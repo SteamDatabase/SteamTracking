@@ -6,27 +6,27 @@
     "8H1D": function (e, t, n) {
       "use strict";
       n.d(t, "b", function () {
-        return r;
+        return i;
       }),
         n.d(t, "a", function () {
-          return a;
+          return r;
         });
-      var i = n("lkRc"),
-        r = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
-      function a(e, t) {
+      var a = n("lkRc"),
+        i = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
+      function r(e, t) {
         var n = ".jpg";
-        (e && "0000000000000000000000000000000000000000" !== e) || (e = r),
+        (e && "0000000000000000000000000000000000000000" !== e) || (e = i),
           44 == e.length && ((n = e.substr(-4)), (e = e.substr(0, 40)));
-        var a = i.c.MEDIA_CDN_COMMUNITY_URL + "images/avatars/";
+        var r = a.c.MEDIA_CDN_COMMUNITY_URL + "images/avatars/";
         return (
-          (a += e.substr(0, 2) + "/" + e),
-          t && "small" != t && (a += "_" + t),
-          (a += n)
+          (r += e.substr(0, 2) + "/" + e),
+          t && "small" != t && (r += "_" + t),
+          (r += n)
         );
       }
     },
-    Cmuy: function (e, t, a) {
-      var i = {
+    Cmuy: function (e, t, n) {
+      var a = {
         "./managefriends_brazilian.json": ["QEZI", 73],
         "./managefriends_bulgarian.json": ["GBrP", 74],
         "./managefriends_czech.json": ["Inia", 75],
@@ -57,23 +57,23 @@
         "./managefriends_ukrainian.json": ["B7eG", 100],
         "./managefriends_vietnamese.json": ["EcJa", 101],
       };
-      function n(t) {
-        var n = i[t];
-        return n
-          ? a.e(n[1]).then(function () {
-              var e = n[0];
-              return a.t(e, 3);
-            })
-          : Promise.resolve().then(function () {
-              var e = new Error("Cannot find module '" + t + "'");
-              throw ((e.code = "MODULE_NOT_FOUND"), e);
-            });
+      function i(e) {
+        if (!n.o(a, e))
+          return Promise.resolve().then(function () {
+            var t = new Error("Cannot find module '" + e + "'");
+            throw ((t.code = "MODULE_NOT_FOUND"), t);
+          });
+        var t = a[e],
+          i = t[0];
+        return n.e(t[1]).then(function () {
+          return n.t(i, 3);
+        });
       }
-      (n.keys = function () {
-        return Object.keys(i);
+      (i.keys = function () {
+        return Object.keys(a);
       }),
-        (n.id = "Cmuy"),
-        (e.exports = n);
+        (i.id = "Cmuy"),
+        (e.exports = i);
     },
     IASz: function (e, t, n) {
       e.exports = {
@@ -104,9 +104,9 @@
         n.d(t, "a", function () {
           return b;
         });
-      var i = n("mrSG"),
-        a = n("q1tI"),
-        r = n.n(a),
+      var a = n("mrSG"),
+        i = n("q1tI"),
+        r = n.n(i),
         s = n("bxiW"),
         o = n("vDqi"),
         c = n.n(o),
@@ -119,26 +119,26 @@
         p = n("X3Ds"),
         h = n("Qcoi"),
         g = n("6Y59"),
-        v = (function (t) {
-          function e() {
-            var e = (null !== t && t.apply(this, arguments)) || this;
+        v = (function (e) {
+          function t() {
+            var t = (null !== e && e.apply(this, arguments)) || this;
             return (
-              (e.state = {
+              (t.state = {
                 invite_token: "",
                 input_search: "",
                 friend_code_copied: !1,
                 invite_copied: !1,
               }),
-              e
+              t
             );
           }
           return (
-            Object(i.d)(e, t),
-            (e.prototype.componentDidMount = function () {
-              return Object(i.b)(this, void 0, void 0, function () {
-                var t, n;
-                return Object(i.e)(this, function (e) {
-                  switch (e.label) {
+            Object(a.d)(t, e),
+            (t.prototype.componentDidMount = function () {
+              return Object(a.b)(this, void 0, void 0, function () {
+                var e, t;
+                return Object(a.e)(this, function (n) {
+                  switch (n.label) {
                     case 0:
                       return [
                         4,
@@ -148,13 +148,13 @@
                       ];
                     case 1:
                       return (
-                        (t = e.sent()) &&
-                        t.data &&
-                        t.data.tokens &&
-                        (n = t.data.tokens.filter(function (e) {
+                        (e = n.sent()) &&
+                        e.data &&
+                        e.data.tokens &&
+                        (t = e.data.tokens.filter(function (e) {
                           return e.valid;
                         })).length
-                          ? this.setState({ invite_token: n[0].invite_token })
+                          ? this.setState({ invite_token: t[0].invite_token })
                           : this.OnCreateInviteLink(),
                         [2]
                       );
@@ -162,31 +162,31 @@
                 });
               });
             }),
-            (e.prototype.OnCreateInviteLink = function () {
-              return Object(i.b)(this, void 0, void 0, function () {
-                var t, n;
-                return Object(i.e)(this, function (e) {
-                  switch (e.label) {
+            (t.prototype.OnCreateInviteLink = function () {
+              return Object(a.b)(this, void 0, void 0, function () {
+                var e, t;
+                return Object(a.e)(this, function (n) {
+                  switch (n.label) {
                     case 0:
                       return (
-                        (t = new FormData()).append("sessionid", m.c.SESSIONID),
-                        t.append("steamid_user", m.i.steamid),
-                        t.append("duration", (2592e3).toString()),
+                        (e = new FormData()).append("sessionid", m.c.SESSIONID),
+                        e.append("steamid_user", m.i.steamid),
+                        e.append("duration", (2592e3).toString()),
                         [
                           4,
                           c.a.post(
                             m.c.COMMUNITY_BASE_URL + "invites/ajaxcreate",
-                            t
+                            e
                           ),
                         ]
                       );
                     case 1:
                       return (
-                        (n = e.sent()) &&
-                          n.data &&
-                          n.data.invite &&
+                        (t = n.sent()) &&
+                          t.data &&
+                          t.data.invite &&
                           this.setState({
-                            invite_token: n.data.invite.invite_token,
+                            invite_token: t.data.invite.invite_token,
                           }),
                         [2]
                       );
@@ -194,7 +194,7 @@
                 });
               });
             }),
-            (e.prototype.OnCopy = function (e, t) {
+            (t.prototype.OnCopy = function (e, t) {
               var n = this;
               "friend_code" === e &&
                 (this.setState({ friend_code_copied: !0 }),
@@ -206,21 +206,21 @@
                   setTimeout(function () {
                     return n.setState({ invite_copied: !1 });
                   }, 1e3)),
-                Object(p.h)(t);
+                Object(p.i)(t);
             }),
-            (e.prototype.OnAddFriend = function (a) {
-              return Object(i.b)(this, void 0, void 0, function () {
+            (t.prototype.OnAddFriend = function (e) {
+              return Object(a.b)(this, void 0, void 0, function () {
                 var t, n;
-                return Object(i.e)(this, function (e) {
-                  switch (e.label) {
+                return Object(a.e)(this, function (a) {
+                  switch (a.label) {
                     case 0:
                       (t = new FormData()).append("sessionID", m.c.SESSIONID),
-                        t.append("steamid", a),
+                        t.append("steamid", e),
                         t.append("accept_invite", "0"),
-                        (e.label = 1);
+                        (a.label = 1);
                     case 1:
                       return (
-                        e.trys.push([1, 3, , 4]),
+                        a.trys.push([1, 3, , 4]),
                         [
                           4,
                           c.a.post(
@@ -232,23 +232,23 @@
                     case 2:
                       return [
                         2,
-                        (n = e.sent()) && n.data && 1 == n.data.success,
+                        (n = a.sent()) && n.data && 1 == n.data.success,
                       ];
                     case 3:
-                      return e.sent(), [2, !1];
+                      return a.sent(), [2, !1];
                     case 4:
                       return [2];
                   }
                 });
               });
             }),
-            (e.prototype.OnSearchChange = function (e) {
+            (t.prototype.OnSearchChange = function (e) {
               this.setState({ input_search: e.target.value });
             }),
-            (e.prototype.OnSearchKeyDown = function (e) {
+            (t.prototype.OnSearchKeyDown = function (e) {
               13 === e.keyCode && this.OnSearchSubmit();
             }),
-            (e.prototype.OnSearchSubmit = function () {
+            (t.prototype.OnSearchSubmit = function () {
               window.open(
                 m.c.COMMUNITY_BASE_URL +
                   "search/users/#text=" +
@@ -256,7 +256,7 @@
                 "_self"
               );
             }),
-            (e.prototype.render = function () {
+            (t.prototype.render = function () {
               var e = this,
                 t = m.i.short_url + "/" + this.state.invite_token;
               return r.a.createElement(
@@ -405,38 +405,38 @@
                 )
               );
             }),
-            Object(i.c)([s.a], e.prototype, "OnCreateInviteLink", null),
-            Object(i.c)([s.a], e.prototype, "OnCopy", null),
-            Object(i.c)([s.a], e.prototype, "OnAddFriend", null),
-            Object(i.c)([s.a], e.prototype, "OnSearchChange", null),
-            Object(i.c)([s.a], e.prototype, "OnSearchKeyDown", null),
-            Object(i.c)([s.a], e.prototype, "OnSearchSubmit", null),
-            e
+            Object(a.c)([s.a], t.prototype, "OnCreateInviteLink", null),
+            Object(a.c)([s.a], t.prototype, "OnCopy", null),
+            Object(a.c)([s.a], t.prototype, "OnAddFriend", null),
+            Object(a.c)([s.a], t.prototype, "OnSearchChange", null),
+            Object(a.c)([s.a], t.prototype, "OnSearchKeyDown", null),
+            Object(a.c)([s.a], t.prototype, "OnSearchSubmit", null),
+            t
           );
         })(r.a.Component),
-        b = (function (t) {
-          function e() {
-            var e = (null !== t && t.apply(this, arguments)) || this;
+        b = (function (e) {
+          function t() {
+            var t = (null !== e && e.apply(this, arguments)) || this;
             return (
-              (e.state = {
+              (t.state = {
                 input_friend_code: "",
                 disable_send_invite: !1,
                 searchResult: null,
                 invite_status: "pending",
               }),
-              (e.m_currentRequest = 0),
-              e
+              (t.m_currentRequest = 0),
+              t
             );
           }
           return (
-            Object(i.d)(e, t),
-            (e.prototype.OnFriendCodeChange = function (a) {
-              return Object(i.b)(this, void 0, void 0, function () {
+            Object(a.d)(t, e),
+            (t.prototype.OnFriendCodeChange = function (e) {
+              return Object(a.b)(this, void 0, void 0, function () {
                 var t,
                   n = this;
-                return Object(i.e)(this, function (e) {
+                return Object(a.e)(this, function (a) {
                   return (
-                    (t = a.target.value.split(",")[0]),
+                    (t = e.target.value.split(",")[0]),
                     this.setState({
                       input_friend_code: t,
                       invite_status: "pending",
@@ -450,19 +450,19 @@
                 });
               });
             }),
-            (e.prototype.LoadProfile = function (a) {
-              return Object(i.b)(this, void 0, void 0, function () {
+            (t.prototype.LoadProfile = function (e) {
+              return Object(a.b)(this, void 0, void 0, function () {
                 var t, n;
-                return Object(i.e)(this, function (e) {
-                  switch (e.label) {
+                return Object(a.e)(this, function (a) {
+                  switch (a.label) {
                     case 0:
-                      return a
-                        ? ((t = _.a.InitFromAccountID(Number(a))),
+                      return e
+                        ? ((t = _.a.InitFromAccountID(Number(e))),
                           [4, h.a.LoadProfiles([t.ConvertTo64BitString()])])
                         : [3, 2];
                     case 1:
                       return (
-                        e.sent(),
+                        a.sent(),
                         (n = h.a.GetProfile(t.ConvertTo64BitString()))
                           ? this.setState({
                               searchResult: n,
@@ -475,30 +475,30 @@
                         [3, 3]
                       );
                     case 2:
-                      this.setState({ searchResult: null }), (e.label = 3);
+                      this.setState({ searchResult: null }), (a.label = 3);
                     case 3:
                       return [2];
                   }
                 });
               });
             }),
-            (e.prototype.OnActionClick = function (a) {
-              return Object(i.b)(this, void 0, void 0, function () {
+            (t.prototype.OnActionClick = function (e) {
+              return Object(a.b)(this, void 0, void 0, function () {
                 var t,
                   n = this;
-                return Object(i.e)(this, function (e) {
-                  switch (e.label) {
+                return Object(a.e)(this, function (a) {
+                  switch (a.label) {
                     case 0:
                       return (
                         (t = new FormData()).append("sessionID", m.c.SESSIONID),
-                        t.append("steamid", a),
+                        t.append("steamid", e),
                         t.append("accept_invite", "0"),
                         this.setState({ disable_send_invite: !0 }),
-                        [4, this.props.onButtonClick(a)]
+                        [4, this.props.onButtonClick(e)]
                       );
                     case 1:
                       return (
-                        e.sent()
+                        a.sent()
                           ? (this.setState({
                               input_friend_code: "",
                               invite_status: "success",
@@ -516,7 +516,7 @@
                 });
               });
             }),
-            (e.prototype.render = function () {
+            (t.prototype.render = function () {
               var e = this;
               return r.a.createElement(
                 "div",
@@ -658,10 +658,10 @@
                   )
               );
             }),
-            Object(i.c)([s.a], e.prototype, "OnFriendCodeChange", null),
-            Object(i.c)([s.a], e.prototype, "LoadProfile", null),
-            Object(i.c)([s.a], e.prototype, "OnActionClick", null),
-            e
+            Object(a.c)([s.a], t.prototype, "OnFriendCodeChange", null),
+            Object(a.c)([s.a], t.prototype, "LoadProfile", null),
+            Object(a.c)([s.a], t.prototype, "OnActionClick", null),
+            t
           );
         })(r.a.Component);
     },
@@ -673,15 +673,15 @@
         n.d(t, "b", function () {
           return _;
         });
-      var c = n("mrSG"),
-        a = n("vDqi"),
-        l = n.n(a),
-        i = n("2vnA"),
-        r = n("q1tI"),
-        u = n("8H1D"),
-        s = n("kLLr"),
-        d = n("r64O"),
-        o = n("bDQf"),
+      var a = n("mrSG"),
+        i = n("vDqi"),
+        r = n.n(i),
+        s = n("2vnA"),
+        o = n("q1tI"),
+        c = n("8H1D"),
+        l = n("kLLr"),
+        u = n("r64O"),
+        d = n("bDQf"),
         f = n("lkRc"),
         m = new ((function () {
           function e() {
@@ -689,57 +689,59 @@
               (this.m_mapProfilesLoading = new Map());
           }
           return (
-            (e.prototype.LoadProfiles = function (s, o) {
-              return Object(c.b)(this, void 0, void 0, function () {
-                var t,
-                  n,
-                  a,
+            (e.prototype.LoadProfiles = function (e, t) {
+              return Object(a.b)(this, void 0, void 0, function () {
+                var n,
                   i,
-                  r = this;
-                return Object(c.e)(this, function (e) {
-                  switch (e.label) {
+                  s,
+                  o,
+                  l = this;
+                return Object(a.e)(this, function (a) {
+                  switch (a.label) {
                     case 0:
-                      return (Object(d.a)(
-                        s.length <= 500,
-                        "Check LoadProfiles, requesting too many steam IDs"
-                      ),
-                      0 ==
-                        (t = s.filter(function (e) {
+                      return (
+                        Object(u.a)(
+                          e.length <= 500,
+                          "Check LoadProfiles, requesting too many steam IDs"
+                        ),
+                        0 ==
+                        (n = e.filter(function (e) {
                           return (
-                            !r.m_mapProfiles.has(e) &&
-                            !r.m_mapProfilesLoading.has(e)
+                            !l.m_mapProfiles.has(e) &&
+                            !l.m_mapProfilesLoading.has(e)
                           );
-                        })).length)
-                        ? [2, this.m_mapProfilesLoading.get(s[0])]
-                        : ((n =
-                            f.c.COMMUNITY_BASE_URL +
-                            "actions/ajaxresolveusers"),
-                          (a = l.a.get(n, {
-                            params: { steamids: t.join(",") },
-                            withCredentials: !0,
-                            cancelToken: null == o ? void 0 : o.token,
-                          })),
-                          t.forEach(function (e) {
-                            return r.m_mapProfilesLoading.set(e, a);
-                          }),
-                          [4, a]);
+                        })).length
+                          ? [2, this.m_mapProfilesLoading.get(e[0])]
+                          : ((i =
+                              f.c.COMMUNITY_BASE_URL +
+                              "actions/ajaxresolveusers"),
+                            (s = r.a.get(i, {
+                              params: { steamids: n.join(",") },
+                              withCredentials: !0,
+                              cancelToken: null == t ? void 0 : t.token,
+                            })),
+                            n.forEach(function (e) {
+                              return l.m_mapProfilesLoading.set(e, s);
+                            }),
+                            [4, s])
+                      );
                     case 1:
                       return (
-                        (i = e.sent()).data &&
-                          200 == i.status &&
-                          i.data.forEach(function (e) {
+                        (o = a.sent()).data &&
+                          200 == o.status &&
+                          o.data.forEach(function (e) {
                             (e.avatar_hash = e.avatar_url),
-                              (e.avatar_url_medium = Object(u.a)(
+                              (e.avatar_url_medium = Object(c.a)(
                                 e.avatar_url,
                                 "medium"
                               )),
-                              (e.avatar_url_full = Object(u.a)(
+                              (e.avatar_url_full = Object(c.a)(
                                 e.avatar_url,
                                 "full"
                               )),
-                              (e.avatar_url = Object(u.a)(e.avatar_url)),
-                              r.m_mapProfiles.set(e.steamid, e),
-                              r.m_mapProfilesLoading.delete(e.steamid);
+                              (e.avatar_url = Object(c.a)(e.avatar_url)),
+                              l.m_mapProfiles.set(e.steamid, e),
+                              l.m_mapProfilesLoading.delete(e.steamid);
                           }),
                         [2]
                       );
@@ -752,7 +754,7 @@
             }),
             (e.prototype.GetProfileByAccountID = function (e) {
               return this.m_mapProfiles.get(
-                s.a.InitFromAccountID(e).ConvertTo64BitString()
+                l.a.InitFromAccountID(e).ConvertTo64BitString()
               );
             }),
             (e.prototype.GetProfileBySteamID = function (e) {
@@ -763,7 +765,7 @@
             }),
             (e.prototype.BHasProfileByAccountID = function (e) {
               return this.m_mapProfiles.has(
-                s.a.InitFromAccountID(e).ConvertTo64BitString()
+                l.a.InitFromAccountID(e).ConvertTo64BitString()
               );
             }),
             (e.prototype.BHasProfileBySteamID = function (e) {
@@ -781,31 +783,31 @@
               var t = this.GetProfileBySteamID(e);
               return t && t.persona_name ? t.persona_name : "";
             }),
-            Object(c.c)([i.C], e.prototype, "m_mapProfiles", void 0),
+            Object(a.c)([s.C], e.prototype, "m_mapProfiles", void 0),
             e
           );
         })())();
       function _(e) {
-        var n = "string" == typeof e ? new s.a(e) : e,
-          t = Object(r.useState)(!m.BHasProfileBySteamID(n)),
-          a = t[0],
-          i = t[1];
+        var t = "string" == typeof e ? new l.a(e) : e,
+          n = Object(o.useState)(!m.BHasProfileBySteamID(t)),
+          a = n[0],
+          i = n[1];
         return (
-          Object(r.useEffect)(
+          Object(o.useEffect)(
             function () {
-              var e = l.a.CancelToken.source();
+              var e = r.a.CancelToken.source();
               return (
-                m.BHasProfileBySteamID(n) ||
+                m.BHasProfileBySteamID(t) ||
                   m
-                    .LoadProfiles([n.ConvertTo64BitString()])
+                    .LoadProfiles([t.ConvertTo64BitString()])
                     .catch(function (e) {
-                      var t = Object(o.a)(e);
+                      var n = Object(d.a)(e);
                       console.error(
                         "useUserProfile failed to load profile for " +
-                          n.ConvertTo64BitString() +
+                          t.ConvertTo64BitString() +
                           ": " +
-                          t.strErrorMsg,
-                        t
+                          n.strErrorMsg,
+                        n
                       );
                     })
                     .finally(function () {
@@ -818,42 +820,45 @@
             },
             [e]
           ),
-          [a, m.GetProfileBySteamID(n)]
+          [a, m.GetProfileBySteamID(t)]
         );
       }
       window.g_ProfileStore = m;
     },
-    rt5e: function (e, t, i) {
+    rt5e: function (e, t, n) {
       "use strict";
-      i.r(t),
-        i.d(t, "default", function () {
-          return a;
+      n.r(t),
+        n.d(t, "default", function () {
+          return c;
         });
-      var n = i("q1tI"),
-        r = i.n(n),
-        s = i("McqU"),
-        o = i("lkRc"),
-        c = i("TLQK");
-      function a() {
-        var e, t, a;
-        return ((e = Object(n.useState)(!1)),
-        (t = e[0]),
-        (a = e[1]),
-        Object(n.useEffect)(function () {
-          var e = o.c.LANGUAGE,
-            t = c.b.GetLanguageFallback(e),
-            n = e === t;
-          Promise.all([
-            i("Cmuy")("./managefriends_" + e + ".json"),
-            n ? void 0 : i("Cmuy")("./managefriends_" + t + ".json"),
-          ]).then(function (e) {
-            var t = e[0],
-              n = e[1];
-            c.e.AddTokens(t.default, n ? n.default : void 0), a(!0);
-          });
-        }, []),
-        t)
-          ? r.a.createElement(s.b, null)
+      var a = n("q1tI"),
+        i = n.n(a),
+        r = n("McqU"),
+        s = n("lkRc"),
+        o = n("TLQK");
+      function c() {
+        return (function () {
+          var e = Object(a.useState)(!1),
+            t = e[0],
+            i = e[1];
+          return (
+            Object(a.useEffect)(function () {
+              var e = s.c.LANGUAGE,
+                t = o.b.GetLanguageFallback(e),
+                a = e === t;
+              Promise.all([
+                n("Cmuy")("./managefriends_" + e + ".json"),
+                a ? void 0 : n("Cmuy")("./managefriends_" + t + ".json"),
+              ]).then(function (e) {
+                var t = e[0],
+                  n = e[1];
+                o.e.AddTokens(t.default, n ? n.default : void 0), i(!0);
+              });
+            }, []),
+            t
+          );
+        })()
+          ? i.a.createElement(r.b, null)
           : null;
       }
     },

@@ -6,57 +6,57 @@
     "3WEt": function (e, t, a) {
       "use strict";
       a.r(t);
-      var r,
-        i,
-        u = a("mrSG"),
-        o = a("lkRc"),
-        n = a("TyAF"),
+      var i,
+        n = a("mrSG"),
+        r = a("lkRc"),
+        o = a("TyAF"),
         s = a("2vnA"),
         c = a("q1tI"),
-        P = a.n(c),
-        U = a("Ophz"),
-        w = a("6Y59"),
-        M = a("exH9"),
-        x = a("TLQK"),
-        l = a("bxiW"),
-        F = a("Asqs"),
-        d = a("1h/R"),
-        m = a.n(d),
-        p = a("vDqi"),
-        _ = a.n(p);
-      ((i = r = r || {})[(i.Unrequested = 0)] = "Unrequested"),
-        (i[(i.Pending = 1)] = "Pending"),
-        (i[(i.Valid = 2)] = "Valid"),
-        (i[(i.Failed = 3)] = "Failed"),
-        (i[(i.Rerequest = 4)] = "Rerequest");
-      var h,
-        g,
-        v = (function () {
+        l = a.n(c),
+        d = a("Ophz"),
+        m = a("6Y59"),
+        u = a("exH9"),
+        p = a("TLQK"),
+        _ = a("bxiW"),
+        h = a("Asqs"),
+        g = a("1h/R"),
+        v = a.n(g),
+        E = a("vDqi"),
+        f = a.n(E);
+      !(function (e) {
+        (e[(e.Unrequested = 0)] = "Unrequested"),
+          (e[(e.Pending = 1)] = "Pending"),
+          (e[(e.Valid = 2)] = "Valid"),
+          (e[(e.Failed = 3)] = "Failed"),
+          (e[(e.Rerequest = 4)] = "Rerequest");
+      })(i || (i = {}));
+      var b,
+        S = (function () {
           function e() {
-            (this.eState = r.Unrequested), (this.nExpirationTime = 0);
+            (this.eState = i.Unrequested), (this.nExpirationTime = 0);
           }
           return (
-            (e.prototype.getData = function (t, a, i) {
+            (e.prototype.getData = function (e, t, a) {
               var n = this,
-                e = this.eState == r.Pending || this.eState == r.Rerequest;
+                r = this.eState == i.Pending || this.eState == i.Rerequest;
               return (
                 this.isExpired() &&
-                  !e &&
-                  ((this.eState = r.Pending),
-                  a().then(function (e) {
-                    return n.eState == r.Rerequest
-                      ? (n.expireData(), void n.getData(t, a, i))
-                      : void (e
-                          ? ((n.data = i ? i(e) : e),
-                            n.delayNewData(t),
-                            (n.eState = r.Valid))
-                          : (n.eState = r.Failed));
+                  !r &&
+                  ((this.eState = i.Pending),
+                  t().then(function (r) {
+                    if (n.eState == i.Rerequest)
+                      return n.expireData(), void n.getData(e, t, a);
+                    r
+                      ? ((n.data = a ? a(r) : r),
+                        n.delayNewData(e),
+                        (n.eState = i.Valid))
+                      : (n.eState = i.Failed);
                   })),
                 this.data
               );
             }),
             (e.prototype.clearData = function () {
-              (this.eState = r.Unrequested),
+              (this.eState = i.Unrequested),
                 (this.data = null),
                 (this.nExpirationTime = 0);
             }),
@@ -68,20 +68,21 @@
               return this.nExpirationTime < e;
             }),
             (e.prototype.delayNewData = function (e) {
-              var t;
-              e <= 0
-                ? (this.nExpirationTime = Number.MAX_SAFE_INTEGER)
-                : ((t = Date.now() / 1e3), (this.nExpirationTime = t + e));
+              if (e <= 0) this.nExpirationTime = Number.MAX_SAFE_INTEGER;
+              else {
+                var t = Date.now() / 1e3;
+                this.nExpirationTime = t + e;
+              }
             }),
             (e.prototype.rerequestDataIfPending = function () {
-              this.eState == r.Pending && (this.eState = r.Rerequest);
+              this.eState == i.Pending && (this.eState = i.Rerequest);
             }),
-            Object(u.c)([s.C], e.prototype, "data", void 0),
-            Object(u.c)([s.C], e.prototype, "nExpirationTime", void 0),
+            Object(n.c)([s.C], e.prototype, "data", void 0),
+            Object(n.c)([s.C], e.prototype, "nExpirationTime", void 0),
             e
           );
         })(),
-        k = {
+        y = {
           EUNIVERSE: 0,
           WEB_UNIVERSE: "",
           LANGUAGE: "english",
@@ -118,10 +119,12 @@
           EXCLUDE_WISHLIST: !1,
           USE_MICROTRAILERS: !1,
         };
-      ((g = h = h || {})[(g.ClickThrough = 1)] = "ClickThrough"),
-        (g[(g.AddToWishlist = 2)] = "AddToWishlist"),
-        (g[(g.AddToCart = 3)] = "AddToCart");
-      var V = new ((function () {
+      !(function (e) {
+        (e[(e.ClickThrough = 1)] = "ClickThrough"),
+          (e[(e.AddToWishlist = 2)] = "AddToWishlist"),
+          (e[(e.AddToCart = 3)] = "AddToCart");
+      })(b || (b = {}));
+      var T = new ((function () {
         function e() {
           var e = this;
           (this.m_rgFilterTags = []),
@@ -129,9 +132,9 @@
             (this.m_rgSavedFilterTags = []),
             (this.m_rgSavedExcludeTags = []),
             (this.m_mapAppDetailsCache = new Map()),
-            (this.m_ResultDataCache = new v()),
-            (this.m_InputAppsCache = new v()),
-            (this.m_TagsCache = new v()),
+            (this.m_ResultDataCache = new S()),
+            (this.m_InputAppsCache = new S()),
+            (this.m_TagsCache = new S()),
             (this.m_TagNameMap = new Map()),
             (this.m_fPopularityValue = window.history.state
               ? window.history.state.popularity
@@ -169,47 +172,47 @@
         }
         return (
           (e.prototype.Init = function () {
-            (this.m_fPopularityValue = k.DEFAULT_POPULARITY_SLIDER),
-              (this.m_fRecencyValue = k.DEFAULT_RECENCY_SLIDER),
-              (this.m_rgSavedExcludeTags = Object(u.g)(
-                k.DEFAULT_EXCLUDED_TAGS
+            (this.m_fPopularityValue = y.DEFAULT_POPULARITY_SLIDER),
+              (this.m_fRecencyValue = y.DEFAULT_RECENCY_SLIDER),
+              (this.m_rgSavedExcludeTags = Object(n.g)(
+                y.DEFAULT_EXCLUDED_TAGS
               )),
-              (this.m_rgSavedFilterTags = Object(u.g)(k.DEFAULT_INCLUDED_TAGS)),
-              (this.m_rgExcludeTags = Object(u.g)(this.m_rgSavedExcludeTags)),
-              (this.m_rgFilterTags = Object(u.g)(this.m_rgSavedFilterTags)),
+              (this.m_rgSavedFilterTags = Object(n.g)(y.DEFAULT_INCLUDED_TAGS)),
+              (this.m_rgExcludeTags = Object(n.g)(this.m_rgSavedExcludeTags)),
+              (this.m_rgFilterTags = Object(n.g)(this.m_rgSavedFilterTags)),
               (this.m_fQueuedPopularityValue = this.m_fPopularityValue),
               (this.m_fQueuedRecencyValue = this.m_fRecencyValue),
               (this.m_bExcludeWishlisted = !1),
               (this.m_bStateUpdated = !0),
-              (this.m_bExcludeWishlisted = k.EXCLUDE_WISHLIST),
-              (this.m_bUseMicrotrailers = k.USE_MICROTRAILERS);
+              (this.m_bExcludeWishlisted = y.EXCLUDE_WISHLIST),
+              (this.m_bUseMicrotrailers = y.USE_MICROTRAILERS);
           }),
-          (e.prototype.getDetails = function (t) {
-            var e = this;
+          (e.prototype.getDetails = function (e) {
+            var t = this;
             return (
-              this.m_mapAppDetailsCache.has(t) ||
-                this.m_mapAppDetailsCache.set(t, new v()),
-              this.m_mapAppDetailsCache.get(t).getData(
+              this.m_mapAppDetailsCache.has(e) ||
+                this.m_mapAppDetailsCache.set(e, new S()),
+              this.m_mapAppDetailsCache.get(e).getData(
                 60,
                 function () {
-                  return Object(u.b)(e, void 0, void 0, function () {
-                    return Object(u.e)(this, function (e) {
-                      switch (e.label) {
+                  return Object(n.b)(t, void 0, void 0, function () {
+                    return Object(n.e)(this, function (t) {
+                      switch (t.label) {
                         case 0:
                           return [
                             4,
-                            _.a.get(
-                              k.BASE_URL +
+                            f.a.get(
+                              y.BASE_URL +
                                 "recommender/" +
-                                k.STEAM_ID +
+                                y.STEAM_ID +
                                 "/details?appid=" +
-                                t +
+                                e +
                                 "&sessionid=" +
-                                k.SESSION_ID
+                                y.SESSION_ID
                             ),
                           ];
                         case 1:
-                          return [2, e.sent()];
+                          return [2, t.sent()];
                       }
                     });
                   });
@@ -221,46 +224,46 @@
             );
           }),
           (e.prototype.getResults = function (e, t, a, i) {
-            var n = this,
-              r = e ? "1" : "0",
-              o = t ? "" + t : "0",
-              s = a ? "1" : "0",
-              c = i ? "" + i : "0",
-              l = "",
-              d = this.getInputApps();
-            if (d) {
-              var m = [];
+            var r = this,
+              o = e ? "1" : "0",
+              s = t ? "" + t : "0",
+              c = a ? "1" : "0",
+              l = i ? "" + i : "0",
+              d = "",
+              m = this.getInputApps();
+            if (m) {
+              var u = [];
               return (
-                Object.keys(d).map(function (e) {
-                  (d[e].i || d[e].ip) && m.push(d[e].a);
+                Object.keys(m).map(function (e) {
+                  (m[e].i || m[e].ip) && u.push(m[e].a);
                 }),
-                0 < m.length && (l = "&ignored=" + m.join()),
+                u.length > 0 && (d = "&ignored=" + u.join()),
                 this.m_ResultDataCache.getData(
                   9999999,
                   function () {
-                    return Object(u.b)(n, void 0, void 0, function () {
-                      return Object(u.e)(this, function (e) {
+                    return Object(n.b)(r, void 0, void 0, function () {
+                      return Object(n.e)(this, function (e) {
                         switch (e.label) {
                           case 0:
                             return [
                               4,
-                              _.a.get(
-                                k.BASE_URL +
+                              f.a.get(
+                                y.BASE_URL +
                                   "recommender/" +
-                                  k.STEAM_ID +
+                                  y.STEAM_ID +
                                   "/results?sessionid=" +
-                                  k.SESSION_ID +
+                                  y.SESSION_ID +
                                   "&steamid=" +
-                                  k.STEAM_ID +
+                                  y.STEAM_ID +
                                   "&include_played=" +
-                                  r +
-                                  "&algorithm=" +
                                   o +
-                                  "&reinference=" +
+                                  "&algorithm=" +
                                   s +
-                                  "&model_version=" +
+                                  "&reinference=" +
                                   c +
-                                  l
+                                  "&model_version=" +
+                                  l +
+                                  d
                               ),
                             ];
                           case 1:
@@ -280,11 +283,11 @@
             return this.m_ResultDataCache.isExpired();
           }),
           (e.prototype.getRecommendations = function () {
-            var e = V.getResults(
-              k.INCLUDE_PLAYED,
-              k.ALGORITHM,
-              k.REINFERENCE,
-              k.MODEL_VERSION
+            var e = T.getResults(
+              y.INCLUDE_PLAYED,
+              y.ALGORITHM,
+              y.REINFERENCE,
+              y.MODEL_VERSION
             );
             return e ? e.recommendations : void 0;
           }),
@@ -293,20 +296,20 @@
             return this.m_InputAppsCache.getData(
               9999999,
               function () {
-                return Object(u.b)(e, void 0, void 0, function () {
-                  return Object(u.e)(this, function (e) {
+                return Object(n.b)(e, void 0, void 0, function () {
+                  return Object(n.e)(this, function (e) {
                     switch (e.label) {
                       case 0:
                         return [
                           4,
-                          _.a.get(
-                            k.BASE_URL +
+                          f.a.get(
+                            y.BASE_URL +
                               "recommender/" +
-                              k.STEAM_ID +
+                              y.STEAM_ID +
                               "/inputs?sessionid=" +
-                              k.SESSION_ID +
+                              y.SESSION_ID +
                               "&steamid=" +
-                              k.STEAM_ID
+                              y.STEAM_ID
                           ),
                         ];
                       case 1:
@@ -321,31 +324,31 @@
             );
           }),
           (e.prototype.getAppInfo = function () {
-            var e = V.getResults(
-              k.INCLUDE_PLAYED,
-              k.ALGORITHM,
-              k.REINFERENCE,
-              k.MODEL_VERSION
+            var e = T.getResults(
+              y.INCLUDE_PLAYED,
+              y.ALGORITHM,
+              y.REINFERENCE,
+              y.MODEL_VERSION
             );
             return e ? e.app_info : void 0;
           }),
           (e.prototype.getTags = function () {
-            var n = this;
+            var e = this;
             return this.m_TagsCache.getData(
               9999999,
               function () {
-                return Object(u.b)(n, void 0, void 0, function () {
-                  return Object(u.e)(this, function (e) {
+                return Object(n.b)(e, void 0, void 0, function () {
+                  return Object(n.e)(this, function (e) {
                     switch (e.label) {
                       case 0:
                         return [
                           4,
-                          _.a.get(
-                            k.BASE_URL +
+                          f.a.get(
+                            y.BASE_URL +
                               "recommender/" +
-                              k.STEAM_ID +
+                              y.STEAM_ID +
                               "/tags?sessionid=" +
-                              k.SESSION_ID
+                              y.SESSION_ID
                           ),
                         ];
                       case 1:
@@ -354,13 +357,13 @@
                   });
                 });
               },
-              function (e) {
-                n.m_TagNameMap.clear();
-                for (var t = 0, a = e.data; t < a.length; t++) {
-                  var i = a[t];
-                  n.m_TagNameMap.set(i.tagid, i.name);
+              function (t) {
+                e.m_TagNameMap.clear();
+                for (var a = 0, i = t.data; a < i.length; a++) {
+                  var n = i[a];
+                  e.m_TagNameMap.set(n.tagid, n.name);
                 }
-                return e.data;
+                return t.data;
               }
             );
           }),
@@ -420,81 +423,81 @@
               (this.m_bStateUpdated = !0);
           }),
           (e.prototype.onSaveUserSettings = function (e) {
-            return Object(u.b)(this, void 0, void 0, function () {
-              var t, a, i, n, r, o;
-              return Object(u.e)(this, function (e) {
-                switch (e.label) {
+            return Object(n.b)(this, void 0, void 0, function () {
+              var e, t, a, i, r, o;
+              return Object(n.e)(this, function (s) {
+                switch (s.label) {
                   case 0:
                     for (
-                      t = [], a = this.getInputApps(), i = 0, n = a;
-                      i < n.length;
-                      i++
+                      e = [], t = this.getInputApps(), a = 0, i = t;
+                      a < i.length;
+                      a++
                     )
-                      ((r = n[i]).i || r.ip) && t.push(r.a);
-                    return this.m_fRecencyValue != k.DEFAULT_RECENCY_SLIDER ||
-                      this.m_fPopularityValue != k.DEFAULT_POPULARITY_SLIDER ||
+                      ((r = i[a]).i || r.ip) && e.push(r.a);
+                    return this.m_fRecencyValue != y.DEFAULT_RECENCY_SLIDER ||
+                      this.m_fPopularityValue != y.DEFAULT_POPULARITY_SLIDER ||
                       this.m_rgFilterTags.slice().sort().join(",") !==
                         this.m_rgSavedFilterTags.sort().join(",") ||
                       this.m_rgExcludeTags.slice().sort().join(",") !==
                         this.m_rgSavedExcludeTags.sort().join(",") ||
-                      t.slice().sort().join(",") !==
-                        k.DEFAULT_IGNORED_PLAYED_APPS.sort().join(",") ||
-                      this.m_bExcludeWishlisted != k.EXCLUDE_WISHLIST
+                      e.slice().sort().join(",") !==
+                        y.DEFAULT_IGNORED_PLAYED_APPS.sort().join(",") ||
+                      this.m_bExcludeWishlisted != y.EXCLUDE_WISHLIST
                       ? [3, 1]
                       : [3, 3];
                   case 1:
                     return (
                       (o = {
-                        session_id: k.SESSION_ID,
+                        session_id: y.SESSION_ID,
                         recency_position: this.m_fRecencyValue,
                         popularity_position: this.m_fPopularityValue,
                         included_tags: this.m_rgFilterTags,
                         excluded_tags: this.m_rgExcludeTags,
-                        ignored_played_apps: t,
+                        ignored_played_apps: e,
                         exclude_wishlist: this.m_bExcludeWishlisted,
                       }),
-                      (k.DEFAULT_RECENCY_SLIDER = this.m_fRecencyValue),
-                      (k.DEFAULT_POPULARITY_SLIDER = this.m_fPopularityValue),
-                      (k.DEFAULT_INCLUDED_TAGS = Object(u.g)(
+                      (y.DEFAULT_RECENCY_SLIDER = this.m_fRecencyValue),
+                      (y.DEFAULT_POPULARITY_SLIDER = this.m_fPopularityValue),
+                      (y.DEFAULT_INCLUDED_TAGS = Object(n.g)(
                         this.m_rgFilterTags
                       )),
-                      (k.DEFAULT_EXCLUDED_TAGS = Object(u.g)(
+                      (y.DEFAULT_EXCLUDED_TAGS = Object(n.g)(
                         this.m_rgExcludeTags
                       )),
-                      (this.m_rgSavedFilterTags = Object(u.g)(
+                      (this.m_rgSavedFilterTags = Object(n.g)(
                         this.m_rgFilterTags
                       )),
-                      (this.m_rgSavedExcludeTags = Object(u.g)(
+                      (this.m_rgSavedExcludeTags = Object(n.g)(
                         this.m_rgExcludeTags
                       )),
-                      (k.DEFAULT_IGNORED_PLAYED_APPS = Object(u.g)(t)),
-                      (k.EXCLUDE_WISHLIST = this.m_bExcludeWishlisted),
+                      (y.DEFAULT_IGNORED_PLAYED_APPS = Object(n.g)(e)),
+                      (y.EXCLUDE_WISHLIST = this.m_bExcludeWishlisted),
                       [
                         4,
-                        _.a.post(
-                          k.BASE_URL +
+                        f.a.post(
+                          y.BASE_URL +
                             "recommender/" +
-                            k.STEAM_ID +
+                            y.STEAM_ID +
                             "/savesettings",
                           o
                         ),
                       ]
                     );
                   case 2:
-                    e.sent(), (e.label = 3);
+                    s.sent(), (s.label = 3);
                   case 3:
                     return [2];
                 }
               });
             });
           }),
-          (e.prototype.onToggleIgnore = function (r) {
-            return Object(u.b)(this, void 0, void 0, function () {
-              var t, a, i, n;
-              return Object(u.e)(this, function (e) {
+          (e.prototype.onToggleIgnore = function (e) {
+            return Object(n.b)(this, void 0, void 0, function () {
+              var t, a, i, r;
+              return Object(n.e)(this, function (n) {
                 for (t = this.getInputApps(), a = 0, i = t; a < i.length; a++)
-                  if ((n = i[a]).a == r) {
-                    n.i || n.ip ? ((n.i = !1), (n.ip = !1)) : (n.ip = !0);
+                  if ((r = i[a]).a == e) {
+                    r.i || r.ip ? ((r.i = !1), (r.ip = !1)) : (r.ip = !0);
                     break;
                   }
                 return (
@@ -508,134 +511,134 @@
           (e.prototype.onUpdateWithIgnored = function () {
             this.m_ResultDataCache.expireData(), (this.m_bIgnoredEdited = !1);
           }),
-          (e.prototype.onAppClicked = function (a, i) {
-            return Object(u.b)(this, void 0, void 0, function () {
-              var t;
-              return Object(u.e)(this, function (e) {
-                switch (e.label) {
+          (e.prototype.onAppClicked = function (e, t) {
+            return Object(n.b)(this, void 0, void 0, function () {
+              var a;
+              return Object(n.e)(this, function (i) {
+                switch (i.label) {
                   case 0:
                     return (
-                      (t = {
-                        account_id: k.ACCOUNT_ID,
-                        session_id: k.SESSION_ID,
-                        app_id: a,
-                        app_rank: i,
-                        action: h.ClickThrough,
+                      (a = {
+                        account_id: y.ACCOUNT_ID,
+                        session_id: y.SESSION_ID,
+                        app_id: e,
+                        app_rank: t,
+                        action: b.ClickThrough,
                         algorithm: 1,
                         setting_1: 100 * this.m_fPopularityValue,
                         setting_2: 100 * this.m_fRecencyValue,
                       }),
                       [
                         4,
-                        _.a.post(
-                          k.BASE_URL + "recommender/" + k.STEAM_ID + "/stats",
-                          t
+                        f.a.post(
+                          y.BASE_URL + "recommender/" + y.STEAM_ID + "/stats",
+                          a
                         ),
                       ]
                     );
                   case 1:
-                    return e.sent(), [2];
+                    return i.sent(), [2];
                 }
               });
             });
           }),
-          (e.prototype.onAddToWishlist = function (n, r) {
-            return Object(u.b)(this, void 0, void 0, function () {
-              var t, a, i;
-              return Object(u.e)(this, function (e) {
-                switch (e.label) {
+          (e.prototype.onAddToWishlist = function (e, t) {
+            return Object(n.b)(this, void 0, void 0, function () {
+              var a, i, r;
+              return Object(n.e)(this, function (n) {
+                switch (n.label) {
                   case 0:
                     return (
-                      (V.getAppInfo()[n].w = !0),
-                      (t = { sessionid: k.SESSION_ID, appid: n }),
+                      (T.getAppInfo()[e].w = !0),
+                      (a = { sessionid: y.SESSION_ID, appid: e }),
                       [
                         4,
-                        _.a.post(
-                          k.BASE_URL +
+                        f.a.post(
+                          y.BASE_URL +
                             "recommender/" +
-                            k.STEAM_ID +
+                            y.STEAM_ID +
                             "/wishlist?snr=" +
-                            k.LINK_PARAM,
-                          t
+                            y.LINK_PARAM,
+                          a
                         ),
                       ]
                     );
                   case 1:
                     return (
-                      (a = e.sent()),
-                      (i = {
-                        account_id: k.ACCOUNT_ID,
-                        session_id: k.SESSION_ID,
-                        app_id: n,
-                        app_rank: r,
-                        action: h.AddToWishlist,
+                      (i = n.sent()),
+                      (r = {
+                        account_id: y.ACCOUNT_ID,
+                        session_id: y.SESSION_ID,
+                        app_id: e,
+                        app_rank: t,
+                        action: b.AddToWishlist,
                         algorithm: 1,
                         setting_1: 100 * this.m_fPopularityValue,
                         setting_2: 100 * this.m_fRecencyValue,
                       }),
                       [
                         4,
-                        _.a.post(
-                          k.BASE_URL + "recommender/" + k.STEAM_ID + "/stats",
-                          i
+                        f.a.post(
+                          y.BASE_URL + "recommender/" + y.STEAM_ID + "/stats",
+                          r
                         ),
                       ]
                     );
                   case 2:
-                    return e.sent(), [2, a];
+                    return n.sent(), [2, i];
                 }
               });
             });
           }),
           (e.prototype.onGoToWishlist = function () {
             window.location.href =
-              k.COMMUNITY_BASE_URL + "profiles/" + k.STEAM_ID + "/wishlist";
+              y.COMMUNITY_BASE_URL + "profiles/" + y.STEAM_ID + "/wishlist";
           }),
-          (e.prototype.onAddToCart = function (i, n) {
-            return Object(u.b)(this, void 0, void 0, function () {
-              var t, a;
-              return Object(u.e)(this, function (e) {
-                switch (e.label) {
+          (e.prototype.onAddToCart = function (e, t) {
+            return Object(n.b)(this, void 0, void 0, function () {
+              var a, i;
+              return Object(n.e)(this, function (n) {
+                switch (n.label) {
                   case 0:
                     return (
-                      (t = { sessionid: k.SESSION_ID, appid: i }),
+                      (a = { sessionid: y.SESSION_ID, appid: e }),
                       [
                         4,
-                        _.a.post(
-                          k.BASE_URL +
+                        f.a.post(
+                          y.BASE_URL +
                             "recommender/" +
-                            k.STEAM_ID +
+                            y.STEAM_ID +
                             "/cart?snr=" +
-                            k.LINK_PARAM,
-                          t
+                            y.LINK_PARAM,
+                          a
                         ),
                       ]
                     );
                   case 1:
                     return (
-                      e.sent(),
-                      (a = {
-                        account_id: k.ACCOUNT_ID,
-                        session_id: k.SESSION_ID,
-                        app_id: i,
-                        app_rank: n,
-                        action: h.AddToCart,
+                      n.sent(),
+                      (i = {
+                        account_id: y.ACCOUNT_ID,
+                        session_id: y.SESSION_ID,
+                        app_id: e,
+                        app_rank: t,
+                        action: b.AddToCart,
                         algorithm: 1,
                         setting_1: 100 * this.m_fPopularityValue,
                         setting_2: 100 * this.m_fRecencyValue,
                       }),
                       [
                         4,
-                        _.a.post(
-                          k.BASE_URL + "recommender/" + k.STEAM_ID + "/stats",
-                          a
+                        f.a.post(
+                          y.BASE_URL + "recommender/" + y.STEAM_ID + "/stats",
+                          i
                         ),
                       ]
                     );
                   case 2:
                     return (
-                      e.sent(),
-                      (window.location.href = o.d.STORE_BASE_URL + "cart"),
+                      n.sent(),
+                      (window.location.href = r.d.STORE_BASE_URL + "cart"),
                       [2]
                     );
                 }
@@ -654,255 +657,261 @@
           (e.prototype.shouldUseMicrotrailers = function () {
             return this.m_bUseMicrotrailers;
           }),
-          Object(u.c)([s.C], e.prototype, "m_fPopularityValue", void 0),
-          Object(u.c)([s.C], e.prototype, "m_fRecencyValue", void 0),
-          Object(u.c)([s.C], e.prototype, "m_rgFilterTags", void 0),
-          Object(u.c)([s.C], e.prototype, "m_rgExcludeTags", void 0),
-          Object(u.c)([s.C], e.prototype, "m_fQueuedPopularityValue", void 0),
-          Object(u.c)([s.C], e.prototype, "m_fQueuedRecencyValue", void 0),
-          Object(u.c)([s.C], e.prototype, "m_bExcludeWishlisted", void 0),
-          Object(u.c)([s.C], e.prototype, "m_bShouldMute", void 0),
-          Object(u.c)([s.C], e.prototype, "m_bUseMicrotrailers", void 0),
-          Object(u.c)([s.C], e.prototype, "m_bIgnoredEdited", void 0),
-          Object(u.c)([l.a], e.prototype, "getTagHeight", null),
-          Object(u.c)([l.a], e.prototype, "onPopularityChanged", null),
-          Object(u.c)([l.a], e.prototype, "onRecencyChanged", null),
-          Object(u.c)([l.a], e.prototype, "onTagFilterAdd", null),
-          Object(u.c)([l.a], e.prototype, "onTagFilterRemove", null),
-          Object(u.c)([l.a], e.prototype, "onTagExcludeAdd", null),
-          Object(u.c)([l.a], e.prototype, "onTagExcludeRemove", null),
-          Object(u.c)([l.a], e.prototype, "doTagsPassFilter", null),
-          Object(u.c)([l.a], e.prototype, "doTagsFailExclusion", null),
-          Object(u.c)([l.a], e.prototype, "onExcludeWishlistedToggled", null),
-          Object(u.c)([l.a], e.prototype, "onSaveUserSettings", null),
-          Object(u.c)([l.a], e.prototype, "onToggleIgnore", null),
-          Object(u.c)([l.a], e.prototype, "onUpdateWithIgnored", null),
-          Object(u.c)([l.a], e.prototype, "onAppClicked", null),
-          Object(u.c)([l.a], e.prototype, "onAddToWishlist", null),
-          Object(u.c)([l.a], e.prototype, "onGoToWishlist", null),
-          Object(u.c)([l.a], e.prototype, "onAddToCart", null),
-          Object(u.c)([l.a], e.prototype, "onMuteClicked", null),
-          Object(u.c)([l.a], e.prototype, "onUnMuteClicked", null),
-          Object(u.c)([l.a], e.prototype, "shouldMute", null),
-          Object(u.c)([l.a], e.prototype, "shouldUseMicrotrailers", null),
+          Object(n.c)([s.C], e.prototype, "m_fPopularityValue", void 0),
+          Object(n.c)([s.C], e.prototype, "m_fRecencyValue", void 0),
+          Object(n.c)([s.C], e.prototype, "m_rgFilterTags", void 0),
+          Object(n.c)([s.C], e.prototype, "m_rgExcludeTags", void 0),
+          Object(n.c)([s.C], e.prototype, "m_fQueuedPopularityValue", void 0),
+          Object(n.c)([s.C], e.prototype, "m_fQueuedRecencyValue", void 0),
+          Object(n.c)([s.C], e.prototype, "m_bExcludeWishlisted", void 0),
+          Object(n.c)([s.C], e.prototype, "m_bShouldMute", void 0),
+          Object(n.c)([s.C], e.prototype, "m_bUseMicrotrailers", void 0),
+          Object(n.c)([s.C], e.prototype, "m_bIgnoredEdited", void 0),
+          Object(n.c)([_.a], e.prototype, "getTagHeight", null),
+          Object(n.c)([_.a], e.prototype, "onPopularityChanged", null),
+          Object(n.c)([_.a], e.prototype, "onRecencyChanged", null),
+          Object(n.c)([_.a], e.prototype, "onTagFilterAdd", null),
+          Object(n.c)([_.a], e.prototype, "onTagFilterRemove", null),
+          Object(n.c)([_.a], e.prototype, "onTagExcludeAdd", null),
+          Object(n.c)([_.a], e.prototype, "onTagExcludeRemove", null),
+          Object(n.c)([_.a], e.prototype, "doTagsPassFilter", null),
+          Object(n.c)([_.a], e.prototype, "doTagsFailExclusion", null),
+          Object(n.c)([_.a], e.prototype, "onExcludeWishlistedToggled", null),
+          Object(n.c)([_.a], e.prototype, "onSaveUserSettings", null),
+          Object(n.c)([_.a], e.prototype, "onToggleIgnore", null),
+          Object(n.c)([_.a], e.prototype, "onUpdateWithIgnored", null),
+          Object(n.c)([_.a], e.prototype, "onAppClicked", null),
+          Object(n.c)([_.a], e.prototype, "onAddToWishlist", null),
+          Object(n.c)([_.a], e.prototype, "onGoToWishlist", null),
+          Object(n.c)([_.a], e.prototype, "onAddToCart", null),
+          Object(n.c)([_.a], e.prototype, "onMuteClicked", null),
+          Object(n.c)([_.a], e.prototype, "onUnMuteClicked", null),
+          Object(n.c)([_.a], e.prototype, "shouldMute", null),
+          Object(n.c)([_.a], e.prototype, "shouldUseMicrotrailers", null),
           e
         );
       })())();
-      window.g_InteractiveRecommender = V;
-      var E,
-        f = a("BFsE");
-      (E = Object(o.h)("ir_config", "application_config")) &&
-        (Object.assign(k, E), V.Init());
-      function b(e) {
-        e.accountID;
-        var t = V.getInputApps(),
-          a = Object.keys(t).length,
-          i = 0;
-        return (
-          Object.keys(t).map(function (e) {
-            i += t[e].p;
-          }),
-          P.a.createElement(
-            "div",
-            { className: F.IdentityBlock },
-            P.a.createElement("img", {
-              className: F.Avatar,
-              src: k.AVATAR_URL,
+      window.g_InteractiveRecommender = T;
+      var O,
+        R = a("BFsE");
+      (O = Object(r.h)("ir_config", "application_config")) &&
+        (Object.assign(y, O), T.Init());
+      var N = function (e) {
+          e.accountID;
+          var t = T.getInputApps(),
+            a = Object.keys(t).length,
+            i = 0;
+          return (
+            Object.keys(t).map(function (e) {
+              i += t[e].p;
             }),
-            P.a.createElement(
+            l.a.createElement(
               "div",
-              { className: F.PersonalInfo },
-              P.a.createElement(
+              { className: h.IdentityBlock },
+              l.a.createElement("img", {
+                className: h.Avatar,
+                src: y.AVATAR_URL,
+              }),
+              l.a.createElement(
                 "div",
-                { className: F.Persona },
-                k.PERSONA_NAME
-              ),
-              P.a.createElement(
-                "div",
-                { className: F.GameCount },
-                Object(x.f)("#PlaytimeList_RecentGames", a)
-              ),
-              P.a.createElement(
-                "div",
-                { className: F.TotalTime },
-                Object(x.f)("#PlaytimeList_HoursTotal", i)
+                { className: h.PersonalInfo },
+                l.a.createElement(
+                  "div",
+                  { className: h.Persona },
+                  y.PERSONA_NAME
+                ),
+                l.a.createElement(
+                  "div",
+                  { className: h.GameCount },
+                  Object(p.f)("#PlaytimeList_RecentGames", a)
+                ),
+                l.a.createElement(
+                  "div",
+                  { className: h.TotalTime },
+                  Object(p.f)("#PlaytimeList_HoursTotal", i)
+                )
               )
             )
-          )
-        );
-      }
-      function S(e) {
-        var t = e.appID,
-          a = e.name,
-          i = e.hours,
-          n = e.lastPlayed,
-          r = e.ignored,
-          o = k.CDN_URL + "apps/" + t + "/header.jpg",
-          s = Date.now() / 1e3 - n,
-          c = "",
-          l = "",
-          l =
+          );
+        },
+        L = function (e) {
+          var t = e.appID,
+            a = e.name,
+            i = e.hours,
+            n = e.lastPlayed,
+            r = e.ignored,
+            o = y.CDN_URL + "apps/" + t + "/header.jpg",
+            s = Date.now() / 1e3 - n,
+            c = "",
+            d = "";
+          return (
             n <= 86400
-              ? Object(x.f)("#PlaytimeList_LastPlayedMax")
-              : ((c = 31449600 < s ? Object(x.o)(n) : Object(x.q)(s)),
-                Object(x.f)("#PlaytimeList_LastPlayed", c));
-        return P.a.createElement(
-          "div",
-          { className: Object(M.a)(F.PlayedGame, r && F.Ignored) },
-          P.a.createElement(
-            "a",
-            { href: k.BASE_URL + "app/" + t + "?snr=" + k.LINK_PARAM },
-            P.a.createElement("img", { className: F.Logo, src: o })
-          ),
-          P.a.createElement(
-            "div",
-            { className: F.PlaytimeInfo },
-            P.a.createElement(
+              ? (d = Object(p.f)("#PlaytimeList_LastPlayedMax"))
+              : s > 31449600
+              ? ((c = Object(p.o)(n)),
+                (d = Object(p.f)("#PlaytimeList_LastPlayed", c)))
+              : ((c = Object(p.q)(s)),
+                (d = Object(p.f)("#PlaytimeList_LastPlayed", c))),
+            l.a.createElement(
               "div",
-              { className: F.HoursPlayed },
-              Object(x.f)("#PlaytimeList_Hours", i)
-            ),
-            P.a.createElement("div", { className: F.Title }, a),
-            P.a.createElement("div", { className: F.LastPlayed }, l),
-            P.a.createElement(
-              "div",
-              {
-                className: F.IgnoreToggle,
-                onClick: function () {
-                  return V.onToggleIgnore(t);
-                },
-              },
-              Object(x.f)(r ? "#PlaytimeList_UnIgnore" : "#PlaytimeList_Ignore")
+              { className: Object(u.a)(h.PlayedGame, r && h.Ignored) },
+              l.a.createElement(
+                "a",
+                { href: y.BASE_URL + "app/" + t + "?snr=" + y.LINK_PARAM },
+                l.a.createElement("img", { className: h.Logo, src: o })
+              ),
+              l.a.createElement(
+                "div",
+                { className: h.PlaytimeInfo },
+                l.a.createElement(
+                  "div",
+                  { className: h.HoursPlayed },
+                  Object(p.f)("#PlaytimeList_Hours", i)
+                ),
+                l.a.createElement("div", { className: h.Title }, a),
+                l.a.createElement("div", { className: h.LastPlayed }, d),
+                l.a.createElement(
+                  "div",
+                  {
+                    className: h.IgnoreToggle,
+                    onClick: function () {
+                      return T.onToggleIgnore(t);
+                    },
+                  },
+                  Object(p.f)(
+                    r ? "#PlaytimeList_UnIgnore" : "#PlaytimeList_Ignore"
+                  )
+                )
+              )
             )
-          )
-        );
-      }
-      function y(e) {
-        var t = e.titleLabel,
-          a = e.minLabel,
-          i = e.maxLabel,
-          n = e.minValue,
-          r = e.maxValue,
-          o = e.value,
-          s = e.onChange,
-          c = e.sliderLabels,
-          l = c ? Math.round((c.length - 1) * ((o - n) / (r - n))) : void 0,
-          d = c ? c[l] : "";
-        return P.a.createElement(
-          "div",
-          { className: F.OptionSlider },
-          P.a.createElement("div", { className: F.Title }, t),
-          P.a.createElement(
-            "div",
-            { className: F.Labels },
-            P.a.createElement("div", { className: F.Min }, a),
-            P.a.createElement("div", { className: F.Max }, i)
-          ),
-          P.a.createElement("input", {
-            type: "range",
-            min: n,
-            max: r,
-            step: (r - n) / 100,
-            value: o,
-            onChange: s,
-          }),
-          P.a.createElement("div", { className: F.OptionalLabel }, d)
-        );
-      }
-      function T(e) {
-        var t = e.className,
-          a = e.titleLabel,
-          i = e.checked,
-          n = e.onChange;
-        return P.a.createElement(
-          "label",
-          { className: Object(M.a)(F.OptionCheckbox, t && t) },
-          P.a.createElement("input", {
-            type: "checkbox",
-            className: F.Checkbox,
-            checked: i,
-            onChange: n,
-          }),
-          a
-        );
-      }
-      var O = (function (a) {
-          function e(e) {
-            var t = a.call(this, e) || this;
-            return (t.state = {}), t;
+          );
+        },
+        I = (function (e) {
+          function t(t) {
+            var a = e.call(this, t) || this;
+            return (a.state = {}), a;
           }
           return (
-            Object(u.d)(e, a),
-            (e.prototype.render = function () {
-              var e = V.getInputApps(),
-                a = [];
+            Object(n.d)(t, e),
+            (t.prototype.render = function () {
+              var e = T.getInputApps(),
+                t = [];
               if (!e)
-                return P.a.createElement(
+                return l.a.createElement(
                   "div",
-                  { className: F.PlaytimeList },
-                  P.a.createElement(
+                  { className: h.PlaytimeList },
+                  l.a.createElement(
                     "div",
-                    { className: F.Header },
-                    Object(x.f)("#PlaytimeList_Header")
+                    { className: h.Header },
+                    Object(p.f)("#PlaytimeList_Header")
                   ),
-                  P.a.createElement("div", { className: F.Loading })
+                  l.a.createElement("div", { className: h.Loading })
                 );
-              V.getAppInfo();
-              var i = e.slice().sort(function (e, t) {
+              T.getAppInfo();
+              var a = e.slice().sort(function (e, t) {
                 return t.l - e.l;
               });
               return (
-                Object.keys(i).map(function (e) {
-                  var t = i[e];
-                  a.push(
-                    P.a.createElement(S, {
-                      key: "PlayedGame_" + t.a,
-                      appID: t.a,
-                      name: t.t,
-                      hours: t.p,
-                      lastPlayed: t.l,
-                      ignored: t.i || t.ip,
+                Object.keys(a).map(function (e) {
+                  var i = a[e];
+                  t.push(
+                    l.a.createElement(L, {
+                      key: "PlayedGame_" + i.a,
+                      appID: i.a,
+                      name: i.t,
+                      hours: i.p,
+                      lastPlayed: i.l,
+                      ignored: i.i || i.ip,
                     })
                   );
                 }),
-                P.a.createElement(
+                l.a.createElement(
                   "div",
-                  { className: F.PlaytimeList },
-                  P.a.createElement(
+                  { className: h.PlaytimeList },
+                  l.a.createElement(
                     "div",
-                    { className: F.Header },
-                    Object(x.f)("#PlaytimeList_Header")
+                    { className: h.Header },
+                    Object(p.f)("#PlaytimeList_Header")
                   ),
-                  P.a.createElement(b, { accountID: this.props.accountID }),
-                  P.a.createElement("div", { className: F.List }, a)
+                  l.a.createElement(N, { accountID: this.props.accountID }),
+                  l.a.createElement("div", { className: h.List }, t)
                 )
               );
             }),
-            (e = Object(u.c)([n.a], e))
+            (t = Object(n.c)([o.a], t))
           );
-        })(P.a.Component),
-        R = (function (a) {
-          function e(e) {
-            var t = a.call(this, e) || this;
+        })(l.a.Component),
+        C = function (e) {
+          var t = e.titleLabel,
+            a = e.minLabel,
+            i = e.maxLabel,
+            n = e.minValue,
+            r = e.maxValue,
+            o = e.value,
+            s = e.onChange,
+            c = e.sliderLabels,
+            d = c ? Math.round((c.length - 1) * ((o - n) / (r - n))) : void 0,
+            m = c ? c[d] : "";
+          return l.a.createElement(
+            "div",
+            { className: h.OptionSlider },
+            l.a.createElement("div", { className: h.Title }, t),
+            l.a.createElement(
+              "div",
+              { className: h.Labels },
+              l.a.createElement("div", { className: h.Min }, a),
+              l.a.createElement("div", { className: h.Max }, i)
+            ),
+            l.a.createElement("input", {
+              type: "range",
+              min: n,
+              max: r,
+              step: (r - n) / 100,
+              value: o,
+              onChange: s,
+            }),
+            l.a.createElement("div", { className: h.OptionalLabel }, m)
+          );
+        },
+        A = function (e) {
+          var t = e.className,
+            a = e.titleLabel,
+            i = e.checked,
+            n = e.onChange;
+          return l.a.createElement(
+            "label",
+            { className: Object(u.a)(h.OptionCheckbox, t && t) },
+            l.a.createElement("input", {
+              type: "checkbox",
+              className: h.Checkbox,
+              checked: i,
+              onChange: n,
+            }),
+            a
+          );
+        },
+        j = (function (e) {
+          function t(t) {
+            var a = e.call(this, t) || this;
             return (
-              (t.selectedtags = []),
-              (t.rgTags = []),
-              (t.selectedtags = Object(u.g)(e.selectedtags)),
-              (t.state = { value: "", suggestions: [] }),
-              t
+              (a.selectedtags = []),
+              (a.rgTags = []),
+              (a.selectedtags = Object(n.g)(t.selectedtags)),
+              (a.state = { value: "", suggestions: [] }),
+              a
             );
           }
           return (
-            Object(u.d)(e, a),
-            (e.prototype.componentDidMount = function () {
-              var e = V.getTags();
+            Object(n.d)(t, e),
+            (t.prototype.componentDidMount = function () {
+              var e = T.getTags();
               if (e)
                 for (var t = 0, a = e; t < a.length; t++) {
                   var i = a[t];
                   this.rgTags.push({ id: parseInt(i.tagid), name: i.name });
                 }
             }),
-            (e.prototype.onFetchRequested = function (e) {
+            (t.prototype.onFetchRequested = function (e) {
               var t = e.value.trim().toLowerCase(),
                 a = t.length,
                 i =
@@ -913,11 +922,11 @@
                       });
               this.setState({ suggestions: i });
             }),
-            (e.prototype.onClearRequested = function () {}),
-            (e.prototype.onChange = function (e, t) {
+            (t.prototype.onClearRequested = function () {}),
+            (t.prototype.onChange = function (e, t) {
               this.setState({ value: t.newValue });
             }),
-            (e.prototype.onKeyDown = function (e) {
+            (t.prototype.onKeyDown = function (e) {
               if (13 == e.keyCode)
                 for (var t = 0, a = this.props.tagoptions; t < a.length; t++) {
                   var i = a[t];
@@ -934,17 +943,17 @@
                   }
                 }
             }),
-            (e.prototype.shouldRenderSuggestions = function (e) {
+            (t.prototype.shouldRenderSuggestions = function (e) {
               return !0;
             }),
-            (e.prototype.onSuggestionSelected = function (e, t) {
+            (t.prototype.onSuggestionSelected = function (e, t) {
               for (var a = 0, i = this.selectedtags; a < i.length; a++) {
                 if (i[a] == t.suggestion.id) return;
               }
               this.selectedtags.push(t.suggestion.id),
                 this.props.onAddTag(t.suggestion.id);
             }),
-            (e.prototype.onRemoveSelectedTag = function (e) {
+            (t.prototype.onRemoveSelectedTag = function (e) {
               for (var t = 0; t < this.selectedtags.length; t++)
                 if (this.selectedtags[t] == e) {
                   this.props.onRemoveTag(this.selectedtags[t]),
@@ -952,48 +961,49 @@
                   break;
                 }
             }),
-            (e.prototype.render = function () {
+            (t.prototype.render = function () {
               for (
-                var a = this,
-                  e = {
-                    placeholder: Object(x.f)("#TagSelect"),
+                var e = this,
+                  t = {
+                    placeholder: Object(p.f)("#TagSelect"),
                     value: this.state.value,
                     onChange: this.onChange,
                     onKeyDown: this.onKeyDown,
                   },
-                  i = [],
-                  t = 0,
-                  n = this.selectedtags;
-                t < n.length;
-                t++
-              ) {
-                !(function (t) {
-                  var e = V.m_TagNameMap.get(t);
-                  i.push(
-                    P.a.createElement(
-                      "div",
-                      {
-                        key: t,
-                        className: F.SelectedTag,
-                        onClick: function (e) {
-                          return a.onRemoveSelectedTag(t);
+                  a = [],
+                  i = function (t) {
+                    var i = T.m_TagNameMap.get(t);
+                    a.push(
+                      l.a.createElement(
+                        "div",
+                        {
+                          key: t,
+                          className: h.SelectedTag,
+                          onClick: function (a) {
+                            return e.onRemoveSelectedTag(t);
+                          },
                         },
-                      },
-                      P.a.createElement("div", null, e),
-                      P.a.createElement("div", { className: F.Close }, "X")
-                    )
-                  );
-                })(n[t]);
+                        l.a.createElement("div", null, i),
+                        l.a.createElement("div", { className: h.Close }, "X")
+                      )
+                    );
+                  },
+                  n = 0,
+                  r = this.selectedtags;
+                n < r.length;
+                n++
+              ) {
+                i(r[n]);
               }
-              return P.a.createElement(
+              return l.a.createElement(
                 "div",
-                { className: F.OptionTagList },
-                P.a.createElement(
+                { className: h.OptionTagList },
+                l.a.createElement(
                   "div",
-                  { className: F.Label },
+                  { className: h.Label },
                   this.props.title
                 ),
-                P.a.createElement(m.a, {
+                l.a.createElement(v.a, {
                   suggestions: this.state.suggestions,
                   onSuggestionsFetchRequested: this.onFetchRequested,
                   onSuggestionsClearRequested: this.onClearRequested,
@@ -1003,32 +1013,32 @@
                     return e.name;
                   },
                   renderSuggestion: function (e) {
-                    return P.a.createElement("div", null, e.name);
+                    return l.a.createElement("div", null, e.name);
                   },
-                  inputProps: e,
+                  inputProps: t,
                   theme: {
-                    input: F.SuggestionInput,
-                    suggestion: F.OptionSuggestion,
-                    suggestionsList: F.SuggestionsList,
-                    suggestionsContainerOpen: F.SuggestionContainerOpen,
+                    input: h.SuggestionInput,
+                    suggestion: h.OptionSuggestion,
+                    suggestionsList: h.SuggestionsList,
+                    suggestionsContainerOpen: h.SuggestionContainerOpen,
                   },
                 }),
-                i
+                a
               );
             }),
-            Object(u.c)([s.C], e.prototype, "selectedtags", void 0),
-            Object(u.c)([l.a], e.prototype, "onFetchRequested", null),
-            Object(u.c)([l.a], e.prototype, "onClearRequested", null),
-            Object(u.c)([l.a], e.prototype, "onChange", null),
-            Object(u.c)([l.a], e.prototype, "onKeyDown", null),
-            Object(u.c)([l.a], e.prototype, "shouldRenderSuggestions", null),
-            Object(u.c)([l.a], e.prototype, "onSuggestionSelected", null),
-            Object(u.c)([l.a], e.prototype, "onRemoveSelectedTag", null),
-            (e = Object(u.c)([n.a], e))
+            Object(n.c)([s.C], t.prototype, "selectedtags", void 0),
+            Object(n.c)([_.a], t.prototype, "onFetchRequested", null),
+            Object(n.c)([_.a], t.prototype, "onClearRequested", null),
+            Object(n.c)([_.a], t.prototype, "onChange", null),
+            Object(n.c)([_.a], t.prototype, "onKeyDown", null),
+            Object(n.c)([_.a], t.prototype, "shouldRenderSuggestions", null),
+            Object(n.c)([_.a], t.prototype, "onSuggestionSelected", null),
+            Object(n.c)([_.a], t.prototype, "onRemoveSelectedTag", null),
+            (t = Object(n.c)([o.a], t))
           );
-        })(P.a.Component),
-        j = Object(n.a)(function () {
-          var e = V.getTags(),
+        })(l.a.Component),
+        D = Object(o.a)(function () {
+          var e = T.getTags(),
             t = [];
           if (e)
             for (var a = 0, i = e; a < i.length; a++) {
@@ -1036,466 +1046,470 @@
               t.push({ id: parseInt(n.tagid), name: n.name });
             }
           var r = [
-              Object(x.f)("#FilterAge_120"),
-              Object(x.f)("#FilterAge_60"),
-              Object(x.f)("#FilterAge_36"),
-              Object(x.f)("#FilterAge_24"),
-              Object(x.f)("#FilterAge_12"),
-              Object(x.f)("#FilterAge_6"),
+              Object(p.f)("#FilterAge_120"),
+              Object(p.f)("#FilterAge_60"),
+              Object(p.f)("#FilterAge_36"),
+              Object(p.f)("#FilterAge_24"),
+              Object(p.f)("#FilterAge_12"),
+              Object(p.f)("#FilterAge_6"),
             ],
-            o = V.m_rgSavedExcludeTags,
-            s = V.m_rgSavedFilterTags;
-          return P.a.createElement(
+            o = T.m_rgSavedExcludeTags,
+            s = T.m_rgSavedFilterTags;
+          return l.a.createElement(
             "div",
-            { className: F.RecommendationOptions },
-            P.a.createElement(
+            { className: h.RecommendationOptions },
+            l.a.createElement(
               "div",
-              { className: Object(M.a)(F.Row, F.FirstRow) },
-              P.a.createElement(y, {
-                minLabel: Object(x.f)("#Popularity_Popular"),
-                titleLabel: Object(x.f)("#Popularity_Title"),
-                maxLabel: Object(x.f)("#Popularity_Niche"),
+              { className: Object(u.a)(h.Row, h.FirstRow) },
+              l.a.createElement(C, {
+                minLabel: Object(p.f)("#Popularity_Popular"),
+                titleLabel: Object(p.f)("#Popularity_Title"),
+                maxLabel: Object(p.f)("#Popularity_Niche"),
                 minValue: 0,
                 maxValue: 1,
-                value: V.m_fQueuedPopularityValue,
-                onChange: V.onPopularityChanged,
+                value: T.m_fQueuedPopularityValue,
+                onChange: T.onPopularityChanged,
               }),
-              P.a.createElement(y, {
-                minLabel: Object(x.f)("#Recency_Older"),
-                titleLabel: Object(x.f)("#Recency_Title"),
-                maxLabel: Object(x.f)("#Recency_Newer"),
+              l.a.createElement(C, {
+                minLabel: Object(p.f)("#Recency_Older"),
+                titleLabel: Object(p.f)("#Recency_Title"),
+                maxLabel: Object(p.f)("#Recency_Newer"),
                 minValue: 0,
                 maxValue: 1,
-                value: V.m_fQueuedRecencyValue,
-                onChange: V.onRecencyChanged,
+                value: T.m_fQueuedRecencyValue,
+                onChange: T.onRecencyChanged,
                 sliderLabels: r,
               })
             ),
-            P.a.createElement(
+            l.a.createElement(
               "div",
-              { className: Object(M.a)(F.Row, F.SecondRow) },
-              P.a.createElement(R, {
-                title: Object(x.f)("#TagFilterMultiple_Title"),
+              { className: Object(u.a)(h.Row, h.SecondRow) },
+              l.a.createElement(j, {
+                title: Object(p.f)("#TagFilterMultiple_Title"),
                 tagoptions: t,
                 selectedtags: s,
                 key: "Filter" + s.toString(),
-                onAddTag: V.onTagFilterAdd,
-                onRemoveTag: V.onTagFilterRemove,
+                onAddTag: T.onTagFilterAdd,
+                onRemoveTag: T.onTagFilterRemove,
               }),
-              P.a.createElement(R, {
-                title: Object(x.f)("#TagExcludeMultiple_Title"),
+              l.a.createElement(j, {
+                title: Object(p.f)("#TagExcludeMultiple_Title"),
                 tagoptions: t,
                 selectedtags: o,
                 key: "Exclude" + o.toString(),
-                onAddTag: V.onTagExcludeAdd,
-                onRemoveTag: V.onTagExcludeRemove,
+                onAddTag: T.onTagExcludeAdd,
+                onRemoveTag: T.onTagExcludeRemove,
               }),
-              P.a.createElement(T, {
-                className: F.WishlistCheckbox,
-                titleLabel: Object(x.f)("#ExcludeWishlisted"),
-                checked: V.m_bExcludeWishlisted,
-                onChange: V.onExcludeWishlistedToggled,
+              l.a.createElement(A, {
+                className: h.WishlistCheckbox,
+                titleLabel: Object(p.f)("#ExcludeWishlisted"),
+                checked: T.m_bExcludeWishlisted,
+                onChange: T.onExcludeWishlistedToggled,
               }),
-              P.a.createElement(
+              l.a.createElement(
                 "button",
                 {
-                  className: F.SaveUserSettingsButton,
-                  onClick: V.onSaveUserSettings,
-                  title: Object(x.f)("#SaveUserSettingsTooltip"),
+                  className: h.SaveUserSettingsButton,
+                  onClick: T.onSaveUserSettings,
+                  title: Object(p.f)("#SaveUserSettingsTooltip"),
                 },
-                Object(x.f)("#SaveUserSettings")
+                Object(p.f)("#SaveUserSettings")
               )
             )
           );
         }),
-        D = (function (a) {
-          function e(e) {
-            var t = a.call(this, e) || this;
+        P = (function (e) {
+          function t(t) {
+            var a = e.call(this, t) || this;
             return (
-              (t.m_videoRef = P.a.createRef()),
-              (t.state = {
+              (a.m_videoRef = l.a.createRef()),
+              (a.state = {
                 hovered: !1,
-                wishlisted: V.getAppInfo()[e.appID].w,
+                wishlisted: T.getAppInfo()[t.appID].w,
               }),
-              t
+              a
             );
           }
           return (
-            Object(u.d)(e, a),
-            (e.prototype.componentDidMount = function () {
+            Object(n.d)(t, e),
+            (t.prototype.componentDidMount = function () {
               this.m_videoRef.current.defaultMuted = !0;
             }),
-            (e.prototype.componentDidUpdate = function () {
-              var e;
-              this.state.hovered &&
+            (t.prototype.componentDidUpdate = function () {
+              if (
+                this.state.hovered &&
                 this.m_videoRef &&
                 this.m_videoRef.current &&
-                0 == this.m_videoRef.current.currentTime &&
-                (e = this.m_videoRef.current.play()) &&
-                e.then(
-                  function () {},
-                  function () {}
-                );
+                0 == this.m_videoRef.current.currentTime
+              ) {
+                var e = this.m_videoRef.current.play();
+                e &&
+                  e.then(
+                    function () {},
+                    function () {}
+                  );
+              }
             }),
-            (e.prototype.OnHover = function () {
+            (t.prototype.OnHover = function () {
               this.setState({ hovered: !0 });
             }),
-            (e.prototype.OnUnHover = function () {
+            (t.prototype.OnUnHover = function () {
               this.setState({ hovered: !1 }),
                 this.m_videoRef &&
                   this.m_videoRef.current &&
                   ((this.m_videoRef.current.currentTime = 0),
                   this.m_videoRef.current.pause());
             }),
-            (e.prototype.onMuteToggle = function (e) {
-              V.shouldMute()
-                ? (V.onUnMuteClicked(),
+            (t.prototype.onMuteToggle = function (e) {
+              T.shouldMute()
+                ? (T.onUnMuteClicked(),
                   this.m_videoRef &&
                     this.m_videoRef.current &&
                     (this.m_videoRef.current.muted = !1))
-                : (V.onMuteClicked(),
+                : (T.onMuteClicked(),
                   this.m_videoRef &&
                     this.m_videoRef.current &&
                     (this.m_videoRef.current.muted = !0)),
                 e.preventDefault(),
                 e.stopPropagation();
             }),
-            (e.prototype.onAddToWishlist = function (e) {
-              V.onAddToWishlist(this.props.appID, this.props.rank),
+            (t.prototype.onAddToWishlist = function (e) {
+              T.onAddToWishlist(this.props.appID, this.props.rank),
                 this.setState({ wishlisted: !0 }),
                 e.preventDefault(),
                 e.stopPropagation();
             }),
-            (e.prototype.onGoToWishlist = function (e) {
-              V.onGoToWishlist(), e.preventDefault(), e.stopPropagation();
+            (t.prototype.onGoToWishlist = function (e) {
+              T.onGoToWishlist(), e.preventDefault(), e.stopPropagation();
             }),
-            (e.prototype.onAddToCart = function (e) {
-              V.onAddToCart(this.props.appID, this.props.rank),
+            (t.prototype.onAddToCart = function (e) {
+              T.onAddToCart(this.props.appID, this.props.rank),
                 e.preventDefault(),
                 e.stopPropagation();
             }),
-            (e.prototype.render = function () {
-              var t = this,
-                e = this.props,
-                a = e.appID,
-                i = e.score,
-                n = e.rank,
-                r = e.width,
+            (t.prototype.render = function () {
+              var e = this,
+                t = this.props,
+                a = t.appID,
+                i = t.score,
+                n = t.rank,
+                r = t.width,
                 o =
                   "https://steamcdn-a.akamaihd.net/steam/apps/" +
                   a +
                   "/header.jpg",
-                s = V.getAppInfo()[a];
-              if (!s) return P.a.createElement("div", null);
+                s = T.getAppInfo()[a];
+              if (!s) return l.a.createElement("div", null);
               var c = s.n,
-                l =
-                  0 < s.r
-                    ? Object(x.f)(
+                _ =
+                  s.r > 0
+                    ? Object(p.f)(
                         "#Recommendation_ReleasedOn",
-                        Object(x.o)(s.r)
+                        Object(p.o)(s.r)
                       )
                     : "",
-                d = [];
+                g = [];
               if (s.t)
-                for (var m = 0, u = 0, p = s.t; u < p.length; u++) {
-                  var _ = p[u];
+                for (var v = 0, E = 0, f = s.t; E < f.length; E++) {
+                  var b = f[E];
                   if (
-                    (d.push(
-                      P.a.createElement(
+                    (g.push(
+                      l.a.createElement(
                         "div",
-                        { key: a + "_" + _, className: F.Tag },
-                        V.getTagName(_)
+                        { key: a + "_" + b, className: h.Tag },
+                        T.getTagName(b)
                       )
                     ),
-                    5 == ++m)
+                    5 == ++v)
                   )
                     break;
                 }
-              var h = parseInt(F.smallentrywidth),
-                g = parseInt(F.optionswrapwidth),
-                v = 112,
-                E = !0;
-              r < h ? (E = !(v = 66)) : r < g && (E = !(v = 87));
-              var f,
-                b = E && this.state.hovered,
-                S = Math.min(Number(i) / 10, 1e3),
-                y = (Math.max(1, i), !1),
-                T = !1,
-                O = !0,
-                R = "",
-                N = "",
-                I = "",
-                L = "",
-                C = "",
+              var S = parseInt(h.smallentrywidth),
+                O = parseInt(h.optionswrapwidth),
+                R = 112,
+                N = !0;
+              r < S ? ((R = 66), (N = !1)) : r < O && ((R = 87), (N = !1));
+              var L = N && this.state.hovered,
+                I = Math.min(Number(i) / 10, 1e3),
+                C = (Math.max(1, i), !1),
                 A = !1,
-                j = !0;
-              !b ||
-                ((f = V.getDetails(this.props.appID)) &&
-                  ((y = !0),
-                  (T = 0 < f.discount_pct),
-                  (O = "0" == f.discount_price),
+                j = !0,
+                D = "",
+                P = "",
+                U = "",
+                w = "",
+                M = "",
+                x = !1,
+                F = !0;
+              if (L) {
+                var k = T.getDetails(this.props.appID);
+                k &&
+                  ((C = !0),
+                  (A = k.discount_pct > 0),
+                  (j = "0" == k.discount_price),
                   "probably" ==
                   document
                     .createElement("video")
                     .canPlayType('video/webm; codecs="vp8, vorbis"')
-                    ? V.shouldUseMicrotrailers() && f.microtrailer_webm
-                      ? ((C = f.microtrailer_webm), (j = !(A = !0)))
-                      : (C = f.video_webm)
-                    : V.shouldUseMicrotrailers() && f.microtrailer_mp4
-                    ? ((C = f.microtrailer_mp4), (j = !(A = !0)))
-                    : (C = f.video_mp4),
-                  (R = "-" + f.discount_pct + "%"),
-                  (N = f.base_price),
-                  (I = O ? Object(x.f)("#FreeToPlay") : f.discount_price),
-                  (L = f.description)));
-              var D = C && 0 < C.length;
-              return P.a.createElement(
-                U.a,
-                { appID: a, snr: k.LINK_PARAM },
-                P.a.createElement(
+                    ? T.shouldUseMicrotrailers() && k.microtrailer_webm
+                      ? ((M = k.microtrailer_webm), (x = !0), (F = !1))
+                      : (M = k.video_webm)
+                    : T.shouldUseMicrotrailers() && k.microtrailer_mp4
+                    ? ((M = k.microtrailer_mp4), (x = !0), (F = !1))
+                    : (M = k.video_mp4),
+                  (D = "-" + k.discount_pct + "%"),
+                  (P = k.base_price),
+                  (U = j ? Object(p.f)("#FreeToPlay") : k.discount_price),
+                  (w = k.description));
+              }
+              var V = M && M.length > 0;
+              return l.a.createElement(
+                d.a,
+                { appID: a, snr: y.LINK_PARAM },
+                l.a.createElement(
                   "a",
                   {
-                    href: k.BASE_URL + "app/" + a + "?snr=" + k.LINK_PARAM,
+                    href: y.BASE_URL + "app/" + a + "?snr=" + y.LINK_PARAM,
                     onClick: function () {
-                      return V.onAppClicked(a, n);
+                      return T.onAppClicked(a, n);
                     },
-                    className: Object(M.a)(
-                      F.RecommendationEntry,
+                    className: Object(u.a)(
+                      h.RecommendationEntry,
                       "ds_flagged",
                       "ds_wishlist",
-                      30 < n && F.Hidden,
-                      b && F.Hovered
+                      n > 30 && h.Hidden,
+                      L && h.Hovered
                     ),
-                    style: { top: Math.min(31, n) * v },
+                    style: { top: Math.min(31, n) * R },
                     onMouseEnter: this.OnHover,
                     onMouseLeave: this.OnUnHover,
                   },
-                  P.a.createElement(
+                  l.a.createElement(
                     "div",
-                    { className: F.TopEntrySection },
-                    P.a.createElement(
+                    { className: h.TopEntrySection },
+                    l.a.createElement(
                       "div",
-                      { className: F.LeftSection },
-                      P.a.createElement("img", {
-                        className: Object(M.a)(
-                          F.Logo,
-                          (!D || !b) && F.Revealed
+                      { className: h.LeftSection },
+                      l.a.createElement("img", {
+                        className: Object(u.a)(
+                          h.Logo,
+                          (!V || !L) && h.Revealed
                         ),
                         src: o,
                       }),
-                      P.a.createElement("video", {
+                      l.a.createElement("video", {
                         ref: this.m_videoRef,
-                        className: Object(M.a)(
+                        className: Object(u.a)(
                           "highlight_player_item",
                           "highlight_movie",
-                          F.Video,
-                          D && b && F.Revealed
+                          h.Video,
+                          V && L && h.Revealed
                         ),
                         playsInline: !0,
                         autoPlay: !0,
-                        muted: j && V.shouldMute(),
-                        src: C,
-                        loop: A,
+                        muted: F && T.shouldMute(),
+                        src: M,
+                        loop: x,
                       }),
-                      j &&
-                        P.a.createElement(
+                      F &&
+                        l.a.createElement(
                           "div",
                           {
-                            className: Object(M.a)(F.UnMute, D && F.Revealed),
-                            onClick: function (e) {
-                              return t.onMuteToggle(e);
+                            className: Object(u.a)(h.UnMute, V && h.Revealed),
+                            onClick: function (t) {
+                              return e.onMuteToggle(t);
                             },
                           },
-                          P.a.createElement(w.lb, { muted: V.shouldMute() })
+                          l.a.createElement(m.lb, { muted: T.shouldMute() })
                         ),
                       this.state.wishlisted &&
-                        P.a.createElement(
+                        l.a.createElement(
                           "div",
                           {
-                            className: Object(M.a)(
+                            className: Object(u.a)(
                               "ds_flag",
                               "ds_wishlist_flag",
-                              F.WishlistFlag
+                              h.WishlistFlag
                             ),
                           },
-                          Object(x.f)("#Recommendation_OnWishlist") + "  "
+                          Object(p.f)("#Recommendation_OnWishlist") + "  "
                         )
                     ),
-                    P.a.createElement(
+                    l.a.createElement(
                       "div",
-                      { className: F.RightSection },
-                      P.a.createElement("div", { className: F.Name }, c),
-                      P.a.createElement(
+                      { className: h.RightSection },
+                      l.a.createElement("div", { className: h.Name }, c),
+                      l.a.createElement(
                         "div",
-                        { className: F.CenterSection },
-                        P.a.createElement(
+                        { className: h.CenterSection },
+                        l.a.createElement(
                           "div",
                           {
-                            className: Object(M.a)(
-                              F.CenterOption,
-                              F.CenterDefault,
-                              b && F.Hidden
+                            className: Object(u.a)(
+                              h.CenterOption,
+                              h.CenterDefault,
+                              L && h.Hidden
                             ),
                           },
-                          P.a.createElement(
+                          l.a.createElement(
                             "div",
-                            { className: F.Released },
-                            l
+                            { className: h.Released },
+                            _
                           ),
-                          P.a.createElement(
+                          l.a.createElement(
                             "div",
-                            { className: F.BarContainer },
-                            P.a.createElement("div", {
-                              className: F.Bar,
-                              style: { width: S + "%" },
+                            { className: h.BarContainer },
+                            l.a.createElement("div", {
+                              className: h.Bar,
+                              style: { width: I + "%" },
                             })
                           ),
-                          P.a.createElement("div", { className: F.Tags }, d)
+                          l.a.createElement("div", { className: h.Tags }, g)
                         ),
-                        P.a.createElement(
+                        l.a.createElement(
                           "div",
                           {
-                            className: Object(M.a)(
-                              F.CenterOption,
-                              F.CenterHovered,
-                              !b && F.Hidden
+                            className: Object(u.a)(
+                              h.CenterOption,
+                              h.CenterHovered,
+                              !L && h.Hidden
                             ),
                           },
-                          L
+                          w
                         )
                       ),
-                      y &&
-                        P.a.createElement(
+                      C &&
+                        l.a.createElement(
                           "div",
-                          { className: F.BottomEntrySection },
-                          P.a.createElement(
+                          { className: h.BottomEntrySection },
+                          l.a.createElement(
                             "div",
                             {
-                              className: Object(M.a)(
+                              className: Object(u.a)(
                                 "game_purchase_action",
-                                F.PurchaseSection
+                                h.PurchaseSection
                               ),
                             },
-                            P.a.createElement(
+                            l.a.createElement(
                               "div",
                               {
-                                className: Object(M.a)(
+                                className: Object(u.a)(
                                   "game_purchase_action_bg",
-                                  F.PurchaseBG
+                                  h.PurchaseBG
                                 ),
                               },
-                              T &&
-                                P.a.createElement(
+                              A &&
+                                l.a.createElement(
                                   "div",
                                   {
                                     className:
                                       "discount_block game_purchase_discount",
                                   },
-                                  P.a.createElement(
+                                  l.a.createElement(
                                     "div",
                                     { className: "discount_pct" },
-                                    R
+                                    D
                                   ),
-                                  P.a.createElement(
+                                  l.a.createElement(
                                     "div",
                                     { className: "discount_prices" },
-                                    P.a.createElement(
+                                    l.a.createElement(
                                       "div",
                                       { className: "discount_original_price" },
-                                      N
+                                      P
                                     ),
-                                    P.a.createElement(
+                                    l.a.createElement(
                                       "div",
                                       { className: "discount_final_price" },
-                                      I
+                                      U
                                     )
                                   )
                                 ),
-                              !T &&
-                                P.a.createElement(
+                              !A &&
+                                l.a.createElement(
                                   "div",
                                   {
-                                    className: Object(M.a)(
+                                    className: Object(u.a)(
                                       "game_purchase_price",
                                       "price",
-                                      F.Price
+                                      h.Price
                                     ),
                                   },
-                                  I
+                                  U
                                 ),
-                              !O &&
-                                P.a.createElement(
+                              !j &&
+                                l.a.createElement(
                                   "div",
                                   {
                                     className: "btn_addtocart",
-                                    onClick: function (e) {
-                                      return t.onAddToCart(e);
+                                    onClick: function (t) {
+                                      return e.onAddToCart(t);
                                     },
                                   },
-                                  P.a.createElement(
+                                  l.a.createElement(
                                     "span",
                                     {
                                       className:
                                         "btnv6_green_white_innerfade btn_medium",
                                     },
-                                    P.a.createElement(
+                                    l.a.createElement(
                                       "span",
                                       null,
-                                      Object(x.f)("#btn_add_to_cart")
+                                      Object(p.f)("#btn_add_to_cart")
                                     )
                                   )
                                 )
                             )
                           ),
                           !this.state.wishlisted &&
-                            !O &&
-                            P.a.createElement(
+                            !j &&
+                            l.a.createElement(
                               "div",
                               {
                                 id: "add_to_wishlist_area",
-                                className: F.WishlistSection,
-                                onClick: function (e) {
-                                  return t.onAddToWishlist(e);
+                                className: h.WishlistSection,
+                                onClick: function (t) {
+                                  return e.onAddToWishlist(t);
                                 },
                               },
-                              P.a.createElement(
+                              l.a.createElement(
                                 "div",
                                 {
                                   className: "btnv6_blue_hoverfade btn_medium",
                                 },
-                                P.a.createElement(
+                                l.a.createElement(
                                   "span",
                                   null,
-                                  Object(x.f)("#wishlist_add_to_wishlist")
+                                  Object(p.f)("#wishlist_add_to_wishlist")
                                 )
                               )
                             ),
                           this.state.wishlisted &&
-                            !O &&
-                            P.a.createElement(
+                            !j &&
+                            l.a.createElement(
                               "div",
                               {
-                                className: Object(M.a)(
+                                className: Object(u.a)(
                                   "btnv6_blue_hoverfade btn_medium",
                                   "queue_btn_active",
-                                  F.Wishlisted,
-                                  F.WishlistSection
+                                  h.Wishlisted,
+                                  h.WishlistSection
                                 ),
-                                "data-tooltip-text": Object(x.f)(
+                                "data-tooltip-text": Object(p.f)(
                                   "#OnWishlistTooltip"
                                 ),
-                                onClick: function (e) {
-                                  return t.onGoToWishlist(e);
+                                onClick: function (t) {
+                                  return e.onGoToWishlist(t);
                                 },
                               },
-                              P.a.createElement(
+                              l.a.createElement(
                                 "span",
                                 null,
-                                P.a.createElement("img", {
+                                l.a.createElement("img", {
                                   src:
-                                    k.IMG_URL_BASE + "/v6/ico/ico_selected.png",
+                                    y.IMG_URL_BASE + "/v6/ico/ico_selected.png",
                                 }),
-                                "  " + Object(x.f)("#OnWishlist")
+                                "  " + Object(p.f)("#OnWishlist")
                               )
                             )
                         )
@@ -1504,226 +1518,229 @@
                 )
               );
             }),
-            Object(u.c)([l.a], e.prototype, "OnHover", null),
-            Object(u.c)([l.a], e.prototype, "OnUnHover", null),
-            Object(u.c)([l.a], e.prototype, "onMuteToggle", null),
-            Object(u.c)([l.a], e.prototype, "onAddToWishlist", null),
-            Object(u.c)([l.a], e.prototype, "onGoToWishlist", null),
-            Object(u.c)([l.a], e.prototype, "onAddToCart", null),
-            (e = Object(u.c)([n.a], e))
+            Object(n.c)([_.a], t.prototype, "OnHover", null),
+            Object(n.c)([_.a], t.prototype, "OnUnHover", null),
+            Object(n.c)([_.a], t.prototype, "onMuteToggle", null),
+            Object(n.c)([_.a], t.prototype, "onAddToWishlist", null),
+            Object(n.c)([_.a], t.prototype, "onGoToWishlist", null),
+            Object(n.c)([_.a], t.prototype, "onAddToCart", null),
+            (t = Object(n.c)([o.a], t))
           );
-        })(P.a.Component),
-        N = (function (a) {
-          function e(e) {
-            var t = a.call(this, e) || this;
-            return (t.state = { sortedRecommendedApps: [] }), t;
+        })(l.a.Component),
+        U = (function (e) {
+          function t(t) {
+            var a = e.call(this, t) || this;
+            return (a.state = { sortedRecommendedApps: [] }), a;
           }
           return (
-            Object(u.d)(e, a),
-            (e.prototype.render = function () {
-              var e = V.m_fRecencyValue * (k.NUM_RECENCY_STEPS - 1 - 0.001),
+            Object(n.d)(t, e),
+            (t.prototype.render = function () {
+              var e = T.m_fRecencyValue * (y.NUM_RECENCY_STEPS - 1 - 0.001),
                 t = Math.floor(e),
                 a = t + 1,
                 i = 1 - (e - t),
                 n = 1 - i,
-                r = V.m_fPopularityValue * (k.NUM_POPULARITY_STEPS - 1 - 0.001),
+                r = T.m_fPopularityValue * (y.NUM_POPULARITY_STEPS - 1 - 0.001),
                 o = Math.floor(r),
                 s = o + 1,
                 c = 1 - (r - o),
-                l = 1 - c,
-                d = [];
-              d.push({ index: o * k.NUM_RECENCY_STEPS + t, weight: c * i }),
-                d.push({ index: s * k.NUM_RECENCY_STEPS + t, weight: l * i }),
-                d.push({ index: o * k.NUM_RECENCY_STEPS + a, weight: c * n }),
-                d.push({ index: s * k.NUM_RECENCY_STEPS + a, weight: l * n });
-              var m = new Map(),
-                u = 0,
-                p = V.getRecommendations(),
-                _ = V.getAppInfo(),
-                h = [];
-              if (p) {
-                for (var g = 0, v = d; g < v.length; g++) {
-                  var E = v[g],
-                    f = p[E.index],
-                    u = Math.max(u, f.score_scale);
-                  if (f)
-                    for (var b = 0; b < f.app_ids.length; b++) {
-                      var S,
-                        y = f.app_ids[b];
-                      !_[y] ||
-                        _[y].o ||
-                        _[y].i ||
-                        _[y].ti ||
-                        (_[y].w && V.m_bExcludeWishlisted) ||
-                        ((S =
-                          (m.get(y) || 0) +
-                          f.scores[b] * E.weight * f.score_scale),
-                        m.set(y, S));
+                d = 1 - c,
+                m = [];
+              m.push({ index: o * y.NUM_RECENCY_STEPS + t, weight: c * i }),
+                m.push({ index: s * y.NUM_RECENCY_STEPS + t, weight: d * i }),
+                m.push({ index: o * y.NUM_RECENCY_STEPS + a, weight: c * n }),
+                m.push({ index: s * y.NUM_RECENCY_STEPS + a, weight: d * n });
+              var _ = new Map(),
+                g = 0,
+                v = T.getRecommendations(),
+                E = T.getAppInfo(),
+                f = [];
+              if (v) {
+                for (var b = 0, S = m; b < S.length; b++) {
+                  var O = S[b],
+                    R = v[O.index];
+                  if (((g = Math.max(g, R.score_scale)), R))
+                    for (var N = 0; N < R.app_ids.length; N++) {
+                      var L = R.app_ids[N];
+                      if (
+                        !(
+                          !E[L] ||
+                          E[L].o ||
+                          E[L].i ||
+                          E[L].ti ||
+                          (E[L].w && T.m_bExcludeWishlisted)
+                        )
+                      ) {
+                        var I =
+                          (_.get(L) || 0) +
+                          R.scores[N] * O.weight * R.score_scale;
+                        _.set(L, I);
+                      }
                     }
                 }
-                m.forEach(function (e, t) {
-                  return m.set(t, e / u);
+                _.forEach(function (e, t) {
+                  return _.set(t, e / g);
                 });
-                var T = [];
-                m.forEach(function (e, t) {
-                  return T.push({ appid: t, score: e });
+                var C = [];
+                _.forEach(function (e, t) {
+                  return C.push({ appid: t, score: e });
                 });
-                var O = (T = (T = (T = T.filter(function (e) {
-                  return _[e.appid].t && V.doTagsPassFilter(_[e.appid].t);
+                var A = (C = (C = (C = C.filter(function (e) {
+                  return E[e.appid].t && T.doTagsPassFilter(E[e.appid].t);
                 })).filter(function (e) {
-                  return _[e.appid].t && !V.doTagsFailExclusion(_[e.appid].t);
+                  return E[e.appid].t && !T.doTagsFailExclusion(E[e.appid].t);
                 })).filter(function (e) {
-                  return 0 < e.score;
+                  return e.score > 0;
                 })).sort(function (e, t) {
                   return t.score - e.score;
                 });
-                if (0 < O.length) {
+                if (A.length > 0) {
                   for (
-                    var R = 0, N = 0, I = (O = O.slice(0, 30));
-                    N < I.length;
-                    N++
+                    var j = 0, U = 0, w = (A = A.slice(0, 30));
+                    U < w.length;
+                    U++
                   ) {
-                    (I[N].rank = R), R++;
+                    (w[U].rank = j), j++;
                   }
-                  for (var L = 0, C = O; L < C.length; L++) {
-                    var A = C[L];
-                    h.push(
-                      P.a.createElement(D, {
-                        key: A.appid,
-                        appID: A.appid,
-                        score: A.score,
-                        rank: A.rank,
+                  for (var M = 0, x = A; M < x.length; M++) {
+                    var F = x[M];
+                    f.push(
+                      l.a.createElement(P, {
+                        key: F.appid,
+                        appID: F.appid,
+                        score: F.score,
+                        rank: F.rank,
                         width: this.props.width,
                       })
                     );
                   }
                 } else
-                  h.push(
-                    P.a.createElement(
+                  f.push(
+                    l.a.createElement(
                       "div",
                       {
                         key: "no_recommedations_due_to_filter",
-                        className: F.NoRecommendationsMessage,
+                        className: h.NoRecommendationsMessage,
                       },
-                      Object(x.f)("#NoRecommendationsDueToFilter")
+                      Object(p.f)("#NoRecommendationsDueToFilter")
                     )
                   );
               } else
-                h.push(
-                  P.a.createElement("div", {
+                f.push(
+                  l.a.createElement("div", {
                     key: "recommendations_loading",
-                    className: F.RecommendationsLoading,
+                    className: h.RecommendationsLoading,
                   })
                 );
-              return P.a.createElement(
+              return l.a.createElement(
                 "div",
-                { className: F.RecommendationList },
-                P.a.createElement(
+                { className: h.RecommendationList },
+                l.a.createElement(
                   "div",
-                  { className: F.Header },
-                  Object(x.f)("#Recommendations_Header")
+                  { className: h.Header },
+                  Object(p.f)("#Recommendations_Header")
                 ),
-                P.a.createElement(j, null),
-                P.a.createElement(
+                l.a.createElement(D, null),
+                l.a.createElement(
                   "div",
                   {
-                    className: Object(M.a)(
-                      F.List,
-                      V.areResultsExpired() && F.Updating
+                    className: Object(u.a)(
+                      h.List,
+                      T.areResultsExpired() && h.Updating
                     ),
                   },
-                  h
+                  f
                 )
               );
             }),
-            (e = Object(u.c)([n.a], e))
+            (t = Object(n.c)([o.a], t))
           );
-        })(P.a.Component),
-        I = (function (t) {
-          function e() {
-            var e = (null !== t && t.apply(this, arguments)) || this;
-            return (e.state = { width: window.innerWidth }), e;
+        })(l.a.Component),
+        w = (function (e) {
+          function t() {
+            var t = (null !== e && e.apply(this, arguments)) || this;
+            return (t.state = { width: window.innerWidth }), t;
           }
           return (
-            Object(u.d)(e, t),
-            (e.prototype.updateDimensions = function () {
+            Object(n.d)(t, e),
+            (t.prototype.updateDimensions = function () {
               this.setState({ width: window.innerWidth });
             }),
-            (e.prototype.componentDidMount = function () {
+            (t.prototype.componentDidMount = function () {
               window.addEventListener("resize", this.updateDimensions);
             }),
-            (e.prototype.ShowLoginDialog = function () {
-              Object(f.a)();
+            (t.prototype.ShowLoginDialog = function () {
+              Object(R.a)();
             }),
-            (e.prototype.render = function () {
-              return o.k.logged_in
-                ? P.a.createElement(
+            (t.prototype.render = function () {
+              return r.k.logged_in
+                ? l.a.createElement(
                     "div",
                     {
-                      className: F.App,
-                      style: { height: 3840 + 26 * V.getTagHeight() },
+                      className: h.App,
+                      style: { height: 3840 + 26 * T.getTagHeight() },
                     },
-                    P.a.createElement(
+                    l.a.createElement(
                       "div",
-                      { className: F.Container },
-                      P.a.createElement(
+                      { className: h.Container },
+                      l.a.createElement(
                         "div",
-                        { className: F.TopSection },
-                        P.a.createElement(
+                        { className: h.TopSection },
+                        l.a.createElement(
                           "div",
-                          { className: F.Header },
-                          Object(x.f)("#HeaderTitle")
+                          { className: h.Header },
+                          Object(p.f)("#HeaderTitle")
                         ),
-                        P.a.createElement(
+                        l.a.createElement(
                           "div",
-                          { className: F.Body },
-                          Object(x.f)("#HeaderBody1")
+                          { className: h.Body },
+                          Object(p.f)("#HeaderBody1")
                         )
                       ),
-                      P.a.createElement(
+                      l.a.createElement(
                         "div",
-                        { className: F.BottomSection },
-                        P.a.createElement(O, { accountID: o.k.accountid }),
-                        P.a.createElement("div", { className: F.VerticalBar }),
-                        P.a.createElement(N, { width: this.state.width })
+                        { className: h.BottomSection },
+                        l.a.createElement(I, { accountID: r.k.accountid }),
+                        l.a.createElement("div", { className: h.VerticalBar }),
+                        l.a.createElement(U, { width: this.state.width })
                       )
                     )
                   )
-                : P.a.createElement(
+                : l.a.createElement(
                     "div",
-                    { className: F.App },
-                    P.a.createElement(
+                    { className: h.App },
+                    l.a.createElement(
                       "div",
-                      { className: F.Login },
-                      P.a.createElement(
+                      { className: h.Login },
+                      l.a.createElement(
                         "div",
-                        { className: F.Text },
-                        Object(x.f)("#LoginText")
+                        { className: h.Text },
+                        Object(p.f)("#LoginText")
                       ),
-                      P.a.createElement(
+                      l.a.createElement(
                         "div",
                         {
-                          className: Object(M.a)(
+                          className: Object(u.a)(
                             "btn_green_white_innerfade",
                             " btn_medium"
                           ),
                           onClick: this.ShowLoginDialog,
                         },
-                        P.a.createElement(
+                        l.a.createElement(
                           "span",
                           null,
-                          Object(x.f)("#LoginButton")
+                          Object(p.f)("#LoginButton")
                         )
                       )
                     )
                   );
             }),
-            Object(u.c)([l.a], e.prototype, "updateDimensions", null),
-            Object(u.c)([l.a], e.prototype, "ShowLoginDialog", null),
-            (e = Object(u.c)([n.a], e))
+            Object(n.c)([_.a], t.prototype, "updateDimensions", null),
+            Object(n.c)([_.a], t.prototype, "ShowLoginDialog", null),
+            (t = Object(n.c)([o.a], t))
           );
-        })(P.a.Component);
-      t.default = I;
+        })(l.a.Component);
+      t.default = w;
     },
     Asqs: function (e, t, a) {
       e.exports = {

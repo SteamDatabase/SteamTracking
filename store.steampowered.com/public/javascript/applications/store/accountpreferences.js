@@ -9,15 +9,15 @@
         r.d(t, "AccountPreferencesRoutes", function () {
           return v;
         });
-      var c,
-        s = r("q1tI"),
-        o = r.n(s),
-        n = r("Ty5D"),
-        l = r("mrSG"),
-        i = r("2vnA"),
-        _ = (r("bDQf"), r("lkRc")),
-        a = r("vDqi"),
-        f = r.n(a),
+      var n,
+        c = r("q1tI"),
+        s = r.n(c),
+        o = r("Ty5D"),
+        i = r("mrSG"),
+        a = r("2vnA"),
+        l = (r("bDQf"), r("lkRc")),
+        _ = r("vDqi"),
+        f = r.n(_),
         m = r("TLQK"),
         p = (function () {
           function e(e) {
@@ -63,18 +63,21 @@
               return 2 == this.m_Preferences.preference_state;
             }),
             (e.prototype.SetPreferenceState = function (e) {
-              var t;
-              this.m_Preferences.preference_state != e &&
-                ((1 != (this.m_Preferences.preference_state = e) && 2 != e) ||
-                  ((t = 1 == e),
+              if (this.m_Preferences.preference_state != e) {
+                if (
+                  ((this.m_Preferences.preference_state = e), 1 == e || 2 == e)
+                ) {
+                  var t = 1 == e;
                   (this.m_Preferences.content_customization.recentapps = t),
-                  (this.m_Preferences.third_party_analytics.google_analytics = t),
-                  (this.m_Preferences.third_party_content.sketchfab = t),
-                  (this.m_Preferences.third_party_content.twitter = t),
-                  (this.m_Preferences.third_party_content.vimeo = t),
-                  (this.m_Preferences.third_party_content.youtube = t),
-                  (this.m_Preferences.valve_analytics.product_impressions_tracking = t)),
-                this.PostCookieSettings());
+                    (this.m_Preferences.third_party_analytics.google_analytics = t),
+                    (this.m_Preferences.third_party_content.sketchfab = t),
+                    (this.m_Preferences.third_party_content.twitter = t),
+                    (this.m_Preferences.third_party_content.vimeo = t),
+                    (this.m_Preferences.third_party_content.youtube = t),
+                    (this.m_Preferences.valve_analytics.product_impressions_tracking = t);
+                }
+                this.PostCookieSettings();
+              }
             }),
             (e.prototype.GetRecentApps = function () {
               return this.m_Preferences.content_customization.recentapps;
@@ -97,8 +100,8 @@
               return this.m_Preferences.third_party_analytics.google_analytics;
             }),
             (e.prototype.ToggleGoogleAnalytics = function () {
-              return Object(l.b)(this, void 0, void 0, function () {
-                return Object(l.e)(this, function (e) {
+              return Object(i.b)(this, void 0, void 0, function () {
+                return Object(i.e)(this, function (e) {
                   return (
                     (this.m_Preferences.third_party_analytics.google_analytics = !this
                       .m_Preferences.third_party_analytics.google_analytics),
@@ -137,54 +140,54 @@
                 this.PostCookieSettings();
             }),
             (e.prototype.PostCookieSettings = function () {
-              var i, a;
-              return Object(l.b)(this, void 0, void 0, function () {
-                var t, r, n, c, s, o;
-                return Object(l.e)(this, function (e) {
-                  switch (e.label) {
+              var e, t;
+              return Object(i.b)(this, void 0, void 0, function () {
+                var r, n, c, s, o, a;
+                return Object(i.e)(this, function (i) {
+                  switch (i.label) {
                     case 0:
-                      (t =
-                        _.d.STORE_BASE_URL +
+                      (r =
+                        l.d.STORE_BASE_URL +
                         "account/ajaxsetcookiepreferences"),
-                        (r = new FormData()).set("sessionid", _.d.SESSIONID),
-                        r.append(
+                        (n = new FormData()).set("sessionid", l.d.SESSIONID),
+                        n.append(
                           "cookiepreferences",
                           JSON.stringify(this.m_Preferences)
                         ),
-                        (e.label = 1);
+                        (i.label = 1);
                     case 1:
                       return (
-                        e.trys.push([1, 3, , 4]),
-                        [4, f.a.post(t, r, { withCredentials: !0 })]
+                        i.trys.push([1, 3, , 4]),
+                        [4, f.a.post(r, n, { withCredentials: !0 })]
                       );
                     case 2:
                       return (
-                        200 != (n = e.sent()).status ||
+                        200 != (c = i.sent()).status ||
                         1 !=
-                          (null === (i = null == n ? void 0 : n.data) ||
-                          void 0 === i
+                          (null === (e = null == c ? void 0 : c.data) ||
+                          void 0 === e
                             ? void 0
-                            : i.success)
+                            : e.success)
                           ? window.ShowAlertDialog(
                               Object(m.f)("#CookiePref_Error"),
                               Object(m.f)("#CookiePref_ErrorNotSaved")
                             )
                           : 1 ==
-                              (null === (a = null == n ? void 0 : n.data) ||
-                              void 0 === a
+                              (null === (t = null == c ? void 0 : c.data) ||
+                              void 0 === t
                                 ? void 0
-                                : a.success) &&
-                            ((c = n.data),
-                            (s = c.transfer_urls),
-                            (o = c.transfer_params),
-                            s &&
-                              o &&
-                              this.TransferCookiePreferencesToSites(s, o)),
+                                : t.success) &&
+                            ((s = c.data),
+                            (o = s.transfer_urls),
+                            (a = s.transfer_params),
+                            o &&
+                              a &&
+                              this.TransferCookiePreferencesToSites(o, a)),
                         [3, 4]
                       );
                     case 3:
                       return (
-                        e.sent(),
+                        i.sent(),
                         window.ShowAlertDialog(
                           Object(m.f)("#CookiePref_Error"),
                           Object(m.f)("#CookiePref_ErrorNotSaved")
@@ -205,7 +208,7 @@
                 f.a.post(s, r);
               }
             }),
-            Object(l.c)([i.C], e.prototype, "m_Preferences", void 0),
+            Object(i.c)([a.C], e.prototype, "m_Preferences", void 0),
             e
           );
         })(),
@@ -214,28 +217,29 @@
         y = r("nNQW"),
         g = r("exH9");
       var P = Object(u.a)(function () {
-          var e,
-            t =
-              (c ||
-                ((e = Object(_.h)("cookiepreferences", "application_config")),
-                (c = new p(e))),
-              c),
-            r = Object(s.useCallback)(
+          var e = (function () {
+              if (!n) {
+                var e = Object(l.h)("cookiepreferences", "application_config");
+                n = new p(e);
+              }
+              return n;
+            })(),
+            t = Object(c.useCallback)(
               function () {
-                t.SetPreferenceState(1);
+                e.SetPreferenceState(1);
               },
-              [t]
+              [e]
             ),
-            n = Object(s.useCallback)(
+            r = Object(c.useCallback)(
               function () {
-                t.SetPreferenceState(2);
+                e.SetPreferenceState(2);
               },
-              [t]
+              [e]
             );
-          return o.a.createElement(
+          return s.a.createElement(
             "div",
             null,
-            o.a.createElement(
+            s.a.createElement(
               "div",
               {
                 className: Object(g.a)(
@@ -243,47 +247,47 @@
                   "account_header_line noicon"
                 ),
               },
-              o.a.createElement(
+              s.a.createElement(
                 "div",
                 null,
                 Object(m.f)("#CookiePref_OptionalCookies_Title")
               )
             ),
-            o.a.createElement(
+            s.a.createElement(
               "div",
               { className: "account_settings_container" },
-              o.a.createElement(
+              s.a.createElement(
                 "div",
                 { className: y.ButtonGroup },
-                o.a.createElement(
+                s.a.createElement(
                   "div",
                   {
                     className: Object(g.a)(
                       y.AllButton,
-                      t.BIsRejectAll() ? y.ButtonHighlight : ""
+                      e.BIsRejectAll() ? y.ButtonHighlight : ""
                     ),
-                    onClick: n,
+                    onClick: r,
                   },
                   Object(m.f)("#CookiePref_RejectAll")
                 ),
-                o.a.createElement(
+                s.a.createElement(
                   "div",
                   {
                     className: Object(g.a)(
                       y.AllButton,
-                      t.BIsAllowAll() ? y.ButtonHighlight : ""
+                      e.BIsAllowAll() ? y.ButtonHighlight : ""
                     ),
-                    onClick: r,
+                    onClick: t,
                   },
                   Object(m.f)("#CookiePref_AcceptAll")
                 )
               ),
-              o.a.createElement(k, { settings: t }),
-              o.a.createElement(b, { settings: t }),
-              o.a.createElement(d, { settings: t }),
-              o.a.createElement(C, { settings: t })
+              s.a.createElement(k, { settings: e }),
+              s.a.createElement(b, { settings: e }),
+              s.a.createElement(d, { settings: e }),
+              s.a.createElement(C, { settings: e })
             ),
-            o.a.createElement(
+            s.a.createElement(
               "div",
               {
                 className: Object(g.a)(
@@ -291,102 +295,102 @@
                   "account_header_line noicon"
                 ),
               },
-              o.a.createElement(
+              s.a.createElement(
                 "div",
                 null,
                 Object(m.f)("#CookiePref_TechnicallyNeccesary_Title")
               )
             ),
-            o.a.createElement(
+            s.a.createElement(
               "div",
               { className: "account_settings_container" },
-              o.a.createElement(
+              s.a.createElement(
                 "p",
                 null,
                 Object(m.f)("#CookiePref_TechnicallyNeccesary_Desc")
               ),
-              o.a.createElement(
+              s.a.createElement(
                 "div",
                 { className: y.CookieGroup },
-                o.a.createElement(
+                s.a.createElement(
                   "div",
                   { className: y.NecessaryGroup },
-                  o.a.createElement(
+                  s.a.createElement(
                     "span",
                     { className: y.NecessaryTitle },
                     Object(m.f)("#CookiePref_SessionID_Title")
                   ),
-                  o.a.createElement(
+                  s.a.createElement(
                     "span",
                     { className: y.NecessaryDesc },
                     Object(m.f)("#CookiePref_SessionID_Desc")
                   )
                 ),
-                o.a.createElement(
+                s.a.createElement(
                   "div",
                   { className: y.NecessaryGroup },
-                  o.a.createElement(
+                  s.a.createElement(
                     "span",
                     { className: y.NecessaryTitle },
                     Object(m.f)("#CookiePref_ShoppingCart_Title")
                   ),
-                  o.a.createElement(
+                  s.a.createElement(
                     "span",
                     { className: y.NecessaryDesc },
                     Object(m.f)("#CookiePref_ShoppingCart_Desc")
                   )
                 ),
-                o.a.createElement(
+                s.a.createElement(
                   "div",
                   { className: y.NecessaryGroup },
-                  o.a.createElement(
+                  s.a.createElement(
                     "span",
                     { className: y.NecessaryTitle },
                     Object(m.f)("#CookiePref_SteamCountry_Title")
                   ),
-                  o.a.createElement(
+                  s.a.createElement(
                     "span",
                     { className: y.NecessaryDesc },
                     Object(m.f)("#CookiePref_SteamCountry_Desc")
                   )
                 ),
-                o.a.createElement(
+                s.a.createElement(
                   "div",
                   { className: y.NecessaryGroup },
-                  o.a.createElement(
+                  s.a.createElement(
                     "span",
                     { className: y.NecessaryTitle },
                     Object(m.f)("#CookiePref_Timezone_Title")
                   ),
-                  o.a.createElement(
+                  s.a.createElement(
                     "span",
                     { className: y.NecessaryDesc },
                     Object(m.f)("#CookiePref_Timezone_Desc")
                   )
                 ),
-                o.a.createElement(
+                s.a.createElement(
                   "div",
                   { className: y.NecessaryGroup },
-                  o.a.createElement(
+                  s.a.createElement(
                     "span",
                     { className: y.NecessaryTitle },
                     Object(m.f)("#CookiePref_BirthTime_Title")
                   ),
-                  o.a.createElement(
+                  s.a.createElement(
                     "span",
                     { className: y.NecessaryDesc },
                     Object(m.f)("#CookiePref_BirthTime_Desc")
                   )
                 ),
-                o.a.createElement(
+                s.a.createElement(
                   "div",
                   { className: y.NecessaryGroup },
-                  o.a.createElement(
+                  s.a.createElement(
                     "span",
                     { className: y.NecessaryTitle },
                     Object(m.f)("#CookiePref_CookieSettings_Title")
                   ),
-                  o.a.createElement(
+                  s.a.createElement(
                     "span",
                     { className: y.NecessaryDesc },
                     Object(m.f)("#CookiePref_CookieSettings_Desc")
@@ -399,29 +403,29 @@
         }),
         k = Object(u.a)(function (e) {
           var t = e.settings,
-            r = Object(s.useCallback)(
+            r = Object(c.useCallback)(
               function () {
                 t.ToggleRecentApps();
               },
               [t]
             );
-          return o.a.createElement(
+          return s.a.createElement(
             "div",
             { className: y.CookieGroup },
-            o.a.createElement(
+            s.a.createElement(
               "div",
               { className: y.CookieSection },
-              o.a.createElement(
+              s.a.createElement(
                 "h2",
                 null,
                 Object(m.f)("#CookiePref_Content_Title")
               ),
-              o.a.createElement(
+              s.a.createElement(
                 "p",
                 { className: y.SectionDescription },
                 Object(m.f)("#CookiePref_Content_Desc")
               ),
-              o.a.createElement(h.p, {
+              s.a.createElement(h.p, {
                 onChange: r,
                 label: Object(m.f)("#CookiePref_Content_ToggleTitle"),
                 checked: t.GetRecentApps(),
@@ -432,29 +436,29 @@
         }),
         b = Object(u.a)(function (e) {
           var t = e.settings,
-            r = Object(s.useCallback)(
+            r = Object(c.useCallback)(
               function () {
                 t.ToggleImpressions();
               },
               [t]
             );
-          return o.a.createElement(
+          return s.a.createElement(
             "div",
             { className: y.CookieGroup },
-            o.a.createElement(
+            s.a.createElement(
               "div",
               { className: y.CookieSection },
-              o.a.createElement(
+              s.a.createElement(
                 "h2",
                 null,
                 Object(m.f)("#CookiePref_ValveAnalytics_Title")
               ),
-              o.a.createElement(
+              s.a.createElement(
                 "p",
                 { className: y.SectionDescription },
                 Object(m.f)("#CookiePref_ValveAnalytics_Desc")
               ),
-              o.a.createElement(h.p, {
+              s.a.createElement(h.p, {
                 onChange: r,
                 label: Object(m.f)("#CookiePref_ValveAnalytics_ToggleTitle"),
                 checked: t.GetImpressions(),
@@ -467,29 +471,29 @@
         }),
         d = Object(u.a)(function (e) {
           var t = e.settings,
-            r = Object(s.useCallback)(
+            r = Object(c.useCallback)(
               function () {
                 t.ToggleGoogleAnalytics();
               },
               [t]
             );
-          return o.a.createElement(
+          return s.a.createElement(
             "div",
             { className: y.CookieGroup },
-            o.a.createElement(
+            s.a.createElement(
               "div",
               { className: y.CookieSection },
-              o.a.createElement(
+              s.a.createElement(
                 "h2",
                 null,
                 Object(m.f)("#CookiePref_GoogleAnalytics_Title")
               ),
-              o.a.createElement(
+              s.a.createElement(
                 "p",
                 { className: y.SectionDescription },
                 Object(m.f)("#CookiePref_GoogleAnalytics_Desc")
               ),
-              o.a.createElement(h.p, {
+              s.a.createElement(h.p, {
                 onChange: r,
                 label: Object(m.f)("#CookiePref_GoogleAnalytics_ToggleLabel"),
                 checked: t.GetGoogleAnalytics(),
@@ -502,54 +506,54 @@
         }),
         C = Object(u.a)(function (e) {
           var t = e.settings,
-            r = Object(s.useCallback)(
+            r = Object(c.useCallback)(
               function () {
                 t.ToggleYouTube();
               },
               [t]
             ),
-            n = Object(s.useCallback)(
+            n = Object(c.useCallback)(
               function () {
                 t.ToggleVimeo();
               },
               [t]
             ),
-            c = Object(s.useCallback)(
+            o = Object(c.useCallback)(
               function () {
                 t.ToggleSketchfab();
               },
               [t]
             );
-          return o.a.createElement(
+          return s.a.createElement(
             "div",
             { className: y.CookieGroup },
-            o.a.createElement(
+            s.a.createElement(
               "div",
               { className: y.CookieSection },
-              o.a.createElement(
+              s.a.createElement(
                 "h2",
                 null,
                 Object(m.f)("#CookiePref_ThirdParty_Title")
               ),
-              o.a.createElement(
+              s.a.createElement(
                 "p",
                 { className: y.SectionDescription },
                 Object(m.f)("#CookiePref_ThirdParty_Desc")
               ),
-              o.a.createElement(h.p, {
+              s.a.createElement(h.p, {
                 onChange: r,
                 label: Object(m.f)("#CookiePref_YouTube_Title"),
                 checked: t.GetYouTube(),
                 description: Object(m.f)("#CookiePref_YouTube_Desc"),
               }),
-              o.a.createElement(h.p, {
+              s.a.createElement(h.p, {
                 onChange: n,
                 label: Object(m.f)("#CookiePref_Vimeo_Title"),
                 checked: t.GetVimeo(),
                 description: Object(m.f)("#CookiePref_Vimeo_Desc"),
               }),
-              o.a.createElement(h.p, {
-                onChange: c,
+              s.a.createElement(h.p, {
+                onChange: o,
                 label: Object(m.f)("#CookiePref_Sketchfab_Title"),
                 checked: t.GetSketchfab(),
                 description: Object(m.f)("#CookiePref_Sketchfab_Desc"),
@@ -563,14 +567,15 @@
           },
         };
       t.default = function (e) {
-        var t = e.match.url;
-        return o.a.createElement(
-          n.d,
+        var t = e.match.url,
+          r = v;
+        return s.a.createElement(
+          o.d,
           null,
-          o.a.createElement(
-            n.b,
-            { path: "" + t + v.CookieSettings() },
-            o.a.createElement(P, null)
+          s.a.createElement(
+            o.b,
+            { path: "" + t + r.CookieSettings() },
+            s.a.createElement(P, null)
           )
         );
       };

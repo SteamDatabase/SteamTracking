@@ -35,10 +35,10 @@
       "use strict";
       t.r(n);
       var r = t("q1tI"),
-        l = t.n(r),
-        i = t("Ty5D"),
-        d = t("1fPh"),
-        a = t("TyAF"),
+        a = t.n(r),
+        l = t("Ty5D"),
+        i = t("1fPh"),
+        d = t("TyAF"),
         c = t("prdU"),
         o = t("nXE5"),
         u = t("+j4l"),
@@ -51,25 +51,25 @@
         O = t("3xXb"),
         w = t("exH9"),
         h = t("cOvF");
-      n.default = Object(a.a)(function (e) {
+      n.default = Object(d.a)(function (e) {
         var n = e.match.params.bundleid,
           t = parseInt(n),
-          r = l.a.createElement(i.a, { to: d.b.LoyaltyStore() });
+          r = a.a.createElement(l.a, { to: i.b.LoyaltyStore() });
         if (isNaN(t)) return r;
-        var a = c.b.Get().GetRewardDefinitions(t)[0];
-        return a
-          ? 5 !== a.type && 6 !== a.type
+        var d = c.b.Get().GetRewardDefinitions(t)[0];
+        return d
+          ? 5 !== d.type && 6 !== d.type
             ? r
-            : l.a.createElement(C, { bundle: a })
+            : a.a.createElement(C, { bundle: d })
           : null;
       });
-      var C = Object(a.a)(function (e) {
+      var C = Object(d.a)(function (e) {
           var n = e.bundle,
             t = c.b.Get().GetBundleOfferForUser(n);
-          return l.a.createElement(
+          return a.a.createElement(
             o.e,
             null,
-            l.a.createElement(
+            a.a.createElement(
               s.a,
               {
                 paddingY: "xlarge",
@@ -77,10 +77,10 @@
                 flexDirection: "column",
                 alignItems: "center",
               },
-              l.a.createElement(I, { bundle: n, offer: t }),
+              a.a.createElement(I, { bundle: n, offer: t }),
               0 === t.point_cost
-                ? l.a.createElement(B, { className: O.PrimaryRedeemButton })
-                : l.a.createElement(u.a, {
+                ? a.a.createElement(B, { className: O.PrimaryRedeemButton })
+                : a.a.createElement(u.a, {
                     cost: t.point_cost,
                     discount: t.discount,
                     originalCost: t.original_point_cost,
@@ -89,55 +89,55 @@
                       return Object(u.e)(e, n);
                     },
                   }),
-              l.a.createElement(E, { offer: t })
+              a.a.createElement(E, { offer: t })
             )
           );
         }),
-        I = Object(a.a)(function (e) {
+        I = Object(d.a)(function (e) {
           var n = e.bundle,
             t = e.offer,
             r = Object(_.b)(n),
-            a = Object(b.f)("#RewardBundle_OfferDescription", t.discount);
-          return l.a.createElement(
+            l = Object(b.f)("#RewardBundle_OfferDescription", t.discount);
+          return a.a.createElement(
             s.a,
             { paddingBottom: "xlarge" },
-            l.a.createElement(o.f, { title: r, subtitle: a })
+            a.a.createElement(o.f, { title: r, subtitle: l })
           );
         }),
         B = function (e) {
           var n = e.className;
-          return l.a.createElement(
+          return a.a.createElement(
             "div",
             { className: Object(w.a)(n, O.AlreadyOwned) },
-            l.a.createElement(h.i, { className: O.CheckmarkCircle }),
-            l.a.createElement(
+            a.a.createElement(h.i, { className: O.CheckmarkCircle }),
+            a.a.createElement(
               "span",
               { className: O.AlreadyOwnedText },
               Object(b.f)("#Redeem_BundleItemOwned")
             )
           );
         },
-        E = Object(a.a)(function (e) {
-          var t = e.offer;
-          return l.a.createElement(
+        E = Object(d.a)(function (e) {
+          var n = e.offer;
+          return a.a.createElement(
             m.b,
             { title: Object(b.f)("#RewardBundle_BundleContentsSection_Title") },
-            l.a.createElement(f.a, {
-              getItems: function (e, n) {
+            a.a.createElement(f.a, {
+              getItems: function (e, t) {
                 return {
-                  rewards: t.items.slice(e, n),
+                  rewards: n.items.slice(e, t),
                   bLoadingMore: !1,
-                  cTotalMatching: t.items.length,
-                  cMaxToReturn: t.items.length,
+                  cTotalMatching: n.items.length,
+                  cMaxToReturn: n.items.length,
                 };
               },
-              renderItem: function (n) {
-                return l.a.createElement(p.e, {
-                  key: n.defid,
-                  definition: n,
+              renderItem: function (e) {
+                return a.a.createElement(p.e, {
+                  key: e.defid,
+                  definition: e,
                   purchaseable: !1,
-                  onClick: function (e) {
-                    return Object(u.b)(e, n);
+                  onClick: function (n) {
+                    return Object(u.b)(n, e);
                   },
                 });
               },

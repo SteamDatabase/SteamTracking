@@ -7,8 +7,6 @@
   align-items: center;
   color: #a4d007;
 }
-
-/* stylelint-disable selector-class-pattern */
 body.v6.rewards {
   background-color: #161a1f;
   height: 100%;
@@ -21,22 +19,18 @@ body.v6.rewards .ModalPosition {
 body.v6.rewards .ModalPosition_Content {
   min-height: none;
 }
-
 .responsive_page_frame {
   height: 100%;
 }
-
 .responsive_page_content {
   max-height: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
-
 .responsive_page_template_content {
   padding-bottom: 0 !important;
 }
-
 .responsive_page_template_content,
 .page_content_ctn,
 #application_root,
@@ -47,12 +41,9 @@ body.v6.rewards .ModalPosition_Content {
   display: flex;
   flex-direction: column;
 }
-
 .placeHolder_summerSale2020_promotionDetailsBar {
   overflow-x: hidden;
 }
-
-/* stylelint-enable selector-class-pattern */
 .bundle_ShellHeader_kOC36 {
   background-color: #1e232e;
   width: 100%;
@@ -128,7 +119,7 @@ body.v6.rewards .ModalPosition_Content {
 .bundle_ShellHeader_kOC36
   .bundle_AppFilterContainer_2h5QB
   .bundle_AppFilterIcon_HCNAj:hover {
-  color: #ffffff;
+  color: #fff;
   stroke: currentColor;
   fill: currentColor;
 }
@@ -146,13 +137,11 @@ body.v6.rewards .ModalPosition_Content {
 .bundle_ShellHeader_kOC36 .bundle_RewardsPointsCount_1XPtb {
   letter-spacing: 0.1em;
 }
-
 .bundle_ShellHeaderBrandName_2fDre {
   font-size: 1.6em;
   text-transform: uppercase;
   color: #78a9e2;
 }
-
 .bundle_Shell_2Zfec {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   color: #c5cbd8;
@@ -167,18 +156,15 @@ body.v6.rewards .ModalPosition_Content {
 .bundle_Shell_2Zfec .bundle_ShellScrollParent_1Qkju {
   align-items: stretch;
 }
-
 .bundle_SvgOverrideColor_29EuR path {
   fill: #78a9e2;
 }
-
 .bundle_ItemHoverZIndex_3gUO3 {
   z-index: 1;
 }
 .bundle_ItemHoverZIndex_3gUO3:hover {
   z-index: 20;
 }
-
 .bundle_ActionButton_1YLE2 {
   border-radius: 3px;
   background-color: #474e58;
@@ -192,27 +178,23 @@ body.v6.rewards .ModalPosition_Content {
   transition: all 0.2s ease-in-out;
 }
 .bundle_ActionButton_1YLE2:hover {
-  color: white;
+  color: #fff;
 }
 .bundle_ActionButton_1YLE2:focus {
-  color: white;
+  color: #fff;
 }
-
 .bundle_Icon_1QoZD {
   width: 32px;
   height: 32px;
 }
-
 .bundle_PrimaryRedeemButton_2nL0c {
   margin-bottom: 20px;
 }
-
 .bundle_CheckmarkCircle_2UpnB {
   width: 20px;
   height: 20px;
   color: #5b7e0f;
 }
-
 .bundle_AlreadyOwned_3KGvD {
   display: flex;
   flex-direction: row;

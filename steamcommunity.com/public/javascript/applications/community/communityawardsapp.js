@@ -26,13 +26,13 @@
         i = t("6Y59"),
         o = t("2i24"),
         p = t.n(o),
-        l = (function (r) {
-          function e(e) {
-            return r.call(this, e) || this;
+        l = (function (e) {
+          function r(r) {
+            return e.call(this, r) || this;
           }
           return (
-            Object(a.d)(e, r),
-            (e.prototype.AddSizeClass = function (e) {
+            Object(a.d)(r, e),
+            (r.prototype.AddSizeClass = function (e) {
               "small" == this.props.size
                 ? e.push(p.a.throbber_small)
                 : "medium" == this.props.size
@@ -43,7 +43,7 @@
                 ? e.push(p.a.throbber_xxlarge)
                 : e.push(p.a.throbber_large);
             }),
-            (e.prototype.render = function () {
+            (r.prototype.render = function () {
               var e = [p.a.LoadingWrapper, "SteamLogoThrobber"];
               this.AddSizeClass(e),
                 void 0 === this.props.string && e.push(p.a.noString),
@@ -76,7 +76,7 @@
                   )
               );
             }),
-            e
+            r
           );
         })(n.a.PureComponent);
     },

@@ -5,72 +5,24 @@
   {
     "8zUZ": function (e, t, a) {
       "use strict";
-      a.r(t);
+      a.r(t),
+        a.d(t, "default", function () {
+          return be;
+        });
       a("xnZ7"), a("idvb");
-      function c(e) {
-        var r = Object(f.useRef)(null),
-          t = Object(f.useState)(null),
-          a = t[0],
-          n = t[1];
-        return (
-          Object(f.useEffect)(function () {
-            return function () {
-              r.current && r.current("BroadcastDebugSection: unmounting");
-            };
-          }, []),
-          v.a.createElement(
-            C.a,
-            null,
-            v.a.createElement(
-              "div",
-              { className: Object(T.a)(k.Container) },
-              v.a.createElement(
-                "div",
-                { className: k.Controls },
-                v.a.createElement(
-                  I.d,
-                  {
-                    onClick: function () {
-                      return Object(h.b)(void 0, void 0, void 0, function () {
-                        var t, a;
-                        return Object(h.e)(this, function (e) {
-                          switch (e.label) {
-                            case 0:
-                              return (
-                                r.current && r.current(),
-                                (t = O.a.CancelToken.source()),
-                                (r.current = t.cancel),
-                                (a = n),
-                                [4, S.Get().LoadBroadcastDebugInfo(t)]
-                              );
-                            case 1:
-                              return a.apply(void 0, [e.sent()]), [2];
-                          }
-                        });
-                      });
-                    },
-                  },
-                  "(VO) Load Debug Info"
-                )
-              ),
-              v.a.createElement(C.a, null, v.a.createElement(F, { info: a }))
-            )
-          )
-        );
-      }
-      var f = a("q1tI"),
-        v = a.n(f),
-        r = a("Ty5D"),
-        n = a("nmPn"),
-        h = a("mrSG"),
-        o = a("vDqi"),
-        O = a.n(o),
+      var r = a("q1tI"),
+        n = a.n(r),
+        o = a("Ty5D"),
+        c = a("nmPn"),
+        i = a("mrSG"),
+        s = a("vDqi"),
+        l = a.n(s),
         u = a("2vnA"),
-        i = a("kLLr"),
+        m = a("kLLr"),
         d = a("boaH"),
-        m = a("bDQf"),
-        p = a("lkRc"),
-        S = (function () {
+        p = a("bDQf"),
+        b = a("lkRc"),
+        _ = (function () {
           function e() {
             (this.m_bShowOnlyVideo = !1),
               (this.m_bShowOnlyChat = !1),
@@ -92,36 +44,36 @@
             (e.prototype.BShowInIframe = function () {
               return this.m_bShowOnlyChat || this.m_bShowOnlyVideo;
             }),
-            (e.prototype.LoadBroadcastDebugInfo = function (c) {
-              return Object(h.b)(this, void 0, void 0, function () {
+            (e.prototype.LoadBroadcastDebugInfo = function (e) {
+              return Object(i.b)(this, void 0, void 0, function () {
                 var t, a, r, n, o;
-                return Object(h.e)(this, function (e) {
-                  switch (e.label) {
+                return Object(i.e)(this, function (c) {
+                  switch (c.label) {
                     case 0:
                       (t =
-                        p.c.COMMUNITY_BASE_URL +
+                        b.c.COMMUNITY_BASE_URL +
                         "broadcast/broadcastdebuginfo"),
                         (a = {
                           steamid: this.m_steamid.ConvertTo64BitString(),
                           origin: self.origin,
                         }),
-                        (e.label = 1);
+                        (c.label = 1);
                     case 1:
                       return (
-                        e.trys.push([1, 3, , 4]),
+                        c.trys.push([1, 3, , 4]),
                         [
                           4,
-                          O.a.get(t, {
+                          l.a.get(t, {
                             params: a,
                             withCredentials: !0,
-                            cancelToken: c ? c.token : void 0,
+                            cancelToken: e ? e.token : void 0,
                           }),
                         ]
                       );
                     case 2:
                       return (
-                        (r = e.sent()),
-                        c && c.token.reason
+                        (r = c.sent()),
+                        e && e.token.reason
                           ? [2, null]
                           : r &&
                             200 == r.status &&
@@ -133,8 +85,8 @@
                       );
                     case 3:
                       return (
-                        (n = e.sent()),
-                        (o = Object(m.a)(n)),
+                        (n = c.sent()),
+                        (o = Object(p.a)(n)),
                         console.error(
                           "LoadBroadcastDebugInfo: Failed " + o.strErrorMsg,
                           o
@@ -147,59 +99,59 @@
                 });
               });
             }),
-            (e.prototype.UpdateBroadcastSettings = function (i, s, l) {
-              return Object(h.b)(this, void 0, void 0, function () {
-                var t, a, r, n, o, c;
-                return Object(h.e)(this, function (e) {
-                  switch (e.label) {
+            (e.prototype.UpdateBroadcastSettings = function (e, t, a) {
+              return Object(i.b)(this, void 0, void 0, function () {
+                var r, n, o, c, s, m;
+                return Object(i.e)(this, function (i) {
+                  switch (i.label) {
                     case 0:
-                      (t =
-                        p.c.COMMUNITY_BASE_URL +
+                      (r =
+                        b.c.COMMUNITY_BASE_URL +
                         "broadcast/updatebroadcastsettings"),
-                        (a = {
+                        (n = {
                           steamid: this.m_steamid.ConvertTo64BitString(),
-                          matchid: i,
-                          title: s,
-                          sessionid: p.c.SESSIONID,
+                          matchid: e,
+                          title: t,
+                          sessionid: b.c.SESSIONID,
                         }),
-                        (e.label = 1);
+                        (i.label = 1);
                     case 1:
                       return (
-                        e.trys.push([1, 3, , 4]),
+                        i.trys.push([1, 3, , 4]),
                         [
                           4,
-                          O.a.get(t, {
-                            params: a,
+                          l.a.get(r, {
+                            params: n,
                             withCredentials: !0,
-                            cancelToken: l ? l.token : void 0,
+                            cancelToken: a ? a.token : void 0,
                           }),
                         ]
                       );
                     case 2:
                       return (
-                        (r = e.sent()),
-                        l && l.token.reason
+                        (o = i.sent()),
+                        a && a.token.reason
                           ? [2, !1]
-                          : r &&
-                            200 == r.status &&
-                            r.data &&
-                            1 == r.data.success
-                          ? ((n = d.a.GetOrCreateBroadcastInfo(
+                          : o &&
+                            200 == o.status &&
+                            o.data &&
+                            1 == o.data.success
+                          ? ((c = d.a.GetOrCreateBroadcastInfo(
                               this.m_steamid.ConvertTo64BitString()
                             )) &&
                               Object(u.G)(function () {
-                                n.m_strTitle = s;
+                                c.m_strTitle = t;
                               }),
                             [2, !0])
                           : [3, 4]
                       );
                     case 3:
                       return (
-                        (o = e.sent()),
-                        (c = Object(m.a)(o)),
+                        (s = i.sent()),
+                        (m = Object(p.a)(s)),
                         console.error(
-                          "UpdateBroadcastSettings: Failed " + c.strErrorMsg,
-                          c
+                          "UpdateBroadcastSettings: Failed " + m.strErrorMsg,
+                          m
                         ),
                         [3, 4]
                       );
@@ -209,21 +161,21 @@
                 });
               });
             }),
-            (e.prototype.StopBroadcast = function (o) {
-              return Object(h.b)(this, void 0, void 0, function () {
+            (e.prototype.StopBroadcast = function (e) {
+              return Object(i.b)(this, void 0, void 0, function () {
                 var t, a, r, n;
-                return Object(h.e)(this, function (e) {
-                  switch (e.label) {
+                return Object(i.e)(this, function (o) {
+                  switch (o.label) {
                     case 0:
                       return (
                         (t = this.m_steamid.ConvertTo64BitString()),
                         (a = d.a.GetBroadcast(t)),
                         (r =
-                          p.c.COMMUNITY_BASE_URL + "broadcast/stopbroadcast"),
+                          b.c.COMMUNITY_BASE_URL + "broadcast/stopbroadcast"),
                         (n = {
                           steamid: t,
                           broadcastid: a ? a.m_ulBroadcastID : null,
-                          sessionid: p.c.SESSIONID,
+                          sessionid: b.c.SESSIONID,
                         }),
                         [
                           4,
@@ -231,65 +183,65 @@
                             "StopBroadcast",
                             r,
                             n,
-                            o
+                            e
                           ),
                         ]
                       );
                     case 1:
-                      return [2, e.sent()];
+                      return [2, o.sent()];
                   }
                 });
               });
             }),
-            (e.prototype.SetBroadcasterRestrictions = function (o, c, i) {
-              return Object(h.b)(this, void 0, void 0, function () {
-                var t, a, r, n;
-                return Object(h.e)(this, function (e) {
-                  switch (e.label) {
+            (e.prototype.SetBroadcasterRestrictions = function (e, t, a) {
+              return Object(i.b)(this, void 0, void 0, function () {
+                var r, n, o, c;
+                return Object(i.e)(this, function (i) {
+                  switch (i.label) {
                     case 0:
                       return (
-                        (t = this.m_steamid.ConvertTo64BitString()),
-                        (a = d.a.GetBroadcast(t)),
-                        (r =
-                          p.c.COMMUNITY_BASE_URL +
+                        (r = this.m_steamid.ConvertTo64BitString()),
+                        (n = d.a.GetBroadcast(r)),
+                        (o =
+                          b.c.COMMUNITY_BASE_URL +
                           "broadcast/setbroadcastrestriction"),
-                        (n = {
-                          steamid: t,
-                          broadcastid: a ? a.m_ulBroadcastID : null,
-                          type: o,
-                          days: c,
-                          sessionid: p.c.SESSIONID,
+                        (c = {
+                          steamid: r,
+                          broadcastid: n ? n.m_ulBroadcastID : null,
+                          type: e,
+                          days: t,
+                          sessionid: b.c.SESSIONID,
                         }),
                         [
                           4,
                           this.InternalSendSimpleGetRequest(
                             "SetBroadcasterRestrictions",
-                            r,
-                            n,
-                            i
+                            o,
+                            c,
+                            a
                           ),
                         ]
                       );
                     case 1:
-                      return [2, e.sent()];
+                      return [2, i.sent()];
                   }
                 });
               });
             }),
-            (e.prototype.SetUnBannable = function (o) {
-              return Object(h.b)(this, void 0, void 0, function () {
+            (e.prototype.SetUnBannable = function (e) {
+              return Object(i.b)(this, void 0, void 0, function () {
                 var t, a, r, n;
-                return Object(h.e)(this, function (e) {
-                  switch (e.label) {
+                return Object(i.e)(this, function (o) {
+                  switch (o.label) {
                     case 0:
                       return (
                         (t = this.m_steamid.ConvertTo64BitString()),
                         (a = d.a.GetBroadcast(t)),
-                        (r = p.c.COMMUNITY_BASE_URL + "broadcast/unban"),
+                        (r = b.c.COMMUNITY_BASE_URL + "broadcast/unban"),
                         (n = {
                           steamid: t,
                           broadcastid: a ? a.m_ulBroadcastID : null,
-                          sessionid: p.c.SESSIONID,
+                          sessionid: b.c.SESSIONID,
                         }),
                         [
                           4,
@@ -297,31 +249,31 @@
                             "SetUnBannable",
                             r,
                             n,
-                            o
+                            e
                           ),
                         ]
                       );
                     case 1:
-                      return [2, e.sent()];
+                      return [2, o.sent()];
                   }
                 });
               });
             }),
-            (e.prototype.SendUserReportOnBroadcast = function (o) {
-              return Object(h.b)(this, void 0, void 0, function () {
+            (e.prototype.SendUserReportOnBroadcast = function (e) {
+              return Object(i.b)(this, void 0, void 0, function () {
                 var t, a, r, n;
-                return Object(h.e)(this, function (e) {
-                  switch (e.label) {
+                return Object(i.e)(this, function (o) {
+                  switch (o.label) {
                     case 0:
                       return (
                         (t = this.m_steamid.ConvertTo64BitString()),
                         (a = d.a.GetBroadcast(t)),
-                        (r = p.c.COMMUNITY_BASE_URL + "broadcast/report"),
+                        (r = b.c.COMMUNITY_BASE_URL + "broadcast/report"),
                         (n = {
                           steamid: t,
                           broadcastid: a ? a.m_ulBroadcastID : null,
-                          description: o,
-                          sessionid: p.c.SESSIONID,
+                          description: e,
+                          sessionid: b.c.SESSIONID,
                         }),
                         [
                           4,
@@ -334,50 +286,50 @@
                         ]
                       );
                     case 1:
-                      return [2, e.sent()];
+                      return [2, o.sent()];
                   }
                 });
               });
             }),
-            (e.prototype.InternalSendSimpleGetRequest = function (n, o, c, i) {
-              return Object(h.b)(this, void 0, void 0, function () {
-                var t, a, r;
-                return Object(h.e)(this, function (e) {
-                  switch (e.label) {
+            (e.prototype.InternalSendSimpleGetRequest = function (e, t, a, r) {
+              return Object(i.b)(this, void 0, void 0, function () {
+                var n, o, c;
+                return Object(i.e)(this, function (i) {
+                  switch (i.label) {
                     case 0:
                       return (
-                        e.trys.push([0, 2, , 3]),
+                        i.trys.push([0, 2, , 3]),
                         [
                           4,
-                          O.a.get(o, {
-                            params: c,
+                          l.a.get(t, {
+                            params: a,
                             withCredentials: !0,
-                            cancelToken: i ? i.token : void 0,
+                            cancelToken: r ? r.token : void 0,
                           }),
                         ]
                       );
                     case 1:
                       return (
-                        (t = e.sent()),
-                        i && i.token.reason
+                        (n = i.sent()),
+                        r && r.token.reason
                           ? [2, !1]
-                          : t &&
-                            200 == t.status &&
-                            t.data &&
-                            1 == t.data.success
+                          : n &&
+                            200 == n.status &&
+                            n.data &&
+                            1 == n.data.success
                           ? [2, !0]
                           : [3, 3]
                       );
                     case 2:
                       return (
-                        (a = e.sent()),
-                        (r = Object(m.a)(a)),
+                        (o = i.sent()),
+                        (c = Object(p.a)(o)),
                         console.error(
                           "CCommunityBroadcastStore:" +
-                            n +
+                            e +
                             ": Failed " +
-                            r.strErrorMsg,
-                          r
+                            c.strErrorMsg,
+                          c
                         ),
                         [3, 3]
                       );
@@ -389,13 +341,15 @@
             }),
             (e.Get = function () {
               return (
-                e.s_Singleton || (e.s_Singleton = new e()).Init(), e.s_Singleton
+                e.s_Singleton ||
+                  ((e.s_Singleton = new e()), e.s_Singleton.Init()),
+                e.s_Singleton
               );
             }),
             (e.prototype.Init = function () {
-              var e = Object(p.g)("broadcastsinfo", "application_config");
+              var e = Object(b.g)("broadcastsinfo", "application_config");
               this.ValidateStoreDefault(e) &&
-                ((this.m_steamid = new i.a(e.steamid)),
+                ((this.m_steamid = new m.a(e.steamid)),
                 (this.m_bShowOnlyChat = Boolean(e.show_only_chat)),
                 (this.m_bShowOnlyVideo = Boolean(e.show_only_video)));
             }),
@@ -404,50 +358,101 @@
                 !(!e || "object" != typeof e) && "string" == typeof e.steamid
               );
             }),
-            Object(h.c)([u.C], e.prototype, "m_curDebugInfo", void 0),
+            Object(i.c)([u.C], e.prototype, "m_curDebugInfo", void 0),
             e
           );
         })(),
-        s = a("TyAF"),
-        l = a("eN6m"),
-        b = a("trWU"),
-        _ = a("rKv1"),
-        g = a.n(_),
-        y = a("nWbB"),
-        E = a("TQGK"),
-        j = a("6oCP"),
-        I = a("Mgs7"),
-        C = a("IjL/"),
-        B = a("SdTr"),
-        A = a("GiuM"),
-        G = a("fpVW"),
-        P = a.n(G),
-        D = a("5L1o"),
-        N = a("Jqb/"),
-        w = a("ka0M"),
-        T = a("exH9"),
-        R = a("X3Ds"),
-        L = a("TLQK"),
-        M = a("eDP5"),
-        U = a("YLyR"),
-        k = a("V9dL"),
+        f = a("TyAF"),
+        v = a("eN6m"),
+        h = a("trWU"),
+        O = a("rKv1"),
+        S = a.n(O),
+        g = a("nWbB"),
+        y = a("TQGK"),
+        E = a("6oCP"),
+        j = a("Mgs7"),
+        I = a("IjL/"),
+        C = a("SdTr"),
+        B = a("GiuM"),
+        A = a("fpVW"),
+        G = a.n(A),
+        P = a("5L1o"),
+        D = a("Jqb/"),
+        N = a("ka0M"),
+        w = a("exH9"),
+        T = a("X3Ds"),
+        R = a("TLQK"),
+        L = a("eDP5"),
+        M = a("YLyR"),
+        U = a("V9dL"),
+        k = function (e) {
+          var t = Object(r.useRef)(null),
+            a = Object(r.useState)(null),
+            o = a[0],
+            c = a[1];
+          return (
+            Object(r.useEffect)(function () {
+              return function () {
+                t.current && t.current("BroadcastDebugSection: unmounting");
+              };
+            }, []),
+            n.a.createElement(
+              I.a,
+              null,
+              n.a.createElement(
+                "div",
+                { className: Object(w.a)(U.Container) },
+                n.a.createElement(
+                  "div",
+                  { className: U.Controls },
+                  n.a.createElement(
+                    j.d,
+                    {
+                      onClick: function () {
+                        return Object(i.b)(void 0, void 0, void 0, function () {
+                          var e, a;
+                          return Object(i.e)(this, function (r) {
+                            switch (r.label) {
+                              case 0:
+                                return (
+                                  t.current && t.current(),
+                                  (e = l.a.CancelToken.source()),
+                                  (t.current = e.cancel),
+                                  (a = c),
+                                  [4, _.Get().LoadBroadcastDebugInfo(e)]
+                                );
+                              case 1:
+                                return a.apply(void 0, [r.sent()]), [2];
+                            }
+                          });
+                        });
+                      },
+                    },
+                    "(VO) Load Debug Info"
+                  )
+                ),
+                n.a.createElement(I.a, null, n.a.createElement(F, { info: o }))
+              )
+            )
+          );
+        },
         F = function (e) {
           var t = e.info,
-            a = Object(f.useState)(!1),
-            r = a[0],
-            n = a[1];
+            a = Object(r.useState)(!1),
+            o = a[0],
+            c = a[1];
           if (!t) return null;
-          var o = S.Get().GetBroadcasterSteamID().ConvertTo64BitString(),
-            c = d.a.GetBroadcast(o);
-          return v.a.createElement(
+          var i = _.Get().GetBroadcasterSteamID().ConvertTo64BitString(),
+            s = d.a.GetBroadcast(i);
+          return n.a.createElement(
             "div",
-            { className: k.DisplaySection },
+            { className: U.DisplaySection },
             Boolean(t.last_error_result && 1 != t.last_error_result) &&
-              v.a.createElement(
+              n.a.createElement(
                 "div",
-                { className: k.SubSection },
-                v.a.createElement("div", { className: k.Header }, "Error"),
-                v.a.createElement(
+                { className: U.SubSection },
+                n.a.createElement("div", { className: U.Header }, "Error"),
+                n.a.createElement(
                   "div",
                   null,
                   "EResult: ",
@@ -455,29 +460,29 @@
                   ", occurred ",
                   t.last_error_time,
                   " - ",
-                  v.a.createElement(U.a, {
+                  n.a.createElement(M.a, {
                     dateAndTime: t.last_error_time,
                     bSingleLine: !0,
                   })
                 )
               ),
-            v.a.createElement(
+            n.a.createElement(
               "div",
-              { className: k.SubSection },
-              v.a.createElement(
+              { className: U.SubSection },
+              n.a.createElement(
                 "div",
-                { className: k.Header },
+                { className: U.Header },
                 "Broadcast Setup"
               ),
-              v.a.createElement(
+              n.a.createElement(
                 "div",
                 null,
                 "Broadcaster: ",
                 t.steam_id,
                 ", SteamID: ",
-                o
+                i
               ),
-              v.a.createElement(
+              n.a.createElement(
                 "div",
                 null,
                 "Broadcast Directory: ",
@@ -485,7 +490,7 @@
                 ", SessionID: ",
                 t.broadcast_id
               ),
-              v.a.createElement(
+              n.a.createElement(
                 "div",
                 null,
                 "Broadcast Ingestor: ",
@@ -493,19 +498,19 @@
                 ", UploadID: ",
                 t.upload_id
               ),
-              v.a.createElement(
+              n.a.createElement(
                 "div",
                 null,
                 "Broadcast Origin: ",
                 t.origin_server
               ),
-              v.a.createElement("div", null, "Broadcast Chat: ", t.chat_server)
+              n.a.createElement("div", null, "Broadcast Chat: ", t.chat_server)
             ),
-            v.a.createElement(
+            n.a.createElement(
               "div",
-              { className: k.SubSection },
-              v.a.createElement("div", { className: k.Header }, "Upload Info"),
-              v.a.createElement(
+              { className: U.SubSection },
+              n.a.createElement("div", { className: U.Header }, "Upload Info"),
+              n.a.createElement(
                 "div",
                 null,
                 "Upload Client: ",
@@ -513,7 +518,7 @@
                 " ",
                 Boolean(t.is_rtmp) ? "(RTMP)" : "(STEAM CLIENT)"
               ),
-              v.a.createElement(
+              n.a.createElement(
                 "div",
                 null,
                 "Avg Upload: ",
@@ -525,11 +530,11 @@
                 " MSEC key frame interval"
               )
             ),
-            v.a.createElement(
+            n.a.createElement(
               "div",
-              { className: k.SubSection },
-              v.a.createElement("div", { className: k.Header }, "Viewer Info"),
-              v.a.createElement(
+              { className: U.SubSection },
+              n.a.createElement("div", { className: U.Header }, "Viewer Info"),
+              n.a.createElement(
                 "div",
                 null,
                 "Viewers: ",
@@ -542,14 +547,14 @@
                 t.max_concurrent_viewers,
                 " max concurrent"
               ),
-              v.a.createElement(
+              n.a.createElement(
                 "div",
                 null,
                 "Average time watched: ",
                 t.average_watch_duration,
                 " seconds"
               ),
-              v.a.createElement(
+              n.a.createElement(
                 "div",
                 null,
                 "Last Minute: ",
@@ -558,100 +563,100 @@
                 t.rejected_viewers_last_minute,
                 " rejected"
               ),
-              v.a.createElement("div", null, "Restrictions: ", t.restriction)
+              n.a.createElement("div", null, "Restrictions: ", t.restriction)
             ),
-            v.a.createElement(
+            n.a.createElement(
               "div",
-              { className: k.SubSection },
-              v.a.createElement("div", { className: k.Header }, "Settings"),
-              v.a.createElement("div", null, "is replay? ", t.is_replay),
-              v.a.createElement(
+              { className: U.SubSection },
+              n.a.createElement("div", { className: U.Header }, "Settings"),
+              n.a.createElement("div", null, "is replay? ", t.is_replay),
+              n.a.createElement(
                 "div",
                 null,
                 "is replay local file? ",
                 t.is_replay_local_file
               ),
-              v.a.createElement(
+              n.a.createElement(
                 "div",
                 null,
                 "is replay clip? ",
                 t.is_replay_local_file
               ),
-              v.a.createElement(
+              n.a.createElement(
                 "div",
                 null,
                 "is replay clip? ",
                 t.is_replay_clip
               ),
-              v.a.createElement(
+              n.a.createElement(
                 "div",
                 null,
                 "is capturing VOD? ",
                 t.is_capturing_vod
               ),
-              v.a.createElement(
+              n.a.createElement(
                 "div",
                 null,
                 "is white listed for store streaming? ",
                 t.is_whitelisted
               )
             ),
-            v.a.createElement(
+            n.a.createElement(
               "div",
-              { className: k.SubSection },
-              v.a.createElement("div", { className: k.Header }, "App Info"),
-              v.a.createElement("div", null, "appid: ", t.app_id),
-              v.a.createElement("div", null, "app name: ", t.app_name),
-              v.a.createElement("div", null, "broadcast title: ", t.title),
-              v.a.createElement("div", null, "thumbnail: ", t.thumbnail_url),
+              { className: U.SubSection },
+              n.a.createElement("div", { className: U.Header }, "App Info"),
+              n.a.createElement("div", null, "appid: ", t.app_id),
+              n.a.createElement("div", null, "app name: ", t.app_name),
+              n.a.createElement("div", null, "broadcast title: ", t.title),
+              n.a.createElement("div", null, "thumbnail: ", t.thumbnail_url),
               Boolean(t.thumbnail_url) &&
-                v.a.createElement("img", { src: t.thumbnail_url }),
-              Boolean(t.app_id && 0 < t.app_id) &&
-                v.a.createElement(
+                n.a.createElement("img", { src: t.thumbnail_url }),
+              Boolean(t.app_id && t.app_id > 0) &&
+                n.a.createElement(
                   "div",
-                  { className: k.AppSummaryWidgetCtn },
-                  v.a.createElement(D.h, { id: t.app_id, type: "game" })
+                  { className: U.AppSummaryWidgetCtn },
+                  n.a.createElement(P.h, { id: t.app_id, type: "game" })
                 )
             ),
-            v.a.createElement(
+            n.a.createElement(
               "div",
-              { className: k.SubSection },
-              v.a.createElement(
+              { className: U.SubSection },
+              n.a.createElement(
                 "div",
-                { className: k.Header },
+                { className: U.Header },
                 "Manifest Information"
               ),
-              v.a.createElement(
+              n.a.createElement(
                 "div",
                 null,
                 "Heartbeat Interval: ",
-                c.m_data.heartbeat_interval
+                s.m_data.heartbeat_interval
               ),
-              v.a.createElement("div", null, "DASH MPEG Url: ", c.m_data.url),
-              v.a.createElement("div", null, "HLS Url: ", c.m_data.hls_url)
+              n.a.createElement("div", null, "DASH MPEG Url: ", s.m_data.url),
+              n.a.createElement("div", null, "HLS Url: ", s.m_data.hls_url)
             ),
-            v.a.createElement(
-              I.d,
+            n.a.createElement(
+              j.d,
               {
                 onClick: function () {
-                  return n(!r);
+                  return c(!o);
                 },
               },
               "Toggle Raw Data"
             ),
-            Boolean(r) &&
-              v.a.createElement(
-                v.a.Fragment,
+            Boolean(o) &&
+              n.a.createElement(
+                n.a.Fragment,
                 null,
-                v.a.createElement(
+                n.a.createElement(
                   "div",
-                  { className: k.SubSection },
-                  v.a.createElement(M.b, { data: t })
+                  { className: U.SubSection },
+                  n.a.createElement(L.b, { data: t })
                 ),
-                v.a.createElement(
+                n.a.createElement(
                   "div",
-                  { className: k.SubSection },
-                  v.a.createElement(M.b, { data: c.m_data })
+                  { className: U.SubSection },
+                  n.a.createElement(L.b, { data: s.m_data })
                 )
               )
           );
@@ -674,206 +679,151 @@
         }
         return null;
       }
-      function K(t) {
-        t.steamid.GetAccountID();
-        var e = Object(f.useState)(Y(t.steamid)),
-          a = e[0],
-          r = e[1],
-          n = Object(f.useState)(x.a.GetProfileURLBySteamID(t.steamid)),
-          o = n[0],
-          c = n[1],
-          i = Object(f.useState)(x.a.GetPersonaNameBySteamID(t.steamid)),
-          s = i[0],
-          l = i[1];
-        return (
-          Object(f.useEffect)(
-            function () {
-              a ||
-                Object(h.b)(void 0, void 0, void 0, function () {
-                  return Object(h.e)(this, function (e) {
-                    switch (e.label) {
-                      case 0:
-                        return [
-                          4,
-                          x.a.LoadProfiles([t.steamid.ConvertTo64BitString()]),
-                        ];
-                      case 1:
-                        return (
-                          e.sent(),
-                          r(Y(t.steamid)),
-                          c(x.a.GetProfileURLBySteamID(t.steamid)),
-                          l(x.a.GetPersonaNameBySteamID(t.steamid)),
-                          [2]
-                        );
-                    }
-                  });
-                });
-            },
-            [t.steamid, a]
-          ),
-          v.a.createElement(
-            "div",
-            { className: q.AvatarCtn },
-            v.a.createElement(
-              "a",
-              {
-                href: o,
-                "data-miniprofile": "s" + t.steamid.ConvertTo64BitString(),
-              },
-              v.a.createElement(V.b, {
-                persona: a,
-                size: t.size,
-                statusPosition: "bottom",
-              })
-            ),
-            v.a.createElement(
-              "div",
-              { className: q.NameAndProps },
-              Boolean(t.bShowName) &&
-                v.a.createElement(
-                  "a",
-                  {
-                    href: o,
-                    "data-miniprofile": "s" + t.steamid.ConvertTo64BitString(),
-                  },
-                  s
-                ),
-              t.children
-            )
-          )
-        );
-      }
-      function W(a) {
-        if (!p.i.is_support) return null;
-        function t(e, t) {
-          Object(w.d)(
-            v.a.createElement(ie, {
-              broadcastSteamID: a.broadcastSteamID,
-              strAction: t,
-            }),
-            Object(R.l)(e)
-          );
-        }
-        var r =
-          "https://steamsupport.valvesoftware.com/account/overview/" +
-          a.broadcastSteamID.ConvertTo64BitString();
-        return v.a.createElement(
-          "div",
-          { className: Object(T.a)(oe.AdminControls, P.a.ValveOnlyBackground) },
-          v.a.createElement("div", null, "(VO) Support Tools"),
-          v.a.createElement(
-            I.d,
-            {
-              onClick: function (e) {
-                return t(e, "frontpage");
-              },
-            },
-            "Remove from Front Page"
-          ),
-          v.a.createElement(
-            I.d,
-            {
-              onClick: function (e) {
-                return t(e, "ban");
-              },
-            },
-            "Ban from Broadcasting"
-          ),
-          v.a.createElement(
-            I.d,
-            {
-              onClick: function (e) {
-                Object(w.d)(
-                  v.a.createElement(se, { steamid: a.broadcastSteamID }),
-                  Object(R.l)(e)
-                );
-              },
-            },
-            "Make Unbannable"
-          ),
-          v.a.createElement(
-            I.d,
-            {
-              onClick: function (e) {
-                return Object(Z.d)(e, r);
-              },
-            },
-            "Go to Support Page"
-          )
-        );
-      }
-      var X = a("5eAM"),
-        Q = a("BFsE"),
-        J = a("6Y59"),
-        Z = a("+d9t"),
-        $ = a("IzPI"),
-        ee = a("M7Y6"),
-        te = Object(s.a)(function (e) {
-          var t = e.broadcasterSteamID,
-            a = t.ConvertTo64BitString(),
-            r = d.a.GetOrCreateBroadcastInfo(a),
-            n = Object(f.useState)(
-              X.a.GetAppLinkInfo(Number.parseInt(r.m_strAppId))
-            ),
-            o = n[0],
-            c = n[1];
+      var K = function (e) {
+          e.steamid.GetAccountID();
+          var t = Object(r.useState)(Y(e.steamid)),
+            a = t[0],
+            o = t[1],
+            c = Object(r.useState)(x.a.GetProfileURLBySteamID(e.steamid)),
+            s = c[0],
+            l = c[1],
+            u = Object(r.useState)(x.a.GetPersonaNameBySteamID(e.steamid)),
+            m = u[0],
+            d = u[1];
           return (
-            Object(f.useEffect)(
+            Object(r.useEffect)(
               function () {
-                var t = Number.parseInt(r.m_strAppId);
-                (!o || o.appid != t) &&
-                  0 < t &&
-                  Object(h.b)(void 0, void 0, void 0, function () {
-                    return Object(h.e)(this, function (e) {
-                      switch (e.label) {
+                if (!a) {
+                  Object(i.b)(void 0, void 0, void 0, function () {
+                    return Object(i.e)(this, function (t) {
+                      switch (t.label) {
                         case 0:
-                          return [4, X.a.LoadAppLinkInfo([t])];
+                          return [
+                            4,
+                            x.a.LoadProfiles([
+                              e.steamid.ConvertTo64BitString(),
+                            ]),
+                          ];
                         case 1:
-                          return e.sent(), c(X.a.GetAppLinkInfo(t)), [2];
+                          return (
+                            t.sent(),
+                            o(Y(e.steamid)),
+                            l(x.a.GetProfileURLBySteamID(e.steamid)),
+                            d(x.a.GetPersonaNameBySteamID(e.steamid)),
+                            [2]
+                          );
                       }
                     });
                   });
+                }
               },
-              [r.m_strAppId, o]
+              [e.steamid, a]
             ),
-            v.a.createElement(
-              C.a,
-              null,
-              v.a.createElement(
+            n.a.createElement(
+              "div",
+              { className: q.AvatarCtn },
+              n.a.createElement(
+                "a",
+                {
+                  href: s,
+                  "data-miniprofile": "s" + e.steamid.ConvertTo64BitString(),
+                },
+                n.a.createElement(V.b, {
+                  persona: a,
+                  size: e.size,
+                  statusPosition: "bottom",
+                })
+              ),
+              n.a.createElement(
                 "div",
-                { className: ee.ProfileCtn },
-                v.a.createElement(
+                { className: q.NameAndProps },
+                Boolean(e.bShowName) &&
+                  n.a.createElement(
+                    "a",
+                    {
+                      href: s,
+                      "data-miniprofile":
+                        "s" + e.steamid.ConvertTo64BitString(),
+                    },
+                    m
+                  ),
+                e.children
+              )
+            )
+          );
+        },
+        X = a("5eAM"),
+        Q = a("BFsE"),
+        W = a("6Y59"),
+        J = a("+d9t"),
+        Z = a("IzPI"),
+        $ = a("M7Y6"),
+        ee = Object(f.a)(function (e) {
+          var t = e.broadcasterSteamID,
+            a = t.ConvertTo64BitString(),
+            o = d.a.GetOrCreateBroadcastInfo(a),
+            c = Object(r.useState)(
+              X.a.GetAppLinkInfo(Number.parseInt(o.m_strAppId))
+            ),
+            s = c[0],
+            l = c[1];
+          return (
+            Object(r.useEffect)(
+              function () {
+                var e = Number.parseInt(o.m_strAppId);
+                if ((!s || s.appid != e) && e > 0) {
+                  Object(i.b)(void 0, void 0, void 0, function () {
+                    return Object(i.e)(this, function (t) {
+                      switch (t.label) {
+                        case 0:
+                          return [4, X.a.LoadAppLinkInfo([e])];
+                        case 1:
+                          return t.sent(), l(X.a.GetAppLinkInfo(e)), [2];
+                      }
+                    });
+                  });
+                }
+              },
+              [o.m_strAppId, s]
+            ),
+            n.a.createElement(
+              I.a,
+              null,
+              n.a.createElement(
+                "div",
+                { className: $.ProfileCtn },
+                n.a.createElement(
                   "a",
                   {
-                    href: Object($.e)(
-                      p.c.STORE_BASE_URL + (o ? "app/" + o.appid : "")
+                    href: Object(Z.e)(
+                      b.c.STORE_BASE_URL + (s ? "app/" + s.appid : "")
                     ),
-                    className: ee.GameCapsule,
+                    className: $.GameCapsule,
                   },
-                  v.a.createElement("img", { src: o ? o.capsule : "" })
+                  n.a.createElement("img", { src: s ? s.capsule : "" })
                 ),
-                v.a.createElement(
+                n.a.createElement(
                   "div",
-                  { className: ee.StreamDetailsCtn },
-                  v.a.createElement(
+                  { className: $.StreamDetailsCtn },
+                  n.a.createElement(
                     "div",
-                    { className: ee.GameAndOptionsCtn },
-                    v.a.createElement(
+                    { className: $.GameAndOptionsCtn },
+                    n.a.createElement(
                       "div",
-                      { className: ee.GameAndViewersCtn },
-                      v.a.createElement(ae, { broadcasterSteamID: t }),
-                      v.a.createElement(
+                      { className: $.GameAndViewersCtn },
+                      n.a.createElement(te, { broadcasterSteamID: t }),
+                      n.a.createElement(
                         "div",
-                        { className: ee.ViewerCount },
-                        Object(L.l)(
+                        { className: $.ViewerCount },
+                        Object(R.l)(
                           "#Broadcast_ViewerCount",
-                          r.m_nViewerCount.toLocaleString()
+                          o.m_nViewerCount.toLocaleString()
                         )
                       )
                     ),
-                    v.a.createElement(re, { broadcasterSteamID: t })
+                    n.a.createElement(ae, { broadcasterSteamID: t })
                   ),
-                  v.a.createElement(K, {
+                  n.a.createElement(K, {
                     steamid: t,
                     size: "Medium",
                     bShowName: !0,
@@ -883,198 +833,259 @@
             )
           );
         }),
-        ae = Object(s.a)(function (e) {
+        te = Object(f.a)(function (e) {
           var t = e.broadcasterSteamID.ConvertTo64BitString(),
             a = d.a.GetOrCreateBroadcastInfo(t),
-            r = Object(f.useState)(
+            o = Object(r.useState)(
               X.a.GetAppLinkInfo(Number.parseInt(a.m_strAppId))
             ),
-            n = r[0],
-            o = r[1];
+            c = o[0],
+            s = o[1];
           return (
-            Object(f.useEffect)(
+            Object(r.useEffect)(
               function () {
-                var t = Number.parseInt(a.m_strAppId);
-                (!n || n.appid != t) &&
-                  0 < t &&
-                  Object(h.b)(void 0, void 0, void 0, function () {
-                    return Object(h.e)(this, function (e) {
-                      switch (e.label) {
+                var e = Number.parseInt(a.m_strAppId);
+                if ((!c || c.appid != e) && e > 0) {
+                  Object(i.b)(void 0, void 0, void 0, function () {
+                    return Object(i.e)(this, function (t) {
+                      switch (t.label) {
                         case 0:
-                          return [4, X.a.LoadAppLinkInfo([t])];
+                          return [4, X.a.LoadAppLinkInfo([e])];
                         case 1:
-                          return e.sent(), o(X.a.GetAppLinkInfo(t)), [2];
+                          return t.sent(), s(X.a.GetAppLinkInfo(e)), [2];
                       }
                     });
                   });
+                }
               },
-              [a.m_strAppId, n]
+              [a.m_strAppId, c]
             ),
-            v.a.createElement(
+            n.a.createElement(
               "div",
-              { className: ee.BroadcastTitleCtn },
-              Object(L.f)("#Broadcast_Playing"),
-              v.a.createElement(
+              { className: $.BroadcastTitleCtn },
+              Object(R.f)("#Broadcast_Playing"),
+              n.a.createElement(
                 "a",
                 {
-                  href: Object($.e)(
-                    p.c.STORE_BASE_URL + (n ? "app/" + n.appid : "")
+                  href: Object(Z.e)(
+                    b.c.STORE_BASE_URL + (c ? "app/" + c.appid : "")
                   ),
                 },
-                Boolean(a.m_strAppTitle) ? a.m_strAppTitle : n ? n.title : ""
+                Boolean(a.m_strAppTitle) ? a.m_strAppTitle : c ? c.title : ""
               ),
-              Boolean(a.m_strTitle && 0 < a.m_strTitle.length) &&
-                v.a.createElement("span", null, " - ", a.m_strTitle)
+              Boolean(a.m_strTitle && a.m_strTitle.length > 0) &&
+                n.a.createElement("span", null, " - ", a.m_strTitle)
             )
           );
         }),
-        re = Object(s.a)(function (e) {
+        ae = Object(f.a)(function (e) {
           var t = e.broadcasterSteamID,
             a = t.ConvertTo64BitString();
           d.a.GetOrCreateBroadcastInfo(a);
-          return v.a.createElement(
+          return n.a.createElement(
             "div",
-            { className: ee.BroadcastUserActionsCtn },
+            { className: $.BroadcastUserActionsCtn },
             Boolean(
-              p.i.steamid != e.broadcasterSteamID.ConvertTo64BitString()
+              b.i.steamid != e.broadcasterSteamID.ConvertTo64BitString()
             ) &&
-              v.a.createElement(
-                I.d,
+              n.a.createElement(
+                j.d,
                 {
-                  "data-tooltip-text": Object(L.f)(
+                  "data-tooltip-text": Object(R.f)(
                     "#Broadcast_User_Report_ttip"
                   ),
                   onClick: function (e) {
-                    p.i.logged_in
-                      ? Object(w.d)(
-                          v.a.createElement(ne, { broadcasterSteamID: t }),
-                          Object(R.l)(e)
+                    b.i.logged_in
+                      ? Object(N.d)(
+                          n.a.createElement(re, { broadcasterSteamID: t }),
+                          Object(T.m)(e)
                         )
-                      : Object(w.d)(
-                          v.a.createElement(N.d, {
-                            strTitle: Object(L.f)(
+                      : Object(N.d)(
+                          n.a.createElement(D.d, {
+                            strTitle: Object(R.f)(
                               "#EventDisplay_Share_NotLoggedIn"
                             ),
-                            strDescription: Object(L.f)(
+                            strDescription: Object(R.f)(
                               "#EventDisplay_Share_NotLoggedIn_Description"
                             ),
-                            strOKButtonText: Object(L.f)("#MobileLogin_SignIn"),
+                            strOKButtonText: Object(R.f)("#MobileLogin_SignIn"),
                             onOK: function () {
                               return Object(Q.a)();
                             },
                           }),
-                          Object(R.l)(e)
+                          Object(T.m)(e)
                         );
                   },
                 },
-                v.a.createElement(J.x, null)
+                n.a.createElement(W.x, null)
               ),
-            v.a.createElement(
-              I.d,
+            n.a.createElement(
+              j.d,
               {
-                "data-tooltip-text": Object(L.f)("#Broadcast_User_FAQ_ttip"),
+                "data-tooltip-text": Object(R.f)("#Broadcast_User_FAQ_ttip"),
                 onClick: function (e) {
-                  return Object(Z.d)(
+                  return Object(J.d)(
                     e,
                     "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497"
                   );
                 },
               },
-              v.a.createElement(J.A, null)
+              n.a.createElement(W.A, null)
             )
           );
         }),
-        ne = function (t) {
-          var e = Object(f.useState)(""),
-            a = e[0],
-            r = e[1];
-          return v.a.createElement(
-            N.d,
+        re = function (e) {
+          var t = Object(r.useState)(""),
+            a = t[0],
+            o = t[1];
+          return n.a.createElement(
+            D.d,
             {
-              strTitle: Object(L.f)("#Broadcast_ReportItem_Title"),
-              strDescription: Object(L.f)("#Broadcast_ReportItem_Description"),
-              onCancel: t.closeModal,
+              strTitle: Object(R.f)("#Broadcast_ReportItem_Title"),
+              strDescription: Object(R.f)("#Broadcast_ReportItem_Description"),
+              onCancel: e.closeModal,
               bOKDisabled: 0 == a.trim().length,
               onOK: function () {
-                return Object(h.b)(void 0, void 0, void 0, function () {
-                  return Object(h.e)(this, function (e) {
-                    switch (e.label) {
+                return Object(i.b)(void 0, void 0, void 0, function () {
+                  return Object(i.e)(this, function (t) {
+                    switch (t.label) {
                       case 0:
-                        return [4, S.Get().SendUserReportOnBroadcast(a)];
+                        return [4, _.Get().SendUserReportOnBroadcast(a)];
                       case 1:
-                        return e.sent(), t.closeModal && t.closeModal(), [2];
+                        return t.sent(), e.closeModal && e.closeModal(), [2];
                     }
                   });
                 });
               },
             },
-            v.a.createElement("textarea", {
+            n.a.createElement("textarea", {
               value: a,
               onChange: function (e) {
-                return r(e.currentTarget.value);
+                return o(e.currentTarget.value);
               },
               rows: 10,
               cols: 80,
             })
           );
         },
-        oe = a("Pa9b"),
-        ce = a("0OaU"),
-        ie = Object(s.a)(function (e) {
+        ne = a("Pa9b"),
+        oe = a("0OaU"),
+        ce = function (e) {
+          if (!b.i.is_support) return null;
+          var t = function (t, a) {
+              Object(N.d)(
+                n.a.createElement(ie, {
+                  broadcastSteamID: e.broadcastSteamID,
+                  strAction: a,
+                }),
+                Object(T.m)(t)
+              );
+            },
+            a =
+              "https://steamsupport.valvesoftware.com/account/overview/" +
+              e.broadcastSteamID.ConvertTo64BitString();
+          return n.a.createElement(
+            "div",
+            {
+              className: Object(w.a)(ne.AdminControls, G.a.ValveOnlyBackground),
+            },
+            n.a.createElement("div", null, "(VO) Support Tools"),
+            n.a.createElement(
+              j.d,
+              {
+                onClick: function (e) {
+                  return t(e, "frontpage");
+                },
+              },
+              "Remove from Front Page"
+            ),
+            n.a.createElement(
+              j.d,
+              {
+                onClick: function (e) {
+                  return t(e, "ban");
+                },
+              },
+              "Ban from Broadcasting"
+            ),
+            n.a.createElement(
+              j.d,
+              {
+                onClick: function (t) {
+                  Object(N.d)(
+                    n.a.createElement(se, { steamid: e.broadcastSteamID }),
+                    Object(T.m)(t)
+                  );
+                },
+              },
+              "Make Unbannable"
+            ),
+            n.a.createElement(
+              j.d,
+              {
+                onClick: function (e) {
+                  return Object(J.d)(e, a);
+                },
+              },
+              "Go to Support Page"
+            )
+          );
+        },
+        ie = Object(f.a)(function (e) {
           e.broadcastSteamID;
-          var r = e.strAction,
-            t = Object(f.useState)(1),
-            n = t[0],
-            a = t[1],
-            o = Object(f.useState)(!1),
-            c = o[0],
-            i = o[1],
-            s = Object(f.useState)(!1),
-            l = s[0],
-            u = s[1],
-            m = Object(f.useState)(!1),
-            d = m[0],
-            p = m[1],
-            b = Object(f.useRef)(null);
-          Object(f.useEffect)(function () {
+          var t = e.strAction,
+            a = Object(r.useState)(1),
+            o = a[0],
+            c = a[1],
+            s = Object(r.useState)(!1),
+            u = s[0],
+            m = s[1],
+            d = Object(r.useState)(!1),
+            p = d[0],
+            b = d[1],
+            f = Object(r.useState)(!1),
+            v = f[0],
+            h = f[1],
+            O = Object(r.useRef)(null);
+          Object(r.useEffect)(function () {
             return function () {
-              b.current && b.current("BroadcastConfirmBanAction: unmounting");
+              O.current && O.current("BroadcastConfirmBanAction: unmounting");
             };
           }, []);
-          function _() {
+          var S = function () {
             return e.closeModal && e.closeModal();
-          }
-          return v.a.createElement(
-            C.a,
+          };
+          return n.a.createElement(
+            I.a,
             null,
-            v.a.createElement(
-              N.h,
-              { onEscKeypress: _ },
-              v.a.createElement(
-                I.f,
+            n.a.createElement(
+              D.h,
+              { onEscKeypress: S },
+              n.a.createElement(
+                j.f,
                 null,
-                v.a.createElement(
-                  I.l,
+                n.a.createElement(
+                  j.l,
                   null,
                   "Remove Broadcast From Front Page"
                 ),
-                v.a.createElement(
-                  I.b,
+                n.a.createElement(
+                  j.b,
                   null,
-                  v.a.createElement(
-                    I.c,
+                  n.a.createElement(
+                    j.c,
                     null,
-                    v.a.createElement(
+                    n.a.createElement(
                       "p",
                       null,
-                      "frontpage" == r
+                      "frontpage" == t
                         ? "How long should we prevent the broadcast from appearing in community or store?"
                         : "How long should we prevent the user from Broadcast at all on Steam?"
                     ),
-                    v.a.createElement(
+                    n.a.createElement(
                       "div",
                       null,
-                      v.a.createElement(I.i, {
+                      n.a.createElement(j.i, {
                         rgOptions: [
                           { label: "1 Day", data: 1 },
                           { label: "1 Week", data: 7 },
@@ -1082,75 +1093,75 @@
                           { label: "6 Months", data: 180 },
                           { label: "1 Year", data: 365 },
                         ],
-                        selectedOption: n,
+                        selectedOption: o,
                         onChange: function (e) {
-                          return a(e.data);
+                          return c(e.data);
                         },
                       }),
-                      Boolean(c) && v.a.createElement(ce.a, null, " "),
-                      Boolean(l) &&
-                        v.a.createElement(
+                      Boolean(u) && n.a.createElement(oe.a, null, " "),
+                      Boolean(p) &&
+                        n.a.createElement(
                           "div",
                           null,
-                          d
+                          v
                             ? "Successfully Completed Request"
                             : "Failed to complete request, check browser console and/or try again later"
                         )
                     )
                   )
                 ),
-                v.a.createElement(
-                  I.k,
+                n.a.createElement(
+                  j.k,
                   null,
-                  l
-                    ? v.a.createElement(
-                        I.r,
-                        { onClick: _ },
-                        Object(L.f)("#Button_Dismiss")
+                  p
+                    ? n.a.createElement(
+                        j.r,
+                        { onClick: S },
+                        Object(R.f)("#Button_Dismiss")
                       )
-                    : v.a.createElement(
-                        I.w,
+                    : n.a.createElement(
+                        j.w,
                         null,
-                        v.a.createElement(
-                          I.d,
-                          { onClick: _ },
-                          Object(L.f)("#Button_Cancel")
+                        n.a.createElement(
+                          j.d,
+                          { onClick: S },
+                          Object(R.f)("#Button_Cancel")
                         ),
-                        v.a.createElement(
-                          I.r,
+                        n.a.createElement(
+                          j.r,
                           {
                             onClick: function () {
-                              return Object(h.b)(
+                              return Object(i.b)(
                                 void 0,
                                 void 0,
                                 void 0,
                                 function () {
-                                  var t, a;
-                                  return Object(h.e)(this, function (e) {
-                                    switch (e.label) {
+                                  var e, a;
+                                  return Object(i.e)(this, function (r) {
+                                    switch (r.label) {
                                       case 0:
-                                        i(!(t = !1)), (e.label = 1);
+                                        (e = !1), m(!0), (r.label = 1);
                                       case 1:
                                         return (
-                                          e.trys.push([1, , 3, 4]),
-                                          b.current && b.current(),
-                                          (a = O.a.CancelToken.source()),
-                                          (b.current = a.cancel),
+                                          r.trys.push([1, , 3, 4]),
+                                          O.current && O.current(),
+                                          (a = l.a.CancelToken.source()),
+                                          (O.current = a.cancel),
                                           [
                                             4,
-                                            S.Get().SetBroadcasterRestrictions(
-                                              r,
-                                              n,
+                                            _.Get().SetBroadcasterRestrictions(
+                                              t,
+                                              o,
                                               a
                                             ),
                                           ]
                                         );
                                       case 2:
                                         return (
-                                          e.sent(), a.token.reason || 0, [3, 4]
+                                          r.sent(), a.token.reason || !0, [3, 4]
                                         );
                                       case 3:
-                                        return i(!1), u(!0), p(t), [7];
+                                        return m(!1), b(!0), h(e), [7];
                                       case 4:
                                         return [2];
                                     }
@@ -1159,7 +1170,7 @@
                               );
                             },
                           },
-                          Object(L.f)("#Button_Confirm")
+                          Object(R.f)("#Button_Confirm")
                         )
                       )
                 )
@@ -1168,103 +1179,103 @@
           );
         }),
         se = function (e) {
-          var t = Object(f.useState)(!1),
+          var t = Object(r.useState)(!1),
             a = t[0],
-            r = t[1],
-            n = Object(f.useState)(!1),
-            o = n[0],
-            c = n[1],
-            i = Object(f.useState)(!1),
-            s = i[0],
-            l = i[1],
-            u = Object(f.useRef)(null);
-          Object(f.useEffect)(function () {
+            o = t[1],
+            c = Object(r.useState)(!1),
+            s = c[0],
+            u = c[1],
+            m = Object(r.useState)(!1),
+            d = m[0],
+            p = m[1],
+            b = Object(r.useRef)(null);
+          Object(r.useEffect)(function () {
             return function () {
-              u.current && u.current("BroadcastMakeUnbannable: unmounting");
+              b.current && b.current("BroadcastMakeUnbannable: unmounting");
             };
           }, []);
-          function m() {
+          var f = function () {
             return e.closeModal && e.closeModal();
-          }
-          return v.a.createElement(
-            C.a,
+          };
+          return n.a.createElement(
+            I.a,
             null,
-            v.a.createElement(
-              N.h,
-              { onEscKeypress: m },
-              v.a.createElement(
-                I.f,
+            n.a.createElement(
+              D.h,
+              { onEscKeypress: f },
+              n.a.createElement(
+                j.f,
                 null,
-                v.a.createElement(I.l, null, "Make Broadcast Unbannable"),
-                v.a.createElement(
-                  I.b,
+                n.a.createElement(j.l, null, "Make Broadcast Unbannable"),
+                n.a.createElement(
+                  j.b,
                   null,
-                  v.a.createElement(
-                    I.c,
+                  n.a.createElement(
+                    j.c,
                     null,
-                    v.a.createElement(
+                    n.a.createElement(
                       "p",
                       null,
                       "Prevent automatic, report based banning changes to this strema visibility the stream for 1 week?"
                     ),
-                    v.a.createElement(
+                    n.a.createElement(
                       "div",
                       null,
-                      Boolean(a) && v.a.createElement(ce.a, null, " "),
-                      Boolean(o) &&
-                        v.a.createElement(
+                      Boolean(a) && n.a.createElement(oe.a, null, " "),
+                      Boolean(s) &&
+                        n.a.createElement(
                           "div",
                           null,
-                          s
+                          d
                             ? "Successfully Set Unbannable"
                             : "Failed to make Unbannable"
                         )
                     )
                   )
                 ),
-                v.a.createElement(
-                  I.k,
+                n.a.createElement(
+                  j.k,
                   null,
-                  o
-                    ? v.a.createElement(
-                        I.r,
-                        { onClick: m },
-                        Object(L.f)("#Button_Dismiss")
+                  s
+                    ? n.a.createElement(
+                        j.r,
+                        { onClick: f },
+                        Object(R.f)("#Button_Dismiss")
                       )
-                    : v.a.createElement(
-                        I.w,
+                    : n.a.createElement(
+                        j.w,
                         null,
-                        v.a.createElement(
-                          I.d,
-                          { onClick: m },
-                          Object(L.f)("#Button_Cancel")
+                        n.a.createElement(
+                          j.d,
+                          { onClick: f },
+                          Object(R.f)("#Button_Cancel")
                         ),
-                        v.a.createElement(
-                          I.r,
+                        n.a.createElement(
+                          j.r,
                           {
                             onClick: function () {
-                              return Object(h.b)(
+                              return Object(i.b)(
                                 void 0,
                                 void 0,
                                 void 0,
                                 function () {
-                                  var t, a;
-                                  return Object(h.e)(this, function (e) {
-                                    switch (e.label) {
+                                  var e, t;
+                                  return Object(i.e)(this, function (a) {
+                                    switch (a.label) {
                                       case 0:
-                                        r(!0), (t = !1), (e.label = 1);
+                                        o(!0), (e = !1), (a.label = 1);
                                       case 1:
                                         return (
-                                          e.trys.push([1, , 3, 4]),
-                                          u.current && u.current(),
-                                          (a = O.a.CancelToken.source()),
-                                          (u.current = a.cancel),
-                                          [4, S.Get().SetUnBannable(a)]
+                                          a.trys.push([1, , 3, 4]),
+                                          b.current && b.current(),
+                                          (t = l.a.CancelToken.source()),
+                                          (b.current = t.cancel),
+                                          [4, _.Get().SetUnBannable(t)]
                                         );
                                       case 2:
-                                        return (t = e.sent()), [3, 4];
+                                        return (e = a.sent()), [3, 4];
                                       case 3:
-                                        return r(!1), c(!0), l(t), [7];
+                                        return o(!1), u(!0), p(e), [7];
                                       case 4:
                                         return [2];
                                     }
@@ -1273,7 +1284,7 @@
                               );
                             },
                           },
-                          Object(L.f)("#Button_Confirm")
+                          Object(R.f)("#Button_Confirm")
                         )
                       )
                 )
@@ -1281,255 +1292,256 @@
             )
           );
         },
-        le = Object(s.a)(function (e) {
+        le = Object(f.a)(function (e) {
           var t,
-            a = S.Get().GetBroadcasterSteamID(),
+            a = _.Get().GetBroadcasterSteamID(),
             r = a.ConvertTo64BitString(),
-            n = Object(A.d)("muted", !0),
-            o = n[0],
-            c = (n[1], d.a.GetBroadcast(r)),
-            i = d.a.GetOrCreateBroadcastInfo(r);
-          return v.a.createElement(
-            v.a.Fragment,
+            o = Object(B.d)("muted", !0),
+            c = o[0],
+            i = (o[1], d.a.GetBroadcast(r)),
+            s = d.a.GetOrCreateBroadcastInfo(r);
+          return n.a.createElement(
+            n.a.Fragment,
             null,
-            v.a.createElement(
+            n.a.createElement(
               "div",
-              { className: Object(T.a)(z.BroadcastPage) },
-              v.a.createElement(
+              { className: Object(w.a)(z.BroadcastPage) },
+              n.a.createElement(
                 "div",
-                { className: Object(T.a)(g.a.BroadcastAndChat) },
-                Boolean(!S.Get().BShowOnlyChat()) &&
-                  v.a.createElement(
-                    C.a,
+                { className: Object(w.a)(S.a.BroadcastAndChat) },
+                Boolean(!_.Get().BShowOnlyChat()) &&
+                  n.a.createElement(
+                    I.a,
                     null,
-                    v.a.createElement(
+                    n.a.createElement(
                       "div",
-                      { className: Object(T.a)(g.a.wrapper) },
-                      v.a.createElement(
+                      { className: Object(w.a)(S.a.wrapper) },
+                      n.a.createElement(
                         "div",
                         {
-                          className: Object(T.a)(
-                            (((t = {})[g.a.video_placeholder] = !0),
+                          className: Object(w.a)(
+                            ((t = {}),
+                            (t[S.a.video_placeholder] = !0),
                             (t.video_placeholder_trgt = !0),
-                            (t[g.a.NoChat] = S.Get().BShowOnlyVideo()),
+                            (t[S.a.NoChat] = _.Get().BShowOnlyVideo()),
                             t)
                           ),
                         },
-                        v.a.createElement(
+                        n.a.createElement(
                           "div",
-                          { className: g.a.BroadcastPlayerContainer },
-                          v.a.createElement(
-                            C.a,
+                          { className: S.a.BroadcastPlayerContainer },
+                          n.a.createElement(
+                            I.a,
                             null,
-                            v.a.createElement(b.a, {
+                            n.a.createElement(h.a, {
                               steamIDBroadcast: r,
                               watchLocation: 5,
-                              bStartMuted: o,
+                              bStartMuted: c,
                             })
                           )
                         )
                       )
                     )
                   ),
-                Boolean(!S.Get().BShowOnlyVideo()) &&
-                  v.a.createElement(
+                Boolean(!_.Get().BShowOnlyVideo()) &&
+                  n.a.createElement(
                     "div",
-                    { className: g.a.detail_chat_ctn },
-                    v.a.createElement(
+                    { className: S.a.detail_chat_ctn },
+                    n.a.createElement(
                       "div",
-                      { className: g.a.ChatContainer },
-                      v.a.createElement(
-                        C.a,
+                      { className: S.a.ChatContainer },
+                      n.a.createElement(
+                        I.a,
                         null,
-                        v.a.createElement(l.a, {
-                          emoticonStore: y.f,
+                        n.a.createElement(v.a, {
+                          emoticonStore: g.f,
                           watchLocation: 6,
                           steamID: r,
-                          broadcastID: c ? c.m_ulBroadcastID : void 0,
+                          broadcastID: i ? i.m_ulBroadcastID : void 0,
                         })
                       )
                     )
                   )
               ),
-              Boolean(!S.Get().BShowInIframe()) &&
-                v.a.createElement(ue, {
+              Boolean(!_.Get().BShowInIframe()) &&
+                n.a.createElement(ue, {
                   broadcasterSteamID: a,
-                  broadcastInfo: i,
+                  broadcastInfo: s,
                 })
             )
           );
         }),
-        ue = Object(s.a)(function (e) {
+        ue = Object(f.a)(function (e) {
           var t = e.broadcasterSteamID,
             a = e.broadcastInfo,
-            r = Object(f.useState)(null),
-            n = r[0],
-            o = r[1];
+            o = Object(r.useState)(null),
+            c = o[0],
+            s = o[1];
           return (
-            Object(f.useEffect)(
+            Object(r.useEffect)(
               function () {
-                Object(h.b)(void 0, void 0, void 0, function () {
-                  var t;
-                  return Object(h.e)(this, function (e) {
-                    switch (e.label) {
+                Object(i.b)(void 0, void 0, void 0, function () {
+                  var e;
+                  return Object(i.e)(this, function (t) {
+                    switch (t.label) {
                       case 0:
                         return [
                           4,
-                          E.a.LoadOGGClanInfoForAppID(
+                          y.a.LoadOGGClanInfoForAppID(
                             Number.parseInt(a.m_strAppId)
                           ),
                         ];
                       case 1:
-                        return (t = e.sent()), o(t), [2];
+                        return (e = t.sent()), s(e), [2];
                     }
                   });
                 });
               },
               [a.m_strAppId]
             ),
-            v.a.createElement(
-              v.a.Fragment,
+            n.a.createElement(
+              n.a.Fragment,
               null,
-              v.a.createElement(te, { broadcasterSteamID: t }),
-              v.a.createElement(me, { steamid: t }),
-              Boolean(p.i.is_support) &&
-                v.a.createElement(
+              n.a.createElement(ee, { broadcasterSteamID: t }),
+              n.a.createElement(me, { steamid: t }),
+              Boolean(b.i.is_support) &&
+                n.a.createElement(
                   "div",
                   null,
-                  v.a.createElement(W, { broadcastSteamID: t }),
-                  v.a.createElement(
+                  n.a.createElement(ce, { broadcastSteamID: t }),
+                  n.a.createElement(
                     "div",
                     {
-                      className: Object(T.a)(
-                        P.a.ValveOnlyBackground,
+                      className: Object(w.a)(
+                        G.a.ValveOnlyBackground,
                         z.DebugCtn
                       ),
                     },
-                    v.a.createElement(c, null)
+                    n.a.createElement(k, null)
                   )
                 ),
-              Boolean(a.m_strAppId && 7 < Number.parseInt(a.m_strAppId)) &&
-                v.a.createElement(
+              Boolean(a.m_strAppId && Number.parseInt(a.m_strAppId) > 7) &&
+                n.a.createElement(
                   "div",
                   { className: z.GameInfoCtn },
-                  v.a.createElement(
+                  n.a.createElement(
                     "div",
                     { className: z.GameAboutTitleCtn },
-                    v.a.createElement(
+                    n.a.createElement(
                       "div",
                       { className: z.GameAboutTitle },
                       " ",
-                      Object(L.f)("#Broadcast_About_Game"),
+                      Object(R.f)("#Broadcast_About_Game"),
                       " "
                     ),
-                    v.a.createElement(
+                    n.a.createElement(
                       "div",
-                      { className: P.a.EventSectionSpacer },
+                      { className: G.a.EventSectionSpacer },
                       " "
                     )
                   ),
-                  v.a.createElement(
+                  n.a.createElement(
                     "div",
                     { className: z.GameInfo },
-                    v.a.createElement(D.h, {
+                    n.a.createElement(P.h, {
                       id: Number.parseInt(a.m_strAppId),
                       type: "game",
                     })
                   )
                 ),
-              Boolean(n) &&
-                v.a.createElement(
+              Boolean(c) &&
+                n.a.createElement(
                   "div",
                   { className: z.RelatedEvents },
-                  v.a.createElement(B.a, {
-                    clanAccountID: n.clanAccountID,
+                  n.a.createElement(C.a, {
+                    clanAccountID: c.clanAccountID,
                     trackingLocation: 6,
-                    partnerEventStore: j.d,
+                    partnerEventStore: E.d,
                     bViewAllShowInfiniteScroll: !0,
                   })
                 )
             )
           );
         }),
-        me = Object(s.a)(function (e) {
-          var r = Object(f.useRef)(null),
-            t = d.a.GetOrCreateBroadcastInfo(e.steamid.ConvertTo64BitString()),
-            a = Object(f.useState)(t.m_strTitle),
-            n = a[0],
-            o = a[1],
-            c = Object(f.useState)(""),
-            i = c[0],
-            s = c[1],
-            l = Object(f.useState)(null),
-            u = l[0],
-            m = l[1];
+        me = Object(f.a)(function (e) {
+          var t = Object(r.useRef)(null),
+            a = d.a.GetOrCreateBroadcastInfo(e.steamid.ConvertTo64BitString()),
+            o = Object(r.useState)(a.m_strTitle),
+            c = o[0],
+            s = o[1],
+            u = Object(r.useState)(""),
+            m = u[0],
+            p = u[1],
+            f = Object(r.useState)(null),
+            v = f[0],
+            h = f[1];
           if (
-            (Object(f.useEffect)(
+            (Object(r.useEffect)(
               function () {
                 return (
-                  o(t.m_strTitle),
+                  s(a.m_strTitle),
                   function () {
-                    r.current && r.current("BroadcastControls: unmounting");
+                    t.current && t.current("BroadcastControls: unmounting");
                   }
                 );
               },
-              [t.m_strTitle]
+              [a.m_strTitle]
             ),
-            p.i.accountid != e.steamid.GetAccountID())
+            b.i.accountid != e.steamid.GetAccountID())
           )
             return null;
-          return v.a.createElement(
+          return n.a.createElement(
             "div",
             { className: z.ControlCtn },
-            v.a.createElement(
+            n.a.createElement(
               "div",
               { className: z.ControlsTitle },
-              Object(L.f)("#Broadcaster_Control_title")
+              Object(R.f)("#Broadcaster_Control_title")
             ),
-            v.a.createElement(
+            n.a.createElement(
               "div",
               { className: z.TitleInput },
-              v.a.createElement(
+              n.a.createElement(
                 "div",
                 { className: z.Options },
-                v.a.createElement(I.m, {
+                n.a.createElement(j.m, {
                   type: "text",
-                  label: Object(L.f)("#Broadcast_title_title"),
-                  onChange: function (e) {
-                    return o(e.currentTarget.value || "");
-                  },
-                  placeholder: Object(L.f)("#Broadcast_title_placeholder"),
-                  value: n,
-                }),
-                v.a.createElement(I.m, {
-                  type: "text",
-                  label: Object(L.f)("#Broadcast_Control_matchid"),
+                  label: Object(R.f)("#Broadcast_title_title"),
                   onChange: function (e) {
                     return s(e.currentTarget.value || "");
                   },
-                  value: i,
+                  placeholder: Object(R.f)("#Broadcast_title_placeholder"),
+                  value: c,
                 }),
-                v.a.createElement(
-                  I.d,
+                n.a.createElement(j.m, {
+                  type: "text",
+                  label: Object(R.f)("#Broadcast_Control_matchid"),
+                  onChange: function (e) {
+                    return p(e.currentTarget.value || "");
+                  },
+                  value: m,
+                }),
+                n.a.createElement(
+                  j.d,
                   {
                     onClick: function () {
-                      return Object(h.b)(void 0, void 0, void 0, function () {
-                        var t, a;
-                        return Object(h.e)(this, function (e) {
-                          switch (e.label) {
+                      return Object(i.b)(void 0, void 0, void 0, function () {
+                        var e, a;
+                        return Object(i.e)(this, function (r) {
+                          switch (r.label) {
                             case 0:
                               return (
-                                r.current && r.current(),
-                                (t = O.a.CancelToken.source()),
-                                (r.current = t.cancel),
-                                [4, S.Get().UpdateBroadcastSettings(i, n, t)]
+                                t.current && t.current(),
+                                (e = l.a.CancelToken.source()),
+                                (t.current = e.cancel),
+                                [4, _.Get().UpdateBroadcastSettings(m, c, e)]
                               );
                             case 1:
                               return (
-                                (a = e.sent()),
-                                t.token.reason ||
-                                  m(
-                                    Object(L.f)(
+                                (a = r.sent()),
+                                e.token.reason ||
+                                  h(
+                                    Object(R.f)(
                                       a
                                         ? "#Broadcast_Control_Success"
                                         : "#Broadcast_Control_Failure"
@@ -1541,50 +1553,50 @@
                         });
                       });
                     },
-                    "data-tooltip-text": Object(L.f)(
+                    "data-tooltip-text": Object(R.f)(
                       "#Broadcast_save_title_ttip"
                     ),
                   },
-                  Object(L.f)("#Broadcast_save_changes")
+                  Object(R.f)("#Broadcast_save_changes")
                 )
               ),
-              v.a.createElement(
+              n.a.createElement(
                 "div",
                 { className: z.StopCtn },
-                v.a.createElement(
-                  I.d,
+                n.a.createElement(
+                  j.d,
                   {
                     onClick: function (e) {
-                      Object(w.d)(
-                        v.a.createElement(N.d, {
-                          strTitle: Object(L.f)(
+                      Object(N.d)(
+                        n.a.createElement(D.d, {
+                          strTitle: Object(R.f)(
                             "#Broadcast_Control_StopBroadcast"
                           ),
-                          strDescription: Object(L.f)(
+                          strDescription: Object(R.f)(
                             "#EventEditor_GenericAreYouSure"
                           ),
                           onOK: function () {
-                            return Object(h.b)(
+                            return Object(i.b)(
                               void 0,
                               void 0,
                               void 0,
                               function () {
-                                var t, a;
-                                return Object(h.e)(this, function (e) {
-                                  switch (e.label) {
+                                var e, a;
+                                return Object(i.e)(this, function (r) {
+                                  switch (r.label) {
                                     case 0:
                                       return (
-                                        r.current && r.current(),
-                                        (t = O.a.CancelToken.source()),
-                                        (r.current = t.cancel),
-                                        [4, S.Get().StopBroadcast(t)]
+                                        t.current && t.current(),
+                                        (e = l.a.CancelToken.source()),
+                                        (t.current = e.cancel),
+                                        [4, _.Get().StopBroadcast(e)]
                                       );
                                     case 1:
                                       return (
-                                        (a = e.sent()),
-                                        t.token.reason ||
-                                          m(
-                                            Object(L.f)(
+                                        (a = r.sent()),
+                                        e.token.reason ||
+                                          h(
+                                            Object(R.f)(
                                               a
                                                 ? "#Broadcast_Control_StopSuccess"
                                                 : "#Broadcast_Control_StopFailure"
@@ -1598,46 +1610,41 @@
                             );
                           },
                         }),
-                        Object(R.l)(e)
+                        Object(T.m)(e)
                       );
                     },
                   },
-                  Object(L.f)("#Broadcast_Control_StopBroadcast")
+                  Object(R.f)("#Broadcast_Control_StopBroadcast")
                 ),
-                Boolean(u) && v.a.createElement("div", null, u)
+                Boolean(v) && n.a.createElement("div", null, v)
               )
             )
           );
         }),
-        de = a("9w6b");
-      a.d(t, "default", function () {
-        return be;
-      });
-      var pe = {
-        BroadcastWatch: function (e) {
+        de = a("9w6b"),
+        pe = function (e) {
           return "/broadcast/(watch|watchnew)/" + e;
-        },
-      };
+        };
       function be(e) {
         return (
-          Object(f.useEffect)(function () {
+          Object(r.useEffect)(function () {
             de.a.InitGlobal();
           }, []),
-          v.a.createElement(
-            v.a.Fragment,
+          n.a.createElement(
+            n.a.Fragment,
             null,
-            v.a.createElement(
-              r.e,
+            n.a.createElement(
+              o.e,
               null,
-              v.a.createElement(r.c, {
-                path: pe.BroadcastWatch(":steamid_or_user_vanity"),
+              n.a.createElement(o.c, {
+                path: pe(":steamid_or_user_vanity"),
                 render: function (e) {
-                  return v.a.createElement(le, {
+                  return n.a.createElement(le, {
                     strSteamID: e.match.params.steamid_or_user_vanity,
                   });
                 },
               }),
-              v.a.createElement(r.c, { component: n.b })
+              n.a.createElement(o.c, { component: c.b })
             )
           )
         );
@@ -1646,34 +1653,34 @@
     Gpul: function (e, t, a) {
       "use strict";
       a.d(t, "a", function () {
-        return p;
+        return m;
       }),
         a.d(t, "b", function () {
-          return o;
+          return d;
         });
-      var s = a("mrSG"),
-        l = a("q1tI"),
-        r = a("TyAF"),
-        i = a("jUCX"),
-        u = a("exH9"),
-        n = a("WeG9"),
-        m = a.n(n),
-        d = a("lkRc"),
-        p = (function (e) {
+      var r = a("mrSG"),
+        n = a("q1tI"),
+        o = a("TyAF"),
+        c = a("jUCX"),
+        i = a("exH9"),
+        s = a("WeG9"),
+        l = a.n(s),
+        u = a("lkRc"),
+        m = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
-            Object(s.d)(t, e),
+            Object(r.d)(t, e),
             (t.prototype.render = function () {
               var e = this.props,
                 t = e.strAvatarURL,
                 a = e.size,
-                r = e.className,
-                n = e.statusStyle,
-                o = e.statusPosition,
-                c = e.children,
-                i = Object(s.f)(e, [
+                o = e.className,
+                c = e.statusStyle,
+                s = e.statusPosition,
+                u = e.children,
+                m = Object(r.f)(e, [
                   "strAvatarURL",
                   "size",
                   "className",
@@ -1681,116 +1688,117 @@
                   "statusPosition",
                   "children",
                 ]);
-              return l.createElement(
+              return n.createElement(
                 "div",
-                Object(s.a)(
+                Object(r.a)(
                   {
-                    className: Object(u.a)(
-                      m.a.avatarHolder,
+                    className: Object(i.a)(
+                      l.a.avatarHolder,
                       "avatarHolder",
                       "no-drag",
                       a || "Medium",
-                      r
+                      o
                     ),
                   },
-                  i
+                  m
                 ),
-                l.createElement("div", {
-                  className: Object(u.a)(m.a.avatarStatus, "avatarStatus", o),
-                  style: n,
+                n.createElement("div", {
+                  className: Object(i.a)(l.a.avatarStatus, "avatarStatus", s),
+                  style: c,
                 }),
-                l.createElement("img", {
-                  className: Object(u.a)(m.a.avatar, "avatar"),
+                n.createElement("img", {
+                  className: Object(i.a)(l.a.avatar, "avatar"),
                   src: t,
                   draggable: !1,
                 }),
-                c
+                u
               );
             }),
             t
           );
-        })(l.Component),
-        o = (function (e) {
+        })(n.Component),
+        d = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
-            Object(s.d)(t, e),
+            Object(r.d)(t, e),
             (t.prototype.render = function () {
               var e = this.props,
                 t = e.persona,
                 a = e.size,
-                r = e.animatedAvatar,
-                n = e.className,
-                o = Object(s.f)(e, [
+                o = e.animatedAvatar,
+                s = e.className,
+                l = Object(r.f)(e, [
                   "persona",
                   "size",
                   "animatedAvatar",
                   "className",
                 ]),
-                c = "";
+                d = "";
               return (
-                r && r.image_small && 0 != r.image_small.length
-                  ? (c =
-                      d.c.MEDIA_CDN_COMMUNITY_URL + "images/" + r.image_small)
+                o && o.image_small && 0 != o.image_small.length
+                  ? (d =
+                      u.c.MEDIA_CDN_COMMUNITY_URL + "images/" + o.image_small)
                   : t
-                  ? ((c = t.avatar_url_medium),
+                  ? ((d = t.avatar_url_medium),
                     "Small" == a || "X-Small" == a
-                      ? (c = t.avatar_url)
+                      ? (d = t.avatar_url)
                       : ("Large" != a && "X-Large" != a && "FillArea" != a) ||
-                        (c = t.avatar_url_full))
-                  : ((c =
-                      d.c.MEDIA_CDN_COMMUNITY_URL +
+                        (d = t.avatar_url_full))
+                  : ((d =
+                      u.c.MEDIA_CDN_COMMUNITY_URL +
                       "images/avatars/fe/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_medium.jpg"),
                     "Small" == a || "X-Small" == a
-                      ? (c =
-                          d.c.MEDIA_CDN_COMMUNITY_URL +
+                      ? (d =
+                          u.c.MEDIA_CDN_COMMUNITY_URL +
                           "images/avatars/fe/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb.jpg")
                       : ("Large" != a && "X-Large" != a && "FillArea" != a) ||
-                        (c =
-                          d.c.MEDIA_CDN_COMMUNITY_URL +
+                        (d =
+                          u.c.MEDIA_CDN_COMMUNITY_URL +
                           "images/avatars/fe/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg")),
-                l.createElement(
-                  p,
-                  Object(s.a)(
+                n.createElement(
+                  m,
+                  Object(r.a)(
                     {
-                      strAvatarURL: c,
+                      strAvatarURL: d,
                       size: a,
-                      className: Object(u.a)(Object(i.c)(t), n),
+                      className: Object(i.a)(Object(c.c)(t), s),
                     },
-                    o
+                    l
                   )
                 )
               );
             }),
-            (t = Object(s.c)([r.a], t))
+            (t = Object(r.c)([o.a], t))
           );
-        })(l.Component),
-        c = Object(r.a)(function (e) {
+        })(n.Component),
+        p = Object(o.a)(function (e) {
           var t = e.profileItem,
             a = e.className,
-            r = e.bDisableAnimation,
-            n = Object(s.f)(e, [
+            o = e.bDisableAnimation,
+            c = Object(r.f)(e, [
               "profileItem",
               "className",
               "bDisableAnimation",
             ]);
           if (!t || !t.image_small || 0 == t.image_small.length) return null;
-          var o = r ? t.image_large : t.image_small;
+          var s = o ? t.image_large : t.image_small;
           return (
-            (o = o || t.image_small).startsWith("https://") ||
-              (o = d.c.MEDIA_CDN_COMMUNITY_URL + "images/" + o),
-            l.createElement(
+            s || (s = t.image_small),
+            s.startsWith("https://") ||
+              (s = u.c.MEDIA_CDN_COMMUNITY_URL + "images/" + s),
+            n.createElement(
               "div",
-              Object(s.a)(
-                { className: Object(u.a)(m.a.avatarFrame, a, "avatarFrame") },
-                n
+              Object(r.a)(
+                { className: Object(i.a)(l.a.avatarFrame, a, "avatarFrame") },
+                c
               ),
-              l.createElement("img", { className: m.a.avatarFrameImg, src: o })
+              n.createElement("img", { className: l.a.avatarFrameImg, src: s })
             )
           );
         });
-      l.Component;
+      n.Component;
     },
     M7Y6: function (e, t, a) {
       e.exports = {
@@ -2042,9 +2050,10 @@
           }),
           (e.prototype.GetOfflineStatusUpdateRate = function () {
             if (0 == this.last_seen_online) return 3e4;
-            var e = 1e3,
-              t = c.a.CMInterface.GetServerRTime32() - this.last_seen_online;
-            return (e *= 86400 < t ? 3600 : 7200 < t ? 60 : 15);
+            var e = 3600,
+              t = 1e3,
+              a = c.a.CMInterface.GetServerRTime32() - this.last_seen_online;
+            return (t *= a > 86400 ? e : a > 7200 ? 60 : 15);
           }),
           (e.prototype.GetOfflineStatusTime = function () {
             if (0 == this.last_seen_online)

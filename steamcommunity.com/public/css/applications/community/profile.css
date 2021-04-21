@@ -61,13 +61,11 @@
   .friendsnooze_SnoozeZ_2n0Ei {
   color: #a1f410;
 }
-
 .friendsnooze_SnoozeContainer_1Dsum.friendsnooze_animating_2rXc7
   .friendsnooze_SnoozeZ_2n0Ei,
 .friendsnooze_hoverParent_3-8cB:hover * .friendsnooze_SnoozeZ_2n0Ei {
   animation-name: friendsnooze_Snoring_38wIV;
 }
-
 @keyframes friendsnooze_Snoring_38wIV {
   0% {
     transform: translateY(0px);
@@ -79,7 +77,6 @@
     transform: translateY(0px);
   }
 }
-
 .steamavatar_avatarHolder_nibod {
   height: 36px;
   width: 36px;
@@ -112,7 +109,6 @@
   height: 100%;
   width: 100%;
 }
-
 .ingame .steamavatar_avatarStatus_3xUpb {
   background: linear-gradient(
     to bottom,
@@ -122,11 +118,9 @@
     #8cd61d 100%
   );
 }
-
 .ingame .X-Large .steamavatar_avatarStatus_3xUpb {
   background: #bff02b;
 }
-
 .watchingbroadcast .steamavatar_avatarStatus_3xUpb {
   background: linear-gradient(
     to bottom,
@@ -136,7 +130,6 @@
     #9c8fd4 100%
   );
 }
-
 .online .steamavatar_avatarStatus_3xUpb {
   background: linear-gradient(
     to bottom,
@@ -146,7 +139,6 @@
     #6dcff6 100%
   );
 }
-
 .awayOrSnooze .steamavatar_avatarStatus_3xUpb {
   -webkit-mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC")
     repeat-y;
@@ -156,7 +148,6 @@
   mask-size: 5px 5px;
   opacity: 0.75;
 }
-
 .steamavatar_avatarStatus_3xUpb.right {
   position: absolute;
   top: 0;
@@ -164,7 +155,6 @@
   right: 0;
   width: 2px;
 }
-
 .steamavatar_avatarStatus_3xUpb.bottom {
   position: absolute;
   bottom: 0;
@@ -172,19 +162,16 @@
   right: 0;
   height: 2px;
 }
-
 .awayOrSnooze .steamavatar_avatarStatus_3xUpb.bottom {
   -webkit-mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC")
     repeat-x;
   mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC")
     repeat-x;
 }
-
 .awayOrSnooze .X-Large .steamavatar_avatarStatus_3xUpb.bottom {
   mask-size: 6px 6px;
   opacity: 1;
 }
-
 .steamavatar_avatar_3h-QR {
   border: 1px solid #383c43;
   height: calc(100% - 2px);
@@ -192,7 +179,6 @@
   box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.3);
   transition: filter 0.24s ease-in-out;
 }
-
 .steamavatar_avatarFrame_X_mJE {
   position: absolute;
   top: 0;
@@ -201,50 +187,40 @@
   width: 100%;
   height: 100%;
 }
-
 .steamavatar_avatarHolder_nibod .steamavatar_avatarFrame_X_mJE {
   transform: scale(1.2);
 }
-
 .personastatusicons_PersonaStatusIcon_KxAI_ {
   width: 16px;
   height: 16px;
   margin-top: -1px;
   margin-left: 2px;
 }
-
 .personastatusicons_PersonaStatusIcon_KxAI_.personastatusicons_MobilePhoneIcon_1iRFj {
   margin-top: -2x;
   margin-left: -1px;
 }
-
 .personastatusicons_PersonaStatusIcon_KxAI_.ingame .SVGIcon_VR path,
 .personastatusicons_PersonaStatusIcon_KxAI_.ingame .SVGIcon_MobilePhone path,
 .personastatusicons_PersonaStatusIcon_KxAI_.ingame .SVGIcon_BigPicture path {
   fill: #80aa4d;
 }
-
 .personastatusicons_PersonaStatusIcon_KxAI_.online .SVGIcon_VR path,
 .personastatusicons_PersonaStatusIcon_KxAI_.online .SVGIcon_MobilePhone path,
 .personastatusicons_PersonaStatusIcon_KxAI_.online .SVGIcon_BigPicture path {
   fill: #4c91ac;
 }
-
 .miniprofile_miniProfile_2QPdq {
   width: fit-content;
   margin: 11px;
   box-shadow: 0 10px 32px 0px #000000ab;
   overflow: hidden;
 }
-
 .miniprofile_miniProfileContent_1xTAT {
   width: 328px;
   position: relative;
-  /* we have children with z-indexes, including negative index, so we need to establish our own
-	 	z-index context or we could potentially have elements appear behind the background */
   z-index: 0;
 }
-
 .miniprofile_miniProfileContent_1xTAT .miniprofile_miniProfileHeader_3CZcH {
   height: 62px;
   z-index: 1;
@@ -252,12 +228,10 @@
   background: none;
   border: none;
 }
-
 .miniprofile_miniProfileContent_1xTAT .miniprofile_miniProfilePlayer_2jZ0A {
   display: flex;
   flex-direction: row;
 }
-
 .miniprofile_miniProfileContent_1xTAT
   .miniprofile_miniProfilePlayer_2jZ0A
   .miniprofile_playerContent_2-pwJ {
@@ -265,7 +239,6 @@
   margin-bottom: 30px;
   margin-top: auto;
 }
-
 .miniprofile_miniProfileBackground_3HzZh {
   position: absolute;
   top: 0;
@@ -281,7 +254,6 @@
     #282c32 100%
   );
 }
-
 .miniprofile_miniProfileBackgroundBlur_xUosY {
   width: 380px;
   height: 380px;
@@ -306,14 +278,12 @@
   );
   mix-blend-mode: screen;
 }
-
 .miniprofile_miniProfileVideoBackground_2Zqfb {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: top right;
 }
-
 .miniprofile_miniProfileVideoBackgroundContainer_3MrYv {
   position: absolute;
   top: 0;
@@ -323,12 +293,10 @@
   z-index: -3;
   background-color: #1b1c20;
 }
-
 .miniprofile_miniProfileBackdropBlur_1QhpY {
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 }
-
 .miniprofile_miniProfileContent_1xTAT .miniprofile_miniProfileBlocked_39Jef,
 .miniprofile_miniProfileContent_1xTAT .miniprofile_miniProfileNotFriends_3Ea91 {
   position: absolute;
@@ -338,16 +306,13 @@
   font-size: 12px;
   color: rgba(184, 156, 80, 0.75);
 }
-
 .miniprofile_miniProfileContent_1xTAT .miniprofile_miniProfileBlocked_39Jef {
   color: rgba(195, 74, 72, 0.75);
 }
-
 .miniprofile_miniProfileContent_1xTAT.miniprofile_notFriends_2zgR7
   .miniprofile_miniProfileBlocked_39Jef {
   top: 18px;
 }
-
 .miniprofile_miniProfileContent_1xTAT .miniprofile_SnoozeContainer_1cAsx {
   position: absolute;
   overflow: visible;
@@ -355,12 +320,10 @@
   left: 4px;
   top: 8px;
 }
-
 .miniprofile_miniProfileHover_2AWay
   .miniprofile_miniprofile_arrow_1YsNo.miniprofile_left_1qS_b {
   border-right: 8px solid #41444e;
 }
-
 .miniprofile_miniProfileContent_1xTAT .miniprofile_playerAvatar_36eQg {
   width: 90px;
   height: 92px;
@@ -383,32 +346,27 @@
   width: calc(100% + 18px);
   height: calc(100% + 18px);
 }
-
 .miniprofile_miniProfileContent_1xTAT
   .miniprofile_avatarStatus_1YdpX.miniprofile_miniProfileAvatarStatus_1k5Yk {
   width: 100%;
   height: 2px;
   z-index: 2;
 }
-
 .miniprofile_miniProfileContent_1xTAT
   .miniprofile_miniProfilePlayer_2jZ0A.online
   .miniprofile_avatarStatus_1YdpX.miniprofile_miniProfileAvatarStatus_1k5Yk {
   background: #6dcff6;
 }
-
 .miniprofile_miniProfileContent_1xTAT
   .miniprofile_miniProfilePlayer_2jZ0A.in-game
   .miniprofile_avatarStatus_1YdpX.miniprofile_miniProfileAvatarStatus_1k5Yk {
   background: #bff02b;
 }
-
 .miniprofile_miniProfileContent_1xTAT
   .miniprofile_miniProfilePlayer_2jZ0A.watchingbroadcast
   .miniprofile_avatarStatus_1YdpX.miniprofile_miniProfileAvatarStatus_1k5Yk {
   background: #9c8fd4;
 }
-
 .miniprofile_miniProfileContent_1xTAT
   .miniprofile_playerContent_2-pwJ
   .miniprofile_personaName_qiP8a {
@@ -419,7 +377,6 @@
   font-weight: 300;
   display: flex;
 }
-
 .miniprofile_miniProfileContent_1xTAT
   .miniprofile_miniProfilePlayer_2jZ0A.in-game
   .miniprofile_personaName_qiP8a:not(.miniprofile_hasNickname_2TAWS)
@@ -430,7 +387,6 @@
   .miniprofile_personaNameLabel_2VUw8 {
   color: #e3ffc2;
 }
-
 .miniprofile_miniProfileContent_1xTAT
   .miniprofile_miniProfilePlayer_2jZ0A.watchingbroadcast
   .miniprofile_personaName_qiP8a:not(.miniprofile_hasNickname_2TAWS)
@@ -441,7 +397,6 @@
   .miniprofile_personaNameLabel_2VUw8 {
   color: #c9bdf7;
 }
-
 .miniprofile_miniProfileContent_1xTAT
   .miniprofile_playerContent_2-pwJ
   .miniprofile_persona_3c5GO
@@ -449,7 +404,6 @@
   color: #888;
   font-size: 14px;
 }
-
 .miniprofile_miniProfileContent_1xTAT
   .miniprofile_playerContent_2-pwJ
   .miniprofile_persona_3c5GO
@@ -461,17 +415,14 @@
   white-space: nowrap;
   overflow: hidden;
 }
-
 .miniprofile_personaAndIcons_1p9kf {
   display: flex;
   flex-direction: row;
 }
-
 .miniprofile_persona_3c5GO {
   display: flex;
   flex-direction: column;
 }
-
 .miniprofile_miniProfileContent_1xTAT
   .miniprofile_playerContent_2-pwJ
   .miniprofile_awayStatusLabel_1FgWI {
@@ -483,7 +434,6 @@
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   font-weight: 300;
 }
-
 .miniprofile_miniProfileContent_1xTAT
   .miniprofile_playerContent_2-pwJ
   .miniprofile_personaName_qiP8a.miniprofile_nickName_h_So5
@@ -499,7 +449,6 @@
   white-space: nowrap;
   word-wrap: break-word;
 }
-
 .miniprofile_miniProfileContent_1xTAT
   .miniprofile_miniProfilePlayer_2jZ0A.online
   .miniprofile_nickname_1SWhp,
@@ -508,7 +457,6 @@
   .miniprofile_persona_3c5GO {
   color: #6dcff6;
 }
-
 .miniprofile_miniProfileContent_1xTAT
   .miniprofile_miniProfilePlayer_2jZ0A.offline
   .miniprofile_nickname_1SWhp,
@@ -517,11 +465,9 @@
   .miniprofile_persona_3c5GO {
   color: #bbb;
 }
-
 .miniprofile_miniProfileContent_1xTAT .miniprofile_playerNicknameBracket_3qa8c {
   color: #bbb;
 }
-
 .miniprofile_miniProfileContent_1xTAT .miniprofile_playerAvatar_36eQg img {
   width: 90px;
   height: 90px;
@@ -533,7 +479,6 @@
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
 }
-
 .miniprofile_miniProfileContent_1xTAT.miniprofile_notInOrWatchingGame_1NkB7
   .miniprofile_miniProfileBottom_26ga2,
 .miniprofile_miniProfileContent_1xTAT
@@ -544,7 +489,6 @@
     rgba(24, 26, 30, 0.4) 95%
   );
 }
-
 .miniprofile_miniProfileContent_1xTAT
   .miniprofile_miniProfileGameContainer_7-U6j {
   z-index: -1;
@@ -552,7 +496,6 @@
   min-height: 64px;
   position: relative;
 }
-
 .miniprofile_miniProfileContent_1xTAT
   .miniprofile_miniProfileGameContainer_7-U6j
   .miniprofile_gameLogo_A0XYr {
@@ -562,13 +505,11 @@
   left: 16px;
   position: absolute;
 }
-
 .miniprofile_miniProfileContent_1xTAT
   .miniprofile_miniProfileGameContainer_7-U6j
   .miniprofile_ingame_24oQz {
   color: #90ba3c;
 }
-
 .miniprofile_miniProfileContent_1xTAT
   .miniprofile_miniProfileGameContainer_7-U6j
   .miniprofile_ingame_24oQz
@@ -580,7 +521,6 @@
   font-size: 12px;
   color: #62813b;
 }
-
 .miniprofile_miniProfileContent_1xTAT
   .miniprofile_miniProfileGameContainer_7-U6j
   .miniprofile_watchingbroadcast_3hSAG
@@ -589,7 +529,6 @@
   font-size: 12px;
   color: #8277b1;
 }
-
 .miniprofile_miniProfileContent_1xTAT
   .miniprofile_miniProfileGameContainer_7-U6j
   .miniprofile_watchingbroadcast_3hSAG
@@ -597,7 +536,6 @@
   font-size: 14px;
   color: #c9bdf7;
 }
-
 .miniprofile_miniProfileContent_1xTAT
   .miniprofile_miniProfileGameContainer_7-U6j
   .miniprofile_watchingbroadcast_3hSAG
@@ -607,23 +545,19 @@
   margin-top: 8px;
   position: relative;
 }
-
 .miniprofile_miniProfileContent_1xTAT
   .miniprofile_miniProfileGameContainer_7-U6j
   .miniprofile_gameContent_3YwnZ {
   padding: 8px 8px 8px 122px;
   font-size: 14px;
 }
-
 .miniprofile_miniProfileContent_1xTAT .miniprofile_miniProfileBottom_26ga2 {
   padding: 16px 16px 8px 16px;
 }
-
 .miniprofile_miniProfileContent_1xTAT.miniprofile_notInOrWatchingGame_1NkB7
   .miniprofile_miniProfileBottom_26ga2 {
   padding-top: 26px;
 }
-
 .miniprofile_miniProfileContent_1xTAT
   .miniprofile_miniProfileFeaturedContainer_1KDhd {
   position: relative;
@@ -632,21 +566,18 @@
   padding-left: 16px;
   margin-bottom: 8px;
 }
-
 .miniprofile_miniProfileContent_1xTAT
   .miniprofile_miniProfileFeaturedContainer_1KDhd
   .miniprofile_favoriteBadgeIcon_qP4hs {
   width: 34px;
   height: 34px;
 }
-
 .miniprofile_miniProfileContent_1xTAT
   .miniprofile_miniProfileFeaturedContainer_1KDhd
   .miniprofile_badgeIcon_1oWOa {
   width: 100%;
   height: 100%;
 }
-
 .miniprofile_miniProfileContent_1xTAT
   .miniprofile_miniProfileBottom_26ga2
   .miniprofile_featuredLabels_39har {
@@ -658,7 +589,6 @@
   margin-bottom: auto;
   margin-left: 12px;
 }
-
 .miniprofile_miniProfileContent_1xTAT
   .miniprofile_miniProfileBottom_26ga2
   .friendPlayerLevel
@@ -666,7 +596,6 @@
   font-size: 14px;
   color: #e5e5e5;
 }
-
 .miniprofile_miniProfileContent_1xTAT
   .miniprofile_miniProfileBottom_26ga2
   .miniprofile_featuredLabels_39har
@@ -675,11 +604,9 @@
   text-overflow: ellipsis;
   color: #b1b1b1;
 }
-
 .miniprofile_mutualFriends_3AWk3 {
   background-color: #000a;
 }
-
 .miniprofile_miniProfileContent_1xTAT
   .miniprofile_miniProfileBottom_26ga2
   .miniprofile_featuredLabels_39har
@@ -687,21 +614,18 @@
   color: #6b6a6a;
   font-size: 12px;
 }
-
 .miniprofile_miniProfileContent_1xTAT
   .miniprofile_miniProfilePlayer_2jZ0A.watchingbroadcast
   .miniprofile_playerContent_2-pwJ
   .miniprofile_awayStatusLabel_1FgWI {
   color: #c9bdf7;
 }
-
 .miniprofile_miniProfileContent_1xTAT
   .miniprofile_miniProfilePlayer_2jZ0A.in-game
   .miniprofile_playerContent_2-pwJ
   .miniprofile_awayStatusLabel_1FgWI {
   color: #91c257;
 }
-
 .miniprofile_miniProfileContent_1xTAT
   .miniprofile_miniProfilePlayer_2jZ0A.offline
   .miniprofile_playerContent_2-pwJ
@@ -709,28 +633,23 @@
   font-size: 10px;
   letter-spacing: 0;
 }
-
 .miniprofile_miniProfileContent_1xTAT
   .miniprofile_miniProfilePlayer_2jZ0A.watchingbroadcast
   .miniprofile_playerContent_2-pwJ
   .miniprofile_awayStatusLabel_1FgWI {
   color: #8277b1;
 }
-
 .miniprofile_miniProfileContent_1xTAT
   .miniprofile_miniProfilePlayer_2jZ0A.online
   .miniprofile_playerContent_2-pwJ
   .miniprofile_awayStatusLabel_1FgWI {
   color: #4c91ac;
 }
-
-/* These are all also in community's shared_global.css but we don't necessarily have that file available where we're using
-	this component. */
 .friendPlayerLevel {
   display: inline-block;
   font-size: 16px;
   border-radius: 50%;
-  border: solid white 2px;
+  border: solid #fff 2px;
   height: 28px;
   width: 28px;
   line-height: 26px;
@@ -738,47 +657,36 @@
   cursor: default;
   margin-top: 2px;
 }
-
 .friendPlayerLevel.lvl_0 {
   border-color: #9b9b9b;
 }
-
 .friendPlayerLevel.lvl_10 {
   border-color: #c02942;
 }
-
 .friendPlayerLevel.lvl_20 {
   border-color: #d95b43;
 }
-
 .friendPlayerLevel.lvl_30 {
   border-color: #fecc23;
 }
-
 .friendPlayerLevel.lvl_40 {
   border-color: #467a3c;
 }
-
 .friendPlayerLevel.lvl_50 {
   border-color: #4e8ddb;
 }
-
 .friendPlayerLevel.lvl_60 {
   border-color: #7652c9;
 }
-
 .friendPlayerLevel.lvl_70 {
   border-color: #c252c9;
 }
-
 .friendPlayerLevel.lvl_80 {
   border-color: #542437;
 }
-
 .friendPlayerLevel.lvl_90 {
   border-color: #997c52;
 }
-
 .friendPlayerLevel.lvl_100,
 .friendPlayerLevel.lvl_200,
 .friendPlayerLevel.lvl_300,
@@ -839,239 +747,180 @@
   line-height: 32px;
   text-shadow: 1px 1px #1a1a1a;
 }
-
 .friendPlayerLevel.lvl_100 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_hexagons.png");
 }
-
 .friendPlayerLevel.lvl_200 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_shields.png");
 }
-
 .friendPlayerLevel.lvl_300 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_books.png");
 }
-
 .friendPlayerLevel.lvl_400 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_chevrons.png");
 }
-
 .friendPlayerLevel.lvl_500 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_circle2.png");
 }
-
 .friendPlayerLevel.lvl_600 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_angle.png");
 }
-
 .friendPlayerLevel.lvl_700 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_flag.png");
 }
-
 .friendPlayerLevel.lvl_800 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_wings.png");
 }
-
 .friendPlayerLevel.lvl_900 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_arrows.png");
 }
-
 .friendPlayerLevel.lvl_1000 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_crystals.png");
 }
-
 .friendPlayerLevel.lvl_1100 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_space.png");
 }
-
 .friendPlayerLevel.lvl_1200 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_waterelement.png");
 }
-
 .friendPlayerLevel.lvl_1300 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_fireelement.png");
 }
-
 .friendPlayerLevel.lvl_1400 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_earthelement.png");
 }
-
 .friendPlayerLevel.lvl_1500 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_airelement_1-2.png");
 }
-
 .friendPlayerLevel.lvl_1600 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_airelement_3-4.png");
 }
-
 .friendPlayerLevel.lvl_1700 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_airelement_5-6.png");
 }
-
 .friendPlayerLevel.lvl_1800 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_airelement_7-8.png");
 }
-
 .friendPlayerLevel.lvl_1900 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_airelement_9-10.png");
 }
-
 .friendPlayerLevel.lvl_2000 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_geo_1-2.png?v=2");
 }
-
 .friendPlayerLevel.lvl_2100 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_geo_3-4.png?v=2");
 }
-
 .friendPlayerLevel.lvl_2200 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_geo_5-6.png?v=2");
 }
-
 .friendPlayerLevel.lvl_2300 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_geo_7-8.png?v=2");
 }
-
 .friendPlayerLevel.lvl_2400 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_geo_9-10.png?v=2");
 }
-
 .friendPlayerLevel.lvl_2500 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_mandala_1-2.png?v=2");
 }
-
 .friendPlayerLevel.lvl_2600 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_mandala_3-4.png?v=2");
 }
-
 .friendPlayerLevel.lvl_2700 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_mandala_5-6.png?v=2");
 }
-
 .friendPlayerLevel.lvl_2800 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_mandala_7-8.png?v=2");
 }
-
 .friendPlayerLevel.lvl_2900 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_mandala_9-10.png?v=2");
 }
-
 .friendPlayerLevel.lvl_3000 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_spiro_1-2.png?v=2");
 }
-
 .friendPlayerLevel.lvl_3100 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_spiro_3-4.png?v=2");
 }
-
 .friendPlayerLevel.lvl_3200 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_spiro_5-6.png?v=2");
 }
-
 .friendPlayerLevel.lvl_3300 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_spiro_7-8.png?v=2");
 }
-
 .friendPlayerLevel.lvl_3400 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_spiro_9-10.png?v=2");
 }
-
 .friendPlayerLevel.lvl_3500 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_patterns_1-2.png?v=2");
 }
-
 .friendPlayerLevel.lvl_3600 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_patterns_3-4.png?v=2");
 }
-
 .friendPlayerLevel.lvl_3700 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_patterns_5-6.png?v=2");
 }
-
 .friendPlayerLevel.lvl_3800 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_patterns_7-8.png?v=2");
 }
-
 .friendPlayerLevel.lvl_3900 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_patterns_9-10.png?v=2");
 }
-
 .friendPlayerLevel.lvl_4000 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_shapes_1.png?v=2");
 }
-
 .friendPlayerLevel.lvl_4100 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_shapes_2.png?v=2");
 }
-
 .friendPlayerLevel.lvl_4200 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_shapes_3.png?v=2");
 }
-
 .friendPlayerLevel.lvl_4300 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_shapes_4.png?v=2");
 }
-
 .friendPlayerLevel.lvl_4400 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_shapes_5.png?v=2");
 }
-
 .friendPlayerLevel.lvl_4500 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_grunge_1.png?v=2");
 }
-
 .friendPlayerLevel.lvl_4600 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_grunge_2.png?v=2");
 }
-
 .friendPlayerLevel.lvl_4700 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_grunge_3.png?v=2");
 }
-
 .friendPlayerLevel.lvl_4800 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_grunge_4.png?v=2");
 }
-
 .friendPlayerLevel.lvl_4900 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_grunge_5.png?v=2");
 }
-
 .friendPlayerLevel.lvl_plus_10 {
   background-position: 0 -32px;
 }
-
 .friendPlayerLevel.lvl_plus_20 {
   background-position: 0 -64px;
 }
-
 .friendPlayerLevel.lvl_plus_30 {
   background-position: 0 -96px;
 }
-
 .friendPlayerLevel.lvl_plus_40 {
   background-position: 0 -128px;
 }
-
 .friendPlayerLevel.lvl_plus_50 {
   background-position: 0 -160px;
 }
-
 .friendPlayerLevel.lvl_plus_60 {
   background-position: 0 -192px;
 }
-
 .friendPlayerLevel.lvl_plus_70 {
   background-position: 0 -224px;
 }
-
 .friendPlayerLevel.lvl_plus_80 {
   background-position: 0 -256px;
 }
-
 .friendPlayerLevel.lvl_plus_90 {
   background-position: 0 -288px;
 }
-
 .avatar_AvatarRow_2_WvK {
   display: flex;
   flex-direction: row;
@@ -1081,11 +930,9 @@
 .avatar_AvatarRow_2_WvK .avatar_Avatar_27tBX {
   margin-right: 25px;
 }
-
 .avatar_Avatar_27tBX .avatar_AvatarImgCtn_38rbz {
   position: relative;
 }
-
 .avatar_Avatar_27tBX .avatar_AvatarCropPreview_2Oe26 {
   overflow: hidden;
   position: absolute;
@@ -1094,14 +941,13 @@
   bottom: 0;
   left: 0;
 }
-
 .avatar_Avatar_27tBX .avatar_AvatarFrame_3ySvF {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  transform: scale(1.21739);
+  transform: scale(1.2173913043);
 }
 .avatar_Avatar_27tBX .avatar_AvatarFrame_3ySvF img {
   width: 100%;
@@ -1109,30 +955,24 @@
   display: block;
   background: none;
 }
-
 .avatar_Avatar_27tBX.avatar_Large_EYMSh {
   width: 184px;
 }
-
 .avatar_Avatar_27tBX.avatar_Medium_14qK3 {
   width: 64px;
 }
-
 .avatar_Avatar_27tBX.avatar_Small_2pCRw {
   width: 32px;
 }
-
 .avatar_Avatar_27tBX img {
   display: block;
   width: 100%;
 }
-
 .avatar_Avatar_27tBX .avatar_size_2jOhb {
   padding-top: 15px;
   font-size: 9px;
   line-height: 11px;
 }
-
 .avatar_AvatarDialog_1p-Wx {
   width: auto;
 }
@@ -1142,13 +982,11 @@
 .avatar_AvatarDialog_1p-Wx .avatar_AvatarDialogBody_39Ovv {
   overflow: auto;
 }
-
 @media screen and (max-width: 480px) {
   .avatar_AvatarDialog_1p-Wx.DialogContent {
     padding: 6px;
   }
 }
-
 .avatar_AvatarDialogTop_aCrGP {
   display: flex;
   flex-direction: row;
@@ -1164,10 +1002,9 @@
 .avatar_AvatarDialogTop_aCrGP .avatar_AvatarDialogUploadArea_22Ena {
   width: 217px;
   font-size: 14px;
-  color: #808080;
+  color: gray;
   margin-bottom: 24px;
 }
-
 .avatar_AvatarSaveActions_1c6Pv {
   display: flex;
   flex-direction: row-reverse;
@@ -1177,16 +1014,13 @@
   width: 200px;
   margin-left: 12px;
 }
-
 .avatar_Error_eo3iM {
   padding: 8px;
   color: red;
 }
-
 .avatar_HideDefaultAvatar_6zU6F .playerAvatar {
   display: none;
 }
-
 .avatarcollection_AvatarCollectionHeader_27Q-8 {
   margin-bottom: 10px;
 }
@@ -1195,7 +1029,6 @@
   font-size: 20px;
   color: #e4e4e4;
 }
-
 .avatarcollection_AvatarCollection_1UoAv {
   padding: 15px 20px 20px 20px;
   background-color: rgba(0, 0, 0, 0.2);
@@ -1225,7 +1058,6 @@
   .DialogButton {
   width: 120px;
 }
-
 .avatarcollection_AvatarCollectionSingleRow_BT8Zj {
   display: flex;
   justify-items: center;
@@ -1240,7 +1072,6 @@
   .avatarcollection_AvatarRowSpacer_3g0nr:last-child {
   display: none;
 }
-
 .avatarcollection_AvatarPreview_29CGQ {
   width: 64px;
   cursor: pointer;
@@ -1266,7 +1097,6 @@
   filter: drop-shadow(1px 5px 10px rgba(0, 0, 0, 0.35)) brightness(125%);
   cursor: pointer;
 }
-
 .avatarcollection_FramePreview_16w1D {
   cursor: pointer;
   width: 64px;
@@ -1315,7 +1145,6 @@
   left: 2px;
   background: #25282e;
 }
-
 .avatarcollection_CollectionGroup_2kbA6 {
   margin-bottom: 6px;
 }
@@ -1335,7 +1164,6 @@
   color: #e4e4e4;
   margin-bottom: 12px;
 }
-
 .avatarcollection_CollectionGroupAvatars_wWso7 {
   display: flex;
   flex-direction: row;
@@ -1351,7 +1179,6 @@
   margin-right: 12px;
   margin-bottom: 12px;
 }
-
 body {
   background: linear-gradient(180deg, #262d33 -3.38%, #1d1e20 78.58%);
   background-attachment: fixed;
@@ -1359,35 +1186,28 @@ body {
   background-size: auto 100%;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
 }
-
 .rightcol {
   display: none;
 }
-
 .leftcol.hasContentBoxes {
   display: block;
   float: none;
   width: auto;
   max-width: none;
 }
-
 .showcase_preview_ctn {
   width: 652px;
 }
-
 .MiniProfilePreview {
   margin: 0 auto 12px;
 }
-
 .ProfileShowcaseSelectorHeader {
   display: none;
 }
-
 .customization_controls_nextprev {
   display: block;
   margin-bottom: 6px;
 }
-
 .DialogHeader {
   display: flex;
   justify-content: flex-start;
@@ -1395,7 +1215,6 @@ body {
   letter-spacing: 1px;
   margin: 0px 5px 0px 5px;
 }
-
 .DialogBodyText {
   display: flex;
   justify-content: flex-start;
@@ -1404,7 +1223,6 @@ body {
   padding-bottom: 5px;
   line-height: normal;
 }
-
 input.DialogTextInputBase,
 input.DialogTextInputBase:not(disabled):hover,
 input.DialogTextInputBase:disabled:hover,
@@ -1413,7 +1231,6 @@ input.DialogTextInputBase:focus {
   border: none;
   background-color: rgba(0, 0, 0, 0.25);
 }
-
 @media screen and (max-width: 910px) {
   html.responsive .profile_showcase_selector {
     display: block;
@@ -1429,13 +1246,11 @@ input.DialogTextInputBase:focus {
     max-width: none;
   }
 }
-
 .profileedit_ProfileEditRoot_1lBbV button.DialogButton {
   width: 80%;
   padding-left: 10%;
   padding-right: 10%;
 }
-
 .SaveActions {
   display: flex;
   flex-direction: row-reverse;
@@ -1445,11 +1260,9 @@ input.DialogTextInputBase:focus {
   width: 200px;
   margin-left: 12px;
 }
-
 .profileedit_ItemPicker_n1M1o {
   margin-bottom: 15px;
   overflow: hidden;
-  /* for some reason ItemPickerCtn overflow doesn't work without this */
 }
 .profileedit_ItemPicker_n1M1o .profileedit_ItemPickerCtn_20EDL {
   padding: 20px;
@@ -1466,11 +1279,9 @@ input.DialogTextInputBase:focus {
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
 }
-
 .profileedit_PickerPreviewDialog_20HXb .DialogContent_InnerWidth {
   max-width: none;
 }
-
 .profileedit_PickerPreviewDialog_20HXb .profileedit_PickerPreviewBody_2sArl {
   min-height: 0;
 }
@@ -1479,12 +1290,10 @@ input.DialogTextInputBase:focus {
   .profileedit_PickerPreviewItems_2N5uy {
   flex: 1;
 }
-
 .profileedit_PickerPreviewItems_2N5uy {
   display: grid;
   grid-template-columns: 1fr;
 }
-
 .profileedit_SaveCancelButtons_2KJ8a {
   display: flex;
   flex-direction: row-reverse;
@@ -1493,7 +1302,6 @@ input.DialogTextInputBase:focus {
   width: 200px;
   margin-left: 12px;
 }
-
 .profileedit_ProfileRow_302o- {
   display: flex;
   flex-direction: row;
@@ -1510,7 +1318,6 @@ input.DialogTextInputBase:focus {
   > .profileedit_ProfileBox_uwqwo:not(:first-child) {
   margin-left: 26px;
 }
-
 .profileedit_ProfileCol_3tMGe {
   flex: 1;
   display: flex;
@@ -1520,7 +1327,6 @@ input.DialogTextInputBase:focus {
 .profileedit_ProfileCol_3tMGe .profileedit_ProfileBox_uwqwo:not(:first-child) {
   margin-top: 26px;
 }
-
 @media screen and (max-width: 640px) {
   html.responsive .profileedit_ProfileRow_302o- {
     display: block;
@@ -1540,7 +1346,6 @@ input.DialogTextInputBase:focus {
     margin-left: 0;
   }
 }
-
 .profileedit_ProfileBox_uwqwo {
   flex: 1;
   display: flex;
@@ -1548,7 +1353,6 @@ input.DialogTextInputBase:focus {
   padding: 0 0 15px 0;
 }
 .profileedit_ProfileBox_uwqwo .profileedit_ProfileBoxTitle_2CGYg {
-  /*background: rgba(0, 0, 0, 0.3);*/
   font-size: 16px;
   line-height: 28px;
   letter-spacing: 0em;
@@ -1567,11 +1371,9 @@ input.DialogTextInputBase:focus {
   .DialogLabelExplainer {
   text-align: left;
 }
-
 .profileedit_ShortLeftCol_1tHO9 {
   flex: 0.8;
 }
-
 .profileedit_HTMLErrorBox_2MfLN {
   margin: 4px 0 24px 0;
   padding: 12px;
@@ -1580,14 +1382,13 @@ input.DialogTextInputBase:focus {
     rgba(146, 3, 3, 0.8) 5.43%,
     rgba(112, 49, 20, 0.301) 100%
   );
-  color: #ffffff;
+  color: #fff;
   animation-duration: 1s;
   animation-name: profileedit_HTMLErrorBoxAppear_1QYzn;
 }
 .profileedit_HTMLErrorBox_2MfLN b {
   font-weight: bold;
 }
-
 @keyframes profileedit_HTMLErrorBoxAppear_1QYzn {
   from {
     filter: brightness(1);
@@ -1599,22 +1400,18 @@ input.DialogTextInputBase:focus {
     filter: brightness(1);
   }
 }
-
 .profileedit_CooldownNotice_2kl3A .profileedit_ErrorMessage_3j9lm {
   font-weight: bold;
   font-size: 14px;
   margin-bottom: 12px;
 }
-
 .profileedit_CooldownNotice_2kl3A a {
   text-decoration: underline;
 }
-
 .profileedit_CooldownNotice_2kl3A .profileedit_DisabledInputCtn_ZePu4 {
   opacity: 0.5;
   pointer-events: none;
 }
-
 .summary_formattingButtons_2T2D7 {
   display: flex;
   flex-direction: row-reverse;
@@ -1632,7 +1429,6 @@ input.DialogTextInputBase:focus {
   transform: scale(1.01);
   filter: drop-shadow(1px 3px 6px rgba(0, 0, 0, 0.25)) brightness(115%);
 }
-
 .summary_summaryTextArea_2ipSt {
   resize: none;
   overflow: hidden;
@@ -1650,7 +1446,6 @@ input.DialogTextInputBase:focus {
   opacity: 0.5;
   pointer-events: none;
 }
-
 .favoritebadge_Badge_2ODUB {
   display: flex;
   flex-direction: row;
@@ -1695,19 +1490,16 @@ input.DialogTextInputBase:focus {
   .favoritebadge_BadgeDetails_3Y40H {
   color: #2e83c9;
 }
-
 .favoritebadge_FavoriteBadge_3lkNZ {
   margin-bottom: 20px;
   padding: 10px 15px;
 }
-
 .favoritebadge_BadgeOption_P1MG7 {
   flex: 1;
   align-self: flex-start;
   margin: 6px;
   width: 100%;
 }
-
 .favoritegroup_Group_1yHxt {
   display: flex;
   flex-direction: row;
@@ -1745,30 +1537,25 @@ input.DialogTextInputBase:focus {
   .favoritegroup_GroupDetails_aUFBJ {
   color: #2e83c9;
 }
-
 .favoritegroup_FavoriteGroup_2XwzR {
   margin-bottom: 20px;
   padding: 10px 15px;
 }
-
 .favoritegroup_GroupOption_3neyr {
   flex: 1;
   align-self: flex-start;
   margin: 6px;
   width: 100%;
 }
-
 .miniprofilepreview_MiniProfilePreview_1MWlW {
   width: 328px;
   margin: 0 auto 20px;
   filter: drop-shadow(1px 5px 10px rgba(0, 0, 0, 0.35));
   box-shadow: 0 0 0 0;
 }
-
 .miniprofilepreview_MiniProfileBackgroundOption_1kB6_:hover {
   cursor: pointer;
 }
-
 .miniprofilepreview_MiniProfileBackgroundOption_1kB6_:hover
   .miniprofilepreview_Preview_1JFlR {
   -webkit-transform: scale(1.1);
@@ -1776,12 +1563,10 @@ input.DialogTextInputBase:focus {
   transform: scale(1.1);
   filter: drop-shadow(1px 5px 10px rgba(0, 0, 0, 0.35)) brightness(125%);
 }
-
 .miniprofilepreview_MiniProfileBackgroundOption_1kB6_.miniprofilepreview_Active_B-qJh
   .miniprofilepreview_Details_3-aXJ {
   color: #2e83c9;
 }
-
 .miniprofilepreview_MiniProfileBackgroundOption_1kB6_
   .miniprofilepreview_Preview_1JFlR {
   padding: 0px;
@@ -1806,7 +1591,6 @@ input.DialogTextInputBase:focus {
   top: 0;
   bottom: 0;
 }
-
 .miniprofilepreview_MiniProfileBackgroundOption_1kB6_
   .miniprofilepreview_Details_3-aXJ {
   padding: 10px 0px 10px 0px;
@@ -1824,7 +1608,6 @@ input.DialogTextInputBase:focus {
   font-style: italic;
   font-size: 13px;
 }
-
 .miniprofilepreview_Preview_1JFlR {
   padding: 5px;
   position: relative;
@@ -1852,28 +1635,23 @@ input.DialogTextInputBase:focus {
   height: 100%;
   border-radius: 3px;
 }
-
 .miniprofilepreview_WithVideo_1BBIS:hover
   .miniprofilepreview_Preview_1JFlR
   img {
   opacity: 0;
   transition: opacity 0.5s;
 }
-
 .miniprofilepreview_WithVideo_1BBIS:hover
   .miniprofilepreview_PreviewVideo_3PAmy {
   display: block;
 }
-
 .profilebackground_EquippedBackgroundBlock_1Pihr
   .profilebackground_EquippedBackgroundPreview_2k_2L {
   padding: 10px;
 }
-
 .profilebackground_BackgroundOption_189ER:hover {
   cursor: pointer;
 }
-
 .profilebackground_BackgroundOption_189ER:hover
   .profilebackground_Preview_2Zegg {
   -webkit-transform: scale(1.1);
@@ -1881,15 +1659,13 @@ input.DialogTextInputBase:focus {
   transform: scale(1.1);
   filter: drop-shadow(1px 5px 10px rgba(0, 0, 0, 0.35)) brightness(125%);
 }
-
 .profilebackground_BackgroundOption_189ER.profilebackground_Active_evPn2
   .profilebackground_Details_1xKo7 {
   color: #2e83c9;
 }
-
 .profilebackground_BackgroundOption_189ER .profilebackground_Preview_2Zegg {
   padding: 0;
-  background: #000000;
+  background: #000;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -1900,18 +1676,15 @@ input.DialogTextInputBase:focus {
   right: 0;
   top: 0;
   bottom: -13px;
-  /* bottom 13px of image is cut off, we need to stretch video accordingly */
 }
-
 .profilebackground_BackgroundOption_189ER .profilebackground_Details_1xKo7 {
   padding-top: 10px;
 }
-
 .profilebackground_Preview_2Zegg {
   width: 200px;
   height: 112px;
   overflow: hidden;
-  background: #000000;
+  background: #000;
   border-radius: 3px;
 }
 .profilebackground_Preview_2Zegg img {
@@ -1932,16 +1705,13 @@ input.DialogTextInputBase:focus {
   border-radius: 3px;
   object-position: center top;
 }
-
 .profilebackground_WithVideo_3muY5:hover .profilebackground_Preview_2Zegg img {
   opacity: 0;
   transition: opacity 0.5s;
 }
-
 .profilebackground_WithVideo_3muY5:hover .profilebackground_PreviewVideo_2zA7Y {
   display: block;
 }
-
 .profilebackground_Details_1xKo7 {
   width: 200px;
   padding: 10px 0px 10px 0px;
@@ -1954,7 +1724,6 @@ input.DialogTextInputBase:focus {
   font-style: italic;
   font-size: 13px;
 }
-
 .profilebackground_ProfileBackgroundEquipOptions_RS77U {
   margin: 15px 0 15px 0;
 }
@@ -1972,10 +1741,8 @@ input.DialogTextInputBase:focus {
   display: inline-block;
   margin-left: 10px;
 }
-
 .profilepreview_ProfilePreview_sJ5St {
   margin-top: -13px;
-  /* TODO: this exported from figma with 13 pixels of blank space at the top */
 }
 .profilepreview_ProfilePreview_sJ5St .profilepreview_PaintRadial0_3ygvj {
   mix-blend-mode: overlay;
@@ -1989,7 +1756,6 @@ input.DialogTextInputBase:focus {
 .profilepreview_ProfilePreview_sJ5St radialGradient stop {
   transition: stop-color 0.25s;
 }
-
 .profilepreview_ProfilePagePreviewCtn_jnA47 {
   position: relative;
   height: 281px;
@@ -1999,7 +1765,7 @@ input.DialogTextInputBase:focus {
   overflow: auto;
   overflow: hidden;
   display: flex;
-  background: #000000;
+  background: #000;
 }
 .profilepreview_ProfilePagePreviewCtn_jnA47
   .profilepreview_BackgroundPosition_2iCc5 {
@@ -2073,7 +1839,6 @@ input.DialogTextInputBase:focus {
     height: 36vw;
   }
 }
-
 .profilethemecolors_DefaultTheme_1bf2x {
   --gradient-right: rgba(114, 49, 56, 0.726);
   --gradient-left: rgba(50, 255, 193, 0.541);
@@ -2087,7 +1852,6 @@ input.DialogTextInputBase:focus {
   --btn-outline: rgb(73, 87, 110);
   --edit-background: rgb(43, 52, 54);
 }
-
 .profilethemecolors_CosmicTheme_B0JwR {
   --gradient-right: rgba(196, 21, 143, 0.842);
   --gradient-left: rgba(9, 243, 99, 0.74);
@@ -2101,7 +1865,6 @@ input.DialogTextInputBase:focus {
   --btn-outline: rgba(175, 71, 179, 1);
   --edit-background: rgb(94, 46, 109);
 }
-
 .profilethemecolors_SummerTheme_HJIK8 {
   --gradient-right: rgba(252, 169, 16, 0.753);
   --gradient-left: rgb(9, 138, 243);
@@ -2115,7 +1878,6 @@ input.DialogTextInputBase:focus {
   --btn-outline: rgb(179, 168, 71);
   --edit-background: rgb(129, 95, 31);
 }
-
 .profilethemecolors_MidnightTheme_AH86R {
   --gradient-right: rgba(51, 54, 253, 1);
   --gradient-left: rgba(12, 85, 241, 1);
@@ -2129,7 +1891,6 @@ input.DialogTextInputBase:focus {
   --btn-outline: rgb(71, 82, 179);
   --edit-background: rgb(41, 37, 59);
 }
-
 .profilethemecolors_DarkModeTheme_3bM7i {
   --gradient-right: rgb(37, 37, 37);
   --gradient-left: rgb(41, 41, 41);
@@ -2143,7 +1904,6 @@ input.DialogTextInputBase:focus {
   --btn-outline: rgb(92, 92, 92);
   --edit-background: rgb(22, 22, 22);
 }
-
 .profilethemecolors_SteelTheme_2EmRD {
   --gradient-right: rgb(88, 107, 119);
   --gradient-left: rgb(112, 101, 101);
@@ -2157,7 +1917,6 @@ input.DialogTextInputBase:focus {
   --btn-outline: rgb(104, 119, 143);
   --edit-background: rgb(66, 72, 82);
 }
-
 .profileeditshell_Shell_2kqKZ {
   display: flex;
   flex-direction: row;
@@ -2196,7 +1955,7 @@ input.DialogTextInputBase:focus {
   transition-property: background-position, color, background-color;
   transition-duration: 0.15s;
   transition-timing-function: ease-in;
-  color: #999999;
+  color: #999;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -2315,13 +2074,12 @@ input.DialogTextInputBase:focus {
     margin: 0 2%;
   }
 }
-
 .profileeditshell_BackToProfileCtn_1YOt2 {
   text-align: right;
   line-height: 20px;
 }
 .profileeditshell_BackToProfileCtn_1YOt2 a {
-  color: #999999;
+  color: #999;
   text-decoration: underline;
 }
 .profileeditshell_BackToProfileCtn_1YOt2 a:hover {
@@ -2332,18 +2090,15 @@ input.DialogTextInputBase:focus {
     padding-right: 2%;
   }
 }
-
 .profilemodifier_ProfileModifierPreview_OhBEt {
   width: 328px;
   margin: 0 auto 20px;
   filter: drop-shadow(1px 5px 10px rgba(0, 0, 0, 0.35));
   box-shadow: 0 0 0 0;
 }
-
 .profilemodifier_ProfileModifierOption_3NIiY:hover {
   cursor: pointer;
 }
-
 .profilemodifier_ProfileModifierOption_3NIiY:hover
   .profilemodifier_Preview_2GvFU {
   -webkit-transform: scale(1.1);
@@ -2351,12 +2106,10 @@ input.DialogTextInputBase:focus {
   transform: scale(1.1);
   filter: drop-shadow(1px 5px 10px rgba(0, 0, 0, 0.35)) brightness(125%);
 }
-
 .profilemodifier_ProfileModifierOption_3NIiY.profilemodifier_Active_3nePJ
   .profilemodifier_Details_v3Wjr {
   color: #2e83c9;
 }
-
 .profilemodifier_ProfileModifierOption_3NIiY .profilemodifier_Preview_2GvFU {
   padding: 0px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -2372,7 +2125,6 @@ input.DialogTextInputBase:focus {
     #282c32 100%
   );
 }
-
 .profilemodifier_ProfileModifierOption_3NIiY .profilemodifier_Details_v3Wjr {
   padding: 10px 0px 10px 0px;
   width: 183px;
@@ -2389,7 +2141,6 @@ input.DialogTextInputBase:focus {
   font-style: italic;
   font-size: 13px;
 }
-
 .profilemodifier_Preview_2GvFU {
   padding: 5px;
   position: relative;
@@ -2403,11 +2154,9 @@ input.DialogTextInputBase:focus {
   z-index: 3;
   border-radius: 3px;
 }
-
 .profiletheme_ProfileThemePicker_37I7q {
   padding-top: 16px;
 }
-
 .profiletheme_ThemePickerDisabled_1gBl2 {
   opacity: 0.25;
   pointer-events: none;
@@ -2416,7 +2165,6 @@ input.DialogTextInputBase:focus {
   .profiletheme_ProfileThemePreviewCtn_3PwJq {
   display: none;
 }
-
 .profiletheme_ThemesDisabledNotice_3GOAI {
   padding: 5% 20%;
 }
@@ -2424,7 +2172,6 @@ input.DialogTextInputBase:focus {
   font-size: 24px;
   text-align: center;
 }
-
 .profiletheme_ProfileTheme_39ksj.profiletheme_Option_2aQ08 {
   padding-bottom: 10px;
 }
@@ -2448,7 +2195,6 @@ input.DialogTextInputBase:focus {
   .profiletheme_Details_mHggM {
   color: #2e83c9;
 }
-
 .profiletheme_ProfileTheme_39ksj .profiletheme_PreviewCtn_33SnK {
   padding: 0px 10px 0px 10px;
   margin: 10px 25px 5px 25px;
@@ -2491,7 +2237,6 @@ input.DialogTextInputBase:focus {
   .profiletheme_ProfilePreview_MneEO {
   margin: 0 auto;
 }
-
 .profiletheme_ProfileTheme_39ksj .profiletheme_Details_mHggM {
   padding: 10px 0px 10px 0px;
   font-size: 16px;

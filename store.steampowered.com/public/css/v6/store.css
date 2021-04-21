@@ -202,7 +202,7 @@ body.v6 h2 {
 	text-transform: uppercase;
 	color: #fff;
 	margin: 0 0 10px;
-	letter-spacing: 2px;
+	letter-spacing: 0.03em;
 	font-weight: normal;
 	padding-top: 2px;
 }
@@ -4377,7 +4377,7 @@ body.v6 .recommendation_mainsection h2 {
 	color: #fff;
 	margin: 0 0 10px;
 	font-size: 17px;
-	letter-spacing: 2px;
+	letter-spacing: 0.03em;
 	font-family: "Motiva Sans", Sans-serif;
 	font-weight: normal;
 	padding-top: 2px;
@@ -5220,7 +5220,7 @@ background: -webkit-linear-gradient( 297deg, rgba( 255, 255, 255, 0.2) 5%,rgba( 
 .curator_page .review_direction {
 	text-transform: uppercase;
 	font-size: 13px;
-	letter-spacing: 2px;
+	letter-spacing: 0.03em;
 	font-weight: 300;
 	line-height: 23px;
 }

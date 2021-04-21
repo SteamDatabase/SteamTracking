@@ -2456,6 +2456,7 @@ b {
   border-radius: 3px;
   line-height: 26px;
   text-align: center;
+  color: #ebebeb;
   background: #3d434d;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   text-decoration: none;
@@ -2463,6 +2464,10 @@ b {
 .partnereventshared_EditPreviewButton_1Hpie:hover {
   cursor: pointer;
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+}
+.partnereventshared_EditPreviewButton_1Hpie.partnereventshared_Delete_2joF8 {
+  border: 1px solid #ca5029;
+  width: fit-content;
 }
 .partnereventshared_BrowseMoreButton_jJY9v {
   display: inline-block;
@@ -15001,33 +15006,55 @@ html:not(.touch)
 }
 .facetedbrowse_FacetedBrowseControls_2SS84 h1 {
   text-transform: uppercase;
-  font-size: 17px;
-  letter-spacing: 0.05em;
+  font-size: 16px;
+  letter-spacing: 0.03em;
   padding-bottom: 4px;
 }
 .facetedbrowse_FacetedBrowseMatchCount_2Ru8O {
   text-transform: uppercase;
   font-size: 13px;
-  opacity: 80%;
-  margin-top: 8px;
-  margin-bottom: 4px;
+  opacity: 70%;
+  margin: 4px 0;
 }
-.facetedbrowse_FacetedBrowseMatchCount_2Ru8O a {
+.facetedbrowse_FacetedBrowseReset_2C5jA {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 13px;
+  margin: 4px 0;
+  padding-bottom: 4px;
   cursor: pointer;
+  opacity: 85%;
 }
 .facetedbrowse_FacetedBrowseControls_2SS84 h2 {
-  text-transform: uppercase;
-  font-size: 15px;
-  letter-spacing: 0.05em;
   margin-top: 25x !important;
   margin-bottom: 0px !important;
-  padding-bottom: 4px;
+}
+.facetedbrowse_Facet_hvtGW {
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+.facetedbrowse_Facet_hvtGW h2 {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  padding: 4px 0;
+  width: fit-content;
+  opacity: 70%;
+}
+.facetedbrowse_Facet_hvtGW h2:hover {
+  cursor: pointer;
+  opacity: 85%;
 }
 .facetedbrowse_FacetValue_2UfiC {
   display: flex;
   align-items: baseline;
   cursor: pointer;
   padding-left: 12px;
+  opacity: 85%;
+}
+.facetedbrowse_FacetValue_2UfiC:hover {
+  opacity: 100%;
 }
 .facetedbrowse_FacetValueEnabled_1HuLd {
   display: flex;
@@ -15035,12 +15062,16 @@ html:not(.touch)
   cursor: pointer;
   font-weight: bold;
   padding-left: 8px;
+  opacity: 100%;
+}
+.facetedbrowse_FacetValueEnabled_1HuLd:hover {
+  opacity: 85%;
 }
 .facetedbrowse_FacetValueDeactivated_2nUuG {
   display: flex;
   align-items: baseline;
   padding-left: 12px;
-  opacity: 50%;
+  opacity: 40%;
 }
 .facetedbrowse_FacetValueDeactivated_2nUuG a {
   cursor: default;
@@ -15059,13 +15090,16 @@ html:not(.touch)
   opacity: 50%;
 }
 .facetedbrowse_FacetValueShowMore_3yM5S {
-  font-size: 11px;
-  margin-top: 8px;
+  font-size: 13px;
+  margin-top: 2px;
   margin-bottom: 2px;
   padding-left: 12px;
   flex-grow: 1;
-  text-transform: uppercase;
-  opacity: 80%;
+  opacity: 40%;
+  cursor: pointer;
+}
+.facetedbrowse_FacetValueShowMore_3yM5S:hover {
+  opacity: 60%;
   cursor: pointer;
 }
 .facetedbrowse_FacetedBrowseItems_34Tgy {
@@ -18239,13 +18273,13 @@ img.broadcastplayer_BroadcastPlaceholderImg_1LIEZ {
   margin-top: 16px;
 }
 .bbcodeeditor_BBCodeEditorInputStyles_2c_D7 textarea {
-  color: #909090;
+  color: #adadad;
   background-color: rgba(0, 0, 0, 0.2);
   border: 1px solid #000;
   border-radius: 3px;
 }
 .bbcodeeditor_BBCodeEditorInputStyles_2c_D7 input {
-  color: #909090;
+  color: #adadad;
   background-color: rgba(0, 0, 0, 0.2);
   border: 1px solid #000;
   border-radius: 3px;
@@ -18494,6 +18528,163 @@ img.broadcastplayer_BroadcastPlaceholderImg_1LIEZ {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+}
+
+.optin_admin_email_dashboard_TileContainer_2dKmv {
+  width: 100%;
+  min-height: 189px;
+  display: flex;
+  flex-direction: column;
+  background: #262626;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+  padding: 12px;
+}
+
+.optin_admin_email_editor_CenterAlign_30g6t {
+  display: flex;
+  justify-content: center;
+}
+.optin_admin_email_editor_EmailEditorContent_BLEK0 {
+  width: 800px;
+  flex-grow: 2;
+  padding-top: 20px;
+  margin: 0 auto;
+}
+.optin_admin_email_editor_EmailOptionTitle_2byFL {
+  margin-top: 5px;
+  margin-right: 30px;
+}
+.optin_admin_email_editor_EmailTemplate_4QEkY {
+  box-shadow: 0 0 10px #000000;
+}
+.optin_admin_email_editor_EmailTemplate_4QEkY hr {
+  margin: 25px;
+  border-color: #5b6274;
+}
+.optin_admin_email_editor_RightAlign_jGzd4 {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 10px;
+  text-decoration: underline;
+}
+.optin_admin_email_editor_DevEmailTemplate_1Mnom {
+  width: 100%;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  -webkit-border-horizontal-spacing: 0px;
+  -webkit-border-vertical-spacing: 0px;
+  background-color: #e1e4e9;
+}
+.optin_admin_email_editor_DevEmail_Content_3Ot-a {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 78px;
+  padding-right: 78px;
+}
+.optin_admin_email_editor_DevEmail_HearComes_3p6BE {
+  color: #000000;
+  font-family: Arial, sans-serif;
+  font-size: 36px;
+  line-height: 50px;
+  text-align: left;
+  font-weight: normal;
+  letter-spacing: 1px;
+  min-width: auto !important;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+.optin_admin_email_editor_DevEmail_TopLogo_1cVtv {
+  width: 203px;
+  height: 43px;
+  padding-top: 70px;
+  padding-left: 450px;
+}
+.optin_admin_email_editor_DevEmail_TopHeader_I1TnL {
+  background-image: url(https://partner.steamgames.com/public/images/events/devemailblue/header_bg.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  height: 180px;
+}
+.optin_admin_email_editor_DevEmail_Subject_1EiY0 {
+  color: #000000;
+  font-family: Arial, sans-serif;
+  font-size: 42px;
+  line-height: 50px;
+  text-align: left;
+  font-weight: bold;
+  letter-spacing: 1px;
+  min-width: auto !important;
+  padding-bottom: 45px;
+}
+.optin_admin_email_editor_DevEmail_SignOff_Img_3O708 {
+  width: 70px;
+  height: 70px;
+  border: 0px;
+}
+.optin_admin_email_editor_DevEmail_Signoff_3AVDI {
+  color: #000000;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: left;
+  min-width: auto !important;
+  padding-bottom: 100px;
+}
+.optin_admin_email_editor_DevEmail_Footer_Ctn_FpCTM {
+  padding-top: 50px;
+  padding-bottom: 60px;
+  padding-left: 100px;
+  padding-right: 100px;
+  background-color: #fff;
+}
+.optin_admin_email_editor_DevEmail_Footer_Reason_oQkDs {
+  color: #000000;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: left;
+  min-width: auto !important;
+  padding-bottom: 50px;
+}
+.optin_admin_email_editor_DevEmail_Footer_SubSection_2fxkC {
+  display: flex;
+  flex-direction: row;
+  padding-top: 40px;
+}
+.optin_admin_email_editor_DevEmail_Footer_Bold_3dqoc {
+  color: #000000;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: left;
+  min-width: auto !important;
+  padding-bottom: 12px;
+}
+.optin_admin_email_editor_DevEmail_Footer_Regular_pleWj {
+  color: #000000;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: left;
+  min-width: auto !important;
+  padding-bottom: 18px;
+}
+.optin_admin_email_editor_DevEmail_Follow_1i4xt {
+  color: #000000;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: left;
+  min-width: auto !important;
+}
+.optin_admin_email_editor_DevEmail_RecipientTable_wkKaz {
+  border-spacing: 0 30px;
+}
+.optin_admin_email_editor_DevEmail_RecipientTable_wkKaz th {
+  vertical-align: top;
 }
 
 .importexportdialog_Label_hoiNW {
@@ -19674,6 +19865,9 @@ button.TextButton:focus {
 }
 .DialogDropDown.Disabled:hover {
   box-shadow: unset;
+}
+.DialogDropDown_CurrentDisplay:empty::before {
+  content: "\00a0";
 }
 .DialogDropDown._DialogInputContainer {
   margin-bottom: 0;

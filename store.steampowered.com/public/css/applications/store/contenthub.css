@@ -2,61 +2,50 @@
   display: flex;
   flex-direction: column;
 }
-
 .contenthubtabs_TabHeaderCtn_2hDgH {
   display: flex;
   flex-direction: row;
 }
-
 .contenthubtabs_TabHeader_uLDXr {
   font-size: 16px;
   padding: 10px;
   border-style: dotted;
 }
-
 .contenthubtabs_TabHeaderSelected_2lb5o {
   font-weight: bold;
   color: green;
 }
-
 .contenthubtabs_PagingCtn_1z4pT {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
 }
-
 .contenthubtabs_PagingNumCtn_2JUQr {
   display: flex;
   justify-content: flex-end;
   flex-direction: row;
   align-items: center;
 }
-
 .contenthubtabs_PageNumCtn_sJmNK {
   display: flex;
   flex-direction: row;
 }
-
 .contenthubtabs_PageNumber_1QUSX {
   padding: 5px;
 }
-
 .contenthubtabs_PageSelectedNumber_tJc_C {
   font-weight: bold;
   color: green;
 }
-
 .contenthubtabs_PagingButton_J9G7z {
   padding-left: 10px;
   padding-right: 10px;
 }
-
 .maincapsule_FeatureCtn_IIjzc {
   display: flex;
   flex-direction: row;
   min-height: 500px;
 }
-
 .maincapsule_BGImage_1Wb3- {
   display: flex;
   flex-direction: column;
@@ -67,7 +56,6 @@
   width: 100%;
   height: 100%;
 }
-
 .maincapsule_CapsuleDecorators_2SkJz {
   position: absolute;
   left: 0px;
@@ -75,23 +63,20 @@
   display: grid;
   row-gap: 5px;
 }
-
 .maincapsule_Artwork_1BjaZ {
   padding: 0;
   position: relative;
   height: 500px;
   width: 200px;
 }
-
 .maincapsule_Info_30Ff- {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
-
 .maincapsule_Title_5_Erf {
   font-size: 24px;
   margin-bottom: 5px;
-  color: white;
+  color: #fff;
   line-height: 26px;
 }

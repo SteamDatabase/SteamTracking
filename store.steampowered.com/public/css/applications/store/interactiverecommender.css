@@ -1,16 +1,12 @@
-/* stylelint-disable */
-
-/* stylelint-enable */
 a:link {
   text-decoration: none;
 }
-
 .interactiverecommender_App_u3SD8 {
   margin: 0px auto;
   height: 3840px;
   font-family: "Motiva Sans", Sans-serif;
   background-image: linear-gradient(#1b2838, #1b2838 400px, #1b2838 100%);
-  color: white;
+  color: #fff;
   padding: 40px;
   position: relative;
 }
@@ -113,7 +109,6 @@ a:link {
   height: 100%;
   border-left: 1px solid #30455a;
 }
-
 .interactiverecommender_PlaytimeList_3qtYu {
   width: 300px;
   min-width: 300px;
@@ -139,7 +134,6 @@ a:link {
   font-size: 20px;
   color: #355d79;
 }
-
 .interactiverecommender_IdentityBlock_qLWcn {
   width: 100%;
   color: #ccc;
@@ -177,7 +171,6 @@ a:link {
   .interactiverecommender_TotalTime_1tOWe {
   font-size: 10px;
 }
-
 .interactiverecommender_PlayedGame_sNb81 {
   display: flex;
   flex-direction: row;
@@ -200,7 +193,7 @@ a:link {
 .interactiverecommender_PlayedGame_sNb81 .interactiverecommender_Logo_26qua {
   width: 100px;
   height: 48px;
-  background-color: black;
+  background-color: #000;
   margin-top: 4px;
   margin-bottom: 4px;
   margin-left: 5px;
@@ -273,7 +266,6 @@ a:link {
   margin-top: 2px;
   height: 15px;
 }
-
 .interactiverecommender_UpdateSaveBlock_iaGmJ
   .interactiverecommender_UpdateButton_wcFtI {
   max-width: 200px;
@@ -300,7 +292,6 @@ a:link {
   .interactiverecommender_UpdateButton_wcFtI.interactiverecommender_Enabled_3QyVu:hover {
   background-color: #406f91;
 }
-
 .interactiverecommender_RecommendationList_1krh3 {
   flex-grow: 1;
   margin-left: 20px;
@@ -342,7 +333,6 @@ a:link {
   .interactiverecommender_NoRecommendationsMessage_1Ps6j {
   font-size: 14px;
 }
-
 .interactiverecommender_RecommendationOptions_2F61j
   .interactiverecommender_Row_1sYIz {
   display: flex;
@@ -353,7 +343,6 @@ a:link {
   margin-left: -10px;
   margin-right: -10px;
 }
-
 .interactiverecommender_RecommendationOptions_2F61j
   .interactiverecommender_SecondRow_K-rzA {
   margin-bottom: 36px;
@@ -364,7 +353,6 @@ a:link {
     margin-bottom: 40px;
   }
 }
-
 .interactiverecommender_OptionCheckbox_2Cb6n {
   color: #ccc;
   margin-top: 10px;
@@ -383,7 +371,6 @@ a:link {
 .interactiverecommender_OptionCheckbox_2Cb6n.interactiverecommender_WishlistCheckbox_1cnxU {
   height: 40px;
 }
-
 .interactiverecommender_SaveUserSettingsButton_1VRgd {
   height: 40px;
   margin-left: 4px;
@@ -408,7 +395,6 @@ a:link {
   background-color: #406986;
   color: #eee;
 }
-
 .interactiverecommender_OptionSlider_26ek6 {
   display: flex;
   flex-direction: column;
@@ -454,7 +440,6 @@ a:link {
   margin-top: 4px;
   color: #ccc;
 }
-
 .interactiverecommender_OptionDropdown_1dKx5 {
   display: flex;
   flex-direction: column;
@@ -469,7 +454,6 @@ a:link {
   color: #ccc;
   margin-bottom: 4px;
 }
-
 .interactiverecommender_OptionTagList_uNxeG {
   margin-left: 12px;
 }
@@ -509,7 +493,6 @@ a:link {
   .interactiverecommender_Close_2bZrr {
   transform: scale(1);
 }
-
 .interactiverecommender_RecommendationEntry_3opuX {
   width: 100%;
   height: 106px;
@@ -579,7 +562,7 @@ a:link {
   width: 200px;
   height: 100px;
   position: absolute;
-  background: black;
+  background: #000;
   transition: opacity 0.2s ease-in-out, width 0.1s ease-in-out,
     height 0.1s ease-in-out;
   opacity: 0;
@@ -912,7 +895,6 @@ a:link {
   width: 250px;
   height: 141px;
 }
-
 input[type="range"] {
   -webkit-appearance: none;
   width: 100%;
@@ -920,28 +902,25 @@ input[type="range"] {
   background-color: rgba(0, 0, 0, 0);
   max-height: 5px;
 }
-
 input[type="range"]:focus {
   outline: none;
 }
-
 input[type="range"]::-webkit-slider-runnable-track {
   width: 100%;
   height: 3.1px;
   cursor: pointer;
-  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  box-shadow: 0px 0px 0px #000, 0px 0px 0px #0d0d0d;
   background: #67c1f5;
   border-radius: 1.5px;
   border: 0px solid #67c1f5;
 }
-
 input[type="range"]::-webkit-slider-thumb {
-  box-shadow: 0px 0px 8px #000000, 0px 0px 3px #0d0d0d;
-  border: 0px solid #ffffff;
+  box-shadow: 0px 0px 8px #000, 0px 0px 3px #0d0d0d;
+  border: 0px solid #fff;
   height: 12px;
   width: 12px;
   border-radius: 6px;
-  background: #ffffff;
+  background: #fff;
   cursor: pointer;
   -webkit-appearance: none;
   margin-top: -4.45px;
@@ -954,31 +933,27 @@ input[type="range"]::-webkit-slider-thumb {
     margin-top: -7.75px;
   }
 }
-
 input[type="range"]:focus::-webkit-slider-runnable-track {
   background: #7fcbf7;
 }
-
 input[type="range"]::-moz-range-track {
   width: 100%;
   height: 3.1px;
   cursor: pointer;
-  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  box-shadow: 0px 0px 0px #000, 0px 0px 0px #0d0d0d;
   background: #67c1f5;
   border-radius: 1.5px;
   border: 0px solid #67c1f5;
 }
-
 input[type="range"]::-moz-range-thumb {
-  box-shadow: 0px 0px 8px #000000, 0px 0px 3px #0d0d0d;
-  border: 0px solid #ffffff;
+  box-shadow: 0px 0px 8px #000, 0px 0px 3px #0d0d0d;
+  border: 0px solid #fff;
   height: 12px;
   width: 12px;
   border-radius: 6px;
-  background: #ffffff;
+  background: #fff;
   cursor: pointer;
 }
-
 input[type="range"]::-ms-track {
   width: 100%;
   height: 3.1px;
@@ -987,39 +962,33 @@ input[type="range"]::-ms-track {
   border-color: transparent;
   color: transparent;
 }
-
 input[type="range"]::-ms-fill-lower {
   background: #4fb7f3;
   border: 0px solid #67c1f5;
   border-radius: 3px;
-  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  box-shadow: 0px 0px 0px #000, 0px 0px 0px #0d0d0d;
 }
-
 input[type="range"]::-ms-fill-upper {
   background: #67c1f5;
   border: 0px solid #67c1f5;
   border-radius: 3px;
-  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  box-shadow: 0px 0px 0px #000, 0px 0px 0px #0d0d0d;
 }
-
 input[type="range"]::-ms-thumb {
-  box-shadow: 0px 0px 8px #000000, 0px 0px 3px #0d0d0d;
-  border: 0px solid #ffffff;
+  box-shadow: 0px 0px 8px #000, 0px 0px 3px #0d0d0d;
+  border: 0px solid #fff;
   height: 12px;
   width: 12px;
   border-radius: 6px;
-  background: #ffffff;
+  background: #fff;
   cursor: pointer;
 }
-
 input[type="range"]:focus::-ms-fill-lower {
   background: #67c1f5;
 }
-
 input[type="range"]:focus::-ms-fill-upper {
   background: #7fcbf7;
 }
-
 .interactiverecommender_SelectionBox_2W7pR {
   display: block;
   font-size: 12px;
@@ -1048,14 +1017,13 @@ input[type="range"]:focus::-ms-fill-upper {
 .interactiverecommender_SelectionBox_2W7pR option {
   font-weight: normal;
 }
-
 .interactiverecommender_SuggestionInput_3OdNp {
   background-color: #355d79;
   border: 1px solid #3d6a8a;
   padding: 2px;
   margin-top: 4px;
   margin-bottom: 4px;
-  color: white;
+  color: #fff;
   font-size: 12px;
 }
 .interactiverecommender_SuggestionInput_3OdNp:hover {
@@ -1067,7 +1035,6 @@ input[type="range"]:focus::-ms-fill-upper {
 .interactiverecommender_SuggestionInput_3OdNp::placeholder {
   color: #1e3242;
 }
-
 .interactiverecommender_SuggestionContainerOpen_2NTkL {
   background-color: #1e3242;
   border: 1px solid #355d79;

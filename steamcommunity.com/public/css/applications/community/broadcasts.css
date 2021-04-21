@@ -1,11 +1,9 @@
 .broadcastdebug_SubSection_3Ac4z {
   padding-bottom: 10px;
 }
-
 .broadcastdebug_Header_2vrXB {
   font-weight: bolder;
 }
-
 .broadcastdebug_AppSummaryWidgetCtn_35ozI {
   flex-grow: 2;
   flex-basis: 0;
@@ -16,21 +14,17 @@
   border-radius: 4px;
   max-width: 800px;
 }
-
 .broadcastplayer_BroadcastPage_3IVNU {
   display: flex;
   flex-direction: column;
 }
-
 .broadcastplayer_ChatAndVideoContainer_3T2Xh {
   position: relative;
   min-height: 540px;
 }
-
 .broadcastplayer_PlayerContainer_1YtbI {
   width: 100vh;
 }
-
 .broadcastplayer_ControlCtn_3NMuA {
   display: flex;
   flex-direction: column;
@@ -81,7 +75,6 @@
   width: fit-content;
   padding: 0px 12px;
 }
-
 @media screen and (max-width: 600px) {
   .broadcastplayer_ControlCtn_3NMuA
     .broadcastplayer_TitleInput_2hXPK
@@ -95,7 +88,6 @@
     width: 100%;
   }
 }
-
 .broadcastplayer_GameInfoCtn_4stlZ {
   margin: 60px 24px 0 24px;
   max-width: 1000px;
@@ -120,7 +112,6 @@
   font-weight: 200;
   color: #969fab;
 }
-
 .broadcastplayer_RelatedEvents_2RjLr {
   max-width: 1000px;
   margin: 20px 0;
@@ -132,11 +123,9 @@
   font-weight: 200;
   color: #969fab;
 }
-
 .broadcastplayer_DebugCtn_FKW0z {
   margin: 0px 24px;
 }
-
 .steamavatar_avatarHolder_nibod {
   height: 36px;
   width: 36px;
@@ -169,7 +158,6 @@
   height: 100%;
   width: 100%;
 }
-
 .ingame .steamavatar_avatarStatus_3xUpb {
   background: linear-gradient(
     to bottom,
@@ -179,11 +167,9 @@
     #8cd61d 100%
   );
 }
-
 .ingame .X-Large .steamavatar_avatarStatus_3xUpb {
   background: #bff02b;
 }
-
 .watchingbroadcast .steamavatar_avatarStatus_3xUpb {
   background: linear-gradient(
     to bottom,
@@ -193,7 +179,6 @@
     #9c8fd4 100%
   );
 }
-
 .online .steamavatar_avatarStatus_3xUpb {
   background: linear-gradient(
     to bottom,
@@ -203,7 +188,6 @@
     #6dcff6 100%
   );
 }
-
 .awayOrSnooze .steamavatar_avatarStatus_3xUpb {
   -webkit-mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC")
     repeat-y;
@@ -213,7 +197,6 @@
   mask-size: 5px 5px;
   opacity: 0.75;
 }
-
 .steamavatar_avatarStatus_3xUpb.right {
   position: absolute;
   top: 0;
@@ -221,7 +204,6 @@
   right: 0;
   width: 2px;
 }
-
 .steamavatar_avatarStatus_3xUpb.bottom {
   position: absolute;
   bottom: 0;
@@ -229,19 +211,16 @@
   right: 0;
   height: 2px;
 }
-
 .awayOrSnooze .steamavatar_avatarStatus_3xUpb.bottom {
   -webkit-mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC")
     repeat-x;
   mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC")
     repeat-x;
 }
-
 .awayOrSnooze .X-Large .steamavatar_avatarStatus_3xUpb.bottom {
   mask-size: 6px 6px;
   opacity: 1;
 }
-
 .steamavatar_avatar_3h-QR {
   border: 1px solid #383c43;
   height: calc(100% - 2px);
@@ -249,7 +228,6 @@
   box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.3);
   transition: filter 0.24s ease-in-out;
 }
-
 .steamavatar_avatarFrame_X_mJE {
   position: absolute;
   top: 0;
@@ -258,21 +236,17 @@
   width: 100%;
   height: 100%;
 }
-
 .steamavatar_avatarHolder_nibod .steamavatar_avatarFrame_X_mJE {
   transform: scale(1.2);
 }
-
 .communityavatar_AvatarCtn_3n3n0 {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-
 .communityavatar_NameAndProps_3Pljh {
   margin-left: 6px;
 }
-
 .broadcastprofile_ProfileCtn__qonR {
   display: flex;
   flex-direction: row;
@@ -296,14 +270,12 @@
   font-weight: 200;
   color: #969fab;
 }
-
 .broadcastprofile_StreamDetailsCtn_11FAt {
   display: flex;
   flex-direction: column;
   width: 100%;
   margin-left: 8px;
 }
-
 .broadcastprofile_ViewerCount_2skQ1 {
   font-size: 14px;
   margin: 2px 0px 0px 16px;
@@ -316,7 +288,6 @@
   text-decoration: none;
   color: #969fab;
 }
-
 .broadcastprofile_BroadcastUserActionsCtn_1MeMB {
   display: flex;
   flex-direction: row;
@@ -329,11 +300,9 @@
   padding-right: 12px;
   margin-left: 4px;
 }
-
 .broadcastprofile_GameCapsule_1oJMx img {
   width: 200px;
 }
-
 @media screen and (max-width: 910px) {
   .broadcastprofile_GameCapsule_1oJMx {
     display: none;
@@ -342,7 +311,6 @@
     margin-left: 0px;
   }
 }
-
 .broadcastsupport_AdminControls_3KL0b {
   display: flex;
   flex-direction: row;

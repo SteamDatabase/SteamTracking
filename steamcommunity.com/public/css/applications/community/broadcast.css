@@ -29,7 +29,6 @@
     flex-direction: row;
   }
 }
-
 .broadcastwidgets_StoreSaleWidgetImage_mini_yvW2h {
   cursor: pointer;
   max-width: 155px;
@@ -37,13 +36,11 @@
   box-sizing: border-box;
   padding: 5px;
 }
-
 .broadcastwidgets_StoreSaleImage_mini_1zSsm {
   cursor: pointer;
   width: 100%;
   display: block;
 }
-
 .broadcastwidgets_StoreSaleWidgetShortDesc_mini_2ZkfU {
   overflow-y: scroll;
   -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);

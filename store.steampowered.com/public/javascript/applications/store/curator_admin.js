@@ -14,14 +14,14 @@
         u = n("2l+k"),
         s = n("IjL/"),
         l = n("9w6b"),
-        p = (function (e) {
-          function t() {
-            var t = (null !== e && e.apply(this, arguments)) || this;
-            return (t.state = { bIsLoading: !0 }), t;
+        p = (function (t) {
+          function e() {
+            var e = (null !== t && t.apply(this, arguments)) || this;
+            return (e.state = { bIsLoading: !0 }), e;
           }
           return (
-            Object(a.d)(t, e),
-            (t.prototype.componentDidMount = function () {
+            Object(a.d)(e, t),
+            (e.prototype.componentDidMount = function () {
               return Object(a.b)(this, void 0, void 0, function () {
                 return Object(a.e)(this, function (t) {
                   switch (t.label) {
@@ -33,7 +33,7 @@
                 });
               });
             }),
-            (t.prototype.render = function () {
+            (e.prototype.render = function () {
               return this.state.bIsLoading
                 ? null
                 : o.a.createElement(
@@ -52,7 +52,7 @@
                     )
                   );
             }),
-            t
+            e
           );
         })(o.a.Component);
       e.default = p;

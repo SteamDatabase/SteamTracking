@@ -49,2083 +49,2084 @@
     },
     tPo2: function (e, t, r) {
       "use strict";
-      var s = r("mrSG"),
-        j = r("q1tI"),
-        m = r.n(j),
-        n = r("TyAF"),
-        z = r("Jqb/"),
-        E = r("ARGL"),
-        S = r("TLQK"),
-        i = r("bxiW"),
-        L = r("lkRc"),
-        a = r("WBba"),
-        o = r("2lpH"),
-        c = r.n(o),
-        l = r("2vnA"),
-        u = r("bxBv"),
-        d = r("hRO2"),
-        f = r("OS8t"),
-        b = d.Message;
-      var y,
-        p,
-        w,
-        h,
-        _ = (function (r) {
-          function n(e) {
-            void 0 === e && (e = null);
-            var t = r.call(this) || this;
+      var n = r("mrSG"),
+        i = r("q1tI"),
+        a = r.n(i),
+        o = r("TyAF"),
+        s = r("Jqb/"),
+        c = r("ARGL"),
+        l = r("TLQK"),
+        u = r("bxiW"),
+        d = r("lkRc"),
+        m = r("WBba"),
+        f = r("2lpH"),
+        b = r.n(f),
+        y = r("2vnA"),
+        p = r("bxBv"),
+        w = r("hRO2"),
+        h = r("OS8t"),
+        _ = w.Message;
+      var g,
+        v,
+        B = (function (e) {
+          function t(r) {
+            void 0 === r && (r = null);
+            var n = e.call(this) || this;
             return (
-              n.prototype.steamid || f.a(n.M()),
-              b.initialize(t, e, 0, -1, void 0, null),
-              t
+              t.prototype.steamid || h.a(t.M()),
+              _.initialize(n, r, 0, -1, void 0, null),
+              n
             );
           }
           return (
-            Object(s.d)(n, r),
-            (n.M = function () {
+            Object(n.d)(t, e),
+            (t.M = function () {
               return (
-                n.sm_m ||
-                  (n.sm_m = {
-                    proto: n,
+                t.sm_m ||
+                  (t.sm_m = {
+                    proto: t,
                     fields: {
                       steamid: {
                         n: 1,
-                        br: f.d.readFixed64String,
-                        bw: f.h.writeFixed64String,
+                        br: h.d.readFixed64String,
+                        bw: h.h.writeFixed64String,
                       },
                     },
                   }),
-                n.sm_m
+                t.sm_m
               );
             }),
-            (n.MBF = function () {
-              return n.sm_mbf || (n.sm_mbf = f.e(n.M())), n.sm_mbf;
+            (t.MBF = function () {
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
-            (n.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), n.toObject(e, this);
+            (t.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (n.toObject = function (e, t) {
-              return f.g(n.M(), e, t);
+            (t.toObject = function (e, r) {
+              return h.g(t.M(), e, r);
             }),
-            (n.fromObject = function (e) {
-              return f.c(n.M(), e);
+            (t.fromObject = function (e) {
+              return h.c(t.M(), e);
             }),
-            (n.deserializeBinary = function (e) {
-              var t = new d.BinaryReader(e),
-                r = new n();
-              return n.deserializeBinaryFromReader(r, t);
+            (t.deserializeBinary = function (e) {
+              var r = new w.BinaryReader(e),
+                n = new t();
+              return t.deserializeBinaryFromReader(n, r);
             }),
-            (n.deserializeBinaryFromReader = function (e, t) {
-              return f.b(n.MBF(), e, t);
+            (t.deserializeBinaryFromReader = function (e, r) {
+              return h.b(t.MBF(), e, r);
             }),
-            (n.prototype.serializeBinary = function () {
-              var e = new d.BinaryWriter();
-              return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            (t.prototype.serializeBinary = function () {
+              var e = new w.BinaryWriter();
+              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (n.serializeBinaryToWriter = function (e, t) {
-              f.f(n.M(), e, t);
+            (t.serializeBinaryToWriter = function (e, r) {
+              h.f(t.M(), e, r);
             }),
-            (n.prototype.getClassName = function () {
+            (t.prototype.getClassName = function () {
               return "CLoyaltyRewards_GetSummary_Request";
             }),
-            n
+            t
           );
-        })(b),
-        g = (function (r) {
-          function n(e) {
-            void 0 === e && (e = null);
-            var t = r.call(this) || this;
+        })(_),
+        R = (function (e) {
+          function t(r) {
+            void 0 === r && (r = null);
+            var n = e.call(this) || this;
             return (
-              n.prototype.summary || f.a(n.M()),
-              b.initialize(t, e, 0, -1, void 0, null),
-              t
+              t.prototype.summary || h.a(t.M()),
+              _.initialize(n, r, 0, -1, void 0, null),
+              n
             );
           }
           return (
-            Object(s.d)(n, r),
-            (n.M = function () {
+            Object(n.d)(t, e),
+            (t.M = function () {
               return (
-                n.sm_m ||
-                  (n.sm_m = {
-                    proto: n,
+                t.sm_m ||
+                  (t.sm_m = {
+                    proto: t,
                     fields: {
-                      summary: { n: 1, c: v },
+                      summary: { n: 1, c: M },
                       timestamp_updated: {
                         n: 2,
-                        br: f.d.readUint32,
-                        bw: f.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       auditid_highwater: {
                         n: 3,
-                        br: f.d.readUint64String,
-                        bw: f.h.writeUint64String,
+                        br: h.d.readUint64String,
+                        bw: h.h.writeUint64String,
                       },
                     },
                   }),
-                n.sm_m
+                t.sm_m
               );
             }),
-            (n.MBF = function () {
-              return n.sm_mbf || (n.sm_mbf = f.e(n.M())), n.sm_mbf;
+            (t.MBF = function () {
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
-            (n.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), n.toObject(e, this);
+            (t.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (n.toObject = function (e, t) {
-              return f.g(n.M(), e, t);
+            (t.toObject = function (e, r) {
+              return h.g(t.M(), e, r);
             }),
-            (n.fromObject = function (e) {
-              return f.c(n.M(), e);
+            (t.fromObject = function (e) {
+              return h.c(t.M(), e);
             }),
-            (n.deserializeBinary = function (e) {
-              var t = new d.BinaryReader(e),
-                r = new n();
-              return n.deserializeBinaryFromReader(r, t);
+            (t.deserializeBinary = function (e) {
+              var r = new w.BinaryReader(e),
+                n = new t();
+              return t.deserializeBinaryFromReader(n, r);
             }),
-            (n.deserializeBinaryFromReader = function (e, t) {
-              return f.b(n.MBF(), e, t);
+            (t.deserializeBinaryFromReader = function (e, r) {
+              return h.b(t.MBF(), e, r);
             }),
-            (n.prototype.serializeBinary = function () {
-              var e = new d.BinaryWriter();
-              return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            (t.prototype.serializeBinary = function () {
+              var e = new w.BinaryWriter();
+              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (n.serializeBinaryToWriter = function (e, t) {
-              f.f(n.M(), e, t);
+            (t.serializeBinaryToWriter = function (e, r) {
+              h.f(t.M(), e, r);
             }),
-            (n.prototype.getClassName = function () {
+            (t.prototype.getClassName = function () {
               return "CLoyaltyRewards_GetSummary_Response";
             }),
-            n
+            t
           );
-        })(b),
-        v = (function (r) {
-          function n(e) {
-            void 0 === e && (e = null);
-            var t = r.call(this) || this;
+        })(_),
+        M = (function (e) {
+          function t(r) {
+            void 0 === r && (r = null);
+            var n = e.call(this) || this;
             return (
-              n.prototype.points || f.a(n.M()),
-              b.initialize(t, e, 0, -1, void 0, null),
-              t
+              t.prototype.points || h.a(t.M()),
+              _.initialize(n, r, 0, -1, void 0, null),
+              n
             );
           }
           return (
-            Object(s.d)(n, r),
-            (n.M = function () {
+            Object(n.d)(t, e),
+            (t.M = function () {
               return (
-                n.sm_m ||
-                  (n.sm_m = {
-                    proto: n,
+                t.sm_m ||
+                  (t.sm_m = {
+                    proto: t,
                     fields: {
                       points: {
                         n: 1,
-                        br: f.d.readInt64String,
-                        bw: f.h.writeInt64String,
+                        br: h.d.readInt64String,
+                        bw: h.h.writeInt64String,
                       },
                       points_earned: {
                         n: 2,
-                        br: f.d.readInt64String,
-                        bw: f.h.writeInt64String,
+                        br: h.d.readInt64String,
+                        bw: h.h.writeInt64String,
                       },
                       points_spent: {
                         n: 3,
-                        br: f.d.readInt64String,
-                        bw: f.h.writeInt64String,
+                        br: h.d.readInt64String,
+                        bw: h.h.writeInt64String,
                       },
                     },
                   }),
-                n.sm_m
+                t.sm_m
               );
             }),
-            (n.MBF = function () {
-              return n.sm_mbf || (n.sm_mbf = f.e(n.M())), n.sm_mbf;
+            (t.MBF = function () {
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
-            (n.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), n.toObject(e, this);
+            (t.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (n.toObject = function (e, t) {
-              return f.g(n.M(), e, t);
+            (t.toObject = function (e, r) {
+              return h.g(t.M(), e, r);
             }),
-            (n.fromObject = function (e) {
-              return f.c(n.M(), e);
+            (t.fromObject = function (e) {
+              return h.c(t.M(), e);
             }),
-            (n.deserializeBinary = function (e) {
-              var t = new d.BinaryReader(e),
-                r = new n();
-              return n.deserializeBinaryFromReader(r, t);
+            (t.deserializeBinary = function (e) {
+              var r = new w.BinaryReader(e),
+                n = new t();
+              return t.deserializeBinaryFromReader(n, r);
             }),
-            (n.deserializeBinaryFromReader = function (e, t) {
-              return f.b(n.MBF(), e, t);
+            (t.deserializeBinaryFromReader = function (e, r) {
+              return h.b(t.MBF(), e, r);
             }),
-            (n.prototype.serializeBinary = function () {
-              var e = new d.BinaryWriter();
-              return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            (t.prototype.serializeBinary = function () {
+              var e = new w.BinaryWriter();
+              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (n.serializeBinaryToWriter = function (e, t) {
-              f.f(n.M(), e, t);
+            (t.serializeBinaryToWriter = function (e, r) {
+              h.f(t.M(), e, r);
             }),
-            (n.prototype.getClassName = function () {
+            (t.prototype.getClassName = function () {
               return "CLoyaltyRewards_GetSummary_Response_Summary";
             }),
-            n
+            t
           );
-        })(b),
-        B = (function (r) {
-          function n(e) {
-            void 0 === e && (e = null);
-            var t = r.call(this) || this;
+        })(_),
+        C = (function (e) {
+          function t(r) {
+            void 0 === r && (r = null);
+            var n = e.call(this) || this;
             return (
-              n.prototype.points || f.a(n.M()),
-              b.initialize(t, e, 0, -1, void 0, null),
-              t
+              t.prototype.points || h.a(t.M()),
+              _.initialize(n, r, 0, -1, void 0, null),
+              n
             );
           }
           return (
-            Object(s.d)(n, r),
-            (n.M = function () {
+            Object(n.d)(t, e),
+            (t.M = function () {
               return (
-                n.sm_m ||
-                  (n.sm_m = {
-                    proto: n,
+                t.sm_m ||
+                  (t.sm_m = {
+                    proto: t,
                     fields: {
                       points: {
                         n: 1,
-                        br: f.d.readInt64String,
-                        bw: f.h.writeInt64String,
+                        br: h.d.readInt64String,
+                        bw: h.h.writeInt64String,
                       },
                     },
                   }),
-                n.sm_m
+                t.sm_m
               );
             }),
-            (n.MBF = function () {
-              return n.sm_mbf || (n.sm_mbf = f.e(n.M())), n.sm_mbf;
+            (t.MBF = function () {
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
-            (n.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), n.toObject(e, this);
+            (t.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (n.toObject = function (e, t) {
-              return f.g(n.M(), e, t);
+            (t.toObject = function (e, r) {
+              return h.g(t.M(), e, r);
             }),
-            (n.fromObject = function (e) {
-              return f.c(n.M(), e);
+            (t.fromObject = function (e) {
+              return h.c(t.M(), e);
             }),
-            (n.deserializeBinary = function (e) {
-              var t = new d.BinaryReader(e),
-                r = new n();
-              return n.deserializeBinaryFromReader(r, t);
+            (t.deserializeBinary = function (e) {
+              var r = new w.BinaryReader(e),
+                n = new t();
+              return t.deserializeBinaryFromReader(n, r);
             }),
-            (n.deserializeBinaryFromReader = function (e, t) {
-              return f.b(n.MBF(), e, t);
+            (t.deserializeBinaryFromReader = function (e, r) {
+              return h.b(t.MBF(), e, r);
             }),
-            (n.prototype.serializeBinary = function () {
-              var e = new d.BinaryWriter();
-              return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            (t.prototype.serializeBinary = function () {
+              var e = new w.BinaryWriter();
+              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (n.serializeBinaryToWriter = function (e, t) {
-              f.f(n.M(), e, t);
+            (t.serializeBinaryToWriter = function (e, r) {
+              h.f(t.M(), e, r);
             }),
-            (n.prototype.getClassName = function () {
+            (t.prototype.getClassName = function () {
               return "CLoyaltyRewards_GetPointsForSpend_Response";
             }),
-            n
+            t
           );
-        })(b),
-        R = (function (r) {
-          function n(e) {
-            void 0 === e && (e = null);
-            var t = r.call(this) || this;
+        })(_),
+        O = (function (e) {
+          function t(r) {
+            void 0 === r && (r = null);
+            var n = e.call(this) || this;
             return (
-              n.prototype.communityitemid || f.a(n.M()),
-              b.initialize(t, e, 0, -1, [2], null),
-              t
+              t.prototype.communityitemid || h.a(t.M()),
+              _.initialize(n, r, 0, -1, [2], null),
+              n
             );
           }
           return (
-            Object(s.d)(n, r),
-            (n.M = function () {
+            Object(n.d)(t, e),
+            (t.M = function () {
               return (
-                n.sm_m ||
-                  (n.sm_m = {
-                    proto: n,
+                t.sm_m ||
+                  (t.sm_m = {
+                    proto: t,
                     fields: {
                       communityitemid: {
                         n: 1,
-                        br: f.d.readUint64String,
-                        bw: f.h.writeUint64String,
+                        br: h.d.readUint64String,
+                        bw: h.h.writeUint64String,
                       },
                       bundle_community_item_ids: {
                         n: 2,
                         r: !0,
                         q: !0,
-                        br: f.d.readUint64String,
-                        bw: f.h.writeRepeatedUint64String,
+                        br: h.d.readUint64String,
+                        bw: h.h.writeRepeatedUint64String,
                       },
                     },
                   }),
-                n.sm_m
+                t.sm_m
               );
             }),
-            (n.MBF = function () {
-              return n.sm_mbf || (n.sm_mbf = f.e(n.M())), n.sm_mbf;
+            (t.MBF = function () {
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
-            (n.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), n.toObject(e, this);
+            (t.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (n.toObject = function (e, t) {
-              return f.g(n.M(), e, t);
+            (t.toObject = function (e, r) {
+              return h.g(t.M(), e, r);
             }),
-            (n.fromObject = function (e) {
-              return f.c(n.M(), e);
+            (t.fromObject = function (e) {
+              return h.c(t.M(), e);
             }),
-            (n.deserializeBinary = function (e) {
-              var t = new d.BinaryReader(e),
-                r = new n();
-              return n.deserializeBinaryFromReader(r, t);
+            (t.deserializeBinary = function (e) {
+              var r = new w.BinaryReader(e),
+                n = new t();
+              return t.deserializeBinaryFromReader(n, r);
             }),
-            (n.deserializeBinaryFromReader = function (e, t) {
-              return f.b(n.MBF(), e, t);
+            (t.deserializeBinaryFromReader = function (e, r) {
+              return h.b(t.MBF(), e, r);
             }),
-            (n.prototype.serializeBinary = function () {
-              var e = new d.BinaryWriter();
-              return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            (t.prototype.serializeBinary = function () {
+              var e = new w.BinaryWriter();
+              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (n.serializeBinaryToWriter = function (e, t) {
-              f.f(n.M(), e, t);
+            (t.serializeBinaryToWriter = function (e, r) {
+              h.f(t.M(), e, r);
             }),
-            (n.prototype.getClassName = function () {
+            (t.prototype.getClassName = function () {
               return "CLoyaltyRewards_RedeemPoints_Response";
             }),
-            n
+            t
           );
-        })(b),
-        M = (function (r) {
-          function n(e) {
-            void 0 === e && (e = null);
-            var t = r.call(this) || this;
+        })(_),
+        j = (function (e) {
+          function t(r) {
+            void 0 === r && (r = null);
+            var n = e.call(this) || this;
             return (
-              n.prototype.purchaseid || f.a(n.M()),
-              b.initialize(t, e, 0, -1, void 0, null),
-              t
+              t.prototype.purchaseid || h.a(t.M()),
+              _.initialize(n, r, 0, -1, void 0, null),
+              n
             );
           }
           return (
-            Object(s.d)(n, r),
-            (n.M = function () {
+            Object(n.d)(t, e),
+            (t.M = function () {
               return (
-                n.sm_m ||
-                  (n.sm_m = {
-                    proto: n,
+                t.sm_m ||
+                  (t.sm_m = {
+                    proto: t,
                     fields: {
                       purchaseid: {
                         n: 1,
-                        br: f.d.readUint64String,
-                        bw: f.h.writeUint64String,
+                        br: h.d.readUint64String,
+                        bw: h.h.writeUint64String,
                       },
                     },
                   }),
-                n.sm_m
+                t.sm_m
               );
             }),
-            (n.MBF = function () {
-              return n.sm_mbf || (n.sm_mbf = f.e(n.M())), n.sm_mbf;
+            (t.MBF = function () {
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
-            (n.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), n.toObject(e, this);
+            (t.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (n.toObject = function (e, t) {
-              return f.g(n.M(), e, t);
+            (t.toObject = function (e, r) {
+              return h.g(t.M(), e, r);
             }),
-            (n.fromObject = function (e) {
-              return f.c(n.M(), e);
+            (t.fromObject = function (e) {
+              return h.c(t.M(), e);
             }),
-            (n.deserializeBinary = function (e) {
-              var t = new d.BinaryReader(e),
-                r = new n();
-              return n.deserializeBinaryFromReader(r, t);
+            (t.deserializeBinary = function (e) {
+              var r = new w.BinaryReader(e),
+                n = new t();
+              return t.deserializeBinaryFromReader(n, r);
             }),
-            (n.deserializeBinaryFromReader = function (e, t) {
-              return f.b(n.MBF(), e, t);
+            (t.deserializeBinaryFromReader = function (e, r) {
+              return h.b(t.MBF(), e, r);
             }),
-            (n.prototype.serializeBinary = function () {
-              var e = new d.BinaryWriter();
-              return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            (t.prototype.serializeBinary = function () {
+              var e = new w.BinaryWriter();
+              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (n.serializeBinaryToWriter = function (e, t) {
-              f.f(n.M(), e, t);
+            (t.serializeBinaryToWriter = function (e, r) {
+              h.f(t.M(), e, r);
             }),
-            (n.prototype.getClassName = function () {
+            (t.prototype.getClassName = function () {
               return "CLoyaltyRewards_RedeemPointsForProfileCustomization_Response";
             }),
-            n
+            t
           );
-        })(b),
-        C = (function (r) {
-          function n(e) {
-            void 0 === e && (e = null);
-            var t = r.call(this) || this;
-            return b.initialize(t, e, 0, -1, void 0, null), t;
+        })(_),
+        z = (function (e) {
+          function t(t) {
+            void 0 === t && (t = null);
+            var r = e.call(this) || this;
+            return _.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
-            Object(s.d)(n, r),
-            (n.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), n.toObject(e, this);
+            Object(n.d)(t, e),
+            (t.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (n.toObject = function (e, t) {
+            (t.toObject = function (e, t) {
               return e ? { $jspbMessageInstance: t } : {};
             }),
-            (n.fromObject = function (e) {
-              return new n();
+            (t.fromObject = function (e) {
+              return new t();
             }),
-            (n.deserializeBinary = function (e) {
-              var t = new d.BinaryReader(e),
-                r = new n();
-              return n.deserializeBinaryFromReader(r, t);
+            (t.deserializeBinary = function (e) {
+              var r = new w.BinaryReader(e),
+                n = new t();
+              return t.deserializeBinaryFromReader(n, r);
             }),
-            (n.deserializeBinaryFromReader = function (e, t) {
+            (t.deserializeBinaryFromReader = function (e, t) {
               return e;
             }),
-            (n.prototype.serializeBinary = function () {
-              var e = new d.BinaryWriter();
-              return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            (t.prototype.serializeBinary = function () {
+              var e = new w.BinaryWriter();
+              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (n.serializeBinaryToWriter = function (e, t) {}),
-            (n.prototype.getClassName = function () {
+            (t.serializeBinaryToWriter = function (e, t) {}),
+            (t.prototype.getClassName = function () {
               return "CLoyaltyRewards_RedeemPointsForProfileCustomizationUpgrade_Response";
             }),
-            n
+            t
           );
-        })(b),
-        O = (function (r) {
-          function n(e) {
-            void 0 === e && (e = null);
-            var t = r.call(this) || this;
+        })(_),
+        E = (function (e) {
+          function t(r) {
+            void 0 === r && (r = null);
+            var n = e.call(this) || this;
             return (
-              n.prototype.target_type || f.a(n.M()),
-              b.initialize(t, e, 0, -1, void 0, null),
-              t
+              t.prototype.target_type || h.a(t.M()),
+              _.initialize(n, r, 0, -1, void 0, null),
+              n
             );
           }
           return (
-            Object(s.d)(n, r),
-            (n.M = function () {
+            Object(n.d)(t, e),
+            (t.M = function () {
               return (
-                n.sm_m ||
-                  (n.sm_m = {
-                    proto: n,
+                t.sm_m ||
+                  (t.sm_m = {
+                    proto: t,
                     fields: {
                       target_type: {
                         n: 1,
-                        br: f.d.readEnum,
-                        bw: f.h.writeEnum,
+                        br: h.d.readEnum,
+                        bw: h.h.writeEnum,
                       },
                       targetid: {
                         n: 2,
-                        br: f.d.readUint64String,
-                        bw: f.h.writeUint64String,
+                        br: h.d.readUint64String,
+                        bw: h.h.writeUint64String,
                       },
                       reactionid: {
                         n: 3,
-                        br: f.d.readUint32,
-                        bw: f.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                     },
                   }),
-                n.sm_m
+                t.sm_m
               );
             }),
-            (n.MBF = function () {
-              return n.sm_mbf || (n.sm_mbf = f.e(n.M())), n.sm_mbf;
+            (t.MBF = function () {
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
-            (n.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), n.toObject(e, this);
+            (t.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (n.toObject = function (e, t) {
-              return f.g(n.M(), e, t);
+            (t.toObject = function (e, r) {
+              return h.g(t.M(), e, r);
             }),
-            (n.fromObject = function (e) {
-              return f.c(n.M(), e);
+            (t.fromObject = function (e) {
+              return h.c(t.M(), e);
             }),
-            (n.deserializeBinary = function (e) {
-              var t = new d.BinaryReader(e),
-                r = new n();
-              return n.deserializeBinaryFromReader(r, t);
+            (t.deserializeBinary = function (e) {
+              var r = new w.BinaryReader(e),
+                n = new t();
+              return t.deserializeBinaryFromReader(n, r);
             }),
-            (n.deserializeBinaryFromReader = function (e, t) {
-              return f.b(n.MBF(), e, t);
+            (t.deserializeBinaryFromReader = function (e, r) {
+              return h.b(t.MBF(), e, r);
             }),
-            (n.prototype.serializeBinary = function () {
-              var e = new d.BinaryWriter();
-              return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            (t.prototype.serializeBinary = function () {
+              var e = new w.BinaryWriter();
+              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (n.serializeBinaryToWriter = function (e, t) {
-              f.f(n.M(), e, t);
+            (t.serializeBinaryToWriter = function (e, r) {
+              h.f(t.M(), e, r);
             }),
-            (n.prototype.getClassName = function () {
+            (t.prototype.getClassName = function () {
               return "CLoyaltyRewards_AddReaction_Request";
             }),
-            n
+            t
           );
-        })(b),
-        F = (function (r) {
-          function n(e) {
-            void 0 === e && (e = null);
-            var t = r.call(this) || this;
-            return b.initialize(t, e, 0, -1, void 0, null), t;
+        })(_),
+        S = (function (e) {
+          function t(t) {
+            void 0 === t && (t = null);
+            var r = e.call(this) || this;
+            return _.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
-            Object(s.d)(n, r),
-            (n.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), n.toObject(e, this);
+            Object(n.d)(t, e),
+            (t.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (n.toObject = function (e, t) {
+            (t.toObject = function (e, t) {
               return e ? { $jspbMessageInstance: t } : {};
             }),
-            (n.fromObject = function (e) {
-              return new n();
+            (t.fromObject = function (e) {
+              return new t();
             }),
-            (n.deserializeBinary = function (e) {
-              var t = new d.BinaryReader(e),
-                r = new n();
-              return n.deserializeBinaryFromReader(r, t);
+            (t.deserializeBinary = function (e) {
+              var r = new w.BinaryReader(e),
+                n = new t();
+              return t.deserializeBinaryFromReader(n, r);
             }),
-            (n.deserializeBinaryFromReader = function (e, t) {
+            (t.deserializeBinaryFromReader = function (e, t) {
               return e;
             }),
-            (n.prototype.serializeBinary = function () {
-              var e = new d.BinaryWriter();
-              return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            (t.prototype.serializeBinary = function () {
+              var e = new w.BinaryWriter();
+              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (n.serializeBinaryToWriter = function (e, t) {}),
-            (n.prototype.getClassName = function () {
+            (t.serializeBinaryToWriter = function (e, t) {}),
+            (t.prototype.getClassName = function () {
               return "CLoyaltyRewards_AddReaction_Response";
             }),
-            n
+            t
           );
-        })(b),
-        T = (function (r) {
-          function n(e) {
-            void 0 === e && (e = null);
-            var t = r.call(this) || this;
+        })(_),
+        L = (function (e) {
+          function t(r) {
+            void 0 === r && (r = null);
+            var n = e.call(this) || this;
             return (
-              n.prototype.target_type || f.a(n.M()),
-              b.initialize(t, e, 0, -1, void 0, null),
-              t
+              t.prototype.target_type || h.a(t.M()),
+              _.initialize(n, r, 0, -1, void 0, null),
+              n
             );
           }
           return (
-            Object(s.d)(n, r),
-            (n.M = function () {
+            Object(n.d)(t, e),
+            (t.M = function () {
               return (
-                n.sm_m ||
-                  (n.sm_m = {
-                    proto: n,
+                t.sm_m ||
+                  (t.sm_m = {
+                    proto: t,
                     fields: {
                       target_type: {
                         n: 1,
-                        br: f.d.readEnum,
-                        bw: f.h.writeEnum,
+                        br: h.d.readEnum,
+                        bw: h.h.writeEnum,
                       },
                       targetid: {
                         n: 2,
-                        br: f.d.readUint64String,
-                        bw: f.h.writeUint64String,
+                        br: h.d.readUint64String,
+                        bw: h.h.writeUint64String,
                       },
                     },
                   }),
-                n.sm_m
+                t.sm_m
               );
             }),
-            (n.MBF = function () {
-              return n.sm_mbf || (n.sm_mbf = f.e(n.M())), n.sm_mbf;
+            (t.MBF = function () {
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
-            (n.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), n.toObject(e, this);
+            (t.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (n.toObject = function (e, t) {
-              return f.g(n.M(), e, t);
+            (t.toObject = function (e, r) {
+              return h.g(t.M(), e, r);
             }),
-            (n.fromObject = function (e) {
-              return f.c(n.M(), e);
+            (t.fromObject = function (e) {
+              return h.c(t.M(), e);
             }),
-            (n.deserializeBinary = function (e) {
-              var t = new d.BinaryReader(e),
-                r = new n();
-              return n.deserializeBinaryFromReader(r, t);
+            (t.deserializeBinary = function (e) {
+              var r = new w.BinaryReader(e),
+                n = new t();
+              return t.deserializeBinaryFromReader(n, r);
             }),
-            (n.deserializeBinaryFromReader = function (e, t) {
-              return f.b(n.MBF(), e, t);
+            (t.deserializeBinaryFromReader = function (e, r) {
+              return h.b(t.MBF(), e, r);
             }),
-            (n.prototype.serializeBinary = function () {
-              var e = new d.BinaryWriter();
-              return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            (t.prototype.serializeBinary = function () {
+              var e = new w.BinaryWriter();
+              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (n.serializeBinaryToWriter = function (e, t) {
-              f.f(n.M(), e, t);
+            (t.serializeBinaryToWriter = function (e, r) {
+              h.f(t.M(), e, r);
             }),
-            (n.prototype.getClassName = function () {
+            (t.prototype.getClassName = function () {
               return "CLoyaltyRewards_GetReactions_Request";
             }),
-            n
+            t
           );
-        })(b),
-        A = (function (r) {
-          function n(e) {
-            void 0 === e && (e = null);
-            var t = r.call(this) || this;
+        })(_),
+        F = (function (e) {
+          function t(r) {
+            void 0 === r && (r = null);
+            var n = e.call(this) || this;
             return (
-              n.prototype.reactionids || f.a(n.M()),
-              b.initialize(t, e, 0, -1, [1], null),
-              t
+              t.prototype.reactionids || h.a(t.M()),
+              _.initialize(n, r, 0, -1, [1], null),
+              n
             );
           }
           return (
-            Object(s.d)(n, r),
-            (n.M = function () {
+            Object(n.d)(t, e),
+            (t.M = function () {
               return (
-                n.sm_m ||
-                  (n.sm_m = {
-                    proto: n,
+                t.sm_m ||
+                  (t.sm_m = {
+                    proto: t,
                     fields: {
                       reactionids: {
                         n: 1,
                         r: !0,
                         q: !0,
-                        br: f.d.readUint32,
-                        bw: f.h.writeRepeatedUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeRepeatedUint32,
                       },
                     },
                   }),
-                n.sm_m
+                t.sm_m
               );
             }),
-            (n.MBF = function () {
-              return n.sm_mbf || (n.sm_mbf = f.e(n.M())), n.sm_mbf;
+            (t.MBF = function () {
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
-            (n.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), n.toObject(e, this);
+            (t.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (n.toObject = function (e, t) {
-              return f.g(n.M(), e, t);
+            (t.toObject = function (e, r) {
+              return h.g(t.M(), e, r);
             }),
-            (n.fromObject = function (e) {
-              return f.c(n.M(), e);
+            (t.fromObject = function (e) {
+              return h.c(t.M(), e);
             }),
-            (n.deserializeBinary = function (e) {
-              var t = new d.BinaryReader(e),
-                r = new n();
-              return n.deserializeBinaryFromReader(r, t);
+            (t.deserializeBinary = function (e) {
+              var r = new w.BinaryReader(e),
+                n = new t();
+              return t.deserializeBinaryFromReader(n, r);
             }),
-            (n.deserializeBinaryFromReader = function (e, t) {
-              return f.b(n.MBF(), e, t);
+            (t.deserializeBinaryFromReader = function (e, r) {
+              return h.b(t.MBF(), e, r);
             }),
-            (n.prototype.serializeBinary = function () {
-              var e = new d.BinaryWriter();
-              return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            (t.prototype.serializeBinary = function () {
+              var e = new w.BinaryWriter();
+              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (n.serializeBinaryToWriter = function (e, t) {
-              f.f(n.M(), e, t);
+            (t.serializeBinaryToWriter = function (e, r) {
+              h.f(t.M(), e, r);
             }),
-            (n.prototype.getClassName = function () {
+            (t.prototype.getClassName = function () {
               return "CLoyaltyRewards_GetReactions_Response";
             }),
-            n
+            t
           );
-        })(b),
-        I = (function (r) {
-          function n(e) {
-            void 0 === e && (e = null);
-            var t = r.call(this) || this;
+        })(_),
+        T = (function (e) {
+          function t(r) {
+            void 0 === r && (r = null);
+            var n = e.call(this) || this;
             return (
-              n.prototype.total || f.a(n.M()),
-              b.initialize(t, e, 0, -1, [1, 2, 3, 4, 5, 6], null),
-              t
+              t.prototype.total || h.a(t.M()),
+              _.initialize(n, r, 0, -1, [1, 2, 3, 4, 5, 6], null),
+              n
             );
           }
           return (
-            Object(s.d)(n, r),
-            (n.M = function () {
+            Object(n.d)(t, e),
+            (t.M = function () {
               return (
-                n.sm_m ||
-                  (n.sm_m = {
-                    proto: n,
+                t.sm_m ||
+                  (t.sm_m = {
+                    proto: t,
                     fields: {
-                      total: { n: 1, c: N, r: !0, q: !0 },
-                      user_reviews: { n: 2, c: N, r: !0, q: !0 },
-                      ugc: { n: 3, c: N, r: !0, q: !0 },
-                      profile: { n: 4, c: N, r: !0, q: !0 },
-                      forum_topics: { n: 5, c: N, r: !0, q: !0 },
-                      comments: { n: 6, c: N, r: !0, q: !0 },
+                      total: { n: 1, c: A, r: !0, q: !0 },
+                      user_reviews: { n: 2, c: A, r: !0, q: !0 },
+                      ugc: { n: 3, c: A, r: !0, q: !0 },
+                      profile: { n: 4, c: A, r: !0, q: !0 },
+                      forum_topics: { n: 5, c: A, r: !0, q: !0 },
+                      comments: { n: 6, c: A, r: !0, q: !0 },
                       total_given: {
                         n: 7,
-                        br: f.d.readUint32,
-                        bw: f.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       total_received: {
                         n: 8,
-                        br: f.d.readUint32,
-                        bw: f.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       total_points_given: {
                         n: 9,
-                        br: f.d.readInt64String,
-                        bw: f.h.writeInt64String,
+                        br: h.d.readInt64String,
+                        bw: h.h.writeInt64String,
                       },
                       total_points_received: {
                         n: 10,
-                        br: f.d.readInt64String,
-                        bw: f.h.writeInt64String,
+                        br: h.d.readInt64String,
+                        bw: h.h.writeInt64String,
                       },
                     },
                   }),
-                n.sm_m
+                t.sm_m
               );
             }),
-            (n.MBF = function () {
-              return n.sm_mbf || (n.sm_mbf = f.e(n.M())), n.sm_mbf;
+            (t.MBF = function () {
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
-            (n.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), n.toObject(e, this);
+            (t.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (n.toObject = function (e, t) {
-              return f.g(n.M(), e, t);
+            (t.toObject = function (e, r) {
+              return h.g(t.M(), e, r);
             }),
-            (n.fromObject = function (e) {
-              return f.c(n.M(), e);
+            (t.fromObject = function (e) {
+              return h.c(t.M(), e);
             }),
-            (n.deserializeBinary = function (e) {
-              var t = new d.BinaryReader(e),
-                r = new n();
-              return n.deserializeBinaryFromReader(r, t);
+            (t.deserializeBinary = function (e) {
+              var r = new w.BinaryReader(e),
+                n = new t();
+              return t.deserializeBinaryFromReader(n, r);
             }),
-            (n.deserializeBinaryFromReader = function (e, t) {
-              return f.b(n.MBF(), e, t);
+            (t.deserializeBinaryFromReader = function (e, r) {
+              return h.b(t.MBF(), e, r);
             }),
-            (n.prototype.serializeBinary = function () {
-              var e = new d.BinaryWriter();
-              return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            (t.prototype.serializeBinary = function () {
+              var e = new w.BinaryWriter();
+              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (n.serializeBinaryToWriter = function (e, t) {
-              f.f(n.M(), e, t);
+            (t.serializeBinaryToWriter = function (e, r) {
+              h.f(t.M(), e, r);
             }),
-            (n.prototype.getClassName = function () {
+            (t.prototype.getClassName = function () {
               return "CLoyaltyRewards_GetReactionsSummaryForUser_Response";
             }),
-            n
+            t
           );
-        })(b),
-        N = (function (r) {
-          function n(e) {
-            void 0 === e && (e = null);
-            var t = r.call(this) || this;
+        })(_),
+        A = (function (e) {
+          function t(r) {
+            void 0 === r && (r = null);
+            var n = e.call(this) || this;
             return (
-              n.prototype.reactionid || f.a(n.M()),
-              b.initialize(t, e, 0, -1, void 0, null),
-              t
+              t.prototype.reactionid || h.a(t.M()),
+              _.initialize(n, r, 0, -1, void 0, null),
+              n
             );
           }
           return (
-            Object(s.d)(n, r),
-            (n.M = function () {
+            Object(n.d)(t, e),
+            (t.M = function () {
               return (
-                n.sm_m ||
-                  (n.sm_m = {
-                    proto: n,
+                t.sm_m ||
+                  (t.sm_m = {
+                    proto: t,
                     fields: {
-                      reactionid: { n: 1, br: f.d.readEnum, bw: f.h.writeEnum },
-                      given: { n: 2, br: f.d.readUint32, bw: f.h.writeUint32 },
+                      reactionid: { n: 1, br: h.d.readEnum, bw: h.h.writeEnum },
+                      given: { n: 2, br: h.d.readUint32, bw: h.h.writeUint32 },
                       received: {
                         n: 3,
-                        br: f.d.readUint32,
-                        bw: f.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       points_given: {
                         n: 4,
-                        br: f.d.readInt64String,
-                        bw: f.h.writeInt64String,
+                        br: h.d.readInt64String,
+                        bw: h.h.writeInt64String,
                       },
                       points_received: {
                         n: 5,
-                        br: f.d.readInt64String,
-                        bw: f.h.writeInt64String,
+                        br: h.d.readInt64String,
+                        bw: h.h.writeInt64String,
                       },
                     },
                   }),
-                n.sm_m
+                t.sm_m
               );
             }),
-            (n.MBF = function () {
-              return n.sm_mbf || (n.sm_mbf = f.e(n.M())), n.sm_mbf;
+            (t.MBF = function () {
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
-            (n.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), n.toObject(e, this);
+            (t.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (n.toObject = function (e, t) {
-              return f.g(n.M(), e, t);
+            (t.toObject = function (e, r) {
+              return h.g(t.M(), e, r);
             }),
-            (n.fromObject = function (e) {
-              return f.c(n.M(), e);
+            (t.fromObject = function (e) {
+              return h.c(t.M(), e);
             }),
-            (n.deserializeBinary = function (e) {
-              var t = new d.BinaryReader(e),
-                r = new n();
-              return n.deserializeBinaryFromReader(r, t);
+            (t.deserializeBinary = function (e) {
+              var r = new w.BinaryReader(e),
+                n = new t();
+              return t.deserializeBinaryFromReader(n, r);
             }),
-            (n.deserializeBinaryFromReader = function (e, t) {
-              return f.b(n.MBF(), e, t);
+            (t.deserializeBinaryFromReader = function (e, r) {
+              return h.b(t.MBF(), e, r);
             }),
-            (n.prototype.serializeBinary = function () {
-              var e = new d.BinaryWriter();
-              return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            (t.prototype.serializeBinary = function () {
+              var e = new w.BinaryWriter();
+              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (n.serializeBinaryToWriter = function (e, t) {
-              f.f(n.M(), e, t);
+            (t.serializeBinaryToWriter = function (e, r) {
+              h.f(t.M(), e, r);
             }),
-            (n.prototype.getClassName = function () {
+            (t.prototype.getClassName = function () {
               return "CLoyaltyRewards_GetReactionsSummaryForUser_Response_Breakdown";
             }),
-            n
+            t
           );
-        })(b),
-        G = (function (r) {
-          function n(e) {
-            void 0 === e && (e = null);
-            var t = r.call(this) || this;
-            return b.initialize(t, e, 0, -1, void 0, null), t;
+        })(_),
+        I = (function (e) {
+          function t(t) {
+            void 0 === t && (t = null);
+            var r = e.call(this) || this;
+            return _.initialize(r, t, 0, -1, void 0, null), r;
           }
           return (
-            Object(s.d)(n, r),
-            (n.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), n.toObject(e, this);
+            Object(n.d)(t, e),
+            (t.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (n.toObject = function (e, t) {
+            (t.toObject = function (e, t) {
               return e ? { $jspbMessageInstance: t } : {};
             }),
-            (n.fromObject = function (e) {
-              return new n();
+            (t.fromObject = function (e) {
+              return new t();
             }),
-            (n.deserializeBinary = function (e) {
-              var t = new d.BinaryReader(e),
-                r = new n();
-              return n.deserializeBinaryFromReader(r, t);
+            (t.deserializeBinary = function (e) {
+              var r = new w.BinaryReader(e),
+                n = new t();
+              return t.deserializeBinaryFromReader(n, r);
             }),
-            (n.deserializeBinaryFromReader = function (e, t) {
+            (t.deserializeBinaryFromReader = function (e, t) {
               return e;
             }),
-            (n.prototype.serializeBinary = function () {
-              var e = new d.BinaryWriter();
-              return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            (t.prototype.serializeBinary = function () {
+              var e = new w.BinaryWriter();
+              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (n.serializeBinaryToWriter = function (e, t) {}),
-            (n.prototype.getClassName = function () {
+            (t.serializeBinaryToWriter = function (e, t) {}),
+            (t.prototype.getClassName = function () {
               return "CLoyaltyRewards_GetReactionConfig_Request";
             }),
-            n
+            t
           );
-        })(b),
-        P = (function (r) {
-          function n(e) {
-            void 0 === e && (e = null);
-            var t = r.call(this) || this;
+        })(_),
+        N = (function (e) {
+          function t(r) {
+            void 0 === r && (r = null);
+            var n = e.call(this) || this;
             return (
-              n.prototype.reactions || f.a(n.M()),
-              b.initialize(t, e, 0, -1, [3], null),
-              t
+              t.prototype.reactions || h.a(t.M()),
+              _.initialize(n, r, 0, -1, [3], null),
+              n
             );
           }
           return (
-            Object(s.d)(n, r),
-            (n.M = function () {
+            Object(n.d)(t, e),
+            (t.M = function () {
               return (
-                n.sm_m ||
-                  (n.sm_m = {
-                    proto: n,
-                    fields: { reactions: { n: 3, c: U, r: !0, q: !0 } },
+                t.sm_m ||
+                  (t.sm_m = {
+                    proto: t,
+                    fields: { reactions: { n: 3, c: G, r: !0, q: !0 } },
                   }),
-                n.sm_m
+                t.sm_m
               );
             }),
-            (n.MBF = function () {
-              return n.sm_mbf || (n.sm_mbf = f.e(n.M())), n.sm_mbf;
+            (t.MBF = function () {
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
-            (n.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), n.toObject(e, this);
+            (t.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (n.toObject = function (e, t) {
-              return f.g(n.M(), e, t);
+            (t.toObject = function (e, r) {
+              return h.g(t.M(), e, r);
             }),
-            (n.fromObject = function (e) {
-              return f.c(n.M(), e);
+            (t.fromObject = function (e) {
+              return h.c(t.M(), e);
             }),
-            (n.deserializeBinary = function (e) {
-              var t = new d.BinaryReader(e),
-                r = new n();
-              return n.deserializeBinaryFromReader(r, t);
+            (t.deserializeBinary = function (e) {
+              var r = new w.BinaryReader(e),
+                n = new t();
+              return t.deserializeBinaryFromReader(n, r);
             }),
-            (n.deserializeBinaryFromReader = function (e, t) {
-              return f.b(n.MBF(), e, t);
+            (t.deserializeBinaryFromReader = function (e, r) {
+              return h.b(t.MBF(), e, r);
             }),
-            (n.prototype.serializeBinary = function () {
-              var e = new d.BinaryWriter();
-              return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            (t.prototype.serializeBinary = function () {
+              var e = new w.BinaryWriter();
+              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (n.serializeBinaryToWriter = function (e, t) {
-              f.f(n.M(), e, t);
+            (t.serializeBinaryToWriter = function (e, r) {
+              h.f(t.M(), e, r);
             }),
-            (n.prototype.getClassName = function () {
+            (t.prototype.getClassName = function () {
               return "CLoyaltyRewards_GetReactionConfig_Response";
             }),
-            n
+            t
           );
-        })(b),
-        U = (function (r) {
-          function n(e) {
-            void 0 === e && (e = null);
-            var t = r.call(this) || this;
+        })(_),
+        G = (function (e) {
+          function t(r) {
+            void 0 === r && (r = null);
+            var n = e.call(this) || this;
             return (
-              n.prototype.reactionid || f.a(n.M()),
-              b.initialize(t, e, 0, -1, [4, 5], null),
-              t
+              t.prototype.reactionid || h.a(t.M()),
+              _.initialize(n, r, 0, -1, [4, 5], null),
+              n
             );
           }
           return (
-            Object(s.d)(n, r),
-            (n.M = function () {
+            Object(n.d)(t, e),
+            (t.M = function () {
               return (
-                n.sm_m ||
-                  (n.sm_m = {
-                    proto: n,
+                t.sm_m ||
+                  (t.sm_m = {
+                    proto: t,
                     fields: {
-                      reactionid: { n: 1, br: f.d.readEnum, bw: f.h.writeEnum },
+                      reactionid: { n: 1, br: h.d.readEnum, bw: h.h.writeEnum },
                       points_cost: {
                         n: 2,
-                        br: f.d.readUint32,
-                        bw: f.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       points_transferred: {
                         n: 3,
-                        br: f.d.readUint32,
-                        bw: f.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       valid_target_types: {
                         n: 4,
                         r: !0,
                         q: !0,
-                        br: f.d.readEnum,
-                        bw: f.h.writeRepeatedEnum,
+                        br: h.d.readEnum,
+                        bw: h.h.writeRepeatedEnum,
                       },
                       valid_ugc_types: {
                         n: 5,
                         r: !0,
                         q: !0,
-                        br: f.d.readUint32,
-                        bw: f.h.writeRepeatedUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeRepeatedUint32,
                       },
                     },
                   }),
-                n.sm_m
+                t.sm_m
               );
             }),
-            (n.MBF = function () {
-              return n.sm_mbf || (n.sm_mbf = f.e(n.M())), n.sm_mbf;
+            (t.MBF = function () {
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
-            (n.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), n.toObject(e, this);
+            (t.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (n.toObject = function (e, t) {
-              return f.g(n.M(), e, t);
+            (t.toObject = function (e, r) {
+              return h.g(t.M(), e, r);
             }),
-            (n.fromObject = function (e) {
-              return f.c(n.M(), e);
+            (t.fromObject = function (e) {
+              return h.c(t.M(), e);
             }),
-            (n.deserializeBinary = function (e) {
-              var t = new d.BinaryReader(e),
-                r = new n();
-              return n.deserializeBinaryFromReader(r, t);
+            (t.deserializeBinary = function (e) {
+              var r = new w.BinaryReader(e),
+                n = new t();
+              return t.deserializeBinaryFromReader(n, r);
             }),
-            (n.deserializeBinaryFromReader = function (e, t) {
-              return f.b(n.MBF(), e, t);
+            (t.deserializeBinaryFromReader = function (e, r) {
+              return h.b(t.MBF(), e, r);
             }),
-            (n.prototype.serializeBinary = function () {
-              var e = new d.BinaryWriter();
-              return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            (t.prototype.serializeBinary = function () {
+              var e = new w.BinaryWriter();
+              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (n.serializeBinaryToWriter = function (e, t) {
-              f.f(n.M(), e, t);
+            (t.serializeBinaryToWriter = function (e, r) {
+              h.f(t.M(), e, r);
             }),
-            (n.prototype.getClassName = function () {
+            (t.prototype.getClassName = function () {
               return "CLoyaltyRewards_GetReactionConfig_Response_ReactionConfig";
             }),
-            n
+            t
           );
-        })(b),
-        W = (function (r) {
-          function n(e) {
-            void 0 === e && (e = null);
-            var t = r.call(this) || this;
+        })(_),
+        P = (function (e) {
+          function t(r) {
+            void 0 === r && (r = null);
+            var n = e.call(this) || this;
             return (
-              n.prototype.points_cost || f.a(n.M()),
-              b.initialize(t, e, 0, -1, [3, 4], null),
-              t
+              t.prototype.points_cost || h.a(t.M()),
+              _.initialize(n, r, 0, -1, [3, 4], null),
+              n
             );
           }
           return (
-            Object(s.d)(n, r),
-            (n.M = function () {
+            Object(n.d)(t, e),
+            (t.M = function () {
               return (
-                n.sm_m ||
-                  (n.sm_m = {
-                    proto: n,
+                t.sm_m ||
+                  (t.sm_m = {
+                    proto: t,
                     fields: {
                       points_cost: {
                         n: 1,
-                        br: f.d.readUint32,
-                        bw: f.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       upgrade_points_cost: {
                         n: 2,
-                        br: f.d.readUint32,
-                        bw: f.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       purchasable_customization_types: {
                         n: 3,
                         r: !0,
                         q: !0,
-                        br: f.d.readEnum,
-                        bw: f.h.writeRepeatedEnum,
+                        br: h.d.readEnum,
+                        bw: h.h.writeRepeatedEnum,
                       },
                       upgradable_customization_types: {
                         n: 4,
                         r: !0,
                         q: !0,
-                        br: f.d.readEnum,
-                        bw: f.h.writeRepeatedEnum,
+                        br: h.d.readEnum,
+                        bw: h.h.writeRepeatedEnum,
                       },
                       max_slots_per_type: {
                         n: 5,
-                        br: f.d.readUint32,
-                        bw: f.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       max_upgradable_level: {
                         n: 6,
-                        br: f.d.readUint32,
-                        bw: f.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                     },
                   }),
-                n.sm_m
+                t.sm_m
               );
             }),
-            (n.MBF = function () {
-              return n.sm_mbf || (n.sm_mbf = f.e(n.M())), n.sm_mbf;
+            (t.MBF = function () {
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
-            (n.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), n.toObject(e, this);
+            (t.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (n.toObject = function (e, t) {
-              return f.g(n.M(), e, t);
+            (t.toObject = function (e, r) {
+              return h.g(t.M(), e, r);
             }),
-            (n.fromObject = function (e) {
-              return f.c(n.M(), e);
+            (t.fromObject = function (e) {
+              return h.c(t.M(), e);
             }),
-            (n.deserializeBinary = function (e) {
-              var t = new d.BinaryReader(e),
-                r = new n();
-              return n.deserializeBinaryFromReader(r, t);
+            (t.deserializeBinary = function (e) {
+              var r = new w.BinaryReader(e),
+                n = new t();
+              return t.deserializeBinaryFromReader(n, r);
             }),
-            (n.deserializeBinaryFromReader = function (e, t) {
-              return f.b(n.MBF(), e, t);
+            (t.deserializeBinaryFromReader = function (e, r) {
+              return h.b(t.MBF(), e, r);
             }),
-            (n.prototype.serializeBinary = function () {
-              var e = new d.BinaryWriter();
-              return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            (t.prototype.serializeBinary = function () {
+              var e = new w.BinaryWriter();
+              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (n.serializeBinaryToWriter = function (e, t) {
-              f.f(n.M(), e, t);
+            (t.serializeBinaryToWriter = function (e, r) {
+              h.f(t.M(), e, r);
             }),
-            (n.prototype.getClassName = function () {
+            (t.prototype.getClassName = function () {
               return "CLoyaltyRewards_GetProfileCustomizationsConfig_Response";
             }),
-            n
+            t
           );
-        })(b),
-        x = (function (r) {
-          function n(e) {
-            void 0 === e && (e = null);
-            var t = r.call(this) || this;
+        })(_),
+        U = (function (e) {
+          function t(r) {
+            void 0 === r && (r = null);
+            var n = e.call(this) || this;
             return (
-              n.prototype.apps || f.a(n.M()),
-              b.initialize(t, e, 0, -1, [1], null),
-              t
+              t.prototype.apps || h.a(t.M()),
+              _.initialize(n, r, 0, -1, [1], null),
+              n
             );
           }
           return (
-            Object(s.d)(n, r),
-            (n.M = function () {
+            Object(n.d)(t, e),
+            (t.M = function () {
               return (
-                n.sm_m ||
-                  (n.sm_m = {
-                    proto: n,
-                    fields: { apps: { n: 1, c: k, r: !0, q: !0 } },
+                t.sm_m ||
+                  (t.sm_m = {
+                    proto: t,
+                    fields: { apps: { n: 1, c: W, r: !0, q: !0 } },
                   }),
-                n.sm_m
+                t.sm_m
               );
             }),
-            (n.MBF = function () {
-              return n.sm_mbf || (n.sm_mbf = f.e(n.M())), n.sm_mbf;
+            (t.MBF = function () {
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
-            (n.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), n.toObject(e, this);
+            (t.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (n.toObject = function (e, t) {
-              return f.g(n.M(), e, t);
+            (t.toObject = function (e, r) {
+              return h.g(t.M(), e, r);
             }),
-            (n.fromObject = function (e) {
-              return f.c(n.M(), e);
+            (t.fromObject = function (e) {
+              return h.c(t.M(), e);
             }),
-            (n.deserializeBinary = function (e) {
-              var t = new d.BinaryReader(e),
-                r = new n();
-              return n.deserializeBinaryFromReader(r, t);
+            (t.deserializeBinary = function (e) {
+              var r = new w.BinaryReader(e),
+                n = new t();
+              return t.deserializeBinaryFromReader(n, r);
             }),
-            (n.deserializeBinaryFromReader = function (e, t) {
-              return f.b(n.MBF(), e, t);
+            (t.deserializeBinaryFromReader = function (e, r) {
+              return h.b(t.MBF(), e, r);
             }),
-            (n.prototype.serializeBinary = function () {
-              var e = new d.BinaryWriter();
-              return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            (t.prototype.serializeBinary = function () {
+              var e = new w.BinaryWriter();
+              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (n.serializeBinaryToWriter = function (e, t) {
-              f.f(n.M(), e, t);
+            (t.serializeBinaryToWriter = function (e, r) {
+              h.f(t.M(), e, r);
             }),
-            (n.prototype.getClassName = function () {
+            (t.prototype.getClassName = function () {
               return "CLoyaltyRewards_GetEligibleApps_Response";
             }),
-            n
+            t
           );
-        })(b),
-        k = (function (r) {
-          function n(e) {
-            void 0 === e && (e = null);
-            var t = r.call(this) || this;
+        })(_),
+        W = (function (e) {
+          function t(r) {
+            void 0 === r && (r = null);
+            var n = e.call(this) || this;
             return (
-              n.prototype.appid || f.a(n.M()),
-              b.initialize(t, e, 0, -1, void 0, null),
-              t
+              t.prototype.appid || h.a(t.M()),
+              _.initialize(n, r, 0, -1, void 0, null),
+              n
             );
           }
           return (
-            Object(s.d)(n, r),
-            (n.M = function () {
+            Object(n.d)(t, e),
+            (t.M = function () {
               return (
-                n.sm_m ||
-                  (n.sm_m = {
-                    proto: n,
+                t.sm_m ||
+                  (t.sm_m = {
+                    proto: t,
                     fields: {
-                      appid: { n: 1, br: f.d.readUint32, bw: f.h.writeUint32 },
+                      appid: { n: 1, br: h.d.readUint32, bw: h.h.writeUint32 },
                       has_items_anyone_can_purchase: {
                         n: 2,
-                        br: f.d.readBool,
-                        bw: f.h.writeBool,
+                        br: h.d.readBool,
+                        bw: h.h.writeBool,
                       },
-                      event_app: { n: 3, br: f.d.readBool, bw: f.h.writeBool },
+                      event_app: { n: 3, br: h.d.readBool, bw: h.h.writeBool },
                       hero_carousel_image: {
                         n: 4,
-                        br: f.d.readString,
-                        bw: f.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                     },
                   }),
-                n.sm_m
+                t.sm_m
               );
             }),
-            (n.MBF = function () {
-              return n.sm_mbf || (n.sm_mbf = f.e(n.M())), n.sm_mbf;
+            (t.MBF = function () {
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
-            (n.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), n.toObject(e, this);
+            (t.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (n.toObject = function (e, t) {
-              return f.g(n.M(), e, t);
+            (t.toObject = function (e, r) {
+              return h.g(t.M(), e, r);
             }),
-            (n.fromObject = function (e) {
-              return f.c(n.M(), e);
+            (t.fromObject = function (e) {
+              return h.c(t.M(), e);
             }),
-            (n.deserializeBinary = function (e) {
-              var t = new d.BinaryReader(e),
-                r = new n();
-              return n.deserializeBinaryFromReader(r, t);
+            (t.deserializeBinary = function (e) {
+              var r = new w.BinaryReader(e),
+                n = new t();
+              return t.deserializeBinaryFromReader(n, r);
             }),
-            (n.deserializeBinaryFromReader = function (e, t) {
-              return f.b(n.MBF(), e, t);
+            (t.deserializeBinaryFromReader = function (e, r) {
+              return h.b(t.MBF(), e, r);
             }),
-            (n.prototype.serializeBinary = function () {
-              var e = new d.BinaryWriter();
-              return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            (t.prototype.serializeBinary = function () {
+              var e = new w.BinaryWriter();
+              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (n.serializeBinaryToWriter = function (e, t) {
-              f.f(n.M(), e, t);
+            (t.serializeBinaryToWriter = function (e, r) {
+              h.f(t.M(), e, r);
             }),
-            (n.prototype.getClassName = function () {
+            (t.prototype.getClassName = function () {
               return "CLoyaltyRewards_GetEligibleApps_Response_EligibleApp";
             }),
-            n
+            t
           );
-        })(b),
-        D = (function (r) {
-          function n(e) {
-            void 0 === e && (e = null);
-            var t = r.call(this) || this;
+        })(_),
+        x = (function (e) {
+          function t(r) {
+            void 0 === r && (r = null);
+            var n = e.call(this) || this;
             return (
-              n.prototype.appid || f.a(n.M()),
-              b.initialize(t, e, 0, -1, [15], null),
-              t
+              t.prototype.appid || h.a(t.M()),
+              _.initialize(n, r, 0, -1, [15], null),
+              n
             );
           }
           return (
-            Object(s.d)(n, r),
-            (n.M = function () {
+            Object(n.d)(t, e),
+            (t.M = function () {
               return (
-                n.sm_m ||
-                  (n.sm_m = {
-                    proto: n,
+                t.sm_m ||
+                  (t.sm_m = {
+                    proto: t,
                     fields: {
-                      appid: { n: 1, br: f.d.readUint32, bw: f.h.writeUint32 },
-                      defid: { n: 2, br: f.d.readUint32, bw: f.h.writeUint32 },
-                      type: { n: 3, br: f.d.readEnum, bw: f.h.writeEnum },
+                      appid: { n: 1, br: h.d.readUint32, bw: h.h.writeUint32 },
+                      defid: { n: 2, br: h.d.readUint32, bw: h.h.writeUint32 },
+                      type: { n: 3, br: h.d.readEnum, bw: h.h.writeEnum },
                       community_item_class: {
                         n: 4,
-                        br: f.d.readInt32,
-                        bw: f.h.writeInt32,
+                        br: h.d.readInt32,
+                        bw: h.h.writeInt32,
                       },
                       community_item_type: {
                         n: 5,
-                        br: f.d.readUint32,
-                        bw: f.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       point_cost: {
                         n: 6,
-                        br: f.d.readInt64String,
-                        bw: f.h.writeInt64String,
+                        br: h.d.readInt64String,
+                        bw: h.h.writeInt64String,
                       },
                       timestamp_created: {
                         n: 7,
-                        br: f.d.readUint32,
-                        bw: f.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       timestamp_updated: {
                         n: 8,
-                        br: f.d.readUint32,
-                        bw: f.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       timestamp_available: {
                         n: 9,
-                        br: f.d.readUint32,
-                        bw: f.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       timestamp_available_end: {
                         n: 14,
-                        br: f.d.readUint32,
-                        bw: f.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       quantity: {
                         n: 10,
-                        br: f.d.readInt64String,
-                        bw: f.h.writeInt64String,
+                        br: h.d.readInt64String,
+                        bw: h.h.writeInt64String,
                       },
                       internal_description: {
                         n: 11,
-                        br: f.d.readString,
-                        bw: f.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
-                      active: { n: 12, br: f.d.readBool, bw: f.h.writeBool },
-                      community_item_data: { n: 13, c: q },
+                      active: { n: 12, br: h.d.readBool, bw: h.h.writeBool },
+                      community_item_data: { n: 13, c: k },
                       bundle_defids: {
                         n: 15,
                         r: !0,
                         q: !0,
-                        br: f.d.readUint32,
-                        bw: f.h.writeRepeatedUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeRepeatedUint32,
                       },
                       usable_duration: {
                         n: 16,
-                        br: f.d.readUint32,
-                        bw: f.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       bundle_discount: {
                         n: 17,
-                        br: f.d.readUint32,
-                        bw: f.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                     },
                   }),
-                n.sm_m
+                t.sm_m
               );
             }),
-            (n.MBF = function () {
-              return n.sm_mbf || (n.sm_mbf = f.e(n.M())), n.sm_mbf;
+            (t.MBF = function () {
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
-            (n.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), n.toObject(e, this);
+            (t.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (n.toObject = function (e, t) {
-              return f.g(n.M(), e, t);
+            (t.toObject = function (e, r) {
+              return h.g(t.M(), e, r);
             }),
-            (n.fromObject = function (e) {
-              return f.c(n.M(), e);
+            (t.fromObject = function (e) {
+              return h.c(t.M(), e);
             }),
-            (n.deserializeBinary = function (e) {
-              var t = new d.BinaryReader(e),
-                r = new n();
-              return n.deserializeBinaryFromReader(r, t);
+            (t.deserializeBinary = function (e) {
+              var r = new w.BinaryReader(e),
+                n = new t();
+              return t.deserializeBinaryFromReader(n, r);
             }),
-            (n.deserializeBinaryFromReader = function (e, t) {
-              return f.b(n.MBF(), e, t);
+            (t.deserializeBinaryFromReader = function (e, r) {
+              return h.b(t.MBF(), e, r);
             }),
-            (n.prototype.serializeBinary = function () {
-              var e = new d.BinaryWriter();
-              return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            (t.prototype.serializeBinary = function () {
+              var e = new w.BinaryWriter();
+              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (n.serializeBinaryToWriter = function (e, t) {
-              f.f(n.M(), e, t);
+            (t.serializeBinaryToWriter = function (e, r) {
+              h.f(t.M(), e, r);
             }),
-            (n.prototype.getClassName = function () {
+            (t.prototype.getClassName = function () {
               return "LoyaltyRewardDefinition";
             }),
-            n
+            t
           );
-        })(b),
-        q = (function (r) {
-          function n(e) {
-            void 0 === e && (e = null);
-            var t = r.call(this) || this;
+        })(_),
+        k = (function (e) {
+          function t(r) {
+            void 0 === r && (r = null);
+            var n = e.call(this) || this;
             return (
-              n.prototype.item_name || f.a(n.M()),
-              b.initialize(t, e, 0, -1, [9], null),
-              t
+              t.prototype.item_name || h.a(t.M()),
+              _.initialize(n, r, 0, -1, [9], null),
+              n
             );
           }
           return (
-            Object(s.d)(n, r),
-            (n.M = function () {
+            Object(n.d)(t, e),
+            (t.M = function () {
               return (
-                n.sm_m ||
-                  (n.sm_m = {
-                    proto: n,
+                t.sm_m ||
+                  (t.sm_m = {
+                    proto: t,
                     fields: {
                       item_name: {
                         n: 1,
-                        br: f.d.readString,
-                        bw: f.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       item_title: {
                         n: 2,
-                        br: f.d.readString,
-                        bw: f.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       item_description: {
                         n: 3,
-                        br: f.d.readString,
-                        bw: f.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       item_image_small: {
                         n: 4,
-                        br: f.d.readString,
-                        bw: f.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       item_image_large: {
                         n: 5,
-                        br: f.d.readString,
-                        bw: f.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       item_movie_webm: {
                         n: 6,
-                        br: f.d.readString,
-                        bw: f.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       item_movie_mp4: {
                         n: 7,
-                        br: f.d.readString,
-                        bw: f.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       item_movie_webm_small: {
                         n: 10,
-                        br: f.d.readString,
-                        bw: f.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                       item_movie_mp4_small: {
                         n: 11,
-                        br: f.d.readString,
-                        bw: f.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
-                      animated: { n: 8, br: f.d.readBool, bw: f.h.writeBool },
-                      badge_data: { n: 9, c: Z, r: !0, q: !0 },
+                      animated: { n: 8, br: h.d.readBool, bw: h.h.writeBool },
+                      badge_data: { n: 9, c: D, r: !0, q: !0 },
                     },
                   }),
-                n.sm_m
+                t.sm_m
               );
             }),
-            (n.MBF = function () {
-              return n.sm_mbf || (n.sm_mbf = f.e(n.M())), n.sm_mbf;
+            (t.MBF = function () {
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
-            (n.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), n.toObject(e, this);
+            (t.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (n.toObject = function (e, t) {
-              return f.g(n.M(), e, t);
+            (t.toObject = function (e, r) {
+              return h.g(t.M(), e, r);
             }),
-            (n.fromObject = function (e) {
-              return f.c(n.M(), e);
+            (t.fromObject = function (e) {
+              return h.c(t.M(), e);
             }),
-            (n.deserializeBinary = function (e) {
-              var t = new d.BinaryReader(e),
-                r = new n();
-              return n.deserializeBinaryFromReader(r, t);
+            (t.deserializeBinary = function (e) {
+              var r = new w.BinaryReader(e),
+                n = new t();
+              return t.deserializeBinaryFromReader(n, r);
             }),
-            (n.deserializeBinaryFromReader = function (e, t) {
-              return f.b(n.MBF(), e, t);
+            (t.deserializeBinaryFromReader = function (e, r) {
+              return h.b(t.MBF(), e, r);
             }),
-            (n.prototype.serializeBinary = function () {
-              var e = new d.BinaryWriter();
-              return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            (t.prototype.serializeBinary = function () {
+              var e = new w.BinaryWriter();
+              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (n.serializeBinaryToWriter = function (e, t) {
-              f.f(n.M(), e, t);
+            (t.serializeBinaryToWriter = function (e, r) {
+              h.f(t.M(), e, r);
             }),
-            (n.prototype.getClassName = function () {
+            (t.prototype.getClassName = function () {
               return "LoyaltyRewardDefinition_CommunityItemData";
             }),
-            n
+            t
           );
-        })(b),
-        Z = (function (r) {
-          function n(e) {
-            void 0 === e && (e = null);
-            var t = r.call(this) || this;
+        })(_),
+        D = (function (e) {
+          function t(r) {
+            void 0 === r && (r = null);
+            var n = e.call(this) || this;
             return (
-              n.prototype.level || f.a(n.M()),
-              b.initialize(t, e, 0, -1, void 0, null),
-              t
+              t.prototype.level || h.a(t.M()),
+              _.initialize(n, r, 0, -1, void 0, null),
+              n
             );
           }
           return (
-            Object(s.d)(n, r),
-            (n.M = function () {
+            Object(n.d)(t, e),
+            (t.M = function () {
               return (
-                n.sm_m ||
-                  (n.sm_m = {
-                    proto: n,
+                t.sm_m ||
+                  (t.sm_m = {
+                    proto: t,
                     fields: {
-                      level: { n: 1, br: f.d.readInt32, bw: f.h.writeInt32 },
-                      image: { n: 2, br: f.d.readString, bw: f.h.writeString },
+                      level: { n: 1, br: h.d.readInt32, bw: h.h.writeInt32 },
+                      image: { n: 2, br: h.d.readString, bw: h.h.writeString },
                     },
                   }),
-                n.sm_m
+                t.sm_m
               );
             }),
-            (n.MBF = function () {
-              return n.sm_mbf || (n.sm_mbf = f.e(n.M())), n.sm_mbf;
+            (t.MBF = function () {
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
-            (n.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), n.toObject(e, this);
+            (t.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (n.toObject = function (e, t) {
-              return f.g(n.M(), e, t);
+            (t.toObject = function (e, r) {
+              return h.g(t.M(), e, r);
             }),
-            (n.fromObject = function (e) {
-              return f.c(n.M(), e);
+            (t.fromObject = function (e) {
+              return h.c(t.M(), e);
             }),
-            (n.deserializeBinary = function (e) {
-              var t = new d.BinaryReader(e),
-                r = new n();
-              return n.deserializeBinaryFromReader(r, t);
+            (t.deserializeBinary = function (e) {
+              var r = new w.BinaryReader(e),
+                n = new t();
+              return t.deserializeBinaryFromReader(n, r);
             }),
-            (n.deserializeBinaryFromReader = function (e, t) {
-              return f.b(n.MBF(), e, t);
+            (t.deserializeBinaryFromReader = function (e, r) {
+              return h.b(t.MBF(), e, r);
             }),
-            (n.prototype.serializeBinary = function () {
-              var e = new d.BinaryWriter();
-              return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            (t.prototype.serializeBinary = function () {
+              var e = new w.BinaryWriter();
+              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (n.serializeBinaryToWriter = function (e, t) {
-              f.f(n.M(), e, t);
+            (t.serializeBinaryToWriter = function (e, r) {
+              h.f(t.M(), e, r);
             }),
-            (n.prototype.getClassName = function () {
+            (t.prototype.getClassName = function () {
               return "LoyaltyRewardDefinition_BadgeData";
             }),
-            n
+            t
           );
-        })(b),
-        H = (function (r) {
-          function n(e) {
-            void 0 === e && (e = null);
-            var t = r.call(this) || this;
+        })(_),
+        q = (function (e) {
+          function t(r) {
+            void 0 === r && (r = null);
+            var n = e.call(this) || this;
             return (
-              n.prototype.bonusid || f.a(n.M()),
-              b.initialize(t, e, 0, -1, void 0, null),
-              t
+              t.prototype.bonusid || h.a(t.M()),
+              _.initialize(n, r, 0, -1, void 0, null),
+              n
             );
           }
           return (
-            Object(s.d)(n, r),
-            (n.M = function () {
+            Object(n.d)(t, e),
+            (t.M = function () {
               return (
-                n.sm_m ||
-                  (n.sm_m = {
-                    proto: n,
+                t.sm_m ||
+                  (t.sm_m = {
+                    proto: t,
                     fields: {
                       bonusid: {
                         n: 1,
-                        br: f.d.readUint64String,
-                        bw: f.h.writeUint64String,
+                        br: h.d.readUint64String,
+                        bw: h.h.writeUint64String,
                       },
-                      appid: { n: 2, br: f.d.readUint32, bw: f.h.writeUint32 },
-                      active: { n: 3, br: f.d.readBool, bw: f.h.writeBool },
-                      points: { n: 4, br: f.d.readInt32, bw: f.h.writeInt32 },
+                      appid: { n: 2, br: h.d.readUint32, bw: h.h.writeUint32 },
+                      active: { n: 3, br: h.d.readBool, bw: h.h.writeBool },
+                      points: { n: 4, br: h.d.readInt32, bw: h.h.writeInt32 },
                       timestamp_start: {
                         n: 5,
-                        br: f.d.readUint32,
-                        bw: f.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       timestamp_end: {
                         n: 6,
-                        br: f.d.readUint32,
-                        bw: f.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
                       internal_description: {
                         n: 7,
-                        br: f.d.readString,
-                        bw: f.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                     },
                   }),
-                n.sm_m
+                t.sm_m
               );
             }),
-            (n.MBF = function () {
-              return n.sm_mbf || (n.sm_mbf = f.e(n.M())), n.sm_mbf;
+            (t.MBF = function () {
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
-            (n.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), n.toObject(e, this);
+            (t.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (n.toObject = function (e, t) {
-              return f.g(n.M(), e, t);
+            (t.toObject = function (e, r) {
+              return h.g(t.M(), e, r);
             }),
-            (n.fromObject = function (e) {
-              return f.c(n.M(), e);
+            (t.fromObject = function (e) {
+              return h.c(t.M(), e);
             }),
-            (n.deserializeBinary = function (e) {
-              var t = new d.BinaryReader(e),
-                r = new n();
-              return n.deserializeBinaryFromReader(r, t);
+            (t.deserializeBinary = function (e) {
+              var r = new w.BinaryReader(e),
+                n = new t();
+              return t.deserializeBinaryFromReader(n, r);
             }),
-            (n.deserializeBinaryFromReader = function (e, t) {
-              return f.b(n.MBF(), e, t);
+            (t.deserializeBinaryFromReader = function (e, r) {
+              return h.b(t.MBF(), e, r);
             }),
-            (n.prototype.serializeBinary = function () {
-              var e = new d.BinaryWriter();
-              return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            (t.prototype.serializeBinary = function () {
+              var e = new w.BinaryWriter();
+              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (n.serializeBinaryToWriter = function (e, t) {
-              f.f(n.M(), e, t);
+            (t.serializeBinaryToWriter = function (e, r) {
+              h.f(t.M(), e, r);
             }),
-            (n.prototype.getClassName = function () {
+            (t.prototype.getClassName = function () {
               return "LoyaltyRewardPurchaseBonus";
             }),
-            n
+            t
           );
-        })(b),
-        Q = (function (r) {
-          function n(e) {
-            void 0 === e && (e = null);
-            var t = r.call(this) || this;
+        })(_),
+        Z = (function (e) {
+          function t(r) {
+            void 0 === r && (r = null);
+            var n = e.call(this) || this;
             return (
-              n.prototype.bonuses || f.a(n.M()),
-              b.initialize(t, e, 0, -1, [1], null),
-              t
+              t.prototype.bonuses || h.a(t.M()),
+              _.initialize(n, r, 0, -1, [1], null),
+              n
             );
           }
           return (
-            Object(s.d)(n, r),
-            (n.M = function () {
+            Object(n.d)(t, e),
+            (t.M = function () {
               return (
-                n.sm_m ||
-                  (n.sm_m = {
-                    proto: n,
-                    fields: { bonuses: { n: 1, c: H, r: !0, q: !0 } },
+                t.sm_m ||
+                  (t.sm_m = {
+                    proto: t,
+                    fields: { bonuses: { n: 1, c: q, r: !0, q: !0 } },
                   }),
-                n.sm_m
+                t.sm_m
               );
             }),
-            (n.MBF = function () {
-              return n.sm_mbf || (n.sm_mbf = f.e(n.M())), n.sm_mbf;
+            (t.MBF = function () {
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
-            (n.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), n.toObject(e, this);
+            (t.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (n.toObject = function (e, t) {
-              return f.g(n.M(), e, t);
+            (t.toObject = function (e, r) {
+              return h.g(t.M(), e, r);
             }),
-            (n.fromObject = function (e) {
-              return f.c(n.M(), e);
+            (t.fromObject = function (e) {
+              return h.c(t.M(), e);
             }),
-            (n.deserializeBinary = function (e) {
-              var t = new d.BinaryReader(e),
-                r = new n();
-              return n.deserializeBinaryFromReader(r, t);
+            (t.deserializeBinary = function (e) {
+              var r = new w.BinaryReader(e),
+                n = new t();
+              return t.deserializeBinaryFromReader(n, r);
             }),
-            (n.deserializeBinaryFromReader = function (e, t) {
-              return f.b(n.MBF(), e, t);
+            (t.deserializeBinaryFromReader = function (e, r) {
+              return h.b(t.MBF(), e, r);
             }),
-            (n.prototype.serializeBinary = function () {
-              var e = new d.BinaryWriter();
-              return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            (t.prototype.serializeBinary = function () {
+              var e = new w.BinaryWriter();
+              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (n.serializeBinaryToWriter = function (e, t) {
-              f.f(n.M(), e, t);
+            (t.serializeBinaryToWriter = function (e, r) {
+              h.f(t.M(), e, r);
             }),
-            (n.prototype.getClassName = function () {
+            (t.prototype.getClassName = function () {
               return "CLoyaltyRewards_GetActivePurchaseBonuses_Response";
             }),
-            n
+            t
           );
-        })(b),
-        Y = (function (r) {
-          function n(e) {
-            void 0 === e && (e = null);
-            var t = r.call(this) || this;
+        })(_),
+        H = (function (e) {
+          function t(r) {
+            void 0 === r && (r = null);
+            var n = e.call(this) || this;
             return (
-              n.prototype.definitions || f.a(n.M()),
-              b.initialize(t, e, 0, -1, [1], null),
-              t
+              t.prototype.definitions || h.a(t.M()),
+              _.initialize(n, r, 0, -1, [1], null),
+              n
             );
           }
           return (
-            Object(s.d)(n, r),
-            (n.M = function () {
+            Object(n.d)(t, e),
+            (t.M = function () {
               return (
-                n.sm_m ||
-                  (n.sm_m = {
-                    proto: n,
+                t.sm_m ||
+                  (t.sm_m = {
+                    proto: t,
                     fields: {
-                      definitions: { n: 1, c: D, r: !0, q: !0 },
+                      definitions: { n: 1, c: x, r: !0, q: !0 },
                       total_count: {
                         n: 2,
-                        br: f.d.readInt32,
-                        bw: f.h.writeInt32,
+                        br: h.d.readInt32,
+                        bw: h.h.writeInt32,
                       },
-                      count: { n: 3, br: f.d.readInt32, bw: f.h.writeInt32 },
+                      count: { n: 3, br: h.d.readInt32, bw: h.h.writeInt32 },
                       next_cursor: {
                         n: 4,
-                        br: f.d.readString,
-                        bw: f.h.writeString,
+                        br: h.d.readString,
+                        bw: h.h.writeString,
                       },
                     },
                   }),
-                n.sm_m
+                t.sm_m
               );
             }),
-            (n.MBF = function () {
-              return n.sm_mbf || (n.sm_mbf = f.e(n.M())), n.sm_mbf;
+            (t.MBF = function () {
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
-            (n.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), n.toObject(e, this);
+            (t.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (n.toObject = function (e, t) {
-              return f.g(n.M(), e, t);
+            (t.toObject = function (e, r) {
+              return h.g(t.M(), e, r);
             }),
-            (n.fromObject = function (e) {
-              return f.c(n.M(), e);
+            (t.fromObject = function (e) {
+              return h.c(t.M(), e);
             }),
-            (n.deserializeBinary = function (e) {
-              var t = new d.BinaryReader(e),
-                r = new n();
-              return n.deserializeBinaryFromReader(r, t);
+            (t.deserializeBinary = function (e) {
+              var r = new w.BinaryReader(e),
+                n = new t();
+              return t.deserializeBinaryFromReader(n, r);
             }),
-            (n.deserializeBinaryFromReader = function (e, t) {
-              return f.b(n.MBF(), e, t);
+            (t.deserializeBinaryFromReader = function (e, r) {
+              return h.b(t.MBF(), e, r);
             }),
-            (n.prototype.serializeBinary = function () {
-              var e = new d.BinaryWriter();
-              return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            (t.prototype.serializeBinary = function () {
+              var e = new w.BinaryWriter();
+              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (n.serializeBinaryToWriter = function (e, t) {
-              f.f(n.M(), e, t);
+            (t.serializeBinaryToWriter = function (e, r) {
+              h.f(t.M(), e, r);
             }),
-            (n.prototype.getClassName = function () {
+            (t.prototype.getClassName = function () {
               return "CLoyaltyRewards_QueryRewardItems_Response";
             }),
-            n
+            t
           );
-        })(b),
-        K = (function (r) {
-          function n(e) {
-            void 0 === e && (e = null);
-            var t = r.call(this) || this;
+        })(_),
+        Q = (function (e) {
+          function t(r) {
+            void 0 === r && (r = null);
+            var n = e.call(this) || this;
             return (
-              n.prototype.responses || f.a(n.M()),
-              b.initialize(t, e, 0, -1, [1], null),
-              t
+              t.prototype.responses || h.a(t.M()),
+              _.initialize(n, r, 0, -1, [1], null),
+              n
             );
           }
           return (
-            Object(s.d)(n, r),
-            (n.M = function () {
+            Object(n.d)(t, e),
+            (t.M = function () {
               return (
-                n.sm_m ||
-                  (n.sm_m = {
-                    proto: n,
-                    fields: { responses: { n: 1, c: V, r: !0, q: !0 } },
+                t.sm_m ||
+                  (t.sm_m = {
+                    proto: t,
+                    fields: { responses: { n: 1, c: Y, r: !0, q: !0 } },
                   }),
-                n.sm_m
+                t.sm_m
               );
             }),
-            (n.MBF = function () {
-              return n.sm_mbf || (n.sm_mbf = f.e(n.M())), n.sm_mbf;
+            (t.MBF = function () {
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
-            (n.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), n.toObject(e, this);
+            (t.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (n.toObject = function (e, t) {
-              return f.g(n.M(), e, t);
+            (t.toObject = function (e, r) {
+              return h.g(t.M(), e, r);
             }),
-            (n.fromObject = function (e) {
-              return f.c(n.M(), e);
+            (t.fromObject = function (e) {
+              return h.c(t.M(), e);
             }),
-            (n.deserializeBinary = function (e) {
-              var t = new d.BinaryReader(e),
-                r = new n();
-              return n.deserializeBinaryFromReader(r, t);
+            (t.deserializeBinary = function (e) {
+              var r = new w.BinaryReader(e),
+                n = new t();
+              return t.deserializeBinaryFromReader(n, r);
             }),
-            (n.deserializeBinaryFromReader = function (e, t) {
-              return f.b(n.MBF(), e, t);
+            (t.deserializeBinaryFromReader = function (e, r) {
+              return h.b(t.MBF(), e, r);
             }),
-            (n.prototype.serializeBinary = function () {
-              var e = new d.BinaryWriter();
-              return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            (t.prototype.serializeBinary = function () {
+              var e = new w.BinaryWriter();
+              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (n.serializeBinaryToWriter = function (e, t) {
-              f.f(n.M(), e, t);
+            (t.serializeBinaryToWriter = function (e, r) {
+              h.f(t.M(), e, r);
             }),
-            (n.prototype.getClassName = function () {
+            (t.prototype.getClassName = function () {
               return "CLoyaltyRewards_BatchedQueryRewardItems_Response";
             }),
-            n
+            t
           );
-        })(b),
-        V = (function (r) {
-          function n(e) {
-            void 0 === e && (e = null);
-            var t = r.call(this) || this;
+        })(_),
+        Y = (function (e) {
+          function t(r) {
+            void 0 === r && (r = null);
+            var n = e.call(this) || this;
             return (
-              n.prototype.eresult || f.a(n.M()),
-              b.initialize(t, e, 0, -1, void 0, null),
-              t
+              t.prototype.eresult || h.a(t.M()),
+              _.initialize(n, r, 0, -1, void 0, null),
+              n
             );
           }
           return (
-            Object(s.d)(n, r),
-            (n.M = function () {
+            Object(n.d)(t, e),
+            (t.M = function () {
               return (
-                n.sm_m ||
-                  (n.sm_m = {
-                    proto: n,
+                t.sm_m ||
+                  (t.sm_m = {
+                    proto: t,
                     fields: {
-                      eresult: { n: 1, br: f.d.readInt32, bw: f.h.writeInt32 },
-                      response: { n: 2, c: Y },
+                      eresult: { n: 1, br: h.d.readInt32, bw: h.h.writeInt32 },
+                      response: { n: 2, c: H },
                     },
                   }),
-                n.sm_m
+                t.sm_m
               );
             }),
-            (n.MBF = function () {
-              return n.sm_mbf || (n.sm_mbf = f.e(n.M())), n.sm_mbf;
+            (t.MBF = function () {
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
-            (n.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), n.toObject(e, this);
+            (t.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (n.toObject = function (e, t) {
-              return f.g(n.M(), e, t);
+            (t.toObject = function (e, r) {
+              return h.g(t.M(), e, r);
             }),
-            (n.fromObject = function (e) {
-              return f.c(n.M(), e);
+            (t.fromObject = function (e) {
+              return h.c(t.M(), e);
             }),
-            (n.deserializeBinary = function (e) {
-              var t = new d.BinaryReader(e),
-                r = new n();
-              return n.deserializeBinaryFromReader(r, t);
+            (t.deserializeBinary = function (e) {
+              var r = new w.BinaryReader(e),
+                n = new t();
+              return t.deserializeBinaryFromReader(n, r);
             }),
-            (n.deserializeBinaryFromReader = function (e, t) {
-              return f.b(n.MBF(), e, t);
+            (t.deserializeBinaryFromReader = function (e, r) {
+              return h.b(t.MBF(), e, r);
             }),
-            (n.prototype.serializeBinary = function () {
-              var e = new d.BinaryWriter();
-              return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            (t.prototype.serializeBinary = function () {
+              var e = new w.BinaryWriter();
+              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (n.serializeBinaryToWriter = function (e, t) {
-              f.f(n.M(), e, t);
+            (t.serializeBinaryToWriter = function (e, r) {
+              h.f(t.M(), e, r);
             }),
-            (n.prototype.getClassName = function () {
+            (t.prototype.getClassName = function () {
               return "CLoyaltyRewards_BatchedQueryRewardItems_Response_Response";
             }),
-            n
+            t
           );
-        })(b),
-        J = (function (r) {
-          function n(e) {
-            void 0 === e && (e = null);
-            var t = r.call(this) || this;
+        })(_),
+        K = (function (e) {
+          function t(r) {
+            void 0 === r && (r = null);
+            var n = e.call(this) || this;
             return (
-              n.prototype.communityitemid || f.a(n.M()),
-              b.initialize(t, e, 0, -1, void 0, null),
-              t
+              t.prototype.communityitemid || h.a(t.M()),
+              _.initialize(n, r, 0, -1, void 0, null),
+              n
             );
           }
           return (
-            Object(s.d)(n, r),
-            (n.M = function () {
+            Object(n.d)(t, e),
+            (t.M = function () {
               return (
-                n.sm_m ||
-                  (n.sm_m = {
-                    proto: n,
+                t.sm_m ||
+                  (t.sm_m = {
+                    proto: t,
                     fields: {
                       communityitemid: {
                         n: 1,
-                        br: f.d.readUint64String,
-                        bw: f.h.writeUint64String,
+                        br: h.d.readUint64String,
+                        bw: h.h.writeUint64String,
                       },
                       next_claim_time: {
                         n: 2,
-                        br: f.d.readUint32,
-                        bw: f.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
-                      reward_item: { n: 3, c: D },
+                      reward_item: { n: 3, c: x },
                     },
                   }),
-                n.sm_m
+                t.sm_m
               );
             }),
-            (n.MBF = function () {
-              return n.sm_mbf || (n.sm_mbf = f.e(n.M())), n.sm_mbf;
+            (t.MBF = function () {
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
-            (n.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), n.toObject(e, this);
+            (t.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (n.toObject = function (e, t) {
-              return f.g(n.M(), e, t);
+            (t.toObject = function (e, r) {
+              return h.g(t.M(), e, r);
             }),
-            (n.fromObject = function (e) {
-              return f.c(n.M(), e);
+            (t.fromObject = function (e) {
+              return h.c(t.M(), e);
             }),
-            (n.deserializeBinary = function (e) {
-              var t = new d.BinaryReader(e),
-                r = new n();
-              return n.deserializeBinaryFromReader(r, t);
+            (t.deserializeBinary = function (e) {
+              var r = new w.BinaryReader(e),
+                n = new t();
+              return t.deserializeBinaryFromReader(n, r);
             }),
-            (n.deserializeBinaryFromReader = function (e, t) {
-              return f.b(n.MBF(), e, t);
+            (t.deserializeBinaryFromReader = function (e, r) {
+              return h.b(t.MBF(), e, r);
             }),
-            (n.prototype.serializeBinary = function () {
-              var e = new d.BinaryWriter();
-              return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            (t.prototype.serializeBinary = function () {
+              var e = new w.BinaryWriter();
+              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (n.serializeBinaryToWriter = function (e, t) {
-              f.f(n.M(), e, t);
+            (t.serializeBinaryToWriter = function (e, r) {
+              h.f(t.M(), e, r);
             }),
-            (n.prototype.getClassName = function () {
+            (t.prototype.getClassName = function () {
               return "CSaleItemRewards_ClaimItem_Response";
             }),
-            n
+            t
           );
-        })(b),
-        X = (function (r) {
-          function n(e) {
-            void 0 === e && (e = null);
-            var t = r.call(this) || this;
+        })(_),
+        V = (function (e) {
+          function t(r) {
+            void 0 === r && (r = null);
+            var n = e.call(this) || this;
             return (
-              n.prototype.can_claim || f.a(n.M()),
-              b.initialize(t, e, 0, -1, void 0, null),
-              t
+              t.prototype.can_claim || h.a(t.M()),
+              _.initialize(n, r, 0, -1, void 0, null),
+              n
             );
           }
           return (
-            Object(s.d)(n, r),
-            (n.M = function () {
+            Object(n.d)(t, e),
+            (t.M = function () {
               return (
-                n.sm_m ||
-                  (n.sm_m = {
-                    proto: n,
+                t.sm_m ||
+                  (t.sm_m = {
+                    proto: t,
                     fields: {
-                      can_claim: { n: 1, br: f.d.readBool, bw: f.h.writeBool },
+                      can_claim: { n: 1, br: h.d.readBool, bw: h.h.writeBool },
                       next_claim_time: {
                         n: 2,
-                        br: f.d.readUint32,
-                        bw: f.h.writeUint32,
+                        br: h.d.readUint32,
+                        bw: h.h.writeUint32,
                       },
-                      reward_item: { n: 3, c: D },
+                      reward_item: { n: 3, c: x },
                     },
                   }),
-                n.sm_m
+                t.sm_m
               );
             }),
-            (n.MBF = function () {
-              return n.sm_mbf || (n.sm_mbf = f.e(n.M())), n.sm_mbf;
+            (t.MBF = function () {
+              return t.sm_mbf || (t.sm_mbf = h.e(t.M())), t.sm_mbf;
             }),
-            (n.prototype.toObject = function (e) {
-              return void 0 === e && (e = !1), n.toObject(e, this);
+            (t.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), t.toObject(e, this);
             }),
-            (n.toObject = function (e, t) {
-              return f.g(n.M(), e, t);
+            (t.toObject = function (e, r) {
+              return h.g(t.M(), e, r);
             }),
-            (n.fromObject = function (e) {
-              return f.c(n.M(), e);
+            (t.fromObject = function (e) {
+              return h.c(t.M(), e);
             }),
-            (n.deserializeBinary = function (e) {
-              var t = new d.BinaryReader(e),
-                r = new n();
-              return n.deserializeBinaryFromReader(r, t);
+            (t.deserializeBinary = function (e) {
+              var r = new w.BinaryReader(e),
+                n = new t();
+              return t.deserializeBinaryFromReader(n, r);
             }),
-            (n.deserializeBinaryFromReader = function (e, t) {
-              return f.b(n.MBF(), e, t);
+            (t.deserializeBinaryFromReader = function (e, r) {
+              return h.b(t.MBF(), e, r);
             }),
-            (n.prototype.serializeBinary = function () {
-              var e = new d.BinaryWriter();
-              return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            (t.prototype.serializeBinary = function () {
+              var e = new w.BinaryWriter();
+              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (n.serializeBinaryToWriter = function (e, t) {
-              f.f(n.M(), e, t);
+            (t.serializeBinaryToWriter = function (e, r) {
+              h.f(t.M(), e, r);
             }),
-            (n.prototype.getClassName = function () {
+            (t.prototype.getClassName = function () {
               return "CSaleItemRewards_CanClaimItem_Response";
             }),
-            n
+            t
           );
-        })(b);
-      ((p = y = y || {}).GetPointsForSpend = function (e, t) {
-        return e.SendMsg("LoyaltyRewards.GetPointsForSpend#1", t, B, {
-          bConstMethod: !0,
-          ePrivilege: 0,
-          eWebAPIKeyRequirement: 1,
-        });
-      }),
-        (p.GetSummary = function (e, t) {
-          return e.SendMsg("LoyaltyRewards.GetSummary#1", t, g, {
-            bConstMethod: !0,
-            ePrivilege: 1,
-          });
-        }),
-        (p.RedeemPoints = function (e, t) {
-          return e.SendMsg("LoyaltyRewards.RedeemPoints#1", t, R, {
-            ePrivilege: 1,
-          });
-        }),
-        (p.RedeemPointsForBadgeLevel = function (e, t) {
-          return e.SendMsg("LoyaltyRewards.RedeemPointsForBadgeLevel#1", t, R, {
-            ePrivilege: 1,
-          });
-        }),
-        (p.RedeemPointsToUpgradeItem = function (e, t) {
-          return e.SendMsg("LoyaltyRewards.RedeemPointsToUpgradeItem#1", t, R, {
-            ePrivilege: 1,
-          });
-        }),
-        (p.RedeemPointsForProfileCustomization = function (e, t) {
-          return e.SendMsg(
-            "LoyaltyRewards.RedeemPointsForProfileCustomization#1",
-            t,
-            M,
-            { ePrivilege: 1 }
-          );
-        }),
-        (p.RedeemPointsForProfileCustomizationUpgrade = function (e, t) {
-          return e.SendMsg(
-            "LoyaltyRewards.RedeemPointsForProfileCustomizationUpgrade#1",
-            t,
-            C,
-            { ePrivilege: 1 }
-          );
-        }),
-        (p.AddReaction = function (e, t) {
-          return e.SendMsg("LoyaltyRewards.AddReaction#1", t, F, {
-            ePrivilege: 1,
-          });
-        }),
-        (p.GetReactions = function (e, t) {
-          return e.SendMsg("LoyaltyRewards.GetReactions#1", t, A, {
-            bConstMethod: !0,
-            ePrivilege: 1,
-          });
-        }),
-        (p.GetReactionsSummaryForUser = function (e, t) {
-          return e.SendMsg(
-            "LoyaltyRewards.GetReactionsSummaryForUser#1",
-            t,
-            I,
-            { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 }
-          );
-        }),
-        (p.GetReactionConfig = function (e, t) {
-          return e.SendMsg("LoyaltyRewards.GetReactionConfig#1", t, P, {
+        })(_);
+      !(function (e) {
+        (e.GetPointsForSpend = function (e, t) {
+          return e.SendMsg("LoyaltyRewards.GetPointsForSpend#1", t, C, {
             bConstMethod: !0,
             ePrivilege: 0,
             eWebAPIKeyRequirement: 1,
           });
         }),
-        (p.GetProfileCustomizationsConfig = function (e, t) {
-          return e.SendMsg(
-            "LoyaltyRewards.GetProfileCustomizationsConfig#1",
-            t,
-            W,
-            { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 }
-          );
-        }),
-        (p.GetEligibleApps = function (e, t) {
-          return e.SendMsg("LoyaltyRewards.GetEligibleApps#1", t, x, {
-            bConstMethod: !0,
-            ePrivilege: 0,
-            eWebAPIKeyRequirement: 1,
+          (e.GetSummary = function (e, t) {
+            return e.SendMsg("LoyaltyRewards.GetSummary#1", t, R, {
+              bConstMethod: !0,
+              ePrivilege: 1,
+            });
+          }),
+          (e.RedeemPoints = function (e, t) {
+            return e.SendMsg("LoyaltyRewards.RedeemPoints#1", t, O, {
+              ePrivilege: 1,
+            });
+          }),
+          (e.RedeemPointsForBadgeLevel = function (e, t) {
+            return e.SendMsg(
+              "LoyaltyRewards.RedeemPointsForBadgeLevel#1",
+              t,
+              O,
+              { ePrivilege: 1 }
+            );
+          }),
+          (e.RedeemPointsToUpgradeItem = function (e, t) {
+            return e.SendMsg(
+              "LoyaltyRewards.RedeemPointsToUpgradeItem#1",
+              t,
+              O,
+              { ePrivilege: 1 }
+            );
+          }),
+          (e.RedeemPointsForProfileCustomization = function (e, t) {
+            return e.SendMsg(
+              "LoyaltyRewards.RedeemPointsForProfileCustomization#1",
+              t,
+              j,
+              { ePrivilege: 1 }
+            );
+          }),
+          (e.RedeemPointsForProfileCustomizationUpgrade = function (e, t) {
+            return e.SendMsg(
+              "LoyaltyRewards.RedeemPointsForProfileCustomizationUpgrade#1",
+              t,
+              z,
+              { ePrivilege: 1 }
+            );
+          }),
+          (e.AddReaction = function (e, t) {
+            return e.SendMsg("LoyaltyRewards.AddReaction#1", t, S, {
+              ePrivilege: 1,
+            });
+          }),
+          (e.GetReactions = function (e, t) {
+            return e.SendMsg("LoyaltyRewards.GetReactions#1", t, F, {
+              bConstMethod: !0,
+              ePrivilege: 1,
+            });
+          }),
+          (e.GetReactionsSummaryForUser = function (e, t) {
+            return e.SendMsg(
+              "LoyaltyRewards.GetReactionsSummaryForUser#1",
+              t,
+              T,
+              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 }
+            );
+          }),
+          (e.GetReactionConfig = function (e, t) {
+            return e.SendMsg("LoyaltyRewards.GetReactionConfig#1", t, N, {
+              bConstMethod: !0,
+              ePrivilege: 0,
+              eWebAPIKeyRequirement: 1,
+            });
+          }),
+          (e.GetProfileCustomizationsConfig = function (e, t) {
+            return e.SendMsg(
+              "LoyaltyRewards.GetProfileCustomizationsConfig#1",
+              t,
+              P,
+              { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 }
+            );
+          }),
+          (e.GetEligibleApps = function (e, t) {
+            return e.SendMsg("LoyaltyRewards.GetEligibleApps#1", t, U, {
+              bConstMethod: !0,
+              ePrivilege: 0,
+              eWebAPIKeyRequirement: 1,
+            });
+          }),
+          (e.GetActivePurchaseBonuses = function (e, t) {
+            return e.SendMsg(
+              "LoyaltyRewards.GetActivePurchaseBonuses#1",
+              t,
+              Z,
+              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 }
+            );
+          }),
+          (e.QueryRewardItems = function (e, t) {
+            return e.SendMsg("LoyaltyRewards.QueryRewardItems#1", t, H, {
+              bConstMethod: !0,
+              ePrivilege: 2,
+              eWebAPIKeyRequirement: 1,
+            });
+          }),
+          (e.BatchedQueryRewardItems = function (e, t) {
+            return e.SendMsg("LoyaltyRewards.BatchedQueryRewardItems#1", t, Q, {
+              bConstMethod: !0,
+              ePrivilege: 2,
+              eWebAPIKeyRequirement: 1,
+            });
           });
-        }),
-        (p.GetActivePurchaseBonuses = function (e, t) {
-          return e.SendMsg("LoyaltyRewards.GetActivePurchaseBonuses#1", t, Q, {
-            bConstMethod: !0,
-            ePrivilege: 2,
-            eWebAPIKeyRequirement: 1,
-          });
-        }),
-        (p.QueryRewardItems = function (e, t) {
-          return e.SendMsg("LoyaltyRewards.QueryRewardItems#1", t, Y, {
-            bConstMethod: !0,
-            ePrivilege: 2,
-            eWebAPIKeyRequirement: 1,
-          });
-        }),
-        (p.BatchedQueryRewardItems = function (e, t) {
-          return e.SendMsg("LoyaltyRewards.BatchedQueryRewardItems#1", t, K, {
-            bConstMethod: !0,
-            ePrivilege: 2,
-            eWebAPIKeyRequirement: 1,
-          });
-        }),
-        ((h = w = w || {}).ClaimItem = function (e, t) {
-          return e.SendMsg("SaleItemRewards.ClaimItem#1", t, J, {
-            ePrivilege: 1,
-          });
-        }),
-        (h.CanClaimItem = function (e, t) {
-          return e.SendMsg("SaleItemRewards.CanClaimItem#1", t, X, {
-            bConstMethod: !0,
-            ePrivilege: 1,
-          });
-        });
-      function $(e) {
-        var t = e.className,
-          r = Object(s.f)(e, ["className"]);
-        return m.a.createElement(
-          "button",
-          Object(s.a)({ className: Object(te.a)(t, re.UnstyledButton) }, r)
-        );
-      }
-      var ee = (function () {
+      })(g || (g = {})),
+        (function (e) {
+          (e.ClaimItem = function (e, t) {
+            return e.SendMsg("SaleItemRewards.ClaimItem#1", t, K, {
+              ePrivilege: 1,
+            });
+          }),
+            (e.CanClaimItem = function (e, t) {
+              return e.SendMsg("SaleItemRewards.CanClaimItem#1", t, V, {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              });
+            });
+        })(v || (v = {}));
+      var J = (function () {
           function e(e) {
             (this.m_lPointsAvailable = null),
               (this.m_bPointsBalanceLoadedOrInFlight = !1),
@@ -2136,33 +2137,33 @@
           }
           return (
             (e.prototype.BIsLoggedIn = function () {
-              return L.i.logged_in;
+              return d.i.logged_in;
             }),
             (e.prototype.SetTarget = function (e, t) {
               (this.m_targetID = e),
                 (this.m_eTargetType = t),
                 this.LoadExistingReactions();
             }),
-            (e.prototype.AddReaction = function (n) {
-              return Object(s.b)(this, void 0, void 0, function () {
+            (e.prototype.AddReaction = function (e) {
+              return Object(n.b)(this, void 0, void 0, function () {
                 var t, r;
-                return Object(s.e)(this, function (e) {
-                  switch (e.label) {
+                return Object(n.e)(this, function (n) {
+                  switch (n.label) {
                     case 0:
                       return this.BIsLoggedIn()
-                        ? ((t = u.b.Init(O))
+                        ? ((t = p.b.Init(E))
                             .Body()
                             .set_target_type(this.m_eTargetType),
                           t.Body().set_targetid(this.m_targetID),
-                          t.Body().set_reactionid(n),
+                          t.Body().set_reactionid(e),
                           console.log(" ProtoBuf sending..."),
                           console.log(t),
                           console.log("Target ID is..." + t.Body().targetid()),
-                          [4, y.AddReaction(this.m_transport, t)])
+                          [4, g.AddReaction(this.m_transport, t)])
                         : [2, { eResult: 21, strMessage: "Not logged on" }];
                     case 1:
                       return (
-                        1 != (r = e.sent()).GetEResult()
+                        1 != (r = n.sent()).GetEResult()
                           ? console.error(
                               "Error when calling LoyaltyRewardsService.AddReaction: EResult=" +
                                 r.GetEResult()
@@ -2182,27 +2183,27 @@
                 : null;
             }),
             (e.prototype.LoadUserPointBalance = function () {
-              return Object(s.b)(this, void 0, void 0, function () {
-                var t, r;
-                return Object(s.e)(this, function (e) {
-                  switch (e.label) {
+              return Object(n.b)(this, void 0, void 0, function () {
+                var e, t;
+                return Object(n.e)(this, function (r) {
+                  switch (r.label) {
                     case 0:
                       return this.BIsLoggedIn()
                         ? ((this.m_bPointsBalanceLoadedOrInFlight = !0),
-                          (t = u.b.Init(_)).SetBodyFields({
-                            steamid: L.i.steamid,
+                          (e = p.b.Init(B)).SetBodyFields({
+                            steamid: d.i.steamid,
                           }),
-                          [4, y.GetSummary(this.m_transport, t)])
+                          [4, g.GetSummary(this.m_transport, e)])
                         : [2, Promise.resolve(null)];
                     case 1:
                       return (
-                        1 == (r = e.sent()).GetEResult()
-                          ? (this.m_lPointsAvailable = c.a.fromString(
-                              r.Body().summary().points()
+                        1 == (t = r.sent()).GetEResult()
+                          ? (this.m_lPointsAvailable = b.a.fromString(
+                              t.Body().summary().points()
                             ))
                           : console.error(
                               "Error when calling LoyaltyRewardsService.GetSummary: EResult=" +
-                                r.GetEResult()
+                                t.GetEResult()
                             ),
                         [2]
                       );
@@ -2218,20 +2219,20 @@
               );
             }),
             (e.prototype.LoadAwardsConfiguration = function () {
-              return Object(s.b)(this, void 0, void 0, function () {
-                var t, r, n, i, a, o;
-                return Object(s.e)(this, function (e) {
-                  switch (e.label) {
+              return Object(n.b)(this, void 0, void 0, function () {
+                var e, t, r, i, a, o;
+                return Object(n.e)(this, function (n) {
+                  switch (n.label) {
                     case 0:
                       return (
                         (this.m_bReactionConfigurationLoadedOrInFlight = !0),
-                        (t = u.b.Init(G)),
-                        [4, y.GetReactionConfig(this.m_transport, t)]
+                        (e = p.b.Init(I)),
+                        [4, g.GetReactionConfig(this.m_transport, e)]
                       );
                     case 1:
-                      if (1 == (r = e.sent()).GetEResult())
+                      if (1 == (t = n.sent()).GetEResult())
                         for (
-                          n = r.Body().toObject().reactions, i = 0, a = n;
+                          r = t.Body().toObject().reactions, i = 0, a = r;
                           i < a.length;
                           i++
                         )
@@ -2243,7 +2244,7 @@
                       else
                         console.error(
                           "Error when calling LoyaltyRewardsService.GetReactionConfig: EResult=" +
-                            r.GetEResult()
+                            t.GetEResult()
                         );
                       return [2];
                   }
@@ -2254,33 +2255,33 @@
               return this.m_mapExistingReactions;
             }),
             (e.prototype.LoadExistingReactions = function () {
-              return Object(s.b)(this, void 0, void 0, function () {
-                var t,
-                  r,
-                  n = this;
-                return Object(s.e)(this, function (e) {
-                  switch (e.label) {
+              return Object(n.b)(this, void 0, void 0, function () {
+                var e,
+                  t,
+                  r = this;
+                return Object(n.e)(this, function (n) {
+                  switch (n.label) {
                     case 0:
                       return (
                         this.m_mapExistingReactions.clear(),
-                        (t = u.b.Init(T))
+                        (e = p.b.Init(L))
                           .Body()
                           .set_target_type(this.m_eTargetType),
-                        t.Body().set_targetid(this.m_targetID),
-                        [4, y.GetReactions(this.m_transport, t)]
+                        e.Body().set_targetid(this.m_targetID),
+                        [4, g.GetReactions(this.m_transport, e)]
                       );
                     case 1:
                       return (
-                        1 == (r = e.sent()).GetEResult()
-                          ? r
+                        1 == (t = n.sent()).GetEResult()
+                          ? t
                               .Body()
                               .reactionids()
                               .map(function (e) {
-                                return n.m_mapExistingReactions.set(e, !0);
+                                return r.m_mapExistingReactions.set(e, !0);
                               })
                           : console.error(
                               "Error when calling LoyaltyRewardsService.GetReactions: EResult=" +
-                                r.GetEResult()
+                                t.GetEResult()
                             ),
                         [2]
                       );
@@ -2288,15 +2289,15 @@
                 });
               });
             }),
-            Object(s.c)([l.C.ref], e.prototype, "m_lPointsAvailable", void 0),
-            Object(s.c)(
-              [l.C.deep],
+            Object(n.c)([y.C.ref], e.prototype, "m_lPointsAvailable", void 0),
+            Object(n.c)(
+              [y.C.deep],
               e.prototype,
               "m_mapReactionConfiguration",
               void 0
             ),
-            Object(s.c)(
-              [l.C.deep],
+            Object(n.c)(
+              [y.C.deep],
               e.prototype,
               "m_mapExistingReactions",
               void 0
@@ -2304,257 +2305,270 @@
             e
           );
         })(),
-        te = r("exH9"),
-        re = r("Dsqm"),
-        ne = r("0OaU"),
-        ie = r("6Y59");
-      function ae(e) {
-        return Object(S.f)("#RewardsReaction_" + e);
+        X = r("exH9"),
+        $ = r("Dsqm"),
+        ee = function (e) {
+          var t = e.className,
+            r = Object(n.f)(e, ["className"]);
+          return a.a.createElement(
+            "button",
+            Object(n.a)({ className: Object(X.a)(t, $.UnstyledButton) }, r)
+          );
+        },
+        te = r("0OaU"),
+        re = r("6Y59");
+      function ne(e) {
+        return Object(l.f)("#RewardsReaction_" + e);
       }
-      var oe,
-        se,
-        ce = r("ZO3Q"),
-        le = r("YyVH");
-      function ue(e, t) {
-        var r = [];
-        if (!e) return r;
-        for (var n = e.width, i = e.height, a = 0; a < 200; a++) {
-          var o = Math.random(),
-            s = Math.random() * o,
-            c = Math.random() * s,
-            l = 4 * (Math.random() - 0.5) * Math.PI * 20,
-            u = Math.random() + 0.5,
-            d = [Math.random() * i - i - 20, i + 20 + Math.random() * i * u],
-            m = u * (n <= 1e3 ? 1 : n / 1e3) * (t == oe.Gold ? 2 : 1),
-            f = (Math.random() - 0.5) * n,
-            b = (Math.random() - 0.5) * n,
-            y = [b, f + b],
-            p = (function (e) {
-              switch (e) {
-                case oe.Gold:
-                case oe.LNY2020:
-                  return "hsl(" + (51 + -16 * Math.random()) + ", 93%, 54%)";
-                default:
-                  return "hsl(" + 360 * Math.random() + ", 100%, 40%)";
-              }
-            })(t),
-            w =
-              t == oe.LNY2020
-                ? "hue-rotate(" + (360 + Object(le.b)(-30, 10)) + "deg)"
-                : "";
-          r.push({
-            rotationCoefficient: l,
-            rotationRatioY: s,
-            rotationRatioX: o,
-            rotationRatioZ: c,
-            yRange: d,
-            xRange: y,
-            scale: m,
-            colorHue: p,
-            filter: w,
-          });
+      var ie,
+        ae = r("ZO3Q"),
+        oe = r("YyVH");
+      function se(e) {
+        switch (e) {
+          case ie.Gold:
+          case ie.LNY2020:
+            return "hsl(" + (51 + -16 * Math.random()) + ", 93%, 54%)";
+          default:
+            return "hsl(" + 360 * Math.random() + ", 100%, 40%)";
         }
-        return r;
       }
-      ((se = oe = oe || {})[(se.Default = 0)] = "Default"),
-        (se[(se.Gold = 1)] = "Gold"),
-        (se[(se.LNY2020 = 2)] = "LNY2020");
-      function de(t, r) {
-        var n = Object(ce.useSpring)({
-          anim: 1,
-          from: { anim: 0 },
-          config: { duration: 8e3 },
-        }).anim;
-        return Object(j.useMemo)(
-          function () {
-            var e = ue(t, r);
-            return {
-              rgParticleStyles: e.map(function (e) {
-                return (function (e, t) {
-                  oe.Default;
-                  var a = e.rotationCoefficient,
-                    o = e.rotationRatioY,
-                    s = e.rotationRatioX,
-                    c = e.rotationRatioZ,
-                    l = e.yRange,
-                    u = e.xRange,
-                    d = e.scale,
-                    r = e.colorHue;
-                  return {
-                    backgroundColor: r,
-                    fill: r,
-                    filter: e.filter,
-                    flRandom: 0,
-                    transform: t.interpolate(function (e) {
-                      var t = e * a * o,
-                        r = e * a * s,
-                        n = e * a * c,
-                        i = e * (l[1] - l[0]) + l[0];
-                      return (
-                        "translate(" +
-                        (e * (u[1] - u[0]) + u[0]) +
-                        "px, " +
-                        i +
-                        "px) rotateY(" +
-                        t +
-                        "rad) rotateX(" +
-                        r +
-                        "rad) rotateZ(" +
-                        n +
-                        "rad) scale(" +
-                        d +
-                        ")"
-                      );
-                    }),
-                  };
-                })(e, n);
-              }),
-              rgStreamerStyles: e
-                .map(function (e) {
-                  return (function (e, t) {
-                    if (0.1 < Math.random()) return null;
+      function ce(e) {
+        return e == ie.LNY2020
+          ? "hue-rotate(" + (360 + Object(oe.b)(-30, 10)) + "deg)"
+          : "";
+      }
+      !(function (e) {
+        (e[(e.Default = 0)] = "Default"),
+          (e[(e.Gold = 1)] = "Gold"),
+          (e[(e.LNY2020 = 2)] = "LNY2020");
+      })(ie || (ie = {}));
+      var le = function (e, t) {
+          var r = Object(ae.useSpring)({
+            anim: 1,
+            from: { anim: 0 },
+            config: { duration: 8e3 },
+          }).anim;
+          return Object(i.useMemo)(
+            function () {
+              var n = (function (e, t) {
+                var r = [];
+                if (!e) return r;
+                for (var n = e.width, i = e.height, a = 0; a < 200; a++) {
+                  var o = Math.random(),
+                    s = Math.random() * o,
+                    c = Math.random() * s,
+                    l = 4 * (Math.random() - 0.5) * Math.PI * 20,
+                    u = Math.random() + 0.5,
+                    d = [
+                      Math.random() * i - i - 20,
+                      i + 20 + Math.random() * i * u,
+                    ],
+                    m = u * (n <= 1e3 ? 1 : n / 1e3) * (t == ie.Gold ? 2 : 1),
+                    f = (Math.random() - 0.5) * n,
+                    b = (Math.random() - 0.5) * n,
+                    y = [b, f + b],
+                    p = se(t),
+                    w = ce(t);
+                  r.push({
+                    rotationCoefficient: l,
+                    rotationRatioY: s,
+                    rotationRatioX: o,
+                    rotationRatioZ: c,
+                    yRange: d,
+                    xRange: y,
+                    scale: m,
+                    colorHue: p,
+                    filter: w,
+                  });
+                }
+                return r;
+              })(e, t);
+              return {
+                rgParticleStyles: n.map(function (e) {
+                  return (function (e, t, r) {
+                    ie.Default;
                     var n = e.rotationCoefficient,
-                      i = e.rotationRatioZ,
-                      a = e.yRange,
-                      o = e.xRange,
-                      s = e.scale;
+                      i = e.rotationRatioY,
+                      a = e.rotationRatioX,
+                      o = e.rotationRatioZ,
+                      s = e.yRange,
+                      c = e.xRange,
+                      l = e.scale,
+                      u = e.colorHue;
                     return {
-                      backgroundColor: void 0,
-                      fill: e.colorHue,
+                      backgroundColor: u,
+                      fill: u,
                       filter: e.filter,
-                      flRandom: Math.random(),
+                      flRandom: 0,
                       transform: t.interpolate(function (e) {
-                        var t = ((e * n) / 4) * i,
-                          r = e * (a[1] - a[0]) + a[0];
+                        var t = e * n * i,
+                          r = e * n * a,
+                          u = e * n * o,
+                          d = e * (s[1] - s[0]) + s[0];
                         return (
                           "translate(" +
-                          (e * (o[1] - o[0]) + o[0]) +
+                          (e * (c[1] - c[0]) + c[0]) +
                           "px, " +
-                          r +
-                          "px) rotateZ(" +
+                          d +
+                          "px) rotateY(" +
                           t +
+                          "rad) rotateX(" +
+                          r +
+                          "rad) rotateZ(" +
+                          u +
                           "rad) scale(" +
-                          s +
+                          l +
                           ")"
                         );
                       }),
                     };
-                  })(e, n);
-                })
-                .filter(function (e) {
-                  return !!e;
+                  })(e, r);
                 }),
-            };
-          },
-          [t, r, n]
-        );
-      }
-      function me(e) {
-        var t,
-          r,
-          n,
-          i,
-          a,
-          o = e.eType,
-          s =
-            (oe.Gold,
-            oe.LNY2020,
-            (t = Object(j.useState)(null)),
-            (r = t[0]),
-            (n = t[1]),
-            (i = Object(j.useCallback)(function (e) {
-              e &&
-                "function" == typeof e.getBoundingClientRect &&
-                n(e.getBoundingClientRect());
-            }, [])),
-            [r, i]),
-          c = s[1],
-          l = de(s[0], o),
-          u = l.rgParticleStyles,
-          d = l.rgStreamerStyles;
-        switch (o) {
-          case oe.Gold:
-            a = u.map(function (e, t) {
-              return m.a.createElement(pe, { key: t, style: e });
-            });
-            break;
-          case oe.LNY2020:
-            a = u.map(function (e, t) {
-              return t % 2
-                ? m.a.createElement(ye, { key: t, style: e })
-                : m.a.createElement(we, { key: t, style: e });
-            });
-            break;
-          case oe.Default:
-            a = u.map(function (e, t) {
-              return m.a.createElement(ye, { key: t, style: e });
-            });
-        }
-        return m.a.createElement(
-          "div",
-          {
-            style: {
-              position: "absolute",
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              overflow: "hidden",
+                rgStreamerStyles: n
+                  .map(function (e) {
+                    return (function (e, t, r) {
+                      if (Math.random() > 0.1) return null;
+                      var n = e.rotationCoefficient,
+                        i = e.rotationRatioZ,
+                        a = e.yRange,
+                        o = e.xRange,
+                        s = e.scale;
+                      return {
+                        backgroundColor: void 0,
+                        fill: e.colorHue,
+                        filter: e.filter,
+                        flRandom: Math.random(),
+                        transform: t.interpolate(function (e) {
+                          var t = ((e * n) / 4) * i,
+                            r = e * (a[1] - a[0]) + a[0];
+                          return (
+                            "translate(" +
+                            (e * (o[1] - o[0]) + o[0]) +
+                            "px, " +
+                            r +
+                            "px) rotateZ(" +
+                            t +
+                            "rad) scale(" +
+                            s +
+                            ")"
+                          );
+                        }),
+                      };
+                    })(e, r);
+                  })
+                  .filter(function (e) {
+                    return !!e;
+                  }),
+              };
             },
-            ref: c,
-          },
-          a,
-          d.map(function (e, t) {
-            return 0.5 < e.flRandom
-              ? m.a.createElement(_e, { key: t, style: e })
-              : m.a.createElement(he, { key: t, style: e });
-          })
-        );
-      }
-      var fe = { position: "absolute", left: "50%", top: 0 },
-        be = Object(s.a)(Object(s.a)({}, fe), {
+            [e, t, r]
+          );
+        },
+        ue = { position: "absolute", left: "50%", top: 0 },
+        de = Object(n.a)(Object(n.a)({}, ue), {
           width: 10,
           height: 5,
           borderWidth: 1,
           borderColor: "black",
         }),
-        ye = function (e) {
+        me = function (e) {
+          var t,
+            r = e.eType,
+            n =
+              (ie.Gold,
+              ie.LNY2020,
+              (function () {
+                var e = Object(i.useState)(null),
+                  t = e[0],
+                  r = e[1],
+                  n = Object(i.useCallback)(function (e) {
+                    e &&
+                      "function" == typeof e.getBoundingClientRect &&
+                      r(e.getBoundingClientRect());
+                  }, []);
+                return [t, n];
+              })()),
+            o = n[0],
+            s = n[1],
+            c = le(o, r),
+            l = c.rgParticleStyles,
+            u = c.rgStreamerStyles;
+          switch (r) {
+            case ie.Gold:
+              t = l.map(function (e, t) {
+                return a.a.createElement(be, { key: t, style: e });
+              });
+              break;
+            case ie.LNY2020:
+              t = l.map(function (e, t) {
+                return t % 2
+                  ? a.a.createElement(fe, { key: t, style: e })
+                  : a.a.createElement(ye, { key: t, style: e });
+              });
+              break;
+            case ie.Default:
+              t = l.map(function (e, t) {
+                return a.a.createElement(fe, { key: t, style: e });
+              });
+          }
+          return a.a.createElement(
+            "div",
+            {
+              style: {
+                position: "absolute",
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                overflow: "hidden",
+              },
+              ref: s,
+            },
+            t,
+            u.map(function (e, t) {
+              return e.flRandom > 0.5
+                ? a.a.createElement(we, { key: t, style: e })
+                : a.a.createElement(pe, { key: t, style: e });
+            })
+          );
+        },
+        fe = function (e) {
           var t = e.style;
-          return m.a.createElement(ce.animated.div, {
-            style: Object(s.a)(Object(s.a)({}, be), t),
+          return a.a.createElement(ae.animated.div, {
+            style: Object(n.a)(Object(n.a)({}, de), t),
+          });
+        },
+        be = function (e) {
+          var t = e.style,
+            r = Object(i.useState)(Math.floor(Math.random() * he.length))[0],
+            o = he[r];
+          return a.a.createElement(o, {
+            style: Object(n.a)(Object(n.a)(Object(n.a)({}, ue), t), {
+              backgroundColor: void 0,
+            }),
+          });
+        },
+        ye = function (e) {
+          var t = e.style,
+            r = Object(i.useState)(Math.floor(Math.random() * _e.length))[0],
+            o = _e[r];
+          return a.a.createElement(o, {
+            style: Object(n.a)(Object(n.a)(Object(n.a)({}, ue), t), {
+              backgroundColor: void 0,
+            }),
           });
         },
         pe = function (e) {
-          var t = e.style,
-            r = Object(j.useState)(Math.floor(Math.random() * ge.length))[0],
-            n = ge[r];
-          return m.a.createElement(n, {
-            style: Object(s.a)(Object(s.a)(Object(s.a)({}, fe), t), {
-              backgroundColor: void 0,
-            }),
-          });
-        },
-        we = function (e) {
-          var t = e.style,
-            r = Object(j.useState)(Math.floor(Math.random() * ve.length))[0],
-            n = ve[r];
-          return m.a.createElement(n, {
-            style: Object(s.a)(Object(s.a)(Object(s.a)({}, fe), t), {
-              backgroundColor: void 0,
-            }),
-          });
-        },
-        he = function (e) {
           var t = e.style;
-          return m.a.createElement(
-            ce.animated.svg,
+          return a.a.createElement(
+            ae.animated.svg,
             {
               viewBox: "0 0 80 620",
               fill: "none",
               xmlns: "http://www.w3.org/2000/svg",
-              style: Object(s.a)({ width: 10, height: 70 }, t),
+              style: Object(n.a)({ width: 10, height: 70 }, t),
             },
-            m.a.createElement("path", {
+            a.a.createElement("path", {
               fillRule: "evenodd",
               clipRule: "evenodd",
               d:
@@ -2563,17 +2577,17 @@
             })
           );
         },
-        _e = function (e) {
+        we = function (e) {
           var t = e.style;
-          return m.a.createElement(
-            ce.animated.svg,
+          return a.a.createElement(
+            ae.animated.svg,
             {
               viewBox: "0 0 203 295",
               fill: "none",
               xmlns: "http://www.w3.org/2000/svg",
-              style: Object(s.a)({ width: 10, height: 20 }, t),
+              style: Object(n.a)({ width: 10, height: 20 }, t),
             },
-            m.a.createElement("path", {
+            a.a.createElement("path", {
               fillRule: "evenodd",
               clipRule: "evenodd",
               d:
@@ -2582,18 +2596,18 @@
             })
           );
         },
-        ge = [
+        he = [
           function (e) {
             var t = e.style;
-            return m.a.createElement(
-              ce.animated.svg,
+            return a.a.createElement(
+              ae.animated.svg,
               {
                 viewBox: "0 0 48 102",
                 fill: "none",
                 xmlns: "http://www.w3.org/2000/svg",
-                style: Object(s.a)({ width: 5, height: 10 }, t),
+                style: Object(n.a)({ width: 5, height: 10 }, t),
               },
-              m.a.createElement("path", {
+              a.a.createElement("path", {
                 fillRule: "evenodd",
                 clipRule: "evenodd",
                 d:
@@ -2604,20 +2618,20 @@
           },
           function (e) {
             var t = e.style;
-            return m.a.createElement(
-              ce.animated.svg,
+            return a.a.createElement(
+              ae.animated.svg,
               {
                 viewBox: "0 0 50 39",
                 fill: "none",
                 xmlns: "http://www.w3.org/2000/svg",
-                style: Object(s.a)({ width: 10, height: 7 }, t),
+                style: Object(n.a)({ width: 10, height: 7 }, t),
               },
-              m.a.createElement("path", {
+              a.a.createElement("path", {
                 d:
                   "M48.444 16.0525L32.7132 0.633915C20.0884 16.8827 7.13568 21.7989 0.597293 21.9904C7.33478 28.5984 14.1472 37.4728 14.1472 37.4728C31.6473 38.7751 44.3035 23.7352 48.444 16.0525Z",
                 fill: "#C4C4C4",
               }),
-              m.a.createElement("path", {
+              a.a.createElement("path", {
                 d:
                   "M48.444 16.0525L32.7132 0.633915C20.0884 16.8827 7.13568 21.7989 0.597293 21.9904C7.33478 28.5984 14.1472 37.4728 14.1472 37.4728C31.6473 38.7751 44.3035 23.7352 48.444 16.0525Z",
                 fill: t.fill,
@@ -2626,15 +2640,15 @@
           },
           function (e) {
             var t = e.style;
-            return m.a.createElement(
-              ce.animated.svg,
+            return a.a.createElement(
+              ae.animated.svg,
               {
                 viewBox: "0 0 68 69",
                 fill: "none",
                 xmlns: "http://www.w3.org/2000/svg",
-                style: Object(s.a)({ width: 10, height: 10 }, t),
+                style: Object(n.a)({ width: 10, height: 10 }, t),
               },
-              m.a.createElement("rect", {
+              a.a.createElement("rect", {
                 y: "34.6389",
                 width: "48",
                 height: "48",
@@ -2645,15 +2659,15 @@
           },
           function (e) {
             var t = e.style;
-            return m.a.createElement(
-              ce.animated.svg,
+            return a.a.createElement(
+              ae.animated.svg,
               {
                 viewBox: "0 0 48 48",
                 fill: "none",
                 xmlns: "http://www.w3.org/2000/svg",
-                style: Object(s.a)({ width: 10, height: 10 }, t),
+                style: Object(n.a)({ width: 10, height: 10 }, t),
               },
-              m.a.createElement("path", {
+              a.a.createElement("path", {
                 fillRule: "evenodd",
                 clipRule: "evenodd",
                 d:
@@ -2664,15 +2678,15 @@
           },
           function (e) {
             var t = e.style;
-            return m.a.createElement(
-              ce.animated.svg,
+            return a.a.createElement(
+              ae.animated.svg,
               {
                 viewBox: "0 0 48 30",
                 fill: "none",
                 xmlns: "http://www.w3.org/2000/svg",
-                style: Object(s.a)({ width: 10, height: 8 }, t),
+                style: Object(n.a)({ width: 10, height: 8 }, t),
               },
-              m.a.createElement("ellipse", {
+              a.a.createElement("ellipse", {
                 cx: "24",
                 cy: "15",
                 rx: "24",
@@ -2683,15 +2697,15 @@
           },
           function (e) {
             var t = e.style;
-            return m.a.createElement(
-              ce.animated.svg,
+            return a.a.createElement(
+              ae.animated.svg,
               {
                 viewBox: "0 0 48 30",
                 fill: "none",
                 xmlns: "http://www.w3.org/2000/svg",
-                style: Object(s.a)({ width: 10, height: 8 }, t),
+                style: Object(n.a)({ width: 10, height: 8 }, t),
               },
-              m.a.createElement("ellipse", {
+              a.a.createElement("ellipse", {
                 cx: "24",
                 cy: "15",
                 rx: "24",
@@ -2702,15 +2716,15 @@
           },
           function (e) {
             var t = e.style;
-            return m.a.createElement(
-              ce.animated.svg,
+            return a.a.createElement(
+              ae.animated.svg,
               {
                 viewBox: "0 0 48 30",
                 fill: "none",
                 xmlns: "http://www.w3.org/2000/svg",
-                style: Object(s.a)({ width: 10, height: 8 }, t),
+                style: Object(n.a)({ width: 10, height: 8 }, t),
               },
-              m.a.createElement("ellipse", {
+              a.a.createElement("ellipse", {
                 cx: "24",
                 cy: "15",
                 rx: "24",
@@ -2721,15 +2735,15 @@
           },
           function (e) {
             var t = e.style;
-            return m.a.createElement(
-              ce.animated.svg,
+            return a.a.createElement(
+              ae.animated.svg,
               {
                 viewBox: "0 0 48 39",
                 fill: "none",
                 xmlns: "http://www.w3.org/2000/svg",
-                style: Object(s.a)({ width: 10, height: 8 }, t),
+                style: Object(n.a)({ width: 10, height: 8 }, t),
               },
-              m.a.createElement("path", {
+              a.a.createElement("path", {
                 d:
                   "M33.8287 29.6914L24.9705 21.1201C23.199 24.5487 23.4612 24.5487 21.4282 27.9773C19.3952 31.4058 13.4557 29.6914 12.57 27.9773C7.25553 22.8344 10.7985 17.6914 12.57 15.9773C19.656 5.69155 36.5247 4.54869 48 5.69155C47.4095 4.54865 45.5199 1.92 42.6855 0.548571C39.1425 -1.16571 1.94169 0.548571 0.170191 14.2629C-1.60131 27.9771 10.7992 38.2629 21.4282 38.2629C29.9314 38.2629 33.2382 32.5486 33.8287 29.6914Z",
                 fill: t.fill,
@@ -2738,43 +2752,43 @@
           },
           function (e) {
             var t = e.style;
-            return m.a.createElement(
-              ce.animated.svg,
+            return a.a.createElement(
+              ae.animated.svg,
               {
                 width: "48",
                 height: "35",
                 viewBox: "0 0 48 35",
                 fill: "none",
                 xmlns: "http://www.w3.org/2000/svg",
-                style: Object(s.a)({ width: 10, height: 7 }, t),
+                style: Object(n.a)({ width: 10, height: 7 }, t),
               },
-              m.a.createElement("path", {
+              a.a.createElement("path", {
                 d: "M48 0H0L24 35L48 0Z",
                 fill: t.fill,
               })
             );
           },
         ],
-        ve = [
+        _e = [
           function (e) {
             var t = e.style;
-            return m.a.createElement(
-              ce.animated.svg,
+            return a.a.createElement(
+              ae.animated.svg,
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 viewBox: "0 0 54 47.18",
-                style: Object(s.a)({ width: 28, height: 28 }, t),
+                style: Object(n.a)({ width: 28, height: 28 }, t),
               },
-              m.a.createElement("polygon", {
+              a.a.createElement("polygon", {
                 fill: "#60000e",
                 points: "10.02 14.06 10.02 14.06 10.02 14.06 10.02 14.06",
               }),
-              m.a.createElement("path", {
+              a.a.createElement("path", {
                 fill: "#f93838",
                 d:
                   "M54,9.53A9.52,9.52,0,0,0,37.74,2.79a10.82,10.82,0,0,0-2.25,3.54,21.52,21.52,0,0,0-1.19,4.08A16.55,16.55,0,0,0,27,8.73h-.24a16.38,16.38,0,0,0-7,1.69,22.41,22.41,0,0,0-1.2-4.09,10.82,10.82,0,0,0-2.25-3.54A9.52,9.52,0,1,0,2.79,16.26h0a10.82,10.82,0,0,0,3.54,2.25,23.87,23.87,0,0,0,5,1.36,16.34,16.34,0,0,0-.94,5.48h0v0a16.57,16.57,0,0,0,4.92,11.81A7.36,7.36,0,0,1,17.05,40a10.5,10.5,0,0,0,10,7.15,10.38,10.38,0,0,0,6.17-2,10.57,10.57,0,0,0,3.77-5.11,7.48,7.48,0,0,1,1.79-2.89,16.66,16.66,0,0,0,4-17.3l.65-.12a22.44,22.44,0,0,0,4.31-1.24,10.82,10.82,0,0,0,3.54-2.25L50.9,16l.31.31A9.5,9.5,0,0,0,54,9.53ZM32.11,21.28a9.27,9.27,0,0,1,2.68-.38,9.06,9.06,0,0,1,2.87.44.44.44,0,0,1,.28.56.44.44,0,0,1-.56.27,8.4,8.4,0,0,0-2.59-.39,8.59,8.59,0,0,0-2.43.34h0a.44.44,0,1,1-.26-.84Zm-7.88,8.64a9.27,9.27,0,0,1,2.68-.38,9.06,9.06,0,0,1,2.87.44.44.44,0,0,1,.28.56.44.44,0,0,1-.56.27,8.35,8.35,0,0,0-2.59-.39,8.46,8.46,0,0,0-2.42.34h0a.44.44,0,1,1-.26-.84ZM24.31,33a.45.45,0,0,1,.54-.32l2.16.55,2.14-.55a.45.45,0,0,1,.54.32.44.44,0,0,1-.32.53l-2.25.58a.41.41,0,0,1-.22,0l-2.27-.58h0A.44.44,0,0,1,24.31,33ZM21.9,21.34a.44.44,0,0,1,.28.56.44.44,0,0,1-.56.27A8.35,8.35,0,0,0,19,21.78a8.46,8.46,0,0,0-2.42.34h0a.44.44,0,0,1-.26-.84A9.27,9.27,0,0,1,19,20.9,9.06,9.06,0,0,1,21.9,21.34Zm-1.6,8.08h0v0a.41.41,0,0,1,0-.1c0-.08-.06-.19-.12-.33a4.39,4.39,0,0,0-.47-.95,2.16,2.16,0,0,0-.43-.5,1.11,1.11,0,0,0-.24-.16.7.7,0,0,0-.25-.05.88.88,0,0,0-.29.05,1.82,1.82,0,0,0-.4.24,5,5,0,0,0-1.16,1.3.66.66,0,0,1-.92.17.65.65,0,0,1-.17-.91,7.44,7.44,0,0,1,1.1-1.32A3.45,3.45,0,0,1,18,26.13a2.21,2.21,0,0,1,.75-.14,2,2,0,0,1,.87.21,2.37,2.37,0,0,1,.66.49,4.41,4.41,0,0,1,.84,1.21,7.08,7.08,0,0,1,.3.72c.1.27.14.45.15.46h0a.67.67,0,0,1-.47.81A.66.66,0,0,1,20.3,29.42Zm12.19,8.86a4.18,4.18,0,0,1-.92.52,7.57,7.57,0,0,1-1.11,2.55A4.85,4.85,0,0,1,28.58,43a3.56,3.56,0,0,1-3.16,0,4.71,4.71,0,0,1-1.33-1,7.14,7.14,0,0,1-1.66-3.24,4.18,4.18,0,0,1-.92-.52.44.44,0,0,1-.1-.61.45.45,0,0,1,.62-.1,2.89,2.89,0,0,0,1.76.61,3,3,0,0,0,1.58-.47,4.28,4.28,0,0,0,1.26-1.31.43.43,0,0,1,.74,0,4.28,4.28,0,0,0,1.26,1.31,3,3,0,0,0,1.58.47A2.89,2.89,0,0,0,32,37.57h0a.45.45,0,0,1,.62.1A.44.44,0,0,1,32.49,38.28ZM38,29.07a.66.66,0,0,1-.92-.17,6.25,6.25,0,0,0-.9-1.09,2.25,2.25,0,0,0-.66-.45.88.88,0,0,0-.29-.05.58.58,0,0,0-.28.07,1,1,0,0,0-.31.23,3.29,3.29,0,0,0-.58.84c-.1.21-.19.42-.25.59s-.12.37-.13.38h0a.66.66,0,0,1-.8.47.67.67,0,0,1-.47-.81s.07-.25.2-.58a6.91,6.91,0,0,1,.59-1.2,3.66,3.66,0,0,1,.69-.79,2.3,2.3,0,0,1,.56-.35,1.82,1.82,0,0,1,.78-.17,2.21,2.21,0,0,1,.75.14,3,3,0,0,1,.73.41,6.6,6.6,0,0,1,1.46,1.62A.65.65,0,0,1,38,29.07Z",
               }),
-              m.a.createElement("path", {
+              a.a.createElement("path", {
                 fill: "#f93838",
                 d:
                   "M27,40.35c1.12,0,1.55-.37,1.89-1.53a4.17,4.17,0,0,1-.73-.37A5,5,0,0,1,27,37.39a5,5,0,0,1-1.16,1.06,4.17,4.17,0,0,1-.73.37C25.45,40,25.88,40.35,27,40.35Z",
@@ -2783,32 +2797,32 @@
           },
           function (e) {
             var t = e.style;
-            return m.a.createElement(
-              ce.animated.svg,
+            return a.a.createElement(
+              ae.animated.svg,
               {
                 version: "1.1",
                 xmlns: "http://www.w3.org/2000/svg",
                 x: "0px",
                 y: "0px",
                 viewBox: "0 0 14.5 22",
-                style: Object(s.a)({ width: 28, height: 28 }, t),
+                style: Object(n.a)({ width: 28, height: 28 }, t),
               },
-              m.a.createElement("path", {
+              a.a.createElement("path", {
                 fill: "#fc1010",
                 d:
                   "M1.6,10.1c0,0-0.1,0-0.4-0.1C1,10,0.8,9.9,0.8,9.9c-0.1,0-0.2-0.1-0.2-0.2c0-0.2,0.1-0.4,0.3-0.6v0L1,9c0.1-0.1,0.2-0.3,0.5-0.6C1.8,8.1,2,7.8,2.2,7.5c0-0.1,0.1-0.1,0.1-0.2s0.1-0.1,0.1-0.2C2.6,7,2.7,6.8,2.8,6.5c0-0.1,0.1-0.2,0.1-0.3C3,6.1,3,6,3,5.9c0-0.2-0.1-0.4-0.2-0.5C2.6,5.3,2.4,5.3,2.1,5.3c-0.2,0-0.4,0-0.6,0.1c-0.1,0-0.4,0.1-0.7,0.3c0,0,0,0,0,0c0,0,0-0.1,0-0.1c0-0.2,0-0.4-0.1-0.8l0-0.6l0-0.3l0-0.2V3.5l0.5-0.2C1.6,3.2,2,3.1,2.5,3c0.5-0.1,0.9-0.1,1.4-0.1c0.4,0,0.8,0,1.1,0.1c0.4,0.1,0.7,0.2,0.9,0.4c0.6,0.4,0.9,1,0.9,1.8c0,0.4-0.1,0.8-0.4,1.2C6.1,6.8,5.7,7.2,5.1,7.6h0.5h0.5c0.2,0,0.4,0,0.5,0c0.2,0.1,0.3,0.1,0.3,0.3c0,0.2,0,0.5,0,0.8V9v0.3c0,0.2,0,0.4-0.1,0.5C6.6,10,6.5,10,6.2,10c0,0-0.1,0-0.2,0c-0.1,0-0.4,0-0.9,0H4H3.6H3.1H2.6C1.9,10.1,1.6,10.1,1.6,10.1z",
               }),
-              m.a.createElement("path", {
+              a.a.createElement("path", {
                 fill: "#fc1010",
                 d:
                   "M9.8,10.3c-0.1,0-0.2,0-0.3,0l-0.6-0.1c0,0-0.1,0-0.1-0.1c0,0-0.1,0-0.1,0c0,0,0,0-0.1,0c0,0,0,0,0-0.1c-0.1,0-0.2-0.1-0.3-0.1C8.1,9.8,8,9.8,8,9.7L7.8,9.6c-0.1,0-0.1-0.1-0.2-0.1C7.4,9.3,7.2,9,7.1,8.6C7,8.3,6.9,8,6.9,7.6c0-0.2,0-0.6,0-0.9c0-0.5,0-0.8,0.1-1.1c0-0.3,0.1-0.7,0.3-1.1c0.1,0,0.1-0.2,0.3-0.5c0,0,0.1-0.1,0.1-0.1s0-0.1,0.1-0.1c0,0,0,0,0-0.1s0-0.1,0.1-0.1c0.1,0,0.2-0.1,0.3-0.2c0,0,0.1-0.1,0.2-0.1c0.1-0.1,0.1-0.1,0.2-0.1C8.5,3.1,8.8,3,9.1,2.9c0.1,0,0.1,0,0.2,0c0.1,0,0.2,0,0.2,0c0.1,0,0.2,0,0.3,0c0.1,0,0.1,0,0.2,0c0.5,0,0.9,0,1.3,0.1c0.3,0,0.7,0.1,1.1,0.2c0,0,0.1,0,0.1,0c0.3,0.1,0.5,0.2,0.6,0.2c0.1,0,0.1,0.1,0.1,0.1v0.1c0.1,0,0.2,0,0.3,0.1s0.2,0.2,0.3,0.3c0.1,0.1,0.2,0.2,0.2,0.4c0,0.1,0.1,0.2,0.1,0.3c0.1,0,0.1,0,0.1,0s0,0,0,0.1c0,0.2,0.1,0.4,0.1,0.5c0,0.1,0,0.1,0.1,0.2c0,0.1,0,0.2,0.1,0.3l0,0.1l0,0.4v0.3c0,0.6,0,1.1-0.1,1.4C14.2,8.6,14,9,13.7,9.3c-0.1,0.1-0.3,0.2-0.4,0.3l-0.4,0.3c-0.2,0.1-0.4,0.1-0.5,0.2l-0.5,0.2c-0.3,0-0.6,0-0.9,0.1c-0.3,0-0.6,0.1-0.9,0.1C9.9,10.3,9.9,10.3,9.8,10.3z M11.2,8.3c0-0.1,0.1-0.2,0.1-0.3c0-0.1,0-0.2,0-0.2l0-0.3c0-0.2,0-0.5,0-0.7c0-0.1,0-0.2,0-0.3c0-0.2,0-0.4-0.1-0.6c0-0.2-0.1-0.3-0.1-0.5c0-0.2-0.1-0.3-0.1-0.3c0-0.1,0-0.3-0.1-0.3c-0.1-0.1-0.1-0.1-0.3-0.1c-0.2,0-0.4,0.1-0.5,0.4c0,0.1-0.1,0.2-0.1,0.3c0,0,0,0.2,0,0.3L10,6.2C9.9,6.4,9.9,6.6,9.9,6.8c0,0.3,0,0.5,0.1,0.8c0,0.1,0,0.2,0.1,0.4s0.1,0.2,0.1,0.3c0,0.1,0.1,0.2,0.2,0.2c0,0,0.1,0.1,0.1,0.1c0,0,0.1,0,0.1,0C10.9,8.6,11.1,8.5,11.2,8.3z",
               }),
-              m.a.createElement("path", {
+              a.a.createElement("path", {
                 fill: "#fc1010",
                 d:
                   "M1.6,17.5c0,0-0.1,0-0.4-0.1c-0.2,0-0.4-0.1-0.4-0.1c-0.1,0-0.2-0.1-0.2-0.2c0-0.2,0.1-0.4,0.3-0.6v0L1,16.4c0.1-0.1,0.2-0.3,0.5-0.6c0.2-0.2,0.4-0.5,0.7-0.9c0-0.1,0.1-0.1,0.1-0.2s0.1-0.1,0.1-0.2c0.1-0.1,0.2-0.3,0.3-0.6c0-0.1,0.1-0.2,0.1-0.3C3,13.5,3,13.4,3,13.3c0-0.2-0.1-0.4-0.2-0.5c-0.1-0.1-0.4-0.1-0.7-0.1c-0.2,0-0.4,0-0.6,0.1c-0.1,0-0.4,0.1-0.7,0.3c0,0,0,0,0,0c0,0,0-0.1,0-0.1c0-0.2,0-0.4-0.1-0.8l0-0.6l0-0.3l0-0.2v-0.1l0.5-0.2c0.4-0.1,0.9-0.2,1.3-0.3c0.5-0.1,0.9-0.1,1.4-0.1c0.4,0,0.8,0,1.1,0.1c0.4,0.1,0.7,0.2,0.9,0.4c0.6,0.4,0.9,1,0.9,1.8c0,0.4-0.1,0.8-0.4,1.2c-0.3,0.4-0.7,0.8-1.3,1.2h0.5h0.5c0.2,0,0.4,0,0.5,0c0.2,0.1,0.3,0.1,0.3,0.3c0,0.2,0,0.5,0,0.8v0.3v0.3c0,0.2,0,0.4-0.1,0.5c-0.1,0.1-0.3,0.2-0.5,0.2c0,0-0.1,0-0.2,0c-0.1,0-0.4,0-0.9,0H4H3.6H3.1H2.6C1.9,17.5,1.6,17.5,1.6,17.5z",
               }),
-              m.a.createElement("path", {
+              a.a.createElement("path", {
                 fill: "#fc1010",
                 d:
                   "M9.8,17.7c-0.1,0-0.2,0-0.3,0l-0.6-0.1c0,0-0.1,0-0.1-0.1c0,0-0.1,0-0.1,0c0,0,0,0-0.1,0c0,0,0,0,0-0.1c-0.1,0-0.2-0.1-0.3-0.1c-0.1,0-0.2-0.1-0.3-0.1L7.8,17c-0.1,0-0.1-0.1-0.2-0.1c-0.2-0.2-0.4-0.5-0.5-0.9C7,15.7,6.9,15.4,6.9,15c0-0.2,0-0.6,0-0.9c0-0.5,0-0.8,0.1-1.1c0-0.3,0.1-0.7,0.3-1.1c0.1,0,0.1-0.2,0.3-0.5c0,0,0.1-0.1,0.1-0.1s0-0.1,0.1-0.1c0,0,0,0,0-0.1s0-0.1,0.1-0.1c0.1,0,0.2-0.1,0.3-0.2c0,0,0.1-0.1,0.2-0.1c0.1-0.1,0.1-0.1,0.2-0.1c0.2-0.1,0.5-0.2,0.8-0.3c0.1,0,0.1,0,0.2,0c0.1,0,0.2,0,0.2,0c0.1,0,0.2,0,0.3,0c0.1,0,0.1,0,0.2,0c0.5,0,0.9,0,1.3,0.1c0.3,0,0.7,0.1,1.1,0.2c0,0,0.1,0,0.1,0c0.3,0.1,0.5,0.2,0.6,0.2c0.1,0,0.1,0.1,0.1,0.1v0.1c0.1,0,0.2,0,0.3,0.1s0.2,0.2,0.3,0.3c0.1,0.1,0.2,0.2,0.2,0.4c0,0.1,0.1,0.2,0.1,0.3c0.1,0,0.1,0,0.1,0s0,0,0,0.1c0,0.2,0.1,0.4,0.1,0.5c0,0.1,0,0.1,0.1,0.2c0,0.1,0,0.2,0.1,0.3l0,0.1l0,0.4v0.3c0,0.6,0,1.1-0.1,1.4c-0.1,0.5-0.3,0.9-0.7,1.2c-0.1,0.1-0.3,0.2-0.4,0.3l-0.4,0.3c-0.2,0.1-0.4,0.1-0.5,0.2l-0.5,0.2c-0.3,0-0.6,0-0.9,0.1c-0.3,0-0.6,0.1-0.9,0.1C9.9,17.7,9.9,17.7,9.8,17.7z M11.2,15.7c0-0.1,0.1-0.2,0.1-0.3c0-0.1,0-0.2,0-0.2l0-0.3c0-0.2,0-0.5,0-0.7c0-0.1,0-0.2,0-0.3c0-0.2,0-0.4-0.1-0.6c0-0.2-0.1-0.3-0.1-0.5c0-0.2-0.1-0.3-0.1-0.3c0-0.1,0-0.3-0.1-0.3C10.9,12,10.8,12,10.7,12c-0.2,0-0.4,0.1-0.5,0.4c0,0.1-0.1,0.2-0.1,0.3c0,0,0,0.2,0,0.3L10,13.6c-0.1,0.2-0.1,0.4-0.1,0.6c0,0.3,0,0.5,0.1,0.8c0,0.1,0,0.2,0.1,0.4s0.1,0.2,0.1,0.3c0,0.1,0.1,0.2,0.2,0.2c0,0,0.1,0.1,0.1,0.1c0,0,0.1,0,0.1,0C10.9,16,11.1,15.9,11.2,15.7z",
@@ -2816,631 +2830,626 @@
             );
           },
         ];
-      var Be,
-        Re,
-        Me = r("Mgs7");
+      var ge,
+        ve = r("Mgs7");
       r("idvb");
-      ((Re = Be = Be || {})[(Re.SELECTING = 0)] = "SELECTING"),
-        (Re[(Re.CONFIRM = 1)] = "CONFIRM"),
-        (Re[(Re.SUBMITTING = 2)] = "SUBMITTING"),
-        (Re[(Re.DONE = 3)] = "DONE"),
-        (Re[(Re.ERROR = 4)] = "ERROR");
-      function Ce(e) {
-        return j.createElement(
-          "svg",
-          Object(s.a)(
-            {
-              viewBox: "0 0 24 24",
-              fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
-            },
-            e
-          ),
-          j.createElement("path", {
-            fill: "currentColor",
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            d:
-              "M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24ZM10.9577 17.254L18.8038 10.0384L16.773 7.83022L10.0706 13.9941L7.71092 11.2399L5.43271 13.1918L8.80323 17.1259C9.06802 17.4349 9.44701 17.6231 9.85327 17.6473C10.2595 17.6715 10.6582 17.5295 10.9577 17.254Z",
-          })
-        );
-      }
-      var Oe = (function (r) {
-        function e(e) {
-          var t = r.call(this, e) || this;
-          return (t.state = { bHovered: !1 }), t;
-        }
-        return (
-          Object(s.d)(e, r),
-          (e.prototype.handleMouseOver = function (e) {
-            this.setState({ bHovered: !0 });
-          }),
-          (e.prototype.handleMouseOut = function () {
-            this.setState({ bHovered: !1 });
-          }),
-          (e.prototype.render = function () {
-            var e,
-              t,
-              r =
-                ((e = this.props.reactionType),
-                (t =
-                  !this.props.bDisableAnimation &&
-                  (this.state.bHovered || this.props.bForceAnimated)),
-                L.c.STORE_CDN_URL +
-                  "public/images/loyalty/reactions/" +
-                  (t ? "animated" : "still") +
-                  "/" +
-                  e +
-                  ".png");
-            return j.createElement("img", {
-              className: this.props.className,
-              src: r,
-              onMouseEnter: this.handleMouseOver,
-              onMouseLeave: this.handleMouseOut,
-            });
-          }),
-          Object(s.c)([i.a], e.prototype, "handleMouseOver", null),
-          Object(s.c)([i.a], e.prototype, "handleMouseOut", null),
-          e
-        );
-      })(j.PureComponent);
-      var je = (function (t) {
-          function e(e) {
-            var a = t.call(this, e) || this;
+      !(function (e) {
+        (e[(e.SELECTING = 0)] = "SELECTING"),
+          (e[(e.CONFIRM = 1)] = "CONFIRM"),
+          (e[(e.SUBMITTING = 2)] = "SUBMITTING"),
+          (e[(e.DONE = 3)] = "DONE"),
+          (e[(e.ERROR = 4)] = "ERROR");
+      })(ge || (ge = {}));
+      var Be = function (e) {
+          return i.createElement(
+            "svg",
+            Object(n.a)(
+              {
+                viewBox: "0 0 24 24",
+                fill: "none",
+                xmlns: "http://www.w3.org/2000/svg",
+              },
+              e
+            ),
+            i.createElement("path", {
+              fill: "currentColor",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              d:
+                "M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24ZM10.9577 17.254L18.8038 10.0384L16.773 7.83022L10.0706 13.9941L7.71092 11.2399L5.43271 13.1918L8.80323 17.1259C9.06802 17.4349 9.44701 17.6231 9.85327 17.6473C10.2595 17.6715 10.6582 17.5295 10.9577 17.254Z",
+            })
+          );
+        },
+        Re = (function (e) {
+          function t(t) {
+            var r = e.call(this, t) || this;
+            return (r.state = { bHovered: !1 }), r;
+          }
+          return (
+            Object(n.d)(t, e),
+            (t.prototype.handleMouseOver = function (e) {
+              this.setState({ bHovered: !0 });
+            }),
+            (t.prototype.handleMouseOut = function () {
+              this.setState({ bHovered: !1 });
+            }),
+            (t.prototype.render = function () {
+              var e,
+                t,
+                r =
+                  ((e = this.props.reactionType),
+                  (t =
+                    !this.props.bDisableAnimation &&
+                    (this.state.bHovered || this.props.bForceAnimated)),
+                  d.c.STORE_CDN_URL +
+                    "public/images/loyalty/reactions/" +
+                    (t ? "animated" : "still") +
+                    "/" +
+                    e +
+                    ".png");
+              return i.createElement("img", {
+                className: this.props.className,
+                src: r,
+                onMouseEnter: this.handleMouseOver,
+                onMouseLeave: this.handleMouseOut,
+              });
+            }),
+            Object(n.c)([u.a], t.prototype, "handleMouseOver", null),
+            Object(n.c)([u.a], t.prototype, "handleMouseOut", null),
+            t
+          );
+        })(i.PureComponent);
+      var Me = (function (e) {
+          function t(t) {
+            var r = e.call(this, t) || this;
             return (
-              (a.state = { targetType: e.targetType }),
-              a.Init(e.serviceTransport),
-              (window.fnLoyalty_ShowAwardModal = function (e, t, r, n, i) {
-                (i = i || 0),
-                  a.setState({
+              (r.state = { targetType: t.targetType }),
+              r.Init(t.serviceTransport),
+              (window.fnLoyalty_ShowAwardModal = function (e, t, n, i, a) {
+                a || (a = 0),
+                  r.setState({
                     bShowModal: !0,
-                    fnSuccessFunc: r,
+                    fnSuccessFunc: n,
                     targetid: e,
-                    ugcType: n,
-                    initialSelectedReaction: i,
+                    ugcType: i,
+                    initialSelectedReaction: a,
                     targetType: t,
                   });
               }),
-              (a.state = {}),
-              a
+              (r.state = {}),
+              r
             );
           }
-          var l;
+          var r;
           return (
-            Object(s.d)(e, t),
-            ((l = e).prototype.Init = function (e) {
-              var t, r;
-              l.s_LoyaltyAwardModalStore ||
-                (e
-                  ? (l.s_LoyaltyAwardModalStore = new ee(e))
-                  : ((t = Object(L.g)("loyaltystore", "application_config")),
-                    (r = new a.a(L.c.WEBAPI_BASE_URL, t.webapi_token)),
-                    (l.s_LoyaltyAwardModalStore = new ee(
-                      r.GetServiceTransport()
-                    ))));
+            Object(n.d)(t, e),
+            (r = t),
+            (t.prototype.Init = function (e) {
+              if (!r.s_LoyaltyAwardModalStore)
+                if (e) r.s_LoyaltyAwardModalStore = new J(e);
+                else {
+                  var t = Object(d.g)("loyaltystore", "application_config"),
+                    n = new m.a(d.c.WEBAPI_BASE_URL, t.webapi_token);
+                  r.s_LoyaltyAwardModalStore = new J(n.GetServiceTransport());
+                }
             }),
-            (e.prototype.render = function () {
+            (t.prototype.render = function () {
               var e = this,
                 t = this.state,
-                r = t.bShowModal,
-                n = t.targetType,
-                i = t.fnSuccessFunc,
-                a = t.targetid,
-                o = t.ugcType,
-                s = t.initialSelectedReaction,
-                c = l.s_LoyaltyAwardModalStore;
-              if (!r) return null;
-              c.GetAwardConfigurations();
-              return j.createElement(ze, {
-                key: a,
-                targetid: a,
-                active: r,
-                targetType: n,
-                ugcType: o,
+                n = t.bShowModal,
+                a = t.targetType,
+                o = t.fnSuccessFunc,
+                s = t.targetid,
+                c = t.ugcType,
+                l = t.initialSelectedReaction,
+                u = r.s_LoyaltyAwardModalStore;
+              if (!n) return null;
+              u.GetAwardConfigurations();
+              return i.createElement(Ce, {
+                key: s,
+                targetid: s,
+                active: n,
+                targetType: a,
+                ugcType: c,
                 onDismiss: function () {
                   return e.setState({ bShowModal: !1 });
                 },
-                onSuccess: i,
-                store: l.s_LoyaltyAwardModalStore,
-                initialSelectedReaction: s,
+                onSuccess: o,
+                store: r.s_LoyaltyAwardModalStore,
+                initialSelectedReaction: l,
               });
             }),
-            (e.defaultProps = { targetType: 1 }),
-            (e = l = Object(s.c)([n.a], e))
+            (t.defaultProps = { targetType: 1 }),
+            (t = r = Object(n.c)([o.a], t))
           );
-        })(j.Component),
-        ze =
-          ((t.a = je),
-          j.Component,
-          (function (r) {
-            function e(e) {
-              var t = r.call(this, e) || this;
+        })(i.Component),
+        Ce =
+          ((t.a = Me),
+          i.Component,
+          (function (e) {
+            function t(t) {
+              var r = e.call(this, t) || this;
               return (
-                e.store.SetTarget(e.targetid, e.targetType),
-                (t.state = {
-                  selectedReaction: e.initialSelectedReaction || 0,
-                  ePhase: Be.SELECTING,
+                t.store.SetTarget(t.targetid, t.targetType),
+                (r.state = {
+                  selectedReaction: t.initialSelectedReaction || 0,
+                  ePhase: ge.SELECTING,
                 }),
-                t
+                r
               );
             }
             return (
-              Object(s.d)(e, r),
-              (e.prototype.render = function () {
-                var t = this,
-                  e = this.props,
-                  r = e.active,
-                  n = e.targetType,
-                  i = e.ugcType,
-                  a = e.store,
-                  o = e.onDismiss,
-                  s = this.state,
-                  c = s.selectedReaction,
-                  l = s.ePhase,
-                  u = s.celebrate;
+              Object(n.d)(t, e),
+              (t.prototype.render = function () {
+                var e = this,
+                  t = this.props,
+                  r = t.active,
+                  n = t.targetType,
+                  a = t.ugcType,
+                  o = t.store,
+                  u = t.onDismiss,
+                  m = this.state,
+                  f = m.selectedReaction,
+                  b = m.ePhase,
+                  y = m.celebrate;
                 if (!r) return null;
-                var d,
-                  m,
-                  f,
-                  b = a.GetExistingReactions(),
-                  y = a.GetAwardConfigurations(),
-                  p = a.GetUserPointBalance(),
-                  w =
-                    ((d = n),
-                    (m = i),
-                    (f = []),
-                    y.forEach(function (e) {
-                      if (e.valid_target_types.includes(d))
-                        switch (d) {
-                          case 1:
-                            f.push(e.reactionid);
-                            break;
-                          case 2:
-                            e.valid_ugc_types.includes(m) &&
-                              f.push(e.reactionid);
-                            break;
-                          case 3:
-                          case 4:
-                          case 5:
-                            f.push(e.reactionid);
-                        }
-                    }),
-                    f),
-                  h = 0 === c ? null : y.get(c),
-                  _ = h ? h.points_cost : 0,
-                  g = h ? h.points_transferred : 0,
-                  v = "";
+                var p,
+                  w = o.GetExistingReactions(),
+                  h = o.GetAwardConfigurations(),
+                  _ = o.GetUserPointBalance(),
+                  g = (function (e, t, r) {
+                    var n = [];
+                    return (
+                      e.forEach(function (e) {
+                        if (e.valid_target_types.includes(t))
+                          switch (t) {
+                            case 1:
+                              n.push(e.reactionid);
+                              break;
+                            case 2:
+                              e.valid_ugc_types.includes(r) &&
+                                n.push(e.reactionid);
+                              break;
+                            case 3:
+                            case 4:
+                            case 5:
+                              n.push(e.reactionid);
+                          }
+                      }),
+                      n
+                    );
+                  })(h, n, a),
+                  v = 0 === f ? null : h.get(f),
+                  B = v ? v.points_cost : 0,
+                  R = v ? v.points_transferred : 0,
+                  M = "";
                 switch (n) {
                   case 1:
-                    v = Object(S.f)("#GrantAwardDescription_Review");
+                    M = Object(l.f)("#GrantAwardDescription_Review");
                     break;
                   case 2:
-                    v = Object(S.f)("#GrantAwardDescription_UGC");
+                    M = Object(l.f)("#GrantAwardDescription_UGC");
                     break;
                   case 3:
-                    v = Object(S.f)("#GrantAwardDescription_Profile");
+                    M = Object(l.f)("#GrantAwardDescription_Profile");
                     break;
                   case 4:
-                    v = Object(S.f)("#GrantAwardDescription_ForumTopic");
+                    M = Object(l.f)("#GrantAwardDescription_ForumTopic");
                     break;
                   case 5:
-                    v = Object(S.f)("#GrantAwardDescription_Comment");
+                    M = Object(l.f)("#GrantAwardDescription_Comment");
                 }
-                switch (l) {
-                  case Be.SELECTING:
-                    var B = 0 === c || b.get(c),
-                      R = !p || p.greaterThanOrEqual(_),
-                      M = j.createElement(
-                        Me.r,
+                switch (b) {
+                  case ge.SELECTING:
+                    var C = 0 === f || w.get(f),
+                      O = !_ || _.greaterThanOrEqual(B),
+                      j = i.createElement(
+                        ve.r,
                         {
                           onClick: function () {
-                            return t.setState({ ePhase: Be.CONFIRM });
+                            return e.setState({ ePhase: ge.CONFIRM });
                           },
-                          disabled: B,
-                          title: Object(S.f)(
-                            B
+                          disabled: C,
+                          title: Object(l.f)(
+                            C
                               ? "#GrantAward_PromptTooltip"
                               : "#GrantAward_SubmitTooltip"
                           ),
                         },
-                        Object(S.f)(
-                          B ? "#GrantAward_SelectAward" : "#GrantAward_Next"
-                        )
-                      ),
-                      C = j.createElement(
-                        j.Fragment,
-                        null,
-                        j.createElement(Ee, { description: v }),
-                        j.createElement(Le, null),
-                        j.createElement(
-                          "div",
-                          { className: E.ButtonContainer },
-                          w.map(function (e) {
-                            return j.createElement(Fe, {
-                              key: e,
-                              reaction: e,
-                              selected: e === c && !b.get(e),
-                              cost: y.get(e).points_cost,
-                              alreadyAwarded: b.get(e),
-                              onClick: function () {
-                                b.get(e) ||
-                                  t.setState({
-                                    selectedReaction: e === c ? 0 : e,
-                                  });
-                              },
-                            });
-                          })
-                        ),
-                        j.createElement(Le, null),
-                        j.createElement(
-                          Se,
-                          { store: a },
-                          B || R
-                            ? M
-                            : [
-                                j.createElement(
-                                  "div",
-                                  { key: "msg", className: E.NotEnoughPoints },
-                                  Object(S.f)(
-                                    "#GrantAward_CantAfford",
-                                    p
-                                      .negate()
-                                      .add(_)
-                                      .toNumber()
-                                      .toLocaleString()
-                                  )
-                                ),
-                                j.createElement(
-                                  "a",
-                                  {
-                                    key: "button",
-                                    href:
-                                      L.c.STORE_BASE_URL + "points/howitworks",
-                                  },
-                                  j.createElement(
-                                    Me.d,
-                                    { key: "button" },
-                                    Object(S.f)("#GrantAward_HowToGetPoints")
-                                  )
-                                ),
-                              ]
+                        Object(l.f)(
+                          C ? "#GrantAward_SelectAward" : "#GrantAward_Next"
                         )
                       );
-                    break;
-                  case Be.CONFIRM:
-                  case Be.SUBMITTING:
-                  case Be.DONE:
-                    C = j.createElement(
-                      j.Fragment,
+                    p = i.createElement(
+                      i.Fragment,
                       null,
-                      j.createElement(Ee, { description: v }),
-                      j.createElement(Le, null),
-                      j.createElement(
+                      i.createElement(Oe, { description: M }),
+                      i.createElement(ze, null),
+                      i.createElement(
+                        "div",
+                        { className: c.ButtonContainer },
+                        g.map(function (t) {
+                          return i.createElement(Ee, {
+                            key: t,
+                            reaction: t,
+                            selected: t === f && !w.get(t),
+                            cost: h.get(t).points_cost,
+                            alreadyAwarded: w.get(t),
+                            onClick: function () {
+                              w.get(t) ||
+                                e.setState({
+                                  selectedReaction: t === f ? 0 : t,
+                                });
+                            },
+                          });
+                        })
+                      ),
+                      i.createElement(ze, null),
+                      i.createElement(
+                        je,
+                        { store: o },
+                        C || O
+                          ? j
+                          : [
+                              i.createElement(
+                                "div",
+                                { key: "msg", className: c.NotEnoughPoints },
+                                Object(l.f)(
+                                  "#GrantAward_CantAfford",
+                                  _.negate().add(B).toNumber().toLocaleString()
+                                )
+                              ),
+                              i.createElement(
+                                "a",
+                                {
+                                  key: "button",
+                                  href:
+                                    d.c.STORE_BASE_URL + "points/howitworks",
+                                },
+                                i.createElement(
+                                  ve.d,
+                                  { key: "button" },
+                                  Object(l.f)("#GrantAward_HowToGetPoints")
+                                )
+                              ),
+                            ]
+                      )
+                    );
+                    break;
+                  case ge.CONFIRM:
+                  case ge.SUBMITTING:
+                  case ge.DONE:
+                    p = i.createElement(
+                      i.Fragment,
+                      null,
+                      i.createElement(Oe, { description: M }),
+                      i.createElement(ze, null),
+                      i.createElement(
                         "div",
                         { style: { position: "relative" } },
-                        j.createElement(
+                        i.createElement(
                           "div",
                           {
-                            className: Object(te.a)(
-                              E.ConfirmContainer,
-                              l === Be.CONFIRM && E.Visible
+                            className: Object(X.a)(
+                              c.ConfirmContainer,
+                              b === ge.CONFIRM && c.Visible
                             ),
                           },
-                          j.createElement(Oe, {
-                            className: E.ConfirmAwardImage,
-                            reactionType: c,
+                          i.createElement(Re, {
+                            className: c.ConfirmAwardImage,
+                            reactionType: f,
                           }),
-                          j.createElement(
+                          i.createElement(
                             "div",
-                            { className: E.ConfirmText },
-                            Object(S.n)(
+                            { className: c.ConfirmText },
+                            Object(l.n)(
                               "#GrantAward_Confirm",
-                              j.createElement(Ae, null, _.toLocaleString()),
-                              j.createElement(
+                              i.createElement(Le, null, B.toLocaleString()),
+                              i.createElement(
                                 "span",
-                                { className: E.AwardName },
-                                ae(c)
+                                { className: c.AwardName },
+                                ne(f)
                               )
                             )
                           ),
-                          j.createElement(
+                          i.createElement(
                             "div",
-                            { className: E.ConfirmText },
-                            Object(S.n)(
+                            { className: c.ConfirmText },
+                            Object(l.n)(
                               "#GrantAward_Confirm_Details",
-                              j.createElement(Ae, null, g.toLocaleString()),
-                              j.createElement(
+                              i.createElement(Le, null, R.toLocaleString()),
+                              i.createElement(
                                 "span",
-                                { className: E.TimePeriod },
-                                Object(S.f)(
+                                { className: c.TimePeriod },
+                                Object(l.f)(
                                   "#GrantAward_Confirm_DetailsTimePeriod"
                                 )
                               )
                             )
                           )
                         ),
-                        j.createElement(
+                        i.createElement(
                           "div",
                           {
-                            className: Object(te.a)(
-                              E.LoadingContainer,
-                              l === Be.SUBMITTING && E.Visible
+                            className: Object(X.a)(
+                              c.LoadingContainer,
+                              b === ge.SUBMITTING && c.Visible
                             ),
                           },
-                          j.createElement(Te, null)
+                          i.createElement(Se, null)
                         ),
-                        j.createElement(
+                        i.createElement(
                           "div",
                           {
-                            className: Object(te.a)(
-                              E.SuccessContainer,
-                              l === Be.DONE && E.Visible
+                            className: Object(X.a)(
+                              c.SuccessContainer,
+                              b === ge.DONE && c.Visible
                             ),
                           },
-                          j.createElement(Oe, {
-                            className: E.ConfirmAwardImage,
-                            reactionType: c,
+                          i.createElement(Re, {
+                            className: c.ConfirmAwardImage,
+                            reactionType: f,
                           }),
-                          j.createElement(
+                          i.createElement(
                             "div",
-                            { className: E.SuccessText },
-                            Object(S.f)("#GrantAward_Success")
+                            { className: c.SuccessText },
+                            Object(l.f)("#GrantAward_Success")
                           )
                         )
                       ),
-                      j.createElement(Le, null),
-                      j.createElement(
-                        Se,
-                        { store: a },
-                        j.createElement(
-                          Me.d,
+                      i.createElement(ze, null),
+                      i.createElement(
+                        je,
+                        { store: o },
+                        i.createElement(
+                          ve.d,
                           {
                             onClick: function () {
-                              return t.setState({ ePhase: Be.SELECTING });
+                              return e.setState({ ePhase: ge.SELECTING });
                             },
-                            disabled: l !== Be.CONFIRM,
+                            disabled: b !== ge.CONFIRM,
                           },
-                          Object(S.f)("#GrantAward_Back")
+                          Object(l.f)("#GrantAward_Back")
                         ),
-                        j.createElement(
-                          Me.r,
+                        i.createElement(
+                          ve.r,
                           {
                             onClick: this.GrantAward,
-                            title: Object(S.f)("#GrantAward_SubmitTooltip"),
-                            disabled: l !== Be.CONFIRM,
+                            title: Object(l.f)("#GrantAward_SubmitTooltip"),
+                            disabled: b !== ge.CONFIRM,
                           },
-                          Object(S.f)("#GrantAwardNowButton")
+                          Object(l.f)("#GrantAwardNowButton")
                         )
                       )
                     );
                     break;
-                  case Be.ERROR:
-                    var O = "";
+                  case ge.ERROR:
+                    var z = "";
                     switch (this.state.eResult) {
                       case 10:
-                        O = Object(S.f)("#GrantAwardError_Busy");
+                        z = Object(l.f)("#GrantAwardError_Busy");
                         break;
                       case 32:
-                        O = Object(S.f)("#GrantAwardError_PersistFailed");
+                        z = Object(l.f)("#GrantAwardError_PersistFailed");
                         break;
                       case 8:
-                        O = Object(S.f)("#GrantAwardError_InvalidParam");
+                        z = Object(l.f)("#GrantAwardError_InvalidParam");
                         break;
                       case 42:
-                        O = Object(S.f)("#GrantAwardError_NoMatch");
+                        z = Object(l.f)("#GrantAwardError_NoMatch");
                         break;
                       case 107:
-                        O = Object(S.f)("#GrantAwardError_InsufficientFunds");
+                        z = Object(l.f)("#GrantAwardError_InsufficientFunds");
                         break;
                       case 15:
-                        O = Object(S.f)("#GrantAwardError_AccessDenied");
+                        z = Object(l.f)("#GrantAwardError_AccessDenied");
                         break;
                       case 21:
-                        O = Object(S.f)("#GrantAwardError_NotLoggedOn");
+                        z = Object(l.f)("#GrantAwardError_NotLoggedOn");
                         break;
                       default:
-                        O = Object(S.f)("#GrantAwardError_Fail");
+                        z = Object(l.f)("#GrantAwardError_Fail");
                     }
-                    C = j.createElement(
-                      j.Fragment,
+                    p = i.createElement(
+                      i.Fragment,
                       null,
-                      j.createElement(Ee, { description: v }),
-                      j.createElement(Le, null),
-                      j.createElement(
+                      i.createElement(Oe, { description: M }),
+                      i.createElement(ze, null),
+                      i.createElement(
                         "div",
                         { style: { position: "relative" } },
-                        j.createElement(
+                        i.createElement(
                           "div",
-                          { className: E.ErrorContainer },
-                          j.createElement("div", { className: E.ErrorText }, O)
+                          { className: c.ErrorContainer },
+                          i.createElement("div", { className: c.ErrorText }, z)
                         )
                       ),
-                      j.createElement(Le, null),
-                      j.createElement(
-                        Se,
-                        { store: a },
-                        j.createElement(
-                          Me.d,
+                      i.createElement(ze, null),
+                      i.createElement(
+                        je,
+                        { store: o },
+                        i.createElement(
+                          ve.d,
                           {
                             onClick: function () {
-                              return t.setState({ ePhase: Be.SELECTING });
+                              return e.setState({ ePhase: ge.SELECTING });
                             },
                           },
-                          Object(S.f)("#GrantAward_Back")
+                          Object(l.f)("#GrantAward_Back")
                         )
                       )
                     );
                 }
-                return j.createElement(
-                  z.b,
-                  { className: E.GrantAwardModal, active: r, onDismiss: o },
-                  u && j.createElement(me, { eType: oe.Default }),
-                  C
+                return i.createElement(
+                  s.b,
+                  { className: c.GrantAwardModal, active: r, onDismiss: u },
+                  y && i.createElement(me, { eType: ie.Default }),
+                  p
                 );
               }),
-              (e.prototype.GrantAward = function () {
-                var r = this,
-                  e = this.props,
-                  n = e.targetid,
-                  t = e.store,
-                  i = e.onSuccess,
+              (t.prototype.GrantAward = function () {
+                var e = this,
+                  t = this.props,
+                  r = t.targetid,
+                  n = t.store,
+                  i = t.onSuccess,
                   a = this.state.selectedReaction;
                 null !== a &&
                   0 != a &&
-                  (this.setState({ ePhase: Be.SUBMITTING }),
-                  t.AddReaction(a).then(function (e) {
-                    var t = e.eResult;
-                    e.strMessage;
-                    1 == t
-                      ? r.setState(
-                          { ePhase: Be.DONE, celebrate: !0 },
+                  (this.setState({ ePhase: ge.SUBMITTING }),
+                  n.AddReaction(a).then(function (t) {
+                    var n = t.eResult;
+                    t.strMessage;
+                    1 == n
+                      ? e.setState(
+                          { ePhase: ge.DONE, celebrate: !0 },
                           function () {
                             return setTimeout(function () {
-                              i && i(n, a);
+                              i && i(r, a);
                             }, 2e3);
                           }
                         )
-                      : r.setState({ ePhase: Be.ERROR, eResult: t });
+                      : e.setState({ ePhase: ge.ERROR, eResult: n });
                   }));
               }),
-              Object(s.c)([i.a], e.prototype, "GrantAward", null),
-              (e = Object(s.c)([n.a], e))
+              Object(n.c)([u.a], t.prototype, "GrantAward", null),
+              (t = Object(n.c)([o.a], t))
             );
-          })(j.Component)),
-        Ee = function (e) {
+          })(i.Component)),
+        Oe = function (e) {
           var t = e.description;
-          return j.createElement(
+          return i.createElement(
             "div",
-            { className: E.Header },
-            j.createElement(
+            { className: c.Header },
+            i.createElement(
               "div",
-              { className: E.Title },
-              Object(S.f)("#GrantAwardTitle")
+              { className: c.Title },
+              Object(l.f)("#GrantAwardTitle")
             ),
-            j.createElement("div", { className: E.Description }, t)
+            i.createElement("div", { className: c.Description }, t)
           );
         },
-        Se = Object(n.a)(function (e) {
+        je = Object(o.a)(function (e) {
           var t = e.store,
             r = e.children,
             n = t.GetUserPointBalance(),
-            i = n && n.toNumber().toLocaleString();
-          return j.createElement(
+            a = n && n.toNumber().toLocaleString();
+          return i.createElement(
             "div",
-            { className: E.Footer },
-            j.createElement(
+            { className: c.Footer },
+            i.createElement(
               "div",
-              { className: E.Left },
-              j.createElement(ie.E, { className: E.BalanceIcon }),
-              j.createElement(
+              { className: c.Left },
+              i.createElement(re.E, { className: c.BalanceIcon }),
+              i.createElement(
                 "div",
-                { className: E.BalanceDetails },
-                j.createElement(
+                { className: c.BalanceDetails },
+                i.createElement(
                   "div",
-                  { className: E.BalanceLabel },
-                  Object(S.f)("#YourBalance")
+                  { className: c.BalanceLabel },
+                  Object(l.f)("#YourBalance")
                 ),
-                j.createElement("div", { className: E.BalanceAmount }, i)
+                i.createElement("div", { className: c.BalanceAmount }, a)
               )
             ),
-            j.createElement(
+            i.createElement(
               "div",
-              { className: E.Right },
-              j.createElement(
+              { className: c.Right },
+              i.createElement(
                 "div",
-                { className: E.Actions },
-                j.Children.map(r, function (e) {
-                  return j.createElement("div", { className: E.Action }, e);
+                { className: c.Actions },
+                i.Children.map(r, function (e) {
+                  return i.createElement("div", { className: c.Action }, e);
                 })
               ),
-              j.createElement(
+              i.createElement(
                 "a",
                 {
-                  className: E.FooterLink,
-                  href: L.c.STORE_BASE_URL + "points/howitworks",
+                  className: c.FooterLink,
+                  href: d.c.STORE_BASE_URL + "points/howitworks",
                 },
-                Object(S.f)("#GrantAward_PointsLink")
+                Object(l.f)("#GrantAward_PointsLink")
               )
             )
           );
         }),
-        Le = function () {
-          return j.createElement("div", { className: E.Divider });
+        ze = function () {
+          return i.createElement("div", { className: c.Divider });
         },
-        Fe = (function (r) {
-          function e(e) {
-            var t = r.call(this, e) || this;
-            return (t.state = { bHovered: !1 }), t;
+        Ee = (function (e) {
+          function t(t) {
+            var r = e.call(this, t) || this;
+            return (r.state = { bHovered: !1 }), r;
           }
           return (
-            Object(s.d)(e, r),
-            (e.prototype.handleMouseOver = function (e) {
+            Object(n.d)(t, e),
+            (t.prototype.handleMouseOver = function (e) {
               this.setState({ bHovered: !0 });
             }),
-            (e.prototype.handleMouseOut = function () {
+            (t.prototype.handleMouseOut = function () {
               this.setState({ bHovered: !1 });
             }),
-            (e.prototype.render = function () {
+            (t.prototype.render = function () {
               var e = this.props,
                 t = e.reaction,
                 r = e.selected,
-                n = e.alreadyAwarded,
-                i = e.cost,
-                a = Object(s.f)(e, [
+                a = e.alreadyAwarded,
+                o = e.cost,
+                s = Object(n.f)(e, [
                   "reaction",
                   "selected",
                   "alreadyAwarded",
                   "cost",
                 ]);
-              return j.createElement(
-                $,
-                Object(s.a)(
+              return i.createElement(
+                ee,
+                Object(n.a)(
                   {
                     type: "button",
                     onMouseEnter: this.handleMouseOver,
                     onMouseLeave: this.handleMouseOut,
-                    className: Object(te.a)(
-                      E.Button,
-                      r && E.Selected,
-                      n && E.Disabled
+                    className: Object(X.a)(
+                      c.Button,
+                      r && c.Selected,
+                      a && c.Disabled
                     ),
                   },
-                  a
+                  s
                 ),
-                j.createElement(
+                i.createElement(
                   "div",
-                  { className: E.IconCtn },
-                  j.createElement(Oe, {
+                  { className: c.IconCtn },
+                  i.createElement(Re, {
                     reactionType: t,
                     bForceAnimated: this.state.bHovered,
-                    bDisableAnimation: n,
+                    bDisableAnimation: a,
                   })
                 ),
-                j.createElement("div", { className: E.Label }, ae(t)),
-                j.createElement(
-                  Ae,
-                  { className: E.Points },
-                  i.toLocaleString()
+                i.createElement("div", { className: c.Label }, ne(t)),
+                i.createElement(
+                  Le,
+                  { className: c.Points },
+                  o.toLocaleString()
                 ),
-                n && j.createElement(Ce, { className: E.IconCheckMark })
+                a && i.createElement(Be, { className: c.IconCheckMark })
               );
             }),
-            Object(s.c)([i.a], e.prototype, "handleMouseOver", null),
-            Object(s.c)([i.a], e.prototype, "handleMouseOut", null),
-            e
+            Object(n.c)([u.a], t.prototype, "handleMouseOver", null),
+            Object(n.c)([u.a], t.prototype, "handleMouseOut", null),
+            t
           );
-        })(j.PureComponent),
-        Te = function () {
-          return j.createElement(ne.a, { size: "large", className: E.Loading });
+        })(i.PureComponent),
+        Se = function () {
+          return i.createElement(te.a, { size: "large", className: c.Loading });
         },
-        Ae = function (e) {
+        Le = function (e) {
           var t = e.children,
             r = e.className,
-            n = Object(s.f)(e, ["children", "className"]);
-          return j.createElement(
+            a = Object(n.f)(e, ["children", "className"]);
+          return i.createElement(
             "span",
-            Object(s.a)({}, n, { className: Object(te.a)(r, E.PointsAmount) }),
-            j.createElement(ie.E, { className: E.PointsAmountIcon }),
+            Object(n.a)({}, a, { className: Object(X.a)(r, c.PointsAmount) }),
+            i.createElement(re.E, { className: c.PointsAmountIcon }),
             t
           );
         };

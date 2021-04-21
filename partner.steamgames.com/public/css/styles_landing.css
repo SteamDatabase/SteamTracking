@@ -611,7 +611,7 @@ p {
 	}
 
 		.landingTable a.tr:hover .td, .landingTable .tr.highlightHover:hover .td {
-			background-color: rgba(255,255,255,0.15);
+			background-color: #4d525c;
 		}
 
 		.landingTable .tr.selected {
@@ -643,7 +643,7 @@ p {
 	.landingTable th, .landingTable .th {
 		font-size: 10px;
 		text-transform: uppercase;
-		background-color: #424242;
+		background-color: #434953;
 		padding: 6px;
 		color: #93979a;
 		display: table-cell;
@@ -659,7 +659,7 @@ p {
 	.landingTable td, .landingTable .td {
 		font-size: 12px;
 		padding: 7px 7px 7px 7px;
-		background-color: rgba(255,255,255,0.1);
+		background-color: #2a2d32;
 		display: table-cell;
 		vertical-align: middle;
 		
@@ -883,18 +883,20 @@ p {
 	padding: 5px 5px 5px 35px;
 	color: #e7e8e9;
 	font-size: 14px;
-	background-color: #333333;
+	background-color: #343941;
 	margin: 1px 0;
 	text-decoration: none;
-	border: 1px solid #3a3a3a;
+	border: 1px solid #393e47;
 }
 
 	.buttonRow:hover {
-		background-color: #3D3E3E;
-		border: 1px solid #444444;
+		background-color: #444b55;
+		border: 1px solid #545d69;
 	}
 	.buttonRow.disabled, .buttonRow.disabled .subText, .buttonRow.ttip.disabled {
 		color: #555555;
+        background-color: #2b2f36;
+        border: 1px solid #2b2f36;
 	}
 
 	.buttonRow .subText {
@@ -2114,9 +2116,13 @@ input.datepicker {
 }
 
 .release_body {
-	background-color: #4d4d4d;
+	background-color: #555e62;
 	border-top: 1px solid #6b8805;
 	padding: 15px;
+}
+
+.releaseOption2 {
+    margin-top: 20px;
 }
 
 .alertText {
