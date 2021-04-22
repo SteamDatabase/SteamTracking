@@ -1485,6 +1485,21 @@
         "posted_in": "CSteamController::FlashControllerFirmware(unsigned int, CUtlBuffer*, unsigned int, char const*)"
     },
     {
+        "id": 2801,
+        "size": 8,
+        "posted_in": "void CSteamEngine::PostCallbackToAllUsers<SteamInputDeviceConnected_t>(SteamInputDeviceConnected_t*)"
+    },
+    {
+        "id": 2802,
+        "size": 8,
+        "posted_in": "void CSteamEngine::PostCallbackToAllUsers<SteamInputDeviceDisconnected_t>(SteamInputDeviceDisconnected_t*)"
+    },
+    {
+        "id": 2803,
+        "size": 32,
+        "posted_in": "void CSteamEngine::PostCallbackToAllUsers<SteamInputConfigurationLoaded_t>(SteamInputConfigurationLoaded_t*)"
+    },
+    {
         "id": 2901,
         "size": 1,
         "posted_in": "CUser::NotifyParentalLockChanged()"
