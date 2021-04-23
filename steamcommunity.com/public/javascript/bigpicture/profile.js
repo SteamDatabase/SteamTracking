@@ -318,7 +318,7 @@ function DisplayFullscreenImage( parentpanelid, url )
 			'<include src="https://community.cloudflare.steamstatic.com/public/css/bigpicture/profile.css?v=valveisgoodatcaching&amp;l=english&amp;_cdn=cloudflare" />' +
 '</styles>' +
 '<scripts>' +
-'<include src="" />' +
+'<include src="https://community.cloudflare.steamstatic.com/public/shared/javascript/bigpicture/base.js?v=valveisgoodatcaching&amp;l=english&amp;_cdn=cloudflare" />' +
 '<include src="https://community.cloudflare.steamstatic.com/public/javascript/bigpicture/profile.js?v=valveisgoodatcaching&amp;l=english&amp;_cdn=cloudflare" />' +
 '</scripts>' +
 '<Panel defaultfocus="ImageButton" class="FullscreenImagePopup" oncancel="CloseFullscreenImage( \'FullscreenImagePopup\' );" >' +
