@@ -85,4 +85,5 @@ public:
     virtual unknown_ret ResumeSubscribedFileDownloadsForApp(unsigned int) = 0;
     virtual unknown_ret PauseAllSubscribedFileDownloads() = 0;
     virtual unknown_ret ResumeAllSubscribedFileDownloads() = 0;
+    virtual unknown_ret CancelCurrentAndPendingOperations() = 0;
 };

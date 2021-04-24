@@ -122,4 +122,5 @@ typedef enum EControllerSetting
     k_EControllerSettingFrame_time, // frame_time
     k_EControllerSettingTransition_time, // transition_time
     k_EControllerSettingActivation_button, // activation_button
+    k_EControllerSettingDeadzone_enable_type, // deadzone_enable_type
 } EControllerSetting;
