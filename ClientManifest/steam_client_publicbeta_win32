@@ -1,6 +1,6 @@
 "win32"
 {
-	"version"		"1619231536"
+	"version"		"1619385801"
 	"tenfoot_misc_all"
 	{
 		"file"		"tenfoot_misc_all.zip.1ca83d76835b4613170f5cead778b176b11f2b0c"
@@ -131,11 +131,11 @@
 	}
 	"bins_misc_win32"
 	{
-		"file"		"bins_misc_win32.zip.a6bccd9e2db7da054ef15ee53145d4465902680f"
-		"size"		"17756244"
-		"sha2"		"413f0996fb6c975736d9e1d0e8b643fbf991160725234f2e1765f59ca4d32a73"
-		"zipvz"		"bins_misc_win32.zip.vz.25be7077c389d82a2b22fa1af6d5a5054cb49943_12929267"
-		"sha2vz"		"17573f1745ee1ecedf998ed9c5ff46baf86cd1d7899d0ee2bce5928ca3946e77"
+		"file"		"bins_misc_win32.zip.e72ffc7016acfb57f8ea1044b64222332214934b"
+		"size"		"17756237"
+		"sha2"		"51f0462b1c17846833a2adaf7d36faf605643f11105566da1cab45ce154fffa8"
+		"zipvz"		"bins_misc_win32.zip.vz.1364ca9ad2d8108184b2f5c9a0aee00fa27a6fa6_12930545"
+		"sha2vz"		"31a82e1934d6bf25c835b366840bce1bcc97db2ea64c201630d9640e57708161"
 	}
 	"bins_cef_win32"
 	{
@@ -186,78 +186,78 @@
 		"sha2vz"		"5aa7c52345c2a8d2e120275b3a67211212508eb25953d941210f6a72b974c4ab"
 		"win8-64"
 		{
-			"file"		"bins_webhelpers_win32_win8-64.zip.efc5a2f23a55abaf7857c017dbae915de3315cd5"
-			"size"		"2161955"
-			"sha2"		"4fb7f4626a5d94721803fd41e561e466c340f250edaba06e748ffeef1979caf9"
-			"zipvz"		"bins_webhelpers_win32_win8-64.zip.vz.aa7af78cc67e9c70855a0f29a9b971ff29570b3d_1740772"
-			"sha2vz"		"1aecf8178650956d5f6b9e779fff0892bbb29eea1e9288a7cb5c5fb921b64d3a"
+			"file"		"bins_webhelpers_win32_win8-64.zip.a16010983bd4b7433507daaf88c2a29f52e7aa6d"
+			"size"		"2161959"
+			"sha2"		"0781f23140372245e7adf1f96b7d90054ad6bd8cbcc9bb8ae36f06a9ce3d118e"
+			"zipvz"		"bins_webhelpers_win32_win8-64.zip.vz.fb24a4014dd6d379cc39ac6b2c536f9c4f4201c1_1740751"
+			"sha2vz"		"669d282d4fb1be45ae6aa75f121a3352a92e746c5d98cef43dd18d883b6845b7"
 		}
 		"win10-64"
 		{
-			"file"		"bins_webhelpers_win32_win10-64.zip.98fb9ed99dc19d360dabb211c04f70cc5927032c"
-			"size"		"2599490"
-			"sha2"		"e80a6848b27bc0872a2c6d7ee8a5b52959be00142e1e6ffbeb0e8a4bdc994cc5"
-			"zipvz"		"bins_webhelpers_win32_win10-64.zip.vz.cdad4c1f11cb7e12af4543c18efd99622decce10_2048844"
-			"sha2vz"		"97cad8f09dd8697a46c69bea6cbb1599b6bb9c6f75c73b6d2cc123bb8e71b051"
+			"file"		"bins_webhelpers_win32_win10-64.zip.6165b38001758d3fe9477ea8f2b65e6244aad873"
+			"size"		"2599488"
+			"sha2"		"25531986921afd78267f414ebd156578b22ea19fc7076a25b74e76ba665aa25c"
+			"zipvz"		"bins_webhelpers_win32_win10-64.zip.vz.653f914b20c357a31bcb25e02dc0e385b8acefd0_2049707"
+			"sha2vz"		"2a6c32f3123b959a6df176a6eb09d60291263a86420d58f4799c8132978e94a5"
 		}
 		"win7"
 		{
-			"file"		"bins_webhelpers_win32_win7.zip.efc5a2f23a55abaf7857c017dbae915de3315cd5"
-			"size"		"2161955"
-			"sha2"		"4fb7f4626a5d94721803fd41e561e466c340f250edaba06e748ffeef1979caf9"
-			"zipvz"		"bins_webhelpers_win32_win7.zip.vz.aa7af78cc67e9c70855a0f29a9b971ff29570b3d_1740772"
-			"sha2vz"		"1aecf8178650956d5f6b9e779fff0892bbb29eea1e9288a7cb5c5fb921b64d3a"
+			"file"		"bins_webhelpers_win32_win7.zip.a16010983bd4b7433507daaf88c2a29f52e7aa6d"
+			"size"		"2161959"
+			"sha2"		"0781f23140372245e7adf1f96b7d90054ad6bd8cbcc9bb8ae36f06a9ce3d118e"
+			"zipvz"		"bins_webhelpers_win32_win7.zip.vz.fb24a4014dd6d379cc39ac6b2c536f9c4f4201c1_1740751"
+			"sha2vz"		"669d282d4fb1be45ae6aa75f121a3352a92e746c5d98cef43dd18d883b6845b7"
 		}
 		"win7-64"
 		{
-			"file"		"bins_webhelpers_win32_win7-64.zip.98fb9ed99dc19d360dabb211c04f70cc5927032c"
-			"size"		"2599490"
-			"sha2"		"e80a6848b27bc0872a2c6d7ee8a5b52959be00142e1e6ffbeb0e8a4bdc994cc5"
-			"zipvz"		"bins_webhelpers_win32_win7-64.zip.vz.cdad4c1f11cb7e12af4543c18efd99622decce10_2048844"
-			"sha2vz"		"97cad8f09dd8697a46c69bea6cbb1599b6bb9c6f75c73b6d2cc123bb8e71b051"
+			"file"		"bins_webhelpers_win32_win7-64.zip.6165b38001758d3fe9477ea8f2b65e6244aad873"
+			"size"		"2599488"
+			"sha2"		"25531986921afd78267f414ebd156578b22ea19fc7076a25b74e76ba665aa25c"
+			"zipvz"		"bins_webhelpers_win32_win7-64.zip.vz.653f914b20c357a31bcb25e02dc0e385b8acefd0_2049707"
+			"sha2vz"		"2a6c32f3123b959a6df176a6eb09d60291263a86420d58f4799c8132978e94a5"
 		}
 	}
 	"bins_win32"
 	{
-		"file"		"bins_win32.zip.d051991c0c4b0c0f944b30ae0483f0ec787bf435"
-		"size"		"53706258"
-		"sha2"		"d9350091256fb452d3eb84c6596c3143694369741a077cf1206dffdcefaa9413"
-		"zipvz"		"bins_win32.zip.vz.7b76a50d691e927e80ad55bb76fc41f7e3c397d3_27897393"
-		"sha2vz"		"ffb844dfda22ec8aa98cfc880a9fccdb562efeec65dc29aa76e434a5a88b5da2"
+		"file"		"bins_win32.zip.338d8a89fec521d87133308c05f3048a73b76a6b"
+		"size"		"53706221"
+		"sha2"		"e0688c70b436f2a8cc415dad3f576bd564237d02cae28763402437e3c3a7b101"
+		"zipvz"		"bins_win32.zip.vz.93e95f8ed7da3fc9e7ac9b8c5b9257f793c73c07_27897555"
+		"sha2vz"		"0ac4a14e193ad2034c1eedc35543bb60e9c24e60d92398cb4298009b86780659"
 	}
 	"steam_win32"
 	{
-		"file"		"steam_win32.zip.c7fa906ed3ca26c4da0d4ca6aa37015a9a4bfb7a"
-		"size"		"2013339"
-		"sha2"		"b326dd4625b871bf02605b958be73dda0e69e28baf3931a9fcea6bd458308f24"
-		"zipvz"		"steam_win32.zip.vz.3d818d44427941cf740dea2306d55dcfbaa644af_1651762"
-		"sha2vz"		"ccd69806e2b5b8361fa54fc379ae80e2f67cde8324d7880e110a3e2d716c420e"
+		"file"		"steam_win32.zip.976f90b68b60b7b4c2e81e3b88ed730d027b66dd"
+		"size"		"2013332"
+		"sha2"		"c9d1edbdabbe30addd66bf96caa143b0850845690ed81d57e3883396fa2c4fcf"
+		"zipvz"		"steam_win32.zip.vz.e727d8cccabd862d94170576e8af99bfb7e779ca_1652772"
+		"sha2vz"		"7bb25bb07e2ca4ada4b2fe56ce5beb1d7d77ced79c88f027f3efca876b8ff125"
 		"IsBootstrapperPackage"		"1"
 		"steamchina"
 		{
-			"file"		"steam_win32_steamchina.zip.d217d3de8ee242851a1ed45fde65f5b00fbfd91d"
-			"size"		"1969331"
-			"sha2"		"5f68fecab0234930eee71782e9d3f6a98e880a83c4a31d1c1cbc20532b942868"
-			"zipvz"		"steam_win32_steamchina.zip.vz.119030ad9e4437fb4f547913ed737c499f0a4113_1621780"
-			"sha2vz"		"dbc30c7dc83bcbc720e3ce1091f0a53d5771cb1707d6f0cbca9418983d0b56fb"
+			"file"		"steam_win32_steamchina.zip.7ed49983073df3983cbc215b9decf6b09e26aa1f"
+			"size"		"1969334"
+			"sha2"		"2769c274ec7e8381b9b39c68d25385e06441a2c2d718e3aaee2f6c28a9254dbb"
+			"zipvz"		"steam_win32_steamchina.zip.vz.e5e2693492a248d865a9d8e8cf6f5bc137f477c4_1622347"
+			"sha2vz"		"76eb3a12845a178e0c95fb05a335f76339a568e7a2ca6826a7d366848c145490"
 			"IsBootstrapperPackage"		"1"
 		}
 		"steamrow"
 		{
-			"file"		"steam_win32_steamrow.zip.c7fa906ed3ca26c4da0d4ca6aa37015a9a4bfb7a"
-			"size"		"2013339"
-			"sha2"		"b326dd4625b871bf02605b958be73dda0e69e28baf3931a9fcea6bd458308f24"
-			"zipvz"		"steam_win32_steamrow.zip.vz.3d818d44427941cf740dea2306d55dcfbaa644af_1651762"
-			"sha2vz"		"ccd69806e2b5b8361fa54fc379ae80e2f67cde8324d7880e110a3e2d716c420e"
+			"file"		"steam_win32_steamrow.zip.976f90b68b60b7b4c2e81e3b88ed730d027b66dd"
+			"size"		"2013332"
+			"sha2"		"c9d1edbdabbe30addd66bf96caa143b0850845690ed81d57e3883396fa2c4fcf"
+			"zipvz"		"steam_win32_steamrow.zip.vz.e727d8cccabd862d94170576e8af99bfb7e779ca_1652772"
+			"sha2vz"		"7bb25bb07e2ca4ada4b2fe56ce5beb1d7d77ced79c88f027f3efca876b8ff125"
 			"IsBootstrapperPackage"		"1"
 		}
 	}
 }
 "kvsign2"
 {
-	"win32"		"a14325b9ccda75e1801f6ead31594e7cc9d0dcd959107a5e13c1995301eee4207dd36f71054501e1bf126be51052248cfc57f2c1dddd49310c7fa2bd030e9b01"
+	"win32"		"7906ea1eb4893dc954f6d157621b5cea9a5588fda9dd5537a2fcff16c847f127bbdc2a1203f26b59f0205482710025f04f4db73bddf54ac327c2591d8930a80c"
 }
 "kvsignatures"
 {
-	"win32"		"37f4391a8ae84d12c4dc7c7a9c6d3a3afa2c826caf040a6d4aa438d0a5787b279d56c9fe616c84d2264e7480767e62596787aa02a88130de6d56a4624f6cfbb081d69751a91dc887b6d2b2bb1b56adda9e9487f5ee4fbaa8112d19be45ab40f8b2a90c7af88b05b12e4e4d1b2d8717dd745c2075e8a0ed7f1a2578e48210e207"
+	"win32"		"2f938faea0b70d872d4f193656c85557db49793e679935f7a3ad5d539f1a5069b0d9a5d15f021596f9a10af67bfa39f673e6e8e59a61f842d06f5785409001b600eaf04e422393cfb070caa3703fc49d651aef2695cb9aebad57d5e522ab286a1a2ebd404c263c845224f134d568dec1ba031f557a764f9dd742d5f388b24554"
 }
