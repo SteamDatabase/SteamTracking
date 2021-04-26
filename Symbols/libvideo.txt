@@ -1262,7 +1262,6 @@
  T AsyncSocketRead(int, WSABUF_S const*, unsigned int, unsigned int*, CompletionData_t*)
  T AsyncSocketReadFrom(int, WSABUF_S const*, unsigned int, sockaddr*, unsigned int*, unsigned int*, CompletionData_t*)
  T AsyncSocketWrite(int, WSABUF_S const*, unsigned int, unsigned int*, CompletionData_t*)
- T AvLockOpCallback(void**, AVLockOp)
  T AvLogDefaultCallback(void*, int, char const*, __va_list_tag*)
  T AvLogDefaultCallback(void*, int, char const*, char*)
  T BASIC_CONSTRAINTS_free
@@ -4088,9 +4087,6 @@
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::~CUtlVector()
  T CUtlVector<NetConnectPingResults_t, CUtlMemory<NetConnectPingResults_t> >::AddToTail(NetConnectPingResults_t const&)
  T CUtlVector<NetConnectPingResults_t, CUtlMemory<NetConnectPingResults_t> >::GrowVector(int)
- T CUtlVector<SteamThreadTools::CThreadMutex*, CUtlMemory<SteamThreadTools::CThreadMutex*> >::AddToTail(SteamThreadTools::CThreadMutex* const&)
- T CUtlVector<SteamThreadTools::CThreadMutex*, CUtlMemory<SteamThreadTools::CThreadMutex*> >::GrowVector(int)
- T CUtlVector<SteamThreadTools::CThreadMutex*, CUtlMemory<SteamThreadTools::CThreadMutex*> >::Remove(int)
  T CUtlVector<SteamThreadTools::CThreadMutex*, CUtlMemory<SteamThreadTools::CThreadMutex*> >::Validate(CValidator&, char const*)
  T CUtlVector<SteamThreadTools::CThreadMutex*, CUtlMemory<SteamThreadTools::CThreadMutex*> >::~CUtlVector()
  T CUtlVector<TLSTicketKey_t, CUtlMemory<TLSTicketKey_t> >::FastRemove(int)
@@ -4585,7 +4581,6 @@
  T CreatePlatformSocket(int, int, int, unsigned int, int*)
  T CreateRTMPStream
  T CreateTempFileName(CUtlString*)
- T CreateThreadMutex()
  T CreateVideoPlayer
  T DES_SPtrans
  T DES_cfb64_encrypt
@@ -4665,7 +4660,6 @@
  T DeleteAudioFileDecoder
  T DeleteAudioResampler
  T DeleteRTMPStream
- T DeleteThreadMutex(SteamThreadTools::CThreadMutex*)
  T DeleteVideoDecoder
  T DeleteVideoEncoder
  T DeleteVideoPlayer
@@ -7600,14 +7594,12 @@
  av_get_packed_sample_fmt
  av_gettime
  av_init_packet
- av_lockmgr_register
  av_log_set_callback
  av_malloc_tracked
  av_new_packet
  av_opt_set_int
  av_packet_unref
  av_read_frame
- av_register_all
  av_register_malloc
  av_rescale
  av_rescale_q
@@ -7624,7 +7616,6 @@
  avcodec_free_context
  avcodec_open2
  avcodec_parameters_to_context
- avcodec_register_all
  avformat_alloc_context
  avformat_alloc_output_context2
  avformat_close_input

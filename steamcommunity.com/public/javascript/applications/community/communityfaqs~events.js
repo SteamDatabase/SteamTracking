@@ -4656,6 +4656,7 @@
             n.discount_percent && t.push("Discounted"),
             n.is_free && t.push("Free"),
             "music" === n.type && t.push("Soundtrack"),
+            "dlc" === n.type && t.push("DLC"),
             B(n, 3) && t.push("Adult Only Sexual Content"),
             B(n, 1) && t.push("Nudity or Sexual Content"),
             B(n, 2) && t.push("Violence or Gore")),
