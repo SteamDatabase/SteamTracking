@@ -18081,7 +18081,7 @@
                         return (
                           (R = a.sent()),
                           (k = L.length),
-                          (null == _ ? void 0 : _.BIsAnyUserPreferenceEnabled())
+                          _.BIsAnyUserPreferenceEnabled()
                             ? ((G = _.BIsUserPreferenceEnabled(
                                 u.n.k_EHideOwnedItems
                               )),
