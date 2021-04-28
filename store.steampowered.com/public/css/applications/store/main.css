@@ -2019,6 +2019,11 @@ html.touch .salepreviewwidgets_CapsuleMenuButton_niVR8 {
 .salepreviewwidgets_BundleContentsCtn_34acu {
   padding: 0px 20px 16px;
 }
+@media screen and (max-width: 620px) {
+  .salepreviewwidgets_BundleContentsCtn_34acu {
+    padding: 0px 8px 8px;
+  }
+}
 .salepreviewwidgets_BundleContentsCtn_34acu
   .salepreviewwidgets_BundleContentsTitle_hhdk8 {
   font-size: 13px;
@@ -2162,16 +2167,23 @@ html.touch
   .salepreviewwidgets_StoreSaleWidgetRight_v9uRg {
   flex-basis: 77%;
   padding-right: 0px;
+  margin-top: 0px;
+  margin-left: 8px;
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto;
-  margin-left: 8px;
+}
+@media screen and (max-width: 620px) {
+  .salepreviewwidgets_BundleContentItem_2sdNO
+    .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO
+    .salepreviewwidgets_StoreSaleWidgetRight_v9uRg {
+    grid-template-rows: 100%;
+  }
 }
 .salepreviewwidgets_BundleContentItem_2sdNO
   .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO
   .salepreviewwidgets_StoreSaleWidgetRight_v9uRg
   .salepreviewwidgets_TitleCtn_3rrH9 {
-  margin-top: 10px;
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 1;
@@ -2181,9 +2193,19 @@ html.touch
   .salepreviewwidgets_BundleContentItem_2sdNO
     .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO
     .salepreviewwidgets_StoreSaleWidgetRight_v9uRg
+    .salepreviewwidgets_TitleCtn_3rrH9 {
+    grid-column-end: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .salepreviewwidgets_BundleContentItem_2sdNO
+    .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO
+    .salepreviewwidgets_StoreSaleWidgetRight_v9uRg
     .salepreviewwidgets_TitleCtn_3rrH9
     .salepreviewwidgets_StoreSaleWidgetTitle_2ekpT {
     font-size: 15px;
+    line-height: 17px;
     font-weight: 300;
   }
 }
@@ -2228,7 +2250,7 @@ html.touch
     .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO
     .salepreviewwidgets_StoreSaleWidgetRight_v9uRg
     .salepreviewwidgets_StoreActionWidgetContainer_kW6m4 {
-    grid-column-start: 1;
+    grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
   }
@@ -4258,6 +4280,12 @@ body.v6.partner_events {
   margin: 0px auto;
   position: relative;
 }
+@media screen and (max-width: 500px) {
+  .partnereventdisplay_EventBodyPosition_3lIxP {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
 .partnereventdisplay_EventBody_3aht- {
   margin-top: -6vw;
   width: 100%;
@@ -4458,6 +4486,7 @@ body.v6.partner_events {
     .partnereventdisplay_EventDetailsDescription_2orfV
     .partnereventdisplay_EventDetailsBody_A_A2B {
     border-right: none;
+    padding-right: 0px;
   }
 }
 .partnereventdisplay_EventDetailsSticky_3IxVZ {
@@ -5249,7 +5278,6 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
 .eventbbcodeparser_AppSummaryWidgetCtn_3DfY9 {
   flex-grow: 2;
   flex-basis: 0;
-  margin-right: 16px;
   padding: 16px;
   background-image: radial-gradient(ellipse at top left, #42454c, #25282e);
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
@@ -14984,6 +15012,9 @@ html:not(.touch)
 }
 .facetedbrowse_FacetedBrowseFeedbackLink_rpvzD {
   margin-top: 32px;
+}
+.facetedbrowse_Facet_Qa8BX .facetedbrowse_FacetValuePriceSlider_FdYHb {
+  background: none;
 }
 .partnereventstats_TotalsCtn_FQKvU {
   background: #000;

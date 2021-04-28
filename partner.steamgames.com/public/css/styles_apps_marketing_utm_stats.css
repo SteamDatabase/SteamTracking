@@ -6,31 +6,31 @@
 
 /* Clear out standard datatable sorting style for the UTM Details table */
 #utmdetails_table tr.odd td.sorting_1 {
-	background-color: inherit;
+	background-color: #434953;
 }
 
 #utmdetails_table tr.odd td.sorting_2 {
-	background-color: inherit;
+	background-color: #434953;
 }
 
 #utmdetails_table tr.odd td.sorting_3 {
-	background-color: inherit;
+	background-color: #434953;
 }
 
 #utmdetails_table tr.even td.sorting_1 {
-	background-color: inherit;
+	background-color: #434953;
 }
 
 #utmdetails_table tr.even td.sorting_2 {
-	background-color: inherit;
+	background-color: #434953;
 }
 
 #utmdetails_table tr.even td.sorting_3 {
-	background-color: inherit;
+	background-color: #434953;
 }
 
 #utmdetails_table th {
-	background-color: #383838;
+	background-color: #434953;
 	padding-right: 10px;
 	vertical-align: top;
 }
@@ -81,4 +81,16 @@
 
 .sorting_asc_disabled {
 	background-position: bottom 5px right 0px;
+}
+
+.all_other_clicks {
+    color: #bd8142;
+}
+.landingTable a.filterTerm {
+    background: #91b807;
+    color: black;
+    padding: 2px 4px;
+    display: flex;
+    width: fit-content;
+    border-radius: 2px;
 }

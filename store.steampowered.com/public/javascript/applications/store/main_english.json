@@ -199,6 +199,10 @@
     "CookiePref_BirthTime_Desc": "This is only set if you fill out an age gate and is used to limit access to potentially inappropriate content.",
     "CookiePref_CookieSettings_Title": "cookieSettings",
     "CookiePref_CookieSettings_Desc": "This stores the settings you make on this page or on the cookie warning banner.",
+    "CookiePref_Login_Title": "steamLoginSecure, steamRememberLogin, and steamMachineAuth",
+    "CookiePref_Login_Desc": "These are used to support secure login to Steam.",
+    "CookiePref_Language_Title": "Steam_Language",
+    "CookiePref_Language_Desc": "We cache your preferred language so it will be used the next time you visit Steam.",
     "CookiePref_Content_Title": "Valve's Content Customization Cookies",
     "CookiePref_Content_Desc": "To customize the editorial content on Steam based on your use of services",
     "CookiePref_Content_ToggleTitle": "recentapps",
@@ -221,5 +225,10 @@
     "CookiePref_Sketchfab_Desc": "Cookies placed by embedded Sketchfab players within Steam.  Subject to Sketchfab's Privacy Policy",
     "CookiePref_Error": "Error",
     "CookiePref_ErrorNotSaved": "Your preferences have not been saved. Please try again later.",
+    "PrivacySettings_Marketing_Header": "Browsing",
+    "PrivacySettings_Marketing_Title": "Third Party Links (UTM)",
+    "PrivacySettings_Marketing_Desc": "Some game developers add additional information to their Steam Store page web links using a format called UTM.  The UTM information is used to measure the effectiveness of web sites, customer communications and marketing campaigns. Steam summarizes and anonymizes the data to protect user privacy, then provides the developer with a report on how these UTM links performed.",
+    "PrivacySettings_UTM_ToggleLabel": "UTM",
+    "PrivacySettings_UTM_ToggleDesc": "Include how my UTM visits performed in the summarized, anonymized reports provided to game developers",
     "dummy": "dummy"
 }

@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6509184";
+var CLSTAMP = "6512518";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [71],
   {
@@ -3340,22 +3340,26 @@ var CLSTAMP = "6509184";
         return s(e, "vgp_onblur", t);
       }
       function b(e, t, n) {
-        e.dispatchEvent(
-          new CustomEvent(t, { bubbles: !0, cancelable: !0, detail: n })
-        );
+        var r = new e.ownerDocument.defaultView.CustomEvent(t, {
+          bubbles: !0,
+          cancelable: !0,
+          detail: n,
+        });
+        e.dispatchEvent(r);
       }
       var v = !1;
       function _() {
-        if (!v) {
-          var e = [i.a.DIR_UP, i.a.DIR_DOWN, i.a.DIR_LEFT, i.a.DIR_RIGHT];
-          c(window, function (t) {
-            var n = a[t.detail.button];
-            n && b(t.target, n, t.detail),
-              -1 !== e.indexOf(t.detail.button) &&
-                b(t.target, "vgp_ondirection", t.detail);
-          }),
-            (v = !0);
-        }
+        v ||
+          (!(function (e) {
+            var t = [i.a.DIR_UP, i.a.DIR_DOWN, i.a.DIR_LEFT, i.a.DIR_RIGHT];
+            c(e, function (e) {
+              var n = a[e.detail.button];
+              n && b(e.target, n, e.detail),
+                -1 !== t.indexOf(e.detail.button) &&
+                  b(e.target, "vgp_ondirection", e.detail);
+            });
+          })(window),
+          (v = !0));
       }
       function y(e) {
         return function (t) {
@@ -8769,6 +8773,13 @@ var CLSTAMP = "6509184";
               t,
               { ePrivilege: 1 }
             );
+          }),
+          (e.ClientDownloadRatesReport = function (e, t) {
+            return e.SendNotification(
+              "ClientMetrics.ClientDownloadRatesReport#1",
+              t,
+              { ePrivilege: 1 }
+            );
           });
       })(s || (s = {}));
     },
@@ -12518,7 +12529,7 @@ var CLSTAMP = "6509184";
         m = n("6TF7"),
         f = n.n(m),
         g = i.a.lazy(function () {
-          return Promise.all([n.e(0), n.e(2), n.e(1), n.e(4), n.e(74)]).then(
+          return Promise.all([n.e(0), n.e(2), n.e(1), n.e(4), n.e(103)]).then(
             n.bind(null, "GEPe")
           );
         }),
@@ -12861,7 +12872,7 @@ var CLSTAMP = "6509184";
           return l;
         });
       var r = n("mrSG"),
-        o = n("Kw0F"),
+        o = (n("q1tI"), n("Kw0F")),
         i = n("XxJJ"),
         a = (function () {
           function e() {
@@ -12890,8 +12901,8 @@ var CLSTAMP = "6509184";
             }),
             e
           );
-        })(),
-        s = (function () {
+        })();
+      var s = (function () {
           function e() {}
           return (
             (e.prototype.Schedule = function (e, t) {
@@ -14255,5 +14266,5 @@ var CLSTAMP = "6509184";
       };
     },
   },
-  [["gfbn", 73, 0]],
+  [["gfbn", 102, 0]],
 ]);

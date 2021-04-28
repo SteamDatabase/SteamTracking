@@ -666,8 +666,8 @@ p {
 	}
 	
 	.landingTable .td.readOnly {
-		background-color: #1f1f1f;
-		color: #caba8d;
+		background-color: #141719;
+		color: #ab9c73;
 	}
 
 
@@ -1339,7 +1339,7 @@ div + #landingFooter.nonconfidential {
 	}
 
 .pricing_note {
-	background-color: #333333;
+	background-color: #2a2d32;
 	color: #e66d34;
 	font-size: 16px;
 	padding: 10px;
@@ -1856,7 +1856,7 @@ background: -webkit-linear-gradient( 45deg, #3b5c1f 5%,#4c7728 95%);
 	}
 
 .noAppsBox {
-	background-color: #1f1f1f;
+	background-color: #121417;
 	min-height: 150px;
 	text-align: center;
 }
@@ -2465,12 +2465,14 @@ div#appHeaderFindSuggestions
 	margin-top: 0px;
 }
 
-ul.actualUL li {
+ul.actualUL li,
+.build_submission_notes ul li{
 	list-style-type: circle;
 	padding: 4px 0 4px 10px;
 }
 
-ul.actualUL {
+.build_submission_notes ul {
+    font-size: 14px;
 }
 
 /* App landing release steps */
@@ -2791,8 +2793,8 @@ ul.transfer_rights li {
 .cdkey_requests_headers {
 	padding: 10px 0px 10px 0px;
 	display: table;
-	background-color: #1f1f1f;
-	color: #808285;
+	background-color: #434953;
+	color: #b3b5b7;
 	text-decoration: none;
 	width: 100%;
     position: sticky;
@@ -2809,7 +2811,7 @@ ul.transfer_rights li {
 }
 
 .cdkey_request_territory_name {
-	width: 53px;
+	width: 64px;
 	padding: 4px 0px 0px 0px;
 	display: inline-block;
 	overflow-wrap: break-spaces;
@@ -2817,14 +2819,14 @@ ul.transfer_rights li {
 }
 
 .cdkey_request_numreq {
-	width: 90px;
+	width: 70px;
 	padding: 2px 0px 0px 4px;
 	text-align: right;
 	display: inline-block;
 }
 
 .cdkey_request_date {
-	width: 120px;
+	width: 100px;
 	padding: 2px 0px 0px 4px;
 	text-align: right;
 	display: inline-block;
@@ -2832,7 +2834,7 @@ ul.transfer_rights li {
 
 .cdkey_request_account {
 	width: 210px;
-	padding: 2px 0px 0px 64px;
+	padding: 2px 0px 0px 30px;
 	display: inline-block;
 }
 

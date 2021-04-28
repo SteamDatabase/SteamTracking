@@ -93,9 +93,9 @@ GDynamicStore = {
 	s_ImpressionTracker: false,
 	s_bAllowAppImpressions: false,
 
-	Init: function( accountid, bForceRefresh, strOS, preferences, strCC )
+	Init: function( accountid, bForceRefresh, strOS, preferences, strCC, optsIn )
 	{
-
+		var opts = $J.extend( { bNoDefaultDescriptors: false }, optsIn || {} );
 		var rgDesiredOSTypes = strOS ? strOS.split(',') : 'any';
 
 		for( var i=0; i < rgDesiredOSTypes.length; i++ )
@@ -251,7 +251,8 @@ GDynamicStore = {
 		}
 		else
 		{
-			GDynamicStore.s_rgExcludedDescIDs[3] = 3;
+			if ( !opts.bNoDefaultDescriptors )
+				GDynamicStore.s_rgExcludedDescIDs[3] = 3;
 
 			var url = 'https://store.steampowered.com/dynamicstore/saledata/?cc=' + strCC;
 
