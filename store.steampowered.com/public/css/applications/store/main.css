@@ -859,10 +859,23 @@ body.modals_BodyNoScrollDialog_105OB {
 }
 .bbcodes_Header1_2SIyP {
   display: block;
-  color: #5aa9d6;
+  color: #fff;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 26px;
+  line-height: 30px;
   margin-bottom: 4px;
+}
+.bbcodes_Header2_38_5M {
+  color: #fff;
+  font-size: 22px;
+  line-height: 25px;
+  font-weight: 400;
+}
+.bbcodes_Header3_2QwSx {
+  color: #fff;
+  font-size: 19px;
+  line-height: 22px;
+  font-weight: 300;
 }
 .bbcodes_Underline_2vtht {
   display: inline;
@@ -6965,13 +6978,13 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   margin-top: 16px;
 }
 .bbcodeeditor_BBCodeEditorInputStyles_F506h textarea {
-  color: #adadad;
+  color: #cfcfcf;
   background-color: rgba(0, 0, 0, 0.2);
   border: 1px solid #000;
   border-radius: 3px;
 }
 .bbcodeeditor_BBCodeEditorInputStyles_F506h input {
-  color: #adadad;
+  color: #cfcfcf;
   background-color: rgba(0, 0, 0, 0.2);
   border: 1px solid #000;
   border-radius: 3px;

@@ -14887,6 +14887,7 @@
                         t.bEnabled &&
                         Boolean(t.facetValue.rgStoreTagFilter)
                       ) {
+                        if (t.facetValue.type === u.m.k_EUserPreference) return;
                         var n = Object(a.a)({}, t.facetValue.rgStoreTagFilter);
                         t.facetValue.type === u.m.k_EPrice &&
                           (n.value = Boolean(e.m_priceStopInfo)
@@ -14900,7 +14901,10 @@
                       0 !== r.rgSubexpressions.length &&
                         t.rgSubexpressions.push(r);
                   }),
-                  this.m_bSomeFacetValueEnabled ? JSON.stringify(t) : ""
+                  0 !== t.rgSubexpressions.length &&
+                  this.m_bSomeFacetValueEnabled
+                    ? JSON.stringify(t)
+                    : ""
                 );
               },
               enumerable: !1,
@@ -15107,12 +15111,12 @@
                       t.facetValue.type === u.m.k_EPrice &&
                       n.facetValue.type !== u.m.k_EPrice
                     )
-                      return 1;
+                      return -1;
                     if (
                       t.facetValue.type !== u.m.k_EPrice &&
                       n.facetValue.type == u.m.k_EPrice
                     )
-                      return -1;
+                      return 1;
                     if (t.bEnabled !== n.bEnabled) return n.bEnabled ? 1 : -1;
                     if (t.bDeactivated !== n.bDeactivated)
                       return t.bDeactivated ? 1 : -1;
@@ -26622,6 +26626,8 @@
         Bold: "bbcodes_Bold_Whyj8",
         Italic: "bbcodes_Italic_3sfhE",
         Header1: "bbcodes_Header1_2SIyP",
+        Header2: "bbcodes_Header2_38_5M",
+        Header3: "bbcodes_Header3_2QwSx",
         Underline: "bbcodes_Underline_2vtht",
         Strike: "bbcodes_Strike_1f7F7",
         Spoiler: "bbcodes_Spoiler_3JtzY",

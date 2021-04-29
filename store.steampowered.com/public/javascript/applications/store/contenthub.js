@@ -104,17 +104,17 @@
             j = n.k_NotRejected;
           switch (T.item_type) {
             case "sub":
-              var C = c.b.GetPackageInfo(v);
+              var k = c.b.GetPackageInfo(v);
               if (
                 1 !==
-                (null === (s = null == C ? void 0 : C.appids) || void 0 === s
+                (null === (s = null == k ? void 0 : k.appids) || void 0 === s
                   ? void 0
                   : s.length)
               ) {
                 j = b(v, t, a, !0);
                 break;
               }
-              v = C.appids[0];
+              v = k.appids[0];
             case "app":
               j = f(v, t, a, !0);
               break;
@@ -439,16 +439,16 @@
           );
         })(),
         j = a("q1tI"),
-        C = a.n(j),
-        k = a("VQ2A"),
+        k = a.n(j),
+        C = a("VQ2A"),
         S = a("IjL/"),
         A = a("0OaU"),
-        P = a("TLQK"),
-        I = a("xVl9"),
-        w = a("5L1o"),
-        R = a("MnIK"),
-        E = a("dfs5");
-      function G(e, t) {
+        E = a("TLQK"),
+        R = a("xVl9"),
+        I = a("5L1o"),
+        w = a("MnIK"),
+        G = a("dfs5");
+      function P(e, t) {
         var a = new Array();
         return (
           e.forEach(function (e) {
@@ -466,28 +466,28 @@
           a
         );
       }
-      var L = function (e) {
+      var N = function (e) {
           var t = e.section,
             a = v.Get().GetAppListForSection(t.id);
           if (!a || 0 == a.length) return null;
           var n = null;
           switch (t.type) {
             case "4wide":
-              n = C.a.createElement(O, { capsuleList: a });
+              n = k.a.createElement(O, { capsuleList: a });
               break;
             case "creator4wide":
-              n = C.a.createElement(D, { capsuleList: a });
+              n = k.a.createElement(D, { capsuleList: a });
               break;
             default:
-              n = C.a.createElement("div", null, "Unknown: ", t.type);
+              n = k.a.createElement("div", null, "Unknown: ", t.type);
           }
-          return C.a.createElement(
-            E.b,
+          return k.a.createElement(
+            G.b,
             { feature: t.id },
-            C.a.createElement(
-              R.a,
+            k.a.createElement(
+              w.a,
               { placeholderHeight: 250, rootMargin: "0px 0px 100% 0px" },
-              C.a.createElement(N, {
+              k.a.createElement(L, {
                 title: t.title,
                 description: t.description,
               }),
@@ -495,23 +495,23 @@
             )
           );
         },
-        N = function (e) {
+        L = function (e) {
           var t = e.title,
             a = e.description;
-          return C.a.createElement(
+          return k.a.createElement(
             "div",
             null,
-            C.a.createElement("span", null, t),
-            Boolean(a) && C.a.createElement("span", null, a)
+            k.a.createElement("span", null, t),
+            Boolean(a) && k.a.createElement("span", null, a)
           );
         },
         O = function (e) {
-          var t = G(e.capsuleList, 40);
-          return C.a.createElement(
-            I.a,
+          var t = P(e.capsuleList, 40);
+          return k.a.createElement(
+            R.a,
             { visibleElements: 4 },
             t.map(function (e) {
-              return C.a.createElement(w.l, {
+              return k.a.createElement(I.l, {
                 key: e.type + "_" + e.id,
                 capsule: e,
                 imageType: "header",
@@ -525,17 +525,17 @@
             n = a[0];
           a[1];
           if (n)
-            return C.a.createElement(A.a, {
-              string: Object(P.f)("#Loading"),
+            return k.a.createElement(A.a, {
+              string: Object(E.f)("#Loading"),
               size: "medium",
               position: "center",
             });
-          var r = G(t, 40);
-          return C.a.createElement(
-            I.a,
+          var r = P(t, 40);
+          return k.a.createElement(
+            R.a,
             { visibleElements: 4 },
             r.map(function (e) {
-              return C.a.createElement(w.l, {
+              return k.a.createElement(I.l, {
                 key: e.type + "_" + e.id,
                 capsule: e,
                 imageType: "header",
@@ -976,26 +976,13 @@
                 return this.m_SelectedTab;
               }),
               (e.prototype.SetSelectedTab = function (e) {
-                (this.m_SelectedTab = e),
-                  this.m_facetFilterState.Reset(),
-                  (this.m_nCurrentPage = 0),
-                  this.HintLoadTabPage(
-                    this.m_SelectedTab,
-                    this.m_facetFilterState.GetQuery(),
-                    this.m_nCurrentPage
-                  );
+                this.m_SelectedTab = e;
               }),
               (e.prototype.GetSelectedPage = function () {
                 return this.m_nCurrentPage;
               }),
               (e.prototype.SetSelectedPage = function (e) {
-                this.m_nCurrentPage !== e &&
-                  ((this.m_nCurrentPage = e),
-                  this.HintLoadTabPage(
-                    this.m_SelectedTab,
-                    this.m_facetFilterState.GetQuery(),
-                    e
-                  ));
+                this.m_nCurrentPage !== e && (this.m_nCurrentPage = e);
               }),
               Object.defineProperty(e.prototype, "nRowsPerPage", {
                 get: function () {
@@ -1028,14 +1015,6 @@
               }),
               (e.prototype.GetFacetFilter = function () {
                 return this.m_facetFilterState;
-              }),
-              (e.prototype.UpdateFacetQuery = function () {
-                (this.m_nCurrentPage = 0),
-                  this.HintLoadTabPage(
-                    this.m_SelectedTab,
-                    this.m_facetFilterState.GetQuery(),
-                    this.m_nCurrentPage
-                  );
               }),
               (e.prototype.UpdateResults = function () {
                 var e = this.GetPageKey(
@@ -1216,7 +1195,6 @@
               Object(r.c)([M.n], e.prototype, "nRowsPerPage", null),
               Object(r.c)([M.n], e.prototype, "nTotalMatchingResults", null),
               Object(r.c)([M.n], e.prototype, "nPages", null),
-              Object(r.c)([M.k], e.prototype, "UpdateFacetQuery", null),
               Object(r.c)([M.k], e.prototype, "UpdateResults", null),
               e
             );
@@ -1229,42 +1207,58 @@
         Y = a("exH9"),
         Z = a("lhLD"),
         $ = a("5E+2"),
-        ee = Object(Q.a)(function (e) {
-          var t = K.Get().GetVisibleTabs(),
-            a = K.Get().GetSelectedTab(),
-            n = K.Get().GetFacetFilter(),
-            r = n.strQuery;
-          if (!t || 0 == t.length) return null;
-          var i = K.Get().GetSelectedPage();
-          return C.a.createElement(
-            "div",
-            { className: Object(Y.a)(Z.TabCtn) },
-            C.a.createElement(ne, null),
-            C.a.createElement(ae, null),
-            C.a.createElement(z.c, {
-              facetFilterState: n,
-              language: Object(o.f)(u.d.LANGUAGE),
-              nMaxFacetValues: 5,
-              fnOnUpdateFilter: function () {
-                return K.Get().UpdateFacetQuery();
-              },
-            }),
-            C.a.createElement(
-              E.b,
-              { feature: "tab-" + a.name },
-              C.a.createElement(te, {
-                selectedTab: a,
-                facetQuery: r,
-                nCurPage: i,
-              })
-            ),
-            C.a.createElement(ae, null)
+        ee = a("Ty5D"),
+        te = a("GiuM"),
+        ae = Object(ee.i)(
+          Object(Q.a)(function (e) {
+            var t = K.Get(),
+              a = t.GetVisibleTabs(),
+              n = Object(te.a)(e.history, "tab"),
+              r = Boolean(n)
+                ? a.find(function (e) {
+                    return e.name === n;
+                  })
+                : a[0],
+              o = Object(te.a)(e.history, "facets"),
+              i = Number(Object(te.a)(e.history, "page")) || 0;
+            return (
+              Object(j.useEffect)(
+                function () {
+                  t.SetSelectedTab(r),
+                    null != o
+                      ? t.GetFacetFilter().SetFromURLParam(o)
+                      : t.GetFacetFilter().Reset(),
+                    t.SetSelectedPage(i),
+                    t.HintLoadTabPage(r, o, i);
+                },
+                [t, r, o, i]
+              ),
+              a && 0 != a.length
+                ? k.a.createElement(
+                    "div",
+                    { className: Object(Y.a)(Z.TabCtn) },
+                    k.a.createElement(se, null),
+                    k.a.createElement(oe, null),
+                    k.a.createElement(ie, null),
+                    k.a.createElement(ne, null),
+                    k.a.createElement(oe, null)
+                  )
+                : null
+            );
+          })
+        ),
+        ne = Object(Q.a)(function (e) {
+          var t = K.Get().GetSelectedTab();
+          return k.a.createElement(
+            G.b,
+            { feature: "tab-" + t.name },
+            k.a.createElement(re, null)
           );
         }),
-        te = Object(Q.a)(function (e) {
-          var t = e.selectedTab,
-            a = e.facetQuery,
-            n = e.nCurPage,
+        re = Object(Q.a)(function (e) {
+          var t = K.Get().GetSelectedTab(),
+            a = K.Get().GetFacetFilter().strQuery,
+            n = K.Get().GetSelectedPage(),
             r = K.Get().BHasTabPageLoaded(t, a, n),
             o = Object(j.useState)(!r),
             s = o[0],
@@ -1290,32 +1284,32 @@
             ),
             !r)
           )
-            return C.a.createElement(A.a, {
-              string: Object(P.f)("#Loading"),
+            return k.a.createElement(A.a, {
+              string: Object(E.f)("#Loading"),
               size: "medium",
               position: "center",
             });
           var l = K.Get().GetTabPageApps(t, a, n),
             m = g(l, T.Get().GetHomeView(), new p(), l.length, l.length),
             d = l.length - m.length;
-          return C.a.createElement(
-            C.a.Fragment,
+          return k.a.createElement(
+            k.a.Fragment,
             null,
             Boolean(d > 0) &&
-              C.a.createElement(
+              k.a.createElement(
                 "a",
                 {
                   href: u.d.STORE_BASE_URL + "account/preferences/",
-                  "data-tooltip-text": Object(P.f)(
+                  "data-tooltip-text": Object(E.f)(
                     "#ContentHub_TabFiltered_ttip"
                   ),
                 },
-                C.a.createElement(
+                k.a.createElement(
                   $.a,
                   {
-                    toolTipContent: Object(P.f)("#ContentHub_TabFiltered_ttip"),
+                    toolTipContent: Object(E.f)("#ContentHub_TabFiltered_ttip"),
                   },
-                  Object(P.l)("#ContentHub_TabFitlered", d)
+                  Object(E.l)("#ContentHub_TabFitlered", d)
                 )
               ),
             m.map(function (e) {
@@ -1328,13 +1322,13 @@
                     : (null === (t = i.a.GetAppLinkInfo(e.id)) || void 0 === t
                         ? void 0
                         : t.type) || "game"),
-                C.a.createElement(
+                k.a.createElement(
                   "div",
                   {
                     key: "" + e.item_type + e.id,
                     className: X.a.SaleItemBrowserRow,
                   },
-                  C.a.createElement(w.n, {
+                  k.a.createElement(I.n, {
                     id: e.id,
                     type: a,
                     bShowDemoButton: !1,
@@ -1345,121 +1339,150 @@
             })
           );
         }),
-        ae = Object(Q.a)(function (e) {
-          var t,
-            a = K.Get(),
-            n =
-              (a.GetSelectedTab(),
-              a.GetFacetFilter().strQuery,
-              a.GetSelectedPage()),
-            r = a.nRowsPerPage,
-            o = a.nTotalMatchingResults,
-            i = r * n + 1,
-            s = Math.min(r * (n + 1), o),
-            c = a.nPages;
-          if (c > 1) {
-            var l = new Set();
-            l.add(1), l.add(c);
-            for (var u = 0; l.size < 7 && u < 7; ++u)
-              n + 1 - u > 0 && l.add(n + 1 - u),
-                l.size < 7 && n + 1 + u < c && l.add(n + 1 + u);
-            t = Array.from(l).sort(function (e, t) {
-              return e - t;
-            });
-          }
-          return C.a.createElement(
-            "div",
-            { className: Object(Y.a)(Z.PagingCtn) },
-            C.a.createElement(
+        oe = Object(ee.i)(
+          Object(Q.a)(function (e) {
+            var t,
+              a = K.Get(),
+              n =
+                (a.GetSelectedTab(),
+                a.GetFacetFilter().strQuery,
+                a.GetSelectedPage()),
+              r = a.nRowsPerPage,
+              o = a.nTotalMatchingResults,
+              i = r * n + 1,
+              s = Math.min(r * (n + 1), o),
+              c = a.nPages;
+            if (c > 1) {
+              var l = new Set();
+              l.add(1), l.add(c);
+              for (var u = 0; l.size < 7 && u < 7; ++u)
+                n + 1 - u > 0 && l.add(n + 1 - u),
+                  l.size < 7 && n + 1 + u < c && l.add(n + 1 + u);
+              t = Array.from(l).sort(function (e, t) {
+                return e - t;
+              });
+            }
+            var p = function (t) {
+              Object(te.c)(e.history, { page: t.toString() });
+            };
+            return k.a.createElement(
               "div",
-              null,
-              Object(P.f)("#ContentHub_Paging", i, s, o)
-            ),
-            Boolean(c > 1) &&
-              C.a.createElement(
+              { className: Object(Y.a)(Z.PagingCtn) },
+              k.a.createElement(
                 "div",
-                { className: Object(Y.a)(Z.PagingNumCtn) },
-                Boolean(n > 0) &&
-                  C.a.createElement(
-                    W.d,
-                    {
-                      onClick: function () {
-                        return a.SetSelectedPage(n - 1);
-                      },
-                    },
-                    "<"
-                  ),
-                t.map(function (e, t) {
-                  var r;
-                  return C.a.createElement(
-                    "div",
-                    { className: Z.PageNumCtn, key: "" + e },
-                    Boolean(1 === t && 2 !== e) &&
-                      C.a.createElement("span", null, "..."),
-                    C.a.createElement(
-                      "div",
+                null,
+                Object(E.f)("#ContentHub_Paging", i, s, o)
+              ),
+              Boolean(c > 1) &&
+                k.a.createElement(
+                  "div",
+                  { className: Object(Y.a)(Z.PagingNumCtn) },
+                  Boolean(n > 0) &&
+                    k.a.createElement(
+                      W.d,
                       {
                         onClick: function () {
-                          return a.SetSelectedPage(e - 1);
+                          return p(n - 1);
                         },
-                        className: Object(Y.a)(
-                          ((r = {}),
-                          (r[Z.PageNumber] = !0),
-                          (r[Z.PageSelectedNumber] = e === n + 1),
-                          r)
-                        ),
                       },
-                      e
+                      "<"
                     ),
-                    Boolean(5 === t && e !== c - 1) &&
-                      C.a.createElement("span", null, "...")
-                  );
-                }),
-                Boolean(n + 1 < c) &&
-                  C.a.createElement(
-                    W.d,
-                    {
-                      onClick: function () {
-                        return a.SetSelectedPage(n + 1);
+                  t.map(function (e, t) {
+                    var a;
+                    return k.a.createElement(
+                      "div",
+                      { className: Z.PageNumCtn, key: "" + e },
+                      Boolean(1 === t && 2 !== e) &&
+                        k.a.createElement("span", null, "..."),
+                      k.a.createElement(
+                        "div",
+                        {
+                          onClick: function () {
+                            return p(e - 1);
+                          },
+                          className: Object(Y.a)(
+                            ((a = {}),
+                            (a[Z.PageNumber] = !0),
+                            (a[Z.PageSelectedNumber] = e === n + 1),
+                            a)
+                          ),
+                        },
+                        e
+                      ),
+                      Boolean(5 === t && e !== c - 1) &&
+                        k.a.createElement("span", null, "...")
+                    );
+                  }),
+                  Boolean(n + 1 < c) &&
+                    k.a.createElement(
+                      W.d,
+                      {
+                        onClick: function () {
+                          return p(n + 1);
+                        },
                       },
+                      ">"
+                    )
+                )
+            );
+          })
+        ),
+        ie = Object(ee.i)(
+          Object(Q.a)(function (e) {
+            var t = K.Get().GetFacetFilter();
+            return k.a.createElement(z.c, {
+              facetFilterState: t,
+              language: Object(o.f)(u.d.LANGUAGE),
+              nMaxFacetValues: 5,
+              fnOnUpdateFilter: function () {
+                Object(te.c)(e.history, {
+                  facets: t.GetURLParam(),
+                  page: void 0,
+                });
+              },
+            });
+          })
+        ),
+        se = Object(ee.i)(
+          Object(Q.a)(function (e) {
+            var t = K.Get().GetVisibleTabs(),
+              a = K.Get().GetSelectedTab();
+            return k.a.createElement(
+              J.a,
+              { className: Z.TabHeaderCtn },
+              t.map(function (t) {
+                var n;
+                return k.a.createElement(
+                  "div",
+                  {
+                    key: t.displaylistname,
+                    className: Object(Y.a)(
+                      ((n = {}),
+                      (n[Z.TabHeader] = !0),
+                      (n[Z.TabHeaderSelected] =
+                        (null == t ? void 0 : t.name) ==
+                        (null == a ? void 0 : a.name)),
+                      n)
+                    ),
+                    onClick: function () {
+                      return (function (t) {
+                        Object(te.c)(e.history, {
+                          tab: t.name,
+                          facets: void 0,
+                          page: void 0,
+                        });
+                      })(t);
                     },
-                    ">"
-                  )
-              )
-          );
-        }),
-        ne = Object(Q.a)(function (e) {
-          var t = K.Get().GetVisibleTabs(),
-            a = K.Get().GetSelectedTab();
-          return C.a.createElement(
-            J.a,
-            { className: Z.TabHeaderCtn },
-            t.map(function (e) {
-              var t;
-              return C.a.createElement(
-                "div",
-                {
-                  key: e.displaylistname,
-                  className: Object(Y.a)(
-                    ((t = {}),
-                    (t[Z.TabHeader] = !0),
-                    (t[Z.TabHeaderSelected] =
-                      (null == e ? void 0 : e.name) ==
-                      (null == a ? void 0 : a.name)),
-                    t)
-                  ),
-                  onClick: function () {
-                    return K.Get().SetSelectedTab(e);
                   },
-                },
-                e.title
-              );
-            })
-          );
-        }),
-        re = a("IzPI"),
-        oe = a("RNU2"),
-        ie =
+                  t.title
+                );
+              })
+            );
+          })
+        ),
+        ce = a("IzPI"),
+        le = a("RNU2"),
+        ue =
           (Object(Q.a)(function (e) {
             var t = e.capsule,
               a = t.appid,
@@ -1470,20 +1493,20 @@
                 : t.packageid
                 ? ((n = "sub"), (a = t.packageid))
                 : (n = i.a.GetAppLinkInfo(a).type),
-              C.a.createElement(
+              k.a.createElement(
                 "div",
                 null,
-                C.a.createElement(w.k, { id: a, type: n })
+                k.a.createElement(I.k, { id: a, type: n })
               )
             );
           }),
           function (e) {
             var t = v.Get().GetMainCapsuleList();
-            return C.a.createElement(
-              I.a,
+            return k.a.createElement(
+              R.a,
               { visibleElements: 1 },
               t.map(function (e) {
-                return C.a.createElement(se, {
+                return k.a.createElement(pe, {
                   key: e.item_type + " " + e.id,
                   item: e,
                   strReason:
@@ -1492,7 +1515,7 @@
               })
             );
           }),
-        se = function (e) {
+        pe = function (e) {
           var t = e.item,
             a = e.strReason,
             n = i.a.GetAppLinkInfo(t.id);
@@ -1501,52 +1524,52 @@
               n.screenshot_list.length > 0
                 ? n.screenshot_list[0]
                 : n.header_image_url,
-            o = Object(re.f)(n.capsule_link);
-          return C.a.createElement(
-            w.e,
+            o = Object(ce.f)(n.capsule_link);
+          return k.a.createElement(
+            I.e,
             { appInfo: n },
-            C.a.createElement(
+            k.a.createElement(
               "div",
               {
-                className: Object(Y.a)(oe.BGImage),
+                className: Object(Y.a)(le.BGImage),
                 style: { backgroundImage: 'url("' + r + '")' },
               },
-              C.a.createElement(
+              k.a.createElement(
                 "div",
-                { className: Object(Y.a)(oe.FeatureCtn) },
-                C.a.createElement(
+                { className: Object(Y.a)(le.FeatureCtn) },
+                k.a.createElement(
                   "a",
-                  { href: o, className: Object(Y.a)(oe.Artwork) },
-                  Object(w.b)(n) &&
-                    C.a.createElement(
+                  { href: o, className: Object(Y.a)(le.Artwork) },
+                  Object(I.b)(n) &&
+                    k.a.createElement(
                       "div",
-                      { className: oe.CapsuleDecorators },
-                      C.a.createElement(w.h, null)
+                      { className: le.CapsuleDecorators },
+                      k.a.createElement(I.h, null)
                     ),
-                  C.a.createElement(w.f, { info: n, appInfo: n }),
-                  C.a.createElement(w.c, { info: n })
+                  k.a.createElement(I.f, { info: n, appInfo: n }),
+                  k.a.createElement(I.c, { info: n })
                 ),
-                C.a.createElement(
+                k.a.createElement(
                   "div",
-                  { className: Object(Y.a)(oe.Info) },
-                  C.a.createElement(
+                  { className: Object(Y.a)(le.Info) },
+                  k.a.createElement(
                     "a",
-                    { className: oe.Title, href: o },
+                    { className: le.Title, href: o },
                     n.title
                   ),
-                  C.a.createElement("div", null, a),
-                  C.a.createElement(w.m, { appInfo: n, instanceNum: t.id })
+                  k.a.createElement("div", null, a),
+                  k.a.createElement(I.m, { appInfo: n, instanceNum: t.id })
                 )
               )
             )
           );
         };
       t.default = function (e) {
-        var t = C.a.useState(!0),
+        var t = k.a.useState(!0),
           a = t[0],
           n = t[1];
         if (
-          (C.a.useEffect(function () {
+          (k.a.useEffect(function () {
             l.a
               .Get()
               .HintLoad()
@@ -1556,8 +1579,8 @@
           }, []),
           a)
         )
-          return C.a.createElement(A.a, {
-            string: Object(P.f)("#Loading"),
+          return k.a.createElement(A.a, {
+            string: Object(E.f)("#Loading"),
             size: "medium",
             position: "center",
           });
@@ -1565,22 +1588,22 @@
           .Get()
           .GetSections()
           .map(function (e) {
-            return C.a.createElement(L, { section: e, key: e.id });
+            return k.a.createElement(N, { section: e, key: e.id });
           });
-        return C.a.createElement(
+        return k.a.createElement(
           "div",
           null,
-          C.a.createElement(S.a, null, C.a.createElement(ie, null)),
-          C.a.createElement(S.a, null, r),
-          C.a.createElement(S.a, null, C.a.createElement(ee, null)),
-          C.a.createElement(
+          k.a.createElement(S.a, null, k.a.createElement(ue, null)),
+          k.a.createElement(S.a, null, r),
+          k.a.createElement(S.a, null, k.a.createElement(ae, null)),
+          k.a.createElement(
             "a",
             {
-              href: Object(k.a)(
+              href: Object(C.a)(
                 u.d.STORE_BASE_URL + "labs/contenthub?optout=1"
               ),
             },
-            Object(P.f)("#ContentHub_OptOut")
+            Object(E.f)("#ContentHub_OptOut")
           )
         );
       };

@@ -473,6 +473,7 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 {
 	float: left;
 	padding-left: 8px;
+	padding-right: 8px;
 	margin: 9px 0;
 }
 

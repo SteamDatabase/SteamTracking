@@ -4110,6 +4110,11 @@
       e.exports =
         n.p + "images/applications/store/float.png?v=valveisgoodatcaching";
     },
+    "6c1j": function (e, t, n) {
+      e.exports =
+        n.p +
+        "images/applications/store/seasonal_pagebg.png?v=valveisgoodatcaching";
+    },
     "7JP+": function (e, t, n) {
       e.exports =
         n.p +
@@ -4991,7 +4996,7 @@
         ee = n("StxQ"),
         te = n("nXE5"),
         ne = n("0OaU"),
-        re = n("nFQ1"),
+        re = n("6c1j"),
         ae = n("mgoM"),
         ie = n("jUCX"),
         oe = n("WonJ"),
@@ -5394,7 +5399,6 @@
             t = Object(a.useRef)(null),
             n = f.b.Get().GetGoldenProfileDefinition();
           if (!n) return null;
-          if (!f.b.Get().BHasAutumnSaleStarted()) return null;
           var r = f.b.Get().GetPersonaState(),
             o = f.b.Get().GetEquippedItems();
           return i.a.createElement(
@@ -5519,7 +5523,8 @@
                       : 2 == l.d.EUNIVERSE
                       ? "148618792083695825"
                       : "76561197960266962") +
-                    "?previewprofile=1",
+                    "?previewprofile=1&appid=" +
+                    f.b.Get().GetCurrentSeasonalAppID(),
                   frameBorder: 0,
                   scrolling: "no",
                   onLoad: function () {
@@ -7670,7 +7675,6 @@
               iconComponent: Ae.q,
               children: Object(g.f)("#ShopNav_ItemBundlesLink"),
               to: { pathname: s.b.LoyaltyItemBundles() },
-              iconCallout: Ae.u,
             },
           });
           var t = Object(rt.a)(l.d.EREALM);
@@ -7693,15 +7697,16 @@
                   iconComponent: ce.d,
                   children: Object(g.f)("#ShopNav_SeasonalBadgeLink"),
                   to: s.b.LoyaltySteamBadge(),
+                  iconCallout: Ae.u,
                 },
               }),
-            f.b.Get().BHasAutumnSaleStarted(),
             t ||
               e[1].items.push({
                 props: {
                   iconComponent: Ae.l,
                   children: Object(g.f)("#ShopNav_ProfileLink_Autumn2020"),
                   to: s.b.LoyaltyProfile(),
+                  iconCallout: Ae.u,
                 },
               }),
             t ||
@@ -11002,14 +11007,14 @@
             className: t,
             height: 100,
             width: 100,
-            fill: "#fff",
+            fill: "currentColor",
+            stroke: "currentColor",
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 69 69",
           },
           i.a.createElement("path", {
             d:
               "M47.9849 0.487061L62.9734 29.8571L95.5377 35.0362L72.2368 58.367L77.3741 90.9379L47.9849 75.9871L18.5956 90.9379L23.7329 58.367L0.432037 35.0362L32.9963 29.8571L47.9849 0.487061Z",
-            fill: "#AFB5C1",
           }),
           "  "
         );
@@ -12489,11 +12494,6 @@
             i.a.createElement("div", { className: m.Inner }, t)
           );
         };
-    },
-    nFQ1: function (e, t, n) {
-      e.exports =
-        n.p +
-        "images/applications/store/winter_pagebg.png?v=valveisgoodatcaching";
     },
     nXE5: function (e, t, n) {
       "use strict";
@@ -14724,7 +14724,7 @@
               return this.m_config;
             }),
             (e.prototype.GetCurrentSeasonalAppID = function () {
-              return 1492660;
+              return 1615900;
             }),
             (e.prototype.GetLoyaltyRewardsSummary = function () {
               return Object(r.b)(this, void 0, void 0, function () {

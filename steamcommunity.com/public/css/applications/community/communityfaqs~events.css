@@ -3023,6 +3023,7 @@ strong {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  background-color: #51545d;
   color: var(--main-text-on-light-blue);
   box-shadow: 0 0 10px #000;
   padding: 15px;

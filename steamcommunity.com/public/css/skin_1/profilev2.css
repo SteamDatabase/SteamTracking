@@ -105,16 +105,16 @@ body.WinterProfile2020Theme {
 }
 
 body.GoldenWeekProfile2021Theme {
-    --gradient-right: #7770A988;
-    --gradient-left: #34526F88;
-    --gradient-background: #34526F88;
-    --gradient-background-right: rgba(25, 20, 65, 0.333);
-    --gradient-background-left: rgba(3, 7, 12, 0.333);
-    --color-showcase-header: #07817f;
-    --gradient-showcase-header-left: #34526F;
-    --btn-background: #34526F;
-    --btn-background-hover: rgb(54, 104, 151);
-    --btn-outline: #34526F;
+    --gradient-right: #389bb0aa;
+    --gradient-left: #2c5e83aa;
+    --gradient-background: #134061aa;
+    --gradient-background-right: #389bb066;
+    --gradient-background-left: #2c5e8333;
+    --color-showcase-header: #389bb0;
+    --gradient-showcase-header-left: #2c5e83;
+    --btn-background: #2c5e83;
+    --btn-background-hover: #1b6daa;
+    --btn-outline: #2c5e83;
 }
 
 div.profile_page {
