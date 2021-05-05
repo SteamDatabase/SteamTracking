@@ -1703,7 +1703,7 @@
                 })),
                   (a.label = 1);
               case 1:
-                return a.trys.push([1, 3, , 4]), [4, Object(G.g)(n)];
+                return a.trys.push([1, 3, , 4]), [4, Object(G.h)(n)];
               case 2:
                 return a.sent(), [3, 4];
               case 3:
@@ -4306,67 +4306,67 @@
           return g;
         }),
         n.d(t, "b", function () {
-          return f;
+          return h;
         }),
         n.d(t, "c", function () {
-          return E;
+          return b;
         }),
         n.d(t, "e", function () {
-          return v;
+          return E;
         }),
         n.d(t, "a", function () {
-          return S;
+          return v;
         }),
         n.d(t, "n", function () {
-          return y;
+          return S;
         }),
         n.d(t, "m", function () {
-          return O;
+          return y;
         }),
         n.d(t, "i", function () {
-          return T;
+          return O;
         }),
         n.d(t, "h", function () {
-          return C;
+          return T;
         }),
         n.d(t, "l", function () {
-          return j;
+          return C;
         }),
         n.d(t, "f", function () {
-          return I;
+          return j;
         }),
         n.d(t, "s", function () {
-          return M;
+          return I;
         }),
         n.d(t, "k", function () {
-          return w;
+          return M;
         }),
         n.d(t, "d", function () {
-          return D;
+          return w;
         }),
         n.d(t, "t", function () {
-          return G;
+          return k;
         }),
         n.d(t, "q", function () {
-          return A;
+          return G;
         }),
         n.d(t, "r", function () {
-          return L;
+          return A;
         }),
         n.d(t, "u", function () {
-          return B;
+          return L;
         }),
         n.d(t, "v", function () {
-          return N;
+          return B;
         }),
         n.d(t, "p", function () {
-          return F;
+          return N;
         }),
         n.d(t, "o", function () {
-          return R;
+          return F;
         }),
         n.d(t, "g", function () {
-          return U;
+          return P;
         });
       var a,
         i = n("mrSG"),
@@ -4380,99 +4380,186 @@
         p = n("gyoR"),
         m = n("lkRc"),
         _ = n("fcuX");
-      function g(e, t, n, r, o, m) {
+      function g(e, t, n, r, _, g) {
         return (
           void 0 === n && (n = !0),
           void 0 === r && (r = !0),
-          void 0 === o && (o = !0),
-          void 0 === m && (m = !1),
+          void 0 === _ && (_ = !0),
+          void 0 === g && (g = !1),
           Object(i.b)(this, void 0, void 0, function () {
-            var _, g, f, b, E, v, S, y, O, T, C, j, I, M, w;
-            return Object(i.e)(this, function (i) {
-              switch (i.label) {
+            var h,
+              f,
+              b,
+              E,
+              v,
+              S,
+              y,
+              O,
+              T,
+              C,
+              j,
+              I,
+              M,
+              w,
+              D,
+              G,
+              A = this;
+            return Object(i.e)(this, function (L) {
+              switch (L.label) {
                 case 0:
                   return (
-                    (_ = new Array()),
-                    (g = null),
+                    (h = null),
                     (f = e.GetEventModel().jsondata.sale_opt_in_page_name),
-                    o && f && _.push(l.a.Get().HintLoadOptInPageData(f)),
-                    n || r
-                      ? (_.push(
-                          Object(p.g)(
-                            t.map(function (e) {
-                              return e.capsule;
-                            })
-                          )
-                        ),
-                        m
-                          ? [
-                              4,
-                              h(
-                                t.map(function (e) {
-                                  return e.capsule.id;
-                                })
-                              ),
-                            ]
-                          : [3, 2])
-                      : [3, 2]
+                    _ && f ? [4, l.a.Get().HintLoadOptInPageData(f)] : [3, 2]
                   );
                 case 1:
-                  (g = i.sent()), (i.label = 2);
+                  L.sent(), (L.label = 2);
                 case 2:
-                  if (r)
-                    for (
-                      b = t.map(function (e) {
-                        return e.capsule.id;
-                      }),
-                        _.push(u.a.Get().LoadAppIDsBatch(b)),
-                        200,
-                        E = 0;
-                      E < b.length;
-                      E += 200
-                    )
-                      (v = Math.min(200, b.length - E)),
-                        _.push(
-                          d.a
-                            .Get()
-                            .HintLoadStoreItems(
-                              void 0,
-                              b.slice(E, E + v),
-                              [],
-                              [],
-                              { include_basic_info: !0 }
-                            )
-                        );
-                  return [4, Promise.all(_)];
-                case 3:
-                  if (
-                    (i.sent(),
-                    (S = o && f ? l.a.Get().GetOptInPageData(f) : null),
-                    (y = new Map()),
-                    !n)
-                  )
-                    return [3, 7];
-                  (O = 0), (T = t), (i.label = 4);
-                case 4:
-                  return O < T.length
-                    ? ((C = T[O]),
-                      (I = (j = y).set),
-                      (M = [C]),
-                      [4, Object(p.e)(C.capsule)])
-                    : [3, 7];
-                case 5:
-                  I.apply(j, M.concat([i.sent()])), (i.label = 6);
-                case 6:
-                  return O++, [3, 4];
-                case 7:
                   return (
-                    (w = !1),
+                    (b = _ && f ? l.a.Get().GetOptInPageData(f) : null),
+                    [
+                      4,
+                      Object(p.h)(
+                        t.map(function (e) {
+                          return e.capsule;
+                        })
+                      ),
+                    ]
+                  );
+                case 3:
+                  return (
+                    L.sent(),
+                    [
+                      4,
+                      Object(p.f)(
+                        t.map(function (e) {
+                          return e.capsule;
+                        })
+                      ),
+                    ]
+                  );
+                case 4:
+                  if (((E = L.sent()), (v = new Map()), !n)) return [3, 8];
+                  (S = 0), (y = t), (L.label = 5);
+                case 5:
+                  return S < y.length
+                    ? ((O = y[S]),
+                      (C = (T = v).set),
+                      (j = [O]),
+                      [4, Object(p.e)(O.capsule)])
+                    : [3, 8];
+                case 6:
+                  C.apply(T, j.concat([L.sent()])), (L.label = 7);
+                case 7:
+                  return S++, [3, 5];
+                case 8:
+                  if (
+                    ((I = new Array()),
+                    g &&
+                      I.push(
+                        (function (e) {
+                          return Object(i.b)(this, void 0, void 0, function () {
+                            var t, n, a, r, l, s, c, u;
+                            return Object(i.e)(this, function (i) {
+                              switch (i.label) {
+                                case 0:
+                                  for (
+                                    t = 50, n = [], a = e.slice();
+                                    a.length > 0;
+
+                                  )
+                                    (r = Math.min(t, a.length)),
+                                      (l = a.slice(0, r)),
+                                      (a = a.slice(r)),
+                                      n.push(l);
+                                  return (
+                                    (s = n.map(function (e) {
+                                      var t =
+                                          m.c.STORE_BASE_URL +
+                                          "broadcast/ajaxgettopntagsforappbatch",
+                                        n = { appids: e.join(",") };
+                                      return o.a.get(t, { params: n });
+                                    })),
+                                    [4, Promise.all(s)]
+                                  );
+                                case 1:
+                                  return (
+                                    (c = i.sent()),
+                                    (u = new Map()),
+                                    c.forEach(function (e) {
+                                      var t, n;
+                                      null ===
+                                        (n =
+                                          null ===
+                                            (t = null == e ? void 0 : e.data) ||
+                                          void 0 === t
+                                            ? void 0
+                                            : t.apps) ||
+                                        void 0 === n ||
+                                        n.forEach(function (e) {
+                                          u.set(Number(e.appid), e.tags);
+                                        });
+                                    }),
+                                    [2, u]
+                                  );
+                              }
+                            });
+                          });
+                        })(E).then(function (e) {
+                          h = e;
+                        })
+                      ),
+                    r)
+                  )
+                    for (
+                      I.push(u.a.Get().LoadAppIDsBatch(E)),
+                        100,
+                        M = Promise.resolve(null),
+                        w = function (e) {
+                          var t = Math.min(100, E.length - e),
+                            n = E.slice(e, e + t),
+                            a = function () {
+                              return Object(i.b)(
+                                A,
+                                void 0,
+                                void 0,
+                                function () {
+                                  return Object(i.e)(this, function (e) {
+                                    return [
+                                      2,
+                                      d.a
+                                        .Get()
+                                        .HintLoadStoreItems(
+                                          void 0,
+                                          n,
+                                          [],
+                                          [],
+                                          d.a.k_DataRequest_CommonOnly
+                                        ),
+                                    ];
+                                  });
+                                }
+                              );
+                            };
+                          (M = M.then(a, a)), I.push(M);
+                        },
+                        D = 0;
+                      D < E.length;
+                      D += 100
+                    )
+                      w(D);
+                  return [4, Promise.all(I)];
+                case 9:
+                  return (
+                    L.sent(),
+                    (G = !1),
                     Object(s.G)(function () {
                       for (var i = 0, o = t; i < o.length; i++) {
                         var l = o[i],
                           s = !1;
-                        if (S) {
-                          var u = S.get(l.capsule.id);
-                          G(
+                        if (b) {
+                          var u = b.get(l.capsule.id);
+                          k(
                             l,
                             u
                               ? u.tags.map(function (e) {
@@ -4484,78 +4571,48 @@
                         }
                         if (n) {
                           for (
-                            var d = new Set(), p = 0, _ = y.get(l);
-                            p < _.length;
+                            var d = new Set(), p = 0, m = v.get(l);
+                            p < m.length;
                             p++
                           ) {
-                            var h = _[p];
-                            if (m) {
-                              if (!g || !g.has(h)) continue;
-                              for (var f = 0, b = g.get(h); f < b.length; f++) {
-                                var E = b[f];
-                                d.add(E.name);
+                            var _ = m[p];
+                            if (g) {
+                              if (!h || !h.has(_)) {
+                                console.error("COULD NOT FIND TAGS FOR ", _);
+                                continue;
+                              }
+                              for (var f = 0, E = h.get(_); f < E.length; f++) {
+                                var S = E[f];
+                                d.add(S.name);
                               }
                             } else {
-                              var v = c.a.GetAppLinkInfo(h);
-                              if (!v || !v.tags) continue;
-                              for (var O = 0, T = v.tags; O < T.length; O++) {
-                                E = T[O];
-                                d.add(E.name);
+                              var y = c.a.GetAppLinkInfo(_);
+                              if (!y || !y.tags) {
+                                console.error("COULD NOT FIND TAGS FOR ", _);
+                                continue;
+                              }
+                              for (var O = 0, T = y.tags; O < T.length; O++) {
+                                S = T[O];
+                                d.add(S.name);
                               }
                             }
                           }
-                          G(l, Array.from(d), a.Store) && (s = !0);
+                          k(l, Array.from(d), a.Store) && (s = !0);
                         }
-                        if (r) G(l, P(l.capsule), a.Feature) && (s = !0);
+                        if (r) k(l, x(l.capsule), a.Feature) && (s = !0);
                         s &&
-                          (N(e.GetEventModel().jsondata.auto_item_tags, l),
-                          (w = !0));
+                          (B(e.GetEventModel().jsondata.auto_item_tags, l),
+                          (G = !0));
                       }
                     }),
-                    [2, w]
+                    [2, G]
                   );
               }
             });
           })
         );
       }
-      function h(e) {
-        return Object(i.b)(this, void 0, void 0, function () {
-          var t, n, a, r, l, s, c;
-          return Object(i.e)(this, function (i) {
-            switch (i.label) {
-              case 0:
-                for (50, t = [], n = e.slice(); n.length > 0; )
-                  (a = Math.min(50, n.length)),
-                    (r = n.slice(0, a)),
-                    (n = n.slice(a)),
-                    t.push(r);
-                return (
-                  (l = t.map(function (e) {
-                    var t =
-                        m.c.STORE_BASE_URL +
-                        "broadcast/ajaxgettopntagsforappbatch",
-                      n = { appids: e.join(",") };
-                    return o.a.get(t, { params: n });
-                  })),
-                  [4, Promise.all(l)]
-                );
-              case 1:
-                return (
-                  (s = i.sent()),
-                  (c = new Map()),
-                  s.forEach(function (e) {
-                    e.data.apps.forEach(function (e) {
-                      c.set(Number(e.appid), e.tags);
-                    });
-                  }),
-                  [2, c]
-                );
-            }
-          });
-        });
-      }
-      function f(e, t, n) {
+      function h(e, t, n) {
         return Object(i.b)(this, void 0, void 0, function () {
           var a, r;
           return Object(i.e)(this, function (i) {
@@ -4573,13 +4630,13 @@
                 );
               case 1:
                 return (
-                  i.sent(), a.push(r), B(e), e.SetDirty(_.c.jsondata_sales), [2]
+                  i.sent(), a.push(r), L(e), e.SetDirty(_.c.jsondata_sales), [2]
                 );
             }
           });
         });
       }
-      function b(e, t) {
+      function f(e, t) {
         e.manually_added_tags &&
           (e.manually_added_tags = e.manually_added_tags.filter(function (e) {
             return e.toLocaleLowerCase() != t;
@@ -4591,7 +4648,7 @@
               return e.toLocaleLowerCase() != t;
             }));
       }
-      function E(e, t) {
+      function b(e, t) {
         for (var n = !1, a = new Map(), i = 0, r = e.tags; i < r.length; i++) {
           var o = r[i];
           a.set(o.toLocaleLowerCase(), o);
@@ -4601,14 +4658,14 @@
             u = c.toLocaleLowerCase();
           a.has(u)
             ? a.delete(u)
-            : (b(e, u),
+            : (f(e, u),
               e.manually_added_tags || (e.manually_added_tags = []),
               e.manually_added_tags.push(c),
               (n = !0));
         }
         return (
           a.forEach(function (t, a) {
-            b(e, a),
+            f(e, a),
               e.manually_removed_tags || (e.manually_removed_tags = []),
               e.manually_removed_tags.push(t),
               (n = !0);
@@ -4617,10 +4674,10 @@
           n
         );
       }
-      function v(e) {
+      function E(e) {
         return JSON.parse(JSON.stringify(e));
       }
-      function S(e, t, n) {
+      function v(e, t, n) {
         for (var a = 0, i = t; a < i.length; a++) {
           var r = i[a],
             o = r.toLocaleLowerCase(),
@@ -4628,14 +4685,14 @@
           l ? l.items.push(e) : n.set(o, { properCaseString: r, items: [e] });
         }
       }
-      function y(e) {
+      function S(e) {
         for (var t = new Map(), n = 0, a = e; n < a.length; n++) {
           var i = a[n];
-          i.tags && S(i, i.tags, t);
+          i.tags && v(i, i.tags, t);
         }
         return t;
       }
-      function O(e) {
+      function y(e) {
         var t = new Set();
         return (
           e.forEach(function (e) {
@@ -4644,7 +4701,7 @@
           t
         );
       }
-      function T(e, t) {
+      function O(e, t) {
         if (t && t.clauses)
           for (var n = 0, a = t.clauses; n < a.length; n++) {
             var i = a[n];
@@ -4658,28 +4715,28 @@
           }
         return !0;
       }
-      function C(e, t) {
-        return !t || !t.clauses || T(O(e), t);
+      function T(e, t) {
+        return !t || !t.clauses || O(y(e), t);
       }
-      function j(e, t) {
+      function C(e, t) {
         return e.filter(function (e) {
-          return C(e.tags, t);
+          return T(e.tags, t);
         });
       }
-      function I(e, t) {
+      function j(e, t) {
         return "[" + t + "] " + e;
       }
-      function M(e) {
+      function I(e) {
         return e.replace(/^\[(.+)\]/, "").trim();
       }
-      function w(e) {
+      function M(e) {
         var t = /^\[(.+)\]/.exec(e);
         return t ? t[1] : void 0;
       }
-      function D(e, t) {
-        return w(e) === t;
+      function w(e, t) {
+        return M(e) === t;
       }
-      function k(e, t) {
+      function D(e, t) {
         return (
           !!t &&
           t.some(function (t) {
@@ -4687,26 +4744,26 @@
           })
         );
       }
-      function G(e, t, n, a) {
+      function k(e, t, n, a) {
         void 0 === a && (a = null);
         var i = !1,
           r = new Map();
         t.forEach(function (e) {
-          var t = w(e);
+          var t = M(e);
           if (!t || t === n) {
-            var a = t ? e : I(e, n);
+            var a = t ? e : j(e, n);
             r.set(a.toLocaleLowerCase(), a);
           }
         });
-        var o = I("", n).toLocaleLowerCase(),
+        var o = j("", n).toLocaleLowerCase(),
           l = null;
         return (
           a &&
             ((l = new Set()),
             a.forEach(function (e) {
-              var t = w(e);
+              var t = M(e);
               if (!t || t === n) {
-                var a = t ? e : I(e, n);
+                var a = t ? e : j(e, n);
                 l.add(a.toLocaleLowerCase());
               }
             })),
@@ -4717,18 +4774,18 @@
               !n.startsWith(o) ||
               (r.has(n)
                 ? (r.delete(n), !0)
-                : !!k(n, e.manually_added_tags) || ((i = !0), !1))
+                : !!D(n, e.manually_added_tags) || ((i = !0), !1))
             );
           })),
           r.forEach(function (t, n) {
-            k(n, e.tags) ||
-              k(n, e.manually_removed_tags) ||
+            D(n, e.tags) ||
+              D(n, e.manually_removed_tags) ||
               ((i = !0), e.tags.push(t));
           }),
           i
         );
       }
-      function A(e) {
+      function G(e) {
         var t;
         if (
           !e ||
@@ -4740,13 +4797,13 @@
         }
         return !0;
       }
-      function L(e, t, n) {
+      function A(e, t, n) {
         for (var a = new Map(), i = 0, r = n; i < r.length; i++) {
           var o = r[i];
           a.set(o.type + o.id, !1);
         }
         for (
-          var l = j(e, t), s = new Array(), c = 0, u = l;
+          var l = C(e, t), s = new Array(), c = 0, u = l;
           c < u.length;
           c++
         ) {
@@ -4760,9 +4817,9 @@
         });
         return _.push.apply(_, s), _;
       }
-      function B(e) {
+      function L(e) {
         Object(s.G)(function () {
-          var t = R(e);
+          var t = F(e);
           if (e.GetEventModel().jsondata.sorting_tiers)
             for (
               var n = 0, a = e.GetEventModel().jsondata.sorting_tiers;
@@ -4771,7 +4828,7 @@
             ) {
               var i = a[n];
               i.sale_tag_filter &&
-                (i.capsules = L(t, i.sale_tag_filter, i.capsules));
+                (i.capsules = A(t, i.sale_tag_filter, i.capsules));
             }
           for (
             var r = 0, o = e.GetEventModel().GetSaleSections();
@@ -4781,34 +4838,34 @@
             var l = o[r];
             if (
               (l.sale_tag_filter &&
-                (l.capsules = L(t, l.sale_tag_filter, l.capsules)),
+                (l.capsules = A(t, l.sale_tag_filter, l.capsules)),
               l.tabs)
             )
               for (var s = 0, c = l.tabs; s < c.length; s++) {
                 var u = c[s];
                 u.sale_tag_filter &&
-                  (u.capsules = L(t, u.sale_tag_filter, u.capsules));
+                  (u.capsules = A(t, u.sale_tag_filter, u.capsules));
               }
           }
         });
       }
-      function N(e, t) {
+      function B(e, t) {
         var n = new Array();
         if (e)
           for (var i = 0, r = e; i < r.length; i++) {
             var o = r[i];
-            C(t.tags, o.filter) && n.push(o.tag_name);
+            T(t.tags, o.filter) && n.push(o.tag_name);
           }
-        return G(t, n, a.Auto);
+        return k(t, n, a.Auto);
       }
-      function F(e) {
+      function N(e) {
         return e.GetEventModel().jsondata.tagged_item_filter || { clauses: [] };
       }
-      function R(e) {
-        var t = F(e);
-        return j(e.GetEventModel().GetTaggedItems(), t);
+      function F(e) {
+        var t = N(e);
+        return C(e.GetEventModel().GetTaggedItems(), t);
       }
-      function x(e, t) {
+      function R(e, t) {
         return (
           !!e.content_descriptors &&
           void 0 !==
@@ -4817,26 +4874,27 @@
             })
         );
       }
-      function P(e) {
+      function x(e) {
         var t = new Array(),
           n = c.a.GetAppLinkInfo(e.id),
           a = u.a.Get().GetDemoEventInfo(e.id),
           i = d.a.Get().GetApp(e.id);
         return (
           a && a.demo_appid && t.push("Has Demo"),
-          n &&
-            (n.coming_soon && t.push("Coming Soon"),
-            n.available_linux && t.push("Linux"),
-            n.available_mac && t.push("Mac"),
-            n.support_vrhmd && t.push("VR"),
-            n.support_vrhmd_only && t.push("VR Only"),
-            n.discount_percent && t.push("Discounted"),
-            n.is_free && t.push("Free"),
-            "music" === n.type && t.push("Soundtrack"),
-            "dlc" === n.type && t.push("DLC"),
-            x(n, 3) && t.push("Adult Only Sexual Content"),
-            x(n, 1) && t.push("Nudity or Sexual Content"),
-            x(n, 2) && t.push("Violence or Gore")),
+          n
+            ? (n.coming_soon && t.push("Coming Soon"),
+              n.available_linux && t.push("Linux"),
+              n.available_mac && t.push("Mac"),
+              n.support_vrhmd && t.push("VR"),
+              n.support_vrhmd_only && t.push("VR Only"),
+              n.discount_percent && t.push("Discounted"),
+              n.is_free && t.push("Free"),
+              "music" === n.type && t.push("Soundtrack"),
+              "dlc" === n.type && t.push("DLC"),
+              R(n, 3) && t.push("Adult Only Sexual Content"),
+              R(n, 1) && t.push("Nudity or Sexual Content"),
+              R(n, 2) && t.push("Violence or Gore"))
+            : console.log("Could not load appinfo for", e.type, e.id),
           i &&
             (i.BHasStoreCategory(28) && t.push("Full Controller"),
             i.BHasStoreCategory(9) && t.push("Coop"),
@@ -4849,13 +4907,13 @@
           t
         );
       }
-      function U(e) {
-        var t = F(e);
-        if (A(t)) return !1;
+      function P(e) {
+        var t = N(e);
+        if (G(t)) return !1;
         var n = e.GetEventModel().jsondata.tagged_items.length;
         return (
           Object(s.G)(function () {
-            e.GetEventModel().jsondata.tagged_items = j(
+            e.GetEventModel().jsondata.tagged_items = C(
               e.GetEventModel().jsondata.tagged_items,
               t
             );
@@ -10309,59 +10367,64 @@
                 n = t.nEarliestTime,
                 a = t.fnSetTimeToUpdate,
                 i = t.fnIsValidDateTime;
-              if ("string" == typeof e) {
-                var r = b(e, "h:m a +-h:m", !0);
-                if (!r.isValid())
-                  return void this.setState({ timeAsString: e });
-                e = r;
+              if (!t.disabled) {
+                if ("string" == typeof e) {
+                  var r = b(e, "h:m a +-h:m", !0);
+                  if (!r.isValid())
+                    return void this.setState({ timeAsString: e });
+                  e = r;
+                }
+                var o = this.props.fnGetTimeToUpdate(),
+                  l = 0;
+                if (o) {
+                  var s = b.unix(o);
+                  e.year(s.year()),
+                    e.month(s.month()),
+                    e.day(s.day()),
+                    (l = e.unix());
+                } else {
+                  l =
+                    b.unix(n).hour(0).second(0).minutes(0).unix() +
+                    3600 * e.hour() +
+                    60 * e.minutes();
+                }
+                a(l);
+                var c = i && !0 === i();
+                (null == this.state.timeAsString &&
+                  c == this.state.bEndTimeBeforeStartTime) ||
+                  this.setState({
+                    timeAsString: null,
+                    bEndTimeBeforeStartTime: c,
+                  });
               }
-              var o = this.props.fnGetTimeToUpdate(),
-                l = 0;
-              if (o) {
-                var s = b.unix(o);
-                e.year(s.year()),
-                  e.month(s.month()),
-                  e.day(s.day()),
-                  (l = e.unix());
-              } else {
-                l =
-                  b.unix(n).hour(0).second(0).minutes(0).unix() +
-                  3600 * e.hour() +
-                  60 * e.minutes();
-              }
-              a(l);
-              var c = i && !0 === i();
-              (null == this.state.timeAsString &&
-                c == this.state.bEndTimeBeforeStartTime) ||
-                this.setState({
-                  timeAsString: null,
-                  bEndTimeBeforeStartTime: c,
-                });
             }),
             (t.prototype.OnDateChange = function (e) {
-              if ("string" == typeof e) {
-                var t = b(e, "M/D/YYYY", !0);
-                if (!t.isValid())
-                  return void this.setState({ dateAsString: e });
-                e = t;
+              if (!this.props.disabled) {
+                if ("string" == typeof e) {
+                  var t = b(e, "M/D/YYYY", !0);
+                  if (!t.isValid())
+                    return void this.setState({ dateAsString: e });
+                  e = t;
+                }
+                var n = this.props.fnGetTimeToUpdate(),
+                  a = b.unix(n || c.a.GetTimeNowWithOverride());
+                e.hour(a.hour()),
+                  e.minute(a.minute()),
+                  e.second(0),
+                  this.props.fnSetTimeToUpdate(e.unix());
+                var i =
+                  this.props.fnIsValidDateTime &&
+                  !0 === this.props.fnIsValidDateTime();
+                (null == this.state.dateAsString &&
+                  i == this.state.bEndTimeBeforeStartTime) ||
+                  this.setState({
+                    dateAsString: null,
+                    bEndTimeBeforeStartTime: i,
+                  });
               }
-              var n = this.props.fnGetTimeToUpdate(),
-                a = b.unix(n || c.a.GetTimeNowWithOverride());
-              e.hour(a.hour()),
-                e.minute(a.minute()),
-                e.second(0),
-                this.props.fnSetTimeToUpdate(e.unix());
-              var i =
-                this.props.fnIsValidDateTime &&
-                !0 === this.props.fnIsValidDateTime();
-              (null == this.state.dateAsString &&
-                i == this.state.bEndTimeBeforeStartTime) ||
-                this.setState({
-                  dateAsString: null,
-                  bEndTimeBeforeStartTime: i,
-                });
             }),
             (t.prototype.IsValidDate = function (e) {
+              if (this.props.disabled) return !1;
               var t = this.props,
                 n = t.nEarliestTime,
                 a = t.nLatestTime,
@@ -14259,7 +14322,7 @@
                             (i = n.map(function (e) {
                               return { id: e, type: r.state.type };
                             })),
-                            [4, Object(Se.g)(i)])
+                            [4, Object(Se.h)(i)])
                       );
                     case 1:
                       return (
@@ -14425,7 +14488,7 @@
                     : this.state.nImportCapsuleVisibiltyIndex,
               };
               this.props.capsuleContainer.capsules.push(n),
-                Object(Se.g)([n]),
+                Object(Se.h)([n]),
                 this.props.editModel.SetDirty(o.c.jsondata_sales);
             }),
             (t.prototype.CountCapsPerVisibilityIndex = function () {
@@ -15059,7 +15122,7 @@
                       )
                         (c = s[l]),
                           (u = this.ParseCapsuleInfoFromLine(c)) && i.push(u);
-                      return [4, Object(Se.g)(i)];
+                      return [4, Object(Se.h)(i)];
                     case 1:
                       for (
                         a.sent(), d = "", p = t.GetNumberOfDays(), m = 0, _ = i;
@@ -20862,7 +20925,7 @@
                 (this.m_refInput.element.value = ""),
                 Object(O.G)(function () {
                   (n.props.saleSection.capsules = [{ id: e, type: t }]),
-                    Object(Se.g)(n.props.saleSection.capsules),
+                    Object(Se.h)(n.props.saleSection.capsules),
                     n.props.editModel.SetDirty(o.c.jsondata_sales);
                 });
             }),
@@ -21953,7 +22016,7 @@
                 o = 0,
                 s = 0,
                 c = i.GetEventModel().GetTaggedItems();
-              Object(j.g)(
+              Object(j.h)(
                 c.map(function (e) {
                   return e.capsule;
                 })
@@ -24151,7 +24214,17 @@
         ue = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
-            return (t.state = { bImporting: !1 }), t;
+            return (
+              (t.state = {
+                bImporting: !1,
+                sync_opt_in_items: !1,
+                sync_opt_in_tags: !1,
+                sync_store_tags: !1,
+                sync_feature_tags: !1,
+                bSyncTop20StoreTags: !1,
+              }),
+              t
+            );
           }
           return (
             Object(a.d)(t, e),
@@ -24250,7 +24323,7 @@
             }),
             (t.prototype.DoImport = function () {
               return Object(a.b)(this, void 0, void 0, function () {
-                var e, t, n, i, r, s;
+                var e, t, n, i, r, s, c;
                 return Object(a.e)(this, function (a) {
                   switch (a.label) {
                     case 0:
@@ -24266,21 +24339,30 @@
                     case 1:
                       (s = a.sent() || s), (a.label = 2);
                     case 2:
-                      return r || t
-                        ? [
-                            4,
-                            Object(l.w)(
-                              this.props.editModel,
-                              this.props.editModel
-                                .GetEventModel()
-                                .GetTaggedItems(),
-                              r,
-                              t,
-                              !1,
-                              this.state.bSyncTop20StoreTags
-                            ),
-                          ]
-                        : [3, 4];
+                      return (
+                        (c = this.props.editModel
+                          .GetEventModel()
+                          .GetTaggedItems()),
+                        this.setState({
+                          statusMsg: Object(N.f)(
+                            "#Sale_SyncTaggedItems_Progress_LoadingStore",
+                            c.length
+                          ),
+                        }),
+                        r || t
+                          ? [
+                              4,
+                              Object(l.w)(
+                                this.props.editModel,
+                                c,
+                                r,
+                                t,
+                                !1,
+                                this.state.bSyncTop20StoreTags
+                              ),
+                            ]
+                          : [3, 4]
+                      );
                     case 3:
                       (s = a.sent() || s), (a.label = 4);
                     case 4:

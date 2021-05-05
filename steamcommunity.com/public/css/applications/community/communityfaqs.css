@@ -7,8 +7,7 @@
 }
 .faqdashboard_FAQDashboard_tIxuP {
   background-color: #2e3138;
-  max-width: 100%;
-  width: 900px;
+  width: 100%;
   padding: 24px;
   color: #fff;
   display: flex;
@@ -65,16 +64,15 @@ button.faqdashboard_DashboardCreateFAQButton_3VW3j.faqdashboard_DashboardCreateF
   font-size: 13px;
 }
 .faqdashboard_EntryColumn_29Dif.faqdashboard_NameCol_1fuCl {
-  width: 50%;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.faqdashboard_EntryColumn_29Dif.faqdashboard_TimeCol_3V2JE {
-  width: 25%;
-}
-.faqdashboard_EntryColumn_29Dif.faqdashboard_VisCol_1k550 {
-  width: 25%;
+.faqdashboard_EntryColumn_29Dif.faqdashboard_DataCol_31hg_ {
+  width: 100px;
+  justify-content: flex-end;
+  text-align: right;
 }
 .faqdashboard_DashboardListHeaderRow_1m9z- .faqdashboard_EntryColumn_29Dif {
   display: flex;
@@ -87,10 +85,6 @@ button.faqdashboard_DashboardCreateFAQButton_3VW3j.faqdashboard_DashboardCreateF
   cursor: pointer;
 }
 .faqdashboard_DashboardListHeaderRow_1m9z-
-  .faqdashboard_EntryColumn_29Dif.faqdashboard_RightAligned_3aRrw {
-  justify-content: flex-end;
-}
-.faqdashboard_DashboardListHeaderRow_1m9z-
   .faqdashboard_EntryColumn_29Dif
   .faqdashboard_DownArrow_30b5I {
   display: none;
@@ -99,38 +93,26 @@ button.faqdashboard_DashboardCreateFAQButton_3VW3j.faqdashboard_DashboardCreateF
   margin: 3px 6px;
 }
 .faqdashboard_DashboardListHeaderRow_1m9z-
+  .faqdashboard_EntryColumn_29Dif.faqdashboard_Selected_3_SL2 {
+  font-weight: 600;
+}
+.faqdashboard_DashboardListHeaderRow_1m9z-
   .faqdashboard_EntryColumn_29Dif.faqdashboard_Selected_3_SL2
   .faqdashboard_DownArrow_30b5I {
   display: block;
 }
-.faqdashboard_EntryRow_1XVhG {
-  display: flex;
-}
-.faqdashboard_EntryRow_1XVhG .faqdashboard_SmallLabel_2hoVL {
-  color: #777e83;
-  margin-right: 6px;
-  width: 160px;
-  text-align: right;
-}
-.faqdashboard_SmallData_2wFUB {
-  text-align: right;
-  width: 130px;
-  font-weight: bold;
-}
-.faqdashboard_SmallData_2wFUB.faqdashboard_State_2DKYg {
-  width: 60px;
-}
-.faqdashboard_SmallData_2wFUB.faqdashboard_Never_36m0d {
+.faqdashboard_Never_36m0d,
+.faqdashboard_BadCount_1kNWc {
   color: #b36f6f;
 }
-.faqdashboard_SmallData_2wFUB.faqdashboard_Warning_6rM4e {
-  color: #9a7a3a;
-}
-.faqdashboard_SmallData_2wFUB.faqdashboard_Visible_pbhW7 {
+.faqdashboard_Visible_pbhW7 {
   color: #47bfff;
 }
-.faqdashboard_SmallData_2wFUB.faqdashboard_Hidden_2sNUo {
+.faqdashboard_Hidden_2sNUo {
   color: #889396;
+}
+.faqdashboard_GoodCount_M3TAP {
+  color: #35b435;
 }
 .faqdashboard_DateToolTip_Q8C5p {
   background-color: dimgray;
@@ -138,7 +120,7 @@ button.faqdashboard_DashboardCreateFAQButton_3VW3j.faqdashboard_DashboardCreateF
 }
 .faqdashboard_DashboardEntry_kcPTy {
   margin: 4px 0px;
-  padding: 12px 0px;
+  padding: 12px;
   display: flex;
   background-color: #40454f;
   color: #d3d3d3;

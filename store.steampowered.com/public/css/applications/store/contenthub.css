@@ -1,3 +1,39 @@
+.contenthubshared_MainCarousel_KAdot {
+  width: 100%;
+}
+.contenthubshared_MainCarousel_KAdot .carousel .CarouselBtnLeft {
+  left: calc(50% - 526px);
+}
+.contenthubshared_MainCarousel_KAdot .carousel .CarouselBtnRight {
+  left: calc(50% + 504px);
+}
+.contenthubshared_MainCarousel_KAdot .contenthubshared_FeatureCtn_3zFZ- {
+  width: 940px;
+  height: 640px;
+  margin: 0 auto;
+}
+.contenthubshared_StoreSection_112Fx {
+  width: 940px;
+  margin: 0 auto;
+}
+.contenthubshared_StoreSection_112Fx .contenthubshared_SectionTitle_tL3rp {
+  font-size: 18px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.contenthubshared_StoreSection_112Fx
+  .contenthubshared_SectionDescription_1Mq8O {
+  font-size: 18px;
+  color: #555454;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.contenthubshared_SectionTitleCtn_3XTET {
+  margin-top: 30px;
+  font-weight: 300;
+  margin-bottom: 8px;
+}
 .contenthubtabs_TabCtn_2oMA1 {
   display: flex;
   flex-direction: column;
@@ -6,12 +42,12 @@
   display: flex;
   flex-direction: row;
 }
-.contenthubtabs_TabHeader_uLDXr {
+.contenthubtabs_TabHeaderCtn_2hDgH .contenthubtabs_TabHeader_uLDXr {
   font-size: 16px;
   padding: 10px;
-  border-style: dotted;
+  background: blue;
 }
-.contenthubtabs_TabHeaderSelected_2lb5o {
+.contenthubtabs_TabHeaderCtn_2hDgH .contenthubtabs_TabHeaderSelected_2lb5o {
   font-weight: bold;
   color: green;
 }
@@ -41,20 +77,26 @@
   padding-left: 10px;
   padding-right: 10px;
 }
+.contenthubtabs_ContentsList_2ZnWm {
+  position: relative;
+}
 .maincapsule_FeatureCtn_IIjzc {
   display: flex;
   flex-direction: row;
   min-height: 500px;
 }
-.maincapsule_BGImage_1Wb3- {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  justify-content: center;
-  padding: 0;
-  position: relative;
+.maincapsule_SuperCapsuleCtn_3LMaD {
   width: 100%;
   height: 100%;
+  position: relative;
+}
+.maincapsule_BGImage_1Wb3- {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .maincapsule_CapsuleDecorators_2SkJz {
   position: absolute;
@@ -64,15 +106,19 @@
   row-gap: 5px;
 }
 .maincapsule_Artwork_1BjaZ {
+  flex-shrink: 0;
+  margin-top: 50px;
   padding: 0;
   position: relative;
-  height: 500px;
-  width: 200px;
+  height: 524px;
+  width: 348px;
 }
 .maincapsule_Info_30Ff- {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  justify-content: flex-end;
+  height: 600px;
+  padding-left: 30px;
 }
 .maincapsule_Title_5_Erf {
   font-size: 24px;

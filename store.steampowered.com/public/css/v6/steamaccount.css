@@ -233,7 +233,6 @@ p.currency_change_confirm_dialog_footer {
 }
 
 .two_column {
-	display: inline-block;
 	vertical-align: top;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
@@ -242,12 +241,13 @@ p.currency_change_confirm_dialog_footer {
 
 .two_column.left {
 	width: 220px;
+    float: left;
 }
 
 .two_column.right {
 	vertical-align: top;
 	margin-left: 11px;
-	width: 705px;
+	overflow: hidden;
 }
 
 @media screen and (max-width: 910px)
@@ -258,11 +258,12 @@ p.currency_change_confirm_dialog_footer {
 		display: block;
 		margin-left: 0;
 		margin-bottom: 8px;
+        float: none;
 	}
 
 	html.responsive .two_column .nav_item {
 		display: inline-block;
-		min-width: 30%;
+		min-width: calc( 33% - 30px );
 	}
 }
 

@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6516146";
+var CLSTAMP = "6525024";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [71],
   {
@@ -189,7 +189,7 @@ var CLSTAMP = "6516146";
         contextMenuItem: "contextmenu_contextMenuItem_1n7Wl",
         active: "contextmenu_active_18z-3",
         MenuSectionHeader: "contextmenu_MenuSectionHeader_2Bb4J",
-        StrongerSeparation: "contextmenu_StrongerSeparation_1BNck",
+        ContextMenuSeparator: "contextmenu_ContextMenuSeparator_WUOrU",
         NoSeparation: "contextmenu_NoSeparation_3hRb6",
         UpperCase: "contextmenu_UpperCase_uz1Xm",
         SubMenu: "contextmenu_SubMenu_2RlEO",
@@ -7529,11 +7529,12 @@ var CLSTAMP = "6516146";
       };
       function h(e) {
         if (!e) return s.b.NONE;
-        var t = e.ownerDocument.defaultView.getComputedStyle(e);
-        if ("flex" == t.display)
-          switch (t.flexDirection) {
+        var t = e.ownerDocument.defaultView,
+          n = t.getComputedStyle(e);
+        if ("flex" == n.display)
+          switch (n.flexDirection) {
             case "row":
-              return "wrap" == t.flexWrap ? s.b.GRID : s.b.ROW;
+              return "wrap" == n.flexWrap ? s.b.GRID : s.b.ROW;
             case "row-reverse":
               return s.b.ROW_REVERSE;
             case "column":
@@ -7541,7 +7542,16 @@ var CLSTAMP = "6516146";
             case "column-reverse":
               return s.b.COLUMN_REVERSE;
           }
-        else if ("grid" == t.display) return s.b.GRID;
+        else {
+          if ("grid" == n.display) return s.b.GRID;
+          if (e.childElementCount > 0) {
+            var r = t.getComputedStyle(e.firstElementChild);
+            if ("left" === r.float) return s.b.ROW;
+            if ("right" === r.float) return s.b.ROW_REVERSE;
+            if ("inline" === r.display || "inline-block" === r.display)
+              return s.b.GRID;
+          }
+        }
         return s.b.COLUMN;
       }
       function m(e) {
@@ -11085,26 +11095,23 @@ var CLSTAMP = "6516146";
     "j+5p": function (e, t, n) {
       "use strict";
       n.d(t, "b", function () {
-        return r;
+        return p;
       }),
         n.d(t, "c", function () {
-          return i;
+          return h;
         }),
         n.d(t, "a", function () {
           return f;
         });
-      var r,
-        o,
-        i,
-        a,
-        s = n("mrSG"),
-        c = n("rHSA"),
-        l = n("9cYf"),
-        u = n("r64O"),
-        p = n("qiKp"),
-        d = n("XxJJ"),
-        h = n("BaVA"),
-        m = n("NxAk");
+      var r = n("mrSG"),
+        o = n("rHSA"),
+        i = n("9cYf"),
+        a = n("r64O"),
+        s = n("qiKp"),
+        c = n("XxJJ"),
+        l = n("BaVA"),
+        u = n("NxAk");
+      var p, d, h, m;
       !(function (e) {
         (e[(e.NONE = 0)] = "NONE"),
           (e[(e.COLUMN = 1)] = "COLUMN"),
@@ -11113,24 +11120,24 @@ var CLSTAMP = "6516146";
           (e[(e.ROW_REVERSE = 4)] = "ROW_REVERSE"),
           (e[(e.GRID = 5)] = "GRID"),
           (e[(e.GEOMETRIC = 6)] = "GEOMETRIC");
-      })(r || (r = {})),
+      })(p || (p = {})),
         (function (e) {
           (e[(e.FIRST = 0)] = "FIRST"),
             (e[(e.MAINTAIN_X = 1)] = "MAINTAIN_X"),
             (e[(e.MAINTAIN_Y = 2)] = "MAINTAIN_Y");
-        })(o || (o = {})),
+        })(d || (d = {})),
         (function (e) {
           (e[(e.LAZY = 0)] = "LAZY"),
             (e[(e.START = 1)] = "START"),
             (e[(e.CENTER = 2)] = "CENTER"),
             (e[(e.END = 3)] = "END"),
             (e[(e.NEAREST = 4)] = "NEAREST");
-        })(i || (i = {})),
+        })(h || (h = {})),
         (function (e) {
           (e[(e.INVALID = 0)] = "INVALID"),
             (e[(e.FORWARD = 1)] = "FORWARD"),
             (e[(e.BACKWARD = 2)] = "BACKWARD");
-        })(a || (a = {}));
+        })(m || (m = {}));
       var f = (function () {
         function e(e, t, n) {
           (this.m_rgChildren = []),
@@ -11138,7 +11145,8 @@ var CLSTAMP = "6516146";
             (this.m_bChildrenSorted = !1),
             (this.m_bAutoFocusChild = !1),
             (this.m_bFocused = !1),
-            (this.m_FocusCallbackList = new p.a()),
+            (this.m_FocusCallbackList = new s.a()),
+            (this.m_ActionDescriptionsChangedCallbackList = new s.a()),
             (this.m_rgNavigationHandlers = []),
             (this.m_rgFocusHandlers = []),
             (this.m_Tree = e),
@@ -11147,7 +11155,7 @@ var CLSTAMP = "6516146";
         }
         return (
           (e.prototype.CreateHandle = function () {
-            return new m.d(this);
+            return new u.d(this);
           }),
           Object.defineProperty(e.prototype, "Tree", {
             get: function () {
@@ -11178,7 +11186,25 @@ var CLSTAMP = "6516146";
             configurable: !0,
           }),
           (e.prototype.SetProperties = function (e) {
+            var t,
+              n,
+              r,
+              o =
+                ((n =
+                  null === (t = this.m_Properties) || void 0 === t
+                    ? void 0
+                    : t.actionDescriptionMap),
+                (r = null == e ? void 0 : e.actionDescriptionMap),
+                !(null == n || null == r
+                  ? n === r
+                  : "object" == typeof n &&
+                    "object" == typeof r &&
+                    Object.keys(n).length === Object.keys(r).length &&
+                    Object.keys(n).every(function (e) {
+                      return r.hasOwnProperty(e) && n[e] === r[e];
+                    })));
             (this.m_Properties = e || {}),
+              o && this.m_ActionDescriptionsChangedCallbackList.Dispatch(),
               this.m_element && this.RegisterDOMEvents();
           }),
           (e.prototype.BWantsAutoFocus = function () {
@@ -11208,6 +11234,17 @@ var CLSTAMP = "6516146";
             enumerable: !1,
             configurable: !0,
           }),
+          Object.defineProperty(
+            e.prototype,
+            "ActionDescriptionChangedCallbackList",
+            {
+              get: function () {
+                return this.m_ActionDescriptionsChangedCallbackList;
+              },
+              enumerable: !1,
+              configurable: !0,
+            }
+          ),
           (e.prototype.GetActiveActionDescriptions = function () {
             return this.BuildConsolidatedActionDescriptionMap({});
           }),
@@ -11242,7 +11279,7 @@ var CLSTAMP = "6516146";
               -1 !== t &&
                 ((this.m_iActiveChild = t),
                 !this.m_Parent || this.m_Parent.m_element
-                  ? this.BTakeFocus(h.b.MOUNT)
+                  ? this.BTakeFocus(l.b.MOUNT)
                   : (this.m_Parent.m_bAutoFocusChild = !0));
             }
           }),
@@ -11255,7 +11292,7 @@ var CLSTAMP = "6516146";
                 this.m_Properties.onMoveDown ||
                 this.m_Properties.onMoveLeft) &&
               (this.m_rgNavigationHandlers.push(
-                Object(h.h)(this.m_element, this.OnNavigationEvent)
+                Object(l.h)(this.m_element, this.OnNavigationEvent)
               ),
               this.m_element.addEventListener("focusin", this.OnFocusIn),
               this.m_rgNavigationHandlers.push(function () {
@@ -11272,10 +11309,10 @@ var CLSTAMP = "6516146";
                 }));
           }),
           (e.prototype.RemoveChild = function (e) {
-            e.m_bFocused && this.m_Tree.TransferFocus(h.b.MOUNT, null),
+            e.m_bFocused && this.m_Tree.TransferFocus(l.b.MOUNT, null),
               e.UnregisterDOMEvents();
             var t = this.m_rgChildren.indexOf(e);
-            Object(u.a)(-1 !== t, "Child was not found to remove"),
+            Object(a.a)(-1 !== t, "Child was not found to remove"),
               -1 !== t &&
                 (t <= this.m_iActiveChild && this.m_iActiveChild--,
                 this.m_rgChildren.splice(t, 1));
@@ -11349,10 +11386,10 @@ var CLSTAMP = "6516146";
             }
           }),
           (e.prototype.OnDOMFocus = function (e) {
-            this.m_bFocused || this.m_Tree.TransferFocus(h.b.BROWSER, this);
+            this.m_bFocused || this.m_Tree.TransferFocus(l.b.BROWSER, this);
           }),
           (e.prototype.OnDOMBlur = function (e) {
-            this.m_bFocused && this.m_Tree.TransferFocus(h.b.BROWSER, null);
+            this.m_bFocused && this.m_Tree.TransferFocus(l.b.BROWSER, null);
           }),
           (e.prototype.RequestFocus = function () {
             this.m_Parent &&
@@ -11360,40 +11397,48 @@ var CLSTAMP = "6516146";
               this.m_Parent.RequestFocus());
           }),
           (e.prototype.BTakeFocus = function (e, t) {
-            var n = Object(m.a)(t);
-            if (this.m_Properties.focusable)
-              return this.m_Tree.TransferFocus(e, this, n), !0;
+            var n = Object(u.a)(t),
+              r = this.m_Properties,
+              o = r.focusable,
+              a = r.fnCanTakeFocus;
+            if (a && !a(this)) return !1;
+            if (o) return this.m_Tree.TransferFocus(e, this, n), !0;
             if (this.m_rgChildren.length) {
               this.EnsureChildrenSorted();
-              var i = this.m_iActiveChild;
-              (i < 0 || i >= this.m_rgChildren.length) && (i = 0);
-              var s = this.m_Properties.navEntryPreferPosition;
+              var s = this.m_iActiveChild;
+              if (s < 0 || s >= this.m_rgChildren.length) {
+                s = 0;
+                var c = this.GetLayout();
+                (c != p.ROW_REVERSE && c != p.COLUMN_REVERSE) ||
+                  (s = this.m_rgChildren.length - 1);
+              }
+              var l = this.m_Properties.navEntryPreferPosition;
               if (
-                (s == o.MAINTAIN_X && "y" == n) ||
-                (s == o.MAINTAIN_Y && "x" == n)
+                (l == d.MAINTAIN_X && "y" == n) ||
+                (l == d.MAINTAIN_Y && "x" == n)
               ) {
-                var c = l.b[n],
-                  u = this.m_Tree.GetLastFocusedMovementNode(c),
-                  p = this.ComputeRelativeDirection(t, r.GRID);
-                if (u) {
-                  var d = Object(m.f)(u.GetBoundingRect()),
-                    h = p == a.BACKWARD ? this.m_rgChildren.length - 1 : 0;
+                var h = i.b[n],
+                  f = this.m_Tree.GetLastFocusedMovementNode(h),
+                  g = this.ComputeRelativeDirection(t, p.GRID);
+                if (f) {
+                  var b = Object(u.f)(f.GetBoundingRect()),
+                    v = g == m.BACKWARD ? this.m_rgChildren.length - 1 : 0;
                   if (
                     this.BFocusClosestChildInNextAxiallyAlignedSet(
-                      c,
-                      p,
-                      t,
-                      d,
                       h,
-                      this.m_rgChildren[h].GetBoundingRect()
+                      g,
+                      t,
+                      b,
+                      v,
+                      this.m_rgChildren[v].GetBoundingRect()
                     )
                   )
                     return !0;
                 }
               }
               return (
-                !!this.BFocusNextChildInDirection(e, i - 1, a.FORWARD, t) ||
-                !!this.BFocusNextChildInDirection(e, i, a.BACKWARD, t)
+                !!this.BFocusNextChildInDirection(e, s - 1, m.FORWARD, t) ||
+                !!this.BFocusNextChildInDirection(e, s, m.BACKWARD, t)
               );
             }
             return !1;
@@ -11402,89 +11447,89 @@ var CLSTAMP = "6516146";
             return this.m_Properties.layout
               ? this.m_Properties.layout
               : this.m_rgChildren.length < 2
-              ? r.NONE
-              : Object(m.e)(this.m_element);
+              ? p.NONE
+              : Object(u.e)(this.m_element);
           }),
           (e.prototype.OnNavigationEvent = function (e) {
             var t = e.detail.button;
             if (this.BTryInternalNavigation(t)) return !0;
             var n = this.m_Properties,
               r = n.onMoveUp,
-              o = n.onMoveRight,
-              i = n.onMoveDown,
-              a = n.onMoveLeft,
-              s = !1;
+              i = n.onMoveRight,
+              a = n.onMoveDown,
+              s = n.onMoveLeft,
+              c = !1;
             switch (t) {
-              case c.a.DIR_UP:
-                r && (s = r());
+              case o.a.DIR_UP:
+                r && (c = r());
                 break;
-              case c.a.DIR_RIGHT:
-                o && (s = o());
+              case o.a.DIR_RIGHT:
+                i && (c = i());
                 break;
-              case c.a.DIR_DOWN:
-                i && (s = i());
+              case o.a.DIR_DOWN:
+                a && (c = a());
                 break;
-              case c.a.DIR_LEFT:
-                a && (s = a());
+              case o.a.DIR_LEFT:
+                s && (c = s());
             }
-            return s;
+            return c;
           }),
           (e.prototype.BTryInternalNavigation = function (e) {
             var t = this.GetLayout(),
               n = this.ComputeRelativeDirection(e, t);
-            if (n == a.INVALID) return !1;
-            if ((this.EnsureChildrenSorted(), t == r.GRID))
+            if (n == m.INVALID) return !1;
+            if ((this.EnsureChildrenSorted(), t == p.GRID))
               return this.BPerformGridNavigation(this.m_iActiveChild, n, e);
-            var o = this.m_iActiveChild;
+            var r = this.m_iActiveChild;
             return (
-              -1 == o && (o = n == a.FORWARD ? -1 : this.m_rgChildren.length),
-              this.BFocusNextChildInDirection(h.b.GAMEPAD, o, n, e)
+              -1 == r && (r = n == m.FORWARD ? -1 : this.m_rgChildren.length),
+              this.BFocusNextChildInDirection(l.b.GAMEPAD, r, n, e)
             );
           }),
           (e.prototype.ComputeRelativeDirection = function (e, t) {
-            var n = t == r.ROW_REVERSE || t == r.COLUMN_REVERSE;
+            var n = t == p.ROW_REVERSE || t == p.COLUMN_REVERSE;
             switch (t) {
-              case r.ROW:
-              case r.ROW_REVERSE:
+              case p.ROW:
+              case p.ROW_REVERSE:
                 switch (e) {
-                  case c.a.DIR_LEFT:
-                    return n ? a.FORWARD : a.BACKWARD;
-                  case c.a.DIR_RIGHT:
-                    return n ? a.BACKWARD : a.FORWARD;
+                  case o.a.DIR_LEFT:
+                    return n ? m.FORWARD : m.BACKWARD;
+                  case o.a.DIR_RIGHT:
+                    return n ? m.BACKWARD : m.FORWARD;
                   default:
-                    return a.INVALID;
+                    return m.INVALID;
                 }
-              case r.COLUMN:
-              case r.COLUMN_REVERSE:
+              case p.COLUMN:
+              case p.COLUMN_REVERSE:
                 switch (e) {
-                  case c.a.DIR_UP:
-                    return n ? a.FORWARD : a.BACKWARD;
-                  case c.a.DIR_DOWN:
-                    return n ? a.BACKWARD : a.FORWARD;
+                  case o.a.DIR_UP:
+                    return n ? m.FORWARD : m.BACKWARD;
+                  case o.a.DIR_DOWN:
+                    return n ? m.BACKWARD : m.FORWARD;
                   default:
-                    return a.INVALID;
+                    return m.INVALID;
                 }
-              case r.GRID:
+              case p.GRID:
                 switch (e) {
-                  case c.a.DIR_LEFT:
-                  case c.a.DIR_UP:
-                    return n ? a.FORWARD : a.BACKWARD;
-                  case c.a.DIR_RIGHT:
-                  case c.a.DIR_DOWN:
-                    return n ? a.BACKWARD : a.FORWARD;
+                  case o.a.DIR_LEFT:
+                  case o.a.DIR_UP:
+                    return n ? m.FORWARD : m.BACKWARD;
+                  case o.a.DIR_RIGHT:
+                  case o.a.DIR_DOWN:
+                    return n ? m.BACKWARD : m.FORWARD;
                   default:
-                    return a.INVALID;
+                    return m.INVALID;
                 }
               default:
-                return a.INVALID;
+                return m.INVALID;
             }
           }),
           (e.prototype.AdvanceIndex = function (e, t) {
-            return e + (t == a.FORWARD ? 1 : -1);
+            return e + (t == m.FORWARD ? 1 : -1);
           }),
           (e.prototype.BFocusNextChildInDirection = function (e, t, n, r) {
             for (
-              var o = n == a.FORWARD ? 1 : -1, i = t + o;
+              var o = n == m.FORWARD ? 1 : -1, i = t + o;
               i >= 0 && i < this.m_rgChildren.length;
               i += o
             ) {
@@ -11495,7 +11540,7 @@ var CLSTAMP = "6516146";
           }),
           (e.prototype.ScanChildren = function (e, t, n) {
             for (
-              var r = t == a.FORWARD ? 1 : -1, o = e;
+              var r = t == m.FORWARD ? 1 : -1, o = e;
               o >= 0 && o < this.m_rgChildren.length;
               o += r
             )
@@ -11503,55 +11548,55 @@ var CLSTAMP = "6516146";
             return -1;
           }),
           (e.prototype.BPerformGridNavigation = function (e, t, n) {
-            var r = n == c.a.DIR_UP || n == c.a.DIR_DOWN,
-              o = this.GetLastFocusElement();
-            if (!o || o == this.m_element)
+            var r = n == o.a.DIR_UP || n == o.a.DIR_DOWN,
+              i = this.GetLastFocusElement();
+            if (!i || i == this.m_element)
               return (
                 !!this.BFocusNextChildInDirection(
-                  h.b.GAMEPAD,
+                  l.b.GAMEPAD,
                   this.m_iActiveChild,
                   t,
                   n
                 ) ||
                 this.BFocusNextChildInDirection(
-                  h.b.GAMEPAD,
+                  l.b.GAMEPAD,
                   this.m_iActiveChild,
-                  t == a.FORWARD ? a.BACKWARD : a.FORWARD,
+                  t == m.FORWARD ? m.BACKWARD : m.FORWARD,
                   n
                 )
               );
-            var i = (this.GetActiveChild() || this).GetBoundingRect();
-            if (n == c.a.DIR_UP || n == c.a.DIR_DOWN) {
+            var a = (this.GetActiveChild() || this).GetBoundingRect();
+            if (n == o.a.DIR_UP || n == o.a.DIR_DOWN) {
               var s = this.m_Tree.GetLastFocusedMovementNode("x");
               if (s) {
-                var l = s.GetBoundingRect();
-                (i.x = l.x), (i.width = l.width);
+                var c = s.GetBoundingRect();
+                (a.x = c.x), (a.width = c.width);
               }
             }
             if (!r) {
-              var u = !1;
+              var p = !1;
               return (
                 -1 !=
                   this.ScanChildren(this.AdvanceIndex(e, t), t, function (e) {
-                    return Object(m.b)("y", i, e.GetBoundingRect())
-                      ? e.BTakeFocus(h.b.GAMEPAD, n)
-                      : ((u = !0), !0);
-                  }) && !u
+                    return Object(u.b)("y", a, e.GetBoundingRect())
+                      ? e.BTakeFocus(l.b.GAMEPAD, n)
+                      : ((p = !0), !0);
+                  }) && !p
               );
             }
-            var p = this.ScanChildren(this.AdvanceIndex(e, t), t, function (e) {
-              return !Object(m.b)("y", i, e.GetBoundingRect());
+            var d = this.ScanChildren(this.AdvanceIndex(e, t), t, function (e) {
+              return !Object(u.b)("y", a, e.GetBoundingRect());
             });
-            if (-1 == p) return !1;
-            var d = this.m_rgChildren[p].GetBoundingRect(),
-              f = Object(m.f)(i);
+            if (-1 == d) return !1;
+            var h = this.m_rgChildren[d].GetBoundingRect(),
+              f = Object(u.f)(a);
             return !!this.BFocusClosestChildInNextAxiallyAlignedSet(
               "x",
               t,
               n,
               f,
-              p,
-              d
+              d,
+              h
             );
           }),
           (e.prototype.BFocusClosestChildInNextAxiallyAlignedSet = function (
@@ -11560,26 +11605,26 @@ var CLSTAMP = "6516146";
             n,
             r,
             o,
-            i
+            a
           ) {
             (!o || o < 0) && (o = 0);
             var s = [];
             this.ScanChildren(o, t, function (t) {
               return (
-                !(!i || Object(m.b)(l.b[e], i, t.GetBoundingRect())) ||
+                !(!a || Object(u.b)(i.b[e], a, t.GetBoundingRect())) ||
                 (s.push({
                   child: t,
-                  dist: Object(m.c)(e, r, t.GetBoundingRect()),
+                  dist: Object(u.c)(e, r, t.GetBoundingRect()),
                 }),
                 !1)
               );
             }),
-              t == a.BACKWARD && s.reverse(),
+              t == m.BACKWARD && s.reverse(),
               s.sort(function (e, t) {
                 return e.dist - t.dist;
               });
-            for (var c = 0, u = s; c < u.length; c++) {
-              if (u[c].child.BTakeFocus(h.b.GAMEPAD, n)) return !0;
+            for (var c = 0, p = s; c < p.length; c++) {
+              if (p[c].child.BTakeFocus(l.b.GAMEPAD, n)) return !0;
             }
             return !1;
           }),
@@ -11597,10 +11642,10 @@ var CLSTAMP = "6516146";
               : (n = t),
               (this.m_iActiveChild = n);
           }),
-          Object(s.c)([d.a], e.prototype, "OnFocusIn", null),
-          Object(s.c)([d.a], e.prototype, "OnDOMFocus", null),
-          Object(s.c)([d.a], e.prototype, "OnDOMBlur", null),
-          Object(s.c)([d.a], e.prototype, "OnNavigationEvent", null),
+          Object(r.c)([c.a], e.prototype, "OnFocusIn", null),
+          Object(r.c)([c.a], e.prototype, "OnDOMFocus", null),
+          Object(r.c)([c.a], e.prototype, "OnDOMBlur", null),
+          Object(r.c)([c.a], e.prototype, "OnNavigationEvent", null),
           e
         );
       })();
@@ -12529,7 +12574,7 @@ var CLSTAMP = "6516146";
         m = n("6TF7"),
         f = n.n(m),
         g = i.a.lazy(function () {
-          return Promise.all([n.e(0), n.e(2), n.e(1), n.e(4), n.e(74)]).then(
+          return Promise.all([n.e(0), n.e(2), n.e(1), n.e(4), n.e(103)]).then(
             n.bind(null, "GEPe")
           );
         }),
@@ -12803,59 +12848,66 @@ var CLSTAMP = "6516146";
         s = n("exH9"),
         c = n("bxiW"),
         l = n("j+5p"),
-        u = n("8sdS"),
-        p = i.a.forwardRef(function (e, t) {
-          var n = e["flow-children"],
-            o = e.onActivate,
-            p = e.onCancel,
-            d = e.focusClassName,
-            h = Object(r.f)(e, [
-              "flow-children",
-              "onActivate",
-              "onCancel",
-              "focusClassName",
-            ]),
-            m = Object(a.b)(h),
-            f = m.elemProps,
-            g = m.navOptions,
-            b = m.gamepadEvents,
-            v = {};
-          "column" == n
-            ? (v.layout = l.b.COLUMN)
-            : "column-reverse" == n
-            ? (v.layout = l.b.COLUMN_REVERSE)
-            : "row" == n
-            ? (v.layout = l.b.ROW)
-            : "row-reverse" == n
-            ? (v.layout = l.b.ROW_REVERSE)
-            : "grid" == n && (v.layout = l.b.GRID),
-            o &&
-              ((f.onClick = f.onClick || o),
-              (b.onOKButton = b.onOKButton || o)),
-            b.onOKButton && void 0 === g.focusable && (g.focusable = !0),
-            g.focusable && (f.tabIndex = f.tabIndex || 0),
-            p && (b.onCancelButton = b.onCancelButton || p),
-            (f.className = Object(s.a)(f.className, "Panel", "Focusable"));
-          var _ = Object(a.g)(Object(r.a)(Object(r.a)({}, v), g)),
-            y = _.ref,
-            O = _.node;
-          Object(u.a)(b, y);
-          var w = Object(c.f)(y, t);
-          return i.a.createElement(
-            a.f.Provider,
-            { value: O },
-            O
-              ? i.a.createElement(
-                  a.c,
-                  Object(r.a)({}, f, {
-                    divRef: w,
-                    node: O,
-                    focusClassName: Object(s.a)(d, "gpfocus"),
-                  })
-                )
-              : i.a.createElement("div", Object(r.a)({}, f, { ref: w }))
-          );
-        });
+        u = n("8sdS");
+      var p = i.a.forwardRef(function (e, t) {
+        var n = e["flow-children"],
+          o = e.onActivate,
+          p = e.onCancel,
+          d = e.focusClassName,
+          h = Object(r.f)(e, [
+            "flow-children",
+            "onActivate",
+            "onCancel",
+            "focusClassName",
+          ]),
+          m = Object(a.b)(h),
+          f = m.elemProps,
+          g = m.navOptions,
+          b = m.gamepadEvents,
+          v = {},
+          _ = (function (e) {
+            switch (e) {
+              case "column":
+                return l.b.COLUMN;
+              case "column-reverse":
+                return l.b.COLUMN_REVERSE;
+              case "row":
+                return l.b.ROW;
+              case "row-reverse":
+                return l.b.ROW_REVERSE;
+              case "grid":
+                return l.b.GRID;
+              default:
+                return l.b.NONE;
+            }
+          })(n);
+        _ != l.b.NONE && (v.layout = _),
+          o &&
+            ((f.onClick = f.onClick || o), (b.onOKButton = b.onOKButton || o)),
+          b.onOKButton && void 0 === g.focusable && (g.focusable = !0),
+          g.focusable && (f.tabIndex = f.tabIndex || 0),
+          p && (b.onCancelButton = b.onCancelButton || p),
+          (f.className = Object(s.a)(f.className, "Panel", "Focusable"));
+        var y = Object(a.g)(Object(r.a)(Object(r.a)({}, v), g)),
+          O = y.ref,
+          w = y.node;
+        Object(u.a)(b, O);
+        var E = Object(c.f)(O, t);
+        return i.a.createElement(
+          a.f.Provider,
+          { value: w },
+          w
+            ? i.a.createElement(
+                a.c,
+                Object(r.a)({}, f, {
+                  divRef: E,
+                  node: w,
+                  focusClassName: Object(s.a)(d, "gpfocus"),
+                })
+              )
+            : i.a.createElement("div", Object(r.a)({}, f, { ref: E }))
+        );
+      });
     },
     qiKp: function (e, t, n) {
       "use strict";
@@ -12872,7 +12924,7 @@ var CLSTAMP = "6516146";
           return l;
         });
       var r = n("mrSG"),
-        o = (n("q1tI"), n("Kw0F")),
+        o = n("Kw0F"),
         i = n("XxJJ"),
         a = (function () {
           function e() {
@@ -13764,293 +13816,290 @@ var CLSTAMP = "6516146";
             }),
             t
           );
-        })(i.PureComponent),
-        w =
-          (i.PureComponent,
-          (function (e) {
-            function t(t) {
-              var n = e.call(this, t) || this;
-              return (
-                (n.m_elMenu = void 0),
-                (n.m_cReenteranceGuard = 1),
-                (n.state = {
-                  ready: !1,
-                  menuLeft: void 0,
-                  menuTop: void 0,
-                  menuRight: void 0,
-                  menuBottom: void 0,
-                  menuWidth: void 0,
-                  menuHeight: void 0,
-                }),
-                (n.m_mutationObserver = new MutationObserver(n.OnMenuMutation)),
-                n
-              );
-            }
+        })(i.PureComponent);
+      i.PureComponent;
+      var w = (function (e) {
+          function t(t) {
+            var n = e.call(this, t) || this;
             return (
-              Object(r.d)(t, e),
-              (t.prototype.BindMenuElement = function (e) {
-                var t = this;
-                this.m_elMenu &&
-                  (this.m_mutationObserver.disconnect(),
+              (n.m_elMenu = void 0),
+              (n.m_cReenteranceGuard = 1),
+              (n.state = {
+                ready: !1,
+                menuLeft: void 0,
+                menuTop: void 0,
+                menuRight: void 0,
+                menuBottom: void 0,
+                menuWidth: void 0,
+                menuHeight: void 0,
+              }),
+              (n.m_mutationObserver = new MutationObserver(n.OnMenuMutation)),
+              n
+            );
+          }
+          return (
+            Object(r.d)(t, e),
+            (t.prototype.BindMenuElement = function (e) {
+              var t = this;
+              this.m_elMenu &&
+                (this.m_mutationObserver.disconnect(),
+                this.props.popup ||
+                  this.m_elMenu.ownerDocument.defaultView.removeEventListener(
+                    "resize",
+                    this.OnWindowResize
+                  )),
+                e &&
+                  (this.m_mutationObserver.observe(e, {
+                    childList: !0,
+                    subtree: !0,
+                  }),
                   this.props.popup ||
-                    this.m_elMenu.ownerDocument.defaultView.removeEventListener(
+                    e.ownerDocument.defaultView.addEventListener(
                       "resize",
                       this.OnWindowResize
                     )),
-                  e &&
-                    (this.m_mutationObserver.observe(e, {
-                      childList: !0,
-                      subtree: !0,
-                    }),
-                    this.props.popup ||
-                      e.ownerDocument.defaultView.addEventListener(
-                        "resize",
-                        this.OnWindowResize
-                      )),
-                  (this.m_elMenu = e || void 0),
-                  this.PositionMenu(),
-                  this.state.ready ||
-                    (this.props.instance.SetTakeFocus(
-                      this.TakeFocus.bind(this)
-                    ),
-                    this.setState({ ready: !0 }, function () {
-                      t.TakeFocus();
-                    }));
-              }),
-              (t.prototype.OnMenuMutation = function (e, t) {
-                this.PositionMenu();
-              }),
-              (t.prototype.OnWindowResize = function () {
-                this.PositionMenu();
-              }),
-              (t.prototype.OnBlur = function (e) {
-                (e.relatedTarget && l.e(e.currentTarget, e.relatedTarget)) ||
-                  (e.relatedTarget &&
-                    this.props.instance.BIsElementInMenuHierarchy(
-                      e.relatedTarget
-                    )) ||
-                  this.props.instance.BIsSubMenuVisible() ||
-                  (this.state.ready &&
-                    this.props.instance.visible &&
-                    this.props.instance.Hide());
-              }),
-              (t.prototype.OnKeyDown = function (e) {
-                27 == e.keyCode &&
-                  this.state.ready &&
-                  (this.props.instance.Hide(),
-                  e.preventDefault(),
-                  e.stopPropagation());
-              }),
-              (t.prototype.componentDidUpdate = function () {
-                this.m_cReenteranceGuard-- > 0
-                  ? this.PositionMenu()
-                  : (this.m_cReenteranceGuard = 2);
-              }),
-              (t.prototype.TakeFocus = function () {
-                if (
-                  this.m_elMenu &&
-                  this.state.ready &&
+                (this.m_elMenu = e || void 0),
+                this.PositionMenu(),
+                this.state.ready ||
+                  (this.props.instance.SetTakeFocus(this.TakeFocus.bind(this)),
+                  this.setState({ ready: !0 }, function () {
+                    t.TakeFocus();
+                  }));
+            }),
+            (t.prototype.OnMenuMutation = function (e, t) {
+              this.PositionMenu();
+            }),
+            (t.prototype.OnWindowResize = function () {
+              this.PositionMenu();
+            }),
+            (t.prototype.OnBlur = function (e) {
+              (e.relatedTarget && l.e(e.currentTarget, e.relatedTarget)) ||
+                (e.relatedTarget &&
+                  this.props.instance.BIsElementInMenuHierarchy(
+                    e.relatedTarget
+                  )) ||
+                this.props.instance.BIsSubMenuVisible() ||
+                (this.state.ready &&
                   this.props.instance.visible &&
-                  (this.props.popup ||
-                    !l.e(
-                      this.m_elMenu,
-                      this.m_elMenu.ownerDocument.activeElement
-                    ))
-                ) {
-                  var e = this.m_elMenu.querySelector(".ContextMenuAutoFocus");
-                  e && e.focus ? e.focus() : this.m_elMenu.focus();
-                }
-              }),
-              (t.prototype.PositionMenu = function () {
-                var e = this.m_elMenu,
-                  t = this.props.element;
-                if (e && t) {
-                  var n = t.ownerDocument.defaultView;
-                  if ("none" !== n.getComputedStyle(t).display) {
-                    var r = t.getBoundingClientRect(),
-                      o = e.getBoundingClientRect(),
-                      i = null != this.props.popup,
-                      a = this.props.options,
-                      s = {
-                        menuLeft: void 0,
-                        menuRight: void 0,
-                        menuTop: void 0,
-                        menuBottom: void 0,
-                        menuWidth: void 0,
-                        menuHeight: void 0,
-                      },
-                      c = this.props.clientX,
-                      u = this.props.clientY,
-                      p = n.innerWidth,
-                      d = n.innerHeight;
-                    if (i) {
-                      this.props.options.bScreenCoordinates ||
-                        ((c += n.screenLeft), (u += n.screenTop)),
-                        (r = l.h(n, r));
-                      var h = n.screen,
-                        m = 0,
-                        f = 0;
-                      h.availLeft && (m = h.availLeft),
-                        h.availTop && (f = h.availTop),
-                        (p = m + h.availWidth),
-                        (d = f + h.availHeight);
-                    }
-                    (a.bOverlapHorizontal || a.bOverlapVertical) &&
-                      (c = u = void 0);
-                    var g = c || r.left,
-                      b = c || r.right,
-                      v = o.width;
-                    a.bMatchWidth && ((v = b - g), (s.menuWidth = v));
-                    var _ = (a.bOverlapHorizontal ? b : g) - v,
-                      y = _ > 0,
-                      O = p - (a.bOverlapHorizontal ? g : b) - v,
-                      w = O > 0,
-                      E = (a.bPreferPopLeft || !w) && y;
-                    y ||
-                      w ||
-                      ((E = y > w),
-                      a.bFitToWindow &&
-                        ((v += (E ? _ : O) - 8), (s.menuWidth = v))),
-                      (!a.bPreferPopLeft && w) || !y
-                        ? (s.menuLeft = a.bOverlapHorizontal ? g : b)
-                        : (s.menuRight = p - (a.bOverlapHorizontal ? b : g));
-                    var C = u || r.top,
-                      S = u || r.bottom,
-                      D = e.scrollHeight;
-                    a.bMatchHeight && ((D = S - C), (s.menuHeight = D));
-                    var M = (a.bOverlapVertical ? S : C) - D,
-                      x = M > 0,
-                      R = d - (a.bOverlapVertical ? C : S) - D,
-                      I = R > 0,
-                      j = (a.bPreferPopTop || !I) && x && !a.bDisablePopTop;
-                    if (!x && !I) {
-                      var T =
-                        void 0 !== a.bShiftToFitWindow
-                          ? a.bShiftToFitWindow
-                          : a.bFitToWindow && !a.bOverlapHorizontal;
-                      (j = M > R && !a.bDisablePopTop),
-                        T && (j ? (s.menuTop = 4) : (s.menuBottom = 4)),
-                        a.bFitToWindow &&
-                          (T ? (D = Math.min(D, d - 8)) : (D += j ? M : R),
-                          (s.menuHeight = D - 8));
-                    }
-                    void 0 === s.menuBottom &&
-                      void 0 === s.menuTop &&
-                      (j
-                        ? (s.menuBottom = d - (a.bOverlapVertical ? S : C))
-                        : (s.menuTop = a.bOverlapVertical ? C : S)),
-                      i
-                        ? (s.menuHeight || (s.menuHeight = o.height),
-                          s.menuWidth || (s.menuWidth = o.width),
-                          s.menuBottom &&
-                            !s.menuTop &&
-                            ((s.menuTop = d - s.menuBottom - s.menuHeight),
-                            (s.menuBottom = void 0)),
-                          s.menuRight &&
-                            !s.menuLeft &&
-                            ((s.menuLeft = p - s.menuRight - s.menuWidth),
-                            (s.menuRight = void 0)))
-                        : (s.menuLeft && (s.menuLeft += n.scrollX),
-                          s.menuTop && (s.menuTop += n.scrollY),
-                          s.menuBottom &&
-                            (s.menuBottom +=
-                              n.document.body.clientHeight -
-                              n.scrollY -
-                              n.innerHeight),
-                          s.menuRight &&
-                            (s.menuRight +=
-                              n.document.body.clientWidth -
-                              n.scrollX -
-                              n.innerWidth)),
-                      (s.menuLeft === this.state.menuLeft &&
-                        s.menuRight === this.state.menuRight &&
-                        s.menuTop === this.state.menuTop &&
-                        s.menuBottom === this.state.menuBottom &&
-                        s.menuWidth === this.state.menuWidth &&
-                        s.menuHeight === this.state.menuHeight) ||
-                        this.setState(s);
+                  this.props.instance.Hide());
+            }),
+            (t.prototype.OnKeyDown = function (e) {
+              27 == e.keyCode &&
+                this.state.ready &&
+                (this.props.instance.Hide(),
+                e.preventDefault(),
+                e.stopPropagation());
+            }),
+            (t.prototype.componentDidUpdate = function () {
+              this.m_cReenteranceGuard-- > 0
+                ? this.PositionMenu()
+                : (this.m_cReenteranceGuard = 2);
+            }),
+            (t.prototype.TakeFocus = function () {
+              if (
+                this.m_elMenu &&
+                this.state.ready &&
+                this.props.instance.visible &&
+                (this.props.popup ||
+                  !l.e(
+                    this.m_elMenu,
+                    this.m_elMenu.ownerDocument.activeElement
+                  ))
+              ) {
+                var e = this.m_elMenu.querySelector(".ContextMenuAutoFocus");
+                e && e.focus ? e.focus() : this.m_elMenu.focus();
+              }
+            }),
+            (t.prototype.PositionMenu = function () {
+              var e = this.m_elMenu,
+                t = this.props.element;
+              if (e && t) {
+                var n = t.ownerDocument.defaultView;
+                if ("none" !== n.getComputedStyle(t).display) {
+                  var r = t.getBoundingClientRect(),
+                    o = e.getBoundingClientRect(),
+                    i = null != this.props.popup,
+                    a = this.props.options,
+                    s = {
+                      menuLeft: void 0,
+                      menuRight: void 0,
+                      menuTop: void 0,
+                      menuBottom: void 0,
+                      menuWidth: void 0,
+                      menuHeight: void 0,
+                    },
+                    c = this.props.clientX,
+                    u = this.props.clientY,
+                    p = n.innerWidth,
+                    d = n.innerHeight;
+                  if (i) {
+                    this.props.options.bScreenCoordinates ||
+                      ((c += n.screenLeft), (u += n.screenTop)),
+                      (r = l.h(n, r));
+                    var h = n.screen,
+                      m = 0,
+                      f = 0;
+                    h.availLeft && (m = h.availLeft),
+                      h.availTop && (f = h.availTop),
+                      (p = m + h.availWidth),
+                      (d = f + h.availHeight);
                   }
+                  (a.bOverlapHorizontal || a.bOverlapVertical) &&
+                    (c = u = void 0);
+                  var g = c || r.left,
+                    b = c || r.right,
+                    v = o.width;
+                  a.bMatchWidth && ((v = b - g), (s.menuWidth = v));
+                  var _ = (a.bOverlapHorizontal ? b : g) - v,
+                    y = _ > 0,
+                    O = p - (a.bOverlapHorizontal ? g : b) - v,
+                    w = O > 0,
+                    E = (a.bPreferPopLeft || !w) && y;
+                  y ||
+                    w ||
+                    ((E = y > w),
+                    a.bFitToWindow &&
+                      ((v += (E ? _ : O) - 8), (s.menuWidth = v))),
+                    (!a.bPreferPopLeft && w) || !y
+                      ? (s.menuLeft = a.bOverlapHorizontal ? g : b)
+                      : (s.menuRight = p - (a.bOverlapHorizontal ? b : g));
+                  var C = u || r.top,
+                    S = u || r.bottom,
+                    D = e.scrollHeight;
+                  a.bMatchHeight && ((D = S - C), (s.menuHeight = D));
+                  var M = (a.bOverlapVertical ? S : C) - D,
+                    x = M > 0,
+                    R = d - (a.bOverlapVertical ? C : S) - D,
+                    I = R > 0,
+                    j = (a.bPreferPopTop || !I) && x && !a.bDisablePopTop;
+                  if (!x && !I) {
+                    var T =
+                      void 0 !== a.bShiftToFitWindow
+                        ? a.bShiftToFitWindow
+                        : a.bFitToWindow && !a.bOverlapHorizontal;
+                    (j = M > R && !a.bDisablePopTop),
+                      T && (j ? (s.menuTop = 4) : (s.menuBottom = 4)),
+                      a.bFitToWindow &&
+                        (T ? (D = Math.min(D, d - 8)) : (D += j ? M : R),
+                        (s.menuHeight = D - 8));
+                  }
+                  void 0 === s.menuBottom &&
+                    void 0 === s.menuTop &&
+                    (j
+                      ? (s.menuBottom = d - (a.bOverlapVertical ? S : C))
+                      : (s.menuTop = a.bOverlapVertical ? C : S)),
+                    i
+                      ? (s.menuHeight || (s.menuHeight = o.height),
+                        s.menuWidth || (s.menuWidth = o.width),
+                        s.menuBottom &&
+                          !s.menuTop &&
+                          ((s.menuTop = d - s.menuBottom - s.menuHeight),
+                          (s.menuBottom = void 0)),
+                        s.menuRight &&
+                          !s.menuLeft &&
+                          ((s.menuLeft = p - s.menuRight - s.menuWidth),
+                          (s.menuRight = void 0)))
+                      : (s.menuLeft && (s.menuLeft += n.scrollX),
+                        s.menuTop && (s.menuTop += n.scrollY),
+                        s.menuBottom &&
+                          (s.menuBottom +=
+                            n.document.body.clientHeight -
+                            n.scrollY -
+                            n.innerHeight),
+                        s.menuRight &&
+                          (s.menuRight +=
+                            n.document.body.clientWidth -
+                            n.scrollX -
+                            n.innerWidth)),
+                    (s.menuLeft === this.state.menuLeft &&
+                      s.menuRight === this.state.menuRight &&
+                      s.menuTop === this.state.menuTop &&
+                      s.menuBottom === this.state.menuBottom &&
+                      s.menuWidth === this.state.menuWidth &&
+                      s.menuHeight === this.state.menuHeight) ||
+                      this.setState(s);
                 }
-              }),
-              (t.prototype.render = function () {
-                var e = this,
-                  t = { visibility: this.state.ready ? "visible" : "hidden" };
-                if (this.props.popup) {
-                  var n = this.props.element.ownerDocument.defaultView;
-                  void 0 !== this.state.menuLeft &&
-                    void 0 !== this.state.menuTop &&
-                    void 0 !== this.state.menuWidth &&
-                    void 0 !== this.state.menuHeight &&
-                    n.SteamClient.Window.GetWindowRestoreDetails(function (t) {
-                      var r = e.props.popup.window,
-                        o = e.state.menuLeft - n.screenX,
-                        i = e.state.menuTop - n.screenY;
-                      try {
-                        r.SteamClient.Window.PositionWindowRelative(
-                          t,
-                          o,
-                          i,
-                          e.state.menuWidth,
-                          e.state.menuHeight
-                        );
-                      } catch (e) {
-                        console.error(e);
-                      }
-                    });
-                } else
-                  void 0 !== this.state.menuTop
-                    ? (t.top = this.state.menuTop)
-                    : void 0 !== this.state.menuBottom &&
-                      (t.bottom = this.state.menuBottom),
-                    void 0 !== this.state.menuLeft
-                      ? (t.left = this.state.menuLeft)
-                      : void 0 !== this.state.menuRight &&
-                        (t.right = this.state.menuRight),
-                    void 0 !== this.state.menuHeight &&
-                      (t.height = this.state.menuHeight),
-                    void 0 !== this.state.menuWidth &&
-                      (t.width = this.state.menuWidth);
-                var r =
-                  this.props.options.strClassName ||
-                  (this.props.options.bUseWebStyles
-                    ? "popup_block_new popup_block_hidden_until_visible"
-                    : g.a.contextMenu);
-                return (
-                  this.props.instance.visible &&
-                    this.state.ready &&
-                    (r += " visible"),
-                  (r += " " + g.a.ContextMenuFocusContainer),
+              }
+            }),
+            (t.prototype.render = function () {
+              var e = this,
+                t = { visibility: this.state.ready ? "visible" : "hidden" };
+              if (this.props.popup) {
+                var n = this.props.element.ownerDocument.defaultView;
+                void 0 !== this.state.menuLeft &&
+                  void 0 !== this.state.menuTop &&
+                  void 0 !== this.state.menuWidth &&
+                  void 0 !== this.state.menuHeight &&
+                  n.SteamClient.Window.GetWindowRestoreDetails(function (t) {
+                    var r = e.props.popup.window,
+                      o = e.state.menuLeft - n.screenX,
+                      i = e.state.menuTop - n.screenY;
+                    try {
+                      r.SteamClient.Window.PositionWindowRelative(
+                        t,
+                        o,
+                        i,
+                        e.state.menuWidth,
+                        e.state.menuHeight
+                      );
+                    } catch (e) {
+                      console.error(e);
+                    }
+                  });
+              } else
+                void 0 !== this.state.menuTop
+                  ? (t.top = this.state.menuTop)
+                  : void 0 !== this.state.menuBottom &&
+                    (t.bottom = this.state.menuBottom),
+                  void 0 !== this.state.menuLeft
+                    ? (t.left = this.state.menuLeft)
+                    : void 0 !== this.state.menuRight &&
+                      (t.right = this.state.menuRight),
+                  void 0 !== this.state.menuHeight &&
+                    (t.height = this.state.menuHeight),
+                  void 0 !== this.state.menuWidth &&
+                    (t.width = this.state.menuWidth);
+              var r =
+                this.props.options.strClassName ||
+                (this.props.options.bUseWebStyles
+                  ? "popup_block_new popup_block_hidden_until_visible"
+                  : g.a.contextMenu);
+              return (
+                this.props.instance.visible &&
+                  this.state.ready &&
+                  (r += " visible"),
+                (r += " " + g.a.ContextMenuFocusContainer),
+                i.createElement(
+                  v.Provider,
+                  { value: this.props.instance },
                   i.createElement(
-                    v.Provider,
-                    { value: this.props.instance },
-                    i.createElement(
-                      "div",
-                      {
-                        className: r,
-                        ref: this.BindMenuElement,
-                        style: t,
-                        onBlur: this.OnBlur,
-                        onKeyDown: this.OnKeyDown,
-                        tabIndex: 0,
-                      },
-                      this.props.children
-                    )
+                    "div",
+                    {
+                      className: r,
+                      ref: this.BindMenuElement,
+                      style: t,
+                      onBlur: this.OnBlur,
+                      onKeyDown: this.OnKeyDown,
+                      tabIndex: 0,
+                    },
+                    this.props.children
                   )
-                );
-              }),
-              Object(r.c)([u.a], t.prototype, "BindMenuElement", null),
-              Object(r.c)(
-                [u.a, Object(d.a)(100)],
-                t.prototype,
-                "OnMenuMutation",
-                null
-              ),
-              Object(r.c)([u.a], t.prototype, "OnWindowResize", null),
-              Object(r.c)([u.a], t.prototype, "OnBlur", null),
-              Object(r.c)([u.a], t.prototype, "OnKeyDown", null),
-              (t = Object(r.c)([o.a], t))
-            );
-          })(i.Component)),
+                )
+              );
+            }),
+            Object(r.c)([u.a], t.prototype, "BindMenuElement", null),
+            Object(r.c)(
+              [u.a, Object(d.a)(100)],
+              t.prototype,
+              "OnMenuMutation",
+              null
+            ),
+            Object(r.c)([u.a], t.prototype, "OnWindowResize", null),
+            Object(r.c)([u.a], t.prototype, "OnBlur", null),
+            Object(r.c)([u.a], t.prototype, "OnKeyDown", null),
+            (t = Object(r.c)([o.a], t))
+          );
+        })(i.Component),
         E = (function (e) {
           function t(n, r, o) {
             var i =
@@ -14266,5 +14315,5 @@ var CLSTAMP = "6516146";
       };
     },
   },
-  [["gfbn", 73, 0]],
+  [["gfbn", 102, 0]],
 ]);

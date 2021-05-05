@@ -135,7 +135,7 @@ html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenuItem_1n7Wl {
   font-size: 12px;
   text-transform: uppercase;
 }
-.contextmenu_contextMenuItem_1n7Wl.contextmenu_StrongerSeparation_1BNck {
+.contextmenu_ContextMenuSeparator_WUOrU + .contextmenu_contextMenuItem_1n7Wl {
   border-top-color: dimgray;
 }
 .contextmenu_contextMenuItem_1n7Wl.contextmenu_NoSeparation_3hRb6 {

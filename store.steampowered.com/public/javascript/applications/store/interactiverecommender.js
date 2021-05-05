@@ -60,6 +60,12 @@
                 (this.data = null),
                 (this.nExpirationTime = 0);
             }),
+            (e.prototype.setDataPending = function () {
+              this.eState = i.Pending;
+            }),
+            (e.prototype.setData = function (e, t) {
+              (this.data = t), this.delayNewData(e), (this.eState = i.Valid);
+            }),
             (e.prototype.expireData = function () {
               this.nExpirationTime = 0;
             }),

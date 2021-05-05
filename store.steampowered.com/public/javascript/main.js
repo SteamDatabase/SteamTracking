@@ -1974,6 +1974,7 @@ function InitHorizontalAutoSliders()
 			$Wrapper.find('img' ).one('load', fnFixHeight );
 		} );
 		$J(window ).on('resize.AutoSlider', fnFixHeight );
+		$Scroll.attr( 'data-panel', '{"maintainX":true,"flow-children":"row"}' );
 
 		window.setTimeout( function() {
 			$Wrapper.trigger('v_contentschanged.AutoSlider');
@@ -2116,7 +2117,8 @@ var CGenericCarousel = function( $elContainer, nSpeed, fnOnFocus, fnOnBlur, fnCl
 	$elContainer.bind('mouseover', function(e) { instance.fnMouseOver(); } );
 	$elContainer.bind('mouseout', function(e) { instance.fnMouseOut(); }  );
 	// If we get a scroll event, and we're in respondive, hint all remaining images
-	this.$elItems.parent().bind('scroll', function(e) { if( instance.bIsResponsive() ) PreloadImages( $elContainer ); }   );
+	this.$elItems.parent().bind('scroll', function(e) { if( instance.bIsResponsive() ) PreloadImages( $elContainer ); } );
+	this.$elItems.parent().attr( 'data-panel', '{"flow-children":"row"}' );
 
 	// Only bind a mouseover thumb event if we have one.
 	if( fnClickThumb ) {
@@ -2136,7 +2138,6 @@ var CGenericCarousel = function( $elContainer, nSpeed, fnOnFocus, fnOnBlur, fnCl
 	this.$elArrowLeft.click( function(e){ instance.Advance(-1); e.preventDefault(); return true; });
 	this.$elArrowRight.click( function(e){ instance.Advance(); e.preventDefault(); return true; });
 
-	this.$elContainer.attr('data-gpnav', 'columns' );//.attr('data-gpfocus',1);
 	this.$elContainer.on('v_gamepadpress', function( e, button ) {
 		if ( button.button == 'BUMPER_BACK' )
 		{

@@ -2171,6 +2171,7 @@
           (e[(e.k_EEventStateVisible = 2)] = "k_EEventStateVisible");
       })(j || (j = {}));
       var G = [
+        "newandtrending",
         "topwishlisted",
         "trendingwishlisted",
         "popularcomingsoon",
@@ -7014,9 +7015,9 @@
             function () {
               E.a.Get().HintLoad();
               var e = { id: j, type: T };
-              Object($.g)([e]).then(function () {
+              Object($.h)([e]).then(function () {
                 if (!Object($.c)(e)) {
-                  var n = Object($.f)(e),
+                  var n = Object($.g)(e),
                     r = se(e.type),
                     a = n.id;
                   t.current.token.reason ||
@@ -7867,7 +7868,7 @@
                 var e = i.a.CancelToken.source();
                 return (
                   E.a.Get().HintLoad(),
-                  Object($.g)([t]).then(function () {
+                  Object($.h)([t]).then(function () {
                     var n;
                     if (
                       !(null === (n = null == e ? void 0 : e.token) ||
@@ -7875,7 +7876,7 @@
                         ? void 0
                         : n.reason)
                     ) {
-                      var r = Object($.f)(t);
+                      var r = Object($.g)(t);
                       r
                         ? w(r)
                         : console.warn("Unsupported item:", t.type, t.id),
@@ -9945,7 +9946,7 @@
                           i.forEach(function (e) {
                             h.has(e.id) || f.push(e);
                           }),
-                          [4, Object(re.g)(f)]
+                          [4, Object(re.h)(f)]
                         );
                       case 2:
                         return (
@@ -16147,7 +16148,7 @@
                               (d = d.filter(function (e) {
                                 return !o || o.ShouldShowCapsule(e);
                               })),
-                            [4, Object(re.g)(d)]);
+                            [4, Object(re.h)(d)]);
                       case 7:
                         return (
                           a.sent(),
@@ -18057,7 +18058,7 @@
                             (w = Math.min(w, A))),
                           p.length > w && (p = p.slice(0, w)),
                           (M = Object(Hn.a)(n)),
-                          [4, Object(re.g)(p, M)]
+                          [4, Object(re.h)(p, M)]
                         );
                       case 5:
                         return (
@@ -25079,7 +25080,7 @@
             (c.a.useEffect(
               function () {
                 var e = t;
-                Object(T.g)([e], !1, C.current).then(function () {
+                Object(T.h)([e], !1, C.current).then(function () {
                   return Object(r.b)(void 0, void 0, void 0, function () {
                     var n, a, i;
                     return Object(r.e)(this, function (r) {
@@ -25089,7 +25090,7 @@
                         case 1:
                           return (
                             (n = r.sent()),
-                            (a = Object(T.f)(e)),
+                            (a = Object(T.g)(e)),
                             Object(v.a)(
                               !!a,
                               "Unsupported item: " + t.type + " " + t.id
@@ -49157,23 +49158,26 @@
       n.d(t, "c", function () {
         return u;
       }),
-        n.d(t, "f", function () {
+        n.d(t, "g", function () {
           return d;
         }),
-        n.d(t, "g", function () {
+        n.d(t, "h", function () {
           return p;
         }),
         n.d(t, "e", function () {
           return m;
         }),
-        n.d(t, "d", function () {
+        n.d(t, "f", function () {
           return h;
         }),
-        n.d(t, "a", function () {
+        n.d(t, "d", function () {
           return f;
         }),
-        n.d(t, "b", function () {
+        n.d(t, "a", function () {
           return _;
+        }),
+        n.d(t, "b", function () {
+          return b;
         });
       var r = n("mrSG"),
         a = n("kyHq"),
@@ -49318,6 +49322,33 @@
         });
       }
       function h(e) {
+        return Object(r.b)(this, void 0, void 0, function () {
+          var t, n, a;
+          return Object(r.e)(this, function (r) {
+            switch (r.label) {
+              case 0:
+                return (
+                  (t = e.map(function (e) {
+                    return m(e);
+                  })),
+                  [4, Promise.all(t)]
+                );
+              case 1:
+                return (
+                  (n = r.sent()),
+                  (a = new Set()),
+                  n.forEach(function (e) {
+                    return e.forEach(function (e) {
+                      return a.add(e);
+                    });
+                  }),
+                  [2, Array.from(a)]
+                );
+            }
+          });
+        });
+      }
+      function f(e) {
         return (
           !e ||
           c.a.Get().BExcludesContentDescriptor(e.content_descriptors) ||
@@ -49325,9 +49356,9 @@
           c.a.Get().BIsGameIgnored(e.appid)
         );
       }
-      function f(e, t, n, a) {
+      function _(e, t, n, a) {
         return Object(r.b)(this, void 0, void 0, function () {
-          var o, s, c, l, u, d, p, f;
+          var o, s, c, l, u, d, p, h;
           return Object(r.e)(this, function (r) {
             switch (r.label) {
               case 0:
@@ -49348,16 +49379,16 @@
                       .filter(function (e) {
                         return !!e;
                       })),
-                    (f = p.map(function (e) {
+                    (h = p.map(function (e) {
                       return i.a.GetAppLinkInfo(e);
                     })),
-                    d.push.apply(d, f)),
+                    d.push.apply(d, h)),
                   d.some(function (e) {
                     return !e;
                   }))
                 )
                   return [3, 3];
-                d.some(a || h) ? n && n.push(l) : o.push(l), (r.label = 3);
+                d.some(a || f) ? n && n.push(l) : o.push(l), (r.label = 3);
               case 3:
                 return s++, [3, 1];
               case 4:
@@ -49366,9 +49397,9 @@
           });
         });
       }
-      function _(e, t, n, a, i, o, s) {
+      function b(e, t, n, a, i, o, s) {
         return Object(r.b)(this, void 0, void 0, function () {
-          var l, u, d, p, _, b, v, g;
+          var l, u, d, p, h, b, v, g;
           return Object(r.e)(this, function (r) {
             switch (r.label) {
               case 0:
@@ -49382,12 +49413,12 @@
                       c.a.Get().BExcludesTag(e.tags)
                     );
                   }),
-                  [4, f(e, t, s, i ? l : h)]
+                  [4, _(e, t, s, i ? l : f)]
                 );
               case 1:
-                (u = r.sent()), (d = []), (p = 0), (_ = u), (r.label = 2);
+                (u = r.sent()), (d = []), (p = 0), (h = u), (r.label = 2);
               case 2:
-                return p < _.length ? [4, m((b = _[p]))] : [3, 5];
+                return p < h.length ? [4, m((b = h[p]))] : [3, 5];
               case 3:
                 (v = r.sent()),
                   (g = !1),
@@ -67055,7 +67086,8 @@
                             className: Object(s.a)(
                               u.carouselBtnCtn,
                               u.left,
-                              u.carouselNavButton
+                              u.carouselNavButton,
+                              "CarouselBtnLeft"
                             ),
                           },
                           i.createElement(o.n, null)
@@ -67072,7 +67104,8 @@
                             className: Object(s.a)(
                               u.carouselBtnCtn,
                               u.right,
-                              u.carouselNavButton
+                              u.carouselNavButton,
+                              "CarouselBtnRight"
                             ),
                           },
                           i.createElement(o.n, null)

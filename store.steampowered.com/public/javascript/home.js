@@ -1457,7 +1457,7 @@ GHomepage = {
 
 				if ( !$Col )
 				{
-					$Col = $J('<div/>', {'data-gpnav': 'rows'} );
+					$Col = $J('<div/>', {'data-panel': '{"flow-children":"column"}' } );
 					$Page.append( $Col );
 				}
 
@@ -1483,7 +1483,7 @@ GHomepage = {
 
 				if ( !$Col )
 				{
-					$Col = $J('<div/>', {'data-gpnav': 'rows'});
+					$Col = $J('<div/>', {'data-panel': '{"flow-children":"column"}' } );
 					$Page.append( $Col );
 				}
 
@@ -1726,6 +1726,7 @@ GHomepage = {
 				break;
 
 			var $elPageContainer = $J('<div>');
+			$elPageContainer.attr( 'data-panel', '{"maintainX":true,"flow-children":"row"}' );
 			for( var k=0; k < nCapsules && k + j < rgCapsules.length; k++ )
 			{
 				var oItem = rgCapsules[ k + j ];
