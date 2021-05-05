@@ -486,16 +486,11 @@ function _BuildDialog( strTitle, strDescription, rgButtons, fnOnCancel, rgModalP
 
 	if ( rgButtons.length > 0 )
 	{
-		var $Buttons = $J('<div/>', {'class': 'newmodal_buttons', 'data-panel': '{"flow-children":"row"}' } );
+		var $Buttons = $J('<div/>', {'class': 'newmodal_buttons' } );
 		$Content.append( $Buttons );
 		for( var i = 0; i < rgButtons.length; i++ )
 		{
-			var $Button = rgButtons[i];
-			if ( i == 0 )
-				$Button.attr( 'data-panel', '{"autoFocus":true,"focusable":true,"clickOnActivate":true}' );
-			else
-				$Button.attr( 'data-panel', '{"focusable":true,"clickOnActivate":true}' );
-			$Buttons.append( $Button );
+			$Buttons.append( rgButtons[i] );
 		}
 	}
 
@@ -565,8 +560,6 @@ function CModal( $Content, rgParams )
 	this.m_nInitialOffsetLeft = $J(window).scrollLeft();
 	this.m_$Content.css( 'position', 'fixed' );
 	this.m_$Content.css( 'z-index', 1000 );
-	if ( !this.m_$Content.attr('panel' ) )
-		this.m_$Content.attr( 'data-panel', '[]' );
 
 	this.m_$StandardContent = null;
 	this.m_$SizedContent = null;
@@ -735,10 +728,7 @@ CModal.prototype.Show = function()
 
 	this.m_bVisible = true;
 	CModal.PushActiveModal( this );
-
-	var _this = this;
-	if ( typeof GPNavFocusChild !== 'undefined' )
-		window.setTimeout( function() { GPNavFocusChild( _this.m_$Content ) }, 1 );	};
+};
 
 CModal.prototype.Dismiss = function()
 {
@@ -3304,19 +3294,16 @@ function BindAutoFlyoutEvents()
 				HideFlyoutMenu( null, $Tab, $Content );
 			});
 
-			$Content.add($Tab).on('vgp_oncancel', function( e ) {
-				HideFlyoutMenu( null, $Tab, $Content );
-				if ( typeof GPNavFocusChild != 'undefined' )
-					GPNavFocusChild( $Tab );
-			});
-
-			$Content.on('vgp_onblur', function( e ) {
-				var node = e.originalEvent.detail.focusedNode;
-				console.log( node );
-				if ( !node || !$J.contains( e.currentTarget, node.Element ) )
+			$Content.add($Tab).on('v_gamepadpress', function( e, button ) {
+				if ( button.button == 'CANCEL' )
+				{
 					HideFlyoutMenu( null, $Tab, $Content );
+					if ( typeof GPNavFocusChild != 'undefined' )
+						GPNavFocusChild( $Tab );
+				}
 			});
 
+			
 			$Content.data('flyout-events-bound', true );
 		}
 
@@ -3390,9 +3377,13 @@ function BindAutoFlyoutEvents()
 		}
 	});
 
-		$J(document).on('vgp_onok', '.flyout_tab', function( e ) {
-		fnShowFlyout( $J(this), false, true );
-		e.stopPropagation();
+		$J('.flyout_tab').attr('data-gpfocus','manual');
+	$J(document).on('v_gamepadpress', '.flyout_tab', function( e, button ) {
+		if ( button.button == 'OK' )
+		{
+			fnShowFlyout( $J(this), false, true );
+			e.stopPropagation();
+		}
 	});
 }
 
