@@ -274,6 +274,14 @@
   font-size: 16;
   padding-top: 24px;
 }
+.awardmodal_InitialLoading_1ZKr7 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 400px;
+  min-height: 300px;
+}
 .awardmodal_ErrorContainer_1SebP {
   padding: 20px;
 }
