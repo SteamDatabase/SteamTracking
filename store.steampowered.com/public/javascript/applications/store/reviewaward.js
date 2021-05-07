@@ -257,8 +257,8 @@
         return Object(d.f)("#RewardsReaction_" + e);
       }
       var R,
-        S = a("oet2"),
-        C = a("Mgs7");
+        C = a("oet2"),
+        S = a("Mgs7");
       a("idvb");
       !(function (e) {
         (e[(e.SELECTING = 0)] = "SELECTING"),
@@ -339,7 +339,8 @@
                     s.a.get(
                       m.d.STORE_BASE_URL +
                         "pointssummary/ajaxgetasyncconfig?origin=" +
-                        Object(m.f)()
+                        Object(m.f)(),
+                      { withCredentials: !0 }
                     ),
                   ]
                 );
@@ -593,7 +594,7 @@
                   var T = 0 === b || h.get(b),
                     j = !g || g.greaterThanOrEqual(O),
                     I = r.createElement(
-                      C.q,
+                      S.q,
                       {
                         onClick: function () {
                           return e.setState({ ePhase: R.CONFIRM });
@@ -668,7 +669,7 @@
                                 href: m.d.STORE_BASE_URL + "points/howitworks",
                               },
                               r.createElement(
-                                C.d,
+                                S.d,
                                 { key: "button" },
                                 Object(d.f)("#GrantAward_HowToGetPoints")
                               )
@@ -763,7 +764,7 @@
                       M,
                       { store: i },
                       r.createElement(
-                        C.d,
+                        S.d,
                         {
                           onClick: function () {
                             return e.setState({ ePhase: R.SELECTING });
@@ -773,7 +774,7 @@
                         Object(d.f)("#GrantAward_Back")
                       ),
                       r.createElement(
-                        C.q,
+                        S.q,
                         {
                           onClick: this.GrantAward,
                           title: Object(d.f)("#GrantAward_SubmitTooltip"),
@@ -830,7 +831,7 @@
                       M,
                       { store: i },
                       r.createElement(
-                        C.d,
+                        S.d,
                         {
                           onClick: function () {
                             return e.setState({ ePhase: R.SELECTING });
@@ -844,7 +845,7 @@
               return r.createElement(
                 c.b,
                 { className: l.GrantAwardModal, active: a, onDismiss: s },
-                _ && r.createElement(S.a, { eType: S.b.Default }),
+                _ && r.createElement(C.a, { eType: C.b.Default }),
                 f
               );
             }),

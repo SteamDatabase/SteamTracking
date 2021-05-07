@@ -54,8 +54,8 @@
         i = r("q1tI"),
         a = r.n(i),
         o = r("TyAF"),
-        c = r("vDqi"),
-        s = r.n(c),
+        s = r("vDqi"),
+        c = r.n(s),
         l = r("Jqb/"),
         u = r("ARGL"),
         d = r("TLQK"),
@@ -2324,8 +2324,8 @@
         return Object(d.f)("#RewardsReaction_" + e);
       }
       var oe,
-        ce = r("ZO3Q"),
-        se = r("YyVH");
+        se = r("ZO3Q"),
+        ce = r("YyVH");
       function le(e) {
         switch (e) {
           case oe.Gold:
@@ -2337,7 +2337,7 @@
       }
       function ue(e) {
         return e == oe.LNY2020
-          ? "hue-rotate(" + (360 + Object(se.b)(-30, 10)) + "deg)"
+          ? "hue-rotate(" + (360 + Object(ce.b)(-30, 10)) + "deg)"
           : "";
       }
       !(function (e) {
@@ -2346,7 +2346,7 @@
           (e[(e.LNY2020 = 2)] = "LNY2020");
       })(oe || (oe = {}));
       var de = function (e, t) {
-          var r = Object(ce.useSpring)({
+          var r = Object(se.useSpring)({
             anim: 1,
             from: { anim: 0 },
             config: { duration: 8e3 },
@@ -2358,8 +2358,8 @@
                 if (!e) return r;
                 for (var n = e.width, i = e.height, a = 0; a < 200; a++) {
                   var o = Math.random(),
-                    c = Math.random() * o,
-                    s = Math.random() * c,
+                    s = Math.random() * o,
+                    c = Math.random() * s,
                     l = 4 * (Math.random() - 0.5) * Math.PI * 20,
                     u = Math.random() + 0.5,
                     d = [
@@ -2374,9 +2374,9 @@
                     w = ue(t);
                   r.push({
                     rotationCoefficient: l,
-                    rotationRatioY: c,
+                    rotationRatioY: s,
                     rotationRatioX: o,
-                    rotationRatioZ: s,
+                    rotationRatioZ: c,
                     yRange: d,
                     xRange: y,
                     scale: m,
@@ -2394,8 +2394,8 @@
                       i = e.rotationRatioY,
                       a = e.rotationRatioX,
                       o = e.rotationRatioZ,
-                      c = e.yRange,
-                      s = e.xRange,
+                      s = e.yRange,
+                      c = e.xRange,
                       l = e.scale,
                       u = e.colorHue;
                     return {
@@ -2407,10 +2407,10 @@
                         var t = e * n * i,
                           r = e * n * a,
                           u = e * n * o,
-                          d = e * (c[1] - c[0]) + c[0];
+                          d = e * (s[1] - s[0]) + s[0];
                         return (
                           "translate(" +
-                          (e * (s[1] - s[0]) + s[0]) +
+                          (e * (c[1] - c[0]) + c[0]) +
                           "px, " +
                           d +
                           "px) rotateY(" +
@@ -2435,7 +2435,7 @@
                         i = e.rotationRatioZ,
                         a = e.yRange,
                         o = e.xRange,
-                        c = e.scale;
+                        s = e.scale;
                       return {
                         backgroundColor: void 0,
                         fill: e.colorHue,
@@ -2452,7 +2452,7 @@
                             "px) rotateZ(" +
                             t +
                             "rad) scale(" +
-                            c +
+                            s +
                             ")"
                           );
                         }),
@@ -2492,10 +2492,10 @@
                 return [t, n];
               })()),
             o = n[0],
-            c = n[1],
-            s = de(o, r),
-            l = s.rgParticleStyles,
-            u = s.rgStreamerStyles;
+            s = n[1],
+            c = de(o, r),
+            l = c.rgParticleStyles,
+            u = c.rgStreamerStyles;
           switch (r) {
             case oe.Gold:
               t = l.map(function (e, t) {
@@ -2525,7 +2525,7 @@
                 bottom: 0,
                 overflow: "hidden",
               },
-              ref: c,
+              ref: s,
             },
             t,
             u.map(function (e, t) {
@@ -2537,7 +2537,7 @@
         },
         ye = function (e) {
           var t = e.style;
-          return a.a.createElement(ce.animated.div, {
+          return a.a.createElement(se.animated.div, {
             style: Object(n.a)(Object(n.a)({}, fe), t),
           });
         },
@@ -2564,7 +2564,7 @@
         he = function (e) {
           var t = e.style;
           return a.a.createElement(
-            ce.animated.svg,
+            se.animated.svg,
             {
               viewBox: "0 0 80 620",
               fill: "none",
@@ -2583,7 +2583,7 @@
         _e = function (e) {
           var t = e.style;
           return a.a.createElement(
-            ce.animated.svg,
+            se.animated.svg,
             {
               viewBox: "0 0 203 295",
               fill: "none",
@@ -2603,7 +2603,7 @@
           function (e) {
             var t = e.style;
             return a.a.createElement(
-              ce.animated.svg,
+              se.animated.svg,
               {
                 viewBox: "0 0 48 102",
                 fill: "none",
@@ -2622,7 +2622,7 @@
           function (e) {
             var t = e.style;
             return a.a.createElement(
-              ce.animated.svg,
+              se.animated.svg,
               {
                 viewBox: "0 0 50 39",
                 fill: "none",
@@ -2644,7 +2644,7 @@
           function (e) {
             var t = e.style;
             return a.a.createElement(
-              ce.animated.svg,
+              se.animated.svg,
               {
                 viewBox: "0 0 68 69",
                 fill: "none",
@@ -2663,7 +2663,7 @@
           function (e) {
             var t = e.style;
             return a.a.createElement(
-              ce.animated.svg,
+              se.animated.svg,
               {
                 viewBox: "0 0 48 48",
                 fill: "none",
@@ -2682,7 +2682,7 @@
           function (e) {
             var t = e.style;
             return a.a.createElement(
-              ce.animated.svg,
+              se.animated.svg,
               {
                 viewBox: "0 0 48 30",
                 fill: "none",
@@ -2701,7 +2701,7 @@
           function (e) {
             var t = e.style;
             return a.a.createElement(
-              ce.animated.svg,
+              se.animated.svg,
               {
                 viewBox: "0 0 48 30",
                 fill: "none",
@@ -2720,7 +2720,7 @@
           function (e) {
             var t = e.style;
             return a.a.createElement(
-              ce.animated.svg,
+              se.animated.svg,
               {
                 viewBox: "0 0 48 30",
                 fill: "none",
@@ -2739,7 +2739,7 @@
           function (e) {
             var t = e.style;
             return a.a.createElement(
-              ce.animated.svg,
+              se.animated.svg,
               {
                 viewBox: "0 0 48 39",
                 fill: "none",
@@ -2756,7 +2756,7 @@
           function (e) {
             var t = e.style;
             return a.a.createElement(
-              ce.animated.svg,
+              se.animated.svg,
               {
                 width: "48",
                 height: "35",
@@ -2776,7 +2776,7 @@
           function (e) {
             var t = e.style;
             return a.a.createElement(
-              ce.animated.svg,
+              se.animated.svg,
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 viewBox: "0 0 54 47.18",
@@ -2801,7 +2801,7 @@
           function (e) {
             var t = e.style;
             return a.a.createElement(
-              ce.animated.svg,
+              se.animated.svg,
               {
                 version: "1.1",
                 xmlns: "http://www.w3.org/2000/svg",
@@ -2912,10 +2912,11 @@
                   r.trys.push([0, 2, , 3]),
                   [
                     4,
-                    s.a.get(
+                    c.a.get(
                       f.c.STORE_BASE_URL +
                         "pointssummary/ajaxgetasyncconfig?origin=" +
-                        Object(f.e)()
+                        Object(f.e)(),
+                      { withCredentials: !0 }
                     ),
                   ]
                 );
@@ -2967,8 +2968,8 @@
             (t.prototype.Init = function (e) {
               return Object(n.b)(this, void 0, void 0, function () {
                 var t, i, a, o;
-                return Object(n.e)(this, function (c) {
-                  switch (c.label) {
+                return Object(n.e)(this, function (s) {
+                  switch (s.label) {
                     case 0:
                       return r.s_LoyaltyAwardModalStore
                         ? [2]
@@ -2981,7 +2982,7 @@
                           [4, Oe()]);
                     case 1:
                       return (
-                        (i = c.sent()),
+                        (i = s.sent()),
                         (a = Object(n.a)(Object(n.a)({}, t), i)),
                         (o = new b.a(f.c.WEBAPI_BASE_URL, a.webapi_token)),
                         (r.s_LoyaltyAwardModalStore = new $(
@@ -3000,8 +3001,8 @@
                 n = t.bLoading,
                 a = t.bShowModal,
                 o = t.targetType,
-                c = t.fnSuccessFunc,
-                s = t.targetid,
+                s = t.fnSuccessFunc,
+                c = t.targetid,
                 d = t.ugcType,
                 m = t.initialSelectedReaction,
                 f = r.s_LoyaltyAwardModalStore;
@@ -3032,15 +3033,15 @@
                 );
               f.GetAwardConfigurations();
               return i.createElement(Ee, {
-                key: s,
-                targetid: s,
+                key: c,
+                targetid: c,
                 active: a,
                 targetType: o,
                 ugcType: d,
                 onDismiss: function () {
                   return e.setState({ bShowModal: !1 });
                 },
-                onSuccess: c,
+                onSuccess: s,
                 store: r.s_LoyaltyAwardModalStore,
                 initialSelectedReaction: m,
               });
@@ -3073,11 +3074,11 @@
                   n = t.targetType,
                   a = t.ugcType,
                   o = t.store,
-                  c = t.onDismiss,
-                  s = this.state,
-                  m = s.selectedReaction,
-                  b = s.ePhase,
-                  y = s.celebrate;
+                  s = t.onDismiss,
+                  c = this.state,
+                  m = c.selectedReaction,
+                  b = c.ePhase,
+                  y = c.celebrate;
                 if (!r) return null;
                 var p,
                   w = o.GetExistingReactions(),
@@ -3383,7 +3384,7 @@
                 }
                 return i.createElement(
                   l.b,
-                  { className: u.GrantAwardModal, active: r, onDismiss: c },
+                  { className: u.GrantAwardModal, active: r, onDismiss: s },
                   y && i.createElement(be, { eType: oe.Default }),
                   p
                 );
@@ -3496,7 +3497,7 @@
                 r = e.selected,
                 a = e.alreadyAwarded,
                 o = e.cost,
-                c = Object(n.f)(e, [
+                s = Object(n.f)(e, [
                   "reaction",
                   "selected",
                   "alreadyAwarded",
@@ -3515,7 +3516,7 @@
                       a && u.Disabled
                     ),
                   },
-                  c
+                  s
                 ),
                 i.createElement(
                   "div",
