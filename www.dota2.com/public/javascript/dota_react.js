@@ -35485,8 +35485,12 @@ object-assign
         d && !u.ability_is_granted_by_shard && (S = E),
           m && !u.ability_is_granted_by_scepter && (S = L);
         var T = function (e) {
-          ir.setSelectedAbilityIndex(e), r(!0);
-        };
+            ir.setSelectedAbilityIndex(e), r(!0);
+          },
+          k = m && u.ability_has_scepter && !u.ability_is_granted_by_scepter,
+          D = d && u.ability_has_shard && !u.ability_is_granted_by_shard,
+          O = m && u.ability_is_granted_by_scepter,
+          j = d && u.ability_is_granted_by_shard;
         return o.a.createElement(
           "div",
           { className: ca.a.HeroAbilities },
@@ -35638,35 +35642,29 @@ object-assign
                     { className: ca.a.AbilityName },
                     u.name_loc
                   ),
-                  m &&
-                    u.ability_has_scepter &&
-                    !u.ability_is_granted_by_scepter &&
+                  k &&
                     o.a.createElement(
                       "div",
                       { className: ca.a.AghType },
                       Object(_.a)("#ability_upgrade_scepter")
                     ),
-                  d &&
-                    u.ability_has_shard &&
-                    !u.ability_is_granted_by_shard &&
+                  D &&
                     o.a.createElement(
                       "div",
                       { className: ca.a.AghType },
                       Object(_.a)("#ability_upgrade_shard")
                     ),
-                  d &&
-                    u.ability_is_granted_by_shard &&
-                    o.a.createElement(
-                      "div",
-                      { className: ca.a.AghType },
-                      Object(_.a)("#ability_new_shard")
-                    ),
-                  m &&
-                    u.ability_is_granted_by_scepter &&
+                  O &&
                     o.a.createElement(
                       "div",
                       { className: ca.a.AghType },
                       Object(_.a)("#ability_new_scepter")
+                    ),
+                  j &&
+                    o.a.createElement(
+                      "div",
+                      { className: ca.a.AghType },
+                      Object(_.a)("#ability_new_shard")
                     ),
                   o.a.createElement(
                     "div",
@@ -35683,7 +35681,7 @@ object-assign
                   {
                     className: Object(le.a)(
                       ca.a.GenericValues,
-                      (m || d) && ca.a.Hidden
+                      (k || D) && ca.a.Hidden
                     ),
                   },
                   o.a.createElement(
@@ -35768,9 +35766,24 @@ object-assign
                   {
                     className: Object(le.a)(
                       ca.a.SpecificValues,
-                      (m || d) && ca.a.Hidden
+                      (k || D) && ca.a.Hidden
                     ),
                   },
+                  u.damages.reduce(function (e, t) {
+                    return e + t;
+                  }) > 0 &&
+                    o.a.createElement(
+                      "div",
+                      { className: ca.a.SpecialElement },
+                      Object(_.a)("#hero_damage"),
+                      o.a.createElement(
+                        "div",
+                        { className: ca.a.SpecialValue },
+                        u.damages.map(function (e, t) {
+                          return (t > 0 ? " / " : "") + e.toFixed(0);
+                        })
+                      )
+                    ),
                   u.special_values.map(function (e) {
                     return 0 == e.heading_loc.length
                       ? null
@@ -35811,7 +35824,7 @@ object-assign
                     {
                       className: Object(le.a)(
                         ca.a.BottomValues,
-                        (m || d) && ca.a.Hidden
+                        (D || D) && ca.a.Hidden
                       ),
                     },
                     o.a.createElement(
@@ -35848,7 +35861,7 @@ object-assign
                 o.a.createElement(
                   "div",
                   {
-                    className: Object(le.a)(ca.a.Lore, (m || d) && ca.a.Hidden),
+                    className: Object(le.a)(ca.a.Lore, (D || D) && ca.a.Hidden),
                   },
                   u.lore_loc
                 )
