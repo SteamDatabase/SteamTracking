@@ -99,3 +99,10 @@ enum EProfileCustomizationType {
 	k_EProfileCustomizationTypeSingleArtworkShowcase = 22;
 	k_EProfileCustomizationTypeAchievementsCompletionist = 23;
 }
+
+enum EPublishedFileStorageSystem {
+	k_EPublishedFileStorageSystemInvalid = 0;
+	k_EPublishedFileStorageSystemLegacyCloud = 1;
+	k_EPublishedFileStorageSystemDepot = 2;
+	k_EPublishedFileStorageSystemUGCCloud = 3;
+}
