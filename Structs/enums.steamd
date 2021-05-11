@@ -1,20 +1,60 @@
-enum Accuracy
+enum AndroidAudioContentType
 {
-	Lowest = 1;
-	Low = 2;
-	Balanced = 3;
-	High = 4;
-	Highest = 5;
-	BestForNavigation = 6;
+	UNKNOWN = 0;
+	SPEECH = 1;
+	MUSIC = 2;
+	MOVIE = 3;
+	SONIFICATION = 4;
 }
 
-enum ActivityType
+enum AndroidAudioUsage
 {
-	Other = 1;
-	AutomotiveNavigation = 2;
-	Fitness = 3;
-	OtherNavigation = 4;
-	Airborne = 5;
+	UNKNOWN = 0;
+	MEDIA = 1;
+	VOICE_COMMUNICATION = 2;
+	VOICE_COMMUNICATION_SIGNALLING = 3;
+	ALARM = 4;
+	NOTIFICATION = 5;
+	NOTIFICATION_RINGTONE = 6;
+	NOTIFICATION_COMMUNICATION_REQUEST = 7;
+	NOTIFICATION_COMMUNICATION_INSTANT = 8;
+	NOTIFICATION_COMMUNICATION_DELAYED = 9;
+	NOTIFICATION_EVENT = 10;
+	ASSISTANCE_ACCESSIBILITY = 11;
+	ASSISTANCE_NAVIGATION_GUIDANCE = 12;
+	ASSISTANCE_SONIFICATION = 13;
+	GAME = 14;
+}
+
+enum AndroidImportance
+{
+	UNKNOWN = 0;
+	UNSPECIFIED = 1;
+	NONE = 2;
+	MIN = 3;
+	LOW = 4;
+	DEFAULT = 5;
+	DEEFAULT = 5;
+	HIGH = 6;
+	MAX = 7;
+}
+
+enum AndroidNotificationVisibility
+{
+	UNKNOWN = 0;
+	PUBLIC = 1;
+	PRIVATE = 2;
+	SECRET = 3;
+}
+
+enum ApplicationReleaseType
+{
+	UNKNOWN = 0;
+	SIMULATOR = 1;
+	ENTERPRISE = 2;
+	DEVELOPMENT = 3;
+	AD_HOC = 4;
+	APP_STORE = 5;
 }
 
 enum CBroadcast_BroadcastViewerState_Notification_EViewerState
@@ -38,13 +78,6 @@ enum CBroadcast_WatchBroadcast_Response_EWatchResponse
 	ClientOutOfDate = 10;
 	PoorUploadQuality = 11;
 	MissingSubscription = 12;
-}
-
-enum ChatMessageTypeEnum
-{
-	Chat = 0;
-	Notification = 1;
-	Error = 2;
 }
 
 enum EAbuseNotificationType
@@ -80,6 +113,13 @@ enum EActorAffiliation
 	Keywords = 2;
 	TaskUs = 3;
 	Volunteer = 4;
+}
+
+enum EAgreementType
+{
+	Invalid = -1;
+	GlobalSSA = 0;
+	ChinaSSA = 1;
 }
 
 enum EAnnouncementPlacement
@@ -126,6 +166,33 @@ enum EAppControllerSupportLevel
 	None = 0;
 	Partial = 1;
 	Full = 2;
+}
+
+enum EAppOwnershipFlags
+{
+	None = 0;
+	OwnsLicense = 1;
+	FreeLicense = 2;
+	RegionRestricted = 4;
+	LowViolence = 8;
+	InvalidPlatform = 16;
+	SharedLicense = 32;
+	FreeWeekend = 64;
+	RetailLicense = 128;
+	LicenseLocked = 256;
+	LicensePending = 512;
+	LicenseExpired = 1024;
+	LicensePermanent = 2048;
+	LicenseRecurring = 4096;
+	LicenseCanceled = 8192;
+	AutoGrant = 16384;
+	PendingGift = 32768;
+	RentalNotActivated = 65536;
+	Rental = 131072;
+	SiteLicense = 262144;
+	LegacyFreeSub = 524288;
+	InvalidOSType = 1048576;
+	TimedTrial = 2097152;
 }
 
 enum EAppReportType
@@ -236,6 +303,18 @@ enum EBackpackContext
 	EConContextMax = 999;
 }
 
+enum EBanContentCheckResult
+{
+	NotScanned = 0;
+	Reset = 1;
+	NeedsChecking = 2;
+	VeryUnlikely = 5;
+	Unlikely = 30;
+	Possible = 50;
+	Likely = 75;
+	VeryLikely = 100;
+}
+
 enum EBroadcastChatBan
 {
 	Clear = 0;
@@ -247,6 +326,14 @@ enum EBroadcastChatPermission
 {
 	Public = 0;
 	OwnsApp = 1;
+}
+
+enum EBroadcastRestriction
+{
+	None = 0;
+	NotSearchable = 1;
+	CantBroadcast = 2;
+	Unbannable = 3;
 }
 
 enum EBroadcastViewRequestState
@@ -272,14 +359,6 @@ enum EBroadcastWatchLocation
 	DeveloperPage = 11;
 	Chat_Friends = 12;
 	SteamTV_Web = 13;
-}
-
-enum EBroadcastWatchState
-{
-	None = 0;
-	Loading = 1;
-	Ready = 2;
-	Error = 3;
 }
 
 enum EBrowserType
@@ -405,6 +484,13 @@ enum EChatRoomMemberStateChange
 	RolesChanged = 12;
 }
 
+enum EChatRoomMessageReactionType
+{
+	Invalid = 0;
+	Emoticon = 1;
+	Sticker = 2;
+}
+
 enum EChatRoomNotificationLevel
 {
 	Invalid = 0;
@@ -437,6 +523,15 @@ enum EChatWindowState
 	FocusedActive = 4;
 }
 
+enum EClanAccountFlags
+{
+	None = 0;
+	TrustedPress = 1;
+	AllowClanImages = 2;
+	AllowRSSFeed = 4;
+	AllowPartnerEventEditor = 8;
+}
+
 enum EClanChatChangeType
 {
 	Created = 1;
@@ -462,6 +557,7 @@ enum EClanEventType
 	SmallUpdateEvent = 12;
 	RegularUpdateEvent = 13;
 	MajorUpdateEvent = 14;
+	DLCReleaseEvent = 15;
 	FutureReleaseEvent = 16;
 	ESportTournamentStreamEvent = 17;
 	DevStreamEvent = 18;
@@ -590,14 +686,18 @@ enum ECommunityWordFilterReason
 	AdultContent = 3;
 	Cheat = 4;
 	Referral = 5;
-	InappropriateLanguage = 6;
+	InappropriateLanguageStrongProfanity = 6;
 	Piracy = 7;
 	Scam = 8;
 	Malware = 9;
 	FreeTLD = 10;
 	Harassment = 11;
 	URLShortener = 12;
-	Max = 13;
+	InappropriateLanguageSlur = 13;
+	InappropriateLanguageOther = 14;
+	InappropriateLanguageMildProfanity = 15;
+	InappropriateLanguageHateSpeech = 16;
+	Max = 17;
 }
 
 enum ECommunityWordFilterType
@@ -608,6 +708,8 @@ enum ECommunityWordFilterType
 	WhitelistedGreenlightURLs = 3;
 	BlacklistOverrideDomains = 4;
 	BadWordsInChina = 5;
+	CleanWords = 6;
+	CleanWordsComplete = 7;
 }
 
 enum EComputerActiveState
@@ -622,6 +724,15 @@ enum EConfiguratorSupportTypes
 	PS4 = 1;
 	XBox = 2;
 	Generic = 4;
+	Switch = 8;
+}
+
+enum EContentCheckProvider
+{
+	Invalid = 0;
+	Google = 1;
+	Amazon = 2;
+	Local = 3;
 }
 
 enum EContentDescriptorID
@@ -656,6 +767,23 @@ enum EControllerAttribCapabilityBits
 	ATTRIBCAP_UNCALIBRATED_IMU = 262144;
 }
 
+enum EControllerConfigFeature
+{
+	None = 0;
+	Gamepad = 1;
+	Keyboard = 2;
+	Mouse = 3;
+	MouseRegion = 4;
+	Gyro = 5;
+	TouchMenu = 6;
+	RadialMenu = 7;
+	ModeShift = 8;
+	ActionSet = 9;
+	Activator = 10;
+	LEDColors = 11;
+	Native = 12;
+}
+
 enum EControllerEnableSupport
 {
 	ForceOff = 0;
@@ -670,6 +798,37 @@ enum EControllerRumbleSetting
 	On = 2;
 }
 
+enum EControllerType
+{
+	None = -1;
+	Unknown = 0;
+	UnknownSteamController = 1;
+	SteamController = 2;
+	SteamControllerV2 = 3;
+	SteamControllerNeptune = 4;
+	FrontPanelBoard = 20;
+	UnknownNonSteamController = 30;
+	XBox360Controller = 31;
+	XBoxOneController = 32;
+	PS3Controller = 33;
+	PS4Controller = 34;
+	WiiController = 35;
+	AppleController = 36;
+	AndroidController = 37;
+	SwitchProController = 38;
+	SwitchJoyConLeft = 39;
+	SwitchJoyConRight = 40;
+	SwitchJoyConPair = 41;
+	SwitchInputOnlyController = 42;
+	MobileTouch = 43;
+	XInputSwitchController = 44;
+	PS5Controller = 45;
+	XBoxEliteController = 46;
+	LastController = 47;
+	GenericKeyboard = 400;
+	GenericMouse = 800;
+}
+
 enum EDiscoveryQueueExperimentalCohort
 {
 	None = 0;
@@ -677,6 +836,7 @@ enum EDiscoveryQueueExperimentalCohort
 	ExperimentalRecommenderMarch2019 = 2;
 	Sept2019Experiment = 3;
 	Sept2019ComingSoon = 4;
+	Sept2019Control = 5;
 }
 
 enum EDisplayStatus
@@ -712,6 +872,7 @@ enum EDisplayStatus
 	AvailToBorrow = 29;
 	AvailGuestPass = 30;
 	Purchase = 31;
+	Unavailable = 32;
 }
 
 enum EEconTradeResponse
@@ -815,6 +976,13 @@ enum EFileUploadState
 	Completed = 6;
 }
 
+enum EForceFeatureNotificationAdditionalFilters
+{
+	None = 0;
+	IR_TopN = 1;
+	WishList = 2;
+}
+
 enum EForceFeatureNotificationTargetSelection
 {
 	Invalid = 0;
@@ -830,6 +998,7 @@ enum EForceFeatureNotificationTargetSelection
 	ExcludeAppOwner = 512;
 	AppWishList = 1024;
 	SteamworksPublishers = 2048;
+	MaxPlayTime = 4096;
 }
 
 enum EFraudReviewReason
@@ -924,6 +1093,7 @@ enum EHelpIssue
 	Hardware_DoNotWant = 305;
 	Hardware_Other = 306;
 	Hardware_Purchase = 307;
+	Hardware_QuestionAboutShipping = 308;
 	SteamLink_Network = 350;
 	SteamLink_Display = 351;
 	SteamLink_Sound = 352;
@@ -989,6 +1159,8 @@ enum EHelpIssue
 	SteamFeature_Market_TaxForm = 811;
 	SteamFeature_Cloud = 812;
 	SteamFeature_ItemBug = 813;
+	SteamFeature_SteamSaleEvents = 814;
+	SteamFeature_SteamRewards = 815;
 	Publishing_ManagingMyApp = 901;
 	Publishing_ReleasingMyApp = 902;
 	Publishing_ManagingMySteamworksAccount = 903;
@@ -1019,6 +1191,7 @@ enum EHelpIssue
 	Publishing_SiteLicense = 928;
 	Publishing_ModerationAssistance = 929;
 	Publishing_ReviewMyApp = 930;
+	Publishing_ShareApp = 931;
 	SteamCommunity_Group = 1001;
 	SteamCommunity_Profile = 1002;
 	SteamCommunity_Discussions = 1003;
@@ -1107,6 +1280,17 @@ enum EHelpRequestPOPType
 	Phone = 19;
 	AccountName = 20;
 	WeChat = 21;
+	Konbini = 22;
+	Nodwin = 23;
+	Przelewy = 24;
+	SantanderRio = 25;
+	Rapipago = 26;
+	Redpagos = 27;
+	POLi = 28;
+	PagoFacil = 29;
+	Happymoney = 30;
+	CultureVoucher = 31;
+	Toss = 32;
 }
 
 enum EHelpRequestReviewState
@@ -1227,7 +1411,10 @@ enum EHelpRequestType
 	Publishing_StorePageReview = 71;
 	SteamCommunity_MobileChat = 72;
 	SteamFeature_ItemBug = 73;
-	Max = 74;
+	SteamFeature_SteamSaleEvents = 74;
+	ShippingIssue = 75;
+	SteamFeature_SteamRewards = 76;
+	Max = 77;
 }
 
 enum EInternalAccountType
@@ -1270,7 +1457,8 @@ enum ELanguage
 	Ukrainian = 26;
 	Latam_Spanish = 27;
 	Vietnamese = 28;
-	MAX = 29;
+	SteamChina_SChinese = 29;
+	MAX = 30;
 }
 
 enum ELaunchAppTask
@@ -1331,6 +1519,20 @@ enum ELaunchSource
 	AppPortraitContextMenu = 1000;
 }
 
+enum ELauncherType
+{
+	Default = 0;
+	PerfectWorld = 1;
+	Nexon = 2;
+	CmdLine = 3;
+	CSGO = 4;
+	ClientUI = 5;
+	Headless = 6;
+	SteamChina = 7;
+	SingleApp = 8;
+	Max = 9;
+}
+
 enum ELibraryAssetType
 {
 	Capsule = 0;
@@ -1387,6 +1589,13 @@ enum EMMSLobbyStatus
 	Exists = 1;
 	DoesNotExist = 2;
 	NotAMember = 3;
+}
+
+enum EMessageReactionType
+{
+	Invalid = 0;
+	Emoticon = 1;
+	Sticker = 2;
 }
 
 enum EMobileApp
@@ -1520,6 +1729,7 @@ enum EMsg
 	UpdateScheduledTaskEnableState_TEST = 244;
 	UpdateScheduledTaskEnableStateResponse_TEST = 245;
 	ContentDescriptionDeltaUpdate = 246;
+	GMShellAndServerAddressUpdates = 247;
 	BaseGM = 300;
 	Heartbeat = 300;
 	ShellFailed = 301;
@@ -1546,6 +1756,7 @@ enum EMsg
 	GMTestNextBuildSchemaConversionResponse = 335;
 	ExpectShellRestart = 336;
 	HotFixProgress = 337;
+	GMStatsForwardToAdminConnections = 338;
 	BaseAIS = 400;
 	AISRequestContentDescription = 402;
 	AISUpdateAppInfo = 403;
@@ -1949,7 +2160,6 @@ enum EMsg
 	DPBlockingStats = 1607;
 	DPNatTraversalStats = 1608;
 	DPCloudStats = 1612;
-	DPAchievementStats = 1613;
 	DPGetPlayerCount = 1615;
 	DPGetPlayerCountResponse = 1616;
 	DPGameServersPlayersStats = 1617;
@@ -1959,7 +2169,6 @@ enum EMsg
 	ClientDPSendSpecialSurveyResponseReply = 1623;
 	DPStoreSaleStatistics = 1624;
 	ClientDPUpdateAppJobReport = 1625;
-	DPUpdateContentEvent = 1626;
 	ClientDPUnsignedInstallScript = 1627;
 	DPPartnerMicroTxns = 1628;
 	DPPartnerMicroTxnsResponse = 1629;
@@ -2003,6 +2212,8 @@ enum EMsg
 	GCHAccountPhoneNumberChange = 2236;
 	GCHAccountTwoFactorChange = 2237;
 	GCHInviteUserToLobby = 2238;
+	GCHUpdateMultipleSessions = 2239;
+	GCHMarkAppSessionsAuthoritative = 2240;
 	BaseP2P = 2500;
 	P2PIntroducerMessage = 2502;
 	BaseSM = 2900;
@@ -2217,8 +2428,6 @@ enum EMsg
 	AMGetUserCurrentGameInfoResponse = 4270;
 	AMGetGSPlayerList = 4271;
 	AMGetGSPlayerListResponse = 4272;
-	AMGetGameMembers = 4276;
-	AMGetGameMembersResponse = 4277;
 	AMGetSteamIDForMicroTxn = 4278;
 	AMGetSteamIDForMicroTxnResponse = 4279;
 	AMSetPartnerMember = 4280;
@@ -2485,7 +2694,6 @@ enum EMsg
 	ClientMicroTxnAuthRequest = 5504;
 	ClientMicroTxnAuthorize = 5505;
 	ClientMicroTxnAuthorizeResponse = 5506;
-	ClientAppMinutesPlayedData = 5507;
 	ClientGetMicroTxnInfo = 5508;
 	ClientGetMicroTxnInfoResponse = 5509;
 	ClientMarketingMessageUpdate2 = 5510;
@@ -2718,8 +2926,6 @@ enum EMsg
 	UCMPublishedFilePreviewAddResponse = 7342;
 	UCMPublishedFilePreviewRemove = 7343;
 	UCMPublishedFilePreviewRemoveResponse = 7344;
-	ClientUCMPublishedFileSubscribed = 7347;
-	ClientUCMPublishedFileUnsubscribed = 7348;
 	UCMPublishedFileSubscribed = 7349;
 	UCMPublishedFileUnsubscribed = 7350;
 	UCMPublishFile = 7351;
@@ -2735,7 +2941,6 @@ enum EMsg
 	ClientUCMSetUserPublishedFileActionResponse = 7365;
 	ClientUCMEnumeratePublishedFilesByUserAction = 7366;
 	ClientUCMEnumeratePublishedFilesByUserActionResponse = 7367;
-	ClientUCMPublishedFileDeleted = 7368;
 	UCMGetUserSubscribedFiles = 7369;
 	UCMGetUserSubscribedFilesResponse = 7370;
 	UCMFixStatsPublishedFile = 7371;
@@ -2841,8 +3046,6 @@ enum EMsg
 	CREUpdateUserPublishedItemVoteResponse = 8508;
 	CREGetUserPublishedItemVoteDetails = 8509;
 	CREGetUserPublishedItemVoteDetailsResponse = 8510;
-	CREEnumeratePublishedFiles = 8511;
-	CREEnumeratePublishedFilesResponse = 8512;
 	CREPublishedFileVoteAdded = 8513;
 	SecretsBase = 8600;
 	SecretsRequestCredentialPair = 8600;
@@ -2988,6 +3191,24 @@ enum EMusicPlayingRepeatStatus
 	PlayingRepeat_Max = 3;
 }
 
+enum ENetworkDeviceState
+{
+	NotPresent = 0;
+	Failed = 1;
+	Disconnected = 2;
+	Disconnecting = 3;
+	Connecting = 4;
+	Connected = 5;
+	Retrying = 6;
+}
+
+enum ENetworkDeviceType
+{
+	Unknown = 0;
+	Wired = 1;
+	Wireless = 2;
+}
+
 enum ENewReleaseNotificationState
 {
 	Initial = 0;
@@ -3002,6 +3223,7 @@ enum ENewReleaseNotificationType
 	Released = 0;
 	ReleasedFromEarlyAccess = 1;
 	ReleasedAsEarlyAccess = 2;
+	ReleasedPreSale = 3;
 }
 
 enum ENoiseGateLevel
@@ -3087,6 +3309,7 @@ enum EPartnerEventDisplayLocation
 	AppDetailsActivity = 5;
 	CommunityHub = 6;
 	StoreFrontPage = 7;
+	NewsHub = 8;
 }
 
 enum EPartnerLinkTrackingStoreLocation
@@ -3122,6 +3345,14 @@ enum EPersonaStateFlag
 	ClientTypeVR = 2048;
 	LaunchTypeGamepad = 4096;
 	LaunchTypeCompatTool = 8192;
+}
+
+enum EPlaytestStatus
+{
+	None = 0;
+	Pending = 1;
+	Invited = 2;
+	Granted = 3;
 }
 
 enum EPlaytestingQuestionType
@@ -3175,6 +3406,10 @@ enum EProductPageAction
 	ShowInteractiveRecommendDeals = 13;
 	ShowWishlistDeals = 14;
 	ShowDLCDeals = 15;
+	ChangeNewsHubFilters = 16;
+	NewsHubScrollPast = 17;
+	NewsHubScrollFuture = 18;
+	NewsHubAppInteraction = 19;
 }
 
 enum EProductViewAction
@@ -3183,6 +3418,13 @@ enum EProductViewAction
 	AddToWishlist = 1;
 	IgnoreNotInterested = 2;
 	AddToCart = 3;
+}
+
+enum EProfileCooldown
+{
+	Unknown = 0;
+	PersonaName = 1;
+	ProfileSummary = 2;
 }
 
 enum EProfileCustomizationStyle
@@ -3218,6 +3460,14 @@ enum EProfileCustomizationType
 	Greenlight = 18;
 	MyGreenlight = 19;
 	Salien = 20;
+	LoyaltyRewardReactions = 21;
+	SingleArtworkShowcase = 22;
+	AchievementsCompletionist = 23;
+}
+
+enum EProfileItemEquippedFlag
+{
+	FullScreen = 1;
 }
 
 enum EProfileModerationState
@@ -3359,6 +3609,7 @@ enum ERefundSupportAction
 	DeclineRefund_NoDefectAU = 15;
 	DeclineRefund_NeedMoreInfo = 16;
 	DeclineRefund_GiftResellerAbuse = 17;
+	DeclineRefund_BadReviewBehavior = 18;
 }
 
 enum ERemoteClientLaunchResult
@@ -3679,6 +3930,27 @@ enum ESteamGuardCodeError
 	InvalidCode = 1;
 }
 
+enum ESteamPipeOperationType
+{
+	Invalid = 0;
+	DecryptCPU = 1;
+	DiskRead = 2;
+	DiskWrite = 3;
+}
+
+enum ESteamPipeWorkType
+{
+	Invalid = 0;
+	StageFromChunkStores = 1;
+}
+
+enum ESteamRealm
+{
+	Unknown = 0;
+	Global = 1;
+	China = 2;
+}
+
 enum ESteamReviewScore
 {
 	OverwhelminglyPositive = 9;
@@ -3691,6 +3963,58 @@ enum ESteamReviewScore
 	VeryNegative = 2;
 	OverwhelminglyNegative = 1;
 	None = 0;
+}
+
+enum EStoreCategory
+{
+	Multiplayer = 1;
+	Singleplayer = 2;
+	ModHL2 = 6;
+	ModHL = 7;
+	VAC = 8;
+	Coop = 9;
+	Demo = 10;
+	Friends = 11;
+	HDR = 12;
+	CC = 13;
+	Commentary = 14;
+	Stats = 15;
+	SDK = 16;
+	Editor = 17;
+	PartialController = 18;
+	Mod = 19;
+	MMO = 20;
+	DLC = 21;
+	Achievements = 22;
+	Cloud = 23;
+	SharedSplitscreen = 24;
+	Leaderboards = 25;
+	Guide = 26;
+	CrossPlatMultiplayer = 27;
+	FullController = 28;
+	TradingCard = 29;
+	Workshop = 30;
+	VRThirdParty = 31;
+	AsyncGameNotifications = 32;
+	SteamController = 33;
+	VRSteam = 34;
+	InAppPurchases = 35;
+	OnlinePvP = 36;
+	LocalPvP = 37;
+	OnlineCoop = 38;
+	LocalCoop = 39;
+	SteamVRCollectibles = 40;
+	RemotePlayToPhone = 41;
+	RemotePlayToTablet = 42;
+	RemotePlayToTV = 43;
+	RemotePlayTogether = 44;
+	CloudGaming = 45;
+	CloudGamingNVIDIA = 46;
+	LANPvP = 47;
+	LANCoop = 48;
+	PvP = 49;
+	HighQualitySoundtrackAudio = 50;
+	SteamChinaWorkshop = 51;
 }
 
 enum EStoreCuratorRecommendationState
@@ -3711,7 +4035,11 @@ enum EStoreDiscoveryQueueType
 	WishlistOnSale = 6;
 	DLC = 7;
 	DLCOnSale = 8;
-	MAX = 9;
+	RecommendedComingSoon = 9;
+	RecommendedFree = 10;
+	RecommendedOnSale = 11;
+	RecommendedDemos = 12;
+	MAX = 13;
 }
 
 enum EStoreUsabilityEvent
@@ -3746,18 +4074,33 @@ enum ESupportActionSource
 	Agent = 1;
 }
 
+enum ESystemUISystemKey
+{
+	SystemKey0 = 0;
+	SystemKey1 = 1;
+}
+
+enum ETextFilterOperation
+{
+	AddWords = 0;
+	RemoveWords = 1;
+	ReplaceWords = 2;
+}
+
+enum ETextFilterSetting
+{
+	SteamLabOptedOut = 0;
+	Enabled = 1;
+	EnabledAllowProfanity = 2;
+	Disabled = 3;
+}
+
 enum ETickerCategoryLanguageRule
 {
 	Invalid = 0;
 	Normal = 1;
 	NoDelay = 2;
 	Escalate = 3;
-}
-
-enum ETimelineRange
-{
-	Timeline = 1;
-	Minimap = 2;
 }
 
 enum ETradeOfferConfirmationMethod
@@ -3811,6 +4154,27 @@ enum EUCMListType
 	Completed = 4;
 	ShortcutFavorites = 5;
 	Followed = 6;
+}
+
+enum EUIComposition
+{
+	Hidden = 0;
+	Notification = 1;
+	Overlay = 2;
+	Opaque = 3;
+}
+
+enum EUIMode
+{
+	Unknown = -1;
+	VGUI = 0;
+	Tenfoot = 1;
+	Mobile = 2;
+	Web = 3;
+	ClientUI = 4;
+	MobileChat = 5;
+	EmbeddedClient = 6;
+	MAX = 7;
 }
 
 enum EUniverse
@@ -3876,6 +4240,12 @@ enum EUserBadge
 	SummerSale2019_TeamPig = 42;
 	SteamAwards2019Nominations = 43;
 	WinterSaleEvent2019 = 44;
+	WinterSale2019Steamville = 45;
+	LunarNewYearSale2020 = 46;
+	SpringCleaning2020 = 47;
+	AwardsCommunityContributor = 48;
+	AwardsCommunityPatron = 49;
+	SteamAwards2020Nominations = 50;
 }
 
 enum EUserLastReadFeedType
@@ -3932,6 +4302,27 @@ enum EWebAPIError
 	AccessDenied = 1;
 }
 
+enum EWirelessEndpointStrength
+{
+	None = 0;
+	Weak = 1;
+	Ok = 2;
+	Good = 3;
+	Excellent = 4;
+}
+
+enum EWirelessSecurityFlags
+{
+	None = 0;
+	StaticWep = 1;
+	DynamicWep = 2;
+	Wpa = 4;
+	WpaEnterprise = 8;
+	Wpa2 = 16;
+	Wpa2Enterprise = 32;
+	Unsupported = 32768;
+}
+
 enum EWorkshopFileType
 {
 	Invalid = -1;
@@ -3955,6 +4346,18 @@ enum EWorkshopFileType
 	Max = 16;
 }
 
+enum FileSystemSessionType
+{
+	BACKGROUND = 0;
+	FOREGROUND = 1;
+}
+
+enum FileSystemUploadType
+{
+	BINARY_CONTENT = 0;
+	MULTIPART = 1;
+}
+
 enum FriendGroupDisplayType
 {
 	eOnlineOnly = 0;
@@ -3964,32 +4367,35 @@ enum FriendGroupDisplayType
 	eAll = 4;
 }
 
-enum GameDataRegionBehavior
-{
-	Hover = 0;
-	ClickPopup = 1;
-	ClickSurroundingRegion = 2;
-}
-
-enum GeofencingEventType
-{
-	Enter = 1;
-	Exit = 2;
-}
-
-enum GeofencingRegionState
-{
-	Unknown = 0;
-	Inside = 1;
-	Outside = 2;
-}
-
 enum IDerivationState
 {
 	NOT_TRACKING = -1;
 	UP_TO_DATE = 0;
 	POSSIBLY_STALE = 1;
 	STALE = 2;
+}
+
+enum IosAlertStyle
+{
+	NONE = 0;
+	BANNER = 1;
+	ALERT = 2;
+}
+
+enum IosAllowsPreviews
+{
+	NEVER = 0;
+	ALWAYS = 1;
+	WHEN_AUTHENTICATED = 2;
+}
+
+enum IosAuthorizationStatus
+{
+	NOT_DETERMINED = 0;
+	DENIED = 1;
+	AUTHORIZED = 2;
+	PROVISIONAL = 3;
+	EPHEMERAL = 4;
 }
 
 enum PartnerEventNotificationType
@@ -4004,6 +4410,21 @@ enum ResponsiveWindowActiveView
 {
 	FriendsList = 0;
 	Chat = 1;
+}
+
+enum VideoExportPreset
+{
+	Passthrough = 0;
+	LowQuality = 1;
+	MediumQuality = 2;
+	HighestQuality = 3;
+	H264_640x480 = 4;
+	H264_960x540 = 5;
+	H264_1280x720 = 6;
+	H264_1920x1080 = 7;
+	H264_3840x2160 = 8;
+	HEVC_1920x1080 = 9;
+	HEVC_3840x2160 = 10;
 }
 
 enum bbNodeType
