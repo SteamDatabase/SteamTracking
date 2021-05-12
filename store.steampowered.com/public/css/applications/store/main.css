@@ -104,6 +104,9 @@ html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenuItem_1n7Wl {
   cursor: default;
   position: relative;
   min-width: 120px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
 }
 .contextmenu_contextMenuItem_1n7Wl:first-child {
   border-top: 0.5px solid rgba(80, 87, 94, 0);
@@ -170,6 +173,11 @@ html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenuItem_1n7Wl {
   transform: rotateZ(-90deg);
   fill: #9ca4a7;
   margin: 0px 3px;
+}
+.contextmenu_contextMenuItem_1n7Wl svg {
+  height: 12px;
+  width: 12px;
+  margin-right: 6px;
 }
 .contextmenu_contextMenuItem_1n7Wl .SVGIcon_PlusCircle {
   height: 16px;
@@ -876,6 +884,17 @@ body.modals_BodyNoScrollDialog_105OB {
   font-size: 19px;
   line-height: 22px;
   font-weight: 300;
+}
+.bbcodes_Header4_qpkV7 {
+  color: #fff;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 300;
+}
+.bbcodes_Header5_2_91m {
+  color: #fff;
+  font-size: 16px;
+  line-height: 20px;
 }
 .bbcodes_Underline_2vtht {
   display: inline;
@@ -1845,6 +1864,10 @@ body.modals_BodyNoScrollDialog_105OB {
 .salepreviewwidgets_LibraryFallbackAssetImageContainer_1APLS {
   display: flex;
   padding: 150% 0 0 0;
+  overflow: hidden;
+  position: relative;
+  background: #000;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.8);
 }
 .salepreviewwidgets_LibraryFallbackAssetImageContainer_1APLS
   .salepreviewwidgets_FallbackBackground_3chRZ {

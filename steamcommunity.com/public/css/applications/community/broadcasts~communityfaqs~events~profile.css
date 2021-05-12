@@ -1448,6 +1448,17 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
   line-height: 22px;
   font-weight: 300;
 }
+.bbcodes_Header4_qpkV7 {
+  color: #fff;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 300;
+}
+.bbcodes_Header5_2_91m {
+  color: #fff;
+  font-size: 16px;
+  line-height: 20px;
+}
 .bbcodes_Underline_2vtht {
   display: inline;
   text-decoration: underline;
@@ -3468,6 +3479,10 @@ html.touch .gamehover_WishlistButton_3notz .gamehover_WishlistButtonText_VI5mZ,
 .salepreviewwidgets_LibraryFallbackAssetImageContainer_1APLS {
   display: flex;
   padding: 150% 0 0 0;
+  overflow: hidden;
+  position: relative;
+  background: #000;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.8);
 }
 .salepreviewwidgets_LibraryFallbackAssetImageContainer_1APLS
   .salepreviewwidgets_FallbackBackground_3chRZ {

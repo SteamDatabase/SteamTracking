@@ -8,10 +8,13 @@
         FeatureCtn: "maincapsule_FeatureCtn_IIjzc",
         SuperCapsuleCtn: "maincapsule_SuperCapsuleCtn_3LMaD",
         BGImage: "maincapsule_BGImage_1Wb3-",
+        BGGradient: "maincapsule_BGGradient_2enDy",
+        BGGradientTwo: "maincapsule_BGGradientTwo_2vfd-",
         CapsuleDecorators: "maincapsule_CapsuleDecorators_2SkJz",
         Artwork: "maincapsule_Artwork_1BjaZ",
         Info: "maincapsule_Info_30Ff-",
         Title: "maincapsule_Title_5_Erf",
+        Reason: "maincapsule_Reason_1jQcK",
       };
     },
     j6A3: function (e, t, a) {
@@ -441,15 +444,15 @@
         })(),
         S = a("q1tI"),
         C = a.n(S),
-        k = a("VQ2A"),
-        j = a("IjL/"),
+        j = a("VQ2A"),
+        k = a("IjL/"),
         E = a("0OaU"),
         I = a("TLQK"),
-        F = a("exH9"),
-        P = a("xVl9"),
-        A = a("5L1o"),
-        w = a("MnIK"),
-        G = a("dfs5");
+        A = a("exH9"),
+        F = a("xVl9"),
+        P = a("5L1o"),
+        G = a("MnIK"),
+        w = a("dfs5");
       function O(e, t) {
         var a = new Array();
         return (
@@ -485,10 +488,10 @@
               r = C.a.createElement("div", null, "Unknown: ", t.type);
           }
           return C.a.createElement(
-            G.b,
+            w.b,
             { feature: t.id },
             C.a.createElement(
-              w.a,
+              G.a,
               { placeholderHeight: 250, rootMargin: "0px 0px 100% 0px" },
               C.a.createElement(N, {
                 title: t.title,
@@ -503,7 +506,7 @@
             a = e.description;
           return C.a.createElement(
             "div",
-            { className: Object(F.a)(L.StoreSection, L.SectionTitleCtn) },
+            { className: Object(A.a)(L.StoreSection, L.SectionTitleCtn) },
             C.a.createElement("span", { className: L.SectionTitle }, t),
             Boolean(a) &&
               C.a.createElement("span", { className: L.SectionDescription }, a)
@@ -512,13 +515,13 @@
         D = function (e) {
           var t = O(e.capsuleList, 40);
           return C.a.createElement(
-            P.a,
+            F.a,
             {
               visibleElements: 4,
-              className: Object(F.a)(L.StoreSection, L.StoreSection),
+              className: Object(A.a)(L.StoreSection, L.StoreSection),
             },
             t.map(function (e) {
-              return C.a.createElement(A.l, {
+              return C.a.createElement(P.l, {
                 key: e.type + "_" + e.id,
                 capsule: e,
                 imageType: "header",
@@ -539,10 +542,10 @@
             });
           var n = O(t, 40);
           return C.a.createElement(
-            P.a,
+            F.a,
             { visibleElements: 4 },
             n.map(function (e) {
-              return C.a.createElement(A.l, {
+              return C.a.createElement(P.l, {
                 key: e.type + "_" + e.id,
                 capsule: e,
                 imageType: "header",
@@ -872,23 +875,24 @@
                 e.forEach(function (e, o) {
                   for (
                     var i = { name: a.get(o), facetValues: new Array() },
-                      s = 0,
-                      c = e;
-                    s < c.length;
-                    s++
+                      s = Array(),
+                      c = 0,
+                      l = e;
+                    c < l.length;
+                    c++
                   ) {
-                    var l = c[s];
-                    if (r.get(l)) {
-                      var u = {
-                        name: r.get(l),
+                    var u = l[c];
+                    if (r.get(u)) {
+                      var p = {
+                        name: r.get(u),
                         subtitle: new Array(),
                         rgStoreTagFilter: {
                           type: z.n.k_EStoreFilterClauseTypeAnd,
                           rgSubexpressions: [
                             {
                               type: z.n.k_EStoreFilterClauseTypeOr,
-                              rgSubexpressions: t.has(l)
-                                ? t.get(l).map(function (e) {
+                              rgSubexpressions: t.has(u)
+                                ? t.get(u).map(function (e) {
                                     return {
                                       type:
                                         z.n.k_EStoreFilterClauseTypeStoreTag,
@@ -899,25 +903,27 @@
                                     {
                                       type:
                                         z.n.k_EStoreFilterClauseTypeStoreTag,
-                                      value: l,
+                                      value: u,
                                     },
                                   ],
                             },
                           ],
                         },
-                        nAtomicStoreTagID: l,
+                        nAtomicStoreTagID: u,
                         filter: null,
                         matchingCapsules: [],
                       };
-                      i.facetValues.push(u);
-                    } else
-                      console.warn(
-                        "No name information found for tag ID " +
-                          l +
-                          ", skipping."
-                      );
+                      i.facetValues.push(p);
+                    } else s.push(u);
                   }
-                  n.push(i);
+                  s.length > 0 &&
+                    console.warn(
+                      "No name information found for tag count " +
+                        s.length +
+                        ", skipping.",
+                      s
+                    ),
+                    n.push(i);
                 }),
                 n
               );
@@ -1517,14 +1523,14 @@
                       ? t.GetFacetFilter().SetFromURLParam(o)
                       : t.GetFacetFilter().Reset(),
                     t.SetSelectedPage(i),
-                    t.HintLoadTabPage(n, o, i);
+                    t.HintLoadTabPage(n, t.GetFacetFilter().GetQuery(), i);
                 },
                 [t, n, o, i]
               ),
               a && 0 != a.length
                 ? C.a.createElement(
                     "div",
-                    { className: Object(F.a)($.TabCtn) },
+                    { className: Object(A.a)($.TabCtn) },
                     C.a.createElement(ce, null),
                     C.a.createElement(ie, null),
                     C.a.createElement(se, null),
@@ -1538,7 +1544,7 @@
         ne = Object(q.a)(function (e) {
           var t = W.Get().GetSelectedTab();
           return C.a.createElement(
-            G.b,
+            w.b,
             { feature: "tab-" + t.name },
             C.a.createElement(oe, null)
           );
@@ -1621,7 +1627,7 @@
                       key: "" + e.item_type + e.id,
                       className: Y.a.SaleItemBrowserRow,
                     },
-                    C.a.createElement(A.n, {
+                    C.a.createElement(P.n, {
                       id: e.id,
                       type: a,
                       bShowDemoButton: !1,
@@ -1661,7 +1667,7 @@
             };
             return C.a.createElement(
               "div",
-              { className: Object(F.a)($.PagingCtn) },
+              { className: Object(A.a)($.PagingCtn) },
               C.a.createElement(
                 "div",
                 null,
@@ -1670,7 +1676,7 @@
               Boolean(c > 1) &&
                 C.a.createElement(
                   "div",
-                  { className: Object(F.a)($.PagingNumCtn) },
+                  { className: Object(A.a)($.PagingNumCtn) },
                   Boolean(r > 0) &&
                     C.a.createElement(
                       J.d,
@@ -1694,7 +1700,7 @@
                           onClick: function () {
                             return p(e - 1);
                           },
-                          className: Object(F.a)(
+                          className: Object(A.a)(
                             ((a = {}),
                             (a[$.PageNumber] = !0),
                             (a[$.PageSelectedNumber] = e === r + 1),
@@ -1750,7 +1756,7 @@
                   "div",
                   {
                     key: t.displaylistname,
-                    className: Object(F.a)(
+                    className: Object(A.a)(
                       ((r = {}),
                       (r[$.TabHeader] = !0),
                       (r[$.TabHeaderSelected] =
@@ -1776,7 +1782,9 @@
         ),
         le = a("IzPI"),
         ue = a("RNU2"),
-        pe =
+        pe = a("b3LC"),
+        ge = a("QXuq"),
+        me =
           (Object(q.a)(function (e) {
             var t = e.capsule,
               a = t.appid,
@@ -1790,17 +1798,17 @@
               C.a.createElement(
                 "div",
                 null,
-                C.a.createElement(A.k, { id: a, type: r })
+                C.a.createElement(P.k, { id: a, type: r })
               )
             );
           }),
           function (e) {
             var t = v.Get().GetMainCapsuleList();
             return C.a.createElement(
-              P.a,
+              F.a,
               { visibleElements: 1, className: L.MainCarousel },
               t.map(function (e) {
-                return C.a.createElement(ge, {
+                return C.a.createElement(de, {
                   key: e.item_type + " " + e.id,
                   item: e,
                   strReason:
@@ -1809,55 +1817,73 @@
               })
             );
           }),
-        ge = function (e) {
-          var t = e.item,
-            a = e.strReason,
-            r = i.a.GetAppLinkInfo(t.id);
-          if (!r) return null;
-          var n =
-              r.screenshot_list.length > 0
-                ? r.screenshot_list[0]
-                : r.header_image_url,
-            o = Object(le.f)(r.capsule_link);
+        de = function (e) {
+          var t,
+            a = e.item,
+            r = e.strReason,
+            n = Object(pe.a)(a.id, Object(ge.e)(a.item_type), {
+              include_assets: !0,
+            })[0],
+            o = i.a.GetAppLinkInfo(a.id);
+          if (!o || !n) return null;
+          var s =
+              (null === (t = n.assets.GetLibraryHeroURL()) || void 0 === t
+                ? void 0
+                : t.trim().length) > 0
+                ? n.assets.GetLibraryHeroURL()
+                : o.screenshot_list.length > 0
+                ? o.screenshot_list[0]
+                : o.header_image_url,
+            c = Object(le.f)(o.capsule_link);
           return C.a.createElement(
-            A.e,
-            { appInfo: r },
+            P.e,
+            { appid: n.GetAppID() },
             C.a.createElement(
               "div",
               { className: ue.SuperCapsuleCtn },
               C.a.createElement(
                 "div",
+                { className: Object(A.a)(ue.BGGradient) },
+                " "
+              ),
+              C.a.createElement(
+                "div",
+                { className: Object(A.a)(ue.BGGradientTwo) },
+                " "
+              ),
+              C.a.createElement(
+                "div",
                 {
-                  className: Object(F.a)(ue.BGImage),
-                  style: { backgroundImage: 'url("' + n + '")' },
+                  className: Object(A.a)(ue.BGImage),
+                  style: { backgroundImage: 'url("' + s + '")' },
                 },
                 " "
               ),
               C.a.createElement(
                 "div",
-                { className: Object(F.a)(ue.FeatureCtn, L.FeatureCtn) },
+                { className: Object(A.a)(ue.FeatureCtn, L.FeatureCtn) },
                 C.a.createElement(
                   "a",
-                  { href: o, className: Object(F.a)(ue.Artwork) },
-                  Object(A.b)(r) &&
+                  { href: c, className: Object(A.a)(ue.Artwork) },
+                  Object(P.b)(n.GetAppID(), n.GetAppIDToRun()) &&
                     C.a.createElement(
                       "div",
                       { className: ue.CapsuleDecorators },
-                      C.a.createElement(A.h, null)
+                      C.a.createElement(P.h, null)
                     ),
-                  C.a.createElement(A.f, { info: r, appInfo: r }),
-                  C.a.createElement(A.c, { info: r })
+                  C.a.createElement(P.f, { info: o, appInfo: o }),
+                  C.a.createElement(P.c, { info: o })
                 ),
                 C.a.createElement(
                   "div",
-                  { className: Object(F.a)(ue.Info) },
+                  { className: Object(A.a)(ue.Info) },
                   C.a.createElement(
                     "a",
-                    { className: ue.Title, href: o },
-                    r.title
+                    { className: ue.Title, href: c },
+                    o.title
                   ),
-                  C.a.createElement("div", null, a),
-                  C.a.createElement(A.m, { appInfo: r, instanceNum: t.id })
+                  C.a.createElement("div", { className: ue.Reason }, r),
+                  C.a.createElement(P.m, { appInfo: o, instanceNum: a.id })
                 )
               )
             )
@@ -1892,13 +1918,13 @@
         return C.a.createElement(
           "div",
           null,
-          C.a.createElement(j.a, null, C.a.createElement(pe, null)),
-          C.a.createElement(j.a, null, n),
-          C.a.createElement(j.a, null, C.a.createElement(re, null)),
+          C.a.createElement(k.a, null, C.a.createElement(me, null)),
+          C.a.createElement(k.a, null, n),
+          C.a.createElement(k.a, null, C.a.createElement(re, null)),
           C.a.createElement(
             "a",
             {
-              href: Object(k.a)(
+              href: Object(j.a)(
                 u.d.STORE_BASE_URL + "labs/contenthub?optout=1"
               ),
             },

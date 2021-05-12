@@ -2637,6 +2637,11 @@ ul.actualUL li,
 	font-weight: normal;
 	text-transform: none;
 	margin-top: 10px;
+    letter-spacing: 0px;
+}
+
+.landingRightCol ul li {
+    list-style-type: unset;
 }
 
 .landingRightCol .panel.checklist p.subTitle {

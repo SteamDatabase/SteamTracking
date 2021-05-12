@@ -1635,6 +1635,9 @@ html.contextmenu_ContextMenuPopup_152-v .contextmenu_contextMenuItem_3hJA5 {
   cursor: default;
   position: relative;
   min-width: 120px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
 }
 .contextmenu_contextMenuItem_3hJA5:first-child {
   border-top: 0.5px solid rgba(80, 87, 94, 0);
@@ -1666,7 +1669,7 @@ html.contextmenu_ContextMenuPopup_152-v .contextmenu_contextMenuItem_3hJA5 {
   font-size: 12px;
   text-transform: uppercase;
 }
-.contextmenu_contextMenuItem_3hJA5.contextmenu_StrongerSeparation_20LoK {
+.contextmenu_ContextMenuSeparator_LXVyl + .contextmenu_contextMenuItem_3hJA5 {
   border-top-color: dimgray;
 }
 .contextmenu_contextMenuItem_3hJA5.contextmenu_NoSeparation_2ct40 {
@@ -1701,6 +1704,11 @@ html.contextmenu_ContextMenuPopup_152-v .contextmenu_contextMenuItem_3hJA5 {
   transform: rotateZ(-90deg);
   fill: #9ca4a7;
   margin: 0px 3px;
+}
+.contextmenu_contextMenuItem_3hJA5 svg {
+  height: 12px;
+  width: 12px;
+  margin-right: 6px;
 }
 .contextmenu_contextMenuItem_3hJA5 .SVGIcon_PlusCircle {
   height: 16px;
@@ -4182,10 +4190,34 @@ span.suggestdialog_mentionSearchMatch_1t0Xl {
 }
 .bbcodes_Header1_3nmkN {
   display: block;
-  color: #5aa9d6;
+  color: white;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 26px;
+  line-height: 30px;
   margin-bottom: 4px;
+}
+.bbcodes_Header2_2C1Hj {
+  color: white;
+  font-size: 22px;
+  line-height: 25px;
+  font-weight: 400;
+}
+.bbcodes_Header3_2q6Vr {
+  color: white;
+  font-size: 19px;
+  line-height: 22px;
+  font-weight: 300;
+}
+.bbcodes_Header4_1zThg {
+  color: white;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 300;
+}
+.bbcodes_Header5_3c6Cp {
+  color: white;
+  font-size: 16px;
+  line-height: 20px;
 }
 .bbcodes_Underline_2r-_U {
   display: inline;
@@ -6020,6 +6052,10 @@ html.touch .gamehover_WishlistButton_1lp6v .gamehover_WishlistButtonText_3SsXJ,
 .salepreviewwidgets_LibraryFallbackAssetImageContainer_2iRRt {
   display: flex;
   padding: 150% 0 0 0;
+  overflow: hidden;
+  position: relative;
+  background: black;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.8);
 }
 .salepreviewwidgets_LibraryFallbackAssetImageContainer_2iRRt
   .salepreviewwidgets_FallbackBackground_3C9jN {
@@ -18304,13 +18340,13 @@ img.broadcastplayer_BroadcastPlaceholderImg_1LIEZ {
   margin-top: 16px;
 }
 .bbcodeeditor_BBCodeEditorInputStyles_2c_D7 textarea {
-  color: #adadad;
+  color: #cfcfcf;
   background-color: rgba(0, 0, 0, 0.2);
   border: 1px solid #000;
   border-radius: 3px;
 }
 .bbcodeeditor_BBCodeEditorInputStyles_2c_D7 input {
-  color: #adadad;
+  color: #cfcfcf;
   background-color: rgba(0, 0, 0, 0.2);
   border: 1px solid #000;
   border-radius: 3px;
@@ -18813,6 +18849,20 @@ img.broadcastplayer_BroadcastPlaceholderImg_1LIEZ {
   font-weight: bold;
   padding-bottom: 15px;
 }
+.optin_admin_email_editor_SectionCtn_2LeZ2
+  .optin_admin_email_editor_SectionBody_2JTPY
+  ul {
+  padding-top: 12px;
+}
+.optin_admin_email_editor_SectionCtn_2LeZ2
+  .optin_admin_email_editor_SectionBody_2JTPY
+  ul
+  li {
+  list-style-position: outside;
+  list-style-type: circle;
+  margin-left: 16px;
+  padding-bottom: 8px;
+}
 .optin_admin_email_editor_ChangeBtnCtn_1LZ2L {
   margin-bottom: -30px;
   width: 100%;
@@ -18827,6 +18877,10 @@ img.broadcastplayer_BroadcastPlaceholderImg_1LIEZ {
   justify-content: center;
   margin-top: 20px;
   margin-bottom: 30px;
+}
+
+.optin_admin_email_sections_Preview_3fMhG {
+  max-width: 800px;
 }
 
 .optin_admin_email_dashboard_EmailTypesCtn_4xCBy {
@@ -18871,6 +18925,11 @@ img.broadcastplayer_BroadcastPlaceholderImg_1LIEZ {
   .optin_admin_email_dashboard_TileContainer_2dKmv
   .optin_admin_email_dashboard_EmailStatusTodo_3bvme {
   color: pink;
+}
+.optin_admin_email_dashboard_EmailTypesCtn_4xCBy
+  .optin_admin_email_dashboard_EmailDrafts_2Eh_M
+  .optin_admin_email_dashboard_Selected_UaNa5 {
+  background: hotpink;
 }
 
 .importexportdialog_Label_hoiNW {

@@ -2391,8 +2391,7 @@ a#store_search_link img {
 	display: none;
 }
 
-.tab_item_discount .discount_pct,
-.tab_item_discount.no_discount .bundle_base_discount {
+.tab_item_discount .discount_pct {
 	display: block;
 	float: left;
 	font-size: 14px;
@@ -2400,6 +2399,10 @@ a#store_search_link img {
 	padding: 0 4px;
 	margin-top: 8px;
     border-radius: 1px;
+}
+
+.tab_item_discount.no_discount .bundle_base_discount {
+    display: none;
 }
 
 .tab_item_discount .discount_final_price {

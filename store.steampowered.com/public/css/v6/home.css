@@ -3672,6 +3672,10 @@ background: -webkit-linear-gradient( top, rgba(42,71,94,1.0) 5%, rgba(42,71,94,0
 	left: 632px;
 }
 
+.store_main_capsule .discount_block.no_discount .bundle_base_discount {
+    display: none;
+}
+
 .store_main_capsule .ds_options {
 	right: 325px;
 	z-index: 50;

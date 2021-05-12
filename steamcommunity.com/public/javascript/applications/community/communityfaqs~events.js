@@ -789,23 +789,24 @@
                 e.forEach(function (e, r) {
                   for (
                     var o = { name: n.get(r), facetValues: new Array() },
-                      l = 0,
-                      s = e;
-                    l < s.length;
-                    l++
+                      l = Array(),
+                      s = 0,
+                      u = e;
+                    s < u.length;
+                    s++
                   ) {
-                    var u = s[l];
-                    if (a.get(u)) {
-                      var d = {
-                        name: a.get(u),
+                    var d = u[s];
+                    if (a.get(d)) {
+                      var p = {
+                        name: a.get(d),
                         subtitle: new Array(),
                         rgStoreTagFilter: {
                           type: c.o.k_EStoreFilterClauseTypeAnd,
                           rgSubexpressions: [
                             {
                               type: c.o.k_EStoreFilterClauseTypeOr,
-                              rgSubexpressions: t.has(u)
-                                ? t.get(u).map(function (e) {
+                              rgSubexpressions: t.has(d)
+                                ? t.get(d).map(function (e) {
                                     return {
                                       type:
                                         c.o.k_EStoreFilterClauseTypeStoreTag,
@@ -816,25 +817,27 @@
                                     {
                                       type:
                                         c.o.k_EStoreFilterClauseTypeStoreTag,
-                                      value: u,
+                                      value: d,
                                     },
                                   ],
                             },
                           ],
                         },
-                        nAtomicStoreTagID: u,
+                        nAtomicStoreTagID: d,
                         filter: null,
                         matchingCapsules: [],
                       };
-                      o.facetValues.push(d);
-                    } else
-                      console.warn(
-                        "No name information found for tag ID " +
-                          u +
-                          ", skipping."
-                      );
+                      o.facetValues.push(p);
+                    } else l.push(d);
                   }
-                  i.push(o);
+                  l.length > 0 &&
+                    console.warn(
+                      "No name information found for tag count " +
+                        l.length +
+                        ", skipping.",
+                      l
+                    ),
+                    i.push(o);
                 }),
                 i
               );

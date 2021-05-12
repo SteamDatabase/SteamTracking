@@ -1,3 +1,6 @@
+Body.v6.tag_page.contenthub_page {
+  background-color: #282b31;
+}
 .contenthubshared_MainCarousel_KAdot {
   width: 100%;
 }
@@ -81,9 +84,12 @@
   position: relative;
 }
 .maincapsule_FeatureCtn_IIjzc {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: row;
   min-height: 500px;
+  position: relative;
+  z-index: 4;
 }
 .maincapsule_SuperCapsuleCtn_3LMaD {
   width: 100%;
@@ -94,9 +100,31 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  opacity: 0.3;
+  opacity: 0.8;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position-x: center;
+  z-index: 1;
+}
+.maincapsule_BGGradient_2enDy {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    38% 61% at 59% 42%,
+    rgba(40, 43, 49, 0) 65%,
+    rgba(40, 43, 49, 0.2) 75%,
+    rgba(40, 43, 49, 0.6) 100%,
+    rgba(40, 43, 49, 0.7) 130%
+  );
+  z-index: 2;
+}
+.maincapsule_BGGradientTwo_2vfd- {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(40, 43, 49, 0) 80%, #282b31 100%);
+  z-index: 3;
 }
 .maincapsule_CapsuleDecorators_2SkJz {
   position: absolute;
@@ -112,6 +140,7 @@
   position: relative;
   height: 524px;
   width: 348px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
 }
 .maincapsule_Info_30Ff- {
   display: flex;
@@ -120,9 +149,28 @@
   height: 600px;
   padding-left: 30px;
 }
+.maincapsule_Info_30Ff- .WidgetTagTitle {
+  display: none;
+}
+.maincapsule_Info_30Ff- .SaleTagBlockCtn .TagBox .WidgetTag {
+  background-color: #000;
+  color: #c6d4df;
+  font-weight: 300;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
 .maincapsule_Title_5_Erf {
-  font-size: 24px;
+  font-size: 30px;
+  font-weight: 200;
   margin-bottom: 5px;
   color: #fff;
   line-height: 26px;
+  text-shadow: 1px 1px 0px #000;
+}
+.maincapsule_Reason_1jQcK {
+  font-size: 20px;
+  font-weight: 200;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 0px #000;
 }
