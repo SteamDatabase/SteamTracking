@@ -1,66 +1,3 @@
-.bbcodeimporter_ImportToolCtn_TQZns {
-  padding: 20px;
-  overflow: auto;
-}
-.bbcodeimporter_ImportToolCtn_TQZns .bbcodeimporter_ToolHeader_vr371 {
-  color: #fff;
-  font-size: 36px;
-  text-align: center;
-  padding-bottom: 20px;
-}
-.bbcodeimporter_ImportToolCtn_TQZns .bbcodeimporter_StatusMessage_3LsT8 {
-  padding: 8px;
-  font-size: 20px;
-}
-.bbcodeimporter_ImportToolCtn_TQZns .bbcodeimporter_FAQRow_2KnD- {
-  display: flex;
-  padding: 2px;
-  height: 36px;
-}
-.bbcodeimporter_ImportToolCtn_TQZns
-  .bbcodeimporter_FAQRow_2KnD-
-  .bbcodeimporter_ID_3amum {
-  width: 60px;
-}
-.bbcodeimporter_ImportToolCtn_TQZns
-  .bbcodeimporter_FAQRow_2KnD-
-  .bbcodeimporter_Ref_29eod {
-  width: 180px;
-}
-.bbcodeimporter_ImportToolCtn_TQZns
-  .bbcodeimporter_FAQRow_2KnD-
-  .bbcodeimporter_Text_24IpJ {
-  width: 250px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.bbcodeimporter_ImportToolCtn_TQZns
-  .bbcodeimporter_FAQRow_2KnD-
-  .bbcodeimporter_ID_3amum,
-.bbcodeimporter_ImportToolCtn_TQZns
-  .bbcodeimporter_FAQRow_2KnD-
-  .bbcodeimporter_Ref_29eod,
-.bbcodeimporter_ImportToolCtn_TQZns
-  .bbcodeimporter_FAQRow_2KnD-
-  .bbcodeimporter_Text_24IpJ {
-  padding: 4px;
-  margin: 4px;
-}
-.bbcodeimporter_ImportToolCtn_TQZns .bbcodeimporter_ImportFAQsButton_2CwpZ {
-  padding: 4px 8px;
-  margin: 4px;
-  width: 90px;
-  text-align: center;
-  background-color: #a9a9a9;
-  font-weight: 600;
-  color: #000;
-  cursor: pointer;
-}
-.bbcodeimporter_ImportToolCtn_TQZns
-  .bbcodeimporter_ImportFAQsButton_2CwpZ:hover {
-  background-color: gray;
-}
 .faqdashboard_FAQDashboardPage_59oO6 {
   background: #24282e;
   display: flex;
@@ -164,6 +101,7 @@ button.faqdashboard_DashboardCreateFAQButton_3VW3j.faqdashboard_DashboardCreateF
   .faqdashboard_DownArrow_30b5I {
   display: block;
 }
+.faqdashboard_Never_36m0d,
 .faqdashboard_BadCount_1kNWc {
   color: #b36f6f;
 }
@@ -196,12 +134,6 @@ button.faqdashboard_DashboardCreateFAQButton_3VW3j.faqdashboard_DashboardCreateF
 .faqdashboard_EntryInternalName_1sL5y {
   font-size: 18px;
   padding-left: 6px;
-}
-.faqtimestamp_Never_8rlUG {
-  color: #b36f6f;
-}
-.faqtimestamp_Warning_pZM2L {
-  color: #9a7a3a;
 }
 .faqeditor_FAQEditPage_2QALa {
   background: #24282e;
@@ -393,49 +325,6 @@ button.faqeditor_EditorSaveButton_22iwd.faqeditor_EditorSaveButton_22iwd:disable
 .faqtoolbar_EditorInternalName_3A9ci {
   font-size: 24px;
   color: #ff0;
-}
-.faqbbcode_FAQContainer_2PQsW .BB_Header1,
-.faqbbcode_FAQContainer_2PQsW .BB_Header2,
-.faqbbcode_FAQContainer_2PQsW .BB_Header3,
-.faqbbcode_FAQContainer_2PQsW .BB_Header4,
-.faqbbcode_FAQContainer_2PQsW .BB_Header5 {
-  margin-bottom: 8px;
-}
-.faqbbcode_Section_bjwwI {
-  padding: 10px;
-  margin: 10px 0;
-}
-.faqbbcode_Section_bjwwI.faqbbcode_Note_XjQ8g,
-.faqbbcode_Section_bjwwI.faqbbcode_Important_mRx2I,
-.faqbbcode_Section_bjwwI.faqbbcode_Warning_3Hvtr {
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 3px;
-}
-.faqbbcode_Section_bjwwI.faqbbcode_Note_XjQ8g p,
-.faqbbcode_Section_bjwwI.faqbbcode_Important_mRx2I p,
-.faqbbcode_Section_bjwwI.faqbbcode_Warning_3Hvtr p {
-  padding: 0;
-}
-.faqbbcode_Section_bjwwI.faqbbcode_Note_XjQ8g {
-  border: 1px solid #5eac32;
-}
-.faqbbcode_Section_bjwwI.faqbbcode_Important_mRx2I {
-  border: 1px solid #8bb9e0;
-}
-.faqbbcode_Section_bjwwI.faqbbcode_Warning_3Hvtr {
-  border: 1px solid #a40d36;
-}
-.faqbbcode_Section_bjwwI.faqbbcode_Warning_3Hvtr h1:first-child,
-.faqbbcode_Section_bjwwI.faqbbcode_Warning_3Hvtr h2:first-child,
-.faqbbcode_Section_bjwwI.faqbbcode_Warning_3Hvtr h3:first-child,
-.faqbbcode_Section_bjwwI.faqbbcode_Warning_3Hvtr h4:first-child,
-.faqbbcode_Section_bjwwI.faqbbcode_Warning_3Hvtr h5:first-child {
-  color: #fff;
-  font-weight: bold;
-  margin: 0;
-}
-.faqbbcode_FAQImage_3Eebt {
-  max-width: 100%;
 }
 .faqsharedviewpage_FAQViewPage_Ya530 {
   display: flex;
