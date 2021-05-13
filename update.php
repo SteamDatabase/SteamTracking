@@ -200,6 +200,40 @@
 				$Data = json_decode( $Data, true );
 				$Data = json_encode( $Data, JSON_PRETTY_PRINT );
 			}
+			else if( $File === 'Random/SteamMobileApks.txt' )
+			{
+				$ApkLinks = [];
+
+				if( preg_match_all( '/(https:\/\/[\w.\/-]+\.apk)/', $Data, $Test ) > 0 )
+				{
+					$ApkLinks = $Test[ 0 ];
+				}
+
+				if( empty( $ApkLinks ) )
+				{
+					$this->Log( '{lightred}Failed to find apk links' );
+
+					return false;
+				}
+
+				foreach( $ApkLinks as &$ApkLink )
+				{
+					$ApkLink = preg_replace( '/^https:\/\/[\w.\/-]+\/apps/', 'https://media.steampowered.com/apps', $ApkLink );
+
+					if( preg_match( '/\/apps\/([\w-]+)\//', $ApkLink, $AppName ) === 1 )
+					{
+						$this->URLsToFetch[ ] =
+						[
+							'URL'  => $ApkLink,
+							'File' => '.support/archives/' . $AppName[ 1 ] . '.apk',
+						];
+					}
+				}
+
+				unset( $ApkLink );
+
+				$Data = implode( "\n", $ApkLinks ) . "\n";
+			}
 			// Unzip it
 			else if( str_ends_with( $File, '.zip' ) )
 			{
