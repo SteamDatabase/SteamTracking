@@ -9989,11 +9989,6 @@
         );
       }
     },
-    RhBb: function (e, t, n) {
-      e.exports =
-        n.p +
-        "images/applications/store/dota_tile_background.png?v=valveisgoodatcaching";
-    },
     RvZ5: function (e, t, n) {
       e.exports =
         n.p +
@@ -12905,22 +12900,22 @@
     prdU: function (e, t, n) {
       "use strict";
       n.d(t, "d", function () {
-        return re;
+        return ne;
       }),
         n.d(t, "f", function () {
-          return ae;
+          return re;
         }),
         n.d(t, "b", function () {
-          return oe;
+          return ie;
         }),
         n.d(t, "e", function () {
-          return se;
+          return oe;
         }),
         n.d(t, "a", function () {
-          return de;
+          return ue;
         }),
         n.d(t, "c", function () {
-          return ye;
+          return be;
         });
       var r = n("mrSG"),
         a = n("2lpH"),
@@ -14509,13 +14504,12 @@
       var Q = n("BFsE"),
         q = n("jUCX"),
         J = n("kLLr"),
-        X = n("RhBb"),
-        K = n("bEwK"),
-        $ = n("cMk+"),
-        ee = n("1fPh"),
-        te = n("r64O"),
-        ne = n("qD+2");
-      function re(e, t) {
+        X = n("bEwK"),
+        K = n("cMk+"),
+        $ = n("1fPh"),
+        ee = n("r64O"),
+        te = n("qD+2");
+      function ne(e, t) {
         void 0 === t && (t = !1);
         var n = function (e) {
           return Object(s.f)(t ? e + "_Plural" : e);
@@ -14542,13 +14536,13 @@
         }
         return "Unknown ECommunityItemClass";
       }
-      var ae = "home",
-        ie = (function () {
+      var re = "home",
+        ae = (function () {
           return function () {
             (this.items = []), (this.mapItemOwnership = new Map());
           };
         })(),
-        oe = (function () {
+        ie = (function () {
           function e() {
             var e = this;
             (this.m_lPointsAvailable = new i.a(0, 0)),
@@ -14582,7 +14576,7 @@
               (this.m_bLoadedAwardCost = !1),
               (this.m_unAwardPointsTransferred = 0),
               (this.m_bIsSaleActive = !1),
-              (this.m_HeroImageFallbackLoader = new be(
+              (this.m_HeroImageFallbackLoader = new he(
                 function (e) {
                   return fetch(
                     m.d.STORE_BASE_URL + "points/heroimage?appid=" + e
@@ -14598,7 +14592,7 @@
                   return e.toString();
                 }
               )),
-              (this.m_batchedRewardItemLoader = new ge(
+              (this.m_batchedRewardItemLoader = new _e(
                 function (t) {
                   return _.o.BatchedQueryRewardItems(e.m_anonymousTransport, t);
                 },
@@ -14621,7 +14615,7 @@
                       []);
                 }
               )),
-              (this.m_batchedCommunityInventoryLoader = new ge(
+              (this.m_batchedCommunityInventoryLoader = new _e(
                 function (t) {
                   return y.GetCommunityInventory(e.m_transport, t);
                 },
@@ -14702,7 +14696,7 @@
                 t.golden_profiles &&
                   (this.m_goldenProfileConfigs = t.golden_profiles || []),
                 t.can_claim_sale_reward &&
-                  ye.Get().InitFreeItemReward(t.can_claim_sale_reward),
+                  be.Get().InitFreeItemReward(t.can_claim_sale_reward),
                 t.is_sale_active && (this.m_bIsSaleActive = t.is_sale_active),
                 t.free_item_header &&
                   (this.m_strFreeItemHeader = t.free_item_header),
@@ -14952,7 +14946,7 @@
                   categoryTag: e.categoryTag || [],
                 },
                 c = Object(r.g)(l.appid).sort(),
-                m = me(l.grouping),
+                m = ce(l.grouping),
                 u =
                   m.sort +
                   "__" +
@@ -15072,7 +15066,7 @@
                         i.m_mapLoyaltyRewardDefs.set(e.defid, e),
                           _.push(e.appid);
                       }),
-                      ne.a.EnsureAppInfoForAppIDs(_);
+                      te.a.EnsureAppInfoForAppIDs(_);
                   });
                 });
               }
@@ -15099,7 +15093,7 @@
                         (s = e.itemclass),
                         (l = e.queryFilter),
                         (c = e.categoryTag),
-                        (u = me(o)),
+                        (u = ce(o)),
                         (d = new _.h()),
                         i.forEach(function (e) {
                           return d.add_appids(e);
@@ -15288,7 +15282,7 @@
             }),
             (e.prototype.GetBundleOfferForUser = function (e) {
               var t = this,
-                n = new ie();
+                n = new ae();
               return (
                 (n.original_point_cost = 0),
                 (n.point_cost = 0),
@@ -15377,7 +15371,7 @@
               );
               return (
                 t || this.GetCommunityItemInventory(e.appid),
-                Object(te.a)(
+                Object(ee.a)(
                   t.has(e.community_item_type),
                   "Missing owned item " + e.community_item_type
                 ),
@@ -16349,7 +16343,7 @@
                     is_custom: !0,
                   }
                 : {
-                    img_url: this.m_HeroImageFallbackLoader.Get(e) || K,
+                    img_url: this.m_HeroImageFallbackLoader.Get(e) || X,
                     is_custom: !1,
                   };
             }),
@@ -16384,15 +16378,15 @@
             }),
             (e.prototype.GetPageDescriptor = function (e) {
               return (
-                this.m_mapPages.has(le(e)) ||
-                  this.m_mapPages.set(le(e), this.BuildPage(e)),
-                this.m_mapPages.get(le(e))
+                this.m_mapPages.has(se(e)) ||
+                  this.m_mapPages.set(se(e), this.BuildPage(e)),
+                this.m_mapPages.get(se(e))
               );
             }),
             (e.prototype.BuildPage = function (e) {
               switch (e.type) {
                 case "app":
-                  return new pe(
+                  return new de(
                     e.appid,
                     e.appid === this.GetCurrentSeasonalAppID()
                       ? Object(s.f)("#HeroCluster_Premier_Collection_Subtitle")
@@ -16412,7 +16406,7 @@
             (e.prototype.HydrateCustomPages = function () {
               var t = this,
                 n = function (e, n, a) {
-                  var i = new ue(
+                  var i = new me(
                     e,
                     n,
                     Object(r.a)({ grouping: 2, maxToReturn: 0 }, a)
@@ -16424,7 +16418,7 @@
                 },
                 a = function (n, r, a, i) {
                   var o = (function (e, n, r) {
-                    var a = new de(e, n, he({ grouping: 2 }, r));
+                    var a = new ue(e, n, ge({ grouping: 2 }, r));
                     return (
                       t.m_mapClusters.has(a.id) || t.m_mapClusters.set(a.id, a),
                       a
@@ -16453,7 +16447,7 @@
                   };
                 },
                 i = function (e) {
-                  return t.m_mapPages.set(le(e.params), e);
+                  return t.m_mapPages.set(se(e.params), e);
                 },
                 l = n(
                   Object(s.f)(
@@ -16463,7 +16457,7 @@
                   Object(s.f)("#RewardCluster_Popular_Subtitle")
                 ),
                 c = n(
-                  re(13, !0),
+                  ne(13, !0),
                   Object(s.f)("#RewardCluster_MiniProfileBackgrounds_Subtitle"),
                   { itemclass: [13] }
                 ),
@@ -16473,7 +16467,7 @@
                   { itemclass: [15, 14] }
                 ),
                 p = n(
-                  re(3, !0),
+                  ne(3, !0),
                   Object(s.f)("#RewardCluster_Backgrounds_Subtitle"),
                   { itemclass: [3] }
                 ),
@@ -16502,12 +16496,12 @@
                   { itemclass: [4] }
                 ),
                 h = n(
-                  Object(s.f)("#RewardCluster_All_Title", re(15, !0)),
+                  Object(s.f)("#RewardCluster_All_Title", ne(15, !0)),
                   Object(s.f)("#RewardCluster_AnimatedAvatar_Subtitle"),
                   { itemclass: [15] }
                 ),
                 b = n(
-                  Object(s.f)("#RewardCluster_All_Title", re(14, !0)),
+                  Object(s.f)("#RewardCluster_All_Title", ne(14, !0)),
                   Object(s.f)("#RewardCluster_AvatarFrames_Subtitle"),
                   { itemclass: [14] }
                 ),
@@ -16551,23 +16545,24 @@
               v.unshift({ cluster: C, type: 1 });
               var I,
                 w = [];
-              w.push(a(1526200)),
-                Object(u.a)(m.d.EREALM) ||
-                  w.push(
+              Object(u.a)(m.d.EREALM)
+                ? w.push(a(1526200))
+                : w.push(
+                    a(1328670),
+                    a(1526200),
                     a(1492660),
                     a(1091500),
                     a(1314563),
                     a(870780),
-                    a(1190460, void 0, void 0, { itemclass: [3] }),
-                    a(570, X, Object(s.f)("#HeroCluster_dota_subtitile"))
+                    a(1190460, void 0, void 0, { itemclass: [3] })
                   ),
                 (I = {
                   type: "banner",
                   title: Object(s.f)("#FeaturedBanner_Headline"),
                   description: Object(s.f)("#FeaturedBanner_Subhead"),
                   link_text: Object(s.f)("#FeaturedBanner_CallToAction"),
-                  linked_page: ee.b.LoyaltyItemBundles(),
-                  image: $,
+                  linked_page: $.b.LoyaltyItemBundles(),
+                  image: K,
                 });
               for (
                 var M = [], j = [v, w], N = 0;
@@ -16579,22 +16574,22 @@
                     M.push({ type: "clusterview", view: j[0][N] }),
                   N < j[1].length &&
                     M.push({ type: "clusterview", view: j[1][N] });
-              i(new fe(ae, M)),
+              i(new pe(re, M)),
                 i(
-                  new _e(
+                  new fe(
                     "stickers",
                     [{ cluster: _, type: 0 }],
                     Object(s.f)("#ShopPageTitle_Stickers")
                   )
                 ),
                 i(
-                  new _e(
+                  new fe(
                     "emoticons",
                     [{ cluster: g, type: 0 }],
                     Object(s.f)("#ShopPageTitle_Emoticons")
                   )
                 ),
-                i(new _e("chateffects", [{ cluster: f, type: 0 }], re(12, !0)));
+                i(new fe("chateffects", [{ cluster: f, type: 0 }], ne(12, !0)));
               var E = n(
                   Object(s.f)(
                     "#RewardCluster_AnimatedProfileBackgrounds_Title"
@@ -16622,7 +16617,7 @@
                   { itemclass: [13], queryFilter: [2] }
                 );
               i(
-                new _e(
+                new fe(
                   "backgrounds",
                   [
                     { cluster: E, type: 1 },
@@ -16634,7 +16629,7 @@
                 )
               ),
                 i(
-                  new _e(
+                  new fe(
                     "avatar",
                     [
                       { cluster: h, type: 1 },
@@ -16644,7 +16639,7 @@
                   )
                 ),
                 i(
-                  new _e(
+                  new fe(
                     "itembundles",
                     [{ cluster: y, type: 0 }],
                     Object(s.f)("#ShopPageTitle_ItemBundles"),
@@ -16655,7 +16650,7 @@
                   Object(o.L)(function () {
                     return !!e.Get().GetSortedGamesWithRewards().length;
                   }).then(function () {
-                    var n = new ue(
+                    var n = new me(
                       Object(s.f)("#HeroCluster_YourGamesTitle"),
                       void 0,
                       {
@@ -16673,7 +16668,7 @@
                       type: 2,
                       linkedPage: { type: "custom", pageid: "games" },
                       cluster: n.id,
-                      strImage: K,
+                      strImage: X,
                       bFullBleedImage: !0,
                     };
                     M.push({ type: "clusterview", view: r });
@@ -16687,7 +16682,7 @@
                               return (
                                 "clusterview" === n.type &&
                                 ((r = n.view.cluster),
-                                ((a = t.m_mapClusters.get(r)) && a instanceof de
+                                ((a = t.m_mapClusters.get(r)) && a instanceof ue
                                   ? a.appid
                                   : null) === e)
                               );
@@ -16712,8 +16707,8 @@
                       if ("break" === l(m[c])) break;
                     }
                     t.m_mapPages.set(
-                      le({ type: "custom", pageid: ae }),
-                      new fe(ae, M)
+                      se({ type: "custom", pageid: re }),
+                      new pe(re, M)
                     );
                   });
             }),
@@ -16783,8 +16778,8 @@
             e
           );
         })();
-      function se(e) {
-        var t = ee.b.LoyaltyStore();
+      function oe(e) {
+        var t = $.b.LoyaltyStore();
         switch (e.type) {
           case "app":
             return (
@@ -16808,10 +16803,10 @@
             return console.error("Unknown page type " + e.type), t;
         }
       }
-      function le(e) {
+      function se(e) {
         return btoa(JSON.stringify(e));
       }
-      function ce(e, t) {
+      function le(e, t) {
         return (
           e.join("_") +
           "__" +
@@ -16834,7 +16829,7 @@
           })(t)
         );
       }
-      function me(e) {
+      function ce(e) {
         var t = { sort: 1, sort_descending: !0 };
         switch (e) {
           case 1:
@@ -16845,13 +16840,13 @@
         }
         return t;
       }
-      var ue = (function () {
+      var me = (function () {
           function e(e, t, n) {
             void 0 === n && (n = {}),
               (this.m_filter = n),
               (this.m_strTitle = e),
               (this.m_strSubtitle = t),
-              (this.m_strId = ce([], n));
+              (this.m_strId = le([], n));
           }
           return (
             Object.defineProperty(e.prototype, "id", {
@@ -16876,20 +16871,20 @@
               configurable: !0,
             }),
             (e.prototype.GetRewards = function (e, t, n) {
-              var r = he(this.m_filter, n);
-              return oe.Get().QueryRewardDefinitions(r, e, t);
+              var r = ge(this.m_filter, n);
+              return ie.Get().QueryRewardDefinitions(r, e, t);
             }),
             Object(r.c)([p.a], e.prototype, "GetRewards", null),
             e
           );
         })(),
-        de = (function () {
+        ue = (function () {
           function e(e, t, n) {
             (this.m_appid = e),
               (this.m_strSubtitle = t || ""),
               (this.m_additionalFilter = n || {}),
-              ne.a.GetAppInfo(this.m_appid),
-              (this.m_strId = ce([this.m_appid], this.m_additionalFilter));
+              te.a.GetAppInfo(this.m_appid),
+              (this.m_strId = le([this.m_appid], this.m_additionalFilter));
           }
           return (
             Object.defineProperty(e.prototype, "id", {
@@ -16908,7 +16903,7 @@
             }),
             Object.defineProperty(e.prototype, "title", {
               get: function () {
-                return ne.a.GetAppInfo(this.m_appid).name;
+                return te.a.GetAppInfo(this.m_appid).name;
               },
               enumerable: !1,
               configurable: !0,
@@ -16921,19 +16916,19 @@
               configurable: !0,
             }),
             (e.prototype.GetRewards = function (e, t, n) {
-              var r = he({ appid: [this.m_appid] }, this.m_additionalFilter, n);
-              return oe.Get().QueryRewardDefinitions(r, e, t);
+              var r = ge({ appid: [this.m_appid] }, this.m_additionalFilter, n);
+              return ie.Get().QueryRewardDefinitions(r, e, t);
             }),
             Object(r.c)([p.a], e.prototype, "GetRewards", null),
             e
           );
         })(),
-        pe = (function () {
+        de = (function () {
           function e(e, t) {
             void 0 === t && (t = ""),
               (this.m_appid = e),
               (this.m_strSubtitle = t),
-              ne.a.GetAppInfo(this.m_appid);
+              te.a.GetAppInfo(this.m_appid);
           }
           return (
             Object.defineProperty(e.prototype, "params", {
@@ -16945,7 +16940,7 @@
             }),
             Object.defineProperty(e.prototype, "title", {
               get: function () {
-                return ne.a.GetAppInfo(this.m_appid).name;
+                return te.a.GetAppInfo(this.m_appid).name;
               },
               enumerable: !1,
               configurable: !0,
@@ -16966,14 +16961,14 @@
                     view: {
                       type: 1,
                       cluster: {
-                        id: ce([this.m_appid], { rewardtype: [5] }),
+                        id: le([this.m_appid], { rewardtype: [5] }),
                         title: Object(s.f)("#RewardItemType_Bundle_plural"),
                         subtitle: "",
                         GetRewards: function (t, n, r) {
-                          return oe
+                          return ie
                             .Get()
                             .QueryRewardDefinitions(
-                              he({ appid: [e.m_appid], rewardtype: [5, 6] }, r),
+                              ge({ appid: [e.m_appid], rewardtype: [5, 6] }, r),
                               t,
                               n
                             );
@@ -16988,14 +16983,14 @@
                     view: {
                       type: 1,
                       cluster: {
-                        id: ce([e.m_appid], { itemclass: [t] }),
-                        title: re(t, !0),
+                        id: le([e.m_appid], { itemclass: [t] }),
+                        title: ne(t, !0),
                         subtitle: "",
                         GetRewards: function (n, r, a) {
-                          return oe
+                          return ie
                             .Get()
                             .QueryRewardDefinitions(
-                              he({ appid: [e.m_appid], itemclass: [t] }, a),
+                              ge({ appid: [e.m_appid], itemclass: [t] }, a),
                               n,
                               r
                             );
@@ -17012,7 +17007,7 @@
             e
           );
         })(),
-        fe = (function () {
+        pe = (function () {
           function e(e, t, n, r) {
             (this.m_pageid = e),
               (this.m_strTitle = n),
@@ -17052,7 +17047,7 @@
                         return {
                           type: "clusterview",
                           view: Object(r.a)(Object(r.a)({}, e.view), {
-                            cluster: oe
+                            cluster: ie
                               .Get()
                               .GetClusterDescriptor(e.view.cluster),
                           }),
@@ -17067,7 +17062,7 @@
             e
           );
         })();
-      var _e = (function (e) {
+      var fe = (function (e) {
           function t(t, n, r, a) {
             return (
               e.call(
@@ -17082,8 +17077,8 @@
             );
           }
           return Object(r.d)(t, e), t;
-        })(fe),
-        ge = (function () {
+        })(pe),
+        _e = (function () {
           function e(e, t, n) {
             (this.m_rgRequestParts = []),
               (this.m_fnMakeRequest = e),
@@ -17116,7 +17111,7 @@
             e
           );
         })();
-      function he(e) {
+      function ge(e) {
         for (var t = [], n = 1; n < arguments.length; n++)
           t[n - 1] = arguments[n];
         return t && t.length
@@ -17163,7 +17158,7 @@
             })
           : e;
       }
-      var be = (function () {
+      var he = (function () {
         function e(e, t) {
           (this.m_fnRequest = e), (this.m_fnBuildRequestKey = t), this.Reset();
         }
@@ -17194,7 +17189,7 @@
           e
         );
       })();
-      var ye = (function () {
+      var be = (function () {
         function e() {
           this.m_bCanClaimFreeItem = !1;
         }
@@ -17213,7 +17208,7 @@
               this.SetClaimTimer();
           }),
           (e.prototype.BCanClaimFreeSaleReward = function () {
-            return !oe.Get().BIsLoggedIn() || this.m_bCanClaimFreeItem;
+            return !ie.Get().BIsLoggedIn() || this.m_bCanClaimFreeItem;
           }),
           (e.prototype.GetCurrentSaleRewardAppID = function () {
             return 1526200;
@@ -17227,11 +17222,11 @@
               return Object(r.e)(this, function (n) {
                 switch (n.label) {
                   case 0:
-                    return oe.Get().BIsLoggedIn()
+                    return ie.Get().BIsLoggedIn()
                       ? ((e = f.b.Init(_.m)),
                         [
                           4,
-                          _.p.CanClaimItem(oe.Get().GetServiceTransport(), e),
+                          _.p.CanClaimItem(ie.Get().GetServiceTransport(), e),
                         ])
                       : [2];
                   case 1:
@@ -17255,9 +17250,9 @@
                   case 0:
                     return (
                       (e = { eResult: 2, strMessage: "" }),
-                      oe.Get().BIsLoggedIn()
+                      ie.Get().BIsLoggedIn()
                         ? ((t = f.b.Init(_.n)),
-                          [4, _.p.ClaimItem(oe.Get().GetServiceTransport(), t)])
+                          [4, _.p.ClaimItem(ie.Get().GetServiceTransport(), t)])
                         : [
                             2,
                             (e = {
@@ -17275,7 +17270,7 @@
                             .Body()
                             .reward_item()
                             .toObject()),
-                          oe
+                          ie
                             .Get()
                             .GetCommunityItemInventory(
                               this.m_claimedFreeItemDef.appid
