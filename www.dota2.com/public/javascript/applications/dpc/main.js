@@ -763,10 +763,10 @@
   CqJL: function (e, a, t) {
     "use strict";
     t.d(a, "b", function () {
-      return L;
+      return T;
     }),
       t.d(a, "a", function () {
-        return P;
+        return L;
       });
     var r = t("mrSG");
     t("q1tI");
@@ -862,40 +862,32 @@
         (e[(e.ClientRestartPending = 7)] = "ClientRestartPending"),
         (e[(e.SystemRestartPending = 8)] = "SystemRestartPending");
     })(c || (c = {}));
-    var l, i;
+    var l;
     !(function (e) {
-      (e[(e.Invalid = -1)] = "Invalid"),
-        (e[(e.Hidden = 1)] = "Hidden"),
-        (e[(e.Overlay = 2)] = "Overlay"),
-        (e[(e.Opaque = 3)] = "Opaque"),
-        (e[(e.Notification = 4)] = "Notification");
-    })(l || (l = {})),
-      (function (e) {
-        (e[(e.EBrowserType_OffScreen = 0)] = "EBrowserType_OffScreen"),
-          (e[(e.EBrowserType_OpenVROverlay = 1)] =
-            "EBrowserType_OpenVROverlay"),
-          (e[(e.EBrowserType_OpenVROverlay_Dashboard = 2)] =
-            "EBrowserType_OpenVROverlay_Dashboard"),
-          (e[(e.EBrowserType_DirectHWND = 3)] = "EBrowserType_DirectHWND"),
-          (e[(e.EBrowserType_DirectHWND_Borderless = 4)] =
-            "EBrowserType_DirectHWND_Borderless"),
-          (e[(e.EBrowserType_DirectHWND_Hidden = 5)] =
-            "EBrowserType_DirectHWND_Hidden"),
-          (e[(e.EBrowserType_ChildHWNDNative = 6)] =
-            "EBrowserType_ChildHWNDNative"),
-          (e[(e.EBrowserType_Transparent_Toplevel = 7)] =
-            "EBrowserType_Transparent_Toplevel"),
-          (e[(e.EBrowserType_OffScreen_SharedTexture = 8)] =
-            "EBrowserType_OffScreen_SharedTexture"),
-          (e[(e.EBrowserType_OffScreen_GameOverlay = 9)] =
-            "EBrowserType_OffScreen_GameOverlay"),
-          (e[(e.EBrowserType_OffScreen_GameOverlay_SharedTexture = 10)] =
-            "EBrowserType_OffScreen_GameOverlay_SharedTexture"),
-          (e[(e.EBrowserType_Offscreen_FriendsUI = 11)] =
-            "EBrowserType_Offscreen_FriendsUI"),
-          (e[(e.EBrowserType_MAX = 12)] = "EBrowserType_MAX");
-      })(i || (i = {}));
-    var s, g;
+      (e[(e.EBrowserType_OffScreen = 0)] = "EBrowserType_OffScreen"),
+        (e[(e.EBrowserType_OpenVROverlay = 1)] = "EBrowserType_OpenVROverlay"),
+        (e[(e.EBrowserType_OpenVROverlay_Dashboard = 2)] =
+          "EBrowserType_OpenVROverlay_Dashboard"),
+        (e[(e.EBrowserType_DirectHWND = 3)] = "EBrowserType_DirectHWND"),
+        (e[(e.EBrowserType_DirectHWND_Borderless = 4)] =
+          "EBrowserType_DirectHWND_Borderless"),
+        (e[(e.EBrowserType_DirectHWND_Hidden = 5)] =
+          "EBrowserType_DirectHWND_Hidden"),
+        (e[(e.EBrowserType_ChildHWNDNative = 6)] =
+          "EBrowserType_ChildHWNDNative"),
+        (e[(e.EBrowserType_Transparent_Toplevel = 7)] =
+          "EBrowserType_Transparent_Toplevel"),
+        (e[(e.EBrowserType_OffScreen_SharedTexture = 8)] =
+          "EBrowserType_OffScreen_SharedTexture"),
+        (e[(e.EBrowserType_OffScreen_GameOverlay = 9)] =
+          "EBrowserType_OffScreen_GameOverlay"),
+        (e[(e.EBrowserType_OffScreen_GameOverlay_SharedTexture = 10)] =
+          "EBrowserType_OffScreen_GameOverlay_SharedTexture"),
+        (e[(e.EBrowserType_Offscreen_FriendsUI = 11)] =
+          "EBrowserType_Offscreen_FriendsUI"),
+        (e[(e.EBrowserType_MAX = 12)] = "EBrowserType_MAX");
+    })(l || (l = {}));
+    var i, s;
     !(function (e) {
       (e[(e.k_EClientUINotificationGroupChatMessage = 1)] =
         "k_EClientUINotificationGroupChatMessage"),
@@ -903,7 +895,7 @@
           "k_EClientUINotificationFriendChatMessage"),
         (e[(e.k_EClientUINotificationFriendPersonaState = 3)] =
           "k_EClientUINotificationFriendPersonaState");
-    })(s || (s = {})),
+    })(i || (i = {})),
       (function (e) {
         (e[(e.k_EComputerActiveStateInvalid = 0)] =
           "k_EComputerActiveStateInvalid"),
@@ -911,14 +903,14 @@
             "k_EComputerActiveStateActive"),
           (e[(e.k_EComputerActiveStateIdle = 2)] =
             "k_EComputerActiveStateIdle");
-      })(g || (g = {}));
-    var m;
+      })(s || (s = {}));
+    var g;
     !(function (e) {
       (e[(e.k_EPending = 0)] = "k_EPending"),
         (e[(e.k_EAccepted = 1)] = "k_EAccepted"),
         (e[(e.k_ERejected = 2)] = "k_ERejected");
-    })(m || (m = {}));
-    var _, d;
+    })(g || (g = {}));
+    var m, _;
     !(function (e) {
       (e[(e.k_EClientUsedInputTypeKeyboard = 0)] =
         "k_EClientUsedInputTypeKeyboard"),
@@ -927,7 +919,7 @@
         (e[(e.k_EClientUsedInputTypeController = 2)] =
           "k_EClientUsedInputTypeController"),
         (e[(e.k_EClientUsedInputTypeMax = 3)] = "k_EClientUsedInputTypeMax");
-    })(_ || (_ = {})),
+    })(m || (m = {})),
       (function (e) {
         (e[(e.k_ERemoteClientLaunchOK = 1)] = "k_ERemoteClientLaunchOK"),
           (e[(e.k_ERemoteClientLaunchFail = 2)] = "k_ERemoteClientLaunchFail"),
@@ -982,19 +974,20 @@
             "k_ERemoteClientLaunchInvisible"),
           (e[(e.k_ERemoteClientLaunchRestrictedCountry = 28)] =
             "k_ERemoteClientLaunchRestrictedCountry");
-      })(d || (d = {}));
-    var p;
+      })(_ || (_ = {}));
+    var d;
     !(function (e) {
       (e[(e.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
         (e[(e.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
         (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
-    })(p || (p = {}));
-    var u, h, b, y, k, v;
+    })(d || (d = {}));
+    var p, u, h, b, y, k;
     !(function (e) {
       (e[(e.Unknown = 0)] = "Unknown"),
         (e[(e.Wired = 1)] = "Wired"),
-        (e[(e.Wireless = 2)] = "Wireless");
-    })(u || (u = {})),
+        (e[(e.Wireless = 2)] = "Wireless"),
+        (e[(e.Virtual = 3)] = "Virtual");
+    })(p || (p = {})),
       (function (e) {
         (e[(e.NotPresent = 0)] = "NotPresent"),
           (e[(e.Failed = 1)] = "Failed"),
@@ -1003,14 +996,14 @@
           (e[(e.Connecting = 4)] = "Connecting"),
           (e[(e.Connected = 5)] = "Connected"),
           (e[(e.Retrying = 6)] = "Retrying");
-      })(h || (h = {})),
+      })(u || (u = {})),
       (function (e) {
         (e[(e.None = 0)] = "None"),
           (e[(e.Weak = 1)] = "Weak"),
           (e[(e.Ok = 2)] = "Ok"),
           (e[(e.Good = 3)] = "Good"),
           (e[(e.Excellent = 4)] = "Excellent");
-      })(b || (b = {})),
+      })(h || (h = {})),
       (function (e) {
         (e[(e.None = 0)] = "None"),
           (e[(e.StaticWep = 1)] = "StaticWep"),
@@ -1020,28 +1013,28 @@
           (e[(e.Wpa2 = 16)] = "Wpa2"),
           (e[(e.Wpa2Enterprise = 32)] = "Wpa2Enterprise"),
           (e[(e.Unsupported = 32768)] = "Unsupported");
-      })(y || (y = {})),
+      })(b || (b = {})),
       (function (e) {
         (e[(e.SystemKey0 = 0)] = "SystemKey0"),
           (e[(e.SystemKey1 = 1)] = "SystemKey1");
-      })(k || (k = {})),
+      })(y || (y = {})),
       (function (e) {
         (e[(e.Hidden = 0)] = "Hidden"),
           (e[(e.Notification = 1)] = "Notification"),
           (e[(e.Overlay = 2)] = "Overlay"),
           (e[(e.Opaque = 3)] = "Opaque");
-      })(v || (v = {}));
-    var f = t("gM6l");
-    function E(e) {
-      if (!C() || !window.document.cookie) return null;
+      })(k || (k = {}));
+    var v = t("gM6l");
+    function f(e) {
+      if (!E() || !window.document.cookie) return null;
       var a = document.cookie.match("(^|; )" + e + "=([^;]*)");
       return a && a[2] ? decodeURIComponent(a[2]) : null;
     }
-    function C() {
+    function E() {
       return !!window.document;
     }
-    var N,
-      B = {
+    var C,
+      N = {
         EUNIVERSE: 0,
         WEB_UNIVERSE: "",
         LANGUAGE: "english",
@@ -1079,9 +1072,9 @@
         PAGE_TIMESTAMP: 0,
         get SESSIONID() {
           return (function () {
-            if (!C()) return N || (N = S()), N;
-            var e = E("sessionid");
-            e || (e = S());
+            if (!E()) return C || (C = B()), C;
+            var e = f("sessionid");
+            e || (e = B());
             return e;
           })();
         },
@@ -1089,18 +1082,17 @@
         STEAM_TV: !1,
         DEV_MODE: !1,
         IN_LIBRARY: !1,
-        NO_RAISE_ON_REFRESH: !1,
         IN_SP: !1,
       };
-    function S() {
+    function B() {
       var e = (function () {
         for (var e = "", a = 0; a < 24; a++)
-          e += Object(f.a)(0, 35).toString(36);
+          e += Object(v.a)(0, 35).toString(36);
         return e;
       })();
       return (
         (function (e, a, t, r) {
-          if (C()) {
+          if (E()) {
             r || (r = "/");
             var o = "";
             if (void 0 !== t && t) {
@@ -1124,7 +1116,7 @@
     new Map();
     new Map(), new Map();
     new Map(), new Map(), new Map(), new Map(), new Map();
-    var T = (function () {
+    var S = (function () {
       function e() {
         (this.m_mapTokens = new Map()), (this.m_mapFallbackTokens = new Map());
       }
@@ -1140,7 +1132,7 @@
         }),
         (e.IsELanguageValidInRealm = function (e, a) {
           return (
-            a === (29 === e ? p.k_ESteamRealmChina : p.k_ESteamRealmGlobal)
+            a === (29 === e ? d.k_ESteamRealmChina : d.k_ESteamRealmGlobal)
           );
         }),
         (e.GetLanguageListForRealms = function (e) {
@@ -1186,9 +1178,9 @@
         (e.prototype.GetELanguageFallbackOrder = function (a) {
           void 0 === a && (a = null);
           var t = new Array();
-          (t.push(o(B.LANGUAGE)),
-          (B.SUPPORTED_LANGUAGES || []).forEach(function (e) {
-            e.value != B.LANGUAGE && t.push(o(e.value));
+          (t.push(o(N.LANGUAGE)),
+          (N.SUPPORTED_LANGUAGES || []).forEach(function (e) {
+            e.value != N.LANGUAGE && t.push(o(e.value));
           }),
           a) &&
             e.GetLanguageListForRealms(a).forEach(function (e) {
@@ -1209,8 +1201,10 @@
                   "Unable to find localization token '" +
                     a +
                     "' for language '" +
-                    B.LANGUAGE +
-                    "'"
+                    N.LANGUAGE +
+                    "', " +
+                    this.m_mapTokens.size +
+                    " tokens in map"
                 ),
                 { bIncludeMessageInIdentifier: !0 }
               );
@@ -1225,10 +1219,10 @@
         e
       );
     })();
-    function L(e) {
+    function T(e) {
       for (var a = [], t = 1; t < arguments.length; t++)
         a[t - 1] = arguments[t];
-      var r = P.LocalizeString(e);
+      var r = L.LocalizeString(e);
       return void 0 === r
         ? e
         : (a.length > 0 &&
@@ -1241,8 +1235,8 @@
             })),
           r);
     }
-    var P = new T();
-    window.LocalizationManager = P;
+    var L = new S();
+    window.LocalizationManager = L;
   },
   Gb4a: function (e, a, t) {
     e.exports = {

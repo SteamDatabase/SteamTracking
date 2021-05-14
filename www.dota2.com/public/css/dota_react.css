@@ -20081,3 +20081,1128 @@ a {
   line-height: 30px;
   font-weight: 200;
 }
+
+* {
+  box-sizing: border-box;
+  font-family: "Radiance", "Noto Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.Bold {
+  font-weight: bold;
+}
+[data-aos="fade-zoom-in"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: scale(0);
+}
+[data-aos="fade-zoom-in"].aos-animate {
+  opacity: 1;
+  transform: scale(1);
+}
+[data-aos="fade-slide-right"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateX(-40%);
+}
+[data-aos="fade-slide-right"].aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-left"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateX(40%);
+}
+[data-aos="fade-slide-left"].aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-up"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateY(40%);
+}
+[data-aos="fade-slide-up"].aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-down"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateY(-40%);
+}
+[data-aos="fade-slide-down"].aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="rotate"] {
+  transition-property: transform;
+  transform: rotateZ(0deg);
+}
+[data-aos="rotate"][data-aos-rotate-bottom] {
+  transform-origin: bottom center;
+}
+[data-aos="rotate"][data-aos-rotate="10"].aos-animate {
+  transform: rotateZ(10deg);
+}
+[data-aos="rotate"][data-aos-rotate="20"].aos-animate {
+  transform: rotateZ(20deg);
+}
+[data-aos="rotate"][data-aos-rotate="30"].aos-animate {
+  transform: rotateZ(30deg);
+}
+[data-aos="rotate"][data-aos-rotate="40"].aos-animate {
+  transform: rotateZ(40deg);
+}
+[data-aos="rotate"][data-aos-rotate="50"].aos-animate {
+  transform: rotateZ(50deg);
+}
+[data-aos="rotate"][data-aos-rotate="60"].aos-animate {
+  transform: rotateZ(60deg);
+}
+[data-aos="rotate"][data-aos-rotate="70"].aos-animate {
+  transform: rotateZ(70deg);
+}
+[data-aos="rotate"][data-aos-rotate="80"].aos-animate {
+  transform: rotateZ(80deg);
+}
+[data-aos="rotate"][data-aos-rotate="90"].aos-animate {
+  transform: rotateZ(90deg);
+}
+[data-aos="rotate"][data-aos-rotate="100"].aos-animate {
+  transform: rotateZ(100deg);
+}
+[data-aos="rotate"][data-aos-rotate="110"].aos-animate {
+  transform: rotateZ(110deg);
+}
+[data-aos="rotate"][data-aos-rotate="120"].aos-animate {
+  transform: rotateZ(120deg);
+}
+[data-aos="rotate"][data-aos-rotate="130"].aos-animate {
+  transform: rotateZ(130deg);
+}
+[data-aos="rotate"][data-aos-rotate="140"].aos-animate {
+  transform: rotateZ(140deg);
+}
+[data-aos="rotate"][data-aos-rotate="150"].aos-animate {
+  transform: rotateZ(150deg);
+}
+[data-aos="rotate"][data-aos-rotate="160"].aos-animate {
+  transform: rotateZ(160deg);
+}
+[data-aos="rotate"][data-aos-rotate="170"].aos-animate {
+  transform: rotateZ(170deg);
+}
+[data-aos="rotate"][data-aos-rotate="180"].aos-animate {
+  transform: rotateZ(180deg);
+}
+[data-aos="rotate"][data-aos-rotate="190"].aos-animate {
+  transform: rotateZ(190deg);
+}
+[data-aos="rotate"][data-aos-rotate="200"].aos-animate {
+  transform: rotateZ(200deg);
+}
+[data-aos="rotate"][data-aos-rotate="210"].aos-animate {
+  transform: rotateZ(210deg);
+}
+[data-aos="rotate"][data-aos-rotate="220"].aos-animate {
+  transform: rotateZ(220deg);
+}
+[data-aos="rotate"][data-aos-rotate="230"].aos-animate {
+  transform: rotateZ(230deg);
+}
+[data-aos="rotate"][data-aos-rotate="240"].aos-animate {
+  transform: rotateZ(240deg);
+}
+[data-aos="rotate"][data-aos-rotate="250"].aos-animate {
+  transform: rotateZ(250deg);
+}
+[data-aos="rotate"][data-aos-rotate="260"].aos-animate {
+  transform: rotateZ(260deg);
+}
+[data-aos="rotate"][data-aos-rotate="270"].aos-animate {
+  transform: rotateZ(270deg);
+}
+[data-aos="rotate"][data-aos-rotate="280"].aos-animate {
+  transform: rotateZ(280deg);
+}
+[data-aos="rotate"][data-aos-rotate="290"].aos-animate {
+  transform: rotateZ(290deg);
+}
+[data-aos="rotate"][data-aos-rotate="300"].aos-animate {
+  transform: rotateZ(300deg);
+}
+[data-aos="rotate"][data-aos-rotate="310"].aos-animate {
+  transform: rotateZ(310deg);
+}
+[data-aos="rotate"][data-aos-rotate="320"].aos-animate {
+  transform: rotateZ(320deg);
+}
+[data-aos="rotate"][data-aos-rotate="330"].aos-animate {
+  transform: rotateZ(330deg);
+}
+[data-aos="rotate"][data-aos-rotate="340"].aos-animate {
+  transform: rotateZ(340deg);
+}
+[data-aos="rotate"][data-aos-rotate="350"].aos-animate {
+  transform: rotateZ(350deg);
+}
+[data-aos="rotate"][data-aos-rotate="-10"].aos-animate {
+  transform: rotateZ(-10deg);
+}
+[data-aos="rotate"][data-aos-rotate="-20"].aos-animate {
+  transform: rotateZ(-20deg);
+}
+[data-aos="rotate"][data-aos-rotate="-30"].aos-animate {
+  transform: rotateZ(-30deg);
+}
+[data-aos="rotate"][data-aos-rotate="-40"].aos-animate {
+  transform: rotateZ(-40deg);
+}
+[data-aos="rotate"][data-aos-rotate="-50"].aos-animate {
+  transform: rotateZ(-50deg);
+}
+[data-aos="rotate"][data-aos-rotate="-60"].aos-animate {
+  transform: rotateZ(-60deg);
+}
+[data-aos="rotate"][data-aos-rotate="-70"].aos-animate {
+  transform: rotateZ(-70deg);
+}
+[data-aos="rotate"][data-aos-rotate="-80"].aos-animate {
+  transform: rotateZ(-80deg);
+}
+[data-aos="rotate"][data-aos-rotate="-90"].aos-animate {
+  transform: rotateZ(-90deg);
+}
+[data-aos="rotate"][data-aos-rotate="-100"].aos-animate {
+  transform: rotateZ(-100deg);
+}
+[data-aos="rotate"][data-aos-rotate="-110"].aos-animate {
+  transform: rotateZ(-110deg);
+}
+[data-aos="rotate"][data-aos-rotate="-120"].aos-animate {
+  transform: rotateZ(-120deg);
+}
+[data-aos="rotate"][data-aos-rotate="-130"].aos-animate {
+  transform: rotateZ(-130deg);
+}
+[data-aos="rotate"][data-aos-rotate="-140"].aos-animate {
+  transform: rotateZ(-140deg);
+}
+[data-aos="rotate"][data-aos-rotate="-150"].aos-animate {
+  transform: rotateZ(-150deg);
+}
+[data-aos="rotate"][data-aos-rotate="-160"].aos-animate {
+  transform: rotateZ(-160deg);
+}
+[data-aos="rotate"][data-aos-rotate="-170"].aos-animate {
+  transform: rotateZ(-170deg);
+}
+[data-aos="rotate"][data-aos-rotate="-180"].aos-animate {
+  transform: rotateZ(-180deg);
+}
+[data-aos="rotate"][data-aos-rotate="-190"].aos-animate {
+  transform: rotateZ(-190deg);
+}
+[data-aos="rotate"][data-aos-rotate="-200"].aos-animate {
+  transform: rotateZ(-200deg);
+}
+[data-aos="rotate"][data-aos-rotate="-210"].aos-animate {
+  transform: rotateZ(-210deg);
+}
+[data-aos="rotate"][data-aos-rotate="-220"].aos-animate {
+  transform: rotateZ(-220deg);
+}
+[data-aos="rotate"][data-aos-rotate="-230"].aos-animate {
+  transform: rotateZ(-230deg);
+}
+[data-aos="rotate"][data-aos-rotate="-240"].aos-animate {
+  transform: rotateZ(-240deg);
+}
+[data-aos="rotate"][data-aos-rotate="-250"].aos-animate {
+  transform: rotateZ(-250deg);
+}
+[data-aos="rotate"][data-aos-rotate="-260"].aos-animate {
+  transform: rotateZ(-260deg);
+}
+[data-aos="rotate"][data-aos-rotate="-270"].aos-animate {
+  transform: rotateZ(-270deg);
+}
+[data-aos="rotate"][data-aos-rotate="-280"].aos-animate {
+  transform: rotateZ(-280deg);
+}
+[data-aos="rotate"][data-aos-rotate="-290"].aos-animate {
+  transform: rotateZ(-290deg);
+}
+[data-aos="rotate"][data-aos-rotate="-300"].aos-animate {
+  transform: rotateZ(-300deg);
+}
+[data-aos="rotate"][data-aos-rotate="-310"].aos-animate {
+  transform: rotateZ(-310deg);
+}
+[data-aos="rotate"][data-aos-rotate="-320"].aos-animate {
+  transform: rotateZ(-320deg);
+}
+[data-aos="rotate"][data-aos-rotate="-330"].aos-animate {
+  transform: rotateZ(-330deg);
+}
+[data-aos="rotate"][data-aos-rotate="-340"].aos-animate {
+  transform: rotateZ(-340deg);
+}
+[data-aos="rotate"][data-aos-rotate="-350"].aos-animate {
+  transform: rotateZ(-350deg);
+}
+.carousel__slide-focus-ring {
+  outline: none !important;
+}
+.carousel__dot:focus {
+  outline: none !important;
+}
+.__react_component_tooltip.show {
+  opacity: 1 !important;
+}
+.shortfilmcontest_Tooltip_2RUfy {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.shortfilmcontest_CarouselFade_25D1H {
+  mask-image: linear-gradient(
+    to left,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to left,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.ttf")
+      format("truetype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.svg#ywftsvg")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.ttf")
+      format("truetype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.svg#ywftsvg")
+      format("svg");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.ttf")
+      format("truetype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.svg#ywftsvg")
+      format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.ttf")
+      format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-regular.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-regular.ttf")
+      format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-semibold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-semibold.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-bold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-bold.ttf")
+      format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Averia Serif Libre";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/averiaseriflibre-regular.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/averiaseriflibre-regular.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Averia Serif Libre";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/averiaseriflibre-italic.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/averiaseriflibre-italic.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular.ttf")
+      format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Light.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Light.ttf")
+      format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-SemiBold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular-SemiBold.ttf")
+      format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Bold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Bold.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Black.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Black.ttf")
+      format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+.shortfilmcontest_StandardButton_8vKFn {
+  border: 3px solid #ffffff50;
+  padding: 15px 25px;
+  margin: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.2s;
+}
+.shortfilmcontest_StandardButton_8vKFn:hover {
+  border: 3px solid #ff6046;
+  transform: translateY(-2px);
+  color: #ff6046;
+}
+.shortfilmcontest_StandardButton_8vKFn .shortfilmcontest_ButtonText_1E8dN {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.shortfilmcontest_StandardButton_8vKFn .shortfilmcontest_SteamLogo_NKf2T {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//icons/steam_icon.svg");
+}
+.shortfilmcontest_HorizBar_1VZQU {
+  width: 80px;
+  height: 3px;
+  min-height: 3px;
+  background-color: #ff6046;
+  border-radius: 1px;
+}
+.shortfilmcontest_RightArrow_3NmAc {
+  width: 20px;
+  height: 20px;
+  margin: 0px 8px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: rotateZ(180deg);
+}
+.shortfilmcontest_UpRightArrow_31_7c {
+  width: 20px;
+  height: 20px;
+  margin: 0px 4px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: rotateZ(135deg);
+  filter: brightness(0.7);
+}
+.shortfilmcontest_FilmButton_3f-RA {
+  border: 3px solid #ffffff30;
+  padding: 20px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  transition-duration: 0.2s;
+  margin-bottom: 30px;
+}
+.shortfilmcontest_FilmButton_3f-RA:hover {
+  border: 3px solid #ff6046;
+  transform: translateY(-5px);
+  color: #ff6046;
+}
+.shortfilmcontest_FilmButton_3f-RA .shortfilmcontest_ButtonText_1E8dN {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.shortfilmcontest_FilmButton_3f-RA .shortfilmcontest_RightArrow_3NmAc {
+  width: 30px;
+  height: 30px;
+}
+.shortfilmcontest_FilmButton_3f-RA .shortfilmcontest_SteamLogo_NKf2T {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//icons/steam_icon.svg");
+}
+@keyframes shortfilmcontest_clapBoardIn_1ANQt {
+  0% {
+    transform: translateY(90px) rotate(0deg);
+    opacity: 0;
+  }
+  75% {
+    transform: translateY(-70px) rotate(-13deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px) rotate(-7deg);
+    opacity: 1;
+  }
+}
+.shortfilmcontest_HomePage_19ELl {
+  width: 100%;
+  color: white;
+  display: grid;
+}
+.shortfilmcontest_HomePage_19ELl .shortfilmcontest_HeaderSection_3CmwA {
+  width: 100%;
+  margin-bottom: 0px;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-color: #08090c;
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+.shortfilmcontest_HomePage_19ELl
+  .shortfilmcontest_HeaderSection_3CmwA
+  .shortfilmcontest_BottomFade_2FhWR {
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  bottom: 0px;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(60%, rgba(0, 0, 0, 0)),
+    color-stop(80%, rgba(0, 0, 0, 0.7)),
+    color-stop(100%, #000)
+  );
+}
+.shortfilmcontest_HomePage_19ELl
+  .shortfilmcontest_HeaderSection_3CmwA
+  .shortfilmcontest_BackgroundVideoContainer_1SByh {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  -webkit-mask-image: linear-gradient(to top, transparent 25%, black 75%);
+  mask-image: linear-gradient(to top, transparent 25%, black 75%);
+}
+.shortfilmcontest_HomePage_19ELl
+  .shortfilmcontest_HeaderSection_3CmwA
+  .shortfilmcontest_BackgroundVideoContainer_1SByh
+  video {
+  width: 100%;
+  top: 0;
+  left: 0;
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, black 10%);
+  mask-image: linear-gradient(to top, transparent 0%, black 100%);
+}
+.shortfilmcontest_HomePage_19ELl
+  .shortfilmcontest_HeaderSection_3CmwA
+  .shortfilmcontest_PlayButtonPositioner_1-xix {
+  margin: 0px auto;
+  margin-top: 30vw;
+}
+.shortfilmcontest_HomePage_19ELl .shortfilmcontest_TitleContainer_1qvNp {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  pointer-events: auto;
+  margin-top: 30vw;
+  margin-bottom: 150px;
+  z-index: 10;
+}
+@media (max-width: 900px) {
+  .shortfilmcontest_HomePage_19ELl .shortfilmcontest_TitleContainer_1qvNp {
+    padding-left: 20px;
+    max-width: 80%;
+  }
+}
+@keyframes shortfilmcontest_rotate_vpspr {
+  0% {
+    opacity: 0;
+  }
+  20%,
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.shortfilmcontest_HomePage_19ELl
+  .shortfilmcontest_TitleContainer_1qvNp
+  .shortfilmcontest_TopRow_1B_8X {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.shortfilmcontest_HomePage_19ELl
+  .shortfilmcontest_TitleContainer_1qvNp
+  .shortfilmcontest_TopRow_1B_8X
+  .shortfilmcontest_FilmButton_3f-RA {
+  background-color: #000000;
+  min-width: 290px;
+}
+@media (max-width: 1200px) {
+  .shortfilmcontest_HomePage_19ELl
+    .shortfilmcontest_TitleContainer_1qvNp
+    .shortfilmcontest_TopRow_1B_8X
+    .shortfilmcontest_FilmButton_3f-RA {
+    margin-bottom: 30px;
+    margin-top: 10px;
+  }
+}
+.shortfilmcontest_HomePage_19ELl
+  .shortfilmcontest_TitleContainer_1qvNp
+  .shortfilmcontest_CommunityDesc_2tBAr {
+  color: #ffffff;
+  font-weight: bold;
+  text-align: left;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.shortfilmcontest_HomePage_19ELl
+  .shortfilmcontest_TitleContainer_1qvNp
+  .shortfilmcontest_HeroName_eKuLM {
+  font-size: 60px;
+  line-height: 113%;
+  font-family: "Reaver", serif;
+  letter-spacing: 5px;
+  font-weight: 600;
+  color: #ffffffee;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 20px #000000;
+}
+@media (max-width: 600px) {
+  .shortfilmcontest_HomePage_19ELl
+    .shortfilmcontest_TitleContainer_1qvNp
+    .shortfilmcontest_HeroName_eKuLM {
+    font-size: 40px;
+  }
+}
+.shortfilmcontest_HomePage_19ELl
+  .shortfilmcontest_TitleContainer_1qvNp
+  .shortfilmcontest_HeroLogo_1mVt3 {
+  max-width: 800px;
+  width: 60%;
+  transform: rotate(-7deg);
+  margin-bottom: -30px;
+  animation-duration: 1.3s;
+  animation-timing-function: ease-in;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-name: shortfilmcontest_clapBoardIn_1ANQt;
+}
+@media (max-width: 1200px) {
+  .shortfilmcontest_HomePage_19ELl
+    .shortfilmcontest_TitleContainer_1qvNp
+    .shortfilmcontest_HeroLogo_1mVt3 {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+.shortfilmcontest_HomePage_19ELl
+  .shortfilmcontest_TitleContainer_1qvNp
+  .shortfilmcontest_Introduction_3gcUT {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 50px;
+}
+.shortfilmcontest_HomePage_19ELl
+  .shortfilmcontest_TitleContainer_1qvNp
+  .shortfilmcontest_Introduction_3gcUT
+  .shortfilmcontest_Bold_YHXdy {
+  color: red;
+}
+.shortfilmcontest_HomePage_19ELl
+  .shortfilmcontest_TitleContainer_1qvNp
+  .shortfilmcontest_Prizes_GR0cl {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.shortfilmcontest_HomePage_19ELl
+  .shortfilmcontest_TitleContainer_1qvNp
+  .shortfilmcontest_Prizes_GR0cl
+  .shortfilmcontest_Prize_38sWz {
+  margin: 30px;
+  min-width: 250px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 18px;
+  font-family: "Reaver", serif;
+  font-weight: 600;
+}
+.shortfilmcontest_HomePage_19ELl
+  .shortfilmcontest_TitleContainer_1qvNp
+  .shortfilmcontest_Prizes_GR0cl
+  .shortfilmcontest_Prize_38sWz
+  .shortfilmcontest_PrizeAmount_1gEvB {
+  font-size: 65px;
+  font-weight: 800;
+}
+.shortfilmcontest_HomePage_19ELl
+  .shortfilmcontest_TitleContainer_1qvNp
+  .shortfilmcontest_Prizes_GR0cl
+  .shortfilmcontest_Prize_38sWz
+  .shortfilmcontest_PrizeLabel_2iH7k {
+  font-size: 20px;
+  font-weight: 600px;
+}
+.shortfilmcontest_HomePage_19ELl
+  .shortfilmcontest_TitleContainer_1qvNp
+  .shortfilmcontest_Prizes_GR0cl
+  .shortfilmcontest_Prize1_2YY12 {
+  background: -webkit-linear-gradient(#e4c269, #c79123);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(2px 2px 10px #c79123);
+}
+.shortfilmcontest_HomePage_19ELl
+  .shortfilmcontest_TitleContainer_1qvNp
+  .shortfilmcontest_Prizes_GR0cl
+  .shortfilmcontest_Prize2_-AIIm {
+  background: -webkit-linear-gradient(#c7ccd8, #75829f);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(2px 2px 10px #c7ccd8);
+}
+.shortfilmcontest_HomePage_19ELl
+  .shortfilmcontest_TitleContainer_1qvNp
+  .shortfilmcontest_Prizes_GR0cl
+  .shortfilmcontest_Prize3_197pa {
+  background: -webkit-linear-gradient(#d8a36f, #93482b);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(2px 2px 10px #d8a36f);
+}
+.shortfilmcontest_HomePage_19ELl
+  .shortfilmcontest_TitleContainer_1qvNp
+  .shortfilmcontest_Prizes_GR0cl
+  .shortfilmcontest_Prize4_1mPKI {
+  background: -webkit-linear-gradient(#f8f3ed, #747084);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(2px 2px 10px #f8f3ed);
+}
+.shortfilmcontest_HomePage_19ELl
+  .shortfilmcontest_TitleContainer_1qvNp
+  .shortfilmcontest_ButtonRow_jzYZJ {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  width: 40%;
+  margin-left: auto;
+  background-color: #00000060;
+  padding: 20px;
+  margin-top: 200px;
+}
+@media (max-width: 1200px) {
+  .shortfilmcontest_HomePage_19ELl
+    .shortfilmcontest_TitleContainer_1qvNp
+    .shortfilmcontest_ButtonRow_jzYZJ {
+    width: 100%;
+    margin-top: 50px;
+    align-items: center;
+  }
+}
+.shortfilmcontest_HomePage_19ELl
+  .shortfilmcontest_TitleContainer_1qvNp
+  .shortfilmcontest_PrizeDesc_41nAk {
+  font-size: 18px;
+  line-height: 160%;
+  font-weight: 200;
+  max-width: 1220px;
+  margin: 40px;
+  text-align: justify;
+  color: #999999;
+}
+.shortfilmcontest_HomePage_19ELl .shortfilmcontest_GuidelinesSection_3HrYc {
+  padding: 150px 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//international2020/shortfilm/guidelines_bg.jpg");
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+@media (max-width: 600px) {
+  .shortfilmcontest_HomePage_19ELl .shortfilmcontest_GuidelinesSection_3HrYc {
+    padding: 100px 12vw;
+  }
+}
+.shortfilmcontest_HomePage_19ELl
+  .shortfilmcontest_GuidelinesSection_3HrYc
+  .shortfilmcontest_GuidelinesTitle_3Zwjn {
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 170%;
+  margin-bottom: 20px;
+  opacity: 0.95;
+  text-shadow: 0px 0px 5px #000000;
+}
+.shortfilmcontest_HomePage_19ELl
+  .shortfilmcontest_GuidelinesSection_3HrYc
+  .shortfilmcontest_GuidelinesList_2qJS9 {
+  font-size: 20px;
+  line-height: 30px;
+  color: #dedede;
+  max-width: 1200px;
+}
+.shortfilmcontest_HomePage_19ELl
+  .shortfilmcontest_GuidelinesSection_3HrYc
+  .shortfilmcontest_GuidelinesList_2qJS9
+  ul {
+  padding-left: 16px;
+}
+.shortfilmcontest_HomePage_19ELl
+  .shortfilmcontest_GuidelinesSection_3HrYc
+  .shortfilmcontest_GuidelinesList_2qJS9
+  li {
+  margin-bottom: 15px;
+}
+.shortfilmcontest_HomePage_19ELl .shortfilmcontest_EndRow_3ipnV {
+  background-color: #222222;
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//backgrounds/greyfade.jpg");
+  background-size: cover;
+  background-position: center top;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: 5;
+  overflow: hidden;
+  border-top: 3px solid #ffffff50;
+  border-bottom: 3px solid #ffffff50;
+  padding: 100px 10vw;
+}
+.shortfilmcontest_HomePage_19ELl
+  .shortfilmcontest_EndRow_3ipnV:hover
+  .shortfilmcontest_EndRowImage_1TVQk {
+  transform: translateY(10px) rotate(-5deg);
+}
+.shortfilmcontest_HomePage_19ELl
+  .shortfilmcontest_EndRow_3ipnV
+  .shortfilmcontest_EndRowImage_1TVQk {
+  transform: translateY(30px) rotate(-7deg);
+  margin-left: 30px;
+  right: 0px;
+  bottom: 0px;
+  transition-duration: 0.3s;
+  max-height: 400px;
+  pointer-events: none;
+  filter: drop-shadow(0 0 1rem #000);
+  z-index: 5;
+  margin-left: auto;
+}
+@media (max-width: 1600px) {
+  .shortfilmcontest_HomePage_19ELl
+    .shortfilmcontest_EndRow_3ipnV
+    .shortfilmcontest_EndRowImage_1TVQk {
+    right: -5%;
+    max-height: 300px;
+  }
+}
+@media (max-width: 900px) {
+  .shortfilmcontest_HomePage_19ELl
+    .shortfilmcontest_EndRow_3ipnV
+    .shortfilmcontest_EndRowImage_1TVQk {
+    display: none;
+  }
+}
+.shortfilmcontest_HomePage_19ELl
+  .shortfilmcontest_EndRow_3ipnV
+  .shortfilmcontest_EndRowImage_1TVQk
+  img {
+  transition-duration: 0.3s;
+}
+.shortfilmcontest_HomePage_19ELl
+  .shortfilmcontest_EndRow_3ipnV
+  .shortfilmcontest_EndRowText_1Ke6U {
+  font-size: 36px;
+  font-weight: bold;
+  max-width: 50%;
+}
+@media (max-width: 900px) {
+  .shortfilmcontest_HomePage_19ELl
+    .shortfilmcontest_EndRow_3ipnV
+    .shortfilmcontest_EndRowText_1Ke6U {
+    padding-left: 30px;
+    max-width: 100%;
+  }
+}
+.shortfilmcontest_HomePage_19ELl
+  .shortfilmcontest_EndRow_3ipnV
+  .shortfilmcontest_FilmButton_3f-RA {
+  transform: translateX(-30px) translateY(10px);
+}
+.shortfilmcontest_HomePage_19ELl
+  .shortfilmcontest_EndRow_3ipnV
+  .shortfilmcontest_FilmButton_3f-RA:hover {
+  transform: translateX(-30px) translateY(5px);
+  color: #ff6046;
+}
+.shortfilmcontest_HomePage_19ELl .shortfilmcontest_WallpaperSection_2V4ms {
+  background-color: #181c22;
+  padding: 50px 0px;
+  background-position: center bottom;
+  background-size: cover;
+  z-index: 10;
+  position: relative;
+  border-top: 2px solid #ffffff60;
+  border-bottom: 2px solid #ffffff60;
+}
+.shortfilmcontest_HomePage_19ELl
+  .shortfilmcontest_WallpaperSection_2V4ms
+  .shortfilmcontest_WallpaperTitle_2ANfi {
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  text-shadow: 0px 0px 10px #000000;
+}
+.shortfilmcontest_HomePage_19ELl
+  .shortfilmcontest_WallpaperSection_2V4ms
+  .shortfilmcontest_Wallpapers_2q9Ur {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.shortfilmcontest_HomePage_19ELl
+  .shortfilmcontest_WallpaperSection_2V4ms
+  .shortfilmcontest_PreviousWinnerVideo_2Lxdi {
+  width: 25%;
+  margin: 0px 20px;
+  box-shadow: 0px 0px 20px #000000;
+}
+.shortfilmcontest_ShortFilmPopup_3Z41i {
+  position: relative;
+  width: 80vw;
+  max-width: 1000px;
+  background-color: black;
+  border-radius: 4px;
+  padding: 40px;
+  border: 1px solid white;
+  box-shadow: 0px 0px 20px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.shortfilmcontest_ShortFilmPopup_3Z41i .shortfilmcontest_ShortFilmTitle_3Kz1a {
+  text-align: center;
+  margin-bottom: 8px;
+}
+.shortfilmcontest_ShortFilmPopup_3Z41i
+  .shortfilmcontest_ShortFilmSubTitle_2DNED {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.shortfilmcontest_ShortFilmPopup_3Z41i .shortfilmcontest_Entries_6SMZ8 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.shortfilmcontest_ShortFilmPopup_3Z41i
+  .shortfilmcontest_Entries_6SMZ8
+  .shortfilmcontest_Entry_2a_cp {
+  font-size: 15px;
+  width: 300px;
+  padding: 0px 8px;
+  color: #777;
+}
+@media (max-width: 375px) {
+  .shortfilmcontest_ShortFilmPopup_3Z41i
+    .shortfilmcontest_Entries_6SMZ8
+    .shortfilmcontest_Entry_2a_cp {
+    font-size: 10px;
+    padding: 0px 8px;
+    text-align: center;
+  }
+}
+.shortfilmcontest_PopupPanelContainer_W_776 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  z-index: 99;
+}
+.shortfilmcontest_PopupPanelContainer_W_776 .shortfilmcontest_PopupPanel_39pFj {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.shortfilmcontest_PopupPanelContainer_W_776.shortfilmcontest_ShowPopupPanel_3B_yJ {
+  opacity: 1;
+  pointer-events: auto;
+}
+.shortfilmcontest_PopupPanelContainer_W_776
+  .shortfilmcontest_CloseButton_3kkJq {
+  position: absolute;
+  cursor: pointer;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  filter: brightness(0.6);
+  transition: 0.2s;
+}
+.shortfilmcontest_PopupPanelContainer_W_776
+  .shortfilmcontest_CloseButton_3kkJq
+  img {
+  width: 100%;
+  height: 100%;
+}
+.shortfilmcontest_PopupPanelContainer_W_776
+  .shortfilmcontest_CloseButton_3kkJq:hover {
+  filter: brightness(1);
+  transform: scale(1.04);
+}
