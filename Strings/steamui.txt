@@ -20198,9 +20198,9 @@ ShowLegalInformation
 SettingsPanel_About
 file://{resources}/layout/settings/settings_about.xml
 build_date
-May  7 2021
+May 14 2021
 build_time
-17:02:57
+16:06:41
 package_version
 local
 SteamClient020
@@ -28192,7 +28192,7 @@ https://steamchina.com
 https://www.steampowered.com
 WebsiteURL
 steam/cached/aboutdialog.res
-17:04:52
+16:08:44
 CAboutDialog
 ValveSurveySummarizeData
 #steam_systeminfo_title
