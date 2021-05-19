@@ -30331,16 +30331,16 @@
     NF5x: function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
-        return v;
+        return g;
       }),
         n.d(t, "c", function () {
-          return y;
-        }),
-        n.d(t, "d", function () {
           return S;
         }),
-        n.d(t, "b", function () {
+        n.d(t, "d", function () {
           return E;
+        }),
+        n.d(t, "b", function () {
+          return C;
         });
       var r = n("mrSG"),
         a = n("TyAF"),
@@ -30355,9 +30355,9 @@
         m = n("6AJf"),
         h = n("ZlHF"),
         f = n.n(h),
-        _ = n("7G5R");
-      n("bUNj");
-      function b(e, t, n) {
+        _ = n("7G5R"),
+        b = (n("bUNj"), n("U+Q5"));
+      function v(e, t, n) {
         return {
           color: e,
           background:
@@ -30368,20 +30368,20 @@
             " 100%)",
         };
       }
-      function v(e, t) {
+      function g(e, t) {
         return e
-          ? b(
+          ? v(
               t.tab_active_label_color,
               t.tab_active_background_gradient_top,
               t.tab_active_background_gradient_bottom
             )
-          : b(
+          : v(
               t.tab_inactive_label_color,
               t.tab_inactive_background_gradient_top,
               t.tab_inactive_background_gradient_bottom
             );
       }
-      var g = function (e) {
+      var y = function (e) {
           var t = e.tab,
             n = e.language,
             r = e.onTabSelected,
@@ -30390,7 +30390,7 @@
             s = e.selected,
             c = Object(m.g)(t, n);
           if (!c) return null;
-          var l = o ? v(s, o) : void 0;
+          var l = o ? g(s, o) : void 0;
           return i.createElement(
             "div",
             {
@@ -30412,7 +30412,7 @@
             )
           );
         },
-        y = (function (e) {
+        S = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -30530,7 +30530,7 @@
             (t = Object(r.c)([a.a], t))
           );
         })(i.Component),
-        S = (function (e) {
+        E = (function (e) {
           function t() {
             var n = (null !== e && e.apply(this, arguments)) || this;
             return (n.state = { nMaxTabsPerRow: t.GetMaxTabsPerRow() }), n;
@@ -30541,31 +30541,45 @@
               return Math.max(Math.floor(window.innerWidth / 160), 2);
             }),
             (t.prototype.render = function () {
-              var e = this,
-                t = this.props,
-                n = t.section,
-                r = t.event,
-                a = t.language,
-                o = t.activeTab;
-              if (n.tabs.length < 2) return null;
-              var s = Object(d.a)(f.a.SaleSectionTabsTab),
-                c = n.tabs.map(function (t) {
-                  var r = "Tab_" + t.unique_id;
-                  return i.createElement(g, {
-                    key: r,
-                    section: n,
-                    selected: t === o,
-                    tab: t,
-                    language: a,
+              var e,
+                t = this,
+                n = this.props,
+                r = n.section,
+                a = n.event,
+                o = n.language,
+                s = n.activeTab;
+              if (r.tabs.length < 2) return null;
+              var c = Object(d.a)(f.a.SaleSectionTabsTab),
+                l = r.tabs.map(function (e) {
+                  var n = "Tab_" + e.unique_id;
+                  return i.createElement(y, {
+                    key: n,
+                    section: r,
+                    selected: e === s,
+                    tab: e,
+                    language: o,
                     classNames: Object(d.a)(
-                      s,
-                      t === o && f.a.SaleSectionTabsSelected
+                      c,
+                      e === s && f.a.SaleSectionTabsSelected
                     ),
-                    onTabSelected: function (t) {
-                      return e.props.onTabSelected(n, t);
+                    onTabSelected: function (e) {
+                      return t.props.onTabSelected(r, e);
                     },
                   });
-                });
+                }),
+                p = Object(m.f)(r, a);
+              if (
+                (null === (e = null == s ? void 0 : s.tab_bar_bg_image) ||
+                void 0 === e
+                  ? void 0
+                  : e.length) > 0
+              ) {
+                var h = b.a.GenerateArtworkURLFromHashAndExtensions(
+                  a.clanSteamID,
+                  s.tab_bar_bg_image
+                );
+                p.background = "url(" + h + ")";
+              }
               return i.createElement(
                 i.Fragment,
                 null,
@@ -30577,7 +30591,7 @@
                       f.a.SaleSectionTabs,
                       "SaleSectionTabs"
                     ),
-                    style: Object(m.f)(n, r),
+                    style: p,
                   },
                   i.createElement(
                     _.a,
@@ -30591,7 +30605,7 @@
                           "SaleSectionCtn_Trgt"
                         ),
                       },
-                      c
+                      l
                     )
                   )
                 )
@@ -30600,7 +30614,7 @@
             t
           );
         })(i.Component),
-        E = function (e) {
+        C = function (e) {
           var t = e.section,
             n = e.activeTab,
             a = e.onTabSelected,
@@ -30620,7 +30634,7 @@
               (null == n ? void 0 : n.GetActiveTabUniqueID()) === e.unique_id;
             if (r && c) return null;
             var o = t.unique_id + "_tab_button_" + e.unique_id;
-            return i.createElement(g, {
+            return i.createElement(y, {
               key: o,
               selected: r,
               tab: e,
@@ -31003,6 +31017,7 @@
         product_banner_override: { width: 1100, height: 160 },
         product_mobile_banner_override: { width: 500, height: 160 },
         schedule_track_art: { width: 196, height: 92 },
+        tab_bar_background: { width: 1500, height: 100 },
       };
       function a(e, t, n) {
         var a = r[n];
