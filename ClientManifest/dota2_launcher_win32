@@ -1,6 +1,6 @@
 "win32"
 {
-	"version"		"1621035867"
+	"version"		"1621394930"
 	"dota2_steamui_websrc_all"
 	{
 		"file"		"dota2_steamui_websrc_all.zip.708c7b06d73313d3216f1a126617d39d2dccf62b"
@@ -79,11 +79,11 @@
 	}
 	"dota2_bins_misc_win32"
 	{
-		"file"		"dota2_bins_misc_win32.zip.f4f6f1415b7ad95303d2eca266181be588456b7b"
-		"size"		"17756233"
-		"sha2"		"26d16c08b24b27c374d3c05bf5c54a2ff96453292d7e5f99bc185d36a3c5322f"
-		"zipvz"		"dota2_bins_misc_win32.zip.vz.287096f8cd31565f65ae5c45757e7b338fe5734f_12946560"
-		"sha2vz"		"03287bf0002d68e1c03b681b48ff120fd2c184c2b99d9f572676af97b74da9fd"
+		"file"		"dota2_bins_misc_win32.zip.ec50c4e7282442111f12c547272ad1a2fe28ba8a"
+		"size"		"17756239"
+		"sha2"		"f7d315d78cea63c269e5024cdbbf41ffec0f3b9f91f54bc33d0e888d7b83f4a5"
+		"zipvz"		"dota2_bins_misc_win32.zip.vz.1fde7d2a1f5b890d91a011d94596f4c71e7010a5_12935387"
+		"sha2vz"		"964743c05f264d75cb0f3bb92f7812c7154c540d343e99cb53bd719bd0ed2a30"
 	}
 	"dota2_bins_cef_win32"
 	{
@@ -94,35 +94,35 @@
 		"sha2vz"		"1231681b7e69cdd61fe128b11e982937638a71a6b70534813ffc8e2faa769d0a"
 		"win8-64"
 		{
-			"file"		"dota2_bins_cef_win32_win8-64.zip.11a4ed0cc405d35c495178e4f9d189c832c04787"
-			"size"		"78708038"
-			"sha2"		"86bb4ce6dcbe54d05224e74af656c7b39b10b9f57b3d6a33dbaf174d79761374"
-			"zipvz"		"dota2_bins_cef_win32_win8-64.zip.vz.330dd803155bd73d6a8836ce4896d4e479f60698_57803178"
-			"sha2vz"		"f89bc745fbb34e2182d0d355d5c2bf322fa01a5dc832e72c47f7c693a7575d92"
+			"file"		"dota2_bins_cef_win32_win8-64.zip.e3d0fc8f60d82c51cad782e72825feea5412a5ef"
+			"size"		"78708109"
+			"sha2"		"87aaf0581ba0ccc5580d8a0a3399edd2b329db027552929cc20d35b3ade608dd"
+			"zipvz"		"dota2_bins_cef_win32_win8-64.zip.vz.6fcf73926ffe1c45594cacd25a19b6b67a235b08_57785500"
+			"sha2vz"		"10f1064ac6fe568cd35c29d279f71b3e4e59d694cd06e6794d29c90f57119bb5"
 		}
 		"win10-64"
 		{
-			"file"		"dota2_bins_cef_win32_win10-64.zip.9679a0c0eda570e66da6007d6dc8f62c26aeca4a"
-			"size"		"82826394"
-			"sha2"		"15bd22899161de306fc7c4e29092d6254d474139cf01dfc51a0253334abf5628"
-			"zipvz"		"dota2_bins_cef_win32_win10-64.zip.vz.9ca18c2e239bab9a09d5dbd6123bf09e82cfd794_59828494"
-			"sha2vz"		"cce35cf9323811fc5e911c73d61e51d320650842e068cc0c603b856a65be02ba"
+			"file"		"dota2_bins_cef_win32_win10-64.zip.7aab4ed740bd824ef41166d5215c5fafdaf6e378"
+			"size"		"82826510"
+			"sha2"		"3d86c22dc9c9e85a759b62fa4faee0f59d44236a3460b570c8a4487524c317eb"
+			"zipvz"		"dota2_bins_cef_win32_win10-64.zip.vz.3406a08e09d8b3af47227c3400e4462a94e270dc_59811447"
+			"sha2vz"		"514e424e9033394232f3257a11ca7f1c15aa4ec89f14510b3594458f93222038"
 		}
 		"win7"
 		{
-			"file"		"dota2_bins_cef_win32_win7.zip.11a4ed0cc405d35c495178e4f9d189c832c04787"
-			"size"		"78708038"
-			"sha2"		"86bb4ce6dcbe54d05224e74af656c7b39b10b9f57b3d6a33dbaf174d79761374"
-			"zipvz"		"dota2_bins_cef_win32_win7.zip.vz.330dd803155bd73d6a8836ce4896d4e479f60698_57803178"
-			"sha2vz"		"f89bc745fbb34e2182d0d355d5c2bf322fa01a5dc832e72c47f7c693a7575d92"
+			"file"		"dota2_bins_cef_win32_win7.zip.e3d0fc8f60d82c51cad782e72825feea5412a5ef"
+			"size"		"78708109"
+			"sha2"		"87aaf0581ba0ccc5580d8a0a3399edd2b329db027552929cc20d35b3ade608dd"
+			"zipvz"		"dota2_bins_cef_win32_win7.zip.vz.6fcf73926ffe1c45594cacd25a19b6b67a235b08_57785500"
+			"sha2vz"		"10f1064ac6fe568cd35c29d279f71b3e4e59d694cd06e6794d29c90f57119bb5"
 		}
 		"win7-64"
 		{
-			"file"		"dota2_bins_cef_win32_win7-64.zip.9679a0c0eda570e66da6007d6dc8f62c26aeca4a"
-			"size"		"82826394"
-			"sha2"		"15bd22899161de306fc7c4e29092d6254d474139cf01dfc51a0253334abf5628"
-			"zipvz"		"dota2_bins_cef_win32_win7-64.zip.vz.9ca18c2e239bab9a09d5dbd6123bf09e82cfd794_59828494"
-			"sha2vz"		"cce35cf9323811fc5e911c73d61e51d320650842e068cc0c603b856a65be02ba"
+			"file"		"dota2_bins_cef_win32_win7-64.zip.7aab4ed740bd824ef41166d5215c5fafdaf6e378"
+			"size"		"82826510"
+			"sha2"		"3d86c22dc9c9e85a759b62fa4faee0f59d44236a3460b570c8a4487524c317eb"
+			"zipvz"		"dota2_bins_cef_win32_win7-64.zip.vz.3406a08e09d8b3af47227c3400e4462a94e270dc_59811447"
+			"sha2vz"		"514e424e9033394232f3257a11ca7f1c15aa4ec89f14510b3594458f93222038"
 		}
 	}
 	"dota2_bins_webhelpers_win32"
@@ -134,60 +134,60 @@
 		"sha2vz"		"5aa7c52345c2a8d2e120275b3a67211212508eb25953d941210f6a72b974c4ab"
 		"win8-64"
 		{
-			"file"		"dota2_bins_webhelpers_win32_win8-64.zip.7e0f635ed97db71062c178ff6f7f3fd805caa079"
-			"size"		"2563426"
-			"sha2"		"435840414d168760e369f8669517e29fadbf3c2e7d9d60841091fd48083af25e"
-			"zipvz"		"dota2_bins_webhelpers_win32_win8-64.zip.vz.5ccfc9b5449ce43ecdaa36a58d2d0d0d2a253d8f_2052658"
-			"sha2vz"		"2b3537932fabf1fabf891df69b1fb18024f8d14a1d65a3a1bb05813cedb1b93a"
+			"file"		"dota2_bins_webhelpers_win32_win8-64.zip.9ac3e5484171b733962790987bc8de1043574e7f"
+			"size"		"2563428"
+			"sha2"		"4e55def13f9be1ea8cd6884dae6ce54b78c737de42fd5a02d6ce26f1826a1202"
+			"zipvz"		"dota2_bins_webhelpers_win32_win8-64.zip.vz.ebdc5a3a45ec2a708609469d68e317821e03a8a3_2053672"
+			"sha2vz"		"a161dc36fb9f1cf105296bf1dd728280c389543f4b97e34fc5044ee4da17428c"
 		}
 		"win10-64"
 		{
-			"file"		"dota2_bins_webhelpers_win32_win10-64.zip.323d48c4a76c3ab720498d0e6da948957c7c7a4b"
-			"size"		"3065201"
-			"sha2"		"e3b88a3e054f3cf2c2fdc6b6cdd5d13d3f3a8e2cc0a3c0506635641f39d3398f"
-			"zipvz"		"dota2_bins_webhelpers_win32_win10-64.zip.vz.a75d613872de8b8eb45686231b3f469cc4d7645d_2409375"
-			"sha2vz"		"43d5188fd4ed91cb3bea18d4622f7f39aba1ee4b94f7c361d97b77550afa4fc3"
+			"file"		"dota2_bins_webhelpers_win32_win10-64.zip.7463b3718f6853a7b0cd7c3b42d35a290c91ad36"
+			"size"		"3065206"
+			"sha2"		"84a7c823757155d014e7f72cac8bd3edf45e347815ca10a061c47e58084a2b4d"
+			"zipvz"		"dota2_bins_webhelpers_win32_win10-64.zip.vz.b66f214e1dc9363ff8739a6801929ab21582c93e_2410026"
+			"sha2vz"		"8f95d29856d8e014f148e9b021a6c93ada793c8c886803f920c8a3367ffce612"
 		}
 		"win7"
 		{
-			"file"		"dota2_bins_webhelpers_win32_win7.zip.7e0f635ed97db71062c178ff6f7f3fd805caa079"
-			"size"		"2563426"
-			"sha2"		"435840414d168760e369f8669517e29fadbf3c2e7d9d60841091fd48083af25e"
-			"zipvz"		"dota2_bins_webhelpers_win32_win7.zip.vz.5ccfc9b5449ce43ecdaa36a58d2d0d0d2a253d8f_2052658"
-			"sha2vz"		"2b3537932fabf1fabf891df69b1fb18024f8d14a1d65a3a1bb05813cedb1b93a"
+			"file"		"dota2_bins_webhelpers_win32_win7.zip.9ac3e5484171b733962790987bc8de1043574e7f"
+			"size"		"2563428"
+			"sha2"		"4e55def13f9be1ea8cd6884dae6ce54b78c737de42fd5a02d6ce26f1826a1202"
+			"zipvz"		"dota2_bins_webhelpers_win32_win7.zip.vz.ebdc5a3a45ec2a708609469d68e317821e03a8a3_2053672"
+			"sha2vz"		"a161dc36fb9f1cf105296bf1dd728280c389543f4b97e34fc5044ee4da17428c"
 		}
 		"win7-64"
 		{
-			"file"		"dota2_bins_webhelpers_win32_win7-64.zip.323d48c4a76c3ab720498d0e6da948957c7c7a4b"
-			"size"		"3065201"
-			"sha2"		"e3b88a3e054f3cf2c2fdc6b6cdd5d13d3f3a8e2cc0a3c0506635641f39d3398f"
-			"zipvz"		"dota2_bins_webhelpers_win32_win7-64.zip.vz.a75d613872de8b8eb45686231b3f469cc4d7645d_2409375"
-			"sha2vz"		"43d5188fd4ed91cb3bea18d4622f7f39aba1ee4b94f7c361d97b77550afa4fc3"
+			"file"		"dota2_bins_webhelpers_win32_win7-64.zip.7463b3718f6853a7b0cd7c3b42d35a290c91ad36"
+			"size"		"3065206"
+			"sha2"		"84a7c823757155d014e7f72cac8bd3edf45e347815ca10a061c47e58084a2b4d"
+			"zipvz"		"dota2_bins_webhelpers_win32_win7-64.zip.vz.b66f214e1dc9363ff8739a6801929ab21582c93e_2410026"
+			"sha2vz"		"8f95d29856d8e014f148e9b021a6c93ada793c8c886803f920c8a3367ffce612"
 		}
 	}
 	"dota2_bins_win32"
 	{
-		"file"		"dota2_bins_win32.zip.ff59fd32368cdaf89e7cf70f3c5cbe5d19cea922"
-		"size"		"46591109"
-		"sha2"		"72b597f56e1a47e7e5fc46c96d5c7f2de546d7fa522b353e16538de6b2245803"
-		"zipvz"		"dota2_bins_win32.zip.vz.1726dcb759ed8f9cf13f2872066af8bf96f5ce8b_24028954"
-		"sha2vz"		"c88ca26c08964d8b46aaa919c29565f9f81c005b58700d05eee6213bab4b4cf8"
+		"file"		"dota2_bins_win32.zip.213f8d30ae188b3f79b4b8f79ce084be9c1d9a30"
+		"size"		"46591166"
+		"sha2"		"d18edb8d279284ae69d2cdfdaae0f572459f260ef89555a9597befec9d0ee56b"
+		"zipvz"		"dota2_bins_win32.zip.vz.204017f05d0a2165dba72a9b4d5942579fffabbd_24034579"
+		"sha2vz"		"cae4e78a668dbb8af5c79aa41e617bce6c167aa492e97589ebee9cb117b021c6"
 	}
 	"d2l_exe_win32"
 	{
-		"file"		"d2l_exe_win32.zip.f04d82a128d2891541ca07f95b05af531b1fb55e"
-		"size"		"2005628"
-		"sha2"		"e4aab40b2d2a69b50dc41047c162361efe29f967cf597a5bfee1a13385f6fbd4"
-		"zipvz"		"d2l_exe_win32.zip.vz.34abaa12b7cd9f9aa721424208d061510e3aa1cd_1688171"
-		"sha2vz"		"379e3870e5a7ea793b85cc94e6a63325cd978a8f4ace2453ef3bea38d04ac53d"
+		"file"		"d2l_exe_win32.zip.fea6e1ad91b61aeb83d8f51fd4f0b4ed9f263d96"
+		"size"		"2005626"
+		"sha2"		"c939c7cf0bb3e1a137ad52114be2a331259bfb30f745735794580cebdaef3d96"
+		"zipvz"		"d2l_exe_win32.zip.vz.57f10584f24d0e32cc982f7aa7af918c9c9bf2c5_1688009"
+		"sha2vz"		"700855cdccd1ee027bf48ad829b30749591627f1eb870e6c7fab837c4d5838e3"
 		"IsBootstrapperPackage"		"1"
 	}
 }
 "kvsign2"
 {
-	"win32"		"364313ed44fb5a917bf82d256200478b9f43592257a2667c827056cc58252b8ee18be2ccaffe0de3fb1dce08ef78d1a69c0dae95ef5cc0fe5076c0da42de440e"
+	"win32"		"648a824cda4498f0afd840e784221b8aef0d18b0088e0782e19182dabe0c81ec92a4519138b23b1e0af3c7c39469984073730d9a77f867c4083b5c73729db60f"
 }
 "kvsignatures"
 {
-	"win32"		"216fade3ea8ac9dbcae178acddce125004e251dca2cbd88590fd7abbe2c011f702fceca84455042a84db935697fda8df306978d33e498f716870a267a663a82e9aed9b93afbab67539425c0a7dd80636bc28281decdceeef59d8667e778e84035e0bc70448c3765342916e7987eae507059fdbde97a3f2d870104e69e715ae31"
+	"win32"		"0ceb7d88b26a41c2a18b3afe5dff9498ac063399e0c1b4395fb6536d2f9228ce41a68035edb4b64b369519c4663419fc37e3748a6de9249646e8618af3a812e1cb3b6a0cc821350da207e462872977b5af282c1b0f0314f3114f03f9a25920698f87beae95a0083b04d1a34f45e08294349774910873ac7aade73667805aa0f3"
 }
