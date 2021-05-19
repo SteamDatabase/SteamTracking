@@ -770,7 +770,7 @@
         H = a.n(V),
         W = a("kyHq"),
         Z = a("2vnA"),
-        J = (function () {
+        Y = (function () {
           function e() {
             var e = this;
             (this.m_optInData = new Map()), (window.g_optInStore = this);
@@ -824,8 +824,8 @@
             e
           );
         })();
-      var Y = a("exH9"),
-        Q = a("PqGv"),
+      var Q = a("exH9"),
+        J = a("PqGv"),
         z = function (e) {
           return s.createElement(
             s.Fragment,
@@ -856,15 +856,15 @@
           };
           return s.createElement(
             "div",
-            { className: Object(Y.a)(Q.Halloween) },
+            { className: Object(Q.a)(J.Halloween) },
             s.createElement(
               "div",
-              { className: Object(Y.a)(Q.EventTitle) },
+              { className: Object(Q.a)(J.EventTitle) },
               Object(f.f)("#EventEditor_Category_Halloween")
             ),
             s.createElement(
               "div",
-              { className: Object(Y.a)(Q.EventDesc) },
+              { className: Object(Q.a)(J.EventDesc) },
               Object(f.n)(
                 "#EventEditor_Category_Halloween_Desc",
                 s.createElement(
@@ -922,7 +922,7 @@
             ? null
             : s.createElement(
                 "div",
-                { className: Q.EventCategory_SteamAwardsNomination },
+                { className: J.EventCategory_SteamAwardsNomination },
                 s.createElement(F, {
                   name: "#EventCategory_SteamAwardsNomination",
                   description: "#EventCategory_SteamAwardsNomination_Desc",
@@ -959,7 +959,7 @@
                     "div",
                     {
                       key: a,
-                      className: Object(Y.a)(
+                      className: Object(Q.a)(
                         D.a.FlexRowContainer,
                         D.a.RadioOption
                       ),
@@ -976,10 +976,10 @@
                     }),
                     s.createElement(
                       "label",
-                      { htmlFor: a, className: Q.CategoryOption },
+                      { htmlFor: a, className: J.CategoryOption },
                       s.createElement(
                         "span",
-                        { className: Q.CategoryTitle },
+                        { className: J.CategoryTitle },
                         Object(f.f)("#promo_steamawards2020_cat" + t)
                       ),
                       s.createElement(
@@ -994,7 +994,7 @@
                 });
               return s.createElement(
                 "div",
-                { className: Q.SteamAwardCategoryPicker },
+                { className: J.SteamAwardCategoryPicker },
                 s.createElement(
                   "div",
                   { className: D.a.EventEditorTextTitle },
@@ -1010,24 +1010,24 @@
                 s.createElement(
                   "div",
                   {
-                    className: Object(Y.a)(
-                      Q.SteamAwardCategoryOptions,
+                    className: Object(Q.a)(
+                      J.SteamAwardCategoryOptions,
                       D.a.FlexColumnContainer,
                       D.a.EventDefaultRowContainer
                     ),
                   },
                   s.createElement(
                     "div",
-                    { className: Q.event_nomination_banner_ctn },
+                    { className: J.event_nomination_banner_ctn },
                     s.createElement("img", {
-                      className: Q.event_nomination_banner,
+                      className: J.event_nomination_banner,
                       src:
                         u.c.MEDIA_CDN_URL +
                         "store/promo/autumn2020/event_nomination_banner_2020.png?v=2",
                     }),
                     s.createElement(
                       "div",
-                      { className: Q.event_nomination_banner_text },
+                      { className: J.event_nomination_banner_text },
                       n
                         ? Object(f.f)(
                             "#EventEditor_Options_SteamAwardNominations_Description"
@@ -1065,7 +1065,7 @@
             }),
             s.createElement(
               "div",
-              { className: Q.EventCategory_SteamAwardsNomination },
+              { className: J.EventCategory_SteamAwardsNomination },
               s.createElement(F, {
                 name: "#EventCategory_SteamAwardsVoteRequest",
                 description: "#EventCategory_SteamAwardsVoteRequest_Desc",
@@ -1088,7 +1088,7 @@
             i = (n[0], n[1]);
           return A.a.GetTimeNowWithOverride() < c.d &&
             (null == i ? void 0 : i.is_ogg) &&
-            u.c.EREALM != W.e.k_ESteamRealmChina
+            u.c.EREALM != W.d.k_ESteamRealmChina
             ? s.createElement(te, { fnOnCategoryChosen: t })
             : null;
         },
@@ -1096,7 +1096,7 @@
           var t = (function (e, t) {
               var a = d.a.useState(!1),
                 n = a[0];
-              return a[1], [n, J.Get().GetOptInForApp(e, t)];
+              return a[1], [n, Y.Get().GetOptInForApp(e, t)];
             })(l.c.GetEditModel().GetAppID(), "sale_game_festival_summer2021"),
             a = (t[0], t[1]);
           return (null == a ? void 0 : a.opt_in)
@@ -1122,7 +1122,7 @@
                       href:
                         "https://partner.steamgames.com/doc/marketing/steamgamefestival/2021summer",
                       target: "_blank",
-                      className: Object(Y.a)(D.a.Button, Q.Link),
+                      className: Object(Q.a)(D.a.Button, J.Link),
                     },
                     Object(f.f)("#EventCategory_SteamGameFestival_Link")
                   )
@@ -1419,7 +1419,7 @@
                 s.createElement(
                   "div",
                   {
-                    className: Object(Y.a)(
+                    className: Object(Q.a)(
                       "maincontent",
                       "pagecontent",
                       L.a.eventcategory_picker_page
@@ -1446,7 +1446,7 @@
                         s.createElement(
                           ne.b,
                           {
-                            className: Object(Y.a)(D.a.Button),
+                            className: Object(Q.a)(D.a.Button),
                             to: o.a.Home(
                               this.props.match.params.appid_or_vanity_str
                             ),
@@ -1667,7 +1667,7 @@
                   s.createElement(
                     "div",
                     {
-                      className: Object(Y.a)(
+                      className: Object(Q.a)(
                         ((e = {}),
                         (e[Ne.TileContainer] = !0),
                         (e[Ne.TileAgeAppropriate] = true),
@@ -1790,7 +1790,7 @@
                               s.createElement(
                                 ye.c,
                                 {
-                                  className: Object(Y.a)(
+                                  className: Object(Q.a)(
                                     Ne.ManageButton,
                                     Ne.Edit
                                   ),
@@ -1912,7 +1912,7 @@
                 Object(Ie.b)(
                   a,
                   e,
-                  f.b.GetLanguageListForRealms([W.e.k_ESteamRealmGlobal])
+                  f.b.GetLanguageListForRealms([W.d.k_ESteamRealmGlobal])
                 )),
                 this.props.fnOnGotoPage(null, "clone");
             }),
@@ -1983,7 +1983,7 @@
                   s.createElement(
                     ye.c,
                     {
-                      className: Object(Y.a)(Ne.ManageButton, Ne.Edit),
+                      className: Object(Q.a)(Ne.ManageButton, Ne.Edit),
                       eventModel: a,
                       route: ye.a.k_eCommunityEdit,
                       onClick: this.StopPropagation,
@@ -1994,7 +1994,7 @@
                   s.createElement(
                     ye.c,
                     {
-                      className: Object(Y.a)(Ne.ManageButton, Ne.Edit),
+                      className: Object(Q.a)(Ne.ManageButton, Ne.Edit),
                       "data-tooltip-text": Object(f.f)(
                         "#EventEditor_Button_MigrateAndEdit_Announcement_ttip"
                       ),
@@ -2008,7 +2008,7 @@
                   s.createElement(
                     ye.c,
                     {
-                      className: Object(Y.a)(Ne.ManageButton, Ne.View),
+                      className: Object(Q.a)(Ne.ManageButton, Ne.View),
                       "data-tooltip-text": Object(f.f)(
                         "#EventEditor_Button_PreviewButton_ttip"
                       ),
@@ -2022,7 +2022,7 @@
                   s.createElement(
                     ye.c,
                     {
-                      className: Object(Y.a)(Ne.ManageButton, Ne.View),
+                      className: Object(Q.a)(Ne.ManageButton, Ne.View),
                       eventModel: a,
                       route: ye.a.k_eView,
                       onClick: this.StopPropagation,
@@ -2034,7 +2034,7 @@
                   s.createElement(
                     "div",
                     {
-                      className: Object(Y.a)(Ne.ManageButton, Ne.Publish),
+                      className: Object(Q.a)(Ne.ManageButton, Ne.Publish),
                       onClick: this.OnPublishEvent,
                     },
                     Object(f.f)("#EventDisplay_Publish")
@@ -2044,7 +2044,7 @@
                   s.createElement(
                     "div",
                     {
-                      className: Object(Y.a)(Ne.ManageButton, Ne.Clone),
+                      className: Object(Q.a)(Ne.ManageButton, Ne.Clone),
                       onClick: this.OnClone,
                     },
                     Object(f.f)("#Button_Clone")
@@ -2052,7 +2052,7 @@
                 s.createElement(
                   "div",
                   {
-                    className: Object(Y.a)(Ne.ManageButton, Ne.Delete),
+                    className: Object(Q.a)(Ne.ManageButton, Ne.Delete),
                     "data-tooltip-text": Object(f.f)(
                       "#EventEditor_Button_DeleteButton_ttip"
                     ),
@@ -2404,7 +2404,7 @@
                 s.createElement(
                   "div",
                   {
-                    className: Object(Y.a)(
+                    className: Object(Q.a)(
                       "maincontent",
                       ge.a.EventDashboardCtn
                     ),
@@ -2420,7 +2420,7 @@
                   s.createElement(
                     "div",
                     {
-                      className: Object(Y.a)(
+                      className: Object(Q.a)(
                         "maincontent",
                         ge.a.EventDashboardCtn
                       ),
@@ -2441,12 +2441,12 @@
                     s.createElement(
                       "div",
                       {
-                        className: Object(Y.a)(ge.a.Section, ge.a.Unpublished),
+                        className: Object(Q.a)(ge.a.Section, ge.a.Unpublished),
                       },
                       s.createElement(
                         "div",
                         {
-                          className: Object(Y.a)(
+                          className: Object(Q.a)(
                             "maincontent",
                             "eventlist",
                             ge.a.EventDashboardCtn
@@ -2473,11 +2473,11 @@
                   a.length > 0 &&
                     s.createElement(
                       "div",
-                      { className: Object(Y.a)(ge.a.Section, ge.a.Staged) },
+                      { className: Object(Q.a)(ge.a.Section, ge.a.Staged) },
                       s.createElement(
                         "div",
                         {
-                          className: Object(Y.a)(
+                          className: Object(Q.a)(
                             "maincontent",
                             "eventlist",
                             ge.a.EventDashboardCtn
@@ -2504,7 +2504,7 @@
                   s.createElement(
                     "div",
                     {
-                      className: Object(Y.a)(
+                      className: Object(Q.a)(
                         ge.a.Section,
                         ge.a.DisplaySectionHeaderContainer,
                         ge.a.Visible
@@ -2513,7 +2513,7 @@
                     s.createElement(
                       "div",
                       {
-                        className: Object(Y.a)(
+                        className: Object(Q.a)(
                           "maincontent",
                           "eventlist",
                           ge.a.EventDashboardCtn
@@ -2604,7 +2604,7 @@
                 s.createElement(
                   ne.b,
                   {
-                    className: Object(Y.a)(D.a.Button, D.a.Primary),
+                    className: Object(Q.a)(D.a.Button, D.a.Primary),
                     to: o.a.Create(n),
                     onClick: function () {
                       return l.c.ResetModel();
@@ -2633,9 +2633,9 @@
         He = a("ZlHF"),
         We = a.n(He),
         Ze = a("6AJf"),
-        Je = a("rerp"),
-        Ye = a.n(Je),
-        Qe = a("aXcg"),
+        Ye = a("rerp"),
+        Qe = a.n(Ye),
+        Je = a("aXcg"),
         ze = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
@@ -2683,7 +2683,7 @@
                   null,
                   !r &&
                     s.createElement("img", {
-                      className: Qe.SavedImage,
+                      className: Je.SavedImage,
                       src: w.a,
                     }),
                   Object(f.f)(r ? "#Button_Save" : "#Button_Saved"),
@@ -2724,7 +2724,7 @@
                 m = r.bShowPreviewSale;
               return s.createElement(
                 "div",
-                { className: Ye.a.PreviewBarContainer },
+                { className: Qe.a.PreviewBarContainer },
                 s.createElement(
                   ne.b,
                   {
@@ -2755,7 +2755,7 @@
                   null != n &&
                     s.createElement(
                       "span",
-                      { className: Ye.a.FallBackWarning },
+                      { className: Qe.a.FallBackWarning },
                       Object(f.f)(
                         "#EventPreview_UsingFallBack",
                         Object(f.f)("#Language_" + Object(fe.a)(n))
@@ -2839,7 +2839,7 @@
                       { style: { position: "relative" } },
                       s.createElement(
                         "div",
-                        { className: Ye.a.StoreNavigationPlaceholder },
+                        { className: Qe.a.StoreNavigationPlaceholder },
                         Object(f.f)("#Sale_ReservedStoreNavigation")
                       ),
                       s.createElement(Ze.c, {
@@ -3278,7 +3278,7 @@
                               s.createElement(
                                 "div",
                                 {
-                                  className: Object(Y.a)(
+                                  className: Object(Q.a)(
                                     ot.a.GraphicalAssetStatus,
                                     n
                                   ),
@@ -3410,14 +3410,6 @@
                 ((this.GetJSONData().broadcast_whitelist = []),
                 this.m_editModel.SetDirty(S.c.jsondata_broadcast));
             }),
-            (e.prototype.GetPrerollVideo = function () {
-              return this.GetJSONData().broadcast_preroll_vod_appid;
-            }),
-            (e.prototype.SetPrerollVODAppID = function (e) {
-              this.GetJSONData().broadcast_preroll_vod_appid !== e &&
-                ((this.GetJSONData().broadcast_preroll_vod_appid = e),
-                this.m_editModel.SetDirty(S.c.jsondata_broadcast));
-            }),
             (e.prototype.SetDropsEnabled = function (e) {
               this.GetJSONData().broadcast_item_drops_enabled != e &&
                 (e
@@ -3477,7 +3469,6 @@
             ),
             Object(n.c)([Z.k], e.prototype, "RemoveWhiteListAtIndex", null),
             Object(n.c)([Z.k], e.prototype, "ClearWhiteList", null),
-            Object(n.c)([Z.k], e.prototype, "SetPrerollVODAppID", null),
             Object(n.c)([Z.k], e.prototype, "SetDropsEnabled", null),
             Object(n.c)([Z.k], e.prototype, "SetItemDropManual", null),
             Object(n.c)([Z.k], e.prototype, "SetItemDropMinutes", null),
@@ -3609,14 +3600,6 @@
             (t.prototype.ClearWhitelist = function () {
               this.GetBroadcastEditModel().ClearWhiteList();
             }),
-            (t.prototype.GetPrerollVideo = function () {
-              return this.GetBroadcastEditModel().GetPrerollVideo() || "";
-            }),
-            (t.prototype.OnPrerollVideoChange = function (e) {
-              this.GetBroadcastEditModel().SetPrerollVODAppID(
-                e.target.value.trim()
-              );
-            }),
             (t.prototype.OnSaleColorChange = function (e, t) {
               (this.props.editModel.GetEventModel().jsondata[t] = e),
                 this.props.editModel.SetDirty(S.c.jsondata_sales);
@@ -3675,7 +3658,7 @@
                     (_.a.Get().GetPartnerEventPermissions(t.GetClanSteamID()),
                     []),
                   o = 0,
-                  l = f.b.GetLanguageListForRealms([W.e.k_ESteamRealmGlobal]);
+                  l = f.b.GetLanguageListForRealms([W.d.k_ESteamRealmGlobal]);
                 o < l.length;
                 o++
               ) {
@@ -3717,7 +3700,7 @@
                     "div",
                     {
                       key: "broadcastchatOptions_" + a,
-                      className: Object(Y.a)(
+                      className: Object(Q.a)(
                         D.a.FlexRowContainer,
                         D.a.RadioOption
                       ),
@@ -3760,7 +3743,7 @@
                     {
                       target: u.c.IN_CLIENT ? void 0 : "_blank",
                       href: u.c.PARTNER_BASE_URL + "doc/store/broadcast",
-                      className: Object(Y.a)(D.a.doclink),
+                      className: Object(Q.a)(D.a.doclink),
                     },
                     s.createElement(
                       "span",
@@ -3790,7 +3773,7 @@
                     s.createElement(
                       "div",
                       {
-                        className: Object(Y.a)(
+                        className: Object(Q.a)(
                           D.a.FlexColumnContainer,
                           D.a.EventDefaultRowContainer
                         ),
@@ -3816,7 +3799,7 @@
                         s.createElement(
                           "div",
                           {
-                            className: Object(Y.a)(
+                            className: Object(Q.a)(
                               D.a.FlexRowContainer,
                               Gt.a.CustomTitleCtn
                             ),
@@ -3862,13 +3845,13 @@
                         ),
                         s.createElement(
                           "div",
-                          { className: Object(Y.a)(D.a.FlexColumnContainer) },
+                          { className: Object(Q.a)(D.a.FlexColumnContainer) },
                           a.localized_broadcast_title.map(function (t, a) {
                             return t
                               ? s.createElement(
                                   "div",
                                   {
-                                    className: Object(Y.a)(
+                                    className: Object(Q.a)(
                                       Gt.a.TitleRowCtn,
                                       D.a.FlexRowContainer
                                     ),
@@ -3934,7 +3917,7 @@
                     s.createElement(
                       "div",
                       {
-                        className: Object(Y.a)(
+                        className: Object(Q.a)(
                           D.a.FlexColumnContainer,
                           D.a.EventDefaultRowContainer
                         ),
@@ -3962,7 +3945,7 @@
                       s.createElement(
                         "div",
                         {
-                          className: Object(Y.a)(
+                          className: Object(Q.a)(
                             D.a.FlexRowWrapFlexStartContainer
                           ),
                         },
@@ -4016,52 +3999,6 @@
                       )
                     ),
                     s.createElement(
-                      De.b,
-                      {
-                        requireAdmin: !0,
-                        clanSteamID: t.GetClanSteamID(),
-                        className: Object(Y.a)(D.a.ValveOnlyBackground),
-                      },
-                      s.createElement(
-                        "div",
-                        { className: D.a.EventEditorTextTitle },
-                        Object(f.f)("#Broadcast_preroll_title")
-                      ),
-                      s.createElement(
-                        "div",
-                        {
-                          className: Object(Y.a)(
-                            D.a.FlexColumnContainer,
-                            D.a.EventDefaultRowContainer
-                          ),
-                        },
-                        s.createElement(
-                          "div",
-                          null,
-                          Object(f.f)("#Broadcast_preroll_desc")
-                        ),
-                        s.createElement(Oe.m, {
-                          type: "text",
-                          placeholder: Object(f.f)("#Broadcast_preroll_prompt"),
-                          mustBeNumeric: !0,
-                          rangeMin: 1,
-                          value: this.GetPrerollVideo(),
-                          onChange: this.OnPrerollVideoChange,
-                        }),
-                        this.GetPrerollVideo() &&
-                          s.createElement(
-                            "a",
-                            {
-                              href:
-                                u.c.PARTNER_BASE_URL +
-                                "apps/landing/" +
-                                this.GetPrerollVideo(),
-                            },
-                            Object(f.f)("#Broadcast_preroll_app_link")
-                          )
-                      )
-                    ),
-                    s.createElement(
                       "div",
                       { className: D.a.EventEditorTextTitle },
                       Object(f.f)("#Broadcast_chat_title")
@@ -4069,7 +4006,7 @@
                     s.createElement(
                       "div",
                       {
-                        className: Object(Y.a)(
+                        className: Object(Q.a)(
                           D.a.FlexColumnContainer,
                           D.a.EventDefaultRowContainer
                         ),
@@ -4081,7 +4018,7 @@
                       {
                         requireAdmin: !0,
                         clanSteamID: t.GetClanSteamID(),
-                        className: Object(Y.a)(D.a.ValveOnlyBackground),
+                        className: Object(Q.a)(D.a.ValveOnlyBackground),
                       },
                       s.createElement(
                         "div",
@@ -4256,8 +4193,6 @@
             Object(n.c)([G.a], t.prototype, "AddWhitelist", null),
             Object(n.c)([G.a], t.prototype, "RemoveWhitelist", null),
             Object(n.c)([G.a], t.prototype, "ClearWhitelist", null),
-            Object(n.c)([G.a], t.prototype, "GetPrerollVideo", null),
-            Object(n.c)([G.a], t.prototype, "OnPrerollVideoChange", null),
             Object(n.c)([G.a], t.prototype, "OnSaleColorChange", null),
             Object(n.c)([G.a], t.prototype, "OnOpenGradientInnerColor", null),
             Object(n.c)([G.a], t.prototype, "OnOpenGradientOuterColor", null),
@@ -4341,11 +4276,11 @@
               var i = this.state.friendData;
               return s.createElement(
                 "div",
-                { className: Object(Y.a)(r.a.FlexCenter, Gt.a.AccountRow) },
+                { className: Object(Q.a)(r.a.FlexCenter, Gt.a.AccountRow) },
                 s.createElement(
                   "a",
                   {
-                    className: Object(Y.a)(
+                    className: Object(Q.a)(
                       r.a.FlexCenter,
                       L.a.BroadcastAccountInfo
                     ),
@@ -4377,7 +4312,7 @@
                 ),
                 s.createElement(Mt, { accountid: this.props.accountid }),
                 s.createElement("img", {
-                  className: Object(Y.a)(r.a.FlexCenter, r.a.RemoveIcon),
+                  className: Object(Q.a)(r.a.FlexCenter, r.a.RemoveIcon),
                   src: Ot.a,
                   onClick: this.OnDeleteBroadcaster,
                 })
@@ -4440,7 +4375,7 @@
           return s.createElement(
             "div",
             {
-              className: Object(Y.a)(
+              className: Object(Q.a)(
                 Bt.EventEditorTopBarContainer,
                 n && i ? Bt.EventPublished : Bt.EventUnPublished
               ),
@@ -4549,9 +4484,9 @@
         Ht = a("bS9Q"),
         Wt = a("GOhU"),
         Zt = a("Yamg"),
-        Jt = a("pdAa"),
-        Yt = a.n(Jt);
-      var Qt = Object(y.a)(function (e) {
+        Yt = a("pdAa"),
+        Qt = a.n(Yt);
+      var Jt = Object(y.a)(function (e) {
         var t = e.editModel;
         if (!Object(De.a)(t.GetClanSteamID())) return null;
         if (
@@ -4572,7 +4507,7 @@
           i = a.build_branch,
           r = s.createElement(
             "span",
-            { className: Object(Y.a)(Yt.a.BuildDisplay, Yt.a.BuildUnlinked) },
+            { className: Object(Q.a)(Qt.a.BuildDisplay, Qt.a.BuildUnlinked) },
             Object(f.f)("#EventEditor_AssociateBuildBlank")
           );
         return (
@@ -4581,9 +4516,9 @@
               ? s.createElement(
                   "span",
                   {
-                    className: Object(Y.a)(
-                      Yt.a.BuildDisplay,
-                      Yt.a.BuildLinkedBranch
+                    className: Object(Q.a)(
+                      Qt.a.BuildDisplay,
+                      Qt.a.BuildLinkedBranch
                     ),
                   },
                   Object(f.f)("#EventEditor_AssociatedBuild", n, i)
@@ -4591,16 +4526,16 @@
               : s.createElement(
                   "span",
                   {
-                    className: Object(Y.a)(
-                      Yt.a.BuildDisplay,
-                      Yt.a.BuildLinkedDefault
+                    className: Object(Q.a)(
+                      Qt.a.BuildDisplay,
+                      Qt.a.BuildLinkedDefault
                     ),
                   },
                   Object(f.f)("#EventEditor_AssociatedBuild_Default", n)
                 )),
           s.createElement(
             "div",
-            { className: Yt.a.AssociatedBuildBody },
+            { className: Qt.a.AssociatedBuildBody },
             r,
             s.createElement(
               "span",
@@ -4861,7 +4796,7 @@
                       s.createElement(
                         "div",
                         {
-                          className: Object(Y.a)(
+                          className: Object(Q.a)(
                             D.a.FlexRowContainer,
                             Wt.ToolContainer
                           ),
@@ -4901,7 +4836,7 @@
                   s.createElement(
                     "span",
                     {
-                      className: Object(Y.a)(
+                      className: Object(Q.a)(
                         R.CharactorRemaining,
                         c ? R.CharactorExhausted : ""
                       ),
@@ -4917,7 +4852,7 @@
                   { className: D.a.InputBorder },
                   s.createElement("input", {
                     type: "text",
-                    className: Object(Y.a)(
+                    className: Object(Q.a)(
                       R.EventEditorTitleInput,
                       c ? R.EventEditorInputMaxLength : ""
                     ),
@@ -4960,7 +4895,7 @@
                   s.createElement(
                     "span",
                     {
-                      className: Object(Y.a)(
+                      className: Object(Q.a)(
                         R.CharactorRemaining,
                         d ? R.CharactorExhausted : ""
                       ),
@@ -4976,7 +4911,7 @@
                   { className: D.a.InputBorder },
                   s.createElement("input", {
                     type: "text",
-                    className: Object(Y.a)(
+                    className: Object(Q.a)(
                       R.EventEditorTitleInput,
                       R.Subtitle,
                       d ? R.EventEditorInputMaxLength : ""
@@ -5028,7 +4963,7 @@
                       s.createElement(
                         "span",
                         {
-                          className: Object(Y.a)(
+                          className: Object(Q.a)(
                             R.CharactorRemaining,
                             m ? R.CharactorExhausted : ""
                           ),
@@ -5040,7 +4975,7 @@
                       )
                     ),
                     s.createElement("textarea", {
-                      className: Object(Y.a)(
+                      className: Object(Q.a)(
                         R.EventEditorTitleInput,
                         R.Summary,
                         m ? R.EventEditorInputMaxLength : ""
@@ -5122,14 +5057,14 @@
                         },
                       })
                   ),
-                s.createElement(Qt, { editModel: e }),
+                s.createElement(Jt, { editModel: e }),
                 s.createElement(
                   "div",
                   { className: D.a.Columns },
                   s.createElement(
                     "div",
                     {
-                      className: Object(Y.a)(D.a.LeftCol, Wt.DescEditorPadding),
+                      className: Object(Q.a)(D.a.LeftCol, Wt.DescEditorPadding),
                     },
                     s.createElement(
                       "div",
@@ -5158,7 +5093,7 @@
                     s.createElement(
                       "div",
                       {
-                        className: Object(Y.a)(
+                        className: Object(Q.a)(
                           D.a.RightCol,
                           Wt.DescEditorPadding
                         ),
@@ -5288,7 +5223,7 @@
               return s.createElement(
                 "div",
                 {
-                  className: Object(Y.a)(
+                  className: Object(Q.a)(
                     a,
                     ma.DevEmailEmailBackground,
                     ma.EmailSection
@@ -6024,7 +5959,7 @@
                 s.createElement(
                   "div",
                   {
-                    className: Object(Y.a)(
+                    className: Object(Q.a)(
                       D.a.FlexRowContainer,
                       ma.EmailSubjectCtn
                     ),
@@ -6052,7 +5987,7 @@
                 s.createElement(
                   "div",
                   {
-                    className: Object(Y.a)(
+                    className: Object(Q.a)(
                       ma.EmailTemplate,
                       ma.DevEmailTemplate
                     ),
@@ -6060,7 +5995,7 @@
                   s.createElement(
                     "div",
                     {
-                      className: Object(Y.a)(
+                      className: Object(Q.a)(
                         ma.CenterAlign,
                         ma.DevEmail_TopHeader
                       ),
@@ -6076,7 +6011,7 @@
                   ),
                   s.createElement(
                     "div",
-                    { className: Object(Y.a)(ma.DevEmail_Content) },
+                    { className: Object(Q.a)(ma.DevEmail_Content) },
                     s.createElement(
                       "div",
                       { className: ma.DevEmail_HearComes },
@@ -6091,7 +6026,7 @@
                   i,
                   s.createElement(
                     "div",
-                    { className: Object(Y.a)(ma.DevEmail_Content) },
+                    { className: Object(Q.a)(ma.DevEmail_Content) },
                     s.createElement("img", {
                       src: aa.a,
                       className: ma.DevEmail_SignOff_Img,
@@ -6114,7 +6049,7 @@
                 ),
                 s.createElement(
                   "div",
-                  { className: Object(Y.a)(ma.DevEmail_Footer_Ctn) },
+                  { className: Object(Q.a)(ma.DevEmail_Footer_Ctn) },
                   s.createElement(
                     "span",
                     { className: ma.DevEmail_Footer_Reason },
@@ -6177,7 +6112,7 @@
                 s.createElement(
                   "button",
                   {
-                    className: Object(Y.a)(D.a.Button, ma.CenterAlign),
+                    className: Object(Q.a)(D.a.Button, ma.CenterAlign),
                     onClick: function () {
                       n.AddSection(ga);
                     },
@@ -6362,7 +6297,7 @@
                 { className: ma.RecipientCtn },
                 s.createElement(
                   "div",
-                  { className: Object(Y.a)(D.a.EventEditorTextTitle) },
+                  { className: Object(Q.a)(D.a.EventEditorTextTitle) },
                   s.createElement(
                     "span",
                     { className: D.a.EventEditorTextTitle },
@@ -6372,7 +6307,7 @@
                 s.createElement(
                   "div",
                   {
-                    className: Object(Y.a)(
+                    className: Object(Q.a)(
                       D.a.FlexColumnContainer,
                       D.a.EventDefaultRowContainer
                     ),
@@ -6662,7 +6597,7 @@
               { className: ma.EmailTabCtn },
               s.createElement(
                 "div",
-                { className: Object(Y.a)(D.a.EventEditorTextTitleCtn) },
+                { className: Object(Q.a)(D.a.EventEditorTextTitleCtn) },
                 s.createElement(
                   "span",
                   { className: D.a.EventEditorTextTitle },
@@ -6670,7 +6605,7 @@
                 ),
                 s.createElement(
                   "a",
-                  { href: "#", className: Object(Y.a)(D.a.doclink) },
+                  { href: "#", className: Object(Q.a)(D.a.doclink) },
                   s.createElement(
                     "span",
                     null,
@@ -6680,7 +6615,7 @@
               ),
               s.createElement(
                 "div",
-                { className: Object(Y.a)(D.a.FlexColumnContainer) },
+                { className: Object(Q.a)(D.a.FlexColumnContainer) },
                 s.createElement(Oe.q, {
                   label: Object(f.f)("#EventEmail_EnableEmailOption"),
                   onChange: function (t) {
@@ -7098,7 +7033,7 @@
                 s.createElement(
                   "div",
                   {
-                    className: Object(Y.a)(
+                    className: Object(Q.a)(
                       D.a.FlexRowContainer,
                       ma.EmailSubjectCtn
                     ),
@@ -7139,7 +7074,7 @@
                   s.createElement(
                     "div",
                     {
-                      className: Object(Y.a)(
+                      className: Object(Q.a)(
                         ma.EmailIconHeader,
                         ma.CenterAlign
                       ),
@@ -7149,7 +7084,7 @@
                   s.createElement(
                     "div",
                     {
-                      className: Object(Y.a)(
+                      className: Object(Q.a)(
                         ma.EmailBackground,
                         ma.EmailReasonHeader,
                         ma.EmailTextCtn
@@ -7225,7 +7160,7 @@
                   s.createElement(
                     "div",
                     {
-                      className: Object(Y.a)(
+                      className: Object(Q.a)(
                         ma.FooterLegal,
                         D.a.FlexRowContainer
                       ),
@@ -7305,14 +7240,14 @@
               return s.createElement(
                 "div",
                 {
-                  className: Object(Y.a)(
+                  className: Object(Q.a)(
                     D.a.ValveOnlyBackground,
                     ma.RecipientCtn
                   ),
                 },
                 s.createElement(
                   "div",
-                  { className: Object(Y.a)(D.a.EventEditorTextTitle) },
+                  { className: Object(Q.a)(D.a.EventEditorTextTitle) },
                   s.createElement(
                     "span",
                     { className: D.a.EventEditorTextTitle },
@@ -7322,7 +7257,7 @@
                 s.createElement(
                   "div",
                   {
-                    className: Object(Y.a)(
+                    className: Object(Q.a)(
                       D.a.FlexColumnContainer,
                       D.a.EventDefaultRowContainer
                     ),
@@ -7494,7 +7429,7 @@
                               {
                                 key:
                                   "RecipientToggle_player_" + i.clan_account_id,
-                                className: Object(Y.a)(D.a.ValveOnlyBackground),
+                                className: Object(Q.a)(D.a.ValveOnlyBackground),
                               },
                               s.createElement(Oe.q, {
                                 onChange: function (e) {
@@ -7546,7 +7481,7 @@
                 { className: ma.RecipientCtn },
                 s.createElement(
                   "div",
-                  { className: Object(Y.a)(D.a.EventEditorTextTitle) },
+                  { className: Object(Q.a)(D.a.EventEditorTextTitle) },
                   s.createElement(
                     "span",
                     { className: D.a.EventEditorTextTitle },
@@ -7556,7 +7491,7 @@
                 s.createElement(
                   "div",
                   {
-                    className: Object(Y.a)(
+                    className: Object(Q.a)(
                       D.a.FlexColumnContainer,
                       D.a.EventDefaultRowContainer
                     ),
@@ -7888,7 +7823,7 @@
                   s.createElement(
                     "div",
                     {
-                      className: Object(Y.a)(
+                      className: Object(Q.a)(
                         D.a.FlexColumnContainer,
                         D.a.EventDefaultRowContainer
                       ),
@@ -7912,7 +7847,7 @@
                   s.createElement(
                     "div",
                     {
-                      className: Object(Y.a)(
+                      className: Object(Q.a)(
                         D.a.FlexColumnContainer,
                         D.a.EventDefaultRowContainer
                       ),
@@ -7934,7 +7869,7 @@
                 s.createElement(
                   "div",
                   {
-                    className: Object(Y.a)(
+                    className: Object(Q.a)(
                       D.a.FlexColumnContainer,
                       D.a.EventDefaultRowContainer
                     ),
@@ -8053,7 +7988,7 @@
           return s.createElement(
             s.Fragment,
             null,
-            s.createElement(Ja, { editModel: t }),
+            s.createElement(Ya, { editModel: t }),
             !a &&
               s.createElement(
                 "div",
@@ -8128,7 +8063,7 @@
           return s.createElement(
             "div",
             {
-              className: Object(Y.a)(
+              className: Object(Q.a)(
                 D.a.FlexColumnContainer,
                 Ua.a.TimeRowContainer
               ),
@@ -8140,7 +8075,7 @@
             ),
             s.createElement(
               "div",
-              { className: Object(Y.a)(D.a.FlexRowContainer, D.a.RadioOption) },
+              { className: Object(Q.a)(D.a.FlexRowContainer, D.a.RadioOption) },
               s.createElement("input", {
                 type: "radio",
                 name: "EndDateRadio",
@@ -8164,7 +8099,7 @@
                 s.createElement(
                   "div",
                   {
-                    className: Object(Y.a)(
+                    className: Object(Q.a)(
                       "EndDateAmount_Ctn",
                       Ua.a.EndDateAmountCtn
                     ),
@@ -8212,7 +8147,7 @@
               ),
             s.createElement(
               "div",
-              { className: Object(Y.a)(D.a.FlexRowContainer, D.a.RadioOption) },
+              { className: Object(Q.a)(D.a.FlexRowContainer, D.a.RadioOption) },
               s.createElement("input", {
                 type: "radio",
                 name: "EndDateRadio",
@@ -8237,7 +8172,7 @@
               s.createElement(
                 "div",
                 {
-                  className: Object(Y.a)(
+                  className: Object(Q.a)(
                     "EndDateSpecific_Ctn",
                     Ua.a.TimeRowDropDown,
                     Ua.a.EndDateSpecificCtn
@@ -8302,7 +8237,7 @@
           return s.createElement(
             "div",
             {
-              className: Object(Y.a)(
+              className: Object(Q.a)(
                 D.a.EventDefaultRowContainer,
                 D.a.EventStartPublic
               ),
@@ -8324,7 +8259,7 @@
           return s.createElement(
             "div",
             {
-              className: Object(Y.a)(
+              className: Object(Q.a)(
                 D.a.EventDefaultRowContainer,
                 D.a.EventStartPublic
               ),
@@ -8342,7 +8277,7 @@
             )
           );
         },
-        Ja = (function (e) {
+        Ya = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -8411,7 +8346,7 @@
                   s.createElement(
                     "div",
                     {
-                      className: Object(Y.a)(
+                      className: Object(Q.a)(
                         D.a.FlexColumnContainer,
                         Ua.a.TimeRowContainer
                       ),
@@ -8428,7 +8363,7 @@
                         s.createElement(
                           "div",
                           {
-                            className: Object(Y.a)(
+                            className: Object(Q.a)(
                               D.a.FlexRowContainer,
                               D.a.RadioOption
                             ),
@@ -8457,7 +8392,7 @@
                         s.createElement(
                           "div",
                           {
-                            className: Object(Y.a)(
+                            className: Object(Q.a)(
                               D.a.FlexRowContainer,
                               D.a.RadioOption
                             ),
@@ -8488,7 +8423,7 @@
                         )
                       ),
                     m &&
-                      s.createElement(Ya, {
+                      s.createElement(Qa, {
                         editModel: e,
                         nEarliestTime: i,
                         nLatestTime: r,
@@ -8502,7 +8437,7 @@
             (t = Object(n.c)([y.a], t))
           );
         })(s.Component),
-        Ya = (function (e) {
+        Qa = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -8535,7 +8470,7 @@
                 s.createElement(
                   "div",
                   {
-                    className: Object(Y.a)(
+                    className: Object(Q.a)(
                       D.a.FlexColumnContainer,
                       Ua.a.TimeRowContainer
                     ),
@@ -8549,13 +8484,13 @@
                     fnIsValidDateTime: t.BIsValidStartTimeForEdit,
                   })
                 ),
-                i && s.createElement(Qa, { editModel: t })
+                i && s.createElement(Ja, { editModel: t })
               );
             }),
             (t = Object(n.c)([y.a], t))
           );
         })(s.Component),
-        Qa = (function (e) {
+        Ja = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -8580,7 +8515,7 @@
                         s.createElement(
                           "span",
                           {
-                            className: Object(Y.a)(
+                            className: Object(Q.a)(
                               Ua.a.EventVisibilityItem,
                               D.a.RadioOption
                             ),
@@ -8677,7 +8612,7 @@
             { className: D.a.Columns },
             s.createElement(
               "div",
-              { className: Object(Y.a)(D.a.LeftCol) },
+              { className: Object(Q.a)(D.a.LeftCol) },
               s.createElement(tn, { editModel: t }),
               s.createElement(Va, { bHideEndRange: !a, editModel: t }),
               Boolean(t.BHasTag("steam_award_nomination_request")) &&
@@ -8688,7 +8623,7 @@
             ),
             s.createElement(
               "div",
-              { className: Object(Y.a)(L.a.OptionsNotes, D.a.RightCol) },
+              { className: Object(Q.a)(L.a.OptionsNotes, D.a.RightCol) },
               Object(f.f)("#EventEditor_Time_ttip")
             )
           );
@@ -8714,7 +8649,7 @@
               s.createElement(
                 "div",
                 {
-                  className: Object(Y.a)(
+                  className: Object(Q.a)(
                     D.a.FlexColumnContainer,
                     D.a.EventDefaultRowContainer
                   ),
@@ -8838,7 +8773,7 @@
             .valve_admin
             ? s.createElement(
                 "div",
-                { className: Object(Y.a)(D.a.ValveOnlyBackground) },
+                { className: Object(Q.a)(D.a.ValveOnlyBackground) },
                 s.createElement(
                   "div",
                   { className: D.a.EventEditorTextSubTitle },
@@ -8969,10 +8904,10 @@
                   i == S.f.event_start;
               return s.createElement(
                 "div",
-                { className: Object(Y.a)(L.a.EventEditorInputPaneContents) },
+                { className: Object(Q.a)(L.a.EventEditorInputPaneContents) },
                 s.createElement(
                   "div",
-                  { className: Object(Y.a)(D.a.LeftCol, qa.a.ThemedCtn) },
+                  { className: Object(Q.a)(D.a.LeftCol, qa.a.ThemedCtn) },
                   s.createElement(
                     "div",
                     { className: D.a.EventEditorTextTitle },
@@ -8981,7 +8916,7 @@
                   s.createElement(
                     "div",
                     {
-                      className: Object(Y.a)(
+                      className: Object(Q.a)(
                         D.a.FlexColumnContainer,
                         D.a.EventDefaultRowContainer
                       ),
@@ -9056,7 +8991,7 @@
               s.createElement(
                 "div",
                 {
-                  className: Object(Y.a)(
+                  className: Object(Q.a)(
                     D.a.FlexColumnContainer,
                     D.a.EventDefaultRowContainer
                   ),
@@ -9087,13 +9022,13 @@
             e.BInRealmChina() &&
             f.b.IsELanguageValidInRealm(
               e.GetCurEditLanguage(),
-              W.e.k_ESteamRealmChina
+              W.d.k_ESteamRealmChina
             ),
           a =
             e.BInRealmGlobal() &&
             f.b.IsELanguageValidInRealm(
               e.GetCurEditLanguage(),
-              W.e.k_ESteamRealmGlobal
+              W.d.k_ESteamRealmGlobal
             );
         t || a || e.SetCurEditLanguage(e.BInRealmChina() ? 29 : 0);
       }
@@ -9228,7 +9163,7 @@
                 s.createElement(
                   "div",
                   {
-                    className: Object(Y.a)(
+                    className: Object(Q.a)(
                       D.a.RightColumnContainer,
                       dn.a.PublishContainer
                     ),
@@ -9241,7 +9176,7 @@
                         "data-tooltip-text": Object(f.f)(
                           "#EventEditor_Publish_ttip"
                         ),
-                        className: Object(Y.a)(
+                        className: Object(Q.a)(
                           D.a.EventPublishButton,
                           "DialogButton Primary"
                         ),
@@ -9271,7 +9206,7 @@
                         "button",
                         {
                           onClick: this.OnMakeVisibleNow,
-                          className: Object(Y.a)(
+                          className: Object(Q.a)(
                             D.a.EventPublishButton,
                             "DialogButton Primary"
                           ),
@@ -9306,10 +9241,10 @@
               var e = this.props.editModel;
               return s.createElement(
                 "div",
-                { className: Object(Y.a)(pn.PublishContainer) },
+                { className: Object(Q.a)(pn.PublishContainer) },
                 s.createElement(
                   "div",
-                  { className: Object(Y.a)(T.ReachBackground) },
+                  { className: Object(Q.a)(T.ReachBackground) },
                   s.createElement(
                     "div",
                     { className: R.EventEditorInputPaneContents },
@@ -9451,7 +9386,7 @@
                     ),
                     s.createElement(
                       "div",
-                      { className: Object(Y.a)(pn.ReachSubject) },
+                      { className: Object(Q.a)(pn.ReachSubject) },
                       Object(f.f)("#EventReach_PersonalizedCalendar"),
                       s.createElement(
                         "span",
@@ -9500,7 +9435,7 @@
                     e.BWillShowOnLibraryOverviewDueToSettings() &&
                       s.createElement(
                         "div",
-                        { className: Object(Y.a)(pn.ReachSubject) },
+                        { className: Object(Q.a)(pn.ReachSubject) },
                         Object(f.f)("#EventReach_LibraryHome"),
                         r &&
                           s.createElement(
@@ -9528,7 +9463,7 @@
                     e.BWillShowOnLibraryDetailDueToSettings() &&
                       s.createElement(
                         "div",
-                        { className: Object(Y.a)(pn.ReachSubject) },
+                        { className: Object(Q.a)(pn.ReachSubject) },
                         Object(f.f)("#EventReach_LibraryDetail"),
                         r &&
                           s.createElement(
@@ -9558,7 +9493,7 @@
                     ) &&
                       s.createElement(
                         "div",
-                        { className: Object(Y.a)(pn.ReachSubject, pn.Future) },
+                        { className: Object(Q.a)(pn.ReachSubject, pn.Future) },
                         Object(f.f)("#EventReach_Future"),
                         " ",
                         Object(f.f)("#EventReach_Reminder"),
@@ -9579,7 +9514,7 @@
                     Boolean(e.BIsAllowedInNotifications()) &&
                       s.createElement(
                         "div",
-                        { className: Object(Y.a)(pn.ReachSubject, pn.Future) },
+                        { className: Object(Q.a)(pn.ReachSubject, pn.Future) },
                         Object(f.f)("#EventReach_Future"),
                         " ",
                         Object(f.f)("#EventReach_EmailRollUp"),
@@ -9682,7 +9617,7 @@
                             ),
                           s.createElement(
                             "div",
-                            { className: Object(Y.a)(pn.ReachSubject) },
+                            { className: Object(Q.a)(pn.ReachSubject) },
                             s.createElement(
                               "span",
                               { className: pn.ReachSubjectOptional },
@@ -9873,7 +9808,7 @@
                         s.createElement(
                           ye.c,
                           {
-                            className: Object(Y.a)(T.Button, T.Primary),
+                            className: Object(Q.a)(T.Button, T.Primary),
                             eventModel: t,
                             route: ye.a.k_eStoreView,
                           },
@@ -10162,7 +10097,7 @@
                 ),
                 s.createElement(
                   "div",
-                  { className: Object(Y.a)(D.a.SaveBackground) },
+                  { className: Object(Q.a)(D.a.SaveBackground) },
                   s.createElement(Lt, null)
                 )
               );
@@ -10216,7 +10151,7 @@
                   p = d.GetEventModel().bOldAnnouncement;
                 return s.createElement(
                   "div",
-                  { className: Object(Y.a)(L.a.wrapper) },
+                  { className: Object(Q.a)(L.a.wrapper) },
                   s.createElement(Rt, {
                     clanSteamID: t,
                     appid: n,
@@ -10226,7 +10161,7 @@
                   s.createElement(
                     "div",
                     {
-                      className: Object(Y.a)(
+                      className: Object(Q.a)(
                         D.a.FlexColumnContainer,
                         L.a.EventEditBelowTopBarContainer
                       ),
@@ -10450,7 +10385,7 @@
                       s.createElement(
                         "div",
                         {
-                          className: Object(Y.a)(
+                          className: Object(Q.a)(
                             ht.a.SelectImageBlock,
                             ht.a.Tips
                           ),
@@ -10940,7 +10875,7 @@
                   d.a.createElement(
                     "div",
                     {
-                      className: Object(Y.a)(T.FlexRowContainer, Tn.ButtonRow),
+                      className: Object(Q.a)(T.FlexRowContainer, Tn.ButtonRow),
                     },
                     d.a.createElement(
                       "div",
@@ -11825,7 +11760,7 @@
             t
           );
         })(d.a.Component),
-        Jn = (function () {
+        Yn = (function () {
           function e() {
             (this.m_rgApps = []),
               (this.m_rgClanAccountIDs = []),
@@ -12027,8 +11962,8 @@
             e
           );
         })(),
-        Yn = a("Tgxo"),
-        Qn = a.n(Yn),
+        Qn = a("Tgxo"),
+        Jn = a.n(Qn),
         zn = Object(y.a)(function (e) {
           var t = Object(s.useState)(!0),
             a = t[0],
@@ -12060,7 +11995,7 @@
             D = T[0],
             I = T[1],
             G = Object(s.useRef)(0),
-            N = Jn.Get().GetApps(r, u, m),
+            N = Yn.Get().GetApps(r, u, m),
             w =
               0 == A
                 ? N
@@ -12076,10 +12011,10 @@
             };
           return d.a.createElement(
             "div",
-            { className: Qn.a.MigrateToolCtn },
+            { className: Jn.a.MigrateToolCtn },
             d.a.createElement(
               "div",
-              { className: Qn.a.ToolHeader },
+              { className: Jn.a.ToolHeader },
               "Partner Events Migration Tools"
             ),
             w.map(function (e) {
@@ -12107,7 +12042,7 @@
             d.a.createElement(
               "div",
               {
-                className: Qn.a.LoadEventsButton,
+                className: Jn.a.LoadEventsButton,
                 onClick: function () {
                   y(!1), I(new Set()), o(r + u);
                 },
@@ -12118,7 +12053,7 @@
               d.a.createElement(
                 "div",
                 {
-                  className: Qn.a.LoadEventsButton,
+                  className: Jn.a.LoadEventsButton,
                   onClick: function () {
                     return y(!0);
                   },
@@ -12127,7 +12062,7 @@
               ),
             d.a.createElement(
               "div",
-              { className: Qn.a.StatusMessage },
+              { className: Jn.a.StatusMessage },
               D.size +
                 " OF " +
                 N.length +
@@ -12244,24 +12179,24 @@
             }),
             d.a.createElement(
               "div",
-              { className: Qn.a.ClanRow },
-              d.a.createElement("div", { className: Qn.a.ID }, t),
-              d.a.createElement("a", { className: Qn.a.ClanName, href: C }, O),
+              { className: Jn.a.ClanRow },
+              d.a.createElement("div", { className: Jn.a.ID }, t),
+              d.a.createElement("a", { className: Jn.a.ClanName, href: C }, O),
               d.a.createElement(
                 "div",
-                { className: Qn.a.Counts },
+                { className: Jn.a.Counts },
                 "Loaded: " + S + "\tVisible: " + A + "\tOld: " + I,
                 T > 0 &&
                   d.a.createElement(
                     "span",
-                    { className: Qn.a.LinkedAnnouncements },
+                    { className: Jn.a.LinkedAnnouncements },
                     "Linked: " + T
                   )
               ),
               y
                 ? d.a.createElement(
                     "div",
-                    { className: Qn.a.LoadEventsButton, onClick: N },
+                    { className: Jn.a.LoadEventsButton, onClick: N },
                     "LOAD EVENTS"
                   )
                 : v
@@ -12269,12 +12204,12 @@
                 : G
                 ? d.a.createElement(
                     "div",
-                    { className: Qn.a.MigrateEventsButton, onClick: M },
+                    { className: Jn.a.MigrateEventsButton, onClick: M },
                     "MIGRATE EVENTS"
                   )
                 : d.a.createElement(
                     "div",
-                    { className: Qn.a.CompleteMessage },
+                    { className: Jn.a.CompleteMessage },
                     "NOTHING TO MIGRATE"
                   )
             )

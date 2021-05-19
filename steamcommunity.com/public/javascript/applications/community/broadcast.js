@@ -17,11 +17,11 @@
         p = a("5eAM"),
         m = a("VQ2A"),
         u = a("b3LC"),
-        h = a("5L1o"),
-        _ = a("NKJh"),
+        _ = a("5L1o"),
+        h = a("NKJh"),
         b = a("RQmk"),
-        f = a("dfs5"),
-        v = a("0OaU"),
+        v = a("dfs5"),
+        f = a("0OaU"),
         S = a("exH9"),
         g = a("lkRc"),
         E = a("dLk7"),
@@ -30,7 +30,7 @@
           var t = e.appid,
             a = Object(u.c)(t, 0, !0),
             n = (a[0], a[1]),
-            s = Object(f.c)();
+            s = Object(v.c)();
           Object(i.useEffect)(
             function () {
               if (!p.a.BHasAppLinkLoaded(t)) {
@@ -56,7 +56,7 @@
             return c.a.createElement(
               "div",
               { className: o },
-              c.a.createElement(v.a, { size: "medium" }),
+              c.a.createElement(f.a, { size: "medium" }),
               ";"
             );
           var j = "series" != E.type,
@@ -67,7 +67,7 @@
                 { className: o },
                 c.a.createElement(
                   "div",
-                  { className: _.Actions },
+                  { className: h.Actions },
                   c.a.createElement(
                     "a",
                     { href: y, target: g.c.IN_CLIENT ? void 0 : "_blank" },
@@ -87,10 +87,10 @@
                 ),
                 c.a.createElement(
                   "div",
-                  { className: _.StoreSaleBroadcastWidgetRight },
+                  { className: h.StoreSaleBroadcastWidgetRight },
                   c.a.createElement(
                     "div",
-                    { className: _.Actions },
+                    { className: h.Actions },
                     c.a.createElement(
                       "a",
                       { href: y, target: g.c.IN_CLIENT ? void 0 : "_blank" },
@@ -101,7 +101,7 @@
                           "div",
                           {
                             className: Object(S.a)(
-                              _.StoreSaleWidgetTitle,
+                              h.StoreSaleWidgetTitle,
                               "StoreSaleWidgetTitle"
                             ),
                           },
@@ -112,11 +112,11 @@
                   ),
                   c.a.createElement(
                     "div",
-                    { className: _.StoreSaleWidgetRelease },
+                    { className: h.StoreSaleWidgetRelease },
                     E.release
                   ),
                   j &&
-                    c.a.createElement(h.i, {
+                    c.a.createElement(_.i, {
                       info: E,
                       bShowDemoButton: !0,
                       bStackedButtons: !0,
@@ -124,7 +124,7 @@
                 )
               )
             : c.a.createElement("div", {
-                className: _.StoreSaleWidgetEmptyContainer,
+                className: h.StoreSaleWidgetEmptyContainer,
               });
         }),
         y = a("kyHq"),
@@ -137,8 +137,8 @@
         G = a("d+Me"),
         A = a("TLQK"),
         k = a("bxiW"),
-        D = a("kLLr"),
-        L = a("uIWk"),
+        L = a("kLLr"),
+        D = a("uIWk"),
         x = a("rKv1"),
         T = a.n(x),
         W = Object(o.a)(function (e) {
@@ -147,7 +147,7 @@
             n = !t || !t.jsondata || !t.jsondata.broadcast_item_drops_enabled,
             o = Object(i.useRef)(null),
             l = Object(i.useState)(
-              t ? L.a.GetCreatorHome(t.clanSteamID) : null
+              t ? D.a.GetCreatorHome(t.clanSteamID) : null
             ),
             d = l[0],
             p = l[1];
@@ -163,8 +163,8 @@
                       switch (r.label) {
                         case 0:
                           return (
-                            (t = D.a.InitFromClanID(a)),
-                            [4, L.a.LoadCreatorHome(t, e)]
+                            (t = L.a.InitFromClanID(a)),
+                            [4, D.a.LoadCreatorHome(t, e)]
                           );
                         case 1:
                           return (n = r.sent()), e.token.reason || p(n), [2];
@@ -246,7 +246,7 @@
             },
           ],
         },
-        V = (function (e) {
+        H = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -275,7 +275,7 @@
             Object(r.d)(t, e),
             (a = t),
             (t.IsBroadcastAllowed = function () {
-              return g.c.EREALM != y.e.k_ESteamRealmChina;
+              return g.c.EREALM != y.d.k_ESteamRealmChina;
             }),
             (t.prototype.componentDidMount = function () {
               return Object(r.b)(this, void 0, void 0, function () {
@@ -344,13 +344,6 @@
                   }
                 });
               });
-            }),
-            (t.prototype.componentDidUpdate = function (e) {
-              e.nAppIDVOD &&
-                !this.props.nAppIDVOD &&
-                (this.props.bIsPreview && this.props.accountIDs
-                  ? w.a.Get().HintLoadEmbeddablePreviewStreams(this.props)
-                  : w.a.Get().HintLoadEmbeddableStreams(this.props));
             }),
             (t.prototype.componentWillUnmount = function () {
               this.m_cancelSignal.cancel(
@@ -477,27 +470,26 @@
                   o = this.props,
                   c = o.event,
                   l = o.language,
-                  d = o.fnRenderBroadcastContext,
-                  p = o.fnOnVideoEnd;
+                  d = o.fnRenderBroadcastContext;
                 c &&
                   (n = Object(r.a)(Object(r.a)({}, n), {
                     left_panel: c.GetImageURL(
                       "broadcast_left",
-                      l || Object(y.f)(g.c.LANGUAGE)
+                      l || Object(y.e)(g.c.LANGUAGE)
                     ),
                     right_panel: c.GetImageURL(
                       "broadcast_right",
-                      l || Object(y.f)(g.c.LANGUAGE)
+                      l || Object(y.e)(g.c.LANGUAGE)
                     ),
                     store_title: c.GetBroadcastTitle(
-                      l || Object(y.f)(g.c.LANGUAGE)
+                      l || Object(y.e)(g.c.LANGUAGE)
                     ),
                     broadcast_chat_visibility: c.GetBroadcastChatVisibility(),
                   }));
-                var m = this.ConstructSidePanels(n, s),
-                  u = n.store_title ? n.store_title : n.title,
-                  _ = w.a.Get().GetConcurrentStreams(this.props) > 1,
-                  b =
+                var p = this.ConstructSidePanels(n, s),
+                  m = n.store_title ? n.store_title : n.title,
+                  u = w.a.Get().GetConcurrentStreams(this.props) > 1,
+                  h =
                     "radial-gradient(100% 80% at 64% 95%, " +
                     ((c &&
                       c.jsondata &&
@@ -521,7 +513,7 @@
                     i.createElement(
                       "div",
                       {
-                        style: { background: b },
+                        style: { background: h },
                         className: Object(S.a)(
                           ((e = {}),
                           (e[T.a.bordered_container] = !0),
@@ -538,8 +530,8 @@
                             "bordered_title_trgt"
                           ),
                         },
-                        i.createElement(h.d, null),
-                        u,
+                        i.createElement(_.d, null),
+                        m,
                         i.createElement(
                           "div",
                           { className: T.a.bordered_corner_container },
@@ -581,26 +573,25 @@
                               ((t = {}),
                               (t[T.a.container] = !0),
                               (t.embeddable_ctn_trgt = !0),
-                              (t.multistream = _),
+                              (t.multistream = u),
                               (t.broadcast_right_panel_simple =
-                                m.bRightPanelArtworkOrEmpty),
+                                p.bRightPanelArtworkOrEmpty),
                               (t.broadcast_chat_expanded = s),
                               t)
                             ),
                             style: Object(r.a)({}, this.state.innerStyle),
                             onTransitionEnd: this.OnShrinkTransitionEnd,
                           },
-                          m.leftPanel,
-                          i.createElement(H, {
+                          p.leftPanel,
+                          i.createElement(U, {
                             stream: n,
                             bStartMuted: this.state.bStartMuted,
                             fnRenderBroadcastContext: d,
-                            fnOnVideoEnd: p,
                             bWidePlayer: this.props.bWidePlayer,
                           }),
-                          m.rightPanel,
+                          p.rightPanel,
                           this.state.bExpanded &&
-                            i.createElement(U, { stream: n })
+                            i.createElement(V, { stream: n })
                         )
                     ),
                     Boolean(
@@ -610,7 +601,7 @@
                       i.createElement(
                         "div",
                         { className: "" + (c ? T.a.Event : "") },
-                        i.createElement(U, { stream: n })
+                        i.createElement(V, { stream: n })
                       ),
                     i.createElement("div", { className: T.a.clear_div })
                   )
@@ -631,8 +622,8 @@
             (t = a = Object(r.c)([o.a], t))
           );
         })(i.Component),
-        H =
-          ((t.default = V),
+        U =
+          ((t.default = H),
           (function (e) {
             function t(t) {
               var a = e.call(this, t) || this;
@@ -704,7 +695,6 @@
                             bStartMuted: this.props.bStartMuted,
                             fnRenderBroadcastContext: this.props
                               .fnRenderBroadcastContext,
-                            fnOnVideoEnd: this.props.fnOnVideoEnd,
                             nAppIDVOD: this.props.stream.nAppIDVOD,
                           })
                         )
@@ -719,7 +709,7 @@
               t
             );
           })(i.Component)),
-        U = (function (e) {
+        V = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -869,7 +859,7 @@
         })(i.Component),
         M = Object(o.a)(function (e) {
           var t = e.stream,
-            a = Object(f.c)(),
+            a = Object(v.c)(),
             r = I.a.GetOrCreateBroadcastInfo(t.steamid).m_nAppID,
             n = p.a.GetAppLinkInfo(r),
             s = n
