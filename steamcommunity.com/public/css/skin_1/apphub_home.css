@@ -166,11 +166,11 @@ body.apphub_blue
 {
 	position: relative;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 0 10px;
 
 	margin: 0 auto;
 	background-color: #2a2d33;
@@ -194,7 +194,6 @@ body.apphub_blue
 	padding-left: 20px;
 }
 
-
 .apphub_SectionFilter .learnMore
 {
 	padding: 16px;
@@ -217,6 +216,29 @@ body.apphub_blue
 	html.responsive .apphub_SectionFilterLabel.language {
 		clear: left;
 		padding-left: 12px;
+	}
+
+	html.responsive .apphub_SectionFilter {
+		display: grid;
+		grid-template-columns: max-content 1fr;
+		gap: 0 10px;
+
+		padding-right: 12px;
+	}
+
+	html.responsive .apphub_SectionFilter .apphub_SectionFilterLabel {
+		text-align: right;
+	}
+
+	html.responsive .apphub_SectionFilter .filterselect {
+		width: auto;
+		flex: 1;
+	}
+
+	html.responsive .apphub_FollowGame {
+		margin-left: 10px;
+		margin-top: 2px;
+		margin-bottom: 9px;
 	}
 }
 

@@ -46,7 +46,7 @@
       "use strict";
       a.r(t),
         a.d(t, "FAQRoutes", function () {
-          return oa;
+          return ia;
         });
       var o,
         i = a("mrSG"),
@@ -210,26 +210,26 @@
             }),
             (e.prototype.GetDraftTitle = function (e) {
               var t;
-              return (
-                this.m_mapLocalUpdates.get(e).strTitle ||
-                (null === (t = this.m_mapStoredDrafts.get(e)) || void 0 === t
-                  ? void 0
-                  : t.title)
-              );
+              return null !== this.m_mapLocalUpdates.get(e).strTitle &&
+                void 0 !== this.m_mapLocalUpdates.get(e).strTitle
+                ? this.m_mapLocalUpdates.get(e).strTitle
+                : null === (t = this.m_mapStoredDrafts.get(e)) || void 0 === t
+                ? void 0
+                : t.title;
             }),
             (e.prototype.GetDraftContent = function (e) {
               var t;
-              return (
-                this.m_mapLocalUpdates.get(e).strContent ||
-                (null === (t = this.m_mapStoredDrafts.get(e)) || void 0 === t
-                  ? void 0
-                  : t.content)
-              );
+              return null !== this.m_mapLocalUpdates.get(e).strContent &&
+                void 0 !== this.m_mapLocalUpdates.get(e).strContent
+                ? this.m_mapLocalUpdates.get(e).strContent
+                : null === (t = this.m_mapStoredDrafts.get(e)) || void 0 === t
+                ? void 0
+                : t.content;
             }),
             (e.prototype.GetDraftTitleWithFallback = function (e, t) {
               var a, o, i, s, n, r;
-              void 0 === t && (t = c.d.k_ESteamRealmGlobal);
-              var l = t == c.d.k_ESteamRealmChina ? 6 : 0;
+              void 0 === t && (t = c.e.k_ESteamRealmGlobal);
+              var l = t == c.e.k_ESteamRealmChina ? 6 : 0;
               return null !==
                 (r =
                   null !==
@@ -257,8 +257,8 @@
             }),
             (e.prototype.GetDraftContentWithFallback = function (e, t) {
               var a, o, i, s, n, r;
-              void 0 === t && (t = c.d.k_ESteamRealmGlobal);
-              var l = t == c.d.k_ESteamRealmChina ? 6 : 0;
+              void 0 === t && (t = c.e.k_ESteamRealmGlobal);
+              var l = t == c.e.k_ESteamRealmChina ? 6 : 0;
               return null !==
                 (r =
                   null !==
@@ -312,10 +312,10 @@
               var e = new Array();
               return (
                 this.m_summary.visible_in_global_realm &&
-                  e.push(c.d.k_ESteamRealmGlobal),
+                  e.push(c.e.k_ESteamRealmGlobal),
                 this.m_summary.visible_in_global_realm &&
-                  e.push(c.d.k_ESteamRealmChina),
-                0 == e.length && e.push(c.d.k_ESteamRealmGlobal),
+                  e.push(c.e.k_ESteamRealmChina),
+                0 == e.length && e.push(c.e.k_ESteamRealmGlobal),
                 Object(u.a)(
                   e.length > 0,
                   "FAQ " +
@@ -9807,7 +9807,11 @@
                       switch (i.label) {
                         case 0:
                           console.log("importing", e.strRef),
-                            (a = [ue(e.strQuestion), ue(e.strAnswer)]),
+                            (a = [ue(e.strQuestion), ue(e.strAnswer)].filter(
+                              function (e) {
+                                return (null == e ? void 0 : e.length) > 0;
+                              }
+                            )),
                             (o = a.join("\n\n")),
                             (s = ce(e.strTitle)),
                             console.log(e.strTitle),
@@ -9824,7 +9828,9 @@
                               ? [3, 3]
                               : [
                                   4,
-                                  Y.Get().CreateFAQ("Imported KB " + e.strRef),
+                                  Y.Get().CreateFAQ(
+                                    "Imported KB " + e.strRef + ": " + s
+                                  ),
                                 ]
                           );
                         case 2:
@@ -9877,6 +9883,14 @@
         );
       };
       var de = [
+          [
+            /<div[^>]*?troubleshooting_step_container"?\s*>.*?troubleshooting-header[^>]*?>\s*([^<]*)\s*<\/.*?troubleshooting-collapse[^>]*?>\s*(.*?)\s*<\/div>/gim,
+            '[expand type=title title="$1"]$2[/expand]',
+          ],
+          [
+            /(.*)<script[^>]*>.*?headerImage.*?(http[^,]*?)"?,.*?<\/script>/gim,
+            "[img]$2[/img]$1",
+          ],
           [/<script[^>]*>(.*?)<\/script>/gim, ""],
           [/<style[^>]*>(.*?)<\/style>/gim, ""],
           [/<!--(.*?)-->/gim, ""],
@@ -9890,17 +9904,19 @@
             "[h1]$1[/h1]",
           ],
           [
-            /<div[^>]*class\s*=\s*[\'"]?([^\'"> ]*)[^>]*>(.*?)<\/div>/gim,
+            /<div[^>]*class\s*=\s*[\'"]?(section|note|important|warning)[^>]*>(.*?)<\/div>/gim,
             "[section style=$1]$2[/section]",
           ],
-          [/<a\s+[^>]*href\s*=[\s\\]*["']?([^'"]*)[^>]*>/gim, "[url=$1]"],
-          [/<a\s+[^>]*name\s*=[\s\\]*["']?([^'"]*)[^>]*>/gim, "[url id=$1]"],
+          [/<a\s+[^>]*href\s*=[\s\\]*["']?([^\'">]*)[^>]*>/gim, "[url=$1]"],
+          [/<a\s+[^>]*name\s*=[\s\\]*["']?([^\'">]*)[^>]*>/gim, "[url id=$1]"],
           [/<\s*\/\s*a[^>]*>/gim, "[/url]"],
           [/<img[^>]*src\s*=\s*[\'"]?([^\'"> ]*)[^>]*>/gim, "[img]$1[/img]"],
           [
-            /\[img\](images\/.*?)\[\/img\]/gim,
+            /\[img\]\/?(images\/.*?)\[\/img\]/gim,
             "[img]https://support.steampowered.com/$1[/img]",
           ],
+          [/<li>\s*<p>/gim, "<li>"],
+          [/<\/p>\s*<\/li>/gim, "</li>"],
           [/<br>\s*<\/br>/gim, "\n\n"],
           [/<\/p>(&nbsp;|\s)*<p>/gim, "\n\n"],
           [/<\/?(p|br)[^>]*>/gim, "\n\n"],
@@ -9924,13 +9940,22 @@
           [/<(\/?)font(\s+[^>]*>|>)/gim, "[$1b]"],
           [/<(\/?)tt(\s+[^>]*>|>)/gim, "[$1code]"],
           [/<hr[^>]*>/gim, "[hr][/hr]"],
+          [
+            /<iframe[^>]*src\s*=\s*[^>]*www.youtube.com\/embed\/([^\'">? ]*)[^>]*>/gim,
+            "[previewyoutube=$1;full][/previewyoutube]",
+          ],
           [/<iframe[^>]*src\s*=\s*[\'"]?([^\'"> ]*)[^>]*>/gim, "$1"],
           [/<div[^>]*src\s*=\s*[\'"]?([^\'"> ]*)[^>]*>/gim, "$1"],
           [/<embed[^>]*src\s*=\s*[\'"]?([^\'"> ]*)[^>]*>/gim, "$1"],
           [
+            /<video[^>]*?(?:poster\s*=\s*[\'"]?([^\'">]*))?[^>]>\s*<source[^>]*src\s*=\s*[\'"]?([^\'"> ]*).*?<\/video>/gim,
+            '[video poster="$1" mp4="$2" autoplay=0][/video]',
+          ],
+          [
             /<(\/?)(\!doctype|html|head|thead|tbody|body|title|div|figure|p|br|a|object|embed|iframe)[^>]*>/gim,
             "",
           ],
+          [/\[\/expand\]\s+\[expand/gim, "[/expand][expand"],
         ],
         he = [
           ["nbsp", " "],
@@ -10467,11 +10492,11 @@
                     ? void 0
                     : t.length) > 0
                 ) ||
-                (e.pathname != oa.DashboardFAQ(U.b.VANITY_ID) &&
+                (e.pathname != ia.DashboardFAQ(U.b.VANITY_ID) &&
                   !(null === (a = e.pathname) || void 0 === a
                     ? void 0
                     : a.startsWith(
-                        oa.ViewFAQ(U.b.VANITY_ID, "").slice(0, -1)
+                        ia.ViewFAQ(U.b.VANITY_ID, "").slice(0, -1)
                       ))) ||
                 Object(Se.f)("#EventEditor_UnsavedChanges")
               );
@@ -11633,9 +11658,9 @@
               }),
             p =
               n &&
-              ((U.c.EREALM == c.d.k_ESteamRealmGlobal &&
+              ((U.c.EREALM == c.e.k_ESteamRealmGlobal &&
                 s.visible_in_global_realm) ||
-                (U.c.EREALM == c.d.k_ESteamRealmChina &&
+                (U.c.EREALM == c.e.k_ESteamRealmChina &&
                   s.visible_in_china_realm)) &&
               !!(null == l ? void 0 : l.last_publish_timestamp);
           return r.a.createElement(
@@ -11826,9 +11851,10 @@
         Ot = a("ZeAL"),
         Et = a("nrKv"),
         Ft = a("rcjX"),
-        Rt = a("WcT4"),
-        Wt = a.n(Rt),
-        Nt = new Map(
+        Rt = a("zvcZ"),
+        Wt = a("WcT4"),
+        Nt = a.n(Wt),
+        Lt = new Map(
           Object(i.g)(Array.from(Ft.c.entries()), [
             [
               "section",
@@ -11842,10 +11868,10 @@
                     (t = t.substring(1));
                   var a = Object(Ft.d)(e.args, "style"),
                     o = Object(ve.a)(
-                      Wt.a.Section,
-                      "note" == a && Wt.a.Note,
-                      "important" == a && Wt.a.Important,
-                      "warning" == a && Wt.a.Warning
+                      Nt.a.Section,
+                      "note" == a && Nt.a.Note,
+                      "important" == a && Nt.a.Important,
+                      "warning" == a && Nt.a.Warning
                     );
                   return n.createElement(
                     "div",
@@ -11872,81 +11898,92 @@
                     return "";
                   return (
                     (t = t.replace("http://", "https://")),
-                    n.createElement("img", { className: Wt.a.FAQImage, src: t })
+                    n.createElement("img", { className: Nt.a.FAQImage, src: t })
                   );
                 },
                 autocloses: !1,
               },
             ],
+            ["looping_media", { Constructor: Ft.j, autocloses: !1 }],
+            ["video", { Constructor: Ft.n, autocloses: !1 }],
+            ["previewyoutube", { Constructor: Ft.l, autocloses: !1 }],
           ])
         ),
-        Lt = function (e) {
-          var t = n.useCallback(function () {
-              return new Et.c(new Et.b(), 0);
+        Ht = function (e) {
+          var t = n.useCallback(function (e) {
+              return new Rt.b(
+                new Rt.c(
+                  new Et.c(new Et.b(), 0),
+                  e,
+                  [{ urlRegExp: /youtu.be|youtube.com/i, fnBBComponent: Ft.o }],
+                  {}
+                ),
+                e
+              );
             }, []),
-            a = n.useRef(new Ot.a(Nt, t));
+            a = n.useRef(new Ot.a(Lt, t));
           return n.createElement(
             "div",
-            { className: Wt.a.FAQContainer },
+            { className: Nt.a.FAQContainer },
             a.current.ParseBBCode(e.text, {})
           );
         };
-      var Ht = a("orBq"),
-        Vt = function (e) {
+      var Vt = a("orBq"),
+        jt = function (e) {
           var t = e.title,
             a = e.content,
             o = e.elSideBars;
           return r.a.createElement(
             "div",
-            { className: Ht.FAQViewPage },
+            { className: Vt.FAQViewPage },
             r.a.createElement(
               "a",
-              { className: Ht.SupportTitle, href: "" + U.c.HELP_BASE_URL },
+              { className: Vt.SupportTitle, href: "" + U.c.HELP_BASE_URL },
               Object(Se.f)("#FAQViewer_SteamSupport")
             ),
             r.a.createElement(
               "div",
-              { className: Ht.Columns },
+              { className: Vt.Columns },
               r.a.createElement(
                 "div",
-                { className: Object(ve.a)(Ht.LeftCol) },
+                { className: Object(ve.a)(Vt.LeftCol) },
                 r.a.createElement(
                   "div",
-                  { className: Ht.FAQTopicCtn },
-                  r.a.createElement("div", { className: Ht.FAQTitle }, t),
+                  { className: Vt.FAQTopicCtn },
+                  r.a.createElement("div", { className: Vt.FAQTitle }, t),
                   r.a.createElement(
                     "div",
-                    { className: Ht.FAQContent },
-                    r.a.createElement(Lt, { text: a })
+                    { className: Vt.FAQContent },
+                    r.a.createElement(Ht, { text: a })
                   )
                 )
               ),
               r.a.createElement(
                 "div",
-                { className: Ht.RightCol },
-                r.a.createElement("div", { className: Ht.SectionCtn }, o)
+                { className: Vt.RightCol },
+                r.a.createElement("div", { className: Vt.SectionCtn }, o)
               )
             )
           );
         },
-        jt = function (e) {
+        Bt = function (e) {
           return r.a.createElement(
             "div",
-            { className: Ht.FAQViewPage },
+            { className: Vt.FAQViewPage },
             e.children
           );
         },
-        Bt = a("3tbG"),
-        Gt = a("0zs6"),
-        Ut = function (e) {
+        Gt = a("3tbG"),
+        Ut = a("0zs6"),
+        Yt = function (e) {
           var t = e.faqContent;
           return Y.Get().BHasFAQEdit()
             ? r.a.createElement(
                 "div",
-                { className: Object(ve.a)(Gt.Section, Ge.ValveOnlyBackground) },
+                { className: Object(ve.a)(Ut.Section, Ge.ValveOnlyBackground) },
                 r.a.createElement(
                   "div",
-                  { className: Gt.TopicHeader },
+                  { className: Ut.TopicHeader },
                   Object(Se.f)("#FAQViewer_AdminLinks")
                 ),
                 r.a.createElement(
@@ -11955,7 +11992,7 @@
                   Object(Se.n)(
                     "#FAQViewer_Admin_LastUpdate",
                     t.author_account_id
-                      ? r.a.createElement(Yt, {
+                      ? r.a.createElement(Qt, {
                           authorAccountID: Number.parseInt(t.author_account_id),
                         })
                       : Object(Se.f)("#Sale_Debug_Unknown"),
@@ -11968,7 +12005,7 @@
                     )
                   )
                 ),
-                r.a.createElement(Qt, { faqContent: t }),
+                r.a.createElement(Xt, { faqContent: t }),
                 r.a.createElement(
                   ne,
                   {
@@ -11981,7 +12018,7 @@
               )
             : null;
         },
-        Yt = function (e) {
+        Qt = function (e) {
           var t = He.a.InitFromAccountID(e.authorAccountID),
             a = Object(nt.b)(t.ConvertTo64BitString()),
             o = a[0],
@@ -11995,7 +12032,7 @@
                   r.a.Fragment,
                   null,
                   r.a.createElement("img", {
-                    className: Bt.SmallAvatar,
+                    className: Gt.SmallAvatar,
                     src: i.avatar_url,
                     "data-miniprofile": "s" + t.ConvertTo64BitString(),
                   }),
@@ -12003,7 +12040,7 @@
                 )
           );
         },
-        Qt = function (e) {
+        Xt = function (e) {
           var t = e.faqContent,
             a = $(t.faq_id),
             o = a[0],
@@ -12020,7 +12057,7 @@
             null,
             Object(Se.n)(
               "#FAQViewer_DraftNewer",
-              r.a.createElement(Yt, {
+              r.a.createElement(Qt, {
                 authorAccountID: Number.parseInt(s.author_account_id),
               }),
               r.a.createElement(
@@ -12031,18 +12068,18 @@
             )
           );
         },
-        Xt = a("rTBr"),
-        $t = a.n(Xt),
-        Kt = function (e) {
+        $t = a("rTBr"),
+        Kt = a.n($t),
+        Jt = function (e) {
           return r.a.createElement(
             r.a.Fragment,
             null,
             r.a.createElement(
               "div",
-              { className: Gt.Section },
+              { className: Ut.Section },
               r.a.createElement(
                 "div",
-                { className: Gt.TopicHeader },
+                { className: Ut.TopicHeader },
                 Object(Se.f)("#FAQViewer_SideBar_ProblemWithSteam_Title")
               ),
               r.a.createElement(
@@ -12052,7 +12089,7 @@
               ),
               r.a.createElement(
                 "div",
-                { className: Gt.CenterButtonCtn },
+                { className: Ut.CenterButtonCtn },
                 r.a.createElement(
                   "a",
                   { href: U.c.HELP_BASE_URL, className: Ge.EditPreviewButton },
@@ -12062,10 +12099,10 @@
             ),
             r.a.createElement(
               "div",
-              { className: Gt.Section },
+              { className: Ut.Section },
               r.a.createElement(
                 "div",
-                { className: Gt.TopicHeader },
+                { className: Ut.TopicHeader },
                 Object(Se.f)("#FAQViewer_SideBar_CommunityHelp_Title")
               ),
               r.a.createElement(
@@ -12075,7 +12112,7 @@
               ),
               r.a.createElement(
                 "div",
-                { className: Gt.CenterButtonCtn },
+                { className: Ut.CenterButtonCtn },
                 r.a.createElement(
                   "a",
                   {
@@ -12088,30 +12125,30 @@
             )
           );
         },
-        Jt = function (e) {
+        Zt = function (e) {
           var t = (function (e, t) {
               return [e && Y.Get().GetFAQPublishedContent(e, t), !0];
             })(e.faqid, Object($e.d)(U.c.LANGUAGE)),
             a = t[0];
           return t[1]
             ? a
-              ? r.a.createElement(Vt, {
+              ? r.a.createElement(jt, {
                   title: a.title,
                   content: a.content,
                   elSideBars: [
-                    r.a.createElement(Kt, { key: "sidebar", faqContent: a }),
-                    r.a.createElement(Ut, { key: "adminbar", faqContent: a }),
+                    r.a.createElement(Jt, { key: "sidebar", faqContent: a }),
+                    r.a.createElement(Yt, { key: "adminbar", faqContent: a }),
                   ],
                 })
               : r.a.createElement(
-                  jt,
+                  Bt,
                   null,
-                  r.a.createElement(Zt, {
+                  r.a.createElement(ea, {
                     strError: Object(Se.f)("#FAQViewer_NoFAQFound"),
                   })
                 )
             : r.a.createElement(
-                jt,
+                Bt,
                 null,
                 r.a.createElement(be.a, {
                   position: "center",
@@ -12120,7 +12157,7 @@
                 })
               );
         },
-        Zt = function (e) {
+        ea = function (e) {
           var t,
             a =
               U.c.COMMUNITY_BASE_URL +
@@ -12130,16 +12167,16 @@
                 : "gid/" + U.b.CLANSTEAMID);
           return r.a.createElement(
             "div",
-            { className: $t.a.ErrorCtn },
-            r.a.createElement("div", { className: $t.a.ErrorMsg }, e.strError),
+            { className: Kt.a.ErrorCtn },
+            r.a.createElement("div", { className: Kt.a.ErrorMsg }, e.strError),
             r.a.createElement(
               "a",
-              { className: $t.a.EscapeLink, href: a },
+              { className: Kt.a.EscapeLink, href: a },
               Object(Se.f)("#FAQViewer_GoToHomepage")
             )
           );
         },
-        ea = Object(s.a)(function (e) {
+        ta = Object(s.a)(function (e) {
           var t = $(e.faqid),
             a = t[0],
             o = t[1],
@@ -12150,21 +12187,21 @@
                   r.a.Fragment,
                   null,
                   r.a.createElement(At, { draft: a, bPreview: !0 }),
-                  r.a.createElement(Vt, {
+                  r.a.createElement(jt, {
                     title: a.GetDraftTitleWithFallback(i, U.c.EREALM),
                     content: a.GetDraftContentWithFallback(i, U.c.EREALM),
                   }),
                   r.a.createElement(Tt, { draft: a, eLanguage: i })
                 )
               : r.a.createElement(
-                  jt,
+                  Bt,
                   null,
-                  r.a.createElement(Zt, {
+                  r.a.createElement(ea, {
                     strError: Object(Se.f)("#FAQViewer_NoFAQFound"),
                   })
                 )
             : r.a.createElement(
-                jt,
+                Bt,
                 null,
                 r.a.createElement(be.a, {
                   position: "center",
@@ -12173,9 +12210,9 @@
                 })
               );
         }),
-        ta = a("9w6b"),
-        aa = a("WplJ"),
-        oa = {
+        aa = a("9w6b"),
+        oa = a("WplJ"),
+        ia = {
           ViewFAQ: function (e, t) {
             return "/faqs/" + e + "/view/" + t + "*";
           },
@@ -12192,7 +12229,7 @@
             return "/faqs/" + e + "/import";
           },
         },
-        ia = Object(s.a)(function (e) {
+        sa = Object(s.a)(function (e) {
           var t = r.a.useState(!0),
             a = t[0],
             o = t[1];
@@ -12202,7 +12239,7 @@
                 return Object(i.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
-                      return [4, ta.a.InitGlobal()];
+                      return [4, aa.a.InitGlobal()];
                     case 1:
                       return e.sent(), o(!1), [2];
                   }
@@ -12223,22 +12260,22 @@
                     oe.e,
                     null,
                     r.a.createElement(oe.c, {
-                      path: oa.ViewFAQ(":vanity_str", ":faqid"),
+                      path: ia.ViewFAQ(":vanity_str", ":faqid"),
                       render: function (e) {
-                        return r.a.createElement(aa.a, {
+                        return r.a.createElement(oa.a, {
                           config: {
                             "faqs-root": function () {
                               var t = X(e.match.params.faqid);
-                              return r.a.createElement(Jt, { faqid: t });
+                              return r.a.createElement(Zt, { faqid: t });
                             },
                           },
                         });
                       },
                     }),
                     r.a.createElement(oe.c, {
-                      path: oa.EditFAQ(":vanity_str", ":faqid"),
+                      path: ia.EditFAQ(":vanity_str", ":faqid"),
                       render: function (e) {
-                        return r.a.createElement(aa.a, {
+                        return r.a.createElement(oa.a, {
                           config: {
                             "faqs-root": function () {
                               var t = e.match.params.faqid;
@@ -12258,9 +12295,9 @@
                       },
                     }),
                     r.a.createElement(oe.c, {
-                      path: oa.DashboardFAQ(":vanity_str"),
+                      path: ia.DashboardFAQ(":vanity_str"),
                       render: function (e) {
-                        return r.a.createElement(aa.a, {
+                        return r.a.createElement(oa.a, {
                           config: {
                             "faqs-root": function () {
                               return r.a.createElement(qe, null);
@@ -12270,29 +12307,29 @@
                       },
                     }),
                     r.a.createElement(oe.c, {
-                      path: oa.PreviewFAQ(":vanity_str", ":faqid"),
+                      path: ia.PreviewFAQ(":vanity_str", ":faqid"),
                       render: function (e) {
-                        return r.a.createElement(aa.a, {
+                        return r.a.createElement(oa.a, {
                           config: {
                             "faqs-root": function () {
                               var t = X(e.match.params.faqid);
-                              return r.a.createElement(ea, { faqid: t });
+                              return r.a.createElement(ta, { faqid: t });
                             },
                           },
                         });
                       },
                     }),
                     r.a.createElement(oe.c, {
-                      path: oa.ImportTool(":vanity_str"),
+                      path: ia.ImportTool(":vanity_str"),
                       component: le,
                     }),
-                    r.a.createElement(oe.c, { component: sa })
+                    r.a.createElement(oe.c, { component: na })
                   )
                 )
           );
         });
-      t.default = ia;
-      function sa(e) {
+      t.default = sa;
+      function na(e) {
         return "dev" !== U.c.WEB_UNIVERSE
           ? r.a.createElement(oe.b, { to: "/" })
           : r.a.createElement(

@@ -7784,7 +7784,7 @@
               (this.m_regexBannedWords = null),
               (this.m_regexCleanWords = null),
               (this.m_bShownFilterTip = !1),
-              (this.m_TextFilterPreferences = new Pt.h());
+              (this.m_TextFilterPreferences = new Pt.i());
             var e = new Et.a();
             (this.m_TextFilterPreferences.eTextFilterSetting = e.text_filter_setting()),
               (this.m_TextFilterPreferences.bIgnoreFriends = e.text_filter_ignore_friends()),
@@ -10379,7 +10379,7 @@
             Object(n.d)(t, e),
             (r = t),
             (t.IsBroadcastAllowed = function () {
-              return St.d.EREALM != Pt.f.k_ESteamRealmChina;
+              return St.d.EREALM != Pt.g.k_ESteamRealmChina;
             }),
             (t.prototype.componentDidMount = function () {
               return Object(n.b)(this, void 0, void 0, function () {
@@ -10448,6 +10448,13 @@
                   }
                 });
               });
+            }),
+            (t.prototype.componentDidUpdate = function (e) {
+              e.nAppIDVOD &&
+                !this.props.nAppIDVOD &&
+                (this.props.bIsPreview && this.props.accountIDs
+                  ? Or.a.Get().HintLoadEmbeddablePreviewStreams(this.props)
+                  : Or.a.Get().HintLoadEmbeddableStreams(this.props));
             }),
             (t.prototype.componentWillUnmount = function () {
               this.m_cancelSignal.cancel(
@@ -10574,26 +10581,27 @@
                   o = this.props,
                   c = o.event,
                   u = o.language,
-                  d = o.fnRenderBroadcastContext;
+                  d = o.fnRenderBroadcastContext,
+                  l = o.fnOnVideoEnd;
                 c &&
                   (i = Object(n.a)(Object(n.a)({}, i), {
                     left_panel: c.GetImageURL(
                       "broadcast_left",
-                      u || Object(Pt.g)(St.d.LANGUAGE)
+                      u || Object(Pt.h)(St.d.LANGUAGE)
                     ),
                     right_panel: c.GetImageURL(
                       "broadcast_right",
-                      u || Object(Pt.g)(St.d.LANGUAGE)
+                      u || Object(Pt.h)(St.d.LANGUAGE)
                     ),
                     store_title: c.GetBroadcastTitle(
-                      u || Object(Pt.g)(St.d.LANGUAGE)
+                      u || Object(Pt.h)(St.d.LANGUAGE)
                     ),
                     broadcast_chat_visibility: c.GetBroadcastChatVisibility(),
                   }));
-                var l = this.ConstructSidePanels(i, a),
-                  m = i.store_title ? i.store_title : i.title,
-                  f = Or.a.Get().GetConcurrentStreams(this.props) > 1,
-                  b =
+                var m = this.ConstructSidePanels(i, a),
+                  f = i.store_title ? i.store_title : i.title,
+                  b = Or.a.Get().GetConcurrentStreams(this.props) > 1,
+                  p =
                     "radial-gradient(100% 80% at 64% 95%, " +
                     ((c &&
                       c.jsondata &&
@@ -10617,7 +10625,7 @@
                     s.createElement(
                       "div",
                       {
-                        style: { background: b },
+                        style: { background: p },
                         className: Object(nr.a)(
                           ((e = {}),
                           (e[Wr.a.bordered_container] = !0),
@@ -10635,7 +10643,7 @@
                           ),
                         },
                         s.createElement(hr.h, null),
-                        m,
+                        f,
                         s.createElement(
                           "div",
                           { className: Wr.a.bordered_corner_container },
@@ -10677,23 +10685,24 @@
                               ((t = {}),
                               (t[Wr.a.container] = !0),
                               (t.embeddable_ctn_trgt = !0),
-                              (t.multistream = f),
+                              (t.multistream = b),
                               (t.broadcast_right_panel_simple =
-                                l.bRightPanelArtworkOrEmpty),
+                                m.bRightPanelArtworkOrEmpty),
                               (t.broadcast_chat_expanded = a),
                               t)
                             ),
                             style: Object(n.a)({}, this.state.innerStyle),
                             onTransitionEnd: this.OnShrinkTransitionEnd,
                           },
-                          l.leftPanel,
+                          m.leftPanel,
                           s.createElement(xr, {
                             stream: i,
                             bStartMuted: this.state.bStartMuted,
                             fnRenderBroadcastContext: d,
+                            fnOnVideoEnd: l,
                             bWidePlayer: this.props.bWidePlayer,
                           }),
-                          l.rightPanel,
+                          m.rightPanel,
                           this.state.bExpanded &&
                             s.createElement(Er, { stream: i })
                         )
@@ -10799,6 +10808,7 @@
                             bStartMuted: this.props.bStartMuted,
                             fnRenderBroadcastContext: this.props
                               .fnRenderBroadcastContext,
+                            fnOnVideoEnd: this.props.fnOnVideoEnd,
                             nAppIDVOD: this.props.stream.nAppIDVOD,
                           })
                         )

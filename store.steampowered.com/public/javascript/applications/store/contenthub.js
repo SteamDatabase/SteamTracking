@@ -176,7 +176,7 @@
       function _(e, t) {
         var a;
         if (t.localized) {
-          var n = Object(o.g)(u.d.LANGUAGE);
+          var n = Object(o.h)(u.d.LANGUAGE);
           if (
             !(null === (a = e.localized_langs) || void 0 === a
               ? void 0
@@ -518,7 +518,11 @@
             F.a,
             {
               visibleElements: 4,
-              className: Object(A.a)(L.StoreSection, L.StoreSection),
+              className: Object(A.a)(
+                L.StoreSection,
+                L.StoreSection,
+                "SaleSectionCarouselPadding"
+              ),
             },
             t.map(function (e) {
               return C.a.createElement(P.l, {
@@ -979,7 +983,7 @@
                   !1,
                   1,
                   z.k.k_ESortFacetsByMatchCount,
-                  Object(o.g)(u.d.LANGUAGE)
+                  Object(o.h)(u.d.LANGUAGE)
                 )),
                 (this.m_prevTabFacetKey = this.GetPageKey(
                   this.m_SelectedTab,
@@ -1732,7 +1736,7 @@
             var t = W.Get().GetFacetFilter();
             return C.a.createElement(x.c, {
               facetFilterState: t,
-              language: Object(o.g)(u.d.LANGUAGE),
+              language: Object(o.h)(u.d.LANGUAGE),
               nMaxFacetValues: 5,
               fnOnUpdateFilter: function () {
                 Object(ae.c)(e.history, {
@@ -1818,26 +1822,21 @@
             );
           }),
         de = function (e) {
-          var t,
-            a = e.item,
-            r = e.strReason,
-            n = Object(pe.a)(a.id, Object(ge.e)(a.item_type), {
+          var t = e.item,
+            a = e.strReason,
+            r = Object(pe.a)(t.id, Object(ge.e)(t.item_type), {
               include_assets: !0,
             })[0],
-            o = i.a.GetAppLinkInfo(a.id);
-          if (!o || !n) return null;
-          var s =
-              (null === (t = n.assets.GetLibraryHeroURL()) || void 0 === t
-                ? void 0
-                : t.trim().length) > 0
-                ? n.assets.GetLibraryHeroURL()
-                : o.screenshot_list.length > 0
-                ? o.screenshot_list[0]
-                : o.header_image_url,
-            c = Object(le.f)(o.capsule_link);
+            n = i.a.GetAppLinkInfo(t.id);
+          if (!n || !r) return null;
+          var o =
+              "https://cdn.cloudflare.steamstatic.com/steam/apps/" +
+              r.GetAppID() +
+              "/library_hero.jpg",
+            s = Object(le.f)(n.capsule_link);
           return C.a.createElement(
             P.e,
-            { appid: n.GetAppID() },
+            { appid: r.GetAppID() },
             C.a.createElement(
               "div",
               { className: ue.SuperCapsuleCtn },
@@ -1855,7 +1854,7 @@
                 "div",
                 {
                   className: Object(A.a)(ue.BGImage),
-                  style: { backgroundImage: 'url("' + s + '")' },
+                  style: { backgroundImage: 'url("' + o + '")' },
                 },
                 " "
               ),
@@ -1864,26 +1863,26 @@
                 { className: Object(A.a)(ue.FeatureCtn, L.FeatureCtn) },
                 C.a.createElement(
                   "a",
-                  { href: c, className: Object(A.a)(ue.Artwork) },
-                  Object(P.b)(n.GetAppID(), n.GetAppIDToRun()) &&
+                  { href: s, className: Object(A.a)(ue.Artwork) },
+                  Object(P.b)(r.GetAppID(), r.GetAppIDToRun()) &&
                     C.a.createElement(
                       "div",
                       { className: ue.CapsuleDecorators },
                       C.a.createElement(P.h, null)
                     ),
-                  C.a.createElement(P.f, { info: o, appInfo: o }),
-                  C.a.createElement(P.c, { info: o })
+                  C.a.createElement(P.f, { info: n, appInfo: n }),
+                  C.a.createElement(P.c, { info: n })
                 ),
                 C.a.createElement(
                   "div",
                   { className: Object(A.a)(ue.Info) },
                   C.a.createElement(
                     "a",
-                    { className: ue.Title, href: c },
-                    o.title
+                    { className: ue.Title, href: s },
+                    n.title
                   ),
-                  C.a.createElement("div", { className: ue.Reason }, r),
-                  C.a.createElement(P.m, { appInfo: o, instanceNum: a.id })
+                  C.a.createElement("div", { className: ue.Reason }, a),
+                  C.a.createElement(P.m, { appInfo: n, instanceNum: t.id })
                 )
               )
             )

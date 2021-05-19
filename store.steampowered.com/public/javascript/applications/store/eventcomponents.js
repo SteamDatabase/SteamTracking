@@ -1528,7 +1528,7 @@
                 t = this.props.solrData,
                 n = t.unique_id,
                 a = Number(t.appid),
-                r = Object(b.g)(j.d.LANGUAGE),
+                r = Object(b.h)(j.d.LANGUAGE),
                 i = k.c.GetClanEventModel(n),
                 l = null;
               if (i) {
@@ -2610,7 +2610,7 @@
                   r.createElement(
                     "h1",
                     null,
-                    e.GetNameWithFallback(Object(b.g)(j.d.LANGUAGE))
+                    e.GetNameWithFallback(Object(b.h)(j.d.LANGUAGE))
                   ),
                   r.createElement(
                     "div",
@@ -3457,7 +3457,7 @@
                   ),
                 (this.m_objApprovalPriviledge = e),
                 (this.m_LoadingPriviledgePromise = null))
-              : (j.k.logged_in && j.d.EREALM === b.f.k_ESteamRealmChina) ||
+              : (j.k.logged_in && j.d.EREALM === b.g.k_ESteamRealmChina) ||
                 (this.m_objApprovalPriviledge = { bHasAccess: !1 });
           }
           return (
@@ -3901,7 +3901,7 @@
                   partnerEventStore: Ue,
                   event: d,
                   adminPanel:
-                    j.d.EREALM === b.f.k_ESteamRealmChina
+                    j.d.EREALM === b.g.k_ESteamRealmChina
                       ? o.a.createElement(He, { eventModel: d })
                       : o.a.createElement(De.a, {
                           eventModel: d,

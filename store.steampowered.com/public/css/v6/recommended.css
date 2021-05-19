@@ -1622,6 +1622,14 @@ html.touch .similar_grid_item .buttons {
 	color: #8ba6b6;
 	min-width: 320px;
 }
+
+
+@media screen and ( max-width: 450px ) {
+	.user_reviews_summary_bar .summary_section {
+		min-width: 0px;
+	}
+}
+
 .user_reviews_summary_bar .title {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */

@@ -1481,3 +1481,18 @@ h3.apphub_responsive_menu_title {
 .responsive_page_menu .appHubSearchTextForm .appHubSearchTextInput {
 	width: 97%;
 }
+
+
+@media screen and ( max-width: 910px ) {
+	.apphub_HeaderTop {
+		padding-right: 12px;
+		padding-left: 12px;
+		padding-bottom: 6px;
+	}
+}
+
+@media screen and ( max-width: 450px ) {
+	.apphub_AppName {
+		font-size: 20px;
+	}
+}

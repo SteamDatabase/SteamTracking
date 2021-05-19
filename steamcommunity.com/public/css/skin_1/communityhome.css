@@ -12,7 +12,10 @@ body
 	position: relative;
 	max-width: 948px;
 	margin: 0px auto;
-	padding: 20px 1% 0 1%;
+	padding-top: 20px;
+	padding-bottom: 0;
+	padding-left: 1%;
+	padding-right: 1%;
 	text-align: left;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
@@ -81,10 +84,11 @@ body
 {
 	position: relative;
 	max-width: 948px;
-	padding: 0 1%;
 	margin: 0px auto;
 	padding-top: 5px;
 	padding-bottom: 10px;
+	padding-left: 1%;
+	padding-right: 1%;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
 
@@ -304,7 +308,10 @@ input.community_home_search_players_input
 .community_home_sort_options
 {
 	max-width: 948px;
-	padding: 0 1% 20px 1%;
+	padding-top: 0;
+	padding-bottom: 20px;
+	padding-left: 1%;
+	padding-right: 1%;
 	margin: 0 auto;
 	text-align: left;
 			font-family: "Motiva Sans", Sans-serif;
@@ -354,6 +361,13 @@ input.community_home_search_players_input
 
 @media screen and (max-width: 450px)
 {
+	html.responsive .community_home_header,
+	html.responsive .community_home_tabs,
+	html.responsive .community_home_sort_options {
+		padding-left: 3%;
+		padding-right: 3%;
+	}
+
 	html.responsive .community_home_search_ctn {
 		float: none;
 		width: auto;

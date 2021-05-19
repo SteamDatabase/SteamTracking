@@ -422,7 +422,7 @@ body.v6 .wishlist_header h2 {
 	left: -10px;
 	width: calc(100% - 32px);
 	background-color: #808a9c;
-	padding: 30px;
+	padding: 30px 22px 30px 30px;
 	margin-top: -16px;
 	z-index: 2;
 	pointer-events: none;

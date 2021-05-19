@@ -303,22 +303,33 @@ CWishlistController.prototype.BuildElements = function()
 				.replace(/%5\$s/g, rgAppInfo['free_promo']?'checkout/addfreelicense':'cart');
 			}
 			else if( rgAppInfo['prerelease'] )
+			{
 				strPurchaseArea = '<a class="coming_soon_link" href="'+GStoreItemData.GetAppURL(  wishlist.appid , 'wishlist_details')+'"><span>'+"Coming soon"+'</span></a>';
+			}
 			else if( rgAppInfo['free'] )
 			{
 				var strURL = 'steam://run/%1$s';
-				if( !g_bIsInSteamClient )
+				var strPlayButton = "Play now";
+				if ( g_bIsMobileAgent )
+				{
+					// On mobile devices show a 'free' link to the store page since play is not supported
+					strURL = GStoreItemData.GetAppURL( wishlist.appid );
+					strPlayButton = "Free";
+				}
+				else if( !g_bIsInSteamClient )
+				{
 					strURL = 'javascript:ShowGotSteamModal(\''+strURL+'\', %2$s, &quot;Play this game now&quot; )';
-
+				}
 
 				strPurchaseArea += "<a class=\"btn_green_steamui btn_medium\" href=\"%4$s\"><span>%3$s<\/span><\/a><\/div>"					.replace ( /%4\$s/g, strURL  )
 					.replace ( /%1\$s/g, wishlist.appid  )
 					.replace ( /%2\$s/g, V_EscapeHTML( JSON.stringify( rgAppInfo.name ) ) )
-					.replace ( /%3\$s/g, rgAppInfo['type'] == 'Video' ? "Watch Now" : "Play now" )
+					.replace ( /%3\$s/g, rgAppInfo['type'] == 'Video' ? "Watch Now" : strPlayButton )
 			}
 			else
+			{
 				strPurchaseArea += '<a class="btn_blue_steamui btn_medium noicon" href="'+GStoreItemData.GetAppURL(  wishlist.appid , 'wishlist_details')+'"><span>'+"View Details"+'</span></a><a class="btn_blue_steamui btn_medium icon" href="'+GStoreItemData.GetAppURL(  wishlist.appid , 'wishlist_details')+'"><span><img class="ico_cart" src="https://store.cloudflare.steamstatic.com/public/images/v6/ico/wishlist/ico_info.png"></span></a></div>';
-
+			}
 
 
 			var options = {  year: 'numeric', month: 'numeric', day: 'numeric' };
@@ -404,10 +415,21 @@ CWishlistController.prototype.SetFilterString = function()
 	history.replaceState(undefined, undefined, "#" + strFilterString)
 }
 
+CWishlistController.prototype.ApplyDefaultView = function()
+{
+	var strMode = g_bIsMobileAgent ? 'compact' : 'full';
+
+	$J('#viewmode_'+V_EscapeHTML( strMode )).attr('checked',true);
+
+	if( strMode == "compact")
+		this.elContainer.addClass('compact');
+	else
+		this.elContainer.removeClass('compact');
+}
+
 CWishlistController.prototype.LoadSettings = function()
 {
 	var lsValue = WebStorage.GetLocal('wishlistSettings');
-
 
 	var rgPairs = location.hash.substring(1).split('&');
 	if( rgPairs.length > 0 && rgPairs[0] )
@@ -419,7 +441,8 @@ CWishlistController.prototype.LoadSettings = function()
 
 			$J('input[name=\''+V_EscapeHTML( rgKV[ 0 ] )+'\']').attr('checked',true);
 		}
-	} else if( lsValue != null )
+	} 
+	else if( lsValue != null )
 	{
 		this.rgFilterSettings = lsValue;
 	}
@@ -435,12 +458,16 @@ CWishlistController.prototype.LoadSettings = function()
 		this.SetDropdownLabel('type', this.rgFilterSettings.type );
 	if( this.rgFilterSettings.term )
 		$J('#wishlist_search').val(this.rgFilterSettings.term);
+	
 	if( this.rgFilterSettings.view )
 	{
 		this.SetViewMode ( this.rgFilterSettings.view );
 		$J('#viewmode_'+V_EscapeHTML(  this.rgFilterSettings.view )).attr('checked',true);
 	}
-
+	else
+	{
+		this.ApplyDefaultView();
+	}
 }
 
 CWishlistController.prototype.SaveSettings = function()

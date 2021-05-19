@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6537362";
+var CLSTAMP = "6549379";
 !(function (e) {
   function t(t) {
     for (
@@ -154,9 +154,9 @@ var CLSTAMP = "6537362";
                 42: "a84027090d482f9bdd47",
                 43: "87dc4a1e6a0f1c55ed09",
                 44: "bf5c9682d395c9e7b6e8",
-                45: "07dbd3155c53a5bc665d",
+                45: "78b5914c2c65c006e40b",
                 46: "94e8f42e73a626343128",
-                47: "97f37bd143d40ca4e7aa",
+                47: "499c39e7531723f04b9d",
                 48: "8650da31254fa3bb3e52",
                 49: "ff20ffbda269d93200a4",
                 50: "c469bce0fc12a204a409",
@@ -170,7 +170,7 @@ var CLSTAMP = "6537362";
                 58: "1906154d4d540f50ffe3",
                 59: "1183386e91952eb9897a",
                 60: "c81899f447cf840c2cbc",
-                61: "37397e31045cf6ed924f",
+                61: "959c99995ce0fa14a241",
                 62: "93fa758bfcece3bd62c4",
                 63: "83bfbd74c0df4580af30",
                 64: "03260a8f9dc63abd3554",
@@ -1751,7 +1751,7 @@ var CLSTAMP = "6537362";
   },
   hEDq: function (e, t, n) {
     "use strict";
-    n.d(t, "n", function () {
+    n.d(t, "o", function () {
       return a;
     }),
       n.d(t, "d", function () {
@@ -1775,7 +1775,7 @@ var CLSTAMP = "6537362";
       n.d(t, "e", function () {
         return m;
       }),
-      n.d(t, "p", function () {
+      n.d(t, "q", function () {
         return b;
       }),
       n.d(t, "g", function () {
@@ -1787,10 +1787,10 @@ var CLSTAMP = "6537362";
       n.d(t, "j", function () {
         return v;
       }),
-      n.d(t, "l", function () {
+      n.d(t, "m", function () {
         return E;
       }),
-      n.d(t, "m", function () {
+      n.d(t, "n", function () {
         return S;
       }),
       n.d(t, "a", function () {
@@ -1798,9 +1798,12 @@ var CLSTAMP = "6537362";
       });
     var r = n("mrSG"),
       i = n("0N1H");
-    n.d(t, "o", function () {
-      return i.f;
-    });
+    n.d(t, "l", function () {
+      return i.d;
+    }),
+      n.d(t, "p", function () {
+        return i.f;
+      });
     var o = n("2vnA"),
       a = (function () {
         function e() {
@@ -2382,7 +2385,7 @@ PERFORMANCE OF THIS SOFTWARE.
         }),
         (e.IsELanguageValidInRealm = function (e, t) {
           return (
-            t === (29 === e ? a.m.k_ESteamRealmChina : a.m.k_ESteamRealmGlobal)
+            t === (29 === e ? a.n.k_ESteamRealmChina : a.n.k_ESteamRealmGlobal)
           );
         }),
         (e.GetLanguageListForRealms = function (e) {

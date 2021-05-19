@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6537362";
+var CLSTAMP = "6549379";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [71],
   {
@@ -427,14 +427,14 @@ var CLSTAMP = "6537362";
             ),
             Object.defineProperty(e.prototype, "bIsFollowingEnabled", {
               get: function () {
-                return c.c.EREALM != s.d.k_ESteamRealmChina;
+                return c.c.EREALM != s.e.k_ESteamRealmChina;
               },
               enumerable: !1,
               configurable: !0,
             }),
             Object.defineProperty(e.prototype, "bIsCuratorsEnabled", {
               get: function () {
-                return c.c.EREALM != s.d.k_ESteamRealmChina;
+                return c.c.EREALM != s.e.k_ESteamRealmChina;
               },
               enumerable: !1,
               configurable: !0,
@@ -2963,10 +2963,11 @@ var CLSTAMP = "6537362";
           l = Object(r.f)(e, ["onButtonDown"]),
           u = i.a.useCallback(
             function (e) {
-              o && o(e),
-                e.cancelBubble ||
-                  (Object(a.c)(e) || n.FireUnhandledGamepadEventCallbacks(e),
-                  e.stopPropagation());
+              if ((o && o(e), !e.cancelBubble)) {
+                var t = Object(a.c)(e);
+                t || n.FireUnhandledGamepadEventCallbacks(e),
+                  e.stopPropagation();
+              }
             },
             [o, n]
           );
@@ -8924,7 +8925,7 @@ var CLSTAMP = "6537362";
           (e.IsELanguageValidInRealm = function (e, t) {
             return (
               t ===
-              (29 === e ? a.d.k_ESteamRealmChina : a.d.k_ESteamRealmGlobal)
+              (29 === e ? a.e.k_ESteamRealmChina : a.e.k_ESteamRealmGlobal)
             );
           }),
           (e.GetLanguageListForRealms = function (e) {
@@ -11402,11 +11403,11 @@ var CLSTAMP = "6537362";
                 : null
             );
           }),
-          (e.prototype.EnsureChildrenSorted = function () {
-            if (!this.m_bChildrenSorted) {
-              var e = void 0;
+          (e.prototype.EnsureChildrenSorted = function (e) {
+            if ((void 0 === e && (e = !1), !this.m_bChildrenSorted || e)) {
+              var t = void 0;
               -1 != this.m_iActiveChild &&
-                (e = this.m_rgChildren[this.m_iActiveChild]),
+                (t = this.m_rgChildren[this.m_iActiveChild]),
                 this.m_rgChildren.sort(function (e, t) {
                   var n = e.m_element,
                     r = t.m_element;
@@ -11419,7 +11420,7 @@ var CLSTAMP = "6537362";
                     ? -1
                     : 0;
                 }),
-                e && (this.m_iActiveChild = this.m_rgChildren.indexOf(e)),
+                t && (this.m_iActiveChild = this.m_rgChildren.indexOf(t)),
                 (this.m_bChildrenSorted = !0);
             }
           }),
@@ -11529,16 +11530,16 @@ var CLSTAMP = "6537362";
               c = !1;
             switch (t) {
               case o.a.DIR_UP:
-                r && (c = r());
+                r && (c = r(e.detail));
                 break;
               case o.a.DIR_RIGHT:
-                i && (c = i());
+                i && (c = i(e.detail));
                 break;
               case o.a.DIR_DOWN:
-                a && (c = a());
+                a && (c = a(e.detail));
                 break;
               case o.a.DIR_LEFT:
-                s && (c = s());
+                s && (c = s(e.detail));
             }
             return c;
           }),
@@ -11546,7 +11547,7 @@ var CLSTAMP = "6537362";
             var t = this.GetLayout(),
               n = this.ComputeRelativeDirection(e, t);
             if (n == d.INVALID) return !1;
-            if ((this.EnsureChildrenSorted(), t == l.GRID))
+            if ((this.EnsureChildrenSorted(!0), t == l.GRID))
               return this.BPerformGridNavigation(this.m_iActiveChild, n, e);
             var r = this.m_iActiveChild;
             return (
@@ -11873,13 +11874,13 @@ var CLSTAMP = "6537362";
       n.d(t, "c", function () {
         return a;
       }),
-        n.d(t, "f", function () {
+        n.d(t, "g", function () {
           return u;
         }),
         n.d(t, "b", function () {
           return p;
         }),
-        n.d(t, "d", function () {
+        n.d(t, "e", function () {
           return m;
         }),
         n.d(t, "a", function () {
@@ -11887,9 +11888,12 @@ var CLSTAMP = "6537362";
         });
       n("mrSG");
       var r = n("mgoM");
-      n.d(t, "e", function () {
-        return r.d;
-      });
+      n.d(t, "d", function () {
+        return r.b;
+      }),
+        n.d(t, "f", function () {
+          return r.d;
+        });
       n("2vnA");
       var o;
       !(function (e) {

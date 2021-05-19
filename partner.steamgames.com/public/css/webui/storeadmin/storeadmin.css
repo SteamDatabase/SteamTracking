@@ -525,9 +525,8 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
   padding-right: 20px;
-  vertical-align: middle;
+  align-items: center;
 }
 .sharedappdetailsheader_TitleSection_2oAYX.sharedappdetailsheader_Fullscreen_ywsZN {
   opacity: 0;
@@ -4180,6 +4179,142 @@ span.suggestdialog_mentionSearchMatch_1t0Xl {
   display: inline-block;
 }
 
+.youtubeembed_DynamicLinkBox_1QopE {
+  position: relative;
+  font-family: Helvetica, Arial, sans-serif;
+  border-radius: 6px;
+  padding: 8px;
+  margin: 10px 0px 10px 0px;
+  cursor: pointer;
+  overflow: hidden;
+  background: -webkit-linear-gradient(
+    60deg,
+    rgba(87, 92, 104, 0.3) 5%,
+    rgba(255, 255, 255, 0.05) 95%
+  );
+  background: linear-gradient(
+    60deg,
+    rgba(87, 92, 104, 0.3) 5%,
+    rgba(255, 255, 255, 0.05) 95%
+  );
+}
+.youtubeembed_DynamicLinkBox_1QopE .youtubeembed_DynamicLink_Preview_3-eez {
+  float: left;
+  margin-right: 14px;
+  max-height: 88px;
+  max-width: 75%;
+}
+a.youtubeembed_DynamicLinkBox_1QopE {
+  display: block;
+  text-decoration: none !important;
+  border-bottom: none;
+}
+a.youtubeembed_DynamicLinkBox_1QopE:hover {
+  border-bottom: none;
+}
+.youtubeembed_DynamicLink_Author_30kmA {
+  height: 16px;
+  font-size: 12px;
+  color: #95a6b2;
+  margin-bottom: 4px;
+}
+.youtubeembed_DynamicLink_Author_30kmA span {
+  color: #809fb7;
+}
+.youtubeembed_DynamicLink_Description_3sqJF {
+  padding-bottom: 10px;
+}
+.youtubeembed_DynamicLink_Content_iGJXx {
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 300;
+  color: silver;
+  text-shadow: 0 0 16px #000;
+  font-size: 13px;
+  line-height: normal;
+  text-align: left;
+  display: flow-root;
+}
+.youtubeembed_DynamicLink_Name_2-qnu {
+  font-size: 15px;
+  color: #aad8ec;
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 300;
+  border-bottom: 1px dotted rgba(109, 207, 246, 0.6);
+  padding-bottom: 0px;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+.youtubeembed_DynamicLink_YoutubeViews_3ALy1 {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  color: #bfbfbf;
+}
+.youtubeembed_Dynamiclink_Content_1OZDu {
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 300;
+  color: silver;
+  text-shadow: 0 0 16px #000;
+  font-size: 13px;
+  line-height: 15px;
+  margin-bottom: 9px;
+  text-align: left;
+  display: flow-root;
+}
+.youtubeembed_DynamicLink_URL_Zo5Wg a,
+.youtubeembed_DynamicLink_AuthorName_WkET8 {
+  color: #ffffff;
+}
+.youtubeembed_DynamicLink_Date_3KWqB {
+  float: right;
+}
+.youtubeembed_PreviewYouTubeVideo_3ebu4 {
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+}
+.youtubeembed_PreviewYouTubeVideo_3ebu4 img {
+  width: 100%;
+  display: block;
+}
+.youtubeembed_PreviewYouTubeVideo_3ebu4 iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.youtubeembed_PreviewYouTubeVideo_3ebu4.youtubeembed_sizeThumb_gQnf7 {
+  width: 311px;
+  height: 187px;
+}
+.youtubeembed_PreviewYouTubeVideo_3ebu4.youtubeembed_sizeFull_WaUEM {
+  width: 100%;
+  margin-bottom: 6px;
+  margin-top: 4px;
+}
+.youtubeembed_PreviewYouTubeVideo_3ebu4.youtubeembed_floatLeft_HphUI {
+  float: left;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.youtubeembed_PreviewYouTubeVideo_3ebu4.youtubeembed_floatRight_3NCOz {
+  float: right;
+  padding-left: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+iframe.youtubeembed_PreviewYouTubeVideo_3ebu4.youtubeembed_floatLeft_HphUI,
+iframe.youtubeembed_PreviewYouTubeVideo_3ebu4.youtubeembed_floatRight_3NCOz {
+  float: none;
+  padding: 0px;
+}
+
 .bbcodes_Bold_YFA7u {
   display: inline;
   font-weight: bold;
@@ -4274,7 +4409,7 @@ span.suggestdialog_mentionSearchMatch_1t0Xl {
   display: table;
   word-break: break-word;
   line-height: 28px;
-  padding: 10px;
+  padding: 0px 0px 10px 20px;
 }
 .bbcodes_Code_3VS8- {
   display: block;
@@ -4344,142 +4479,66 @@ span.suggestdialog_mentionSearchMatch_1t0Xl {
 .bbcodes_TableData_15DlH:first-of-type {
   border-left: 1px solid #77797e;
 }
-
-.eventbbcodeyoutubeembed_DynamicLinkBox_2cyyJ {
-  position: relative;
-  font-family: Helvetica, Arial, sans-serif;
-  border-radius: 6px;
-  padding: 8px;
-  margin: 10px 0px 10px 0px;
+.bbcodes_ExpandSectionBlock_1KRtd .bbcodes_ExpandSectionHeader_PlB0t {
+  padding: 3px 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: fit-content;
+  background-color: rgba(255, 255, 255, 0.11);
+  -webkit-user-select: none;
+  -moz-user-select: none;
   cursor: pointer;
-  overflow: hidden;
-  background: -webkit-linear-gradient(
-    60deg,
-    rgba(87, 92, 104, 0.3) 5%,
-    rgba(255, 255, 255, 0.05) 95%
-  );
-  background: linear-gradient(
-    60deg,
-    rgba(87, 92, 104, 0.3) 5%,
-    rgba(255, 255, 255, 0.05) 95%
-  );
+  color: #aebac2;
 }
-.eventbbcodeyoutubeembed_DynamicLinkBox_2cyyJ
-  .eventbbcodeyoutubeembed_DynamicLink_Preview_3mGEl {
-  float: left;
-  margin-right: 14px;
-  max-height: 88px;
-  max-width: 75%;
+.bbcodes_ExpandSectionBlock_1KRtd
+  .bbcodes_ExpandSectionHeader_PlB0t
+  .bbcodes_EmbedArrow_3FT4d
+  svg {
+  margin-left: 10px;
+  width: 12px;
+  height: 12px;
+  fill: #aebac2;
+  transition: transform;
+  transition-duration: 0.2s;
 }
-a.eventbbcodeyoutubeembed_DynamicLinkBox_2cyyJ {
-  display: block;
-  text-decoration: none !important;
-  border-bottom: none;
+.bbcodes_ExpandSectionBlock_1KRtd .bbcodes_ExpandSectionHeader_PlB0t:hover {
+  color: white;
 }
-a.eventbbcodeyoutubeembed_DynamicLinkBox_2cyyJ:hover {
-  border-bottom: none;
+.bbcodes_ExpandSectionBlock_1KRtd
+  .bbcodes_ExpandSectionHeader_PlB0t:hover
+  .bbcodes_EmbedArrow_3FT4d
+  svg {
+  fill: white;
 }
-.eventbbcodeyoutubeembed_DynamicLink_Author_1IEda {
-  height: 16px;
-  font-size: 12px;
-  color: #95a6b2;
-  margin-bottom: 4px;
+.bbcodes_ExpandSectionBlock_1KRtd .bbcodes_ExpandSectionBody_RpylK {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px;
+  border-radius: 2px;
 }
-.eventbbcodeyoutubeembed_DynamicLink_Author_1IEda span {
-  color: #809fb7;
+.bbcodes_ExpandSectionBlock_1KRtd.bbcodes_ExpandSection_WithTitle_1FbuV {
+  padding-bottom: 8px;
 }
-.eventbbcodeyoutubeembed_DynamicLink_Description_aaNoT {
-  padding-bottom: 10px;
-}
-.eventbbcodeyoutubeembed_DynamicLink_Content_2Hd95 {
-  font-family: "Motiva Sans", Sans-serif;
-  font-weight: 300;
-  color: silver;
-  text-shadow: 0 0 16px #000;
-  font-size: 13px;
-  line-height: normal;
-  text-align: left;
-  display: flow-root;
-}
-.eventbbcodeyoutubeembed_DynamicLink_Name_bc0o3 {
-  font-size: 15px;
-  color: #aad8ec;
-  font-family: "Motiva Sans", Sans-serif;
-  font-weight: 300;
-  border-bottom: 1px dotted rgba(109, 207, 246, 0.6);
-  padding-bottom: 0px;
-  display: inline-block;
-  margin-bottom: 6px;
-}
-.eventbbcodeyoutubeembed_DynamicLink_YoutubeViews_1I--j {
-  padding-top: 4px;
-  padding-bottom: 4px;
-  color: #bfbfbf;
-}
-.eventbbcodeyoutubeembed_Dynamiclink_Content_2OXPd {
-  font-family: "Motiva Sans", Sans-serif;
-  font-weight: 300;
-  color: silver;
-  text-shadow: 0 0 16px #000;
-  font-size: 13px;
-  line-height: 15px;
-  margin-bottom: 9px;
-  text-align: left;
-  display: flow-root;
-}
-.eventbbcodeyoutubeembed_DynamicLink_URL_3PJCU a,
-.eventbbcodeyoutubeembed_DynamicLink_AuthorName_yvZgF {
-  color: #ffffff;
-}
-.eventbbcodeyoutubeembed_DynamicLink_Date_3btwO {
-  float: right;
-}
-.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2lqcm {
-  display: block;
+.bbcodes_ExpandSectionBlock_1KRtd.bbcodes_ExpandSection_WithTitle_1FbuV
+  .bbcodes_ExpandSectionHeader_PlB0t {
+  box-sizing: border-box;
   width: 100%;
+  padding: 8px;
+  color: white;
+  font-size: 19px;
+  line-height: 22px;
+  font-weight: 300;
+}
+.bbcodes_ExpandSectionBlock_1KRtd.bbcodes_ExpandSection_WithTitle_1FbuV
+  .bbcodes_ExpandSectionHeader_PlB0t
+  .bbcodes_EmbedArrow_3FT4d {
   margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  overflow: hidden;
 }
-.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2lqcm img {
-  width: 100%;
-  display: block;
-}
-.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2lqcm iframe {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2lqcm.eventbbcodeyoutubeembed_sizeThumb_1U6kg {
-  width: 311px;
-  height: 187px;
-}
-.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2lqcm.eventbbcodeyoutubeembed_sizeFull_1r2y9 {
-  width: 100%;
-  margin-bottom: 6px;
-  margin-top: 4px;
-}
-.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2lqcm.eventbbcodeyoutubeembed_floatLeft_E51DO {
-  float: left;
-  padding-right: 8px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2lqcm.eventbbcodeyoutubeembed_floatRight_1s8hp {
-  float: right;
-  padding-left: 8px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2lqcm.eventbbcodeyoutubeembed_floatLeft_E51DO,
-iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2lqcm.eventbbcodeyoutubeembed_floatRight_1s8hp {
-  float: none;
-  padding: 0px;
+.bbcodes_ExpandSectionBlock_1KRtd.bbcodes_ExpandSection_WithTitle_1FbuV
+  .bbcodes_ExpandSectionHeader_PlB0t
+  .bbcodes_EmbedArrow_3FT4d
+  svg {
+  margin-right: 8px;
 }
 
 .image_ErrorDiv_bxLsI {
@@ -9529,46 +9588,6 @@ iframe.eventbbcodeparser_MedalTVWidget_3pE8b {
   background-image: radial-gradient(ellipse at top left, #42454c, #25282e);
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
-}
-.eventbbcodeparser_ExpandSectionBlock_rsaD2
-  .eventbbcodeparser_ExpandSectionHeader_1_OHv {
-  padding: 3px 8px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: fit-content;
-  background-color: rgba(255, 255, 255, 0.11);
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  cursor: pointer;
-  color: #aebac2;
-}
-.eventbbcodeparser_ExpandSectionBlock_rsaD2
-  .eventbbcodeparser_ExpandSectionHeader_1_OHv
-  .eventbbcodeparser_EmbedArrow_1mLgX
-  svg {
-  margin-left: 10px;
-  width: 12px;
-  height: 12px;
-  fill: #aebac2;
-  transition: transform;
-  transition-duration: 0.2s;
-}
-.eventbbcodeparser_ExpandSectionBlock_rsaD2
-  .eventbbcodeparser_ExpandSectionHeader_1_OHv:hover {
-  color: white;
-}
-.eventbbcodeparser_ExpandSectionBlock_rsaD2
-  .eventbbcodeparser_ExpandSectionHeader_1_OHv:hover
-  .eventbbcodeparser_EmbedArrow_1mLgX
-  svg {
-  fill: white;
-}
-.eventbbcodeparser_ExpandSectionBlock_rsaD2
-  .eventbbcodeparser_ExpandSectionBody_WGoIL {
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 8px;
-  border-radius: 2px;
 }
 .DetailPageExample .eventbbcodeparser_Header2_1XW7a {
   font-size: 10px;
@@ -19037,6 +19056,18 @@ img.broadcastplayer_BroadcastPlaceholderImg_1LIEZ {
   width: fit-content;
   min-width: 50%;
   max-width: 100%;
+}
+.optin_display_dynamic_sections_TextArea_2GJyI {
+  width: 80vw;
+  max-width: 570px;
+  height: 400px;
+  cursor: text;
+  background: transparent;
+  color: wheat;
+  font-size: 14px;
+  border: 1px solid #464c58;
+  padding: 10px;
+  border-radius: 4px;
 }
 
 .featuring_Featuring_3T5cu {

@@ -53,6 +53,8 @@
     "Loading": "Loading...",
     "Updating": "Updating...",
     "Uploading": "Uploading...",
+    "Saving": "Saving...",
+    "Sending": "Sending...",
     "Settings": "Settings",
     "FriendSettings_AlwaysNewChatWindow": "Always open a new chat window rather than a tab",
     "g_DisabledOnWeb": "Unavailable in web version",
