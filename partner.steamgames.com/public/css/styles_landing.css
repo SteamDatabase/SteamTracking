@@ -664,6 +664,10 @@ p {
 		vertical-align: middle;
 		
 	}
+
+	.landingtable td.wrap, .landingTable .td.wrap {
+		overflow-wrap: anywhere;
+	}
 	
 	.landingTable .td.readOnly {
 		background-color: #141719;
