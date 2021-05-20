@@ -1144,14 +1144,12 @@ function EnableSearchSuggestions( elemTerm, navcontext, cc, realm, l, rgUserPref
 	$Term.on( 'keydown', function( event ) { SearchSuggestOnKeyDown( event, $Term, $SuggestionsCtn, $Suggestions ); } );
 	$Term.on( 'click focus', function( event ) { SearchSuggestClearDefaultSearchText( $Term, $SuggestionsCtn, $Suggestions ); } );
 	$Term.on( 'blur', function( event ) { SearchSuggestSetDefaultSearchText( $Term, $SuggestionsCtn, $Suggestions ); } );
-	g_oSuggestParams = {
+	g_oSuggestParams = $J.extend( {
 		cc: cc,
 		realm: realm,
 		l:l,
-		excluded_tags: rgUserPreferences['excluded_tags'],
-		excluded_content_descriptors: rgUserPreferences['excluded_content_descriptors'],
 		v: strPackageXMLVersion
-	}
+	}, rgUserPreferences );
 }
 function SearchTimeout( $Term, value, $SuggestionsCtn, $Suggestions )
 {
