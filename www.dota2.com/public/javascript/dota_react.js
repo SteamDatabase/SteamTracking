@@ -205,35 +205,35 @@
               }[e] || e) +
               ".js?contenthash=" +
               {
-                1: "7ae38c95bba0beb66751",
-                2: "743bf41d442b22f098ce",
-                3: "916ef00837d07ba4b386",
-                4: "28c35dfe1bacca6e8b09",
-                5: "e6756cdf0ec3b436870f",
+                1: "a2da60547297fda8dfc1",
+                2: "81fd2f8f7ce856a306f7",
+                3: "c45175b9447526b62472",
+                4: "cde657d677176dc4213b",
+                5: "9682938f4e9094cca324",
                 6: "58afd8a902f3e6b132b2",
-                7: "0bdcdfb57df77d6d15a9",
-                8: "c2f4381a9a3b07191124",
-                9: "c980e6209217b092c115",
-                10: "9d382897f4e3456d5446",
-                11: "bfd502384e1ca696d841",
-                12: "e68f78169ad435818e9e",
+                7: "99e75a2b84c30fe40d77",
+                8: "30294df7b272787e0c49",
+                9: "29e676c8c0d17fb134ab",
+                10: "fc8dffa77cd527f3d465",
+                11: "559b7bcaded73024ea5d",
+                12: "38d6ae419dead5530629",
                 13: "0a546b9cce299e1435cb",
-                14: "7576b1bc6dad409ad127",
-                15: "a35c093f795ce0d20c0a",
-                16: "f401be869c8f10a5e8b2",
-                17: "ec577453a13d3331339c",
-                18: "e983da49ba09dbabd4d2",
-                19: "20688e972b38962e6506",
+                14: "4380647eaf2d22fd88cc",
+                15: "ec0d9f61979c1fb9c13f",
+                16: "d6675aec65e16c178273",
+                17: "e37ca2ed3480ee8d40d5",
+                18: "3ef0f23e03e3e6a31403",
+                19: "c0bb526174b2b494d466",
                 20: "1fe10794b24fbc63d1a4",
-                21: "875473737c8e039b8624",
-                22: "f6496ee70e37a846e32e",
-                23: "c144d4483d868a523340",
-                24: "a99164ea3d608f389451",
-                25: "122f7e1a0517f1891ee2",
-                26: "9c8bd9a5436415bd25be",
-                27: "4dc545325593ff2217c2",
-                28: "92ec4ec7e12d633a69da",
-                29: "28bc2f20e6b493ee3393",
+                21: "b4e2e998961f6937ae0c",
+                22: "dae539235d3c09e01897",
+                23: "7ca2c6b483949c84142a",
+                24: "aca6f33e38609e4b158a",
+                25: "419d6aae6b9ceaa3be16",
+                26: "c371b3171eb3c34ff785",
+                27: "39bcc337e571b8b85b91",
+                28: "09d93e22d9a194d63d92",
+                29: "a78a3de09fe56bd32b96",
                 30: "a2683b6869f94691e758",
                 31: "56d93acd58ff59a74b81",
                 32: "174556465f9559969258",
@@ -38155,7 +38155,16 @@ object-assign
             null == r
               ? void 0
               : r.sort(function (e, t) {
-                  return s.indexOf(e.language) - s.indexOf(t.language);
+                  var a = s.indexOf(e.language) - s.indexOf(t.language);
+                  return a && 0 != a
+                    ? a
+                    : e.broadcast_provider == Pa.a.LEAGUE_BROADCAST_STEAM &&
+                      t.broadcast_provider != Pa.a.LEAGUE_BROADCAST_STEAM
+                    ? 1
+                    : t.broadcast_provider == Pa.a.LEAGUE_BROADCAST_STEAM &&
+                      e.broadcast_provider != Pa.a.LEAGUE_BROADCAST_STEAM
+                    ? -1
+                    : 0;
                 });
         if ((null == c ? void 0 : c.length) > 0)
           switch (c[0].broadcast_provider) {
@@ -38168,26 +38177,23 @@ object-assign
             case Pa.a.LEAGUE_BROADCAST_STEAM:
               l =
                 p.a.COMMUNITY_URL +
-                "broadcast/watch/" +
+                "broadcast/watchnew/" +
                 c[0].stream_url.replace(
                   "https://steamcommunity.com/broadcast/watch/",
                   ""
                 ) +
-                "?iframe=1&origin=https://www.dota2.com";
+                "?origin=https://www.dota2.com&enablechat=0&enablevideo=1&showasiframe=1";
           }
-        return (
-          console.log(p.a),
-          o.a.createElement(
-            "div",
-            { className: cn.a.LiveSeries },
-            o.a.createElement("iframe", {
-              src: l,
-              height: "100%",
-              width: "100%",
-              allowFullScreen: !0,
-              frameBorder: "0",
-            })
-          )
+        return o.a.createElement(
+          "div",
+          { className: cn.a.LiveSeries },
+          o.a.createElement("iframe", {
+            src: l,
+            height: "100%",
+            width: "100%",
+            allowFullScreen: !0,
+            frameBorder: "0",
+          })
         );
       },
       yn = Object(s.a)(function () {
