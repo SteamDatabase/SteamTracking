@@ -38173,7 +38173,7 @@ object-assign
                   "https://steamcommunity.com/broadcast/watch/",
                   ""
                 ) +
-                "?iframe=1&origin=dota2.com";
+                "?iframe=1&origin=https://www.dota2.com";
           }
         return (
           console.log(p.a),
