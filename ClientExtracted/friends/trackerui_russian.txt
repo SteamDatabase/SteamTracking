@@ -789,9 +789,9 @@
 "Steam_Settings_Browser"	"Браузер"
 "Overlay_SettingsBrowserDesc" "Эти настройки относятся к браузеру в клиенте и внутриигровом оверлее Steam."
 "Steam_SettingsBrowserClearWebCache"	"Очистить кэш браузера"
-"Steam_SettingsBrowserClearAllCookies"	"Удалить все куки браузера"
-"Steam_Settings_Browser_DeleteTitle"	"Удалить куки"
-"Steam_Settings_Browser_DeleteMsg"	"Очистить все cookie браузера Steam?"
+"Steam_SettingsBrowserClearAllCookies"	"Удалить все файлы cookie браузера"
+"Steam_Settings_Browser_DeleteTitle"	"Удалить файлы cookie"
+"Steam_Settings_Browser_DeleteMsg"	"Очистить все файлы cookie браузера Steam?"
 "Steam_Settings_Browser_ClearWebCacheTitle"	"Очистить кэш браузера"
 "Steam_Settings_Browser_ClearWebCacheMsg"	"Удалить все файлы из кэша браузера Steam?"
 

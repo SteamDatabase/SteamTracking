@@ -145,6 +145,7 @@
 "VAC_ConnectionRefusedTitle"	"連線被拒絕 - VAC"
 "VAC_ConnectionRefusedDetail"	"您無法連線至選取的伺服器，因為該伺服器正受到 VAC（Valve 防作弊系統）的安全防護。\n\n此 Steam 帳戶因違規作弊，已無法在受防護的伺服器上進行遊戲。"
 "VAC_ConnectionRefusedByServer"	"此伺服器正在受到 VAC（Valve 防作弊系統）的安全防護，因此拒絕您的連線要求。\n\n此 Steam 帳戶因違規作弊，已無法在受防護的伺服器上進行遊戲。"
+"VAC_BanSupportURL"	"https://support.steampowered.com/kb/7849-RADZ-6869/"
 "VAC_SecureServerToolTip"	"Valve 防作弊系統 - 受防護"
 "VAC_BannedFromServerToolTip"	"您無法連線至此受防護的伺服器"
 "VAC_Secure"	"受防護"
@@ -159,6 +160,7 @@
 "Steam_ValidLoginRequired"	"無法與 Steam VAC 伺服器建立連線。有關網路問題的疑難排解，請點擊下方連結。"
 "VAC_ConnectionIssuesSupport_Title"	"安全連線失敗"
 "VAC_ConnectionIssuesSupportSite"	"按此造訪 Steam 客服網站"
+"VAC_ConnectionIssuesSupportURL"	"https://support.steampowered.com/kb/7579-RPSX-6098/"
 "VAC_LoggedInElsewhere_Title"		"已從別處使用帳戶"
 "VAC_LoggedInElsewhereReason"		"該 Steam 帳戶曾從另一台電腦使用登入。 若要繼續使用 Steam，您必須重新登入。"
 

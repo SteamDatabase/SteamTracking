@@ -119,4 +119,5 @@ typedef enum EResult
     k_EResultMustAgreeToSSA, // Must agree to SSA
     k_EResultClientNoLongerSupported, // Client no longer supported
     k_EResultTheCurrentSteamRealmDoesNotMatchTheRequestedResource, // The current Steam realm does not match the requested resource
+    k_EResultSignatureCheckFailed, // Signature check failed
 } EResult;

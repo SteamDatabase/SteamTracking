@@ -1,10 +1,8 @@
 __TEXT
-"
-"
+p"
+p"
 __text
 __TEXT
-0E
-0E
 __stubs
 __TEXT
 __stub_helper
@@ -19,13 +17,13 @@ __TEXT
 __eh_frame
 __TEXT
 __DATA
-"
-"
+p"
+p"
 @
 __nl_symbol_ptr
 __DATA
-"
-"
+p"
+p"
 __got
 __DATA
 __la_symbol_ptr
@@ -34,8 +32,8 @@ __mod_init_func
 __DATA
 __const
 __DATA
-P,"
-P,"
+P|"
+P|"
 __cfstring
 __DATA
 __data
@@ -46,18 +44,19 @@ __thread_bss
 __DATA
 __bss
 __DATA
+R.
 __common
 __DATA
+0.
 H
 __LINKEDIT
-`,
 
 @
 @loader_path/serverbrowser.dylib
 "
-`,
 @
 P
+(--
 
 8
 @loader_path/libtier0_s.dylib
@@ -86,6 +85,7 @@ h
 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
 &
 )
+@]
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 13CCallbackImplILi16EE
@@ -102,12 +102,12 @@ N4vgui12IClientPanelE
 N14CBaseGamesPage24CCallback_OnFavoritesMsgE
 9CCallbackI14CBaseGamesPage22FavoritesListChanged_tLb0EE
 13CCallbackImplILi28EE
-7CUtlMapIyii8CDefLessIyEE
-10CUtlRBTreeIN7CUtlMapIyii8CDefLessIyEE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
-7CUtlMapIi15serverdisplay_ti8CDefLessIiEE
-10CUtlRBTreeIN7CUtlMapIi15serverdisplay_ti8CDefLessIiEE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEiE
-7CUtlMapI10CIPAndPortii8CDefLessIS0_EE
-10CUtlRBTreeIN7CUtlMapI10CIPAndPortii8CDefLessIS1_EE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
+7CUtlMapIyii8CDefLessE
+10CUtlRBTreeIN7CUtlMapIyii8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
+7CUtlMapIi15serverdisplay_ti8CDefLessE
+10CUtlRBTreeIN7CUtlMapIi15serverdisplay_ti8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEiE
+7CUtlMapI10CIPAndPortii8CDefLessE
+10CUtlRBTreeIN7CUtlMapI10CIPAndPortii8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
 10CUtlVectorI25MatchMakingKeyValuePair_t10CUtlMemoryIS0_EE
 16CDialogAddServer
 32ISteamMatchmakingPlayersResponse
@@ -135,8 +135,8 @@ N8CModList26CCallback_OnAppDataChangedE
 14IBaseInterface
 12CDLLValidate
 9IValidate
-7CUtlMapIibi8CDefLessIiEE
-10CUtlRBTreeIN7CUtlMapIibi8CDefLessIiEE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEiE
+7CUtlMapIibi8CDefLessE
+10CUtlRBTreeIN7CUtlMapIibi8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEiE
 20CServerBrowserDialog
 18CServerContextMenu
 14CSpectateGames
@@ -319,6 +319,7 @@ T
 C
 X
 `
+h
 @
 (
 (
@@ -454,6 +455,14 @@ $
 ,
 0
 0
+0
+(
+8
+@
+4
+(
+0
+(
 9CMsgKeyUp
 11CMsgKeyDown
 11CMsgKeyChar
@@ -480,6 +489,7 @@ $
 13CMsgGoForward
 10CMsgGoBack
 13CMsgWasHidden
+25CMsgBrowserViewSetVisible
 16CMsgClearHistory
 24CMsgClearAllBrowsingData
 8CMsgCopy
@@ -600,6 +610,8 @@ $
 41CMsgShowBrowserContextMenu_ContextCommand
 26CMsgShowBrowserContextMenu
 28CMsgHandleContextMenuCommand
+16CMsgTouchGesture
+28CMsgSetTouchGesturesToCancel
 21CMsgImeSetComposition
 17CMsgImeCommitText
 24CMsgImeCancelComposition
@@ -607,6 +619,8 @@ $
 18CMsgInspectElement
 13CMsgDisableF5
 17CMsgStartDownload
+16CMsgSetTopWindow
+33CMsgBrowserViewPostMessageRequest
 N4vgui19AnimatingImagePanelE
 N4vgui19AnimationControllerE
 25CPanelAnimationDictionary
@@ -624,8 +638,8 @@ N4vgui17CBitmapImagePanelE
 10CUtlVectorIN15CUtlHandleTableIN4vgui10BuildGroupELi20EE11EntryType_tE10CUtlMemoryIS4_EE
 19CUtlQueueDeprecatedIiE
 14CUtlLinkedListIiiE
-7CUtlMapI10CUtlSymbolPK9KeyValuesi8CDefLessIS0_EE
-10CUtlRBTreeIN7CUtlMapI10CUtlSymbolPK9KeyValuesi8CDefLessIS1_EE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
+7CUtlMapI10CUtlSymbolPK9KeyValuesi8CDefLessE
+10CUtlRBTreeIN7CUtlMapI10CUtlSymbolPK9KeyValuesi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
 10CUtlVectorIPK9KeyValues10CUtlMemoryIS2_EE
 N4vgui6ButtonE
 N4vgui11CheckButtonE
@@ -637,8 +651,8 @@ N4vgui13EditablePanelE
 10CUtlRBTreeIN7CUtlMapIPKcN4vgui13CLayoutRegionEi22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlVectorIN4vgui11layoutcmd_tE10CUtlMemoryIS1_EE
 10CUtlVectorIs10CUtlMemoryIsEE
-7CUtlMapIjbs8CDefLessIjEE
-10CUtlRBTreeIN7CUtlMapIjbs8CDefLessIjEE6Node_tEsNS3_8CKeyLessE25CDefRBTreeBalanceListenerIsEjE
+7CUtlMapIjbs8CDefLessE
+10CUtlRBTreeIN7CUtlMapIjbs8CDefLessE6Node_tEsNS2_8CKeyLessE25CDefRBTreeBalanceListenerIsEjE
 *
 N4vgui18FileCompletionEditE
 N4vgui14FileOpenDialogE
@@ -793,8 +807,8 @@ N4vgui9HTMLPopupE
 N4vgui9HTMLPopup9PopupHTMLE
 N4vgui5ImageE
 N4vgui11CStyleImageE
-N4vgui9ImageListE
 10BlankImage
+N4vgui9ImageListE
 10CUtlVectorIPN4vgui6IImageE10CUtlMemoryIS2_EE
 A
 N4vgui10ImagePanelE
@@ -963,9 +977,9 @@ N4vgui13TreeNodeImageE
 N4vgui12TreeNodeTextE
 N4vgui16TreeViewSubPanelE
 10CUtlVectorIPN4vgui8TreeNodeE10CUtlMemoryIS2_EE
-14CUtlLinkedListIP10CUtlRBTreeIPvi8CDefLessIS1_E25CDefRBTreeBalanceListenerIiES1_EiE
+14CUtlLinkedListIP10CUtlRBTreeIPvi8CDefLess25CDefRBTreeBalanceListenerIiES1_EiE
 14CUtlLinkedListIPN4vgui8TreeNodeEiE
-19CUtlQueueDeprecatedIP10CUtlRBTreeIPvi8CDefLessIS1_E25CDefRBTreeBalanceListenerIiES1_EE
+19CUtlQueueDeprecatedIP10CUtlRBTreeIPvi8CDefLess25CDefRBTreeBalanceListenerIiES1_EE
 N4vgui20CTreeViewListControlE
 N4vgui18CTypingJumpHandlerE
 N4vgui8URLLabelE
@@ -974,8 +988,8 @@ N4vgui8URLLabelE
 19CDirContentsWatcher
 11CPathString
 14CUtlLinkedListI10CUtlStringiE
-7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessIS0_EE
-10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessIS1_EE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
+7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE
+10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlVectorI13ModuleCount_t10CUtlMemoryIS0_EE
 t
 r
@@ -1023,6 +1037,8 @@ ClientAPI_Init(GlobalInstance): GetIClientFriends returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientBilling returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientUtils returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientNetworkDeviceManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientStorageDeviceManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientSystemManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientMatchmaking returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientApps returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientMatchmakingServers returned NULL.
@@ -1969,6 +1985,8 @@ Tokenizer::ParseFloat() passed text that could not have been tokenized as a floa
 Tokenizer::ParseStringAppend() passed text that could not have been tokenized as a string:
 \U%08x
 message
+-quicklogin
+Set the base used to construct quick login URLs
 -community
 Set the community URL
 -store
@@ -2135,7 +2153,7 @@ VGUI_Scheme010
 VGUI_System010
 VGUI_Input005
 VGUI_Localize003
-VFileSystem013
+VFileSystem014
 Divider
 Hotkey
 ControlFactory
@@ -2710,6 +2728,7 @@ Assertion Failed: m_TotalElements != InvalidIndex()
 %s overflow!
 Assertion Failed: IsValidIndex(elem)
 Assertion Failed: IsInList(before)
+Invalid index %u
 MenuBar
 menu
 menubar
@@ -3336,32 +3355,34 @@ Assertion Failed: !pszString || pszString[nChars] == '\0'
 Assertion Failed: s_bAllowStaticSymbolTable
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
 s_pSymbolTable
-,
-,
+z,
+0
+p
+0
+p
+0
+p
+0
+p
+0
+p
+0
+p
+0
+p
+0
+p
 (
-(
-(
+
+
 0
 p
-0
-p
-0
-p
-0
-p
-0
-p
-0
-p
-0
-p
-0
-p
-!
-2'
-0
-p
-<'
+Lc5=l'
++
++
++
++
++
 $
 @
 @
@@ -3373,25 +3394,7 @@ $
 A
 Hc
 =
-(
-(
-(
-(
-(
-(
-(
-(
-(
-(
-(
-(
-(
-(
-(
-(
-'
 Hc
-V%
 ?
 ?
 ?
@@ -3407,37 +3410,33 @@ V%
 ?
 ?
 ?
-G$
 "
 3
-0$
 D
-8$
-3$
-#$
-$
-$
-$
-$
-$
-$
-$
-$
-$
-$
-$
-$
-$
-$
-$
+r$
+k$
+V$
+P$
 $
 @
-$#
+,
+B#
+#
+#
+
+
+
+"
+"
+"
 "
 "
 
-=!
-!
+
+U
+L95,I
+=
+
 
 
 
@@ -3445,23 +3444,14 @@ d
 :
 
 
-
-
-
-
-
 d
 &
 &
 d
-
-
 t=
 =
 =
-D
 @
-"
 uV%
 
 
@@ -3469,7 +3459,6 @@ E
 
 
 
-'
 @
 @
 @
@@ -3518,10 +3507,9 @@ d
 @
 =
 @
-F
+u
 @
 @
-L
 5
 @
 @

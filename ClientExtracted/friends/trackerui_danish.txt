@@ -753,7 +753,7 @@
 "Steam_Settings_Broadcast_ShowChat_RightTop" "Øverst til højre"
 "Steam_Settings_Broadcast_ShowChat_RightBottom" "Nederst til højre"
 "Steam_Settings_Broadcast_ShowChat_LeftBottom" "Nederst til venstre"
-"Steam_Settings_Broadcast_Disabled_System" "Steam-broadcasting er ikke understøtte på dette operativsystem på nuværende tidspunkt."
+"Steam_Settings_Broadcast_Disabled_System" "Steam-broadcasting understøttes på nuværende tidspunkt ikke på dette operativsystem."
 "Steam_Settings_Broadcast_Disabled_Overlay" "Steam Overlay skal være slået til for at broadcaste direkte streaminger."
 "Steam_Settings_Broadcast_Disabled_User" "Din konto har ikke de nødvendige rettigheder til at broadcaste livestreaminger."
 "Steam_Settings_Broadcast_Disabled_System_Windows_Compat_Enabled" "Steam kan ikke starte broadcasting på denne maskine.\n\nWindows kører på nuværende tidspunkt Steam i Windows-kompatibilitetstilstand, hvilket kan forhindre Steam-broadcasting i at fungere korrekt. Hvis denne maskine kører Windows 7 eller højere så bedes du følge support-siden nedenfor for at fjerne kompatibilitetstilstand."

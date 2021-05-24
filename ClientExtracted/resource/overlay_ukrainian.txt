@@ -254,7 +254,6 @@
 "Overlay_Broadcast_Chat_Title" "Трансляція — чат ( %numviewers%)"
 "Overlay_Broadcast_Live_Debug" "%videosendkbps% кбіт/с, %videosendfps% FPS"
 
-"SteamChina_Overlay_DurationControl_Init"		"Healthy Gaming Advisory\nBoycott harmful games; reject game piracy.\nExercise self-protection; avoid deception.\nModeration promotes brain health; excess play is harmful to the body.\nWell-planned use of your time will lead to a healthy lifestyle."
 "SteamChina_Overlay_DurationControl_MessageA"		"Ви граєте вже одну годину."
 "SteamChina_Overlay_DurationControl_MessageB"		"Ви граєте вже три години.\nПодумайте щодо перерви."
 "SteamChina_Overlay_DurationControl_MessageC"		"Ви граєте вже більше трьох годин.\nВаш досвід / прогрес буде зменшено наполовину."

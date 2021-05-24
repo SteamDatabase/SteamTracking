@@ -141,7 +141,7 @@
 "VAC_AccountBanned"	"Steam-konto utestengt"
 "VAC_YourAccountBanned"	"Steam-kontoen %account% er utestengt fra sikre spilltjenere på grunn av juks."
 "VAC_GamesAffected"	"Dette gjelder følgende spill:"
-"VAC_ForDetails"	"Klikk her hvis du vil ha mer informasjon"
+"VAC_ForDetails"	"Trykk her for mer informasjon"
 "VAC_ConnectionRefusedTitle"	"Tilkobling avvist – VAC"
 "VAC_ConnectionRefusedDetail"	"Du kan ikke koble til den valgte tjeneren fordi den kjører i sikker VAC-modus (Valve Anti-Cheat).\n\nDenne Steam-kontoen er utestengt fra sikre spilltjenere på grunn av juks."
 "VAC_ConnectionRefusedByServer"	"Tjeneren avviste tilkoblingen fordi den kjører i sikker VAC-modus (Valve Anti-Cheat).\n\nDenne Steam-kontoen er utestengt fra sikre spilltjenere på grunn av juks."
@@ -157,7 +157,7 @@
 "Steam_ValidLoginRequiredTitle"	"Krever gyldig Steam-pålogging"
 
 // need to remove the VAC line from this when we have our authentication system going via the Steam servers (when it should change to a login failure)
-"Steam_ValidLoginRequired"	"Kan ikke opprette tilkobling til Steam VAC-tjenerne. Klikk koblingen nedenfor hvis du vil feilsøke nettverksproblemer."
+"Steam_ValidLoginRequired"	"Kan ikke opprette tilkobling til Steam VAC-tjenerne. Trykk på lenken nedenfor hvis du vil feilsøke nettverksproblemer."
 "VAC_ConnectionIssuesSupport_Title"	"Sikker tilkobling mislyktes"
 "VAC_ConnectionIssuesSupportSite"	"Trykk her for å gå til Steams kundestøtte"
 "VAC_ConnectionIssuesSupportURL"	"https://support.steampowered.com/kb/7579-RPSX-6098/"

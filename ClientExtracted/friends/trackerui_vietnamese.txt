@@ -796,7 +796,7 @@
 "Steam_Settings_Browser_ClearWebCacheMsg"	"Bạn có muốn xóa mọi tệp cache của trình duyệt web cài sẵn của Steam?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
-"RemotePlayTogether_Notification_AvailableToInvite" "Nhấp chuột phải vào bất kỳ ai trong danh sách bạn bè để mời họ cùng chơi."
+"RemotePlayTogether_Notification_AvailableToInvite" "Nhấp chuột phải vào danh sách bạn bè để mời ai đó cùng chơi."
 
 } 
 }  

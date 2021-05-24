@@ -85,7 +85,7 @@
 	"Sale_BrowserSortOption_TopWishlisted_ttip": "按加入愿望单总数（迄今为止）排序的即将推出游戏。仅包括尚未在蒸汽平台上发行的游戏。",
 	"Sale_BrowserSortOption_TrendingWishlisted_ttip": "按热门程度或最近加入愿望单次数排序的的即将推出的游戏。仅包括尚未在蒸汽平台上发行的游戏。",
 	"Sale_BrowserSortOption_PopularComingSoon_ttip": "愿望单热门游戏，按发行日期排序。仅包括尚未在蒸汽平台上发行的游戏。",
-	"Sale_BrowserSortOption_PopularUpcoming_ttip": "愿望单热门游戏，按发行日期排序。仅包括尚未在蒸汽平台上发行的游戏。",
+	"Sale_BrowserSortOption_PopularUpcoming_ttip": "被众人加入愿望单的游戏，按发行日期排序。仅包括尚未在蒸汽平台上发行的游戏。",
 	"Sale_BrowserSortOption_RecentlyReleased_ttip": "最近发行的游戏；按蒸汽平台上发行日期的先后排序。",
 	"SteamAwards_EventMainTitle": "蒸汽平台大奖",
 	"SteamAwards_EventMainTitleCombined": "蒸汽平台大奖提名作品",

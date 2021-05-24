@@ -48,5 +48,6 @@
 	"AppProperties_SteamInputOff": "禁用蒸汽平台输入",
 	"AppProperties_SteamInputOn": "启用蒸汽平台输入",
 	"AppProperties_SteamInputStatus": "蒸汽平台输入状态：",
-	"AppProperties_Controller_Steam": "蒸汽平台控制器"
+	"AppProperties_Controller_Steam": "蒸汽平台控制器",
+	"SteamNetSockets_Disconnect_SteamConnectivity": "由于无法与蒸汽平台通信（例如获取证书），连接失败。"
 }

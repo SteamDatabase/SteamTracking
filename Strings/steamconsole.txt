@@ -40,7 +40,6 @@ __bss
 __DATA
 __common
 __DATA
-(D
 H
 __LINKEDIT
 
@@ -70,7 +69,7 @@ h
 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
 &
 )
--
+0+
 public
 local
 anonymous
@@ -112,7 +111,7 @@ N25CControllerConfigUploader40CCallback_OnRemoteStorageAppSyncedClientE
 N25CControllerConfigUploader40CCallback_OnRemoteStorageAppSyncedServerE
 9CCallbackI25CControllerConfigUploader30RemoteStorageAppSyncedServer_tLb0EE
 20CMultipleCallResultsI25CControllerConfigUploader24SteamUGCQueryCompleted_tE
-10CUtlRBTreeIyi8CDefLessIyE25CDefRBTreeBalanceListenerIiEyE
+10CUtlRBTreeIyi8CDefLess25CDefRBTreeBalanceListenerIiEyE
 20CMultipleCallResultsI25CControllerConfigUploader32RemoteStoragePublishFileResult_tE
 20CMultipleCallResultsI25CControllerConfigUploader40RemoteStorageUpdatePublishedFileResult_tE
 N20CAppInstallerBuilder27CCallback_OnAppBackupStatusE
@@ -121,9 +120,9 @@ N20CAppInstallerBuilder27CCallback_OnAppBackupStatusE
 19CConsoleInputThread
 25SteamClientConVarAccessor
 23IConCommandBaseAccessor
-20CMultipleCallResultsI19CPreDepotOperations17CEGWrapResponse_tE
 20CMultipleCallResultsI19CPreDepotOperations27InstallScriptSignResponse_tE
 20CMultipleCallResultsI19CPreDepotOperations17DRMWrapResponse_tE
+20CMultipleCallResultsI19CPreDepotOperations17CEGWrapResponse_tE
 N23CWorkshopItemDownloader30CCallback_OnDownloadItemResultE
 9CCallbackI23CWorkshopItemDownloader20DownloadItemResult_tLb0EE
 _
@@ -209,6 +208,8 @@ ClientAPI_Init(GlobalInstance): GetIClientFriends returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientBilling returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientUtils returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientNetworkDeviceManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientStorageDeviceManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientSystemManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientMatchmaking returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientApps returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientMatchmakingServers returned NULL.
@@ -249,6 +250,8 @@ com.valvesoftware.steam.ipctool
 ipcserver restart: expected: %d, got: %d
 StopJob
 CreateInterface
+-quicklogin
+Set the base used to construct quick login URLs
 -community
 Set the community URL
 -store
@@ -309,7 +312,7 @@ app_update <appid> [-validate] [-language <lang>] [-beta <betaname>] [-betapassw
 set_app_beta_password
 set_app_beta_password <appid> -betapassword <pwd>  -- opt-in to the app beta with the given password
 app_uninstall
-[-complete] <appId>
+<appId>
 app_run
 <appId> [LaunchOptionIndex] [Arguments]
 app_info_request
@@ -327,7 +330,6 @@ Assertion Failed: m_eAppInfoResult != k_EResultPending
 CAppInfoUpdater::OnAppInfoUpdate
 ERROR! AppInfo request for AppId %d returned error %s.
 CAppUpdater::OnCheckAppBetaPasswordResponse
--complete
 CAppLauncher::OnAppLifetimeNotice
 ERROR! AppId %u launch failed (%s)
 App info request sent.
@@ -646,8 +648,11 @@ DRM wrap failed with EResult %d (%s)
 CEG wrap completed successfully
 CEG wrap failed with EResult %d (%s)
 Usage: sign_install_script <appid> <filename> <output filename>
+Sign installscript failed to start job
 Usage: drm_wrap <appid> <filename> <output filename> <toolname> <flags>
+DRM wrap failed to start job
 Usage: ceg_wrap <appid> <orig filename> <stripped filename> <strips filename>
+CEG wrap failed to start job
 swarm_get_bucket_manifest
 <appid> <bucket_hw_id> <bucket_sw_id> - query Swarm bucket depot manifest, if depot built
 swarm_tc_loop
@@ -879,7 +884,6 @@ loopback
 Assertion Failed: info.m_pReplacementString == 0
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
 CUtlBuffer::GetStringFast: binary buffers only
-CUtlBuffer::GetStringFast: no string termination
 Expected %lld but got %lld!
 Assertion Failed: pConv && pConv->GetDelimiterLength() > 0
 Assertion Failed: pFmt
@@ -1066,6 +1070,7 @@ No launcher specified
 Must agree to SSA
 Client no longer supported
 The current Steam realm does not match the requested resource
+Signature check failed
 Invalid
 Public
 Beta
@@ -1129,6 +1134,8 @@ Steam client out of date
 Allowed playtime exceeded
 Steam client files corrupt
 Missing game files
+Compat tool failed
+Install path removed
 Logged Off
 Logging On
 Logging Off
@@ -1225,18 +1232,20 @@ Assertion Failed: (unsigned)elem <= (unsigned)m_Size
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/string_misc.cpp
 E
 @
+t
 @
 @
+\
 
 =
 @
+a
 @
 @
-&
+#
 @
 @
 @
 @
 @
 @
-^

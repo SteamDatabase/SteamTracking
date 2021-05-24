@@ -254,7 +254,6 @@
 "Overlay_Broadcast_Chat_Title" "Közvetítés - Csevegés ( %numviewers%)"
 "Overlay_Broadcast_Live_Debug" "%videosendkbps% kbps, %videosendfps% FPS"
 
-"SteamChina_Overlay_DurationControl_Init"		"Tanácsok az egészséges játékért\nBojkottáld a káros játékokat, utasítsd el a játékok kalózmásolatát.\nGyakorolj önvédelmet, kerüld a megtévesztést.\nA mértékletesség jót tesz az agynak, a mértéktelen játék árt a testnek.\nIdőd jól megtervezett beosztása egészséges életmódhoz vezet."
 "SteamChina_Overlay_DurationControl_MessageA"		"Egy órája játszol."
 "SteamChina_Overlay_DurationControl_MessageB"		"Három órája játszol.\nSzünetet kellene tartanod."
 "SteamChina_Overlay_DurationControl_MessageC"		"Több mint három órája játszol.\nTP-szerzésed / előrehaladásod felére lett csökkentve."

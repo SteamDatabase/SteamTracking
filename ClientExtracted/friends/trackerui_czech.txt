@@ -789,9 +789,9 @@
 "Steam_Settings_Browser"	"Internetový prohlížeč"
 "Overlay_SettingsBrowserDesc" "Následující nastavení se vztahuje k internetovému prohlížeči používanému v klientu služby Steam a ve hrách."
 "Steam_SettingsBrowserClearWebCache"	"Vymazat cache prohlížeče"
-"Steam_SettingsBrowserClearAllCookies"	"Vymazat všechny soubory cookies"
+"Steam_SettingsBrowserClearAllCookies"	"Vymazat všechny soubory cookie"
 "Steam_Settings_Browser_DeleteTitle"	"Vymazat cookies"
-"Steam_Settings_Browser_DeleteMsg"	"Opravdu chcete ve svém prohlížeči vymazat všechny soubory cookies?"
+"Steam_Settings_Browser_DeleteMsg"	"Opravdu chcete v prohlížeči vymazat všechny soubory cookie?"
 "Steam_Settings_Browser_ClearWebCacheTitle"	"Vymazat cache"
 "Steam_Settings_Browser_ClearWebCacheMsg"	"Opravdu chcete ve svém prohlížeči vymazat celou paměť cache?"
 

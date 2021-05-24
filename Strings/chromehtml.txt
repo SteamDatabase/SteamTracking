@@ -1,6 +1,8 @@
 __TEXT
 __text
 __TEXT
+PP
+PP
 __stubs
 __TEXT
 __stub_helper
@@ -18,7 +20,6 @@ __const
 __TEXT
 __unwind_info
 __TEXT
-l~
 __eh_frame
 __TEXT
 __DATA
@@ -52,7 +53,6 @@ __bss
 __DATA
 __common
 __DATA
-p*
 H
 __LINKEDIT
 
@@ -95,7 +95,7 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
-pJ
+0@
 N3IPC15BinarySemaphoreE
 N3IPC10PosixMutexE
 N3IPC6IMutexE
@@ -130,6 +130,7 @@ T
 C
 X
 `
+h
 @
 (
 (
@@ -265,6 +266,14 @@ $
 ,
 0
 0
+0
+(
+8
+@
+4
+(
+0
+(
 9CMsgKeyUp
 11CMsgKeyDown
 11CMsgKeyChar
@@ -291,6 +300,7 @@ $
 13CMsgGoForward
 10CMsgGoBack
 13CMsgWasHidden
+25CMsgBrowserViewSetVisible
 16CMsgClearHistory
 24CMsgClearAllBrowsingData
 8CMsgCopy
@@ -411,6 +421,8 @@ $
 41CMsgShowBrowserContextMenu_ContextCommand
 26CMsgShowBrowserContextMenu
 28CMsgHandleContextMenuCommand
+16CMsgTouchGesture
+28CMsgSetTouchGesturesToCancel
 21CMsgImeSetComposition
 17CMsgImeCommitText
 24CMsgImeCancelComposition
@@ -418,6 +430,8 @@ $
 18CMsgInspectElement
 13CMsgDisableF5
 17CMsgStartDownload
+16CMsgSetTopWindow
+33CMsgBrowserViewPostMessageRequest
 N15CHTMLController12CIPCTaskPostE
 15CHTMLController
 21IHTMLChromeController
@@ -484,6 +498,7 @@ N15CHTMLController12CIPCTaskPostE
 16CHTMLProtoBufMsgI26CMsgShowBrowserContextMenuE
 16CHTMLProtoBufMsgI25CMsgMaximizeRestoreWindowE
 16CHTMLProtoBufMsgI18CMsgMinimizeWindowE
+16CHTMLProtoBufMsgI16CMsgTouchGestureE
 16CHTMLProtoBufMsgI30CMsgImeCompositionRangeChangedE
 16CHTMLProtoBufMsgI13CMsgSetCookieE
 16CHTMLProtoBufMsgI11CMsgBuildIDE
@@ -493,8 +508,8 @@ N15CHTMLController12CIPCTaskPostE
 16CHTMLProtoBufMsgI14CMsgUnlockH264E
 16CHTMLProtoBufMsgI22CMsgAuthedSteamDomainsE
 16CHTMLProtoBufMsgI23CMsgSteamAuthCookiesSetE
-7CUtlMapIjN15CHTMLController16BrowserDetails_tEi8CDefLessIjEE
-10CUtlRBTreeIN7CUtlMapIjN15CHTMLController16BrowserDetails_tEi8CDefLessIjEE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
+7CUtlMapIjN15CHTMLController16BrowserDetails_tEi8CDefLessE
+10CUtlRBTreeIN7CUtlMapIjN15CHTMLController16BrowserDetails_tEi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
 19HTMLCommandBuffer_t
 N@
 $@
@@ -808,6 +823,7 @@ HTML_MSG_FUNC eHTMLCommands_SetForegroundWindow
 HTML_MSG_FUNC eHTMLCommands_ShowBrowserContextMenu
 HTML_MSG_FUNC eHTMLCommands_MaximizeRestoreWindow
 HTML_MSG_FUNC eHTMLCommands_MinimizeWindow
+HTML_MSG_FUNC eHTMLCommands_TouchGesture
 HTML_MSG_FUNC eHTMLCommands_IME_CompositionRangeChanged
 CHTMLController::RunFrame - Deferred paint
 STEAMVIDEOTOKEN
@@ -844,6 +860,8 @@ m_Memory
 -no-cef-sandbox
 disables sandboxing in CEF
 -cef-disable-sandbox
+-cef-force-sandbox
+force sandboxing in CEF
 -disable-winh264
 disables loading winh264.dll
 -disablehighdpi
@@ -865,6 +883,12 @@ enables full crash dumps
 disables breakpad in crash dumps
 -cef-force-32bit
 forces usage of 32-bit steamwebhelper when available
+-cef-disable-hang-timeouts
+disables GPU and renderer hang timeouts
+-cef-enable-debugging
+enables Chromium remote debugging, defaulting to localhost:8080
+-cef-disable-occlusion
+disables Chromium window occlusion testing on Windows
 -store
 -community
 -clientui
@@ -905,13 +929,14 @@ clientui
 8080
 --remote-debugging-port=%s
 --remote-debugging-address=%s
+--disable-features=CalculateNativeWinOcclusion
 --enable-smooth-scrolling
 --disable-smooth-scrolling
---enable-experimental-web-platform-features
 --disable-gpu-compositing --disable-gpu
 --disable-accelerated-video-decode
 --disablehighdpi --force-device-scale-factor=1 --device-scale-factor=1
 --no-sandbox
+-force-sandbox
 --disable-winh264
 -dev
 --single-process
@@ -924,6 +949,7 @@ clientui
 BREAKPAD_DUMP_LOCATION
 --full-memory-crash-report
 --disable-breakpad
+--disable-hang-monitor --disable-gpu-watchdog
 Assertion Failed: bValidHandle == true
 Failed to connect to master html process, created shared memory (spawn time %0.2f)
 %s_%u_%u
@@ -1803,19 +1829,23 @@ sc_schinese
 
 
 
-J
 "
 3
+f
 D
 @
-2
+,
+Q
 
 
 
 
-U
-B
-7
+
+
+
+
+
+o
 Hi
 `
 $
@@ -1829,10 +1859,8 @@ $
 A
 Hc
 =
-
-
-
 Hc
+\
 ?
 ?
 ?
@@ -1849,7 +1877,6 @@ Hc
 ?
 ?
 
-1
 @
 @
 @

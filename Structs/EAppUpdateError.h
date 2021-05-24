@@ -51,4 +51,6 @@ typedef enum EAppUpdateError
     k_EAppUpdateErrorAllowedPlaytimeExceeded, // Allowed playtime exceeded
     k_EAppUpdateErrorSteamClientFilesCorrupt, // Steam client files corrupt
     k_EAppUpdateErrorMissingGameFiles, // Missing game files
+    k_EAppUpdateErrorCompatToolFailed, // Compat tool failed
+    k_EAppUpdateErrorInstallPathRemoved, // Install path removed
 } EAppUpdateError;

@@ -42,6 +42,7 @@ public:
     virtual unknown_ret GetGamepadIndexForControllerIndex(unsigned int) = 0;
     virtual unknown_ret CreateBindingInstanceFromVDFString(CControllerMappingCreateData const*) = 0;
     virtual unknown_ret FreeBindingInstance(unsigned int) = 0;
+    virtual unknown_ret GetControllerConfiguration(unsigned int, CMsgControllerConfiguration*) = 0;
     virtual unknown_ret IsModified(unsigned int) = 0;
     virtual unknown_ret ClearModified(unsigned int) = 0;
     virtual unknown_ret GetLocalizationTokenCount(unsigned int) = 0;
@@ -170,6 +171,10 @@ public:
     virtual unknown_ret GetLastActiveControllerPID() = 0;
     virtual unknown_ret LoadControllerPersonalizationFile(unsigned int, char const*, bool, bool) = 0;
     virtual unknown_ret SaveControllerPersonalizationFile(unsigned int, unsigned int, ControllerIdentity_t*) = 0;
+    virtual unknown_ret SetControllerHapticsSetting(unsigned int, bool) = 0;
+    virtual unknown_ret SetControllerRumbleSetting(unsigned int, EControllerRumbleSetting) = 0;
+    virtual unknown_ret SetUseGripsSetting(unsigned int, bool) = 0;
+    virtual unknown_ret SetUseTrackpadSetting(unsigned int, bool) = 0;
     virtual unknown_ret BGetTouchConfigData(unsigned int, unsigned int, unsigned long long*, unsigned int*, CUtlBuffer*, CUtlBuffer*) = 0;
     virtual unknown_ret BSaveTouchConfigLayout(unsigned int, unsigned int, CUtlBuffer const*) = 0;
     virtual unknown_ret SetGyroOn(unsigned int, unsigned long long) = 0;

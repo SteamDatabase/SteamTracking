@@ -180,7 +180,7 @@
 "Overlay_MicroTxnAuth_RefundPeriod" "在购买后的 48 小时内，Steam 可以在您未消耗、修改或转让这些物品的情况下提供退款。<a href=http://store.steampowered.com/steam_refunds>了解更多</a>"
 "Overlay_MicroTxnAuth_NotRefundable" "这些物品不符合退款要求。<a href=http://store.steampowered.com/steam_refunds>了解更多</a>"
 "Overlay_MicroTxnAuth_ConnectionError" "连接错误"
-"Overlay_MicroTxnAuth_ConnectionError_Info" "由于和 Steam 通讯时出现问题，您的交易无法完成。"
+"Overlay_MicroTxnAuth_ConnectionError_Info" "由于和 Steam 通信时出现问题，您的交易无法完成。"
 "Overlay_MicroTxnAuth_Insufficient_Funds" "资金不足"
 "Overlay_MicroTxnAuth_Insufficient_Funds_Info" "您的 Steam 钱包中资金不足，无法完成购买。您想要充值以继续吗？"
 

@@ -841,7 +841,8 @@ button.DialogButton::-moz-focus-inner {
 .DialogInput_Wrapper {
   display: flex;
   flex-direction: row;
-  position: relative; }
+  position: relative;
+  align-items: center; }
 
 .DialogInput_Wrapper > input.DialogInput {
   flex: 1; }
@@ -860,10 +861,17 @@ button.DialogButton.DialogInput_CopyAction {
 .DialogInput_ClearAction {
   position: absolute;
   right: 12px;
-  top: 0;
-  bottom: 0;
+  /* top: 0;
+	bottom: 0; */
   width: 24px;
-  cursor: pointer; }
+  height: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .DialogInput_ClearAction svg {
+    width: 18px;
+    height: 18px; }
 
 .DialogInput_ClearAction .SVGIcon_X_Line line {
   stroke-width: 22px;
@@ -1066,7 +1074,7 @@ button.TextButton:focus {
   background-color: #434953; }
 
 .DialogToggle_Description {
-  color: #808080;
+  color: #999c9f;
   line-height: 19px;
   font-size: 13px;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
@@ -1097,10 +1105,18 @@ button.TextButton:focus {
   position: relative; }
 
 .DialogDropDown.Disabled {
-  cursor: initial; }
+  cursor: initial;
+  opacity: 0.5; }
 
 .DialogDropDown:hover {
   box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.16); }
+
+.DialogDropDown.Disabled:hover {
+  box-shadow: unset; }
+
+.DialogDropDown_CurrentDisplay:empty::before {
+  /* Make the min height effectively 1 line. min-height:1em doesn't account for line-height. */
+  content: '\A0'; }
 
 .DialogDropDown._DialogInputContainer {
   margin-bottom: 0;

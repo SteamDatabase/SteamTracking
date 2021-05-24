@@ -12,7 +12,7 @@
 "Overlay_SettingsDescriptionApp"	"Steam puede permanecer activo y ofrecerte notificaciones de mensajes de la Comunidad Steam, así como una completa interfaz de amigos, mientras estás dentro de tu aplicación."
 "Overlay_SettingsEnable"	"Habilitar la interfaz de Steam"
 "Overlay_SettingsEnableApp"	"Activar Comunidad Steam en la aplicación"
-"Overlay_SettingsSCTenfootEnable"	"Utilizar interfaz de Big Picture al usar un mando compat. con Steam Input desde el escritorio"
+"Overlay_SettingsSCTenfootEnable"	"Utilizar interfaz de Big Picture al usar un control compat. con Steam Input desde el escritorio"
 "Overlay_SettingsHotKeyLabel"	"Teclas de acceso directo a la interfaz"
 "Overlay_SettingsScreenshotHotKeyLabel"	"Teclas de captura de pantalla"
 "Overlay_SettingsScreenshotActionLabel" "Cuando se capture una imagen"
@@ -254,7 +254,6 @@
 "Overlay_Broadcast_Chat_Title" "Retransmisión - Chat ( %numviewers%)"
 "Overlay_Broadcast_Live_Debug" "%videosendkbps% kbps, %videosendfps% FPS"
 
-"SteamChina_Overlay_DurationControl_Init"		"Aviso de juego saludable\nBoicotear juegos perjudiciales; rechazar la piratería de juegos.\nEjercer autoprotección; evitar engaños.\nLa moderación promueve la salud del cerebro; el exceso de juego es dañino para el cuerpo.\nEl uso bien planificado de tu tiempo te conducirá a un estilo de vida saludable."
 "SteamChina_Overlay_DurationControl_MessageA"		"You've been playing for one hour."
 "SteamChina_Overlay_DurationControl_MessageB"		"You've been playing for three hours.\nConsider taking a break."
 "SteamChina_Overlay_DurationControl_MessageC"		"You've been playing for over three hours.\nYour XP / progress has been reduced by half."

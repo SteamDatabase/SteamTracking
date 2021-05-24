@@ -837,6 +837,7 @@ Vänligen skriv in SMS-koden nedan."
 "SteamUI_ValveSurvey_Summary_VideoCard"						"Grafikkort:"
 "SteamUI_ValveSurvey_Summary_Memory"						"Minne:"
 "SteamUI_ValveSurvey_Summary_Audio"							"Ljudkort:"
+"SteamUI_ValveSurvey_Summary_Storage"						"Lagring:"
 
 "SteamUI_ValveSurvey_ResultsLabel"							"Enkäten är klar. Tack igen för din medverkan.\n\nOm du vill se en jämförelse av din dator med andra Steam-abonnenters datorer kan du visa de samlade enkätresultaten genom att klicka på länken nedan.\n\n (Om inte så klickar du bara på Avsluta så stängs det här fönstret.)"
 "SteamUI_ValveSurvey_ResultsButton"							"Visa resultatsidan."
@@ -848,6 +849,11 @@ Vänligen skriv in SMS-koden nedan."
 
 "SteamUI_ValveSurvey_Summary_MACAddressHash"				"MAC-adress (hash): %s1"
 "SteamUI_ValveSurvey_Summary_DiskSerialHash"				"Diskserienummer (hash): %s1"
+
+"SteamUI_ValveSurvey_Summary_SSDCount"						"Antal SSD-diskar: %s1"
+"SteamUI_ValveSurvey_Summary_SSDSizes"						"SSD-storlekar: %s1"
+"SteamUI_ValveSurvey_Summary_HDDCount"						"Antalet hårddiskar: %s1"
+"SteamUI_ValveSurvey_Summary_HDDSizes"						"Hårddiskstorlekar: %s1"
 
 "SteamUI_ValveSurvey_Summary_DesktopSystem"					"Formfaktor: Stationär"
 "SteamUI_ValveSurvey_Summary_LaptopSystem"					"Formfaktor: Laptop"
@@ -2854,12 +2860,12 @@ Skaffa dig en nu genom att skicka en gåva via e-post till någon du känner."
 "SteamUI_ValveSurvey_MicrophoneNo"		"Nej, jag har ingen mikrofon."
 "SteamUI_ValveSurvey_Summary_Microphone"	"Mikrofon:  %s1"
 
-"SteamUI_ValveSurvey_ControllerCradleLabel"		"Använder du den trådlösa förlängaren för att förbättra din Steam-kontrolls trådlösa anslutning (på bild nedan)?"
+"SteamUI_ValveSurvey_ControllerCradleLabel"		"Använder du den trådlösa förlängaren för att förbättra din Steam Controllers trådlösa anslutning (på bild nedan)?"
 "SteamUI_ValveSurvey_ControllerCradleDontHave"	"Jag har ingen trådlös förlängare."
 "SteamUI_ValveSurvey_ControllerCradleYes"		"Ja, jag använder den trådlösa förlängaren som visas."
 "SteamUI_ValveSurvey_ControllerCradleNo"		"Nej, jag kopplar in den trådlösa mottagaren direkt i en USB-port."
 "SteamUI_ValveSurvey_ControllerNoReceiver"		"Ingen trådlös mottagare."
-"SteamUI_ValveSurvey_Summary_ControllerCradle"	"Steam-kontrollens kabel med förlängare: %s1"
+"SteamUI_ValveSurvey_Summary_ControllerCradle"	"Kabel med förlängare till Steam Controller: %s1"
 
 "SteamUI_ValveSurvey_Linux_Runtime_Info" "Information om Steam Linux Runtime:"
 
@@ -3810,7 +3816,7 @@ Skaffa dig en ny vän på Steam genom att skicka en gåva via e-post till någon
 "steam_details_tags"	"Kategorier"
 "steam_details_edittags"	"Ange kategorier..."
 
-"steam_configurecontroller_menuitem"	"Ändra Steam-kontrollens konfiguration..."
+"steam_configurecontroller_menuitem"	"Ändra Steam Controller-konfiguration ..."
 
 "steam_client_edit_categories" "
 Ange en kategori för det här spelet så kan du hitta det snabbare och sortera ditt bibliotek lättare. Spel i kategorier grupperas ihop i spellistan. "
@@ -3929,7 +3935,7 @@ Ange en kategori för det här spelet så kan du hitta det snabbare och sortera 
 
 "SteamUI_ValveSurvey_Summary_Software"	"Installerad programvara:"
 "steam_systeminfo_info"			"Steam har upptäckt följande hård- och programvara i din dator:"
-"SteamUI_ValveSurvey_OverviewTitle" 	"Var god ta några minuter att svara på denna korta enkäten. Varje månad samlar Steam in information om vad för sorts hård- och programvara som våra kunder använder. Enkätinformationen är extremt hjälpsam genom att den säkerställer våra beslut att stödja viss teknologi och vilka produkter som ska erbjudas.\nInformationen vi samlar in är anonym och kommer inte kopplas med ditt konto."
+"SteamUI_ValveSurvey_OverviewTitle" 	"Om du har några minuter, svara gärna på denna korta enkät. Varje månad samlar Steam in information om vad för sorts hårdvara och programvara som våra kunder använder. Enkätinformationen hjälper oss att säkerställa att vi gör bra beslut om vilken teknologi vi ska stöda och vilka produkter som erbjuds.\nInformationen vi samlar in är anonym och kommer inte kopplas till ditt konto."
 
 "steam_statuslabel"	"Status"
 
@@ -4566,10 +4572,13 @@ Ange en kategori för det här spelet så kan du hitta det snabbare och sortera 
 "Steam_Settings_Streaming_Bandwidth20000" 	"20 MBit/s"
 "Steam_Settings_Streaming_Bandwidth25000" 	"25 MBit/s"
 "Steam_Settings_Streaming_Bandwidth30000" 	"30 MBit/s"
+"Steam_Settings_Streaming_Bandwidth40000" 	"40 MBit/s"
 "Steam_Settings_Streaming_Bandwidth50000" 	"50 MBit/s"
+"Steam_Settings_Streaming_Bandwidth75000" 	"75 MBit/s"
 "Steam_Settings_Streaming_BandwidthUnlimited" 	"Obegränsad (ökar fördröjning)"
 "Steam_Settings_Streaming_Resolution"	"Begränsa upplösning till"
 "Steam_Settings_Streaming_ResolutionDesktop" 	"Skärmupplösning"
+"Steam_Settings_Streaming_Resolution8K" 	"7680x4320 (8K)"
 "Steam_Settings_Streaming_Resolution2160p" 	"3840x2160 (4K)"
 "Steam_Settings_Streaming_Resolution1440p" 	"2560x1440 (1440p)"
 "Steam_Settings_Streaming_Resolution1080p" 	"1920x1080 (1080p)"
@@ -4657,7 +4666,7 @@ Ange en kategori för det här spelet så kan du hitta det snabbare och sortera 
 "SteamUI_UpdateControllerFirmware_WiredUpdate_Title" "Uppdatering för Steamkontrollens programvara"
 "SteamUI_UpdateControllerFirmware_HardFailure" "Varning: En av dina Steamkontroller har inaktiverats och kommer inte omkonfigureras eller programmeras för spel eftersom dess programvara är utdaterad och Steam kunde inte hämta uppdaterad programvaruinformation."
 "SteamUI_UpdateControllerFirmware_Required_Title" "Ny kontrollprogramvara tillgänglig"
-"SteamUI_UpdateControllerFirmware_Required" "Det finns ny programvara till din Steam-kontroll. Vänligen gå över till storbildsläget för att påbörja uppdateringsprocessen."
+"SteamUI_UpdateControllerFirmware_Required" "Det finns ny programvara till din Steam Controller. Växla till storbildsläget Big Picture för att påbörja uppdateringsprocessen."
 "SteamUI_UpdateControllerMigration_Title"	"Ommigrering av kontroll krävs"
 "SteamUI_UpdateControllerMigration"			"Vi har fixat ett problem med kontrollens migreringsprocess relaterat till icke-Steam-spel. Byt till storbildsläget för att ommigrera dina kontrollkonfigurationer."
 
@@ -4743,7 +4752,7 @@ Ange en kategori för det här spelet så kan du hitta det snabbare och sortera 
 
 "Steam_BLEControllerFirmware_Title" "Uppdatering av Bluetooth-programvara"
 "Steam_BLEControllerFirmware_Header" "Steam Link-app"
-"Steam_BLEControllerFirmware_Body" "Utöka din spelupplevelse med Steam till din telefon, surfplatta, eller TV över ditt lokala nätverk.\n\nFör att använda din Steam-kontroll med Steam Link-appen, så behöver du den nya uppdateringen till Bluetooth-programvaran."
+"Steam_BLEControllerFirmware_Body" "Utöka din spelupplevelse med Steam till din telefon, surfplatta eller tv via ditt lokala nätverk.\n\nFör att använda din Steam Controller med Steam Link-appen behöver du den nya uppdateringen till den inbyggda Bluetooth-programvaran."
 "Steam_BLEControllerFirmware_LearnMore" "Läs mer"
 "Steam_BLEControllerFirmware_UpdateNow" "Uppdatera programvara nu"
 

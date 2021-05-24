@@ -41,4 +41,5 @@ public:
     virtual unknown_ret GetCertificateRequest(int*, void*, char (&) [1024]) = 0;
     virtual unknown_ret SetCertificate(void const*, int, char (&) [1024]) = 0;
     virtual unknown_ret RunCallbacks() = 0;
+    virtual unknown_ret ResetIdentity(SteamNetworkingIdentity const*) = 0;
 };

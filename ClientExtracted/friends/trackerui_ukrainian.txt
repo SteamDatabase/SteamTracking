@@ -599,7 +599,7 @@
 "friends_voice_friendendedcall"			"%friend% закінчив розмову."
 
 "friends_trade_invite"		"%friend% запрошує вас до обміну предметів"
-"friends_trade_invite_action"		"НАТИСНІТЬ ДЛЯ ТОРГІВЛІ"
+"friends_trade_invite_action"		"НАТИСНІТЬ ДЛЯ ОБМІНУ"
 
 "friends_trade_invite_sent"	"Запит поторгуватися був відправлений до %friend%"
 "friends_trade_invite_sent_waiting"	"Очікування відповіді…"
@@ -641,8 +641,8 @@
 "friends_trade_you_are_already_requesting_trade" "Ви можете одночасно надіслати лише одну пропозицію обміну."
 "friends_trade_no_respond"			"%friend% не відповідає на пропозицію обміну."
 
-"friends_trade_accepted"			"%friend% прийняв ваш запит до торгівлі."
-"friends_trade_you_accepted"		"Ви прийняли запит до торгівлі від %friend%."
+"friends_trade_accepted"			"%friend% прийняв ваш запит на обмін."
+"friends_trade_you_accepted"		"Ви прийняли запит на обмін від %friend%."
 "friends_invite_to_trade"			"Запропонувати обмін"
 "Friends_TradeInvitation_Info"		"запрошує вас поторгуватися"
 "friends_view_item_in_inventory"	"Переглянути в інвентарі"
@@ -796,7 +796,7 @@
 "Steam_Settings_Browser_ClearWebCacheMsg"	"Вилучити всі файли у вбудованому кеші браузера?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
-"RemotePlayTogether_Notification_AvailableToInvite" "ПКМ на будь-кого в списку друзів, аби запросити до гри."
+"RemotePlayTogether_Notification_AvailableToInvite" "Клацніть правою кнопкою миші будь-кого в списку друзів, аби запросити до гри."
 
 } 
 }  

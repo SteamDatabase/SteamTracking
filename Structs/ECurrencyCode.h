@@ -42,4 +42,10 @@ typedef enum ECurrencyCode
     k_ECurrencyCodeQAR, // QAR
     k_ECurrencyCodeCRC, // CRC
     k_ECurrencyCodeUYU, // UYU
+    k_ECurrencyCodeBGN, // BGN
+    k_ECurrencyCodeHRK, // HRK
+    k_ECurrencyCodeCZK, // CZK
+    k_ECurrencyCodeDKK, // DKK
+    k_ECurrencyCodeHUF, // HUF
+    k_ECurrencyCodeRON, // RON
 } ECurrencyCode;

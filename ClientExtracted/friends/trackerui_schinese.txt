@@ -66,7 +66,7 @@
 "Friends_FriendList_Offline"		"离线"
 
 "Friends_SendInstantMessage"		"发送消息"
-"Friends_Ignore"			"屏蔽所有通讯..."
+"Friends_Ignore"			"屏蔽所有通信..."
 "Friends_UnIgnore"			"取消屏蔽"
 "Friends_InviteFriendToGame"		"邀请加入游戏"
 "Friends_JoinGame"				"加入游戏"
@@ -167,7 +167,7 @@
 "Friends_InvitationSent"				"已经向 %search% 发送了电子邮件邀请，在他们响应后就会被添加至您的好友列表。\n"
 "Friends_DefaultInviteError"			"向 %search% 发送邀请时出现问题。" 
 "Friends_TooManyPendingInvitations"   "最近您已经发送了过多的邀请。请尝试在一至两天内再次邀请 %search%。"
-"Friends_InvitationBlocking"		"您将屏蔽与此用户的所有通讯。在与对方进行通讯之前，请先访问对方的“Steam 社区”页面取消对其的屏蔽。"
+"Friends_InvitationBlocking"		"您将屏蔽与此用户的所有通信。在与对方进行通信之前，请先访问对方的“Steam 社区”页面取消对其的屏蔽。"
 
 "Friends_DontGiveOutPassword"			"请不要将您的密码透露给任何人。\n"
 "Friends_DontGiveOutPassword_URL"		"https://support.steampowered.com/kb/1266-OAFV-8478/"
@@ -437,7 +437,7 @@
 "Friends_WhenThisFriendJoinsGame"				"当 %FriendName% 加入游戏时"
 "Friends_WhenThisFriendComesOnline"			"当 %FriendName% 上线时"
 "Friends_WhenReceiveMessageFromThisFriend"	"当我接收到 %FriendName% 的消息时"
-"Friends_InviteInfo_HasAdded"					"已将您添加到 TA 的"
+"Friends_InviteInfo_HasAdded"					"已将您添加到其"
 "Friends_InviteInfo_FriendsList"				"好友列表"
 "Friends_InviteInfo_BeenInvited"				"您已被邀请"
 "Friends_InviteInfo_JoinGroup"				"加入 Steam 组"
@@ -482,7 +482,7 @@
 "Friends_ChatPasswordWarning_DontSend"		"否，不要发送"
 
 "Friends_BlockCommunicationWarning_Title"	"屏蔽与 %username% 的所有互动"
-"Friends_BlockCommunicationWarning_Info"	"您即将屏蔽所有与 %username% 的通讯。\n\n同时 Steamworks 的游戏匹配系统也将不会让你们在一起进行游戏。"
+"Friends_BlockCommunicationWarning_Info"	"您即将屏蔽所有与 %username% 的通信。\n\n同时 Steamworks 的游戏匹配系统也将不会让你们在一起进行游戏。"
 "Friends_BlockCommunicationWarning_Info2"	"您将要屏蔽与 %username% 的所有通信。\n\n您将不能发送消息给该玩家，也不能接收该玩家的消息或该玩家的邀请。\n\n您可以通过访问他们的 Steam 个人资料或您的好友列表来取消对他们的屏蔽。"
 "Friends_BlockCommunicationWarning_LinkInfo"	"更多有关 Steamworks 匹配系统的信息。"
 "Friends_BlockCommunicationWarning_DontAskAgainCheck"	"不再显示此信息。"

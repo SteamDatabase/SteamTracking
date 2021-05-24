@@ -1,21 +1,8 @@
 
- B CSafeSet::g_bInitialized
- B SteamThreadTools::g_SuspendResumeLock
- B SteamThreadTools::g_nCurThreadSuspendCount
- B SteamThreadTools::g_pCurThread
- B SteamVProf::g_mutexProfileDump
- B g_AllocTrackMutex
- B g_StackDumpMutex
- B g_TestHarness
  B g_VProfManager
  B g_VProfProfilesRunningCount
  B g_VProfile
  B g_bInException
- B g_bTrackedAllocRecordStack
- B g_cTrackedAllocs
- B g_cTrackedAllocsMax
- B g_mapAllocations
- B s_bInAssert
  CFDictionaryGetTypeID
  CFDictionaryGetValueIfPresent
  CFGetTypeID
@@ -24,20 +11,13 @@
  CFStringGetCString
  CFURLCreateDataAndPropertiesFromResource
  CFURLCreateWithFileSystemPath
- D g_AllocError
  D g_ClockSpeed
  D g_ClockSpeedMicrosecondsMultiplier
  D g_ClockSpeedMillisecondsMultiplier
  D g_ClockSpeedSecondsMultiplier
  D g_pMemAllocSteam
- D g_pszUnknown
- D typeinfo for CStdMemAlloc
- D typeinfo for IMemAlloc
  D typeinfo for SteamThreadTools::CThread
- D vtable for CStdMemAlloc
  D vtable for SteamThreadTools::CThread
- R typeinfo name for CStdMemAlloc
- R typeinfo name for IMemAlloc
  R typeinfo name for SteamThreadTools::CThread
  R typeinfo name for SteamVProf::CVProfManager
  T AllocateCrashMemoryReserve
@@ -49,117 +29,12 @@
  T BWritingFatalMiniDump
  T BWritingMiniDump
  T BWritingNonFatalMiniDump
- T CCrashHandlerScope::~CCrashHandlerScope()
  T CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(DbgFmtFatalMsgTag_t*, char const*, ...)
  T CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(char const*, ...)
  T CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(DbgFmtFatalMsgTag_t*, StringView)
  T CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(StringView)
- T CFilenamesCache::FindOrCreateFilename(char const*)
- T CFilenamesCache::~CFilenamesCache()
- T CL2Cache::CL2Cache()
- T CL2Cache::End()
- T CL2Cache::Start()
- T CL2Cache::Validate(CValidator&, char const*)
- T CL2Cache::~CL2Cache()
- T CSafeSet::~CSafeSet()
- T CStackLess::operator()(CStack*, CStack*) const
- T CStdMemAlloc::Alloc(unsigned long)
- T CStdMemAlloc::Alloc(unsigned long, char const*, int, bool, bool)
- T CStdMemAlloc::AllocCanFail(unsigned long)
- T CStdMemAlloc::AllocCanFail(unsigned long, char const*, int, bool)
- T CStdMemAlloc::AllocTracked(unsigned long)
- T CStdMemAlloc::BIsVirtualHeapInitialized()
- T CStdMemAlloc::CStdMemAlloc()
- T CStdMemAlloc::ClearMemTrackingStats()
- T CStdMemAlloc::CompactHeap()
- T CStdMemAlloc::CompactIncremental()
- T CStdMemAlloc::ComputeMemoryUsedBy(char const*)
- T CStdMemAlloc::CpubAllocated()
- T CStdMemAlloc::CrtCheckMemory()
- T CStdMemAlloc::CrtDbgReport(int, char const*, int, char const*, char const*)
- T CStdMemAlloc::CrtIsValidHeapPointer(void const*)
- T CStdMemAlloc::CrtIsValidPointer(void const*, unsigned int, int)
- T CStdMemAlloc::CrtMemCheckpoint(_CrtMemState*)
- T CStdMemAlloc::CrtSetBreakAlloc(long)
- T CStdMemAlloc::CrtSetDbgFlag(int)
- T CStdMemAlloc::CrtSetReportFile(int, void*)
- T CStdMemAlloc::CrtSetReportHook(void*)
- T CStdMemAlloc::CrtSetReportMode(int, int)
- T CStdMemAlloc::CubAllocated()
- T CStdMemAlloc::CubAllocatedUntracked()
- T CStdMemAlloc::CubLogicalAllocated()
- T CStdMemAlloc::CubSBHAllocated()
- T CStdMemAlloc::CubSBHCommitted()
- T CStdMemAlloc::CubSBHFree()
- T CStdMemAlloc::CubSBHMinPoolFree()
- T CStdMemAlloc::DefaultFailHandler(unsigned long)
- T CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)
- T CStdMemAlloc::DumpStats()
- T CStdMemAlloc::DumpStatsFileBase(char const*)
- T CStdMemAlloc::Expand_NoLongerSupported(void*, unsigned long)
- T CStdMemAlloc::Expand_NoLongerSupported(void*, unsigned long, char const*, int)
- T CStdMemAlloc::Free(void*, bool)
- T CStdMemAlloc::Free(void*, char const*, int, bool)
- T CStdMemAlloc::FreeTracked(void*)
- T CStdMemAlloc::GetActualDbgInfo(char const*&, int&)
- T CStdMemAlloc::GetAllocationFile(void*)
- T CStdMemAlloc::GetAllocationLine(void*)
- T CStdMemAlloc::GetFirstMemBlock()
- T CStdMemAlloc::GetNextMemBlock(void*)
- T CStdMemAlloc::GetSize(void*)
- T CStdMemAlloc::InitVirtualHeap(EVirtualHeapType)
- T CStdMemAlloc::InternalAlloc(unsigned long, bool)
- T CStdMemAlloc::InternalAllocFromPools(unsigned long)
- T CStdMemAlloc::InternalFree(void*)
- T CStdMemAlloc::InternalRealloc(void*, unsigned long)
- T CStdMemAlloc::IsClaimed(void*)
- T CStdMemAlloc::IsDebugHeap()
- T CStdMemAlloc::IsMemLeak(void*)
- T CStdMemAlloc::IsMemLeakReported(void*)
- T CStdMemAlloc::IsMemUntracked(void*)
- T CStdMemAlloc::IsValid(void*)
- T CStdMemAlloc::MemoryAllocFailed()
- T CStdMemAlloc::OutOfMemory(unsigned long)
- T CStdMemAlloc::PopAllocDbgInfo()
- T CStdMemAlloc::PrintCallStack(void*)
- T CStdMemAlloc::PushAllocDbgInfo(char const*, int)
- T CStdMemAlloc::Realloc(void*, unsigned long)
- T CStdMemAlloc::Realloc(void*, unsigned long, char const*, int, bool)
- T CStdMemAlloc::RegisterAllocation(char const*, int, unsigned long, unsigned long, unsigned int)
- T CStdMemAlloc::RegisterDeallocation(char const*, int, unsigned long, unsigned long, unsigned int)
- T CStdMemAlloc::SetAllocFailHandler(unsigned long (*)(unsigned long))
- T CStdMemAlloc::SetBClaimed(void*, bool)
- T CStdMemAlloc::SetCRTAllocFailed(unsigned long)
- T CStdMemAlloc::SetDebugStackDumpOnAlloc(unsigned long, unsigned long, int)
- T CStdMemAlloc::SetLowFragmentationHeap()
- T CStdMemAlloc::SetMemLeakReported(void*)
- T CStdMemAlloc::SetMemUntracked(void*)
- T CStdMemAlloc::SetReleaseMemTrackingOn(int, int, int, bool)
- T CStdMemAlloc::WalkAndAuditHeap(bool)
- T CStdMemAlloc::heapchk()
- T CStdMemAlloc::~CStdMemAlloc()
- T CSteam3DumpHelper::ComputeBuildID(char const*, char const*)
- T CSteam3DumpHelper::ComputeExeNameFromArgv0(char const*)
- T CSteam3DumpHelper::GetProduct()
- T CSteam3DumpHelper::GetVersion()
- T CSteam3DumpHelper::Init()
- T CSteam3DumpHelper::LoadModule(char const*)
- T CSteam3DumpHelper::Shutdown()
- T CSteam3DumpHelper::~CSteam3DumpHelper()
- T CTestHarness::Init()
- T CTestHarness::RunTest(void (*)(void*), void*)
- T CTestHarness::TerminateThread()
- T CTestHarness::TestThread()
- T CTestHarness::TestThreadProxy(void*)
- T CTestHarness::YieldToMainThread()
- T CTestHarness::YieldToTestThread()
- T CTestHarness::~CTestHarness()
  T CTier0::ValidateGlobals(CValidator&)
  T CVProfile_ExitScope
- T CValObject::ClaimChildMemoryBlock(unsigned long)
- T CValObject::ClaimMemoryBlock(void*, unsigned long)
- T CValObject::Init(char const*, void*, char const*, CValObject*, CValObject*)
- T CValidateAutoPushPop::~CValidateAutoPushPop()
  T CValidator::AddValidationLock(SteamThreadTools::CThreadMutex*)
  T CValidator::BExcludeAllocationFromTracking(char const*, int)
  T CValidator::CValidator(int, bool, IMemBlockClaimedList*)
@@ -183,31 +58,23 @@
  T CValidator::UnlockValidationLocks()
  T CValidator::Validate(CValidator&, char const*)
  T CValidator::~CValidator()
- T CalculateCPUFreq()
  T CallAssertFailedNotifyFunc
  T CallFlushLogFunc
- T CatchAndWriteContext_t::Invoke()
  T CatchAndWriteMiniDump
  T CatchAndWriteMiniDumpEx
  T CatchAndWriteMiniDumpExForVoidPtrFn
  T CatchAndWriteMiniDumpExReturnsInt
  T CatchAndWriteMiniDumpForVoidPtrFn
- T CatchAndWriteMiniDump_Impl(CatchAndWriteContext_t&)
- T CheckSSE4aTechnology()
  T ClearStackTrackingFilters
  T ClearWritingMiniDump
  T CrackSmokingCompiler
- T CrashOnPurpose()
  T CreateSimpleProcess
  T DLog
  T DWarning
  T DeclareCurrentThreadIsMainThread
- T DefaultSpewFunc(SpewType_t, char const*)
  T DoNewAssertDialog
  T EnableCrashingOnCrashes
  T Error
- T FindOrCreateStack(CStack*)
- T FindSpewGroup(char const*, int*)
  T FreeCrashMemoryReserve
  T GetAvailableRAM
  T GetCPUInformation()
@@ -221,16 +88,12 @@
  T GetNumberOfSpewAndLogGroups
  T GetNumberOfStackTrackingFilters
  T GetPortableSystemInformation
- T GetProcessorBrand()
- T GetProcessorDetailBlob(int*)
  T GetSpewAndLogLevel
  T GetSpewAndLogLevelByGroupIndex
  T GetSpewOutputFunc
  T GetStackTrackingFilter
  T HasStackTrackingFilters
- T HasWrittenMinidumpForFileLine(char const*, unsigned int)
  T InitPME
- T InitStackWalk()
  T InitializeStackTrackingFilters
  T Is64BitOS
  T IsInAssert
@@ -239,7 +102,6 @@
  T IsStackTrackingFiltered
  T Log
  T MiniDumpUnlock
- T MinidumpValidate(CValidator&)
  T Msg
  T Plat_AbsoluteTime
  T Plat_AbsoluteTimeToFloat
@@ -255,9 +117,11 @@
  T Plat_GetPackageName
  T Plat_GetProcessArgv
  T Plat_GetStackBackTrace
+ T Plat_IsChromeOS
  T Plat_IsInDebugSession
  T Plat_IsSteamConsoleMode
  T Plat_IsSteamOS
+ T Plat_IsSteamOS3
  T Plat_MSTime
  T Plat_MSTime64
  T Plat_OutputDebugString
@@ -281,13 +145,9 @@
  T Plat_localtime
  T Plat_timegm
  T Plat_timezone
- T RTAClearData(int, bool)
- T RTANoteAlloc(void*, unsigned long, bool, char const*, int, int, int)
- T RTANoteFree(void*, char const*)
  T RealGetCallStack
  T RealPrintCallStack
  T RealPrintRawCallStack
- T ReapChildProcesses(int)
  T ReleaseThreadHandle
  T SecureRandomBytes
  T SetAssertDumpStack
@@ -300,8 +160,6 @@
  T SetMiniDumpCustomInfo
  T SetMiniDumpSteamID
  T SetStackTrackingFilter
- T SetWritingMiniDump(bool)
- T SetWrittenMinidumpForFileLine(char const*, unsigned int)
  T ShouldUseNewAssertDialog
  T ShutdownPME
  T SpewActivate
@@ -343,20 +201,10 @@
  T SteamThreadTools::CThreadFullMutex::CThreadFullMutex(bool, char const*, bool, bool)
  T SteamThreadTools::CThreadFullMutex::IsCreator() const
  T SteamThreadTools::CThreadFullMutex::Release()
- T SteamThreadTools::CThreadLocal<int>::~CThreadLocal()
- T SteamThreadTools::CThreadLocal<long long>::~CThreadLocal()
  T SteamThreadTools::CThreadLocalBase::CThreadLocalBase()
  T SteamThreadTools::CThreadLocalBase::Get() const
  T SteamThreadTools::CThreadLocalBase::Set(void*)
  T SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
- T SteamThreadTools::CThreadLocalInt<int>::~CThreadLocalInt()
- T SteamThreadTools::CThreadLocalInt<long long>::~CThreadLocalInt()
- T SteamThreadTools::CThreadLocalPtr<SteamThreadTools::CThread>::~CThreadLocalPtr()
- T SteamThreadTools::CThreadLocalPtr<SteamVProf::CVProfile>::~CThreadLocalPtr()
- T SteamThreadTools::CThreadLocalStackCounter<int>::CThreadLocalStackCounter(SteamThreadTools::CThreadLocal<int>&)
- T SteamThreadTools::CThreadLocalStackCounter<int>::~CThreadLocalStackCounter()
- T SteamThreadTools::CThreadLocalStackCounter<long long>::CThreadLocalStackCounter(SteamThreadTools::CThreadLocal<long long>&)
- T SteamThreadTools::CThreadLocalStackCounter<long long>::~CThreadLocalStackCounter()
  T SteamThreadTools::CThreadMutex::CThreadMutex()
  T SteamThreadTools::CThreadMutex::~CThreadMutex()
  T SteamThreadTools::CThreadRWLock::LockForWrite()
@@ -365,7 +213,6 @@
  T SteamThreadTools::CThreadSemaphore::CThreadSemaphore(long, long)
  T SteamThreadTools::CThreadSemaphore::Release(long)
  T SteamThreadTools::CThreadSpinLock::Lock(unsigned int) volatile
- T SteamThreadTools::CThreadSpinLock::~CThreadSpinLock()
  T SteamThreadTools::CThreadSyncObject::AcquireSemaphoreInternal(unsigned int)
  T SteamThreadTools::CThreadSyncObject::AssertUseable()
  T SteamThreadTools::CThreadSyncObject::CThreadSyncObject()
@@ -383,8 +230,6 @@
  T SteamThreadTools::CThreadSyncObject::operator!() const
  T SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
  T SteamThreadTools::CreateSimpleThread(unsigned int (*)(void*), void*, unsigned int*, unsigned int)
- T SteamThreadTools::InitMainThread()
- T SteamThreadTools::ThreadShellExecuteInternal(char const*, char const*, char const*, char const*, bool)
  T SteamVProf::CVProfManager::AddProfileForThread(SteamVProf::CVProfile*, unsigned int, _opaque_pthread_t*)
  T SteamVProf::CVProfManager::BIsProfilePtrValid(SteamVProf::CVProfile*)
  T SteamVProf::CVProfManager::CVProfManager()
@@ -518,8 +363,6 @@
  T ThreadWaitForProcessExit
  T VProfInternalEnterScopeCurrentThread
  T VProfInternalGetProfileForCurrentThread
- T V_pretifymem(float, int, bool)
- T V_tier0_strncpy
  T ValidateSpew
  T Warning
  T WriteMiniDump
@@ -527,82 +370,6 @@
  T _SpewMessageType
  T _SpewMessageTypeSourceFmt
  T _SpewMessageTypeSourceV
- T _ZNSt3__16vectorIN10SteamVProf10TimeSums_tENS_9allocatorIS2_EEE6assignIPS2_EENS_9enable_ifIXaasr21__is_forward_iteratorIT_EE5valuesr16is_constructibleIS2_NS_15iterator_traitsIS9_E9referenceEEE5valueEvE4typeES9_S9_
- T __clang_call_terminate
- T bool std::__1::__insertion_sort_incomplete<bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&), SteamVProf::TimeSums_t*>(SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&))
- T std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<int, char const*>, void*>*> std::__1::__hash_table<std::__1::__hash_value_type<int, char const*>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, char const*>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, char const*>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, char const*> > >::find<int>(int const&)
- T std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<long long, char const*>, void*>*> std::__1::__hash_table<std::__1::__hash_value_type<long long, char const*>, std::__1::__unordered_map_hasher<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::hash<long long>, true>, std::__1::__unordered_map_equal<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::equal_to<long long>, true>, std::__1::allocator<std::__1::__hash_value_type<long long, char const*> > >::find<long long>(long long const&)
- T std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<void*, AllocTracking_t>, void*>*> std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::__insert_multi<std::__1::__hash_value_type<void*, AllocTracking_t> const&>(std::__1::__hash_value_type<void*, AllocTracking_t> const&)
- T std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<void*, AllocTracking_t>, void*>*> std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::find<void*>(void* const&)
- T std::__1::__hash_table<std::__1::__hash_value_type<int, char const*>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, char const*>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, char const*>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, char const*> > >::__node_insert_unique(std::__1::__hash_node<std::__1::__hash_value_type<int, char const*>, void*>*)
- T std::__1::__hash_table<std::__1::__hash_value_type<int, char const*>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, char const*>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, char const*>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, char const*> > >::__rehash(unsigned long)
- T std::__1::__hash_table<std::__1::__hash_value_type<int, char const*>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, char const*>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, char const*>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, char const*> > >::rehash(unsigned long)
- T std::__1::__hash_table<std::__1::__hash_value_type<int, char const*>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, char const*>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, char const*>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, char const*> > >::~__hash_table()
- T std::__1::__hash_table<std::__1::__hash_value_type<long long, char const*>, std::__1::__unordered_map_hasher<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::hash<long long>, true>, std::__1::__unordered_map_equal<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::equal_to<long long>, true>, std::__1::allocator<std::__1::__hash_value_type<long long, char const*> > >::__node_insert_unique(std::__1::__hash_node<std::__1::__hash_value_type<long long, char const*>, void*>*)
- T std::__1::__hash_table<std::__1::__hash_value_type<long long, char const*>, std::__1::__unordered_map_hasher<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::hash<long long>, true>, std::__1::__unordered_map_equal<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::equal_to<long long>, true>, std::__1::allocator<std::__1::__hash_value_type<long long, char const*> > >::__rehash(unsigned long)
- T std::__1::__hash_table<std::__1::__hash_value_type<long long, char const*>, std::__1::__unordered_map_hasher<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::hash<long long>, true>, std::__1::__unordered_map_equal<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::equal_to<long long>, true>, std::__1::allocator<std::__1::__hash_value_type<long long, char const*> > >::rehash(unsigned long)
- T std::__1::__hash_table<std::__1::__hash_value_type<long long, char const*>, std::__1::__unordered_map_hasher<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::hash<long long>, true>, std::__1::__unordered_map_equal<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::equal_to<long long>, true>, std::__1::allocator<std::__1::__hash_value_type<long long, char const*> > >::~__hash_table()
- T std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::__node_insert_multi(std::__1::__hash_node<std::__1::__hash_value_type<void*, AllocTracking_t>, void*>*)
- T std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::__node_insert_unique(std::__1::__hash_node<std::__1::__hash_value_type<void*, AllocTracking_t>, void*>*)
- T std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::__rehash(unsigned long)
- T std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::clear()
- T std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::erase(std::__1::__hash_const_iterator<std::__1::__hash_node<std::__1::__hash_value_type<void*, AllocTracking_t>, void*>*>)
- T std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::operator=(std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > > const&)
- T std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::rehash(unsigned long)
- T std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::remove(std::__1::__hash_const_iterator<std::__1::__hash_node<std::__1::__hash_value_type<void*, AllocTracking_t>, void*>*>)
- T std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::~__hash_table()
- T std::__1::__murmur2_or_cityhash<unsigned long, 32ul>::operator()(void const*, unsigned long)
- T std::__1::__split_buffer<SteamVProf::IVProfileCallbackHandler*, std::__1::allocator<SteamVProf::IVProfileCallbackHandler*>&>::~__split_buffer()
- T std::__1::__split_buffer<SteamVProf::TimeSums_t, std::__1::allocator<SteamVProf::TimeSums_t>&>::~__split_buffer()
- T std::__1::__tree<CStack*, CStackLess, CNoRecurseAllocator<CStack*> >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
- T std::__1::__tree<CStack*, CStackLess, CNoRecurseAllocator<CStack*> >::__insert_unique(CStack* const&)
- T std::__1::__tree<CStack*, CStackLess, CNoRecurseAllocator<CStack*> >::destroy(std::__1::__tree_node<CStack*, void*>*)
- T std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
- T std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::__insert_unique(MinidumpWritten_t const&)
- T std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::destroy(std::__1::__tree_node<MinidumpWritten_t, void*>*)
- T std::__1::__tree<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__map_value_compare<SteamVProf::CVProfNode*, std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::less<SteamVProf::CVProfNode*>, true>, std::__1::allocator<std::__1::__value_type<SteamVProf::CVProfNode*, double> > >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
- T std::__1::__tree<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__map_value_compare<SteamVProf::CVProfNode*, std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::less<SteamVProf::CVProfNode*>, true>, std::__1::allocator<std::__1::__value_type<SteamVProf::CVProfNode*, double> > >::__node_insert_unique(std::__1::__tree_node<std::__1::__value_type<SteamVProf::CVProfNode*, double>, void*>*)
- T std::__1::__tree<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__map_value_compare<SteamVProf::CVProfNode*, std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::less<SteamVProf::CVProfNode*>, true>, std::__1::allocator<std::__1::__value_type<SteamVProf::CVProfNode*, double> > >::destroy(std::__1::__tree_node<std::__1::__value_type<SteamVProf::CVProfNode*, double>, void*>*)
- T std::__1::__tree<std::__1::__value_type<char const*, unsigned int>, std::__1::__map_value_compare<char const*, std::__1::__value_type<char const*, unsigned int>, std::__1::less<char const*>, true>, std::__1::allocator<std::__1::__value_type<char const*, unsigned int> > >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
- T std::__1::__tree<std::__1::__value_type<char const*, unsigned int>, std::__1::__map_value_compare<char const*, std::__1::__value_type<char const*, unsigned int>, std::__1::less<char const*>, true>, std::__1::allocator<std::__1::__value_type<char const*, unsigned int> > >::__node_insert_unique(std::__1::__tree_node<std::__1::__value_type<char const*, unsigned int>, void*>*)
- T std::__1::__tree<std::__1::__value_type<char const*, unsigned int>, std::__1::__map_value_compare<char const*, std::__1::__value_type<char const*, unsigned int>, std::__1::less<char const*>, true>, std::__1::allocator<std::__1::__value_type<char const*, unsigned int> > >::destroy(std::__1::__tree_node<std::__1::__value_type<char const*, unsigned int>, void*>*)
- T std::__1::__tree_iterator<CStack*, std::__1::__tree_node<CStack*, void*>*, int> std::__1::__tree<CStack*, CStackLess, CNoRecurseAllocator<CStack*> >::__lower_bound<CStack*>(CStack* const&, std::__1::__tree_node<CStack*, void*>*, std::__1::__tree_node<CStack*, void*>*)
- T std::__1::__tree_iterator<CStack*, std::__1::__tree_node<CStack*, void*>*, int> std::__1::__tree<CStack*, CStackLess, CNoRecurseAllocator<CStack*> >::find<CStack*>(CStack* const&)
- T std::__1::__tree_iterator<CStack*, std::__1::__tree_node<CStack*, void*>*, long> std::__1::__tree<CStack*, CStackLess, CNoRecurseAllocator<CStack*> >::__lower_bound<CStack*>(CStack* const&, std::__1::__tree_node<CStack*, void*>*, std::__1::__tree_node<CStack*, void*>*)
- T std::__1::__tree_iterator<CStack*, std::__1::__tree_node<CStack*, void*>*, long> std::__1::__tree<CStack*, CStackLess, CNoRecurseAllocator<CStack*> >::find<CStack*>(CStack* const&)
- T std::__1::__tree_iterator<MinidumpWritten_t, std::__1::__tree_node<MinidumpWritten_t, void*>*, int> std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::find<MinidumpWritten_t>(MinidumpWritten_t const&)
- T std::__1::__tree_iterator<MinidumpWritten_t, std::__1::__tree_node<MinidumpWritten_t, void*>*, long> std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::find<MinidumpWritten_t>(MinidumpWritten_t const&)
- T std::__1::__tree_iterator<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__tree_node<std::__1::__value_type<SteamVProf::CVProfNode*, double>, void*>*, int> std::__1::__tree<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__map_value_compare<SteamVProf::CVProfNode*, std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::less<SteamVProf::CVProfNode*>, true>, std::__1::allocator<std::__1::__value_type<SteamVProf::CVProfNode*, double> > >::find<SteamVProf::CVProfNode*>(SteamVProf::CVProfNode* const&)
- T std::__1::__tree_iterator<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__tree_node<std::__1::__value_type<SteamVProf::CVProfNode*, double>, void*>*, long> std::__1::__tree<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__map_value_compare<SteamVProf::CVProfNode*, std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::less<SteamVProf::CVProfNode*>, true>, std::__1::allocator<std::__1::__value_type<SteamVProf::CVProfNode*, double> > >::find<SteamVProf::CVProfNode*>(SteamVProf::CVProfNode* const&)
- T std::__1::__tree_node_base<void*>*& std::__1::__tree<CStack*, CStackLess, CNoRecurseAllocator<CStack*> >::__find_equal<CStack*>(std::__1::__tree_node_base<void*>*&, CStack* const&)
- T std::__1::__tree_node_base<void*>*& std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::__find_equal<MinidumpWritten_t>(std::__1::__tree_node_base<void*>*&, MinidumpWritten_t const&)
- T std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__map_value_compare<SteamVProf::CVProfNode*, std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::less<SteamVProf::CVProfNode*>, true>, std::__1::allocator<std::__1::__value_type<SteamVProf::CVProfNode*, double> > >::__find_equal<std::__1::__value_type<SteamVProf::CVProfNode*, double> >(std::__1::__tree_node_base<void*>*&, std::__1::__value_type<SteamVProf::CVProfNode*, double> const&)
- T std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::__value_type<char const*, unsigned int>, std::__1::__map_value_compare<char const*, std::__1::__value_type<char const*, unsigned int>, std::__1::less<char const*>, true>, std::__1::allocator<std::__1::__value_type<char const*, unsigned int> > >::__find_equal<std::__1::__value_type<char const*, unsigned int> >(std::__1::__tree_node_base<void*>*&, std::__1::__value_type<char const*, unsigned int> const&)
- T std::__1::__vector_base<SteamVProf::IVProfileCallbackHandler*, std::__1::allocator<SteamVProf::IVProfileCallbackHandler*> >::~__vector_base()
- T std::__1::__vector_base<SteamVProf::TimeSums_t, std::__1::allocator<SteamVProf::TimeSums_t> >::~__vector_base()
- T std::__1::pair<std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<int, char const*>, void*>*>, bool> std::__1::__hash_table<std::__1::__hash_value_type<int, char const*>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, char const*>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, char const*>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, char const*> > >::__insert_unique<std::__1::pair<int, char const*> >(std::__1::pair<int, char const*>&&)
- T std::__1::pair<std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<long long, char const*>, void*>*>, bool> std::__1::__hash_table<std::__1::__hash_value_type<long long, char const*>, std::__1::__unordered_map_hasher<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::hash<long long>, true>, std::__1::__unordered_map_equal<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::equal_to<long long>, true>, std::__1::allocator<std::__1::__hash_value_type<long long, char const*> > >::__insert_unique<std::__1::pair<long long, char const*> >(std::__1::pair<long long, char const*>&&)
- T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__tree_node<std::__1::__value_type<SteamVProf::CVProfNode*, double>, void*>*, int>, bool> std::__1::__tree<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__map_value_compare<SteamVProf::CVProfNode*, std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::less<SteamVProf::CVProfNode*>, true>, std::__1::allocator<std::__1::__value_type<SteamVProf::CVProfNode*, double> > >::__insert_unique<std::__1::pair<SteamVProf::CVProfNode*, double> >(std::__1::pair<SteamVProf::CVProfNode*, double>&&)
- T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__tree_node<std::__1::__value_type<SteamVProf::CVProfNode*, double>, void*>*, long>, bool> std::__1::__tree<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__map_value_compare<SteamVProf::CVProfNode*, std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::less<SteamVProf::CVProfNode*>, true>, std::__1::allocator<std::__1::__value_type<SteamVProf::CVProfNode*, double> > >::__insert_unique<std::__1::pair<SteamVProf::CVProfNode*, double> >(std::__1::pair<SteamVProf::CVProfNode*, double>&&)
- T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<char const*, unsigned int>, std::__1::__tree_node<std::__1::__value_type<char const*, unsigned int>, void*>*, int>, bool> std::__1::__tree<std::__1::__value_type<char const*, unsigned int>, std::__1::__map_value_compare<char const*, std::__1::__value_type<char const*, unsigned int>, std::__1::less<char const*>, true>, std::__1::allocator<std::__1::__value_type<char const*, unsigned int> > >::__insert_unique<std::__1::pair<char const*, unsigned int> >(std::__1::pair<char const*, unsigned int>&&)
- T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<char const*, unsigned int>, std::__1::__tree_node<std::__1::__value_type<char const*, unsigned int>, void*>*, long>, bool> std::__1::__tree<std::__1::__value_type<char const*, unsigned int>, std::__1::__map_value_compare<char const*, std::__1::__value_type<char const*, unsigned int>, std::__1::less<char const*>, true>, std::__1::allocator<std::__1::__value_type<char const*, unsigned int> > >::__insert_unique<std::__1::pair<char const*, unsigned int> >(std::__1::pair<char const*, unsigned int>&&)
- T std::__1::set<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::~set()
- T std::__1::unique_ptr<std::__1::__hash_node<std::__1::__hash_value_type<void*, AllocTracking_t>, void*>, std::__1::__hash_node_destructor<std::__1::allocator<std::__1::__hash_node<std::__1::__hash_value_type<void*, AllocTracking_t>, void*> > > > std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::__construct_node<std::__1::__hash_value_type<void*, AllocTracking_t> const&>(std::__1::__hash_value_type<void*, AllocTracking_t> const&)
- T std::__1::unordered_map<void*, AllocTracking_t, std::__1::hash<void*>, std::__1::equal_to<void*>, std::__1::allocator<std::__1::pair<void* const, AllocTracking_t> > >::operator[](void* const&)
- T std::__1::unordered_map<void*, AllocTracking_t, std::__1::hash<void*>, std::__1::equal_to<void*>, std::__1::allocator<std::__1::pair<void* const, AllocTracking_t> > >::~unordered_map()
- T std::__1::vector<SteamVProf::TimeSums_t, std::__1::allocator<SteamVProf::TimeSums_t> >::allocate(unsigned long)
- T std::__1::vector<SteamVProf::TimeSums_t, std::__1::allocator<SteamVProf::TimeSums_t> >::deallocate()
- T unsigned int std::__1::__sort3<bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&), SteamVProf::TimeSums_t*>(SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&))
- T unsigned int std::__1::__sort4<bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&), SteamVProf::TimeSums_t*>(SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&))
- T unsigned int std::__1::__sort5<bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&), SteamVProf::TimeSums_t*>(SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&))
- T void std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::__assign_multi<std::__1::__hash_const_iterator<std::__1::__hash_node<std::__1::__hash_value_type<void*, AllocTracking_t>, void*>*> >(std::__1::__hash_const_iterator<std::__1::__hash_node<std::__1::__hash_value_type<void*, AllocTracking_t>, void*>*>, std::__1::__hash_const_iterator<std::__1::__hash_node<std::__1::__hash_value_type<void*, AllocTracking_t>, void*>*>)
- T void std::__1::__insertion_sort_3<bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&), SteamVProf::TimeSums_t*>(SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&))
- T void std::__1::__sort<bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&), SteamVProf::TimeSums_t*>(SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&))
- T void std::__1::__tree_balance_after_insert<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)
- T void std::__1::__tree_left_rotate<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*)
- T void std::__1::__tree_right_rotate<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*)
- T void std::__1::vector<SteamVProf::IVProfileCallbackHandler*, std::__1::allocator<SteamVProf::IVProfileCallbackHandler*> >::__push_back_slow_path<SteamVProf::IVProfileCallbackHandler* const&>(SteamVProf::IVProfileCallbackHandler* const&)
- T void std::__1::vector<SteamVProf::TimeSums_t, std::__1::allocator<SteamVProf::TimeSums_t> >::__push_back_slow_path<SteamVProf::TimeSums_t const&>(SteamVProf::TimeSums_t const&)
  T vtune
  _DefaultRuneLocale
  _NSGetArgc
@@ -636,73 +403,11 @@
  _exit
  asctime_r
  atoi
- b AssertMsgImplementation::s_ThreadLocalAssertMsgGuardStatic
- b AssertMsgImplementation::s_bDisableDebuggerBreak
- b BGetLocalFQDN::rgchHostname
- b CFilenamesCache::FindOrCreateFilename(char const*)::autoMutex__
- b ClearWritingMiniDump::fAsserted
- b FindOrCreateStack(CStack*)::autoMutex__
- b GetCPUInformation()::pi
- b GetCRunTimeVersion::rgchVersionStr
- b GetLocalHostname::rgchHostname
- b GetMiniDumpMutex()::ThreadMutexMiniDump
- b GetMinidumpsWritten()::s_MinidumpsWritten
- b GetProcessorBrand()::CPUBrand
- b GetProcessorDetailBlob(int*)::DetailBlob
- b GetProcessorVendorId()::VendorID
- b Plat_IsSteamConsoleMode::bInited
- b Plat_IsSteamConsoleMode::bIsSteamConsole
- b RTANoteAlloc(void*, unsigned long, bool, char const*, int, int, int)::g_FilenamesCache
- b SecureRandomBytes::s_dev_urandom_fd
- b SetWritingMiniDump(bool)::fAsserted
- b SteamThreadTools::ThreadSetPriority::__executeCount
- b SteamThreadTools::ThreadShellExecuteInternal(char const*, char const*, char const*, char const*, bool)::bInstalledSignalHandler
- b SteamThreadTools::g_ThreadMainThreadID
- b V_pretifymem(float, int, bool)::current
- b V_pretifymem(float, int, bool)::output
- b _SpewMessageTypeSourceV::autoMutex__
- b _ZL6g_Info.0
- b _ZL6g_Info.1
- b _ZL6g_Info.2
- b g_DumpHelper
- b g_Stacks
- b g_TickBase
- b g_TickFrequency
- b g_TickFrequencyDouble
- b g_TicksToUS
- b g_bBreak
- b g_bDumpWritten
- b g_bWriteFullMemOnCrash
- b g_bWritingFatalMinidump
- b g_bWritingNonfatalMinidump
- b g_nNumFilters
- b g_pAssertDisables
- b g_pCrashMemoryReserve
- b g_rgchStackTrackingFilters
- b guard variable for AssertMsgImplementation::s_ThreadLocalAssertMsgGuardStatic
- b guard variable for CFilenamesCache::FindOrCreateFilename(char const*)::autoMutex__
- b guard variable for FindOrCreateStack(CStack*)::autoMutex__
- b guard variable for GetMiniDumpMutex()::ThreadMutexMiniDump
- b guard variable for GetMinidumpsWritten()::s_MinidumpsWritten
- b guard variable for RTANoteAlloc(void*, unsigned long, bool, char const*, int, int, int)::g_FilenamesCache
- b guard variable for SecureRandomBytes::s_dev_urandom_fd
- b guard variable for _SpewMessageTypeSourceV::autoMutex__
- b s_AssertFailedNotifyFunc
- b s_DefaultLevel
- b s_DefaultLogLevel
- b s_FlushLogFunc
- b s_GroupCount
- b s_LastMiniDumpTime
- b s_StdMemAlloc
- b s_bSetSigHandler
- b s_pSpewGroups
- b sm_bAssertDumpStack
  backtrace
  backtrace_symbols
  ceilf
  chdir
  ctime_r
- d s_SpewOutputFunc
  daylight
  dladdr
  dlclose
@@ -793,8 +498,6 @@
  pthread_self
  pthread_setschedparam
  pthread_setspecific
- r SteamVProf::g_ColorLookup
- r crc32(unsigned int, void const*, unsigned long)::s_crc32
  read
  read$UNIX2003
  realloc
@@ -830,39 +533,6 @@
  sysctlnametomib
  system
  system$UNIX2003
- t GetMiniDumpMutex()
- t GetMinidumpsWritten()
- t InitTicks()
- t ProcessRawStack(void**, int, int, CStack&)
- t SteamThreadTools::ThreadProcConvert(void*)
- t SteamVProf::AverageTimeCompare(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&)
- t SteamVProf::AverageTimeLessChildrenCompare(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&)
- t SteamVProf::PeakCompare(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&)
- t SteamVProf::PeakOverAverageCompare(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&)
- t SteamVProf::TimeCompare(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&)
- t SteamVProf::TimeLessChildrenCompare(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&)
- t TSQueueBase_PopInternal(TSLHead_t*, unsigned long, unsigned long, unsigned int*)
- t TSQueueBase_PopInternal(TSLHead_t*, unsigned long, unsigned long, unsigned long long*)
- t TSQueueBase_PopInternal_StackAlloc(TSLHead_t*, unsigned long, unsigned long, void*)
- t WriteMiniDumpThread(void*)
- t _GLOBAL__sub_I_fasttimer.cpp
- t _GLOBAL__sub_I_memstd.cpp
- t _GLOBAL__sub_I_minidump.cpp
- t _GLOBAL__sub_I_platformtime.cpp
- t _GLOBAL__sub_I_testthread.cpp
- t _GLOBAL__sub_I_threadtools.cpp
- t _GLOBAL__sub_I_vprof.cpp
- t bool std::__1::__insertion_sort_incomplete<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t>&)
- t crc32(unsigned int, void const*, unsigned long)
- t global constructors keyed to 000101
- t global constructors keyed to 000200
- t std::__1::__hash_table<std::__1::__hash_value_type<AllocTracking_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocDetails_t>, std::__1::__unordered_map_hasher<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocDetails_t>, std::__1::hash<AllocTracking_t>, true>, std::__1::__unordered_map_equal<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocDetails_t>, std::__1::equal_to<AllocTracking_t>, true>, std::__1::allocator<std::__1::__hash_value_type<AllocTracking_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocDetails_t> > >::__rehash(unsigned long)
- t std::__1::__split_buffer<CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t, std::__1::allocator<CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t>&>::~__split_buffer()
- t std::__1::unordered_map<AllocTracking_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocDetails_t, std::__1::hash<AllocTracking_t>, std::__1::equal_to<AllocTracking_t>, std::__1::allocator<std::__1::pair<AllocTracking_t const, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocDetails_t> > >::operator[](AllocTracking_t const&)
- t unsigned int std::__1::__sort3<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t>&)
- t unsigned int std::__1::__sort4<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t>&)
- t unsigned int std::__1::__sort5<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t>&)
- t void std::__1::__sort<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t>&)
  time
  timegm
  timezone

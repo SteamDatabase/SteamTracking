@@ -8,11 +8,15 @@ __stub_helper
 __TEXT
 __cstring
 __TEXT
+p)%
+p)%
 __gcc_except_tab__TEXT
+06'
+06'
 __const
 __TEXT
-P+*
-P+*
+i*
+i*
 __objc_methname
 __TEXT
 __objc_classname__TEXT
@@ -38,15 +42,9 @@ __DATA
 __cfstring
 __DATA
 __objc_classlist__DATA
-PtB
-PtB
 __objc_imageinfo__DATA
-XtB
-XtB
 __objc_const
 __DATA
-`tB
-`tB
 __objc_selrefs
 __DATA
 __objc_classrefs__DATA
@@ -58,28 +56,25 @@ __DATA
 P
 __data
 __DATA
-yB
-yB
 __thread_vars
 __DATA
 __thread_bss
 __DATA
-OK
 __bss
 __DATA
-SK
 __common
 __DATA
 H
 __LINKEDIT
-PK
+0L
 
 @
 @loader_path/gameoverlayui.dylib
 "
-PK
+p>
 P
 b
+c
 
 8
 @loader_path/libtier0_s.dylib
@@ -127,8 +122,9 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-`E
+H"L
 )
+hL
 C
 14CParentalCache
 23IClientParentalSettings
@@ -150,8 +146,8 @@ N4vgui12IClientPanelE
 20CFriendsImageManager
 N4vgui9RGBAImageE
 N4vgui6IImageE
-7CUtlMapIiPN4vgui6IImageEi8CDefLessIiEE
-10CUtlRBTreeIN7CUtlMapIiPN4vgui6IImageEi8CDefLessIiEE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiEiE
+7CUtlMapIiPN4vgui6IImageEi8CDefLessE
+10CUtlRBTreeIN7CUtlMapIiPN4vgui6IImageEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEiE
 15CEmoticonButton
 17CItemImageManager
 10CUtlString
@@ -207,7 +203,7 @@ N16CSteamAuthedHTML35CCallback_OnParentalWebTokenChangedE
 10CUtlVectorIN4vgui4HTML19CustomCursorCache_tE10CUtlMemoryIS2_EE
 10CUtlVectorI9CSmartPtrI15CJSCallbackFuncE10CUtlMemoryIS2_EE
 20CMultipleCallResultsI16CSteamAuthedHTML26SupportSystemReportReady_tE
-10CUtlRBTreeIyi8CDefLessIyE25CDefRBTreeBalanceListenerIiEyE
+10CUtlRBTreeIyi8CDefLess25CDefRBTreeBalanceListenerIiEyE
 20CJSMethodCallHandlerI16CSteamAuthedHTMLJ9CSmartPtrI15CJSCallbackFuncEEE
 20IJSMethodCallHandler
 12CTradeDialog
@@ -311,8 +307,8 @@ Y@
 18ScreenshotToLoad_t
 23CScreenshotCaptionEntry
 23CScreenshotGameSelector
-7CUtlMapI7CGameIDii8CDefLessIS0_EE
-10CUtlRBTreeIN7CUtlMapI7CGameIDii8CDefLessIS1_EE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
+7CUtlMapI7CGameIDii8CDefLessE
+10CUtlRBTreeIN7CUtlMapI7CGameIDii8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
 13CCallbackImplILi16EE
 13CCallbackImplILi608EE
 23CScreenshotUploadDialog
@@ -325,8 +321,8 @@ Y@
 9CCallbackI18CScreenshotManager20ScreenshotUploaded_tLb0EE
 9CCallbackI18CScreenshotManager19ScreenshotDeleted_tLb0EE
 10CUtlVectorIP26CScreenshotImageClickPanel10CUtlMemoryIS1_EE
-7CUtlMapIjii8CDefLessIjEE
-10CUtlRBTreeIN7CUtlMapIjii8CDefLessIjEE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
+7CUtlMapIjii8CDefLessE
+10CUtlRBTreeIN7CUtlMapIjii8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb1EE
@@ -7054,6 +7050,7 @@ T
 C
 X
 `
+h
 @
 (
 (
@@ -7189,6 +7186,14 @@ $
 ,
 0
 0
+0
+(
+8
+@
+4
+(
+0
+(
 9CMsgKeyUp
 11CMsgKeyDown
 11CMsgKeyChar
@@ -7215,6 +7220,7 @@ $
 13CMsgGoForward
 10CMsgGoBack
 13CMsgWasHidden
+25CMsgBrowserViewSetVisible
 16CMsgClearHistory
 24CMsgClearAllBrowsingData
 8CMsgCopy
@@ -7335,6 +7341,8 @@ $
 41CMsgShowBrowserContextMenu_ContextCommand
 26CMsgShowBrowserContextMenu
 28CMsgHandleContextMenuCommand
+16CMsgTouchGesture
+28CMsgSetTouchGesturesToCancel
 21CMsgImeSetComposition
 17CMsgImeCommitText
 24CMsgImeCancelComposition
@@ -7342,6 +7350,8 @@ $
 18CMsgInspectElement
 13CMsgDisableF5
 17CMsgStartDownload
+16CMsgSetTopWindow
+33CMsgBrowserViewPostMessageRequest
 N4vgui19AnimatingImagePanelE
 10CUtlVectorIPN4vgui6IImageE10CUtlMemoryIS2_EE
 N4vgui19AnimationControllerE
@@ -7604,8 +7614,8 @@ N4vgui13EditablePanelE
 10CUtlRBTreeIN7CUtlMapIPKcN4vgui13CLayoutRegionEi22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlVectorIN4vgui11layoutcmd_tE10CUtlMemoryIS1_EE
 10CUtlVectorIs10CUtlMemoryIsEE
-7CUtlMapIjbs8CDefLessIjEE
-10CUtlRBTreeIN7CUtlMapIjbs8CDefLessIjEE6Node_tEsNS3_8CKeyLessE25CDefRBTreeBalanceListenerIsEjE
+7CUtlMapIjbs8CDefLessE
+10CUtlRBTreeIN7CUtlMapIjbs8CDefLessE6Node_tEsNS2_8CKeyLessE25CDefRBTreeBalanceListenerIsEjE
 *
 N4vgui18FileCompletionEditE
 N4vgui14FileOpenDialogE
@@ -7759,8 +7769,8 @@ N4vgui9HTMLPopupE
 N4vgui9HTMLPopup9PopupHTMLE
 N4vgui5ImageE
 N4vgui11CStyleImageE
-N4vgui9ImageListE
 10BlankImage
+N4vgui9ImageListE
 N4vgui10ImagePanelE
 N4vgui18ThrobberImagePanelE
 %
@@ -7925,15 +7935,15 @@ N4vgui13TreeNodeImageE
 N4vgui12TreeNodeTextE
 N4vgui16TreeViewSubPanelE
 10CUtlVectorIPN4vgui8TreeNodeE10CUtlMemoryIS2_EE
-14CUtlLinkedListIP10CUtlRBTreeIPvi8CDefLessIS1_E25CDefRBTreeBalanceListenerIiES1_EiE
+14CUtlLinkedListIP10CUtlRBTreeIPvi8CDefLess25CDefRBTreeBalanceListenerIiES1_EiE
 14CUtlLinkedListIPN4vgui8TreeNodeEiE
-19CUtlQueueDeprecatedIP10CUtlRBTreeIPvi8CDefLessIS1_E25CDefRBTreeBalanceListenerIiES1_EE
+19CUtlQueueDeprecatedIP10CUtlRBTreeIPvi8CDefLess25CDefRBTreeBalanceListenerIiES1_EE
 N4vgui20CTreeViewListControlE
 N4vgui18CTypingJumpHandlerE
 N4vgui8URLLabelE
 N4vgui9WrapPanelE
-7CUtlMapIiPN4vgui5PanelEi8CDefLessIiEE
-10CUtlRBTreeIN7CUtlMapIiPN4vgui5PanelEi8CDefLessIiEE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiEiE
+7CUtlMapIiPN4vgui5PanelEi8CDefLessE
+10CUtlRBTreeIN7CUtlMapIiPN4vgui5PanelEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEiE
 _
 convar_
 14ConCommandBase
@@ -7942,8 +7952,8 @@ convar_
 19CDirContentsWatcher
 11CPathString
 14CUtlLinkedListI10CUtlStringiE
-7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessIS0_EE
-10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessIS1_EE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
+7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE
+10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 t
 r
 u
@@ -8022,6 +8032,8 @@ ClientAPI_Init(GlobalInstance): GetIClientFriends returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientBilling returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientUtils returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientNetworkDeviceManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientStorageDeviceManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientSystemManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientMatchmaking returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientApps returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientMatchmakingServers returned NULL.
@@ -8549,9 +8561,10 @@ clickandbuy_success
 try { OnClickAndBuySuccess( '%s', '%s', '%s', '%s' ); } catch(e) {}
 clickandbuy_cancel
 try { OnClickAndBuyCancel(); } catch(e) {}
-Assertion Failed: 0
 LoadTGA: Only type 2 and 10 targa RGB images supported
 Texture_LoadTGA: Only 32 or 24 bit images supported (no colormaps)
+-quicklogin
+Set the base used to construct quick login URLs
 -community
 Set the community URL
 -store
@@ -8602,6 +8615,7 @@ UserIpd
 ModelNumberID
 SerialNumber
 Unable to add OpenVRSessionDetails row: %s
+Assertion Failed: 0
 %s/filesystem_%s
 steam
 stdio
@@ -9662,15 +9676,15 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-May 18 2021
-18:58:34
+May 22 2021
+09:40:01
 crashhandler003
 gameoverlayui
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
 Fatal Assertion Failed: ClientAPI_Init()
 BuildID: %u
 GAMEOVERLAY
-VFileSystem013
+VFileSystem014
 Fatal Assertion Failed: ::g_pFileSystem
 PLATFORM
 EXECUTABLE_PATH
@@ -10074,6 +10088,7 @@ Assertion Failed: m_TotalElements != InvalidIndex()
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utllinkedlist.h
 %s overflow!
 Assertion Failed: IsInList(after)
+Invalid index %u
 RunGameEngine007
 Assertion Failed: m_pStream->BWaitForDataToGet()
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/screenshotthread.cpp
@@ -12830,7 +12845,6 @@ BResolveHostString - unexpected DNS lookup flag '%d'
 Assertion Failed: info.m_pReplacementString == 0
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
 CUtlBuffer::GetStringFast: binary buffers only
-CUtlBuffer::GetStringFast: no string termination
 Expected %lld but got %lld!
 Assertion Failed: pConv && pConv->GetDelimiterLength() > 0
 Assertion Failed: pFmt
@@ -12918,6 +12932,9 @@ Br
 KD
 QR
 $U
+kn
+Ft
+lei
 Unknown currency code %d
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/amount.cpp
 %s%s
@@ -13058,6 +13075,7 @@ No launcher specified
 Must agree to SSA
 Client no longer supported
 The current Steam realm does not match the requested resource
+Signature check failed
 Invalid
 Public
 Beta
@@ -13111,6 +13129,12 @@ KWD
 QAR
 CRC
 UYU
+BGN
+HRK
+CZK
+DKK
+HUF
+RON
 Down
 default
 none
@@ -13326,164 +13350,121 @@ Nov
 Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
-Xx&
--t&
-Et&
-qx&
-n$
+1K
+K
+e#
+0
+p
 6
-V$
-V$
-0
-p
-$
-$
-$
-$
 p
 0
-=
-&#
-#
-#
-#
-C#
+$
+$
+$
+$
+$
+$
+$
+$
+)
+"
+<#
+w#
+@"
 0
 p
 #
 #
 #
+"
 #
 #
-#
-#
-!
-!
-%"
+p@
+1@
 "
 "
-"
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
+l"
+]"
 "
 "
-"
-"
-"
+x!
 3
-)!
-I
-k
-!
-!
 d
+
+
+
+
+
+
+p
+0
+0
+p
+0
+0
+p
+0
+0
+p
+0
+0
+p
+0
+p
+0
+p
+0
+p
+0
+0
+p
+0
+0
+p
+0
+p
+p
+p
+p
+p
+0
 !
 !
 !
-!
-n?
-G
-G
-G
-
-
-
-
-
-
-p
-0
-0
-p
-0
-0
-p
-0
-0
-p
-0
-0
-p
-0
-p
-0
-p
-0
-p
-0
-0
-p
-0
-0
-p
-0
-p
-p
-p
-p
-p
-0
 @
 =
 
++
 0
+s1
+U
 ?
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-GE
+?
+1A
 Hi
 0
+0
 p
 I
 I
+5
+#
 $
 @
 @
 =
 @
 @
-4
 ?
 ?
 A
 Hc
 =
-6A
-L95K&A
-L95
+OA
+A
 Hc
+1
+1
 ?
 ?
 ?
@@ -13524,8 +13505,7 @@ HcU
 #
 i[
 ~
-'
-'
+*'
 B
 ?
 U
@@ -13551,6 +13531,8 @@ S
 4
 9
 E
+7
+7
 4
 @
 <
@@ -13575,6 +13557,7 @@ B
 @
 /
 .
+&
 0
 >
 0
@@ -13675,79 +13658,86 @@ P
 @
 |
 |
-#
+O8
+8
+8
+8
+8
 "
 3
+&8
 D
-~7
+M
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
 @
-7
-7
-7
-6
-6
-65
-04
-.%
+M(
+,
+B6
+h'
+_&
+5
+84
 4
 4
+%
+
+
 d
+42
 
 
 
 
--
--
--
--
--
--
--
--
--
-_0
 
+O1
+u-
+o
+8-
+
+
+
+-
+-
+-
+-
+
+-
 
 d
 &
 &
 d
--
--
 t=
 =
 =
 @
-G,
-,
-,
-,
-,
+.
+.
+.
+.
 uV%
 
 
-"
-"
 E
-'!
->
-+
-+
-+
-+
-+
-+
-+
-+
-+
-+
-+
-+
 
 
 
+@*
+o+
 @
-*
+K
 @
 @
 &
@@ -13787,6 +13777,9 @@ E
 @
 @
 )
+)
+)
+)
 .
 .
 .
@@ -13811,10 +13804,9 @@ d
 @
 @
 @
-='
 0
 E
-}
-l'
-$
+Q
+&'
 p
+!'

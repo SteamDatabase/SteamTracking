@@ -88,6 +88,7 @@ message CMsgBrowserCreate {
 	optional bool only_allow_trusted_popups = 17 [default = false];
 	optional string initial_url = 18;
 	optional fixed64 hwnd_parent = 19;
+	optional uint32 creation_flags = 20 [default = 0];
 }
 
 message CMsgBrowserCreateResponse {
@@ -183,6 +184,11 @@ message CMsgGoBack {
 message CMsgWasHidden {
 	optional uint32 browser_handle = 1;
 	optional bool hidden = 2;
+}
+
+message CMsgBrowserViewSetVisible {
+	optional uint32 browser_handle = 1;
+	optional bool visible = 2;
 }
 
 message CMsgClearHistory {
@@ -882,6 +888,22 @@ message CMsgHandleContextMenuCommand {
 	optional int32 command_id = 2;
 }
 
+message CMsgTouchGesture {
+	optional uint32 browser_handle = 1;
+	optional int32 id = 2;
+	optional uint32 gesture = 3;
+	optional double x = 4;
+	optional double y = 5;
+	optional double width = 6;
+	optional double height = 7;
+	optional uint32 tap_count = 8;
+}
+
+message CMsgSetTouchGesturesToCancel {
+	optional uint32 browser_handle = 1;
+	repeated uint32 gestures = 2;
+}
+
 message CMsgImeSetComposition {
 	optional uint32 browser_handle = 1;
 	optional string text = 2;
@@ -916,4 +938,15 @@ message CMsgDisableF5 {
 message CMsgStartDownload {
 	optional uint32 browser_handle = 1;
 	optional string url = 2;
+}
+
+message CMsgSetTopWindow {
+	optional uint32 browser_handle = 1;
+}
+
+message CMsgBrowserViewPostMessageRequest {
+	optional uint32 browser_handle = 1;
+	optional string message = 2;
+	optional string args = 3;
+	optional string requesting_url = 4;
 }

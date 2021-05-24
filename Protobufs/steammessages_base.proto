@@ -249,6 +249,8 @@ message CClanEventData {
 	optional uint32 rtime_mod_reviewed = 26;
 	optional uint32 featured_app_tagid = 27;
 	repeated uint32 referenced_appids = 28;
+	optional uint32 build_id = 29;
+	optional string build_branch = 30;
 }
 
 message CBilling_Address {

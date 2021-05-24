@@ -440,6 +440,7 @@
 "Steam_DPIScaling_Option"				"Увеличаване на текста и иконите спрямо мониторния размер (изисква рестартиране)"
 "Steam_LaunchSteamOnStartup_Option"		"Стартиране на Steam, когато компютърът ми се включи"
 "Steam_BPMOnStartup_Option"				"Стартиране на Steam в режим „Голям екран“"
+"Steam_ShowUrlBar_Option"				"Показване на лентата с уеб адреса, когато е възможно"
 "Steam_UseDirectWrite_Option"			"Включване на DirectWrite за подобрено заглаждане и кърнинг на шрифтовете"
 "Steam_UseH264HWAccel_Option"			"Включване на хардуерното видео декодиране, ако се поддържа (изисква рестартиране)"
 
@@ -833,6 +834,7 @@
 "SteamUI_ValveSurvey_Summary_VideoCard"						"Видеокарта:"
 "SteamUI_ValveSurvey_Summary_Memory"						"Памет:"
 "SteamUI_ValveSurvey_Summary_Audio"							"Звукова карта:"
+"SteamUI_ValveSurvey_Summary_Storage"						"Пространство за съхранение:"
 
 "SteamUI_ValveSurvey_ResultsLabel"							"Това проучването беше завършено. Благодарим Ви отново за участието.\n\nАко искате да видите как Вашият компютър се съпоставя спрямо тези на другите абонати, ползващи Steam, може да видите събраните резултати от проучването, като кликнете върху връзката по-долу.\n\n (В противен случай просто кликнете върху „Край“, за да затворите прозореца.)"
 "SteamUI_ValveSurvey_ResultsButton"							"Посетете страницата с резултатите от проучването."
@@ -844,6 +846,11 @@
 
 "SteamUI_ValveSurvey_Summary_MACAddressHash"				"MAC адрес хеш: %s1"
 "SteamUI_ValveSurvey_Summary_DiskSerialHash"				"Хеш за серийния номер на диска: %s1"
+
+"SteamUI_ValveSurvey_Summary_SSDCount"						"Брой статични дискови устр.-ва (SSD): %s1"
+"SteamUI_ValveSurvey_Summary_SSDSizes"						"Размери на SSD: %s1"
+"SteamUI_ValveSurvey_Summary_HDDCount"						"Брой твърди дискови устр.-ва (HDD): %s1"
+"SteamUI_ValveSurvey_Summary_HDDSizes"						"Размери на HDD: %s1"
 
 "SteamUI_ValveSurvey_Summary_DesktopSystem"					"Форм фактор: Десктоп"
 "SteamUI_ValveSurvey_Summary_LaptopSystem"					"Форм фактор: Лаптоп"
@@ -1153,6 +1160,8 @@
 "Steam_SubscriptionApprovalCode" "Упълномощаване"
 "Steam_SubscriptionConfirmation" "Потвърдителен код"
 
+"Steam_TroubleshooterURL_CDKey" "https://support.steampowered.com/kb/1968-HKLX-7538/"
+
 "Steam_SubscriptionSuccess_CDKey_Headline" "Активацията е успешна!"
 "Steam_SubscriptionSuccess_CDKey" "Продуктовият Ви код беше активиран успешно. Този продукт или други такива, изброени по-долу, вече са перманентно асоциирани със Steam акаунта Ви. Трябва да влезете в него, за да имате достъп до артикулите, които току-що активирахте в Steam.\n\nРазпечатайте квитанция от тази транзакция, за да запомните акаунта си за бъдеща употреба."
 
@@ -1221,6 +1230,8 @@
 "Steam_Subscription_HardwarePromo_Used_Headline" "Дублирана регистрация"
 "Steam_Subscription_HardwarePromo_Used" "Тази оферта вече е била активирана  на друг Steam акаунт."
 "Steam_PurchaseError_HardwarePromoIneligible" "За съжаление този компютър не отговаря на системните изисквания за офертата „%subscription%”."
+"Steam_HardwarePromo_SupportURL" "https://support.steampowered.com/kb/2734-UDFX-1098/"
+
 "Steam_Subscription_HardwarePromo_AlreadyPurchased_Headline" "Вече притежавате този продукт"
 "Steam_Subscription_HardwarePromo_AlreadyPurchased" "Този Steam акаунт вече притежава продукта(ите), съдържащ(и)\nсе в тази оферта. За достъп до тях посетете своята игрална библиотека."
 
@@ -1614,6 +1625,8 @@
 "Steam_ConnectionFailureTitle"	"Неуспешно свързване"
 "Steam_ConnectionFailureDetail"	"Steam не може да се свърже с мрежата. Това може да се дължи на проблем с Интернет връзката."
 "Steam_ConnectionSupportLink"	"Отстраняване на проблеми с връзката ми"
+"Steam_ConnectionSupportURL"	"https://support.steampowered.com/kb/1456-EUDN-2493/"
+
 "SteamUI_NetworkTroubleshootingTips"	"Съвети за отстраняване на проблеми с мрежата"
 "SteamUI_NetworkTroubleshootingTips_URL"	"https://support.steampowered.com/kb_article.php?ref=1456-EUDN-2493"
 
@@ -2394,10 +2407,17 @@
 "Steam_RegionRestricted_Title"			"Steam — Играта е недостъпна"
 "Steam_RegionRestrictedPurchase_Info"				"Тази игра е била активирана с продуктов код, който е валиден само в определен географски регион. Тъй като понастоящем не сте в този регион, %game% не е достъпна за пускане."
 "Steam_RegionRestricted_SupportLink"		"Посетете уебсайта на Steam поддръжката за още информация"
+"Steam_RegionRestrictedPurchase_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141/"
 "Steam_RegionRestricted_Info"				"%game% не е достъпна в територията Ви."
+"Steam_RegionRestricted_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141/"
+
 "Steam_CountryRestricted_Info"				"Този абонамент не е достъпен за покупка в държавата Ви."
+"Steam_CountryRestricted_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141/"
+
 "Steam_RegionRestrictedCode_Title"		"Steam — Недостъпен продукт"
 "Steam_RegionRestrictedCode_Info"			"Този продуктов код не може да бъде активиран от Вашия регион."
+"Steam_RegionRestrictedCode_SupportURL"	"https://support.steampowered.com/kb/1266-QFZC-2141/"
+
 "Steam_FragmentationBad_Title"			"Steam — Предупреждение за фрагментацията на диска"
 "Steam_FragmentationBad_Info"				"Игралните Ви файлове са достигнали високо ниво на фрагментация. Това може да причини бавно зареждане и влошена производителност. \n\nSteam може да оптимизира игралните файловете сега.\n"
 "Steam_FragmentationBad_RunDefrag"		"Дефрагментиране"
@@ -2767,6 +2787,8 @@
 "Steam_GuestPassAccept_HeadlineServiceUnavailable$type=guestpass"	"Неуспешно приемане на пробен пропуск"
 "Steam_GuestPassAccept_TextServiceUnavailable"	"Понастоящем компютърът Ви няма възможност да се свърже със Steam сървърите или услугата е временно преустановена. Моля, опитайте отново по-късно."
 "Steam_GuestPassAccept_LinkTextServiceUnavailable" 	"За отстраняване на проблеми, свързани с информацията за подаръци, вижте тази помощна страница."
+"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"https://support.steampowered.com/kb/6262-QXCN-0755/"
+
 "Steam_GuestPassAccept_HeadlineRevoked$type=guestpass"	"Този пробен пропуск е бил анулиран"
 "Steam_GuestPassAccept_TextRevoked$type=guestpass"	"Приятелят, който е изпратил този пробен пропуск, го е отказал и Ви е препратил по-нов код за изпълняване. Ако новата версия Ви е била изпратена, ще получите друго е-писмо с обновения код."
 
@@ -2784,6 +2806,8 @@
 "Steam_GuestPassRedeemed_HeadlineServiceUnavailable$type=guestpass"	"Неуспешно активиране на пробен пропуск"
 "Steam_GuestPassRedeemed_TextServiceUnavailable"	"Понастоящем компютърът Ви няма възможност да се свърже със Steam сървърите или услугата е временно преустановена. Моля, опитайте отново по-късно."
 "Steam_GuestPassRedeemed_LinkTextServiceUnavailable"	"За информация по отстраняване на неизправности относно пробните пропуски вижте тази помощна страница."
+"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"https://support.steampowered.com/kb/6262-QXCN-0755/"
+
 "Steam_GuestPassRedeemed_HeadlineLimitExceeded"	"Вече сте използвали пробен пропуск за този продукт"
 "Steam_GuestPassRedeemed_TextLimitExceeded"	"Защото вече сте приели пробен пропуск за %package%, не можете да приемате още един. Ако желаете да продължите да пускате играта, моля, помислете за закупуване."
 "Steam_GuestPassRedeemed_LinkTextLimitExceeded"	"Кликнете тук, за да посетите магазина на Steam."
@@ -2834,12 +2858,12 @@
 "SteamUI_ValveSurvey_MicrophoneNo"		"Не, нямам микрофон."
 "SteamUI_ValveSurvey_Summary_Microphone"	"Микрофон: %s1"
 
-"SteamUI_ValveSurvey_ControllerCradleLabel"		"Използвате ли безжичния удължител за базата, така че да подобрите безжичната връзка на Steam контролера Ви (както е показано по-долу)?"
+"SteamUI_ValveSurvey_ControllerCradleLabel"		"Използвате ли безжичния удължител за базата, така че да подобрите безжичната връзка на Вашия Steam Controller (както е показано по-долу)?"
 "SteamUI_ValveSurvey_ControllerCradleDontHave"	"Нямам безжичен удължител."
 "SteamUI_ValveSurvey_ControllerCradleYes"		"Да. Използвам безжичния удължител за базата, както е показано по-долу."
 "SteamUI_ValveSurvey_ControllerCradleNo"		"Не. Включвам безжичния приемник директно в USB порт."
 "SteamUI_ValveSurvey_ControllerNoReceiver"		"Няма безжичен удължител."
-"SteamUI_ValveSurvey_Summary_ControllerCradle"	"Кабел и база на Steam контролера: %s1"
+"SteamUI_ValveSurvey_Summary_ControllerCradle"	"Кабел и база на Steam Controller: %s1"
 
 "SteamUI_ValveSurvey_Linux_Runtime_Info" "Информация за изпълнимата среда на Steam под Linux:"
 
@@ -2869,6 +2893,8 @@
 "Steam_LaunchEULA_Text"			"Моля, прочетете това споразумение изцяло. Трябва да сте съгласи с условията на ЛСКП, за да играете %game%."
 
 "Steam_GuestPasses_LinkText"		"Още инф. относно подаръци и пробни пропуски"
+"Steam_GuestPasses_LinkURL"		"https://support.steampowered.com/kb/6262-QXCN-0755/"
+
 "Steam_AlreadyRunningError_Title"			"Steam — Невъзможно пускане"
 "Steam_AlreadyRunningError_Info"			"Инстанция на Steam вече е пусната от този компютър, но под различен потребителски акаунт. Моля, изключете Steam от него, преди да опитате повторно пускане."
 "Steam_AlreadyRunningError_SupportLink"	"Вижте сайта на Steam поддръжката за още информация"
@@ -3794,7 +3820,7 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "steam_details_tags"	"Категории"
 "steam_details_edittags"	"Задаване на категории…"
 
-"steam_configurecontroller_menuitem"	"Редактиране на конфигурацията за Steam контролера…"
+"steam_configurecontroller_menuitem"	"Редактиране на конфигурацията за Steam Controller…"
 
 "steam_client_edit_categories" "Задайте категория за тази игра, така че да я намирате бързо и организирате библиотеката си. Категоризираните игри ще бъдат групирани в списъка Ви с игри."
 
@@ -4549,10 +4575,13 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "Steam_Settings_Streaming_Bandwidth20000" 	"20 MBit/сек."
 "Steam_Settings_Streaming_Bandwidth25000" 	"25 MBit/сек."
 "Steam_Settings_Streaming_Bandwidth30000" 	"30 MBit/сек."
+"Steam_Settings_Streaming_Bandwidth40000" 	"40 MBit/сек."
 "Steam_Settings_Streaming_Bandwidth50000" 	"50 MBit/сек."
+"Steam_Settings_Streaming_Bandwidth75000" 	"75 MBit/сек."
 "Steam_Settings_Streaming_BandwidthUnlimited" 	"Неограничено (увеличава латентността)"
 "Steam_Settings_Streaming_Resolution"	"Ограничаване на резолюцията до"
 "Steam_Settings_Streaming_ResolutionDesktop" 	"Екранна резолюция"
+"Steam_Settings_Streaming_Resolution8K" 	"7680x4320 (8K)"
 "Steam_Settings_Streaming_Resolution2160p" 	"3840x2160 (4K)"
 "Steam_Settings_Streaming_Resolution1440p" 	"2560x1440 (1440p)"
 "Steam_Settings_Streaming_Resolution1080p" 	"1920x1080 (1080p)"
@@ -4629,18 +4658,18 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "SteamUI_UpdateControllerFirmware_Cancel"	"Не сега"
 "SteamUI_UpdateControllerFirmware_Continue"	"Следваща"
 "SteamUI_UpdateControllerFirmware_Done"		"Добре"
-"SteamUI_UpdateControllerFirmware_Title"	"Обновяване на фърмуера за Steam контролера"
-"SteamUI_UpdateControllerFirmware_Intro"	"Достъпен е нов фърмуер за Steam контролера Ви. Сега ще Ви поведем през стъпките за обновлението."
+"SteamUI_UpdateControllerFirmware_Title"	"Обновяване на фърмуера за Steam Controller"
+"SteamUI_UpdateControllerFirmware_Intro"	"Достъпен е нов фърмуер за Вашия Steam Controller. Сега ще Ви упътим в стъпките за обновлението."
 "SteamUI_UpdateControllerFirmware_Install"	"Новият фърмуер се инсталира на контролера Ви.\nМоля, не разкачвайте контролера."
-"SteamUI_UpdateControllerFirmware_Finished"	"Фърмуерът за Steam контролера Ви беше обновен."
+"SteamUI_UpdateControllerFirmware_Finished"	"Фърмуерът за Вашия Steam Controller беше обновен."
 "SteamUI_UpdateControllerFirmware_Fallback"	"Нужно е Steam да използва възстановителния режим, за да инсталира фърмуера на контролера Ви:\n\n 1) Изключете USB кабела, свързващ контролера;\n 2) Задръжте ДЕСНИЯ СПУСЪК и отново включете контролера;\n 3) Изчакайте малко (до 30 — 60 секунди), докато ОС засече и постави пакета с обновлението за фърмуера на контролера.\n\nСлед като завършите тези стъпки, контролерът ще се свърже отново в режим за обновяване на фърмуера и преминаваме към следващия етап."
 "SteamUI_UpdateControllerFirmware_Fallback_Finished" "Фърмуерът вече е обновен, моля, направете следното:\n\n 1) Изключете USB кабела, свързващ контролера;\n 2) Включете USB кабела обратно, без да докосвате никакви бутони;\n 3) Изберете „Добре“ по-долу, за да приключите този съветник."
-"SteamUI_UpdateControllerFirmware_Disconnect"	"Steam контролерът беше разкачен, докато траеше процеса по обновяване на фърмуера. Пак ще имате възможност да обновите фърмуера, когато той бъде свързан отново."
-"SteamUI_UpdateControllerFirmware_WiredUpdate"	"Достъпно е обновление на фърмуера за Steam контролера. Изисква се еднократно жично обновяване.\nКогато сте готови свържете контролера чрез USB и обновителния процес ще започне автоматично."
-"SteamUI_UpdateControllerFirmware_WiredUpdate_Title" "Обновление на фърмуера за Steam контролера"
-"SteamUI_UpdateControllerFirmware_HardFailure" "Предупреждение: Един от Steam контролерите Ви беше преустановен и няма да бъде преконфигуриран или програмиран за игрите, тъй като фърмуерът му не е актуален и Steam нямаше възможност да получи информацията за обновяване."
+"SteamUI_UpdateControllerFirmware_Disconnect"	"Steam Controller беше разкачен, докато траеше процеса по обновяване на фърмуера. Ще имате още една възможност да обновите фърмуера, когато той бъде свързан отново."
+"SteamUI_UpdateControllerFirmware_WiredUpdate"	"Достъпно е обновление на фърмуера за Steam Controller. Изисква се еднократно жично обновяване.\nКогато сте готови, свържете контролера чрез USB и обновителният процес ще започне автоматично."
+"SteamUI_UpdateControllerFirmware_WiredUpdate_Title" "Обновление на фърмуера за Steam Controller"
+"SteamUI_UpdateControllerFirmware_HardFailure" "Предупреждение: Един от Вашите контролери на Steam беше преустановен и няма да бъде повторно конфигуриран или програмиран за игрите, тъй като фърмуерът му не е актуален и Steam нямаше възможност да получи информацията за обновяване."
 "SteamUI_UpdateControllerFirmware_Required_Title" "Достъпен е нов фърмуер за контролера"
-"SteamUI_UpdateControllerFirmware_Required" "Има нов фърмуер за Steam контролера Ви. Моля, превключете към режим „Голям екран“, така че да започне процеса на обновяване."
+"SteamUI_UpdateControllerFirmware_Required" "Има нов фърмуер за Вашия Steam Controller. Моля, превключете към режим „Голям екран“, за да започнете процеса на обновяване."
 "SteamUI_UpdateControllerMigration_Title"	"Изисква се повторна миграция на контролера"
 "SteamUI_UpdateControllerMigration"			"Поправихме проблем в миграционния процес на контролера, свързан с игрите, които са извън Steam. Моля, превключете към режим „Голям екран“, така че повторно да мигрирате конфигурациите на контролера си."
 
@@ -4714,7 +4743,7 @@ Windows до Windows XP Service Pack 2 или по-нов."
 
 
 "Steam_VGUIControllerWarning_Title" "Steam въвеждане"
-"Steam_VGUIControllerWarning" "Моля, пуснете Steam в режим „Голям екран“, така че да използвате контролера си пълноценно."
+"Steam_VGUIControllerWarning" "Моля, пуснете Steam в режим „Голям екран“, за да използвате контролера си пълноценно."
 "Steam_VGUIControllerWarningHeader" "Използвате контролер?"
 
 "Steam_VGUIVRHMDWarning_Title" "SteamVR"
@@ -4726,7 +4755,7 @@ Windows до Windows XP Service Pack 2 или по-нов."
 
 "Steam_BLEControllerFirmware_Title" "Обновление на Bluetooth фърмуера"
 "Steam_BLEControllerFirmware_Header" "Steam Link приложение"
-"Steam_BLEControllerFirmware_Body" "Разширете игралното си Steam преживяване до своя телефон, таблет или телевизор чрез локалната Ви мрежа.\n\nС цел да използвате своя Steam контролер със Steam Link приложението, ще е нужно ново обновление на Bluetooth фърмуера."
+"Steam_BLEControllerFirmware_Body" "Разширете игралното си Steam преживяване до своя телефон, таблет или телевизор чрез локалната Ви мрежа.\n\nС цел да използвате своя Steam Controller със Steam Link приложението, ще е нужно ново обновление на Bluetooth фърмуера."
 "Steam_BLEControllerFirmware_LearnMore" "Научете още"
 "Steam_BLEControllerFirmware_UpdateNow" "Обновяване на фърмуера сега"
 

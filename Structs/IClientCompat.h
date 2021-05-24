@@ -15,4 +15,5 @@ public:
     virtual unknown_ret GetControllerConfigOverrides(CUtlVector<AppControllerConfigOverride_t, CUtlMemory<AppControllerConfigOverride_t> >*) = 0;
     virtual unknown_ret StartSession(unsigned int) = 0;
     virtual unknown_ret ReleaseSession(unsigned int, unsigned long long) = 0;
+    virtual unknown_ret DeleteCompatData(unsigned int) = 0;
 };

@@ -827,6 +827,7 @@ tela. Para acessar o Steam, clique com o botão direito no seu ícone."
 "SteamUI_ValveSurvey_Summary_VideoCard"						"Placa de vídeo:"
 "SteamUI_ValveSurvey_Summary_Memory"						"Memória:"
 "SteamUI_ValveSurvey_Summary_Audio"							"Placa de som:"
+"SteamUI_ValveSurvey_Summary_Storage"						"Armazenamento:"
 
 "SteamUI_ValveSurvey_ResultsLabel"							"A pesquisa foi concluída. Agradecemos novamente pela sua participação.\n\nCaso queira comparar o seu computador com o de outros usuários Steam, você pode ver os resultados compilados da pesquisa clicando no link abaixo.\n\n (Caso contrário, clique em \"Concluir\" para fechar esta janela.)"
 "SteamUI_ValveSurvey_ResultsButton"							"Visitar a página de resultados."
@@ -838,6 +839,11 @@ tela. Para acessar o Steam, clique com o botão direito no seu ícone."
 
 "SteamUI_ValveSurvey_Summary_MACAddressHash"				"Hash do endereço MAC: %s1"
 "SteamUI_ValveSurvey_Summary_DiskSerialHash"				"Hash do número de série do disco: %s1"
+
+"SteamUI_ValveSurvey_Summary_SSDCount"						"Quantidade de SSDs: %s1"
+"SteamUI_ValveSurvey_Summary_SSDSizes"						"Tamanho dos SSDs: %s1"
+"SteamUI_ValveSurvey_Summary_HDDCount"						"Quantidade de HDs: %s1"
+"SteamUI_ValveSurvey_Summary_HDDSizes"						"Tamanho dos HDs: %s1"
 
 "SteamUI_ValveSurvey_Summary_DesktopSystem"					"Tipo: Computador de mesa"
 "SteamUI_ValveSurvey_Summary_LaptopSystem"					"Tipo: Laptop"
@@ -3292,7 +3298,7 @@ Faça um novo amigo no Steam, enviando um presente para alguém que você conhec
 "Steam_ModNeedsFullGame_Info"	"%game% é uma mod e requer que você possua uma versão do jogo base."
 "Steam_ModNeedsFullGame_Button"	"Obter mais informações"
 
-"Steam_AccountEmail_Title"		"Informações da Conta Steam"
+"Steam_AccountEmail_Title"		"Dados da conta Steam"
 "Steam_AccountEmail_Info"		"É recomendado que você imprima essas informações e as guarde em um lugar seguro. O seu nome de usuário e senha são importantes — 
 a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outros recursos do Steam."
 "Steam_AccountEmail_AccountName" "Nome de usuário:"
@@ -4557,10 +4563,13 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "Steam_Settings_Streaming_Bandwidth20000" 	"20 MBit/s"
 "Steam_Settings_Streaming_Bandwidth25000" 	"25 MBit/s"
 "Steam_Settings_Streaming_Bandwidth30000" 	"30 MBit/s"
+"Steam_Settings_Streaming_Bandwidth40000" 	"40 Mb/s"
 "Steam_Settings_Streaming_Bandwidth50000" 	"50 MBit/s"
+"Steam_Settings_Streaming_Bandwidth75000" 	"75 Mb/s"
 "Steam_Settings_Streaming_BandwidthUnlimited" 	"Ilimitada (aumenta latência)"
 "Steam_Settings_Streaming_Resolution"	"Limitar resolução a"
 "Steam_Settings_Streaming_ResolutionDesktop" 	"Resolução de exibição"
+"Steam_Settings_Streaming_Resolution8K" 	"7680x4320 (8K)"
 "Steam_Settings_Streaming_Resolution2160p" 	"3840x2160 (4K)"
 "Steam_Settings_Streaming_Resolution1440p" 	"2560x1440 (1440p)"
 "Steam_Settings_Streaming_Resolution1080p" 	"1920x1080 (1080p)"
@@ -4745,7 +4754,7 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "Steam_ViewSSAInBrowser" "Você precisa ler e aceitar o Acordo de Assinatura do Steam.\n<a href=\"%url%\">Clique aqui</a> para abrir o acordo no seu navegador. Volte a esta janela para continuar."
 
 "Steam_VR2DGameWarning_Title" "Aviso"
-"Steam_VR2DGameWarning_Desc" "%launching_app% será iniciado em um ambiente no visor de RV e na área de trabalho.\nO desempenho neste modo pode não ser aceitável. Feche o SteamVR antes de iniciar o jogo caso queira jogá-lo apenas na área de trabalho."
+"Steam_VR2DGameWarning_Desc" "%launching_app% será iniciado em um ambiente na tela de RV e na área de trabalho.\nO desempenho neste modo pode não ser aceitável. Feche o SteamVR antes de iniciar o jogo caso queira jogá-lo apenas na área de trabalho."
 "Steam_VR2DGameWarning_Desc_Old" "%launching_app% não é compatível com realidade virtual. Ele será exibido na sua área de trabalho e poderá afetar o desempenho de RV."
 "Steam_VR2DGameWarning_Desc_VRGame" "%launching_app% é compatível com RV, mas você escolheu a versão da área de trabalho. Deseja continuar?"
 

@@ -4,6 +4,7 @@ option optimize_for = SPEED;
 option cc_generic_services = false;
 
 message CMsgClientHeartBeat {
+	optional bool send_reply = 1;
 }
 
 message CMsgClientServerTimestampRequest {

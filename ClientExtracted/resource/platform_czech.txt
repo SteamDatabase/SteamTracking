@@ -31,10 +31,10 @@
 "app_task_stop_streaming"	"Ukončit Remote Play"
 
 "Steam_AccountAlreadyLoggedInNeedShutdown"		"Váš účet „%account%“ je momentálně používán na jiném počítači. Abyste se mohli ke službě Steam přihlásit na tomto počítači, budete se muset odhlásit z druhého počítače."
-"Steam_AccountAlreadyLoggedInNeedPassword"		"Tento účet je již někde jinde přihlášen. Zadejte znovu své heslo a přihlásíte se na tomto počítači."
+"Steam_AccountAlreadyLoggedInNeedPassword"		"Tento účet je již přihlášen někde jinde.\nZadejte znovu své heslo a přihlaste se na tomto počítači."
 "Steam_AccountOfflineMissingConfig"				"Nepodařilo se stáhnout konfigurační data platformy."
 "Steam_NeverConnectedNoConnection"				"Tento účet „%account%“ nebyl nikdy předtím zpřístupněn z tohoto počítače a nemůže být navázáno připojení ke steam serverům .\nNěkteré služby nebudou dostupné. Steam se bude nadále pokoušet o připojení. Veškeré funkce budou dostupné až v případě úspěšného spojení."
-"Steam_RefreshEnterTwoFactorCode"				"Zadejte prosím aktuální kód z Vašeho autentifikátoru funkce Steam Guard"
+"Steam_RefreshEnterTwoFactorCode"				"Zadejte aktuální kód ze svého autentifikátoru funkce Steam Guard"
 "Steam_RefreshLogin_RateLimited"		"Z Vaší sítě bylo v nedávné době provedeno příliš mnoho nesprávných pokusů o přihlášení. Zkuste to později znovu."
 "Steam_RefreshLogin_Title"			"Steam – Obnovení přihlášení"
 "Steam_RefreshLogin_InfoTicketExpired"	"Vypršela platnost ověření pro službu Steam.\nPokračujte opětovným zadáním hesla."
@@ -54,8 +54,8 @@
 "Steam_Login_CloseSteam"		"Ukončit klienta služby Steam"
 "Steam_AccountName"	"Název účtu"
 "Steam_Twofactor_Code"			"Kód funkce Steam Guard"
-"Steam_ErrorLoginNeedTwoFactor" "Zadejte prosím svůj aktuální autentifikační kód funkce Steam Guard."
-"Steam_ErrorLoginBadTwoFactor" "Tento dvoufaktorový kód je neplatný.\nZadejte prosím svůj aktuální autentifikační kód funkce Steam Guard."
+"Steam_ErrorLoginNeedTwoFactor" "Zadejte svůj aktuální autentifikační kód funkce Steam Guard."
+"Steam_ErrorLoginBadTwoFactor" "Tento dvoufaktorový kód je neplatný.\nZadejte svůj aktuální autentifikační kód funkce Steam Guard."
 
 "SteamGuardBanner"				"Steam Guard s technologií Intel® Identity Protection"
 "LoginIPTNotDetected"			"Druhá generace procesorů Intel® Core™ nebyla detekována.\nTento účet možná na tomto počítači nepůjde použít."

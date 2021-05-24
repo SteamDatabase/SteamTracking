@@ -155,6 +155,23 @@ message CCloud_ExternalStorageTransferReport_Notification {
 	optional bool ipv6_remote = 12;
 }
 
+message CCloud_BeginAppUploadBatch_Request {
+	optional uint32 appid = 1 [(description) = "App ID for this batch is for."];
+	optional string machine_name = 2 [(description) = "Client machine name (may be user's alias)."];
+	repeated string files_to_upload = 3 [(description) = "Filenames of files to upload in this batch"];
+	repeated string files_to_delete = 4 [(description) = "Filenames of files to delete in this batch"];
+}
+
+message CCloud_BeginAppUploadBatch_Response {
+	optional uint64 batch_id = 1 [(description) = "ID of this batch."];
+}
+
+message CCloud_CompleteAppUploadBatch_Notification {
+	optional uint32 appid = 1 [(description) = "App ID for this batch is for."];
+	optional uint64 batch_id = 2 [(description) = "ID of this batch."];
+	optional uint32 batch_eresult = 3 [(description) = "result of this batch."];
+}
+
 message CCloud_ClientBeginFileUpload_Request {
 	optional uint32 appid = 1 [(description) = "App ID for which the file is being uploaded."];
 	optional uint32 file_size = 2 [(description) = "file size as transmitted and stored in Cloud."];
@@ -166,7 +183,8 @@ message CCloud_ClientBeginFileUpload_Request {
 	optional uint32 cell_id = 9 [(description) = "Client's cell ID so we can pick storage location."];
 	optional bool can_encrypt = 10 [(description) = "if true, client can encrypt the file before uploading it"];
 	optional bool is_shared_file = 11 [(description) = "if true, this is going to be UGC or a screenshot or some other shared file"];
-	optional uint32 realm = 12 [(description) = "Steam Realm"];
+	optional uint32 deprecated_realm = 12 [(description) = "unused"];
+	optional uint64 upload_batch_id = 13 [(description) = "ID of this batch."];
 }
 
 message ClientCloudFileUploadBlockDetails {
@@ -231,6 +249,7 @@ message CCloud_ClientDeleteFile_Request {
 	optional uint32 appid = 1 [(description) = "App ID for which the file is being deleted."];
 	optional string filename = 2 [(description) = "Filename of file."];
 	optional bool is_explicit_delete = 3 [(description) = "If true, this is a 'delete'; if false, it is a 'forget'"];
+	optional uint64 upload_batch_id = 4 [(description) = "ID of this batch."];
 }
 
 message CCloud_ClientDeleteFile_Response {
@@ -252,6 +271,10 @@ message CCloud_EnumerateUserApps_Response {
 	}
 
 	repeated .CCloud_EnumerateUserApps_Response.Apps apps = 1;
+}
+
+message CCloud_AppCloudStateChange_Notification {
+	optional uint32 appid = 1 [(description) = "App which has had a change in cloud state"];
 }
 
 service Cloud {
@@ -301,6 +324,14 @@ service Cloud {
 		option (method_description) = "Reports the result of an external Cloud storage transfer.";
 	}
 
+	rpc BeginAppUploadBatch (.CCloud_BeginAppUploadBatch_Request) returns (.CCloud_BeginAppUploadBatch_Response) {
+		option (method_description) = "Indicate a batch of files that will be uploaded / deleted for an app.";
+	}
+
+	rpc CompleteAppUploadBatch (.CCloud_CompleteAppUploadBatch_Notification) returns (.NoResponse) {
+		option (method_description) = "Indicate that the batch is complete or being stopped for some other reason.";
+	}
+
 	rpc ClientBeginFileUpload (.CCloud_ClientBeginFileUpload_Request) returns (.CCloud_ClientBeginFileUpload_Response) {
 		option (method_description) = "Initiate an upload to Cloud.";
 	}
@@ -323,5 +354,14 @@ service Cloud {
 
 	rpc EnumerateUserApps (.CCloud_EnumerateUserApps_Request) returns (.CCloud_EnumerateUserApps_Response) {
 		option (method_description) = "Enumerates apps stroing cloud files for a user.";
+	}
+}
+
+service CloudClient {
+	option (service_description) = "Client notifications for Steam cloud events";
+	option (service_execution_site) = k_EProtoExecutionSiteSteamClient;
+
+	rpc NotifyAppStateChange (.CCloud_AppCloudStateChange_Notification) returns (.NoResponse) {
+		option (method_description) = "Cloud state for the given app has changed.";
 	}
 }

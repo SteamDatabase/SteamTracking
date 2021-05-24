@@ -529,6 +529,23 @@ message CPublishedFile_GetUserVoteSummary_Response {
 	repeated .CPublishedFile_GetUserVoteSummary_Response.VoteSummary summaries = 1;
 }
 
+message CPublishedFile_GetItemChanges_Request {
+	optional uint32 appid = 1;
+	optional uint32 last_time_updated = 2;
+	optional uint32 num_items_max = 3;
+}
+
+message CPublishedFile_GetItemChanges_Response {
+	message WorkshopItemInfo {
+		optional fixed64 published_file_id = 1;
+		optional uint32 time_updated = 2;
+		optional fixed64 manifest_id = 3;
+	}
+
+	optional uint32 update_time = 1;
+	repeated .CPublishedFile_GetItemChanges_Response.WorkshopItemInfo workshop_items = 2;
+}
+
 message CPublishedFile_FileSubscribed_Notification {
 	message RevisionData {
 		optional .EPublishedFileRevision revision = 1 [default = k_EPublishedFileRevision_Default];
@@ -649,6 +666,10 @@ service PublishedFile {
 
 	rpc GetUserVoteSummary (.CPublishedFile_GetUserVoteSummary_Request) returns (.CPublishedFile_GetUserVoteSummary_Response) {
 		option (method_description) = "Get user vote summary";
+	}
+
+	rpc GetItemChanges (.CPublishedFile_GetItemChanges_Request) returns (.CPublishedFile_GetItemChanges_Response) {
+		option (method_description) = "Get list of updated items since given date";
 	}
 }
 

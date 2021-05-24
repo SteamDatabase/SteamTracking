@@ -20,7 +20,7 @@
 		"Overlay_MicroTxnAuth_SubscriptionText" "蒸汽平台会在您的订阅更新时，自动使用您保存的支付方式结算。如果您没有存档的账单信息，蒸汽平台会尝试从您钱包的资金中扣款。"
 		"Overlay_MicroTxnAuth_RefundPeriod" "在购买后的 48 小时内，蒸汽平台可以在您未消耗、修改或转让这些物品的情况下提供退款。<a href=http://store.steamchina.com/steam_refunds>了解更多</a>"
 		"Overlay_MicroTxnAuth_NotRefundable" "这些物品不符合退款要求。<a href=http://store.steamchina.com/steam_refunds>了解更多</a>"
-		"Overlay_MicroTxnAuth_ConnectionError_Info" "由于和蒸汽平台通讯时出现问题，您的交易无法完成。"
+		"Overlay_MicroTxnAuth_ConnectionError_Info" "由于和蒸汽平台通信时出现问题，您的交易无法完成。"
 		"Overlay_MicroTxnAuth_Insufficient_Funds_Info" "您的蒸汽平台钱包中资金不足，无法完成购买。您想要充值以继续吗？"
 		"Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_Title" "《蒸汽平台创意工坊法律协议》"
 		"Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_Desc" "在您的物品被完整发布之前，您必须接受最新的《蒸汽平台创意工坊法律协议》。"

@@ -34,6 +34,7 @@ enum EDisplayStatus {
 	k_EDisplayStatusAvailGuestPass = 30;
 	k_EDisplayStatusPurchase = 31;
 	k_EDisplayStatusUnavailable = 32;
+	k_EDisplayStatusNotLaunchable = 33;
 }
 
 enum EProtoAppType {

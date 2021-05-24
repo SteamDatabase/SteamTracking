@@ -4,7 +4,7 @@
 "SteamBootstrapper_UpdatingSteam"				"Обновяване на %appname%…"
 "SteamBootstrapper_ElevationPrompt"			"%appname% трябва да се обнови преди пускането."
 "SteamBootstrapper_ReadOnlyInstallOSX"		"%appname% няма възможност да записва в папката си. Уверете се, че не се опитвате да стартирате от изображението на диска."
-"SteamBootstrapper_RunFromDiskImageOSX"		"Моля, провлечете %appname% в папката Ви с приложения, преди да го пуснете."
+"SteamBootstrapper_RunFromDiskImageOSX"		"Моля, провлачете %appname% в папката Ви с приложения, преди да го пуснете."
 "SteamBootstrapper_ReadOnlyInstall"			"%appname% няма възможност да записва в папката си."
 "SteamBootstrapper_InstallDirNotASCII"			"%appname% не може да бъде пуснато от папка, чийто път съдържа символи, които не са на английски. Моля, преинсталирайте %appname% в папката по подразбиране"
 "SteamBootstrapper_InstallDirIncompatible"		"%appname% не може да се пусне от папка, съдържаща символи, които не са ASCII, в тази версия на Windows. Моля, преинсталирайте %appname% към папката по подразбиране или направете инсталация на Windows 7 или по-нова версия."

@@ -1,0 +1,30 @@
+"resource/layout/webpopout.layout"
+{
+	controls
+	{
+		html { controlname=htmlRoot style="html" }
+	}
+	
+	styles
+	{
+		html
+		{
+			inset="0 0 0 0"
+		}
+	}
+	
+	layout
+	{
+		region	{ name="root" y=0 x=0 width=max height=max }
+
+		place
+		{
+			control=html
+			region=root
+			x=0
+			y=0
+			width=max
+			height=max
+		}
+	}
+}

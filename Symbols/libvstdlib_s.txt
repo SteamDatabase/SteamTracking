@@ -1,21 +1,6 @@
 
  .objc_class_name_NSProcessInfo
  AssertMsgImplementation
- B CMemoryPool::g_ReportFunc
- B CUtlSymbol::s_pSymbolTable
- B ConCommandBase::s_pConCommandBases
- B InterfaceReg::s_pInterfaceRegs
- B __g_CreateCDefaultCvarICvar_reg
- B __g_CreateCVStdLibDLLValidateIValidate_reg
- B gCURLUtils_hashTLDs
- B g_ThreadLocalCoroutineMgr
- B g_ThreadMutexCoroutineMgr
- B g_VecLoadedModules
- B g_VecPCoroutineMgr
- B g_bPreventCoroutineContinue
- B g_pFioAsyncFinalize
- B s_NoEscConversion
- B s_StringCharConversion
  CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(char const*, ...)
  CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(DbgFmtFatalMsgTag_t*, StringView)
  CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(StringView)
@@ -24,76 +9,17 @@
  CValidator::ClaimMemory(void*)
  CValidator::Pop()
  CValidator::Push(char const*, void*, char const*)
- D g_BitStringEndMasks
- D g_VStdLibDLLValidate
- D pCV
- D typeinfo for CDebugStatsSystem
- D typeinfo for CDefaultCvar
- D typeinfo for CKeyValuesSystem
- D typeinfo for CPathString
  D typeinfo for CUniformRandomStream
- D typeinfo for CUtlCStringConversion
- D typeinfo for CUtlCharConversion
- D typeinfo for CUtlNoEscConversion
- D typeinfo for CVStdLibDLLValidate
- D typeinfo for ICvar
- D typeinfo for IDebugStatsSystem
- D typeinfo for IKeyValuesSystem
- D typeinfo for IUniformRandomStream
- D typeinfo for IValidate
- D typeinfo for SteamStdLib::CCommandLine
- D typeinfo for SteamStdLib::ICommandLine
  D typeinfo for std::__1::bad_function_call
- D vtable for CDebugStatsSystem
- D vtable for CDefaultCvar
- D vtable for CKeyValuesSystem
- D vtable for CPathString
  D vtable for CUniformRandomStream
- D vtable for CUtlCStringConversion
- D vtable for CUtlCharConversion
- D vtable for CUtlNoEscConversion
- D vtable for CVStdLibDLLValidate
- D vtable for SteamStdLib::CCommandLine
- D vtable for std::__1::bad_function_call
  Error
- Gestalt
  Is64BitOS
  Msg
  OBJC_CLASS_$_NSProcessInfo
  Plat_GetProcessArgv
  Plat_OutputDebugString
  Plat_RelativeTicks
- R typeinfo name for CDebugStatsSystem
- R typeinfo name for CDefaultCvar
- R typeinfo name for CKeyValuesSystem
- R typeinfo name for CPathString
  R typeinfo name for CUniformRandomStream
- R typeinfo name for CUtlCStringConversion
- R typeinfo name for CUtlCharConversion
- R typeinfo name for CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>
- R typeinfo name for CUtlLinkedList<CCoroutine, int>
- R typeinfo name for CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>
- R typeinfo name for CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >
- R typeinfo name for CUtlMap<void*, int, int, CDefLess<void*> >
- R typeinfo name for CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >
- R typeinfo name for CUtlMemoryBase
- R typeinfo name for CUtlNoEscConversion
- R typeinfo name for CUtlRBTree<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>
- R typeinfo name for CUtlRBTree<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t, int, CUtlMap<void*, int, int, CDefLess<void*> >::CKeyLess, CDefRBTreeBalanceListener<int>, void*>
- R typeinfo name for CUtlRBTree<CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::Node_t, int, CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, wchar_t>
- R typeinfo name for CUtlString
- R typeinfo name for CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >
- R typeinfo name for CUtlVector<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::HashBucket_t> >
- R typeinfo name for CUtlVector<CUtlString, CUtlMemory<CUtlString> >
- R typeinfo name for CUtlVector<int, CUtlMemory<int> >
- R typeinfo name for CVStdLibDLLValidate
- R typeinfo name for ICvar
- R typeinfo name for IDebugStatsSystem
- R typeinfo name for IKeyValuesSystem
- R typeinfo name for IUniformRandomStream
- R typeinfo name for IValidate
- R typeinfo name for SteamStdLib::CCommandLine
- R typeinfo name for SteamStdLib::ICommandLine
  R typeinfo name for std::__1::bad_function_call
  SteamThreadTools::CThreadEvent::CThreadEvent(bool)
  SteamThreadTools::CThreadEvent::Set()
@@ -110,75 +36,10 @@
  SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
  SteamVProf::CVProfile::EnterScope(char const*, EVProfBugdetGroup, void*)
  SteamVProf::CVProfile::ExitScope()
- T AllocString(char const*, int)
  T BHanIdeograph
- T CBaseUtlSymbolTable<CUtlSymbol>::RemoveAll()
- T CBaseUtlSymbolTable<CUtlSymbol>::~CBaseUtlSymbolTable()
- T CBitStringT<CVariableBitStringBase>::GetBit(int) const
- T CBitStringT<CVariableBitStringBase>::SetBit(int)
- T CCleanupUtlSymbolTable::~CCleanupUtlSymbolTable()
- T CCoroutine::RestoreStack()
- T CCoroutine::Validate(CValidator&, char const*)
- T CCoroutine::~CCoroutine()
- T CCoroutineMgr::CCoroutineMgr()
- T CCoroutineMgr::PopCoroutineStack()
- T CCoroutineMgr::Validate(CValidator&, char const*)
- T CDebugStatsSystem::DeregisterDebugStat(long long*)
- T CDebugStatsSystem::FindDebugStat(char const*) const
- T CDebugStatsSystem::GetList()
- T CDebugStatsSystem::RegisterDebugStat(char const*)
- T CDebugStatsSystem::Validate(CValidator&, char const*)
- T CDebugStatsSystem::~CDebugStatsSystem()
- T CDefaultCvar::CallGlobalChangeCallback(ConVar*, char const*)
- T CDefaultCvar::Connect(void* (*)(char const*, int*))
- T CDefaultCvar::Disconnect()
- T CDefaultCvar::FindVar(char const*)
- T CDefaultCvar::FindVar(char const*) const
- T CDefaultCvar::GetCommandLineValue(char const*)
- T CDefaultCvar::GetCommands()
- T CDefaultCvar::Init()
- T CDefaultCvar::InstallGlobalChangeCallback(void (*)(ConVar*, char const*))
- T CDefaultCvar::QueryInterface(char const*)
- T CDefaultCvar::RegisterConCommandBase(ConCommandBase*)
- T CDefaultCvar::Shutdown()
- T CDefaultCvar::UnlinkVariables(int)
- T CFileReader::BOpenFile(StringView, EFioModifiers)
- T CFileReader::CFileReader(bool, unsigned int)
- T CFileReader::Read(void*, unsigned int, unsigned int*)
- T CFileReader::Seek(long long, EFioSeekMode)
- T CFileReader::~CFileReader()
  T CGaussianRandomStream::AttachToStream(IUniformRandomStream*)
  T CGaussianRandomStream::CGaussianRandomStream(IUniformRandomStream*)
  T CGaussianRandomStream::RandomFloat(float, float)
- T CKeyValuesSystem::AddKeyToLeakTrack(void*, unsigned int)
- T CKeyValuesSystem::AddStringToPool(char const*, int)
- T CKeyValuesSystem::CKeyValuesSystem()
- T CKeyValuesSystem::DumpStats()
- T CKeyValuesSystem::GetKeyValuesExpressionSymbol(char const*)
- T CKeyValuesSystem::GetStats(CUtlString&)
- T CKeyValuesSystem::GetStatsInternal(CUtlString*)
- T CKeyValuesSystem::GetStringForSymbol(unsigned int)
- T CKeyValuesSystem::GetSymbolForString(char const*, bool)
- T CKeyValuesSystem::GetSymbolForStringEx(char const*, char const***)
- T CKeyValuesSystem::RegisterSizeofKeyValues(unsigned long)
- T CKeyValuesSystem::RemoveKeyFromLeakTrack(void*)
- T CKeyValuesSystem::SetKeyValuesExpressionSymbol(char const*, bool)
- T CKeyValuesSystem::Validate(CValidator&, char const*)
- T CKeyValuesSystem::~CKeyValuesSystem()
- T CMemoryPool::AddNewBlob()
- T CMemoryPool::Alloc(unsigned int)
- T CMemoryPool::CMemoryPool(int, int, int)
- T CMemoryPool::Clear()
- T CMemoryPool::Validate(CValidator&, char const*)
- T CMemoryPool::~CMemoryPool()
- T CParseURL::FindAnyCharInSegment(char const*, char const*, char const*)
- T CParseURL::FindInSegment(char const*, char const*, char const*)
- T CParseURL::Parse(char const*, int, URLParts_t&)
- T CParseURL::ParseURLImpl(char const*, int, URLParts_t&)
- T CParseURL::SetURLPart(char const*, char const*, CUtlString&)
- T CPathString::CPathString(StringView, StringView)
- T CPathString::Clear()
- T CPathString::Validate(CValidator&, char const*)
  T CStringNormalization::Fold(wchar_t const*, wchar_t*, int)
  T CStringNormalization::Initialize()
  T CStringNormalization::Normalize(bool, char const*, char*, int)
@@ -195,255 +56,41 @@
  T CUniformRandomStream::RandomFloat(float, float)
  T CUniformRandomStream::RandomInt(int, int)
  T CUniformRandomStream::SetSeed(int)
- T CUtlBuffer::AddNullTermination()
- T CUtlBuffer::CUtlBuffer(int, int, int)
- T CUtlBuffer::CheckPut(int)
- T CUtlBuffer::EnsureCapacity(int)
- T CUtlBuffer::GetOverflow(int)
- T CUtlBuffer::Put(void const*, int)
- T CUtlBuffer::PutChar(char)
- T CUtlBuffer::PutOverflow(int)
- T CUtlBuffer::PutString(StringView)
- T CUtlBuffer::SeekPut(CUtlBuffer::SeekType_t, int)
- T CUtlBuffer::SetBufferType(bool, bool)
- T CUtlCStringConversion::CUtlCStringConversion(char, StringView, int, CUtlCharConversion::ConversionArray_t*)
- T CUtlCStringConversion::FindConversion(StringView, int*)
- T CUtlCharConversion::CUtlCharConversion(char, StringView, int, CUtlCharConversion::ConversionArray_t*)
- T CUtlCharConversion::FindConversion(StringView, int*)
- T CUtlDict<CUtlString, CDefCaselessStringLess, int>::Insert(StringView, CUtlString&&)
- T CUtlFmtString::CUtlFmtString(char const*, ...)
- T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::AllocNode()
- T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::CUtlHashMap()
- T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::EnsureCapacity(int)
- T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::Find(char const* const&) const
- T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::FindInBucket(int, char const* const&) const
- T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::IncrementalRehash()
- T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::Purge()
- T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::RehashNodesInBucket(int)
- T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::Validate(CValidator&, char const*)
- T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::~CUtlHashMap()
- T CUtlLinkedList<CCoroutine, int>::AllocInternal(bool)
- T CUtlLinkedList<CCoroutine, int>::Free(int)
- T CUtlLinkedList<CCoroutine, int>::InsertBefore(int)
- T CUtlLinkedList<CCoroutine, int>::LinkBefore(int, int)
- T CUtlLinkedList<CCoroutine, int>::RemoveAll()
- T CUtlLinkedList<CCoroutine, int>::Unlink(int)
- T CUtlLinkedList<CCoroutine, int>::Validate(CValidator&, char const*)
- T CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>::AllocInternal(bool)
- T CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>::Find(SteamStdLib::CCommandLine::CommandLineParam_t const&) const
- T CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>::Free(int)
- T CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>::LinkBefore(int, int)
- T CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>::RemoveAll()
- T CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>::Unlink(int)
- T CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>::Validate(CValidator&, char const*)
- T CUtlMap<char const*, CUtlString, int, CDefCaselessStringLess>::Insert(char const*&&, CUtlString&&)
- T CUtlMap<char const*, CUtlString, int, CDefCaselessStringLess>::Node_t::~Node_t()
- T CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Validate(CValidator&, char const*)
- T CUtlMap<void*, int, int, CDefLess<void*> >::Validate(CValidator&, char const*)
- T CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::Validate(CValidator&, char const*)
- T CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::~CUtlMap()
- T CUtlMemoryBase::CUtlMemoryBase(int, int, int)
- T CUtlMemoryBase::ConvertToGrowableMemory(int)
- T CUtlMemoryBase::Count() const
- T CUtlMemoryBase::EnsureCapacity(int)
- T CUtlMemoryBase::Grow(int)
- T CUtlMemoryBase::IsExternallyAllocated() const
- T CUtlMemoryBase::NumAllocated() const
- T CUtlMemoryBase::Purge()
- T CUtlMemoryBase::Swap(CUtlMemoryBase&)
- T CUtlMemoryBase::Validate(CValidator&, char const*)
- T CUtlMemoryBase::~CUtlMemoryBase()
- T CUtlNoEscConversion::FindConversion(StringView, int*)
- T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short>, CStringPoolIndex>::RemoveAll()
- T CUtlRBTree<CUtlMap<char const*, CUtlString, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CUtlString, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Find(char const* const&) const
- T CUtlRBTree<CUtlMap<char const*, CUtlString, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CUtlString, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::NewNode(bool)
- T CUtlRBTree<CUtlMap<char const*, char const*, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, char const*, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::NewNode(bool)
- T CUtlRBTree<CUtlMap<int, int, int, CDefLess<int> >::Node_t, int, CUtlMap<int, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int>, int>::NewNode(bool)
- T CUtlRBTree<CUtlMap<int, int, int, CDefLess<int> >::Node_t, int, CUtlMap<int, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int>, int>::RemoveAll()
- T CUtlRBTree<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>::Find(unsigned int const&) const
- T CUtlRBTree<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>::NewNode(bool)
- T CUtlRBTree<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>::RemoveAll()
- T CUtlRBTree<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>::Validate(CValidator&, char const*)
- T CUtlRBTree<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t, int, CUtlMap<void*, int, int, CDefLess<void*> >::CKeyLess, CDefRBTreeBalanceListener<int>, void*>::Find(void* const&) const
- T CUtlRBTree<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t, int, CUtlMap<void*, int, int, CDefLess<void*> >::CKeyLess, CDefRBTreeBalanceListener<int>, void*>::NewNode(bool)
- T CUtlRBTree<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t, int, CUtlMap<void*, int, int, CDefLess<void*> >::CKeyLess, CDefRBTreeBalanceListener<int>, void*>::Remove(void* const&)
- T CUtlRBTree<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t, int, CUtlMap<void*, int, int, CDefLess<void*> >::CKeyLess, CDefRBTreeBalanceListener<int>, void*>::RemoveAll()
- T CUtlRBTree<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t, int, CUtlMap<void*, int, int, CDefLess<void*> >::CKeyLess, CDefRBTreeBalanceListener<int>, void*>::RemoveAt(int)
- T CUtlRBTree<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t, int, CUtlMap<void*, int, int, CDefLess<void*> >::CKeyLess, CDefRBTreeBalanceListener<int>, void*>::Validate(CValidator&, char const*)
- T CUtlRBTree<CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::Node_t, int, CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, wchar_t>::Find(wchar_t const&) const
- T CUtlRBTree<CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::Node_t, int, CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, wchar_t>::NewNode(bool)
- T CUtlRBTree<CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::Node_t, int, CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, wchar_t>::RemoveAll()
- T CUtlRBTree<CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::Node_t, int, CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, wchar_t>::Validate(CValidator&, char const*)
- T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_InsertRebalance(int, unsigned long, void*)
- T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_LinkToParent(int, int, bool, unsigned long, void*)
- T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_NextInorder(int, unsigned long, void*) const
- T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_RemoveRebalance(int, unsigned long, void*)
- T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_RotateLeft(int, unsigned long, void*)
- T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_RotateRight(int, unsigned long, void*)
- T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_Unlink(int, unsigned long, void*)
- T CUtlString* Destruct<CUtlString>(CUtlString*)
- T CUtlString::AppendFormat(char const*, ...)
- T CUtlString::AssertStringTooLong()
- T CUtlString::Format(char const*, ...)
- T CUtlString::SetValue(char const*)
- T CUtlString::VAppendFormat(char const*, __va_list_tag*)
- T CUtlString::VAppendFormat(char const*, char*)
- T CUtlString::VFormat(char const*, __va_list_tag*)
- T CUtlString::VFormat(char const*, char*)
- T CUtlStringBuilder::AppendChar(char)
- T CUtlStringBuilder::Data::Clear()
- T CUtlStringBuilder::Data::DetachHeapString(unsigned long&, unsigned long&)
- T CUtlStringBuilder::Data::MoveToHeap()
- T CUtlStringBuilder::Data::SetError(bool)
- T CUtlStringBuilder::Data::SetLength(unsigned long)
- T CUtlStringBuilder::DetachString()
- T CUtlStringBuilder::InternalPrepareBuffer(unsigned long, bool, unsigned long)
- T CUtlStringBuilder::PrepareBuffer(unsigned long, bool, unsigned long)
- T CUtlStringBuilder::Swap(CUtlString&)
- T CUtlStringBuilder::VFormat(char const*, __va_list_tag*)
- T CUtlStringBuilder::VFormat(char const*, char*)
- T CUtlVector<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*, CUtlMemory<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*> >::~CUtlVector()
- T CUtlVector<CCoroutine::vprofNode_t, CUtlMemory<CCoroutine::vprofNode_t> >::AddToTail(CCoroutine::vprofNode_t const&)
- T CUtlVector<CCoroutine::vprofNode_t, CUtlMemory<CCoroutine::vprofNode_t> >::GrowVector(int)
- T CUtlVector<CCoroutine::vprofNode_t, CUtlMemory<CCoroutine::vprofNode_t> >::~CUtlVector()
- T CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >::AddToTail(CCoroutineMgr*&&)
- T CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >::GrowVector(int)
- T CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >::Remove(int)
- T CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >::Validate(CValidator&, char const*)
- T CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >::~CUtlVector()
- T CUtlVector<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::HashBucket_t> >::GrowVector(int)
- T CUtlVector<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::HashBucket_t const*)
- T CUtlVector<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::HashBucket_t> >::Validate(CValidator&, char const*)
- T CUtlVector<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::HashBucket_t> >::~CUtlVector()
- T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::AddMultipleToTail(int, CUtlString const*)
- T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::AddToTail(CUtlString const&)
- T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::AddToTail(CUtlString&&)
- T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::GrowVector(int)
- T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::InsertMultipleBefore(int, int, CUtlString const*)
- T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::Remove(int)
- T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::RemoveAll()
- T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::Validate(CValidator&, char const*)
- T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::~CUtlVector()
- T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::~CUtlVector()
- T CUtlVector<char const*, CUtlMemory<char const*> >::AddToTail(char const* const&)
- T CUtlVector<char const*, CUtlMemory<char const*> >::AddToTail(char const*&&)
- T CUtlVector<char const*, CUtlMemory<char const*> >::GrowVector(int)
- T CUtlVector<char const*, CUtlMemory<char const*> >::~CUtlVector()
- T CUtlVector<char*, CUtlMemory<char*> >::AddToTail(char*&&)
- T CUtlVector<char*, CUtlMemory<char*> >::GrowVector(int)
- T CUtlVector<int, CUtlMemory<int> >::AddToTail(int const&)
- T CUtlVector<int, CUtlMemory<int> >::AddToTail(int&&)
- T CUtlVector<int, CUtlMemory<int> >::GrowVector(int)
- T CUtlVector<int, CUtlMemory<int> >::Remove(int)
- T CUtlVector<int, CUtlMemory<int> >::Validate(CValidator&, char const*)
- T CUtlVector<int, CUtlMemory<int> >::~CUtlVector()
- T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::AddToTail(unsigned int const&)
- T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::AddToTail(unsigned int&&)
- T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::GrowVector(int)
- T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::~CUtlVector()
- T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::AddMultipleToTail(int, wchar_t const*)
- T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::AddToTail(wchar_t&&)
- T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::GrowVector(int)
- T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::InsertMultipleBefore(int, int, wchar_t const*)
- T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::SetCount(int)
- T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::~CUtlVector()
- T CVStdLibDLLValidate::Validate(CValidator&)
- T CValidateAutoPushPop::~CValidateAutoPushPop()
- T CVariableBitStringBase::AllocInts(int)
- T CVariableBitStringBase::FreeInts()
- T CVariableBitStringBase::ReallocInts(int)
- T CVariableBitStringBase::Resize(int)
- T CVariableBitStringBase::Validate(CValidator&, char const*)
  T CanBeginLine
  T CanBreakBetween
  T CanBreakRepeated
  T CanEndLine
- T ConCommandBase::AddToList(ConCommandBase*)
- T ConCommandBase::FindCommand(char const*)
- T ConCommandBase::GetCommands()
- T ConCommandBase::GetNext() const
- T CoroutineTestFunc(void*)
- T CoroutineTestL1(void*)
- T CoroutineTestL2(void*)
  T Coroutine_Cancel
  T Coroutine_Continue
  T Coroutine_Create
  T Coroutine_DebugBreak
- T Coroutine_Finish()
  T Coroutine_GetCurrentlyActive
  T Coroutine_GetStackDepth
  T Coroutine_IsActive
  T Coroutine_IsAddressInOurStack
- T Coroutine_Launch(CCoroutine&)
  T Coroutine_ReleaseThreadMemory
  T Coroutine_Test
  T Coroutine_ValidateGlobals
  T Coroutine_YieldToMain
  T CreateInterface
- T CreateInterfaceInternal(char const*, int*)
  T DebugStatsSystem
- T FioClose(int)
- T FioCreateFile(StringView, unsigned int, EFioShareFlags, EFioCreateMode, unsigned int, int*)
- T FioGetSize(int, unsigned long long*)
- T FioRead(int, void*, int, int*)
- T FioSeek(int, long long, EFioSeekMode, unsigned long long*)
- T GCoroutineMgr()
  T GetNameFromOSType
  T GetOSDetailString
- T GetOSMajorMinorPatchVersion(int*, int*, int*)
- T GetOSMajorMinorPatchVersion(long*, long*, long*)
  T GetOSType
  T GetPlatformFromOS
  T GetPlatformName
  T GetPlatformNameFromEPlatformType
  T GetPortableOsVersionInformation
- T GetReal1016Version(int*, int*, int*)
- T GetReal1016Version(long*, long*, long*)
- T HashStringCaseless(char const*, unsigned long)
  T InstallUniformRandomStream
- T InterfaceReg::InterfaceReg(void* (*)(), char const*)
- T Internal_Coroutine_Continue(int, bool, char const*)
  T KeyValuesSystemSteam
- T LoadFileIntoBuffer(StringView, CUtlBuffer&, bool, EFioModifiers)
- T MurmurHash3_32(void const*, unsigned long, unsigned int, bool)
  T OSIsCompatible
  T OSTypesAreCompatible
- T ReplaceBadFilenameCharacters(char*, char, char const*)
- T SteamStdLib::CCommandLine::AppendParm(SteamStdLib::OpaqueHParamType*, char const*)
- T SteamStdLib::CCommandLine::AutoCreateCmdLine()
- T SteamStdLib::CCommandLine::CCommandLine()
- T SteamStdLib::CCommandLine::CheckParm(SteamStdLib::OpaqueHParamType*, char const**) const
- T SteamStdLib::CCommandLine::CreateCmdLine(int, char**)
- T SteamStdLib::CCommandLine::FindParm(SteamStdLib::OpaqueHParamType*) const
- T SteamStdLib::CCommandLine::GetCmdLine() const
- T SteamStdLib::CCommandLine::GetCommandString(SteamStdLib::OpaqueHParamType*) const
- T SteamStdLib::CCommandLine::GetFirstRegisteredCmd()
- T SteamStdLib::CCommandLine::GetNextRegisteredCmd(SteamStdLib::OpaqueHParamType*)
- T SteamStdLib::CCommandLine::GetParm(int) const
- T SteamStdLib::CCommandLine::GetRegisteredCmd(SteamStdLib::OpaqueHParamType*)
- T SteamStdLib::CCommandLine::GetRegisteredCmdHelp(SteamStdLib::OpaqueHParamType*)
- T SteamStdLib::CCommandLine::ParmCount() const
- T SteamStdLib::CCommandLine::ParmValue(SteamStdLib::OpaqueHParamType*, char const*) const
- T SteamStdLib::CCommandLine::ParmValue(SteamStdLib::OpaqueHParamType*, float) const
- T SteamStdLib::CCommandLine::ParmValue(SteamStdLib::OpaqueHParamType*, int) const
- T SteamStdLib::CCommandLine::ParseIncludeFiles()
- T SteamStdLib::CCommandLine::PrintCommandHelp()
- T SteamStdLib::CCommandLine::RegisterParam(char const*, char const*)
- T SteamStdLib::CCommandLine::RemoveParm(SteamStdLib::OpaqueHParamType*)
- T SteamStdLib::CCommandLine::UnregisterParam(SteamStdLib::OpaqueHParamType*)
- T SteamStdLib::CCommandLine::Validate(CValidator&, char const*)
- T SteamStdLib::CCommandLine::~CCommandLine()
  T SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
  T SteamStdLib::CCommandLineParam::~CCommandLineParam()
  T SteamStdLib::CommandLine()
- T SteamThreadTools::CRWLockAutoRead<SteamThreadTools::CThreadRWLock>::~CRWLockAutoRead()
- T SteamThreadTools::CRWLockAutoWrite<SteamThreadTools::CThreadRWLock>::~CRWLockAutoWrite()
- T SteamThreadTools::CThreadLocalPtr<CCoroutineMgr>::~CThreadLocalPtr()
  T StringAfterPrefix
  T StringAfterPrefixCaseSensitive
  T StringFindSuffix
- T Sys_GetFactoryThis()
- T UtlMemory_CalcNewAllocationCount(int, int, int, unsigned long)
  T VStdLib_GetICVarFactory
  T V_AggressiveStripPrecedingAndTrailingWhitespace
  T V_AggressiveStripPrecedingAndTrailingWhitespaceW
@@ -539,10 +186,8 @@
  T V_URLContainsDomain
  T V_URLCracker
  T V_URLDecode
- T V_URLDecodeInternal(char*, int, char const*, int, bool)
  T V_URLDecodeRaw
  T V_URLEncode
- T V_URLEncodeInternal(char*, int, char const*, int, bool)
  T V_URLEncodeRaw
  T V_URLParse
  T V_URLPartsToString
@@ -595,7 +240,6 @@
  T V_snprintf
  T V_strcat
  T V_strcmp_prefix
- T V_stricmp(char const*, char const*)
  T V_stricmp_filename
  T V_stricmp_prefix
  T V_stristr(char const*, char const*)
@@ -627,8 +271,6 @@
  T V_wcstoi64
  T V_wcstoui64
  T V_whextobinary
- T ValidateDebugStatsGlobal(CValidator&)
- T ValidateKeyValuesGlobal(CValidator&)
  T WeakRandomChar
  T WeakRandomFillMemory
  T WeakRandomFloat
@@ -636,34 +278,8 @@
  T WeakRandomInt
  T WeakRandomSeed
  T WeakRandomUint32
- T __CreateCDefaultCvarICvar_interface()
- T __CreateCVStdLibDLLValidateIValidate_interface()
- T __clang_call_terminate
  T _strlwr
  T _strupr
- T bool UsingWcharBufferFor<bool>(char*, bool (*)(char*, wchar_t*, int, int))
- T cIntToHexDigit(int)
- T int CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::FindOrInsert_Internal<char const* const&, bool>(char const* const&, bool&&, CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::ReplaceExisting)
- T int CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::InsertUnconstructed<char const* const&>(char const* const&, int*, bool)
- T int CUtlRBTree<CUtlMap<char const*, CUtlString, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CUtlString, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Insert_Internal<CUtlMap<char const*, CUtlString, int, CDefCaselessStringLess>::Node_t>(CUtlMap<char const*, CUtlString, int, CDefCaselessStringLess>::Node_t&&, bool)
- T int CUtlRBTree<CUtlMap<char const*, char const*, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, char const*, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Insert_Internal<CUtlMap<char const*, char const*, int, bool (*)(char const* const&, char const* const&)>::Node_t>(CUtlMap<char const*, char const*, int, bool (*)(char const* const&, char const* const&)>::Node_t&&, bool)
- T int CUtlRBTree<CUtlMap<int, int, int, CDefLess<int> >::Node_t, int, CUtlMap<int, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int>, int>::Insert_Internal<CUtlMap<int, int, int, CDefLess<int> >::Node_t>(CUtlMap<int, int, int, CDefLess<int> >::Node_t&&, bool)
- T int CUtlRBTree<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>::Insert_Internal<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t>(CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t&&, bool)
- T int CUtlRBTree<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t, int, CUtlMap<void*, int, int, CDefLess<void*> >::CKeyLess, CDefRBTreeBalanceListener<int>, void*>::Insert_Internal<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t>(CUtlMap<void*, int, int, CDefLess<void*> >::Node_t&&, bool)
- T int CUtlRBTree<CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::Node_t, int, CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, wchar_t>::Insert_Internal<CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::Node_t>(CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::Node_t&&, bool)
- T int SplitNumbers<CUtlVector<int, CUtlMemory<int> > >(char const*, char, CUtlVector<int, CUtlMemory<int> >&)
- T int SplitNumbers<CUtlVector<unsigned int, CUtlMemory<unsigned int> > >(char const*, char, CUtlVector<unsigned int, CUtlMemory<unsigned int> >&)
- T std::__1::bad_function_call::~bad_function_call()
- T uint128::operator*(uint128)
- T void CUtlRBTree<CUtlMap<char const*, CUtlString, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CUtlString, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::FindInsertionPosition<CUtlMap<char const*, CUtlString, int, CDefCaselessStringLess>::Node_t>(CUtlMap<char const*, CUtlString, int, CDefCaselessStringLess>::Node_t const&, bool, int&, bool&, bool&)
- T void CUtlRBTree<CUtlMap<char const*, char const*, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, char const*, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::FindInsertionPosition<CUtlMap<char const*, char const*, int, bool (*)(char const* const&, char const* const&)>::Node_t>(CUtlMap<char const*, char const*, int, bool (*)(char const* const&, char const* const&)>::Node_t const&, bool, int&, bool&, bool&)
- T void CUtlRBTree<CUtlMap<int, int, int, CDefLess<int> >::Node_t, int, CUtlMap<int, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int>, int>::FindInsertionPosition<CUtlMap<int, int, int, CDefLess<int> >::Node_t>(CUtlMap<int, int, int, CDefLess<int> >::Node_t const&, bool, int&, bool&, bool&)
- T void CUtlRBTree<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>::FindInsertionPosition<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t>(CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t const&, bool, int&, bool&, bool&)
- T void CUtlRBTree<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t, int, CUtlMap<void*, int, int, CDefLess<void*> >::CKeyLess, CDefRBTreeBalanceListener<int>, void*>::FindInsertionPosition<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t>(CUtlMap<void*, int, int, CDefLess<void*> >::Node_t const&, bool, int&, bool&, bool&)
- T void CUtlRBTree<CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::Node_t, int, CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, wchar_t>::FindInsertionPosition<CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::Node_t>(CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::Node_t const&, bool, int&, bool&, bool&)
- T void JoinNumbers<CUtlVector<int, CUtlMemory<int> > >(char, CUtlVector<int, CUtlMemory<int> > const&, CUtlString&)
- T void JoinNumbers<CUtlVector<unsigned int, CUtlMemory<unsigned int> > >(char, CUtlVector<unsigned int, CUtlMemory<unsigned int> > const&, CUtlString&)
- T void JoinNumbers<CUtlVector<unsigned long long, CUtlMemory<unsigned long long> > >(char, CUtlVector<unsigned long long, CUtlMemory<unsigned long long> > const&, CUtlString&)
  T vstdlib_wcsicmp
  T vstdlib_wcsnicmp
  T vstdlib_wcstoi64
@@ -697,53 +313,9 @@
  __tolower
  __toupper
  atoi
- b CFileReader::Read(void*, unsigned int, unsigned int*)::fAsserted
- b CStringNormalization::Initialize()::threadonce_1176_20
- b CStringNormalization::Normalize(bool, char const*, char*, int)::fAsserted
- b CStringNormalization::Normalize(bool, wchar_t const*, wchar_t*, int)::fAsserted
- b CStringNormalization::Test_BValidateStructures()::fAsserted
- b CURLUtils::IsTLD(char const*)::threadonce_119_23
- b DebugStatsSystem::g_DebugStatsSystem
- b GetNetAdrResolveCacheMutex()::mutex
- b KeyValuesSystem()::s_KeyValuesSystem
- b SteamStdLib::CommandLine()::g_CmdLine
- b SteamStdLib::s_pCommandLine
- b TestForAppleGraphicsUpdateInstalled()::bInstalled
- b TestForAppleGraphicsUpdateInstalled()::bLoaded
- b TestForAppleGraphicsUpdateInstalled()::handle
- b V_pretifymem::current
- b V_pretifymem::output
- b V_pretifynum::current
- b V_pretifynum::output
- b g_CleanupSymbolTable
- b g_mapPairs
- b g_pCustomICvarIF
- b guard variable for DebugStatsSystem::g_DebugStatsSystem
- b guard variable for GetNetAdrResolveCacheMutex()::mutex
- b guard variable for KeyValuesSystem()::s_KeyValuesSystem
- b guard variable for SteamStdLib::CommandLine()::g_CmdLine
- b guard variable for TestForAppleGraphicsUpdateInstalled()::handle
- b s_Cvar
- b s_GaussianStream
- b s_UniformStream
- b s_bCPUHasFastREPMOVSB
- b s_bHWAccelCRC32
- b s_netadrResolveCache
- b s_netadrResolveCacheMutexEnforceConstruction
  chdir
  close
  close$UNIX2003
- d Coroutine_Launch(CCoroutine&)::sThisFunctionHasParentFramePointer
- d GetOSType::eOSVersion
- d TestForAppleGraphicsUpdateInstalled()::attribs
- d g_BasicHTMLEntities
- d g_FullHTMLEntities
- d g_WhitespaceEntities
- d rgentryString
- d rgpchTLDs
- d s_pConversionArrays_NoEscConversion
- d s_pConversionArrays_StringCharConversion
- d s_pUniformStream
  dlclose
  dlopen
  dlsym
@@ -780,34 +352,6 @@
  popen$UNIX2003
  pthread_mutex_lock
  pthread_mutex_unlock
- r (anonymous namespace)::UChar32ToLower(wchar_t, wchar_t (&) [3])::k_SpecialLowerCaseLookup1
- r (anonymous namespace)::UChar32ToLower(wchar_t, wchar_t (&) [3])::k_SpecialLowerCaseLookup2
- r (anonymous namespace)::UChar32ToLower(wchar_t, wchar_t (&) [3])::k_SpecialLowerCaseValues
- r (anonymous namespace)::UChar32ToUpper(wchar_t, wchar_t (&) [3])::k_SpecialUpperCaseLookup1
- r (anonymous namespace)::UChar32ToUpper(wchar_t, wchar_t (&) [3])::k_SpecialUpperCaseLookup2
- r (anonymous namespace)::UChar32ToUpper(wchar_t, wchar_t (&) [3])::k_SpecialUpperCaseLookup3
- r (anonymous namespace)::UChar32ToUpper(wchar_t, wchar_t (&) [3])::k_SpecialUpperCaseLookup4
- r (anonymous namespace)::UChar32ToUpper(wchar_t, wchar_t (&) [3])::s_SpecialUpperCaseValues
- r V_CP437CharsToUTF8::s_table
- r V_MakeFileSafeName::k_rgchBadChars
- r V_Windows1252CharsToUTF8::s_table
- r V_binarytohex::k_rgchHexToASCII
- r V_iswalpha32::s_arrRanges
- r V_towlower32::s_SimpleToLower_1
- r V_towlower32::s_SimpleToLower_2
- r V_towlower32::s_SimpleToLower_3
- r V_towlower32::s_SimpleToLower_4
- r V_towlower32::s_SimpleToLower_deltas
- r V_towupper32::s_SimpleToUpper_1
- r V_towupper32::s_SimpleToUpper_2
- r V_towupper32::s_SimpleToUpper_3
- r V_towupper32::s_SimpleToUpper_4
- r V_towupper32::s_SimpleToUpper_deltas
- r rgentry
- r rgwchIdeogramList
- r wszCantBeginLine
- r wszCantBreakRepeated
- r wszCantEndLine
  read
  read$UNIX2003
  setjmp
@@ -828,60 +372,6 @@
  strtoull
  swprintf
  swscanf
- t (anonymous namespace)::InternalUnicodeTableLookupN((anonymous namespace)::InternalUnicodeRangeTableEntry_t const*, int, wchar_t)
- t (anonymous namespace)::LinguisticToLowerFunctor<char, &V_UTF8ToUChar32>::operator()(char const*, wchar_t&, bool&)
- t (anonymous namespace)::LinguisticToLowerFunctor<unsigned short, &V_UTF16ToUChar32>::operator()(unsigned short const*, wchar_t&, bool&)
- t (anonymous namespace)::LinguisticToLowerFunctor<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>::operator()(wchar_t const*, wchar_t&, bool&)
- t (anonymous namespace)::LinguisticToUpperFunctor<char, &V_UTF8ToUChar32>::operator()(char const*, wchar_t&, bool&)
- t (anonymous namespace)::LinguisticToUpperFunctor<unsigned short, &V_UTF16ToUChar32>::operator()(unsigned short const*, wchar_t&, bool&)
- t (anonymous namespace)::LinguisticToUpperFunctor<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>::operator()(wchar_t const*, wchar_t&, bool&)
- t (anonymous namespace)::UChar32ToLower(wchar_t, wchar_t (&) [3])
- t (anonymous namespace)::UChar32ToUpper(wchar_t, wchar_t (&) [3])
- t (anonymous namespace)::WrapSimpleCaseMapFunctor<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32, V_towupper32>::operator()(wchar_t const*, wchar_t&, bool&)
- t AggressiveStripPrecedingAndTrailingWhitespace(char*, wchar_t*, int, int)
- t CopyToMaxChars(char*, int, char const*, int)
- t GetNetAdrResolveCacheMutex()
- t GetStackPtr()
- t KeyValuesSystem()
- t LoadFileRangeIntoBuffer_Internal(StringView, unsigned long long, unsigned long long, CUtlBuffer&, bool, EFioModifiers)
- t StripPrecedingAndTrailingWhitespace(char*, wchar_t*, int, int)
- t StripUnprintable(char*, wchar_t*, int, int)
- t StripWhitespaceWorker(int, wchar_t*, bool*, bool)
- t _GLOBAL__sub_I_checksum_crc.cpp
- t _GLOBAL__sub_I_coroutine.cpp
- t _GLOBAL__sub_I_cvar.cpp
- t _GLOBAL__sub_I_interface.cpp
- t _GLOBAL__sub_I_netadr.cpp
- t _GLOBAL__sub_I_random.cpp
- t _GLOBAL__sub_I_stringnormalize.cpp
- t _GLOBAL__sub_I_strtools.cpp
- t _GLOBAL__sub_I_urlutils.cpp
- t _GLOBAL__sub_I_utlbuffer.cpp
- t _GLOBAL__sub_I_utlsymbol.cpp
- t _GLOBAL__sub_I_validate_vstdlib.cpp
- t int (anonymous namespace)::UnicodeConvertT<false, wchar_t, char, (anonymous namespace)::DecodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>, (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8> >(wchar_t const*, int, char*, int, EStringConvertErrorPolicy, (anonymous namespace)::DecodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>&, (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>&, (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>&)
- t int (anonymous namespace)::UnicodeConvertT<false, wchar_t, unsigned short, (anonymous namespace)::DecodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>, (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF16Len>, (anonymous namespace)::EncodeFuncAdapter<unsigned short, &V_UChar32ToUTF16> >(wchar_t const*, int, unsigned short*, int, EStringConvertErrorPolicy, (anonymous namespace)::DecodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>&, (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF16Len>&, (anonymous namespace)::EncodeFuncAdapter<unsigned short, &V_UChar32ToUTF16>&)
- t int (anonymous namespace)::UnicodeConvertT<true, char, char, (anonymous namespace)::DecodeFuncAdapter<char, &V_UTF8ToUChar32>, (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8> >(char const*, int, char*, int, EStringConvertErrorPolicy, (anonymous namespace)::DecodeFuncAdapter<char, &V_UTF8ToUChar32>&, (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>&, (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>&)
- t int (anonymous namespace)::UnicodeConvertT<true, char, char, (anonymous namespace)::LinguisticToLowerFunctor<char, &V_UTF8ToUChar32>, (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8> >(char const*, int, char*, int, EStringConvertErrorPolicy, (anonymous namespace)::LinguisticToLowerFunctor<char, &V_UTF8ToUChar32>&, (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>&, (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>&)
- t int (anonymous namespace)::UnicodeConvertT<true, char, char, (anonymous namespace)::LinguisticToUpperFunctor<char, &V_UTF8ToUChar32>, (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8> >(char const*, int, char*, int, EStringConvertErrorPolicy, (anonymous namespace)::LinguisticToUpperFunctor<char, &V_UTF8ToUChar32>&, (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>&, (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>&)
- t int (anonymous namespace)::UnicodeConvertT<true, char, char, (anonymous namespace)::WrapSimpleCaseMapFunctor<char, &V_UTF8ToUChar32, V_towlower32>, (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8> >(char const*, int, char*, int, EStringConvertErrorPolicy, (anonymous namespace)::WrapSimpleCaseMapFunctor<char, &V_UTF8ToUChar32, V_towlower32>&, (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>&, (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>&)
- t int (anonymous namespace)::UnicodeConvertT<true, char, char, (anonymous namespace)::WrapSimpleCaseMapFunctor<char, &V_UTF8ToUChar32, V_towupper32>, (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8> >(char const*, int, char*, int, EStringConvertErrorPolicy, (anonymous namespace)::WrapSimpleCaseMapFunctor<char, &V_UTF8ToUChar32, V_towupper32>&, (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>&, (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>&)
- t int (anonymous namespace)::UnicodeConvertT<true, char, unsigned short, (anonymous namespace)::DecodeFuncAdapter<char, &V_UTF8ToUChar32>, (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF16Len>, (anonymous namespace)::EncodeFuncAdapter<unsigned short, &V_UChar32ToUTF16> >(char const*, int, unsigned short*, int, EStringConvertErrorPolicy, (anonymous namespace)::DecodeFuncAdapter<char, &V_UTF8ToUChar32>&, (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF16Len>&, (anonymous namespace)::EncodeFuncAdapter<unsigned short, &V_UChar32ToUTF16>&)
- t int (anonymous namespace)::UnicodeConvertT<true, char, wchar_t, (anonymous namespace)::DecodeFuncAdapter<char, &V_UTF8ToUChar32>, (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32> >(char const*, int, wchar_t*, int, EStringConvertErrorPolicy, (anonymous namespace)::DecodeFuncAdapter<char, &V_UTF8ToUChar32>&, (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>&, (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>&)
- t int (anonymous namespace)::UnicodeConvertT<true, unsigned short, char, (anonymous namespace)::DecodeFuncAdapter<unsigned short, &V_UTF16ToUChar32>, (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8> >(unsigned short const*, int, char*, int, EStringConvertErrorPolicy, (anonymous namespace)::DecodeFuncAdapter<unsigned short, &V_UTF16ToUChar32>&, (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>&, (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>&)
- t int (anonymous namespace)::UnicodeConvertT<true, unsigned short, unsigned short, (anonymous namespace)::DecodeFuncAdapter<unsigned short, &V_UTF16ToUChar32>, (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF16Len>, (anonymous namespace)::EncodeFuncAdapter<unsigned short, &V_UChar32ToUTF16> >(unsigned short const*, int, unsigned short*, int, EStringConvertErrorPolicy, (anonymous namespace)::DecodeFuncAdapter<unsigned short, &V_UTF16ToUChar32>&, (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF16Len>&, (anonymous namespace)::EncodeFuncAdapter<unsigned short, &V_UChar32ToUTF16>&)
- t int (anonymous namespace)::UnicodeConvertT<true, unsigned short, unsigned short, (anonymous namespace)::LinguisticToLowerFunctor<unsigned short, &V_UTF16ToUChar32>, (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF16Len>, (anonymous namespace)::EncodeFuncAdapter<unsigned short, &V_UChar32ToUTF16> >(unsigned short const*, int, unsigned short*, int, EStringConvertErrorPolicy, (anonymous namespace)::LinguisticToLowerFunctor<unsigned short, &V_UTF16ToUChar32>&, (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF16Len>&, (anonymous namespace)::EncodeFuncAdapter<unsigned short, &V_UChar32ToUTF16>&)
- t int (anonymous namespace)::UnicodeConvertT<true, unsigned short, unsigned short, (anonymous namespace)::LinguisticToUpperFunctor<unsigned short, &V_UTF16ToUChar32>, (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF16Len>, (anonymous namespace)::EncodeFuncAdapter<unsigned short, &V_UChar32ToUTF16> >(unsigned short const*, int, unsigned short*, int, EStringConvertErrorPolicy, (anonymous namespace)::LinguisticToUpperFunctor<unsigned short, &V_UTF16ToUChar32>&, (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF16Len>&, (anonymous namespace)::EncodeFuncAdapter<unsigned short, &V_UChar32ToUTF16>&)
- t int (anonymous namespace)::UnicodeConvertT<true, unsigned short, unsigned short, (anonymous namespace)::WrapSimpleCaseMapFunctor<unsigned short, &V_UTF16ToUChar32, V_towlower32>, (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF16Len>, (anonymous namespace)::EncodeFuncAdapter<unsigned short, &V_UChar32ToUTF16> >(unsigned short const*, int, unsigned short*, int, EStringConvertErrorPolicy, (anonymous namespace)::WrapSimpleCaseMapFunctor<unsigned short, &V_UTF16ToUChar32, V_towlower32>&, (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF16Len>&, (anonymous namespace)::EncodeFuncAdapter<unsigned short, &V_UChar32ToUTF16>&)
- t int (anonymous namespace)::UnicodeConvertT<true, unsigned short, unsigned short, (anonymous namespace)::WrapSimpleCaseMapFunctor<unsigned short, &V_UTF16ToUChar32, V_towupper32>, (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF16Len>, (anonymous namespace)::EncodeFuncAdapter<unsigned short, &V_UChar32ToUTF16> >(unsigned short const*, int, unsigned short*, int, EStringConvertErrorPolicy, (anonymous namespace)::WrapSimpleCaseMapFunctor<unsigned short, &V_UTF16ToUChar32, V_towupper32>&, (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF16Len>&, (anonymous namespace)::EncodeFuncAdapter<unsigned short, &V_UChar32ToUTF16>&)
- t int (anonymous namespace)::UnicodeConvertT<true, unsigned short, wchar_t, (anonymous namespace)::DecodeFuncAdapter<unsigned short, &V_UTF16ToUChar32>, (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32> >(unsigned short const*, int, wchar_t*, int, EStringConvertErrorPolicy, (anonymous namespace)::DecodeFuncAdapter<unsigned short, &V_UTF16ToUChar32>&, (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>&, (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>&)
- t int (anonymous namespace)::UnicodeConvertT<true, wchar_t, char, (anonymous namespace)::DecodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>, (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8> >(wchar_t const*, int, char*, int, EStringConvertErrorPolicy, (anonymous namespace)::DecodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>&, (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>&, (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>&)
- t int (anonymous namespace)::UnicodeConvertT<true, wchar_t, unsigned short, (anonymous namespace)::DecodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>, (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF16Len>, (anonymous namespace)::EncodeFuncAdapter<unsigned short, &V_UChar32ToUTF16> >(wchar_t const*, int, unsigned short*, int, EStringConvertErrorPolicy, (anonymous namespace)::DecodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>&, (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF16Len>&, (anonymous namespace)::EncodeFuncAdapter<unsigned short, &V_UChar32ToUTF16>&)
- t int (anonymous namespace)::UnicodeConvertT<true, wchar_t, wchar_t, (anonymous namespace)::DecodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>, (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32> >(wchar_t const*, int, wchar_t*, int, EStringConvertErrorPolicy, (anonymous namespace)::DecodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>&, (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>&, (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>&)
- t int (anonymous namespace)::UnicodeConvertT<true, wchar_t, wchar_t, (anonymous namespace)::LinguisticToLowerFunctor<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>, (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32> >(wchar_t const*, int, wchar_t*, int, EStringConvertErrorPolicy, (anonymous namespace)::LinguisticToLowerFunctor<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>&, (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>&, (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>&)
- t int (anonymous namespace)::UnicodeConvertT<true, wchar_t, wchar_t, (anonymous namespace)::LinguisticToUpperFunctor<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>, (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32> >(wchar_t const*, int, wchar_t*, int, EStringConvertErrorPolicy, (anonymous namespace)::LinguisticToUpperFunctor<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>&, (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>&, (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>&)
- t int (anonymous namespace)::UnicodeConvertT<true, wchar_t, wchar_t, (anonymous namespace)::WrapSimpleCaseMapFunctor<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32, V_towlower32>, (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32> >(wchar_t const*, int, wchar_t*, int, EStringConvertErrorPolicy, (anonymous namespace)::WrapSimpleCaseMapFunctor<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32, V_towlower32>&, (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>&, (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>&)
- t int (anonymous namespace)::UnicodeConvertT<true, wchar_t, wchar_t, (anonymous namespace)::WrapSimpleCaseMapFunctor<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32, V_towupper32>, (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32> >(wchar_t const*, int, wchar_t*, int, EStringConvertErrorPolicy, (anonymous namespace)::WrapSimpleCaseMapFunctor<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32, V_towupper32>&, (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>&, (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>&)
  typeinfo for std::exception
  unlink
  vasprintf

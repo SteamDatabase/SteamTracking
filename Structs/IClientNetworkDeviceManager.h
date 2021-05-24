@@ -3,6 +3,15 @@ class IClientNetworkDeviceManager
 public:
     virtual unknown_ret IsInterfaceValid() = 0;
     virtual unknown_ret RefreshDevices() = 0;
+    virtual unknown_ret GetNetworkDevicesData(NetworkDevicesData_t*) = 0;
+    virtual unknown_ret ConnectToDevice(unsigned int, unsigned int, char const*, char const*, unsigned int, bool, bool) = 0;
+    virtual unknown_ret DisconnectFromDevice(unsigned int) = 0;
+    virtual unknown_ret SetWifiEnabled(bool) = 0;
+    virtual unknown_ret SetWifiScanningEnabled(bool) = 0;
+    virtual unknown_ret ForgetWirelessEndpoint(unsigned int, unsigned int) = 0;
+    virtual unknown_ret SetWirelessEndpointAutoconnect(unsigned int, unsigned int, bool) = 0;
+    virtual unknown_ret SetCustomIPSettings(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int) = 0;
+    virtual unknown_ret GetCustomIPSettings(unsigned int, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*) = 0;
     virtual unknown_ret EnumerateNetworkDevices(unsigned int, unsigned int*) = 0;
     virtual unknown_ret GetDeviceType(unsigned int) = 0;
     virtual unknown_ret IsCurrentDevice(unsigned int) = 0;
@@ -25,11 +34,6 @@ public:
     virtual unknown_ret GetWirelessEndpointStrength(unsigned int, unsigned int) = 0;
     virtual unknown_ret IsSecurityRequired(unsigned int, unsigned int) = 0;
     virtual unknown_ret GetCachedWirelessCredentials(unsigned int, unsigned int) = 0;
-    virtual unknown_ret DisconnectFromDevice(unsigned int, bool) = 0;
-    virtual unknown_ret SetCustomIPSettings(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int) = 0;
-    virtual unknown_ret ConnectToDevice(unsigned int, unsigned int, char const*, char const*, unsigned int, bool, bool) = 0;
     virtual unknown_ret IsWirelessEndpointForgettable(unsigned int, unsigned int) = 0;
-    virtual unknown_ret ForgetWirelessEndpointAutoconnect(unsigned int, unsigned int) = 0;
     virtual unknown_ret IsUsingDHCP(unsigned int) = 0;
-    virtual unknown_ret GetCustomIPSettings(unsigned int, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*) = 0;
 };

@@ -32,7 +32,7 @@
 "WelcomeToSteamPrivacyInfo3" "για περισσότερες πληροφορίες."
 "Underline" "_________________"
 "Underline2" "_________________"
-"WelcomeToSteamPasswordInfo" "Παρακαλούμε εισάγετε έναν κωδικό πρόσβασης. Σιγουρευτείτε ότι θα επιλέξετε κάτι που είναι δύσκολο να μαντευθεί - χρησιμοποιήστε τουλάχιστον 8 χαρακτήρες."
+"WelcomeToSteamPasswordInfo" "Εισαγάγετε ένα συνθηματικό. Σιγουρευτείτε να επιλέξετε κάτι που είναι δύσκολο να παραβιαστεί —χρησιμοποιήστε τουλάχιστον 8 χαρακτήρες."
 "WelcomeToSteamPassword" "Συνθηματικό"
 "WelcomeToSteamRetypePassword" "Πληκτρολογήστε ξανά το συνθηματικό"
 "WelcomeAccountCreateComplete" "Είστε έτοιμος! Ευχαριστούμε που χρησιμοποιείτε το Steam. Το πρόγραμμα τρέχει στην περιοχή ειδοποιήσεων, συνήθως στην κάτω δεξιά γωνία της οθόνης σας. Για να αποκτήσετε πρόσβαση στο Steam, κάντε δεξί κλικ στο εικονίδιο του."
@@ -826,6 +826,7 @@
 "SteamUI_ValveSurvey_Summary_VideoCard"						"Κάρτα γραφικών:"
 "SteamUI_ValveSurvey_Summary_Memory"						"Μνήμη:"
 "SteamUI_ValveSurvey_Summary_Audio"							"Κάρτα ήχου:"
+"SteamUI_ValveSurvey_Summary_Storage"						"Χώρος αποθήκευσης:"
 
 "SteamUI_ValveSurvey_ResultsLabel"							"Η έρευνα ολοκληρώθηκε. Ευχαριστούμε ξανά για τη συμμετοχή σας.\n\nΑν θα θέλατε να δείτε πως ο υπολογιστής σας συγκρίνεται με αυτούς των άλλων συνδρομητών του Steam, μπορείτε να δείτε τα συγκεντρωμένα αποτελέσματα της έρευνας κάνοντας κλικ στον παρακάτω σύνδεσμο.\n\n (Διαφορετικά, μπορείτε απλά να κάνετε κλικ στο «Τέλος» για να κλείσετε αυτό το παράθυρο.)"
 "SteamUI_ValveSurvey_ResultsButton"							"Προβολή σελίδας αποτελεσμάτων έρευνας."
@@ -837,6 +838,11 @@
 
 "SteamUI_ValveSurvey_Summary_MACAddressHash"				"Κατατεμαχισμός διεύθυνσης MAC: %s1"
 "SteamUI_ValveSurvey_Summary_DiskSerialHash"				"Κατατεμαχισμός σειριακού αριθμού δίσκου: %s1"
+
+"SteamUI_ValveSurvey_Summary_SSDCount"						"Αριθμός SSD: %s1"
+"SteamUI_ValveSurvey_Summary_SSDSizes"						"Μεγέθη SSD: %s1"
+"SteamUI_ValveSurvey_Summary_HDDCount"						"Αριθμός HDD: %s1"
+"SteamUI_ValveSurvey_Summary_HDDSizes"						"Μεγέθη HDD: %s1"
 
 "SteamUI_ValveSurvey_Summary_DesktopSystem"					"Τύπος: Desktop"
 "SteamUI_ValveSurvey_Summary_LaptopSystem"					"Τύπος: Laptop"
@@ -3393,7 +3399,7 @@
 "SteamUI_JoinDialog_PreparingToPlay" 	"Προετοιμασία για εκκίνηση %game% %dots%"
 "SteamUI_JoinDialog_Title"		"%game% - Steam"
 "SteamUI_JoinDialog_Updating_Title" 	"Ενημέρωση του %game%"
-"SteamUI_JoinDialog_Ready_Title"	"Έτοιμο- %game%"
+"SteamUI_JoinDialog_Ready_Title"	"Έτοιμο — %game%"
 "SteamUI_JoinDialog_NoName_Title" 	"Steam"
 "SteamUI_JoinDialog_InstallScriptInfo"	"Πραγματοποιείται εγκατάσταση για πρώτη φορά %dots% \n\\Εγκατάσταση: %stepname% (βήμα %step% από %steptotal%)"
 
@@ -4556,10 +4562,13 @@
 "Steam_Settings_Streaming_Bandwidth20000" 	"20 Mbit/s"
 "Steam_Settings_Streaming_Bandwidth25000" 	"25 Mbit/s"
 "Steam_Settings_Streaming_Bandwidth30000" 	"30 Mbit/s"
+"Steam_Settings_Streaming_Bandwidth40000" 	"40 MBit/s"
 "Steam_Settings_Streaming_Bandwidth50000" 	"50 Mbit/s"
+"Steam_Settings_Streaming_Bandwidth75000" 	"75 MBit/s"
 "Steam_Settings_Streaming_BandwidthUnlimited" 	"Απεριόριστο (αυξάνει τον χρόνο καθυστέρησης)"
 "Steam_Settings_Streaming_Resolution"	"Περιορισμός ανάλυσης σε"
 "Steam_Settings_Streaming_ResolutionDesktop" 	"Ανάλυση οθόνης"
+"Steam_Settings_Streaming_Resolution8K" 	"7680x4320 (8K)"
 "Steam_Settings_Streaming_Resolution2160p" 	"3840x2160 (4K)"
 "Steam_Settings_Streaming_Resolution1440p" 	"2560x1440 (1440p)"
 "Steam_Settings_Streaming_Resolution1080p" 	"1920x1080 (1080p)"

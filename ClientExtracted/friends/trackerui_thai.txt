@@ -686,7 +686,7 @@
 
 "Broadcast_FirstTime_Header" "ยินดีต้อนรับเข้าสู่การถ่ายทอดสดบน Steam! ตอนนี้คุณสามารถรับชมผู้เล่นอื่นและถ่ายทอดสดเกมของคุณเองด้วย Steam ได้แล้ว"
 "Broadcast_FirstTime_PermissionHeader" "ใช้เวลาสักครู่ในการเริ่มตั้งค่าการปรับแต่งของคุณ..."
-"Broadcast_FirstTime_DesktopOnly" "ตามค่าเริ่มต้น มีเพียงเนื้อหาเกมของคุณเท่านั้นที่สามารถรับชมได้ เดสก์ทอปของคุณจะไม่ถูกถ่ายทอดสด"
+"Broadcast_FirstTime_DesktopOnly" "ตามค่าเริ่มต้น มีเพียงเนื้อหาเกมของคุณเท่านั้นที่สามารถรับชมได้ เดสก์ท็อปของคุณจะไม่ถูกถ่ายทอดสด"
 "Broadcast_FirstTime_FAQ" "อ่านคำถามที่พบบ่อยของการถ่ายทอดสดบน Steam"
 "Broadcast_FirstTime_FAQLink" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497&l=thai"
 "Broadcast_FirstTime_Title" "การถ่ายทอดสดบน Steam"

@@ -77,6 +77,34 @@ message CClientMetrics_ClientBootstrap_Notification {
 	optional .CClientMetrics_ClientBootstrap_Summary summary = 1;
 }
 
+message CClientMetrics_DownloadRates_Notification {
+	message StatsInfo {
+		optional uint32 source_type = 1;
+		optional uint32 source_id = 2;
+		optional uint64 bytes = 3;
+		optional string host_name = 4;
+		optional uint64 microseconds = 5;
+		optional bool used_ipv6 = 6;
+		optional bool proxied = 7;
+	}
+
+	optional uint32 cell_id = 1;
+	repeated .CClientMetrics_DownloadRates_Notification.StatsInfo stats = 2;
+	optional uint32 throttling_kbps = 3;
+}
+
+message CClientMetrics_ContentValidation_Notification {
+	optional int32 validation_result = 1;
+	optional uint32 app_id = 2;
+	optional bool staged_files = 3;
+	optional bool user_initiated = 4;
+	optional bool early_out = 5;
+	optional uint32 chunks_scanned = 6;
+	optional uint32 chunks_corrupt = 7;
+	optional uint64 bytes_scanned = 8;
+	optional uint64 chunk_bytes_corrupt = 9;
+}
+
 service ClientMetrics {
 	option (service_description) = "A service for client-reported metrics";
 
@@ -85,4 +113,6 @@ service ClientMetrics {
 	rpc SteamPipeWorkStatsReport (.CClientMetrics_SteamPipeWorkStats_Notification) returns (.NoResponse);
 	rpc ReportClientError (.CClientMetrics_ReportClientError_Notification) returns (.NoResponse);
 	rpc ClientBootstrapReport (.CClientMetrics_ClientBootstrap_Notification) returns (.NoResponse);
+	rpc ClientDownloadRatesReport (.CClientMetrics_DownloadRates_Notification) returns (.NoResponse);
+	rpc ClientContentValidationReport (.CClientMetrics_ContentValidation_Notification) returns (.NoResponse);
 }

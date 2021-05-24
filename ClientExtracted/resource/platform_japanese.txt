@@ -53,7 +53,7 @@
 "Steam_Login_Cancel"		"取り消し"
 "Steam_Login_CloseSteam"		"Steam を終了"
 "Steam_AccountName"	"アカウント名"
-"Steam_Twofactor_Code"			"Steam ガードコード"
+"Steam_Twofactor_Code"			"Steamガードコード"
 "Steam_ErrorLoginNeedTwoFactor" "現在の Steam ガード認証用機器のコードを入力してください。"
 "Steam_ErrorLoginBadTwoFactor" "その二要素認証コードは無効です。\n現在の Steam ガード認証用機器のコードを入力してください。"
 

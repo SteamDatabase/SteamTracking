@@ -59,6 +59,8 @@
 	"Loading": "Loading...",
 	"Updating": "Updating...",
 	"Uploading": "Uploading...",
+	"Saving": "Saving...",
+	"Sending": "Sending...",
 
 	"Settings":	"Settings",
 	"FriendSettings_AlwaysNewChatWindow": "Always open a new chat window rather than a tab",
@@ -185,6 +187,8 @@
 	"EventCalendar_WatchLiveBroadcast": "Watch Live Broadcast",
 
 	"EventModTile_Moderator": "Moderator: %1$s",
+	"EventModTile_EventCreator": "Original Poster: %1$s",
+	"EventModTile_EventLastUpdator": "Last Updater: %1$s",
 	"EventModTile_Action_Reviewed": "%1$s %2$s marked reviewed",
 	"EventModTile_Action_ReReviewed": "%1$s %2$s marked Re-Reviewed",
 	"EventModTile_Action_UnReviewed": "%1$s %2$s cleared reviewed flag",
@@ -379,6 +383,8 @@
 	"EventDisplay_ViewOnStore": "View on Store",
 	"EventDisplay_ViewOnCommunity": "View on Community",
 
+	"EventDisplay_NoEventsToSee": "No events found",
+
 	"EventDisplay_RightColumnTitle_Game": "Game",
 	"EventDisplay_RightColumnTitle_Blog": "Blog",
 	"EventDisplay_RightColumnTitle_DateAndTime": "Date and Time",
@@ -499,9 +505,11 @@
 	"EventEmail_Destination_SalesPage": "Steam Store Sales Page",
 
 	"EventDashBoard_SummaryStats_Admin_Title": "(Visible only to admins)",
-	"EventDashBoard_SummaryStats_Title": "Total Unique Impressions and Views",
+	"EventDashBoard_SummaryStats_Title": "Unique Impressions and Views",
 	"EventDashBoard_SummaryStats_Desc": "(Beta) These are impressions and views of your events and announcements by unique logged-in users. This is only for new events and announcements crafted with this editor.",
 	"EventDashBoard_SummaryStats_Link": "Click here for more details.",
+	"EventDashBoard_SummaryStats_TotalImpressions": "Total Unique Impressions:",
+	"EventDashBoard_SummaryStats_TotalViews": "Total Unique Views:",
 	"EventDashBoard_SummaryStats_Dec2020Note": "Note: Due to heavy load, visibility was greatly undercounted from Dec 23 - Jan 5, 2021",
 	"EventDashBoard_ModerationQueueWarning": "This event has not yet gone through routine moderation and is therefore not currently visible in the Library.",
 	"EventDashBoard_Summary_LibraryHome_Shown": "Impressions of events (cover image):",
@@ -1026,9 +1034,9 @@
 	"PartnerEvent_Other":		"Other Event",
 	"PartnerEvent_SteamAwardNominations":	"Steam Award Nomination Request",
 	"PartnerEvent_SteamAwardVoteRequest":	"Steam Award Vote Request",
-	"PartnerEvent_SteamGameFestival_ArtistState": "Steam Game Festival Artists Statement",
-	"PartnerEvent_SteamGameFestival_Broadcast": "Steam Game Festival Live Stream",
-	"PartnerEvent_SteamGameFestival_OfficeHour": "Steam Game Festival Office Hours",
+	"PartnerEvent_SteamGameFestival_ArtistState": "Steam Next Fest Artists Statement",
+	"PartnerEvent_SteamGameFestival_Broadcast": "Steam Next Fest Live Stream",
+	"PartnerEvent_SteamGameFestival_OfficeHour": "Steam Next Fest Office Hours",
 	"PartnerEvent_Curator_Group_Members": "Curator Group Announcement",
 	"PartnerEvent_Curator_Public": "Curator Public News Post",
 
@@ -1384,9 +1392,9 @@
 	"Sale_default_label_95": "Romance Visual Novels",
 	"Sale_default_label_96": "Mystery Visual Novels",
 	"Sale_default_label_97": "Text-Based Adventures",
-	"Sale_default_label_98": "2D Platfomers",
+	"Sale_default_label_98": "2D Platformers",
 	"Sale_default_label_99": "Precision Platformers",
-	"Sale_default_label_100": "Puzzle Platfomers",
+	"Sale_default_label_100": "Puzzle Platformers",
 	"Sale_default_label_101": "Third Person",
 	"Sale_default_label_102": "Rhythm",
 	"Sale_default_label_103": "Featured Titles",
@@ -1631,6 +1639,15 @@
 	"AppType_hardware": "hardware",
 	"AppType_series": "series",
 
+	"AppTypeLabelTitle": "Type",
+	"AppTypeLabel_game": "Games",
+	"AppTypeLabel_software": "Software",
+	"AppTypeLabel_dlc": "Downloadable Content",
+	"AppTypeLabel_demo": "Demos",
+	"AppTypeLabel_music": "Soundtracks",
+	"AppTypeLabel_video": "Videos",
+	"AppTypeLabel_hardware": "Hardware",
+
 	"GameHover_Tags": "Tags",
 	"GameHover_UserReviewsHeader": "",
 	"GameHover_UserReviewCount": "| %1$s User Reviews",
@@ -1655,8 +1672,25 @@
 	"FacetedBrowse_NoMatches": "No matches found.",
 	"FacetedBrowse_MatchCount": "%1$s match",
 	"FacetedBrowse_MatchCount_Plural": "%1$s matches",
+	"FacetedBrowse_MatchCountPartial": "%1$s+ match",
+	"FacetedBrowse_MatchCountPartial_Plural": "%1$s+ matches",
 	"FacetedBrowse_Reset": "Reset",
 	"FacetedBrowse_ReturnToTop": "Return to Top",
+
+	"Platform": "Platform",
+	"Platform_Windows": "Windows",
+	"Platform_Linux": "Linux / SteamOS",
+	"Platform_Mac": "macOS",
+
+	"ContentDescriptor": "Content Descriptor",
+	"ContentDescriptor_GeneralMatureContent": "General Mature Content",
+	"ContentDescriptor_FrequentViolenceOrGore": "Frequent Violence or Gore",
+	"ContentDescriptor_NudityOrSexualContent": "Nudity or Sexual Content",
+	"ContentDescriptor_AdultOnlySexualContent": "Adult Only Sexual Content",
+
+	"UserPreference_HideOwnedItems": "Hide items in my library",
+	"UserPreference_HideWishlistedItems": "Hide items on my wishlist",
+	"UserPreference_HideIgnoredItems": "Hide ignored items",
 
 	"App_Taxonomy_Survey_QSuperGenreTitle": "Top-Level Genres",
 	"App_Taxonomy_Survey_QGenreTitle": "Genres",
@@ -1665,6 +1699,14 @@
 	"App_Taxonomy_Survey_QThemeMoodTitle": "Themes & Moods",
 	"App_Taxonomy_Survey_QFeaturesTitle": "Features",
 	"App_Taxonomy_Survey_QPlayersTitle": "Players",
+
+
+	"Browse_Sale_Hide_Games_I_Own": "Hide items in my Library",
+	"Browse_Sale_Mature_Themes": "Mature Themes",
+	"Browse_Sale_Mature_Feature": "Mature",
+	"Browse_sale_Violence_Feature":	"Violence",
+	"Browse_Sale_Sexual_Feature": "Nudity or Sexual Content",
+	"Browse_Sale_Adult_Feature": "Adult Only",
 
 	"bytes": "%1$s B",
 	"bytes_PerSecond": "%1$s B/s",

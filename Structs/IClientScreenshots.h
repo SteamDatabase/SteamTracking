@@ -22,6 +22,7 @@ public:
     virtual unknown_ret SetLocalScreenshotCaption(CGameID, unsigned int, char const*) = 0;
     virtual unknown_ret SetLocalScreenshotPrivacy(CGameID, unsigned int, EUCMFilePrivacyState) = 0;
     virtual unknown_ret SetLocalScreenshotSpoiler(CGameID, unsigned int, bool) = 0;
+    virtual unknown_ret GetLocalLastScreenshot(CGameID*, unsigned int*) = 0;
     virtual unknown_ret StartBatch(CGameID) = 0;
     virtual unknown_ret AddToBatch(unsigned int) = 0;
     virtual unknown_ret UploadBatch(EUCMFilePrivacyState) = 0;

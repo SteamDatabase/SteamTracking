@@ -18,4 +18,5 @@ typedef enum EAppState
     k_EAppStateComponentInUse = 16384, // Component In Use
     k_EAppStateMovingFolder = 32768, // Moving Folder
     k_EAppStateUpdateHidden = 65536, // Update Hidden
+    k_EAppStatePrefetchingInfo = 131072, // Prefetching Info
 } EAppState;

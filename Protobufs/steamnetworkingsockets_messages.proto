@@ -144,6 +144,7 @@ message CMsgSteamNetworkingP2PRendezvous {
 		optional .CMsgSteamDatagramCertificateSigned cert = 7;
 		optional uint32 to_virtual_port = 9;
 		optional uint32 from_virtual_port = 10;
+		optional string from_fakeip = 11;
 	}
 
 	message ConnectOK {

@@ -694,7 +694,7 @@
 "Broadcast_FirstTime_Cancel" "취소"
 "Broadcast_FirstTime_ViewerRequest" "%gamename% 게임 플레이를 %friend%님이 보고싶어합니다."
 "Broadcast_FirstTime_CompleteText" "방송 공개 설정을 해주셔서 감사합니다."
-"Broadcast_FirstTime_Configuration" "마이크 녹음 또는 비디오 해상도 같은 추가 설정을 위해 다음 링크로 가십시오:"
+"Broadcast_FirstTime_Configuration" "마이크 녹음 또는 동영상 해상도 같은 추가 설정을 위해 다음 링크로 가십시오:"
 "Broadcast_FirstTime_ConfigurationLink" "방송 설정"
 
 "Broadcast_Chat_Show_Profile" "프로필 보기"
@@ -742,7 +742,7 @@
 "Steam_Settings_Broadcast_HelpURL_URL" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497"
 "Steam_Settings_Broadcast_PermissionsHeader" "공개 설정:"
 "Steam_Settings_Broadcast_BitrateHeader" "최대 비트 전송률:"
-"Steam_Settings_Broadcast_DimensionsHeader" "비디오 해상도:"
+"Steam_Settings_Broadcast_DimensionsHeader" "동영상 해상도:"
 "Steam_Settings_Broadcast_EncoderHeader" "인코딩 최적화 설정:"
 "Steam_Settings_Broadcast_EncoderQuality" "최고 화질"
 "Steam_Settings_Broadcast_EncoderPerformance" "최고 성능"

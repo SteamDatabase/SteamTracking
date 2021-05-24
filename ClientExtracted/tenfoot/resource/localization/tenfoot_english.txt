@@ -1999,6 +1999,7 @@
 	"Library_Details_ControllerBindingsGordon_ApplyConfiguration"	"APPLY CONFIGURATION"
 	"Library_Details_ControllerBindingsGordon_Share"	"SHARE CONFIGURATION"	
 	"Library_Details_ControllerBindingsGordon_ListenForBinding"	"LISTEN FOR KEY"
+	"Library_Details_ControllerBindingsGordon_Reset"			"RESET TO ACTION SET BINDING"
 	
 	"Library_Details_CopyToClipboard_Title"				"Share Configuration"
 	"Library_Details_CopyToClipboard_Desc"				"A Link to this configuration has been copied to your clipboard."
@@ -2040,6 +2041,7 @@
 	"Library_Details_GameActionsHeader"				"SELECT AN IN-GAME ACTION"
 	"Library_Details_FieldLabel_InputStyle_GA"		"In-Game Action"
 	"Library_GameAction_None"						"None"
+	"Library_GameAction_ResetToParent"				"Reset to Action Set Binding"
 
 	"Library_Details_Binding_Custom_Description"		"Custom Description..."
 
@@ -2091,14 +2093,15 @@
 	"Library_Details_SourceMode_Hotbar_Title"		"HOTBAR MENU"
 	"Library_Details_SourceMode_DPad_Title"				"DIRECTIONAL PAD"
 	"Library_Details_SourceMode_ABXY_Title"				"BUTTON PAD"
-	"Library_Details_SourceMode_MouseJoystick_Title"	"MOUSE-LIKE JOYSTICK"
+	"Library_Details_SourceMode_MouseJoystick_Title"	"MOUSE LIKE JOYSTICK"
 	"Library_Details_SourceMode_MouseRegion_Title"		"MOUSE REGION"
 	"Library_Details_SourceMode_RadialMenu_Title"		"RADIAL MENU"
 	"Library_Details_SourceMode_SingleButton_Title"		"SINGLE BUTTON"
 	"Library_Details_SourceMode_FlickStick_Title"		"FLICK STICK"
 	"Library_Details_SourceMode_FlickStick_Acton_Title"	"FS: {s:action}"
-	"Library_Details_SourceMode_Mouse_Joystick_Acton_Title"	"JM: {s:action}"
-
+	"Library_Details_SourceMode_Mouse_Joystick_Acton_Title"	"MJ: {s:action}"
+	"Library_Details_SourceMode_LayerInherit"		""
+	
 	"Library_Details_Source_Title_none"			"UNASSIGNED"
 	"Library_Details_Source_Title_left_trackpad"		"L Pad"
 	"Library_Details_Source_Title_right_trackpad"		"R Pad"
@@ -2397,6 +2400,8 @@
 	"Library_Details_SourceMode_Title_FlickStick"		"Flick Stick"
 	"Library_Details_SourceMode_Title_2DScroll"		"Directional Swipe"
 	"Library_Details_SourceMode_Title_Hotbar"		"Hotbar Menu"
+	"Library_Details_SourceMode_Title_LayerInherit"			"Inherit From Action Set"
+	"Library_Details_SourceMode_Title_LayerNullOverride"	"None"
 
 	"Library_Details_ModeShift_Title_None"				"None"
 	"Library_Details_ModeShift_Title_LeftTrigger"		"Left Trigger Full Pull"
@@ -3427,6 +3432,7 @@
 	"Downloads_Status_downloading"	"Downloading {s:downloadpercent}"
 	"Downloads_Status_preloading"	"Preloading {s:downloadpercent}"
 	"Downloads_Status_unpacking"	"Unpacking {s:downloadpercent}"
+	"Downloads_Status_patching"	"Patching {s:downloadpercent}"
 	"Downloads_Status_paused"	"Paused"
 	"Downloads_Status_queued"	"In Queue"
 	"Downloads_Status_ready"	"Ready to Play"
@@ -3436,6 +3442,7 @@
 	"Downloads_Status_finished"	"Download finished at {t:t:downloadfinished}"
 	"Downloads_Status_deferred"	"Download scheduled at {t:t:downloadstart}"
 	"Downloads_Status_locked"	"All licenses are in use for this product"
+	"Downloads_Status_uninstalled"	"Not Installed"
 
 
 	"Quit_LabelStreamingClient0"	"{s:streamingclient0}"
@@ -5092,6 +5099,8 @@
 	"ControllerBinding_ModeDropDown_InGameAction_Description"	"Select this option to make the stick or pad perform the specified In-Game Action."
 	"ControllerBinding_ModeDropDown_OtherAction"				"Other In-Game Action..."
 	"ControllerBinding_ModeDropDown_OtherAction_Description"	"This game has In-Game Actions specifically designed for use on the controller's Trigger Buttons. If you'd like to bind other In-Game Actions to this Trigger instead, select this option."
+	"ControllerBinding_ModeDropDown_LayerInherit"				"Inherit from Action Set"
+	"ControllerBinding_ModeDropDown_LayerInherit_Description"	"Select this option to clear the changes made in this mode and have it inherit the mode defined in the Action Set containing this layer."
 	"ControllerBinding_ModeDropDown_GenericDPad"				"Generic Directional Pad"
 	"ControllerBinding_ModeDropDown_GenericDPad_Description"	"If you'd like to set this stick or pad to act like a generic Directional Pad, select this option."
 

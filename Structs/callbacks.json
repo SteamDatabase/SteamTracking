@@ -1021,7 +1021,7 @@
     },
     {
         "id": 1018,
-        "size": 588,
+        "size": 620,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<AppUpdateStopped_t>(AppUpdateStopped_t*)"
     },
     {
@@ -1046,7 +1046,7 @@
     },
     {
         "id": 1024,
-        "size": 24,
+        "size": 8,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<AppMoveFolderResult_t>(AppMoveFolderResult_t*)"
     },
     {
@@ -1076,8 +1076,8 @@
     },
     {
         "id": 1030,
-        "size": 16,
-        "posted_in": "CClientTimedTrialManager::SendStatusCallback(TimedTrialApp_s const*)"
+        "size": 4,
+        "posted_in": "void CSteamEngine::PostCallbackToAllUsers<LibraryFolderChanged_t>(LibraryFolderChanged_t*)"
     },
     {
         "id": 1101,
@@ -1256,8 +1256,8 @@
     },
     {
         "id": 1316,
-        "size": 16,
-        "posted_in": "CAPIJobUpdatePublishedFile::BYieldingRunAPIJob()"
+        "size": 4,
+        "posted_in": "CCloudClient_NotifyAppStateChange_Job::YieldingRunMethod(CUser*, CCloud_AppCloudStateChange_Notification const&)"
     },
     {
         "id": 1317,
@@ -1462,7 +1462,7 @@
     {
         "id": 2602,
         "size": 1,
-        "posted_in": "CUser::RequestStopNVStreaming()"
+        "posted_in": "CUser::StopStreaming(unsigned int)"
     },
     {
         "id": 2603,
@@ -1542,7 +1542,7 @@
     {
         "id": 3004,
         "size": 72,
-        "posted_in": "CUser::UpdateSharedLibraries(CUtlMap<unsigned int, unsigned int, int, CDefLess<unsigned int> >&, unsigned int)"
+        "posted_in": "CUser::UpdateSharedLibraries(CUtlMap<unsigned int, unsigned int, int, CDefLess>&, unsigned int)"
     },
     {
         "id": 3005,
@@ -1993,6 +1993,11 @@
         "id": 3417,
         "size": 12,
         "posted_in": "void CBaseAPIJob::PostAPIResult<DeleteItemResult_t>(DeleteItemResult_t*)"
+    },
+    {
+        "id": 3418,
+        "size": 4,
+        "posted_in": "CUserWorkshopItems::OnWorkshopSubscriptionsChanged(unsigned int)"
     },
     {
         "id": 3501,

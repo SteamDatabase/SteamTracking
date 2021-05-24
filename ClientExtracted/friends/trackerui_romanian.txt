@@ -198,7 +198,7 @@
 "Friends_menu_status"				"Stare"
 "Friends_menu_view"				"Afişare"
 "Friends_menu_players"				"Jucători"
-"Friends_menu_view_showavatars"			"Afişează Avatari"
+"Friends_menu_view_showavatars"			"Afișează avatarurile"
 "Friends_menu_view_showsteamids"		"Afişează ID-uri conturi"
 "Friends_menu_view_sortbyname"			"Sortare alfabetică"
 "Friends_menu_view_onlineonly"			"Afişează doar Utilizatorii Online"
@@ -227,7 +227,7 @@
 "Friends_Chat_KickFromChatRoom"       "Elimină din camera de chat"
 "Friends_Chat_BanFromChatRoom"        "Banează din camera de discuții"
 
-"Friends_Chat_ToggleAvatars"			"Afişează Avatari"
+"Friends_Chat_ToggleAvatars"			"Afișează avatarurile"
 "Friends_Chat_ToggleBeeps"            "Alertează-mă când utilizatorii trimit mesaje"
 "Friends_Chat_ToggleTimestamp"        "Afişează data şi ora fiecărui mesaj"
 

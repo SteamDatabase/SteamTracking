@@ -145,6 +145,7 @@
 "VAC_ConnectionRefusedTitle"	"Свързването отказано — VAC"
 "VAC_ConnectionRefusedDetail"	"Не можете да се свържете към избрания сървър, защото е пуснат във VAC (Valve Anti-Cheat) защитен режим.\n\nТози Steam акаунт е получил забрана от защитени сървъри поради нарушение с измама."
 "VAC_ConnectionRefusedByServer"	"Сървърът отхвърли връзката Ви, защото е пуснат във VAC (Valve Anti-Cheat) защитен режим.\n\nТози Steam акаунт е получил забрана от защитени сървъри поради нарушение с измама."
+"VAC_BanSupportURL"	"https://support.steampowered.com/kb/7849-RADZ-6869/"
 "VAC_SecureServerToolTip"	"Valve Anti-Cheat — Защитен"
 "VAC_BannedFromServerToolTip"	"Не можете да се свържете към този защитен сървър"
 "VAC_Secure"	"Защитен"
@@ -159,6 +160,7 @@
 "Steam_ValidLoginRequired"	"Не може да бъде установена връзка към VAC сървърите на Steam. За отстраняване на мрежови неизправности, моля, кликнете върху връзката по-долу."
 "VAC_ConnectionIssuesSupport_Title"	"Неуспешно защитено свързване"
 "VAC_ConnectionIssuesSupportSite"	"Кликнете тук, за да посетите Steam поддръжката"
+"VAC_ConnectionIssuesSupportURL"	"https://support.steampowered.com/kb/7579-RPSX-6098/"
 "VAC_LoggedInElsewhere_Title"		"Акаунтът се използва другаде"
 "VAC_LoggedInElsewhereReason"		"Този Steam акаунт е бил използван, за да се влезе от друг компютър. С цел да продължите да използвате Steam, е нужно да влезете отново."
 

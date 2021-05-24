@@ -1,0 +1,11 @@
+option optimize_for = SPEED;
+option cc_generic_services = true;
+
+enum EClientNotificationType {
+	k_EClientNotificationType_Invalid = 0;
+	k_EClientNotificationType_DownloadCompleted = 1;
+}
+
+message CClientNotificationDownloadCompleted {
+	optional uint32 appid = 1;
+}

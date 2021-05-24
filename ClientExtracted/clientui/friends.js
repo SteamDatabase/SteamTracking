@@ -199,8 +199,8 @@
         }));
     var P = [],
       R = [],
-      N = 1,
-      L = null,
+      L = 1,
+      N = null,
       D = 3,
       I = !1,
       A = !1,
@@ -229,27 +229,27 @@
       var n = D;
       try {
         for (
-          j(t), L = T(P);
-          null !== L && (!(L.expirationTime > t) || (e && !_()));
+          j(t), N = T(P);
+          null !== N && (!(N.expirationTime > t) || (e && !_()));
 
         ) {
           var r,
-            o = L.callback;
+            o = N.callback;
           null !== o
-            ? ((L.callback = null),
-              (D = L.priorityLevel),
-              (r = o(L.expirationTime <= t)),
+            ? ((N.callback = null),
+              (D = N.priorityLevel),
+              (r = o(N.expirationTime <= t)),
               (t = l.unstable_now()),
-              "function" == typeof r ? (L.callback = r) : L === T(P) && C(P),
+              "function" == typeof r ? (N.callback = r) : N === T(P) && C(P),
               j(t))
             : C(P),
-            (L = T(P));
+            (N = T(P));
         }
         var i,
-          a = null !== L || (null !== (i = T(R)) && u(z, i.startTime - t), !1);
+          a = null !== N || (null !== (i = T(R)) && u(z, i.startTime - t), !1);
         return a;
       } finally {
-        (L = null), (D = n), (I = !1);
+        (N = null), (D = n), (I = !1);
       }
     }
     function B(e) {
@@ -333,7 +333,7 @@
               (n = "number" == typeof n.timeout ? n.timeout : B(e)))
             : ((n = B(e)), (r = o)),
           (e = {
-            id: N++,
+            id: L++,
             callback: t,
             priorityLevel: e,
             startTime: r,
@@ -353,12 +353,12 @@
         j(e);
         var t = T(P);
         return (
-          (t !== L &&
-            null !== L &&
+          (t !== N &&
+            null !== N &&
             null !== t &&
             null !== t.callback &&
             t.startTime <= e &&
-            t.expirationTime < L.expirationTime) ||
+            t.expirationTime < N.expirationTime) ||
           _()
         );
       }),
@@ -391,7 +391,7 @@
         return k;
       }),
         Sn.d(En, "b", function () {
-          return Jt;
+          return Xt;
         }),
         Sn.d(En, "c", function () {
           return Ke;
@@ -481,7 +481,7 @@
           return et;
         }),
         Sn.d(En, "F", function () {
-          return Nt;
+          return Lt;
         }),
         Sn.d(En, "G", function () {
           return se;
@@ -490,7 +490,7 @@
           return Ot;
         }),
         Sn.d(En, "I", function () {
-          return Lt;
+          return Nt;
         });
       /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved.
@@ -661,7 +661,7 @@ and limitations under the License.
                   ((t.lowestObserverState = Q.STALE),
                   t.observers.forEach(function (e) {
                     e.dependenciesState === Q.UP_TO_DATE &&
-                      (e.isTracing !== J.NONE && qe(e, t), e.onBecomeStale()),
+                      (e.isTracing !== X.NONE && qe(e, t), e.onBecomeStale()),
                       (e.dependenciesState = Q.STALE);
                   }));
               })(this),
@@ -705,13 +705,13 @@ and limitations under the License.
           },
         },
         R = Symbol("mobx did run lazy initializers"),
-        N = Symbol("mobx pending decorators"),
-        L = {},
+        L = Symbol("mobx pending decorators"),
+        N = {},
         D = {};
       function I(e) {
         var t, n;
         if (!0 !== e[R]) {
-          var r = e[N];
+          var r = e[L];
           if (r) {
             b(e, R, !0);
             var o = u(Object.getOwnPropertySymbols(r), Object.keys(r));
@@ -743,16 +743,16 @@ and limitations under the License.
           function e(e, t, n, r) {
             return !0 === r
               ? (c(e, t, n, e, u), null)
-              : (Object.prototype.hasOwnProperty.call(e, N) ||
-                  ((o = e[N]), b(e, N, f({}, o))),
-                (e[N][t] = {
+              : (Object.prototype.hasOwnProperty.call(e, L) ||
+                  ((o = e[L]), b(e, L, f({}, o))),
+                (e[L][t] = {
                   prop: t,
                   propertyCreator: c,
                   descriptor: n,
                   decoratorTarget: e,
                   decoratorArguments: u,
                 }),
-                (l = (a = s) ? L : D)[(i = t)] ||
+                (l = (a = s) ? N : D)[(i = t)] ||
                   (l[i] = {
                     configurable: !0,
                     enumerable: a,
@@ -874,7 +874,7 @@ and limitations under the License.
           map: function (e, t) {
             2 < arguments.length && $("map");
             var n = B(t);
-            return new Jt(e, H(n), n.name);
+            return new Xt(e, H(n), n.name);
           },
           set: function (e, t) {
             2 < arguments.length && $("set");
@@ -926,9 +926,9 @@ and limitations under the License.
         return (K[e] = q[e]);
       });
       var Q,
+        Y,
         X,
         J,
-        Y,
         Z = A(!1, function (e, t, n, r, o) {
           var i = n.get,
             a = n.set,
@@ -945,17 +945,17 @@ and limitations under the License.
             (r.get = e),
             (r.set = "function" == typeof t ? t : r.set),
             (r.name = r.name || e.name || ""),
-            new Ne(r)
+            new Le(r)
           );
         };
       (te.struct = ee),
-        ((X = Q = Q || {})[(X.NOT_TRACKING = -1)] = "NOT_TRACKING"),
-        (X[(X.UP_TO_DATE = 0)] = "UP_TO_DATE"),
-        (X[(X.POSSIBLY_STALE = 1)] = "POSSIBLY_STALE"),
-        (X[(X.STALE = 2)] = "STALE"),
-        ((Y = J = J || {})[(Y.NONE = 0)] = "NONE"),
-        (Y[(Y.LOG = 1)] = "LOG"),
-        (Y[(Y.BREAK = 2)] = "BREAK");
+        ((Y = Q = Q || {})[(Y.NOT_TRACKING = -1)] = "NOT_TRACKING"),
+        (Y[(Y.UP_TO_DATE = 0)] = "UP_TO_DATE"),
+        (Y[(Y.POSSIBLY_STALE = 1)] = "POSSIBLY_STALE"),
+        (Y[(Y.STALE = 2)] = "STALE"),
+        ((J = X = X || {})[(J.NONE = 0)] = "NONE"),
+        (J[(J.LOG = 1)] = "LOG"),
+        (J[(J.BREAK = 2)] = "BREAK");
       var ne = function (e) {
         this.cause = e;
       };
@@ -1242,32 +1242,32 @@ and limitations under the License.
         );
       }
       t("ObservableValue", Oe);
-      var Ne =
-        ((Le.prototype.onBecomeStale = function () {
+      var Le =
+        ((Ne.prototype.onBecomeStale = function () {
           !(function (t) {
             t.lowestObserverState === Q.UP_TO_DATE &&
               ((t.lowestObserverState = Q.POSSIBLY_STALE),
               t.observers.forEach(function (e) {
                 e.dependenciesState === Q.UP_TO_DATE &&
                   ((e.dependenciesState = Q.POSSIBLY_STALE),
-                  e.isTracing !== J.NONE && qe(e, t),
+                  e.isTracing !== X.NONE && qe(e, t),
                   e.onBecomeStale());
               }));
           })(this);
         }),
-        (Le.prototype.onBecomeObserved = function () {
+        (Ne.prototype.onBecomeObserved = function () {
           this.onBecomeObservedListeners &&
             this.onBecomeObservedListeners.forEach(function (e) {
               return e();
             });
         }),
-        (Le.prototype.onBecomeUnobserved = function () {
+        (Ne.prototype.onBecomeUnobserved = function () {
           this.onBecomeUnobservedListeners &&
             this.onBecomeUnobservedListeners.forEach(function (e) {
               return e();
             });
         }),
-        (Le.prototype.get = function () {
+        (Ne.prototype.get = function () {
           this.isComputing &&
             d(
               "Cycle detected in computation " +
@@ -1298,12 +1298,12 @@ and limitations under the License.
           if (re(e)) throw e.cause;
           return e;
         }),
-        (Le.prototype.peek = function () {
+        (Ne.prototype.peek = function () {
           var e = this.computeValue(!1);
           if (re(e)) throw e.cause;
           return e;
         }),
-        (Le.prototype.set = function (e) {
+        (Ne.prototype.set = function (e) {
           if (this.setter) {
             c(
               !this.isRunningSetter,
@@ -1319,14 +1319,14 @@ and limitations under the License.
             }
           } else c(!1, !1);
         }),
-        (Le.prototype.trackAndCompute = function () {
+        (Ne.prototype.trackAndCompute = function () {
           var e = this.value,
             t = this.dependenciesState === Q.NOT_TRACKING,
             n = this.computeValue(!0),
             r = t || re(e) || re(n) || !this.equals(e, n);
           return r && (this.value = n), r;
         }),
-        (Le.prototype.computeValue = function (e) {
+        (Ne.prototype.computeValue = function (e) {
           var t;
           if (((this.isComputing = !0), Be.computationDepth++, e))
             t = le(this, this.derivation, this.scope);
@@ -1340,10 +1340,10 @@ and limitations under the License.
             }
           return Be.computationDepth--, (this.isComputing = !1), t;
         }),
-        (Le.prototype.suspend = function () {
+        (Ne.prototype.suspend = function () {
           this.keepAlive || (ue(this), (this.value = void 0));
         }),
-        (Le.prototype.observe = function (n, r) {
+        (Ne.prototype.observe = function (n, r) {
           var o = this,
             i = !0,
             a = void 0;
@@ -1358,21 +1358,21 @@ and limitations under the License.
               (a = t);
           });
         }),
-        (Le.prototype.warnAboutUntrackedRead = function () {}),
-        (Le.prototype.toJSON = function () {
+        (Ne.prototype.warnAboutUntrackedRead = function () {}),
+        (Ne.prototype.toJSON = function () {
           return this.get();
         }),
-        (Le.prototype.toString = function () {
+        (Ne.prototype.toString = function () {
           return this.name + "[" + this.derivation.toString() + "]";
         }),
-        (Le.prototype.valueOf = function () {
+        (Ne.prototype.valueOf = function () {
           return S(this.get());
         }),
-        (Le.prototype[Symbol.toPrimitive] = function () {
+        (Ne.prototype[Symbol.toPrimitive] = function () {
           return this.valueOf();
         }),
-        Le);
-      function Le(e) {
+        Ne);
+      function Ne(e) {
         (this.dependenciesState = Q.NOT_TRACKING),
           (this.observing = []),
           (this.newObserving = null),
@@ -1388,7 +1388,7 @@ and limitations under the License.
           (this.value = new ne(null)),
           (this.isComputing = !1),
           (this.isRunningSetter = !1),
-          (this.isTracing = J.NONE),
+          (this.isTracing = X.NONE),
           c(e.get, "missing option for computed: get"),
           (this.derivation = e.get),
           (this.name = e.name || "ComputedValue@" + v()),
@@ -1400,7 +1400,7 @@ and limitations under the License.
           (this.requiresReaction = !!e.requiresReaction),
           (this.keepAlive = !!e.keepAlive);
       }
-      var De = t("ComputedValue", Ne),
+      var De = t("ComputedValue", Le),
         Ie = function () {
           (this.version = 5),
             (this.UNCHANGED = {}),
@@ -1469,14 +1469,14 @@ and limitations under the License.
       }
       function Ge() {
         if (0 == --Be.inBatch) {
-          Je();
+          Xe();
           for (var e = Be.pendingUnobservations, t = 0; t < e.length; t++) {
             var n = e[t];
             (n.isPendingUnobservation = !1),
               0 === n.observers.size &&
                 (n.isBeingObserved &&
                   ((n.isBeingObserved = !1), n.onBecomeUnobserved()),
-                n instanceof Ne && n.suspend());
+                n instanceof Le && n.suspend());
           }
           Be.pendingUnobservations = [];
         }
@@ -1500,7 +1500,7 @@ and limitations under the License.
             t.name +
             "'"
         ),
-          e.isTracing === J.BREAK &&
+          e.isTracing === X.BREAK &&
             ((n = []),
             (function t(e, n, r) {
               if (1e3 <= n.length) return void n.push("(and many more)");
@@ -1518,7 +1518,7 @@ and limitations under the License.
                 "' is being traced and '" +
                 t.name +
                 "' is now forcing it to update.\nJust follow the stacktrace you should now see in the devtools to see precisely what piece of your code is causing this update\nThe stackframe you are looking for is at least ~6-8 stack-frames up.\n\n" +
-                (e instanceof Ne
+                (e instanceof Le
                   ? e.derivation.toString().replace(/[*]\//g, "/")
                   : "") +
                 "\n\nThe dependencies for this derivation are:\n\n" +
@@ -1532,7 +1532,7 @@ and limitations under the License.
         }),
         ($e.prototype.schedule = function () {
           this._isScheduled ||
-            ((this._isScheduled = !0), Be.pendingReactions.push(this), Je());
+            ((this._isScheduled = !0), Be.pendingReactions.push(this), Xe());
         }),
         ($e.prototype.isScheduled = function () {
           return this._isScheduled;
@@ -1612,9 +1612,9 @@ and limitations under the License.
                 }
               })(e);
               if (!r) return d(!1);
-              r.isTracing === J.NONE &&
+              r.isTracing === X.NONE &&
                 console.log("[mobx.trace] '" + r.name + "' tracing enabled"),
-                (r.isTracing = n ? J.BREAK : J.LOG);
+                (r.isTracing = n ? X.BREAK : X.LOG);
             })(this, e);
         }),
         $e);
@@ -1636,16 +1636,16 @@ and limitations under the License.
           (this._isScheduled = !1),
           (this._isTrackPending = !1),
           (this._isRunning = !1),
-          (this.isTracing = J.NONE);
+          (this.isTracing = X.NONE);
       }
       var Qe = 100,
-        Xe = function (e) {
+        Ye = function (e) {
           return e();
         };
-      function Je() {
-        0 < Be.inBatch || Be.isRunningReactions || Xe(Ye);
+      function Xe() {
+        0 < Be.inBatch || Be.isRunningReactions || Ye(Je);
       }
-      function Ye() {
+      function Je() {
         Be.isRunningReactions = !0;
         for (var e = Be.pendingReactions, t = 0; 0 < e.length; ) {
           ++t === Qe &&
@@ -1931,8 +1931,8 @@ and limitations under the License.
             (Be.disableErrorBoundaries = !!a)),
           l &&
             ((t = l),
-            (n = Xe),
-            (Xe = function (e) {
+            (n = Ye),
+            (Ye = function (e) {
               return t(function () {
                 return n(e);
               });
@@ -2132,7 +2132,7 @@ and limitations under the License.
         var o, i, a, l;
       }
       gt.prototype = Object.create(Error.prototype);
-      function Nt(e, t) {
+      function Lt(e, t) {
         void 0 === t && (t = void 0), Ve();
         try {
           return e.apply(t);
@@ -2140,7 +2140,7 @@ and limitations under the License.
           Ge();
         }
       }
-      function Lt(e, t, n) {
+      function Nt(e, t, n) {
         return 1 === arguments.length || (t && "object" == typeof t)
           ? (function (r, o) {
               0;
@@ -2606,12 +2606,12 @@ and limitations under the License.
       function Qt(e) {
         return h(e) && $t(e[k]);
       }
-      var Xt = {},
-        Jt =
-          ((Yt.prototype._has = function (e) {
+      var Yt = {},
+        Xt =
+          ((Jt.prototype._has = function (e) {
             return this._data.has(e);
           }),
-          (Yt.prototype.has = function (e) {
+          (Jt.prototype.has = function (e) {
             var t = this;
             if (!Be.trackingDerivation) return this._has(e);
             var n,
@@ -2631,7 +2631,7 @@ and limitations under the License.
               r.get()
             );
           }),
-          (Yt.prototype.set = function (e, t) {
+          (Jt.prototype.set = function (e, t) {
             var n = this._has(e);
             if (jt(this)) {
               var r = Ut(this, {
@@ -2645,7 +2645,7 @@ and limitations under the License.
             }
             return n ? this._updateValue(e, t) : this._addValue(e, t), this;
           }),
-          (Yt.prototype.delete = function (e) {
+          (Jt.prototype.delete = function (e) {
             var t = this;
             if (
               jt(this) &&
@@ -2663,7 +2663,7 @@ and limitations under the License.
                     }
                   : null;
               return (
-                Nt(function () {
+                Lt(function () {
                   t._keysAtom.reportChanged(),
                     t._updateHasMapEntry(e, !1),
                     t._data.get(e).setNewValue(void 0),
@@ -2675,11 +2675,11 @@ and limitations under the License.
             }
             return !1;
           }),
-          (Yt.prototype._updateHasMapEntry = function (e, t) {
+          (Jt.prototype._updateHasMapEntry = function (e, t) {
             var n = this._hasMap.get(e);
             n && n.setNewValue(t);
           }),
-          (Yt.prototype._updateValue = function (e, t) {
+          (Jt.prototype._updateValue = function (e, t) {
             var n,
               r,
               o = this._data.get(e);
@@ -2696,10 +2696,10 @@ and limitations under the License.
               o.setNewValue(t),
               n && Wt(this, r));
           }),
-          (Yt.prototype._addValue = function (t, n) {
+          (Jt.prototype._addValue = function (t, n) {
             var r = this;
             ae(this._keysAtom),
-              Nt(function () {
+              Lt(function () {
                 var e = new Oe(n, r.enhancer, r.name + "." + E(t), !1);
                 r._data.set(t, e),
                   (n = e.value),
@@ -2712,18 +2712,18 @@ and limitations under the License.
                 : null;
             e && Wt(this, o);
           }),
-          (Yt.prototype.get = function (e) {
+          (Jt.prototype.get = function (e) {
             return this.has(e)
               ? this.dehanceValue(this._data.get(e).get())
               : this.dehanceValue(void 0);
           }),
-          (Yt.prototype.dehanceValue = function (e) {
+          (Jt.prototype.dehanceValue = function (e) {
             return void 0 !== this.dehancer ? this.dehancer(e) : e;
           }),
-          (Yt.prototype.keys = function () {
+          (Jt.prototype.keys = function () {
             return this._keysAtom.reportObserved(), this._data.keys();
           }),
-          (Yt.prototype.values = function () {
+          (Jt.prototype.values = function () {
             var e = this,
               t = 0,
               n = Array.from(this.keys());
@@ -2735,7 +2735,7 @@ and limitations under the License.
               },
             });
           }),
-          (Yt.prototype.entries = function () {
+          (Jt.prototype.entries = function () {
             var t = this,
               n = 0,
               r = Array.from(this.keys());
@@ -2749,10 +2749,10 @@ and limitations under the License.
               },
             });
           }),
-          (Yt.prototype[((Kt = k), Symbol.iterator)] = function () {
+          (Jt.prototype[((Kt = k), Symbol.iterator)] = function () {
             return this.entries();
           }),
-          (Yt.prototype.forEach = function (e, t) {
+          (Jt.prototype.forEach = function (e, t) {
             var n, r;
             try {
               for (var o = p(this), i = o.next(); !i.done; i = o.next()) {
@@ -2771,11 +2771,11 @@ and limitations under the License.
               }
             }
           }),
-          (Yt.prototype.merge = function (t) {
+          (Jt.prototype.merge = function (t) {
             var o = this;
             return (
               en(t) && (t = t.toJS()),
-              Nt(function () {
+              Lt(function () {
                 y(t)
                   ? _(t).forEach(function (e) {
                       return o.set(e, t[e]);
@@ -2801,9 +2801,9 @@ and limitations under the License.
               this
             );
           }),
-          (Yt.prototype.clear = function () {
+          (Jt.prototype.clear = function () {
             var i = this;
-            Nt(function () {
+            Lt(function () {
               se(function () {
                 var t, e;
                 try {
@@ -2827,10 +2827,10 @@ and limitations under the License.
               });
             });
           }),
-          (Yt.prototype.replace = function (n) {
+          (Jt.prototype.replace = function (n) {
             var r = this;
             return (
-              Nt(function () {
+              Lt(function () {
                 var e,
                   t = y((e = n))
                     ? Object.keys(e)
@@ -2853,14 +2853,14 @@ and limitations under the License.
               this
             );
           }),
-          Object.defineProperty(Yt.prototype, "size", {
+          Object.defineProperty(Jt.prototype, "size", {
             get: function () {
               return this._keysAtom.reportObserved(), this._data.size;
             },
             enumerable: !0,
             configurable: !0,
           }),
-          (Yt.prototype.toPOJO = function () {
+          (Jt.prototype.toPOJO = function () {
             var t,
               e,
               n = {};
@@ -2882,13 +2882,13 @@ and limitations under the License.
             }
             return n;
           }),
-          (Yt.prototype.toJS = function () {
+          (Jt.prototype.toJS = function () {
             return new Map(this);
           }),
-          (Yt.prototype.toJSON = function () {
+          (Jt.prototype.toJSON = function () {
             return this.toPOJO();
           }),
-          (Yt.prototype.toString = function () {
+          (Jt.prototype.toString = function () {
             var t = this;
             return (
               this.name +
@@ -2901,20 +2901,20 @@ and limitations under the License.
               " }]"
             );
           }),
-          (Yt.prototype.observe = function (e, t) {
+          (Jt.prototype.observe = function (e, t) {
             return Ft(this, e);
           }),
-          (Yt.prototype.intercept = function (e) {
+          (Jt.prototype.intercept = function (e) {
             return zt(this, e);
           }),
-          Yt);
-      function Yt(e, t, n) {
+          Jt);
+      function Jt(e, t, n) {
         if (
           (void 0 === t && (t = M),
           void 0 === n && (n = "ObservableMap@" + v()),
           (this.enhancer = t),
           (this.name = n),
-          (this[Kt] = Xt),
+          (this[Kt] = Yt),
           (this._keysAtom = O(this.name + ".keys()")),
           (this[Symbol.toStringTag] = "Map"),
           "function" != typeof Map)
@@ -2925,7 +2925,7 @@ and limitations under the License.
         (this._data = new Map()), (this._hasMap = new Map()), this.merge(e);
       }
       var Zt,
-        en = t("ObservableMap", Jt),
+        en = t("ObservableMap", Xt),
         tn = {},
         nn =
           ((rn.prototype.dehanceValue = function (e) {
@@ -2933,7 +2933,7 @@ and limitations under the License.
           }),
           (rn.prototype.clear = function () {
             var i = this;
-            Nt(function () {
+            Lt(function () {
               se(function () {
                 var t, e;
                 try {
@@ -2990,7 +2990,7 @@ and limitations under the License.
               (jt(this) &&
                 !(n = Ut(this, { type: "add", object: this, newValue: e }))) ||
                 this.has(e) ||
-                (Nt(function () {
+                (Lt(function () {
                   r._data.add(r.enhancer(e, void 0)), r._atom.reportChanged();
                 }),
                 (n = (t = Bt(this))
@@ -3011,7 +3011,7 @@ and limitations under the License.
               var n = Bt(this),
                 r = n ? { type: "delete", object: this, oldValue: e } : null;
               return (
-                Nt(function () {
+                Lt(function () {
                   t._atom.reportChanged(), t._data.delete(e);
                 }),
                 n && Wt(this, r),
@@ -3061,7 +3061,7 @@ and limitations under the License.
             var t = this;
             return (
               on(e) && (e = e.toJS()),
-              Nt(function () {
+              Lt(function () {
                 Array.isArray(e)
                   ? (t.clear(),
                     e.forEach(function (e) {
@@ -3122,7 +3122,7 @@ and limitations under the License.
               r,
               o = this.target,
               i = this.values.get(e);
-            if (i instanceof Ne) i.set(t);
+            if (i instanceof Le) i.set(t);
             else {
               if (jt(this)) {
                 if (
@@ -3198,7 +3198,7 @@ and limitations under the License.
               a,
               l = this.target;
             (n.name = n.name || this.name + "." + E(t)),
-              this.values.set(t, new Ne(n)),
+              this.values.set(t, new Le(n)),
               (e !== l &&
                 ((o = e),
                 (i = t),
@@ -3693,16 +3693,16 @@ and limitations under the License.
       };
     };
   },
-  Gp1o: function (e, N, L) {
+  Gp1o: function (e, L, N) {
     "use strict";
     (function (e) {
-      L.d(N, "a", function () {
+      N.d(L, "a", function () {
         return S;
       }),
-        L.d(N, "b", function () {
+        N.d(L, "b", function () {
           return w;
         });
-      var c = L("2vnA"),
+      var c = N("2vnA"),
         u = function () {};
       function n(e) {
         throw new Error("[mobx-utils] " + e);
@@ -4309,7 +4309,7 @@ and limitations under the License.
         new Set(),
         Promise.resolve(),
         "undefined" != typeof queueMicrotask || (void 0 !== e && e.nextTick);
-    }.call(this, L("8oxB")));
+    }.call(this, N("8oxB")));
   },
   HQzE: function (e, t, n) {},
   HSsa: function (e, t, n) {
@@ -4789,10 +4789,118 @@ PERFORMANCE OF THIS SOFTWARE.
     }
     var f = n("2vnA"),
       c = n("i8i4");
-    n("Gp1o");
-    var p = n("q1tI"),
-      d = n.n(p);
-    function h(e, t, n) {
+    function p(e, t) {
+      var n = e.findIndex(t);
+      return 0 <= n && (e.splice(n, 1), !0);
+    }
+    (d.prototype.SetParent = function (e) {
+      this.m_elParent &&
+        this.m_elParent.ownerDocument.defaultView.removeEventListener(
+          "resize",
+          this.RecomputeVisibility
+        ),
+        (this.m_elParent = e),
+        this.m_elParent &&
+          this.m_elParent.ownerDocument.defaultView.addEventListener(
+            "resize",
+            this.RecomputeVisibility
+          );
+    }),
+      (d.prototype.InvalidateOffsetsAndRecompute = function () {
+        (this.m_bOffsetsInvalidated = !0), this.RecomputeVisibility();
+      }),
+      (d.prototype.EnsureSort = function () {
+        if (this.m_bOffsetsInvalidated) {
+          for (var e = 0; e < this.m_rgChildren.length; e++)
+            this.m_rgChildren[e].yOffset = this.m_rgChildren[
+              e
+            ].element.offsetTop;
+          this.m_bOffsetsInvalidated = !1;
+        }
+        this.m_bNeedSort &&
+          (this.m_rgChildren.sort(function (e, t) {
+            return e.yOffset - t.yOffset;
+          }),
+          (this.m_bNeedSort = !1));
+      }),
+      (d.prototype.RegisterChild = function (e, t) {
+        this.m_rgChildren.push({
+          element: e,
+          yOffset: e.offsetTop,
+          fnCallback: t,
+        }),
+          (this.m_bNeedSort = !0),
+          void 0 !== this.m_nLastYMin &&
+            void 0 !== this.m_nLastYMax &&
+            e.offsetTop >= this.m_nLastYMin &&
+            e.offsetTop <= this.m_nLastYMax &&
+            t(!0);
+      }),
+      (d.prototype.UnregisterChild = function (t) {
+        p(this.m_rgChildren, function (e) {
+          return e.element == t;
+        });
+      });
+    function d(e) {
+      var i = this;
+      (this.m_bNeedSort = !1),
+        (this.m_bOffsetsInvalidated = !1),
+        (this.m_rgChildren = []),
+        (this.RecomputeVisibility = function () {
+          var e = i.m_elParent.scrollTop - i.m_nBufferPx,
+            t =
+              i.m_elParent.scrollTop +
+              i.m_elParent.clientHeight +
+              i.m_nBufferPx;
+          i.EnsureSort();
+          for (var n = 0, r = i.m_rgChildren; n < r.length; n++) {
+            var o = r[n];
+            if (!(o.yOffset < e)) {
+              if (o.yOffset > t) break;
+              o.fnCallback(!0);
+            }
+          }
+          (i.m_nLastYMin = e), (i.m_nLastYMax = t);
+        }),
+        (this.m_nBufferPx = e);
+    }
+    function h() {
+      var t = {};
+      return (
+        document
+          .querySelectorAll('link[rel="stylesheet"]')
+          .forEach(function (e) {
+            t[e.href] = e;
+          }),
+        t
+      );
+    }
+    function m(e, t) {
+      for (
+        var n = Object.assign({}, t),
+          r = e.document.getElementsByTagName("head")[0],
+          o = r.getElementsByTagName("link"),
+          i = o.length,
+          a = 0;
+        a < i;
+        ++a
+      ) {
+        var l = o[a];
+        n[l.href] ? delete n[l.href] : l.parentNode.removeChild(l);
+      }
+      for (var u in n) {
+        for (
+          var s = n[u], c = e.document.createElement("link"), f = 0;
+          f < s.attributes.length;
+          f++
+        ) {
+          var p = s.attributes.item(f);
+          c.setAttribute(p.name, p.value);
+        }
+        r.appendChild(c);
+      }
+    }
+    function v(e, t, n) {
       return {
         get: function () {
           var e = n.value.bind(this);
@@ -4804,25 +4912,7 @@ PERFORMANCE OF THIS SOFTWARE.
         },
       };
     }
-    Object.defineProperty(m.prototype, "current", {
-      get: function () {
-        return this.m_Instance;
-      },
-      set: function (e) {
-        (this.m_Instance = e), this.m_fnEffect && this.m_fnEffect(e);
-      },
-      enumerable: !1,
-      configurable: !0,
-    }),
-      Object.defineProperty(m.prototype, "effect", {
-        set: function (e) {
-          this.m_fnEffect = e;
-        },
-        enumerable: !1,
-        configurable: !0,
-      });
-    function m() {}
-    function v(e, t) {
+    function y(e, t) {
       switch ((void 0 === t && (t = 0), e)) {
         case "english":
           return 0;
@@ -4889,13 +4979,13 @@ PERFORMANCE OF THIS SOFTWARE.
           return t;
       }
     }
-    i([f.z], y.prototype, "enabled", void 0),
-      i([f.z], y.prototype, "locked", void 0),
-      i([f.z], y.prototype, "features", void 0),
-      i([f.z], y.prototype, "allowallapps", void 0),
-      i([f.z], y.prototype, "baselist", void 0),
-      i([f.z], y.prototype, "customlist", void 0);
-    function y() {
+    i([f.z], b.prototype, "enabled", void 0),
+      i([f.z], b.prototype, "locked", void 0),
+      i([f.z], b.prototype, "features", void 0),
+      i([f.z], b.prototype, "allowallapps", void 0),
+      i([f.z], b.prototype, "baselist", void 0),
+      i([f.z], b.prototype, "customlist", void 0);
+    function b() {
       (this.enabled = !1),
         (this.locked = !1),
         (this.features = 0),
@@ -4903,111 +4993,131 @@ PERFORMANCE OF THIS SOFTWARE.
         (this.baselist = void 0),
         (this.customlist = void 0);
     }
-    var b, g;
-    ((g = b = b || {})[(g.EBrowserType_OffScreen = 0)] =
+    var g;
+    ((g = {})[(g.Input = 0)] = "Input"),
+      (g[(g.AllOutput = 1)] = "AllOutput"),
+      (g[(g.Left = 2)] = "Left"),
+      (g[(g.Right = 3)] = "Right"),
+      (g[(g.Sub = 4)] = "Sub"),
+      (g[(g.BackLeft = 5)] = "BackLeft"),
+      (g[(g.BackRight = 6)] = "BackRight");
+    var w;
+    ((w = {})[(w.Error = -2)] = "Error"),
+      (w[(w.Invalid = -1)] = "Invalid"),
+      (w[(w.UpToDate = 0)] = "UpToDate"),
+      (w[(w.Checking = 1)] = "Checking"),
+      (w[(w.Available = 2)] = "Available"),
+      (w[(w.Downloading = 3)] = "Downloading"),
+      (w[(w.Downloaded = 4)] = "Downloaded"),
+      (w[(w.Applying = 5)] = "Applying"),
+      (w[(w.Applied = 6)] = "Applied"),
+      (w[(w.ClientRestartPending = 7)] = "ClientRestartPending"),
+      (w[(w.SystemRestartPending = 8)] = "SystemRestartPending");
+    var _, E;
+    ((E = _ = _ || {})[(E.EBrowserType_OffScreen = 0)] =
       "EBrowserType_OffScreen"),
-      (g[(g.EBrowserType_OpenVROverlay = 1)] = "EBrowserType_OpenVROverlay"),
-      (g[(g.EBrowserType_OpenVROverlay_Dashboard = 2)] =
+      (E[(E.EBrowserType_OpenVROverlay = 1)] = "EBrowserType_OpenVROverlay"),
+      (E[(E.EBrowserType_OpenVROverlay_Dashboard = 2)] =
         "EBrowserType_OpenVROverlay_Dashboard"),
-      (g[(g.EBrowserType_DirectHWND = 3)] = "EBrowserType_DirectHWND"),
-      (g[(g.EBrowserType_DirectHWND_Borderless = 4)] =
+      (E[(E.EBrowserType_DirectHWND = 3)] = "EBrowserType_DirectHWND"),
+      (E[(E.EBrowserType_DirectHWND_Borderless = 4)] =
         "EBrowserType_DirectHWND_Borderless"),
-      (g[(g.EBrowserType_DirectHWND_Hidden = 5)] =
+      (E[(E.EBrowserType_DirectHWND_Hidden = 5)] =
         "EBrowserType_DirectHWND_Hidden"),
-      (g[(g.EBrowserType_ChildHWNDNative = 6)] =
+      (E[(E.EBrowserType_ChildHWNDNative = 6)] =
         "EBrowserType_ChildHWNDNative"),
-      (g[(g.EBrowserType_Transparent_Toplevel = 7)] =
+      (E[(E.EBrowserType_Transparent_Toplevel = 7)] =
         "EBrowserType_Transparent_Toplevel"),
-      (g[(g.EBrowserType_OffScreen_SharedTexture = 8)] =
+      (E[(E.EBrowserType_OffScreen_SharedTexture = 8)] =
         "EBrowserType_OffScreen_SharedTexture"),
-      (g[(g.EBrowserType_OffScreen_GameOverlay = 9)] =
+      (E[(E.EBrowserType_OffScreen_GameOverlay = 9)] =
         "EBrowserType_OffScreen_GameOverlay"),
-      (g[(g.EBrowserType_OffScreen_GameOverlay_SharedTexture = 10)] =
+      (E[(E.EBrowserType_OffScreen_GameOverlay_SharedTexture = 10)] =
         "EBrowserType_OffScreen_GameOverlay_SharedTexture"),
-      (g[(g.EBrowserType_Offscreen_FriendsUI = 11)] =
+      (E[(E.EBrowserType_Offscreen_FriendsUI = 11)] =
         "EBrowserType_Offscreen_FriendsUI"),
-      (g[(g.EBrowserType_MAX = 12)] = "EBrowserType_MAX");
-    var w, _;
-    ((w = {})[(w.k_EClientUINotificationGroupChatMessage = 1)] =
-      "k_EClientUINotificationGroupChatMessage"),
-      (w[(w.k_EClientUINotificationFriendChatMessage = 2)] =
-        "k_EClientUINotificationFriendChatMessage"),
-      (w[(w.k_EClientUINotificationFriendPersonaState = 3)] =
-        "k_EClientUINotificationFriendPersonaState"),
-      ((_ = {})[(_.k_EComputerActiveStateInvalid = 0)] =
-        "k_EComputerActiveStateInvalid"),
-      (_[(_.k_EComputerActiveStateActive = 1)] =
-        "k_EComputerActiveStateActive"),
-      (_[(_.k_EComputerActiveStateIdle = 2)] = "k_EComputerActiveStateIdle");
-    var E;
-    ((E = {})[(E.k_EPending = 0)] = "k_EPending"),
-      (E[(E.k_EAccepted = 1)] = "k_EAccepted"),
-      (E[(E.k_ERejected = 2)] = "k_ERejected");
+      (E[(E.EBrowserType_MAX = 12)] = "EBrowserType_MAX");
     var S, k;
-    ((S = {})[(S.k_EClientUsedInputTypeKeyboard = 0)] =
+    ((S = {})[(S.k_EClientUINotificationGroupChatMessage = 1)] =
+      "k_EClientUINotificationGroupChatMessage"),
+      (S[(S.k_EClientUINotificationFriendChatMessage = 2)] =
+        "k_EClientUINotificationFriendChatMessage"),
+      (S[(S.k_EClientUINotificationFriendPersonaState = 3)] =
+        "k_EClientUINotificationFriendPersonaState"),
+      ((k = {})[(k.k_EComputerActiveStateInvalid = 0)] =
+        "k_EComputerActiveStateInvalid"),
+      (k[(k.k_EComputerActiveStateActive = 1)] =
+        "k_EComputerActiveStateActive"),
+      (k[(k.k_EComputerActiveStateIdle = 2)] = "k_EComputerActiveStateIdle");
+    var x;
+    ((x = {})[(x.k_EPending = 0)] = "k_EPending"),
+      (x[(x.k_EAccepted = 1)] = "k_EAccepted"),
+      (x[(x.k_ERejected = 2)] = "k_ERejected");
+    var T, C;
+    ((T = {})[(T.k_EClientUsedInputTypeKeyboard = 0)] =
       "k_EClientUsedInputTypeKeyboard"),
-      (S[(S.k_EClientUsedInputTypeMouse = 1)] = "k_EClientUsedInputTypeMouse"),
-      (S[(S.k_EClientUsedInputTypeController = 2)] =
+      (T[(T.k_EClientUsedInputTypeMouse = 1)] = "k_EClientUsedInputTypeMouse"),
+      (T[(T.k_EClientUsedInputTypeController = 2)] =
         "k_EClientUsedInputTypeController"),
-      (S[(S.k_EClientUsedInputTypeMax = 3)] = "k_EClientUsedInputTypeMax"),
-      ((k = {})[(k.k_ERemoteClientLaunchOK = 1)] = "k_ERemoteClientLaunchOK"),
-      (k[(k.k_ERemoteClientLaunchFail = 2)] = "k_ERemoteClientLaunchFail"),
-      (k[(k.k_ERemoteClientLaunchRequiresUI = 3)] =
+      (T[(T.k_EClientUsedInputTypeMax = 3)] = "k_EClientUsedInputTypeMax"),
+      ((C = {})[(C.k_ERemoteClientLaunchOK = 1)] = "k_ERemoteClientLaunchOK"),
+      (C[(C.k_ERemoteClientLaunchFail = 2)] = "k_ERemoteClientLaunchFail"),
+      (C[(C.k_ERemoteClientLaunchRequiresUI = 3)] =
         "k_ERemoteClientLaunchRequiresUI"),
-      (k[(k.k_ERemoteClientLaunchRequiresLaunchOption = 4)] =
+      (C[(C.k_ERemoteClientLaunchRequiresLaunchOption = 4)] =
         "k_ERemoteClientLaunchRequiresLaunchOption"),
-      (k[(k.k_ERemoteClientLaunchRequiresEULA = 5)] =
+      (C[(C.k_ERemoteClientLaunchRequiresEULA = 5)] =
         "k_ERemoteClientLaunchRequiresEULA"),
-      (k[(k.k_ERemoteClientLaunchTimeout = 6)] =
+      (C[(C.k_ERemoteClientLaunchTimeout = 6)] =
         "k_ERemoteClientLaunchTimeout"),
-      (k[(k.k_ERemoteClientLaunchStreamTimeout = 7)] =
+      (C[(C.k_ERemoteClientLaunchStreamTimeout = 7)] =
         "k_ERemoteClientLaunchStreamTimeout"),
-      (k[(k.k_ERemoteClientLaunchStreamClientFail = 8)] =
+      (C[(C.k_ERemoteClientLaunchStreamClientFail = 8)] =
         "k_ERemoteClientLaunchStreamClientFail"),
-      (k[(k.k_ERemoteClientLaunchOtherGameRunning = 9)] =
+      (C[(C.k_ERemoteClientLaunchOtherGameRunning = 9)] =
         "k_ERemoteClientLaunchOtherGameRunning"),
-      (k[(k.k_ERemoteClientLaunchDownloadStarted = 10)] =
+      (C[(C.k_ERemoteClientLaunchDownloadStarted = 10)] =
         "k_ERemoteClientLaunchDownloadStarted"),
-      (k[(k.k_ERemoteClientLaunchDownloadNoSpace = 11)] =
+      (C[(C.k_ERemoteClientLaunchDownloadNoSpace = 11)] =
         "k_ERemoteClientLaunchDownloadNoSpace"),
-      (k[(k.k_ERemoteClientLaunchDownloadFiltered = 12)] =
+      (C[(C.k_ERemoteClientLaunchDownloadFiltered = 12)] =
         "k_ERemoteClientLaunchDownloadFiltered"),
-      (k[(k.k_ERemoteClientLaunchDownloadRequiresUI = 13)] =
+      (C[(C.k_ERemoteClientLaunchDownloadRequiresUI = 13)] =
         "k_ERemoteClientLaunchDownloadRequiresUI"),
-      (k[(k.k_ERemoteClientLaunchAccessDenied = 14)] =
+      (C[(C.k_ERemoteClientLaunchAccessDenied = 14)] =
         "k_ERemoteClientLaunchAccessDenied"),
-      (k[(k.k_ERemoteClientLaunchNetworkError = 15)] =
+      (C[(C.k_ERemoteClientLaunchNetworkError = 15)] =
         "k_ERemoteClientLaunchNetworkError"),
-      (k[(k.k_ERemoteClientLaunchProgress = 16)] =
+      (C[(C.k_ERemoteClientLaunchProgress = 16)] =
         "k_ERemoteClientLaunchProgress"),
-      (k[(k.k_ERemoteClientLaunchParentalUnlockFailed = 17)] =
+      (C[(C.k_ERemoteClientLaunchParentalUnlockFailed = 17)] =
         "k_ERemoteClientLaunchParentalUnlockFailed"),
-      (k[(k.k_ERemoteClientLaunchScreenLocked = 18)] =
+      (C[(C.k_ERemoteClientLaunchScreenLocked = 18)] =
         "k_ERemoteClientLaunchScreenLocked"),
-      (k[(k.k_ERemoteClientLaunchUnsupported = 19)] =
+      (C[(C.k_ERemoteClientLaunchUnsupported = 19)] =
         "k_ERemoteClientLaunchUnsupported"),
-      (k[(k.k_ERemoteClientLaunchDisabledLocal = 20)] =
+      (C[(C.k_ERemoteClientLaunchDisabledLocal = 20)] =
         "k_ERemoteClientLaunchDisabledLocal"),
-      (k[(k.k_ERemoteClientLaunchDisabledRemote = 21)] =
+      (C[(C.k_ERemoteClientLaunchDisabledRemote = 21)] =
         "k_ERemoteClientLaunchDisabledRemote"),
-      (k[(k.k_ERemoteClientLaunchBroadcasting = 22)] =
+      (C[(C.k_ERemoteClientLaunchBroadcasting = 22)] =
         "k_ERemoteClientLaunchBroadcasting"),
-      (k[(k.k_ERemoteClientLaunchBusy = 23)] = "k_ERemoteClientLaunchBusy"),
-      (k[(k.k_ERemoteClientLaunchDriversNotInstalled = 24)] =
+      (C[(C.k_ERemoteClientLaunchBusy = 23)] = "k_ERemoteClientLaunchBusy"),
+      (C[(C.k_ERemoteClientLaunchDriversNotInstalled = 24)] =
         "k_ERemoteClientLaunchDriversNotInstalled"),
-      (k[(k.k_ERemoteClientLaunchTransportUnavailable = 25)] =
+      (C[(C.k_ERemoteClientLaunchTransportUnavailable = 25)] =
         "k_ERemoteClientLaunchTransportUnavailable"),
-      (k[(k.k_ERemoteClientLaunchCanceled = 26)] =
+      (C[(C.k_ERemoteClientLaunchCanceled = 26)] =
         "k_ERemoteClientLaunchCanceled"),
-      (k[(k.k_ERemoteClientLaunchInvisible = 27)] =
+      (C[(C.k_ERemoteClientLaunchInvisible = 27)] =
         "k_ERemoteClientLaunchInvisible"),
-      (k[(k.k_ERemoteClientLaunchRestrictedCountry = 28)] =
+      (C[(C.k_ERemoteClientLaunchRestrictedCountry = 28)] =
         "k_ERemoteClientLaunchRestrictedCountry");
-    var x, T;
-    (C.prototype.Add = function (e) {
+    var O, P;
+    (R.prototype.Add = function (e) {
       e && this.m_rgHandles.push(e);
     }),
-      (C.prototype.Unregister = function () {
+      (R.prototype.Unregister = function () {
         var e = this.m_rgHandles;
         this.m_rgHandles = [];
         for (var t = 0, n = e; t < n.length; t++) {
@@ -5015,51 +5125,55 @@ PERFORMANCE OF THIS SOFTWARE.
           r && r.unregister();
         }
       });
-    function C() {
+    function R() {
       this.m_rgHandles = [];
     }
-    ((T = x = x || {})[(T.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
-      (T[(T.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
-      (T[(T.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
-    var O, P, R, N, L, D;
-    function I(e) {
-      if (!A() || !window.document.cookie) return null;
+    ((P = O = O || {})[(P.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
+      (P[(P.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
+      (P[(P.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
+    var L, N, D, I, A, M;
+    ((L = {})[(L.Unknown = 0)] = "Unknown"),
+      (L[(L.Wired = 1)] = "Wired"),
+      (L[(L.Wireless = 2)] = "Wireless"),
+      (L[(L.Virtual = 3)] = "Virtual"),
+      ((N = {})[(N.NotPresent = 0)] = "NotPresent"),
+      (N[(N.Failed = 1)] = "Failed"),
+      (N[(N.Disconnected = 2)] = "Disconnected"),
+      (N[(N.Disconnecting = 3)] = "Disconnecting"),
+      (N[(N.Connecting = 4)] = "Connecting"),
+      (N[(N.Connected = 5)] = "Connected"),
+      (N[(N.Retrying = 6)] = "Retrying"),
+      ((D = {})[(D.None = 0)] = "None"),
+      (D[(D.Weak = 1)] = "Weak"),
+      (D[(D.Ok = 2)] = "Ok"),
+      (D[(D.Good = 3)] = "Good"),
+      (D[(D.Excellent = 4)] = "Excellent"),
+      ((I = {})[(I.None = 0)] = "None"),
+      (I[(I.StaticWep = 1)] = "StaticWep"),
+      (I[(I.DynamicWep = 2)] = "DynamicWep"),
+      (I[(I.Wpa = 4)] = "Wpa"),
+      (I[(I.WpaEnterprise = 8)] = "WpaEnterprise"),
+      (I[(I.Wpa2 = 16)] = "Wpa2"),
+      (I[(I.Wpa2Enterprise = 32)] = "Wpa2Enterprise"),
+      (I[(I.Unsupported = 32768)] = "Unsupported"),
+      ((A = {})[(A.SystemKey0 = 0)] = "SystemKey0"),
+      (A[(A.SystemKey1 = 1)] = "SystemKey1"),
+      ((M = {})[(M.Hidden = 0)] = "Hidden"),
+      (M[(M.Notification = 1)] = "Notification"),
+      (M[(M.Overlay = 2)] = "Overlay"),
+      (M[(M.Opaque = 3)] = "Opaque");
+    var j = n("q1tI"),
+      z = n.n(j);
+    function U(e) {
+      if (!B() || !window.document.cookie) return null;
       var t = document.cookie.match("(^|; )" + e + "=([^;]*)");
       return t && t[2] ? decodeURIComponent(t[2]) : null;
     }
-    function A() {
+    function B() {
       return window.document;
     }
-    ((O = {})[(O.Unknown = 0)] = "Unknown"),
-      (O[(O.Wired = 1)] = "Wired"),
-      (O[(O.Wireless = 2)] = "Wireless"),
-      ((P = {})[(P.NotPresent = 0)] = "NotPresent"),
-      (P[(P.Failed = 1)] = "Failed"),
-      (P[(P.Disconnected = 2)] = "Disconnected"),
-      (P[(P.Disconnecting = 3)] = "Disconnecting"),
-      (P[(P.Connecting = 4)] = "Connecting"),
-      (P[(P.Connected = 5)] = "Connected"),
-      (P[(P.Retrying = 6)] = "Retrying"),
-      ((R = {})[(R.None = 0)] = "None"),
-      (R[(R.Weak = 1)] = "Weak"),
-      (R[(R.Ok = 2)] = "Ok"),
-      (R[(R.Good = 3)] = "Good"),
-      (R[(R.Excellent = 4)] = "Excellent"),
-      ((N = {})[(N.None = 0)] = "None"),
-      (N[(N.StaticWep = 1)] = "StaticWep"),
-      (N[(N.DynamicWep = 2)] = "DynamicWep"),
-      (N[(N.Wpa = 4)] = "Wpa"),
-      (N[(N.WpaEnterprise = 8)] = "WpaEnterprise"),
-      (N[(N.Wpa2 = 16)] = "Wpa2"),
-      (N[(N.Wpa2Enterprise = 32)] = "Wpa2Enterprise"),
-      (N[(N.Unsupported = 32768)] = "Unsupported"),
-      ((L = {})[(L.SystemKey0 = 0)] = "SystemKey0"),
-      (L[(L.SystemKey1 = 1)] = "SystemKey1"),
-      ((D = {})[(D.Hidden = 0)] = "Hidden"),
-      (D[(D.Notification = 1)] = "Notification"),
-      (D[(D.Overlay = 2)] = "Overlay");
-    var M,
-      j = {
+    var F,
+      W = {
         EUNIVERSE: 0,
         WEB_UNIVERSE: "",
         LANGUAGE: "english",
@@ -5082,7 +5196,7 @@ PERFORMANCE OF THIS SOFTWARE.
         STATS_BASE_URL: "",
         INTERNAL_STATS_BASE_URL: "",
         BASE_URL_STORE_CDN_ASSETS: "",
-        IN_CLIENT: !(D[(D.Opaque = 3)] = "Opaque"),
+        IN_CLIENT: !1,
         USE_POPUPS: !1,
         IN_MOBILE: !1,
         IN_TENFOOT: !1,
@@ -5097,19 +5211,19 @@ PERFORMANCE OF THIS SOFTWARE.
         PAGE_TIMESTAMP: 0,
         get SESSIONID() {
           return (function () {
-            if (!A()) return (M = M || U());
-            var e = I("sessionid");
-            e = e || U();
+            if (!B()) return (F = F || G());
+            var e = U("sessionid");
+            e = e || G();
             return e;
           })();
         },
         FRIENDSUI_BETA: !1,
         STEAM_TV: !1,
         DEV_MODE: !1,
-        OFFLINE_MODE: !1,
         IN_LIBRARY: !1,
+        IN_SP: !1,
       };
-    function z() {
+    function V() {
       for (var e, t, n = "", r = 0; r < 24; r++)
         n +=
           ((e = 0),
@@ -5119,19 +5233,19 @@ PERFORMANCE OF THIS SOFTWARE.
           (Math.floor(Math.random() * (t - e + 1)) + e).toString(36));
       return n;
     }
-    function U() {
+    function G() {
       var e,
         t,
         n,
         r,
         o,
         i,
-        a = z();
+        a = V();
       return (
         (e = "sessionid"),
         (t = a),
         (n = 0),
-        A() &&
+        B() &&
           ((r = r || "/"),
           (o = ""),
           void 0 !== n &&
@@ -5148,23 +5262,24 @@ PERFORMANCE OF THIS SOFTWARE.
         a
       );
     }
+    n("Gp1o");
     new Map();
     new Map(), new Map();
     new Map(), new Map(), new Map(), new Map(), new Map();
-    var B =
-      ((F.InstallErrorReportingStore = function (e) {
+    var H =
+      ((q.InstallErrorReportingStore = function (e) {
         this.sm_ErrorReportingStore = e;
       }),
-      (F.GetLanguageFallback = function (e) {
+      (q.GetLanguageFallback = function (e) {
         return "sc_schinese" === e ? "schinese" : "english";
       }),
-      (F.GetELanguageFallback = function (e) {
+      (q.GetELanguageFallback = function (e) {
         return 29 === e ? 6 : 0;
       }),
-      (F.IsELanguageValidInRealm = function (e, t) {
-        return t === (29 === e ? x.k_ESteamRealmChina : x.k_ESteamRealmGlobal);
+      (q.IsELanguageValidInRealm = function (e, t) {
+        return t === (29 === e ? O.k_ESteamRealmChina : O.k_ESteamRealmGlobal);
       }),
-      (F.GetLanguageListForRealms = function (e) {
+      (q.GetLanguageListForRealms = function (e) {
         for (var t = new Array(), n = 0; n < 30; n++)
           for (var r = 0, o = e; r < o.length; r++) {
             var i = o[r];
@@ -5175,18 +5290,18 @@ PERFORMANCE OF THIS SOFTWARE.
           }
         return t;
       }),
-      (F.prototype.InitFromObjects = function (e, t, n, r, o) {
+      (q.prototype.InitFromObjects = function (e, t, n, r, o) {
         o || this.m_mapTokens.clear();
         var i = l(l({}, n || {}), e),
           a = l(l({}, r || {}), t || {});
         this.AddTokens(i, a);
       }),
-      (F.prototype.InitDirect = function (e, t) {
+      (q.prototype.InitDirect = function (e, t) {
         this.m_mapTokens.clear(),
           this.m_mapFallbackTokens.clear(),
           this.AddTokens(e, t);
       }),
-      (F.prototype.AddTokens = function (t, n) {
+      (q.prototype.AddTokens = function (t, n) {
         var r = this;
         Object.keys(t).forEach(function (e) {
           r.m_mapTokens.set(e, t[e]);
@@ -5197,42 +5312,42 @@ PERFORMANCE OF THIS SOFTWARE.
                 r.m_mapFallbackTokens.set(e, n[e]);
             });
       }),
-      (F.prototype.GetPreferredLocales = function () {
+      (q.prototype.GetPreferredLocales = function () {
         return this.m_rgLocalesToUse
           ? this.m_rgLocalesToUse
           : navigator && navigator.languages
           ? navigator.languages
           : ["en-US"];
       }),
-      (F.prototype.GetELanguageFallbackOrder = function (e) {
+      (q.prototype.GetELanguageFallbackOrder = function (e) {
         void 0 === e && (e = null);
         var t = new Array();
         return (
-          t.push(v(j.LANGUAGE)),
-          (j.SUPPORTED_LANGUAGES || []).forEach(function (e) {
-            e.value != j.LANGUAGE && t.push(v(e.value));
+          t.push(y(W.LANGUAGE)),
+          (W.SUPPORTED_LANGUAGES || []).forEach(function (e) {
+            e.value != W.LANGUAGE && t.push(y(e.value));
           }),
           e &&
-            F.GetLanguageListForRealms(e).forEach(function (e) {
+            q.GetLanguageListForRealms(e).forEach(function (e) {
               -1 == t.indexOf(e) && t.push(e);
             }),
           t
         );
       }),
-      (F.prototype.SetPreferredLocales = function (e) {
+      (q.prototype.SetPreferredLocales = function (e) {
         this.m_rgLocalesToUse = e;
       }),
-      (F.prototype.LocalizeString = function (e) {
+      (q.prototype.LocalizeString = function (e) {
         if (e && 0 != e.length && "#" == e.charAt(0)) {
           var t = this.m_mapTokens.get(e.substring(1));
           if (void 0 !== t) return t;
-          F.sm_ErrorReportingStore &&
-            F.sm_ErrorReportingStore.ReportError(
+          q.sm_ErrorReportingStore &&
+            q.sm_ErrorReportingStore.ReportError(
               new Error(
                 "Unable to find localization token '" +
                   e +
                   "' for language '" +
-                  j.LANGUAGE +
+                  W.LANGUAGE +
                   "', " +
                   this.m_mapTokens.size +
                   " tokens in map"
@@ -5241,20 +5356,20 @@ PERFORMANCE OF THIS SOFTWARE.
             );
         }
       }),
-      (F.prototype.LocalizeStringFromFallback = function (e) {
+      (q.prototype.LocalizeStringFromFallback = function (e) {
         if (e && 0 != e.length && "#" == e.charAt(0)) {
           var t = this.m_mapFallbackTokens.get(e.substring(1));
           if (void 0 !== t) return t;
         }
       }),
-      F);
-    function F() {
+      q);
+    function q() {
       (this.m_mapTokens = new Map()), (this.m_mapFallbackTokens = new Map());
     }
-    function W(e) {
+    function K(e) {
       for (var r = [], t = 1; t < arguments.length; t++)
         r[t - 1] = arguments[t];
-      var n = K.LocalizeString(e);
+      var n = Y.LocalizeString(e);
       return void 0 === n
         ? e
         : (0 < r.length &&
@@ -5267,7 +5382,7 @@ PERFORMANCE OF THIS SOFTWARE.
             })),
           n);
     }
-    (V.Set = function (e, t, n) {
+    ($.Set = function (e, t, n) {
       if (e.length <= t) {
         if (30 <= t) return e;
         (o = t + 1),
@@ -5281,14 +5396,14 @@ PERFORMANCE OF THIS SOFTWARE.
       var r, o, i;
       return (e[t] = n), e;
     }),
-      (V.Get = function (e, t) {
+      ($.Get = function (e, t) {
         return (e && e.length > t && e[t]) || "";
       }),
-      (V.GetWithFallback = function (e, t) {
-        return V.Get(e, t) || V.Get(e, B.GetELanguageFallback(t));
+      ($.GetWithFallback = function (e, t) {
+        return $.Get(e, t) || $.Get(e, H.GetELanguageFallback(t));
       });
-    function V() {}
-    var G = {
+    function $() {}
+    var Q = {
       english: "en",
       german: "de",
       french: "fr",
@@ -5321,36 +5436,30 @@ PERFORMANCE OF THIS SOFTWARE.
       sc_schinese: "zh-cn",
       koreana: "ko",
     };
-    var H,
-      q,
-      K = new B();
-    (window.LocalizationManager = K),
-      ((q = H = H || {})[(q.Minimized = 1)] = "Minimized"),
-      (q[(q.Hidden = 2)] = "Hidden"),
-      (q[(q.Tooltip = 4)] = "Tooltip"),
-      (q[(q.ContextMenu = 8)] = "ContextMenu"),
-      (q[(q.Resizable = 16)] = "Resizable");
-    var $ =
-      ((Q.prototype.SetTarget = function (e) {
-        (this.m_fnRender = e),
-          0 == this.m_rgLoadingLinks.length &&
-            (this.m_fnRender(), (this.m_fnRender = void 0));
-      }),
-      (Q.prototype.OnLinkLoad = function (e) {
-        var t, n, r, o, i;
-        e.currentTarget.removeEventListener("load", this.OnLinkLoad),
-          (t = this.m_rgLoadingLinks),
-          (n = e.currentTarget),
-          (o = function (e) {
-            return n == e;
-          }),
-          0 <= (i = (r = t).findIndex(o)) && r.splice(i, 1),
-          0 == this.m_rgLoadingLinks.length &&
-            (this.m_fnRender(), (this.m_fnRender = void 0));
-      }),
-      i([h], Q.prototype, "OnLinkLoad", null),
-      Q);
-    function Q(e, t) {
+    var Y = new H();
+    window.LocalizationManager = Y;
+    var X,
+      J,
+      Z =
+        ((ee.prototype.SetTarget = function (e) {
+          (this.m_fnRender = e),
+            0 == this.m_rgLoadingLinks.length &&
+              (this.m_fnRender(), (this.m_fnRender = void 0));
+        }),
+        (ee.prototype.OnLinkLoad = function (e) {
+          var t, n;
+          e.currentTarget.removeEventListener("load", this.OnLinkLoad),
+            (t = this.m_rgLoadingLinks),
+            (n = e.currentTarget),
+            p(t, function (e) {
+              return n == e;
+            }),
+            0 == this.m_rgLoadingLinks.length &&
+              (this.m_fnRender(), (this.m_fnRender = void 0));
+        }),
+        i([v], ee.prototype, "OnLinkLoad", null),
+        ee);
+    function ee(e, t) {
       (this.m_rgLoadingLinks = []), (this.m_rgLoadingLinks = []);
       for (
         var n = e.document.getElementsByTagName("link"), r = 0;
@@ -5362,30 +5471,35 @@ PERFORMANCE OF THIS SOFTWARE.
           this.m_rgLoadingLinks.push(o);
       }
     }
-    var X =
-      ((J.prototype.UpdateParamsBeforeShow = function (e) {
+    ((J = X = X || {})[(J.Minimized = 1)] = "Minimized"),
+      (J[(J.Hidden = 2)] = "Hidden"),
+      (J[(J.Tooltip = 4)] = "Tooltip"),
+      (J[(J.ContextMenu = 8)] = "ContextMenu"),
+      (J[(J.Resizable = 16)] = "Resizable");
+    var te =
+      ((ne.prototype.UpdateParamsBeforeShow = function (e) {
         return e;
       }),
-      (J.prototype.OnDrop = function (e) {
+      (ne.prototype.OnDrop = function (e) {
         console.log("Ignoring drop onto toplevel window", e),
           e.preventDefault(),
           e.stopPropagation();
       }),
-      (J.prototype.OnDragOver = function (e) {
+      (ne.prototype.OnDragOver = function (e) {
         e.preventDefault(),
           (e.dataTransfer.dropEffect = "none"),
           e.stopPropagation();
       }),
-      (J.prototype.OnMessage = function (e) {
+      (ne.prototype.OnMessage = function (e) {
         "window_moved" == e.data && this.OnResize();
       }),
-      (J.prototype.Show = function (e, t) {
+      (ne.prototype.Show = function (e, t) {
         var n,
           r = this;
         void 0 === e && (e = !0),
           void 0 === t && (t = !1),
-          window.SteamClient && (this.m_rgParams.eCreationFlags |= H.Hidden),
-          this.m_rgParams.eCreationFlags & H.Tooltip && (e = !1),
+          window.SteamClient && (this.m_rgParams.eCreationFlags |= X.Hidden),
+          this.m_rgParams.eCreationFlags & X.Tooltip && (e = !1),
           this.BIsValid() &&
             (this.BIsClosed()
               ? ((this.m_popup = void 0), (this.m_element = void 0))
@@ -5393,7 +5507,7 @@ PERFORMANCE OF THIS SOFTWARE.
         var o,
           i,
           a,
-          l = ie.GetExistingPopup(this.m_strName);
+          l = se.GetExistingPopup(this.m_strName);
         (l && !this.m_rgParams.replace_existing_popup) ||
           ((this.m_rgParams = this.UpdateParamsBeforeShow(this.m_rgParams)),
           l
@@ -5401,7 +5515,7 @@ PERFORMANCE OF THIS SOFTWARE.
               (o = l.m_popup),
               l.ReleasePopup(),
               (a = l.m_renderWhenReady),
-              ie.RemoveTrackedPopup(l),
+              se.RemoveTrackedPopup(l),
               o.removeEventListener("beforeunload", l.OnBeforeUnloadEvent),
               o.removeEventListener("unload", l.OnUnload),
               o.removeEventListener("resize", l.OnResizeEvent),
@@ -5410,10 +5524,10 @@ PERFORMANCE OF THIS SOFTWARE.
               o.removeEventListener("drop", l.OnDrop),
               o.removeEventListener("dragover", l.OnDragOver),
               o.removeEventListener("message", this.OnMessage))
-            : ((o = (n = ne.CreatePopup(this.m_strName, this.m_rgParams))
+            : ((o = (n = le.CreatePopup(this.m_strName, this.m_rgParams))
                 .popup),
               (i = n.element),
-              (a = new $(o, i))),
+              (a = new Z(o, i))),
           o &&
             i &&
             ((o.document.title = this.m_strTitle),
@@ -5425,10 +5539,10 @@ PERFORMANCE OF THIS SOFTWARE.
             o.addEventListener("drop", this.OnDrop),
             o.addEventListener("dragover", this.OnDragOver),
             o.addEventListener("message", this.OnMessage),
-            j.LANGUAGE &&
+            W.LANGUAGE &&
               o.document.documentElement.setAttribute(
                 "lang",
-                G[j.LANGUAGE] || null
+                Q[W.LANGUAGE] || null
               ),
             (this.m_popup = o),
             (this.m_element = i),
@@ -5436,10 +5550,10 @@ PERFORMANCE OF THIS SOFTWARE.
             this.m_renderWhenReady.SetTarget(function () {
               return r.RenderInternal(r.m_popup, r.m_element, e);
             })),
-          ie.AddTrackedPopup(this),
+          se.AddTrackedPopup(this),
           l && e && this.Focus());
       }),
-      (J.prototype.RemoveEventListeners = function () {
+      (ne.prototype.RemoveEventListeners = function () {
         this.window.removeEventListener(
           "beforeunload",
           this.OnBeforeUnloadEvent
@@ -5452,12 +5566,12 @@ PERFORMANCE OF THIS SOFTWARE.
           this.window.removeEventListener("dragover", this.OnDragOver),
           this.window.removeEventListener("message", this.OnMessage);
       }),
-      (J.prototype.RenderInternal = function (e, t, n) {
+      (ne.prototype.RenderInternal = function (e, t, n) {
         var r;
         !this.browser_info ||
           ((r = this.browser_info).m_eBrowserType !=
-            b.EBrowserType_OpenVROverlay &&
-            r.m_eBrowserType != b.EBrowserType_OpenVROverlay_Dashboard) ||
+            _.EBrowserType_OpenVROverlay &&
+            r.m_eBrowserType != _.EBrowserType_OpenVROverlay_Dashboard) ||
           (t.ownerDocument.body.className += " VR"),
           this.Render(e, t),
           this.OnLoad(),
@@ -5466,40 +5580,40 @@ PERFORMANCE OF THIS SOFTWARE.
               ? e.SteamClient.Window.BringToFront()
               : e.SteamClient.Window.ShowWindow());
       }),
-      (J.prototype.OnResizeEvent = function () {
+      (ne.prototype.OnResizeEvent = function () {
         this.OnResize();
       }),
-      (J.prototype.OnBeforeUnloadEvent = function () {
+      (ne.prototype.OnBeforeUnloadEvent = function () {
         this.OnBeforeUnload();
       }),
-      (J.prototype.OnUnload = function () {
+      (ne.prototype.OnUnload = function () {
         this.RemoveEventListeners(),
-          ie.RemoveTrackedPopup(this),
+          se.RemoveTrackedPopup(this),
           this.OnClose(),
           c.unmountComponentAtNode(this.m_element);
       }),
-      Object.defineProperty(J.prototype, "browser_info", {
+      Object.defineProperty(ne.prototype, "browser_info", {
         get: function () {
           return this.m_rgParams.target_browser;
         },
         enumerable: !1,
         configurable: !0,
       }),
-      Object.defineProperty(J.prototype, "window", {
+      Object.defineProperty(ne.prototype, "window", {
         get: function () {
           return this.m_popup;
         },
         enumerable: !1,
         configurable: !0,
       }),
-      Object.defineProperty(J.prototype, "root_element", {
+      Object.defineProperty(ne.prototype, "root_element", {
         get: function () {
           return this.m_element;
         },
         enumerable: !1,
         configurable: !0,
       }),
-      Object.defineProperty(J.prototype, "title", {
+      Object.defineProperty(ne.prototype, "title", {
         get: function () {
           return this.m_strTitle;
         },
@@ -5510,7 +5624,7 @@ PERFORMANCE OF THIS SOFTWARE.
         enumerable: !1,
         configurable: !0,
       }),
-      (J.prototype.Focus = function (e) {
+      (ne.prototype.Focus = function (e) {
         void 0 === e && (e = !1),
           this.m_popup &&
           void 0 !== this.m_popup.SteamClient &&
@@ -5520,42 +5634,42 @@ PERFORMANCE OF THIS SOFTWARE.
               : this.m_popup.SteamClient.Window.BringToFront()
             : this.m_popup && this.m_popup.focus();
       }),
-      (J.prototype.Close = function () {
+      (ne.prototype.Close = function () {
         this.m_popup && this.m_popup.close();
       }),
-      (J.prototype.GetName = function () {
+      (ne.prototype.GetName = function () {
         return this.m_strName;
       }),
-      (J.prototype.BIsValid = function () {
+      (ne.prototype.BIsValid = function () {
         return !!this.m_popup;
       }),
-      (J.prototype.BIsClosed = function () {
+      (ne.prototype.BIsClosed = function () {
         return !this.m_popup || this.m_popup.closed;
       }),
-      (J.prototype.BIsVisible = function () {
+      (ne.prototype.BIsVisible = function () {
         return (
           this.m_popup &&
           !this.m_popup.closed &&
           "visible" == this.m_popup.document.visibilityState
         );
       }),
-      (J.prototype.BIsFocused = function () {
+      (ne.prototype.BIsFocused = function () {
         return this.BIsVisible() && this.m_popup.document.hasFocus();
       }),
-      (J.prototype.OnFocusInternal = function () {
+      (ne.prototype.OnFocusInternal = function () {
         (this.m_bFocused = !0), this.OnFocus();
       }),
-      (J.prototype.OnBlurInternal = function () {
+      (ne.prototype.OnBlurInternal = function () {
         (this.m_bFocused = !1), this.OnBlur();
       }),
-      Object.defineProperty(J.prototype, "focused", {
+      Object.defineProperty(ne.prototype, "focused", {
         get: function () {
           return this.m_bFocused;
         },
         enumerable: !1,
         configurable: !0,
       }),
-      (J.prototype.GetWindowRestoreDetails = function () {
+      (ne.prototype.GetWindowRestoreDetails = function () {
         var n = this;
         return this.m_popup && !this.m_popup.closed && this.m_popup.SteamClient
           ? new Promise(function (t, e) {
@@ -5567,7 +5681,7 @@ PERFORMANCE OF THIS SOFTWARE.
             })
           : Promise.resolve("");
       }),
-      (J.prototype.IsMinimized = function () {
+      (ne.prototype.IsMinimized = function () {
         var n = this;
         return this.m_popup &&
           !this.m_popup.closed &&
@@ -5581,21 +5695,21 @@ PERFORMANCE OF THIS SOFTWARE.
             })
           : Promise.resolve(!1);
       }),
-      (J.prototype.ReleasePopup = function () {
+      (ne.prototype.ReleasePopup = function () {
         this.OnClose(), (this.m_popup = null);
       }),
-      (J.prototype.OnBeforeUnload = function () {}),
-      (J.prototype.OnFocus = function () {}),
-      (J.prototype.OnBlur = function () {}),
-      i([f.z], J.prototype, "m_bFocused", void 0),
-      i([h], J.prototype, "OnMessage", null),
-      i([h], J.prototype, "OnResizeEvent", null),
-      i([h], J.prototype, "OnBeforeUnloadEvent", null),
-      i([h], J.prototype, "OnUnload", null),
-      i([h], J.prototype, "OnFocusInternal", null),
-      i([h], J.prototype, "OnBlurInternal", null),
-      J);
-    function J(e, t) {
+      (ne.prototype.OnBeforeUnload = function () {}),
+      (ne.prototype.OnFocus = function () {}),
+      (ne.prototype.OnBlur = function () {}),
+      i([f.z], ne.prototype, "m_bFocused", void 0),
+      i([v], ne.prototype, "OnMessage", null),
+      i([v], ne.prototype, "OnResizeEvent", null),
+      i([v], ne.prototype, "OnBeforeUnloadEvent", null),
+      i([v], ne.prototype, "OnUnload", null),
+      i([v], ne.prototype, "OnFocusInternal", null),
+      i([v], ne.prototype, "OnBlurInternal", null),
+      ne);
+    function ne(e, t) {
       (this.m_bFocused = !1),
         (this.m_strName = e),
         (this.m_rgParams = t),
@@ -5604,48 +5718,48 @@ PERFORMANCE OF THIS SOFTWARE.
         (this.m_strTitle = t.title),
         delete this.m_rgParams.title;
     }
-    var Y,
-      Z =
-        (o(ee, (Y = X)),
-        (ee.prototype.BIsInOverlay = function () {
+    var re,
+      oe =
+        (o(ie, (re = te)),
+        (ie.prototype.BIsInOverlay = function () {
           return (
             this.browser_info &&
             this.browser_info != { m_unPID: 0, m_nBrowserID: -1 }
           );
         }),
-        (ee.prototype.SetSavedDimensionsKey = function (e) {
+        (ie.prototype.SetSavedDimensionsKey = function (e) {
           this.m_strSavedDimensionsKey = e;
         }),
-        (ee.prototype.UpdateParamsBeforeShow = function (e) {
+        (ie.prototype.UpdateParamsBeforeShow = function (e) {
           return (
             !this.m_strSavedDimensionsKey ||
             e.bIgnoreSavedDimensions ||
             e.strRestoreDetails
               ? e.strRestoreDetails &&
                 ((this.m_strInitialSavedDimensionsKey = this.GetSavedDimensionsKey()),
-                ie.SetRestoreDetails(
+                se.SetRestoreDetails(
                   this.m_strInitialSavedDimensionsKey,
                   e.strRestoreDetails,
                   this.m_bExpires
                 ))
               : ((this.m_strInitialSavedDimensionsKey = this.GetSavedDimensionsKey()),
-                (e.strRestoreDetails = ie.GetRestoreDetails(
+                (e.strRestoreDetails = se.GetRestoreDetails(
                   this.m_strInitialSavedDimensionsKey
                 ))),
             e
           );
         }),
-        (ee.prototype.OnLoad = function () {
+        (ie.prototype.OnLoad = function () {
           var t = this;
           this.GetWindowRestoreDetails().then(function (e) {
             (t.m_strInitialRestoreDetails = e), t.OnResizeComplete(e);
           });
         }),
-        (ee.prototype.OnResize = function () {
+        (ie.prototype.OnResize = function () {
           this.QueryAndStoreWindowPosition();
         }),
-        (ee.prototype.OnResizeComplete = function (e) {}),
-        (ee.prototype.QueryAndStoreWindowPosition = function () {
+        (ie.prototype.OnResizeComplete = function (e) {}),
+        (ie.prototype.QueryAndStoreWindowPosition = function () {
           var n,
             r = this;
           this.m_strInitialRestoreDetails &&
@@ -5659,56 +5773,56 @@ PERFORMANCE OF THIS SOFTWARE.
                   r.m_strSavedDimensionsKey &&
                   e &&
                   !t &&
-                  (ie.SetRestoreDetails(n, e, r.m_bExpires),
+                  (se.SetRestoreDetails(n, e, r.m_bExpires),
                   (r.m_rgParams.strRestoreDetails = e),
                   (r.m_strInitialSavedDimensionsKey = n),
                   r.OnResizeComplete(e));
               });
             }, 30));
         }),
-        (ee.prototype.OnBeforeUnload = function () {
+        (ie.prototype.OnBeforeUnload = function () {
           this.QueryAndStoreWindowPosition(),
-            Y.prototype.OnBeforeUnload.call(this);
+            re.prototype.OnBeforeUnload.call(this);
         }),
-        (ee.prototype.OnClose = function () {}),
-        (ee.prototype.SaveWindowPosition = function (e) {
-          ie.SetRestoreDetails(this.GetSavedDimensionsKey(), e, !1),
+        (ie.prototype.OnClose = function () {}),
+        (ie.prototype.SaveWindowPosition = function (e) {
+          se.SetRestoreDetails(this.GetSavedDimensionsKey(), e, !1),
             (this.m_rgParams.strRestoreDetails = e);
         }),
-        i([h], ee.prototype, "QueryAndStoreWindowPosition", null),
-        ee);
-    function ee(e, t, n, r) {
-      var o = Y.call(this, e, n) || this;
+        i([v], ie.prototype, "QueryAndStoreWindowPosition", null),
+        ie);
+    function ie(e, t, n, r) {
+      var o = re.call(this, e, n) || this;
       return o.SetSavedDimensionsKey(t), (o.m_bExpires = r), o;
     }
-    var te,
-      ne =
-        ((re.prototype.SetCurrentLoggedInAccountID = function (e) {
+    var ae,
+      le =
+        ((ue.prototype.SetCurrentLoggedInAccountID = function (e) {
           (this.m_unCurrentAccountID = e)
             ? this.LoadSavedDimensionStore()
             : this.ClearSavedDimensionStore();
         }),
-        (re.prototype.AddShutdownCallback = function (e) {
+        (ue.prototype.AddShutdownCallback = function (e) {
           this.m_rgShutdownCallbacks.push(e);
         }),
-        (re.prototype.AddPopupCreatedCallback = function (e) {
+        (ue.prototype.AddPopupCreatedCallback = function (e) {
           this.m_rgPopupCreatedCallbacks.push(e);
         }),
-        (re.prototype.AddTrackedPopup = function (e) {
+        (ue.prototype.AddTrackedPopup = function (e) {
           this.m_mapPopups.set(e.GetName(), e);
           for (var t = 0, n = this.m_rgPopupCreatedCallbacks; t < n.length; t++)
             (0, n[t])(e);
         }),
-        (re.prototype.RemoveTrackedPopup = function (e) {
+        (ue.prototype.RemoveTrackedPopup = function (e) {
           this.m_mapPopups.delete(e.GetName());
         }),
-        (re.prototype.GetExistingPopup = function (e) {
+        (ue.prototype.GetExistingPopup = function (e) {
           return this.m_mapPopups.get(e);
         }),
-        (re.prototype.GetPopups = function () {
+        (ue.prototype.GetPopups = function () {
           return this.m_mapPopups.values();
         }),
-        (re.prototype.ClosePopupsOwnedByBrowser = function (t) {
+        (ue.prototype.ClosePopupsOwnedByBrowser = function (t) {
           this.m_mapPopups.forEach(function (e) {
             e.browser_info &&
               e.browser_info.m_nBrowserID == t.m_nBrowserID &&
@@ -5716,7 +5830,7 @@ PERFORMANCE OF THIS SOFTWARE.
               e.Close();
           });
         }),
-        (re.CreatePopup = function (e, t) {
+        (ue.CreatePopup = function (e, t) {
           var n = t.dimensions || {},
             r = n.width || 300,
             o = n.height || 300,
@@ -5741,6 +5855,7 @@ PERFORMANCE OF THIS SOFTWARE.
             t.strVROverlayKey && u.push("vrOverlayKey=" + t.strVROverlayKey),
             t.strRestoreDetails &&
               u.push("restoredetails=" + t.strRestoreDetails),
+            t.window_opener_id && u.push("openerid=" + t.window_opener_id),
             u && (l += "?" + u.join("&"));
           var s = (t.owner_window || window).open(l, e, a, !0);
           if (!s)
@@ -5763,42 +5878,17 @@ PERFORMANCE OF THIS SOFTWARE.
           return (
             s.document.write(p),
             (s.document.title = i),
-            re.SetStylesheetsForPopup(s, oe()),
+            m(s, h()),
             { popup: s, element: s.document.getElementById("popup_target") }
           );
         }),
-        (re.SetStylesheetsForPopup = function (e, t) {
-          for (
-            var n = Object.assign({}, t),
-              r = e.document.getElementsByTagName("head")[0],
-              o = r.getElementsByTagName("link"),
-              i = o.length,
-              a = 0;
-            a < i;
-            ++a
-          ) {
-            var l = o[a];
-            n[l.href] ? delete n[l.href] : l.parentNode.removeChild(l);
-          }
-          for (var u in n) {
-            for (
-              var s = n[u], c = e.document.createElement("link"), f = 0;
-              f < s.attributes.length;
-              f++
-            ) {
-              var p = s.attributes.item(f);
-              c.setAttribute(p.name, p.value);
-            }
-            r.appendChild(c);
-          }
-        }),
-        (re.prototype.BShuttingDown = function () {
+        (ue.prototype.BShuttingDown = function () {
           return this.m_bShuttingDown;
         }),
-        (re.prototype.GetLocalStorageKey = function () {
+        (ue.prototype.GetLocalStorageKey = function () {
           return "PopupSavedDimensions_" + this.m_unCurrentAccountID;
         }),
-        (re.prototype.LoadSavedDimensionStore = function () {
+        (ue.prototype.LoadSavedDimensionStore = function () {
           if (this.m_unCurrentAccountID) {
             var e = this.GetLocalStorageKey();
             this.m_mapRestoreDetails = void 0;
@@ -5811,7 +5901,7 @@ PERFORMANCE OF THIS SOFTWARE.
             this.m_mapRestoreDetails || (this.m_mapRestoreDetails = new Map());
           }
         }),
-        (re.prototype.SaveSavedDimensionStore = function () {
+        (ue.prototype.SaveSavedDimensionStore = function () {
           var e, t;
           this.m_unCurrentAccountID &&
             this.m_bSaveRequired &&
@@ -5820,13 +5910,13 @@ PERFORMANCE OF THIS SOFTWARE.
             window.localStorage.setItem(e, t),
             (this.m_bSaveRequired = !1));
         }),
-        (re.prototype.DebouncedSaveSavedDimensionStore = function () {
+        (ue.prototype.DebouncedSaveSavedDimensionStore = function () {
           this.SaveSavedDimensionStore();
         }),
-        (re.prototype.ClearSavedDimensionStore = function () {
+        (ue.prototype.ClearSavedDimensionStore = function () {
           this.m_mapRestoreDetails.clear(), (this.m_bSaveRequired = !1);
         }),
-        (re.prototype.GetRestoreDetails = function (e) {
+        (ue.prototype.GetRestoreDetails = function (e) {
           if (!this.m_mapRestoreDetails.has(e)) return "";
           var t = this.m_mapRestoreDetails.get(e);
           return (
@@ -5835,7 +5925,7 @@ PERFORMANCE OF THIS SOFTWARE.
             t.strRestoreDetails
           );
         }),
-        (re.prototype.SetRestoreDetails = function (e, t, n) {
+        (ue.prototype.SetRestoreDetails = function (e, t, n) {
           if (e) {
             if (t) {
               if (50 < this.m_mapRestoreDetails.size) {
@@ -5868,8 +5958,8 @@ PERFORMANCE OF THIS SOFTWARE.
         }),
         i(
           [
-            h,
-            ((te = 100),
+            v,
+            ((ae = 100),
             function (e, o, t) {
               var i = t.value;
               t.value = function () {
@@ -5888,17 +5978,17 @@ PERFORMANCE OF THIS SOFTWARE.
                           ? (i.apply(e, t), (r.nPending = 0))
                           : (window.clearInterval(r.hTimer),
                             (r.hTimer = void 0));
-                      }, te)))
+                      }, ae)))
                     : (r.nPending += 1);
               };
             }),
           ],
-          re.prototype,
+          ue.prototype,
           "DebouncedSaveSavedDimensionStore",
           null
         ),
-        re);
-    function re() {
+        ue);
+    function ue() {
       var e,
         a = this;
       (this.m_bShuttingDown = !1),
@@ -5939,31 +6029,20 @@ PERFORMANCE OF THIS SOFTWARE.
           ),
           e &&
             ((this.m_DynamicCSSObserver = new MutationObserver(function () {
-              var t = oe();
+              var t = h();
               a.m_mapPopups.forEach(function (e) {
-                re.SetStylesheetsForPopup(e.window, t);
+                m(e.window, t);
               });
             })),
             this.m_DynamicCSSObserver.observe(e, { childList: !0 })));
     }
-    function oe() {
-      var t = {};
-      return (
-        document
-          .querySelectorAll('link[rel="stylesheet"]')
-          .forEach(function (e) {
-            t[e.href] = e;
-          }),
-        t
-      );
-    }
-    var ie = new ne();
-    window.g_PopupManager = ie;
-    var ae = n("twdX"),
-      le = n.n(ae);
+    var se = new le();
+    window.g_PopupManager = se;
+    var ce = n("twdX"),
+      fe = n.n(ce);
     n("vvG3");
-    function ue() {
-      return p.createElement(
+    function pe() {
+      return j.createElement(
         "svg",
         {
           version: "1.1",
@@ -5976,7 +6055,7 @@ PERFORMANCE OF THIS SOFTWARE.
           height: "256px",
           viewBox: "0 0 256 256",
         },
-        p.createElement("line", {
+        j.createElement("line", {
           fill: "none",
           stroke: "#ffffff",
           strokeWidth: "45",
@@ -5986,7 +6065,7 @@ PERFORMANCE OF THIS SOFTWARE.
           x2: "44",
           y2: "44",
         }),
-        p.createElement("line", {
+        j.createElement("line", {
           fill: "none",
           stroke: "#ffffff",
           strokeWidth: "45",
@@ -5998,9 +6077,9 @@ PERFORMANCE OF THIS SOFTWARE.
         })
       );
     }
-    function se(e) {
+    function de(e) {
       var t = e.color || "#020202";
-      return p.createElement(
+      return j.createElement(
         "svg",
         {
           version: "1.1",
@@ -6013,17 +6092,17 @@ PERFORMANCE OF THIS SOFTWARE.
           height: "256px",
           viewBox: "0 0 256 256",
         },
-        p.createElement(
+        j.createElement(
           "g",
           { className: "triangle" },
-          p.createElement("path", {
+          j.createElement("path", {
             stroke: t,
             strokeWidth: "16",
             strokeLinecap: "round",
             strokeMiterlimit: "10",
             d: "M127.9,76.632",
           }),
-          p.createElement("path", {
+          j.createElement("path", {
             fill: "none",
             stroke: t,
             strokeWidth: "11",
@@ -6033,12 +6112,12 @@ PERFORMANCE OF THIS SOFTWARE.
             d:
               "M128.001,226.606c42.507,0,81.538,0,87.756,0c31.222,0,36.95-14.974,24.045-34.771c-6.921-10.617-78.297-122.962-89.163-140.254\tC141.859,37.613,138.542,29.393,128,29.393l0,0c-10.543,0-13.86,8.222-22.639,22.189C94.495,68.874,23.119,181.219,16.198,191.836 c-12.905,19.797-7.175,34.771,24.045,34.771C46.463,226.606,85.494,226.606,128.001,226.606",
           }),
-          p.createElement("path", { fill: t, d: "M127.9,208.12" })
+          j.createElement("path", { fill: t, d: "M127.9,208.12" })
         ),
-        p.createElement(
+        j.createElement(
           "g",
           { className: "exclamation" },
-          p.createElement("line", {
+          j.createElement("line", {
             fill: "none",
             stroke: t,
             strokeWidth: "16",
@@ -6049,7 +6128,7 @@ PERFORMANCE OF THIS SOFTWARE.
             x2: "127.9",
             y2: "160.07",
           }),
-          p.createElement("path", {
+          j.createElement("path", {
             fill: t,
             d:
               "M127.9,208.12c-6.377,0-11.548-5.17-11.548-11.548c0-6.377,5.17-11.547,11.548-11.547 c6.377,0,11.547,5.17,11.547,11.547C139.447,202.95,134.277,208.12,127.9,208.12",
@@ -6057,11 +6136,11 @@ PERFORMANCE OF THIS SOFTWARE.
         )
       );
     }
-    function ce(e) {
+    function he(e) {
       var t = "SVGIcon_Button SVGIcon_Throbber ";
       return (
         e.className && (t += e.className),
-        p.createElement(
+        j.createElement(
           "svg",
           {
             version: "1.1",
@@ -6074,11 +6153,11 @@ PERFORMANCE OF THIS SOFTWARE.
             height: "256px",
             viewBox: "0 0 256 256",
           },
-          p.createElement(
+          j.createElement(
             "g",
-            { className: le.a.partCircle },
-            p.createElement("path", {
-              className: le.a.roundOuter,
+            { className: fe.a.partCircle },
+            j.createElement("path", {
+              className: fe.a.roundOuter,
               fill: "none",
               stroke: "#ffffff",
               strokeWidth: "6",
@@ -6086,16 +6165,16 @@ PERFORMANCE OF THIS SOFTWARE.
               d:
                 "M27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895",
             }),
-            p.createElement("path", {
-              className: le.a.roundOuter,
+            j.createElement("path", {
+              className: fe.a.roundOuter,
               fill: "none",
               stroke: "#ffffff",
               strokeWidth: "6",
               strokeMiterlimit: "10",
               d: "M201.432,101.166",
             }),
-            p.createElement("path", {
-              className: le.a.roundOuter,
+            j.createElement("path", {
+              className: fe.a.roundOuter,
               fill: "none",
               stroke: "#ffffff",
               strokeWidth: "6",
@@ -6103,11 +6182,11 @@ PERFORMANCE OF THIS SOFTWARE.
               d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754",
             })
           ),
-          p.createElement(
+          j.createElement(
             "g",
-            { className: le.a.mainOutline },
-            p.createElement("path", {
-              className: le.a.roundFill,
+            { className: fe.a.mainOutline },
+            j.createElement("path", {
+              className: fe.a.roundFill,
               fill: "none",
               stroke: "#ffffff",
               strokeWidth: "6",
@@ -6115,8 +6194,8 @@ PERFORMANCE OF THIS SOFTWARE.
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
             }),
-            p.createElement("path", {
-              className: le.a.roundOuterOutline,
+            j.createElement("path", {
+              className: fe.a.roundOuterOutline,
               strokeLinecap: "butt",
               fill: "none",
               stroke: "#ffffff",
@@ -6125,8 +6204,8 @@ PERFORMANCE OF THIS SOFTWARE.
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
             }),
-            p.createElement("path", {
-              className: le.a.roundThrobber01,
+            j.createElement("path", {
+              className: fe.a.roundThrobber01,
               strokeLinecap: "butt",
               fill: "none",
               stroke: "#ffffff",
@@ -6135,8 +6214,8 @@ PERFORMANCE OF THIS SOFTWARE.
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
             }),
-            p.createElement("path", {
-              className: le.a.roundThrobber02,
+            j.createElement("path", {
+              className: fe.a.roundThrobber02,
               strokeLinecap: "butt",
               fill: "none",
               stroke: "#ffffff",
@@ -6145,8 +6224,8 @@ PERFORMANCE OF THIS SOFTWARE.
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
             }),
-            p.createElement("path", {
-              className: le.a.roundThrobber03,
+            j.createElement("path", {
+              className: fe.a.roundThrobber03,
               strokeLinecap: "butt",
               fill: "none",
               stroke: "#ffffff",
@@ -6155,8 +6234,8 @@ PERFORMANCE OF THIS SOFTWARE.
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
             }),
-            p.createElement("path", {
-              className: le.a.roundThrobber04,
+            j.createElement("path", {
+              className: fe.a.roundThrobber04,
               strokeLinecap: "butt",
               fill: "none",
               stroke: "#ffffff",
@@ -6165,8 +6244,8 @@ PERFORMANCE OF THIS SOFTWARE.
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
             }),
-            p.createElement("path", {
-              className: le.a.roundThrobber05,
+            j.createElement("path", {
+              className: fe.a.roundThrobber05,
               strokeLinecap: "butt",
               fill: "none",
               stroke: "#ffffff",
@@ -6175,8 +6254,8 @@ PERFORMANCE OF THIS SOFTWARE.
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
             }),
-            p.createElement("path", {
-              className: le.a.roundThrobber06,
+            j.createElement("path", {
+              className: fe.a.roundThrobber06,
               strokeLinecap: "butt",
               fill: "none",
               stroke: "#ffffff",
@@ -6185,8 +6264,8 @@ PERFORMANCE OF THIS SOFTWARE.
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
             }),
-            p.createElement("path", {
-              className: le.a.roundThrobber07,
+            j.createElement("path", {
+              className: fe.a.roundThrobber07,
               strokeLinecap: "butt",
               fill: "none",
               stroke: "#ffffff",
@@ -6195,8 +6274,8 @@ PERFORMANCE OF THIS SOFTWARE.
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
             }),
-            p.createElement("path", {
-              className: le.a.roundThrobber08,
+            j.createElement("path", {
+              className: fe.a.roundThrobber08,
               strokeLinecap: "butt",
               fill: "none",
               stroke: "#ffffff",
@@ -6205,8 +6284,8 @@ PERFORMANCE OF THIS SOFTWARE.
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
             }),
-            p.createElement("path", {
-              className: le.a.roundThrobber09,
+            j.createElement("path", {
+              className: fe.a.roundThrobber09,
               strokeLinecap: "butt",
               fill: "none",
               stroke: "#ffffff",
@@ -6215,8 +6294,8 @@ PERFORMANCE OF THIS SOFTWARE.
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
             }),
-            p.createElement("path", {
-              className: le.a.roundThrobber10,
+            j.createElement("path", {
+              className: fe.a.roundThrobber10,
               strokeLinecap: "butt",
               fill: "none",
               stroke: "#ffffff",
@@ -6225,8 +6304,8 @@ PERFORMANCE OF THIS SOFTWARE.
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
             }),
-            p.createElement("path", {
-              className: le.a.roundThrobber11,
+            j.createElement("path", {
+              className: fe.a.roundThrobber11,
               strokeLinecap: "butt",
               fill: "none",
               stroke: "#ffffff",
@@ -6235,8 +6314,8 @@ PERFORMANCE OF THIS SOFTWARE.
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
             }),
-            p.createElement("path", {
-              className: le.a.roundThrobber12,
+            j.createElement("path", {
+              className: fe.a.roundThrobber12,
               strokeLinecap: "butt",
               fill: "none",
               stroke: "#ffffff",
@@ -6245,8 +6324,8 @@ PERFORMANCE OF THIS SOFTWARE.
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
             }),
-            p.createElement("path", {
-              className: le.a.roundThrobber13,
+            j.createElement("path", {
+              className: fe.a.roundThrobber13,
               strokeLinecap: "butt",
               fill: "none",
               stroke: "#ffffff",
@@ -6255,8 +6334,8 @@ PERFORMANCE OF THIS SOFTWARE.
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
             }),
-            p.createElement("path", {
-              className: le.a.roundThrobber14,
+            j.createElement("path", {
+              className: fe.a.roundThrobber14,
               strokeLinecap: "butt",
               fill: "none",
               stroke: "#ffffff",
@@ -6265,8 +6344,8 @@ PERFORMANCE OF THIS SOFTWARE.
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
             }),
-            p.createElement("path", {
-              className: le.a.roundThrobber15,
+            j.createElement("path", {
+              className: fe.a.roundThrobber15,
               strokeLinecap: "butt",
               fill: "none",
               stroke: "#ffffff",
@@ -6276,19 +6355,19 @@ PERFORMANCE OF THIS SOFTWARE.
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
             })
           ),
-          p.createElement(
+          j.createElement(
             "g",
-            { className: le.a.bottomCircle },
-            p.createElement("path", {
+            { className: fe.a.bottomCircle },
+            j.createElement("path", {
               fill: "#ffffff",
               d:
                 "M89.226,181.579L76.5,176.321c2.256,4.696,6.159,8.628,11.339,10.786 c11.197,4.668,24.11-0.647,28.779-11.854c2.259-5.425,2.274-11.405,0.033-16.841c-2.237-5.436-6.46-9.675-11.886-11.938 c-5.384-2.24-11.151-2.156-16.22-0.244l13.146,5.436c8.261,3.443,12.166,12.93,8.725,21.189 C106.976,181.115,97.486,185.022,89.226,181.579",
             })
           ),
-          p.createElement(
+          j.createElement(
             "g",
-            { className: le.a.topCircle },
-            p.createElement("circle", {
+            { className: fe.a.topCircle },
+            j.createElement("circle", {
               fill: "none",
               stroke: "#ffffff",
               strokeWidth: "6",
@@ -6301,8 +6380,8 @@ PERFORMANCE OF THIS SOFTWARE.
         )
       );
     }
-    function fe() {
-      return p.createElement(
+    function me() {
+      return j.createElement(
         "svg",
         {
           version: "1.1",
@@ -6315,7 +6394,7 @@ PERFORMANCE OF THIS SOFTWARE.
           height: "256px",
           viewBox: "0 0 256 256",
         },
-        p.createElement("rect", {
+        j.createElement("rect", {
           x: "24",
           y: "42.167",
           fill: "none",
@@ -6325,7 +6404,7 @@ PERFORMANCE OF THIS SOFTWARE.
           width: "208",
           height: "171.667",
         }),
-        p.createElement("line", {
+        j.createElement("line", {
           fill: "none",
           stroke: "rgb(120, 138, 146)",
           strokeWidth: "42",
@@ -6337,8 +6416,8 @@ PERFORMANCE OF THIS SOFTWARE.
         })
       );
     }
-    function pe() {
-      return p.createElement(
+    function ve() {
+      return j.createElement(
         "svg",
         {
           version: "1.1",
@@ -6351,7 +6430,7 @@ PERFORMANCE OF THIS SOFTWARE.
           height: "256px",
           viewBox: "0 0 256 256",
         },
-        p.createElement("line", {
+        j.createElement("line", {
           fill: "none",
           stroke: "rgb(120, 138, 146)",
           strokeWidth: "18",
@@ -6363,8 +6442,8 @@ PERFORMANCE OF THIS SOFTWARE.
         })
       );
     }
-    function de() {
-      return p.createElement(
+    function ye() {
+      return j.createElement(
         "svg",
         {
           version: "1.1",
@@ -6377,14 +6456,14 @@ PERFORMANCE OF THIS SOFTWARE.
           height: "256px",
           viewBox: "0 0 256 256",
         },
-        p.createElement("polyline", {
+        j.createElement("polyline", {
           fill: "none",
           stroke: "rgb(120, 138, 146)",
           strokeWidth: "12",
           strokeMiterlimit: "10",
           points: "83,90.861 83,42.167 232,42.167 232,165.14 173,165.14 ",
         }),
-        p.createElement("rect", {
+        j.createElement("rect", {
           x: "24",
           y: "90.861",
           fill: "none",
@@ -6404,8 +6483,8 @@ PERFORMANCE OF THIS SOFTWARE.
      * This source code is licensed under the MIT license found in the
      * LICENSE file in the root directory of this source tree.
      */
-    function he(e) {
-      return (he =
+    function be(e) {
+      return (be =
         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
           ? function (e) {
               return typeof e;
@@ -6419,11 +6498,11 @@ PERFORMANCE OF THIS SOFTWARE.
                 : typeof e;
             })(e);
     }
-    function me(e, t) {
+    function ge(e, t) {
       if (!(e instanceof t))
         throw new TypeError("Cannot call a class as a function");
     }
-    function ve(e, t) {
+    function we(e, t) {
       for (var n = 0; n < t.length; n++) {
         var r = t[n];
         (r.enumerable = r.enumerable || !1),
@@ -6432,10 +6511,10 @@ PERFORMANCE OF THIS SOFTWARE.
           Object.defineProperty(e, r.key, r);
       }
     }
-    function ye(e, t, n) {
-      return t && ve(e.prototype, t), n && ve(e, n), e;
+    function _e(e, t, n) {
+      return t && we(e.prototype, t), n && we(e, n), e;
     }
-    function be(e, t, n) {
+    function Ee(e, t, n) {
       return (
         t in e
           ? Object.defineProperty(e, t, {
@@ -6448,7 +6527,7 @@ PERFORMANCE OF THIS SOFTWARE.
         e
       );
     }
-    function ge(e, t) {
+    function Se(e, t) {
       if ("function" != typeof t && null !== t)
         throw new TypeError(
           "Super expression must either be null or a function"
@@ -6456,23 +6535,23 @@ PERFORMANCE OF THIS SOFTWARE.
       (e.prototype = Object.create(t && t.prototype, {
         constructor: { value: e, writable: !0, configurable: !0 },
       })),
-        t && _e(e, t);
+        t && xe(e, t);
     }
-    function we(e) {
-      return (we = Object.setPrototypeOf
+    function ke(e) {
+      return (ke = Object.setPrototypeOf
         ? Object.getPrototypeOf
         : function (e) {
             return e.__proto__ || Object.getPrototypeOf(e);
           })(e);
     }
-    function _e(e, t) {
-      return (_e =
+    function xe(e, t) {
+      return (xe =
         Object.setPrototypeOf ||
         function (e, t) {
           return (e.__proto__ = t), e;
         })(e, t);
     }
-    function Ee(e, t) {
+    function Te(e, t) {
       return !t || ("object" != typeof t && "function" != typeof t)
         ? (function (e) {
             if (void 0 === e)
@@ -6483,11 +6562,11 @@ PERFORMANCE OF THIS SOFTWARE.
           })(e)
         : t;
     }
-    function Se(e, t) {
+    function Ce(e, t) {
       return e((t = { exports: {} }), t.exports), t.exports;
     }
-    var ke,
-      xe = Se(function (e, t) {
+    var Oe,
+      Pe = Ce(function (e, t) {
         Object.defineProperty(t, "__esModule", { value: !0 });
         var n = "function" == typeof Symbol && Symbol.for,
           r = n ? Symbol.for("react.element") : 60103,
@@ -6591,36 +6670,36 @@ PERFORMANCE OF THIS SOFTWARE.
             return v(e) === a;
           });
       });
-    (ke = xe) &&
-      ke.__esModule &&
-      Object.prototype.hasOwnProperty.call(ke, "default") &&
-      ke.default;
-    xe.typeOf,
-      xe.AsyncMode,
-      xe.ConcurrentMode,
-      xe.ContextConsumer,
-      xe.ContextProvider,
-      xe.Element,
-      xe.ForwardRef,
-      xe.Fragment,
-      xe.Profiler,
-      xe.Portal,
-      xe.StrictMode,
-      xe.isValidElementType,
-      xe.isAsyncMode,
-      xe.isConcurrentMode,
-      xe.isContextConsumer,
-      xe.isContextProvider,
-      xe.isElement,
-      xe.isForwardRef,
-      xe.isFragment,
-      xe.isProfiler,
-      xe.isPortal,
-      xe.isStrictMode;
-    var Te = Se(function (e) {
-        e.exports = xe;
+    (Oe = Pe) &&
+      Oe.__esModule &&
+      Object.prototype.hasOwnProperty.call(Oe, "default") &&
+      Oe.default;
+    Pe.typeOf,
+      Pe.AsyncMode,
+      Pe.ConcurrentMode,
+      Pe.ContextConsumer,
+      Pe.ContextProvider,
+      Pe.Element,
+      Pe.ForwardRef,
+      Pe.Fragment,
+      Pe.Profiler,
+      Pe.Portal,
+      Pe.StrictMode,
+      Pe.isValidElementType,
+      Pe.isAsyncMode,
+      Pe.isConcurrentMode,
+      Pe.isContextConsumer,
+      Pe.isContextProvider,
+      Pe.isElement,
+      Pe.isForwardRef,
+      Pe.isFragment,
+      Pe.isProfiler,
+      Pe.isPortal,
+      Pe.isStrictMode;
+    var Re = Ce(function (e) {
+        e.exports = Pe;
       }),
-      Ce = {
+      Le = {
         childContextTypes: !0,
         contextType: !0,
         contextTypes: !0,
@@ -6633,7 +6712,7 @@ PERFORMANCE OF THIS SOFTWARE.
         propTypes: !0,
         type: !0,
       },
-      Oe = {
+      Ne = {
         name: !0,
         length: !0,
         prototype: !0,
@@ -6642,47 +6721,47 @@ PERFORMANCE OF THIS SOFTWARE.
         arguments: !0,
         arity: !0,
       },
-      Pe = {};
-    Pe[Te.ForwardRef] = {
+      De = {};
+    De[Re.ForwardRef] = {
       $$typeof: !0,
       render: !0,
       defaultProps: !0,
       displayName: !0,
       propTypes: !0,
     };
-    var Re = Object.defineProperty,
-      Ne = Object.getOwnPropertyNames,
-      Le = Object.getOwnPropertySymbols,
-      De = Object.getOwnPropertyDescriptor,
-      Ie = Object.getPrototypeOf,
-      Ae = Object.prototype;
-    var Me = function e(t, n, r) {
+    var Ie = Object.defineProperty,
+      Ae = Object.getOwnPropertyNames,
+      Me = Object.getOwnPropertySymbols,
+      je = Object.getOwnPropertyDescriptor,
+      ze = Object.getPrototypeOf,
+      Ue = Object.prototype;
+    var Be = function e(t, n, r) {
         if ("string" == typeof n) return t;
         var o;
-        !Ae || ((o = Ie(n)) && o !== Ae && e(t, o, r));
-        var i = Ne(n);
-        Le && (i = i.concat(Le(n)));
+        !Ue || ((o = ze(n)) && o !== Ue && e(t, o, r));
+        var i = Ae(n);
+        Me && (i = i.concat(Me(n)));
         for (
-          var a = Pe[t.$$typeof] || Ce, l = Pe[n.$$typeof] || Ce, u = 0;
+          var a = De[t.$$typeof] || Le, l = De[n.$$typeof] || Le, u = 0;
           u < i.length;
           ++u
         ) {
           var s = i[u];
-          if (!(Oe[s] || (r && r[s]) || (l && l[s]) || (a && a[s]))) {
-            var c = De(n, s);
+          if (!(Ne[s] || (r && r[s]) || (l && l[s]) || (a && a[s]))) {
+            var c = je(n, s);
             try {
-              Re(t, s, c);
+              Ie(t, s, c);
             } catch (e) {}
           }
         }
         return t;
       },
-      je = (function () {
+      Fe = (function () {
         function e() {
-          me(this, e), (this.listeners = []);
+          ge(this, e), (this.listeners = []);
         }
         return (
-          ye(e, [
+          _e(e, [
             {
               key: "on",
               value: function (t) {
@@ -6708,7 +6787,7 @@ PERFORMANCE OF THIS SOFTWARE.
           e
         );
       })();
-    function ze(s) {
+    function We(s) {
       function e(t, n, r, o, i, a) {
         for (
           var e = arguments.length, l = new Array(6 < e ? e - 6 : 0), u = 6;
@@ -6739,9 +6818,9 @@ PERFORMANCE OF THIS SOFTWARE.
       var t = e.bind(null, !1);
       return (t.isRequired = e.bind(null, !0)), t;
     }
-    function Ue(e) {
+    function Ve(e) {
       var t,
-        n = he(e);
+        n = be(e);
       return Array.isArray(e)
         ? "array"
         : e instanceof RegExp
@@ -6753,10 +6832,10 @@ PERFORMANCE OF THIS SOFTWARE.
             ? "symbol"
             : n);
     }
-    function Be(u, s) {
-      return ze(function (o, i, a, e, l) {
+    function Ge(u, s) {
+      return We(function (o, i, a, e, l) {
         return Object(f.G)(function () {
-          if (u && Ue(o[i]) === s.toLowerCase()) return null;
+          if (u && Ve(o[i]) === s.toLowerCase()) return null;
           var e;
           switch (s) {
             case "Array":
@@ -6774,7 +6853,7 @@ PERFORMANCE OF THIS SOFTWARE.
           var t = o[i];
           if (e(t)) return null;
           var n = (function (e) {
-              var t = Ue(e);
+              var t = Ve(e);
               if ("object" === t) {
                 if (e instanceof Date) return "date";
                 if (e instanceof RegExp) return "regexp";
@@ -6798,8 +6877,8 @@ PERFORMANCE OF THIS SOFTWARE.
         });
       });
     }
-    function Fe(s, c) {
-      return ze(function (r, o, i, a, l) {
+    function He(s, c) {
+      return We(function (r, o, i, a, l) {
         for (
           var e = arguments.length, u = new Array(5 < e ? e - 5 : 0), t = 5;
           t < e;
@@ -6815,7 +6894,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 i +
                 "` has invalid PropType notation."
             );
-          var e = Be(s, "Array")(r, o, i);
+          var e = Ge(s, "Array")(r, o, i);
           if (e instanceof Error) return e;
           for (var t = r[o], n = 0; n < t.length; n++)
             if (
@@ -6829,29 +6908,29 @@ PERFORMANCE OF THIS SOFTWARE.
         });
       });
     }
-    Be(!1, "Array"),
-      Fe.bind(null, !1),
-      Be(!1, "Map"),
-      Be(!1, "Object"),
-      Be(!0, "Array"),
-      Fe.bind(null, !0);
-    var We = Be(!0, "Object");
-    var Ve = 0;
-    var Ge = {};
-    function He(e) {
+    Ge(!1, "Array"),
+      He.bind(null, !1),
+      Ge(!1, "Map"),
+      Ge(!1, "Object"),
+      Ge(!0, "Array"),
+      He.bind(null, !0);
+    var qe = Ge(!0, "Object");
+    var Ke = 0;
+    var $e = {};
+    function Qe(e) {
       return (
-        Ge[e] ||
-          (Ge[e] = (function (e) {
+        $e[e] ||
+          ($e[e] = (function (e) {
             if ("function" == typeof Symbol) return Symbol(e);
-            var t = "__$mobx-react ".concat(e, " (").concat(Ve, ")");
-            return Ve++, t;
+            var t = "__$mobx-react ".concat(e, " (").concat(Ke, ")");
+            return Ke++, t;
           })(e)),
-        Ge[e]
+        $e[e]
       );
     }
-    var qe = He("patchMixins"),
-      Ke = He("patchedDefinition");
-    function $e(e, t) {
+    var Ye = Qe("patchMixins"),
+      Xe = Qe("patchedDefinition");
+    function Je(e, t) {
       for (
         var n,
           r = this,
@@ -6873,14 +6952,14 @@ PERFORMANCE OF THIS SOFTWARE.
             });
       }
     }
-    function Qe(r, o) {
+    function Ze(r, o) {
       return function () {
         for (var e = arguments.length, t = new Array(e), n = 0; n < e; n++)
           t[n] = arguments[n];
-        $e.call.apply($e, [this, r, o].concat(t));
+        Je.call.apply(Je, [this, r, o].concat(t));
       };
     }
-    function Xe(e, t) {
+    function et(e, t) {
       for (
         var n,
           r,
@@ -6888,7 +6967,7 @@ PERFORMANCE OF THIS SOFTWARE.
           i,
           a =
             ((r = t),
-            (o = (n = e)[qe] = n[qe] || {}),
+            (o = (n = e)[Ye] = n[Ye] || {}),
             ((i = o[r] = o[r] || {}).locks = i.locks || 0),
             (i.methods = i.methods || []),
             i),
@@ -6906,37 +6985,37 @@ PERFORMANCE OF THIS SOFTWARE.
       var p,
         d,
         h = Object.getOwnPropertyDescriptor(e, t);
-      (h && h[Ke]) ||
+      (h && h[Xe]) ||
         ((p = e[t]),
         (d = (function n(r, o, i, a, e) {
           var t;
-          var l = Qe(e, a);
+          var l = Ze(e, a);
           return (
             (t = {}),
-            be(t, Ke, !0),
-            be(t, "get", function () {
+            Ee(t, Xe, !0),
+            Ee(t, "get", function () {
               return l;
             }),
-            be(t, "set", function (e) {
+            Ee(t, "set", function (e) {
               var t;
               this === r
-                ? (l = Qe(e, a))
+                ? (l = Ze(e, a))
                 : ((t = n(this, o, i, a, e)),
                   Object.defineProperty(this, o, t));
             }),
-            be(t, "configurable", !0),
-            be(t, "enumerable", i),
+            Ee(t, "configurable", !0),
+            Ee(t, "enumerable", i),
             t
           );
         })(e, t, h ? h.enumerable : void 0, a, p)),
         Object.defineProperty(e, t, d));
     }
-    var Je = { mobxStores: We };
-    Object.seal(Je);
-    var Ye = {
+    var tt = { mobxStores: qe };
+    Object.seal(tt);
+    var nt = {
       contextTypes: {
         get: function () {
-          return Je;
+          return tt;
         },
         set: function () {
           console.warn(
@@ -6953,7 +7032,7 @@ PERFORMANCE OF THIS SOFTWARE.
         enumerable: !0,
       },
     };
-    function Ze(a, l, e) {
+    function rt(a, l, e) {
       var t =
         "inject-" +
         (l.displayName ||
@@ -6964,13 +7043,13 @@ PERFORMANCE OF THIS SOFTWARE.
       var n = (function () {
         function i() {
           var e, t;
-          me(this, i);
+          ge(this, i);
           for (var n = arguments.length, r = new Array(n), o = 0; o < n; o++)
             r[o] = arguments[o];
           return (
-            ((t = Ee(
+            ((t = Te(
               this,
-              (e = we(i)).call.apply(e, [this].concat(r))
+              (e = ke(i)).call.apply(e, [this].concat(r))
             )).storeRef = function (e) {
               t.wrappedInstance = e;
             }),
@@ -6978,8 +7057,8 @@ PERFORMANCE OF THIS SOFTWARE.
           );
         }
         return (
-          ge(i, p["Component"]),
-          ye(i, [
+          Se(i, j["Component"]),
+          _e(i, [
             {
               key: "render",
               value: function () {
@@ -6993,7 +7072,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   (n = l).prototype &&
                     n.prototype.render &&
                     (e.ref = this.storeRef),
-                  Object(p.createElement)(l, e)
+                  Object(j.createElement)(l, e)
                 );
               },
             },
@@ -7003,21 +7082,21 @@ PERFORMANCE OF THIS SOFTWARE.
       })();
       return (
         (n.displayName = t),
-        Me(n, l),
+        Be(n, l),
         (n.wrappedComponent = l),
-        Object.defineProperties(n, Ye),
+        Object.defineProperties(n, nt),
         n
       );
     }
-    function et() {
+    function ot() {
       var n;
       if ("function" == typeof arguments[0])
         return (
           (n = arguments[0]),
           function (e) {
-            var t = Ze(n, e);
+            var t = rt(n, e);
             return (
-              (t.isMobxInjector = !1), ((t = gt(t)).isMobxInjector = !0), t
+              (t.isMobxInjector = !1), ((t = St(t)).isMobxInjector = !0), t
             );
           }
         );
@@ -7041,23 +7120,23 @@ PERFORMANCE OF THIS SOFTWARE.
           );
         }),
         function (e) {
-          return Ze(n, e, t.join("-"));
+          return rt(n, e, t.join("-"));
         }
       );
     }
-    var tt = f.a || "$mobx",
-      nt = He("isUnmounted"),
-      rt = !1,
-      ot = !1,
-      it = !1,
-      at = "undefined" != typeof WeakMap ? new WeakMap() : void 0,
-      lt = new je(),
-      ut = He("skipRender"),
-      st = He("isForcingUpdate"),
-      ct =
-        "function" == typeof p.forwardRef &&
-        Object(p.forwardRef)(function (e, t) {}).$$typeof;
-    function ft(e, t, n) {
+    var it = f.a || "$mobx",
+      at = Qe("isUnmounted"),
+      lt = !1,
+      ut = !1,
+      st = !1,
+      ct = "undefined" != typeof WeakMap ? new WeakMap() : void 0,
+      ft = new Fe(),
+      pt = Qe("skipRender"),
+      dt = Qe("isForcingUpdate"),
+      ht =
+        "function" == typeof j.forwardRef &&
+        Object(j.forwardRef)(function (e, t) {}).$$typeof;
+    function mt(e, t, n) {
       Object.hasOwnProperty.call(e, t)
         ? (e[t] = n)
         : Object.defineProperty(e, t, {
@@ -7067,7 +7146,7 @@ PERFORMANCE OF THIS SOFTWARE.
             value: n,
           });
     }
-    function pt(e) {
+    function vt(e) {
       if (c.findDOMNode)
         try {
           return Object(c.findDOMNode)(e);
@@ -7076,10 +7155,10 @@ PERFORMANCE OF THIS SOFTWARE.
         }
       return null;
     }
-    function dt(e) {
-      var t = pt(e);
-      t && at && at.set(t, e),
-        lt.emit({
+    function yt(e) {
+      var t = vt(e);
+      t && ct && ct.set(t, e),
+        ft.emit({
           event: "render",
           renderTime: e.__$mobRenderEnd - e.__$mobRenderStart,
           totalTime: Date.now() - e.__$mobRenderStart,
@@ -7087,58 +7166,58 @@ PERFORMANCE OF THIS SOFTWARE.
           node: t,
         });
     }
-    var ht = new je();
-    function mt(e, t) {
-      if (vt(e, t)) return 1;
+    var bt = new Fe();
+    function gt(e, t) {
+      if (wt(e, t)) return 1;
       if (
-        "object" === he(e) &&
+        "object" === be(e) &&
         null !== e &&
-        "object" === he(t) &&
+        "object" === be(t) &&
         null !== t
       ) {
         var n = Object.keys(e),
           r = Object.keys(t);
         if (n.length === r.length) {
           for (var o = 0; o < n.length; o++)
-            if (!hasOwnProperty.call(t, n[o]) || !vt(e[n[o]], t[n[o]])) return;
+            if (!hasOwnProperty.call(t, n[o]) || !wt(e[n[o]], t[n[o]])) return;
           return 1;
         }
       }
     }
-    function vt(e, t) {
+    function wt(e, t) {
       return e === t ? 0 !== e || 1 / e == 1 / t : e != e && t != t;
     }
-    var yt = {
+    var _t = {
       componentWillUnmount: function () {
         var e;
-        !0 !== ot &&
-          (this.render[tt] && this.render[tt].dispose(),
-          (this[nt] = !0),
-          rt &&
-            ((e = pt(this)) && at && at.delete(e),
-            lt.emit({ event: "destroy", component: this, node: e })));
+        !0 !== ut &&
+          (this.render[it] && this.render[it].dispose(),
+          (this[at] = !0),
+          lt &&
+            ((e = vt(this)) && ct && ct.delete(e),
+            ft.emit({ event: "destroy", component: this, node: e })));
       },
       componentDidMount: function () {
-        rt && dt(this);
+        lt && yt(this);
       },
       componentDidUpdate: function () {
-        rt && dt(this);
+        lt && yt(this);
       },
       shouldComponentUpdate: function (e, t) {
         return (
-          ot &&
+          ut &&
             console.warn(
               "[mobx-react] It seems that a re-rendering of a React component is triggered while in static (server-side) mode. Please make sure components are rendered only once server-side."
             ),
-          this.state !== t || !mt(this.props, e)
+          this.state !== t || !gt(this.props, e)
         );
       },
     };
-    function bt(e, t) {
-      var n = He("reactProp_".concat(t, "_valueHolder")),
-        r = He("reactProp_".concat(t, "_atomHolder"));
+    function Et(e, t) {
+      var n = Qe("reactProp_".concat(t, "_valueHolder")),
+        r = Qe("reactProp_".concat(t, "_atomHolder"));
       function o() {
-        return this[r] || ft(this, r, Object(f.m)("reactive " + t)), this[r];
+        return this[r] || mt(this, r, Object(f.m)("reactive " + t)), this[r];
       }
       Object.defineProperty(e, t, {
         configurable: !0,
@@ -7147,29 +7226,29 @@ PERFORMANCE OF THIS SOFTWARE.
           return o.call(this).reportObserved(), this[n];
         },
         set: function (e) {
-          this[st] || mt(this[n], e)
-            ? ft(this, n, e)
-            : (ft(this, n, e),
-              ft(this, ut, !0),
+          this[dt] || gt(this[n], e)
+            ? mt(this, n, e)
+            : (mt(this, n, e),
+              mt(this, pt, !0),
               o.call(this).reportChanged(),
-              ft(this, ut, !1));
+              mt(this, pt, !1));
         },
       });
     }
-    function gt(t, e) {
+    function St(t, e) {
       if ("string" == typeof t)
         throw new Error("Store names should be provided as array");
       if (Array.isArray(t))
         return (
-          it ||
-            ((it = !0),
+          st ||
+            ((st = !0),
             console.warn(
               'Mobx observer: Using observer to inject stores is deprecated since 4.0. Use `@inject("store1", "store2") @observer ComponentClass` or `inject("store1", "store2")(observer(componentClass))` instead of `@observer(["store1", "store2"]) ComponentClass`'
             )),
           e
-            ? et.apply(null, t)(gt(e))
+            ? ot.apply(null, t)(St(e))
             : function (e) {
-                return gt(t, e);
+                return St(t, e);
               }
         );
       var n = t;
@@ -7178,18 +7257,18 @@ PERFORMANCE OF THIS SOFTWARE.
           console.warn(
             "Mobx observer: You are trying to use 'observer' on a component that already has 'inject'. Please apply 'observer' before applying 'inject'"
           ),
-        n.__proto__ === p.PureComponent &&
+        n.__proto__ === j.PureComponent &&
           console.warn(
             "Mobx observer: You are using 'observer' on React.PureComponent. These two achieve two opposite goals and should not be used together"
           ),
-        ct && n.$$typeof === ct)
+        ht && n.$$typeof === ht)
       ) {
         var r = n.render;
         if ("function" != typeof r)
           throw new Error("render property of ForwardRef was not a function");
-        return Object(p.forwardRef)(function () {
+        return Object(j.forwardRef)(function () {
           var e = arguments;
-          return d.a.createElement(wt, null, function () {
+          return z.a.createElement(kt, null, function () {
             return r.apply(void 0, e);
           });
         });
@@ -7199,19 +7278,19 @@ PERFORMANCE OF THIS SOFTWARE.
           "function" != typeof n ||
           (n.prototype && n.prototype.render) ||
           n.isReactClass ||
-          p.Component.isPrototypeOf(n)
+          j.Component.isPrototypeOf(n)
         )
       ) {
         var o,
           i,
-          a = gt(
+          a = St(
             ((i = o = (function () {
               function e() {
-                return me(this, e), Ee(this, we(e).apply(this, arguments));
+                return ge(this, e), Te(this, ke(e).apply(this, arguments));
               }
               return (
-                ge(e, p["Component"]),
-                ye(e, [
+                Se(e, j["Component"]),
+                _e(e, [
                   {
                     key: "render",
                     value: function () {
@@ -7228,7 +7307,7 @@ PERFORMANCE OF THIS SOFTWARE.
             (o.defaultProps = n.defaultProps),
             i)
           );
-        return Me(a, n), a;
+        return Be(a, n), a;
       }
       if (!n) throw new Error("Please pass a valid component to 'observer'");
       var l,
@@ -7240,23 +7319,23 @@ PERFORMANCE OF THIS SOFTWARE.
           "componentDidUpdate",
         ].forEach(function (e) {
           var t;
-          Xe(l, (t = e), yt[t]);
+          et(l, (t = e), _t[t]);
         }),
         l.shouldComponentUpdate
-          ? l.shouldComponentUpdate !== yt.shouldComponentUpdate &&
+          ? l.shouldComponentUpdate !== _t.shouldComponentUpdate &&
             console.warn(
               "Use `shouldComponentUpdate` in an `observer` based component breaks the behavior of `observer` and might lead to unexpected results. Manually implementing `sCU` should not be needed when using mobx-react."
             )
-          : (l.shouldComponentUpdate = yt.shouldComponentUpdate),
+          : (l.shouldComponentUpdate = _t.shouldComponentUpdate),
         (n.isMobXReactObserver = !0),
-        bt(u, "props"),
-        bt(u, "state");
+        Et(u, "props"),
+        Et(u, "state");
       var s = u.render;
       return (
         (u.render = function () {
           return function (e) {
             var t = this;
-            if (!0 === ot) return e.call(this);
+            if (!0 === ut) return e.call(this);
             function n() {
               var e = this;
               a = !1;
@@ -7264,17 +7343,17 @@ PERFORMANCE OF THIS SOFTWARE.
                 n = void 0;
               if (
                 (l.track(function () {
-                  rt && (e.__$mobRenderStart = Date.now());
+                  lt && (e.__$mobRenderStart = Date.now());
                   try {
                     n = Object(f.d)(!1, i);
                   } catch (e) {
                     t = e;
                   }
-                  rt && (e.__$mobRenderEnd = Date.now());
+                  lt && (e.__$mobRenderEnd = Date.now());
                 }),
                 t)
               )
-                throw (ht.emit(t), t);
+                throw (bt.emit(t), t);
               return n;
             }
             var r =
@@ -7289,7 +7368,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 (this._reactInternalInstance &&
                   this._reactInternalInstance._debugID) ||
                 (this._reactInternalFiber && this._reactInternalFiber._debugID);
-            ft(this, ut, !1), ft(this, st, !1);
+            mt(this, pt, !1), mt(this, dt, !1);
             var i = e.bind(this),
               a = !1,
               l = new f.c(
@@ -7300,22 +7379,22 @@ PERFORMANCE OF THIS SOFTWARE.
                     ((a = !0),
                     "function" == typeof t.componentWillReact &&
                       t.componentWillReact(),
-                    !0 !== t[nt])
+                    !0 !== t[at])
                   ) {
                     var e = !0;
                     try {
-                      ft(t, st, !0),
-                        t[ut] || p.Component.prototype.forceUpdate.call(t),
+                      mt(t, dt, !0),
+                        t[pt] || j.Component.prototype.forceUpdate.call(t),
                         (e = !1);
                     } finally {
-                      ft(t, st, !1), e && l.dispose();
+                      mt(t, dt, !1), e && l.dispose();
                     }
                   }
                 }
               );
             return (
               (l.reactComponent = this),
-              (n[tt] = l),
+              (n[it] = l),
               (this.render = n).call(this)
             );
           }.call(this, s);
@@ -7323,7 +7402,7 @@ PERFORMANCE OF THIS SOFTWARE.
         n
       );
     }
-    var wt = gt(function (e) {
+    var kt = St(function (e) {
       var t = e.children,
         n = e.inject,
         r = e.render,
@@ -7333,11 +7412,11 @@ PERFORMANCE OF THIS SOFTWARE.
       console.warn(
         "<Observer inject=.../> is no longer supported. Please use inject on the enclosing component instead"
       );
-      var i = et(n)(o);
-      return d.a.createElement(i, null);
+      var i = ot(n)(o);
+      return z.a.createElement(i, null);
     });
-    wt.displayName = "Observer";
-    function _t(e, t, n, r, o) {
+    kt.displayName = "Observer";
+    function xt(e, t, n, r, o) {
       var i = "children" === t ? "render" : "children";
       return "function" == typeof e[t] && "function" == typeof e[i]
         ? new Error(
@@ -7349,18 +7428,18 @@ PERFORMANCE OF THIS SOFTWARE.
             "Invalid prop `" +
               o +
               "` of type `" +
-              he(e[t]) +
+              be(e[t]) +
               "` supplied to `" +
               n +
               "`, expected `function`."
           )
         : void 0;
     }
-    function Et() {
+    function Tt() {
       var e = this.constructor.getDerivedStateFromProps(this.props, this.state);
       null != e && this.setState(e);
     }
-    function St(n) {
+    function Ct(n) {
       this.setState(
         function (e) {
           var t = this.constructor.getDerivedStateFromProps(n, e);
@@ -7368,7 +7447,7 @@ PERFORMANCE OF THIS SOFTWARE.
         }.bind(this)
       );
     }
-    function kt(e, t) {
+    function Ot(e, t) {
       try {
         var n = this.props,
           r = this.state;
@@ -7380,31 +7459,31 @@ PERFORMANCE OF THIS SOFTWARE.
         (this.props = n), (this.state = r);
       }
     }
-    wt.propTypes = { render: _t, children: _t };
-    var xt = {
-        children: (kt.__suppressDeprecationWarning = St.__suppressDeprecationWarning = Et.__suppressDeprecationWarning = !0),
+    kt.propTypes = { render: xt, children: xt };
+    var Pt = {
+        children: (Ot.__suppressDeprecationWarning = Ct.__suppressDeprecationWarning = Tt.__suppressDeprecationWarning = !0),
         key: !0,
         ref: !0,
       },
-      Tt = (function () {
+      Rt = (function () {
         function r(e, t) {
           var n;
           return (
-            me(this, r),
-            ((n = Ee(this, we(r).call(this, e, t))).state = {}),
-            Ct(e, n.state),
+            ge(this, r),
+            ((n = Te(this, ke(r).call(this, e, t))).state = {}),
+            Lt(e, n.state),
             n
           );
         }
         return (
-          ge(r, p["Component"]),
-          ye(
+          Se(r, j["Component"]),
+          _e(
             r,
             [
               {
                 key: "render",
                 value: function () {
-                  return p.Children.only(this.props.children);
+                  return j.Children.only(this.props.children);
                 },
               },
               {
@@ -7412,8 +7491,8 @@ PERFORMANCE OF THIS SOFTWARE.
                 value: function () {
                   var e = {};
                   return (
-                    Ct(this.context.mobxStores, e),
-                    Ct(this.props, e),
+                    Lt(this.context.mobxStores, e),
+                    Lt(this.props, e),
                     { mobxStores: e }
                   );
                 },
@@ -7426,15 +7505,15 @@ PERFORMANCE OF THIS SOFTWARE.
                   if (!e) return null;
                   if (!t) return e;
                   if (
-                    (Object.keys(e).filter(Ot).length !==
-                      Object.keys(t).filter(Ot).length &&
+                    (Object.keys(e).filter(Nt).length !==
+                      Object.keys(t).filter(Nt).length &&
                       console.warn(
                         "MobX Provider: The set of provided stores has changed. Please avoid changing stores as the change might not propagate to all children"
                       ),
                     !e.suppressChangedStoreWarning)
                   )
                     for (var n in e)
-                      Ot(n) &&
+                      Nt(n) &&
                         t[n] !== e[n] &&
                         console.warn(
                           "MobX Provider: Provided store '" +
@@ -7449,14 +7528,14 @@ PERFORMANCE OF THIS SOFTWARE.
           r
         );
       })();
-    function Ct(e, t) {
-      if (e) for (var n in e) Ot(n) && (t[n] = e[n]);
+    function Lt(e, t) {
+      if (e) for (var n in e) Nt(n) && (t[n] = e[n]);
     }
-    function Ot(e) {
-      return !xt[e] && "suppressChangedStoreWarning" !== e;
+    function Nt(e) {
+      return !Pt[e] && "suppressChangedStoreWarning" !== e;
     }
-    (Tt.contextTypes = { mobxStores: We }),
-      (Tt.childContextTypes = { mobxStores: We.isRequired }),
+    (Rt.contextTypes = { mobxStores: qe }),
+      (Rt.childContextTypes = { mobxStores: qe.isRequired }),
       (function (e) {
         var t = e.prototype;
         if (!t || !t.isReactComponent)
@@ -7503,14 +7582,14 @@ PERFORMANCE OF THIS SOFTWARE.
         }
         if (
           ("function" == typeof e.getDerivedStateFromProps &&
-            ((t.componentWillMount = Et), (t.componentWillReceiveProps = St)),
+            ((t.componentWillMount = Tt), (t.componentWillReceiveProps = Ct)),
           "function" == typeof t.getSnapshotBeforeUpdate)
         ) {
           if ("function" != typeof t.componentDidUpdate)
             throw new Error(
               "Cannot polyfill getSnapshotBeforeUpdate() for components that do not define componentDidUpdate() on the prototype"
             );
-          t.componentWillUpdate = kt;
+          t.componentWillUpdate = Ot;
           var l = t.componentDidUpdate;
           t.componentDidUpdate = function (e, t, n) {
             var r = this.__reactInternalSnapshotFlag
@@ -7519,36 +7598,36 @@ PERFORMANCE OF THIS SOFTWARE.
             l.call(this, e, t, r);
           };
         }
-      })(Tt);
-    He("disposeOnUnmount");
-    if (!p.Component)
+      })(Rt);
+    Qe("disposeOnUnmount");
+    if (!j.Component)
       throw new Error("mobx-react requires React to be available");
     if (!f.E) throw new Error("mobx-react requires mobx to be available");
     "function" == typeof c.unstable_batchedUpdates &&
       Object(f.l)({ reactionScheduler: c.unstable_batchedUpdates });
-    var Pt, Rt;
+    var Dt, It;
     "object" ===
       ("undefined" == typeof __MOBX_DEVTOOLS_GLOBAL_HOOK__
         ? "undefined"
-        : he(__MOBX_DEVTOOLS_GLOBAL_HOOK__)) &&
-      ((Pt = { spy: f.E, extras: { getDebugName: f.r } }),
-      (Rt = {
-        renderReporter: lt,
-        componentByNodeRegistry: at,
-        componentByNodeRegistery: at,
+        : be(__MOBX_DEVTOOLS_GLOBAL_HOOK__)) &&
+      ((Dt = { spy: f.E, extras: { getDebugName: f.r } }),
+      (It = {
+        renderReporter: ft,
+        componentByNodeRegistry: ct,
+        componentByNodeRegistery: ct,
         trackComponents: function () {
           if ("undefined" == typeof WeakMap)
             throw new Error(
               "[mobx-react] tracking components is not supported in this browser."
             );
-          rt = rt || !0;
+          lt = lt || !0;
         },
       }),
-      __MOBX_DEVTOOLS_GLOBAL_HOOK__.injectMobxReact(Rt, Pt));
-    var Nt,
-      Lt =
-        (o(Dt, (Nt = p.PureComponent)),
-        (Dt.prototype.BindResizeGrip = function (e) {
+      __MOBX_DEVTOOLS_GLOBAL_HOOK__.injectMobxReact(It, Dt));
+    var At,
+      Mt =
+        (o(jt, (At = j.PureComponent)),
+        (jt.prototype.BindResizeGrip = function (e) {
           var t,
             n,
             r = 0,
@@ -7566,28 +7645,28 @@ PERFORMANCE OF THIS SOFTWARE.
             i.SteamClient.Window.SetResizeGrip &&
             i.SteamClient.Window.SetResizeGrip(r, o);
         }),
-        (Dt.prototype.componentWillUnmount = function () {
+        (jt.prototype.componentWillUnmount = function () {
           this.props.popup.SteamClient.Window.SetResizeGrip(0, 0);
         }),
-        (Dt.prototype.render = function () {
-          return p.createElement("div", {
+        (jt.prototype.render = function () {
+          return j.createElement("div", {
             className: "window_resize_grip",
             ref: this.BindResizeGrip,
           });
         }),
-        Dt);
-    function Dt(e) {
-      var t = Nt.call(this, e) || this;
+        jt);
+    function jt(e) {
+      var t = At.call(this, e) || this;
       return (
         (t.m_fnExistingPopupInitializer = void 0),
         (t.BindResizeGrip = t.BindResizeGrip.bind(t)),
         t
       );
     }
-    var It,
-      At =
-        (o(Mt, (It = p.Component)),
-        (Mt.prototype.BIsMaximized = function () {
+    var zt,
+      Ut =
+        (o(Bt, (zt = j.Component)),
+        (Bt.prototype.BIsMaximized = function () {
           var e =
               this.props.popup.screen.availWidth - this.props.popup.innerWidth,
             t =
@@ -7595,20 +7674,20 @@ PERFORMANCE OF THIS SOFTWARE.
               this.props.popup.innerHeight;
           return 0 == e && 0 == t;
         }),
-        (Mt.prototype.componentDidMount = function () {
+        (Bt.prototype.componentDidMount = function () {
           this.props.popup.addEventListener("resize", this.UpdateMaximizeState);
         }),
-        (Mt.prototype.componentWillUnmount = function () {
+        (Bt.prototype.componentWillUnmount = function () {
           this.props.popup.removeEventListener(
             "resize",
             this.UpdateMaximizeState
           );
         }),
-        (Mt.prototype.UpdateMaximizeState = function () {
+        (Bt.prototype.UpdateMaximizeState = function () {
           var e = this.BIsMaximized();
           e != this.state.maximized && this.setState({ maximized: e });
         }),
-        (Mt.prototype.render = function () {
+        (Bt.prototype.render = function () {
           var e = this.props.popup,
             t = "title-area-icon";
           this.state.maximized
@@ -7617,20 +7696,20 @@ PERFORMANCE OF THIS SOFTWARE.
           var n = "TitleBar title-area";
           return (
             this.props.className && (n = n + " " + this.props.className),
-            p.createElement(
+            j.createElement(
               "div",
               { className: n, style: this.props.style },
-              p.createElement("div", { className: "title-area-highlight" }),
-              p.createElement(
+              j.createElement("div", { className: "title-area-highlight" }),
+              j.createElement(
                 "div",
                 { className: "title-area-children" },
                 this.props.children
               ),
               !this.props.hideActions &&
-                p.createElement(
+                j.createElement(
                   "div",
                   { className: "title-bar-actions" },
-                  p.createElement(
+                  j.createElement(
                     "div",
                     {
                       className: "title-area-icon closeButton",
@@ -7638,10 +7717,10 @@ PERFORMANCE OF THIS SOFTWARE.
                         e && e.close();
                       },
                     },
-                    p.createElement(ue, null)
+                    j.createElement(pe, null)
                   ),
                   !this.props.hideMinMax &&
-                    p.createElement(
+                    j.createElement(
                       "div",
                       {
                         className: t,
@@ -7649,11 +7728,11 @@ PERFORMANCE OF THIS SOFTWARE.
                           e.SteamClient.Window.ToggleMaximize();
                         },
                       },
-                      this.state.maximized && p.createElement(de, null),
-                      !this.state.maximized && p.createElement(fe, null)
+                      this.state.maximized && j.createElement(ye, null),
+                      !this.state.maximized && j.createElement(me, null)
                     ),
                   !this.props.hideMinMax &&
-                    p.createElement(
+                    j.createElement(
                       "div",
                       {
                         className: "title-area-icon minimizeButton",
@@ -7661,102 +7740,102 @@ PERFORMANCE OF THIS SOFTWARE.
                           e.SteamClient.Window.Minimize();
                         },
                       },
-                      p.createElement(pe, null)
+                      j.createElement(ve, null)
                     )
                 )
             )
           );
         }),
-        i([h], Mt.prototype, "UpdateMaximizeState", null),
-        Mt);
-    function Mt(e) {
-      var t = It.call(this, e) || this;
+        i([v], Bt.prototype, "UpdateMaximizeState", null),
+        Bt);
+    function Bt(e) {
+      var t = zt.call(this, e) || this;
       return (t.state = { maximized: t.BIsMaximized() }), t;
     }
-    var jt,
-      zt,
-      Ut,
-      Bt =
-        (o(Ft, (jt = d.a.PureComponent)),
-        (Ft.prototype.AddSizeClass = function (e) {
+    var Ft,
+      Wt,
+      Vt,
+      Gt =
+        (o(Ht, (Ft = z.a.PureComponent)),
+        (Ht.prototype.AddSizeClass = function (e) {
           "small" == this.props.size
-            ? e.push(le.a.throbber_small)
+            ? e.push(fe.a.throbber_small)
             : "medium" == this.props.size
-            ? e.push(le.a.throbber_medium)
+            ? e.push(fe.a.throbber_medium)
             : "xlarge" == this.props.size
-            ? e.push(le.a.throbber_xlarge)
+            ? e.push(fe.a.throbber_xlarge)
             : "xxlarge" == this.props.size
-            ? e.push(le.a.throbber_xxlarge)
-            : e.push(le.a.throbber_large);
+            ? e.push(fe.a.throbber_xxlarge)
+            : e.push(fe.a.throbber_large);
         }),
-        (Ft.prototype.render = function () {
-          var e = [le.a.LoadingWrapper, "SteamLogoThrobber"];
+        (Ht.prototype.render = function () {
+          var e = [fe.a.LoadingWrapper, "SteamLogoThrobber"];
           this.AddSizeClass(e),
-            void 0 === this.props.string && e.push(le.a.noString),
+            void 0 === this.props.string && e.push(fe.a.noString),
             this.props.className && e.push(this.props.className),
-            this.props.static && e.push(le.a.Static);
-          var t = d.a.createElement(
+            this.props.static && e.push(fe.a.Static);
+          var t = z.a.createElement(
             "div",
             { className: e.join(" ") },
-            d.a.createElement(
+            z.a.createElement(
               "div",
-              { className: le.a.Throbber },
-              d.a.createElement(ce, { className: le.a.base }),
-              d.a.createElement(ce, { className: le.a.blur })
+              { className: fe.a.Throbber },
+              z.a.createElement(he, { className: fe.a.base }),
+              z.a.createElement(he, { className: fe.a.blur })
             )
           );
-          return d.a.createElement(
+          return z.a.createElement(
             "div",
             {
               className:
                 "center" == this.props.position
-                  ? le.a.throbber_center_wrapper
+                  ? fe.a.throbber_center_wrapper
                   : "",
             },
             t,
             Boolean(this.props.string) &&
-              d.a.createElement(
+              z.a.createElement(
                 "div",
-                { className: le.a.ThrobberText },
+                { className: fe.a.ThrobberText },
                 this.props.string
               )
           );
         }),
-        Ft);
-    function Ft(e) {
-      return jt.call(this, e) || this;
+        Ht);
+    function Ht(e) {
+      return Ft.call(this, e) || this;
     }
-    ((Ut = zt = zt || {})[(Ut.SignIn = 0)] = "SignIn"),
-      (Ut[(Ut.Loading = 1)] = "Loading"),
-      (Ut[(Ut.Loaded = 2)] = "Loaded"),
-      (Ut[(Ut.FailRetry = 3)] = "FailRetry"),
-      (Ut[(Ut.OfflineMode = 4)] = "OfflineMode");
-    var Wt =
-      ((Vt.prototype.Init = function () {
-        this.m_eState = zt.SignIn;
+    ((Vt = Wt = Wt || {})[(Vt.SignIn = 0)] = "SignIn"),
+      (Vt[(Vt.Loading = 1)] = "Loading"),
+      (Vt[(Vt.Loaded = 2)] = "Loaded"),
+      (Vt[(Vt.FailRetry = 3)] = "FailRetry"),
+      (Vt[(Vt.OfflineMode = 4)] = "OfflineMode");
+    var qt =
+      ((Kt.prototype.Init = function () {
+        this.m_eState = Wt.SignIn;
       }),
-      Object.defineProperty(Vt.prototype, "loadingState", {
+      Object.defineProperty(Kt.prototype, "loadingState", {
         get: function () {
           return this.m_eState;
         },
         enumerable: !1,
         configurable: !0,
       }),
-      (Vt.prototype.SetLoadingState = function (e) {
+      (Kt.prototype.SetLoadingState = function (e) {
         this.m_eState = e;
       }),
-      i([f.z], Vt.prototype, "m_eState", void 0),
-      Vt);
-    function Vt() {
-      this.m_eState = zt.SignIn;
+      i([f.z], Kt.prototype, "m_eState", void 0),
+      Kt);
+    function Kt() {
+      this.m_eState = Wt.SignIn;
     }
-    var Gt,
-      Ht =
-        (o(qt, (Gt = p.Component)),
-        (qt.prototype.ContextMenu = function (e) {
+    var $t,
+      Qt =
+        (o(Yt, ($t = j.Component)),
+        (Yt.prototype.ContextMenu = function (e) {
           e.preventDefault(), e.stopPropagation();
         }),
-        (qt.prototype.componentDidMount = function () {
+        (Yt.prototype.componentDidMount = function () {
           var t = this;
           SteamClient.WebChat.GetLocalPersonaName().then(function (e) {
             t.m_strPersonaName = e;
@@ -7765,7 +7844,7 @@ PERFORMANCE OF THIS SOFTWARE.
               t.m_strAvatarSource = e;
             });
         }),
-        (qt.prototype.render = function () {
+        (Yt.prototype.render = function () {
           var e = this.props.offlineStore.loadingState,
             t = this.m_strPersonaName,
             n = this.m_strAvatarSource,
@@ -7775,118 +7854,118 @@ PERFORMANCE OF THIS SOFTWARE.
             "chat_main fullheight responsive_friends friends_loading_error";
           return (
             this.props.popup && this.props.popup.focused && (o += " focused"),
-            p.createElement(
+            j.createElement(
               "div",
               { className: o, onContextMenu: this.ContextMenu },
-              p.createElement(
+              j.createElement(
                 "div",
                 { className: "friendsListContainer fullheight" },
-                p.createElement(
+                j.createElement(
                   "div",
                   { className: "friendlist" },
-                  p.createElement(At, { popup: this.props.popup.window }),
-                  p.createElement(
+                  j.createElement(Ut, { popup: this.props.popup.window }),
+                  j.createElement(
                     "div",
                     { className: "currentUserContainer" },
-                    p.createElement(
+                    j.createElement(
                       "div",
                       { className: "AvatarAndUser" },
                       "" != n &&
-                        p.createElement("img", { className: r, src: n }),
-                      "" == n && p.createElement("div", { className: r }),
-                      p.createElement(
+                        j.createElement("img", { className: r, src: n }),
+                      "" == n && j.createElement("div", { className: r }),
+                      j.createElement(
                         "div",
                         { className: "labelHolder" },
-                        p.createElement(
+                        j.createElement(
                           "div",
                           { className: "statusAndName" },
-                          p.createElement("div", { className: "playerName" }, t)
+                          j.createElement("div", { className: "playerName" }, t)
                         ),
-                        p.createElement(
+                        j.createElement(
                           "div",
                           { className: "richPresenceContainer" },
-                          p.createElement(
+                          j.createElement(
                             "div",
                             { className: "gameName richPresenceLabel" },
-                            W("#FriendsList_Offline_Disconnected")
+                            K("#FriendsList_Offline_Disconnected")
                           )
                         )
                       )
                     )
                   ),
-                  p.createElement(
+                  j.createElement(
                     "div",
                     { className: "FriendsFailureContainer" },
-                    p.createElement(
+                    j.createElement(
                       "div",
                       { className: "friendsListInsetShadowCtn" },
-                      p.createElement("div", {
+                      j.createElement("div", {
                         className: "frienListInsetShadowTop",
                       })
                     ),
-                    e == zt.SignIn && p.createElement(Qt, null),
-                    e == zt.Loading && p.createElement(Kt, null),
-                    e == zt.FailRetry && p.createElement($t, null),
-                    e == zt.OfflineMode && p.createElement(Xt, null)
+                    e == Wt.SignIn && j.createElement(Zt, null),
+                    e == Wt.Loading && j.createElement(Xt, null),
+                    e == Wt.FailRetry && j.createElement(Jt, null),
+                    e == Wt.OfflineMode && j.createElement(en, null)
                   )
                 ),
-                p.createElement(Lt, { popup: this.props.popup.window })
+                j.createElement(Mt, { popup: this.props.popup.window })
               )
             )
           );
         }),
-        i([f.z], qt.prototype, "m_strPersonaName", void 0),
-        i([f.z], qt.prototype, "m_strAvatarSource", void 0),
-        i([h], qt.prototype, "ContextMenu", null),
-        i([gt], qt));
-    function qt() {
-      return (null !== Gt && Gt.apply(this, arguments)) || this;
+        i([f.z], Yt.prototype, "m_strPersonaName", void 0),
+        i([f.z], Yt.prototype, "m_strAvatarSource", void 0),
+        i([v], Yt.prototype, "ContextMenu", null),
+        i([St], Yt));
+    function Yt() {
+      return (null !== $t && $t.apply(this, arguments)) || this;
     }
-    function Kt() {
-      return p.createElement(
+    function Xt() {
+      return j.createElement(
         "div",
         null,
-        p.createElement(
+        j.createElement(
           "div",
           null,
-          p.createElement(Bt, {
+          j.createElement(Gt, {
             className: "friendsThrobber",
             size: "large",
-            string: W("#FriendsList_StillLoadingSummary"),
+            string: K("#FriendsList_StillLoadingSummary"),
             position: "center",
           })
         ),
-        p.createElement("div", { className: "summaryText" }),
-        p.createElement(
+        j.createElement("div", { className: "summaryText" }),
+        j.createElement(
           "div",
           { className: "detailText" },
-          W("#FriendsList_StillLoadingDetail")
+          K("#FriendsList_StillLoadingDetail")
         )
       );
     }
-    function $t() {
-      return p.createElement(
+    function Jt() {
+      return j.createElement(
         "div",
         null,
-        p.createElement(
+        j.createElement(
           "div",
           { className: "cautionIcon" },
-          p.createElement(se, null)
+          j.createElement(de, null)
         ),
-        p.createElement(
+        j.createElement(
           "div",
           { className: "summaryText" },
-          W("#FriendsList_OfflineOrFailure")
+          K("#FriendsList_OfflineOrFailure")
         ),
-        p.createElement(
+        j.createElement(
           "div",
           { className: "detailText" },
-          W("#FriendsList_OfflineDetail")
+          K("#FriendsList_OfflineDetail")
         ),
-        p.createElement(
+        j.createElement(
           "div",
           null,
-          p.createElement(
+          j.createElement(
             "button",
             {
               className: "retryButton",
@@ -7898,29 +7977,29 @@ PERFORMANCE OF THIS SOFTWARE.
                   );
               },
             },
-            W("#Friends_RetryLoading")
+            K("#Friends_RetryLoading")
           )
         )
       );
     }
-    function Qt() {
-      return p.createElement(
+    function Zt() {
+      return j.createElement(
         "div",
         null,
-        p.createElement(
+        j.createElement(
           "div",
           { className: "summaryText" },
-          W("#FriendsList_SignedOut")
+          K("#FriendsList_SignedOut")
         ),
-        p.createElement(
+        j.createElement(
           "div",
           { className: "detailText" },
-          W("#FriendsList_SignedOut_Detail")
+          K("#FriendsList_SignedOut_Detail")
         ),
-        p.createElement(
+        j.createElement(
           "div",
           null,
-          p.createElement(
+          j.createElement(
             "button",
             {
               className: "retryButton",
@@ -7931,72 +8010,72 @@ PERFORMANCE OF THIS SOFTWARE.
                 );
               },
             },
-            W("#Friends_SignIn")
+            K("#Friends_SignIn")
           )
         )
       );
     }
-    function Xt() {
-      return p.createElement(
+    function en() {
+      return j.createElement(
         "div",
         null,
-        p.createElement(
+        j.createElement(
           "div",
           { className: "summaryText" },
-          W("#FriendsList_OfflineMode")
+          K("#FriendsList_OfflineMode")
         ),
-        p.createElement(
+        j.createElement(
           "div",
           { className: "detailText" },
-          W("#FriendsList_OfflineMode_Detail")
+          K("#FriendsList_OfflineMode_Detail")
         )
       );
     }
-    var Jt,
-      Yt =
-        (o(Zt, (Jt = Z)),
-        (Zt.prototype.GetSavedDimensionsKey = function () {
+    var tn,
+      nn =
+        (o(rn, (tn = oe)),
+        (rn.prototype.GetSavedDimensionsKey = function () {
           return this.m_strSavedDimensionsKey;
         }),
-        (Zt.prototype.OnResizeComplete = function (e) {
+        (rn.prototype.OnResizeComplete = function (e) {
           window.parent.postMessage(
             { message: "ErrorPopupRestoreDetailsChanged", data: e },
             "https://steamloopback.host"
           );
         }),
-        (Zt.prototype.Render = function (e, t) {
+        (rn.prototype.Render = function (e, t) {
           t.setAttribute("class", "fullheight popup_chat_frame"),
             c.render(
-              p.createElement(Ht, {
+              j.createElement(Qt, {
                 popup: this,
                 offlineStore: this.m_offlineStore,
               }),
               t
             );
         }),
-        (Zt.prototype.OnClose = function () {
-          Jt.prototype.OnClose.call(this),
+        (rn.prototype.OnClose = function () {
+          tn.prototype.OnClose.call(this),
             window.parent.postMessage(
               { message: "ErrorPopupClosed" },
               "https://steamloopback.host"
             );
         }),
-        Zt);
-    function Zt(e, t) {
+        rn);
+    function rn(e, t) {
       var n = this,
         r = {
           dimensions: { width: 300, height: 650 },
           minWidth: 226,
           minHeight: 400,
-          title: W("#WindowTitle_FriendsList"),
+          title: K("#WindowTitle_FriendsList"),
           html_class: "client_chat_frame fullheight SavedDimensionsPopup",
           body_class: "fullheight",
-          eCreationFlags: H.Resizable,
+          eCreationFlags: X.Resizable,
           target_browser: t,
         };
       return (
         ((n =
-          Jt.call(
+          tn.call(
             this,
             "offlinefriendslist",
             "PopupFriendsListDimensions",
@@ -8006,11 +8085,11 @@ PERFORMANCE OF THIS SOFTWARE.
         n
       );
     }
-    var en = n("vDqi"),
-      tn = n.n(en);
-    function nn(e) {
+    var on = n("vDqi"),
+      an = n.n(on);
+    function ln(e) {
       function t(e, t, n) {
-        return tn.a
+        return an.a
           .get(
             "https://steamloopback.host/localization/" + e + "_" + t + ".json"
           )
@@ -8036,7 +8115,7 @@ PERFORMANCE OF THIS SOFTWARE.
             o = e;
           })
         );
-      var l = B.GetLanguageFallback(e);
+      var l = H.GetLanguageFallback(e);
       return (
         e != l &&
           (a.push(
@@ -8050,11 +8129,11 @@ PERFORMANCE OF THIS SOFTWARE.
             })
           )),
         Promise.all(a).then(function () {
-          K.InitFromObjects(n, r, o, i);
+          Y.InitFromObjects(n, r, o, i);
         })
       );
     }
-    function rn(e) {
+    function un(e) {
       var t,
         n = e.split(".");
       return (
@@ -8123,52 +8202,52 @@ PERFORMANCE OF THIS SOFTWARE.
           }
         });
       });
-    var on,
-      an = "",
-      ln = "",
-      un = void 0,
-      sn = void 0,
-      cn = void 0,
-      fn = 0,
-      pn = [],
-      dn = "",
+    var sn,
+      cn = "",
+      fn = "",
+      pn = void 0,
+      dn = void 0,
       hn = void 0,
-      mn = void 0,
-      vn = 0,
-      yn = 0,
+      mn = 0,
+      vn = [],
+      yn = "",
       bn = void 0,
-      gn = !1,
-      wn = !1;
-    function _n(e) {
+      gn = void 0,
+      wn = 0,
+      _n = 0,
+      En = void 0,
+      Sn = !1,
+      kn = !1;
+    function xn(e) {
       if (
-        (SteamClient.WebChat.RegisterForFriendPostMessage(Nn),
-        void 0 !== cn && (clearInterval(cn), (cn = void 0)),
-        (an = e),
-        on.SetLoadingState(zt.Loading),
-        (vn = 0),
-        En(),
-        gn)
+        (SteamClient.WebChat.RegisterForFriendPostMessage(An),
+        void 0 !== hn && (clearInterval(hn), (hn = void 0)),
+        (cn = e),
+        sn.SetLoadingState(Wt.Loading),
+        (wn = 0),
+        Tn(),
+        Sn)
       )
-        return on.SetLoadingState(zt.FailRetry), void Dn();
-      wn
-        ? Dn()
-        : ((sn = setTimeout(xn, 4e3)),
-          (un = setTimeout(kn, 1e3)),
+        return sn.SetLoadingState(Wt.FailRetry), void jn();
+      kn
+        ? jn()
+        : ((dn = setTimeout(Pn, 4e3)),
+          (pn = setTimeout(On, 1e3)),
           SteamClient.WebChat.GetWebChatURL().then(function (e) {
             var t;
-            (ln = e),
-              void 0 !== un && (clearTimeout(un), (un = void 0)),
+            (fn = e),
+              void 0 !== pn && (clearTimeout(pn), (pn = void 0)),
               e
                 ? ((t = new URL(e)).searchParams.set("origin", window.origin),
-                  (ln = t.href),
+                  (fn = t.href),
                   console.log("Loading chat from url: ", t.href),
                   (function t(e) {
-                    console.log("Checking network... " + fn);
+                    console.log("Checking network... " + mn);
                     var n = 7500;
-                    0 == fn ? (n = 500) : 1 == fn && (n = 2e3);
+                    0 == mn ? (n = 500) : 1 == mn && (n = 2e3);
                     var r = e;
-                    ++fn;
-                    tn.a
+                    ++mn;
+                    an.a
                       .head(e, { timeout: n })
                       .then(function (e) {
                         void 0 === e.headers["x-buildtimestamp"] &&
@@ -8177,68 +8256,68 @@ PERFORMANCE OF THIS SOFTWARE.
                           ),
                           console.log(
                             "Network check (head req) passed after " +
-                              fn +
+                              mn +
                               " tries..."
                           ),
-                          Sn(r);
+                          Cn(r);
                       })
                       .catch(function (e) {
-                        console.log("Network check try " + fn + " failed..."),
-                          3 <= fn ? kn() : t(r);
+                        console.log("Network check try " + mn + " failed..."),
+                          3 <= mn ? On() : t(r);
                       });
                   })(t.href))
-                : (En(),
+                : (Tn(),
                   console.log("Empty webchat URL, we are in offline mode"),
-                  on.SetLoadingState(zt.OfflineMode));
+                  sn.SetLoadingState(Wt.OfflineMode));
           }));
     }
-    function En() {
-      void 0 !== un && (clearTimeout(un), (un = void 0)),
-        void 0 !== sn && (clearTimeout(sn), (sn = void 0));
-    }
-    function Sn(e) {
-      console.log("Loading chat from url: ", e),
-        void 0 !== un && clearTimeout(un),
-        (un = setTimeout(kn, 15e3)),
-        (document.getElementById(an).src = e);
-    }
-    function kn() {
-      console.log("Failed to load chat!"),
-        En(),
-        on.SetLoadingState(zt.FailRetry),
-        Dn();
-    }
-    function xn() {
-      on.loadingState != zt.Loaded && Dn(), (sn = void 0);
-    }
     function Tn() {
-      var e = document.getElementById(an);
-      e && null != e.src && (e.src = void 0),
-        SteamClient.WebChat.RegisterForFriendPostMessage(Nn),
-        SteamClient.WebChat.RegisterOverlayChatBrowserInfoChanged(Rn);
+      void 0 !== pn && (clearTimeout(pn), (pn = void 0)),
+        void 0 !== dn && (clearTimeout(dn), (dn = void 0));
     }
-    function Cn() {
-      (fn = 0), _n("tracked_frame_friends_chat");
+    function Cn(e) {
+      console.log("Loading chat from url: ", e),
+        void 0 !== pn && clearTimeout(pn),
+        (pn = setTimeout(On, 15e3)),
+        (document.getElementById(cn).src = e);
     }
     function On() {
-      Pn(!1);
+      console.log("Failed to load chat!"),
+        Tn(),
+        sn.SetLoadingState(Wt.FailRetry),
+        jn();
     }
-    function Pn(l) {
+    function Pn() {
+      sn.loadingState != Wt.Loaded && jn(), (dn = void 0);
+    }
+    function Rn() {
+      var e = document.getElementById(cn);
+      e && null != e.src && (e.src = void 0),
+        SteamClient.WebChat.RegisterForFriendPostMessage(An),
+        SteamClient.WebChat.RegisterOverlayChatBrowserInfoChanged(In);
+    }
+    function Ln() {
+      (mn = 0), xn("tracked_frame_friends_chat");
+    }
+    function Nn() {
+      Dn(!1);
+    }
+    function Dn(l) {
       SteamClient.WebChat.GetWebChatURL().then(function (a) {
         console.log("Checking for updates from chat from url: ", a),
-          void 0 !== un && (clearTimeout(un), (un = void 0)),
-          tn.a
+          void 0 !== pn && (clearTimeout(pn), (pn = void 0)),
+          an.a
             .head(a, { timeout: 1e4 })
             .then(function (e) {
               var t, n, r, o, i;
               void 0 !== e.headers["x-buildtimestamp"] &&
-                ((yn = Number(e.headers["x-buildtimestamp"])),
-                console.log("Currently available build: " + yn),
+                ((_n = Number(e.headers["x-buildtimestamp"])),
+                console.log("Currently available build: " + _n),
                 (t = l ? 0 : 86400),
-                0 != yn &&
-                  0 != vn &&
-                  ((n = yn - vn),
-                  on.loadingState == zt.Loaded &&
+                0 != _n &&
+                  0 != wn &&
+                  ((n = _n - wn),
+                  sn.loadingState == Wt.Loaded &&
                     t < n &&
                     ((r = 604800 < n),
                     (o = Number(e.headers["x-forceuiupdate"]) || l),
@@ -8262,33 +8341,33 @@ PERFORMANCE OF THIS SOFTWARE.
             });
       });
     }
-    function Rn() {
+    function In() {
       SteamClient.WebChat.GetOverlayChatBrowserInfo()
         .then(function (e) {
-          for (var t = new Map(), n = 0; n < pn.length; ++n)
-            pn[n].browser_info &&
-              0 != pn[n].browser_info.m_unPID &&
-              t.set(pn[n].browser_info.m_unPID, !0);
+          for (var t = new Map(), n = 0; n < vn.length; ++n)
+            vn[n].browser_info &&
+              0 != vn[n].browser_info.m_unPID &&
+              t.set(vn[n].browser_info.m_unPID, !0);
           for (var r = 0, o = e; r < o.length; r++) {
             var i = o[r];
             t.delete(i.unPID);
           }
-          for (n = pn.length - 1; 0 <= n; n--)
-            null != pn[n].browser_info &&
-              t.has(pn[n].browser_info.m_unPID) &&
+          for (n = vn.length - 1; 0 <= n; n--)
+            null != vn[n].browser_info &&
+              t.has(vn[n].browser_info.m_unPID) &&
               (console.log(
                 "Deleting error/offline dialog for: " +
-                  pn[n].browser_info.m_unPID
+                  vn[n].browser_info.m_unPID
               ),
-              pn[n].Close(),
-              (pn[n] = void 0),
-              pn.pop());
+              vn[n].Close(),
+              (vn[n] = void 0),
+              vn.pop());
         })
         .catch(function (e) {
           console.log("Failed to load overlay browser info:", e);
         });
     }
-    function Nn(e) {
+    function An(e) {
       var t,
         n,
         r = e.data;
@@ -8299,90 +8378,90 @@ PERFORMANCE OF THIS SOFTWARE.
             (t = { m_unPID: 0, m_nBrowserID: -1 }),
             void 0 !== e.data.pid &&
               (t = { m_unPID: e.data.pid, m_nBrowserID: e.data.browserid }),
-            Dn(t))
+            jn(t))
           : "SetPersonaState" != r.command ||
             (0 != (n = r.persona_state) &&
-              ((mn = n), (fn = 0), _n("tracked_frame_friends_chat"))));
+              ((gn = n), (mn = 0), xn("tracked_frame_friends_chat"))));
     }
-    function Ln(e, t, n) {
-      "SignInToFriends" == t && Cn();
+    function Mn(e, t, n) {
+      "SignInToFriends" == t && Ln();
     }
-    function Dn(e) {
+    function jn(e) {
       void 0 === e && (e = void 0),
         (null != e && null != e) || (e = { m_unPID: 0, m_nBrowserID: -1 });
-      for (var t = 0; t < pn.length; ++t)
+      for (var t = 0; t < vn.length; ++t)
         if (
-          pn[t].browser_info.m_nBrowserID == e.m_nBrowserID &&
-          pn[t].browser_info.m_unPID == e.m_unPID
+          vn[t].browser_info.m_nBrowserID == e.m_nBrowserID &&
+          vn[t].browser_info.m_unPID == e.m_unPID
         )
-          return pn[t].Show(), void (hn = !0);
-      var n = new Yt(on, e);
-      pn.push(n), n.Show(), (hn = !0);
+          return vn[t].Show(), void (bn = !0);
+      var n = new nn(sn, e);
+      vn.push(n), n.Show(), (bn = !0);
     }
     window.addEventListener("message", function (e) {
       if ("object" != typeof e.data || null == e.data.message) return;
       if ("ShowFriendsErrorRetryDialog" == e.data.message)
-        En(), Tn(), on.SetLoadingState(zt.FailRetry), Dn();
+        Tn(), Rn(), sn.SetLoadingState(Wt.FailRetry), jn();
       else if ("ChatJavascriptInitialized" == e.data.message) {
-        on.SetLoadingState(zt.Loaded), En();
-        var t = ln.match(/(https:\/\/[^\/]+)\/.*/)[1];
+        sn.SetLoadingState(Wt.Loaded), Tn();
+        var t = fn.match(/(https:\/\/[^\/]+)\/.*/)[1];
         if (
           (window.frames[0].postMessage(
-            { message: "LoaderWindowRestoreDetails", data: dn, bVisible: hn },
+            { message: "LoaderWindowRestoreDetails", data: yn, bVisible: bn },
             t
           ),
-          void 0 !== mn &&
+          void 0 !== gn &&
             (window.frames[0].postMessage(
-              { message: "SetPersonaState", persona_state: mn },
+              { message: "SetPersonaState", persona_state: gn },
               t
             ),
-            (mn = void 0)),
-          (vn = void 0 !== e.data.data ? e.data.data : 0),
-          null != bn)
+            (gn = void 0)),
+          (wn = void 0 !== e.data.data ? e.data.data : 0),
+          null != En)
         )
           try {
             window.frames[0].postMessage(
-              { message: "ReloadSerializedChatState", state: bn },
+              { message: "ReloadSerializedChatState", state: En },
               t
             ),
-              (bn = void 0);
+              (En = void 0);
           } catch (e) {
             console.log(
               "Failed trying to ask FriendsUI to restore chat state after reload"
             ),
-              (bn = void 0);
+              (En = void 0);
           }
-        (cn = setInterval(On, 144e5)),
+        (hn = setInterval(Nn, 144e5)),
           (function () {
-            for (var e = 0; e < pn.length; ++e) pn[e].Close(), (pn[e] = void 0);
-            pn = [];
+            for (var e = 0; e < vn.length; ++e) vn[e].Close(), (vn[e] = void 0);
+            vn = [];
           })(),
-          console.log("Chat loaded! " + vn);
+          console.log("Chat loaded! " + wn);
       } else if ("ChatReloadRequest" == e.data.message) {
-        if (null == an || "" == an) return;
-        (fn = 0), null != e.data.state && (bn = e.data.state), _n(an);
+        if (null == cn || "" == cn) return;
+        (mn = 0), null != e.data.state && (En = e.data.state), xn(cn);
       } else {
         var n, r;
         "CheckForAndForceUpdate" == e.data.message
-          ? Pn(!0)
+          ? Dn(!0)
           : "SignInRequest" == e.data.message
-          ? Cn()
+          ? Ln()
           : "SignOutRequest" == e.data.message
-          ? (En(),
-            Tn(),
-            on.SetLoadingState(zt.SignIn),
-            (hn = e.data.bShowLoaderWindow),
+          ? (Tn(),
+            Rn(),
+            sn.SetLoadingState(Wt.SignIn),
+            (bn = e.data.bShowLoaderWindow),
             e.data.bShowLoaderWindow &&
               ((n = void 0),
               e.data.browserContext && (n = e.data.browserContext),
-              Dn(n)))
+              jn(n)))
           : "FriendsListRestoreDetailsChanged" == e.data.message
           ? ((r = e.data.data),
-            new Yt(on, void 0).SaveWindowPosition(r),
-            (dn = r))
+            new nn(sn, void 0).SaveWindowPosition(r),
+            (yn = r))
           : "ErrorPopupRestoreDetailsChanged" == e.data.message
-          ? (dn = e.data.data)
-          : "ErrorPopupClosed" == e.data.message && (hn = !1);
+          ? (yn = e.data.data)
+          : "ErrorPopupClosed" == e.data.message && (bn = !1);
       }
     }),
       document.addEventListener("DOMContentLoaded", function () {
@@ -8393,13 +8472,13 @@ PERFORMANCE OF THIS SOFTWARE.
               switch (e.label) {
                 case 0:
                   return (
-                    (on = new Wt()).Init(),
+                    (sn = new qt()).Init(),
                     [4, SteamClient.WebChat.GetWebChatLanguage()]
                   );
                 case 1:
                   (t = e.sent()), (e.label = 2);
                 case 2:
-                  return e.trys.push([2, 4, , 5]), [4, nn(t)];
+                  return e.trys.push([2, 4, , 5]), [4, ln(t)];
                 case 3:
                   return e.sent(), [3, 5];
                 case 4:
@@ -8410,14 +8489,14 @@ PERFORMANCE OF THIS SOFTWARE.
                   );
                 case 5:
                   return (
-                    SteamClient.WebChat.RegisterForFriendPostMessage(Nn),
+                    SteamClient.WebChat.RegisterForFriendPostMessage(An),
                     SteamClient.WebChat.RegisterOverlayChatBrowserInfoChanged(
-                      Rn
+                      In
                     ),
-                    rn("Messaging.RegisterForMessages") &&
+                    un("Messaging.RegisterForMessages") &&
                       SteamClient.Messaging.RegisterForMessages(
                         "FriendsLoader",
-                        Ln
+                        Mn
                       ),
                     [4, SteamClient.WebChat.GetSignIntoFriendsOnStart()]
                   );
@@ -8425,13 +8504,13 @@ PERFORMANCE OF THIS SOFTWARE.
                   return e.sent()
                     ? [4, SteamClient.WebChat.GetCurrentUserAccountID()]
                     : (console.log("Don't sign in on start"),
-                      on.SetLoadingState(zt.SignIn),
+                      sn.SetLoadingState(Wt.SignIn),
                       [2]);
                 case 7:
                   return (
                     (n = e.sent()),
-                    ie.SetCurrentLoggedInAccountID(n),
-                    _n("tracked_frame_friends_chat"),
+                    se.SetCurrentLoggedInAccountID(n),
+                    xn("tracked_frame_friends_chat"),
                     [2]
                   );
               }
@@ -8901,7 +8980,7 @@ PERFORMANCE OF THIS SOFTWARE.
     }
     var P = /\/+/g,
       R = [];
-    function N(e, t, n, r) {
+    function L(e, t, n, r) {
       if (R.length) {
         var o = R.pop();
         return (
@@ -8915,7 +8994,7 @@ PERFORMANCE OF THIS SOFTWARE.
       }
       return { result: e, keyPrefix: t, func: n, context: r, count: 0 };
     }
-    function L(e) {
+    function N(e) {
       (e.result = null),
         (e.keyPrefix = null),
         (e.func = null),
@@ -9022,8 +9101,8 @@ PERFORMANCE OF THIS SOFTWARE.
     function j(e, t, n, r, o) {
       var i = "";
       null != n && (i = ("" + n).replace(P, "$&/") + "/"),
-        D(e, M, (t = N(t, i, r, o))),
-        L(t);
+        D(e, M, (t = L(t, i, r, o))),
+        N(t);
     }
     var z = { current: null };
     function U() {
@@ -9046,7 +9125,7 @@ PERFORMANCE OF THIS SOFTWARE.
       },
       forEach: function (e, t, n) {
         if (null == e) return e;
-        D(e, A, (t = N(null, null, t, n))), L(t);
+        D(e, A, (t = L(null, null, t, n))), N(t);
       },
       count: function (e) {
         return D(
@@ -9511,10 +9590,10 @@ PERFORMANCE OF THIS SOFTWARE.
         t && ((t = a(t)), C(e.stateNode, e.type, t));
       }
     }
-    function N(e) {
+    function L(e) {
       O ? (P ? P.push(e) : (P = [e])) : (O = e);
     }
-    function L() {
+    function N() {
       if (O) {
         var e = O,
           t = P;
@@ -9532,7 +9611,7 @@ PERFORMANCE OF THIS SOFTWARE.
       j = !1,
       z = !1;
     function U() {
-      (null === O && null === P) || (A(), L());
+      (null === O && null === P) || (A(), N());
     }
     function B(e, t, n) {
       if (z) return e(t, n);
@@ -9669,8 +9748,8 @@ PERFORMANCE OF THIS SOFTWARE.
       ["src", "href", "action", "formAction"].forEach(function (e) {
         K[e] = new q(e, 1, !1, e.toLowerCase(), null, !0);
       });
-    var X = o.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
-    function J(e, t, n, r) {
+    var Y = o.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+    function X(e, t, n, r) {
       var o,
         i = K.hasOwnProperty(t) ? K[t] : null;
       (null !== i
@@ -9696,11 +9775,11 @@ PERFORMANCE OF THIS SOFTWARE.
                   3 === (i = i.type) || (4 === i && !0 === n) ? "" : "" + n),
                 r ? e.setAttributeNS(r, t, n) : e.setAttribute(t, n))));
     }
-    X.hasOwnProperty("ReactCurrentDispatcher") ||
-      (X.ReactCurrentDispatcher = { current: null }),
-      X.hasOwnProperty("ReactCurrentBatchConfig") ||
-        (X.ReactCurrentBatchConfig = { suspense: null });
-    var Y = /^(.*)[\\\/]/,
+    Y.hasOwnProperty("ReactCurrentDispatcher") ||
+      (Y.ReactCurrentDispatcher = { current: null }),
+      Y.hasOwnProperty("ReactCurrentBatchConfig") ||
+        (Y.ReactCurrentBatchConfig = { suspense: null });
+    var J = /^(.*)[\\\/]/,
       Z = "function" == typeof Symbol && Symbol.for,
       ee = Z ? Symbol.for("react.element") : 60103,
       te = Z ? Symbol.for("react.portal") : 60106,
@@ -9786,7 +9865,7 @@ PERFORMANCE OF THIS SOFTWARE.
               o
                 ? (i =
                     " (at " +
-                    o.fileName.replace(Y, "") +
+                    o.fileName.replace(J, "") +
                     ":" +
                     o.lineNumber +
                     ")")
@@ -9892,7 +9971,7 @@ PERFORMANCE OF THIS SOFTWARE.
       };
     }
     function ke(e, t) {
-      null != (t = t.checked) && J(e, "checked", t, !1);
+      null != (t = t.checked) && X(e, "checked", t, !1);
     }
     function xe(e, t) {
       ke(e, t);
@@ -9975,7 +10054,7 @@ PERFORMANCE OF THIS SOFTWARE.
         children: "" + e._wrapperState.initialValue,
       });
     }
-    function Ne(e, t) {
+    function Le(e, t) {
       var n = t.value;
       if (null == n) {
         if (((n = t.children), (t = t.defaultValue), null != n)) {
@@ -9990,7 +10069,7 @@ PERFORMANCE OF THIS SOFTWARE.
       }
       e._wrapperState = { initialValue: be(n) };
     }
-    function Le(e, t) {
+    function Ne(e, t) {
       var n = be(t.value),
         r = be(t.defaultValue);
       null != n &&
@@ -10091,14 +10170,14 @@ PERFORMANCE OF THIS SOFTWARE.
     var Ke = qe("animationend"),
       $e = qe("animationiteration"),
       Qe = qe("animationstart"),
-      Xe = qe("transitionend"),
-      Je = "abort canplay canplaythrough durationchange emptied encrypted ended error loadeddata loadedmetadata loadstart pause play playing progress ratechange seeked seeking stalled suspend timeupdate volumechange waiting".split(
+      Ye = qe("transitionend"),
+      Xe = "abort canplay canplaythrough durationchange emptied encrypted ended error loadeddata loadedmetadata loadstart pause play playing progress ratechange seeked seeking stalled suspend timeupdate volumechange waiting".split(
         " "
       ),
-      Ye = new ("function" == typeof WeakMap ? WeakMap : Map)();
+      Je = new ("function" == typeof WeakMap ? WeakMap : Map)();
     function Ze(e) {
-      var t = Ye.get(e);
-      return void 0 === t && ((t = new Map()), Ye.set(e, t)), t;
+      var t = Je.get(e);
+      return void 0 === t && ((t = new Map()), Je.set(e, t)), t;
     }
     function et(e) {
       var t = e,
@@ -10330,7 +10409,7 @@ PERFORMANCE OF THIS SOFTWARE.
           case "reset":
             break;
           default:
-            -1 === Je.indexOf(e) && Kt(e, t);
+            -1 === Xe.indexOf(e) && Kt(e, t);
         }
         n.set(e, null);
       }
@@ -10384,7 +10463,7 @@ PERFORMANCE OF THIS SOFTWARE.
           xt.delete(t.pointerId);
       }
     }
-    function Nt(e, t, n, r, o, i) {
+    function Lt(e, t, n, r, o, i) {
       return (
         null === e || e.nativeEvent !== i
           ? ((e = Pt(t, n, r, o, i)),
@@ -10393,9 +10472,9 @@ PERFORMANCE OF THIS SOFTWARE.
         e
       );
     }
-    function Lt(e) {
+    function Nt(e) {
       if (null === e.blockedOn) {
-        var t = Xt(
+        var t = Yt(
           e.topLevelType,
           e.eventSystemFlags,
           e.container,
@@ -10407,7 +10486,7 @@ PERFORMANCE OF THIS SOFTWARE.
       }
     }
     function Dt(e, t, n) {
-      Lt(e) && n.delete(t);
+      Nt(e) && n.delete(t);
     }
     function It() {
       for (gt = !1; 0 < wt.length; ) {
@@ -10416,7 +10495,7 @@ PERFORMANCE OF THIS SOFTWARE.
           null !== (e = Rn(e.blockedOn)) && vt(e);
           break;
         }
-        var t = Xt(
+        var t = Yt(
           e.topLevelType,
           e.eventSystemFlags,
           e.container,
@@ -10424,9 +10503,9 @@ PERFORMANCE OF THIS SOFTWARE.
         );
         null !== t ? (e.blockedOn = t) : wt.shift();
       }
-      null !== _t && Lt(_t) && (_t = null),
-        null !== Et && Lt(Et) && (Et = null),
-        null !== St && Lt(St) && (St = null),
+      null !== _t && Nt(_t) && (_t = null),
+        null !== Et && Nt(Et) && (Et = null),
+        null !== St && Nt(St) && (St = null),
         kt.forEach(Dt),
         xt.forEach(Dt);
     }
@@ -10531,7 +10610,7 @@ PERFORMANCE OF THIS SOFTWARE.
         "suspend",
         "timeupdate",
         "timeUpdate",
-        Xe,
+        Ye,
         "transitionEnd",
         "waiting",
         "waiting",
@@ -10610,25 +10689,25 @@ PERFORMANCE OF THIS SOFTWARE.
         if (0 < wt.length && -1 < Ct.indexOf(e))
           (e = Pt(null, e, t, n, r)), wt.push(e);
         else {
-          var o = Xt(e, t, n, r);
+          var o = Yt(e, t, n, r);
           if (null === o) Rt(e, r);
           else if (-1 < Ct.indexOf(e)) (e = Pt(o, e, t, n, r)), wt.push(e);
           else if (
             !(function (e, t, n, r, o) {
               switch (t) {
                 case "focus":
-                  return (_t = Nt(_t, e, t, n, r, o)), 1;
+                  return (_t = Lt(_t, e, t, n, r, o)), 1;
                 case "dragenter":
-                  return (Et = Nt(Et, e, t, n, r, o)), 1;
+                  return (Et = Lt(Et, e, t, n, r, o)), 1;
                 case "mouseover":
-                  return (St = Nt(St, e, t, n, r, o)), 1;
+                  return (St = Lt(St, e, t, n, r, o)), 1;
                 case "pointerover":
                   var i = o.pointerId;
-                  return kt.set(i, Nt(kt.get(i) || null, e, t, n, r, o)), 1;
+                  return kt.set(i, Lt(kt.get(i) || null, e, t, n, r, o)), 1;
                 case "gotpointercapture":
                   return (
                     (i = o.pointerId),
-                    xt.set(i, Nt(xt.get(i) || null, e, t, n, r, o)),
+                    xt.set(i, Lt(xt.get(i) || null, e, t, n, r, o)),
                     1
                   );
               }
@@ -10643,7 +10722,7 @@ PERFORMANCE OF THIS SOFTWARE.
           }
         }
     }
-    function Xt(e, t, n, r) {
+    function Yt(e, t, n, r) {
       if (null !== (n = Pn((n = st(r))))) {
         var o = et(n);
         if (null === o) n = null;
@@ -10667,7 +10746,7 @@ PERFORMANCE OF THIS SOFTWARE.
       }
       return null;
     }
-    var Jt = {
+    var Xt = {
         animationIterationCount: !0,
         borderImageOutset: !0,
         borderImageSlice: !0,
@@ -10711,14 +10790,14 @@ PERFORMANCE OF THIS SOFTWARE.
         strokeOpacity: !0,
         strokeWidth: !0,
       },
-      Yt = ["Webkit", "ms", "Moz", "O"];
+      Jt = ["Webkit", "ms", "Moz", "O"];
     function Zt(e, t, n) {
       return null == t || "boolean" == typeof t || "" === t
         ? ""
         : n ||
           "number" != typeof t ||
           0 === t ||
-          (Jt.hasOwnProperty(e) && Jt[e])
+          (Xt.hasOwnProperty(e) && Xt[e])
         ? ("" + t).trim()
         : t + "px";
     }
@@ -10732,9 +10811,9 @@ PERFORMANCE OF THIS SOFTWARE.
           r ? e.setProperty(n, o) : (e[n] = o));
       }
     }
-    Object.keys(Jt).forEach(function (t) {
-      Yt.forEach(function (e) {
-        (e = e + t.charAt(0).toUpperCase() + t.substring(1)), (Jt[e] = Jt[t]);
+    Object.keys(Xt).forEach(function (t) {
+      Jt.forEach(function (e) {
+        (e = e + t.charAt(0).toUpperCase() + t.substring(1)), (Xt[e] = Xt[t]);
       });
     });
     var tn = y(
@@ -10943,11 +11022,11 @@ PERFORMANCE OF THIS SOFTWARE.
         ? null
         : e;
     }
-    function Nn(e) {
+    function Ln(e) {
       if (5 === e.tag || 6 === e.tag) return e.stateNode;
       throw Error(x(33));
     }
-    function Ln(e) {
+    function Nn(e) {
       return e[Cn] || null;
     }
     function Dn(e) {
@@ -11139,9 +11218,9 @@ PERFORMANCE OF THIS SOFTWARE.
         );
       }),
       Qn(qn);
-    var Xn = qn.extend({ data: null }),
-      Jn = qn.extend({ data: null }),
-      Yn = [9, 13, 27, 32],
+    var Yn = qn.extend({ data: null }),
+      Xn = qn.extend({ data: null }),
+      Jn = [9, 13, 27, 32],
       Zn = T && "CompositionEvent" in window,
       er = null;
     T && "documentMode" in document && (er = document.documentMode);
@@ -11188,7 +11267,7 @@ PERFORMANCE OF THIS SOFTWARE.
     function ar(e, t) {
       switch (e) {
         case "keyup":
-          return -1 !== Yn.indexOf(t.keyCode);
+          return -1 !== Jn.indexOf(t.keyCode);
         case "keydown":
           return 229 !== t.keyCode;
         case "keypress":
@@ -11236,7 +11315,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     ? i === or.compositionEnd && ur && (o = Vn())
                     : ((Fn = "value" in (Bn = r) ? Bn.value : Bn.textContent),
                       (ur = !0))),
-                (i = Xn.getPooled(i, t, n, r)),
+                (i = Yn.getPooled(i, t, n, r)),
                 o ? (i.data = o) : null !== (o = lr(n)) && (i.data = o),
                 Un(i),
                 i)
@@ -11277,7 +11356,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       return null;
                   }
                 })(e, n))
-              ? (((t = Jn.getPooled(or.beforeInput, t, n, r)).data = e), Un(t))
+              ? (((t = Xn.getPooled(or.beforeInput, t, n, r)).data = e), Un(t))
               : (t = null),
             null === o ? t : null === t ? o : [o, t]
           );
@@ -11317,7 +11396,7 @@ PERFORMANCE OF THIS SOFTWARE.
     };
     function dr(e, t, n) {
       return (
-        ((e = qn.getPooled(pr.change, e, t, n)).type = "change"), N(n), Un(e), e
+        ((e = qn.getPooled(pr.change, e, t, n)).type = "change"), L(n), Un(e), e
       );
     }
     var hr = null,
@@ -11326,7 +11405,7 @@ PERFORMANCE OF THIS SOFTWARE.
       ut(e);
     }
     function yr(e) {
-      if (_e(Nn(e))) return e;
+      if (_e(Ln(e))) return e;
     }
     function br(e, t) {
       if ("change" === e) return t;
@@ -11371,7 +11450,7 @@ PERFORMANCE OF THIS SOFTWARE.
         extractEvents: function (e, t, n, r) {
           var o,
             i,
-            a = t ? Nn(t) : window,
+            a = t ? Ln(t) : window,
             l = a.nodeName && a.nodeName.toLowerCase();
           if (
             ("select" === l || ("input" === l && "file" === a.type)
@@ -11411,8 +11490,8 @@ PERFORMANCE OF THIS SOFTWARE.
     function Rr() {
       return Pr;
     }
-    var Nr = 0,
-      Lr = 0,
+    var Lr = 0,
+      Nr = 0,
       Dr = !1,
       Ir = !1,
       Ar = Cr.extend({
@@ -11437,17 +11516,17 @@ PERFORMANCE OF THIS SOFTWARE.
         },
         movementX: function (e) {
           if ("movementX" in e) return e.movementX;
-          var t = Nr;
+          var t = Lr;
           return (
-            (Nr = e.screenX),
+            (Lr = e.screenX),
             Dr ? ("mousemove" === e.type ? e.screenX - t : 0) : ((Dr = !0), 0)
           );
         },
         movementY: function (e) {
           if ("movementY" in e) return e.movementY;
-          var t = Lr;
+          var t = Nr;
           return (
-            (Lr = e.screenY),
+            (Nr = e.screenY),
             Ir ? ("mousemove" === e.type ? e.screenY - t : 0) : ((Ir = !0), 0)
           );
         },
@@ -11523,8 +11602,8 @@ PERFORMANCE OF THIS SOFTWARE.
                 (a = jr.pointerLeave),
                 (l = jr.pointerEnter),
                 (u = "pointer")),
-            (e = null == c ? s : Nn(c)),
-            (s = null == t ? s : Nn(t)),
+            (e = null == c ? s : Ln(c)),
+            (s = null == t ? s : Ln(t)),
             ((a = i.getPooled(a, c, n, r)).type = u + "leave"),
             (a.target = e),
             (a.relatedTarget = s),
@@ -11653,7 +11732,7 @@ PERFORMANCE OF THIS SOFTWARE.
             i = !o;
           }
           if (i) return null;
-          switch (((o = t ? Nn(t) : window), e)) {
+          switch (((o = t ? Ln(t) : window), e)) {
             case "focus":
               (!fr(o) && "true" !== o.contentEditable) ||
                 ((Gr = o), (Hr = t), (qr = null));
@@ -11677,17 +11756,17 @@ PERFORMANCE OF THIS SOFTWARE.
           return null;
         },
       },
-      Xr = qn.extend({
+      Yr = qn.extend({
         animationName: null,
         elapsedTime: null,
         pseudoElement: null,
       }),
-      Jr = qn.extend({
+      Xr = qn.extend({
         clipboardData: function (e) {
           return "clipboardData" in e ? e.clipboardData : window.clipboardData;
         },
       }),
-      Yr = Cr.extend({ relatedTarget: null });
+      Jr = Cr.extend({ relatedTarget: null });
     function Zr(e) {
       var t = e.keyCode;
       return (
@@ -11836,7 +11915,7 @@ PERFORMANCE OF THIS SOFTWARE.
               break;
             case "blur":
             case "focus":
-              e = Yr;
+              e = Jr;
               break;
             case "click":
               if (2 === n.button) return null;
@@ -11869,9 +11948,9 @@ PERFORMANCE OF THIS SOFTWARE.
             case Ke:
             case $e:
             case Qe:
-              e = Xr;
+              e = Yr;
               break;
-            case Xe:
+            case Ye:
               e = io;
               break;
             case "scroll":
@@ -11883,7 +11962,7 @@ PERFORMANCE OF THIS SOFTWARE.
             case "copy":
             case "cut":
             case "paste":
-              e = Jr;
+              e = Xr;
               break;
             case "gotpointercapture":
             case "lostpointercapture":
@@ -11908,7 +11987,7 @@ PERFORMANCE OF THIS SOFTWARE.
       )
     )),
       b();
-    (a = Ln), (r = Rn), (l = Nn);
+    (a = Nn), (r = Rn), (l = Ln);
     k({
       SimpleEventPlugin: lo,
       EnterLeaveEventPlugin: zr,
@@ -11992,8 +12071,8 @@ PERFORMANCE OF THIS SOFTWARE.
       Oo = i.unstable_now,
       Po = i.unstable_getCurrentPriorityLevel,
       Ro = i.unstable_ImmediatePriority,
-      No = i.unstable_UserBlockingPriority,
-      Lo = i.unstable_NormalPriority,
+      Lo = i.unstable_UserBlockingPriority,
+      No = i.unstable_NormalPriority,
       Do = i.unstable_LowPriority,
       Io = i.unstable_IdlePriority,
       Ao = {},
@@ -12013,9 +12092,9 @@ PERFORMANCE OF THIS SOFTWARE.
       switch (Po()) {
         case Ro:
           return 99;
-        case No:
-          return 98;
         case Lo:
+          return 98;
+        case No:
           return 97;
         case Do:
           return 96;
@@ -12030,9 +12109,9 @@ PERFORMANCE OF THIS SOFTWARE.
         case 99:
           return Ro;
         case 98:
-          return No;
-        case 97:
           return Lo;
+        case 97:
+          return No;
         case 96:
           return Do;
         case 95:
@@ -12072,18 +12151,18 @@ PERFORMANCE OF THIS SOFTWARE.
         }
       }
     }
-    function Xo(e, t, n) {
+    function Yo(e, t, n) {
       return (
         1073741821 - (1 + (((1073741821 - e + t / 10) / (n /= 10)) | 0)) * n
       );
     }
-    function Jo(e, t) {
+    function Xo(e, t) {
       if (e && e.defaultProps)
         for (var n in ((t = y({}, t)), (e = e.defaultProps)))
           void 0 === t[n] && (t[n] = e[n]);
       return t;
     }
-    var Yo = { current: null },
+    var Jo = { current: null },
       Zo = null,
       ei = null,
       ti = null;
@@ -12091,8 +12170,8 @@ PERFORMANCE OF THIS SOFTWARE.
       ti = ei = Zo = null;
     }
     function ri(e) {
-      var t = Yo.current;
-      co(Yo), (e.type._context._currentValue = t);
+      var t = Jo.current;
+      co(Jo), (e.type._context._currentValue = t);
     }
     function oi(e, t) {
       for (; null !== e; ) {
@@ -12112,7 +12191,7 @@ PERFORMANCE OF THIS SOFTWARE.
     function ii(e, t) {
       (ti = ei = null) !== (e = (Zo = e).dependencies) &&
         null !== e.firstContext &&
-        (e.expirationTime >= t && (La = !0), (e.firstContext = null));
+        (e.expirationTime >= t && (Na = !0), (e.firstContext = null));
     }
     function ai(e, t) {
       if (ti !== e && !1 !== t && 0 !== t)
@@ -12281,7 +12360,7 @@ PERFORMANCE OF THIS SOFTWARE.
           }
         }
     }
-    var mi = X.ReactCurrentBatchConfig,
+    var mi = Y.ReactCurrentBatchConfig,
       vi = new o.Component().refs;
     function yi(e, t, n, r) {
       (n = null == (n = n(r, (t = e.memoizedState))) ? t : y({}, t, n)),
@@ -12294,7 +12373,7 @@ PERFORMANCE OF THIS SOFTWARE.
       },
       enqueueSetState: function (e, t, n) {
         e = e._reactInternalFiber;
-        var r = Yl(),
+        var r = Jl(),
           o = mi.suspense;
         ((o = ci((r = Zl(r, e, o)), o)).payload = t),
           null != n && (o.callback = n),
@@ -12303,7 +12382,7 @@ PERFORMANCE OF THIS SOFTWARE.
       },
       enqueueReplaceState: function (e, t, n) {
         e = e._reactInternalFiber;
-        var r = Yl(),
+        var r = Jl(),
           o = mi.suspense;
         ((o = ci((r = Zl(r, e, o)), o)).tag = 1),
           (o.payload = t),
@@ -12313,7 +12392,7 @@ PERFORMANCE OF THIS SOFTWARE.
       },
       enqueueForceUpdate: function (e, t) {
         e = e._reactInternalFiber;
-        var n = Yl(),
+        var n = Jl(),
           r = mi.suspense;
         ((r = ci((n = Zl(n, e, r)), r)).tag = 2),
           null != t && (r.callback = t),
@@ -12490,7 +12569,7 @@ PERFORMANCE OF THIS SOFTWARE.
           4 !== t.tag ||
           t.stateNode.containerInfo !== n.containerInfo ||
           t.stateNode.implementation !== n.implementation
-            ? ((t = Nu(n, e.mode, r)).return = e)
+            ? ((t = Lu(n, e.mode, r)).return = e)
             : ((t = a(t, n.children || [])).return = e),
           t
         );
@@ -12519,7 +12598,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 n
               );
             case te:
-              return ((t = Nu(t, e.mode, n)).return = e), t;
+              return ((t = Lu(t, e.mode, n)).return = e), t;
           }
           if (Si(t) || me(t))
             return ((t = Pu(t, e.mode, n, null)).return = e), t;
@@ -12644,7 +12723,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   }
                   p(e, t), (t = t.sibling);
                 }
-                ((t = Nu(n, e.mode, r)).return = e), (e = t);
+                ((t = Lu(n, e.mode, r)).return = e), (e = t);
               }
               return l(e);
           }
@@ -12767,14 +12846,14 @@ PERFORMANCE OF THIS SOFTWARE.
       Oi = Ti(!1),
       Pi = {},
       Ri = { current: Pi },
-      Ni = { current: Pi },
-      Li = { current: Pi };
+      Li = { current: Pi },
+      Ni = { current: Pi };
     function Di(e) {
       if (e === Pi) throw Error(x(174));
       return e;
     }
     function Ii(e, t) {
-      switch ((fo(Li, t), fo(Ni, e), fo(Ri, Pi), (e = t.nodeType))) {
+      switch ((fo(Ni, t), fo(Li, e), fo(Ri, Pi), (e = t.nodeType))) {
         case 9:
         case 11:
           t = (t = t.documentElement) ? t.namespaceURI : je(null, "");
@@ -12788,16 +12867,16 @@ PERFORMANCE OF THIS SOFTWARE.
       co(Ri), fo(Ri, t);
     }
     function Ai() {
-      co(Ri), co(Ni), co(Li);
+      co(Ri), co(Li), co(Ni);
     }
     function Mi(e) {
-      Di(Li.current);
+      Di(Ni.current);
       var t = Di(Ri.current),
         n = je(t, e.type);
-      t !== n && (fo(Ni, e), fo(Ri, n));
+      t !== n && (fo(Li, e), fo(Ri, n));
     }
     function ji(e) {
-      Ni.current === e && (co(Ri), co(Ni));
+      Li.current === e && (co(Ri), co(Li));
     }
     var zi = { current: 0 };
     function Ui(e) {
@@ -12827,8 +12906,8 @@ PERFORMANCE OF THIS SOFTWARE.
     function Bi(e, t) {
       return { responder: e, props: t };
     }
-    var Fi = X.ReactCurrentDispatcher,
-      Wi = X.ReactCurrentBatchConfig,
+    var Fi = Y.ReactCurrentDispatcher,
+      Wi = Y.ReactCurrentBatchConfig,
       Vi = 0,
       Gi = null,
       Hi = null,
@@ -12844,7 +12923,7 @@ PERFORMANCE OF THIS SOFTWARE.
         return 1;
       }
     }
-    function Xi(e, t, n, r, o, i) {
+    function Yi(e, t, n, r, o, i) {
       if (
         ((Vi = i),
         ((Gi = t).memoizedState = null),
@@ -12875,7 +12954,7 @@ PERFORMANCE OF THIS SOFTWARE.
         throw Error(x(300));
       return e;
     }
-    function Ji() {
+    function Xi() {
       var e = {
         memoizedState: null,
         baseState: null,
@@ -12885,7 +12964,7 @@ PERFORMANCE OF THIS SOFTWARE.
       };
       return null === qi ? (Gi.memoizedState = qi = e) : (qi = qi.next = e), qi;
     }
-    function Yi() {
+    function Ji() {
       var e;
       e =
         null === Hi
@@ -12912,7 +12991,7 @@ PERFORMANCE OF THIS SOFTWARE.
       return "function" == typeof t ? t(e) : t;
     }
     function ea(e) {
-      var t = Yi(),
+      var t = Ji(),
         n = t.queue;
       if (null === n) throw Error(x(311));
       n.lastRenderedReducer = e;
@@ -12958,7 +13037,7 @@ PERFORMANCE OF THIS SOFTWARE.
             (u = u.next);
         } while (null !== u && u !== i);
         null === l ? (a = o) : (l.next = r),
-          Ur(o, t.memoizedState) || (La = !0),
+          Ur(o, t.memoizedState) || (Na = !0),
           (t.memoizedState = o),
           (t.baseState = a),
           (t.baseQueue = l),
@@ -12967,7 +13046,7 @@ PERFORMANCE OF THIS SOFTWARE.
       return [t.memoizedState, n.dispatch];
     }
     function ta(e) {
-      var t = Yi(),
+      var t = Ji(),
         n = t.queue;
       if (null === n) throw Error(x(311));
       n.lastRenderedReducer = e;
@@ -12977,7 +13056,7 @@ PERFORMANCE OF THIS SOFTWARE.
       if (null !== o) {
         n.pending = null;
         for (var a = (o = o.next); (i = e(i, a.action)), (a = a.next) !== o; );
-        Ur(i, t.memoizedState) || (La = !0),
+        Ur(i, t.memoizedState) || (Na = !0),
           (t.memoizedState = i),
           null === t.baseQueue && (t.baseState = i),
           (n.lastRenderedState = i);
@@ -12985,7 +13064,7 @@ PERFORMANCE OF THIS SOFTWARE.
       return [i, r];
     }
     function na(e) {
-      var t = Ji();
+      var t = Xi();
       return (
         "function" == typeof e && (e = e()),
         (t.memoizedState = t.baseState = e),
@@ -13011,15 +13090,15 @@ PERFORMANCE OF THIS SOFTWARE.
       );
     }
     function oa() {
-      return Yi().memoizedState;
+      return Ji().memoizedState;
     }
     function ia(e, t, n, r) {
-      var o = Ji();
+      var o = Xi();
       (Gi.effectTag |= e),
         (o.memoizedState = ra(1 | t, n, void 0, void 0 === r ? null : r));
     }
     function aa(e, t, n, r) {
-      var o = Yi();
+      var o = Ji();
       r = void 0 === r ? null : r;
       var i = void 0;
       if (null !== Hi) {
@@ -13060,10 +13139,10 @@ PERFORMANCE OF THIS SOFTWARE.
     }
     function pa() {}
     function da(e, t) {
-      return (Ji().memoizedState = [e, void 0 === t ? null : t]), e;
+      return (Xi().memoizedState = [e, void 0 === t ? null : t]), e;
     }
     function ha(e, t) {
-      var n = Yi();
+      var n = Ji();
       t = void 0 === t ? null : t;
       var r = n.memoizedState;
       return null !== r && null !== t && Qi(t, r[1])
@@ -13071,7 +13150,7 @@ PERFORMANCE OF THIS SOFTWARE.
         : ((n.memoizedState = [e, t]), e);
     }
     function ma(e, t) {
-      var n = Yi();
+      var n = Ji();
       t = void 0 === t ? null : t;
       var r = n.memoizedState;
       return null !== r && null !== t && Qi(t, r[1])
@@ -13094,7 +13173,7 @@ PERFORMANCE OF THIS SOFTWARE.
         });
     }
     function ya(e, t, n) {
-      var r = Yl(),
+      var r = Jl(),
         o = {
           expirationTime: (r = Zl(r, e, (o = mi.suspense))),
           suspenseConfig: o,
@@ -13156,7 +13235,7 @@ PERFORMANCE OF THIS SOFTWARE.
           return ia(4, 2, e, t);
         },
         useMemo: function (e, t) {
-          var n = Ji();
+          var n = Xi();
           return (
             (t = void 0 === t ? null : t),
             (e = e()),
@@ -13165,7 +13244,7 @@ PERFORMANCE OF THIS SOFTWARE.
           );
         },
         useReducer: function (e, t, n) {
-          var r = Ji();
+          var r = Xi();
           return (
             (t = void 0 !== n ? n(t) : t),
             (r.memoizedState = r.baseState = t),
@@ -13179,7 +13258,7 @@ PERFORMANCE OF THIS SOFTWARE.
           );
         },
         useRef: function (e) {
-          return (e = { current: e }), (Ji().memoizedState = e);
+          return (e = { current: e }), (Xi().memoizedState = e);
         },
         useState: na,
         useDebugValue: pa,
@@ -13390,8 +13469,8 @@ PERFORMANCE OF THIS SOFTWARE.
     function Ra() {
       (Sa = Ea = null), (ka = !1);
     }
-    var Na = X.ReactCurrentOwner,
-      La = !1;
+    var La = Y.ReactCurrentOwner,
+      Na = !1;
     function Da(e, t, n, r) {
       t.child = null === e ? Oi(t, null, n, r) : Ci(t, e.child, n, r);
     }
@@ -13400,13 +13479,13 @@ PERFORMANCE OF THIS SOFTWARE.
       var i = t.ref;
       return (
         ii(t, o),
-        (r = Xi(e, t, n, r, i, o)),
-        null === e || La
+        (r = Yi(e, t, n, r, i, o)),
+        null === e || Na
           ? ((t.effectTag |= 1), Da(e, t, r, o), t.child)
           : ((t.updateQueue = e.updateQueue),
             (t.effectTag &= -517),
             e.expirationTime <= o && (e.expirationTime = 0),
-            Ja(e, t, o))
+            Xa(e, t, o))
       );
     }
     function Aa(e, t, n, r, o, i) {
@@ -13416,7 +13495,7 @@ PERFORMANCE OF THIS SOFTWARE.
           o < i &&
           ((o = a.memoizedProps),
           (n = null !== (n = n.compare) ? n : Fr)(o, r) && e.ref === t.ref)
-            ? Ja(e, t, i)
+            ? Xa(e, t, i)
             : ((t.effectTag |= 1),
               ((e = Cu(a, r)).ref = t.ref),
               ((e.return = t).child = e))
@@ -13435,8 +13514,8 @@ PERFORMANCE OF THIS SOFTWARE.
       return null !== e &&
         Fr(e.memoizedProps, r) &&
         e.ref === t.ref &&
-        ((La = !1), o < i)
-        ? ((t.expirationTime = e.expirationTime), Ja(e, t, i))
+        ((Na = !1), o < i)
+        ? ((t.expirationTime = e.expirationTime), Xa(e, t, i))
         : za(e, t, n, r, i);
     }
     function ja(e, t) {
@@ -13448,13 +13527,13 @@ PERFORMANCE OF THIS SOFTWARE.
       var i = yo(t, (i = bo(n) ? vo : ho.current));
       return (
         ii(t, o),
-        (n = Xi(e, t, n, r, i, o)),
-        null === e || La
+        (n = Yi(e, t, n, r, i, o)),
+        null === e || Na
           ? ((t.effectTag |= 1), Da(e, t, n, o), t.child)
           : ((t.updateQueue = e.updateQueue),
             (t.effectTag &= -517),
             e.expirationTime <= o && (e.expirationTime = 0),
-            Ja(e, t, o))
+            Xa(e, t, o))
       );
     }
     function Ua(e, t, n, r, o) {
@@ -13519,7 +13598,7 @@ PERFORMANCE OF THIS SOFTWARE.
             : ((a = t.stateNode),
               si(e, t),
               (l = t.memoizedProps),
-              (a.props = t.type === t.elementType ? l : Jo(t.type, l)),
+              (a.props = t.type === t.elementType ? l : Xo(t.type, l)),
               (u = a.context),
               (s =
                 "object" == typeof (s = n.contextType) && null !== s
@@ -13577,8 +13656,8 @@ PERFORMANCE OF THIS SOFTWARE.
     function Ba(e, t, n, r, o, i) {
       ja(e, t);
       var a = 0 != (64 & t.effectTag);
-      if (!r && !a) return o && So(t, n, !1), Ja(e, t, i);
-      (r = t.stateNode), (Na.current = t);
+      if (!r && !a) return o && So(t, n, !1), Xa(e, t, i);
+      (r = t.stateNode), (La.current = t);
       var l =
         a && "function" != typeof n.getDerivedStateFromError
           ? null
@@ -13725,7 +13804,7 @@ PERFORMANCE OF THIS SOFTWARE.
           (a.tailMode = o),
           (a.lastEffect = i));
     }
-    function Xa(e, t, n) {
+    function Ya(e, t, n) {
       var r = t.pendingProps,
         o = r.revealOrder,
         i = r.tail;
@@ -13779,7 +13858,7 @@ PERFORMANCE OF THIS SOFTWARE.
         }
       return t.child;
     }
-    function Ja(e, t, n) {
+    function Xa(e, t, n) {
       null !== e && (t.dependencies = e.dependencies);
       var r = t.expirationTime;
       if ((0 !== r && pu(r), t.childExpirationTime < n)) return null;
@@ -13795,7 +13874,7 @@ PERFORMANCE OF THIS SOFTWARE.
       }
       return t.child;
     }
-    function Ya(e, t) {
+    function Ja(e, t) {
       switch (e.tailMode) {
         case "hidden":
           t = e.tail;
@@ -14176,14 +14255,14 @@ PERFORMANCE OF THIS SOFTWARE.
                   ? Be(n, l)
                   : "children" === a
                   ? Fe(n, l)
-                  : J(n, a, l, t);
+                  : X(n, a, l, t);
               }
               switch (e) {
                 case "input":
                   xe(n, r);
                   break;
                 case "textarea":
-                  Le(n, r);
+                  Ne(n, r);
                   break;
                 case "select":
                   (t = n._wrapperState.wasMultiple),
@@ -14269,7 +14348,7 @@ PERFORMANCE OF THIS SOFTWARE.
           var t = function (e, t) {
             var n = e.stateNode;
             null !== n && n.delete(t),
-              (t = 0) === t && (t = Zl((t = Yl()), e, null)),
+              (t = 0) === t && (t = Zl((t = Jl()), e, null)),
               null !== (e = tu(e, t)) && ru(e);
           }.bind(null, n, e);
           r.has(e) || (r.add(e), e.then(t, t));
@@ -14312,8 +14391,8 @@ PERFORMANCE OF THIS SOFTWARE.
     }
     var hl,
       ml = Math.ceil,
-      vl = X.ReactCurrentDispatcher,
-      yl = X.ReactCurrentOwner,
+      vl = Y.ReactCurrentDispatcher,
+      yl = Y.ReactCurrentOwner,
       bl = 0,
       gl = 8,
       wl = 16,
@@ -14327,8 +14406,8 @@ PERFORMANCE OF THIS SOFTWARE.
       Ol = bl,
       Pl = null,
       Rl = null,
-      Nl = 0,
-      Ll = El,
+      Ll = 0,
+      Nl = El,
       Dl = null,
       Il = 1073741823,
       Al = 1073741823,
@@ -14346,32 +14425,32 @@ PERFORMANCE OF THIS SOFTWARE.
       Kl = 90,
       $l = null,
       Ql = 0,
-      Xl = null,
-      Jl = 0;
-    function Yl() {
+      Yl = null,
+      Xl = 0;
+    function Jl() {
       return (Ol & (wl | _l)) !== bl
         ? 1073741821 - ((Wo() / 10) | 0)
-        : 0 !== Jl
-        ? Jl
-        : (Jl = 1073741821 - ((Wo() / 10) | 0));
+        : 0 !== Xl
+        ? Xl
+        : (Xl = 1073741821 - ((Wo() / 10) | 0));
     }
     function Zl(e, t, n) {
       if (0 == (2 & (t = t.mode))) return 1073741823;
       var r = Vo();
       if (0 == (4 & t)) return 99 === r ? 1073741823 : 1073741822;
-      if ((Ol & wl) !== bl) return Nl;
-      if (null !== n) e = Xo(e, 0 | n.timeoutMs || 5e3, 250);
+      if ((Ol & wl) !== bl) return Ll;
+      if (null !== n) e = Yo(e, 0 | n.timeoutMs || 5e3, 250);
       else
         switch (r) {
           case 99:
             e = 1073741823;
             break;
           case 98:
-            e = Xo(e, 150, 100);
+            e = Yo(e, 150, 100);
             break;
           case 97:
           case 96:
-            e = Xo(e, 5e3, 250);
+            e = Yo(e, 5e3, 250);
             break;
           case 95:
             e = 2;
@@ -14379,10 +14458,10 @@ PERFORMANCE OF THIS SOFTWARE.
           default:
             throw Error(x(326));
         }
-      return null !== Pl && e === Nl && --e, e;
+      return null !== Pl && e === Ll && --e, e;
     }
     function eu(e, t) {
-      if (50 < Ql) throw ((Ql = 0), (Xl = null), Error(x(185)));
+      if (50 < Ql) throw ((Ql = 0), (Yl = null), Error(x(185)));
       var n;
       null !== (e = tu(e, t)) &&
         ((n = Vo()),
@@ -14420,7 +14499,7 @@ PERFORMANCE OF THIS SOFTWARE.
           r = r.return;
         }
       return (
-        null !== o && (Pl === o && (pu(t), Ll === Tl && Iu(o, Nl)), Au(o, t)), o
+        null !== o && (Pl === o && (pu(t), Nl === Tl && Iu(o, Ll)), Au(o, t)), o
       );
     }
     function nu(e) {
@@ -14446,7 +14525,7 @@ PERFORMANCE OF THIS SOFTWARE.
             (e.callbackExpirationTime = 0),
             (e.callbackPriority = 90));
         else {
-          var r = Yl(),
+          var r = Jl(),
             r =
               1073741823 === t
                 ? 99
@@ -14477,12 +14556,12 @@ PERFORMANCE OF THIS SOFTWARE.
       }
     }
     function ou(t, e) {
-      if (((Jl = 0), e)) return Mu(t, (e = Yl())), ru(t), null;
+      if (((Xl = 0), e)) return Mu(t, (e = Jl())), ru(t), null;
       var n = nu(t);
       if (0 !== n) {
         if (((e = t.callbackNode), (Ol & (wl | _l)) !== bl))
           throw Error(x(327));
-        if ((yu(), (t === Pl && n === Nl) || uu(t, n), null !== Rl)) {
+        if ((yu(), (t === Pl && n === Ll) || uu(t, n), null !== Rl)) {
           var r = Ol;
           Ol |= wl;
           for (var o = cu(); ; )
@@ -14494,13 +14573,13 @@ PERFORMANCE OF THIS SOFTWARE.
             } catch (e) {
               su(t, e);
             }
-          if ((ni(), (Ol = r), (vl.current = o), Ll === Sl))
+          if ((ni(), (Ol = r), (vl.current = o), Nl === Sl))
             throw ((e = Dl), uu(t, n), Iu(t, n), ru(t), e);
           if (null === Rl)
             switch (
               ((o = t.finishedWork = t.current.alternate),
               (t.finishedExpirationTime = n),
-              (r = Ll),
+              (r = Nl),
               (Pl = null),
               r)
             ) {
@@ -14612,7 +14691,7 @@ PERFORMANCE OF THIS SOFTWARE.
     function iu(t) {
       var e = 0 !== (e = t.lastExpiredTime) ? e : 1073741823;
       if ((Ol & (wl | _l)) !== bl) throw Error(x(327));
-      if ((yu(), (t === Pl && e === Nl) || uu(t, e), null !== Rl)) {
+      if ((yu(), (t === Pl && e === Ll) || uu(t, e), null !== Rl)) {
         var n = Ol;
         Ol |= wl;
         for (var r = cu(); ; )
@@ -14624,7 +14703,7 @@ PERFORMANCE OF THIS SOFTWARE.
           } catch (e) {
             su(t, e);
           }
-        if ((ni(), (Ol = n), (vl.current = r), Ll === Sl))
+        if ((ni(), (Ol = n), (vl.current = r), Nl === Sl))
           throw ((n = Dl), uu(t, e), Iu(t, e), ru(t), n);
         if (null !== Rl) throw Error(x(261));
         (t.finishedWork = t.current.alternate),
@@ -14682,8 +14761,8 @@ PERFORMANCE OF THIS SOFTWARE.
           n = n.return;
         }
       (Rl = Cu((Pl = e).current, null)),
-        (Nl = t),
-        (Ll = El),
+        (Ll = t),
+        (Nl = El),
         (Al = Il = 1073741823),
         (Ml = Dl = null),
         (jl = 0),
@@ -14703,14 +14782,14 @@ PERFORMANCE OF THIS SOFTWARE.
             (Ki = !1),
             null === Rl || null === Rl.return)
           )
-            return (Ll = Sl), (Dl = t), (Rl = null);
+            return (Nl = Sl), (Dl = t), (Rl = null);
           e: {
             var o = e,
               i = Rl.return,
               a = Rl,
               l = t;
             if (
-              ((t = Nl),
+              ((t = Ll),
               (a.effectTag |= 2048),
               (a.firstEffect = a.lastEffect = null) !== l &&
                 "object" == typeof l &&
@@ -14780,7 +14859,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   ye(a)
               );
             }
-            Ll !== Cl && (Ll = kl), (l = Za(l, a)), (h = i);
+            Nl !== Cl && (Nl = kl), (l = Za(l, a)), (h = i);
             do {
               switch (h.tag) {
                 case 3:
@@ -14829,7 +14908,7 @@ PERFORMANCE OF THIS SOFTWARE.
       jl < e && (jl = e);
     }
     function du(e) {
-      var t = hl(e.alternate, e, Nl);
+      var t = hl(e.alternate, e, Ll);
       return (
         (e.memoizedProps = e.pendingProps),
         null === t && (t = hu(e)),
@@ -14874,7 +14953,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     null
                   );
                 case 5:
-                  ji(t), (n = Di(Li.current));
+                  ji(t), (n = Di(Ni.current));
                   var o = t.type;
                   if (null !== e && null != t.stateNode)
                     Ga(e, t, o, r, n), e.ref !== t.ref && (t.effectTag |= 128);
@@ -14895,7 +14974,7 @@ PERFORMANCE OF THIS SOFTWARE.
                           break;
                         case "video":
                         case "audio":
-                          for (e = 0; e < Je.length; e++) Kt(Je[e], r);
+                          for (e = 0; e < Xe.length; e++) Kt(Xe[e], r);
                           break;
                         case "source":
                           Kt("error", r);
@@ -14920,7 +14999,7 @@ PERFORMANCE OF THIS SOFTWARE.
                             an(n, "onChange");
                           break;
                         case "textarea":
-                          Ne(r, a), Kt("invalid", r), an(n, "onChange");
+                          Le(r, a), Kt("invalid", r), an(n, "onChange");
                       }
                       for (var l in (nn(o, a), (e = null), a)) {
                         a.hasOwnProperty(l) &&
@@ -14980,7 +15059,7 @@ PERFORMANCE OF THIS SOFTWARE.
                           break;
                         case "video":
                         case "audio":
-                          for (i = 0; i < Je.length; i++) Kt(Je[i], e);
+                          for (i = 0; i < Xe.length; i++) Kt(Xe[i], e);
                           i = r;
                           break;
                         case "source":
@@ -15013,7 +15092,7 @@ PERFORMANCE OF THIS SOFTWARE.
                             an(n, "onChange");
                           break;
                         case "textarea":
-                          Ne(e, r),
+                          Le(e, r),
                             (i = Re(e, r)),
                             Kt("invalid", e),
                             an(n, "onChange");
@@ -15040,7 +15119,7 @@ PERFORMANCE OF THIS SOFTWARE.
                               "autoFocus" !== a &&
                               (E.hasOwnProperty(a)
                                 ? null != u && an(n, a)
-                                : null != u && J(e, a, u, l)));
+                                : null != u && X(e, a, u, l)));
                       }
                       switch (o) {
                         case "input":
@@ -15073,7 +15152,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   else {
                     if ("string" != typeof r && null === t.stateNode)
                       throw Error(x(166));
-                    (n = Di(Li.current)),
+                    (n = Di(Ni.current)),
                       Di(Ri.current),
                       Pa(t)
                         ? ((n = t.stateNode),
@@ -15109,11 +15188,11 @@ PERFORMANCE OF THIS SOFTWARE.
                         ((null === e &&
                           !0 !== t.memoizedProps.unstable_avoidThisFallback) ||
                         0 != (1 & zi.current)
-                          ? Ll === El && (Ll = xl)
-                          : ((Ll !== El && Ll !== xl) || (Ll = Tl),
+                          ? Nl === El && (Nl = xl)
+                          : ((Nl !== El && Nl !== xl) || (Nl = Tl),
                             0 !== jl &&
                               null !== Pl &&
-                              (Iu(Pl, Nl), Au(Pl, jl)))),
+                              (Iu(Pl, Ll), Au(Pl, jl)))),
                       (n || r) && (t.effectTag |= 4),
                       null);
                 case 4:
@@ -15127,16 +15206,16 @@ PERFORMANCE OF THIS SOFTWARE.
                   if (
                     ((o = 0 != (64 & t.effectTag)), null === (a = r.rendering))
                   ) {
-                    if (o) Ya(r, !1);
+                    if (o) Ja(r, !1);
                     else if (
-                      Ll !== El ||
+                      Nl !== El ||
                       (null !== e && 0 != (64 & e.effectTag))
                     )
                       for (a = t.child; null !== a; ) {
                         if (null !== (e = Ui(a))) {
                           for (
                             t.effectTag |= 64,
-                              Ya(r, !1),
+                              Ja(r, !1),
                               null !== (o = e.updateQueue) &&
                                 ((t.updateQueue = o), (t.effectTag |= 4)),
                               null === r.lastEffect && (t.firstEffect = null),
@@ -15186,7 +15265,7 @@ PERFORMANCE OF THIS SOFTWARE.
                           (o = !0),
                           null !== (n = e.updateQueue) &&
                             ((t.updateQueue = n), (t.effectTag |= 4)),
-                          Ya(r, !0),
+                          Ja(r, !0),
                           null === r.tail &&
                             "hidden" === r.tailMode &&
                             !a.alternate)
@@ -15200,7 +15279,7 @@ PERFORMANCE OF THIS SOFTWARE.
                         2 * Wo() - r.renderingStartTime > r.tailExpiration &&
                           1 < n &&
                           ((t.effectTag |= 64),
-                          Ya(r, !(o = !0)),
+                          Ja(r, !(o = !0)),
                           (t.expirationTime = t.childExpirationTime = n - 1));
                     r.isBackwards
                       ? ((a.sibling = t.child), (t.child = a))
@@ -15224,8 +15303,8 @@ PERFORMANCE OF THIS SOFTWARE.
                     : null;
               }
               throw Error(x(156, t.tag));
-            })(t, Rl, Nl)),
-            1 === Nl || 1 !== Rl.childExpirationTime)
+            })(t, Rl, Ll)),
+            1 === Ll || 1 !== Rl.childExpirationTime)
           ) {
             for (var n = 0, r = Rl.child; null !== r; ) {
               var o = r.expirationTime,
@@ -15289,7 +15368,7 @@ PERFORMANCE OF THIS SOFTWARE.
         if (null !== (t = Rl.sibling)) return t;
         Rl = e;
       } while (null !== Rl);
-      return Ll === El && (Ll = Cl), null;
+      return Nl === El && (Nl = Cl), null;
     }
     function mu(e) {
       var t = e.expirationTime;
@@ -15325,7 +15404,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 : r <= e.firstSuspendedTime && (e.firstSuspendedTime = r - 1),
               r <= e.lastPingedTime && (e.lastPingedTime = 0),
               r <= e.lastExpiredTime && (e.lastExpiredTime = 0),
-              e === Pl && ((Rl = Pl = null), (Nl = 0)),
+              e === Pl && ((Rl = Pl = null), (Ll = 0)),
               (i =
                 1 < n.effectTag
                   ? null !== n.lastEffect
@@ -15421,7 +15500,7 @@ PERFORMANCE OF THIS SOFTWARE.
                                 ((n = e.memoizedProps),
                                 (r = e.memoizedState),
                                 (t = (e = t.stateNode).getSnapshotBeforeUpdate(
-                                  t.elementType === t.type ? n : Jo(t.type, n),
+                                  t.elementType === t.type ? n : Xo(t.type, n),
                                   r
                                 )),
                                 (e.__reactInternalSnapshotBeforeUpdate = t))
@@ -15596,7 +15675,7 @@ PERFORMANCE OF THIS SOFTWARE.
                                     : ((r =
                                         n.elementType === n.type
                                           ? t.memoizedProps
-                                          : Jo(n.type, t.memoizedProps)),
+                                          : Xo(n.type, t.memoizedProps)),
                                       e.componentDidUpdate(
                                         r,
                                         t.memoizedState,
@@ -15676,9 +15755,9 @@ PERFORMANCE OF THIS SOFTWARE.
             if (
               (0 === (t = e.firstPendingTime) && (Gl = null),
               1073741823 === t
-                ? e === Xl
+                ? e === Yl
                   ? Ql++
-                  : ((Ql = 0), (Xl = e))
+                  : ((Ql = 0), (Yl = e))
                 : (Ql = 0),
               "function" == typeof Eu && Eu(n.stateNode, r),
               ru(e),
@@ -15751,9 +15830,9 @@ PERFORMANCE OF THIS SOFTWARE.
     function _u(e, t, n) {
       var r = e.pingCache;
       null !== r && r.delete(t),
-        Pl === e && Nl === n
-          ? Ll === Tl || (Ll === xl && 1073741823 === Il && Wo() - Ul < Bl)
-            ? uu(e, Nl)
+        Pl === e && Ll === n
+          ? Nl === Tl || (Nl === xl && 1073741823 === Il && Wo() - Ul < Bl)
+            ? uu(e, Ll)
             : (zl = !0)
           : Du(e, n) &&
             ((0 !== (t = e.lastPingedTime) && t < n) ||
@@ -15765,10 +15844,10 @@ PERFORMANCE OF THIS SOFTWARE.
         i = t.expirationTime;
       if (null !== e) {
         var a = t.pendingProps;
-        if (e.memoizedProps !== a || mo.current) La = !0;
+        if (e.memoizedProps !== a || mo.current) Na = !0;
         else {
           if (i < n) {
-            switch (((La = !1), t.tag)) {
+            switch (((Na = !1), t.tag)) {
               case 3:
                 Fa(t), Ra();
                 break;
@@ -15785,7 +15864,7 @@ PERFORMANCE OF THIS SOFTWARE.
               case 10:
                 (i = t.memoizedProps.value),
                   (a = t.type._context),
-                  fo(Yo, a._currentValue),
+                  fo(Jo, a._currentValue),
                   (a._currentValue = i);
                 break;
               case 13:
@@ -15793,14 +15872,14 @@ PERFORMANCE OF THIS SOFTWARE.
                   return 0 !== (i = t.child.childExpirationTime) && n <= i
                     ? Ka(e, t, n)
                     : (fo(zi, 1 & zi.current),
-                      null !== (t = Ja(e, t, n)) ? t.sibling : null);
+                      null !== (t = Xa(e, t, n)) ? t.sibling : null);
                 fo(zi, 1 & zi.current);
                 break;
               case 19:
                 if (
                   ((i = t.childExpirationTime >= n), 0 != (64 & e.effectTag))
                 ) {
-                  if (i) return Xa(e, t, n);
+                  if (i) return Ya(e, t, n);
                   t.effectTag |= 64;
                 }
                 if (
@@ -15811,11 +15890,11 @@ PERFORMANCE OF THIS SOFTWARE.
                 )
                   return null;
             }
-            return Ja(e, t, n);
+            return Xa(e, t, n);
           }
-          La = !1;
+          Na = !1;
         }
-      } else La = !1;
+      } else Na = !1;
       switch (((t.expirationTime = 0), t.tag)) {
         case 2:
           var l,
@@ -15827,7 +15906,7 @@ PERFORMANCE OF THIS SOFTWARE.
             (e = t.pendingProps),
             (a = yo(t, ho.current)),
             ii(t, n),
-            (a = Xi(null, t, i, e, a, n)),
+            (a = Yi(null, t, i, e, a, n)),
             (t.effectTag |= 1),
             (t =
               "object" == typeof a &&
@@ -15883,7 +15962,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 }
                 return 2;
               })(a)),
-              (e = Jo(a, e)),
+              (e = Xo(a, e)),
               l)
             ) {
               case 0:
@@ -15896,7 +15975,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 t = Ia(null, t, a, e, n);
                 break e;
               case 14:
-                t = Aa(null, t, a, Jo(a.type, e), i, n);
+                t = Aa(null, t, a, Xo(a.type, e), i, n);
                 break e;
             }
             throw Error(x(306, a, ""));
@@ -15906,13 +15985,13 @@ PERFORMANCE OF THIS SOFTWARE.
           return (
             (i = t.type),
             (a = t.pendingProps),
-            za(e, t, i, (a = t.elementType === i ? a : Jo(i, a)), n)
+            za(e, t, i, (a = t.elementType === i ? a : Xo(i, a)), n)
           );
         case 1:
           return (
             (i = t.type),
             (a = t.pendingProps),
-            Ua(e, t, i, (a = t.elementType === i ? a : Jo(i, a)), n)
+            Ua(e, t, i, (a = t.elementType === i ? a : Xo(i, a)), n)
           );
         case 3:
           if ((Fa(t), (i = t.updateQueue), null === e || null === i))
@@ -15924,7 +16003,7 @@ PERFORMANCE OF THIS SOFTWARE.
             di(t, i, null, n),
             (i = t.memoizedState.element) === a)
           )
-            Ra(), (t = Ja(e, t, n));
+            Ra(), (t = Xa(e, t, n));
           else {
             if (
               ((a = t.stateNode.hydrate) &&
@@ -15971,7 +16050,7 @@ PERFORMANCE OF THIS SOFTWARE.
           return (
             (i = t.type),
             (a = t.pendingProps),
-            Ia(e, t, i, (a = t.elementType === i ? a : Jo(i, a)), n)
+            Ia(e, t, i, (a = t.elementType === i ? a : Xo(i, a)), n)
           );
         case 7:
           return Da(e, t, t.pendingProps, n), t.child;
@@ -15985,7 +16064,7 @@ PERFORMANCE OF THIS SOFTWARE.
               (u = t.memoizedProps),
               (l = a.value);
             var s = t.type._context;
-            if ((fo(Yo, s._currentValue), (s._currentValue = l), null !== u))
+            if ((fo(Jo, s._currentValue), (s._currentValue = l), null !== u))
               if (
                 ((s = u.value),
                 0 ===
@@ -15997,7 +16076,7 @@ PERFORMANCE OF THIS SOFTWARE.
                         : 1073741823)))
               ) {
                 if (u.children === a.children && !mo.current) {
-                  t = Ja(e, t, n);
+                  t = Xa(e, t, n);
                   break e;
                 }
               } else
@@ -16049,8 +16128,8 @@ PERFORMANCE OF THIS SOFTWARE.
           );
         case 14:
           return (
-            (l = Jo((a = t.type), t.pendingProps)),
-            Aa(e, t, a, (l = Jo(a.type, l)), i, n)
+            (l = Xo((a = t.type), t.pendingProps)),
+            Aa(e, t, a, (l = Xo(a.type, l)), i, n)
           );
         case 15:
           return Ma(e, t, t.type, t.pendingProps, i, n);
@@ -16058,7 +16137,7 @@ PERFORMANCE OF THIS SOFTWARE.
           return (
             (i = t.type),
             (a = t.pendingProps),
-            (a = t.elementType === i ? a : Jo(i, a)),
+            (a = t.elementType === i ? a : Xo(i, a)),
             null !== e &&
               ((e.alternate = null), (t.alternate = null), (t.effectTag |= 2)),
             (t.tag = 1),
@@ -16069,7 +16148,7 @@ PERFORMANCE OF THIS SOFTWARE.
             Ba(null, t, i, !0, e, n)
           );
         case 19:
-          return Xa(e, t, n);
+          return Ya(e, t, n);
       }
       throw Error(x(156, t.tag));
     };
@@ -16200,7 +16279,7 @@ PERFORMANCE OF THIS SOFTWARE.
     function Ru(e, t, n) {
       return ((e = xu(6, e, null, t)).expirationTime = n), e;
     }
-    function Nu(e, t, n) {
+    function Lu(e, t, n) {
       return (
         ((t = xu(
           4,
@@ -16216,7 +16295,7 @@ PERFORMANCE OF THIS SOFTWARE.
         t
       );
     }
-    function Lu(e, t, n) {
+    function Nu(e, t, n) {
       (this.tag = t),
         (this.current = null),
         (this.containerInfo = e),
@@ -16257,7 +16336,7 @@ PERFORMANCE OF THIS SOFTWARE.
     }
     function ju(e, t, n, r) {
       var o = t.current,
-        i = Yl(),
+        i = Jl(),
         a = mi.suspense,
         i = Zl(i, o, a);
       e: if (n) {
@@ -16318,7 +16397,7 @@ PERFORMANCE OF THIS SOFTWARE.
     function Fu(e, t, n) {
       var r,
         o,
-        i = new Lu(e, t, (n = null != n && !0 === n.hydrate)),
+        i = new Nu(e, t, (n = null != n && !0 === n.hydrate)),
         a = xu(3, null, null, 2 === t ? 7 : 1 === t ? 3 : 0);
       ((i.current = a).stateNode = i),
         ui(a),
@@ -16415,14 +16494,14 @@ PERFORMANCE OF THIS SOFTWARE.
       }),
       (vt = function (e) {
         var t;
-        13 === e.tag && (eu(e, (t = Xo(Yl(), 150, 100))), Bu(e, t));
+        13 === e.tag && (eu(e, (t = Yo(Jl(), 150, 100))), Bu(e, t));
       }),
       (yt = function (e) {
         13 === e.tag && (eu(e, 3), Bu(e, 3));
       }),
       (bt = function (e) {
         var t;
-        13 === e.tag && (eu(e, (t = Zl((t = Yl()), e, null))), Bu(e, t));
+        13 === e.tag && (eu(e, (t = Zl((t = Jl()), e, null))), Bu(e, t));
       }),
       (C = function (e, t, n) {
         switch (t) {
@@ -16439,7 +16518,7 @@ PERFORMANCE OF THIS SOFTWARE.
               ) {
                 var r = n[t];
                 if (r !== e && r.form === e.form) {
-                  var o = Ln(r);
+                  var o = Nn(r);
                   if (!o) throw Error(x(90));
                   _e(r), xe(r, o);
                 }
@@ -16447,7 +16526,7 @@ PERFORMANCE OF THIS SOFTWARE.
             }
             break;
           case "textarea":
-            Le(e, n);
+            Ne(e, n);
             break;
           case "select":
             null != (t = n.value) && Pe(e, !!n.multiple, t, !1);
@@ -16480,16 +16559,16 @@ PERFORMANCE OF THIS SOFTWARE.
       Ku = {
         Events: [
           Rn,
-          Nn,
           Ln,
+          Nn,
           k,
           _,
           Un,
           function (e) {
             it(e, zn);
           },
-          N,
           L,
+          N,
           Qt,
           ut,
           yu,
@@ -16541,7 +16620,7 @@ PERFORMANCE OF THIS SOFTWARE.
           overrideProps: null,
           setSuspenseHandler: null,
           scheduleUpdate: null,
-          currentDispatcherRef: X.ReactCurrentDispatcher,
+          currentDispatcherRef: Y.ReactCurrentDispatcher,
           findHostInstanceByFiber: function (e) {
             return null === (e = rt(e)) ? null : e.stateNode;
           },

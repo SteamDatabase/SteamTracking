@@ -166,7 +166,7 @@ public:
     virtual unknown_ret GetCountAuthedComputers() = 0;
     virtual unknown_ret BSteamGuardNewMachineNotification() = 0;
     virtual unknown_ret GetSteamGuardEnabledTime() = 0;
-    virtual unknown_ret GetSteamGuardHistoryEntry(int, unsigned int*, unsigned int*, bool*, char*, int, char*, int) = 0;
+    virtual unknown_ret GetSteamGuardHistoryEntry(int, SteamIPAddress_t*, unsigned int*, bool*, char*, int, char*, int) = 0;
     virtual unknown_ret SetSteamGuardNewMachineDialogResponse(bool, bool) = 0;
     virtual unknown_ret SetPhoneIsVerified(bool) = 0;
     virtual unknown_ret BIsPhoneVerified() = 0;

@@ -51,7 +51,7 @@
 "ServerBrowser_AddServersTitle"			"Προσθήκη διακομιστή - Διακομιστές"
 "ServerBrowser_AddServerErrorTitle"		"Προσθήκη διακομιστή - Σφάλμα"
 "ServerBrowser_AddServerError"			"Η διεύθυνση IP του διακομιστή που έχετε εισάγει δεν είναι έγκυρη."
-"ServerBrowser_ServerRequiresPasswordTitle"	"Ο διακομιστής απαιτεί κωδικό πρόσβασης"
+"ServerBrowser_ServerRequiresPasswordTitle"	"Ο διακομιστής απαιτεί συνθηματικό"
 "ServerBrowser_ServerRequiresPassword"		"Αυτός ο διακομιστής απαιτεί συνθηματικό για να συνδεθείτε."
 "ServerBrowser_RemoveServerFromFavorites"	"Αφαίρεση διακομιστή από τα αγαπημένα"
 "ServerBrowser_AddServerByIP"			"Προσθήκη διακομιστή μέσω διεύθυνσης IP"

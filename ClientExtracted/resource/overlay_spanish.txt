@@ -254,7 +254,6 @@
 "Overlay_Broadcast_Chat_Title" "Retransmisión - Chat ( %numviewers%)"
 "Overlay_Broadcast_Live_Debug" "%videosendkbps% kbps, %videosendfps% FPS"
 
-"SteamChina_Overlay_DurationControl_Init"		"Aviso de juego saludable\nBoicotear juegos perjudiciales; rechazar la piratería de juegos.\nEjercer autoprotección; evitar engaños.\nLa moderación promueve la salud del cerebro; el exceso de juego es dañino para el cuerpo.\nEl uso bien planificado de tu tiempo te conducirá a un estilo de vida saludable."
 "SteamChina_Overlay_DurationControl_MessageA"		"Has estado jugando durante una hora."
 "SteamChina_Overlay_DurationControl_MessageB"		"Has estado jugando durante tres horas.\nConsidera tomar un descanso."
 "SteamChina_Overlay_DurationControl_MessageC"		"Has estado jugando más de tres horas.\nTu EXP/progreso se ha reducido a la mitad."

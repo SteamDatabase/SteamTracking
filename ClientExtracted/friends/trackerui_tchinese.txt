@@ -170,6 +170,8 @@
 "Friends_InvitationBlocking"		"您封鎖了所有與此使用者通訊的管道。在和此使用者通訊前，請先前往其 Steam 社群個人檔案解除封鎖。"
 
 "Friends_DontGiveOutPassword"			"切勿將您的密碼告訴其他人。\n"
+"Friends_DontGiveOutPassword_URL"		"https://support.steampowered.com/kb/1266-OAFV-8478/"
+
 "Friends_ChatFilterBlockWarning"		"為了您的安全，以下訊息中的連結已被移除。"
 
 "Friends_invalidname_title"			"好友 - 保留名稱"
@@ -435,7 +437,7 @@
 "Friends_WhenThisFriendJoinsGame"				"當 %FriendName% 加入遊戲時"
 "Friends_WhenThisFriendComesOnline"			"當 %FriendName% 上線時"
 "Friends_WhenReceiveMessageFromThisFriend"	"當我收到 %FriendName% 的訊息時"
-"Friends_InviteInfo_HasAdded"					"已將您加入他/她的"
+"Friends_InviteInfo_HasAdded"					"已將您加入他的"
 "Friends_InviteInfo_FriendsList"				"好友名單"
 "Friends_InviteInfo_BeenInvited"				"您已受邀"
 "Friends_InviteInfo_JoinGroup"				"加入 Steam 群組"

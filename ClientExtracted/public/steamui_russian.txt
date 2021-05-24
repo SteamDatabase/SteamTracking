@@ -826,6 +826,7 @@
 "SteamUI_ValveSurvey_Summary_VideoCard"						"Видеокарта:"
 "SteamUI_ValveSurvey_Summary_Memory"						"Память:"
 "SteamUI_ValveSurvey_Summary_Audio"							"Звуковая карта:"
+"SteamUI_ValveSurvey_Summary_Storage"						"Место на диске:"
 
 "SteamUI_ValveSurvey_ResultsLabel"							"Опрос завершен. Еще раз благодарим вас за участие.\n\nЕсли вы захотите сравнить ваш компьютер с компьютерами других пользователей Steam, обратитесь к обобщенным результатам исследования по ссылке ниже.\n\n (В противном случае вы можете просто нажать на «Готово», чтобы закрыть это окно.)"
 "SteamUI_ValveSurvey_ResultsButton"							"Результаты опроса."
@@ -837,6 +838,11 @@
 
 "SteamUI_ValveSurvey_Summary_MACAddressHash"				"Хэш MAC-адреса: %s1"
 "SteamUI_ValveSurvey_Summary_DiskSerialHash"				"Хэш серийного номера диска: %s1"
+
+"SteamUI_ValveSurvey_Summary_SSDCount"						"Число SSD: %s1"
+"SteamUI_ValveSurvey_Summary_SSDSizes"						"Размеры SSD: %s1"
+"SteamUI_ValveSurvey_Summary_HDDCount"						"Число жёстких дисков: %s1"
+"SteamUI_ValveSurvey_Summary_HDDSizes"						"Размеры жёстких дисков: %s1"
 
 "SteamUI_ValveSurvey_Summary_DesktopSystem"					"Тип: Настольный"
 "SteamUI_ValveSurvey_Summary_LaptopSystem"					"Тип: Ноутбук"
@@ -3632,7 +3638,7 @@
 "steam_downloads_stopping"	"Остановка"
 "steam_downloads_view_on_workshop" "Просмотр"
 "steam_downloads_throttling"	"Скорость ограничена:"
-"steam_downloads_autoupdate_window_label"	"Ограничение автоматических загрузок:"
+"steam_downloads_autoupdate_window_label"	"Автоматические загрузки:"
 "steam_downloads_autoupdate_window_value"	"%autostart% - %autoend%
 "
 "steam_downloads_section_queued"	"В очереди"
@@ -4555,10 +4561,13 @@
 "Steam_Settings_Streaming_Bandwidth20000" 	"20 Мбит/с"
 "Steam_Settings_Streaming_Bandwidth25000" 	"25 Мбит/с"
 "Steam_Settings_Streaming_Bandwidth30000" 	"30 Мбит/с"
+"Steam_Settings_Streaming_Bandwidth40000" 	"40 Мбит/с"
 "Steam_Settings_Streaming_Bandwidth50000" 	"50 Мбит/с"
+"Steam_Settings_Streaming_Bandwidth75000" 	"75 Мбит/с"
 "Steam_Settings_Streaming_BandwidthUnlimited" 	"Не ограничена (высокая задержка)"
 "Steam_Settings_Streaming_Resolution"	"Ограничить разрешение до"
 "Steam_Settings_Streaming_ResolutionDesktop" 	"Разрешение экрана"
+"Steam_Settings_Streaming_Resolution8K" 	"7680x4320 (8K)"
 "Steam_Settings_Streaming_Resolution2160p" 	"3840x2160 (4K)"
 "Steam_Settings_Streaming_Resolution1440p" 	"2560x1440 (1440p)"
 "Steam_Settings_Streaming_Resolution1080p" 	"1920x1080 (1080p)"

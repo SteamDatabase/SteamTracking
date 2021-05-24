@@ -1,8 +1,6 @@
 __TEXT
 __text
 __TEXT
-0D
-0D
 __stubs
 __TEXT
 __stub_helper
@@ -10,13 +8,13 @@ __TEXT
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
+D
 __const
 __TEXT
 __unwind_info
 __TEXT
 __eh_frame
 __TEXT
-@1
 __DATA
 @
 
@@ -43,7 +41,7 @@ __
 7CUtlMapIPKcii22CDefCaselessStringLessE
 10CUtlRBTreeIN7CUtlMapIPKcii22CDefCaselessStringLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlVectorIN15CBaseFileSystem11CSearchPathE10CUtlMemoryIS1_EE
-10CUtlRBTreeIN15CBaseFileSystem14CPackFileEntryEi8CDefLessIS1_E25CDefRBTreeBalanceListenerIiES1_E
+10CUtlRBTreeIN15CBaseFileSystem14CPackFileEntryEi8CDefLess25CDefRBTreeBalanceListenerIiES1_E
 10CUtlVectorIPN15CBaseFileSystem11CPathIDInfoE10CUtlMemoryIS2_EE
 10CUtlVectorIN15CBaseFileSystem11COpenedFileE10CUtlMemoryIS1_EE
 10CUtlVectorIPN15CBaseFileSystem11CFileHandleE10CUtlMemoryIS2_EE
@@ -172,9 +170,6 @@ CBaseFileSystem::Flush
 FS:  Tried to Flush NULL file handle!
 FS:  Tried to Flush NULL file pointer inside valid file handle!
 Assertion Failed: pPathID
-CBaseFileSystem::ReadLine
-FS:  Tried to ReadLine NULL file handle!
-FS:  Tried to ReadLine NULL file pointer inside valid file handle!
 CBaseFileSystem::GetFileTime
 filetime
 CBaseFileSystem::FileExists
@@ -225,8 +220,8 @@ m_Lookup
 Assertion Failed: !m_bMounted
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/filesystem/filesystem_stdio/filesystem_stdio.cpp
 Assertion Failed: !strchr(filename, '\n') && !strchr(filename, '\r')
-VFileSystem013
-VBaseFileSystem007
+VFileSystem014
+VBaseFileSystem008
 CFileSystem_Stdio
 IVALIDATE001
 Filesystem
@@ -272,16 +267,13 @@ Assertion Failed: num > 0
 Assertion Failed: s_bAllowStaticSymbolTable
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
 s_pSymbolTable
-v
-*
+{
 @
 @
-
-j
-_
-
-=
+h
+b
 @
 =
 @
-+
+=
+@

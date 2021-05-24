@@ -2568,7 +2568,7 @@ ControllerSourceModeABXY.ControllerMode ControllerBindingButton
 }
 
 #ModeContainer #ABXYButtonX,
-.controller_ps5.UpperGrips #ModeContainer #ABXYButtonX
+.controller_ps5.UpperGrips #ModeContainer #ABXYButtonX,
 .controller_ps4.UpperGrips #ModeContainer #ABXYButtonX
 {
     background-image: url("file://{images}/library/controller/api/button_x.png");

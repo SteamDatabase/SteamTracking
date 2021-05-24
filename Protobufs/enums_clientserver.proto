@@ -552,6 +552,7 @@ enum EMsg {
 	k_EMsgGCHInviteUserToLobby = 2238;
 	k_EMsgGCHUpdateMultipleSessions = 2239;
 	k_EMsgGCHMarkAppSessionsAuthoritative = 2240;
+	k_EMsgGCHRecurringSubscriptionStatusChange = 2241;
 	k_EMsgBaseP2P = 2500;
 	k_EMsgP2PIntroducerMessage = 2502;
 	k_EMsgBaseSM = 2900;

@@ -12,12 +12,12 @@
 "Overlay_SettingsDescriptionApp"	"Steam สามารถคงการทำงานไว้อยู่ และแสดงการแจ้งเตือนข้อความชุมชน Steam ในแอปพลิเคชันได้ รวมถึงอินเตอร์เฟสเพื่อนแบบเต็มภายในแอปพลิเคชันของคุณด้วย"
 "Overlay_SettingsEnable"	"เปิดการใช้งานโอเวอร์เลย์ Steam ขณะอยู่ในเกม"
 "Overlay_SettingsEnableApp"	"เปิดการใช้งานชุมชน Steam ในแอปพลิเคชัน"
-"Overlay_SettingsSCTenfootEnable"	"ใช้โอเวอร์เลย์ Big Picture เมื่อใช้คอนโทรลเลอร์ที่เปิดการใช้งานอุปกรณ์ควบคุมบน Steam จากเดสก์ทอป"
+"Overlay_SettingsSCTenfootEnable"	"ใช้โอเวอร์เลย์ Big Picture เมื่อใช้คอนโทรลเลอร์ที่เปิดการใช้งานอุปกรณ์ควบคุมบน Steam จากเดสก์ท็อป"
 "Overlay_SettingsHotKeyLabel"	"ปุ่มลัดสำหรับโอเวอร์เลย์"
 "Overlay_SettingsScreenshotHotKeyLabel"	"ปุ่มลัดสำหรับถ่ายภาพหน้าจอ"
 "Overlay_SettingsScreenshotActionLabel" "เมื่อถ่ายภาพหน้าจอ"
-"Overlay_SettingsEnableVRDesktopGameTheaterCheck" "ใช้โรงภาพยนตร์เกมบนเดสก์ทอป เมื่อเริ่มเปิดเกมบนเดสก์ทอป ขณะที่ SteamVR เปิดใช้งานอยู่"
-"Overlay_SettingsDesktopGameTheaterCheck" "ใช้โรงภาพยนตร์เกมบนเดสก์ทอป ขณะที่ SteamVR เปิดใช้งานอยู่"
+"Overlay_SettingsEnableVRDesktopGameTheaterCheck" "ใช้โรงภาพยนตร์เกมบนเดสก์ท็อป เมื่อเริ่มเปิดเกมบนเดสก์ท็อป ขณะที่ SteamVR เปิดใช้งานอยู่"
+"Overlay_SettingsDesktopGameTheaterCheck" "ใช้โรงภาพยนตร์เกมบนเดสก์ท็อป ขณะที่ SteamVR เปิดใช้งานอยู่"
 "Overlay_SettingsIsVRShortcut"			"รวมในคลัง VR"
 
 "Steam_Settings_Ingame_ShowFPS_Title"	"ตัวนับ FPS ในเกม"
@@ -148,7 +148,7 @@
 "Overlay_FriendChangeConfirmation_Button_RequestIgnore"		"ละเว้นคำขอ"
 
 "Overlay_LobbyInvite_WrongGame_Title"	"คำเชิญเข้าร่วมเกม"
-"Overlay_LobbyInvite_WrongGame_Message" "คำเชิญนี้สำหรับเกมอื่นซึ่งไม่ใช่เกมที่คุณกำลังเล่นอยู่ในขณะนี้ \nกรุณาปิดเกมปัจจุบันของคุณ และยอมรับคำเชิญจากเดสก์ทอปของคุณ"
+"Overlay_LobbyInvite_WrongGame_Message" "คำเชิญนี้สำหรับเกมอื่นซึ่งไม่ใช่เกมที่คุณกำลังเล่นอยู่ในขณะนี้ \nกรุณาปิดเกมปัจจุบันของคุณ และยอมรับคำเชิญจากเดสก์ท็อปของคุณ"
 
 "Overlay_MicroTxnAuth_Title"		"ธุรกรรมบน Steam"
 "Overlay_MicroTxnAuth_Authorize"	"อนุญาต"
@@ -254,7 +254,6 @@
 "Overlay_Broadcast_Chat_Title" "การถ่ายทอดสด - แช็ต ( %numviewers%)"
 "Overlay_Broadcast_Live_Debug" "%videosendkbps% kbps, %videosendfps% FPS"
 
-"SteamChina_Overlay_DurationControl_Init"		"Healthy Gaming Advisory\nBoycott harmful games; reject game piracy.\nExercise self-protection; avoid deception.\nModeration promotes brain health; excess play is harmful to the body.\nWell-planned use of your time will lead to a healthy lifestyle."
 "SteamChina_Overlay_DurationControl_MessageA"		"You've been playing for one hour."
 "SteamChina_Overlay_DurationControl_MessageB"		"You've been playing for three hours.\nConsider taking a break."
 "SteamChina_Overlay_DurationControl_MessageC"		"You've been playing for over three hours.\nYour XP / progress has been reduced by half."

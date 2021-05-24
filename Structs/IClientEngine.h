@@ -39,6 +39,8 @@ public:
     virtual unknown_ret GetIClientProductBuilder(int, int) = 0;
     virtual unknown_ret GetIClientDepotBuilder(int, int) = 0;
     virtual unknown_ret GetIClientNetworkDeviceManager(int) = 0;
+    virtual unknown_ret GetIClientStorageDeviceManager(int) = 0;
+    virtual unknown_ret GetIClientSystemManager(int) = 0;
     virtual unknown_ret ConCommandInit(IConCommandBaseAccessor*) = 0;
     virtual unknown_ret GetIClientAppManager(int, int) = 0;
     virtual unknown_ret GetIClientConfigStore(int, int) = 0;

@@ -28,7 +28,7 @@
 "app_task_console"	"Консоль"
 "app_task_musicplayer"	"Музичний програвач"
 "app_task_steamvr"	"SteamVR"
-"app_task_stop_streaming"	"Зупинити Steam Remote Play"
+"app_task_stop_streaming"	"Зупинити Remote Play"
 
 "Steam_AccountAlreadyLoggedInNeedShutdown"		"Ваш акаунт «%account%» зараз уживається на іншому пристрої.\nВам потрібно закрити Steam на іншому комп’ютері, щоб увійти тут."
 "Steam_AccountAlreadyLoggedInNeedPassword"		"До цього акаунта вже хтось увійшов.\nУведіть свій пароль повторно, аби ввійти на цьому комп’ютері."

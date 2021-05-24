@@ -40,6 +40,8 @@ message CContentServerDirectory_GetDepotPatchInfo_Request {
 
 message CContentServerDirectory_GetDepotPatchInfo_Response {
 	optional bool is_available = 1;
+	optional uint64 patch_size = 2;
+	optional uint64 patched_chunks_size = 3;
 }
 
 message CContentServerDirectory_GetClientUpdateHosts_Request {

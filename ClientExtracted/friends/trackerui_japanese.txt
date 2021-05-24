@@ -470,9 +470,9 @@
 "Friends_AchievementProgress_Headline"		"実績の状況"
 "Friends_AchievementProgress_Body"			"%achievement% (%cur%/%max%)"
 
-"Friends_ChatURLWarning_Title"		"警告:Steam 以外の Web サイト"
-"Friends_ChatURLWarning_Info"			"注意:クリックした URL は公式 Steam Web サイトではありません。"
-"Friends_ChatURLWarning_Info2"		"この Web サイトでユーザー名やパスワードを尋ねられたとしても、絶対に入力しないでください。 お使いの Steam アカウントや所有しているゲームが失われる可能性があります。"
+"Friends_ChatURLWarning_Title"		"警告：Steam以外のWebサイト"
+"Friends_ChatURLWarning_Info"			"注意：クリックしたURLは公式Steam Webサイトではありません。"
+"Friends_ChatURLWarning_Info2"		"このWebサイトでユーザー名やパスワードを尋ねられたとしても、絶対に入力しないでください。 お使いのSteamアカウントや所有しているゲームが失われる可能性があります。"
 "Friends_ChatURLWarning_Continue"		"注意事項を理解した上で Web ページを表示する"
 "Friends_ChatURLWarning_DontAskAgainCheck"	"次から表示しない"
 

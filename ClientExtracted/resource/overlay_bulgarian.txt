@@ -254,7 +254,6 @@
 "Overlay_Broadcast_Chat_Title" "Предаване — чат ( %numviewers%)"
 "Overlay_Broadcast_Live_Debug" "%videosendkbps% kbps, %videosendfps% К/С"
 
-"SteamChina_Overlay_DurationControl_Init"		"Съветване за здравословно играене.\nБойкотирайте вредните игри. Отхвърлете игралното пиратство.\nПрактикувайте самозащита. Избягвайте измамата.\nУмереността насърчава здравето на мозъка. Прекомерната игра е вредна за тялото.\nДобре планираното оползотворяване на времето Ви ще доведе до здравословен начин на живот."
 "SteamChina_Overlay_DurationControl_MessageA"		"Играли сте един час."
 "SteamChina_Overlay_DurationControl_MessageB"		"Играли сте три часа.\nОбмислете да си починете."
 "SteamChina_Overlay_DurationControl_MessageC"		"Играли сте над три часа.\nОпитът/Напредъкът Ви е намален наполовина."

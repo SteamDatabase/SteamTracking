@@ -8,7 +8,7 @@
 	{
 		"english"
 		{
-			"title"		"Gamepad with Mouse and Gyro"
+			"title"		"Gamepad with Gyro"
 			"description"		"The template works best for games that are designed with a gamepad in mind, but also support a desktop mouse for camera control or aim. This uses both the right pad and the gyro to allow for the most precise aim in games which support gamepad and mouse."
 		}
 	}

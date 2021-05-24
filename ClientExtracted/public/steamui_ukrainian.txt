@@ -230,7 +230,7 @@
 "SteamUI_JoinDialog_OpenVRWaitingForQuit" "Очікування завершення %quitting_game% %dots%"
 
 "SteamUI_JoinDialog_UpdatingAppInfo" "Оновлення конфігурації %dots%"
-"SteamUI_JoinDialog_UpdatingAppTicket" "Оновлення звернення %dots%"
+"SteamUI_JoinDialog_UpdatingAppTicket" "Оновлення запиту %dots%"
 
 "SteamUI_JoinDialog_TimedTrial_Error" "Не вдалося запустити  %game% як обмежену пробну версію. (Помилка: %error%)"
 
@@ -830,6 +830,7 @@
 "SteamUI_ValveSurvey_Summary_VideoCard"						"Відеокарта:"
 "SteamUI_ValveSurvey_Summary_Memory"						"Пам’ять:"
 "SteamUI_ValveSurvey_Summary_Audio"							"Звукова плата:"
+"SteamUI_ValveSurvey_Summary_Storage"						"Місце на диску:"
 
 "SteamUI_ValveSurvey_ResultsLabel"							"Опитування завершено. Ще раз дякуємо вам за участь.\n\nЯкщо ви бажаєте порівняти показники з комп’ютерами інших користувачів Steam, то можете переглянути об’єднані результати опитування, натиснувши на посилання нижче.\n\n (Або просто натисніть «Готово», аби закрити вікно.)"
 "SteamUI_ValveSurvey_ResultsButton"							"Перейти на сторінку результатів опитування."
@@ -841,6 +842,11 @@
 
 "SteamUI_ValveSurvey_Summary_MACAddressHash"				"Геш MAC-адреси: %s1"
 "SteamUI_ValveSurvey_Summary_DiskSerialHash"				"Геш серійного номера диска: %s1"
+
+"SteamUI_ValveSurvey_Summary_SSDCount"						"Кількість SSD: %s1"
+"SteamUI_ValveSurvey_Summary_SSDSizes"						"Розміри SSD: %s1"
+"SteamUI_ValveSurvey_Summary_HDDCount"						"Кількість жорстких дисків: %s1"
+"SteamUI_ValveSurvey_Summary_HDDSizes"						"Розміри жорстких дисків: %s1"
 
 "SteamUI_ValveSurvey_Summary_DesktopSystem"					"Форм-фактор: Настільний ПК"
 "SteamUI_ValveSurvey_Summary_LaptopSystem"					"Форм-фактор: Ноутбук"
@@ -1248,7 +1254,7 @@
 
 "Steam_Rejected_Cdkey_Recover_Feedback" "Власнику введеного коду продукту було відправлено електронний лист."
 
-"Steam_Receipt_AlreadyPurchased" "Цей акаунт Steam вже має у власності продукти (чи продукт), які пов’язані з цим кодом активації. Натисніть «Далі», аби перейти до інсталяції."
+"Steam_Receipt_AlreadyPurchased" "Цей акаунт Steam вже має у власності продукти (чи продукт), які пов’язані з цим кодом активації. Натисніть «Готово», аби перейти до інсталяції."
 "Steam_Receipt_AlreadyPurchased_Headline" "Ви вже маєте цей продукт"
 
 "Steam_InstallAppWizard_Title"	"Інсталювання — %game%"
@@ -1940,8 +1946,8 @@
 "SteamUI_AppTypeToolInitialCapsPlural"	"Інструменти"
 "SteamUI_AppTypeDemo"			"демоверсія"
 "SteamUI_AppTypeDemoInitialCaps"	"Демоверсія"
-"SteamUI_AppTypeDemoPlural"		"демки"
-"SteamUI_AppTypeDemoInitialCapsPlural"	"Демки"
+"SteamUI_AppTypeDemoPlural"		"демоверсії"
+"SteamUI_AppTypeDemoInitialCapsPlural"	"Демоверсії"
 "SteamUI_AppTypeMediaFile"		"матеріал"
 "SteamUI_AppTypeMediaFileInitialCaps"	"Матеріал"
 "SteamUI_AppTypeMediaFilePlural"		"матеріали"
@@ -2041,7 +2047,7 @@
 "Steam_BackgroundDownloadsDeny"	"Ніколи не дозволяти фонові завантаження"
 
 "Steam_GameProperties_SteamInputSettings"	"Налаштування введення Steam"
-"Steam_GameProperties_SteamInputSettings_PerGameOptIn" "Передігрове налаштування введення Steam (вимагає перезапуску гри)"
+"Steam_GameProperties_SteamInputSettings_PerGameOptIn" "Налашт. введення Steam для окремої гри (вимагає перезапуску гри)"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn_ForcedOff" "Примусово вимк."
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn_Global"	"Використати ваші глобальні налаштування введення Steam"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn_ForcedOn" "Примусово увімк."
@@ -3859,7 +3865,7 @@
 "Friends_busy"			"Не турбувати"
 "Friends_snooze"			"Дрімає"
 "Friends_offline"			"Не в мережі"
-"Friends_invisible"		"Невидимий"
+"Friends_invisible"		"Невидимість"
 "Friends_lookingtotrade"	"Бажає обмінятися"
 "Friends_lookingtoplay"		"Бажає пограти"
 "Friends_mobile_device_only"	"%s1 (мобільна версія)"
@@ -3948,8 +3954,8 @@
 "steam_screenshots_error_info" "Виникла помилка під час вивантаження знімків екрана (%ScreenshotsErrors%). Steam Cloud може бути тимчасово недоступним."
 "steam_screenshots_error_accountban" "Ви не можете вивантажувати вміст до цього центру через активне блокування на вашому акаунті."
 "steam_screenshots_limited_user" "Ваш акаунт наразі обмежений, бо ви ще не витратили 5$ у Steam. Поки його обмежено, ви не можете вивантажувати загальнодоступні знімки екрана."
-"steam_are_you_sure_delete_screenshot" "Ви дійсно бажаєте назавжди стерти цей знімок екрана з вашого жорсткого диска?"
-"steam_are_you_sure_delete_screenshots" "Ви дійсно бажаєте назавжди стерти ці знімки екрана (%delete_screenshot_count% шт.) з вашого жорсткого диска?"
+"steam_are_you_sure_delete_screenshot" "Ви дійсно бажаєте назавжди видалити цей знімок екрана з вашого жорсткого диска?"
+"steam_are_you_sure_delete_screenshots" "Ви дійсно бажаєте назавжди видалити ці знімки екрана (%delete_screenshot_count% шт.) з вашого жорсткого диска?"
 "steam_screenshotdelete_title" "Видалення знімка екрана"
 "steam_delete" "Видалити"
 "steam_screenshots_selected" "Обрано знімків екрана: (%selected_screenshot_count%)."
@@ -3972,7 +3978,7 @@
 "Steam_Login_ContactSupport"		"Будь ласка, зверніться до служби підтримки Steam для розв’язання цієї проблеми."
 "Steam_ErrorAccountIPLoginRestricted"		"До цього акаунта не можна ввійти з поточного розташування.\n"
 
-"steam_tradedialog_title"			"Торгівля"
+"steam_tradedialog_title"			"Обмін"
 "steam_accountsettings_title"		"Налаштування акаунта"
 
 "Steam_EOLAlert"	"Steam перестане працювати на ОС %OsVer% через %DaysUntilOSEndOfLife% дн."
@@ -4324,7 +4330,7 @@
 
 "Notification_StreamingTitle"	"Steam Remote Play"
 "Notification_StreamingStarted"	"Почалося транслювання з %hostname% до %machine%"
-"Notification_StreamingStopped"	"Зупинено транслювання до %machine%"
+"Notification_StreamingStopped"	"Транслювання на %machine% зупинено"
 
 "steam_menu_view_music_details" "Список музики з подробицями"
 "steam_menu_view_musicplayer" "Музичний програвач"
@@ -4512,12 +4518,12 @@
 "Steam_Settings_Compat_Launch_Forced"     "обрано вами для цього продукту"
 
 
-"Steam_Settings_StreamingTitle" "Steam Remote Play"
+"Steam_Settings_StreamingTitle" "Remote Play"
 
 "Steam_Settings_Streaming_Description" "Виявлено підтримку транслювання ігор із вашого комп’ютера на інші пристрої. Для підключення до пристрою просто ввійдіть на ньому до цього ж акаунта Steam або оберіть «Інший комп’ютер» у Steam Link."
 "Steam_Settings_Streaming_DeviceName" "НАЗВА ПРИСТРОЮ"
 "Steam_Settings_Streaming_Status" "СТАН"
-"Steam_Settings_Streaming_EnableStreaming" "Увімкнути Steam Remote Play"
+"Steam_Settings_Streaming_EnableStreaming" "Увімкнути Remote Play"
 "Steam_Settings_Streaming_Pair" "Поєднати Steam Link"
 "Steam_Settings_Streaming_Unpair" "Роз’єднати пристрої"
 "Steam_Settings_Streaming_UnpairConfirmation" "Ви дійсно бажаєте роз’єднати всі пристрої?"
@@ -4532,11 +4538,11 @@
 "Steam_Settings_Streaming_QualityBeautiful" "Якість"
 "Steam_Settings_Streaming_AdvancedHostOptions" "Додаткові параметри хоста"
 "Steam_Settings_Streaming_AdvancedHostOptions_Title" "Додаткові параметри хоста"
-"Steam_Settings_Streaming_AdvancedHostOptions_Description" "Задля покращення швидкодії транслювання на цей комп’ютер спробуйте зменшити роздільність гри або змінити наступні налаштування."
-"Steam_Settings_Streaming_AdvancedClientOptions" "Додаткові параметри клієнта"
-"Steam_Settings_Streaming_AdvancedClientOptions_Title" "Додаткові параметри клієнта"
-"Steam_Settings_Streaming_AdvancedClientOptions_DescriptionLocal" "Задля покращення швидкодії транслювання на цей комп’ютер спробуйте зменшити роздільність гри або змінити наступні налаштування."
-"Steam_Settings_Streaming_AdvancedClientOptions_DescriptionRemote" "Задля покращення продуктивності транслювання на %streamingclient% спробуйте зменшити роздільність гри або налаштувати наведені параметри."
+"Steam_Settings_Streaming_AdvancedHostOptions_Description" "Задля покращення швидкодії транслювання з цього комп’ютера спробуйте зменшити роздільність гри або змінити наведені нижче налаштування."
+"Steam_Settings_Streaming_AdvancedClientOptions" "Розширені налаштування клієнта"
+"Steam_Settings_Streaming_AdvancedClientOptions_Title" "Розширені налаштування клієнта"
+"Steam_Settings_Streaming_AdvancedClientOptions_DescriptionLocal" "Задля покращення швидкодії транслювання на цей комп’ютер спробуйте зменшити роздільність гри або змінити наведені нижче налаштування."
+"Steam_Settings_Streaming_AdvancedClientOptions_DescriptionRemote" "Задля покращення продуктивності транслювання на %streamingclient% спробуйте зменшити роздільність гри або змінити наведені нижче налаштування."
 "Steam_Settings_Streaming_EnableCaptureNVFBC" "Функція захоплення NVFBC (NVIDIA)"
 "Steam_Settings_Streaming_EnableHardwareEncoding" "Увімкнути апаратне кодування"
 "Steam_Settings_Streaming_EnableHardwareEncodingNVIDIA" "Увімкнути апаратне кодування на відеоадаптері NVIDIA"
@@ -4558,10 +4564,13 @@
 "Steam_Settings_Streaming_Bandwidth20000" 	"20 Мбіт/с"
 "Steam_Settings_Streaming_Bandwidth25000" 	"25 Мбіт/с"
 "Steam_Settings_Streaming_Bandwidth30000" 	"30 Mбіт/с"
+"Steam_Settings_Streaming_Bandwidth40000" 	"40 Мбіт/с"
 "Steam_Settings_Streaming_Bandwidth50000" 	"50 Мбіт/с"
+"Steam_Settings_Streaming_Bandwidth75000" 	"75 Мбіт/с"
 "Steam_Settings_Streaming_BandwidthUnlimited" 	"Без обмежень (збільшує затримку)"
 "Steam_Settings_Streaming_Resolution"	"Обмежити роздільність до"
 "Steam_Settings_Streaming_ResolutionDesktop" 	"Роздільності екрана"
+"Steam_Settings_Streaming_Resolution8K" 	"7680x4320 (8K)"
 "Steam_Settings_Streaming_Resolution2160p" 	"3840x2160 (4K)"
 "Steam_Settings_Streaming_Resolution1440p" 	"2560x1440 (1440p)"
 "Steam_Settings_Streaming_Resolution1080p" 	"1920 на 1080 (1080p)"

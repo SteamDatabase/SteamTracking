@@ -8,8 +8,8 @@
 	{
 		"english"
 		{
-			"Title" "Gamepad with High Precision Camera/Aim"
-			"Description" "The template works best for games that are designed with a gamepad in mind, but also support a desktop mouse for camera control or aim. This will do the best job of specifically taking advantage of the right side pad on your controller for precise aiming and camera control."
+			"Title" "Gamepad"
+			"Description" "The template works best for games that are designed with a gamepad in mind. The right trackpad will be bound to mouse emulation which may not work in all games."
 		}
 		"czech"
 		{

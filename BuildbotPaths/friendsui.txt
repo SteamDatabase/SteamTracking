@@ -1,5 +1,3 @@
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientui/htmlwindow.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientui/htmlwindowcontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/commonkeycode.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto_digest_openssl.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto_rsa_openssl.cpp
@@ -13,6 +11,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/opensslwrapper.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/client_api.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steamid.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_clientnotificationtypes.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/urlhelper.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/protobuf-2.6.1/src/google/protobuf/repeated_field.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/friendsUI/AppDownloadNotification.cpp
@@ -22,6 +21,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/friendsUI/friendsUI.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/friendsUI/friendsdialog.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/friendsUI/friendswebchat.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/htmlwindow/htmlwindow.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/htmlwindow/htmlwindowcontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/htmlmessages.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/htmlpaintbuffer.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/htmlprotobuf.cpp

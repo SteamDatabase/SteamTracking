@@ -2,6 +2,7 @@ __TEXT
 __text
 __TEXT
 @
+$r
 @
 __stubs
 __TEXT
@@ -10,6 +11,8 @@ __TEXT
 __gcc_except_tab__TEXT
 __cstring
 __TEXT
+"
+"
 __const
 __TEXT
 __objc_methname
@@ -17,7 +20,6 @@ __TEXT
 7
 __unwind_info
 __TEXT
-|u
 __eh_frame
 __TEXT
 __DATA
@@ -33,19 +35,12 @@ __DATA
 __const
 __DATA
 __objc_imageinfo__DATA
-(H/
-(H/
 __objc_selrefs
 __DATA
-0H/
-0H/
 __objc_classrefs__DATA
-HH/
-HH/
 __data
 __DATA
-PH/
-PH/
+8N
 __thread_vars
 __DATA
 __thread_bss
@@ -54,17 +49,19 @@ __common
 __DATA
 __bss
 __DATA
-L0
 H
 __LINKEDIT
+`/
 
 8
 @loader_path/steamservice.dylib
 "
+`/
+p/
 H
 P
 {
-~%
+|
 
 `
 h
@@ -88,12 +85,13 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-8$
 )
+O,
 Hi
 H=
+]!
 ?
-10CUtlString
+,!
 10CIPCServer
 11CPipeWaiter
 10IIPCServer
@@ -1196,30 +1194,12 @@ N10OSXHelpers13CCompatThreadE
 12CIPRangeList
 10CUtlVectorI9IPRange_t10CUtlMemoryIS0_EE
 10CUtlVectorI8CNetMask10CUtlMemoryIS0_EE
+10CUtlString
 14CFrameFunctionI7CJobMgrE
 14CUtlLinkedListIN7CJobMgr13JobYielding_tEiE
 kvsignatures
 kvsign2
 Logger
-11CUtlHashMapI14CMetricsSymbol9CSmartPtrI14CMetricsStringE10CDefEqualsIS0_E11HashFunctorIS0_ES0_E
-10CUtlVectorIN11CUtlHashMapI14CMetricsSymbol9CSmartPtrI14CMetricsStringE10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tE10CUtlMemoryISA_EE
-12CAutoReleaseI14CMetricsStringE
-11CUtlHashMapI14CMetricsSymbolS0_10CDefEqualsIS0_E11HashFunctorIS0_ES0_E
-10CUtlVectorIN11CUtlHashMapI14CMetricsSymbolS1_10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tE10CUtlMemoryIS7_EE
-11CUtlHashMapI14CMetricsSymbolx10CDefEqualsIS0_E11HashFunctorIS0_ES0_E
-10CUtlVectorIN11CUtlHashMapI14CMetricsSymbolx10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tE10CUtlMemoryIS7_EE
-11CUtlHashMapI14CMetricsSymbold10CDefEqualsIS0_E11HashFunctorIS0_ES0_E
-10CUtlVectorIN11CUtlHashMapI14CMetricsSymbold10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tE10CUtlMemoryIS7_EE
-NSt3__110__function6__funcIZN15IMetricsFactory11NullMetricsEvE3$_8NS_9allocatorIS3_EEFvR8CMetricsEEE
-ZN15IMetricsFactory11NullMetricsEvE3$_8
-15IMetricsFactory
-19CNullMetricsFactory
-NSt3__110__function6__baseIFvR8CMetricsEEE
-NSt3__110__function6__funcIPFv14CPoolReferenceI8CMetricsEENS_9allocatorIS6_EEFvRS4_EEE
-NSt3__110__function6__baseIFvR14CPoolReferenceI8CMetricsEEEE
-PFv14CPoolReferenceI8CMetricsEE
-Fv14CPoolReferenceI8CMetricsEE
-13CMetricsTimer
 6CTHashIP18IUDPSocketCallbackjE
 6CTHashIP16ITCPHostCallbackjE
 14CFrameFunctionI21CScheduledFunctionMgrE
@@ -1449,10 +1429,13 @@ Assertion Failed: IsValidIndex( elem )
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
 Assertion Failed: _IsValidIndex( elem, unNodeSize, pMemBase )
 Assertion Failed: _IsValidIndex( y, unNodeSize, pMemBase )
+Invalid index %u
 m_Memory
 %s-%x
-Accept returned true but returned a NULL pipe
+Assertion Failed: m_dwProcessID
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/pipes.cpp
+Assertion Failed: m_pSingleProcessPipe == NULL
+Accept returned true but returned a NULL pipe
 Assertion Failed: false
 Assertion Failed: m_dwThreadID == ThreadGetCurrentId()
 CServerPipe::SerializeCallbacks()
@@ -1529,13 +1512,12 @@ Assertion Failed: !m_bIsInCallback
 Assertion Failed: !GetRefCount()
 Assertion Failed: pEventHeaders
 Assertion Failed: static_cast<int>( nStartEventIndex ) <= m_eventHeaders.Count()
-m_vecHashBuckets
-m_memNodes
-m_bitsMigratedBuckets
 Assertion Failed: bitNum >= 0 && bitNum < this->Size()
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/bitstring.h
 Assertion Failed: m_iRefs >= 0 && m_iRefs < 0x0ffffff
+CUtlHashMap::RemoveAt - Invalid index
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlhashmap.h
+CUtlHashMap::RemoveAt - couldn't find bucket for item
 Assertion Failed: m_heap.IsValidIndex(index)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlpriorityqueue.h
 SOFTWARE\Khronos\Vulkan
@@ -1611,10 +1593,12 @@ CHECK failed: cpp_type(extension->type) == WireFormatLite::CPPTYPE_MESSAGE:
 CHECK failed: (extension->type) == (other_extension.type):
 CHECK failed: (extension->is_packed) == (other_extension.is_packed):
 CHECK failed: !extension->is_repeated:
+Non-primitive types can't be packed.
 CHECK failed: is_repeated:
 Multiple extension registrations for type "
 ", field number
 CHECK failed: type > 0 && type <= WireFormatLite::MAX_FIELD_TYPE:
+CHECK failed: (current_size_) > (0):
 google/protobuf/message_lite.cc
 CHECK failed: !coded_out.HadError():
 CHECK failed: IsInitialized():
@@ -1839,6 +1823,9 @@ Invalid wire type for CPPTYPE_UINT64:
 Warning: Unused import: "
 " imports "
 " which is not used.
+GetEmptyStringAlreadyInited
+./google/protobuf/generated_message_util.h
+empty_string_ != NULL
 set_label
 ./google/protobuf/descriptor.pb.h
 ::google::protobuf::FieldDescriptorProto_Label_IsValid(value)
@@ -1847,6 +1834,9 @@ set_type
 $0option $1;
 }
 (.
+./google/protobuf/repeated_field.h
+CHECK failed: (index) >= (0):
+CHECK failed: (index) < (size()):
 " not previously defined in symbols_by_name_, but was defined in symbols_by_parent_; this shouldn't be possible.
 " is already defined.
 " is already defined in "
@@ -1858,6 +1848,9 @@ No field named "uninterpreted_option" in the Options proto.
 CHECK failed: original_uninterpreted_options_field != NULL:
 CHECK failed: options->ParseFromString(buf):
 Protocol message serialized itself in invalid fashion.
+down_cast
+./google/protobuf/stubs/common.h
+f == NULL || dynamic_cast<To>(f) != NULL
 length_delimited
 ./google/protobuf/unknown_field_set.h
 type() == TYPE_LENGTH_DELIMITED
@@ -1897,6 +1890,7 @@ Extension conflicts with extension already in database: extend
 }
 google/protobuf/dynamic_message.cc
 CHECK failed: is_prototype():
+Can't get here.
 operator[]
 i >= 0
 array_ != NULL
@@ -1910,7 +1904,6 @@ CHECK failed: ((*extension).is_repeated ? FieldDescriptor::LABEL_REPEATED : Fiel
 CHECK failed: prototype != NULL:
 CHECK failed: output->message_prototype != NULL:
 Extension factory's GetPrototype() returned NULL for extension:
-Non-primitive types can't be packed.
 CHECK failed: type > 0 && type <= FieldDescriptor::MAX_TYPE:
 google/protobuf/generated_message_reflection.cc
 Unimplemented type:
@@ -1927,7 +1920,6 @@ Field does not match message type.
 Field is repeated; the method requires a singular field.
 FieldSize
 Field is singular; the method requires a repeated field.
-Can't get here.
 ClearField
 RemoveLast
 ReleaseLast
@@ -1994,9 +1986,6 @@ CHECK failed: (field->options().ctype()) == (ctype):
 subtype mismatch
 CHECK failed: (field->message_type()) == (desc):
 wrong submessage type
-GetEmptyStringAlreadyInited
-./google/protobuf/generated_message_util.h
-empty_string_ != NULL
 Protocol Buffer reflection usage error:  Method      : google::protobuf::Reflection::
 Message type:
 Field       :
@@ -2017,10 +2006,6 @@ CPPTYPE_MESSAGE
 Problem     : Enum value did not match field type:    Expected  :
 Actual    :
 CHECK failed: (extensions_offset_) != (-1):
-./google/protobuf/repeated_field.h
-CHECK failed: (current_size_) > (0):
-CHECK failed: (index) >= (0):
-CHECK failed: (index) < (size()):
 google/protobuf/message.cc
 CHECK failed: (from.GetDescriptor()) == (descriptor):
 : Tried to merge from a message with a different type.  to:
@@ -2033,9 +2018,6 @@ File is already registered:
 CHECK failed: (descriptor->file()->pool()) == (DescriptorPool::generated_pool()):
 Tried to register a non-generated type with the generated type registry.
 Type is already registered:
-down_cast
-./google/protobuf/stubs/common.h
-f == NULL || dynamic_cast<To>(f) != NULL
 google/protobuf/reflection_ops.cc
 CHECK failed: (&from) != (to):
 CHECK failed: (to->GetDescriptor()) == (descriptor):
@@ -7669,7 +7651,6 @@ invalid input pointer
 Assertion Failed: resizeNumBits >= 0
 Assertion Failed: !m_pInt
 Assertion Failed: GetInts()
-CVariableBitStringBase
 Assertion Failed: pName
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/convar.cpp
 Assertion Failed: m_vecCallbacks.Count() == 0 || !callback
@@ -7682,7 +7663,6 @@ Assertion Failed: m_vecCallbacks.Count() == 0
 Assertion Failed: pDefaultValue
 Attempted to change replicated CVar when you are not the GM
 FCVAR_NEVER_AS_STRING
-Assertion Failed: m_p == NULL
 Bad expression token: %c at %d in %s
 Bad expression token: %c %c
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/fileio.cpp
@@ -7714,7 +7694,6 @@ Seeking to a position which is not sector aligned will break unbuffered io
 ..
 Assertion Failed: cbActual < (uint32)nBufSizeWithTerminator
 *.*
-Element( i )
 CPathString
 .dylib
 %s/%s%s
@@ -7892,8 +7871,8 @@ crashhandler.dylib
 CreateInterface
 %u
 1.0
-May 18 2021
-18:54:37
+May 22 2021
+09:35:31
 Jan
 Feb
 Mar
@@ -8160,6 +8139,8 @@ Invalid spew group
 RequestHeaders
 @bHttpClientRecordHostnameDimension
 Group HTTP metrics by hostname.  Careful, the cardinality of your in-memory map might be large.
+@bEnableHTTP2OnAllCHTTPClients
+Enable HTTP/2 on all CHTTPClients automatically for SSL connections
 Cache-Control
 Connection
 Content-Disposition
@@ -8180,10 +8161,6 @@ Transfer-Encoding
 Range
 Set-Cookie
 yes
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlsymbol.h
-Assertion Failed: pPool->m_SpaceUsed < 0xFFFF
-Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
-m_pObj
 m_vecpHTTPClients
 private
 Unexpected thread race for CIOPollingHelper construction
@@ -8213,7 +8190,6 @@ Assertion Failed: m_MapJob[iJob]->GetPauseReason() == k_EJobPauseReasonYield
 Unexpected sleep reason %d in CJobMgr::BResumeSleepingJobs.
 CJobMgr::CheckForJobTimeouts
 name
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/smartptr.h
 @bEnableSpewThrottle
 1
 @bEnableLogTearOff
@@ -8269,15 +8245,6 @@ Persistent Logfiles created which have no cleanup limit specified!
 CLogInstance::EmitEventNow
 Last Message Repeated %d times.%s
 Assertion Failed: (unsigned)elem <= (unsigned)m_Size
-totaltime
-CMetrics::Increment_int
-m_nullMetrics
-m_totalTime
-m_stringDimensions
-m_symbolDimensions
-m_intDimensions
-m_doubleMeasurements
-m_intMeasurements
 double
 ":
 @bMetricsEnabled
@@ -8295,12 +8262,6 @@ Comma separated list of tag names known to cause cardinality problems for Influx
 @metricsLegacyJobMetrics
 CInfluxClient::SendCurrentBatchAsync,UpdateAppJobReport,perf,ExternalStorageTransferReport,ChatRoom.RelaySendChatMessage#1,DownloadRates,DownloadRatesPerServer,AppBranchUpdateStats,Trust.FullAccountUpdate#1,Trust.OnAccountChanged#1,Trust.OnAccountLabeled#1,Trust.OnAccountLicenseAdded#1,PlayerStatsVOD,PlayerStatsBroadcast,CurrentPlayers,matchmaking,AppTransfers,DownloadRatesISP,DownloadRatesISPPerServer,ExternalTransferStats,BroadcastFetchStats,Transaction,DataTransfer,ContentServerStats,SteamPipeCDNWeights,RegionDirectives,BroadcastCDNWeights,China.ListPersonaNames#1,China.RestrictVisibility#1,GetInteractiveRecommendations,PlayerStallReportBroadcast,PlayerStallReportVOD,AddAnnouncementImage,GetIRAppRankForAccounts,email_monitor
 Comma separated list of Operation names that predate preaggregated job metrics.
-null catalog
-null program
-null operation
-Assertion Failed: m_pNRefs
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/tsmempool.h
-Assertion Failed: *m_pNRefs > 0
 @bMsgErrorDump
 @nSpewThrottlePeriodMs
 1000
@@ -8448,7 +8409,7 @@ Assertion Failed: pszThreadName != NULL
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/workthreadpool.cpp
 CWorkThreadPool::~CWorkThreadPool(): Thread pool %s shutdown incorrectly.
 Assertion Failed: 0 == m_WorkThreads.Count()
-Assertion Failed: 0 == m_cThreadsRunning
+Assertion Failed: 0 == (int)m_cThreadsRunning
 CWorkThreadPool::~CWorkThreadPool: work complete queue not empty, %d items discarded.
 CWorkThreadPool::~CWorkThreadPool: work processing queue not empty: %d items discarded.
 Assertion Failed: pThread
@@ -8471,10 +8432,15 @@ Work thread '%s' is marked exited, but we could not immediately join prior to de
 CWorkItem::DispatchCompletedWorkItem: got a work item with no job ID
 Assertion Failed: m_cCurrentDepth > 0
 %s%s%s
+O,
 Hi
 H=
+]!
 ?
+,!
 #
+e
+N
 @
 @
 =
@@ -8485,13 +8451,12 @@ H=
 A
 Hc
 =
-N
-4,
-L95v+
+I,
+L95s0+
++
 (
-(
-(
-++
++
++
 Hc
 ?
 ?
@@ -8514,7 +8479,8 @@ AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 @
 AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
-L$
+
+
 Pj
 ARj
 j
@@ -8523,7 +8489,6 @@ j
 =
 =
 @
-#
 =
 9
 =
@@ -8821,14 +8786,12 @@ ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 =
 @
-!
 
-b$
 @
 @
 @
 0
-!
+#
 H=
 Ic]
 j
@@ -8884,12 +8847,6 @@ $
 
 SHA1 multi-block transform for x86_64, CRYPTOGAMS by <appro@openssl.org>
 SHA1 block transform for x86_64, CRYPTOGAMS by <appro@openssl.org>
-
-
-
-
-
-
 0
 @
 @
@@ -8950,11 +8907,9 @@ i
 @
 @
 @
-
 @
 @
 @
 @
 @
 Hi
-
