@@ -513,7 +513,7 @@ a#store_search_link img {
 	color: #eeeeee;
 	margin-top: 2px;
 	margin-left: 8px;
-	width: 80px;
+		width: calc( 100% - 25px - 8px );
 	outline: none;
 	line-height: 26px;
 }
