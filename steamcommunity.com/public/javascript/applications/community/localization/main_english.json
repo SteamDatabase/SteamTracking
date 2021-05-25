@@ -1230,6 +1230,8 @@
     "Sale_Tabs_TitleShowAllItems": "%1$s - Show All Items",
     "Sale_Tabs_ShowItems": "This tab is set up to show all items in the sections that follow. However, by clicking below you can create a list of items and then only the items that are contained within this list will appear in the following sections when this tab is active.",
     "Sale_Tabs_ShowItems_Button": "Edit Filtered Items",
+    "Sale_Tabs_Background_title": "Background Tab Select Image (optional)",
+    "Sale_Tabs_Background_desc": "Allows setting a per tab background image that appears when the tab is selected.  It stretches across the tab bar on the top of the screen.",
     "Sale_Debug_Title": "Find in Sale",
     "Sale_Debug_Tooltip": "Tool which lets you lookup where specific app\/package\/bundle is across the sale page",
     "Sale_Debug_Desc": "Search for an app on the page via appid or the name. This search only looks within the sale for apps, bundles or packages that are explicitly featured on this sale page via sale section or implicitly via being part of tabs alone.",
