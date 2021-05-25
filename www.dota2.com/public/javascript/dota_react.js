@@ -210,7 +210,7 @@
                 3: "c45175b9447526b62472",
                 4: "cde657d677176dc4213b",
                 5: "9682938f4e9094cca324",
-                6: "58afd8a902f3e6b132b2",
+                6: "42f52c2f5b0ee6829a76",
                 7: "99e75a2b84c30fe40d77",
                 8: "30294df7b272787e0c49",
                 9: "29e676c8c0d17fb134ab",
@@ -42387,7 +42387,7 @@ object-assign
                       return e.handleClick(t);
                     },
                   },
-                  'By clicking the "I AGREE" button, you agree to the following terms: In addition to the licenses to Valve granted in the Steam Subscriber Agreement and Workshop terms, by submitting your film for consideration you grant Valve a non-exclusive, perpetual license to distribute, broadcast and transmit your film, or otherwise publicly perform or display your film on any medium, and to sublicense these rights to third parties.',
+                  Object(_.a)("#filmcontest_tos_2021"),
                   o.a.createElement(
                     "div",
                     {
@@ -42401,7 +42401,7 @@ object-assign
                     },
                     Object(_.a)("#filmcontest_i_agree")
                   ),
-                  "Clicking I accept will also redirect you to the community site where you can upload your submission."
+                  Object(_.a)("#filmcontest_redirect_to_community")
                 )
               )
             );
