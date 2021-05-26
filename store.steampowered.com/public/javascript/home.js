@@ -1457,7 +1457,7 @@ GHomepage = {
 
 				if ( !$Col )
 				{
-					$Col = $J('<div/>', {'data-panel': '{"flow-children":"column"}' } );
+					$Col = $J('<div/>', { 'class': 'spotlight_col', 'data-panel': '{"flow-children":"column"}' } );
 					$Page.append( $Col );
 				}
 

@@ -574,7 +574,6 @@ img.game_header_image_full {
 	border-radius: 6px;
 	box-shadow: 0 0 5px rgba(0,0,0,0.5);
 	overflow: hidden;
-	background-color: rgba(39,67,88,1);
 
 }
 	.franchise_notice:hover {
@@ -2673,6 +2672,19 @@ img.package_header {
 
 @media screen and (max-width: 910px )
 {
+	.franchise_notice, .franchise_notice .franchise_name, .franchise_notice .franchise_highlight, .franchise_notice .background_image {
+		height: unset;
+	}
+
+	.franchise_notice .franchise_name {
+		position: unset;
+		padding: 12px;
+	}
+
+	.franchise_notice .background_image {
+		z-index: -1;
+	}
+
 	html.responsive .queue_ctn {
 		width: auto;
 	}
@@ -5693,3 +5705,4 @@ body.v6 .page_content.notes {
 .music_album_track_name_other_language {
     color: #9aa8b7;
 }
+

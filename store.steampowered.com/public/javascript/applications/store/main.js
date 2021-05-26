@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6553546";
+var CLSTAMP = "6563032";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [10],
   {
@@ -3240,6 +3240,17 @@ var CLSTAMP = "6553546";
             }),
             (e.prototype.GetAllTags = function () {
               return this.vecTags;
+            }),
+            (e.prototype.BMatchesAllTags = function (e) {
+              var t = this,
+                n = !0;
+              return (
+                null == e ||
+                  e.forEach(function (e) {
+                    t.vecTags.includes(e) || (n = !1);
+                  }),
+                n
+              );
             }),
             (e.prototype.BHasSteamStoreSpotlight = function () {
               return Boolean(this.jsondata.store_spotlight);
@@ -12255,31 +12266,45 @@ var CLSTAMP = "6553546";
               return Math.max(Math.floor(window.innerWidth / 160), 2);
             }),
             (t.prototype.render = function () {
-              var e = this,
-                t = this.props,
-                n = t.section,
-                r = t.event,
-                a = t.language,
-                i = t.activeTab;
-              if (n.tabs.length < 2) return null;
-              var s = Object(X.a)(pe.a.SaleSectionTabsTab),
-                c = n.tabs.map(function (t) {
-                  var r = "Tab_" + t.unique_id;
+              var e,
+                t = this,
+                n = this.props,
+                r = n.section,
+                a = n.event,
+                i = n.language,
+                s = n.activeTab;
+              if (r.tabs.length < 2) return null;
+              var c = Object(X.a)(pe.a.SaleSectionTabsTab),
+                l = r.tabs.map(function (e) {
+                  var n = "Tab_" + e.unique_id;
                   return o.createElement(st, {
-                    key: r,
-                    section: n,
-                    selected: t === i,
-                    tab: t,
-                    language: a,
+                    key: n,
+                    section: r,
+                    selected: e === s,
+                    tab: e,
+                    language: i,
                     classNames: Object(X.a)(
-                      s,
-                      t === i && pe.a.SaleSectionTabsSelected
+                      c,
+                      e === s && pe.a.SaleSectionTabsSelected
                     ),
-                    onTabSelected: function (t) {
-                      return e.props.onTabSelected(n, t);
+                    onTabSelected: function (e) {
+                      return t.props.onTabSelected(r, e);
                     },
                   });
-                });
+                }),
+                u = zt(r, a);
+              if (
+                (null === (e = null == s ? void 0 : s.tab_bar_bg_image) ||
+                void 0 === e
+                  ? void 0
+                  : e.length) > 0
+              ) {
+                var p = b.a.GenerateArtworkURLFromHashAndExtensions(
+                  a.clanSteamID,
+                  s.tab_bar_bg_image
+                );
+                u.background = "url(" + p + ")";
+              }
               return o.createElement(
                 o.Fragment,
                 null,
@@ -12291,7 +12316,7 @@ var CLSTAMP = "6553546";
                       pe.a.SaleSectionTabs,
                       "SaleSectionTabs"
                     ),
-                    style: zt(n, r),
+                    style: u,
                   },
                   o.createElement(
                     xe.a,
@@ -12305,7 +12330,7 @@ var CLSTAMP = "6553546";
                           "SaleSectionCtn_Trgt"
                         ),
                       },
-                      c
+                      l
                     )
                   )
                 )
@@ -23907,9 +23932,11 @@ var CLSTAMP = "6553546";
         FacetedBrowseCtn: "facetedbrowse_FacetedBrowseCtn_1Drr-",
         FacetedBrowseInnerCtn: "facetedbrowse_FacetedBrowseInnerCtn_3vjDu",
         FacetedBrowseControls: "facetedbrowse_FacetedBrowseControls_1JM3A",
+        FacetMenuTitle: "facetedbrowse_FacetMenuTitle_2HmeH",
         FacetedBrowseMatchCount: "facetedbrowse_FacetedBrowseMatchCount_3_OwR",
         FacetedBrowseReset: "facetedbrowse_FacetedBrowseReset_3jRGA",
         Facet: "facetedbrowse_Facet_Qa8BX",
+        FacetTitle: "facetedbrowse_FacetTitle_3Jg7m",
         FacetValue: "facetedbrowse_FacetValue_12piy",
         FacetValueEnabled: "facetedbrowse_FacetValueEnabled_TZdsh",
         FacetValueDeactivated: "facetedbrowse_FacetValueDeactivated_2OE4s",
@@ -33872,6 +33899,7 @@ var CLSTAMP = "6553546";
         product_banner_override: { width: 1100, height: 160 },
         product_mobile_banner_override: { width: 500, height: 160 },
         schedule_track_art: { width: 196, height: 92 },
+        tab_bar_background: { width: 1500, height: 100 },
       };
       function a(e, t, n) {
         var a = r[n];
@@ -37053,6 +37081,13 @@ var CLSTAMP = "6553546";
           (e.ClientDownloadRatesReport = function (e, t) {
             return e.SendNotification(
               "ClientMetrics.ClientDownloadRatesReport#1",
+              t,
+              { ePrivilege: 1 }
+            );
+          }),
+          (e.ClientContentValidationReport = function (e, t) {
+            return e.SendNotification(
+              "ClientMetrics.ClientContentValidationReport#1",
               t,
               { ePrivilege: 1 }
             );
@@ -41578,8 +41613,9 @@ var CLSTAMP = "6553546";
           (e[(e.HomeMenu = 8)] = "HomeMenu"),
           (e[(e.QuickMenu = 9)] = "QuickMenu"),
           (e[(e.Select = 10)] = "Select"),
-          (e[(e.LeftBumper = 11)] = "LeftBumper"),
-          (e[(e.RightBumper = 12)] = "RightBumper");
+          (e[(e.Start = 11)] = "Start"),
+          (e[(e.LeftBumper = 12)] = "LeftBumper"),
+          (e[(e.RightBumper = 13)] = "RightBumper");
       })(r || (r = {}));
       var c;
       !(function (e) {
@@ -57804,91 +57840,116 @@ var CLSTAMP = "6553546";
         })(),
         y = Object(i.a)(function (e) {
           var t,
-            n = e.language,
-            r = e.linkColor,
-            i = e.headingColor,
-            s = e.background,
-            c = e.facetFilterState,
-            l = e.fnOnUpdateFilter,
-            h = { background: s, color: r || "white" },
-            f = {
-              borderBottom: "0px solid " + (r || "white"),
-              color: i || "white",
-            },
-            b = Object(o.useRef)(null),
-            _ = function () {
-              c.UpdateFilter(), l();
+            n,
+            r,
+            i = e.language,
+            s = e.linkColor,
+            c = e.headingColor,
+            l = e.background,
+            h = e.styleOverrides,
+            f = e.facetFilterState,
+            b = e.fnOnUpdateFilter;
+          (null == h ? void 0 : h.menu) ||
+            (n = { background: l, color: s || "white" }),
+            (null == h ? void 0 : h.menuTitle) ||
+              (r = {
+                borderBottom: "0px solid " + (s || "white"),
+                color: c || "white",
+              });
+          var _ = Object(o.useRef)(null),
+            v = function () {
+              f.UpdateFilter(), b();
             };
           return o.createElement(
             "div",
-            { ref: b, className: m.FacetedBrowseControls, style: h },
+            {
+              ref: _,
+              className:
+                (null == h ? void 0 : h.menu) || m.FacetedBrowseControls,
+              style: n,
+            },
             o.createElement(
-              "h1",
-              { style: f },
+              "div",
+              {
+                className:
+                  (null == h ? void 0 : h.menuTitle) || m.FacetMenuTitle,
+                style: r,
+              },
               Object(u.f)("#FacetedBrowse_Heading")
             ),
-            (null == c ? void 0 : c.m_filteredCapsules) &&
-              (null == c ? void 0 : c.BSomeFacetValueEnabled()) &&
+            (null == f ? void 0 : f.m_filteredCapsules) &&
+              (null == f ? void 0 : f.BSomeFacetValueEnabled()) &&
               o.createElement(
                 "div",
-                { className: m.FacetedBrowseMatchCount },
-                c.m_bFilteredCapsuleCountIsPartial
+                {
+                  className:
+                    (null == h ? void 0 : h.matchCount) ||
+                    m.FacetedBrowseMatchCount,
+                },
+                f.m_bFilteredCapsuleCountIsPartial
                   ? Object(u.l)(
                       "#FacetedBrowse_MatchCountPartial",
-                      c.m_nFilteredCapsuleCount
+                      f.m_nFilteredCapsuleCount
                     )
                   : Object(u.l)(
                       "#FacetedBrowse_MatchCount",
-                      c.m_nFilteredCapsuleCount
+                      f.m_nFilteredCapsuleCount
                     )
               ),
             o.createElement(
               "div",
-              { className: m.FacetedBrowseReset },
+              {
+                className:
+                  (null == h ? void 0 : h.reset) || m.FacetedBrowseReset,
+              },
               o.createElement(
                 "a",
                 {
                   onClick: function (e) {
                     e.preventDefault(),
                       Object(a.G)(function () {
-                        c.Reset(), l();
+                        f.Reset(), b();
                       });
                   },
                 },
                 Object(u.f)("#FacetedBrowse_Reset")
               )
             ),
-            null === (t = null == c ? void 0 : c.GetSortedFacets()) ||
+            null === (t = null == f ? void 0 : f.GetSortedFacets()) ||
               void 0 === t
               ? void 0
-              : t.map(function (t, r) {
+              : t.map(function (t, n) {
                   return o.createElement(M, {
                     key:
                       "facet_" +
-                      u.a.GetWithFallback(t.facet.facet.name, n) +
+                      u.a.GetWithFallback(t.facet.facet.name, i) +
                       "_" +
-                      r,
+                      n,
                     facet: t,
-                    facetFilterState: c,
-                    nFacetIndex: r,
-                    language: n,
+                    facetFilterState: f,
+                    nFacetIndex: n,
+                    language: i,
                     nMaxFacetValues: e.nMaxFacetValues,
                     highlightedFacetColor: e.highlightedFacetColor,
                     linkColor: e.linkColor,
                     headingColor: e.headingColor,
-                    fnOnUpdateFilter: _,
+                    fnOnUpdateFilter: v,
+                    styleOverrides: h,
                   });
                 }),
             o.createElement(
               "div",
-              { className: m.FacetedBrowseReset },
+              {
+                className:
+                  (null == h ? void 0 : h.reset) || m.FacetedBrowseReset,
+              },
               o.createElement(
                 "a",
                 {
                   onClick: function (e) {
                     e.preventDefault();
                     var t =
-                      b.current.getBoundingClientRect().top + window.scrollY;
+                      _.current.getBoundingClientRect().top + window.scrollY;
                     window.scrollTo(0, t);
                   },
                 },
@@ -57907,72 +57968,82 @@ var CLSTAMP = "6553546";
           );
         }),
         M = Object(i.a)(function (e) {
-          var t = e.language,
-            n = e.linkColor,
-            a = e.headingColor,
-            i = e.facet,
-            s = e.nFacetIndex,
-            c = Object(o.useState)(Boolean(0 !== s)),
-            l = c[0],
-            p = c[1],
-            d = Object(o.useState)(!1),
-            h = d[0],
-            f = d[1],
-            b = {
-              borderBottom: "0px solid " + (n || "white"),
-              color: a || "white",
-            },
-            _ = Object(u.f)(u.a.GetWithFallback(i.facet.facet.name, t)),
-            v = e.nMaxFacetValues,
-            g = i.facetValues.reduce(function (e, t) {
+          var t,
+            n = e.language,
+            a = e.linkColor,
+            i = e.headingColor,
+            s = e.facet,
+            c = e.nFacetIndex,
+            l = e.styleOverrides,
+            p = Object(o.useState)(Boolean(0 !== c)),
+            d = p[0],
+            h = p[1],
+            f = Object(o.useState)(!1),
+            b = f[0],
+            _ = f[1];
+          (null == l ? void 0 : l.facetName) ||
+            (t = {
+              borderBottom: "0px solid " + (a || "white"),
+              color: i || "white",
+            });
+          var v = Object(u.f)(u.a.GetWithFallback(s.facet.facet.name, n)),
+            g = e.nMaxFacetValues,
+            y = s.facetValues.reduce(function (e, t) {
               return e + (t.bDeactivated ? 1 : 0);
             }, 0);
-          v = Math.min(v, i.facetValues.length - g);
-          var y = i.facetValues.reduce(function (e, t) {
+          g = Math.min(g, s.facetValues.length - y);
+          var M = s.facetValues.reduce(function (e, t) {
               return e + (t.bEnabled ? 1 : 0);
             }, 0),
-            M = i.facetValues.some(function (e) {
+            O = s.facetValues.some(function (e) {
               return !e.bEnabled && !e.bDeactivated;
             });
-          v = Math.max(v, y + (M ? 1 : 0));
-          var O = i.facetValues.length > v,
-            E = O && !h ? i.facetValues.slice(0, v) : i.facetValues;
+          g = Math.max(g, M + (O ? 1 : 0));
+          var E = s.facetValues.length > g,
+            C = E && !b ? s.facetValues.slice(0, g) : s.facetValues;
           return o.createElement(
             "div",
             { className: m.Facet },
             o.createElement(
-              "h2",
+              "div",
               {
-                style: b,
+                className: (null == l ? void 0 : l.facetName) || m.FacetTitle,
+                style: t,
                 onClick: function () {
-                  return p(!l);
+                  return h(!d);
                 },
               },
-              _
+              v
             ),
-            !l &&
+            !d &&
               o.createElement(
                 o.Fragment,
                 null,
-                E.map(function (t, n) {
+                C.map(function (t, n) {
                   return o.createElement(
                     S,
                     Object(r.a)(
-                      { key: "facet_" + _ + "_value_" + n, facetValue: t },
+                      {
+                        key: "facet_" + v + "_value_" + n,
+                        facetValue: t,
+                        styleOverrides: l,
+                      },
                       e
                     )
                   );
                 }),
-                O &&
+                E &&
                   o.createElement(
                     "div",
                     {
-                      className: m.FacetValueShowMore,
+                      className:
+                        (null == l ? void 0 : l.showMore) ||
+                        m.FacetValueShowMore,
                       onClick: function () {
-                        return f(!h);
+                        return _(!b);
                       },
                     },
-                    h
+                    b
                       ? Object(u.f)("#Bbcode_Expand_ShowMore_Expanded")
                       : Object(u.f)("#Bbcode_Expand_ShowMore_Collapsed")
                   )
@@ -57985,24 +58056,27 @@ var CLSTAMP = "6553546";
             r = e.linkColor,
             i = e.facetValue,
             c = e.facetFilterState,
-            l = e.fnOnUpdateFilter;
+            l = e.styleOverrides,
+            p = e.fnOnUpdateFilter;
           if (i.facetValue.type === s.l.k_EPrice && null == c.m_priceStopInfo)
             return null;
-          var p = i.bEnabled,
-            d = i.bDeactivated,
-            f = p
-              ? {
-                  color: n || "darkorange",
-                  borderLeft: "4px solid " + (n || "darkorange"),
-                }
-              : {},
-            b = { color: r || "white" },
-            _ = Object(u.f)(u.a.GetWithFallback(i.facetValue.name, t)),
-            v = Boolean(i.facetValue.subtitle)
+          var d,
+            f,
+            b = i.bEnabled,
+            _ = i.bDeactivated,
+            v = {
+              color: n || "darkorange",
+              borderLeft: "4px solid " + (n || "darkorange"),
+            };
+          (null == l ? void 0 : l.facetValue) || (d = b ? v : {}),
+            (null == l ? void 0 : l.facetValueName) ||
+              (f = { color: r || "white" });
+          var g = Object(u.f)(u.a.GetWithFallback(i.facetValue.name, t)),
+            y = Boolean(i.facetValue.subtitle)
               ? u.a.GetWithFallback(i.facetValue.subtitle, t)
               : null;
           if (i.facetValue.type === s.l.k_EPrice) {
-            var g =
+            var M =
               null != i.nPriceStopIndex
                 ? i.nPriceStopIndex
                 : c.m_priceStopInfo.length - 1;
@@ -58010,8 +58084,8 @@ var CLSTAMP = "6553546";
               classname: m.FacetValuePriceSlider,
               min: 0,
               max: c.m_priceStopInfo.length - 1,
-              value: g,
-              label: c.m_priceStopInfo[g].label,
+              value: M,
+              label: c.m_priceStopInfo[M].label,
               onChange: function (e) {
                 Object(a.G)(function () {
                   i.nPriceStopIndex = Math.floor(e);
@@ -58022,38 +58096,46 @@ var CLSTAMP = "6553546";
                   (i.bEnabled = Boolean(
                     i.nPriceStopIndex !== c.m_priceStopInfo.length - 1
                   )),
-                    l();
+                    p();
                 });
               },
             });
           }
+          var S = (null == l ? void 0 : l.facetValue) || m.FacetValue,
+            O =
+              (null == l ? void 0 : l.facetValueEnabled) || m.FacetValueEnabled,
+            E =
+              (null == l ? void 0 : l.facetValueDeactivated) ||
+              m.FacetValueDeactivated,
+            C = (null == l ? void 0 : l.facetValueName) || m.FacetValueName;
           return o.createElement(
             "div",
-            {
-              className: p
-                ? m.FacetValueEnabled
-                : d
-                ? m.FacetValueDeactivated
-                : m.FacetValue,
-              style: f,
-            },
+            { className: b ? O : _ ? E : S, style: d },
             o.createElement(
               "a",
               {
-                className: m.FacetValueName,
-                style: b,
+                className: C,
+                style: f,
                 onClick: function (e) {
                   e.preventDefault(),
                     Object(a.G)(function () {
-                      d || ((i.bEnabled = !i.bEnabled), l());
+                      _ || ((i.bEnabled = !i.bEnabled), p());
                     });
                 },
                 href: "",
               },
-              _
+              g
             ),
-            Boolean(v) &&
-              o.createElement("div", { className: m.FacetValueDescription }, v)
+            Boolean(y) &&
+              o.createElement(
+                "div",
+                {
+                  className:
+                    (null == l ? void 0 : l.facetValueDesc) ||
+                    m.FacetValueDescription,
+                },
+                y
+              )
           );
         }),
         O = Object(i.a)(function (e) {
@@ -75441,6 +75523,9 @@ var CLSTAMP = "6553546";
             (e.prototype.ClearAllCallbacks = function () {
               this.m_vecCallbacks = [];
             }),
+            (e.prototype.CountRegistered = function () {
+              return this.m_vecCallbacks.length;
+            }),
             e
           );
         })();
@@ -83444,7 +83529,7 @@ var CLSTAMP = "6553546";
                     },
                     i.createElement(
                       "div",
-                      { className: u.sliderBody },
+                      { className: Object(s.a)(u.sliderBody, "SliderBody") },
                       !r &&
                         i.createElement(
                           a.a,

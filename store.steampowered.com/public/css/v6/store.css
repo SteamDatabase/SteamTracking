@@ -5111,6 +5111,18 @@ body.v6 .quadscreenshot_carousel h2 {
 	body.v6 .quadscreenshot_carousel h2 {
 		white-space: normal;
 	}
+
+	.slider_ctn, slider_ctn .slider, .slider_ctn .slider_left, slider_ctn .slider_right, .slider_bg, .slider .handle, .slider {
+		height: 25px;
+	}
+	.slider_left span {
+		margin-left: 15px;
+		margin-top: 9px;
+	}
+	.slider_right span {
+		margin-left: 18px;
+		margin-top: 9px;
+	}
 }
 
 

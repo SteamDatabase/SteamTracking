@@ -36,12 +36,11 @@ body.v6 .wishlist_header h2 {
 
 .wishlist_row {
 	will-change: transform, top;
-	overflow:hidden;
-
+	overflow: hidden;
 	display: flex;
 	position: absolute;
 	flex-direction: row;
-	padding: 16px;
+	padding: 16px 16px 8px 16px;
 	background-color: rgba(64, 81, 99, 0.9);
 	color: #b2b8bd;
 	margin-bottom: 10px;
@@ -240,8 +239,7 @@ body.v6 .wishlist_header h2 {
 
 			display: flex;
 	flex-direction: row;
-	margin-left: -15px;
-	margin-bottom: 8px;
+	margin-bottom: 12px;
 }
 
 .hover_handle {
@@ -332,8 +330,6 @@ body.v6 .wishlist_header h2 {
 	border-right: 1px solid rgba(0,0,0,0.2);
 }
 
-
-
 .sort_order .hover_handle {
 	display: block;
 }
@@ -343,15 +339,6 @@ body.v6 .wishlist_header h2 {
 	height: 20px;
 	transition: background-color 300ms;
 	order: 10;
-}
-.wishlist .controls > div.search {
-	flex-grow: 1;
-	flex-shrink: 1;
-	text-align: right;
-	margin-right: 0;
-	padding-top: 0px;
-	padding-right: 0;
-	order:10;
 }
 
 .wishlist .controls div.filter_tab.hover{
@@ -398,16 +385,6 @@ body.v6 .wishlist_header h2 {
 	color: #000;
 }
 
-.settings_tab img {
-	width: 16px;
-}
-
-.wishlist .controls div.settings_tab {
-	display: inline-block;
-	line-height: 25px;
-
-}
-
 .dropdown_spacer {
 	height: 15px;
 }
@@ -419,15 +396,26 @@ body.v6 .wishlist_header h2 {
 			opacity: 0;
 	transition: opacity 300ms;
 	position: absolute;
-	left: -10px;
-	width: calc(100% - 32px);
+	width: calc(100% - 52px);
 	background-color: #808a9c;
 	padding: 30px 22px 30px 30px;
 	margin-top: -16px;
 	z-index: 2;
 	pointer-events: none;
-
 }
+
+.checkbox_wrapper {
+	display: flex;
+	flex-direction: row;
+}
+
+.checkbox_wrapper div {
+	flex: 1;
+	color: #fff;
+	font-size: 13px;
+	padding-left: 4px;
+}
+
 
 body.v6 .filter_section h3, body.v6 .category h3 {
 	text-transform: uppercase;
@@ -483,7 +471,6 @@ body.v6 .filter_section label, body.v6 .filter_section input {
 	cursor: pointer;
 }
 
-
 .filter_tab .filter_section {
 	pointer-events: none;
 }
@@ -505,7 +492,6 @@ body.v6 .filter_section label, body.v6 .filter_section input {
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	white-space: nowrap;
-
 }
 
 .wishlist .controls  div span,
@@ -549,7 +535,6 @@ body.v6 .filter_section label, body.v6 .filter_section input {
 
 }
 
-
 .wishlist_row .screenshots > div {
 	position: absolute;
 	width: 100%; /* Redundant ?? */
@@ -576,6 +561,7 @@ body.v6 .filter_section label, body.v6 .filter_section input {
 .wishlist_row .capsule:hover .screenshots > div:nth-child(3) { animation-delay: 2s }
 .wishlist_row .capsule:hover .screenshots > div:nth-child(4) { animation-delay: 3s }
 
+
 @keyframes screenshot_hover_fadein {
 	0% {
 		opacity: 0;
@@ -593,8 +579,9 @@ body.v6 .filter_section label, body.v6 .filter_section input {
 }
 
 #wishlist_search {
+	margin-right: 20px;
 	padding: 7px 10px;
-	width: calc( 100% - 70px);
+	width: 100%;
 	box-sizing: border-box;
 	background-color: rgba(0,0,0,0.1);
 	border: 1px solid #000;
@@ -698,9 +685,18 @@ body.v6 .filter_section label, body.v6 .filter_section input {
 	max-width: 250px;
 }
 
+.wishlist .controls .control_row {
+	display: flex;
+	flex-direction: row;
+	padding: unset;
+}
 
-@media screen and (max-width: 910px)
-{
+@media screen and (max-width: 910px) {
+
+	.compact .wishlist_row .addedon, .compact .wishlist_row .delete {
+		font-size: 12px;
+	}
+
 	.wishlist_row .mid_container, .wishlist_row .lower_columns {
 		flex-direction: column;
 	}
@@ -711,6 +707,7 @@ body.v6 .filter_section label, body.v6 .filter_section input {
 
 	.wishlist_row .capsule {
 		width: 25%;
+		height: 25%;
 		flex-shrink: 0;
 		margin-right: 10px;
 	}
@@ -743,8 +740,8 @@ body.v6 .filter_section label, body.v6 .filter_section input {
 
 	/* Shrink margins since we're losing vertical space */
 	.wishlist_row .platform_icons {
-
 	}
+
 	.wishlist_row .title {
 		margin-bottom: 2px;
 		font-size: 18px;
@@ -773,11 +770,9 @@ body.v6 .filter_section label, body.v6 .filter_section input {
 	.wishlist .controls {
 		margin: 0;
 	}
-	.wishlist .controls > div.search {
-		text-align: left;
-		order: 5;
+	.wishlist .controls .control_row {
+		padding-top: 5px;
 	}
-
 
 	.filter_section .wrapper {
 		grid-template-columns: repeat(2, 1fr);
@@ -788,6 +783,11 @@ body.v6 .filter_section label, body.v6 .filter_section input {
 		top: 50px;
 		left: 0px;
 	}
+	.wishlist_row .lower_columns {
+		display: flex;
+		flex-direction: row;
+	}
+
 	.compact .wishlist_row .title {
 		font-size: 17px;
 		max-width: 100%;
@@ -799,7 +799,16 @@ body.v6 .filter_section label, body.v6 .filter_section input {
 		margin-top: 0px;
 		margin-bottom: 25px;
 	}
+	.filter_section {
+		padding: 20px 17px 20px 20px;
+		margin: 0px;
+		max-width: 500px;
+	}
+	.compact .wishlist_row .value.release_date {
+		display: none;
+	}
 }
+
 
 @media screen and (max-width: 500px) {
 	#wishlist_ctn:not(.compact) .wishlist_row .capsule {
@@ -826,8 +835,11 @@ body.v6 .filter_section label, body.v6 .filter_section input {
 	.compact .wishlist_row .title {
 		font-size: 15px;
 	}
-	.compact .wishlist_row .value.release_date {
-		display: none;
+
+	.wishlist .controls div {
+		font-size: 11px;
+		margin: 2px 0px 0px 3px;
+		padding: 4px 5px 3px 8px;
 	}
 }
 

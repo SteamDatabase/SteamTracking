@@ -394,8 +394,7 @@ class CreatorHome {
 							}
 							else
 							{
-								console.log( 'did not find: ' + clanSteamIDArray[index] + ':' + linkname );
-							}
+															}
 						}
 					}
 				}

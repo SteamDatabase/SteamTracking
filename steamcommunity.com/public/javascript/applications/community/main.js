@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6550884";
+var CLSTAMP = "6563033";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [71],
   {
@@ -8844,6 +8844,13 @@ var CLSTAMP = "6550884";
               t,
               { ePrivilege: 1 }
             );
+          }),
+          (e.ClientContentValidationReport = function (e, t) {
+            return e.SendNotification(
+              "ClientMetrics.ClientContentValidationReport#1",
+              t,
+              { ePrivilege: 1 }
+            );
           });
       })(s || (s = {}));
     },
@@ -9476,8 +9483,9 @@ var CLSTAMP = "6550884";
           (e[(e.HomeMenu = 8)] = "HomeMenu"),
           (e[(e.QuickMenu = 9)] = "QuickMenu"),
           (e[(e.Select = 10)] = "Select"),
-          (e[(e.LeftBumper = 11)] = "LeftBumper"),
-          (e[(e.RightBumper = 12)] = "RightBumper");
+          (e[(e.Start = 11)] = "Start"),
+          (e[(e.LeftBumper = 12)] = "LeftBumper"),
+          (e[(e.RightBumper = 13)] = "RightBumper");
       })(r || (r = {}));
       var c;
       !(function (e) {
@@ -13003,6 +13011,9 @@ var CLSTAMP = "6550884";
             }),
             (e.prototype.ClearAllCallbacks = function () {
               this.m_vecCallbacks = [];
+            }),
+            (e.prototype.CountRegistered = function () {
+              return this.m_vecCallbacks.length;
             }),
             e
           );

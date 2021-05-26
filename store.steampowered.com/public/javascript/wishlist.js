@@ -60,6 +60,9 @@ var CWishlistController = function()
 	$J('#tab_filters').on('click',function(e){
 		$J('#tab_filters').toggleClass('hover');
 		$J('#section_filters').toggleClass('hover');
+
+		e.preventDefault();
+		return false;
 	})
 
 	$J('#wishlist_search').on('keyup', function(){
@@ -74,10 +77,8 @@ var CWishlistController = function()
 		if( elTarget == $J('#tab_filters')[0] || $J('#section_filters')[0].contains( elTarget ) )
 			return;
 
-
 		$J('#tab_filters').removeClass('hover');
 		$J('#section_filters').removeClass('hover');
-
 	});
 
 	window.addEventListener('scroll', this.OnScroll.bind(this));
@@ -93,11 +94,13 @@ var CWishlistController = function()
 	document.body.addEventListener('touchend', this.OnDrop.bind(this));
 
 	// Add price brackets, built in JS since they vary by cc
+	// Using a div with flex becuse the 'less than steam wallet' text is long and we don't want it to wrap under the checkbox
 	var $elPriceCtn = $J('#price_brackets_container');
-	$elPriceCtn.append('<label><input class="filter_check" type="checkbox" name="price_1"> '+"Less than %1$s".replace(/%1\$s/g,GStoreItemData.fnFormatCurrency( g_rgPriceBrackets[0] ) )+'</label>');
-	$elPriceCtn.append('<label><input class="filter_check" type="checkbox" name="price_2"> '+"Less than %1$s".replace(/%1\$s/g,GStoreItemData.fnFormatCurrency( g_rgPriceBrackets[1] ) )+'</label>');
+	$elPriceCtn.append('<label><div class="checkbox_wrapper"><input class="filter_check" type="checkbox" name="price_1"><div>'+"Less than %1$s".replace(/%1\$s/g,GStoreItemData.fnFormatCurrency( g_rgPriceBrackets[0] ) )+'</div></div></label>');
+	$elPriceCtn.append('<label><div class="checkbox_wrapper"><input class="filter_check" type="checkbox" name="price_2"><div>'+"Less than %1$s".replace(/%1\$s/g,GStoreItemData.fnFormatCurrency( g_rgPriceBrackets[1] ) )+'</div></div></label>');
 	if( g_nWalletCents > 0 )
-		$elPriceCtn.append('<label><input class="filter_check" type="checkbox" name="price_wallet"> '+"Less than Steam Wallet balance"+'</label>');
+		$elPriceCtn.append('<label><div class="checkbox_wrapper"><input class="filter_check" type="checkbox" name="price_wallet"><div>'+"Less than Steam Wallet balance"+'</div></div></label>');
+
 
 	// Hook up filter checkboxes
 	$J('.filter_check').change(function(){
@@ -331,12 +334,15 @@ CWishlistController.prototype.BuildElements = function()
 				strPurchaseArea += '<a class="btn_blue_steamui btn_medium noicon" href="'+GStoreItemData.GetAppURL(  wishlist.appid , 'wishlist_details')+'"><span>'+"View Details"+'</span></a><a class="btn_blue_steamui btn_medium icon" href="'+GStoreItemData.GetAppURL(  wishlist.appid , 'wishlist_details')+'"><span><img class="ico_cart" src="https://store.cloudflare.steamstatic.com/public/images/v6/ico/wishlist/ico_info.png"></span></a></div>';
 			}
 
-
 			var options = {  year: 'numeric', month: 'numeric', day: 'numeric' };
 			var date = new Date(rgAppInfo['added'] * 1000);
-			var strAdded =  "Added on %1$s".replace(/%1\$s/, date.toLocaleDateString(options) );
+			var strAdded =  g_bIsMobileAgent ? "" : "Added on %1$s".replace(/%1\$s/, date.toLocaleDateString(options) );
+
 			if( g_bCanEdit )
 				strAdded += " ( <div %1$s>remove<\/div> )".replace(/%1\$s/, ' class="delete"' );
+
+			if ( g_bIsMobileAgent ) // remove parens around remove text
+				strAdded = strAdded.replace('(', '').replace(')', '');
 
 			var $el = $J(
 				g_strRowTemplate.replace(/%1\$s/g, wishlist.appid)
@@ -427,6 +433,16 @@ CWishlistController.prototype.ApplyDefaultView = function()
 		this.elContainer.removeClass('compact');
 }
 
+CWishlistController.prototype.ApplyDefaultType = function()
+{
+	$J('#type_all').attr('checked',true);
+}
+
+CWishlistController.prototype.ApplyDefaultPlatform = function()
+{
+	$J('#platform_all').attr('checked',true);
+}
+
 CWishlistController.prototype.LoadSettings = function()
 {
 	var lsValue = WebStorage.GetLocal('wishlistSettings');
@@ -454,8 +470,17 @@ CWishlistController.prototype.LoadSettings = function()
 
 	if( this.rgFilterSettings.sort )
 		this.SetDropdownLabel('sort', this.rgFilterSettings.sort );
+
+	if( this.rgFilterSettings.platform )
+		$J('#platform_'+V_EscapeHTML( this.rgFilterSettings.platform )).attr('checked',true);
+	else
+		this.ApplyDefaultPlatform();
+
 	if( this.rgFilterSettings.type )
-		this.SetDropdownLabel('type', this.rgFilterSettings.type );
+		$J('#type_'+V_EscapeHTML( this.rgFilterSettings.type )).attr('checked',true);
+	else
+		this.ApplyDefaultType();
+
 	if( this.rgFilterSettings.term )
 		$J('#wishlist_search').val(this.rgFilterSettings.term);
 	
@@ -680,6 +705,13 @@ CWishlistController.prototype.UnloadElement = function( unAppId )
 	 $elTarget.detach();
 }
 
+CWishlistController.prototype.SetFilterFromRadio = function( strFilter, elSource )
+{
+	this.rgFilterSettings[ strFilter ] = $J(elSource).data('dropdownValue');
+	this.Update();
+	this.SaveSettings();
+}
+
 CWishlistController.prototype.SetFilterFromDropdown = function( strFilter, elSource )
 {
 	this.rgFilterSettings[ strFilter ] = $J(elSource).data('dropdownValue');
@@ -838,7 +870,7 @@ CWishlistController.prototype.Update = function( bForceSort )
 
 CWishlistController.prototype.UpdateFilterDisplay = function()
 {
-	this.rgIgnoreTagFields = ['sort', 'last_sort','show', 'type', 'term', 'view'];
+	this.rgIgnoreTagFields = ['sort', 'last_sort','show', 'type', 'term', 'view', 'platform'];
 
 	var _this = this;
 	var $elContainer = $J('#filters_container');
@@ -859,6 +891,30 @@ CWishlistController.prototype.UpdateFilterDisplay = function()
 		})
 		$elContainer.append($el);
 	});
+
+	if ( this.rgFilterSettings.type && this.rgFilterSettings.type != 'all' )
+	{
+		var $el = $J('<div></div>').text( "Type" + ": " + this.rgFilterSettings.type);
+
+		$el.on('click', function(){
+			_this.ApplyDefaultType();
+			_this.rgFilterSettings.type = '';
+			_this.Update();
+		})
+		$elContainer.append($el);
+	}
+
+	if ( this.rgFilterSettings.platform && this.rgFilterSettings.platform != 'all' )
+	{
+		var $el = $J('<div></div>').text( "Platform" + ": " + this.rgFilterSettings.platform);
+
+		$el.on('click', function(){
+			_this.ApplyDefaultPlatform();
+			_this.rgFilterSettings.platform = '';
+			_this.Update();
+		})
+		$elContainer.append($el);
+	}
 
 	if( this.rgFilterSettings.term )
 	{
@@ -998,10 +1054,7 @@ CWishlistController.prototype.BPassesFilters = function( unAppId, rgFilters ) {
 	if( !bPassesDiscountFilters )
 		return false;
 
-
-
-
-	if( rgFilters.type && rgFilters.type != 'all')
+	if( rgFilters.type && rgFilters.type != 'all' )
 	{
 		if( rgFilters.type == 'Video' && appInfo.type != "Video" && appInfo.type != "Movie" && appInfo.type != "Series" && appInfo.type != "Episode")
 			return false;
@@ -1010,17 +1063,13 @@ CWishlistController.prototype.BPassesFilters = function( unAppId, rgFilters ) {
 	}
 
 	// Platform checks: Assume unsupported if any filters are set
-	var bSupportsPlatform = !( rgFilters.platform_win || rgFilters.platform_mac || rgFilters.platform_linux );
-
-	if( rgFilters.platform_win && appInfo.win )
-		bSupportsPlatform = true;
-	else if( rgFilters.platform_mac && appInfo.mac )
-		bSupportsPlatform = true;
-	else if( rgFilters.platform_linux && appInfo.linux )
-		bSupportsPlatform = true;
-
-	if( !bSupportsPlatform )
-		return false;
+	if ( rgFilters.platform && rgFilters.platform != 'all' )
+	{
+		if( rgFilters.platform == 'mac' && !appInfo.mac )
+			return false;
+		else if( rgFilters.platform == 'linux' && !appInfo.linux )
+			return false;
+	}
 
 
 	return true;

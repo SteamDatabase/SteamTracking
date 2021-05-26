@@ -542,6 +542,10 @@ a.webmoney_prompt_link:hover .webmoney_prompt_ctn {
 	/* color: #ff9900; */
 }
 
+.remove_ctn {
+	float: right;
+}
+
 .cart_notice_section {
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -2893,7 +2897,6 @@ body.checkout .block .block_content {
 @media screen and (max-width: 910px)
 {
 	html.responsive .continue_shopping_ctn {
-		text-align: center;
 		margin-bottom: 24px;
 	}
 
@@ -2949,6 +2952,15 @@ body.checkout .block .block_content {
 	html.responsive .cart_tab_left_on {
 		display: none;
 	}
+
+	.remove_ctn {
+		float: none;
+		margin-bottom: 6px;
+	}
+
+	html.responsive .cart_notice_section .cart_bodycopy {
+		padding-left: 0; /* Looks misaligned on smaller screens, just put it flush with normal gutter */
+	}
 }
 
 @media screen and (max-width: 540px)
@@ -2990,8 +3002,7 @@ body.checkout .block .block_content {
 		float: none;
 	}
 
-	html.responsive .cart_item_img,
-	html.responsive .checkout_review_item_img {
-		max-width: 30%;
+	html.responsive .cart_checkout_buttons {
+		padding-left: 16px; /* Trigger wrapping before we butt up against container. This value matches the right margin on the buttons themselves */
 	}
 }

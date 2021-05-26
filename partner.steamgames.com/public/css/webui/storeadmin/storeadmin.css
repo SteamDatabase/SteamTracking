@@ -517,7 +517,6 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
   padding-left: 24px;
   padding-bottom: 20px;
   user-select: none;
-  z-index: 35;
   color: white;
 }
 .sharedappdetailsheader_TitleSection_2oAYX
@@ -845,6 +844,7 @@ html {
 }
 .fakeappdetailsrow_MenuButton_19jdY svg {
   fill: #929799;
+  color: #929799;
 }
 .fakeappdetailsrow_DetailsSection_3Ajg1 {
   box-sizing: border-box;
@@ -4326,33 +4326,33 @@ iframe.youtubeembed_PreviewYouTubeVideo_3ebu4.youtubeembed_floatRight_3NCOz {
 .bbcodes_Header1_3nmkN {
   display: block;
   color: white;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 26px;
-  line-height: 30px;
+  line-height: 31px;
   margin-bottom: 4px;
 }
 .bbcodes_Header2_2C1Hj {
   color: white;
   font-size: 22px;
-  line-height: 25px;
+  line-height: 28px;
   font-weight: 400;
 }
 .bbcodes_Header3_2q6Vr {
   color: white;
   font-size: 19px;
-  line-height: 22px;
-  font-weight: 300;
+  line-height: 25px;
+  font-weight: 400;
 }
 .bbcodes_Header4_1zThg {
   color: white;
   font-size: 18px;
-  line-height: 20px;
-  font-weight: 300;
+  line-height: 24px;
+  font-weight: 400;
 }
 .bbcodes_Header5_3c6Cp {
   color: white;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 22px;
 }
 .bbcodes_Underline_2r-_U {
   display: inline;
@@ -4434,6 +4434,7 @@ iframe.youtubeembed_PreviewYouTubeVideo_3ebu4.youtubeembed_floatRight_3NCOz {
 }
 .bbcodes_ListItem_1BF9I {
   list-style-position: outside;
+  margin-bottom: 5px;
 }
 .bbcodes_HR_25UY0 {
   border: none;
@@ -4454,6 +4455,18 @@ iframe.youtubeembed_PreviewYouTubeVideo_3ebu4.youtubeembed_floatRight_3NCOz {
 .bbcodes_Table_30RMh.bbcodes_NoBorder_3hanR .bbcodes_TableData_15DlH {
   border: none;
 }
+.bbcodes_Table_30RMh .bbcodes_TableRow_pAlt4 {
+  border-bottom: 1px solid #77797e;
+}
+.bbcodes_Table_30RMh .bbcodes_TableRow_pAlt4:first-of-type {
+  border-top: 1px solid #77797e;
+}
+.bbcodes_Table_30RMh .bbcodes_TableData_15DlH {
+  border-right: 1px solid #77797e;
+}
+.bbcodes_Table_30RMh .bbcodes_TableData_15DlH:first-of-type {
+  border-left: 1px solid #77797e;
+}
 .bbcodes_TableHeader_1np5h {
   display: table-cell;
   font-weight: bold;
@@ -4465,19 +4478,11 @@ iframe.youtubeembed_PreviewYouTubeVideo_3ebu4.youtubeembed_floatRight_3NCOz {
 }
 .bbcodes_TableRow_pAlt4 {
   display: table-row;
-  border-bottom: 1px solid #77797e;
-}
-.bbcodes_TableRow_pAlt4:first-of-type {
-  border-top: 1px solid #77797e;
 }
 .bbcodes_TableData_15DlH {
   display: table-cell;
   vertical-align: middle;
   padding: 4px;
-  border-right: 1px solid #77797e;
-}
-.bbcodes_TableData_15DlH:first-of-type {
-  border-left: 1px solid #77797e;
 }
 .bbcodes_ExpandSectionBlock_1KRtd .bbcodes_ExpandSectionHeader_PlB0t {
   padding: 3px 8px;
@@ -5749,6 +5754,8 @@ html.touch .gamehover_WishlistButton_1lp6v .gamehover_WishlistButtonText_3SsXJ,
 .salepreviewwidgets_LibraryAssetExpandedDisplay_2oeoi
   .salepreviewwidgets_StoreSaleWidgetShortDesc_1ZwKj {
   margin-bottom: 6px;
+  max-height: unset;
+  line-height: 16px;
 }
 .salepreviewwidgets_SaleItemFullCapsuleDisplay_R6Co5
   .salepreviewwidgets_StoreSaleWidgetShortDesc_1ZwKj {
@@ -5787,6 +5794,7 @@ html.touch .gamehover_WishlistButton_1lp6v .gamehover_WishlistButtonText_3SsXJ,
   margin-right: 12px;
   font-size: 11px;
   letter-spacing: 0.07em;
+  white-space: nowrap;
 }
 .salepreviewwidgets_SaleTagBlockCtn_136qJ .salepreviewwidgets_TagBox_On4kw {
   display: flex;
@@ -11895,6 +11903,7 @@ html.responsive.touch
   .eventcalendar_FilterLink_SeG-K
   svg {
   fill: #aaa;
+  color: #aaa;
   height: 16px;
   width: 16px;
   margin-right: 8px;
@@ -12900,11 +12909,13 @@ html.responsive.touch
   .eventcalendar_SettingsPanel_1Stak
   path {
   fill: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.8);
 }
 .eventcalendar_MobileNavBannerCtn_2dwco
   .eventcalendar_SettingsPanel_1Stak:hover
   path {
   fill: white;
+  color: white;
 }
 .eventcalendar_MobileNavBannerCtn_2dwco
   .eventcalendar_SearchExpanded_2C7hU
@@ -14707,7 +14718,7 @@ html:not(.touch)
   opacity: 0.1;
   filter: none;
 }
-.carousel_carouselNavButton_2aDk-.carousel_left_1UJsC svg {
+.carousel_carouselNavButton_2aDk-.carousel_left_1UJsC {
   transform: rotateZ(180deg);
 }
 .carousel_carouselNavButton_2aDk- svg {
@@ -15087,7 +15098,7 @@ html:not(.touch)
     margin-right: 16px;
   }
 }
-.facetedbrowse_FacetedBrowseControls_2SS84 h1 {
+.facetedbrowse_FacetMenuTitle_2wY0i {
   text-transform: uppercase;
   font-size: 16px;
   letter-spacing: 0.03em;
@@ -15116,7 +15127,7 @@ html:not(.touch)
   margin-top: 12px;
   margin-bottom: 16px;
 }
-.facetedbrowse_Facet_hvtGW h2 {
+.facetedbrowse_FacetTitle_2h2X1 {
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 500;
@@ -15125,7 +15136,7 @@ html:not(.touch)
   width: fit-content;
   opacity: 70%;
 }
-.facetedbrowse_Facet_hvtGW h2:hover {
+.facetedbrowse_FacetTitle_2h2X1:hover {
   cursor: pointer;
   opacity: 85%;
 }
@@ -19879,6 +19890,7 @@ button.DialogButton::-moz-focus-inner {
   display: flex;
   flex-direction: row;
   position: relative;
+  align-items: center;
 }
 .DialogInput_Wrapper > input.DialogInput {
   flex: 1;
@@ -19897,10 +19909,16 @@ button.DialogButton.DialogInput_CopyAction {
 .DialogInput_ClearAction {
   position: absolute;
   right: 12px;
-  top: 0;
-  bottom: 0;
   width: 24px;
+  height: 24px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.DialogInput_ClearAction svg {
+  width: 18px;
+  height: 18px;
 }
 .DialogInput_ClearAction .SVGIcon_X_Line line {
   stroke-width: 22px;

@@ -624,6 +624,12 @@ span.partnereventeditor_RequiredFieldLabel_11TnL {
   text-transform: uppercase;
   color: #fff;
   font-weight: 500;
+  width: fit-content;
+  padding: 4px 8px;
+  border-radius: 3px;
+}
+.partnereventeditor_EventEditBelowTopBarCategoryChoice_1GRf_:hover {
+  background: #000;
 }
 .partnereventeditor_EventEditBelowTopBarCategoryChoice_1GRf_ > img {
   padding-left: 10px;
@@ -797,6 +803,7 @@ span.partnereventeditor_RequiredFieldLabel_11TnL {
   padding-left: 10px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .partnereventeditor_TabsSelectorEntrySelected_1ryee {
   font-size: 16px;
@@ -1058,6 +1065,9 @@ span.partnereventeditor_RequiredFieldLabel_11TnL {
 }
 .partnereventsalewidgeteditor_EventCategoryWidth_3SyzC {
   width: 250px;
+}
+.partnereventsalewidgeteditor_SingleLine_JPNIC {
+  display: inline-block;
 }
 .partnereventsale_SaleContainer_3BwSi {
   position: relative;
@@ -1368,6 +1378,10 @@ span.partnereventeditor_RequiredFieldLabel_11TnL {
 .partnereventsale_BackgroundSettings_3_B1e
   .partnereventsale_HalfColumn_3F_CF:first-child {
   margin-right: 40px;
+}
+.partnersaledebug_SearchResults_26iJ3 {
+  overflow: scroll;
+  max-height: 300px;
 }
 .partnereventshared_ErrorPage_1HZBl {
   padding: 24px;
@@ -2012,9 +2026,11 @@ span.partnereventeditor_RequiredFieldLabel_11TnL {
 .saletabeditor_AddButton_2fqBD {
   width: 25%;
 }
-.partnersaledebug_SearchResults_26iJ3 {
-  overflow: scroll;
-  max-height: 300px;
+.saletabeditor_ImgPreview_3jXQP {
+  width: 100px;
+  height: 20px;
+  overflow: hidden;
+  padding-right: 10px;
 }
 :root {
   --main-text-color: #dbe2e6;

@@ -3186,6 +3186,17 @@
             (e.prototype.GetAllTags = function () {
               return this.vecTags;
             }),
+            (e.prototype.BMatchesAllTags = function (e) {
+              var t = this,
+                n = !0;
+              return (
+                null == e ||
+                  e.forEach(function (e) {
+                    t.vecTags.includes(e) || (n = !1);
+                  }),
+                n
+              );
+            }),
             (e.prototype.BHasSteamStoreSpotlight = function () {
               return Boolean(this.jsondata.store_spotlight);
             }),
@@ -15238,91 +15249,116 @@
         })(),
         An = Object(i.a)(function (e) {
           var t,
-            n = e.language,
-            r = e.linkColor,
-            a = e.headingColor,
-            i = e.background,
-            s = e.facetFilterState,
-            c = e.fnOnUpdateFilter,
-            l = { background: i, color: r || "white" },
-            u = {
-              borderBottom: "0px solid " + (r || "white"),
-              color: a || "white",
-            },
-            d = Object(o.useRef)(null),
-            p = function () {
-              s.UpdateFilter(), c();
+            n,
+            r,
+            a = e.language,
+            i = e.linkColor,
+            s = e.headingColor,
+            c = e.background,
+            l = e.styleOverrides,
+            u = e.facetFilterState,
+            d = e.fnOnUpdateFilter;
+          (null == l ? void 0 : l.menu) ||
+            (n = { background: c, color: i || "white" }),
+            (null == l ? void 0 : l.menuTitle) ||
+              (r = {
+                borderBottom: "0px solid " + (i || "white"),
+                color: s || "white",
+              });
+          var p = Object(o.useRef)(null),
+            m = function () {
+              u.UpdateFilter(), d();
             };
           return o.createElement(
             "div",
-            { ref: d, className: Bn.FacetedBrowseControls, style: l },
+            {
+              ref: p,
+              className:
+                (null == l ? void 0 : l.menu) || Bn.FacetedBrowseControls,
+              style: n,
+            },
             o.createElement(
-              "h1",
-              { style: u },
+              "div",
+              {
+                className:
+                  (null == l ? void 0 : l.menuTitle) || Bn.FacetMenuTitle,
+                style: r,
+              },
               Object(Q.f)("#FacetedBrowse_Heading")
             ),
-            (null == s ? void 0 : s.m_filteredCapsules) &&
-              (null == s ? void 0 : s.BSomeFacetValueEnabled()) &&
+            (null == u ? void 0 : u.m_filteredCapsules) &&
+              (null == u ? void 0 : u.BSomeFacetValueEnabled()) &&
               o.createElement(
                 "div",
-                { className: Bn.FacetedBrowseMatchCount },
-                s.m_bFilteredCapsuleCountIsPartial
+                {
+                  className:
+                    (null == l ? void 0 : l.matchCount) ||
+                    Bn.FacetedBrowseMatchCount,
+                },
+                u.m_bFilteredCapsuleCountIsPartial
                   ? Object(Q.l)(
                       "#FacetedBrowse_MatchCountPartial",
-                      s.m_nFilteredCapsuleCount
+                      u.m_nFilteredCapsuleCount
                     )
                   : Object(Q.l)(
                       "#FacetedBrowse_MatchCount",
-                      s.m_nFilteredCapsuleCount
+                      u.m_nFilteredCapsuleCount
                     )
               ),
             o.createElement(
               "div",
-              { className: Bn.FacetedBrowseReset },
+              {
+                className:
+                  (null == l ? void 0 : l.reset) || Bn.FacetedBrowseReset,
+              },
               o.createElement(
                 "a",
                 {
                   onClick: function (e) {
                     e.preventDefault(),
                       Object(I.G)(function () {
-                        s.Reset(), c();
+                        u.Reset(), d();
                       });
                   },
                 },
                 Object(Q.f)("#FacetedBrowse_Reset")
               )
             ),
-            null === (t = null == s ? void 0 : s.GetSortedFacets()) ||
+            null === (t = null == u ? void 0 : u.GetSortedFacets()) ||
               void 0 === t
               ? void 0
-              : t.map(function (t, r) {
+              : t.map(function (t, n) {
                   return o.createElement(Mn, {
                     key:
                       "facet_" +
-                      Q.a.GetWithFallback(t.facet.facet.name, n) +
+                      Q.a.GetWithFallback(t.facet.facet.name, a) +
                       "_" +
-                      r,
+                      n,
                     facet: t,
-                    facetFilterState: s,
-                    nFacetIndex: r,
-                    language: n,
+                    facetFilterState: u,
+                    nFacetIndex: n,
+                    language: a,
                     nMaxFacetValues: e.nMaxFacetValues,
                     highlightedFacetColor: e.highlightedFacetColor,
                     linkColor: e.linkColor,
                     headingColor: e.headingColor,
-                    fnOnUpdateFilter: p,
+                    fnOnUpdateFilter: m,
+                    styleOverrides: l,
                   });
                 }),
             o.createElement(
               "div",
-              { className: Bn.FacetedBrowseReset },
+              {
+                className:
+                  (null == l ? void 0 : l.reset) || Bn.FacetedBrowseReset,
+              },
               o.createElement(
                 "a",
                 {
                   onClick: function (e) {
                     e.preventDefault();
                     var t =
-                      d.current.getBoundingClientRect().top + window.scrollY;
+                      p.current.getBoundingClientRect().top + window.scrollY;
                     window.scrollTo(0, t);
                   },
                 },
@@ -15341,72 +15377,82 @@
           );
         }),
         Mn = Object(i.a)(function (e) {
-          var t = e.language,
-            n = e.linkColor,
-            r = e.headingColor,
-            i = e.facet,
-            s = e.nFacetIndex,
-            c = Object(o.useState)(Boolean(0 !== s)),
-            l = c[0],
-            u = c[1],
-            d = Object(o.useState)(!1),
-            p = d[0],
-            m = d[1],
-            h = {
-              borderBottom: "0px solid " + (n || "white"),
-              color: r || "white",
-            },
-            f = Object(Q.f)(Q.a.GetWithFallback(i.facet.facet.name, t)),
-            _ = e.nMaxFacetValues,
-            b = i.facetValues.reduce(function (e, t) {
+          var t,
+            n = e.language,
+            r = e.linkColor,
+            i = e.headingColor,
+            s = e.facet,
+            c = e.nFacetIndex,
+            l = e.styleOverrides,
+            u = Object(o.useState)(Boolean(0 !== c)),
+            d = u[0],
+            p = u[1],
+            m = Object(o.useState)(!1),
+            h = m[0],
+            f = m[1];
+          (null == l ? void 0 : l.facetName) ||
+            (t = {
+              borderBottom: "0px solid " + (r || "white"),
+              color: i || "white",
+            });
+          var _ = Object(Q.f)(Q.a.GetWithFallback(s.facet.facet.name, n)),
+            b = e.nMaxFacetValues,
+            v = s.facetValues.reduce(function (e, t) {
               return e + (t.bDeactivated ? 1 : 0);
             }, 0);
-          _ = Math.min(_, i.facetValues.length - b);
-          var v = i.facetValues.reduce(function (e, t) {
+          b = Math.min(b, s.facetValues.length - v);
+          var g = s.facetValues.reduce(function (e, t) {
               return e + (t.bEnabled ? 1 : 0);
             }, 0),
-            g = i.facetValues.some(function (e) {
+            y = s.facetValues.some(function (e) {
               return !e.bEnabled && !e.bDeactivated;
             });
-          _ = Math.max(_, v + (g ? 1 : 0));
-          var y = i.facetValues.length > _,
-            S = y && !p ? i.facetValues.slice(0, _) : i.facetValues;
+          b = Math.max(b, g + (y ? 1 : 0));
+          var S = s.facetValues.length > b,
+            E = S && !h ? s.facetValues.slice(0, b) : s.facetValues;
           return o.createElement(
             "div",
             { className: Bn.Facet },
             o.createElement(
-              "h2",
+              "div",
               {
-                style: h,
+                className: (null == l ? void 0 : l.facetName) || Bn.FacetTitle,
+                style: t,
                 onClick: function () {
-                  return u(!l);
+                  return p(!d);
                 },
               },
-              f
+              _
             ),
-            !l &&
+            !d &&
               o.createElement(
                 o.Fragment,
                 null,
-                S.map(function (t, n) {
+                E.map(function (t, n) {
                   return o.createElement(
                     Ln,
                     Object(a.a)(
-                      { key: "facet_" + f + "_value_" + n, facetValue: t },
+                      {
+                        key: "facet_" + _ + "_value_" + n,
+                        facetValue: t,
+                        styleOverrides: l,
+                      },
                       e
                     )
                   );
                 }),
-                y &&
+                S &&
                   o.createElement(
                     "div",
                     {
-                      className: Bn.FacetValueShowMore,
+                      className:
+                        (null == l ? void 0 : l.showMore) ||
+                        Bn.FacetValueShowMore,
                       onClick: function () {
-                        return m(!p);
+                        return f(!h);
                       },
                     },
-                    p
+                    h
                       ? Object(Q.f)("#Bbcode_Expand_ShowMore_Expanded")
                       : Object(Q.f)("#Bbcode_Expand_ShowMore_Collapsed")
                   )
@@ -15419,24 +15465,27 @@
             r = e.linkColor,
             a = e.facetValue,
             i = e.facetFilterState,
-            s = e.fnOnUpdateFilter;
+            s = e.styleOverrides,
+            c = e.fnOnUpdateFilter;
           if (a.facetValue.type === u.m.k_EPrice && null == i.m_priceStopInfo)
             return null;
-          var c = a.bEnabled,
-            l = a.bDeactivated,
-            d = c
-              ? {
-                  color: n || "darkorange",
-                  borderLeft: "4px solid " + (n || "darkorange"),
-                }
-              : {},
-            p = { color: r || "white" },
-            m = Object(Q.f)(Q.a.GetWithFallback(a.facetValue.name, t)),
-            h = Boolean(a.facetValue.subtitle)
+          var l,
+            d,
+            p = a.bEnabled,
+            m = a.bDeactivated,
+            h = {
+              color: n || "darkorange",
+              borderLeft: "4px solid " + (n || "darkorange"),
+            };
+          (null == s ? void 0 : s.facetValue) || (l = p ? h : {}),
+            (null == s ? void 0 : s.facetValueName) ||
+              (d = { color: r || "white" });
+          var f = Object(Q.f)(Q.a.GetWithFallback(a.facetValue.name, t)),
+            _ = Boolean(a.facetValue.subtitle)
               ? Q.a.GetWithFallback(a.facetValue.subtitle, t)
               : null;
           if (a.facetValue.type === u.m.k_EPrice) {
-            var f =
+            var b =
               null != a.nPriceStopIndex
                 ? a.nPriceStopIndex
                 : i.m_priceStopInfo.length - 1;
@@ -15444,8 +15493,8 @@
               classname: Bn.FacetValuePriceSlider,
               min: 0,
               max: i.m_priceStopInfo.length - 1,
-              value: f,
-              label: i.m_priceStopInfo[f].label,
+              value: b,
+              label: i.m_priceStopInfo[b].label,
               onChange: function (e) {
                 Object(I.G)(function () {
                   a.nPriceStopIndex = Math.floor(e);
@@ -15456,38 +15505,47 @@
                   (a.bEnabled = Boolean(
                     a.nPriceStopIndex !== i.m_priceStopInfo.length - 1
                   )),
-                    s();
+                    c();
                 });
               },
             });
           }
+          var v = (null == s ? void 0 : s.facetValue) || Bn.FacetValue,
+            g =
+              (null == s ? void 0 : s.facetValueEnabled) ||
+              Bn.FacetValueEnabled,
+            y =
+              (null == s ? void 0 : s.facetValueDeactivated) ||
+              Bn.FacetValueDeactivated,
+            S = (null == s ? void 0 : s.facetValueName) || Bn.FacetValueName;
           return o.createElement(
             "div",
-            {
-              className: c
-                ? Bn.FacetValueEnabled
-                : l
-                ? Bn.FacetValueDeactivated
-                : Bn.FacetValue,
-              style: d,
-            },
+            { className: p ? g : m ? y : v, style: l },
             o.createElement(
               "a",
               {
-                className: Bn.FacetValueName,
-                style: p,
+                className: S,
+                style: d,
                 onClick: function (e) {
                   e.preventDefault(),
                     Object(I.G)(function () {
-                      l || ((a.bEnabled = !a.bEnabled), s());
+                      m || ((a.bEnabled = !a.bEnabled), c());
                     });
                 },
                 href: "",
               },
-              m
+              f
             ),
-            Boolean(h) &&
-              o.createElement("div", { className: Bn.FacetValueDescription }, h)
+            Boolean(_) &&
+              o.createElement(
+                "div",
+                {
+                  className:
+                    (null == s ? void 0 : s.facetValueDesc) ||
+                    Bn.FacetValueDescription,
+                },
+                _
+              )
           );
         }),
         Rn = Object(i.a)(function (e) {
@@ -24696,9 +24754,11 @@
         FacetedBrowseCtn: "facetedbrowse_FacetedBrowseCtn_1Drr-",
         FacetedBrowseInnerCtn: "facetedbrowse_FacetedBrowseInnerCtn_3vjDu",
         FacetedBrowseControls: "facetedbrowse_FacetedBrowseControls_1JM3A",
+        FacetMenuTitle: "facetedbrowse_FacetMenuTitle_2HmeH",
         FacetedBrowseMatchCount: "facetedbrowse_FacetedBrowseMatchCount_3_OwR",
         FacetedBrowseReset: "facetedbrowse_FacetedBrowseReset_3jRGA",
         Facet: "facetedbrowse_Facet_Qa8BX",
+        FacetTitle: "facetedbrowse_FacetTitle_3Jg7m",
         FacetValue: "facetedbrowse_FacetValue_12piy",
         FacetValueEnabled: "facetedbrowse_FacetValueEnabled_TZdsh",
         FacetValueDeactivated: "facetedbrowse_FacetValueDeactivated_2OE4s",
@@ -67237,7 +67297,7 @@
                     },
                     i.createElement(
                       "div",
-                      { className: u.sliderBody },
+                      { className: Object(s.a)(u.sliderBody, "SliderBody") },
                       !r &&
                         i.createElement(
                           a.a,

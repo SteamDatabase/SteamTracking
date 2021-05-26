@@ -2668,6 +2668,24 @@ body.migrated_profile_page #BG_bottom.maincontent {
 	position: relative;
 }
 
+.gameListRowItemTop {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+}
+
+.gameListRowItemTopPrimary {
+	/* Ensures text still ellipsizes correctly */
+	overflow: hidden;
+	max-width: 100%;
+}
+
+.gameListRowItemTopSecondary {
+
+}
+
 .gameListRowLogo {
 	left: 0;
 	position: absolute;
@@ -3309,6 +3327,12 @@ background: -webkit-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);
 	}
 	html.responsive .recentgame_recentplaytime > h2 {
 		font-size: 16px;
+	}
+
+	html.responsive .gameListRowItemTop {
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
 	}
 }
 

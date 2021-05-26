@@ -1453,6 +1453,7 @@ button.DialogButton::-moz-focus-inner {
   display: flex;
   flex-direction: row;
   position: relative;
+  align-items: center;
 }
 .DialogInput_Wrapper > input.DialogInput {
   flex: 1;
@@ -1471,10 +1472,16 @@ button.DialogButton.DialogInput_CopyAction {
 .DialogInput_ClearAction {
   position: absolute;
   right: 12px;
-  top: 0;
-  bottom: 0;
   width: 24px;
+  height: 24px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.DialogInput_ClearAction svg {
+  width: 18px;
+  height: 18px;
 }
 .DialogInput_ClearAction .SVGIcon_X_Line line {
   stroke-width: 22px;

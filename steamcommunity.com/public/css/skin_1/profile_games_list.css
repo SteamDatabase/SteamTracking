@@ -135,7 +135,6 @@ a.games_list_tab:hover {
 
 .gameListRowLogo {
 	float: left;
-	max-width: 30%;
 	width: 184px;
 	margin-right: 8px;
 	position: relative;
@@ -171,6 +170,7 @@ a.games_list_tab:hover {
 	color: #7092a5;
 	position: relative;
 	padding: 5px 0px 0px 0px;
+	height: auto;
 }
 
 .gameListItemActive {
@@ -209,11 +209,21 @@ background-color: #4e4e4d;
 }
 
 #gameslist_controls {
-line-height: 24px;
+	line-height: 24px;
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 6px;
 }
 
-#gameslist_sort_options {
-float: right;
+.common_filter_ctn {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-bottom: 6px;
 }
 
 .save_button_nag {
@@ -232,7 +242,7 @@ text-align: right;
 
 .sort_options {
 color: #8F98A0;
-margin-bottom: 8px;
+margin-bottom: 6px;
 }
 
 .sort_options .selected_sort {
@@ -498,7 +508,6 @@ a.popup_menu_item2:hover h5 {
 	background-color: rgba( 103, 193, 245, 0.2 );
 	padding:3px 8px 0px 0px;
 	border-radius: 2px;
-	margin-right:6px;
 	cursor: pointer;
 	line-height: 18px;
 	color: #66c0f4;
@@ -519,7 +528,10 @@ a.pullup_item {
 }
 
 .bottom_controls {
-	padding-top: 4px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 6px;
 }
 
 /* recommendations */
@@ -1136,12 +1148,19 @@ h5.hours_played {
 	padding-top: 18px;
 }
 
-@media screen and ( max-width: 500px ) {
+@media screen and ( max-width: 600px ) {
 	html.responsive .bottom_controls {
 		clear: left;
-		padding-top: 8px;
+		padding-top: 4px;
 	}
 
+	html.responsive #gameslist_controls {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+
+@media screen and ( max-width: 500px ) {
 	html.responsive .gameListRowItem, html.responsive .wishlistRowItem {
 		overflow: visible;
 		height: auto;
@@ -1149,6 +1168,10 @@ h5.hours_played {
 
 	html.responsive .gameListRow {
 		padding: 8px 1%;
+	}
+
+	html.responsive .gameListRowLogo {
+		width: 160px;
 	}
 }
 

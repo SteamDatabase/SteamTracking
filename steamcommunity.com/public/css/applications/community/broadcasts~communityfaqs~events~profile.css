@@ -1566,33 +1566,33 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
 .bbcodes_Header1_2SIyP {
   display: block;
   color: #fff;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 26px;
-  line-height: 30px;
+  line-height: 31px;
   margin-bottom: 4px;
 }
 .bbcodes_Header2_38_5M {
   color: #fff;
   font-size: 22px;
-  line-height: 25px;
+  line-height: 28px;
   font-weight: 400;
 }
 .bbcodes_Header3_2QwSx {
   color: #fff;
   font-size: 19px;
-  line-height: 22px;
-  font-weight: 300;
+  line-height: 25px;
+  font-weight: 400;
 }
 .bbcodes_Header4_qpkV7 {
   color: #fff;
   font-size: 18px;
-  line-height: 20px;
-  font-weight: 300;
+  line-height: 24px;
+  font-weight: 400;
 }
 .bbcodes_Header5_2_91m {
   color: #fff;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 22px;
 }
 .bbcodes_Underline_2vtht {
   display: inline;
@@ -1674,6 +1674,7 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
 }
 .bbcodes_ListItem_3FrNm {
   list-style-position: outside;
+  margin-bottom: 5px;
 }
 .bbcodes_HR_3M2PS {
   border: none;
@@ -1694,6 +1695,18 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
 .bbcodes_Table_1iK3C.bbcodes_NoBorder_3Gpas .bbcodes_TableData_1vHUl {
   border: none;
 }
+.bbcodes_Table_1iK3C .bbcodes_TableRow_qVi0G {
+  border-bottom: 1px solid #77797e;
+}
+.bbcodes_Table_1iK3C .bbcodes_TableRow_qVi0G:first-of-type {
+  border-top: 1px solid #77797e;
+}
+.bbcodes_Table_1iK3C .bbcodes_TableData_1vHUl {
+  border-right: 1px solid #77797e;
+}
+.bbcodes_Table_1iK3C .bbcodes_TableData_1vHUl:first-of-type {
+  border-left: 1px solid #77797e;
+}
 .bbcodes_TableHeader_3rbaO {
   display: table-cell;
   font-weight: bold;
@@ -1705,19 +1718,11 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
 }
 .bbcodes_TableRow_qVi0G {
   display: table-row;
-  border-bottom: 1px solid #77797e;
-}
-.bbcodes_TableRow_qVi0G:first-of-type {
-  border-top: 1px solid #77797e;
 }
 .bbcodes_TableData_1vHUl {
   display: table-cell;
   vertical-align: middle;
   padding: 4px;
-  border-right: 1px solid #77797e;
-}
-.bbcodes_TableData_1vHUl:first-of-type {
-  border-left: 1px solid #77797e;
 }
 .bbcodes_ExpandSectionBlock_2UXXq .bbcodes_ExpandSectionHeader_3d8DX {
   padding: 3px 8px;
@@ -3177,6 +3182,8 @@ html.touch .gamehover_WishlistButton_3notz .gamehover_WishlistButtonText_VI5mZ,
 .salepreviewwidgets_LibraryAssetExpandedDisplay_PZY_7
   .salepreviewwidgets_StoreSaleWidgetShortDesc_3AsE5 {
   margin-bottom: 6px;
+  max-height: unset;
+  line-height: 16px;
 }
 .salepreviewwidgets_SaleItemFullCapsuleDisplay_2sVvR
   .salepreviewwidgets_StoreSaleWidgetShortDesc_3AsE5 {
@@ -3215,6 +3222,7 @@ html.touch .gamehover_WishlistButton_3notz .gamehover_WishlistButtonText_VI5mZ,
   margin-right: 12px;
   font-size: 11px;
   letter-spacing: 0.07em;
+  white-space: nowrap;
 }
 .salepreviewwidgets_SaleTagBlockCtn_1ZqQL .salepreviewwidgets_TagBox_1lqaD {
   display: flex;
@@ -9300,6 +9308,7 @@ html.responsive.touch
   .eventcalendar_FilterLink_1zyVy
   svg {
   fill: #aaa;
+  color: #aaa;
   height: 16px;
   width: 16px;
   margin-right: 8px;
@@ -10305,11 +10314,13 @@ html.responsive.touch
   .eventcalendar_SettingsPanel_tifiV
   path {
   fill: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.8);
 }
 .eventcalendar_MobileNavBannerCtn_20PrZ
   .eventcalendar_SettingsPanel_tifiV:hover
   path {
   fill: #fff;
+  color: #fff;
 }
 .eventcalendar_MobileNavBannerCtn_20PrZ
   .eventcalendar_SearchExpanded_3rn-P
@@ -12108,7 +12119,7 @@ html:not(.touch)
   opacity: 0.1;
   filter: none;
 }
-.carousel_carouselNavButton_13rGo.carousel_left_S8IHd svg {
+.carousel_carouselNavButton_13rGo.carousel_left_S8IHd {
   transform: rotateZ(180deg);
 }
 .carousel_carouselNavButton_13rGo svg {
@@ -12483,7 +12494,7 @@ html:not(.touch)
     margin-right: 16px;
   }
 }
-.facetedbrowse_FacetedBrowseControls_1JM3A h1 {
+.facetedbrowse_FacetMenuTitle_2HmeH {
   text-transform: uppercase;
   font-size: 16px;
   letter-spacing: 0.03em;
@@ -12512,7 +12523,7 @@ html:not(.touch)
   margin-top: 12px;
   margin-bottom: 16px;
 }
-.facetedbrowse_Facet_Qa8BX h2 {
+.facetedbrowse_FacetTitle_3Jg7m {
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 500;
@@ -12521,7 +12532,7 @@ html:not(.touch)
   width: fit-content;
   opacity: 70%;
 }
-.facetedbrowse_Facet_Qa8BX h2:hover {
+.facetedbrowse_FacetTitle_3Jg7m:hover {
   cursor: pointer;
   opacity: 85%;
 }

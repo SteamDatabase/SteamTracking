@@ -1413,6 +1413,25 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 	padding: 7px 7px;
 	color: #9099a0;
 	margin: 2px 0 25px 0;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 6px;
+}
+
+.home_content.single_buttonbar .single_buttonbar_1 {
+	flex-grow: 1;
+}
+
+.home_content.single_buttonbar .single_buttonbar_2 {
+	flex-grow: 2;
+}
+
+.home_content.single_buttonbar .buttonbar_spacer {
+	width: 75px;
+	display: inline-block;
 }
 
 
@@ -1510,12 +1529,6 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 			font-style: italic;
 	line-height: 18px;
 	margin-top: 7px;
-}
-
-
-.home_content .buttonbar_spacer {
-	width: 75px;
-	display: inline-block;
 }
 
 .home_content a.right {
@@ -1759,6 +1772,11 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 		text-align: center;
 	}
 
+	html.responsive .spotlight_col {
+		display: flex;
+		flex-direction: column;
+	}
+
 	body.responsive_page .home_page_body_ctn.has_takeover .home_header_textimage_ctn {
 		margin-top: 0;
 	}
@@ -1781,6 +1799,25 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 {
 	html.responsive .hardware_content {
 		font-size: 12px;
+	}
+
+	html.responsive .home_content.single .capsule {
+		max-width: none;
+		display: block;
+	}
+
+	html.responsive .home_content.single .gamelink {
+		display: block;
+	}
+
+	html.responsive .home_content.single .screenshots {
+		display: flex;
+		margin-top: 6px;
+		gap: 6px;
+	}
+
+	html.responsive .home_content.single .screenshots .screenshot {
+		margin-right: 0;
 	}
 }
 
@@ -2544,6 +2581,17 @@ body.v6 .recommended_by_deep_dive_method {
 	float:unset;
 }
 
+@media screen and ( max-width: 500px ) {
+	html.responsive .deep_dive_block .recently_updated_apps .carousel_items {
+		height: auto;
+		padding-bottom: 20px;
+	}
+
+	html.responsive body.v6 .deep_dive_key_tags {
+		display: none;
+	}
+}
+
 .recommended_by_steam_labs_ctn .lower_pad_block {
     
 }
@@ -2688,6 +2736,7 @@ body.v6 .discovery_queue_ctn h2, body.v6 .steam_curators_ctn h2, body.v6 .apps_r
 	box-shadow: 0 0 4px #000;
 	background: #000;
 }
+
 .community_recommendation_app > .community_recommendation_capsule > .capsule {
 	height: 350px;
 }
@@ -2847,6 +2896,24 @@ body.v6 .discovery_queue_ctn h2, body.v6 .steam_curators_ctn h2, body.v6 .apps_r
 	overflow-wrap: break-word;
 	overflow: hidden;
 }
+
+/* Community Recommendations Responsive */
+@media screen and (max-width: 910px) {
+	.community_recommendation_app > .community_recommendation_capsule > .capsule {
+		height: auto; /* Clear out the hardcoded 350px height above */
+	}
+}
+
+@media screen and ( max-width: 500px ) {
+	.community_recommendations_block > .review_box .view_more {
+		display: none;
+	}
+
+	.community_recommendation_app > .right_col > .paging_thumbs {
+		display: none;
+	}
+}
+
 
 /* Deep Dive widget */
 
@@ -3089,6 +3156,55 @@ background: -webkit-linear-gradient( 134deg, #e8f5fc 5%,#cce9f9 95%);
 
 }
 
+.discovery_queue_ctn .begin_exploring_mobile {
+	display: none;
+
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	flex-direction: column;
+	justify-content: center;
+	align-items: stretch;
+}
+
+.discovery_queue_ctn .begin_exploring_mobile .begin_exploring_mobile_btn {
+	font-size: 18px;
+
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+	background: linear-gradient(136.4deg, #0056D6 8%, #1A9FFF 90.05%);
+
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-weight: 700;
+	font-family: 'Motiva Sans';
+
+	padding: 20px 12px;
+	margin: 0 12px;
+
+	text-align: center;
+
+	cursor: pointer;
+}
+
+@media screen and (max-width: 600px ) {
+	.discovery_queue_ctn .begin_exploring {
+		display: none;
+	}
+
+	.discovery_queue_ctn .begin_exploring_mobile {
+		display: flex;
+	}
+}
+
+
+
 /* Valve Index Banner */
 
 .home_index_banner {
@@ -3219,14 +3335,23 @@ background: -webkit-linear-gradient( 135deg, rgba(37,49,63,1) 5%,rgba(54,97,125,
 	{
 		display: block;
 	}
-	html.responsive .home_marketing_message {
-		display: block;
-		margin: 0 0 10px 10px;
+
+	html.responsive .marketingmessage_container {
+		display: grid;
+		grid-template-columns: repeat( auto-fill, minmax( 173px, 1fr ) );
+		gap: 10px;
 	}
 
 	html.responsive .home_marketing_message > span {
-		width: 173px;
-		height: 182px;
+		width: 100%;
+		height: 0;
+		padding-top: 105%; /* Maintain aspect ratio as grid items resize */
+	}
+
+	html.responsive .home_marketing_message {
+		margin: 0;
+		margin-left: 0;
+		display: block;
 	}
 }
 
@@ -4214,6 +4339,27 @@ body.v6 .discovery_queue_ctn h2 {
 	background-position-y: 10px;
 }
 
+@media screen and ( max-width: 600px ) {
+	#content_callout {
+		background: none;
+		background-image: none;
+		padding: 24px 20px;
+	}
+
+	#content_callout .more_content_title {
+		font-size: 16px;
+		color: #c6d4df;
+		margin-bottom: 10px;
+	}
+
+	#content_callout .more_content_desc {
+		font-size: 13px;
+		color: #c6d4df;
+		line-height: 20px;
+	}
+
+}
+
 .home_page_content.takeover_mini .takeover_mini_ctn {
 	height: 40px;
 	width: 854px;
@@ -4335,6 +4481,7 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 	}
 	html.responsive .community_recommendation_app > .right_col {
 		height: 215px;
+		background: linear-gradient(180deg, #0A141D 0%, rgba(10, 20, 29, 0.2) 100%);
 	}
 
 	html.responsive body.v6 .friends_recently_purchased h2,
@@ -4459,6 +4606,10 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 		padding-bottom: 0px;
 	}
 
+	html.responsive .top_new_releases_carousel .carousel_container.paging_capsules .carousel_items:not(.no_paging) {
+		padding-bottom: 20px;
+	}
+
 	/* hardware callouts */
 	html.responsive .hardware_content {
 		text-align: center;
@@ -4526,13 +4677,12 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
         flex-direction: column;
     }
     html.responsive body.v6 .recommended_by_steam_labs_ctn .header_inline_reason {
-        float: left;
-        padding-bottom: 0px;
-        padding-right: 0px;
-        font-size: 12px;
+        display: none;
     }
     html.responsive .recommended_by_steam_labs_ctn .lower_right_block {
         margin-bottom: 6px;
+
+		padding-top: 0;
     }
 
 }
@@ -4572,7 +4722,7 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 
 .valveindex_banner
 {
-	display: block;
+	display: flex;
 	margin-top: 12px;
 	overflow: hidden;
 	position: relative;
