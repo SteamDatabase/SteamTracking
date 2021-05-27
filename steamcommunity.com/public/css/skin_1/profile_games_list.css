@@ -531,7 +531,16 @@ a.pullup_item {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	gap: 6px;
+
+	margin-bottom: -6px;
+}
+
+.bottom_controls > *:not(:last-child) {
+	margin-right: 6px;
+}
+
+.bottom_controls > * {
+	margin-bottom: 6px;
 }
 
 /* recommendations */

@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6550884";
+var CLSTAMP = "6567514";
 !(function (e) {
   function t(t) {
     for (
@@ -121,11 +121,11 @@ var CLSTAMP = "6550884";
                 9: "abd716bb6bb7cebbe238",
                 10: "e58c8467fe35f316eaa0",
                 11: "6d193daa461486fc1340",
-                12: "b8d6d93f224090794a9e",
+                12: "4c9b9171958f7e9a8a00",
                 13: "1097496cace1b964cd8c",
                 14: "6e4ac9daeb66131d81ef",
                 15: "3bf9a6e8d60ff85a5585",
-                16: "223f08a42daed722e356",
+                16: "d567945c61bd60c46b3a",
                 17: "196174ea5480aca8fd9a",
                 18: "2a134fac026ff77c6569",
                 19: "c00a15dd96bfb93ac759",
@@ -135,49 +135,49 @@ var CLSTAMP = "6550884";
                 23: "51c6d810937840ee5938",
                 24: "ede78306707e4d6f826c",
                 25: "0c6329820c7fc3621ef0",
-                26: "7c3904c05135f564c96c",
+                26: "97c86e24d9afdfeda297",
                 27: "e92830cdf4622cb52e29",
                 28: "4cfed9da21c1be4d9875",
                 29: "f77c0185fc9f074b644f",
                 30: "130ab0ff03cfdc8df1e3",
                 31: "267330685299a4e3b1ac",
                 32: "431acbf7e7c8a88812cd",
-                33: "9da43b10d468662a968d",
+                33: "3e4e5a69af2bb185ae68",
                 34: "a082c6e02d47d1e7c679",
                 35: "fb3ad354f4108afbfe84",
                 36: "cc6c55fdeeb6dbf682c8",
                 37: "9f9bedba116aceef6c7c",
                 38: "da7e6c633725ba8f9063",
                 39: "dd555942eeebcf691e37",
-                40: "0d052a5adc2505251d0d",
-                41: "f62854ad8cf27724fcfc",
-                42: "a84027090d482f9bdd47",
-                43: "87dc4a1e6a0f1c55ed09",
-                44: "bf5c9682d395c9e7b6e8",
+                40: "d8ff20b10be4051d8647",
+                41: "f4323ccffc0d09d59488",
+                42: "1e23472e04677e772ebd",
+                43: "5deb96d7b1a28bdc01a5",
+                44: "179f9fee6f02e294d2e2",
                 45: "78b5914c2c65c006e40b",
-                46: "94e8f42e73a626343128",
-                47: "499c39e7531723f04b9d",
-                48: "8650da31254fa3bb3e52",
-                49: "ff20ffbda269d93200a4",
-                50: "c469bce0fc12a204a409",
-                51: "c57de97a9c75f0dd8879",
-                52: "d613a5e8e149f85af4a4",
-                53: "887b3a4b6e970c86bb18",
-                54: "5bc05f219a20b0c16409",
-                55: "bef2e5fdf848bb301be7",
-                56: "322d871913c95fe9ba26",
-                57: "75b707bb2a00f1b4b576",
-                58: "1906154d4d540f50ffe3",
-                59: "1183386e91952eb9897a",
+                46: "6e8f08d5a3b9b506a2f2",
+                47: "0163d9d40b3d5993337d",
+                48: "b363ff14f91a4ce87e74",
+                49: "a8396c3fe8fd8c2e72c3",
+                50: "3abde3b903d3d6ff1da1",
+                51: "2717eb29374edf3dbee6",
+                52: "a6c09b9d735f8d181292",
+                53: "747b70a6cdbc22b936f3",
+                54: "2b70d8289ce8bc073d7c",
+                55: "0c7d478fb91e2603835e",
+                56: "9d3f2dcf1c57710fc18b",
+                57: "3b0698509feb80980bbc",
+                58: "1d2c089a67a549e1a8aa",
+                59: "02d672afa83bb2cb7141",
                 60: "c81899f447cf840c2cbc",
-                61: "959c99995ce0fa14a241",
-                62: "93fa758bfcece3bd62c4",
-                63: "83bfbd74c0df4580af30",
-                64: "03260a8f9dc63abd3554",
-                65: "7d97c8a034bf45133091",
-                66: "a60dca9515e6c11f29eb",
-                67: "ce22561f0806019888f2",
-                68: "00415418bd3fc04b6c38",
+                61: "b92356fd19ce6ed0cd4c",
+                62: "650984fef79b869543af",
+                63: "6915206bdc5812aba1b6",
+                64: "707c62056aaa31b54ccd",
+                65: "a7c5837b03c9073331c3",
+                66: "701405c9bb2bd27d34f4",
+                67: "8b4281f354db53424ce5",
+                68: "45fde9cf541c2b58a428",
               }[e]
             );
           })(e));
@@ -1260,7 +1260,7 @@ var CLSTAMP = "6550884";
               (this.m_bValid = !0),
               (this.m_bReady = !0);
           }),
-          Object(r.c)([i.B], e.prototype, "m_bReady", void 0),
+          Object(r.c)([i.C], e.prototype, "m_bReady", void 0),
           Object(r.c)([i.k], e.prototype, "InitInvalid", null),
           Object(r.c)([i.k], e.prototype, "InitDirectInvite", null),
           e
@@ -1296,10 +1296,10 @@ var CLSTAMP = "6550884";
         return m;
       }),
       n.d(t, "c", function () {
-        return y;
+        return C;
       }),
       n.d(t, "b", function () {
-        return C;
+        return y;
       }),
       n.d(t, "d", function () {
         return j;
@@ -1477,7 +1477,7 @@ var CLSTAMP = "6550884";
             : (f.setDate(f.getDate() + 1),
               n < f
                 ? Object(i.f)("#Time_Tomorrow")
-                : (f.setDate(f.getDate() + 5), n < f ? C(n) : y(n, !0)))
+                : (f.setDate(f.getDate() + 5), n < f ? y(n) : C(n, !0)))
         );
       }
       a.c(new Date().setHours(24, 0, 0, 0) - c.getTime());
@@ -1517,7 +1517,7 @@ var CLSTAMP = "6550884";
       v = new Map(),
       E = new Map(),
       S = new Map();
-    function y(e, t) {
+    function C(e, t) {
       void 0 === t && (t = !1);
       var n = e.getDate() + 31 * (e.getMonth() + 12 * e.getFullYear()),
         r = S.get(n);
@@ -1532,7 +1532,7 @@ var CLSTAMP = "6550884";
         r)
       );
     }
-    function C(e) {
+    function y(e) {
       var t = b.get(e.getDay());
       return (
         t ||
@@ -1794,7 +1794,7 @@ var CLSTAMP = "6550884";
         return S;
       }),
       n.d(t, "a", function () {
-        return y;
+        return C;
       });
     var r = n("mrSG"),
       i = n("0N1H");
@@ -1815,12 +1815,12 @@ var CLSTAMP = "6550884";
             (this.customlist = void 0);
         }
         return (
-          Object(r.c)([o.B], e.prototype, "enabled", void 0),
-          Object(r.c)([o.B], e.prototype, "locked", void 0),
-          Object(r.c)([o.B], e.prototype, "features", void 0),
-          Object(r.c)([o.B], e.prototype, "allowallapps", void 0),
-          Object(r.c)([o.B], e.prototype, "baselist", void 0),
-          Object(r.c)([o.B], e.prototype, "customlist", void 0),
+          Object(r.c)([o.C], e.prototype, "enabled", void 0),
+          Object(r.c)([o.C], e.prototype, "locked", void 0),
+          Object(r.c)([o.C], e.prototype, "features", void 0),
+          Object(r.c)([o.C], e.prototype, "allowallapps", void 0),
+          Object(r.c)([o.C], e.prototype, "baselist", void 0),
+          Object(r.c)([o.C], e.prototype, "customlist", void 0),
           e
         );
       })(),
@@ -2027,7 +2027,7 @@ var CLSTAMP = "6550884";
             "k_ERemoteClientLaunchRestrictedCountry");
       })(E || (E = {}));
     var S;
-    function y(e) {
+    function C(e) {
       return e === S.k_ESteamRealmChina;
     }
     !(function (e) {
@@ -2035,13 +2035,13 @@ var CLSTAMP = "6550884";
         (e[(e.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
         (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
     })(S || (S = {}));
-    var C, I, j, k, O, L;
+    var y, I, j, k, O, L;
     !(function (e) {
       (e[(e.Unknown = 0)] = "Unknown"),
         (e[(e.Wired = 1)] = "Wired"),
         (e[(e.Wireless = 2)] = "Wireless"),
         (e[(e.Virtual = 3)] = "Virtual");
-    })(C || (C = {})),
+    })(y || (y = {})),
       (function (e) {
         (e[(e.NotPresent = 0)] = "NotPresent"),
           (e[(e.Failed = 1)] = "Failed"),
@@ -2717,15 +2717,15 @@ PERFORMANCE OF THIS SOFTWARE.
               c.b
                 .ShowChatRoomGroupInvite(this.m_invite.GetInviteCode())
                 .then(function (t) {
-                  Object(l.F)(function () {
+                  Object(l.G)(function () {
                     (e.m_bConnectingToClient = !1),
                       (e.m_connectResult = t),
                       console.log(t);
                   });
                 }));
           }),
-          Object(r.c)([l.B], e.prototype, "m_bConnectingToClient", void 0),
-          Object(r.c)([l.B], e.prototype, "m_connectResult", void 0),
+          Object(r.c)([l.C], e.prototype, "m_bConnectingToClient", void 0),
+          Object(r.c)([l.C], e.prototype, "m_connectResult", void 0),
           e
         );
       })(),
@@ -2914,7 +2914,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   )
             );
           }),
-          Object(r.c)([l.B], t.prototype, "m_bTriedToLaunchSteam", void 0),
+          Object(r.c)([l.C], t.prototype, "m_bTriedToLaunchSteam", void 0),
           Object(r.c)([p.a], t.prototype, "LaunchWebChat", null),
           Object(r.c)([p.a], t.prototype, "OpenInSteamIgnoreAccount", null),
           Object(r.c)([p.a], t.prototype, "LaunchSteamClient", null),
@@ -2974,8 +2974,8 @@ PERFORMANCE OF THIS SOFTWARE.
       );
     }
     window.AssertMsg = u.a;
-    var y = new c.a();
-    function C(e) {
+    var C = new c.a();
+    function y(e) {
       var t;
       try {
         t = JSON.parse(e.getAttribute("data-inviteinfo"));
@@ -3020,7 +3020,7 @@ PERFORMANCE OF THIS SOFTWARE.
         });
       });
     }
-    (window.ClientConnectionAPI = y),
+    (window.ClientConnectionAPI = C),
       document.addEventListener("DOMContentLoaded", function () {
         return Object(r.b)(this, void 0, void 0, function () {
           return Object(r.e)(this, function (e) {
@@ -3041,7 +3041,7 @@ PERFORMANCE OF THIS SOFTWARE.
                         r = n.getAttribute("data-component");
                       switch (r) {
                         case "ChatInvite":
-                          C(n);
+                          y(n);
                           break;
                         default:
                           Object(u.a)(!1, 'unknown component: "' + r + '"');

@@ -1410,7 +1410,7 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 
 .home_content.single_buttonbar {
 	background: rgba(0,0,0,0.2);
-	padding: 7px 7px;
+	padding: 7px 7px 1px 7px; /* Bottom padding is accounted for with child element bottom margin */
 	color: #9099a0;
 	margin: 2px 0 25px 0;
 
@@ -1418,15 +1418,24 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 	flex-direction: row;
 	align-items: center;
 	flex-wrap: wrap;
-	gap: 6px;
+	justify-content: space-between;
 }
 
-.home_content.single_buttonbar .single_buttonbar_1 {
-	flex-grow: 1;
+.home_content.single_buttonbar .single_buttonbar_group {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	flex-wrap: wrap;
 }
 
-.home_content.single_buttonbar .single_buttonbar_2 {
-	flex-grow: 2;
+.home_content.single_buttonbar > *:not(:last-child),
+.home_content.single_buttonbar .single_buttonbar_group > *:not(:last-child) {
+	margin-right: 6px;
+}
+
+.home_content.single_buttonbar > *:not(.single_buttonbar_group),
+.home_content.single_buttonbar .single_buttonbar_group > * {
+	margin-bottom: 6px;
 }
 
 .home_content.single_buttonbar .buttonbar_spacer {
