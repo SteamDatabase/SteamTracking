@@ -9852,55 +9852,65 @@
           var t,
             a = ee(),
             o = a[0],
-            i = (a[1], r.a.useState(null)),
-            s = i[0],
-            l = i[1];
+            s = (a[1], r.a.useState(null)),
+            l = s[0],
+            p = s[1];
           Object(n.useEffect)(function () {
-            l(
-              ie
-                .map(function (e) {
-                  return (function (e) {
-                    e[13] && e[14] && console.error("redirect dupes on", e);
-                    return {
-                      id: parseInt(e[0]),
-                      strRef: e[1],
-                      strTitle: e[2],
-                      strQuestion: e[3] || "",
-                      strAnswer: e[4] || "",
-                      rgKeywords: (e[5] || "").split(","),
-                      nViewCount: parseInt(e[6]),
-                      nVoteCount: parseInt(e[7]),
-                      nCategory: parseInt(e[10]),
-                      nAppID: parseInt(e[11]) || 0,
-                      nOldFaqID: parseInt(e[12]) || void 0,
-                      strRedirct: e[13] || e[14] || void 0,
-                    };
-                  })(e);
-                })
-                .sort(function (e, t) {
-                  return t.nViewCount - e.nViewCount;
-                })
-            );
+            Object(i.b)(void 0, void 0, void 0, function () {
+              return Object(i.e)(this, function (e) {
+                return (
+                  p(
+                    ie
+                      .map(function (e) {
+                        return (
+                          (t = e)[13] &&
+                            t[14] &&
+                            console.error("redirect dupes on", t),
+                          {
+                            id: parseInt(t[0]),
+                            strRef: t[1],
+                            strTitle: t[2],
+                            strQuestion: t[3] || "",
+                            strAnswer: t[4] || "",
+                            rgKeywords: (t[5] || "").split(","),
+                            nViewCount: parseInt(t[6]),
+                            nVoteCount: parseInt(t[7]),
+                            nCategory: parseInt(t[10]),
+                            nAppID: parseInt(t[11]) || 0,
+                            nOldFaqID: parseInt(t[12]) || void 0,
+                            strRedirct: t[13] || t[14] || void 0,
+                          }
+                        );
+                        var t;
+                      })
+                      .sort(function (e, t) {
+                        return t.nViewCount - e.nViewCount;
+                      })
+                  ),
+                  [2]
+                );
+              });
+            });
           }, []);
-          for (var p = new Map(), d = 0, h = o; d < h.length; d++) {
-            var c = h[d];
-            if (c.json_data) {
-              var u =
-                null === (t = JSON.parse(c.json_data)) || void 0 === t
+          for (var d = new Map(), h = 0, c = o; h < c.length; h++) {
+            var u = c[h];
+            if (u.json_data) {
+              var m =
+                null === (t = JSON.parse(u.json_data)) || void 0 === t
                   ? void 0
                   : t.legacyDeskProInfo;
-              (null == u ? void 0 : u.strRef) && p.set(u.strRef, c);
+              (null == m ? void 0 : m.strRef) && d.set(m.strRef, u);
             }
           }
-          if (!s) return null;
-          var m = s.length,
-            f = p.size,
-            g = "Found " + m + " FAQs to import";
-          f > 0 &&
-            (g =
-              f == m
-                ? "Imported total of " + m + " FAQs"
-                : "Imported " + f + "/" + m + " FAQs");
+          if (!l) return null;
+          var f = l.length,
+            g = d.size,
+            y = "Found " + f + " FAQs to import";
+          g > 0 &&
+            (y =
+              g == f
+                ? "Imported total of " + f + " FAQs"
+                : "Imported " + g + "/" + f + " FAQs");
           return r.a.createElement(
             "div",
             { className: oe.a.ImportToolCtn },
@@ -9909,7 +9919,7 @@
               { className: oe.a.ToolHeader },
               "FAQ Importer"
             ),
-            r.a.createElement("div", { className: oe.a.StatusMessage }, g),
+            r.a.createElement("div", { className: oe.a.StatusMessage }, y),
             r.a.createElement(
               "div",
               { className: oe.a.FAQRow },
@@ -9922,9 +9932,9 @@
                   className: oe.a.ImportFAQsButton,
                   onClick: function () {
                     console.log("Importing all FAQs");
-                    for (var e = 0, t = s; e < t.length; e++) {
+                    for (var e = 0, t = l; e < t.length; e++) {
                       var a = t[e];
-                      if (!ce(a, p.get(a.strRef), !0)) return;
+                      if (!ce(a, d.get(a.strRef), !0)) return;
                     }
                   },
                 },
@@ -9932,11 +9942,11 @@
               ),
               r.a.createElement("div", { className: oe.a.Ref }, "Imported ID")
             ),
-            s.map(function (e) {
+            l.map(function (e) {
               return r.a.createElement(ue, {
                 key: "faq" + e.id,
                 legacyInfo: e,
-                matchingSummary: p.get(e.strRef),
+                matchingSummary: d.get(e.strRef),
               });
             })
           );
@@ -10091,6 +10101,14 @@
           [
             /<div[^>]*>(?![^<]*?<div)(<h2>|<b>|<br>|<hr>|<h1>|<font[^>]*?>|[^<])*?Support\s+Resources.*?<\/div>\s*<\/div>/gim,
             "",
+          ],
+          [
+            /<([^>\s]+)(\s+[^>]*?class\s*=\s*"[^"]*?)SteamChinaExclude([^"]*?".*?(<\/\1|\s+\/))>/gim,
+            "[exclude_realm=china]<$1$2$3>[/exclude_realm]",
+          ],
+          [
+            /<([^>\s]+)(\s+[^>]*?class\s*=\s*"[^"]*?)SteamGlobalExclude([^"]*?".*?(<\/\1|\s+\/))>/gim,
+            "[exclude_realm=global]<$1$2$3>[/exclude_realm]",
           ],
         ],
         fe = [
@@ -11754,6 +11772,7 @@
                     return !0;
                   },
                   fnLastUpdateRTime: a.GetLastTimeLanguageUpdated,
+                  realms: [c.e.k_ESteamRealmGlobal, c.e.k_ESteamRealmChina],
                 }),
                 !o &&
                   r.a.createElement(
@@ -12126,6 +12145,20 @@
             ["looping_media", { Constructor: Ht.j, autocloses: !1 }],
             ["video", { Constructor: Ht.n, autocloses: !1 }],
             ["previewyoutube", { Constructor: Ht.l, autocloses: !1 }],
+            [
+              "exclude_realm",
+              {
+                Constructor: function (e) {
+                  var t = Object(Ht.d)(e.args);
+                  return ("global" == t &&
+                    Q.c.EREALM == c.e.k_ESteamRealmGlobal) ||
+                    ("china" == t && Q.c.EREALM == c.e.k_ESteamRealmChina)
+                    ? null
+                    : n.createElement(n.Fragment, null, e.children);
+                },
+                autocloses: !1,
+              },
+            ],
           ])
         ),
         Ut = function (e) {

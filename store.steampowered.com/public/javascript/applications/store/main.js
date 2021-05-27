@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6563032";
+var CLSTAMP = "6568382";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [10],
   {
@@ -8141,7 +8141,8 @@ var CLSTAMP = "6563032";
             i = t.formatted_orig_price,
             o = t.formatted_final_price,
             s = t.coming_soon,
-            l = "bundle" == n && t.bundle_base_discount;
+            l = t.purchasePackageId,
+            u = "bundle" == n && t.bundle_base_discount;
           if (e.bShowInLibrary)
             return c.a.createElement(
               "div",
@@ -8152,7 +8153,7 @@ var CLSTAMP = "6563032";
                 Object(x.f)("#EventDisplay_CallToAction_InLibrary")
               )
             );
-          if (s)
+          if (s && !l)
             return c.a.createElement(
               "div",
               { className: $.a.StoreSalePriceWidgetContainer },
@@ -8173,29 +8174,29 @@ var CLSTAMP = "6563032";
               )
             );
           if (!o) return null;
-          var u = a || l,
-            p = u && l && u > l && l;
+          var p = a || u,
+            d = p && u && p > u && u;
           return c.a.createElement(
             "div",
             {
               className: Object(F.a)(
                 $.a.StoreSalePriceWidgetContainer,
-                u && $.a.Discounted
+                p && $.a.Discounted
               ),
             },
-            Boolean(p) &&
+            Boolean(d) &&
               c.a.createElement(
                 "span",
                 { className: Object(F.a)($.a.BaseDiscount) },
-                "-" + p + "%"
+                "-" + d + "%"
               ),
-            Boolean(u) &&
+            Boolean(p) &&
               c.a.createElement(
                 "div",
                 { className: $.a.StoreSaleDiscountBox },
-                "-" + u + "%"
+                "-" + p + "%"
               ),
-            u && i
+            p && i
               ? c.a.createElement(
                   "div",
                   { className: $.a.StoreSaleDiscountedPriceCtn },
@@ -8213,7 +8214,10 @@ var CLSTAMP = "6563032";
               : c.a.createElement(
                   "div",
                   { className: $.a.StoreSalePriceBox },
-                  o
+                  (s
+                    ? Object(x.f)("#EventDisplay_CallToAction_ComingSoon") +
+                      ": "
+                    : "") + o
                 )
           );
         },
