@@ -103,6 +103,7 @@ message CClientMetrics_ContentValidation_Notification {
 	optional uint32 chunks_corrupt = 7;
 	optional uint64 bytes_scanned = 8;
 	optional uint64 chunk_bytes_corrupt = 9;
+	optional uint64 total_file_size_corrupt = 10;
 }
 
 service ClientMetrics {

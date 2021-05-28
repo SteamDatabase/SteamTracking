@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6568382";
+var CLSTAMP = "6568447";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [10],
   {
@@ -59105,26 +59105,40 @@ var CLSTAMP = "6568382";
         h = n("NKJh"),
         f = n.n(h),
         b = Object(r.a)(function (e) {
-          var t = Object(m.c)();
+          var t,
+            n,
+            r = Object(m.c)();
           Object(a.useEffect)(function () {
             c.a.Get().HintLoad();
           }, []);
-          var n = e.info,
-            r = e.className,
-            h = n.type,
-            b = n.id,
-            _ = n.purchasePackageId,
-            v = n.is_free,
-            g = n.formatted_final_price;
-          if ("series" == h) return null;
-          if (!h || Object(o.b)(h)) {
-            var y = n;
-            if (y.coming_soon && !_) return null;
-            var M = c.a.Get().BOwnsApp(b);
-            if (M || v || "0" == g) {
-              var S =
-                (M && Object(p.f)("#EventDisplay_CallToAction_PlayNow")) ||
-                y.button_action ||
+          var h = e.info,
+            b = e.className,
+            _ = h.type,
+            v = h.id,
+            g = h.purchasePackageId,
+            y = h.is_free,
+            M = h.formatted_final_price,
+            S = h.discount_percent;
+          if ("series" == _) return null;
+          var O = y || "0" == M || S >= 100;
+          if (
+            "sub" == _ &&
+            O &&
+            (null ===
+              (n = null === (t = h) || void 0 === t ? void 0 : t.appids) ||
+            void 0 === n
+              ? void 0
+              : n.length) > 1
+          )
+            return null;
+          if (!_ || Object(o.b)(_)) {
+            var E = h;
+            if (E.coming_soon && !g) return null;
+            var C = c.a.Get().BOwnsApp(v);
+            if (C || O) {
+              var A =
+                (C && Object(p.f)("#EventDisplay_CallToAction_PlayNow")) ||
+                E.button_action ||
                 Object(p.f)("#EventDisplay_CallToAction_PlayNowForFree");
               return i.a.createElement(
                 "div",
@@ -59134,14 +59148,14 @@ var CLSTAMP = "6568382";
                     Object(l.d)(window, "steam://run/" + e.info.app_to_run);
                   },
                 },
-                i.a.createElement("span", null, S)
+                i.a.createElement("span", null, A)
               );
             }
-            if ("" == g) {
-              var O = Object(s.b)(y.capsule_link, t);
+            if ("" == M) {
+              var w = Object(s.b)(E.capsule_link, r);
               return i.a.createElement(
                 "a",
-                { href: O, className: Object(u.a)(f.a.Action, r) },
+                { href: w, className: Object(u.a)(f.a.Action, b) },
                 Object(p.f)("#EventDisplay_CallToAction_VisitStore")
               );
             }
@@ -59149,18 +59163,18 @@ var CLSTAMP = "6568382";
           return i.a.createElement(
             "div",
             {
-              className: Object(u.a)(f.a.Action, r),
-              onClick: function (n) {
-                var r = e.info,
-                  a = r.type,
-                  i = r.id,
-                  o = r.purchasePackageId,
+              className: Object(u.a)(f.a.Action, b),
+              onClick: function (t) {
+                var n = e.info,
+                  a = n.type,
+                  i = n.id,
+                  o = n.purchasePackageId,
                   l = d.d.STORE_BASE_URL + "cart",
                   u = d.d.STORE_BASE_URL + "cart/addtocart",
-                  p = Object(s.c)(t);
+                  p = Object(s.c)(r);
                 "bundle" == a
-                  ? c.a.Get().AddToCart(n, null, u, l, p, i)
-                  : c.a.Get().AddToCart(n, o, u, l, p);
+                  ? c.a.Get().AddToCart(t, null, u, l, p, i)
+                  : c.a.Get().AddToCart(t, o, u, l, p);
               },
             },
             i.a.createElement("span", null, Object(p.f)("#Store_AddToCart"))
