@@ -169,6 +169,7 @@
     "OptIn_EmailSection_PressPreviewDetails_Title": "PRESS PREVIEW",
     "OptIn_EmailSection_PressPreviewDetails_Body": "If you have indicated your permission for us to share your demo and information with press, we\u2019ll be doing so starting %1$s. This will give gaming press a chance to explore the games participating this time around, try out your demo, and reach out to you if they\u2019d like to learn more about your game.  Please see the %2$s.",
     "OptIn_EmailSection_PressPreviewDetails_EventDoc": "Event Documentation",
+    "OptIn_Debug": "Debug Data",
     "BuildNotes_Title": "Build %1$s is now live for players on the branch \"%2$s\"",
     "BuildNotes_SubTitle": "Now, tell players about your changes",
     "BuildNotes_Desc1": "Players that have your game installed will see a download queued for this update. They'll probably want to know what changed.",
