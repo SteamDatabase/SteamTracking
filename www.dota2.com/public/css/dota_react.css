@@ -1156,6 +1156,7 @@ a {
   height: 80px;
   padding: 0px 20px;
   background-color: black;
+  position: relative;
 }
 .microheader_MicroHeader_U7wdC.microheader_Overlapping_2RDnz {
   top: 0;
@@ -1175,7 +1176,9 @@ a {
   .microheader_HeaderContents_RsnZk
   .microheader_DotaLogo_ZFf5S {
   width: 200px;
+  min-width: 200px;
   height: 50px;
+  min-height: 50px;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/global/dota2_logo_horiz.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -1189,6 +1192,31 @@ a {
   opacity: 1;
   cursor: pointer;
 }
+@media (max-width: 1300px) {
+  .microheader_MicroHeader_U7wdC
+    .microheader_HeaderContents_RsnZk
+    .microheader_DotaLogo_ZFf5S {
+    background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/global/dota2_logo_symbol.png");
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+    min-height: 50px;
+  }
+}
+@media (max-width: 900px) {
+  .microheader_MicroHeader_U7wdC
+    .microheader_HeaderContents_RsnZk
+    .microheader_DotaLogo_ZFf5S {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  .microheader_MicroHeader_U7wdC
+    .microheader_HeaderContents_RsnZk
+    .microheader_DotaLogo_ZFf5S {
+    display: block;
+  }
+}
 .microheader_MicroHeader_U7wdC
   .microheader_HeaderContents_RsnZk
   .microheader_NavItems_3WYkc {
@@ -1198,6 +1226,13 @@ a {
   flex-direction: row;
   align-items: center;
   position: relative;
+}
+@media (max-width: 700px) {
+  .microheader_MicroHeader_U7wdC
+    .microheader_HeaderContents_RsnZk
+    .microheader_NavItems_3WYkc {
+    justify-content: center;
+  }
 }
 .microheader_MicroHeader_U7wdC
   .microheader_HeaderContents_RsnZk
@@ -1217,6 +1252,20 @@ a {
   text-transform: uppercase;
   border-top: 3px solid transparent;
   border-bottom: 3px solid transparent;
+}
+@media (max-width: 700px) {
+  .microheader_MicroHeader_U7wdC
+    .microheader_HeaderContents_RsnZk
+    .microheader_NavItems_3WYkc
+    .microheader_NavLink_15Uwp {
+    display: none;
+  }
+  .microheader_MicroHeader_U7wdC
+    .microheader_HeaderContents_RsnZk
+    .microheader_NavItems_3WYkc
+    .microheader_NavLink_15Uwp.microheader_Active_3ulNR {
+    display: flex;
+  }
 }
 .microheader_MicroHeader_U7wdC
   .microheader_HeaderContents_RsnZk
@@ -1339,6 +1388,13 @@ a {
   flex-direction: row;
   align-items: center;
 }
+@media (max-width: 700px) {
+  .microheader_MicroHeader_U7wdC
+    .microheader_HeaderContents_RsnZk
+    .microheader_OptionsSide_11feq {
+    display: none;
+  }
+}
 .microheader_MicroHeader_U7wdC
   .microheader_HeaderContents_RsnZk
   .microheader_OptionsSide_11feq
@@ -1396,6 +1452,253 @@ a {
   .microheader_Account_lcq6h
   .microheader_Logout_rirOy:hover {
   color: #ccc;
+}
+@media (max-width: 1200px) {
+  .microheader_MicroHeader_U7wdC
+    .microheader_HeaderContents_RsnZk
+    .microheader_OptionsSide_11feq
+    .microheader_PlayForFree_3viea {
+    display: none;
+  }
+}
+.microheader_MicroHeader_U7wdC
+  .microheader_HeaderContents_RsnZk
+  .microheader_MobileHamburger_MM-C2 {
+  width: 50px;
+  min-width: 50px;
+  height: 50px;
+  min-height: 50px;
+  padding: 10px;
+  margin-left: 40px;
+  opacity: 0.8;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+@media (max-width: 700px) {
+  .microheader_MicroHeader_U7wdC
+    .microheader_HeaderContents_RsnZk
+    .microheader_MobileHamburger_MM-C2 {
+    display: flex;
+  }
+}
+.microheader_MicroHeader_U7wdC
+  .microheader_HeaderContents_RsnZk
+  .microheader_MobileHamburger_MM-C2:hover {
+  opacity: 1;
+}
+.microheader_MicroHeader_U7wdC
+  .microheader_HeaderContents_RsnZk
+  .microheader_MobileHamburger_MM-C2
+  .microheader_HamburgerSlice_vkYBh {
+  width: 100%;
+  height: 5px;
+  background-color: white;
+  border-radius: 2px;
+}
+.microheader_MicroHeader_U7wdC .microheader_MobilePopup_27Q74 {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #0f0f0f;
+  display: none;
+  flex-direction: column;
+  opacity: 0;
+  pointer-events: none;
+  transition-property: opacity;
+  transition-timing-function: ease-in;
+  transition-duration: 0.1s;
+}
+.microheader_MicroHeader_U7wdC
+  .microheader_MobilePopup_27Q74.microheader_Show_hLuNN {
+  opacity: 1;
+  pointer-events: unset;
+  display: flex;
+}
+.microheader_MicroHeader_U7wdC
+  .microheader_MobilePopup_27Q74
+  .microheader_Header_2H33B {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.microheader_MicroHeader_U7wdC
+  .microheader_MobilePopup_27Q74
+  .microheader_Header_2H33B
+  .microheader_DotaLogo_ZFf5S {
+  width: 200px;
+  min-width: 200px;
+  height: 50px;
+  min-height: 50px;
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/global/dota2_logo_horiz.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-left: 20px;
+}
+.microheader_MicroHeader_U7wdC
+  .microheader_MobilePopup_27Q74
+  .microheader_Header_2H33B
+  .microheader_CloseButton_1cGE- {
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-right: 26px;
+}
+.microheader_MicroHeader_U7wdC
+  .microheader_MobilePopup_27Q74
+  .microheader_MobileOption_3IxVZ {
+  width: 100%;
+  height: 60px;
+  background-color: #1b1b1b;
+  color: white;
+  font-family: "Reaver", serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+}
+.microheader_MicroHeader_U7wdC
+  .microheader_MobilePopup_27Q74
+  .microheader_MobileOption_3IxVZ
+  .microheader_Arrow_3k0_X {
+  width: 16px;
+  height: 24px;
+  margin-right: 18px;
+}
+.microheader_MicroHeader_U7wdC
+  .microheader_MobilePopup_27Q74
+  .microheader_MobileSubOptionList_3GiVq {
+  width: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 4px 0px;
+}
+.microheader_MicroHeader_U7wdC
+  .microheader_MobilePopup_27Q74
+  .microheader_MobileSubOptionList_3GiVq
+  .microheader_MobileSubOption_2HVs2 {
+  width: 100%;
+  height: 30px;
+  background-color: #0f0f0f;
+  color: #cacaca;
+  font-family: "Reaver", serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 20px;
+}
+.microheader_MicroHeader_U7wdC
+  .microheader_MobilePopup_27Q74
+  .microheader_MobileSubOptionList_3GiVq
+  .microheader_MobileSubOption_2HVs2
+  .microheader_Arrow_3k0_X {
+  width: 8px;
+  height: 12px;
+  margin-left: 4px;
+  margin-top: 1px;
+}
+.microheader_MicroHeader_U7wdC
+  .microheader_MobilePopup_27Q74
+  .microheader_LineSeparator_YWlJq {
+  width: 100%;
+  height: 1px;
+  background-color: #494949;
+}
+.microheader_MicroHeader_U7wdC
+  .microheader_MobilePopup_27Q74
+  .microheader_BottomSection_1E5o8 {
+  width: 100%;
+  flex-grow: 1;
+  background-color: #1b1b1b;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.microheader_MicroHeader_U7wdC
+  .microheader_MobilePopup_27Q74
+  .microheader_BottomSection_1E5o8
+  .microheader_LoginLanguage_204pi {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.microheader_MicroHeader_U7wdC
+  .microheader_MobilePopup_27Q74
+  .microheader_BottomSection_1E5o8
+  .microheader_LoginLanguage_204pi
+  .microheader_Login_1RIIB {
+  font-size: 18px;
+  margin-left: 20px;
+}
+.microheader_MicroHeader_U7wdC
+  .microheader_MobilePopup_27Q74
+  .microheader_BottomSection_1E5o8
+  .microheader_LoginLanguage_204pi
+  .microheader_Login_1RIIB.microheader_Hidden_3P4BK {
+  display: none;
+}
+.microheader_MicroHeader_U7wdC
+  .microheader_MobilePopup_27Q74
+  .microheader_BottomSection_1E5o8
+  .microheader_LoginLanguage_204pi
+  .microheader_Account_lcq6h {
+  font-size: 18px;
+  margin-bottom: 4px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+}
+.microheader_MicroHeader_U7wdC
+  .microheader_MobilePopup_27Q74
+  .microheader_BottomSection_1E5o8
+  .microheader_LoginLanguage_204pi
+  .microheader_Account_lcq6h.microheader_Hidden_3P4BK {
+  display: none;
+}
+.microheader_MicroHeader_U7wdC
+  .microheader_MobilePopup_27Q74
+  .microheader_BottomSection_1E5o8
+  .microheader_LoginLanguage_204pi
+  .microheader_Account_lcq6h
+  .microheader_Logout_rirOy {
+  margin-left: 4px;
+  color: #999;
+}
+.microheader_MicroHeader_U7wdC
+  .microheader_MobilePopup_27Q74
+  .microheader_BottomSection_1E5o8
+  .microheader_LoginLanguage_204pi
+  .microheader_Account_lcq6h
+  .microheader_Logout_rirOy:hover {
+  color: #ccc;
+}
+.microheader_MicroHeader_U7wdC
+  .microheader_MobilePopup_27Q74
+  .microheader_BottomSection_1E5o8
+  .microheader_PlayForFree_3viea
+  .microheader_StandardButton_3mkXB {
+  width: calc(100% - 20px);
+  margin: 10px 10px;
 }
 
 * {
@@ -1914,25 +2217,22 @@ a {
   justify-content: flex-end;
   align-items: center;
 }
-.languageselector_LanguageSelector_1C-JM
-  .languageselector_InnerWrapper_A5ZD2
-  .languageselector_DownArrow_37icj {
-  width: 10px;
-  height: 6px;
-  opacity: 0.9;
-  margin-left: 5px;
+.languageselector_LanguageSelector_1C-JM .languageselector_MobileWrapper_1Tjgw {
+  width: 120px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 10px;
 }
 .languageselector_LanguageSelector_1C-JM
-  .languageselector_InnerWrapper_A5ZD2
-  .languageselector_LanguageIcon_yTASe {
-  width: 12px;
-  height: 12px;
-  margin-right: 8px;
-  opacity: 0.8;
-  margin-bottom: 1px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//icons/language.svg");
+  .languageselector_MobileWrapper_1Tjgw
+  .languageselector_MobileDropdown_kZoIo {
+  width: 80px;
+  appearance: none;
+  background-color: #1b1b1b;
+  border: none;
+  color: white;
+  font-size: 18px;
 }
 .languageselector_LanguageSelector_1C-JM .languageselector_LanguageList_1vJep {
   z-index: 9999;
@@ -1966,6 +2266,22 @@ a {
   .languageselector_LanguageOption_Kd1K6:hover {
   color: black;
   background-color: #999;
+}
+.languageselector_LanguageIcon_yTASe {
+  width: 12px;
+  height: 12px;
+  margin-right: 8px;
+  opacity: 0.8;
+  margin-bottom: 1px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//icons/language.svg");
+}
+.languageselector_DownArrow_37icj {
+  width: 10px;
+  height: 6px;
+  opacity: 0.9;
+  margin-left: 5px;
 }
 
 * {
@@ -16573,23 +16889,28 @@ a {
   width: 100%;
   height: 110px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 20px;
+  position: relative;
 }
 .dpcseriesdetails_DPCSeriesDetailsHeader_2HQCI
   .dpcseriesdetails_CenterSection_UrSWZ {
   width: 300px;
   height: 100%;
-  background-color: #1f1f22;
+  background-color: #060606;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   text-align: center;
+  clip-path: polygon(0px 0px, 300px 0px, 260px 110px, 40px 110px);
 }
 .dpcseriesdetails_DPCSeriesDetailsHeader_2HQCI
   .dpcseriesdetails_CenterSection_UrSWZ
   .dpcseriesdetails_Season_1ds__ {
-  color: white;
+  color: #a3a3a3;
+  width: 200px;
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
@@ -16612,18 +16933,59 @@ a {
   color: #a3a3a3;
   font-size: 14px;
 }
+.dpcseriesdetails_DPCSeriesDetailsHeader_2HQCI
+  .dpcseriesdetails_CenterSection_UrSWZ
+  .dpcseriesdetails_LiveBanner_twGpS {
+  position: absolute;
+  top: -4px;
+  left: 0px;
+  background-color: #00ab30;
+  color: white;
+  padding: 4px 8px;
+  font-size: 11px;
+  border-radius: 2px;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  display: none;
+  flex-direction: row;
+}
+.dpcseriesdetails_DPCSeriesDetailsHeader_2HQCI
+  .dpcseriesdetails_CenterSection_UrSWZ
+  .dpcseriesdetails_LiveBanner_twGpS
+  .dpcseriesdetails_Dot_1skin {
+  width: 8px;
+  height: 8px;
+  margin-left: 6px;
+  border-radius: 4px;
+  background-color: white;
+}
 .dpcseriesdetails_DPCSeriesDetailsHeaderTeam_1Ffo- {
-  flex-grow: 1;
-  flex-basis: 0;
+  width: 365px;
   height: 100%;
+  position: absolute;
   min-height: 0;
   display: flex;
   flex-direction: column;
+  background-color: #18181a;
   color: #a3a3a3;
+}
+.dpcseriesdetails_DPCSeriesDetailsHeaderTeam_1Ffo-.dpcseriesdetails_Left_2at7C {
+  top: 0px;
+  left: 0px;
+  clip-path: polygon(0px 0px, 325px 0px, 365px 110px, 0px 110px);
 }
 .dpcseriesdetails_DPCSeriesDetailsHeaderTeam_1Ffo-.dpcseriesdetails_Left_2at7C
   .dpcseriesdetails_TopSection_3-mWp {
   flex-direction: row;
+  padding-right: 30px;
+  padding-left: 10px;
+}
+.dpcseriesdetails_DPCSeriesDetailsHeaderTeam_1Ffo-.dpcseriesdetails_Left_2at7C
+  .dpcseriesdetails_TopSection_3-mWp
+  .dpcseriesdetails_Pips_1ArlQ {
+  transform: skewX(21deg);
+  margin-left: 0px;
 }
 .dpcseriesdetails_DPCSeriesDetailsHeaderTeam_1Ffo-.dpcseriesdetails_Left_2at7C
   .dpcseriesdetails_TopSection_3-mWp
@@ -16632,16 +16994,34 @@ a {
 }
 .dpcseriesdetails_DPCSeriesDetailsHeaderTeam_1Ffo-.dpcseriesdetails_Left_2at7C
   .dpcseriesdetails_TeamLinkSection_1sly3 {
+  background: linear-gradient(to left, #000, #18181a);
   justify-content: flex-end;
+}
+.dpcseriesdetails_DPCSeriesDetailsHeaderTeam_1Ffo-.dpcseriesdetails_Right__VHXn {
+  top: 0px;
+  right: 0px;
+  clip-path: polygon(40px 0px, 365px 0px, 365px 110px, 0px 110px);
 }
 .dpcseriesdetails_DPCSeriesDetailsHeaderTeam_1Ffo-.dpcseriesdetails_Right__VHXn
   .dpcseriesdetails_TopSection_3-mWp {
   flex-direction: row-reverse;
+  padding-left: 30px;
+  padding-right: 10px;
+}
+.dpcseriesdetails_DPCSeriesDetailsHeaderTeam_1Ffo-.dpcseriesdetails_Right__VHXn
+  .dpcseriesdetails_TopSection_3-mWp
+  .dpcseriesdetails_Pips_1ArlQ {
+  transform: skewX(-21deg);
+  margin-right: 0px;
 }
 .dpcseriesdetails_DPCSeriesDetailsHeaderTeam_1Ffo-.dpcseriesdetails_Right__VHXn
   .dpcseriesdetails_TopSection_3-mWp
   .dpcseriesdetails_Labels_1SgxR {
   text-align: left;
+}
+.dpcseriesdetails_DPCSeriesDetailsHeaderTeam_1Ffo-.dpcseriesdetails_Right__VHXn
+  .dpcseriesdetails_TeamLinkSection_1sly3 {
+  background: linear-gradient(to right, #000, #18181a);
 }
 .dpcseriesdetails_DPCSeriesDetailsHeaderTeam_1Ffo-.dpcseriesdetails_Right__VHXn
   .dpcseriesdetails_TeamLinkSection_1sly3
@@ -16655,11 +17035,10 @@ a {
 .dpcseriesdetails_DPCSeriesDetailsHeaderTeam_1Ffo-
   .dpcseriesdetails_TopSection_3-mWp {
   width: 100%;
-  height: 80px;
+  height: 88px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  background-color: #27272a;
 }
 .dpcseriesdetails_DPCSeriesDetailsHeaderTeam_1Ffo-
   .dpcseriesdetails_TopSection_3-mWp
@@ -16673,10 +17052,11 @@ a {
   .dpcseriesdetails_Labels_1SgxR
   .dpcseriesdetails_TeamName_Y--ke {
   width: 100%;
-  font-size: 16px;
-  font-weight: bold;
+  color: white;
+  font-size: 18px;
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 .dpcseriesdetails_DPCSeriesDetailsHeaderTeam_1Ffo-
   .dpcseriesdetails_TopSection_3-mWp
@@ -16696,14 +17076,15 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0px 12px;
+  filter: drop-shadow(0px 0px 4px #000);
 }
 .dpcseriesdetails_DPCSeriesDetailsHeaderTeam_1Ffo-
   .dpcseriesdetails_TopSection_3-mWp
   .dpcseriesdetails_Pips_1ArlQ {
-  height: 50px;
+  height: 30px;
   display: flex;
   flex-direction: row;
-  margin: 0px 20px;
+  margin: 0px 10px;
 }
 .dpcseriesdetails_DPCSeriesDetailsHeaderTeam_1Ffo-
   .dpcseriesdetails_TopSection_3-mWp
@@ -16713,13 +17094,14 @@ a {
   height: 100%;
   margin-right: 10px;
   display: none;
-  border: 1px solid white;
+  background-color: #2f2f30;
 }
 .dpcseriesdetails_DPCSeriesDetailsHeaderTeam_1Ffo-
   .dpcseriesdetails_TopSection_3-mWp
   .dpcseriesdetails_Pips_1ArlQ
   .dpcseriesdetails_Pip__Xdhu.dpcseriesdetails_Filled_Vf6Iv {
-  background-color: white;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px #0066ff;
 }
 .dpcseriesdetails_DPCSeriesDetailsHeaderTeam_1Ffo-
   .dpcseriesdetails_TopSection_3-mWp
@@ -16736,16 +17118,23 @@ a {
   flex-direction: row;
   align-items: center;
   background-color: #222226;
+  cursor: pointer;
+  user-select: none;
 }
 .dpcseriesdetails_DPCSeriesDetailsHeaderTeam_1Ffo-
   .dpcseriesdetails_TeamLinkSection_1sly3
   .dpcseriesdetails_TeamLink_3NYHd {
   font-size: 13px;
-  color: #a3a3a3;
+  color: #757575;
   text-shadow: none;
   text-transform: uppercase;
   letter-spacing: 1px;
   padding: 0px 20px;
+}
+.dpcseriesdetails_DPCSeriesDetailsHeaderTeam_1Ffo-
+  .dpcseriesdetails_TeamLinkSection_1sly3
+  .dpcseriesdetails_TeamLink_3NYHd:hover {
+  filter: brightness(1.3);
 }
 .dpcseriesdetails_DPCSeriesDetailsBody_2Yo9C {
   width: 100%;
@@ -16865,6 +17254,25 @@ a {
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+.dpcseriesdetails_DPCSeriesUpcoming_1yiu5 {
+  width: 100%;
+  height: 100%;
+  display: none;
+  flex-direction: row;
+}
+.dpcseriesdetails_DPCSeriesUpcoming_1yiu5 .dpcseriesdetails_PlayerList_ftJxP {
+  flex-grow: 1;
+  flex-basis: 0;
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.dpcseriesdetails_DPCSeriesUpcoming_1yiu5.dpcseriesdetails_Visible_1sQWs {
+  display: flex;
 }
 .dpcseriesdetails_GameSelector_1MtUK {
   width: 300px;
