@@ -1076,6 +1076,11 @@
     },
     {
         "id": 1030,
+        "size": 16,
+        "posted_in": "CClientTimedTrialManager::SendStatusCallback(TimedTrialApp_s const*)"
+    },
+    {
+        "id": 1031,
         "size": 4,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<LibraryFolderChanged_t>(LibraryFolderChanged_t*)"
     },
