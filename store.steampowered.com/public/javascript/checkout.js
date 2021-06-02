@@ -3015,7 +3015,7 @@ function BIsCreditCardMethod( method )
 	return method == 'mastercard' || method == 'visa' 
 			|| method == 'amex' || method == 'jcb' 
 			|| method == 'discover' || method == 'cartebleue' 
-			|| method == 'dankort';
+			|| method == 'dankort' || method == 'mir';
 }
 
 function BIsStoredCreditCard()
@@ -4011,6 +4011,10 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 			else if ( method.value == 'dankort' && providerPaymentMethod == 2 )
 			{
 				$('payment_method_review_text').innerHTML = 'Visa Dankort'+' ending in '+ (card_number.substr( Math.max( 0, card_number.length-4 ) ) );
+			}
+			else if ( method.value == 'mir' && providerPaymentMethod == 2 )
+			{
+				$('payment_method_review_text').innerHTML = 'MIR'+' ending in '+ (card_number.substr( Math.max( 0, card_number.length-4 ) ) );
 			}
 			else if ( method.value == 'steamaccount' && providerPaymentMethod == 0 )
 			{
