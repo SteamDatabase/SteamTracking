@@ -603,7 +603,7 @@
             t
           );
         })(v),
-        A = (function (e) {
+        I = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
@@ -669,7 +669,7 @@
             t
           );
         })(v),
-        I = (function (e) {
+        A = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
@@ -2058,7 +2058,7 @@
             });
           }),
           (e.GetReactions = function (e, t) {
-            return e.SendMsg("LoyaltyRewards.GetReactions#1", t, I, {
+            return e.SendMsg("LoyaltyRewards.GetReactions#1", t, A, {
               bConstMethod: !0,
               ePrivilege: 1,
             });
@@ -2267,7 +2267,7 @@
                     case 0:
                       return (
                         this.m_mapExistingReactions.clear(),
-                        (e = h.b.Init(A))
+                        (e = h.b.Init(I))
                           .Body()
                           .set_target_type(this.m_eTargetType),
                         e.Body().set_targetid(this.m_targetID),
@@ -2913,9 +2913,7 @@
                   [
                     4,
                     c.a.get(
-                      f.c.STORE_BASE_URL +
-                        "pointssummary/ajaxgetasyncconfig?origin=" +
-                        Object(f.e)(),
+                      Object(f.e)() + "pointssummary/ajaxgetasyncconfig",
                       { withCredentials: !0 }
                     ),
                   ]
@@ -3027,7 +3025,7 @@
                       {
                         className: Object(ee.a)(u.LoadingContainer, u.Visible),
                       },
-                      i.createElement(Ae, null)
+                      i.createElement(Ie, null)
                     )
                   )
                 );
@@ -3164,7 +3162,7 @@
                                 u.Visible
                               ),
                             },
-                            i.createElement(Ae, null)
+                            i.createElement(Ie, null)
                           )
                         ),
                       i.createElement(
@@ -3246,7 +3244,7 @@
                             { className: u.ConfirmText },
                             Object(d.n)(
                               "#GrantAward_Confirm",
-                              i.createElement(Ie, null, B.toLocaleString()),
+                              i.createElement(Ae, null, B.toLocaleString()),
                               i.createElement(
                                 "span",
                                 { className: u.AwardName },
@@ -3259,7 +3257,7 @@
                             { className: u.ConfirmText },
                             Object(d.n)(
                               "#GrantAward_Confirm_Details",
-                              i.createElement(Ie, null, R.toLocaleString()),
+                              i.createElement(Ae, null, R.toLocaleString()),
                               i.createElement(
                                 "span",
                                 { className: u.TimePeriod },
@@ -3278,7 +3276,7 @@
                               b === Be.SUBMITTING && u.Visible
                             ),
                           },
-                          i.createElement(Ae, null)
+                          i.createElement(Ie, null)
                         ),
                         i.createElement(
                           "div",
@@ -3529,7 +3527,7 @@
                 ),
                 i.createElement("div", { className: u.Label }, ae(t)),
                 i.createElement(
-                  Ie,
+                  Ae,
                   { className: u.Points },
                   o.toLocaleString()
                 ),
@@ -3541,10 +3539,10 @@
             t
           );
         })(i.PureComponent),
-        Ae = function () {
+        Ie = function () {
           return i.createElement(ne.a, { size: "large", className: u.Loading });
         },
-        Ie = function (e) {
+        Ae = function (e) {
           var t = e.children,
             r = e.className,
             a = Object(n.f)(e, ["children", "className"]);
