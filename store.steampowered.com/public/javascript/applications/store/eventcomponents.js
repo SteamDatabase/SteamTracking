@@ -1533,7 +1533,7 @@
                 t = this.props.solrData,
                 n = t.unique_id,
                 a = Number(t.appid),
-                r = Object(f.h)(M.d.LANGUAGE),
+                r = Object(f.i)(M.d.LANGUAGE),
                 i = G.c.GetClanEventModel(n),
                 l = null;
               if (i) {
@@ -2621,7 +2621,7 @@
                   r.createElement(
                     "h1",
                     null,
-                    e.GetNameWithFallback(Object(f.h)(M.d.LANGUAGE))
+                    e.GetNameWithFallback(Object(f.i)(M.d.LANGUAGE))
                   ),
                   r.createElement(
                     "div",

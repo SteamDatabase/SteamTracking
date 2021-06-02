@@ -184,7 +184,7 @@
       function _(e, t) {
         var a;
         if (t.localized) {
-          var n = Object(i.h)(u.d.LANGUAGE);
+          var n = Object(i.i)(u.d.LANGUAGE);
           if (
             !(null === (a = e.localized_langs) || void 0 === a
               ? void 0
@@ -991,7 +991,7 @@
                   !1,
                   1,
                   z.k.k_ESortFacetsByMatchCount,
-                  Object(i.h)(u.d.LANGUAGE)
+                  Object(i.i)(u.d.LANGUAGE)
                 )),
                 (this.m_prevTabFacetKey = this.GetPageKey(
                   this.m_SelectedTab,
@@ -1755,7 +1755,7 @@
               { className: Y.FacetMenuCtn },
               C.a.createElement(x.c, {
                 facetFilterState: t,
-                language: Object(i.h)(u.d.LANGUAGE),
+                language: Object(i.i)(u.d.LANGUAGE),
                 nMaxFacetValues: 5,
                 fnOnUpdateFilter: function () {
                   Object(te.c)(e.history, {

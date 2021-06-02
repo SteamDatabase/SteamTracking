@@ -2477,7 +2477,7 @@
                 )
                   return u.a.Get().GetCurEditLanguage();
               }
-              return t.includes(l.e.k_ESteamRealmGlobal) ? 0 : 29;
+              return t.includes(l.f.k_ESteamRealmGlobal) ? 0 : 29;
             }),
             (t.prototype.OnDropFiles = function (e) {
               return Object(a.b)(this, void 0, void 0, function () {
@@ -2776,7 +2776,7 @@
             },
             p = new Array(),
             _ = 0,
-            h = y.b.GetLanguageListForRealms(i || [l.e.k_ESteamRealmGlobal]);
+            h = y.b.GetLanguageListForRealms(i || [l.f.k_ESteamRealmGlobal]);
           _ < h.length;
           _++
         ) {
@@ -3827,7 +3827,7 @@
                 )
               )
             ),
-            p.b.IsELanguageValidInRealm(y, l.e.k_ESteamRealmGlobal) &&
+            p.b.IsELanguageValidInRealm(y, l.f.k_ESteamRealmGlobal) &&
               e.BHasLanguageRequired(y) &&
               ++S;
         }
@@ -3849,7 +3849,7 @@
         )
           for (
             var j = 0,
-              I = p.b.GetLanguageListForRealms([l.e.k_ESteamRealmChina]);
+              I = p.b.GetLanguageListForRealms([l.f.k_ESteamRealmChina]);
             j < I.length;
             j++
           ) {
@@ -3877,7 +3877,7 @@
               !(function (e, t) {
                 for (
                   var n = 0,
-                    a = p.b.GetLanguageListForRealms([l.e.k_ESteamRealmChina]);
+                    a = p.b.GetLanguageListForRealms([l.f.k_ESteamRealmChina]);
                   n < a.length;
                   n++
                 ) {
@@ -3999,8 +3999,8 @@
               )
             );
         for (var i = 0, o = 0, c = 0, d = 0, m = 0; m < 30; ++m) {
-          var g = p.b.IsELanguageValidInRealm(m, l.e.k_ESteamRealmGlobal),
-            f = p.b.IsELanguageValidInRealm(m, l.e.k_ESteamRealmChina);
+          var g = p.b.IsELanguageValidInRealm(m, l.f.k_ESteamRealmGlobal),
+            f = p.b.IsELanguageValidInRealm(m, l.f.k_ESteamRealmChina);
           if ((g && e.BInRealmGlobal()) || (f && e.BInRealmChina())) {
             var b = f ? p.b.GetELanguageFallback(m) : m;
             h(e, "capsule", m, b) && i++,
@@ -7313,7 +7313,7 @@
               );
             }),
             (e.prototype.GetExportLanguages = function () {
-              return c.b.GetLanguageListForRealms([l.e.k_ESteamRealmGlobal]);
+              return c.b.GetLanguageListForRealms([l.f.k_ESteamRealmGlobal]);
             }),
             (e.prototype.WriteLocalizationData_CSV_TokenAndLanguageColumns = function (
               e,
@@ -8671,7 +8671,7 @@
             i = n.GetDescriptionWithFallback(t),
             o = n.GetSubTitleWithLanguageFallback(t),
             l = i
-              ? s.createElement(O.b, {
+              ? s.createElement(O.a, {
                   text: i || "",
                   partnerEventStore: r.c,
                   showErrorInfo: !1,
@@ -8978,8 +8978,8 @@
                   o = Array(),
                   l = 0,
                   c = x.b.GetLanguageListForRealms([
-                    p.e.k_ESteamRealmGlobal,
-                    p.e.k_ESteamRealmChina,
+                    p.f.k_ESteamRealmGlobal,
+                    p.f.k_ESteamRealmChina,
                   ]);
                 l < c.length;
                 l++
@@ -9831,18 +9831,18 @@
           return o;
         });
       var a,
-        i = n("+VX6"),
-        r = n("U+Q5");
+        i = n("U+Q5"),
+        r = n("ZeAL");
       function o(e, t, n) {
         var o = "",
-          l = i.d + "/" + t.clanAccountID + "/" + r.a.GetHashAndExt(t);
+          l = r.e + "/" + t.clanAccountID + "/" + i.a.GetHashAndExt(t);
         n == a.k_eInsertFullImage
           ? (o = "[img]" + l + "[/img]")
           : (o =
               "[url=" +
               l +
               "][img]" +
-              (i.d + "/" + t.clanAccountID + "/" + r.a.GetThumbHashAndExt(t)) +
+              (r.e + "/" + t.clanAccountID + "/" + i.a.GetThumbHashAndExt(t)) +
               "[/img][/url]");
         e.InsertText(o);
       }
@@ -10793,8 +10793,8 @@
           (e.prototype.GetIncludedRealmList = function () {
             var e = new Array();
             return (
-              this.BInRealmGlobal() && e.push(d.e.k_ESteamRealmGlobal),
-              this.BInRealmChina() && e.push(d.e.k_ESteamRealmChina),
+              this.BInRealmGlobal() && e.push(d.f.k_ESteamRealmGlobal),
+              this.BInRealmChina() && e.push(d.f.k_ESteamRealmChina),
               Object(v.a)(
                 e.length > 0,
                 "Event " +
@@ -13275,7 +13275,7 @@
                           t
                             .toLocaleLowerCase()
                             .startsWith(N.c.COMMUNITY_BASE_URL)
-                            ? ((i = Object(x.f)(N.c.LANGUAGE)),
+                            ? ((i = Object(x.h)(N.c.LANGUAGE)),
                               (o = /app\/(\d+)\/view\/(\d+)\/?$/.exec(t)),
                               (l = /group\/(\d+)\/view\/(\d+)\/?$/.exec(t)),
                               (s = /groups\/(\w+)\/announcements\/detail\/(\d+)+\/?$/.exec(
@@ -20296,7 +20296,7 @@
                                 return t.unique_id == e;
                               });
                               n += a
-                                ? Object(_e.g)(a, Object(x.f)(N.c.LANGUAGE))
+                                ? Object(_e.g)(a, Object(x.h)(N.c.LANGUAGE))
                                 : Object(f.f)("#EventCalendar_MuteApp_Unknown");
                             })
                           : (n = Object(f.f)("#Sale_Section_ShowOnTabs_All")),
@@ -20977,7 +20977,7 @@
                     bSupportHTMLImport: !0,
                     showFormatHelp: "PartnerEvents",
                     classNameForTextArea: y.EventEditorDescription,
-                    limitBBCode: N.b.CAN_UPLOAD_IMAGES ? void 0 : vt.d,
+                    limitBBCode: N.b.CAN_UPLOAD_IMAGES ? void 0 : vt.f,
                     clanSteamID: n.GetClanSteamID(),
                   }),
                   d.createElement(
@@ -26311,7 +26311,7 @@
                 );
               for (
                 var m = new Array(),
-                  _ = this.props.realms || [l.e.k_ESteamRealmGlobal],
+                  _ = this.props.realms || [l.f.k_ESteamRealmGlobal],
                   g = 0,
                   h = d.b.GetLanguageListForRealms(_);
                 g < h.length;
@@ -26612,7 +26612,7 @@
                                   var n = new b.a().DetectAndFormatCSV(t);
                                   if (n) {
                                     var a = f.b.GetLanguageListForRealms([
-                                        c.e.k_ESteamRealmGlobal,
+                                        c.f.k_ESteamRealmGlobal,
                                       ]),
                                       i = e.fnOnImportLocData(n, a);
                                     y(i);

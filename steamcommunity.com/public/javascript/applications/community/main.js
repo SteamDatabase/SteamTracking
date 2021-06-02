@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6575755";
+var CLSTAMP = "6576413";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [71],
   {
@@ -441,14 +441,14 @@ var CLSTAMP = "6575755";
             ),
             Object.defineProperty(e.prototype, "bIsFollowingEnabled", {
               get: function () {
-                return c.c.EREALM != s.e.k_ESteamRealmChina;
+                return c.c.EREALM != s.f.k_ESteamRealmChina;
               },
               enumerable: !1,
               configurable: !0,
             }),
             Object.defineProperty(e.prototype, "bIsCuratorsEnabled", {
               get: function () {
-                return c.c.EREALM != s.e.k_ESteamRealmChina;
+                return c.c.EREALM != s.f.k_ESteamRealmChina;
               },
               enumerable: !1,
               configurable: !0,
@@ -8946,7 +8946,7 @@ var CLSTAMP = "6575755";
           (e.IsELanguageValidInRealm = function (e, t) {
             return (
               t ===
-              (29 === e ? a.e.k_ESteamRealmChina : a.e.k_ESteamRealmGlobal)
+              (29 === e ? a.f.k_ESteamRealmChina : a.f.k_ESteamRealmGlobal)
             );
           }),
           (e.GetLanguageListForRealms = function (e) {
@@ -11896,13 +11896,13 @@ var CLSTAMP = "6575755";
       n.d(t, "c", function () {
         return a;
       }),
-        n.d(t, "g", function () {
+        n.d(t, "i", function () {
           return u;
         }),
         n.d(t, "b", function () {
           return p;
         }),
-        n.d(t, "e", function () {
+        n.d(t, "f", function () {
           return m;
         }),
         n.d(t, "a", function () {
@@ -11911,9 +11911,15 @@ var CLSTAMP = "6575755";
       n("mrSG");
       var r = n("mgoM");
       n.d(t, "d", function () {
-        return r.b;
+        return r.a;
       }),
-        n.d(t, "f", function () {
+        n.d(t, "e", function () {
+          return r.b;
+        }),
+        n.d(t, "g", function () {
+          return r.c;
+        }),
+        n.d(t, "h", function () {
           return r.d;
         });
       n("2vnA");
@@ -12663,7 +12669,7 @@ var CLSTAMP = "6575755";
         m = n("6TF7"),
         f = n.n(m),
         g = i.a.lazy(function () {
-          return Promise.all([n.e(0), n.e(2), n.e(1), n.e(4), n.e(74)]).then(
+          return Promise.all([n.e(0), n.e(2), n.e(1), n.e(4), n.e(103)]).then(
             n.bind(null, "GEPe")
           );
         }),
@@ -14398,5 +14404,5 @@ var CLSTAMP = "6575755";
       };
     },
   },
-  [["gfbn", 73, 0]],
+  [["gfbn", 102, 0]],
 ]);

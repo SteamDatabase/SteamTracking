@@ -1,48 +1,44 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6575092";
+var CLSTAMP = "6576416";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [10],
   {
     "+VX6": function (e, t, n) {
       "use strict";
-      n.d(t, "c", function () {
-        return r;
+      n.d(t, "a", function () {
+        return c;
       }),
-        n.d(t, "a", function () {
-          return l;
-        }),
         n.d(t, "b", function () {
-          return p;
+          return u;
         });
-      var r = "{STEAM_CLAN_IMAGE}",
-        a = /^.*youtube[^v]+v=(.{11}).*/,
-        i = /^.*youtu\.be\/(.{11}).*/,
-        o = /^.*youtube.*\/embed\/(.{11}).*/,
-        s = /^.*[?&]t=([^&]+)(?:&|$)/,
-        c = /^(?:(?:([\d]+)h)?(?:([\d]+)m)?(?:([\d]+)s)?|([\d]+))$/;
-      function l(e) {
-        return !!u(e);
+      var r = /^.*youtube[^v]+v=(.{11}).*/,
+        a = /^.*youtu\.be\/(.{11}).*/,
+        i = /^.*youtube.*\/embed\/(.{11}).*/,
+        o = /^.*[?&]t=([^&]+)(?:&|$)/,
+        s = /^(?:(?:([\d]+)h)?(?:([\d]+)m)?(?:([\d]+)s)?|([\d]+))$/;
+      function c(e) {
+        return !!l(e);
       }
-      function u(e) {
+      function l(e) {
         var t =
           (null == e ? void 0 : e.length) < 20
             ? void 0
-            : a.exec(e) || i.exec(e) || o.exec(e);
+            : r.exec(e) || a.exec(e) || i.exec(e);
         return null == t ? void 0 : t[1];
       }
-      function p(e) {
-        var t = u(e);
+      function u(e) {
+        var t = l(e);
         if (t) {
           var n = (function (e) {
-            var t = s.exec(e);
+            var t = o.exec(e);
             return null == t ? void 0 : t[1];
           })(e);
           return {
             strVideoID: t,
             nStartSeconds: n
               ? (function (e) {
-                  var t = c.exec(e);
+                  var t = s.exec(e);
                   if (
                     (null == t ? void 0 : t[1]) ||
                     (null == t ? void 0 : t[2]) ||
@@ -2091,89 +2087,88 @@ var CLSTAMP = "6575092";
     "3+zv": function (e, t, n) {
       "use strict";
       n.d(t, "c", function () {
-        return O;
+        return S;
       }),
         n.d(t, "b", function () {
-          return C;
+          return E;
         }),
         n.d(t, "x", function () {
-          return w;
-        }),
-        n.d(t, "w", function () {
-          return B;
-        }),
-        n.d(t, "d", function () {
-          return L;
-        }),
-        n.d(t, "e", function () {
-          return T;
-        }),
-        n.d(t, "g", function () {
-          return D;
-        }),
-        n.d(t, "j", function () {
           return A;
         }),
+        n.d(t, "w", function () {
+          return w;
+        }),
+        n.d(t, "d", function () {
+          return I;
+        }),
+        n.d(t, "e", function () {
+          return L;
+        }),
+        n.d(t, "g", function () {
+          return T;
+        }),
+        n.d(t, "j", function () {
+          return C;
+        }),
         n.d(t, "f", function () {
-          return j;
+          return N;
         }),
         n.d(t, "y", function () {
-          return z;
+          return j;
         }),
         n.d(t, "t", function () {
-          return R;
+          return z;
         }),
         n.d(t, "v", function () {
-          return x;
-        }),
-        n.d(t, "n", function () {
-          return k;
-        }),
-        n.d(t, "l", function () {
-          return G;
-        }),
-        n.d(t, "m", function () {
-          return P;
-        }),
-        n.d(t, "k", function () {
           return F;
         }),
+        n.d(t, "n", function () {
+          return R;
+        }),
+        n.d(t, "l", function () {
+          return k;
+        }),
+        n.d(t, "m", function () {
+          return G;
+        }),
+        n.d(t, "k", function () {
+          return P;
+        }),
         n.d(t, "r", function () {
-          return W;
+          return x;
         }),
         n.d(t, "s", function () {
-          return U;
+          return W;
         }),
         n.d(t, "q", function () {
-          return q;
+          return U;
         }),
         n.d(t, "i", function () {
-          return H;
+          return q;
         }),
         n.d(t, "h", function () {
-          return V;
+          return H;
         }),
         n.d(t, "z", function () {
-          return X;
+          return V;
         }),
         n.d(t, "a", function () {
-          return Y;
+          return X;
         }),
         n.d(t, "o", function () {
-          return K;
+          return Y;
         }),
         n.d(t, "p", function () {
-          return Q;
+          return K;
         }),
         n.d(t, "u", function () {
-          return J;
+          return Q;
         });
       var r = n("mrSG"),
         a = n("2vnA"),
         i = n("ZeAL"),
         o = n("kyHq"),
-        s = n("+VX6"),
-        c = {
+        s = {
           bBroadcastEnabled: !1,
           broadcastChatSetting: "hide",
           default_broadcast_title: "#Broadcast_default_title_dev",
@@ -2182,69 +2177,69 @@ var CLSTAMP = "6575092";
           localized_broadcast_right_image: new Array(30),
           broadcast_whitelist: [],
         },
-        l = n("kLLr"),
-        u = n("ir+G"),
-        p = n("U+Q5"),
-        d = n("TQGK"),
-        m = n("uIWk"),
-        h = n("5izx"),
-        f = n("r64O"),
-        b = n("TLQK"),
-        _ = n("YyVH"),
-        v = n("N0Ye"),
-        g = (n("vDqi"), n("q1tI"), n("bDQf"), n("lkRc")),
-        y = n("bS9Q"),
-        M = n("CdLH"),
-        S =
+        c = n("kLLr"),
+        l = n("ir+G"),
+        u = n("U+Q5"),
+        p = n("TQGK"),
+        d = n("uIWk"),
+        m = n("5izx"),
+        h = n("r64O"),
+        f = n("TLQK"),
+        b = n("YyVH"),
+        _ = n("N0Ye"),
+        v = (n("vDqi"), n("q1tI"), n("bDQf"), n("lkRc")),
+        g = n("bS9Q"),
+        y = n("CdLH"),
+        M =
           (n("XxJJ"),
           [13, 14, 17, 18, 19, 22, 23, 24, 35, 25, 26, 28, 15, 32, 10]);
-      function O(e) {
+      function S(e) {
         return (
-          S.some(function (t) {
+          M.some(function (t) {
             return t == e.GetEventType();
           }) &&
           !e.BHasTag("steam_award_nomination_request") &&
           !e.BHasTag("curator")
         );
       }
-      var E = [20, 31, 34];
-      function C(e) {
+      var O = [20, 31, 34];
+      function E(e) {
         return (
-          !E.some(function (t) {
+          !O.some(function (t) {
             return t == e.GetEventType();
           }) && !e.BHasTag("curator")
         );
       }
       new Set([9, 11, 20, 21, 22, 23, 24, 25, 26, 27, 31, 35]);
-      var A,
-        w = 593110,
-        B = [w, 766, 221410],
-        I = [12, 34];
-      function L(e) {
+      var C,
+        A = 593110,
+        w = [A, 766, 221410],
+        B = [12, 34];
+      function I(e) {
         return (
-          !I.some(function (t) {
+          !B.some(function (t) {
             return t == e.GetEventType();
           }) && !e.BHasTag("curator")
         );
       }
-      function T(e) {
-        var t = 60 * M.e.PerDay;
+      function L(e) {
+        var t = 60 * y.e.PerDay;
         return (
           e.BIsVisibleEvent() &&
           e.BIsOGGEvent() &&
-          e.rtime32_last_modified > h.a.GetTimeNowWithOverride() - t &&
-          !D(e)
+          e.rtime32_last_modified > m.a.GetTimeNowWithOverride() - t &&
+          !T(e)
         );
       }
-      function D(e) {
+      function T(e) {
         return e.BHasTag("mod_reviewed") && !e.BHasTag("mod_require_rereview");
       }
       !(function (e) {
         (e[(e.k_EEventStateUnpublished = 0)] = "k_EEventStateUnpublished"),
           (e[(e.k_EEventStateStaged = 1)] = "k_EEventStateStaged"),
           (e[(e.k_EEventStateVisible = 2)] = "k_EEventStateVisible");
-      })(A || (A = {}));
-      var N = [
+      })(C || (C = {}));
+      var D = [
         "newandtrending",
         "topwishlisted",
         "trendingwishlisted",
@@ -2258,10 +2253,10 @@ var CLSTAMP = "6575092";
         "discounted",
         "price",
       ];
-      function j(e) {
-        return N.indexOf(e) >= 0;
+      function N(e) {
+        return D.indexOf(e) >= 0;
       }
-      var z = [
+      var j = [
         {
           label: "#Sale_BrowserSortOption_NewAndTrending",
           flavor: "newandtrending",
@@ -2323,7 +2318,7 @@ var CLSTAMP = "6575092";
           tooltip: "#Sale_BrowserSortOption_Price_ttip",
         },
       ];
-      function R(e) {
+      function z(e) {
         switch (e) {
           case "links":
             return { nMaxItemsPerRow: 5, nItemMinimumWidth: 200 };
@@ -2331,18 +2326,18 @@ var CLSTAMP = "6575092";
             return { nMaxItemsPerRow: 4, nItemMinimumWidth: 300 };
         }
       }
-      var k,
+      var R,
+        k,
         G,
         P,
-        F,
-        x = "bordered";
-      function W(e) {
+        F = "bordered";
+      function x(e) {
         return e.carousel_rows || 1;
       }
-      function U(e) {
+      function W(e) {
         return e.cap_item_count || 0;
       }
-      function q(e) {
+      function U(e) {
         return e.cap_section_content
           ? e.cap_section_row_count && e.cap_section_row_count > 0
             ? e.cap_section_row_count
@@ -2365,7 +2360,7 @@ var CLSTAMP = "6575092";
             "k_EStoreFilterClauseTypePrice"),
           (e[(e.k_EStoreFilterClauseTypeAppType = 7)] =
             "k_EStoreFilterClauseTypeAppType");
-      })(k || (k = {})),
+      })(R || (R = {})),
         (function (e) {
           (e[(e.k_ESaleTagFilter = 0)] = "k_ESaleTagFilter"),
             (e[(e.k_ELanguage = 1)] = "k_ELanguage"),
@@ -2373,19 +2368,19 @@ var CLSTAMP = "6575092";
             (e[(e.k_EUserPreference = 3)] = "k_EUserPreference"),
             (e[(e.k_EPrice = 4)] = "k_EPrice"),
             (e[(e.k_EAppType = 5)] = "k_EAppType");
-        })(G || (G = {})),
+        })(k || (k = {})),
         (function (e) {
           (e[(e.k_EHideOwnedItems = 0)] = "k_EHideOwnedItems"),
             (e[(e.k_EHideWishlistedItems = 1)] = "k_EHideWishlistedItems"),
             (e[(e.k_EHideIgnoredItems = 2)] = "k_EHideIgnoredItems");
-        })(P || (P = {})),
+        })(G || (G = {})),
         (function (e) {
           (e[(e.k_ESortFacetsByName = 0)] = "k_ESortFacetsByName"),
             (e[(e.k_ESortFacetsByMatchCount = 1)] =
               "k_ESortFacetsByMatchCount"),
             (e[(e.k_ESortFacetsManually = 2)] = "k_ESortFacetsManually");
-        })(F || (F = {}));
-      var H = {
+        })(P || (P = {}));
+      var q = {
         capsules: [],
         events: [],
         links: [],
@@ -2394,7 +2389,7 @@ var CLSTAMP = "6575092";
         default_label: "#Sale_default_label",
         section_type: "unselected_empty",
       };
-      var V = Object(r.a)(
+      var H = Object(r.a)(
           Object(r.a)(
             {
               localized_subtitle: new Array(30),
@@ -2418,12 +2413,12 @@ var CLSTAMP = "6575092";
               sale_header_offset: 150,
               referenced_appids: [],
             },
-            c
+            s
           ),
           { bScheduleEnabled: !1, scheduleEntries: [] }
         ),
-        X = "old_announce_",
-        Y = [
+        V = "old_announce_",
+        X = [
           "steam_blog_featured",
           "workshop",
           "steam_blog",
@@ -2459,7 +2454,7 @@ var CLSTAMP = "6575092";
           "enable_steam_china",
           "disable_steam_global",
         ],
-        K = [
+        Y = [
           "patchnotes",
           "steam_award_nomination_request",
           "steam_award_vote_request",
@@ -2472,15 +2467,15 @@ var CLSTAMP = "6575092";
           "curator_group_members",
           "curator_public",
         ],
-        Q = (function () {
+        K = (function () {
           function e() {
             (this.type = 1),
               (this.appid = 0),
               (this.name = new Map()),
               (this.description = new Map()),
               (this.timestamp_loc_updated = new Map()),
-              (this.visibility_state = A.k_EEventStateUnpublished),
-              (this.jsondata = V),
+              (this.visibility_state = C.k_EEventStateUnpublished),
+              (this.jsondata = H),
               (this.nCommentCount = 0),
               (this.nVotesUp = 0),
               (this.nVotesDown = 0),
@@ -2503,15 +2498,15 @@ var CLSTAMP = "6575092";
                 (n.name = new Map(r.name)),
                 (n.description = new Map(r.description)),
                 (n.vecTags = new Array(r.vecTags)),
-                (n.clanSteamID = new l.a(r.clanSteamID)),
-                Object(f.a)(
+                (n.clanSteamID = new c.a(r.clanSteamID)),
+                Object(h.a)(
                   n.clanSteamID && n.clanSteamID.BIsValid(),
                   "Invalid Clan SteamID: " +
                     n.clanSteamID.ConvertTo64BitString()
                 ),
                 r.broadcaster &&
-                  ((n.broadcaster = new l.a(r.broadcaster)),
-                  Object(f.a)(
+                  ((n.broadcaster = new c.a(r.broadcaster)),
+                  Object(h.a)(
                     n.broadcaster && n.broadcaster.BIsValid(),
                     "Invalid Broadcast SteamID: " +
                       n.broadcaster.ConvertTo64BitString()
@@ -2575,7 +2570,7 @@ var CLSTAMP = "6575092";
                 (t.loadedAllLanguages = this.loadedAllLanguages),
                 (t.bLoaded = this.bLoaded),
                 (t.broadcaster = this.broadcaster
-                  ? new l.a(this.broadcaster.ConvertTo64BitString())
+                  ? new c.a(this.broadcaster.ConvertTo64BitString())
                   : null),
                 (t.jsondata = JSON.parse(JSON.stringify(this.jsondata))),
                 (t.vecTags = new Array()),
@@ -2621,7 +2616,7 @@ var CLSTAMP = "6575092";
             }),
             (e.prototype.GetDayIndexFromEventStart = function () {
               var e = 0,
-                t = h.a.GetTimeNowWithOverride();
+                t = m.a.GetTimeNowWithOverride();
               void 0 !== this.startTime &&
                 t >= this.startTime &&
                 (e = Math.floor((t - this.startTime) / 86400)),
@@ -2632,11 +2627,11 @@ var CLSTAMP = "6575092";
               return Math.min(e, n);
             }),
             (e.prototype.GetNameWithFallback = function (e) {
-              var t = b.b.GetELanguageFallback(e);
+              var t = f.b.GetELanguageFallback(e);
               return this.name.get(e) || this.name.get(t);
             }),
             (e.prototype.GetGameTitle = function (e) {
-              return u.a.GetStoreCapsuleInfo(this.appid).GetAppStoreData()
+              return l.a.GetStoreCapsuleInfo(this.appid).GetAppStoreData()
                 .title;
             }),
             (e.prototype.BInRealmGlobal = function () {
@@ -2649,11 +2644,11 @@ var CLSTAMP = "6575092";
               return (
                 !(
                   !this.BInRealmGlobal() ||
-                  !b.b.IsELanguageValidInRealm(e, o.g.k_ESteamRealmGlobal)
+                  !f.b.IsELanguageValidInRealm(e, o.g.k_ESteamRealmGlobal)
                 ) ||
                 !(
                   !this.BInRealmChina() ||
-                  !b.b.IsELanguageValidInRealm(e, o.g.k_ESteamRealmChina)
+                  !f.b.IsELanguageValidInRealm(e, o.g.k_ESteamRealmChina)
                 )
               );
             }),
@@ -2692,7 +2687,7 @@ var CLSTAMP = "6575092";
                     "product_mobile_banner_override" === e ||
                     "sale_section_title" === e ||
                     "schedule_track_art" === e
-                  ? (t = p.e.GetLocalizedImageGroupForEditAsImgArray(
+                  ? (t = u.e.GetLocalizedImageGroupForEditAsImgArray(
                       this.clanSteamID
                     ))
                   : "product_banner" === e
@@ -2702,10 +2697,10 @@ var CLSTAMP = "6575092";
               return t;
             }),
             (e.prototype.GetImageURL = function (e, t, n) {
-              void 0 === t && (t = 0), void 0 === n && (n = p.c.full);
+              void 0 === t && (t = 0), void 0 === n && (n = u.c.full);
               var r = this.GetImgArray(e);
               return r && r.length > t && null != r[t]
-                ? p.a.GenerateArtworkURLFromHashAndExtensions(
+                ? u.a.GenerateArtworkURLFromHashAndExtensions(
                     this.clanSteamID,
                     r[t],
                     n
@@ -2753,42 +2748,42 @@ var CLSTAMP = "6575092";
               if (!this.BHasForumTopicGID()) return "";
               if (this.appid)
                 return (
-                  g.d.COMMUNITY_BASE_URL +
+                  v.d.COMMUNITY_BASE_URL +
                   "app/" +
                   this.appid +
                   "/eventcomments/" +
                   this.forumTopicGID
                 );
-              var e = d.a.GetClanInfoByClanAccountID(
+              var e = p.a.GetClanInfoByClanAccountID(
                 this.clanSteamID.GetAccountID()
               );
               return e && e.vanity_url
-                ? g.d.COMMUNITY_BASE_URL +
+                ? v.d.COMMUNITY_BASE_URL +
                     "groups/" +
                     e.vanity_url +
                     "/eventcomments/" +
                     this.forumTopicGID
-                : g.d.COMMUNITY_BASE_URL +
+                : v.d.COMMUNITY_BASE_URL +
                     "gid/" +
                     this.clanSteamID.ConvertTo64BitString() +
                     "/eventcomments/" +
                     this.forumTopicGID;
             }),
             (e.prototype.BIsEventInFuture = function () {
-              return h.a.GetTimeNowWithOverride() < this.startTime;
+              return m.a.GetTimeNowWithOverride() < this.startTime;
             }),
             (e.prototype.BHasEventEnded = function () {
-              return this.endTime < h.a.GetTimeNowWithOverride();
+              return this.endTime < m.a.GetTimeNowWithOverride();
             }),
             (e.prototype.UpdateVoteCount = function (e, t) {
               "up" == e
-                ? (this.nVotesUp = Object(_.a)(
+                ? (this.nVotesUp = Object(b.a)(
                     this.nVotesUp + t,
                     0,
                     Number.MAX_SAFE_INTEGER
                   ))
                 : "down" == e &&
-                  (this.nVotesDown = Object(_.a)(
+                  (this.nVotesDown = Object(b.a)(
                     this.nVotesDown + t,
                     0,
                     Number.MAX_SAFE_INTEGER
@@ -2802,11 +2797,11 @@ var CLSTAMP = "6575092";
                   r += 5;
                   var a = n.indexOf("[/img]", r);
                   if (-1 != a) {
-                    var i = n.substr(r, a - r).trim();
-                    if (0 != i.length)
-                      return (i = i.replace(
-                        s.c,
-                        g.d.MEDIA_CDN_COMMUNITY_URL + "images/clans/"
+                    var o = n.substr(r, a - r).trim();
+                    if (0 != o.length)
+                      return (o = o.replace(
+                        i.e,
+                        v.d.MEDIA_CDN_COMMUNITY_URL + "images/clans/"
                       )).replace("http://", "https://");
                   }
                 }
@@ -2815,23 +2810,23 @@ var CLSTAMP = "6575092";
             }),
             (e.prototype.GetImageURLWithFallback = function (e, t, n) {
               var r, a;
-              void 0 === n && (n = p.c.full);
+              void 0 === n && (n = u.c.full);
               var i = this.GetImageURL(e, t, n);
               if (i && i.trim().length > 0) return i;
-              var o = b.b.GetELanguageFallback(t);
+              var o = f.b.GetELanguageFallback(t);
               if (t != o) {
                 var s = this.GetImageURL(e, o, n);
                 if (s && s.trim().length > 0) return s;
               }
-              var c = d.a.GetClanInfoByClanAccountID(
+              var c = p.a.GetClanInfoByClanAccountID(
                 this.clanSteamID.GetAccountID()
               );
               if ("capsule" == e) {
-                var l = this.GetImageFromBeginningOfDescription(
+                var d = this.GetImageFromBeginningOfDescription(
                   t,
                   Number.MAX_VALUE
                 );
-                if (l) return l;
+                if (d) return d;
                 var m = this.appid;
                 if (c && (c.is_creator_home || c.is_curator)) {
                   if (
@@ -2846,10 +2841,10 @@ var CLSTAMP = "6575092";
                     return c.avatar_full_url;
                   m = this.jsondata.referenced_appids[0];
                 }
-                var h = u.a.GetStoreCapsuleInfo(m);
+                var h = l.a.GetStoreCapsuleInfo(m);
                 return h.BIsLoaded()
                   ? h.GetAppStoreData().capsule
-                  : g.d.MEDIA_CDN_URL + "steam/apps/" + m + "/header.jpg";
+                  : v.d.MEDIA_CDN_URL + "steam/apps/" + m + "/header.jpg";
               }
               return "background" == e &&
                 c &&
@@ -2859,8 +2854,8 @@ var CLSTAMP = "6575092";
             }),
             (e.prototype.GetFallbackArtworkScreenshot = function () {
               if (this.appid) {
-                u.a.EnsureStoreCapsuleInfoLoaded(this.appid);
-                var e = u.a.GetStoreCapsuleInfo(this.appid).GetAppStoreData();
+                l.a.EnsureStoreCapsuleInfoLoaded(this.appid);
+                var e = l.a.GetStoreCapsuleInfo(this.appid).GetAppStoreData();
                 if (e.screenshot_list && e.screenshot_list.length > 1) {
                   var t = Number(
                     this.bOldAnnouncement
@@ -2874,7 +2869,7 @@ var CLSTAMP = "6575092";
                 return e.screenshot;
               }
               if (this.clanSteamID) {
-                var n = d.a.GetClanInfoByClanAccountID(
+                var n = p.a.GetClanInfoByClanAccountID(
                   this.clanSteamID.GetAccountID()
                 );
                 if (n && (n.is_creator_home || n.is_curator))
@@ -2885,7 +2880,7 @@ var CLSTAMP = "6575092";
             (e.prototype.BImageNeedScreenshotFallback = function (e, t) {
               var n = this.GetImageURL(e, t);
               if (!n || 0 == n.length) {
-                var r = b.b.GetELanguageFallback(t);
+                var r = f.b.GetELanguageFallback(t);
                 t != r && (n = this.GetImageURL(e, r));
               }
               return !n || 0 == n.length;
@@ -2899,39 +2894,39 @@ var CLSTAMP = "6575092";
               var a = new Array();
               this.BImageNeedScreenshotFallback(e, t) ||
                 (a.push(this.GetImageURLWithFallback(e, t, n)),
-                n != p.c.full &&
-                  a.push(this.GetImageURLWithFallback(e, t, p.c.full)));
+                n != u.c.full &&
+                  a.push(this.GetImageURLWithFallback(e, t, u.c.full)));
               var i = this.GetFallbackArtworkScreenshot();
               return i && !r && a.push(i), a;
             }),
             (e.prototype.GetDescriptionWithFallback = function (e) {
-              var t = b.b.GetELanguageFallback(e);
+              var t = f.b.GetELanguageFallback(e);
               return this.description.get(e) || this.description.get(t);
             }),
             (e.prototype.BIsImageSafeForAllAges = function (e, t) {
-              var n = d.a.GetClanInfoByClanAccountID(
+              var n = p.a.GetClanInfoByClanAccountID(
                   this.clanSteamID.GetAccountID()
                 ),
-                r = b.b.GetELanguageFallback(t);
+                r = f.b.GetELanguageFallback(t);
               return (
                 null != this.GetImageURL(e, t) ||
                 (t != r && null != this.GetImageURL(e, r)) ||
                 (this.appid &&
-                  u.a.GetStoreCapsuleInfo(this.appid).GetAppStoreData()
+                  l.a.GetStoreCapsuleInfo(this.appid).GetAppStoreData()
                     .age_safe_screenshot) ||
                 (!this.appid && n && (n.is_creator_home || n.is_curator))
               );
             }),
             (e.prototype.BIsVisibleEvent = function () {
-              var e = Math.floor(h.a.GetTimeNowWithOverride());
+              var e = Math.floor(m.a.GetTimeNowWithOverride());
               return (
-                this.visibility_state == A.k_EEventStateVisible &&
+                this.visibility_state == C.k_EEventStateVisible &&
                 e > this.visibilityStartTime &&
                 (this.visibilityEndTime < 10 || e < this.visibilityEndTime)
               );
             }),
             (e.prototype.BIsStagedEvent = function () {
-              return this.visibility_state == A.k_EEventStateStaged;
+              return this.visibility_state == C.k_EEventStateStaged;
             }),
             (e.prototype.GetStartTimeAndDateUnixSeconds = function () {
               return this.startTime;
@@ -2948,9 +2943,9 @@ var CLSTAMP = "6575092";
             (e.prototype.BIsEventActionEnabled = function () {
               return (
                 !!this.jsondata.action_end_time &&
-                (this.jsondata.action_end_time > h.a.GetTimeNowWithOverride() ||
+                (this.jsondata.action_end_time > m.a.GetTimeNowWithOverride() ||
                   (1575396e3 == this.jsondata.action_end_time &&
-                    1606845600 > h.a.GetTimeNowWithOverride()))
+                    1606845600 > m.a.GetTimeNowWithOverride()))
               );
             }),
             (e.prototype.BHasSubTitle = function (e) {
@@ -2975,13 +2970,13 @@ var CLSTAMP = "6575092";
             }),
             (e.prototype.GetSubTitleWithLanguageFallback = function (e) {
               return this.jsondata
-                ? b.a.GetWithFallback(this.jsondata.localized_subtitle, e)
+                ? f.a.GetWithFallback(this.jsondata.localized_subtitle, e)
                 : "";
             }),
             (e.prototype.GetSubTitleWithSummaryFallback = function (t) {
               var n;
               return (
-                b.a.GetWithFallback(
+                f.a.GetWithFallback(
                   null === (n = this.jsondata) || void 0 === n
                     ? void 0
                     : n.localized_subtitle,
@@ -2993,7 +2988,7 @@ var CLSTAMP = "6575092";
             (e.prototype.GetSummaryWithFallback = function (t) {
               var n;
               return (
-                b.a.GetWithFallback(
+                f.a.GetWithFallback(
                   null === (n = this.jsondata) || void 0 === n
                     ? void 0
                     : n.localized_summary,
@@ -3004,7 +2999,7 @@ var CLSTAMP = "6575092";
             }),
             (e.prototype.GetSummary = function (e) {
               var t;
-              return b.a.Get(
+              return f.a.Get(
                 null === (t = this.jsondata) || void 0 === t
                   ? void 0
                   : t.localized_summary,
@@ -3029,8 +3024,8 @@ var CLSTAMP = "6575092";
                     "sticker",
                   ])),
                   (e = Object(i.c)(e)),
-                  (e = Object(y.c)(e)),
-                  Object(y.d)(e, 180))
+                  (e = Object(g.c)(e)),
+                  Object(g.d)(e, 180))
                 : "";
             }),
             (e.prototype.BHasTag = function (e) {
@@ -3051,7 +3046,7 @@ var CLSTAMP = "6575092";
             (e.prototype.BEventCanShowBroadcastWidget = function (e) {
               if (this.jsondata.bSaleEnabled)
                 return this.BHasBroadcastEnabled();
-              var t = h.a.GetTimeNowWithOverride(),
+              var t = m.a.GetTimeNowWithOverride(),
                 n = this.endTime ? this.endTime : t + 3600;
               return (
                 this.BHasBroadcastEnabled() &&
@@ -3085,11 +3080,11 @@ var CLSTAMP = "6575092";
             (e.prototype.GetBroadcastTitle = function (e) {
               var t;
               return (
-                b.a.GetWithFallback(
+                f.a.GetWithFallback(
                   this.jsondata.localized_broadcast_title,
                   e
                 ) ||
-                Object(b.f)(
+                Object(f.f)(
                   null !== (t = this.jsondata.default_broadcast_title) &&
                     void 0 !== t
                     ? t
@@ -3102,7 +3097,7 @@ var CLSTAMP = "6575092";
             }),
             (e.prototype.GetBroadcastWhitelistAsSteamIDs = function () {
               return this.jsondata.broadcast_whitelist.map(function (e) {
-                return l.a.InitFromAccountID(e).ConvertTo64BitString();
+                return c.a.InitFromAccountID(e).ConvertTo64BitString();
               });
             }),
             (e.prototype.BIsBroadcastAccountIDWhiteListed = function (e) {
@@ -3125,19 +3120,19 @@ var CLSTAMP = "6575092";
             (e.prototype.GetSaleURL = function () {
               return Boolean(this.jsondata.sale_vanity_id)
                 ? this.jsondata.sale_vanity_id_valve_approved_for_sale_subpath
-                  ? g.d.STORE_BASE_URL + "sale/" + this.jsondata.sale_vanity_id
-                  : m.a.BHasCreatorHomeLoaded(this.clanSteamID)
-                  ? m.a
+                  ? v.d.STORE_BASE_URL + "sale/" + this.jsondata.sale_vanity_id
+                  : d.a.BHasCreatorHomeLoaded(this.clanSteamID)
+                  ? d.a
                       .GetCreatorHome(this.clanSteamID)
                       .GetCreatorHomeURL("developer") +
                     "sale/" +
                     this.jsondata.sale_vanity_id
-                  : g.d.STORE_BASE_URL +
+                  : v.d.STORE_BASE_URL +
                     "curator/" +
                     this.clanSteamID.GetAccountID() +
                     "/sale/" +
                     this.jsondata.sale_vanity_id
-                : g.d.STORE_BASE_URL +
+                : v.d.STORE_BASE_URL +
                     "newshub/" +
                     (this.appid
                       ? "app/" + this.appid
@@ -3223,19 +3218,19 @@ var CLSTAMP = "6575092";
               return this.type;
             }),
             (e.prototype.GetEventTypeAsString = function () {
-              return Object(v.b)(this.type);
+              return Object(_.b)(this.type);
             }),
             (e.prototype.GetCategoryAsString = function () {
               return this.BHasTag("steam_award_nomination_request")
-                ? Object(b.f)("#PartnerEvent_SteamAwardNominations")
+                ? Object(f.f)("#PartnerEvent_SteamAwardNominations")
                 : this.BHasTag("steam_award_vote_request")
-                ? Object(b.f)("#PartnerEvent_SteamAwardVoteRequest")
+                ? Object(f.f)("#PartnerEvent_SteamAwardVoteRequest")
                 : this.BHasTag("steam_game_festival_artist_statement")
-                ? Object(b.f)("#PartnerEvent_SteamGameFestival_ArtistState")
+                ? Object(f.f)("#PartnerEvent_SteamGameFestival_ArtistState")
                 : this.BHasTag("steam_game_festival_office_hour")
-                ? Object(b.f)("#PartnerEvent_SteamGameFestival_OfficeHour")
+                ? Object(f.f)("#PartnerEvent_SteamGameFestival_OfficeHour")
                 : this.BHasTag("steam_game_festival_broadcast")
-                ? Object(b.f)("#PartnerEvent_SteamGameFestival_Broadcast")
+                ? Object(f.f)("#PartnerEvent_SteamGameFestival_Broadcast")
                 : this.GetEventTypeAsString();
             }),
             (e.prototype.GetAllTags = function () {
@@ -3356,7 +3351,7 @@ var CLSTAMP = "6575092";
             e
           );
         })();
-      function J(e) {
+      function Q(e) {
         return e.replace("(", "\\(").replace(")", "\\)");
       }
     },
@@ -3450,2863 +3445,12 @@ var CLSTAMP = "6575092";
               return i.createElement(
                 "div",
                 { className: c.a.ReferencedApps },
-                i.createElement(l.b, { text: r })
+                i.createElement(l.a, { text: r })
               );
             }),
             (t = Object(r.c)([a.a], t))
           );
         })(i.Component);
-    },
-    "4P4B": function (e, t, n) {
-      "use strict";
-      n.d(t, "b", function () {
-        return de;
-      }),
-        n.d(t, "a", function () {
-          return me;
-        });
-      var r = n("mrSG"),
-        a = n("vDqi"),
-        i = n.n(a),
-        o = n("TyAF"),
-        s = n("q1tI"),
-        c = n.n(s),
-        l = n("ZeAL"),
-        u = n("TtDX"),
-        p = n("+VX6"),
-        d = n("kLLr"),
-        m = n("U+Q5"),
-        h = n("a5LV"),
-        f = n("Qcoi"),
-        b = n("bxiW"),
-        _ = n("Gorr"),
-        v = n("i8i4"),
-        g = n("2vnA"),
-        y = n("I3Kc"),
-        M = n.n(y),
-        S = n("exH9"),
-        O = (function (e) {
-          function t(t) {
-            var n = e.call(this, t) || this;
-            return (
-              (n.m_rgCurrentMatches = []),
-              (n.m_mapMatchByKey = new Map()),
-              (n.m_hMobxSearchDisposer = Object(g.l)(function () {
-                return Object(r.b)(n, void 0, void 0, function () {
-                  return Object(r.e)(this, function (e) {
-                    switch (e.label) {
-                      case 0:
-                        return [
-                          4,
-                          this.UpdateSearchResults(this.props.strSearch),
-                        ];
-                      case 1:
-                        return e.sent(), this.forceUpdate(), [2];
-                    }
-                  });
-                });
-              })),
-              (n.state = { selectedIndex: void 0 }),
-              n
-            );
-          }
-          return (
-            Object(r.d)(t, e),
-            (t.prototype.OnKeyDown = function (e) {
-              this.BHandleKeyPress(e.keyCode) && e.preventDefault();
-            }),
-            (t.prototype.BHandleKeyPress = function (e) {
-              switch (e) {
-                case 38:
-                  this.SetSelectedIndexDelta(-1);
-                  break;
-                case 40:
-                  this.SetSelectedIndexDelta(1);
-                  break;
-                case 36:
-                  this.SetSelectedIndex(0);
-                  break;
-                case 33:
-                  this.SetSelectedIndexDelta(-this.GetPageSize());
-                  break;
-                case 35:
-                  this.SetSelectedIndex(-1);
-                  break;
-                case 34:
-                  this.SetSelectedIndexDelta(this.GetPageSize());
-                  break;
-                case 13:
-                case 9:
-                  if (void 0 === this.state.selectedIndex)
-                    return (
-                      this.props.onSuggestionSelected(this.props.strSearch), !1
-                    );
-                  this.ChooseSuggestion(
-                    this.m_rgCurrentMatches[this.state.selectedIndex]
-                  );
-                  break;
-                case 27:
-                  this.props.onSuggestionSelected(this.props.strSearch);
-                  break;
-                default:
-                  return !1;
-              }
-              return !0;
-            }),
-            (t.prototype.GetPageSize = function () {
-              var e = v.findDOMNode(this),
-                t = e && e.firstElementChild,
-                n = this.m_rgCurrentMatches.length;
-              if (
-                (n > this.getMaxMatches() && (n = this.getMaxMatches()), t && n)
-              ) {
-                var r = t.scrollHeight / n,
-                  a = t.clientHeight / r;
-                return Math.max(1, Math.floor(a));
-              }
-              return 5;
-            }),
-            (t.prototype.ChooseSuggestion = function (e) {
-              this.props.onSuggestionSelected(
-                this.props.strSearch,
-                e ? this.getSelection(e) : void 0
-              );
-            }),
-            (t.prototype.SetSelectedIndexDelta = function (e) {
-              void 0 !== this.state.selectedIndex
-                ? this.SetSelectedIndex(this.state.selectedIndex + e)
-                : this.SetSelectedIndex(1 === e ? 0 : e);
-            }),
-            (t.prototype.SetSelectedIndex = function (e) {
-              if (this.m_rgCurrentMatches.length) {
-                var t = this.m_rgCurrentMatches.length;
-                t > this.getMaxMatches() && (t = this.getMaxMatches()),
-                  (e %= t) < 0 && (e += t),
-                  this.setState({ selectedIndex: e });
-              }
-            }),
-            (t.prototype.FindKeyIndex = function (e) {
-              if (!this.m_mapMatchByKey.size && this.m_rgCurrentMatches.length)
-                for (var t = 0; t < this.m_rgCurrentMatches.length; t++)
-                  this.m_mapMatchByKey.set(
-                    this.getKey(this.m_rgCurrentMatches[t]),
-                    t
-                  );
-              return this.m_mapMatchByKey.get(e);
-            }),
-            (t.prototype.OnClickSuggestion = function (e) {
-              var t = this.FindKeyIndex(e);
-              void 0 !== t && this.ChooseSuggestion(this.m_rgCurrentMatches[t]);
-            }),
-            (t.prototype.OnMouseOverSuggestion = function (e) {
-              var t = this.FindKeyIndex(e);
-              void 0 !== t && this.SetSelectedIndex(t);
-            }),
-            (t.prototype.BindSelectedElement = function (e) {
-              var t = v.findDOMNode(this),
-                n = v.findDOMNode(e),
-                r = t && t.firstElementChild;
-              n &&
-                r &&
-                (r.scrollTop + r.clientHeight < n.offsetTop ||
-                  n.offsetTop < r.scrollTop) &&
-                n.scrollIntoView();
-            }),
-            (t.prototype.UpdateSearchResults = function (e) {
-              return Object(r.b)(this, void 0, void 0, function () {
-                var t;
-                return Object(r.e)(this, function (n) {
-                  switch (n.label) {
-                    case 0:
-                      return (t = this), [4, this.performSearch(e)];
-                    case 1:
-                      return (
-                        (t.m_rgCurrentMatches = n.sent()),
-                        (this.m_strLastSearch = e),
-                        this.m_mapMatchByKey.clear(),
-                        this.m_rgCurrentMatches.length
-                          ? this.state && void 0 !== this.state.selectedIndex
-                            ? this.state.selectedIndex >=
-                                this.m_rgCurrentMatches.length &&
-                              this.setState({ selectedIndex: 0 })
-                            : (void 0 ===
-                                this.props
-                                  .nMinimumSearchLengthBeforeAutoSelection ||
-                                e.length >=
-                                  this.props
-                                    .nMinimumSearchLengthBeforeAutoSelection) &&
-                              this.setState({ selectedIndex: 0 })
-                          : this.state &&
-                            void 0 !== this.state.selectedIndex &&
-                            this.setState({ selectedIndex: void 0 }),
-                        [2]
-                      );
-                  }
-                });
-              });
-            }),
-            (t.prototype.componentWillUnmount = function () {
-              this.m_hMobxSearchDisposer &&
-                (this.m_hMobxSearchDisposer(),
-                (this.m_hMobxSearchDisposer = void 0));
-            }),
-            (t.prototype.componentDidUpdate = function (e) {
-              return Object(r.b)(this, void 0, void 0, function () {
-                return Object(r.e)(this, function (e) {
-                  switch (e.label) {
-                    case 0:
-                      return this.m_strLastSearch == this.props.strSearch
-                        ? [3, 2]
-                        : [4, this.UpdateSearchResults(this.props.strSearch)];
-                    case 1:
-                      e.sent(), this.forceUpdate(), (e.label = 2);
-                    case 2:
-                      return [2];
-                  }
-                });
-              });
-            }),
-            (t.prototype.render = function () {
-              var e = [];
-              if (this.m_rgCurrentMatches.length) {
-                for (
-                  var t = this.getMaxMatches(), n = 0;
-                  n < Math.min(t, this.m_rgCurrentMatches.length);
-                  n++
-                ) {
-                  var r = this.m_rgCurrentMatches[n],
-                    a = this.getKey(r),
-                    i = n === this.state.selectedIndex;
-                  e.push(
-                    c.a.createElement(
-                      E,
-                      {
-                        key: a,
-                        matchKey: a,
-                        fnOnClick: this.OnClickSuggestion,
-                        fnOnMouseOver: this.OnMouseOverSuggestion,
-                        bIsSelected: i,
-                        ref: i ? this.BindSelectedElement : void 0,
-                      },
-                      this.renderMatch(r)
-                    )
-                  );
-                }
-                this.m_rgCurrentMatches.length > t &&
-                  e.push(
-                    this.renderTooManyMatchesMessage(
-                      this.m_rgCurrentMatches.length - t
-                    )
-                  );
-              } else {
-                var o = this.renderNoMatchMessage();
-                if (!o) return null;
-                e.push(o);
-              }
-              return c.a.createElement(
-                "div",
-                { className: M.a.mentionDialogPosition },
-                c.a.createElement(
-                  "div",
-                  {
-                    className: M.a.mentionDialog,
-                    tabIndex: 0,
-                    onKeyDown: this.OnKeyDown,
-                  },
-                  this.renderHeader(),
-                  e
-                )
-              );
-            }),
-            Object(r.c)([b.a], t.prototype, "OnKeyDown", null),
-            Object(r.c)([b.a], t.prototype, "OnClickSuggestion", null),
-            Object(r.c)([b.a], t.prototype, "OnMouseOverSuggestion", null),
-            Object(r.c)([b.a], t.prototype, "BindSelectedElement", null),
-            t
-          );
-        })(c.a.Component),
-        E = (function (e) {
-          function t() {
-            return (null !== e && e.apply(this, arguments)) || this;
-          }
-          return (
-            Object(r.d)(t, e),
-            (t.prototype.OnMouseOver = function (e) {
-              this.props.fnOnMouseOver(this.props.matchKey);
-            }),
-            (t.prototype.OnClick = function (e) {
-              this.props.fnOnClick(this.props.matchKey);
-            }),
-            (t.prototype.render = function () {
-              return c.a.createElement(
-                "div",
-                {
-                  className: Object(S.a)(
-                    M.a.suggestOption,
-                    M.a.mentionSearchOption,
-                    this.props.bIsSelected ? M.a.selected : ""
-                  ),
-                  onMouseEnter: this.OnMouseOver,
-                  onClick: this.OnClick,
-                },
-                this.props.children
-              );
-            }),
-            Object(r.c)([b.a], t.prototype, "OnMouseOver", null),
-            Object(r.c)([b.a], t.prototype, "OnClick", null),
-            t
-          );
-        })(c.a.PureComponent),
-        C = O,
-        A = n("Wb2E"),
-        w = n.n(A),
-        B = (function (e) {
-          function t() {
-            return (null !== e && e.apply(this, arguments)) || this;
-          }
-          return (
-            Object(r.d)(t, e),
-            (t.prototype.performSearch = function (e) {
-              return this.props.emoticonStore.SearchEmoticons(e, 10, !1);
-            }),
-            (t.prototype.getSelection = function (e) {
-              return e.name;
-            }),
-            (t.prototype.getKey = function (e) {
-              return e.name;
-            }),
-            (t.prototype.renderMatch = function (e) {
-              return c.a.createElement(
-                "div",
-                {
-                  className: Object(S.a)(
-                    w.a.EmoticonSuggestion,
-                    e.recent ? "Recent" : ""
-                  ),
-                },
-                c.a.createElement(
-                  "div",
-                  { className: w.a.Emoticon },
-                  c.a.createElement(_.b, {
-                    emoticon: e.name,
-                    emoticonHoverStore: this.props.emoticonHoverStore,
-                  }),
-                  e.new && c.a.createElement(_.d, null)
-                ),
-                ":",
-                e.name,
-                ":"
-              );
-            }),
-            (t.prototype.renderNoMatchMessage = function () {
-              return null;
-            }),
-            (t.prototype.renderTooManyMatchesMessage = function (e) {
-              return null;
-            }),
-            (t.prototype.renderHeader = function () {
-              return null;
-            }),
-            (t.prototype.getMaxMatches = function () {
-              return Number.MAX_VALUE;
-            }),
-            t
-          );
-        })(C),
-        I = n("w4Zq"),
-        L = n.n(I),
-        T = n("TLQK"),
-        D = (function (e) {
-          function t() {
-            return (null !== e && e.apply(this, arguments)) || this;
-          }
-          return (
-            Object(r.d)(t, e),
-            (t.prototype.performSearch = function (e) {
-              var t = Array();
-              return (
-                this.props.supportBBCodes.forEach(function (n) {
-                  n.indexOf(e) >= 0 && t.push({ name: n });
-                }),
-                t
-              );
-            }),
-            (t.prototype.getSelection = function (e) {
-              return "[" + e.name + "][/" + e.name + "]";
-            }),
-            (t.prototype.getKey = function (e) {
-              return e.name;
-            }),
-            (t.prototype.renderMatch = function (e) {
-              return c.a.createElement(
-                "div",
-                { key: e.name, className: Object(S.a)(L.a.BBCodeSuggestion) },
-                c.a.createElement("div", { className: L.a.BBCode }, e.name),
-                "[",
-                e.name,
-                "]...[/",
-                e.name,
-                "]"
-              );
-            }),
-            (t.prototype.renderNoMatchMessage = function () {
-              return c.a.createElement(
-                "div",
-                {
-                  key: "nomatches",
-                  className: Object(S.a)(
-                    M.a.mentionSearchOption,
-                    M.a.noMatches
-                  ),
-                },
-                Object(T.f)("#Bbcode_No_Match")
-              );
-            }),
-            (t.prototype.renderTooManyMatchesMessage = function (e) {
-              return null;
-            }),
-            (t.prototype.renderHeader = function () {
-              return null;
-            }),
-            (t.prototype.getMaxMatches = function () {
-              return Number.MAX_VALUE;
-            }),
-            t
-          );
-        })(C),
-        N = (function (e) {
-          function t(t) {
-            var n = e.call(this, t) || this;
-            return (
-              (n.descTextAreaRef = s.createRef()),
-              (n.m_bDisabled = !0),
-              (n.state = {
-                mentionSearch: void 0,
-                activeSuggestSearchType: void 0,
-              }),
-              n
-            );
-          }
-          return (
-            Object(r.d)(t, e),
-            (t.prototype.BindMentionDialog = function (e) {
-              this.m_MentionDialog = e;
-            }),
-            (t.prototype.OnKeyDown = function (e) {
-              this.state.activeSuggestSearchType &&
-              this.m_MentionDialog &&
-              !e.shiftKey &&
-              !e.ctrlKey &&
-              this.m_MentionDialog.BHandleKeyPress(e.keyCode)
-                ? e.preventDefault()
-                : (8 != e.keyCode && 46 != e.keyCode) ||
-                  (this.m_iMentionSearchCancelledOffset = void 0);
-            }),
-            (t.prototype.FindMatchOpener = function (e, t, n) {
-              for (var r = n - 1; r >= 0; r--) {
-                if (t[r] == e) return r;
-                if (" " == t[r] || "\n" == t[r]) break;
-              }
-            }),
-            (t.prototype.ReplaceSuggestedText = function (e, t) {
-              var n = this.descTextAreaRef.current.selectionStart,
-                r = this.descTextAreaRef.current.value,
-                a = this.FindMatchOpener(e, r, n);
-              if (
-                (void 0 === a &&
-                  "@" == e &&
-                  (a = this.FindMatchOpener("＠", r, n)),
-                void 0 !== a)
-              ) {
-                var i = r.substr(0, a);
-                (i += t), (n >= r.length || " " != r[n]) && (i += " ");
-                var o = i.length;
-                (i += r.substr(n)),
-                  (this.descTextAreaRef.current.value = i),
-                  (this.descTextAreaRef.current.selectionStart = this.descTextAreaRef.current.selectionEnd = o),
-                  this.props.fnSetText(i),
-                  this.FocusTextInput();
-              }
-            }),
-            (t.prototype.OnFocus = function (e) {
-              this.UpdateAutoSearchState();
-            }),
-            (t.prototype.OnKeyPress = function (e) {
-              this.UpdateAutoSearchState();
-            }),
-            (t.prototype.OnClick = function (e) {
-              this.UpdateAutoSearchState();
-            }),
-            (t.prototype.ClearMentionSearchState = function () {
-              (this.m_iMentionSearchStartOffset = void 0),
-                this.state.activeSuggestSearchType &&
-                  this.setState({
-                    activeSuggestSearchType: void 0,
-                    mentionSearch: void 0,
-                  });
-            }),
-            (t.prototype.OnEmoticonSuggestionSelected = function (e, t) {
-              if (!t)
-                return (
-                  (this.m_iMentionSearchCancelledOffset = this.m_iMentionSearchStartOffset),
-                  void this.ClearMentionSearchState()
-                );
-              this.ReplaceSuggestedText(":", ":" + t + ":"),
-                this.ClearMentionSearchState();
-            }),
-            (t.prototype.OnBBCodeSuggestionSelected = function (e, t) {
-              if (!t)
-                return (
-                  (this.m_iMentionSearchCancelledOffset = this.m_iMentionSearchStartOffset),
-                  void this.ClearMentionSearchState()
-                );
-              this.ReplaceSuggestedText("[", t), this.ClearMentionSearchState();
-            }),
-            (t.prototype.FocusTextInput = function () {
-              this.descTextAreaRef.current &&
-                this.descTextAreaRef.current.focus();
-            }),
-            (t.prototype.UpdateAutoSearchState = function () {
-              var e = this.descTextAreaRef.current;
-              if (e && !this.m_bDisabled)
-                if (e.selectionStart == e.selectionEnd && e.selectionStart) {
-                  for (
-                    var t = e.selectionStart,
-                      n = e.value,
-                      r = void 0,
-                      a = void 0,
-                      i = t - 1;
-                    i >= 0;
-                    i--
-                  ) {
-                    var o = i > 0 ? n[i - 1] : void 0;
-                    if (
-                      this.props.emoticonStore &&
-                      ":" == n[i] &&
-                      n.length > 2
-                    ) {
-                      (o && " " != o && "\n" != o && ":" != o) ||
-                        ((r = i), (a = "Emoticon"));
-                      break;
-                    }
-                    if ("[" == n[i] && (i + 1 > n.length || "/" != n[i + 1])) {
-                      (o && " " != o && "\n" != o && "]" != o) ||
-                        ((r = i), (a = "BBCode"));
-                      break;
-                    }
-                    if (" " == n[i] || "\n" == n[i]) break;
-                  }
-                  if (
-                    void 0 !== r &&
-                    r !== this.m_iMentionSearchCancelledOffset
-                  ) {
-                    var s = n.substr(r + 1, t - r - 1);
-                    (this.m_iMentionSearchStartOffset = r),
-                      this.setState({
-                        activeSuggestSearchType: a,
-                        mentionSearch: s,
-                      });
-                  } else this.ClearMentionSearchState();
-                } else this.ClearMentionSearchState();
-            }),
-            (t.prototype.GetTextAreaRef = function () {
-              return this.descTextAreaRef;
-            }),
-            (t.prototype.GetTextAreaCurrent = function () {
-              return this.descTextAreaRef.current;
-            }),
-            (t.prototype.render = function () {
-              var e = this.props,
-                t = e.emoticonStore,
-                n = e.supportBBCodes,
-                a =
-                  (e.fnSetText,
-                  Object(r.f)(e, [
-                    "emoticonStore",
-                    "supportBBCodes",
-                    "fnSetText",
-                  ])),
-                i = void 0;
-              switch (this.state.activeSuggestSearchType) {
-                case "Emoticon":
-                  i = s.createElement(B, {
-                    emoticonStore: t,
-                    emoticonHoverStore: h.a,
-                    strSearch: this.state.mentionSearch,
-                    nMinimumSearchLengthBeforeAutoSelection: 2,
-                    onSuggestionSelected: this.OnEmoticonSuggestionSelected,
-                    ref: this.BindMentionDialog,
-                  });
-                  break;
-                case "BBCode":
-                  i = s.createElement(D, {
-                    supportBBCodes: n,
-                    strSearch: this.state.mentionSearch,
-                    nMinimumSearchLengthBeforeAutoSelection: 2,
-                    onSuggestionSelected: this.OnBBCodeSuggestionSelected,
-                    ref: this.BindMentionDialog,
-                  });
-              }
-              return s.createElement(
-                s.Fragment,
-                null,
-                i,
-                s.createElement(
-                  "textarea",
-                  Object(r.a)({}, a, {
-                    ref: this.descTextAreaRef,
-                    onKeyDown: this.OnKeyDown,
-                    onKeyUp: this.OnKeyPress,
-                    onFocus: this.OnFocus,
-                    onClick: this.OnClick,
-                  })
-                )
-              );
-            }),
-            Object(r.c)([b.a], t.prototype, "BindMentionDialog", null),
-            Object(r.c)([b.a], t.prototype, "OnKeyDown", null),
-            Object(r.c)([b.a], t.prototype, "OnFocus", null),
-            Object(r.c)([b.a], t.prototype, "OnKeyPress", null),
-            Object(r.c)([b.a], t.prototype, "OnClick", null),
-            Object(r.c)(
-              [b.a],
-              t.prototype,
-              "OnEmoticonSuggestionSelected",
-              null
-            ),
-            Object(r.c)([b.a], t.prototype, "OnBBCodeSuggestionSelected", null),
-            Object(r.c)([b.a], t.prototype, "FocusTextInput", null),
-            Object(r.c)([b.a], t.prototype, "GetTextAreaRef", null),
-            Object(r.c)([b.a], t.prototype, "GetTextAreaCurrent", null),
-            t
-          );
-        })(s.Component),
-        j = n("Mgs7"),
-        z = n("0QoN"),
-        R = n("fpVW"),
-        k = n.n(R),
-        G = n("Jqb/"),
-        P = n("ka0M"),
-        F = n("26EA"),
-        x = n.n(F),
-        W = n("X3Ds"),
-        U = n("lkRc"),
-        q = n("ccG0"),
-        H = n.n(q),
-        V = n("y+6m"),
-        X = n("gPCo"),
-        Y = n("0OaU"),
-        K = n("5E+2"),
-        Q = n("76AC"),
-        J = n.n(Q),
-        Z = n("r64O"),
-        $ = n("Nsq5"),
-        ee = n("XOvi"),
-        te = n("NqJg"),
-        ne = (function (e) {
-          function t() {
-            var t = (null !== e && e.apply(this, arguments)) || this;
-            return (
-              (t.state = {
-                region: {
-                  xPosPct: 0,
-                  yPosPct: 0,
-                  widthPct: (t.GetDestWidth() / t.props.uploadFile.width) * 100,
-                  heightPct:
-                    (t.GetDestHeight() / t.props.uploadFile.height) * 100,
-                },
-              }),
-              t
-            );
-          }
-          return (
-            Object(r.d)(t, e),
-            (t.prototype.OnCrop = function () {
-              return Object(r.b)(this, void 0, void 0, function () {
-                return Object(r.e)(this, function (e) {
-                  switch (e.label) {
-                    case 0:
-                      return [
-                        4,
-                        this.props.uploadFile.CropImage(
-                          (this.state.region.xPosPct / 100) *
-                            this.props.uploadFile.width,
-                          (this.state.region.yPosPct / 100) *
-                            this.props.uploadFile.height,
-                          (this.state.region.widthPct / 100) *
-                            this.props.uploadFile.width,
-                          (this.state.region.heightPct / 100) *
-                            this.props.uploadFile.height,
-                          this.GetDestWidth(),
-                          this.GetDestHeight(),
-                          this.props.fileType
-                        ),
-                      ];
-                    case 1:
-                      return e.sent(), this.props.closeModal(), [2];
-                  }
-                });
-              });
-            }),
-            (t.prototype.UpdateCrop = function (e, t) {
-              this.setState({ region: t });
-            }),
-            (t.prototype.GetDestWidth = function () {
-              var e = this.props,
-                t = e.uploadFile,
-                n = e.forceResolution;
-              return n ? n.width : $.a[t.type].width;
-            }),
-            (t.prototype.GetDestHeight = function () {
-              var e = this.props,
-                t = e.uploadFile,
-                n = e.forceResolution;
-              return n ? n.height : $.a[t.type].height;
-            }),
-            (t.prototype.GetLargestBoxThatFits = function (e, t, n, r) {
-              var a = n,
-                i = (a * t) / Math.max(e, 1);
-              return (
-                i > r && (a = ((i = r) * e) / Math.max(t, 1)),
-                { width: a, height: i }
-              );
-            }),
-            (t.prototype.GetPreviewWindowStyle = function () {
-              var e = this.state.region,
-                t = this.GetLargestBoxThatFits(
-                  this.GetDestWidth(),
-                  this.GetDestHeight(),
-                  500,
-                  150
-                ),
-                n = t.width,
-                r = t.height,
-                a = 1 / Math.max(e.widthPct / 100, 1e-4),
-                i = 1 / Math.max(e.heightPct / 100, 1e-4),
-                o = (this.props.uploadFile.width * e.xPosPct) / 100,
-                s = (this.props.uploadFile.height * e.yPosPct) / 100;
-              return {
-                width: n,
-                height: r,
-                backgroundPosition:
-                  -o * ((n * a) / this.props.uploadFile.width) +
-                  "px " +
-                  -s * ((r * i) / this.props.uploadFile.height) +
-                  "px",
-                backgroundSize: 100 * a + "% " + 100 * i + "%",
-                backgroundImage: "url(" + this.props.uploadFile.dataUrl + ")",
-              };
-            }),
-            (t.prototype.render = function () {
-              var e = (this.GetDestWidth() / this.props.uploadFile.width) * 100,
-                t = (this.GetDestHeight() / this.props.uploadFile.height) * 100,
-                n = this.GetLargestBoxThatFits(
-                  this.props.uploadFile.width,
-                  this.props.uploadFile.height,
-                  800,
-                  500
-                );
-              return s.createElement(
-                G.h,
-                {
-                  onEscKeypress: this.props.closeModal,
-                  bDisableBackgroundDismiss: !0,
-                },
-                s.createElement(
-                  "div",
-                  {
-                    className: Object(S.a)(
-                      "DialogContent",
-                      "_DialogCenterVertically"
-                    ),
-                  },
-                  s.createElement(
-                    j.s,
-                    null,
-                    Object(T.f)(
-                      "#ImageUpload_CropModalTitleDims",
-                      this.GetDestWidth(),
-                      this.GetDestHeight()
-                    )
-                  ),
-                  s.createElement(
-                    "div",
-                    { className: Object(S.a)("DialogBodyText") },
-                    Object(T.f)("#ImageUpload_CropModalDescription")
-                  ),
-                  s.createElement(
-                    "div",
-                    {
-                      className: te.CropImage,
-                      style: { width: n.width, height: n.height },
-                    },
-                    s.createElement("img", {
-                      style: {
-                        maxWidth: "100%",
-                        maxHeight: "100%",
-                        objectFit: "contain",
-                      },
-                      src: this.props.uploadFile.dataUrl,
-                    }),
-                    s.createElement(ee.a, {
-                      bLockAspectRatio: !0,
-                      bDisableLink: !0,
-                      index: 0,
-                      updateFn: this.UpdateCrop,
-                      xPosPct: 0,
-                      yPosPct: 0,
-                      widthMinPct: e,
-                      heightMinPct: t,
-                      widthPct: e,
-                      heightPct: t,
-                    })
-                  ),
-                  s.createElement(
-                    "div",
-                    { className: te.CropPreviewGroup },
-                    s.createElement(
-                      "div",
-                      { className: te.CropPreviewLabel },
-                      Object(T.f)("#ImageUpload_CropPreview")
-                    ),
-                    s.createElement("div", {
-                      style: this.GetPreviewWindowStyle(),
-                    })
-                  ),
-                  s.createElement(
-                    j.q,
-                    { onClick: this.OnCrop },
-                    Object(T.f)("#ImageUpload_CropAndContinue")
-                  )
-                )
-              );
-            }),
-            Object(r.c)([b.a], t.prototype, "OnCrop", null),
-            Object(r.c)([b.a], t.prototype, "UpdateCrop", null),
-            t
-          );
-        })(s.Component),
-        re = n("IjL/"),
-        ae = n("L+ta"),
-        ie = function (e) {
-          var t = e.clanSteamID,
-            n = e.fnImageSelectCallBack,
-            a = Object(s.useRef)(null),
-            o = Object(s.useState)(!m.e.BHasLoadedClanImages(t)),
-            l = o[0],
-            u = o[1],
-            p = Object(s.useState)(""),
-            d = p[0],
-            h = p[1];
-          Object(s.useEffect)(
-            function () {
-              if (!m.e.BHasLoadedClanImages(t)) {
-                a.current && a.current(), u(!0);
-                Object(r.b)(void 0, void 0, void 0, function () {
-                  var e;
-                  return Object(r.e)(this, function (n) {
-                    switch (n.label) {
-                      case 0:
-                        return (
-                          (e = i.a.CancelToken.source()),
-                          (a.current = e.cancel),
-                          [4, m.e.LoadClanImages(t, !1, e)]
-                        );
-                      case 1:
-                        return n.sent(), e.token.reason || u(!1), [2];
-                    }
-                  });
-                });
-              }
-              return function () {
-                a.current && a.current("ClanImageChooseDialog: unmounting");
-              };
-            },
-            [t]
-          );
-          var f = function () {
-              return e.closeModal && e.closeModal();
-            },
-            b = m.e.GetFilteredClanImages(t, d),
-            _ = function (e) {
-              n(e), f();
-            };
-          return c.a.createElement(
-            re.a,
-            null,
-            c.a.createElement(
-              G.h,
-              { onEscKeypress: f },
-              c.a.createElement(
-                j.f,
-                null,
-                c.a.createElement(
-                  j.k,
-                  null,
-                  Object(T.f)("#ClanImageChooser_Title")
-                ),
-                c.a.createElement(
-                  j.b,
-                  null,
-                  c.a.createElement(
-                    j.c,
-                    null,
-                    c.a.createElement(
-                      "p",
-                      null,
-                      Object(T.f)("#ClanImageChooser_Desc")
-                    ),
-                    c.a.createElement(j.l, {
-                      placeholder: Object(T.f)("#ClanImageChooser_Search"),
-                      value: d,
-                      onChange: function (e) {
-                        return h(e.currentTarget.value);
-                      },
-                    }),
-                    c.a.createElement(
-                      "div",
-                      { className: ae.ImagesOuterContainer },
-                      l
-                        ? c.a.createElement(Y.a, {
-                            size: "medium",
-                            string: Object(T.f)("#Loading"),
-                          })
-                        : Boolean(b.length > 0)
-                        ? b.map(function (e) {
-                            return c.a.createElement(oe, {
-                              key: "ci" + e.image_hash,
-                              clanImage: e,
-                              searchStringHilight: d,
-                              fnImageClick: _,
-                            });
-                          })
-                        : Boolean(0 == d.trim().length)
-                        ? c.a.createElement(
-                            "div",
-                            null,
-                            Object(T.f)("#ClanImageChooser_None")
-                          )
-                        : c.a.createElement(
-                            "div",
-                            null,
-                            Object(T.f)("#EventCalendar_GameSearch_NoneFound")
-                          )
-                    )
-                  )
-                ),
-                c.a.createElement(
-                  j.j,
-                  null,
-                  c.a.createElement(
-                    j.d,
-                    { onClick: f },
-                    Object(T.f)("#Button_Cancel")
-                  )
-                )
-              )
-            )
-          );
-        },
-        oe = function (e) {
-          var t = e.clanImage,
-            n = e.searchStringHilight,
-            r = e.fnImageClick,
-            a = t.file_name ? t.file_name : "",
-            i = (function (e, t, n, r) {
-              var a = [];
-              if (e.length > 0)
-                for (var i = t.toLocaleLowerCase(), o = 0; o < t.length; ) {
-                  var s = i.indexOf(e, o);
-                  if (s < 0) {
-                    a.push(
-                      c.a.createElement(
-                        "span",
-                        { key: n + "_" + String(o) },
-                        t.substring(o)
-                      )
-                    );
-                    break;
-                  }
-                  o < s &&
-                    a.push(
-                      c.a.createElement(
-                        "span",
-                        { key: n + "_" + String(o) },
-                        t.substring(o, s)
-                      )
-                    ),
-                    a.push(
-                      c.a.createElement(
-                        "span",
-                        { key: n + "_" + String(o), className: r },
-                        t.substr(s, e.length)
-                      )
-                    ),
-                    (o = s + e.length);
-                }
-              else a.push(c.a.createElement("span", { key: n + "_null" }, t));
-              return a;
-            })(n, a, String(t.imageid), ae.Hilight);
-          return c.a.createElement(
-            "div",
-            { className: ae.ImageContainer },
-            c.a.createElement("div", {
-              className: ae.Image,
-              style: { backgroundImage: "url( '" + t.thumb_url + "' )" },
-              onDoubleClick: function () {
-                return r(t);
-              },
-            }),
-            c.a.createElement(
-              "div",
-              { className: ae.ImageFilename, title: a },
-              i
-            )
-          );
-        };
-      var se,
-        ce = n("lyHv"),
-        le = Object(o.a)(function (e) {
-          var t = e.clanSteamID,
-            n = e.inputClanImage,
-            a = e.nWidth,
-            i = e.nHeight,
-            o = e.setImage,
-            c = s.useMemo(function () {
-              return ["sale_header"];
-            }, []),
-            l = s.useMemo(
-              function () {
-                return { width: a, height: i };
-              },
-              [a, i]
-            ),
-            u = s.useState(void 0),
-            p = u[0],
-            h = u[1],
-            f = s.useState(Boolean(n)),
-            b = f[0],
-            _ = f[1],
-            v = s.useState(void 0),
-            g = v[0],
-            y = v[1],
-            M = s.useState(!1),
-            S = M[0],
-            O = M[1],
-            E = s.useCallback(
-              function (e, t) {
-                return Object(r.b)(void 0, void 0, void 0, function () {
-                  var a, i;
-                  return Object(r.e)(this, function (r) {
-                    switch (r.label) {
-                      case 0:
-                        return (
-                          e.ClearImages(),
-                          t
-                            ? (_(!0), [4, e.AddExistingClanImage(t, 0, c)])
-                            : [3, 2]
-                        );
-                      case 1:
-                        r.sent() &&
-                          (h(t),
-                          (a = e.GetUploadImages()[0]),
-                          0 != (i = a.IsValidImage(c, l)).error.length ||
-                            i.needsCrop ||
-                            (n && n.image_hash == t.image_hash) ||
-                            o(t)),
-                          (r.label = 2);
-                      case 2:
-                        return _(!1), [2];
-                    }
-                  });
-                });
-              },
-              [n, o, c, l]
-            );
-          s.useEffect(
-            function () {
-              (g &&
-                g.GetClanSteamID().ConvertTo64BitString() ==
-                  t.ConvertTo64BitString()) ||
-                y(new m.b(t));
-            },
-            [g, t]
-          ),
-            s.useEffect(
-              function () {
-                E(g, n);
-              },
-              [E, g, n]
-            );
-          var C = "",
-            A = !1,
-            w = void 0;
-          if (g && g.GetFilesToUpload().length > 0) {
-            var B = (w = g.GetUploadImages()[0]).IsValidImage(c, l);
-            (C = B.error), (A = B.needsCrop);
-          }
-          return s.createElement(
-            s.Fragment,
-            null,
-            b
-              ? s.createElement(Y.a, {
-                  size: "medium",
-                  string: Object(T.f)("#Loading"),
-                })
-              : Boolean(p) &&
-                  s.createElement("div", {
-                    className: ce.Image,
-                    style: {
-                      backgroundImage:
-                        "url( '" + (w ? w.dataUrl : p.url) + "' )",
-                      height: i + "px",
-                      width: a + "px",
-                    },
-                  }),
-            Boolean(C) && s.createElement("p", null, C),
-            A &&
-              s.createElement(
-                j.d,
-                {
-                  onClick: function (e) {
-                    var t = Object(W.m)(e),
-                      n = g.GetUploadImages()[0];
-                    Object(P.d)(
-                      s.createElement(ne, {
-                        ownerWin: t,
-                        uploadFile: n,
-                        forceResolution: { width: a, height: i },
-                        fileType: 3,
-                      }),
-                      t
-                    );
-                  },
-                },
-                Object(T.f)("#BBCode_ResizeImage")
-              ),
-            Boolean(w && w.bCropped) &&
-              s.createElement(
-                s.Fragment,
-                null,
-                s.createElement(
-                  "div",
-                  null,
-                  Object(T.f)("#ClanImagePickAndResize_UploadStatus", w.status)
-                ),
-                S
-                  ? s.createElement(Y.a, {
-                      string: Object(T.f)("#Uploading"),
-                      size: "small",
-                    })
-                  : s.createElement(
-                      j.d,
-                      {
-                        onClick: function () {
-                          return Object(r.b)(
-                            void 0,
-                            void 0,
-                            void 0,
-                            function () {
-                              var e, n, a, i, s, u, p, d;
-                              return Object(r.e)(this, function (r) {
-                                switch (r.label) {
-                                  case 0:
-                                    O(!0), (r.label = 1);
-                                  case 1:
-                                    return (
-                                      r.trys.push([1, , 3, 4]),
-                                      [4, g.UploadAllFiles(c, l)]
-                                    );
-                                  case 2:
-                                    return (
-                                      (e = r.sent()),
-                                      (n = Object.values(e)) &&
-                                        n.length > 0 &&
-                                        (Object(Z.a)(
-                                          1 == n.length,
-                                          "ClanImagePickForCertainSize expected size 1, got " +
-                                            n.length
-                                        ),
-                                        1 == n[0].success &&
-                                          ((a = n[0]),
-                                          (i =
-                                            U.d.MEDIA_CDN_COMMUNITY_URL +
-                                            "images/clans/" +
-                                            t.GetAccountID() +
-                                            "/"),
-                                          (s = m.a.GetExtensionStringForFileType(
-                                            a.file_type
-                                          )),
-                                          (u = i + a.image_hash + s),
-                                          (p = i + a.thumbnail_hash + s),
-                                          (d = {
-                                            imageid: -11231412,
-                                            image_hash: a.image_hash,
-                                            thumbnail_hash: a.thumbnail_hash,
-                                            file_type: a.file_type,
-                                            file_name: a.file_name,
-                                            clanAccountID: t.GetAccountID(),
-                                            url: u,
-                                            thumb_url: p,
-                                            uploaded_time: Date.now() / 1e3,
-                                            loc_languages: void 0,
-                                            is_loc_group: !1,
-                                          }),
-                                          h(d),
-                                          o(d))),
-                                      [3, 4]
-                                    );
-                                  case 3:
-                                    return O(!1), [7];
-                                  case 4:
-                                    return [2];
-                                }
-                              });
-                            }
-                          );
-                        },
-                      },
-                      Object(T.f)("#ClanImagePickAndResize_UploadImage")
-                    )
-              ),
-            s.createElement(
-              j.d,
-              {
-                onClick: function (e) {
-                  var t = new d.a(U.c.CLANSTEAMID);
-                  Object(P.d)(
-                    s.createElement(ie, {
-                      clanSteamID: t,
-                      fnImageSelectCallBack: function (e) {
-                        return E(g, e);
-                      },
-                    }),
-                    Object(W.m)(e)
-                  );
-                },
-              },
-              Object(T.f)("#BBCode_ChooseImage", a, i)
-            )
-          );
-        }),
-        ue = n("bDQf"),
-        pe = (function (e) {
-          function t(t) {
-            var r = e.call(this, t) || this;
-            return (
-              (r.m_cancelSignal = i.a.CancelToken.source()),
-              (r.state = {
-                formattingHelp: {
-                  __html: n.s_formattingHelp.has(t.formatType)
-                    ? n.s_formattingHelp.get(t.formatType)
-                    : "",
-                },
-              }),
-              r
-            );
-          }
-          var n;
-          return (
-            Object(r.d)(t, e),
-            (n = t),
-            (t.prototype.componentDidMount = function () {
-              var e = this;
-              this.AjaxGetFormattingHelp().catch(function (t) {
-                e.setState(Object(ue.a)(t));
-              });
-            }),
-            (t.prototype.componentWillUnmount = function () {
-              this.m_cancelSignal.cancel(
-                "FormattingHelpWidget component unmounted"
-              );
-            }),
-            (t.GetHelpURL = function (e, t) {
-              return (
-                U.d.COMMUNITY_BASE_URL +
-                "comment/" +
-                e +
-                "/formattinghelp" +
-                (t ? "?ajax=1" : "")
-              );
-            }),
-            (t.prototype.AjaxGetFormattingHelp = function () {
-              return Object(r.b)(this, void 0, void 0, function () {
-                var e, t;
-                return Object(r.e)(this, function (r) {
-                  switch (r.label) {
-                    case 0:
-                      return "" != this.state.formattingHelp.__html
-                        ? [3, 2]
-                        : ((e = { sessionid: U.d.SESSIONID }),
-                          (t = void 0),
-                          [
-                            4,
-                            i.a.get(n.GetHelpURL(this.props.formatType, !0), {
-                              params: e,
-                              cancelToken: this.m_cancelSignal.token,
-                            }),
-                          ]);
-                    case 1:
-                      (t = r.sent()),
-                        n.s_formattingHelp.set(this.props.formatType, t.data),
-                        this.setState({ formattingHelp: { __html: t.data } }),
-                        (r.label = 2);
-                    case 2:
-                      return [2];
-                  }
-                });
-              });
-            }),
-            (t.prototype.render = function () {
-              return this.state.strErrorMsg
-                ? s.createElement(
-                    "div",
-                    null,
-                    this.state.strErrorMsg,
-                    s.createElement("br", null),
-                    this.state.errorCode
-                  )
-                : "" == this.state.formattingHelp.__html
-                ? s.createElement(Y.a, null)
-                : s.createElement(
-                    G.d,
-                    {
-                      strTitle: Object(T.f)(
-                        "#EventEditor_FormattingHelp_GetHelpLink"
-                      ),
-                      strDescription: "",
-                      closeModal: this.props.closeModal,
-                      onOK: this.props.closeModal,
-                      onCancel: this.props.closeModal,
-                      bAlertDialog: !0,
-                    },
-                    s.createElement("div", {
-                      dangerouslySetInnerHTML: this.state.formattingHelp,
-                    })
-                  );
-            }),
-            (t.s_formattingHelp = new Map()),
-            (t = n = Object(r.c)([o.a], t))
-          );
-        })(s.Component),
-        de = "{STEAM_CLAN_LOC_IMAGE}",
-        me = (function (e) {
-          function t(t) {
-            var n = e.call(this, t) || this;
-            return (
-              (n.descAutoTextAreaRef = s.createRef()),
-              (n.state = { bShowDragTarget: !1 }),
-              n
-            );
-          }
-          return (
-            Object(r.d)(t, e),
-            (t.prototype.componentDidMount = function () {
-              m.e.AddClanImageDragListener(this.ClanImageDragListener);
-            }),
-            (t.prototype.componentWillUnmount = function () {
-              m.e.RemoveClanImageDragListener(this.ClanImageDragListener);
-            }),
-            (t.prototype.ClanImageDragListener = function (e, t) {
-              this.state.bShowDragTarget != t &&
-                this.setState({ bShowDragTarget: t });
-            }),
-            (t.prototype.onFocus = function (e) {
-              e && e.target.select();
-            }),
-            (t.prototype.InsertText = function (e) {
-              he.replaceSelection(this.GetTextAreaRef().current, e);
-            }),
-            (t.prototype.OnTextAreaDropListener = function (e) {
-              if (
-                (e.preventDefault(),
-                e.stopPropagation(),
-                e.dataTransfer.items && e.dataTransfer.items[0])
-              ) {
-                var t = e.dataTransfer.getData("text");
-                if (t && t.length > 0) {
-                  var n = U.d.MEDIA_CDN_COMMUNITY_URL + "images/clans/";
-                  if (t.startsWith(n)) {
-                    var r = "[img]" + p.c + "/" + t.substr(n.length) + "[/img]";
-                    he.replaceSelection(this.GetTextAreaRef().current, r);
-                  }
-                }
-              }
-            }),
-            (t.prototype.GetTextAreaRef = function () {
-              return this.descAutoTextAreaRef &&
-                this.descAutoTextAreaRef.current
-                ? this.descAutoTextAreaRef.current.GetTextAreaRef()
-                : void 0;
-            }),
-            (t.prototype.render = function () {
-              return s.createElement(
-                s.Fragment,
-                null,
-                s.createElement(fe, {
-                  pathToImages:
-                    U.d.COMMUNITY_CDN_URL + "public/images/sharedfiles/guides/",
-                  fnTextareaRef: this.GetTextAreaRef,
-                  emoticonStore: this.props.emoticonStore,
-                  supportBBCodes: this.props.limitBBCode
-                    ? this.props.limitBBCode
-                    : l.d,
-                  bSupportHTMLImport: this.props.bSupportHTMLImport,
-                  showFormatHelp: this.props.showFormatHelp,
-                  bEmbeddedInDialog: this.props.bEmbeddedInDialog,
-                  clanSteamID: this.props.clanSteamID,
-                }),
-                s.createElement(
-                  "div",
-                  {
-                    className: Object(S.a)(
-                      J.a.DescriptionCtn,
-                      J.a.BBCodeEditorInputStyles,
-                      this.state.bShowDragTarget ? J.a.DragTarget : ""
-                    ),
-                  },
-                  s.createElement(N, {
-                    cols: 40,
-                    rows: this.props.nOverridesRows || 42,
-                    maxLength: 32e3,
-                    className: Object(S.a)(
-                      J.a.DefaultEditor,
-                      this.props.classNameForTextArea
-                        ? this.props.classNameForTextArea
-                        : ""
-                    ),
-                    placeholder: this.props.strPlaceholder,
-                    ref: this.descAutoTextAreaRef,
-                    value: this.props.fnGetCurText(),
-                    onChange: this.props.fnOnTextChange,
-                    onDrop: this.OnTextAreaDropListener,
-                    emoticonStore: this.props.emoticonStore,
-                    fnSetText: this.props.fnSetText,
-                    supportBBCodes: this.props.limitBBCode
-                      ? this.props.limitBBCode
-                      : l.d,
-                  })
-                )
-              );
-            }),
-            Object(r.c)([b.a], t.prototype, "ClanImageDragListener", null),
-            Object(r.c)([b.a], t.prototype, "onFocus", null),
-            Object(r.c)([b.a], t.prototype, "OnTextAreaDropListener", null),
-            Object(r.c)([b.a], t.prototype, "GetTextAreaRef", null),
-            (t = Object(r.c)([o.a], t))
-          );
-        })(s.Component),
-        he = (function () {
-          function e() {}
-          return (
-            (e.BIsFireFox = function () {
-              return Boolean(
-                new RegExp(/Firefox\/([0-9\.]+)(?:\s|$)/i).exec(
-                  navigator.userAgent
-                )
-              );
-            }),
-            (e.replaceSelection = function (t, n) {
-              var r = t.selectionStart;
-              t.focus(),
-                e.InsertTextAtSelect(n, t),
-                t.setSelectionRange(r, r + n.length);
-            }),
-            (e.getSelectedString = function (e) {
-              return e.value.substr(
-                e.selectionStart,
-                e.selectionEnd - e.selectionStart
-              );
-            }),
-            (e.wrapBBCode = function (t, n, r) {
-              var a = e.getSelectedString(r),
-                i = "";
-              (i =
-                0 == a.indexOf(t) && a.lastIndexOf(n) == a.length - n.length
-                  ? a.substr(t.length, a.length - t.length - n.length)
-                  : t + a + n),
-                e.replaceSelection(r, i);
-            }),
-            (e.append = function (t, n) {
-              n &&
-                (n.focus(),
-                n.setSelectionRange(n.value.length, n.value.length),
-                e.InsertTextAtSelect(t, n));
-            }),
-            (e.overwrite = function (t, n) {
-              n &&
-                (n.focus(),
-                document.execCommand("selectAll", !1, t),
-                e.BIsFireFox()
-                  ? (n.value = "")
-                  : document.execCommand("delete", !1),
-                e.InsertTextAtSelect(t, n));
-            }),
-            (e.InsertTextAtSelect = function (t, n) {
-              e.BIsFireFox() && n.setRangeText
-                ? n.setRangeText(t)
-                : document.execCommand("insertText", !1, t);
-            }),
-            e
-          );
-        })(),
-        fe = (function (e) {
-          function t() {
-            var t = (null !== e && e.apply(this, arguments)) || this;
-            return (t.m_linkPopupRef = s.createRef()), t;
-          }
-          return (
-            Object(r.d)(t, e),
-            (t.prototype.onBold = function () {
-              he.wrapBBCode("[b]", "[/b]", this.props.fnTextareaRef().current);
-            }),
-            (t.prototype.onItalics = function () {
-              he.wrapBBCode("[i]", "[/i]", this.props.fnTextareaRef().current);
-            }),
-            (t.prototype.onUnderline = function () {
-              he.wrapBBCode("[u]", "[/u]", this.props.fnTextareaRef().current);
-            }),
-            (t.prototype.onStrikeThrough = function () {
-              he.wrapBBCode(
-                "[strike]",
-                "[/strike]",
-                this.props.fnTextareaRef().current
-              );
-            }),
-            (t.prototype.onHeader = function () {
-              he.wrapBBCode(
-                "[h1]",
-                "[/h1]",
-                this.props.fnTextareaRef().current
-              );
-            }),
-            (t.prototype.onHeader2 = function () {
-              he.wrapBBCode(
-                "[h2]",
-                "[/h2]",
-                this.props.fnTextareaRef().current
-              );
-            }),
-            (t.prototype.onHeader3 = function () {
-              he.wrapBBCode(
-                "[h3]",
-                "[/h3]",
-                this.props.fnTextareaRef().current
-              );
-            }),
-            (t.prototype.onUnorderedList = function () {
-              this.handleList("list");
-            }),
-            (t.prototype.onOrderedList = function () {
-              this.handleList("olist");
-            }),
-            (t.prototype.handleList = function (e) {
-              var t = this.props.fnTextareaRef().current,
-                n = "[" + e + "]\n",
-                r = "[/" + e + "]";
-              if (t.selectionStart == t.selectionEnd)
-                he.wrapBBCode(n + "[*]", "\n" + r, t);
-              else {
-                var a =
-                  n +
-                  he
-                    .getSelectedString(t)
-                    .split("\n")
-                    .map(function (e) {
-                      return (e.match(/\*+\s/) ? "[*]" : "[*] ") + e;
-                    })
-                    .join("\n") +
-                  "\n" +
-                  r;
-                he.replaceSelection(t, a);
-              }
-            }),
-            (t.prototype.OnAddLink = function (e) {
-              Object(P.c)(
-                s.createElement(_e, {
-                  textareaRef: this.props.fnTextareaRef(),
-                }),
-                Object(W.m)(e)
-              );
-            }),
-            (t.prototype.ShowHelpDialog = function (e) {
-              this.props.showFormatHelp &&
-                Object(P.c)(
-                  s.createElement(pe, {
-                    formatType: this.props.showFormatHelp,
-                  }),
-                  Object(W.m)(e)
-                );
-            }),
-            (t.prototype.OnConvertHTMLToBBCodeDialog = function (e) {
-              Object(P.c)(
-                s.createElement(ye, {
-                  textareaRef: this.props.fnTextareaRef(),
-                }),
-                Object(W.m)(e)
-              );
-            }),
-            (t.prototype.OnOpenYoutubeDialog = function (e) {
-              var t = U.d.IMG_URL + "applications/community/";
-              Object(P.c)(
-                s.createElement(be, {
-                  textareaRef: this.props.fnTextareaRef(),
-                  pathToImages: t,
-                }),
-                Object(W.m)(e)
-              );
-            }),
-            (t.prototype.OnOpenImageDialog = function (e) {
-              Object(P.c)(
-                s.createElement(ve, {
-                  textareaRef: this.props.fnTextareaRef(),
-                }),
-                Object(W.m)(e)
-              );
-            }),
-            (t.prototype.OnOpenSpeakerDialog = function (e) {
-              Object(P.d)(
-                s.createElement(ge, {
-                  clanSteamID: this.props.clanSteamID,
-                  textareaRef: this.props.fnTextareaRef(),
-                }),
-                Object(W.m)(e)
-              );
-            }),
-            (t.prototype.OnEmoticonSelected = function (e, t) {
-              void 0 === t && (t = !1);
-              var n = "ː" + e + "ː";
-              he.replaceSelection(this.props.fnTextareaRef().current, n),
-                this.props.fnTextareaRef().current.focus();
-            }),
-            (t.prototype.BSupports = function (e) {
-              return (
-                this.props.supportBBCodes.findIndex(function (t) {
-                  return t == e;
-                }) >= 0
-              );
-            }),
-            (t.prototype.render = function () {
-              var e = this.props,
-                t = e.showFormatHelp,
-                n = e.bEmbeddedInDialog,
-                r = e.bSupportHTMLImport,
-                a = e.pathToImages,
-                i = void 0;
-              return (
-                t &&
-                  (i = n
-                    ? s.createElement(
-                        "span",
-                        {
-                          className: Object(S.a)("ttip", J.a.ActionGetHelp),
-                          "data-tooltip-text": Object(T.f)(
-                            "#EventEditor_FormattingHelp_GetHelpLink"
-                          ),
-                        },
-                        s.createElement(
-                          "a",
-                          {
-                            href: pe.GetHelpURL(this.props.showFormatHelp, !1),
-                            target: U.d.IN_CLIENT ? void 0 : "_blank",
-                          },
-                          s.createElement("img", {
-                            src: a + "/action_help.png",
-                          }),
-                          " ",
-                          Object(T.f)("#EventEditor_FormattingHelp_GetHelpLink")
-                        )
-                      )
-                    : s.createElement(
-                        "span",
-                        {
-                          onClick: this.ShowHelpDialog,
-                          className: Object(S.a)("ttip", J.a.ActionGetHelp),
-                          "data-tooltip-text": Object(T.f)(
-                            "#EventEditor_FormattingHelp_GetHelpLink"
-                          ),
-                        },
-                        s.createElement("img", { src: a + "/action_help.png" }),
-                        " ",
-                        Object(T.f)("#EventEditor_FormattingHelp_GetHelpLink")
-                      )),
-                s.createElement(
-                  "div",
-                  { className: J.a.TextEditorToolBarContainer },
-                  this.BSupports("b") &&
-                    s.createElement(
-                      "span",
-                      {
-                        onClick: this.onBold,
-                        className: "ttip",
-                        "data-tooltip-text": Object(T.f)("#Editor_Bold"),
-                      },
-                      s.createElement("img", {
-                        src: this.props.pathToImages + "/format_bold.png",
-                      })
-                    ),
-                  this.BSupports("u") &&
-                    s.createElement(
-                      "span",
-                      {
-                        onClick: this.onUnderline,
-                        className: "ttip",
-                        "data-tooltip-text": Object(T.f)("#Editor_Underline"),
-                      },
-                      s.createElement("img", {
-                        src: this.props.pathToImages + "/format_underline.png",
-                      })
-                    ),
-                  this.BSupports("i") &&
-                    s.createElement(
-                      "span",
-                      {
-                        onClick: this.onItalics,
-                        className: "ttip",
-                        "data-tooltip-text": Object(T.f)("#Editor_Italics"),
-                      },
-                      s.createElement("img", {
-                        src: this.props.pathToImages + "/format_italic.png",
-                      })
-                    ),
-                  this.BSupports("strike") &&
-                    s.createElement(
-                      "span",
-                      {
-                        onClick: this.onStrikeThrough,
-                        className: "ttip",
-                        "data-tooltip-text": Object(T.f)(
-                          "#Editor_StrikeThrough"
-                        ),
-                      },
-                      s.createElement("img", {
-                        src: this.props.pathToImages + "/format_strike.png",
-                      })
-                    ),
-                  Boolean(this.BSupports("url") && !n) &&
-                    s.createElement(
-                      "span",
-                      {
-                        onClick: this.OnAddLink,
-                        className: "ttip",
-                        "data-tooltip-text": Object(T.f)("#Editor_Link"),
-                      },
-                      s.createElement("img", {
-                        src: this.props.pathToImages + "/format_link.png",
-                      })
-                    ),
-                  this.BSupports("list") &&
-                    s.createElement(
-                      "span",
-                      {
-                        onClick: this.onUnorderedList,
-                        className: "ttip",
-                        "data-tooltip-text": Object(T.f)("#Editor_Unordered"),
-                      },
-                      s.createElement("img", {
-                        src: this.props.pathToImages + "/format_bullet.png",
-                      })
-                    ),
-                  this.BSupports("olist") &&
-                    s.createElement(
-                      "span",
-                      {
-                        onClick: this.onOrderedList,
-                        className: "ttip",
-                        "data-tooltip-text": Object(T.f)("#Editor_Ordered"),
-                      },
-                      s.createElement("img", {
-                        src: this.props.pathToImages + "/format_numbered.png",
-                      })
-                    ),
-                  this.BSupports("h1") &&
-                    s.createElement(
-                      "span",
-                      {
-                        onClick: this.onHeader,
-                        className: "ttip",
-                        "data-tooltip-text": Object(T.f)("#Editor_Header"),
-                      },
-                      s.createElement("img", {
-                        src: this.props.pathToImages + "/format_header1.png",
-                      })
-                    ),
-                  this.BSupports("h2") &&
-                    s.createElement(
-                      "span",
-                      {
-                        onClick: this.onHeader2,
-                        className: "ttip",
-                        "data-tooltip-text": Object(T.f)("#Editor_Header2"),
-                      },
-                      s.createElement("img", {
-                        src: this.props.pathToImages + "/format_header2.png",
-                      })
-                    ),
-                  this.BSupports("h3") &&
-                    s.createElement(
-                      "span",
-                      {
-                        onClick: this.onHeader3,
-                        className: "ttip",
-                        "data-tooltip-text": Object(T.f)("#Editor_Header3"),
-                      },
-                      s.createElement("img", {
-                        src: this.props.pathToImages + "/format_header3.png",
-                      })
-                    ),
-                  this.BSupports("previewyoutube") &&
-                    s.createElement(
-                      "span",
-                      {
-                        onClick: this.OnOpenYoutubeDialog,
-                        "data-tooltip-text": Object(T.f)(
-                          "#EventEditor_InsertYouTube"
-                        ),
-                      },
-                      s.createElement("img", { src: H.a })
-                    ),
-                  this.props.emoticonStore &&
-                    s.createElement(z.a, {
-                      title: " ",
-                      ttip: Object(T.f)("#Editor_Emoticon"),
-                      className: Object(S.a)(J.a.EmoteOuter),
-                      disabled: !1,
-                      OnEmoticonSelected: this.OnEmoticonSelected,
-                      rtLastAckedNewEmoticons: Number.MAX_VALUE,
-                      emoticonStore: this.props.emoticonStore,
-                      emoticonHoverStore: h.a,
-                      useImg: this.props.pathToImages + "/format_emote.png",
-                      contextOptions: {
-                        bOverlapHorizontal: !0,
-                        bDisablePopTop: !0,
-                      },
-                    }),
-                  Boolean(this.BSupports("img") && !n) &&
-                    s.createElement(
-                      "span",
-                      {
-                        onClick: this.OnOpenImageDialog,
-                        "data-tooltip-text": Object(T.f)(
-                          "#EventEditor_InsertImage"
-                        ),
-                      },
-                      s.createElement("img", {
-                        src: this.props.pathToImages + "/insert_img.png",
-                      })
-                    ),
-                  Boolean(
-                    U.k.is_support &&
-                      this.props.clanSteamID &&
-                      this.BSupports("speaker")
-                  ) &&
-                    s.createElement(
-                      "span",
-                      {
-                        onClick: this.OnOpenSpeakerDialog,
-                        "data-tooltip-text": Object(T.f)(
-                          "#EventEditor_AddSpeaker"
-                        ),
-                      },
-                      s.createElement("img", {
-                        src: this.props.pathToImages + "/insert_img.png",
-                      })
-                    ),
-                  Boolean(r && !n) &&
-                    s.createElement(
-                      "span",
-                      {
-                        onClick: this.OnConvertHTMLToBBCodeDialog,
-                        className: J.a.ActionImportHTML,
-                        "data-tooltip-text": Object(T.f)(
-                          "#EventEditor_ImportFromHTML_ttip"
-                        ),
-                      },
-                      Object(T.f)("#EventEditor_ImportHTML")
-                    ),
-                  i
-                )
-              );
-            }),
-            Object(r.c)([b.a], t.prototype, "onBold", null),
-            Object(r.c)([b.a], t.prototype, "onItalics", null),
-            Object(r.c)([b.a], t.prototype, "onUnderline", null),
-            Object(r.c)([b.a], t.prototype, "onStrikeThrough", null),
-            Object(r.c)([b.a], t.prototype, "onHeader", null),
-            Object(r.c)([b.a], t.prototype, "onHeader2", null),
-            Object(r.c)([b.a], t.prototype, "onHeader3", null),
-            Object(r.c)([b.a], t.prototype, "onUnorderedList", null),
-            Object(r.c)([b.a], t.prototype, "onOrderedList", null),
-            Object(r.c)([b.a], t.prototype, "OnAddLink", null),
-            Object(r.c)([b.a], t.prototype, "ShowHelpDialog", null),
-            Object(r.c)(
-              [b.a],
-              t.prototype,
-              "OnConvertHTMLToBBCodeDialog",
-              null
-            ),
-            Object(r.c)([b.a], t.prototype, "OnOpenYoutubeDialog", null),
-            Object(r.c)([b.a], t.prototype, "OnOpenImageDialog", null),
-            Object(r.c)([b.a], t.prototype, "OnOpenSpeakerDialog", null),
-            Object(r.c)([b.a], t.prototype, "OnEmoticonSelected", null),
-            (t = Object(r.c)([o.a], t))
-          );
-        })(s.Component);
-      !(function (e) {
-        (e.left = "leftthumb"),
-          (e.right = "rightthumb"),
-          (e.full = "full"),
-          (e.summary = "summary");
-      })(se || (se = {}));
-      var be = (function (e) {
-          function t() {
-            var t = (null !== e && e.apply(this, arguments)) || this;
-            return (t.state = { youtubeInput: "", alignment: se.left }), t;
-          }
-          return (
-            Object(r.d)(t, e),
-            (t.prototype.OnYoutubeInsertLink = function () {
-              var e =
-                this.state.youtubeInput && Object(p.b)(this.state.youtubeInput);
-              if (e) {
-                if (this.state.alignment == se.summary) {
-                  var t =
-                    "https://www.youtube.com/watch?v=" +
-                    e.strVideoID +
-                    (e.nStartSeconds ? "&t=" + e.nStartSeconds : "");
-                  he.wrapBBCode(t, "", this.props.textareaRef.current);
-                } else {
-                  var n =
-                    "[previewyoutube=" +
-                    e.strVideoID +
-                    ";" +
-                    this.state.alignment +
-                    "]";
-                  he.wrapBBCode(
-                    n,
-                    "[/previewyoutube]",
-                    this.props.textareaRef.current
-                  );
-                }
-                this.setState({ youtubeInput: "", alignment: se.left });
-              } else alert(Object(T.f)("#EventEditor_InsertYouTube_NoURL"));
-            }),
-            (t.prototype.OnUrlChange = function (e) {
-              this.state.youtubeInput != e.target.value &&
-                this.setState({ youtubeInput: e.target.value });
-            }),
-            (t.prototype.OnLeftSelected = function () {
-              this.setState({ alignment: se.left });
-            }),
-            (t.prototype.OnRightSelected = function () {
-              this.setState({ alignment: se.right });
-            }),
-            (t.prototype.OnFullSelected = function () {
-              this.setState({ alignment: se.full });
-            }),
-            (t.prototype.OnSummarySelected = function () {
-              this.setState({ alignment: se.summary });
-            }),
-            (t.prototype.OnOuterDivClickPassDown = function (e) {}),
-            (t.prototype.render = function () {
-              return s.createElement(
-                G.d,
-                {
-                  strTitle: Object(T.f)("#EventEditor_InsertYouTube"),
-                  strDescription: "",
-                  closeModal: this.props.closeModal,
-                  onCancel: this.props.closeModal,
-                  onOK: this.OnYoutubeInsertLink,
-                  strOKButtonText: Object(T.f)("#EventEditor_InsertYouTube"),
-                  className: J.a.BBCodeEditorInputStyles,
-                },
-                s.createElement(
-                  "div",
-                  { className: J.a.YouTubeInput },
-                  s.createElement(
-                    "div",
-                    { className: "DialogInputLabelGroup" },
-                    s.createElement(
-                      "label",
-                      null,
-                      s.createElement(
-                        "div",
-                        { className: "DialogLabel" },
-                        Object(T.f)("#EventEditor_InsertYouTube_URL")
-                      ),
-                      s.createElement(
-                        "div",
-                        { className: "DialogInput_Wrapper" },
-                        s.createElement("input", {
-                          className: "DialogInput DialogTextInputBase",
-                          ref: function (e) {
-                            return e && e.focus();
-                          },
-                          type: "text",
-                          value: this.state.youtubeInput,
-                          onChange: this.OnUrlChange,
-                          placeholder: Object(T.f)(
-                            "#EventEditor_InsertYouTube_Placholder"
-                          ),
-                        })
-                      )
-                    )
-                  ),
-                  s.createElement(
-                    "div",
-                    { className: "DialogInputLabelGroup" },
-                    s.createElement(
-                      "div",
-                      { className: "DialogLabel" },
-                      Object(T.f)("#EventEditor_InsertYouTube_Position")
-                    ),
-                    s.createElement(
-                      "div",
-                      {
-                        className: J.a.YouTubePreviewInsertOption,
-                        onClick: this.OnOuterDivClickPassDown,
-                      },
-                      s.createElement("input", {
-                        type: "radio",
-                        name: "YouTubePreviewInsertType",
-                        id: se.left,
-                        value: se.left,
-                        checked: this.state.alignment == se.left,
-                        onChange: this.OnLeftSelected,
-                      }),
-                      s.createElement(
-                        "label",
-                        { htmlFor: se.left },
-                        s.createElement(
-                          "span",
-                          null,
-                          Object(T.f)("#EventEditor_InsertYouTube_Left")
-                        )
-                      )
-                    ),
-                    s.createElement(
-                      "div",
-                      {
-                        className: J.a.YouTubePreviewInsertOption,
-                        onClick: this.OnOuterDivClickPassDown,
-                      },
-                      s.createElement("input", {
-                        type: "radio",
-                        name: "YouTubePreviewInsertType",
-                        id: se.right,
-                        value: se.right,
-                        checked: this.state.alignment == se.right,
-                        onChange: this.OnRightSelected,
-                      }),
-                      s.createElement(
-                        "label",
-                        { htmlFor: se.right },
-                        s.createElement(
-                          "span",
-                          null,
-                          Object(T.f)("#EventEditor_InsertYouTube_Right")
-                        )
-                      )
-                    ),
-                    s.createElement(
-                      "div",
-                      {
-                        className: J.a.YouTubePreviewInsertOption,
-                        onClick: this.OnOuterDivClickPassDown,
-                      },
-                      s.createElement("input", {
-                        type: "radio",
-                        name: "YouTubePreviewInsertType",
-                        id: se.full,
-                        value: se.full,
-                        checked: this.state.alignment == se.full,
-                        onChange: this.OnFullSelected,
-                      }),
-                      s.createElement(
-                        "label",
-                        { htmlFor: se.full },
-                        s.createElement(
-                          "span",
-                          null,
-                          Object(T.f)("#EventEditor_InsertYouTube_Full")
-                        )
-                      )
-                    ),
-                    s.createElement(
-                      "div",
-                      {
-                        className: J.a.YouTubePreviewInsertOption,
-                        onClick: this.OnOuterDivClickPassDown,
-                      },
-                      s.createElement("input", {
-                        type: "radio",
-                        name: "YouTubePreviewInsertType",
-                        id: se.summary,
-                        value: se.summary,
-                        checked: this.state.alignment == se.summary,
-                        onChange: this.OnSummarySelected,
-                      }),
-                      s.createElement(
-                        "label",
-                        { htmlFor: se.summary },
-                        s.createElement(
-                          "span",
-                          null,
-                          Object(T.f)("#EventEditor_InsertYouTube_Summary")
-                        )
-                      )
-                    )
-                  )
-                )
-              );
-            }),
-            Object(r.c)([b.a], t.prototype, "OnYoutubeInsertLink", null),
-            Object(r.c)([b.a], t.prototype, "OnUrlChange", null),
-            Object(r.c)([b.a], t.prototype, "OnLeftSelected", null),
-            Object(r.c)([b.a], t.prototype, "OnRightSelected", null),
-            Object(r.c)([b.a], t.prototype, "OnFullSelected", null),
-            Object(r.c)([b.a], t.prototype, "OnSummarySelected", null),
-            Object(r.c)([b.a], t.prototype, "OnOuterDivClickPassDown", null),
-            (t = Object(r.c)([o.a], t))
-          );
-        })(s.Component),
-        _e = (function (e) {
-          function t() {
-            var t = (null !== e && e.apply(this, arguments)) || this;
-            return (t.state = { textToDisplay: "", strURL: "" }), t;
-          }
-          var n;
-          return (
-            Object(r.d)(t, e),
-            (n = t),
-            (t.prototype.LoadFromTextArea = function () {
-              var e = this.props.textareaRef;
-              if (e && e.current) {
-                var t = he.getSelectedString(e.current),
-                  r = n.m_regExp.exec(t);
-                r
-                  ? this.setState({ strURL: r[1], textToDisplay: r[2] })
-                  : this.setState({ textToDisplay: t });
-              }
-            }),
-            (t.prototype.componentDidMount = function () {
-              this.LoadFromTextArea();
-            }),
-            (t.prototype.onLinkTitleUpdate = function (e) {
-              this.setState({ textToDisplay: e.target.value });
-            }),
-            (t.prototype.onLinkURLUpdate = function (e) {
-              this.setState({ strURL: e.target.value });
-            }),
-            (t.prototype.onInsertLink = function () {
-              var e = this.state,
-                t = "[url=" + e.strURL + "]" + e.textToDisplay + "[/url]";
-              he.replaceSelection(this.props.textareaRef.current, t);
-            }),
-            (t.prototype.render = function () {
-              return s.createElement(
-                G.d,
-                {
-                  strTitle: Object(T.f)("#Editor_Link"),
-                  strDescription: "",
-                  closeModal: this.props.closeModal,
-                  onOK: this.onInsertLink,
-                  onCancel: this.props.closeModal,
-                  strOKButtonText: Object(T.f)("#EventEditor_InsertLinkURL"),
-                  className: J.a.BBCodeEditorInputStyles,
-                },
-                s.createElement(
-                  "div",
-                  { className: J.a.EventEditorLinkInput },
-                  s.createElement(
-                    "div",
-                    { className: "DialogInputLabelGroup" },
-                    s.createElement(
-                      "label",
-                      null,
-                      s.createElement(
-                        "div",
-                        { className: "DialogLabel" },
-                        Object(T.f)("#EventEditor_LinkDescription")
-                      ),
-                      s.createElement(
-                        "div",
-                        { className: "DialogInput_Wrapper" },
-                        s.createElement("input", {
-                          type: "text",
-                          onChange: this.onLinkTitleUpdate,
-                          value: this.state.textToDisplay,
-                          className: "DialogInput DialogTextInputBase",
-                        })
-                      )
-                    )
-                  ),
-                  s.createElement(
-                    "div",
-                    { className: "DialogInputLabelGroup" },
-                    s.createElement(
-                      "label",
-                      null,
-                      s.createElement(
-                        "div",
-                        { className: "DialogLabel" },
-                        Object(T.f)("#EventEditor_LinkURL")
-                      ),
-                      s.createElement(
-                        "div",
-                        { className: "DialogInput_Wrapper" },
-                        s.createElement("input", {
-                          type: "text",
-                          onChange: this.onLinkURLUpdate,
-                          value: this.state.strURL,
-                          className: "DialogInput DialogTextInputBase",
-                        })
-                      )
-                    )
-                  )
-                )
-              );
-            }),
-            (t.m_regExp = new RegExp(/\[url=([^\]]*)\]([^\[\]]+)\[\/url\]/i)),
-            Object(r.c)([b.a], t.prototype, "onLinkTitleUpdate", null),
-            Object(r.c)([b.a], t.prototype, "onLinkURLUpdate", null),
-            Object(r.c)([b.a], t.prototype, "onInsertLink", null),
-            (t = n = Object(r.c)([o.a], t))
-          );
-        })(s.Component),
-        ve = (function (e) {
-          function t() {
-            var t = (null !== e && e.apply(this, arguments)) || this;
-            return (t.state = { imgURL: "", anchorURL: "" }), t;
-          }
-          return (
-            Object(r.d)(t, e),
-            (t.prototype.componentDidMount = function () {
-              this.refFirstInput && this.refFirstInput.current.focus();
-            }),
-            (t.prototype.OnImageInsert = function () {
-              var e = this.state,
-                t = e.anchorURL,
-                n = e.imgURL,
-                r = "",
-                a = "";
-              t &&
-                t.length > 0 &&
-                ((r += "[url=" + t + "]"), (a = "[/url]" + a)),
-                (r += "[img]" + n),
-                (a = "[/img]" + a),
-                he.wrapBBCode(r, a, this.props.textareaRef.current);
-            }),
-            (t.prototype.OnImageURLChange = function (e) {
-              this.state.imgURL != e.target.value &&
-                this.setState({ imgURL: e.target.value });
-            }),
-            (t.prototype.OnAnchorURLChange = function (e) {
-              this.state.anchorURL != e.target.value &&
-                this.setState({ anchorURL: e.target.value });
-            }),
-            (t.prototype.render = function () {
-              var e = this.state,
-                t = e.imgURL,
-                n = e.anchorURL;
-              return s.createElement(
-                G.d,
-                {
-                  strTitle: Object(T.f)("#EventEditor_InsertImage_Title"),
-                  strDescription: "",
-                  closeModal: this.props.closeModal,
-                  onCancel: this.props.closeModal,
-                  onOK: this.OnImageInsert,
-                  strOKButtonText: Object(T.f)(
-                    "#EventEditor_InsertImage_Title"
-                  ),
-                  className: J.a.BBCodeEditorInputStyles,
-                },
-                s.createElement(
-                  "div",
-                  { className: J.a.EventEditorLinkInput },
-                  s.createElement(
-                    "p",
-                    null,
-                    Object(T.f)("#EventEditor_InsertImage_Desc")
-                  ),
-                  s.createElement(
-                    "div",
-                    { className: "DialogInputLabelGroup" },
-                    s.createElement(
-                      "label",
-                      null,
-                      s.createElement(
-                        "div",
-                        { className: "DialogLabel" },
-                        Object(T.f)("#EventEditor_InsertImage_URL")
-                      ),
-                      s.createElement(
-                        "div",
-                        { className: "DialogInput_Wrapper" },
-                        s.createElement("input", {
-                          className: "DialogInput DialogTextInputBase",
-                          type: "text",
-                          value: t,
-                          onChange: this.OnImageURLChange,
-                          placeholder: Object(T.f)(
-                            "#EventEditor_InsertImage_Placeholder"
-                          ),
-                          ref: this.refFirstInput,
-                        })
-                      )
-                    )
-                  ),
-                  s.createElement(
-                    "div",
-                    { className: "DialogInputLabelGroup" },
-                    s.createElement(
-                      "label",
-                      null,
-                      s.createElement(
-                        "div",
-                        { className: "DialogLabel" },
-                        Object(T.f)("#EventEditor_InsertImage_Anchor")
-                      ),
-                      s.createElement(
-                        "div",
-                        { className: "DialogInput_Wrapper" },
-                        s.createElement("input", {
-                          className: "DialogInput DialogTextInputBase",
-                          type: "text",
-                          value: n,
-                          onChange: this.OnAnchorURLChange,
-                          placeholder: Object(T.f)(
-                            "#EventEditor_InsertImage_Placeholder"
-                          ),
-                        })
-                      )
-                    )
-                  )
-                )
-              );
-            }),
-            Object(r.c)([b.a], t.prototype, "OnImageInsert", null),
-            Object(r.c)([b.a], t.prototype, "OnImageURLChange", null),
-            Object(r.c)([b.a], t.prototype, "OnAnchorURLChange", null),
-            (t = Object(r.c)([o.a], t))
-          );
-        })(s.Component),
-        ge = function (e) {
-          var t = s.useRef(null),
-            n = s.useState(""),
-            a = n[0],
-            o = n[1],
-            c = s.useState(""),
-            l = c[0],
-            h = c[1],
-            b = s.useState(""),
-            _ = b[0],
-            v = b[1],
-            g = s.useState(""),
-            y = g[0],
-            M = g[1],
-            S = s.useState(void 0),
-            O = S[0],
-            E = S[1],
-            C = s.useState(void 0),
-            A = C[0],
-            w = C[1],
-            B = s.useState([]),
-            I = B[0],
-            L = B[1],
-            D = s.useState(!0),
-            N = D[0],
-            z = D[1];
-          s.useEffect(function () {
-            return (
-              Object(r.b)(void 0, void 0, void 0, function () {
-                var e, n;
-                return Object(r.e)(this, function (a) {
-                  switch (a.label) {
-                    case 0:
-                      return (
-                        (e = i.a.CancelToken.source()),
-                        (t.current = e.cancel),
-                        [
-                          4,
-                          i.a.get(
-                            U.d.COMMUNITY_BASE_URL + "actions/ajaxlistfriends",
-                            { cancelToken: e.token }
-                          ),
-                        ]
-                      );
-                    case 1:
-                      return (
-                        (n = a.sent()),
-                        e.token.reason || !n
-                          ? [3, 3]
-                          : (L(n.data),
-                            [
-                              4,
-                              f.a.LoadProfiles(
-                                Object(r.g)(
-                                  [U.k.steamid],
-                                  n.data.map(function (e) {
-                                    return e.steamid;
-                                  })
-                                )
-                              ),
-                            ])
-                      );
-                    case 2:
-                      a.sent(), z(!1), (a.label = 3);
-                    case 3:
-                      return [2];
-                  }
-                });
-              }),
-              function () {
-                t.current && t.current("InsertSpeakerBBCode: unmounting");
-              }
-            );
-          }, []);
-          var R = 0 != a.trim().length && 0 != y.trim().length,
-            k = s.createElement(
-              "div",
-              { className: J.a.DropDownScroll },
-              I.map(function (e) {
-                return s.createElement(
-                  V.d,
-                  {
-                    onSelected: function () {
-                      return w(new d.a(e.steamid));
-                    },
-                    key: e.steamid,
-                  },
-                  s.createElement(
-                    "div",
-                    { style: { display: "flex", alignItems: "center" } },
-                    s.createElement("img", {
-                      className: x.a.WhitelistAvatar,
-                      src: e.avatar_url,
-                    }),
-                    e.persona_name
-                  )
-                );
-              })
-            ),
-            P = A ? f.a.GetProfileBySteamID(A) : void 0;
-          return s.createElement(
-            G.d,
-            {
-              strTitle: Object(T.f)("#EventEditor_AddSpeaker"),
-              strDescription: Object(T.f)("#EventEditor_AddSpeaker_Desc"),
-              closeModal: e.closeModal,
-              onCancel: e.closeModal,
-              bOKDisabled: !R,
-              onOK: function () {
-                var t = '[speaker name="' + a.trim() + '"';
-                (l.trim().length > 0 && (t += ' title="' + l + '"'),
-                _.trim().length > 0 && (t += ' company="' + _ + '"'),
-                O) &&
-                  (t +=
-                    ' photo="' +
-                    (p.c + "/" + O.clanAccountID + "/" + m.a.GetHashAndExt(O)) +
-                    '"');
-                A && (t += ' steamid="' + A.ConvertTo64BitString() + '"'),
-                  (t += "]" + y + "[/speaker]"),
-                  he.replaceSelection(e.textareaRef.current, t);
-              },
-              className: J.a.BBCodeEditorInputStyles,
-            },
-            s.createElement(
-              "div",
-              { className: J.a.InsertSpeakerCtn },
-              s.createElement(j.l, {
-                type: "text",
-                label: Object(T.f)("#EventEditor_AddSpeaker_Name"),
-                value: a,
-                onChange: function (e) {
-                  return o(e.target.value);
-                },
-                focusOnMount: !0,
-              }),
-              s.createElement(
-                "div",
-                { className: J.a.TitleGroup },
-                s.createElement(j.l, {
-                  type: "text",
-                  label: Object(T.f)("#EventEditor_AddSpeaker_Title"),
-                  value: l,
-                  onChange: function (e) {
-                    return h(e.target.value);
-                  },
-                }),
-                s.createElement(j.l, {
-                  type: "text",
-                  label: Object(T.f)("#EventEditor_AddSpeaker_Company"),
-                  value: _,
-                  onChange: function (e) {
-                    return v(e.target.value);
-                  },
-                })
-              ),
-              s.createElement(
-                K.a,
-                {
-                  toolTipContent: Object(T.f)(
-                    "#EventEditor_AssociateSteamAccount_ttip"
-                  ),
-                },
-                s.createElement(
-                  "div",
-                  { className: "DialogLabel" },
-                  Object(T.f)("#EventEditor_AssociateSteamAccount"),
-                  " (?)"
-                )
-              ),
-              s.createElement(
-                "div",
-                null,
-                N &&
-                  s.createElement(Y.a, {
-                    string: Object(T.f)("#Loading"),
-                    size: "small",
-                  }),
-                Boolean(P) &&
-                  s.createElement(
-                    "a",
-                    {
-                      href:
-                        U.d.COMMUNITY_BASE_URL +
-                        "profiles/" +
-                        A.ConvertTo64BitString(),
-                      target: "_blank",
-                    },
-                    P
-                      ? s.createElement("img", {
-                          style: { marginRight: "8px" },
-                          src: P.avatar_url,
-                        })
-                      : null,
-                    P ? P.persona_name : null
-                  ),
-                s.createElement(
-                  "div",
-                  { className: J.a.AssociateRowCtn },
-                  s.createElement(
-                    j.d,
-                    {
-                      onClick: function () {
-                        return w(new d.a(U.k.steamid));
-                      },
-                    },
-                    Object(T.f)("#EventEditor_SteamAccount_addme")
-                  ),
-                  s.createElement(
-                    j.d,
-                    {
-                      onClick: function (e) {
-                        return Object(u.a)(k, e);
-                      },
-                    },
-                    Object(T.f)("#EventEditor_SteamAccount_addfriend")
-                  ),
-                  s.createElement(
-                    j.d,
-                    {
-                      onClick: function () {
-                        return w(void 0);
-                      },
-                    },
-                    Object(T.f)("#EventEditor_SteamAccount_clear")
-                  )
-                )
-              ),
-              s.createElement(
-                "div",
-                { className: J.a.PhotoCtn },
-                s.createElement(
-                  "div",
-                  { className: "DialogLabel" },
-                  Object(T.f)("#EventEditor_ChoosePhoto")
-                ),
-                s.createElement(le, {
-                  clanSteamID: e.clanSteamID,
-                  inputClanImage: O,
-                  setImage: E,
-                  nWidth: 184,
-                  nHeight: 184,
-                })
-              ),
-              s.createElement(
-                "div",
-                { className: J.a.AboutCtn },
-                s.createElement(
-                  "div",
-                  { className: "DialogLabel" },
-                  Object(T.f)("#EventEditor_AddSpeaker_About")
-                ),
-                s.createElement(j.a, {
-                  value: y,
-                  onChange: function (e) {
-                    return M(e.target.value);
-                  },
-                  rows: 8,
-                  cols: 80,
-                  nMinHeight: 40,
-                  placeholder: Object(T.f)(
-                    "#EventEditor_AddSpeaker_About_Placeholder"
-                  ),
-                })
-              ),
-              s.createElement(
-                "div",
-                { className: J.a.PreviewCtn },
-                s.createElement(
-                  "div",
-                  { className: "DialogLabel" },
-                  Object(T.f)("#Button_Preview")
-                ),
-                s.createElement(X.a, {
-                  company: _,
-                  name: a,
-                  title: l,
-                  bioString: y,
-                  photo: O ? O.url : void 0,
-                })
-              )
-            )
-          );
-        },
-        ye = (function (e) {
-          function t(t) {
-            var n = e.call(this, t) || this;
-            return (
-              (n.m_isMounted = !1),
-              (n.m_bAppend = !1),
-              (n.state = { bPreserveNewLines: !1, strHTMLData: "" }),
-              n
-            );
-          }
-          return (
-            Object(r.d)(t, e),
-            (t.prototype.componentDidMount = function () {
-              this.m_isMounted = !0;
-            }),
-            (t.prototype.componentWillUnmount = function () {
-              this.m_isMounted = !1;
-            }),
-            (t.prototype.OnConvertAndOverriteHTML = function () {
-              (this.m_bAppend = !1), this.ConvertBBCode();
-            }),
-            (t.prototype.OnConvertAndAppendHTML = function () {
-              (this.m_bAppend = !0), this.ConvertBBCode();
-            }),
-            (t.prototype.ConvertHtmlToBBCode = function (e, t) {
-              return Object(r.b)(this, void 0, void 0, function () {
-                var n;
-                return Object(r.e)(this, function (r) {
-                  switch (r.label) {
-                    case 0:
-                      return (
-                        (n = new URLSearchParams()).append("content", e),
-                        n.append("preserve_newlines", t ? "1" : "0"),
-                        null,
-                        [
-                          4,
-                          i.a.post(
-                            U.d.COMMUNITY_BASE_URL +
-                              "/actions/ConvertHTMLToBBCode",
-                            n
-                          ),
-                        ]
-                      );
-                    case 1:
-                      return [2, r.sent().data.content];
-                  }
-                });
-              });
-            }),
-            (t.prototype.ConvertBBCode = function () {
-              var e = this;
-              this.setState({ bConverting: !0 }),
-                this.ConvertHtmlToBBCode(
-                  this.state.strHTMLData,
-                  this.state.bPreserveNewLines
-                )
-                  .then(function (t) {
-                    e.m_isMounted &&
-                      (e.m_bAppend
-                        ? he.append(t, e.props.textareaRef.current)
-                        : he.overwrite(t, e.props.textareaRef.current),
-                      e.setState({ bConverting: !1, bFinishedConverting: !0 }));
-                  })
-                  .catch(function (e) {
-                    Object(P.d)(
-                      s.createElement(G.f, {
-                        strTitle: Object(T.f)("#EventEditor_ConvertHTML_Error"),
-                        strDescription: Object(T.f)(
-                          "#EventEditor_ConvertHTML_Error_Desc",
-                          e.response && e.response.data
-                            ? e.response.data.msg
-                            : e
-                        ),
-                        bAlertDialog: !0,
-                        bDestructiveWarning: !0,
-                      }),
-                      window,
-                      {
-                        strTitle: Object(T.f)("#EventEditor_ConvertHTML_Error"),
-                      }
-                    );
-                  });
-            }),
-            (t.prototype.OnCheckboxChange = function (e) {
-              var t = e.target.checked;
-              t != this.state.bPreserveNewLines &&
-                this.setState({ bPreserveNewLines: t });
-            }),
-            (t.prototype.OnTextAreaChange = function (e) {
-              this.setState({ strHTMLData: e.currentTarget.value });
-            }),
-            (t.prototype.render = function () {
-              var e = this.props.closeModal;
-              return this.state.bConverting
-                ? s.createElement(
-                    G.d,
-                    {
-                      strTitle: Object(T.f)("#EventEditor_ImportFromHTML"),
-                      strDescription: Object(T.f)(
-                        "#EventEditor_ImportFromHTML_ConversionInProgress"
-                      ),
-                      closeModal: e,
-                      bAlertDialog: !0,
-                      onOK: e,
-                      onCancel: e,
-                    },
-                    s.createElement(Y.a, null)
-                  )
-                : this.state.bFinishedConverting
-                ? s.createElement(G.d, {
-                    strTitle: Object(T.f)("#EventEditor_ImportFromHTML"),
-                    strDescription: Object(T.f)(
-                      "#EventEditor_ImportFromHTML_ConvertFinished"
-                    ),
-                    closeModal: e,
-                    bAlertDialog: !0,
-                    onOK: e,
-                    onCancel: e,
-                  })
-                : s.createElement(
-                    G.e,
-                    {
-                      onOK: this.OnConvertAndOverriteHTML,
-                      onCancel: e,
-                      className: J.a.BBCodeEditorInputStyles,
-                    },
-                    s.createElement(
-                      j.k,
-                      null,
-                      " ",
-                      Object(T.f)("#EventEditor_ImportFromHTML"),
-                      " "
-                    ),
-                    s.createElement(
-                      j.b,
-                      null,
-                      s.createElement(
-                        j.c,
-                        null,
-                        s.createElement(
-                          "div",
-                          {
-                            className: Object(S.a)(
-                              k.a.FlexColumnContainer,
-                              J.a.ImportHTMLCtn
-                            ),
-                          },
-                          s.createElement(
-                            "div",
-                            { className: k.a.FlexColumnContainer },
-                            Object(T.n)(
-                              "#EventEditor_ImportFromHTML_ConvertDescription",
-                              s.createElement(
-                                "a",
-                                {
-                                  target: U.d.IN_CLIENT ? void 0 : "_blank",
-                                  href:
-                                    "https://partner.steamgames.com/doc/marketing/event_tools/import",
-                                },
-                                Object(T.f)(
-                                  "#EventEditor_ImportFromHTML_ConvertLearn"
-                                )
-                              )
-                            )
-                          ),
-                          s.createElement("textarea", {
-                            value: this.state.strHTMLData,
-                            placeholder: Object(T.f)(
-                              "#EventEditor_ImportFromHTML_Instruction"
-                            ),
-                            className: J.a.ImportHTMLTextArea,
-                            onChange: this.OnTextAreaChange,
-                            ref: function (e) {
-                              return e && e.focus();
-                            },
-                          }),
-                          s.createElement(
-                            "div",
-                            { className: J.a.ImportHTMLCheckBoxLine },
-                            s.createElement("input", {
-                              id: "ImportFromHTMLNewLines",
-                              type: "checkbox",
-                              checked: this.state.bPreserveNewLines,
-                              onChange: this.OnCheckboxChange,
-                            }),
-                            s.createElement(
-                              "label",
-                              { htmlFor: "ImportFromHTMLNewLines" },
-                              Object(T.f)(
-                                "#EventEditor_ImportFromHTML_PreserveNewlines"
-                              ),
-                              s.createElement(
-                                "span",
-                                {
-                                  className: "ttip",
-                                  "data-tooltip-text": Object(T.f)(
-                                    "#EventEditor_ImportFromHTML_PreserveNewlines_Hint"
-                                  ),
-                                },
-                                "(?)"
-                              )
-                            )
-                          ),
-                          s.createElement(
-                            "div",
-                            null,
-                            Object(T.f)(
-                              "#EventEditor_ImportFromHTML_ConvertToBBCode"
-                            )
-                          )
-                        )
-                      ),
-                      s.createElement(
-                        j.j,
-                        null,
-                        s.createElement(j.o, {
-                          onCancel: e,
-                          strOKText: Object(T.f)("#Button_Overwrite"),
-                          onUpdate: this.OnConvertAndAppendHTML,
-                          strUpdateText: Object(T.f)("#Button_Append"),
-                        })
-                      )
-                    )
-                  );
-            }),
-            Object(r.c)([b.a], t.prototype, "OnConvertAndOverriteHTML", null),
-            Object(r.c)([b.a], t.prototype, "OnConvertAndAppendHTML", null),
-            Object(r.c)([b.a], t.prototype, "OnCheckboxChange", null),
-            Object(r.c)([b.a], t.prototype, "OnTextAreaChange", null),
-            (t = Object(r.c)([o.a], t))
-          );
-        })(s.Component);
     },
     "4SZ2": function (e, t, n) {
       e.exports = {
@@ -9475,25 +6619,25 @@ var CLSTAMP = "6575092";
     "6AJf": function (e, t, n) {
       "use strict";
       n.d(t, "b", function () {
-        return mt;
+        return ht;
       }),
         n.d(t, "f", function () {
-          return vt;
+          return gt;
         }),
         n.d(t, "a", function () {
-          return Et;
+          return Ct;
         }),
         n.d(t, "g", function () {
-          return Tt;
-        }),
-        n.d(t, "e", function () {
           return Dt;
         }),
-        n.d(t, "c", function () {
+        n.d(t, "e", function () {
           return Nt;
         }),
+        n.d(t, "c", function () {
+          return jt;
+        }),
         n.d(t, "d", function () {
-          return zt;
+          return Rt;
         });
       var r,
         a = n("mrSG"),
@@ -11104,7 +8248,7 @@ var CLSTAMP = "6575092";
                   o.createElement(
                     de.a,
                     {
-                      hideArrows: !Et(),
+                      hideArrows: !Ct(),
                       visibleElements: 1,
                       useTestScrollbar: !0,
                       bLazyRenderChildren: !0,
@@ -11822,7 +8966,7 @@ var CLSTAMP = "6575092";
                     )
                 );
               if (r.enable_faceted_browsing) {
-                var y = zt(r, a).background;
+                var y = Rt(r, a).background;
                 g = s.a.createElement(
                   oe.d,
                   {
@@ -11890,10 +9034,11 @@ var CLSTAMP = "6575092";
         Ye = n("onkS"),
         Ke = n("oVVc"),
         Qe = n("UxvL"),
-        Je = n("l2mU"),
-        Ze = n("31dG"),
-        $e = n.n(Ze);
-      function et(e, t) {
+        Je = n("rcjX"),
+        Ze = n("l2mU"),
+        $e = n("31dG"),
+        et = n.n($e);
+      function tt(e, t) {
         for (var n = [], r = 0, a = e.capsules; r < a.length; r++) {
           var i = a[r];
           if ("sub" === i.type) {
@@ -11905,11 +9050,11 @@ var CLSTAMP = "6575092";
         }
         n.length > 0 && Ke.b.LoadPackageInfo(n);
       }
-      function tt(e, t, n, r) {
+      function nt(e, t, n, r) {
         var a = e.createElement("input");
         (a.type = "hidden"), (a.name = n), (a.value = r), t.appendChild(a);
       }
-      var nt = Object(i.a)(function (e) {
+      var rt = Object(i.a)(function (e) {
           var t = Object(W.c)(),
             n = e.language,
             r = e.logo_image,
@@ -11926,7 +9071,7 @@ var CLSTAMP = "6575092";
           if (!h.formatted_final_price) return null;
           var b = h.formatted_final_price,
             _ = h.discount_end_rtime,
-            v = (h.discount_percent, Object(Je.a)(h, f)),
+            v = (h.discount_percent, Object(Ze.a)(h, f)),
             g = [b, v || ""],
             y = Y.f.apply(void 0, Object(a.g)([c], g)),
             S = Y.f.apply(void 0, Object(a.g)(["#Sale_Subscription_Save"], g)),
@@ -11937,13 +9082,13 @@ var CLSTAMP = "6575092";
             (E = Object(Y.f)(p, h.renewal_formatted_final_price)));
           var C = null;
           if (r) {
-            var A = Object(ie.a)(r, n),
+            var A = Object(Je.d)(r, n),
               w = null;
             (w =
               "string" == typeof A
                 ? o.createElement("img", { src: A })
                 : o.createElement(Qe.a, { rgSources: A })),
-              (C = o.createElement("div", { className: $e.a.LogoImg }, w));
+              (C = o.createElement("div", { className: et.a.LogoImg }, w));
           }
           var B = (function (e) {
               for (var t = 0, n = e.appids; t < n.length; t++) {
@@ -11959,8 +9104,8 @@ var CLSTAMP = "6575092";
                   "div",
                   {
                     className: Object(X.a)(
-                      $e.a.PurchaseButton,
-                      $e.a.AlreadyOwnedPackage
+                      et.a.PurchaseButton,
+                      et.a.AlreadyOwnedPackage
                     ),
                   },
                   Object(Y.f)("#Sale_Subscription_AlreadyOwnedPackage")
@@ -11970,8 +9115,8 @@ var CLSTAMP = "6575092";
                   "div",
                   {
                     className: Object(X.a)(
-                      $e.a.PurchaseButton,
-                      $e.a.AlreadyOwnedApp
+                      et.a.PurchaseButton,
+                      et.a.AlreadyOwnedApp
                     ),
                   },
                   Object(Y.f)("#Sale_Subscription_AlreadyOwnedApp")
@@ -11979,7 +9124,7 @@ var CLSTAMP = "6575092";
               : o.createElement(
                   "div",
                   {
-                    className: Object(X.a)($e.a.PurchaseButton, $e.a.UnOwned),
+                    className: Object(X.a)(et.a.PurchaseButton, et.a.UnOwned),
                     onClick: function (n) {
                       Object(m.c)(t),
                         (function (e, t, n) {
@@ -11988,10 +9133,10 @@ var CLSTAMP = "6575092";
                           (a.action = M.d.STORE_BASE_URL + "cart/"),
                             (a.method = "POST"),
                             (a.style.display = "none"),
-                            tt(document, a, "action", "add_to_cart"),
-                            tt(document, a, "subid", t.toString()),
-                            tt(document, a, "sessionid", M.d.SESSIONID),
-                            tt(document, a, "snr", M.d.SNR),
+                            nt(document, a, "action", "add_to_cart"),
+                            nt(document, a, "subid", t.toString()),
+                            nt(document, a, "sessionid", M.d.SESSIONID),
+                            nt(document, a, "snr", M.d.SNR),
                             r.document.documentElement.append(a),
                             a.submit();
                         })(n, e.sub_package_id),
@@ -12002,32 +9147,32 @@ var CLSTAMP = "6575092";
                 )),
             o.createElement(
               "div",
-              { className: $e.a.SubscriptionBlock },
+              { className: et.a.SubscriptionBlock },
               C,
               o.createElement(
                 "div",
-                { className: $e.a.PriceBlock },
+                { className: et.a.PriceBlock },
                 o.createElement(
                   "span",
                   {
                     className: Object(X.a)(
-                      $e.a.PriceDisplay,
-                      Boolean(_) ? $e.a.LimitedDiscount : ""
+                      et.a.PriceDisplay,
+                      Boolean(_) ? et.a.LimitedDiscount : ""
                     ),
                   },
                   y
                 ),
                 Boolean(v) &&
-                  o.createElement("span", { className: $e.a.SavingsDisplay }, S)
+                  o.createElement("span", { className: et.a.SavingsDisplay }, S)
               ),
               o.createElement(
                 "div",
-                { className: $e.a.BodyTextBlock },
+                { className: et.a.BodyTextBlock },
                 E,
                 Boolean(_) &&
                   o.createElement(
                     "div",
-                    { className: $e.a.ExpirationTextBlock },
+                    { className: et.a.ExpirationTextBlock },
                     Object(Y.n)(
                       "#Sale_Subscription_NewSubsOfferEnds",
                       Object(Y.o)(_)
@@ -12038,7 +9183,7 @@ var CLSTAMP = "6575092";
             )
           );
         }),
-        rt = (function (e) {
+        at = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -12049,8 +9194,8 @@ var CLSTAMP = "6575092";
                 t = this.props,
                 n = t.section,
                 r = t.language,
-                a = et(n, 12),
-                i = et(n, 1),
+                a = tt(n, 12),
+                i = tt(n, 1),
                 s =
                   null === (e = n.internal_section_data) || void 0 === e
                     ? void 0
@@ -12060,16 +9205,16 @@ var CLSTAMP = "6575092";
                 { feature: "salesubscription" },
                 o.createElement(
                   "div",
-                  { className: $e.a.MainBlock },
+                  { className: et.a.MainBlock },
                   o.createElement(
                     "span",
-                    { className: $e.a.SelectAPlan },
+                    { className: et.a.SelectAPlan },
                     Object(Y.f)("#Sale_Subscription_SelectPlan")
                   ),
                   o.createElement(
                     "div",
-                    { className: $e.a.SubscriptionListBlock },
-                    o.createElement(nt, {
+                    { className: et.a.SubscriptionListBlock },
+                    o.createElement(rt, {
                       sub_package_id: a,
                       logo_image: s,
                       language: r,
@@ -12084,7 +9229,7 @@ var CLSTAMP = "6575092";
                         "#Sale_Subscription_Annual_Button"
                       ),
                     }),
-                    o.createElement(nt, {
+                    o.createElement(rt, {
                       sub_package_id: i,
                       logo_image: s,
                       language: r,
@@ -12105,9 +9250,9 @@ var CLSTAMP = "6575092";
             (t = Object(a.c)([i.a], t))
           );
         })(o.Component),
-        at = n("qD+2"),
-        it = n("R+8l");
-      function ot(e, t, n) {
+        it = n("qD+2"),
+        ot = n("R+8l");
+      function st(e, t, n) {
         return {
           color: e,
           background:
@@ -12118,24 +9263,24 @@ var CLSTAMP = "6575092";
             " 100%)",
         };
       }
-      var st = function (e) {
+      var ct = function (e) {
           var t = e.tab,
             n = e.language,
             r = e.onTabSelected,
             a = e.classNames,
             i = e.section,
             s = e.selected,
-            c = Dt(t, n);
+            c = Nt(t, n);
           if (!c) return null;
           var l = i
             ? (function (e, t) {
                 return e
-                  ? ot(
+                  ? st(
                       t.tab_active_label_color,
                       t.tab_active_background_gradient_top,
                       t.tab_active_background_gradient_bottom
                     )
-                  : ot(
+                  : st(
                       t.tab_inactive_label_color,
                       t.tab_inactive_background_gradient_top,
                       t.tab_inactive_background_gradient_bottom
@@ -12163,7 +9308,7 @@ var CLSTAMP = "6575092";
             )
           );
         },
-        ct = (function (e) {
+        lt = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -12190,7 +9335,7 @@ var CLSTAMP = "6575092";
                       return t.type === e.type && t.id === e.id;
                     }) &&
                       (n && (n += "; "),
-                      (n += Nt(
+                      (n += jt(
                         i,
                         this.props.language,
                         this.props.event.clanSteamID.GetAccountID(),
@@ -12220,10 +9365,10 @@ var CLSTAMP = "6575092";
                     l =
                       (c =
                         "bundle" === i.type
-                          ? it.a.GetBundleInfo(i.id)
+                          ? ot.a.GetBundleInfo(i.id)
                           : "sub" === i.type
                           ? Ke.b.GetPackageInfo(i.id)
-                          : at.a.GetAppInfo(i.id)) && c.name
+                          : it.a.GetAppInfo(i.id)) && c.name
                         ? c.name
                         : s,
                     u = void 0 === i.visibility_index ? -1 : i.visibility_index,
@@ -12266,8 +9411,8 @@ var CLSTAMP = "6575092";
                 n = e.event;
               return o.createElement(
                 "div",
-                { className: Object(X.a)(pe.a.SaleSection), style: zt(t, n) },
-                o.createElement(vt, Object(a.a)({}, this.props)),
+                { className: Object(X.a)(pe.a.SaleSection), style: Rt(t, n) },
+                o.createElement(gt, Object(a.a)({}, this.props)),
                 o.createElement(
                   "div",
                   { className: pe.a.TabContentsContainer },
@@ -12278,7 +9423,7 @@ var CLSTAMP = "6575092";
             (t = Object(a.c)([i.a], t))
           );
         })(o.Component),
-        lt = (function (e) {
+        ut = (function (e) {
           function t() {
             var n = (null !== e && e.apply(this, arguments)) || this;
             return (n.state = { nMaxTabsPerRow: t.GetMaxTabsPerRow() }), n;
@@ -12300,7 +9445,7 @@ var CLSTAMP = "6575092";
               var c = Object(X.a)(pe.a.SaleSectionTabsTab),
                 l = r.tabs.map(function (e) {
                   var n = "Tab_" + e.unique_id;
-                  return o.createElement(st, {
+                  return o.createElement(ct, {
                     key: n,
                     section: r,
                     selected: e === s,
@@ -12315,7 +9460,7 @@ var CLSTAMP = "6575092";
                     },
                   });
                 }),
-                u = zt(r, a);
+                u = Rt(r, a);
               if (
                 (null === (e = null == s ? void 0 : s.tab_bar_bg_image) ||
                 void 0 === e
@@ -12362,7 +9507,7 @@ var CLSTAMP = "6575092";
             t
           );
         })(o.Component),
-        ut = function (e) {
+        pt = function (e) {
           var t = e.section,
             n = e.activeTab,
             r = e.onTabSelected,
@@ -12382,7 +9527,7 @@ var CLSTAMP = "6575092";
               (null == n ? void 0 : n.GetActiveTabUniqueID()) === e.unique_id;
             if (a && c) return null;
             var i = t.unique_id + "_tab_button_" + e.unique_id;
-            return o.createElement(st, {
+            return o.createElement(ct, {
               key: i,
               selected: a,
               tab: e,
@@ -12398,18 +9543,18 @@ var CLSTAMP = "6575092";
           });
           return o.createElement(
             "div",
-            { className: pe.a.SaleSection, style: zt(t, i) },
-            o.createElement(vt, Object(a.a)({}, e)),
+            { className: pe.a.SaleSection, style: Rt(t, i) },
+            o.createElement(gt, Object(a.a)({}, e)),
             o.createElement("div", { className: pe.a.TabButtonsCtn }, u)
           );
         },
-        pt = o.lazy(function () {
+        dt = o.lazy(function () {
           return n.e(4).then(n.bind(null, "NIbt"));
         });
-      function dt(e) {
+      function mt(e) {
         return (M.d.IN_CLIENT ? "library-" : Object(M.g)() + "-") + e;
       }
-      var mt = (function (e) {
+      var ht = (function (e) {
           function t(t) {
             var n = e.call(this, t) || this;
             return (
@@ -12554,7 +9699,7 @@ var CLSTAMP = "6575092";
                     W.a,
                     null,
                     o.createElement(
-                      ht,
+                      ft,
                       {
                         className: Object(X.a)(
                           pe.a["CustomStyle_" + r.jsondata.sale_vanity_id],
@@ -12626,7 +9771,7 @@ var CLSTAMP = "6575092";
                           r.BEventCanShowBroadcastWidget() &&
                             r.BSaleShowBroadcastAtTopOfPage()
                         ) &&
-                          o.createElement(Gt, {
+                          o.createElement(Pt, {
                             event: r,
                             broadcastEmbedContext: d,
                             bWideBroadcastDisplay: m,
@@ -12655,7 +9800,7 @@ var CLSTAMP = "6575092";
                               })
                             )
                           ),
-                        o.createElement(_t, {
+                        o.createElement(vt, {
                           bIsPreview: i,
                           event: r,
                           language: this.props.language,
@@ -12683,7 +9828,7 @@ var CLSTAMP = "6575092";
                                 marginTop: "14px",
                               },
                             },
-                            o.createElement(Lt, {
+                            o.createElement(Tt, {
                               text: Object(Y.f)("#Sale_SeeAllSpecials"),
                               url: r.jsondata.sale_browsemore_url,
                               color: r.jsondata.sale_browsemore_color,
@@ -12714,7 +9859,7 @@ var CLSTAMP = "6575092";
             (t = Object(a.c)([i.a], t))
           );
         })(o.Component),
-        ht = (function (e) {
+        ft = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.m_refBackgroundPanel = o.createRef()), t;
@@ -12767,7 +9912,7 @@ var CLSTAMP = "6575092";
             t
           );
         })(o.Component),
-        ft = (function () {
+        bt = (function () {
           function e(e, t, n) {
             var r = this;
             void 0 === n && (n = !0),
@@ -12779,7 +9924,7 @@ var CLSTAMP = "6575092";
                 (this.m_bDefaultTab = n),
                 e.capsules && 0 !== e.capsules.length
                   ? ((this.m_capsuleFilter = new Set()),
-                    It(e.capsules, t).forEach(function (e) {
+                    Lt(e.capsules, t).forEach(function (e) {
                       r.m_capsuleFilter.add(Number(e.id));
                     }))
                   : (this.m_capsuleFilter = null));
@@ -12830,7 +9975,7 @@ var CLSTAMP = "6575092";
             e
           );
         })(),
-        bt = (function (e) {
+        _t = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.m_refTabSection = o.createRef()), t;
@@ -12856,7 +10001,7 @@ var CLSTAMP = "6575092";
                           : void 0;
                     a || (a = n.tabs[0]);
                     var i = a === n.tabs[0];
-                    t.set(n, new ft(a, e.props.nSaleDayIndex, i));
+                    t.set(n, new bt(a, e.props.nSaleDayIndex, i));
                   }
                 }),
                 t
@@ -12896,7 +10041,7 @@ var CLSTAMP = "6575092";
                 s = (t.nSaleDayIndex, this.GetTabSelectionsFromURL()),
                 c = !1,
                 l = !1,
-                u = new ft(null, this.props.nSaleDayIndex),
+                u = new bt(null, this.props.nSaleDayIndex),
                 p = [{ elements: [], activeTab: u }];
               n.GetSaleSections().forEach(function (t, d) {
                 var m,
@@ -12926,7 +10071,7 @@ var CLSTAMP = "6575092";
                     !M.k.logged_in
                   )
                     c ||
-                      ((_ = o.createElement(gt, {
+                      ((_ = o.createElement(yt, {
                         section: t,
                         event: n,
                         language: r,
@@ -12938,14 +10083,14 @@ var CLSTAMP = "6575092";
                       case "events":
                       case "links":
                         _ = o.createElement(
-                          Ct,
+                          At,
                           Object(a.a)({ section: t, activeTab: f }, e.props)
                         );
                         break;
                       case "broadcast":
                         n.BEventCanShowBroadcastWidget() &&
                           !l &&
-                          ((_ = o.createElement(Gt, {
+                          ((_ = o.createElement(Pt, {
                             event: n,
                             broadcastEmbedContext:
                               e.props.broadcastEmbedContext,
@@ -12959,18 +10104,18 @@ var CLSTAMP = "6575092";
                         break;
                       case "event_description":
                         _ = o.createElement(
-                          yt,
+                          Mt,
                           Object(a.a)({ section: t }, e.props)
                         );
                         break;
                       case "doors":
                         _ = o.createElement(ce.d, {
-                          strFontFamily: kt(n.jsondata.sale_font, r),
+                          strFontFamily: Gt(n.jsondata.sale_font, r),
                         });
                         break;
                       case "text_section":
                         _ = o.createElement(
-                          Mt,
+                          St,
                           Object(a.a)({ section: t }, e.props)
                         );
                         break;
@@ -12982,7 +10127,7 @@ var CLSTAMP = "6575092";
                             null,
                             o.createElement("div", { ref: e.m_refTabSection }),
                             o.createElement(
-                              lt,
+                              ut,
                               Object(a.a)({ section: t }, e.props, {
                                 activeTab: v.GetTab(),
                                 onTabSelected: e.OnTabSelected,
@@ -12993,7 +10138,7 @@ var CLSTAMP = "6575092";
                         break;
                       case "tab_buttons":
                         _ = o.createElement(
-                          ut,
+                          pt,
                           Object(a.a)({ section: t }, e.props, {
                             activeTab: f,
                             onTabSelected: e.OnTabSelected,
@@ -13041,13 +10186,13 @@ var CLSTAMP = "6575092";
                           switch (t.internal_section_data.internal_type) {
                             case "subscription_pricing":
                               _ = o.createElement(
-                                rt,
+                                at,
                                 Object(a.a)({ section: t }, e.props)
                               );
                               break;
                             case "tab_contents":
                               _ = o.createElement(
-                                ct,
+                                lt,
                                 Object(a.a)({ section: t }, e.props, {
                                   tab: h.GetTab(),
                                   showReferences: !1,
@@ -13056,7 +10201,7 @@ var CLSTAMP = "6575092";
                               break;
                             case "tab_references":
                               _ = o.createElement(
-                                ct,
+                                lt,
                                 Object(a.a)({ section: t }, e.props, {
                                   tab: h.GetTab(),
                                   showReferences: !0,
@@ -13066,7 +10211,7 @@ var CLSTAMP = "6575092";
                         break;
                       case "sale_item_browser":
                         _ = o.createElement(
-                          Ot,
+                          Et,
                           Object(a.a)({ section: t }, e.props, { activeTab: f })
                         );
                         break;
@@ -13117,13 +10262,13 @@ var CLSTAMP = "6575092";
             (t = Object(a.c)([i.a], t))
           );
         })(o.Component),
-        _t = Object(c.i)(bt);
-      var vt = function (e) {
+        vt = Object(c.i)(_t);
+      var gt = function (e) {
           var t = e.section,
             n = e.event,
             r = e.language,
             a = e.nHiddenCapsules,
-            i = Nt(t, r, n.clanSteamID.GetAccountID());
+            i = jt(t, r, n.clanSteamID.GetAccountID());
           if (!i) return null;
           var s = o.createElement(
               "div",
@@ -13132,19 +10277,19 @@ var CLSTAMP = "6575092";
                   G.a.SaleSectionHeader,
                   "SaleSectionHeader"
                 ),
-                style: Rt(t, n, r),
+                style: kt(t, n, r),
               },
               i
             ),
             c = null;
           if (
             t.label_link &&
-            ((s = o.createElement(Tt, { url: t.label_link }, s)),
+            ((s = o.createElement(Dt, { url: t.label_link }, s)),
             "browseall" === t.label_link_style)
           ) {
             var l = Object(Y.f)("#Sale_SectionLink_BrowseAll");
             c = o.createElement(
-              Tt,
+              Dt,
               {
                 className: Object(X.a)(
                   pe.a.SectionLabelLinkButton,
@@ -13189,14 +10334,14 @@ var CLSTAMP = "6575092";
             )
           );
         },
-        gt = function (e) {
+        yt = function (e) {
           var t = e.section,
             n = e.event;
           e.language;
           return o.createElement(
             "div",
-            { className: pe.a.SaleSection, style: zt(t, n) },
-            o.createElement(vt, Object(a.a)({}, e)),
+            { className: pe.a.SaleSection, style: Rt(t, n) },
+            o.createElement(gt, Object(a.a)({}, e)),
             o.createElement(
               "div",
               { className: pe.a.SaleSectionLoginPrompt },
@@ -13209,7 +10354,7 @@ var CLSTAMP = "6575092";
             )
           );
         },
-        yt = function (e) {
+        Mt = function (e) {
           var t = e.section,
             n = e.event,
             r = e.language,
@@ -13222,15 +10367,15 @@ var CLSTAMP = "6575092";
                 R.a.SaleSectionCtn,
                 "SaleSectionForCustomCSS"
               ),
-              style: zt(t, n),
+              style: Rt(t, n),
             },
-            o.createElement(vt, Object(a.a)({}, e)),
+            o.createElement(gt, Object(a.a)({}, e)),
             o.createElement(
               "div",
               {
                 className: Object(X.a)(G.a.SaleSectionContainer, "SaleTextCtn"),
               },
-              o.createElement(ie.b, {
+              o.createElement(ie.a, {
                 text: n.GetDescriptionWithFallback(r),
                 partnerEventStore: w.c,
                 showErrorInfo: i,
@@ -13240,7 +10385,7 @@ var CLSTAMP = "6575092";
             )
           );
         },
-        Mt = Object(i.a)(function (e) {
+        St = Object(i.a)(function (e) {
           var t = e.section,
             n = e.event,
             r = e.language,
@@ -13260,15 +10405,15 @@ var CLSTAMP = "6575092";
                 R.a.SaleSectionCtn,
                 "SaleSectionForCustomCSS"
               ),
-              style: zt(t, n),
+              style: Rt(t, n),
             },
-            o.createElement(vt, Object(a.a)({}, e)),
+            o.createElement(gt, Object(a.a)({}, e)),
             o.createElement(
               "div",
               {
                 className: Object(X.a)(G.a.SaleSectionContainer, "SaleTextCtn"),
               },
-              o.createElement(ie.b, {
+              o.createElement(ie.a, {
                 text: s,
                 partnerEventStore: w.c,
                 showErrorInfo: i,
@@ -13278,7 +10423,7 @@ var CLSTAMP = "6575092";
             )
           );
         }),
-        St = (function () {
+        Ot = (function () {
           function e(e) {
             (this.m_nMaxTiers = 0),
               (this.m_nDefaultTier = 0),
@@ -13324,7 +10469,7 @@ var CLSTAMP = "6575092";
             e
           );
         })(),
-        Ot = Object(i.a)(function (e) {
+        Et = Object(i.a)(function (e) {
           var t = e.section,
             n = e.event,
             r = e.activeTab,
@@ -13345,9 +10490,9 @@ var CLSTAMP = "6575092";
                 R.a.SaleSectionCtn,
                 "SaleSectionForCustomCSS"
               ),
-              style: zt(t, n),
+              style: Rt(t, n),
             },
-            o.createElement(vt, Object(a.a)({}, e)),
+            o.createElement(gt, Object(a.a)({}, e)),
             o.createElement(
               Xe,
               Object(a.a)(
@@ -13357,10 +10502,10 @@ var CLSTAMP = "6575092";
             )
           );
         });
-      function Et() {
+      function Ct() {
         return window.innerWidth >= 940;
       }
-      var Ct = (function (e) {
+      var At = (function (e) {
           function t(t) {
             var n = e.call(this, t) || this;
             if (
@@ -13372,7 +10517,7 @@ var CLSTAMP = "6575092";
                 capsules: [],
                 facetFilterState: null,
                 strFacetUrlParam: null,
-                bScreenIsWide: Et(),
+                bScreenIsWide: Ct(),
                 nMaxCapsulesPerRow: n.GetMaxCapsulesPerRow(),
               }),
               t.section.enable_faceted_browsing)
@@ -13472,7 +10617,7 @@ var CLSTAMP = "6575092";
             }),
             (t.prototype.GetMaxCapsulesPerRow = function () {
               var e = Object(u.t)(this.props.section.section_type);
-              return Et()
+              return Ct()
                 ? e.nMaxItemsPerRow
                 : Math.min(
                     Math.max(
@@ -13530,7 +10675,7 @@ var CLSTAMP = "6575092";
               );
             }),
             (t.prototype.RandomizeCapsuleList = function (e) {
-              new St(this.props.event).RandomizeCapsules(e);
+              new Ot(this.props.event).RandomizeCapsules(e);
             }),
             (t.prototype.GetCachedRandomizedOrder = function (e, t, n) {
               var r = this.props,
@@ -13662,12 +10807,12 @@ var CLSTAMP = "6575092";
                           n.smart_section
                             ? [
                                 4,
-                                Bt(
+                                It(
                                   this.props.bIsPreview,
                                   c,
                                   i,
                                   n,
-                                  dt(o),
+                                  mt(o),
                                   this.state.facetFilterState
                                 ),
                               ]
@@ -13694,7 +10839,7 @@ var CLSTAMP = "6575092";
                       case 4:
                         return (
                           f &&
-                            (d = It(
+                            (d = Lt(
                               (d = d.filter(function (e) {
                                 return c.ShouldShowCapsule(e);
                               })),
@@ -13704,7 +10849,7 @@ var CLSTAMP = "6575092";
                             n.facets &&
                             ((v = void 0),
                             (v = n.smart_section
-                              ? It(
+                              ? Lt(
                                   (v = (v = Object(oe.e)(n.facets)).filter(
                                     function (e) {
                                       return c.ShouldShowCapsule(e);
@@ -13724,14 +10869,14 @@ var CLSTAMP = "6575092";
                                 b.SetFilteredCapsules(d))),
                           (g = !1),
                           (y = this.GetRowsToShow(e)),
-                          (E = jt(n, y)),
+                          (E = zt(n, y)),
                           (C = d.length),
                           (A = !s && "store" === Object(M.g)()),
                           (B = (y > 0 && A) || !f),
                           !n.show_as_carousel &&
                             B &&
                             (4,
-                            (L = jt(n, y) + 4),
+                            (L = zt(n, y) + 4),
                             4,
                             C > L + 4 && ((C = L), (g = !0))),
                           (F = Object(u.s)(n)) > 0 &&
@@ -13895,7 +11040,7 @@ var CLSTAMP = "6575092";
             }),
             (t.prototype.OnResize = function () {
               this.setState({
-                bScreenIsWide: Et(),
+                bScreenIsWide: Ct(),
                 nMaxCapsulesPerRow: this.GetMaxCapsulesPerRow(),
               });
             }),
@@ -13969,7 +11114,7 @@ var CLSTAMP = "6575092";
                 l = s.facetFilterState;
               e.preventDefault();
               var u = Object(oe.e)(r.facets);
-              u = It(
+              u = Lt(
                 (u = u.filter(function (e) {
                   return a.ShouldShowCapsule(e);
                 })),
@@ -14003,7 +11148,7 @@ var CLSTAMP = "6575092";
                 f = s.nMaxCapsulesPerRow,
                 b = s.bAwaitingShowContentLoading,
                 _ = this.GetSectionForSession(),
-                v = zt(_, n).background,
+                v = Rt(_, n).background,
                 g = null;
               if (c) {
                 var y = Ae({
@@ -14087,13 +11232,13 @@ var CLSTAMP = "6575092";
                       R.a.SaleSectionCtn,
                       "SaleSectionForCustomCSS"
                     ),
-                    style: zt(_, n),
+                    style: Rt(_, n),
                   },
                   o.createElement(
                     "div",
                     { className: pe.a.SaleSectionTitleCtn },
                     o.createElement(
-                      vt,
+                      gt,
                       Object(a.a)({}, this.props, { nHiddenCapsules: u })
                     ),
                     M.k.logged_in &&
@@ -14129,7 +11274,7 @@ var CLSTAMP = "6575092";
                         g
                       )
                     : o.createElement(o.Fragment, null, g),
-                  o.createElement(At, { section: _ })
+                  o.createElement(wt, { section: _ })
                 )
               );
             }),
@@ -14142,28 +11287,28 @@ var CLSTAMP = "6575092";
             (t = Object(a.c)([i.a], t))
           );
         })(o.Component),
-        At = function (e) {
+        wt = function (e) {
           var t = e.section;
           return t.label_link && !t.label_link_style
             ? o.createElement(
                 "div",
                 { className: pe.a.SaleViewAll },
                 o.createElement(
-                  Tt,
+                  Dt,
                   { url: t.label_link },
                   Object(Y.f)("#btn_live_streams_all")
                 )
               )
             : null;
         };
-      function wt(e, t) {
+      function Bt(e, t) {
         return e
           ? t.filter(function (t) {
               return e.ShouldShowOnTab(t);
             })
           : t;
       }
-      function Bt(e, t, n, r, i, o) {
+      function It(e, t, n, r, i, o) {
         var s;
         return Object(a.b)(this, void 0, void 0, function () {
           var c,
@@ -14203,7 +11348,7 @@ var CLSTAMP = "6575092";
                   (h = l || 24),
                   "tag" !== c
                     ? [3, 2]
-                    : ((f = wt),
+                    : ((f = Bt),
                       (b = [t]),
                       [
                         4,
@@ -14230,7 +11375,7 @@ var CLSTAMP = "6575092";
               case 2:
                 return "category" !== c
                   ? [3, 4]
-                  : ((_ = wt),
+                  : ((_ = Bt),
                     (v = [t]),
                     [
                       4,
@@ -14257,7 +11402,7 @@ var CLSTAMP = "6575092";
               case 4:
                 return "top_n" !== c
                   ? [3, 6]
-                  : ((g = wt), (y = [t]), [4, S.GetTopN(i, h)]);
+                  : ((g = Bt), (y = [t]), [4, S.GetTopN(i, h)]);
               case 5:
                 return [
                   2,
@@ -14291,7 +11436,7 @@ var CLSTAMP = "6575092";
                   [
                     2,
                     {
-                      capsules: (j = wt(t, E.rgAppIDs)).map(function (e) {
+                      capsules: (j = Bt(t, E.rgAppIDs)).map(function (e) {
                         return { id: e, type: "game" };
                       }),
                       bMoreRemaining: !1,
@@ -14324,7 +11469,7 @@ var CLSTAMP = "6575092";
                   [
                     2,
                     {
-                      capsules: (j = wt(t, E.appids)).map(function (e) {
+                      capsules: (j = Bt(t, E.appids)).map(function (e) {
                         return { id: e, type: "game" };
                       }),
                       bMoreRemaining: E.bHasPossibleMoreResults,
@@ -14373,7 +11518,7 @@ var CLSTAMP = "6575092";
                       "wishlist" === c
                         ? O.a.Get().GetWishlistGamesInUserOrder()
                         : O.a.Get().GetRecommendedGamesInIRPriorityOrder(),
-                    B = wt(t, w),
+                    B = Bt(t, w),
                     I = 0,
                     L = B;
                   I < L.length &&
@@ -14485,7 +11630,7 @@ var CLSTAMP = "6575092";
                 return [
                   2,
                   {
-                    capsules: (j = wt(t, j)).slice(0, h).map(function (e) {
+                    capsules: (j = Bt(t, j)).slice(0, h).map(function (e) {
                       return { id: e, type: z };
                     }),
                     bMoreRemaining: !1,
@@ -14500,18 +11645,18 @@ var CLSTAMP = "6575092";
           });
         });
       }
-      function It(e, t) {
+      function Lt(e, t) {
         return e.filter(function (e) {
           return null == e.visibility_index || e.visibility_index == t;
         });
       }
-      var Lt = function (e) {
+      var Tt = function (e) {
           var t = e.text,
             n = e.url,
             r = e.color,
             a = e.bgcolor;
           return o.createElement(
-            Tt,
+            Dt,
             {
               url: n,
               className: G.a.BrowseMoreButton,
@@ -14520,7 +11665,7 @@ var CLSTAMP = "6575092";
             t || Object(Y.f)("#Sale_BrowseMore_Text_Default")
           );
         },
-        Tt = function (e) {
+        Dt = function (e) {
           var t = Object(W.c)(),
             n = Object(J.a)(e.url, M.d.STORE_BASE_URL);
           if (n) {
@@ -14538,7 +11683,7 @@ var CLSTAMP = "6575092";
           }
           return o.createElement(o.Fragment, null, e.children);
         };
-      function Dt(e, t) {
+      function Nt(e, t) {
         return (
           Y.a.GetWithFallback(e.localized_label, t) ||
           ("#Sale_default_label" === e.default_label
@@ -14546,7 +11691,7 @@ var CLSTAMP = "6575092";
             : Object(Y.f)(e.default_label))
         );
       }
-      function Nt(e, t, n, r) {
+      function jt(e, t, n, r) {
         var a = (function (e) {
           if ("items" === e.section_type)
             switch (e.smart_section_type) {
@@ -14585,11 +11730,11 @@ var CLSTAMP = "6575092";
         }
         return i;
       }
-      function jt(e, t) {
+      function zt(e, t) {
         for (var n = Me(e), r = 0, a = 0; a < t; a++) r += n[a % n.length];
         return r;
       }
-      function zt(e, t) {
+      function Rt(e, t) {
         if (e.disable_background) return { paddingLeft: 0, paddingRight: 0 };
         var n = "";
         e.background_image &&
@@ -14610,9 +11755,9 @@ var CLSTAMP = "6575092";
             n,
         };
       }
-      function Rt(e, t, n) {
+      function kt(e, t, n) {
         return {
-          fontFamily: kt(t.jsondata.sale_font, n),
+          fontFamily: Gt(t.jsondata.sale_font, n),
           fontWeight: t.jsondata.sale_font_weight,
           fontSize: t.jsondata.sale_section_font_size,
           textTransform: t.jsondata.sale_section_disable_capitalize
@@ -14621,7 +11766,7 @@ var CLSTAMP = "6575092";
           color: e.label_color,
         };
       }
-      function kt(e, t) {
+      function Gt(e, t) {
         return (
           (e = e || ""),
           12 === t
@@ -14646,7 +11791,7 @@ var CLSTAMP = "6575092";
             : e
         );
       }
-      var Gt = function (e) {
+      var Pt = function (e) {
         var t,
           n = e.event,
           r = e.activeTab,
@@ -14699,7 +11844,7 @@ var CLSTAMP = "6575092";
                   },
                   Boolean(c) &&
                     o.createElement(
-                      pt,
+                      dt,
                       Object(a.a)({}, f, {
                         bShowCapsuleArt: !0,
                         fnFilterStreams: function (e) {
@@ -37641,14 +34786,11 @@ var CLSTAMP = "6575092";
     },
     TOXn: function (e, t, n) {
       "use strict";
-      n.d(t, "b", function () {
-        return we;
+      n.d(t, "a", function () {
+        return Ce;
       }),
-        n.d(t, "a", function () {
-          return Ie;
-        }),
-        n.d(t, "c", function () {
-          return Ge;
+        n.d(t, "b", function () {
+          return ze;
         });
       var r = n("mrSG"),
         a = n("s4NR"),
@@ -37704,7 +34846,7 @@ var CLSTAMP = "6575092";
                           );
                         break;
                       }
-                  s || e.prototype.AppendNode.call(this, Ge(o)),
+                  s || e.prototype.AppendNode.call(this, ze(o)),
                     (r = a.input.substr(a.index + o.length)),
                     (a = this.m_LinkFilter.exec(r));
                 }
@@ -37765,38 +34907,34 @@ var CLSTAMP = "6575092";
             t
           );
         })(l.a),
-        v = n("mgoM"),
-        g = n("kyHq"),
-        y = n("+VX6"),
-        M = n("kLLr"),
-        S = n("U+Q5"),
-        O = n("4P4B"),
-        E = n("iwen"),
-        C = n("6tCl"),
+        v = n("kyHq"),
+        g = n("kLLr"),
+        y = n("iwen"),
+        M = n("6tCl"),
+        S = n.n(M),
+        O = n("TyAF"),
+        E = n("TLQK"),
+        C = n("vDqi"),
         A = n.n(C),
-        w = n("TyAF"),
-        B = n("TLQK"),
-        I = n("vDqi"),
-        L = n.n(I),
-        T = n("lkRc"),
-        D = n("2vnA"),
-        N = n("odrA"),
-        j = n("bDQf"),
-        z = (function (e) {
+        w = n("lkRc"),
+        B = n("2vnA"),
+        I = n("odrA"),
+        L = n("bDQf"),
+        T = (function (e) {
           function t(t) {
             var n = e.call(this, t) || this;
             return (
-              (n.m_cancelSignal = L.a.CancelToken.source()),
+              (n.m_cancelSignal = A.a.CancelToken.source()),
               (n.state = { bLoadedMetadata: !1 }),
               (n.m_sharedFileInfo = {
                 sharedfileid: n.props.sharedFileID,
-                title: Object(B.f)("#Loading"),
+                title: Object(E.f)("#Loading"),
                 description: "",
                 type: "",
                 previewurl: "",
                 appid: 0,
                 url:
-                  T.d.COMMUNITY_BASE_URL +
+                  w.d.COMMUNITY_BASE_URL +
                   "sharedfiles/filedetails/?id=" +
                   n.props.sharedFileID,
               }),
@@ -37807,7 +34945,7 @@ var CLSTAMP = "6575092";
             Object(r.d)(t, e),
             (t.prototype.componentDidMount = function () {
               var e = this;
-              N.a
+              I.a
                 .LoadSharedFileDynamicData(
                   [this.props.sharedFileID],
                   this.m_cancelSignal
@@ -37820,7 +34958,7 @@ var CLSTAMP = "6575092";
                 })
                 .catch(function (e) {
                   return console.error(
-                    "SharedFileSnippet: " + Object(j.a)(e).strErrorMsg
+                    "SharedFileSnippet: " + Object(L.a)(e).strErrorMsg
                   );
                 });
             }),
@@ -37837,22 +34975,22 @@ var CLSTAMP = "6575092";
                 "a",
                 {
                   href: this.m_sharedFileInfo.url,
-                  className: A.a.DynamicLinkBox,
+                  className: S.a.DynamicLinkBox,
                   "data-modal-content-sizetofit": !!this.m_sharedFileInfo
                     .bSizeToFit,
                   "data-appid": this.m_sharedFileInfo.appid,
                   "data-publishedfileid": this.props.sharedFileID,
                 },
                 o.createElement("img", {
-                  className: A.a.DynamicLink_Preview,
+                  className: S.a.DynamicLink_Preview,
                   src: this.m_sharedFileInfo.previewurl,
                 }),
                 o.createElement(
                   "div",
-                  { className: A.a.DynamicLink_Content },
+                  { className: S.a.DynamicLink_Content },
                   o.createElement(
                     "div",
-                    { className: A.a.DynamicLink_Name },
+                    { className: S.a.DynamicLink_Name },
                     this.m_sharedFileInfo.title
                   ),
                   o.createElement(
@@ -37860,41 +34998,41 @@ var CLSTAMP = "6575092";
                     null,
                     o.createElement(
                       "span",
-                      { className: A.a.DynamicLink_Type },
+                      { className: S.a.DynamicLink_Type },
                       this.m_sharedFileInfo.type
                     )
                   ),
                   e &&
                     o.createElement(
                       "div",
-                      { className: A.a.DynamicLink_Author },
-                      Object(B.n)(
+                      { className: S.a.DynamicLink_Author },
+                      Object(E.n)(
                         "#EventEditor_Author",
                         o.createElement(
                           "span",
-                          { className: A.a.DynamicLink_AuthorName },
+                          { className: S.a.DynamicLink_AuthorName },
                           this.m_sharedFileInfo.personnaname
                         )
                       )
                     ),
                   o.createElement(
                     "div",
-                    { className: A.a.DynamicLink_Description },
+                    { className: S.a.DynamicLink_Description },
                     this.m_sharedFileInfo.description
                   )
                 )
               );
             }),
-            Object(r.c)([D.C], t.prototype, "m_sharedFileInfo", void 0),
-            (t = Object(r.c)([w.a], t))
+            Object(r.c)([B.C], t.prototype, "m_sharedFileInfo", void 0),
+            (t = Object(r.c)([O.a], t))
           );
         })(o.Component),
-        R = n("C4Nl"),
-        k = n("nyjn"),
-        G = n("oazx"),
-        P = n.n(G),
-        F = n("0OaU"),
-        x = function (e) {
+        D = n("C4Nl"),
+        N = n("nyjn"),
+        j = n("oazx"),
+        z = n.n(j),
+        R = n("0OaU"),
+        k = function (e) {
           var t = Object(o.useState)(!0),
             n = t[0],
             a = t[1],
@@ -37911,7 +35049,7 @@ var CLSTAMP = "6575092";
                         case 0:
                           return [
                             4,
-                            R.a
+                            D.a
                               .Get()
                               .HintLoadStoreItems(null, [e.appid], [], [], {
                                 include_trailers: !0,
@@ -37920,8 +35058,8 @@ var CLSTAMP = "6575092";
                         case 1:
                           return (
                             t.sent(),
-                            R.a.Get().BHasApp(e.appid)
-                              ? (R.a
+                            D.a.Get().BHasApp(e.appid)
+                              ? (D.a
                                   .Get()
                                   .GetApp(e.appid)
                                   .GetAllTrailers()
@@ -37933,7 +35071,7 @@ var CLSTAMP = "6575092";
                                       e.appid
                                   ),
                                   l(
-                                    Object(B.f)(
+                                    Object(E.f)(
                                       "#TrailerPlayer_CouldNotLoad",
                                       e.appid,
                                       e.trailerBaseID
@@ -37941,7 +35079,7 @@ var CLSTAMP = "6575092";
                                   )),
                                 a(!1))
                               : l(
-                                  Object(B.f)(
+                                  Object(E.f)(
                                     "#TrailerPlayer_CouldNotLoad",
                                     e.appid,
                                     e.trailerBaseID
@@ -37952,21 +35090,21 @@ var CLSTAMP = "6575092";
                       }
                     });
                   });
-                } else l(Object(B.f)("#TrailerPlayer_ID_NotProvided"));
+                } else l(Object(E.f)("#TrailerPlayer_ID_NotProvided"));
               },
               [e.appid, e.trailerBaseID]
             ),
             c)
           )
             return e.bIsPreviewMode
-              ? s.a.createElement("div", { className: P.a.ErrorDiv }, c)
+              ? s.a.createElement("div", { className: z.a.ErrorDiv }, c)
               : null;
           if (n)
-            return s.a.createElement(F.a, {
-              string: Object(B.f)("#Loading"),
+            return s.a.createElement(R.a, {
+              string: Object(E.f)("#Loading"),
               size: "small",
             });
-          var u = R.a
+          var u = D.a
               .Get()
               .GetApp(e.appid)
               .GetAllTrailers()
@@ -37979,28 +35117,28 @@ var CLSTAMP = "6575092";
                 { sURL: p.strMP4URL, sFormat: "video/mp4" },
               ],
             };
-          return s.a.createElement(k.a, {
+          return s.a.createElement(N.a, {
             bControls: !0,
             bAutoPlay: !1,
             bLoop: !1,
             video: d,
           });
         },
-        W = n("XA70"),
-        U = n("TQQK"),
-        q = n("trWU"),
-        H = n("IjL/"),
-        V =
+        G = n("XA70"),
+        P = n("TQQK"),
+        F = n("trWU"),
+        x = n("IjL/"),
+        W =
           (s.a.lazy(function () {
             return n.e(4).then(n.bind(null, "NIbt"));
           }),
           function (e) {
             var t = Object(o.useRef)(null),
-              n = Object(o.useState)(U.a.Get().GetVODForAppID(e.appid)),
+              n = Object(o.useState)(P.a.Get().GetVODForAppID(e.appid)),
               a = n[0],
               i = n[1],
               c = Object(o.useState)(
-                !Boolean(U.a.Get().GetVODForAppID(e.appid))
+                !Boolean(P.a.Get().GetVODForAppID(e.appid))
               ),
               l = c[0],
               u = c[1];
@@ -38016,7 +35154,7 @@ var CLSTAMP = "6575092";
                   if (
                     (a &&
                       a.appid != e.appid &&
-                      (n = U.a.Get().GetVODForAppID(e.appid)),
+                      (n = P.a.Get().GetVODForAppID(e.appid)),
                     !n)
                   ) {
                     u(!0),
@@ -38027,9 +35165,9 @@ var CLSTAMP = "6575092";
                             case 0:
                               return (
                                 t.current && t.current(),
-                                (a = L.a.CancelToken.source()),
+                                (a = A.a.CancelToken.source()),
                                 (t.current = a.cancel),
-                                [4, U.a.Get().LoadVODForAppID(e.appid)]
+                                [4, P.a.Get().LoadVODForAppID(e.appid)]
                               );
                             case 1:
                               return (
@@ -38050,21 +35188,21 @@ var CLSTAMP = "6575092";
                 ? s.a.createElement(
                     "div",
                     null,
-                    Object(B.f)(
+                    Object(E.f)(
                       l ? "#VODPlayer_Loading" : "#VODPlayer_ErrorLoading",
                       e.appid
                     )
                   )
                 : s.a.createElement(
                     "div",
-                    { className: W.BroadcastCtn },
+                    { className: G.BroadcastCtn },
                     s.a.createElement(
-                      H.a,
+                      x.a,
                       null,
                       s.a.createElement(
                         s.a.Suspense,
                         { fallback: s.a.createElement("div", null) },
-                        s.a.createElement(q.a, {
+                        s.a.createElement(F.a, {
                           nAppIDVOD: e.appid,
                           watchLocation: 9,
                           bStartPaused: !0,
@@ -38074,27 +35212,29 @@ var CLSTAMP = "6575092";
                   )
             );
           }),
-        X = n("02Wr"),
-        Y = n("UxvL"),
-        K = n("6Y59"),
-        Q = n("+d9t"),
-        J = n("exH9"),
-        Z = n("bxiW"),
-        $ = n("6oCP"),
-        ee = n("ir+G"),
-        te = n("TQGK"),
-        ne = n("mB/g"),
-        re = (function (e) {
+        U = n("02Wr"),
+        q = n("UxvL"),
+        H = n("6Y59"),
+        V = n("+d9t"),
+        X = n("exH9"),
+        Y = n("bxiW"),
+        K = n("6oCP"),
+        Q = n("mgoM"),
+        J = n("ir+G"),
+        Z = n("U+Q5"),
+        $ = n("TQGK"),
+        ee = n("mB/g"),
+        te = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
               (t.state = {
                 bLoading: t.props.announcementGID
-                  ? !$.c.BHasClanAnnouncementGID(t.props.announcementGID)
-                  : !$.c.BHasClanAnnouncementGID(t.props.eventGID),
+                  ? !K.c.BHasClanAnnouncementGID(t.props.announcementGID)
+                  : !K.c.BHasClanAnnouncementGID(t.props.eventGID),
                 bFailedLoad: !1,
               }),
-              (t.m_cancelSignal = L.a.CancelToken.source()),
+              (t.m_cancelSignal = A.a.CancelToken.source()),
               t
             );
           }
@@ -38123,7 +35263,7 @@ var CLSTAMP = "6575092";
                         this.state.bLoading
                           ? void 0 === n
                             ? [3, 3]
-                            : [4, te.a.LoadOGGClanInfoForIdentifier(n)]
+                            : [4, $.a.LoadOGGClanInfoForIdentifier(n)]
                           : [3, 8]
                       );
                     case 2:
@@ -38131,15 +35271,15 @@ var CLSTAMP = "6575092";
                     case 3:
                       return void 0 === o
                         ? [3, 5]
-                        : [4, te.a.LoadOGGClanInfoForGroupVanity(o)];
+                        : [4, $.a.LoadOGGClanInfoForGroupVanity(o)];
                     case 4:
                       (c = r.sent()), (s = c.clanSteamID), (r.label = 5);
                     case 5:
-                      return [4, $.c.LoadPartnerEventGeneric(s, t, i, a, 0)];
+                      return [4, K.c.LoadPartnerEventGeneric(s, t, i, a, 0)];
                     case 6:
                       return (
                         (l = r.sent()),
-                        [4, ee.a.EnsureStoreCapsuleInfoLoaded(l.appid)]
+                        [4, J.a.EnsureStoreCapsuleInfoLoaded(l.appid)]
                       );
                     case 7:
                       r.sent(),
@@ -38156,7 +35296,7 @@ var CLSTAMP = "6575092";
               });
             }),
             (t.prototype.HandleError = function (e) {
-              var t = Object(j.a)(e),
+              var t = Object(L.a)(e),
                 n = this.props,
                 r = n.eventGID,
                 a = n.announcementGID,
@@ -38187,35 +35327,35 @@ var CLSTAMP = "6575092";
                 a = e.strURL,
                 i = e.fnFilterImageURLsForKnownFailures,
                 s = e.fnImageFailureCallback;
-              if (this.state.bFailedLoad) return Ge(a);
-              if (this.state.bLoading) return o.createElement(F.a, null);
+              if (this.state.bFailedLoad) return ze(a);
+              if (this.state.bLoading) return o.createElement(R.a, null);
               var c =
                 void 0 !== n
-                  ? $.c.GetClanEventFromAnnouncementGID(n)
-                  : $.c.GetClanEventModel(r);
-              if (null == c) return Ge(a);
-              var l = Object(v.g)(T.d.LANGUAGE),
+                  ? K.c.GetClanEventFromAnnouncementGID(n)
+                  : K.c.GetClanEventModel(r);
+              if (null == c) return ze(a);
+              var l = Object(Q.g)(w.d.LANGUAGE),
                 u = c.GetImageForSizeAsArrayWithFallback(
                   "capsule",
                   l,
-                  S.c.capsule_main
+                  Z.c.capsule_main
                 );
               i && (u = i(u));
               var p = c.GetNameWithFallback(l),
                 d = c.GetSubTitleWithSummaryFallback(l),
-                m = ee.a.GetStoreCapsuleInfo(t),
-                h = Object(B.k)(c.GetStartTimeAndDateUnixSeconds());
+                m = J.a.GetStoreCapsuleInfo(t),
+                h = Object(E.k)(c.GetStartTimeAndDateUnixSeconds());
               return o.createElement(
-                ne.c,
+                ee.c,
                 {
                   eventModel: c,
-                  route: ne.a.k_eView,
-                  className: A.a.DynamicLinkBox,
+                  route: ee.a.k_eView,
+                  className: S.a.DynamicLinkBox,
                   "data-modal-content-sizetofit": !0,
                   "data-appid": t,
                 },
-                o.createElement(Y.a, {
-                  className: A.a.DynamicLink_Preview,
+                o.createElement(q.a, {
+                  className: S.a.DynamicLink_Preview,
                   rgSources: u,
                   onIncrementalError: function (e, t, n) {
                     return s && s(t);
@@ -38223,11 +35363,11 @@ var CLSTAMP = "6575092";
                 }),
                 o.createElement(
                   "div",
-                  { className: A.a.DynamicLink_Content },
+                  { className: S.a.DynamicLink_Content },
                   o.createElement(
                     "div",
-                    { className: A.a.DynamicLink_Author },
-                    Object(B.f)(
+                    { className: S.a.DynamicLink_Author },
+                    Object(E.f)(
                       28 == c.type
                         ? "#EventDisplay_Share_Announcement"
                         : "#EventDisplay_Share_Event",
@@ -38235,34 +35375,34 @@ var CLSTAMP = "6575092";
                     ),
                     o.createElement(
                       "span",
-                      { className: A.a.DynamicLink_Date },
+                      { className: S.a.DynamicLink_Date },
                       h
                     )
                   ),
                   o.createElement(
                     "div",
-                    { className: A.a.DynamicLink_Name },
+                    { className: S.a.DynamicLink_Name },
                     o.createElement(
                       "div",
-                      { className: A.a.DynamicLink_Type },
+                      { className: S.a.DynamicLink_Type },
                       p
                     )
                   ),
                   o.createElement(
                     "div",
-                    { className: A.a.DynamicLink_Description },
+                    { className: S.a.DynamicLink_Description },
                     d
                   )
                 )
               );
             }),
-            (t = Object(r.c)([w.a], t))
+            (t = Object(r.c)([O.a], t))
           );
         })(o.Component),
-        ae = n("bWts"),
-        ie = n("DTkY"),
-        oe = n.n(ie),
-        se = (function (e) {
+        ne = n("bWts"),
+        re = n("DTkY"),
+        ae = n.n(re),
+        ie = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.state = { bSummaryMode: !0, bLoadedMetaData: !1 }), t;
@@ -38280,7 +35420,7 @@ var CLSTAMP = "6575092";
                         this.props.modelID),
                         (r.label = 1);
                     case 1:
-                      return r.trys.push([1, 3, , 4]), [4, L.a.get(e)];
+                      return r.trys.push([1, 3, , 4]), [4, A.a.get(e)];
                     case 2:
                       return (
                         (t = r.sent()),
@@ -38293,7 +35433,7 @@ var CLSTAMP = "6575092";
                         this.setState({ bError: !0 }),
                         console.error(
                           "SketchFabEmbed failed to load: " +
-                            Object(j.a)(n).strErrorMsg
+                            Object(L.a)(n).strErrorMsg
                         ),
                         [3, 4]
                       );
@@ -38312,21 +35452,21 @@ var CLSTAMP = "6575092";
                 ? o.createElement(
                     "div",
                     {
-                      className: oe.a.dynamiclink_box,
+                      className: ae.a.dynamiclink_box,
                       onClick: this.OnSketchFabClick,
                     },
                     o.createElement("span", null, e),
                     o.createElement(
                       "span",
                       null,
-                      Object(B.f)("#EventDisplay_SketchFab_Error_Network")
+                      Object(E.f)("#EventDisplay_SketchFab_Error_Network")
                     )
                   )
                 : this.state.bSummaryMode
                 ? o.createElement(
                     "div",
                     {
-                      className: oe.a.dynamiclink_box,
+                      className: ae.a.dynamiclink_box,
                       onClick: this.OnSketchFabClick,
                     },
                     Boolean(this.state.bLoadedMetaData)
@@ -38334,22 +35474,22 @@ var CLSTAMP = "6575092";
                           o.Fragment,
                           null,
                           o.createElement("img", {
-                            className: oe.a.dynamiclink_preview,
+                            className: ae.a.dynamiclink_preview,
                             src: this.state.data.thumbnail_url,
                           }),
                           o.createElement("img", {
-                            className: oe.a.sketchfab_play_overlay_image,
+                            className: ae.a.sketchfab_play_overlay_image,
                           }),
                           o.createElement(
                             "div",
-                            { className: oe.a.dynamiclink_content },
+                            { className: ae.a.dynamiclink_content },
                             o.createElement(
                               "div",
-                              { className: oe.a.dynamiclink_name },
+                              { className: ae.a.dynamiclink_name },
                               o.createElement(
                                 "span",
-                                { className: oe.a.dynamiclink_type },
-                                Object(B.f)("#EventDisplay_Sketchfab")
+                                { className: ae.a.dynamiclink_type },
+                                Object(E.f)("#EventDisplay_Sketchfab")
                               ),
                               o.createElement(
                                 "div",
@@ -38360,18 +35500,18 @@ var CLSTAMP = "6575092";
                             ),
                             o.createElement(
                               "div",
-                              { className: oe.a.dynamiclink_author },
+                              { className: ae.a.dynamiclink_author },
                               this.state.data.author_name
                             )
                           )
                         )
-                      : o.createElement(F.a, { size: "medium" })
+                      : o.createElement(R.a, { size: "medium" })
                   )
                 : o.createElement(
                     "div",
-                    { className: oe.a.sketchfabmodelembedded },
+                    { className: ae.a.sketchfabmodelembedded },
                     o.createElement("iframe", {
-                      className: oe.a.sketchfabmodelembedded,
+                      className: ae.a.sketchfabmodelembedded,
                       src:
                         "https://sketchfab.com/models/" +
                         this.props.modelID +
@@ -38381,12 +35521,12 @@ var CLSTAMP = "6575092";
                     })
                   );
             }),
-            Object(r.c)([Z.a], t.prototype, "OnSketchFabClick", null),
-            (t = Object(r.c)([w.a], t))
+            Object(r.c)([Y.a], t.prototype, "OnSketchFabClick", null),
+            (t = Object(r.c)([O.a], t))
           );
         })(o.Component),
-        ce = n("cGQe"),
-        le = (function () {
+        oe = n("cGQe"),
+        se = (function () {
           function e() {}
           return (
             (e.prototype.BIsValid = function () {
@@ -38398,16 +35538,16 @@ var CLSTAMP = "6575092";
                 (this.seconds_until_drawing >= 0 || this.winner_count > 0)
               );
             }),
-            Object(r.c)([D.C], e.prototype, "giveaway_id", void 0),
-            Object(r.c)([D.C], e.prototype, "seconds_until_drawing", void 0),
-            Object(r.c)([D.C], e.prototype, "rtime_start", void 0),
-            Object(r.c)([D.C], e.prototype, "rtime_end", void 0),
-            Object(r.c)([D.C], e.prototype, "closed", void 0),
-            Object(r.c)([D.C], e.prototype, "winner_count", void 0),
+            Object(r.c)([B.C], e.prototype, "giveaway_id", void 0),
+            Object(r.c)([B.C], e.prototype, "seconds_until_drawing", void 0),
+            Object(r.c)([B.C], e.prototype, "rtime_start", void 0),
+            Object(r.c)([B.C], e.prototype, "rtime_end", void 0),
+            Object(r.c)([B.C], e.prototype, "closed", void 0),
+            Object(r.c)([B.C], e.prototype, "winner_count", void 0),
             e
           );
         })(),
-        ue = new ((function () {
+        ce = new ((function () {
           function e() {
             (this.m_mapGiveawayIDToNextDrawInfo = new Map()),
               (this.m_bLoadedFromConfig = !1);
@@ -38415,9 +35555,9 @@ var CLSTAMP = "6575092";
           return (
             (e.prototype.LazyInit = function () {
               if (!this.m_bLoadedFromConfig) {
-                var e = Object(T.h)("giveawaynextdraw", "application_config");
+                var e = Object(w.h)("giveawaynextdraw", "application_config");
                 if (e && e.giveaway_id) {
-                  var t = new le();
+                  var t = new se();
                   this.CopyToGiveaway(e, t),
                     this.m_mapGiveawayIDToNextDrawInfo.set(e.giveaway_id, t);
                 }
@@ -38455,16 +35595,16 @@ var CLSTAMP = "6575092";
                   switch (r.label) {
                     case 0:
                       return (
-                        (n = T.d.STORE_BASE_URL + "prizes/nextdraw/" + e),
+                        (n = w.d.STORE_BASE_URL + "prizes/nextdraw/" + e),
                         (a = null),
                         (i = { origin: self.origin }),
-                        [4, L.a.get(n, { params: i, cancelToken: t.token })]
+                        [4, A.a.get(n, { params: i, cancelToken: t.token })]
                       );
                     case 1:
                       return (
                         (a = r.sent()),
                         this.m_mapGiveawayIDToNextDrawInfo.has(e) ||
-                          this.m_mapGiveawayIDToNextDrawInfo.set(e, new le()),
+                          this.m_mapGiveawayIDToNextDrawInfo.set(e, new se()),
                         this.CopyToGiveaway(
                           a.data,
                           this.m_mapGiveawayIDToNextDrawInfo.get(e)
@@ -38476,23 +35616,23 @@ var CLSTAMP = "6575092";
               });
             }),
             Object(r.c)(
-              [D.C],
+              [B.C],
               e.prototype,
               "m_mapGiveawayIDToNextDrawInfo",
               void 0
             ),
-            Object(r.c)([D.k], e.prototype, "CopyToGiveaway", null),
+            Object(r.c)([B.k], e.prototype, "CopyToGiveaway", null),
             e
           );
         })())();
-      window.g_GiveawayStore = ue;
-      var pe = n("uEKC"),
-        de = (function (e) {
+      window.g_GiveawayStore = ce;
+      var le = n("uEKC"),
+        ue = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
               (t.state = { info: void 0 }),
-              (t.m_cancelSignal = L.a.CancelToken.source()),
+              (t.m_cancelSignal = A.a.CancelToken.source()),
               t
             );
           }
@@ -38513,7 +35653,7 @@ var CLSTAMP = "6575092";
                     case 0:
                       return [
                         4,
-                        ue.FirstTimeLoadGiveaway(
+                        ce.FirstTimeLoadGiveaway(
                           this.props.giveawayid,
                           this.m_cancelSignal
                         ),
@@ -38558,7 +35698,7 @@ var CLSTAMP = "6575092";
                         ? (this.ClearCountDown(),
                           [
                             4,
-                            ue.ReloadGiveaway(
+                            ce.ReloadGiveaway(
                               this.props.giveawayid,
                               this.m_cancelSignal
                             ),
@@ -38603,23 +35743,23 @@ var CLSTAMP = "6575092";
               var e = this.state.info;
               if (!e || null == e.giveaway_id || !e.BStarted()) return null;
               var t =
-                T.d.STORE_BASE_URL +
+                w.d.STORE_BASE_URL +
                 "prizes/view/" +
                 e.giveaway_id +
-                (T.d.SNR ? "?snr=" + T.d.SNR : "");
+                (w.d.SNR ? "?snr=" + w.d.SNR : "");
               return o.createElement(
                 "div",
-                { className: pe.countdownCtn },
+                { className: le.countdownCtn },
                 Boolean(e.closed) &&
                   o.createElement(
                     "div",
-                    { className: pe.Closed },
+                    { className: le.Closed },
                     e.winner_count > 0
-                      ? Object(B.f)(
+                      ? Object(E.f)(
                           "#Giveaway_Closed",
                           e.winner_count.toLocaleString()
                         )
-                      : Object(B.f)("#Giveaway_Closed_NoWinnerInfo")
+                      : Object(E.f)("#Giveaway_Closed_NoWinnerInfo")
                   ),
                 Boolean(!e.closed) &&
                   o.createElement(
@@ -38628,20 +35768,20 @@ var CLSTAMP = "6575092";
                     Boolean(e.seconds_until_drawing <= 0)
                       ? o.createElement(
                           "div",
-                          { className: pe.Throbber },
-                          o.createElement(F.a, { size: "small" }),
+                          { className: le.Throbber },
+                          o.createElement(R.a, { size: "small" }),
                           o.createElement(
                             "div",
                             null,
-                            Object(B.f)("#Giveaway_RandomDraw")
+                            Object(E.f)("#Giveaway_RandomDraw")
                           )
                         )
                       : o.createElement(
                           "div",
-                          { className: pe.CountDownCtn },
+                          { className: le.CountDownCtn },
                           o.createElement(
                             "div",
-                            { className: pe.CountDownTime },
+                            { className: le.CountDownTime },
                             this.PrintTwoDigits(
                               Math.floor(e.seconds_until_drawing / 60)
                             ) +
@@ -38650,57 +35790,57 @@ var CLSTAMP = "6575092";
                           ),
                           o.createElement(
                             "div",
-                            { className: pe.CountDownText },
-                            Object(B.f)("#Giveaway_CountDown2"),
+                            { className: le.CountDownText },
+                            Object(E.f)("#Giveaway_CountDown2"),
                             " ",
-                            Object(B.f)("#Giveaway_KeepWatching")
+                            Object(E.f)("#Giveaway_KeepWatching")
                           )
                         ),
                     Boolean(e.winner_count > 0) &&
                       o.createElement(
                         "div",
-                        { className: pe.WinnerInfo },
+                        { className: le.WinnerInfo },
                         o.createElement(
                           "div",
-                          { className: pe.WinnerCount },
+                          { className: le.WinnerCount },
                           e.winner_count.toLocaleString()
                         ),
                         o.createElement(
                           "div",
-                          { className: pe.WinnerText },
-                          Object(B.f)("#Giveaway_Congratulation")
+                          { className: le.WinnerText },
+                          Object(E.f)("#Giveaway_Congratulation")
                         )
                       )
                   ),
                 o.createElement(
-                  Q.a,
-                  { className: pe.LearnMore, href: t },
-                  Object(B.f)("#Giveaway_LearnMore")
+                  V.a,
+                  { className: le.LearnMore, href: t },
+                  Object(E.f)("#Giveaway_LearnMore")
                 )
               );
             }),
-            Object(r.c)([Z.a], t.prototype, "SetupRefreshDataInterval", null),
-            Object(r.c)([Z.a], t.prototype, "ClearRefreshInterval", null),
-            Object(r.c)([Z.a], t.prototype, "RefreshData", null),
-            Object(r.c)([Z.a], t.prototype, "SetupCountDown", null),
-            Object(r.c)([Z.a], t.prototype, "UpdateTimer", null),
-            (t = Object(r.c)([w.a], t))
+            Object(r.c)([Y.a], t.prototype, "SetupRefreshDataInterval", null),
+            Object(r.c)([Y.a], t.prototype, "ClearRefreshInterval", null),
+            Object(r.c)([Y.a], t.prototype, "RefreshData", null),
+            Object(r.c)([Y.a], t.prototype, "SetupCountDown", null),
+            Object(r.c)([Y.a], t.prototype, "UpdateTimer", null),
+            (t = Object(r.c)([O.a], t))
           );
         })(o.Component),
-        me = n("l2mU"),
-        he = n("gPCo"),
-        fe = n("5L1o"),
-        be = /(?:steampowered\.com|valve\.org\/store|store\.steamchina\.com)\/(app|bundle|sub)\/(\d+)/i,
-        _e = /(?:steamcommunity\.com|valve\.org\/community|my\.steamchina\.com)\/(games|app|ogg|gid|groups)\/(\w+)\/(?:announcements\/detail|partnerevents\/view_old_announcement)\/(\d+)/i,
-        ve = /(?:steamcommunity\.com|valve\.org\/community)\/(games|app|ogg|gid|groups)\/(\w+)\/partnerevents\/view\/(\d+)/i,
-        ge = /(?:steampowered\.com|valve\.org\/store|store\.steamchina\.com)\/(?:news|newshub)\/(group|app)\/(\w+)\/view\/(\d+)/i,
-        ye = /:\/\/medal.tv\/(?:clip|clips)\/(\d+)/i,
-        Me = /sketchfab.com\/(?:models\/(?:[^\/\s]+-)?)([a-z0-9]{32})/i,
-        Se = /twitter\.com\/(\w+)(\/?)$/i,
-        Oe = /twitter\.com\/hashtag\/(\w+)(\/?)$/i,
-        Ee = /twitch\.tv\/(\w+)(\/?)$/i,
-        Ce = /(?:steamcommunity\.com|valve\.org\/community|my\.steamchina\.com)\/id\/(\w+)(\/?)$/i;
-      function Ae(e, t) {
+        pe = n("l2mU"),
+        de = n("gPCo"),
+        me = n("5L1o"),
+        he = /(?:steampowered\.com|valve\.org\/store|store\.steamchina\.com)\/(app|bundle|sub)\/(\d+)/i,
+        fe = /(?:steamcommunity\.com|valve\.org\/community|my\.steamchina\.com)\/(games|app|ogg|gid|groups)\/(\w+)\/(?:announcements\/detail|partnerevents\/view_old_announcement)\/(\d+)/i,
+        be = /(?:steamcommunity\.com|valve\.org\/community)\/(games|app|ogg|gid|groups)\/(\w+)\/partnerevents\/view\/(\d+)/i,
+        _e = /(?:steampowered\.com|valve\.org\/store|store\.steamchina\.com)\/(?:news|newshub)\/(group|app)\/(\w+)\/view\/(\d+)/i,
+        ve = /:\/\/medal.tv\/(?:clip|clips)\/(\d+)/i,
+        ge = /sketchfab.com\/(?:models\/(?:[^\/\s]+-)?)([a-z0-9]{32})/i,
+        ye = /twitter\.com\/(\w+)(\/?)$/i,
+        Me = /twitter\.com\/hashtag\/(\w+)(\/?)$/i,
+        Se = /twitch\.tv\/(\w+)(\/?)$/i,
+        Oe = /(?:steamcommunity\.com|valve\.org\/community|my\.steamchina\.com)\/id\/(\w+)(\/?)$/i;
+      function Ee(e, t) {
         return Object(u.b)(
           e,
           (function (e) {
@@ -38717,7 +35857,7 @@ var CLSTAMP = "6575092";
           })(t)
         );
       }
-      var we = (function (e) {
+      var Ce = (function (e) {
         function t(n) {
           var r = e.call(this, n) || this;
           return (
@@ -38745,35 +35885,35 @@ var CLSTAMP = "6575092";
           (t.GetBBCodeURLComponent = function () {
             return (
               null == t.sm_InternalBBCodeURLComponent &&
-                (T.d.EREALM == g.g.k_ESteamRealmChina
+                (w.d.EREALM == v.g.k_ESteamRealmChina
                   ? (t.sm_InternalBBCodeURLComponent = [
+                      { urlRegExp: new RegExp(he), fnBBComponent: xe },
                       { urlRegExp: new RegExp(be), fnBBComponent: qe },
-                      { urlRegExp: new RegExp(ve), fnBBComponent: Xe },
-                      { urlRegExp: new RegExp(ge), fnBBComponent: Ve },
-                      { urlRegExp: new RegExp(_e), fnBBComponent: He },
-                      { urlRegExp: new RegExp(Ce), fnBBComponent: $e },
+                      { urlRegExp: new RegExp(_e), fnBBComponent: Ue },
+                      { urlRegExp: new RegExp(fe), fnBBComponent: We },
+                      { urlRegExp: new RegExp(Oe), fnBBComponent: Qe },
                     ])
                   : (t.sm_InternalBBCodeURLComponent = [
                       {
                         urlRegExp: new RegExp(/youtu.be|youtube.com/i),
-                        fnBBComponent: Pe,
+                        fnBBComponent: Re,
                       },
                       {
                         urlRegExp: new RegExp(
                           /community.+sharedfiles\/filedetails\/\?id=\d+/i
                         ),
-                        fnBBComponent: We,
+                        fnBBComponent: Pe,
                       },
+                      { urlRegExp: new RegExp(he), fnBBComponent: xe },
                       { urlRegExp: new RegExp(be), fnBBComponent: qe },
-                      { urlRegExp: new RegExp(ve), fnBBComponent: Xe },
-                      { urlRegExp: new RegExp(ge), fnBBComponent: Ve },
-                      { urlRegExp: new RegExp(_e), fnBBComponent: He },
-                      { urlRegExp: new RegExp(ye), fnBBComponent: Fe },
-                      { urlRegExp: new RegExp(Me), fnBBComponent: xe },
-                      { urlRegExp: new RegExp(Se), fnBBComponent: Qe },
-                      { urlRegExp: new RegExp(Oe), fnBBComponent: Je },
-                      { urlRegExp: new RegExp(Ee), fnBBComponent: Ze },
-                      { urlRegExp: new RegExp(Ce), fnBBComponent: $e },
+                      { urlRegExp: new RegExp(_e), fnBBComponent: Ue },
+                      { urlRegExp: new RegExp(fe), fnBBComponent: We },
+                      { urlRegExp: new RegExp(ve), fnBBComponent: ke },
+                      { urlRegExp: new RegExp(ge), fnBBComponent: Ge },
+                      { urlRegExp: new RegExp(ye), fnBBComponent: Xe },
+                      { urlRegExp: new RegExp(Me), fnBBComponent: Ye },
+                      { urlRegExp: new RegExp(Se), fnBBComponent: Ke },
+                      { urlRegExp: new RegExp(Oe), fnBBComponent: Qe },
                     ])),
               t.sm_InternalBBCodeURLComponent
             );
@@ -38790,11 +35930,11 @@ var CLSTAMP = "6575092";
           }),
           (t.BBCodeDictionary = new Map(
             Object(r.g)(Array.from(u.c.entries()), [
-              ["url", { Constructor: Le, autocloses: !1 }],
+              ["url", { Constructor: we, autocloses: !1 }],
               [
                 "h1",
                 {
-                  Constructor: u.a(u.e, ae.Header1),
+                  Constructor: u.a(u.f, ne.Header1),
                   autocloses: !1,
                   skipFollowingNewline: !0,
                 },
@@ -38802,7 +35942,7 @@ var CLSTAMP = "6575092";
               [
                 "h2",
                 {
-                  Constructor: u.a(u.f, ae.Header2),
+                  Constructor: u.a(u.g, ne.Header2),
                   autocloses: !1,
                   skipFollowingNewline: !0,
                 },
@@ -38810,19 +35950,19 @@ var CLSTAMP = "6575092";
               [
                 "h3",
                 {
-                  Constructor: u.a(u.g, ae.Header3),
+                  Constructor: u.a(u.h, ne.Header3),
                   autocloses: !1,
                   skipFollowingNewline: !0,
                 },
               ],
               [
                 "quote",
-                { Constructor: u.a(u.m, ae.BlockQuote), autocloses: !1 },
+                { Constructor: u.a(u.n, ne.BlockQuote), autocloses: !1 },
               ],
               [
                 "list",
                 {
-                  Constructor: u.a(u.h, ae.UnorderedList),
+                  Constructor: u.a(u.i, ne.UnorderedList),
                   autocloses: !1,
                   skipInternalNewline: !0,
                 },
@@ -38830,29 +35970,29 @@ var CLSTAMP = "6575092";
               [
                 "olist",
                 {
-                  Constructor: u.a(u.k, ae.OrderedList),
+                  Constructor: u.a(u.l, ne.OrderedList),
                   autocloses: !1,
                   skipInternalNewline: !0,
                 },
               ],
               [
                 "*",
-                { Constructor: u.i, autocloses: !0, skipInternalNewline: !0 },
+                { Constructor: u.j, autocloses: !0, skipInternalNewline: !0 },
               ],
-              ["img", { Constructor: De, autocloses: !1 }],
-              ["previewyoutube", { Constructor: u.l, autocloses: !1 }],
-              ["looping_media", { Constructor: u.j, autocloses: !1 }],
-              ["remindme", { Constructor: ze, autocloses: !1 }],
-              ["giveawayinfo", { Constructor: Re, autocloses: !1 }],
-              ["video", { Constructor: u.n, autocloses: !1 }],
-              ["price", { Constructor: me.b, autocloses: !1 }],
-              ["pricesavings", { Constructor: me.c, autocloses: !1 }],
-              ["trailer", { Constructor: Ne, autocloses: !0 }],
-              ["vod", { Constructor: je, autocloses: !1 }],
+              ["img", { Constructor: Ie, autocloses: !1 }],
+              ["previewyoutube", { Constructor: u.m, autocloses: !1 }],
+              ["looping_media", { Constructor: u.k, autocloses: !1 }],
+              ["remindme", { Constructor: De, autocloses: !1 }],
+              ["giveawayinfo", { Constructor: Ne, autocloses: !1 }],
+              ["video", { Constructor: u.o, autocloses: !1 }],
+              ["price", { Constructor: pe.b, autocloses: !1 }],
+              ["pricesavings", { Constructor: pe.c, autocloses: !1 }],
+              ["trailer", { Constructor: Le, autocloses: !0 }],
+              ["vod", { Constructor: Te, autocloses: !1 }],
               [
                 "speaker",
                 {
-                  Constructor: ke,
+                  Constructor: je,
                   autocloses: !1,
                   skipInternalNewline: !0,
                   allowWrapTextForCopying: !0,
@@ -38861,77 +36001,60 @@ var CLSTAMP = "6575092";
             ])
           )),
           (t.sm_InternalBBCodeURLComponent = null),
-          Object(r.c)([Z.a], t.prototype, "ElementAccumulator", null),
+          Object(r.c)([Y.a], t.prototype, "ElementAccumulator", null),
           t
         );
       })(o.Component);
-      function Be(e, t, n) {
-        var r = Object(u.d)(e, t);
+      function Ae(e, t, n) {
+        var r = Object(u.e)(e, t);
         return void 0 === r || null == r ? n : Number.parseInt(r);
       }
-      function Ie(e, t, n) {
-        var r = (null == n ? void 0 : n.rtime32_last_modified) || 0;
-        if (void 0 !== e && e.startsWith(y.c))
-          return (
-            (i = T.d.MEDIA_CDN_COMMUNITY_URL + "images/clans/") +
-            e.substr(y.c.length + 1)
-          );
-        if (void 0 !== e && e.startsWith(O.b)) {
-          var a = new Array(),
-            i = T.d.MEDIA_CDN_COMMUNITY_URL + "images/clans/",
-            o = e.substr(O.b.length + 1),
-            s = S.a.GetHashFromHashAndExt(o),
-            c = S.a.GetExtensionStringFromHashAndExt(o);
-          if (null != t) {
-            var l = Object(v.d)(t);
-            a.push(i + s + "/" + l + c + "?t=" + r),
-              4 == t &&
-                ((l = Object(v.f)(Object(v.d)(t))),
-                a.push(i + s + "/" + l + c + "?t=" + r));
-          }
-          return a.push(i + o), a;
-        }
-        return e;
-      }
-      function Le(e) {
-        var t = Object(u.d)(e.args),
-          n = (function (e) {
+      function we(e) {
+        var t,
+          n = Object(u.e)(e.args),
+          r = (function (e) {
             switch (e) {
               case "button":
-                return Object(J.a)(ae.LinkButton, "LinkButton");
+                return Object(X.a)(ne.LinkButton, "LinkButton");
               default:
-                return ae.Link;
+                return ne.Link;
             }
-          })(Object(u.d)(e.args, "style"));
-        if (void 0 === t) return e.children || "";
-        if ("string" == typeof t && t.length > 0) {
-          var r = Ie(t, e.language, e.context.event);
-          t = "string" == typeof r ? r : r[1];
+          })(Object(u.e)(e.args, "style"));
+        if (void 0 === n) return e.children || "";
+        if ("string" == typeof n && n.length > 0) {
+          var a = u.d(
+            n,
+            e.language,
+            null === (t = e.context.event) || void 0 === t
+              ? void 0
+              : t.rtime32_last_modified
+          );
+          n = "string" == typeof a ? a : a[1];
         }
-        return "string" == typeof t && t.length > 0 && "#" == t[0]
-          ? o.createElement("a", { className: n, href: t }, e.children)
-          : "steam://settings/account" == t
+        return "string" == typeof n && n.length > 0 && "#" == n[0]
+          ? o.createElement("a", { className: r, href: n }, e.children)
+          : "steam://settings/account" == n
           ? o.createElement(
-              Q.a,
-              { className: n, href: "steam://settings/account" },
+              V.a,
+              { className: r, href: "steam://settings/account" },
               e.children
             )
           : o.createElement(
-              Te,
-              { className: n, url: t, event: e.context.event },
+              Be,
+              { className: r, url: n, event: e.context.event },
               e.children
             );
       }
-      var Te = function (e) {
+      var Be = function (e) {
         var t,
           n = e.url,
           r = e.event,
           a = e.className,
           i = Object(m.g)(n);
-        Ae(i, r) &&
+        Ee(i, r) &&
           (i =
-            (T.d.IN_CLIENT ? "steam://openurl_external/" : "") +
-            T.d.COMMUNITY_BASE_URL +
+            (w.d.IN_CLIENT ? "steam://openurl_external/" : "") +
+            w.d.COMMUNITY_BASE_URL +
             "linkfilter/?url=" +
             i),
           Object(u.b)(i) && (t = "noopener nofollow");
@@ -38948,7 +36071,7 @@ var CLSTAMP = "6575092";
           o.createElement("span", { "data-tooltip-text": s }, e.children)
         );
       };
-      function De(e) {
+      function Ie(e) {
         var t = e.context,
           n = t.showErrorInfo,
           r = t.event,
@@ -38962,22 +36085,26 @@ var CLSTAMP = "6575092";
           )
         )
           return "";
-        var i = Ie(a, e.language, r);
+        var i = u.d(
+          a,
+          e.language,
+          null == r ? void 0 : r.rtime32_last_modified
+        );
         if ("string" == typeof i) {
           a = i;
           var s = void 0;
           if (r && r.BHasTag("auto_rssfeed")) s = !1;
           else {
             var c = Object(m.d)(a),
-              l = Object(m.d)(T.d.COMMUNITY_CDN_URL),
-              u = Object(m.d)(T.d.MEDIA_CDN_URL),
-              p = Object(m.d)(T.d.MEDIA_CDN_COMMUNITY_URL);
-            s = Boolean(c !== l && c !== u && c !== p);
+              l = Object(m.d)(w.d.COMMUNITY_CDN_URL),
+              p = Object(m.d)(w.d.MEDIA_CDN_URL),
+              d = Object(m.d)(w.d.MEDIA_CDN_COMMUNITY_URL);
+            s = Boolean(c !== l && c !== p && c !== d);
           }
           return (
             n || (a = a.replace("http://", "https://")),
             n
-              ? o.createElement(X.a, {
+              ? o.createElement(U.a, {
                   src: a,
                   crossOrigin: s ? "anonymous" : void 0,
                 })
@@ -38987,36 +36114,36 @@ var CLSTAMP = "6575092";
                 })
           );
         }
-        return o.createElement(Y.a, { rgSources: i });
+        return o.createElement(q.a, { rgSources: i });
       }
-      function Ne(e) {
-        var t = Be(
+      function Le(e) {
+        var t = Ae(
             e.args,
             "appid",
             e.context.event.appid ? e.context.event.appid : 0
           ),
-          n = Be(e.args, "trailerid", 0);
-        return o.createElement(x, {
+          n = Ae(e.args, "trailerid", 0);
+        return o.createElement(k, {
           appid: t,
           trailerBaseID: n,
           bIsPreviewMode: e.context.showErrorInfo,
         });
       }
-      function je(e) {
-        var t = Be(e.args, "appid", 0);
-        return o.createElement(V, {
+      function Te(e) {
+        var t = Ae(e.args, "appid", 0);
+        return o.createElement(W, {
           appid: t,
           bPreviewMode: e.context.showErrorInfo,
         });
       }
-      function ze(e) {
+      function De(e) {
         var t = e.context,
           n = t.event,
           r = t.language;
         if (n) {
-          var a = Object(u.d)(e.args) || n.GID;
+          var a = Object(u.e)(e.args) || n.GID;
           if (a)
-            return o.createElement(ce.a, {
+            return o.createElement(oe.a, {
               eventModel: n,
               eventGID: a,
               lang: r,
@@ -39024,26 +36151,26 @@ var CLSTAMP = "6575092";
         }
         return o.createElement(o.Fragment, null);
       }
-      function Re(e) {
-        var t = Object(u.d)(e.args);
+      function Ne(e) {
+        var t = Object(u.e)(e.args);
         return t
-          ? o.createElement(de, { giveawayid: t })
+          ? o.createElement(ue, { giveawayid: t })
           : o.createElement(o.Fragment, null);
       }
-      function ke(e) {
-        var t = Object(u.d)(e.args, "name"),
-          n = Object(u.d)(e.args, "title"),
-          r = Object(u.d)(e.args, "company"),
-          a = Object(u.d)(e.args, "photo");
+      function je(e) {
+        var t = Object(u.e)(e.args, "name"),
+          n = Object(u.e)(e.args, "title"),
+          r = Object(u.e)(e.args, "company"),
+          a = Object(u.e)(e.args, "photo");
         return e.context.bShowShortSpeakerInfo
-          ? o.createElement(he.c, {
+          ? o.createElement(de.c, {
               name: t,
               title: n,
               company: r,
               photo: a,
               bio: e.children,
             })
-          : o.createElement(he.a, {
+          : o.createElement(de.a, {
               name: t,
               title: n,
               company: r,
@@ -39051,15 +36178,15 @@ var CLSTAMP = "6575092";
               bio: e.children,
             });
       }
-      function Ge(e, t, n) {
+      function ze(e, t, n) {
         var r = e;
         return (
           r.toLowerCase().startsWith("http") || (r = "http://" + r),
-          o.createElement(Te, { url: r, event: t }, n || e)
+          o.createElement(Be, { url: r, event: t }, n || e)
         );
       }
-      function Pe(e, t) {
-        if (T.d.EREALM === g.g.k_ESteamRealmChina) return null;
+      function Re(e, t) {
+        if (w.d.EREALM === v.g.k_ESteamRealmChina) return null;
         var n = e.split("?"),
           r = void 0;
         if (2 == n.length) {
@@ -39077,17 +36204,17 @@ var CLSTAMP = "6575092";
           -1 != c && c + 1 < s.length && (r = s.substring(c + 1));
         }
         return void 0 !== r
-          ? o.createElement(E.a, {
+          ? o.createElement(y.a, {
               videoID: r,
               classNameAlign: "",
-              classNameSize: A.a.sizeFull,
+              classNameSize: S.a.sizeFull,
               bShowVideoImmediately: !1,
             })
-          : Ge(e, null == t ? void 0 : t.event);
+          : ze(e, null == t ? void 0 : t.event);
       }
-      function Fe(e, t) {
-        if (T.d.EREALM === g.g.k_ESteamRealmChina) return null;
-        var n = new RegExp(ye).exec(e);
+      function ke(e, t) {
+        if (w.d.EREALM === v.g.k_ESteamRealmChina) return null;
+        var n = new RegExp(ve).exec(e);
         if (n && n.length > 1) {
           var r = Number(n[1]);
           if (r > 0) {
@@ -39097,24 +36224,24 @@ var CLSTAMP = "6575092";
               "/?autoplay=0&donate=0" +
               (t && t.event ? "&steamappid=" + t.event.appid : "");
             return o.createElement("iframe", {
-              className: ae.MedalTVWidget,
+              className: ne.MedalTVWidget,
               src: a,
               frameBorder: 0,
               allow: "autoplay",
             });
           }
         }
-        return Ge(e, null == t ? void 0 : t.event);
+        return ze(e, null == t ? void 0 : t.event);
       }
-      function xe(e, t) {
-        var n = new RegExp(Me).exec(e);
+      function Ge(e, t) {
+        var n = new RegExp(ge).exec(e);
         if (n && n.length > 1) {
           var r = n[1];
-          if (r && r.length > 1) return o.createElement(se, { modelID: r });
+          if (r && r.length > 1) return o.createElement(ie, { modelID: r });
         }
-        return Ge(e, null == t ? void 0 : t.event);
+        return ze(e, null == t ? void 0 : t.event);
       }
-      function We(e, t) {
+      function Pe(e, t) {
         var n = e.split("?"),
           r = void 0;
         if (2 == n.length) {
@@ -39122,25 +36249,25 @@ var CLSTAMP = "6575092";
           "id" in a && (r = a.id.toString());
         }
         return void 0 !== r
-          ? o.createElement(z, { sharedFileID: r })
-          : Ge(e, null == t ? void 0 : t.event);
+          ? o.createElement(T, { sharedFileID: r })
+          : ze(e, null == t ? void 0 : t.event);
       }
-      function Ue(e) {
+      function Fe(e) {
         var t = Object(m.d)(e).toLocaleLowerCase(),
-          n = Object(m.d)(T.d.STORE_BASE_URL),
-          r = Object(m.d)(T.d.COMMUNITY_BASE_URL);
+          n = Object(m.d)(w.d.STORE_BASE_URL),
+          r = Object(m.d)(w.d.COMMUNITY_BASE_URL);
         return (
           t == n ||
           t == r ||
-          ("dev" === T.d.WEB_UNIVERSE &&
+          ("dev" === w.d.WEB_UNIVERSE &&
             (t.includes("steampowered.com") ||
               t.includes("steamcommunity.com") ||
               t.includes("steamchina.com")))
         );
       }
-      function qe(e, t) {
-        if (Ue(e)) {
-          var n = new RegExp(be).exec(e);
+      function xe(e, t) {
+        if (Fe(e)) {
+          var n = new RegExp(he).exec(e);
           if (n && n.length > 2) {
             var r = n[1],
               a = Number(n[2]);
@@ -39148,24 +36275,24 @@ var CLSTAMP = "6575092";
               var i = "bundle" == r ? "bundle" : "sub" == r ? "sub" : "game";
               return o.createElement(
                 "div",
-                { className: ae.AppSummaryWidgetCtn },
-                o.createElement(fe.n, { id: a, type: i })
+                { className: ne.AppSummaryWidgetCtn },
+                o.createElement(me.n, { id: a, type: i })
               );
             }
           }
         }
-        return Ge(e, null == t ? void 0 : t.event);
+        return ze(e, null == t ? void 0 : t.event);
       }
-      function He(e, t) {
-        if (Ue(e)) {
-          var n = new RegExp(_e).exec(e);
+      function We(e, t) {
+        if (Fe(e)) {
+          var n = new RegExp(fe).exec(e);
           if (n && n.length > 2) {
             var r = void 0,
               a = void 0,
               i = void 0,
               s = void 0;
             "gid" == n[1]
-              ? (a = new M.a(n[2]))
+              ? (a = new g.a(n[2]))
               : "groups" == n[1]
               ? (s = n[2])
               : isNaN(+n[2])
@@ -39180,7 +36307,7 @@ var CLSTAMP = "6575092";
               null != c &&
               c.length > 0
             )
-              return o.createElement(re, {
+              return o.createElement(te, {
                 appid: r,
                 clanSteamID: a,
                 strVanity: i,
@@ -39190,16 +36317,16 @@ var CLSTAMP = "6575092";
               });
           }
         }
-        return Ge(e, null == t ? void 0 : t.event);
+        return ze(e, null == t ? void 0 : t.event);
       }
-      function Ve(e, t) {
-        return Ye(ge, e, t);
+      function Ue(e, t) {
+        return He(_e, e, t);
       }
-      function Xe(e, t) {
-        return Ye(ve, e, t);
+      function qe(e, t) {
+        return He(be, e, t);
       }
-      function Ye(e, t, n) {
-        if (Ue(t)) {
+      function He(e, t, n) {
+        if (Fe(t)) {
           var r = new RegExp(e).exec(t);
           if (r && r.length > 2) {
             var a = void 0,
@@ -39207,9 +36334,9 @@ var CLSTAMP = "6575092";
               s = void 0,
               c = void 0;
             "gid" == r[1]
-              ? (i = new M.a(r[2]))
+              ? (i = new g.a(r[2]))
               : "group" == r[1]
-              ? (i = M.a.InitFromClanID(Number.parseInt(r[2])))
+              ? (i = g.a.InitFromClanID(Number.parseInt(r[2])))
               : "groups" == r[1]
               ? (c = r[2])
               : isNaN(+r[2])
@@ -39224,7 +36351,7 @@ var CLSTAMP = "6575092";
               null != l &&
               l.length > 0
             )
-              return o.createElement(re, {
+              return o.createElement(te, {
                 appid: a,
                 clanSteamID: i,
                 strVanity: s,
@@ -39234,39 +36361,39 @@ var CLSTAMP = "6575092";
               });
           }
         }
-        return Ge(t, null == n ? void 0 : n.event);
+        return ze(t, null == n ? void 0 : n.event);
       }
-      function Ke(e, t, n, r) {
+      function Ve(e, t, n, r) {
         var a = void 0,
           i = e.endsWith("/") ? e.length - 1 : e.length,
           s = e.lastIndexOf("/", i - 1);
         -1 != s && s + 1 < e.length && (a = e.substring(s + 1, i)),
           n && a && (a = n + a);
-        var c = Ge(e, null == r ? void 0 : r.event, null != a ? a : e);
+        var c = ze(e, null == r ? void 0 : r.event, null != a ? a : e);
         return o.createElement(
           "div",
-          { className: ae.SocialLink },
-          o.createElement("div", { className: ae.SocialIcon }, t),
+          { className: ne.SocialLink },
+          o.createElement("div", { className: ne.SocialIcon }, t),
           c
         );
       }
+      function Xe(e, t) {
+        return w.d.EREALM === v.g.k_ESteamRealmChina
+          ? null
+          : Ve(e, o.createElement(H.gb, null), "@", t);
+      }
+      function Ye(e, t) {
+        return w.d.EREALM === v.g.k_ESteamRealmChina
+          ? null
+          : Ve(e, o.createElement(H.gb, null), "#", t);
+      }
+      function Ke(e, t) {
+        return w.d.EREALM === v.g.k_ESteamRealmChina
+          ? null
+          : Ve(e, o.createElement(H.fb, null), void 0, t);
+      }
       function Qe(e, t) {
-        return T.d.EREALM === g.g.k_ESteamRealmChina
-          ? null
-          : Ke(e, o.createElement(K.gb, null), "@", t);
-      }
-      function Je(e, t) {
-        return T.d.EREALM === g.g.k_ESteamRealmChina
-          ? null
-          : Ke(e, o.createElement(K.gb, null), "#", t);
-      }
-      function Ze(e, t) {
-        return T.d.EREALM === g.g.k_ESteamRealmChina
-          ? null
-          : Ke(e, o.createElement(K.fb, null), void 0, t);
-      }
-      function $e(e, t) {
-        return Ke(e, o.createElement(K.ab, null), void 0, t);
+        return Ve(e, o.createElement(H.ab, null), void 0, t);
       }
     },
     TQGK: function (e, t, n) {
@@ -45822,7 +42949,7 @@ var CLSTAMP = "6575092";
                           J.a.EventDetailsBody
                         ),
                       },
-                      s.createElement(X.b, {
+                      s.createElement(X.a, {
                         text: E || "",
                         partnerEventStore: r,
                         showErrorInfo: l,
@@ -47562,20 +44689,26 @@ var CLSTAMP = "6575092";
     },
     ZeAL: function (e, t, n) {
       "use strict";
-      n.d(t, "d", function () {
+      n.d(t, "f", function () {
         return c;
       }),
-        n.d(t, "e", function () {
+        n.d(t, "g", function () {
           return l;
         }),
-        n.d(t, "b", function () {
+        n.d(t, "e", function () {
           return p;
         }),
-        n.d(t, "c", function () {
+        n.d(t, "d", function () {
           return d;
         }),
-        n.d(t, "a", function () {
+        n.d(t, "b", function () {
+          return m;
+        }),
+        n.d(t, "c", function () {
           return h;
+        }),
+        n.d(t, "a", function () {
+          return b;
         });
       var r = n("mrSG"),
         a = n("q1tI"),
@@ -47625,11 +44758,14 @@ var CLSTAMP = "6575092";
           "noparse",
           "url",
         ],
-        u = ["img", "previewyoutube", "looping_media", "roomeffect"];
-      c.filter(function (e) {
-        return -1 == u.indexOf(e);
-      });
-      function p(e, t, n) {
+        u = ["img", "previewyoutube", "looping_media", "roomeffect"],
+        p =
+          (c.filter(function (e) {
+            return -1 == u.indexOf(e);
+          }),
+          "{STEAM_CLAN_IMAGE}"),
+        d = "{STEAM_CLAN_LOC_IMAGE}";
+      function m(e, t, n) {
         return (
           void 0 === t && (t = c),
           void 0 === n && (n = " "),
@@ -47640,12 +44776,12 @@ var CLSTAMP = "6575092";
           e
         );
       }
-      function d(e, t, n) {
+      function h(e, t, n) {
         void 0 === t && (t = c), void 0 === n && (n = "");
         var r = "\\[\\/?(?:" + t.join("|") + ")*?.*?\\]";
         return e.replace(new RegExp(r, "gi"), n);
       }
-      function m(e, t, n) {
+      function f(e, t, n) {
         if ((void 0 === n && (n = 0), 2 == t.type)) {
           var r = t.text.indexOf("="),
             a = t.text.indexOf(" ");
@@ -47708,10 +44844,10 @@ var CLSTAMP = "6575092";
           } else (t.args = {}), (t.tag = t.text.toLocaleLowerCase());
         }
         e.push(t);
-        var o = new f();
+        var o = new _();
         return (o.type = n), o;
       }
-      var h = (function () {
+      var b = (function () {
           function e(e, t, n) {
             void 0 === t &&
               (t = function () {
@@ -47729,7 +44865,7 @@ var CLSTAMP = "6575092";
             (e.prototype.ParseBBCode = function (e, t) {
               var n = (function (e) {
                 for (
-                  var t = [], n = new f(), r = !1, a = !1, i = 0;
+                  var t = [], n = new _(), r = !1, a = !1, i = 0;
                   i < e.length;
                   i++
                 ) {
@@ -47750,10 +44886,10 @@ var CLSTAMP = "6575092";
                             ? ((n.text += o), (r = !r), (a = !1))
                             : ((n.text += o), (r = !1), (a = !1))
                           : (a && n.ConvertMalformedNodeToText(),
-                            (n = m(t, n)),
+                            (n = f(t, n)),
                             (a = !1))
                         : (n.ConvertMalformedNodeToText(),
-                          (n = m(t, n, 2)),
+                          (n = f(t, n, 2)),
                           (a = !0));
                       break;
                     case 1:
@@ -47761,7 +44897,7 @@ var CLSTAMP = "6575092";
                         ? "\\" == o
                           ? (r && (n.text += o), (r = !r))
                           : ((n.text += o), (r = !1))
-                        : ((n = m(t, n, 2)), (a = !0));
+                        : ((n = f(t, n, 2)), (a = !0));
                   }
                 }
                 return (
@@ -47881,7 +45017,7 @@ var CLSTAMP = "6575092";
             e
           );
         })(),
-        f = (function () {
+        _ = (function () {
           function e() {
             (this.type = 0), (this.text = "");
           }
@@ -59458,73 +56594,72 @@ var CLSTAMP = "6575092";
     gPCo: function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
-        return f;
+        return b;
       }),
         n.d(t, "b", function () {
-          return b;
+          return _;
         }),
         n.d(t, "c", function () {
-          return _;
+          return v;
         });
       var r = n("mrSG"),
-        a = n("q1tI"),
-        i = n.n(a),
-        o = n("TyAF"),
-        s = n("bxiW"),
-        c = n("sUmc"),
-        l = n("DWPT"),
-        u = n("XB0Y"),
-        p = n.n(u),
-        d = n("TOXn"),
-        m = n("mgoM"),
-        h = n("lkRc"),
-        f =
-          (n("5E+2"),
-          Object(o.a)(function (e) {
-            var t = e.photo
-                ? Object(d.a)(e.photo, Object(m.g)(h.d.LANGUAGE))
-                : null,
-              n = e.photo ? ("string" == typeof t ? t : t[1]) : null,
-              r = Boolean(e.title),
-              a = Boolean(e.company);
-            return i.a.createElement(
+        a = n("TyAF"),
+        i = n("q1tI"),
+        o = n.n(i),
+        s = n("rcjX"),
+        c = n("mgoM"),
+        l = n("sUmc"),
+        u = n("DWPT"),
+        p = (n("5E+2"), n("bxiW")),
+        d = n("lkRc"),
+        m = n("TOXn"),
+        h = n("XB0Y"),
+        f = n.n(h),
+        b = Object(a.a)(function (e) {
+          var t = e.photo
+              ? Object(s.d)(e.photo, Object(c.g)(d.d.LANGUAGE))
+              : null,
+            n = e.photo ? ("string" == typeof t ? t : t[1]) : null,
+            r = Boolean(e.title),
+            a = Boolean(e.company);
+          return o.a.createElement(
+            "div",
+            { className: f.a.SpeakerPopup, onMouseLeave: e.fnClose },
+            o.a.createElement(
               "div",
-              { className: p.a.SpeakerPopup, onMouseLeave: e.fnClose },
-              i.a.createElement(
+              { className: f.a.SpeakerInfoOuter },
+              e.photo && o.a.createElement("img", { src: n }),
+              o.a.createElement(
                 "div",
-                { className: p.a.SpeakerInfoOuter },
-                e.photo && i.a.createElement("img", { src: n }),
-                i.a.createElement(
-                  "div",
-                  { className: p.a.SpeakerInfoInner },
-                  i.a.createElement("div", null, e.name),
-                  (r || a) &&
-                    i.a.createElement(
-                      "div",
-                      null,
-                      r &&
-                        i.a.createElement(
-                          "span",
-                          { className: p.a.SpeakerTitle },
-                          e.title
-                        ),
-                      r && a && i.a.createElement("span", null, ", "),
-                      a && i.a.createElement("span", null, e.company)
-                    )
-                )
-              ),
-              i.a.createElement(
-                "div",
-                { className: p.a.SpeakerBio },
-                e.bio,
-                e.bioString && i.a.createElement(d.b, { text: e.bioString })
+                { className: f.a.SpeakerInfoInner },
+                o.a.createElement("div", null, e.name),
+                (r || a) &&
+                  o.a.createElement(
+                    "div",
+                    null,
+                    r &&
+                      o.a.createElement(
+                        "span",
+                        { className: f.a.SpeakerTitle },
+                        e.title
+                      ),
+                    r && a && o.a.createElement("span", null, ", "),
+                    a && o.a.createElement("span", null, e.company)
+                  )
               )
-            );
-          })),
-        b = (function (e) {
+            ),
+            o.a.createElement(
+              "div",
+              { className: f.a.SpeakerBio },
+              e.bio,
+              e.bioString && o.a.createElement(m.a, { text: e.bioString })
+            )
+          );
+        }),
+        _ = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
-            return (t.m_refAnchor = i.a.createRef()), t;
+            return (t.m_refAnchor = o.a.createRef()), t;
           }
           return (
             Object(r.d)(t, e),
@@ -59550,24 +56685,24 @@ var CLSTAMP = "6575092";
                     style: { maxWidth: 640, minHeight: n.clientHeight },
                     target: n,
                   },
-                  o = "presenter-hover-" + Math.floor(1e8 * Math.random());
+                  i = "presenter-hover-" + Math.floor(1e8 * Math.random());
                 (this.m_fnHidePopup = function () {
-                  return t.sm_embeddedElements.HideElement(n.ownerDocument, o);
+                  return t.sm_embeddedElements.HideElement(n.ownerDocument, i);
                 }),
                   window.addEventListener("scroll", this.OnScroll),
                   (this.m_nScrollPosAtHoverStart = window.scrollY);
                 t.sm_embeddedElements.ShowElementDelayed(
                   n.ownerDocument,
                   150,
-                  i.a.createElement(
-                    l.a,
+                  o.a.createElement(
+                    u.a,
                     Object(r.a)({}, a),
-                    i.a.createElement(
-                      f,
+                    o.a.createElement(
+                      b,
                       Object(r.a)({}, this.props, { fnClose: this.OnLeave })
                     )
                   ),
-                  o
+                  i
                 );
               }
             }),
@@ -59575,10 +56710,10 @@ var CLSTAMP = "6575092";
               this.ClosePopup();
             }),
             (t.prototype.render = function () {
-              return i.a.createElement(
+              return o.a.createElement(
                 "div",
                 {
-                  className: p.a.SpeakerHover,
+                  className: f.a.SpeakerHover,
                   ref: this.m_refAnchor,
                   onMouseEnter: this.OnHover,
                   onFocus: this.OnHover,
@@ -59588,17 +56723,17 @@ var CLSTAMP = "6575092";
                 this.props.children
               );
             }),
-            (t.sm_embeddedElements = new c.a(
+            (t.sm_embeddedElements = new l.a(
               "presenter-hover-source-elements"
             )),
-            Object(r.c)([s.a], t.prototype, "ClosePopup", null),
-            Object(r.c)([s.a], t.prototype, "OnScroll", null),
-            Object(r.c)([s.a], t.prototype, "OnHover", null),
-            Object(r.c)([s.a], t.prototype, "OnLeave", null),
+            Object(r.c)([p.a], t.prototype, "ClosePopup", null),
+            Object(r.c)([p.a], t.prototype, "OnScroll", null),
+            Object(r.c)([p.a], t.prototype, "OnHover", null),
+            Object(r.c)([p.a], t.prototype, "OnLeave", null),
             t
           );
-        })(i.a.Component),
-        _ = (function (e) {
+        })(o.a.Component),
+        v = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -59606,7 +56741,7 @@ var CLSTAMP = "6575092";
             Object(r.d)(t, e),
             (t.prototype.render = function () {
               var e = this.props.photo
-                  ? Object(d.a)(this.props.photo, Object(m.g)(h.d.LANGUAGE))
+                  ? Object(s.d)(this.props.photo, Object(c.g)(d.d.LANGUAGE))
                   : null,
                 t =
                   this.props.photo && !this.props.hidePhotoInCompactView
@@ -59616,36 +56751,36 @@ var CLSTAMP = "6575092";
                     : null,
                 n = Boolean(this.props.title),
                 a = Boolean(this.props.company);
-              return i.a.createElement(
+              return o.a.createElement(
                 "div",
-                { className: p.a.SpeakerOuter },
-                i.a.createElement(
-                  b,
+                { className: f.a.SpeakerOuter },
+                o.a.createElement(
+                  _,
                   Object(r.a)({}, this.props),
-                  i.a.createElement(
+                  o.a.createElement(
                     "div",
-                    { className: p.a.Speaker },
-                    i.a.createElement(
+                    { className: f.a.Speaker },
+                    o.a.createElement(
                       "div",
-                      { className: p.a.SpeakerInfoOuter },
-                      !!t && i.a.createElement("img", { src: t }),
-                      i.a.createElement(
+                      { className: f.a.SpeakerInfoOuter },
+                      !!t && o.a.createElement("img", { src: t }),
+                      o.a.createElement(
                         "div",
-                        { className: p.a.SpeakerInfoInner },
-                        i.a.createElement("div", null, this.props.name),
+                        { className: f.a.SpeakerInfoInner },
+                        o.a.createElement("div", null, this.props.name),
                         (n || a) &&
-                          i.a.createElement(
+                          o.a.createElement(
                             "div",
                             null,
                             n &&
-                              i.a.createElement(
+                              o.a.createElement(
                                 "span",
-                                { className: p.a.SpeakerTitle },
+                                { className: f.a.SpeakerTitle },
                                 this.props.title
                               ),
-                            n && a && i.a.createElement("span", null, ", "),
+                            n && a && o.a.createElement("span", null, ", "),
                             a &&
-                              i.a.createElement(
+                              o.a.createElement(
                                 "span",
                                 null,
                                 this.props.company
@@ -59659,7 +56794,7 @@ var CLSTAMP = "6575092";
             }),
             t
           );
-        })(i.a.Component);
+        })(o.a.Component);
     },
     gfbn: function (e, t, n) {
       "use strict";
@@ -60581,7 +57716,7 @@ var CLSTAMP = "6575092";
                                 return s.a.createElement(re, {
                                   key: "sale_" + t,
                                   promotionName: "sale_" + t,
-                                  language: Object(v.h)(u.d.LANGUAGE),
+                                  language: Object(v.i)(u.d.LANGUAGE),
                                 });
                               },
                               "broadcast-embed": function () {
@@ -60618,7 +57753,7 @@ var CLSTAMP = "6575092";
                                     e.match.params.salePageName,
                                   promotionName:
                                     "sale_" + e.match.params.salePageName,
-                                  language: Object(v.h)(u.d.LANGUAGE),
+                                  language: Object(v.i)(u.d.LANGUAGE),
                                 });
                               },
                             },
@@ -60638,7 +57773,7 @@ var CLSTAMP = "6575092";
                                     e.match.params.salePageName,
                                   promotionName:
                                     "sale_" + e.match.params.salePageName,
-                                  language: Object(v.h)(u.d.LANGUAGE),
+                                  language: Object(v.i)(u.d.LANGUAGE),
                                 });
                               },
                             },
@@ -60654,7 +57789,7 @@ var CLSTAMP = "6575092";
                                 return s.a.createElement(re, {
                                   key: "sale_remoteplaylanding",
                                   promotionName: "remoteplaylanding",
-                                  language: Object(v.h)(u.d.LANGUAGE),
+                                  language: Object(v.i)(u.d.LANGUAGE),
                                 });
                               },
                             },
@@ -60670,7 +57805,7 @@ var CLSTAMP = "6575092";
                                 return s.a.createElement(re, {
                                   key: "sale_together",
                                   promotionName: "sale_together",
-                                  language: Object(v.h)(u.d.LANGUAGE),
+                                  language: Object(v.i)(u.d.LANGUAGE),
                                 });
                               },
                             },
@@ -60686,7 +57821,7 @@ var CLSTAMP = "6575092";
                                 return s.a.createElement(re, {
                                   key: "sale_vrhardware",
                                   promotionName: "vrhardware",
-                                  language: Object(v.h)(u.d.LANGUAGE),
+                                  language: Object(v.i)(u.d.LANGUAGE),
                                 });
                               },
                             },
@@ -64713,7 +61848,7 @@ var CLSTAMP = "6575092";
       n.d(t, "c", function () {
         return o;
       }),
-        n.d(t, "i", function () {
+        n.d(t, "j", function () {
           return u;
         }),
         n.d(t, "b", function () {
@@ -64737,6 +61872,9 @@ var CLSTAMP = "6575092";
           return r.e;
         }),
         n.d(t, "h", function () {
+          return r.f;
+        }),
+        n.d(t, "i", function () {
           return r.g;
         });
       n("2vnA");
@@ -73278,7 +70416,7 @@ var CLSTAMP = "6575092";
               u.a.createElement(
                 "div",
                 { className: Z.a.PresenterEventStatementCtn },
-                u.a.createElement($.b, {
+                u.a.createElement($.a, {
                   text: e.event.GetSummaryWithFallback(
                     Object(d.g)(k.d.LANGUAGE)
                   ),
@@ -74850,7 +71988,7 @@ var CLSTAMP = "6575092";
                       r.sent(),
                         (n = o.b.Init(f.b))
                           .Body()
-                          .set_language(Object(i.h)(s.d.LANGUAGE)),
+                          .set_language(Object(i.i)(s.d.LANGUAGE)),
                         (a = 50),
                         (r.label = 3);
                     case 3:
@@ -77100,70 +74238,75 @@ var CLSTAMP = "6575092";
     rcjX: function (e, t, n) {
       "use strict";
       n.d(t, "c", function () {
-        return v;
+        return y;
       }),
-        n.d(t, "b", function () {
-          return g;
-        }),
         n.d(t, "d", function () {
-          return y;
-        }),
-        n.d(t, "a", function () {
           return M;
+        }),
+        n.d(t, "b", function () {
+          return S;
         }),
         n.d(t, "e", function () {
           return O;
         }),
-        n.d(t, "f", function () {
+        n.d(t, "a", function () {
           return E;
         }),
-        n.d(t, "g", function () {
-          return C;
-        }),
-        n.d(t, "m", function () {
+        n.d(t, "f", function () {
           return A;
         }),
-        n.d(t, "h", function () {
+        n.d(t, "g", function () {
           return w;
         }),
-        n.d(t, "k", function () {
+        n.d(t, "h", function () {
           return B;
         }),
-        n.d(t, "i", function () {
+        n.d(t, "n", function () {
           return I;
         }),
-        n.d(t, "l", function () {
+        n.d(t, "i", function () {
           return L;
+        }),
+        n.d(t, "l", function () {
+          return T;
         }),
         n.d(t, "j", function () {
           return D;
         }),
-        n.d(t, "n", function () {
+        n.d(t, "m", function () {
           return N;
+        }),
+        n.d(t, "k", function () {
+          return z;
+        }),
+        n.d(t, "o", function () {
+          return R;
         });
       var r = n("mrSG"),
         a = n("q1tI"),
         i = n("kyHq"),
-        o = (n("+VX6"), n("iwen")),
-        s = n("6tCl"),
-        c = n("nyjn"),
-        l = n("6Y59"),
-        u = n("+d9t"),
-        p = n("exH9"),
-        d = n("TLQK"),
-        m = n("IzPI"),
-        h = n("lkRc"),
-        f = n("MCLT"),
-        b = n("HoJB"),
-        _ = n.n(b),
-        v = new Map([
+        o = (n("+VX6"), n("U+Q5")),
+        s = n("iwen"),
+        c = n("6tCl"),
+        l = n("nyjn"),
+        u = n("6Y59"),
+        p = n("+d9t"),
+        d = n("exH9"),
+        m = n("TLQK"),
+        h = n("IzPI"),
+        f = n("lkRc"),
+        b = n("MCLT"),
+        _ = n("ZeAL"),
+        v = n("HoJB"),
+        g = n.n(v),
+        y = new Map([
           [
             "b",
             {
               Constructor: function (e) {
                 return a.createElement(
                   "div",
-                  { className: _.a.Bold },
+                  { className: g.a.Bold },
                   e.children
                 );
               },
@@ -77176,21 +74319,21 @@ var CLSTAMP = "6575092";
               Constructor: function (e) {
                 return a.createElement(
                   "div",
-                  { className: _.a.Italic },
+                  { className: g.a.Italic },
                   e.children
                 );
               },
               autocloses: !1,
             },
           ],
-          ["h1", { Constructor: O, autocloses: !1, skipFollowingNewline: !0 }],
-          ["h2", { Constructor: E, autocloses: !1, skipFollowingNewline: !0 }],
-          ["h3", { Constructor: C, autocloses: !1, skipFollowingNewline: !0 }],
+          ["h1", { Constructor: A, autocloses: !1, skipFollowingNewline: !0 }],
+          ["h2", { Constructor: w, autocloses: !1, skipFollowingNewline: !0 }],
+          ["h3", { Constructor: B, autocloses: !1, skipFollowingNewline: !0 }],
           [
             "h4",
             {
               Constructor: function (e) {
-                return S(e, Object(p.a)(_.a.Header4, "BB_Header4"));
+                return C(e, Object(d.a)(g.a.Header4, "BB_Header4"));
               },
               autocloses: !1,
               skipFollowingNewline: !0,
@@ -77200,7 +74343,7 @@ var CLSTAMP = "6575092";
             "h5",
             {
               Constructor: function (e) {
-                return S(e, Object(p.a)(_.a.Header5, "BB_Header5"));
+                return C(e, Object(d.a)(g.a.Header5, "BB_Header5"));
               },
               autocloses: !1,
               skipFollowingNewline: !0,
@@ -77212,7 +74355,7 @@ var CLSTAMP = "6575092";
               Constructor: function (e) {
                 return a.createElement(
                   "div",
-                  { className: _.a.Underline },
+                  { className: g.a.Underline },
                   e.children
                 );
               },
@@ -77225,7 +74368,7 @@ var CLSTAMP = "6575092";
               Constructor: function (e) {
                 return a.createElement(
                   "div",
-                  { className: _.a.Strike },
+                  { className: g.a.Strike },
                   e.children
                 );
               },
@@ -77238,10 +74381,10 @@ var CLSTAMP = "6575092";
               Constructor: function (e) {
                 return a.createElement(
                   "span",
-                  { className: _.a.Spoiler },
+                  { className: g.a.Spoiler },
                   a.createElement(
                     "span",
-                    { className: _.a.SpoilerText },
+                    { className: g.a.SpoilerText },
                     e.children
                   )
                 );
@@ -77253,7 +74396,7 @@ var CLSTAMP = "6575092";
             "hr",
             {
               Constructor: function (e) {
-                return a.createElement("div", { className: _.a.HR });
+                return a.createElement("div", { className: g.a.HR });
               },
               autocloses: !1,
             },
@@ -77271,8 +74414,8 @@ var CLSTAMP = "6575092";
             "url",
             {
               Constructor: function (e) {
-                var t = y(e.args),
-                  n = y(e.args, "id");
+                var t = O(e.args),
+                  n = O(e.args, "id");
                 n &&
                   "string" == typeof n &&
                   n.length > 0 &&
@@ -77289,22 +74432,22 @@ var CLSTAMP = "6575092";
                     e.children
                   );
                 return a.createElement(
-                  u.a,
-                  { href: t, id: n, bUseLinkFilter: g(t) },
+                  p.a,
+                  { href: t, id: n, bUseLinkFilter: S(t) },
                   e.children
                 );
               },
               autocloses: !1,
             },
           ],
-          ["quote", { Constructor: A, autocloses: !1 }],
+          ["quote", { Constructor: I, autocloses: !1 }],
           [
             "pullquote",
             {
               Constructor: function (e) {
                 return a.createElement(
                   "div",
-                  { className: _.a.PullQuote },
+                  { className: g.a.PullQuote },
                   e.children
                 );
               },
@@ -77317,27 +74460,27 @@ var CLSTAMP = "6575092";
               Constructor: function (e) {
                 return a.createElement(
                   "div",
-                  { className: _.a.Code },
+                  { className: g.a.Code },
                   e.children
                 );
               },
               autocloses: !1,
             },
           ],
-          ["list", { Constructor: w, autocloses: !1, skipInternalNewline: !0 }],
+          ["list", { Constructor: L, autocloses: !1, skipInternalNewline: !0 }],
           [
             "olist",
-            { Constructor: B, autocloses: !1, skipInternalNewline: !0 },
+            { Constructor: T, autocloses: !1, skipInternalNewline: !0 },
           ],
-          ["*", { Constructor: I, autocloses: !0, skipInternalNewline: !0 }],
+          ["*", { Constructor: D, autocloses: !0, skipInternalNewline: !0 }],
           [
             "table",
             {
               Constructor: function (e) {
-                var t = y(e.args, "noborder");
+                var t = O(e.args, "noborder");
                 return a.createElement(
                   "div",
-                  { className: Object(p.a)(_.a.Table, t && _.a.NoBorder) },
+                  { className: Object(d.a)(g.a.Table, t && g.a.NoBorder) },
                   e.children
                 );
               },
@@ -77351,7 +74494,7 @@ var CLSTAMP = "6575092";
               Constructor: function (e) {
                 return a.createElement(
                   "div",
-                  { className: Object(p.a)(_.a.TableRow, "BB_TableRow") },
+                  { className: Object(d.a)(g.a.TableRow, "BB_TableRow") },
                   e.children
                 );
               },
@@ -77365,7 +74508,7 @@ var CLSTAMP = "6575092";
               Constructor: function (e) {
                 return a.createElement(
                   "div",
-                  { className: _.a.TableHeader },
+                  { className: g.a.TableHeader },
                   e.children
                 );
               },
@@ -77379,7 +74522,7 @@ var CLSTAMP = "6575092";
               Constructor: function (e) {
                 return a.createElement(
                   "div",
-                  { className: Object(p.a)(_.a.TableData, "BB_TableData") },
+                  { className: Object(d.a)(g.a.TableData, "BB_TableData") },
                   e.children
                 );
               },
@@ -77391,7 +74534,7 @@ var CLSTAMP = "6575092";
             "expand",
             {
               Constructor: function (e) {
-                var t = Boolean(y(e.args, "expanded")),
+                var t = Boolean(O(e.args, "expanded")),
                   n = a.useState(t),
                   r = n[0],
                   i = n[1],
@@ -77401,57 +74544,57 @@ var CLSTAMP = "6575092";
                         return {
                           collapsed: "#Bbcode_Expand_Details_Collapsed",
                           expanded: "#Bbcode_Expand_Details_Expanded",
-                          style: _.a.ExpandSection_Details,
+                          style: g.a.ExpandSection_Details,
                         };
                       case "spoiler":
                         return {
                           collapsed: "#Bbcode_Expand_Spoiler_Collapsed",
                           expanded: "#Bbcode_Expand_Spoiler_Expanded",
-                          style: _.a.ExpandSection_Spoiler,
+                          style: g.a.ExpandSection_Spoiler,
                         };
                       case "title":
                         return {
                           collapsed: t || "#Bbcode_Expand_ShowMore_Collapsed",
                           expanded: t || "#Bbcode_Expand_ShowMore_Expanded",
-                          style: _.a.ExpandSection_WithTitle,
+                          style: g.a.ExpandSection_WithTitle,
                         };
                       default:
                       case "showmore":
                         return {
                           collapsed: "#Bbcode_Expand_ShowMore_Collapsed",
                           expanded: "#Bbcode_Expand_ShowMore_Expanded",
-                          style: _.a.ExpandSection_ShowMore,
+                          style: g.a.ExpandSection_ShowMore,
                         };
                     }
-                  })(y(e.args, "type"), y(e.args, "title"));
+                  })(O(e.args, "type"), O(e.args, "title"));
                 return a.createElement(
                   "div",
                   {
-                    className: Object(p.a)(
-                      _.a.ExpandSectionBlock,
+                    className: Object(d.a)(
+                      g.a.ExpandSectionBlock,
                       o.style,
-                      r ? _.a.ExpandSectionExpanded : _.a.ExpandSectionCollapsed
+                      r ? g.a.ExpandSectionExpanded : g.a.ExpandSectionCollapsed
                     ),
                   },
                   a.createElement(
                     "div",
                     {
-                      className: _.a.ExpandSectionHeader,
+                      className: g.a.ExpandSectionHeader,
                       onClick: function () {
                         return i(!r);
                       },
                     },
-                    Object(d.f)(r ? o.expanded : o.collapsed),
+                    Object(m.f)(r ? o.expanded : o.collapsed),
                     a.createElement(
                       "div",
-                      { className: _.a.EmbedArrow },
-                      a.createElement(l.z, { angle: r ? 180 : 0 })
+                      { className: g.a.EmbedArrow },
+                      a.createElement(u.z, { angle: r ? 180 : 0 })
                     )
                   ),
                   r &&
                     a.createElement(
                       "div",
-                      { className: _.a.ExpandSectionBody },
+                      { className: g.a.ExpandSectionBody },
                       e.children
                     )
                 );
@@ -77462,14 +74605,40 @@ var CLSTAMP = "6575092";
             },
           ],
         ]);
-      function g(e, t) {
+      new Map([
+        ["looping_media", { Constructor: z, autocloses: !1 }],
+        ["video", { Constructor: R, autocloses: !1 }],
+        ["previewyoutube", { Constructor: N, autocloses: !1 }],
+      ]);
+      function M(e, t, n) {
+        void 0 === n && (n = 0);
+        var r = f.d.MEDIA_CDN_COMMUNITY_URL + "images/clans/";
+        if (void 0 !== e && e.startsWith(_.e))
+          return r + e.substr(_.e.length + 1);
+        if (void 0 !== e && e.startsWith(_.d)) {
+          var a = new Array(),
+            s = e.substr(_.d.length + 1),
+            c = o.a.GetHashFromHashAndExt(s),
+            l = o.a.GetExtensionStringFromHashAndExt(s);
+          if (null != t) {
+            var u = Object(i.e)(t);
+            a.push(r + c + "/" + u + l + "?t=" + n),
+              4 == t &&
+                ((u = Object(i.h)(Object(i.e)(t))),
+                a.push(r + c + "/" + u + l + "?t=" + n));
+          }
+          return a.push(r + s), a;
+        }
+        return e;
+      }
+      function S(e, t) {
         if (e.startsWith("steam://")) return !1;
         if (e.startsWith("/")) return !1;
-        var n = Object(m.d)(e).toLowerCase(),
-          r = Object(m.d)(h.d.COMMUNITY_BASE_URL).toLowerCase(),
-          a = Object(m.d)(h.d.STORE_BASE_URL).toLowerCase(),
-          i = Object(m.d)(h.d.HELP_BASE_URL).toLowerCase(),
-          o = Object(m.d)(h.d.PARTNER_BASE_URL || "").toLowerCase();
+        var n = Object(h.d)(e).toLowerCase(),
+          r = Object(h.d)(f.d.COMMUNITY_BASE_URL).toLowerCase(),
+          a = Object(h.d)(f.d.STORE_BASE_URL).toLowerCase(),
+          i = Object(h.d)(f.d.HELP_BASE_URL).toLowerCase(),
+          o = Object(h.d)(f.d.PARTNER_BASE_URL || "").toLowerCase();
         return (
           n !== r &&
           n !== a &&
@@ -77483,20 +74652,20 @@ var CLSTAMP = "6575092";
               }).length)
         );
       }
-      function y(e, t) {
-        return Object(f.isNullOrUndefined)(t) ? e[""] : e[t];
+      function O(e, t) {
+        return Object(b.isNullOrUndefined)(t) ? e[""] : e[t];
       }
-      function M(e, t) {
+      function E(e, t) {
         return function (n) {
           return e(
             Object(r.a)(Object(r.a)({}, n), {
-              className: Object(p.a)(n.className, t),
+              className: Object(d.a)(n.className, t),
             })
           );
         };
       }
-      function S(e, t) {
-        var n = y(e.args, "id");
+      function C(e, t) {
+        var n = O(e.args, "id");
         return (
           n &&
             "string" == typeof n &&
@@ -77505,48 +74674,48 @@ var CLSTAMP = "6575092";
             (n = n.substring(1)),
           a.createElement(
             "div",
-            { id: n || void 0, className: Object(p.a)(t, e.className) },
+            { id: n || void 0, className: Object(d.a)(t, e.className) },
             e.children
           )
         );
       }
-      function O(e) {
-        return S(e, Object(p.a)(_.a.Header1, "BB_Header1"));
-      }
-      function E(e) {
-        return S(e, Object(p.a)(_.a.Header2, "BB_Header2"));
-      }
-      function C(e) {
-        return S(e, Object(p.a)(_.a.Header3, "BB_Header3"));
-      }
       function A(e) {
-        var t = y(e.args, "author");
+        return C(e, Object(d.a)(g.a.Header1, "BB_Header1"));
+      }
+      function w(e) {
+        return C(e, Object(d.a)(g.a.Header2, "BB_Header2"));
+      }
+      function B(e) {
+        return C(e, Object(d.a)(g.a.Header3, "BB_Header3"));
+      }
+      function I(e) {
+        var t = O(e.args, "author");
         return a.createElement(
           "blockquote",
-          { className: Object(p.a)(_.a.BlockQuote, e.className) },
+          { className: Object(d.a)(g.a.BlockQuote, e.className) },
           !!t &&
             a.createElement(
               "div",
-              { className: _.a.QuoteAuthor },
-              Object(d.f)("#Bbcode_Originally_Posted_By") + " ",
+              { className: g.a.QuoteAuthor },
+              Object(m.f)("#Bbcode_Originally_Posted_By") + " ",
               " ",
               a.createElement("b", null, t + ":")
             ),
           e.children
         );
       }
-      function w(e) {
-        return a.createElement("ul", { className: _.a.List }, e.children);
+      function L(e) {
+        return a.createElement("ul", { className: g.a.List }, e.children);
       }
-      function B(e) {
+      function T(e) {
         return a.createElement(
           "ol",
-          { className: _.a.OrderedList },
+          { className: g.a.OrderedList },
           e.children
         );
       }
-      function I(e) {
-        var t = y(e.args, "id");
+      function D(e) {
+        var t = O(e.args, "id");
         return (
           t &&
             "string" == typeof t &&
@@ -77555,27 +74724,27 @@ var CLSTAMP = "6575092";
             (t = t.substring(1)),
           a.createElement(
             "li",
-            { className: _.a.ListItem, id: t || void 0 },
+            { className: g.a.ListItem, id: t || void 0 },
             e.children
           )
         );
       }
-      function L(e) {
-        if (h.d.EREALM === i.g.k_ESteamRealmChina) return null;
-        var t = y(e.args);
+      function N(e) {
+        if (f.d.EREALM === i.g.k_ESteamRealmChina) return null;
+        var t = O(e.args);
         if (t) {
           var n = t.split(";");
           if (2 == n.length) {
             var r = n[0],
-              c = n[1].toLocaleLowerCase(),
-              l = "full" == c ? s.sizeFull : s.sizeThumb,
+              o = n[1].toLocaleLowerCase(),
+              l = "full" == o ? c.sizeFull : c.sizeThumb,
               u =
-                "full" == c
+                "full" == o
                   ? ""
-                  : "leftthumb" == c
-                  ? s.floatLeft
-                  : s.floatRight;
-            return a.createElement(o.a, {
+                  : "leftthumb" == o
+                  ? c.floatLeft
+                  : c.floatRight;
+            return a.createElement(s.a, {
               videoID: r,
               classNameAlign: u,
               classNameSize: l,
@@ -77585,43 +74754,43 @@ var CLSTAMP = "6575092";
         }
         return a.createElement(a.Fragment, null);
       }
-      function T(e) {
-        var t = y(e.args, "poster");
-        t && (t = Object(m.h)(t));
+      function j(e) {
+        var t = O(e.args, "poster");
+        t && (t = Object(h.h)(t));
         var n = new Array(),
-          r = y(e.args, "mp4");
-        r && n.push({ sURL: Object(m.h)(r), sFormat: "video/mp4" });
-        var a = y(e.args, "webm");
-        a && n.push({ sURL: Object(m.h)(a), sFormat: "video/webm" });
+          r = O(e.args, "mp4");
+        r && n.push({ sURL: Object(h.h)(r), sFormat: "video/mp4" });
+        var a = O(e.args, "webm");
+        a && n.push({ sURL: Object(h.h)(a), sFormat: "video/webm" });
         for (var o = new Array(), s = 0; s < 30; s++) {
-          var c = y(e.args, "sub_" + Object(i.f)(s));
+          var c = O(e.args, "sub_" + Object(i.f)(s));
           c &&
-            o.push({ sURL: Object(m.h)(c), eLanguage: s, sKind: "subtitles" });
-          var l = y(e.args, "cap_" + Object(i.f)(s));
-          l && o.push({ sURL: Object(m.h)(l), eLanguage: s, sKind: "caption" });
+            o.push({ sURL: Object(h.h)(c), eLanguage: s, sKind: "subtitles" });
+          var l = O(e.args, "cap_" + Object(i.f)(s));
+          l && o.push({ sURL: Object(h.h)(l), eLanguage: s, sKind: "caption" });
         }
         return { sPoster: t, rgVideoSources: n, rgVideoTracks: o };
       }
-      function D(e) {
-        var t = T(e);
-        return a.createElement(c.a, {
+      function z(e) {
+        var t = j(e);
+        return a.createElement(l.a, {
           video: t,
           bAutoPlay: !0,
           bControls: !1,
           bLoop: !0,
         });
       }
-      function N(e) {
-        var t = T(e),
+      function R(e) {
+        var t = j(e),
           n = e.children ? e.children.toString() : void 0;
         n &&
           t.rgVideoSources.push({
-            sURL: Object(m.h)(n),
+            sURL: Object(h.h)(n),
             sFormat: "video/webm",
           });
-        var r = y(e.args, "autoplay"),
+        var r = O(e.args, "autoplay"),
           i = "0" !== r && "off" !== r && "false" !== r;
-        return a.createElement(c.a, {
+        return a.createElement(l.a, {
           video: t,
           bAutoPlay: i,
           bControls: !0,
@@ -85053,7 +82222,7 @@ var CLSTAMP = "6575092";
                       ),
                       onContextMenu: F.d.IN_CLIENT ? g.g : void 0,
                     },
-                    s.createElement(M.b, {
+                    s.createElement(M.a, {
                       text: b,
                       partnerEventStore: r,
                       event: t,
@@ -85529,10 +82698,10 @@ var CLSTAMP = "6575092";
     ylkE: function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
-        return ie;
+        return Je;
       }),
         n.d(t, "b", function () {
-          return oe;
+          return Ze;
         });
       var r = n("mrSG"),
         a = n("q1tI"),
@@ -85557,14 +82726,2834 @@ var CLSTAMP = "6575092";
         O = n("kLLr"),
         E = n("oFam"),
         C = n("Qcoi"),
-        A = n("4P4B"),
-        w = n("mB/g"),
-        B = n("bDQf"),
-        I = n("0OaU"),
-        L = n("TOXn"),
-        T = n("fkaw"),
-        D = n.n(T),
-        N = Object(o.a)(function (e) {
+        A = n("TtDX"),
+        w = n("+VX6"),
+        B = n("U+Q5"),
+        I = n("a5LV"),
+        L = n("Gorr"),
+        T = n("i8i4"),
+        D = n("2vnA"),
+        N = n("I3Kc"),
+        j = n.n(N),
+        z = (function (e) {
+          function t(t) {
+            var n = e.call(this, t) || this;
+            return (
+              (n.m_rgCurrentMatches = []),
+              (n.m_mapMatchByKey = new Map()),
+              (n.m_hMobxSearchDisposer = Object(D.l)(function () {
+                return Object(r.b)(n, void 0, void 0, function () {
+                  return Object(r.e)(this, function (e) {
+                    switch (e.label) {
+                      case 0:
+                        return [
+                          4,
+                          this.UpdateSearchResults(this.props.strSearch),
+                        ];
+                      case 1:
+                        return e.sent(), this.forceUpdate(), [2];
+                    }
+                  });
+                });
+              })),
+              (n.state = { selectedIndex: void 0 }),
+              n
+            );
+          }
+          return (
+            Object(r.d)(t, e),
+            (t.prototype.OnKeyDown = function (e) {
+              this.BHandleKeyPress(e.keyCode) && e.preventDefault();
+            }),
+            (t.prototype.BHandleKeyPress = function (e) {
+              switch (e) {
+                case 38:
+                  this.SetSelectedIndexDelta(-1);
+                  break;
+                case 40:
+                  this.SetSelectedIndexDelta(1);
+                  break;
+                case 36:
+                  this.SetSelectedIndex(0);
+                  break;
+                case 33:
+                  this.SetSelectedIndexDelta(-this.GetPageSize());
+                  break;
+                case 35:
+                  this.SetSelectedIndex(-1);
+                  break;
+                case 34:
+                  this.SetSelectedIndexDelta(this.GetPageSize());
+                  break;
+                case 13:
+                case 9:
+                  if (void 0 === this.state.selectedIndex)
+                    return (
+                      this.props.onSuggestionSelected(this.props.strSearch), !1
+                    );
+                  this.ChooseSuggestion(
+                    this.m_rgCurrentMatches[this.state.selectedIndex]
+                  );
+                  break;
+                case 27:
+                  this.props.onSuggestionSelected(this.props.strSearch);
+                  break;
+                default:
+                  return !1;
+              }
+              return !0;
+            }),
+            (t.prototype.GetPageSize = function () {
+              var e = T.findDOMNode(this),
+                t = e && e.firstElementChild,
+                n = this.m_rgCurrentMatches.length;
+              if (
+                (n > this.getMaxMatches() && (n = this.getMaxMatches()), t && n)
+              ) {
+                var r = t.scrollHeight / n,
+                  a = t.clientHeight / r;
+                return Math.max(1, Math.floor(a));
+              }
+              return 5;
+            }),
+            (t.prototype.ChooseSuggestion = function (e) {
+              this.props.onSuggestionSelected(
+                this.props.strSearch,
+                e ? this.getSelection(e) : void 0
+              );
+            }),
+            (t.prototype.SetSelectedIndexDelta = function (e) {
+              void 0 !== this.state.selectedIndex
+                ? this.SetSelectedIndex(this.state.selectedIndex + e)
+                : this.SetSelectedIndex(1 === e ? 0 : e);
+            }),
+            (t.prototype.SetSelectedIndex = function (e) {
+              if (this.m_rgCurrentMatches.length) {
+                var t = this.m_rgCurrentMatches.length;
+                t > this.getMaxMatches() && (t = this.getMaxMatches()),
+                  (e %= t) < 0 && (e += t),
+                  this.setState({ selectedIndex: e });
+              }
+            }),
+            (t.prototype.FindKeyIndex = function (e) {
+              if (!this.m_mapMatchByKey.size && this.m_rgCurrentMatches.length)
+                for (var t = 0; t < this.m_rgCurrentMatches.length; t++)
+                  this.m_mapMatchByKey.set(
+                    this.getKey(this.m_rgCurrentMatches[t]),
+                    t
+                  );
+              return this.m_mapMatchByKey.get(e);
+            }),
+            (t.prototype.OnClickSuggestion = function (e) {
+              var t = this.FindKeyIndex(e);
+              void 0 !== t && this.ChooseSuggestion(this.m_rgCurrentMatches[t]);
+            }),
+            (t.prototype.OnMouseOverSuggestion = function (e) {
+              var t = this.FindKeyIndex(e);
+              void 0 !== t && this.SetSelectedIndex(t);
+            }),
+            (t.prototype.BindSelectedElement = function (e) {
+              var t = T.findDOMNode(this),
+                n = T.findDOMNode(e),
+                r = t && t.firstElementChild;
+              n &&
+                r &&
+                (r.scrollTop + r.clientHeight < n.offsetTop ||
+                  n.offsetTop < r.scrollTop) &&
+                n.scrollIntoView();
+            }),
+            (t.prototype.UpdateSearchResults = function (e) {
+              return Object(r.b)(this, void 0, void 0, function () {
+                var t;
+                return Object(r.e)(this, function (n) {
+                  switch (n.label) {
+                    case 0:
+                      return (t = this), [4, this.performSearch(e)];
+                    case 1:
+                      return (
+                        (t.m_rgCurrentMatches = n.sent()),
+                        (this.m_strLastSearch = e),
+                        this.m_mapMatchByKey.clear(),
+                        this.m_rgCurrentMatches.length
+                          ? this.state && void 0 !== this.state.selectedIndex
+                            ? this.state.selectedIndex >=
+                                this.m_rgCurrentMatches.length &&
+                              this.setState({ selectedIndex: 0 })
+                            : (void 0 ===
+                                this.props
+                                  .nMinimumSearchLengthBeforeAutoSelection ||
+                                e.length >=
+                                  this.props
+                                    .nMinimumSearchLengthBeforeAutoSelection) &&
+                              this.setState({ selectedIndex: 0 })
+                          : this.state &&
+                            void 0 !== this.state.selectedIndex &&
+                            this.setState({ selectedIndex: void 0 }),
+                        [2]
+                      );
+                  }
+                });
+              });
+            }),
+            (t.prototype.componentWillUnmount = function () {
+              this.m_hMobxSearchDisposer &&
+                (this.m_hMobxSearchDisposer(),
+                (this.m_hMobxSearchDisposer = void 0));
+            }),
+            (t.prototype.componentDidUpdate = function (e) {
+              return Object(r.b)(this, void 0, void 0, function () {
+                return Object(r.e)(this, function (e) {
+                  switch (e.label) {
+                    case 0:
+                      return this.m_strLastSearch == this.props.strSearch
+                        ? [3, 2]
+                        : [4, this.UpdateSearchResults(this.props.strSearch)];
+                    case 1:
+                      e.sent(), this.forceUpdate(), (e.label = 2);
+                    case 2:
+                      return [2];
+                  }
+                });
+              });
+            }),
+            (t.prototype.render = function () {
+              var e = [];
+              if (this.m_rgCurrentMatches.length) {
+                for (
+                  var t = this.getMaxMatches(), n = 0;
+                  n < Math.min(t, this.m_rgCurrentMatches.length);
+                  n++
+                ) {
+                  var r = this.m_rgCurrentMatches[n],
+                    a = this.getKey(r),
+                    o = n === this.state.selectedIndex;
+                  e.push(
+                    i.a.createElement(
+                      R,
+                      {
+                        key: a,
+                        matchKey: a,
+                        fnOnClick: this.OnClickSuggestion,
+                        fnOnMouseOver: this.OnMouseOverSuggestion,
+                        bIsSelected: o,
+                        ref: o ? this.BindSelectedElement : void 0,
+                      },
+                      this.renderMatch(r)
+                    )
+                  );
+                }
+                this.m_rgCurrentMatches.length > t &&
+                  e.push(
+                    this.renderTooManyMatchesMessage(
+                      this.m_rgCurrentMatches.length - t
+                    )
+                  );
+              } else {
+                var s = this.renderNoMatchMessage();
+                if (!s) return null;
+                e.push(s);
+              }
+              return i.a.createElement(
+                "div",
+                { className: j.a.mentionDialogPosition },
+                i.a.createElement(
+                  "div",
+                  {
+                    className: j.a.mentionDialog,
+                    tabIndex: 0,
+                    onKeyDown: this.OnKeyDown,
+                  },
+                  this.renderHeader(),
+                  e
+                )
+              );
+            }),
+            Object(r.c)([l.a], t.prototype, "OnKeyDown", null),
+            Object(r.c)([l.a], t.prototype, "OnClickSuggestion", null),
+            Object(r.c)([l.a], t.prototype, "OnMouseOverSuggestion", null),
+            Object(r.c)([l.a], t.prototype, "BindSelectedElement", null),
+            t
+          );
+        })(i.a.Component),
+        R = (function (e) {
+          function t() {
+            return (null !== e && e.apply(this, arguments)) || this;
+          }
+          return (
+            Object(r.d)(t, e),
+            (t.prototype.OnMouseOver = function (e) {
+              this.props.fnOnMouseOver(this.props.matchKey);
+            }),
+            (t.prototype.OnClick = function (e) {
+              this.props.fnOnClick(this.props.matchKey);
+            }),
+            (t.prototype.render = function () {
+              return i.a.createElement(
+                "div",
+                {
+                  className: Object(h.a)(
+                    j.a.suggestOption,
+                    j.a.mentionSearchOption,
+                    this.props.bIsSelected ? j.a.selected : ""
+                  ),
+                  onMouseEnter: this.OnMouseOver,
+                  onClick: this.OnClick,
+                },
+                this.props.children
+              );
+            }),
+            Object(r.c)([l.a], t.prototype, "OnMouseOver", null),
+            Object(r.c)([l.a], t.prototype, "OnClick", null),
+            t
+          );
+        })(i.a.PureComponent),
+        k = z,
+        G = n("Wb2E"),
+        P = n.n(G),
+        F = (function (e) {
+          function t() {
+            return (null !== e && e.apply(this, arguments)) || this;
+          }
+          return (
+            Object(r.d)(t, e),
+            (t.prototype.performSearch = function (e) {
+              return this.props.emoticonStore.SearchEmoticons(e, 10, !1);
+            }),
+            (t.prototype.getSelection = function (e) {
+              return e.name;
+            }),
+            (t.prototype.getKey = function (e) {
+              return e.name;
+            }),
+            (t.prototype.renderMatch = function (e) {
+              return i.a.createElement(
+                "div",
+                {
+                  className: Object(h.a)(
+                    P.a.EmoticonSuggestion,
+                    e.recent ? "Recent" : ""
+                  ),
+                },
+                i.a.createElement(
+                  "div",
+                  { className: P.a.Emoticon },
+                  i.a.createElement(L.b, {
+                    emoticon: e.name,
+                    emoticonHoverStore: this.props.emoticonHoverStore,
+                  }),
+                  e.new && i.a.createElement(L.d, null)
+                ),
+                ":",
+                e.name,
+                ":"
+              );
+            }),
+            (t.prototype.renderNoMatchMessage = function () {
+              return null;
+            }),
+            (t.prototype.renderTooManyMatchesMessage = function (e) {
+              return null;
+            }),
+            (t.prototype.renderHeader = function () {
+              return null;
+            }),
+            (t.prototype.getMaxMatches = function () {
+              return Number.MAX_VALUE;
+            }),
+            t
+          );
+        })(k),
+        x = n("w4Zq"),
+        W = n.n(x),
+        U = (function (e) {
+          function t() {
+            return (null !== e && e.apply(this, arguments)) || this;
+          }
+          return (
+            Object(r.d)(t, e),
+            (t.prototype.performSearch = function (e) {
+              var t = Array();
+              return (
+                this.props.supportBBCodes.forEach(function (n) {
+                  n.indexOf(e) >= 0 && t.push({ name: n });
+                }),
+                t
+              );
+            }),
+            (t.prototype.getSelection = function (e) {
+              return "[" + e.name + "][/" + e.name + "]";
+            }),
+            (t.prototype.getKey = function (e) {
+              return e.name;
+            }),
+            (t.prototype.renderMatch = function (e) {
+              return i.a.createElement(
+                "div",
+                { key: e.name, className: Object(h.a)(W.a.BBCodeSuggestion) },
+                i.a.createElement("div", { className: W.a.BBCode }, e.name),
+                "[",
+                e.name,
+                "]...[/",
+                e.name,
+                "]"
+              );
+            }),
+            (t.prototype.renderNoMatchMessage = function () {
+              return i.a.createElement(
+                "div",
+                {
+                  key: "nomatches",
+                  className: Object(h.a)(
+                    j.a.mentionSearchOption,
+                    j.a.noMatches
+                  ),
+                },
+                Object(c.f)("#Bbcode_No_Match")
+              );
+            }),
+            (t.prototype.renderTooManyMatchesMessage = function (e) {
+              return null;
+            }),
+            (t.prototype.renderHeader = function () {
+              return null;
+            }),
+            (t.prototype.getMaxMatches = function () {
+              return Number.MAX_VALUE;
+            }),
+            t
+          );
+        })(k),
+        q = (function (e) {
+          function t(t) {
+            var n = e.call(this, t) || this;
+            return (
+              (n.descTextAreaRef = a.createRef()),
+              (n.m_bDisabled = !0),
+              (n.state = {
+                mentionSearch: void 0,
+                activeSuggestSearchType: void 0,
+              }),
+              n
+            );
+          }
+          return (
+            Object(r.d)(t, e),
+            (t.prototype.BindMentionDialog = function (e) {
+              this.m_MentionDialog = e;
+            }),
+            (t.prototype.OnKeyDown = function (e) {
+              this.state.activeSuggestSearchType &&
+              this.m_MentionDialog &&
+              !e.shiftKey &&
+              !e.ctrlKey &&
+              this.m_MentionDialog.BHandleKeyPress(e.keyCode)
+                ? e.preventDefault()
+                : (8 != e.keyCode && 46 != e.keyCode) ||
+                  (this.m_iMentionSearchCancelledOffset = void 0);
+            }),
+            (t.prototype.FindMatchOpener = function (e, t, n) {
+              for (var r = n - 1; r >= 0; r--) {
+                if (t[r] == e) return r;
+                if (" " == t[r] || "\n" == t[r]) break;
+              }
+            }),
+            (t.prototype.ReplaceSuggestedText = function (e, t) {
+              var n = this.descTextAreaRef.current.selectionStart,
+                r = this.descTextAreaRef.current.value,
+                a = this.FindMatchOpener(e, r, n);
+              if (
+                (void 0 === a &&
+                  "@" == e &&
+                  (a = this.FindMatchOpener("＠", r, n)),
+                void 0 !== a)
+              ) {
+                var i = r.substr(0, a);
+                (i += t), (n >= r.length || " " != r[n]) && (i += " ");
+                var o = i.length;
+                (i += r.substr(n)),
+                  (this.descTextAreaRef.current.value = i),
+                  (this.descTextAreaRef.current.selectionStart = this.descTextAreaRef.current.selectionEnd = o),
+                  this.props.fnSetText(i),
+                  this.FocusTextInput();
+              }
+            }),
+            (t.prototype.OnFocus = function (e) {
+              this.UpdateAutoSearchState();
+            }),
+            (t.prototype.OnKeyPress = function (e) {
+              this.UpdateAutoSearchState();
+            }),
+            (t.prototype.OnClick = function (e) {
+              this.UpdateAutoSearchState();
+            }),
+            (t.prototype.ClearMentionSearchState = function () {
+              (this.m_iMentionSearchStartOffset = void 0),
+                this.state.activeSuggestSearchType &&
+                  this.setState({
+                    activeSuggestSearchType: void 0,
+                    mentionSearch: void 0,
+                  });
+            }),
+            (t.prototype.OnEmoticonSuggestionSelected = function (e, t) {
+              if (!t)
+                return (
+                  (this.m_iMentionSearchCancelledOffset = this.m_iMentionSearchStartOffset),
+                  void this.ClearMentionSearchState()
+                );
+              this.ReplaceSuggestedText(":", ":" + t + ":"),
+                this.ClearMentionSearchState();
+            }),
+            (t.prototype.OnBBCodeSuggestionSelected = function (e, t) {
+              if (!t)
+                return (
+                  (this.m_iMentionSearchCancelledOffset = this.m_iMentionSearchStartOffset),
+                  void this.ClearMentionSearchState()
+                );
+              this.ReplaceSuggestedText("[", t), this.ClearMentionSearchState();
+            }),
+            (t.prototype.FocusTextInput = function () {
+              this.descTextAreaRef.current &&
+                this.descTextAreaRef.current.focus();
+            }),
+            (t.prototype.UpdateAutoSearchState = function () {
+              var e = this.descTextAreaRef.current;
+              if (e && !this.m_bDisabled)
+                if (e.selectionStart == e.selectionEnd && e.selectionStart) {
+                  for (
+                    var t = e.selectionStart,
+                      n = e.value,
+                      r = void 0,
+                      a = void 0,
+                      i = t - 1;
+                    i >= 0;
+                    i--
+                  ) {
+                    var o = i > 0 ? n[i - 1] : void 0;
+                    if (
+                      this.props.emoticonStore &&
+                      ":" == n[i] &&
+                      n.length > 2
+                    ) {
+                      (o && " " != o && "\n" != o && ":" != o) ||
+                        ((r = i), (a = "Emoticon"));
+                      break;
+                    }
+                    if ("[" == n[i] && (i + 1 > n.length || "/" != n[i + 1])) {
+                      (o && " " != o && "\n" != o && "]" != o) ||
+                        ((r = i), (a = "BBCode"));
+                      break;
+                    }
+                    if (" " == n[i] || "\n" == n[i]) break;
+                  }
+                  if (
+                    void 0 !== r &&
+                    r !== this.m_iMentionSearchCancelledOffset
+                  ) {
+                    var s = n.substr(r + 1, t - r - 1);
+                    (this.m_iMentionSearchStartOffset = r),
+                      this.setState({
+                        activeSuggestSearchType: a,
+                        mentionSearch: s,
+                      });
+                  } else this.ClearMentionSearchState();
+                } else this.ClearMentionSearchState();
+            }),
+            (t.prototype.GetTextAreaRef = function () {
+              return this.descTextAreaRef;
+            }),
+            (t.prototype.GetTextAreaCurrent = function () {
+              return this.descTextAreaRef.current;
+            }),
+            (t.prototype.render = function () {
+              var e = this.props,
+                t = e.emoticonStore,
+                n = e.supportBBCodes,
+                i =
+                  (e.fnSetText,
+                  Object(r.f)(e, [
+                    "emoticonStore",
+                    "supportBBCodes",
+                    "fnSetText",
+                  ])),
+                o = void 0;
+              switch (this.state.activeSuggestSearchType) {
+                case "Emoticon":
+                  o = a.createElement(F, {
+                    emoticonStore: t,
+                    emoticonHoverStore: I.a,
+                    strSearch: this.state.mentionSearch,
+                    nMinimumSearchLengthBeforeAutoSelection: 2,
+                    onSuggestionSelected: this.OnEmoticonSuggestionSelected,
+                    ref: this.BindMentionDialog,
+                  });
+                  break;
+                case "BBCode":
+                  o = a.createElement(U, {
+                    supportBBCodes: n,
+                    strSearch: this.state.mentionSearch,
+                    nMinimumSearchLengthBeforeAutoSelection: 2,
+                    onSuggestionSelected: this.OnBBCodeSuggestionSelected,
+                    ref: this.BindMentionDialog,
+                  });
+              }
+              return a.createElement(
+                a.Fragment,
+                null,
+                o,
+                a.createElement(
+                  "textarea",
+                  Object(r.a)({}, i, {
+                    ref: this.descTextAreaRef,
+                    onKeyDown: this.OnKeyDown,
+                    onKeyUp: this.OnKeyPress,
+                    onFocus: this.OnFocus,
+                    onClick: this.OnClick,
+                  })
+                )
+              );
+            }),
+            Object(r.c)([l.a], t.prototype, "BindMentionDialog", null),
+            Object(r.c)([l.a], t.prototype, "OnKeyDown", null),
+            Object(r.c)([l.a], t.prototype, "OnFocus", null),
+            Object(r.c)([l.a], t.prototype, "OnKeyPress", null),
+            Object(r.c)([l.a], t.prototype, "OnClick", null),
+            Object(r.c)(
+              [l.a],
+              t.prototype,
+              "OnEmoticonSuggestionSelected",
+              null
+            ),
+            Object(r.c)([l.a], t.prototype, "OnBBCodeSuggestionSelected", null),
+            Object(r.c)([l.a], t.prototype, "FocusTextInput", null),
+            Object(r.c)([l.a], t.prototype, "GetTextAreaRef", null),
+            Object(r.c)([l.a], t.prototype, "GetTextAreaCurrent", null),
+            t
+          );
+        })(a.Component),
+        H = n("Mgs7"),
+        V = n("0QoN"),
+        X = n("26EA"),
+        Y = n.n(X),
+        K = n("ccG0"),
+        Q = n.n(K),
+        J = n("y+6m"),
+        Z = n("gPCo"),
+        $ = n("0OaU"),
+        ee = n("5E+2"),
+        te = n("76AC"),
+        ne = n.n(te),
+        re = n("r64O"),
+        ae = n("Nsq5"),
+        ie = n("XOvi"),
+        oe = n("NqJg"),
+        se = (function (e) {
+          function t() {
+            var t = (null !== e && e.apply(this, arguments)) || this;
+            return (
+              (t.state = {
+                region: {
+                  xPosPct: 0,
+                  yPosPct: 0,
+                  widthPct: (t.GetDestWidth() / t.props.uploadFile.width) * 100,
+                  heightPct:
+                    (t.GetDestHeight() / t.props.uploadFile.height) * 100,
+                },
+              }),
+              t
+            );
+          }
+          return (
+            Object(r.d)(t, e),
+            (t.prototype.OnCrop = function () {
+              return Object(r.b)(this, void 0, void 0, function () {
+                return Object(r.e)(this, function (e) {
+                  switch (e.label) {
+                    case 0:
+                      return [
+                        4,
+                        this.props.uploadFile.CropImage(
+                          (this.state.region.xPosPct / 100) *
+                            this.props.uploadFile.width,
+                          (this.state.region.yPosPct / 100) *
+                            this.props.uploadFile.height,
+                          (this.state.region.widthPct / 100) *
+                            this.props.uploadFile.width,
+                          (this.state.region.heightPct / 100) *
+                            this.props.uploadFile.height,
+                          this.GetDestWidth(),
+                          this.GetDestHeight(),
+                          this.props.fileType
+                        ),
+                      ];
+                    case 1:
+                      return e.sent(), this.props.closeModal(), [2];
+                  }
+                });
+              });
+            }),
+            (t.prototype.UpdateCrop = function (e, t) {
+              this.setState({ region: t });
+            }),
+            (t.prototype.GetDestWidth = function () {
+              var e = this.props,
+                t = e.uploadFile,
+                n = e.forceResolution;
+              return n ? n.width : ae.a[t.type].width;
+            }),
+            (t.prototype.GetDestHeight = function () {
+              var e = this.props,
+                t = e.uploadFile,
+                n = e.forceResolution;
+              return n ? n.height : ae.a[t.type].height;
+            }),
+            (t.prototype.GetLargestBoxThatFits = function (e, t, n, r) {
+              var a = n,
+                i = (a * t) / Math.max(e, 1);
+              return (
+                i > r && (a = ((i = r) * e) / Math.max(t, 1)),
+                { width: a, height: i }
+              );
+            }),
+            (t.prototype.GetPreviewWindowStyle = function () {
+              var e = this.state.region,
+                t = this.GetLargestBoxThatFits(
+                  this.GetDestWidth(),
+                  this.GetDestHeight(),
+                  500,
+                  150
+                ),
+                n = t.width,
+                r = t.height,
+                a = 1 / Math.max(e.widthPct / 100, 1e-4),
+                i = 1 / Math.max(e.heightPct / 100, 1e-4),
+                o = (this.props.uploadFile.width * e.xPosPct) / 100,
+                s = (this.props.uploadFile.height * e.yPosPct) / 100;
+              return {
+                width: n,
+                height: r,
+                backgroundPosition:
+                  -o * ((n * a) / this.props.uploadFile.width) +
+                  "px " +
+                  -s * ((r * i) / this.props.uploadFile.height) +
+                  "px",
+                backgroundSize: 100 * a + "% " + 100 * i + "%",
+                backgroundImage: "url(" + this.props.uploadFile.dataUrl + ")",
+              };
+            }),
+            (t.prototype.render = function () {
+              var e = (this.GetDestWidth() / this.props.uploadFile.width) * 100,
+                t = (this.GetDestHeight() / this.props.uploadFile.height) * 100,
+                n = this.GetLargestBoxThatFits(
+                  this.props.uploadFile.width,
+                  this.props.uploadFile.height,
+                  800,
+                  500
+                );
+              return a.createElement(
+                _.h,
+                {
+                  onEscKeypress: this.props.closeModal,
+                  bDisableBackgroundDismiss: !0,
+                },
+                a.createElement(
+                  "div",
+                  {
+                    className: Object(h.a)(
+                      "DialogContent",
+                      "_DialogCenterVertically"
+                    ),
+                  },
+                  a.createElement(
+                    H.s,
+                    null,
+                    Object(c.f)(
+                      "#ImageUpload_CropModalTitleDims",
+                      this.GetDestWidth(),
+                      this.GetDestHeight()
+                    )
+                  ),
+                  a.createElement(
+                    "div",
+                    { className: Object(h.a)("DialogBodyText") },
+                    Object(c.f)("#ImageUpload_CropModalDescription")
+                  ),
+                  a.createElement(
+                    "div",
+                    {
+                      className: oe.CropImage,
+                      style: { width: n.width, height: n.height },
+                    },
+                    a.createElement("img", {
+                      style: {
+                        maxWidth: "100%",
+                        maxHeight: "100%",
+                        objectFit: "contain",
+                      },
+                      src: this.props.uploadFile.dataUrl,
+                    }),
+                    a.createElement(ie.a, {
+                      bLockAspectRatio: !0,
+                      bDisableLink: !0,
+                      index: 0,
+                      updateFn: this.UpdateCrop,
+                      xPosPct: 0,
+                      yPosPct: 0,
+                      widthMinPct: e,
+                      heightMinPct: t,
+                      widthPct: e,
+                      heightPct: t,
+                    })
+                  ),
+                  a.createElement(
+                    "div",
+                    { className: oe.CropPreviewGroup },
+                    a.createElement(
+                      "div",
+                      { className: oe.CropPreviewLabel },
+                      Object(c.f)("#ImageUpload_CropPreview")
+                    ),
+                    a.createElement("div", {
+                      style: this.GetPreviewWindowStyle(),
+                    })
+                  ),
+                  a.createElement(
+                    H.q,
+                    { onClick: this.OnCrop },
+                    Object(c.f)("#ImageUpload_CropAndContinue")
+                  )
+                )
+              );
+            }),
+            Object(r.c)([l.a], t.prototype, "OnCrop", null),
+            Object(r.c)([l.a], t.prototype, "UpdateCrop", null),
+            t
+          );
+        })(a.Component),
+        ce = n("IjL/"),
+        le = n("L+ta"),
+        ue = function (e) {
+          var t = e.clanSteamID,
+            n = e.fnImageSelectCallBack,
+            o = Object(a.useRef)(null),
+            s = Object(a.useState)(!B.e.BHasLoadedClanImages(t)),
+            l = s[0],
+            u = s[1],
+            p = Object(a.useState)(""),
+            d = p[0],
+            m = p[1];
+          Object(a.useEffect)(
+            function () {
+              if (!B.e.BHasLoadedClanImages(t)) {
+                o.current && o.current(), u(!0);
+                Object(r.b)(void 0, void 0, void 0, function () {
+                  var e;
+                  return Object(r.e)(this, function (n) {
+                    switch (n.label) {
+                      case 0:
+                        return (
+                          (e = g.a.CancelToken.source()),
+                          (o.current = e.cancel),
+                          [4, B.e.LoadClanImages(t, !1, e)]
+                        );
+                      case 1:
+                        return n.sent(), e.token.reason || u(!1), [2];
+                    }
+                  });
+                });
+              }
+              return function () {
+                o.current && o.current("ClanImageChooseDialog: unmounting");
+              };
+            },
+            [t]
+          );
+          var h = function () {
+              return e.closeModal && e.closeModal();
+            },
+            f = B.e.GetFilteredClanImages(t, d),
+            b = function (e) {
+              n(e), h();
+            };
+          return i.a.createElement(
+            ce.a,
+            null,
+            i.a.createElement(
+              _.h,
+              { onEscKeypress: h },
+              i.a.createElement(
+                H.f,
+                null,
+                i.a.createElement(
+                  H.k,
+                  null,
+                  Object(c.f)("#ClanImageChooser_Title")
+                ),
+                i.a.createElement(
+                  H.b,
+                  null,
+                  i.a.createElement(
+                    H.c,
+                    null,
+                    i.a.createElement(
+                      "p",
+                      null,
+                      Object(c.f)("#ClanImageChooser_Desc")
+                    ),
+                    i.a.createElement(H.l, {
+                      placeholder: Object(c.f)("#ClanImageChooser_Search"),
+                      value: d,
+                      onChange: function (e) {
+                        return m(e.currentTarget.value);
+                      },
+                    }),
+                    i.a.createElement(
+                      "div",
+                      { className: le.ImagesOuterContainer },
+                      l
+                        ? i.a.createElement($.a, {
+                            size: "medium",
+                            string: Object(c.f)("#Loading"),
+                          })
+                        : Boolean(f.length > 0)
+                        ? f.map(function (e) {
+                            return i.a.createElement(pe, {
+                              key: "ci" + e.image_hash,
+                              clanImage: e,
+                              searchStringHilight: d,
+                              fnImageClick: b,
+                            });
+                          })
+                        : Boolean(0 == d.trim().length)
+                        ? i.a.createElement(
+                            "div",
+                            null,
+                            Object(c.f)("#ClanImageChooser_None")
+                          )
+                        : i.a.createElement(
+                            "div",
+                            null,
+                            Object(c.f)("#EventCalendar_GameSearch_NoneFound")
+                          )
+                    )
+                  )
+                ),
+                i.a.createElement(
+                  H.j,
+                  null,
+                  i.a.createElement(
+                    H.d,
+                    { onClick: h },
+                    Object(c.f)("#Button_Cancel")
+                  )
+                )
+              )
+            )
+          );
+        },
+        pe = function (e) {
+          var t = e.clanImage,
+            n = e.searchStringHilight,
+            r = e.fnImageClick,
+            a = t.file_name ? t.file_name : "",
+            o = (function (e, t, n, r) {
+              var a = [];
+              if (e.length > 0)
+                for (var o = t.toLocaleLowerCase(), s = 0; s < t.length; ) {
+                  var c = o.indexOf(e, s);
+                  if (c < 0) {
+                    a.push(
+                      i.a.createElement(
+                        "span",
+                        { key: n + "_" + String(s) },
+                        t.substring(s)
+                      )
+                    );
+                    break;
+                  }
+                  s < c &&
+                    a.push(
+                      i.a.createElement(
+                        "span",
+                        { key: n + "_" + String(s) },
+                        t.substring(s, c)
+                      )
+                    ),
+                    a.push(
+                      i.a.createElement(
+                        "span",
+                        { key: n + "_" + String(s), className: r },
+                        t.substr(c, e.length)
+                      )
+                    ),
+                    (s = c + e.length);
+                }
+              else a.push(i.a.createElement("span", { key: n + "_null" }, t));
+              return a;
+            })(n, a, String(t.imageid), le.Hilight);
+          return i.a.createElement(
+            "div",
+            { className: le.ImageContainer },
+            i.a.createElement("div", {
+              className: le.Image,
+              style: { backgroundImage: "url( '" + t.thumb_url + "' )" },
+              onDoubleClick: function () {
+                return r(t);
+              },
+            }),
+            i.a.createElement(
+              "div",
+              { className: le.ImageFilename, title: a },
+              o
+            )
+          );
+        };
+      var de,
+        me = n("lyHv"),
+        he = Object(o.a)(function (e) {
+          var t = e.clanSteamID,
+            n = e.inputClanImage,
+            i = e.nWidth,
+            o = e.nHeight,
+            l = e.setImage,
+            u = a.useMemo(function () {
+              return ["sale_header"];
+            }, []),
+            p = a.useMemo(
+              function () {
+                return { width: i, height: o };
+              },
+              [i, o]
+            ),
+            h = a.useState(void 0),
+            f = h[0],
+            b = h[1],
+            _ = a.useState(Boolean(n)),
+            v = _[0],
+            g = _[1],
+            y = a.useState(void 0),
+            M = y[0],
+            S = y[1],
+            E = a.useState(!1),
+            C = E[0],
+            A = E[1],
+            w = a.useCallback(
+              function (e, t) {
+                return Object(r.b)(void 0, void 0, void 0, function () {
+                  var a, i;
+                  return Object(r.e)(this, function (r) {
+                    switch (r.label) {
+                      case 0:
+                        return (
+                          e.ClearImages(),
+                          t
+                            ? (g(!0), [4, e.AddExistingClanImage(t, 0, u)])
+                            : [3, 2]
+                        );
+                      case 1:
+                        r.sent() &&
+                          (b(t),
+                          (a = e.GetUploadImages()[0]),
+                          0 != (i = a.IsValidImage(u, p)).error.length ||
+                            i.needsCrop ||
+                            (n && n.image_hash == t.image_hash) ||
+                            l(t)),
+                          (r.label = 2);
+                      case 2:
+                        return g(!1), [2];
+                    }
+                  });
+                });
+              },
+              [n, l, u, p]
+            );
+          a.useEffect(
+            function () {
+              (M &&
+                M.GetClanSteamID().ConvertTo64BitString() ==
+                  t.ConvertTo64BitString()) ||
+                S(new B.b(t));
+            },
+            [M, t]
+          ),
+            a.useEffect(
+              function () {
+                w(M, n);
+              },
+              [w, M, n]
+            );
+          var I = "",
+            L = !1,
+            T = void 0;
+          if (M && M.GetFilesToUpload().length > 0) {
+            var D = (T = M.GetUploadImages()[0]).IsValidImage(u, p);
+            (I = D.error), (L = D.needsCrop);
+          }
+          return a.createElement(
+            a.Fragment,
+            null,
+            v
+              ? a.createElement($.a, {
+                  size: "medium",
+                  string: Object(c.f)("#Loading"),
+                })
+              : Boolean(f) &&
+                  a.createElement("div", {
+                    className: me.Image,
+                    style: {
+                      backgroundImage:
+                        "url( '" + (T ? T.dataUrl : f.url) + "' )",
+                      height: o + "px",
+                      width: i + "px",
+                    },
+                  }),
+            Boolean(I) && a.createElement("p", null, I),
+            L &&
+              a.createElement(
+                H.d,
+                {
+                  onClick: function (e) {
+                    var t = Object(m.m)(e),
+                      n = M.GetUploadImages()[0];
+                    Object(d.d)(
+                      a.createElement(se, {
+                        ownerWin: t,
+                        uploadFile: n,
+                        forceResolution: { width: i, height: o },
+                        fileType: 3,
+                      }),
+                      t
+                    );
+                  },
+                },
+                Object(c.f)("#BBCode_ResizeImage")
+              ),
+            Boolean(T && T.bCropped) &&
+              a.createElement(
+                a.Fragment,
+                null,
+                a.createElement(
+                  "div",
+                  null,
+                  Object(c.f)("#ClanImagePickAndResize_UploadStatus", T.status)
+                ),
+                C
+                  ? a.createElement($.a, {
+                      string: Object(c.f)("#Uploading"),
+                      size: "small",
+                    })
+                  : a.createElement(
+                      H.d,
+                      {
+                        onClick: function () {
+                          return Object(r.b)(
+                            void 0,
+                            void 0,
+                            void 0,
+                            function () {
+                              var e, n, a, i, o, c, d, m;
+                              return Object(r.e)(this, function (r) {
+                                switch (r.label) {
+                                  case 0:
+                                    A(!0), (r.label = 1);
+                                  case 1:
+                                    return (
+                                      r.trys.push([1, , 3, 4]),
+                                      [4, M.UploadAllFiles(u, p)]
+                                    );
+                                  case 2:
+                                    return (
+                                      (e = r.sent()),
+                                      (n = Object.values(e)) &&
+                                        n.length > 0 &&
+                                        (Object(re.a)(
+                                          1 == n.length,
+                                          "ClanImagePickForCertainSize expected size 1, got " +
+                                            n.length
+                                        ),
+                                        1 == n[0].success &&
+                                          ((a = n[0]),
+                                          (i =
+                                            s.d.MEDIA_CDN_COMMUNITY_URL +
+                                            "images/clans/" +
+                                            t.GetAccountID() +
+                                            "/"),
+                                          (o = B.a.GetExtensionStringForFileType(
+                                            a.file_type
+                                          )),
+                                          (c = i + a.image_hash + o),
+                                          (d = i + a.thumbnail_hash + o),
+                                          (m = {
+                                            imageid: -11231412,
+                                            image_hash: a.image_hash,
+                                            thumbnail_hash: a.thumbnail_hash,
+                                            file_type: a.file_type,
+                                            file_name: a.file_name,
+                                            clanAccountID: t.GetAccountID(),
+                                            url: c,
+                                            thumb_url: d,
+                                            uploaded_time: Date.now() / 1e3,
+                                            loc_languages: void 0,
+                                            is_loc_group: !1,
+                                          }),
+                                          b(m),
+                                          l(m))),
+                                      [3, 4]
+                                    );
+                                  case 3:
+                                    return A(!1), [7];
+                                  case 4:
+                                    return [2];
+                                }
+                              });
+                            }
+                          );
+                        },
+                      },
+                      Object(c.f)("#ClanImagePickAndResize_UploadImage")
+                    )
+              ),
+            a.createElement(
+              H.d,
+              {
+                onClick: function (e) {
+                  var t = new O.a(s.c.CLANSTEAMID);
+                  Object(d.d)(
+                    a.createElement(ue, {
+                      clanSteamID: t,
+                      fnImageSelectCallBack: function (e) {
+                        return w(M, e);
+                      },
+                    }),
+                    Object(m.m)(e)
+                  );
+                },
+              },
+              Object(c.f)("#BBCode_ChooseImage", i, o)
+            )
+          );
+        }),
+        fe = n("bDQf"),
+        be = (function (e) {
+          function t(t) {
+            var r = e.call(this, t) || this;
+            return (
+              (r.m_cancelSignal = g.a.CancelToken.source()),
+              (r.state = {
+                formattingHelp: {
+                  __html: n.s_formattingHelp.has(t.formatType)
+                    ? n.s_formattingHelp.get(t.formatType)
+                    : "",
+                },
+              }),
+              r
+            );
+          }
+          var n;
+          return (
+            Object(r.d)(t, e),
+            (n = t),
+            (t.prototype.componentDidMount = function () {
+              var e = this;
+              this.AjaxGetFormattingHelp().catch(function (t) {
+                e.setState(Object(fe.a)(t));
+              });
+            }),
+            (t.prototype.componentWillUnmount = function () {
+              this.m_cancelSignal.cancel(
+                "FormattingHelpWidget component unmounted"
+              );
+            }),
+            (t.GetHelpURL = function (e, t) {
+              return (
+                s.d.COMMUNITY_BASE_URL +
+                "comment/" +
+                e +
+                "/formattinghelp" +
+                (t ? "?ajax=1" : "")
+              );
+            }),
+            (t.prototype.AjaxGetFormattingHelp = function () {
+              return Object(r.b)(this, void 0, void 0, function () {
+                var e, t;
+                return Object(r.e)(this, function (r) {
+                  switch (r.label) {
+                    case 0:
+                      return "" != this.state.formattingHelp.__html
+                        ? [3, 2]
+                        : ((e = { sessionid: s.d.SESSIONID }),
+                          (t = void 0),
+                          [
+                            4,
+                            g.a.get(n.GetHelpURL(this.props.formatType, !0), {
+                              params: e,
+                              cancelToken: this.m_cancelSignal.token,
+                            }),
+                          ]);
+                    case 1:
+                      (t = r.sent()),
+                        n.s_formattingHelp.set(this.props.formatType, t.data),
+                        this.setState({ formattingHelp: { __html: t.data } }),
+                        (r.label = 2);
+                    case 2:
+                      return [2];
+                  }
+                });
+              });
+            }),
+            (t.prototype.render = function () {
+              return this.state.strErrorMsg
+                ? a.createElement(
+                    "div",
+                    null,
+                    this.state.strErrorMsg,
+                    a.createElement("br", null),
+                    this.state.errorCode
+                  )
+                : "" == this.state.formattingHelp.__html
+                ? a.createElement($.a, null)
+                : a.createElement(
+                    _.d,
+                    {
+                      strTitle: Object(c.f)(
+                        "#EventEditor_FormattingHelp_GetHelpLink"
+                      ),
+                      strDescription: "",
+                      closeModal: this.props.closeModal,
+                      onOK: this.props.closeModal,
+                      onCancel: this.props.closeModal,
+                      bAlertDialog: !0,
+                    },
+                    a.createElement("div", {
+                      dangerouslySetInnerHTML: this.state.formattingHelp,
+                    })
+                  );
+            }),
+            (t.s_formattingHelp = new Map()),
+            (t = n = Object(r.c)([o.a], t))
+          );
+        })(a.Component),
+        _e = (function (e) {
+          function t(t) {
+            var n = e.call(this, t) || this;
+            return (
+              (n.descAutoTextAreaRef = a.createRef()),
+              (n.state = { bShowDragTarget: !1 }),
+              n
+            );
+          }
+          return (
+            Object(r.d)(t, e),
+            (t.prototype.componentDidMount = function () {
+              B.e.AddClanImageDragListener(this.ClanImageDragListener);
+            }),
+            (t.prototype.componentWillUnmount = function () {
+              B.e.RemoveClanImageDragListener(this.ClanImageDragListener);
+            }),
+            (t.prototype.ClanImageDragListener = function (e, t) {
+              this.state.bShowDragTarget != t &&
+                this.setState({ bShowDragTarget: t });
+            }),
+            (t.prototype.onFocus = function (e) {
+              e && e.target.select();
+            }),
+            (t.prototype.InsertText = function (e) {
+              ve.replaceSelection(this.GetTextAreaRef().current, e);
+            }),
+            (t.prototype.OnTextAreaDropListener = function (e) {
+              if (
+                (e.preventDefault(),
+                e.stopPropagation(),
+                e.dataTransfer.items && e.dataTransfer.items[0])
+              ) {
+                var t = e.dataTransfer.getData("text");
+                if (t && t.length > 0) {
+                  var n = s.d.MEDIA_CDN_COMMUNITY_URL + "images/clans/";
+                  if (t.startsWith(n)) {
+                    var r = "[img]" + y.e + "/" + t.substr(n.length) + "[/img]";
+                    ve.replaceSelection(this.GetTextAreaRef().current, r);
+                  }
+                }
+              }
+            }),
+            (t.prototype.GetTextAreaRef = function () {
+              return this.descAutoTextAreaRef &&
+                this.descAutoTextAreaRef.current
+                ? this.descAutoTextAreaRef.current.GetTextAreaRef()
+                : void 0;
+            }),
+            (t.prototype.render = function () {
+              return a.createElement(
+                a.Fragment,
+                null,
+                a.createElement(ge, {
+                  pathToImages:
+                    s.d.COMMUNITY_CDN_URL + "public/images/sharedfiles/guides/",
+                  fnTextareaRef: this.GetTextAreaRef,
+                  emoticonStore: this.props.emoticonStore,
+                  supportBBCodes: this.props.limitBBCode
+                    ? this.props.limitBBCode
+                    : y.f,
+                  bSupportHTMLImport: this.props.bSupportHTMLImport,
+                  showFormatHelp: this.props.showFormatHelp,
+                  bEmbeddedInDialog: this.props.bEmbeddedInDialog,
+                  clanSteamID: this.props.clanSteamID,
+                }),
+                a.createElement(
+                  "div",
+                  {
+                    className: Object(h.a)(
+                      ne.a.DescriptionCtn,
+                      ne.a.BBCodeEditorInputStyles,
+                      this.state.bShowDragTarget ? ne.a.DragTarget : ""
+                    ),
+                  },
+                  a.createElement(q, {
+                    cols: 40,
+                    rows: this.props.nOverridesRows || 42,
+                    maxLength: 32e3,
+                    className: Object(h.a)(
+                      ne.a.DefaultEditor,
+                      this.props.classNameForTextArea
+                        ? this.props.classNameForTextArea
+                        : ""
+                    ),
+                    placeholder: this.props.strPlaceholder,
+                    ref: this.descAutoTextAreaRef,
+                    value: this.props.fnGetCurText(),
+                    onChange: this.props.fnOnTextChange,
+                    onDrop: this.OnTextAreaDropListener,
+                    emoticonStore: this.props.emoticonStore,
+                    fnSetText: this.props.fnSetText,
+                    supportBBCodes: this.props.limitBBCode
+                      ? this.props.limitBBCode
+                      : y.f,
+                  })
+                )
+              );
+            }),
+            Object(r.c)([l.a], t.prototype, "ClanImageDragListener", null),
+            Object(r.c)([l.a], t.prototype, "onFocus", null),
+            Object(r.c)([l.a], t.prototype, "OnTextAreaDropListener", null),
+            Object(r.c)([l.a], t.prototype, "GetTextAreaRef", null),
+            (t = Object(r.c)([o.a], t))
+          );
+        })(a.Component),
+        ve = (function () {
+          function e() {}
+          return (
+            (e.BIsFireFox = function () {
+              return Boolean(
+                new RegExp(/Firefox\/([0-9\.]+)(?:\s|$)/i).exec(
+                  navigator.userAgent
+                )
+              );
+            }),
+            (e.replaceSelection = function (t, n) {
+              var r = t.selectionStart;
+              t.focus(),
+                e.InsertTextAtSelect(n, t),
+                t.setSelectionRange(r, r + n.length);
+            }),
+            (e.getSelectedString = function (e) {
+              return e.value.substr(
+                e.selectionStart,
+                e.selectionEnd - e.selectionStart
+              );
+            }),
+            (e.wrapBBCode = function (t, n, r) {
+              var a = e.getSelectedString(r),
+                i = "";
+              (i =
+                0 == a.indexOf(t) && a.lastIndexOf(n) == a.length - n.length
+                  ? a.substr(t.length, a.length - t.length - n.length)
+                  : t + a + n),
+                e.replaceSelection(r, i);
+            }),
+            (e.append = function (t, n) {
+              n &&
+                (n.focus(),
+                n.setSelectionRange(n.value.length, n.value.length),
+                e.InsertTextAtSelect(t, n));
+            }),
+            (e.overwrite = function (t, n) {
+              n &&
+                (n.focus(),
+                document.execCommand("selectAll", !1, t),
+                e.BIsFireFox()
+                  ? (n.value = "")
+                  : document.execCommand("delete", !1),
+                e.InsertTextAtSelect(t, n));
+            }),
+            (e.InsertTextAtSelect = function (t, n) {
+              e.BIsFireFox() && n.setRangeText
+                ? n.setRangeText(t)
+                : document.execCommand("insertText", !1, t);
+            }),
+            e
+          );
+        })(),
+        ge = (function (e) {
+          function t() {
+            var t = (null !== e && e.apply(this, arguments)) || this;
+            return (t.m_linkPopupRef = a.createRef()), t;
+          }
+          return (
+            Object(r.d)(t, e),
+            (t.prototype.onBold = function () {
+              ve.wrapBBCode("[b]", "[/b]", this.props.fnTextareaRef().current);
+            }),
+            (t.prototype.onItalics = function () {
+              ve.wrapBBCode("[i]", "[/i]", this.props.fnTextareaRef().current);
+            }),
+            (t.prototype.onUnderline = function () {
+              ve.wrapBBCode("[u]", "[/u]", this.props.fnTextareaRef().current);
+            }),
+            (t.prototype.onStrikeThrough = function () {
+              ve.wrapBBCode(
+                "[strike]",
+                "[/strike]",
+                this.props.fnTextareaRef().current
+              );
+            }),
+            (t.prototype.onHeader = function () {
+              ve.wrapBBCode(
+                "[h1]",
+                "[/h1]",
+                this.props.fnTextareaRef().current
+              );
+            }),
+            (t.prototype.onHeader2 = function () {
+              ve.wrapBBCode(
+                "[h2]",
+                "[/h2]",
+                this.props.fnTextareaRef().current
+              );
+            }),
+            (t.prototype.onHeader3 = function () {
+              ve.wrapBBCode(
+                "[h3]",
+                "[/h3]",
+                this.props.fnTextareaRef().current
+              );
+            }),
+            (t.prototype.onUnorderedList = function () {
+              this.handleList("list");
+            }),
+            (t.prototype.onOrderedList = function () {
+              this.handleList("olist");
+            }),
+            (t.prototype.handleList = function (e) {
+              var t = this.props.fnTextareaRef().current,
+                n = "[" + e + "]\n",
+                r = "[/" + e + "]";
+              if (t.selectionStart == t.selectionEnd)
+                ve.wrapBBCode(n + "[*]", "\n" + r, t);
+              else {
+                var a =
+                  n +
+                  ve
+                    .getSelectedString(t)
+                    .split("\n")
+                    .map(function (e) {
+                      return (e.match(/\*+\s/) ? "[*]" : "[*] ") + e;
+                    })
+                    .join("\n") +
+                  "\n" +
+                  r;
+                ve.replaceSelection(t, a);
+              }
+            }),
+            (t.prototype.OnAddLink = function (e) {
+              Object(d.c)(
+                a.createElement(Me, {
+                  textareaRef: this.props.fnTextareaRef(),
+                }),
+                Object(m.m)(e)
+              );
+            }),
+            (t.prototype.ShowHelpDialog = function (e) {
+              this.props.showFormatHelp &&
+                Object(d.c)(
+                  a.createElement(be, {
+                    formatType: this.props.showFormatHelp,
+                  }),
+                  Object(m.m)(e)
+                );
+            }),
+            (t.prototype.OnConvertHTMLToBBCodeDialog = function (e) {
+              Object(d.c)(
+                a.createElement(Ee, {
+                  textareaRef: this.props.fnTextareaRef(),
+                }),
+                Object(m.m)(e)
+              );
+            }),
+            (t.prototype.OnOpenYoutubeDialog = function (e) {
+              var t = s.d.IMG_URL + "applications/community/";
+              Object(d.c)(
+                a.createElement(ye, {
+                  textareaRef: this.props.fnTextareaRef(),
+                  pathToImages: t,
+                }),
+                Object(m.m)(e)
+              );
+            }),
+            (t.prototype.OnOpenImageDialog = function (e) {
+              Object(d.c)(
+                a.createElement(Se, {
+                  textareaRef: this.props.fnTextareaRef(),
+                }),
+                Object(m.m)(e)
+              );
+            }),
+            (t.prototype.OnOpenSpeakerDialog = function (e) {
+              Object(d.d)(
+                a.createElement(Oe, {
+                  clanSteamID: this.props.clanSteamID,
+                  textareaRef: this.props.fnTextareaRef(),
+                }),
+                Object(m.m)(e)
+              );
+            }),
+            (t.prototype.OnEmoticonSelected = function (e, t) {
+              void 0 === t && (t = !1);
+              var n = "ː" + e + "ː";
+              ve.replaceSelection(this.props.fnTextareaRef().current, n),
+                this.props.fnTextareaRef().current.focus();
+            }),
+            (t.prototype.BSupports = function (e) {
+              return (
+                this.props.supportBBCodes.findIndex(function (t) {
+                  return t == e;
+                }) >= 0
+              );
+            }),
+            (t.prototype.render = function () {
+              var e = this.props,
+                t = e.showFormatHelp,
+                n = e.bEmbeddedInDialog,
+                r = e.bSupportHTMLImport,
+                i = e.pathToImages,
+                o = void 0;
+              return (
+                t &&
+                  (o = n
+                    ? a.createElement(
+                        "span",
+                        {
+                          className: Object(h.a)("ttip", ne.a.ActionGetHelp),
+                          "data-tooltip-text": Object(c.f)(
+                            "#EventEditor_FormattingHelp_GetHelpLink"
+                          ),
+                        },
+                        a.createElement(
+                          "a",
+                          {
+                            href: be.GetHelpURL(this.props.showFormatHelp, !1),
+                            target: s.d.IN_CLIENT ? void 0 : "_blank",
+                          },
+                          a.createElement("img", {
+                            src: i + "/action_help.png",
+                          }),
+                          " ",
+                          Object(c.f)("#EventEditor_FormattingHelp_GetHelpLink")
+                        )
+                      )
+                    : a.createElement(
+                        "span",
+                        {
+                          onClick: this.ShowHelpDialog,
+                          className: Object(h.a)("ttip", ne.a.ActionGetHelp),
+                          "data-tooltip-text": Object(c.f)(
+                            "#EventEditor_FormattingHelp_GetHelpLink"
+                          ),
+                        },
+                        a.createElement("img", { src: i + "/action_help.png" }),
+                        " ",
+                        Object(c.f)("#EventEditor_FormattingHelp_GetHelpLink")
+                      )),
+                a.createElement(
+                  "div",
+                  { className: ne.a.TextEditorToolBarContainer },
+                  this.BSupports("b") &&
+                    a.createElement(
+                      "span",
+                      {
+                        onClick: this.onBold,
+                        className: "ttip",
+                        "data-tooltip-text": Object(c.f)("#Editor_Bold"),
+                      },
+                      a.createElement("img", {
+                        src: this.props.pathToImages + "/format_bold.png",
+                      })
+                    ),
+                  this.BSupports("u") &&
+                    a.createElement(
+                      "span",
+                      {
+                        onClick: this.onUnderline,
+                        className: "ttip",
+                        "data-tooltip-text": Object(c.f)("#Editor_Underline"),
+                      },
+                      a.createElement("img", {
+                        src: this.props.pathToImages + "/format_underline.png",
+                      })
+                    ),
+                  this.BSupports("i") &&
+                    a.createElement(
+                      "span",
+                      {
+                        onClick: this.onItalics,
+                        className: "ttip",
+                        "data-tooltip-text": Object(c.f)("#Editor_Italics"),
+                      },
+                      a.createElement("img", {
+                        src: this.props.pathToImages + "/format_italic.png",
+                      })
+                    ),
+                  this.BSupports("strike") &&
+                    a.createElement(
+                      "span",
+                      {
+                        onClick: this.onStrikeThrough,
+                        className: "ttip",
+                        "data-tooltip-text": Object(c.f)(
+                          "#Editor_StrikeThrough"
+                        ),
+                      },
+                      a.createElement("img", {
+                        src: this.props.pathToImages + "/format_strike.png",
+                      })
+                    ),
+                  Boolean(this.BSupports("url") && !n) &&
+                    a.createElement(
+                      "span",
+                      {
+                        onClick: this.OnAddLink,
+                        className: "ttip",
+                        "data-tooltip-text": Object(c.f)("#Editor_Link"),
+                      },
+                      a.createElement("img", {
+                        src: this.props.pathToImages + "/format_link.png",
+                      })
+                    ),
+                  this.BSupports("list") &&
+                    a.createElement(
+                      "span",
+                      {
+                        onClick: this.onUnorderedList,
+                        className: "ttip",
+                        "data-tooltip-text": Object(c.f)("#Editor_Unordered"),
+                      },
+                      a.createElement("img", {
+                        src: this.props.pathToImages + "/format_bullet.png",
+                      })
+                    ),
+                  this.BSupports("olist") &&
+                    a.createElement(
+                      "span",
+                      {
+                        onClick: this.onOrderedList,
+                        className: "ttip",
+                        "data-tooltip-text": Object(c.f)("#Editor_Ordered"),
+                      },
+                      a.createElement("img", {
+                        src: this.props.pathToImages + "/format_numbered.png",
+                      })
+                    ),
+                  this.BSupports("h1") &&
+                    a.createElement(
+                      "span",
+                      {
+                        onClick: this.onHeader,
+                        className: "ttip",
+                        "data-tooltip-text": Object(c.f)("#Editor_Header"),
+                      },
+                      a.createElement("img", {
+                        src: this.props.pathToImages + "/format_header1.png",
+                      })
+                    ),
+                  this.BSupports("h2") &&
+                    a.createElement(
+                      "span",
+                      {
+                        onClick: this.onHeader2,
+                        className: "ttip",
+                        "data-tooltip-text": Object(c.f)("#Editor_Header2"),
+                      },
+                      a.createElement("img", {
+                        src: this.props.pathToImages + "/format_header2.png",
+                      })
+                    ),
+                  this.BSupports("h3") &&
+                    a.createElement(
+                      "span",
+                      {
+                        onClick: this.onHeader3,
+                        className: "ttip",
+                        "data-tooltip-text": Object(c.f)("#Editor_Header3"),
+                      },
+                      a.createElement("img", {
+                        src: this.props.pathToImages + "/format_header3.png",
+                      })
+                    ),
+                  this.BSupports("previewyoutube") &&
+                    a.createElement(
+                      "span",
+                      {
+                        onClick: this.OnOpenYoutubeDialog,
+                        "data-tooltip-text": Object(c.f)(
+                          "#EventEditor_InsertYouTube"
+                        ),
+                      },
+                      a.createElement("img", { src: Q.a })
+                    ),
+                  this.props.emoticonStore &&
+                    a.createElement(V.a, {
+                      title: " ",
+                      ttip: Object(c.f)("#Editor_Emoticon"),
+                      className: Object(h.a)(ne.a.EmoteOuter),
+                      disabled: !1,
+                      OnEmoticonSelected: this.OnEmoticonSelected,
+                      rtLastAckedNewEmoticons: Number.MAX_VALUE,
+                      emoticonStore: this.props.emoticonStore,
+                      emoticonHoverStore: I.a,
+                      useImg: this.props.pathToImages + "/format_emote.png",
+                      contextOptions: {
+                        bOverlapHorizontal: !0,
+                        bDisablePopTop: !0,
+                      },
+                    }),
+                  Boolean(this.BSupports("img") && !n) &&
+                    a.createElement(
+                      "span",
+                      {
+                        onClick: this.OnOpenImageDialog,
+                        "data-tooltip-text": Object(c.f)(
+                          "#EventEditor_InsertImage"
+                        ),
+                      },
+                      a.createElement("img", {
+                        src: this.props.pathToImages + "/insert_img.png",
+                      })
+                    ),
+                  Boolean(
+                    s.k.is_support &&
+                      this.props.clanSteamID &&
+                      this.BSupports("speaker")
+                  ) &&
+                    a.createElement(
+                      "span",
+                      {
+                        onClick: this.OnOpenSpeakerDialog,
+                        "data-tooltip-text": Object(c.f)(
+                          "#EventEditor_AddSpeaker"
+                        ),
+                      },
+                      a.createElement("img", {
+                        src: this.props.pathToImages + "/insert_img.png",
+                      })
+                    ),
+                  Boolean(r && !n) &&
+                    a.createElement(
+                      "span",
+                      {
+                        onClick: this.OnConvertHTMLToBBCodeDialog,
+                        className: ne.a.ActionImportHTML,
+                        "data-tooltip-text": Object(c.f)(
+                          "#EventEditor_ImportFromHTML_ttip"
+                        ),
+                      },
+                      Object(c.f)("#EventEditor_ImportHTML")
+                    ),
+                  o
+                )
+              );
+            }),
+            Object(r.c)([l.a], t.prototype, "onBold", null),
+            Object(r.c)([l.a], t.prototype, "onItalics", null),
+            Object(r.c)([l.a], t.prototype, "onUnderline", null),
+            Object(r.c)([l.a], t.prototype, "onStrikeThrough", null),
+            Object(r.c)([l.a], t.prototype, "onHeader", null),
+            Object(r.c)([l.a], t.prototype, "onHeader2", null),
+            Object(r.c)([l.a], t.prototype, "onHeader3", null),
+            Object(r.c)([l.a], t.prototype, "onUnorderedList", null),
+            Object(r.c)([l.a], t.prototype, "onOrderedList", null),
+            Object(r.c)([l.a], t.prototype, "OnAddLink", null),
+            Object(r.c)([l.a], t.prototype, "ShowHelpDialog", null),
+            Object(r.c)(
+              [l.a],
+              t.prototype,
+              "OnConvertHTMLToBBCodeDialog",
+              null
+            ),
+            Object(r.c)([l.a], t.prototype, "OnOpenYoutubeDialog", null),
+            Object(r.c)([l.a], t.prototype, "OnOpenImageDialog", null),
+            Object(r.c)([l.a], t.prototype, "OnOpenSpeakerDialog", null),
+            Object(r.c)([l.a], t.prototype, "OnEmoticonSelected", null),
+            (t = Object(r.c)([o.a], t))
+          );
+        })(a.Component);
+      !(function (e) {
+        (e.left = "leftthumb"),
+          (e.right = "rightthumb"),
+          (e.full = "full"),
+          (e.summary = "summary");
+      })(de || (de = {}));
+      var ye = (function (e) {
+          function t() {
+            var t = (null !== e && e.apply(this, arguments)) || this;
+            return (t.state = { youtubeInput: "", alignment: de.left }), t;
+          }
+          return (
+            Object(r.d)(t, e),
+            (t.prototype.OnYoutubeInsertLink = function () {
+              var e =
+                this.state.youtubeInput && Object(w.b)(this.state.youtubeInput);
+              if (e) {
+                if (this.state.alignment == de.summary) {
+                  var t =
+                    "https://www.youtube.com/watch?v=" +
+                    e.strVideoID +
+                    (e.nStartSeconds ? "&t=" + e.nStartSeconds : "");
+                  ve.wrapBBCode(t, "", this.props.textareaRef.current);
+                } else {
+                  var n =
+                    "[previewyoutube=" +
+                    e.strVideoID +
+                    ";" +
+                    this.state.alignment +
+                    "]";
+                  ve.wrapBBCode(
+                    n,
+                    "[/previewyoutube]",
+                    this.props.textareaRef.current
+                  );
+                }
+                this.setState({ youtubeInput: "", alignment: de.left });
+              } else alert(Object(c.f)("#EventEditor_InsertYouTube_NoURL"));
+            }),
+            (t.prototype.OnUrlChange = function (e) {
+              this.state.youtubeInput != e.target.value &&
+                this.setState({ youtubeInput: e.target.value });
+            }),
+            (t.prototype.OnLeftSelected = function () {
+              this.setState({ alignment: de.left });
+            }),
+            (t.prototype.OnRightSelected = function () {
+              this.setState({ alignment: de.right });
+            }),
+            (t.prototype.OnFullSelected = function () {
+              this.setState({ alignment: de.full });
+            }),
+            (t.prototype.OnSummarySelected = function () {
+              this.setState({ alignment: de.summary });
+            }),
+            (t.prototype.OnOuterDivClickPassDown = function (e) {}),
+            (t.prototype.render = function () {
+              return a.createElement(
+                _.d,
+                {
+                  strTitle: Object(c.f)("#EventEditor_InsertYouTube"),
+                  strDescription: "",
+                  closeModal: this.props.closeModal,
+                  onCancel: this.props.closeModal,
+                  onOK: this.OnYoutubeInsertLink,
+                  strOKButtonText: Object(c.f)("#EventEditor_InsertYouTube"),
+                  className: ne.a.BBCodeEditorInputStyles,
+                },
+                a.createElement(
+                  "div",
+                  { className: ne.a.YouTubeInput },
+                  a.createElement(
+                    "div",
+                    { className: "DialogInputLabelGroup" },
+                    a.createElement(
+                      "label",
+                      null,
+                      a.createElement(
+                        "div",
+                        { className: "DialogLabel" },
+                        Object(c.f)("#EventEditor_InsertYouTube_URL")
+                      ),
+                      a.createElement(
+                        "div",
+                        { className: "DialogInput_Wrapper" },
+                        a.createElement("input", {
+                          className: "DialogInput DialogTextInputBase",
+                          ref: function (e) {
+                            return e && e.focus();
+                          },
+                          type: "text",
+                          value: this.state.youtubeInput,
+                          onChange: this.OnUrlChange,
+                          placeholder: Object(c.f)(
+                            "#EventEditor_InsertYouTube_Placholder"
+                          ),
+                        })
+                      )
+                    )
+                  ),
+                  a.createElement(
+                    "div",
+                    { className: "DialogInputLabelGroup" },
+                    a.createElement(
+                      "div",
+                      { className: "DialogLabel" },
+                      Object(c.f)("#EventEditor_InsertYouTube_Position")
+                    ),
+                    a.createElement(
+                      "div",
+                      {
+                        className: ne.a.YouTubePreviewInsertOption,
+                        onClick: this.OnOuterDivClickPassDown,
+                      },
+                      a.createElement("input", {
+                        type: "radio",
+                        name: "YouTubePreviewInsertType",
+                        id: de.left,
+                        value: de.left,
+                        checked: this.state.alignment == de.left,
+                        onChange: this.OnLeftSelected,
+                      }),
+                      a.createElement(
+                        "label",
+                        { htmlFor: de.left },
+                        a.createElement(
+                          "span",
+                          null,
+                          Object(c.f)("#EventEditor_InsertYouTube_Left")
+                        )
+                      )
+                    ),
+                    a.createElement(
+                      "div",
+                      {
+                        className: ne.a.YouTubePreviewInsertOption,
+                        onClick: this.OnOuterDivClickPassDown,
+                      },
+                      a.createElement("input", {
+                        type: "radio",
+                        name: "YouTubePreviewInsertType",
+                        id: de.right,
+                        value: de.right,
+                        checked: this.state.alignment == de.right,
+                        onChange: this.OnRightSelected,
+                      }),
+                      a.createElement(
+                        "label",
+                        { htmlFor: de.right },
+                        a.createElement(
+                          "span",
+                          null,
+                          Object(c.f)("#EventEditor_InsertYouTube_Right")
+                        )
+                      )
+                    ),
+                    a.createElement(
+                      "div",
+                      {
+                        className: ne.a.YouTubePreviewInsertOption,
+                        onClick: this.OnOuterDivClickPassDown,
+                      },
+                      a.createElement("input", {
+                        type: "radio",
+                        name: "YouTubePreviewInsertType",
+                        id: de.full,
+                        value: de.full,
+                        checked: this.state.alignment == de.full,
+                        onChange: this.OnFullSelected,
+                      }),
+                      a.createElement(
+                        "label",
+                        { htmlFor: de.full },
+                        a.createElement(
+                          "span",
+                          null,
+                          Object(c.f)("#EventEditor_InsertYouTube_Full")
+                        )
+                      )
+                    ),
+                    a.createElement(
+                      "div",
+                      {
+                        className: ne.a.YouTubePreviewInsertOption,
+                        onClick: this.OnOuterDivClickPassDown,
+                      },
+                      a.createElement("input", {
+                        type: "radio",
+                        name: "YouTubePreviewInsertType",
+                        id: de.summary,
+                        value: de.summary,
+                        checked: this.state.alignment == de.summary,
+                        onChange: this.OnSummarySelected,
+                      }),
+                      a.createElement(
+                        "label",
+                        { htmlFor: de.summary },
+                        a.createElement(
+                          "span",
+                          null,
+                          Object(c.f)("#EventEditor_InsertYouTube_Summary")
+                        )
+                      )
+                    )
+                  )
+                )
+              );
+            }),
+            Object(r.c)([l.a], t.prototype, "OnYoutubeInsertLink", null),
+            Object(r.c)([l.a], t.prototype, "OnUrlChange", null),
+            Object(r.c)([l.a], t.prototype, "OnLeftSelected", null),
+            Object(r.c)([l.a], t.prototype, "OnRightSelected", null),
+            Object(r.c)([l.a], t.prototype, "OnFullSelected", null),
+            Object(r.c)([l.a], t.prototype, "OnSummarySelected", null),
+            Object(r.c)([l.a], t.prototype, "OnOuterDivClickPassDown", null),
+            (t = Object(r.c)([o.a], t))
+          );
+        })(a.Component),
+        Me = (function (e) {
+          function t() {
+            var t = (null !== e && e.apply(this, arguments)) || this;
+            return (t.state = { textToDisplay: "", strURL: "" }), t;
+          }
+          var n;
+          return (
+            Object(r.d)(t, e),
+            (n = t),
+            (t.prototype.LoadFromTextArea = function () {
+              var e = this.props.textareaRef;
+              if (e && e.current) {
+                var t = ve.getSelectedString(e.current),
+                  r = n.m_regExp.exec(t);
+                r
+                  ? this.setState({ strURL: r[1], textToDisplay: r[2] })
+                  : this.setState({ textToDisplay: t });
+              }
+            }),
+            (t.prototype.componentDidMount = function () {
+              this.LoadFromTextArea();
+            }),
+            (t.prototype.onLinkTitleUpdate = function (e) {
+              this.setState({ textToDisplay: e.target.value });
+            }),
+            (t.prototype.onLinkURLUpdate = function (e) {
+              this.setState({ strURL: e.target.value });
+            }),
+            (t.prototype.onInsertLink = function () {
+              var e = this.state,
+                t = "[url=" + e.strURL + "]" + e.textToDisplay + "[/url]";
+              ve.replaceSelection(this.props.textareaRef.current, t);
+            }),
+            (t.prototype.render = function () {
+              return a.createElement(
+                _.d,
+                {
+                  strTitle: Object(c.f)("#Editor_Link"),
+                  strDescription: "",
+                  closeModal: this.props.closeModal,
+                  onOK: this.onInsertLink,
+                  onCancel: this.props.closeModal,
+                  strOKButtonText: Object(c.f)("#EventEditor_InsertLinkURL"),
+                  className: ne.a.BBCodeEditorInputStyles,
+                },
+                a.createElement(
+                  "div",
+                  { className: ne.a.EventEditorLinkInput },
+                  a.createElement(
+                    "div",
+                    { className: "DialogInputLabelGroup" },
+                    a.createElement(
+                      "label",
+                      null,
+                      a.createElement(
+                        "div",
+                        { className: "DialogLabel" },
+                        Object(c.f)("#EventEditor_LinkDescription")
+                      ),
+                      a.createElement(
+                        "div",
+                        { className: "DialogInput_Wrapper" },
+                        a.createElement("input", {
+                          type: "text",
+                          onChange: this.onLinkTitleUpdate,
+                          value: this.state.textToDisplay,
+                          className: "DialogInput DialogTextInputBase",
+                        })
+                      )
+                    )
+                  ),
+                  a.createElement(
+                    "div",
+                    { className: "DialogInputLabelGroup" },
+                    a.createElement(
+                      "label",
+                      null,
+                      a.createElement(
+                        "div",
+                        { className: "DialogLabel" },
+                        Object(c.f)("#EventEditor_LinkURL")
+                      ),
+                      a.createElement(
+                        "div",
+                        { className: "DialogInput_Wrapper" },
+                        a.createElement("input", {
+                          type: "text",
+                          onChange: this.onLinkURLUpdate,
+                          value: this.state.strURL,
+                          className: "DialogInput DialogTextInputBase",
+                        })
+                      )
+                    )
+                  )
+                )
+              );
+            }),
+            (t.m_regExp = new RegExp(/\[url=([^\]]*)\]([^\[\]]+)\[\/url\]/i)),
+            Object(r.c)([l.a], t.prototype, "onLinkTitleUpdate", null),
+            Object(r.c)([l.a], t.prototype, "onLinkURLUpdate", null),
+            Object(r.c)([l.a], t.prototype, "onInsertLink", null),
+            (t = n = Object(r.c)([o.a], t))
+          );
+        })(a.Component),
+        Se = (function (e) {
+          function t() {
+            var t = (null !== e && e.apply(this, arguments)) || this;
+            return (t.state = { imgURL: "", anchorURL: "" }), t;
+          }
+          return (
+            Object(r.d)(t, e),
+            (t.prototype.componentDidMount = function () {
+              this.refFirstInput && this.refFirstInput.current.focus();
+            }),
+            (t.prototype.OnImageInsert = function () {
+              var e = this.state,
+                t = e.anchorURL,
+                n = e.imgURL,
+                r = "",
+                a = "";
+              t &&
+                t.length > 0 &&
+                ((r += "[url=" + t + "]"), (a = "[/url]" + a)),
+                (r += "[img]" + n),
+                (a = "[/img]" + a),
+                ve.wrapBBCode(r, a, this.props.textareaRef.current);
+            }),
+            (t.prototype.OnImageURLChange = function (e) {
+              this.state.imgURL != e.target.value &&
+                this.setState({ imgURL: e.target.value });
+            }),
+            (t.prototype.OnAnchorURLChange = function (e) {
+              this.state.anchorURL != e.target.value &&
+                this.setState({ anchorURL: e.target.value });
+            }),
+            (t.prototype.render = function () {
+              var e = this.state,
+                t = e.imgURL,
+                n = e.anchorURL;
+              return a.createElement(
+                _.d,
+                {
+                  strTitle: Object(c.f)("#EventEditor_InsertImage_Title"),
+                  strDescription: "",
+                  closeModal: this.props.closeModal,
+                  onCancel: this.props.closeModal,
+                  onOK: this.OnImageInsert,
+                  strOKButtonText: Object(c.f)(
+                    "#EventEditor_InsertImage_Title"
+                  ),
+                  className: ne.a.BBCodeEditorInputStyles,
+                },
+                a.createElement(
+                  "div",
+                  { className: ne.a.EventEditorLinkInput },
+                  a.createElement(
+                    "p",
+                    null,
+                    Object(c.f)("#EventEditor_InsertImage_Desc")
+                  ),
+                  a.createElement(
+                    "div",
+                    { className: "DialogInputLabelGroup" },
+                    a.createElement(
+                      "label",
+                      null,
+                      a.createElement(
+                        "div",
+                        { className: "DialogLabel" },
+                        Object(c.f)("#EventEditor_InsertImage_URL")
+                      ),
+                      a.createElement(
+                        "div",
+                        { className: "DialogInput_Wrapper" },
+                        a.createElement("input", {
+                          className: "DialogInput DialogTextInputBase",
+                          type: "text",
+                          value: t,
+                          onChange: this.OnImageURLChange,
+                          placeholder: Object(c.f)(
+                            "#EventEditor_InsertImage_Placeholder"
+                          ),
+                          ref: this.refFirstInput,
+                        })
+                      )
+                    )
+                  ),
+                  a.createElement(
+                    "div",
+                    { className: "DialogInputLabelGroup" },
+                    a.createElement(
+                      "label",
+                      null,
+                      a.createElement(
+                        "div",
+                        { className: "DialogLabel" },
+                        Object(c.f)("#EventEditor_InsertImage_Anchor")
+                      ),
+                      a.createElement(
+                        "div",
+                        { className: "DialogInput_Wrapper" },
+                        a.createElement("input", {
+                          className: "DialogInput DialogTextInputBase",
+                          type: "text",
+                          value: n,
+                          onChange: this.OnAnchorURLChange,
+                          placeholder: Object(c.f)(
+                            "#EventEditor_InsertImage_Placeholder"
+                          ),
+                        })
+                      )
+                    )
+                  )
+                )
+              );
+            }),
+            Object(r.c)([l.a], t.prototype, "OnImageInsert", null),
+            Object(r.c)([l.a], t.prototype, "OnImageURLChange", null),
+            Object(r.c)([l.a], t.prototype, "OnAnchorURLChange", null),
+            (t = Object(r.c)([o.a], t))
+          );
+        })(a.Component),
+        Oe = function (e) {
+          var t = a.useRef(null),
+            n = a.useState(""),
+            i = n[0],
+            o = n[1],
+            l = a.useState(""),
+            u = l[0],
+            p = l[1],
+            d = a.useState(""),
+            m = d[0],
+            h = d[1],
+            f = a.useState(""),
+            b = f[0],
+            v = f[1],
+            M = a.useState(void 0),
+            S = M[0],
+            E = M[1],
+            w = a.useState(void 0),
+            I = w[0],
+            L = w[1],
+            T = a.useState([]),
+            D = T[0],
+            N = T[1],
+            j = a.useState(!0),
+            z = j[0],
+            R = j[1];
+          a.useEffect(function () {
+            return (
+              Object(r.b)(void 0, void 0, void 0, function () {
+                var e, n;
+                return Object(r.e)(this, function (a) {
+                  switch (a.label) {
+                    case 0:
+                      return (
+                        (e = g.a.CancelToken.source()),
+                        (t.current = e.cancel),
+                        [
+                          4,
+                          g.a.get(
+                            s.d.COMMUNITY_BASE_URL + "actions/ajaxlistfriends",
+                            { cancelToken: e.token }
+                          ),
+                        ]
+                      );
+                    case 1:
+                      return (
+                        (n = a.sent()),
+                        e.token.reason || !n
+                          ? [3, 3]
+                          : (N(n.data),
+                            [
+                              4,
+                              C.a.LoadProfiles(
+                                Object(r.g)(
+                                  [s.k.steamid],
+                                  n.data.map(function (e) {
+                                    return e.steamid;
+                                  })
+                                )
+                              ),
+                            ])
+                      );
+                    case 2:
+                      a.sent(), R(!1), (a.label = 3);
+                    case 3:
+                      return [2];
+                  }
+                });
+              }),
+              function () {
+                t.current && t.current("InsertSpeakerBBCode: unmounting");
+              }
+            );
+          }, []);
+          var k = 0 != i.trim().length && 0 != b.trim().length,
+            G = a.createElement(
+              "div",
+              { className: ne.a.DropDownScroll },
+              D.map(function (e) {
+                return a.createElement(
+                  J.d,
+                  {
+                    onSelected: function () {
+                      return L(new O.a(e.steamid));
+                    },
+                    key: e.steamid,
+                  },
+                  a.createElement(
+                    "div",
+                    { style: { display: "flex", alignItems: "center" } },
+                    a.createElement("img", {
+                      className: Y.a.WhitelistAvatar,
+                      src: e.avatar_url,
+                    }),
+                    e.persona_name
+                  )
+                );
+              })
+            ),
+            P = I ? C.a.GetProfileBySteamID(I) : void 0;
+          return a.createElement(
+            _.d,
+            {
+              strTitle: Object(c.f)("#EventEditor_AddSpeaker"),
+              strDescription: Object(c.f)("#EventEditor_AddSpeaker_Desc"),
+              closeModal: e.closeModal,
+              onCancel: e.closeModal,
+              bOKDisabled: !k,
+              onOK: function () {
+                var t = '[speaker name="' + i.trim() + '"';
+                (u.trim().length > 0 && (t += ' title="' + u + '"'),
+                m.trim().length > 0 && (t += ' company="' + m + '"'),
+                S) &&
+                  (t +=
+                    ' photo="' +
+                    (y.e + "/" + S.clanAccountID + "/" + B.a.GetHashAndExt(S)) +
+                    '"');
+                I && (t += ' steamid="' + I.ConvertTo64BitString() + '"'),
+                  (t += "]" + b + "[/speaker]"),
+                  ve.replaceSelection(e.textareaRef.current, t);
+              },
+              className: ne.a.BBCodeEditorInputStyles,
+            },
+            a.createElement(
+              "div",
+              { className: ne.a.InsertSpeakerCtn },
+              a.createElement(H.l, {
+                type: "text",
+                label: Object(c.f)("#EventEditor_AddSpeaker_Name"),
+                value: i,
+                onChange: function (e) {
+                  return o(e.target.value);
+                },
+                focusOnMount: !0,
+              }),
+              a.createElement(
+                "div",
+                { className: ne.a.TitleGroup },
+                a.createElement(H.l, {
+                  type: "text",
+                  label: Object(c.f)("#EventEditor_AddSpeaker_Title"),
+                  value: u,
+                  onChange: function (e) {
+                    return p(e.target.value);
+                  },
+                }),
+                a.createElement(H.l, {
+                  type: "text",
+                  label: Object(c.f)("#EventEditor_AddSpeaker_Company"),
+                  value: m,
+                  onChange: function (e) {
+                    return h(e.target.value);
+                  },
+                })
+              ),
+              a.createElement(
+                ee.a,
+                {
+                  toolTipContent: Object(c.f)(
+                    "#EventEditor_AssociateSteamAccount_ttip"
+                  ),
+                },
+                a.createElement(
+                  "div",
+                  { className: "DialogLabel" },
+                  Object(c.f)("#EventEditor_AssociateSteamAccount"),
+                  " (?)"
+                )
+              ),
+              a.createElement(
+                "div",
+                null,
+                z &&
+                  a.createElement($.a, {
+                    string: Object(c.f)("#Loading"),
+                    size: "small",
+                  }),
+                Boolean(P) &&
+                  a.createElement(
+                    "a",
+                    {
+                      href:
+                        s.d.COMMUNITY_BASE_URL +
+                        "profiles/" +
+                        I.ConvertTo64BitString(),
+                      target: "_blank",
+                    },
+                    P
+                      ? a.createElement("img", {
+                          style: { marginRight: "8px" },
+                          src: P.avatar_url,
+                        })
+                      : null,
+                    P ? P.persona_name : null
+                  ),
+                a.createElement(
+                  "div",
+                  { className: ne.a.AssociateRowCtn },
+                  a.createElement(
+                    H.d,
+                    {
+                      onClick: function () {
+                        return L(new O.a(s.k.steamid));
+                      },
+                    },
+                    Object(c.f)("#EventEditor_SteamAccount_addme")
+                  ),
+                  a.createElement(
+                    H.d,
+                    {
+                      onClick: function (e) {
+                        return Object(A.a)(G, e);
+                      },
+                    },
+                    Object(c.f)("#EventEditor_SteamAccount_addfriend")
+                  ),
+                  a.createElement(
+                    H.d,
+                    {
+                      onClick: function () {
+                        return L(void 0);
+                      },
+                    },
+                    Object(c.f)("#EventEditor_SteamAccount_clear")
+                  )
+                )
+              ),
+              a.createElement(
+                "div",
+                { className: ne.a.PhotoCtn },
+                a.createElement(
+                  "div",
+                  { className: "DialogLabel" },
+                  Object(c.f)("#EventEditor_ChoosePhoto")
+                ),
+                a.createElement(he, {
+                  clanSteamID: e.clanSteamID,
+                  inputClanImage: S,
+                  setImage: E,
+                  nWidth: 184,
+                  nHeight: 184,
+                })
+              ),
+              a.createElement(
+                "div",
+                { className: ne.a.AboutCtn },
+                a.createElement(
+                  "div",
+                  { className: "DialogLabel" },
+                  Object(c.f)("#EventEditor_AddSpeaker_About")
+                ),
+                a.createElement(H.a, {
+                  value: b,
+                  onChange: function (e) {
+                    return v(e.target.value);
+                  },
+                  rows: 8,
+                  cols: 80,
+                  nMinHeight: 40,
+                  placeholder: Object(c.f)(
+                    "#EventEditor_AddSpeaker_About_Placeholder"
+                  ),
+                })
+              ),
+              a.createElement(
+                "div",
+                { className: ne.a.PreviewCtn },
+                a.createElement(
+                  "div",
+                  { className: "DialogLabel" },
+                  Object(c.f)("#Button_Preview")
+                ),
+                a.createElement(Z.a, {
+                  company: m,
+                  name: i,
+                  title: u,
+                  bioString: b,
+                  photo: S ? S.url : void 0,
+                })
+              )
+            )
+          );
+        },
+        Ee = (function (e) {
+          function t(t) {
+            var n = e.call(this, t) || this;
+            return (
+              (n.m_isMounted = !1),
+              (n.m_bAppend = !1),
+              (n.state = { bPreserveNewLines: !1, strHTMLData: "" }),
+              n
+            );
+          }
+          return (
+            Object(r.d)(t, e),
+            (t.prototype.componentDidMount = function () {
+              this.m_isMounted = !0;
+            }),
+            (t.prototype.componentWillUnmount = function () {
+              this.m_isMounted = !1;
+            }),
+            (t.prototype.OnConvertAndOverriteHTML = function () {
+              (this.m_bAppend = !1), this.ConvertBBCode();
+            }),
+            (t.prototype.OnConvertAndAppendHTML = function () {
+              (this.m_bAppend = !0), this.ConvertBBCode();
+            }),
+            (t.prototype.ConvertHtmlToBBCode = function (e, t) {
+              return Object(r.b)(this, void 0, void 0, function () {
+                var n;
+                return Object(r.e)(this, function (r) {
+                  switch (r.label) {
+                    case 0:
+                      return (
+                        (n = new URLSearchParams()).append("content", e),
+                        n.append("preserve_newlines", t ? "1" : "0"),
+                        null,
+                        [
+                          4,
+                          g.a.post(
+                            s.d.COMMUNITY_BASE_URL +
+                              "/actions/ConvertHTMLToBBCode",
+                            n
+                          ),
+                        ]
+                      );
+                    case 1:
+                      return [2, r.sent().data.content];
+                  }
+                });
+              });
+            }),
+            (t.prototype.ConvertBBCode = function () {
+              var e = this;
+              this.setState({ bConverting: !0 }),
+                this.ConvertHtmlToBBCode(
+                  this.state.strHTMLData,
+                  this.state.bPreserveNewLines
+                )
+                  .then(function (t) {
+                    e.m_isMounted &&
+                      (e.m_bAppend
+                        ? ve.append(t, e.props.textareaRef.current)
+                        : ve.overwrite(t, e.props.textareaRef.current),
+                      e.setState({ bConverting: !1, bFinishedConverting: !0 }));
+                  })
+                  .catch(function (e) {
+                    Object(d.d)(
+                      a.createElement(_.f, {
+                        strTitle: Object(c.f)("#EventEditor_ConvertHTML_Error"),
+                        strDescription: Object(c.f)(
+                          "#EventEditor_ConvertHTML_Error_Desc",
+                          e.response && e.response.data
+                            ? e.response.data.msg
+                            : e
+                        ),
+                        bAlertDialog: !0,
+                        bDestructiveWarning: !0,
+                      }),
+                      window,
+                      {
+                        strTitle: Object(c.f)("#EventEditor_ConvertHTML_Error"),
+                      }
+                    );
+                  });
+            }),
+            (t.prototype.OnCheckboxChange = function (e) {
+              var t = e.target.checked;
+              t != this.state.bPreserveNewLines &&
+                this.setState({ bPreserveNewLines: t });
+            }),
+            (t.prototype.OnTextAreaChange = function (e) {
+              this.setState({ strHTMLData: e.currentTarget.value });
+            }),
+            (t.prototype.render = function () {
+              var e = this.props.closeModal;
+              return this.state.bConverting
+                ? a.createElement(
+                    _.d,
+                    {
+                      strTitle: Object(c.f)("#EventEditor_ImportFromHTML"),
+                      strDescription: Object(c.f)(
+                        "#EventEditor_ImportFromHTML_ConversionInProgress"
+                      ),
+                      closeModal: e,
+                      bAlertDialog: !0,
+                      onOK: e,
+                      onCancel: e,
+                    },
+                    a.createElement($.a, null)
+                  )
+                : this.state.bFinishedConverting
+                ? a.createElement(_.d, {
+                    strTitle: Object(c.f)("#EventEditor_ImportFromHTML"),
+                    strDescription: Object(c.f)(
+                      "#EventEditor_ImportFromHTML_ConvertFinished"
+                    ),
+                    closeModal: e,
+                    bAlertDialog: !0,
+                    onOK: e,
+                    onCancel: e,
+                  })
+                : a.createElement(
+                    _.e,
+                    {
+                      onOK: this.OnConvertAndOverriteHTML,
+                      onCancel: e,
+                      className: ne.a.BBCodeEditorInputStyles,
+                    },
+                    a.createElement(
+                      H.k,
+                      null,
+                      " ",
+                      Object(c.f)("#EventEditor_ImportFromHTML"),
+                      " "
+                    ),
+                    a.createElement(
+                      H.b,
+                      null,
+                      a.createElement(
+                        H.c,
+                        null,
+                        a.createElement(
+                          "div",
+                          {
+                            className: Object(h.a)(
+                              p.a.FlexColumnContainer,
+                              ne.a.ImportHTMLCtn
+                            ),
+                          },
+                          a.createElement(
+                            "div",
+                            { className: p.a.FlexColumnContainer },
+                            Object(c.n)(
+                              "#EventEditor_ImportFromHTML_ConvertDescription",
+                              a.createElement(
+                                "a",
+                                {
+                                  target: s.d.IN_CLIENT ? void 0 : "_blank",
+                                  href:
+                                    "https://partner.steamgames.com/doc/marketing/event_tools/import",
+                                },
+                                Object(c.f)(
+                                  "#EventEditor_ImportFromHTML_ConvertLearn"
+                                )
+                              )
+                            )
+                          ),
+                          a.createElement("textarea", {
+                            value: this.state.strHTMLData,
+                            placeholder: Object(c.f)(
+                              "#EventEditor_ImportFromHTML_Instruction"
+                            ),
+                            className: ne.a.ImportHTMLTextArea,
+                            onChange: this.OnTextAreaChange,
+                            ref: function (e) {
+                              return e && e.focus();
+                            },
+                          }),
+                          a.createElement(
+                            "div",
+                            { className: ne.a.ImportHTMLCheckBoxLine },
+                            a.createElement("input", {
+                              id: "ImportFromHTMLNewLines",
+                              type: "checkbox",
+                              checked: this.state.bPreserveNewLines,
+                              onChange: this.OnCheckboxChange,
+                            }),
+                            a.createElement(
+                              "label",
+                              { htmlFor: "ImportFromHTMLNewLines" },
+                              Object(c.f)(
+                                "#EventEditor_ImportFromHTML_PreserveNewlines"
+                              ),
+                              a.createElement(
+                                "span",
+                                {
+                                  className: "ttip",
+                                  "data-tooltip-text": Object(c.f)(
+                                    "#EventEditor_ImportFromHTML_PreserveNewlines_Hint"
+                                  ),
+                                },
+                                "(?)"
+                              )
+                            )
+                          ),
+                          a.createElement(
+                            "div",
+                            null,
+                            Object(c.f)(
+                              "#EventEditor_ImportFromHTML_ConvertToBBCode"
+                            )
+                          )
+                        )
+                      ),
+                      a.createElement(
+                        H.j,
+                        null,
+                        a.createElement(H.o, {
+                          onCancel: e,
+                          strOKText: Object(c.f)("#Button_Overwrite"),
+                          onUpdate: this.OnConvertAndAppendHTML,
+                          strUpdateText: Object(c.f)("#Button_Append"),
+                        })
+                      )
+                    )
+                  );
+            }),
+            Object(r.c)([l.a], t.prototype, "OnConvertAndOverriteHTML", null),
+            Object(r.c)([l.a], t.prototype, "OnConvertAndAppendHTML", null),
+            Object(r.c)([l.a], t.prototype, "OnCheckboxChange", null),
+            Object(r.c)([l.a], t.prototype, "OnTextAreaChange", null),
+            (t = Object(r.c)([o.a], t))
+          );
+        })(a.Component),
+        Ce = n("mB/g"),
+        Ae = n("TOXn"),
+        we = n("fkaw"),
+        Be = n.n(we),
+        Ie = Object(o.a)(function (e) {
           var t = e.eventModel,
             n = a.useRef(null),
             i = Object(C.b)(s.k.steamid),
@@ -85576,11 +85565,11 @@ var CLSTAMP = "6575092";
             f = m[0],
             b = m[1],
             v = a.useState(""),
-            T = v[0],
-            N = v[1],
-            j = a.useState(!1),
-            z = j[0],
-            R = j[1];
+            A = v[0],
+            w = v[1],
+            B = a.useState(!1),
+            I = B[0],
+            L = B[1];
           a.useEffect(function () {
             return function () {
               return (
@@ -85589,9 +85578,9 @@ var CLSTAMP = "6575092";
               );
             };
           }, []);
-          var k = o ? o.avatar_url : null,
-            G = Object(w.h)(t),
-            P = O.a.InitFromAccountID(s.k.accountid);
+          var T = o ? o.avatar_url : null,
+            D = Object(Ce.h)(t),
+            N = O.a.InitFromAccountID(s.k.accountid);
           return f
             ? a.createElement(
                 _.d,
@@ -85612,18 +85601,18 @@ var CLSTAMP = "6575092";
                   ),
                   a.createElement(
                     "div",
-                    { className: D.a.Container },
-                    0 == (null == T ? void 0 : T.length)
-                      ? a.createElement(I.a, { position: "center" })
-                      : a.createElement("div", null, T),
-                    Boolean(z) &&
+                    { className: Be.a.Container },
+                    0 == (null == A ? void 0 : A.length)
+                      ? a.createElement($.a, { position: "center" })
+                      : a.createElement("div", null, A),
+                    Boolean(I) &&
                       a.createElement(
                         "a",
                         {
                           href:
                             s.d.COMMUNITY_BASE_URL +
                             "profiles/" +
-                            P.ConvertTo64BitString() +
+                            N.ConvertTo64BitString() +
                             "/home",
                           target: s.d.IN_CLIENT ? void 0 : "_blank",
                         },
@@ -85652,11 +85641,11 @@ var CLSTAMP = "6575092";
                               (n.current = e.cancel),
                               b(!0),
                               0 != (a = u).trim().length && (a += "\n\n"),
-                              (a += G),
+                              (a += D),
                               (i =
                                 s.d.COMMUNITY_BASE_URL +
                                 "profiles/" +
-                                P.ConvertTo64BitString() +
+                                N.ConvertTo64BitString() +
                                 "/ajaxpostuserstatus"),
                               (r.label = 1);
                           case 1:
@@ -85683,7 +85672,7 @@ var CLSTAMP = "6575092";
                                   "\n\n" +
                                   l.GetEResult()),
                                 console.error(f, !e.token.reason),
-                                e.token.reason || N(f),
+                                e.token.reason || w(f),
                                 [2])
                               : [3, 5];
                           case 3:
@@ -85715,26 +85704,26 @@ var CLSTAMP = "6575092";
                                     ? void 0
                                     : v.message)),
                                 console.error(f),
-                                e.token.reason || N(f),
+                                e.token.reason || w(f),
                                 [2]
                               );
                             r.label = 5;
                           case 5:
                             return (
                               e.token.reason ||
-                                (R(!0),
-                                N(Object(c.f)("#EventDisplay_Share_Success"))),
+                                (L(!0),
+                                w(Object(c.f)("#EventDisplay_Share_Success"))),
                               [3, 7]
                             );
                           case 6:
                             return (
                               (m = r.sent()),
-                              (h = Object(B.a)(m)),
+                              (h = Object(fe.a)(m)),
                               (f =
                                 Object(c.f)("#EventDisplay_Share_Failure") +
                                 "\n\n" +
                                 h.strErrorMsg),
-                              e.token.reason || N(f),
+                              e.token.reason || w(f),
                               console.error(f),
                               [3, 7]
                             );
@@ -85758,7 +85747,7 @@ var CLSTAMP = "6575092";
                     "div",
                     {
                       className: Object(h.a)(
-                        D.a.Container,
+                        Be.a.Container,
                         p.a.FlexColumnContainer
                       ),
                     },
@@ -85766,14 +85755,14 @@ var CLSTAMP = "6575092";
                       "div",
                       null,
                       a.createElement("img", {
-                        className: D.a.SmallAvatar,
-                        src: k,
+                        className: Be.a.SmallAvatar,
+                        src: T,
                         "data-miniprofile": "s" + s.k.steamid,
                       }),
                       a.createElement(
                         "div",
                         { className: Object(h.a)(p.a.FlexColumnContainer) },
-                        a.createElement(A.a, {
+                        a.createElement(_e, {
                           strPlaceholder: Object(c.f)(
                             "#EventDisplay_Share_OnMyStatus_Placeholder"
                           ),
@@ -85787,8 +85776,8 @@ var CLSTAMP = "6575092";
                           emoticonStore: e.emoticonStore,
                           bSupportHTMLImport: !1,
                           showFormatHelp: "UserStatusPublished",
-                          limitBBCode: y.e,
-                          classNameForTextArea: D.a.ShareDescription,
+                          limitBBCode: y.g,
+                          classNameForTextArea: Be.a.ShareDescription,
                           bEmbeddedInDialog: !0,
                         })
                       )
@@ -85796,8 +85785,8 @@ var CLSTAMP = "6575092";
                     a.createElement(
                       "div",
                       null,
-                      a.createElement(L.b, {
-                        text: G,
+                      a.createElement(Ae.a, {
+                        text: D,
                         partnerEventStore: e.partnerEventStore,
                       })
                     )
@@ -85805,28 +85794,26 @@ var CLSTAMP = "6575092";
                 )
               );
         }),
-        j = n("YyVH"),
-        z = n("9w6b"),
-        R = n("6Y59"),
-        k = n("7u3m"),
-        G = n.n(k),
-        P = n("yNwp"),
-        F = n.n(P),
-        x = n("D4G2"),
-        W = n.n(x),
-        U = n("goqe"),
-        q = n.n(U),
-        H = n("Pr9M"),
-        V = n.n(H),
-        X = n("BFsE"),
-        Y = n("/PpB"),
-        K = n("TQGK"),
-        Q = n("kyHq"),
-        J = n("+d9t"),
-        Z = n("5E+2"),
-        $ = n("IzPI"),
-        ee = n("2vnA"),
-        te = (function () {
+        Le = n("YyVH"),
+        Te = n("9w6b"),
+        De = n("6Y59"),
+        Ne = n("7u3m"),
+        je = n.n(Ne),
+        ze = n("yNwp"),
+        Re = n.n(ze),
+        ke = n("D4G2"),
+        Ge = n.n(ke),
+        Pe = n("goqe"),
+        Fe = n.n(Pe),
+        xe = n("Pr9M"),
+        We = n.n(xe),
+        Ue = n("BFsE"),
+        qe = n("/PpB"),
+        He = n("TQGK"),
+        Ve = n("kyHq"),
+        Xe = n("+d9t"),
+        Ye = n("IzPI"),
+        Ke = (function () {
           function e() {
             (this.m_mapClanReposted = new Set()),
               (this.m_mapSourceEventGIDToPostedClans = new Map());
@@ -85927,7 +85914,7 @@ var CLSTAMP = "6575092";
                     case 3:
                       return (
                         (p = r.sent()),
-                        (d = Object(B.a)(p)),
+                        (d = Object(fe.a)(p)),
                         console.error(
                           "GetRepostClanAccountID: fail repost with " +
                             d.strErrorMsg,
@@ -86014,7 +86001,7 @@ var CLSTAMP = "6575092";
                     case 3:
                       return (
                         (h = r.sent()),
-                        (f = Object(B.a)(h)),
+                        (f = Object(fe.a)(h)),
                         console.error(
                           "RepostEvent: fail repost with " + f.strErrorMsg,
                           f
@@ -86027,13 +86014,11 @@ var CLSTAMP = "6575092";
                 });
               });
             }),
-            Object(r.c)([ee.C], e.prototype, "m_mapClanReposted", void 0),
+            Object(r.c)([D.C], e.prototype, "m_mapClanReposted", void 0),
             e
           );
         })(),
-        ne = n("Mgs7"),
-        re = n("IjL/"),
-        ae = Object(o.a)(function (e) {
+        Qe = Object(o.a)(function (e) {
           var t = e.eventModel,
             n = Object(a.useState)(!0),
             o = n[0],
@@ -86065,13 +86050,11 @@ var CLSTAMP = "6575092";
                         return (
                           (e = g.a.CancelToken.source()),
                           (w.current = e.cancel),
-                          (n = te
-                            .Get()
-                            .LoadClansAlreadyRepostedTo(
-                              t.clanSteamID,
-                              t.GID,
-                              e
-                            )).then(function (e) {
+                          (n = Ke.Get().LoadClansAlreadyRepostedTo(
+                            t.clanSteamID,
+                            t.GID,
+                            e
+                          )).then(function (e) {
                             var t = new Set();
                             e.forEach(function (e) {
                               return t.add(e);
@@ -86079,12 +86062,11 @@ var CLSTAMP = "6575092";
                               p(t);
                           }),
                           (a = new Array()).push(n),
-                          te
-                            .Get()
+                          Ke.Get()
                             .GetRepostClanAccountID()
                             .forEach(function (e) {
                               var t = O.a.InitFromClanID(e);
-                              a.push(K.a.LoadClanInfoForClanSteamID(t));
+                              a.push(He.a.LoadClanInfoForClanSteamID(t));
                             }),
                           [4, Promise.all(a)]
                         );
@@ -86102,16 +86084,15 @@ var CLSTAMP = "6575092";
           );
           var B = new Array();
           return (
-            te
-              .Get()
+            Ke.Get()
               .GetRepostClanAccountID()
               .forEach(function (e) {
-                var n = K.a.GetClanInfoByClanAccountID(e);
+                var n = He.a.GetClanInfoByClanAccountID(e);
                 if (n && e != t.clanSteamID.GetAccountID()) {
                   var r = u.has(e),
                     a = m.has(e) || (r && !b.has(e));
                   B.push(
-                    i.a.createElement(ne.e, {
+                    i.a.createElement(H.e, {
                       key: "checkbox" + e,
                       label: r
                         ? Object(c.f)(
@@ -86131,7 +86112,7 @@ var CLSTAMP = "6575092";
                 }
               }),
             i.a.createElement(
-              re.a,
+              ce.a,
               null,
               i.a.createElement(
                 _.h,
@@ -86141,23 +86122,23 @@ var CLSTAMP = "6575092";
                   },
                 },
                 i.a.createElement(
-                  ne.f,
+                  H.f,
                   null,
                   i.a.createElement(
-                    ne.k,
+                    H.k,
                     null,
                     Object(c.f)("#EventRepost_Dialog_Title")
                   ),
                   i.a.createElement(
-                    ne.b,
+                    H.b,
                     null,
                     i.a.createElement(
-                      ne.c,
+                      H.c,
                       null,
                       Object(c.f)("#EventRepost_Dialog_Desc")
                     ),
                     o
-                      ? i.a.createElement(I.a, {
+                      ? i.a.createElement($.a, {
                           string: Object(c.f)("#Loading"),
                         })
                       : i.a.createElement("div", null, B),
@@ -86197,9 +86178,9 @@ var CLSTAMP = "6575092";
                     Boolean(C) && i.a.createElement("div", null, C)
                   ),
                   i.a.createElement(
-                    ne.j,
+                    H.j,
                     null,
-                    i.a.createElement(ne.n, {
+                    i.a.createElement(H.n, {
                       onCancel: function () {
                         return e.closeModal && e.closeModal();
                       },
@@ -86235,15 +86216,13 @@ var CLSTAMP = "6575092";
                                     (p = O.a.InitFromClanID(u)),
                                     [
                                       4,
-                                      te
-                                        .Get()
-                                        .RepostEvent(
-                                          t.clanSteamID,
-                                          t.GID,
-                                          p,
-                                          !0,
-                                          e
-                                        ),
+                                      Ke.Get().RepostEvent(
+                                        t.clanSteamID,
+                                        t.GID,
+                                        p,
+                                        !0,
+                                        e
+                                      ),
                                     ])
                                   : [3, 4];
                               case 2:
@@ -86274,15 +86253,13 @@ var CLSTAMP = "6575092";
                                     (p = O.a.InitFromClanID(u)),
                                     [
                                       4,
-                                      te
-                                        .Get()
-                                        .RepostEvent(
-                                          t.clanSteamID,
-                                          t.GID,
-                                          p,
-                                          !1,
-                                          e
-                                        ),
+                                      Ke.Get().RepostEvent(
+                                        t.clanSteamID,
+                                        t.GID,
+                                        p,
+                                        !1,
+                                        e
+                                      ),
                                     ])
                                   : [3, 8];
                               case 6:
@@ -86325,10 +86302,10 @@ var CLSTAMP = "6575092";
             )
           );
         });
-      function ie(e, t) {
+      function Je(e, t) {
         return t.BIsUserLoggedIn()
           ? !t.GetPartnerEventPermissions(e.clanSteamID).limited_user ||
-              (Object(d.d)(a.createElement(Y.a, null), window), !1)
+              (Object(d.d)(a.createElement(qe.a, null), window), !1)
           : (s.d.IN_CLIENT
               ? console.log(
                   "EventDiscussionWidget: In Client: Cannot use login widget. We expect to be already logged in."
@@ -86341,23 +86318,23 @@ var CLSTAMP = "6575092";
                     ),
                     strOKButtonText: Object(c.f)("#MobileLogin_SignIn"),
                     onOK: function () {
-                      return Object(X.a)();
+                      return Object(Ue.a)();
                     },
                   }),
                   window
                 ),
             !1);
       }
-      var oe = (function (e) {
+      var Ze = (function (e) {
         function t(t) {
           var r = e.call(this, t) || this;
           r.m_cancelSignal = g.a.CancelToken.source();
-          var a = z.a.Get().BHasMyVote(t.eventModel),
+          var a = Te.a.Get().BHasMyVote(t.eventModel),
             i = void 0;
           return (
             a &&
               (i = n.ConvertMyVoteRaw(
-                z.a.Get().GetPreviouslyLoadedVote(t.eventModel)
+                Te.a.Get().GetPreviouslyLoadedVote(t.eventModel)
               )),
             (r.state = { bLoadedVote: !!a, myVote: i }),
             r
@@ -86377,8 +86354,8 @@ var CLSTAMP = "6575092";
                   (e = this.props),
                   (t = e.eventModel),
                   e.partnerEventStore,
-                  z.a.Get().BIsUserLoggedIn() &&
-                    (z.a
+                  Te.a.Get().BIsUserLoggedIn() &&
+                    (Te.a
                       .Get()
                       .LoadMyVote(t, this.m_cancelSignal)
                       .then(function (e) {
@@ -86386,15 +86363,15 @@ var CLSTAMP = "6575092";
                         a.setState({ myVote: t, bLoadedVote: !0 });
                       })
                       .catch(function (e) {
-                        var t = Object(B.a)(e);
+                        var t = Object(fe.a)(e);
                         console.error(
                           "EventDiscussionWidget = " + t.strErrorMsg
                         );
                       }),
-                    K.a
+                    He.a
                       .LoadClanInfoForClanSteamID(t.clanSteamID)
                       .catch(function (e) {
-                        var t = Object(B.a)(e);
+                        var t = Object(fe.a)(e);
                         console.error(
                           "EventDiscussionWidget = " + t.strErrorMsg
                         );
@@ -86429,18 +86406,18 @@ var CLSTAMP = "6575092";
           (t.prototype.Vote = function (e) {
             var t = this,
               n = this.props.eventModel;
-            ie(n, z.a.Get()) &&
+            Je(n, Te.a.Get()) &&
               this.state.myVote != e &&
               null != e &&
               this.state.bLoadedVote &&
               this.setState(
                 { bVotingUp: "up" == e, bVotingDown: "down" == e },
                 function () {
-                  z.a
+                  Te.a
                     .Get()
                     .Vote(n, "up" === e, t.m_cancelSignal)
                     .catch(function (n) {
-                      var r = Object(B.a)(n);
+                      var r = Object(fe.a)(n);
                       console.error(
                         "EventDiscussionWidget.OnVote" +
                           e +
@@ -86456,7 +86433,7 @@ var CLSTAMP = "6575092";
           }),
           (t.prototype.OnShareDialog = function (e) {
             Object(d.d)(
-              a.createElement(ce, {
+              a.createElement(et, {
                 eventModel: this.props.eventModel,
                 emoticonStore: this.props.emoticonStore,
                 partnerEventStore: this.props.partnerEventStore,
@@ -86477,20 +86454,20 @@ var CLSTAMP = "6575092";
           }),
           (t.prototype.OpenRepostDialogs = function (e) {
             Object(d.d)(
-              a.createElement(ae, { eventModel: this.props.eventModel }),
+              a.createElement(Qe, { eventModel: this.props.eventModel }),
               Object(m.m)(e)
             );
           }),
           (t.prototype.render = function () {
             var e = this.props.eventModel,
-              t = Object(j.a)(
+              t = Object(Le.a)(
                 e.nVotesUp - e.nVotesDown,
                 0,
                 Number.MAX_SAFE_INTEGER
               ),
               n = e.GetForumTopicURL(),
-              r = s.d.EREALM === Q.g.k_ESteamRealmChina,
-              i = s.k.logged_in && te.Get().BCanRepostPartnerEvent();
+              r = s.d.EREALM === Ve.g.k_ESteamRealmChina,
+              i = s.k.logged_in && Ke.Get().BCanRepostPartnerEvent();
             return a.createElement(
               "div",
               { className: b.a.Container },
@@ -86503,7 +86480,7 @@ var CLSTAMP = "6575092";
                   a.createElement(
                     "div",
                     { className: b.a.VoteCount },
-                    a.createElement(R.db, { className: b.a.VoteUpStaticIcon }),
+                    a.createElement(De.db, { className: b.a.VoteUpStaticIcon }),
                     t.toLocaleString(c.e.GetPreferredLocales())
                   ),
                   a.createElement(
@@ -86517,7 +86494,7 @@ var CLSTAMP = "6575092";
                       ),
                       onClick: this.OnVoteUp,
                     },
-                    a.createElement(R.db, {
+                    a.createElement(De.db, {
                       className:
                         "up" == this.state.myVote
                           ? b.a.VoteUpSelectedIcon
@@ -86542,7 +86519,7 @@ var CLSTAMP = "6575092";
                       ),
                       onClick: this.OnVoteDown,
                     },
-                    a.createElement(R.db, {
+                    a.createElement(De.db, {
                       className:
                         "down" == this.state.myVote
                           ? b.a.VoteDownSelectedIcon
@@ -86551,7 +86528,7 @@ var CLSTAMP = "6575092";
                   )
                 ),
                 !r &&
-                  a.createElement(se, {
+                  a.createElement($e, {
                     commentCount: e.nCommentCount,
                     discussionURL: n,
                     gotoDiscussion: this.GotoDiscussion,
@@ -86590,7 +86567,7 @@ var CLSTAMP = "6575092";
                     ),
                     onClick: this.OnShareDialog,
                   },
-                  a.createElement(R.Y, { className: b.a.ShareIcon }),
+                  a.createElement(De.Y, { className: b.a.ShareIcon }),
                   a.createElement(
                     "span",
                     { className: b.a.DiscussionButtonText },
@@ -86608,7 +86585,7 @@ var CLSTAMP = "6575092";
           (t = n = Object(r.c)([o.a], t))
         );
       })(a.Component);
-      function se(e) {
+      function $e(e) {
         var t = e.commentCount,
           n = e.discussionURL,
           r = e.gotoDiscussion;
@@ -86618,13 +86595,13 @@ var CLSTAMP = "6575092";
           a.createElement(
             "div",
             { className: b.a.DiscussionCount },
-            a.createElement(R.k, null),
+            a.createElement(De.k, null),
             t.toLocaleString(c.e.GetPreferredLocales())
           ),
           n &&
             a.createElement(
               "a",
-              { href: Object($.f)(n) },
+              { href: Object(Ye.f)(n) },
               a.createElement(
                 "div",
                 {
@@ -86634,7 +86611,7 @@ var CLSTAMP = "6575092";
                     b.a.DiscussionButton
                   ),
                 },
-                a.createElement(R.k, null),
+                a.createElement(De.k, null),
                 a.createElement(
                   "span",
                   { className: b.a.DiscussionButtonText },
@@ -86653,7 +86630,7 @@ var CLSTAMP = "6575092";
                   b.a.DiscussionButton
                 ),
               },
-              a.createElement(R.k, null),
+              a.createElement(De.k, null),
               a.createElement(
                 "span",
                 { className: b.a.DiscussionButtonText },
@@ -86662,7 +86639,7 @@ var CLSTAMP = "6575092";
             )
         );
       }
-      var ce = (function (e) {
+      var et = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -86673,7 +86650,7 @@ var CLSTAMP = "6575092";
           return (
             Object(r.d)(t, e),
             (t.prototype.ShareOnSteamActivityFeed = function () {
-              z.a.Get().BIsUserLoggedIn()
+              Te.a.Get().BIsUserLoggedIn()
                 ? this.setState({ bShareOnSteamDialog: !0 })
                 : s.d.IN_CLIENT
                 ? console.log(
@@ -86696,11 +86673,11 @@ var CLSTAMP = "6575092";
                     strOKButtonText: Object(c.f)("#MobileLogin_SignIn"),
                     onCancel: this.props.closeModal,
                     onOK: function () {
-                      return Object(X.a)();
+                      return Object(Ue.a)();
                     },
                   })
                 : this.state.bShareOnSteamDialog
-                ? a.createElement(N, {
+                ? a.createElement(Ie, {
                     eventModel: t,
                     emoticonStore: r,
                     partnerEventStore: i,
@@ -86715,7 +86692,7 @@ var CLSTAMP = "6575092";
                       onOK: this.props.closeModal,
                       bAlertDialog: !0,
                     },
-                    a.createElement(le, {
+                    a.createElement(tt, {
                       eventModel: t,
                       fnShareOnSteamActivityFeed: this.ShareOnSteamActivityFeed,
                     })
@@ -86725,9 +86702,9 @@ var CLSTAMP = "6575092";
             t
           );
         })(a.Component),
-        le = function (e) {
+        tt = function (e) {
           var t = e.eventModel,
-            n = s.d.EREALM === Q.g.k_ESteamRealmChina;
+            n = s.d.EREALM === Ve.g.k_ESteamRealmChina;
           return a.createElement(
             "div",
             {
@@ -86747,7 +86724,7 @@ var CLSTAMP = "6575092";
                     style: { flexWrap: "wrap" },
                   },
                   a.createElement(
-                    Z.a,
+                    ee.a,
                     {
                       toolTipContent: Object(c.f)(
                         "#EventDisplay_Share_OnSteam"
@@ -86761,7 +86738,7 @@ var CLSTAMP = "6575092";
                       },
                       a.createElement("img", {
                         className: b.a.SteamIcon,
-                        src: V.a,
+                        src: We.a,
                       }),
                       a.createElement(
                         "span",
@@ -86771,69 +86748,69 @@ var CLSTAMP = "6575092";
                     )
                   ),
                   a.createElement(
-                    Z.a,
+                    ee.a,
                     {
                       toolTipContent: Object(c.f)(
                         "#EventDisplay_Share_OnFaceBook"
                       ),
                     },
                     a.createElement(
-                      J.a,
+                      Xe.a,
                       {
-                        href: Object(w.g)(t, w.b.k_eFacebook),
+                        href: Object(Ce.g)(t, Ce.b.k_eFacebook),
                         className: b.a.ShareBtn,
                       },
                       a.createElement("img", {
                         className: Object(h.a)(p.a.Button),
-                        src: G.a,
+                        src: je.a,
                       })
                     )
                   ),
                   a.createElement(
-                    Z.a,
+                    ee.a,
                     {
                       toolTipContent: Object(c.f)(
                         "#EventDisplay_Share_OnTwitter"
                       ),
                     },
                     a.createElement(
-                      J.a,
+                      Xe.a,
                       {
-                        href: Object(w.g)(t, w.b.k_eTwitter),
+                        href: Object(Ce.g)(t, Ce.b.k_eTwitter),
                         className: b.a.ShareBtn,
                       },
                       a.createElement("img", {
                         className: Object(h.a)(p.a.Button),
-                        src: W.a,
+                        src: Ge.a,
                       })
                     )
                   ),
                   a.createElement(
-                    Z.a,
+                    ee.a,
                     {
                       toolTipContent: Object(c.f)(
                         "#EventDisplay_Share_OnReddit"
                       ),
                     },
                     a.createElement(
-                      J.a,
+                      Xe.a,
                       {
-                        href: Object(w.g)(t, w.b.k_eReddit),
+                        href: Object(Ce.g)(t, Ce.b.k_eReddit),
                         className: b.a.ShareBtn,
                       },
                       a.createElement("img", {
                         className: Object(h.a)(p.a.Button),
-                        src: F.a,
+                        src: Re.a,
                       })
                     )
                   )
                 ),
                 a.createElement("div", { className: p.a.Divider })
               ),
-            a.createElement(ue, { eventModel: t })
+            a.createElement(nt, { eventModel: t })
           );
         },
-        ue = function (e) {
+        nt = function (e) {
           var t = a.createRef();
           return a.createElement(
             "div",
@@ -86849,7 +86826,7 @@ var CLSTAMP = "6575092";
               className: b.a.LinkInput,
               ref: t,
               type: "text",
-              value: Object(w.h)(e.eventModel),
+              value: Object(Ce.h)(e.eventModel),
               readOnly: !0,
             }),
             document.queryCommandSupported("copy") &&
@@ -86868,7 +86845,7 @@ var CLSTAMP = "6575092";
                 },
                 a.createElement("img", {
                   className: b.a.ClipboardIcon,
-                  src: q.a,
+                  src: Fe.a,
                 })
               )
           );

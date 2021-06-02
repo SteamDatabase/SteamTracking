@@ -6335,854 +6335,48 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
   color: #4297f8;
   text-decoration: none;
 }
-.suggestdialog_mentionDialogPosition_3isL0 {
+.VODPlayer_BroadcastCtn_39rR9 {
+  position: relative;
+  margin: 0 auto;
+  max-width: 940px;
+}
+.VODPlayer_BroadcastCtn_39rR9 .videoContainer {
+  height: unset;
+  width: unset;
+  display: block;
+  position: relative;
+  padding-bottom: 56.25%;
+}
+.VODPlayer_BroadcastCtn_39rR9 .BroadcastPlaceholderImg {
   position: absolute;
-  left: 0;
-  right: 0;
+  width: 100%;
 }
-.suggestdialog_mentionDialog_1QU3c {
-  position: absolute;
-  bottom: 6px;
-  left: 0;
-  right: 0;
-  background: #2c3036;
-  padding: 12px 0px 12px 12px;
-  box-shadow: 0 0 32px 0px #000000ab;
-  overflow-y: auto;
-  overflow-x: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+.VODPlayer_BroadcastCtn_39rR9 .videoSrc {
+  width: 100%;
+  height: auto;
+  border-left: none;
+  border-right: none;
+  background-color: unset;
 }
-.suggestdialog_mentionDialog_1QU3c:focus {
-  outline: none;
-}
-.suggestdialog_mentionSearchText_1xVcZ {
-  color: #818181;
-  margin-bottom: 10px;
-  font-size: 12px;
-}
-.suggestdialog_suggestOption_vquL9 {
-  color: #adaeaf;
-  transition-property: padding-left, color;
-  transition-duration: 0.15s;
-  transition-timing-function: ease-out;
-  line-height: 26px;
-  cursor: pointer;
-  margin-top: 0px;
-  padding-left: 22px;
-  margin-right: 12px;
+.crossfade {
+  position: relative;
   overflow: hidden;
 }
-.suggestdialog_suggestOption_vquL9 .suggestdialog_nickname_2dKJq {
-  color: #6e6e6e;
-}
-.suggestdialog_suggestOption_vquL9.suggestdialog_selected_boNOG {
-  color: #dfe3e6;
-  background-color: #434953;
-  padding-left: 30px;
-}
-span.suggestdialog_mentionSearchMatch_2_0t_ {
-  color: #dfe3e6;
-}
-.emoticonsuggestion_Emoticon_Toggle_Y5J3n {
-  margin-right: 8px;
-  border-radius: 3px;
-  cursor: pointer;
-  padding: 4px 6px;
-}
-.emoticonsuggestion_Emoticon_Toggle_Y5J3n.emoticonsuggestion_Active_YCbwL {
-  background: #777;
-}
-.emoticonsuggestion_Emoticon_2o57_ {
-  position: relative;
-  display: inline-block;
-  margin-right: 8px;
-  padding: 0 4px;
-}
-.bbcodesuggestions_BBCode_Toggle_3dX8- {
-  margin-right: 8px;
-  border-radius: 3px;
-  cursor: pointer;
-  padding: 4px 6px;
-}
-.bbcodesuggestions_BBCode_Toggle_3dX8-.bbcodesuggestions_Active_2vTzh {
-  background: #777;
-}
-.bbcodesuggestions_BBCode_1pH9C {
-  position: relative;
-  display: inline-block;
-  margin-right: 8px;
-  padding: 0 4px;
-}
-.chatentry_chatEntryControls_3Ule3 {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-  background-color: #1b1c20;
-  box-shadow: inset 0px 0px 4px #000;
-  outline-width: 0px;
-  color: #aaa;
-  border: 0px solid transparent;
-  padding-right: 2px;
-}
-.chatentry_chatTextarea_113iu {
-  resize: none;
-  margin-right: 4px;
-  height: 42px;
-  background-color: transparent;
-  box-shadow: inset 0px 0px 4px transparent;
-  outline-width: 0px;
-  color: #aaa;
-  border: 0px solid transparent;
-  font-size: 14px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-  padding: 4px 4px 4px 8px;
-  flex-shrink: 1;
-  width: 100%;
-  transition: all 0.2s ease-in-out;
-}
-.chatentry_chatEntryActionsGroup_2WfNo {
-  padding: 2px;
-  box-shadow: #000 0px 0px 4px inset;
-  background-color: #1b1c20;
-  margin-left: 8px;
-}
-.chatentry_chatEntryActionsContainer_W0Ohk,
-.chatentry_chatEntryActionsGroup_2WfNo {
-  display: flex;
-  flex-direction: row;
-}
-.chatentry_chatEntryActionsContainer_W0Ohk {
-  max-height: 50px;
-  align-self: flex-end;
-}
-.chatentry_minHeightZero_2zeeh {
-  min-height: 0;
-}
-.compactView .chatentry_chatTextarea_113iu {
-  height: 24px;
-  line-height: 18px;
-}
-.chatentry_chatSubmitButton_RVIs8 {
-  position: relative;
-  background-color: #3d424b;
-  border: 1px solid #1b1c20;
-  color: #c9c9c9;
-  margin: 0px;
-  margin-top: 2px;
-  min-width: 16px;
-  max-width: 46px;
-  max-height: 46px;
-  padding: 0;
-  background-image: none;
-  background-size: 22px 22px;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-width: 46px;
-  cursor: pointer;
-}
-.chatentry_chatSubmitButton_RVIs8.chatentry_EmbedButton_3zOBe,
-.chatentry_chatSubmitButton_RVIs8.chatentry_EmoticonPickerButton_Aupsw {
-  flex: 0;
-  min-width: 46px;
-  position: relative;
-  color: #c9c9c9;
-  margin: 0px;
-  margin-top: 0px;
-  max-width: 46px;
-  max-height: 50px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-}
-.chatentry_chatSubmitButton_RVIs8.chatentry_EmbedButton_3zOBe {
-  max-width: 46px;
-  max-height: 46px;
-}
-.chatentry_chatSubmitButton_RVIs8:focus {
-  outline: none;
-}
-.chatentry_chatSubmitButton_RVIs8.chatentry_EmbedButton_3zOBe:hover {
-  background-color: #3d424b;
-}
-.chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2):hover
-  .SVGIcon_Button.SVGIcon_Submit
-  path {
-  fill: #fff;
-  stroke: #fff;
-}
-.chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2):hover
-  .SVGIcon_Button {
-  fill: #f5ffd7;
-}
-.chatentry_chatSubmitButton_RVIs8.chatentry_Inactive_3G-I9
-  .SVGIcon_Microphone_Off {
+.crossfade-anim-exit {
   opacity: 1;
+  transition-timing-function: linear;
+  transition-property: opacity;
 }
-.chatentry_chatSubmitButton_RVIs8.chatentry_disabled_jaQN2 {
-  color: #898989;
-  cursor: default;
-  background-color: #2c3036;
+.crossfade-anim-exit-active {
+  opacity: 0.01;
 }
-.chatentry_chatSubmitButton_RVIs8.chatentry_EmoticonPickerButton_Aupsw,
-.chatentry_chatSubmitButton_RVIs8.chatentry_EmbedButton_3zOBe {
-  color: #898989;
-  background-color: #2c3036;
-}
-.chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2):hover
-  .SVGIcon_VoiceRoom {
-  fill: rgba(0, 0, 0, 0);
-  stroke: #f5ffd7;
-}
-.chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2):hover
-  .SVGIcon_VoiceRoom
-  .chatentry_AudioLines_IWaba {
-  fill: #f5ffd7;
-}
-.chatentry_Active_37tPt.chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2):hover
-  .SVGIcon_VoiceRoom {
-  fill: #fff;
-  stroke: #000;
-}
-.chatentry_Active_37tPt.chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2):hover
-  .SVGIcon_VoiceRoom
-  .chatentry_AudioLines_IWaba {
-  fill: #000;
-}
-.chatentry_chatSubmitButton_RVIs8 .SVGIcon_Submit {
-  width: 24px;
-  height: 24px;
-  margin-top: 3px;
-}
-.chatentry_chatSubmitButton_RVIs8 .SVGIcon_Submit path {
-  fill: #8592a5;
-  stroke-width: 2px;
-}
-.chatentry_EmbedButton_3zOBe {
-  background-image: none;
-  margin-right: 2px;
-  font-size: 28px;
-  text-align: center;
-  color: #8492a4;
-  padding: 0px;
-}
-.chatentry_EmbedButton_3zOBe .SVGIcon_Paperclip {
-  width: 26px;
-  height: 26px;
-}
-.chatentry_EmbedButton_3zOBe .SVGIcon_Paperclip path {
-  stroke: #8492a4;
-  stroke-width: 12px;
-}
-.chatentry_EmbedButton_3zOBe:hover .SVGIcon_Paperclip path,
-.SVGIcon_Paperclip {
-  stroke: #fff;
-}
-.chatentry_EmoticonPickerButton_Aupsw {
-  margin-right: 1px;
-}
-.chatentry_EmoticonPickerButton_Aupsw:hover {
-  background-color: #3d424b;
-}
-.chatentry_EmoticonPickerButton_Aupsw .SVGIcon_Emoticon {
-  width: 26px;
-  height: 26px;
-}
-.chatentry_EmoticonPickerButton_Aupsw .SVGIcon_CSGO {
-  width: 32px;
-  height: 32px;
-  fill: #dfc408;
-  margin-left: 1px;
-  margin-top: 4px;
-}
-.chatentry_EmoticonPickerButton_Aupsw .SVGIcon_Emoticon line,
-.chatentry_EmoticonPickerButton_Aupsw .SVGIcon_Emoticon circle,
-.chatentry_EmoticonPickerButton_Aupsw .SVGIcon_Emoticon path {
-  stroke: #8492a4;
-  stroke-width: 10px;
-}
-.chatentry_EmoticonPickerButton_Aupsw .SVGIcon_Emoticon line {
-  stroke-width: 16px;
-}
-.chatentry_EmoticonPickerButton_Aupsw:hover .SVGIcon_Emoticon line,
-.chatentry_EmoticonPickerButton_Aupsw:hover .SVGIcon_Emoticon circle,
-.chatentry_EmoticonPickerButton_Aupsw:hover .SVGIcon_Emoticon path {
-  stroke: #fff;
-}
-.chatentry_chatEntryControls_3Ule3 .chatentry_chatSubmitButton_RVIs8 {
-  align-self: flex-end;
-  min-height: 46px;
-  margin-bottom: 2px;
-}
-.compactView
-  .chatentry_chatEntryControls_3Ule3
-  .chatentry_chatSubmitButton_RVIs8 {
-  height: 28px;
-  min-height: 28px;
-  margin-bottom: 2px;
-}
-.compactView .chatentry_chatSubmitButton_RVIs8 {
-  min-width: 32px;
-}
-.chatEntry.compactView .chatentry_chatSubmitButton_RVIs8 svg {
-  width: 20px;
-  height: 20px;
-}
-.ChatMessageEntryVoice {
-  flex: 0;
-  min-width: 46px;
-  position: relative;
-  color: #c9c9c9;
-  margin: 0px;
-  margin-top: 0px;
-  max-width: 46px;
-  max-height: 50px;
-  padding: 2px;
-  display: flex;
-  flex-direction: column;
-  margin-left: 8px;
-  box-shadow: #000 0px 0px 4px inset;
-  transition-property: width, max-width, min-width, border-radius,
-    background-position;
-  transition-duration: 0.3s, 0.3s, 0.3s, 0.6s;
-  background: radial-gradient(
-    128px 128px at 20% 50%,
-    #1da834 0%,
-    rgba(27, 28, 32, 0) 100%
-  );
-  background-position: -190px 0px;
-  background-color: #1b1c20;
-  background-repeat: no-repeat;
-  background-size: 256px 128px;
-}
-.friendListHeaderContainer .activeVoicePushToTalk,
-.ChatMessageEntryVoice .activeVoicePushToTalk {
-  font-size: 11px;
-  margin-top: 12px;
-  margin-bottom: -18px;
-  opacity: 1;
-  transition: opacity 0.3s ease-out;
-  white-space: nowrap;
-  user-select: none;
-}
-.ChatMessageEntryVoice.Disabled {
-  opacity: 0.2;
-  border: 1px dashed #000;
-  outline: 2px solid #0007;
-}
-.ChatMessageEntryVoice.Active {
-  min-width: 136px;
-  max-width: 136px;
-  width: 136px;
-  background-position: 0px 0px;
-}
-.ChatMessageEntryVoice .buttonsContainer {
-  display: flex;
-}
-.ChatMessageEntryVoice .activeVoicePushToTalk {
+.crossfade-img {
   position: absolute;
-  top: 33px;
-  left: 49px;
-  width: 87px;
-  text-align: center;
-  color: #74c069;
-  background-color: #0005;
-}
-.ChatMessageEntryVoice .activeVoicePushToTalk {
-  font-size: 10px;
-  margin-top: 0px;
-}
-.ChatMessageEntryVoice.pushToTalkEnabled .activeVoiceButtons {
-  margin-top: -8px;
-}
-.ChatMessageEntryVoice.pushToTalkEnabled .VoiceControlPanelButton {
-  min-height: 14px;
-}
-.ChatMessageEntryVoice.pushToTalkEnabled
-  .activeVoiceButtons
-  .SVGIcon_Button.SVGIcon_Shadow {
-  top: 2px;
-}
-.ChatMessageEntryVoice .activeVoiceButtons {
-  min-width: 0px;
-  width: 84px;
-}
-.ChatMessageEntryVoice .activeVoiceControls {
-  min-width: 0px;
-  width: 84px;
-  border-top: 0px solid transparent;
-  border-bottom: 0px solid transparent;
-  background: none;
-}
-.ChatMessageEntryVoice.Inactive .VoiceControlPanelButton {
-  pointer-events: none;
-}
-.ChatMessageEntryVoice.Active
-  .VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone:active,
-.VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone:active {
-  background-color: rgba(197, 23, 11, 0.5);
-  transition-duration: 0s;
-}
-.ChatMessageEntryVoice.Inactive .activeVoiceButtons {
-  display: none;
-}
-.ChatMessageEntryVoice .VoiceControlPanelButton.ToggleVoiceOutputButton {
-  transform: translateX(-64px) scale(0.7);
-  transition-property: transform, opacity;
-  transition-duration: 0.16s;
-  transition-timing-function: ease-in-out;
-  opacity: 0;
-  cursor: pointer;
-}
-.ChatMessageEntryVoice .VoiceControlPanelButton.ToggleMicrophoneButton {
-  transform: translateX(-32px) scale(0.5);
-  transition: transform 0.1s ease-in-out, opacity 0.3s ease-in-out;
-  opacity: 0;
-  cursor: pointer;
-}
-.ChatMessageEntryVoice.Active .VoiceControlPanelButton.ToggleVoiceOutputButton,
-.ChatMessageEntryVoice.Active .VoiceControlPanelButton.ToggleMicrophoneButton {
-  opacity: 1;
-  transform: translateX(0px) scale(1);
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out,
-    background-color 0.1s ease-in-out;
-}
-.ChatMessageEntryVoice .VoiceControlPanelButton.chatEndVoiceChat {
-  display: none;
-}
-.ChatMessageEntryVoice.Active .VoiceControlPanelButton:active,
-.VoiceControlPanelButton:active {
-  background-color: rgba(97, 253, 151, 0.5);
-}
-.ChatMessageEntryVoice.pushToTalkEnabled
-  .VoiceControlPanelButton.ToggleMicrophoneButton
-  .SVGIcon_Microphone,
-.friendListHeaderContainer
-  .pushToTalkEnabled
-  .VoiceControlPanelButton.ToggleMicrophoneButton
-  .SVGIcon_Microphone {
-  fill: rgba(200, 241, 194, 0.2);
-}
-.ChatMessageEntryVoice.pushToTalkEnabled
-  .VoiceControlPanelButton.ToggleMicrophoneButton
-  .SVGIcon_Microphone.SVGIcon_Shadow,
-.friendListHeaderContainer
-  .pushToTalkEnabled
-  .VoiceControlPanelButton.ToggleMicrophoneButton
-  .SVGIcon_Microphone.SVGIcon_Shadow {
-  fill: rgba(0, 0, 0, 0.2);
-}
-.ChatMessageEntryVoice.pushToTalkEnabled.pushToTalkKeyDown
-  .VoiceControlPanelButton.ToggleMicrophoneButton
-  .SVGIcon_Microphone.SVGIcon_Shadow,
-.friendListHeaderContainer
-  .pushToTalkEnabled.pushToTalkKeyDown
-  .VoiceControlPanelButton.ToggleMicrophoneButton
-  .SVGIcon_Microphone.SVGIcon_Shadow {
-  fill: #000;
-}
-.ChatMessageEntryVoice.pushToTalkEnabled.pushToTalkKeyDown
-  .VoiceControlPanelButton.ToggleMicrophoneButton
-  .SVGIcon_Microphone,
-.friendListHeaderContainer
-  .pushToTalkEnabled.pushToTalkKeyDown
-  .VoiceControlPanelButton.ToggleMicrophoneButton
-  .SVGIcon_Microphone {
-  fill: #c8f1c2;
-}
-.chatEntry.compactView .VoiceToggle {
-  height: 28px;
-}
-.chatEntry.compactView .VoiceToggleIconCtn {
-  height: 24px;
-  top: 3px;
-}
-.chatEntry.compactView .activeVoiceFlexBox {
-  height: 28px;
-}
-.chatEntry.compactView .activeVoiceButtons button {
-  max-width: 28px;
-  min-width: 28px;
-  min-height: 28px;
-  max-height: 28px;
-  margin-top: 2px;
-}
-.chatEntry.compactView .SVGIcon_Button.SVGIcon_Shadow {
-  top: 6px;
-  left: 10px;
-}
-.chatEntry.compactView
-  .VoiceControlPanelButton:active
-  .SVGIcon_Microphone.SVGIcon_Shadow,
-.chatEntry.compactView
-  .VoiceControlPanelButton:active
-  .SVGIcon_Headphones.SVGIcon_Shadow {
-  top: 3px;
-  left: 7px;
-}
-.chatEntry.compactView
-  .VoiceControlPanelButton.ToggleVoiceOutputButton
-  .SVGIcon_Headphones,
-.chatEntry.compactView
-  .VoiceControlPanelButton.ToggleMicrophoneButton
-  .SVGIcon_Microphone {
-  padding-top: 2px;
-  width: 20px;
-  height: 20px;
-}
-.VoiceToggle.Inactive:hover {
-  background-color: #3d424b;
-}
-.chatEntry.compactView .ChatMessageEntryVoice .activeVoiceButtons {
-  width: 64px;
-}
-.chatEntry.compactView .ChatMessageEntryVoice .activeVoiceControls {
-  width: 64px;
-}
-.chatEntry.compactView .ChatMessageEntryVoice.Active {
-  min-width: 114px;
-  max-width: 114px;
-  width: 114px;
-}
-.chatEntry.compactView
-  .ChatMessageEntryVoice.pushToTalkEnabled
-  .activeVoiceButtons {
-  margin-top: -2px;
-}
-.chatEntry.compactView
-  .ChatMessageEntryVoice.pushToTalkEnabled
-  .VoiceControlPanelButton {
-  min-height: 14px;
-}
-.chatEntry.compactView
-  .ChatMessageEntryVoice.pushToTalkEnabled
-  .activeVoiceButtons
-  .SVGIcon_Button.SVGIcon_Shadow {
-  top: 2px;
-}
-.chatEntry.compactView .ChatMessageEntryVoice .activeVoicePushToTalk {
-  top: 18px;
-  right: 0px;
-  width: 66px;
-  text-align: center;
-  color: #74c069;
-  background-color: #0000;
-}
-.reorderablelist_WhitelistNumber_IY3dF {
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  background-color: #2a2e34;
-  margin-right: 8px;
-}
-.reorderablelist_WhitelistCtn_1Uhmx {
-  margin-bottom: 8px;
-  margin-top: 8px;
-}
-.reorderablelist_WhitelistRow_28TC1 {
-  display: flex;
-  align-items: center;
-  background-color: #333740;
-  padding: 4px;
-  margin-bottom: 2px;
-  user-select: none;
-  box-sizing: border-box;
-}
-.reorderablelist_Grabbable_riuel {
-  cursor: grab;
-}
-.reorderablelist_Grabbing_1vSZ5 {
-  cursor: grabbing;
-}
-.reorderablelist_DisabledGrab_2K0C_ {
-  cursor: not-allowed;
-}
-.reorderablelist_WhitelistAvatar_3DGjm {
-  margin-right: 8px;
-}
-.reorderablelist_ButtonCtn_1hSql {
-  margin-left: auto;
-  display: flex;
-  flex-direction: row;
-}
-.presenterpopup_SpeakerOuter_3rRqP {
-  display: block;
-}
-.presenterpopup_Speaker_3F7-F {
-  margin-bottom: 16px;
-  font-size: 12px;
-  flex: 1;
-  display: inline-block;
-}
-.presenterpopup_SpeakerPopup_3y7kV {
-  font-size: 14px;
-  background-color: #48484d;
-  box-shadow: 0 0 12px #00000066;
-  border: 1px solid #48484d;
-  border-radius: 2px;
-  padding: 8px;
-  max-width: 370px;
-}
-@media only screen and (min-width: 400px) {
-  .presenterpopup_SpeakerInfoOuter_1NC9n {
-    display: flex;
-  }
-}
-.presenterpopup_SpeakerInfoOuter_1NC9n img {
-  max-width: 128px;
-  width: 128px;
-  margin-right: 8px;
-}
-@media only screen and (min-width: 400px) {
-  .presenterpopup_SpeakerInfoOuter_1NC9n img {
-    flex: 1;
-  }
-}
-.presenterpopup_SpeakerInfoInner_1bMpE {
-  font-size: 14px;
-  padding: 8px 8px 8px 0px;
-}
-@media only screen and (min-width: 400px) {
-  .presenterpopup_SpeakerInfoInner_1bMpE {
-    flex: 2;
-  }
-}
-.presenterpopup_SpeakerTitle_2Vo0l {
-  font-weight: bold;
-}
-.presenterpopup_SpeakerBio_2yP7s {
-  padding: 8px 8px 8px 0px;
-}
-.presenterpopup_SpeakerHover_16UyH {
-  display: inline-block;
-}
-:root {
-  --main-text-color: #dbe2e6;
-  --main-light-blue-background: #93b3c8;
-  --main-text-on-light-blue: rgb(209, 209, 209);
-  --main-top-image-bg: #1f2126;
-  --main-editor-bg-color: #363a43;
-  --main-editor-text-color: #e6e7e8;
-  --main-editor-input-bg-color: #30333b;
-  --main-editor-section-title-color: #a3a3a3;
-}
-.bbcodeeditor_DragTarget_2sUvh {
-  font-size: 12px;
-  background-color: rgba(255, 255, 255, 0.4);
-}
-.bbcodeeditor_DragOnTopOfMe_1mvpI {
-  background-color: rgba(255, 255, 255, 0.4);
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);
-}
-.bbcodeeditor_DescriptionCtn_3DQEB {
-  border: 2px solid transparent;
-  margin: -2px;
-}
-.bbcodeeditor_DescriptionCtn_3DQEB.bbcodeeditor_DragTarget_2sUvh {
-  border: 2px dashed #06beff;
-}
-.bbcodeeditor_EventEditorLinkInput_25nbu {
-  position: relative;
-  width: 600px;
-  margin-right: 14px;
-  margin-top: 20px;
-}
-.bbcodeeditor_EventEditorLinkInput_25nbu input {
-  width: calc(100% - 20px);
-  color: #dfe3e6;
-  background: rgba(59, 63, 72, 0.5);
-  border: none;
-  box-shadow: inset 0px 0px 0px #0000;
-  border-radius: 3px;
-}
-.bbcodeeditor_EventEditorLinkInput_25nbu input:focus {
-  background: rgba(67, 73, 83, 0.6);
-  box-shadow: inset 1px 1px 8px #000a;
-  padding-left: 11px;
-  outline: none;
-}
-.bbcodeeditor_DefaultEditor_NENu2 {
-  border: none;
-  outline-width: 0;
-  padding: 10px;
-  background-color: var(--main-editor-input-bg-color);
-  box-shadow: 0 0 5px #000 inset;
-  color: var(--main-editor-text-color);
-  font-size: 14px;
-  overflow-x: hidden;
-}
-.bbcodeeditor_ImportHTMLCtn_3sVZH {
-  position: relative;
-  margin-right: 14px;
-  min-width: calc(40vw - 40px);
-}
-.bbcodeeditor_ImportHTMLCtn_3sVZH .bbcodeeditor_ImportHTMLTextArea_DHbRF {
-  width: calc(100% - 12px);
-  height: 200px;
-  margin: 4px 0px;
-  background-color: #1e2025;
-  border: solid 1px #000;
-  outline-width: 0;
-  box-shadow: 1px 1px rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
-  color: gray;
-}
-.bbcodeeditor_ImportHTMLCtn_3sVZH .bbcodeeditor_ImportHTMLConvertButtons_lnyZa {
-  padding: 5px;
-  margin-left: 5px;
-  display: inline-block;
-  width: 30%;
-  line-height: 22px;
-}
-.bbcodeeditor_ImportHTMLCtn_3sVZH .bbcodeeditor_ImportHTMLCheckBoxLine_3R3FN {
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-.bbcodeeditor_ImportHTMLCtn_3sVZH .bbcodeeditor_OptionRow_2Y3ML {
-  display: flex;
-  flex-direction: column;
-}
-.bbcodeeditor_TextEditorToolBarContainer_2bOpQ {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-.bbcodeeditor_TextEditorToolBarContainer_2bOpQ > span,
-.bbcodeeditor_TextEditorToolBarContainer_2bOpQ
-  > img.bbcodeeditor_EmoteOuter_1x3UO {
-  cursor: pointer;
-  padding: 5px;
-  border-radius: 2px;
-  color: #afafaf;
-  background-color: #3d4450;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  margin-right: 2px;
-  margin-bottom: 5px;
-}
-.bbcodeeditor_TextEditorToolBarContainer_2bOpQ > span:hover,
-.bbcodeeditor_TextEditorToolBarContainer_2bOpQ
-  > img.bbcodeeditor_EmoteOuter_1x3UO:hover {
-  background-color: #4f5763;
-  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
-}
-.bbcodeeditor_TextEditorToolBarContainer_2bOpQ > span > img,
-.bbcodeeditor_TextEditorToolBarContainer_2bOpQ
-  > img.bbcodeeditor_EmoteOuter_1x3UO {
-  vertical-align: middle;
-  width: 16px;
-  height: 16px;
-}
-.bbcodeeditor_YouTubeInput_3WXTC {
-  position: relative;
-  width: 600px;
-  margin-right: 14px;
-}
-.bbcodeeditor_YouTubeInput_3WXTC input[type="text"] {
-  width: calc(100% - 20px);
-  color: #dfe3e6;
-  background: rgba(59, 63, 72, 0.5);
-  border: none;
-  box-shadow: inset 0px 0px 0px #0000;
-  border-radius: 3px;
-}
-.bbcodeeditor_YouTubeInput_3WXTC input[type="text"]:focus {
-  background: rgba(67, 73, 83, 0.6);
-  box-shadow: inset 1px 1px 8px #000a;
-  padding-left: 11px;
-  outline: none;
-}
-.bbcodeeditor_YouTubePreviewInsertOption_6ocli {
-  padding: 2px;
-  margin-bottom: 2px;
-  background-color: rgba(57, 61, 71, 0.5);
-  color: #e5e5e5;
-  cursor: pointer;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-.bbcodeeditor_YouTubePreviewInsertOption_6ocli:selected {
-  background-color: #9199a3;
-}
-.bbcodeeditor_YouTubePreviewInsertOption_6ocli input {
-  margin-right: 5px;
-}
-.bbcodeeditor_YouTubePreviewInsertOption_6ocli span {
-  padding-left: 10px;
-}
-.bbcodeeditor_YouTubePreviewInsertOption_6ocli label {
-  cursor: pointer;
-}
-.bbcodeeditor_YouTubePreviewInsertOption_6ocli label > span {
-  vertical-align: super;
-}
-.bbcodeeditor_EmoteOuter_1x3UO {
-  min-width: initial;
-  color: unset;
-  background-color: unset;
-  border: unset;
-  display: unset;
-  cursor: hand;
-}
-.bbcodeeditor_DropDownScroll_P0-tb {
-  max-height: 400px;
-  overflow: hidden scroll;
-}
-.bbcodeeditor_InsertSpeakerCtn_2f-6Y {
-  margin-top: 16px;
-}
-.bbcodeeditor_InsertSpeakerCtn_2f-6Y .bbcodeeditor_TitleGroup_1ddLh {
-  display: flex;
-  flex-direction: row;
-}
-.bbcodeeditor_InsertSpeakerCtn_2f-6Y .bbcodeeditor_TitleGroup_1ddLh > div {
-  flex-grow: 1;
-}
-.bbcodeeditor_InsertSpeakerCtn_2f-6Y
-  .bbcodeeditor_TitleGroup_1ddLh
-  > div:not(:first-of-type) {
-  margin-left: 10px;
-}
-.bbcodeeditor_InsertSpeakerCtn_2f-6Y .bbcodeeditor_AssociateRowCtn_2HeY5 {
-  display: flex;
-  flex-direction: row;
-}
-.bbcodeeditor_InsertSpeakerCtn_2f-6Y
-  .bbcodeeditor_AssociateRowCtn_2HeY5
-  button:not(:first-of-type) {
-  margin-left: 10px;
-}
-.bbcodeeditor_InsertSpeakerCtn_2f-6Y .bbcodeeditor_PhotoCtn_2-f4C {
-  margin-top: 16px;
-}
-.bbcodeeditor_InsertSpeakerCtn_2f-6Y .bbcodeeditor_AboutCtn_3hF9c {
-  margin-top: 16px;
-}
-.bbcodeeditor_InsertSpeakerCtn_2f-6Y .bbcodeeditor_PreviewCtn__VCRy {
-  margin-top: 16px;
-}
-.bbcodeeditor_BBCodeEditorInputStyles_F506h textarea {
-  color: #cfcfcf;
-  background-color: rgba(0, 0, 0, 0.2);
-  border: 1px solid #000;
-  border-radius: 3px;
-}
-.bbcodeeditor_BBCodeEditorInputStyles_F506h input {
-  color: #cfcfcf;
-  background-color: rgba(0, 0, 0, 0.2);
-  border: 1px solid #000;
-  border-radius: 3px;
-  padding: 7px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-size: cover;
 }
 .linkregionbox_LinkRegionDragBox_Rtlc- {
   position: absolute;
@@ -7379,105 +6573,6 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   text-align: center;
   vertical-align: middle;
   display: table-cell;
-}
-.cropmodal_CropImage_3qfqT {
-  position: relative;
-  margin: 0px auto;
-}
-.cropmodal_CropPreviewGroup_1RI-Q {
-  margin: 10px auto;
-}
-.cropmodal_CropPreviewLabel_3_zyL {
-  text-transform: uppercase;
-  color: #fff;
-  text-align: center;
-}
-.clanimagechooser_ImagesOuterContainer_3A8RG {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  overflow-y: auto;
-  max-height: 732px;
-  background: #000;
-}
-.clanimagechooser_ImagesOuterContainer_3A8RG::-webkit-scrollbar-thumb {
-  background: #3d4450;
-}
-.clanimagechooser_Hilight_1v_zQ {
-  font-weight: bold;
-  color: green;
-}
-.clanimagechooser_ImageContainer_2ti3y {
-  text-align: center;
-  width: 180px;
-  display: inline-block;
-  position: relative;
-  max-height: 168px;
-  overflow: hidden;
-  padding: 4px;
-}
-.clanimagechooser_Image_y902_ {
-  height: 100px;
-  width: 100%;
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-.clanimagechooser_ImageFilename_2jzLZ {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  word-break: break-all;
-  word-wrap: break-word;
-  white-space: normal;
-  font-size: 12px;
-}
-.clanimagepickandresize_Image_1po_j {
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-.VODPlayer_BroadcastCtn_39rR9 {
-  position: relative;
-  margin: 0 auto;
-  max-width: 940px;
-}
-.VODPlayer_BroadcastCtn_39rR9 .videoContainer {
-  height: unset;
-  width: unset;
-  display: block;
-  position: relative;
-  padding-bottom: 56.25%;
-}
-.VODPlayer_BroadcastCtn_39rR9 .BroadcastPlaceholderImg {
-  position: absolute;
-  width: 100%;
-}
-.VODPlayer_BroadcastCtn_39rR9 .videoSrc {
-  width: 100%;
-  height: auto;
-  border-left: none;
-  border-right: none;
-  background-color: unset;
-}
-.crossfade {
-  position: relative;
-  overflow: hidden;
-}
-.crossfade-anim-exit {
-  opacity: 1;
-  transition-timing-function: linear;
-  transition-property: opacity;
-}
-.crossfade-anim-exit-active {
-  opacity: 0.01;
-}
-.crossfade-img {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-size: cover;
 }
 .BroadcastView {
   width: 100%;
@@ -9840,6 +8935,57 @@ html:not(.touch)
   align-items: center;
   display: flex;
 }
+.presenterpopup_SpeakerOuter_3rRqP {
+  display: block;
+}
+.presenterpopup_Speaker_3F7-F {
+  margin-bottom: 16px;
+  font-size: 12px;
+  flex: 1;
+  display: inline-block;
+}
+.presenterpopup_SpeakerPopup_3y7kV {
+  font-size: 14px;
+  background-color: #48484d;
+  box-shadow: 0 0 12px #00000066;
+  border: 1px solid #48484d;
+  border-radius: 2px;
+  padding: 8px;
+  max-width: 370px;
+}
+@media only screen and (min-width: 400px) {
+  .presenterpopup_SpeakerInfoOuter_1NC9n {
+    display: flex;
+  }
+}
+.presenterpopup_SpeakerInfoOuter_1NC9n img {
+  max-width: 128px;
+  width: 128px;
+  margin-right: 8px;
+}
+@media only screen and (min-width: 400px) {
+  .presenterpopup_SpeakerInfoOuter_1NC9n img {
+    flex: 1;
+  }
+}
+.presenterpopup_SpeakerInfoInner_1bMpE {
+  font-size: 14px;
+  padding: 8px 8px 8px 0px;
+}
+@media only screen and (min-width: 400px) {
+  .presenterpopup_SpeakerInfoInner_1bMpE {
+    flex: 2;
+  }
+}
+.presenterpopup_SpeakerTitle_2Vo0l {
+  font-weight: bold;
+}
+.presenterpopup_SpeakerBio_2yP7s {
+  padding: 8px 8px 8px 0px;
+}
+.presenterpopup_SpeakerHover_16UyH {
+  display: inline-block;
+}
 .storesuggest_SuggestContainer_2gBFq ._DialogLayout {
   margin-bottom: 2px;
 }
@@ -10269,6 +9415,860 @@ div.curatorfeedbrowse_CuratorHoverToolTip_rSTyU {
 }
 .discussionwidget_VoteButtonSelected_2OXBS {
   background-color: #399aec;
+}
+.suggestdialog_mentionDialogPosition_3isL0 {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.suggestdialog_mentionDialog_1QU3c {
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  right: 0;
+  background: #2c3036;
+  padding: 12px 0px 12px 12px;
+  box-shadow: 0 0 32px 0px #000000ab;
+  overflow-y: auto;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.suggestdialog_mentionDialog_1QU3c:focus {
+  outline: none;
+}
+.suggestdialog_mentionSearchText_1xVcZ {
+  color: #818181;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+.suggestdialog_suggestOption_vquL9 {
+  color: #adaeaf;
+  transition-property: padding-left, color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-out;
+  line-height: 26px;
+  cursor: pointer;
+  margin-top: 0px;
+  padding-left: 22px;
+  margin-right: 12px;
+  overflow: hidden;
+}
+.suggestdialog_suggestOption_vquL9 .suggestdialog_nickname_2dKJq {
+  color: #6e6e6e;
+}
+.suggestdialog_suggestOption_vquL9.suggestdialog_selected_boNOG {
+  color: #dfe3e6;
+  background-color: #434953;
+  padding-left: 30px;
+}
+span.suggestdialog_mentionSearchMatch_2_0t_ {
+  color: #dfe3e6;
+}
+.emoticonsuggestion_Emoticon_Toggle_Y5J3n {
+  margin-right: 8px;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 4px 6px;
+}
+.emoticonsuggestion_Emoticon_Toggle_Y5J3n.emoticonsuggestion_Active_YCbwL {
+  background: #777;
+}
+.emoticonsuggestion_Emoticon_2o57_ {
+  position: relative;
+  display: inline-block;
+  margin-right: 8px;
+  padding: 0 4px;
+}
+.bbcodesuggestions_BBCode_Toggle_3dX8- {
+  margin-right: 8px;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 4px 6px;
+}
+.bbcodesuggestions_BBCode_Toggle_3dX8-.bbcodesuggestions_Active_2vTzh {
+  background: #777;
+}
+.bbcodesuggestions_BBCode_1pH9C {
+  position: relative;
+  display: inline-block;
+  margin-right: 8px;
+  padding: 0 4px;
+}
+.chatentry_chatEntryControls_3Ule3 {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  background-color: #1b1c20;
+  box-shadow: inset 0px 0px 4px #000;
+  outline-width: 0px;
+  color: #aaa;
+  border: 0px solid transparent;
+  padding-right: 2px;
+}
+.chatentry_chatTextarea_113iu {
+  resize: none;
+  margin-right: 4px;
+  height: 42px;
+  background-color: transparent;
+  box-shadow: inset 0px 0px 4px transparent;
+  outline-width: 0px;
+  color: #aaa;
+  border: 0px solid transparent;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  padding: 4px 4px 4px 8px;
+  flex-shrink: 1;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+.chatentry_chatEntryActionsGroup_2WfNo {
+  padding: 2px;
+  box-shadow: #000 0px 0px 4px inset;
+  background-color: #1b1c20;
+  margin-left: 8px;
+}
+.chatentry_chatEntryActionsContainer_W0Ohk,
+.chatentry_chatEntryActionsGroup_2WfNo {
+  display: flex;
+  flex-direction: row;
+}
+.chatentry_chatEntryActionsContainer_W0Ohk {
+  max-height: 50px;
+  align-self: flex-end;
+}
+.chatentry_minHeightZero_2zeeh {
+  min-height: 0;
+}
+.compactView .chatentry_chatTextarea_113iu {
+  height: 24px;
+  line-height: 18px;
+}
+.chatentry_chatSubmitButton_RVIs8 {
+  position: relative;
+  background-color: #3d424b;
+  border: 1px solid #1b1c20;
+  color: #c9c9c9;
+  margin: 0px;
+  margin-top: 2px;
+  min-width: 16px;
+  max-width: 46px;
+  max-height: 46px;
+  padding: 0;
+  background-image: none;
+  background-size: 22px 22px;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-width: 46px;
+  cursor: pointer;
+}
+.chatentry_chatSubmitButton_RVIs8.chatentry_EmbedButton_3zOBe,
+.chatentry_chatSubmitButton_RVIs8.chatentry_EmoticonPickerButton_Aupsw {
+  flex: 0;
+  min-width: 46px;
+  position: relative;
+  color: #c9c9c9;
+  margin: 0px;
+  margin-top: 0px;
+  max-width: 46px;
+  max-height: 50px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.chatentry_chatSubmitButton_RVIs8.chatentry_EmbedButton_3zOBe {
+  max-width: 46px;
+  max-height: 46px;
+}
+.chatentry_chatSubmitButton_RVIs8:focus {
+  outline: none;
+}
+.chatentry_chatSubmitButton_RVIs8.chatentry_EmbedButton_3zOBe:hover {
+  background-color: #3d424b;
+}
+.chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2):hover
+  .SVGIcon_Button.SVGIcon_Submit
+  path {
+  fill: #fff;
+  stroke: #fff;
+}
+.chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2):hover
+  .SVGIcon_Button {
+  fill: #f5ffd7;
+}
+.chatentry_chatSubmitButton_RVIs8.chatentry_Inactive_3G-I9
+  .SVGIcon_Microphone_Off {
+  opacity: 1;
+}
+.chatentry_chatSubmitButton_RVIs8.chatentry_disabled_jaQN2 {
+  color: #898989;
+  cursor: default;
+  background-color: #2c3036;
+}
+.chatentry_chatSubmitButton_RVIs8.chatentry_EmoticonPickerButton_Aupsw,
+.chatentry_chatSubmitButton_RVIs8.chatentry_EmbedButton_3zOBe {
+  color: #898989;
+  background-color: #2c3036;
+}
+.chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2):hover
+  .SVGIcon_VoiceRoom {
+  fill: rgba(0, 0, 0, 0);
+  stroke: #f5ffd7;
+}
+.chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2):hover
+  .SVGIcon_VoiceRoom
+  .chatentry_AudioLines_IWaba {
+  fill: #f5ffd7;
+}
+.chatentry_Active_37tPt.chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2):hover
+  .SVGIcon_VoiceRoom {
+  fill: #fff;
+  stroke: #000;
+}
+.chatentry_Active_37tPt.chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2):hover
+  .SVGIcon_VoiceRoom
+  .chatentry_AudioLines_IWaba {
+  fill: #000;
+}
+.chatentry_chatSubmitButton_RVIs8 .SVGIcon_Submit {
+  width: 24px;
+  height: 24px;
+  margin-top: 3px;
+}
+.chatentry_chatSubmitButton_RVIs8 .SVGIcon_Submit path {
+  fill: #8592a5;
+  stroke-width: 2px;
+}
+.chatentry_EmbedButton_3zOBe {
+  background-image: none;
+  margin-right: 2px;
+  font-size: 28px;
+  text-align: center;
+  color: #8492a4;
+  padding: 0px;
+}
+.chatentry_EmbedButton_3zOBe .SVGIcon_Paperclip {
+  width: 26px;
+  height: 26px;
+}
+.chatentry_EmbedButton_3zOBe .SVGIcon_Paperclip path {
+  stroke: #8492a4;
+  stroke-width: 12px;
+}
+.chatentry_EmbedButton_3zOBe:hover .SVGIcon_Paperclip path,
+.SVGIcon_Paperclip {
+  stroke: #fff;
+}
+.chatentry_EmoticonPickerButton_Aupsw {
+  margin-right: 1px;
+}
+.chatentry_EmoticonPickerButton_Aupsw:hover {
+  background-color: #3d424b;
+}
+.chatentry_EmoticonPickerButton_Aupsw .SVGIcon_Emoticon {
+  width: 26px;
+  height: 26px;
+}
+.chatentry_EmoticonPickerButton_Aupsw .SVGIcon_CSGO {
+  width: 32px;
+  height: 32px;
+  fill: #dfc408;
+  margin-left: 1px;
+  margin-top: 4px;
+}
+.chatentry_EmoticonPickerButton_Aupsw .SVGIcon_Emoticon line,
+.chatentry_EmoticonPickerButton_Aupsw .SVGIcon_Emoticon circle,
+.chatentry_EmoticonPickerButton_Aupsw .SVGIcon_Emoticon path {
+  stroke: #8492a4;
+  stroke-width: 10px;
+}
+.chatentry_EmoticonPickerButton_Aupsw .SVGIcon_Emoticon line {
+  stroke-width: 16px;
+}
+.chatentry_EmoticonPickerButton_Aupsw:hover .SVGIcon_Emoticon line,
+.chatentry_EmoticonPickerButton_Aupsw:hover .SVGIcon_Emoticon circle,
+.chatentry_EmoticonPickerButton_Aupsw:hover .SVGIcon_Emoticon path {
+  stroke: #fff;
+}
+.chatentry_chatEntryControls_3Ule3 .chatentry_chatSubmitButton_RVIs8 {
+  align-self: flex-end;
+  min-height: 46px;
+  margin-bottom: 2px;
+}
+.compactView
+  .chatentry_chatEntryControls_3Ule3
+  .chatentry_chatSubmitButton_RVIs8 {
+  height: 28px;
+  min-height: 28px;
+  margin-bottom: 2px;
+}
+.compactView .chatentry_chatSubmitButton_RVIs8 {
+  min-width: 32px;
+}
+.chatEntry.compactView .chatentry_chatSubmitButton_RVIs8 svg {
+  width: 20px;
+  height: 20px;
+}
+.ChatMessageEntryVoice {
+  flex: 0;
+  min-width: 46px;
+  position: relative;
+  color: #c9c9c9;
+  margin: 0px;
+  margin-top: 0px;
+  max-width: 46px;
+  max-height: 50px;
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+  box-shadow: #000 0px 0px 4px inset;
+  transition-property: width, max-width, min-width, border-radius,
+    background-position;
+  transition-duration: 0.3s, 0.3s, 0.3s, 0.6s;
+  background: radial-gradient(
+    128px 128px at 20% 50%,
+    #1da834 0%,
+    rgba(27, 28, 32, 0) 100%
+  );
+  background-position: -190px 0px;
+  background-color: #1b1c20;
+  background-repeat: no-repeat;
+  background-size: 256px 128px;
+}
+.friendListHeaderContainer .activeVoicePushToTalk,
+.ChatMessageEntryVoice .activeVoicePushToTalk {
+  font-size: 11px;
+  margin-top: 12px;
+  margin-bottom: -18px;
+  opacity: 1;
+  transition: opacity 0.3s ease-out;
+  white-space: nowrap;
+  user-select: none;
+}
+.ChatMessageEntryVoice.Disabled {
+  opacity: 0.2;
+  border: 1px dashed #000;
+  outline: 2px solid #0007;
+}
+.ChatMessageEntryVoice.Active {
+  min-width: 136px;
+  max-width: 136px;
+  width: 136px;
+  background-position: 0px 0px;
+}
+.ChatMessageEntryVoice .buttonsContainer {
+  display: flex;
+}
+.ChatMessageEntryVoice .activeVoicePushToTalk {
+  position: absolute;
+  top: 33px;
+  left: 49px;
+  width: 87px;
+  text-align: center;
+  color: #74c069;
+  background-color: #0005;
+}
+.ChatMessageEntryVoice .activeVoicePushToTalk {
+  font-size: 10px;
+  margin-top: 0px;
+}
+.ChatMessageEntryVoice.pushToTalkEnabled .activeVoiceButtons {
+  margin-top: -8px;
+}
+.ChatMessageEntryVoice.pushToTalkEnabled .VoiceControlPanelButton {
+  min-height: 14px;
+}
+.ChatMessageEntryVoice.pushToTalkEnabled
+  .activeVoiceButtons
+  .SVGIcon_Button.SVGIcon_Shadow {
+  top: 2px;
+}
+.ChatMessageEntryVoice .activeVoiceButtons {
+  min-width: 0px;
+  width: 84px;
+}
+.ChatMessageEntryVoice .activeVoiceControls {
+  min-width: 0px;
+  width: 84px;
+  border-top: 0px solid transparent;
+  border-bottom: 0px solid transparent;
+  background: none;
+}
+.ChatMessageEntryVoice.Inactive .VoiceControlPanelButton {
+  pointer-events: none;
+}
+.ChatMessageEntryVoice.Active
+  .VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone:active,
+.VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone:active {
+  background-color: rgba(197, 23, 11, 0.5);
+  transition-duration: 0s;
+}
+.ChatMessageEntryVoice.Inactive .activeVoiceButtons {
+  display: none;
+}
+.ChatMessageEntryVoice .VoiceControlPanelButton.ToggleVoiceOutputButton {
+  transform: translateX(-64px) scale(0.7);
+  transition-property: transform, opacity;
+  transition-duration: 0.16s;
+  transition-timing-function: ease-in-out;
+  opacity: 0;
+  cursor: pointer;
+}
+.ChatMessageEntryVoice .VoiceControlPanelButton.ToggleMicrophoneButton {
+  transform: translateX(-32px) scale(0.5);
+  transition: transform 0.1s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0;
+  cursor: pointer;
+}
+.ChatMessageEntryVoice.Active .VoiceControlPanelButton.ToggleVoiceOutputButton,
+.ChatMessageEntryVoice.Active .VoiceControlPanelButton.ToggleMicrophoneButton {
+  opacity: 1;
+  transform: translateX(0px) scale(1);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out,
+    background-color 0.1s ease-in-out;
+}
+.ChatMessageEntryVoice .VoiceControlPanelButton.chatEndVoiceChat {
+  display: none;
+}
+.ChatMessageEntryVoice.Active .VoiceControlPanelButton:active,
+.VoiceControlPanelButton:active {
+  background-color: rgba(97, 253, 151, 0.5);
+}
+.ChatMessageEntryVoice.pushToTalkEnabled
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone,
+.friendListHeaderContainer
+  .pushToTalkEnabled
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone {
+  fill: rgba(200, 241, 194, 0.2);
+}
+.ChatMessageEntryVoice.pushToTalkEnabled
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone.SVGIcon_Shadow,
+.friendListHeaderContainer
+  .pushToTalkEnabled
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone.SVGIcon_Shadow {
+  fill: rgba(0, 0, 0, 0.2);
+}
+.ChatMessageEntryVoice.pushToTalkEnabled.pushToTalkKeyDown
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone.SVGIcon_Shadow,
+.friendListHeaderContainer
+  .pushToTalkEnabled.pushToTalkKeyDown
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone.SVGIcon_Shadow {
+  fill: #000;
+}
+.ChatMessageEntryVoice.pushToTalkEnabled.pushToTalkKeyDown
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone,
+.friendListHeaderContainer
+  .pushToTalkEnabled.pushToTalkKeyDown
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone {
+  fill: #c8f1c2;
+}
+.chatEntry.compactView .VoiceToggle {
+  height: 28px;
+}
+.chatEntry.compactView .VoiceToggleIconCtn {
+  height: 24px;
+  top: 3px;
+}
+.chatEntry.compactView .activeVoiceFlexBox {
+  height: 28px;
+}
+.chatEntry.compactView .activeVoiceButtons button {
+  max-width: 28px;
+  min-width: 28px;
+  min-height: 28px;
+  max-height: 28px;
+  margin-top: 2px;
+}
+.chatEntry.compactView .SVGIcon_Button.SVGIcon_Shadow {
+  top: 6px;
+  left: 10px;
+}
+.chatEntry.compactView
+  .VoiceControlPanelButton:active
+  .SVGIcon_Microphone.SVGIcon_Shadow,
+.chatEntry.compactView
+  .VoiceControlPanelButton:active
+  .SVGIcon_Headphones.SVGIcon_Shadow {
+  top: 3px;
+  left: 7px;
+}
+.chatEntry.compactView
+  .VoiceControlPanelButton.ToggleVoiceOutputButton
+  .SVGIcon_Headphones,
+.chatEntry.compactView
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone {
+  padding-top: 2px;
+  width: 20px;
+  height: 20px;
+}
+.VoiceToggle.Inactive:hover {
+  background-color: #3d424b;
+}
+.chatEntry.compactView .ChatMessageEntryVoice .activeVoiceButtons {
+  width: 64px;
+}
+.chatEntry.compactView .ChatMessageEntryVoice .activeVoiceControls {
+  width: 64px;
+}
+.chatEntry.compactView .ChatMessageEntryVoice.Active {
+  min-width: 114px;
+  max-width: 114px;
+  width: 114px;
+}
+.chatEntry.compactView
+  .ChatMessageEntryVoice.pushToTalkEnabled
+  .activeVoiceButtons {
+  margin-top: -2px;
+}
+.chatEntry.compactView
+  .ChatMessageEntryVoice.pushToTalkEnabled
+  .VoiceControlPanelButton {
+  min-height: 14px;
+}
+.chatEntry.compactView
+  .ChatMessageEntryVoice.pushToTalkEnabled
+  .activeVoiceButtons
+  .SVGIcon_Button.SVGIcon_Shadow {
+  top: 2px;
+}
+.chatEntry.compactView .ChatMessageEntryVoice .activeVoicePushToTalk {
+  top: 18px;
+  right: 0px;
+  width: 66px;
+  text-align: center;
+  color: #74c069;
+  background-color: #0000;
+}
+.reorderablelist_WhitelistNumber_IY3dF {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color: #2a2e34;
+  margin-right: 8px;
+}
+.reorderablelist_WhitelistCtn_1Uhmx {
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+.reorderablelist_WhitelistRow_28TC1 {
+  display: flex;
+  align-items: center;
+  background-color: #333740;
+  padding: 4px;
+  margin-bottom: 2px;
+  user-select: none;
+  box-sizing: border-box;
+}
+.reorderablelist_Grabbable_riuel {
+  cursor: grab;
+}
+.reorderablelist_Grabbing_1vSZ5 {
+  cursor: grabbing;
+}
+.reorderablelist_DisabledGrab_2K0C_ {
+  cursor: not-allowed;
+}
+.reorderablelist_WhitelistAvatar_3DGjm {
+  margin-right: 8px;
+}
+.reorderablelist_ButtonCtn_1hSql {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+}
+:root {
+  --main-text-color: #dbe2e6;
+  --main-light-blue-background: #93b3c8;
+  --main-text-on-light-blue: rgb(209, 209, 209);
+  --main-top-image-bg: #1f2126;
+  --main-editor-bg-color: #363a43;
+  --main-editor-text-color: #e6e7e8;
+  --main-editor-input-bg-color: #30333b;
+  --main-editor-section-title-color: #a3a3a3;
+}
+.bbcodeeditor_DragTarget_2sUvh {
+  font-size: 12px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.bbcodeeditor_DragOnTopOfMe_1mvpI {
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+.bbcodeeditor_DescriptionCtn_3DQEB {
+  border: 2px solid transparent;
+  margin: -2px;
+}
+.bbcodeeditor_DescriptionCtn_3DQEB.bbcodeeditor_DragTarget_2sUvh {
+  border: 2px dashed #06beff;
+}
+.bbcodeeditor_EventEditorLinkInput_25nbu {
+  position: relative;
+  width: 600px;
+  margin-right: 14px;
+  margin-top: 20px;
+}
+.bbcodeeditor_EventEditorLinkInput_25nbu input {
+  width: calc(100% - 20px);
+  color: #dfe3e6;
+  background: rgba(59, 63, 72, 0.5);
+  border: none;
+  box-shadow: inset 0px 0px 0px #0000;
+  border-radius: 3px;
+}
+.bbcodeeditor_EventEditorLinkInput_25nbu input:focus {
+  background: rgba(67, 73, 83, 0.6);
+  box-shadow: inset 1px 1px 8px #000a;
+  padding-left: 11px;
+  outline: none;
+}
+.bbcodeeditor_DefaultEditor_NENu2 {
+  border: none;
+  outline-width: 0;
+  padding: 10px;
+  background-color: var(--main-editor-input-bg-color);
+  box-shadow: 0 0 5px #000 inset;
+  color: var(--main-editor-text-color);
+  font-size: 14px;
+  overflow-x: hidden;
+}
+.bbcodeeditor_ImportHTMLCtn_3sVZH {
+  position: relative;
+  margin-right: 14px;
+  min-width: calc(40vw - 40px);
+}
+.bbcodeeditor_ImportHTMLCtn_3sVZH .bbcodeeditor_ImportHTMLTextArea_DHbRF {
+  width: calc(100% - 12px);
+  height: 200px;
+  margin: 4px 0px;
+  background-color: #1e2025;
+  border: solid 1px #000;
+  outline-width: 0;
+  box-shadow: 1px 1px rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  color: gray;
+}
+.bbcodeeditor_ImportHTMLCtn_3sVZH .bbcodeeditor_ImportHTMLConvertButtons_lnyZa {
+  padding: 5px;
+  margin-left: 5px;
+  display: inline-block;
+  width: 30%;
+  line-height: 22px;
+}
+.bbcodeeditor_ImportHTMLCtn_3sVZH .bbcodeeditor_ImportHTMLCheckBoxLine_3R3FN {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.bbcodeeditor_ImportHTMLCtn_3sVZH .bbcodeeditor_OptionRow_2Y3ML {
+  display: flex;
+  flex-direction: column;
+}
+.bbcodeeditor_TextEditorToolBarContainer_2bOpQ {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.bbcodeeditor_TextEditorToolBarContainer_2bOpQ > span,
+.bbcodeeditor_TextEditorToolBarContainer_2bOpQ
+  > img.bbcodeeditor_EmoteOuter_1x3UO {
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 2px;
+  color: #afafaf;
+  background-color: #3d4450;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  margin-right: 2px;
+  margin-bottom: 5px;
+}
+.bbcodeeditor_TextEditorToolBarContainer_2bOpQ > span:hover,
+.bbcodeeditor_TextEditorToolBarContainer_2bOpQ
+  > img.bbcodeeditor_EmoteOuter_1x3UO:hover {
+  background-color: #4f5763;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+}
+.bbcodeeditor_TextEditorToolBarContainer_2bOpQ > span > img,
+.bbcodeeditor_TextEditorToolBarContainer_2bOpQ
+  > img.bbcodeeditor_EmoteOuter_1x3UO {
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+}
+.bbcodeeditor_YouTubeInput_3WXTC {
+  position: relative;
+  width: 600px;
+  margin-right: 14px;
+}
+.bbcodeeditor_YouTubeInput_3WXTC input[type="text"] {
+  width: calc(100% - 20px);
+  color: #dfe3e6;
+  background: rgba(59, 63, 72, 0.5);
+  border: none;
+  box-shadow: inset 0px 0px 0px #0000;
+  border-radius: 3px;
+}
+.bbcodeeditor_YouTubeInput_3WXTC input[type="text"]:focus {
+  background: rgba(67, 73, 83, 0.6);
+  box-shadow: inset 1px 1px 8px #000a;
+  padding-left: 11px;
+  outline: none;
+}
+.bbcodeeditor_YouTubePreviewInsertOption_6ocli {
+  padding: 2px;
+  margin-bottom: 2px;
+  background-color: rgba(57, 61, 71, 0.5);
+  color: #e5e5e5;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.bbcodeeditor_YouTubePreviewInsertOption_6ocli:selected {
+  background-color: #9199a3;
+}
+.bbcodeeditor_YouTubePreviewInsertOption_6ocli input {
+  margin-right: 5px;
+}
+.bbcodeeditor_YouTubePreviewInsertOption_6ocli span {
+  padding-left: 10px;
+}
+.bbcodeeditor_YouTubePreviewInsertOption_6ocli label {
+  cursor: pointer;
+}
+.bbcodeeditor_YouTubePreviewInsertOption_6ocli label > span {
+  vertical-align: super;
+}
+.bbcodeeditor_EmoteOuter_1x3UO {
+  min-width: initial;
+  color: unset;
+  background-color: unset;
+  border: unset;
+  display: unset;
+  cursor: hand;
+}
+.bbcodeeditor_DropDownScroll_P0-tb {
+  max-height: 400px;
+  overflow: hidden scroll;
+}
+.bbcodeeditor_InsertSpeakerCtn_2f-6Y {
+  margin-top: 16px;
+}
+.bbcodeeditor_InsertSpeakerCtn_2f-6Y .bbcodeeditor_TitleGroup_1ddLh {
+  display: flex;
+  flex-direction: row;
+}
+.bbcodeeditor_InsertSpeakerCtn_2f-6Y .bbcodeeditor_TitleGroup_1ddLh > div {
+  flex-grow: 1;
+}
+.bbcodeeditor_InsertSpeakerCtn_2f-6Y
+  .bbcodeeditor_TitleGroup_1ddLh
+  > div:not(:first-of-type) {
+  margin-left: 10px;
+}
+.bbcodeeditor_InsertSpeakerCtn_2f-6Y .bbcodeeditor_AssociateRowCtn_2HeY5 {
+  display: flex;
+  flex-direction: row;
+}
+.bbcodeeditor_InsertSpeakerCtn_2f-6Y
+  .bbcodeeditor_AssociateRowCtn_2HeY5
+  button:not(:first-of-type) {
+  margin-left: 10px;
+}
+.bbcodeeditor_InsertSpeakerCtn_2f-6Y .bbcodeeditor_PhotoCtn_2-f4C {
+  margin-top: 16px;
+}
+.bbcodeeditor_InsertSpeakerCtn_2f-6Y .bbcodeeditor_AboutCtn_3hF9c {
+  margin-top: 16px;
+}
+.bbcodeeditor_InsertSpeakerCtn_2f-6Y .bbcodeeditor_PreviewCtn__VCRy {
+  margin-top: 16px;
+}
+.bbcodeeditor_BBCodeEditorInputStyles_F506h textarea {
+  color: #cfcfcf;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+.bbcodeeditor_BBCodeEditorInputStyles_F506h input {
+  color: #cfcfcf;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid #000;
+  border-radius: 3px;
+  padding: 7px;
+}
+.cropmodal_CropImage_3qfqT {
+  position: relative;
+  margin: 0px auto;
+}
+.cropmodal_CropPreviewGroup_1RI-Q {
+  margin: 10px auto;
+}
+.cropmodal_CropPreviewLabel_3_zyL {
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+}
+.clanimagechooser_ImagesOuterContainer_3A8RG {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  max-height: 732px;
+  background: #000;
+}
+.clanimagechooser_ImagesOuterContainer_3A8RG::-webkit-scrollbar-thumb {
+  background: #3d4450;
+}
+.clanimagechooser_Hilight_1v_zQ {
+  font-weight: bold;
+  color: green;
+}
+.clanimagechooser_ImageContainer_2ti3y {
+  text-align: center;
+  width: 180px;
+  display: inline-block;
+  position: relative;
+  max-height: 168px;
+  overflow: hidden;
+  padding: 4px;
+}
+.clanimagechooser_Image_y902_ {
+  height: 100px;
+  width: 100%;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.clanimagechooser_ImageFilename_2jzLZ {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: normal;
+  font-size: 12px;
+}
+.clanimagepickandresize_Image_1po_j {
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 .sharewithfriends_Container_2vGr9 {
   background-color: #1c1e26;

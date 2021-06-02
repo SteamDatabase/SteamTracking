@@ -7784,7 +7784,7 @@
               (this.m_regexBannedWords = null),
               (this.m_regexCleanWords = null),
               (this.m_bShownFilterTip = !1),
-              (this.m_TextFilterPreferences = new Pt.i());
+              (this.m_TextFilterPreferences = new Pt.j());
             var e = new Et.a();
             (this.m_TextFilterPreferences.eTextFilterSetting = e.text_filter_setting()),
               (this.m_TextFilterPreferences.bIgnoreFriends = e.text_filter_ignore_friends()),
@@ -10587,14 +10587,14 @@
                   (i = Object(n.a)(Object(n.a)({}, i), {
                     left_panel: c.GetImageURL(
                       "broadcast_left",
-                      u || Object(Pt.h)(St.d.LANGUAGE)
+                      u || Object(Pt.i)(St.d.LANGUAGE)
                     ),
                     right_panel: c.GetImageURL(
                       "broadcast_right",
-                      u || Object(Pt.h)(St.d.LANGUAGE)
+                      u || Object(Pt.i)(St.d.LANGUAGE)
                     ),
                     store_title: c.GetBroadcastTitle(
-                      u || Object(Pt.h)(St.d.LANGUAGE)
+                      u || Object(Pt.i)(St.d.LANGUAGE)
                     ),
                     broadcast_chat_visibility: c.GetBroadcastChatVisibility(),
                   }));
