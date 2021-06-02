@@ -476,6 +476,9 @@ LocalizationReady("main", "english", {
   LeagueName_12957: "DPC Spring 21 Qualifier (EEU) presented by ESL One",
   LeagueName_13063: "DPC Spring 21 Qualifier (CN) presented by Perfect World",
 
+  LeagueName_12964: "WePlay Kyiv Major 2021",
+  LeagueName_13256: "The International 10",
+
   DayMonth_0: "%1$s Jan",
   DayMonth_1: "%1$s Feb",
   DayMonth_2: "%1$s Mar",

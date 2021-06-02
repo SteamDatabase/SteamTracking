@@ -17400,7 +17400,6 @@ a {
   justify-content: center;
   align-items: center;
   position: absolute;
-  opacity: 0;
 }
 .dpcseriesdetails_DPCSeriesDetailsGameDetails_36t5S.dpcseriesdetails_Visible_1sQWs {
   display: flex;
@@ -17575,12 +17574,12 @@ a {
   margin: 0px 12px;
 }
 .dpcseriesdetails_MatchSectionPlayer_Ej-PQ
-  .dpcseriesdetails_HeroPlayer_1S-In.dpcseriesdetails_AlwaysShow_kE3vu
+  .dpcseriesdetails_HeroPlayer_1S-In.dpcseriesdetails_AlwaysShowPlayer_2hXcn
   .dpcseriesdetails_HeroIcon_1AFRB {
   opacity: 0;
 }
 .dpcseriesdetails_MatchSectionPlayer_Ej-PQ
-  .dpcseriesdetails_HeroPlayer_1S-In.dpcseriesdetails_AlwaysShow_kE3vu
+  .dpcseriesdetails_HeroPlayer_1S-In.dpcseriesdetails_AlwaysShowPlayer_2hXcn
   .dpcseriesdetails_PlayerImage_1K0J3 {
   opacity: 1;
 }

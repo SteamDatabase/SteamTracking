@@ -39681,8 +39681,9 @@ object-assign
               : t.replace("npc_dota_hero_", ""),
           b = null == v ? void 0 : v.name_loc,
           E = u ? m + " / " + h + " / " + f : "",
-          L = u && 0 != u,
-          w = u ? Object(_.a)("#dpc_hero_level", d) : void 0,
+          L = u && 0 != u;
+        console.log(L);
+        var w = u ? Object(_.a)("#dpc_hero_level", d) : void 0,
           M = i == c || (0 == i && n == c);
         return o.a.createElement(
           "div",
@@ -39713,7 +39714,12 @@ object-assign
           ),
           o.a.createElement(
             "div",
-            { className: Ba.a.HeroPlayer },
+            {
+              className: Object(ce.a)(
+                Ba.a.HeroPlayer,
+                !L && Ba.a.AlwaysShowPlayer
+              ),
+            },
             u &&
               o.a.createElement("div", {
                 className: Ba.a.HeroIcon,
@@ -39727,7 +39733,7 @@ object-assign
                 },
               }),
             o.a.createElement("div", {
-              className: Object(ce.a)(Ba.a.PlayerImage, !L && Ba.a.AlwaysShow),
+              className: Ba.a.PlayerImage,
               style: {
                 backgroundImage:
                   "url( " + p.a.CDN_URL + "apps/dota2/players/" + c + ".png )",
@@ -62440,7 +62446,7 @@ PERFORMANCE OF THIS SOFTWARE.
       PlayerName: "dpcseriesdetails_PlayerName_2I7vG",
       Stats: "dpcseriesdetails_Stats_1JAD9",
       HeroPlayer: "dpcseriesdetails_HeroPlayer_1S-In",
-      AlwaysShow: "dpcseriesdetails_AlwaysShow_kE3vu",
+      AlwaysShowPlayer: "dpcseriesdetails_AlwaysShowPlayer_2hXcn",
       HeroIcon: "dpcseriesdetails_HeroIcon_1AFRB",
       PlayerImage: "dpcseriesdetails_PlayerImage_1K0J3",
       MatchSectionDetailsOverlay:
