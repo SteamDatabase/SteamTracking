@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6568397";
+var CLSTAMP = "6575079";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [2],
   {
@@ -33150,13 +33150,160 @@ var CLSTAMP = "6568397";
             }),
             r
           );
+        })(a),
+        d = (function (e) {
+          function r(t) {
+            void 0 === t && (t = null);
+            var n = e.call(this) || this;
+            return (
+              r.prototype.matches || o.a(r.M()),
+              a.initialize(n, t, 0, -1, [1], null),
+              n
+            );
+          }
+          return (
+            Object(n.d)(r, e),
+            (r.M = function () {
+              return (
+                r.sm_m ||
+                  (r.sm_m = {
+                    proto: r,
+                    fields: {
+                      matches: { n: 1, c: f, r: !0, q: !0 },
+                      num_total_results: {
+                        n: 2,
+                        br: o.d.readUint32,
+                        bw: o.h.writeUint32,
+                      },
+                      next_cursor: {
+                        n: 3,
+                        br: o.d.readString,
+                        bw: o.h.writeString,
+                      },
+                    },
+                  }),
+                r.sm_m
+              );
+            }),
+            (r.MBF = function () {
+              return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
+            }),
+            (r.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function (e, t) {
+              return o.g(r.M(), e, t);
+            }),
+            (r.fromObject = function (e) {
+              return o.c(r.M(), e);
+            }),
+            (r.deserializeBinary = function (e) {
+              var t = new i.BinaryReader(e),
+                n = new r();
+              return r.deserializeBinaryFromReader(n, t);
+            }),
+            (r.deserializeBinaryFromReader = function (e, t) {
+              return o.b(r.MBF(), e, t);
+            }),
+            (r.prototype.serializeBinary = function () {
+              var e = new i.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function (e, t) {
+              o.f(r.M(), e, t);
+            }),
+            (r.prototype.getClassName = function () {
+              return "CClan_GetPartnerEventsByBuildIDRange_Response";
+            }),
+            r
+          );
+        })(a),
+        f = (function (e) {
+          function r(t) {
+            void 0 === t && (t = null);
+            var n = e.call(this) || this;
+            return (
+              r.prototype.appid || o.a(r.M()),
+              a.initialize(n, t, 0, -1, void 0, null),
+              n
+            );
+          }
+          return (
+            Object(n.d)(r, e),
+            (r.M = function () {
+              return (
+                r.sm_m ||
+                  (r.sm_m = {
+                    proto: r,
+                    fields: {
+                      appid: { n: 1, br: o.d.readUint32, bw: o.h.writeUint32 },
+                      build_id: {
+                        n: 2,
+                        br: o.d.readUint32,
+                        bw: o.h.writeUint32,
+                      },
+                      branch: { n: 3, br: o.d.readString, bw: o.h.writeString },
+                      clan_event_gid: {
+                        n: 4,
+                        br: o.d.readFixed64String,
+                        bw: o.h.writeFixed64String,
+                      },
+                      clan_account_id: {
+                        n: 5,
+                        br: o.d.readUint32,
+                        bw: o.h.writeUint32,
+                      },
+                    },
+                  }),
+                r.sm_m
+              );
+            }),
+            (r.MBF = function () {
+              return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
+            }),
+            (r.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function (e, t) {
+              return o.g(r.M(), e, t);
+            }),
+            (r.fromObject = function (e) {
+              return o.c(r.M(), e);
+            }),
+            (r.deserializeBinary = function (e) {
+              var t = new i.BinaryReader(e),
+                n = new r();
+              return r.deserializeBinaryFromReader(n, t);
+            }),
+            (r.deserializeBinaryFromReader = function (e, t) {
+              return o.b(r.MBF(), e, t);
+            }),
+            (r.prototype.serializeBinary = function () {
+              var e = new i.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function (e, t) {
+              o.f(r.M(), e, t);
+            }),
+            (r.prototype.getClassName = function () {
+              return "CClan_GetPartnerEventsByBuildIDRange_Response_PatchNotesDesc";
+            }),
+            r
+          );
         })(a);
       !(function (e) {
-        e.RespondToClanInvite = function (e, r) {
+        (e.RespondToClanInvite = function (e, r) {
           return e.SendMsg("Clan.RespondToClanInvite#1", r, c, {
             ePrivilege: 1,
           });
-        };
+        }),
+          (e.GetPartnerEventsByBuildIDRange = function (e, r) {
+            return e.SendMsg("Clan.GetPartnerEventsByBuildIDRange#1", r, d, {
+              bConstMethod: !0,
+              ePrivilege: 0,
+              eWebAPIKeyRequirement: 1,
+            });
+          });
       })(u || (u = {}));
     },
     nD25: function (e, r, t) {

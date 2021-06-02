@@ -1564,6 +1564,17 @@ a.view_messages:hover {
 	font-size: 12px;
 }
 
+.forum_help_ctn {
+    border: 1px solid #a55b13;
+    border-radius: 4px;
+    box-shadow: 1px 1px 0 0 #39393a;
+    padding: 10px 10px;
+
+    background: #1b1b1b;
+    background: rgba(27,27,27,.36);
+    margin-bottom: 17px;
+}
+
 .manage_actions_content {
 	padding: 0 10px;
 }

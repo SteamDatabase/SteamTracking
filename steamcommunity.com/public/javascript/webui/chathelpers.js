@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6568397";
+var CLSTAMP = "6575079";
 !(function (e) {
   function t(t) {
     for (
@@ -131,10 +131,10 @@ var CLSTAMP = "6568397";
                 19: "c00a15dd96bfb93ac759",
                 20: "68ed1bcdbe36edb5a871",
                 21: "28e2f33a17ec9205d67a",
-                22: "b56e1916a5bc4340b2d4",
+                22: "131a7f71f0d1a0120826",
                 23: "51c6d810937840ee5938",
                 24: "ede78306707e4d6f826c",
-                25: "0c6329820c7fc3621ef0",
+                25: "dcfefa2f4d1d428f2cee",
                 26: "97c86e24d9afdfeda297",
                 27: "e92830cdf4622cb52e29",
                 28: "4cfed9da21c1be4d9875",
@@ -156,28 +156,28 @@ var CLSTAMP = "6568397";
                 44: "179f9fee6f02e294d2e2",
                 45: "78b5914c2c65c006e40b",
                 46: "6e8f08d5a3b9b506a2f2",
-                47: "0163d9d40b3d5993337d",
+                47: "082c596852bf64766be1",
                 48: "b363ff14f91a4ce87e74",
                 49: "a8396c3fe8fd8c2e72c3",
                 50: "3abde3b903d3d6ff1da1",
                 51: "2717eb29374edf3dbee6",
-                52: "a6c09b9d735f8d181292",
+                52: "7a50e7e7f2dab68123bf",
                 53: "747b70a6cdbc22b936f3",
                 54: "2b70d8289ce8bc073d7c",
-                55: "0c7d478fb91e2603835e",
+                55: "9e9eee9c2d55065fc455",
                 56: "9d3f2dcf1c57710fc18b",
-                57: "3b0698509feb80980bbc",
+                57: "18eda18a4df1b01b1e92",
                 58: "1d2c089a67a549e1a8aa",
-                59: "02d672afa83bb2cb7141",
+                59: "2390efc4b0e2d8d10169",
                 60: "c81899f447cf840c2cbc",
-                61: "b92356fd19ce6ed0cd4c",
-                62: "650984fef79b869543af",
+                61: "155c9e8cbb23b3e3a6bb",
+                62: "96a65bd43971eaff6931",
                 63: "6915206bdc5812aba1b6",
                 64: "707c62056aaa31b54ccd",
                 65: "a7c5837b03c9073331c3",
                 66: "701405c9bb2bd27d34f4",
                 67: "8b4281f354db53424ce5",
-                68: "45fde9cf541c2b58a428",
+                68: "536d8593fb5780b0ec42",
               }[e]
             );
           })(e));
@@ -2076,7 +2076,8 @@ var CLSTAMP = "6568397";
         (e[(e.Hidden = 0)] = "Hidden"),
           (e[(e.Notification = 1)] = "Notification"),
           (e[(e.Overlay = 2)] = "Overlay"),
-          (e[(e.Opaque = 3)] = "Opaque");
+          (e[(e.Opaque = 3)] = "Opaque"),
+          (e[(e.OverlayKeyboard = 4)] = "OverlayKeyboard");
       })(L || (L = {}));
   },
   mrSG: function (e, t, n) {

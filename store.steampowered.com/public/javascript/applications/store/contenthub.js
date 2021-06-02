@@ -16,8 +16,13 @@
         Info: "maincapsule_Info_30Ff-",
         Title: "maincapsule_Title_5_Erf",
         Reason: "maincapsule_Reason_1jQcK",
+        InfoSlideRight: "maincapsule_InfoSlideRight_3u_to",
+        ArtworkSlideRight: "maincapsule_ArtworkSlideRight_1MfhA",
+        InfoSlideLeft: "maincapsule_InfoSlideLeft_iyafk",
+        ArtworkSlideleft: "maincapsule_ArtworkSlideleft_3U7W7",
         BgImageFade: "maincapsule_BgImageFade_2_cnF",
         BgVidShow: "maincapsule_BgVidShow_1M19z",
+        ArtworkSlideLeft: "maincapsule_ArtworkSlideLeft_1t4C4",
       };
     },
     j6A3: function (e, t, a) {
@@ -448,12 +453,12 @@
         S = a("q1tI"),
         C = a.n(S),
         F = a("VQ2A"),
-        j = a("IjL/"),
-        k = a("0OaU"),
+        k = a("IjL/"),
+        j = a("0OaU"),
         E = a("TLQK"),
         I = a("exH9"),
-        P = a("xVl9"),
-        A = a("5L1o"),
+        A = a("xVl9"),
+        P = a("5L1o"),
         O = a("MnIK"),
         w = a("dfs5");
       function G(e, t) {
@@ -518,7 +523,7 @@
         D = function (e) {
           var t = G(e.capsuleList, 40);
           return C.a.createElement(
-            P.a,
+            A.a,
             {
               visibleElements: 4,
               className: Object(I.a)(
@@ -528,7 +533,7 @@
               ),
             },
             t.map(function (e) {
-              return C.a.createElement(A.l, {
+              return C.a.createElement(P.l, {
                 key: e.type + "_" + e.id,
                 capsule: e,
                 imageType: "header",
@@ -542,17 +547,17 @@
             r = a[0];
           a[1];
           if (r)
-            return C.a.createElement(k.a, {
+            return C.a.createElement(j.a, {
               string: Object(E.f)("#Loading"),
               size: "medium",
               position: "center",
             });
           var n = G(t, 40);
           return C.a.createElement(
-            P.a,
+            A.a,
             { visibleElements: 4 },
             n.map(function (e) {
-              return C.a.createElement(A.l, {
+              return C.a.createElement(P.l, {
                 key: e.type + "_" + e.id,
                 capsule: e,
                 imageType: "header",
@@ -1591,7 +1596,7 @@
             ),
             !n)
           )
-            return C.a.createElement(k.a, {
+            return C.a.createElement(j.a, {
               string: Object(E.f)("#Loading"),
               size: "medium",
               position: "center",
@@ -1640,7 +1645,7 @@
                       key: "" + e.item_type + e.id,
                       className: Z.a.SaleItemBrowserRow,
                     },
-                    C.a.createElement(A.n, {
+                    C.a.createElement(P.n, {
                       id: e.id,
                       type: a,
                       bShowDemoButton: !1,
@@ -1830,14 +1835,14 @@
               C.a.createElement(
                 "div",
                 null,
-                C.a.createElement(A.k, { id: a, type: r })
+                C.a.createElement(P.k, { id: a, type: r })
               )
             );
           }),
           function (e) {
             var t = T.Get().GetMainCapsuleList();
             return C.a.createElement(
-              P.a,
+              A.a,
               { visibleElements: 1, className: N.MainCarousel },
               t.map(function (e) {
                 return C.a.createElement(me, {
@@ -1866,7 +1871,7 @@
           return (
             (t = i.microtrailer_mp4),
             C.a.createElement(
-              A.e,
+              P.e,
               { appid: n.GetAppID() },
               C.a.createElement(
                 "div",
@@ -1903,14 +1908,14 @@
                   C.a.createElement(
                     "a",
                     { href: c, className: Object(I.a)(le.Artwork) },
-                    Object(A.b)(n.GetAppID(), n.GetAppIDToRun()) &&
+                    Object(P.b)(n.GetAppID(), n.GetAppIDToRun()) &&
                       C.a.createElement(
                         "div",
                         { className: le.CapsuleDecorators },
-                        C.a.createElement(A.h, null)
+                        C.a.createElement(P.h, null)
                       ),
-                    C.a.createElement(A.f, { info: i, appInfo: i }),
-                    C.a.createElement(A.c, { info: i })
+                    C.a.createElement(P.f, { info: i, appInfo: i }),
+                    C.a.createElement(P.c, { info: i })
                   ),
                   C.a.createElement(
                     "div",
@@ -1921,7 +1926,7 @@
                       i.title
                     ),
                     C.a.createElement("div", { className: le.Reason }, r),
-                    C.a.createElement(A.m, { appInfo: i, instanceNum: a.id })
+                    C.a.createElement(P.m, { appInfo: i, instanceNum: a.id })
                   )
                 )
               )
@@ -1943,7 +1948,7 @@
           }, []),
           a)
         )
-          return C.a.createElement(k.a, {
+          return C.a.createElement(j.a, {
             string: Object(E.f)("#Loading"),
             size: "medium",
             position: "center",
@@ -1956,9 +1961,9 @@
         return C.a.createElement(
           "div",
           null,
-          C.a.createElement(j.a, null, C.a.createElement(de, null)),
-          C.a.createElement(j.a, null, n),
-          C.a.createElement(j.a, null, C.a.createElement(ae, null)),
+          C.a.createElement(k.a, null, C.a.createElement(de, null)),
+          C.a.createElement(k.a, null, n),
+          C.a.createElement(k.a, null, C.a.createElement(ae, null)),
           C.a.createElement(
             "a",
             {

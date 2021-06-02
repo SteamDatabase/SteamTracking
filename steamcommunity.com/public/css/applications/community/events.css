@@ -1,5 +1,5 @@
 /*!
- * https://github.com/YouCanBookMe/react-datetime
+ * https://github.com/arqex/react-datetime
  */
 .rdt {
   position: relative;
@@ -7,7 +7,7 @@
 .rdtPicker {
   display: none;
   position: absolute;
-  width: 250px;
+  min-width: 250px;
   padding: 4px;
   margin-top: 1px;
   z-index: 99999 !important;
@@ -118,10 +118,10 @@
   color: #999;
   cursor: not-allowed;
 }
-.rdtPicker thead tr:first-child th {
+.rdtPicker thead tr:first-of-type th {
   cursor: pointer;
 }
-.rdtPicker thead tr:first-child th:hover {
+.rdtPicker thead tr:first-of-type th:hover {
   background: #eee;
 }
 .rdtPicker tfoot {

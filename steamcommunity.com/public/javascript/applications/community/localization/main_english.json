@@ -1567,6 +1567,7 @@
     "FacetedBrowseEditor_EnabledByDefault": "Enabled by default",
     "FacetedBrowseEditor_SyncTopNTags": "Sync top 20 store tags",
     "FacetedBrowseEditor_SyncTopNTags_Tooltip": "By default, only the top 10 store tags are synced for each item. Check this box to sync the top 20 store tags instead.",
+    "FacetedBrowseEditor_GenerateDebugInfo": "Generate information for debugging",
     "FAQViewer_SteamSupport": "Steam Support",
     "FAQViewer_NoFAQFound": "Sorry, we could not find that page.",
     "FAQViewer_GoToHomepage": "Return to community homepage",

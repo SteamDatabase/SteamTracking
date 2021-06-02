@@ -463,7 +463,7 @@
         return R;
       }),
         n.d(t, "b", function () {
-          return z;
+          return W;
         });
       var a = n("mrSG"),
         i = n("fcuX"),
@@ -1667,6 +1667,32 @@
                           },
                         })
                       )
+                    ),
+                    _.createElement(
+                      D.b,
+                      { clanSteamID: o.GetClanSteamID(), requireAdmin: !0 },
+                      H(t) &&
+                        _.createElement(
+                          "div",
+                          { className: M.FilterActionsCtn },
+                          _.createElement(
+                            "span",
+                            null,
+                            Object(O.f)(
+                              "#FacetedBrowseEditor_GenerateDebugInfo"
+                            )
+                          ),
+                          _.createElement(
+                            "div",
+                            { className: M.FilterSettingRightCol },
+                            _.createElement(h.e, {
+                              checked: n.facets_generate_debug_info,
+                              onChange: function (e) {
+                                (n.facets_generate_debug_info = e), m();
+                              },
+                            })
+                          )
+                        )
                     )
                   ),
                   d
@@ -1971,24 +1997,30 @@
           )
         );
       });
-      function H(e, t) {
-        var n;
+      function H(e) {
+        return (
+          !("items" !== e.section_type || !e.smart_section) ||
+          "sale_item_browser" === e.section_type
+        );
+      }
+      function z(e, t, n) {
+        var i;
         return Object(a.b)(this, void 0, void 0, function () {
-          var i, o, l, s, u, d, p, m, _, g, h, f, b, E, v, S, y, O, T, C;
+          var o, l, s, u, d, p, m, _, g, h, f, b, E, v, S, y, O, T, C, j;
           return Object(a.e)(this, function (a) {
             switch (a.label) {
               case 0:
-                return [4, x(t, e)];
+                return [4, x(n, t)];
               case 1:
                 for (
                   a.sent(),
-                    i = e.map(function (e) {
+                    o = t.map(function (e) {
                       return {
                         setTags: Object(r.m)(e.tags),
                         capsule: e.capsule,
                       };
                     }),
-                    o = e.map(function (e) {
+                    l = t.map(function (e) {
                       var t = L.a.GetAppLinkInfo(e.capsule.id);
                       return {
                         languages: Boolean(t)
@@ -1997,7 +2029,7 @@
                         capsule: e.capsule,
                       };
                     }),
-                    l = e.map(function (e) {
+                    s = t.map(function (e) {
                       var t = L.a.GetAppLinkInfo(e.capsule.id);
                       return {
                         contentDescriptors: Boolean(t)
@@ -2006,54 +2038,56 @@
                         capsule: e.capsule,
                       };
                     }),
-                    s = e.map(function (e) {
+                    u = t.map(function (e) {
                       var t = L.a.GetAppLinkInfo(e.capsule.id);
                       return {
                         appType: Boolean(t) ? t.type : null,
                         capsule: e.capsule,
                       };
                     }),
-                    u = 0,
-                    d = t;
-                  u < d.length;
-                  u++
+                    d = 0,
+                    p = n;
+                  d < p.length;
+                  d++
                 )
-                  for (p = d[u], m = 0, _ = p.facetValues; m < _.length; m++)
+                  for (m = p[d], _ = 0, g = m.facetValues; _ < g.length; _++)
                     if (
-                      (((g = _[m]).matchingCapsules = []),
-                      g.type === c.m.k_ELanguage)
+                      (((h = g[_]).matchingCapsules = []),
+                      H(e) && !1 === e.facets_generate_debug_info)
                     )
-                      for (h = 0, f = o; h < f.length; h++)
-                        (y = f[h]),
-                          (null === (n = y.languages) || void 0 === n
+                      h.matchingCapsules = void 0;
+                    else if (h.type === c.m.k_ELanguage)
+                      for (f = 0, b = l; f < b.length; f++)
+                        (O = b[f]),
+                          (null === (i = O.languages) || void 0 === i
                             ? void 0
-                            : n.has(g.language)) &&
-                            g.matchingCapsules.push(y.capsule);
-                    else if (g.type === c.m.k_EContentDescriptor)
-                      for (b = 0, E = l; b < E.length; b++)
-                        (null === (y = E[b]).contentDescriptors ||
-                          y.contentDescriptors.has(g.contentDescriptor)) &&
-                          g.matchingCapsules.push(y.capsule);
+                            : i.has(h.language)) &&
+                            h.matchingCapsules.push(O.capsule);
+                    else if (h.type === c.m.k_EContentDescriptor)
+                      for (E = 0, v = s; E < v.length; E++)
+                        (null === (O = v[E]).contentDescriptors ||
+                          O.contentDescriptors.has(h.contentDescriptor)) &&
+                          h.matchingCapsules.push(O.capsule);
                     else if (
-                      g.type === c.m.k_EUserPreference ||
-                      g.type === c.m.k_EPrice
+                      h.type === c.m.k_EUserPreference ||
+                      h.type === c.m.k_EPrice
                     )
-                      g.matchingCapsules = [];
-                    else if (g.type === c.m.k_EAppType)
-                      for (v = 0, S = s; v < S.length; v++)
-                        (y = S[v]).appType === g.appType &&
-                          g.matchingCapsules.push(y.capsule);
+                      h.matchingCapsules = [];
+                    else if (h.type === c.m.k_EAppType)
+                      for (S = 0, y = u; S < y.length; S++)
+                        (O = y[S]).appType === h.appType &&
+                          h.matchingCapsules.push(O.capsule);
                     else
-                      for (O = 0, T = i; O < T.length; O++)
-                        (C = T[O]),
-                          Object(r.i)(C.setTags, g.filter) &&
-                            g.matchingCapsules.push(C.capsule);
+                      for (T = 0, C = o; T < C.length; T++)
+                        (j = C[T]),
+                          Object(r.i)(j.setTags, h.filter) &&
+                            h.matchingCapsules.push(j.capsule);
                 return [2];
             }
           });
         });
       }
-      function z(e) {
+      function W(e) {
         return Object(a.b)(this, void 0, void 0, function () {
           var t, n, i, r, o, l, u, d;
           return Object(a.e)(this, function (a) {
@@ -2088,13 +2122,15 @@
                   ? "tabs" === (d = u[l]).section_type && d.tabs
                     ? (d.tabs.forEach(function (e) {
                         e.sale_tag_filter &&
-                          (e.store_filter = W(e.sale_tag_filter, o));
+                          (e.store_filter = q(e.sale_tag_filter, o));
                       }),
                       [3, 7])
                     : [3, 5]
                   : [3, 8];
               case 5:
-                return d.enable_faceted_browsing ? [4, H(t, d.facets)] : [3, 7];
+                return d.enable_faceted_browsing
+                  ? [4, z(d, t, d.facets)]
+                  : [3, 7];
               case 6:
                 a.sent(),
                   (function (e, t) {
@@ -2109,9 +2145,9 @@
                             i++
                           ) {
                             (s = r[i]).type === c.m.k_ELanguage
-                              ? n.set(s, K(s.language))
+                              ? n.set(s, Y(s.language))
                               : s.type === c.m.k_EContentDescriptor
-                              ? n.set(s, Y(s.contentDescriptor))
+                              ? n.set(s, Q(s.contentDescriptor))
                               : s.type === c.m.k_EUserPreference
                               ? n.set(s, null)
                               : s.type === c.m.k_EPrice
@@ -2119,9 +2155,9 @@
                                   type: c.o.k_EStoreFilterClauseTypePrice,
                                 })
                               : s.type === c.m.k_EAppType
-                              ? n.set(s, Q(s.appType))
-                              : (n.set(s, W(s.filter, t)),
-                                a.set(s, q(s.filter, t)));
+                              ? n.set(s, J(s.appType))
+                              : (n.set(s, q(s.filter, t)),
+                                a.set(s, K(s.filter, t)));
                           }
                           if (
                             e.facetValues.every(function (e) {
@@ -2197,7 +2233,7 @@
           });
         });
       }
-      function W(e, t) {
+      function q(e, t) {
         for (
           var n = {
               type: c.o.k_EStoreFilterClauseTypeAnd,
@@ -2248,7 +2284,7 @@
         }
         return n;
       }
-      function q(e, t) {
+      function K(e, t) {
         for (var n = 0, a = e.clauses; n < a.length; n++)
           for (var i = 0, o = a[n].or_tags; i < o.length; i++) {
             var l = o[i],
@@ -2267,19 +2303,19 @@
           }
         return 0;
       }
-      function K(e) {
+      function Y(e) {
         return {
           type: c.o.k_EStoreFilterClauseTypeLanguage,
           value: Object(s.a)(e),
         };
       }
-      function Y(e) {
+      function Q(e) {
         return {
           type: c.o.k_EStoreFilterClauseTypeContentDescriptor,
           value: e,
         };
       }
-      function Q(e) {
+      function J(e) {
         return { type: c.o.k_EStoreFilterClauseTypeAppType, value: e };
       }
     },
@@ -10361,25 +10397,26 @@
     f1ZV: function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
-        return E;
+        return v;
       });
       var a = n("mrSG"),
         i = n("TyAF"),
         r = n("q1tI"),
-        o = n("AXHe"),
-        l = n("dsQf"),
-        s = n.n(l),
-        c = n("5izx"),
-        u = n("fpVW"),
-        d = n.n(u),
-        p = n("exH9"),
-        m = n("TLQK"),
-        _ = n("bxiW"),
-        g = n("5E+2"),
-        h = n("ba6i"),
-        f = n.n(h),
-        b = n("f0Wu"),
-        E = (function (e) {
+        o = n("y2g3"),
+        l = n.n(o),
+        s = n("dsQf"),
+        c = n.n(s),
+        u = n("5izx"),
+        d = n("fpVW"),
+        p = n.n(d),
+        m = n("exH9"),
+        _ = n("TLQK"),
+        g = n("bxiW"),
+        h = n("5E+2"),
+        f = n("ba6i"),
+        b = n.n(f),
+        E = n("f0Wu"),
+        v = (function (e) {
           function t(t) {
             var n = e.call(this, t) || this;
             return (
@@ -10400,7 +10437,7 @@
                 i = t.fnIsValidDateTime;
               if (!t.disabled) {
                 if ("string" == typeof e) {
-                  var r = b(e, "h:m a +-h:m", !0);
+                  var r = E(e, "h:m a +-h:m", !0);
                   if (!r.isValid())
                     return void this.setState({ timeAsString: e });
                   e = r;
@@ -10408,14 +10445,14 @@
                 var o = this.props.fnGetTimeToUpdate(),
                   l = 0;
                 if (o) {
-                  var s = b.unix(o);
+                  var s = E.unix(o);
                   e.year(s.year()),
                     e.month(s.month()),
                     e.day(s.day()),
                     (l = e.unix());
                 } else {
                   l =
-                    b.unix(n).hour(0).second(0).minutes(0).unix() +
+                    E.unix(n).hour(0).second(0).minutes(0).unix() +
                     3600 * e.hour() +
                     60 * e.minutes();
                 }
@@ -10432,13 +10469,13 @@
             (t.prototype.OnDateChange = function (e) {
               if (!this.props.disabled) {
                 if ("string" == typeof e) {
-                  var t = b(e, "M/D/YYYY", !0);
+                  var t = E(e, "M/D/YYYY", !0);
                   if (!t.isValid())
                     return void this.setState({ dateAsString: e });
                   e = t;
                 }
                 var n = this.props.fnGetTimeToUpdate(),
-                  a = b.unix(n || c.a.GetTimeNowWithOverride());
+                  a = E.unix(n || u.a.GetTimeNowWithOverride());
                 e.hour(a.hour()),
                   e.minute(a.minute()),
                   e.second(0),
@@ -10459,18 +10496,18 @@
               var t = this.props,
                 n = t.nEarliestTime,
                 a = t.nLatestTime,
-                i = b.unix(n).hour(0).seconds(0).minute(0),
+                i = E.unix(n).hour(0).seconds(0).minute(0),
                 r = e.unix() >= i.unix();
               if (r && a && a >= n) {
-                var o = b.unix(a).hour(23).minute(59).seconds(59);
+                var o = E.unix(a).hour(23).minute(59).seconds(59);
                 r = e.unix() <= o.unix();
               }
               return r;
             }),
             (t.prototype.SetToNow = function () {
               this.props.fnSetToNow
-                ? this.props.fnSetToNow(c.a.GetTimeNowWithOverride())
-                : this.props.fnSetTimeToUpdate(c.a.GetTimeNowWithOverride());
+                ? this.props.fnSetToNow(u.a.GetTimeNowWithOverride())
+                : this.props.fnSetTimeToUpdate(u.a.GetTimeNowWithOverride());
             }),
             (t.prototype.render = function () {
               var e = this.props,
@@ -10478,48 +10515,48 @@
                 n = e.nEarliestTime,
                 a = e.fnGetTimeToUpdate,
                 i = e.fnIsValidDateTime,
-                l = a(),
-                u = l > 0 ? new Date(1e3 * l) : null,
-                _ = "h:mm A",
-                h = i && i(),
-                E =
+                o = a(),
+                s = o > 0 ? new Date(1e3 * o) : null,
+                d = "h:mm A",
+                g = i && i(),
+                f =
                   this.state.timeAsString ||
                   this.state.dateAsString ||
-                  "string" == typeof h,
+                  "string" == typeof g,
                 v = "#EventEditor_Fallback_Invalid_DateTime";
               this.state.timeAsString
                 ? (v = "#EventEditor_Time_CannotParse")
                 : this.state.dateAsString
                 ? (v = "#EventEditor_Date_CannotParse")
-                : "string" == typeof h && (v = h);
+                : "string" == typeof g && (v = g);
               var S = void 0;
-              if (t && n && t == n && n > c.a.GetTimeNowWithOverride()) {
-                var y = b.unix(n);
+              if (t && n && t == n && n > u.a.GetTimeNowWithOverride()) {
+                var y = E.unix(n);
                 (S = {
                   hours: { max: y.hour(), min: y.hour(), step: 0 },
                   minutes: { max: y.minute(), min: y.minute(), step: 0 },
                   seconds: { max: y.seconds(), min: y.seconds(), step: 0 },
                   milliseconds: { max: 0, min: 0, step: 0 },
                 }),
-                  (_ = "HH:mm");
+                  (d = "HH:mm");
               }
               var O = void 0;
-              !l && n && (O = b.unix(n));
-              var T = b.tz.guess(),
-                C = b.unix(l).tz(T);
+              !o && n && (O = E.unix(n));
+              var T = E.tz.guess(),
+                C = E.unix(o).tz(T);
               return r.createElement(
                 "div",
                 {
-                  className: Object(p.a)(
-                    f.a.EventTimeSection,
+                  className: Object(m.a)(
+                    b.a.EventTimeSection,
                     this.props.className
                   ),
                 },
                 r.createElement(
                   "div",
-                  { className: f.a.EventTimeTitle },
+                  { className: b.a.EventTimeTitle },
                   r.createElement(
-                    g.a,
+                    h.a,
                     {
                       toolTipContent: this.props.strDescToolTip,
                       direction: "top",
@@ -10527,54 +10564,54 @@
                     Boolean(this.props.strDescription) &&
                       r.createElement("span", null, this.props.strDescription)
                   ),
-                  E &&
+                  f &&
                     r.createElement(
                       "span",
                       null,
-                      r.createElement("img", { src: s.a }),
-                      Object(m.f)(v)
+                      r.createElement("img", { src: c.a }),
+                      Object(_.f)(v)
                     )
                 ),
                 r.createElement(
                   "div",
-                  { className: d.a.FlexRowContainer },
+                  { className: p.a.FlexRowContainer },
                   r.createElement(
                     "div",
-                    { className: Object(p.a)(d.a.InputBorder, f.a.TimeBlock) },
-                    r.createElement(o, {
+                    { className: Object(m.a)(p.a.InputBorder, b.a.TimeBlock) },
+                    r.createElement(l.a, {
                       onChange: this.OnDateChange,
                       timeFormat: !1,
                       value: this.state.dateAsString
                         ? this.state.dateAsString
-                        : u,
+                        : s,
                       isValidDate: this.IsValidDate,
-                      defaultValue: O,
+                      initialValue: O,
                       inputProps: {
-                        placeholder: Object(m.f)("#EventEditor_Enter_Date"),
-                        className: f.a.TimeWidth,
+                        placeholder: Object(_.f)("#EventEditor_Enter_Date"),
+                        className: b.a.TimeWidth,
                       },
                     })
                   ),
                   r.createElement(
                     "div",
                     {
-                      className: Object(p.a)(
-                        d.a.InputBorder,
-                        f.a.TimeBlock,
-                        d.a.FlexRowContainer
+                      className: Object(m.a)(
+                        p.a.InputBorder,
+                        b.a.TimeBlock,
+                        p.a.FlexRowContainer
                       ),
                     },
-                    r.createElement(o, {
+                    r.createElement(l.a, {
                       onChange: this.OnTimeChange,
                       dateFormat: !1,
-                      timeFormat: _,
+                      timeFormat: d,
                       timeConstraints: S,
                       value: this.state.timeAsString
                         ? this.state.timeAsString
-                        : u,
+                        : s,
                       inputProps: {
-                        placeholder: Object(m.f)("#EventEditor_Enter_Time"),
-                        className: f.a.TimeWidth,
+                        placeholder: Object(_.f)("#EventEditor_Enter_Time"),
+                        className: b.a.TimeWidth,
                       },
                     })
                   ),
@@ -10585,14 +10622,14 @@
                   r.createElement(
                     "div",
                     null,
-                    Object(m.f)("#EventEditor_DateTime_Fixed")
+                    Object(_.f)("#EventEditor_DateTime_Fixed")
                   )
               );
             }),
-            Object(a.c)([_.a], t.prototype, "OnTimeChange", null),
-            Object(a.c)([_.a], t.prototype, "OnDateChange", null),
-            Object(a.c)([_.a], t.prototype, "IsValidDate", null),
-            Object(a.c)([_.a], t.prototype, "SetToNow", null),
+            Object(a.c)([g.a], t.prototype, "OnTimeChange", null),
+            Object(a.c)([g.a], t.prototype, "OnDateChange", null),
+            Object(a.c)([g.a], t.prototype, "IsValidDate", null),
+            Object(a.c)([g.a], t.prototype, "SetToNow", null),
             (t = Object(a.c)([i.a], t))
           );
         })(r.Component);

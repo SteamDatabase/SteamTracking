@@ -1,3 +1,54 @@
+.faqbbcode_FAQContainer_2PQsW .BB_Header1,
+.faqbbcode_FAQContainer_2PQsW .BB_Header2,
+.faqbbcode_FAQContainer_2PQsW .BB_Header3,
+.faqbbcode_FAQContainer_2PQsW .BB_Header4,
+.faqbbcode_FAQContainer_2PQsW .BB_Header5 {
+  margin-bottom: 8px;
+}
+.faqbbcode_Section_bjwwI {
+  margin-bottom: 12px;
+}
+.faqbbcode_Section_bjwwI.faqbbcode_Note_XjQ8g,
+.faqbbcode_Section_bjwwI.faqbbcode_Important_mRx2I,
+.faqbbcode_Section_bjwwI.faqbbcode_Warning_3Hvtr {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  padding: 10px;
+  margin: 10px 0;
+}
+.faqbbcode_Section_bjwwI.faqbbcode_Note_XjQ8g p,
+.faqbbcode_Section_bjwwI.faqbbcode_Important_mRx2I p,
+.faqbbcode_Section_bjwwI.faqbbcode_Warning_3Hvtr p {
+  padding: 0;
+}
+.faqbbcode_Section_bjwwI.faqbbcode_Note_XjQ8g {
+  border: 1px solid #5eac32;
+}
+.faqbbcode_Section_bjwwI.faqbbcode_Important_mRx2I {
+  border: 1px solid #8bb9e0;
+}
+.faqbbcode_Section_bjwwI.faqbbcode_Warning_3Hvtr {
+  border: 1px solid #a40d36;
+}
+.faqbbcode_Section_bjwwI.faqbbcode_Warning_3Hvtr h1:first-child,
+.faqbbcode_Section_bjwwI.faqbbcode_Warning_3Hvtr h2:first-child,
+.faqbbcode_Section_bjwwI.faqbbcode_Warning_3Hvtr h3:first-child,
+.faqbbcode_Section_bjwwI.faqbbcode_Warning_3Hvtr h4:first-child,
+.faqbbcode_Section_bjwwI.faqbbcode_Warning_3Hvtr h5:first-child {
+  color: #fff;
+  font-weight: bold;
+  margin: 0;
+}
+.faqbbcode_FAQImage_3Eebt {
+  max-width: 100%;
+}
+.BB_Header4 {
+  margin: 20px 0px 8px 0px;
+  padding: 0 0 4px 0;
+  font-family: "Motiva Sans", Arial, sans-serif;
+  background: url("https://support.steampowered.com/images/v6/maincol_gradient_rule.png")
+    no-repeat bottom left rgba(0, 0, 0, 0);
+}
 .bbcodeimporter_ImportToolCtn_TQZns {
   padding: 20px;
   overflow: auto;
@@ -16,21 +67,56 @@
   display: flex;
   padding: 2px;
   height: 36px;
+  width: 1400px;
 }
 .bbcodeimporter_ImportToolCtn_TQZns
   .bbcodeimporter_FAQRow_2KnD-
   .bbcodeimporter_ID_3amum {
-  width: 60px;
+  width: 44px;
+}
+.bbcodeimporter_ImportToolCtn_TQZns
+  .bbcodeimporter_FAQRow_2KnD-
+  .bbcodeimporter_ShortCode_X44e5 {
+  width: 20px;
+  padding: 0px 2px;
+}
+.bbcodeimporter_ImportToolCtn_TQZns
+  .bbcodeimporter_FAQRow_2KnD-
+  .bbcodeimporter_ShortCode_X44e5.bbcodeimporter_Missing_x-9o9 {
+  color: #a9a9a9;
+}
+.bbcodeimporter_ImportToolCtn_TQZns
+  .bbcodeimporter_FAQRow_2KnD-
+  .bbcodeimporter_ShortCode_X44e5.bbcodeimporter_Good_2Tj3Z {
+  color: green;
+}
+.bbcodeimporter_ImportToolCtn_TQZns
+  .bbcodeimporter_FAQRow_2KnD-
+  .bbcodeimporter_ShortCode_X44e5.bbcodeimporter_Suspicious_o09Lc {
+  color: orange;
+}
+.bbcodeimporter_ImportToolCtn_TQZns
+  .bbcodeimporter_FAQRow_2KnD-
+  .bbcodeimporter_ShortCode_X44e5.bbcodeimporter_Bad_1jrHo {
+  color: red;
+}
+.bbcodeimporter_ImportToolCtn_TQZns
+  .bbcodeimporter_FAQRow_2KnD-
+  .bbcodeimporter_ShortCode_X44e5.bbcodeimporter_BadImport_2rvOL {
+  color: purple;
 }
 .bbcodeimporter_ImportToolCtn_TQZns
   .bbcodeimporter_FAQRow_2KnD-
   .bbcodeimporter_Ref_29eod {
-  width: 180px;
+  width: 90px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .bbcodeimporter_ImportToolCtn_TQZns
   .bbcodeimporter_FAQRow_2KnD-
   .bbcodeimporter_Text_24IpJ {
-  width: 250px;
+  width: 240px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -396,57 +482,6 @@ button.faqeditor_EditorSaveButton_22iwd.faqeditor_EditorSaveButton_22iwd:disable
 }
 .faqtoolbar_EditorInternalName_3A9ci img {
   margin-left: 8px;
-}
-.faqbbcode_FAQContainer_2PQsW .BB_Header1,
-.faqbbcode_FAQContainer_2PQsW .BB_Header2,
-.faqbbcode_FAQContainer_2PQsW .BB_Header3,
-.faqbbcode_FAQContainer_2PQsW .BB_Header4,
-.faqbbcode_FAQContainer_2PQsW .BB_Header5 {
-  margin-bottom: 8px;
-}
-.faqbbcode_Section_bjwwI {
-  margin-bottom: 12px;
-}
-.faqbbcode_Section_bjwwI.faqbbcode_Note_XjQ8g,
-.faqbbcode_Section_bjwwI.faqbbcode_Important_mRx2I,
-.faqbbcode_Section_bjwwI.faqbbcode_Warning_3Hvtr {
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 3px;
-  padding: 10px;
-  margin: 10px 0;
-}
-.faqbbcode_Section_bjwwI.faqbbcode_Note_XjQ8g p,
-.faqbbcode_Section_bjwwI.faqbbcode_Important_mRx2I p,
-.faqbbcode_Section_bjwwI.faqbbcode_Warning_3Hvtr p {
-  padding: 0;
-}
-.faqbbcode_Section_bjwwI.faqbbcode_Note_XjQ8g {
-  border: 1px solid #5eac32;
-}
-.faqbbcode_Section_bjwwI.faqbbcode_Important_mRx2I {
-  border: 1px solid #8bb9e0;
-}
-.faqbbcode_Section_bjwwI.faqbbcode_Warning_3Hvtr {
-  border: 1px solid #a40d36;
-}
-.faqbbcode_Section_bjwwI.faqbbcode_Warning_3Hvtr h1:first-child,
-.faqbbcode_Section_bjwwI.faqbbcode_Warning_3Hvtr h2:first-child,
-.faqbbcode_Section_bjwwI.faqbbcode_Warning_3Hvtr h3:first-child,
-.faqbbcode_Section_bjwwI.faqbbcode_Warning_3Hvtr h4:first-child,
-.faqbbcode_Section_bjwwI.faqbbcode_Warning_3Hvtr h5:first-child {
-  color: #fff;
-  font-weight: bold;
-  margin: 0;
-}
-.faqbbcode_FAQImage_3Eebt {
-  max-width: 100%;
-}
-.BB_Header4 {
-  margin: 20px 0px 8px 0px;
-  padding: 0 0 4px 0;
-  font-family: "Motiva Sans", Arial, sans-serif;
-  background: url("https://support.steampowered.com/images/v6/maincol_gradient_rule.png")
-    no-repeat bottom left rgba(0, 0, 0, 0);
 }
 .faqsharedviewpage_FAQViewPage_Ya530 {
   display: flex;

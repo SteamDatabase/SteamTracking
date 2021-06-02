@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6568397";
+var CLSTAMP = "6575079";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [71],
   {
@@ -25,13 +25,13 @@ var CLSTAMP = "6568397";
           return v;
         });
       var r = n("mrSG"),
-        o = n("q1tI"),
-        i = n("y+6m"),
-        a = n("TLQK"),
+        o = (n("2vnA"), n("riab"), n("q1tI")),
+        i = n("TtDX"),
+        a = n("exH9"),
         s = n("X3Ds"),
-        c = n("TtDX"),
+        c = n("TLQK"),
         l = n("lkRc"),
-        u = (n("2vnA"), n("riab"), n("exH9"));
+        u = n("y+6m");
       function p(e, t) {
         var n;
         (n =
@@ -98,30 +98,30 @@ var CLSTAMP = "6568397";
           o.Fragment,
           null,
           o.createElement(
-            i.d,
+            u.d,
             {
               onSelected: function () {
                 s.j(t);
               },
             },
-            Object(a.f)("#ContextMenu_CopyLinkURL")
+            Object(c.f)("#ContextMenu_CopyLinkURL")
           ),
           o.createElement(
-            i.d,
+            u.d,
             {
               onSelected: function (e) {
                 f(e, t, { unPID: n });
               },
             },
-            Object(a.f)("#ContextMenu_OpenLinkInNewWindow")
+            Object(c.f)("#ContextMenu_OpenLinkInNewWindow")
           )
         );
       }
       function m(e, t) {
         var n = e.currentTarget;
-        return Object(c.a)(
+        return Object(i.a)(
           o.createElement(
-            i.c,
+            u.c,
             null,
             o.createElement(h, { strURL: n.href, unPID: t })
           ),
@@ -171,7 +171,7 @@ var CLSTAMP = "6568397";
           return o.createElement(
             "div",
             Object(r.a)({}, t, {
-              className: Object(u.a)(e, t.className),
+              className: Object(a.a)(e, t.className),
               ref: n,
             })
           );
@@ -245,7 +245,7 @@ var CLSTAMP = "6568397";
     "5E+2": function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
-        return h;
+        return m;
       });
       var r = n("mrSG"),
         o = n("q1tI"),
@@ -273,16 +273,55 @@ var CLSTAMP = "6568397";
               var e = this,
                 t = this.props,
                 n = t.toolTipContent,
-                i = t.nDelayShowMS,
-                s = t.bDisabled,
-                c = t.direction,
-                l = t.nBodyAlignment,
-                u = t.nBodyDistance,
-                p = t.nAllowOffscreenPx,
-                d = t.nMaxLateralMoveOnScreen,
-                h = t.strTooltipClassname,
-                f = t.bNavStop,
-                g = Object(r.f)(t, [
+                o = t.nDelayShowMS,
+                i = t.bDisabled,
+                a = {
+                  direction: t.direction,
+                  nBodyAlignment: t.nBodyAlignment,
+                  nBodyDistance: t.nBodyDistance,
+                  nAllowOffscreenPx: t.nAllowOffscreenPx,
+                  nMaxLateralMoveOnScreen: t.nMaxLateralMoveOnScreen,
+                  className: t.strTooltipClassname,
+                },
+                s = null;
+              if (!i) {
+                var c = function (t) {
+                  return (e.m_fnHide = t);
+                };
+                s =
+                  "string" == typeof n
+                    ? f.ForText(n, c, o, a)
+                    : f.ForReactNode(n, c, o, a);
+              }
+              var l = Object(r.a)(Object(r.a)({}, this.props), {
+                onMouseEnter: s ? s.ShowToolTip : null,
+                onMouseLeave: this.TryHide,
+              });
+              return this.RenderHelper(l, s);
+            }),
+            (t.defaultProps = { nDelayShowMS: 300 }),
+            Object(r.c)([u.a], t.prototype, "TryHide", null),
+            t
+          );
+        })(o.Component),
+        m = (function (e) {
+          function t() {
+            return (null !== e && e.apply(this, arguments)) || this;
+          }
+          return (
+            Object(r.d)(t, e),
+            (t.prototype.RenderHelper = function (e, t) {
+              e.toolTipContent,
+                e.nDelayShowMS,
+                e.bDisabled,
+                e.direction,
+                e.nBodyAlignment,
+                e.nBodyDistance,
+                e.nAllowOffscreenPx,
+                e.nMaxLateralMoveOnScreen,
+                e.strTooltipClassname;
+              var n = e.bNavStop,
+                i = Object(r.f)(e, [
                   "toolTipContent",
                   "nDelayShowMS",
                   "bDisabled",
@@ -293,45 +332,20 @@ var CLSTAMP = "6568397";
                   "nMaxLateralMoveOnScreen",
                   "strTooltipClassname",
                   "bNavStop",
-                ]),
-                b = {
-                  direction: c,
-                  nBodyAlignment: l,
-                  nBodyDistance: u,
-                  nAllowOffscreenPx: p,
-                  nMaxLateralMoveOnScreen: d,
-                  className: h,
-                },
-                v = null;
-              if (!s) {
-                var _ = function (t) {
-                  return (e.m_fnHide = t);
-                };
-                v =
-                  "string" == typeof n
-                    ? m.ForText(n, _, i, b)
-                    : m.ForReactNode(n, _, i, b);
-              }
+                ]);
               return o.createElement(
                 a.a,
                 Object(r.a)(
-                  {
-                    noFocusRing: !0,
-                    focusable: null != f ? f : !!g.onClick,
-                    onMouseEnter: v ? v.ShowToolTip : null,
-                    onMouseLeave: this.TryHide,
-                  },
-                  g
+                  { noFocusRing: !0, focusable: null != n ? n : !!i.onClick },
+                  i
                 ),
-                this.props.children
+                e.children
               );
             }),
-            (t.defaultProps = { nDelayShowMS: 300 }),
-            Object(r.c)([u.a], t.prototype, "TryHide", null),
             t
           );
-        })(o.Component),
-        m =
+        })(h),
+        f =
           (o.Component,
           o.Component,
           o.Component,
@@ -12107,7 +12121,8 @@ var CLSTAMP = "6568397";
           (e[(e.Hidden = 0)] = "Hidden"),
             (e[(e.Notification = 1)] = "Notification"),
             (e[(e.Overlay = 2)] = "Overlay"),
-            (e[(e.Opaque = 3)] = "Opaque");
+            (e[(e.Opaque = 3)] = "Opaque"),
+            (e[(e.OverlayKeyboard = 4)] = "OverlayKeyboard");
         })(O || (O = {}));
     },
     lkRc: function (e, t, n) {

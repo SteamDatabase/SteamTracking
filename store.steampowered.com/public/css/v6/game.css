@@ -4767,7 +4767,7 @@ background: -webkit-linear-gradient( 315deg, #356480 5%,#1a303d 95%);
 	}
 }
 
-@media screen and (max-width: 470px )
+@media screen and (max-width: 500px )
 {
 	html.responsive .game_header_image_ctn {
 		float: none;
@@ -5704,5 +5704,11 @@ body.v6 .page_content.notes {
 
 .music_album_track_name_other_language {
     color: #9aa8b7;
+}
+
+.release_date_text_short,
+.responsive_reviewdesc_short,
+.responsive_block_header  {
+	display: none;
 }
 

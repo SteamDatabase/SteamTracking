@@ -1822,3 +1822,7 @@ function JSReportProductAction( appId, pageAction, snr )
 	);
 }
 
+function ReparentAppLandingPageForMobileUX()
+{
+	}
+

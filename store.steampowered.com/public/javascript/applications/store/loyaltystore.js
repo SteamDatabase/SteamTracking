@@ -6417,9 +6417,9 @@
                 "span",
                 null,
                 ((t = e.dollarConversion),
-                void 0 === window.GStoreItemData
+                "undefined" == typeof GStoreItemData
                   ? (console.error("Unable to find GStoreItemData"), null)
-                  : window.GStoreItemData.fnFormatCurrency(t))
+                  : GStoreItemData.fnFormatCurrency(t))
               )
             );
           return i.a.createElement(
