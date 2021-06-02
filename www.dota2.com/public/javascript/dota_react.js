@@ -37153,14 +37153,154 @@ object-assign
       Ua = a("knzx"),
       Fa = a("k7N+"),
       Wa = a.n(Fa),
-      za = a("6rKP"),
-      Va = (function () {
+      za = a("xMCQ"),
+      Va = a.n(za),
+      qa = function (e) {
+        var t = e.options,
+          a = e.selectedOption,
+          n = e.setOption,
+          r = e.className,
+          i = t.findIndex(function (e) {
+            return e.value == a;
+          }),
+          s = -1 != i ? t[i] : void 0,
+          l = function (e) {
+            var a = Math.min(Math.max(0, i + e), t.length - 1);
+            n(t[a].value);
+          };
+        return o.a.createElement(
+          "div",
+          { className: Object(ce.a)(Va.a.CycleSelector, r) },
+          o.a.createElement(
+            "div",
+            {
+              className: Object(ce.a)(
+                Va.a.Arrow,
+                Va.a.Left,
+                0 != i && Va.a.Enabled
+              ),
+              onClick: function () {
+                return l(-1);
+              },
+            },
+            o.a.createElement("img", {
+              className: Va.a.ArrowIcon,
+              src: p.a.IMG_URL + "arrow_solid_left.png",
+            })
+          ),
+          o.a.createElement(
+            "div",
+            { className: Va.a.CurrentOption },
+            "string" == typeof (null == s ? void 0 : s.strLabel) &&
+              Object(_.a)(null == s ? void 0 : s.strLabel),
+            o.a.isValidElement(null == s ? void 0 : s.strLabel) &&
+              (null == s ? void 0 : s.strLabel)
+          ),
+          o.a.createElement(
+            "div",
+            {
+              className: Object(ce.a)(
+                Va.a.Arrow,
+                Va.a.Right,
+                i != t.length - 1 && Va.a.Enabled
+              ),
+              onClick: function () {
+                return l(1);
+              },
+            },
+            o.a.createElement("img", {
+              className: Va.a.ArrowIcon,
+              src: p.a.IMG_URL + "arrow_solid_left.png",
+            })
+          )
+        );
+      },
+      Ja = function (e) {
+        var t = e.options,
+          a = e.selectedOption,
+          n = e.setOption,
+          r = t.findIndex(function (e) {
+            return a == e.value;
+          });
+        return o.a.createElement(
+          "div",
+          { className: Va.a.DropdownSelector },
+          o.a.createElement(
+            "select",
+            {
+              onChange: function (e) {
+                return n(t[parseInt(e.target.value)].value);
+              },
+              value: r,
+            },
+            t.map(function (e, t) {
+              return o.a.createElement(
+                "option",
+                { key: t, value: t },
+                "string" == typeof (null == e ? void 0 : e.strLabel) &&
+                  Object(_.a)(null == e ? void 0 : e.strLabel),
+                o.a.isValidElement(null == e ? void 0 : e.strLabel) &&
+                  (null == e ? void 0 : e.strLabel)
+              );
+            })
+          ),
+          o.a.createElement("img", {
+            className: Va.a.ArrowDown,
+            src: p.a.IMG_URL + "arrow_solid_left.png",
+          })
+        );
+      },
+      Ka = function (e) {
+        var t = e.strInput,
+          a = e.setInput;
+        return o.a.createElement(
+          "div",
+          { className: Va.a.TextInput },
+          o.a.createElement(
+            "form",
+            null,
+            o.a.createElement("input", {
+              type: "text",
+              className: Va.a.InputBox,
+              placeholder: Object(_.b)("#dpc_search_team"),
+              value: t,
+              onChange: function (e) {
+                return a(e.target.value);
+              },
+              onKeyDown: function (e) {
+                return "Escape" == e.key && a("");
+              },
+            })
+          ),
+          o.a.createElement("img", {
+            className: Va.a.MaginifyingGlass,
+            src: p.a.IMG_URL + "arrow_solid_left.png",
+          })
+        );
+      },
+      Qa = function (e) {
+        var t = e.bEnabled,
+          a = e.setEnabled;
+        return o.a.createElement(
+          "div",
+          {
+            className: Object(ce.a)(Va.a.Switch, t && Va.a.On),
+            onClick: function () {
+              return a(!t);
+            },
+          },
+          o.a.createElement("div", { className: Va.a.Background }),
+          o.a.createElement("div", { className: Va.a.Selector })
+        );
+      },
+      Xa = a("6rKP"),
+      Za = (function () {
         function e() {
-          (this.m_asyncLeagueData = new za.b()),
-            (this.m_asyncMatchData = new za.b()),
-            (this.m_asyncFavoriteTeams = new za.a()),
-            (this.m_asyncPopularTeams = new za.a()),
-            (this.m_asyncTeamInfo = new za.b()),
+          (this.m_asyncLeagueData = new Xa.b()),
+            (this.m_asyncMatchData = new Xa.b()),
+            (this.m_asyncFavoriteTeams = new Xa.a()),
+            (this.m_asyncPopularTeams = new Xa.a()),
+            (this.m_asyncTeamInfo = new Xa.b()),
             (this.m_mapLeagueNodeGroup = new Map()),
             (this.m_mapLeagueNode = new Map()),
             (this.m_mapLeagueDates = new Map()),
@@ -37613,150 +37753,10 @@ object-assign
           e
         );
       })(),
-      qa = a("poSt"),
-      Ja = a.n(qa),
-      Ka = a("HlPF"),
-      Qa = a.n(Ka),
-      Xa = a("xMCQ"),
-      Za = a.n(Xa),
-      $a = function (e) {
-        var t = e.options,
-          a = e.selectedOption,
-          n = e.setOption,
-          r = e.className,
-          i = t.findIndex(function (e) {
-            return e.value == a;
-          }),
-          s = -1 != i ? t[i] : void 0,
-          l = function (e) {
-            var a = Math.min(Math.max(0, i + e), t.length - 1);
-            n(t[a].value);
-          };
-        return o.a.createElement(
-          "div",
-          { className: Object(ce.a)(Za.a.CycleSelector, r) },
-          o.a.createElement(
-            "div",
-            {
-              className: Object(ce.a)(
-                Za.a.Arrow,
-                Za.a.Left,
-                0 != i && Za.a.Enabled
-              ),
-              onClick: function () {
-                return l(-1);
-              },
-            },
-            o.a.createElement("img", {
-              className: Za.a.ArrowIcon,
-              src: p.a.IMG_URL + "arrow_solid_left.png",
-            })
-          ),
-          o.a.createElement(
-            "div",
-            { className: Za.a.CurrentOption },
-            "string" == typeof (null == s ? void 0 : s.strLabel) &&
-              Object(_.a)(null == s ? void 0 : s.strLabel),
-            o.a.isValidElement(null == s ? void 0 : s.strLabel) &&
-              (null == s ? void 0 : s.strLabel)
-          ),
-          o.a.createElement(
-            "div",
-            {
-              className: Object(ce.a)(
-                Za.a.Arrow,
-                Za.a.Right,
-                i != t.length - 1 && Za.a.Enabled
-              ),
-              onClick: function () {
-                return l(1);
-              },
-            },
-            o.a.createElement("img", {
-              className: Za.a.ArrowIcon,
-              src: p.a.IMG_URL + "arrow_solid_left.png",
-            })
-          )
-        );
-      },
-      en = function (e) {
-        var t = e.options,
-          a = e.selectedOption,
-          n = e.setOption,
-          r = t.findIndex(function (e) {
-            return a == e.value;
-          });
-        return o.a.createElement(
-          "div",
-          { className: Za.a.DropdownSelector },
-          o.a.createElement(
-            "select",
-            {
-              onChange: function (e) {
-                return n(t[parseInt(e.target.value)].value);
-              },
-              value: r,
-            },
-            t.map(function (e, t) {
-              return o.a.createElement(
-                "option",
-                { key: t, value: t },
-                "string" == typeof (null == e ? void 0 : e.strLabel) &&
-                  Object(_.a)(null == e ? void 0 : e.strLabel),
-                o.a.isValidElement(null == e ? void 0 : e.strLabel) &&
-                  (null == e ? void 0 : e.strLabel)
-              );
-            })
-          ),
-          o.a.createElement("img", {
-            className: Za.a.ArrowDown,
-            src: p.a.IMG_URL + "arrow_solid_left.png",
-          })
-        );
-      },
-      tn = function (e) {
-        var t = e.strInput,
-          a = e.setInput;
-        return o.a.createElement(
-          "div",
-          { className: Za.a.TextInput },
-          o.a.createElement(
-            "form",
-            null,
-            o.a.createElement("input", {
-              type: "text",
-              className: Za.a.InputBox,
-              placeholder: Object(_.b)("#dpc_search_team"),
-              value: t,
-              onChange: function (e) {
-                return a(e.target.value);
-              },
-              onKeyDown: function (e) {
-                return "Escape" == e.key && a("");
-              },
-            })
-          ),
-          o.a.createElement("img", {
-            className: Za.a.MaginifyingGlass,
-            src: p.a.IMG_URL + "arrow_solid_left.png",
-          })
-        );
-      },
-      an = function (e) {
-        var t = e.bEnabled,
-          a = e.setEnabled;
-        return o.a.createElement(
-          "div",
-          {
-            className: Object(ce.a)(Za.a.Switch, t && Za.a.On),
-            onClick: function () {
-              return a(!t);
-            },
-          },
-          o.a.createElement("div", { className: Za.a.Background }),
-          o.a.createElement("div", { className: Za.a.Selector })
-        );
-      },
+      $a = a("poSt"),
+      en = a.n($a),
+      tn = a("HlPF"),
+      an = a.n(tn),
       nn = function (e, t) {
         return (nn =
           Object.setPrototypeOf ||
@@ -38117,9 +38117,9 @@ object-assign
           "div",
           {
             className: Object(ce.a)(
-              Qa.a.ScrollArrow,
-              t && Qa.a.Left,
-              !t && Qa.a.Right
+              an.a.ScrollArrow,
+              t && an.a.Left,
+              !t && an.a.Right
             ),
             onClick: function () {
               return a(t ? -1 : 1);
@@ -38127,9 +38127,9 @@ object-assign
           },
           o.a.createElement(
             "div",
-            { className: Qa.a.Clip },
+            { className: an.a.Clip },
             o.a.createElement("img", {
-              className: Qa.a.ArrowIcon,
+              className: an.a.ArrowIcon,
               src: p.a.IMG_URL + "arrow_solid_left.png",
             })
           )
@@ -38151,13 +38151,13 @@ object-assign
             ],
             d = new Set(),
             m = 0,
-            p = Va.Get().GetDPCLeagues(l);
+            p = Za.Get().GetDPCLeagues(l);
           m < p.length;
           m++
         )
           for (var h = 0, f = p[m].nLeagueIDs; h < f.length; h++) {
             var g = f[h];
-            null === (t = Va.Get().GetLeagueDates(g)) ||
+            null === (t = Za.Get().GetLeagueDates(g)) ||
               void 0 === t ||
               t.forEach(function (e) {
                 return d.add(e);
@@ -38177,31 +38177,31 @@ object-assign
             }),
           o.a.createElement(
             "div",
-            { className: Qa.a.OptionSelector },
+            { className: an.a.OptionSelector },
             o.a.createElement(
               "div",
-              { className: Qa.a.DPCBlock },
-              o.a.createElement(dn.a, { className: Qa.a.DPCIcon }),
+              { className: an.a.DPCBlock },
+              o.a.createElement(dn.a, { className: an.a.DPCIcon }),
               o.a.createElement(
                 "div",
-                { className: Qa.a.Dota },
+                { className: an.a.Dota },
                 Object(_.a)("#dpc_dota")
               ),
               o.a.createElement(
                 "div",
-                { className: Qa.a.ProCircuit },
+                { className: an.a.ProCircuit },
                 Object(_.a)("#dpc_pro_circuit")
               )
             ),
             o.a.createElement(
               "div",
-              { className: Qa.a.Selectors },
-              o.a.createElement($a, {
+              { className: an.a.Selectors },
+              o.a.createElement(qa, {
                 options: u,
                 selectedOption: a,
                 setOption: n,
               }),
-              o.a.createElement(en, {
+              o.a.createElement(Ja, {
                 options: v,
                 selectedOption: r,
                 setOption: i,
@@ -38218,12 +38218,12 @@ object-assign
             var t = e.nTeamID,
               a = e.strTeamInfo,
               n = e.bWinner,
-              r = Va.Get().GetTeamNames(t);
+              r = Za.Get().GetTeamNames(t);
             return o.a.createElement(
               "div",
-              { className: Object(ce.a)(Qa.a.BannerTeam, n && Qa.a.Winner) },
+              { className: Object(ce.a)(an.a.BannerTeam, n && an.a.Winner) },
               o.a.createElement("div", {
-                className: Qa.a.TeamLogo,
+                className: an.a.TeamLogo,
                 style: {
                   backgroundImage:
                     "url( " +
@@ -38235,18 +38235,18 @@ object-assign
               }),
               o.a.createElement(
                 "div",
-                { className: Qa.a.TeamName },
+                { className: an.a.TeamName },
                 null == r ? void 0 : r.name
               ),
-              o.a.createElement("div", { className: Qa.a.TeamInfo }, a)
+              o.a.createElement("div", { className: an.a.TeamInfo }, a)
             );
           }),
           i = En(),
-          d = Va.Get().GetLeagueNode(t, a),
+          d = Za.Get().GetLeagueNode(t, a),
           m = null == d ? void 0 : d.team_id_1,
           h = null == d ? void 0 : d.team_id_2,
-          f = Va.Get().FindLeagueTeamStanding(i.eSeason, m),
-          g = Va.Get().FindLeagueTeamStanding(i.eSeason, h),
+          f = Za.Get().FindLeagueTeamStanding(i.eSeason, m),
+          g = Za.Get().FindLeagueTeamStanding(i.eSeason, h),
           v =
             (null == d ? void 0 : d.has_started) &&
             !(null == d ? void 0 : d.is_completed),
@@ -38259,12 +38259,12 @@ object-assign
               : null == d
               ? void 0
               : d.scheduled_time,
-          E = Va.Get().GetLeagueTeamDivisionString(
+          E = Za.Get().GetLeagueTeamDivisionString(
             i.eSeason,
             null == d ? void 0 : d.team_id_1,
             !0
           ),
-          L = Va.Get().GetSpoilerBlockEnabled(),
+          L = Za.Get().GetSpoilerBlockEnabled(),
           w = L
             ? ""
             : v || y
@@ -38287,36 +38287,36 @@ object-assign
           {
             to: u.a.dpc_home(n.strSeason, "" + T, "" + D),
             className: Object(ce.a)(
-              Qa.a.DPCMatchBannerNode,
-              S && Qa.a.IsSelected,
-              v && Qa.a.IsInProgress,
-              y && Qa.a.IsCompleted
+              an.a.DPCMatchBannerNode,
+              S && an.a.IsSelected,
+              v && an.a.IsInProgress,
+              y && an.a.IsCompleted
             ),
           },
           o.a.createElement(
             "div",
-            { className: Qa.a.UpperContainer },
+            { className: an.a.UpperContainer },
             o.a.createElement(
               "div",
-              { className: Qa.a.Time },
+              { className: an.a.Time },
               o.a.createElement(Wa.a, { date: 1e3 * b, format: "DD MMM LT" })
             ),
             o.a.createElement(
               "div",
-              { className: Qa.a.RegionDivision },
+              { className: an.a.RegionDivision },
               Object(_.a)(E),
               y && " - " + Object(_.a)("#dpc_match_final")
             ),
             o.a.createElement(
               "div",
-              { className: Object(ce.a)(Qa.a.LiveBanner) },
+              { className: Object(ce.a)(an.a.LiveBanner) },
               Object(_.a)("#dpc_live"),
-              o.a.createElement("div", { className: Qa.a.Dot })
+              o.a.createElement("div", { className: an.a.Dot })
             )
           ),
           o.a.createElement(
             "div",
-            { className: Qa.a.TeamsContainer },
+            { className: an.a.TeamsContainer },
             o.a.createElement(r, {
               nTeamID: m,
               strTeamInfo: w,
@@ -38357,10 +38357,10 @@ object-assign
             g = h[1],
             v = Object(i.useRef)(null),
             y = Object(i.useRef)(null),
-            b = Va.Get().GetDPCLeagues(t),
+            b = Za.Get().GetDPCLeagues(t),
             E = [],
             L = function (e) {
-              Va.Get()
+              Za.Get()
                 .GetLeagueNodeIDs(e.nLeagueIDs[0])
                 .forEach(function (t) {
                   return E.push({
@@ -38369,7 +38369,7 @@ object-assign
                     nTimestamp: 0,
                   });
                 }),
-                Va.Get()
+                Za.Get()
                   .GetLeagueNodeIDs(e.nLeagueIDs[1])
                   .forEach(function (t) {
                     return E.push({
@@ -38387,7 +38387,7 @@ object-assign
           L(M[w]);
         }
         E.forEach(function (e) {
-          var t = Va.Get().GetLeagueNode(e.nLeagueID, e.nNodeID);
+          var t = Za.Get().GetLeagueNode(e.nLeagueID, e.nNodeID);
           e.nTimestamp =
             0 != (null == t ? void 0 : t.actual_time)
               ? null == t
@@ -38451,10 +38451,10 @@ object-assign
         };
         return o.a.createElement(
           "div",
-          { className: Qa.a.DPCMatchBanner },
+          { className: an.a.DPCMatchBanner },
           o.a.createElement(
             "div",
-            { className: Qa.a.DPCMatchBannerContents },
+            { className: an.a.DPCMatchBannerContents },
             o.a.createElement(_n, {
               eDivision: r,
               setDivision: s,
@@ -38463,14 +38463,14 @@ object-assign
             }),
             o.a.createElement(
               "div",
-              { className: Qa.a.MatchesContainer },
+              { className: an.a.MatchesContainer },
               o.a.createElement(pn, { bLeft: !0, adjustDate: T }),
               o.a.createElement(
                 un,
                 {
                   className: Object(ce.a)(
-                    Qa.a.MatchesScroller,
-                    f && Qa.a.AfterFirstScroll
+                    an.a.MatchesScroller,
+                    f && an.a.AfterFirstScroll
                   ),
                   vertical: !1,
                   innerRef: v,
@@ -38503,13 +38503,13 @@ object-assign
       vn = a.n(gn),
       yn = function () {
         var e = Object(c.h)(),
-          t = Object(i.useState)(Va.Get().GetSpoilerBlockEnabled()),
+          t = Object(i.useState)(Za.Get().GetSpoilerBlockEnabled()),
           a = t[0],
           n = t[1];
         return (
           Object(i.useEffect)(
             function () {
-              Va.Get().SetSpoilerBlockEnabled(a);
+              Za.Get().SetSpoilerBlockEnabled(a);
             },
             [a]
           ),
@@ -38612,7 +38612,7 @@ object-assign
                   { className: vn.a.SpoilerText },
                   Object(_.a)("#dpc_header_spoiler_block")
                 ),
-                o.a.createElement(an, { bEnabled: a, setEnabled: n })
+                o.a.createElement(Qa, { bEnabled: a, setEnabled: n })
               )
             )
           )
@@ -38634,40 +38634,40 @@ object-assign
           a = e.className,
           n = e.children;
         return (
-          t.eSeason != Ua.e.INVALID && Va.Get().CacheDPCLeagueData(t.eSeason),
+          t.eSeason != Ua.e.INVALID && Za.Get().CacheDPCLeagueData(t.eSeason),
           o.a.createElement(
             "div",
-            { className: Object(ce.a)(Ja.a.DPCRoot, a) },
+            { className: Object(ce.a)(en.a.DPCRoot, a) },
             o.a.createElement(
               Ln,
               { matchContext: t },
               o.a.createElement(
                 "div",
-                { className: Ja.a.TopAnchor },
+                { className: en.a.TopAnchor },
                 o.a.createElement(fe.a, { bOverlapping: !1 }),
                 o.a.createElement(fn, null)
               ),
               o.a.createElement(
                 "div",
                 {
-                  className: Ja.a.DPCHeaderSpacer,
+                  className: en.a.DPCHeaderSpacer,
                   style: {
                     backgroundImage:
                       "url( " + p.a.IMG_URL + "backgrounds/dpcbanner.png )",
                   },
                 },
-                o.a.createElement(dn.a, { className: Ja.a.Icon }),
+                o.a.createElement(dn.a, { className: en.a.Icon }),
                 o.a.createElement(
                   "div",
-                  { className: Ja.a.Right },
+                  { className: en.a.Right },
                   o.a.createElement(
                     "div",
-                    { className: Ja.a.Dota },
+                    { className: en.a.Dota },
                     Object(_.a)("#dpc_dota")
                   ),
                   o.a.createElement(
                     "div",
-                    { className: Ja.a.ProCircuit },
+                    { className: en.a.ProCircuit },
                     Object(_.a)("#dpc_pro_circuit")
                   )
                 ),
@@ -38721,7 +38721,7 @@ object-assign
     var Tn = Object(s.a)(function () {
         Object(c.i)();
         var e = En();
-        return Va.Get().GetLeagueNode(e.nLeagueID, e.nNodeID)
+        return Za.Get().GetLeagueNode(e.nLeagueID, e.nNodeID)
           ? o.a.createElement(
               "div",
               { className: Ba.a.DPCSeriesDetails },
@@ -38732,7 +38732,7 @@ object-assign
       }),
       Dn = Object(s.a)(function () {
         var e = En(),
-          t = Va.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
+          t = Za.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
           a =
             (null == t ? void 0 : t.is_completed) &&
             (null == t ? void 0 : t.team_1_wins) >
@@ -38753,13 +38753,13 @@ object-assign
           case Ua.c.BEST_OF_FIVE:
             r = 3;
         }
-        var i = Va.Get().GetLeagueTeamDivisionString(
+        var i = Za.Get().GetLeagueTeamDivisionString(
             e.eSeason,
             null == t ? void 0 : t.team_id_1,
             !1
           ),
           s =
-            (Va.Get().GetLeagueTeamDivision(
+            (Za.Get().GetLeagueTeamDivision(
               e.eSeason,
               null == t ? void 0 : t.team_id_1
             ),
@@ -38838,8 +38838,8 @@ object-assign
           i = e.nPossibleWins,
           s = Object(c.i)(),
           d = En(),
-          m = Va.Get().GetTeamNames(t),
-          h = Va.Get().FindLeagueTeamStanding(d.eSeason, t),
+          m = Za.Get().GetTeamNames(t),
+          h = Za.Get().FindLeagueTeamStanding(d.eSeason, t),
           f = h ? h.nWins + " - " + h.nLosses : "";
         return o.a.createElement(
           "div",
@@ -38914,9 +38914,9 @@ object-assign
       }),
       On = Object(s.a)(function () {
         var e = En(),
-          t = Va.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
+          t = Za.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
           a = 0;
-        if (Va.Get().GetSpoilerBlockEnabled())
+        if (Za.Get().GetSpoilerBlockEnabled())
           switch (null == t ? void 0 : t.node_type) {
             case Ua.c.BEST_OF_ONE:
               a = 1;
@@ -38962,7 +38962,7 @@ object-assign
       }),
       jn = Object(s.a)(function () {
         var e = En(),
-          t = Va.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
+          t = Za.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
           a =
             e.eSeriesDisplay == Ha.g.OVERVIEW &&
             (null == t ? void 0 : t.is_completed),
@@ -38985,8 +38985,8 @@ object-assign
             null == t ? void 0 : t.team_1_wins,
             null == t ? void 0 : t.team_2_wins
           ),
-          c = Va.Get().GetTeamInfo(null == t ? void 0 : t.team_id_1),
-          u = Va.Get().GetTeamInfo(null == t ? void 0 : t.team_id_2),
+          c = Za.Get().GetTeamInfo(null == t ? void 0 : t.team_id_1),
+          u = Za.Get().GetTeamInfo(null == t ? void 0 : t.team_id_2),
           d =
             c && t && (n || i == t.team_id_1)
               ? c.color_primary + "44"
@@ -38995,7 +38995,7 @@ object-assign
             u && t && (n || i == t.team_id_2)
               ? u.color_primary + "44"
               : "#131313",
-          p = Va.Get().GetTeamNames(i),
+          p = Za.Get().GetTeamNames(i),
           h = n ? "" : null == p ? void 0 : p.name,
           f = [];
         null == c ||
@@ -39115,9 +39115,9 @@ object-assign
       }),
       In = Object(s.a)(function () {
         var e = En(),
-          t = Va.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
-          a = Va.Get().GetTeamInfo(null == t ? void 0 : t.team_id_1),
-          n = Va.Get().GetTeamInfo(null == t ? void 0 : t.team_id_2),
+          t = Za.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
+          a = Za.Get().GetTeamInfo(null == t ? void 0 : t.team_id_1),
+          n = Za.Get().GetTeamInfo(null == t ? void 0 : t.team_id_2),
           r =
             e.eSeriesDisplay == Ha.g.OVERVIEW &&
             !(null == t ? void 0 : t.is_completed) &&
@@ -39206,12 +39206,12 @@ object-assign
         var t = e.nGame,
           a = Object(c.i)(),
           n = En(),
-          r = Va.Get().GetLeagueNode(n.nLeagueID, n.nNodeID),
+          r = Za.Get().GetLeagueNode(n.nLeagueID, n.nNodeID),
           i = t - 1,
           s =
             (null == r ? void 0 : r.matches.length) > i ? r.matches[i] : void 0,
-          d = s ? Va.Get().GetMatchData(n.nLeagueID, s.match_id) : void 0,
-          m = Va.Get().GetTeamNames(null == s ? void 0 : s.winning_team_id),
+          d = s ? Za.Get().GetMatchData(n.nLeagueID, s.match_id) : void 0,
+          m = Za.Get().GetTeamNames(null == s ? void 0 : s.winning_team_id),
           p = d
             ? U.a
                 .utc(U.a.duration(d.duration, "seconds").as("milliseconds"))
@@ -39275,7 +39275,7 @@ object-assign
       }),
       Cn = Object(s.a)(function () {
         var e = En(),
-          t = Va.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
+          t = Za.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
           a =
             e.eSeriesDisplay == Ha.g.DETAILS &&
             (null == t ? void 0 : t.is_completed),
@@ -39327,10 +39327,10 @@ object-assign
           s = En(),
           l = Object(i.useRef)(),
           c = na.a.Get().getItemList(),
-          u = Va.Get().GetLeagueNode(s.nLeagueID, s.nNodeID),
+          u = Za.Get().GetLeagueNode(s.nLeagueID, s.nNodeID),
           d =
             u && (null == u ? void 0 : u.matches.length) > 0
-              ? Va.Get().GetMatchData(
+              ? Za.Get().GetMatchData(
                   s.nLeagueID,
                   null ===
                     (t = null == u ? void 0 : u.matches[s.nSeriesGame - 1]) ||
@@ -39357,7 +39357,7 @@ object-assign
             : null == d
             ? void 0
             : d.tourney.dire_team_id,
-          v = Va.Get().GetTeamNames(g),
+          v = Za.Get().GetTeamNames(g),
           y = na.a.Get().getHeroList(),
           b =
             null == y
@@ -39480,10 +39480,10 @@ object-assign
           s = e.nHoveredAccountID,
           l = e.setHoveredAccountID,
           c = En(),
-          u = Va.Get().GetLeagueNode(c.nLeagueID, c.nNodeID),
+          u = Za.Get().GetLeagueNode(c.nLeagueID, c.nNodeID),
           d =
             u && (null == u ? void 0 : u.matches.length) > 0
-              ? Va.Get().GetMatchData(
+              ? Za.Get().GetMatchData(
                   c.nLeagueID,
                   null ===
                     (t = null == u ? void 0 : u.matches[c.nSeriesGame - 1]) ||
@@ -39492,7 +39492,7 @@ object-assign
                     : t.match_id
                 )
               : void 0,
-          m = Va.Get().GetTeamInfo(a),
+          m = Za.Get().GetTeamInfo(a),
           p = (null == d ? void 0 : d.tourney.radiant_team_id) == a,
           h =
             (p &&
@@ -39681,8 +39681,9 @@ object-assign
               : t.replace("npc_dota_hero_", ""),
           b = null == v ? void 0 : v.name_loc,
           E = u ? m + " / " + h + " / " + f : "",
-          L = u ? Object(_.a)("#dpc_hero_level", d) : void 0,
-          w = i == c || (0 == i && n == c);
+          L = u && 0 != u,
+          w = u ? Object(_.a)("#dpc_hero_level", d) : void 0,
+          M = i == c || (0 == i && n == c);
         return o.a.createElement(
           "div",
           {
@@ -39690,7 +39691,7 @@ object-assign
               Ba.a.MatchSectionPlayer,
               a && Ba.a.Left,
               !a && Ba.a.Right,
-              w && Ba.a.Selected
+              M && Ba.a.Selected
             ),
             onClick: function () {
               return s(i == c ? 0 : c);
@@ -39708,7 +39709,7 @@ object-assign
               className: Object(ce.a)(Ba.a.HeroAndLevel, !u && Ba.a.Collapsed),
             },
             o.a.createElement("div", { className: Ba.a.HeroName }, b),
-            o.a.createElement("div", { className: Ba.a.Level }, L)
+            o.a.createElement("div", { className: Ba.a.Level }, w)
           ),
           o.a.createElement(
             "div",
@@ -39726,10 +39727,7 @@ object-assign
                 },
               }),
             o.a.createElement("div", {
-              className: Object(ce.a)(
-                Ba.a.PlayerImage,
-                0 == u && Ba.a.AlwaysShow
-              ),
+              className: Object(ce.a)(Ba.a.PlayerImage, !L && Ba.a.AlwaysShow),
               style: {
                 backgroundImage:
                   "url( " + p.a.CDN_URL + "apps/dota2/players/" + c + ".png )",
@@ -39751,82 +39749,166 @@ object-assign
       }),
       Pn = Object(s.a)(function () {
         var e = En(),
-          t = Va.Get().GetLeagueData(e.nLeagueID),
-          a = Va.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
+          t = Za.Get().GetLeagueData(e.nLeagueID),
+          a = Za.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
           n =
             e.eSeriesDisplay == Ha.g.OVERVIEW &&
             !(null == a ? void 0 : a.is_completed) &&
             (null == a ? void 0 : a.has_started),
           r = null == a ? void 0 : a.stream_ids,
-          i =
+          s =
             null == t
               ? void 0
               : t.streams.filter(function (e) {
                   return null == r ? void 0 : r.includes(e.stream_id);
                 }),
-          s = Va.Get().GetDefaultRegion(),
-          l = [];
-        switch (s) {
+          l = Za.Get().GetDefaultRegion(),
+          c = [];
+        switch (l) {
           case Ua.d.LEAGUE_REGION_NA:
           case Ua.d.LEAGUE_REGION_EUROPE:
-            l.push.apply(l, [0, 8, 6, 5, 11]);
+            c.push.apply(c, [0, 8, 6, 5, 11]);
             break;
           case Ua.d.LEAGUE_REGION_SA:
-            l.push.apply(l, [11, 5, 0, 8, 6]);
+            c.push.apply(c, [11, 5, 0, 8, 6]);
             break;
           case Ua.d.LEAGUE_REGION_CIS:
-            l.push.apply(l, [8, 0, 6, 5, 11]);
+            c.push.apply(c, [8, 0, 6, 5, 11]);
             break;
           case Ua.d.LEAGUE_REGION_CHINA:
-            l.push.apply(l, [6, 0, 8, 5, 11]);
+            c.push.apply(c, [6, 0, 8, 5, 11]);
             break;
           case Ua.d.LEAGUE_REGION_SEA:
-            l.push.apply(l, [0, 6, 8, 5, 11]);
+            c.push.apply(c, [0, 6, 8, 5, 11]);
         }
-        var c,
-          u =
-            null == i
+        var u,
+          d = Object(i.useState)(c[0]),
+          m = d[0],
+          _ = d[1],
+          h = Object(i.useState)(!1),
+          f = h[0],
+          v = h[1],
+          y =
+            null == s
               ? void 0
-              : i.sort(function (e, t) {
-                  var a = l.indexOf(e.language) - l.indexOf(t.language);
+              : s.sort(function (e, t) {
+                  var a = c.indexOf(e.language) - c.indexOf(t.language);
                   return a && 0 != a
                     ? a
                     : e.broadcast_provider == Ua.a.LEAGUE_BROADCAST_STEAM &&
                       t.broadcast_provider != Ua.a.LEAGUE_BROADCAST_STEAM
-                    ? 1
+                    ? f
+                      ? 1
+                      : -1
                     : t.broadcast_provider == Ua.a.LEAGUE_BROADCAST_STEAM &&
                       e.broadcast_provider != Ua.a.LEAGUE_BROADCAST_STEAM
-                    ? -1
+                    ? 1
                     : 0;
                 });
-        if ((null == u ? void 0 : u.length) > 0)
-          switch (u[0].broadcast_provider) {
+        if ((null == y ? void 0 : y.length) > 0)
+          switch (y[0].broadcast_provider) {
             case Ua.a.LEAGUE_BROADCAST_TWITCH:
-              c =
+              u =
                 "https://player.twitch.tv/?channel=" +
-                u[0].stream_url.replace("https://www.twitch.tv/", "") +
+                y[0].stream_url.replace("https://www.twitch.tv/", "") +
                 "&parent=www.dota2.com";
               break;
             case Ua.a.LEAGUE_BROADCAST_STEAM:
-              c =
+              u =
                 p.a.COMMUNITY_URL +
                 "broadcast/watchnew/" +
-                u[0].stream_url.replace(
+                y[0].stream_url.replace(
                   "https://steamcommunity.com/broadcast/watch/",
                   ""
                 ) +
                 "?origin=https://www.dota2.com&enablechat=0&enablevideo=1&showasiframe=1";
           }
-        return o.a.createElement(
-          "div",
-          { className: Object(ce.a)(Ba.a.DPCSeriesLive, n && Ba.a.Visible) },
-          o.a.createElement("iframe", {
-            src: c,
-            height: "100%",
-            width: "100%",
-            allowFullScreen: !0,
-            frameBorder: "0",
-          })
+        for (
+          var b = [],
+            E = function (e) {
+              y.find(function (t) {
+                return t.language == e;
+              }) &&
+                b.push({ value: e, strLabel: "#Language_" + Object(g.a)(e) });
+            },
+            L = -1;
+          L < 30;
+          L++
+        )
+          E(L);
+        var w =
+            -1 !=
+            y
+              .filter(function (e) {
+                return e.language == m;
+              })
+              .findIndex(function (e) {
+                return e.broadcast_provider == Ua.a.LEAGUE_BROADCAST_TWITCH;
+              }),
+          M =
+            -1 !=
+            y
+              .filter(function (e) {
+                return e.language == m;
+              })
+              .findIndex(function (e) {
+                return e.broadcast_provider == Ua.a.LEAGUE_BROADCAST_STEAM;
+              });
+        return (
+          M && !w && f && v(!1),
+          !w || M || f || v(!0),
+          o.a.createElement(
+            "div",
+            { className: Object(ce.a)(Ba.a.DPCSeriesLive, n && Ba.a.Visible) },
+            o.a.createElement(
+              "div",
+              { className: Ba.a.VideoContainer },
+              o.a.createElement("iframe", {
+                src: u,
+                height: "100%",
+                width: "100%",
+                allowFullScreen: !0,
+                frameBorder: "0",
+              })
+            ),
+            o.a.createElement(
+              "div",
+              { className: Ba.a.OptionContainer },
+              o.a.createElement(Ja, {
+                options: b,
+                selectedOption: m,
+                setOption: _,
+              }),
+              w &&
+                o.a.createElement(
+                  "div",
+                  {
+                    className: Object(ce.a)(
+                      Ba.a.StreamingOption,
+                      f && Ba.a.Enabled
+                    ),
+                    onClick: function () {
+                      return v(!0);
+                    },
+                  },
+                  "Twitch"
+                ),
+              M &&
+                o.a.createElement(
+                  "div",
+                  {
+                    className: Object(ce.a)(
+                      Ba.a.StreamingOption,
+                      !f && Ba.a.Enabled
+                    ),
+                    onClick: function () {
+                      return v(!1);
+                    },
+                  },
+                  "Steam"
+                )
+            )
+          )
         );
       }),
       Hn = a("Kcip"),
@@ -39834,9 +39916,9 @@ object-assign
       Bn = Object(s.a)(function (e) {
         var t = e.nTeamID,
           a = En(),
-          n = Va.Get().FindLeagueTeamStanding(a.eSeason, t),
+          n = Za.Get().FindLeagueTeamStanding(a.eSeason, t),
           r = (null == n ? void 0 : n.nStanding) <= 3,
-          i = Va.Get().GetTeamNames(t),
+          i = Za.Get().GetTeamNames(t),
           s = n ? n.nWins + " - " + n.nLosses : "";
         return o.a.createElement(
           "div",
@@ -39864,12 +39946,12 @@ object-assign
         var t = e.eRegion,
           a = e.eDivision,
           n = En(),
-          r = Va.Get()
+          r = Za.Get()
             .GetDPCLeagues(n.eSeason)
             .find(function (e) {
               return e.eRegion == t || e.eRegion == Ua.d.LEAGUE_REGION_UNSET;
             }),
-          i = Va.Get().GetLeagueNodeGroup(
+          i = Za.Get().GetLeagueNodeGroup(
             r.nLeagueIDs[a == Ua.b.DIVISION_I ? 0 : 1],
             1
           ),
@@ -39881,11 +39963,11 @@ object-assign
         var l = Array.from(s.values()).sort(function (e, t) {
           var a, r;
           return (
-            (null === (a = Va.Get().FindLeagueTeamStanding(n.eSeason, e)) ||
+            (null === (a = Za.Get().FindLeagueTeamStanding(n.eSeason, e)) ||
             void 0 === a
               ? void 0
               : a.nStanding) -
-            (null === (r = Va.Get().FindLeagueTeamStanding(n.eSeason, t)) ||
+            (null === (r = Za.Get().FindLeagueTeamStanding(n.eSeason, t)) ||
             void 0 === r
               ? void 0
               : r.nStanding)
@@ -39936,11 +40018,11 @@ object-assign
               )).forEach(function (a) {
                 var r;
                 0 != e.nLeagueIDs[a] &&
-                  (null === (r = Va.Get()) || void 0 === r
+                  (null === (r = Za.Get()) || void 0 === r
                     ? void 0
                     : r.GetLeagueNodeIDs(e.nLeagueIDs[a])
                   ).forEach(function (r) {
-                    var i = Va.Get().GetLeagueNode(e.nLeagueIDs[a], r);
+                    var i = Za.Get().GetLeagueNode(e.nLeagueIDs[a], r);
                     (null == i ? void 0 : i.is_completed) ||
                       0 == (null == i ? void 0 : i.scheduled_time) ||
                       (!t && (null == i ? void 0 : i.has_started)) ||
@@ -39952,15 +40034,15 @@ object-assign
               });
             },
             i = 0,
-            s = Va.Get().GetDPCLeagues(a.eSeason);
+            s = Za.Get().GetDPCLeagues(a.eSeason);
           i < s.length;
           i++
         ) {
           r(s[i]);
         }
         if (!n) return null;
-        var c = Va.Get().GetTeamNames(null == n ? void 0 : n.team_id_1),
-          d = Va.Get().GetTeamNames(null == n ? void 0 : n.team_id_2),
+        var c = Za.Get().GetTeamNames(null == n ? void 0 : n.team_id_1),
+          d = Za.Get().GetTeamNames(null == n ? void 0 : n.team_id_2),
           m = U()(1e3 * (null == n ? void 0 : n.scheduled_time))
             .format("DD MMM LT")
             .toString();
@@ -40037,7 +40119,7 @@ object-assign
         );
       }),
       zn = Object(s.a)(function () {
-        var e = Object(i.useState)(Va.Get().GetDefaultRegion()),
+        var e = Object(i.useState)(Za.Get().GetDefaultRegion()),
           t = e[0],
           a = e[1],
           n = [
@@ -40065,7 +40147,7 @@ object-assign
               { className: Pa.a.Label },
               Object(_.a)("#dpc_header_standings")
             ),
-            o.a.createElement(en, {
+            o.a.createElement(Ja, {
               options: n,
               selectedOption: t,
               setOption: a,
@@ -40119,13 +40201,13 @@ object-assign
             p = d[1],
             _ = new Set(),
             h = 0,
-            f = Va.Get().GetDPCLeagues(n);
+            f = Za.Get().GetDPCLeagues(n);
           h < f.length;
           h++
         )
           for (var g = 0, v = f[h].nLeagueIDs; g < v.length; g++) {
             var y = v[g];
-            null === (e = Va.Get().GetLeagueDates(y)) ||
+            null === (e = Za.Get().GetLeagueDates(y)) ||
               void 0 === e ||
               e.forEach(function (e) {
                 return _.add(e);
@@ -40157,12 +40239,12 @@ object-assign
           o.a.createElement(
             "div",
             { className: Jn.a.StandingsOptionsContainer },
-            o.a.createElement($a, {
+            o.a.createElement(qa, {
               options: b,
               selectedOption: m,
               setOption: p,
             }),
-            o.a.createElement(en, {
+            o.a.createElement(Ja, {
               options: E,
               selectedOption: s,
               setOption: l,
@@ -40174,8 +40256,8 @@ object-assign
         var t = e.nTeamID,
           a = Object(c.i)(),
           n = Object(Ha.j)(a.strSeason),
-          r = Va.Get().FindLeagueTeamStanding(n, t),
-          i = Va.Get().GetTeamNames(t),
+          r = Za.Get().FindLeagueTeamStanding(n, t),
+          i = Za.Get().GetTeamNames(t),
           s = r ? "" + r.nStanding : "",
           l = r ? "" + r.nWins : "",
           u = r ? "" + r.nLosses : "";
@@ -40208,13 +40290,13 @@ object-assign
           t = Object(Ha.j)(e.strSeason),
           a = Object(Ha.h)(e.strRegion),
           n = Object(Ha.e)(e.strDivision),
-          r = Va.Get()
+          r = Za.Get()
             .GetDPCLeagues(t)
             .find(function (e) {
               return e.eRegion == a;
             }),
           i = null == r ? void 0 : r.nLeagueIDs[n == Ua.b.DIVISION_I ? 0 : 1],
-          s = Va.Get().GetLeagueNodeGroup(i, 1),
+          s = Za.Get().GetLeagueNodeGroup(i, 1),
           l = new Set();
         null == s ||
           s.team_standings.forEach(function (e) {
@@ -40223,11 +40305,11 @@ object-assign
         var u = Array.from(l.values()).sort(function (e, a) {
           var n, r;
           return (
-            (null === (n = Va.Get().FindLeagueTeamStanding(t, e)) ||
+            (null === (n = Za.Get().FindLeagueTeamStanding(t, e)) ||
             void 0 === n
               ? void 0
               : n.nStanding) -
-            (null === (r = Va.Get().FindLeagueTeamStanding(t, a)) ||
+            (null === (r = Za.Get().FindLeagueTeamStanding(t, a)) ||
             void 0 === r
               ? void 0
               : r.nStanding)
@@ -42752,7 +42834,7 @@ object-assign
           n = e.strMatchID,
           r = (e.nLeftTeamID, e.nRightTeamID),
           i = na.a.Get().getHeroList(),
-          s = Va.Get().GetMatchData(t, n),
+          s = Za.Get().GetMatchData(t, n),
           l = (null == s ? void 0 : s.tourney.radiant_team_id) == r,
           c = s
             ? (l ? s.dire_score : s.radiant_score) +
@@ -42897,14 +42979,14 @@ object-assign
           r = e.setSelected,
           i = Object(c.i)(),
           s = Object(Ha.j)(i.strSeason),
-          l = Va.Get().GetLeagueNode(t, a),
-          u = Va.Get().GetTeamNames(null == l ? void 0 : l.team_id_1),
-          d = Va.Get().GetTeamNames(null == l ? void 0 : l.team_id_2),
-          m = Va.Get().FindLeagueTeamStanding(
+          l = Za.Get().GetLeagueNode(t, a),
+          u = Za.Get().GetTeamNames(null == l ? void 0 : l.team_id_1),
+          d = Za.Get().GetTeamNames(null == l ? void 0 : l.team_id_2),
+          m = Za.Get().FindLeagueTeamStanding(
             s,
             null == l ? void 0 : l.team_id_1
           ),
-          p = Va.Get().FindLeagueTeamStanding(
+          p = Za.Get().FindLeagueTeamStanding(
             s,
             null == l ? void 0 : l.team_id_2
           ),
@@ -43037,13 +43119,13 @@ object-assign
             b = v[1],
             E = new Set(),
             L = 0,
-            w = Va.Get().GetDPCLeagues(d);
+            w = Za.Get().GetDPCLeagues(d);
           L < w.length;
           L++
         )
           for (var M = 0, S = w[L].nLeagueIDs; M < S.length; M++) {
             var T = S[M];
-            null === (t = Va.Get().GetLeagueDates(T)) ||
+            null === (t = Za.Get().GetLeagueDates(T)) ||
               void 0 === t ||
               t.forEach(function (e) {
                 return E.add(e);
@@ -43104,22 +43186,22 @@ object-assign
           o.a.createElement(
             "div",
             { className: pr.a.ScheduleOptionsContainer },
-            o.a.createElement(en, {
+            o.a.createElement(Ja, {
               options: D,
               selectedOption: k,
               setOption: _,
             }),
-            o.a.createElement($a, {
+            o.a.createElement(qa, {
               options: O,
               selectedOption: y,
               setOption: b,
             }),
-            o.a.createElement(en, {
+            o.a.createElement(Ja, {
               options: j,
               selectedOption: f,
               setOption: g,
             }),
-            o.a.createElement(tn, { strInput: n, setInput: r })
+            o.a.createElement(Ka, { strInput: n, setInput: r })
           )
         );
       }),
@@ -43137,13 +43219,13 @@ object-assign
             p = m[0],
             _ = m[1],
             h = Object(i.useRef)(null),
-            f = Va.Get().GetDPCLeagues(n),
+            f = Za.Get().GetDPCLeagues(n),
             g = [],
             v = function (e) {
               if (r != Ua.d.LEAGUE_REGION_UNSET && r != e.eRegion)
                 return "continue";
               (s != Ua.b.UNSET && s != Ua.b.DIVISION_I) ||
-                Va.Get()
+                Za.Get()
                   .GetLeagueNodeIDs(e.nLeagueIDs[0])
                   .forEach(function (t) {
                     return g.push({
@@ -43153,7 +43235,7 @@ object-assign
                     });
                   });
               (s != Ua.b.UNSET && s != Ua.b.DIVISION_II) ||
-                Va.Get()
+                Za.Get()
                   .GetLeagueNodeIDs(e.nLeagueIDs[1])
                   .forEach(function (t) {
                     return g.push({
@@ -43171,16 +43253,16 @@ object-assign
           v(b[y]);
         }
         g.forEach(function (e) {
-          var t = Va.Get().GetLeagueNode(e.nLeagueID, e.nNodeID);
+          var t = Za.Get().GetLeagueNode(e.nLeagueID, e.nNodeID);
           e.nTimestamp = 0 != t.actual_time ? t.actual_time : t.scheduled_time;
         });
         var E = g
             .filter(function (e) {
               if (0 == e.nTimestamp) return !1;
               if (t.length > 0) {
-                var a = Va.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
-                  n = Va.Get().GetTeamNames(null == a ? void 0 : a.team_id_1),
-                  r = Va.Get().GetTeamNames(null == a ? void 0 : a.team_id_2);
+                var a = Za.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
+                  n = Za.Get().GetTeamNames(null == a ? void 0 : a.team_id_1),
+                  r = Za.Get().GetTeamNames(null == a ? void 0 : a.team_id_2);
                 return (
                   -1 != n.name.toLowerCase().search(t.toLowerCase()) ||
                   -1 != r.name.toLowerCase().search(t.toLowerCase())
@@ -44216,11 +44298,11 @@ object-assign
       })(o.a.Component),
       Pr = new ((function () {
         function e() {
-          (this.m_asyncPrizePool = new za.a()),
-            (this.m_asyncPatchNotesListData = new za.a()),
-            (this.m_asyncPatchNotesData = new za.b()),
+          (this.m_asyncPrizePool = new Xa.a()),
+            (this.m_asyncPatchNotesListData = new Xa.a()),
+            (this.m_asyncPatchNotesData = new Xa.b()),
             (this.m_nSelectedAbilityIndex = 0),
-            (this.m_asyncShortFilmOwnership = new za.a()),
+            (this.m_asyncShortFilmOwnership = new Xa.a()),
             Object(_.c)();
         }
         return (
@@ -62369,6 +62451,9 @@ PERFORMANCE OF THIS SOFTWARE.
       ItemIcon: "dpcseriesdetails_ItemIcon_tS-pP",
       PlaystyleSection: "dpcseriesdetails_PlaystyleSection_3KGiE",
       DPCSeriesLive: "dpcseriesdetails_DPCSeriesLive_1bOMe",
+      VideoContainer: "dpcseriesdetails_VideoContainer_VjKmb",
+      OptionContainer: "dpcseriesdetails_OptionContainer_3ik_p",
+      StreamingOption: "dpcseriesdetails_StreamingOption_Yn4qv",
     };
   },
   yl30: function (e, t, a) {
