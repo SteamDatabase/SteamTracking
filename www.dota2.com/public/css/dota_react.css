@@ -16875,6 +16875,33 @@ a {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+.dpchomepage_StandingsBlock_1Wk1M {
+  width: 100%;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+.dpchomepage_StandingsBlock_1Wk1M .dpchomepage_Header_ks44o {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.dpchomepage_StandingsBlock_1Wk1M
+  .dpchomepage_Header_ks44o
+  .dpchomepage_Label_2RE-0 {
+  font-size: 17px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
+  margin-bottom: -20px;
+}
 
 .dpcseriesdetails_DPCSeriesDetails_cpS5D {
   width: 100%;
@@ -17165,15 +17192,27 @@ a {
 .dpcseriesdetails_DPCSeriesDetailsOverview_3LX-5 {
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  background-color: #131313;
   position: absolute;
-  opacity: 0;
 }
 .dpcseriesdetails_DPCSeriesDetailsOverview_3LX-5.dpcseriesdetails_Visible_1sQWs {
-  opacity: 1;
+  display: flex;
+}
+.dpcseriesdetails_DPCSeriesDetailsOverview_3LX-5
+  .dpcseriesdetails_PlayerList_ftJxP {
+  flex-grow: 1;
+  flex-basis: 0;
+  height: 100%;
+  padding: 50px 0px;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 .dpcseriesdetails_DPCSeriesDetailsOverview_3LX-5
   .dpcseriesdetails_CenterContainer_8B-ZB {
@@ -17183,7 +17222,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #212328;
+  background-color: #18191a;
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.4);
 }
 .dpcseriesdetails_DPCSeriesDetailsOverview_3LX-5
@@ -17356,7 +17395,7 @@ a {
 .dpcseriesdetails_DPCSeriesDetailsGameDetails_36t5S {
   width: 100%;
   height: 100%;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -17364,7 +17403,7 @@ a {
   opacity: 0;
 }
 .dpcseriesdetails_DPCSeriesDetailsGameDetails_36t5S.dpcseriesdetails_Visible_1sQWs {
-  opacity: 1;
+  display: flex;
 }
 .dpcseriesdetails_DPCSeriesDetailsGameDetails_36t5S
   .dpcseriesdetails_Body_blq53 {
@@ -17486,6 +17525,11 @@ a {
   min-height: 0;
   display: flex;
   flex-direction: column;
+}
+.dpcseriesdetails_MatchSectionPlayer_Ej-PQ
+  .dpcseriesdetails_HeroAndLevel_3YDGB.dpcseriesdetails_Collapsed_-YO-Y {
+  max-width: 50px;
+  opacity: 0;
 }
 .dpcseriesdetails_MatchSectionPlayer_Ej-PQ
   .dpcseriesdetails_HeroAndLevel_3YDGB
@@ -17691,6 +17735,15 @@ a {
   width: calc(100% - 40px);
   flex-grow: 1;
   border-top: 1px solid black;
+}
+.dpcseriesdetails_DPCSeriesLive_1bOMe {
+  width: 100%;
+  height: 100%;
+  display: none;
+  flex-direction: row;
+}
+.dpcseriesdetails_DPCSeriesLive_1bOMe.dpcseriesdetails_Visible_1sQWs {
+  display: flex;
 }
 
 * {
@@ -19349,6 +19402,89 @@ a {
   font-weight: bold;
   color: #999;
   margin-right: 12px;
+}
+
+.dpcregionstandings_DPCRegionStandings_3H8ng {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.dpcregionstandings_RegionStandingDivsion_2MduX {
+  width: 580px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+.dpcregionstandings_RegionStandingDivsion_2MduX
+  .dpcregionstandings_Header_1iLRR {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0px;
+  background-color: #36363e;
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+}
+.dpcregionstandings_RegionStandingTeam_1f4VI {
+  width: 100%;
+  height: 70px;
+  background-color: #27272d;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+}
+.dpcregionstandings_RegionStandingTeam_1f4VI.dpcregionstandings_TopThree_2wy-O {
+  height: 90px;
+  margin-bottom: 10px;
+}
+.dpcregionstandings_RegionStandingTeam_1f4VI.dpcregionstandings_TopThree_2wy-O
+  .dpcregionstandings_Standing_2uvLI {
+  font-size: 17px;
+}
+.dpcregionstandings_RegionStandingTeam_1f4VI.dpcregionstandings_TopThree_2wy-O
+  .dpcregionstandings_TeamName_Utar5 {
+  font-size: 17px;
+}
+.dpcregionstandings_RegionStandingTeam_1f4VI
+  .dpcregionstandings_Standing_2uvLI {
+  width: 100px;
+  text-align: center;
+  font-size: 15px;
+  color: #a3a3a3;
+  font-weight: 800;
+}
+.dpcregionstandings_RegionStandingTeam_1f4VI
+  .dpcregionstandings_TeamLogo_p6D7N {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.4));
+}
+.dpcregionstandings_RegionStandingTeam_1f4VI
+  .dpcregionstandings_TeamName_Utar5 {
+  flex-grow: 1;
+  color: #a3a3a3;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 15px;
+  font-weight: 700;
+  margin-left: 10px;
+}
+.dpcregionstandings_RegionStandingTeam_1f4VI .dpcregionstandings_Record_1h4rU {
+  width: 60px;
+  text-align: center;
+  margin: 0px 20px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #a3a3a3;
 }
 
 * {

@@ -18698,7 +18698,8 @@ img.broadcastplayer_BroadcastPlaceholderImg_1LIEZ {
   line-height: 24px;
   font-family: "Motiva Sans", Arial, sans-serif;
   text-align: left;
-  color: #fffffe;
+  color: #c5c5c5;
+  font-weight: 200;
 }
 .optin_admin_email_editor_DevEmailTemplate_1Mnom a {
   color: #88c6fd;
@@ -18880,6 +18881,25 @@ img.broadcastplayer_BroadcastPlaceholderImg_1LIEZ {
   padding-bottom: 15px;
 }
 .optin_admin_email_editor_SectionCtn_2LeZ2
+  .optin_admin_email_editor_SectionEntryTitle_ScsuE {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 14px;
+  color: #acacac;
+}
+.optin_admin_email_editor_SectionCtn_2LeZ2 input {
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+.optin_admin_email_editor_SectionCtn_2LeZ2 textarea {
+  width: 100%;
+  font-size: 18px;
+  color: white;
+}
+.optin_admin_email_editor_SectionCtn_2LeZ2
   .optin_admin_email_editor_SectionBody_2JTPY
   ul {
   padding-top: 12px;
@@ -18908,6 +18928,41 @@ img.broadcastplayer_BroadcastPlaceholderImg_1LIEZ {
   margin-top: 20px;
   margin-bottom: 30px;
 }
+.optin_admin_email_editor_StatCtn_3lCM2 {
+  padding-bottom: 65px;
+}
+.optin_admin_email_editor_StatCtn_3lCM2
+  .optin_admin_email_editor_StatNumber_3gAEw {
+  font-size: 36px;
+  line-height: 43px;
+  color: #ffffff;
+}
+.optin_admin_email_editor_StatCtn_3lCM2
+  .optin_admin_email_editor_StatNumber_3gAEw
+  span {
+  font-weight: bold;
+}
+.optin_admin_email_editor_BigButton_2d5qK {
+  font-size: 15px;
+  line-height: 19px;
+  color: #ffffff;
+  font-family: "Motiva Sans", Arial, sans-serif;
+  text-align: center;
+  min-width: auto !important;
+  background-color: #3a9bed;
+  background-image: linear-gradient(38deg, #3a9bed 0%, #235ecf 100%);
+  text-transform: uppercase;
+  border-radius: 3px;
+  font-weight: bold;
+  display: block;
+  padding: 19px;
+  max-width: 70%;
+  margin: 27px auto;
+}
+.optin_admin_email_editor_BigButton_2d5qK span {
+  color: #ffffff;
+  text-decoration: none;
+}
 
 .optin_admin_email_sections_Preview_3fMhG {
   max-width: 800px;
@@ -18934,6 +18989,12 @@ img.broadcastplayer_BroadcastPlaceholderImg_1LIEZ {
   padding: 12px;
   margin-right: 8px;
   flex-basis: 20%;
+}
+.optin_admin_email_dashboard_EmailTypesCtn_4xCBy
+  .optin_admin_email_dashboard_EmailDrafts_2Eh_M
+  .optin_admin_email_dashboard_TileContainer_2dKmv:hover {
+  background: #484b56;
+  cursor: pointer;
 }
 .optin_admin_email_dashboard_EmailTypesCtn_4xCBy
   .optin_admin_email_dashboard_EmailDrafts_2Eh_M
@@ -19069,15 +19130,15 @@ img.broadcastplayer_BroadcastPlaceholderImg_1LIEZ {
   max-width: 100%;
 }
 .optin_display_dynamic_sections_TextArea_2GJyI {
-  width: 80vw;
-  max-width: 570px;
-  height: 400px;
+  width: 100%;
+  height: 200px;
+  margin-top: 12px;
+  padding: 10px;
   cursor: text;
-  background: transparent;
+  background: rgba(0, 0, 0, 0.2);
   color: wheat;
   font-size: 14px;
   border: 1px solid #464c58;
-  padding: 10px;
   border-radius: 4px;
 }
 
