@@ -10,7 +10,7 @@
                     "name": "eventid",
                     "type": "uint32",
                     "optional": false,
-                    "description": "The League ID of the compendium you're looking for."
+                    "description": "The Event ID of the event you're looking for."
                 },
                 {
                     "name": "accountid",
