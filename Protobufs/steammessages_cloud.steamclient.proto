@@ -164,6 +164,7 @@ message CCloud_BeginAppUploadBatch_Request {
 
 message CCloud_BeginAppUploadBatch_Response {
 	optional uint64 batch_id = 1 [(description) = "ID of this batch."];
+	optional uint64 app_change_number = 4 [(description) = "New App Change Number"];
 }
 
 message CCloud_CompleteAppUploadBatch_Notification {
@@ -273,8 +274,33 @@ message CCloud_EnumerateUserApps_Response {
 	repeated .CCloud_EnumerateUserApps_Response.Apps apps = 1;
 }
 
+message CCloud_GetAppFileChangelist_Request {
+	optional uint32 appid = 1 [(description) = "App ID"];
+	optional uint64 synced_change_number = 2 [(description) = "Change Number to which local machine was last successfully synced"];
+}
+
+message CCloud_AppFileInfo {
+	optional string file_name = 1 [(description) = "unqualified filename"];
+	optional bytes sha_file = 2 [(description) = "SHA of file"];
+	optional uint64 time_stamp = 3 [(description) = "server timestamp of last modification"];
+	optional uint32 raw_file_size = 4 [(description) = "size of raw file"];
+	optional .ECloudStoragePersistState persist_state = 5 [default = k_ECloudStoragePersistStatePersisted, (description) = "current persist state of the file"];
+	optional uint32 platforms_to_sync = 6 [(description) = "ERemoteStoragePlatform bits"];
+	optional uint32 path_prefix_index = 7 [(description) = "index into string table of path prefixes"];
+	optional uint32 machine_name_index = 8 [(description) = "what machine last modified this file"];
+}
+
+message CCloud_GetAppFileChangelist_Response {
+	optional uint64 current_change_number = 1 [(description) = "Change Number current on server"];
+	repeated .CCloud_AppFileInfo files = 2 [(description) = "List of files; may be the full list of extant/deleted files, or just a delta from the client list"];
+	optional bool is_only_delta = 3 [(description) = "If true, 'files' omits any files that have not changed since client's change ID"];
+	repeated string path_prefixes = 4 [(description) = "string table of path prefixes"];
+	repeated string machine_names = 5 [(description) = "string table of machine names"];
+}
+
 message CCloud_AppCloudStateChange_Notification {
 	optional uint32 appid = 1 [(description) = "App which has had a change in cloud state"];
+	optional uint64 app_change_number = 2 [(description) = "New App Change Number"];
 }
 
 service Cloud {
@@ -354,6 +380,10 @@ service Cloud {
 
 	rpc EnumerateUserApps (.CCloud_EnumerateUserApps_Request) returns (.CCloud_EnumerateUserApps_Response) {
 		option (method_description) = "Enumerates apps stroing cloud files for a user.";
+	}
+
+	rpc GetAppFileChangelist (.CCloud_GetAppFileChangelist_Request) returns (.CCloud_GetAppFileChangelist_Response) {
+		option (method_description) = "Get a list of Cloud file changes for an app given a starting Change Number.";
 	}
 }
 

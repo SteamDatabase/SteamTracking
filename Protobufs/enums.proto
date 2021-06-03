@@ -107,3 +107,9 @@ enum EPublishedFileStorageSystem {
 	k_EPublishedFileStorageSystemDepot = 2;
 	k_EPublishedFileStorageSystemUGCCloud = 3;
 }
+
+enum ECloudStoragePersistState {
+	k_ECloudStoragePersistStatePersisted = 0;
+	k_ECloudStoragePersistStateForgotten = 1;
+	k_ECloudStoragePersistStateDeleted = 2;
+}
