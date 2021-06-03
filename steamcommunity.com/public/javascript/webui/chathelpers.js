@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6576413";
+var CLSTAMP = "6575755";
 !(function (e) {
   function t(t) {
     for (
@@ -1260,7 +1260,7 @@ var CLSTAMP = "6576413";
               (this.m_bValid = !0),
               (this.m_bReady = !0);
           }),
-          Object(r.c)([i.B], e.prototype, "m_bReady", void 0),
+          Object(r.c)([i.C], e.prototype, "m_bReady", void 0),
           Object(r.c)([i.k], e.prototype, "InitInvalid", null),
           Object(r.c)([i.k], e.prototype, "InitDirectInvite", null),
           e
@@ -1751,7 +1751,7 @@ var CLSTAMP = "6576413";
   },
   hEDq: function (e, t, n) {
     "use strict";
-    n.d(t, "q", function () {
+    n.d(t, "o", function () {
       return a;
     }),
       n.d(t, "d", function () {
@@ -1775,7 +1775,7 @@ var CLSTAMP = "6576413";
       n.d(t, "e", function () {
         return m;
       }),
-      n.d(t, "s", function () {
+      n.d(t, "q", function () {
         return b;
       }),
       n.d(t, "g", function () {
@@ -1787,10 +1787,10 @@ var CLSTAMP = "6576413";
       n.d(t, "j", function () {
         return v;
       }),
-      n.d(t, "n", function () {
+      n.d(t, "m", function () {
         return E;
       }),
-      n.d(t, "o", function () {
+      n.d(t, "n", function () {
         return S;
       }),
       n.d(t, "a", function () {
@@ -1799,15 +1799,9 @@ var CLSTAMP = "6576413";
     var r = n("mrSG"),
       i = n("0N1H");
     n.d(t, "l", function () {
-      return i.c;
+      return i.d;
     }),
-      n.d(t, "m", function () {
-        return i.d;
-      }),
       n.d(t, "p", function () {
-        return i.e;
-      }),
-      n.d(t, "r", function () {
         return i.f;
       });
     var o = n("2vnA"),
@@ -1821,12 +1815,12 @@ var CLSTAMP = "6576413";
             (this.customlist = void 0);
         }
         return (
-          Object(r.c)([o.B], e.prototype, "enabled", void 0),
-          Object(r.c)([o.B], e.prototype, "locked", void 0),
-          Object(r.c)([o.B], e.prototype, "features", void 0),
-          Object(r.c)([o.B], e.prototype, "allowallapps", void 0),
-          Object(r.c)([o.B], e.prototype, "baselist", void 0),
-          Object(r.c)([o.B], e.prototype, "customlist", void 0),
+          Object(r.c)([o.C], e.prototype, "enabled", void 0),
+          Object(r.c)([o.C], e.prototype, "locked", void 0),
+          Object(r.c)([o.C], e.prototype, "features", void 0),
+          Object(r.c)([o.C], e.prototype, "allowallapps", void 0),
+          Object(r.c)([o.C], e.prototype, "baselist", void 0),
+          Object(r.c)([o.C], e.prototype, "customlist", void 0),
           e
         );
       })(),
@@ -2392,7 +2386,7 @@ PERFORMANCE OF THIS SOFTWARE.
         }),
         (e.IsELanguageValidInRealm = function (e, t) {
           return (
-            t === (29 === e ? a.o.k_ESteamRealmChina : a.o.k_ESteamRealmGlobal)
+            t === (29 === e ? a.n.k_ESteamRealmChina : a.n.k_ESteamRealmGlobal)
           );
         }),
         (e.GetLanguageListForRealms = function (e) {
@@ -2724,15 +2718,15 @@ PERFORMANCE OF THIS SOFTWARE.
               c.b
                 .ShowChatRoomGroupInvite(this.m_invite.GetInviteCode())
                 .then(function (t) {
-                  Object(l.F)(function () {
+                  Object(l.G)(function () {
                     (e.m_bConnectingToClient = !1),
                       (e.m_connectResult = t),
                       console.log(t);
                   });
                 }));
           }),
-          Object(r.c)([l.B], e.prototype, "m_bConnectingToClient", void 0),
-          Object(r.c)([l.B], e.prototype, "m_connectResult", void 0),
+          Object(r.c)([l.C], e.prototype, "m_bConnectingToClient", void 0),
+          Object(r.c)([l.C], e.prototype, "m_connectResult", void 0),
           e
         );
       })(),
@@ -2921,7 +2915,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   )
             );
           }),
-          Object(r.c)([l.B], t.prototype, "m_bTriedToLaunchSteam", void 0),
+          Object(r.c)([l.C], t.prototype, "m_bTriedToLaunchSteam", void 0),
           Object(r.c)([p.a], t.prototype, "LaunchWebChat", null),
           Object(r.c)([p.a], t.prototype, "OpenInSteamIgnoreAccount", null),
           Object(r.c)([p.a], t.prototype, "LaunchSteamClient", null),
