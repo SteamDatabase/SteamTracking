@@ -205,35 +205,35 @@
               }[e] || e) +
               ".js?contenthash=" +
               {
-                1: "c092a65a1f7db6f00b9d",
-                2: "81fd2f8f7ce856a306f7",
-                3: "a54ebcdf23d2ef73220f",
-                4: "a036895c95d9ef7edb56",
-                5: "cbfb4f4dcf19a3e27240",
+                1: "910e96ceb42955062a6e",
+                2: "5c152d52f32cdc35416e",
+                3: "bc3ce9b6c9022e583c6b",
+                4: "af745a2f52366ab35d81",
+                5: "c82a8e0b7ace950e5cd1",
                 6: "3c7cb0976c2c616f79f5",
-                7: "33f3968b270bea01e89a",
-                8: "7a5ab0add3cf1c9fa6d9",
-                9: "eb62a505e5204a7a68c9",
-                10: "90e16ddf9f490c465589",
-                11: "9cfa079f3429719f693b",
-                12: "41bcc50534ece249e095",
+                7: "b4221943956a35d6e458",
+                8: "578144a5c034fb1f181b",
+                9: "7ea8fb45871747335644",
+                10: "dc85133ed3ce16ac9d43",
+                11: "4b41925923c32340a32c",
+                12: "72d85dfec2fe518f62de",
                 13: "0a546b9cce299e1435cb",
-                14: "e43a3e77dc20fa4f240d",
-                15: "77bc3df1b6c2779e8140",
-                16: "14d0e62e91f449e1d975",
-                17: "4fecb54af472fe912540",
-                18: "ade7eae27831f294d64e",
-                19: "eefa5818954ed5530c9a",
+                14: "5cc1af05d1e5256e6da8",
+                15: "0e1644a56dc655f0b672",
+                16: "e1107020066bcc835993",
+                17: "28834b50b9f65693714f",
+                18: "fbc13c856f774f648628",
+                19: "f65eb66b179b6f129e5c",
                 20: "1fe10794b24fbc63d1a4",
-                21: "b4e2e998961f6937ae0c",
-                22: "a7fde516ae7b2253abc6",
-                23: "266730059dce05f2ed86",
-                24: "9ab0cfecaedc7b30be23",
+                21: "e20e65ff6ba0bd7d067d",
+                22: "93a58bcc4285b400fd64",
+                23: "e65c14e84a516bf47ad2",
+                24: "73d659bb7b38da0041c4",
                 25: "419d6aae6b9ceaa3be16",
-                26: "7303ea076b27a125d2b1",
+                26: "acccb0509c72dc4bbb57",
                 27: "39bcc337e571b8b85b91",
-                28: "09d93e22d9a194d63d92",
-                29: "2a41d31e4437fe57c909",
+                28: "37c9984bc899e6e73b64",
+                29: "595cf6824ca09425ac60",
                 30: "a2683b6869f94691e758",
                 31: "56d93acd58ff59a74b81",
                 32: "174556465f9559969258",
@@ -264,7 +264,7 @@
                 57: "a22f4edb091fe05b2d58",
                 58: "943901a59d46dbef25fc",
                 59: "9eca75ba124997a1b0bc",
-                60: "1fa3cc8512a45610ca02",
+                60: "090f1bd444cc71fbc6c2",
               }[e]
             );
           })(e));
@@ -6291,24 +6291,24 @@ and limitations under the License.
           return (
             o.dpc_home_root() +
             "/" +
-            (e || Object(r.c)()) +
+            (e || Object(r.e)()) +
             "/" +
-            (t || "0") +
+            (t || Object(r.b)(Object(r.l)(e || Object(r.e)()))) +
             "/" +
-            (a || "0") +
+            (a || Object(r.c)(Object(r.l)(e || Object(r.e)()))) +
             "/" +
-            (n || Object(r.d)())
+            (n || Object(r.f)())
           );
         },
         dpc_schedule: function (e, t, a, n, i) {
           return (
             o.dpc_schedule_root() +
             "/" +
-            (e || Object(r.c)()) +
+            (e || Object(r.e)()) +
             "/" +
-            (t || Object(r.b)()) +
+            (t || Object(r.d)()) +
             "/" +
-            (a || Object(r.b)()) +
+            (a || Object(r.d)()) +
             "/" +
             (n || "0") +
             "/" +
@@ -6319,18 +6319,18 @@ and limitations under the License.
           return (
             o.dpc_standings_root() +
             "/" +
-            (e || Object(r.c)()) +
+            (e || Object(r.e)()) +
             "/" +
-            (t || Object(r.b)()) +
+            (t || Object(r.d)()) +
             "/" +
-            (a || Object(r.f)(i.b.DIVISION_I))
+            (a || Object(r.h)(i.b.DIVISION_I))
           );
         },
         dpc_ti_standings: function (e) {
-          return o.dpc_ti_standings_root() + "/" + (e || Object(r.b)());
+          return o.dpc_ti_standings_root() + "/" + (e || Object(r.d)());
         },
         dpc_teams: function (e) {
-          return o.dpc_teams_root() + "/" + (e || Object(r.b)());
+          return o.dpc_teams_root() + "/" + (e || Object(r.d)());
         },
         dpc_about: function () {
           return o.dpc_root() + "/about";
@@ -7192,6 +7192,110 @@ and limitations under the License.
         week: { dow: 0, doy: 6 },
       });
     })(a("wd/R"));
+  },
+  "7RJi": function (e, t, a) {
+    "use strict";
+    a.d(t, "a", function () {
+      return l;
+    });
+    var n = a("q1tI"),
+      r = a.n(n),
+      i = a("2PBR"),
+      o = a.n(i),
+      s = a("3wCP"),
+      l = function (e) {
+        var t = e.top,
+          a = e.bottom,
+          n = e.left,
+          i = e.right,
+          l = e.color,
+          c = e.startPct,
+          u = e.midPct,
+          d = e.endPct,
+          m = c || 60,
+          p = d || 90,
+          _ = u || m + 0.5 * (p - m),
+          h = {
+            background:
+              "linear-gradient( to top, " +
+              l +
+              "00 " +
+              m +
+              "%, " +
+              l +
+              "BB " +
+              _ +
+              "%, " +
+              l +
+              "FF " +
+              p +
+              "%",
+          },
+          f = {
+            background:
+              "linear-gradient( to bottom, " +
+              l +
+              "00 " +
+              m +
+              "%, " +
+              l +
+              "BB " +
+              _ +
+              "%, " +
+              l +
+              "FF " +
+              p +
+              "%",
+          },
+          g = {
+            background:
+              "linear-gradient( to left, " +
+              l +
+              "00 " +
+              m +
+              "%, " +
+              l +
+              "BB " +
+              _ +
+              "%, " +
+              l +
+              "FF " +
+              p +
+              "%",
+          },
+          v = {
+            background:
+              "linear-gradient( to right, " +
+              l +
+              "00 " +
+              m +
+              "%, " +
+              l +
+              "BB " +
+              _ +
+              "%, " +
+              l +
+              "FF " +
+              p +
+              "%",
+          };
+        return r.a.createElement(
+          "div",
+          {
+            className: Object(s.a)(
+              o.a.FadeContainer,
+              t && o.a.Top,
+              a && o.a.Bottom,
+              n && o.a.Left,
+              i && o.a.Right
+            ),
+          },
+          t && r.a.createElement("div", { style: h, className: o.a.Fade }),
+          a && r.a.createElement("div", { style: f, className: o.a.Fade }),
+          n && r.a.createElement("div", { style: g, className: o.a.Fade }),
+          i && r.a.createElement("div", { style: v, className: o.a.Fade })
+        );
+      };
   },
   "7aV9": function (e, t, a) {
     !(function (e) {
@@ -8517,6 +8621,166 @@ and limitations under the License.
         week: { dow: 1, doy: 7 },
       });
     })(a("wd/R"));
+  },
+  AAuy: function (e, t, a) {
+    "use strict";
+    a.d(t, "a", function () {
+      return u;
+    }),
+      a.d(t, "b", function () {
+        return d;
+      }),
+      a.d(t, "c", function () {
+        return m;
+      }),
+      a.d(t, "d", function () {
+        return p;
+      });
+    var n = a("q1tI"),
+      r = a.n(n),
+      i = a("xMCQ"),
+      o = a.n(i),
+      s = a("3wCP"),
+      l = a("tkkQ"),
+      c = a("dkia"),
+      u = function (e) {
+        var t = e.options,
+          a = e.selectedOption,
+          n = e.setOption,
+          i = e.className,
+          u = t.findIndex(function (e) {
+            return e.value == a;
+          }),
+          d = -1 != u ? t[u] : void 0,
+          m = function (e) {
+            var a = Math.min(Math.max(0, u + e), t.length - 1);
+            n(t[a].value);
+          };
+        return r.a.createElement(
+          "div",
+          { className: Object(s.a)(o.a.CycleSelector, i) },
+          r.a.createElement(
+            "div",
+            {
+              className: Object(s.a)(
+                o.a.Arrow,
+                o.a.Left,
+                0 != u && o.a.Enabled
+              ),
+              onClick: function () {
+                return m(-1);
+              },
+            },
+            r.a.createElement("img", {
+              className: o.a.ArrowIcon,
+              src: l.a.IMG_URL + "arrow_solid_left.png",
+            })
+          ),
+          r.a.createElement(
+            "div",
+            { className: o.a.CurrentOption },
+            "string" == typeof (null == d ? void 0 : d.strLabel) &&
+              Object(c.a)(null == d ? void 0 : d.strLabel),
+            r.a.isValidElement(null == d ? void 0 : d.strLabel) &&
+              (null == d ? void 0 : d.strLabel)
+          ),
+          r.a.createElement(
+            "div",
+            {
+              className: Object(s.a)(
+                o.a.Arrow,
+                o.a.Right,
+                u != t.length - 1 && o.a.Enabled
+              ),
+              onClick: function () {
+                return m(1);
+              },
+            },
+            r.a.createElement("img", {
+              className: o.a.ArrowIcon,
+              src: l.a.IMG_URL + "arrow_solid_left.png",
+            })
+          )
+        );
+      },
+      d = function (e) {
+        var t = e.options,
+          a = e.selectedOption,
+          n = e.setOption,
+          i = t.findIndex(function (e) {
+            return a == e.value;
+          });
+        return r.a.createElement(
+          "div",
+          { className: o.a.DropdownSelector },
+          r.a.createElement(
+            "select",
+            {
+              onChange: function (e) {
+                return n(t[parseInt(e.target.value)].value);
+              },
+              value: i,
+            },
+            t.map(function (e, t) {
+              return r.a.createElement(
+                "option",
+                { key: t, value: t },
+                "string" == typeof (null == e ? void 0 : e.strLabel) &&
+                  Object(c.a)(null == e ? void 0 : e.strLabel),
+                r.a.isValidElement(null == e ? void 0 : e.strLabel) &&
+                  (null == e ? void 0 : e.strLabel)
+              );
+            })
+          ),
+          r.a.createElement("img", {
+            className: o.a.ArrowDown,
+            src: l.a.IMG_URL + "arrow_solid_left.png",
+          })
+        );
+      },
+      m = function (e) {
+        var t = e.strInput,
+          a = e.setInput;
+        return r.a.createElement(
+          "div",
+          { className: o.a.TextInput },
+          r.a.createElement(
+            "form",
+            null,
+            r.a.createElement("input", {
+              type: "text",
+              className: o.a.InputBox,
+              placeholder: Object(c.b)("#dpc_search_team"),
+              value: t,
+              onChange: function (e) {
+                return a(e.target.value);
+              },
+              onKeyDown: function (e) {
+                return "Escape" == e.key && a("");
+              },
+            })
+          ),
+          r.a.createElement("img", {
+            className: o.a.MaginifyingGlass,
+            src: l.a.IMG_URL + "arrow_solid_left.png",
+          })
+        );
+      },
+      p = function (e) {
+        var t = e.bEnabled,
+          a = e.setEnabled;
+        return r.a.createElement(
+          "div",
+          {
+            className: Object(s.a)(o.a.Switch, t && o.a.On),
+            onClick: function () {
+              return a(!t);
+            },
+          },
+          r.a.createElement("div", { className: o.a.Background }),
+          r.a.createElement("div", { className: o.a.Selector })
+        );
+      };
   },
   AQ68: function (e, t, a) {
     !(function (e) {
@@ -14035,6 +14299,626 @@ and limitations under the License.
       });
     })(a("wd/R"));
   },
+  KWBk: function (e, t, a) {
+    "use strict";
+    a.d(t, "b", function () {
+      return P;
+    }),
+      a.d(t, "a", function () {
+        return G;
+      });
+    var n = a("tkkQ"),
+      r = a("q1tI"),
+      i = a.n(r),
+      o = a("poSt"),
+      s = a.n(o),
+      l = a("3wCP"),
+      c = a("TyAF"),
+      u = a("dkia"),
+      d = a("oJUx"),
+      m = a("xV+v"),
+      p = a("knzx"),
+      _ = a("HlPF"),
+      h = a.n(_),
+      f = a("AAuy"),
+      g = a("wd/R"),
+      v = a.n(g),
+      y = a("k7N+"),
+      b = a.n(y),
+      E = a("nz6D"),
+      L = a("3Rkk"),
+      w = a("sjx6"),
+      M = a("Ty5D"),
+      S = a("55Ip"),
+      T = a("Viej"),
+      D = a("WPyR"),
+      k = 244,
+      O = function (e) {
+        var t = e.bLeft,
+          a = e.adjustDate;
+        return i.a.createElement(
+          "div",
+          {
+            className: Object(l.a)(
+              h.a.ScrollArrow,
+              t && h.a.Left,
+              !t && h.a.Right
+            ),
+            onClick: function () {
+              return a(t ? -1 : 1);
+            },
+          },
+          i.a.createElement(
+            "div",
+            { className: h.a.Clip },
+            i.a.createElement("img", {
+              className: h.a.ArrowIcon,
+              src: n.a.IMG_URL + "arrow_solid_left.png",
+            })
+          )
+        );
+      },
+      j = Object(c.a)(function (e) {
+        for (
+          var t,
+            a = e.eDivision,
+            n = e.setDivision,
+            r = e.nDate,
+            o = e.scrollToDate,
+            s = Object(M.i)(),
+            l = Object(w.l)(s.strSeason),
+            c = [
+              { value: p.b.UNSET, strLabel: "#dpc_division_filter_all" },
+              { value: p.b.DIVISION_I, strLabel: "#dpc_division_filter_i" },
+              { value: p.b.DIVISION_II, strLabel: "#dpc_division_filter_ii" },
+            ],
+            d = new Set(),
+            m = 0,
+            _ = D.a.Get().GetDPCLeagues(l);
+          m < _.length;
+          m++
+        )
+          for (var g = 0, y = _[m].nLeagueIDs; g < y.length; g++) {
+            var b = y[g];
+            null === (t = D.a.Get().GetLeagueDates(b)) ||
+              void 0 === t ||
+              t.forEach(function (e) {
+                return d.add(e);
+              });
+          }
+        var E = [];
+        return (
+          Array.from(d.values())
+            .sort()
+            .forEach(function (e) {
+              E.push({
+                value: e,
+                strLabel: v()(1e3 * e)
+                  .format("ddd, D MMMM")
+                  .toString(),
+              });
+            }),
+          i.a.createElement(
+            "div",
+            { className: h.a.OptionSelector },
+            i.a.createElement(
+              "div",
+              { className: h.a.DPCBlock },
+              i.a.createElement(T.a, { className: h.a.DPCIcon }),
+              i.a.createElement(
+                "div",
+                { className: h.a.Dota },
+                Object(u.a)("#dpc_dota")
+              ),
+              i.a.createElement(
+                "div",
+                { className: h.a.ProCircuit },
+                Object(u.a)("#dpc_pro_circuit")
+              )
+            ),
+            i.a.createElement(
+              "div",
+              { className: h.a.Selectors },
+              i.a.createElement(f.a, {
+                options: c,
+                selectedOption: a,
+                setOption: n,
+              }),
+              i.a.createElement(f.b, {
+                options: E,
+                selectedOption: r,
+                setOption: o,
+              })
+            )
+          )
+        );
+      }),
+      I = Object(c.a)(function (e) {
+        var t = e.nLeagueID,
+          a = e.nNodeID,
+          r = Object(M.i)(),
+          o = Object(c.a)(function (e) {
+            var t = e.nTeamID,
+              a = e.strTeamInfo,
+              r = e.bWinner,
+              o = D.a.Get().GetTeamNames(t);
+            return i.a.createElement(
+              "div",
+              { className: Object(l.a)(h.a.BannerTeam, r && h.a.Winner) },
+              i.a.createElement("div", {
+                className: h.a.TeamLogo,
+                style: {
+                  backgroundImage:
+                    "url( " +
+                    n.a.IMG_URL +
+                    "teams/square_medium/" +
+                    (0 != t ? t : "team_unknown_web") +
+                    ".png )",
+                },
+              }),
+              i.a.createElement(
+                "div",
+                { className: h.a.TeamName },
+                null == o ? void 0 : o.name
+              ),
+              i.a.createElement("div", { className: h.a.TeamInfo }, a)
+            );
+          }),
+          s = P(),
+          d = D.a.Get().GetLeagueNode(t, a),
+          m = null == d ? void 0 : d.team_id_1,
+          p = null == d ? void 0 : d.team_id_2,
+          _ = D.a.Get().FindLeagueTeamStanding(s.eSeason, m),
+          f = D.a.Get().FindLeagueTeamStanding(s.eSeason, p),
+          g =
+            (null == d ? void 0 : d.has_started) &&
+            !(null == d ? void 0 : d.is_completed),
+          v = null == d ? void 0 : d.is_completed,
+          y =
+            0 != (null == d ? void 0 : d.actual_time)
+              ? null == d
+                ? void 0
+                : d.actual_time
+              : null == d
+              ? void 0
+              : d.scheduled_time,
+          E = D.a
+            .Get()
+            .GetLeagueTeamDivisionString(
+              s.eSeason,
+              null == d ? void 0 : d.team_id_1,
+              !0
+            ),
+          w = D.a.Get().GetSpoilerBlockEnabled(),
+          T = w
+            ? ""
+            : g || v
+            ? "" + (null == d ? void 0 : d.team_1_wins)
+            : (null == _ ? void 0 : _.nWins) +
+              " - " +
+              (null == _ ? void 0 : _.nLosses),
+          k = w
+            ? ""
+            : g || v
+            ? "" + (null == d ? void 0 : d.team_2_wins)
+            : (null == f ? void 0 : f.nWins) +
+              " - " +
+              (null == f ? void 0 : f.nLosses),
+          O = s.nLeagueID == t && s.nNodeID == a,
+          j = O ? 0 : t,
+          I = O ? 0 : a;
+        return i.a.createElement(
+          S.b,
+          {
+            to: L.a.dpc_home(r.strSeason, "" + j, "" + I),
+            className: Object(l.a)(
+              h.a.DPCMatchBannerNode,
+              O && h.a.IsSelected,
+              g && h.a.IsInProgress,
+              v && h.a.IsCompleted
+            ),
+          },
+          i.a.createElement(
+            "div",
+            { className: h.a.UpperContainer },
+            i.a.createElement(
+              "div",
+              { className: h.a.Time },
+              i.a.createElement(b.a, { date: 1e3 * y, format: "DD MMM LT" })
+            ),
+            i.a.createElement(
+              "div",
+              { className: h.a.RegionDivision },
+              Object(u.a)(E),
+              v && " - " + Object(u.a)("#dpc_match_final")
+            ),
+            i.a.createElement(
+              "div",
+              { className: Object(l.a)(h.a.LiveBanner) },
+              Object(u.a)("#dpc_live"),
+              i.a.createElement("div", { className: h.a.Dot })
+            )
+          ),
+          i.a.createElement(
+            "div",
+            { className: h.a.TeamsContainer },
+            i.a.createElement(o, {
+              nTeamID: m,
+              strTeamInfo: T,
+              bWinner:
+                v &&
+                !w &&
+                (null == d ? void 0 : d.team_1_wins) >
+                  (null == d ? void 0 : d.team_2_wins),
+            }),
+            i.a.createElement(o, {
+              nTeamID: p,
+              strTeamInfo: k,
+              bWinner:
+                v &&
+                !w &&
+                (null == d ? void 0 : d.team_2_wins) >
+                  (null == d ? void 0 : d.team_1_wins),
+            })
+          )
+        );
+      }),
+      N = Object(c.a)(function () {
+        for (
+          var e = Object(M.i)(),
+            t = Object(w.l)(e.strSeason),
+            a = P(),
+            n = Object(r.useState)(p.b.UNSET),
+            o = n[0],
+            s = n[1],
+            c = Object(r.useState)(new Date().setHours(0, 0, 0, 0) / 1e3),
+            u = c[0],
+            d = c[1],
+            m = Object(r.useState)(new Date().setHours(0, 0, 0, 0) / 1e3),
+            _ = m[0],
+            f = m[1],
+            g = Object(r.useState)(!1),
+            v = g[0],
+            y = g[1],
+            b = Object(r.useRef)(null),
+            L = Object(r.useRef)(null),
+            S = D.a.Get().GetDPCLeagues(t),
+            T = [],
+            N = function (e) {
+              D.a
+                .Get()
+                .GetLeagueNodeIDs(e.nLeagueIDs[0])
+                .forEach(function (t) {
+                  return T.push({
+                    nLeagueID: e.nLeagueIDs[0],
+                    nNodeID: t,
+                    nTimestamp: 0,
+                  });
+                }),
+                D.a
+                  .Get()
+                  .GetLeagueNodeIDs(e.nLeagueIDs[1])
+                  .forEach(function (t) {
+                    return T.push({
+                      nLeagueID: e.nLeagueIDs[1],
+                      nNodeID: t,
+                      nTimestamp: 0,
+                    });
+                  });
+            },
+            C = 0,
+            A = S;
+          C < A.length;
+          C++
+        ) {
+          N(A[C]);
+        }
+        T.forEach(function (e) {
+          var t = D.a.Get().GetLeagueNode(e.nLeagueID, e.nNodeID);
+          e.nTimestamp =
+            0 != (null == t ? void 0 : t.actual_time)
+              ? null == t
+                ? void 0
+                : t.actual_time
+              : null == t
+              ? void 0
+              : t.scheduled_time;
+        });
+        var Y = T.filter(function (e) {
+          if (0 == e.nTimestamp) return !1;
+          switch (o) {
+            case p.b.DIVISION_I:
+              return S.find(function (t) {
+                return t.nLeagueIDs[0] == e.nLeagueID;
+              });
+            case p.b.DIVISION_II:
+              return S.find(function (t) {
+                return t.nLeagueIDs[1] == e.nLeagueID;
+              });
+          }
+          return !0;
+        }).sort(function (e, t) {
+          return e.nTimestamp - t.nTimestamp;
+        });
+        Object(r.useEffect)(
+          function () {
+            var e = Y.filter(function (e) {
+              return e.nTimestamp < _;
+            }).length;
+            b.current && (b.current.scrollLeft = k * e), d(_);
+          },
+          [_, Y.length]
+        ),
+          Object(r.useEffect)(
+            function () {
+              if (a && 0 != a.nLeagueID) {
+                var e = Y.findIndex(function (e) {
+                  return e.nLeagueID == a.nLeagueID && e.nNodeID == a.nNodeID;
+                });
+                if (0 != e && b.current && L.current) {
+                  var t = k * e;
+                  (b.current.scrollLeft > t + k ||
+                    b.current.scrollLeft < t - 1708) &&
+                    (b.current.scrollLeft = Math.max(0, k * e - k));
+                }
+              }
+            },
+            [
+              null == a ? void 0 : a.nLeagueID,
+              null == a ? void 0 : a.nNodeID,
+              Y.length,
+            ]
+          );
+        var x = function (e) {
+          var t = u + 24 * e * 60 * 60,
+            a = Y.findIndex(function (e) {
+              return e.nTimestamp > t;
+            });
+          -1 != a && f(new Date(1e3 * Y[a].nTimestamp).setHours(0, 0, 0) / 1e3);
+        };
+        return i.a.createElement(
+          "div",
+          { className: h.a.DPCMatchBanner },
+          i.a.createElement(
+            "div",
+            { className: h.a.DPCMatchBannerContents },
+            i.a.createElement(j, {
+              eDivision: o,
+              setDivision: s,
+              nDate: u,
+              scrollToDate: f,
+            }),
+            i.a.createElement(
+              "div",
+              { className: h.a.MatchesContainer },
+              i.a.createElement(O, { bLeft: !0, adjustDate: x }),
+              i.a.createElement(
+                E.a,
+                {
+                  className: Object(l.a)(
+                    h.a.MatchesScroller,
+                    v && h.a.AfterFirstScroll
+                  ),
+                  vertical: !1,
+                  innerRef: b,
+                  onEndScroll: function (e) {
+                    if ((y(!0), b.current)) {
+                      var t = Math.floor(Math.ceil(b.current.scrollLeft) / k);
+                      t < Y.length &&
+                        d(
+                          new Date(1e3 * Y[t].nTimestamp).setHours(0, 0, 0) /
+                            1e3
+                        );
+                    }
+                  },
+                  ref: L,
+                },
+                Y.map(function (e) {
+                  return i.a.createElement(I, {
+                    key: e.nLeagueID + "_" + e.nNodeID,
+                    nLeagueID: e.nLeagueID,
+                    nNodeID: e.nNodeID,
+                  });
+                })
+              ),
+              i.a.createElement(O, { bLeft: !1, adjustDate: x })
+            )
+          )
+        );
+      }),
+      C = a("k9bf"),
+      A = a.n(C),
+      Y = function () {
+        var e = Object(M.h)(),
+          t = Object(r.useState)(D.a.Get().GetSpoilerBlockEnabled()),
+          a = t[0],
+          n = t[1];
+        return (
+          Object(r.useEffect)(
+            function () {
+              D.a.Get().SetSpoilerBlockEnabled(a);
+            },
+            [a]
+          ),
+          i.a.createElement(
+            "div",
+            { className: A.a.DPCHeader },
+            i.a.createElement(
+              "div",
+              { className: A.a.DPCHeaderContents },
+              i.a.createElement("div", { className: A.a.DPCTitle }),
+              i.a.createElement(
+                "div",
+                { className: A.a.DPCOptions },
+                i.a.createElement(
+                  S.b,
+                  {
+                    to: L.a.dpc_home(),
+                    className: Object(l.a)(
+                      A.a.DPCLink,
+                      0 == e.pathname.indexOf(L.a.dpc_home_root()) && A.a.Active
+                    ),
+                  },
+                  i.a.createElement(
+                    "div",
+                    { className: A.a.Label },
+                    Object(u.a)("#dpc_header_home")
+                  )
+                ),
+                i.a.createElement(
+                  S.b,
+                  {
+                    to: L.a.dpc_schedule(),
+                    className: Object(l.a)(
+                      A.a.DPCLink,
+                      0 == e.pathname.indexOf(L.a.dpc_schedule_root()) &&
+                        A.a.Active
+                    ),
+                  },
+                  i.a.createElement(
+                    "div",
+                    { className: A.a.Label },
+                    Object(u.a)("#dpc_header_schedule")
+                  )
+                ),
+                i.a.createElement(
+                  S.b,
+                  {
+                    to: L.a.dpc_standings(),
+                    className: Object(l.a)(
+                      A.a.DPCLink,
+                      0 == e.pathname.indexOf(L.a.dpc_standings_root()) &&
+                        A.a.Active
+                    ),
+                  },
+                  i.a.createElement(
+                    "div",
+                    { className: A.a.Label },
+                    Object(u.a)("#dpc_header_standings")
+                  )
+                ),
+                i.a.createElement(
+                  S.b,
+                  {
+                    to: L.a.dpc_ti_standings(),
+                    className: Object(l.a)(
+                      A.a.DPCLink,
+                      0 == e.pathname.indexOf(L.a.dpc_ti_standings_root()) &&
+                        A.a.Active
+                    ),
+                  },
+                  i.a.createElement(
+                    "div",
+                    { className: A.a.Label },
+                    Object(u.a)("#dpc_header_ti_standings")
+                  )
+                ),
+                i.a.createElement(
+                  S.b,
+                  {
+                    to: L.a.dpc_about(),
+                    className: Object(l.a)(
+                      A.a.DPCLink,
+                      0 == e.pathname.indexOf(L.a.dpc_teams_root()) &&
+                        A.a.Active
+                    ),
+                  },
+                  i.a.createElement(
+                    "div",
+                    { className: A.a.Label },
+                    Object(u.a)("#dpc_header_teams")
+                  )
+                )
+              ),
+              i.a.createElement(
+                "div",
+                { className: A.a.DPCSpoilerBlock },
+                i.a.createElement(
+                  "div",
+                  { className: A.a.SpoilerText },
+                  Object(u.a)("#dpc_header_spoiler_block")
+                ),
+                i.a.createElement(f.d, { bEnabled: a, setEnabled: n })
+              )
+            )
+          )
+        );
+      },
+      x = a("7RJi"),
+      R = Object(r.createContext)(null),
+      P = function () {
+        return Object(r.useContext)(R);
+      };
+    function H(e) {
+      return i.a.createElement(
+        R.Provider,
+        { value: e.matchContext },
+        e.children
+      );
+    }
+    var G = Object(c.a)(function (e) {
+      var t = e.matchContext,
+        a = e.className,
+        r = e.children;
+      Object(M.g)();
+      return (
+        t.eSeason != p.e.INVALID && D.a.Get().CacheDPCLeagueData(t.eSeason),
+        i.a.createElement(
+          "div",
+          { className: Object(l.a)(s.a.DPCRoot, a) },
+          i.a.createElement(
+            H,
+            { matchContext: t },
+            i.a.createElement(d.a, { bOverlapping: !1 }),
+            i.a.createElement(N, null),
+            i.a.createElement(
+              "div",
+              {
+                className: s.a.DPCHeaderSpacer,
+                style: {
+                  backgroundImage:
+                    "url( " + n.a.IMG_URL + "backgrounds/dpcbanner.png )",
+                },
+              },
+              i.a.createElement(T.a, { className: s.a.Icon }),
+              i.a.createElement(
+                "div",
+                { className: s.a.Right },
+                i.a.createElement(
+                  "div",
+                  { className: s.a.Dota },
+                  Object(u.a)("#dpc_dota")
+                ),
+                i.a.createElement(
+                  "div",
+                  { className: s.a.ProCircuit },
+                  Object(u.a)("#dpc_pro_circuit")
+                )
+              ),
+              i.a.createElement(x.a, {
+                bottom: !0,
+                startPct: 80,
+                midPct: 90,
+                endPct: 100,
+                color: "#222226",
+              }),
+              i.a.createElement(x.a, {
+                left: !0,
+                right: !0,
+                startPct: 80,
+                midPct: 90,
+                endPct: 100,
+                color: "#222226",
+              })
+            ),
+            i.a.createElement(Y, null),
+            r
+          ),
+          i.a.createElement(m.a, null)
+        )
+      );
+    });
+  },
   Kcip: function (e, t, a) {
     e.exports = {
       DPCRegionStandings: "dpcregionstandings_DPCRegionStandings_3H8ng",
@@ -19437,6 +20321,514 @@ object-assign
     });
     var n = "{STEAM_CLAN_IMAGE}";
   },
+  WPyR: function (e, t, a) {
+    "use strict";
+    a.d(t, "a", function () {
+      return p;
+    });
+    var n = a("mrSG"),
+      r = a("2vnA"),
+      i = a("6rKP"),
+      o = a("vDqi"),
+      s = a.n(o),
+      l = a("tkkQ"),
+      c = a("knzx"),
+      u = a("3Rkk"),
+      d = a("aaBf"),
+      m = a("qn5s"),
+      p = (function () {
+        function e() {
+          (this.m_asyncLeagueData = new i.b()),
+            (this.m_asyncMatchData = new i.b()),
+            (this.m_asyncFavoriteTeams = new i.a()),
+            (this.m_asyncPopularTeams = new i.a()),
+            (this.m_asyncTeamInfo = new i.b()),
+            (this.m_mapLeagueNodeGroup = new Map()),
+            (this.m_mapLeagueNode = new Map()),
+            (this.m_mapLeagueDates = new Map()),
+            (this.m_mapLeagueTeamDivision = new Map()),
+            (this.m_mapTeamNameInfo = new Map()),
+            (this.m_arrLeagueInfo = [
+              [],
+              [
+                { eRegion: c.d.LEAGUE_REGION_NA, nLeagueIDs: [13119, 13120] },
+                { eRegion: c.d.LEAGUE_REGION_SA, nLeagueIDs: [13109, 13110] },
+                {
+                  eRegion: c.d.LEAGUE_REGION_EUROPE,
+                  nLeagueIDs: [13114, 13115],
+                },
+                { eRegion: c.d.LEAGUE_REGION_CIS, nLeagueIDs: [13116, 13117] },
+                {
+                  eRegion: c.d.LEAGUE_REGION_CHINA,
+                  nLeagueIDs: [13112, 13113],
+                },
+                { eRegion: c.d.LEAGUE_REGION_SEA, nLeagueIDs: [13108, 13107] },
+              ],
+              [{ eRegion: c.d.LEAGUE_REGION_UNSET, nLeagueIDs: [12964, 0] }],
+              [{ eRegion: c.d.LEAGUE_REGION_UNSET, nLeagueIDs: [0, 0] }],
+            ]),
+            (this.m_bSpoilerBlockEnabled =
+              "1" == localStorage.getItem("bSpoilerBlockEnabled"));
+        }
+        return (
+          (e.Get = function () {
+            return e.g_Singleton || (e.g_Singleton = new e()), e.g_Singleton;
+          }),
+          (e.prototype.UpdateLeagueDataRecursive = function (e, t, a) {
+            for (var n = this, r = 0, i = a.team_standings; r < i.length; r++) {
+              var o = i[r];
+              this.m_mapTeamNameInfo.has(o.team_id) ||
+                this.m_mapTeamNameInfo.set(o.team_id, {
+                  name: o.team_name,
+                  tag: o.team_tag,
+                  abbreviation: o.team_abbreviation,
+                });
+            }
+            this.m_mapLeagueNodeGroup.set(t + "_" + a.node_group_id, a),
+              a.team_standings.forEach(function (a) {
+                var r = n.GetDPCLeagues(e).find(function (e) {
+                    return e.nLeagueIDs[0] == t || e.nLeagueIDs[1] == t;
+                  }),
+                  i = (null == r ? void 0 : r.nLeagueIDs[0]) == t ? 1 : 2;
+                n.m_mapLeagueTeamDivision.set(e + "_" + a.team_id, {
+                  eRegion: null == r ? void 0 : r.eRegion,
+                  nLeagueID: t,
+                  nDivision: i,
+                });
+              }),
+              a.nodes.forEach(function (e) {
+                var a = 0 == e.actual_time ? e.scheduled_time : e.actual_time;
+                if (0 != a) {
+                  var r = new Date(1e3 * a);
+                  n.m_mapLeagueDates.get(t).add(r.setHours(0, 0, 0, 0) / 1e3);
+                }
+                n.m_mapLeagueNode.set(t + "_" + e.node_id, e);
+              }),
+              a.node_groups.forEach(function (a) {
+                return n.UpdateLeagueDataRecursive(e, t, a);
+              });
+          }),
+          (e.prototype.GetLeagueNodeGroup = function (e, t) {
+            return this.m_mapLeagueNodeGroup.get(e + "_" + t);
+          }),
+          (e.prototype.GetLeagueNode = function (e, t) {
+            return this.m_mapLeagueNode.get(e + "_" + t);
+          }),
+          (e.prototype.GetLeagueNodeIDs = function (e) {
+            return Array.from(this.m_mapLeagueNode.entries())
+              .filter(function (t) {
+                return -1 != t[0].indexOf(e + "_");
+              })
+              .map(function (e) {
+                return e[1].node_id;
+              });
+          }),
+          (e.prototype.GetLeagueDates = function (e) {
+            var t;
+            return Array.from(
+              (null === (t = this.m_mapLeagueDates.get(e)) || void 0 === t
+                ? void 0
+                : t.values()) || []
+            );
+          }),
+          (e.prototype.GetTeamNames = function (e) {
+            return this.m_mapTeamNameInfo.get(e);
+          }),
+          (e.prototype.FindLeagueTeamStanding = function (e, t) {
+            for (
+              var a = 0, n = Array.from(this.m_mapLeagueNodeGroup.keys());
+              a < n.length;
+              a++
+            ) {
+              var r = n[a],
+                i = parseInt(r.split("_")[0]);
+              if (this.FindSeasonForLeagueID(i) == e) {
+                var o = this.m_mapLeagueNodeGroup.get(r);
+                if (1 != o.node_group_id) {
+                  var s = o.team_standings.find(function (e) {
+                    return e.team_id == t;
+                  });
+                  if (s)
+                    return {
+                      nStanding: s.standing,
+                      nWins: s.wins,
+                      nLosses: s.losses,
+                    };
+                }
+              }
+            }
+          }),
+          (e.prototype.GetLeagueTeamDivision = function (e, t) {
+            return this.m_mapLeagueTeamDivision.get(e + "_" + t);
+          }),
+          (e.prototype.GetLeagueTeamDivisionString = function (e, t, a) {
+            var n = this.GetLeagueTeamDivision(e, t);
+            if (n)
+              if (a)
+                switch (n.eRegion) {
+                  case c.d.LEAGUE_REGION_NA:
+                    return "#dpc_region_abbrev_na_" + n.nDivision;
+                  case c.d.LEAGUE_REGION_SA:
+                    return "#dpc_region_abbrev_sa_" + n.nDivision;
+                  case c.d.LEAGUE_REGION_EUROPE:
+                    return "#dpc_region_abbrev_weu_" + n.nDivision;
+                  case c.d.LEAGUE_REGION_CIS:
+                    return "#dpc_region_abbrev_eeu_" + n.nDivision;
+                  case c.d.LEAGUE_REGION_CHINA:
+                    return "#dpc_region_abbrev_cn_" + n.nDivision;
+                  case c.d.LEAGUE_REGION_SEA:
+                    return "#dpc_region_abbrev_sea_" + n.nDivision;
+                }
+              else
+                switch (n.eRegion) {
+                  case c.d.LEAGUE_REGION_NA:
+                    return "#dpc_region_na_" + n.nDivision;
+                  case c.d.LEAGUE_REGION_SA:
+                    return "#dpc_region_sa_" + n.nDivision;
+                  case c.d.LEAGUE_REGION_EUROPE:
+                    return "#dpc_region_weu_" + n.nDivision;
+                  case c.d.LEAGUE_REGION_CIS:
+                    return "#dpc_region_eeu_" + n.nDivision;
+                  case c.d.LEAGUE_REGION_CHINA:
+                    return "#dpc_region_cn_" + n.nDivision;
+                  case c.d.LEAGUE_REGION_SEA:
+                    return "#dpc_region_sea_" + n.nDivision;
+                }
+            return "";
+          }),
+          (e.prototype.FindSeasonForLeagueID = function (e) {
+            var t = 0;
+            switch (
+              (this.m_arrLeagueInfo.forEach(function (a, n) {
+                return a.forEach(function (a) {
+                  return a.nLeagueIDs.forEach(function (a) {
+                    a == e && (t = n);
+                  });
+                });
+              }),
+              t)
+            ) {
+              case 1:
+                return c.e.SPRING_2021_LEAGUE;
+              case 2:
+                return c.e.SPRING_2021_MAJOR;
+              case 3:
+                return c.e.INTERNATIONAL_2021;
+            }
+            return c.e.INVALID;
+          }),
+          (e.prototype.UpdateDerivedLeagueData = function (e) {
+            var t = this;
+            if (e) {
+              var a = e.info.league_id;
+              Object(r.F)(function () {
+                t.m_mapLeagueDates.has(a) ||
+                  t.m_mapLeagueDates.set(a, new Set());
+                var n = t.FindSeasonForLeagueID(a);
+                n != c.e.INVALID &&
+                  e.node_groups.forEach(function (e) {
+                    return t.UpdateLeagueDataRecursive(n, a, e);
+                  });
+              });
+            }
+          }),
+          (e.prototype.GetLeagueData = function (e) {
+            var t = this;
+            return this.m_asyncLeagueData.getAsyncDataWrapper(e).getData(
+              600,
+              function () {
+                return Object(n.b)(t, void 0, void 0, function () {
+                  return Object(n.e)(this, function (t) {
+                    switch (t.label) {
+                      case 0:
+                        return [
+                          4,
+                          s.a.get(
+                            l.a.BASE_URL +
+                              "webapi/IDOTA2League/GetLeagueData/v001",
+                            { params: { league_id: e } }
+                          ),
+                        ];
+                      case 1:
+                        return [2, t.sent()];
+                    }
+                  });
+                });
+              },
+              function (e) {
+                var a = e.data;
+                return t.UpdateDerivedLeagueData(a), a;
+              }
+            );
+          }),
+          (e.prototype.GetSpoilerBlockEnabled = function () {
+            return this.m_bSpoilerBlockEnabled;
+          }),
+          (e.prototype.SetSpoilerBlockEnabled = function (e) {
+            (this.m_bSpoilerBlockEnabled = e),
+              localStorage.setItem("bSpoilerBlockEnabled", e ? "1" : "0");
+          }),
+          (e.prototype.GetDefaultRegion = function () {
+            var e = c.d.LEAGUE_REGION_EUROPE;
+            switch (l.a.REGION) {
+              case "North America":
+                e = c.d.LEAGUE_REGION_NA;
+                break;
+              case "Latin America":
+                e = c.d.LEAGUE_REGION_SA;
+                break;
+              case "Western Europe":
+              case "EU":
+              case "EEA":
+                e = c.d.LEAGUE_REGION_EUROPE;
+                break;
+              case "Eastern Europe":
+              case "Russia, Ukraine, & CIS":
+                e = c.d.LEAGUE_REGION_CIS;
+                break;
+              case "Oceania":
+              case "Asia":
+              case "South East Asia":
+              case "South Asia":
+                e = c.d.LEAGUE_REGION_SEA;
+            }
+            return (
+              ("CN" != d.b.COUNTRY && "XC" != d.b.COUNTRY) ||
+                (e = c.d.LEAGUE_REGION_CHINA),
+              e
+            );
+          }),
+          (e.prototype.GetDPCLeagues = function (e) {
+            return this.m_arrLeagueInfo[e];
+          }),
+          (e.prototype.CacheDPCLeagueData = function (e) {
+            var t = this,
+              a = !1;
+            if (
+              (this.GetDPCLeagues(e).forEach(function (e) {
+                var n, r;
+                0 != e.nLeagueIDs[0] &&
+                  (a =
+                    a ||
+                    (null ===
+                      (n = t.m_asyncLeagueData.getAsyncDataWrapper(
+                        e.nLeagueIDs[0]
+                      )) || void 0 === n
+                      ? void 0
+                      : n.isExpired())),
+                  0 != e.nLeagueIDs[1] &&
+                    (a =
+                      a ||
+                      (null ===
+                        (r = t.m_asyncLeagueData.getAsyncDataWrapper(
+                          e.nLeagueIDs[1]
+                        )) || void 0 === r
+                        ? void 0
+                        : r.isExpired()));
+              }),
+              a)
+            ) {
+              var n = "";
+              this.GetDPCLeagues(e).forEach(function (e) {
+                t.m_asyncLeagueData
+                  .getAsyncDataWrapper(e.nLeagueIDs[0])
+                  .setDataPending(),
+                  t.m_asyncLeagueData
+                    .getAsyncDataWrapper(e.nLeagueIDs[1])
+                    .setDataPending(),
+                  0 != e.nLeagueIDs[0] && (n += e.nLeagueIDs[0] + ","),
+                  0 != e.nLeagueIDs[1] && (n += e.nLeagueIDs[1] + ",");
+              }),
+                s.a
+                  .get(
+                    l.a.BASE_URL + "webapi/IDOTA2League/GetLeaguesData/v001",
+                    { params: { league_ids: n } }
+                  )
+                  .then(function (e) {
+                    var a = null == e ? void 0 : e.data;
+                    Object(r.F)(function () {
+                      null == a ||
+                        a.leagues.forEach(function (e) {
+                          t.m_asyncLeagueData
+                            .getAsyncDataWrapper(e.info.league_id)
+                            .setData(600, e),
+                            t.UpdateDerivedLeagueData(e);
+                        });
+                    });
+                  });
+            }
+          }),
+          (e.prototype.GetMatchData = function (e, t) {
+            var a = this;
+            return this.m_asyncMatchData.getAsyncDataWrapper(t).getData(
+              600,
+              function () {
+                return Object(n.b)(a, void 0, void 0, function () {
+                  return Object(n.e)(this, function (a) {
+                    switch (a.label) {
+                      case 0:
+                        return [
+                          4,
+                          s.a.get(
+                            l.a.BASE_URL +
+                              "webapi/IDOTA2DPC/GetLeagueMatchMinimal/v001",
+                            { params: { league_id: e, match_id: t } }
+                          ),
+                        ];
+                      case 1:
+                        return [2, a.sent()];
+                    }
+                  });
+                });
+              },
+              function (e) {
+                return e.data;
+              }
+            );
+          }),
+          (e.prototype.GetNextLeagueNode = function (t, a) {
+            for (
+              var n = void 0,
+                r = void 0,
+                i = function (t) {
+                  Object(m.b)(0, 1).forEach(function (i) {
+                    var o;
+                    0 != t.nLeagueIDs[i] &&
+                      (null === (o = e.Get()) || void 0 === o
+                        ? void 0
+                        : o.GetLeagueNodeIDs(t.nLeagueIDs[i])
+                      ).forEach(function (o) {
+                        var s = e.Get().GetLeagueNode(t.nLeagueIDs[i], o);
+                        (null == s ? void 0 : s.is_completed) ||
+                          0 == (null == s ? void 0 : s.scheduled_time) ||
+                          (!a && (null == s ? void 0 : s.has_started)) ||
+                          ((!r ||
+                            (null == s ? void 0 : s.scheduled_time) <
+                              r.scheduled_time) &&
+                            ((n = t.nLeagueIDs[i]), (r = s)));
+                      });
+                  });
+                },
+                o = 0,
+                s = e.Get().GetDPCLeagues(t);
+              o < s.length;
+              o++
+            ) {
+              i(s[o]);
+            }
+            return { nLeagueID: n, nNodeID: null == r ? void 0 : r.node_id };
+          }),
+          (e.prototype.GetFavoriteTeams = function () {
+            var e = this;
+            return "dev" == l.a.WEB_UNIVERSE
+              ? [39, 2586976]
+              : this.m_asyncFavoriteTeams.getData(
+                  600,
+                  function () {
+                    return Object(n.b)(e, void 0, void 0, function () {
+                      return Object(n.e)(this, function (e) {
+                        switch (e.label) {
+                          case 0:
+                            return [
+                              4,
+                              s.a.get(
+                                l.a.BASE_URL +
+                                  u.a.dpc_root() +
+                                  "/getfavoriteteams",
+                                {}
+                              ),
+                            ];
+                          case 1:
+                            return [2, e.sent()];
+                        }
+                      });
+                    });
+                  },
+                  function (e) {
+                    var t;
+                    return null === (t = null == e ? void 0 : e.data) ||
+                      void 0 === t
+                      ? void 0
+                      : t.types[2].favorites.map(function (e) {
+                          return e.id;
+                        });
+                  }
+                );
+          }),
+          (e.prototype.GetPopularTeams = function () {
+            var e = this;
+            return this.m_asyncPopularTeams.getData(
+              600,
+              function () {
+                return Object(n.b)(e, void 0, void 0, function () {
+                  return Object(n.e)(this, function (e) {
+                    switch (e.label) {
+                      case 0:
+                        return [
+                          4,
+                          s.a.get(
+                            l.a.BASE_URL +
+                              "webapi/IDOTA2DPC/GetDPCSearchResults/v001",
+                            {
+                              params: { search: "", count: 20, resultflags: 2 },
+                            }
+                          ),
+                        ];
+                      case 1:
+                        return [2, e.sent()];
+                    }
+                  });
+                });
+              },
+              function (e) {
+                var t;
+                return null === (t = e.data) || void 0 === t
+                  ? void 0
+                  : t.teams.map(function (e) {
+                      return e.id;
+                    });
+              }
+            );
+          }),
+          (e.prototype.GetTeamInfo = function (e) {
+            var t = this;
+            return this.m_asyncTeamInfo.getAsyncDataWrapper(e).getData(
+              600,
+              function () {
+                return Object(n.b)(t, void 0, void 0, function () {
+                  return Object(n.e)(this, function (t) {
+                    switch (t.label) {
+                      case 0:
+                        return [
+                          4,
+                          s.a.get(
+                            l.a.BASE_URL +
+                              "webapi/IDOTA2Teams/GetSingleTeamInfo/v001",
+                            { params: { team_id: e, get_dpc_info: !0 } }
+                          ),
+                        ];
+                      case 1:
+                        return [2, t.sent()];
+                    }
+                  });
+                });
+              },
+              function (e) {
+                return e.data;
+              }
+            );
+          }),
+          Object(n.c)([r.B], e.prototype, "m_mapLeagueNodeGroup", void 0),
+          Object(n.c)([r.B], e.prototype, "m_mapLeagueNode", void 0),
+          Object(n.c)([r.B], e.prototype, "m_mapLeagueDates", void 0),
+          Object(n.c)([r.B], e.prototype, "m_mapLeagueTeamDivision", void 0),
+          Object(n.c)([r.B], e.prototype, "m_mapTeamNameInfo", void 0),
+          Object(n.c)([r.B], e.prototype, "m_bSpoilerBlockEnabled", void 0),
+          Object(n.c)([r.B], e.prototype, "GetNextLeagueNode", null),
+          e
+        );
+      })();
+  },
   WYrj: function (e, t, a) {
     !(function (e) {
       "use strict";
@@ -22945,7 +24337,7 @@ object-assign
     "use strict";
     a.r(t),
       a.d(t, "g_App", function () {
-        return Pr;
+        return Yn;
       });
     var n = a("mrSG"),
       r = a("i8i4"),
@@ -26813,102 +28205,8 @@ object-assign
     var ce = a("3wCP"),
       ue = a("mGMt"),
       de = a.n(ue),
-      me = a("2PBR"),
-      pe = a.n(me),
-      _e = function (e) {
-        var t = e.top,
-          a = e.bottom,
-          n = e.left,
-          r = e.right,
-          i = e.color,
-          s = e.startPct,
-          l = e.midPct,
-          c = e.endPct,
-          u = s || 60,
-          d = c || 90,
-          m = l || u + 0.5 * (d - u),
-          p = {
-            background:
-              "linear-gradient( to top, " +
-              i +
-              "00 " +
-              u +
-              "%, " +
-              i +
-              "BB " +
-              m +
-              "%, " +
-              i +
-              "FF " +
-              d +
-              "%",
-          },
-          _ = {
-            background:
-              "linear-gradient( to bottom, " +
-              i +
-              "00 " +
-              u +
-              "%, " +
-              i +
-              "BB " +
-              m +
-              "%, " +
-              i +
-              "FF " +
-              d +
-              "%",
-          },
-          h = {
-            background:
-              "linear-gradient( to left, " +
-              i +
-              "00 " +
-              u +
-              "%, " +
-              i +
-              "BB " +
-              m +
-              "%, " +
-              i +
-              "FF " +
-              d +
-              "%",
-          },
-          f = {
-            background:
-              "linear-gradient( to right, " +
-              i +
-              "00 " +
-              u +
-              "%, " +
-              i +
-              "BB " +
-              m +
-              "%, " +
-              i +
-              "FF " +
-              d +
-              "%",
-          };
-        return o.a.createElement(
-          "div",
-          {
-            className: Object(ce.a)(
-              pe.a.FadeContainer,
-              t && pe.a.Top,
-              a && pe.a.Bottom,
-              n && pe.a.Left,
-              r && pe.a.Right
-            ),
-          },
-          t && o.a.createElement("div", { style: p, className: pe.a.Fade }),
-          a && o.a.createElement("div", { style: _, className: pe.a.Fade }),
-          n && o.a.createElement("div", { style: h, className: pe.a.Fade }),
-          r && o.a.createElement("div", { style: f, className: pe.a.Fade })
-        );
-      },
-      he = function (e) {
+      me = a("7RJi"),
+      pe = function (e) {
         var t = e.event,
           a = new Date(1e3 * t.GetStartTimeAndDateUnixSeconds()),
           n = Object(g.c)(p.a.LANGUAGE),
@@ -26923,7 +28221,11 @@ object-assign
               className: de.a.Entry,
               style: { backgroundImage: i ? "url( " + i + " )" : null },
             },
-            o.a.createElement(_e, { bottom: !0, color: "#13171C", midPct: 70 }),
+            o.a.createElement(me.a, {
+              bottom: !0,
+              color: "#13171C",
+              midPct: 70,
+            }),
             o.a.createElement("div", { className: de.a.Desc }, r),
             o.a.createElement(
               "div",
@@ -26942,21 +28244,21 @@ object-assign
           )
         );
       },
-      fe = a("oJUx"),
-      ge = a("xV+v"),
-      ve = a("CanJ"),
-      ye = a.n(ve),
-      be = function (e) {
+      _e = a("oJUx"),
+      he = a("xV+v"),
+      fe = a("CanJ"),
+      ge = a.n(fe),
+      ve = function (e) {
         var t = e.event,
           a = new Date(1e3 * t.GetStartTimeAndDateUnixSeconds()),
           n = Object(g.c)(p.a.LANGUAGE),
           r = E(t.GetDescriptionWithFallback(n), ["img"]);
         return o.a.createElement(
           "div",
-          { className: ye.a.UpdateCapsule, key: t.GID },
+          { className: ge.a.UpdateCapsule, key: t.GID },
           o.a.createElement(
             "div",
-            { className: ye.a.Date },
+            { className: ge.a.Date },
             a.toLocaleDateString(void 0, {
               month: "long",
               day: "numeric",
@@ -26965,15 +28267,15 @@ object-assign
           ),
           o.a.createElement(
             "div",
-            { className: ye.a.Title },
+            { className: ge.a.Title },
             t.GetNameWithFallback(n)
           ),
-          o.a.createElement("div", { className: ye.a.Desc }, Object(_.a)(r))
+          o.a.createElement("div", { className: ge.a.Desc }, Object(_.a)(r))
         );
       },
-      Ee = a("8M7R"),
-      Le = a.n(Ee);
-    function we(e, t) {
+      ye = a("8M7R"),
+      be = a.n(ye);
+    function Ee(e, t) {
       return (
         (t.BIsVisibleEvent() && e && 12 == t.type) ||
         (!e &&
@@ -26984,7 +28286,7 @@ object-assign
             26 == t.type))
       );
     }
-    var Me = Object(s.a)(function (e) {
+    var Le = Object(s.a)(function (e) {
         var t = Object(c.i)(),
           a = Object(i.useState)(void 0),
           n = a[0],
@@ -27008,7 +28310,7 @@ object-assign
               .then(function (e) {
                 return r(e);
               }),
-            o.a.createElement(fe.a, { bOverlapping: !0 })
+            o.a.createElement(_e.a, { bOverlapping: !0 })
           );
         for (
           var v, y = Object(g.c)(p.a.LANGUAGE), b = 0, E = n;
@@ -27016,37 +28318,37 @@ object-assign
           b++
         ) {
           var w = E[b];
-          if (we(!1, w)) {
+          if (Ee(!1, w)) {
             w.GID;
             var M = new Date(1e3 * w.GetStartTimeAndDateUnixSeconds());
             v = o.a.createElement(
               "div",
-              { className: Le.a.LargeEntry, key: w.GID },
+              { className: be.a.LargeEntry, key: w.GID },
               o.a.createElement("div", {
-                className: Le.a.HeadingImage,
+                className: be.a.HeadingImage,
                 style: {
                   backgroundImage: "url( " + w.GetImageURL("background") + " )",
                 },
               }),
-              o.a.createElement(_e, {
+              o.a.createElement(me.a, {
                 bottom: !0,
                 startPct: 75,
                 midPct: 85,
                 endPct: 95,
                 color: "#000000",
               }),
-              o.a.createElement("div", { className: Le.a.BottomFade }),
+              o.a.createElement("div", { className: be.a.BottomFade }),
               o.a.createElement(
                 "div",
-                { className: Le.a.FeaturedContent },
+                { className: be.a.FeaturedContent },
                 o.a.createElement(
                   "div",
-                  { className: Le.a.Tag },
+                  { className: be.a.Tag },
                   Object(_.a)("#news_featured")
                 ),
                 o.a.createElement(
                   "div",
-                  { className: Le.a.Date },
+                  { className: be.a.Date },
                   M.toLocaleDateString(void 0, {
                     month: "long",
                     day: "numeric",
@@ -27055,16 +28357,16 @@ object-assign
                 ),
                 o.a.createElement(
                   "div",
-                  { className: Le.a.Title },
+                  { className: be.a.Title },
                   w.GetNameWithFallback(y)
                 ),
                 o.a.createElement(
                   l.b,
-                  { to: u.a.newsentry(w.GID), className: Le.a.FeaturedLink },
+                  { to: u.a.newsentry(w.GID), className: be.a.FeaturedLink },
                   Object(_.a)("#news_readmore"),
                   o.a.createElement("img", {
                     src: p.a.IMG_URL + "arrow_left.png",
-                    className: Le.a.ForwardArrow,
+                    className: be.a.ForwardArrow,
                   })
                 )
               )
@@ -27077,15 +28379,15 @@ object-assign
           O < j.length;
           O++
         ) {
-          we(f, j[O]) && (k += 1);
+          Ee(f, j[O]) && (k += 1);
         }
         for (var I = 0, N = 0, C = 0, A = n; C < A.length; C++) {
           var Y = A[C];
-          if (we(f, Y) && !((I += 1) <= 15 * d)) {
+          if (Ee(f, Y) && !((I += 1) <= 15 * d)) {
             if ((N += 1) > 15) break;
             f
-              ? T.push(o.a.createElement(be, { event: Y, key: Y.GID }))
-              : S.push(o.a.createElement(he, { event: Y, key: Y.GID }));
+              ? T.push(o.a.createElement(ve, { event: Y, key: Y.GID }))
+              : S.push(o.a.createElement(pe, { event: Y, key: Y.GID }));
           }
         }
         var x = Math.ceil((k - 1) / 15);
@@ -27094,9 +28396,9 @@ object-assign
             "div",
             {
               className: Object(ce.a)(
-                Le.a.PageNumber,
-                Le.a.PageChange,
-                0 == d && Le.a.Hidden
+                be.a.PageNumber,
+                be.a.PageChange,
+                0 == d && be.a.Hidden
               ),
               key: "page_previous",
               onClick: function () {
@@ -27113,8 +28415,8 @@ object-assign
                   "div",
                   {
                     className: Object(ce.a)(
-                      Le.a.PageNumber,
-                      e == d && Le.a.SelectedPage
+                      be.a.PageNumber,
+                      e == d && be.a.SelectedPage
                     ),
                     key: "page_" + e,
                     onClick: function () {
@@ -27136,9 +28438,9 @@ object-assign
               "div",
               {
                 className: Object(ce.a)(
-                  Le.a.PageNumber,
-                  Le.a.PageChange,
-                  d == x - 1 && Le.a.Hidden
+                  be.a.PageNumber,
+                  be.a.PageChange,
+                  d == x - 1 && be.a.Hidden
                 ),
                 key: "page_next",
                 onClick: function () {
@@ -27150,8 +28452,8 @@ object-assign
           ),
           o.a.createElement(
             "div",
-            { className: Le.a.BlogOverviewPage },
-            o.a.createElement(fe.a, { bOverlapping: !0 }),
+            { className: be.a.BlogOverviewPage },
+            o.a.createElement(_e.a, { bOverlapping: !0 }),
             o.a.createElement(
               h.a,
               null,
@@ -27159,19 +28461,19 @@ object-assign
             ),
             o.a.createElement(
               "div",
-              { className: Le.a.Body },
+              { className: be.a.Body },
               v,
               o.a.createElement(
                 "div",
-                { className: Le.a.TabContainer },
+                { className: be.a.TabContainer },
                 o.a.createElement(
                   "div",
-                  { className: Le.a.TabsLeft },
+                  { className: be.a.TabsLeft },
                   o.a.createElement(
                     l.b,
                     {
                       to: u.a.news(),
-                      className: Object(ce.a)(Le.a.Tab, !f && Le.a.Active),
+                      className: Object(ce.a)(be.a.Tab, !f && be.a.Active),
                     },
                     Object(_.a)("#news_news")
                   ),
@@ -27179,7 +28481,7 @@ object-assign
                     l.b,
                     {
                       to: u.a.news("updates"),
-                      className: Object(ce.a)(Le.a.Tab, f && Le.a.Active),
+                      className: Object(ce.a)(be.a.Tab, f && be.a.Active),
                     },
                     Object(_.a)("#news_updates")
                   )
@@ -27187,22 +28489,22 @@ object-assign
               ),
               o.a.createElement(
                 "div",
-                { className: Le.a.BottomSection },
+                { className: be.a.BottomSection },
                 !f &&
-                  o.a.createElement("div", { className: Le.a.SubEntries }, S),
+                  o.a.createElement("div", { className: be.a.SubEntries }, S),
                 f &&
-                  o.a.createElement("div", { className: Le.a.SubUpdates }, T),
-                !f && o.a.createElement("div", { className: Le.a.Pages }, D),
-                o.a.createElement(ge.a, null)
+                  o.a.createElement("div", { className: be.a.SubUpdates }, T),
+                !f && o.a.createElement("div", { className: be.a.Pages }, D),
+                o.a.createElement(he.a, null)
               )
             )
           )
         );
       }),
-      Se = a("Q0yo"),
-      Te = a.n(Se),
-      De = a("C038"),
-      ke = Object(s.a)(function (e) {
+      we = a("Q0yo"),
+      Me = a.n(we),
+      Se = a("C038"),
+      Te = Object(s.a)(function (e) {
         var t = Object(c.i)(),
           a = Object(i.useState)(void 0),
           n = a[0],
@@ -27239,8 +28541,8 @@ object-assign
           var E = b[y];
           if (
             E != s &&
-            (we(!1, E) &&
-              v.push(o.a.createElement(he, { event: E, key: E.GID })),
+            (Ee(!1, E) &&
+              v.push(o.a.createElement(pe, { event: E, key: E.GID })),
             3 == v.length)
           )
             break;
@@ -27249,15 +28551,15 @@ object-assign
           M = s.GetImageURL("background");
         return o.a.createElement(
           "div",
-          { className: Te.a.BlogEntryPage },
+          { className: Me.a.BlogEntryPage },
           o.a.createElement(h.a, null, o.a.createElement("title", null, w)),
-          o.a.createElement(De.a, null),
-          o.a.createElement(fe.a, { bOverlapping: !0 }),
+          o.a.createElement(Se.a, null),
+          o.a.createElement(_e.a, { bOverlapping: !0 }),
           p.a.VALVE_INTERNAL &&
             o.a.createElement(
               "a",
               {
-                className: Te.a.CommunityLink,
+                className: Me.a.CommunityLink,
                 href:
                   "https://steamcommunity.com/games/dota2/announcements/detail/" +
                   s.AnnouncementGID,
@@ -27266,53 +28568,53 @@ object-assign
             ),
           o.a.createElement(
             "div",
-            { className: Te.a.TitleContainer },
+            { className: Me.a.TitleContainer },
             o.a.createElement("div", {
-              className: Te.a.TitleBackground,
+              className: Me.a.TitleBackground,
               style: { backgroundImage: M ? "url( " + M + " )" : null },
             })
           ),
           o.a.createElement(
             l.b,
-            { to: u.a.news(), className: Te.a.BackToOverview },
+            { to: u.a.news(), className: Me.a.BackToOverview },
             o.a.createElement("img", {
               src: p.a.IMG_URL + "arrow_left.png",
-              className: Te.a.BackArrow,
+              className: Me.a.BackArrow,
             }),
             "Back to Blog"
           ),
-          o.a.createElement("div", { className: Te.a.Title }, w),
-          o.a.createElement("div", { className: Te.a.Date }, m),
-          o.a.createElement("div", { className: Te.a.Body }, Object(_.a)(f)),
+          o.a.createElement("div", { className: Me.a.Title }, w),
+          o.a.createElement("div", { className: Me.a.Date }, m),
+          o.a.createElement("div", { className: Me.a.Body }, Object(_.a)(f)),
           o.a.createElement(
             "div",
-            { className: Te.a.LatestNews },
+            { className: Me.a.LatestNews },
             o.a.createElement(
               "div",
-              { className: Te.a.LatestNewsHeader },
+              { className: Me.a.LatestNewsHeader },
               Object(_.a)("#latest_news")
             ),
-            o.a.createElement("div", { className: Te.a.LatestNewsContainer }, v)
+            o.a.createElement("div", { className: Me.a.LatestNewsContainer }, v)
           ),
-          o.a.createElement(ge.a, null)
+          o.a.createElement(he.a, null)
         );
       }),
-      Oe = a("dfKm"),
+      De = a("dfKm"),
+      ke = a.n(De),
+      Oe = a("ZfeC"),
       je = a.n(Oe),
-      Ie = a("ZfeC"),
-      Ne = a.n(Ie),
-      Ce = function () {
+      Ie = function () {
         var e = Object(i.useState)(!1),
           t = e[0],
           a = e[1],
           n = Object(c.h)();
         return o.a.createElement(
           "div",
-          { className: Ne.a.LanguageSelector },
+          { className: je.a.LanguageSelector },
           o.a.createElement(
             "div",
             {
-              className: Ne.a.Button,
+              className: je.a.Button,
               onMouseEnter: function () {
                 return a(!0);
               },
@@ -27322,11 +28624,11 @@ object-assign
             },
             o.a.createElement(
               "div",
-              { className: Ne.a.InnerWrapper },
+              { className: je.a.InnerWrapper },
               o.a.createElement("span", null, Object(_.a)("#header_language")),
               o.a.createElement("img", {
                 src: p.a.IMG_URL + "arrow_over.png",
-                className: Ne.a.DownArrow,
+                className: je.a.DownArrow,
               })
             )
           ),
@@ -27334,8 +28636,8 @@ object-assign
             "div",
             {
               className: Object(ce.a)(
-                Ne.a.LanguageList,
-                t && Ne.a.ShowLanguages
+                je.a.LanguageList,
+                t && je.a.ShowLanguages
               ),
               onMouseEnter: function () {
                 return a(!0);
@@ -27378,7 +28680,7 @@ object-assign
                 "a",
                 {
                   key: e,
-                  className: Ne.a.LanguageOption,
+                  className: je.a.LanguageOption,
                   href: "" + u.a.base() + n.pathname + "?l=" + e,
                 },
                 Object(_.a)("#language_selection_" + e)
@@ -27387,7 +28689,7 @@ object-assign
           )
         );
       },
-      Ae = function () {
+      Ne = function () {
         var e = [
             { token: "#header_heroes", url: p.a.BASE_URL + "heroes" },
             { token: "#header_item_explorer", url: p.a.BASE_URL + "items" },
@@ -27407,11 +28709,11 @@ object-assign
           n = t[1];
         return o.a.createElement(
           "div",
-          { className: Ne.a.HeropediaSelector },
+          { className: je.a.HeropediaSelector },
           o.a.createElement(
             "div",
             {
-              className: Ne.a.Button,
+              className: je.a.Button,
               onMouseEnter: function () {
                 return n(!0);
               },
@@ -27421,18 +28723,18 @@ object-assign
             },
             o.a.createElement(
               "div",
-              { className: Ne.a.InnerWrapper },
+              { className: je.a.InnerWrapper },
               o.a.createElement("span", null, Object(_.a)("#header_heropedia")),
               o.a.createElement("img", {
                 src: p.a.IMG_URL + "arrow_over.png",
-                className: Ne.a.DownArrow,
+                className: je.a.DownArrow,
               })
             )
           ),
           o.a.createElement(
             "div",
             {
-              className: Object(ce.a)(Ne.a.OptionList, a && Ne.a.ShowOptions),
+              className: Object(ce.a)(je.a.OptionList, a && je.a.ShowOptions),
               onMouseEnter: function () {
                 return n(!0);
               },
@@ -27443,52 +28745,52 @@ object-assign
             e.map(function (e, t) {
               return o.a.createElement(
                 "a",
-                { key: e.token, className: Ne.a.Option, href: e.url },
+                { key: e.token, className: je.a.Option, href: e.url },
                 Object(_.a)(e.token)
               );
             })
           )
         );
       },
-      Ye = function () {
+      Ce = function () {
         var e = Object(c.h)().pathname.substr(1);
         return o.a.createElement(
           "div",
-          { className: Ne.a.OldHeader },
+          { className: je.a.OldHeader },
           o.a.createElement(
             "a",
-            { className: Ne.a.HeaderLink, href: p.a.BASE_URL + "play" },
+            { className: je.a.HeaderLink, href: p.a.BASE_URL + "play" },
             o.a.createElement("img", {
-              className: Ne.a.Logo,
+              className: je.a.Logo,
               src: p.a.IMG_URL + "logo.png",
             })
           ),
-          o.a.createElement("div", { className: Ne.a.VerticalBar }),
+          o.a.createElement("div", { className: je.a.VerticalBar }),
           o.a.createElement(
             "a",
-            { className: Ne.a.HeaderLink, href: p.a.BASE_URL + "blog" },
+            { className: je.a.HeaderLink, href: p.a.BASE_URL + "blog" },
             o.a.createElement(
               "div",
-              { className: Ne.a.SectionHeader },
+              { className: je.a.SectionHeader },
               Object(_.a)("#header_news")
             )
           ),
-          o.a.createElement("div", { className: Ne.a.VerticalBar }),
+          o.a.createElement("div", { className: je.a.VerticalBar }),
           o.a.createElement(
             "a",
-            { className: Ne.a.HeaderLink, href: p.a.BASE_URL + "store" },
+            { className: je.a.HeaderLink, href: p.a.BASE_URL + "store" },
             o.a.createElement(
               "div",
-              { className: Ne.a.SectionHeader },
+              { className: je.a.SectionHeader },
               Object(_.a)("#header_store")
             )
           ),
-          o.a.createElement("div", { className: Ne.a.VerticalBar }),
-          o.a.createElement(Ae, null),
-          o.a.createElement("div", { className: Ne.a.Spacer }),
+          o.a.createElement("div", { className: je.a.VerticalBar }),
+          o.a.createElement(Ne, null),
+          o.a.createElement("div", { className: je.a.Spacer }),
           o.a.createElement(
             "div",
-            { className: Ne.a.LoginAndLanguage },
+            { className: je.a.LoginAndLanguage },
             0 == p.a.ACCOUNT_ID &&
               o.a.createElement(
                 "a",
@@ -27511,49 +28813,49 @@ object-assign
                 p.a.PLAYER,
                 ")"
               ),
-            o.a.createElement("div", { className: Ne.a.VerticalBar }),
-            o.a.createElement(Ce, null)
+            o.a.createElement("div", { className: je.a.VerticalBar }),
+            o.a.createElement(Ie, null)
           ),
           o.a.createElement(
             "a",
             {
               href: p.a.STORE_URL + "app/" + p.a.DOTA_APP_ID + "/Dota_2/",
-              className: Ne.a.PlayForFree,
+              className: je.a.PlayForFree,
             },
             Object(_.a)("#header_payforfree")
           ),
           o.a.createElement(
             "a",
-            { href: "", className: Ne.a.BackToDota },
+            { href: "", className: je.a.BackToDota },
             Object(_.a)("#header_backtodota")
           )
         );
       },
-      xe = a("HMs9"),
-      Re = a.n(xe),
-      Pe = a("mZMQ"),
-      He = a("17x9"),
-      Ge = a.n(He),
-      Be =
+      Ae = a("HMs9"),
+      Ye = a.n(Ae),
+      xe = a("mZMQ"),
+      Re = a("17x9"),
+      Pe = a.n(Re),
+      He =
         ("undefined" != typeof crypto &&
           crypto.getRandomValues &&
           crypto.getRandomValues.bind(crypto)) ||
         ("undefined" != typeof msCrypto &&
           "function" == typeof msCrypto.getRandomValues &&
           msCrypto.getRandomValues.bind(msCrypto)),
-      Ue = new Uint8Array(16);
-    function Fe() {
-      if (!Be)
+      Ge = new Uint8Array(16);
+    function Be() {
+      if (!He)
         throw new Error(
           "crypto.getRandomValues() not supported. See https://github.com/uuidjs/uuid#getrandomvalues-not-supported"
         );
-      return Be(Ue);
+      return He(Ge);
     }
-    for (var We = [], ze = 0; ze < 256; ++ze)
-      We[ze] = (ze + 256).toString(16).substr(1);
-    var Ve = function (e, t) {
+    for (var Ue = [], Fe = 0; Fe < 256; ++Fe)
+      Ue[Fe] = (Fe + 256).toString(16).substr(1);
+    var We = function (e, t) {
       var a = t || 0,
-        n = We;
+        n = Ue;
       return [
         n[e[a++]],
         n[e[a++]],
@@ -27577,16 +28879,16 @@ object-assign
         n[e[a++]],
       ].join("");
     };
-    var qe = function (e, t, a) {
+    var ze = function (e, t, a) {
       var n = (t && a) || 0;
       "string" == typeof e &&
         ((t = "binary" === e ? new Array(16) : null), (e = null));
-      var r = (e = e || {}).random || (e.rng || Fe)();
+      var r = (e = e || {}).random || (e.rng || Be)();
       if (((r[6] = (15 & r[6]) | 64), (r[8] = (63 & r[8]) | 128), t))
         for (var i = 0; i < 16; ++i) t[n + i] = r[i];
-      return t || Ve(r);
+      return t || We(r);
     };
-    function Je(e, t) {
+    function Ve(e, t) {
       for (var a = 0; a < t.length; a++) {
         var n = t[a];
         (n.enumerable = n.enumerable || !1),
@@ -27595,10 +28897,10 @@ object-assign
           Object.defineProperty(e, n.key, n);
       }
     }
-    function Ke(e, t, a) {
-      return t && Je(e.prototype, t), a && Je(e, a), e;
+    function qe(e, t, a) {
+      return t && Ve(e.prototype, t), a && Ve(e, a), e;
     }
-    function Qe(e, t, a) {
+    function Je(e, t, a) {
       return (
         t in e
           ? Object.defineProperty(e, t, {
@@ -27611,8 +28913,8 @@ object-assign
         e
       );
     }
-    function Xe() {
-      return (Xe =
+    function Ke() {
+      return (Ke =
         Object.assign ||
         function (e) {
           for (var t = 1; t < arguments.length; t++) {
@@ -27623,7 +28925,7 @@ object-assign
           return e;
         }).apply(this, arguments);
     }
-    function Ze(e, t) {
+    function Qe(e, t) {
       var a = Object.keys(e);
       if (Object.getOwnPropertySymbols) {
         var n = Object.getOwnPropertySymbols(e);
@@ -27635,16 +28937,16 @@ object-assign
       }
       return a;
     }
-    function $e(e) {
+    function Xe(e) {
       for (var t = 1; t < arguments.length; t++) {
         var a = null != arguments[t] ? arguments[t] : {};
         t % 2
-          ? Ze(Object(a), !0).forEach(function (t) {
-              Qe(e, t, a[t]);
+          ? Qe(Object(a), !0).forEach(function (t) {
+              Je(e, t, a[t]);
             })
           : Object.getOwnPropertyDescriptors
           ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(a))
-          : Ze(Object(a)).forEach(function (t) {
+          : Qe(Object(a)).forEach(function (t) {
               Object.defineProperty(
                 e,
                 t,
@@ -27654,21 +28956,21 @@ object-assign
       }
       return e;
     }
-    function et(e) {
-      return (et = Object.setPrototypeOf
+    function Ze(e) {
+      return (Ze = Object.setPrototypeOf
         ? Object.getPrototypeOf
         : function (e) {
             return e.__proto__ || Object.getPrototypeOf(e);
           })(e);
     }
-    function tt(e, t) {
-      return (tt =
+    function $e(e, t) {
+      return ($e =
         Object.setPrototypeOf ||
         function (e, t) {
           return (e.__proto__ = t), e;
         })(e, t);
     }
-    function at(e, t) {
+    function et(e, t) {
       return !t || ("object" != typeof t && "function" != typeof t)
         ? (function (e) {
             if (void 0 === e)
@@ -27679,19 +28981,19 @@ object-assign
           })(e)
         : t;
     }
-    var nt = {
+    var tt = {
         HIDE: "__react_tooltip_hide_event",
         REBUILD: "__react_tooltip_rebuild_event",
         SHOW: "__react_tooltip_show_event",
       },
-      rt = function (e, t) {
+      at = function (e, t) {
         var a;
         "function" == typeof window.CustomEvent
           ? (a = new window.CustomEvent(e, { detail: t }))
           : (a = document.createEvent("Event")).initEvent(e, !1, !0, t),
           window.dispatchEvent(a);
       };
-    var it = function (e, t) {
+    var nt = function (e, t) {
         var a = this.state.show,
           n = this.props.id,
           r = this.isCapture(t.currentTarget),
@@ -27700,23 +29002,23 @@ object-assign
           a && "true" === i
             ? e || this.hideTooltip(t)
             : (t.currentTarget.setAttribute("currentItem", "true"),
-              ot(t.currentTarget, this.getTargetArray(n)),
+              rt(t.currentTarget, this.getTargetArray(n)),
               this.showTooltip(t));
       },
-      ot = function (e, t) {
+      rt = function (e, t) {
         for (var a = 0; a < t.length; a++)
           e !== t[a]
             ? t[a].setAttribute("currentItem", "false")
             : t[a].setAttribute("currentItem", "true");
       },
-      st = {
+      it = {
         id: "9b69f92e-d3fe-498b-b1b4-c5e63a51b0cf",
         set: function (e, t, a) {
           this.id in e
             ? (e[this.id][t] = a)
             : Object.defineProperty(e, this.id, {
                 configurable: !0,
-                value: Qe({}, t, a),
+                value: Je({}, t, a),
               });
         },
         get: function (e, t) {
@@ -27724,7 +29026,7 @@ object-assign
           if (void 0 !== a) return a[t];
         },
       };
-    var lt = function (e, t, a) {
+    var ot = function (e, t, a) {
         var n = t.respectEffect,
           r = void 0 !== n && n,
           i = t.customEvent,
@@ -27748,7 +29050,7 @@ object-assign
           }
         }
       },
-      ct = function (e, t) {
+      st = function (e, t) {
         var a = {};
         return (
           e.forEach(function (e) {
@@ -27761,27 +29063,27 @@ object-assign
           a
         );
       },
-      ut = function () {
+      lt = function () {
         return document.getElementsByTagName("body")[0];
       };
-    function dt(e, t, a, n, r, i, o) {
+    function ct(e, t, a, n, r, i, o) {
       for (
-        var s = mt(a),
+        var s = ut(a),
           l = s.width,
           c = s.height,
-          u = mt(t),
+          u = ut(t),
           d = u.width,
           m = u.height,
-          p = pt(e, t, i),
+          p = dt(e, t, i),
           _ = p.mouseX,
           h = p.mouseY,
-          f = _t(i, d, m, l, c),
-          g = ht(o),
+          f = mt(i, d, m, l, c),
+          g = pt(o),
           v = g.extraOffsetX,
           y = g.extraOffsetY,
           b = window.innerWidth,
           E = window.innerHeight,
-          L = ft(a),
+          L = _t(a),
           w = L.parentTop,
           M = L.parentLeft,
           S = function (e) {
@@ -27850,24 +29152,24 @@ object-assign
             }
       );
     }
-    var mt = function (e) {
+    var ut = function (e) {
         var t = e.getBoundingClientRect(),
           a = t.height,
           n = t.width;
         return { height: parseInt(a, 10), width: parseInt(n, 10) };
       },
-      pt = function (e, t, a) {
+      dt = function (e, t, a) {
         var n = t.getBoundingClientRect(),
           r = n.top,
           i = n.left,
-          o = mt(t),
+          o = ut(t),
           s = o.width,
           l = o.height;
         return "float" === a
           ? { mouseX: e.clientX, mouseY: e.clientY }
           : { mouseX: i + s / 2, mouseY: r + l / 2 };
       },
-      _t = function (e, t, a, n, r) {
+      mt = function (e, t, a, n, r) {
         var i, o, s, l;
         return (
           "float" === e
@@ -27883,7 +29185,7 @@ object-assign
           { top: i, bottom: s, left: l, right: o }
         );
       },
-      ht = function (e) {
+      pt = function (e) {
         var t = 0,
           a = 0;
         for (var n in ("[object String]" ===
@@ -27899,7 +29201,7 @@ object-assign
             : "right" === n && (t += parseInt(e[n], 10));
         return { extraOffsetX: t, extraOffsetY: a };
       },
-      ft = function (e) {
+      _t = function (e) {
         for (
           var t = e;
           t &&
@@ -27912,7 +29214,7 @@ object-assign
           parentLeft: (t && t.getBoundingClientRect().left) || 0,
         };
       };
-    function gt(e, t, a, n) {
+    function ht(e, t, a, n) {
       if (t) return t;
       if (null != a) return a;
       if (null === a) return null;
@@ -27927,7 +29229,7 @@ object-assign
           })
         : e;
     }
-    function vt(e) {
+    function ft(e) {
       var t = {};
       return (
         Object.keys(e)
@@ -27940,7 +29242,7 @@ object-assign
         t
       );
     }
-    function yt(e) {
+    function gt(e) {
       var t = e.length;
       return e.hasOwnProperty
         ? Array.prototype.slice.call(e)
@@ -27958,10 +29260,10 @@ object-assign
     })(
       '.__react_component_tooltip {\n  border-radius: 3px;\n  display: inline-block;\n  font-size: 13px;\n  left: -999em;\n  opacity: 0;\n  padding: 8px 21px;\n  position: fixed;\n  pointer-events: none;\n  transition: opacity 0.3s ease-out;\n  top: -999em;\n  visibility: hidden;\n  z-index: 999;\n}\n.__react_component_tooltip.allow_hover, .__react_component_tooltip.allow_click {\n  pointer-events: auto;\n}\n.__react_component_tooltip::before, .__react_component_tooltip::after {\n  content: "";\n  width: 0;\n  height: 0;\n  position: absolute;\n}\n.__react_component_tooltip.show {\n  opacity: 0.9;\n  margin-top: 0;\n  margin-left: 0;\n  visibility: visible;\n}\n.__react_component_tooltip.place-top::before {\n  border-left: 10px solid transparent;\n  border-right: 10px solid transparent;\n  bottom: -8px;\n  left: 50%;\n  margin-left: -10px;\n}\n.__react_component_tooltip.place-bottom::before {\n  border-left: 10px solid transparent;\n  border-right: 10px solid transparent;\n  top: -8px;\n  left: 50%;\n  margin-left: -10px;\n}\n.__react_component_tooltip.place-left::before {\n  border-top: 6px solid transparent;\n  border-bottom: 6px solid transparent;\n  right: -8px;\n  top: 50%;\n  margin-top: -5px;\n}\n.__react_component_tooltip.place-right::before {\n  border-top: 6px solid transparent;\n  border-bottom: 6px solid transparent;\n  left: -8px;\n  top: 50%;\n  margin-top: -5px;\n}\n.__react_component_tooltip .multi-line {\n  display: block;\n  padding: 2px 0;\n  text-align: center;\n}'
     );
-    var bt,
-      Et,
-      Lt,
-      wt = {
+    var vt,
+      yt,
+      bt,
+      Et = {
         dark: {
           text: "#fff",
           background: "#222",
@@ -27999,7 +29301,7 @@ object-assign
           arrow: "#fff",
         },
       };
-    function Mt(e, t, a, n) {
+    function Lt(e, t, a, n) {
       return (function (e, t) {
         var a = t.text,
           n = t.background,
@@ -28065,7 +29367,7 @@ object-assign
             i = e.border,
             o = e.arrow ? e.arrow : e.background,
             s = (function (e) {
-              return wt[e] ? $e({}, wt[e]) : void 0;
+              return Et[e] ? Xe({}, Et[e]) : void 0;
             })(t);
           n && (s.text = n);
           r && (s.background = r);
@@ -28075,18 +29377,18 @@ object-assign
         })(t, a, n)
       );
     }
-    var St,
-      Tt,
-      Dt =
+    var wt,
+      Mt,
+      St =
         (function (e) {
           (e.hide = function (e) {
-            rt(nt.HIDE, { target: e });
+            at(tt.HIDE, { target: e });
           }),
             (e.rebuild = function () {
-              rt(nt.REBUILD);
+              at(tt.REBUILD);
             }),
             (e.show = function (e) {
-              rt(nt.SHOW, { target: e });
+              at(tt.SHOW, { target: e });
             }),
             (e.prototype.globalRebuild = function () {
               this.mount && (this.unbindListener(), this.bindListener());
@@ -28104,30 +29406,30 @@ object-assign
               }
             });
         })(
-          (bt =
+          (vt =
             (function (e) {
               (e.prototype.bindWindowEvents = function (e) {
-                window.removeEventListener(nt.HIDE, this.globalHide),
-                  window.addEventListener(nt.HIDE, this.globalHide, !1),
-                  window.removeEventListener(nt.REBUILD, this.globalRebuild),
-                  window.addEventListener(nt.REBUILD, this.globalRebuild, !1),
-                  window.removeEventListener(nt.SHOW, this.globalShow),
-                  window.addEventListener(nt.SHOW, this.globalShow, !1),
+                window.removeEventListener(tt.HIDE, this.globalHide),
+                  window.addEventListener(tt.HIDE, this.globalHide, !1),
+                  window.removeEventListener(tt.REBUILD, this.globalRebuild),
+                  window.addEventListener(tt.REBUILD, this.globalRebuild, !1),
+                  window.removeEventListener(tt.SHOW, this.globalShow),
+                  window.addEventListener(tt.SHOW, this.globalShow, !1),
                   e &&
                     (window.removeEventListener("resize", this.onWindowResize),
                     window.addEventListener("resize", this.onWindowResize, !1));
               }),
                 (e.prototype.unbindWindowEvents = function () {
-                  window.removeEventListener(nt.HIDE, this.globalHide),
-                    window.removeEventListener(nt.REBUILD, this.globalRebuild),
-                    window.removeEventListener(nt.SHOW, this.globalShow),
+                  window.removeEventListener(tt.HIDE, this.globalHide),
+                    window.removeEventListener(tt.REBUILD, this.globalRebuild),
+                    window.removeEventListener(tt.SHOW, this.globalShow),
                     window.removeEventListener("resize", this.onWindowResize);
                 }),
                 (e.prototype.onWindowResize = function () {
                   this.mount && this.hideTooltip();
                 });
             })(
-              (bt =
+              (vt =
                 (function (e) {
                   (e.prototype.isCustomEvent = function (e) {
                     return this.state.event || !!e.getAttribute("data-event");
@@ -28140,9 +29442,9 @@ object-assign
                         i = e.getAttribute("data-event") || n,
                         o = e.getAttribute("data-event-off") || r;
                       i.split(" ").forEach(function (a) {
-                        e.removeEventListener(a, st.get(e, a));
-                        var n = it.bind(t, o);
-                        st.set(e, a, n), e.addEventListener(a, n, !1);
+                        e.removeEventListener(a, it.get(e, a));
+                        var n = nt.bind(t, o);
+                        it.set(e, a, n), e.addEventListener(a, n, !1);
                       }),
                         o &&
                           o.split(" ").forEach(function (a) {
@@ -28156,11 +29458,11 @@ object-assign
                         n = t.eventOff,
                         r = a || e.getAttribute("data-event"),
                         i = n || e.getAttribute("data-event-off");
-                      e.removeEventListener(r, st.get(e, a)),
+                      e.removeEventListener(r, it.get(e, a)),
                         i && e.removeEventListener(i, this.hideTooltip);
                     });
                 })(
-                  (bt =
+                  (vt =
                     (function (e) {
                       e.prototype.isCapture = function (e) {
                         return (
@@ -28170,7 +29472,7 @@ object-assign
                         );
                       };
                     })(
-                      (bt =
+                      (vt =
                         (function (e) {
                           e.prototype.getEffect = function (e) {
                             return (
@@ -28180,7 +29482,7 @@ object-assign
                             );
                           };
                         })(
-                          (bt =
+                          (vt =
                             (function (e) {
                               (e.prototype.isBodyMode = function () {
                                 return !!this.props.bodyMode;
@@ -28192,9 +29494,9 @@ object-assign
                                     r = a.eventOff,
                                     i = a.possibleCustomEvents,
                                     o = a.possibleCustomEventsOff,
-                                    s = ut(),
-                                    l = ct(e, "data-event"),
-                                    c = ct(e, "data-event-off");
+                                    s = lt(),
+                                    l = st(e, "data-event"),
+                                    c = st(e, "data-event-off");
                                   null != n && (l[n] = !0),
                                     null != r && (c[r] = !0),
                                     i.split(" ").forEach(function (e) {
@@ -28206,47 +29508,47 @@ object-assign
                                     this.unbindBodyListener(s);
                                   var u = (this.bodyModeListeners = {});
                                   for (var d in (null == n &&
-                                    ((u.mouseover = lt.bind(
+                                    ((u.mouseover = ot.bind(
                                       this,
                                       this.showTooltip,
                                       {}
                                     )),
-                                    (u.mousemove = lt.bind(
+                                    (u.mousemove = ot.bind(
                                       this,
                                       this.updateTooltip,
                                       { respectEffect: !0 }
                                     )),
-                                    (u.mouseout = lt.bind(
+                                    (u.mouseout = ot.bind(
                                       this,
                                       this.hideTooltip,
                                       {}
                                     ))),
                                   l))
-                                    u[d] = lt.bind(
+                                    u[d] = ot.bind(
                                       this,
                                       function (e) {
                                         var a =
                                           e.currentTarget.getAttribute(
                                             "data-event-off"
                                           ) || r;
-                                        it.call(t, a, e);
+                                        nt.call(t, a, e);
                                       },
                                       { customEvent: !0 }
                                     );
                                   for (var m in c)
-                                    u[m] = lt.bind(this, this.hideTooltip, {
+                                    u[m] = ot.bind(this, this.hideTooltip, {
                                       customEvent: !0,
                                     });
                                   for (var p in u) s.addEventListener(p, u[p]);
                                 }),
                                 (e.prototype.unbindBodyListener = function (e) {
-                                  e = e || ut();
+                                  e = e || lt();
                                   var t = this.bodyModeListeners;
                                   for (var a in t)
                                     e.removeEventListener(a, t[a]);
                                 });
                             })(
-                              ((Lt = Et = (function (e) {
+                              ((bt = yt = (function (e) {
                                 function t(e) {
                                   var a;
                                   return (
@@ -28256,11 +29558,11 @@ object-assign
                                           "Cannot call a class as a function"
                                         );
                                     })(this, t),
-                                    ((a = at(
+                                    ((a = et(
                                       this,
-                                      et(t).call(this, e)
+                                      Ze(t).call(this, e)
                                     )).state = {
-                                      uuid: e.uuid || "t" + qe(),
+                                      uuid: e.uuid || "t" + ze(),
                                       place: e.place || "top",
                                       desiredPlace: e.place || "top",
                                       type: "dark",
@@ -28277,7 +29579,7 @@ object-assign
                                       eventOff: e.eventOff || null,
                                       currentEvent: null,
                                       currentTarget: null,
-                                      ariaProps: vt(e),
+                                      ariaProps: ft(e),
                                       isEmptyTip: !1,
                                       disable: !1,
                                       possibleCustomEvents:
@@ -28323,54 +29625,54 @@ object-assign
                                         },
                                       }
                                     )),
-                                      t && tt(e, t);
+                                      t && $e(e, t);
                                   })(t, e),
-                                  Ke(t, null, [
+                                  qe(t, null, [
                                     {
                                       key: "propTypes",
                                       get: function () {
                                         return {
-                                          uuid: Ge.a.string,
-                                          children: Ge.a.any,
-                                          place: Ge.a.string,
-                                          type: Ge.a.string,
-                                          effect: Ge.a.string,
-                                          offset: Ge.a.object,
-                                          multiline: Ge.a.bool,
-                                          border: Ge.a.bool,
-                                          textColor: Ge.a.string,
-                                          backgroundColor: Ge.a.string,
-                                          borderColor: Ge.a.string,
-                                          arrowColor: Ge.a.string,
-                                          insecure: Ge.a.bool,
-                                          class: Ge.a.string,
-                                          className: Ge.a.string,
-                                          id: Ge.a.string,
-                                          html: Ge.a.bool,
-                                          delayHide: Ge.a.number,
-                                          delayUpdate: Ge.a.number,
-                                          delayShow: Ge.a.number,
-                                          event: Ge.a.string,
-                                          eventOff: Ge.a.string,
-                                          isCapture: Ge.a.bool,
-                                          globalEventOff: Ge.a.string,
-                                          getContent: Ge.a.any,
-                                          afterShow: Ge.a.func,
-                                          afterHide: Ge.a.func,
-                                          overridePosition: Ge.a.func,
-                                          disable: Ge.a.bool,
-                                          scrollHide: Ge.a.bool,
-                                          resizeHide: Ge.a.bool,
-                                          wrapper: Ge.a.string,
-                                          bodyMode: Ge.a.bool,
-                                          possibleCustomEvents: Ge.a.string,
-                                          possibleCustomEventsOff: Ge.a.string,
-                                          clickable: Ge.a.bool,
+                                          uuid: Pe.a.string,
+                                          children: Pe.a.any,
+                                          place: Pe.a.string,
+                                          type: Pe.a.string,
+                                          effect: Pe.a.string,
+                                          offset: Pe.a.object,
+                                          multiline: Pe.a.bool,
+                                          border: Pe.a.bool,
+                                          textColor: Pe.a.string,
+                                          backgroundColor: Pe.a.string,
+                                          borderColor: Pe.a.string,
+                                          arrowColor: Pe.a.string,
+                                          insecure: Pe.a.bool,
+                                          class: Pe.a.string,
+                                          className: Pe.a.string,
+                                          id: Pe.a.string,
+                                          html: Pe.a.bool,
+                                          delayHide: Pe.a.number,
+                                          delayUpdate: Pe.a.number,
+                                          delayShow: Pe.a.number,
+                                          event: Pe.a.string,
+                                          eventOff: Pe.a.string,
+                                          isCapture: Pe.a.bool,
+                                          globalEventOff: Pe.a.string,
+                                          getContent: Pe.a.any,
+                                          afterShow: Pe.a.func,
+                                          afterHide: Pe.a.func,
+                                          overridePosition: Pe.a.func,
+                                          disable: Pe.a.bool,
+                                          scrollHide: Pe.a.bool,
+                                          resizeHide: Pe.a.bool,
+                                          wrapper: Pe.a.string,
+                                          bodyMode: Pe.a.bool,
+                                          possibleCustomEvents: Pe.a.string,
+                                          possibleCustomEventsOff: Pe.a.string,
+                                          clickable: Pe.a.bool,
                                         };
                                       },
                                     },
                                   ]),
-                                  Ke(
+                                  qe(
                                     t,
                                     [
                                       {
@@ -28433,7 +29735,7 @@ object-assign
                                           } else
                                             t = "[data-tip]:not([data-for])";
                                           return (
-                                            yt(
+                                            gt(
                                               document.getElementsByTagName("*")
                                             )
                                               .filter(function (e) {
@@ -28441,7 +29743,7 @@ object-assign
                                               })
                                               .forEach(function (e) {
                                                 a = a.concat(
-                                                  yt(
+                                                  gt(
                                                     e.shadowRoot.querySelectorAll(
                                                       t
                                                     )
@@ -28449,7 +29751,7 @@ object-assign
                                                 );
                                               }),
                                             a.concat(
-                                              yt(document.querySelectorAll(t))
+                                              gt(document.querySelectorAll(t))
                                             )
                                           );
                                         },
@@ -28569,7 +29871,7 @@ object-assign
                                                 ? a[0] &&
                                                   a[0](this.state.originTooltip)
                                                 : a(this.state.originTooltip)),
-                                            gt(
+                                            ht(
                                               this.state.originTooltip,
                                               n,
                                               e,
@@ -28642,7 +29944,7 @@ object-assign
                                                 ) ||
                                                 this.props.offset ||
                                                 {},
-                                              m = dt(
+                                              m = ct(
                                                 e,
                                                 e.currentTarget,
                                                 this.tooltipRef,
@@ -28785,7 +30087,7 @@ object-assign
                                                               var e =
                                                                   f.props
                                                                     .getContent,
-                                                                t = gt(
+                                                                t = ht(
                                                                   i,
                                                                   "",
                                                                   e[0](),
@@ -28974,7 +30276,7 @@ object-assign
                                             o = t.effect,
                                             s = t.offset,
                                             l = this.tooltipRef,
-                                            c = dt(a, n, l, r, i, o, s);
+                                            c = ct(a, n, l, r, i, o, s);
                                           if (
                                             (c.position &&
                                               this.props.overridePosition &&
@@ -29042,7 +30344,7 @@ object-assign
                                             s = a.disable,
                                             l = this.getTooltipContent(),
                                             c = this.isEmptyTip(l),
-                                            u = Mt(
+                                            u = Lt(
                                               this.state.uuid,
                                               this.state.customColors,
                                               this.state.type,
@@ -29083,7 +30385,7 @@ object-assign
                                               .concat(u, "</style>");
                                             return o.a.createElement(
                                               m,
-                                              Xe(
+                                              Ke(
                                                 {
                                                   className: "".concat(p),
                                                   id: this.props.id,
@@ -29103,7 +30405,7 @@ object-assign
                                           }
                                           return o.a.createElement(
                                             m,
-                                            Xe(
+                                            Ke(
                                               {
                                                 className: "".concat(p),
                                                 id: this.props.id,
@@ -29131,13 +30433,13 @@ object-assign
                                         key: "getDerivedStateFromProps",
                                         value: function (e, t) {
                                           var a = t.ariaProps,
-                                            n = vt(e);
+                                            n = ft(e);
                                           return Object.keys(n).some(function (
                                             e
                                           ) {
                                             return n[e] !== a[e];
                                           })
-                                            ? $e({}, t, { ariaProps: n })
+                                            ? Xe({}, t, { ariaProps: n })
                                             : null;
                                         },
                                       },
@@ -29146,15 +30448,15 @@ object-assign
                                   t
                                 );
                               })(o.a.Component)),
-                              Qe(Et, "defaultProps", {
+                              Je(yt, "defaultProps", {
                                 insecure: !0,
                                 resizeHide: !0,
                                 wrapper: "div",
                                 clickable: !1,
                               }),
-                              Qe(Et, "supportedWrappers", ["div", "span"]),
-                              Qe(Et, "displayName", "ReactTooltip"),
-                              ((St = bt = Lt).prototype.bindRemovalTracker = function () {
+                              Je(yt, "supportedWrappers", ["div", "span"]),
+                              Je(yt, "displayName", "ReactTooltip"),
+                              ((wt = vt = bt).prototype.bindRemovalTracker = function () {
                                 var e = this,
                                   t =
                                     window.MutationObserver ||
@@ -29181,20 +30483,20 @@ object-assign
                                     (this.removalTracker = a);
                                 }
                               }),
-                              (bt =
-                                void (St.prototype.unbindRemovalTracker = function () {
+                              (vt =
+                                void (wt.prototype.unbindRemovalTracker = function () {
                                   this.removalTracker &&
                                     (this.removalTracker.disconnect(),
                                     (this.removalTracker = null));
-                                }) || bt))
-                            ) || bt)
-                        ) || bt)
-                    ) || bt)
-                ) || bt)
-            ) || bt)
-        ) || bt,
-      kt = (a("hmtA"), (0, a("SjWX").detect)());
-    function Ot() {
+                                }) || vt))
+                            ) || vt)
+                        ) || vt)
+                    ) || vt)
+                ) || vt)
+            ) || vt)
+        ) || vt,
+      Tt = (a("hmtA"), (0, a("SjWX").detect)());
+    function Dt() {
       return { width: window.innerWidth, height: window.innerHeight };
     }
     !(function (e) {
@@ -29206,8 +30508,8 @@ object-assign
         (e[(e.LeftBottom = 5)] = "LeftBottom"),
         (e[(e.CenterBottom = 6)] = "CenterBottom"),
         (e[(e.RightBottom = 7)] = "RightBottom");
-    })(Tt || (Tt = {}));
-    var jt = function (e) {
+    })(Mt || (Mt = {}));
+    var kt = function (e) {
         var t = e.heightClassName,
           a = e.headerPrefix,
           r = e.headerText,
@@ -29220,13 +30522,13 @@ object-assign
           h = e.centerWidth,
           f = e.children,
           g = (function () {
-            var e = Object(i.useState)(Ot()),
+            var e = Object(i.useState)(Dt()),
               t = e[0],
               a = e[1];
             return (
               Object(i.useEffect)(function () {
                 function e() {
-                  a(Ot());
+                  a(Dt());
                 }
                 return (
                   window.addEventListener("resize", e),
@@ -29240,9 +30542,9 @@ object-assign
           })();
         g.height;
         return (
-          g.width < h && (c = Tt.CenterBottom),
+          g.width < h && (c = Mt.CenterBottom),
           o.a.createElement(
-            Re.a,
+            Ye.a,
             {
               offset: 1500,
               once: !0,
@@ -29250,19 +30552,19 @@ object-assign
             },
             o.a.createElement(
               "div",
-              { className: Object(ce.a)(je.a.BattlepassSegment, t) },
+              { className: Object(ce.a)(ke.a.BattlepassSegment, t) },
               m &&
                 o.a.createElement(
                   "video",
                   {
-                    className: je.a.BackgroundVideo,
+                    className: ke.a.BackgroundVideo,
                     autoPlay: !0,
                     preload: "auto",
                     muted: !0,
                     loop: !0,
                     playsInline: !0,
                   },
-                  "edge" != kt.name &&
+                  "edge" != Tt.name &&
                     o.a.createElement("source", {
                       type: "video/webm",
                       src: p.a.VIDEO_URL + "international2020/" + m + ".webm",
@@ -29278,37 +30580,37 @@ object-assign
                   Object(n.a)(
                     {
                       className: Object(ce.a)(
-                        je.a.Text,
-                        u && je.a.NeverTradeable,
-                        new Set([Tt.LeftTop, Tt.LeftMiddle, Tt.LeftBottom]).has(
+                        ke.a.Text,
+                        u && ke.a.NeverTradeable,
+                        new Set([Mt.LeftTop, Mt.LeftMiddle, Mt.LeftBottom]).has(
                           c
-                        ) && je.a.Left,
-                        new Set([Tt.CenterTop, Tt.CenterBottom]).has(c) &&
-                          je.a.Center,
+                        ) && ke.a.Left,
+                        new Set([Mt.CenterTop, Mt.CenterBottom]).has(c) &&
+                          ke.a.Center,
                         new Set([
-                          Tt.RightTop,
-                          Tt.RightMiddle,
-                          Tt.RightBottom,
-                        ]).has(c) && je.a.Right,
-                        new Set([Tt.LeftTop, Tt.CenterTop, Tt.RightTop]).has(
+                          Mt.RightTop,
+                          Mt.RightMiddle,
+                          Mt.RightBottom,
+                        ]).has(c) && ke.a.Right,
+                        new Set([Mt.LeftTop, Mt.CenterTop, Mt.RightTop]).has(
                           c
-                        ) && je.a.Top,
-                        new Set([Tt.LeftMiddle, Tt.RightMiddle]).has(c) &&
-                          je.a.Middle,
+                        ) && ke.a.Top,
+                        new Set([Mt.LeftMiddle, Mt.RightMiddle]).has(c) &&
+                          ke.a.Middle,
                         new Set([
-                          Tt.LeftBottom,
-                          Tt.CenterBottom,
-                          Tt.RightBottom,
-                        ]).has(c) && je.a.Bottom
+                          Mt.LeftBottom,
+                          Mt.CenterBottom,
+                          Mt.RightBottom,
+                        ]).has(c) && ke.a.Bottom
                       ),
                     },
-                    (c == Tt.CenterTop || c == Tt.CenterBottom) && {
+                    (c == Mt.CenterTop || c == Mt.CenterBottom) && {
                       "data-aos": "fade-in",
                     },
-                    (c == Tt.LeftTop || c == Tt.LeftBottom) && {
+                    (c == Mt.LeftTop || c == Mt.LeftBottom) && {
                       "data-aos": "fade-in",
                     },
-                    (c == Tt.RightTop || c == Tt.RightBottom) && {
+                    (c == Mt.RightTop || c == Mt.RightBottom) && {
                       "data-aos": "fade-in",
                     }
                   ),
@@ -29317,9 +30619,9 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleOverline,
-                          je.a.TextColorGold,
-                          je.a.HeaderPrefix
+                          ke.a.TextStyleOverline,
+                          ke.a.TextColorGold,
+                          ke.a.HeaderPrefix
                         ),
                       },
                       Object(_.a)(a)
@@ -29329,10 +30631,10 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleHeading,
-                          je.a.TextColorGoldGradient,
-                          je.a.TextColorGoldGlow,
-                          je.a.Header
+                          ke.a.TextStyleHeading,
+                          ke.a.TextColorGoldGradient,
+                          ke.a.TextColorGoldGlow,
+                          ke.a.Header
                         ),
                       },
                       Object(_.a)(r)
@@ -29342,9 +30644,9 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleBody,
-                          je.a.TextColorLightestGrey,
-                          je.a.Body
+                          ke.a.TextStyleBody,
+                          ke.a.TextColorLightestGrey,
+                          ke.a.Body
                         ),
                       },
                       Object(_.a)(s)
@@ -29356,9 +30658,9 @@ object-assign
                   "div",
                   {
                     className: Object(ce.a)(
-                      je.a.TextStyleFootnote,
-                      je.a.TextColorLighterGold,
-                      je.a.Footer
+                      ke.a.TextStyleFootnote,
+                      ke.a.TextColorLighterGold,
+                      ke.a.Footer
                     ),
                   },
                   Object(_.a)("#battlepass_never_tradeable")
@@ -29368,11 +30670,11 @@ object-assign
                   "div",
                   {
                     className: Object(ce.a)(
-                      je.a.LevelReward,
-                      d <= 80 && je.a.Bronze,
-                      d > 80 && d <= 225 && je.a.Silver,
-                      d > 225 && d <= 1e3 && je.a.Gold,
-                      d > 1e3 && je.a.Platium
+                      ke.a.LevelReward,
+                      d <= 80 && ke.a.Bronze,
+                      d > 80 && d <= 225 && ke.a.Silver,
+                      d > 225 && d <= 1e3 && ke.a.Gold,
+                      d > 1e3 && ke.a.Platium
                     ),
                     style: {
                       background:
@@ -29383,56 +30685,56 @@ object-assign
                     "data-aos": "slide-right",
                   },
                   o.a.createElement("img", {
-                    className: je.a.StoneLeft,
+                    className: ke.a.StoneLeft,
                     src: p.a.IMG_URL + "international2020/stone_left.png",
                   }),
                   o.a.createElement("img", {
-                    className: je.a.LevelShield,
+                    className: ke.a.LevelShield,
                     src: p.a.IMG_URL + "international2020/bp_level_shield.png",
                   }),
                   o.a.createElement(
                     "div",
                     {
                       className: Object(ce.a)(
-                        je.a.TextStyleOverline,
-                        je.a.LevelText
+                        ke.a.TextStyleOverline,
+                        ke.a.LevelText
                       ),
                     },
                     Object(_.a)("#battlepass_level", d)
                   )
                 ),
-              o.a.createElement("div", { className: je.a.Content }, f)
+              o.a.createElement("div", { className: ke.a.Content }, f)
             )
           )
         );
       },
-      It = function () {
-        return o.a.createElement(Dt, {
+      Ot = function () {
+        return o.a.createElement(St, {
           effect: "solid",
           borderColor: "#936725",
           arrowColor: "#1B1B21",
           backgroundColor: "#1B1B21",
           textColor: "#ECD393",
           border: !0,
-          className: je.a.Tooltip,
+          className: ke.a.Tooltip,
         });
       },
-      Nt = function (e) {
+      jt = function (e) {
         var t = e.level,
           a = e.andAbove;
         return o.a.createElement(
           "div",
-          { className: je.a.BPLevelContainer },
+          { className: ke.a.BPLevelContainer },
           o.a.createElement("img", {
-            className: je.a.BPShieldSmall,
+            className: ke.a.BPShieldSmall,
             src: p.a.IMG_URL + "international2020/bp_shield_small.png",
           }),
           o.a.createElement(
             "div",
             {
               className: Object(ce.a)(
-                je.a.TextStyleFootnote,
-                je.a.TextColorDarkGold
+                ke.a.TextStyleFootnote,
+                ke.a.TextColorDarkGold
               ),
             },
             Object(_.a)("#battlepass_bp_level", t),
@@ -29440,19 +30742,19 @@ object-assign
           )
         );
       },
-      Ct = function (e) {
+      It = function (e) {
         var t = e.heroName;
         return o.a.createElement("img", {
-          className: je.a.BPHeroImage,
+          className: ke.a.BPHeroImage,
           src: p.a.IMG_URL + "heroes/wide/" + t + ".png",
         });
       },
-      At = function (e) {
+      Nt = function (e) {
         var t = e.video;
         return o.a.createElement(
           "video",
           {
-            className: je.a.SeasonalEffectVideo,
+            className: ke.a.SeasonalEffectVideo,
             autoPlay: !0,
             preload: "auto",
             muted: !0,
@@ -29470,7 +30772,7 @@ object-assign
           })
         );
       },
-      Yt = function (e) {
+      Ct = function (e) {
         var t = e.audiofiles,
           a = Object(i.useState)(0),
           n = a[0],
@@ -29478,7 +30780,7 @@ object-assign
         return o.a.createElement(
           "div",
           {
-            className: je.a.PlayButton,
+            className: ke.a.PlayButton,
             onClick: function () {
               new Audio(
                 p.a.AUDIO_URL + "international2020/" + t[n] + ".wav"
@@ -29487,17 +30789,17 @@ object-assign
             },
           },
           o.a.createElement("img", {
-            className: je.a.Arrow,
+            className: ke.a.Arrow,
             src: p.a.IMG_URL + "international2020/button_arrow.png",
           })
         );
       },
-      xt = function (e) {
+      At = function (e) {
         var t = e.index,
           a = e.heroLeft,
           n = e.heroRight,
           r = e.video,
-          s = Object(i.useContext)(Pe.c),
+          s = Object(i.useContext)(xe.c),
           l = Object(i.useRef)();
         return (
           Object(i.useEffect)(
@@ -29516,13 +30818,13 @@ object-assign
           ),
           o.a.createElement(
             "div",
-            { className: je.a.ImmortalTreasureSet },
+            { className: ke.a.ImmortalTreasureSet },
             o.a.createElement(
               "div",
-              { className: je.a.VideoContainer },
+              { className: ke.a.VideoContainer },
               a &&
                 o.a.createElement("img", {
-                  className: Object(ce.a)(je.a.HeroImage, je.a.Left),
+                  className: Object(ce.a)(ke.a.HeroImage, ke.a.Left),
                   src:
                     p.a.IMG_URL +
                     "international2020/immortals/art/" +
@@ -29533,7 +30835,7 @@ object-assign
                 "video",
                 {
                   ref: l,
-                  className: je.a.ImmortalVideo,
+                  className: ke.a.ImmortalVideo,
                   autoPlay: !0,
                   preload: "auto",
                   muted: !0,
@@ -29558,7 +30860,7 @@ object-assign
               ),
               n &&
                 o.a.createElement("img", {
-                  className: Object(ce.a)(je.a.HeroImage, je.a.Right),
+                  className: Object(ce.a)(ke.a.HeroImage, ke.a.Right),
                   src:
                     p.a.IMG_URL +
                     "international2020/immortals/art/" +
@@ -29569,9 +30871,9 @@ object-assign
           )
         );
       },
-      Rt = function (e) {
+      Yt = function (e) {
         var t = e.treasureID,
-          a = Object(i.useContext)(Pe.c),
+          a = Object(i.useContext)(xe.c),
           n = Object(i.useState)(a.state.currentSlide),
           r = n[0],
           s = n[1];
@@ -29592,14 +30894,14 @@ object-assign
           ),
           o.a.createElement(
             "div",
-            { className: je.a.NameAndDesc },
+            { className: ke.a.NameAndDesc },
             o.a.createElement(
               "div",
               {
                 className: Object(ce.a)(
-                  je.a.TextStyleSmallHeading,
-                  je.a.TextColorLightestGold,
-                  je.a.ImmortalName
+                  ke.a.TextStyleSmallHeading,
+                  ke.a.TextColorLightestGold,
+                  ke.a.ImmortalName
                 ),
               },
               Object(_.a)("#battlepass_immortal_" + t + "_" + (r + 1) + "_name")
@@ -29608,9 +30910,9 @@ object-assign
               "div",
               {
                 className: Object(ce.a)(
-                  je.a.TextStyleBody,
-                  je.a.TextColorLightestGrey,
-                  je.a.ImmortalDesc
+                  ke.a.TextStyleBody,
+                  ke.a.TextColorLightestGrey,
+                  ke.a.ImmortalDesc
                 ),
               },
               Object(_.a)("#battlepass_immortal_" + t + "_" + (r + 1) + "_desc")
@@ -29618,7 +30920,7 @@ object-assign
           )
         );
       },
-      Pt = function (e) {
+      xt = function (e) {
         var t = e.heroName,
           a = e.rare,
           n = e.veryrare,
@@ -29628,18 +30930,18 @@ object-assign
           "div",
           {
             className: Object(ce.a)(
-              je.a.ImmortalDot,
-              a && je.a.Rare,
-              n && je.a.VeryRare,
-              r && je.a.UltraRare,
-              i && je.a.CosmicallyRare
+              ke.a.ImmortalDot,
+              a && ke.a.Rare,
+              n && ke.a.VeryRare,
+              r && ke.a.UltraRare,
+              i && ke.a.CosmicallyRare
             ),
           },
-          o.a.createElement(Ct, { heroName: t })
+          o.a.createElement(It, { heroName: t })
         );
       },
-      Ht = function () {
-        var e = Object(i.useContext)(Pe.c),
+      Rt = function () {
+        var e = Object(i.useContext)(xe.c),
           t = Object(i.useState)(e.state.currentSlide),
           a = (t[0], t[1]);
         return (
@@ -29661,39 +30963,39 @@ object-assign
             "div",
             {
               className: Object(ce.a)(
-                je.a.TextStyleSmallHeading,
-                je.a.TextColorWhite,
-                je.a.SprayName
+                ke.a.TextStyleSmallHeading,
+                ke.a.TextColorWhite,
+                ke.a.SprayName
               ),
             },
             Object(_.a)("")
           )
         );
       },
-      Gt = function (e) {
+      Pt = function (e) {
         var t = e.spray,
           a = e.level;
         return o.a.createElement(
           "div",
-          { className: je.a.SprayDot },
+          { className: ke.a.SprayDot },
           o.a.createElement("img", {
-            className: je.a.SprayIcon,
+            className: ke.a.SprayIcon,
             src: p.a.IMG_URL + "international2020/sprays/spray_" + t + ".png",
           }),
           o.a.createElement(
             "div",
             {
               className: Object(ce.a)(
-                je.a.TextStyleFootnote,
-                je.a.TextColorGold
+                ke.a.TextStyleFootnote,
+                ke.a.TextColorGold
               ),
             },
             a
           )
         );
       },
-      Bt = function () {
-        var e = Object(i.useContext)(Pe.c),
+      Ht = function () {
+        var e = Object(i.useContext)(xe.c),
           t = Object(i.useState)(e.state.currentSlide),
           a = t[0],
           n = t[1];
@@ -29714,14 +31016,14 @@ object-assign
           ),
           o.a.createElement(
             "div",
-            { className: je.a.NameAndDesc },
+            { className: ke.a.NameAndDesc },
             o.a.createElement(
               "div",
               {
                 className: Object(ce.a)(
-                  je.a.TextStyleSmallHeading,
-                  je.a.TextColorLightestGold,
-                  je.a.AssistantName
+                  ke.a.TextStyleSmallHeading,
+                  ke.a.TextColorLightestGold,
+                  ke.a.AssistantName
                 ),
               },
               Object(_.a)("#battlepass_assistant_" + (a + 1))
@@ -29730,9 +31032,9 @@ object-assign
               "div",
               {
                 className: Object(ce.a)(
-                  je.a.TextStyleBody,
-                  je.a.TextColorLightestGrey,
-                  je.a.AssistantDesc
+                  ke.a.TextStyleBody,
+                  ke.a.TextColorLightestGrey,
+                  ke.a.AssistantDesc
                 ),
               },
               Object(_.a)("#battlepass_assistant_desc_" + (a + 1))
@@ -29740,10 +31042,10 @@ object-assign
           )
         );
       },
-      Ut = function (e) {
+      Gt = function (e) {
         var t = e.video,
           a = e.index,
-          n = Object(i.useContext)(Pe.c),
+          n = Object(i.useContext)(xe.c),
           r = Object(i.useRef)();
         return (
           Object(i.useEffect)(
@@ -29764,7 +31066,7 @@ object-assign
             "video",
             {
               ref: r,
-              className: je.a.BackgroundVideo,
+              className: ke.a.BackgroundVideo,
               autoPlay: !0,
               preload: "auto",
               muted: !0,
@@ -29784,13 +31086,13 @@ object-assign
           )
         );
       },
-      Ft = function (e) {
+      Bt = function (e) {
         var t = e.consumable;
         return o.a.createElement(
           "div",
-          { className: je.a.ConsumableDot },
+          { className: ke.a.ConsumableDot },
           o.a.createElement("img", {
-            className: je.a.ConsumableIcon,
+            className: ke.a.ConsumableIcon,
             src:
               p.a.IMG_URL +
               "international2020/consumables/consumable_" +
@@ -29799,8 +31101,8 @@ object-assign
           })
         );
       },
-      Wt = function () {
-        var e = Object(i.useContext)(Pe.c),
+      Ut = function () {
+        var e = Object(i.useContext)(xe.c),
           t = Object(i.useState)(e.state.currentSlide),
           a = t[0],
           n = t[1];
@@ -29821,14 +31123,14 @@ object-assign
           ),
           o.a.createElement(
             "div",
-            { className: je.a.NameAndDesc },
+            { className: ke.a.NameAndDesc },
             o.a.createElement(
               "div",
               {
                 className: Object(ce.a)(
-                  je.a.TextStyleSmallHeading,
-                  je.a.TextColorLightestGold,
-                  je.a.ConsumablesName
+                  ke.a.TextStyleSmallHeading,
+                  ke.a.TextColorLightestGold,
+                  ke.a.ConsumablesName
                 ),
               },
               Object(_.a)("#battlepass_consumable_" + (a + 1))
@@ -29837,9 +31139,9 @@ object-assign
               "div",
               {
                 className: Object(ce.a)(
-                  je.a.TextStyleBody,
-                  je.a.TextColorLightestGrey,
-                  je.a.ConsumablesDesc
+                  ke.a.TextStyleBody,
+                  ke.a.TextColorLightestGrey,
+                  ke.a.ConsumablesDesc
                 ),
               },
               Object(_.a)("#battlepass_consumable_desc_" + (a + 1))
@@ -29847,8 +31149,8 @@ object-assign
           )
         );
       },
-      zt = function () {
-        var e = Object(i.useContext)(Pe.c),
+      Ft = function () {
+        var e = Object(i.useContext)(xe.c),
           t = Object(i.useState)(e.state.currentSlide),
           a = t[0],
           n = t[1];
@@ -29871,23 +31173,23 @@ object-assign
             "div",
             {
               className: Object(ce.a)(
-                je.a.TextStyleSmallHeading,
-                je.a.TextColorWhite,
-                je.a.SeasonalEffectName
+                ke.a.TextStyleSmallHeading,
+                ke.a.TextColorWhite,
+                ke.a.SeasonalEffectName
               ),
             },
             Object(_.a)("#battlepass_seasonal_effect_name_" + (a + 1))
           )
         );
       },
-      Vt = function (e) {
+      Wt = function (e) {
         var t = e.effect,
           a = e.level;
         return o.a.createElement(
           "div",
-          { className: je.a.SeasonalEffectDot },
+          { className: ke.a.SeasonalEffectDot },
           o.a.createElement("img", {
-            className: je.a.SeasonalEffectIcon,
+            className: ke.a.SeasonalEffectIcon,
             src:
               p.a.IMG_URL +
               "international2020/seasonal_effects/seasonal_effect_icon_" +
@@ -29898,16 +31200,16 @@ object-assign
             "div",
             {
               className: Object(ce.a)(
-                je.a.TextStyleFootnote,
-                je.a.TextColorGold
+                ke.a.TextStyleFootnote,
+                ke.a.TextColorGold
               ),
             },
             a
           )
         );
       },
-      qt = function () {
-        var e = Object(i.useContext)(Pe.c),
+      zt = function () {
+        var e = Object(i.useContext)(xe.c),
           t = Object(i.useState)(e.state.currentSlide),
           a = t[0],
           n = t[1];
@@ -29930,23 +31232,23 @@ object-assign
             "div",
             {
               className: Object(ce.a)(
-                je.a.TextStyleSmallHeading,
-                je.a.TextColorWhite,
-                je.a.RiverVialName
+                ke.a.TextStyleSmallHeading,
+                ke.a.TextColorWhite,
+                ke.a.RiverVialName
               ),
             },
             Object(_.a)("#battlepass_river_vial_name_" + (a + 1))
           )
         );
       },
-      Jt = function (e) {
+      Vt = function (e) {
         var t = e.vial,
           a = e.level;
         return o.a.createElement(
           "div",
-          { className: je.a.RiverVialDot },
+          { className: ke.a.RiverVialDot },
           o.a.createElement("img", {
-            className: je.a.RiverVialIcon,
+            className: ke.a.RiverVialIcon,
             src:
               p.a.IMG_URL +
               "international2020/river_vials/river_vial_icon_" +
@@ -29957,35 +31259,35 @@ object-assign
             "div",
             {
               className: Object(ce.a)(
-                je.a.TextStyleFootnote,
-                je.a.TextColorGold
+                ke.a.TextStyleFootnote,
+                ke.a.TextColorGold
               ),
             },
             a
           )
         );
       },
-      Kt = function (e) {
+      qt = function (e) {
         var t = e.audiofiles,
           a = e.name,
           n = e.level;
         return o.a.createElement(
           "div",
-          { className: je.a.SoundPack },
+          { className: ke.a.SoundPack },
           o.a.createElement(
             "div",
-            { className: je.a.Play },
-            o.a.createElement(Yt, { audiofiles: t })
+            { className: ke.a.Play },
+            o.a.createElement(Ct, { audiofiles: t })
           ),
           o.a.createElement(
             "div",
-            { className: je.a.RightSection },
-            o.a.createElement("div", { className: je.a.Name }, Object(_.a)(a)),
-            o.a.createElement(Nt, { level: n })
+            { className: ke.a.RightSection },
+            o.a.createElement("div", { className: ke.a.Name }, Object(_.a)(a)),
+            o.a.createElement(jt, { level: n })
           )
         );
       },
-      Qt = function (e) {
+      Jt = function (e) {
         var t = e.shouldShow,
           a = e.showFunc,
           n = e.className,
@@ -29995,8 +31297,8 @@ object-assign
           "div",
           {
             className: Object(ce.a)(
-              je.a.PopupPanelContainer,
-              t && je.a.ShowPopupPanel
+              ke.a.PopupPanelContainer,
+              t && ke.a.ShowPopupPanel
             ),
             onClick: function () {
               return a(!1);
@@ -30005,7 +31307,7 @@ object-assign
           o.a.createElement(
             "div",
             {
-              className: Object(ce.a)(je.a.PopupPanel, n),
+              className: Object(ce.a)(ke.a.PopupPanel, n),
               onClick: function (e) {
                 return e.stopPropagation();
               },
@@ -30014,7 +31316,7 @@ object-assign
               o.a.createElement(
                 "div",
                 {
-                  className: je.a.CloseButton,
+                  className: ke.a.CloseButton,
                   onClick: function () {
                     return a(!1);
                   },
@@ -30025,7 +31327,7 @@ object-assign
           )
         );
       },
-      Xt = function (e) {
+      Kt = function (e) {
         var t = e.colorTopEdge,
           a = e.colorTop,
           n = e.colorMiddle,
@@ -30037,14 +31339,14 @@ object-assign
         return o.a.createElement(
           "div",
           {
-            className: je.a.BuyBattlePassCapsule,
+            className: ke.a.BuyBattlePassCapsule,
             style: {
               borderTop: "1px solid " + t,
               backgroundImage: "linear-gradient( " + a + ", " + r + " )",
             },
           },
           o.a.createElement("img", {
-            className: je.a.CapsuleTitle,
+            className: ke.a.CapsuleTitle,
             onError: function (e) {
               return (e.target.src =
                 p.a.IMG_URL + "international2020/title_english.png");
@@ -30054,16 +31356,16 @@ object-assign
           }),
           o.a.createElement(
             "div",
-            { className: Object(ce.a)(je.a.TextStyleOverline) },
+            { className: Object(ce.a)(ke.a.TextStyleOverline) },
             Object(_.a)("#battlepass_purchase_level", i)
           ),
           o.a.createElement(
             "div",
             {
               className: Object(ce.a)(
-                je.a.TextStyleFootnote,
-                je.a.TextColorGreenGlow,
-                je.a.CapsuleDiscount
+                ke.a.TextStyleFootnote,
+                ke.a.TextColorGreenGlow,
+                ke.a.CapsuleDiscount
               ),
             },
             s && Object(_.a)("#battlepass_purchase_discount", s, i)
@@ -30073,9 +31375,9 @@ object-assign
             {
               href: p.a.BASE_URL + "store/itemdetails/" + c,
               className: Object(ce.a)(
-                je.a.TextStyleButton,
-                je.a.TextColorWhite,
-                je.a.CapsulePurchaseButton
+                ke.a.TextStyleButton,
+                ke.a.TextColorWhite,
+                ke.a.CapsulePurchaseButton
               ),
               style: {
                 borderTop: "1px solid " + t,
@@ -30086,57 +31388,57 @@ object-assign
           )
         );
       },
-      Zt = function (e) {
+      Qt = function (e) {
         var t = e.heroName,
           a = e.name,
           n = e.level;
         return o.a.createElement(
           "div",
-          { className: je.a.Taunt },
+          { className: ke.a.Taunt },
           o.a.createElement("img", {
-            className: je.a.HeroIcon,
+            className: ke.a.HeroIcon,
             src: p.a.IMG_URL + "heroes/icons/" + t + ".png",
           }),
           o.a.createElement(
             "div",
-            { className: je.a.Details },
+            { className: ke.a.Details },
             o.a.createElement(
               "div",
               {
                 className: Object(ce.a)(
-                  je.a.TextStyleCaption,
-                  je.a.TextColorLightestGrey,
-                  je.a.Name
+                  ke.a.TextStyleCaption,
+                  ke.a.TextColorLightestGrey,
+                  ke.a.Name
                 ),
               },
               Object(_.a)(a)
             ),
-            o.a.createElement(Nt, { level: n })
+            o.a.createElement(jt, { level: n })
           )
         );
       },
-      $t = function (e) {
+      Xt = function (e) {
         var t = e.title,
           a = e.subtitle;
         return o.a.createElement(
           "div",
           {
-            className: je.a.MajorHeaderDivider,
+            className: ke.a.MajorHeaderDivider,
             style: {
               backgroundImage:
                 "url( " + p.a.IMG_URL + "international2020/stone_rect.png )",
             },
           },
           o.a.createElement("img", {
-            className: Object(ce.a)(je.a.StoneCap, je.a.Left),
+            className: Object(ce.a)(ke.a.StoneCap, ke.a.Left),
             src: p.a.IMG_URL + "international2020/stone_left.png",
           }),
           o.a.createElement(
             "div",
             {
               className: Object(ce.a)(
-                je.a.TextStyleSectionHeading,
-                je.a.TextColorGoldGlow
+                ke.a.TextStyleSectionHeading,
+                ke.a.TextColorGoldGlow
               ),
             },
             Object(_.a)(t)
@@ -30146,20 +31448,20 @@ object-assign
               "div",
               {
                 className: Object(ce.a)(
-                  je.a.TextStyleDescription,
-                  je.a.TextColorLightestGrey,
-                  je.a.MajorHeaderSubtitle
+                  ke.a.TextStyleDescription,
+                  ke.a.TextColorLightestGrey,
+                  ke.a.MajorHeaderSubtitle
                 ),
               },
               Object(_.a)(a)
             ),
           o.a.createElement("img", {
-            className: Object(ce.a)(je.a.StoneCap, je.a.Right),
+            className: Object(ce.a)(ke.a.StoneCap, ke.a.Right),
             src: p.a.IMG_URL + "international2020/stone_right.png",
           })
         );
       },
-      ea = (function (e) {
+      Zt = (function (e) {
         function t(t) {
           var a = e.call(this, t) || this;
           return (
@@ -30180,17 +31482,17 @@ object-assign
           }),
           (t.prototype.render = function () {
             var e = this,
-              t = Pr.getPrizePool();
+              t = Yn.getPrizePool();
             return o.a.createElement(
               "div",
-              { className: je.a.BattlepassPage },
+              { className: ke.a.BattlepassPage },
               o.a.createElement(h.a, null),
-              o.a.createElement(Ye, null),
+              o.a.createElement(Ce, null),
               o.a.createElement(
                 "div",
-                { className: je.a.TopHeader },
+                { className: ke.a.TopHeader },
                 o.a.createElement("img", {
-                  className: je.a.Title,
+                  className: ke.a.Title,
                   onError: function (e) {
                     return (e.target.src =
                       p.a.IMG_URL + "international2020/logo_english.png");
@@ -30203,7 +31505,7 @@ object-assign
                 }),
                 o.a.createElement(
                   "div",
-                  { className: je.a.Aegis },
+                  { className: ke.a.Aegis },
                   o.a.createElement(
                     "video",
                     {
@@ -30213,7 +31515,7 @@ object-assign
                       loop: !0,
                       playsInline: !0,
                     },
-                    "edge" != kt.name &&
+                    "edge" != Tt.name &&
                       o.a.createElement("source", {
                         type: "video/webm",
                         src:
@@ -30227,7 +31529,7 @@ object-assign
                         p.a.VIDEO_URL + "international2020/bp_aegis_header.mp4",
                     })
                   ),
-                  o.a.createElement(_e, {
+                  o.a.createElement(me.a, {
                     bottom: !0,
                     color: "#000000",
                     startPct: 50,
@@ -30237,14 +31539,14 @@ object-assign
                 ),
                 o.a.createElement(
                   "div",
-                  { className: je.a.PrizePoolContainer },
+                  { className: ke.a.PrizePoolContainer },
                   o.a.createElement(
                     "div",
                     {
                       className: Object(ce.a)(
-                        je.a.TextStyleOverline,
-                        je.a.TextColorLightGold,
-                        je.a.PrizePoolLabel
+                        ke.a.TextStyleOverline,
+                        ke.a.TextColorLightGold,
+                        ke.a.PrizePoolLabel
                       ),
                     },
                     Object(_.a)("#battlepass_prizepool_overline")
@@ -30253,9 +31555,9 @@ object-assign
                     "div",
                     {
                       className: Object(ce.a)(
-                        je.a.TextStyleDisplay,
-                        je.a.TextColorGoldGlow,
-                        je.a.PrizePoolValue
+                        ke.a.TextStyleDisplay,
+                        ke.a.TextColorGoldGlow,
+                        ke.a.PrizePoolValue
                       ),
                     },
                     t > 0 ? "$" + t.toLocaleString() : "..."
@@ -30263,14 +31565,14 @@ object-assign
                 ),
                 o.a.createElement(
                   "div",
-                  { className: je.a.PrizePoolTextContainer },
+                  { className: ke.a.PrizePoolTextContainer },
                   o.a.createElement(
                     "div",
                     {
                       className: Object(ce.a)(
-                        je.a.TextStyleOverline,
-                        je.a.TextColorLightGold,
-                        je.a.BPPurchaseTitle
+                        ke.a.TextStyleOverline,
+                        ke.a.TextColorLightGold,
+                        ke.a.BPPurchaseTitle
                       ),
                     },
                     Object(_.a)("#battlepass_purchase_title")
@@ -30279,9 +31581,9 @@ object-assign
                     "div",
                     {
                       className: Object(ce.a)(
-                        je.a.TextStyleBody,
-                        je.a.TextColorLightestGrey,
-                        je.a.BPPurchaseBody
+                        ke.a.TextStyleBody,
+                        ke.a.TextColorLightestGrey,
+                        ke.a.BPPurchaseBody
                       ),
                     },
                     Object(_.a)("#battlepass_purchase_body")
@@ -30289,8 +31591,8 @@ object-assign
                 ),
                 o.a.createElement(
                   "div",
-                  { className: je.a.BuyBattlepassSection },
-                  o.a.createElement(Xt, {
+                  { className: ke.a.BuyBattlepassSection },
+                  o.a.createElement(Kt, {
                     colorTopEdge: "#C9E2F0",
                     colorTop: "#475576",
                     colorMiddle: "#253647",
@@ -30299,7 +31601,7 @@ object-assign
                     itemid: 17530,
                     price: p.a.BP_PRICE_1,
                   }),
-                  o.a.createElement(Xt, {
+                  o.a.createElement(Kt, {
                     colorTopEdge: "#AFC5D2",
                     colorTop: "#649FC0",
                     colorMiddle: "#215978",
@@ -30309,7 +31611,7 @@ object-assign
                     level: 50,
                     price: p.a.BP_PRICE_2,
                   }),
-                  o.a.createElement(Xt, {
+                  o.a.createElement(Kt, {
                     colorTopEdge: "#F8E8B9",
                     colorTop: "#C59023",
                     colorMiddle: "#946825",
@@ -30321,20 +31623,20 @@ object-assign
                   })
                 )
               ),
-              o.a.createElement($t, { title: "#battlepass_new_features" }),
+              o.a.createElement(Xt, { title: "#battlepass_new_features" }),
               o.a.createElement(
-                jt,
+                kt,
                 {
-                  heightClassName: je.a.GuildsHeight,
+                  heightClassName: ke.a.GuildsHeight,
                   headerPrefix: "#battlepass_all_new",
                   headerText: "#battlepass_guilds_title",
                   bodyText: "#battlepass_guilds_desc",
-                  justifyContent: Tt.CenterTop,
+                  justifyContent: Mt.CenterTop,
                 },
                 o.a.createElement(
                   "div",
                   {
-                    className: je.a.Guilds,
+                    className: ke.a.Guilds,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -30344,26 +31646,26 @@ object-assign
                   },
                   o.a.createElement(
                     "div",
-                    { className: je.a.GuildTopRow },
+                    { className: ke.a.GuildTopRow },
                     o.a.createElement(
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.GuildTopRowElement,
-                          je.a.DailyContracts
+                          ke.a.GuildTopRowElement,
+                          ke.a.DailyContracts
                         ),
                       },
                       o.a.createElement("img", {
-                        className: je.a.DailyContractsImage,
+                        className: ke.a.DailyContractsImage,
                         src: p.a.IMG_URL + "international2020/guilds_1.png",
                       }),
                       o.a.createElement(
                         "div",
                         {
                           className: Object(ce.a)(
-                            je.a.TextStyleOverline,
-                            je.a.TextColorLightestGold,
-                            je.a.Title
+                            ke.a.TextStyleOverline,
+                            ke.a.TextColorLightestGold,
+                            ke.a.Title
                           ),
                         },
                         Object(_.a)("#battlepass_guilds_contracts_title")
@@ -30372,9 +31674,9 @@ object-assign
                         "div",
                         {
                           className: Object(ce.a)(
-                            je.a.TextStyleThumbnailBody,
-                            je.a.TextColorLightestGrey,
-                            je.a.Desc
+                            ke.a.TextStyleThumbnailBody,
+                            ke.a.TextColorLightestGrey,
+                            ke.a.Desc
                           ),
                         },
                         Object(_.a)("#battlepass_guilds_contracts_desc")
@@ -30384,21 +31686,21 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.GuildTopRowElement,
-                          je.a.GuildChallenges
+                          ke.a.GuildTopRowElement,
+                          ke.a.GuildChallenges
                         ),
                       },
                       o.a.createElement("img", {
-                        className: je.a.DailyContractsImage,
+                        className: ke.a.DailyContractsImage,
                         src: p.a.IMG_URL + "international2020/guilds_2.png",
                       }),
                       o.a.createElement(
                         "div",
                         {
                           className: Object(ce.a)(
-                            je.a.TextStyleOverline,
-                            je.a.TextColorLightestGold,
-                            je.a.Title
+                            ke.a.TextStyleOverline,
+                            ke.a.TextColorLightestGold,
+                            ke.a.Title
                           ),
                         },
                         Object(_.a)("#battlepass_guilds_challenges_title")
@@ -30407,9 +31709,9 @@ object-assign
                         "div",
                         {
                           className: Object(ce.a)(
-                            je.a.TextStyleThumbnailBody,
-                            je.a.TextColorLightestGrey,
-                            je.a.Desc
+                            ke.a.TextStyleThumbnailBody,
+                            ke.a.TextColorLightestGrey,
+                            ke.a.Desc
                           ),
                         },
                         Object(_.a)("#battlepass_guilds_challenges_desc")
@@ -30419,21 +31721,21 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.GuildTopRowElement,
-                          je.a.LevelUp
+                          ke.a.GuildTopRowElement,
+                          ke.a.LevelUp
                         ),
                       },
                       o.a.createElement("img", {
-                        className: je.a.DailyContractsImage,
+                        className: ke.a.DailyContractsImage,
                         src: p.a.IMG_URL + "international2020/guilds_2b.png",
                       }),
                       o.a.createElement(
                         "div",
                         {
                           className: Object(ce.a)(
-                            je.a.TextStyleOverline,
-                            je.a.TextColorLightestGold,
-                            je.a.Title
+                            ke.a.TextStyleOverline,
+                            ke.a.TextColorLightestGold,
+                            ke.a.Title
                           ),
                         },
                         Object(_.a)("#battlepass_guilds_playgames_title")
@@ -30442,9 +31744,9 @@ object-assign
                         "div",
                         {
                           className: Object(ce.a)(
-                            je.a.TextStyleThumbnailBody,
-                            je.a.TextColorLightestGrey,
-                            je.a.Desc
+                            ke.a.TextStyleThumbnailBody,
+                            ke.a.TextColorLightestGrey,
+                            ke.a.Desc
                           ),
                         },
                         Object(_.a)("#battlepass_guilds_playgames_desc")
@@ -30453,17 +31755,17 @@ object-assign
                   ),
                   o.a.createElement(
                     "div",
-                    { className: je.a.GuildRewards },
+                    { className: ke.a.GuildRewards },
                     o.a.createElement("img", {
-                      className: je.a.RewardImage,
+                      className: ke.a.RewardImage,
                       src: p.a.IMG_URL + "international2020/guilds_3.png",
                     }),
                     o.a.createElement(
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextColorLightestGold,
-                          je.a.Title
+                          ke.a.TextColorLightestGold,
+                          ke.a.Title
                         ),
                       },
                       Object(_.a)("#battlepass_guilds_rewards_title")
@@ -30472,9 +31774,9 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleThumbnailBody,
-                          je.a.TextColorLightestGrey,
-                          je.a.Desc
+                          ke.a.TextStyleThumbnailBody,
+                          ke.a.TextColorLightestGrey,
+                          ke.a.Desc
                         ),
                       },
                       Object(_.a)("#battlepass_guilds_rewards_desc")
@@ -30484,14 +31786,14 @@ object-assign
                     "tchinese" != p.a.LANGUAGE &&
                     o.a.createElement(
                       "div",
-                      { className: je.a.GuildsChat },
+                      { className: ke.a.GuildsChat },
                       o.a.createElement(
                         "div",
                         {
                           className: Object(ce.a)(
-                            je.a.TextStyleOverline,
-                            je.a.TextColorLightestGold,
-                            je.a.Title
+                            ke.a.TextStyleOverline,
+                            ke.a.TextColorLightestGold,
+                            ke.a.Title
                           ),
                         },
                         Object(_.a)("#battlepass_guilds_chat_title")
@@ -30500,9 +31802,9 @@ object-assign
                         "div",
                         {
                           className: Object(ce.a)(
-                            je.a.TextStyleThumbnailBody,
-                            je.a.TextColorLighterGrey,
-                            je.a.Desc
+                            ke.a.TextStyleThumbnailBody,
+                            ke.a.TextColorLighterGrey,
+                            ke.a.Desc
                           ),
                         },
                         Object(_.a)("#battlepass_guilds_chat_desc")
@@ -30511,18 +31813,18 @@ object-assign
                 )
               ),
               o.a.createElement(
-                jt,
+                kt,
                 {
-                  heightClassName: je.a.SummerEventHeight,
+                  heightClassName: ke.a.SummerEventHeight,
                   headerPrefix: "#battlepass_coming_soon",
                   headerText: "#battlepass_summer_event_title",
                   bodyText: "#battlepass_summer_event_desc",
-                  justifyContent: Tt.CenterTop,
+                  justifyContent: Mt.CenterTop,
                 },
                 o.a.createElement(
                   "div",
                   {
-                    className: je.a.SummerEvent,
+                    className: ke.a.SummerEvent,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -30530,36 +31832,36 @@ object-assign
                         "international2020/summer_event_bg.png )",
                     },
                   },
-                  o.a.createElement(_e, { bottom: !0, color: "#000000" }),
+                  o.a.createElement(me.a, { bottom: !0, color: "#000000" }),
                   o.a.createElement(
                     "div",
-                    { className: je.a.BottomSection },
+                    { className: ke.a.BottomSection },
                     o.a.createElement(
                       "div",
-                      { className: je.a.Tease1 },
+                      { className: ke.a.Tease1 },
                       Object(_.a)("#battlepass_summer_tease_1")
                     ),
                     o.a.createElement(
                       "div",
-                      { className: je.a.Tease2 },
+                      { className: ke.a.Tease2 },
                       Object(_.a)("#battlepass_summer_tease_2")
                     )
                   )
                 )
               ),
               o.a.createElement(
-                jt,
+                kt,
                 {
-                  heightClassName: je.a.DivinePathHeight,
+                  heightClassName: ke.a.DivinePathHeight,
                   headerPrefix: "#battlepass_divine_path_prefix",
                   headerText: "#battlepass_divine_path_title",
                   bodyText: "#battlepass_divine_path_desc",
-                  justifyContent: Tt.CenterTop,
+                  justifyContent: Mt.CenterTop,
                 },
                 o.a.createElement(
                   "div",
                   {
-                    className: je.a.DivinePath,
+                    className: ke.a.DivinePath,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -30567,7 +31869,7 @@ object-assign
                         "international2020/divine_path_bg.png )",
                     },
                   },
-                  o.a.createElement(_e, {
+                  o.a.createElement(me.a, {
                     top: !0,
                     color: "#000000",
                     startPct: 60,
@@ -30575,13 +31877,13 @@ object-assign
                     endPct: 100,
                   }),
                   o.a.createElement("img", {
-                    className: je.a.DivineOverlay,
+                    className: ke.a.DivineOverlay,
                     src: p.a.IMG_URL + "international2020/divine_overlay.png",
                   }),
                   o.a.createElement(
                     "div",
                     {
-                      className: je.a.SecondMap,
+                      className: ke.a.SecondMap,
                       "data-aos": "fade-slide-left",
                     },
                     Object(_.a)("#battlepass_divine_path_map")
@@ -30589,18 +31891,18 @@ object-assign
                 )
               ),
               o.a.createElement(
-                jt,
+                kt,
                 {
-                  heightClassName: je.a.GauntletHeight,
+                  heightClassName: ke.a.GauntletHeight,
                   headerPrefix: "#battlepass_new",
                   headerText: "#battlepass_gauntlet_title",
                   bodyText: "#battlepass_gauntlet_desc",
-                  justifyContent: Tt.CenterTop,
+                  justifyContent: Mt.CenterTop,
                 },
                 o.a.createElement(
                   "div",
                   {
-                    className: je.a.Gauntlet,
+                    className: ke.a.Gauntlet,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -30608,49 +31910,49 @@ object-assign
                         "international2020/gauntlet_bg.png )",
                     },
                   },
-                  o.a.createElement("div", { className: je.a.GoldDivider }),
+                  o.a.createElement("div", { className: ke.a.GoldDivider }),
                   o.a.createElement(
                     "div",
-                    { className: je.a.Progress },
+                    { className: ke.a.Progress },
                     Object(_.a)("#battlepass_gauntlet_progress")
                   ),
                   o.a.createElement(
                     "div",
-                    { className: je.a.Pips },
+                    { className: ke.a.Pips },
                     o.a.createElement(
                       "div",
-                      { className: je.a.PipContainer },
+                      { className: ke.a.PipContainer },
                       o.a.createElement(
                         "div",
-                        { className: Object(ce.a)(je.a.Pip, je.a.Win) },
+                        { className: Object(ce.a)(ke.a.Pip, ke.a.Win) },
                         o.a.createElement("img", {
-                          className: je.a.Checkmark,
+                          className: ke.a.Checkmark,
                           src: p.a.IMG_URL + "international2020/icon_check.png",
                         })
                       ),
                       o.a.createElement("div", {
-                        className: Object(ce.a)(je.a.Pip, je.a.Win),
+                        className: Object(ce.a)(ke.a.Pip, ke.a.Win),
                       }),
                       o.a.createElement("div", {
-                        className: Object(ce.a)(je.a.Pip, je.a.Win),
+                        className: Object(ce.a)(ke.a.Pip, ke.a.Win),
                       })
                     ),
                     o.a.createElement("div", {
-                      className: je.a.VerticalDivider,
+                      className: ke.a.VerticalDivider,
                     }),
                     o.a.createElement(
                       "div",
-                      { className: je.a.PipContainer },
+                      { className: ke.a.PipContainer },
                       o.a.createElement(
                         "div",
-                        { className: Object(ce.a)(je.a.Pip, je.a.Lose) },
+                        { className: Object(ce.a)(ke.a.Pip, ke.a.Lose) },
                         o.a.createElement("img", {
-                          className: je.a.Xmark,
+                          className: ke.a.Xmark,
                           src: p.a.IMG_URL + "international2020/icon_x.png",
                         })
                       ),
                       o.a.createElement("div", {
-                        className: Object(ce.a)(je.a.Pip, je.a.Lose),
+                        className: Object(ce.a)(ke.a.Pip, ke.a.Lose),
                       })
                     )
                   ),
@@ -30658,39 +31960,39 @@ object-assign
                     "div",
                     {
                       className: Object(ce.a)(
-                        je.a.TextStyleBody,
-                        je.a.TestColorLightestGrey,
-                        je.a.Desc2
+                        ke.a.TextStyleBody,
+                        ke.a.TestColorLightestGrey,
+                        ke.a.Desc2
                       ),
                     },
                     Object(_.a)("#battlepass_gauntlet_desc2")
                   ),
                   o.a.createElement("img", {
-                    className: je.a.HeroImage1,
+                    className: ke.a.HeroImage1,
                     src: p.a.IMG_URL + "international2020/gauntlet_1.png",
                   }),
                   o.a.createElement("img", {
-                    className: je.a.HeroImage2,
+                    className: ke.a.HeroImage2,
                     src: p.a.IMG_URL + "international2020/gauntlet_2.png",
                   }),
                   o.a.createElement("img", {
-                    className: je.a.HeroImage3,
+                    className: ke.a.HeroImage3,
                     src: p.a.IMG_URL + "international2020/gauntlet_3.png",
                   })
                 )
               ),
               o.a.createElement(
-                jt,
+                kt,
                 {
-                  heightClassName: je.a.BountiesHeight,
+                  heightClassName: ke.a.BountiesHeight,
                   headerPrefix: "#battlepass_new",
                   headerText: "#battlepass_bounties_title",
                   bodyText: "#battlepass_bounties_desc",
-                  justifyContent: Tt.LeftMiddle,
+                  justifyContent: Mt.LeftMiddle,
                   centerWidth: 1138,
                 },
                 o.a.createElement("div", {
-                  className: je.a.Bounties,
+                  className: ke.a.Bounties,
                   style: {
                     backgroundImage:
                       "url( " +
@@ -30700,17 +32002,17 @@ object-assign
                 })
               ),
               o.a.createElement(
-                jt,
+                kt,
                 {
-                  heightClassName: je.a.GiftBattlePassHeight,
+                  heightClassName: ke.a.GiftBattlePassHeight,
                   headerPrefix: "#battlepass_new",
                   headerText: "#battlepass_gift_title",
                   bodyText: "#battlepass_gift_desc",
-                  justifyContent: Tt.RightMiddle,
+                  justifyContent: Mt.RightMiddle,
                   centerWidth: 1410,
                 },
                 o.a.createElement("div", {
-                  className: je.a.GiftBattlePass,
+                  className: ke.a.GiftBattlePass,
                   style: {
                     backgroundImage:
                       "url( " + p.a.IMG_URL + "international2020/gift_bg.png )",
@@ -30718,17 +32020,17 @@ object-assign
                 })
               ),
               o.a.createElement(
-                jt,
+                kt,
                 {
-                  heightClassName: je.a.MatchPredictionsHeight,
+                  heightClassName: ke.a.MatchPredictionsHeight,
                   headerPrefix: "#battlepass_new",
                   headerText: "#battlepass_match_predictions_title",
                   bodyText: "#battlepass_match_predictions_desc",
-                  justifyContent: Tt.LeftMiddle,
+                  justifyContent: Mt.LeftMiddle,
                   centerWidth: 1450,
                 },
                 o.a.createElement("div", {
-                  className: je.a.MatchPredictions,
+                  className: ke.a.MatchPredictions,
                   style: {
                     backgroundImage:
                       "url( " +
@@ -30738,21 +32040,21 @@ object-assign
                 })
               ),
               o.a.createElement(
-                jt,
+                kt,
                 {
-                  heightClassName: je.a.MVPHeight,
+                  heightClassName: ke.a.MVPHeight,
                   headerPrefix: "#battlepass_revamped",
                   headerText: "#battlepass_mvp_title",
                   bodyText: "#battlepass_mvp_desc",
-                  justifyContent: Tt.CenterBottom,
+                  justifyContent: Mt.CenterBottom,
                 },
                 o.a.createElement(
                   "div",
-                  { className: je.a.MVP },
+                  { className: ke.a.MVP },
                   o.a.createElement(
                     "video",
                     {
-                      className: je.a.BackgroundVideo,
+                      className: ke.a.BackgroundVideo,
                       autoPlay: !0,
                       preload: "auto",
                       muted: !0,
@@ -30769,14 +32071,14 @@ object-assign
                     })
                   )
                 ),
-                o.a.createElement(_e, {
+                o.a.createElement(me.a, {
                   bottom: !0,
                   color: "#000000",
                   startPct: 50,
                   midPct: 80,
                   endPct: 100,
                 }),
-                o.a.createElement(_e, {
+                o.a.createElement(me.a, {
                   bottom: !0,
                   color: "#000000",
                   startPct: 50,
@@ -30785,22 +32087,22 @@ object-assign
                 })
               ),
               o.a.createElement(
-                jt,
+                kt,
                 {
-                  heightClassName: je.a.VersusScreenHeight,
+                  heightClassName: ke.a.VersusScreenHeight,
                   headerPrefix: "#battlepass_updated",
                   headerText: "#battlepass_versus_screen_title",
                   bodyText: "#battlepass_versus_screen_desc",
-                  justifyContent: Tt.CenterTop,
+                  justifyContent: Mt.CenterTop,
                   centerWidth: 900,
                 },
                 o.a.createElement(
                   "div",
-                  { className: je.a.VersusScreen },
+                  { className: ke.a.VersusScreen },
                   o.a.createElement(
                     "video",
                     {
-                      className: je.a.BackgroundVideo,
+                      className: ke.a.BackgroundVideo,
                       autoPlay: !0,
                       preload: "auto",
                       muted: !0,
@@ -30819,17 +32121,17 @@ object-assign
                 )
               ),
               o.a.createElement(
-                jt,
+                kt,
                 {
-                  heightClassName: je.a.PauseMinigamesHeight,
+                  heightClassName: ke.a.PauseMinigamesHeight,
                   headerPrefix: "#battlepass_new",
                   headerText: "#battlepass_pause_minigames_title",
                   bodyText: "#battlepass_pause_minigames_desc",
-                  justifyContent: Tt.LeftMiddle,
+                  justifyContent: Mt.LeftMiddle,
                   centerWidth: 1300,
                 },
                 o.a.createElement("div", {
-                  className: je.a.PauseMinigames,
+                  className: ke.a.PauseMinigames,
                   style: {
                     backgroundImage:
                       "url( " +
@@ -30839,16 +32141,16 @@ object-assign
                 })
               ),
               o.a.createElement(
-                jt,
+                kt,
                 {
-                  heightClassName: je.a.AssistantHeight,
+                  heightClassName: ke.a.AssistantHeight,
                   headerText: "#battlepass_assistant_title",
-                  justifyContent: Tt.CenterTop,
+                  justifyContent: Mt.CenterTop,
                 },
                 o.a.createElement(
                   "div",
                   {
-                    className: je.a.Assistant,
+                    className: ke.a.Assistant,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -30857,71 +32159,71 @@ object-assign
                     },
                   },
                   o.a.createElement(
-                    Pe.d,
+                    xe.d,
                     {
-                      className: je.a.AssistantCarousel,
+                      className: ke.a.AssistantCarousel,
                       naturalSlideWidth: 100,
                       naturalSlideHeight: 52,
                       totalSlides: 6,
                     },
                     o.a.createElement(
-                      Pe.g,
+                      xe.g,
                       null,
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 0 },
                         o.a.createElement("img", {
-                          className: je.a.Assistant,
+                          className: ke.a.Assistant,
                           src:
                             p.a.IMG_URL +
                             "international2020/assistant/assistant_1.png",
                         })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 1 },
                         o.a.createElement("img", {
-                          className: je.a.Assistant,
+                          className: ke.a.Assistant,
                           src:
                             p.a.IMG_URL +
                             "international2020/assistant/assistant_2.png",
                         })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 2 },
                         o.a.createElement("img", {
-                          className: je.a.Assistant,
+                          className: ke.a.Assistant,
                           src:
                             p.a.IMG_URL +
                             "international2020/assistant/assistant_3.png",
                         })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 3 },
                         o.a.createElement("img", {
-                          className: je.a.Assistant,
+                          className: ke.a.Assistant,
                           src:
                             p.a.IMG_URL +
                             "international2020/assistant/assistant_4.png",
                         })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 4 },
                         o.a.createElement("img", {
-                          className: je.a.Assistant,
+                          className: ke.a.Assistant,
                           src:
                             p.a.IMG_URL +
                             "international2020/assistant/assistant_6.png",
                         })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 5 },
                         o.a.createElement("img", {
-                          className: je.a.Assistant,
+                          className: ke.a.Assistant,
                           src:
                             p.a.IMG_URL +
                             "international2020/assistant/assistant_7.png",
@@ -30929,73 +32231,73 @@ object-assign
                       )
                     ),
                     o.a.createElement(
-                      Pe.a,
+                      xe.a,
                       {
-                        className: Object(ce.a)(je.a.CarouselArrow, je.a.Left),
+                        className: Object(ce.a)(ke.a.CarouselArrow, ke.a.Left),
                       },
                       o.a.createElement("img", {
                         src: p.a.IMG_URL + "international2020/arrow_left.png",
-                        className: je.a.ArrowImage,
+                        className: ke.a.ArrowImage,
                       })
                     ),
                     o.a.createElement(
-                      Pe.b,
+                      xe.b,
                       {
-                        className: Object(ce.a)(je.a.CarouselArrow, je.a.Right),
+                        className: Object(ce.a)(ke.a.CarouselArrow, ke.a.Right),
                       },
                       o.a.createElement("img", {
                         src: p.a.IMG_URL + "international2020/arrow_left.png",
-                        className: je.a.ArrowImage,
+                        className: ke.a.ArrowImage,
                       })
                     ),
                     o.a.createElement(
                       "div",
-                      { className: je.a.CarouselDots },
+                      { className: ke.a.CarouselDots },
                       o.a.createElement(
-                        Pe.e,
-                        { className: je.a.Dot, slide: 0 },
+                        xe.e,
+                        { className: ke.a.Dot, slide: 0 },
                         o.a.createElement("div", null)
                       ),
                       o.a.createElement(
-                        Pe.e,
-                        { className: je.a.Dot, slide: 1 },
+                        xe.e,
+                        { className: ke.a.Dot, slide: 1 },
                         o.a.createElement("div", null)
                       ),
                       o.a.createElement(
-                        Pe.e,
-                        { className: je.a.Dot, slide: 2 },
+                        xe.e,
+                        { className: ke.a.Dot, slide: 2 },
                         o.a.createElement("div", null)
                       ),
                       o.a.createElement(
-                        Pe.e,
-                        { className: je.a.Dot, slide: 3 },
+                        xe.e,
+                        { className: ke.a.Dot, slide: 3 },
                         o.a.createElement("div", null)
                       ),
                       o.a.createElement(
-                        Pe.e,
-                        { className: je.a.Dot, slide: 4 },
+                        xe.e,
+                        { className: ke.a.Dot, slide: 4 },
                         o.a.createElement("div", null)
                       ),
                       o.a.createElement(
-                        Pe.e,
-                        { className: je.a.Dot, slide: 5 },
+                        xe.e,
+                        { className: ke.a.Dot, slide: 5 },
                         o.a.createElement("div", null)
                       )
                     ),
-                    o.a.createElement(Bt, null)
+                    o.a.createElement(Ht, null)
                   )
                 )
               ),
-              o.a.createElement($t, {
+              o.a.createElement(Xt, {
                 title: "#battlepass_returning_features",
               }),
               o.a.createElement(
-                jt,
-                { heightClassName: je.a.ReturningFeaturesHeight },
+                kt,
+                { heightClassName: ke.a.ReturningFeaturesHeight },
                 o.a.createElement(
                   "div",
                   {
-                    className: je.a.ReturningFeatures,
+                    className: ke.a.ReturningFeatures,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -31005,15 +32307,15 @@ object-assign
                   },
                   o.a.createElement(
                     "div",
-                    { className: je.a.FeatureRow },
+                    { className: ke.a.FeatureRow },
                     o.a.createElement(
                       "div",
                       {
-                        className: je.a.FeatureElementDouble,
+                        className: ke.a.FeatureElementDouble,
                         "data-aos": "fade-slide-up",
                       },
                       o.a.createElement("div", {
-                        className: je.a.FeatureImage,
+                        className: ke.a.FeatureImage,
                         style: {
                           backgroundImage:
                             "url( " +
@@ -31025,9 +32327,9 @@ object-assign
                         "div",
                         {
                           className: Object(ce.a)(
-                            je.a.TextStyleOverline,
-                            je.a.TextColorLightestGold,
-                            je.a.FeatureTitle
+                            ke.a.TextStyleOverline,
+                            ke.a.TextColorLightestGold,
+                            ke.a.FeatureTitle
                           ),
                         },
                         Object(_.a)(
@@ -31038,8 +32340,8 @@ object-assign
                         "div",
                         {
                           className: Object(ce.a)(
-                            je.a.FeatureDesc,
-                            je.a.TextStyleThumbnailBody
+                            ke.a.FeatureDesc,
+                            ke.a.TextStyleThumbnailBody
                           ),
                         },
                         Object(_.a)(
@@ -31050,11 +32352,11 @@ object-assign
                     o.a.createElement(
                       "div",
                       {
-                        className: je.a.FeatureElementDouble,
+                        className: ke.a.FeatureElementDouble,
                         "data-aos": "fade-slide-up",
                       },
                       o.a.createElement("div", {
-                        className: je.a.FeatureImage,
+                        className: ke.a.FeatureImage,
                         style: {
                           backgroundImage:
                             "url( " +
@@ -31066,9 +32368,9 @@ object-assign
                         "div",
                         {
                           className: Object(ce.a)(
-                            je.a.TextStyleOverline,
-                            je.a.TextColorLightestGold,
-                            je.a.FeatureTitle
+                            ke.a.TextStyleOverline,
+                            ke.a.TextColorLightestGold,
+                            ke.a.FeatureTitle
                           ),
                         },
                         Object(_.a)(
@@ -31079,8 +32381,8 @@ object-assign
                         "div",
                         {
                           className: Object(ce.a)(
-                            je.a.FeatureDesc,
-                            je.a.TextStyleThumbnailBody
+                            ke.a.FeatureDesc,
+                            ke.a.TextStyleThumbnailBody
                           ),
                         },
                         Object(_.a)(
@@ -31091,15 +32393,15 @@ object-assign
                   ),
                   o.a.createElement(
                     "div",
-                    { className: je.a.FeatureRow },
+                    { className: ke.a.FeatureRow },
                     o.a.createElement(
                       "div",
                       {
-                        className: je.a.FeatureElementTriple,
+                        className: ke.a.FeatureElementTriple,
                         "data-aos": "fade-slide-up",
                       },
                       o.a.createElement("div", {
-                        className: je.a.FeatureImage,
+                        className: ke.a.FeatureImage,
                         style: {
                           backgroundImage:
                             "url( " +
@@ -31111,9 +32413,9 @@ object-assign
                         "div",
                         {
                           className: Object(ce.a)(
-                            je.a.TextStyleOverline,
-                            je.a.TextColorLightestGold,
-                            je.a.FeatureTitle
+                            ke.a.TextStyleOverline,
+                            ke.a.TextColorLightestGold,
+                            ke.a.FeatureTitle
                           ),
                         },
                         Object(_.a)("#battlepass_returning_high_five_title")
@@ -31122,8 +32424,8 @@ object-assign
                         "div",
                         {
                           className: Object(ce.a)(
-                            je.a.FeatureDesc,
-                            je.a.TextStyleThumbnailBody
+                            ke.a.FeatureDesc,
+                            ke.a.TextStyleThumbnailBody
                           ),
                         },
                         Object(_.a)("#battlepass_returning_high_five_desc")
@@ -31132,11 +32434,11 @@ object-assign
                     o.a.createElement(
                       "div",
                       {
-                        className: je.a.FeatureElementTriple,
+                        className: ke.a.FeatureElementTriple,
                         "data-aos": "fade-slide-up",
                       },
                       o.a.createElement("div", {
-                        className: je.a.FeatureImage,
+                        className: ke.a.FeatureImage,
                         style: {
                           backgroundImage:
                             "url( " +
@@ -31148,9 +32450,9 @@ object-assign
                         "div",
                         {
                           className: Object(ce.a)(
-                            je.a.TextStyleOverline,
-                            je.a.TextColorLightestGold,
-                            je.a.FeatureTitle
+                            ke.a.TextStyleOverline,
+                            ke.a.TextColorLightestGold,
+                            ke.a.FeatureTitle
                           ),
                         },
                         Object(_.a)("#battlepass_returning_tipping_title")
@@ -31159,8 +32461,8 @@ object-assign
                         "div",
                         {
                           className: Object(ce.a)(
-                            je.a.FeatureDesc,
-                            je.a.TextStyleThumbnailBody
+                            ke.a.FeatureDesc,
+                            ke.a.TextStyleThumbnailBody
                           ),
                         },
                         Object(_.a)("#battlepass_returning_tipping_desc")
@@ -31169,11 +32471,11 @@ object-assign
                     o.a.createElement(
                       "div",
                       {
-                        className: je.a.FeatureElementTriple,
+                        className: ke.a.FeatureElementTriple,
                         "data-aos": "fade-slide-up",
                       },
                       o.a.createElement("div", {
-                        className: je.a.FeatureImage,
+                        className: ke.a.FeatureImage,
                         style: {
                           backgroundImage:
                             "url( " +
@@ -31185,9 +32487,9 @@ object-assign
                         "div",
                         {
                           className: Object(ce.a)(
-                            je.a.TextStyleOverline,
-                            je.a.TextColorLightestGold,
-                            je.a.FeatureTitle
+                            ke.a.TextStyleOverline,
+                            ke.a.TextColorLightestGold,
+                            ke.a.FeatureTitle
                           ),
                         },
                         Object(_.a)("#battlepass_returning_arcana_title")
@@ -31196,8 +32498,8 @@ object-assign
                         "div",
                         {
                           className: Object(ce.a)(
-                            je.a.FeatureDesc,
-                            je.a.TextStyleThumbnailBody
+                            ke.a.FeatureDesc,
+                            ke.a.TextStyleThumbnailBody
                           ),
                         },
                         Object(_.a)("#battlepass_returning_arcana_desc")
@@ -31206,15 +32508,15 @@ object-assign
                   ),
                   o.a.createElement(
                     "div",
-                    { className: je.a.FeatureRow },
+                    { className: ke.a.FeatureRow },
                     o.a.createElement(
                       "div",
                       {
-                        className: je.a.FeatureElementTriple,
+                        className: ke.a.FeatureElementTriple,
                         "data-aos": "fade-slide-up",
                       },
                       o.a.createElement("div", {
-                        className: je.a.FeatureImage,
+                        className: ke.a.FeatureImage,
                         style: {
                           backgroundImage:
                             "url( " +
@@ -31226,9 +32528,9 @@ object-assign
                         "div",
                         {
                           className: Object(ce.a)(
-                            je.a.TextStyleOverline,
-                            je.a.TextColorLightestGold,
-                            je.a.FeatureTitle
+                            ke.a.TextStyleOverline,
+                            ke.a.TextColorLightestGold,
+                            ke.a.FeatureTitle
                           ),
                         },
                         Object(_.a)("#battlepass_returning_evolving_chat_title")
@@ -31237,8 +32539,8 @@ object-assign
                         "div",
                         {
                           className: Object(ce.a)(
-                            je.a.FeatureDesc,
-                            je.a.TextStyleThumbnailBody
+                            ke.a.FeatureDesc,
+                            ke.a.TextStyleThumbnailBody
                           ),
                         },
                         Object(_.a)("#battlepass_returning_evolving_chat_desc")
@@ -31247,11 +32549,11 @@ object-assign
                     o.a.createElement(
                       "div",
                       {
-                        className: je.a.FeatureElementTriple,
+                        className: ke.a.FeatureElementTriple,
                         "data-aos": "fade-slide-up",
                       },
                       o.a.createElement("div", {
-                        className: je.a.FeatureImage,
+                        className: ke.a.FeatureImage,
                         style: {
                           backgroundImage:
                             "url( " +
@@ -31263,9 +32565,9 @@ object-assign
                         "div",
                         {
                           className: Object(ce.a)(
-                            je.a.TextStyleOverline,
-                            je.a.TextColorLightestGold,
-                            je.a.FeatureTitle
+                            ke.a.TextStyleOverline,
+                            ke.a.TextColorLightestGold,
+                            ke.a.FeatureTitle
                           ),
                         },
                         Object(_.a)("#battlepass_returning_recycling_title")
@@ -31274,8 +32576,8 @@ object-assign
                         "div",
                         {
                           className: Object(ce.a)(
-                            je.a.FeatureDesc,
-                            je.a.TextStyleThumbnailBody
+                            ke.a.FeatureDesc,
+                            ke.a.TextStyleThumbnailBody
                           ),
                         },
                         Object(_.a)("#battlepass_returning_recycling_desc")
@@ -31284,11 +32586,11 @@ object-assign
                     o.a.createElement(
                       "div",
                       {
-                        className: je.a.FeatureElementTriple,
+                        className: ke.a.FeatureElementTriple,
                         "data-aos": "fade-slide-up",
                       },
                       o.a.createElement("div", {
-                        className: je.a.FeatureImage,
+                        className: ke.a.FeatureImage,
                         style: {
                           backgroundImage:
                             "url( " +
@@ -31300,9 +32602,9 @@ object-assign
                         "div",
                         {
                           className: Object(ce.a)(
-                            je.a.TextStyleOverline,
-                            je.a.TextColorLightestGold,
-                            je.a.FeatureTitle
+                            ke.a.TextStyleOverline,
+                            ke.a.TextColorLightestGold,
+                            ke.a.FeatureTitle
                           ),
                         },
                         Object(_.a)("#battlepass_returning_trivia_title")
@@ -31311,8 +32613,8 @@ object-assign
                         "div",
                         {
                           className: Object(ce.a)(
-                            je.a.FeatureDesc,
-                            je.a.TextStyleThumbnailBody
+                            ke.a.FeatureDesc,
+                            ke.a.TextStyleThumbnailBody
                           ),
                         },
                         Object(_.a)("#battlepass_returning_trivia_desc")
@@ -31321,23 +32623,23 @@ object-assign
                   )
                 )
               ),
-              o.a.createElement($t, {
+              o.a.createElement(Xt, {
                 title: "#battlepass_rewards",
                 subtitle: "#battlepass_rewards_desc",
               }),
               o.a.createElement(
-                jt,
+                kt,
                 {
-                  heightClassName: je.a.ImmortalsHeight,
+                  heightClassName: ke.a.ImmortalsHeight,
                   headerPrefix: "2020",
                   headerText: "#battlepass_immortals_header",
                   bodyText: "#battlepass_immortals_desc",
-                  justifyContent: Tt.CenterTop,
+                  justifyContent: Mt.CenterTop,
                 },
                 o.a.createElement(
                   "div",
                   {
-                    className: je.a.Immortals,
+                    className: ke.a.Immortals,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -31347,36 +32649,36 @@ object-assign
                   },
                   o.a.createElement(
                     "div",
-                    { className: je.a.TreasureList },
+                    { className: ke.a.TreasureList },
                     o.a.createElement(
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.Treasure,
-                          je.a.Enabled,
+                          ke.a.Treasure,
+                          ke.a.Enabled,
                           1 == this.state.nImmortalTreasureSelected &&
-                            je.a.Selected
+                            ke.a.Selected
                         ),
                         onClick: function () {
                           return e.onImmortalSelect(1);
                         },
                       },
                       o.a.createElement("img", {
-                        className: je.a.TreasureIcon,
+                        className: ke.a.TreasureIcon,
                         src:
                           p.a.IMG_URL +
                           "international2020/immortal_treasure_1.png",
                       }),
                       o.a.createElement("div", {
-                        className: je.a.TreasureBorder,
+                        className: ke.a.TreasureBorder,
                       }),
                       o.a.createElement(
                         "div",
                         {
                           className: Object(ce.a)(
-                            je.a.TextStyleOverline,
-                            je.a.TextColorLighterGold,
-                            je.a.TreasureName
+                            ke.a.TextStyleOverline,
+                            ke.a.TextColorLighterGold,
+                            ke.a.TreasureName
                           ),
                         },
                         Object(_.a)("#battlepass_immortals_treasure_1")
@@ -31386,31 +32688,31 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.Treasure,
-                          je.a.Enabled,
+                          ke.a.Treasure,
+                          ke.a.Enabled,
                           2 == this.state.nImmortalTreasureSelected &&
-                            je.a.Selected
+                            ke.a.Selected
                         ),
                         onClick: function () {
                           return e.onImmortalSelect(2);
                         },
                       },
                       o.a.createElement("img", {
-                        className: je.a.TreasureIcon,
+                        className: ke.a.TreasureIcon,
                         src:
                           p.a.IMG_URL +
                           "international2020/immortal_treasure_2.png",
                       }),
                       o.a.createElement("div", {
-                        className: je.a.TreasureBorder,
+                        className: ke.a.TreasureBorder,
                       }),
                       o.a.createElement(
                         "div",
                         {
                           className: Object(ce.a)(
-                            je.a.TextStyleOverline,
-                            je.a.TextColorLighterGold,
-                            je.a.TreasureName
+                            ke.a.TextStyleOverline,
+                            ke.a.TextColorLighterGold,
+                            ke.a.TreasureName
                           ),
                         },
                         Object(_.a)("#battlepass_immortals_treasure_2")
@@ -31420,31 +32722,31 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.Treasure,
-                          je.a.Enabled,
+                          ke.a.Treasure,
+                          ke.a.Enabled,
                           3 == this.state.nImmortalTreasureSelected &&
-                            je.a.Selected
+                            ke.a.Selected
                         ),
                         onClick: function () {
                           return e.onImmortalSelect(3);
                         },
                       },
                       o.a.createElement("img", {
-                        className: je.a.TreasureIcon,
+                        className: ke.a.TreasureIcon,
                         src:
                           p.a.IMG_URL +
                           "international2020/immortal_treasure_3.png",
                       }),
                       o.a.createElement("div", {
-                        className: je.a.TreasureBorder,
+                        className: ke.a.TreasureBorder,
                       }),
                       o.a.createElement(
                         "div",
                         {
                           className: Object(ce.a)(
-                            je.a.TextStyleOverline,
-                            je.a.TextColorLighterGold,
-                            je.a.TreasureName
+                            ke.a.TextStyleOverline,
+                            ke.a.TextColorLighterGold,
+                            ke.a.TreasureName
                           ),
                         },
                         Object(_.a)("#battlepass_immortals_treasure_3")
@@ -31455,242 +32757,242 @@ object-assign
                     "div",
                     {
                       className: Object(ce.a)(
-                        je.a.CarouselContainer,
+                        ke.a.CarouselContainer,
                         1 == this.state.nImmortalTreasureSelected &&
-                          je.a.ShowCarousel
+                          ke.a.ShowCarousel
                       ),
                     },
                     o.a.createElement(
-                      Pe.d,
+                      xe.d,
                       {
-                        className: je.a.ImmortalCarousel,
+                        className: ke.a.ImmortalCarousel,
                         naturalSlideWidth: 100,
                         naturalSlideHeight: 37,
                         totalSlides: 11,
                       },
                       o.a.createElement(
-                        Pe.g,
+                        xe.g,
                         null,
                         o.a.createElement(
-                          Pe.f,
+                          xe.f,
                           { index: 0 },
-                          o.a.createElement(xt, {
+                          o.a.createElement(At, {
                             index: 0,
                             video: "tinker",
                             heroLeft: !0,
                           })
                         ),
                         o.a.createElement(
-                          Pe.f,
+                          xe.f,
                           { index: 1 },
-                          o.a.createElement(xt, {
+                          o.a.createElement(At, {
                             index: 1,
                             video: "nightstalker",
                             heroLeft: !0,
                           })
                         ),
                         o.a.createElement(
-                          Pe.f,
+                          xe.f,
                           { index: 2 },
-                          o.a.createElement(xt, {
+                          o.a.createElement(At, {
                             index: 2,
                             video: "warlock",
                             heroRight: !0,
                           })
                         ),
                         o.a.createElement(
-                          Pe.f,
+                          xe.f,
                           { index: 3 },
-                          o.a.createElement(xt, {
+                          o.a.createElement(At, {
                             index: 3,
                             video: "lifestealer",
                             heroRight: !0,
                           })
                         ),
                         o.a.createElement(
-                          Pe.f,
+                          xe.f,
                           { index: 4 },
-                          o.a.createElement(xt, {
+                          o.a.createElement(At, {
                             index: 4,
                             video: "kotl",
                             heroLeft: !0,
                           })
                         ),
                         o.a.createElement(
-                          Pe.f,
+                          xe.f,
                           { index: 5 },
-                          o.a.createElement(xt, {
+                          o.a.createElement(At, {
                             index: 5,
                             video: "medusa",
                             heroLeft: !0,
                           })
                         ),
                         o.a.createElement(
-                          Pe.f,
+                          xe.f,
                           { index: 6 },
-                          o.a.createElement(xt, {
+                          o.a.createElement(At, {
                             index: 6,
                             video: "puck",
                             heroRight: !0,
                           })
                         ),
                         o.a.createElement(
-                          Pe.f,
+                          xe.f,
                           { index: 7 },
-                          o.a.createElement(xt, {
+                          o.a.createElement(At, {
                             index: 7,
                             video: "nightstalker_gold",
                             heroLeft: !0,
                           })
                         ),
                         o.a.createElement(
-                          Pe.f,
+                          xe.f,
                           { index: 8 },
-                          o.a.createElement(xt, {
+                          o.a.createElement(At, {
                             index: 8,
                             video: "lifestealer_gold",
                             heroLeft: !0,
                           })
                         ),
                         o.a.createElement(
-                          Pe.f,
+                          xe.f,
                           { index: 9 },
-                          o.a.createElement(xt, {
+                          o.a.createElement(At, {
                             index: 9,
                             video: "pudge",
                             heroLeft: !0,
                           })
                         ),
                         o.a.createElement(
-                          Pe.f,
+                          xe.f,
                           { index: 10 },
-                          o.a.createElement(xt, { index: 10, video: "emblem" })
+                          o.a.createElement(At, { index: 10, video: "emblem" })
                         )
                       ),
                       o.a.createElement(
                         "div",
-                        { className: je.a.CarouselDots },
+                        { className: ke.a.CarouselDots },
                         o.a.createElement(
-                          Pe.e,
+                          xe.e,
                           { slide: 0 },
-                          o.a.createElement(Pt, { heroName: "tinker" })
+                          o.a.createElement(xt, { heroName: "tinker" })
                         ),
                         o.a.createElement(
-                          Pe.e,
+                          xe.e,
                           { slide: 1 },
-                          o.a.createElement(Pt, { heroName: "night_stalker" })
+                          o.a.createElement(xt, { heroName: "night_stalker" })
                         ),
                         o.a.createElement(
-                          Pe.e,
+                          xe.e,
                           { slide: 2 },
-                          o.a.createElement(Pt, { heroName: "warlock" })
+                          o.a.createElement(xt, { heroName: "warlock" })
                         ),
                         o.a.createElement(
-                          Pe.e,
+                          xe.e,
                           { slide: 3 },
-                          o.a.createElement(Pt, { heroName: "life_stealer" })
+                          o.a.createElement(xt, { heroName: "life_stealer" })
                         ),
                         o.a.createElement(
-                          Pe.e,
+                          xe.e,
                           { slide: 4 },
-                          o.a.createElement(Pt, {
+                          o.a.createElement(xt, {
                             heroName: "keeper_of_the_light",
                           })
                         ),
                         o.a.createElement(
-                          Pe.e,
+                          xe.e,
                           { slide: 5 },
-                          o.a.createElement(Pt, { heroName: "slark" })
+                          o.a.createElement(xt, { heroName: "slark" })
                         ),
                         o.a.createElement(
-                          Pe.e,
+                          xe.e,
                           {
                             slide: 6,
                             "data-tip": Object(_.a)("#battlepass_tooltip_rare"),
                           },
-                          o.a.createElement(Pt, { rare: !0, heroName: "puck" })
+                          o.a.createElement(xt, { rare: !0, heroName: "puck" })
                         ),
                         o.a.createElement(
-                          Pe.e,
+                          xe.e,
                           {
                             slide: 7,
                             "data-tip": Object(_.a)(
                               "#battlepass_tooltip_very_rare"
                             ),
                           },
-                          o.a.createElement(Pt, {
+                          o.a.createElement(xt, {
                             veryrare: !0,
                             heroName: "night_stalker",
                           })
                         ),
                         o.a.createElement(
-                          Pe.e,
+                          xe.e,
                           {
                             slide: 8,
                             "data-tip": Object(_.a)(
                               "#battlepass_tooltip_very_rare"
                             ),
                           },
-                          o.a.createElement(Pt, {
+                          o.a.createElement(xt, {
                             veryrare: !0,
                             heroName: "life_stealer",
                           })
                         ),
                         o.a.createElement(
-                          Pe.e,
+                          xe.e,
                           {
                             slide: 9,
                             "data-tip": Object(_.a)(
                               "#battlepass_tooltip_ultra_rare"
                             ),
                           },
-                          o.a.createElement(Pt, {
+                          o.a.createElement(xt, {
                             ultrarare: !0,
                             heroName: "pudge",
                           })
                         ),
                         o.a.createElement(
-                          Pe.e,
+                          xe.e,
                           {
                             slide: 10,
                             "data-tip": Object(_.a)(
                               "#battlepass_tooltip_cosmically_rare"
                             ),
                           },
-                          o.a.createElement(Pt, {
+                          o.a.createElement(xt, {
                             cosmicallyrare: !0,
                             heroName: "unknown",
                           })
                         ),
-                        o.a.createElement(It, null)
+                        o.a.createElement(Ot, null)
                       ),
                       o.a.createElement(
-                        Pe.a,
+                        xe.a,
                         {
                           className: Object(ce.a)(
-                            je.a.CarouselArrow,
-                            je.a.Left
+                            ke.a.CarouselArrow,
+                            ke.a.Left
                           ),
                         },
                         o.a.createElement("img", {
                           src: p.a.IMG_URL + "international2020/arrow_left.png",
-                          className: je.a.ArrowImage,
+                          className: ke.a.ArrowImage,
                         })
                       ),
                       o.a.createElement(
-                        Pe.b,
+                        xe.b,
                         {
                           className: Object(ce.a)(
-                            je.a.CarouselArrow,
-                            je.a.Right
+                            ke.a.CarouselArrow,
+                            ke.a.Right
                           ),
                         },
                         o.a.createElement("img", {
                           src: p.a.IMG_URL + "international2020/arrow_left.png",
-                          className: je.a.ArrowImage,
+                          className: ke.a.ArrowImage,
                         })
                       ),
-                      o.a.createElement(Rt, {
+                      o.a.createElement(Yt, {
                         treasureID: this.state.nImmortalTreasureSelected,
                       })
                     ),
@@ -31698,9 +33000,9 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleCaption,
-                          je.a.TextColorLightGrey,
-                          je.a.TreasureLevels
+                          ke.a.TextStyleCaption,
+                          ke.a.TextColorLightGrey,
+                          ke.a.TreasureLevels
                         ),
                       },
                       Object(_.a)("#battlepass_immortals_levels_1_desc")
@@ -31710,243 +33012,243 @@ object-assign
                     "div",
                     {
                       className: Object(ce.a)(
-                        je.a.CarouselContainer,
+                        ke.a.CarouselContainer,
                         2 == this.state.nImmortalTreasureSelected &&
-                          je.a.ShowCarousel
+                          ke.a.ShowCarousel
                       ),
                     },
                     o.a.createElement(
-                      Pe.d,
+                      xe.d,
                       {
-                        className: je.a.ImmortalCarousel,
+                        className: ke.a.ImmortalCarousel,
                         naturalSlideWidth: 100,
                         naturalSlideHeight: 37,
                         totalSlides: 11,
                       },
                       o.a.createElement(
-                        Pe.g,
+                        xe.g,
                         null,
                         o.a.createElement(
-                          Pe.f,
+                          xe.f,
                           { index: 0 },
-                          o.a.createElement(xt, {
+                          o.a.createElement(At, {
                             index: 0,
                             video: "sven",
                             heroRight: !0,
                           })
                         ),
                         o.a.createElement(
-                          Pe.f,
+                          xe.f,
                           { index: 1 },
-                          o.a.createElement(xt, {
+                          o.a.createElement(At, {
                             index: 1,
                             video: "magnus",
                             heroLeft: !0,
                           })
                         ),
                         o.a.createElement(
-                          Pe.f,
+                          xe.f,
                           { index: 2 },
-                          o.a.createElement(xt, {
+                          o.a.createElement(At, {
                             index: 2,
                             video: "slardar",
                             heroLeft: !0,
                           })
                         ),
                         o.a.createElement(
-                          Pe.f,
+                          xe.f,
                           { index: 3 },
-                          o.a.createElement(xt, {
+                          o.a.createElement(At, {
                             index: 3,
                             video: "trollwarlord",
                             heroLeft: !0,
                           })
                         ),
                         o.a.createElement(
-                          Pe.f,
+                          xe.f,
                           { index: 4 },
-                          o.a.createElement(xt, {
+                          o.a.createElement(At, {
                             index: 4,
                             video: "witchdoctor",
                             heroLeft: !0,
                           })
                         ),
                         o.a.createElement(
-                          Pe.f,
+                          xe.f,
                           { index: 5 },
-                          o.a.createElement(xt, {
+                          o.a.createElement(At, {
                             index: 5,
                             video: "silencer",
                             heroLeft: !0,
                           })
                         ),
                         o.a.createElement(
-                          Pe.f,
+                          xe.f,
                           { index: 6 },
-                          o.a.createElement(xt, {
+                          o.a.createElement(At, {
                             index: 6,
                             video: "jakiro",
                             heroLeft: !0,
                           })
                         ),
                         o.a.createElement(
-                          Pe.f,
+                          xe.f,
                           { index: 7 },
-                          o.a.createElement(xt, {
+                          o.a.createElement(At, {
                             index: 7,
                             video: "witchdoctor_gold",
                             heroRight: !0,
                           })
                         ),
                         o.a.createElement(
-                          Pe.f,
+                          xe.f,
                           { index: 8 },
-                          o.a.createElement(xt, {
+                          o.a.createElement(At, {
                             index: 8,
                             video: "slardar_gold",
                             heroLeft: !0,
                           })
                         ),
                         o.a.createElement(
-                          Pe.f,
+                          xe.f,
                           { index: 9 },
-                          o.a.createElement(xt, {
+                          o.a.createElement(At, {
                             index: 9,
                             video: "ursa",
                             heroLeft: !0,
                           })
                         ),
                         o.a.createElement(
-                          Pe.f,
+                          xe.f,
                           { index: 10 },
-                          o.a.createElement(xt, { index: 10, video: "emblem" })
+                          o.a.createElement(At, { index: 10, video: "emblem" })
                         )
                       ),
                       o.a.createElement(
                         "div",
-                        { className: je.a.CarouselDots },
+                        { className: ke.a.CarouselDots },
                         o.a.createElement(
-                          Pe.e,
+                          xe.e,
                           { slide: 0 },
-                          o.a.createElement(Pt, { heroName: "sven" })
+                          o.a.createElement(xt, { heroName: "sven" })
                         ),
                         o.a.createElement(
-                          Pe.e,
+                          xe.e,
                           { slide: 1 },
-                          o.a.createElement(Pt, { heroName: "magnataur" })
+                          o.a.createElement(xt, { heroName: "magnataur" })
                         ),
                         o.a.createElement(
-                          Pe.e,
+                          xe.e,
                           { slide: 2 },
-                          o.a.createElement(Pt, { heroName: "slardar" })
+                          o.a.createElement(xt, { heroName: "slardar" })
                         ),
                         o.a.createElement(
-                          Pe.e,
+                          xe.e,
                           { slide: 3 },
-                          o.a.createElement(Pt, { heroName: "troll_warlord" })
+                          o.a.createElement(xt, { heroName: "troll_warlord" })
                         ),
                         o.a.createElement(
-                          Pe.e,
+                          xe.e,
                           { slide: 4 },
-                          o.a.createElement(Pt, { heroName: "witch_doctor" })
+                          o.a.createElement(xt, { heroName: "witch_doctor" })
                         ),
                         o.a.createElement(
-                          Pe.e,
+                          xe.e,
                           { slide: 5 },
-                          o.a.createElement(Pt, { heroName: "silencer" })
+                          o.a.createElement(xt, { heroName: "silencer" })
                         ),
                         o.a.createElement(
-                          Pe.e,
+                          xe.e,
                           {
                             slide: 6,
                             "data-tip": Object(_.a)("#battlepass_tooltip_rare"),
                           },
-                          o.a.createElement(Pt, {
+                          o.a.createElement(xt, {
                             rare: !0,
                             heroName: "jakiro",
                           })
                         ),
                         o.a.createElement(
-                          Pe.e,
+                          xe.e,
                           {
                             slide: 7,
                             "data-tip": Object(_.a)(
                               "#battlepass_tooltip_very_rare"
                             ),
                           },
-                          o.a.createElement(Pt, {
+                          o.a.createElement(xt, {
                             veryrare: !0,
                             heroName: "witch_doctor",
                           })
                         ),
                         o.a.createElement(
-                          Pe.e,
+                          xe.e,
                           {
                             slide: 8,
                             "data-tip": Object(_.a)(
                               "#battlepass_tooltip_very_rare"
                             ),
                           },
-                          o.a.createElement(Pt, {
+                          o.a.createElement(xt, {
                             veryrare: !0,
                             heroName: "slardar",
                           })
                         ),
                         o.a.createElement(
-                          Pe.e,
+                          xe.e,
                           {
                             slide: 9,
                             "data-tip": Object(_.a)(
                               "#battlepass_tooltip_ultra_rare"
                             ),
                           },
-                          o.a.createElement(Pt, {
+                          o.a.createElement(xt, {
                             ultrarare: !0,
                             heroName: "ursa",
                           })
                         ),
                         o.a.createElement(
-                          Pe.e,
+                          xe.e,
                           {
                             slide: 10,
                             "data-tip": Object(_.a)(
                               "#battlepass_tooltip_cosmically_rare"
                             ),
                           },
-                          o.a.createElement(Pt, {
+                          o.a.createElement(xt, {
                             cosmicallyrare: !0,
                             heroName: "unknown",
                           })
                         ),
-                        o.a.createElement(It, null)
+                        o.a.createElement(Ot, null)
                       ),
                       o.a.createElement(
-                        Pe.a,
+                        xe.a,
                         {
                           className: Object(ce.a)(
-                            je.a.CarouselArrow,
-                            je.a.Left
+                            ke.a.CarouselArrow,
+                            ke.a.Left
                           ),
                         },
                         o.a.createElement("img", {
                           src: p.a.IMG_URL + "international2020/arrow_left.png",
-                          className: je.a.ArrowImage,
+                          className: ke.a.ArrowImage,
                         })
                       ),
                       o.a.createElement(
-                        Pe.b,
+                        xe.b,
                         {
                           className: Object(ce.a)(
-                            je.a.CarouselArrow,
-                            je.a.Right
+                            ke.a.CarouselArrow,
+                            ke.a.Right
                           ),
                         },
                         o.a.createElement("img", {
                           src: p.a.IMG_URL + "international2020/arrow_left.png",
-                          className: je.a.ArrowImage,
+                          className: ke.a.ArrowImage,
                         })
                       ),
-                      o.a.createElement(Rt, {
+                      o.a.createElement(Yt, {
                         treasureID: this.state.nImmortalTreasureSelected,
                       })
                     ),
@@ -31954,9 +33256,9 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleCaption,
-                          je.a.TextColorLightGrey,
-                          je.a.TreasureLevels
+                          ke.a.TextStyleCaption,
+                          ke.a.TextColorLightGrey,
+                          ke.a.TreasureLevels
                         ),
                       },
                       Object(_.a)("#battlepass_immortals_levels_2_desc")
@@ -31966,221 +33268,221 @@ object-assign
                     "div",
                     {
                       className: Object(ce.a)(
-                        je.a.CarouselContainer,
+                        ke.a.CarouselContainer,
                         3 == this.state.nImmortalTreasureSelected &&
-                          je.a.ShowCarousel
+                          ke.a.ShowCarousel
                       ),
                     },
                     o.a.createElement(
-                      Pe.d,
+                      xe.d,
                       {
-                        className: je.a.ImmortalCarousel,
+                        className: ke.a.ImmortalCarousel,
                         naturalSlideWidth: 100,
                         naturalSlideHeight: 37,
                         totalSlides: 10,
                       },
                       o.a.createElement(
-                        Pe.g,
+                        xe.g,
                         null,
                         o.a.createElement(
-                          Pe.f,
+                          xe.f,
                           { index: 0 },
-                          o.a.createElement(xt, {
+                          o.a.createElement(At, {
                             index: 0,
                             video: "lich",
                             heroRight: !0,
                           })
                         ),
                         o.a.createElement(
-                          Pe.f,
+                          xe.f,
                           { index: 1 },
-                          o.a.createElement(xt, {
+                          o.a.createElement(At, {
                             index: 1,
                             video: "oracle",
                             heroLeft: !0,
                           })
                         ),
                         o.a.createElement(
-                          Pe.f,
+                          xe.f,
                           { index: 2 },
-                          o.a.createElement(xt, {
+                          o.a.createElement(At, {
                             index: 2,
                             video: "clockwerk",
                             heroRight: !0,
                           })
                         ),
                         o.a.createElement(
-                          Pe.f,
+                          xe.f,
                           { index: 3 },
-                          o.a.createElement(xt, {
+                          o.a.createElement(At, {
                             index: 3,
                             video: "pugna",
                             heroLeft: !0,
                           })
                         ),
                         o.a.createElement(
-                          Pe.f,
+                          xe.f,
                           { index: 4 },
-                          o.a.createElement(xt, {
+                          o.a.createElement(At, {
                             index: 4,
                             video: "treantprotector",
                             heroLeft: !0,
                           })
                         ),
                         o.a.createElement(
-                          Pe.f,
+                          xe.f,
                           { index: 5 },
-                          o.a.createElement(xt, {
+                          o.a.createElement(At, {
                             index: 5,
                             video: "gyrocopter",
                             heroRight: !0,
                           })
                         ),
                         o.a.createElement(
-                          Pe.f,
+                          xe.f,
                           { index: 6 },
-                          o.a.createElement(xt, {
+                          o.a.createElement(At, {
                             index: 6,
                             video: "battlepoints",
                             heroLeft: !1,
                           })
                         ),
                         o.a.createElement(
-                          Pe.f,
+                          xe.f,
                           { index: 7 },
-                          o.a.createElement(xt, {
+                          o.a.createElement(At, {
                             index: 7,
                             video: "pugna_gold",
                             heroRight: !0,
                           })
                         ),
                         o.a.createElement(
-                          Pe.f,
+                          xe.f,
                           { index: 8 },
-                          o.a.createElement(xt, {
+                          o.a.createElement(At, {
                             index: 8,
                             video: "phoenix",
                             heroLeft: !0,
                           })
                         ),
                         o.a.createElement(
-                          Pe.f,
+                          xe.f,
                           { index: 10 },
-                          o.a.createElement(xt, { index: 9, video: "emblem" })
+                          o.a.createElement(At, { index: 9, video: "emblem" })
                         )
                       ),
                       o.a.createElement(
                         "div",
-                        { className: je.a.CarouselDots },
+                        { className: ke.a.CarouselDots },
                         o.a.createElement(
-                          Pe.e,
+                          xe.e,
                           { slide: 0 },
-                          o.a.createElement(Pt, { heroName: "lich" })
+                          o.a.createElement(xt, { heroName: "lich" })
                         ),
                         o.a.createElement(
-                          Pe.e,
+                          xe.e,
                           { slide: 1 },
-                          o.a.createElement(Pt, { heroName: "oracle" })
+                          o.a.createElement(xt, { heroName: "oracle" })
                         ),
                         o.a.createElement(
-                          Pe.e,
+                          xe.e,
                           { slide: 2 },
-                          o.a.createElement(Pt, { heroName: "rattletrap" })
+                          o.a.createElement(xt, { heroName: "rattletrap" })
                         ),
                         o.a.createElement(
-                          Pe.e,
+                          xe.e,
                           { slide: 3 },
-                          o.a.createElement(Pt, { heroName: "pugna" })
+                          o.a.createElement(xt, { heroName: "pugna" })
                         ),
                         o.a.createElement(
-                          Pe.e,
+                          xe.e,
                           { slide: 4 },
-                          o.a.createElement(Pt, { heroName: "treant" })
+                          o.a.createElement(xt, { heroName: "treant" })
                         ),
                         o.a.createElement(
-                          Pe.e,
+                          xe.e,
                           { slide: 5 },
-                          o.a.createElement(Pt, { heroName: "gyrocopter" })
+                          o.a.createElement(xt, { heroName: "gyrocopter" })
                         ),
                         o.a.createElement(
-                          Pe.e,
+                          xe.e,
                           {
                             slide: 6,
                             "data-tip": Object(_.a)("#battlepass_tooltip_rare"),
                           },
-                          o.a.createElement(Pt, {
+                          o.a.createElement(xt, {
                             rare: !0,
                             heroName: "unknown",
                           })
                         ),
                         o.a.createElement(
-                          Pe.e,
+                          xe.e,
                           {
                             slide: 7,
                             "data-tip": Object(_.a)(
                               "#battlepass_tooltip_very_rare"
                             ),
                           },
-                          o.a.createElement(Pt, {
+                          o.a.createElement(xt, {
                             veryrare: !0,
                             heroName: "pugna",
                           })
                         ),
                         o.a.createElement(
-                          Pe.e,
+                          xe.e,
                           {
                             slide: 8,
                             "data-tip": Object(_.a)(
                               "#battlepass_tooltip_ultra_rare"
                             ),
                           },
-                          o.a.createElement(Pt, {
+                          o.a.createElement(xt, {
                             ultrarare: !0,
                             heroName: "phoenix",
                           })
                         ),
                         o.a.createElement(
-                          Pe.e,
+                          xe.e,
                           {
                             slide: 9,
                             "data-tip": Object(_.a)(
                               "#battlepass_tooltip_cosmically_rare"
                             ),
                           },
-                          o.a.createElement(Pt, {
+                          o.a.createElement(xt, {
                             cosmicallyrare: !0,
                             heroName: "unknown",
                           })
                         ),
-                        o.a.createElement(It, null)
+                        o.a.createElement(Ot, null)
                       ),
                       o.a.createElement(
-                        Pe.a,
+                        xe.a,
                         {
                           className: Object(ce.a)(
-                            je.a.CarouselArrow,
-                            je.a.Left
+                            ke.a.CarouselArrow,
+                            ke.a.Left
                           ),
                         },
                         o.a.createElement("img", {
                           src: p.a.IMG_URL + "international2020/arrow_left.png",
-                          className: je.a.ArrowImage,
+                          className: ke.a.ArrowImage,
                         })
                       ),
                       o.a.createElement(
-                        Pe.b,
+                        xe.b,
                         {
                           className: Object(ce.a)(
-                            je.a.CarouselArrow,
-                            je.a.Right
+                            ke.a.CarouselArrow,
+                            ke.a.Right
                           ),
                         },
                         o.a.createElement("img", {
                           src: p.a.IMG_URL + "international2020/arrow_left.png",
-                          className: je.a.ArrowImage,
+                          className: ke.a.ArrowImage,
                         })
                       ),
-                      o.a.createElement(Rt, {
+                      o.a.createElement(Yt, {
                         treasureID: this.state.nImmortalTreasureSelected,
                       })
                     ),
@@ -32188,9 +33490,9 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleCaption,
-                          je.a.TextColorLightGrey,
-                          je.a.TreasureLevels
+                          ke.a.TextStyleCaption,
+                          ke.a.TextColorLightGrey,
+                          ke.a.TreasureLevels
                         ),
                       },
                       Object(_.a)("#battlepass_immortals_levels_3_desc")
@@ -32200,9 +33502,9 @@ object-assign
                     "div",
                     {
                       className: Object(ce.a)(
-                        je.a.TextStyleFootnote,
-                        je.a.TextColorDarkGold,
-                        je.a.ImmortalsTrade
+                        ke.a.TextStyleFootnote,
+                        ke.a.TextColorDarkGold,
+                        ke.a.ImmortalsTrade
                       ),
                     },
                     Object(_.a)("#battlepass_immortals_trade")
@@ -32210,23 +33512,23 @@ object-assign
                 )
               ),
               o.a.createElement(
-                jt,
+                kt,
                 {
-                  heightClassName: je.a.TerrainHeight,
+                  heightClassName: ke.a.TerrainHeight,
                   headerPrefix: "#battlepass_terrain_prefix",
                   headerText: "#battlepass_terrain_header",
                   bodyText: "#battlepass_terrain_desc",
                   neverTradeable: !0,
                   levelReward: 160,
-                  justifyContent: Tt.CenterBottom,
+                  justifyContent: Mt.CenterBottom,
                 },
                 o.a.createElement(
                   "div",
-                  { className: je.a.Terrain },
+                  { className: ke.a.Terrain },
                   o.a.createElement(
                     "video",
                     {
-                      className: je.a.BackgroundVideo,
+                      className: ke.a.BackgroundVideo,
                       autoPlay: !0,
                       preload: "auto",
                       muted: !0,
@@ -32247,7 +33549,7 @@ object-assign
                     })
                   )
                 ),
-                o.a.createElement(_e, {
+                o.a.createElement(me.a, {
                   bottom: !0,
                   color: "#000000",
                   startPct: 50,
@@ -32256,17 +33558,17 @@ object-assign
                 })
               ),
               o.a.createElement(
-                jt,
+                kt,
                 {
-                  heightClassName: je.a.MiniPudgeHeight,
+                  heightClassName: ke.a.MiniPudgeHeight,
                   headerPrefix: "#battlepass_minipudge_prefix",
                   headerText: "#battlepass_minipudge_header",
                   bodyText: "#battlepass_minipudge_desc",
                   levelReward: 255,
-                  justifyContent: Tt.CenterBottom,
+                  justifyContent: Mt.CenterBottom,
                 },
                 o.a.createElement("div", {
-                  className: je.a.MiniPudge,
+                  className: ke.a.MiniPudge,
                   style: {
                     backgroundImage:
                       "url( " +
@@ -32274,7 +33576,7 @@ object-assign
                       "international2020/pudge_arcana_bg.png )",
                   },
                 }),
-                o.a.createElement(_e, {
+                o.a.createElement(me.a, {
                   bottom: !0,
                   color: "#000000",
                   startPct: 50,
@@ -32283,17 +33585,17 @@ object-assign
                 })
               ),
               o.a.createElement(
-                jt,
+                kt,
                 {
-                  heightClassName: je.a.AntimageHeight,
+                  heightClassName: ke.a.AntimageHeight,
                   headerPrefix: "#battlepass_antimage_prefix",
                   headerText: "#battlepass_antimage_header",
                   bodyText: "#battlepass_antimage_desc",
                   levelReward: 305,
-                  justifyContent: Tt.CenterBottom,
+                  justifyContent: Mt.CenterBottom,
                 },
                 o.a.createElement("div", {
-                  className: je.a.Antimage,
+                  className: ke.a.Antimage,
                   style: {
                     backgroundImage:
                       "url( " +
@@ -32301,7 +33603,7 @@ object-assign
                       "international2020/antimage_arcana_bg.png )",
                   },
                 }),
-                o.a.createElement(_e, {
+                o.a.createElement(me.a, {
                   bottom: !0,
                   color: "#000000",
                   startPct: 50,
@@ -32310,16 +33612,16 @@ object-assign
                 })
               ),
               o.a.createElement(
-                jt,
+                kt,
                 {
-                  heightClassName: je.a.WraithKingHeight,
+                  heightClassName: ke.a.WraithKingHeight,
                   levelReward: 375,
                   backgroundVideo: "wk_arc_banner",
                 },
                 o.a.createElement(
                   "div",
-                  { className: je.a.WraithKing },
-                  o.a.createElement(_e, {
+                  { className: ke.a.WraithKing },
+                  o.a.createElement(me.a, {
                     bottom: !0,
                     color: "#000000",
                     startPct: 50,
@@ -32328,9 +33630,9 @@ object-assign
                   }),
                   o.a.createElement(
                     "div",
-                    { className: je.a.WKContainer },
+                    { className: ke.a.WKContainer },
                     o.a.createElement("img", {
-                      className: je.a.WKTitle,
+                      className: ke.a.WKTitle,
                       onError: function (e) {
                         return (e.target.src =
                           p.a.IMG_URL +
@@ -32346,9 +33648,9 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleOverline,
-                          je.a.TextColorLightGold,
-                          je.a.SubTitle
+                          ke.a.TextStyleOverline,
+                          ke.a.TextColorLightGold,
+                          ke.a.SubTitle
                         ),
                       },
                       Object(_.a)("#battlepass_wraithking_header")
@@ -32357,9 +33659,9 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleBody,
-                          je.a.TextColorLightestGrey,
-                          je.a.Body
+                          ke.a.TextStyleBody,
+                          ke.a.TextColorLightestGrey,
+                          ke.a.Body
                         ),
                       },
                       Object(_.a)("#battlepass_wraithking_desc")
@@ -32369,9 +33671,9 @@ object-assign
                       {
                         href: p.a.BASE_URL + "theonetrueking",
                         className: Object(ce.a)(
-                          je.a.TextStyleButton,
-                          je.a.TextColorLightestGrey,
-                          je.a.LearnMoreButton
+                          ke.a.TextStyleButton,
+                          ke.a.TextColorLightestGrey,
+                          ke.a.LearnMoreButton
                         ),
                       },
                       Object(_.a)("#battlepass_learn_more")
@@ -32380,12 +33682,12 @@ object-assign
                 )
               ),
               o.a.createElement(
-                jt,
-                { heightClassName: je.a.QueenOfPainHeight, levelReward: 445 },
+                kt,
+                { heightClassName: ke.a.QueenOfPainHeight, levelReward: 445 },
                 o.a.createElement(
                   "div",
                   {
-                    className: je.a.QueenOfPain,
+                    className: ke.a.QueenOfPain,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -32393,7 +33695,7 @@ object-assign
                         "international2020/qop_arcana_bg.png )",
                     },
                   },
-                  o.a.createElement(_e, {
+                  o.a.createElement(me.a, {
                     bottom: !0,
                     color: "#000000",
                     startPct: 50,
@@ -32402,9 +33704,9 @@ object-assign
                   }),
                   o.a.createElement(
                     "div",
-                    { className: je.a.QopContainer },
+                    { className: ke.a.QopContainer },
                     o.a.createElement("img", {
-                      className: je.a.QopTitle,
+                      className: ke.a.QopTitle,
                       onError: function (e) {
                         return (e.target.src =
                           p.a.IMG_URL +
@@ -32420,9 +33722,9 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleOverline,
-                          je.a.TextColorLightGold,
-                          je.a.SubTitle
+                          ke.a.TextStyleOverline,
+                          ke.a.TextColorLightGold,
+                          ke.a.SubTitle
                         ),
                       },
                       Object(_.a)("#battlepass_qop_header")
@@ -32431,9 +33733,9 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleBody,
-                          je.a.TextColorLightestGrey,
-                          je.a.Body
+                          ke.a.TextStyleBody,
+                          ke.a.TextColorLightestGrey,
+                          ke.a.Body
                         ),
                       },
                       Object(_.a)("#battlepass_qop_desc")
@@ -32443,9 +33745,9 @@ object-assign
                       {
                         href: p.a.BASE_URL + "eminenceofristul",
                         className: Object(ce.a)(
-                          je.a.TextStyleButton,
-                          je.a.TextColorLightestGrey,
-                          je.a.LearnMoreButton
+                          ke.a.TextStyleButton,
+                          ke.a.TextColorLightestGrey,
+                          ke.a.LearnMoreButton
                         ),
                       },
                       Object(_.a)("#battlepass_learn_more")
@@ -32454,17 +33756,17 @@ object-assign
                 )
               ),
               o.a.createElement(
-                jt,
+                kt,
                 {
-                  heightClassName: je.a.WindrangerHeight,
+                  heightClassName: ke.a.WindrangerHeight,
                   levelReward: 575,
                   headerPrefix: "#battlepass_windranger_prefix",
                   headerText: "#battlepass_windranger_header",
                   bodyText: "#battlepass_windranger_desc",
-                  justifyContent: Tt.CenterBottom,
+                  justifyContent: Mt.CenterBottom,
                 },
                 o.a.createElement("div", {
-                  className: je.a.Windranger,
+                  className: ke.a.Windranger,
                   style: {
                     backgroundImage:
                       "url( " +
@@ -32472,7 +33774,7 @@ object-assign
                       "international2020/windranger_arcana_bg.png )",
                   },
                 }),
-                o.a.createElement(_e, {
+                o.a.createElement(me.a, {
                   bottom: !0,
                   color: "#000000",
                   startPct: 50,
@@ -32481,18 +33783,18 @@ object-assign
                 })
               ),
               o.a.createElement(
-                jt,
+                kt,
                 {
-                  heightClassName: je.a.CustomTowersHeight,
+                  heightClassName: ke.a.CustomTowersHeight,
                   levelReward: 200,
                   headerText: "#battlepass_custom_towers_header",
                   neverTradeable: !0,
-                  justifyContent: Tt.CenterTop,
+                  justifyContent: Mt.CenterTop,
                 },
                 o.a.createElement(
                   "div",
                   {
-                    className: je.a.CustomTowers,
+                    className: ke.a.CustomTowers,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -32502,11 +33804,11 @@ object-assign
                   },
                   o.a.createElement(
                     "div",
-                    { className: je.a.CustomTowersVideoContainer },
+                    { className: ke.a.CustomTowersVideoContainer },
                     o.a.createElement(
                       "video",
                       {
-                        className: je.a.CustomTowersVideo,
+                        className: ke.a.CustomTowersVideo,
                         autoPlay: !0,
                         preload: "auto",
                         muted: !0,
@@ -32523,11 +33825,11 @@ object-assign
                       })
                     ),
                     o.a.createElement("img", {
-                      className: je.a.CustomTowersImage1,
+                      className: ke.a.CustomTowersImage1,
                       src: p.a.IMG_URL + "international2020/custom_tower_1.png",
                     }),
                     o.a.createElement("img", {
-                      className: je.a.CustomTowersImage2,
+                      className: ke.a.CustomTowersImage2,
                       src: p.a.IMG_URL + "international2020/custom_tower_2.png",
                     })
                   ),
@@ -32535,9 +33837,9 @@ object-assign
                     "div",
                     {
                       className: Object(ce.a)(
-                        je.a.TextStyleBody,
-                        je.a.TextColorLightestGrey,
-                        je.a.CustomTowersBody
+                        ke.a.TextStyleBody,
+                        ke.a.TextColorLightestGrey,
+                        ke.a.CustomTowersBody
                       ),
                     },
                     Object(_.a)("#battlepass_custom_towers_desc")
@@ -32545,18 +33847,18 @@ object-assign
                 )
               ),
               o.a.createElement(
-                jt,
+                kt,
                 {
-                  heightClassName: je.a.KillStreakHeight,
+                  heightClassName: ke.a.KillStreakHeight,
                   headerPrefix: "#battlepass_new",
                   headerText: "#battlepass_kill_streak_header",
                   bodyText: "#battlepass_kill_streak_desc",
-                  justifyContent: Tt.CenterTop,
+                  justifyContent: Mt.CenterTop,
                 },
                 o.a.createElement(
                   "div",
                   {
-                    className: je.a.KillStreak,
+                    className: ke.a.KillStreak,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -32565,24 +33867,24 @@ object-assign
                     },
                   },
                   o.a.createElement("img", {
-                    className: je.a.KillStreakOverlay,
+                    className: ke.a.KillStreakOverlay,
                     src: p.a.IMG_URL + "international2020/killstreak.png",
                   })
                 )
               ),
               o.a.createElement(
-                jt,
+                kt,
                 {
-                  heightClassName: je.a.PingCosmeticsHeight,
+                  heightClassName: ke.a.PingCosmeticsHeight,
                   headerPrefix: "#battlepass_new",
                   headerText: "#battlepass_ping_cosmetics_header",
                   bodyText: "#battlepass_ping_cosmetics_desc",
-                  justifyContent: Tt.CenterTop,
+                  justifyContent: Mt.CenterTop,
                 },
                 o.a.createElement(
                   "div",
                   {
-                    className: je.a.PingCosmetics,
+                    className: ke.a.PingCosmetics,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -32591,23 +33893,23 @@ object-assign
                     },
                   },
                   o.a.createElement("img", {
-                    className: je.a.PingImage,
+                    className: ke.a.PingImage,
                     src:
                       p.a.IMG_URL + "international2020/ping_cosmetics_bg.png",
                   })
                 )
               ),
               o.a.createElement(
-                jt,
+                kt,
                 {
-                  heightClassName: je.a.ConsumablesHeight,
+                  heightClassName: ke.a.ConsumablesHeight,
                   headerText: "#battlepass_consumables_title",
-                  justifyContent: Tt.CenterTop,
+                  justifyContent: Mt.CenterTop,
                 },
                 o.a.createElement(
                   "div",
                   {
-                    className: je.a.Consumables,
+                    className: ke.a.Consumables,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -32616,98 +33918,98 @@ object-assign
                     },
                   },
                   o.a.createElement(
-                    Pe.d,
+                    xe.d,
                     {
-                      className: je.a.ConsumablesCarousel,
+                      className: ke.a.ConsumablesCarousel,
                       naturalSlideWidth: 100,
                       naturalSlideHeight: 52,
                       totalSlides: 4,
                     },
                     o.a.createElement(
                       "div",
-                      { className: je.a.CarouselDots },
+                      { className: ke.a.CarouselDots },
                       o.a.createElement(
-                        Pe.e,
+                        xe.e,
                         { slide: 0 },
-                        o.a.createElement(Ft, { consumable: 1 })
+                        o.a.createElement(Bt, { consumable: 1 })
                       ),
                       o.a.createElement(
-                        Pe.e,
+                        xe.e,
                         { slide: 1 },
-                        o.a.createElement(Ft, { consumable: 2 })
+                        o.a.createElement(Bt, { consumable: 2 })
                       ),
                       o.a.createElement(
-                        Pe.e,
+                        xe.e,
                         { slide: 2 },
-                        o.a.createElement(Ft, { consumable: 3 })
+                        o.a.createElement(Bt, { consumable: 3 })
                       ),
                       o.a.createElement(
-                        Pe.e,
+                        xe.e,
                         { slide: 3 },
-                        o.a.createElement(Ft, { consumable: 4 })
+                        o.a.createElement(Bt, { consumable: 4 })
                       )
                     ),
                     o.a.createElement(
-                      Pe.g,
+                      xe.g,
                       null,
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 0 },
-                        o.a.createElement(Ut, { index: 0, video: "portal" })
+                        o.a.createElement(Gt, { index: 0, video: "portal" })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 1 },
-                        o.a.createElement(Ut, { index: 1, video: "ball" })
+                        o.a.createElement(Gt, { index: 1, video: "ball" })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 2 },
-                        o.a.createElement(Ut, { index: 2, video: "disco" })
+                        o.a.createElement(Gt, { index: 2, video: "disco" })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 3 },
-                        o.a.createElement(Ut, { index: 3, video: "pepper" })
+                        o.a.createElement(Gt, { index: 3, video: "pepper" })
                       )
                     ),
                     o.a.createElement(
-                      Pe.a,
+                      xe.a,
                       {
-                        className: Object(ce.a)(je.a.CarouselArrow, je.a.Left),
+                        className: Object(ce.a)(ke.a.CarouselArrow, ke.a.Left),
                       },
                       o.a.createElement("img", {
                         src: p.a.IMG_URL + "international2020/arrow_left.png",
-                        className: je.a.ArrowImage,
+                        className: ke.a.ArrowImage,
                       })
                     ),
                     o.a.createElement(
-                      Pe.b,
+                      xe.b,
                       {
-                        className: Object(ce.a)(je.a.CarouselArrow, je.a.Right),
+                        className: Object(ce.a)(ke.a.CarouselArrow, ke.a.Right),
                       },
                       o.a.createElement("img", {
                         src: p.a.IMG_URL + "international2020/arrow_left.png",
-                        className: je.a.ArrowImage,
+                        className: ke.a.ArrowImage,
                       })
                     ),
-                    o.a.createElement(Wt, null)
+                    o.a.createElement(Ut, null)
                   )
                 )
               ),
               o.a.createElement(
-                jt,
+                kt,
                 {
-                  heightClassName: je.a.SpraysHeight,
+                  heightClassName: ke.a.SpraysHeight,
                   headerPrefix: "#battlepass_updated",
                   headerText: "#battlepass_sprays_header",
                   bodyText: "#battlepass_sprays_desc",
-                  justifyContent: Tt.CenterTop,
+                  justifyContent: Mt.CenterTop,
                 },
                 o.a.createElement(
                   "div",
                   {
-                    className: je.a.Sprays,
+                    className: ke.a.Sprays,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -32716,211 +34018,211 @@ object-assign
                     },
                   },
                   o.a.createElement(
-                    Pe.d,
+                    xe.d,
                     {
-                      className: je.a.SprayCarousel,
+                      className: ke.a.SprayCarousel,
                       naturalSlideWidth: 100,
                       naturalSlideHeight: 60,
                       totalSlides: 20,
                     },
                     o.a.createElement(
-                      Pe.g,
-                      { className: je.a.CarouselFade },
+                      xe.g,
+                      { className: ke.a.CarouselFade },
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 0 },
                         o.a.createElement("img", {
-                          className: je.a.Spray,
+                          className: ke.a.Spray,
                           src:
                             p.a.IMG_URL +
                             "international2020/sprays/spray_1.png",
                         })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 1 },
                         o.a.createElement("img", {
-                          className: je.a.Spray,
+                          className: ke.a.Spray,
                           src:
                             p.a.IMG_URL +
                             "international2020/sprays/spray_2.png",
                         })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 2 },
                         o.a.createElement("img", {
-                          className: je.a.Spray,
+                          className: ke.a.Spray,
                           src:
                             p.a.IMG_URL +
                             "international2020/sprays/spray_3.png",
                         })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 3 },
                         o.a.createElement("img", {
-                          className: je.a.Spray,
+                          className: ke.a.Spray,
                           src:
                             p.a.IMG_URL +
                             "international2020/sprays/spray_4.png",
                         })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 4 },
                         o.a.createElement("img", {
-                          className: je.a.Spray,
+                          className: ke.a.Spray,
                           src:
                             p.a.IMG_URL +
                             "international2020/sprays/spray_5.png",
                         })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 5 },
                         o.a.createElement("img", {
-                          className: je.a.Spray,
+                          className: ke.a.Spray,
                           src:
                             p.a.IMG_URL +
                             "international2020/sprays/spray_6.png",
                         })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 6 },
                         o.a.createElement("img", {
-                          className: je.a.Spray,
+                          className: ke.a.Spray,
                           src:
                             p.a.IMG_URL +
                             "international2020/sprays/spray_7.png",
                         })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 7 },
                         o.a.createElement("img", {
-                          className: je.a.Spray,
+                          className: ke.a.Spray,
                           src:
                             p.a.IMG_URL +
                             "international2020/sprays/spray_8.png",
                         })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 8 },
                         o.a.createElement("img", {
-                          className: je.a.Spray,
+                          className: ke.a.Spray,
                           src:
                             p.a.IMG_URL +
                             "international2020/sprays/spray_9.png",
                         })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 9 },
                         o.a.createElement("img", {
-                          className: je.a.Spray,
+                          className: ke.a.Spray,
                           src:
                             p.a.IMG_URL +
                             "international2020/sprays/spray_10.png",
                         })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 10 },
                         o.a.createElement("img", {
-                          className: je.a.Spray,
+                          className: ke.a.Spray,
                           src:
                             p.a.IMG_URL +
                             "international2020/sprays/spray_11.png",
                         })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 11 },
                         o.a.createElement("img", {
-                          className: je.a.Spray,
+                          className: ke.a.Spray,
                           src:
                             p.a.IMG_URL +
                             "international2020/sprays/spray_12.png",
                         })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 12 },
                         o.a.createElement("img", {
-                          className: je.a.Spray,
+                          className: ke.a.Spray,
                           src:
                             p.a.IMG_URL +
                             "international2020/sprays/spray_13.png",
                         })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 13 },
                         o.a.createElement("img", {
-                          className: je.a.Spray,
+                          className: ke.a.Spray,
                           src:
                             p.a.IMG_URL +
                             "international2020/sprays/spray_14.png",
                         })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 14 },
                         o.a.createElement("img", {
-                          className: je.a.Spray,
+                          className: ke.a.Spray,
                           src:
                             p.a.IMG_URL +
                             "international2020/sprays/spray_15.png",
                         })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 15 },
                         o.a.createElement("img", {
-                          className: je.a.Spray,
+                          className: ke.a.Spray,
                           src:
                             p.a.IMG_URL +
                             "international2020/sprays/spray_16.png",
                         })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 16 },
                         o.a.createElement("img", {
-                          className: je.a.Spray,
+                          className: ke.a.Spray,
                           src:
                             p.a.IMG_URL +
                             "international2020/sprays/spray_17.png",
                         })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 17 },
                         o.a.createElement("img", {
-                          className: je.a.Spray,
+                          className: ke.a.Spray,
                           src:
                             p.a.IMG_URL +
                             "international2020/sprays/spray_18.png",
                         })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 18 },
                         o.a.createElement("img", {
-                          className: je.a.Spray,
+                          className: ke.a.Spray,
                           src:
                             p.a.IMG_URL +
                             "international2020/sprays/spray_19.png",
                         })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 19 },
                         o.a.createElement("img", {
-                          className: je.a.Spray,
+                          className: ke.a.Spray,
                           src:
                             p.a.IMG_URL +
                             "international2020/sprays/spray_20.png",
@@ -32928,144 +34230,144 @@ object-assign
                       )
                     ),
                     o.a.createElement(
-                      Pe.a,
+                      xe.a,
                       {
-                        className: Object(ce.a)(je.a.CarouselArrow, je.a.Left),
+                        className: Object(ce.a)(ke.a.CarouselArrow, ke.a.Left),
                       },
                       o.a.createElement("img", {
                         src: p.a.IMG_URL + "international2020/arrow_left.png",
-                        className: je.a.ArrowImage,
+                        className: ke.a.ArrowImage,
                       })
                     ),
                     o.a.createElement(
-                      Pe.b,
+                      xe.b,
                       {
-                        className: Object(ce.a)(je.a.CarouselArrow, je.a.Right),
+                        className: Object(ce.a)(ke.a.CarouselArrow, ke.a.Right),
                       },
                       o.a.createElement("img", {
                         src: p.a.IMG_URL + "international2020/arrow_left.png",
-                        className: je.a.ArrowImage,
+                        className: ke.a.ArrowImage,
                       })
                     ),
-                    o.a.createElement(Ht, null),
+                    o.a.createElement(Rt, null),
                     o.a.createElement(
                       "div",
-                      { className: je.a.CarouselDots },
+                      { className: ke.a.CarouselDots },
                       o.a.createElement(
-                        Pe.e,
+                        xe.e,
                         { slide: 0 },
-                        o.a.createElement(Gt, { spray: 1, level: 24 })
+                        o.a.createElement(Pt, { spray: 1, level: 24 })
                       ),
                       o.a.createElement(
-                        Pe.e,
+                        xe.e,
                         { slide: 1 },
-                        o.a.createElement(Gt, { spray: 2, level: 56 })
+                        o.a.createElement(Pt, { spray: 2, level: 56 })
                       ),
                       o.a.createElement(
-                        Pe.e,
+                        xe.e,
                         { slide: 2 },
-                        o.a.createElement(Gt, { spray: 3, level: 106 })
+                        o.a.createElement(Pt, { spray: 3, level: 106 })
                       ),
                       o.a.createElement(
-                        Pe.e,
+                        xe.e,
                         { slide: 3 },
-                        o.a.createElement(Gt, { spray: 4, level: 163 })
+                        o.a.createElement(Pt, { spray: 4, level: 163 })
                       ),
                       o.a.createElement(
-                        Pe.e,
+                        xe.e,
                         { slide: 4 },
-                        o.a.createElement(Gt, { spray: 5, level: 236 })
+                        o.a.createElement(Pt, { spray: 5, level: 236 })
                       ),
                       o.a.createElement(
-                        Pe.e,
+                        xe.e,
                         { slide: 5 },
-                        o.a.createElement(Gt, { spray: 6, level: 266 })
+                        o.a.createElement(Pt, { spray: 6, level: 266 })
                       ),
                       o.a.createElement(
-                        Pe.e,
+                        xe.e,
                         { slide: 6 },
-                        o.a.createElement(Gt, { spray: 7, level: 292 })
+                        o.a.createElement(Pt, { spray: 7, level: 292 })
                       ),
                       o.a.createElement(
-                        Pe.e,
+                        xe.e,
                         { slide: 7 },
-                        o.a.createElement(Gt, { spray: 8, level: 313 })
+                        o.a.createElement(Pt, { spray: 8, level: 313 })
                       ),
                       o.a.createElement(
-                        Pe.e,
+                        xe.e,
                         { slide: 8 },
-                        o.a.createElement(Gt, { spray: 9, level: 353 })
+                        o.a.createElement(Pt, { spray: 9, level: 353 })
                       ),
                       o.a.createElement(
-                        Pe.e,
+                        xe.e,
                         { slide: 9 },
-                        o.a.createElement(Gt, { spray: 10, level: 405 })
+                        o.a.createElement(Pt, { spray: 10, level: 405 })
                       ),
                       o.a.createElement(
-                        Pe.e,
+                        xe.e,
                         { slide: 10 },
-                        o.a.createElement(Gt, { spray: 11, level: 455 })
+                        o.a.createElement(Pt, { spray: 11, level: 455 })
                       ),
                       o.a.createElement(
-                        Pe.e,
+                        xe.e,
                         { slide: 11 },
-                        o.a.createElement(Gt, { spray: 12, level: 515 })
+                        o.a.createElement(Pt, { spray: 12, level: 515 })
                       ),
                       o.a.createElement(
-                        Pe.e,
+                        xe.e,
                         { slide: 12 },
-                        o.a.createElement(Gt, { spray: 13, level: 557 })
+                        o.a.createElement(Pt, { spray: 13, level: 557 })
                       ),
                       o.a.createElement(
-                        Pe.e,
+                        xe.e,
                         { slide: 13 },
-                        o.a.createElement(Gt, { spray: 14, level: 612 })
+                        o.a.createElement(Pt, { spray: 14, level: 612 })
                       ),
                       o.a.createElement(
-                        Pe.e,
+                        xe.e,
                         { slide: 14 },
-                        o.a.createElement(Gt, { spray: 15, level: 665 })
+                        o.a.createElement(Pt, { spray: 15, level: 665 })
                       ),
                       o.a.createElement(
-                        Pe.e,
+                        xe.e,
                         { slide: 15 },
-                        o.a.createElement(Gt, { spray: 16, level: 725 })
+                        o.a.createElement(Pt, { spray: 16, level: 725 })
                       ),
                       o.a.createElement(
-                        Pe.e,
+                        xe.e,
                         { slide: 16 },
-                        o.a.createElement(Gt, { spray: 17, level: 785 })
+                        o.a.createElement(Pt, { spray: 17, level: 785 })
                       ),
                       o.a.createElement(
-                        Pe.e,
+                        xe.e,
                         { slide: 17 },
-                        o.a.createElement(Gt, { spray: 18, level: 875 })
+                        o.a.createElement(Pt, { spray: 18, level: 875 })
                       ),
                       o.a.createElement(
-                        Pe.e,
+                        xe.e,
                         { slide: 18 },
-                        o.a.createElement(Gt, { spray: 19, level: 955 })
+                        o.a.createElement(Pt, { spray: 19, level: 955 })
                       ),
                       o.a.createElement(
-                        Pe.e,
+                        xe.e,
                         { slide: 19 },
-                        o.a.createElement(Gt, { spray: 20, level: 1305 })
+                        o.a.createElement(Pt, { spray: 20, level: 1305 })
                       )
                     )
                   )
                 )
               ),
               o.a.createElement(
-                jt,
+                kt,
                 {
-                  heightClassName: je.a.TauntsHeight,
+                  heightClassName: ke.a.TauntsHeight,
                   headerText: "#battlepass_taunts_header",
-                  justifyContent: Tt.CenterTop,
+                  justifyContent: Mt.CenterTop,
                 },
                 o.a.createElement(
                   "div",
                   {
-                    className: je.a.Taunts,
+                    className: ke.a.Taunts,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -33073,7 +34375,7 @@ object-assign
                         "international2020/backgrounds/background_13.jpg )",
                     },
                   },
-                  o.a.createElement(_e, {
+                  o.a.createElement(me.a, {
                     bottom: !0,
                     color: "#000000",
                     startPct: 30,
@@ -33081,93 +34383,93 @@ object-assign
                   }),
                   o.a.createElement(
                     "div",
-                    { className: je.a.TauntBackgroundContainer },
+                    { className: ke.a.TauntBackgroundContainer },
                     o.a.createElement("img", {
                       className: Object(ce.a)(
-                        je.a.TauntBackground,
-                        je.a.TauntBackground1
+                        ke.a.TauntBackground,
+                        ke.a.TauntBackground1
                       ),
                       src: p.a.IMG_URL + "international2020/taunt_1.png",
                     }),
                     o.a.createElement("img", {
                       className: Object(ce.a)(
-                        je.a.TauntBackground,
-                        je.a.TauntBackground2
+                        ke.a.TauntBackground,
+                        ke.a.TauntBackground2
                       ),
                       src: p.a.IMG_URL + "international2020/taunt_2.png",
                     }),
                     o.a.createElement("img", {
                       className: Object(ce.a)(
-                        je.a.TauntBackground,
-                        je.a.TauntBackground3
+                        ke.a.TauntBackground,
+                        ke.a.TauntBackground3
                       ),
                       src: p.a.IMG_URL + "international2020/taunt_3.png",
                     })
                   ),
                   o.a.createElement(
                     "div",
-                    { className: je.a.TauntList },
-                    o.a.createElement(Zt, {
+                    { className: ke.a.TauntList },
+                    o.a.createElement(Qt, {
                       heroName: "void_spirit",
                       name: "#battlepass_taunt_1",
                       level: 3,
                     }),
-                    o.a.createElement(Zt, {
+                    o.a.createElement(Qt, {
                       heroName: "keeper_of_the_light",
                       name: "#battlepass_taunt_2",
                       level: 18,
                     }),
-                    o.a.createElement(Zt, {
+                    o.a.createElement(Qt, {
                       heroName: "templar_assassin",
                       name: "#battlepass_taunt_3",
                       level: 58,
                     }),
-                    o.a.createElement(Zt, {
+                    o.a.createElement(Qt, {
                       heroName: "bane",
                       name: "#battlepass_taunt_4",
                       level: 88,
                     }),
-                    o.a.createElement(Zt, {
+                    o.a.createElement(Qt, {
                       heroName: "ember_spirit",
                       name: "#battlepass_taunt_5",
                       level: 133,
                     }),
-                    o.a.createElement(Zt, {
+                    o.a.createElement(Qt, {
                       heroName: "morphling",
                       name: "#battlepass_taunt_6",
                       level: 172,
                     }),
-                    o.a.createElement(Zt, {
+                    o.a.createElement(Qt, {
                       heroName: "earthshaker",
                       name: "#battlepass_taunt_7",
                       level: 222,
                     }),
-                    o.a.createElement(Zt, {
+                    o.a.createElement(Qt, {
                       heroName: "enchantress",
                       name: "#battlepass_taunt_8",
                       level: 277,
                     }),
-                    o.a.createElement(Zt, {
+                    o.a.createElement(Qt, {
                       heroName: "mars",
                       name: "#battlepass_taunt_9",
                       level: 347,
                     }),
-                    o.a.createElement(Zt, {
+                    o.a.createElement(Qt, {
                       heroName: "tinker",
                       name: "#battlepass_taunt_10",
                       level: 412,
                     }),
-                    o.a.createElement(Zt, {
+                    o.a.createElement(Qt, {
                       heroName: "snapfire",
                       name: "#battlepass_taunt_11",
                       level: 563,
                     }),
-                    o.a.createElement(Zt, {
+                    o.a.createElement(Qt, {
                       heroName: "ogre_magi",
                       name: "#battlepass_taunt_12",
                       level: 606,
                     }),
-                    o.a.createElement(Zt, {
+                    o.a.createElement(Qt, {
                       heroName: "luna",
                       name: "#battlepass_taunt_13",
                       level: 835,
@@ -33176,17 +34478,17 @@ object-assign
                 )
               ),
               o.a.createElement(
-                jt,
+                kt,
                 {
-                  heightClassName: je.a.EmoticonsHeight,
+                  heightClassName: ke.a.EmoticonsHeight,
                   headerText: "#battlepass_emoticons_header",
                   bodyText: "#battlepass_emoticons_desc",
-                  justifyContent: Tt.CenterTop,
+                  justifyContent: Mt.CenterTop,
                 },
                 o.a.createElement(
                   "div",
                   {
-                    className: je.a.Emoticons,
+                    className: ke.a.Emoticons,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -33195,61 +34497,61 @@ object-assign
                     },
                   },
                   o.a.createElement("img", {
-                    className: je.a.Mars,
+                    className: ke.a.Mars,
                     src: p.a.IMG_URL + "international2020/emoticon_mars.png",
                   }),
                   o.a.createElement("img", {
-                    className: je.a.Pango,
+                    className: ke.a.Pango,
                     src: p.a.IMG_URL + "international2020/emoticon_pango.png",
                   }),
                   o.a.createElement(
                     "div",
                     {
                       className: Object(ce.a)(
-                        je.a.EmoticonsGuild,
-                        je.a.EmoticonListContainer
+                        ke.a.EmoticonsGuild,
+                        ke.a.EmoticonListContainer
                       ),
                     },
                     o.a.createElement(
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleSmallHeading,
-                          je.a.TextColorLightestGold,
-                          je.a.EmoticonPackHeader
+                          ke.a.TextStyleSmallHeading,
+                          ke.a.TextColorLightestGold,
+                          ke.a.EmoticonPackHeader
                         ),
                       },
                       Object(_.a)("#battlepass_emoticons_guild_pack")
                     ),
                     o.a.createElement(
                       "div",
-                      { className: je.a.EmoticonList },
+                      { className: ke.a.EmoticonList },
                       o.a.createElement("img", {
-                        className: je.a.Emoticon,
+                        className: ke.a.Emoticon,
                         src:
                           p.a.IMG_URL +
                           "international2020/emoticons/guild_emoticon_1.gif",
                       }),
                       o.a.createElement("img", {
-                        className: je.a.Emoticon,
+                        className: ke.a.Emoticon,
                         src:
                           p.a.IMG_URL +
                           "international2020/emoticons/guild_emoticon_2.gif",
                       }),
                       o.a.createElement("img", {
-                        className: je.a.Emoticon,
+                        className: ke.a.Emoticon,
                         src:
                           p.a.IMG_URL +
                           "international2020/emoticons/guild_emoticon_3.gif",
                       }),
                       o.a.createElement("img", {
-                        className: je.a.Emoticon,
+                        className: ke.a.Emoticon,
                         src:
                           p.a.IMG_URL +
                           "international2020/emoticons/guild_emoticon_4.gif",
                       }),
                       o.a.createElement("img", {
-                        className: je.a.Emoticon,
+                        className: ke.a.Emoticon,
                         src:
                           p.a.IMG_URL +
                           "international2020/emoticons/guild_emoticon_5.gif",
@@ -33260,104 +34562,104 @@ object-assign
                     "div",
                     {
                       className: Object(ce.a)(
-                        je.a.EmoticonsBattlePass,
-                        je.a.EmoticonListContainer
+                        ke.a.EmoticonsBattlePass,
+                        ke.a.EmoticonListContainer
                       ),
                     },
                     o.a.createElement(
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleSmallHeading,
-                          je.a.TextColorLightestGold,
-                          je.a.EmoticonPackHeader
+                          ke.a.TextStyleSmallHeading,
+                          ke.a.TextColorLightestGold,
+                          ke.a.EmoticonPackHeader
                         ),
                       },
                       Object(_.a)("#battlepass_emoticons_general_packs")
                     ),
                     o.a.createElement(
                       "div",
-                      { className: je.a.EmoticonList },
+                      { className: ke.a.EmoticonList },
                       o.a.createElement("img", {
-                        className: je.a.Emoticon,
+                        className: ke.a.Emoticon,
                         src:
                           p.a.IMG_URL +
                           "international2020/emoticons/general_emoticon_1.gif",
                       }),
                       o.a.createElement("img", {
-                        className: je.a.Emoticon,
+                        className: ke.a.Emoticon,
                         src:
                           p.a.IMG_URL +
                           "international2020/emoticons/general_emoticon_2.gif",
                       }),
                       o.a.createElement("img", {
-                        className: je.a.Emoticon,
+                        className: ke.a.Emoticon,
                         src:
                           p.a.IMG_URL +
                           "international2020/emoticons/general_emoticon_3.gif",
                       }),
                       o.a.createElement("img", {
-                        className: je.a.Emoticon,
+                        className: ke.a.Emoticon,
                         src:
                           p.a.IMG_URL +
                           "international2020/emoticons/general_emoticon_4.gif",
                       }),
                       o.a.createElement("img", {
-                        className: je.a.Emoticon,
+                        className: ke.a.Emoticon,
                         src:
                           p.a.IMG_URL +
                           "international2020/emoticons/general_emoticon_5.gif",
                       }),
                       o.a.createElement("img", {
-                        className: je.a.Emoticon,
+                        className: ke.a.Emoticon,
                         src:
                           p.a.IMG_URL +
                           "international2020/emoticons/general_emoticon_6.gif",
                       }),
                       o.a.createElement("img", {
-                        className: je.a.Emoticon,
+                        className: ke.a.Emoticon,
                         src:
                           p.a.IMG_URL +
                           "international2020/emoticons/general_emoticon_7.gif",
                       }),
                       o.a.createElement("img", {
-                        className: je.a.Emoticon,
+                        className: ke.a.Emoticon,
                         src:
                           p.a.IMG_URL +
                           "international2020/emoticons/general_emoticon_8.gif",
                       }),
                       o.a.createElement("img", {
-                        className: je.a.Emoticon,
+                        className: ke.a.Emoticon,
                         src:
                           p.a.IMG_URL +
                           "international2020/emoticons/general_emoticon_9.gif",
                       }),
                       o.a.createElement("img", {
-                        className: je.a.Emoticon,
+                        className: ke.a.Emoticon,
                         src:
                           p.a.IMG_URL +
                           "international2020/emoticons/general_emoticon_10.gif",
                       }),
                       o.a.createElement("img", {
-                        className: je.a.Emoticon,
+                        className: ke.a.Emoticon,
                         src:
                           p.a.IMG_URL +
                           "international2020/emoticons/general_emoticon_11.gif",
                       }),
                       o.a.createElement("img", {
-                        className: je.a.Emoticon,
+                        className: ke.a.Emoticon,
                         src:
                           p.a.IMG_URL +
                           "international2020/emoticons/general_emoticon_12.gif",
                       }),
                       o.a.createElement("img", {
-                        className: je.a.Emoticon,
+                        className: ke.a.Emoticon,
                         src:
                           p.a.IMG_URL +
                           "international2020/emoticons/general_emoticon_13.gif",
                       }),
                       o.a.createElement("img", {
-                        className: je.a.Emoticon,
+                        className: ke.a.Emoticon,
                         src:
                           p.a.IMG_URL +
                           "international2020/emoticons/general_emoticon_14.gif",
@@ -33367,17 +34669,17 @@ object-assign
                 )
               ),
               o.a.createElement(
-                jt,
+                kt,
                 {
-                  heightClassName: je.a.ChatWheelHeight,
+                  heightClassName: ke.a.ChatWheelHeight,
                   headerText: "#battlepass_chat_wheel_header",
                   bodyText: "#battlepass_chat_wheel_desc",
-                  justifyContent: Tt.CenterTop,
+                  justifyContent: Mt.CenterTop,
                 },
                 o.a.createElement(
                   "div",
                   {
-                    className: je.a.ChatWheel,
+                    className: ke.a.ChatWheel,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -33386,32 +34688,32 @@ object-assign
                     },
                   },
                   o.a.createElement("img", {
-                    className: je.a.ChatWheelOverlay,
+                    className: ke.a.ChatWheelOverlay,
                     src: p.a.IMG_URL + "international2020/chat_wheel_bg.png",
                   }),
                   o.a.createElement(
                     "div",
                     {
                       className: Object(ce.a)(
-                        je.a.SoundPackContainer,
-                        je.a.CasterSoundPacks
+                        ke.a.SoundPackContainer,
+                        ke.a.CasterSoundPacks
                       ),
                     },
                     o.a.createElement(
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleSmallHeading,
-                          je.a.TextColorLightestGold,
-                          je.a.CasterPackHeader
+                          ke.a.TextStyleSmallHeading,
+                          ke.a.TextColorLightestGold,
+                          ke.a.CasterPackHeader
                         ),
                       },
                       Object(_.a)("#battlepass_chat_wheel_caster_packs")
                     ),
                     o.a.createElement(
                       "div",
-                      { className: je.a.SoundPackList },
-                      o.a.createElement(Kt, {
+                      { className: ke.a.SoundPackList },
+                      o.a.createElement(qt, {
                         audiofiles: [
                           "casterpack1/takaya_haliava",
                           "casterpack1/whoa_how_close_was_that",
@@ -33420,7 +34722,7 @@ object-assign
                         name: "#battlepass_caster_sound_pack_1",
                         level: 94,
                       }),
-                      o.a.createElement(Kt, {
+                      o.a.createElement(qt, {
                         audiofiles: [
                           "casterpack2/aaah_aaah_chto",
                           "casterpack2/ni_xing_ni",
@@ -33429,7 +34731,7 @@ object-assign
                         name: "#battlepass_caster_sound_pack_2",
                         level: 203,
                       }),
-                      o.a.createElement(Kt, {
+                      o.a.createElement(qt, {
                         audiofiles: [
                           "casterpack3/a_net_net_da",
                           "casterpack3/coming_through_with_the_woooo",
@@ -33438,7 +34740,7 @@ object-assign
                         name: "#battlepass_caster_sound_pack_3",
                         level: 272,
                       }),
-                      o.a.createElement(Kt, {
+                      o.a.createElement(qt, {
                         audiofiles: [
                           "casterpack4/eto_takaya_dushka",
                           "casterpack4/lai_ni_da",
@@ -33447,7 +34749,7 @@ object-assign
                         name: "#battlepass_caster_sound_pack_4",
                         level: 395,
                       }),
-                      o.a.createElement(Kt, {
+                      o.a.createElement(qt, {
                         audiofiles: [
                           "casterpack5/chto_eto_kakaya_zhest",
                           "casterpack5/see_you_later_nerds",
@@ -33456,7 +34758,7 @@ object-assign
                         name: "#battlepass_caster_sound_pack_5",
                         level: 485,
                       }),
-                      o.a.createElement(Kt, {
+                      o.a.createElement(qt, {
                         audiofiles: [
                           "casterpack6/a_nu_ka_idi_suda",
                           "casterpack6/ay_ay_ay_cn",
@@ -33465,7 +34767,7 @@ object-assign
                         name: "#battlepass_caster_sound_pack_6",
                         level: 545,
                       }),
-                      o.a.createElement(Kt, {
+                      o.a.createElement(qt, {
                         audiofiles: [
                           "legacypack/absolutely_perfect",
                           "legacypack/all_dead",
@@ -33493,7 +34795,7 @@ object-assign
                         name: "#battlepass_caster_sound_pack_7",
                         level: 655,
                       }),
-                      o.a.createElement(Kt, {
+                      o.a.createElement(qt, {
                         audiofiles: [
                           "epiccasterpack/easiest_money",
                           "epiccasterpack/echo_slama_jama",
@@ -33519,9 +34821,9 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleFootnote,
-                          je.a.TextColorGold,
-                          je.a.DifferentSample
+                          ke.a.TextStyleFootnote,
+                          ke.a.TextColorGold,
+                          ke.a.DifferentSample
                         ),
                       },
                       Object(_.a)("#battlepass_chat_wheel_different_sample")
@@ -33530,47 +34832,47 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleSmallHeading,
-                          je.a.TextColorLightestGold,
-                          je.a.SoundPackHeader
+                          ke.a.TextStyleSmallHeading,
+                          ke.a.TextColorLightestGold,
+                          ke.a.SoundPackHeader
                         ),
                       },
                       Object(_.a)("#battlepass_chat_wheel_sound_packs")
                     ),
                     o.a.createElement(
                       "div",
-                      { className: je.a.SoundPackList },
-                      o.a.createElement(Kt, {
+                      { className: ke.a.SoundPackList },
+                      o.a.createElement(qt, {
                         audiofiles: ["boing"],
                         name: "#battlepass_chat_wheel_boing",
                         level: 46,
                       }),
-                      o.a.createElement(Kt, {
+                      o.a.createElement(qt, {
                         audiofiles: ["moo"],
                         name: "#battlepass_chat_wheel_moo",
                         level: 46,
                       }),
-                      o.a.createElement(Kt, {
+                      o.a.createElement(qt, {
                         audiofiles: ["orc_hit"],
                         name: "#battlepass_chat_wheel_orchestrahit",
                         level: 46,
                       }),
-                      o.a.createElement(Kt, {
+                      o.a.createElement(qt, {
                         audiofiles: ["heehaw"],
                         name: "#battlepass_chat_wheel_heehaw",
                         level: 140,
                       }),
-                      o.a.createElement(Kt, {
+                      o.a.createElement(qt, {
                         audiofiles: ["oops"],
                         name: "#battlepass_chat_wheel_oops",
                         level: 140,
                       }),
-                      o.a.createElement(Kt, {
+                      o.a.createElement(qt, {
                         audiofiles: ["woopwoo"],
                         name: "#battlepass_chat_wheel_woopwoo",
                         level: 140,
                       }),
-                      o.a.createElement(Kt, {
+                      o.a.createElement(qt, {
                         audiofiles: ["ceeeb_start"],
                         name: "#battlepass_chat_wheel_ceeeb",
                         level: 100,
@@ -33580,17 +34882,17 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.EscalatingChatWheelContainer
+                          ke.a.EscalatingChatWheelContainer
                         ),
                       },
                       o.a.createElement(
                         "div",
                         {
                           className: Object(ce.a)(
-                            je.a.TextStyleOverline,
-                            je.a.TextColorGold,
-                            je.a.HeaderPrefix,
-                            je.a.EscalatingChatWheelPrefix
+                            ke.a.TextStyleOverline,
+                            ke.a.TextColorGold,
+                            ke.a.HeaderPrefix,
+                            ke.a.EscalatingChatWheelPrefix
                           ),
                         },
                         Object(_.a)("#battlepass_new")
@@ -33599,9 +34901,9 @@ object-assign
                         "div",
                         {
                           className: Object(ce.a)(
-                            je.a.TextStyleSmallHeading,
-                            je.a.TextColorLightestGold,
-                            je.a.EscalatingChatWheelHeader
+                            ke.a.TextStyleSmallHeading,
+                            ke.a.TextColorLightestGold,
+                            ke.a.EscalatingChatWheelHeader
                           ),
                         },
                         Object(_.a)("#battlepass_chat_wheel_escalating")
@@ -33610,8 +34912,8 @@ object-assign
                         "div",
                         {
                           className: Object(ce.a)(
-                            je.a.TextStyleBody,
-                            je.a.EscalatingChatWheelDesc
+                            ke.a.TextStyleBody,
+                            ke.a.EscalatingChatWheelDesc
                           ),
                         },
                         Object(_.a)("#battlepass_chat_wheel_escalating_desc")
@@ -33621,18 +34923,18 @@ object-assign
                 )
               ),
               o.a.createElement(
-                jt,
+                kt,
                 {
-                  heightClassName: je.a.EvolvingCourierHeight,
+                  heightClassName: ke.a.EvolvingCourierHeight,
                   headerPrefix: "#battlepass_evolving_courier_prefix",
                   headerText: "#battlepass_evolving_courier_header",
                   bodyText: "#battlepass_evolving_courier_desc",
-                  justifyContent: Tt.CenterTop,
+                  justifyContent: Mt.CenterTop,
                 },
                 o.a.createElement(
                   "div",
                   {
-                    className: je.a.EvolvingCourier,
+                    className: ke.a.EvolvingCourier,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -33642,11 +34944,11 @@ object-assign
                   },
                   o.a.createElement(
                     "div",
-                    { className: je.a.CourierImageContainer },
+                    { className: ke.a.CourierImageContainer },
                     o.a.createElement(
                       "video",
                       {
-                        className: je.a.CourierVideo,
+                        className: ke.a.CourierVideo,
                         autoPlay: !0,
                         preload: "auto",
                         muted: !0,
@@ -33665,11 +34967,11 @@ object-assign
                       })
                     ),
                     o.a.createElement("img", {
-                      className: je.a.CourierOverlay1,
+                      className: ke.a.CourierOverlay1,
                       src: p.a.IMG_URL + "international2020/cat_1.png",
                     }),
                     o.a.createElement("img", {
-                      className: je.a.CourierOverlay2,
+                      className: ke.a.CourierOverlay2,
                       src: p.a.IMG_URL + "international2020/cat_2.png",
                     })
                   ),
@@ -33677,9 +34979,9 @@ object-assign
                     "div",
                     {
                       className: Object(ce.a)(
-                        je.a.TextStyleFootnote,
-                        je.a.TextColorLightGrey,
-                        je.a.Versions
+                        ke.a.TextStyleFootnote,
+                        ke.a.TextColorLightGrey,
+                        ke.a.Versions
                       ),
                     },
                     Object(_.a)("#battlepass_evolving_courier_versions")
@@ -33688,9 +34990,9 @@ object-assign
                     "div",
                     {
                       className: Object(ce.a)(
-                        je.a.TextStyleCaption,
-                        je.a.TextColorGold,
-                        je.a.Unlocks
+                        ke.a.TextStyleCaption,
+                        ke.a.TextColorGold,
+                        ke.a.Unlocks
                       ),
                     },
                     Object(_.a)("#battlepass_unlocks_at_levels")
@@ -33699,9 +35001,9 @@ object-assign
                     "div",
                     {
                       className: Object(ce.a)(
-                        je.a.TextStyleCaption,
-                        je.a.TextColorGold,
-                        je.a.UnlocksLevels
+                        ke.a.TextStyleCaption,
+                        ke.a.TextColorGold,
+                        ke.a.UnlocksLevels
                       ),
                     },
                     Object(_.a)("#battlepass_evolving_courier_levels")
@@ -33709,18 +35011,18 @@ object-assign
                 )
               ),
               o.a.createElement(
-                jt,
+                kt,
                 {
-                  heightClassName: je.a.MusicPackHeight,
+                  heightClassName: ke.a.MusicPackHeight,
                   headerPrefix: "#battlepass_international_10",
                   headerText: "#battlepass_music_pack_header",
                   bodyText: "#battlepass_music_pack_desc",
-                  justifyContent: Tt.CenterTop,
+                  justifyContent: Mt.CenterTop,
                 },
                 o.a.createElement(
                   "div",
                   {
-                    className: je.a.MusicPack,
+                    className: ke.a.MusicPack,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -33729,25 +35031,25 @@ object-assign
                     },
                   },
                   o.a.createElement("img", {
-                    className: je.a.MusicPackOverlay1,
+                    className: ke.a.MusicPackOverlay1,
                     src: p.a.IMG_URL + "international2020/musicpack_keyart.png",
                   })
                 )
               ),
               o.a.createElement(
-                jt,
+                kt,
                 {
-                  heightClassName: je.a.VoiceAnnouncerHeight,
+                  heightClassName: ke.a.VoiceAnnouncerHeight,
                   levelReward: 75,
                   headerPrefix: "#battlepass_voice_announcer_prefix",
                   headerText: "#battlepass_voice_announcer_header",
                   bodyText: "#battlepass_voice_announcer_desc",
-                  justifyContent: Tt.CenterTop,
+                  justifyContent: Mt.CenterTop,
                 },
                 o.a.createElement(
                   "div",
                   {
-                    className: je.a.VoiceAnnouncer,
+                    className: ke.a.VoiceAnnouncer,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -33756,25 +35058,25 @@ object-assign
                     },
                   },
                   o.a.createElement("img", {
-                    className: je.a.VoiceAnnouncerOverlay,
+                    className: ke.a.VoiceAnnouncerOverlay,
                     src:
                       p.a.IMG_URL + "international2020/voice_announcer_bg.png",
                   })
                 )
               ),
               o.a.createElement(
-                jt,
+                kt,
                 {
-                  heightClassName: je.a.RangedAttackHeight,
+                  heightClassName: ke.a.RangedAttackHeight,
                   levelReward: 1575,
                   headerText: "#battlepass_ranged_attack_header",
                   bodyText: "#battlepass_ranged_attack_desc",
-                  justifyContent: Tt.CenterTop,
+                  justifyContent: Mt.CenterTop,
                 },
                 o.a.createElement(
                   "div",
                   {
-                    className: je.a.RangedAttack,
+                    className: ke.a.RangedAttack,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -33784,11 +35086,11 @@ object-assign
                   },
                   o.a.createElement(
                     "div",
-                    { className: je.a.RangedAttackImageContainer },
+                    { className: ke.a.RangedAttackImageContainer },
                     o.a.createElement(
                       "video",
                       {
-                        className: je.a.RangedAttackVideo,
+                        className: ke.a.RangedAttackVideo,
                         autoPlay: !0,
                         preload: "auto",
                         muted: !0,
@@ -33809,7 +35111,7 @@ object-assign
                       })
                     ),
                     o.a.createElement("img", {
-                      className: je.a.RangedAttackOverlay1,
+                      className: ke.a.RangedAttackOverlay1,
                       src:
                         p.a.IMG_URL +
                         "international2020/rangedattack_keyart.png",
@@ -33818,18 +35120,18 @@ object-assign
                 )
               ),
               o.a.createElement(
-                jt,
+                kt,
                 {
-                  heightClassName: je.a.EmblemEffectHeight,
+                  heightClassName: ke.a.EmblemEffectHeight,
                   headerPrefix: "#battlepass_emblem_effect_prefix",
                   headerText: "#battlepass_emblem_effect_header",
                   bodyText: "#battlepass_emblem_effect_desc",
-                  justifyContent: Tt.CenterTop,
+                  justifyContent: Mt.CenterTop,
                 },
                 o.a.createElement(
                   "div",
                   {
-                    className: je.a.EmblemEffect,
+                    className: ke.a.EmblemEffect,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -33838,24 +35140,24 @@ object-assign
                     },
                   },
                   o.a.createElement("img", {
-                    className: je.a.EmblemEffectOverlay,
+                    className: ke.a.EmblemEffectOverlay,
                     src: p.a.IMG_URL + "international2020/emblem_bg.png",
                   }),
-                  o.a.createElement(_e, { top: !0, color: "#000000" })
+                  o.a.createElement(me.a, { top: !0, color: "#000000" })
                 )
               ),
               o.a.createElement(
-                jt,
+                kt,
                 {
-                  heightClassName: je.a.SeasonalEffectsHeight,
+                  heightClassName: ke.a.SeasonalEffectsHeight,
                   headerText: "#battlepass_seasonal_effects_header",
                   bodyText: "#battlepass_seasonal_effects_desc",
-                  justifyContent: Tt.CenterTop,
+                  justifyContent: Mt.CenterTop,
                 },
                 o.a.createElement(
                   "div",
                   {
-                    className: je.a.SeasonalEffects,
+                    className: ke.a.SeasonalEffects,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -33864,318 +35166,318 @@ object-assign
                     },
                   },
                   o.a.createElement(
-                    Pe.d,
+                    xe.d,
                     {
-                      className: je.a.SeasonalEffectsCarousel,
+                      className: ke.a.SeasonalEffectsCarousel,
                       naturalSlideWidth: 100,
                       naturalSlideHeight: 51,
                       totalSlides: 26,
                     },
                     o.a.createElement(
-                      Pe.g,
+                      xe.g,
                       null,
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 0 },
-                        o.a.createElement(At, { video: "high_five_lvl1" })
+                        o.a.createElement(Nt, { video: "high_five_lvl1" })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 1 },
-                        o.a.createElement(At, { video: "fountain" })
+                        o.a.createElement(Nt, { video: "fountain" })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 2 },
-                        o.a.createElement(At, { video: "teleport" })
+                        o.a.createElement(Nt, { video: "teleport" })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 3 },
-                        o.a.createElement(At, { video: "blink_lvl1" })
+                        o.a.createElement(Nt, { video: "blink_lvl1" })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 4 },
-                        o.a.createElement(At, { video: "level_up" })
+                        o.a.createElement(Nt, { video: "level_up" })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 5 },
-                        o.a.createElement(At, { video: "euls_cyclone" })
+                        o.a.createElement(Nt, { video: "euls_cyclone" })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 6 },
-                        o.a.createElement(At, { video: "fountain2" })
+                        o.a.createElement(Nt, { video: "fountain2" })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 7 },
-                        o.a.createElement(At, { video: "agh_lvl1" })
+                        o.a.createElement(Nt, { video: "agh_lvl1" })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 8 },
-                        o.a.createElement(At, { video: "teleport_lvl2" })
+                        o.a.createElement(Nt, { video: "teleport_lvl2" })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 9 },
-                        o.a.createElement(At, { video: "force_staff" })
+                        o.a.createElement(Nt, { video: "force_staff" })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 10 },
-                        o.a.createElement(At, { video: "blink_lvl2" })
+                        o.a.createElement(Nt, { video: "blink_lvl2" })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 11 },
-                        o.a.createElement(At, { video: "bottle" })
+                        o.a.createElement(Nt, { video: "bottle" })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 12 },
-                        o.a.createElement(At, { video: "high_five_lvl2" })
+                        o.a.createElement(Nt, { video: "high_five_lvl2" })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 13 },
-                        o.a.createElement(At, { video: "killstreak_fire" })
+                        o.a.createElement(Nt, { video: "killstreak_fire" })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 14 },
-                        o.a.createElement(At, { video: "fountain3" })
+                        o.a.createElement(Nt, { video: "fountain3" })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 15 },
-                        o.a.createElement(At, { video: "deny" })
+                        o.a.createElement(Nt, { video: "deny" })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 16 },
-                        o.a.createElement(At, { video: "phase_boots" })
+                        o.a.createElement(Nt, { video: "phase_boots" })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 17 },
-                        o.a.createElement(At, { video: "agh_lvl2" })
+                        o.a.createElement(Nt, { video: "agh_lvl2" })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 18 },
-                        o.a.createElement(At, { video: "mekansm" })
+                        o.a.createElement(Nt, { video: "mekansm" })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 19 },
-                        o.a.createElement(At, { video: "teleport_lvl3" })
+                        o.a.createElement(Nt, { video: "teleport_lvl3" })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 20 },
-                        o.a.createElement(At, { video: "killstreak_gold" })
+                        o.a.createElement(Nt, { video: "killstreak_gold" })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 21 },
-                        o.a.createElement(At, { video: "high_five_lvl3" })
+                        o.a.createElement(Nt, { video: "high_five_lvl3" })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 22 },
-                        o.a.createElement(At, { video: "maelstrom_mjollnir" })
+                        o.a.createElement(Nt, { video: "maelstrom_mjollnir" })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 23 },
-                        o.a.createElement(At, { video: "shivas_guard" })
+                        o.a.createElement(Nt, { video: "shivas_guard" })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 24 },
-                        o.a.createElement(At, { video: "radiance" })
+                        o.a.createElement(Nt, { video: "radiance" })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 25 },
-                        o.a.createElement(At, { video: "attack_modifier" })
+                        o.a.createElement(Nt, { video: "attack_modifier" })
                       )
                     ),
                     o.a.createElement(
-                      Pe.a,
+                      xe.a,
                       {
-                        className: Object(ce.a)(je.a.CarouselArrow, je.a.Left),
+                        className: Object(ce.a)(ke.a.CarouselArrow, ke.a.Left),
                       },
                       o.a.createElement("img", {
                         src: p.a.IMG_URL + "international2020/arrow_left.png",
-                        className: je.a.ArrowImage,
+                        className: ke.a.ArrowImage,
                       })
                     ),
                     o.a.createElement(
-                      Pe.b,
+                      xe.b,
                       {
-                        className: Object(ce.a)(je.a.CarouselArrow, je.a.Right),
+                        className: Object(ce.a)(ke.a.CarouselArrow, ke.a.Right),
                       },
                       o.a.createElement("img", {
                         src: p.a.IMG_URL + "international2020/arrow_left.png",
-                        className: je.a.ArrowImage,
+                        className: ke.a.ArrowImage,
                       })
                     ),
-                    o.a.createElement(zt, null),
+                    o.a.createElement(Ft, null),
                     o.a.createElement(
                       "div",
-                      { className: je.a.CarouselDots },
+                      { className: ke.a.CarouselDots },
                       o.a.createElement(
-                        Pe.e,
-                        { className: je.a.CarouselDot, slide: 0 },
-                        o.a.createElement(Vt, { effect: 1, level: 1 })
+                        xe.e,
+                        { className: ke.a.CarouselDot, slide: 0 },
+                        o.a.createElement(Wt, { effect: 1, level: 1 })
                       ),
                       o.a.createElement(
-                        Pe.e,
-                        { className: je.a.CarouselDot, slide: 1 },
-                        o.a.createElement(Vt, { effect: 2, level: 2 })
+                        xe.e,
+                        { className: ke.a.CarouselDot, slide: 1 },
+                        o.a.createElement(Wt, { effect: 2, level: 2 })
                       ),
                       o.a.createElement(
-                        Pe.e,
-                        { className: je.a.CarouselDot, slide: 2 },
-                        o.a.createElement(Vt, { effect: 3, level: 14 })
+                        xe.e,
+                        { className: ke.a.CarouselDot, slide: 2 },
+                        o.a.createElement(Wt, { effect: 3, level: 14 })
                       ),
                       o.a.createElement(
-                        Pe.e,
-                        { className: je.a.CarouselDot, slide: 3 },
-                        o.a.createElement(Vt, { effect: 4, level: 30 })
+                        xe.e,
+                        { className: ke.a.CarouselDot, slide: 3 },
+                        o.a.createElement(Wt, { effect: 4, level: 30 })
                       ),
                       o.a.createElement(
-                        Pe.e,
-                        { className: je.a.CarouselDot, slide: 4 },
-                        o.a.createElement(Vt, { effect: 5, level: 50 })
+                        xe.e,
+                        { className: ke.a.CarouselDot, slide: 4 },
+                        o.a.createElement(Wt, { effect: 5, level: 50 })
                       ),
                       o.a.createElement(
-                        Pe.e,
-                        { className: je.a.CarouselDot, slide: 5 },
-                        o.a.createElement(Vt, { effect: 6, level: 78 })
+                        xe.e,
+                        { className: ke.a.CarouselDot, slide: 5 },
+                        o.a.createElement(Wt, { effect: 6, level: 78 })
                       ),
                       o.a.createElement(
-                        Pe.e,
-                        { className: je.a.CarouselDot, slide: 6 },
-                        o.a.createElement(Vt, { effect: 7, level: 104 })
+                        xe.e,
+                        { className: ke.a.CarouselDot, slide: 6 },
+                        o.a.createElement(Wt, { effect: 7, level: 104 })
                       ),
                       o.a.createElement(
-                        Pe.e,
-                        { className: je.a.CarouselDot, slide: 7 },
-                        o.a.createElement(Vt, { effect: 8, level: 118 })
+                        xe.e,
+                        { className: ke.a.CarouselDot, slide: 7 },
+                        o.a.createElement(Wt, { effect: 8, level: 118 })
                       ),
                       o.a.createElement(
-                        Pe.e,
-                        { className: je.a.CarouselDot, slide: 8 },
-                        o.a.createElement(Vt, { effect: 9, level: 136 })
+                        xe.e,
+                        { className: ke.a.CarouselDot, slide: 8 },
+                        o.a.createElement(Wt, { effect: 9, level: 136 })
                       ),
                       o.a.createElement(
-                        Pe.e,
-                        { className: je.a.CarouselDot, slide: 9 },
-                        o.a.createElement(Vt, { effect: 10, level: 184 })
+                        xe.e,
+                        { className: ke.a.CarouselDot, slide: 9 },
+                        o.a.createElement(Wt, { effect: 10, level: 184 })
                       ),
                       o.a.createElement(
-                        Pe.e,
-                        { className: je.a.CarouselDot, slide: 10 },
-                        o.a.createElement(Vt, { effect: 11, level: 225 })
+                        xe.e,
+                        { className: ke.a.CarouselDot, slide: 10 },
+                        o.a.createElement(Wt, { effect: 11, level: 225 })
                       ),
                       o.a.createElement(
-                        Pe.e,
-                        { className: je.a.CarouselDot, slide: 11 },
-                        o.a.createElement(Vt, { effect: 12, level: 265 })
+                        xe.e,
+                        { className: ke.a.CarouselDot, slide: 11 },
+                        o.a.createElement(Wt, { effect: 12, level: 265 })
                       ),
                       o.a.createElement(
-                        Pe.e,
-                        { className: je.a.CarouselDot, slide: 12 },
-                        o.a.createElement(Vt, { effect: 13, level: 275 })
+                        xe.e,
+                        { className: ke.a.CarouselDot, slide: 12 },
+                        o.a.createElement(Wt, { effect: 13, level: 275 })
                       ),
                       o.a.createElement(
-                        Pe.e,
-                        { className: je.a.CarouselDot, slide: 13 },
-                        o.a.createElement(Vt, { effect: 14, level: 285 })
+                        xe.e,
+                        { className: ke.a.CarouselDot, slide: 13 },
+                        o.a.createElement(Wt, { effect: 14, level: 285 })
                       ),
                       o.a.createElement(
-                        Pe.e,
-                        { className: je.a.CarouselDot, slide: 14 },
-                        o.a.createElement(Vt, { effect: 15, level: 315 })
+                        xe.e,
+                        { className: ke.a.CarouselDot, slide: 14 },
+                        o.a.createElement(Wt, { effect: 15, level: 315 })
                       ),
                       o.a.createElement(
-                        Pe.e,
-                        { className: je.a.CarouselDot, slide: 15 },
-                        o.a.createElement(Vt, { effect: 16, level: 383 })
+                        xe.e,
+                        { className: ke.a.CarouselDot, slide: 15 },
+                        o.a.createElement(Wt, { effect: 16, level: 383 })
                       ),
                       o.a.createElement(
-                        Pe.e,
-                        { className: je.a.CarouselDot, slide: 16 },
-                        o.a.createElement(Vt, { effect: 17, level: 415 })
+                        xe.e,
+                        { className: ke.a.CarouselDot, slide: 16 },
+                        o.a.createElement(Wt, { effect: 17, level: 415 })
                       ),
                       o.a.createElement(
-                        Pe.e,
-                        { className: je.a.CarouselDot, slide: 17 },
-                        o.a.createElement(Vt, { effect: 18, level: 425 })
+                        xe.e,
+                        { className: ke.a.CarouselDot, slide: 17 },
+                        o.a.createElement(Wt, { effect: 18, level: 425 })
                       ),
                       o.a.createElement(
-                        Pe.e,
-                        { className: je.a.CarouselDot, slide: 18 },
-                        o.a.createElement(Vt, { effect: 19, level: 505 })
+                        xe.e,
+                        { className: ke.a.CarouselDot, slide: 18 },
+                        o.a.createElement(Wt, { effect: 19, level: 505 })
                       ),
                       o.a.createElement(
-                        Pe.e,
-                        { className: je.a.CarouselDot, slide: 19 },
-                        o.a.createElement(Vt, { effect: 20, level: 702 })
+                        xe.e,
+                        { className: ke.a.CarouselDot, slide: 19 },
+                        o.a.createElement(Wt, { effect: 20, level: 702 })
                       ),
                       o.a.createElement(
-                        Pe.e,
-                        { className: je.a.CarouselDot, slide: 20 },
-                        o.a.createElement(Vt, { effect: 21, level: 765 })
+                        xe.e,
+                        { className: ke.a.CarouselDot, slide: 20 },
+                        o.a.createElement(Wt, { effect: 21, level: 765 })
                       ),
                       o.a.createElement(
-                        Pe.e,
-                        { className: je.a.CarouselDot, slide: 21 },
-                        o.a.createElement(Vt, { effect: 22, level: 895 })
+                        xe.e,
+                        { className: ke.a.CarouselDot, slide: 21 },
+                        o.a.createElement(Wt, { effect: 22, level: 895 })
                       ),
                       o.a.createElement(
-                        Pe.e,
-                        { className: je.a.CarouselDot, slide: 22 },
-                        o.a.createElement(Vt, { effect: 23, level: 905 })
+                        xe.e,
+                        { className: ke.a.CarouselDot, slide: 22 },
+                        o.a.createElement(Wt, { effect: 23, level: 905 })
                       ),
                       o.a.createElement(
-                        Pe.e,
-                        { className: je.a.CarouselDot, slide: 23 },
-                        o.a.createElement(Vt, { effect: 24, level: 1025 })
+                        xe.e,
+                        { className: ke.a.CarouselDot, slide: 23 },
+                        o.a.createElement(Wt, { effect: 24, level: 1025 })
                       ),
                       o.a.createElement(
-                        Pe.e,
-                        { className: je.a.CarouselDot, slide: 24 },
-                        o.a.createElement(Vt, { effect: 25, level: 1355 })
+                        xe.e,
+                        { className: ke.a.CarouselDot, slide: 24 },
+                        o.a.createElement(Wt, { effect: 25, level: 1355 })
                       ),
                       o.a.createElement(
-                        Pe.e,
-                        { className: je.a.CarouselDot, slide: 25 },
-                        o.a.createElement(Vt, { effect: 26, level: 1575 })
+                        xe.e,
+                        { className: ke.a.CarouselDot, slide: 25 },
+                        o.a.createElement(Wt, { effect: 26, level: 1575 })
                       )
                     )
                   )
                 )
               ),
               o.a.createElement(
-                jt,
+                kt,
                 {
-                  heightClassName: je.a.ExclusiveWardHeight,
+                  heightClassName: ke.a.ExclusiveWardHeight,
                   headerPrefix: "#battlepass_exclusive_ward_prefix",
                   headerText: "#battlepass_exclusive_ward_header",
                   bodyText: "#battlepass_exclusive_ward_desc",
-                  justifyContent: Tt.CenterTop,
+                  justifyContent: Mt.CenterTop,
                 },
                 o.a.createElement(
                   "div",
                   {
-                    className: je.a.ExclusiveWard,
+                    className: ke.a.ExclusiveWard,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -34184,23 +35486,23 @@ object-assign
                     },
                   },
                   o.a.createElement("img", {
-                    className: je.a.WardImage,
+                    className: ke.a.WardImage,
                     src: p.a.IMG_URL + "international2020/ward_bg.png",
                   })
                 )
               ),
               o.a.createElement(
-                jt,
+                kt,
                 {
-                  heightClassName: je.a.RiverVialsHeight,
+                  heightClassName: ke.a.RiverVialsHeight,
                   headerText: "#battlepass_river_vials_header",
                   bodyText: "#battlepass_river_vials_desc",
-                  justifyContent: Tt.CenterTop,
+                  justifyContent: Mt.CenterTop,
                 },
                 o.a.createElement(
                   "div",
                   {
-                    className: je.a.RiverVials,
+                    className: ke.a.RiverVials,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -34209,81 +35511,81 @@ object-assign
                     },
                   },
                   o.a.createElement(
-                    Pe.d,
+                    xe.d,
                     {
-                      className: je.a.RiverVialsCarousel,
+                      className: ke.a.RiverVialsCarousel,
                       naturalSlideWidth: 100,
                       naturalSlideHeight: 50,
                       totalSlides: 7,
                     },
                     o.a.createElement(
-                      Pe.g,
+                      xe.g,
                       null,
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 0 },
                         o.a.createElement("img", {
-                          className: je.a.RiverVial,
+                          className: ke.a.RiverVial,
                           src:
                             p.a.IMG_URL +
                             "international2020/river_vials/river_vial_1.jpg",
                         })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 1 },
                         o.a.createElement("img", {
-                          className: je.a.RiverVial,
+                          className: ke.a.RiverVial,
                           src:
                             p.a.IMG_URL +
                             "international2020/river_vials/river_vial_2.jpg",
                         })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 2 },
                         o.a.createElement("img", {
-                          className: je.a.RiverVial,
+                          className: ke.a.RiverVial,
                           src:
                             p.a.IMG_URL +
                             "international2020/river_vials/river_vial_3.jpg",
                         })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 3 },
                         o.a.createElement("img", {
-                          className: je.a.RiverVial,
+                          className: ke.a.RiverVial,
                           src:
                             p.a.IMG_URL +
                             "international2020/river_vials/river_vial_4.jpg",
                         })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 4 },
                         o.a.createElement("img", {
-                          className: je.a.RiverVial,
+                          className: ke.a.RiverVial,
                           src:
                             p.a.IMG_URL +
                             "international2020/river_vials/river_vial_5.jpg",
                         })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 5 },
                         o.a.createElement("img", {
-                          className: je.a.RiverVial,
+                          className: ke.a.RiverVial,
                           src:
                             p.a.IMG_URL +
                             "international2020/river_vials/river_vial_6.jpg",
                         })
                       ),
                       o.a.createElement(
-                        Pe.f,
+                        xe.f,
                         { index: 6 },
                         o.a.createElement("img", {
-                          className: je.a.RiverVial,
+                          className: ke.a.RiverVial,
                           src:
                             p.a.IMG_URL +
                             "international2020/river_vials/river_vial_7.jpg",
@@ -34291,80 +35593,80 @@ object-assign
                       )
                     ),
                     o.a.createElement(
-                      Pe.a,
+                      xe.a,
                       {
-                        className: Object(ce.a)(je.a.CarouselArrow, je.a.Left),
+                        className: Object(ce.a)(ke.a.CarouselArrow, ke.a.Left),
                       },
                       o.a.createElement("img", {
                         src: p.a.IMG_URL + "international2020/arrow_left.png",
-                        className: je.a.ArrowImage,
+                        className: ke.a.ArrowImage,
                       })
                     ),
                     o.a.createElement(
-                      Pe.b,
+                      xe.b,
                       {
-                        className: Object(ce.a)(je.a.CarouselArrow, je.a.Right),
+                        className: Object(ce.a)(ke.a.CarouselArrow, ke.a.Right),
                       },
                       o.a.createElement("img", {
                         src: p.a.IMG_URL + "international2020/arrow_left.png",
-                        className: je.a.ArrowImage,
+                        className: ke.a.ArrowImage,
                       })
                     ),
-                    o.a.createElement(qt, null),
+                    o.a.createElement(zt, null),
                     o.a.createElement(
                       "div",
-                      { className: je.a.CarouselDots },
+                      { className: ke.a.CarouselDots },
                       o.a.createElement(
-                        Pe.e,
-                        { slide: 0, className: je.a.CarouselDot },
-                        o.a.createElement(Jt, { vial: 1, level: 66 })
+                        xe.e,
+                        { slide: 0, className: ke.a.CarouselDot },
+                        o.a.createElement(Vt, { vial: 1, level: 66 })
                       ),
                       o.a.createElement(
-                        Pe.e,
-                        { slide: 1, className: je.a.CarouselDot },
-                        o.a.createElement(Jt, { vial: 2, level: 122 })
+                        xe.e,
+                        { slide: 1, className: ke.a.CarouselDot },
+                        o.a.createElement(Vt, { vial: 2, level: 122 })
                       ),
                       o.a.createElement(
-                        Pe.e,
-                        { slide: 2, className: je.a.CarouselDot },
-                        o.a.createElement(Jt, { vial: 3, level: 218 })
+                        xe.e,
+                        { slide: 2, className: ke.a.CarouselDot },
+                        o.a.createElement(Vt, { vial: 3, level: 218 })
                       ),
                       o.a.createElement(
-                        Pe.e,
-                        { slide: 3, className: je.a.CarouselDot },
-                        o.a.createElement(Jt, { vial: 4, level: 365 })
+                        xe.e,
+                        { slide: 3, className: ke.a.CarouselDot },
+                        o.a.createElement(Vt, { vial: 4, level: 365 })
                       ),
                       o.a.createElement(
-                        Pe.e,
-                        { slide: 4, className: je.a.CarouselDot },
-                        o.a.createElement(Jt, { vial: 5, level: 615 })
+                        xe.e,
+                        { slide: 4, className: ke.a.CarouselDot },
+                        o.a.createElement(Vt, { vial: 5, level: 615 })
                       ),
                       o.a.createElement(
-                        Pe.e,
-                        { slide: 5, className: je.a.CarouselDot },
-                        o.a.createElement(Jt, { vial: 6, level: 812 })
+                        xe.e,
+                        { slide: 5, className: ke.a.CarouselDot },
+                        o.a.createElement(Vt, { vial: 6, level: 812 })
                       ),
                       o.a.createElement(
-                        Pe.e,
-                        { slide: 6, className: je.a.CarouselDot },
-                        o.a.createElement(Jt, { vial: 7, level: 1905 })
+                        xe.e,
+                        { slide: 6, className: ke.a.CarouselDot },
+                        o.a.createElement(Vt, { vial: 7, level: 1905 })
                       )
                     )
                   )
                 )
               ),
               o.a.createElement(
-                jt,
+                kt,
                 {
-                  heightClassName: je.a.TributeHeight,
+                  heightClassName: ke.a.TributeHeight,
                   headerText: "#battlepass_tribute_header",
                   bodyText: "#battlepass_tribute_desc",
-                  justifyContent: Tt.CenterTop,
+                  justifyContent: Mt.CenterTop,
                 },
                 o.a.createElement(
                   "div",
                   {
-                    className: je.a.Tribute,
+                    className: ke.a.Tribute,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -34373,57 +35675,57 @@ object-assign
                     },
                   },
                   o.a.createElement("img", {
-                    className: je.a.TributeImage,
+                    className: ke.a.TributeImage,
                     src: p.a.IMG_URL + "international2020/tribute_image.png",
                   }),
                   o.a.createElement(
                     "div",
-                    { className: je.a.TributeRewards },
+                    { className: ke.a.TributeRewards },
                     o.a.createElement(
                       "div",
-                      { className: je.a.TributeReward },
+                      { className: ke.a.TributeReward },
                       o.a.createElement(
                         "div",
-                        { className: je.a.TributeRewardLevel },
+                        { className: ke.a.TributeRewardLevel },
                         Object(_.a)("#battlepass_tribute_level", 100)
                       ),
-                      o.a.createElement(Nt, { level: 64, andAbove: !0 })
+                      o.a.createElement(jt, { level: 64, andAbove: !0 })
                     ),
                     o.a.createElement(
                       "div",
-                      { className: je.a.TributeReward },
+                      { className: ke.a.TributeReward },
                       o.a.createElement(
                         "div",
-                        { className: je.a.TributeRewardLevel },
+                        { className: ke.a.TributeRewardLevel },
                         Object(_.a)("#battlepass_tribute_level", 200)
                       ),
-                      o.a.createElement(Nt, { level: 257, andAbove: !0 })
+                      o.a.createElement(jt, { level: 257, andAbove: !0 })
                     ),
                     o.a.createElement(
                       "div",
-                      { className: je.a.TributeReward },
+                      { className: ke.a.TributeReward },
                       o.a.createElement(
                         "div",
-                        { className: je.a.TributeRewardLevel },
+                        { className: ke.a.TributeRewardLevel },
                         Object(_.a)("#battlepass_tribute_level", 300)
                       ),
-                      o.a.createElement(Nt, { level: 885, andAbove: !0 })
+                      o.a.createElement(jt, { level: 885, andAbove: !0 })
                     )
                   )
                 )
               ),
               o.a.createElement(
-                jt,
+                kt,
                 {
-                  heightClassName: je.a.TrustOfTheBenefactorHeight,
+                  heightClassName: ke.a.TrustOfTheBenefactorHeight,
                   headerText: "#battlepass_trust_benefactor_header",
                   bodyText: "#battlepass_trust_benefactor_desc",
-                  justifyContent: Tt.CenterTop,
+                  justifyContent: Mt.CenterTop,
                 },
                 o.a.createElement(
                   "div",
                   {
-                    className: je.a.TrustOfTheBenefactor,
+                    className: ke.a.TrustOfTheBenefactor,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -34431,14 +35733,14 @@ object-assign
                         "international2020/backgrounds/background_9.jpg )",
                     },
                   },
-                  o.a.createElement(_e, {
+                  o.a.createElement(me.a, {
                     top: !0,
                     color: "#000000",
                     startPct: 0,
                     midPct: 90,
                     endPct: 100,
                   }),
-                  o.a.createElement(_e, {
+                  o.a.createElement(me.a, {
                     bottom: !0,
                     color: "#000000",
                     startPct: 0,
@@ -34446,16 +35748,16 @@ object-assign
                     endPct: 100,
                   }),
                   o.a.createElement("img", {
-                    className: je.a.TrustImage,
+                    className: ke.a.TrustImage,
                     src: p.a.IMG_URL + "international2020/benefactor_bg.png",
                   }),
                   o.a.createElement(
                     "div",
                     {
                       className: Object(ce.a)(
-                        je.a.TextStyleFootnote,
-                        je.a.TextColorDarkGold,
-                        je.a.Receive
+                        ke.a.TextStyleFootnote,
+                        ke.a.TextColorDarkGold,
+                        ke.a.Receive
                       ),
                     },
                     Object(_.a)("#battlepass_trust_benefactor_receive")
@@ -34464,9 +35766,9 @@ object-assign
                     "div",
                     {
                       className: Object(ce.a)(
-                        je.a.TextStyleFootnote,
-                        je.a.TextColorDarkGold,
-                        je.a.View
+                        ke.a.TextStyleFootnote,
+                        ke.a.TextColorDarkGold,
+                        ke.a.View
                       ),
                       onClick: function () {
                         return e.showBenefactorPopup(!0);
@@ -34477,17 +35779,17 @@ object-assign
                 )
               ),
               o.a.createElement(
-                jt,
+                kt,
                 {
-                  heightClassName: je.a.AegisRoshanHeight,
+                  heightClassName: ke.a.AegisRoshanHeight,
                   headerPrefix: "#battlepass_aegis_roshan_prefix",
                   headerText: "#battlepass_aegis_roshan_header",
-                  justifyContent: Tt.CenterTop,
+                  justifyContent: Mt.CenterTop,
                 },
                 o.a.createElement(
                   "div",
                   {
-                    className: je.a.AegisRoshan,
+                    className: ke.a.AegisRoshan,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -34495,7 +35797,7 @@ object-assign
                         "international2020/backgrounds/background_1.jpg )",
                     },
                   },
-                  o.a.createElement(_e, {
+                  o.a.createElement(me.a, {
                     top: !0,
                     color: "#000000",
                     startPct: 0,
@@ -34504,54 +35806,54 @@ object-assign
                   }),
                   o.a.createElement(
                     "div",
-                    { className: je.a.Rewards },
+                    { className: ke.a.Rewards },
                     o.a.createElement(
                       "div",
-                      { className: je.a.Reward },
+                      { className: ke.a.Reward },
                       o.a.createElement("img", {
-                        className: je.a.RewardImage1,
+                        className: ke.a.RewardImage1,
                         src: p.a.IMG_URL + "international2020/collector_1.png",
                       }),
                       o.a.createElement(
                         "div",
                         {
                           className: Object(ce.a)(
-                            je.a.TextStyleSmallHeading,
-                            je.a.FontColorLighestGrey,
-                            je.a.RewardName
+                            ke.a.TextStyleSmallHeading,
+                            ke.a.FontColorLighestGrey,
+                            ke.a.RewardName
                           ),
                         },
                         Object(_.a)("#battlepass_aegis_roshan_aegis")
                       ),
-                      o.a.createElement(Nt, { level: 1e3 })
+                      o.a.createElement(jt, { level: 1e3 })
                     ),
                     o.a.createElement(
                       "div",
-                      { className: je.a.Reward },
+                      { className: ke.a.Reward },
                       o.a.createElement("img", {
-                        className: je.a.RewardImage2,
+                        className: ke.a.RewardImage2,
                         src: p.a.IMG_URL + "international2020/collector_2.png",
                       }),
                       o.a.createElement(
                         "div",
                         {
                           className: Object(ce.a)(
-                            je.a.TextStyleSmallHeading,
-                            je.a.RewardName
+                            ke.a.TextStyleSmallHeading,
+                            ke.a.RewardName
                           ),
                         },
                         Object(_.a)("#battlepass_aegis_roshan_roshan")
                       ),
-                      o.a.createElement(Nt, { level: 2e3 })
+                      o.a.createElement(jt, { level: 2e3 })
                     )
                   ),
                   o.a.createElement(
                     "div",
                     {
                       className: Object(ce.a)(
-                        je.a.TextStyleBody,
-                        je.a.TextColorLightestGrey,
-                        je.a.Description
+                        ke.a.TextStyleBody,
+                        ke.a.TextColorLightestGrey,
+                        ke.a.Description
                       ),
                     },
                     Object(_.a)("#battlepass_aegis_roshan_desc")
@@ -34560,20 +35862,20 @@ object-assign
                     "div",
                     {
                       className: Object(ce.a)(
-                        je.a.TextStyleFootnote,
-                        je.a.TextColorDarkGold,
-                        je.a.Description
+                        ke.a.TextStyleFootnote,
+                        ke.a.TextColorDarkGold,
+                        ke.a.Description
                       ),
                     },
                     Object(_.a)("#battlepass_aegis_roshan_footnote")
                   )
                 )
               ),
-              o.a.createElement(ge.a, null),
+              o.a.createElement(he.a, null),
               o.a.createElement(
-                Qt,
+                Jt,
                 {
-                  className: je.a.BenefactorPopup,
+                  className: ke.a.BenefactorPopup,
                   hasCloseButton: !0,
                   shouldShow: this.state.bShowBenefactorPopup,
                   showFunc: function (t) {
@@ -34587,9 +35889,9 @@ object-assign
                     "div",
                     {
                       className: Object(ce.a)(
-                        je.a.TextStyleOverline,
-                        je.a.TextColorDarkGold,
-                        je.a.BenefactorTitle
+                        ke.a.TextStyleOverline,
+                        ke.a.TextColorDarkGold,
+                        ke.a.BenefactorTitle
                       ),
                     },
                     Object(_.a)("#battlepass_trust_benefactor_header")
@@ -34598,23 +35900,23 @@ object-assign
                     "div",
                     {
                       className: Object(ce.a)(
-                        je.a.TextStyleSmallHeading,
-                        je.a.TextColorLightestGold,
-                        je.a.BenefactorSubTitle
+                        ke.a.TextStyleSmallHeading,
+                        ke.a.TextColorLightestGold,
+                        ke.a.BenefactorSubTitle
                       ),
                     },
                     Object(_.a)("#battlepass_benefactor_subtitle")
                   ),
                   o.a.createElement(
                     "div",
-                    { className: je.a.Entries },
+                    { className: ke.a.Entries },
                     o.a.createElement(
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleBody,
-                          je.a.TextColorGrey,
-                          je.a.Entry
+                          ke.a.TextStyleBody,
+                          ke.a.TextColorGrey,
+                          ke.a.Entry
                         ),
                       },
                       Object(_.a)("#battlepass_trust_benefactor_entry_1")
@@ -34623,9 +35925,9 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleBody,
-                          je.a.TextColorGrey,
-                          je.a.Entry
+                          ke.a.TextStyleBody,
+                          ke.a.TextColorGrey,
+                          ke.a.Entry
                         ),
                       },
                       Object(_.a)("#battlepass_trust_benefactor_entry_2")
@@ -34634,9 +35936,9 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleBody,
-                          je.a.TextColorGrey,
-                          je.a.Entry
+                          ke.a.TextStyleBody,
+                          ke.a.TextColorGrey,
+                          ke.a.Entry
                         ),
                       },
                       Object(_.a)("#battlepass_trust_benefactor_entry_3")
@@ -34645,9 +35947,9 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleBody,
-                          je.a.TextColorGrey,
-                          je.a.Entry
+                          ke.a.TextStyleBody,
+                          ke.a.TextColorGrey,
+                          ke.a.Entry
                         ),
                       },
                       Object(_.a)("#battlepass_trust_benefactor_entry_4")
@@ -34656,9 +35958,9 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleBody,
-                          je.a.TextColorGrey,
-                          je.a.Entry
+                          ke.a.TextStyleBody,
+                          ke.a.TextColorGrey,
+                          ke.a.Entry
                         ),
                       },
                       Object(_.a)("#battlepass_trust_benefactor_entry_5")
@@ -34667,9 +35969,9 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleBody,
-                          je.a.TextColorGrey,
-                          je.a.Entry
+                          ke.a.TextStyleBody,
+                          ke.a.TextColorGrey,
+                          ke.a.Entry
                         ),
                       },
                       Object(_.a)("#battlepass_trust_benefactor_entry_6")
@@ -34678,9 +35980,9 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleBody,
-                          je.a.TextColorGrey,
-                          je.a.Entry
+                          ke.a.TextStyleBody,
+                          ke.a.TextColorGrey,
+                          ke.a.Entry
                         ),
                       },
                       Object(_.a)("#battlepass_trust_benefactor_entry_7")
@@ -34689,9 +35991,9 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleBody,
-                          je.a.TextColorGrey,
-                          je.a.Entry
+                          ke.a.TextStyleBody,
+                          ke.a.TextColorGrey,
+                          ke.a.Entry
                         ),
                       },
                       Object(_.a)("#battlepass_trust_benefactor_entry_8")
@@ -34700,9 +36002,9 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleBody,
-                          je.a.TextColorGrey,
-                          je.a.Entry
+                          ke.a.TextStyleBody,
+                          ke.a.TextColorGrey,
+                          ke.a.Entry
                         ),
                       },
                       Object(_.a)("#battlepass_trust_benefactor_entry_9")
@@ -34711,9 +36013,9 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleBody,
-                          je.a.TextColorGrey,
-                          je.a.Entry
+                          ke.a.TextStyleBody,
+                          ke.a.TextColorGrey,
+                          ke.a.Entry
                         ),
                       },
                       Object(_.a)("#battlepass_trust_benefactor_entry_10")
@@ -34722,9 +36024,9 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleBody,
-                          je.a.TextColorGrey,
-                          je.a.Entry
+                          ke.a.TextStyleBody,
+                          ke.a.TextColorGrey,
+                          ke.a.Entry
                         ),
                       },
                       Object(_.a)("#battlepass_trust_benefactor_entry_11")
@@ -34733,9 +36035,9 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleBody,
-                          je.a.TextColorGrey,
-                          je.a.Entry
+                          ke.a.TextStyleBody,
+                          ke.a.TextColorGrey,
+                          ke.a.Entry
                         ),
                       },
                       Object(_.a)("#battlepass_trust_benefactor_entry_12")
@@ -34744,9 +36046,9 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleBody,
-                          je.a.TextColorGrey,
-                          je.a.Entry
+                          ke.a.TextStyleBody,
+                          ke.a.TextColorGrey,
+                          ke.a.Entry
                         ),
                       },
                       Object(_.a)("#battlepass_trust_benefactor_entry_13")
@@ -34755,9 +36057,9 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleBody,
-                          je.a.TextColorGrey,
-                          je.a.Entry
+                          ke.a.TextStyleBody,
+                          ke.a.TextColorGrey,
+                          ke.a.Entry
                         ),
                       },
                       Object(_.a)("#battlepass_trust_benefactor_entry_14")
@@ -34766,9 +36068,9 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleBody,
-                          je.a.TextColorGrey,
-                          je.a.Entry
+                          ke.a.TextStyleBody,
+                          ke.a.TextColorGrey,
+                          ke.a.Entry
                         ),
                       },
                       Object(_.a)("#battlepass_trust_benefactor_entry_15")
@@ -34777,9 +36079,9 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleBody,
-                          je.a.TextColorGrey,
-                          je.a.Entry
+                          ke.a.TextStyleBody,
+                          ke.a.TextColorGrey,
+                          ke.a.Entry
                         ),
                       },
                       Object(_.a)("#battlepass_trust_benefactor_entry_16")
@@ -34788,9 +36090,9 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleBody,
-                          je.a.TextColorGrey,
-                          je.a.Entry
+                          ke.a.TextStyleBody,
+                          ke.a.TextColorGrey,
+                          ke.a.Entry
                         ),
                       },
                       Object(_.a)("#battlepass_trust_benefactor_entry_17")
@@ -34799,9 +36101,9 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleBody,
-                          je.a.TextColorGrey,
-                          je.a.Entry
+                          ke.a.TextStyleBody,
+                          ke.a.TextColorGrey,
+                          ke.a.Entry
                         ),
                       },
                       Object(_.a)("#battlepass_trust_benefactor_entry_18")
@@ -34810,9 +36112,9 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleBody,
-                          je.a.TextColorGrey,
-                          je.a.Entry
+                          ke.a.TextStyleBody,
+                          ke.a.TextColorGrey,
+                          ke.a.Entry
                         ),
                       },
                       Object(_.a)("#battlepass_trust_benefactor_entry_19")
@@ -34821,9 +36123,9 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleBody,
-                          je.a.TextColorGrey,
-                          je.a.Entry
+                          ke.a.TextStyleBody,
+                          ke.a.TextColorGrey,
+                          ke.a.Entry
                         ),
                       },
                       Object(_.a)("#battlepass_trust_benefactor_entry_20")
@@ -34832,9 +36134,9 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleBody,
-                          je.a.TextColorGrey,
-                          je.a.Entry
+                          ke.a.TextStyleBody,
+                          ke.a.TextColorGrey,
+                          ke.a.Entry
                         ),
                       },
                       Object(_.a)("#battlepass_trust_benefactor_entry_21")
@@ -34843,9 +36145,9 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleBody,
-                          je.a.TextColorGrey,
-                          je.a.Entry
+                          ke.a.TextStyleBody,
+                          ke.a.TextColorGrey,
+                          ke.a.Entry
                         ),
                       },
                       Object(_.a)("#battlepass_trust_benefactor_entry_22")
@@ -34854,9 +36156,9 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleBody,
-                          je.a.TextColorGrey,
-                          je.a.Entry
+                          ke.a.TextStyleBody,
+                          ke.a.TextColorGrey,
+                          ke.a.Entry
                         ),
                       },
                       Object(_.a)("#battlepass_trust_benefactor_entry_23")
@@ -34865,9 +36167,9 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleBody,
-                          je.a.TextColorGrey,
-                          je.a.Entry
+                          ke.a.TextStyleBody,
+                          ke.a.TextColorGrey,
+                          ke.a.Entry
                         ),
                       },
                       Object(_.a)("#battlepass_trust_benefactor_entry_24")
@@ -34876,9 +36178,9 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleBody,
-                          je.a.TextColorGrey,
-                          je.a.Entry
+                          ke.a.TextStyleBody,
+                          ke.a.TextColorGrey,
+                          ke.a.Entry
                         ),
                       },
                       Object(_.a)("#battlepass_trust_benefactor_entry_25")
@@ -34887,9 +36189,9 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleBody,
-                          je.a.TextColorGrey,
-                          je.a.Entry
+                          ke.a.TextStyleBody,
+                          ke.a.TextColorGrey,
+                          ke.a.Entry
                         ),
                       },
                       Object(_.a)("#battlepass_trust_benefactor_entry_26")
@@ -34898,9 +36200,9 @@ object-assign
                       "div",
                       {
                         className: Object(ce.a)(
-                          je.a.TextStyleBody,
-                          je.a.TextColorGrey,
-                          je.a.Entry
+                          ke.a.TextStyleBody,
+                          ke.a.TextColorGrey,
+                          ke.a.Entry
                         ),
                       },
                       Object(_.a)("#battlepass_trust_benefactor_entry_27")
@@ -34913,73 +36215,73 @@ object-assign
           (t = Object(n.c)([s.a], t))
         );
       })(o.a.Component),
-      ta = a("b6sG"),
-      aa = a.n(ta),
-      na = a("/fh+"),
-      ra = function () {
+      $t = a("b6sG"),
+      ea = a.n($t),
+      ta = a("/fh+"),
+      aa = function () {
         return o.a.createElement(
           "a",
           { href: "https://store.steampowered.com/app/570/Dota_2/" },
           o.a.createElement(
             "div",
-            { className: aa.a.PlayButton },
+            { className: ea.a.PlayButton },
             o.a.createElement("div", {
-              className: aa.a.SteamLogo,
+              className: ea.a.SteamLogo,
               style: {
                 backgroundImage: "url( " + p.a.IMG_URL + "/icons/steam.svg )",
               },
             }),
             o.a.createElement(
               "div",
-              { className: aa.a.RightSide },
+              { className: ea.a.RightSide },
               o.a.createElement(
                 "div",
-                { className: aa.a.PlayForFree },
+                { className: ea.a.PlayForFree },
                 Object(_.a)("#play_for_free")
               ),
               o.a.createElement(
                 "div",
-                { className: aa.a.Download },
+                { className: ea.a.Download },
                 Object(_.a)("#download_on_steam")
               )
             )
           )
         );
       },
-      ia = function (e) {
+      na = function (e) {
         return e.link
           ? o.a.createElement(
               l.b,
-              { to: e.link, className: aa.a.StandardButton },
+              { to: e.link, className: ea.a.StandardButton },
               o.a.createElement(
                 "div",
-                { className: aa.a.ButtonText },
+                { className: ea.a.ButtonText },
                 Object(_.a)(e.text)
               )
             )
           : o.a.createElement(
               "div",
-              { className: aa.a.StandardButton },
+              { className: ea.a.StandardButton },
               o.a.createElement(
                 "div",
-                { className: aa.a.ButtonText },
+                { className: ea.a.ButtonText },
                 Object(_.a)(e.text)
               )
             );
       },
-      oa = function () {
-        return o.a.createElement("div", { className: aa.a.HorizBar });
+      ra = function () {
+        return o.a.createElement("div", { className: ea.a.HorizBar });
       },
-      sa = function () {
+      ia = function () {
         return o.a.createElement("div", {
-          className: aa.a.RightArrow,
+          className: ea.a.RightArrow,
           style: {
             backgroundImage: "url( " + p.a.IMG_URL + "/arrow_left.png )",
           },
         });
       },
-      la = Object(s.a)(function () {
-        var e = na.a.Get().getHeroList(),
+      oa = Object(s.a)(function () {
+        var e = ta.a.Get().getHeroList(),
           t = [];
         return (
           e &&
@@ -34993,14 +36295,14 @@ object-assign
           }),
           o.a.createElement(
             "div",
-            { className: aa.a.HeroGrid },
+            { className: ea.a.HeroGrid },
             e &&
               t.map(function (e, t) {
                 return o.a.createElement(
                   "div",
                   {
                     key: "Row" + t,
-                    className: Object(ce.a)(aa.a.HeroGridRow, "Row" + t),
+                    className: Object(ce.a)(ea.a.HeroGridRow, "Row" + t),
                     style: {
                       width: 255 * (e.length + 2),
                       animationDuration:
@@ -35027,7 +36329,7 @@ object-assign
                         to: u.a.hero(
                           e.name_english_loc.replace(/ /g, "").toLowerCase()
                         ),
-                        className: aa.a.HeroIcon,
+                        className: ea.a.HeroIcon,
                         style: {
                           backgroundImage:
                             "url( " +
@@ -35039,21 +36341,21 @@ object-assign
                       },
                       o.a.createElement(
                         "div",
-                        { className: aa.a.HeroNameContainer },
+                        { className: ea.a.HeroNameContainer },
                         o.a.createElement("img", {
                           src: p.a.IMG_URL + "icons/hero_" + a + ".png",
-                          className: aa.a.PrimaryStatIcon,
+                          className: ea.a.PrimaryStatIcon,
                         }),
                         o.a.createElement(
                           "div",
-                          { className: aa.a.HeroName },
+                          { className: ea.a.HeroName },
                           Object(_.a)(e.name_loc)
                         )
                       ),
                       o.a.createElement(
                         "div",
-                        { className: aa.a.FadeContainer },
-                        o.a.createElement(_e, {
+                        { className: ea.a.FadeContainer },
+                        o.a.createElement(me.a, {
                           bottom: !0,
                           color: "#000000",
                           startPct: 50,
@@ -35068,7 +36370,7 @@ object-assign
           )
         );
       }),
-      ca = function (e) {
+      sa = function (e) {
         var t = Object(i.useState)(void 0),
           a = t[0],
           n = t[1];
@@ -35083,16 +36385,16 @@ object-assign
           for (var s = 0, c = a; s < c.length; s++) {
             var d = c[s];
             if (
-              (we(!1, d) &&
-                r.push(o.a.createElement(he, { event: d, key: d.GID })),
+              (Ee(!1, d) &&
+                r.push(o.a.createElement(pe, { event: d, key: d.GID })),
               3 == r.length)
             )
               break;
           }
         return o.a.createElement(
           "div",
-          { className: aa.a.HomePage },
-          o.a.createElement(fe.a, { bOverlapping: !0 }),
+          { className: ea.a.HomePage },
+          o.a.createElement(_e.a, { bOverlapping: !0 }),
           o.a.createElement(
             h.a,
             null,
@@ -35100,14 +36402,14 @@ object-assign
           ),
           o.a.createElement(
             "div",
-            { className: aa.a.HeaderSection },
+            { className: ea.a.HeaderSection },
             o.a.createElement(
               "div",
-              { className: aa.a.BackgroundVideoContainer },
+              { className: ea.a.BackgroundVideoContainer },
               o.a.createElement(
                 "video",
                 {
-                  className: aa.a.BackgroundVideo,
+                  className: ea.a.BackgroundVideo,
                   autoPlay: !0,
                   preload: "auto",
                   muted: !0,
@@ -35127,65 +36429,65 @@ object-assign
             o.a.createElement(
               "div",
               {
-                className: aa.a.QuoteContainer,
+                className: ea.a.QuoteContainer,
                 "data-aos": "fade-right",
                 "data-aos-delay": "1000",
                 "data-aos-duration": "2500",
               },
               o.a.createElement(
                 "div",
-                { className: aa.a.Quote },
+                { className: ea.a.Quote },
                 o.a.createElement(
                   "div",
-                  { className: aa.a.QuoteText },
+                  { className: ea.a.QuoteText },
                   Object(_.a)("#quote_destructoid_quote")
                 ),
                 o.a.createElement(
                   "div",
-                  { className: aa.a.QuoteCredit },
+                  { className: ea.a.QuoteCredit },
                   Object(_.a)("#quote_destructoid_credit")
                 )
               ),
-              o.a.createElement(oa, null),
-              o.a.createElement(ra, null)
+              o.a.createElement(ra, null),
+              o.a.createElement(aa, null)
             ),
-            o.a.createElement("div", { className: aa.a.BottomFade })
+            o.a.createElement("div", { className: ea.a.BottomFade })
           ),
           o.a.createElement(
             "div",
-            { className: aa.a.NewsSection },
+            { className: ea.a.NewsSection },
             o.a.createElement(
               "div",
-              { className: aa.a.NewsTop },
+              { className: ea.a.NewsTop },
               o.a.createElement(
                 "div",
-                { className: aa.a.Latest },
+                { className: ea.a.Latest },
                 Object(_.a)("#home_latest_news")
               ),
               o.a.createElement(
                 l.b,
-                { to: u.a.news(), className: aa.a.ViewAll },
+                { to: u.a.news(), className: ea.a.ViewAll },
                 Object(_.a)("#home_view_all"),
-                o.a.createElement(sa, null)
+                o.a.createElement(ia, null)
               )
             ),
-            o.a.createElement("div", { className: aa.a.NewsCapsules }, r)
+            o.a.createElement("div", { className: ea.a.NewsCapsules }, r)
           ),
           o.a.createElement(
             "div",
-            { className: aa.a.BattleSection },
+            { className: ea.a.BattleSection },
             o.a.createElement(
               "div",
-              { className: aa.a.BattleBG },
+              { className: ea.a.BattleBG },
               o.a.createElement("img", {
-                className: aa.a.BattleImg,
+                className: ea.a.BattleImg,
                 src: p.a.IMG_URL + "/home/radiant_dire5.jpg",
               }),
               o.a.createElement("img", {
-                className: Object(ce.a)(aa.a.BattleImg, aa.a.BattleImgMobile),
+                className: Object(ce.a)(ea.a.BattleImg, ea.a.BattleImgMobile),
                 src: p.a.IMG_URL + "/home/battle_mobile.jpg",
               }),
-              o.a.createElement(_e, {
+              o.a.createElement(me.a, {
                 top: !0,
                 color: "#000000",
                 startPct: 60,
@@ -35195,30 +36497,30 @@ object-assign
             ),
             o.a.createElement(
               "div",
-              { className: aa.a.LeftHalf },
+              { className: ea.a.LeftHalf },
               o.a.createElement(
                 "div",
                 {
-                  className: aa.a.HeaderText,
+                  className: ea.a.HeaderText,
                   "data-aos": "fade-up",
                   "data-aos-duration": "1500",
                 },
                 Object(_.a)("#home_battle_join")
               ),
-              o.a.createElement(oa, null),
+              o.a.createElement(ra, null),
               o.a.createElement(
                 "div",
-                { className: aa.a.BodyText },
+                { className: ea.a.BodyText },
                 Object(_.a)("#home_battle_body"),
                 o.a.createElement(
                   l.b,
                   { to: u.a.news() },
                   o.a.createElement(
                     "div",
-                    { className: aa.a.StandardButton },
+                    { className: ea.a.StandardButton },
                     o.a.createElement(
                       "div",
-                      { className: aa.a.ButtonText },
+                      { className: ea.a.ButtonText },
                       Object(_.a)("#home_battle_button")
                     )
                   )
@@ -35228,15 +36530,15 @@ object-assign
           ),
           o.a.createElement(
             "div",
-            { className: aa.a.ChooseSection },
-            o.a.createElement(_e, {
+            { className: ea.a.ChooseSection },
+            o.a.createElement(me.a, {
               top: !0,
               color: "#000000",
               startPct: 60,
               midPct: 90,
               endPct: 100,
             }),
-            o.a.createElement(_e, {
+            o.a.createElement(me.a, {
               bottom: !0,
               color: "#000000",
               startPct: 60,
@@ -35246,60 +36548,60 @@ object-assign
             o.a.createElement(
               "div",
               {
-                className: aa.a.HeaderText,
+                className: ea.a.HeaderText,
                 "data-aos": "fade-up",
                 "data-aos-duration": "2000",
               },
               Object(_.a)("#home_choose_header")
             ),
-            o.a.createElement(oa, null),
+            o.a.createElement(ra, null),
             o.a.createElement(
               "div",
-              { className: aa.a.BodyText },
+              { className: ea.a.BodyText },
               Object(_.a)("#home_choose_body"),
               o.a.createElement(
                 l.b,
                 { to: u.a.herogrid() },
                 o.a.createElement(
                   "div",
-                  { className: aa.a.StandardButton },
+                  { className: ea.a.StandardButton },
                   o.a.createElement(
                     "div",
-                    { className: aa.a.ButtonText },
+                    { className: ea.a.ButtonText },
                     Object(_.a)("#home_choose_button")
                   )
                 )
               )
             ),
-            o.a.createElement(la, null)
+            o.a.createElement(oa, null)
           ),
           o.a.createElement(
             "div",
             {
-              className: aa.a.ProCircuitSection,
+              className: ea.a.ProCircuitSection,
               style: {
                 backgroundImage: "url( " + p.a.IMG_URL + "/home/dpc.jpg )",
               },
             },
             o.a.createElement(
               "div",
-              { className: aa.a.DPCSmImgs },
+              { className: ea.a.DPCSmImgs },
               o.a.createElement("img", {
-                className: Object(ce.a)(aa.a.DPCSmImg, aa.a.Img1),
+                className: Object(ce.a)(ea.a.DPCSmImg, ea.a.Img1),
                 src: p.a.IMG_URL + "/home/dpc_ti9_1.jpg",
                 "data-aos": "fade-up",
                 "data-aos-delay": "300",
                 "data-aos-duration": "2500",
               }),
               o.a.createElement("img", {
-                className: Object(ce.a)(aa.a.DPCSmImg, aa.a.Img2),
+                className: Object(ce.a)(ea.a.DPCSmImg, ea.a.Img2),
                 src: p.a.IMG_URL + "/home/dpc_ti9_2.jpg",
                 "data-aos": "fade-up",
                 "data-aos-delay": "600",
                 "data-aos-duration": "2500",
               }),
               o.a.createElement("img", {
-                className: Object(ce.a)(aa.a.DPCSmImg, aa.a.Img3),
+                className: Object(ce.a)(ea.a.DPCSmImg, ea.a.Img3),
                 src: p.a.IMG_URL + "/home/dpc_ti9_3.jpg",
                 "data-aos": "fade-up",
                 "data-aos-delay": "1000",
@@ -35307,27 +36609,27 @@ object-assign
               })
             ),
             o.a.createElement("div", {
-              className: aa.a.DPCIcon,
+              className: ea.a.DPCIcon,
               style: {
                 backgroundImage: "url( " + p.a.IMG_URL + "/icons/dpc.svg )",
               },
             }),
             o.a.createElement(
               "div",
-              { className: aa.a.HeaderText },
+              { className: ea.a.HeaderText },
               Object(_.a)("#home_dpc_header")
             ),
-            o.a.createElement(oa, null),
+            o.a.createElement(ra, null),
             o.a.createElement(
               "div",
-              { className: aa.a.BodyText },
+              { className: ea.a.BodyText },
               Object(_.a)("#home_dpc_body")
             )
           ),
           o.a.createElement(
             "div",
             {
-              className: aa.a.JoinBattleSection,
+              className: ea.a.JoinBattleSection,
               style: {
                 backgroundImage:
                   "url( " + p.a.IMG_URL + "/home/background4.png )",
@@ -35335,22 +36637,22 @@ object-assign
             },
             o.a.createElement(
               "div",
-              { className: aa.a.HeaderText },
+              { className: ea.a.HeaderText },
               Object(_.a)("#home_join_header")
             ),
-            o.a.createElement(oa, null),
+            o.a.createElement(ra, null),
             o.a.createElement(
               "a",
               { href: "https://store.steampowered.com/app/570/Dota_2/" },
-              o.a.createElement(ia, { text: "#home_play_free_now" })
+              o.a.createElement(na, { text: "#home_play_free_now" })
             )
           ),
-          o.a.createElement(ge.a, null)
+          o.a.createElement(he.a, null)
         );
       },
-      ua = a("Kk3P"),
-      da = a.n(ua),
-      ma = [
+      la = a("Kk3P"),
+      ca = a.n(la),
+      ua = [
         "#hero_carry",
         "#hero_support",
         "#hero_nuker",
@@ -35361,16 +36663,16 @@ object-assign
         "#hero_pusher",
         "#hero_initiator",
       ],
-      pa = function (e) {
+      da = function (e) {
         var t = e.heroname.split("npc_dota_hero_").pop();
         return t
           ? o.a.createElement(
               "div",
-              { className: Object(ce.a)(da.a.HeroPortraitContainer, t) },
+              { className: Object(ce.a)(ca.a.HeroPortraitContainer, t) },
               o.a.createElement(
                 "video",
                 {
-                  className: da.a.HeroPortrait,
+                  className: ca.a.HeroPortrait,
                   poster: p.a.VIDEO_URL + "heroes/renders/" + t + ".png",
                   autoPlay: !0,
                   preload: "auto",
@@ -35389,7 +36691,7 @@ object-assign
             )
           : null;
       },
-      _a = function (e) {
+      ma = function (e) {
         var t = e.heroData,
           a = Object(i.useState)(!1),
           n = a[0],
@@ -35416,37 +36718,37 @@ object-assign
         }
         return o.a.createElement(
           "div",
-          { className: da.a.HeroSummary },
+          { className: ca.a.HeroSummary },
           o.a.createElement(
             "div",
-            { className: da.a.HeroTypeTitle },
+            { className: ca.a.HeroTypeTitle },
             o.a.createElement("img", {
               src: p.a.IMG_URL + "icons/hero_" + s + ".png",
-              className: da.a.PrimaryStatIcon,
+              className: ca.a.PrimaryStatIcon,
             }),
             o.a.createElement(
               "div",
-              { className: da.a.PrimaryStat },
+              { className: ca.a.PrimaryStat },
               Object(_.a)("#hero_" + s)
             )
           ),
-          o.a.createElement("div", { className: da.a.HeroName }, t.name_loc),
+          o.a.createElement("div", { className: ca.a.HeroName }, t.name_loc),
           o.a.createElement(
             "div",
-            { className: da.a.HeroOneLiner },
+            { className: ca.a.HeroOneLiner },
             t.npe_desc_loc
           ),
           o.a.createElement(
             "div",
-            { className: da.a.BioOrSummaryContainer },
+            { className: ca.a.BioOrSummaryContainer },
             o.a.createElement(
               "div",
-              { className: Object(ce.a)(da.a.BioContainer, !n && da.a.Hidden) },
+              { className: Object(ce.a)(ca.a.BioContainer, !n && ca.a.Hidden) },
               Object(_.a)(t.bio_loc),
               o.a.createElement(
                 "div",
                 {
-                  className: da.a.ShowBio,
+                  className: ca.a.ShowBio,
                   onClick: function () {
                     return r(!1);
                   },
@@ -35458,18 +36760,18 @@ object-assign
               "div",
               {
                 className: Object(ce.a)(
-                  da.a.SummaryContainer,
-                  n && da.a.Hidden
+                  ca.a.SummaryContainer,
+                  n && ca.a.Hidden
                 ),
               },
               o.a.createElement(
                 "div",
-                { className: da.a.Lore },
+                { className: ca.a.Lore },
                 Object(_.a)(t.hype_loc),
                 o.a.createElement(
                   "div",
                   {
-                    className: da.a.ShowBio,
+                    className: ca.a.ShowBio,
                     onClick: function () {
                       return r(!0);
                     },
@@ -35479,63 +36781,63 @@ object-assign
               ),
               o.a.createElement(
                 "div",
-                { className: da.a.AttackTypeContainer },
+                { className: ca.a.AttackTypeContainer },
                 o.a.createElement(
                   "div",
-                  { className: da.a.Title },
+                  { className: ca.a.Title },
                   Object(_.a)("#hero_attack_type")
                 ),
                 o.a.createElement(
                   "div",
-                  { className: da.a.AttackTypeDetail },
+                  { className: ca.a.AttackTypeDetail },
                   o.a.createElement("img", {
-                    className: da.a.AttackTypeIcon,
+                    className: ca.a.AttackTypeIcon,
                     src: p.a.IMG_URL + "icons/" + l + ".svg",
                   }),
                   o.a.createElement(
                     "div",
-                    { className: da.a.Value },
+                    { className: ca.a.Value },
                     Object(_.a)("#hero_attack_type_" + l)
                   )
                 )
               ),
               o.a.createElement(
                 "div",
-                { className: da.a.ComplexityContainer },
+                { className: ca.a.ComplexityContainer },
                 o.a.createElement(
                   "div",
-                  { className: da.a.Title },
+                  { className: ca.a.Title },
                   Object(_.a)("#hero_complexity")
                 ),
                 o.a.createElement(
                   "div",
-                  { className: da.a.PipContainer },
+                  { className: ca.a.PipContainer },
                   o.a.createElement("div", {
                     className: Object(ce.a)(
-                      da.a.DiamondPip,
-                      t.complexity >= 1 && da.a.Filled
+                      ca.a.DiamondPip,
+                      t.complexity >= 1 && ca.a.Filled
                     ),
                   }),
                   o.a.createElement("div", {
                     className: Object(ce.a)(
-                      da.a.DiamondPip,
-                      t.complexity >= 2 && da.a.Filled
+                      ca.a.DiamondPip,
+                      t.complexity >= 2 && ca.a.Filled
                     ),
                   }),
                   o.a.createElement("div", {
                     className: Object(ce.a)(
-                      da.a.DiamondPip,
-                      t.complexity >= 3 && da.a.Filled
+                      ca.a.DiamondPip,
+                      t.complexity >= 3 && ca.a.Filled
                     ),
                   })
                 )
               ),
-              o.a.createElement(fa, { heroData: t })
+              o.a.createElement(_a, { heroData: t })
             )
           )
         );
       },
-      ha = function (e) {
+      pa = function (e) {
         var t = e.heroData;
         if (!t) return null;
         var a = "";
@@ -35551,30 +36853,30 @@ object-assign
         }
         return o.a.createElement(
           "div",
-          { className: da.a.HeroVerticalBar },
+          { className: ca.a.HeroVerticalBar },
           o.a.createElement("img", {
             src: p.a.IMG_URL + "icons/hero_" + a + ".png",
-            className: da.a.PrimaryStatIcon,
+            className: ca.a.PrimaryStatIcon,
           }),
-          o.a.createElement("div", { className: da.a.HeroName }, t.name_loc),
-          o.a.createElement("div", { className: da.a.HeroID }, t.order_id),
-          o.a.createElement("div", { className: da.a.Line })
+          o.a.createElement("div", { className: ca.a.HeroName }, t.name_loc),
+          o.a.createElement("div", { className: ca.a.HeroID }, t.order_id),
+          o.a.createElement("div", { className: ca.a.Line })
         );
       },
-      fa = function (e) {
+      _a = function (e) {
         var t = e.heroData;
         return t
           ? o.a.createElement(
               "div",
-              { className: da.a.TopAbilitySelector },
+              { className: ca.a.TopAbilitySelector },
               o.a.createElement(
                 "div",
-                { className: da.a.Title },
+                { className: ca.a.Title },
                 Object(_.a)("#hero_abilities")
               ),
               o.a.createElement(
                 "div",
-                { className: da.a.AbilityList },
+                { className: ca.a.AbilityList },
                 t.abilities
                   .filter(function (e) {
                     return (
@@ -35602,33 +36904,33 @@ object-assign
                       "div",
                       {
                         key: e.name,
-                        className: da.a.TopAbilityContainer,
+                        className: ca.a.TopAbilityContainer,
                         onClick: function () {
                           window.scrollTo({
                             top: document.body.scrollHeight,
                             behavior: "smooth",
                           }),
-                            Pr.setSelectedAbilityIndex(a);
+                            Yn.setSelectedAbilityIndex(a);
                         },
                       },
                       o.a.createElement("img", {
-                        className: da.a.AbilitySelectable,
+                        className: ca.a.AbilitySelectable,
                         src: p.a.IMG_URL + "abilities/" + e.name + ".png",
                       }),
                       o.a.createElement(
                         "div",
-                        { className: da.a.AbilityTooltip },
+                        { className: ca.a.AbilityTooltip },
                         o.a.createElement(
                           "div",
-                          { className: da.a.TooltipBody },
+                          { className: ca.a.TooltipBody },
                           o.a.createElement(
                             "div",
-                            { className: da.a.Video },
+                            { className: ca.a.Video },
                             o.a.createElement(
                               "video",
                               {
                                 key: e.name,
-                                className: da.a.HeroPortrait,
+                                className: ca.a.HeroPortrait,
                                 autoPlay: !0,
                                 preload: "auto",
                                 muted: !0,
@@ -35666,16 +36968,16 @@ object-assign
                           ),
                           o.a.createElement(
                             "div",
-                            { className: da.a.Description },
+                            { className: ca.a.Description },
                             o.a.createElement(
                               "div",
-                              { className: da.a.TooltipTitle },
+                              { className: ca.a.TooltipTitle },
                               e.name_loc,
                               " "
                             ),
                             o.a.createElement(
                               "div",
-                              { className: da.a.TooltipDescription },
+                              { className: ca.a.TooltipDescription },
                               Object(_.a)(n),
                               " "
                             )
@@ -35688,21 +36990,21 @@ object-assign
             )
           : null;
       },
-      ga = function (e) {
+      ha = function (e) {
         var t = e.heroData;
         return t
           ? o.a.createElement(
               "div",
-              { className: da.a.DetailsAttributes },
+              { className: ca.a.DetailsAttributes },
               o.a.createElement(
                 "div",
-                { className: da.a.TopAttributesSection },
+                { className: ca.a.TopAttributesSection },
                 o.a.createElement(
                   "div",
-                  { className: da.a.PortraitContainer },
+                  { className: ca.a.PortraitContainer },
                   o.a.createElement("img", {
                     key: t.id,
-                    className: da.a.Portrait,
+                    className: ca.a.Portrait,
                     src:
                       p.a.IMG_URL +
                       "heroes/" +
@@ -35711,30 +37013,30 @@ object-assign
                   }),
                   o.a.createElement(
                     "div",
-                    { className: da.a.HealthBar },
+                    { className: ca.a.HealthBar },
                     o.a.createElement(
                       "div",
-                      { className: da.a.BarNumberMajor },
+                      { className: ca.a.BarNumberMajor },
                       t.max_health
                     ),
                     o.a.createElement(
                       "div",
-                      { className: da.a.BarNumberMinor },
+                      { className: ca.a.BarNumberMinor },
                       "+",
                       t.health_regen.toFixed(1)
                     )
                   ),
                   o.a.createElement(
                     "div",
-                    { className: da.a.ManaBar },
+                    { className: ca.a.ManaBar },
                     o.a.createElement(
                       "div",
-                      { className: da.a.BarNumberMajor },
+                      { className: ca.a.BarNumberMajor },
                       t.max_mana
                     ),
                     o.a.createElement(
                       "div",
-                      { className: da.a.BarNumberMinor },
+                      { className: ca.a.BarNumberMinor },
                       "+",
                       t.mana_regen.toFixed(1)
                     )
@@ -35742,60 +37044,60 @@ object-assign
                 ),
                 o.a.createElement(
                   "div",
-                  { className: da.a.AttributesContainer },
+                  { className: ca.a.AttributesContainer },
                   o.a.createElement(
                     "div",
-                    { className: da.a.SingleAttributeContainer },
+                    { className: ca.a.SingleAttributeContainer },
                     o.a.createElement("img", {
-                      className: da.a.AttributeIcon,
+                      className: ca.a.AttributeIcon,
                       src: p.a.IMG_URL + "icons/hero_strength.png",
                     }),
                     o.a.createElement(
                       "div",
-                      { className: da.a.AttributeValue },
+                      { className: ca.a.AttributeValue },
                       t.str_base
                     ),
                     o.a.createElement(
                       "div",
-                      { className: da.a.AttributeGain },
+                      { className: ca.a.AttributeGain },
                       "+",
                       t.str_gain.toFixed(1)
                     )
                   ),
                   o.a.createElement(
                     "div",
-                    { className: da.a.SingleAttributeContainer },
+                    { className: ca.a.SingleAttributeContainer },
                     o.a.createElement("img", {
-                      className: da.a.AttributeIcon,
+                      className: ca.a.AttributeIcon,
                       src: p.a.IMG_URL + "icons/hero_agility.png",
                     }),
                     o.a.createElement(
                       "div",
-                      { className: da.a.AttributeValue },
+                      { className: ca.a.AttributeValue },
                       t.agi_base
                     ),
                     o.a.createElement(
                       "div",
-                      { className: da.a.AttributeGain },
+                      { className: ca.a.AttributeGain },
                       "+",
                       t.agi_gain.toFixed(1)
                     )
                   ),
                   o.a.createElement(
                     "div",
-                    { className: da.a.SingleAttributeContainer },
+                    { className: ca.a.SingleAttributeContainer },
                     o.a.createElement("img", {
-                      className: da.a.AttributeIcon,
+                      className: ca.a.AttributeIcon,
                       src: p.a.IMG_URL + "icons/hero_intelligence.png",
                     }),
                     o.a.createElement(
                       "div",
-                      { className: da.a.AttributeValue },
+                      { className: ca.a.AttributeValue },
                       t.int_base
                     ),
                     o.a.createElement(
                       "div",
-                      { className: da.a.AttributeGain },
+                      { className: ca.a.AttributeGain },
                       "+",
                       t.int_gain.toFixed(1)
                     )
@@ -35804,45 +37106,45 @@ object-assign
               ),
               o.a.createElement(
                 "div",
-                { className: da.a.DetailsSectionHeader },
+                { className: ca.a.DetailsSectionHeader },
                 Object(_.a)("#hero_attributes")
               )
             )
           : null;
       },
-      va = function (e) {
+      fa = function (e) {
         var t = e.name,
           a = e.value;
         return o.a.createElement(
           "div",
-          { className: da.a.Role },
+          { className: ca.a.Role },
           o.a.createElement(
             "div",
-            { className: da.a.RoleName },
+            { className: ca.a.RoleName },
             Object(_.a)(t)
           ),
           o.a.createElement(
             "div",
-            { className: da.a.BarContainer },
-            o.a.createElement("div", { className: da.a.BarBackground }),
+            { className: ca.a.BarContainer },
+            o.a.createElement("div", { className: ca.a.BarBackground }),
             o.a.createElement("div", {
-              className: da.a.BarFilled,
+              className: ca.a.BarFilled,
               style: { width: 33.3 * a + "%" },
             })
           )
         );
       },
-      ya = function (e) {
+      ga = function (e) {
         var t = e.heroData;
         return t
           ? o.a.createElement(
               "div",
-              { className: da.a.DetailsRoles },
+              { className: ca.a.DetailsRoles },
               o.a.createElement(
                 "div",
-                { className: da.a.RolesList },
-                ma.map(function (e, a) {
-                  return o.a.createElement(va, {
+                { className: ca.a.RolesList },
+                ua.map(function (e, a) {
+                  return o.a.createElement(fa, {
                     key: e,
                     name: e,
                     value: t.role_levels[a],
@@ -35851,52 +37153,52 @@ object-assign
               ),
               o.a.createElement(
                 "div",
-                { className: da.a.DetailsSectionHeader },
+                { className: ca.a.DetailsSectionHeader },
                 Object(_.a)("#hero_roles")
               )
             )
           : null;
       },
-      ba = function (e) {
+      va = function (e) {
         var t = e.heroData;
         return t
           ? o.a.createElement(
               "div",
-              { className: da.a.DetailsStats },
+              { className: ca.a.DetailsStats },
               o.a.createElement(
                 "div",
-                { className: da.a.StatsList },
+                { className: ca.a.StatsList },
                 o.a.createElement(
                   "div",
-                  { className: da.a.HeroValuesSection },
+                  { className: ca.a.HeroValuesSection },
                   o.a.createElement(
                     "div",
-                    { className: da.a.HeroValueTitle },
+                    { className: ca.a.HeroValueTitle },
                     Object(_.a)("#hero_attack")
                   ),
                   o.a.createElement(
                     "div",
-                    { className: da.a.ValueElement },
+                    { className: ca.a.ValueElement },
                     o.a.createElement("img", {
-                      className: da.a.SwordIcon,
+                      className: ca.a.SwordIcon,
                       src: p.a.IMG_URL + "/heroes/stats/icon_damage.png",
                     }),
                     t.damage_min.toFixed(0) + "-" + t.damage_max.toFixed(0)
                   ),
                   o.a.createElement(
                     "div",
-                    { className: da.a.ValueElement },
+                    { className: ca.a.ValueElement },
                     o.a.createElement("img", {
-                      className: da.a.SwordIcon,
+                      className: ca.a.SwordIcon,
                       src: p.a.IMG_URL + "/heroes/stats/icon_attack_time.png",
                     }),
                     t.attack_rate.toFixed(1)
                   ),
                   o.a.createElement(
                     "div",
-                    { className: da.a.ValueElement },
+                    { className: ca.a.ValueElement },
                     o.a.createElement("img", {
-                      className: da.a.SwordIcon,
+                      className: ca.a.SwordIcon,
                       src: p.a.IMG_URL + "/heroes/stats/icon_attack_range.png",
                     }),
                     t.attack_range.toFixed(0)
@@ -35905,9 +37207,9 @@ object-assign
                     t.projectile_speed > 0 &&
                     o.a.createElement(
                       "div",
-                      { className: da.a.ValueElement },
+                      { className: ca.a.ValueElement },
                       o.a.createElement("img", {
-                        className: da.a.SwordIcon,
+                        className: ca.a.SwordIcon,
                         src:
                           p.a.IMG_URL +
                           "/heroes/stats/icon_projectile_speed.png",
@@ -35920,29 +37222,29 @@ object-assign
                   "div",
                   {
                     className: Object(ce.a)(
-                      da.a.HeroValuesSection,
-                      da.a.Lighter
+                      ca.a.HeroValuesSection,
+                      ca.a.Lighter
                     ),
                   },
                   o.a.createElement(
                     "div",
-                    { className: da.a.HeroValueTitle },
+                    { className: ca.a.HeroValueTitle },
                     Object(_.a)("#hero_defense")
                   ),
                   o.a.createElement(
                     "div",
-                    { className: da.a.ValueElement },
+                    { className: ca.a.ValueElement },
                     o.a.createElement("img", {
-                      className: da.a.SwordIcon,
+                      className: ca.a.SwordIcon,
                       src: p.a.IMG_URL + "/heroes/stats/icon_armor.png",
                     }),
                     t.armor.toFixed(1)
                   ),
                   o.a.createElement(
                     "div",
-                    { className: da.a.ValueElement },
+                    { className: ca.a.ValueElement },
                     o.a.createElement("img", {
-                      className: da.a.SwordIcon,
+                      className: ca.a.SwordIcon,
                       src: p.a.IMG_URL + "/heroes/stats/icon_magic_resist.png",
                     }),
                     t.magic_resistance.toFixed(0) + "%"
@@ -35950,17 +37252,17 @@ object-assign
                 ),
                 o.a.createElement(
                   "div",
-                  { className: da.a.HeroValuesSection },
+                  { className: ca.a.HeroValuesSection },
                   o.a.createElement(
                     "div",
-                    { className: da.a.HeroValueTitle },
+                    { className: ca.a.HeroValueTitle },
                     Object(_.a)("#hero_mobility")
                   ),
                   o.a.createElement(
                     "div",
-                    { className: da.a.ValueElement },
+                    { className: ca.a.ValueElement },
                     o.a.createElement("img", {
-                      className: da.a.SwordIcon,
+                      className: ca.a.SwordIcon,
                       src:
                         p.a.IMG_URL + "/heroes/stats/icon_movement_speed.png",
                     }),
@@ -35968,18 +37270,18 @@ object-assign
                   ),
                   o.a.createElement(
                     "div",
-                    { className: da.a.ValueElement },
+                    { className: ca.a.ValueElement },
                     o.a.createElement("img", {
-                      className: da.a.SwordIcon,
+                      className: ca.a.SwordIcon,
                       src: p.a.IMG_URL + "/heroes/stats/icon_turn_rate.png",
                     }),
                     t.turn_rate.toFixed(1)
                   ),
                   o.a.createElement(
                     "div",
-                    { className: da.a.ValueElement },
+                    { className: ca.a.ValueElement },
                     o.a.createElement("img", {
-                      className: da.a.SwordIcon,
+                      className: ca.a.SwordIcon,
                       src: p.a.IMG_URL + "/heroes/stats/icon_vision.png",
                     }),
                     t.sight_range_day.toFixed(0) +
@@ -35990,31 +37292,31 @@ object-assign
               ),
               o.a.createElement(
                 "div",
-                { className: da.a.DetailsSectionHeader },
+                { className: ca.a.DetailsSectionHeader },
                 Object(_.a)("#hero_stats")
               )
             )
           : null;
       },
-      Ea = function (e) {
+      ya = function (e) {
         var t = e.heroData;
         return o.a.createElement(
           "div",
-          { className: da.a.DetailsBar },
+          { className: ca.a.DetailsBar },
+          o.a.createElement(ha, { heroData: t }),
+          o.a.createElement("div", { className: ca.a.VerticalSeperator }),
           o.a.createElement(ga, { heroData: t }),
-          o.a.createElement("div", { className: da.a.VerticalSeperator }),
-          o.a.createElement(ya, { heroData: t }),
-          o.a.createElement("div", { className: da.a.VerticalSeperator }),
-          o.a.createElement(ba, { heroData: t })
+          o.a.createElement("div", { className: ca.a.VerticalSeperator }),
+          o.a.createElement(va, { heroData: t })
         );
       },
-      La = Object(s.a)(function (e) {
+      ba = Object(s.a)(function (e) {
         var t = e.heroData,
           a = Object(i.useState)(!1),
           n = a[0],
           r = a[1];
         if (!t) return null;
-        var s = Pr.getSelectedAbilityIndex(),
+        var s = Yn.getSelectedAbilityIndex(),
           l =
             t.abilities.filter(function (e) {
               return e.ability_is_granted_by_shard;
@@ -36143,7 +37445,7 @@ object-assign
         d && !u.ability_is_granted_by_shard && (S = L),
           m && !u.ability_is_granted_by_scepter && (S = E);
         var T = function (e) {
-            Pr.setSelectedAbilityIndex(e), r(!0);
+            Yn.setSelectedAbilityIndex(e), r(!0);
           },
           D = m && u.ability_has_scepter && !u.ability_is_granted_by_scepter,
           k = d && u.ability_has_shard && !u.ability_is_granted_by_shard,
@@ -36151,15 +37453,15 @@ object-assign
           j = d && u.ability_is_granted_by_shard;
         return o.a.createElement(
           "div",
-          { className: da.a.HeroAbilities },
+          { className: ca.a.HeroAbilities },
           o.a.createElement(
             "div",
-            { className: da.a.AbilityLeft },
+            { className: ca.a.AbilityLeft },
             o.a.createElement(
               "div",
-              { className: da.a.VideoContainer },
+              { className: ca.a.VideoContainer },
               o.a.createElement("div", {
-                className: Object(ce.a)(da.a.FadeUp, n && da.a.DoFadeAnim),
+                className: Object(ce.a)(ca.a.FadeUp, n && ca.a.DoFadeAnim),
                 onAnimationEnd: function () {
                   return r(!1);
                 },
@@ -36168,7 +37470,7 @@ object-assign
                 "video",
                 {
                   key: M,
-                  className: da.a.HeroPortrait,
+                  className: ca.a.HeroPortrait,
                   autoPlay: !0,
                   preload: "auto",
                   muted: !0,
@@ -36188,7 +37490,7 @@ object-assign
             ),
             o.a.createElement(
               "div",
-              { className: da.a.AbilitySelector },
+              { className: ca.a.AbilitySelector },
               t.abilities.map(function (e, t) {
                 return e.ability_is_granted_by_scepter ||
                   e.ability_is_granted_by_shard ||
@@ -36199,8 +37501,8 @@ object-assign
                   : o.a.createElement("div", {
                       key: e.name,
                       className: Object(ce.a)(
-                        da.a.AbilitySelectable,
-                        t != s && da.a.NotSelected
+                        ca.a.AbilitySelectable,
+                        t != s && ca.a.NotSelected
                       ),
                       style: {
                         backgroundImage:
@@ -36221,9 +37523,9 @@ object-assign
                   {
                     key: l.name + "_shard",
                     className: Object(ce.a)(
-                      da.a.AbilitySelectable,
-                      da.a.Shard,
-                      -1 != s && da.a.NotSelected
+                      ca.a.AbilitySelectable,
+                      ca.a.Shard,
+                      -1 != s && ca.a.NotSelected
                     ),
                     style: {
                       backgroundImage:
@@ -36238,7 +37540,7 @@ object-assign
                     },
                   },
                   o.a.createElement("div", {
-                    className: da.a.SubIcon,
+                    className: ca.a.SubIcon,
                     style: {
                       backgroundImage:
                         "url( " + p.a.IMG_URL + "heroes/stats/aghs_shard.png )",
@@ -36251,9 +37553,9 @@ object-assign
                   {
                     key: c.name + "_scepter",
                     className: Object(ce.a)(
-                      da.a.AbilitySelectable,
-                      da.a.Scepter,
-                      -2 != s && da.a.NotSelected
+                      ca.a.AbilitySelectable,
+                      ca.a.Scepter,
+                      -2 != s && ca.a.NotSelected
                     ),
                     style: {
                       backgroundImage:
@@ -36268,7 +37570,7 @@ object-assign
                     },
                   },
                   o.a.createElement("div", {
-                    className: da.a.SubIcon,
+                    className: ca.a.SubIcon,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -36281,106 +37583,106 @@ object-assign
           ),
           o.a.createElement(
             "div",
-            { className: da.a.AbilityRight },
+            { className: ca.a.AbilityRight },
             o.a.createElement(
               "div",
-              { className: da.a.AbilityInfoContainer },
+              { className: ca.a.AbilityInfoContainer },
               o.a.createElement(
                 "div",
-                { className: da.a.AbilityMain },
+                { className: ca.a.AbilityMain },
                 o.a.createElement("img", {
-                  className: da.a.AbilityImage,
+                  className: ca.a.AbilityImage,
                   src: p.a.IMG_URL + "abilities/" + u.name + ".png",
                 }),
                 o.a.createElement(
                   "div",
-                  { className: da.a.AbilityInfo },
+                  { className: ca.a.AbilityInfo },
                   o.a.createElement(
                     "div",
-                    { className: da.a.AbilityName },
+                    { className: ca.a.AbilityName },
                     u.name_loc
                   ),
                   D &&
                     o.a.createElement(
                       "div",
-                      { className: da.a.AghType },
+                      { className: ca.a.AghType },
                       Object(_.a)("#ability_upgrade_scepter")
                     ),
                   k &&
                     o.a.createElement(
                       "div",
-                      { className: da.a.AghType },
+                      { className: ca.a.AghType },
                       Object(_.a)("#ability_upgrade_shard")
                     ),
                   O &&
                     o.a.createElement(
                       "div",
-                      { className: da.a.AghType },
+                      { className: ca.a.AghType },
                       Object(_.a)("#ability_new_scepter")
                     ),
                   j &&
                     o.a.createElement(
                       "div",
-                      { className: da.a.AghType },
+                      { className: ca.a.AghType },
                       Object(_.a)("#ability_new_shard")
                     ),
                   o.a.createElement(
                     "div",
-                    { className: da.a.AbilityDesc },
+                    { className: ca.a.AbilityDesc },
                     Object(_.a)(S)
                   )
                 )
               ),
               o.a.createElement(
                 "div",
-                { className: da.a.AbilityDetails },
+                { className: ca.a.AbilityDetails },
                 o.a.createElement(
                   "div",
                   {
                     className: Object(ce.a)(
-                      da.a.GenericValues,
-                      (D || k) && da.a.Hidden
+                      ca.a.GenericValues,
+                      (D || k) && ca.a.Hidden
                     ),
                   },
                   o.a.createElement(
                     "div",
-                    { className: da.a.Column },
+                    { className: ca.a.Column },
                     o.a.createElement(
                       "div",
-                      { className: da.a.DetailsValues },
+                      { className: ca.a.DetailsValues },
                       h &&
                         o.a.createElement(
                           "div",
-                          { className: da.a.ValueElement },
+                          { className: ca.a.ValueElement },
                           Object(_.a)("#hero_ability"),
                           ":",
                           o.a.createElement(
                             "div",
-                            { className: da.a.ValueValue },
+                            { className: ca.a.ValueValue },
                             Object(_.a)(h)
                           )
                         ),
                       g &&
                         o.a.createElement(
                           "div",
-                          { className: da.a.ValueElement },
+                          { className: ca.a.ValueElement },
                           Object(_.a)("#hero_affects"),
                           ":",
                           o.a.createElement(
                             "div",
-                            { className: da.a.ValueValue },
+                            { className: ca.a.ValueValue },
                             Object(_.a)(g)
                           )
                         ),
                       v &&
                         o.a.createElement(
                           "div",
-                          { className: da.a.ValueElement },
+                          { className: ca.a.ValueElement },
                           Object(_.a)("#ability_damage"),
                           ":",
                           o.a.createElement(
                             "div",
-                            { className: da.a.ValueValue },
+                            { className: ca.a.ValueValue },
                             Object(_.a)(v)
                           )
                         )
@@ -36388,31 +37690,31 @@ object-assign
                   ),
                   o.a.createElement(
                     "div",
-                    { className: da.a.Column },
+                    { className: ca.a.Column },
                     o.a.createElement(
                       "div",
-                      { className: da.a.DetailsValues },
+                      { className: ca.a.DetailsValues },
                       f &&
                         o.a.createElement(
                           "div",
-                          { className: da.a.ValueElement },
+                          { className: ca.a.ValueElement },
                           Object(_.a)("#hero_spell_immunity"),
                           ":",
                           o.a.createElement(
                             "div",
-                            { className: da.a.ValueValue },
+                            { className: ca.a.ValueValue },
                             Object(_.a)(f)
                           )
                         ),
                       y &&
                         o.a.createElement(
                           "div",
-                          { className: da.a.ValueElement },
+                          { className: ca.a.ValueElement },
                           Object(_.a)("#hero_dispellable"),
                           ":",
                           o.a.createElement(
                             "div",
-                            { className: da.a.ValueValue },
+                            { className: ca.a.ValueValue },
                             Object(_.a)(y)
                           )
                         )
@@ -36423,8 +37725,8 @@ object-assign
                   "div",
                   {
                     className: Object(ce.a)(
-                      da.a.SpecificValues,
-                      (D || k) && da.a.Hidden
+                      ca.a.SpecificValues,
+                      (D || k) && ca.a.Hidden
                     ),
                   },
                   u.damages.reduce(function (e, t) {
@@ -36432,11 +37734,11 @@ object-assign
                   }) > 0 &&
                     o.a.createElement(
                       "div",
-                      { className: da.a.SpecialElement },
+                      { className: ca.a.SpecialElement },
                       Object(_.a)("#hero_damage"),
                       o.a.createElement(
                         "div",
-                        { className: da.a.SpecialValue },
+                        { className: ca.a.SpecialValue },
                         u.damages.map(function (e, t) {
                           return (t > 0 ? " / " : "") + e.toFixed(0);
                         })
@@ -36447,11 +37749,11 @@ object-assign
                       ? null
                       : o.a.createElement(
                           "div",
-                          { key: e.name, className: da.a.SpecialElement },
+                          { key: e.name, className: ca.a.SpecialElement },
                           Object(_.a)(e.heading_loc),
                           o.a.createElement(
                             "div",
-                            { className: da.a.SpecialValue },
+                            { className: ca.a.SpecialValue },
                             e.values_float.length > 0
                               ? e.values_float.map(function (t, a) {
                                   return (
@@ -36481,15 +37783,15 @@ object-assign
                     "div",
                     {
                       className: Object(ce.a)(
-                        da.a.BottomValues,
-                        (k || k) && da.a.Hidden
+                        ca.a.BottomValues,
+                        (k || k) && ca.a.Hidden
                       ),
                     },
                     o.a.createElement(
                       "div",
-                      { className: da.a.CooldownContainer },
+                      { className: ca.a.CooldownContainer },
                       o.a.createElement("div", {
-                        className: da.a.CooldownIcon,
+                        className: ca.a.CooldownIcon,
                         style: {
                           backgroundImage:
                             "url( " + p.a.IMG_URL + "icons/cooldown.png )",
@@ -36497,7 +37799,7 @@ object-assign
                       }),
                       o.a.createElement(
                         "div",
-                        { className: da.a.CooldownText },
+                        { className: ca.a.CooldownText },
                         u.cooldowns.map(function (e, t) {
                           return (t > 0 ? " / " : "") + e.toFixed(1);
                         })
@@ -36505,11 +37807,11 @@ object-assign
                     ),
                     o.a.createElement(
                       "div",
-                      { className: da.a.ManaContainer },
-                      o.a.createElement("div", { className: da.a.ManaIcon }),
+                      { className: ca.a.ManaContainer },
+                      o.a.createElement("div", { className: ca.a.ManaIcon }),
                       o.a.createElement(
                         "div",
-                        { className: da.a.ManaText },
+                        { className: ca.a.ManaText },
                         u.mana_costs.map(function (e, t) {
                           return (t > 0 ? " / " : "") + e.toFixed(0);
                         })
@@ -36519,7 +37821,7 @@ object-assign
                 o.a.createElement(
                   "div",
                   {
-                    className: Object(ce.a)(da.a.Lore, (k || k) && da.a.Hidden),
+                    className: Object(ce.a)(ca.a.Lore, (k || k) && ca.a.Hidden),
                   },
                   u.lore_loc
                 )
@@ -36528,53 +37830,53 @@ object-assign
           )
         );
       }),
-      wa = function (e) {
+      Ea = function (e) {
         var t = e.heroData;
         return o.a.createElement(
           "div",
-          { className: da.a.AbilityDetailsSection },
+          { className: ca.a.AbilityDetailsSection },
           t &&
             o.a.createElement(
               "div",
-              { className: da.a.AbilityDetailsHeader },
+              { className: ca.a.AbilityDetailsHeader },
               Object(_.a)("#hero_ability_details")
             ),
-          o.a.createElement(La, { heroData: t })
+          o.a.createElement(ba, { heroData: t })
         );
       },
-      Ma = function (e) {
+      La = function (e) {
         var t = e.prevhero,
           a = e.nexthero;
         return o.a.createElement(
           "div",
-          { className: da.a.HeroNavigator },
+          { className: ca.a.HeroNavigator },
           o.a.createElement(l.b, {
             to: u.a.hero(t),
-            className: Object(ce.a)(da.a.NavigatorArrow, da.a.Left),
+            className: Object(ce.a)(ca.a.NavigatorArrow, ca.a.Left),
             style: {
               backgroundImage: "url( " + p.a.IMG_URL + "arrow_solid_left.png )",
             },
           }),
           o.a.createElement(
             l.b,
-            { to: u.a.herogrid(), className: da.a.CenterGrid },
-            o.a.createElement("div", { className: da.a.GridDot }),
-            o.a.createElement("div", { className: da.a.GridDot }),
-            o.a.createElement("div", { className: da.a.GridDot }),
-            o.a.createElement("div", { className: da.a.GridDot }),
-            o.a.createElement("div", { className: da.a.GridDot }),
-            o.a.createElement("div", { className: da.a.GridDot })
+            { to: u.a.herogrid(), className: ca.a.CenterGrid },
+            o.a.createElement("div", { className: ca.a.GridDot }),
+            o.a.createElement("div", { className: ca.a.GridDot }),
+            o.a.createElement("div", { className: ca.a.GridDot }),
+            o.a.createElement("div", { className: ca.a.GridDot }),
+            o.a.createElement("div", { className: ca.a.GridDot }),
+            o.a.createElement("div", { className: ca.a.GridDot })
           ),
           o.a.createElement(l.b, {
             to: u.a.hero(a),
-            className: Object(ce.a)(da.a.NavigatorArrow, da.a.Right),
+            className: Object(ce.a)(ca.a.NavigatorArrow, ca.a.Right),
             style: {
               backgroundImage: "url( " + p.a.IMG_URL + "arrow_solid_left.png )",
             },
           })
         );
       },
-      Sa = function (e) {
+      wa = function (e) {
         var t = e.heroData,
           a = e.left,
           n = "";
@@ -36597,7 +37899,7 @@ object-assign
             r = "ranged";
         }
         var i = "",
-          s = na.a.Get().getHeroList();
+          s = ta.a.Get().getHeroList();
         return (
           null == s ||
             s.heroes.forEach(function (e) {
@@ -36608,7 +37910,7 @@ object-assign
             l.b,
             {
               to: u.a.hero(i),
-              className: Object(ce.a)(da.a.BottomSectionHero, a && da.a.Left),
+              className: Object(ce.a)(ca.a.BottomSectionHero, a && ca.a.Left),
               style: {
                 backgroundImage:
                   "url( " +
@@ -36617,7 +37919,7 @@ object-assign
               },
             },
             o.a.createElement("img", {
-              className: da.a.HeroPortrait,
+              className: ca.a.HeroPortrait,
               src:
                 p.a.IMG_URL +
                 "heroes/crops/" +
@@ -36626,23 +37928,23 @@ object-assign
             }),
             o.a.createElement(
               "div",
-              { className: da.a.HeroLabels },
+              { className: ca.a.HeroLabels },
               o.a.createElement(
                 "div",
-                { className: da.a.TopHeader },
+                { className: ca.a.TopHeader },
                 Object(_.a)(a ? "#hero_previous" : "#hero_next")
               ),
-              o.a.createElement("div", { className: da.a.Name }, t.name_loc),
+              o.a.createElement("div", { className: ca.a.Name }, t.name_loc),
               o.a.createElement(
                 "div",
-                { className: da.a.Details },
+                { className: ca.a.Details },
                 o.a.createElement("img", {
                   src: p.a.IMG_URL + "icons/hero_" + n + ".png",
-                  className: da.a.PrimaryStatIcon,
+                  className: ca.a.PrimaryStatIcon,
                 }),
                 o.a.createElement(
                   "div",
-                  { className: da.a.AttackType },
+                  { className: ca.a.AttackType },
                   Object(_.a)("#hero_attack_type_" + r)
                 )
               )
@@ -36650,50 +37952,50 @@ object-assign
           )
         );
       },
-      Ta = function (e) {
+      Ma = function (e) {
         var t = e.nPrevHeroID,
           a = e.nNextHeroID,
-          n = na.a.Get().getHeroData(t),
-          r = na.a.Get().getHeroData(a);
+          n = ta.a.Get().getHeroData(t),
+          r = ta.a.Get().getHeroData(a);
         return n && r
           ? o.a.createElement(
               "div",
-              { className: da.a.BottomSection },
-              o.a.createElement(Sa, { heroData: n, left: !0 }),
+              { className: ca.a.BottomSection },
+              o.a.createElement(wa, { heroData: n, left: !0 }),
               o.a.createElement(
                 l.b,
-                { to: u.a.herogrid(), className: da.a.AllHeroesContainer },
+                { to: u.a.herogrid(), className: ca.a.AllHeroesContainer },
                 o.a.createElement(
                   "div",
-                  { className: da.a.Boxes },
-                  o.a.createElement("div", { className: da.a.Box }),
-                  o.a.createElement("div", { className: da.a.Box }),
-                  o.a.createElement("div", { className: da.a.Box }),
-                  o.a.createElement("div", { className: da.a.Box }),
-                  o.a.createElement("div", { className: da.a.Box }),
-                  o.a.createElement("div", { className: da.a.Box })
+                  { className: ca.a.Boxes },
+                  o.a.createElement("div", { className: ca.a.Box }),
+                  o.a.createElement("div", { className: ca.a.Box }),
+                  o.a.createElement("div", { className: ca.a.Box }),
+                  o.a.createElement("div", { className: ca.a.Box }),
+                  o.a.createElement("div", { className: ca.a.Box }),
+                  o.a.createElement("div", { className: ca.a.Box })
                 ),
                 o.a.createElement(
                   "div",
-                  { className: da.a.AllHeroesLabel },
+                  { className: ca.a.AllHeroesLabel },
                   Object(_.a)("#hero_allheroes"),
                   " "
                 )
               ),
-              o.a.createElement(Sa, { heroData: r, left: !1 })
+              o.a.createElement(wa, { heroData: r, left: !1 })
             )
           : null;
       },
-      Da = Object(s.a)(function (e) {
+      Sa = Object(s.a)(function (e) {
         var t = Object(c.i)().id,
-          a = na.a.Get().getHeroList(),
+          a = ta.a.Get().getHeroList(),
           n = 0;
         a &&
           a.heroes.forEach(function (e) {
             e.name_english_loc.replace(/ /g, "").toLowerCase() ==
               t.toLowerCase() && (n = e.id);
           });
-        var r = na.a.Get().getHeroData(n),
+        var r = ta.a.Get().getHeroData(n),
           s = (function (e, t) {
             if (!t) return ["", ""];
             var a = t.heroes.slice().sort(function (e, t) {
@@ -36735,19 +38037,19 @@ object-assign
               e.name_english_loc.replace(/ /g, "").toLowerCase() == u &&
                 (m = e.id);
           }),
-          na.a.Get().getHeroData(d),
-          na.a.Get().getHeroData(m);
+          ta.a.Get().getHeroData(d),
+          ta.a.Get().getHeroData(m);
         var f = Object(c.h)();
         return (
           Object(i.useEffect)(
             function () {
-              return Pr.setSelectedAbilityIndex(0);
+              return Yn.setSelectedAbilityIndex(0);
             },
             [f.pathname]
           ),
           o.a.createElement(
             "div",
-            { className: da.a.HeroPage },
+            { className: ca.a.HeroPage },
             o.a.createElement(
               h.a,
               null,
@@ -36757,66 +38059,66 @@ object-assign
                 Object(_.a)("#hero_title", null == r ? void 0 : r.name_loc)
               )
             ),
-            o.a.createElement(fe.a, { bOverlapping: !0 }),
-            o.a.createElement(De.a, null),
+            o.a.createElement(_e.a, { bOverlapping: !0 }),
+            o.a.createElement(Se.a, null),
             o.a.createElement(
               "div",
-              { className: da.a.UpperSection },
-              o.a.createElement("div", { className: da.a.BackgroundGradient }),
-              o.a.createElement(Ma, { prevhero: l, nexthero: u }),
-              o.a.createElement(pa, {
+              { className: ca.a.UpperSection },
+              o.a.createElement("div", { className: ca.a.BackgroundGradient }),
+              o.a.createElement(La, { prevhero: l, nexthero: u }),
+              o.a.createElement(da, {
                 key: r ? r.name : "",
                 heroname: r ? r.name : "",
               }),
-              o.a.createElement(_e, {
+              o.a.createElement(me.a, {
                 bottom: !0,
                 color: "#000000",
                 startPct: 70,
                 midPct: 100,
                 endPct: 100,
               }),
-              o.a.createElement(_a, {
+              o.a.createElement(ma, {
                 key: null == r ? void 0 : r.id,
                 heroData: r,
               }),
-              o.a.createElement(ha, { heroData: r }),
-              o.a.createElement(fa, { heroData: r })
+              o.a.createElement(pa, { heroData: r }),
+              o.a.createElement(_a, { heroData: r })
             ),
             o.a.createElement(
               "div",
-              { className: da.a.DetailsBarContainer },
-              o.a.createElement(Ea, { heroData: r })
+              { className: ca.a.DetailsBarContainer },
+              o.a.createElement(ya, { heroData: r })
             ),
             o.a.createElement(
               "div",
               {
-                className: da.a.UnderBarSection,
+                className: ca.a.UnderBarSection,
                 style: {
                   backgroundImage:
                     "url( " + p.a.IMG_URL + "backgrounds/grey_painterly.png )",
                 },
               },
-              o.a.createElement(wa, { heroData: r }),
-              o.a.createElement(Ta, { nNextHeroID: m, nPrevHeroID: d })
+              o.a.createElement(Ea, { heroData: r }),
+              o.a.createElement(Ma, { nNextHeroID: m, nPrevHeroID: d })
             ),
-            o.a.createElement(ge.a, null)
+            o.a.createElement(he.a, null)
           )
         );
       }),
-      ka = a("FBel"),
-      Oa = a.n(ka);
-    function ja() {
+      Ta = a("FBel"),
+      Da = a.n(Ta);
+    function ka() {
       return { width: window.innerWidth, height: window.innerHeight };
     }
-    function Ia() {
+    function Oa() {
       var e = (function () {
-          var e = Object(i.useState)(ja()),
+          var e = Object(i.useState)(ka()),
             t = e[0],
             a = e[1];
           return (
             Object(i.useEffect)(function () {
               function e() {
-                a(ja());
+                a(ka());
               }
               return (
                 window.addEventListener("resize", e),
@@ -36832,9 +38134,7 @@ object-assign
         a = 5;
       return t < 1300 && (a = 4), t < 1e3 && (a = 3), t < 600 && (a = 2), a;
     }
-    var Na,
-      Ca,
-      Aa = function (e) {
+    var ja = function (e) {
         var t = e.hero,
           a = e.hidden,
           n = e.pos,
@@ -36849,14 +38149,14 @@ object-assign
           case 2:
             r = "intelligence";
         }
-        var i = Ia(),
+        var i = Oa(),
           s = Math.max(0, n % i),
           c = Math.max(0, Math.floor(n / i));
         return o.a.createElement(
           l.b,
           {
             to: u.a.hero(t.name_english_loc.replace(/ /g, "").toLowerCase()),
-            className: Object(ce.a)(Oa.a.HeroIcon, a && Oa.a.Hidden),
+            className: Object(ce.a)(Da.a.HeroIcon, a && Da.a.Hidden),
             style: {
               backgroundImage:
                 "url( " +
@@ -36870,28 +38170,28 @@ object-assign
                 " ) * 122px + " +
                 s +
                 " * ( 100% - " +
-                Oa.a.heroIconWidth +
+                Da.a.heroIconWidth +
                 "px ) / 4 )",
-              top: "calc( " + c + " * " + Oa.a.heroIconPaddedHeight + "px )",
+              top: "calc( " + c + " * " + Da.a.heroIconPaddedHeight + "px )",
             },
           },
           o.a.createElement(
             "div",
-            { className: Oa.a.HeroNameContainer },
+            { className: Da.a.HeroNameContainer },
             o.a.createElement("img", {
               src: p.a.IMG_URL + "icons/hero_" + r + ".png",
-              className: Oa.a.PrimaryStatIcon,
+              className: Da.a.PrimaryStatIcon,
             }),
             o.a.createElement(
               "div",
-              { className: Oa.a.HeroName },
+              { className: Da.a.HeroName },
               Object(_.a)(t.name_loc)
             )
           ),
           o.a.createElement(
             "div",
-            { className: Oa.a.FadeContainer },
-            o.a.createElement(_e, {
+            { className: Da.a.FadeContainer },
+            o.a.createElement(me.a, {
               bottom: !0,
               color: "#000000",
               startPct: 50,
@@ -36901,7 +38201,7 @@ object-assign
           )
         );
       },
-      Ya = function (e) {
+      Ia = function (e) {
         var t = e.heroList,
           a = Object(i.useState)(0),
           n = a[0],
@@ -36928,13 +38228,13 @@ object-assign
           t.heroes.forEach(function (e) {
             return (f += h(e) ? 1 : 0);
           });
-        var g = Ia(),
-          v = parseInt(Oa.a.heroIconPaddedHeight),
+        var g = Oa(),
+          v = parseInt(Da.a.heroIconPaddedHeight),
           y = 0;
         return o.a.createElement(
           "div",
           {
-            className: Oa.a.HeroGrid,
+            className: Da.a.HeroGrid,
             style: {
               backgroundImage:
                 "url( " + p.a.IMG_URL + "backgrounds/greyfade.jpg )",
@@ -36943,42 +38243,42 @@ object-assign
           o.a.createElement(
             "div",
             {
-              className: Oa.a.Header,
+              className: Da.a.Header,
               "data-aos": "fade-in",
               "data-aos-duration": "1000",
             },
-            o.a.createElement("div", { className: Oa.a.Trapezoid }),
+            o.a.createElement("div", { className: Da.a.Trapezoid }),
             o.a.createElement(
               "div",
-              { className: Oa.a.TitleText },
+              { className: Da.a.TitleText },
               Object(_.a)("#herogrid_choose")
             ),
             o.a.createElement(
               "div",
-              { className: Oa.a.SubtitleText },
+              { className: Da.a.SubtitleText },
               Object(_.a)("#home_choose_body")
             )
           ),
           o.a.createElement(
             "div",
-            { className: Oa.a.FilterContainer },
+            { className: Da.a.FilterContainer },
             o.a.createElement(
               "div",
-              { className: Oa.a.FilterLabel },
+              { className: Da.a.FilterLabel },
               Object(_.a)("#herogrid_filter")
             ),
             o.a.createElement(
               "div",
-              { className: Oa.a.SpecificFilterContainer },
+              { className: Da.a.SpecificFilterContainer },
               o.a.createElement(
                 "div",
-                { className: Oa.a.SelectorLabel },
+                { className: Da.a.SelectorLabel },
                 Object(_.a)("#herogrid_attribute")
               ),
               o.a.createElement("div", {
                 className: Object(ce.a)(
-                  Oa.a.Filter,
-                  1 == n && 0 == d.length && Oa.a.Selected
+                  Da.a.Filter,
+                  1 == n && 0 == d.length && Da.a.Selected
                 ),
                 style: {
                   backgroundImage:
@@ -36990,8 +38290,8 @@ object-assign
               }),
               o.a.createElement("div", {
                 className: Object(ce.a)(
-                  Oa.a.Filter,
-                  2 == n && 0 == d.length && Oa.a.Selected
+                  Da.a.Filter,
+                  2 == n && 0 == d.length && Da.a.Selected
                 ),
                 style: {
                   backgroundImage:
@@ -37003,8 +38303,8 @@ object-assign
               }),
               o.a.createElement("div", {
                 className: Object(ce.a)(
-                  Oa.a.Filter,
-                  3 == n && 0 == d.length && Oa.a.Selected
+                  Da.a.Filter,
+                  3 == n && 0 == d.length && Da.a.Selected
                 ),
                 style: {
                   backgroundImage:
@@ -37017,16 +38317,16 @@ object-assign
             ),
             o.a.createElement(
               "div",
-              { className: Oa.a.SpecificFilterContainer },
+              { className: Da.a.SpecificFilterContainer },
               o.a.createElement(
                 "div",
-                { className: Oa.a.SelectorLabel },
+                { className: Da.a.SelectorLabel },
                 Object(_.a)("#herogrid_complexity")
               ),
               o.a.createElement("div", {
                 className: Object(ce.a)(
-                  Oa.a.Filter,
-                  l >= 1 && 0 == d.length && Oa.a.Selected
+                  Da.a.Filter,
+                  l >= 1 && 0 == d.length && Da.a.Selected
                 ),
                 style: {
                   backgroundImage:
@@ -37038,8 +38338,8 @@ object-assign
               }),
               o.a.createElement("div", {
                 className: Object(ce.a)(
-                  Oa.a.Filter,
-                  l >= 2 && 0 == d.length && Oa.a.Selected
+                  Da.a.Filter,
+                  l >= 2 && 0 == d.length && Da.a.Selected
                 ),
                 style: {
                   backgroundImage:
@@ -37051,8 +38351,8 @@ object-assign
               }),
               o.a.createElement("div", {
                 className: Object(ce.a)(
-                  Oa.a.Filter,
-                  l >= 3 && 0 == d.length && Oa.a.Selected
+                  Da.a.Filter,
+                  l >= 3 && 0 == d.length && Da.a.Selected
                 ),
                 style: {
                   backgroundImage:
@@ -37065,12 +38365,12 @@ object-assign
             ),
             o.a.createElement(
               "div",
-              { className: Oa.a.SearchBarContainer },
+              { className: Da.a.SearchBarContainer },
               o.a.createElement(
                 "div",
-                { className: Oa.a.SearchBar },
+                { className: Da.a.SearchBar },
                 o.a.createElement("div", {
-                  className: Oa.a.MagnifyingGlass,
+                  className: Da.a.MagnifyingGlass,
                   style: {
                     backgroundImage:
                       "url( " + p.a.IMG_URL + "icons/search.svg )",
@@ -37092,20 +38392,20 @@ object-assign
           ),
           o.a.createElement(
             "div",
-            { className: Object(ce.a)(Oa.a.StateLoading, !t && Oa.a.Show) },
+            { className: Object(ce.a)(Da.a.StateLoading, !t && Da.a.Show) },
             Object(_.a)("#loading")
           ),
           o.a.createElement(
             "div",
             {
-              className: Object(ce.a)(Oa.a.NoHeroes, t && 0 == f && Oa.a.Show),
+              className: Object(ce.a)(Da.a.NoHeroes, t && 0 == f && Da.a.Show),
             },
             Object(_.a)("#herogrid_noheroes")
           ),
           o.a.createElement(
             "div",
             {
-              className: Oa.a.GridList,
+              className: Da.a.GridList,
               style: { height: Math.ceil(f / g) * v + 40 },
             },
             t &&
@@ -37118,7 +38418,7 @@ object-assign
                   var t = h(e);
                   return (
                     (y += t ? 1 : 0),
-                    o.a.createElement(Aa, {
+                    o.a.createElement(ja, {
                       key: e.id,
                       hero: e,
                       hidden: !t,
@@ -37129,3091 +38429,51 @@ object-assign
           )
         );
       },
-      xa = Object(s.a)(function (e) {
-        var t = na.a.Get().getHeroList();
+      Na = Object(s.a)(function (e) {
+        var t = ta.a.Get().getHeroList();
         return o.a.createElement(
           "div",
-          { className: Oa.a.HeroGridPage },
-          o.a.createElement(fe.a, { bOverlapping: !0 }),
-          o.a.createElement(De.a, null),
+          { className: Da.a.HeroGridPage },
+          o.a.createElement(_e.a, { bOverlapping: !0 }),
+          o.a.createElement(Se.a, null),
           o.a.createElement(
             h.a,
             null,
             o.a.createElement("title", null, Object(_.a)("#herogrid_title"))
           ),
-          o.a.createElement(Ya, { heroList: t }),
-          o.a.createElement(ge.a, null)
+          o.a.createElement(Ia, { heroList: t }),
+          o.a.createElement(he.a, null)
         );
       }),
-      Ra = a("pitT"),
-      Pa = a.n(Ra),
-      Ha = a("sjx6"),
-      Ga = a("yWf2"),
-      Ba = a.n(Ga),
-      Ua = a("knzx"),
-      Fa = a("k7N+"),
-      Wa = a.n(Fa),
-      za = a("xMCQ"),
-      Va = a.n(za),
-      qa = function (e) {
-        var t = e.options,
-          a = e.selectedOption,
-          n = e.setOption,
-          r = e.className,
-          i = t.findIndex(function (e) {
-            return e.value == a;
-          }),
-          s = -1 != i ? t[i] : void 0,
-          l = function (e) {
-            var a = Math.min(Math.max(0, i + e), t.length - 1);
-            n(t[a].value);
-          };
-        return o.a.createElement(
-          "div",
-          { className: Object(ce.a)(Va.a.CycleSelector, r) },
-          o.a.createElement(
-            "div",
-            {
-              className: Object(ce.a)(
-                Va.a.Arrow,
-                Va.a.Left,
-                0 != i && Va.a.Enabled
-              ),
-              onClick: function () {
-                return l(-1);
-              },
-            },
-            o.a.createElement("img", {
-              className: Va.a.ArrowIcon,
-              src: p.a.IMG_URL + "arrow_solid_left.png",
-            })
-          ),
-          o.a.createElement(
-            "div",
-            { className: Va.a.CurrentOption },
-            "string" == typeof (null == s ? void 0 : s.strLabel) &&
-              Object(_.a)(null == s ? void 0 : s.strLabel),
-            o.a.isValidElement(null == s ? void 0 : s.strLabel) &&
-              (null == s ? void 0 : s.strLabel)
-          ),
-          o.a.createElement(
-            "div",
-            {
-              className: Object(ce.a)(
-                Va.a.Arrow,
-                Va.a.Right,
-                i != t.length - 1 && Va.a.Enabled
-              ),
-              onClick: function () {
-                return l(1);
-              },
-            },
-            o.a.createElement("img", {
-              className: Va.a.ArrowIcon,
-              src: p.a.IMG_URL + "arrow_solid_left.png",
-            })
-          )
-        );
-      },
-      Ja = function (e) {
-        var t = e.options,
-          a = e.selectedOption,
-          n = e.setOption,
-          r = t.findIndex(function (e) {
-            return a == e.value;
-          });
-        return o.a.createElement(
-          "div",
-          { className: Va.a.DropdownSelector },
-          o.a.createElement(
-            "select",
-            {
-              onChange: function (e) {
-                return n(t[parseInt(e.target.value)].value);
-              },
-              value: r,
-            },
-            t.map(function (e, t) {
-              return o.a.createElement(
-                "option",
-                { key: t, value: t },
-                "string" == typeof (null == e ? void 0 : e.strLabel) &&
-                  Object(_.a)(null == e ? void 0 : e.strLabel),
-                o.a.isValidElement(null == e ? void 0 : e.strLabel) &&
-                  (null == e ? void 0 : e.strLabel)
-              );
-            })
-          ),
-          o.a.createElement("img", {
-            className: Va.a.ArrowDown,
-            src: p.a.IMG_URL + "arrow_solid_left.png",
-          })
-        );
-      },
-      Ka = function (e) {
-        var t = e.strInput,
-          a = e.setInput;
-        return o.a.createElement(
-          "div",
-          { className: Va.a.TextInput },
-          o.a.createElement(
-            "form",
-            null,
-            o.a.createElement("input", {
-              type: "text",
-              className: Va.a.InputBox,
-              placeholder: Object(_.b)("#dpc_search_team"),
-              value: t,
-              onChange: function (e) {
-                return a(e.target.value);
-              },
-              onKeyDown: function (e) {
-                return "Escape" == e.key && a("");
-              },
-            })
-          ),
-          o.a.createElement("img", {
-            className: Va.a.MaginifyingGlass,
-            src: p.a.IMG_URL + "arrow_solid_left.png",
-          })
-        );
-      },
-      Qa = function (e) {
-        var t = e.bEnabled,
-          a = e.setEnabled;
-        return o.a.createElement(
-          "div",
-          {
-            className: Object(ce.a)(Va.a.Switch, t && Va.a.On),
-            onClick: function () {
-              return a(!t);
-            },
-          },
-          o.a.createElement("div", { className: Va.a.Background }),
-          o.a.createElement("div", { className: Va.a.Selector })
-        );
-      },
-      Xa = a("6rKP"),
-      Za = (function () {
-        function e() {
-          (this.m_asyncLeagueData = new Xa.b()),
-            (this.m_asyncMatchData = new Xa.b()),
-            (this.m_asyncFavoriteTeams = new Xa.a()),
-            (this.m_asyncPopularTeams = new Xa.a()),
-            (this.m_asyncTeamInfo = new Xa.b()),
-            (this.m_mapLeagueNodeGroup = new Map()),
-            (this.m_mapLeagueNode = new Map()),
-            (this.m_mapLeagueDates = new Map()),
-            (this.m_mapLeagueTeamDivision = new Map()),
-            (this.m_mapTeamNameInfo = new Map()),
-            (this.m_arrLeagueInfo = [
-              [],
-              [
-                { eRegion: Ua.d.LEAGUE_REGION_NA, nLeagueIDs: [13119, 13120] },
-                { eRegion: Ua.d.LEAGUE_REGION_SA, nLeagueIDs: [13109, 13110] },
-                {
-                  eRegion: Ua.d.LEAGUE_REGION_EUROPE,
-                  nLeagueIDs: [13114, 13115],
-                },
-                { eRegion: Ua.d.LEAGUE_REGION_CIS, nLeagueIDs: [13116, 13117] },
-                {
-                  eRegion: Ua.d.LEAGUE_REGION_CHINA,
-                  nLeagueIDs: [13112, 13113],
-                },
-                { eRegion: Ua.d.LEAGUE_REGION_SEA, nLeagueIDs: [13108, 13107] },
-              ],
-              [{ eRegion: Ua.d.LEAGUE_REGION_UNSET, nLeagueIDs: [12964, 0] }],
-              [{ eRegion: Ua.d.LEAGUE_REGION_UNSET, nLeagueIDs: [0, 0] }],
-            ]),
-            (this.m_bSpoilerBlockEnabled =
-              "1" == localStorage.getItem("bSpoilerBlockEnabled"));
-        }
-        return (
-          (e.Get = function () {
-            return e.g_Singleton || (e.g_Singleton = new e()), e.g_Singleton;
-          }),
-          (e.prototype.UpdateLeagueDataRecursive = function (e, t, a) {
-            for (var n = this, r = 0, i = a.team_standings; r < i.length; r++) {
-              var o = i[r];
-              this.m_mapTeamNameInfo.has(o.team_id) ||
-                this.m_mapTeamNameInfo.set(o.team_id, {
-                  name: o.team_name,
-                  tag: o.team_tag,
-                  abbreviation: o.team_abbreviation,
-                });
-            }
-            this.m_mapLeagueNodeGroup.set(t + "_" + a.node_group_id, a),
-              a.team_standings.forEach(function (a) {
-                var r = n.GetDPCLeagues(e).find(function (e) {
-                    return e.nLeagueIDs[0] == t || e.nLeagueIDs[1] == t;
-                  }),
-                  i = (null == r ? void 0 : r.nLeagueIDs[0]) == t ? 1 : 2;
-                n.m_mapLeagueTeamDivision.set(e + "_" + a.team_id, {
-                  eRegion: null == r ? void 0 : r.eRegion,
-                  nLeagueID: t,
-                  nDivision: i,
-                });
-              }),
-              a.nodes.forEach(function (e) {
-                var a = 0 == e.actual_time ? e.scheduled_time : e.actual_time;
-                if (0 != a) {
-                  var r = new Date(1e3 * a);
-                  n.m_mapLeagueDates.get(t).add(r.setHours(0, 0, 0, 0) / 1e3);
-                }
-                n.m_mapLeagueNode.set(t + "_" + e.node_id, e);
-              }),
-              a.node_groups.forEach(function (a) {
-                return n.UpdateLeagueDataRecursive(e, t, a);
-              });
-          }),
-          (e.prototype.GetLeagueNodeGroup = function (e, t) {
-            return this.m_mapLeagueNodeGroup.get(e + "_" + t);
-          }),
-          (e.prototype.GetLeagueNode = function (e, t) {
-            return this.m_mapLeagueNode.get(e + "_" + t);
-          }),
-          (e.prototype.GetLeagueNodeIDs = function (e) {
-            return Array.from(this.m_mapLeagueNode.entries())
-              .filter(function (t) {
-                return -1 != t[0].indexOf(e + "_");
-              })
-              .map(function (e) {
-                return e[1].node_id;
-              });
-          }),
-          (e.prototype.GetLeagueDates = function (e) {
-            var t;
-            return Array.from(
-              (null === (t = this.m_mapLeagueDates.get(e)) || void 0 === t
-                ? void 0
-                : t.values()) || []
-            );
-          }),
-          (e.prototype.GetTeamNames = function (e) {
-            return this.m_mapTeamNameInfo.get(e);
-          }),
-          (e.prototype.FindLeagueTeamStanding = function (e, t) {
-            for (
-              var a = 0, n = Array.from(this.m_mapLeagueNodeGroup.keys());
-              a < n.length;
-              a++
-            ) {
-              var r = n[a],
-                i = parseInt(r.split("_")[0]);
-              if (this.FindSeasonForLeagueID(i) == e) {
-                var o = this.m_mapLeagueNodeGroup.get(r);
-                if (1 != o.node_group_id) {
-                  var s = o.team_standings.find(function (e) {
-                    return e.team_id == t;
-                  });
-                  if (s)
-                    return {
-                      nStanding: s.standing,
-                      nWins: s.wins,
-                      nLosses: s.losses,
-                    };
-                }
-              }
-            }
-          }),
-          (e.prototype.GetLeagueTeamDivision = function (e, t) {
-            return this.m_mapLeagueTeamDivision.get(e + "_" + t);
-          }),
-          (e.prototype.GetLeagueTeamDivisionString = function (e, t, a) {
-            var n = this.GetLeagueTeamDivision(e, t);
-            if (n)
-              if (a)
-                switch (n.eRegion) {
-                  case Ua.d.LEAGUE_REGION_NA:
-                    return "#dpc_region_abbrev_na_" + n.nDivision;
-                  case Ua.d.LEAGUE_REGION_SA:
-                    return "#dpc_region_abbrev_sa_" + n.nDivision;
-                  case Ua.d.LEAGUE_REGION_EUROPE:
-                    return "#dpc_region_abbrev_weu_" + n.nDivision;
-                  case Ua.d.LEAGUE_REGION_CIS:
-                    return "#dpc_region_abbrev_eeu_" + n.nDivision;
-                  case Ua.d.LEAGUE_REGION_CHINA:
-                    return "#dpc_region_abbrev_cn_" + n.nDivision;
-                  case Ua.d.LEAGUE_REGION_SEA:
-                    return "#dpc_region_abbrev_sea_" + n.nDivision;
-                }
-              else
-                switch (n.eRegion) {
-                  case Ua.d.LEAGUE_REGION_NA:
-                    return "#dpc_region_na_" + n.nDivision;
-                  case Ua.d.LEAGUE_REGION_SA:
-                    return "#dpc_region_sa_" + n.nDivision;
-                  case Ua.d.LEAGUE_REGION_EUROPE:
-                    return "#dpc_region_weu_" + n.nDivision;
-                  case Ua.d.LEAGUE_REGION_CIS:
-                    return "#dpc_region_eeu_" + n.nDivision;
-                  case Ua.d.LEAGUE_REGION_CHINA:
-                    return "#dpc_region_cn_" + n.nDivision;
-                  case Ua.d.LEAGUE_REGION_SEA:
-                    return "#dpc_region_sea_" + n.nDivision;
-                }
-            return "";
-          }),
-          (e.prototype.FindSeasonForLeagueID = function (e) {
-            var t = 0;
-            switch (
-              (this.m_arrLeagueInfo.forEach(function (a, n) {
-                return a.forEach(function (a) {
-                  return a.nLeagueIDs.forEach(function (a) {
-                    a == e && (t = n);
-                  });
-                });
-              }),
-              t)
-            ) {
-              case 1:
-                return Ua.e.SPRING_2021_LEAGUE;
-              case 2:
-                return Ua.e.SPRING_2021_MAJOR;
-              case 3:
-                return Ua.e.INTERNATIONAL_2021;
-            }
-            return Ua.e.INVALID;
-          }),
-          (e.prototype.UpdateDerivedLeagueData = function (e) {
-            var t = this;
-            if (e) {
-              var a = e.info.league_id;
-              Object(S.F)(function () {
-                t.m_mapLeagueDates.has(a) ||
-                  t.m_mapLeagueDates.set(a, new Set());
-                var n = t.FindSeasonForLeagueID(a);
-                n != Ua.e.INVALID &&
-                  e.node_groups.forEach(function (e) {
-                    return t.UpdateLeagueDataRecursive(n, a, e);
-                  });
-              });
-            }
-          }),
-          (e.prototype.GetLeagueData = function (e) {
-            var t = this;
-            return this.m_asyncLeagueData.getAsyncDataWrapper(e).getData(
-              600,
-              function () {
-                return Object(n.b)(t, void 0, void 0, function () {
-                  return Object(n.e)(this, function (t) {
-                    switch (t.label) {
-                      case 0:
-                        return [
-                          4,
-                          M.a.get(
-                            p.a.BASE_URL +
-                              "webapi/IDOTA2League/GetLeagueData/v001",
-                            { params: { league_id: e } }
-                          ),
-                        ];
-                      case 1:
-                        return [2, t.sent()];
-                    }
-                  });
-                });
-              },
-              function (e) {
-                var a = e.data;
-                return t.UpdateDerivedLeagueData(a), a;
-              }
-            );
-          }),
-          (e.prototype.GetSpoilerBlockEnabled = function () {
-            return this.m_bSpoilerBlockEnabled;
-          }),
-          (e.prototype.SetSpoilerBlockEnabled = function (e) {
-            (this.m_bSpoilerBlockEnabled = e),
-              localStorage.setItem("bSpoilerBlockEnabled", e ? "1" : "0");
-          }),
-          (e.prototype.GetDefaultRegion = function () {
-            var e = Ua.d.LEAGUE_REGION_EUROPE;
-            switch (p.a.REGION) {
-              case "North America":
-                e = Ua.d.LEAGUE_REGION_NA;
-                break;
-              case "Latin America":
-                e = Ua.d.LEAGUE_REGION_SA;
-                break;
-              case "Western Europe":
-              case "EU":
-              case "EEA":
-                e = Ua.d.LEAGUE_REGION_EUROPE;
-                break;
-              case "Eastern Europe":
-              case "Russia, Ukraine, & CIS":
-                e = Ua.d.LEAGUE_REGION_CIS;
-                break;
-              case "Oceania":
-              case "Asia":
-              case "South East Asia":
-              case "South Asia":
-                e = Ua.d.LEAGUE_REGION_SEA;
-            }
-            return (
-              ("CN" != v.b.COUNTRY && "XC" != v.b.COUNTRY) ||
-                (e = Ua.d.LEAGUE_REGION_CHINA),
-              e
-            );
-          }),
-          (e.prototype.GetDPCLeagues = function (e) {
-            return this.m_arrLeagueInfo[e];
-          }),
-          (e.prototype.CacheDPCLeagueData = function (e) {
-            var t = this,
-              a = !1;
-            if (
-              (this.GetDPCLeagues(e).forEach(function (e) {
-                var n, r;
-                0 != e.nLeagueIDs[0] &&
-                  (a =
-                    a ||
-                    (null ===
-                      (n = t.m_asyncLeagueData.getAsyncDataWrapper(
-                        e.nLeagueIDs[0]
-                      )) || void 0 === n
-                      ? void 0
-                      : n.isExpired())),
-                  0 != e.nLeagueIDs[1] &&
-                    (a =
-                      a ||
-                      (null ===
-                        (r = t.m_asyncLeagueData.getAsyncDataWrapper(
-                          e.nLeagueIDs[1]
-                        )) || void 0 === r
-                        ? void 0
-                        : r.isExpired()));
-              }),
-              a)
-            ) {
-              var n = "";
-              this.GetDPCLeagues(e).forEach(function (e) {
-                t.m_asyncLeagueData
-                  .getAsyncDataWrapper(e.nLeagueIDs[0])
-                  .setDataPending(),
-                  t.m_asyncLeagueData
-                    .getAsyncDataWrapper(e.nLeagueIDs[1])
-                    .setDataPending(),
-                  0 != e.nLeagueIDs[0] && (n += e.nLeagueIDs[0] + ","),
-                  0 != e.nLeagueIDs[1] && (n += e.nLeagueIDs[1] + ",");
-              }),
-                M.a
-                  .get(
-                    p.a.BASE_URL + "webapi/IDOTA2League/GetLeaguesData/v001",
-                    { params: { league_ids: n } }
-                  )
-                  .then(function (e) {
-                    var a = null == e ? void 0 : e.data;
-                    Object(S.F)(function () {
-                      null == a ||
-                        a.leagues.forEach(function (e) {
-                          t.m_asyncLeagueData
-                            .getAsyncDataWrapper(e.info.league_id)
-                            .setData(600, e),
-                            t.UpdateDerivedLeagueData(e);
-                        });
-                    });
-                  });
-            }
-          }),
-          (e.prototype.GetMatchData = function (e, t) {
-            var a = this;
-            return this.m_asyncMatchData.getAsyncDataWrapper(t).getData(
-              600,
-              function () {
-                return Object(n.b)(a, void 0, void 0, function () {
-                  return Object(n.e)(this, function (a) {
-                    switch (a.label) {
-                      case 0:
-                        return [
-                          4,
-                          M.a.get(
-                            p.a.BASE_URL +
-                              "webapi/IDOTA2DPC/GetLeagueMatchMinimal/v001",
-                            { params: { league_id: e, match_id: t } }
-                          ),
-                        ];
-                      case 1:
-                        return [2, a.sent()];
-                    }
-                  });
-                });
-              },
-              function (e) {
-                return e.data;
-              }
-            );
-          }),
-          (e.prototype.GetFavoriteTeams = function () {
-            var e = this;
-            return "dev" == p.a.WEB_UNIVERSE
-              ? [39, 2586976]
-              : this.m_asyncFavoriteTeams.getData(
-                  600,
-                  function () {
-                    return Object(n.b)(e, void 0, void 0, function () {
-                      return Object(n.e)(this, function (e) {
-                        switch (e.label) {
-                          case 0:
-                            return [
-                              4,
-                              M.a.get(
-                                p.a.BASE_URL +
-                                  u.a.dpc_root() +
-                                  "/getfavoriteteams",
-                                {}
-                              ),
-                            ];
-                          case 1:
-                            return [2, e.sent()];
-                        }
-                      });
-                    });
-                  },
-                  function (e) {
-                    var t;
-                    return null === (t = null == e ? void 0 : e.data) ||
-                      void 0 === t
-                      ? void 0
-                      : t.types[2].favorites.map(function (e) {
-                          return e.id;
-                        });
-                  }
-                );
-          }),
-          (e.prototype.GetPopularTeams = function () {
-            var e = this;
-            return this.m_asyncPopularTeams.getData(
-              600,
-              function () {
-                return Object(n.b)(e, void 0, void 0, function () {
-                  return Object(n.e)(this, function (e) {
-                    switch (e.label) {
-                      case 0:
-                        return [
-                          4,
-                          M.a.get(
-                            p.a.BASE_URL +
-                              "webapi/IDOTA2DPC/GetDPCSearchResults/v001",
-                            {
-                              params: { search: "", count: 20, resultflags: 2 },
-                            }
-                          ),
-                        ];
-                      case 1:
-                        return [2, e.sent()];
-                    }
-                  });
-                });
-              },
-              function (e) {
-                var t;
-                return null === (t = e.data) || void 0 === t
-                  ? void 0
-                  : t.teams.map(function (e) {
-                      return e.id;
-                    });
-              }
-            );
-          }),
-          (e.prototype.GetTeamInfo = function (e) {
-            var t = this;
-            return this.m_asyncTeamInfo.getAsyncDataWrapper(e).getData(
-              600,
-              function () {
-                return Object(n.b)(t, void 0, void 0, function () {
-                  return Object(n.e)(this, function (t) {
-                    switch (t.label) {
-                      case 0:
-                        return [
-                          4,
-                          M.a.get(
-                            p.a.BASE_URL +
-                              "webapi/IDOTA2Teams/GetSingleTeamInfo/v001",
-                            { params: { team_id: e, get_dpc_info: !0 } }
-                          ),
-                        ];
-                      case 1:
-                        return [2, t.sent()];
-                    }
-                  });
-                });
-              },
-              function (e) {
-                return e.data;
-              }
-            );
-          }),
-          Object(n.c)([S.B], e.prototype, "m_mapLeagueNodeGroup", void 0),
-          Object(n.c)([S.B], e.prototype, "m_mapLeagueNode", void 0),
-          Object(n.c)([S.B], e.prototype, "m_mapLeagueDates", void 0),
-          Object(n.c)([S.B], e.prototype, "m_mapLeagueTeamDivision", void 0),
-          Object(n.c)([S.B], e.prototype, "m_mapTeamNameInfo", void 0),
-          Object(n.c)([S.B], e.prototype, "m_bSpoilerBlockEnabled", void 0),
-          e
-        );
-      })(),
-      $a = a("poSt"),
-      en = a.n($a),
-      tn = a("HlPF"),
-      an = a.n(tn),
-      nn = function (e, t) {
-        return (nn =
-          Object.setPrototypeOf ||
-          ({ __proto__: [] } instanceof Array &&
-            function (e, t) {
-              e.__proto__ = t;
-            }) ||
-          function (e, t) {
-            for (var a in t) t.hasOwnProperty(a) && (e[a] = t[a]);
-          })(e, t);
-      },
-      rn =
-        ((Ca = Na = {
-          path: void 0,
-          exports: {},
-          require: function (e, t) {
-            return (function () {
-              throw new Error(
-                "Dynamic requires are not currently supported by @rollup/plugin-commonjs"
-              );
-            })(null == t && Na.path);
-          },
-        }),
-        Na.exports,
-        (function () {
-          var e = {}.hasOwnProperty;
-          function t() {
-            for (var a = [], n = 0; n < arguments.length; n++) {
-              var r = arguments[n];
-              if (r) {
-                var i = typeof r;
-                if ("string" === i || "number" === i) a.push(r);
-                else if (Array.isArray(r) && r.length) {
-                  var o = t.apply(null, r);
-                  o && a.push(o);
-                } else if ("object" === i)
-                  for (var s in r) e.call(r, s) && r[s] && a.push(s);
-              }
-            }
-            return a.join(" ");
-          }
-          Ca.exports
-            ? ((t.default = t), (Ca.exports = t))
-            : (window.classNames = t);
-        })(),
-        Na.exports);
-    function on(e, t, a) {
-      var n, r, i, o, s;
-      function l() {
-        var c = Date.now() - o;
-        c < t && c >= 0
-          ? (n = setTimeout(l, t - c))
-          : ((n = null), a || ((s = e.apply(i, r)), (i = r = null)));
-      }
-      null == t && (t = 100);
-      var c = function () {
-        (i = this), (r = arguments), (o = Date.now());
-        var c = a && !n;
-        return (
-          n || (n = setTimeout(l, t)),
-          c && ((s = e.apply(i, r)), (i = r = null)),
-          s
-        );
-      };
-      return (
-        (c.clear = function () {
-          n && (clearTimeout(n), (n = null));
-        }),
-        (c.flush = function () {
-          n &&
-            ((s = e.apply(i, r)), (i = r = null), clearTimeout(n), (n = null));
-        }),
-        c
-      );
-    }
-    on.debounce = on;
-    var sn = on;
-    !(function (e, t) {
-      void 0 === t && (t = {});
-      var a = t.insertAt;
-      if ("undefined" != typeof document) {
-        var n = document.head || document.getElementsByTagName("head")[0],
-          r = document.createElement("style");
-        (r.type = "text/css"),
-          "top" === a && n.firstChild
-            ? n.insertBefore(r, n.firstChild)
-            : n.appendChild(r),
-          r.styleSheet
-            ? (r.styleSheet.cssText = e)
-            : r.appendChild(document.createTextNode(e));
-      }
-    })(
-      ".indiana-scroll-container {\n  overflow: auto; }\n  .indiana-scroll-container--dragging {\n    scroll-behavior: auto !important; }\n    .indiana-scroll-container--dragging > * {\n      pointer-events: none;\n      cursor: -webkit-grab;\n      cursor: grab; }\n  .indiana-scroll-container--hide-scrollbars {\n    overflow: hidden;\n    overflow: -moz-scrollbars-none;\n    -ms-overflow-style: none;\n    scrollbar-width: none; }\n    .indiana-scroll-container--hide-scrollbars::-webkit-scrollbar {\n      display: none !important;\n      height: 0 !important;\n      width: 0 !important;\n      background: transparent !important;\n      -webkit-appearance: none !important; }\n  .indiana-scroll-container--native-scroll {\n    overflow: auto; }\n\n.indiana-dragging {\n  cursor: -webkit-grab;\n  cursor: grab; }\n"
-    );
-    var ln,
-      cn =
-        ((ln = "indiana-scroll-container"),
-        function (e, t) {
-          if (!e) return ln;
-          var a;
-          "string" == typeof e ? (a = e) : (t = e);
-          var n = ln;
-          return (
-            a && (n += "__" + a),
-            n +
-              (t
-                ? Object.keys(t).reduce(function (e, a) {
-                    var r = t[a];
-                    return (
-                      r &&
-                        (e +=
-                          " " +
-                          ("boolean" == typeof r
-                            ? n + "--" + a
-                            : n + "--" + a + "_" + r)),
-                      e
-                    );
-                  }, "")
-                : "")
-          );
-        }),
-      un = (function (e) {
-        function t(t) {
-          var a = e.call(this, t) || this;
-          return (
-            (a.onEndScroll = function () {
-              (a.scrolling = !1), !a.pressed && a.started && a.processEnd();
-            }),
-            (a.onScroll = function (e) {
-              var t = a.container.current;
-              (t.scrollLeft === a.scrollLeft && t.scrollTop === a.scrollTop) ||
-                ((a.scrolling = !0), a.processScroll(e), a.onEndScroll());
-            }),
-            (a.onTouchStart = function (e) {
-              var t = a.props.nativeMobileScroll;
-              if (a.isDraggable(e.target))
-                if (((a.internal = !0), t && a.scrolling)) a.pressed = !0;
-                else {
-                  var n = e.touches[0];
-                  a.processClick(e, n.clientX, n.clientY),
-                    !t && a.props.stopPropagation && e.stopPropagation();
-                }
-            }),
-            (a.onTouchEnd = function (e) {
-              var t = a.props.nativeMobileScroll;
-              a.pressed &&
-                (!a.started || (a.scrolling && t)
-                  ? (a.pressed = !1)
-                  : a.processEnd(),
-                a.forceUpdate());
-            }),
-            (a.onTouchMove = function (e) {
-              var t = a.props.nativeMobileScroll;
-              if (a.pressed && (!t || !a.isMobile)) {
-                var n = e.touches[0];
-                n && a.processMove(e, n.clientX, n.clientY),
-                  e.preventDefault(),
-                  a.props.stopPropagation && e.stopPropagation();
-              }
-            }),
-            (a.onMouseDown = function (e) {
-              a.isDraggable(e.target) &&
-                a.isScrollable() &&
-                ((a.internal = !0),
-                -1 !== a.props.buttons.indexOf(e.button) &&
-                  (a.processClick(e, e.clientX, e.clientY),
-                  e.preventDefault(),
-                  a.props.stopPropagation && e.stopPropagation()));
-            }),
-            (a.onMouseMove = function (e) {
-              a.pressed &&
-                (a.processMove(e, e.clientX, e.clientY),
-                e.preventDefault(),
-                a.props.stopPropagation && e.stopPropagation());
-            }),
-            (a.onMouseUp = function (e) {
-              a.pressed &&
-                (a.started
-                  ? a.processEnd()
-                  : ((a.internal = !1),
-                    (a.pressed = !1),
-                    a.forceUpdate(),
-                    a.props.onClick && a.props.onClick(e)),
-                e.preventDefault(),
-                a.props.stopPropagation && e.stopPropagation());
-            }),
-            (a.container = o.a.createRef()),
-            (a.onEndScroll = sn(a.onEndScroll, 300)),
-            (a.scrolling = !1),
-            (a.started = !1),
-            (a.pressed = !1),
-            (a.internal = !1),
-            (a.getRef = a.getRef.bind(a)),
-            a
-          );
-        }
-        return (
-          (function (e, t) {
-            function a() {
-              this.constructor = e;
-            }
-            nn(e, t),
-              (e.prototype =
-                null === t
-                  ? Object.create(t)
-                  : ((a.prototype = t.prototype), new a()));
-          })(t, e),
-          (t.prototype.componentDidMount = function () {
-            var e = this.props.nativeMobileScroll,
-              t = this.container.current;
-            window.addEventListener("mouseup", this.onMouseUp),
-              window.addEventListener("mousemove", this.onMouseMove),
-              window.addEventListener("touchmove", this.onTouchMove, {
-                passive: !1,
-              }),
-              window.addEventListener("touchend", this.onTouchEnd),
-              t.addEventListener("touchstart", this.onTouchStart, {
-                passive: !1,
-              }),
-              t.addEventListener("mousedown", this.onMouseDown, {
-                passive: !1,
-              }),
-              e &&
-                ((this.isMobile = this.isMobileDevice()),
-                this.isMobile && this.forceUpdate());
-          }),
-          (t.prototype.componentWillUnmount = function () {
-            window.removeEventListener("mouseup", this.onMouseUp),
-              window.removeEventListener("mousemove", this.onMouseMove),
-              window.removeEventListener("touchmove", this.onTouchMove),
-              window.removeEventListener("touchend", this.onTouchEnd);
-          }),
-          (t.prototype.getElement = function () {
-            return this.container.current;
-          }),
-          (t.prototype.isMobileDevice = function () {
-            return (
-              void 0 !== window.orientation ||
-              -1 !== navigator.userAgent.indexOf("IEMobile")
-            );
-          }),
-          (t.prototype.isDraggable = function (e) {
-            var t = this.props.ignoreElements;
-            if (t) {
-              var a = e.closest(t);
-              return null === a || a.contains(this.getElement());
-            }
-            return !0;
-          }),
-          (t.prototype.isScrollable = function () {
-            var e = this.container.current;
-            return (
-              e &&
-              (e.scrollWidth > e.clientWidth || e.scrollHeight > e.clientHeight)
-            );
-          }),
-          (t.prototype.processClick = function (e, t, a) {
-            var n = this.container.current;
-            (this.scrollLeft = n.scrollLeft),
-              (this.scrollTop = n.scrollTop),
-              (this.clientX = t),
-              (this.clientY = a),
-              (this.pressed = !0);
-          }),
-          (t.prototype.processStart = function (e) {
-            void 0 === e && (e = !0);
-            var t = this.props.onStartScroll;
-            (this.started = !0),
-              e && document.body.classList.add("indiana-dragging"),
-              t && t({ external: !this.internal }),
-              this.forceUpdate();
-          }),
-          (t.prototype.processScroll = function (e) {
-            if (this.started) {
-              var t = this.props.onScroll;
-              t && t({ external: !this.internal });
-            } else this.processStart(!1);
-          }),
-          (t.prototype.processMove = function (e, t, a) {
-            var n = this.props,
-              r = n.horizontal,
-              i = n.vertical,
-              o = n.activationDistance,
-              s = n.onScroll,
-              l = this.container.current;
-            this.started
-              ? (r && (l.scrollLeft -= t - this.clientX),
-                i && (l.scrollTop -= a - this.clientY),
-                s && s({ external: !this.internal }),
-                (this.clientX = t),
-                (this.clientY = a),
-                (this.scrollLeft = l.scrollLeft),
-                (this.scrollTop = l.scrollTop))
-              : ((r && Math.abs(t - this.clientX) > o) ||
-                  (i && Math.abs(a - this.clientY) > o)) &&
-                ((this.clientX = t), (this.clientY = a), this.processStart());
-          }),
-          (t.prototype.processEnd = function () {
-            var e = this.props.onEndScroll;
-            this.container.current && e && e({ external: !this.internal }),
-              (this.pressed = !1),
-              (this.started = !1),
-              (this.scrolling = !1),
-              (this.internal = !1),
-              document.body.classList.remove("indiana-dragging"),
-              this.forceUpdate();
-          }),
-          (t.prototype.getRef = function (e) {
-            [this.container, this.props.innerRef].forEach(function (t) {
-              t && ("function" == typeof t ? t(e) : (t.current = e));
-            });
-          }),
-          (t.prototype.render = function () {
-            var e = this.props,
-              t = e.children,
-              a = e.className,
-              n = e.style,
-              r = e.hideScrollbars,
-              i = e.component;
-            return o.a.createElement(
-              i,
-              {
-                className: rn(
-                  a,
-                  cn({
-                    dragging: this.pressed,
-                    "hide-scrollbars": r,
-                    "native-scroll": this.isMobile,
-                  })
-                ),
-                style: n,
-                ref: this.getRef,
-                onScroll: this.onScroll,
-              },
-              t
-            );
-          }),
-          (t.defaultProps = {
-            nativeMobileScroll: !0,
-            hideScrollbars: !0,
-            activationDistance: 10,
-            vertical: !0,
-            horizontal: !0,
-            stopPropagation: !1,
-            style: {},
-            component: "div",
-            buttons: [0],
-          }),
-          t
-        );
-      })(i.PureComponent),
-      dn = a("Viej"),
-      mn = 244,
-      pn = function (e) {
-        var t = e.bLeft,
-          a = e.adjustDate;
-        return o.a.createElement(
-          "div",
-          {
-            className: Object(ce.a)(
-              an.a.ScrollArrow,
-              t && an.a.Left,
-              !t && an.a.Right
-            ),
-            onClick: function () {
-              return a(t ? -1 : 1);
-            },
-          },
-          o.a.createElement(
-            "div",
-            { className: an.a.Clip },
-            o.a.createElement("img", {
-              className: an.a.ArrowIcon,
-              src: p.a.IMG_URL + "arrow_solid_left.png",
-            })
-          )
-        );
-      },
-      _n = Object(s.a)(function (e) {
-        for (
-          var t,
-            a = e.eDivision,
-            n = e.setDivision,
-            r = e.nDate,
-            i = e.scrollToDate,
-            s = Object(c.i)(),
-            l = Object(Ha.j)(s.strSeason),
-            u = [
-              { value: Ua.b.UNSET, strLabel: "#dpc_division_filter_all" },
-              { value: Ua.b.DIVISION_I, strLabel: "#dpc_division_filter_i" },
-              { value: Ua.b.DIVISION_II, strLabel: "#dpc_division_filter_ii" },
-            ],
-            d = new Set(),
-            m = 0,
-            p = Za.Get().GetDPCLeagues(l);
-          m < p.length;
-          m++
-        )
-          for (var h = 0, f = p[m].nLeagueIDs; h < f.length; h++) {
-            var g = f[h];
-            null === (t = Za.Get().GetLeagueDates(g)) ||
-              void 0 === t ||
-              t.forEach(function (e) {
-                return d.add(e);
-              });
-          }
-        var v = [];
-        return (
-          Array.from(d.values())
-            .sort()
-            .forEach(function (e) {
-              v.push({
-                value: e,
-                strLabel: U()(1e3 * e)
-                  .format("ddd, D MMMM")
-                  .toString(),
-              });
-            }),
-          o.a.createElement(
-            "div",
-            { className: an.a.OptionSelector },
-            o.a.createElement(
-              "div",
-              { className: an.a.DPCBlock },
-              o.a.createElement(dn.a, { className: an.a.DPCIcon }),
-              o.a.createElement(
-                "div",
-                { className: an.a.Dota },
-                Object(_.a)("#dpc_dota")
-              ),
-              o.a.createElement(
-                "div",
-                { className: an.a.ProCircuit },
-                Object(_.a)("#dpc_pro_circuit")
-              )
-            ),
-            o.a.createElement(
-              "div",
-              { className: an.a.Selectors },
-              o.a.createElement(qa, {
-                options: u,
-                selectedOption: a,
-                setOption: n,
-              }),
-              o.a.createElement(Ja, {
-                options: v,
-                selectedOption: r,
-                setOption: i,
-              })
-            )
-          )
-        );
-      }),
-      hn = Object(s.a)(function (e) {
-        var t = e.nLeagueID,
-          a = e.nNodeID,
-          n = Object(c.i)(),
-          r = Object(s.a)(function (e) {
-            var t = e.nTeamID,
-              a = e.strTeamInfo,
-              n = e.bWinner,
-              r = Za.Get().GetTeamNames(t);
-            return o.a.createElement(
-              "div",
-              { className: Object(ce.a)(an.a.BannerTeam, n && an.a.Winner) },
-              o.a.createElement("div", {
-                className: an.a.TeamLogo,
-                style: {
-                  backgroundImage:
-                    "url( " +
-                    p.a.IMG_URL +
-                    "teams/square_medium/" +
-                    (0 != t ? t : "team_unknown_web") +
-                    ".png )",
-                },
-              }),
-              o.a.createElement(
-                "div",
-                { className: an.a.TeamName },
-                null == r ? void 0 : r.name
-              ),
-              o.a.createElement("div", { className: an.a.TeamInfo }, a)
-            );
-          }),
-          i = En(),
-          d = Za.Get().GetLeagueNode(t, a),
-          m = null == d ? void 0 : d.team_id_1,
-          h = null == d ? void 0 : d.team_id_2,
-          f = Za.Get().FindLeagueTeamStanding(i.eSeason, m),
-          g = Za.Get().FindLeagueTeamStanding(i.eSeason, h),
-          v =
-            (null == d ? void 0 : d.has_started) &&
-            !(null == d ? void 0 : d.is_completed),
-          y = null == d ? void 0 : d.is_completed,
-          b =
-            0 != (null == d ? void 0 : d.actual_time)
-              ? null == d
-                ? void 0
-                : d.actual_time
-              : null == d
-              ? void 0
-              : d.scheduled_time,
-          E = Za.Get().GetLeagueTeamDivisionString(
-            i.eSeason,
-            null == d ? void 0 : d.team_id_1,
-            !0
-          ),
-          L = Za.Get().GetSpoilerBlockEnabled(),
-          w = L
-            ? ""
-            : v || y
-            ? "" + (null == d ? void 0 : d.team_1_wins)
-            : (null == f ? void 0 : f.nWins) +
-              " - " +
-              (null == f ? void 0 : f.nLosses),
-          M = L
-            ? ""
-            : v || y
-            ? "" + (null == d ? void 0 : d.team_2_wins)
-            : (null == g ? void 0 : g.nWins) +
-              " - " +
-              (null == g ? void 0 : g.nLosses),
-          S = i.nLeagueID == t && i.nNodeID == a,
-          T = S ? 0 : t,
-          D = S ? 0 : a;
-        return o.a.createElement(
-          l.b,
-          {
-            to: u.a.dpc_home(n.strSeason, "" + T, "" + D),
-            className: Object(ce.a)(
-              an.a.DPCMatchBannerNode,
-              S && an.a.IsSelected,
-              v && an.a.IsInProgress,
-              y && an.a.IsCompleted
-            ),
-          },
-          o.a.createElement(
-            "div",
-            { className: an.a.UpperContainer },
-            o.a.createElement(
-              "div",
-              { className: an.a.Time },
-              o.a.createElement(Wa.a, { date: 1e3 * b, format: "DD MMM LT" })
-            ),
-            o.a.createElement(
-              "div",
-              { className: an.a.RegionDivision },
-              Object(_.a)(E),
-              y && " - " + Object(_.a)("#dpc_match_final")
-            ),
-            o.a.createElement(
-              "div",
-              { className: Object(ce.a)(an.a.LiveBanner) },
-              Object(_.a)("#dpc_live"),
-              o.a.createElement("div", { className: an.a.Dot })
-            )
-          ),
-          o.a.createElement(
-            "div",
-            { className: an.a.TeamsContainer },
-            o.a.createElement(r, {
-              nTeamID: m,
-              strTeamInfo: w,
-              bWinner:
-                y &&
-                !L &&
-                (null == d ? void 0 : d.team_1_wins) >
-                  (null == d ? void 0 : d.team_2_wins),
-            }),
-            o.a.createElement(r, {
-              nTeamID: h,
-              strTeamInfo: M,
-              bWinner:
-                y &&
-                !L &&
-                (null == d ? void 0 : d.team_2_wins) >
-                  (null == d ? void 0 : d.team_1_wins),
-            })
-          )
-        );
-      }),
-      fn = Object(s.a)(function () {
-        for (
-          var e = Object(c.i)(),
-            t = Object(Ha.j)(e.strSeason),
-            a = En(),
-            n = Object(i.useState)(Ua.b.UNSET),
-            r = n[0],
-            s = n[1],
-            l = Object(i.useState)(new Date().setHours(0, 0, 0, 0) / 1e3),
-            u = l[0],
-            d = l[1],
-            m = Object(i.useState)(new Date().setHours(0, 0, 0, 0) / 1e3),
-            p = m[0],
-            _ = m[1],
-            h = Object(i.useState)(!1),
-            f = h[0],
-            g = h[1],
-            v = Object(i.useRef)(null),
-            y = Object(i.useRef)(null),
-            b = Za.Get().GetDPCLeagues(t),
-            E = [],
-            L = function (e) {
-              Za.Get()
-                .GetLeagueNodeIDs(e.nLeagueIDs[0])
-                .forEach(function (t) {
-                  return E.push({
-                    nLeagueID: e.nLeagueIDs[0],
-                    nNodeID: t,
-                    nTimestamp: 0,
-                  });
-                }),
-                Za.Get()
-                  .GetLeagueNodeIDs(e.nLeagueIDs[1])
-                  .forEach(function (t) {
-                    return E.push({
-                      nLeagueID: e.nLeagueIDs[1],
-                      nNodeID: t,
-                      nTimestamp: 0,
-                    });
-                  });
-            },
-            w = 0,
-            M = b;
-          w < M.length;
-          w++
-        ) {
-          L(M[w]);
-        }
-        E.forEach(function (e) {
-          var t = Za.Get().GetLeagueNode(e.nLeagueID, e.nNodeID);
-          e.nTimestamp =
-            0 != (null == t ? void 0 : t.actual_time)
-              ? null == t
-                ? void 0
-                : t.actual_time
-              : null == t
-              ? void 0
-              : t.scheduled_time;
-        });
-        var S = E.filter(function (e) {
-          if (0 == e.nTimestamp) return !1;
-          switch (r) {
-            case Ua.b.DIVISION_I:
-              return b.find(function (t) {
-                return t.nLeagueIDs[0] == e.nLeagueID;
-              });
-            case Ua.b.DIVISION_II:
-              return b.find(function (t) {
-                return t.nLeagueIDs[1] == e.nLeagueID;
-              });
-          }
-          return !0;
-        }).sort(function (e, t) {
-          return e.nTimestamp - t.nTimestamp;
-        });
-        Object(i.useEffect)(
-          function () {
-            var e = S.filter(function (e) {
-              return e.nTimestamp < p;
-            }).length;
-            v.current && (v.current.scrollLeft = mn * e), d(p);
-          },
-          [p, S.length]
-        ),
-          Object(i.useEffect)(
-            function () {
-              if (a && 0 != a.nLeagueID) {
-                var e = S.findIndex(function (e) {
-                  return e.nLeagueID == a.nLeagueID && e.nNodeID == a.nNodeID;
-                });
-                if (0 != e && v.current && y.current) {
-                  var t = mn * e;
-                  (v.current.scrollLeft > t + mn ||
-                    v.current.scrollLeft < t - 1708) &&
-                    (v.current.scrollLeft = Math.max(0, mn * e - mn));
-                }
-              }
-            },
-            [
-              null == a ? void 0 : a.nLeagueID,
-              null == a ? void 0 : a.nNodeID,
-              S.length,
-            ]
-          );
-        var T = function (e) {
-          var t = u + 24 * e * 60 * 60,
-            a = S.findIndex(function (e) {
-              return e.nTimestamp > t;
-            });
-          -1 != a && _(new Date(1e3 * S[a].nTimestamp).setHours(0, 0, 0) / 1e3);
-        };
-        return o.a.createElement(
-          "div",
-          { className: an.a.DPCMatchBanner },
-          o.a.createElement(
-            "div",
-            { className: an.a.DPCMatchBannerContents },
-            o.a.createElement(_n, {
-              eDivision: r,
-              setDivision: s,
-              nDate: u,
-              scrollToDate: _,
-            }),
-            o.a.createElement(
-              "div",
-              { className: an.a.MatchesContainer },
-              o.a.createElement(pn, { bLeft: !0, adjustDate: T }),
-              o.a.createElement(
-                un,
-                {
-                  className: Object(ce.a)(
-                    an.a.MatchesScroller,
-                    f && an.a.AfterFirstScroll
-                  ),
-                  vertical: !1,
-                  innerRef: v,
-                  onEndScroll: function (e) {
-                    if ((g(!0), v.current)) {
-                      var t = Math.floor(Math.ceil(v.current.scrollLeft) / mn);
-                      t < S.length &&
-                        d(
-                          new Date(1e3 * S[t].nTimestamp).setHours(0, 0, 0) /
-                            1e3
-                        );
-                    }
-                  },
-                  ref: y,
-                },
-                S.map(function (e) {
-                  return o.a.createElement(hn, {
-                    key: e.nLeagueID + "_" + e.nNodeID,
-                    nLeagueID: e.nLeagueID,
-                    nNodeID: e.nNodeID,
-                  });
-                })
-              ),
-              o.a.createElement(pn, { bLeft: !1, adjustDate: T })
-            )
-          )
-        );
-      }),
-      gn = a("k9bf"),
-      vn = a.n(gn),
-      yn = function () {
-        var e = Object(c.h)(),
-          t = Object(i.useState)(Za.Get().GetSpoilerBlockEnabled()),
-          a = t[0],
-          n = t[1];
-        return (
-          Object(i.useEffect)(
-            function () {
-              Za.Get().SetSpoilerBlockEnabled(a);
-            },
-            [a]
-          ),
-          o.a.createElement(
-            "div",
-            { className: vn.a.DPCHeader },
-            o.a.createElement(
-              "div",
-              { className: vn.a.DPCHeaderContents },
-              o.a.createElement("div", { className: vn.a.DPCTitle }),
-              o.a.createElement(
-                "div",
-                { className: vn.a.DPCOptions },
-                o.a.createElement(
-                  l.b,
-                  {
-                    to: u.a.dpc_home(),
-                    className: Object(ce.a)(
-                      vn.a.DPCLink,
-                      0 == e.pathname.indexOf(u.a.dpc_home_root()) &&
-                        vn.a.Active
-                    ),
-                  },
-                  o.a.createElement(
-                    "div",
-                    { className: vn.a.Label },
-                    Object(_.a)("#dpc_header_home")
-                  )
-                ),
-                o.a.createElement(
-                  l.b,
-                  {
-                    to: u.a.dpc_schedule(),
-                    className: Object(ce.a)(
-                      vn.a.DPCLink,
-                      0 == e.pathname.indexOf(u.a.dpc_schedule_root()) &&
-                        vn.a.Active
-                    ),
-                  },
-                  o.a.createElement(
-                    "div",
-                    { className: vn.a.Label },
-                    Object(_.a)("#dpc_header_schedule")
-                  )
-                ),
-                o.a.createElement(
-                  l.b,
-                  {
-                    to: u.a.dpc_standings(),
-                    className: Object(ce.a)(
-                      vn.a.DPCLink,
-                      0 == e.pathname.indexOf(u.a.dpc_standings_root()) &&
-                        vn.a.Active
-                    ),
-                  },
-                  o.a.createElement(
-                    "div",
-                    { className: vn.a.Label },
-                    Object(_.a)("#dpc_header_standings")
-                  )
-                ),
-                o.a.createElement(
-                  l.b,
-                  {
-                    to: u.a.dpc_ti_standings(),
-                    className: Object(ce.a)(
-                      vn.a.DPCLink,
-                      0 == e.pathname.indexOf(u.a.dpc_ti_standings_root()) &&
-                        vn.a.Active
-                    ),
-                  },
-                  o.a.createElement(
-                    "div",
-                    { className: vn.a.Label },
-                    Object(_.a)("#dpc_header_ti_standings")
-                  )
-                ),
-                o.a.createElement(
-                  l.b,
-                  {
-                    to: u.a.dpc_about(),
-                    className: Object(ce.a)(
-                      vn.a.DPCLink,
-                      0 == e.pathname.indexOf(u.a.dpc_teams_root()) &&
-                        vn.a.Active
-                    ),
-                  },
-                  o.a.createElement(
-                    "div",
-                    { className: vn.a.Label },
-                    Object(_.a)("#dpc_header_teams")
-                  )
-                )
-              ),
-              o.a.createElement(
-                "div",
-                { className: vn.a.DPCSpoilerBlock },
-                o.a.createElement(
-                  "div",
-                  { className: vn.a.SpoilerText },
-                  Object(_.a)("#dpc_header_spoiler_block")
-                ),
-                o.a.createElement(Qa, { bEnabled: a, setEnabled: n })
-              )
-            )
-          )
-        );
-      },
-      bn = Object(i.createContext)(null),
-      En = function () {
-        return Object(i.useContext)(bn);
-      };
-    function Ln(e) {
-      return o.a.createElement(
-        bn.Provider,
-        { value: e.matchContext },
-        e.children
-      );
-    }
-    var wn = Object(s.a)(function (e) {
-        var t = e.matchContext,
-          a = e.className,
-          n = e.children;
-        return (
-          t.eSeason != Ua.e.INVALID && Za.Get().CacheDPCLeagueData(t.eSeason),
-          o.a.createElement(
-            "div",
-            { className: Object(ce.a)(en.a.DPCRoot, a) },
-            o.a.createElement(
-              Ln,
-              { matchContext: t },
-              o.a.createElement(
-                "div",
-                { className: en.a.TopAnchor },
-                o.a.createElement(fe.a, { bOverlapping: !1 }),
-                o.a.createElement(fn, null)
-              ),
-              o.a.createElement(
-                "div",
-                {
-                  className: en.a.DPCHeaderSpacer,
-                  style: {
-                    backgroundImage:
-                      "url( " + p.a.IMG_URL + "backgrounds/dpcbanner.png )",
-                  },
-                },
-                o.a.createElement(dn.a, { className: en.a.Icon }),
-                o.a.createElement(
-                  "div",
-                  { className: en.a.Right },
-                  o.a.createElement(
-                    "div",
-                    { className: en.a.Dota },
-                    Object(_.a)("#dpc_dota")
-                  ),
-                  o.a.createElement(
-                    "div",
-                    { className: en.a.ProCircuit },
-                    Object(_.a)("#dpc_pro_circuit")
-                  )
-                ),
-                o.a.createElement(_e, {
-                  bottom: !0,
-                  startPct: 80,
-                  midPct: 90,
-                  endPct: 100,
-                  color: "#222226",
-                }),
-                o.a.createElement(_e, {
-                  left: !0,
-                  right: !0,
-                  startPct: 80,
-                  midPct: 90,
-                  endPct: 100,
-                  color: "#222226",
-                })
-              ),
-              o.a.createElement(yn, null),
-              n
-            ),
-            o.a.createElement(ge.a, null)
-          )
-        );
-      }),
-      Mn = function (e) {
-        var t = e.nTeamID,
-          a = e.className;
-        return o.a.createElement("div", {
-          className: Object(ce.a)(Ba.a.TeamLogo, a),
-          style: {
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            backgroundImage:
-              "url( " +
-              p.a.IMG_URL +
-              "teams/" +
-              (t || "team_unknown_web") +
-              ".png )",
-          },
-        });
-      };
-    function Sn(e, t) {
-      return Array.from(
-        Array.from(Array(t - e).keys()).map(function (t) {
-          return t + e;
-        })
-      );
-    }
-    var Tn = Object(s.a)(function () {
-        Object(c.i)();
-        var e = En();
-        return Za.Get().GetLeagueNode(e.nLeagueID, e.nNodeID)
-          ? o.a.createElement(
-              "div",
-              { className: Ba.a.DPCSeriesDetails },
-              o.a.createElement(Dn, null),
-              o.a.createElement(On, null)
-            )
-          : null;
-      }),
-      Dn = Object(s.a)(function () {
-        var e = En(),
-          t = Za.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
-          a =
-            (null == t ? void 0 : t.is_completed) &&
-            (null == t ? void 0 : t.team_1_wins) >
-              (null == t ? void 0 : t.team_2_wins),
-          n =
-            (null == t ? void 0 : t.is_completed) &&
-            (null == t ? void 0 : t.team_2_wins) >
-              (null == t ? void 0 : t.team_1_wins),
-          r = 0;
-        switch (null == t ? void 0 : t.node_type) {
-          case Ua.c.BEST_OF_ONE:
-            r = 1;
-            break;
-          case Ua.c.BEST_OF_TWO:
-          case Ua.c.BEST_OF_THREE:
-            r = 2;
-            break;
-          case Ua.c.BEST_OF_FIVE:
-            r = 3;
-        }
-        var i = Za.Get().GetLeagueTeamDivisionString(
-            e.eSeason,
-            null == t ? void 0 : t.team_id_1,
-            !1
-          ),
-          s =
-            (Za.Get().GetLeagueTeamDivision(
-              e.eSeason,
-              null == t ? void 0 : t.team_id_1
-            ),
-            (null == t ? void 0 : t.team_1_wins) +
-              (null == t ? void 0 : t.team_2_wins) +
-              1),
-          l = !(null == t ? void 0 : t.has_started),
-          c =
-            (null == t ? void 0 : t.has_started) &&
-            !(null == t ? void 0 : t.is_completed),
-          u = null == t ? void 0 : t.is_completed;
-        return o.a.createElement(
-          "div",
-          { className: Ba.a.DPCSeriesDetailsHeader },
-          o.a.createElement(kn, {
-            nTeamID: null == t ? void 0 : t.team_id_1,
-            bLeft: !0,
-            bWinner: a,
-            nWins: null == t ? void 0 : t.team_1_wins,
-            nPossibleWins: r,
-          }),
-          o.a.createElement(
-            "div",
-            { className: Ba.a.CenterSection },
-            c &&
-              o.a.createElement(
-                "div",
-                { className: Ba.a.Game },
-                Object(_.a)("#dpc_game_number", s)
-              ),
-            o.a.createElement(
-              "div",
-              { className: Ba.a.Season },
-              Object(_.a)("#dpc_season_" + Object(Ha.k)(e.eSeason))
-            ),
-            (null == i ? void 0 : i.length) > 0 &&
-              o.a.createElement(
-                "div",
-                { className: Ba.a.Division },
-                Object(_.a)(i)
-              ),
-            l &&
-              o.a.createElement(Wa.a, {
-                className: Ba.a.Timestamp,
-                date: 1e3 * (null == t ? void 0 : t.scheduled_time),
-                format: "MMM DD LT",
-              }),
-            u &&
-              o.a.createElement(Wa.a, {
-                className: Ba.a.Timestamp,
-                date: 1e3 * (null == t ? void 0 : t.actual_time),
-                format: "MMM DD LT",
-              }),
-            c &&
-              o.a.createElement(
-                "div",
-                { className: Object(ce.a)(Ba.a.LiveBanner) },
-                Object(_.a)("#dpc_live"),
-                o.a.createElement("div", { className: Ba.a.Dot })
-              )
-          ),
-          o.a.createElement(kn, {
-            nTeamID: null == t ? void 0 : t.team_id_2,
-            bLeft: !1,
-            bWinner: n,
-            nWins: null == t ? void 0 : t.team_2_wins,
-            nPossibleWins: r,
-          })
-        );
-      }),
-      kn = Object(s.a)(function (e) {
-        var t = e.nTeamID,
-          a = e.bLeft,
-          n = e.bWinner,
-          r = e.nWins,
-          i = e.nPossibleWins,
-          s = Object(c.i)(),
-          d = En(),
-          m = Za.Get().GetTeamNames(t),
-          h = Za.Get().FindLeagueTeamStanding(d.eSeason, t),
-          f = h ? h.nWins + " - " + h.nLosses : "";
-        return o.a.createElement(
-          "div",
-          {
-            className: Object(ce.a)(
-              Ba.a.DPCSeriesDetailsHeaderTeam,
-              a && Ba.a.Left,
-              !a && Ba.a.Right,
-              n && Ba.a.Winner
-            ),
-          },
-          o.a.createElement(
-            "div",
-            { className: Ba.a.TopSection },
-            o.a.createElement(
-              "div",
-              { className: Ba.a.Labels },
-              o.a.createElement(
-                "div",
-                { className: Ba.a.TeamName },
-                null == m ? void 0 : m.name
-              ),
-              o.a.createElement("div", { className: Ba.a.Record }, f)
-            ),
-            o.a.createElement("div", {
-              className: Ba.a.TeamLogo,
-              style: {
-                backgroundImage:
-                  "url( " +
-                  p.a.IMG_URL +
-                  "teams/square_medium/" +
-                  (0 != t ? t : "team_unknown_web") +
-                  ".png )",
-              },
-            }),
-            o.a.createElement(
-              "div",
-              { className: Ba.a.Pips },
-              o.a.createElement("div", {
-                className: Object(ce.a)(
-                  Ba.a.Pip,
-                  r > 0 && Ba.a.Filled,
-                  i > 0 && Ba.a.Visible
-                ),
-              }),
-              o.a.createElement("div", {
-                className: Object(ce.a)(
-                  Ba.a.Pip,
-                  r > 1 && Ba.a.Filled,
-                  i > 1 && Ba.a.Visible
-                ),
-              }),
-              o.a.createElement("div", {
-                className: Object(ce.a)(
-                  Ba.a.Pip,
-                  r > 2 && Ba.a.Filled,
-                  i > 2 && Ba.a.Visible
-                ),
-              })
-            )
-          ),
-          o.a.createElement(
-            l.b,
-            { to: u.a.dpc_teams(s.strSeason), className: Ba.a.TeamLinkSection },
-            o.a.createElement(
-              "div",
-              { className: Ba.a.TeamLink },
-              Object(_.a)("#dpc_team_profile")
-            )
-          )
-        );
-      }),
-      On = Object(s.a)(function () {
-        var e = En(),
-          t = Za.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
-          a = 0;
-        if (Za.Get().GetSpoilerBlockEnabled())
-          switch (null == t ? void 0 : t.node_type) {
-            case Ua.c.BEST_OF_ONE:
-              a = 1;
-              break;
-            case Ua.c.BEST_OF_TWO:
-              a = 2;
-              break;
-            case Ua.c.BEST_OF_THREE:
-              a = 3;
-              break;
-            case Ua.c.BEST_OF_FIVE:
-              a = 5;
-          }
-        else
-          a =
-            (null == t ? void 0 : t.team_1_wins) +
-            (null == t ? void 0 : t.team_2_wins);
-        return o.a.createElement(
-          "div",
-          { className: Object(ce.a)(Ba.a.DPCSeriesDetailsBody) },
-          o.a.createElement(
-            "div",
-            { className: Ba.a.SeriesDetailsUpper },
-            o.a.createElement(jn, null),
-            o.a.createElement(In, null),
-            o.a.createElement(Cn, null),
-            o.a.createElement(Rn, null),
-            o.a.createElement(Pn, null)
-          ),
-          o.a.createElement(
-            "div",
-            {
-              className: Object(ce.a)(
-                Ba.a.GameSelectorList,
-                (null == t ? void 0 : t.is_completed) && Ba.a.Visible
-              ),
-            },
-            Sn(1, a + 1).map(function (e) {
-              return o.a.createElement(Nn, { key: e, nGame: e });
-            })
-          )
-        );
-      }),
-      jn = Object(s.a)(function () {
-        var e = En(),
-          t = Za.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
-          a =
-            e.eSeriesDisplay == Ha.g.OVERVIEW &&
-            (null == t ? void 0 : t.is_completed),
-          n = t && t.team_1_wins == t.team_2_wins,
-          r = n ? "#dpc_draw" : "#dpc_victory",
-          i =
-            (null == t ? void 0 : t.team_1_wins) >
-            (null == t ? void 0 : t.team_2_wins)
-              ? null == t
-                ? void 0
-                : t.team_id_1
-              : null == t
-              ? void 0
-              : t.team_id_2,
-          s = Math.max(
-            null == t ? void 0 : t.team_1_wins,
-            null == t ? void 0 : t.team_2_wins
-          ),
-          l = Math.min(
-            null == t ? void 0 : t.team_1_wins,
-            null == t ? void 0 : t.team_2_wins
-          ),
-          c = Za.Get().GetTeamInfo(null == t ? void 0 : t.team_id_1),
-          u = Za.Get().GetTeamInfo(null == t ? void 0 : t.team_id_2),
-          d =
-            c && t && (n || i == t.team_id_1)
-              ? c.color_primary + "44"
-              : "#131313",
-          m =
-            u && t && (n || i == t.team_id_2)
-              ? u.color_primary + "44"
-              : "#131313",
-          p = Za.Get().GetTeamNames(i),
-          h = n ? "" : null == p ? void 0 : p.name,
-          f = [];
-        null == c ||
-          c.registered_member_account_ids.forEach(function (e) {
-            var t = c.members.find(function (t) {
-              return t.account_id == e;
-            });
-            t &&
-              f.push({
-                nAccountID: t.account_id,
-                strProName: t.pro_name,
-                nHeroID: void 0,
-                nLevel: void 0,
-                nKills: void 0,
-                nDeaths: void 0,
-                nAssists: void 0,
-              });
-          });
-        var g = [];
-        return (
-          null == u ||
-            u.registered_member_account_ids.forEach(function (e) {
-              var t = u.members.find(function (t) {
-                return t.account_id == e;
-              });
-              t &&
-                g.push({
-                  nAccountID: t.account_id,
-                  strProName: t.pro_name,
-                  nHeroID: void 0,
-                  nLevel: void 0,
-                  nKills: void 0,
-                  nDeaths: void 0,
-                  nAssists: void 0,
-                });
-            }),
-          o.a.createElement(
-            "div",
-            {
-              className: Object(ce.a)(
-                Ba.a.DPCSeriesDetailsOverview,
-                a && Ba.a.Visible
-              ),
-              style: {
-                background: "linear-gradient( 120deg, " + d + ", " + m + " )",
-              },
-            },
-            o.a.createElement(
-              "div",
-              { className: Ba.a.PlayerList },
-              Sn(0, 5).map(function (e) {
-                return e < f.length
-                  ? o.a.createElement(xn, {
-                      bLeft: !1,
-                      strName: f[e].strProName,
-                      nAccountID: f[e].nAccountID,
-                    })
-                  : e < f.length - 1
-                  ? o.a.createElement("div", {
-                      className: Ba.a.MatchSectionDivider,
-                    })
-                  : null;
-              })
-            ),
-            o.a.createElement(
-              "div",
-              { className: Ba.a.CenterContainer },
-              o.a.createElement(
-                "div",
-                { className: Ba.a.Results },
-                Object(_.a)(r)
-              ),
-              o.a.createElement(
-                "div",
-                { className: Object(ce.a)(Ba.a.TeamsDraw, n && Ba.a.Visible) },
-                o.a.createElement(Mn, {
-                  nTeamID: null == t ? void 0 : t.team_id_1,
-                }),
-                o.a.createElement(Mn, {
-                  nTeamID: null == t ? void 0 : t.team_id_2,
-                })
-              ),
-              o.a.createElement(
-                "div",
-                {
-                  className: Object(ce.a)(Ba.a.TeamWinner, !n && Ba.a.Visible),
-                },
-                o.a.createElement(Mn, { nTeamID: i })
-              ),
-              o.a.createElement("div", { className: Ba.a.WinningTeamName }, h),
-              !n &&
-                o.a.createElement(
-                  "div",
-                  { className: Ba.a.WinningRecord },
-                  Object(_.a)("#dpc_wins_score", s, l)
-                )
-            ),
-            o.a.createElement(
-              "div",
-              { className: Ba.a.PlayerList },
-              Sn(0, 5).map(function (e) {
-                return e < g.length
-                  ? o.a.createElement(xn, {
-                      bLeft: !0,
-                      strName: g[e].strProName,
-                      nAccountID: g[e].nAccountID,
-                    })
-                  : e < g.length - 1
-                  ? o.a.createElement("div", {
-                      className: Ba.a.MatchSectionDivider,
-                    })
-                  : null;
-              })
-            )
-          )
-        );
-      }),
-      In = Object(s.a)(function () {
-        var e = En(),
-          t = Za.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
-          a = Za.Get().GetTeamInfo(null == t ? void 0 : t.team_id_1),
-          n = Za.Get().GetTeamInfo(null == t ? void 0 : t.team_id_2),
-          r =
-            e.eSeriesDisplay == Ha.g.OVERVIEW &&
-            !(null == t ? void 0 : t.is_completed) &&
-            !(null == t ? void 0 : t.has_started),
-          i = [];
-        null == a ||
-          a.registered_member_account_ids.forEach(function (e) {
-            var t = a.members.find(function (t) {
-              return t.account_id == e;
-            });
-            t &&
-              i.push({
-                nAccountID: t.account_id,
-                strProName: t.pro_name,
-                nHeroID: void 0,
-                nLevel: void 0,
-                nKills: void 0,
-                nDeaths: void 0,
-                nAssists: void 0,
-              });
-          });
-        var s = [];
-        return (
-          null == n ||
-            n.registered_member_account_ids.forEach(function (e) {
-              var t = n.members.find(function (t) {
-                return t.account_id == e;
-              });
-              t &&
-                s.push({
-                  nAccountID: t.account_id,
-                  strProName: t.pro_name,
-                  nHeroID: void 0,
-                  nLevel: void 0,
-                  nKills: void 0,
-                  nDeaths: void 0,
-                  nAssists: void 0,
-                });
-            }),
-          o.a.createElement(
-            "div",
-            {
-              className: Object(ce.a)(
-                Ba.a.DPCSeriesUpcoming,
-                r && Ba.a.Visible
-              ),
-            },
-            o.a.createElement(
-              "div",
-              { className: Ba.a.PlayerList },
-              Sn(0, 5).map(function (e) {
-                return e < i.length
-                  ? o.a.createElement(xn, {
-                      bLeft: !1,
-                      strName: i[e].strProName,
-                      nAccountID: i[e].nAccountID,
-                    })
-                  : e < i.length - 1
-                  ? o.a.createElement("div", {
-                      className: Ba.a.MatchSectionDivider,
-                    })
-                  : null;
-              })
-            ),
-            o.a.createElement(
-              "div",
-              { className: Ba.a.PlayerList },
-              Sn(0, 5).map(function (e) {
-                return e < s.length
-                  ? o.a.createElement(xn, {
-                      bLeft: !0,
-                      strName: s[e].strProName,
-                      nAccountID: s[e].nAccountID,
-                    })
-                  : e < s.length - 1
-                  ? o.a.createElement("div", {
-                      className: Ba.a.MatchSectionDivider,
-                    })
-                  : null;
-              })
-            )
-          )
-        );
-      }),
-      Nn = Object(s.a)(function (e) {
-        var t = e.nGame,
-          a = Object(c.i)(),
-          n = En(),
-          r = Za.Get().GetLeagueNode(n.nLeagueID, n.nNodeID),
-          i = t - 1,
-          s =
-            (null == r ? void 0 : r.matches.length) > i ? r.matches[i] : void 0,
-          d = s ? Za.Get().GetMatchData(n.nLeagueID, s.match_id) : void 0,
-          m = Za.Get().GetTeamNames(null == s ? void 0 : s.winning_team_id),
-          p = d
-            ? U.a
-                .utc(U.a.duration(d.duration, "seconds").as("milliseconds"))
-                .format("mm:ss")
-            : "",
-          h = (null == r ? void 0 : r.vods.length) > 0;
-        return o.a.createElement(
-          "div",
-          { className: Ba.a.GameSelector },
-          o.a.createElement(
-            "div",
-            { className: Ba.a.TopRow },
-            o.a.createElement(Mn, {
-              nTeamID: null == s ? void 0 : s.winning_team_id,
-            }),
-            o.a.createElement(
-              "div",
-              { className: Ba.a.GameNumber },
-              Object(_.a)("#dpc_game_number", t)
-            ),
-            o.a.createElement("div", { className: Ba.a.Duration }, p)
-          ),
-          o.a.createElement(
-            "div",
-            { className: Ba.a.WinningTeam },
-            Object(_.a)("#dpc_team_win", null == m ? void 0 : m.name)
-          ),
-          o.a.createElement(
-            "div",
-            { className: Ba.a.GameButtons },
-            o.a.createElement(
-              "div",
-              {
-                className: Object(ce.a)(
-                  Ba.a.GameButton,
-                  Ba.a.ButtonVOD,
-                  h && Ba.a.Enabled
-                ),
-              },
-              Object(_.a)(h ? "#dpc_watch_vod" : "#dpc_no_vod")
-            ),
-            o.a.createElement(
-              l.b,
-              {
-                to: u.a.dpc_home(
-                  a.strSeason,
-                  a.strLeagueID,
-                  a.strNodeID,
-                  Object(Ha.m)(t, Ha.g.DETAILS)
-                ),
-                className: Object(ce.a)(
-                  Ba.a.GameButton,
-                  Ba.a.ButtonDetails,
-                  Ba.a.Enabled
-                ),
-              },
-              Object(_.a)("#doc_game_details")
-            )
-          )
-        );
-      }),
-      Cn = Object(s.a)(function () {
-        var e = En(),
-          t = Za.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
-          a =
-            e.eSeriesDisplay == Ha.g.DETAILS &&
-            (null == t ? void 0 : t.is_completed),
-          n = Object(i.useState)(0),
-          r = n[0],
-          s = n[1],
-          l = Object(i.useState)(0),
-          c = l[0],
-          u = l[1],
-          d = 0 != r ? r : c;
-        return o.a.createElement(
-          "div",
-          {
-            className: Object(ce.a)(
-              Ba.a.DPCSeriesDetailsGameDetails,
-              a && Ba.a.Visible
-            ),
-          },
-          o.a.createElement("div", { className: Ba.a.Header }),
-          o.a.createElement(
-            "div",
-            { className: Ba.a.Body },
-            o.a.createElement(Yn, {
-              nTeamID: null == t ? void 0 : t.team_id_1,
-              bLeft: !0,
-              nHoveredAccountID: c,
-              setHoveredAccountID: u,
-              nSelectedAccountID: r,
-              setSelectedAccountID: s,
-            }),
-            o.a.createElement(Yn, {
-              nTeamID: null == t ? void 0 : t.team_id_2,
-              bLeft: !1,
-              nHoveredAccountID: c,
-              setHoveredAccountID: u,
-              nSelectedAccountID: r,
-              setSelectedAccountID: s,
-            }),
-            o.a.createElement(An, { bLeft: !0, nAccountID: d }),
-            o.a.createElement(An, { bLeft: !1, nAccountID: d })
-          )
-        );
-      }),
-      An = Object(s.a)(function (e) {
-        var t,
-          a,
-          n = e.bLeft,
-          r = e.nAccountID,
-          s = En(),
-          l = Object(i.useRef)(),
-          c = na.a.Get().getItemList(),
-          u = Za.Get().GetLeagueNode(s.nLeagueID, s.nNodeID),
-          d =
-            u && (null == u ? void 0 : u.matches.length) > 0
-              ? Za.Get().GetMatchData(
-                  s.nLeagueID,
-                  null ===
-                    (t = null == u ? void 0 : u.matches[s.nSeriesGame - 1]) ||
-                    void 0 === t
-                    ? void 0
-                    : t.match_id
-                )
-              : void 0,
-          m =
-            (null == u ? void 0 : u.team_id_1) ==
-            (null == d ? void 0 : d.tourney.radiant_team_id),
-          _ =
-            null == d
-              ? void 0
-              : d.players.find(function (e) {
-                  return e.account_id == r;
-                }),
-          h = (null == _ ? void 0 : _.player_slot) < 128,
-          f = 0 != r && n == (h ? !m : m),
-          g = h
-            ? null == d
-              ? void 0
-              : d.tourney.radiant_team_id
-            : null == d
-            ? void 0
-            : d.tourney.dire_team_id,
-          v = Za.Get().GetTeamNames(g),
-          y = na.a.Get().getHeroList(),
-          b =
-            null == y
-              ? void 0
-              : y.heroes.find(function (e) {
-                  return e.id == (null == _ ? void 0 : _.hero_id);
-                }),
-          E =
-            null === (a = null == b ? void 0 : b.name) || void 0 === a
-              ? void 0
-              : a.replace("npc_dota_hero_", "");
-        return (
-          Object(i.useEffect)(
-            function () {
-              var e;
-              null === (e = l.current) || void 0 === e || e.load();
-            },
-            [E]
-          ),
-          o.a.createElement(
-            "div",
-            {
-              className: Object(ce.a)(
-                Ba.a.MatchSectionDetailsOverlay,
-                f && Ba.a.Visible,
-                n && Ba.a.Left,
-                !n && Ba.a.Right
-              ),
-            },
-            o.a.createElement(
-              "div",
-              { className: Ba.a.TopSection },
-              E &&
-                o.a.createElement(
-                  "video",
-                  {
-                    className: Ba.a.HeroPortraitContainer,
-                    ref: l,
-                    autoPlay: !0,
-                    preload: "auto",
-                    muted: !0,
-                    loop: !0,
-                    playsInline: !0,
-                  },
-                  o.a.createElement("source", {
-                    type: "video/webm",
-                    src: p.a.VIDEO_URL + "heroes/renders/" + E + ".webm",
-                  }),
-                  o.a.createElement("img", {
-                    src: p.a.VIDEO_URL + "heroes/renders/" + E + ".png",
-                  })
-                ),
-              o.a.createElement(
-                "div",
-                { className: Ba.a.Player },
-                o.a.createElement(
-                  "div",
-                  { className: Ba.a.PlayerName },
-                  null == _ ? void 0 : _.pro_name
-                ),
-                o.a.createElement(
-                  "div",
-                  { className: Ba.a.TeamName },
-                  null == v ? void 0 : v.name
-                ),
-                o.a.createElement("div", {
-                  className: Ba.a.PlayerImage,
-                  style: {
-                    backgroundImage:
-                      "url( " +
-                      p.a.CDN_URL +
-                      "apps/dota2/players/" +
-                      r +
-                      ".png )",
-                  },
-                }),
-                o.a.createElement(Mn, { nTeamID: g })
-              )
-            ),
-            o.a.createElement(
-              "div",
-              { className: Ba.a.ItemSection },
-              null == _
-                ? void 0
-                : _.items.map(function (e, t) {
-                    var a =
-                      null == c
-                        ? void 0
-                        : c.itemabilities.find(function (t) {
-                            return t.id == e;
-                          });
-                    return a
-                      ? o.a.createElement("div", {
-                          key: r + "_" + t,
-                          className: Ba.a.ItemIcon,
-                          style: {
-                            backgroundImage:
-                              "url( " +
-                              p.a.IMG_URL +
-                              "items/" +
-                              (null == a
-                                ? void 0
-                                : a.name.replace("item_", "")) +
-                              ".png )",
-                          },
-                        })
-                      : null;
-                  })
-            ),
-            o.a.createElement("div", { className: Ba.a.PlaystyleSection })
-          )
-        );
-      }),
-      Yn = Object(s.a)(function (e) {
-        var t,
-          a = e.nTeamID,
-          n = e.bLeft,
-          r = e.nSelectedAccountID,
-          i = e.setSelectedAccountID,
-          s = e.nHoveredAccountID,
-          l = e.setHoveredAccountID,
-          c = En(),
-          u = Za.Get().GetLeagueNode(c.nLeagueID, c.nNodeID),
-          d =
-            u && (null == u ? void 0 : u.matches.length) > 0
-              ? Za.Get().GetMatchData(
-                  c.nLeagueID,
-                  null ===
-                    (t = null == u ? void 0 : u.matches[c.nSeriesGame - 1]) ||
-                    void 0 === t
-                    ? void 0
-                    : t.match_id
-                )
-              : void 0,
-          m = Za.Get().GetTeamInfo(a),
-          p = (null == d ? void 0 : d.tourney.radiant_team_id) == a,
-          h =
-            (p &&
-              (null == d ? void 0 : d.match_outcome) == Ua.f.RADIANT_VICTORY) ||
-            (!p && (null == d ? void 0 : d.match_outcome) == Ua.f.DIRE_VICTORY),
-          f = d ? (p ? "#radiant" : "#dire") : "",
-          g = [];
-        return (
-          d
-            ? d.players
-                .filter(function (e) {
-                  return (
-                    (e.player_slot < 128 && p) || (e.player_slot >= 128 && !p)
-                  );
-                })
-                .map(function (e) {
-                  g.push({
-                    nAccountID: e.account_id,
-                    strProName: e.pro_name,
-                    nHeroID: e.hero_id,
-                    nLevel: e.level,
-                    nKills: e.kills,
-                    nDeaths: e.deaths,
-                    nAssists: e.assists,
-                  });
-                })
-            : m &&
-              m.registered_member_account_ids.forEach(function (e) {
-                var t = m.members.find(function (t) {
-                  return t.account_id == e;
-                });
-                t &&
-                  g.push({
-                    nAccountID: t.account_id,
-                    strProName: t.pro_name,
-                    nHeroID: void 0,
-                    nLevel: void 0,
-                    nKills: void 0,
-                    nDeaths: void 0,
-                    nAssists: void 0,
-                  });
-              }),
-          o.a.createElement(
-            "div",
-            {
-              className: Object(ce.a)(
-                Ba.a.MatchSectionTeam,
-                n && Ba.a.Left,
-                !n && Ba.a.Right
-              ),
-            },
-            o.a.createElement(
-              "div",
-              { className: Object(ce.a)(Ba.a.TeamHeading, h && Ba.a.Winner) },
-              o.a.createElement(
-                "div",
-                { className: Ba.a.Team },
-                Object(_.a)(f)
-              ),
-              o.a.createElement(
-                "div",
-                { className: Ba.a.Score },
-                p
-                  ? null == d
-                    ? void 0
-                    : d.radiant_score
-                  : null == d
-                  ? void 0
-                  : d.dire_score
-              )
-            ),
-            5 == (null == g ? void 0 : g.length) &&
-              o.a.createElement(
-                "div",
-                { className: Ba.a.PlayerList },
-                o.a.createElement(xn, {
-                  nHoveredAccountID: s,
-                  setHoveredAccountID: l,
-                  nSelectedAccountID: r,
-                  setSelectedAccountID: i,
-                  bLeft: n,
-                  strName: g[0].strProName,
-                  nAccountID: g[0].nAccountID,
-                  nHeroID: g[0].nHeroID,
-                  nLevel: g[0].nLevel,
-                  nKills: g[0].nKills,
-                  nDeaths: g[0].nDeaths,
-                  nAssists: g[0].nAssists,
-                }),
-                o.a.createElement("div", {
-                  className: Ba.a.MatchSectionDivider,
-                }),
-                o.a.createElement(xn, {
-                  nHoveredAccountID: s,
-                  setHoveredAccountID: l,
-                  nSelectedAccountID: r,
-                  setSelectedAccountID: i,
-                  bLeft: n,
-                  strName: g[1].strProName,
-                  nAccountID: g[1].nAccountID,
-                  nHeroID: g[1].nHeroID,
-                  nLevel: g[1].nLevel,
-                  nKills: g[1].nKills,
-                  nDeaths: g[1].nDeaths,
-                  nAssists: g[1].nAssists,
-                }),
-                o.a.createElement("div", {
-                  className: Ba.a.MatchSectionDivider,
-                }),
-                o.a.createElement(xn, {
-                  nHoveredAccountID: s,
-                  setHoveredAccountID: l,
-                  nSelectedAccountID: r,
-                  setSelectedAccountID: i,
-                  bLeft: n,
-                  strName: g[2].strProName,
-                  nAccountID: g[2].nAccountID,
-                  nHeroID: g[2].nHeroID,
-                  nLevel: g[2].nLevel,
-                  nKills: g[2].nKills,
-                  nDeaths: g[2].nDeaths,
-                  nAssists: g[2].nAssists,
-                }),
-                o.a.createElement("div", {
-                  className: Ba.a.MatchSectionDivider,
-                }),
-                o.a.createElement(xn, {
-                  nHoveredAccountID: s,
-                  setHoveredAccountID: l,
-                  nSelectedAccountID: r,
-                  setSelectedAccountID: i,
-                  bLeft: n,
-                  strName: g[3].strProName,
-                  nAccountID: g[3].nAccountID,
-                  nHeroID: g[3].nHeroID,
-                  nLevel: g[3].nLevel,
-                  nKills: g[3].nKills,
-                  nDeaths: g[3].nDeaths,
-                  nAssists: g[3].nAssists,
-                }),
-                o.a.createElement("div", {
-                  className: Ba.a.MatchSectionDivider,
-                }),
-                o.a.createElement(xn, {
-                  nHoveredAccountID: s,
-                  setHoveredAccountID: l,
-                  nSelectedAccountID: r,
-                  setSelectedAccountID: i,
-                  bLeft: n,
-                  strName: g[4].strProName,
-                  nAccountID: g[4].nAccountID,
-                  nHeroID: g[4].nHeroID,
-                  nLevel: g[4].nLevel,
-                  nKills: g[4].nKills,
-                  nDeaths: g[4].nDeaths,
-                  nAssists: g[4].nAssists,
-                })
-              )
-          )
-        );
-      }),
-      xn = Object(s.a)(function (e) {
-        var t,
-          a = e.bLeft,
-          n = e.nHoveredAccountID,
-          r = e.setHoveredAccountID,
-          i = e.nSelectedAccountID,
-          s = e.setSelectedAccountID,
-          l = e.strName,
-          c = e.nAccountID,
-          u = e.nHeroID,
-          d = e.nLevel,
-          m = e.nKills,
-          h = e.nDeaths,
-          f = e.nAssists,
-          g = na.a.Get().getHeroList(),
-          v =
-            null == g
-              ? void 0
-              : g.heroes.find(function (e) {
-                  return e.id == u;
-                }),
-          y =
-            null === (t = null == v ? void 0 : v.name) || void 0 === t
-              ? void 0
-              : t.replace("npc_dota_hero_", ""),
-          b = null == v ? void 0 : v.name_loc,
-          E = u ? m + " / " + h + " / " + f : "",
-          L = u && 0 != u;
-        console.log(L);
-        var w = u ? Object(_.a)("#dpc_hero_level", d) : void 0,
-          M = i == c || (0 == i && n == c);
-        return o.a.createElement(
-          "div",
-          {
-            className: Object(ce.a)(
-              Ba.a.MatchSectionPlayer,
-              a && Ba.a.Left,
-              !a && Ba.a.Right,
-              M && Ba.a.Selected
-            ),
-            onClick: function () {
-              return s(i == c ? 0 : c);
-            },
-            onMouseEnter: function () {
-              r && r(c);
-            },
-            onMouseLeave: function () {
-              r && r(0);
-            },
-          },
-          o.a.createElement(
-            "div",
-            {
-              className: Object(ce.a)(Ba.a.HeroAndLevel, !u && Ba.a.Collapsed),
-            },
-            o.a.createElement("div", { className: Ba.a.HeroName }, b),
-            o.a.createElement("div", { className: Ba.a.Level }, w)
-          ),
-          o.a.createElement(
-            "div",
-            {
-              className: Object(ce.a)(
-                Ba.a.HeroPlayer,
-                !L && Ba.a.AlwaysShowPlayer
-              ),
-            },
-            u &&
-              o.a.createElement("div", {
-                className: Ba.a.HeroIcon,
-                style: {
-                  backgroundImage:
-                    "url( " +
-                    p.a.IMG_URL +
-                    "heroes/wide/" +
-                    (y || "unknown") +
-                    ".png )",
-                },
-              }),
-            o.a.createElement("div", {
-              className: Ba.a.PlayerImage,
-              style: {
-                backgroundImage:
-                  "url( " + p.a.CDN_URL + "apps/dota2/players/" + c + ".png )",
-              },
-            })
-          ),
-          o.a.createElement(
-            "div",
-            { className: Ba.a.NameAndStats },
-            o.a.createElement("div", { className: Ba.a.PlayerName }, l),
-            u && o.a.createElement("div", { className: Ba.a.Stats }, E)
-          )
-        );
-      }),
-      Rn = Object(s.a)(function () {
-        return o.a.createElement("div", {
-          className: Object(ce.a)(Ba.a.DPCSeriesDetailsVOD),
-        });
-      }),
-      Pn = Object(s.a)(function () {
-        var e = En(),
-          t = Za.Get().GetLeagueData(e.nLeagueID),
-          a = Za.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
-          n =
-            e.eSeriesDisplay == Ha.g.OVERVIEW &&
-            !(null == a ? void 0 : a.is_completed) &&
-            (null == a ? void 0 : a.has_started),
-          r = null == a ? void 0 : a.stream_ids,
-          s =
-            null == t
-              ? void 0
-              : t.streams.filter(function (e) {
-                  return null == r ? void 0 : r.includes(e.stream_id);
-                }),
-          l = Za.Get().GetDefaultRegion(),
-          c = [];
-        switch (l) {
-          case Ua.d.LEAGUE_REGION_NA:
-          case Ua.d.LEAGUE_REGION_EUROPE:
-            c.push.apply(c, [0, 8, 6, 5, 11]);
-            break;
-          case Ua.d.LEAGUE_REGION_SA:
-            c.push.apply(c, [11, 5, 0, 8, 6]);
-            break;
-          case Ua.d.LEAGUE_REGION_CIS:
-            c.push.apply(c, [8, 0, 6, 5, 11]);
-            break;
-          case Ua.d.LEAGUE_REGION_CHINA:
-            c.push.apply(c, [6, 0, 8, 5, 11]);
-            break;
-          case Ua.d.LEAGUE_REGION_SEA:
-            c.push.apply(c, [0, 6, 8, 5, 11]);
-        }
-        var u,
-          d = Object(i.useState)(c[0]),
-          m = d[0],
-          _ = d[1],
-          h = Object(i.useState)(!1),
-          f = h[0],
-          v = h[1],
-          y =
-            null == s
-              ? void 0
-              : s.sort(function (e, t) {
-                  var a = c.indexOf(e.language) - c.indexOf(t.language);
-                  return a && 0 != a
-                    ? a
-                    : e.broadcast_provider == Ua.a.LEAGUE_BROADCAST_STEAM &&
-                      t.broadcast_provider != Ua.a.LEAGUE_BROADCAST_STEAM
-                    ? f
-                      ? 1
-                      : -1
-                    : t.broadcast_provider == Ua.a.LEAGUE_BROADCAST_STEAM &&
-                      e.broadcast_provider != Ua.a.LEAGUE_BROADCAST_STEAM
-                    ? 1
-                    : 0;
-                });
-        if ((null == y ? void 0 : y.length) > 0)
-          switch (y[0].broadcast_provider) {
-            case Ua.a.LEAGUE_BROADCAST_TWITCH:
-              u =
-                "https://player.twitch.tv/?channel=" +
-                y[0].stream_url.replace("https://www.twitch.tv/", "") +
-                "&parent=www.dota2.com";
-              break;
-            case Ua.a.LEAGUE_BROADCAST_STEAM:
-              u =
-                p.a.COMMUNITY_URL +
-                "broadcast/watchnew/" +
-                y[0].stream_url.replace(
-                  "https://steamcommunity.com/broadcast/watch/",
-                  ""
-                ) +
-                "?origin=https://www.dota2.com&enablechat=0&enablevideo=1&showasiframe=1";
-          }
-        for (
-          var b = [],
-            E = function (e) {
-              y.find(function (t) {
-                return t.language == e;
-              }) &&
-                b.push({ value: e, strLabel: "#Language_" + Object(g.a)(e) });
-            },
-            L = -1;
-          L < 30;
-          L++
-        )
-          E(L);
-        var w =
-            -1 !=
-            y
-              .filter(function (e) {
-                return e.language == m;
-              })
-              .findIndex(function (e) {
-                return e.broadcast_provider == Ua.a.LEAGUE_BROADCAST_TWITCH;
-              }),
-          M =
-            -1 !=
-            y
-              .filter(function (e) {
-                return e.language == m;
-              })
-              .findIndex(function (e) {
-                return e.broadcast_provider == Ua.a.LEAGUE_BROADCAST_STEAM;
-              });
-        return (
-          M && !w && f && v(!1),
-          !w || M || f || v(!0),
-          o.a.createElement(
-            "div",
-            { className: Object(ce.a)(Ba.a.DPCSeriesLive, n && Ba.a.Visible) },
-            o.a.createElement(
-              "div",
-              { className: Ba.a.VideoContainer },
-              o.a.createElement("iframe", {
-                src: u,
-                height: "100%",
-                width: "100%",
-                allowFullScreen: !0,
-                frameBorder: "0",
-              })
-            ),
-            o.a.createElement(
-              "div",
-              { className: Ba.a.OptionContainer },
-              o.a.createElement(Ja, {
-                options: b,
-                selectedOption: m,
-                setOption: _,
-              }),
-              w &&
-                o.a.createElement(
-                  "div",
-                  {
-                    className: Object(ce.a)(
-                      Ba.a.StreamingOption,
-                      f && Ba.a.Enabled
-                    ),
-                    onClick: function () {
-                      return v(!0);
-                    },
-                  },
-                  "Twitch"
-                ),
-              M &&
-                o.a.createElement(
-                  "div",
-                  {
-                    className: Object(ce.a)(
-                      Ba.a.StreamingOption,
-                      !f && Ba.a.Enabled
-                    ),
-                    onClick: function () {
-                      return v(!1);
-                    },
-                  },
-                  "Steam"
-                )
-            )
-          )
-        );
-      }),
-      Hn = a("Kcip"),
-      Gn = a.n(Hn),
-      Bn = Object(s.a)(function (e) {
-        var t = e.nTeamID,
-          a = En(),
-          n = Za.Get().FindLeagueTeamStanding(a.eSeason, t),
-          r = (null == n ? void 0 : n.nStanding) <= 3,
-          i = Za.Get().GetTeamNames(t),
-          s = n ? n.nWins + " - " + n.nLosses : "";
-        return o.a.createElement(
-          "div",
-          {
-            className: Object(ce.a)(
-              Gn.a.RegionStandingTeam,
-              r && Gn.a.TopThree
-            ),
-          },
-          o.a.createElement(
-            "div",
-            { className: Gn.a.Standing },
-            null == n ? void 0 : n.nStanding
-          ),
-          o.a.createElement(Mn, { className: Gn.a.TeamLogo, nTeamID: t }),
-          o.a.createElement(
-            "div",
-            { className: Gn.a.TeamName },
-            null == i ? void 0 : i.name
-          ),
-          o.a.createElement("div", { className: Gn.a.Record }, s)
-        );
-      }),
-      Un = Object(s.a)(function (e) {
-        var t = e.eRegion,
-          a = e.eDivision,
-          n = En(),
-          r = Za.Get()
-            .GetDPCLeagues(n.eSeason)
-            .find(function (e) {
-              return e.eRegion == t || e.eRegion == Ua.d.LEAGUE_REGION_UNSET;
-            }),
-          i = Za.Get().GetLeagueNodeGroup(
-            r.nLeagueIDs[a == Ua.b.DIVISION_I ? 0 : 1],
-            1
-          ),
-          s = new Set();
-        null == i ||
-          i.team_standings.forEach(function (e) {
-            return s.add(e.team_id);
-          });
-        var l = Array.from(s.values()).sort(function (e, t) {
-          var a, r;
-          return (
-            (null === (a = Za.Get().FindLeagueTeamStanding(n.eSeason, e)) ||
-            void 0 === a
-              ? void 0
-              : a.nStanding) -
-            (null === (r = Za.Get().FindLeagueTeamStanding(n.eSeason, t)) ||
-            void 0 === r
-              ? void 0
-              : r.nStanding)
-          );
-        });
-        return o.a.createElement(
-          "div",
-          { className: Gn.a.RegionStandingDivsion },
-          o.a.createElement(
-            "div",
-            { className: Gn.a.Header },
-            Object(_.a)(
-              a == Ua.b.DIVISION_I
-                ? "#dpc_division_filter_i"
-                : "#dpc_division_filter_ii"
-            )
-          ),
-          l.map(function (e, n) {
-            return o.a.createElement(Bn, {
-              key: a + "_" + t + "_" + e,
-              nTeamID: e,
-            });
-          })
-        );
-      }),
-      Fn = Object(s.a)(function (e) {
-        var t = e.eRegion;
-        return o.a.createElement(
-          "div",
-          { className: Gn.a.DPCRegionStandings },
-          o.a.createElement(Un, { eRegion: t, eDivision: Ua.b.DIVISION_I }),
-          o.a.createElement(Un, { eRegion: t, eDivision: Ua.b.DIVISION_II })
-        );
-      });
-    var Wn = Object(s.a)(function (e) {
-        for (
-          var t = e.bIncludeInProgress,
-            a = En(),
-            n = (Date.now(), void 0),
-            r = function (e) {
-              var a, r;
-              ((a = 0),
-              (r = 1),
-              Array.from(
-                Array.from(Array(r - a).keys()).map(function (e) {
-                  return e + a;
-                })
-              )).forEach(function (a) {
-                var r;
-                0 != e.nLeagueIDs[a] &&
-                  (null === (r = Za.Get()) || void 0 === r
-                    ? void 0
-                    : r.GetLeagueNodeIDs(e.nLeagueIDs[a])
-                  ).forEach(function (r) {
-                    var i = Za.Get().GetLeagueNode(e.nLeagueIDs[a], r);
-                    (null == i ? void 0 : i.is_completed) ||
-                      0 == (null == i ? void 0 : i.scheduled_time) ||
-                      (!t && (null == i ? void 0 : i.has_started)) ||
-                      ((!n ||
-                        (null == i ? void 0 : i.scheduled_time) <
-                          n.scheduled_time) &&
-                        (n = i));
-                  });
-              });
-            },
-            i = 0,
-            s = Za.Get().GetDPCLeagues(a.eSeason);
-          i < s.length;
-          i++
-        ) {
-          r(s[i]);
-        }
-        if (!n) return null;
-        var c = Za.Get().GetTeamNames(null == n ? void 0 : n.team_id_1),
-          d = Za.Get().GetTeamNames(null == n ? void 0 : n.team_id_2),
-          m = U()(1e3 * (null == n ? void 0 : n.scheduled_time))
-            .format("DD MMM LT")
-            .toString();
-        return o.a.createElement(
-          "div",
-          { className: Pa.a.NextBanner },
-          o.a.createElement(
-            "div",
-            { className: Pa.a.Background },
-            o.a.createElement(
-              "div",
-              { className: Pa.a.Teams },
-              o.a.createElement("div", {
-                className: Object(ce.a)(Pa.a.TeamLogo, n && Pa.a.Visible),
-                style: {
-                  backgroundSize: "cover",
-                  backgroundRepeat: "no-repeat",
-                  backgroundImage:
-                    "url( " +
-                    p.a.IMG_URL +
-                    "teams/" +
-                    (null == n ? void 0 : n.team_id_1) +
-                    ".png )",
-                },
-              }),
-              o.a.createElement("div", {
-                className: Object(ce.a)(Pa.a.TeamLogo, n && Pa.a.Visible),
-                style: {
-                  backgroundSize: "cover",
-                  backgroundRepeat: "no-repeat",
-                  backgroundImage:
-                    "url( " +
-                    p.a.IMG_URL +
-                    "teams/" +
-                    (null == n ? void 0 : n.team_id_2) +
-                    ".png )",
-                },
-              })
-            ),
-            o.a.createElement("div", { className: Pa.a.Gradient })
-          ),
-          o.a.createElement(
-            "div",
-            { className: Pa.a.LeftLabels },
-            o.a.createElement(
-              "div",
-              { className: Pa.a.ComingUp },
-              Object(_.a)("#dpc_coming_up")
-            ),
-            o.a.createElement(
-              "div",
-              { className: Object(ce.a)(Pa.a.Teams, n && Pa.a.Visible) },
-              Object(_.a)(
-                "#dpc_team_versus",
-                null == c ? void 0 : c.name,
-                null == d ? void 0 : d.name
-              )
-            ),
-            o.a.createElement(
-              "div",
-              { className: Object(ce.a)(Pa.a.WatchLive, n && Pa.a.Visible) },
-              Object(_.a)("#dpc_watch_live", m)
-            )
-          ),
-          o.a.createElement(
-            l.b,
-            { to: u.a.dpc_schedule(), className: Pa.a.ScheduleButton },
-            o.a.createElement(
-              "div",
-              { className: Pa.a.Label },
-              Object(_.a)("#dpc_view_schedule")
-            )
-          )
-        );
-      }),
-      zn = Object(s.a)(function () {
-        var e = Object(i.useState)(Za.Get().GetDefaultRegion()),
-          t = e[0],
-          a = e[1],
-          n = [
-            { value: Ua.d.LEAGUE_REGION_NA, strLabel: "#dpc_region_na" },
-            { value: Ua.d.LEAGUE_REGION_SA, strLabel: "#dpc_region_sa" },
-            { value: Ua.d.LEAGUE_REGION_EUROPE, strLabel: "#dpc_region_weu" },
-            { value: Ua.d.LEAGUE_REGION_CIS, strLabel: "#dpc_region_eeu" },
-            { value: Ua.d.LEAGUE_REGION_CHINA, strLabel: "#dpc_region_cn" },
-            { value: Ua.d.LEAGUE_REGION_SEA, strLabel: "#dpc_region_sea" },
-          ];
-        return o.a.createElement(
-          "div",
-          {
-            className: Pa.a.StandingsBlock,
-            style: {
-              backgroundImage:
-                "url( " + p.a.IMG_URL + "backgrounds/featured.jpg )",
-            },
-          },
-          o.a.createElement(
-            "div",
-            { className: Pa.a.Header },
-            o.a.createElement(
-              "div",
-              { className: Pa.a.Label },
-              Object(_.a)("#dpc_header_standings")
-            ),
-            o.a.createElement(Ja, {
-              options: n,
-              selectedOption: t,
-              setOption: a,
-            })
-          ),
-          o.a.createElement(Fn, { eRegion: t })
-        );
-      }),
-      Vn = Object(s.a)(function () {
-        var e = Object(c.i)();
-        if (
-          !(e.strSeason && e.strLeagueID && e.strNodeID && e.strSeriesDisplay)
-        )
-          return o.a.createElement(c.a, {
-            to: u.a.dpc_home(
-              e.strSeason || Object(Ha.c)(),
-              e.strLeagueID || "0",
-              e.strNodeID || "0",
-              e.strSeriesDisplay || Object(Ha.d)()
-            ),
-          });
-        var t = Object(Ha.l)(e.strSeriesDisplay),
-          a = {
-            eSeason: Object(Ha.j)(e.strSeason),
-            nLeagueID: parseInt(e.strLeagueID || "0"),
-            nNodeID: parseInt(e.strNodeID || "0"),
-            nSeriesGame: t.nGame,
-            eSeriesDisplay: t.eSeriesDisplay,
-          };
-        return o.a.createElement(
-          wn,
-          { matchContext: a, className: Pa.a.DPCHomePage },
-          o.a.createElement(Tn, null),
-          o.a.createElement(Wn, { bIncludeInProgress: !1 }),
-          o.a.createElement(zn, null)
-        );
-      }),
-      qn = a("iUDg"),
-      Jn = a.n(qn),
-      Kn = Object(s.a)(function () {
+      Ca = a("qn5s"),
+      Aa = a("iUDg"),
+      Ya = a.n(Aa),
+      xa = a("knzx"),
+      Ra = a("AAuy"),
+      Pa = a("sjx6"),
+      Ha = a("WPyR"),
+      Ga = a("KWBk"),
+      Ba = Object(s.a)(function () {
         for (
           var e,
             t = Object(c.g)(),
             a = Object(c.i)(),
-            n = Object(Ha.j)(a.strSeason),
-            r = Object(i.useState)(Object(Ha.h)(a.strRegion)),
+            n = Object(Pa.l)(a.strSeason),
+            r = Object(i.useState)(Object(Pa.j)(a.strRegion)),
             s = r[0],
             l = r[1],
-            d = Object(i.useState)(Object(Ha.e)(a.strDivision)),
+            d = Object(i.useState)(Object(Pa.g)(a.strDivision)),
             m = d[0],
             p = d[1],
             _ = new Set(),
             h = 0,
-            f = Za.Get().GetDPCLeagues(n);
+            f = Ha.a.Get().GetDPCLeagues(n);
           h < f.length;
           h++
         )
           for (var g = 0, v = f[h].nLeagueIDs; g < v.length; g++) {
             var y = v[g];
-            null === (e = Za.Get().GetLeagueDates(y)) ||
+            null === (e = Ha.a.Get().GetLeagueDates(y)) ||
               void 0 === e ||
               e.forEach(function (e) {
                 return _.add(e);
@@ -40222,35 +38482,35 @@ object-assign
         Object(i.useEffect)(
           function () {
             t.push(
-              u.a.dpc_standings(a.strSeason, Object(Ha.i)(s), Object(Ha.f)(m))
+              u.a.dpc_standings(a.strSeason, Object(Pa.k)(s), Object(Pa.h)(m))
             );
           },
           [s, m, t, a.strSeason]
         );
         var b = [
-            { value: Ua.b.DIVISION_I, strLabel: "#dpc_division_filter_i" },
-            { value: Ua.b.DIVISION_II, strLabel: "#dpc_division_filter_ii" },
+            { value: xa.b.DIVISION_I, strLabel: "#dpc_division_filter_i" },
+            { value: xa.b.DIVISION_II, strLabel: "#dpc_division_filter_ii" },
           ],
           E = [
-            { value: Ua.d.LEAGUE_REGION_NA, strLabel: "#dpc_region_na" },
-            { value: Ua.d.LEAGUE_REGION_SA, strLabel: "#dpc_region_sa" },
-            { value: Ua.d.LEAGUE_REGION_EUROPE, strLabel: "#dpc_region_weu" },
-            { value: Ua.d.LEAGUE_REGION_CIS, strLabel: "#dpc_region_eeu" },
-            { value: Ua.d.LEAGUE_REGION_CHINA, strLabel: "#dpc_region_cn" },
-            { value: Ua.d.LEAGUE_REGION_SEA, strLabel: "#dpc_region_sea" },
+            { value: xa.d.LEAGUE_REGION_NA, strLabel: "#dpc_region_na" },
+            { value: xa.d.LEAGUE_REGION_SA, strLabel: "#dpc_region_sa" },
+            { value: xa.d.LEAGUE_REGION_EUROPE, strLabel: "#dpc_region_weu" },
+            { value: xa.d.LEAGUE_REGION_CIS, strLabel: "#dpc_region_eeu" },
+            { value: xa.d.LEAGUE_REGION_CHINA, strLabel: "#dpc_region_cn" },
+            { value: xa.d.LEAGUE_REGION_SEA, strLabel: "#dpc_region_sea" },
           ];
         return o.a.createElement(
           "div",
-          { className: Jn.a.DPCStandingsOptions },
+          { className: Ya.a.DPCStandingsOptions },
           o.a.createElement(
             "div",
-            { className: Jn.a.StandingsOptionsContainer },
-            o.a.createElement(qa, {
+            { className: Ya.a.StandingsOptionsContainer },
+            o.a.createElement(Ra.a, {
               options: b,
               selectedOption: m,
               setOption: p,
             }),
-            o.a.createElement(Ja, {
+            o.a.createElement(Ra.b, {
               options: E,
               selectedOption: s,
               setOption: l,
@@ -40258,21 +38518,21 @@ object-assign
           )
         );
       }),
-      Qn = Object(s.a)(function (e) {
+      Ua = Object(s.a)(function (e) {
         var t = e.nTeamID,
           a = Object(c.i)(),
-          n = Object(Ha.j)(a.strSeason),
-          r = Za.Get().FindLeagueTeamStanding(n, t),
-          i = Za.Get().GetTeamNames(t),
+          n = Object(Pa.l)(a.strSeason),
+          r = Ha.a.Get().FindLeagueTeamStanding(n, t),
+          i = Ha.a.Get().GetTeamNames(t),
           s = r ? "" + r.nStanding : "",
           l = r ? "" + r.nWins : "",
           u = r ? "" + r.nLosses : "";
         return o.a.createElement(
           "div",
-          { className: Jn.a.DPCStandingsTeam },
-          o.a.createElement("div", { className: Jn.a.Rank }, s),
+          { className: Ya.a.DPCStandingsTeam },
+          o.a.createElement("div", { className: Ya.a.Rank }, s),
           o.a.createElement("div", {
-            className: Jn.a.TeamLogo,
+            className: Ya.a.TeamLogo,
             style: {
               backgroundImage:
                 "url( " +
@@ -40284,25 +38544,26 @@ object-assign
           }),
           o.a.createElement(
             "div",
-            { className: Jn.a.TeamName },
+            { className: Ya.a.TeamName },
             null == i ? void 0 : i.name
           ),
-          o.a.createElement("div", { className: Jn.a.Wins }, l),
-          o.a.createElement("div", { className: Jn.a.Losses }, u)
+          o.a.createElement("div", { className: Ya.a.Wins }, l),
+          o.a.createElement("div", { className: Ya.a.Losses }, u)
         );
       }),
-      Xn = Object(s.a)(function () {
+      Fa = Object(s.a)(function () {
         var e = Object(c.i)(),
-          t = Object(Ha.j)(e.strSeason),
-          a = Object(Ha.h)(e.strRegion),
-          n = Object(Ha.e)(e.strDivision),
-          r = Za.Get()
+          t = Object(Pa.l)(e.strSeason),
+          a = Object(Pa.j)(e.strRegion),
+          n = Object(Pa.g)(e.strDivision),
+          r = Ha.a
+            .Get()
             .GetDPCLeagues(t)
             .find(function (e) {
               return e.eRegion == a;
             }),
-          i = null == r ? void 0 : r.nLeagueIDs[n == Ua.b.DIVISION_I ? 0 : 1],
-          s = Za.Get().GetLeagueNodeGroup(i, 1),
+          i = null == r ? void 0 : r.nLeagueIDs[n == xa.b.DIVISION_I ? 0 : 1],
+          s = Ha.a.Get().GetLeagueNodeGroup(i, 1),
           l = new Set();
         null == s ||
           s.team_standings.forEach(function (e) {
@@ -40311,11 +38572,11 @@ object-assign
         var u = Array.from(l.values()).sort(function (e, a) {
           var n, r;
           return (
-            (null === (n = Za.Get().FindLeagueTeamStanding(t, e)) ||
+            (null === (n = Ha.a.Get().FindLeagueTeamStanding(t, e)) ||
             void 0 === n
               ? void 0
               : n.nStanding) -
-            (null === (r = Za.Get().FindLeagueTeamStanding(t, a)) ||
+            (null === (r = Ha.a.Get().FindLeagueTeamStanding(t, a)) ||
             void 0 === r
               ? void 0
               : r.nStanding)
@@ -40323,80 +38584,80 @@ object-assign
         });
         return o.a.createElement(
           "div",
-          { className: Jn.a.DPCStandings },
+          { className: Ya.a.DPCStandings },
           o.a.createElement(
             "div",
-            { className: Jn.a.Header },
+            { className: Ya.a.Header },
             o.a.createElement(
               "div",
-              { className: Jn.a.Rank },
+              { className: Ya.a.Rank },
               Object(_.a)("#dpc_rank")
             ),
             o.a.createElement(
               "div",
-              { className: Jn.a.Team },
+              { className: Ya.a.Team },
               Object(_.a)("#dpc_team")
             ),
             o.a.createElement(
               "div",
-              { className: Jn.a.Wins },
+              { className: Ya.a.Wins },
               Object(_.a)("#dpc_wins")
             ),
             o.a.createElement(
               "div",
-              { className: Jn.a.Losses },
+              { className: Ya.a.Losses },
               Object(_.a)("#dpc_losses")
             )
           ),
           o.a.createElement(
             "div",
-            { className: Jn.a.Entries },
+            { className: Ya.a.Entries },
             null == u
               ? void 0
               : u.map(function (e) {
-                  return o.a.createElement(Qn, { key: e, nTeamID: e });
+                  return o.a.createElement(Ua, { key: e, nTeamID: e });
                 })
           )
         );
       }),
-      Zn = Object(s.a)(function () {
+      Wa = Object(s.a)(function () {
         var e = Object(c.i)();
         if (!e.strSeason || !e.strRegion || !e.strDivision)
           return o.a.createElement(c.a, {
             to: u.a.dpc_standings(
-              e.strSeason || Object(Ha.c)(),
-              e.strRegion || Object(Ha.b)(),
-              e.strDivision || Object(Ha.a)()
+              e.strSeason || Object(Pa.e)(),
+              e.strRegion || Object(Pa.d)(),
+              e.strDivision || Object(Pa.a)()
             ),
           });
         var t = {
-          eSeason: Object(Ha.j)(e.strSeason),
+          eSeason: Object(Pa.l)(e.strSeason),
           nLeagueID: 0,
           nNodeID: 0,
           nSeriesGame: 0,
           eSeriesDisplay: 0,
         };
         return o.a.createElement(
-          wn,
-          { matchContext: t, className: Jn.a.DPCStandingsPage },
-          o.a.createElement(Kn, null),
-          o.a.createElement(Xn, null)
+          Ga.a,
+          { matchContext: t, className: Ya.a.DPCStandingsPage },
+          o.a.createElement(Ba, null),
+          o.a.createElement(Fa, null)
         );
       }),
-      $n = a("tjlA");
-    var er =
-        $n.Buffer.from &&
-        $n.Buffer.alloc &&
-        $n.Buffer.allocUnsafe &&
-        $n.Buffer.allocUnsafeSlow
-          ? $n.Buffer.from
-          : (e) => new $n.Buffer(e),
-      tr = function (e, t) {
+      za = a("tjlA");
+    var Va =
+        za.Buffer.from &&
+        za.Buffer.alloc &&
+        za.Buffer.allocUnsafe &&
+        za.Buffer.allocUnsafeSlow
+          ? za.Buffer.from
+          : (e) => new za.Buffer(e),
+      qa = function (e, t) {
         const a = (e, a) => t(e, a) >>> 0;
         return (a.signed = t), (a.unsigned = a), (a.model = e), a;
       };
-    tr("crc1", function (e, t) {
-      $n.Buffer.isBuffer(e) || (e = er(e));
+    qa("crc1", function (e, t) {
+      za.Buffer.isBuffer(e) || (e = Va(e));
       let a = ~~t,
         n = 0;
       for (let t = 0; t < e.length; t++) {
@@ -40404,7 +38665,7 @@ object-assign
       }
       return (a += n % 256), a % 256;
     });
-    let ar = [
+    let Ja = [
       0,
       7,
       14,
@@ -40662,17 +38923,17 @@ object-assign
       244,
       243,
     ];
-    "undefined" != typeof Int32Array && (ar = new Int32Array(ar));
-    tr("crc-8", function (e, t) {
-      $n.Buffer.isBuffer(e) || (e = er(e));
+    "undefined" != typeof Int32Array && (Ja = new Int32Array(Ja));
+    qa("crc-8", function (e, t) {
+      za.Buffer.isBuffer(e) || (e = Va(e));
       let a = ~~t;
       for (let t = 0; t < e.length; t++) {
         const n = e[t];
-        a = 255 & ar[255 & (a ^ n)];
+        a = 255 & Ja[255 & (a ^ n)];
       }
       return a;
     });
-    let nr = [
+    let Ka = [
       0,
       94,
       188,
@@ -40930,17 +39191,17 @@ object-assign
       107,
       53,
     ];
-    "undefined" != typeof Int32Array && (nr = new Int32Array(nr));
-    tr("dallas-1-wire", function (e, t) {
-      $n.Buffer.isBuffer(e) || (e = er(e));
+    "undefined" != typeof Int32Array && (Ka = new Int32Array(Ka));
+    qa("dallas-1-wire", function (e, t) {
+      za.Buffer.isBuffer(e) || (e = Va(e));
       let a = ~~t;
       for (let t = 0; t < e.length; t++) {
         const n = e[t];
-        a = 255 & nr[255 & (a ^ n)];
+        a = 255 & Ka[255 & (a ^ n)];
       }
       return a;
     });
-    let rr = [
+    let Qa = [
       0,
       49345,
       49537,
@@ -41198,17 +39459,17 @@ object-assign
       32897,
       16448,
     ];
-    "undefined" != typeof Int32Array && (rr = new Int32Array(rr));
-    tr("crc-16", function (e, t) {
-      $n.Buffer.isBuffer(e) || (e = er(e));
+    "undefined" != typeof Int32Array && (Qa = new Int32Array(Qa));
+    qa("crc-16", function (e, t) {
+      za.Buffer.isBuffer(e) || (e = Va(e));
       let a = ~~t;
       for (let t = 0; t < e.length; t++) {
         const n = e[t];
-        a = 65535 & (rr[255 & (a ^ n)] ^ (a >> 8));
+        a = 65535 & (Qa[255 & (a ^ n)] ^ (a >> 8));
       }
       return a;
     });
-    let ir = [
+    let Xa = [
       0,
       4129,
       8258,
@@ -41466,17 +39727,17 @@ object-assign
       3793,
       7920,
     ];
-    "undefined" != typeof Int32Array && (ir = new Int32Array(ir));
-    tr("ccitt", function (e, t) {
-      $n.Buffer.isBuffer(e) || (e = er(e));
+    "undefined" != typeof Int32Array && (Xa = new Int32Array(Xa));
+    qa("ccitt", function (e, t) {
+      za.Buffer.isBuffer(e) || (e = Va(e));
       let a = void 0 !== t ? ~~t : 65535;
       for (let t = 0; t < e.length; t++) {
         const n = e[t];
-        a = 65535 & (ir[255 & ((a >> 8) ^ n)] ^ (a << 8));
+        a = 65535 & (Xa[255 & ((a >> 8) ^ n)] ^ (a << 8));
       }
       return a;
     });
-    let or = [
+    let Za = [
       0,
       49345,
       49537,
@@ -41734,18 +39995,18 @@ object-assign
       32897,
       16448,
     ];
-    "undefined" != typeof Int32Array && (or = new Int32Array(or));
-    tr("crc-16-modbus", function (e, t) {
-      $n.Buffer.isBuffer(e) || (e = er(e));
+    "undefined" != typeof Int32Array && (Za = new Int32Array(Za));
+    qa("crc-16-modbus", function (e, t) {
+      za.Buffer.isBuffer(e) || (e = Va(e));
       let a = void 0 !== t ? ~~t : 65535;
       for (let t = 0; t < e.length; t++) {
         const n = e[t];
-        a = 65535 & (or[255 & (a ^ n)] ^ (a >> 8));
+        a = 65535 & (Za[255 & (a ^ n)] ^ (a >> 8));
       }
       return a;
     });
-    tr("xmodem", function (e, t) {
-      $n.Buffer.isBuffer(e) || (e = er(e));
+    qa("xmodem", function (e, t) {
+      za.Buffer.isBuffer(e) || (e = Va(e));
       let a = void 0 !== t ? ~~t : 0;
       for (let t = 0; t < e.length; t++) {
         let n = (a >>> 8) & 255;
@@ -41760,7 +40021,7 @@ object-assign
       }
       return a;
     });
-    let sr = [
+    let $a = [
       0,
       4489,
       8978,
@@ -42018,17 +40279,17 @@ object-assign
       7921,
       3960,
     ];
-    "undefined" != typeof Int32Array && (sr = new Int32Array(sr));
-    tr("kermit", function (e, t) {
-      $n.Buffer.isBuffer(e) || (e = er(e));
+    "undefined" != typeof Int32Array && ($a = new Int32Array($a));
+    qa("kermit", function (e, t) {
+      za.Buffer.isBuffer(e) || (e = Va(e));
       let a = void 0 !== t ? ~~t : 0;
       for (let t = 0; t < e.length; t++) {
         const n = e[t];
-        a = 65535 & (sr[255 & (a ^ n)] ^ (a >> 8));
+        a = 65535 & ($a[255 & (a ^ n)] ^ (a >> 8));
       }
       return a;
     });
-    let lr = [
+    let en = [
       0,
       8801531,
       9098509,
@@ -42286,17 +40547,17 @@ object-assign
       6015427,
       14517560,
     ];
-    "undefined" != typeof Int32Array && (lr = new Int32Array(lr));
-    tr("crc-24", function (e, t) {
-      $n.Buffer.isBuffer(e) || (e = er(e));
+    "undefined" != typeof Int32Array && (en = new Int32Array(en));
+    qa("crc-24", function (e, t) {
+      za.Buffer.isBuffer(e) || (e = Va(e));
       let a = void 0 !== t ? ~~t : 11994318;
       for (let t = 0; t < e.length; t++) {
         const n = e[t];
-        a = 16777215 & (lr[255 & ((a >> 16) ^ n)] ^ (a << 8));
+        a = 16777215 & (en[255 & ((a >> 16) ^ n)] ^ (a << 8));
       }
       return a;
     });
-    let cr = [
+    let tn = [
       0,
       1996959894,
       3993919788,
@@ -42554,17 +40815,17 @@ object-assign
       1510334235,
       755167117,
     ];
-    "undefined" != typeof Int32Array && (cr = new Int32Array(cr));
-    var ur = tr("crc-32", function (e, t) {
-      $n.Buffer.isBuffer(e) || (e = er(e));
+    "undefined" != typeof Int32Array && (tn = new Int32Array(tn));
+    var an = qa("crc-32", function (e, t) {
+      za.Buffer.isBuffer(e) || (e = Va(e));
       let a = 0 === t ? 0 : -1 ^ ~~t;
       for (let t = 0; t < e.length; t++) {
         const n = e[t];
-        a = cr[255 & (a ^ n)] ^ (a >>> 8);
+        a = tn[255 & (a ^ n)] ^ (a >>> 8);
       }
       return -1 ^ a;
     });
-    let dr = [
+    let nn = [
       0,
       1996959894,
       3993919788,
@@ -42822,25 +41083,28 @@ object-assign
       1510334235,
       755167117,
     ];
-    "undefined" != typeof Int32Array && (dr = new Int32Array(dr));
-    tr("jam", function (e, t = -1) {
-      $n.Buffer.isBuffer(e) || (e = er(e));
+    "undefined" != typeof Int32Array && (nn = new Int32Array(nn));
+    qa("jam", function (e, t = -1) {
+      za.Buffer.isBuffer(e) || (e = Va(e));
       let a = 0 === t ? 0 : ~~t;
       for (let t = 0; t < e.length; t++) {
         const n = e[t];
-        a = dr[255 & (a ^ n)] ^ (a >>> 8);
+        a = nn[255 & (a ^ n)] ^ (a >>> 8);
       }
       return a;
     });
-    var mr = a("X40S"),
-      pr = a.n(mr),
-      _r = Object(s.a)(function (e) {
+    var rn = a("X40S"),
+      on = a.n(rn),
+      sn = a("k7N+"),
+      ln = a.n(sn),
+      cn = a("nz6D"),
+      un = Object(s.a)(function (e) {
         var t = e.nLeagueID,
           a = e.nSeriesGame,
           n = e.strMatchID,
           r = (e.nLeftTeamID, e.nRightTeamID),
-          i = na.a.Get().getHeroList(),
-          s = Za.Get().GetMatchData(t, n),
+          i = ta.a.Get().getHeroList(),
+          s = Ha.a.Get().GetMatchData(t, n),
           l = (null == s ? void 0 : s.tourney.radiant_team_id) == r,
           c = s
             ? (l ? s.dire_score : s.radiant_score) +
@@ -42849,22 +41113,22 @@ object-assign
             : "";
         return o.a.createElement(
           "div",
-          { className: pr.a.DPCScheduleEntryMatch },
+          { className: on.a.DPCScheduleEntryMatch },
           o.a.createElement(
             "div",
-            { className: pr.a.LeftSection },
+            { className: on.a.LeftSection },
             o.a.createElement(
               "div",
-              { className: pr.a.GameLabel },
+              { className: on.a.GameLabel },
               Object(_.a)("#dpc_game_" + a)
             )
           ),
           o.a.createElement(
             "div",
-            { className: pr.a.CenterSection },
+            { className: on.a.CenterSection },
             o.a.createElement(
               "div",
-              { className: pr.a.HeroList },
+              { className: on.a.HeroList },
               null == s
                 ? void 0
                 : s.players.map(function (e) {
@@ -42888,7 +41152,7 @@ object-assign
                       (l && e.player_slot >= 128)
                       ? o.a.createElement("div", {
                           key: e.hero_id,
-                          className: pr.a.HeroImage,
+                          className: on.a.HeroImage,
                           style: {
                             backgroundImage:
                               "url( " +
@@ -42901,10 +41165,10 @@ object-assign
                       : null;
                   })
             ),
-            o.a.createElement("div", { className: pr.a.MatchScore }, c),
+            o.a.createElement("div", { className: on.a.MatchScore }, c),
             o.a.createElement(
               "div",
-              { className: pr.a.HeroList },
+              { className: on.a.HeroList },
               null == s
                 ? void 0
                 : s.players.map(function (e) {
@@ -42928,7 +41192,7 @@ object-assign
                       (l && e.player_slot < 128)
                       ? o.a.createElement("div", {
                           key: e.hero_id,
-                          className: pr.a.HeroImage,
+                          className: on.a.HeroImage,
                           style: {
                             backgroundImage:
                               "url( " +
@@ -42942,10 +41206,10 @@ object-assign
                   })
             )
           ),
-          o.a.createElement("div", { className: pr.a.RightSection })
+          o.a.createElement("div", { className: on.a.RightSection })
         );
       }),
-      hr = function (e) {
+      dn = function (e) {
         var t = e.strTeamName,
           a = e.strRecord,
           n = e.nTeamID,
@@ -42954,19 +41218,19 @@ object-assign
           "div",
           {
             className: Object(ce.a)(
-              pr.a.DPCScheduleEntryTeam,
-              r && pr.a.Left,
-              !r && pr.a.Right
+              on.a.DPCScheduleEntryTeam,
+              r && on.a.Left,
+              !r && on.a.Right
             ),
           },
           o.a.createElement(
             "div",
-            { className: pr.a.NameAndRecord },
-            o.a.createElement("div", { className: pr.a.TeamName }, t),
-            o.a.createElement("div", { className: pr.a.TeamRecord }, a)
+            { className: on.a.NameAndRecord },
+            o.a.createElement("div", { className: on.a.TeamName }, t),
+            o.a.createElement("div", { className: on.a.TeamRecord }, a)
           ),
           o.a.createElement("div", {
-            className: pr.a.TeamLogo,
+            className: on.a.TeamLogo,
             style: {
               backgroundImage:
                 "url( " +
@@ -42978,24 +41242,22 @@ object-assign
           })
         );
       },
-      fr = Object(s.a)(function (e) {
+      mn = Object(s.a)(function (e) {
         var t = e.nLeagueID,
           a = e.nNodeID,
           n = e.bExpanded,
           r = e.setSelected,
           i = Object(c.i)(),
-          s = Object(Ha.j)(i.strSeason),
-          l = Za.Get().GetLeagueNode(t, a),
-          u = Za.Get().GetTeamNames(null == l ? void 0 : l.team_id_1),
-          d = Za.Get().GetTeamNames(null == l ? void 0 : l.team_id_2),
-          m = Za.Get().FindLeagueTeamStanding(
-            s,
-            null == l ? void 0 : l.team_id_1
-          ),
-          p = Za.Get().FindLeagueTeamStanding(
-            s,
-            null == l ? void 0 : l.team_id_2
-          ),
+          s = Object(Pa.l)(i.strSeason),
+          l = Ha.a.Get().GetLeagueNode(t, a),
+          u = Ha.a.Get().GetTeamNames(null == l ? void 0 : l.team_id_1),
+          d = Ha.a.Get().GetTeamNames(null == l ? void 0 : l.team_id_2),
+          m = Ha.a
+            .Get()
+            .FindLeagueTeamStanding(s, null == l ? void 0 : l.team_id_1),
+          p = Ha.a
+            .Get()
+            .FindLeagueTeamStanding(s, null == l ? void 0 : l.team_id_2),
           h = m ? m.nWins + " - " + m.nLosses : "",
           f = p ? p.nWins + " - " + p.nLosses : "",
           g =
@@ -43011,36 +41273,36 @@ object-assign
           "div",
           {
             className: Object(ce.a)(
-              pr.a.DPCScheduleEntry,
-              1 == (null == l ? void 0 : l.matches.length) && pr.a.OneMatch,
-              2 == (null == l ? void 0 : l.matches.length) && pr.a.TwoMatch,
-              3 == (null == l ? void 0 : l.matches.length) && pr.a.ThreeMatch,
-              4 == (null == l ? void 0 : l.matches.length) && pr.a.FourMatch,
-              5 == (null == l ? void 0 : l.matches.length) && pr.a.FiveMatch,
-              n && pr.a.IsExpanded
+              on.a.DPCScheduleEntry,
+              1 == (null == l ? void 0 : l.matches.length) && on.a.OneMatch,
+              2 == (null == l ? void 0 : l.matches.length) && on.a.TwoMatch,
+              3 == (null == l ? void 0 : l.matches.length) && on.a.ThreeMatch,
+              4 == (null == l ? void 0 : l.matches.length) && on.a.FourMatch,
+              5 == (null == l ? void 0 : l.matches.length) && on.a.FiveMatch,
+              n && on.a.IsExpanded
             ),
           },
           o.a.createElement(
             "div",
-            { className: pr.a.SummarySection },
+            { className: on.a.SummarySection },
             o.a.createElement(
               "div",
-              { className: pr.a.DateSection },
-              o.a.createElement(Wa.a, {
+              { className: on.a.DateSection },
+              o.a.createElement(ln.a, {
                 date: 1e3 * g,
                 format: "dddd MMM Do",
-                className: pr.a.Day,
+                className: on.a.Day,
               }),
-              o.a.createElement(Wa.a, {
+              o.a.createElement(ln.a, {
                 date: 1e3 * g,
                 format: "LT",
-                className: pr.a.Time,
+                className: on.a.Time,
               })
             ),
             o.a.createElement(
               "div",
-              { className: pr.a.MatchupSection },
-              o.a.createElement(hr, {
+              { className: on.a.MatchupSection },
+              o.a.createElement(dn, {
                 strTeamName: null == u ? void 0 : u.name,
                 strRecord: h,
                 nTeamID: null == l ? void 0 : l.team_id_1,
@@ -43048,10 +41310,10 @@ object-assign
               }),
               o.a.createElement(
                 "div",
-                { className: pr.a.VS },
+                { className: on.a.VS },
                 Object(_.a)("#dpc_vs")
               ),
-              o.a.createElement(hr, {
+              o.a.createElement(dn, {
                 strTeamName: null == d ? void 0 : d.name,
                 strRecord: f,
                 nTeamID: null == l ? void 0 : l.team_id_2,
@@ -43061,7 +41323,7 @@ object-assign
             o.a.createElement(
               "div",
               {
-                className: Object(ce.a)(pr.a.DetailsButton, v && pr.a.Active),
+                className: Object(ce.a)(on.a.DetailsButton, v && on.a.Active),
                 onClick: function () {
                   return (
                     v &&
@@ -43075,17 +41337,17 @@ object-assign
               },
               o.a.createElement(
                 "div",
-                { className: pr.a.DetailsLabel },
+                { className: on.a.DetailsLabel },
                 Object(_.a)("#dpc_series_details")
               )
             )
           ),
           o.a.createElement(
             "div",
-            { className: pr.a.DetailsSection },
+            { className: on.a.DetailsSection },
             n &&
               l.matches.map(function (e, a) {
-                return o.a.createElement(_r, {
+                return o.a.createElement(un, {
                   key: e.match_id,
                   nLeagueID: t,
                   nSeriesGame: a,
@@ -43097,7 +41359,7 @@ object-assign
           )
         );
       }),
-      gr = Object(s.a)(function (e) {
+      pn = Object(s.a)(function (e) {
         for (
           var t,
             a,
@@ -43105,7 +41367,7 @@ object-assign
             r = e.setTeamSearch,
             s = Object(c.g)(),
             l = Object(c.i)(),
-            d = Object(Ha.j)(l.strSeason),
+            d = Object(Pa.l)(l.strSeason),
             m = Object(i.useState)(
               parseInt(l.strMonth) > 1
                 ? new Date(
@@ -43117,21 +41379,21 @@ object-assign
             ),
             p = m[0],
             _ = m[1],
-            h = Object(i.useState)(Object(Ha.h)(l.strRegion)),
+            h = Object(i.useState)(Object(Pa.j)(l.strRegion)),
             f = h[0],
             g = h[1],
-            v = Object(i.useState)(Object(Ha.e)(l.strDivision)),
+            v = Object(i.useState)(Object(Pa.g)(l.strDivision)),
             y = v[0],
             b = v[1],
             E = new Set(),
             L = 0,
-            w = Za.Get().GetDPCLeagues(d);
+            w = Ha.a.Get().GetDPCLeagues(d);
           L < w.length;
           L++
         )
           for (var M = 0, S = w[L].nLeagueIDs; M < S.length; M++) {
             var T = S[M];
-            null === (t = Za.Get().GetLeagueDates(T)) ||
+            null === (t = Ha.a.Get().GetLeagueDates(T)) ||
               void 0 === t ||
               t.forEach(function (e) {
                 return E.add(e);
@@ -43162,8 +41424,8 @@ object-assign
               s.push(
                 u.a.dpc_schedule(
                   l.strSeason,
-                  Object(Ha.i)(f),
-                  Object(Ha.f)(y),
+                  Object(Pa.k)(f),
+                  Object(Pa.h)(y),
                   "" + (e.getMonth() + 1),
                   "" + e.getDate()
                 )
@@ -43173,51 +41435,51 @@ object-assign
           [k, f, y, s, l.strSeason]
         );
         var O = [
-            { value: Ua.b.UNSET, strLabel: "#dpc_division_filter_all" },
-            { value: Ua.b.DIVISION_I, strLabel: "#dpc_division_filter_i" },
-            { value: Ua.b.DIVISION_II, strLabel: "#dpc_division_filter_ii" },
+            { value: xa.b.UNSET, strLabel: "#dpc_division_filter_all" },
+            { value: xa.b.DIVISION_I, strLabel: "#dpc_division_filter_i" },
+            { value: xa.b.DIVISION_II, strLabel: "#dpc_division_filter_ii" },
           ],
           j = [
-            { value: Ua.d.LEAGUE_REGION_UNSET, strLabel: "#dpc_region_all" },
-            { value: Ua.d.LEAGUE_REGION_NA, strLabel: "#dpc_region_na" },
-            { value: Ua.d.LEAGUE_REGION_SA, strLabel: "#dpc_region_sa" },
-            { value: Ua.d.LEAGUE_REGION_EUROPE, strLabel: "#dpc_region_weu" },
-            { value: Ua.d.LEAGUE_REGION_CIS, strLabel: "#dpc_region_eeu" },
-            { value: Ua.d.LEAGUE_REGION_CHINA, strLabel: "#dpc_region_cn" },
-            { value: Ua.d.LEAGUE_REGION_SEA, strLabel: "#dpc_region_sea" },
+            { value: xa.d.LEAGUE_REGION_UNSET, strLabel: "#dpc_region_all" },
+            { value: xa.d.LEAGUE_REGION_NA, strLabel: "#dpc_region_na" },
+            { value: xa.d.LEAGUE_REGION_SA, strLabel: "#dpc_region_sa" },
+            { value: xa.d.LEAGUE_REGION_EUROPE, strLabel: "#dpc_region_weu" },
+            { value: xa.d.LEAGUE_REGION_CIS, strLabel: "#dpc_region_eeu" },
+            { value: xa.d.LEAGUE_REGION_CHINA, strLabel: "#dpc_region_cn" },
+            { value: xa.d.LEAGUE_REGION_SEA, strLabel: "#dpc_region_sea" },
           ];
         return o.a.createElement(
           "div",
-          { className: pr.a.DPCScheduleOptions },
+          { className: on.a.DPCScheduleOptions },
           o.a.createElement(
             "div",
-            { className: pr.a.ScheduleOptionsContainer },
-            o.a.createElement(Ja, {
+            { className: on.a.ScheduleOptionsContainer },
+            o.a.createElement(Ra.b, {
               options: D,
               selectedOption: k,
               setOption: _,
             }),
-            o.a.createElement(qa, {
+            o.a.createElement(Ra.a, {
               options: O,
               selectedOption: y,
               setOption: b,
             }),
-            o.a.createElement(Ja, {
+            o.a.createElement(Ra.b, {
               options: j,
               selectedOption: f,
               setOption: g,
             }),
-            o.a.createElement(Ka, { strInput: n, setInput: r })
+            o.a.createElement(Ra.c, { strInput: n, setInput: r })
           )
         );
       }),
-      vr = Object(s.a)(function (e) {
+      _n = Object(s.a)(function (e) {
         for (
           var t = e.strTeamSearch,
             a = Object(c.i)(),
-            n = Object(Ha.j)(a.strSeason),
-            r = Object(Ha.h)(a.strRegion),
-            s = Object(Ha.e)(a.strDivision),
+            n = Object(Pa.l)(a.strSeason),
+            r = Object(Pa.j)(a.strRegion),
+            s = Object(Pa.g)(a.strDivision),
             l = Object(i.useState)(!1),
             u = l[0],
             d = l[1],
@@ -43225,13 +41487,14 @@ object-assign
             p = m[0],
             _ = m[1],
             h = Object(i.useRef)(null),
-            f = Za.Get().GetDPCLeagues(n),
+            f = Ha.a.Get().GetDPCLeagues(n),
             g = [],
             v = function (e) {
-              if (r != Ua.d.LEAGUE_REGION_UNSET && r != e.eRegion)
+              if (r != xa.d.LEAGUE_REGION_UNSET && r != e.eRegion)
                 return "continue";
-              (s != Ua.b.UNSET && s != Ua.b.DIVISION_I) ||
-                Za.Get()
+              (s != xa.b.UNSET && s != xa.b.DIVISION_I) ||
+                Ha.a
+                  .Get()
                   .GetLeagueNodeIDs(e.nLeagueIDs[0])
                   .forEach(function (t) {
                     return g.push({
@@ -43240,8 +41503,9 @@ object-assign
                       nTimestamp: 0,
                     });
                   });
-              (s != Ua.b.UNSET && s != Ua.b.DIVISION_II) ||
-                Za.Get()
+              (s != xa.b.UNSET && s != xa.b.DIVISION_II) ||
+                Ha.a
+                  .Get()
                   .GetLeagueNodeIDs(e.nLeagueIDs[1])
                   .forEach(function (t) {
                     return g.push({
@@ -43259,16 +41523,16 @@ object-assign
           v(b[y]);
         }
         g.forEach(function (e) {
-          var t = Za.Get().GetLeagueNode(e.nLeagueID, e.nNodeID);
+          var t = Ha.a.Get().GetLeagueNode(e.nLeagueID, e.nNodeID);
           e.nTimestamp = 0 != t.actual_time ? t.actual_time : t.scheduled_time;
         });
         var E = g
             .filter(function (e) {
               if (0 == e.nTimestamp) return !1;
               if (t.length > 0) {
-                var a = Za.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
-                  n = Za.Get().GetTeamNames(null == a ? void 0 : a.team_id_1),
-                  r = Za.Get().GetTeamNames(null == a ? void 0 : a.team_id_2);
+                var a = Ha.a.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
+                  n = Ha.a.Get().GetTeamNames(null == a ? void 0 : a.team_id_1),
+                  r = Ha.a.Get().GetTeamNames(null == a ? void 0 : a.team_id_2);
                 return (
                   -1 != n.name.toLowerCase().search(t.toLowerCase()) ||
                   -1 != r.name.toLowerCase().search(t.toLowerCase())
@@ -43283,7 +41547,7 @@ object-assign
         E.forEach(function (e) {
           return (L += e.nLeagueID + "_" + e.nNodeID);
         });
-        var w = ur(L);
+        var w = an(L);
         return (
           Object(i.useEffect)(
             function () {
@@ -43302,18 +41566,18 @@ object-assign
             [a.strMonth, a.strDay, w]
           ),
           o.a.createElement(
-            un,
+            cn.a,
             {
               className: Object(ce.a)(
-                pr.a.DPCScheduleMatches,
-                u && pr.a.AfterFirstScroll
+                on.a.DPCScheduleMatches,
+                u && on.a.AfterFirstScroll
               ),
               horizontal: !1,
               hideScrollbars: !1,
               innerRef: h,
             },
             E.map(function (e) {
-              return o.a.createElement(fr, {
+              return o.a.createElement(mn, {
                 key: e.nLeagueID + "_" + e.nNodeID,
                 nLeagueID: e.nLeagueID,
                 nNodeID: e.nNodeID,
@@ -43324,7 +41588,7 @@ object-assign
           )
         );
       }),
-      yr = Object(s.a)(function () {
+      hn = Object(s.a)(function () {
         var e = Object(i.useState)(""),
           t = e[0],
           a = e[1],
@@ -43340,39 +41604,39 @@ object-assign
         )
           return o.a.createElement(c.a, {
             to: u.a.dpc_schedule(
-              n.strSeason || Object(Ha.c)(),
-              n.strRegion || Object(Ha.b)(),
-              n.strDivision || Object(Ha.a)(),
+              n.strSeason || Object(Pa.e)(),
+              n.strRegion || Object(Pa.d)(),
+              n.strDivision || Object(Pa.a)(),
               n.strMonth || "0",
               n.strDay || "0"
             ),
           });
         var r = {
-          eSeason: Object(Ha.j)(n.strSeason),
+          eSeason: Object(Pa.l)(n.strSeason),
           nLeagueID: 0,
           nNodeID: 0,
           nSeriesGame: 0,
           eSeriesDisplay: 0,
         };
         return o.a.createElement(
-          wn,
-          { matchContext: r, className: pr.a.DPCSchedulePage },
-          o.a.createElement(gr, { strTeamSearch: t, setTeamSearch: a }),
-          o.a.createElement(vr, { strTeamSearch: t })
+          Ga.a,
+          { matchContext: r, className: on.a.DPCSchedulePage },
+          o.a.createElement(pn, { strTeamSearch: t, setTeamSearch: a }),
+          o.a.createElement(_n, { strTeamSearch: t })
         );
       }),
-      br = a("ODJw"),
-      Er = a("Y/gT"),
-      Lr = a.n(Er),
-      wr = function () {
+      fn = a("ODJw"),
+      gn = a("Y/gT"),
+      vn = a.n(gn),
+      yn = function () {
         return o.a.createElement("div", {
-          className: Lr.a.RightArrow,
+          className: vn.a.RightArrow,
           style: {
             backgroundImage: "url( " + p.a.IMG_URL + "/arrow_left.png )",
           },
         });
       },
-      Mr = function (e) {
+      bn = function (e) {
         var t = e.shouldShow,
           a = e.showFunc,
           n = e.className,
@@ -43382,8 +41646,8 @@ object-assign
           "div",
           {
             className: Object(ce.a)(
-              Lr.a.PopupPanelContainer,
-              t && Lr.a.ShowPopupPanel
+              vn.a.PopupPanelContainer,
+              t && vn.a.ShowPopupPanel
             ),
             onClick: function () {
               return a(!1);
@@ -43392,7 +41656,7 @@ object-assign
           o.a.createElement(
             "div",
             {
-              className: Object(ce.a)(Lr.a.PopupPanel, n),
+              className: Object(ce.a)(vn.a.PopupPanel, n),
               onClick: function (e) {
                 return e.stopPropagation();
               },
@@ -43401,7 +41665,7 @@ object-assign
               o.a.createElement(
                 "div",
                 {
-                  className: Lr.a.CloseButton,
+                  className: vn.a.CloseButton,
                   onClick: function () {
                     return a(!1);
                   },
@@ -43412,12 +41676,12 @@ object-assign
           )
         );
       },
-      Sr = (function (e) {
+      En = (function (e) {
         function t(t) {
           var a = e.call(this, t) || this;
           return (
             (a.handleClick = function (e) {
-              if (Pr.getShortFilmOwnership()) {
+              if (Yn.getShortFilmOwnership()) {
                 var t =
                   p.a.BASE_URL +
                   "filmcontest/redirecttosteamcommunityshortfilm/";
@@ -43425,13 +41689,13 @@ object-assign
               } else a.setState({ bPopupVisible: e });
             }),
             (a.handleAccepted = function () {
-              Pr.grantShortFilmAppIDOwnership();
+              Yn.grantShortFilmAppIDOwnership();
               var e =
                 p.a.BASE_URL + "filmcontest/redirecttosteamcommunityshortfilm/";
               history.pushState("", "", e), history.go();
             }),
             (a.BGetOwnsApp = function () {
-              return Pr.getShortFilmOwnership();
+              return Yn.getShortFilmOwnership();
             }),
             (a.state = { bPopupVisible: !1 }),
             a
@@ -43445,8 +41709,8 @@ object-assign
               this.BGetOwnsApp(),
               o.a.createElement(
                 "div",
-                { className: Lr.a.HomePage },
-                o.a.createElement(fe.a, { bOverlapping: !0 }),
+                { className: vn.a.HomePage },
+                o.a.createElement(_e.a, { bOverlapping: !0 }),
                 o.a.createElement(
                   h.a,
                   null,
@@ -43458,14 +41722,14 @@ object-assign
                 ),
                 o.a.createElement(
                   "div",
-                  { className: Lr.a.HeaderSection },
+                  { className: vn.a.HeaderSection },
                   o.a.createElement(
                     "div",
-                    { className: Lr.a.BackgroundVideoContainer },
+                    { className: vn.a.BackgroundVideoContainer },
                     o.a.createElement(
                       "video",
                       {
-                        className: Lr.a.BackgroundVideo,
+                        className: vn.a.BackgroundVideo,
                         autoPlay: !0,
                         preload: "auto",
                         muted: !0,
@@ -43491,14 +41755,14 @@ object-assign
                   ),
                   o.a.createElement(
                     "div",
-                    { className: Lr.a.TitleContainer },
+                    { className: vn.a.TitleContainer },
                     o.a.createElement(
                       "div",
-                      { className: Lr.a.TopRow },
+                      { className: vn.a.TopRow },
                       o.a.createElement(
                         "video",
                         {
-                          className: Lr.a.HeroLogo,
+                          className: vn.a.HeroLogo,
                           autoPlay: !0,
                           preload: "auto",
                           muted: !0,
@@ -43517,10 +41781,10 @@ object-assign
                       ),
                       o.a.createElement(
                         "div",
-                        { className: Lr.a.ButtonRow },
+                        { className: vn.a.ButtonRow },
                         o.a.createElement(
                           "div",
-                          { className: Lr.a.CommunityDesc },
+                          { className: vn.a.CommunityDesc },
                           Object(_.a)("#filmcontest_submit_label")
                         ),
                         0 == p.a.ACCOUNT_ID &&
@@ -43537,17 +41801,17 @@ object-assign
                               "div",
                               {
                                 className: Object(ce.a)(
-                                  Lr.a.FilmButton,
-                                  Lr.a.SteamButton
+                                  vn.a.FilmButton,
+                                  vn.a.SteamButton
                                 ),
                               },
                               o.a.createElement(
                                 "div",
-                                { className: Lr.a.ButtonText },
+                                { className: vn.a.ButtonText },
                                 Object(_.a)("#filmcontest_login_steam")
                               ),
                               o.a.createElement("div", {
-                                className: Lr.a.SteamLogo,
+                                className: vn.a.SteamLogo,
                               })
                             )
                           ),
@@ -43559,20 +41823,20 @@ object-assign
                                 return e.handleClick(!0);
                               },
                               className: Object(ce.a)(
-                                Lr.a.FilmButton,
-                                Lr.a.SteamButton
+                                vn.a.FilmButton,
+                                vn.a.SteamButton
                               ),
                             },
                             o.a.createElement(
                               "div",
-                              { className: Lr.a.ButtonText },
+                              { className: vn.a.ButtonText },
                               Object(_.a)("#filmcontest_button_submit")
                             ),
-                            o.a.createElement(wr, null)
+                            o.a.createElement(yn, null)
                           ),
                         o.a.createElement(
                           "div",
-                          { className: Lr.a.CommunityDesc },
+                          { className: vn.a.CommunityDesc },
                           Object(_.a)("#filmcontest_community")
                         ),
                         o.a.createElement(
@@ -43582,102 +41846,102 @@ object-assign
                           },
                           o.a.createElement(
                             "div",
-                            { className: Lr.a.FilmButton },
+                            { className: vn.a.FilmButton },
                             o.a.createElement(
                               "div",
-                              { className: Lr.a.ButtonText },
+                              { className: vn.a.ButtonText },
                               Object(_.a)("#filmcontest_submissions")
                             ),
-                            o.a.createElement(wr, null)
+                            o.a.createElement(yn, null)
                           )
                         )
                       )
                     ),
                     o.a.createElement(
                       "div",
-                      { className: Lr.a.Introduction },
+                      { className: vn.a.Introduction },
                       Object(_.a)("#filmcontest_introduction")
                     ),
                     o.a.createElement(
                       "div",
-                      { className: Lr.a.Prizes },
+                      { className: vn.a.Prizes },
                       o.a.createElement(
                         "div",
-                        { className: Object(ce.a)(Lr.a.Prize, Lr.a.Prize1) },
+                        { className: Object(ce.a)(vn.a.Prize, vn.a.Prize1) },
                         o.a.createElement(
                           "div",
-                          { className: Lr.a.PrizeAmount },
+                          { className: vn.a.PrizeAmount },
                           Object(_.a)("#filmcontest_prize1_amount")
                         ),
                         o.a.createElement(
                           "div",
-                          { className: Lr.a.PrizeLabel },
+                          { className: vn.a.PrizeLabel },
                           Object(_.a)("#filmcontest_prize1_label")
                         )
                       ),
                       o.a.createElement(
                         "div",
-                        { className: Object(ce.a)(Lr.a.Prize, Lr.a.Prize2) },
+                        { className: Object(ce.a)(vn.a.Prize, vn.a.Prize2) },
                         o.a.createElement(
                           "div",
-                          { className: Lr.a.PrizeAmount },
+                          { className: vn.a.PrizeAmount },
                           Object(_.a)("#filmcontest_prize2_amount")
                         ),
                         o.a.createElement(
                           "div",
-                          { className: Lr.a.PrizeLabel },
+                          { className: vn.a.PrizeLabel },
                           Object(_.a)("#filmcontest_prize2_label")
                         )
                       ),
                       o.a.createElement(
                         "div",
-                        { className: Object(ce.a)(Lr.a.Prize, Lr.a.Prize3) },
+                        { className: Object(ce.a)(vn.a.Prize, vn.a.Prize3) },
                         o.a.createElement(
                           "div",
-                          { className: Lr.a.PrizeAmount },
+                          { className: vn.a.PrizeAmount },
                           Object(_.a)("#filmcontest_prize3_amount")
                         ),
                         o.a.createElement(
                           "div",
-                          { className: Lr.a.PrizeLabel },
+                          { className: vn.a.PrizeLabel },
                           Object(_.a)("#filmcontest_prize3_label")
                         )
                       ),
                       o.a.createElement(
                         "div",
-                        { className: Object(ce.a)(Lr.a.Prize, Lr.a.Prize4) },
+                        { className: Object(ce.a)(vn.a.Prize, vn.a.Prize4) },
                         o.a.createElement(
                           "div",
-                          { className: Lr.a.PrizeAmount },
+                          { className: vn.a.PrizeAmount },
                           Object(_.a)("#filmcontest_prize4_amount")
                         ),
                         o.a.createElement(
                           "div",
-                          { className: Lr.a.PrizeLabel },
+                          { className: vn.a.PrizeLabel },
                           Object(_.a)("#filmcontest_prize4_label")
                         )
                       )
                     ),
                     o.a.createElement(
                       "div",
-                      { className: Lr.a.PrizeDesc },
+                      { className: vn.a.PrizeDesc },
                       Object(_.a)("#filmcontest_prize_desc")
                     )
                   )
                 ),
                 o.a.createElement(
                   "div",
-                  { className: Lr.a.WallpaperSection },
+                  { className: vn.a.WallpaperSection },
                   o.a.createElement(
                     "div",
-                    { className: Lr.a.WallpaperTitle },
+                    { className: vn.a.WallpaperTitle },
                     Object(_.a)("#filmcontest_previous_winners")
                   ),
                   o.a.createElement(
                     "div",
-                    { className: Lr.a.Wallpapers },
+                    { className: vn.a.Wallpapers },
                     o.a.createElement("iframe", {
-                      className: Lr.a.PreviousWinnerVideo,
+                      className: vn.a.PreviousWinnerVideo,
                       width: "30%",
                       height: "300px",
                       src: "https://www.youtube.com/embed/xtHskqp8QMc",
@@ -43688,7 +41952,7 @@ object-assign
                       allowFullScreen: !0,
                     }),
                     o.a.createElement("iframe", {
-                      className: Lr.a.PreviousWinnerVideo,
+                      className: vn.a.PreviousWinnerVideo,
                       width: "30%",
                       height: "300px",
                       src: "https://www.youtube.com/embed/4a04C51ZKi4",
@@ -43699,7 +41963,7 @@ object-assign
                       allowFullScreen: !0,
                     }),
                     o.a.createElement("iframe", {
-                      className: Lr.a.PreviousWinnerVideo,
+                      className: vn.a.PreviousWinnerVideo,
                       width: "30%",
                       height: "300px",
                       src: "https://www.youtube.com/embed/qKWcG86wgUc",
@@ -43713,20 +41977,20 @@ object-assign
                 ),
                 o.a.createElement(
                   "div",
-                  { className: Lr.a.GuidelinesSection },
-                  o.a.createElement("div", { className: Lr.a.Divider }),
-                  o.a.createElement("div", { className: Lr.a.DividerBottom }),
+                  { className: vn.a.GuidelinesSection },
+                  o.a.createElement("div", { className: vn.a.Divider }),
+                  o.a.createElement("div", { className: vn.a.DividerBottom }),
                   o.a.createElement(
                     "div",
-                    { className: Lr.a.Quote },
+                    { className: vn.a.Quote },
                     o.a.createElement(
                       "div",
-                      { className: Lr.a.GuidelinesTitle },
+                      { className: vn.a.GuidelinesTitle },
                       Object(_.a)("#filmcontest_guidelines")
                     ),
                     o.a.createElement(
                       "div",
-                      { className: Lr.a.GuidelinesList },
+                      { className: vn.a.GuidelinesList },
                       o.a.createElement(
                         "ul",
                         null,
@@ -43791,10 +42055,10 @@ object-assign
                 ),
                 o.a.createElement(
                   "div",
-                  { className: Lr.a.EndRow },
+                  { className: vn.a.EndRow },
                   o.a.createElement(
                     "div",
-                    { className: Lr.a.EndRowText },
+                    { className: vn.a.EndRowText },
                     Object(_.a)("#filmcontest_introduction"),
                     0 == p.a.ACCOUNT_ID &&
                       o.a.createElement(
@@ -43810,17 +42074,17 @@ object-assign
                           "div",
                           {
                             className: Object(ce.a)(
-                              Lr.a.FilmButton,
-                              Lr.a.SteamButton
+                              vn.a.FilmButton,
+                              vn.a.SteamButton
                             ),
                           },
                           o.a.createElement(
                             "div",
-                            { className: Lr.a.ButtonText },
+                            { className: vn.a.ButtonText },
                             Object(_.a)("#filmcontest_login_steam")
                           ),
                           o.a.createElement("div", {
-                            className: Lr.a.SteamLogo,
+                            className: vn.a.SteamLogo,
                           })
                         )
                       ),
@@ -43832,30 +42096,30 @@ object-assign
                             return e.handleClick(!0);
                           },
                           className: Object(ce.a)(
-                            Lr.a.FilmButton,
-                            Lr.a.SteamButton
+                            vn.a.FilmButton,
+                            vn.a.SteamButton
                           ),
                         },
                         o.a.createElement(
                           "div",
-                          { className: Lr.a.ButtonText },
+                          { className: vn.a.ButtonText },
                           Object(_.a)("#filmcontest_button_submit")
                         ),
-                        o.a.createElement(wr, null)
+                        o.a.createElement(yn, null)
                       )
                   ),
                   o.a.createElement("img", {
-                    className: Lr.a.EndRowImage,
+                    className: vn.a.EndRowImage,
                     src:
                       p.a.IMG_URL +
                       "/international2020/shortfilm/clap_board.png",
                   })
                 ),
-                o.a.createElement(ge.a, null),
+                o.a.createElement(he.a, null),
                 o.a.createElement(
-                  Mr,
+                  bn,
                   {
-                    className: Lr.a.ShortFilmPopup,
+                    className: vn.a.ShortFilmPopup,
                     hasCloseButton: !0,
                     shouldShow: this.state.bPopupVisible,
                     showFunc: function (t) {
@@ -43870,8 +42134,8 @@ object-assign
                         return e.handleAccepted();
                       },
                       className: Object(ce.a)(
-                        Lr.a.FilmButton,
-                        Lr.a.SteamButton
+                        vn.a.FilmButton,
+                        vn.a.SteamButton
                       ),
                     },
                     Object(_.a)("#filmcontest_i_agree")
@@ -43885,7 +42149,7 @@ object-assign
         );
       })(o.a.Component);
     a("DwZD");
-    function Tr(e, t) {
+    function Ln(e, t) {
       return (
         (function (e) {
           if (Array.isArray(e)) return e;
@@ -43925,8 +42189,8 @@ object-assign
         })()
       );
     }
-    var Dr,
-      kr = (function (e, t) {
+    var wn,
+      Mn = (function (e, t) {
         return e((t = { exports: {} }), t.exports), t.exports;
       })(function (e, t) {
         function a(e, t, a) {
@@ -44052,13 +42316,13 @@ object-assign
           return L && j(b), { on: I, stop: N, init: j };
         };
       }),
-      Or =
-        (Dr = kr) &&
-        Dr.__esModule &&
-        Object.prototype.hasOwnProperty.call(Dr, "default")
-          ? Dr.default
-          : Dr,
-      jr = function (e) {
+      Sn =
+        (wn = Mn) &&
+        wn.__esModule &&
+        Object.prototype.hasOwnProperty.call(wn, "default")
+          ? wn.default
+          : wn,
+      Tn = function (e) {
         void 0 === e && (e = function () {});
         var t = Object(i.useRef)(e);
         Object(i.useEffect)(
@@ -44085,23 +42349,23 @@ object-assign
             );
           }, []);
       },
-      Ir = function (e) {
-        return jr(e.onBeforeunload), e.children;
+      Dn = function (e) {
+        return Tn(e.onBeforeunload), e.children;
       };
-    (Ir.defaultProps = { children: null }),
-      (Ir.propTypes = {
-        children: Ge.a.any,
-        onBeforeunload: Ge.a.func.isRequired,
+    (Dn.defaultProps = { children: null }),
+      (Dn.propTypes = {
+        children: Pe.a.any,
+        onBeforeunload: Pe.a.func.isRequired,
       });
-    var Nr,
-      Cr = function (e) {
+    var kn,
+      On = function (e) {
         var t = (function (e) {
-            var t = Tr(Object(i.useState)(!1), 2),
+            var t = Ln(Object(i.useState)(!1), 2),
               a = t[0],
               n = t[1];
             return (
               Object(i.useEffect)(function () {
-                var t = Or(e);
+                var t = Sn(e);
                 return (
                   t.on("idle", function () {
                     return n(!0);
@@ -44174,30 +42438,30 @@ object-assign
           };
         return (
           Object(i.useEffect)(s, [t, r.pathname, a]),
-          jr(function (e) {
+          Tn(function (e) {
             s(!0), delete e.returnValue;
           }),
           o.a.createElement(c.b, Object(n.a)({}, e))
         );
       },
-      Ar = Object(c.j)(function (e) {
+      jn = Object(c.j)(function (e) {
         return p.a && p.a.ENABLE_METRICS
-          ? o.a.createElement(Cr, Object(n.a)({}, e))
+          ? o.a.createElement(On, Object(n.a)({}, e))
           : o.a.createElement(c.b, Object(n.a)({}, e));
       }),
-      Yr = a("9a8T"),
-      xr = a.n(Yr);
-    Nr = o.a.lazy(function () {
+      In = a("9a8T"),
+      Nn = a.n(In);
+    kn = o.a.lazy(function () {
       return a.e(60).then(a.bind(null, "Bqrr"));
     });
-    var Rr = (function (e) {
+    var Cn = (function (e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
           Object(n.d)(t, e),
           (t.prototype.componentDidMount = function () {
-            xr.a.init({
+            Nn.a.init({
               disable: !1,
               startEvent: "DOMContentLoaded",
               initClassName: "aos-init",
@@ -44228,45 +42492,45 @@ object-assign
                   o.a.createElement(
                     c.d,
                     null,
-                    o.a.createElement(Ar, { path: u.a.home(), component: ca }),
-                    o.a.createElement(Ar, {
+                    o.a.createElement(jn, { path: u.a.home(), component: sa }),
+                    o.a.createElement(jn, {
                       path: u.a.newsentry(":id"),
-                      component: ke,
+                      component: Te,
                     }),
-                    o.a.createElement(Ar, {
+                    o.a.createElement(jn, {
                       path: u.a.news(":updates?"),
-                      component: Me,
+                      component: Le,
                     }),
-                    o.a.createElement(Ar, {
+                    o.a.createElement(jn, {
                       path: u.a.battlepass(),
-                      component: ea,
+                      component: Zt,
                     }),
-                    o.a.createElement(Ar, {
+                    o.a.createElement(jn, {
                       path: u.a.hero(":id"),
-                      component: Da,
+                      component: Sa,
                     }),
-                    o.a.createElement(Ar, {
+                    o.a.createElement(jn, {
                       path: u.a.herogrid(),
-                      component: xa,
+                      component: Na,
                     }),
-                    o.a.createElement(Ar, {
+                    o.a.createElement(jn, {
                       path: u.a.dpc_home(
                         ":strSeason?",
                         ":strLeagueID?",
                         ":strNodeID?",
                         ":strSeriesDisplay?"
                       ),
-                      component: Vn,
+                      component: Ca.a,
                     }),
-                    o.a.createElement(Ar, {
+                    o.a.createElement(jn, {
                       path: u.a.dpc_standings(
                         ":strSeason?",
                         ":strRegion?",
                         ":strDivision?"
                       ),
-                      component: Zn,
+                      component: Wa,
                     }),
-                    o.a.createElement(Ar, {
+                    o.a.createElement(jn, {
                       path: u.a.dpc_schedule(
                         ":strSeason?",
                         ":strRegion?",
@@ -44274,21 +42538,21 @@ object-assign
                         ":strMonth?",
                         ":strDay?"
                       ),
-                      component: yr,
+                      component: hn,
                     }),
-                    o.a.createElement(Ar, {
+                    o.a.createElement(jn, {
                       path: u.a.patchnotes(":version?"),
-                      component: br.d,
+                      component: fn.d,
                     }),
-                    o.a.createElement(Ar, {
+                    o.a.createElement(jn, {
                       path: u.a.dawnbreaker(),
-                      component: Nr,
+                      component: kn,
                     }),
-                    o.a.createElement(Ar, {
+                    o.a.createElement(jn, {
                       path: u.a.shortfilm(),
-                      component: Sr,
+                      component: En,
                     }),
-                    o.a.createElement(Ar, {
+                    o.a.createElement(jn, {
                       path: u.a.other(":page"),
                       render: function () {
                         return o.a.createElement(c.a, { to: u.a.root() });
@@ -44302,19 +42566,20 @@ object-assign
           (t = Object(n.c)([s.a], t))
         );
       })(o.a.Component),
-      Pr = new ((function () {
+      An = a("6rKP"),
+      Yn = new ((function () {
         function e() {
-          (this.m_asyncPrizePool = new Xa.a()),
-            (this.m_asyncPatchNotesListData = new Xa.a()),
-            (this.m_asyncPatchNotesData = new Xa.b()),
+          (this.m_asyncPrizePool = new An.a()),
+            (this.m_asyncPatchNotesListData = new An.a()),
+            (this.m_asyncPatchNotesData = new An.b()),
             (this.m_nSelectedAbilityIndex = 0),
-            (this.m_asyncShortFilmOwnership = new Xa.a()),
+            (this.m_asyncShortFilmOwnership = new An.a()),
             Object(_.c)();
         }
         return (
           (e.prototype.Init = function () {
             r.render(
-              i.createElement(Rr, { app: this }),
+              i.createElement(Cn, { app: this }),
               document.getElementById("dota_react_root")
             );
           }),
@@ -44451,7 +42716,7 @@ object-assign
           e
         );
       })())();
-    function Hr(e) {
+    function xn(e) {
       return Object(n.b)(this, void 0, void 0, function () {
         var t, r, i, o, s, l, c, u, d;
         return Object(n.e)(this, function (m) {
@@ -44509,10 +42774,10 @@ object-assign
               return (
                 Object(v.e)("application_config"),
                 Object(p.b)(),
-                [4, Hr(p.a.LANGUAGE)]
+                [4, xn(p.a.LANGUAGE)]
               );
             case 1:
-              return e.sent(), Pr.Init(), [2];
+              return e.sent(), Yn.Init(), [2];
           }
         });
       });
@@ -52713,6 +50978,365 @@ PERFORMANCE OF THIS SOFTWARE.
       });
     })(a("wd/R"));
   },
+  nz6D: function (e, t, a) {
+    "use strict";
+    var n,
+      r,
+      i = a("q1tI"),
+      o = a.n(i),
+      s = function (e, t) {
+        return (s =
+          Object.setPrototypeOf ||
+          ({ __proto__: [] } instanceof Array &&
+            function (e, t) {
+              e.__proto__ = t;
+            }) ||
+          function (e, t) {
+            for (var a in t) t.hasOwnProperty(a) && (e[a] = t[a]);
+          })(e, t);
+      },
+      l =
+        ((r = n = {
+          path: void 0,
+          exports: {},
+          require: function (e, t) {
+            return (function () {
+              throw new Error(
+                "Dynamic requires are not currently supported by @rollup/plugin-commonjs"
+              );
+            })(null == t && n.path);
+          },
+        }),
+        n.exports,
+        (function () {
+          var e = {}.hasOwnProperty;
+          function t() {
+            for (var a = [], n = 0; n < arguments.length; n++) {
+              var r = arguments[n];
+              if (r) {
+                var i = typeof r;
+                if ("string" === i || "number" === i) a.push(r);
+                else if (Array.isArray(r) && r.length) {
+                  var o = t.apply(null, r);
+                  o && a.push(o);
+                } else if ("object" === i)
+                  for (var s in r) e.call(r, s) && r[s] && a.push(s);
+              }
+            }
+            return a.join(" ");
+          }
+          r.exports
+            ? ((t.default = t), (r.exports = t))
+            : (window.classNames = t);
+        })(),
+        n.exports);
+    function c(e, t, a) {
+      var n, r, i, o, s;
+      function l() {
+        var c = Date.now() - o;
+        c < t && c >= 0
+          ? (n = setTimeout(l, t - c))
+          : ((n = null), a || ((s = e.apply(i, r)), (i = r = null)));
+      }
+      null == t && (t = 100);
+      var c = function () {
+        (i = this), (r = arguments), (o = Date.now());
+        var c = a && !n;
+        return (
+          n || (n = setTimeout(l, t)),
+          c && ((s = e.apply(i, r)), (i = r = null)),
+          s
+        );
+      };
+      return (
+        (c.clear = function () {
+          n && (clearTimeout(n), (n = null));
+        }),
+        (c.flush = function () {
+          n &&
+            ((s = e.apply(i, r)), (i = r = null), clearTimeout(n), (n = null));
+        }),
+        c
+      );
+    }
+    c.debounce = c;
+    var u = c;
+    !(function (e, t) {
+      void 0 === t && (t = {});
+      var a = t.insertAt;
+      if ("undefined" != typeof document) {
+        var n = document.head || document.getElementsByTagName("head")[0],
+          r = document.createElement("style");
+        (r.type = "text/css"),
+          "top" === a && n.firstChild
+            ? n.insertBefore(r, n.firstChild)
+            : n.appendChild(r),
+          r.styleSheet
+            ? (r.styleSheet.cssText = e)
+            : r.appendChild(document.createTextNode(e));
+      }
+    })(
+      ".indiana-scroll-container {\n  overflow: auto; }\n  .indiana-scroll-container--dragging {\n    scroll-behavior: auto !important; }\n    .indiana-scroll-container--dragging > * {\n      pointer-events: none;\n      cursor: -webkit-grab;\n      cursor: grab; }\n  .indiana-scroll-container--hide-scrollbars {\n    overflow: hidden;\n    overflow: -moz-scrollbars-none;\n    -ms-overflow-style: none;\n    scrollbar-width: none; }\n    .indiana-scroll-container--hide-scrollbars::-webkit-scrollbar {\n      display: none !important;\n      height: 0 !important;\n      width: 0 !important;\n      background: transparent !important;\n      -webkit-appearance: none !important; }\n  .indiana-scroll-container--native-scroll {\n    overflow: auto; }\n\n.indiana-dragging {\n  cursor: -webkit-grab;\n  cursor: grab; }\n"
+    );
+    var d,
+      m =
+        ((d = "indiana-scroll-container"),
+        function (e, t) {
+          if (!e) return d;
+          var a;
+          "string" == typeof e ? (a = e) : (t = e);
+          var n = d;
+          return (
+            a && (n += "__" + a),
+            n +
+              (t
+                ? Object.keys(t).reduce(function (e, a) {
+                    var r = t[a];
+                    return (
+                      r &&
+                        (e +=
+                          " " +
+                          ("boolean" == typeof r
+                            ? n + "--" + a
+                            : n + "--" + a + "_" + r)),
+                      e
+                    );
+                  }, "")
+                : "")
+          );
+        }),
+      p = (function (e) {
+        function t(t) {
+          var a = e.call(this, t) || this;
+          return (
+            (a.onEndScroll = function () {
+              (a.scrolling = !1), !a.pressed && a.started && a.processEnd();
+            }),
+            (a.onScroll = function (e) {
+              var t = a.container.current;
+              (t.scrollLeft === a.scrollLeft && t.scrollTop === a.scrollTop) ||
+                ((a.scrolling = !0), a.processScroll(e), a.onEndScroll());
+            }),
+            (a.onTouchStart = function (e) {
+              var t = a.props.nativeMobileScroll;
+              if (a.isDraggable(e.target))
+                if (((a.internal = !0), t && a.scrolling)) a.pressed = !0;
+                else {
+                  var n = e.touches[0];
+                  a.processClick(e, n.clientX, n.clientY),
+                    !t && a.props.stopPropagation && e.stopPropagation();
+                }
+            }),
+            (a.onTouchEnd = function (e) {
+              var t = a.props.nativeMobileScroll;
+              a.pressed &&
+                (!a.started || (a.scrolling && t)
+                  ? (a.pressed = !1)
+                  : a.processEnd(),
+                a.forceUpdate());
+            }),
+            (a.onTouchMove = function (e) {
+              var t = a.props.nativeMobileScroll;
+              if (a.pressed && (!t || !a.isMobile)) {
+                var n = e.touches[0];
+                n && a.processMove(e, n.clientX, n.clientY),
+                  e.preventDefault(),
+                  a.props.stopPropagation && e.stopPropagation();
+              }
+            }),
+            (a.onMouseDown = function (e) {
+              a.isDraggable(e.target) &&
+                a.isScrollable() &&
+                ((a.internal = !0),
+                -1 !== a.props.buttons.indexOf(e.button) &&
+                  (a.processClick(e, e.clientX, e.clientY),
+                  e.preventDefault(),
+                  a.props.stopPropagation && e.stopPropagation()));
+            }),
+            (a.onMouseMove = function (e) {
+              a.pressed &&
+                (a.processMove(e, e.clientX, e.clientY),
+                e.preventDefault(),
+                a.props.stopPropagation && e.stopPropagation());
+            }),
+            (a.onMouseUp = function (e) {
+              a.pressed &&
+                (a.started
+                  ? a.processEnd()
+                  : ((a.internal = !1),
+                    (a.pressed = !1),
+                    a.forceUpdate(),
+                    a.props.onClick && a.props.onClick(e)),
+                e.preventDefault(),
+                a.props.stopPropagation && e.stopPropagation());
+            }),
+            (a.container = o.a.createRef()),
+            (a.onEndScroll = u(a.onEndScroll, 300)),
+            (a.scrolling = !1),
+            (a.started = !1),
+            (a.pressed = !1),
+            (a.internal = !1),
+            (a.getRef = a.getRef.bind(a)),
+            a
+          );
+        }
+        return (
+          (function (e, t) {
+            function a() {
+              this.constructor = e;
+            }
+            s(e, t),
+              (e.prototype =
+                null === t
+                  ? Object.create(t)
+                  : ((a.prototype = t.prototype), new a()));
+          })(t, e),
+          (t.prototype.componentDidMount = function () {
+            var e = this.props.nativeMobileScroll,
+              t = this.container.current;
+            window.addEventListener("mouseup", this.onMouseUp),
+              window.addEventListener("mousemove", this.onMouseMove),
+              window.addEventListener("touchmove", this.onTouchMove, {
+                passive: !1,
+              }),
+              window.addEventListener("touchend", this.onTouchEnd),
+              t.addEventListener("touchstart", this.onTouchStart, {
+                passive: !1,
+              }),
+              t.addEventListener("mousedown", this.onMouseDown, {
+                passive: !1,
+              }),
+              e &&
+                ((this.isMobile = this.isMobileDevice()),
+                this.isMobile && this.forceUpdate());
+          }),
+          (t.prototype.componentWillUnmount = function () {
+            window.removeEventListener("mouseup", this.onMouseUp),
+              window.removeEventListener("mousemove", this.onMouseMove),
+              window.removeEventListener("touchmove", this.onTouchMove),
+              window.removeEventListener("touchend", this.onTouchEnd);
+          }),
+          (t.prototype.getElement = function () {
+            return this.container.current;
+          }),
+          (t.prototype.isMobileDevice = function () {
+            return (
+              void 0 !== window.orientation ||
+              -1 !== navigator.userAgent.indexOf("IEMobile")
+            );
+          }),
+          (t.prototype.isDraggable = function (e) {
+            var t = this.props.ignoreElements;
+            if (t) {
+              var a = e.closest(t);
+              return null === a || a.contains(this.getElement());
+            }
+            return !0;
+          }),
+          (t.prototype.isScrollable = function () {
+            var e = this.container.current;
+            return (
+              e &&
+              (e.scrollWidth > e.clientWidth || e.scrollHeight > e.clientHeight)
+            );
+          }),
+          (t.prototype.processClick = function (e, t, a) {
+            var n = this.container.current;
+            (this.scrollLeft = n.scrollLeft),
+              (this.scrollTop = n.scrollTop),
+              (this.clientX = t),
+              (this.clientY = a),
+              (this.pressed = !0);
+          }),
+          (t.prototype.processStart = function (e) {
+            void 0 === e && (e = !0);
+            var t = this.props.onStartScroll;
+            (this.started = !0),
+              e && document.body.classList.add("indiana-dragging"),
+              t && t({ external: !this.internal }),
+              this.forceUpdate();
+          }),
+          (t.prototype.processScroll = function (e) {
+            if (this.started) {
+              var t = this.props.onScroll;
+              t && t({ external: !this.internal });
+            } else this.processStart(!1);
+          }),
+          (t.prototype.processMove = function (e, t, a) {
+            var n = this.props,
+              r = n.horizontal,
+              i = n.vertical,
+              o = n.activationDistance,
+              s = n.onScroll,
+              l = this.container.current;
+            this.started
+              ? (r && (l.scrollLeft -= t - this.clientX),
+                i && (l.scrollTop -= a - this.clientY),
+                s && s({ external: !this.internal }),
+                (this.clientX = t),
+                (this.clientY = a),
+                (this.scrollLeft = l.scrollLeft),
+                (this.scrollTop = l.scrollTop))
+              : ((r && Math.abs(t - this.clientX) > o) ||
+                  (i && Math.abs(a - this.clientY) > o)) &&
+                ((this.clientX = t), (this.clientY = a), this.processStart());
+          }),
+          (t.prototype.processEnd = function () {
+            var e = this.props.onEndScroll;
+            this.container.current && e && e({ external: !this.internal }),
+              (this.pressed = !1),
+              (this.started = !1),
+              (this.scrolling = !1),
+              (this.internal = !1),
+              document.body.classList.remove("indiana-dragging"),
+              this.forceUpdate();
+          }),
+          (t.prototype.getRef = function (e) {
+            [this.container, this.props.innerRef].forEach(function (t) {
+              t && ("function" == typeof t ? t(e) : (t.current = e));
+            });
+          }),
+          (t.prototype.render = function () {
+            var e = this.props,
+              t = e.children,
+              a = e.className,
+              n = e.style,
+              r = e.hideScrollbars,
+              i = e.component;
+            return o.a.createElement(
+              i,
+              {
+                className: l(
+                  a,
+                  m({
+                    dragging: this.pressed,
+                    "hide-scrollbars": r,
+                    "native-scroll": this.isMobile,
+                  })
+                ),
+                style: n,
+                ref: this.getRef,
+                onScroll: this.onScroll,
+              },
+              t
+            );
+          }),
+          (t.defaultProps = {
+            nativeMobileScroll: !0,
+            hideScrollbars: !0,
+            activationDistance: 10,
+            vertical: !0,
+            horizontal: !0,
+            stopPropagation: !1,
+            style: {},
+            component: "div",
+            buttons: [0],
+          }),
+          t
+        );
+      })(i.PureComponent);
+    t.a = p;
+  },
   o1bE: function (e, t, a) {
     !(function (e) {
       "use strict";
@@ -53750,7 +52374,6 @@ PERFORMANCE OF THIS SOFTWARE.
       ButtonText: "dpcroot_ButtonText_m8fp5",
       SteamLogo: "dpcroot_SteamLogo_1Yepm",
       DPCRoot: "dpcroot_DPCRoot_1HKQ9",
-      TopAnchor: "dpcroot_TopAnchor_18uOt",
       DPCHeaderSpacer: "dpcroot_DPCHeaderSpacer_2iZkn",
       Icon: "dpcroot_Icon_2pqfk",
       Right: "dpcroot_Right_2Ejay",
@@ -54733,6 +53356,1529 @@ PERFORMANCE OF THIS SOFTWARE.
       fe.renderStatic = fe.rewind;
     }.call(this, a("yLpj")));
   },
+  qn5s: function (e, t, a) {
+    "use strict";
+    a.d(t, "b", function () {
+      return q;
+    }),
+      a.d(t, "a", function () {
+        return Q;
+      });
+    var n = a("tkkQ"),
+      r = a("q1tI"),
+      i = a.n(r),
+      o = a("55Ip"),
+      s = a("Ty5D"),
+      l = a("pitT"),
+      c = a.n(l),
+      u = a("3wCP"),
+      d = a("TyAF"),
+      m = a("3Rkk"),
+      p = a("sjx6"),
+      _ = a("yWf2"),
+      h = a.n(_),
+      f = a("knzx"),
+      g = a("dkia"),
+      v = a("k7N+"),
+      y = a.n(v),
+      b = a("AAuy"),
+      E = a("wd/R"),
+      L = a.n(E),
+      w = a("AQa9"),
+      M = a("WPyR"),
+      S = a("/fh+"),
+      T = a("KWBk"),
+      D = function (e) {
+        var t = e.nTeamID,
+          a = e.className;
+        return i.a.createElement("div", {
+          className: Object(u.a)(h.a.TeamLogo, a),
+          style: {
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundImage:
+              "url( " +
+              n.a.IMG_URL +
+              "teams/" +
+              (t || "team_unknown_web") +
+              ".png )",
+          },
+        });
+      };
+    function k(e, t) {
+      return Array.from(
+        Array.from(Array(t - e).keys()).map(function (t) {
+          return t + e;
+        })
+      );
+    }
+    var O = Object(d.a)(function () {
+        Object(s.i)();
+        var e = Object(T.b)();
+        return M.a.Get().GetLeagueNode(e.nLeagueID, e.nNodeID)
+          ? i.a.createElement(
+              "div",
+              { className: h.a.DPCSeriesDetails },
+              i.a.createElement(j, null),
+              i.a.createElement(N, null)
+            )
+          : i.a.createElement("div", { className: h.a.DPCSeriesDetails });
+      }),
+      j = Object(d.a)(function () {
+        var e = Object(T.b)(),
+          t = M.a.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
+          a =
+            (null == t ? void 0 : t.is_completed) &&
+            (null == t ? void 0 : t.team_1_wins) >
+              (null == t ? void 0 : t.team_2_wins),
+          n =
+            (null == t ? void 0 : t.is_completed) &&
+            (null == t ? void 0 : t.team_2_wins) >
+              (null == t ? void 0 : t.team_1_wins),
+          r = 0;
+        switch (null == t ? void 0 : t.node_type) {
+          case f.c.BEST_OF_ONE:
+            r = 1;
+            break;
+          case f.c.BEST_OF_TWO:
+          case f.c.BEST_OF_THREE:
+            r = 2;
+            break;
+          case f.c.BEST_OF_FIVE:
+            r = 3;
+        }
+        var o = M.a
+            .Get()
+            .GetLeagueTeamDivisionString(
+              e.eSeason,
+              null == t ? void 0 : t.team_id_1,
+              !1
+            ),
+          s =
+            (M.a
+              .Get()
+              .GetLeagueTeamDivision(
+                e.eSeason,
+                null == t ? void 0 : t.team_id_1
+              ),
+            (null == t ? void 0 : t.team_1_wins) +
+              (null == t ? void 0 : t.team_2_wins) +
+              1),
+          l = !(null == t ? void 0 : t.has_started),
+          c =
+            (null == t ? void 0 : t.has_started) &&
+            !(null == t ? void 0 : t.is_completed),
+          d = null == t ? void 0 : t.is_completed;
+        return i.a.createElement(
+          "div",
+          { className: h.a.DPCSeriesDetailsHeader },
+          i.a.createElement(I, {
+            nTeamID: null == t ? void 0 : t.team_id_1,
+            bLeft: !0,
+            bWinner: a,
+            nWins: null == t ? void 0 : t.team_1_wins,
+            nPossibleWins: r,
+          }),
+          i.a.createElement(
+            "div",
+            { className: h.a.CenterSection },
+            c &&
+              i.a.createElement(
+                "div",
+                { className: h.a.Game },
+                Object(g.a)("#dpc_game_number", s)
+              ),
+            i.a.createElement(
+              "div",
+              { className: h.a.Season },
+              Object(g.a)("#dpc_season_" + Object(p.m)(e.eSeason))
+            ),
+            (null == o ? void 0 : o.length) > 0 &&
+              i.a.createElement(
+                "div",
+                { className: h.a.Division },
+                Object(g.a)(o)
+              ),
+            l &&
+              i.a.createElement(y.a, {
+                className: h.a.Timestamp,
+                date: 1e3 * (null == t ? void 0 : t.scheduled_time),
+                format: "MMM DD LT",
+              }),
+            d &&
+              i.a.createElement(y.a, {
+                className: h.a.Timestamp,
+                date: 1e3 * (null == t ? void 0 : t.actual_time),
+                format: "MMM DD LT",
+              }),
+            c &&
+              i.a.createElement(
+                "div",
+                { className: Object(u.a)(h.a.LiveBanner) },
+                Object(g.a)("#dpc_live"),
+                i.a.createElement("div", { className: h.a.Dot })
+              )
+          ),
+          i.a.createElement(I, {
+            nTeamID: null == t ? void 0 : t.team_id_2,
+            bLeft: !1,
+            bWinner: n,
+            nWins: null == t ? void 0 : t.team_2_wins,
+            nPossibleWins: r,
+          })
+        );
+      }),
+      I = Object(d.a)(function (e) {
+        var t = e.nTeamID,
+          a = e.bLeft,
+          r = e.bWinner,
+          l = e.nWins,
+          c = e.nPossibleWins,
+          d = Object(s.i)(),
+          p = Object(T.b)(),
+          _ = M.a.Get().GetTeamNames(t),
+          f = M.a.Get().FindLeagueTeamStanding(p.eSeason, t),
+          v = f ? f.nWins + " - " + f.nLosses : "";
+        return i.a.createElement(
+          "div",
+          {
+            className: Object(u.a)(
+              h.a.DPCSeriesDetailsHeaderTeam,
+              a && h.a.Left,
+              !a && h.a.Right,
+              r && h.a.Winner
+            ),
+          },
+          i.a.createElement(
+            "div",
+            { className: h.a.TopSection },
+            i.a.createElement(
+              "div",
+              { className: h.a.Labels },
+              i.a.createElement(
+                "div",
+                { className: h.a.TeamName },
+                null == _ ? void 0 : _.name
+              ),
+              i.a.createElement("div", { className: h.a.Record }, v)
+            ),
+            i.a.createElement("div", {
+              className: h.a.TeamLogo,
+              style: {
+                backgroundImage:
+                  "url( " +
+                  n.a.IMG_URL +
+                  "teams/square_medium/" +
+                  (0 != t ? t : "team_unknown_web") +
+                  ".png )",
+              },
+            }),
+            i.a.createElement(
+              "div",
+              { className: h.a.Pips },
+              i.a.createElement("div", {
+                className: Object(u.a)(
+                  h.a.Pip,
+                  l > 0 && h.a.Filled,
+                  c > 0 && h.a.Visible
+                ),
+              }),
+              i.a.createElement("div", {
+                className: Object(u.a)(
+                  h.a.Pip,
+                  l > 1 && h.a.Filled,
+                  c > 1 && h.a.Visible
+                ),
+              }),
+              i.a.createElement("div", {
+                className: Object(u.a)(
+                  h.a.Pip,
+                  l > 2 && h.a.Filled,
+                  c > 2 && h.a.Visible
+                ),
+              })
+            )
+          ),
+          i.a.createElement(
+            o.b,
+            { to: m.a.dpc_teams(d.strSeason), className: h.a.TeamLinkSection },
+            i.a.createElement(
+              "div",
+              { className: h.a.TeamLink },
+              Object(g.a)("#dpc_team_profile")
+            )
+          )
+        );
+      }),
+      N = Object(d.a)(function () {
+        var e = Object(T.b)(),
+          t = M.a.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
+          a = 0;
+        if (M.a.Get().GetSpoilerBlockEnabled())
+          switch (null == t ? void 0 : t.node_type) {
+            case f.c.BEST_OF_ONE:
+              a = 1;
+              break;
+            case f.c.BEST_OF_TWO:
+              a = 2;
+              break;
+            case f.c.BEST_OF_THREE:
+              a = 3;
+              break;
+            case f.c.BEST_OF_FIVE:
+              a = 5;
+          }
+        else
+          a =
+            (null == t ? void 0 : t.team_1_wins) +
+            (null == t ? void 0 : t.team_2_wins);
+        return i.a.createElement(
+          "div",
+          { className: Object(u.a)(h.a.DPCSeriesDetailsBody) },
+          i.a.createElement(
+            "div",
+            { className: h.a.SeriesDetailsUpper },
+            i.a.createElement(C, null),
+            i.a.createElement(A, null),
+            i.a.createElement(x, null),
+            i.a.createElement(G, null),
+            i.a.createElement(B, null)
+          ),
+          i.a.createElement(
+            "div",
+            {
+              className: Object(u.a)(
+                h.a.GameSelectorList,
+                (null == t ? void 0 : t.is_completed) && h.a.Visible
+              ),
+            },
+            k(1, a + 1).map(function (e) {
+              return i.a.createElement(Y, { key: e, nGame: e });
+            })
+          )
+        );
+      }),
+      C = Object(d.a)(function () {
+        var e = Object(T.b)(),
+          t = M.a.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
+          a =
+            e.eSeriesDisplay == p.i.OVERVIEW &&
+            (null == t ? void 0 : t.is_completed),
+          n = t && t.team_1_wins == t.team_2_wins,
+          r = n ? "#dpc_draw" : "#dpc_victory",
+          o =
+            (null == t ? void 0 : t.team_1_wins) >
+            (null == t ? void 0 : t.team_2_wins)
+              ? null == t
+                ? void 0
+                : t.team_id_1
+              : null == t
+              ? void 0
+              : t.team_id_2,
+          s = Math.max(
+            null == t ? void 0 : t.team_1_wins,
+            null == t ? void 0 : t.team_2_wins
+          ),
+          l = Math.min(
+            null == t ? void 0 : t.team_1_wins,
+            null == t ? void 0 : t.team_2_wins
+          ),
+          c = M.a.Get().GetTeamInfo(null == t ? void 0 : t.team_id_1),
+          d = M.a.Get().GetTeamInfo(null == t ? void 0 : t.team_id_2),
+          m =
+            c && t && (n || o == t.team_id_1)
+              ? c.color_primary + "44"
+              : "#131313",
+          _ =
+            d && t && (n || o == t.team_id_2)
+              ? d.color_primary + "44"
+              : "#131313",
+          f = M.a.Get().GetTeamNames(o),
+          v = n ? "" : null == f ? void 0 : f.name,
+          y = [];
+        null == c ||
+          c.registered_member_account_ids.forEach(function (e) {
+            var t = c.members.find(function (t) {
+              return t.account_id == e;
+            });
+            t &&
+              y.push({
+                nAccountID: t.account_id,
+                strProName: t.pro_name,
+                nHeroID: void 0,
+                nLevel: void 0,
+                nKills: void 0,
+                nDeaths: void 0,
+                nAssists: void 0,
+              });
+          });
+        var b = [];
+        return (
+          null == d ||
+            d.registered_member_account_ids.forEach(function (e) {
+              var t = d.members.find(function (t) {
+                return t.account_id == e;
+              });
+              t &&
+                b.push({
+                  nAccountID: t.account_id,
+                  strProName: t.pro_name,
+                  nHeroID: void 0,
+                  nLevel: void 0,
+                  nKills: void 0,
+                  nDeaths: void 0,
+                  nAssists: void 0,
+                });
+            }),
+          i.a.createElement(
+            "div",
+            {
+              className: Object(u.a)(
+                h.a.DPCSeriesDetailsOverview,
+                a && h.a.Visible
+              ),
+              style: {
+                background: "linear-gradient( 120deg, " + m + ", " + _ + " )",
+              },
+            },
+            i.a.createElement(
+              "div",
+              { className: h.a.PlayerList },
+              k(0, 5).map(function (e) {
+                return e < y.length
+                  ? i.a.createElement(H, {
+                      bLeft: !1,
+                      strName: y[e].strProName,
+                      nAccountID: y[e].nAccountID,
+                    })
+                  : e < y.length - 1
+                  ? i.a.createElement("div", {
+                      className: h.a.MatchSectionDivider,
+                    })
+                  : null;
+              })
+            ),
+            i.a.createElement(
+              "div",
+              { className: h.a.CenterContainer },
+              i.a.createElement(
+                "div",
+                { className: h.a.Results },
+                Object(g.a)(r)
+              ),
+              i.a.createElement(
+                "div",
+                { className: Object(u.a)(h.a.TeamsDraw, n && h.a.Visible) },
+                i.a.createElement(D, {
+                  nTeamID: null == t ? void 0 : t.team_id_1,
+                }),
+                i.a.createElement(D, {
+                  nTeamID: null == t ? void 0 : t.team_id_2,
+                })
+              ),
+              i.a.createElement(
+                "div",
+                { className: Object(u.a)(h.a.TeamWinner, !n && h.a.Visible) },
+                i.a.createElement(D, { nTeamID: o })
+              ),
+              i.a.createElement("div", { className: h.a.WinningTeamName }, v),
+              !n &&
+                i.a.createElement(
+                  "div",
+                  { className: h.a.WinningRecord },
+                  Object(g.a)("#dpc_wins_score", s, l)
+                )
+            ),
+            i.a.createElement(
+              "div",
+              { className: h.a.PlayerList },
+              k(0, 5).map(function (e) {
+                return e < b.length
+                  ? i.a.createElement(H, {
+                      bLeft: !0,
+                      strName: b[e].strProName,
+                      nAccountID: b[e].nAccountID,
+                    })
+                  : e < b.length - 1
+                  ? i.a.createElement("div", {
+                      className: h.a.MatchSectionDivider,
+                    })
+                  : null;
+              })
+            )
+          )
+        );
+      }),
+      A = Object(d.a)(function () {
+        var e = Object(T.b)(),
+          t = M.a.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
+          a = M.a.Get().GetTeamInfo(null == t ? void 0 : t.team_id_1),
+          n = M.a.Get().GetTeamInfo(null == t ? void 0 : t.team_id_2),
+          r =
+            e.eSeriesDisplay == p.i.OVERVIEW &&
+            !(null == t ? void 0 : t.is_completed) &&
+            !(null == t ? void 0 : t.has_started),
+          o = [];
+        null == a ||
+          a.registered_member_account_ids.forEach(function (e) {
+            var t = a.members.find(function (t) {
+              return t.account_id == e;
+            });
+            t &&
+              o.push({
+                nAccountID: t.account_id,
+                strProName: t.pro_name,
+                nHeroID: void 0,
+                nLevel: void 0,
+                nKills: void 0,
+                nDeaths: void 0,
+                nAssists: void 0,
+              });
+          });
+        var s = [];
+        return (
+          null == n ||
+            n.registered_member_account_ids.forEach(function (e) {
+              var t = n.members.find(function (t) {
+                return t.account_id == e;
+              });
+              t &&
+                s.push({
+                  nAccountID: t.account_id,
+                  strProName: t.pro_name,
+                  nHeroID: void 0,
+                  nLevel: void 0,
+                  nKills: void 0,
+                  nDeaths: void 0,
+                  nAssists: void 0,
+                });
+            }),
+          i.a.createElement(
+            "div",
+            { className: Object(u.a)(h.a.DPCSeriesUpcoming, r && h.a.Visible) },
+            i.a.createElement(
+              "div",
+              { className: h.a.PlayerList },
+              k(0, 5).map(function (e) {
+                return e < o.length
+                  ? i.a.createElement(H, {
+                      bLeft: !1,
+                      strName: o[e].strProName,
+                      nAccountID: o[e].nAccountID,
+                    })
+                  : e < o.length - 1
+                  ? i.a.createElement("div", {
+                      className: h.a.MatchSectionDivider,
+                    })
+                  : null;
+              })
+            ),
+            i.a.createElement(
+              "div",
+              { className: h.a.PlayerList },
+              k(0, 5).map(function (e) {
+                return e < s.length
+                  ? i.a.createElement(H, {
+                      bLeft: !0,
+                      strName: s[e].strProName,
+                      nAccountID: s[e].nAccountID,
+                    })
+                  : e < s.length - 1
+                  ? i.a.createElement("div", {
+                      className: h.a.MatchSectionDivider,
+                    })
+                  : null;
+              })
+            )
+          )
+        );
+      }),
+      Y = Object(d.a)(function (e) {
+        var t = e.nGame,
+          a = Object(s.i)(),
+          n = Object(T.b)(),
+          r = M.a.Get().GetLeagueNode(n.nLeagueID, n.nNodeID),
+          l = t - 1,
+          c =
+            (null == r ? void 0 : r.matches.length) > l ? r.matches[l] : void 0,
+          d = c ? M.a.Get().GetMatchData(n.nLeagueID, c.match_id) : void 0,
+          _ = M.a.Get().GetTeamNames(null == c ? void 0 : c.winning_team_id),
+          f = d
+            ? L.a
+                .utc(L.a.duration(d.duration, "seconds").as("milliseconds"))
+                .format("mm:ss")
+            : "",
+          v = (null == r ? void 0 : r.vods.length) > 0;
+        return i.a.createElement(
+          "div",
+          { className: h.a.GameSelector },
+          i.a.createElement(
+            "div",
+            { className: h.a.TopRow },
+            i.a.createElement(D, {
+              nTeamID: null == c ? void 0 : c.winning_team_id,
+            }),
+            i.a.createElement(
+              "div",
+              { className: h.a.GameNumber },
+              Object(g.a)("#dpc_game_number", t)
+            ),
+            i.a.createElement("div", { className: h.a.Duration }, f)
+          ),
+          i.a.createElement(
+            "div",
+            { className: h.a.WinningTeam },
+            Object(g.a)("#dpc_team_win", null == _ ? void 0 : _.name)
+          ),
+          i.a.createElement(
+            "div",
+            { className: h.a.GameButtons },
+            i.a.createElement(
+              "div",
+              {
+                className: Object(u.a)(
+                  h.a.GameButton,
+                  h.a.ButtonVOD,
+                  v && h.a.Enabled
+                ),
+              },
+              Object(g.a)(v ? "#dpc_watch_vod" : "#dpc_no_vod")
+            ),
+            i.a.createElement(
+              o.b,
+              {
+                to: m.a.dpc_home(
+                  a.strSeason,
+                  a.strLeagueID,
+                  a.strNodeID,
+                  Object(p.o)(t, p.i.DETAILS)
+                ),
+                className: Object(u.a)(
+                  h.a.GameButton,
+                  h.a.ButtonDetails,
+                  h.a.Enabled
+                ),
+              },
+              Object(g.a)("#doc_game_details")
+            )
+          )
+        );
+      }),
+      x = Object(d.a)(function () {
+        var e = Object(T.b)(),
+          t = M.a.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
+          a =
+            e.eSeriesDisplay == p.i.DETAILS &&
+            (null == t ? void 0 : t.is_completed),
+          n = Object(r.useState)(0),
+          o = n[0],
+          s = n[1],
+          l = Object(r.useState)(0),
+          c = l[0],
+          d = l[1],
+          m = 0 != o ? o : c;
+        return i.a.createElement(
+          "div",
+          {
+            className: Object(u.a)(
+              h.a.DPCSeriesDetailsGameDetails,
+              a && h.a.Visible
+            ),
+          },
+          i.a.createElement("div", { className: h.a.Header }),
+          i.a.createElement(
+            "div",
+            { className: h.a.Body },
+            i.a.createElement(P, {
+              nTeamID: null == t ? void 0 : t.team_id_1,
+              bLeft: !0,
+              nHoveredAccountID: c,
+              setHoveredAccountID: d,
+              nSelectedAccountID: o,
+              setSelectedAccountID: s,
+            }),
+            i.a.createElement(P, {
+              nTeamID: null == t ? void 0 : t.team_id_2,
+              bLeft: !1,
+              nHoveredAccountID: c,
+              setHoveredAccountID: d,
+              nSelectedAccountID: o,
+              setSelectedAccountID: s,
+            }),
+            i.a.createElement(R, { bLeft: !0, nAccountID: m }),
+            i.a.createElement(R, { bLeft: !1, nAccountID: m })
+          )
+        );
+      }),
+      R = Object(d.a)(function (e) {
+        var t,
+          a,
+          o = e.bLeft,
+          s = e.nAccountID,
+          l = Object(T.b)(),
+          c = Object(r.useRef)(),
+          d = S.a.Get().getItemList(),
+          m = M.a.Get().GetLeagueNode(l.nLeagueID, l.nNodeID),
+          p =
+            m && (null == m ? void 0 : m.matches.length) > 0
+              ? M.a
+                  .Get()
+                  .GetMatchData(
+                    l.nLeagueID,
+                    null ===
+                      (t = null == m ? void 0 : m.matches[l.nSeriesGame - 1]) ||
+                      void 0 === t
+                      ? void 0
+                      : t.match_id
+                  )
+              : void 0,
+          _ =
+            (null == m ? void 0 : m.team_id_1) ==
+            (null == p ? void 0 : p.tourney.radiant_team_id),
+          f =
+            null == p
+              ? void 0
+              : p.players.find(function (e) {
+                  return e.account_id == s;
+                }),
+          g = (null == f ? void 0 : f.player_slot) < 128,
+          v = 0 != s && o == (g ? !_ : _),
+          y = g
+            ? null == p
+              ? void 0
+              : p.tourney.radiant_team_id
+            : null == p
+            ? void 0
+            : p.tourney.dire_team_id,
+          b = M.a.Get().GetTeamNames(y),
+          E = S.a.Get().getHeroList(),
+          L =
+            null == E
+              ? void 0
+              : E.heroes.find(function (e) {
+                  return e.id == (null == f ? void 0 : f.hero_id);
+                }),
+          w =
+            null === (a = null == L ? void 0 : L.name) || void 0 === a
+              ? void 0
+              : a.replace("npc_dota_hero_", "");
+        return (
+          Object(r.useEffect)(
+            function () {
+              var e;
+              null === (e = c.current) || void 0 === e || e.load();
+            },
+            [w]
+          ),
+          i.a.createElement(
+            "div",
+            {
+              className: Object(u.a)(
+                h.a.MatchSectionDetailsOverlay,
+                v && h.a.Visible,
+                o && h.a.Left,
+                !o && h.a.Right
+              ),
+            },
+            i.a.createElement(
+              "div",
+              { className: h.a.TopSection },
+              w &&
+                i.a.createElement(
+                  "video",
+                  {
+                    className: h.a.HeroPortraitContainer,
+                    ref: c,
+                    autoPlay: !0,
+                    preload: "auto",
+                    muted: !0,
+                    loop: !0,
+                    playsInline: !0,
+                  },
+                  i.a.createElement("source", {
+                    type: "video/webm",
+                    src: n.a.VIDEO_URL + "heroes/renders/" + w + ".webm",
+                  }),
+                  i.a.createElement("img", {
+                    src: n.a.VIDEO_URL + "heroes/renders/" + w + ".png",
+                  })
+                ),
+              i.a.createElement(
+                "div",
+                { className: h.a.Player },
+                i.a.createElement(
+                  "div",
+                  { className: h.a.PlayerName },
+                  null == f ? void 0 : f.pro_name
+                ),
+                i.a.createElement(
+                  "div",
+                  { className: h.a.TeamName },
+                  null == b ? void 0 : b.name
+                ),
+                i.a.createElement("div", {
+                  className: h.a.PlayerImage,
+                  style: {
+                    backgroundImage:
+                      "url( " +
+                      n.a.CDN_URL +
+                      "apps/dota2/players/" +
+                      s +
+                      ".png )",
+                  },
+                }),
+                i.a.createElement(D, { nTeamID: y })
+              )
+            ),
+            i.a.createElement(
+              "div",
+              { className: h.a.ItemSection },
+              null == f
+                ? void 0
+                : f.items.map(function (e, t) {
+                    var a =
+                      null == d
+                        ? void 0
+                        : d.itemabilities.find(function (t) {
+                            return t.id == e;
+                          });
+                    return a
+                      ? i.a.createElement("div", {
+                          key: s + "_" + t,
+                          className: h.a.ItemIcon,
+                          style: {
+                            backgroundImage:
+                              "url( " +
+                              n.a.IMG_URL +
+                              "items/" +
+                              (null == a
+                                ? void 0
+                                : a.name.replace("item_", "")) +
+                              ".png )",
+                          },
+                        })
+                      : null;
+                  })
+            ),
+            i.a.createElement("div", { className: h.a.PlaystyleSection })
+          )
+        );
+      }),
+      P = Object(d.a)(function (e) {
+        var t,
+          a = e.nTeamID,
+          n = e.bLeft,
+          r = e.nSelectedAccountID,
+          o = e.setSelectedAccountID,
+          s = e.nHoveredAccountID,
+          l = e.setHoveredAccountID,
+          c = Object(T.b)(),
+          d = M.a.Get().GetLeagueNode(c.nLeagueID, c.nNodeID),
+          m =
+            d && (null == d ? void 0 : d.matches.length) > 0
+              ? M.a
+                  .Get()
+                  .GetMatchData(
+                    c.nLeagueID,
+                    null ===
+                      (t = null == d ? void 0 : d.matches[c.nSeriesGame - 1]) ||
+                      void 0 === t
+                      ? void 0
+                      : t.match_id
+                  )
+              : void 0,
+          p = M.a.Get().GetTeamInfo(a),
+          _ = (null == m ? void 0 : m.tourney.radiant_team_id) == a,
+          v =
+            (_ &&
+              (null == m ? void 0 : m.match_outcome) == f.f.RADIANT_VICTORY) ||
+            (!_ && (null == m ? void 0 : m.match_outcome) == f.f.DIRE_VICTORY),
+          y = m ? (_ ? "#radiant" : "#dire") : "",
+          b = [];
+        return (
+          m
+            ? m.players
+                .filter(function (e) {
+                  return (
+                    (e.player_slot < 128 && _) || (e.player_slot >= 128 && !_)
+                  );
+                })
+                .map(function (e) {
+                  b.push({
+                    nAccountID: e.account_id,
+                    strProName: e.pro_name,
+                    nHeroID: e.hero_id,
+                    nLevel: e.level,
+                    nKills: e.kills,
+                    nDeaths: e.deaths,
+                    nAssists: e.assists,
+                  });
+                })
+            : p &&
+              p.registered_member_account_ids.forEach(function (e) {
+                var t = p.members.find(function (t) {
+                  return t.account_id == e;
+                });
+                t &&
+                  b.push({
+                    nAccountID: t.account_id,
+                    strProName: t.pro_name,
+                    nHeroID: void 0,
+                    nLevel: void 0,
+                    nKills: void 0,
+                    nDeaths: void 0,
+                    nAssists: void 0,
+                  });
+              }),
+          i.a.createElement(
+            "div",
+            {
+              className: Object(u.a)(
+                h.a.MatchSectionTeam,
+                n && h.a.Left,
+                !n && h.a.Right
+              ),
+            },
+            i.a.createElement(
+              "div",
+              { className: Object(u.a)(h.a.TeamHeading, v && h.a.Winner) },
+              i.a.createElement("div", { className: h.a.Team }, Object(g.a)(y)),
+              i.a.createElement(
+                "div",
+                { className: h.a.Score },
+                _
+                  ? null == m
+                    ? void 0
+                    : m.radiant_score
+                  : null == m
+                  ? void 0
+                  : m.dire_score
+              )
+            ),
+            5 == (null == b ? void 0 : b.length) &&
+              i.a.createElement(
+                "div",
+                { className: h.a.PlayerList },
+                i.a.createElement(H, {
+                  nHoveredAccountID: s,
+                  setHoveredAccountID: l,
+                  nSelectedAccountID: r,
+                  setSelectedAccountID: o,
+                  bLeft: n,
+                  strName: b[0].strProName,
+                  nAccountID: b[0].nAccountID,
+                  nHeroID: b[0].nHeroID,
+                  nLevel: b[0].nLevel,
+                  nKills: b[0].nKills,
+                  nDeaths: b[0].nDeaths,
+                  nAssists: b[0].nAssists,
+                }),
+                i.a.createElement("div", {
+                  className: h.a.MatchSectionDivider,
+                }),
+                i.a.createElement(H, {
+                  nHoveredAccountID: s,
+                  setHoveredAccountID: l,
+                  nSelectedAccountID: r,
+                  setSelectedAccountID: o,
+                  bLeft: n,
+                  strName: b[1].strProName,
+                  nAccountID: b[1].nAccountID,
+                  nHeroID: b[1].nHeroID,
+                  nLevel: b[1].nLevel,
+                  nKills: b[1].nKills,
+                  nDeaths: b[1].nDeaths,
+                  nAssists: b[1].nAssists,
+                }),
+                i.a.createElement("div", {
+                  className: h.a.MatchSectionDivider,
+                }),
+                i.a.createElement(H, {
+                  nHoveredAccountID: s,
+                  setHoveredAccountID: l,
+                  nSelectedAccountID: r,
+                  setSelectedAccountID: o,
+                  bLeft: n,
+                  strName: b[2].strProName,
+                  nAccountID: b[2].nAccountID,
+                  nHeroID: b[2].nHeroID,
+                  nLevel: b[2].nLevel,
+                  nKills: b[2].nKills,
+                  nDeaths: b[2].nDeaths,
+                  nAssists: b[2].nAssists,
+                }),
+                i.a.createElement("div", {
+                  className: h.a.MatchSectionDivider,
+                }),
+                i.a.createElement(H, {
+                  nHoveredAccountID: s,
+                  setHoveredAccountID: l,
+                  nSelectedAccountID: r,
+                  setSelectedAccountID: o,
+                  bLeft: n,
+                  strName: b[3].strProName,
+                  nAccountID: b[3].nAccountID,
+                  nHeroID: b[3].nHeroID,
+                  nLevel: b[3].nLevel,
+                  nKills: b[3].nKills,
+                  nDeaths: b[3].nDeaths,
+                  nAssists: b[3].nAssists,
+                }),
+                i.a.createElement("div", {
+                  className: h.a.MatchSectionDivider,
+                }),
+                i.a.createElement(H, {
+                  nHoveredAccountID: s,
+                  setHoveredAccountID: l,
+                  nSelectedAccountID: r,
+                  setSelectedAccountID: o,
+                  bLeft: n,
+                  strName: b[4].strProName,
+                  nAccountID: b[4].nAccountID,
+                  nHeroID: b[4].nHeroID,
+                  nLevel: b[4].nLevel,
+                  nKills: b[4].nKills,
+                  nDeaths: b[4].nDeaths,
+                  nAssists: b[4].nAssists,
+                })
+              )
+          )
+        );
+      }),
+      H = Object(d.a)(function (e) {
+        var t,
+          a = e.bLeft,
+          r = e.nHoveredAccountID,
+          o = e.setHoveredAccountID,
+          s = e.nSelectedAccountID,
+          l = e.setSelectedAccountID,
+          c = e.strName,
+          d = e.nAccountID,
+          m = e.nHeroID,
+          p = e.nLevel,
+          _ = e.nKills,
+          f = e.nDeaths,
+          v = e.nAssists,
+          y = S.a.Get().getHeroList(),
+          b =
+            null == y
+              ? void 0
+              : y.heroes.find(function (e) {
+                  return e.id == m;
+                }),
+          E =
+            null === (t = null == b ? void 0 : b.name) || void 0 === t
+              ? void 0
+              : t.replace("npc_dota_hero_", ""),
+          L = null == b ? void 0 : b.name_loc,
+          w = m ? _ + " / " + f + " / " + v : "",
+          M = m && 0 != m,
+          T = m ? Object(g.a)("#dpc_hero_level", p) : void 0,
+          D = s == d || (0 == s && r == d);
+        return i.a.createElement(
+          "div",
+          {
+            className: Object(u.a)(
+              h.a.MatchSectionPlayer,
+              a && h.a.Left,
+              !a && h.a.Right,
+              D && h.a.Selected
+            ),
+            onClick: function () {
+              return l(s == d ? 0 : d);
+            },
+            onMouseEnter: function () {
+              o && o(d);
+            },
+            onMouseLeave: function () {
+              o && o(0);
+            },
+          },
+          i.a.createElement(
+            "div",
+            { className: Object(u.a)(h.a.HeroAndLevel, !m && h.a.Collapsed) },
+            i.a.createElement("div", { className: h.a.HeroName }, L),
+            i.a.createElement("div", { className: h.a.Level }, T)
+          ),
+          i.a.createElement(
+            "div",
+            {
+              className: Object(u.a)(
+                h.a.HeroPlayer,
+                !M && h.a.AlwaysShowPlayer
+              ),
+            },
+            m &&
+              i.a.createElement("div", {
+                className: h.a.HeroIcon,
+                style: {
+                  backgroundImage:
+                    "url( " +
+                    n.a.IMG_URL +
+                    "heroes/wide/" +
+                    (E || "unknown") +
+                    ".png )",
+                },
+              }),
+            i.a.createElement("div", {
+              className: h.a.PlayerImage,
+              style: {
+                backgroundImage:
+                  "url( " + n.a.CDN_URL + "apps/dota2/players/" + d + ".png )",
+              },
+            })
+          ),
+          i.a.createElement(
+            "div",
+            { className: h.a.NameAndStats },
+            i.a.createElement("div", { className: h.a.PlayerName }, c),
+            m && i.a.createElement("div", { className: h.a.Stats }, w)
+          )
+        );
+      }),
+      G = Object(d.a)(function () {
+        return i.a.createElement("div", {
+          className: Object(u.a)(h.a.DPCSeriesDetailsVOD),
+        });
+      }),
+      B = Object(d.a)(function () {
+        var e = Object(T.b)(),
+          t = M.a.Get().GetLeagueData(e.nLeagueID),
+          a = M.a.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
+          o =
+            e.eSeriesDisplay == p.i.OVERVIEW &&
+            !(null == a ? void 0 : a.is_completed) &&
+            (null == a ? void 0 : a.has_started),
+          s = null == a ? void 0 : a.stream_ids,
+          l =
+            null == t
+              ? void 0
+              : t.streams.filter(function (e) {
+                  return null == s ? void 0 : s.includes(e.stream_id);
+                }),
+          c = M.a.Get().GetDefaultRegion(),
+          d = [];
+        switch (c) {
+          case f.d.LEAGUE_REGION_NA:
+          case f.d.LEAGUE_REGION_EUROPE:
+            d.push.apply(d, [0, 8, 6, 5, 11]);
+            break;
+          case f.d.LEAGUE_REGION_SA:
+            d.push.apply(d, [11, 5, 0, 8, 6]);
+            break;
+          case f.d.LEAGUE_REGION_CIS:
+            d.push.apply(d, [8, 0, 6, 5, 11]);
+            break;
+          case f.d.LEAGUE_REGION_CHINA:
+            d.push.apply(d, [6, 0, 8, 5, 11]);
+            break;
+          case f.d.LEAGUE_REGION_SEA:
+            d.push.apply(d, [0, 6, 8, 5, 11]);
+        }
+        var m,
+          _ = Object(r.useState)(d[0]),
+          g = _[0],
+          v = _[1],
+          y = Object(r.useState)(!1),
+          E = y[0],
+          L = y[1],
+          S =
+            null == l
+              ? void 0
+              : l.sort(function (e, t) {
+                  var a = d.indexOf(e.language) - d.indexOf(t.language);
+                  return a && 0 != a
+                    ? a
+                    : e.broadcast_provider == f.a.LEAGUE_BROADCAST_STEAM &&
+                      t.broadcast_provider != f.a.LEAGUE_BROADCAST_STEAM
+                    ? E
+                      ? 1
+                      : -1
+                    : t.broadcast_provider == f.a.LEAGUE_BROADCAST_STEAM &&
+                      e.broadcast_provider != f.a.LEAGUE_BROADCAST_STEAM
+                    ? 1
+                    : 0;
+                });
+        if ((null == S ? void 0 : S.length) > 0)
+          switch (S[0].broadcast_provider) {
+            case f.a.LEAGUE_BROADCAST_TWITCH:
+              m =
+                "https://player.twitch.tv/?channel=" +
+                S[0].stream_url.replace("https://www.twitch.tv/", "") +
+                "&parent=www.dota2.com";
+              break;
+            case f.a.LEAGUE_BROADCAST_STEAM:
+              m =
+                n.a.COMMUNITY_URL +
+                "broadcast/watchnew/" +
+                S[0].stream_url.replace(
+                  "https://steamcommunity.com/broadcast/watch/",
+                  ""
+                ) +
+                "?origin=https://www.dota2.com&enablechat=0&enablevideo=1&showasiframe=1";
+          }
+        for (
+          var D = [],
+            k = function (e) {
+              S.find(function (t) {
+                return t.language == e;
+              }) &&
+                D.push({ value: e, strLabel: "#Language_" + Object(w.a)(e) });
+            },
+            O = -1;
+          O < 30;
+          O++
+        )
+          k(O);
+        var j =
+            -1 !=
+            S.filter(function (e) {
+              return e.language == g;
+            }).findIndex(function (e) {
+              return e.broadcast_provider == f.a.LEAGUE_BROADCAST_TWITCH;
+            }),
+          I =
+            -1 !=
+            S.filter(function (e) {
+              return e.language == g;
+            }).findIndex(function (e) {
+              return e.broadcast_provider == f.a.LEAGUE_BROADCAST_STEAM;
+            });
+        return (
+          I && !j && E && L(!1),
+          !j || I || E || L(!0),
+          i.a.createElement(
+            "div",
+            { className: Object(u.a)(h.a.DPCSeriesLive, o && h.a.Visible) },
+            i.a.createElement(
+              "div",
+              { className: h.a.VideoContainer },
+              i.a.createElement("iframe", {
+                src: m,
+                height: "100%",
+                width: "100%",
+                allowFullScreen: !0,
+                frameBorder: "0",
+              })
+            ),
+            i.a.createElement(
+              "div",
+              { className: h.a.OptionContainer },
+              i.a.createElement(b.b, {
+                options: D,
+                selectedOption: g,
+                setOption: v,
+              }),
+              j &&
+                i.a.createElement(
+                  "div",
+                  {
+                    className: Object(u.a)(
+                      h.a.StreamingOption,
+                      E && h.a.Enabled
+                    ),
+                    onClick: function () {
+                      return L(!0);
+                    },
+                  },
+                  "Twitch"
+                ),
+              I &&
+                i.a.createElement(
+                  "div",
+                  {
+                    className: Object(u.a)(
+                      h.a.StreamingOption,
+                      !E && h.a.Enabled
+                    ),
+                    onClick: function () {
+                      return L(!1);
+                    },
+                  },
+                  "Steam"
+                )
+            )
+          )
+        );
+      }),
+      U = a("Kcip"),
+      F = a.n(U),
+      W = Object(d.a)(function (e) {
+        var t = e.nTeamID,
+          a = Object(T.b)(),
+          n = M.a.Get().FindLeagueTeamStanding(a.eSeason, t),
+          r = (null == n ? void 0 : n.nStanding) <= 3,
+          o = M.a.Get().GetTeamNames(t),
+          s = n ? n.nWins + " - " + n.nLosses : "";
+        return i.a.createElement(
+          "div",
+          { className: Object(u.a)(F.a.RegionStandingTeam, r && F.a.TopThree) },
+          i.a.createElement(
+            "div",
+            { className: F.a.Standing },
+            null == n ? void 0 : n.nStanding
+          ),
+          i.a.createElement(D, { className: F.a.TeamLogo, nTeamID: t }),
+          i.a.createElement(
+            "div",
+            { className: F.a.TeamName },
+            null == o ? void 0 : o.name
+          ),
+          i.a.createElement("div", { className: F.a.Record }, s)
+        );
+      }),
+      z = Object(d.a)(function (e) {
+        var t = e.eRegion,
+          a = e.eDivision,
+          n = Object(T.b)(),
+          r = M.a
+            .Get()
+            .GetDPCLeagues(n.eSeason)
+            .find(function (e) {
+              return e.eRegion == t || e.eRegion == f.d.LEAGUE_REGION_UNSET;
+            }),
+          o = M.a
+            .Get()
+            .GetLeagueNodeGroup(r.nLeagueIDs[a == f.b.DIVISION_I ? 0 : 1], 1),
+          s = new Set();
+        null == o ||
+          o.team_standings.forEach(function (e) {
+            return s.add(e.team_id);
+          });
+        var l = Array.from(s.values()).sort(function (e, t) {
+          var a, r;
+          return (
+            (null === (a = M.a.Get().FindLeagueTeamStanding(n.eSeason, e)) ||
+            void 0 === a
+              ? void 0
+              : a.nStanding) -
+            (null === (r = M.a.Get().FindLeagueTeamStanding(n.eSeason, t)) ||
+            void 0 === r
+              ? void 0
+              : r.nStanding)
+          );
+        });
+        return i.a.createElement(
+          "div",
+          { className: F.a.RegionStandingDivsion },
+          i.a.createElement(
+            "div",
+            { className: F.a.Header },
+            Object(g.a)(
+              a == f.b.DIVISION_I
+                ? "#dpc_division_filter_i"
+                : "#dpc_division_filter_ii"
+            )
+          ),
+          l.map(function (e, n) {
+            return i.a.createElement(W, {
+              key: a + "_" + t + "_" + e,
+              nTeamID: e,
+            });
+          })
+        );
+      }),
+      V = Object(d.a)(function (e) {
+        var t = e.eRegion;
+        return i.a.createElement(
+          "div",
+          { className: F.a.DPCRegionStandings },
+          i.a.createElement(z, { eRegion: t, eDivision: f.b.DIVISION_I }),
+          i.a.createElement(z, { eRegion: t, eDivision: f.b.DIVISION_II })
+        );
+      });
+    function q(e, t) {
+      return Array.from(
+        Array.from(Array(t - e).keys()).map(function (t) {
+          return t + e;
+        })
+      );
+    }
+    var J = Object(d.a)(function (e) {
+        var t = e.bIncludeInProgress,
+          a = Object(T.b)(),
+          r = M.a.Get().GetNextLeagueNode(a.eSeason, t),
+          s = r.nLeagueID,
+          l = r.nNodeID,
+          d = M.a.Get().GetLeagueNode(s, l);
+        if (!d) return null;
+        var p = M.a.Get().GetTeamNames(null == d ? void 0 : d.team_id_1),
+          _ = M.a.Get().GetTeamNames(null == d ? void 0 : d.team_id_2),
+          h = L()(1e3 * (null == d ? void 0 : d.scheduled_time))
+            .format("DD MMM LT")
+            .toString();
+        return i.a.createElement(
+          "div",
+          { className: c.a.NextBanner },
+          i.a.createElement(
+            "div",
+            { className: c.a.Background },
+            i.a.createElement(
+              "div",
+              { className: c.a.Teams },
+              i.a.createElement("div", {
+                className: Object(u.a)(c.a.TeamLogo, d && c.a.Visible),
+                style: {
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
+                  backgroundImage:
+                    "url( " +
+                    n.a.IMG_URL +
+                    "teams/" +
+                    (null == d ? void 0 : d.team_id_1) +
+                    ".png )",
+                },
+              }),
+              i.a.createElement("div", {
+                className: Object(u.a)(c.a.TeamLogo, d && c.a.Visible),
+                style: {
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
+                  backgroundImage:
+                    "url( " +
+                    n.a.IMG_URL +
+                    "teams/" +
+                    (null == d ? void 0 : d.team_id_2) +
+                    ".png )",
+                },
+              })
+            ),
+            i.a.createElement("div", { className: c.a.Gradient })
+          ),
+          i.a.createElement(
+            "div",
+            { className: c.a.LeftLabels },
+            i.a.createElement(
+              "div",
+              { className: c.a.ComingUp },
+              Object(g.a)("#dpc_coming_up")
+            ),
+            i.a.createElement(
+              "div",
+              { className: Object(u.a)(c.a.Teams, d && c.a.Visible) },
+              Object(g.a)(
+                "#dpc_team_versus",
+                null == p ? void 0 : p.name,
+                null == _ ? void 0 : _.name
+              )
+            ),
+            i.a.createElement(
+              "div",
+              { className: Object(u.a)(c.a.WatchLive, d && c.a.Visible) },
+              Object(g.a)("#dpc_watch_live", h)
+            )
+          ),
+          i.a.createElement(
+            o.b,
+            { to: m.a.dpc_schedule(), className: c.a.ScheduleButton },
+            i.a.createElement(
+              "div",
+              { className: c.a.Label },
+              Object(g.a)("#dpc_view_schedule")
+            )
+          )
+        );
+      }),
+      K = Object(d.a)(function () {
+        var e = Object(r.useState)(M.a.Get().GetDefaultRegion()),
+          t = e[0],
+          a = e[1],
+          o = [
+            { value: f.d.LEAGUE_REGION_NA, strLabel: "#dpc_region_na" },
+            { value: f.d.LEAGUE_REGION_SA, strLabel: "#dpc_region_sa" },
+            { value: f.d.LEAGUE_REGION_EUROPE, strLabel: "#dpc_region_weu" },
+            { value: f.d.LEAGUE_REGION_CIS, strLabel: "#dpc_region_eeu" },
+            { value: f.d.LEAGUE_REGION_CHINA, strLabel: "#dpc_region_cn" },
+            { value: f.d.LEAGUE_REGION_SEA, strLabel: "#dpc_region_sea" },
+          ];
+        return i.a.createElement(
+          "div",
+          {
+            className: c.a.StandingsBlock,
+            style: {
+              backgroundImage:
+                "url( " + n.a.IMG_URL + "backgrounds/featured.jpg )",
+            },
+          },
+          i.a.createElement(
+            "div",
+            { className: c.a.Header },
+            i.a.createElement(
+              "div",
+              { className: c.a.Label },
+              Object(g.a)("#dpc_header_standings")
+            ),
+            i.a.createElement(b.b, {
+              options: o,
+              selectedOption: t,
+              setOption: a,
+            })
+          ),
+          i.a.createElement(V, { eRegion: t })
+        );
+      }),
+      Q = Object(d.a)(function () {
+        var e = Object(s.h)(),
+          t = Object(s.i)(),
+          a = Object(p.n)(t.strSeriesDisplay),
+          n = {
+            eSeason: Object(p.l)(t.strSeason),
+            nLeagueID: parseInt(t.strLeagueID || "0"),
+            nNodeID: parseInt(t.strNodeID || "0"),
+            nSeriesGame: a.nGame,
+            eSeriesDisplay: a.eSeriesDisplay,
+          };
+        if (
+          (Object(r.useEffect)(
+            function () {
+              var t;
+              console.log(e),
+                (null === (t = e.state) || void 0 === t
+                  ? void 0
+                  : t.bPreventScroll) ||
+                  window.scrollTo({ top: 490, left: 0, behavior: "smooth" });
+            },
+            [e]
+          ),
+          !(t.strSeason && t.strLeagueID && t.strNodeID && t.strSeriesDisplay))
+        )
+          return i.a.createElement(s.a, {
+            to: {
+              state: { bPreventScroll: !0 },
+              pathname: m.a.dpc_home(
+                t.strSeason || Object(p.e)(),
+                t.strLeagueID || Object(p.b)(n.eSeason),
+                t.strNodeID || Object(p.c)(n.eSeason),
+                t.strSeriesDisplay || Object(p.f)()
+              ),
+            },
+          });
+        if ("0" == t.strLeagueID || "0" == t.strNodeID) {
+          var o = M.a.Get().GetNextLeagueNode(Object(p.l)(t.strSeason), !0),
+            l = o.nLeagueID,
+            u = o.nNodeID;
+          if (l && u)
+            return i.a.createElement(s.a, {
+              to: {
+                state: { bPreventScroll: !0 },
+                pathname: m.a.dpc_home(
+                  t.strSeason || Object(p.e)(),
+                  "" + l,
+                  "" + u,
+                  t.strSeriesDisplay || Object(p.f)()
+                ),
+              },
+            });
+        }
+        return i.a.createElement(
+          T.a,
+          { matchContext: n, className: c.a.DPCHomePage },
+          i.a.createElement(O, null),
+          i.a.createElement(J, { bIncludeInProgress: !1 }),
+          i.a.createElement(K, null)
+        );
+      });
+  },
   qvJo: function (e, t, a) {
     !(function (e) {
       "use strict";
@@ -55194,49 +55340,56 @@ PERFORMANCE OF THIS SOFTWARE.
   },
   sjx6: function (e, t, a) {
     "use strict";
-    a.d(t, "e", function () {
-      return i;
+    a.d(t, "g", function () {
+      return o;
     }),
-      a.d(t, "f", function () {
-        return o;
-      }),
-      a.d(t, "a", function () {
+      a.d(t, "h", function () {
         return s;
       }),
-      a.d(t, "h", function () {
+      a.d(t, "a", function () {
         return l;
       }),
-      a.d(t, "i", function () {
+      a.d(t, "j", function () {
         return c;
       }),
-      a.d(t, "b", function () {
+      a.d(t, "k", function () {
         return u;
       }),
-      a.d(t, "j", function () {
+      a.d(t, "d", function () {
         return d;
       }),
-      a.d(t, "k", function () {
+      a.d(t, "l", function () {
         return m;
       }),
-      a.d(t, "c", function () {
+      a.d(t, "m", function () {
         return p;
       }),
-      a.d(t, "g", function () {
-        return n;
-      }),
-      a.d(t, "l", function () {
+      a.d(t, "e", function () {
         return _;
       }),
-      a.d(t, "m", function () {
+      a.d(t, "b", function () {
         return h;
       }),
-      a.d(t, "d", function () {
+      a.d(t, "c", function () {
         return f;
+      }),
+      a.d(t, "i", function () {
+        return n;
+      }),
+      a.d(t, "n", function () {
+        return g;
+      }),
+      a.d(t, "o", function () {
+        return v;
+      }),
+      a.d(t, "f", function () {
+        return y;
       });
     a("q1tI"), a("k7N+");
     var n,
-      r = a("knzx");
-    function i(e) {
+      r = a("knzx"),
+      i = a("WPyR");
+    function o(e) {
       switch (e) {
         case "alldivisions":
           return r.b.UNSET;
@@ -55247,7 +55400,7 @@ PERFORMANCE OF THIS SOFTWARE.
       }
       return r.b.UNSET;
     }
-    function o(e) {
+    function s(e) {
       switch (e) {
         case r.b.DIVISION_I:
           return "div1";
@@ -55256,10 +55409,10 @@ PERFORMANCE OF THIS SOFTWARE.
       }
       return "alldivisions";
     }
-    function s() {
+    function l() {
       return "alldivisions";
     }
-    function l(e) {
+    function c(e) {
       switch (e) {
         case "all":
           return r.d.LEAGUE_REGION_UNSET;
@@ -55278,7 +55431,7 @@ PERFORMANCE OF THIS SOFTWARE.
       }
       return r.d.LEAGUE_REGION_UNSET;
     }
-    function c(e) {
+    function u(e) {
       switch (e) {
         case r.d.LEAGUE_REGION_NA:
           return "na";
@@ -55295,10 +55448,10 @@ PERFORMANCE OF THIS SOFTWARE.
       }
       return "allregions";
     }
-    function u() {
+    function d() {
       return "allregions";
     }
-    function d(e) {
+    function m(e) {
       switch (e) {
         case "spring21":
           return r.e.SPRING_2021_LEAGUE;
@@ -55309,7 +55462,7 @@ PERFORMANCE OF THIS SOFTWARE.
       }
       return r.e.INVALID;
     }
-    function m(e) {
+    function p(e) {
       switch (e) {
         case r.e.SPRING_2021_LEAGUE:
           return "spring21";
@@ -55320,11 +55473,19 @@ PERFORMANCE OF THIS SOFTWARE.
       }
       return "";
     }
-    function p() {
+    function _() {
       return "springmajor21";
     }
-    function _(e) {
-      if ("" == e) return { nGame: 0, eSeriesDisplay: n.OVERVIEW };
+    function h(e) {
+      var t = i.a.Get().GetNextLeagueNode(e, !0).nLeagueID;
+      return t ? "" + t : "0";
+    }
+    function f(e) {
+      var t = i.a.Get().GetNextLeagueNode(e, !0).nNodeID;
+      return t ? "" + t : "0";
+    }
+    function g(e) {
+      if (!e || "" == e) return { nGame: 0, eSeriesDisplay: n.OVERVIEW };
       var t = e.match(/game(\d)vod/);
       if (t && t.length > 1)
         return { nGame: parseInt(t.groups[1]), eSeriesDisplay: n.VOD };
@@ -55333,7 +55494,7 @@ PERFORMANCE OF THIS SOFTWARE.
         ? { nGame: parseInt(a[1]), eSeriesDisplay: n.DETAILS }
         : { nGame: 0, eSeriesDisplay: n.OVERVIEW };
     }
-    function h(e, t) {
+    function v(e, t) {
       switch (t) {
         case n.OVERVIEW:
           return "series";
@@ -55343,7 +55504,7 @@ PERFORMANCE OF THIS SOFTWARE.
           return "game" + e + "vod";
       }
     }
-    function f() {
+    function y() {
       return "series";
     }
     !(function (e) {
