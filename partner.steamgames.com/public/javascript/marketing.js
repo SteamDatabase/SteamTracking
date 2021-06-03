@@ -376,7 +376,8 @@ function OnAssociationChange()
 	var hashParams = { 
 			associationType: 	associationType,
 			association:  		GetFormValue( 'association_' + associationType ),
-			messageType:		GetFormValue( 'message[marketingmessagetype]' )
+			messageType:		GetFormValue( 'message[marketingmessagetype]' ),
+			validRealms:		GetFormValue( 'message[additionalrestrictions][valid_realms]' )
 	};
 	new Ajax.Request(szBaseUrl + '/marketing/fetchmessageassociationdefaults', {
 		method: 'get',
