@@ -584,11 +584,11 @@
 				</Panel>
 				
 				<!-- Trigger Mode -->
-				<Panel class="FieldWrapper" modes="trigger" GAAnalogTriggers="off" advanced="off">
+				<Panel class="FieldWrapper" modes="trigger" advanced="off" gameactions="both">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerClick" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode" id="TriggerClick" />
 				</Panel>
-				<Panel class="FieldWrapper" modes="trigger" GAAnalogTriggers="off" advanced="off">
+				<Panel class="FieldWrapper" modes="trigger" advanced="off" gameactions="both">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerThresholdBinding" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode" id="TriggerAnalogThresholdBinding" />
 				</Panel>
@@ -1160,11 +1160,11 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_OutputTrigger" />
 					<DropDown id="OutputTrigger" />
 				</Panel>
-				<Panel class="FieldWrapper" modes="trigger" gameactions="off" advanced="off" visualization="off" >
+				<Panel class="FieldWrapper" modes="trigger" gameactions="both" advanced="off" visualization="off" >
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerDeadZoneStart" />
 					<Slider id="TriggerDeadZoneStart" direction="horizontal" />
 				</Panel>
-				<Panel class="FieldWrapper" modes="trigger" gameactions="off" advanced="off" visualization="off" >
+				<Panel class="FieldWrapper" modes="trigger" gameactions="both" advanced="off" visualization="off" >
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerDeadZoneEnd" />
 					<Slider id="TriggerDeadZoneEnd" direction="horizontal" />
 				</Panel>		

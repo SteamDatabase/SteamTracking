@@ -1991,6 +1991,12 @@ ControllerBindingButton.BindingButtonPropertiesMode
 	background-repeat: no-repeat;
 }
 
+.TriggerMode.InGameActionsMode ControllerBindingButton.BindingButtonPropertiesMode
+{
+    height: 44px;
+	margin-bottom: 2px;
+}
+
  .FieldWrapper ControllerBindingButton.BindingButtonPropertiesModeSmall
 {
 	height: 34px;
@@ -5725,7 +5731,6 @@ ControllerConfigBrowser.SelectFriendsBindings.RequiresMoreTimeForPublic #Require
 .TouchMenuMode,
 .RelMouseMode,
 .ScrollWheelMode,
-.TriggerMode,
 {
 	visibility: collapse;
 }
