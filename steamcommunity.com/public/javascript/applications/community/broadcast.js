@@ -275,7 +275,7 @@
             Object(r.d)(t, e),
             (a = t),
             (t.IsBroadcastAllowed = function () {
-              return g.c.EREALM != y.f.k_ESteamRealmChina;
+              return g.c.EREALM != y.e.k_ESteamRealmChina;
             }),
             (t.prototype.componentDidMount = function () {
               return Object(r.b)(this, void 0, void 0, function () {
@@ -483,14 +483,14 @@
                   (n = Object(r.a)(Object(r.a)({}, n), {
                     left_panel: c.GetImageURL(
                       "broadcast_left",
-                      l || Object(y.h)(g.c.LANGUAGE)
+                      l || Object(y.f)(g.c.LANGUAGE)
                     ),
                     right_panel: c.GetImageURL(
                       "broadcast_right",
-                      l || Object(y.h)(g.c.LANGUAGE)
+                      l || Object(y.f)(g.c.LANGUAGE)
                     ),
                     store_title: c.GetBroadcastTitle(
-                      l || Object(y.h)(g.c.LANGUAGE)
+                      l || Object(y.f)(g.c.LANGUAGE)
                     ),
                     broadcast_chat_visibility: c.GetBroadcastChatVisibility(),
                   }));
