@@ -1088,7 +1088,7 @@
           return A.a.GetTimeNowWithOverride() < c.d &&
             ((null == i ? void 0 : i.is_ogg) ||
               (!(null == i ? void 0 : i.is_ogg) && u.i.is_support)) &&
-            u.c.EREALM != W.f.k_ESteamRealmChina
+            u.c.EREALM != W.e.k_ESteamRealmChina
             ? s.createElement(ee, { fnOnCategoryChosen: t })
             : null;
         },
@@ -1848,7 +1848,7 @@
                 Object(Ge.b)(
                   a,
                   e,
-                  f.b.GetLanguageListForRealms([W.f.k_ESteamRealmGlobal])
+                  f.b.GetLanguageListForRealms([W.e.k_ESteamRealmGlobal])
                 )),
                 this.props.fnOnGotoPage(null, "clone");
             }),
@@ -3611,7 +3611,7 @@
                     (h.a.Get().GetPartnerEventPermissions(t.GetClanSteamID()),
                     []),
                   o = 0,
-                  l = f.b.GetLanguageListForRealms([W.f.k_ESteamRealmGlobal]);
+                  l = f.b.GetLanguageListForRealms([W.e.k_ESteamRealmGlobal]);
                 o < l.length;
                 o++
               ) {
@@ -5085,7 +5085,7 @@
                       emoticonStore: Ue.b,
                       bSupportHTMLImport: !0,
                       showFormatHelp: "PartnerEvents",
-                      limitBBCode: u.b.CAN_UPLOAD_IMAGES ? void 0 : Ft.f,
+                      limitBBCode: u.b.CAN_UPLOAD_IMAGES ? void 0 : Ft.d,
                       classNameForTextArea: R.EventEditorDescription,
                       clanSteamID: e.GetClanSteamID(),
                     })
@@ -9035,13 +9035,13 @@
             e.BInRealmChina() &&
             f.b.IsELanguageValidInRealm(
               e.GetCurEditLanguage(),
-              W.f.k_ESteamRealmChina
+              W.e.k_ESteamRealmChina
             ),
           a =
             e.BInRealmGlobal() &&
             f.b.IsELanguageValidInRealm(
               e.GetCurEditLanguage(),
-              W.f.k_ESteamRealmGlobal
+              W.e.k_ESteamRealmGlobal
             );
         t || a || e.SetCurEditLanguage(e.BInRealmChina() ? 29 : 0);
       }
