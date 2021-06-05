@@ -353,6 +353,38 @@ function RenderMoreLikeThisBlock( rgRecommendedAppIDs, bUseShuffle )
 
 	RenderRecommendBlock( rgRecommendedAppIDs, 'recommended', $J('#recommended_block_content'), bUseShuffle ? ShuffleRecScore : DefaultRecScoreFactory( 15 ) );
 }
+					
+function RenderAccessoriesBlock( rgAccessoryAppIDs )
+{
+	if ( !rgAccessoryAppIDs || !rgAccessoryAppIDs.length > 0 || !$J('#accessory_block_content').length )
+	{
+		$J('#accessory_block').hide();
+		return;
+	}
+
+	RenderRecommendBlock( rgAccessoryAppIDs, 'accessories', $J('#accessory_block_content') );
+
+	function scrollToAccessoriesIfNeeded()
+	{
+		if ( window.location.hash == "#accessories" )
+		{
+			document.querySelector( "#accessory_block" ).scrollIntoView( {
+				behavior: 'smooth',
+				block: 'center',
+				inline: 'center',
+			} );
+
+			document.querySelector( "#accessory_block" ).classList.add( "highlighted" );
+		}
+		else
+		{
+			document.querySelector( "#accessory_block" ).classList.remove( "highlighted" );
+		}
+	}
+
+	window.addEventListener( "hashchange", scrollToAccessoriesIfNeeded, false );
+	window.addEventListener( "load", scrollToAccessoriesIfNeeded, false );
+}
 
 function RenderFranchiseAppBlock( rgFranchiseAppIDs )
 {
