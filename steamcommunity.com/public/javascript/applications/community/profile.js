@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [74],
+  [103],
   {
     "042x": function (e, t, r) {
       e.exports = {
@@ -5701,7 +5701,7 @@
               return a.createElement(
                 "div",
                 { style: { display: "block" } },
-                a.createElement(pt.b, {
+                a.createElement(pt.a, {
                   text: Object(_.f)(
                     Object(je.a)(h.c.EREALM)
                       ? "#Profile_Edit_About_Instructions_SteamChina"
