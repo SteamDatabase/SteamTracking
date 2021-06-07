@@ -2325,6 +2325,7 @@
           (e.steam_award_category_voteids = void 0),
           (e.action_end_time = void 0),
           (e.ownership_requirement_info = void 0),
+          (e.sale_use_subscription_layout = void 0),
           (e.app_right_requirement_info = void 0),
           (e.bSaleEnabled = !1),
           (e.valve_access_log = []),
@@ -3211,7 +3212,7 @@
             (e.prototype.GetSteamAwardNomineeCategories = function () {
               return this.jsondata.steam_award_category_voteids;
             }),
-            (e.prototype.BIsLockedToAppOwners = function () {
+            (e.prototype.BIsLockedToGameOwners = function () {
               var e;
               return Boolean(
                 null === (e = this.jsondata.ownership_requirement_info) ||
@@ -3225,8 +3226,13 @@
                 ? this.jsondata.ownership_requirement_info.rgRequiredAppIDs
                 : [];
             }),
-            (e.prototype.GetOwnershipRequirements = function () {
-              return this.jsondata.ownership_requirement_info;
+            (e.prototype.GetRequiredPackageIDs = function () {
+              return this.jsondata.ownership_requirement_info
+                ? this.jsondata.ownership_requirement_info.rgRequiredPackageIDs
+                : [];
+            }),
+            (e.prototype.BUseSubscriptionLayout = function () {
+              return !!this.jsondata.sale_use_subscription_layout;
             }),
             (e.prototype.BIsLockedToPartnerAppRights = function () {
               var e;
@@ -51293,7 +51299,7 @@
                       c = t.rowElements;
                     if (Object(y.c)(e)) return null;
                     var l = E(o),
-                      u = s.BIsLockedToAppOwners(),
+                      u = s.BUseSubscriptionLayout(),
                       d = o.unique_id + "_" + i + "_" + e.type + "_" + e.id;
                     if ("fullrow" !== n) {
                       var m = "tall" === n ? "library" : "header";

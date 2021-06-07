@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6576416";
+var CLSTAMP = "6585607";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [10],
   {
@@ -3266,7 +3266,7 @@ var CLSTAMP = "6576416";
             (e.prototype.GetSteamAwardNomineeCategories = function () {
               return this.jsondata.steam_award_category_voteids;
             }),
-            (e.prototype.BIsLockedToAppOwners = function () {
+            (e.prototype.BIsLockedToGameOwners = function () {
               var e;
               return Boolean(
                 null === (e = this.jsondata.ownership_requirement_info) ||
@@ -3280,8 +3280,13 @@ var CLSTAMP = "6576416";
                 ? this.jsondata.ownership_requirement_info.rgRequiredAppIDs
                 : [];
             }),
-            (e.prototype.GetOwnershipRequirements = function () {
-              return this.jsondata.ownership_requirement_info;
+            (e.prototype.GetRequiredPackageIDs = function () {
+              return this.jsondata.ownership_requirement_info
+                ? this.jsondata.ownership_requirement_info.rgRequiredPackageIDs
+                : [];
+            }),
+            (e.prototype.BUseSubscriptionLayout = function () {
+              return !!this.jsondata.sale_use_subscription_layout;
             }),
             (e.prototype.BIsLockedToPartnerAppRights = function () {
               var e;
@@ -7924,7 +7929,7 @@ var CLSTAMP = "6576416";
                       s = t.rowElements;
                     if (Object(re.c)(e)) return null;
                     var c = ye(a),
-                      l = i.BIsLockedToAppOwners(),
+                      l = i.BUseSubscriptionLayout(),
                       p = a.unique_id + "_" + r + "_" + e.type + "_" + e.id;
                     if ("fullrow" !== n) {
                       var d = "tall" === n ? "library" : "header";
