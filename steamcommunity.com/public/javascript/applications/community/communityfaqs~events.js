@@ -1346,17 +1346,17 @@
             ],
             y = function () {
               return Object(a.b)(void 0, void 0, void 0, function () {
-                var e, t, l, u;
+                var e, t, l, s;
                 return Object(a.e)(this, function (a) {
                   switch (a.label) {
                     case 0:
-                      return s
-                        ? ((e = o.GetEventModel().GetTaggedItems()),
-                          [4, x(n.facets, e)])
-                        : [2];
+                      return (
+                        (e = o.GetEventModel().GetTaggedItems()),
+                        [4, x(n.facets, e)]
+                      );
                     case 1:
                       for (a.sent(), t = 0, l = n.facets; t < l.length; t++)
-                        (u = l[t]).facetValues = u.facetValues.filter(function (
+                        (s = l[t]).facetValues = s.facetValues.filter(function (
                           t
                         ) {
                           return t.type === c.m.k_ELanguage
@@ -1512,26 +1512,27 @@
                                                     p(!0), (a.label = 1);
                                                   case 1:
                                                     return (
-                                                      a.trys.push([1, , 4, 5]),
+                                                      a.trys.push([1, , 5, 6]),
                                                       (t = n),
                                                       [4, P(e)]
                                                     );
                                                   case 2:
                                                     return (
                                                       (t.facets = a.sent()),
-                                                      [4, y()]
+                                                      s ? [4, y()] : [3, 4]
                                                     );
                                                   case 3:
+                                                    a.sent(), (a.label = 4);
+                                                  case 4:
                                                     return (
-                                                      a.sent(),
                                                       o.SetDirty(
                                                         i.c.jsondata_sales
                                                       ),
-                                                      [3, 5]
+                                                      [3, 6]
                                                     );
-                                                  case 4:
-                                                    return p(!1), [7];
                                                   case 5:
+                                                    return p(!1), [7];
+                                                  case 6:
                                                     return [2];
                                                 }
                                               }
@@ -21256,6 +21257,7 @@
                   section: this.props.saleSection,
                   capsuleContainer: this.props.saleSection,
                   editModel: this.props.editModel,
+                  bAllowPruneFacets: !0,
                 })
               );
             }),
