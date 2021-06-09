@@ -1,40 +1,40 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6590824";
+var CLSTAMP = "6591190";
 !(function (a) {
   function e(e) {
     for (
-      var i, o, s = e[0], r = e[1], f = e[2], t = 0, b = [];
-      t < s.length;
+      var i, o, d = e[0], r = e[1], f = e[2], t = 0, b = [];
+      t < d.length;
       t++
     )
-      (o = s[t]),
+      (o = d[t]),
         Object.prototype.hasOwnProperty.call(c, o) && c[o] && b.push(c[o][0]),
         (c[o] = 0);
     for (i in r) Object.prototype.hasOwnProperty.call(r, i) && (a[i] = r[i]);
     for (l && l(e); b.length; ) b.shift()();
-    return d.push.apply(d, f || []), n();
+    return s.push.apply(s, f || []), n();
   }
   function n() {
-    for (var a, e = 0; e < d.length; e++) {
-      for (var n = d[e], i = !0, o = 1; o < n.length; o++) {
+    for (var a, e = 0; e < s.length; e++) {
+      for (var n = s[e], i = !0, o = 1; o < n.length; o++) {
         var r = n[o];
         0 !== c[r] && (i = !1);
       }
-      i && (d.splice(e--, 1), (a = s((s.s = n[0]))));
+      i && (s.splice(e--, 1), (a = d((d.s = n[0]))));
     }
     return a;
   }
   var i = {},
     o = { 102: 0 },
     c = { 102: 0 },
-    d = [];
-  function s(e) {
+    s = [];
+  function d(e) {
     if (i[e]) return i[e].exports;
     var n = (i[e] = { i: e, l: !1, exports: {} });
-    return a[e].call(n.exports, n, n.exports, s), (n.l = !0), n.exports;
+    return a[e].call(n.exports, n, n.exports, d), (n.l = !0), n.exports;
   }
-  (s.e = function (a) {
+  (d.e = function (a) {
     var e = [];
     o[a]
       ? e.push(o[a])
@@ -265,14 +265,14 @@ var CLSTAMP = "6590824";
                     101: "31d6cfe0d16ae931b73c",
                     103: "6140590f3a4970f4a7e1",
                   }[a],
-                c = s.p + i,
-                d = document.getElementsByTagName("link"),
+                c = d.p + i,
+                s = document.getElementsByTagName("link"),
                 r = 0;
-              r < d.length;
+              r < s.length;
               r++
             ) {
               var f =
-                (l = d[r]).getAttribute("data-href") || l.getAttribute("href");
+                (l = s[r]).getAttribute("data-href") || l.getAttribute("href");
               if ("stylesheet" === l.rel && (f === i || f === c)) return e();
             }
             var t = document.getElementsByTagName("style");
@@ -287,14 +287,14 @@ var CLSTAMP = "6590824";
               (b.onload = e),
               (b.onerror = function (e) {
                 var i = (e && e.target && e.target.src) || c,
-                  d = new Error(
+                  s = new Error(
                     "Loading CSS chunk " + a + " failed.\n(" + i + ")"
                   );
-                (d.code = "CSS_CHUNK_LOAD_FAILED"),
-                  (d.request = i),
+                (s.code = "CSS_CHUNK_LOAD_FAILED"),
+                  (s.request = i),
                   delete o[a],
                   b.parentNode.removeChild(b),
-                  n(d);
+                  n(s);
               }),
               (b.href = c),
               document.getElementsByTagName("head")[0].appendChild(b);
@@ -310,14 +310,14 @@ var CLSTAMP = "6590824";
           n = c[a] = [e, i];
         });
         e.push((n[2] = i));
-        var d,
+        var s,
           r = document.createElement("script");
         (r.charset = "utf-8"),
           (r.timeout = 120),
-          s.nc && r.setAttribute("nonce", s.nc),
+          d.nc && r.setAttribute("nonce", d.nc),
           (r.src = (function (a) {
             return (
-              s.p +
+              d.p +
               "javascript/applications/community/" +
               ({
                 1: "broadcasts~communityfaqs~events~profile",
@@ -433,7 +433,7 @@ var CLSTAMP = "6590824";
                 7: "d2869133d7803eee3f1a",
                 8: "bf67203d4009e5f944a8",
                 9: "826be74b2d1e0a8ebeeb",
-                10: "99c1ec1480634de49e8d",
+                10: "09463475b485853b519d",
                 11: "618efb075653d4dab48b",
                 12: "4521ae5a6142fe368db5",
                 13: "7cee9817628cd5a18fb1",
@@ -529,7 +529,7 @@ var CLSTAMP = "6590824";
             );
           })(a));
         var f = new Error();
-        d = function (e) {
+        s = function (e) {
           (r.onerror = r.onload = null), clearTimeout(t);
           var n = c[a];
           if (0 !== n) {
@@ -547,34 +547,34 @@ var CLSTAMP = "6590824";
           }
         };
         var t = setTimeout(function () {
-          d({ type: "timeout", target: r });
+          s({ type: "timeout", target: r });
         }, 12e4);
-        (r.onerror = r.onload = d), document.head.appendChild(r);
+        (r.onerror = r.onload = s), document.head.appendChild(r);
       }
     return Promise.all(e);
   }),
-    (s.m = a),
-    (s.c = i),
-    (s.d = function (a, e, n) {
-      s.o(a, e) || Object.defineProperty(a, e, { enumerable: !0, get: n });
+    (d.m = a),
+    (d.c = i),
+    (d.d = function (a, e, n) {
+      d.o(a, e) || Object.defineProperty(a, e, { enumerable: !0, get: n });
     }),
-    (s.r = function (a) {
+    (d.r = function (a) {
       "undefined" != typeof Symbol &&
         Symbol.toStringTag &&
         Object.defineProperty(a, Symbol.toStringTag, { value: "Module" }),
         Object.defineProperty(a, "__esModule", { value: !0 });
     }),
-    (s.t = function (a, e) {
-      if ((1 & e && (a = s(a)), 8 & e)) return a;
+    (d.t = function (a, e) {
+      if ((1 & e && (a = d(a)), 8 & e)) return a;
       if (4 & e && "object" == typeof a && a && a.__esModule) return a;
       var n = Object.create(null);
       if (
-        (s.r(n),
+        (d.r(n),
         Object.defineProperty(n, "default", { enumerable: !0, value: a }),
         2 & e && "string" != typeof a)
       )
         for (var i in a)
-          s.d(
+          d.d(
             n,
             i,
             function (e) {
@@ -583,7 +583,7 @@ var CLSTAMP = "6590824";
           );
       return n;
     }),
-    (s.n = function (a) {
+    (d.n = function (a) {
       var e =
         a && a.__esModule
           ? function () {
@@ -592,13 +592,13 @@ var CLSTAMP = "6590824";
           : function () {
               return a;
             };
-      return s.d(e, "a", e), e;
+      return d.d(e, "a", e), e;
     }),
-    (s.o = function (a, e) {
+    (d.o = function (a, e) {
       return Object.prototype.hasOwnProperty.call(a, e);
     }),
-    (s.p = ""),
-    (s.oe = function (a) {
+    (d.p = ""),
+    (d.oe = function (a) {
       throw (console.error(a), a);
     });
   var r = (window.webpackJsonp = window.webpackJsonp || []),
