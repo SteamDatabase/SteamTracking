@@ -1883,10 +1883,17 @@ function ReparentAppLandingPageForMobileUX()
 		$J('#publisherList').appendTo('#gameHeaderImageCtn');
 		$J('#releaseDate').appendTo('#gameHeaderImageCtn');
 
+		// place the ... app menu 
+		$J('#appMenu').appendTo('#appHubAppName');
+
 		// purchase banner
 		$J('#game_area_purchase').appendTo('#bannerPurchasePackageContent');
 		$J('#bannerPurchase').appendTo('#game_highlights');
 		$J('#bannerPurchasePackageContent').appendTo('#game_highlights');
+
+		// move DLC section below the recent events and announcements (instead of below the list of purchase options)
+		if ( $J('#gameAreaDLCSection') !== null )
+			$J('#gameAreaDLCSection').appendTo('#contentForThisGame_ctn');
 
 		// the wishlist area needs to squeeze in on the left side of the purchase banner
 		$J('#add_to_wishlist_area').appendTo('#bannerPurchase');

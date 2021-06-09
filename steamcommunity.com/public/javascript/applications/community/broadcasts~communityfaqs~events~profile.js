@@ -51657,6 +51657,7 @@
             Object(s.c)(c.c.MEDIA_CDN_COMMUNITY_URL).toLocaleLowerCase(),
             Object(s.c)(c.c.STORE_CDN_URL).toLocaleLowerCase(),
             "support.steampowered.com",
+            "steamcdn-a.akamaihd.net",
           ].indexOf(t) >= 0
         );
       }
