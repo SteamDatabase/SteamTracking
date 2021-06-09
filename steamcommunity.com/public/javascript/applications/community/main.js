@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6588911";
+var CLSTAMP = "6589942";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [71],
   {
@@ -10112,40 +10112,42 @@ var CLSTAMP = "6588911";
         });
       }
       function y() {
-        var e = {};
         return (
-          document
-            .querySelectorAll('link[rel="stylesheet"]')
-            .forEach(function (t) {
-              e[t.href] = t;
-            }),
-          e
+          (e = document),
+          (t = {}),
+          e.querySelectorAll('link[rel="stylesheet"]').forEach(function (e) {
+            t[e.href] = e;
+          }),
+          t
         );
+        var e, t;
       }
       function O(e, t) {
-        for (
-          var n = Object.assign({}, t),
-            r = e.document.getElementsByTagName("head")[0],
-            o = r.getElementsByTagName("link"),
-            i = o.length,
-            a = 0;
-          a < i;
-          ++a
-        ) {
-          var s = o[a];
-          n[s.href] ? delete n[s.href] : s.parentNode.removeChild(s);
-        }
-        for (var c in n) {
+        !(function (e, t, n) {
           for (
-            var l = n[c], u = e.document.createElement("link"), p = 0;
-            p < l.attributes.length;
-            p++
+            var r = Object.assign({}, t),
+              o = e.getElementsByTagName("head")[0],
+              i = o.getElementsByTagName("link"),
+              a = i.length,
+              s = 0;
+            s < a;
+            ++s
           ) {
-            var d = l.attributes.item(p);
-            u.setAttribute(d.name, d.value);
+            var c = i[s];
+            r[c.href] ? delete r[c.href] : n && c.parentNode.removeChild(c);
           }
-          r.appendChild(u);
-        }
+          for (var l in r) {
+            for (
+              var u = r[l], p = e.createElement("link"), d = 0;
+              d < u.attributes.length;
+              d++
+            ) {
+              var h = u.attributes.item(d);
+              p.setAttribute(h.name, h.value);
+            }
+            o.appendChild(p);
+          }
+        })(e.document, t, !0);
       }
     },
     XxJJ: function (e, t, n) {
@@ -12673,7 +12675,7 @@ var CLSTAMP = "6588911";
         m = n("6TF7"),
         f = n.n(m),
         g = i.a.lazy(function () {
-          return Promise.all([n.e(0), n.e(2), n.e(1), n.e(4), n.e(74)]).then(
+          return Promise.all([n.e(0), n.e(2), n.e(1), n.e(4), n.e(103)]).then(
             n.bind(null, "GEPe")
           );
         }),
@@ -14412,5 +14414,5 @@ var CLSTAMP = "6588911";
       };
     },
   },
-  [["gfbn", 73, 0]],
+  [["gfbn", 102, 0]],
 ]);
