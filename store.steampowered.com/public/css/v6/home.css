@@ -3992,7 +3992,8 @@ background: -webkit-linear-gradient( left, #c6e6f8 5%,#95bcd3 95%);
 }
 
 .specials_under10_content {
-	margin: 50px 0;
+	margin-top: 50px;
+	margin-bottom: 50px;
 }
 
 /* generic paging capsules */
