@@ -63,6 +63,9 @@
             (e.prototype.setDataPending = function () {
               this.eState = i.Pending;
             }),
+            (e.prototype.isDataPending = function () {
+              return this.eState == i.Pending;
+            }),
             (e.prototype.setData = function (e, t) {
               (this.data = t), this.delayNewData(e), (this.eState = i.Valid);
             }),

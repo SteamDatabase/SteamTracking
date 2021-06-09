@@ -116,7 +116,7 @@
                     E.release
                   ),
                   j &&
-                    c.a.createElement(h.i, {
+                    c.a.createElement(h.j, {
                       info: E,
                       bShowDemoButton: !0,
                       bStackedButtons: !0,
@@ -538,7 +538,7 @@
                             "bordered_title_trgt"
                           ),
                         },
-                        i.createElement(h.d, null),
+                        i.createElement(h.e, null),
                         u,
                         i.createElement(
                           "div",

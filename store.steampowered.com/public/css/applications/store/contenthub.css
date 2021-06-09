@@ -214,7 +214,6 @@ Body.v6.tag_page.contenthub_page {
   margin: 2px 0;
 }
 .contenthubtabs_FacetValueEnabledOverride_u_BCM {
-  padding-left: 0;
   margin: 2px 0;
   font-weight: bold;
   border-left: 4px solid rgba(102, 192, 244, 0.9);
@@ -244,6 +243,26 @@ Body.v6.tag_page.contenthub_page {
   text-transform: uppercase;
   margin-top: 4px;
   cursor: pointer;
+}
+.contenthubtabs_ShowMoreCtn_3W8BZ {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+.contenthubtabs_ShowMoreCtn_3W8BZ .contenthubtabs_ShowMore_1DQA2 {
+  border: none;
+  line-height: 32px;
+  color: #dfe3e6;
+  text-align: center;
+  border-radius: 2px;
+  cursor: pointer;
+  min-width: 40%;
+  white-space: nowrap;
+  padding: 0 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.contenthubtabs_ShowMoreCtn_3W8BZ .contenthubtabs_ShowMore_1DQA2:hover {
+  background-color: rgba(255, 255, 255, 0.4);
 }
 .maincapsule_FeatureCtn_IIjzc {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;

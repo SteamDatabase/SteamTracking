@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6588664";
+var CLSTAMP = "6588911";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [71],
   {
@@ -3414,12 +3414,14 @@ var CLSTAMP = "6588664";
         return s(e, "vgp_onblur", t);
       }
       function b(e, t, n) {
-        var r = new e.ownerDocument.defaultView.CustomEvent(t, {
-          bubbles: !0,
-          cancelable: !0,
-          detail: n,
-        });
-        e.dispatchEvent(r);
+        if (null !== e) {
+          var r = new e.ownerDocument.defaultView.CustomEvent(t, {
+            bubbles: !0,
+            cancelable: !0,
+            detail: n,
+          });
+          e.dispatchEvent(r);
+        }
       }
       function v(e) {
         var t = [i.a.DIR_UP, i.a.DIR_DOWN, i.a.DIR_LEFT, i.a.DIR_RIGHT],
@@ -7472,7 +7474,7 @@ var CLSTAMP = "6588664";
         n.d(t, "a", function () {
           return m;
         });
-      n("mrSG"), n("Kw0F");
+      n("mrSG"), n("2vnA"), n("Kw0F");
       var r = n("rHSA"),
         o = n("r64O"),
         i = (n("qiKp"), n("XxJJ"), n("BaVA")),
@@ -12315,6 +12317,8 @@ var CLSTAMP = "6588664";
           ? a.STATS_BASE_URL
           : e.startsWith(a.INTERNAL_STATS_BASE_URL)
           ? a.INTERNAL_STATS_BASE_URL
+          : e.startsWith("https://steamloopback.host")
+          ? "https://steamloopback.host"
           : "";
       }
       function b() {
@@ -12669,7 +12673,7 @@ var CLSTAMP = "6588664";
         m = n("6TF7"),
         f = n.n(m),
         g = i.a.lazy(function () {
-          return Promise.all([n.e(0), n.e(2), n.e(1), n.e(4), n.e(103)]).then(
+          return Promise.all([n.e(0), n.e(2), n.e(1), n.e(4), n.e(74)]).then(
             n.bind(null, "GEPe")
           );
         }),
@@ -13207,13 +13211,17 @@ var CLSTAMP = "6588664";
           (e[(e.DIR_RIGHT = 12)] = "DIR_RIGHT"),
           (e[(e.SELECT = 13)] = "SELECT"),
           (e[(e.START = 14)] = "START"),
-          (e[(e.STEAM_MENU = 15)] = "STEAM_MENU"),
-          (e[(e.STEAM_QUICK_MENU = 16)] = "STEAM_QUICK_MENU");
+          (e[(e.LSTICK_CLICK = 15)] = "LSTICK_CLICK"),
+          (e[(e.RSTICK_CLICK = 16)] = "RSTICK_CLICK"),
+          (e[(e.STEAM_MENU = 17)] = "STEAM_MENU"),
+          (e[(e.STEAM_QUICK_MENU = 18)] = "STEAM_QUICK_MENU");
       })(r || (r = {})),
         (function (e) {
           (e[(e.UNKNOWN = 0)] = "UNKNOWN"),
             (e[(e.GAMEPAD = 1)] = "GAMEPAD"),
-            (e[(e.KEYBOARD = 2)] = "KEYBOARD");
+            (e[(e.KEYBOARD = 2)] = "KEYBOARD"),
+            (e[(e.MOUSE = 3)] = "MOUSE"),
+            (e[(e.TOUCH = 4)] = "TOUCH");
         })(o || (o = {}));
     },
     sUmc: function (e, t, n) {
@@ -14404,5 +14412,5 @@ var CLSTAMP = "6588664";
       };
     },
   },
-  [["gfbn", 102, 0]],
+  [["gfbn", 73, 0]],
 ]);

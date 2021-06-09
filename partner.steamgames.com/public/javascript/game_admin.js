@@ -187,7 +187,7 @@ function InitImageTypes( type )
 	var strHeaderPath = ( type == 'Package' || type == 'Bundle' ) ? 'header_image_ratio' : 'header_image';
 	g_ImageTypes =
 	[
-		{ name: 'Header Image', width: 460, height: 215, path: strHeaderPath + '|header|assets|' + strHeaderPath, localized: true, overrideable: true },
+		{ name: 'Header Capsule', width: 460, height: 215, path: strHeaderPath + '|header|assets|' + strHeaderPath, localized: true, overrideable: true },
 		{ name: 'Small Capsule', width: 231, height: 87, path: 'small_capsule|capsule|assets|small_capsule|image', localized: true, overrideable: true },
 		{ name: 'Main Capsule', width: 616, height: 353, path: 'main_capsule|capsule_616x353|assets|main_capsule|image', localized: true, overrideable: true },
 		{ name: 'Promo Capsule', width: 220, height: 180, path: 'promo_capsule|capsule_220x180|assets|promo_capsule|image', localized: true },
@@ -199,7 +199,7 @@ function InitImageTypes( type )
 		{ name: 'Broadcast Left Side Panel', width: 155, height: 337, path: 'broadcast|broadcast_left_panel|assets|broadcast_left_panel|image', localized: false },
 		{ name: 'Broadcast Right Side Panel', width: 155, height: 337, path: 'broadcast|broadcast_right_panel|assets|broadcast_right_panel|image', localized: false },
 
-		{ name: 'Background', width: 1438, height: 0, path: 'asset|page_bg.jpg|assets|page_background', localized: false },
+		{ name: 'Page Background', width: 1438, height: 0, path: 'asset|page_bg.jpg|assets|page_background', localized: false },
 		{ name: 'Screenshot', width: 0, height: 0, path: 'screenshot|assets|screenshots|', localized: false },
 		{ name: 'ScreenshotLocalized', width: 0, height: 0, path: 'screenshot_localized|assets|screenshots|', localized: true, hidden: true },
 
@@ -207,7 +207,7 @@ function InitImageTypes( type )
 		{ name: 'Library Capsule', width: 600, height: 900, path: 'library_capsule|library_600x900|assets|library_capsule|image', localized: true, overrideable: false, supports2x: true },
 		{ name: 'Library Logo', width: 0, height: 0, path: 'library_logo|logo|assets|library_logo|image', localized: true, overrideable: false, supports2x: true },
 
-		{ name: 'Hero Capsule', width: 374, height: 448, path: 'hero_capsule|hero_capsule|assets|hero_capsule|image', localized: true, overrideable: true, supports2x: true },
+		{ name: 'Vertical Capsule', width: 374, height: 448, path: 'hero_capsule|hero_capsule|assets|hero_capsule|image', localized: true, overrideable: true, supports2x: true },
 	];
 }
 

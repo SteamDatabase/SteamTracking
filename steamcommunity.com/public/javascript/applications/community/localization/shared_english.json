@@ -344,6 +344,8 @@
     "EventDisplay_CallToAction_InLibrary": "In Library",
     "EventDisplay_CallToAction_PlayNow": "Play Now",
     "EventDisplay_CallToAction_ComingSoon": "Coming Soon",
+    "EventDisplay_CallToAction_Prepurchase_Short": "Prepurchase",
+    "EventDisplay_CallToAction_ShowPurchaseOptions_Button": "Purchase Options",
     "EventDisplay_CallToAction_FreeToPlay": "Free To Play",
     "EventDisplay_CallToAction_PlayNowForFree": "Play for Free!",
     "EventDisplay_CallToAction_VisitStore": "View Store Page",

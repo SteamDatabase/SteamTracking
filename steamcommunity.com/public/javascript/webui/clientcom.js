@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6585615";
+var CLSTAMP = "6588911";
 !(function (t) {
   var e = {};
   function n(r) {
@@ -97,10 +97,10 @@ var CLSTAMP = "6585615";
         return a;
       }),
       n.d(e, "e", function () {
-        return f;
+        return l;
       }),
       n.d(e, "h", function () {
-        return l;
+        return f;
       }),
       n.d(e, "a", function () {
         return _;
@@ -115,7 +115,7 @@ var CLSTAMP = "6585615";
         return m;
       }),
       n.d(e, "g", function () {
-        return S;
+        return h;
       });
     n("mrSG");
     var r,
@@ -159,9 +159,9 @@ var CLSTAMP = "6585615";
         PAGE_TIMESTAMP: 0,
         get SESSIONID() {
           return (function () {
-            if (!Object(i.a)()) return r || (r = l()), r;
+            if (!Object(i.a)()) return r || (r = f()), r;
             var t = Object(i.b)("sessionid");
-            t || (t = l());
+            t || (t = f());
             return t;
           })();
         },
@@ -203,8 +203,8 @@ var CLSTAMP = "6585615";
         IS_VALVE_GROUP: !1,
         IS_ALLOWED_SC: !1,
       },
-      f = { ANNOUNCEMENT_GID: "" };
-    function l() {
+      l = { ANNOUNCEMENT_GID: "" };
+    function f() {
       var t = (function () {
         for (var t = "", e = 0; e < 24; e++)
           t += Object(o.b)(0, 35).toString(36);
@@ -233,8 +233,8 @@ var CLSTAMP = "6585615";
       o && (Object.assign(s, o), (e.broadcastConfig = !0));
       var i = d("community", t);
       i && (Object.assign(a, i), (e.communityConfig = !0));
-      var l = d("event", t);
-      return l && (Object.assign(f, l), (e.eventConfig = !0)), e;
+      var f = d("event", t);
+      return f && (Object.assign(l, f), (e.eventConfig = !0)), e;
     }
     function d(t, e) {
       var n;
@@ -271,9 +271,11 @@ var CLSTAMP = "6585615";
         ? c.STATS_BASE_URL
         : t.startsWith(c.INTERNAL_STATS_BASE_URL)
         ? c.INTERNAL_STATS_BASE_URL
+        : t.startsWith("https://steamloopback.host")
+        ? "https://steamloopback.host"
         : "";
     }
-    function S() {
+    function h() {
       var t = window.location.href;
       return t.startsWith(c.STORE_BASE_URL)
         ? "store"
@@ -604,7 +606,7 @@ var CLSTAMP = "6585615";
         return a;
       }),
       n.d(e, "g", function () {
-        return f;
+        return l;
       });
     /*! *****************************************************************************
 Copyright (c) Microsoft Corporation.
@@ -802,7 +804,7 @@ PERFORMANCE OF THIS SOFTWARE.
         };
       }
     }
-    function f() {
+    function l() {
       for (var t = 0, e = 0, n = arguments.length; e < n; e++)
         t += arguments[e].length;
       var r = Array(t),

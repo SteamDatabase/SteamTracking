@@ -49,6 +49,9 @@
   background: url("https://support.steampowered.com/images/v6/maincol_gradient_rule.png")
     no-repeat bottom left rgba(0, 0, 0, 0);
 }
+.BB_TableData {
+  vertical-align: top;
+}
 .bbcodeimporter_ImportToolCtn_TQZns {
   padding: 20px;
   overflow: auto;

@@ -119,6 +119,10 @@ GHomepage = {
 		if ( window.Responsive_ReparentItemsInResponsiveMode )
 		{
 			window.Responsive_ReparentItemsInResponsiveMode( '.spotlight_block', $J('#home_responsive_spotlight_ctn') );
+
+			window.Responsive_ReparentItemsInResponsiveMode( '*[data-content-dive=true]', function ( $el ) {
+				return $el.closest( '.home_page_content' );
+			} );
 		}
 
 		this.usabilityTracker = new CUsabilityTracker();

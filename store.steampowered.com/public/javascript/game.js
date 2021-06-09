@@ -1854,7 +1854,61 @@ function JSReportProductAction( appId, pageAction, snr )
 	);
 }
 
+function ToggleBannerContentVisibility( divContentID, divIconID )
+{
+	var $element = $J( divContentID );
+	if ( $element !== null )
+	{
+		$element.is(':visible') ? $element.hide('fast') : $element.show('fast');
+	}
+
+	var $icon = $J( divIconID )
+	if ( $icon !== null )
+	{
+		$icon.toggleClass('expanded');
+	}
+};
+
 function ReparentAppLandingPageForMobileUX()
 {
+	// Only want to re-parent if we're actually mobile-sized
+	var bMatch = window.matchMedia( '(max-width: 500px)' ).matches;
+
+	if ( bMatch ) {
+		// move the app name below the header image
+		$J('#appHubAppName').appendTo('#gameHeaderImageCtn');
+
+		// move dev, publisher, and release date below the header image
+		$J('#developerList').appendTo('#gameHeaderImageCtn');
+		$J('#publisherList').appendTo('#gameHeaderImageCtn');
+		$J('#releaseDate').appendTo('#gameHeaderImageCtn');
+
+		// purchase banner
+		$J('#game_area_purchase').appendTo('#bannerPurchasePackageContent');
+		$J('#bannerPurchase').appendTo('#game_highlights');
+		$J('#bannerPurchasePackageContent').appendTo('#game_highlights');
+
+		// the wishlist area needs to squeeze in on the left side of the purchase banner
+		$J('#add_to_wishlist_area').appendTo('#bannerPurchase');
+		$J('#add_to_wishlist_area_success').appendTo('#bannerPurchase');
+		$J('#add_to_wishlist_area_fail').appendTo('#bannerPurchase');
+		$J('#bannerPurchaseLink').appendTo('#bannerPurchase');
+				
+		// swap order of app review rows
+		$J('#appReviewsAll').appendTo('#userReviews');
+		$J('#appReviewsRecent').appendTo('#userReviews');
+
+		// move reviews location
+		$J('#reviewsHeader').appendTo('#game_highlights');
+		$J('#userReviews').appendTo('#game_highlights');
+
+		// place banners under app details
+		$J('#bannerAchievements').appendTo('#responsive_apppage_details_left_ctn');
+		$J('#bannerPointsShop').appendTo('#responsive_apppage_details_left_ctn');
+		$J('#bannerItemStore').appendTo('#responsive_apppage_details_left_ctn');
+		
+		// move game details to bottom of page
+		$J('#appDetailsUnderlinedLinks').appendTo('#app_reviews_hash');
 	}
+}
 

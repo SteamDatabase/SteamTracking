@@ -52,7 +52,7 @@
           return L;
         }),
         a.d(t, "LibraryLoyaltyAwardModal", function () {
-          return j;
+          return T;
         });
       var n = a("mrSG"),
         r = a("q1tI"),
@@ -337,9 +337,7 @@
                   [
                     4,
                     s.a.get(
-                      m.d.STORE_BASE_URL +
-                        "pointssummary/ajaxgetasyncconfig?origin=" +
-                        Object(m.f)(),
+                      Object(m.f)() + "pointssummary/ajaxgetasyncconfig",
                       { withCredentials: !0 }
                     ),
                   ]
@@ -365,7 +363,7 @@
           });
         });
       }
-      var T = (function (e) {
+      var j = (function (e) {
           function t(t) {
             var a = e.call(this, t) || this;
             return (
@@ -472,8 +470,8 @@
             (t = a = Object(n.c)([o.a], t))
           );
         })(r.Component),
-        j =
-          ((t.default = T),
+        T =
+          ((t.default = j),
           (function (e) {
             function t(t) {
               return e.call(this, t) || this;
@@ -591,23 +589,23 @@
               }
               switch (p) {
                 case R.SELECTING:
-                  var T = 0 === b || h.get(b),
-                    j = !g || g.greaterThanOrEqual(O),
+                  var j = 0 === b || h.get(b),
+                    T = !g || g.greaterThanOrEqual(O),
                     I = r.createElement(
                       S.q,
                       {
                         onClick: function () {
                           return e.setState({ ePhase: R.CONFIRM });
                         },
-                        disabled: T,
+                        disabled: j,
                         title: Object(d.f)(
-                          T
+                          j
                             ? "#GrantAward_PromptTooltip"
                             : "#GrantAward_SubmitTooltip"
                         ),
                       },
                       Object(d.f)(
-                        T ? "#GrantAward_SelectAward" : "#GrantAward_Next"
+                        j ? "#GrantAward_SelectAward" : "#GrantAward_Next"
                       )
                     );
                   f = r.createElement(
@@ -651,7 +649,7 @@
                     r.createElement(
                       M,
                       { store: i },
-                      T || j
+                      j || T
                         ? I
                         : [
                             r.createElement(

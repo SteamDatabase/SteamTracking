@@ -5222,27 +5222,47 @@ body.v6 .quadscreenshot_carousel h2 {
 		position: relative;
 		z-index: 1;
 		width: 100%;
-		padding: 5px;
+		padding: 0;
+		height: 0;
+		min-height: 0;
 		margin-left: -5px;
+
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
 	}
 
 	html.responsive .carousel_container .carousel_thumbs > div {
 		display: none;
+
+		flex: 1;
+		margin: 12px 3px;
+		max-width: 30px;
+		height: 2px;
+		border-radius: 2px;
+		transition: background-color 0.2s;
+		background-color: hsla(202,60%,100%,0.2);
+		cursor: pointer;
+	}
+	html.responsive .carousel_container .carousel_thumbs > div.focus {
+		background-color: hsla(202,60%,100%,0.7);
 	}
 
 	html.responsive .carousel_container .arrow {
 		bottom: 0px;
 		top: auto;
-		height: 20px;
-		width: 20%;
-		padding: 5px;
+		height: 0px;
+		width: 0;
+		padding: 0px;
+
+		background: none;
 	}
 
 	html.responsive .carousel_container .arrow > div {
 		width: 13px;
 		height: 20px;
 		background-size: cover;
-		display: inline-block;
+		display: none;
 		margin: 0 10px;
 	}
 
@@ -5791,3 +5811,19 @@ background: -webkit-linear-gradient( 297deg, rgba( 255, 255, 255, 0.2) 5%,rgba( 
 	flex: 1;
 }
 
+.responsive_options_flyout {
+	position: absolute;
+
+	background: #000F18;
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+
+	min-width: 160px;
+}
+
+.responsive_options_flyout .responsive_options_flyout_item {
+	margin: 8px 10px 8px 15px;
+	color: #67C1F5;
+	font-size: 14px;
+}

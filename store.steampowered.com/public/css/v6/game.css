@@ -5706,9 +5706,9 @@ body.v6 .page_content.notes {
     color: #9aa8b7;
 }
 
-.release_date_text_short,
+.responsive_release_date_text,
 .responsive_reviewdesc_short,
+.responsive_add_to_wishlist,
 .responsive_block_header  {
 	display: none;
 }
-

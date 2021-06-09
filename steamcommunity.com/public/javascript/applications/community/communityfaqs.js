@@ -10081,55 +10081,50 @@
                                       [4, pe.Get().LoadFAQDraftContent(e)]
                                     );
                                   case 1:
-                                    if (
-                                      ((g = o.sent()),
-                                      (y =
-                                        null !==
-                                          (r =
-                                            null ===
-                                              (s =
-                                                null ===
-                                                  (i =
-                                                    null ===
-                                                      (a =
-                                                        null == g
-                                                          ? void 0
-                                                          : g.GetLastSavedDraftVersion(
-                                                              0
-                                                            )) || void 0 === a
-                                                      ? void 0
-                                                      : a.content) ||
-                                                void 0 === i
-                                                  ? void 0
-                                                  : i.match(Ie)) || void 0 === s
-                                              ? void 0
-                                              : s.length) && void 0 !== r
-                                          ? r
-                                          : 0),
-                                      (b =
-                                        null !==
-                                          (d =
-                                            null ===
-                                              (p =
-                                                null == g
-                                                  ? void 0
-                                                  : g.GetLastSavedDraftVersion(
-                                                      0
-                                                    )) || void 0 === p
-                                              ? void 0
-                                              : p.title) && void 0 !== d
-                                          ? d
-                                          : "unknown"),
-                                      !y)
+                                    for (
+                                      g = o.sent(),
+                                        y =
+                                          null !==
+                                            (r =
+                                              null ===
+                                                (s =
+                                                  null ===
+                                                    (i =
+                                                      null ===
+                                                        (a =
+                                                          null == g
+                                                            ? void 0
+                                                            : g.GetLastSavedDraftVersion(
+                                                                0
+                                                              )) || void 0 === a
+                                                        ? void 0
+                                                        : a.content) ||
+                                                  void 0 === i
+                                                    ? void 0
+                                                    : i.match(Ie)) ||
+                                              void 0 === s
+                                                ? void 0
+                                                : s.length) && void 0 !== r
+                                            ? r
+                                            : 0,
+                                        b =
+                                          null !==
+                                            (d =
+                                              null ===
+                                                (p =
+                                                  null == g
+                                                    ? void 0
+                                                    : g.GetLastSavedDraftVersion(
+                                                        0
+                                                      )) || void 0 === p
+                                                ? void 0
+                                                : p.title) && void 0 !== d
+                                            ? d
+                                            : "unknown",
+                                        w = 0;
+                                      w < 30;
+                                      w++
                                     )
-                                      return (
-                                        console.warn(
-                                          "Could not find tags for English draft of",
-                                          e
-                                        ),
-                                        [2, !1]
-                                      );
-                                    for (w = 0; w < 30; w++)
                                       (
                                         null ==
                                         (v =
@@ -10161,7 +10156,7 @@
                                                   : u.length) && void 0 !== m
                                               ? m
                                               : 0),
-                                          (C = A / y),
+                                          (C = y > 0 ? A / y : 0 == A ? 1 : 0),
                                           0 == I && C > 0.95 && C < 1.05
                                             ? (f[w] = "good")
                                             : I > 0

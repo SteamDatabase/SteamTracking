@@ -611,6 +611,10 @@ html.responsive body {
 		display: inline;
 	}
 
+	html.responsive h2.nonresponsive_hidden {
+		display: block;
+	}
+
 	html.responsive .responsive_hidden {
 		display: none;
 	}
@@ -716,4 +720,18 @@ html.force_desktop body #footer_responsive_optin_spacer {
 	background: #171a21;
 	box-shadow: 0 2px 4px 0 #000000;
 	z-index: 15;
+}
+
+.responsive_app_menu {
+	display: flex;
+	flex-direction: row;
+	cursor: pointer;
+}
+
+.responsive_app_menu .menu_ellipses {
+	width: 6px;
+	height: 6px;
+	background: #8A97A0;
+	border-radius: 3px;
+	margin-right: 3px;
 }

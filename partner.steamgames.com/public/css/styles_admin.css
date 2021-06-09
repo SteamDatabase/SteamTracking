@@ -2408,6 +2408,9 @@ html, body { height:100%; }
 .instructions em {
     color: #ffa558;
 }
+.instructions .formrow.text {
+    line-height: 20px;
+}
 #page_background {
     max-width: 100%;
 }
@@ -3797,4 +3800,8 @@ img.category_icon {
 }
 
 .DeveloperWarningSingleWarningBody {
+}
+
+.section.key_generate_ctn .formrow_large {
+    padding: 4px 0;
 }

@@ -602,7 +602,7 @@ function Responsive_InitResponsiveToggleEvents( $ )
 	} ).trigger( 'resize.ResponsiveToggle' );
 }
 
-function Responsive_ReparentItemsInResponsiveMode( strItemSelector, $Ctn )
+function Responsive_ReparentItemsInResponsiveMode( strItemSelector, $CtnOrFn )
 {
 	var fnReparentItems = function() {
 		var bSmallScreenMode = window.UseSmallScreenMode && window.UseSmallScreenMode();
@@ -610,21 +610,36 @@ function Responsive_ReparentItemsInResponsiveMode( strItemSelector, $Ctn )
 		var $MoveElements = $J(strItemSelector);
 		$MoveElements.each( function() {
 			var $Element = $J(this);
-			var $OriginalParent = $Element.data('originalParent');
-			if ( !$OriginalParent )
-			{
-				$Element.wrap( $J('<div/>') );
-				$OriginalParent = $Element.parent();
-				$Element.data('originalParent', $OriginalParent );
-			}
+			var $OriginalSpot = $Element.data('originalSpot');
 
 			if ( bSmallScreenMode )
 			{
+                if ( !$OriginalSpot )
+                {
+                	$OriginalSpot = $J( '<div/>' );
+                    $Element.after( $OriginalSpot );
+                    $Element.data('originalSpot', $OriginalSpot );
+                }
+
+				var $Ctn;
+				if ( typeof $CtnOrFn === 'function' ) {
+					$Ctn = $CtnOrFn( $Element );
+				} else {
+					$Ctn = $CtnOrFn;
+				}
+
 				$Ctn.append( $Element );
 			}
 			else
 			{
-				$OriginalParent.append( $Element );
+				if ( $OriginalSpot )
+				{
+					// If we've tracked an original parent, put us back
+					$OriginalSpot.after( $Element );
+					$OriginalSpot.remove();
+					$Element.removeData( 'originalSpot' );
+				}
+				// Otherwise, we should already be where we want
 			}
 		});
 
