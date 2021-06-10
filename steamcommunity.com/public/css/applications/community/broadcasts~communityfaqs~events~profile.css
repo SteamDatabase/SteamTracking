@@ -3757,6 +3757,14 @@ html.touch
   justify-content: space-between;
   flex-wrap: wrap;
 }
+.center_row_trgt.ItemCount_1 .eventrow_OtherEvents_16DzR {
+  width: 50%;
+}
+@media screen and (max-width: 600px) {
+  .center_row_trgt.ItemCount_1 .eventrow_OtherEvents_16DzR {
+    width: 100%;
+  }
+}
 .eventrow_OtherEvents_EventCtn_1MwNf {
   height: auto;
   margin-bottom: 8px;

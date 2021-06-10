@@ -1733,7 +1733,7 @@
                 })),
                   (a.label = 1);
               case 1:
-                return a.trys.push([1, 3, , 4]), [4, Object(G.h)(n)];
+                return a.trys.push([1, 3, , 4]), [4, Object(G.i)(n)];
               case 2:
                 return a.sent(), [3, 4];
               case 3:
@@ -4460,7 +4460,7 @@
                     (b = _ && f ? l.a.Get().GetOptInPageData(f) : null),
                     [
                       4,
-                      Object(p.h)(
+                      Object(p.i)(
                         t.map(function (e) {
                           return e.capsule;
                         })
@@ -4472,7 +4472,7 @@
                     A.sent(),
                     [
                       4,
-                      Object(p.f)(
+                      Object(p.g)(
                         t.map(function (e) {
                           return e.capsule;
                         })
@@ -4487,7 +4487,7 @@
                     ? ((O = y[S]),
                       (C = (T = E).set),
                       (j = [O]),
-                      [4, Object(p.e)(O.capsule)])
+                      [4, Object(p.f)(O.capsule)])
                     : [3, 8];
                 case 6:
                   C.apply(T, j.concat([A.sent()])), (A.label = 7);
@@ -13186,9 +13186,13 @@
           return (
             Object(a.d)(t, e),
             (t.prototype.componentDidMount = function () {
-              var e = (this.props.saleSection.events || []).map(function (e) {
-                return e.announcement_gid;
-              });
+              var e = (this.props.saleSection.events || [])
+                .filter(function (e) {
+                  return Boolean(e);
+                })
+                .map(function (e) {
+                  return e.announcement_gid;
+                });
               z.d.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
                 void 0,
                 e,
@@ -13204,7 +13208,7 @@
                 this.props.saleSection.events ||
                   (this.props.saleSection.events = []),
                 this.props.saleSection.events.some(function (t) {
-                  return t.announcement_gid == e.id;
+                  return (null == t ? void 0 : t.announcement_gid) == e.id;
                 })
                   ? Object(w.d)(
                       d.createElement(h.d, {
@@ -13233,7 +13237,12 @@
                 this.props.editModel.SetDirty(o.c.jsondata_sales);
             }),
             (t.prototype.RemoveEvent = function (e) {
-              this.props.saleSection.events.splice(e, 1),
+              (this.props.saleSection.events = this.props.saleSection.events.filter(
+                function (e) {
+                  return Boolean(e);
+                }
+              )),
+                this.props.saleSection.events.splice(e, 1),
                 this.props.editModel.SetDirty(o.c.jsondata_sales);
             }),
             (t.prototype.CreateSelectionMenu = function (e) {
@@ -13475,40 +13484,46 @@
               });
             }),
             (t.prototype.render = function () {
-              var e = this,
-                t = this.props.fnIsValidEvent;
+              var e,
+                t = this,
+                n = this.props.fnIsValidEvent;
               return d.createElement(
                 d.Fragment,
                 null,
                 d.createElement(D.a, {
-                  items: this.props.saleSection.events,
+                  items:
+                    null === (e = this.props.saleSection.events) || void 0 === e
+                      ? void 0
+                      : e.filter(function (e) {
+                          return Boolean(e);
+                        }),
                   onDelete: this.RemoveEvent,
                   onReorder: function () {
-                    return e.props.editModel.SetDirty(o.c.jsondata_sales);
+                    return t.props.editModel.SetDirty(o.c.jsondata_sales);
                   },
                   render: function (e) {
-                    var n = z.d.GetClanEventFromAnnouncementGID(
+                    var t = z.d.GetClanEventFromAnnouncementGID(
                       e.announcement_gid
                     );
                     return d.createElement(
                       q.c,
                       {
                         className: Y.a.FlexCenter,
-                        eventModel: n,
+                        eventModel: t,
                         route: q.a.k_eView,
                       },
-                      n
+                      t
                         ? d.createElement("img", {
                             style: { height: "40px", marginRight: "8px" },
-                            src: n.GetImageURLWithFallback("capsule", 0),
+                            src: t.GetImageURLWithFallback("capsule", 0),
                           })
                         : null,
-                      n ? n.GetNameWithFallback(0) : null,
+                      t ? t.GetNameWithFallback(0) : null,
                       "  (",
-                      n ? n.AnnouncementGID : null,
+                      t ? t.AnnouncementGID : null,
                       ")",
-                      t &&
-                        !t(n) &&
+                      n &&
+                        !n(t) &&
                         d.createElement(
                           "div",
                           { className: g.ErrorStylesWithIcon },
@@ -13521,12 +13536,12 @@
                   onBlur: function () {
                     setTimeout(function () {
                       return (
-                        e.m_searchResultsMenu && e.m_searchResultsMenu.Hide()
+                        t.m_searchResultsMenu && t.m_searchResultsMenu.Hide()
                       );
                     }, 200);
                   },
-                  ref: function (t) {
-                    return (e.m_refInput = t);
+                  ref: function (e) {
+                    return (t.m_refInput = e);
                   },
                   type: "text",
                   label: Object(f.f)("#Sale_EnterEventsURL"),
@@ -13542,7 +13557,7 @@
               null
             ),
             Object(a.c)([b.a], t.prototype, "AddEvent", null),
-            Object(a.c)([b.a], t.prototype, "RemoveEvent", null),
+            Object(a.c)([O.k.bound], t.prototype, "RemoveEvent", null),
             Object(a.c)([b.a], t.prototype, "UpdateEventSuggestions", null),
             (t = Object(a.c)([u.a], t))
           );
@@ -14498,7 +14513,7 @@
                             (i = n.map(function (e) {
                               return { id: e, type: r.state.type };
                             })),
-                            [4, Object(ge.h)(i)])
+                            [4, Object(ge.i)(i)])
                       );
                     case 1:
                       return (
@@ -14664,7 +14679,7 @@
                     : this.state.nImportCapsuleVisibiltyIndex,
               };
               this.props.capsuleContainer.capsules.push(n),
-                Object(ge.h)([n]),
+                Object(ge.i)([n]),
                 this.props.editModel.SetDirty(o.c.jsondata_sales);
             }),
             (t.prototype.CountCapsPerVisibilityIndex = function () {
@@ -15298,7 +15313,7 @@
                       )
                         (c = s[l]),
                           (u = this.ParseCapsuleInfoFromLine(c)) && i.push(u);
-                      return [4, Object(ge.h)(i)];
+                      return [4, Object(ge.i)(i)];
                     case 1:
                       for (
                         a.sent(), d = "", p = t.GetNumberOfDays(), m = 0, _ = i;
@@ -16564,7 +16579,7 @@
                           s = void 0;
                         try {
                           s =
-                            null === (e = Object(ge.g)(l)) || void 0 === e
+                            null === (e = Object(ge.h)(l)) || void 0 === e
                               ? void 0
                               : e.name;
                         } catch (e) {}
@@ -19995,9 +20010,13 @@
               pe.b.LoadPackageInfo(n),
               z.d.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
                 null,
-                this.props.saleSection.events.map(function (e) {
-                  return e.announcement_gid;
-                })
+                this.props.saleSection.events
+                  .filter(function (e) {
+                    return Boolean(null == e ? void 0 : e.announcement_gid);
+                  })
+                  .map(function (e) {
+                    return e.announcement_gid;
+                  })
               );
           }),
           (t.prototype.RemoveSection = function (e) {
@@ -21071,6 +21090,7 @@
               "recent_tagged_events" !== n.smart_section_type &&
               ((i = !1), (r = "#Sale_Section_RevealSetting_limit_smart")),
             d.createElement(pn, {
+              valveOnly: !0,
               varName: "dynamic_reveal",
               editModel: a,
               section: n,
@@ -21701,7 +21721,7 @@
                 (this.m_refInput.element.value = ""),
                 Object(O.G)(function () {
                   (n.props.saleSection.capsules = [{ id: e, type: t }]),
-                    Object(ge.h)(n.props.saleSection.capsules),
+                    Object(ge.i)(n.props.saleSection.capsules),
                     n.props.editModel.SetDirty(o.c.jsondata_sales);
                 });
             }),
@@ -22816,7 +22836,7 @@
                 o = 0,
                 s = 0,
                 c = i.GetEventModel().GetTaggedItems();
-              Object(j.h)(
+              Object(j.i)(
                 c.map(function (e) {
                   return e.capsule;
                 })
