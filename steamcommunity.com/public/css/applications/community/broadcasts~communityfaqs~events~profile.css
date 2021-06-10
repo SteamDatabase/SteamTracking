@@ -11894,9 +11894,6 @@ html:not(.touch)
   margin: 0 auto;
   max-width: 940px;
 }
-.partnersaledisplay_SaleBroadcastCtn_1SFMh.partnersaledisplay_WideBroadcastCtn_RGsXp {
-  max-width: unset;
-}
 .partnersaledisplay_SaleOuterContainer_150kd {
   display: flex;
   flex-direction: column;
@@ -12108,9 +12105,6 @@ html.responsive.touch .partnersaledisplay_SaleSectionTabs_1FPIV {
   width: 100%;
   margin: 0px auto;
   max-width: 940px;
-}
-.partnersaledisplay_SaleBroadcastSection_1u0IZ.partnersaledisplay_WideBroadcastCtn_RGsXp {
-  max-width: unset;
 }
 .partnersaledisplay_CarouselPage_Hlkuk {
   padding-left: 8px;

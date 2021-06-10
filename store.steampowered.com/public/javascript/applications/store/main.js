@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6593457";
+var CLSTAMP = "6593678";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [10],
   {
@@ -12467,7 +12467,7 @@ var CLSTAMP = "6593457";
                       ((t = {}),
                       (t[he.a.SaleBroadcastSection] = _),
                       (t[he.a.SaleBroadcastCtn] = !_),
-                      (t[he.a.WideBroadcastCtn] = i),
+                      (t.WideBroadcastCtn = i),
                       (t.SaleBroadcastSection_trgt = !0),
                       t)
                     ),
@@ -45694,7 +45694,6 @@ var CLSTAMP = "6593457";
         SaleOverlay: "partnersaledisplay_SaleOverlay_1sZo8",
         AppSummaryWidgetCtn: "partnersaledisplay_AppSummaryWidgetCtn_2H8Bm",
         SaleBroadcastCtn: "partnersaledisplay_SaleBroadcastCtn_1SFMh",
-        WideBroadcastCtn: "partnersaledisplay_WideBroadcastCtn_RGsXp",
         SaleOuterContainer: "partnersaledisplay_SaleOuterContainer_150kd",
         CustomStyle_together: "partnersaledisplay_CustomStyle_together_1lAyg",
         SaleBackground: "partnersaledisplay_SaleBackground_2N8Se",

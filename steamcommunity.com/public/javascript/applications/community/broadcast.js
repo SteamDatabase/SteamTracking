@@ -23,9 +23,9 @@
         f = a("dfs5"),
         v = a("0OaU"),
         S = a("exH9"),
-        g = a("lkRc"),
-        E = a("dLk7"),
-        O = a.n(E),
+        E = a("lkRc"),
+        g = a("dLk7"),
+        O = a.n(g),
         j = Object(o.a)(function (e) {
           var t = e.appid,
             a = Object(u.c)(t, 0, !0),
@@ -51,17 +51,17 @@
           var o = O.a.StoreSaleWidgetContainer_mini,
             l = O.a.StoreSaleWidgetImage_mini,
             d = O.a.StoreSaleImage_mini,
-            E = (O.a.StoreSaleWidgetShortDesc_mini, p.a.GetAppLinkInfo(t));
-          if (!n || !E)
+            g = (O.a.StoreSaleWidgetShortDesc_mini, p.a.GetAppLinkInfo(t));
+          if (!n || !g)
             return c.a.createElement(
               "div",
               { className: o },
               c.a.createElement(v.a, { size: "medium" }),
               ";"
             );
-          var j = "series" != E.type,
-            y = Object(m.b)(E.capsule_link, s);
-          return E && E.title
+          var j = "series" != g.type,
+            y = Object(m.b)(g.capsule_link, s);
+          return g && g.title
             ? c.a.createElement(
                 "div",
                 { className: o },
@@ -70,16 +70,16 @@
                   { className: _.Actions },
                   c.a.createElement(
                     "a",
-                    { href: y, target: g.c.IN_CLIENT ? void 0 : "_blank" },
+                    { href: y, target: E.c.IN_CLIENT ? void 0 : "_blank" },
                     c.a.createElement(
                       b.b,
-                      { type: "app", id: E.appid },
+                      { type: "app", id: g.appid },
                       c.a.createElement(
                         "div",
                         { className: l },
                         c.a.createElement("img", {
                           className: d,
-                          src: E.capsule,
+                          src: g.capsule,
                         })
                       )
                     )
@@ -93,10 +93,10 @@
                     { className: _.Actions },
                     c.a.createElement(
                       "a",
-                      { href: y, target: g.c.IN_CLIENT ? void 0 : "_blank" },
+                      { href: y, target: E.c.IN_CLIENT ? void 0 : "_blank" },
                       c.a.createElement(
                         b.b,
-                        { type: "app", id: E.appid },
+                        { type: "app", id: g.appid },
                         c.a.createElement(
                           "div",
                           {
@@ -105,7 +105,7 @@
                               "StoreSaleWidgetTitle"
                             ),
                           },
-                          E.title
+                          g.title
                         )
                       )
                     )
@@ -113,11 +113,11 @@
                   c.a.createElement(
                     "div",
                     { className: _.StoreSaleWidgetRelease },
-                    E.release
+                    g.release
                   ),
                   j &&
                     c.a.createElement(h.j, {
-                      info: E,
+                      info: g,
                       bShowDemoButton: !0,
                       bStackedButtons: !0,
                     })
@@ -182,7 +182,7 @@
           )
             return null;
           var m =
-            g.c.COMMUNITY_BASE_URL +
+            E.c.COMMUNITY_BASE_URL +
             "gid/" +
             t.jsondata.broadcast_item_drops_details_clan_accountid +
             "/partnerevents/view/" +
@@ -213,7 +213,7 @@
               Boolean(t.jsondata.broadcast_item_drops_details_clan_accountid) &&
                 c.a.createElement(
                   "a",
-                  { href: m, target: g.c.IN_CLIENT ? "" : "_blank" },
+                  { href: m, target: E.c.IN_CLIENT ? "" : "_blank" },
                   Object(A.f)("#SalePage_WatchForDrop_LearnMore")
                 )
             )
@@ -275,7 +275,7 @@
             Object(r.d)(t, e),
             (a = t),
             (t.IsBroadcastAllowed = function () {
-              return g.c.EREALM != y.f.k_ESteamRealmChina;
+              return E.c.EREALM != y.f.k_ESteamRealmChina;
             }),
             (t.prototype.componentDidMount = function () {
               return Object(r.b)(this, void 0, void 0, function () {
@@ -483,32 +483,22 @@
                   (n = Object(r.a)(Object(r.a)({}, n), {
                     left_panel: c.GetImageURL(
                       "broadcast_left",
-                      l || Object(y.h)(g.c.LANGUAGE)
+                      l || Object(y.h)(E.c.LANGUAGE)
                     ),
                     right_panel: c.GetImageURL(
                       "broadcast_right",
-                      l || Object(y.h)(g.c.LANGUAGE)
+                      l || Object(y.h)(E.c.LANGUAGE)
                     ),
                     store_title: c.GetBroadcastTitle(
-                      l || Object(y.h)(g.c.LANGUAGE)
+                      l || Object(y.h)(E.c.LANGUAGE)
                     ),
                     broadcast_chat_visibility: c.GetBroadcastChatVisibility(),
                   }));
                 var m = this.ConstructSidePanels(n, s),
                   u = n.store_title ? n.store_title : n.title,
-                  _ = w.a.Get().GetConcurrentStreams(this.props) > 1,
-                  b =
-                    "radial-gradient(100% 80% at 64% 95%, " +
-                    ((c &&
-                      c.jsondata &&
-                      c.jsondata.broadcast_gradient_inner_color) ||
-                      "rgba(108, 119, 134, 0.4)") +
-                    " 40%, " +
-                    ((c &&
-                      c.jsondata &&
-                      c.jsondata.broadcast_gradient_outer_color) ||
-                      "rgba(83, 104, 104, 0.4)") +
-                    " 100%)";
+                  _ = w.a.Get().GetConcurrentStreams(this.props) > 1;
+                c && c.jsondata && c.jsondata.broadcast_gradient_inner_color,
+                  c && c.jsondata && c.jsondata.broadcast_gradient_outer_color;
                 return i.createElement(
                   i.Fragment,
                   null,
@@ -521,7 +511,6 @@
                     i.createElement(
                       "div",
                       {
-                        style: { background: b },
                         className: Object(S.a)(
                           ((e = {}),
                           (e[T.a.bordered_container] = !0),
@@ -551,7 +540,7 @@
                               ),
                               onClick: function () {
                                 return window.open(
-                                  g.c.STORE_BASE_URL +
+                                  E.c.STORE_BASE_URL +
                                     "account/preferences/#store_broadcast_settings"
                                 );
                               },
@@ -739,7 +728,7 @@
               if (a) {
                 var r = a.url;
                 return (
-                  (g.c.IN_CLIENT ||
+                  (E.c.IN_CLIENT ||
                     navigator.userAgent.indexOf("Valve Steam Client") >= 0 ||
                     navigator.userAgent.indexOf("Valve Steam GameOverlay") >=
                       0 ||
@@ -753,7 +742,7 @@
                 );
               }
               var n = this.props.stream.steamid,
-                s = g.c.COMMUNITY_BASE_URL + "broadcast/watch/" + n;
+                s = E.c.COMMUNITY_BASE_URL + "broadcast/watch/" + n;
               return i.createElement(
                 "a",
                 {
@@ -826,9 +815,9 @@
                     "a",
                     {
                       href:
-                        g.c.STORE_BASE_URL +
+                        E.c.STORE_BASE_URL +
                         "account/preferences/#store_broadcast_settings",
-                      target: g.c.IN_CLIENT ? void 0 : "_blank",
+                      target: E.c.IN_CLIENT ? void 0 : "_blank",
                       className: T.a.settings_link,
                       "data-tooltip-text": Object(A.f)(
                         "#StoreBroadcast_Change_store_Broadcast_settings"

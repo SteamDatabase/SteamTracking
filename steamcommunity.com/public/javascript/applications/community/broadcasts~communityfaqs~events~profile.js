@@ -19701,7 +19701,7 @@
                       ((t = {}),
                       (t[qn.a.SaleBroadcastSection] = v),
                       (t[qn.a.SaleBroadcastCtn] = !v),
-                      (t[qn.a.WideBroadcastCtn] = i),
+                      (t.WideBroadcastCtn = i),
                       (t.SaleBroadcastSection_trgt = !0),
                       t)
                     ),
@@ -41894,7 +41894,6 @@
         SaleOverlay: "partnersaledisplay_SaleOverlay_1sZo8",
         AppSummaryWidgetCtn: "partnersaledisplay_AppSummaryWidgetCtn_2H8Bm",
         SaleBroadcastCtn: "partnersaledisplay_SaleBroadcastCtn_1SFMh",
-        WideBroadcastCtn: "partnersaledisplay_WideBroadcastCtn_RGsXp",
         SaleOuterContainer: "partnersaledisplay_SaleOuterContainer_150kd",
         CustomStyle_together: "partnersaledisplay_CustomStyle_together_1lAyg",
         SaleBackground: "partnersaledisplay_SaleBackground_2N8Se",

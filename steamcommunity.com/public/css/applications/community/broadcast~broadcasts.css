@@ -280,6 +280,11 @@
 .broadcast_embeddable_bordered_container_3zXpF {
   padding: 15px;
   text-align: left;
+  background: radial-gradient(
+    100% 80% at 64% 95%,
+    rgba(108, 119, 134, 0.4) 40%,
+    rgba(83, 104, 104, 0.4) 100%
+  );
 }
 .broadcast_embeddable_bordered_container_3zXpF
   .broadcast_embeddable_video_placeholder_1KU95,
@@ -290,7 +295,7 @@
 }
 .broadcast_embeddable_bordered_container_3zXpF
   .broadcast_embeddable_WidePlayer_3zjvr {
-  height: 512px;
+  height: 529px;
 }
 .broadcast_embeddable_bordered_container_3zXpF
   .broadcast_embeddable_store_chat_ctn_21N-V {
@@ -858,6 +863,22 @@
     .broadcast_embeddable_ChatEntry_Rs7El {
     padding: 6px;
   }
+}
+.WideBroadcastCtn .broadcast_embeddable_bordered_container_3zXpF {
+  background: unset;
+  padding: 0px 0px 15px 0px;
+}
+.WideBroadcastCtn
+  .broadcast_embeddable_bordered_container_3zXpF.broadcast_embeddable_Event_1A0NY
+  .broadcast_embeddable_container_2yiy6.broadcast_right_panel_simple {
+  grid-template-rows: auto 30px;
+  grid-template-areas: "livestream livestream livestream" "viewbar viewbar viewbar";
+}
+.WideBroadcastCtn
+  .broadcast_embeddable_viewer_bar_2Ygph
+  .broadcast_embeddable_viewer_links_2EQpO
+  .broadcast_embeddable_chat_link_3a0zX {
+  display: none;
 }
 .broadcast_embeddable_bordered_container_3zXpF.broadcast_embeddable_Event_1A0NY
   .broadcast_embeddable_container_2yiy6 {

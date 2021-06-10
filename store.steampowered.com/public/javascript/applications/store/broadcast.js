@@ -10600,19 +10600,9 @@
                   }));
                 var m = this.ConstructSidePanels(i, a),
                   f = i.store_title ? i.store_title : i.title,
-                  b = Or.a.Get().GetConcurrentStreams(this.props) > 1,
-                  p =
-                    "radial-gradient(100% 80% at 64% 95%, " +
-                    ((c &&
-                      c.jsondata &&
-                      c.jsondata.broadcast_gradient_inner_color) ||
-                      "rgba(108, 119, 134, 0.4)") +
-                    " 40%, " +
-                    ((c &&
-                      c.jsondata &&
-                      c.jsondata.broadcast_gradient_outer_color) ||
-                      "rgba(83, 104, 104, 0.4)") +
-                    " 100%)";
+                  b = Or.a.Get().GetConcurrentStreams(this.props) > 1;
+                c && c.jsondata && c.jsondata.broadcast_gradient_inner_color,
+                  c && c.jsondata && c.jsondata.broadcast_gradient_outer_color;
                 return s.createElement(
                   s.Fragment,
                   null,
@@ -10625,7 +10615,6 @@
                     s.createElement(
                       "div",
                       {
-                        style: { background: p },
                         className: Object(nr.a)(
                           ((e = {}),
                           (e[Wr.a.bordered_container] = !0),
