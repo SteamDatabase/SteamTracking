@@ -9805,10 +9805,29 @@
                             null
                           )
                           .then(function (n) {
-                            var r = n.map(function (e) {
-                              return e.GID;
+                            var r = n
+                              .map(function (e) {
+                                return e.appid;
+                              })
+                              .filter(function (e) {
+                                return Boolean(e);
+                              })
+                              .map(function (e) {
+                                return { id: e, type: "game" };
+                              });
+                            Object(w.i)(r).then(function () {
+                              var r = n
+                                .filter(function (e) {
+                                  return (
+                                    Boolean(e.appid) &&
+                                    !Object(w.c)({ id: e.appid, type: "game" })
+                                  );
+                                })
+                                .map(function (e) {
+                                  return e.GID;
+                                });
+                              e.m_mapSectionToNewEvents.set(t.unique_id, r);
                             });
-                            e.m_mapSectionToNewEvents.set(t.unique_id, r);
                           });
                       }
                       if (
