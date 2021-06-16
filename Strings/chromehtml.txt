@@ -1,8 +1,6 @@
 __TEXT
 __text
 __TEXT
-PP
-PP
 __stubs
 __TEXT
 __stub_helper
@@ -1831,16 +1829,14 @@ sc_schinese
 
 "
 3
-f
 D
+\
 @
 ,
-Q
 
 
 
-
-
+'
 
 
 
@@ -1859,8 +1855,8 @@ $
 A
 Hc
 =
+
 Hc
-\
 ?
 ?
 ?
@@ -1876,6 +1872,7 @@ Hc
 ?
 ?
 ?
+4
 
 @
 @

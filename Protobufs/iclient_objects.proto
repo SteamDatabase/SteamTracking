@@ -1,0 +1,112 @@
+option optimize_for = SPEED;
+option cc_generic_services = false;
+
+message ClientAppInfo {
+	optional uint32 appid = 1;
+	optional bool favorite = 2;
+	optional bool installed = 3;
+	optional bool auto_update = 4;
+	optional string category = 5;
+	optional string app_type = 6;
+	optional bool downloading = 7;
+	optional bool download_paused = 8;
+	optional uint32 bytes_download_rate = 9;
+	optional uint64 bytes_downloaded = 10;
+	optional uint64 bytes_needed = 11;
+	optional bool changing = 12;
+	optional bool available_on_platform = 13;
+}
+
+message CMsgNetworkDevicesData {
+	message Device {
+		message IP4Config {
+			message IP4Address {
+				optional uint32 ip = 1 [default = 0];
+				optional uint32 netmask = 2;
+			}
+
+			repeated .CMsgNetworkDevicesData.Device.IP4Config.IP4Address addresses = 1;
+			repeated uint32 dns_ip = 2;
+			optional uint32 gateway_ip = 3;
+			optional bool is_dhcp_enabled = 4;
+			optional bool is_default_route = 5;
+			optional bool is_enabled = 6 [default = false];
+		}
+
+		message IP6Config {
+			message IP6Address {
+				optional string ip = 1;
+			}
+
+			repeated .CMsgNetworkDevicesData.Device.IP6Config.IP6Address addresses = 1;
+			repeated string dns_ip = 2;
+			optional string gateway_ip = 3;
+			optional bool is_dhcp_enabled = 4;
+			optional bool is_default_route = 5;
+			optional bool is_enabled = 6 [default = false];
+		}
+
+		message Wired {
+			optional bool is_cable_present = 1 [default = false];
+			optional uint32 speed_mbit = 2;
+			optional string friendly_name = 3;
+		}
+
+		message Wireless {
+			message AP {
+				optional uint32 id = 1 [default = 0];
+				optional int32 estrength = 2;
+				optional string ssid = 3;
+				optional bool is_active = 4;
+				optional bool is_autoconnect = 5;
+				optional int32 esecurity = 6;
+				optional string cached_credentials = 7;
+				optional int32 strength_raw = 8;
+			}
+
+			repeated .CMsgNetworkDevicesData.Device.Wireless.AP aps = 1;
+			optional int32 esecurity_supported = 2;
+		}
+
+		optional uint32 id = 1 [default = 0];
+		optional int32 etype = 2;
+		optional int32 estate = 3;
+		optional string mac = 4;
+		optional string vendor = 5;
+		optional string product = 6;
+		optional .CMsgNetworkDevicesData.Device.IP4Config ip4 = 7;
+		optional .CMsgNetworkDevicesData.Device.IP6Config ip6 = 8;
+		optional .CMsgNetworkDevicesData.Device.Wired wired = 9;
+		optional .CMsgNetworkDevicesData.Device.Wireless wireless = 10;
+	}
+
+	repeated .CMsgNetworkDevicesData.Device devices = 1;
+	optional bool is_wifi_enabled = 2;
+	optional bool is_wifi_scanning_enabled = 3;
+}
+
+message CMsgStorageDevicesData {
+	message Drive {
+		optional uint32 id = 1 [default = 0];
+		optional string model = 2;
+		optional string vendor = 3;
+		optional string serial = 4;
+		optional bool is_ejectable = 5;
+		optional uint64 size_bytes = 6;
+	}
+
+	message BlockDevice {
+		optional uint32 id = 1 [default = 0];
+		optional uint32 drive_id = 2 [default = 0];
+		optional string path = 3;
+		optional string friendly_path = 4;
+		optional string label = 5;
+		optional uint64 size_bytes = 6;
+		optional bool is_formattable = 7;
+		optional bool is_read_only = 8;
+		optional bool is_root_device = 9;
+	}
+
+	repeated .CMsgStorageDevicesData.Drive drives = 1;
+	repeated .CMsgStorageDevicesData.BlockDevice block_devices = 2;
+}

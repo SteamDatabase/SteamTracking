@@ -50,6 +50,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(httpclient_internal.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(httpclientmgr.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(httpserver.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(iclient_objects.pb.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(iopollinghelpers_osx.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(iprangelist.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(job.o)
@@ -1079,6 +1080,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/httpclientmgr.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/httpserver.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/httpserver.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/iclient_objects.pb.cc
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/iclient_objects.pb.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/imageloadwrapper.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/interfacemap.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/interfacemap.h
@@ -1169,7 +1172,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/IClientUser.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/controller_constants.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/iclientcontroller.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/iclientnetworkdevicemanager.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/iclientnetworkingsocketsserialized.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/iclientremoteclientmanager.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/iclientscreenshots.h

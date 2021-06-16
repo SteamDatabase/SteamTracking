@@ -6,6 +6,7 @@ public:
     virtual unknown_ret Init(bool, IClientControllerSerialized*, unsigned int) = 0;
     virtual unknown_ret Shutdown() = 0;
     virtual unknown_ret RunFrame() = 0;
+    virtual unknown_ret BWaitForData(bool, bool, unsigned int) = 0;
     virtual unknown_ret GetAllControllersStatus(ControllersStatus_t*) = 0;
     virtual unknown_ret GetControllerState(unsigned int, SteamControllerStateInternal_t*) = 0;
     virtual unknown_ret GetControllerStatusEvent(unsigned int, Voltroller::SteamControllerStatusEvent_t*) = 0;

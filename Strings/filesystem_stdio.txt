@@ -267,12 +267,10 @@ Assertion Failed: num > 0
 Assertion Failed: s_bAllowStaticSymbolTable
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
 s_pSymbolTable
-{
 @
 @
-h
-b
-@
+[
+V
 =
 @
 =

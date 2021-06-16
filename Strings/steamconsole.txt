@@ -2,6 +2,8 @@ h
 __TEXT
 __text
 __TEXT
+7
+7
 __stubs
 __TEXT
 __stub_helper
@@ -11,7 +13,6 @@ __TEXT
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
-|5
 __unwind_info
 __TEXT
 __eh_frame
@@ -1249,3 +1250,4 @@ a
 @
 @
 @
+Z

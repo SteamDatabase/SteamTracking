@@ -3,7 +3,7 @@ class IClientNetworkDeviceManager
 public:
     virtual unknown_ret IsInterfaceValid() = 0;
     virtual unknown_ret RefreshDevices() = 0;
-    virtual unknown_ret GetNetworkDevicesData(NetworkDevicesData_t*) = 0;
+    virtual unknown_ret GetNetworkDevicesData(CMsgNetworkDevicesData*) = 0;
     virtual unknown_ret ConnectToDevice(unsigned int, unsigned int, char const*, char const*, unsigned int, bool, bool) = 0;
     virtual unknown_ret DisconnectFromDevice(unsigned int) = 0;
     virtual unknown_ret SetWifiEnabled(bool) = 0;
