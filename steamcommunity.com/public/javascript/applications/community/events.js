@@ -1313,8 +1313,95 @@
               u = o.find(function (e) {
                 return e.clan_event_gid == m.GetGID();
               });
-            return m.BPublished() && !u
-              ? s.createElement(
+            return !m.BPublished() || u || p.i.is_support
+              ? !u && o.length >= 2 && !p.i.is_support
+                ? s.createElement(
+                    "div",
+                    { className: V.a.EventCategory_SteamGameFestival },
+                    s.createElement(
+                      "div",
+                      { className: V.a.TitleCtn },
+                      s.createElement(
+                        "div",
+                        { className: V.a.Title },
+                        Object(f.f)("#EventCategory_SteamGameFestival_Title")
+                      ),
+                      s.createElement(
+                        "div",
+                        { className: V.a.Summary },
+                        Object(f.f)("#EventCategory_SteamGameFestival_Max", 2)
+                      )
+                    )
+                  )
+                : s.createElement(
+                    "div",
+                    { className: V.a.EventCategory_SteamGameFestival },
+                    s.createElement(
+                      "div",
+                      { className: V.a.TitleCtn },
+                      s.createElement(
+                        "div",
+                        { className: V.a.Title },
+                        Object(f.f)("#EventCategory_SteamGameFestival_Title")
+                      ),
+                      s.createElement(
+                        "div",
+                        { className: V.a.Summary },
+                        Object(f.f)("#EventCategory_SteamGameFestival_Summary")
+                      ),
+                      Boolean(
+                        !m.BPublished() && !u && o.length >= 2 && p.i.is_support
+                      ) &&
+                        s.createElement(
+                          "div",
+                          { className: K.WarningStylesWithIcon },
+                          Object(f.f)(
+                            "#EventCategory_SteamGameFestival_Max",
+                            2
+                          ),
+                          s.createElement(
+                            "div",
+                            null,
+                            Object(f.f)(
+                              "#EventCategory_SteamGameFestival_MaxByPass"
+                            )
+                          )
+                        ),
+                      Boolean(m.BPublished() && !u && p.i.is_support) &&
+                        s.createElement(
+                          "div",
+                          { className: K.WarningStylesWithIcon },
+                          Object(f.f)(
+                            "#EventCategory_SteamGameFestival_Published",
+                            2
+                          ),
+                          s.createElement(
+                            "div",
+                            null,
+                            Object(f.f)(
+                              "#EventCategory_SteamGameFestival_PublishedByPass"
+                            )
+                          )
+                        ),
+                      s.createElement(
+                        "a",
+                        {
+                          href:
+                            "https://partner.steamgames.com/doc/marketing/steamgamefestival/2021summer",
+                          target: "_blank",
+                          className: Object(B.a)(M.a.Button, $.Link),
+                        },
+                        Object(f.f)("#EventCategory_SteamGameFestival_Link")
+                      )
+                    ),
+                    s.createElement(
+                      J,
+                      Object(n.a)({}, c.c.broadcast, {
+                        onCategoryChosen: e.fnOnCategoryChosen,
+                      })
+                    )
+                  )
+              : s.createElement(
                   "div",
                   { className: V.a.EventCategory_SteamGameFestival },
                   s.createElement(
@@ -1330,72 +1417,6 @@
                       { className: V.a.Summary },
                       Object(f.f)("#EventCategory_SteamGameFestival_Published")
                     )
-                  )
-                )
-              : !u && o.length >= 2 && !p.i.is_support
-              ? s.createElement(
-                  "div",
-                  { className: V.a.EventCategory_SteamGameFestival },
-                  s.createElement(
-                    "div",
-                    { className: V.a.TitleCtn },
-                    s.createElement(
-                      "div",
-                      { className: V.a.Title },
-                      Object(f.f)("#EventCategory_SteamGameFestival_Title")
-                    ),
-                    s.createElement(
-                      "div",
-                      { className: V.a.Summary },
-                      Object(f.f)("#EventCategory_SteamGameFestival_Max", 2)
-                    )
-                  )
-                )
-              : s.createElement(
-                  "div",
-                  { className: V.a.EventCategory_SteamGameFestival },
-                  s.createElement(
-                    "div",
-                    { className: V.a.TitleCtn },
-                    s.createElement(
-                      "div",
-                      { className: V.a.Title },
-                      Object(f.f)("#EventCategory_SteamGameFestival_Title")
-                    ),
-                    s.createElement(
-                      "div",
-                      { className: V.a.Summary },
-                      Object(f.f)("#EventCategory_SteamGameFestival_Summary")
-                    ),
-                    Boolean(!u && o.length >= 2 && p.i.is_support) &&
-                      s.createElement(
-                        "div",
-                        { className: K.WarningStylesWithIcon },
-                        Object(f.f)("#EventCategory_SteamGameFestival_Max", 2),
-                        s.createElement(
-                          "div",
-                          null,
-                          Object(f.f)(
-                            "#EventCategory_SteamGameFestival_MaxByPass"
-                          )
-                        )
-                      ),
-                    s.createElement(
-                      "a",
-                      {
-                        href:
-                          "https://partner.steamgames.com/doc/marketing/steamgamefestival/2021summer",
-                        target: "_blank",
-                        className: Object(B.a)(M.a.Button, $.Link),
-                      },
-                      Object(f.f)("#EventCategory_SteamGameFestival_Link")
-                    )
-                  ),
-                  s.createElement(
-                    J,
-                    Object(n.a)({}, c.c.broadcast, {
-                      onCategoryChosen: e.fnOnCategoryChosen,
-                    })
                   )
                 );
           }
