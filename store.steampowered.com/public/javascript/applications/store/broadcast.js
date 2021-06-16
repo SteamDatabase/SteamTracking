@@ -61,55 +61,7 @@
         d = r("TtDX"),
         l = r("A5MU"),
         m = r("bxBv"),
-        f = (function (e) {
-          function t() {
-            return (null !== e && e.apply(this, arguments)) || this;
-          }
-          return (
-            Object(n.d)(t, e),
-            (t.prototype.GetString = function (e) {
-              return Promise.resolve(localStorage.getItem(e));
-            }),
-            (t.prototype.StoreString = function (e, t) {
-              return localStorage.setItem(e, t), Promise.resolve();
-            }),
-            (t.prototype.RemoveObject = function (e) {
-              return localStorage.removeItem(e), Promise.resolve();
-            }),
-            t
-          );
-        })(
-          (function () {
-            function e() {}
-            return (
-              (e.prototype.GetObject = function (e) {
-                return Object(n.b)(this, void 0, void 0, function () {
-                  var t;
-                  return Object(n.e)(this, function (r) {
-                    switch (r.label) {
-                      case 0:
-                        return r.trys.push([0, 2, , 3]), [4, this.GetString(e)];
-                      case 1:
-                        return [2, (t = r.sent()) ? JSON.parse(t) : null];
-                      case 2:
-                        return r.sent(), [2, null];
-                      case 3:
-                        return [2];
-                    }
-                  });
-                });
-              }),
-              (e.prototype.StoreObject = function (e, t) {
-                return Object(n.b)(this, void 0, void 0, function () {
-                  return Object(n.e)(this, function (r) {
-                    return [2, this.StoreString(e, JSON.stringify(t))];
-                  });
-                });
-              }),
-              e
-            );
-          })()
-        ),
+        f = r("u2yL"),
         b = r("WBba"),
         p = r("kLLr"),
         _ = r("hRO2"),
@@ -8384,7 +8336,7 @@
               this.m_textFilterStore = new At();
               var e = 0;
               "" !== St.k.steamid && (e = new p.a(St.k.steamid).GetAccountID());
-              this.m_textFilterStore.Init(e, null, new f());
+              this.m_textFilterStore.Init(e, null, new f.a());
             }),
             Object.defineProperty(e.prototype, "TextFilterStore", {
               get: function () {
