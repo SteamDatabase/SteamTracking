@@ -4466,6 +4466,10 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 		font-size: 14px;
 	}
 
+	html.responsive .store_main_capsule.no_screenshots .app_name {
+		margin-top: 0;
+	}
+
 	html.responsive .home_rightcol{
 		display: none;
 	}
@@ -4565,6 +4569,7 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 
 	html.responsive .carousel_container.maincap .info {
 		background: linear-gradient(180deg, #0A141D 0%, rgba(10, 20, 29, 0.2) 100%);
+		min-height: 70px;
 	}
 
 	html.responsive .carousel_container.maincap .app_name {
@@ -4657,6 +4662,10 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 	html.responsive .carousel_container .carousel_items:not(.no_paging) > * {
 		opacity: 1;
 		pointer-events: auto;
+	}
+
+	html.responsive .store_main_capsule {
+		overflow: hidden;
 	}
 
 	html.responsive .store_main_capsule .capsule {
