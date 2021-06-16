@@ -58,6 +58,8 @@ GHomepage = {
 	MainCapCluster: null,
 	usabilityTracker: null,
 
+	rgMapGenreChoices: [],
+
 	InitLayout: function()
 	{
 		var $Ctn = $J('.home_page_body_ctn');
@@ -213,6 +215,7 @@ GHomepage = {
 			GHomepage.rgShuffleModules = rgParams.rgShuffleModules || [];
 			GHomepage.nModuleShuffleCohort = rgParams.nModuleShuffleCohort || 0;
 			GHomepage.bDisplayShuffleCohort = rgParams.bDisplayShuffleCohort || false;
+			GHomepage.rgMapGenreChoices = rgParams.rgMapGenreChoices || false;
 	} catch( e ) { OnHomepageException(e); }
 
 		GHomepage.bUserDataReady = true;

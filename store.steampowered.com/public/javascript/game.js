@@ -1878,10 +1878,8 @@ function ReparentAppLandingPageForMobileUX()
 		// move the app name below the header image
 		$J('#appHubAppName').appendTo('#gameHeaderImageCtn');
 
-		// move dev, publisher, and release date below the header image
-		$J('#developerList').appendTo('#gameHeaderImageCtn');
-		$J('#publisherList').appendTo('#gameHeaderImageCtn');
-		$J('#releaseDate').appendTo('#gameHeaderImageCtn');
+		// place the dev, publisher, and release date grid below the header image
+		$J('#appHeaderGridContainer').appendTo('#gameHeaderImageCtn');
 
 		// place the ... app menu 
 		$J('#appMenu').appendTo('#appHubAppName');

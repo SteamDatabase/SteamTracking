@@ -1,8 +1,8 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6596884";
+var CLSTAMP = "6603895";
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [71],
+  [99],
   {
     "+d9t": function (e, t, n) {
       "use strict";
@@ -573,10 +573,10 @@ var CLSTAMP = "6596884";
           return M;
         }),
         n.d(t, "c", function () {
-          return x;
+          return R;
         }),
         n.d(t, "n", function () {
-          return R;
+          return x;
         }),
         n.d(t, "p", function () {
           return I;
@@ -591,10 +591,10 @@ var CLSTAMP = "6596884";
           return k;
         }),
         n.d(t, "y", function () {
-          return B;
+          return L;
         }),
         n.d(t, "H", function () {
-          return L;
+          return B;
         }),
         n.d(t, "X", function () {
           return A;
@@ -1538,7 +1538,7 @@ var CLSTAMP = "6596884";
           })
         );
       }
-      function x(e) {
+      function R(e) {
         return o.createElement(
           "svg",
           {
@@ -1573,7 +1573,7 @@ var CLSTAMP = "6596884";
           })
         );
       }
-      function R() {
+      function x() {
         return o.createElement(
           "svg",
           {
@@ -1724,7 +1724,7 @@ var CLSTAMP = "6596884";
           })
         );
       }
-      function B(e) {
+      function L(e) {
         return o.createElement(
           "svg",
           {
@@ -1745,7 +1745,7 @@ var CLSTAMP = "6596884";
           })
         );
       }
-      function L(e) {
+      function B(e) {
         return o.createElement(
           "svg",
           {
@@ -3978,13 +3978,19 @@ var CLSTAMP = "6596884";
           function e(e, t) {
             (this.m_rgLoadingLinks = []), (this.m_rgLoadingLinks = []);
             for (
-              var n = e.document.getElementsByTagName("link"), r = 0;
+              var n = e.getElementsByTagName("link"), r = 0;
               r < n.length;
               r++
             ) {
-              var o = n[r];
-              o.addEventListener("load", this.OnLinkLoad),
-                this.m_rgLoadingLinks.push(o);
+              var o = n[r],
+                i = !1;
+              try {
+                (o.sheet && o.sheet.cssRules && 0 != o.sheet.cssRules.length) ||
+                  (i = !0);
+              } catch (e) {}
+              i &&
+                (o.addEventListener("load", this.OnLinkLoad),
+                this.m_rgLoadingLinks.push(o));
             }
           }
           return (
@@ -4078,7 +4084,7 @@ var CLSTAMP = "6596884";
                   : ((i = (n = b.CreatePopup(this.m_strName, this.m_rgParams))
                       .popup),
                     (a = n.element),
-                    (s = new f(i, a))),
+                    (s = new f(i.document, a))),
                 i &&
                   a &&
                   ((i.document.title = this.m_strTitle),
@@ -4563,7 +4569,7 @@ var CLSTAMP = "6596884";
           return M;
         }),
         n.d(t, "g", function () {
-          return R;
+          return x;
         });
       var r = n("mrSG"),
         o = n("q1tI"),
@@ -4592,7 +4598,7 @@ var CLSTAMP = "6596884";
           o.useEffect(
             function () {
               return (
-                t && !c.current && (c.current = R(window).ShowPortaledModal(s)),
+                t && !c.current && (c.current = x(window).ShowPortaledModal(s)),
                 function () {
                   c.current && (c.current.Close(), (c.current = null));
                 }
@@ -4900,7 +4906,7 @@ var CLSTAMP = "6596884";
             t
           );
         })(o.Component),
-        x = (function () {
+        R = (function () {
           function e() {
             (this.m_bUsePopups = !0),
               (this.m_rgModals = []),
@@ -4973,9 +4979,9 @@ var CLSTAMP = "6596884";
             e
           );
         })();
-      function R(e) {
+      function x(e) {
         var t = I.get(e);
-        return t || ((t = new x()), I.set(e, t)), t;
+        return t || ((t = new R()), I.set(e, t)), t;
       }
       var I = new WeakMap();
     },
@@ -5101,10 +5107,10 @@ var CLSTAMP = "6596884";
           return k;
         }),
         n.d(t, "d", function () {
-          return B;
+          return L;
         }),
         n.d(t, "u", function () {
-          return L;
+          return B;
         }),
         n.d(t, "o", function () {
           return A;
@@ -5214,10 +5220,10 @@ var CLSTAMP = "6596884";
         var t = Object(u.b)();
         return o.createElement(
           p.f,
-          Object(r.a)({ component: t.Content, fallback: x }, e)
+          Object(r.a)({ component: t.Content, fallback: R }, e)
         );
       }
-      function x(e) {
+      function R(e) {
         var t = e.children,
           n = e.bCenterVertically,
           i = e.renderDialogContentDiv,
@@ -5248,7 +5254,7 @@ var CLSTAMP = "6596884";
           )
         );
       }
-      var R = (function (e) {
+      var x = (function (e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -5274,7 +5280,7 @@ var CLSTAMP = "6596884";
         return o.createElement(
           M,
           { className: t, bCenterVertically: n },
-          o.createElement(R, Object(r.a)({}, i))
+          o.createElement(x, Object(r.a)({}, i))
         );
       }
       var j = o.forwardRef(function (e, t) {
@@ -5321,7 +5327,7 @@ var CLSTAMP = "6596884";
             )
           );
         }),
-        B = o.forwardRef(function (e, t) {
+        L = o.forwardRef(function (e, t) {
           return o.createElement(
             j,
             Object(r.a)({ type: "button" }, e, {
@@ -5335,7 +5341,7 @@ var CLSTAMP = "6596884";
             })
           );
         }),
-        L = o.forwardRef(function (e, t) {
+        B = o.forwardRef(function (e, t) {
           return o.createElement(
             j,
             Object(r.a)({ type: "button" }, e, {
@@ -5367,7 +5373,7 @@ var CLSTAMP = "6596884";
             " "
           ),
           o.createElement(
-            B,
+            L,
             { onClick: e.onCancel },
             e.strCancelText || Object(s.f)("#Button_Cancel")
           )
@@ -5390,7 +5396,7 @@ var CLSTAMP = "6596884";
             " "
           ),
           o.createElement(
-            B,
+            L,
             { onClick: e.onCancel },
             e.strCancelText || Object(s.f)("#Button_Cancel")
           )
@@ -5895,7 +5901,7 @@ var CLSTAMP = "6596884";
                       "div",
                       { className: "displayRow" },
                       o.createElement(
-                        B,
+                        L,
                         {
                           className: "DialogInput_CopyAction Primary",
                           onClick: this.OnCopyClick,
@@ -8372,6 +8378,55 @@ var CLSTAMP = "6596884";
           );
         })(a);
     },
+    RMhI: function (e, t, n) {
+      var r = {
+        "./sales_brazilian.json": ["8W/b", 41],
+        "./sales_bulgarian.json": ["CF5q", 42],
+        "./sales_czech.json": ["O2WS", 43],
+        "./sales_danish.json": ["XnEN", 44],
+        "./sales_dutch.json": ["amMP", 45],
+        "./sales_english.json": ["3u+3", 46],
+        "./sales_finnish.json": ["4mLc", 47],
+        "./sales_french.json": ["fJyv", 48],
+        "./sales_german.json": ["LcuH", 49],
+        "./sales_greek.json": ["7l8b", 50],
+        "./sales_hungarian.json": ["L9+e", 51],
+        "./sales_italian.json": ["EnBf", 52],
+        "./sales_japanese.json": ["O9QH", 53],
+        "./sales_koreana.json": ["hPCV", 54],
+        "./sales_latam.json": ["mkfq", 55],
+        "./sales_norwegian.json": ["Xzk6", 56],
+        "./sales_polish.json": ["Mfbu", 57],
+        "./sales_portuguese.json": ["EQQ2", 58],
+        "./sales_romanian.json": ["oXR9", 59],
+        "./sales_russian.json": ["kQHt", 60],
+        "./sales_schinese.json": ["AVwL", 61],
+        "./sales_spanish.json": ["lRrx", 62],
+        "./sales_swedish.json": ["7tPl", 63],
+        "./sales_tchinese.json": ["mQlZ", 64],
+        "./sales_thai.json": ["yDdk", 65],
+        "./sales_turkish.json": ["mjwq", 66],
+        "./sales_ukrainian.json": ["gWvs", 67],
+        "./sales_vietnamese.json": ["VsX2", 68],
+      };
+      function o(e) {
+        if (!n.o(r, e))
+          return Promise.resolve().then(function () {
+            var t = new Error("Cannot find module '" + e + "'");
+            throw ((t.code = "MODULE_NOT_FOUND"), t);
+          });
+        var t = r[e],
+          o = t[0];
+        return n.e(t[1]).then(function () {
+          return n.t(o, 3);
+        });
+      }
+      (o.keys = function () {
+        return Object.keys(r);
+      }),
+        (o.id = "RMhI"),
+        (e.exports = o);
+    },
     RnhZ: function (e, t, n) {
       var r = {
         "./af": "K/tc",
@@ -8864,6 +8919,13 @@ var CLSTAMP = "6596884";
           (e.ClientContentValidationReport = function (e, t) {
             return e.SendNotification(
               "ClientMetrics.ClientContentValidationReport#1",
+              t,
+              { ePrivilege: 1 }
+            );
+          }),
+          (e.ClientCloudAppSyncStats = function (e, t) {
+            return e.SendNotification(
+              "ClientMetrics.ClientCloudAppSyncStats#1",
               t,
               { ePrivilege: 1 }
             );
@@ -9501,7 +9563,21 @@ var CLSTAMP = "6596884";
           (e[(e.Select = 10)] = "Select"),
           (e[(e.Start = 11)] = "Start"),
           (e[(e.LeftBumper = 12)] = "LeftBumper"),
-          (e[(e.RightBumper = 13)] = "RightBumper");
+          (e[(e.RightBumper = 13)] = "RightBumper"),
+          (e[(e.LeftTrigger = 14)] = "LeftTrigger"),
+          (e[(e.RightTrigger = 15)] = "RightTrigger"),
+          (e[(e.LeftStick = 16)] = "LeftStick"),
+          (e[(e.LeftStickClick = 17)] = "LeftStickClick"),
+          (e[(e.RightStick = 18)] = "RightStick"),
+          (e[(e.RightStickClick = 19)] = "RightStickClick"),
+          (e[(e.LeftTrackpad = 20)] = "LeftTrackpad"),
+          (e[(e.LeftTrackpadClick = 21)] = "LeftTrackpadClick"),
+          (e[(e.RightTrackpad = 22)] = "RightTrackpad"),
+          (e[(e.RightTrackpadClick = 23)] = "RightTrackpadClick"),
+          (e[(e.RearLeftUpper = 24)] = "RearLeftUpper"),
+          (e[(e.RearLeftLower = 25)] = "RearLeftLower"),
+          (e[(e.RearRightUpper = 26)] = "RearRightUpper"),
+          (e[(e.RearRightLower = 27)] = "RearRightLower");
       })(r || (r = {}));
       var c;
       !(function (e) {
@@ -10962,13 +11038,13 @@ var CLSTAMP = "6596884";
       var f = [];
       function g(e) {
         return Object(r.b)(this, void 0, void 0, function () {
-          var t, o, i, a, s, c, u, p, d, h;
-          return Object(r.e)(this, function (r) {
-            switch (r.label) {
+          var t, o, i, a, s, c, u, p, d, h, m, g;
+          return Object(r.e)(this, function (b) {
+            switch (b.label) {
               case 0:
                 return [3, 2];
               case 1:
-                return r.sent(), [3, 4];
+                return b.sent(), [3, 4];
               case 2:
                 return (
                   (t = l.b.GetLanguageFallback(e)),
@@ -10977,6 +11053,9 @@ var CLSTAMP = "6596884";
                     4,
                     Promise.all([
                       n("rCDf")("./shared_" + e + ".json").then(function (e) {
+                        return e.default;
+                      }),
+                      n("RMhI")("./sales_" + e + ".json").then(function (e) {
                         return e.default;
                       }),
                       n("AvbV")("./main_" + e + ".json").then(function (e) {
@@ -10991,6 +11070,13 @@ var CLSTAMP = "6596884";
                           }),
                       o
                         ? {}
+                        : n("RMhI")("./sales_" + t + ".json").then(function (
+                            e
+                          ) {
+                            return e.default;
+                          }),
+                      o
+                        ? {}
                         : n("AvbV")("./main_" + t + ".json").then(function (e) {
                             return e.default;
                           }),
@@ -10998,16 +11084,21 @@ var CLSTAMP = "6596884";
                   ]
                 );
               case 3:
-                (i = r.sent()),
+                (i = b.sent()),
                   (a = i[0]),
                   (s = i[1]),
                   (c = i[2]),
                   (u = i[3]),
-                  l.e.InitFromObjects(s, u, a, c),
-                  (r.label = 4);
+                  (p = i[4]),
+                  (d = i[5]),
+                  l.e.AddTokens(
+                    Object(r.a)(Object(r.a)(Object(r.a)({}, s), a), c),
+                    Object(r.a)(Object(r.a)(Object(r.a)({}, p), u), d)
+                  ),
+                  (b.label = 4);
               case 4:
-                for (p = 0, d = f; p < d.length; p++)
-                  (h = d[p]), l.e.AddTokens(h);
+                for (h = 0, m = f; h < m.length; h++)
+                  (g = m[h]), l.e.AddTokens(g);
                 return (f = void 0), [2];
             }
           });
@@ -12675,7 +12766,7 @@ var CLSTAMP = "6596884";
         m = n("6TF7"),
         f = n.n(m),
         g = i.a.lazy(function () {
-          return Promise.all([n.e(0), n.e(2), n.e(1), n.e(4), n.e(103)]).then(
+          return Promise.all([n.e(0), n.e(2), n.e(1), n.e(4), n.e(131)]).then(
             n.bind(null, "GEPe")
           );
         }),
@@ -12695,7 +12786,7 @@ var CLSTAMP = "6596884";
           );
         }),
         y = i.a.lazy(function () {
-          return n.e(72).then(n.bind(null, "rt5e"));
+          return n.e(100).then(n.bind(null, "rt5e"));
         }),
         O = i.a.lazy(function () {
           return Promise.all([n.e(0), n.e(2), n.e(1), n.e(5), n.e(10)]).then(
@@ -12720,10 +12811,10 @@ var CLSTAMP = "6596884";
         M = function (e) {
           return "/groups/" + e + "/";
         },
-        x = function (e) {
+        R = function (e) {
           return "/id/" + e;
         },
-        R = function (e) {
+        x = function (e) {
           return "/profiles/" + e;
         },
         I = function () {
@@ -12738,10 +12829,10 @@ var CLSTAMP = "6596884";
         k = function () {
           return "/profiles/:steamid/recommended";
         },
-        B = function () {
+        L = function () {
           return "/id/:vanity_url/recommended";
         },
-        L = function () {
+        B = function () {
           return "/id/:vanity_url/friends/add";
         },
         A = function () {
@@ -12846,7 +12937,7 @@ var CLSTAMP = "6596884";
                       },
                     }),
                     i.a.createElement(l.c, {
-                      path: B(),
+                      path: L(),
                       render: function (e) {
                         return i.a.createElement(v, Object(r.a)({}, e));
                       },
@@ -12871,17 +12962,17 @@ var CLSTAMP = "6596884";
                     }),
                     i.a.createElement(
                       l.c,
-                      { path: [L(), A()] },
+                      { path: [B(), A()] },
                       i.a.createElement(y, null)
                     ),
                     i.a.createElement(l.c, {
-                      path: x(":vanity_url"),
+                      path: R(":vanity_url"),
                       render: function (e) {
                         return i.a.createElement(g, Object(r.a)({}, e));
                       },
                     }),
                     i.a.createElement(l.c, {
-                      path: R(":steamid"),
+                      path: x(":steamid"),
                       render: function (e) {
                         return i.a.createElement(g, Object(r.a)({}, e));
                       },
@@ -13138,36 +13229,36 @@ var CLSTAMP = "6596884";
     },
     rCDf: function (e, t, n) {
       var r = {
-        "./shared_arabic.json": ["d1TB", 41],
-        "./shared_brazilian.json": ["Pg9r", 42],
-        "./shared_bulgarian.json": ["ENge", 43],
-        "./shared_czech.json": ["Ts6V", 44],
-        "./shared_danish.json": ["9oiU", 45],
-        "./shared_dutch.json": ["nxN4", 46],
-        "./shared_english.json": ["TYjx", 47],
-        "./shared_finnish.json": ["NuB8", 48],
-        "./shared_french.json": ["bOPj", 49],
-        "./shared_german.json": ["svuF", 50],
-        "./shared_greek.json": ["eJKB", 51],
-        "./shared_hungarian.json": ["T7i2", 52],
-        "./shared_italian.json": ["w96W", 53],
-        "./shared_japanese.json": ["XQ4S", 54],
-        "./shared_koreana.json": ["4hyI", 55],
-        "./shared_latam.json": ["3qrw", 56],
-        "./shared_norwegian.json": ["XA4Q", 57],
-        "./shared_polish.json": ["TpXn", 58],
-        "./shared_portuguese.json": ["Q8UV", 59],
-        "./shared_romanian.json": ["Eme1", 60],
-        "./shared_russian.json": ["BUiO", 61],
-        "./shared_sc_schinese.json": ["O0N/", 62],
-        "./shared_schinese.json": ["3UpY", 63],
-        "./shared_spanish.json": ["4Fxc", 64],
-        "./shared_swedish.json": ["0JhB", 65],
-        "./shared_tchinese.json": ["OYRc", 66],
-        "./shared_thai.json": ["lhAZ", 67],
-        "./shared_turkish.json": ["RSoU", 68],
-        "./shared_ukrainian.json": ["lNXI", 69],
-        "./shared_vietnamese.json": ["RSmC", 70],
+        "./shared_arabic.json": ["d1TB", 69],
+        "./shared_brazilian.json": ["Pg9r", 70],
+        "./shared_bulgarian.json": ["ENge", 71],
+        "./shared_czech.json": ["Ts6V", 72],
+        "./shared_danish.json": ["9oiU", 73],
+        "./shared_dutch.json": ["nxN4", 74],
+        "./shared_english.json": ["TYjx", 75],
+        "./shared_finnish.json": ["NuB8", 76],
+        "./shared_french.json": ["bOPj", 77],
+        "./shared_german.json": ["svuF", 78],
+        "./shared_greek.json": ["eJKB", 79],
+        "./shared_hungarian.json": ["T7i2", 80],
+        "./shared_italian.json": ["w96W", 81],
+        "./shared_japanese.json": ["XQ4S", 82],
+        "./shared_koreana.json": ["4hyI", 83],
+        "./shared_latam.json": ["3qrw", 84],
+        "./shared_norwegian.json": ["XA4Q", 85],
+        "./shared_polish.json": ["TpXn", 86],
+        "./shared_portuguese.json": ["Q8UV", 87],
+        "./shared_romanian.json": ["Eme1", 88],
+        "./shared_russian.json": ["BUiO", 89],
+        "./shared_sc_schinese.json": ["O0N/", 90],
+        "./shared_schinese.json": ["3UpY", 91],
+        "./shared_spanish.json": ["4Fxc", 92],
+        "./shared_swedish.json": ["0JhB", 93],
+        "./shared_tchinese.json": ["OYRc", 94],
+        "./shared_thai.json": ["lhAZ", 95],
+        "./shared_turkish.json": ["RSoU", 96],
+        "./shared_ukrainian.json": ["lNXI", 97],
+        "./shared_vietnamese.json": ["RSmC", 98],
       };
       function o(e) {
         if (!n.o(r, e))
@@ -13215,8 +13306,18 @@ var CLSTAMP = "6596884";
           (e[(e.START = 14)] = "START"),
           (e[(e.LSTICK_CLICK = 15)] = "LSTICK_CLICK"),
           (e[(e.RSTICK_CLICK = 16)] = "RSTICK_CLICK"),
-          (e[(e.STEAM_MENU = 17)] = "STEAM_MENU"),
-          (e[(e.STEAM_QUICK_MENU = 18)] = "STEAM_QUICK_MENU");
+          (e[(e.LSTICK_TOUCH = 17)] = "LSTICK_TOUCH"),
+          (e[(e.RSTICK_TOUCH = 18)] = "RSTICK_TOUCH"),
+          (e[(e.LPAD_TOUCH = 19)] = "LPAD_TOUCH"),
+          (e[(e.LPAD_CLICK = 20)] = "LPAD_CLICK"),
+          (e[(e.RPAD_TOUCH = 21)] = "RPAD_TOUCH"),
+          (e[(e.RPAD_CLICK = 22)] = "RPAD_CLICK"),
+          (e[(e.REAR_LEFT_UPPER = 23)] = "REAR_LEFT_UPPER"),
+          (e[(e.REAR_LEFT_LOWER = 24)] = "REAR_LEFT_LOWER"),
+          (e[(e.REAR_RIGHT_UPPER = 25)] = "REAR_RIGHT_UPPER"),
+          (e[(e.REAR_RIGHT_LOWER = 26)] = "REAR_RIGHT_LOWER"),
+          (e[(e.STEAM_MENU = 27)] = "STEAM_MENU"),
+          (e[(e.STEAM_QUICK_MENU = 28)] = "STEAM_QUICK_MENU");
       })(r || (r = {})),
         (function (e) {
           (e[(e.UNKNOWN = 0)] = "UNKNOWN"),
@@ -14067,19 +14168,19 @@ var CLSTAMP = "6596884";
                     D = e.scrollHeight;
                   a.bMatchHeight && ((D = S - C), (s.menuHeight = D));
                   var M = (a.bOverlapVertical ? S : C) - D,
-                    x = M > 0,
-                    R = p - (a.bOverlapVertical ? C : S) - D,
-                    I = R > 0,
-                    j = (a.bPreferPopTop || !I) && x && !a.bDisablePopTop;
-                  if (!x && !I) {
+                    R = M > 0,
+                    x = p - (a.bOverlapVertical ? C : S) - D,
+                    I = x > 0,
+                    j = (a.bPreferPopTop || !I) && R && !a.bDisablePopTop;
+                  if (!R && !I) {
                     var T =
                       void 0 !== a.bShiftToFitWindow
                         ? a.bShiftToFitWindow
                         : a.bFitToWindow && !a.bOverlapHorizontal;
-                    (j = M > R && !a.bDisablePopTop),
+                    (j = M > x && !a.bDisablePopTop),
                       T && (j ? (s.menuTop = 4) : (s.menuBottom = 4)),
                       a.bFitToWindow &&
-                        (T ? (D = Math.min(D, p - 8)) : (D += j ? M : R),
+                        (T ? (D = Math.min(D, p - 8)) : (D += j ? M : x),
                         (s.menuHeight = D - 8));
                   }
                   void 0 === s.menuBottom &&
@@ -14414,5 +14515,5 @@ var CLSTAMP = "6596884";
       };
     },
   },
-  [["gfbn", 102, 0]],
+  [["gfbn", 130, 0]],
 ]);

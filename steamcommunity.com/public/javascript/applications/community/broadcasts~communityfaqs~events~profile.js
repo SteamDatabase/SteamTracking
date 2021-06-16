@@ -17737,11 +17737,13 @@
                 d = [{ elements: [], activeTab: u }];
               n.GetSaleSections().forEach(function (t, p) {
                 var m,
-                  h = d[d.length - 1].activeTab;
-                if (h.ShouldShowSection(t)) {
-                  var f = t.diable_tab_id_filtering ? u : h,
-                    _ = !0,
-                    v = null;
+                  h,
+                  f,
+                  _ = d[d.length - 1].activeTab;
+                if (_.ShouldShowSection(t)) {
+                  var v = t.diable_tab_id_filtering ? u : _,
+                    b = !0,
+                    g = null;
                   if (
                     (function (e) {
                       return (
@@ -17763,7 +17765,7 @@
                     !S.i.logged_in
                   )
                     c ||
-                      ((v = o.createElement(Br, {
+                      ((g = o.createElement(Br, {
                         section: t,
                         event: n,
                         language: r,
@@ -17774,19 +17776,19 @@
                       case "items":
                       case "events":
                       case "links":
-                        v = o.createElement(
+                        g = o.createElement(
                           Lr,
-                          Object(a.a)({ section: t, activeTab: f }, e.props)
+                          Object(a.a)({ section: t, activeTab: v }, e.props)
                         );
                         break;
                       case "broadcast":
                         n.BEventCanShowBroadcastWidget() &&
                           !l &&
-                          ((v = o.createElement(Qr, {
+                          ((g = o.createElement(Qr, {
                             event: n,
                             broadcastEmbedContext:
                               e.props.broadcastEmbedContext,
-                            activeTab: f,
+                            activeTab: v,
                             bWideBroadcastDisplay:
                               null === (m = n.jsondata) || void 0 === m
                                 ? void 0
@@ -17795,44 +17797,44 @@
                           (l = !0));
                         break;
                       case "event_description":
-                        v = o.createElement(
+                        g = o.createElement(
                           Dr,
                           Object(a.a)({ section: t }, e.props)
                         );
                         break;
                       case "doors":
-                        v = o.createElement(Hn.b, {
+                        g = o.createElement(Hn.b, {
                           strFontFamily: Yr(n.jsondata.sale_font, r),
                         });
                         break;
                       case "text_section":
-                        v = o.createElement(
+                        g = o.createElement(
                           jr,
                           Object(a.a)({ section: t }, e.props)
                         );
                         break;
                       case "tabs":
-                        var b = s.get(t);
-                        d.push({ activeTab: b, elements: [] }),
-                          (v = o.createElement(
+                        var y = s.get(t);
+                        d.push({ activeTab: y, elements: [] }),
+                          (g = o.createElement(
                             o.Fragment,
                             null,
                             o.createElement("div", { ref: e.m_refTabSection }),
                             o.createElement(
                               br.d,
                               Object(a.a)({ section: t }, e.props, {
-                                activeTab: b.GetTab(),
+                                activeTab: y.GetTab(),
                                 onTabSelected: e.OnTabSelected,
                               })
                             )
                           )),
-                          (_ = !1);
+                          (b = !1);
                         break;
                       case "tab_buttons":
-                        v = o.createElement(
+                        g = o.createElement(
                           br.b,
                           Object(a.a)({ section: t }, e.props, {
-                            activeTab: f,
+                            activeTab: v,
                             onTabSelected: e.OnTabSelected,
                             hideActiveTab: !0,
                           })
@@ -17840,7 +17842,7 @@
                         break;
                       case "curator":
                         t.curator_clan_id &&
-                          (v = o.createElement(
+                          (g = o.createElement(
                             "div",
                             {
                               style: {
@@ -17861,72 +17863,82 @@
                           ));
                         break;
                       case "curator_recommendation":
-                        v = o.createElement(Jn, {
+                        g = o.createElement(Jn, {
                           bPreviewMode: i,
                           saleSection: t,
                           event: n,
                         });
                         break;
                       case "event_schedule":
-                        v = o.createElement(
+                        g = o.createElement(
                           sr.c,
-                          Object(a.a)({ section: t }, e.props, { activeTab: f })
+                          Object(a.a)({ section: t }, e.props, { activeTab: v })
                         );
                         break;
                       case "vo_internal":
-                        if (t.internal_section_data)
+                        if (t.internal_section_data) {
                           switch (t.internal_section_data.internal_type) {
                             case "subscription_pricing":
-                              v = o.createElement(
+                              g = o.createElement(
                                 vr,
                                 Object(a.a)({ section: t }, e.props)
                               );
                               break;
                             case "tab_contents":
-                              v = o.createElement(
+                              g = o.createElement(
                                 br.c,
                                 Object(a.a)({ section: t }, e.props, {
-                                  tab: h.GetTab(),
+                                  tab: _.GetTab(),
                                   showReferences: !1,
                                 })
                               );
                               break;
                             case "tab_references":
-                              v = o.createElement(
+                              g = o.createElement(
                                 br.c,
                                 Object(a.a)({ section: t }, e.props, {
-                                  tab: h.GetTab(),
+                                  tab: _.GetTab(),
                                   showReferences: !0,
                                 })
                               );
                           }
+                          0;
+                        }
                         break;
                       case "sale_item_browser":
-                        v = o.createElement(
+                        g = o.createElement(
                           Ar,
-                          Object(a.a)({ section: t }, e.props, { activeTab: f })
+                          Object(a.a)({ section: t }, e.props, { activeTab: v })
                         );
                         break;
                       case "unselected_empty":
-                        v = null;
+                        g = null;
                     }
                   d[d.length - 1].elements.push(
                     o.createElement(
                       F.a,
                       { key: "SaleSectionIndex_" + t.unique_id + "_" + p },
-                      _
+                      b
                         ? o.createElement(
                             "div",
                             {
                               id: "SaleSection_" + (t.unique_id || p),
                               className: Object(J.a)(
                                 "SaleSectionCtn",
-                                t.section_type
+                                t.section_type,
+                                null !==
+                                  (f =
+                                    null === (h = t.internal_section_data) ||
+                                    void 0 === h
+                                      ? void 0
+                                      : h.internal_type) && void 0 !== f
+                                  ? f
+                                  : ""
                               ),
                             },
-                            v
+                            g
                           )
-                        : v
+                        : g
                     )
                   );
                 }
@@ -34536,7 +34548,7 @@
         ue = /(?:steamcommunity\.com|valve\.org\/community|my\.steamchina\.com)\/(games|app|ogg|gid|groups)\/(\w+)\/(?:announcements\/detail|partnerevents\/view_old_announcement)\/(\d+)/i,
         de = /(?:steamcommunity\.com|valve\.org\/community)\/(games|app|ogg|gid|groups)\/(\w+)\/partnerevents\/view\/(\d+)/i,
         pe = /(?:steampowered\.com|valve\.org\/store|store\.steamchina\.com)\/(?:news|newshub)\/(group|app)\/(\w+)\/view\/(\d+)/i,
-        me = /:\/\/medal.tv\/(?:clip|clips)\/(\d+)/i,
+        me = /:\/\/medal.tv\/(?:clip|clips)\/([a-z0-9]+)/i,
         he = /sketchfab.com\/(?:models\/(?:[^\/\s]+-)?)([a-z0-9]{32})/i,
         fe = /twitter\.com\/(\w+)(\/?)$/i,
         _e = /twitter\.com\/hashtag\/(\w+)(\/?)$/i,
@@ -34918,8 +34930,8 @@
         if (S.c.EREALM === p.f.k_ESteamRealmChina) return null;
         var n = new RegExp(me).exec(e);
         if (n && n.length > 1) {
-          var r = Number(n[1]);
-          if (r > 0) {
+          var r = n[1];
+          if ((null == r ? void 0 : r.length) > 0) {
             var a =
               "https://medal.tv/clip/" +
               r +

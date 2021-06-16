@@ -6925,6 +6925,14 @@ html.touch
   justify-content: space-between;
   flex-wrap: wrap;
 }
+.center_row_trgt.ItemCount_1 .eventrow_OtherEvents_2PKSF {
+  width: 50%;
+}
+@media screen and (max-width: 600px) {
+  .center_row_trgt.ItemCount_1 .eventrow_OtherEvents_2PKSF {
+    width: 100%;
+  }
+}
 .eventrow_OtherEvents_EventCtn_plQje {
   height: auto;
   margin-bottom: 8px;
@@ -14321,9 +14329,6 @@ html:not(.touch)
   margin: 0 auto;
   max-width: 940px;
 }
-.partnersaledisplay_SaleBroadcastCtn_2wJlO.partnersaledisplay_WideBroadcastCtn_fKNKc {
-  max-width: unset;
-}
 .partnersaledisplay_SaleOuterContainer_3ZZvZ {
   display: flex;
   flex-direction: column;
@@ -14535,9 +14540,6 @@ html.responsive.touch .partnersaledisplay_SaleSectionTabs_QhcTn {
   width: 100%;
   margin: 0px auto;
   max-width: 940px;
-}
-.partnersaledisplay_SaleBroadcastSection_3FpNb.partnersaledisplay_WideBroadcastCtn_fKNKc {
-  max-width: unset;
 }
 .partnersaledisplay_CarouselPage_1Wn59 {
   padding-left: 8px;

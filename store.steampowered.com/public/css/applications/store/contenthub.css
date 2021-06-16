@@ -169,6 +169,7 @@ Body.v6.tag_page.contenthub_page {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   display: inline-block;
   max-width: 200px;
+  margin-top: 30px;
 }
 .contenthubtabs_FacetMenuOverride_1fzSH {
   background: none;
@@ -263,6 +264,38 @@ Body.v6.tag_page.contenthub_page {
 }
 .contenthubtabs_ShowMoreCtn_3W8BZ .contenthubtabs_ShowMore_1DQA2:hover {
   background-color: rgba(255, 255, 255, 0.4);
+}
+.contenthubtabs_TabHeaderInner_2j9tS {
+  display: flex;
+  flex-grow: 1;
+}
+.contenthubtabs_HeaderOptionsCtn_3kOam {
+  min-width: 15%;
+  display: flex;
+}
+.contenthubtabs_HeaderOptionsCtn_3kOam div {
+  margin-bottom: 0;
+}
+.contenthubtabs_GridView_3wfiX {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0px, 1fr));
+  grid-gap: 16px;
+  padding-bottom: 14px;
+}
+.contenthubtabs_ContentHubStorePrefsLink_1VER3 {
+  min-height: 30px;
+  margin-left: auto;
+}
+.contenthubtabs_ContentHubStorePrefsLinkInner_tBsV4 {
+  display: flex;
+  flex-direction: row-reverse;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 3px;
+  margin-left: auto;
+  margin-bottom: 6px;
+  padding: 4px 6px;
 }
 .maincapsule_FeatureCtn_IIjzc {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;

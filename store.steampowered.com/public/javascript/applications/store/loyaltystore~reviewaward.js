@@ -2137,6 +2137,11 @@
                         br: o.d.readUint32,
                         bw: o.h.writeRepeatedUint32,
                       },
+                      include_direct_purchase_disabled: {
+                        n: 16,
+                        br: o.d.readBool,
+                        bw: o.h.writeBool,
+                      },
                     },
                   }),
                 t.sm_m

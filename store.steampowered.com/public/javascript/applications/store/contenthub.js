@@ -452,14 +452,14 @@
         })(),
         S = a("q1tI"),
         C = a.n(S),
-        F = a("VQ2A"),
-        I = a("IjL/"),
-        k = a("0OaU"),
-        j = a("TLQK"),
-        w = a("exH9"),
-        A = a("xVl9"),
-        E = a("5L1o"),
-        O = a("MnIK"),
+        k = a("VQ2A"),
+        w = a("IjL/"),
+        I = a("0OaU"),
+        F = a("TLQK"),
+        j = a("exH9"),
+        E = a("xVl9"),
+        O = a("5L1o"),
+        A = a("MnIK"),
         P = a("dfs5");
       function G(e, t) {
         var a = new Array();
@@ -479,7 +479,8 @@
           a
         );
       }
-      var R = a("pXEO"),
+      var L,
+        R = a("pXEO"),
         N = function (e) {
           var t = e.section,
             a = v.Get().GetAppListForSection(t.id);
@@ -487,10 +488,10 @@
           var r = null;
           switch (t.type) {
             case "4wide":
-              r = C.a.createElement(D, { capsuleList: a });
+              r = C.a.createElement(B, { capsuleList: a });
               break;
             case "creator4wide":
-              r = C.a.createElement(B, { capsuleList: a });
+              r = C.a.createElement(V, { capsuleList: a });
               break;
             default:
               r = C.a.createElement("div", null, "Unknown: ", t.type);
@@ -499,9 +500,9 @@
             P.b,
             { feature: t.id },
             C.a.createElement(
-              O.a,
+              A.a,
               { placeholderHeight: 250, rootMargin: "0px 0px 100% 0px" },
-              C.a.createElement(L, {
+              C.a.createElement(D, {
                 title: t.title,
                 description: t.description,
               }),
@@ -509,31 +510,31 @@
             )
           );
         },
-        L = function (e) {
+        D = function (e) {
           var t = e.title,
             a = e.description;
           return C.a.createElement(
             "div",
-            { className: Object(w.a)(R.StoreSection, R.SectionTitleCtn) },
+            { className: Object(j.a)(R.StoreSection, R.SectionTitleCtn) },
             C.a.createElement("span", { className: R.SectionTitle }, t),
             Boolean(a) &&
               C.a.createElement("span", { className: R.SectionDescription }, a)
           );
         },
-        D = function (e) {
+        B = function (e) {
           var t = G(e.capsuleList, 40);
           return C.a.createElement(
-            A.a,
+            E.a,
             {
               visibleElements: 4,
-              className: Object(w.a)(
+              className: Object(j.a)(
                 R.StoreSection,
                 R.StoreSection,
                 "SaleSectionCarouselPadding"
               ),
             },
             t.map(function (e) {
-              return C.a.createElement(E.m, {
+              return C.a.createElement(O.m, {
                 key: e.type + "_" + e.id,
                 capsule: e,
                 imageType: "header",
@@ -541,23 +542,23 @@
             })
           );
         },
-        B = function (e) {
+        V = function (e) {
           var t = e.capsuleList,
             a = Object(l.b)(),
             r = a[0];
           a[1];
           if (r)
-            return C.a.createElement(k.a, {
-              string: Object(j.f)("#Loading"),
+            return C.a.createElement(I.a, {
+              string: Object(F.f)("#Loading"),
               size: "medium",
               position: "center",
             });
           var n = G(t, 40);
           return C.a.createElement(
-            A.a,
+            E.a,
             { visibleElements: 4 },
             n.map(function (e) {
-              return C.a.createElement(E.m, {
+              return C.a.createElement(O.m, {
                 key: e.type + "_" + e.id,
                 capsule: e,
                 imageType: "header",
@@ -566,13 +567,13 @@
           );
         },
         M = a("vDqi"),
-        V = a.n(M),
-        H = a("2vnA"),
-        U = a("bDQf"),
-        z = a("3+zv"),
-        x = a("dpTt"),
-        K = a("mgoM"),
-        Q = (function () {
+        H = a.n(M),
+        U = a("2vnA"),
+        z = a("bDQf"),
+        x = a("3+zv"),
+        K = a("dpTt"),
+        Q = a("mgoM"),
+        W = (function () {
           function e(e) {
             void 0 === e && (e = null),
               (this.m_rgCategoriesForTagID = null),
@@ -719,7 +720,7 @@
                         r.trys.push([1, 3, , 4]),
                         [
                           4,
-                          V.a.get(
+                          H.a.get(
                             u.d.COMMUNITY_BASE_URL +
                               "sale/ajaxgetcategoriesbytag"
                           ),
@@ -741,7 +742,7 @@
                         (a = r.sent()),
                         console.error(
                           "Unable to load tag category data: " +
-                            Object(U.a)(a).strErrorMsg
+                            Object(z.a)(a).strErrorMsg
                         ),
                         [2, null]
                       );
@@ -858,7 +859,7 @@
                     o = new Array(30);
                   o.fill(""),
                     e.m_rgLanguages.forEach(function (e, t) {
-                      var a = Object(K.g)(e, -1);
+                      var a = Object(Q.g)(e, -1);
                       -1 === a
                         ? console.warn("Unrecognized language: " + e)
                         : 0 <= a && a < 30 && (o[a] = n[t]);
@@ -899,22 +900,22 @@
                         name: r.get(u),
                         subtitle: new Array(),
                         rgStoreTagFilter: {
-                          type: z.n.k_EStoreFilterClauseTypeAnd,
+                          type: x.n.k_EStoreFilterClauseTypeAnd,
                           rgSubexpressions: [
                             {
-                              type: z.n.k_EStoreFilterClauseTypeOr,
+                              type: x.n.k_EStoreFilterClauseTypeOr,
                               rgSubexpressions: t.has(u)
                                 ? t.get(u).map(function (e) {
                                     return {
                                       type:
-                                        z.n.k_EStoreFilterClauseTypeStoreTag,
+                                        x.n.k_EStoreFilterClauseTypeStoreTag,
                                       value: e,
                                     };
                                   })
                                 : [
                                     {
                                       type:
-                                        z.n.k_EStoreFilterClauseTypeStoreTag,
+                                        x.n.k_EStoreFilterClauseTypeStoreTag,
                                       value: u,
                                     },
                                   ],
@@ -942,626 +943,643 @@
             }),
             e
           );
-        })(),
-        W =
-          (new Q(),
-          (function () {
-            function e() {
-              var t = this;
-              (this.m_rgTabs = new Array()),
-                (this.m_mapTabToPagingData = new Map()),
-                (this.m_facets = []),
-                (this.m_facetFilterState = null),
-                (this.m_mapTabToPage = new Map()),
-                (this.m_mapTabToPagePromises = new Map()),
-                (this.m_mapTabToFacetCounts = new Map()),
-                (this.m_nItemsToShow = 0),
-                "dev" === u.d.WEB_UNIVERSE &&
-                  (window.g_ContentHubTabStore = this);
-              var a = Object(u.h)("ch_tab_data", "application_config");
-              this.ValidateTabData(a) &&
-                ((this.m_rgTabs = a.filter(function (e) {
-                  return e.tab_capsules.length > 0;
-                })),
-                this.m_rgTabs.length > 0 &&
-                  (this.m_SelectedTab = this.m_rgTabs[0]),
-                this.m_rgTabs.forEach(function (e) {
-                  var a = { items: e.tab_capsules, nPagesLoaded: 0 };
-                  t.m_mapTabToPage.set(e.name, a),
-                    t.m_mapTabToFacetCounts.set(e.name, e.rgSolrFacetCounts);
-                }));
-              var r = Object(u.h)("ch_tab_paging", "application_config");
-              this.ValidatePagingData(r) &&
-                r.forEach(function (e) {
-                  return t.m_mapTabToPagingData.set(e.prefix, e);
-                });
-              var n = Object(u.h)("ch_facets", "application_config"),
-                i = new Q(n);
-              (this.m_facets = i.AutoGenerateFacets()),
-                e.AddAppTypeFacet(this.m_facets),
-                e.AddPlatformFacet(this.m_facets),
-                e.AddPriceFacet(this.m_facets),
-                e.AddLanguageFacet(this.m_facets),
-                e.AddContentDescriptorFacet(this.m_facets),
-                e.AddUserPreferencesFacet(this.m_facets),
-                (this.m_facetFilterState = new x.b(
-                  this.m_facets,
-                  !1,
-                  1,
-                  z.k.k_ESortFacetsByMatchCount,
-                  Object(o.i)(u.d.LANGUAGE)
-                )),
-                (this.m_prevTabFacetKey = this.GetPageKey(
-                  this.m_SelectedTab,
-                  this.m_facetFilterState.GetQuery()
-                )),
-                this.UpdateResults(),
-                this.ResetItemsToShow();
-            }
-            return (
-              (e.prototype.GetVisibleTabs = function () {
-                return this.m_rgTabs;
-              }),
-              (e.prototype.GetSelectedTab = function () {
-                return this.m_SelectedTab;
-              }),
-              (e.prototype.SetSelectedTab = function (e) {
-                this.m_SelectedTab = e;
-              }),
-              Object.defineProperty(e.prototype, "cTotalRows", {
-                get: function () {
-                  var e;
-                  return (
-                    (null === (e = this.m_curPagingData) || void 0 === e
-                      ? void 0
-                      : e.total_count) || 0
-                  );
-                },
-                enumerable: !1,
-                configurable: !0,
-              }),
-              Object.defineProperty(e.prototype, "nRowsPerPage", {
-                get: function () {
-                  var e;
-                  return (
-                    (null === (e = this.m_curPagingData) || void 0 === e
-                      ? void 0
-                      : e.pagesize) || 1
-                  );
-                },
-                enumerable: !1,
-                configurable: !0,
-              }),
-              Object.defineProperty(e.prototype, "cTotalPages", {
-                get: function () {
-                  return Math.ceil(this.cTotalRows / this.nRowsPerPage);
-                },
-                enumerable: !1,
-                configurable: !0,
-              }),
-              (e.prototype.GetFacetFilter = function () {
-                return this.m_facetFilterState;
-              }),
-              (e.prototype.ResetItemsToShow = function () {
-                this.m_nItemsToShow = this.nRowsPerPage;
-              }),
-              Object.defineProperty(e.prototype, "bHasMoreItemsToShow", {
-                get: function () {
-                  return (
-                    this.m_curCapsules.nPagesLoaded < this.cTotalPages ||
-                    this.m_nItemsToShow < this.m_curCapsules.items.length
-                  );
-                },
-                enumerable: !1,
-                configurable: !0,
-              }),
-              (e.prototype.AddMoreItemsToShow = function () {
-                this.m_nItemsToShow += this.nRowsPerPage;
-              }),
-              (e.prototype.GetNumItemsToShow = function () {
-                return this.m_nItemsToShow;
-              }),
-              (e.prototype.UpdateResults = function () {
-                var e = this.GetPageKey(
-                  this.m_SelectedTab,
-                  this.m_facetFilterState.GetQuery()
+        })();
+      new W();
+      !(function (e) {
+        (e[(e.k_EList = 0)] = "k_EList"), (e[(e.k_EGrid = 1)] = "k_EGrid");
+      })(L || (L = {}));
+      var q = (function () {
+          function e() {
+            var t = this;
+            (this.m_rgTabs = new Array()),
+              (this.m_mapTabToPagingData = new Map()),
+              (this.m_facets = []),
+              (this.m_facetFilterState = null),
+              (this.m_mapTabToPage = new Map()),
+              (this.m_mapTabToPagePromises = new Map()),
+              (this.m_mapTabToFacetCounts = new Map()),
+              (this.m_nItemsToShow = 0),
+              (this.m_viewType = L.k_EList),
+              (this.m_strSearch = ""),
+              "dev" === u.d.WEB_UNIVERSE &&
+                (window.g_ContentHubTabStore = this);
+            var a = Object(u.h)("ch_tab_data", "application_config");
+            this.ValidateTabData(a) &&
+              ((this.m_rgTabs = a.filter(function (e) {
+                return e.tab_capsules.length > 0;
+              })),
+              this.m_rgTabs.length > 0 &&
+                (this.m_SelectedTab = this.m_rgTabs[0]),
+              this.m_rgTabs.forEach(function (e) {
+                var a = { items: e.tab_capsules, nPagesLoaded: 0 };
+                t.m_mapTabToPage.set(e.name, a),
+                  t.m_mapTabToFacetCounts.set(e.name, e.rgSolrFacetCounts);
+              }));
+            var r = Object(u.h)("ch_tab_paging", "application_config");
+            this.ValidatePagingData(r) &&
+              r.forEach(function (e) {
+                return t.m_mapTabToPagingData.set(e.prefix, e);
+              });
+            var n = Object(u.h)("ch_facets", "application_config"),
+              i = new W(n);
+            (this.m_facets = i.AutoGenerateFacets()),
+              e.AddAppTypeFacet(this.m_facets),
+              e.AddPlatformFacet(this.m_facets),
+              e.AddPriceFacet(this.m_facets),
+              e.AddLanguageFacet(this.m_facets),
+              e.AddContentDescriptorFacet(this.m_facets),
+              e.AddUserPreferencesFacet(this.m_facets),
+              (this.m_facetFilterState = new K.b(
+                this.m_facets,
+                !1,
+                1,
+                x.k.k_ESortFacetsByMatchCount,
+                Object(o.i)(u.d.LANGUAGE)
+              )),
+              (this.m_prevTabFacetKey = this.GetPageKey(
+                this.m_SelectedTab,
+                this.m_facetFilterState.GetQuery(),
+                this.m_strSearch
+              )),
+              this.UpdateResults(),
+              this.ResetItemsToShow();
+          }
+          return (
+            (e.prototype.GetVisibleTabs = function () {
+              return this.m_rgTabs;
+            }),
+            (e.prototype.GetSelectedTab = function () {
+              return this.m_SelectedTab;
+            }),
+            (e.prototype.SetSelectedTab = function (e) {
+              this.m_SelectedTab = e;
+            }),
+            Object.defineProperty(e.prototype, "cTotalRows", {
+              get: function () {
+                var e;
+                return (
+                  (null === (e = this.m_curPagingData) || void 0 === e
+                    ? void 0
+                    : e.total_count) || 0
                 );
-                (this.m_curPagingData = this.m_mapTabToPagingData.get(e)),
-                  (this.m_curFacetCounts = this.m_mapTabToFacetCounts.get(e)),
-                  (this.m_curCapsules = this.m_mapTabToPage.get(e)),
-                  e !== this.m_prevTabFacetKey &&
-                    (this.m_facetFilterState.SetFacetCounts(
-                      this.m_mapTabToFacetCounts.get(e)
-                    ),
-                    (this.m_prevTabFacetKey = e));
-              }),
-              (e.prototype.BHasTabPageLoaded = function (e, t, a) {
-                var r = this.GetPageKey(e, t),
-                  n = this.m_mapTabToPage.get(r);
-                return Boolean(
-                  n &&
-                    (a <= n.items.length || n.nPagesLoaded === this.cTotalPages)
+              },
+              enumerable: !1,
+              configurable: !0,
+            }),
+            Object.defineProperty(e.prototype, "nRowsPerPage", {
+              get: function () {
+                var e;
+                return (
+                  (null === (e = this.m_curPagingData) || void 0 === e
+                    ? void 0
+                    : e.pagesize) || 1
                 );
-              }),
-              (e.prototype.GetTabPageApps = function (e, t, a) {
-                return this.m_curCapsules;
-              }),
-              (e.prototype.HintLoadTabPage = function (e, t, a) {
-                return Object(n.b)(this, void 0, void 0, function () {
-                  var r;
-                  return Object(n.e)(this, function (n) {
-                    return this.BHasTabPageLoaded(e, t, a)
-                      ? (this.UpdateResults(),
-                        [2, this.GetTabPageApps(e, t, a)])
-                      : ((r = this.GetPageKey(e, t)),
-                        this.m_mapTabToPagePromises.has(r) ||
-                          this.m_mapTabToPagePromises.set(
-                            r,
-                            this.InternalLoadTabPage(e, t, a)
-                          ),
-                        [2, this.m_mapTabToPagePromises.get(r)]);
-                  });
+              },
+              enumerable: !1,
+              configurable: !0,
+            }),
+            Object.defineProperty(e.prototype, "cTotalPages", {
+              get: function () {
+                return Math.ceil(this.cTotalRows / this.nRowsPerPage);
+              },
+              enumerable: !1,
+              configurable: !0,
+            }),
+            (e.prototype.GetFacetFilter = function () {
+              return this.m_facetFilterState;
+            }),
+            (e.prototype.ResetItemsToShow = function () {
+              this.m_nItemsToShow = this.nRowsPerPage;
+            }),
+            Object.defineProperty(e.prototype, "bHasMoreItemsToShow", {
+              get: function () {
+                return (
+                  this.m_curCapsules.nPagesLoaded < this.cTotalPages ||
+                  this.m_nItemsToShow < this.m_curCapsules.items.length
+                );
+              },
+              enumerable: !1,
+              configurable: !0,
+            }),
+            (e.prototype.AddMoreItemsToShow = function () {
+              this.m_nItemsToShow += this.nRowsPerPage;
+            }),
+            (e.prototype.GetNumItemsToShow = function () {
+              return this.m_nItemsToShow;
+            }),
+            (e.prototype.GetViewType = function () {
+              return this.m_viewType;
+            }),
+            (e.prototype.SetViewType = function (e) {
+              this.m_viewType = e;
+            }),
+            (e.prototype.GetSearch = function () {
+              return this.m_strSearch;
+            }),
+            (e.prototype.SetSearch = function (e) {
+              this.m_strSearch = e;
+            }),
+            (e.prototype.UpdateResults = function () {
+              var e = this.GetPageKey(
+                this.m_SelectedTab,
+                this.m_facetFilterState.GetQuery(),
+                this.m_strSearch
+              );
+              (this.m_curPagingData = this.m_mapTabToPagingData.get(e)),
+                (this.m_curFacetCounts = this.m_mapTabToFacetCounts.get(e)),
+                (this.m_curCapsules = this.m_mapTabToPage.get(e)),
+                e !== this.m_prevTabFacetKey &&
+                  (this.m_facetFilterState.SetFacetCounts(
+                    this.m_mapTabToFacetCounts.get(e)
+                  ),
+                  (this.m_prevTabFacetKey = e));
+            }),
+            (e.prototype.BHasTabPageLoaded = function (e, t, a, r) {
+              var n = this.GetPageKey(e, t, r),
+                o = this.m_mapTabToPage.get(n);
+              return Boolean(
+                o &&
+                  (a <= o.items.length || o.nPagesLoaded === this.cTotalPages)
+              );
+            }),
+            (e.prototype.GetTabPageApps = function (e, t, a) {
+              return this.m_curCapsules;
+            }),
+            (e.prototype.HintLoadTabPage = function (e, t, a, r) {
+              return Object(n.b)(this, void 0, void 0, function () {
+                var o;
+                return Object(n.e)(this, function (n) {
+                  return this.BHasTabPageLoaded(e, t, a, r)
+                    ? (this.UpdateResults(), [2, this.GetTabPageApps(e, t, a)])
+                    : ((o = this.GetPageKey(e, t, r)),
+                      this.m_mapTabToPagePromises.has(o) ||
+                        this.m_mapTabToPagePromises.set(
+                          o,
+                          this.InternalLoadTabPage(e, t, a, r)
+                        ),
+                      [2, this.m_mapTabToPagePromises.get(o)]);
                 });
-              }),
-              (e.prototype.InternalLoadTabPage = function (e, t, a) {
-                var r, o, l;
-                return Object(n.b)(this, void 0, void 0, function () {
-                  var p, d, m, g, _, h, f, b, y;
-                  return Object(n.e)(this, function (n) {
-                    switch (n.label) {
-                      case 0:
-                        (p = this.GetPageKey(e, t)),
-                          (d =
-                            this.m_mapTabToPagingData.get(p) ||
-                            this.ClonePagingDataForFaceting(e, t)),
-                          this.m_mapTabToPage.has(p) ||
-                            this.m_mapTabToPage.set(p, {
-                              items: [],
-                              nPagesLoaded: 0,
-                            }),
-                          (m = this.m_mapTabToPage.get(p)),
-                          (n.label = 1);
-                      case 1:
-                        if (
-                          !(
-                            m.nPagesLoaded < this.cTotalPages &&
-                            m.items.length < a
-                          )
-                        )
-                          return [3, 6];
-                        (g = m.nPagesLoaded), (n.label = 2);
-                      case 2:
-                        return (
-                          n.trys.push([2, 4, , 5]),
-                          (_ = {
-                            query: "",
-                            start: d.pagesize * g,
-                            count: d.pagesize,
-                            cc: u.d.COUNTRY,
-                            l: u.d.LANGUAGE,
-                            v: 1,
-                            tag: v.Get().GetDefinition().strTag,
-                            tagid:
-                              null === (r = d.params) || void 0 === r
-                                ? void 0
-                                : r.tagid,
-                            category:
-                              null === (o = d.params) || void 0 === o
-                                ? void 0
-                                : o.category,
-                            facetQuery: t,
-                            send_app_data: 1,
+              });
+            }),
+            (e.prototype.InternalLoadTabPage = function (e, t, a, r) {
+              var o, l, p;
+              return Object(n.b)(this, void 0, void 0, function () {
+                var d, m, g, _, h, f, b, y, T;
+                return Object(n.e)(this, function (n) {
+                  switch (n.label) {
+                    case 0:
+                      (d = this.GetPageKey(e, t, r)),
+                        (m =
+                          this.m_mapTabToPagingData.get(d) ||
+                          this.ClonePagingDataForFaceting(e, t)),
+                        this.m_mapTabToPage.has(d) ||
+                          this.m_mapTabToPage.set(d, {
+                            items: [],
+                            nPagesLoaded: 0,
                           }),
-                          [
-                            4,
-                            V.a.get(d.url, { params: _, withCredentials: !1 }),
-                          ]
-                        );
-                      case 3:
-                        return (
-                          (h = n.sent()),
-                          1 ==
-                            (null === (l = null == h ? void 0 : h.data) ||
-                            void 0 === l
+                        (g = this.m_mapTabToPage.get(d)),
+                        (n.label = 1);
+                    case 1:
+                      if (
+                        !(
+                          g.nPagesLoaded < this.cTotalPages &&
+                          g.items.length < a
+                        )
+                      )
+                        return [3, 6];
+                      (_ = g.nPagesLoaded), (n.label = 2);
+                    case 2:
+                      return (
+                        n.trys.push([2, 4, , 5]),
+                        (h = {
+                          query: "",
+                          start: m.pagesize * _,
+                          count: m.pagesize,
+                          cc: u.d.COUNTRY,
+                          l: u.d.LANGUAGE,
+                          v: 1,
+                          tag: v.Get().GetDefinition().strTag,
+                          tagid:
+                            null === (o = m.params) || void 0 === o
                               ? void 0
-                              : l.success) &&
-                            ((d.total_count = h.data.total_count),
-                            (f = this.FilterStoreItemsForFaceting(
-                              h.data.tab_capsules
-                            )),
-                            m.items.concat(f),
-                            ++m.nPagesLoaded,
-                            i.a.AddAppLinks(h.data.applinkinfo),
-                            c.b.AddPackages(h.data.packages),
-                            s.a.AddBundles(h.data.bundles),
-                            this.m_mapTabToPagingData.set(p, d),
-                            this.m_mapTabToFacetCounts.set(
-                              p,
-                              h.data.rgSolrFacetCounts
-                            ),
-                            this.UpdateResults()),
-                          [3, 5]
-                        );
-                      case 4:
-                        return (
-                          (b = n.sent()),
-                          (y = Object(U.a)(b)),
-                          console.error(
-                            "CContentHubTabStore.InternalLoadTabPage: failed with " +
-                              y.strErrorMsg,
-                            y,
-                            this.m_facetFilterState
+                              : o.tagid,
+                          category:
+                            null === (l = m.params) || void 0 === l
+                              ? void 0
+                              : l.category,
+                          facetQuery: t,
+                          searchQuery: r,
+                          send_app_data: 1,
+                        }),
+                        [4, H.a.get(m.url, { params: h, withCredentials: !1 })]
+                      );
+                    case 3:
+                      return (
+                        (f = n.sent()),
+                        1 ==
+                          (null === (p = null == f ? void 0 : f.data) ||
+                          void 0 === p
+                            ? void 0
+                            : p.success) &&
+                          ((m.total_count = f.data.total_count),
+                          (b = this.FilterStoreItemsForFaceting(
+                            f.data.tab_capsules
+                          )),
+                          (g.items = g.items.concat(b)),
+                          ++g.nPagesLoaded,
+                          i.a.AddAppLinks(f.data.applinkinfo),
+                          c.b.AddPackages(f.data.packages),
+                          s.a.AddBundles(f.data.bundles),
+                          this.m_mapTabToPagingData.set(d, m),
+                          this.m_mapTabToFacetCounts.set(
+                            d,
+                            f.data.rgSolrFacetCounts
                           ),
-                          [3, 5]
-                        );
-                      case 5:
-                        return [3, 1];
-                      case 6:
-                        return [2, m];
-                    }
-                  });
+                          this.UpdateResults()),
+                        [3, 5]
+                      );
+                    case 4:
+                      return (
+                        (y = n.sent()),
+                        (T = Object(z.a)(y)),
+                        console.error(
+                          "CContentHubTabStore.InternalLoadTabPage: failed with " +
+                            T.strErrorMsg,
+                          T,
+                          this.m_facetFilterState
+                        ),
+                        [3, 5]
+                      );
+                    case 5:
+                      return [3, 1];
+                    case 6:
+                      return [2, g];
+                  }
                 });
-              }),
-              (e.Get = function () {
-                return (
-                  e.s_globalSingletonStore ||
-                    (e.s_globalSingletonStore = new e()),
-                  e.s_globalSingletonStore
-                );
-              }),
-              (e.prototype.ValidateTabData = function (e) {
-                var t = e;
-                return (
-                  !!(
-                    t &&
-                    Array.isArray(t) &&
-                    t.length > 0 &&
-                    "object" == typeof t[0]
-                  ) &&
-                  "string" == typeof t[0].title &&
-                  "string" == typeof t[0].displaylistname &&
-                  Array.isArray(t[0].tab_capsules)
-                );
-              }),
-              (e.prototype.ValidatePagingData = function (e) {
-                var t = e;
-                return (
-                  !!(
-                    t &&
-                    Array.isArray(t) &&
-                    t.length > 0 &&
-                    "object" == typeof t[0]
-                  ) &&
-                  "string" == typeof t[0].url &&
-                  "string" == typeof t[0].prefix &&
-                  "number" == typeof t[0].total_count
-                );
-              }),
-              (e.prototype.GetPageKey = function (e, t) {
-                return e.name + encodeURIComponent(t);
-              }),
-              (e.prototype.ClonePagingDataForFaceting = function (e, t) {
-                var a = this.m_mapTabToPagingData.get(e.name);
-                return Object(n.a)(
-                  {
-                    total_count: 0,
-                    params: Object(n.a)({ facet: t }, a.params),
-                  },
-                  a
-                );
-              }),
-              (e.AddAppTypeFacet = function (e) {
-                for (
-                  var t = { name: ["#AppTypeLabelTitle"], facetValues: [] },
-                    a = 0,
-                    r = [
-                      "game",
-                      "software",
-                      "dlc",
-                      "demo",
-                      "music",
-                      "video",
-                      "hardware",
-                    ];
-                  a < r.length;
-                  a++
-                ) {
-                  var n = r[a];
-                  t.facetValues.push({
-                    name: ["#AppTypeLabel_" + n],
-                    type: z.l.k_EAppType,
-                    appType: n,
-                    rgStoreTagFilter: {
-                      type: z.n.k_EStoreFilterClauseTypeAppType,
-                      value: n,
-                    },
-                    filter: null,
-                    matchingCapsules: [],
-                  });
-                }
-                e.push(t);
-              }),
-              (e.AddPlatformFacet = function (e) {
-                var t = { name: ["#Platform"], facetValues: [] };
+              });
+            }),
+            (e.Get = function () {
+              return (
+                e.s_globalSingletonStore ||
+                  (e.s_globalSingletonStore = new e()),
+                e.s_globalSingletonStore
+              );
+            }),
+            (e.prototype.ValidateTabData = function (e) {
+              var t = e;
+              return (
+                !!(
+                  t &&
+                  Array.isArray(t) &&
+                  t.length > 0 &&
+                  "object" == typeof t[0]
+                ) &&
+                "string" == typeof t[0].title &&
+                "string" == typeof t[0].displaylistname &&
+                Array.isArray(t[0].tab_capsules)
+              );
+            }),
+            (e.prototype.ValidatePagingData = function (e) {
+              var t = e;
+              return (
+                !!(
+                  t &&
+                  Array.isArray(t) &&
+                  t.length > 0 &&
+                  "object" == typeof t[0]
+                ) &&
+                "string" == typeof t[0].url &&
+                "string" == typeof t[0].prefix &&
+                "number" == typeof t[0].total_count
+              );
+            }),
+            (e.prototype.GetPageKey = function (e, t, a) {
+              return e.name + encodeURIComponent(t) + (a || "");
+            }),
+            (e.prototype.ClonePagingDataForFaceting = function (e, t) {
+              var a = this.m_mapTabToPagingData.get(e.name);
+              return Object(n.a)(
+                { total_count: 0, params: Object(n.a)({ facet: t }, a.params) },
+                a
+              );
+            }),
+            (e.AddAppTypeFacet = function (e) {
+              for (
+                var t = { name: ["#AppTypeLabelTitle"], facetValues: [] },
+                  a = 0,
+                  r = [
+                    "game",
+                    "software",
+                    "dlc",
+                    "demo",
+                    "music",
+                    "video",
+                    "hardware",
+                  ];
+                a < r.length;
+                a++
+              ) {
+                var n = r[a];
                 t.facetValues.push({
-                  name: ["#Platform_Windows"],
-                  type: z.l.k_ESaleTagFilter,
+                  name: ["#AppTypeLabel_" + n],
+                  type: x.l.k_EAppType,
+                  appType: n,
                   rgStoreTagFilter: {
-                    type: z.n.k_EStoreFilterClauseTypeFeatureTag,
-                    value: "windows",
+                    type: x.n.k_EStoreFilterClauseTypeAppType,
+                    value: n,
                   },
                   filter: null,
                   matchingCapsules: [],
-                }),
-                  t.facetValues.push({
-                    name: ["#Platform_Linux"],
-                    type: z.l.k_ESaleTagFilter,
-                    rgStoreTagFilter: {
-                      type: z.n.k_EStoreFilterClauseTypeFeatureTag,
-                      value: "linux",
-                    },
-                    filter: null,
-                    matchingCapsules: [],
-                  }),
-                  t.facetValues.push({
-                    name: ["#Platform_Mac"],
-                    type: z.l.k_ESaleTagFilter,
-                    rgStoreTagFilter: {
-                      type: z.n.k_EStoreFilterClauseTypeFeatureTag,
-                      value: "mac",
-                    },
-                    filter: null,
-                    matchingCapsules: [],
-                  }),
-                  e.push(t);
+                });
+              }
+              e.push(t);
+            }),
+            (e.AddPlatformFacet = function (e) {
+              var t = { name: ["#Platform"], facetValues: [] };
+              t.facetValues.push({
+                name: ["#Platform_Windows"],
+                type: x.l.k_ESaleTagFilter,
+                rgStoreTagFilter: {
+                  type: x.n.k_EStoreFilterClauseTypeFeatureTag,
+                  value: "windows",
+                },
+                filter: null,
+                matchingCapsules: [],
               }),
-              (e.AddPriceFacet = function (e) {
-                var t = {
-                  name: ["#Sale_BrowserSortOption_Price"],
-                  facetValues: [],
-                };
                 t.facetValues.push({
-                  name: ["#Sale_BrowserSortOption_Price"],
-                  type: z.l.k_EPrice,
-                  rgStoreTagFilter: { type: z.n.k_EStoreFilterClauseTypePrice },
-                  filter: null,
-                  matchingCapsules: [],
-                }),
-                  t.facetValues.push({
-                    name: [
-                      "#Sale_BrowserSortOption_PopularPurchasedDiscounted",
-                    ],
-                    type: z.l.k_ESaleTagFilter,
-                    rgStoreTagFilter: {
-                      type: z.n.k_EStoreFilterClauseTypeFeatureTag,
-                      value: "discounted",
-                    },
-                    filter: null,
-                    matchingCapsules: [],
-                  }),
-                  e.push(t);
-              }),
-              (e.AddLanguageFacet = function (e) {
-                for (
-                  var t = { name: ["#LanguageTitle"], facetValues: [] }, a = 0;
-                  a < 30;
-                  ++a
-                )
-                  t.facetValues.push({
-                    name: ["#language_selection_" + Object(o.e)(a)],
-                    type: z.l.k_ELanguage,
-                    language: a,
-                    rgStoreTagFilter: {
-                      type: z.n.k_EStoreFilterClauseTypeLanguage,
-                      value: Object(o.e)(a),
-                    },
-                    filter: null,
-                    matchingCapsules: [],
-                  });
-                e.push(t);
-              }),
-              (e.AddContentDescriptorFacet = function (e) {
-                var t = { name: ["#ContentDescriptor"], facetValues: [] };
-                t.facetValues.push({
-                  name: ["#ContentDescriptor_GeneralMatureContent"],
-                  type: z.l.k_EContentDescriptor,
-                  contentDescriptor: 5,
+                  name: ["#Platform_Linux"],
+                  type: x.l.k_ESaleTagFilter,
                   rgStoreTagFilter: {
-                    type: z.n.k_EStoreFilterClauseTypeContentDescriptor,
-                    value: 5,
+                    type: x.n.k_EStoreFilterClauseTypeFeatureTag,
+                    value: "linux",
                   },
                   filter: null,
                   matchingCapsules: [],
                 }),
-                  t.facetValues.push({
-                    name: ["#ContentDescriptor_FrequentViolenceOrGore"],
-                    type: z.l.k_EContentDescriptor,
-                    contentDescriptor: 2,
-                    rgStoreTagFilter: {
-                      type: z.n.k_EStoreFilterClauseTypeContentDescriptor,
-                      value: 2,
-                    },
-                    filter: null,
-                    matchingCapsules: [],
-                  }),
-                  t.facetValues.push({
-                    name: ["#ContentDescriptor_NudityOrSexualContent"],
-                    type: z.l.k_EContentDescriptor,
-                    contentDescriptor: 1,
-                    rgStoreTagFilter: {
-                      type: z.n.k_EStoreFilterClauseTypeContentDescriptor,
-                      value: 1,
-                    },
-                    filter: null,
-                    matchingCapsules: [],
-                  }),
-                  t.facetValues.push({
-                    name: ["#ContentDescriptor_AdultOnlySexualContent"],
-                    type: z.l.k_EContentDescriptor,
-                    contentDescriptor: 3,
-                    rgStoreTagFilter: {
-                      type: z.n.k_EStoreFilterClauseTypeContentDescriptor,
-                      value: 3,
-                    },
-                    filter: null,
-                    matchingCapsules: [],
-                  }),
-                  e.push(t);
-              }),
-              (e.AddUserPreferencesFacet = function (e) {
-                var t = { name: ["#Sale_Preferences"], facetValues: [] };
                 t.facetValues.push({
-                  name: ["#UserPreference_HideOwnedItems"],
-                  type: z.l.k_EUserPreference,
-                  userPreference: z.m.k_EHideOwnedItems,
+                  name: ["#Platform_Mac"],
+                  type: x.l.k_ESaleTagFilter,
+                  rgStoreTagFilter: {
+                    type: x.n.k_EStoreFilterClauseTypeFeatureTag,
+                    value: "mac",
+                  },
+                  filter: null,
+                  matchingCapsules: [],
+                }),
+                e.push(t);
+            }),
+            (e.AddPriceFacet = function (e) {
+              var t = {
+                name: ["#Sale_BrowserSortOption_Price"],
+                facetValues: [],
+              };
+              t.facetValues.push({
+                name: ["#Sale_BrowserSortOption_Price"],
+                type: x.l.k_EPrice,
+                rgStoreTagFilter: { type: x.n.k_EStoreFilterClauseTypePrice },
+                filter: null,
+                matchingCapsules: [],
+              }),
+                t.facetValues.push({
+                  name: ["#Sale_BrowserSortOption_PopularPurchasedDiscounted"],
+                  type: x.l.k_ESaleTagFilter,
+                  rgStoreTagFilter: {
+                    type: x.n.k_EStoreFilterClauseTypeFeatureTag,
+                    value: "discounted",
+                  },
+                  filter: null,
+                  matchingCapsules: [],
+                }),
+                e.push(t);
+            }),
+            (e.AddLanguageFacet = function (e) {
+              for (
+                var t = { name: ["#LanguageTitle"], facetValues: [] }, a = 0;
+                a < 30;
+                ++a
+              )
+                t.facetValues.push({
+                  name: ["#language_selection_" + Object(o.e)(a)],
+                  type: x.l.k_ELanguage,
+                  language: a,
+                  rgStoreTagFilter: {
+                    type: x.n.k_EStoreFilterClauseTypeLanguage,
+                    value: Object(o.e)(a),
+                  },
+                  filter: null,
+                  matchingCapsules: [],
+                });
+              e.push(t);
+            }),
+            (e.AddContentDescriptorFacet = function (e) {
+              var t = { name: ["#ContentDescriptor"], facetValues: [] };
+              t.facetValues.push({
+                name: ["#ContentDescriptor_GeneralMatureContent"],
+                type: x.l.k_EContentDescriptor,
+                contentDescriptor: 5,
+                rgStoreTagFilter: {
+                  type: x.n.k_EStoreFilterClauseTypeContentDescriptor,
+                  value: 5,
+                },
+                filter: null,
+                matchingCapsules: [],
+              }),
+                t.facetValues.push({
+                  name: ["#ContentDescriptor_FrequentViolenceOrGore"],
+                  type: x.l.k_EContentDescriptor,
+                  contentDescriptor: 2,
+                  rgStoreTagFilter: {
+                    type: x.n.k_EStoreFilterClauseTypeContentDescriptor,
+                    value: 2,
+                  },
+                  filter: null,
+                  matchingCapsules: [],
+                }),
+                t.facetValues.push({
+                  name: ["#ContentDescriptor_NudityOrSexualContent"],
+                  type: x.l.k_EContentDescriptor,
+                  contentDescriptor: 1,
+                  rgStoreTagFilter: {
+                    type: x.n.k_EStoreFilterClauseTypeContentDescriptor,
+                    value: 1,
+                  },
+                  filter: null,
+                  matchingCapsules: [],
+                }),
+                t.facetValues.push({
+                  name: ["#ContentDescriptor_AdultOnlySexualContent"],
+                  type: x.l.k_EContentDescriptor,
+                  contentDescriptor: 3,
+                  rgStoreTagFilter: {
+                    type: x.n.k_EStoreFilterClauseTypeContentDescriptor,
+                    value: 3,
+                  },
+                  filter: null,
+                  matchingCapsules: [],
+                }),
+                e.push(t);
+            }),
+            (e.AddUserPreferencesFacet = function (e) {
+              var t = { name: ["#Sale_Preferences"], facetValues: [] };
+              t.facetValues.push({
+                name: ["#UserPreference_HideOwnedItems"],
+                type: x.l.k_EUserPreference,
+                userPreference: x.m.k_EHideOwnedItems,
+                filter: null,
+                matchingCapsules: [],
+                rgStoreTagFilter: null,
+              }),
+                t.facetValues.push({
+                  name: ["#UserPreference_HideWishlistedItems"],
+                  type: x.l.k_EUserPreference,
+                  userPreference: x.m.k_EHideWishlistedItems,
                   filter: null,
                   matchingCapsules: [],
                   rgStoreTagFilter: null,
                 }),
-                  t.facetValues.push({
-                    name: ["#UserPreference_HideWishlistedItems"],
-                    type: z.l.k_EUserPreference,
-                    userPreference: z.m.k_EHideWishlistedItems,
-                    filter: null,
-                    matchingCapsules: [],
-                    rgStoreTagFilter: null,
-                  }),
-                  t.facetValues.push({
-                    name: ["#UserPreference_HideIgnoredItems"],
-                    type: z.l.k_EUserPreference,
-                    userPreference: z.m.k_EHideIgnoredItems,
-                    bEnabledByDefault: !0,
-                    filter: null,
-                    matchingCapsules: [],
-                    rgStoreTagFilter: null,
-                  }),
-                  e.push(t);
-              }),
-              (e.prototype.BAppPassesFilters = function (e) {
-                if (!i.a.GetAppLinkInfo(e)) return !1;
-                var t = l.a.Get();
-                return (
-                  (!this.m_facetFilterState.BIsUserPreferenceEnabled(
-                    z.m.k_EHideOwnedItems
-                  ) ||
-                    !t.BIsGameOwned(e)) &&
-                  (!this.m_facetFilterState.BIsUserPreferenceEnabled(
-                    z.m.k_EHideWishlistedItems
-                  ) ||
-                    !t.BIsGameWishlisted(e)) &&
-                  (!this.m_facetFilterState.BIsUserPreferenceEnabled(
-                    z.m.k_EHideIgnoredItems
-                  ) ||
-                    !t.BIsGameIgnored(e))
-                );
-              }),
-              (e.prototype.BAppSetPassesFilters = function (e) {
-                var t = l.a.Get();
-                return (
-                  (!this.m_facetFilterState.BIsUserPreferenceEnabled(
-                    z.m.k_EHideOwnedItems
-                  ) ||
-                    !e.some(function (e) {
-                      return t.BIsGameOwned(e);
-                    })) &&
-                  (!this.m_facetFilterState.BIsUserPreferenceEnabled(
-                    z.m.k_EHideWishlistedItems
-                  ) ||
-                    !e.some(function (e) {
-                      return t.BIsGameWishlisted(e);
-                    })) &&
-                  (!this.m_facetFilterState.BIsUserPreferenceEnabled(
-                    z.m.k_EHideIgnoredItems
-                  ) ||
-                    !e.some(function (e) {
-                      return t.BIsGameIgnored(e);
-                    }))
-                );
-              }),
-              (e.prototype.BSubPassesFilters = function (e) {
-                var t = c.b.GetPackageInfo(e);
-                if (!t) return !1;
-                if (!this.BAppSetPassesFilters(t.appids)) return !1;
-                var a = l.a.Get();
-                return (
-                  (!this.m_facetFilterState.BIsUserPreferenceEnabled(
-                    z.m.k_EHideOwnedItems
-                  ) ||
-                    !a.BOwnsPackage(e)) &&
-                  (!this.m_facetFilterState.BIsUserPreferenceEnabled(
-                    z.m.k_EHideIgnoredItems
-                  ) ||
-                    !a.BIsPackageIgnored(e))
-                );
-              }),
-              (e.prototype.BBundlePassesFilters = function (e) {
-                var t = s.a.GetBundleInfo(e);
-                return !!t && !!this.BAppSetPassesFilters(t.appids);
-              }),
-              (e.prototype.FilterStoreItemsForFaceting = function (e) {
-                var t = this;
-                return e && 0 !== e.length
-                  ? e.filter(function (e) {
-                      var a,
-                        r = e.id;
-                      switch (e.item_type.toLowerCase()) {
-                        case "sub":
-                          var n = c.b.GetPackageInfo(r);
-                          if (
-                            1 !==
-                            (null === (a = null == n ? void 0 : n.appids) ||
-                            void 0 === a
-                              ? void 0
-                              : a.length)
-                          )
-                            return t.BSubPassesFilters(r);
-                          r = n.appids[0];
-                        case "app":
-                          return t.BAppPassesFilters(r);
-                        case "bundle":
-                          return t.BBundlePassesFilters(r);
-                        default:
-                          return !1;
-                      }
-                    })
-                  : [];
-              }),
-              Object(n.c)([H.C], e.prototype, "m_SelectedTab", void 0),
-              Object(n.c)([H.C], e.prototype, "m_nItemsToShow", void 0),
-              Object(n.c)([H.C], e.prototype, "m_curPagingData", void 0),
-              Object(n.c)([H.C], e.prototype, "m_curCapsules", void 0),
-              Object(n.c)([H.C], e.prototype, "m_curFacetCounts", void 0),
-              Object(n.c)([H.k], e.prototype, "SetSelectedTab", null),
-              Object(n.c)([H.n], e.prototype, "cTotalRows", null),
-              Object(n.c)([H.n], e.prototype, "nRowsPerPage", null),
-              Object(n.c)([H.n], e.prototype, "cTotalPages", null),
-              Object(n.c)([H.k], e.prototype, "ResetItemsToShow", null),
-              Object(n.c)([H.n], e.prototype, "bHasMoreItemsToShow", null),
-              Object(n.c)([H.k], e.prototype, "AddMoreItemsToShow", null),
-              Object(n.c)([H.k], e.prototype, "UpdateResults", null),
-              e
-            );
-          })()),
-        q = a("TyAF"),
-        J = a("7G5R"),
-        X = a("NKJh"),
-        Z = a.n(X),
-        Y = a("lhLD"),
-        $ = a("5E+2"),
-        ee = a("Ty5D"),
-        te = a("GiuM"),
-        ae = Object(ee.i)(
-          Object(q.a)(function (e) {
-            var t = W.Get(),
+                t.facetValues.push({
+                  name: ["#UserPreference_HideIgnoredItems"],
+                  type: x.l.k_EUserPreference,
+                  userPreference: x.m.k_EHideIgnoredItems,
+                  bEnabledByDefault: !0,
+                  filter: null,
+                  matchingCapsules: [],
+                  rgStoreTagFilter: null,
+                }),
+                e.push(t);
+            }),
+            (e.prototype.BAppPassesFilters = function (e) {
+              if (!i.a.GetAppLinkInfo(e)) return !1;
+              var t = l.a.Get();
+              return (
+                (!this.m_facetFilterState.BIsUserPreferenceEnabled(
+                  x.m.k_EHideOwnedItems
+                ) ||
+                  !t.BIsGameOwned(e)) &&
+                (!this.m_facetFilterState.BIsUserPreferenceEnabled(
+                  x.m.k_EHideWishlistedItems
+                ) ||
+                  !t.BIsGameWishlisted(e)) &&
+                (!this.m_facetFilterState.BIsUserPreferenceEnabled(
+                  x.m.k_EHideIgnoredItems
+                ) ||
+                  !t.BIsGameIgnored(e))
+              );
+            }),
+            (e.prototype.BAppSetPassesFilters = function (e) {
+              var t = l.a.Get();
+              return (
+                (!this.m_facetFilterState.BIsUserPreferenceEnabled(
+                  x.m.k_EHideOwnedItems
+                ) ||
+                  !e.some(function (e) {
+                    return t.BIsGameOwned(e);
+                  })) &&
+                (!this.m_facetFilterState.BIsUserPreferenceEnabled(
+                  x.m.k_EHideWishlistedItems
+                ) ||
+                  !e.some(function (e) {
+                    return t.BIsGameWishlisted(e);
+                  })) &&
+                (!this.m_facetFilterState.BIsUserPreferenceEnabled(
+                  x.m.k_EHideIgnoredItems
+                ) ||
+                  !e.some(function (e) {
+                    return t.BIsGameIgnored(e);
+                  }))
+              );
+            }),
+            (e.prototype.BSubPassesFilters = function (e) {
+              var t = c.b.GetPackageInfo(e);
+              if (!t) return !1;
+              if (!this.BAppSetPassesFilters(t.appids)) return !1;
+              var a = l.a.Get();
+              return (
+                (!this.m_facetFilterState.BIsUserPreferenceEnabled(
+                  x.m.k_EHideOwnedItems
+                ) ||
+                  !a.BOwnsPackage(e)) &&
+                (!this.m_facetFilterState.BIsUserPreferenceEnabled(
+                  x.m.k_EHideIgnoredItems
+                ) ||
+                  !a.BIsPackageIgnored(e))
+              );
+            }),
+            (e.prototype.BBundlePassesFilters = function (e) {
+              var t = s.a.GetBundleInfo(e);
+              return !!t && !!this.BAppSetPassesFilters(t.appids);
+            }),
+            (e.prototype.FilterStoreItemsForFaceting = function (e) {
+              var t = this;
+              return e && 0 !== e.length
+                ? e.filter(function (e) {
+                    var a,
+                      r = e.id;
+                    switch (e.item_type.toLowerCase()) {
+                      case "sub":
+                        var n = c.b.GetPackageInfo(r);
+                        if (
+                          1 !==
+                          (null === (a = null == n ? void 0 : n.appids) ||
+                          void 0 === a
+                            ? void 0
+                            : a.length)
+                        )
+                          return t.BSubPassesFilters(r);
+                        r = n.appids[0];
+                      case "app":
+                        return t.BAppPassesFilters(r);
+                      case "bundle":
+                        return t.BBundlePassesFilters(r);
+                      default:
+                        return !1;
+                    }
+                  })
+                : [];
+            }),
+            Object(n.c)([U.C], e.prototype, "m_SelectedTab", void 0),
+            Object(n.c)([U.C], e.prototype, "m_nItemsToShow", void 0),
+            Object(n.c)([U.C], e.prototype, "m_curPagingData", void 0),
+            Object(n.c)([U.C], e.prototype, "m_curCapsules", void 0),
+            Object(n.c)([U.C], e.prototype, "m_curFacetCounts", void 0),
+            Object(n.c)([U.C], e.prototype, "m_viewType", void 0),
+            Object(n.c)([U.C], e.prototype, "m_strSearch", void 0),
+            Object(n.c)([U.k], e.prototype, "SetSelectedTab", null),
+            Object(n.c)([U.n], e.prototype, "cTotalRows", null),
+            Object(n.c)([U.n], e.prototype, "nRowsPerPage", null),
+            Object(n.c)([U.n], e.prototype, "cTotalPages", null),
+            Object(n.c)([U.k], e.prototype, "ResetItemsToShow", null),
+            Object(n.c)([U.n], e.prototype, "bHasMoreItemsToShow", null),
+            Object(n.c)([U.k], e.prototype, "AddMoreItemsToShow", null),
+            Object(n.c)([U.k], e.prototype, "UpdateResults", null),
+            e
+          );
+        })(),
+        J = a("TyAF"),
+        X = a("7G5R"),
+        Z = a("NKJh"),
+        Y = a.n(Z),
+        $ = a("lhLD"),
+        ee = a("5E+2"),
+        te = a("Ty5D"),
+        ae = a("GiuM"),
+        re = a("Mgs7"),
+        ne = a("6Y59"),
+        oe = a("U9Ih"),
+        ie = a("qiKp"),
+        se = Object(te.i)(
+          Object(J.a)(function (e) {
+            var t = q.Get(),
               a = t.GetVisibleTabs(),
-              r = Object(te.a)(e.history, "tab"),
+              r = Object(ae.a)(e.history, "tab"),
               n = Boolean(r)
                 ? a.find(function (e) {
                     return e.name === r;
                   })
                 : a[0],
-              o = Object(te.a)(e.history, "facets"),
-              i = t.GetNumItemsToShow();
+              o = Object(ae.a)(e.history, "facets"),
+              i = t.GetNumItemsToShow(),
+              s = Object(ae.a)(e.history, "search");
             return (
               Object(S.useEffect)(
                 function () {
@@ -1569,23 +1587,24 @@
                     null != o
                       ? t.GetFacetFilter().SetFromURLParam(o)
                       : t.GetFacetFilter().Reset(),
-                    t.HintLoadTabPage(n, t.GetFacetFilter().GetQuery(), i);
+                    t.SetSearch(s),
+                    t.HintLoadTabPage(n, t.GetFacetFilter().GetQuery(), i, s);
                 },
-                [t, n, o, i]
+                [t, n, o, i, s]
               ),
               a && 0 != a.length
                 ? C.a.createElement(
                     "div",
-                    { className: Object(w.a)(Y.TabCtn) },
-                    C.a.createElement(ie, null),
+                    { className: Object(j.a)($.TabCtn) },
+                    C.a.createElement(pe, null),
                     C.a.createElement(
                       "div",
-                      { className: Y.FacetAndPageCtn },
-                      C.a.createElement(oe, null),
+                      { className: $.FacetAndPageCtn },
+                      C.a.createElement(ue, null),
                       C.a.createElement(
                         "div",
-                        { className: Y.PagedItemsCtn },
-                        C.a.createElement(re, null)
+                        { className: $.PagedItemsCtn },
+                        C.a.createElement(ce, null)
                       )
                     )
                   )
@@ -1593,197 +1612,263 @@
             );
           })
         ),
-        re = Object(q.a)(function (e) {
-          var t = W.Get().GetSelectedTab();
+        ce = Object(J.a)(function (e) {
+          var t = q.Get().GetSelectedTab();
           return C.a.createElement(
             P.b,
             { feature: "tab-" + t.name },
-            C.a.createElement(ne, null)
+            C.a.createElement(le, null)
           );
         }),
-        ne = Object(q.a)(function (e) {
-          var t = W.Get(),
+        le = Object(J.a)(function (e) {
+          var t = q.Get(),
             a = t.GetSelectedTab(),
             r = t.GetFacetFilter().strQuery,
             n = t.GetNumItemsToShow(),
-            o = t.BHasTabPageLoaded(a, r, n),
-            s = Object(S.useState)(!o),
-            c = s[0],
-            l = s[1];
+            o = t.GetSearch(),
+            s = t.BHasTabPageLoaded(a, r, n, o),
+            c = Object(S.useState)(!s),
+            l = c[0],
+            m = c[1];
           Object(S.useEffect)(
             function () {
-              var e = V.a.CancelToken.source();
+              var e = H.a.CancelToken.source();
               return (
-                c == o && l(!o),
-                o ||
-                  t.HintLoadTabPage(a, r, n).then(function () {
-                    c && !e.token.reason && l(!1);
+                l == s && m(!s),
+                s ||
+                  t.HintLoadTabPage(a, r, n, o).then(function () {
+                    l && !e.token.reason && m(!1);
                   }),
                 function () {
                   return e.cancel("unmounting TabDisplayPage");
                 }
               );
             },
-            [a, o, c, r, t, n]
+            [a, s, l, r, t, n, o]
           );
-          var m = t.GetTabPageApps(a, r, n).items.slice(0, n),
-            g = d(m, T.Get().GetHomeView(), new p(), m.length, m.length),
-            _ = m.length - g.length;
+          var g = t.GetTabPageApps(a, r, n).items.slice(0, n),
+            _ = d(g, T.Get().GetHomeView(), new p(), g.length, g.length),
+            h = g.length - _.length,
+            f = t.GetViewType() === L.k_EList ? $.ContentsList : $.GridView,
+            b = t.GetViewType() === L.k_EList && Y.a.SaleItemBrowserRow;
           return C.a.createElement(
             C.a.Fragment,
             null,
-            Boolean(_ > 0) &&
-              C.a.createElement(
-                "a",
-                {
-                  href: u.d.STORE_BASE_URL + "account/preferences/",
-                  "data-tooltip-text": Object(j.f)(
-                    "#ContentHub_TabFiltered_ttip"
-                  ),
-                },
-                C.a.createElement(
-                  $.a,
-                  {
-                    toolTipContent: Object(j.f)("#ContentHub_TabFiltered_ttip"),
-                  },
-                  Object(j.l)("#ContentHub_TabFitlered", _)
-                )
-              ),
             C.a.createElement(
               "div",
-              { className: Y.ContentsList },
-              g.map(function (e) {
-                var t,
-                  a = void 0;
+              { className: $.ContentHubStorePrefsLink },
+              Boolean(h > 0) &&
+                C.a.createElement(
+                  "div",
+                  { className: $.ContentHubStorePrefsLinkInner },
+                  C.a.createElement(
+                    "a",
+                    {
+                      href: u.d.STORE_BASE_URL + "account/preferences/",
+                      "data-tooltip-text": Object(F.f)(
+                        "#ContentHub_TabFiltered_ttip"
+                      ),
+                    },
+                    C.a.createElement(
+                      ee.a,
+                      {
+                        toolTipContent: Object(F.f)(
+                          "#ContentHub_TabFiltered_ttip"
+                        ),
+                      },
+                      Object(F.l)("#ContentHub_TabFitlered", h)
+                    )
+                  )
+                )
+            ),
+            C.a.createElement(
+              "div",
+              { className: f },
+              _.map(function (e) {
+                var a,
+                  r = void 0;
                 return (
-                  (a =
+                  (r =
                     "bundle" == e.item_type || "sub" == e.item_type
                       ? e.item_type
-                      : (null === (t = i.a.GetAppLinkInfo(e.id)) || void 0 === t
+                      : (null === (a = i.a.GetAppLinkInfo(e.id)) || void 0 === a
                           ? void 0
-                          : t.type) || "game"),
+                          : a.type) || "game"),
                   C.a.createElement(
                     "div",
-                    {
-                      key: "" + e.item_type + e.id,
-                      className: Z.a.SaleItemBrowserRow,
-                    },
-                    C.a.createElement(E.o, {
-                      id: e.id,
-                      type: a,
-                      bShowDemoButton: !1,
-                      bLoadShortDescription: !1,
-                    })
+                    { key: "" + e.item_type + e.id, className: b },
+                    t.GetViewType() === L.k_EList
+                      ? C.a.createElement(O.o, {
+                          id: e.id,
+                          type: r,
+                          bShowDemoButton: !1,
+                          bLoadShortDescription: !1,
+                        })
+                      : C.a.createElement(O.m, {
+                          capsule: { id: e.id, type: r },
+                          imageType: "header",
+                        })
                   )
                 );
               })
             ),
-            !o &&
+            !s &&
               C.a.createElement(
                 "div",
-                { className: Y.ShowMoreCtn },
-                C.a.createElement(k.a, {
-                  string: Object(j.f)("#Loading"),
+                { className: $.ShowMoreCtn },
+                C.a.createElement(I.a, {
+                  string: Object(F.f)("#Loading"),
                   size: "medium",
                   position: "center",
                 })
               ),
-            o &&
+            s &&
               t.bHasMoreItemsToShow &&
               C.a.createElement(
                 "div",
-                { className: Y.ShowMoreCtn },
+                { className: $.ShowMoreCtn },
                 C.a.createElement(
                   "button",
                   {
-                    className: Y.ShowMore,
+                    className: $.ShowMore,
                     onClick: function () {
                       return t.AddMoreItemsToShow();
                     },
                   },
-                  Object(j.f)("#Sale_ShowMore")
+                  Object(F.f)("#Sale_ShowMore")
                 )
               )
           );
         }),
-        oe = Object(ee.i)(
-          Object(q.a)(function (e) {
-            var t = W.Get(),
+        ue = Object(te.i)(
+          Object(J.a)(function (e) {
+            var t = q.Get(),
               a = t.GetFacetFilter();
             return C.a.createElement(
               "div",
-              { className: Y.FacetMenuCtn },
-              C.a.createElement(x.c, {
+              { className: $.FacetMenuCtn },
+              C.a.createElement(K.c, {
                 facetFilterState: a,
                 language: Object(o.i)(u.d.LANGUAGE),
                 nMaxFacetValues: 5,
                 fnOnUpdateFilter: function () {
                   return (
-                    Object(te.c)(e.history, { facets: a.GetURLParam() }),
+                    Object(ae.c)(e.history, { facets: a.GetURLParam() }),
                     void t.ResetItemsToShow()
                   );
                 },
                 styleOverrides: {
-                  menu: Y.FacetMenuOverride,
-                  menuTitle: Y.FacetMenuTitleOverride,
-                  matchCount: Y.FacetMenuMatchCountOverride,
-                  reset: Y.FacetMenuResetOverride,
-                  facetName: Y.FacetNameOverride,
-                  facetValue: Y.FacetValueOverride,
-                  facetValueEnabled: Y.FacetValueEnabledOverride,
-                  facetValueDeactivated: Y.FacetValueDeactivatedOverride,
-                  facetValueName: Y.FacetValueNameOverride,
-                  facetValueDesc: Y.FacetValueDescOverride,
-                  showMore: Y.FacetShowMoreOverride,
+                  menu: $.FacetMenuOverride,
+                  menuTitle: $.FacetMenuTitleOverride,
+                  matchCount: $.FacetMenuMatchCountOverride,
+                  reset: $.FacetMenuResetOverride,
+                  facetName: $.FacetNameOverride,
+                  facetValue: $.FacetValueOverride,
+                  facetValueEnabled: $.FacetValueEnabledOverride,
+                  facetValueDeactivated: $.FacetValueDeactivatedOverride,
+                  facetValueName: $.FacetValueNameOverride,
+                  facetValueDesc: $.FacetValueDescOverride,
+                  showMore: $.FacetShowMoreOverride,
                 },
               })
             );
           })
         ),
-        ie = Object(ee.i)(
-          Object(q.a)(function (e) {
-            var t = W.Get(),
+        pe = Object(te.i)(
+          Object(J.a)(function (e) {
+            var t = q.Get(),
               a = t.GetVisibleTabs(),
-              r = t.GetSelectedTab();
+              r = t.GetSelectedTab(),
+              n = Object(S.useState)(Object(ae.a)(e.history, "search")),
+              o = n[0],
+              i = n[1],
+              s = Object(S.useState)(new ie.b())[0],
+              c = function (a) {
+                Object(ae.b)(e.history, "search", a.length > 0 ? a : void 0),
+                  t.ResetItemsToShow();
+              },
+              l = [
+                {
+                  label: Object(F.f)("#FacetedBrowsing_ViewAsList"),
+                  data: L.k_EList,
+                },
+                {
+                  label: Object(F.f)("#FacetedBrowsing_ViewAsGrid"),
+                  data: L.k_EGrid,
+                },
+              ];
             return C.a.createElement(
-              J.a,
-              { className: Y.TabHeaderCtn },
-              a.map(function (a) {
-                var n;
-                return C.a.createElement(
-                  "div",
-                  {
-                    key: a.displaylistname,
-                    className: Object(w.a)(
-                      ((n = {}),
-                      (n[Y.TabHeader] = !0),
-                      (n[Y.TabHeaderSelected] =
-                        (null == a ? void 0 : a.name) ==
-                        (null == r ? void 0 : r.name)),
-                      n)
-                    ),
-                    onClick: function () {
-                      return (function (a) {
-                        Object(te.c)(e.history, {
-                          tab: a.name,
-                          facets: void 0,
-                        }),
-                          t.ResetItemsToShow();
-                      })(a);
+              X.a,
+              { className: $.TabHeaderCtn },
+              C.a.createElement(
+                "div",
+                { className: $.TabHeaderInner },
+                a.map(function (a) {
+                  var n;
+                  return C.a.createElement(
+                    "div",
+                    {
+                      key: a.displaylistname,
+                      className: Object(j.a)(
+                        ((n = {}),
+                        (n[$.TabHeader] = !0),
+                        (n[$.TabHeaderSelected] =
+                          (null == a ? void 0 : a.name) ==
+                          (null == r ? void 0 : r.name)),
+                        n)
+                      ),
+                      onClick: function () {
+                        return (function (a) {
+                          s.Cancel(),
+                            Object(ae.c)(e.history, {
+                              tab: a.name,
+                              facets: void 0,
+                            }),
+                            t.ResetItemsToShow();
+                        })(a);
+                      },
                     },
+                    a.title
+                  );
+                })
+              ),
+              C.a.createElement(
+                "div",
+                { className: $.HeaderOptionsCtn },
+                C.a.createElement(
+                  "div",
+                  { className: oe.SuggestContainer },
+                  C.a.createElement(re.l, {
+                    type: "text",
+                    value: o,
+                    onChange: function (e) {
+                      var t = e.target.value;
+                      i(t);
+                      var a = t && t.trim().toLocaleLowerCase();
+                      s.Schedule(200, function () {
+                        return c(a);
+                      });
+                    },
+                  }),
+                  C.a.createElement(ne.I, null)
+                ),
+                C.a.createElement(re.i, {
+                  rgOptions: l,
+                  selectedOption: t.GetViewType(),
+                  onChange: function (e) {
+                    return t.SetViewType(e.data);
                   },
-                  a.title
-                );
-              })
+                })
+              )
             );
           })
         ),
-        se = a("IzPI"),
-        ce = a("RNU2"),
-        le = a("b3LC"),
-        ue = a("QXuq"),
-        pe =
-          (Object(q.a)(function (e) {
+        de = a("IzPI"),
+        me = a("RNU2"),
+        ge = a("b3LC"),
+        _e = a("QXuq"),
+        he =
+          (Object(J.a)(function (e) {
             var t = e.capsule,
               a = t.appid,
               r = "game";
@@ -1796,17 +1881,17 @@
               C.a.createElement(
                 "div",
                 null,
-                C.a.createElement(E.l, { id: a, type: r })
+                C.a.createElement(O.l, { id: a, type: r })
               )
             );
           }),
           function (e) {
             var t = v.Get().GetMainCapsuleList();
             return C.a.createElement(
-              A.a,
+              E.a,
               { visibleElements: 1, className: R.MainCarousel },
               t.map(function (e) {
-                return C.a.createElement(de, {
+                return C.a.createElement(fe, {
                   key: e.item_type + " " + e.id,
                   item: e,
                   strReason:
@@ -1815,11 +1900,11 @@
               })
             );
           }),
-        de = function (e) {
+        fe = function (e) {
           var t,
             a = e.item,
             r = e.strReason,
-            n = Object(le.a)(a.id, Object(ue.e)(a.item_type), {
+            n = Object(ge.a)(a.id, Object(_e.e)(a.item_type), {
               include_assets: !0,
             })[0],
             o = i.a.GetAppLinkInfo(a.id);
@@ -1828,35 +1913,35 @@
               "https://cdn.cloudflare.steamstatic.com/steam/apps/" +
               n.GetAppID() +
               "/library_hero.jpg",
-            c = Object(se.f)(o.capsule_link);
+            c = Object(de.f)(o.capsule_link);
           return (
             (t = o.microtrailer_mp4),
             C.a.createElement(
-              E.e,
+              O.e,
               { appid: n.GetAppID() },
               C.a.createElement(
                 "div",
-                { className: ce.SuperCapsuleCtn },
+                { className: me.SuperCapsuleCtn },
                 C.a.createElement(
                   "div",
-                  { className: Object(w.a)(ce.BGGradient) },
+                  { className: Object(j.a)(me.BGGradient) },
                   " "
                 ),
                 C.a.createElement(
                   "div",
-                  { className: Object(w.a)(ce.BGGradientTwo) },
+                  { className: Object(j.a)(me.BGGradientTwo) },
                   " "
                 ),
                 C.a.createElement(
                   "div",
                   {
-                    className: Object(w.a)(ce.BGImage),
+                    className: Object(j.a)(me.BGImage),
                     style: { backgroundImage: 'url("' + s + '")' },
                   },
                   " "
                 ),
                 C.a.createElement("video", {
-                  className: Object(w.a)(ce.BGVideo),
+                  className: Object(j.a)(me.BGVideo),
                   playsInline: !0,
                   autoPlay: !0,
                   muted: !0,
@@ -1865,29 +1950,29 @@
                 }),
                 C.a.createElement(
                   "div",
-                  { className: Object(w.a)(ce.FeatureCtn, R.FeatureCtn) },
+                  { className: Object(j.a)(me.FeatureCtn, R.FeatureCtn) },
                   C.a.createElement(
                     "a",
-                    { href: c, className: Object(w.a)(ce.Artwork) },
-                    Object(E.b)(n.GetAppID(), n.GetAppIDToRun()) &&
+                    { href: c, className: Object(j.a)(me.Artwork) },
+                    Object(O.b)(n.GetAppID(), n.GetAppIDToRun()) &&
                       C.a.createElement(
                         "div",
-                        { className: ce.CapsuleDecorators },
-                        C.a.createElement(E.i, null)
+                        { className: me.CapsuleDecorators },
+                        C.a.createElement(O.i, null)
                       ),
-                    C.a.createElement(E.f, { info: o, appInfo: o }),
-                    C.a.createElement(E.c, { info: o })
+                    C.a.createElement(O.f, { info: o, appInfo: o }),
+                    C.a.createElement(O.c, { info: o })
                   ),
                   C.a.createElement(
                     "div",
-                    { className: Object(w.a)(ce.Info) },
+                    { className: Object(j.a)(me.Info) },
                     C.a.createElement(
                       "a",
-                      { className: ce.Title, href: c },
+                      { className: me.Title, href: c },
                       o.title
                     ),
-                    C.a.createElement("div", { className: ce.Reason }, r),
-                    C.a.createElement(E.n, { appInfo: o, instanceNum: a.id })
+                    C.a.createElement("div", { className: me.Reason }, r),
+                    C.a.createElement(O.n, { appInfo: o, instanceNum: a.id })
                   )
                 )
               )
@@ -1909,8 +1994,8 @@
           }, []),
           a)
         )
-          return C.a.createElement(k.a, {
-            string: Object(j.f)("#Loading"),
+          return C.a.createElement(I.a, {
+            string: Object(F.f)("#Loading"),
             size: "medium",
             position: "center",
           });
@@ -1923,17 +2008,17 @@
         return C.a.createElement(
           "div",
           null,
-          C.a.createElement(I.a, null, C.a.createElement(pe, null)),
-          C.a.createElement(I.a, null, n),
-          C.a.createElement(I.a, null, C.a.createElement(ae, null)),
+          C.a.createElement(w.a, null, C.a.createElement(he, null)),
+          C.a.createElement(w.a, null, n),
+          C.a.createElement(w.a, null, C.a.createElement(se, null)),
           C.a.createElement(
             "a",
             {
-              href: Object(F.a)(
+              href: Object(k.a)(
                 u.d.STORE_BASE_URL + "labs/contenthub?optout=1"
               ),
             },
-            Object(j.f)("#ContentHub_OptOut")
+            Object(F.f)("#ContentHub_OptOut")
           )
         );
       };
@@ -1972,6 +2057,13 @@
         FacetShowMoreOverride: "contenthubtabs_FacetShowMoreOverride_3IIhW",
         ShowMoreCtn: "contenthubtabs_ShowMoreCtn_3W8BZ",
         ShowMore: "contenthubtabs_ShowMore_1DQA2",
+        TabHeaderInner: "contenthubtabs_TabHeaderInner_2j9tS",
+        HeaderOptionsCtn: "contenthubtabs_HeaderOptionsCtn_3kOam",
+        GridView: "contenthubtabs_GridView_3wfiX",
+        ContentHubStorePrefsLink:
+          "contenthubtabs_ContentHubStorePrefsLink_1VER3",
+        ContentHubStorePrefsLinkInner:
+          "contenthubtabs_ContentHubStorePrefsLinkInner_tBsV4",
       };
     },
     pXEO: function (e, t, a) {

@@ -21465,74 +21465,59 @@
             (t = Object(a.c)([u.a], t))
           );
         })(d.Component),
-        gn = (function (e) {
-          function t() {
-            return (null !== e && e.apply(this, arguments)) || this;
-          }
-          return (
-            Object(a.d)(t, e),
-            (t.prototype.OnTypeChanged = function (e) {
-              (this.props.saleSection.internal_section_data.internal_type =
-                e.data),
-                this.props.editModel.SetDirty(o.c.jsondata_sales);
+        gn = Object(u.a)(function (e) {
+          var t = e.editModel,
+            n = e.saleSection,
+            a = (e.index, n.internal_section_data),
+            i = [
+              {
+                label: Object(f.f)(
+                  "#Sale_VOInternalSection_SubscriptionPricing"
+                ),
+                data: "subscription_pricing",
+              },
+              {
+                label: Object(f.f)("#Sale_VOInternalSection_TabContents"),
+                data: "tab_contents",
+              },
+              {
+                label: Object(f.f)("#Sale_VOInternalSection_TabReferences"),
+                data: "tab_references",
+              },
+            ];
+          var r = null == a ? void 0 : a.internal_type;
+          return d.createElement(
+            d.Fragment,
+            null,
+            d.createElement(_.i, {
+              rgOptions: i,
+              strDropDownClassName: j.DropDownScroll,
+              selectedOption: r || "subscription_pricing",
+              onChange: function (e) {
+                (a.internal_type = e.data), t.SetDirty(o.c.jsondata_sales);
+              },
+              contextMenuPositionOptions: { bDisablePopTop: !0 },
             }),
-            (t.prototype.OnSubscriptionLogoChanged = function (e) {
-              (this.props.saleSection.internal_section_data.subscription_logo_image =
-                e.target.value),
-                this.props.editModel.SetDirty(o.c.jsondata_sales);
+            d.createElement(we, {
+              capsuleContainer: n,
+              editModel: t,
+              uniqueKey: "Section" + n.unique_id,
+              disableDaySelection: !0,
             }),
-            (t.prototype.render = function () {
-              var e = this.props.saleSection,
-                t = e.internal_section_data,
-                n = null == t ? void 0 : t.internal_type,
-                a = [
-                  {
-                    label: Object(f.f)(
-                      "#Sale_VOInternalSection_SubscriptionPricing"
-                    ),
-                    data: "subscription_pricing",
-                  },
-                  {
-                    label: Object(f.f)("#Sale_VOInternalSection_TabContents"),
-                    data: "tab_contents",
-                  },
-                  {
-                    label: Object(f.f)("#Sale_VOInternalSection_TabReferences"),
-                    data: "tab_references",
-                  },
-                ];
-              return d.createElement(
-                d.Fragment,
-                null,
-                d.createElement(_.i, {
-                  rgOptions: a,
-                  strDropDownClassName: j.DropDownScroll,
-                  selectedOption: n || "subscription_pricing",
-                  onChange: this.OnTypeChanged,
-                  contextMenuPositionOptions: { bDisablePopTop: !0 },
-                }),
-                d.createElement(we, {
-                  capsuleContainer: this.props.saleSection,
-                  editModel: this.props.editModel,
-                  uniqueKey: "Section" + e.unique_id,
-                  disableDaySelection: !0,
-                }),
-                "subscription_pricing" === n &&
-                  d.createElement(_.m, {
-                    type: "text",
-                    label: Object(f.f)("#Sale_SubscriptionLogo"),
-                    tooltip: Object(f.f)("#Sale_SubscriptionLogo_ttip"),
-                    onChange: this.OnSubscriptionLogoChanged,
-                    value:
-                      (null == t ? void 0 : t.subscription_logo_image) || "",
-                  })
-              );
-            }),
-            Object(a.c)([b.a], t.prototype, "OnTypeChanged", null),
-            Object(a.c)([b.a], t.prototype, "OnSubscriptionLogoChanged", null),
-            (t = Object(a.c)([u.a], t))
+            "subscription_pricing" === r &&
+              d.createElement(_.m, {
+                type: "text",
+                label: Object(f.f)("#Sale_SubscriptionLogo"),
+                tooltip: Object(f.f)("#Sale_SubscriptionLogo_ttip"),
+                onChange: function (e) {
+                  (a.subscription_logo_image = e.target.value),
+                    t.SetDirty(o.c.jsondata_sales);
+                },
+                value: (null == a ? void 0 : a.subscription_logo_image) || "",
+              }),
+            !1
           );
-        })(d.Component),
+        }),
         hn = Object(u.a)(function (e) {
           switch (e.saleSection.section_type) {
             case "items":

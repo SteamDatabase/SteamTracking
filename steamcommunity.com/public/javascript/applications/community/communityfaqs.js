@@ -2099,6 +2099,11 @@
                         br: O.d.readUint32,
                         bw: O.h.writeUint32,
                       },
+                      url_code: {
+                        n: 5,
+                        br: O.d.readString,
+                        bw: O.h.writeString,
+                      },
                     },
                   }),
                 t.sm_m

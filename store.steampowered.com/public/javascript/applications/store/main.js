@@ -1,8 +1,8 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6596929";
+var CLSTAMP = "6603896";
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [10],
+  [67],
   {
     "+VX6": function (e, t, n) {
       "use strict";
@@ -1517,10 +1517,10 @@ var CLSTAMP = "6596929";
     "1fPh": function (e, t, n) {
       "use strict";
       n.d(t, "b", function () {
-        return l;
+        return u;
       }),
         n.d(t, "a", function () {
-          return u;
+          return p;
         });
       var r = n("mrSG"),
         a = n("lkRc"),
@@ -1542,7 +1542,8 @@ var CLSTAMP = "6596929";
           },
         },
         c = {},
-        l = Object(r.a)(
+        l = {},
+        u = Object(r.a)(
           Object(r.a)(
             Object(r.a)(
               Object(r.a)(
@@ -1552,201 +1553,207 @@ var CLSTAMP = "6596929";
                       Object(r.a)(
                         Object(r.a)(
                           Object(r.a)(
+                            Object(r.a)(
+                              {
+                                Home: function () {
+                                  return "/";
+                                },
+                                AppStorePage: function () {
+                                  return "/app/:appid(\\d+)/:gamename?";
+                                },
+                                PackageStorePage: function () {
+                                  return "/sub/:subid(\\d+)/:packagename?";
+                                },
+                                BundleStorePage: function () {
+                                  return "/bundle/:bundleid(\\d+)/:bundlename?";
+                                },
+                                SaleLandingPage: function () {
+                                  return "/sale/:salePageName";
+                                },
+                                RemotePlay: function () {
+                                  return "/remoteplay_hub/";
+                                },
+                                VRHardware: function () {
+                                  return "/vrhardware/";
+                                },
+                                RemotePlayTogether: function () {
+                                  return "/together/";
+                                },
+                                CreatorSaleLandingPage: function () {
+                                  return "/(curator|publisher|pub|dev|developer|franchise)/:creatorPageName/sale/:salePageName?";
+                                },
+                                SubscriptionPlanLandingPage: function () {
+                                  return "/subscriptions/:salePageName";
+                                },
+                                CuratorHomePage: function () {
+                                  return [
+                                    "/(publisher|pub|dev|developer|franchise|subscriptions|curator)/:curatorPageName",
+                                    "/(dlc)/:appid(\\d+)/:curatorPageName",
+                                  ];
+                                },
+                                CuratorListPage: function () {
+                                  return [
+                                    "/(publisher|pub|dev|developer|franchise|subscriptions|curator)/:curatorPageName/(list)?/:listid(\\d+)?",
+                                    "/(dlc)/:appid(\\d+)/:curatorPageName/(list)?/:listid(\\d+)?",
+                                  ];
+                                },
+                              },
+                              {
+                                NewsHub: function () {
+                                  return "/(news|newshub|events)";
+                                },
+                                NewsHubApp: function (e, t) {
+                                  return (
+                                    "/(news|newshub|events)/app/" + e + "/" + t
+                                  );
+                                },
+                                NewsHubGroup: function (e, t) {
+                                  return (
+                                    "/(news|newshub|events)/group/" +
+                                    e +
+                                    "/" +
+                                    t
+                                  );
+                                },
+                                NewsHubCollection: function (e, t) {
+                                  return (
+                                    "/(news|newshub|events)/collection/" +
+                                    e +
+                                    "/" +
+                                    t
+                                  );
+                                },
+                                NewsHubSale: function (e, t) {
+                                  return (
+                                    "/(news|newshub|events)/sale/" + e + "/" + t
+                                  );
+                                },
+                                EventViewByApp: function (e, t, n) {
+                                  return (
+                                    "/(news|newshub|events)/app/" +
+                                    e +
+                                    "/:viewtype(view|inline)/" +
+                                    t +
+                                    "/" +
+                                    n
+                                  );
+                                },
+                                EventViewByGroup: function (e, t, n) {
+                                  return (
+                                    "/(news|newshub|events)/group/" +
+                                    e +
+                                    "/:viewtype(view|inline)/" +
+                                    t +
+                                    "/" +
+                                    n
+                                  );
+                                },
+                                OldAnnouncementViewByApp: function (e, t, n) {
+                                  return (
+                                    "/(news|newshub|events)/app/" +
+                                    e +
+                                    "/:viewtype(old_view|old_inline)/" +
+                                    t +
+                                    "/" +
+                                    n
+                                  );
+                                },
+                                OldAnnouncementViewByGroup: function (e, t, n) {
+                                  return (
+                                    "/(news|newshub|events)/group/" +
+                                    e +
+                                    "/:viewtype(old_view|old_inline)/" +
+                                    t +
+                                    "/" +
+                                    n
+                                  );
+                                },
+                              }
+                            ),
                             {
-                              Home: function () {
-                                return "/";
+                              EventAdmin: function () {
+                                return "/events_admin";
                               },
-                              AppStorePage: function () {
-                                return "/app/:appid(\\d+)/:gamename?";
+                              EventModeration: function () {
+                                return "/events_admin/(moderate)?/:appid(\\d+)?/";
                               },
-                              PackageStorePage: function () {
-                                return "/sub/:subid(\\d+)/:packagename?";
-                              },
-                              BundleStorePage: function () {
-                                return "/bundle/:bundleid(\\d+)/:bundlename?";
-                              },
-                              SaleLandingPage: function () {
-                                return "/sale/:salePageName";
-                              },
-                              RemotePlay: function () {
-                                return "/remoteplay_hub/";
-                              },
-                              VRHardware: function () {
-                                return "/vrhardware/";
-                              },
-                              RemotePlayTogether: function () {
-                                return "/together/";
-                              },
-                              CreatorSaleLandingPage: function () {
-                                return "/(curator|publisher|pub|dev|developer|franchise)/:creatorPageName/sale/:salePageName?";
-                              },
-                              SubscriptionPlanLandingPage: function () {
-                                return "/subscriptions/:salePageName";
-                              },
-                              CuratorHomePage: function () {
-                                return [
-                                  "/(publisher|pub|dev|developer|franchise|subscriptions|curator)/:curatorPageName",
-                                  "/(dlc)/:appid(\\d+)/:curatorPageName",
-                                ];
-                              },
-                              CuratorListPage: function () {
-                                return [
-                                  "/(publisher|pub|dev|developer|franchise|subscriptions|curator)/:curatorPageName/(list)?/:listid(\\d+)?",
-                                  "/(dlc)/:appid(\\d+)/:curatorPageName/(list)?/:listid(\\d+)?",
-                                ];
-                              },
-                            },
-                            {
-                              NewsHub: function () {
-                                return "/(news|newshub|events)";
-                              },
-                              NewsHubApp: function (e, t) {
-                                return (
-                                  "/(news|newshub|events)/app/" + e + "/" + t
-                                );
-                              },
-                              NewsHubGroup: function (e, t) {
-                                return (
-                                  "/(news|newshub|events)/group/" + e + "/" + t
-                                );
-                              },
-                              NewsHubCollection: function (e, t) {
-                                return (
-                                  "/(news|newshub|events)/collection/" +
-                                  e +
-                                  "/" +
-                                  t
-                                );
-                              },
-                              NewsHubSale: function (e, t) {
-                                return (
-                                  "/(news|newshub|events)/sale/" + e + "/" + t
-                                );
-                              },
-                              EventViewByApp: function (e, t, n) {
-                                return (
-                                  "/(news|newshub|events)/app/" +
-                                  e +
-                                  "/:viewtype(view|inline)/" +
-                                  t +
-                                  "/" +
-                                  n
-                                );
-                              },
-                              EventViewByGroup: function (e, t, n) {
-                                return (
-                                  "/(news|newshub|events)/group/" +
-                                  e +
-                                  "/:viewtype(view|inline)/" +
-                                  t +
-                                  "/" +
-                                  n
-                                );
-                              },
-                              OldAnnouncementViewByApp: function (e, t, n) {
-                                return (
-                                  "/(news|newshub|events)/app/" +
-                                  e +
-                                  "/:viewtype(old_view|old_inline)/" +
-                                  t +
-                                  "/" +
-                                  n
-                                );
-                              },
-                              OldAnnouncementViewByGroup: function (e, t, n) {
-                                return (
-                                  "/(news|newshub|events)/group/" +
-                                  e +
-                                  "/:viewtype(old_view|old_inline)/" +
-                                  t +
-                                  "/" +
-                                  n
-                                );
+                              EventBackfill: function () {
+                                return "/events_admin/backfill/";
                               },
                             }
                           ),
                           {
-                            EventAdmin: function () {
-                              return "/events_admin";
-                            },
                             EventModeration: function () {
                               return "/events_admin/(moderate)?/:appid(\\d+)?/";
                             },
                             EventBackfill: function () {
                               return "/events_admin/backfill/";
                             },
+                            EventGameFestivalDebug: function () {
+                              return "/events_admin/gamefestival/:clanacountid(\\d+)/:claneventgid(\\d+)";
+                            },
+                            EventRSSModeration: function () {
+                              return "/events_admin/rss_admin/";
+                            },
+                            InteractiveRecommender: function () {
+                              return "/recommender/:steamid(\\d+)?/";
+                            },
+                            LabsSandbox: function () {
+                              return "/labs/sandbox";
+                            },
+                            AccountPreferences: function () {
+                              return "/account/";
+                            },
                           }
                         ),
-                        {
-                          EventModeration: function () {
-                            return "/events_admin/(moderate)?/:appid(\\d+)?/";
-                          },
-                          EventBackfill: function () {
-                            return "/events_admin/backfill/";
-                          },
-                          EventGameFestivalDebug: function () {
-                            return "/events_admin/gamefestival/:clanacountid(\\d+)/:claneventgid(\\d+)";
-                          },
-                          EventRSSModeration: function () {
-                            return "/events_admin/rss_admin/";
-                          },
-                          InteractiveRecommender: function () {
-                            return "/recommender/:steamid(\\d+)?/";
-                          },
-                          LabsSandbox: function () {
-                            return "/labs/sandbox";
-                          },
-                          AccountPreferences: function () {
-                            return "/account/";
-                          },
-                        }
+                        l
                       ),
-                      c
+                      {
+                        Loyalty: function () {
+                          return "/points";
+                        },
+                        LoyaltyStore: function () {
+                          return "/points/shop";
+                        },
+                        LoyaltyGetPoints: function () {
+                          return "/points/getpoints";
+                        },
+                        LoyaltyHowItWorks: function () {
+                          return "/points/howitworks";
+                        },
+                        LoyaltyStickers: function () {
+                          return "/points/shop/c/stickers";
+                        },
+                        LoyaltyEmoticons: function () {
+                          return "/points/shop/c/emoticons";
+                        },
+                        LoyaltyChatEffects: function () {
+                          return "/points/shop/c/chateffects";
+                        },
+                        LoyaltyBackgrounds: function () {
+                          return "/points/shop/c/backgrounds";
+                        },
+                        LoyaltyProfile: function () {
+                          return "/points/shop/c/profile";
+                        },
+                        LoyaltyAvatar: function () {
+                          return "/points/shop/c/avatar";
+                        },
+                        LoyaltyByGame: function () {
+                          return "/points/shop/c/games";
+                        },
+                        LoyaltyGiveawayRules: function () {
+                          return "/points/giveawayrules";
+                        },
+                      }
                     ),
-                    {
-                      Loyalty: function () {
-                        return "/points";
-                      },
-                      LoyaltyStore: function () {
-                        return "/points/shop";
-                      },
-                      LoyaltyGetPoints: function () {
-                        return "/points/getpoints";
-                      },
-                      LoyaltyHowItWorks: function () {
-                        return "/points/howitworks";
-                      },
-                      LoyaltyStickers: function () {
-                        return "/points/shop/c/stickers";
-                      },
-                      LoyaltyEmoticons: function () {
-                        return "/points/shop/c/emoticons";
-                      },
-                      LoyaltyChatEffects: function () {
-                        return "/points/shop/c/chateffects";
-                      },
-                      LoyaltyBackgrounds: function () {
-                        return "/points/shop/c/backgrounds";
-                      },
-                      LoyaltyProfile: function () {
-                        return "/points/shop/c/profile";
-                      },
-                      LoyaltyAvatar: function () {
-                        return "/points/shop/c/avatar";
-                      },
-                      LoyaltyByGame: function () {
-                        return "/points/shop/c/games";
-                      },
-                      LoyaltyGiveawayRules: function () {
-                        return "/points/giveawayrules";
-                      },
-                    }
+                    i
                   ),
-                  i
+                  o
                 ),
-                o
+                s
               ),
-              s
+              c
             ),
             {
               ContentHubHome: function () {
@@ -1760,7 +1767,7 @@ var CLSTAMP = "6596929";
             },
           }
         );
-      function u() {
+      function p() {
         var e = document.createElement("a");
         e.href = a.d.STORE_BASE_URL;
         var t = e.pathname;
@@ -10502,11 +10509,13 @@ var CLSTAMP = "6596929";
                 p = [{ elements: [], activeTab: u }];
               n.GetSaleSections().forEach(function (t, d) {
                 var m,
-                  h = p[p.length - 1].activeTab;
-                if (h.ShouldShowSection(t)) {
-                  var f = t.diable_tab_id_filtering ? u : h,
-                    b = !0,
-                    _ = null;
+                  h,
+                  f,
+                  b = p[p.length - 1].activeTab;
+                if (b.ShouldShowSection(t)) {
+                  var _ = t.diable_tab_id_filtering ? u : b,
+                    v = !0,
+                    g = null;
                   if (
                     (function (e) {
                       return (
@@ -10528,7 +10537,7 @@ var CLSTAMP = "6596929";
                     !M.k.logged_in
                   )
                     c ||
-                      ((_ = o.createElement(Ot, {
+                      ((g = o.createElement(Ot, {
                         section: t,
                         event: n,
                         language: r,
@@ -10539,19 +10548,19 @@ var CLSTAMP = "6596929";
                       case "items":
                       case "events":
                       case "links":
-                        _ = o.createElement(
+                        g = o.createElement(
                           It,
-                          Object(a.a)({ section: t, activeTab: f }, e.props)
+                          Object(a.a)({ section: t, activeTab: _ }, e.props)
                         );
                         break;
                       case "broadcast":
                         n.BEventCanShowBroadcastWidget() &&
                           !l &&
-                          ((_ = o.createElement(Ut, {
+                          ((g = o.createElement(Ut, {
                             event: n,
                             broadcastEmbedContext:
                               e.props.broadcastEmbedContext,
-                            activeTab: f,
+                            activeTab: _,
                             bWideBroadcastDisplay:
                               null === (m = n.jsondata) || void 0 === m
                                 ? void 0
@@ -10560,44 +10569,44 @@ var CLSTAMP = "6596929";
                           (l = !0));
                         break;
                       case "event_description":
-                        _ = o.createElement(
+                        g = o.createElement(
                           Et,
                           Object(a.a)({ section: t }, e.props)
                         );
                         break;
                       case "doors":
-                        _ = o.createElement(pe.d, {
+                        g = o.createElement(pe.d, {
                           strFontFamily: Wt(n.jsondata.sale_font, r),
                         });
                         break;
                       case "text_section":
-                        _ = o.createElement(
+                        g = o.createElement(
                           Ct,
                           Object(a.a)({ section: t }, e.props)
                         );
                         break;
                       case "tabs":
-                        var v = s.get(t);
-                        p.push({ activeTab: v, elements: [] }),
-                          (_ = o.createElement(
+                        var y = s.get(t);
+                        p.push({ activeTab: y, elements: [] }),
+                          (g = o.createElement(
                             o.Fragment,
                             null,
                             o.createElement("div", { ref: e.m_refTabSection }),
                             o.createElement(
                               dt,
                               Object(a.a)({ section: t }, e.props, {
-                                activeTab: v.GetTab(),
+                                activeTab: y.GetTab(),
                                 onTabSelected: e.OnTabSelected,
                               })
                             )
                           )),
-                          (b = !1);
+                          (v = !1);
                         break;
                       case "tab_buttons":
-                        _ = o.createElement(
+                        g = o.createElement(
                           mt,
                           Object(a.a)({ section: t }, e.props, {
-                            activeTab: f,
+                            activeTab: _,
                             onTabSelected: e.OnTabSelected,
                             hideActiveTab: !0,
                           })
@@ -10605,7 +10614,7 @@ var CLSTAMP = "6596929";
                         break;
                       case "curator":
                         t.curator_clan_id &&
-                          (_ = o.createElement(
+                          (g = o.createElement(
                             "div",
                             {
                               style: {
@@ -10626,72 +10635,82 @@ var CLSTAMP = "6596929";
                           ));
                         break;
                       case "curator_recommendation":
-                        _ = o.createElement(Ge, {
+                        g = o.createElement(Ge, {
                           bPreviewMode: i,
                           saleSection: t,
                           event: n,
                         });
                         break;
                       case "event_schedule":
-                        _ = o.createElement(
+                        g = o.createElement(
                           Qe.c,
-                          Object(a.a)({ section: t }, e.props, { activeTab: f })
+                          Object(a.a)({ section: t }, e.props, { activeTab: _ })
                         );
                         break;
                       case "vo_internal":
-                        if (t.internal_section_data)
+                        if (t.internal_section_data) {
                           switch (t.internal_section_data.internal_type) {
                             case "subscription_pricing":
-                              _ = o.createElement(
+                              g = o.createElement(
                                 ot,
                                 Object(a.a)({ section: t }, e.props)
                               );
                               break;
                             case "tab_contents":
-                              _ = o.createElement(
+                              g = o.createElement(
                                 pt,
                                 Object(a.a)({ section: t }, e.props, {
-                                  tab: h.GetTab(),
+                                  tab: b.GetTab(),
                                   showReferences: !1,
                                 })
                               );
                               break;
                             case "tab_references":
-                              _ = o.createElement(
+                              g = o.createElement(
                                 pt,
                                 Object(a.a)({ section: t }, e.props, {
-                                  tab: h.GetTab(),
+                                  tab: b.GetTab(),
                                   showReferences: !0,
                                 })
                               );
                           }
+                          0;
+                        }
                         break;
                       case "sale_item_browser":
-                        _ = o.createElement(
+                        g = o.createElement(
                           wt,
-                          Object(a.a)({ section: t }, e.props, { activeTab: f })
+                          Object(a.a)({ section: t }, e.props, { activeTab: _ })
                         );
                         break;
                       case "unselected_empty":
-                        _ = null;
+                        g = null;
                     }
                   p[p.length - 1].elements.push(
                     o.createElement(
                       G.a,
                       { key: "SaleSectionIndex_" + t.unique_id + "_" + d },
-                      b
+                      v
                         ? o.createElement(
                             "div",
                             {
                               id: "SaleSection_" + (t.unique_id || d),
                               className: Object(J.a)(
                                 "SaleSectionCtn",
-                                t.section_type
+                                t.section_type,
+                                null !==
+                                  (f =
+                                    null === (h = t.internal_section_data) ||
+                                    void 0 === h
+                                      ? void 0
+                                      : h.internal_type) && void 0 !== f
+                                  ? f
+                                  : ""
                               ),
                             },
-                            _
+                            g
                           )
-                        : _
+                        : g
                     )
                   );
                 }
@@ -18160,35 +18179,35 @@ var CLSTAMP = "6596929";
     },
     AvbV: function (e, t, n) {
       var r = {
-        "./main_brazilian.json": ["TFAN", 11],
-        "./main_bulgarian.json": ["c2SO", 12],
-        "./main_czech.json": ["peP3", 13],
-        "./main_danish.json": ["0bnV", 14],
-        "./main_dutch.json": ["wcLc", 15],
-        "./main_english.json": ["/rNK", 16],
-        "./main_finnish.json": ["iywU", 17],
-        "./main_french.json": ["Xnpc", 18],
-        "./main_german.json": ["pmKi", 19],
-        "./main_greek.json": ["mTRv", 20],
-        "./main_hungarian.json": ["WkHb", 21],
-        "./main_italian.json": ["Jz5U", 22],
-        "./main_japanese.json": ["3Dk9", 23],
-        "./main_koreana.json": ["neQD", 24],
-        "./main_latam.json": ["6oHD", 25],
-        "./main_norwegian.json": ["2OvS", 26],
-        "./main_polish.json": ["3pwE", 27],
-        "./main_portuguese.json": ["hY40", 28],
-        "./main_romanian.json": ["Q95+", 29],
-        "./main_russian.json": ["bsPT", 30],
-        "./main_sc_schinese.json": ["GOaQ", 31],
-        "./main_schinese.json": ["B/Zz", 32],
-        "./main_spanish.json": ["U6iL", 33],
-        "./main_swedish.json": ["4uPU", 34],
-        "./main_tchinese.json": ["rgC9", 35],
-        "./main_thai.json": ["87dp", 36],
-        "./main_turkish.json": ["yMpO", 37],
-        "./main_ukrainian.json": ["zTWm", 38],
-        "./main_vietnamese.json": ["wqiy", 39],
+        "./main_brazilian.json": ["TFAN", 68],
+        "./main_bulgarian.json": ["c2SO", 69],
+        "./main_czech.json": ["peP3", 70],
+        "./main_danish.json": ["0bnV", 71],
+        "./main_dutch.json": ["wcLc", 72],
+        "./main_english.json": ["/rNK", 73],
+        "./main_finnish.json": ["iywU", 74],
+        "./main_french.json": ["Xnpc", 75],
+        "./main_german.json": ["pmKi", 76],
+        "./main_greek.json": ["mTRv", 77],
+        "./main_hungarian.json": ["WkHb", 78],
+        "./main_italian.json": ["Jz5U", 79],
+        "./main_japanese.json": ["3Dk9", 80],
+        "./main_koreana.json": ["neQD", 81],
+        "./main_latam.json": ["6oHD", 82],
+        "./main_norwegian.json": ["2OvS", 83],
+        "./main_polish.json": ["3pwE", 84],
+        "./main_portuguese.json": ["hY40", 85],
+        "./main_romanian.json": ["Q95+", 86],
+        "./main_russian.json": ["bsPT", 87],
+        "./main_sc_schinese.json": ["GOaQ", 88],
+        "./main_schinese.json": ["B/Zz", 89],
+        "./main_spanish.json": ["U6iL", 90],
+        "./main_swedish.json": ["4uPU", 91],
+        "./main_tchinese.json": ["rgC9", 92],
+        "./main_thai.json": ["87dp", 93],
+        "./main_turkish.json": ["yMpO", 94],
+        "./main_ukrainian.json": ["zTWm", 95],
+        "./main_vietnamese.json": ["wqiy", 96],
       };
       function a(e) {
         if (!n.o(r, e))
@@ -25527,13 +25546,19 @@ var CLSTAMP = "6596929";
           function e(e, t) {
             (this.m_rgLoadingLinks = []), (this.m_rgLoadingLinks = []);
             for (
-              var n = e.document.getElementsByTagName("link"), r = 0;
+              var n = e.getElementsByTagName("link"), r = 0;
               r < n.length;
               r++
             ) {
-              var a = n[r];
-              a.addEventListener("load", this.OnLinkLoad),
-                this.m_rgLoadingLinks.push(a);
+              var a = n[r],
+                i = !1;
+              try {
+                (a.sheet && a.sheet.cssRules && 0 != a.sheet.cssRules.length) ||
+                  (i = !0);
+              } catch (e) {}
+              i &&
+                (a.addEventListener("load", this.OnLinkLoad),
+                this.m_rgLoadingLinks.push(a));
             }
           }
           return (
@@ -25627,7 +25652,7 @@ var CLSTAMP = "6596929";
                   : ((i = (n = _.CreatePopup(this.m_strName, this.m_rgParams))
                       .popup),
                     (o = n.element),
-                    (s = new f(i, o))),
+                    (s = new f(i.document, o))),
                 i &&
                   o &&
                   ((i.document.title = this.m_strTitle),
@@ -33757,6 +33782,55 @@ var CLSTAMP = "6596929";
           );
         })(o);
     },
+    RMhI: function (e, t, n) {
+      var r = {
+        "./sales_brazilian.json": ["8W/b", 9],
+        "./sales_bulgarian.json": ["CF5q", 10],
+        "./sales_czech.json": ["O2WS", 11],
+        "./sales_danish.json": ["XnEN", 12],
+        "./sales_dutch.json": ["amMP", 13],
+        "./sales_english.json": ["3u+3", 14],
+        "./sales_finnish.json": ["4mLc", 15],
+        "./sales_french.json": ["fJyv", 16],
+        "./sales_german.json": ["LcuH", 17],
+        "./sales_greek.json": ["7l8b", 18],
+        "./sales_hungarian.json": ["L9+e", 19],
+        "./sales_italian.json": ["EnBf", 20],
+        "./sales_japanese.json": ["O9QH", 21],
+        "./sales_koreana.json": ["hPCV", 22],
+        "./sales_latam.json": ["mkfq", 23],
+        "./sales_norwegian.json": ["Xzk6", 24],
+        "./sales_polish.json": ["Mfbu", 25],
+        "./sales_portuguese.json": ["EQQ2", 26],
+        "./sales_romanian.json": ["oXR9", 27],
+        "./sales_russian.json": ["kQHt", 28],
+        "./sales_schinese.json": ["AVwL", 29],
+        "./sales_spanish.json": ["lRrx", 30],
+        "./sales_swedish.json": ["7tPl", 31],
+        "./sales_tchinese.json": ["mQlZ", 32],
+        "./sales_thai.json": ["yDdk", 33],
+        "./sales_turkish.json": ["mjwq", 34],
+        "./sales_ukrainian.json": ["gWvs", 35],
+        "./sales_vietnamese.json": ["VsX2", 36],
+      };
+      function a(e) {
+        if (!n.o(r, e))
+          return Promise.resolve().then(function () {
+            var t = new Error("Cannot find module '" + e + "'");
+            throw ((t.code = "MODULE_NOT_FOUND"), t);
+          });
+        var t = r[e],
+          a = t[0];
+        return n.e(t[1]).then(function () {
+          return n.t(a, 3);
+        });
+      }
+      (a.keys = function () {
+        return Object.keys(r);
+      }),
+        (a.id = "RMhI"),
+        (e.exports = a);
+    },
     RQmk: function (e, t, n) {
       "use strict";
       n.d(t, "b", function () {
@@ -34924,6 +34998,13 @@ var CLSTAMP = "6596929";
           (e.ClientContentValidationReport = function (e, t) {
             return e.SendNotification(
               "ClientMetrics.ClientContentValidationReport#1",
+              t,
+              { ePrivilege: 1 }
+            );
+          }),
+          (e.ClientCloudAppSyncStats = function (e, t) {
+            return e.SendNotification(
+              "ClientMetrics.ClientCloudAppSyncStats#1",
               t,
               { ePrivilege: 1 }
             );
@@ -36502,7 +36583,7 @@ var CLSTAMP = "6596929";
         fe = /(?:steamcommunity\.com|valve\.org\/community|my\.steamchina\.com)\/(games|app|ogg|gid|groups)\/(\w+)\/(?:announcements\/detail|partnerevents\/view_old_announcement)\/(\d+)/i,
         be = /(?:steamcommunity\.com|valve\.org\/community)\/(games|app|ogg|gid|groups)\/(\w+)\/partnerevents\/view\/(\d+)/i,
         _e = /(?:steampowered\.com|valve\.org\/store|store\.steamchina\.com)\/(?:news|newshub)\/(group|app)\/(\w+)\/view\/(\d+)/i,
-        ve = /:\/\/medal.tv\/(?:clip|clips)\/(\d+)/i,
+        ve = /:\/\/medal.tv\/(?:clip|clips)\/([a-z0-9]+)/i,
         ge = /sketchfab.com\/(?:models\/(?:[^\/\s]+-)?)([a-z0-9]{32})/i,
         ye = /twitter\.com\/(\w+)(\/?)$/i,
         Me = /twitter\.com\/hashtag\/(\w+)(\/?)$/i,
@@ -36884,8 +36965,8 @@ var CLSTAMP = "6596929";
         if (w.d.EREALM === v.g.k_ESteamRealmChina) return null;
         var n = new RegExp(ve).exec(e);
         if (n && n.length > 1) {
-          var r = Number(n[1]);
-          if (r > 0) {
+          var r = n[1];
+          if ((null == r ? void 0 : r.length) > 0) {
             var a =
               "https://medal.tv/clip/" +
               r +
@@ -39433,7 +39514,21 @@ var CLSTAMP = "6596929";
           (e[(e.Select = 10)] = "Select"),
           (e[(e.Start = 11)] = "Start"),
           (e[(e.LeftBumper = 12)] = "LeftBumper"),
-          (e[(e.RightBumper = 13)] = "RightBumper");
+          (e[(e.RightBumper = 13)] = "RightBumper"),
+          (e[(e.LeftTrigger = 14)] = "LeftTrigger"),
+          (e[(e.RightTrigger = 15)] = "RightTrigger"),
+          (e[(e.LeftStick = 16)] = "LeftStick"),
+          (e[(e.LeftStickClick = 17)] = "LeftStickClick"),
+          (e[(e.RightStick = 18)] = "RightStick"),
+          (e[(e.RightStickClick = 19)] = "RightStickClick"),
+          (e[(e.LeftTrackpad = 20)] = "LeftTrackpad"),
+          (e[(e.LeftTrackpadClick = 21)] = "LeftTrackpadClick"),
+          (e[(e.RightTrackpad = 22)] = "RightTrackpad"),
+          (e[(e.RightTrackpadClick = 23)] = "RightTrackpadClick"),
+          (e[(e.RearLeftUpper = 24)] = "RearLeftUpper"),
+          (e[(e.RearLeftLower = 25)] = "RearLeftLower"),
+          (e[(e.RearRightUpper = 26)] = "RearRightUpper"),
+          (e[(e.RearRightLower = 27)] = "RearRightLower");
       })(r || (r = {}));
       var c;
       !(function (e) {
@@ -41257,40 +41352,42 @@ var CLSTAMP = "6596929";
         return "auto" === r || "scroll" === r;
       }
       function v() {
-        var e = {};
         return (
-          document
-            .querySelectorAll('link[rel="stylesheet"]')
-            .forEach(function (t) {
-              e[t.href] = t;
-            }),
-          e
+          (e = document),
+          (t = {}),
+          e.querySelectorAll('link[rel="stylesheet"]').forEach(function (e) {
+            t[e.href] = e;
+          }),
+          t
         );
+        var e, t;
       }
       function g(e, t) {
-        for (
-          var n = Object.assign({}, t),
-            r = e.document.getElementsByTagName("head")[0],
-            a = r.getElementsByTagName("link"),
-            i = a.length,
-            o = 0;
-          o < i;
-          ++o
-        ) {
-          var s = a[o];
-          n[s.href] ? delete n[s.href] : s.parentNode.removeChild(s);
-        }
-        for (var c in n) {
+        !(function (e, t, n) {
           for (
-            var l = n[c], u = e.document.createElement("link"), p = 0;
-            p < l.attributes.length;
-            p++
+            var r = Object.assign({}, t),
+              a = e.getElementsByTagName("head")[0],
+              i = a.getElementsByTagName("link"),
+              o = i.length,
+              s = 0;
+            s < o;
+            ++s
           ) {
-            var d = l.attributes.item(p);
-            u.setAttribute(d.name, d.value);
+            var c = i[s];
+            r[c.href] ? delete r[c.href] : n && c.parentNode.removeChild(c);
           }
-          r.appendChild(u);
-        }
+          for (var l in r) {
+            for (
+              var u = r[l], p = e.createElement("link"), d = 0;
+              d < u.attributes.length;
+              d++
+            ) {
+              var m = u.attributes.item(d);
+              p.setAttribute(m.name, m.value);
+            }
+            a.appendChild(p);
+          }
+        })(e.document, t, !0);
       }
     },
     XA70: function (e, t, n) {
@@ -58261,12 +58358,12 @@ var CLSTAMP = "6596929";
           return Promise.all([n.e(0), n.e(8)]).then(n.bind(null, "3WEt"));
         }),
         me = s.a.lazy(function () {
-          return Promise.all([n.e(0), n.e(2), n.e(9)]).then(
+          return Promise.all([n.e(0), n.e(2), n.e(66)]).then(
             n.bind(null, "CGeh")
           );
         }),
         he = s.a.lazy(function () {
-          return Promise.all([n.e(0), n.e(2), n.e(43)]).then(
+          return Promise.all([n.e(0), n.e(2), n.e(100)]).then(
             n.bind(null, "tPo2")
           );
         }),
@@ -58617,13 +58714,13 @@ var CLSTAMP = "6596929";
       n("xnZ7"), n("idvb"), n("M1X1");
       function Oe(e) {
         return Object(r.b)(this, void 0, void 0, function () {
-          var t, a, i, o, s, c, l;
-          return Object(r.e)(this, function (u) {
-            switch (u.label) {
+          var t, a, i, o, s, c, l, u, d;
+          return Object(r.e)(this, function (m) {
+            switch (m.label) {
               case 0:
                 return [3, 2];
               case 1:
-                return u.sent(), [2];
+                return m.sent(), [2];
               case 2:
                 return (
                   (t = p.b.GetLanguageFallback(e)),
@@ -58632,22 +58729,26 @@ var CLSTAMP = "6596929";
                     4,
                     Promise.all([
                       n("rCDf")("./shared_" + e + ".json"),
+                      n("RMhI")("./sales_" + e + ".json"),
                       n("AvbV")("./main_" + e + ".json"),
                       a ? {} : n("rCDf")("./shared_" + t + ".json"),
+                      a ? {} : n("RMhI")("./sales_" + t + ".json"),
                       a ? {} : n("AvbV")("./main_" + t + ".json"),
                     ]),
                   ]
                 );
               case 3:
                 return (
-                  (i = u.sent()),
+                  (i = m.sent()),
                   (o = i[0]),
                   (s = i[1]),
                   (c = i[2]),
                   (l = i[3]),
+                  (u = i[4]),
+                  (d = i[5]),
                   p.e.AddTokens(
-                    Object(r.a)(Object(r.a)({}, o), s),
-                    Object(r.a)(Object(r.a)({}, c), l)
+                    Object(r.a)(Object(r.a)(Object(r.a)({}, s), o), c),
+                    Object(r.a)(Object(r.a)(Object(r.a)({}, u), l), d)
                   ),
                   [2]
                 );
@@ -64651,6 +64752,7 @@ var CLSTAMP = "6596929";
             Object(s.d)(c.d.MEDIA_CDN_COMMUNITY_URL).toLocaleLowerCase(),
             Object(s.d)(c.d.STORE_CDN_URL).toLocaleLowerCase(),
             "support.steampowered.com",
+            "steamcdn-a.akamaihd.net",
           ].indexOf(t) >= 0
         );
       }
@@ -74815,36 +74917,36 @@ var CLSTAMP = "6596929";
     },
     rCDf: function (e, t, n) {
       var r = {
-        "./shared_arabic.json": ["d1TB", 44],
-        "./shared_brazilian.json": ["Pg9r", 45],
-        "./shared_bulgarian.json": ["ENge", 46],
-        "./shared_czech.json": ["Ts6V", 47],
-        "./shared_danish.json": ["9oiU", 48],
-        "./shared_dutch.json": ["nxN4", 49],
-        "./shared_english.json": ["TYjx", 50],
-        "./shared_finnish.json": ["NuB8", 51],
-        "./shared_french.json": ["bOPj", 52],
-        "./shared_german.json": ["svuF", 53],
-        "./shared_greek.json": ["eJKB", 54],
-        "./shared_hungarian.json": ["T7i2", 55],
-        "./shared_italian.json": ["w96W", 56],
-        "./shared_japanese.json": ["XQ4S", 57],
-        "./shared_koreana.json": ["4hyI", 58],
-        "./shared_latam.json": ["3qrw", 59],
-        "./shared_norwegian.json": ["XA4Q", 60],
-        "./shared_polish.json": ["TpXn", 61],
-        "./shared_portuguese.json": ["Q8UV", 62],
-        "./shared_romanian.json": ["Eme1", 63],
-        "./shared_russian.json": ["BUiO", 64],
-        "./shared_sc_schinese.json": ["O0N/", 65],
-        "./shared_schinese.json": ["3UpY", 66],
-        "./shared_spanish.json": ["4Fxc", 67],
-        "./shared_swedish.json": ["0JhB", 68],
-        "./shared_tchinese.json": ["OYRc", 69],
-        "./shared_thai.json": ["lhAZ", 70],
-        "./shared_turkish.json": ["RSoU", 71],
-        "./shared_ukrainian.json": ["lNXI", 72],
-        "./shared_vietnamese.json": ["RSmC", 73],
+        "./shared_arabic.json": ["d1TB", 101],
+        "./shared_brazilian.json": ["Pg9r", 102],
+        "./shared_bulgarian.json": ["ENge", 103],
+        "./shared_czech.json": ["Ts6V", 104],
+        "./shared_danish.json": ["9oiU", 105],
+        "./shared_dutch.json": ["nxN4", 106],
+        "./shared_english.json": ["TYjx", 107],
+        "./shared_finnish.json": ["NuB8", 108],
+        "./shared_french.json": ["bOPj", 109],
+        "./shared_german.json": ["svuF", 110],
+        "./shared_greek.json": ["eJKB", 111],
+        "./shared_hungarian.json": ["T7i2", 112],
+        "./shared_italian.json": ["w96W", 113],
+        "./shared_japanese.json": ["XQ4S", 114],
+        "./shared_koreana.json": ["4hyI", 115],
+        "./shared_latam.json": ["3qrw", 116],
+        "./shared_norwegian.json": ["XA4Q", 117],
+        "./shared_polish.json": ["TpXn", 118],
+        "./shared_portuguese.json": ["Q8UV", 119],
+        "./shared_romanian.json": ["Eme1", 120],
+        "./shared_russian.json": ["BUiO", 121],
+        "./shared_sc_schinese.json": ["O0N/", 122],
+        "./shared_schinese.json": ["3UpY", 123],
+        "./shared_spanish.json": ["4Fxc", 124],
+        "./shared_swedish.json": ["0JhB", 125],
+        "./shared_tchinese.json": ["OYRc", 126],
+        "./shared_thai.json": ["lhAZ", 127],
+        "./shared_turkish.json": ["RSoU", 128],
+        "./shared_ukrainian.json": ["lNXI", 129],
+        "./shared_vietnamese.json": ["RSmC", 130],
       };
       function a(e) {
         if (!n.o(r, e))
@@ -74892,8 +74994,18 @@ var CLSTAMP = "6596929";
           (e[(e.START = 14)] = "START"),
           (e[(e.LSTICK_CLICK = 15)] = "LSTICK_CLICK"),
           (e[(e.RSTICK_CLICK = 16)] = "RSTICK_CLICK"),
-          (e[(e.STEAM_MENU = 17)] = "STEAM_MENU"),
-          (e[(e.STEAM_QUICK_MENU = 18)] = "STEAM_QUICK_MENU");
+          (e[(e.LSTICK_TOUCH = 17)] = "LSTICK_TOUCH"),
+          (e[(e.RSTICK_TOUCH = 18)] = "RSTICK_TOUCH"),
+          (e[(e.LPAD_TOUCH = 19)] = "LPAD_TOUCH"),
+          (e[(e.LPAD_CLICK = 20)] = "LPAD_CLICK"),
+          (e[(e.RPAD_TOUCH = 21)] = "RPAD_TOUCH"),
+          (e[(e.RPAD_CLICK = 22)] = "RPAD_CLICK"),
+          (e[(e.REAR_LEFT_UPPER = 23)] = "REAR_LEFT_UPPER"),
+          (e[(e.REAR_LEFT_LOWER = 24)] = "REAR_LEFT_LOWER"),
+          (e[(e.REAR_RIGHT_UPPER = 25)] = "REAR_RIGHT_UPPER"),
+          (e[(e.REAR_RIGHT_LOWER = 26)] = "REAR_RIGHT_LOWER"),
+          (e[(e.STEAM_MENU = 27)] = "STEAM_MENU"),
+          (e[(e.STEAM_QUICK_MENU = 28)] = "STEAM_QUICK_MENU");
       })(r || (r = {})),
         (function (e) {
           (e[(e.UNKNOWN = 0)] = "UNKNOWN"),
@@ -87603,5 +87715,5 @@ var CLSTAMP = "6596929";
       );
     },
   },
-  [["gfbn", 40, 0]],
+  [["gfbn", 97, 0]],
 ]);

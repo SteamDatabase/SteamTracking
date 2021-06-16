@@ -561,11 +561,24 @@ function SaleTagGradient( colorsIn )
 	return strStyle;
 }
 
-// Prioritize the genre/tag blocks based on the users tag prefernce, then display the renaming in the provided random order
+// Prioritize the genre/tag blocks based on the users tag preference, then display the renaming in the provided random order
 // Returns the priority list; can modify and alter the rgTagGenre list
 function PrioritizeTagGenreList( rgTagGenres )
 {
 	rgPriorityTagGenreList = [];
+
+	// put completed genres to the end of the list until there are none left
+	rgCompletedGenres = [];
+	if ( GHomepage && GHomepage.rgMapGenreChoices && Object.keys(GHomepage.rgMapGenreChoices).length && Object.keys(GHomepage.rgMapGenreChoices).length != 15 )
+	{
+		rgTagGenres.forEach( function ( TagGenre, index ) {
+			if ( GHomepage.rgMapGenreChoices[ TagGenre.egenre ] )
+			{
+				rgCompletedGenres.push( rgTagGenres[ index ] );
+				rgTagGenres.splice( index, 1 );
+			}
+		} );
+	}
 
 	// Walk through the user's preference if any, and append to the rgPriorityTagGenreList list. Since multiple tagid
 	// can refer to the same entity, we null out the value, so we don't add the same item more than once.
@@ -600,6 +613,13 @@ function PrioritizeTagGenreList( rgTagGenres )
 		}
 	} );
 
+	// add any completed sale genres last
+	rgCompletedGenres.forEach( function( TagGenre ) {
+		if (TagGenre) {
+			rgPriorityTagGenreList.push(TagGenre)
+		}
+	} );
+
 	return rgPriorityTagGenreList;
 }
 
@@ -614,9 +634,16 @@ function RenderTagGenreBlock( rgTagGenres )
 		var nScrollRowIndex = Math.floor( index / 5 );
 		var $elScrollRow = $J( $elCtn.children()[ nScrollRowIndex] );
 		var $Link = $J('<a/>', { 'class': 'tag_square', 'href': TagGenre.url  } );
-		$Link.append( $J('<img/>', { 'class': 'tag_square_img', 'src': TagGenre.square } ) );
+
+		var strTagGenreSquare = TagGenre.square;
+		if ( GHomepage && GHomepage.rgMapGenreChoices && GHomepage.rgMapGenreChoices[ TagGenre.egenre ] )
+		{
+			strTagGenreSquare = TagGenre.square_completed;
+		}
+
+		$Link.append( $J('<img/>', { 'class': 'tag_square_img', 'src': strTagGenreSquare } ) );
 		$Link.append( $J('<div/>', { 'class': 'tag_genre_title' } ).html( TagGenre.name ) );
-		$Link.append( $J('<div/>', { 'class': 'tag_square_overlay' } ) );
+		// $Link.append( $J('<div/>', { 'class': 'tag_square_overlay' } ) );
 
 		$elScrollRow.append( $Link );
 	});
@@ -882,7 +909,7 @@ function SaleFranchiseBlock( $Parent, rgFranchiseData )
 function BuildFranchiseCap( FranchiseData, bAlternate )
 {
 	var field = bAlternate ? '$CapAlt' : '$Cap';
-	if ( !FranchiseData[field] )
+	if ( FranchiseData && !FranchiseData[field] )
 	{
 		var $Cap = $J( '<div/>', {'class': 'franchise_capsule'} );
 
@@ -928,7 +955,11 @@ function BuildFranchiseCap( FranchiseData, bAlternate )
 
 		FranchiseData[field] = $Cap;
 	}
-	return FranchiseData[field].css( 'opacity', '');
+
+	if ( FranchiseData )
+		FranchiseData[field].css( 'opacity', '');
+
+	return FranchiseData ? FranchiseData[field] : null;
 }
 
 function SaleRenderDiscountsArea( rgUnder10, rgDeals )
