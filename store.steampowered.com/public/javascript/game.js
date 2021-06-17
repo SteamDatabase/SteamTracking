@@ -1875,45 +1875,76 @@ function ReparentAppLandingPageForMobileUX()
 	var bMatch = window.matchMedia( '(max-width: 500px)' ).matches;
 
 	if ( bMatch ) {
+
 		// move the app name below the header image
 		$J('#appHubAppName').appendTo('#gameHeaderImageCtn');
 
 		// place the dev, publisher, and release date grid below the header image
 		$J('#appHeaderGridContainer').appendTo('#gameHeaderImageCtn');
 
-		// place the ... app menu 
-		$J('#appMenu').appendTo('#appHubAppName');
+		// order the action buttons
+		$J('#shareBtn').appendTo('#rowBtnActions');
+		$J('#queueBtnFollow').appendTo('#rowBtnActions');
+		$J('#reportBtn').appendTo('#rowBtnActions');
+		$J('#ignoreBtn').appendTo('#rowBtnActions');
 
 		// purchase banner
-		$J('#game_area_purchase').appendTo('#bannerPurchasePackageContent');
-		$J('#bannerPurchase').appendTo('#game_highlights');
-		$J('#bannerPurchasePackageContent').appendTo('#game_highlights');
+		$J('#game_area_purchase').appendTo('#purchaseOptionsContent');
 
 		// move DLC section below the recent events and announcements (instead of below the list of purchase options)
 		if ( $J('#gameAreaDLCSection') !== null )
 			$J('#gameAreaDLCSection').appendTo('#contentForThisGame_ctn');
 
-		// the wishlist area needs to squeeze in on the left side of the purchase banner
-		$J('#add_to_wishlist_area').appendTo('#bannerPurchase');
-		$J('#add_to_wishlist_area_success').appendTo('#bannerPurchase');
-		$J('#add_to_wishlist_area_fail').appendTo('#bannerPurchase');
-		$J('#bannerPurchaseLink').appendTo('#bannerPurchase');
-				
 		// swap order of app review rows
 		$J('#appReviewsAll').appendTo('#userReviews');
 		$J('#appReviewsRecent').appendTo('#userReviews');
 
 		// move reviews location
-		$J('#reviewsHeader').appendTo('#game_highlights');
-		$J('#userReviews').appendTo('#game_highlights');
+		$J('#reviewsHeader').appendTo('#glanceCtnResponsiveRight');
+		$J('#userReviews').appendTo('#glanceCtnResponsiveRight');
 
-		// place banners under app details
-		$J('#bannerAchievements').appendTo('#responsive_apppage_details_left_ctn');
-		$J('#bannerPointsShop').appendTo('#responsive_apppage_details_left_ctn');
-		$J('#bannerItemStore').appendTo('#responsive_apppage_details_left_ctn');
-		
-		// move game details to bottom of page
-		$J('#appDetailsUnderlinedLinks').appendTo('#app_reviews_hash');
+		// place banners and game details into the links and info section
+		$J('#bannerAchievements').appendTo('#appLinksAndInfo');
+		$J('#bannerPointsShop').appendTo('#appLinksAndInfo');
+		$J('#bannerItemStore').appendTo('#appLinksAndInfo');
+		$J('#bannerCommunity').appendTo('#appLinksAndInfo');
+		$J('#appDetailsUnderlinedLinks').appendTo('#appLinksAndInfo');
+	}
+}
+
+// called by Mobile UX to reveal a list of purchase options for an app
+function TogglePurchaseOptionsModal( divContentID )
+{
+	var $modalDiv = $J(divContentID);
+	if ( $modalDiv !== null )
+	{
+		var $bShowing = !$modalDiv.is(':visible');
+
+		// update which purchase option banner to display
+		$J('#purchaseOptionsBanner_visible').css('display', $bShowing ? 'flex' : 'none');
+		$J('#purchaseOptionsBanner_hidden').css('display', !$bShowing ? 'flex' : 'none');
+
+		// toggle visibility of purchase options 
+		if ( !$bShowing ) 
+		{
+			$modalDiv.hide('fast');
+		}
+		else
+		{
+			$modalDiv.css('display', 'flex');
+
+			// max height for the purchase content is: window height - bottom banner height - page header height
+			var $floatingBanner = $J('#purchaseOptionsBanner_visible');
+			var $height = window.innerHeight - parseInt( $floatingBanner.height() );
+			$height -= GetResponsiveHeaderFixedOffsetAdjustment();
+
+			// we may not want the max height.  only use the screen space we need  
+			var $content = $J('#game_area_purchase');
+			var $contentHeight = parseInt( $content.height() ) + parseInt( $content.css('padding-top') );
+			$height = Math.min( $contentHeight, $height );
+
+			$modalDiv.css('height', $height);
+		}
 	}
 }
 

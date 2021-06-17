@@ -111,7 +111,7 @@
     "EventCategory_SteamGameFestival_Link": "More About The Steam Next Fest",
     "EventCategory_SteamGameFestival_Summary": "Optional: You can create up to two of the following event type during the Steam Next Fest.",
     "EventCategory_SteamGameFestival_Published": "Published events cannot be changed into this type. It is only can be chosen for a new event.",
-    "EventCategory_SteamGameFestival_PublishedByPass": "As Valve Support you are permitted to bypass this guard. Changing a published event won't count toward the maximum allowed and they won't be able to update the any further afterwards: So be wary when doing this.",
+    "EventCategory_SteamGameFestival_PublishedByPass": "As Valve Support you are permitted to bypass this guard. Changing a published event won't count toward the maximum number allowed: So be wary when doing this.",
     "EventCategory_SteamGameFestival_Max": "Sorry, you may only publish %1$s of this event type. That limit has been reached.",
     "EventCategory_SteamGameFestival_MaxByPass": "As Valve Support you can are permitted to bypass this guard. You must set and publish the event on their behalf.",
     "EventCategory_SteamGameFestival_ArtistStatement": "Steam Next Fest: Quick Pitch",
