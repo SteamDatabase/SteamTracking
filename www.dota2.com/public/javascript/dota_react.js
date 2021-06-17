@@ -214,7 +214,7 @@
                 3: "9fe4271be47155521640",
                 4: "9d5359e99be712a13968",
                 5: "6880690e88ff5e2c04ee",
-                6: "b643e7ddc664760b0098",
+                6: "f149c46b5d6e351f23e0",
                 7: "3635deb1da54c8e796cb",
                 8: "d06e9fe0b9a5a70a6ff2",
                 9: "444c8c89b210b8d37277",
@@ -12019,7 +12019,9 @@ and limitations under the License.
       UpperContainer: "dpcmatchbanner_UpperContainer_2ymob",
       LiveBanner: "dpcmatchbanner_LiveBanner_DQm2h",
       Time: "dpcmatchbanner_Time_27Dq-",
-      RegionDivision: "dpcmatchbanner_RegionDivision_3rogP",
+      Description: "dpcmatchbanner_Description_cHdcC",
+      DivisionElement: "dpcmatchbanner_DivisionElement__NZ0K",
+      Final: "dpcmatchbanner_Final_VvrUF",
       Dot: "dpcmatchbanner_Dot_333qo",
       TeamsContainer: "dpcmatchbanner_TeamsContainer_1RcBV",
       BannerTeam: "dpcmatchbanner_BannerTeam_1Anv9",
@@ -12028,6 +12030,240 @@ and limitations under the License.
       TeamInfo: "dpcmatchbanner_TeamInfo_X2Nqs",
       TeamLogo: "dpcmatchbanner_TeamLogo_3o2Hj",
     };
+  },
+  HtA2: function (e, t, a) {
+    "use strict";
+    a.d(t, "e", function () {
+      return n;
+    }),
+      a.d(t, "c", function () {
+        return r;
+      }),
+      a.d(t, "d", function () {
+        return o;
+      }),
+      a.d(t, "b", function () {
+        return s;
+      }),
+      a.d(t, "a", function () {
+        return l;
+      });
+    var n = 150,
+      r = 80,
+      i = 20,
+      o = 40,
+      s = [
+        {
+          strLabel: "#dpc_bracket_ub_quarter",
+          nPosX: 1 * (n + o),
+          nPosY: 0 * (r + i),
+        },
+        {
+          strLabel: "#dpc_bracket_ub_quarter",
+          nPosX: 1 * (n + o),
+          nPosY: 1 * (r + i),
+        },
+        {
+          strLabel: "#dpc_bracket_ub_quarter",
+          nPosX: 1 * (n + o),
+          nPosY: 2 * (r + i),
+        },
+        {
+          strLabel: "#dpc_bracket_ub_quarter",
+          nPosX: 1 * (n + o),
+          nPosY: 3 * (r + i),
+        },
+        {
+          strLabel: "#dpc_bracket_ub_semi",
+          nPosX: 3 * (n + o),
+          nPosY: 0.5 * (r + i),
+        },
+        {
+          strLabel: "#dpc_bracket_ub_semi",
+          nPosX: 3 * (n + o),
+          nPosY: 2.5 * (r + i),
+        },
+        {
+          strLabel: "#dpc_bracket_ub_final",
+          nPosX: 5 * (n + o),
+          nPosY: 1.5 * (r + i),
+        },
+        {
+          strLabel: "#dpc_bracket_grand_final",
+          nPosX: 6 * (n + o),
+          nPosY: 3.5 * (r + i),
+        },
+        {
+          strLabel: "#dpc_bracket_lb_round1",
+          nPosX: 0 * (n + o),
+          nPosY: 4 * (r + i),
+        },
+        {
+          strLabel: "#dpc_bracket_lb_round1",
+          nPosX: 0 * (n + o),
+          nPosY: 5 * (r + i),
+        },
+        {
+          strLabel: "#dpc_bracket_lb_round1",
+          nPosX: 0 * (n + o),
+          nPosY: 6 * (r + i),
+        },
+        {
+          strLabel: "#dpc_bracket_lb_round1",
+          nPosX: 0 * (n + o),
+          nPosY: 7 * (r + i),
+        },
+        {
+          strLabel: "#dpc_bracket_lb_round2",
+          nPosX: 1 * (n + o),
+          nPosY: 4 * (r + i),
+        },
+        {
+          strLabel: "#dpc_bracket_lb_round2",
+          nPosX: 1 * (n + o),
+          nPosY: 5 * (r + i),
+        },
+        {
+          strLabel: "#dpc_bracket_lb_round2",
+          nPosX: 1 * (n + o),
+          nPosY: 6 * (r + i),
+        },
+        {
+          strLabel: "#dpc_bracket_lb_round2",
+          nPosX: 1 * (n + o),
+          nPosY: 7 * (r + i),
+        },
+        {
+          strLabel: "#dpc_bracket_lb_round3",
+          nPosX: 2 * (n + o),
+          nPosY: 4.5 * (r + i),
+        },
+        {
+          strLabel: "#dpc_bracket_lb_round3",
+          nPosX: 2 * (n + o),
+          nPosY: 6.5 * (r + i),
+        },
+        {
+          strLabel: "#dpc_bracket_lb_round4",
+          nPosX: 3 * (n + o),
+          nPosY: 4.5 * (r + i),
+        },
+        {
+          strLabel: "#dpc_bracket_lb_round4",
+          nPosX: 3 * (n + o),
+          nPosY: 6.5 * (r + i),
+        },
+        {
+          strLabel: "#dpc_bracket_lb_round5",
+          nPosX: 4 * (n + o),
+          nPosY: 5.5 * (r + i),
+        },
+        {
+          strLabel: "#dpc_bracket_lb_final",
+          nPosX: 5 * (n + o),
+          nPosY: 5.5 * (r + i),
+        },
+      ],
+      l = [
+        {
+          nPosX: n + 0 * (n + o),
+          nPosY: 4 * (r + i),
+          nWidth: o + 0 * (n + o),
+          nHeight: r + 0 * (r + i),
+          bStraight: !0,
+        },
+        {
+          nPosX: n + 0 * (n + o),
+          nPosY: 5 * (r + i),
+          nWidth: o + 0 * (n + o),
+          nHeight: r + 0 * (r + i),
+          bStraight: !0,
+        },
+        {
+          nPosX: n + 0 * (n + o),
+          nPosY: 6 * (r + i),
+          nWidth: o + 0 * (n + o),
+          nHeight: r + 0 * (r + i),
+          bStraight: !0,
+        },
+        {
+          nPosX: n + 0 * (n + o),
+          nPosY: 7 * (r + i),
+          nWidth: o + 0 * (n + o),
+          nHeight: r + 0 * (r + i),
+          bStraight: !0,
+        },
+        {
+          nPosX: n + 1 * (n + o),
+          nPosY: 0 * (r + i),
+          nWidth: o + 1 * (n + o),
+          nHeight: r + 1 * (r + i),
+          bStraight: !1,
+        },
+        {
+          nPosX: n + 1 * (n + o),
+          nPosY: 2 * (r + i),
+          nWidth: o + 1 * (n + o),
+          nHeight: r + 1 * (r + i),
+          bStraight: !1,
+        },
+        {
+          nPosX: n + 1 * (n + o),
+          nPosY: 4 * (r + i),
+          nWidth: o + 0 * (n + o),
+          nHeight: r + 1 * (r + i),
+          bStraight: !1,
+        },
+        {
+          nPosX: n + 1 * (n + o),
+          nPosY: 6 * (r + i),
+          nWidth: o + 0 * (n + o),
+          nHeight: r + 1 * (r + i),
+          bStraight: !1,
+        },
+        {
+          nPosX: n + 2 * (n + o),
+          nPosY: 4.5 * (r + i),
+          nWidth: o + 0 * (n + o),
+          nHeight: r + 0 * (r + i),
+          bStraight: !0,
+        },
+        {
+          nPosX: n + 2 * (n + o),
+          nPosY: 6.5 * (r + i),
+          nWidth: o + 0 * (n + o),
+          nHeight: r + 0 * (r + i),
+          bStraight: !0,
+        },
+        {
+          nPosX: n + 3 * (n + o),
+          nPosY: 0.5 * r + 10,
+          nWidth: o + 1 * (n + o),
+          nHeight: r + 2 * (r + i),
+          bStraight: !1,
+        },
+        {
+          nPosX: n + 3 * (n + o),
+          nPosY: 0.5 * r + 10 + 4 * (r + i),
+          nWidth: o + 0 * (n + o),
+          nHeight: r + 2 * (r + i),
+          bStraight: !1,
+        },
+        {
+          nPosX: n + 4 * (n + o),
+          nPosY: 0.5 * r + 10 + 5 * (r + i),
+          nWidth: o + 0 * (n + o),
+          nHeight: r + 0 * (r + i),
+          bStraight: !0,
+        },
+        {
+          nPosX: n + 5 * (n + o),
+          nPosY: 0.5 * r + 10 + 1 * (r + i),
+          nWidth: o + 0 * (n + o),
+          nHeight: r + 4 * (r + i),
+          bStraight: !1,
+        },
+      ];
   },
   I8QC: function (e, t, a) {
     "use strict";
@@ -14082,6 +14318,28 @@ and limitations under the License.
       Demoted: "dpcregionstandings_Demoted_2Njjx",
       Removed: "dpcregionstandings_Removed_UpOFm",
       Record: "dpcregionstandings_Record_1h4rU",
+      DPCStandingsBracket: "dpcregionstandings_DPCStandingsBracket_2QBD2",
+      BracketContainer: "dpcregionstandings_BracketContainer_3clp-",
+      BracketNodeContainer: "dpcregionstandings_BracketNodeContainer_1cykg",
+      BracketConnectorContainer:
+        "dpcregionstandings_BracketConnectorContainer_2-QIa",
+      BracketNode: "dpcregionstandings_BracketNode_Gmw1F",
+      NodeHeader: "dpcregionstandings_NodeHeader_EiKFT",
+      Teams: "dpcregionstandings_Teams_cpjR8",
+      Team: "dpcregionstandings_Team_3va1W",
+      Winner: "dpcregionstandings_Winner_1u9z7",
+      Score: "dpcregionstandings_Score_35zvc",
+      BracketConnectorStraight:
+        "dpcregionstandings_BracketConnectorStraight_2O_OH",
+      ConnectorLine: "dpcregionstandings_ConnectorLine_1HmRK",
+      BracketConnectorCombine:
+        "dpcregionstandings_BracketConnectorCombine_TfH0M",
+      Segment1: "dpcregionstandings_Segment1_3igGD",
+      ConnectorLineTop: "dpcregionstandings_ConnectorLineTop_1mNMj",
+      ConnectorLineBottom: "dpcregionstandings_ConnectorLineBottom_2XXFW",
+      ConnectorLineVertical: "dpcregionstandings_ConnectorLineVertical_3oUHN",
+      Segment3: "dpcregionstandings_Segment3_1hljF",
+      ConnectorLineCombined: "dpcregionstandings_ConnectorLineCombined_2fdZP",
     };
   },
   Kk3P: function (e, t, a) {
@@ -19476,7 +19734,7 @@ object-assign
   WPyR: function (e, t, a) {
     "use strict";
     a.d(t, "a", function () {
-      return m;
+      return p;
     });
     var n = a("mrSG"),
       r = a("2vnA"),
@@ -19487,13 +19745,15 @@ object-assign
       c = a("knzx"),
       u = a("3Rkk"),
       d = a("aaBf"),
-      m = (function () {
+      m = a("HtA2"),
+      p = (function () {
         function e() {
           (this.m_asyncLeagueData = new i.b()),
             (this.m_asyncMatchData = new i.b()),
             (this.m_asyncFavoriteTeams = new i.a()),
             (this.m_asyncPopularTeams = new i.a()),
             (this.m_asyncTeamInfo = new i.b()),
+            (this.m_asyncTwitchStreamLive = new i.b()),
             (this.m_mapLeagueNodeGroup = new Map()),
             (this.m_mapLeagueNode = new Map()),
             (this.m_mapSeasonPhaseDates = new Map()),
@@ -19509,172 +19769,172 @@ object-assign
             (this.m_mapTeamDivision = new Map()),
             (this.m_arrLeagueInfo = [
               {
-                eSeason: c.e.SPRING_2021_LEAGUE,
-                eSeasonType: c.g.LEAGUE,
+                eSeason: c.f.SPRING_2021_LEAGUE,
+                eSeasonType: c.h.LEAGUE,
                 arrSeasonLeagues: [
                   {
-                    eRegion: c.d.NA,
+                    eRegion: c.e.NA,
                     eDivision: c.b.DIVISION_I,
                     nLeagueID: 13119,
-                    arrPhaseInfos: [{ ePhase: c.f.OVERALL, nNodeGroupID: 2 }],
+                    arrPhaseInfos: [{ ePhase: c.g.OVERALL, nNodeGroupID: 2 }],
                   },
                   {
-                    eRegion: c.d.NA,
+                    eRegion: c.e.NA,
                     eDivision: c.b.DIVISION_II,
                     nLeagueID: 13120,
-                    arrPhaseInfos: [{ ePhase: c.f.OVERALL, nNodeGroupID: 2 }],
+                    arrPhaseInfos: [{ ePhase: c.g.OVERALL, nNodeGroupID: 2 }],
                   },
                   {
-                    eRegion: c.d.SA,
+                    eRegion: c.e.SA,
                     eDivision: c.b.DIVISION_I,
                     nLeagueID: 13109,
-                    arrPhaseInfos: [{ ePhase: c.f.OVERALL, nNodeGroupID: 2 }],
+                    arrPhaseInfos: [{ ePhase: c.g.OVERALL, nNodeGroupID: 2 }],
                   },
                   {
-                    eRegion: c.d.SA,
+                    eRegion: c.e.SA,
                     eDivision: c.b.DIVISION_II,
                     nLeagueID: 13110,
-                    arrPhaseInfos: [{ ePhase: c.f.OVERALL, nNodeGroupID: 3 }],
+                    arrPhaseInfos: [{ ePhase: c.g.OVERALL, nNodeGroupID: 3 }],
                   },
                   {
-                    eRegion: c.d.WEU,
+                    eRegion: c.e.WEU,
                     eDivision: c.b.DIVISION_I,
                     nLeagueID: 13114,
-                    arrPhaseInfos: [{ ePhase: c.f.OVERALL, nNodeGroupID: 2 }],
+                    arrPhaseInfos: [{ ePhase: c.g.OVERALL, nNodeGroupID: 2 }],
                   },
                   {
-                    eRegion: c.d.WEU,
+                    eRegion: c.e.WEU,
                     eDivision: c.b.DIVISION_II,
                     nLeagueID: 13115,
-                    arrPhaseInfos: [{ ePhase: c.f.OVERALL, nNodeGroupID: 3 }],
+                    arrPhaseInfos: [{ ePhase: c.g.OVERALL, nNodeGroupID: 3 }],
                   },
                   {
-                    eRegion: c.d.EEU,
+                    eRegion: c.e.EEU,
                     eDivision: c.b.DIVISION_I,
                     nLeagueID: 13116,
-                    arrPhaseInfos: [{ ePhase: c.f.OVERALL, nNodeGroupID: 2 }],
+                    arrPhaseInfos: [{ ePhase: c.g.OVERALL, nNodeGroupID: 2 }],
                   },
                   {
-                    eRegion: c.d.EEU,
+                    eRegion: c.e.EEU,
                     eDivision: c.b.DIVISION_II,
                     nLeagueID: 13117,
-                    arrPhaseInfos: [{ ePhase: c.f.OVERALL, nNodeGroupID: 3 }],
+                    arrPhaseInfos: [{ ePhase: c.g.OVERALL, nNodeGroupID: 3 }],
                   },
                   {
-                    eRegion: c.d.CN,
+                    eRegion: c.e.CN,
                     eDivision: c.b.DIVISION_I,
                     nLeagueID: 13112,
-                    arrPhaseInfos: [{ ePhase: c.f.OVERALL, nNodeGroupID: 2 }],
+                    arrPhaseInfos: [{ ePhase: c.g.OVERALL, nNodeGroupID: 2 }],
                   },
                   {
-                    eRegion: c.d.CN,
+                    eRegion: c.e.CN,
                     eDivision: c.b.DIVISION_II,
                     nLeagueID: 13113,
-                    arrPhaseInfos: [{ ePhase: c.f.OVERALL, nNodeGroupID: 3 }],
+                    arrPhaseInfos: [{ ePhase: c.g.OVERALL, nNodeGroupID: 3 }],
                   },
                   {
-                    eRegion: c.d.SEA,
+                    eRegion: c.e.SEA,
                     eDivision: c.b.DIVISION_I,
                     nLeagueID: 13108,
-                    arrPhaseInfos: [{ ePhase: c.f.OVERALL, nNodeGroupID: 2 }],
+                    arrPhaseInfos: [{ ePhase: c.g.OVERALL, nNodeGroupID: 2 }],
                   },
                   {
-                    eRegion: c.d.SEA,
+                    eRegion: c.e.SEA,
                     eDivision: c.b.DIVISION_II,
                     nLeagueID: 13107,
-                    arrPhaseInfos: [{ ePhase: c.f.OVERALL, nNodeGroupID: 3 }],
+                    arrPhaseInfos: [{ ePhase: c.g.OVERALL, nNodeGroupID: 3 }],
                   },
                 ],
               },
               {
-                eSeason: c.e.SPRING_2021_MAJOR,
-                eSeasonType: c.g.MAJOR,
+                eSeason: c.f.SPRING_2021_MAJOR,
+                eSeasonType: c.h.MAJOR,
                 arrSeasonLeagues: [
                   {
-                    eRegion: c.d.UNSET,
+                    eRegion: c.e.UNSET,
                     eDivision: c.b.UNSET,
                     nLeagueID: 12964,
-                    arrPhaseInfos: [{ ePhase: c.f.WILD_CARD, nNodeGroupID: 2 }],
+                    arrPhaseInfos: [{ ePhase: c.g.WILD_CARD, nNodeGroupID: 2 }],
                   },
                   {
-                    eRegion: c.d.UNSET,
+                    eRegion: c.e.UNSET,
                     eDivision: c.b.UNSET,
                     nLeagueID: 12964,
                     arrPhaseInfos: [
-                      { ePhase: c.f.GROUP_STAGE, nNodeGroupID: 3 },
+                      { ePhase: c.g.GROUP_STAGE, nNodeGroupID: 3 },
                     ],
                   },
                   {
-                    eRegion: c.d.UNSET,
+                    eRegion: c.e.UNSET,
                     eDivision: c.b.UNSET,
                     nLeagueID: 12964,
-                    arrPhaseInfos: [{ ePhase: c.f.OVERALL, nNodeGroupID: 4 }],
+                    arrPhaseInfos: [{ ePhase: c.g.PLAYOFF, nNodeGroupID: 4 }],
                   },
                 ],
               },
               {
-                eSeason: c.e.INTERNATIONAL_2021_QUALIFIERS,
-                eSeasonType: c.g.INTERNATIONAL_QUALIFIERS,
+                eSeason: c.f.INTERNATIONAL_2021_QUALIFIERS,
+                eSeasonType: c.h.INTERNATIONAL_QUALIFIERS,
                 arrSeasonLeagues: [
                   {
-                    eRegion: c.d.NA,
+                    eRegion: c.e.NA,
                     eDivision: c.b.UNSET,
                     nLeagueID: 13256,
-                    arrPhaseInfos: [{ ePhase: c.f.PLAYOFF, nNodeGroupID: 14 }],
+                    arrPhaseInfos: [{ ePhase: c.g.PLAYOFF, nNodeGroupID: 14 }],
                   },
                   {
-                    eRegion: c.d.SA,
+                    eRegion: c.e.SA,
                     eDivision: c.b.UNSET,
                     nLeagueID: 13256,
-                    arrPhaseInfos: [{ ePhase: c.f.PLAYOFF, nNodeGroupID: 8 }],
+                    arrPhaseInfos: [{ ePhase: c.g.PLAYOFF, nNodeGroupID: 8 }],
                   },
                   {
-                    eRegion: c.d.WEU,
+                    eRegion: c.e.WEU,
                     eDivision: c.b.UNSET,
                     nLeagueID: 13256,
-                    arrPhaseInfos: [{ ePhase: c.f.PLAYOFF, nNodeGroupID: 15 }],
+                    arrPhaseInfos: [{ ePhase: c.g.PLAYOFF, nNodeGroupID: 15 }],
                   },
                   {
-                    eRegion: c.d.EEU,
+                    eRegion: c.e.EEU,
                     eDivision: c.b.UNSET,
                     nLeagueID: 13256,
-                    arrPhaseInfos: [{ ePhase: c.f.PLAYOFF, nNodeGroupID: 16 }],
+                    arrPhaseInfos: [{ ePhase: c.g.PLAYOFF, nNodeGroupID: 16 }],
                   },
                   {
-                    eRegion: c.d.CN,
+                    eRegion: c.e.CN,
                     eDivision: c.b.UNSET,
                     nLeagueID: 13256,
-                    arrPhaseInfos: [{ ePhase: c.f.PLAYOFF, nNodeGroupID: 17 }],
+                    arrPhaseInfos: [{ ePhase: c.g.PLAYOFF, nNodeGroupID: 17 }],
                   },
                   {
-                    eRegion: c.d.SEA,
+                    eRegion: c.e.SEA,
                     eDivision: c.b.UNSET,
                     nLeagueID: 13256,
-                    arrPhaseInfos: [{ ePhase: c.f.PLAYOFF, nNodeGroupID: 18 }],
+                    arrPhaseInfos: [{ ePhase: c.g.PLAYOFF, nNodeGroupID: 18 }],
                   },
                 ],
               },
               {
-                eSeason: c.e.INTERNATIONAL_2021,
-                eSeasonType: c.g.INTERNATIONAL,
+                eSeason: c.f.INTERNATIONAL_2021,
+                eSeasonType: c.h.INTERNATIONAL,
                 arrSeasonLeagues: [
                   {
-                    eRegion: c.d.UNSET,
+                    eRegion: c.e.UNSET,
                     eDivision: c.b.UNSET,
                     nLeagueID: 13256,
-                    arrPhaseInfos: [{ ePhase: c.f.GROUP_A, nNodeGroupID: 0 }],
+                    arrPhaseInfos: [{ ePhase: c.g.GROUP_A, nNodeGroupID: 0 }],
                   },
                   {
-                    eRegion: c.d.UNSET,
+                    eRegion: c.e.UNSET,
                     eDivision: c.b.UNSET,
                     nLeagueID: 13256,
-                    arrPhaseInfos: [{ ePhase: c.f.GROUP_B, nNodeGroupID: 0 }],
+                    arrPhaseInfos: [{ ePhase: c.g.GROUP_B, nNodeGroupID: 0 }],
                   },
                   {
-                    eRegion: c.d.UNSET,
+                    eRegion: c.e.UNSET,
                     eDivision: c.b.UNSET,
                     nLeagueID: 13256,
-                    arrPhaseInfos: [{ ePhase: c.f.PLAYOFF, nNodeGroupID: 0 }],
+                    arrPhaseInfos: [{ ePhase: c.g.PLAYOFF, nNodeGroupID: 0 }],
                   },
                 ],
               },
@@ -19728,12 +19988,13 @@ object-assign
                         {
                           eSeason: e,
                           nLeagueID: t,
+                          eNodeGroupType: a.node_group_type,
                           eRegion: i.eRegion,
                           eDivision: i.eDivision,
                           ePhase: o.ePhase,
                         }
                       ),
-                      i.eRegion != c.d.UNSET &&
+                      i.eRegion != c.e.UNSET &&
                         n.m_mapTeamRegion.set(e + "_" + r.team_id, i.eRegion),
                       i.eDivision != c.b.UNSET &&
                         n.m_mapTeamDivision.set(
@@ -19741,37 +20002,38 @@ object-assign
                           i.eDivision
                         );
                   }),
-                  a.nodes.forEach(function (a) {
-                    var r =
-                      0 == a.actual_time ? a.scheduled_time : a.actual_time;
-                    if (0 != r) {
-                      var s = new Date(1e3 * r);
+                  a.nodes.forEach(function (r) {
+                    var s =
+                      0 == r.actual_time ? r.scheduled_time : r.actual_time;
+                    if (0 != s) {
+                      var l = new Date(1e3 * s);
                       n.m_mapSeasonPhaseDates
                         .get(e + "_" + o.ePhase)
-                        .add(s.setHours(0, 0, 0, 0) / 1e3),
+                        .add(l.setHours(0, 0, 0, 0) / 1e3),
                         n.m_mapSeasonDates
                           .get(e)
-                          .add(s.setHours(0, 0, 0, 0) / 1e3);
+                          .add(l.setHours(0, 0, 0, 0) / 1e3);
                     }
-                    n.m_mapLeagueNodeInfo.set(t + "_" + a.node_id, {
+                    n.m_mapLeagueNodeInfo.set(t + "_" + r.node_id, {
                       eSeason: e,
                       nLeagueID: t,
+                      eNodeGroupType: a.node_group_type,
                       eRegion: i.eRegion,
                       eDivision: i.eDivision,
                       ePhase: o.ePhase,
                     }),
-                      n.m_mapLeagueNode.set(t + "_" + a.node_id, a),
+                      n.m_mapLeagueNode.set(t + "_" + r.node_id, r),
                       n.m_mapSeasonLeagueNodes
                         .get(e)
-                        .add({ nLeagueID: t, nNodeID: a.node_id }),
-                      n.m_mapSeasonTeams.get(e).add(a.team_id_1),
-                      n.m_mapSeasonTeams.get(e).add(a.team_id_2),
+                        .add({ nLeagueID: t, nNodeID: r.node_id }),
+                      n.m_mapSeasonTeams.get(e).add(r.team_id_1),
+                      n.m_mapSeasonTeams.get(e).add(r.team_id_2),
                       n.m_mapSeasonPhaseTeams
                         .get(e + "_" + o.ePhase)
-                        .add(a.team_id_1),
+                        .add(r.team_id_1),
                       n.m_mapSeasonPhaseTeams
                         .get(e + "_" + o.ePhase)
-                        .add(a.team_id_2);
+                        .add(r.team_id_2);
                   })),
                 a.node_groups.forEach(function (a) {
                   return n.UpdateDerivedLeagueDataRecursive(e, t, a);
@@ -19779,6 +20041,41 @@ object-assign
           }),
           (e.prototype.GetLeagueNodeGroup = function (e, t) {
             return this.m_mapLeagueNodeGroup.get(e + "_" + t);
+          }),
+          (e.prototype.GetSeasonPhaseNodeGroupID = function (e, t, a, n) {
+            var r = 0,
+              i = 0;
+            return (
+              this.m_arrLeagueInfo.forEach(function (o) {
+                o.eSeason == e &&
+                  o.arrSeasonLeagues.forEach(function (e) {
+                    e.eDivision == a &&
+                      e.eRegion == n &&
+                      e.arrPhaseInfos.forEach(function (a) {
+                        a.ePhase == t &&
+                          ((r = e.nLeagueID), (i = a.nNodeGroupID));
+                      });
+                  });
+              }),
+              { nLeagueID: r, nNodeGroupID: i }
+            );
+          }),
+          (e.prototype.GetNodeGroupSeasonPhase = function (e, t, a) {
+            var n = c.g.INVALID,
+              r = this.GetLeagueNode(t, a);
+            return (
+              this.m_arrLeagueInfo.forEach(function (t) {
+                t.eSeason == e &&
+                  t.arrSeasonLeagues.forEach(function (e) {
+                    e.arrPhaseInfos.forEach(function (e) {
+                      e.nNodeGroupID !=
+                        (null == r ? void 0 : r.node_group_id) ||
+                        (n = e.ePhase);
+                    });
+                  });
+              }),
+              n
+            );
           }),
           (e.prototype.GetLeagueNodeGroupInfo = function (e, t) {
             return this.m_mapLeagueNodeGroupInfo.get(e + "_" + t);
@@ -19820,11 +20117,12 @@ object-assign
               a = void 0,
               n = void 0;
             return (
-              this.m_mapSeasonPhaseDates.forEach(function (e, r) {
-                Array.from(e.values()).forEach(function (e) {
-                  var i = Math.abs(e - t);
-                  i < a && ((a = i), (n = parseInt(r.split("_")[1])));
-                });
+              this.m_mapSeasonPhaseDates.forEach(function (r, i) {
+                parseInt(i.split("_")[0]) == e &&
+                  Array.from(r.values()).forEach(function (e) {
+                    var r = Math.abs(e - t);
+                    r < a && ((a = r), (n = parseInt(i.split("_")[1])));
+                  });
               }),
               n
             );
@@ -19871,34 +20169,34 @@ object-assign
           (e.prototype.GetRegionDivisionString = function (e, t, a) {
             var n = a ? "_abbrev" : "";
             switch (e) {
-              case c.d.NA:
+              case c.e.NA:
                 return "#dpc_region" + n + "_na_" + t;
-              case c.d.SA:
+              case c.e.SA:
                 return "#dpc_region" + n + "_sa_" + t;
-              case c.d.WEU:
+              case c.e.WEU:
                 return "#dpc_region" + n + "_weu_" + t;
-              case c.d.EEU:
+              case c.e.EEU:
                 return "#dpc_region" + n + "_eeu_" + t;
-              case c.d.CN:
+              case c.e.CN:
                 return "#dpc_region" + n + "_cn_" + t;
-              case c.d.SEA:
+              case c.e.SEA:
                 return "#dpc_region" + n + "_sea_" + t;
             }
             return "";
           }),
           (e.prototype.GetRegionString = function (e) {
             switch (e) {
-              case c.d.NA:
+              case c.e.NA:
                 return "#dpc_region_na";
-              case c.d.SA:
+              case c.e.SA:
                 return "#dpc_region_sa";
-              case c.d.WEU:
+              case c.e.WEU:
                 return "#dpc_region_weu";
-              case c.d.EEU:
+              case c.e.EEU:
                 return "#dpc_region_eeu";
-              case c.d.CN:
+              case c.e.CN:
                 return "#dpc_region_cn";
-              case c.d.SEA:
+              case c.e.SEA:
                 return "#dpc_region_sea";
             }
             return "";
@@ -19914,24 +20212,49 @@ object-assign
           }),
           (e.prototype.GetSeasonPhaseString = function (e) {
             switch (e) {
-              case c.f.WILD_CARD:
+              case c.g.WILD_CARD:
                 return "#dpc_wild_card";
-              case c.f.GROUP_STAGE:
+              case c.g.GROUP_STAGE:
                 return "#dpc_group_stage";
-              case c.f.GROUP_A:
+              case c.g.GROUP_A:
                 return "#dpc_group_a";
-              case c.f.GROUP_B:
+              case c.g.GROUP_B:
                 return "#dpc_group_b";
-              case c.f.PLAYOFF:
+              case c.g.PLAYOFF:
                 return "#dpc_playoff";
             }
             return "";
+          }),
+          (e.prototype.GetBracketNodeString = function (t, a, n, r) {
+            var i = e.Get().GetLeagueNodeGroup(t, a),
+              o =
+                null == i
+                  ? void 0
+                  : i.nodes.findIndex(function (e) {
+                      return e.node_id == n;
+                    }),
+              s = Math.pow(
+                2,
+                Math.ceil(
+                  Math.log(null == i ? void 0 : i.team_count) / Math.log(2)
+                )
+              ),
+              l = "";
+            if (-1 == o) return l;
+            switch (null == i ? void 0 : i.node_group_type) {
+              case c.c.BRACKET_DOUBLE_SEED_LOSER:
+                switch (s) {
+                  case 16:
+                    l = o < m.b.length ? m.b[o].strLabel : "";
+                }
+            }
+            return r && (l += "_long"), l;
           }),
           (e.prototype.GetSeasonType = function (e) {
             var t = this.m_arrLeagueInfo.find(function (t) {
               return t.eSeason == e;
             });
-            return t ? t.eSeasonType : c.g.UNKNOWN;
+            return t ? t.eSeasonType : c.h.UNKNOWN;
           }),
           (e.prototype.UpdateDerivedLeagueData = function (e) {
             var t = this;
@@ -20034,31 +20357,31 @@ object-assign
               localStorage.setItem("bSpoilerBlockEnabled", e ? "1" : "0");
           }),
           (e.prototype.GetDefaultRegion = function () {
-            var e = c.d.WEU;
+            var e = c.e.WEU;
             switch (l.a.REGION) {
               case "North America":
-                e = c.d.NA;
+                e = c.e.NA;
                 break;
               case "Latin America":
-                e = c.d.SA;
+                e = c.e.SA;
                 break;
               case "Western Europe":
               case "EU":
               case "EEA":
-                e = c.d.WEU;
+                e = c.e.WEU;
                 break;
               case "Eastern Europe":
               case "Russia, Ukraine, & CIS":
-                e = c.d.EEU;
+                e = c.e.EEU;
                 break;
               case "Oceania":
               case "Asia":
               case "South East Asia":
               case "South Asia":
-                e = c.d.SEA;
+                e = c.e.SEA;
             }
             return (
-              ("CN" != d.b.COUNTRY && "XC" != d.b.COUNTRY) || (e = c.d.CN), e
+              ("CN" != d.b.COUNTRY && "XC" != d.b.COUNTRY) || (e = c.e.CN), e
             );
           }),
           (e.prototype.GetSeasonInfo = function (e) {
@@ -20193,6 +20516,112 @@ object-assign
               ),
               { nLeagueID: i, nNodeID: null == o ? void 0 : o.node_id }
             );
+          }),
+          (e.prototype.GetLiveStreams = function (e) {
+            var t = this,
+              a = new Set();
+            this.GetSeasonInfo(e).arrSeasonLeagues.forEach(function (e) {
+              return a.add(e.nLeagueID);
+            });
+            var r = Array.from(a).join();
+            return this.m_asyncTwitchStreamLive.getAsyncDataWrapper(e).getData(
+              30,
+              function () {
+                return Object(n.b)(t, void 0, void 0, function () {
+                  return Object(n.e)(this, function (e) {
+                    switch (e.label) {
+                      case 0:
+                        return [
+                          4,
+                          s.a.get(
+                            l.a.BASE_URL + u.a.dpc_root() + "/getlivestreams",
+                            { params: { league_ids: r } }
+                          ),
+                        ];
+                      case 1:
+                        return [2, e.sent()];
+                    }
+                  });
+                });
+              },
+              function (e) {
+                return null == e ? void 0 : e.data;
+              }
+            );
+          }),
+          (e.prototype.IsStreamLive = function (e, t) {
+            var a,
+              n = this.GetLiveStreams(e);
+            return (
+              "1" ==
+              (null ===
+                (a =
+                  null == n
+                    ? void 0
+                    : n.find(function (e) {
+                        return e.stream_id == t;
+                      })) || void 0 === a
+                ? void 0
+                : a.live)
+            );
+          }),
+          (e.prototype.IsLeagueNodeLive = function (e, t, a) {
+            var n = this.GetLeagueNode(t, a),
+              r = Date.now() / 1e3;
+            if (!n) return !1;
+            if (!n.has_started && n.scheduled_time - r > 10800) return !1;
+            if (n.is_completed && r - n.actual_time > 32400) return !1;
+            for (
+              var i = !1, o = 0, s = (null == n ? void 0 : n.stream_ids) || [];
+              o < s.length;
+              o++
+            ) {
+              var l = s[o];
+              if (this.IsStreamLive(e, l)) {
+                i = !0;
+                break;
+              }
+            }
+            if (!i) return !1;
+            for (
+              var c = this.GetLeagueNodeIDs(t),
+                u = Math.abs(
+                  r - (0 != n.actual_time ? n.actual_time : n.scheduled_time)
+                ),
+                d = !1,
+                m = !1,
+                p = 0,
+                _ = c;
+              p < _.length;
+              p++
+            ) {
+              var h = _[p],
+                f = this.GetLeagueNode(t, h);
+              if (f)
+                if (h != a)
+                  if (
+                    f.stream_ids.filter(function (e) {
+                      return n.stream_ids.includes(e);
+                    }).length > 0
+                  ) {
+                    if (f.has_started && !f.is_completed) {
+                      d = !0;
+                      break;
+                    }
+                    if (
+                      Math.abs(
+                        r -
+                          (0 != f.actual_time
+                            ? f.actual_time
+                            : f.scheduled_time)
+                      ) < u
+                    ) {
+                      m = !0;
+                      break;
+                    }
+                  }
+            }
+            return !d && !m;
           }),
           (e.prototype.GetFavoriteTeams = function () {
             var e = this;
@@ -23822,7 +24251,7 @@ object-assign
     "use strict";
     a.r(t),
       a.d(t, "g_App", function () {
-        return Ur;
+        return qr;
       });
     var n = a("mrSG"),
       r = a("i8i4"),
@@ -31057,7 +31486,7 @@ object-assign
           }),
           (t.prototype.render = function () {
             var e = this,
-              t = Ur.getPrizePool();
+              t = qr.getPrizePool();
             return o.a.createElement(
               "div",
               { className: je.a.BattlepassPage },
@@ -36485,7 +36914,7 @@ object-assign
                             top: document.body.scrollHeight,
                             behavior: "smooth",
                           }),
-                            Ur.setSelectedAbilityIndex(a);
+                            qr.setSelectedAbilityIndex(a);
                         },
                       },
                       o.a.createElement("img", {
@@ -36891,7 +37320,7 @@ object-assign
           n = a[0],
           r = a[1];
         if (!t) return null;
-        var s = Ur.getSelectedAbilityIndex(),
+        var s = qr.getSelectedAbilityIndex(),
           l =
             t.abilities.filter(function (e) {
               return e.ability_is_granted_by_shard;
@@ -37020,7 +37449,7 @@ object-assign
         d && !u.ability_is_granted_by_shard && (M = L),
           m && !u.ability_is_granted_by_scepter && (M = E);
         var T = function (e) {
-            Ur.setSelectedAbilityIndex(e), r(!0);
+            qr.setSelectedAbilityIndex(e), r(!0);
           },
           D = m && u.ability_has_scepter && !u.ability_is_granted_by_scepter,
           k = d && u.ability_has_shard && !u.ability_is_granted_by_shard,
@@ -37618,7 +38047,7 @@ object-assign
         return (
           Object(i.useEffect)(
             function () {
-              return Ur.setSelectedAbilityIndex(0);
+              return qr.setSelectedAbilityIndex(0);
             },
             [f.pathname]
           ),
@@ -38652,11 +39081,27 @@ object-assign
           v = Xa.a
             .Get()
             .GetTeamStanding(m.eSeason, m.ePhase, m.eRegion, m.eDivision, f),
-          y =
-            (null == d ? void 0 : d.has_started) &&
-            !(null == d ? void 0 : d.is_completed),
+          y = Xa.a.Get().IsLeagueNodeLive(i.eSeason, t, a),
           b = null == d ? void 0 : d.is_completed,
-          E =
+          E = Xa.a.Get().GetNodeGroupSeasonPhase(i.eSeason, t, a),
+          L = Xa.a.Get().GetSeasonPhaseString(E),
+          w =
+            (null == m ? void 0 : m.eNodeGroupType) == Ua.c.BRACKET_SINGLE ||
+            (null == m ? void 0 : m.eNodeGroupType) ==
+              Ua.c.BRACKET_DOUBLE_SEED_LOSER ||
+            (null == m ? void 0 : m.eNodeGroupType) ==
+              Ua.c.BRACKET_DOUBLE_ALL_WINNER ||
+            (null == m ? void 0 : m.eNodeGroupType) == Ua.c.GSL,
+          S = (null == m ? void 0 : m.eNodeGroupType) == Ua.c.ROUND_ROBIN,
+          M = m && m.eDivision != Ua.b.UNSET && m.eRegion != Ua.e.UNSET,
+          T = m && w && m.eDivision != Ua.b.UNSET,
+          D = !T && w,
+          k = !w && !M,
+          O = Xa.a.Get().GetRegionDivisionString(m.eRegion, m.eDivision, !0),
+          j = Xa.a
+            .Get()
+            .GetBracketNodeString(t, null == d ? void 0 : d.node_group_id, a),
+          I =
             0 != (null == d ? void 0 : d.actual_time)
               ? null == d
                 ? void 0
@@ -38664,30 +39109,31 @@ object-assign
               : null == d
               ? void 0
               : d.scheduled_time,
-          L = Xa.a.Get().GetRegionDivisionString(m.eRegion, m.eDivision, !0),
-          w = Xa.a.Get().GetSpoilerBlockEnabled(),
-          S = g
-            ? (null == g ? void 0 : g.wins) +
-              " - " +
-              (null == g ? void 0 : g.losses)
-            : "",
-          M = v
-            ? (null == v ? void 0 : v.wins) +
-              " - " +
-              (null == v ? void 0 : v.losses)
-            : "",
-          T = w ? "" : y || b ? "" + (null == d ? void 0 : d.team_1_wins) : S,
-          D = w ? "" : y || b ? "" + (null == d ? void 0 : d.team_2_wins) : M,
-          k = i.nLeagueID == t && i.nNodeID == a,
-          O = k ? 0 : t,
-          j = k ? 0 : a;
+          N = Xa.a.Get().GetSpoilerBlockEnabled(),
+          C =
+            g && S
+              ? (null == g ? void 0 : g.wins) +
+                " - " +
+                (null == g ? void 0 : g.losses)
+              : "",
+          A =
+            v && S
+              ? (null == v ? void 0 : v.wins) +
+                " - " +
+                (null == v ? void 0 : v.losses)
+              : "",
+          Y = N ? "" : y || b ? "" + (null == d ? void 0 : d.team_1_wins) : C,
+          x = N ? "" : y || b ? "" + (null == d ? void 0 : d.team_2_wins) : A,
+          P = i.nLeagueID == t && i.nNodeID == a,
+          R = P ? 0 : t,
+          H = P ? 0 : a;
         return o.a.createElement(
           l.b,
           {
-            to: u.a.dpc_home(n.strSeason, "" + O, "" + j),
+            to: u.a.dpc_home(n.strSeason, "" + R, "" + H),
             className: Object(ce.a)(
               tn.a.DPCMatchBannerNode,
-              k && tn.a.IsSelected,
+              P && tn.a.IsSelected,
               y && tn.a.IsInProgress,
               b && tn.a.IsCompleted
             ),
@@ -38698,13 +39144,37 @@ object-assign
             o.a.createElement(
               "div",
               { className: tn.a.Time },
-              o.a.createElement(Wa.a, { date: 1e3 * E, format: "DD MMM LT" })
+              o.a.createElement(Wa.a, { date: 1e3 * I, format: "DD MMM LT" })
             ),
             o.a.createElement(
               "div",
-              { className: tn.a.RegionDivision },
-              Object(_.a)(L),
-              b && (L.length > 0 ? " - " : "") + Object(_.a)("#dpc_match_final")
+              { className: tn.a.Description },
+              M &&
+                o.a.createElement(
+                  "div",
+                  { className: tn.a.DivisionElement },
+                  Object(_.a)(O)
+                ),
+              T &&
+                o.a.createElement(
+                  "div",
+                  { className: tn.a.DivisionElement },
+                  Object(_.a)(O),
+                  " - ",
+                  Object(_.a)(j)
+                ),
+              D &&
+                o.a.createElement(
+                  "div",
+                  { className: tn.a.DivisionElement },
+                  Object(_.a)(j)
+                ),
+              k &&
+                o.a.createElement(
+                  "div",
+                  { className: tn.a.DivisionElement },
+                  Object(_.a)(L)
+                )
             ),
             o.a.createElement(
               "div",
@@ -38718,19 +39188,19 @@ object-assign
             { className: tn.a.TeamsContainer },
             o.a.createElement(r, {
               nTeamID: h,
-              strTeamInfo: T,
+              strTeamInfo: Y,
               bWinner:
                 b &&
-                !w &&
+                !N &&
                 (null == d ? void 0 : d.team_1_wins) >
                   (null == d ? void 0 : d.team_2_wins),
             }),
             o.a.createElement(r, {
               nTeamID: f,
-              strTeamInfo: D,
+              strTeamInfo: x,
               bWinner:
                 b &&
-                !w &&
+                !N &&
                 (null == d ? void 0 : d.team_2_wins) >
                   (null == d ? void 0 : d.team_1_wins),
             })
@@ -39043,7 +39513,7 @@ object-assign
           n = e.children;
         Object(c.g)();
         return (
-          t.eSeason != Ua.e.INVALID && Xa.a.Get().CacheDPCLeagueData(t.eSeason),
+          t.eSeason != Ua.f.INVALID && Xa.a.Get().CacheDPCLeagueData(t.eSeason),
           o.a.createElement(
             "div",
             { className: Object(ce.a)($a.a.DPCRoot, a) },
@@ -39155,34 +39625,56 @@ object-assign
           c = s && !n ? s.color_primary + "33" : "#000",
           u = 0;
         switch (null == t ? void 0 : t.node_type) {
-          case Ua.c.BEST_OF_ONE:
+          case Ua.d.BEST_OF_ONE:
             u = 1;
             break;
-          case Ua.c.BEST_OF_TWO:
-          case Ua.c.BEST_OF_THREE:
+          case Ua.d.BEST_OF_TWO:
+          case Ua.d.BEST_OF_THREE:
             u = 2;
             break;
-          case Ua.c.BEST_OF_FIVE:
+          case Ua.d.BEST_OF_FIVE:
             u = 3;
         }
-        var d = Xa.a.Get().GetRegionString(a.eRegion),
-          m = Xa.a.Get().GetDivisionString(a.eDivision),
+        var d = Xa.a
+            .Get()
+            .GetNodeGroupSeasonPhase(e.eSeason, e.nLeagueID, e.nNodeID),
+          m = Xa.a.Get().GetSeasonPhaseString(d),
           p =
+            (null == a ? void 0 : a.eNodeGroupType) == Ua.c.BRACKET_SINGLE ||
+            (null == a ? void 0 : a.eNodeGroupType) ==
+              Ua.c.BRACKET_DOUBLE_SEED_LOSER ||
+            (null == a ? void 0 : a.eNodeGroupType) ==
+              Ua.c.BRACKET_DOUBLE_ALL_WINNER ||
+            (null == a ? void 0 : a.eNodeGroupType) == Ua.c.GSL,
+          h = (null == a ? void 0 : a.eNodeGroupType) == Ua.c.ROUND_ROBIN,
+          f = a && a.eDivision != Ua.b.UNSET && a.eRegion != Ua.e.UNSET,
+          g = a && p && a.eDivision != Ua.b.UNSET,
+          v = !g && p,
+          y = !p && !f,
+          b = Xa.a
+            .Get()
+            .GetBracketNodeString(
+              e.nLeagueID,
+              null == t ? void 0 : t.node_group_id,
+              e.nNodeID,
+              !0
+            ),
+          E = Xa.a.Get().GetRegionString(a.eRegion),
+          L = Xa.a.Get().GetDivisionString(a.eDivision),
+          w =
             (null == t ? void 0 : t.team_1_wins) +
             (null == t ? void 0 : t.team_2_wins) +
             1,
-          h = !(null == t ? void 0 : t.has_started),
-          f =
-            (null == t ? void 0 : t.has_started) &&
-            !(null == t ? void 0 : t.is_completed),
-          g = null == t ? void 0 : t.is_completed;
+          S = !(null == t ? void 0 : t.has_started),
+          M = Xa.a.Get().IsLeagueNodeLive(e.eSeason, e.nLeagueID, e.nNodeID),
+          T = null == t ? void 0 : t.is_completed;
         return o.a.createElement(
           "div",
           { className: Ba.a.DPCSeriesDetailsHeader },
           o.a.createElement(
             "div",
             {
-              className: Object(ce.a)(Ba.a.TopBar, !g && Ba.a.Collapse),
+              className: Object(ce.a)(Ba.a.TopBar, !T && Ba.a.Collapse),
               style: {
                 background: "linear-gradient( to right, " + l + ", " + c + " )",
               },
@@ -39190,7 +39682,7 @@ object-assign
             o.a.createElement(
               "div",
               { className: Ba.a.Label },
-              g &&
+              T &&
                 (n || r) &&
                 Object(_.a)(
                   "#dpc_series_winner_team",
@@ -39202,7 +39694,7 @@ object-assign
                     ? void 0
                     : s.name
                 ),
-              g && !n && !r && Object(_.a)("#dpc_series_draw")
+              T && !n && !r && Object(_.a)("#dpc_series_draw")
             )
           ),
           o.a.createElement(
@@ -39217,42 +39709,61 @@ object-assign
                 bWinner: n,
                 nWins: null == t ? void 0 : t.team_1_wins,
                 nPossibleWins: u,
+                bShowRecord: h,
               })
             ),
             o.a.createElement(
               "div",
               { className: Ba.a.CenterSection },
-              f &&
+              M &&
                 o.a.createElement(
                   "div",
                   { className: Ba.a.Game },
-                  Object(_.a)("#dpc_game_number", p)
+                  Object(_.a)("#dpc_game_number", w)
                 ),
-              (null == d ? void 0 : d.length) > 0 &&
+              f &&
                 o.a.createElement(
                   "div",
                   { className: Ba.a.Region },
-                  Object(_.a)(d)
+                  Object(_.a)(E)
                 ),
-              (null == m ? void 0 : m.length) > 0 &&
+              f &&
                 o.a.createElement(
                   "div",
                   { className: Ba.a.Division },
+                  Object(_.a)(L)
+                ),
+              g &&
+                o.a.createElement(
+                  "div",
+                  { className: Ba.a.Region },
+                  Object(_.a)(E)
+                ),
+              (g || v) &&
+                o.a.createElement(
+                  "div",
+                  { className: Ba.a.Region },
+                  Object(_.a)(b)
+                ),
+              y &&
+                o.a.createElement(
+                  "div",
+                  { className: Ba.a.Region },
                   Object(_.a)(m)
                 ),
-              h &&
+              S &&
                 o.a.createElement(Wa.a, {
                   className: Ba.a.Timestamp,
                   date: 1e3 * (null == t ? void 0 : t.scheduled_time),
                   format: "MMM DD LT",
                 }),
-              g &&
+              T &&
                 o.a.createElement(Wa.a, {
                   className: Ba.a.Timestamp,
                   date: 1e3 * (null == t ? void 0 : t.actual_time),
                   format: "MMM DD LT",
                 }),
-              f &&
+              M &&
                 o.a.createElement(
                   "div",
                   { className: Object(ce.a)(Ba.a.LiveBanner) },
@@ -39269,6 +39780,7 @@ object-assign
                 bWinner: r,
                 nWins: null == t ? void 0 : t.team_2_wins,
                 nPossibleWins: u,
+                bShowRecord: h,
               })
             )
           )
@@ -39318,14 +39830,15 @@ object-assign
           n = e.bWinner,
           r = e.nWins,
           i = e.nPossibleWins,
-          s = Object(c.i)(),
-          d = bn(),
-          m = Xa.a.Get().GetLeagueNodeInfo(d.nLeagueID, d.nNodeID),
-          h = Xa.a.Get().GetTeamNames(t),
-          f = Xa.a
+          s = e.bShowRecord,
+          d = Object(c.i)(),
+          m = bn(),
+          h = Xa.a.Get().GetLeagueNodeInfo(m.nLeagueID, m.nNodeID),
+          f = Xa.a.Get().GetTeamNames(t),
+          g = Xa.a
             .Get()
-            .GetTeamStanding(d.eSeason, m.ePhase, m.eRegion, m.eDivision, t),
-          g = f ? f.wins + " - " + f.losses : "";
+            .GetTeamStanding(m.eSeason, h.ePhase, h.eRegion, h.eDivision, t),
+          v = g ? g.wins + " - " + g.losses : "";
         return o.a.createElement(
           "div",
           {
@@ -39345,9 +39858,9 @@ object-assign
               o.a.createElement(
                 "div",
                 { className: Ba.a.TeamName },
-                null == h ? void 0 : h.name
+                null == f ? void 0 : f.name
               ),
-              o.a.createElement("div", { className: Ba.a.Record }, g)
+              s && o.a.createElement("div", { className: Ba.a.Record }, v)
             ),
             o.a.createElement("div", {
               className: Ba.a.TeamLogo,
@@ -39388,7 +39901,7 @@ object-assign
           ),
           o.a.createElement(
             l.b,
-            { to: u.a.dpc_teams(s.strSeason), className: Ba.a.TeamLinkSection },
+            { to: u.a.dpc_teams(d.strSeason), className: Ba.a.TeamLinkSection },
             o.a.createElement(
               "div",
               { className: Ba.a.TeamLink },
@@ -39402,16 +39915,16 @@ object-assign
           t = Xa.a.Get().GetLeagueNode(e.nLeagueID, e.nNodeID);
         if (Xa.a.Get().GetSpoilerBlockEnabled())
           switch (null == t ? void 0 : t.node_type) {
-            case Ua.c.BEST_OF_ONE:
+            case Ua.d.BEST_OF_ONE:
               1;
               break;
-            case Ua.c.BEST_OF_TWO:
+            case Ua.d.BEST_OF_TWO:
               2;
               break;
-            case Ua.c.BEST_OF_THREE:
+            case Ua.d.BEST_OF_THREE:
               3;
               break;
-            case Ua.c.BEST_OF_FIVE:
+            case Ua.d.BEST_OF_FIVE:
               5;
           }
         else
@@ -39597,7 +40110,7 @@ object-assign
             (null == a ? void 0 : a.matches.length) > r ? a.matches[r] : void 0,
           s = i ? Xa.a.Get().GetMatchData(t.nLeagueID, i.match_id) : void 0,
           d =
-            (null == s ? void 0 : s.match_outcome) == Ua.h.RADIANT_VICTORY
+            (null == s ? void 0 : s.match_outcome) == Ua.i.RADIANT_VICTORY
               ? null == s
                 ? void 0
                 : s.tourney.radiant_team_id
@@ -40054,8 +40567,8 @@ object-assign
           p = (null == d ? void 0 : d.tourney.radiant_team_id) == a,
           h =
             (p &&
-              (null == d ? void 0 : d.match_outcome) == Ua.h.RADIANT_VICTORY) ||
-            (!p && (null == d ? void 0 : d.match_outcome) == Ua.h.DIRE_VICTORY),
+              (null == d ? void 0 : d.match_outcome) == Ua.i.RADIANT_VICTORY) ||
+            (!p && (null == d ? void 0 : d.match_outcome) == Ua.i.DIRE_VICTORY),
           f = d ? (p ? "#radiant" : "#dire") : "",
           g = [];
         return (
@@ -40328,20 +40841,20 @@ object-assign
           l = Xa.a.Get().GetDefaultRegion(),
           c = [];
         switch (l) {
-          case Ua.d.NA:
-          case Ua.d.WEU:
+          case Ua.e.NA:
+          case Ua.e.WEU:
             c.push.apply(c, [0, 8, 6, 5, 11]);
             break;
-          case Ua.d.SA:
+          case Ua.e.SA:
             c.push.apply(c, [11, 5, 0, 8, 6]);
             break;
-          case Ua.d.EEU:
+          case Ua.e.EEU:
             c.push.apply(c, [8, 0, 6, 5, 11]);
             break;
-          case Ua.d.CN:
+          case Ua.e.CN:
             c.push.apply(c, [6, 0, 8, 5, 11]);
             break;
-          case Ua.d.SEA:
+          case Ua.e.SEA:
             c.push.apply(c, [0, 6, 8, 5, 11]);
         }
         var u,
@@ -40476,7 +40989,8 @@ object-assign
       }),
       Gn = a("Kcip"),
       Bn = a.n(Gn),
-      Un = Object(s.a)(function (e) {
+      Un = a("HtA2"),
+      Fn = Object(s.a)(function (e) {
         var t = e.ePhase,
           a = e.eDivision,
           n = [];
@@ -40490,46 +41004,46 @@ object-assign
           o.a.createElement(
             "div",
             { className: Bn.a.DPCStandingsDivision },
-            o.a.createElement(Fn, {
+            o.a.createElement(Wn, {
               ePhase: t,
-              eRegion: Ua.d.NA,
+              eRegion: Ua.e.NA,
               eDivision: a,
               arrHighlights: n,
             }),
-            o.a.createElement(Fn, {
+            o.a.createElement(Wn, {
               ePhase: t,
-              eRegion: Ua.d.SA,
+              eRegion: Ua.e.SA,
               eDivision: a,
               arrHighlights: n,
             }),
-            o.a.createElement(Fn, {
+            o.a.createElement(Wn, {
               ePhase: t,
-              eRegion: Ua.d.WEU,
+              eRegion: Ua.e.WEU,
               eDivision: a,
               arrHighlights: n,
             }),
-            o.a.createElement(Fn, {
+            o.a.createElement(Wn, {
               ePhase: t,
-              eRegion: Ua.d.EEU,
+              eRegion: Ua.e.EEU,
               eDivision: a,
               arrHighlights: n,
             }),
-            o.a.createElement(Fn, {
+            o.a.createElement(Wn, {
               ePhase: t,
-              eRegion: Ua.d.CN,
+              eRegion: Ua.e.CN,
               eDivision: a,
               arrHighlights: n,
             }),
-            o.a.createElement(Fn, {
+            o.a.createElement(Wn, {
               ePhase: t,
-              eRegion: Ua.d.SEA,
+              eRegion: Ua.e.SEA,
               eDivision: a,
               arrHighlights: n,
             })
           )
         );
       }),
-      Fn = Object(s.a)(function (e) {
+      Wn = Object(s.a)(function (e) {
         var t,
           a = e.ePhase,
           n = e.eRegion,
@@ -40554,12 +41068,12 @@ object-assign
           }),
           c = "";
         switch (Xa.a.Get().GetSeasonType(s.eSeason)) {
-          case Ua.g.LEAGUE:
+          case Ua.h.LEAGUE:
             c = Xa.a.Get().GetRegionString(n);
             break;
-          case Ua.g.MAJOR:
-          case Ua.g.INTERNATIONAL:
-          case Ua.g.INTERNATIONAL_QUALIFIERS:
+          case Ua.h.MAJOR:
+          case Ua.h.INTERNATIONAL:
+          case Ua.h.INTERNATIONAL_QUALIFIERS:
             c = Xa.a.Get().GetSeasonPhaseString(a);
         }
         return o.a.createElement(
@@ -40574,7 +41088,7 @@ object-assign
                   : i.find(function (e) {
                       return t.standing >= e.nMin && t.standing <= e.nMax;
                     });
-            return o.a.createElement(Wn, {
+            return o.a.createElement(zn, {
               key: r + "_" + n + "_" + e,
               ePhase: a,
               eRegion: n,
@@ -40585,7 +41099,7 @@ object-assign
           })
         );
       }),
-      Wn = Object(s.a)(function (e) {
+      zn = Object(s.a)(function (e) {
         var t = e.ePhase,
           a = e.eRegion,
           n = e.eDivision,
@@ -40618,18 +41132,188 @@ object-assign
           o.a.createElement("div", { className: Bn.a.Record }, u)
         );
       }),
-      zn = Object(s.a)(function (e) {
-        e.ePhase, e.eRegion, e.eDivision, bn();
-        return o.a.createElement("div", {
-          className: Object(ce.a)(Bn.a.DPCStandingsBracket),
-        });
+      Vn = Object(s.a)(function (e) {
+        var t = e.nLeagueID,
+          a = e.nNodeID,
+          n = e.strNodeTitle,
+          r = Xa.a.Get().GetLeagueNode(t, a),
+          i = Xa.a.Get().GetTeamNames(null == r ? void 0 : r.team_id_1),
+          s = Xa.a.Get().GetTeamNames(null == r ? void 0 : r.team_id_2),
+          l =
+            (null == r ? void 0 : r.is_completed) &&
+            (null == r ? void 0 : r.team_1_wins) >
+              (null == r ? void 0 : r.team_2_wins),
+          c =
+            (null == r ? void 0 : r.is_completed) &&
+            (null == r ? void 0 : r.team_2_wins) >
+              (null == r ? void 0 : r.team_1_wins);
+        return o.a.createElement(
+          "div",
+          { className: Bn.a.BracketNode, style: { width: Un.e, height: Un.c } },
+          o.a.createElement(
+            "div",
+            { className: Bn.a.NodeHeader },
+            Object(_.a)(n)
+          ),
+          o.a.createElement(
+            "div",
+            { className: Bn.a.Teams },
+            o.a.createElement(
+              "div",
+              { className: Object(ce.a)(Bn.a.Team, l && Bn.a.Winner) },
+              o.a.createElement(wn, {
+                nTeamID: null == r ? void 0 : r.team_id_1,
+                className: Bn.a.TeamLogo,
+              }),
+              o.a.createElement(
+                "div",
+                { className: Bn.a.TeamName },
+                null == i ? void 0 : i.name
+              ),
+              o.a.createElement(
+                "div",
+                { className: Bn.a.Score },
+                null == r ? void 0 : r.team_1_wins
+              )
+            ),
+            o.a.createElement(
+              "div",
+              { className: Object(ce.a)(Bn.a.Team, c && Bn.a.Winner) },
+              o.a.createElement(wn, {
+                nTeamID: null == r ? void 0 : r.team_id_2,
+                className: Bn.a.TeamLogo,
+              }),
+              o.a.createElement(
+                "div",
+                { className: Bn.a.TeamName },
+                null == s ? void 0 : s.name
+              ),
+              o.a.createElement(
+                "div",
+                { className: Bn.a.Score },
+                null == r ? void 0 : r.team_2_wins
+              )
+            )
+          )
+        );
       }),
-      Vn = a("56qU"),
-      qn = a.n(Vn);
+      qn = function () {
+        return o.a.createElement(
+          "div",
+          { className: Bn.a.BracketConnectorCombine },
+          o.a.createElement(
+            "div",
+            { className: Bn.a.Segment1, style: { width: Un.d / 2 } },
+            o.a.createElement("div", {
+              className: Bn.a.ConnectorLineTop,
+              style: { top: Un.c / 2 },
+            }),
+            o.a.createElement("div", {
+              className: Bn.a.ConnectorLineBottom,
+              style: { bottom: Un.c / 2 },
+            })
+          ),
+          o.a.createElement("div", {
+            className: Bn.a.ConnectorLineVertical,
+            style: {
+              height: "calc( 100% - " + Un.c + "px )",
+              top: Un.c / 2,
+              left: Un.d / 2,
+            },
+          }),
+          o.a.createElement(
+            "div",
+            { className: Bn.a.Segment3 },
+            o.a.createElement("div", { className: Bn.a.ConnectorLineCombined })
+          )
+        );
+      },
+      Jn = function () {
+        return o.a.createElement(
+          "div",
+          { className: Bn.a.BracketConnectorStraight },
+          o.a.createElement("div", {
+            className: Bn.a.ConnectorLine,
+            style: { top: Un.c / 2 },
+          })
+        );
+      },
+      Kn = Object(s.a)(function (e) {
+        var t = e.nLeagueID,
+          a = e.nNodeGroupID,
+          n = Xa.a.Get().GetLeagueNodeGroup(t, a);
+        return 16 !=
+          Math.pow(
+            2,
+            Math.ceil(Math.log(null == n ? void 0 : n.team_count) / Math.log(2))
+          ) ||
+          (null == n ? void 0 : n.node_group_type) !=
+            Ua.c.BRACKET_DOUBLE_SEED_LOSER
+          ? null
+          : o.a.createElement(
+              "div",
+              { className: Bn.a.BracketContainer },
+              null == n
+                ? void 0
+                : n.nodes.map(function (e, a) {
+                    return o.a.createElement(
+                      "div",
+                      {
+                        key: t + "_" + e.node_id,
+                        className: Bn.a.BracketNodeContainer,
+                        style: {
+                          left: Un.b[a].nPosX,
+                          top: Un.b[a].nPosY,
+                          width: Un.e,
+                          height: Un.c,
+                        },
+                      },
+                      o.a.createElement(Vn, {
+                        nLeagueID: t,
+                        nNodeID: e.node_id,
+                        strNodeTitle: Un.b[a].strLabel,
+                      })
+                    );
+                  }),
+              Un.a.map(function (e, t) {
+                return o.a.createElement(
+                  "div",
+                  {
+                    key: "connector_" + t,
+                    className: Bn.a.BracketConnectorContainer,
+                    style: {
+                      left: e.nPosX,
+                      top: e.nPosY,
+                      width: e.nWidth,
+                      height: e.nHeight,
+                    },
+                  },
+                  e.bStraight && o.a.createElement(Jn, null),
+                  !e.bStraight && o.a.createElement(qn, null)
+                );
+              })
+            );
+      }),
+      Qn = Object(s.a)(function (e) {
+        var t = e.ePhase,
+          a = e.eRegion,
+          n = e.eDivision,
+          r = bn(),
+          i = Xa.a.Get().GetSeasonPhaseNodeGroupID(r.eSeason, t, n, a),
+          s = i.nLeagueID,
+          l = i.nNodeGroupID;
+        return o.a.createElement(
+          "div",
+          { className: Object(ce.a)(Bn.a.DPCStandingsBracket) },
+          o.a.createElement(Kn, { nLeagueID: s, nNodeGroupID: l })
+        );
+      }),
+      Xn = a("56qU"),
+      Zn = a.n(Xn);
     !(function (e) {
       (e[(e.POPULAR = 1)] = "POPULAR"), (e[(e.FAVORITE = 2)] = "FAVORITE");
     })(Mn || (Mn = {}));
-    var Jn = Object(s.a)(function () {
+    var $n = Object(s.a)(function () {
         var e = Xa.a.Get().GetFavoriteTeams(),
           t = Xa.a.Get().GetPopularTeams(),
           a = Object(i.useState)(Mn.POPULAR),
@@ -40643,7 +41327,7 @@ object-assign
         return o.a.createElement(
           "div",
           {
-            className: qn.a.DPCTeamList,
+            className: Zn.a.DPCTeamList,
             style: {
               backgroundImage:
                 "url( " + p.a.IMG_URL + "backgrounds/featured.jpg )",
@@ -40651,10 +41335,10 @@ object-assign
           },
           o.a.createElement(
             "div",
-            { className: qn.a.Header },
+            { className: Zn.a.Header },
             o.a.createElement(
               "div",
-              { className: qn.a.Title },
+              { className: Zn.a.Title },
               Object(_.a)("#dpc_header_teams")
             ),
             o.a.createElement(qa, {
@@ -40665,11 +41349,11 @@ object-assign
           ),
           o.a.createElement(
             "div",
-            { className: qn.a.TeamList },
+            { className: Zn.a.TeamList },
             null == l
               ? void 0
               : l.map(function (e) {
-                  return o.a.createElement(Kn, {
+                  return o.a.createElement(er, {
                     key: "Team_" + e,
                     nTeamID: e,
                   });
@@ -40677,7 +41361,7 @@ object-assign
           )
         );
       }),
-      Kn = Object(s.a)(function (e) {
+      er = Object(s.a)(function (e) {
         var t = e.nTeamID,
           a = Object(c.i)(),
           n = bn();
@@ -40754,34 +41438,34 @@ object-assign
               : w.team_1_wins;
         return o.a.createElement(
           "div",
-          { className: qn.a.TeamEntry },
-          o.a.createElement(wn, { className: qn.a.TeamLogo, nTeamID: t }),
+          { className: Zn.a.TeamEntry },
+          o.a.createElement(wn, { className: Zn.a.TeamLogo, nTeamID: t }),
           o.a.createElement(
             "div",
-            { className: qn.a.MidSection },
+            { className: Zn.a.MidSection },
             o.a.createElement(
               "div",
-              { className: qn.a.TeamInfo },
+              { className: Zn.a.TeamInfo },
               o.a.createElement(
                 "div",
-                { className: qn.a.TeamName },
+                { className: Zn.a.TeamName },
                 null == r ? void 0 : r.name
               ),
-              o.a.createElement("div", { className: qn.a.Record }, p)
+              o.a.createElement("div", { className: Zn.a.Record }, p)
             ),
             (null == h ? void 0 : h.length) > 0 &&
-              o.a.createElement("div", { className: qn.a.Separator }),
+              o.a.createElement("div", { className: Zn.a.Separator }),
             (null == h ? void 0 : h.length) > 0 &&
               o.a.createElement(
                 "div",
-                { className: qn.a.RegionDivision },
+                { className: Zn.a.RegionDivision },
                 Object(_.a)(h)
               )
           ),
-          o.a.createElement("div", { className: qn.a.VerticalSeparator }),
+          o.a.createElement("div", { className: Zn.a.VerticalSeparator }),
           o.a.createElement(
             "div",
-            { className: qn.a.RightSection },
+            { className: Zn.a.RightSection },
             v &&
               o.a.createElement(
                 l.b,
@@ -40792,28 +41476,28 @@ object-assign
                     "" + (null == f ? void 0 : f.nNodeID),
                     Object(Ha.o)(0, Ha.i.SERIES)
                   ),
-                  className: qn.a.Next,
+                  className: Zn.a.Next,
                 },
                 o.a.createElement(
                   "div",
-                  { className: qn.a.NextMatch },
+                  { className: Zn.a.NextMatch },
                   Object(_.a)("#dpc_next_match", L)
                 ),
                 o.a.createElement(
                   "div",
-                  { className: qn.a.NextTeam },
+                  { className: Zn.a.NextTeam },
                   o.a.createElement(wn, {
-                    className: qn.a.TeamLogo,
+                    className: Zn.a.TeamLogo,
                     nTeamID: y,
                   }),
                   o.a.createElement(
                     "div",
-                    { className: qn.a.TeamName },
+                    { className: Zn.a.TeamName },
                     Object(_.a)(E)
                   )
                 )
               ),
-            v && w && o.a.createElement("div", { className: qn.a.Separator }),
+            v && w && o.a.createElement("div", { className: Zn.a.Separator }),
             w &&
               o.a.createElement(
                 l.b,
@@ -40824,11 +41508,11 @@ object-assign
                     "" + (null == g ? void 0 : g.nNodeID),
                     Object(Ha.o)(0, Ha.i.SERIES)
                   ),
-                  className: qn.a.Last,
+                  className: Zn.a.Last,
                 },
                 o.a.createElement(
                   "div",
-                  { className: qn.a.LastMatch },
+                  { className: Zn.a.LastMatch },
                   Object(_.a)("#last_match"),
                   !D &&
                     Object(_.a)(
@@ -40840,25 +41524,25 @@ object-assign
                 ),
                 o.a.createElement(
                   "div",
-                  { className: qn.a.PrevTeam },
+                  { className: Zn.a.PrevTeam },
                   o.a.createElement(wn, {
-                    className: qn.a.TeamLogo,
+                    className: Zn.a.TeamLogo,
                     nTeamID: S,
                   }),
                   o.a.createElement(
                     "div",
-                    { className: qn.a.TeamName },
+                    { className: Zn.a.TeamName },
                     Object(_.a)(T)
                   )
                 )
               )
           ),
-          o.a.createElement("div", { className: qn.a.FavoriteStar })
+          o.a.createElement("div", { className: Zn.a.FavoriteStar })
         );
       }),
-      Qn = a("yUx/"),
-      Xn = a.n(Qn),
-      Zn = Object(s.a)(function (e) {
+      tr = a("yUx/"),
+      ar = a.n(tr),
+      nr = Object(s.a)(function (e) {
         var t = e.bIncludeInProgress,
           a = bn(),
           n = Xa.a.Get().GetNextLeagueNode(a.eSeason, null, null, t),
@@ -40874,15 +41558,15 @@ object-assign
           .toString();
         return o.a.createElement(
           "div",
-          { className: Xn.a.DPCNextBanner },
+          { className: ar.a.DPCNextBanner },
           o.a.createElement(
             "div",
-            { className: Xn.a.Background },
+            { className: ar.a.Background },
             o.a.createElement(
               "div",
-              { className: Xn.a.Teams },
+              { className: ar.a.Teams },
               o.a.createElement("div", {
-                className: Object(ce.a)(Xn.a.TeamLogo, s && Xn.a.Visible),
+                className: Object(ce.a)(ar.a.TeamLogo, s && ar.a.Visible),
                 style: {
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
@@ -40895,7 +41579,7 @@ object-assign
                 },
               }),
               o.a.createElement("div", {
-                className: Object(ce.a)(Xn.a.TeamLogo, s && Xn.a.Visible),
+                className: Object(ce.a)(ar.a.TeamLogo, s && ar.a.Visible),
                 style: {
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
@@ -40908,19 +41592,19 @@ object-assign
                 },
               })
             ),
-            o.a.createElement("div", { className: Xn.a.Gradient })
+            o.a.createElement("div", { className: ar.a.Gradient })
           ),
           o.a.createElement(
             "div",
-            { className: Xn.a.LeftLabels },
+            { className: ar.a.LeftLabels },
             o.a.createElement(
               "div",
-              { className: Xn.a.ComingUp },
+              { className: ar.a.ComingUp },
               Object(_.a)("#dpc_coming_up")
             ),
             o.a.createElement(
               "div",
-              { className: Object(ce.a)(Xn.a.Teams, s && Xn.a.Visible) },
+              { className: Object(ce.a)(ar.a.Teams, s && ar.a.Visible) },
               Object(_.a)(
                 "#dpc_team_versus",
                 null == c ? void 0 : c.name,
@@ -40929,27 +41613,27 @@ object-assign
             ),
             o.a.createElement(
               "div",
-              { className: Object(ce.a)(Xn.a.WatchLive, s && Xn.a.Visible) },
+              { className: Object(ce.a)(ar.a.WatchLive, s && ar.a.Visible) },
               Object(_.a)("#dpc_watch_live", m)
             )
           ),
           o.a.createElement(
             l.b,
-            { to: u.a.dpc_schedule(), className: Xn.a.ScheduleButton },
+            { to: u.a.dpc_schedule(), className: ar.a.ScheduleButton },
             o.a.createElement(
               "div",
-              { className: Xn.a.Label },
+              { className: ar.a.Label },
               Object(_.a)("#dpc_view_schedule")
             )
           )
         );
       }),
-      $n = Object(s.a)(function () {
+      rr = Object(s.a)(function () {
         var e = bn(),
           t = Object(i.useState)(Ua.b.DIVISION_I),
           a = t[0],
           n = t[1];
-        if (Xa.a.Get().GetSeasonType(e.eSeason) != Ua.g.LEAGUE) return null;
+        if (Xa.a.Get().GetSeasonType(e.eSeason) != Ua.h.LEAGUE) return null;
         var r = [
           { value: Ua.b.DIVISION_I, strLabel: "#dpc_division_i" },
           { value: Ua.b.DIVISION_II, strLabel: "#dpc_division_ii" },
@@ -40977,10 +41661,10 @@ object-assign
               setOption: n,
             })
           ),
-          o.a.createElement(Un, { ePhase: Ua.f.OVERALL, eDivision: a })
+          o.a.createElement(Fn, { ePhase: Ua.g.OVERALL, eDivision: a })
         );
       }),
-      er = Object(s.a)(function () {
+      ir = Object(s.a)(function () {
         var e = Object(c.h)(),
           t = Object(c.i)(),
           a = Object(Ha.n)(t.strSeriesDisplay),
@@ -41038,69 +41722,69 @@ object-assign
           Ln,
           { matchContext: n, className: Ra.a.DPCHomePage },
           o.a.createElement(Tn, null),
-          o.a.createElement($n, null),
-          o.a.createElement(Zn, { bIncludeInProgress: !1 }),
-          o.a.createElement(Jn, null)
+          o.a.createElement(rr, null),
+          o.a.createElement(nr, { bIncludeInProgress: !1 }),
+          o.a.createElement($n, null)
         );
       }),
-      tr = a("iUDg"),
-      ar = a.n(tr),
-      nr = Object(s.a)(function () {
+      or = a("iUDg"),
+      sr = a.n(or),
+      lr = Object(s.a)(function () {
         var e = bn();
-        return Xa.a.Get().GetSeasonType(e.eSeason) != Ua.g.LEAGUE
+        return Xa.a.Get().GetSeasonType(e.eSeason) != Ua.h.LEAGUE
           ? null
           : o.a.createElement(
               "div",
-              { className: ar.a.DPCStandingsPageLeague },
+              { className: sr.a.DPCStandingsPageLeague },
               o.a.createElement(
                 "div",
-                { className: ar.a.DivisionHeader },
+                { className: sr.a.DivisionHeader },
                 Object(_.a)("#dpc_division_i")
               ),
-              o.a.createElement(Un, {
-                ePhase: Ua.f.OVERALL,
+              o.a.createElement(Fn, {
+                ePhase: Ua.g.OVERALL,
                 eDivision: Ua.b.DIVISION_I,
               }),
               o.a.createElement(
                 "div",
-                { className: ar.a.DivisionHeader },
+                { className: sr.a.DivisionHeader },
                 Object(_.a)("#dpc_division_ii")
               ),
-              o.a.createElement(Un, {
-                ePhase: Ua.f.OVERALL,
+              o.a.createElement(Fn, {
+                ePhase: Ua.g.OVERALL,
                 eDivision: Ua.b.DIVISION_II,
               })
             );
       }),
-      rr = Object(s.a)(function () {
+      cr = Object(s.a)(function () {
         var e = bn();
-        if (Xa.a.Get().GetSeasonType(e.eSeason) != Ua.g.MAJOR) return null;
+        if (Xa.a.Get().GetSeasonType(e.eSeason) != Ua.h.MAJOR) return null;
         return o.a.createElement(
           "div",
-          { className: ar.a.DPCStandingsPageMajor },
-          o.a.createElement(Fn, {
-            ePhase: Ua.f.WILD_CARD,
-            eRegion: Ua.d.UNSET,
+          { className: sr.a.DPCStandingsPageMajor },
+          o.a.createElement(Wn, {
+            ePhase: Ua.g.WILD_CARD,
+            eRegion: Ua.e.UNSET,
             eDivision: Ua.b.UNSET,
             arrHighlights: [{ nMin: 1, nMax: 2, strColor: "#213823" }],
           }),
-          o.a.createElement(Fn, {
-            ePhase: Ua.f.GROUP_STAGE,
-            eRegion: Ua.d.UNSET,
+          o.a.createElement(Wn, {
+            ePhase: Ua.g.GROUP_STAGE,
+            eRegion: Ua.e.UNSET,
             eDivision: Ua.b.UNSET,
             arrHighlights: [
               { nMin: 1, nMax: 2, strColor: "#213823" },
               { nMin: 7, nMax: 8, strColor: "#382121" },
             ],
           }),
-          o.a.createElement(zn, {
-            ePhase: Ua.f.PLAYOFF,
-            eRegion: Ua.d.UNSET,
+          o.a.createElement(Qn, {
+            ePhase: Ua.g.PLAYOFF,
+            eRegion: Ua.e.UNSET,
             eDivision: Ua.b.UNSET,
           })
         );
       }),
-      ir = Object(s.a)(function () {
+      ur = Object(s.a)(function () {
         var e = Object(c.i)();
         if (!e.strSeason || !e.strRegion || !e.strDivision)
           return o.a.createElement(c.a, {
@@ -41120,25 +41804,25 @@ object-assign
         Xa.a.Get().GetSeasonType(t.eSeason);
         return o.a.createElement(
           Ln,
-          { matchContext: t, className: ar.a.DPCStandingsPage },
-          o.a.createElement(nr, null),
-          o.a.createElement(rr, null)
+          { matchContext: t, className: sr.a.DPCStandingsPage },
+          o.a.createElement(lr, null),
+          o.a.createElement(cr, null)
         );
       }),
-      or = a("tjlA");
-    var sr =
-        or.Buffer.from &&
-        or.Buffer.alloc &&
-        or.Buffer.allocUnsafe &&
-        or.Buffer.allocUnsafeSlow
-          ? or.Buffer.from
-          : (e) => new or.Buffer(e),
-      lr = function (e, t) {
+      dr = a("tjlA");
+    var mr =
+        dr.Buffer.from &&
+        dr.Buffer.alloc &&
+        dr.Buffer.allocUnsafe &&
+        dr.Buffer.allocUnsafeSlow
+          ? dr.Buffer.from
+          : (e) => new dr.Buffer(e),
+      pr = function (e, t) {
         const a = (e, a) => t(e, a) >>> 0;
         return (a.signed = t), (a.unsigned = a), (a.model = e), a;
       };
-    lr("crc1", function (e, t) {
-      or.Buffer.isBuffer(e) || (e = sr(e));
+    pr("crc1", function (e, t) {
+      dr.Buffer.isBuffer(e) || (e = mr(e));
       let a = ~~t,
         n = 0;
       for (let t = 0; t < e.length; t++) {
@@ -41146,7 +41830,7 @@ object-assign
       }
       return (a += n % 256), a % 256;
     });
-    let cr = [
+    let _r = [
       0,
       7,
       14,
@@ -41404,17 +42088,17 @@ object-assign
       244,
       243,
     ];
-    "undefined" != typeof Int32Array && (cr = new Int32Array(cr));
-    lr("crc-8", function (e, t) {
-      or.Buffer.isBuffer(e) || (e = sr(e));
+    "undefined" != typeof Int32Array && (_r = new Int32Array(_r));
+    pr("crc-8", function (e, t) {
+      dr.Buffer.isBuffer(e) || (e = mr(e));
       let a = ~~t;
       for (let t = 0; t < e.length; t++) {
         const n = e[t];
-        a = 255 & cr[255 & (a ^ n)];
+        a = 255 & _r[255 & (a ^ n)];
       }
       return a;
     });
-    let ur = [
+    let hr = [
       0,
       94,
       188,
@@ -41672,17 +42356,17 @@ object-assign
       107,
       53,
     ];
-    "undefined" != typeof Int32Array && (ur = new Int32Array(ur));
-    lr("dallas-1-wire", function (e, t) {
-      or.Buffer.isBuffer(e) || (e = sr(e));
+    "undefined" != typeof Int32Array && (hr = new Int32Array(hr));
+    pr("dallas-1-wire", function (e, t) {
+      dr.Buffer.isBuffer(e) || (e = mr(e));
       let a = ~~t;
       for (let t = 0; t < e.length; t++) {
         const n = e[t];
-        a = 255 & ur[255 & (a ^ n)];
+        a = 255 & hr[255 & (a ^ n)];
       }
       return a;
     });
-    let dr = [
+    let fr = [
       0,
       49345,
       49537,
@@ -41940,17 +42624,17 @@ object-assign
       32897,
       16448,
     ];
-    "undefined" != typeof Int32Array && (dr = new Int32Array(dr));
-    lr("crc-16", function (e, t) {
-      or.Buffer.isBuffer(e) || (e = sr(e));
+    "undefined" != typeof Int32Array && (fr = new Int32Array(fr));
+    pr("crc-16", function (e, t) {
+      dr.Buffer.isBuffer(e) || (e = mr(e));
       let a = ~~t;
       for (let t = 0; t < e.length; t++) {
         const n = e[t];
-        a = 65535 & (dr[255 & (a ^ n)] ^ (a >> 8));
+        a = 65535 & (fr[255 & (a ^ n)] ^ (a >> 8));
       }
       return a;
     });
-    let mr = [
+    let gr = [
       0,
       4129,
       8258,
@@ -42208,17 +42892,17 @@ object-assign
       3793,
       7920,
     ];
-    "undefined" != typeof Int32Array && (mr = new Int32Array(mr));
-    lr("ccitt", function (e, t) {
-      or.Buffer.isBuffer(e) || (e = sr(e));
+    "undefined" != typeof Int32Array && (gr = new Int32Array(gr));
+    pr("ccitt", function (e, t) {
+      dr.Buffer.isBuffer(e) || (e = mr(e));
       let a = void 0 !== t ? ~~t : 65535;
       for (let t = 0; t < e.length; t++) {
         const n = e[t];
-        a = 65535 & (mr[255 & ((a >> 8) ^ n)] ^ (a << 8));
+        a = 65535 & (gr[255 & ((a >> 8) ^ n)] ^ (a << 8));
       }
       return a;
     });
-    let pr = [
+    let vr = [
       0,
       49345,
       49537,
@@ -42476,18 +43160,18 @@ object-assign
       32897,
       16448,
     ];
-    "undefined" != typeof Int32Array && (pr = new Int32Array(pr));
-    lr("crc-16-modbus", function (e, t) {
-      or.Buffer.isBuffer(e) || (e = sr(e));
+    "undefined" != typeof Int32Array && (vr = new Int32Array(vr));
+    pr("crc-16-modbus", function (e, t) {
+      dr.Buffer.isBuffer(e) || (e = mr(e));
       let a = void 0 !== t ? ~~t : 65535;
       for (let t = 0; t < e.length; t++) {
         const n = e[t];
-        a = 65535 & (pr[255 & (a ^ n)] ^ (a >> 8));
+        a = 65535 & (vr[255 & (a ^ n)] ^ (a >> 8));
       }
       return a;
     });
-    lr("xmodem", function (e, t) {
-      or.Buffer.isBuffer(e) || (e = sr(e));
+    pr("xmodem", function (e, t) {
+      dr.Buffer.isBuffer(e) || (e = mr(e));
       let a = void 0 !== t ? ~~t : 0;
       for (let t = 0; t < e.length; t++) {
         let n = (a >>> 8) & 255;
@@ -42502,7 +43186,7 @@ object-assign
       }
       return a;
     });
-    let _r = [
+    let yr = [
       0,
       4489,
       8978,
@@ -42760,17 +43444,17 @@ object-assign
       7921,
       3960,
     ];
-    "undefined" != typeof Int32Array && (_r = new Int32Array(_r));
-    lr("kermit", function (e, t) {
-      or.Buffer.isBuffer(e) || (e = sr(e));
+    "undefined" != typeof Int32Array && (yr = new Int32Array(yr));
+    pr("kermit", function (e, t) {
+      dr.Buffer.isBuffer(e) || (e = mr(e));
       let a = void 0 !== t ? ~~t : 0;
       for (let t = 0; t < e.length; t++) {
         const n = e[t];
-        a = 65535 & (_r[255 & (a ^ n)] ^ (a >> 8));
+        a = 65535 & (yr[255 & (a ^ n)] ^ (a >> 8));
       }
       return a;
     });
-    let hr = [
+    let br = [
       0,
       8801531,
       9098509,
@@ -43028,17 +43712,17 @@ object-assign
       6015427,
       14517560,
     ];
-    "undefined" != typeof Int32Array && (hr = new Int32Array(hr));
-    lr("crc-24", function (e, t) {
-      or.Buffer.isBuffer(e) || (e = sr(e));
+    "undefined" != typeof Int32Array && (br = new Int32Array(br));
+    pr("crc-24", function (e, t) {
+      dr.Buffer.isBuffer(e) || (e = mr(e));
       let a = void 0 !== t ? ~~t : 11994318;
       for (let t = 0; t < e.length; t++) {
         const n = e[t];
-        a = 16777215 & (hr[255 & ((a >> 16) ^ n)] ^ (a << 8));
+        a = 16777215 & (br[255 & ((a >> 16) ^ n)] ^ (a << 8));
       }
       return a;
     });
-    let fr = [
+    let Er = [
       0,
       1996959894,
       3993919788,
@@ -43296,17 +43980,17 @@ object-assign
       1510334235,
       755167117,
     ];
-    "undefined" != typeof Int32Array && (fr = new Int32Array(fr));
-    var gr = lr("crc-32", function (e, t) {
-      or.Buffer.isBuffer(e) || (e = sr(e));
+    "undefined" != typeof Int32Array && (Er = new Int32Array(Er));
+    var Lr = pr("crc-32", function (e, t) {
+      dr.Buffer.isBuffer(e) || (e = mr(e));
       let a = 0 === t ? 0 : -1 ^ ~~t;
       for (let t = 0; t < e.length; t++) {
         const n = e[t];
-        a = fr[255 & (a ^ n)] ^ (a >>> 8);
+        a = Er[255 & (a ^ n)] ^ (a >>> 8);
       }
       return -1 ^ a;
     });
-    let vr = [
+    let wr = [
       0,
       1996959894,
       3993919788,
@@ -43564,19 +44248,19 @@ object-assign
       1510334235,
       755167117,
     ];
-    "undefined" != typeof Int32Array && (vr = new Int32Array(vr));
-    lr("jam", function (e, t = -1) {
-      or.Buffer.isBuffer(e) || (e = sr(e));
+    "undefined" != typeof Int32Array && (wr = new Int32Array(wr));
+    pr("jam", function (e, t = -1) {
+      dr.Buffer.isBuffer(e) || (e = mr(e));
       let a = 0 === t ? 0 : ~~t;
       for (let t = 0; t < e.length; t++) {
         const n = e[t];
-        a = vr[255 & (a ^ n)] ^ (a >>> 8);
+        a = wr[255 & (a ^ n)] ^ (a >>> 8);
       }
       return a;
     });
-    var yr = a("X40S"),
-      br = a.n(yr),
-      Er = Object(s.a)(function (e) {
+    var Sr = a("X40S"),
+      Mr = a.n(Sr),
+      Tr = Object(s.a)(function (e) {
         var t = e.nLeagueID,
           a = e.nSeriesGame,
           n = e.strMatchID,
@@ -43591,22 +44275,22 @@ object-assign
             : "";
         return o.a.createElement(
           "div",
-          { className: br.a.DPCScheduleEntryMatch },
+          { className: Mr.a.DPCScheduleEntryMatch },
           o.a.createElement(
             "div",
-            { className: br.a.LeftSection },
+            { className: Mr.a.LeftSection },
             o.a.createElement(
               "div",
-              { className: br.a.GameLabel },
+              { className: Mr.a.GameLabel },
               Object(_.a)("#dpc_game_" + a)
             )
           ),
           o.a.createElement(
             "div",
-            { className: br.a.CenterSection },
+            { className: Mr.a.CenterSection },
             o.a.createElement(
               "div",
-              { className: br.a.HeroList },
+              { className: Mr.a.HeroList },
               null == s
                 ? void 0
                 : s.players.map(function (e) {
@@ -43630,7 +44314,7 @@ object-assign
                       (l && e.player_slot >= 128)
                       ? o.a.createElement("div", {
                           key: e.hero_id,
-                          className: br.a.HeroImage,
+                          className: Mr.a.HeroImage,
                           style: {
                             backgroundImage:
                               "url( " +
@@ -43643,10 +44327,10 @@ object-assign
                       : null;
                   })
             ),
-            o.a.createElement("div", { className: br.a.MatchScore }, c),
+            o.a.createElement("div", { className: Mr.a.MatchScore }, c),
             o.a.createElement(
               "div",
-              { className: br.a.HeroList },
+              { className: Mr.a.HeroList },
               null == s
                 ? void 0
                 : s.players.map(function (e) {
@@ -43670,7 +44354,7 @@ object-assign
                       (l && e.player_slot < 128)
                       ? o.a.createElement("div", {
                           key: e.hero_id,
-                          className: br.a.HeroImage,
+                          className: Mr.a.HeroImage,
                           style: {
                             backgroundImage:
                               "url( " +
@@ -43684,10 +44368,10 @@ object-assign
                   })
             )
           ),
-          o.a.createElement("div", { className: br.a.RightSection })
+          o.a.createElement("div", { className: Mr.a.RightSection })
         );
       }),
-      Lr = function (e) {
+      Dr = function (e) {
         var t = e.strTeamName,
           a = e.strRecord,
           n = e.nTeamID,
@@ -43696,19 +44380,19 @@ object-assign
           "div",
           {
             className: Object(ce.a)(
-              br.a.DPCScheduleEntryTeam,
-              r && br.a.Left,
-              !r && br.a.Right
+              Mr.a.DPCScheduleEntryTeam,
+              r && Mr.a.Left,
+              !r && Mr.a.Right
             ),
           },
           o.a.createElement(
             "div",
-            { className: br.a.NameAndRecord },
-            o.a.createElement("div", { className: br.a.TeamName }, t),
-            o.a.createElement("div", { className: br.a.TeamRecord }, a)
+            { className: Mr.a.NameAndRecord },
+            o.a.createElement("div", { className: Mr.a.TeamName }, t),
+            o.a.createElement("div", { className: Mr.a.TeamRecord }, a)
           ),
           o.a.createElement("div", {
-            className: br.a.TeamLogo,
+            className: Mr.a.TeamLogo,
             style: {
               backgroundImage:
                 "url( " +
@@ -43720,7 +44404,7 @@ object-assign
           })
         );
       },
-      wr = Object(s.a)(function (e) {
+      kr = Object(s.a)(function (e) {
         var t = e.nLeagueID,
           a = e.nNodeID,
           n = e.bExpanded,
@@ -43764,36 +44448,36 @@ object-assign
           "div",
           {
             className: Object(ce.a)(
-              br.a.DPCScheduleEntry,
-              1 == (null == l ? void 0 : l.matches.length) && br.a.OneMatch,
-              2 == (null == l ? void 0 : l.matches.length) && br.a.TwoMatch,
-              3 == (null == l ? void 0 : l.matches.length) && br.a.ThreeMatch,
-              4 == (null == l ? void 0 : l.matches.length) && br.a.FourMatch,
-              5 == (null == l ? void 0 : l.matches.length) && br.a.FiveMatch,
-              n && br.a.IsExpanded
+              Mr.a.DPCScheduleEntry,
+              1 == (null == l ? void 0 : l.matches.length) && Mr.a.OneMatch,
+              2 == (null == l ? void 0 : l.matches.length) && Mr.a.TwoMatch,
+              3 == (null == l ? void 0 : l.matches.length) && Mr.a.ThreeMatch,
+              4 == (null == l ? void 0 : l.matches.length) && Mr.a.FourMatch,
+              5 == (null == l ? void 0 : l.matches.length) && Mr.a.FiveMatch,
+              n && Mr.a.IsExpanded
             ),
           },
           o.a.createElement(
             "div",
-            { className: br.a.SummarySection },
+            { className: Mr.a.SummarySection },
             o.a.createElement(
               "div",
-              { className: br.a.DateSection },
+              { className: Mr.a.DateSection },
               o.a.createElement(Wa.a, {
                 date: 1e3 * v,
                 format: "dddd MMM Do",
-                className: br.a.Day,
+                className: Mr.a.Day,
               }),
               o.a.createElement(Wa.a, {
                 date: 1e3 * v,
                 format: "LT",
-                className: br.a.Time,
+                className: Mr.a.Time,
               })
             ),
             o.a.createElement(
               "div",
-              { className: br.a.MatchupSection },
-              o.a.createElement(Lr, {
+              { className: Mr.a.MatchupSection },
+              o.a.createElement(Dr, {
                 strTeamName: null == d ? void 0 : d.name,
                 strRecord: f,
                 nTeamID: null == l ? void 0 : l.team_id_1,
@@ -43801,10 +44485,10 @@ object-assign
               }),
               o.a.createElement(
                 "div",
-                { className: br.a.VS },
+                { className: Mr.a.VS },
                 Object(_.a)("#dpc_vs")
               ),
-              o.a.createElement(Lr, {
+              o.a.createElement(Dr, {
                 strTeamName: null == m ? void 0 : m.name,
                 strRecord: g,
                 nTeamID: null == l ? void 0 : l.team_id_2,
@@ -43814,7 +44498,7 @@ object-assign
             o.a.createElement(
               "div",
               {
-                className: Object(ce.a)(br.a.DetailsButton, y && br.a.Active),
+                className: Object(ce.a)(Mr.a.DetailsButton, y && Mr.a.Active),
                 onClick: function () {
                   return (
                     y &&
@@ -43828,17 +44512,17 @@ object-assign
               },
               o.a.createElement(
                 "div",
-                { className: br.a.DetailsLabel },
+                { className: Mr.a.DetailsLabel },
                 Object(_.a)("#dpc_series_details")
               )
             )
           ),
           o.a.createElement(
             "div",
-            { className: br.a.DetailsSection },
+            { className: Mr.a.DetailsSection },
             n &&
               l.matches.map(function (e, a) {
-                return o.a.createElement(Er, {
+                return o.a.createElement(Tr, {
                   key: e.match_id,
                   nLeagueID: t,
                   nSeriesGame: a,
@@ -43850,7 +44534,7 @@ object-assign
           )
         );
       }),
-      Sr = Object(s.a)(function (e) {
+      Or = Object(s.a)(function (e) {
         var t,
           a = e.strTeamSearch,
           n = e.setTeamSearch,
@@ -43914,20 +44598,20 @@ object-assign
             { value: Ua.b.DIVISION_II, strLabel: "#dpc_division_ii" },
           ],
           S = [
-            { value: Ua.d.UNSET, strLabel: "#dpc_region_all" },
-            { value: Ua.d.NA, strLabel: "#dpc_region_na" },
-            { value: Ua.d.SA, strLabel: "#dpc_region_sa" },
-            { value: Ua.d.WEU, strLabel: "#dpc_region_weu" },
-            { value: Ua.d.EEU, strLabel: "#dpc_region_eeu" },
-            { value: Ua.d.CN, strLabel: "#dpc_region_cn" },
-            { value: Ua.d.SEA, strLabel: "#dpc_region_sea" },
+            { value: Ua.e.UNSET, strLabel: "#dpc_region_all" },
+            { value: Ua.e.NA, strLabel: "#dpc_region_na" },
+            { value: Ua.e.SA, strLabel: "#dpc_region_sa" },
+            { value: Ua.e.WEU, strLabel: "#dpc_region_weu" },
+            { value: Ua.e.EEU, strLabel: "#dpc_region_eeu" },
+            { value: Ua.e.CN, strLabel: "#dpc_region_cn" },
+            { value: Ua.e.SEA, strLabel: "#dpc_region_sea" },
           ];
         return o.a.createElement(
           "div",
-          { className: br.a.DPCScheduleOptions },
+          { className: Mr.a.DPCScheduleOptions },
           o.a.createElement(
             "div",
-            { className: br.a.ScheduleOptionsContainer },
+            { className: Mr.a.ScheduleOptionsContainer },
             o.a.createElement(Ja, {
               options: E,
               selectedOption: L,
@@ -43947,7 +44631,7 @@ object-assign
           )
         );
       }),
-      Mr = Object(s.a)(function (e) {
+      jr = Object(s.a)(function (e) {
         e.strTeamSearch;
         var t = Object(c.i)(),
           a = Object(Ha.l)(t.strSeason),
@@ -43992,7 +44676,7 @@ object-assign
         _.forEach(function (e) {
           return (h += e.nLeagueID + "_" + e.nNodeID);
         });
-        var f = gr(h);
+        var f = Lr(h);
         return (
           Object(i.useEffect)(
             function () {
@@ -44023,15 +44707,15 @@ object-assign
             cn,
             {
               className: Object(ce.a)(
-                br.a.DPCScheduleMatches,
-                s && br.a.AfterFirstScroll
+                Mr.a.DPCScheduleMatches,
+                s && Mr.a.AfterFirstScroll
               ),
               horizontal: !1,
               hideScrollbars: !1,
               innerRef: p,
             },
             _.map(function (e) {
-              return o.a.createElement(wr, {
+              return o.a.createElement(kr, {
                 key: e.nLeagueID + "_" + e.nNodeID,
                 nLeagueID: e.nLeagueID,
                 nNodeID: e.nNodeID,
@@ -44042,7 +44726,7 @@ object-assign
           )
         );
       }),
-      Tr = Object(s.a)(function () {
+      Ir = Object(s.a)(function () {
         var e = Object(i.useState)(""),
           t = e[0],
           a = e[1],
@@ -44074,23 +44758,23 @@ object-assign
         };
         return o.a.createElement(
           Ln,
-          { matchContext: r, className: br.a.DPCSchedulePage },
-          o.a.createElement(Sr, { strTeamSearch: t, setTeamSearch: a }),
-          o.a.createElement(Mr, { strTeamSearch: t })
+          { matchContext: r, className: Mr.a.DPCSchedulePage },
+          o.a.createElement(Or, { strTeamSearch: t, setTeamSearch: a }),
+          o.a.createElement(jr, { strTeamSearch: t })
         );
       }),
-      Dr = a("ODJw"),
-      kr = a("Y/gT"),
-      Or = a.n(kr),
-      jr = function () {
+      Nr = a("ODJw"),
+      Cr = a("Y/gT"),
+      Ar = a.n(Cr),
+      Yr = function () {
         return o.a.createElement("div", {
-          className: Or.a.RightArrow,
+          className: Ar.a.RightArrow,
           style: {
             backgroundImage: "url( " + p.a.IMG_URL + "/arrow_left.png )",
           },
         });
       },
-      Ir = function (e) {
+      xr = function (e) {
         var t = e.shouldShow,
           a = e.showFunc,
           n = e.className,
@@ -44100,8 +44784,8 @@ object-assign
           "div",
           {
             className: Object(ce.a)(
-              Or.a.PopupPanelContainer,
-              t && Or.a.ShowPopupPanel
+              Ar.a.PopupPanelContainer,
+              t && Ar.a.ShowPopupPanel
             ),
             onClick: function () {
               return a(!1);
@@ -44110,7 +44794,7 @@ object-assign
           o.a.createElement(
             "div",
             {
-              className: Object(ce.a)(Or.a.PopupPanel, n),
+              className: Object(ce.a)(Ar.a.PopupPanel, n),
               onClick: function (e) {
                 return e.stopPropagation();
               },
@@ -44119,7 +44803,7 @@ object-assign
               o.a.createElement(
                 "div",
                 {
-                  className: Or.a.CloseButton,
+                  className: Ar.a.CloseButton,
                   onClick: function () {
                     return a(!1);
                   },
@@ -44130,12 +44814,12 @@ object-assign
           )
         );
       },
-      Nr = (function (e) {
+      Pr = (function (e) {
         function t(t) {
           var a = e.call(this, t) || this;
           return (
             (a.handleClick = function (e) {
-              if (Ur.getShortFilmOwnership()) {
+              if (qr.getShortFilmOwnership()) {
                 var t =
                   p.a.BASE_URL +
                   "filmcontest/redirecttosteamcommunityshortfilm/";
@@ -44143,13 +44827,13 @@ object-assign
               } else a.setState({ bPopupVisible: e });
             }),
             (a.handleAccepted = function () {
-              Ur.grantShortFilmAppIDOwnership();
+              qr.grantShortFilmAppIDOwnership();
               var e =
                 p.a.BASE_URL + "filmcontest/redirecttosteamcommunityshortfilm/";
               history.pushState("", "", e), history.go();
             }),
             (a.BGetOwnsApp = function () {
-              return Ur.getShortFilmOwnership();
+              return qr.getShortFilmOwnership();
             }),
             (a.state = { bPopupVisible: !1 }),
             a
@@ -44163,7 +44847,7 @@ object-assign
               this.BGetOwnsApp(),
               o.a.createElement(
                 "div",
-                { className: Or.a.HomePage },
+                { className: Ar.a.HomePage },
                 o.a.createElement(fe.a, { bOverlapping: !0 }),
                 o.a.createElement(
                   h.a,
@@ -44176,14 +44860,14 @@ object-assign
                 ),
                 o.a.createElement(
                   "div",
-                  { className: Or.a.HeaderSection },
+                  { className: Ar.a.HeaderSection },
                   o.a.createElement(
                     "div",
-                    { className: Or.a.BackgroundVideoContainer },
+                    { className: Ar.a.BackgroundVideoContainer },
                     o.a.createElement(
                       "video",
                       {
-                        className: Or.a.BackgroundVideo,
+                        className: Ar.a.BackgroundVideo,
                         autoPlay: !0,
                         preload: "auto",
                         muted: !0,
@@ -44209,14 +44893,14 @@ object-assign
                   ),
                   o.a.createElement(
                     "div",
-                    { className: Or.a.TitleContainer },
+                    { className: Ar.a.TitleContainer },
                     o.a.createElement(
                       "div",
-                      { className: Or.a.TopRow },
+                      { className: Ar.a.TopRow },
                       o.a.createElement(
                         "video",
                         {
-                          className: Or.a.HeroLogo,
+                          className: Ar.a.HeroLogo,
                           autoPlay: !0,
                           preload: "auto",
                           muted: !0,
@@ -44235,10 +44919,10 @@ object-assign
                       ),
                       o.a.createElement(
                         "div",
-                        { className: Or.a.ButtonRow },
+                        { className: Ar.a.ButtonRow },
                         o.a.createElement(
                           "div",
-                          { className: Or.a.CommunityDesc },
+                          { className: Ar.a.CommunityDesc },
                           Object(_.a)("#filmcontest_submit_label")
                         ),
                         0 == p.a.ACCOUNT_ID &&
@@ -44255,17 +44939,17 @@ object-assign
                               "div",
                               {
                                 className: Object(ce.a)(
-                                  Or.a.FilmButton,
-                                  Or.a.SteamButton
+                                  Ar.a.FilmButton,
+                                  Ar.a.SteamButton
                                 ),
                               },
                               o.a.createElement(
                                 "div",
-                                { className: Or.a.ButtonText },
+                                { className: Ar.a.ButtonText },
                                 Object(_.a)("#filmcontest_login_steam")
                               ),
                               o.a.createElement("div", {
-                                className: Or.a.SteamLogo,
+                                className: Ar.a.SteamLogo,
                               })
                             )
                           ),
@@ -44277,20 +44961,20 @@ object-assign
                                 return e.handleClick(!0);
                               },
                               className: Object(ce.a)(
-                                Or.a.FilmButton,
-                                Or.a.SteamButton
+                                Ar.a.FilmButton,
+                                Ar.a.SteamButton
                               ),
                             },
                             o.a.createElement(
                               "div",
-                              { className: Or.a.ButtonText },
+                              { className: Ar.a.ButtonText },
                               Object(_.a)("#filmcontest_button_submit")
                             ),
-                            o.a.createElement(jr, null)
+                            o.a.createElement(Yr, null)
                           ),
                         o.a.createElement(
                           "div",
-                          { className: Or.a.CommunityDesc },
+                          { className: Ar.a.CommunityDesc },
                           Object(_.a)("#filmcontest_community")
                         ),
                         o.a.createElement(
@@ -44300,102 +44984,102 @@ object-assign
                           },
                           o.a.createElement(
                             "div",
-                            { className: Or.a.FilmButton },
+                            { className: Ar.a.FilmButton },
                             o.a.createElement(
                               "div",
-                              { className: Or.a.ButtonText },
+                              { className: Ar.a.ButtonText },
                               Object(_.a)("#filmcontest_submissions")
                             ),
-                            o.a.createElement(jr, null)
+                            o.a.createElement(Yr, null)
                           )
                         )
                       )
                     ),
                     o.a.createElement(
                       "div",
-                      { className: Or.a.Introduction },
+                      { className: Ar.a.Introduction },
                       Object(_.a)("#filmcontest_introduction")
                     ),
                     o.a.createElement(
                       "div",
-                      { className: Or.a.Prizes },
+                      { className: Ar.a.Prizes },
                       o.a.createElement(
                         "div",
-                        { className: Object(ce.a)(Or.a.Prize, Or.a.Prize1) },
+                        { className: Object(ce.a)(Ar.a.Prize, Ar.a.Prize1) },
                         o.a.createElement(
                           "div",
-                          { className: Or.a.PrizeAmount },
+                          { className: Ar.a.PrizeAmount },
                           Object(_.a)("#filmcontest_prize1_amount")
                         ),
                         o.a.createElement(
                           "div",
-                          { className: Or.a.PrizeLabel },
+                          { className: Ar.a.PrizeLabel },
                           Object(_.a)("#filmcontest_prize1_label")
                         )
                       ),
                       o.a.createElement(
                         "div",
-                        { className: Object(ce.a)(Or.a.Prize, Or.a.Prize2) },
+                        { className: Object(ce.a)(Ar.a.Prize, Ar.a.Prize2) },
                         o.a.createElement(
                           "div",
-                          { className: Or.a.PrizeAmount },
+                          { className: Ar.a.PrizeAmount },
                           Object(_.a)("#filmcontest_prize2_amount")
                         ),
                         o.a.createElement(
                           "div",
-                          { className: Or.a.PrizeLabel },
+                          { className: Ar.a.PrizeLabel },
                           Object(_.a)("#filmcontest_prize2_label")
                         )
                       ),
                       o.a.createElement(
                         "div",
-                        { className: Object(ce.a)(Or.a.Prize, Or.a.Prize3) },
+                        { className: Object(ce.a)(Ar.a.Prize, Ar.a.Prize3) },
                         o.a.createElement(
                           "div",
-                          { className: Or.a.PrizeAmount },
+                          { className: Ar.a.PrizeAmount },
                           Object(_.a)("#filmcontest_prize3_amount")
                         ),
                         o.a.createElement(
                           "div",
-                          { className: Or.a.PrizeLabel },
+                          { className: Ar.a.PrizeLabel },
                           Object(_.a)("#filmcontest_prize3_label")
                         )
                       ),
                       o.a.createElement(
                         "div",
-                        { className: Object(ce.a)(Or.a.Prize, Or.a.Prize4) },
+                        { className: Object(ce.a)(Ar.a.Prize, Ar.a.Prize4) },
                         o.a.createElement(
                           "div",
-                          { className: Or.a.PrizeAmount },
+                          { className: Ar.a.PrizeAmount },
                           Object(_.a)("#filmcontest_prize4_amount")
                         ),
                         o.a.createElement(
                           "div",
-                          { className: Or.a.PrizeLabel },
+                          { className: Ar.a.PrizeLabel },
                           Object(_.a)("#filmcontest_prize4_label")
                         )
                       )
                     ),
                     o.a.createElement(
                       "div",
-                      { className: Or.a.PrizeDesc },
+                      { className: Ar.a.PrizeDesc },
                       Object(_.a)("#filmcontest_prize_desc")
                     )
                   )
                 ),
                 o.a.createElement(
                   "div",
-                  { className: Or.a.WallpaperSection },
+                  { className: Ar.a.WallpaperSection },
                   o.a.createElement(
                     "div",
-                    { className: Or.a.WallpaperTitle },
+                    { className: Ar.a.WallpaperTitle },
                     Object(_.a)("#filmcontest_previous_winners")
                   ),
                   o.a.createElement(
                     "div",
-                    { className: Or.a.Wallpapers },
+                    { className: Ar.a.Wallpapers },
                     o.a.createElement("iframe", {
-                      className: Or.a.PreviousWinnerVideo,
+                      className: Ar.a.PreviousWinnerVideo,
                       width: "30%",
                       height: "300px",
                       src: "https://www.youtube.com/embed/xtHskqp8QMc",
@@ -44406,7 +45090,7 @@ object-assign
                       allowFullScreen: !0,
                     }),
                     o.a.createElement("iframe", {
-                      className: Or.a.PreviousWinnerVideo,
+                      className: Ar.a.PreviousWinnerVideo,
                       width: "30%",
                       height: "300px",
                       src: "https://www.youtube.com/embed/4a04C51ZKi4",
@@ -44417,7 +45101,7 @@ object-assign
                       allowFullScreen: !0,
                     }),
                     o.a.createElement("iframe", {
-                      className: Or.a.PreviousWinnerVideo,
+                      className: Ar.a.PreviousWinnerVideo,
                       width: "30%",
                       height: "300px",
                       src: "https://www.youtube.com/embed/qKWcG86wgUc",
@@ -44431,20 +45115,20 @@ object-assign
                 ),
                 o.a.createElement(
                   "div",
-                  { className: Or.a.GuidelinesSection },
-                  o.a.createElement("div", { className: Or.a.Divider }),
-                  o.a.createElement("div", { className: Or.a.DividerBottom }),
+                  { className: Ar.a.GuidelinesSection },
+                  o.a.createElement("div", { className: Ar.a.Divider }),
+                  o.a.createElement("div", { className: Ar.a.DividerBottom }),
                   o.a.createElement(
                     "div",
-                    { className: Or.a.Quote },
+                    { className: Ar.a.Quote },
                     o.a.createElement(
                       "div",
-                      { className: Or.a.GuidelinesTitle },
+                      { className: Ar.a.GuidelinesTitle },
                       Object(_.a)("#filmcontest_guidelines")
                     ),
                     o.a.createElement(
                       "div",
-                      { className: Or.a.GuidelinesList },
+                      { className: Ar.a.GuidelinesList },
                       o.a.createElement(
                         "ul",
                         null,
@@ -44509,10 +45193,10 @@ object-assign
                 ),
                 o.a.createElement(
                   "div",
-                  { className: Or.a.EndRow },
+                  { className: Ar.a.EndRow },
                   o.a.createElement(
                     "div",
-                    { className: Or.a.EndRowText },
+                    { className: Ar.a.EndRowText },
                     Object(_.a)("#filmcontest_introduction"),
                     0 == p.a.ACCOUNT_ID &&
                       o.a.createElement(
@@ -44528,17 +45212,17 @@ object-assign
                           "div",
                           {
                             className: Object(ce.a)(
-                              Or.a.FilmButton,
-                              Or.a.SteamButton
+                              Ar.a.FilmButton,
+                              Ar.a.SteamButton
                             ),
                           },
                           o.a.createElement(
                             "div",
-                            { className: Or.a.ButtonText },
+                            { className: Ar.a.ButtonText },
                             Object(_.a)("#filmcontest_login_steam")
                           ),
                           o.a.createElement("div", {
-                            className: Or.a.SteamLogo,
+                            className: Ar.a.SteamLogo,
                           })
                         )
                       ),
@@ -44550,20 +45234,20 @@ object-assign
                             return e.handleClick(!0);
                           },
                           className: Object(ce.a)(
-                            Or.a.FilmButton,
-                            Or.a.SteamButton
+                            Ar.a.FilmButton,
+                            Ar.a.SteamButton
                           ),
                         },
                         o.a.createElement(
                           "div",
-                          { className: Or.a.ButtonText },
+                          { className: Ar.a.ButtonText },
                           Object(_.a)("#filmcontest_button_submit")
                         ),
-                        o.a.createElement(jr, null)
+                        o.a.createElement(Yr, null)
                       )
                   ),
                   o.a.createElement("img", {
-                    className: Or.a.EndRowImage,
+                    className: Ar.a.EndRowImage,
                     src:
                       p.a.IMG_URL +
                       "/international2020/shortfilm/clap_board.png",
@@ -44571,9 +45255,9 @@ object-assign
                 ),
                 o.a.createElement(ge.a, null),
                 o.a.createElement(
-                  Ir,
+                  xr,
                   {
-                    className: Or.a.ShortFilmPopup,
+                    className: Ar.a.ShortFilmPopup,
                     hasCloseButton: !0,
                     shouldShow: this.state.bPopupVisible,
                     showFunc: function (t) {
@@ -44588,8 +45272,8 @@ object-assign
                         return e.handleAccepted();
                       },
                       className: Object(ce.a)(
-                        Or.a.FilmButton,
-                        Or.a.SteamButton
+                        Ar.a.FilmButton,
+                        Ar.a.SteamButton
                       ),
                     },
                     Object(_.a)("#filmcontest_i_agree")
@@ -44602,7 +45286,7 @@ object-assign
           t
         );
       })(o.a.Component),
-      Cr =
+      Rr =
         (a("DwZD"),
         function (e) {
           void 0 === e && (e = function () {});
@@ -44631,16 +45315,16 @@ object-assign
               );
             }, []);
         }),
-      Ar = function (e) {
-        return Cr(e.onBeforeunload), e.children;
+      Hr = function (e) {
+        return Rr(e.onBeforeunload), e.children;
       };
-    (Ar.defaultProps = { children: null }),
-      (Ar.propTypes = {
+    (Hr.defaultProps = { children: null }),
+      (Hr.propTypes = {
         children: Ge.a.any,
         onBeforeunload: Ge.a.func.isRequired,
       });
-    var Yr,
-      xr = function (e) {
+    var Gr,
+      Br = function (e) {
         var t = Object(i.useState)({
             active: !1,
             first: !0,
@@ -44682,30 +45366,30 @@ object-assign
           };
         return (
           Object(i.useEffect)(r, [a.pathname, t]),
-          Cr(function (e) {
+          Rr(function (e) {
             r(!0), delete e.returnValue;
           }),
           o.a.createElement(c.b, Object(n.a)({}, e))
         );
       },
-      Pr = Object(c.j)(function (e) {
+      Ur = Object(c.j)(function (e) {
         return p.a && p.a.ENABLE_METRICS
-          ? o.a.createElement(xr, Object(n.a)({}, e))
+          ? o.a.createElement(Br, Object(n.a)({}, e))
           : o.a.createElement(c.b, Object(n.a)({}, e));
       }),
-      Rr = a("9a8T"),
-      Hr = a.n(Rr);
-    Yr = o.a.lazy(function () {
+      Fr = a("9a8T"),
+      Wr = a.n(Fr);
+    Gr = o.a.lazy(function () {
       return a.e(60).then(a.bind(null, "Bqrr"));
     });
-    var Gr = (function (e) {
+    var zr = (function (e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
           Object(n.d)(t, e),
           (t.prototype.componentDidMount = function () {
-            Hr.a.init({
+            Wr.a.init({
               disable: !1,
               startEvent: "DOMContentLoaded",
               initClassName: "aos-init",
@@ -44736,45 +45420,45 @@ object-assign
                   o.a.createElement(
                     c.d,
                     null,
-                    o.a.createElement(Pr, { path: u.a.home(), component: ca }),
-                    o.a.createElement(Pr, {
+                    o.a.createElement(Ur, { path: u.a.home(), component: ca }),
+                    o.a.createElement(Ur, {
                       path: u.a.newsentry(":id"),
                       component: ke,
                     }),
-                    o.a.createElement(Pr, {
+                    o.a.createElement(Ur, {
                       path: u.a.news(":updates?"),
                       component: Se,
                     }),
-                    o.a.createElement(Pr, {
+                    o.a.createElement(Ur, {
                       path: u.a.battlepass(),
                       component: ea,
                     }),
-                    o.a.createElement(Pr, {
+                    o.a.createElement(Ur, {
                       path: u.a.hero(":id"),
                       component: Da,
                     }),
-                    o.a.createElement(Pr, {
+                    o.a.createElement(Ur, {
                       path: u.a.herogrid(),
                       component: xa,
                     }),
-                    o.a.createElement(Pr, {
+                    o.a.createElement(Ur, {
                       path: u.a.dpc_home(
                         ":strSeason?",
                         ":strLeagueID?",
                         ":strNodeID?",
                         ":strSeriesDisplay?"
                       ),
-                      component: er,
+                      component: ir,
                     }),
-                    o.a.createElement(Pr, {
+                    o.a.createElement(Ur, {
                       path: u.a.dpc_standings(
                         ":strSeason?",
                         ":strRegion?",
                         ":strDivision?"
                       ),
-                      component: ir,
+                      component: ur,
                     }),
-                    o.a.createElement(Pr, {
+                    o.a.createElement(Ur, {
                       path: u.a.dpc_schedule(
                         ":strSeason?",
                         ":strRegion?",
@@ -44782,21 +45466,21 @@ object-assign
                         ":strMonth?",
                         ":strDay?"
                       ),
-                      component: Tr,
+                      component: Ir,
                     }),
-                    o.a.createElement(Pr, {
+                    o.a.createElement(Ur, {
                       path: u.a.patchnotes(":version?"),
-                      component: Dr.d,
+                      component: Nr.d,
                     }),
-                    o.a.createElement(Pr, {
+                    o.a.createElement(Ur, {
                       path: u.a.dawnbreaker(),
-                      component: Yr,
+                      component: Gr,
                     }),
-                    o.a.createElement(Pr, {
+                    o.a.createElement(Ur, {
                       path: u.a.shortfilm(),
-                      component: Nr,
+                      component: Pr,
                     }),
-                    o.a.createElement(Pr, {
+                    o.a.createElement(Ur, {
                       path: u.a.other(":page"),
                       render: function () {
                         return o.a.createElement(c.a, { to: u.a.root() });
@@ -44810,20 +45494,20 @@ object-assign
           (t = Object(n.c)([s.a], t))
         );
       })(o.a.Component),
-      Br = a("6rKP"),
-      Ur = new ((function () {
+      Vr = a("6rKP"),
+      qr = new ((function () {
         function e() {
-          (this.m_asyncPrizePool = new Br.a()),
-            (this.m_asyncPatchNotesListData = new Br.a()),
-            (this.m_asyncPatchNotesData = new Br.b()),
+          (this.m_asyncPrizePool = new Vr.a()),
+            (this.m_asyncPatchNotesListData = new Vr.a()),
+            (this.m_asyncPatchNotesData = new Vr.b()),
             (this.m_nSelectedAbilityIndex = 0),
-            (this.m_asyncShortFilmOwnership = new Br.a()),
+            (this.m_asyncShortFilmOwnership = new Vr.a()),
             Object(_.c)();
         }
         return (
           (e.prototype.Init = function () {
             r.render(
-              i.createElement(Gr, { app: this }),
+              i.createElement(zr, { app: this }),
               document.getElementById("dota_react_root")
             );
           }),
@@ -44960,7 +45644,7 @@ object-assign
           e
         );
       })())();
-    function Fr(e) {
+    function Jr(e) {
       return Object(n.b)(this, void 0, void 0, function () {
         var t, r, i, o, s, l, c, u, d;
         return Object(n.e)(this, function (m) {
@@ -45018,10 +45702,10 @@ object-assign
               return (
                 Object(v.e)("application_config"),
                 Object(p.b)(),
-                [4, Fr(p.a.LANGUAGE)]
+                [4, Jr(p.a.LANGUAGE)]
               );
             case 1:
-              return e.sent(), Ur.Init(), [2];
+              return e.sent(), qr.Init(), [2];
           }
         });
       });
@@ -48186,13 +48870,16 @@ object-assign
   knzx: function (e, t, a) {
     "use strict";
     var n, r, i, o, s, l, c, u, d, m, p, _, h;
-    a.d(t, "h", function () {
+    a.d(t, "i", function () {
       return r;
     }),
       a.d(t, "c", function () {
-        return o;
+        return i;
       }),
       a.d(t, "d", function () {
+        return o;
+      }),
+      a.d(t, "e", function () {
         return c;
       }),
       a.d(t, "a", function () {
@@ -48201,13 +48888,13 @@ object-assign
       a.d(t, "b", function () {
         return m;
       }),
-      a.d(t, "e", function () {
+      a.d(t, "f", function () {
         return p;
       }),
-      a.d(t, "f", function () {
+      a.d(t, "g", function () {
         return _;
       }),
-      a.d(t, "g", function () {
+      a.d(t, "h", function () {
         return h;
       }),
       (function (e) {
@@ -55792,35 +56479,35 @@ PERFORMANCE OF THIS SOFTWARE.
     function c(e) {
       switch (e) {
         case "all":
-          return r.d.UNSET;
+          return r.e.UNSET;
         case "na":
-          return r.d.NA;
+          return r.e.NA;
         case "sa":
-          return r.d.SA;
+          return r.e.SA;
         case "weu":
-          return r.d.WEU;
+          return r.e.WEU;
         case "eeu":
-          return r.d.EEU;
+          return r.e.EEU;
         case "cn":
-          return r.d.CN;
+          return r.e.CN;
         case "sea":
-          return r.d.SEA;
+          return r.e.SEA;
       }
-      return r.d.UNSET;
+      return r.e.UNSET;
     }
     function u(e) {
       switch (e) {
-        case r.d.NA:
+        case r.e.NA:
           return "na";
-        case r.d.SA:
+        case r.e.SA:
           return "sa";
-        case r.d.WEU:
+        case r.e.WEU:
           return "weu";
-        case r.d.EEU:
+        case r.e.EEU:
           return "eeu";
-        case r.d.CN:
+        case r.e.CN:
           return "cn";
-        case r.d.SEA:
+        case r.e.SEA:
           return "sea";
       }
       return "allregions";
@@ -55831,22 +56518,26 @@ PERFORMANCE OF THIS SOFTWARE.
     function m(e) {
       switch (e) {
         case "spring21":
-          return r.e.SPRING_2021_LEAGUE;
+          return r.f.SPRING_2021_LEAGUE;
         case "springmajor21":
-          return r.e.SPRING_2021_MAJOR;
+          return r.f.SPRING_2021_MAJOR;
+        case "ti10qual":
+          return r.f.INTERNATIONAL_2021_QUALIFIERS;
         case "ti10":
-          return r.e.INTERNATIONAL_2021;
+          return r.f.INTERNATIONAL_2021;
       }
-      return r.e.INVALID;
+      return r.f.INVALID;
     }
     function p(e) {
       switch (e) {
-        case r.e.SPRING_2021_LEAGUE:
+        case r.f.SPRING_2021_LEAGUE:
           return "spring21";
-        case r.e.SPRING_2021_MAJOR:
+        case r.f.SPRING_2021_MAJOR:
           return "springmajor21";
-        case r.e.INTERNATIONAL_2021:
+        case r.f.INTERNATIONAL_2021:
           return "ti10";
+        case r.f.INTERNATIONAL_2021_QUALIFIERS:
+          return "ti10qual";
       }
       return "";
     }

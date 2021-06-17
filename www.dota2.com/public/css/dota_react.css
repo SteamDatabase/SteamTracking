@@ -19110,8 +19110,8 @@ a {
   flex-direction: row;
   overflow-y: scroll;
   background-color: #000;
-  margin-left: 50px;
-  margin-right: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 .dpcmatchbanner_MatchesContainer_T5fzO
   .dpcmatchbanner_MatchesScroller_2vFED.dpcmatchbanner_AfterFirstScroll_2X7d9 {
@@ -19176,7 +19176,6 @@ a {
 }
 .dpcmatchbanner_DPCMatchBannerNode_1bw0U .dpcmatchbanner_UpperContainer_2ymob {
   width: 100%;
-  height: 30px;
   position: relative;
   min-height: 0px;
   display: flex;
@@ -19193,11 +19192,26 @@ a {
 }
 .dpcmatchbanner_DPCMatchBannerNode_1bw0U
   .dpcmatchbanner_UpperContainer_2ymob
-  .dpcmatchbanner_RegionDivision_3rogP {
+  .dpcmatchbanner_Description_cHdcC {
   font-size: 12px;
   text-transform: uppercase;
   color: #a3a3a3;
   font-weight: bold;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+.dpcmatchbanner_DPCMatchBannerNode_1bw0U
+  .dpcmatchbanner_UpperContainer_2ymob
+  .dpcmatchbanner_Description_cHdcC
+  .dpcmatchbanner_DivisionElement__NZ0K {
+  text-align: right;
+}
+.dpcmatchbanner_DPCMatchBannerNode_1bw0U
+  .dpcmatchbanner_UpperContainer_2ymob
+  .dpcmatchbanner_Description_cHdcC
+  .dpcmatchbanner_Final_VvrUF {
+  text-align: center;
 }
 .dpcmatchbanner_DPCMatchBannerNode_1bw0U
   .dpcmatchbanner_UpperContainer_2ymob
@@ -19229,7 +19243,6 @@ a {
 }
 .dpcmatchbanner_DPCMatchBannerNode_1bw0U .dpcmatchbanner_TeamsContainer_1RcBV {
   width: 100%;
-  height: 80px;
   padding-top: 8px;
   min-height: 0px;
   display: flex;
@@ -19239,7 +19252,6 @@ a {
 .dpcmatchbanner_DPCMatchBannerNode_1bw0U
   .dpcmatchbanner_TeamsContainer_1RcBV
   .dpcmatchbanner_BannerTeam_1Anv9 {
-  height: 30px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -19500,6 +19512,157 @@ a {
   font-size: 15px;
   font-weight: 700;
   color: #a3a3a3;
+}
+.dpcregionstandings_DPCStandingsBracket_2QBD2 {
+  width: 100%;
+  margin-top: 30px;
+}
+.dpcregionstandings_DPCStandingsBracket_2QBD2
+  .dpcregionstandings_BracketContainer_3clp- {
+  width: 1400px;
+  height: 1000px;
+  margin: 0px auto;
+  position: relative;
+}
+.dpcregionstandings_DPCStandingsBracket_2QBD2
+  .dpcregionstandings_BracketContainer_3clp-
+  .dpcregionstandings_BracketNodeContainer_1cykg {
+  position: absolute;
+}
+.dpcregionstandings_DPCStandingsBracket_2QBD2
+  .dpcregionstandings_BracketContainer_3clp-
+  .dpcregionstandings_BracketConnectorContainer_2-QIa {
+  position: absolute;
+}
+.dpcregionstandings_BracketNode_Gmw1F {
+  background-color: #27272d;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+.dpcregionstandings_BracketNode_Gmw1F .dpcregionstandings_NodeHeader_EiKFT {
+  width: 100%;
+  background-color: #36363e;
+  border-bottom: #222;
+  color: #959596;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: left;
+  padding: 2px 5px;
+}
+.dpcregionstandings_BracketNode_Gmw1F .dpcregionstandings_Teams_cpjR8 {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-top: 6px;
+}
+.dpcregionstandings_BracketNode_Gmw1F
+  .dpcregionstandings_Teams_cpjR8
+  .dpcregionstandings_Team_3va1W {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #959596;
+}
+.dpcregionstandings_BracketNode_Gmw1F
+  .dpcregionstandings_Teams_cpjR8
+  .dpcregionstandings_Team_3va1W.dpcregionstandings_Winner_1u9z7 {
+  color: #ccc;
+}
+.dpcregionstandings_BracketNode_Gmw1F
+  .dpcregionstandings_Teams_cpjR8
+  .dpcregionstandings_Team_3va1W
+  .dpcregionstandings_TeamLogo_p6D7N {
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+  margin-right: 4px;
+}
+.dpcregionstandings_BracketNode_Gmw1F
+  .dpcregionstandings_Teams_cpjR8
+  .dpcregionstandings_Team_3va1W
+  .dpcregionstandings_TeamName_Utar5 {
+  flex-grow: 1;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.dpcregionstandings_BracketNode_Gmw1F
+  .dpcregionstandings_Teams_cpjR8
+  .dpcregionstandings_Team_3va1W
+  .dpcregionstandings_Score_35zvc {
+  width: 16px;
+  margin-right: 8px;
+  text-align: right;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.dpcregionstandings_BracketConnectorStraight_2O_OH {
+  height: 100%;
+  position: relative;
+}
+.dpcregionstandings_BracketConnectorStraight_2O_OH
+  .dpcregionstandings_ConnectorLine_1HmRK {
+  width: 100%;
+  height: 1px;
+  background-color: #555;
+  position: absolute;
+}
+.dpcregionstandings_BracketConnectorCombine_TfH0M {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.dpcregionstandings_BracketConnectorCombine_TfH0M
+  .dpcregionstandings_Segment1_3igGD {
+  width: 20px;
+  height: 100%;
+  position: relative;
+}
+.dpcregionstandings_BracketConnectorCombine_TfH0M
+  .dpcregionstandings_Segment1_3igGD
+  .dpcregionstandings_ConnectorLineTop_1mNMj {
+  width: 100%;
+  height: 1px;
+  background-color: #555;
+  position: absolute;
+}
+.dpcregionstandings_BracketConnectorCombine_TfH0M
+  .dpcregionstandings_Segment1_3igGD
+  .dpcregionstandings_ConnectorLineBottom_2XXFW {
+  width: 100%;
+  height: 1px;
+  background-color: #555;
+  position: absolute;
+}
+.dpcregionstandings_BracketConnectorCombine_TfH0M
+  .dpcregionstandings_ConnectorLineVertical_3oUHN {
+  width: 1px;
+  background-color: #555;
+  position: absolute;
+}
+.dpcregionstandings_BracketConnectorCombine_TfH0M
+  .dpcregionstandings_Segment3_1hljF {
+  flex-grow: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.dpcregionstandings_BracketConnectorCombine_TfH0M
+  .dpcregionstandings_Segment3_1hljF
+  .dpcregionstandings_ConnectorLineCombined_2fdZP {
+  width: 100%;
+  height: 1px;
+  background-color: #555;
 }
 .dpcteamlist_DPCTeamList_wkwPY {
   width: 100%;
@@ -20344,7 +20507,7 @@ a {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 50px;
 }
 .dpcstandingspage_DPCStandingsPageLeague_34H1h
@@ -20361,13 +20524,14 @@ a {
 }
 .dpcstandingspage_DPCStandingsPageMajor_3rfFl {
   width: 100%;
-  max-width: 900px;
+  max-width: 1400px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 50px;
   margin-top: 50px;
+  padding: 0px 40px;
 }
 * {
   box-sizing: border-box;
