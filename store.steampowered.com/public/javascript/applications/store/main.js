@@ -1,8 +1,8 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6605937";
+var CLSTAMP = "6611430";
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [39],
+  [68],
   {
     "+VX6": function (e, t, n) {
       "use strict";
@@ -7148,7 +7148,7 @@ var CLSTAMP = "6605937";
                 });
               });
             }),
-            (e.prototype.GetFlavorCacheKey = function (e, t, n, r, a) {
+            (e.prototype.GetFlavorCacheKey = function (e, t, n, r, a, i, o) {
               return (
                 "key-" +
                 e +
@@ -7159,7 +7159,11 @@ var CLSTAMP = "6605937";
                 "-" +
                 (r || "") +
                 "-" +
-                a
+                a +
+                "-" +
+                i +
+                "-" +
+                o
               );
             }),
             (e.prototype.ValidateDataGameByFlavor = function (e) {
@@ -7184,47 +7188,49 @@ var CLSTAMP = "6605937";
               c,
               l,
               u,
-              d
+              d,
+              p,
+              h
             ) {
-              var p, h, f;
+              var f, b, _;
               return (
                 void 0 === l && (l = 0),
                 void 0 === u && (u = void 0),
                 Object(a.b)(this, void 0, void 0, function () {
-                  var b, _, v, g, y, S, E, C, A, w, B, I, L, T;
+                  var v, g, y, S, E, C, A, w, B, I, L, T, D, N;
                   return Object(a.e)(this, function (a) {
                     switch (a.label) {
                       case 0:
                         if (
-                          ((b = this.m_mapSaleGameListsByFlavor.get(e)) ||
-                            ((_ =
+                          ((v = this.m_mapSaleGameListsByFlavor.get(e)) ||
+                            ((g =
                               "browser_" +
                               o +
                               (null == s ? void 0 : s.GetQuery()) +
                               (r ? "_" + r : "_*") +
                               (t ? u : "")),
-                            (v = Object(O.h)(_, "application_config")),
-                            this.ValidateDataGameByFlavor(v)
-                              ? ((b = v),
-                                this.m_mapSaleGameListsByFlavor.set(e, v))
-                              : ((b = {
+                            (y = Object(O.h)(g, "application_config")),
+                            this.ValidateDataGameByFlavor(y)
+                              ? ((v = y),
+                                this.m_mapSaleGameListsByFlavor.set(e, y))
+                              : ((v = {
                                   appids: [],
                                   solr_index: 0,
                                   possible_has_more: !0,
                                 }),
-                                this.m_mapSaleGameListsByFlavor.set(e, b))),
-                          (g = b.appids.length),
-                          !((y = l + c - g) > 0 && b.possible_has_more))
+                                this.m_mapSaleGameListsByFlavor.set(e, v))),
+                          (S = v.appids.length),
+                          !((E = l + c - S) > 0 && v.possible_has_more))
                         )
                           return [3, 5];
                         if (
-                          ((S =
+                          ((C =
                             O.d.STORE_BASE_URL +
                             (n
                               ? "saleaction/ajaxpreviewsaledynamicappquery"
                               : "saleaction/ajaxgetsaledynamicappquery")),
-                          (E = null),
-                          (C = {
+                          (A = null),
+                          (w = {
                             cc: O.d.COUNTRY,
                             l: O.d.LANGUAGE,
                             clanAccountID:
@@ -7235,76 +7241,78 @@ var CLSTAMP = "6605937";
                               (null == i ? void 0 : i.AnnouncementGID) || null,
                             flavor: o,
                             strFacetFilter: null == s ? void 0 : s.GetQuery(),
-                            start: b.solr_index,
-                            count: Math.max(y, 25),
+                            start: v.solr_index,
+                            count: Math.max(E, 25),
                             tabuniqueid: r,
                             return_capsules: !0,
                             search: t ? u : void 0,
                             origin: self.origin,
                             bForceUseSaleTag: !0,
+                            strContentHub: d,
+                            bContentHubDiscountedOnly: p,
                           }),
                           !(s && s.GetQuery().length > 0))
                         )
                           return [3, 2];
-                        for (w in ((A = new FormData()), C))
-                          A.append("" + w, "" + C[w]);
+                        for (I in ((B = new FormData()), w))
+                          B.append("" + I, "" + w[I]);
                         return [
                           4,
-                          M.a.post(S, A, {
+                          M.a.post(C, B, {
                             withCredentials: n,
-                            cancelToken: null == d ? void 0 : d.token,
+                            cancelToken: null == h ? void 0 : h.token,
                           }),
                         ];
                       case 1:
-                        return (E = a.sent()), [3, 4];
+                        return (A = a.sent()), [3, 4];
                       case 2:
                         return [
                           4,
-                          M.a.get(S, {
-                            params: C,
+                          M.a.get(C, {
+                            params: w,
                             withCredentials: n,
-                            cancelToken: null == d ? void 0 : d.token,
+                            cancelToken: null == h ? void 0 : h.token,
                           }),
                         ];
                       case 3:
-                        (E = a.sent()), (a.label = 4);
+                        (A = a.sent()), (a.label = 4);
                       case 4:
                         if (
-                          200 != (null == E ? void 0 : E.status) ||
+                          200 != (null == A ? void 0 : A.status) ||
                           1 !=
-                            (null === (p = E.data) || void 0 === p
+                            (null === (f = A.data) || void 0 === f
                               ? void 0
-                              : p.success) ||
-                          !(null === (h = E.data) || void 0 === h
+                              : f.success) ||
+                          !(null === (b = A.data) || void 0 === b
                             ? void 0
-                            : h.appids)
+                            : b.appids)
                         )
                           throw new Error(
                             "query failed, status=" +
-                              (null == E ? void 0 : E.status) +
+                              (null == A ? void 0 : A.status) +
                               " success: " +
-                              (null === (f = null == E ? void 0 : E.data) ||
-                              void 0 === f
+                              (null === (_ = null == A ? void 0 : A.data) ||
+                              void 0 === _
                                 ? void 0
-                                : f.success)
+                                : _.success)
                           );
-                        for (B = 0, I = E.data.appids; B < I.length; B++)
-                          (L = I[B]), b.appids.push(L);
-                        (b.facetCounts = E.data.faceting),
-                          (b.possible_has_more = E.data.possible_has_more),
-                          (b.solr_index = E.data.solr_index),
-                          E.data.app_info && m.a.AddAppLinks(E.data.app_info),
+                        for (L = 0, T = A.data.appids; L < T.length; L++)
+                          (D = T[L]), v.appids.push(D);
+                        (v.facetCounts = A.data.faceting),
+                          (v.possible_has_more = A.data.possible_has_more),
+                          (v.solr_index = A.data.solr_index),
+                          A.data.app_info && m.a.AddAppLinks(A.data.app_info),
                           (a.label = 5);
                       case 5:
                         return (
-                          this.m_mapSaleGameListsByFlavor.set(e, b),
-                          (T = b.possible_has_more || l + c < b.appids.length),
+                          this.m_mapSaleGameListsByFlavor.set(e, v),
+                          (N = v.possible_has_more || l + c < v.appids.length),
                           [
                             2,
                             {
-                              appids: b.appids.slice(l, c),
-                              facetCounts: b.facetCounts,
-                              bHasPossibleMoreResults: T,
+                              appids: v.appids.slice(l, c),
+                              facetCounts: v.facetCounts,
+                              bHasPossibleMoreResults: N,
                             },
                           ]
                         );
@@ -7322,48 +7330,53 @@ var CLSTAMP = "6605937";
               o,
               s,
               c,
-              l
+              l,
+              u,
+              d
             ) {
               return (
                 void 0 === s && (s = 0),
                 void 0 === c && (c = void 0),
                 Object(a.b)(this, void 0, void 0, function () {
-                  var u,
-                    d,
-                    p,
-                    m = this;
-                  return Object(a.e)(this, function (h) {
-                    switch (h.label) {
+                  var p,
+                    m,
+                    h,
+                    f = this;
+                  return Object(a.e)(this, function (b) {
+                    switch (b.label) {
                       case 0:
                         (c = null == c ? void 0 : c.trim()),
-                          (u = Boolean(c)) && ((r = "search"), (t = void 0)),
-                          (d = this.GetFlavorCacheKey(
+                          (p = Boolean(c)) && ((r = "search"), (t = void 0)),
+                          l && (t = void 0),
+                          (m = this.GetFlavorCacheKey(
                             r,
                             i,
                             t,
                             c,
-                            (null == n ? void 0 : n.AnnouncementGID) || "0"
+                            (null == n ? void 0 : n.AnnouncementGID) || "0",
+                            l,
+                            u
                           )),
-                          (h.label = 1);
+                          (b.label = 1);
                       case 1:
-                        if (!this.m_mapPromisesByFlavor.has(d)) return [3, 6];
-                        h.label = 2;
+                        if (!this.m_mapPromisesByFlavor.has(m)) return [3, 6];
+                        b.label = 2;
                       case 2:
                         return (
-                          h.trys.push([2, 4, , 5]),
-                          [4, this.m_mapPromisesByFlavor.get(d)]
+                          b.trys.push([2, 4, , 5]),
+                          [4, this.m_mapPromisesByFlavor.get(m)]
                         );
                       case 3:
-                        return h.sent(), [3, 5];
+                        return b.sent(), [3, 5];
                       case 4:
-                        return h.sent(), [3, 5];
+                        return b.sent(), [3, 5];
                       case 5:
                         return [3, 1];
                       case 6:
                         return (
-                          (p = this.InternalGetSaleGamesByFlavor(
-                            d,
-                            u,
+                          (h = this.InternalGetSaleGamesByFlavor(
+                            m,
+                            p,
                             e,
                             t,
                             n,
@@ -7372,22 +7385,24 @@ var CLSTAMP = "6605937";
                             o,
                             s,
                             c,
-                            l
+                            l,
+                            u,
+                            d
                           )),
-                          this.m_mapPromisesByFlavor.set(d, p),
+                          this.m_mapPromisesByFlavor.set(m, h),
                           (function () {
-                            return Object(a.b)(m, void 0, void 0, function () {
+                            return Object(a.b)(f, void 0, void 0, function () {
                               return Object(a.e)(this, function (e) {
                                 switch (e.label) {
                                   case 0:
-                                    return e.trys.push([0, 2, 3, 4]), [4, p];
+                                    return e.trys.push([0, 2, 3, 4]), [4, h];
                                   case 1:
                                     return e.sent(), [3, 4];
                                   case 2:
                                     return e.sent(), [3, 4];
                                   case 3:
                                     return (
-                                      this.m_mapPromisesByFlavor.delete(d), [7]
+                                      this.m_mapPromisesByFlavor.delete(m), [7]
                                     );
                                   case 4:
                                     return [2];
@@ -7395,7 +7410,7 @@ var CLSTAMP = "6605937";
                               });
                             });
                           })(),
-                          [2, p]
+                          [2, h]
                         );
                     }
                   });
@@ -9016,12 +9031,26 @@ var CLSTAMP = "6605937";
                   });
                 });
             }),
+            (t.prototype.BUsesContentHubForItemSource = function (e) {
+              return Boolean(e.item_browse_section_data.source_content_hub);
+            }),
+            (t.prototype.GetContentHubName = function (e, t) {
+              var n, r;
+              return (
+                (null === (n = null == t ? void 0 : t.GetTab()) || void 0 === n
+                  ? void 0
+                  : n.source_content_hub_override) ||
+                (null === (r = e.item_browse_section_data) || void 0 === r
+                  ? void 0
+                  : r.source_content_hub)
+              );
+            }),
             (t.prototype.LoadCapsules = function (e, t) {
+              var n;
               return (
                 void 0 === t && (t = !0),
                 Object(a.b)(this, void 0, void 0, function () {
-                  var n,
-                    r,
+                  var r,
                     i,
                     o,
                     s,
@@ -9046,46 +9075,47 @@ var CLSTAMP = "6605937";
                     L,
                     T,
                     D,
-                    j;
+                    j,
+                    R;
                   return Object(a.e)(this, function (a) {
                     switch (a.label) {
                       case 0:
                         return (
-                          (n = this.props),
-                          (r = n.event),
-                          (i = n.bIsPreview),
-                          (o = n.activeTab),
-                          (s = n.section),
-                          (c = this.state),
-                          (l = c.currentFlavor),
-                          (u = c.rgCapsules),
-                          (d = c.nNumRequestedLastTime),
-                          (m = c.nHiddenCapsules),
-                          (h = c.strSearchQuery),
-                          (f = c.facetFilterState),
+                          (r = this.props),
+                          (i = r.event),
+                          (o = r.bIsPreview),
+                          (s = r.activeTab),
+                          (c = r.section),
+                          (l = this.state),
+                          (u = l.currentFlavor),
+                          (d = l.rgCapsules),
+                          (m = l.nNumRequestedLastTime),
+                          (h = l.nHiddenCapsules),
+                          (f = l.strSearchQuery),
+                          (b = l.facetFilterState),
                           [4, C.a.Get().HintLoad()]
                         );
                       case 1:
                         a.sent(),
-                          (b = !0),
-                          (_ = Math.max(d, e + 1)),
-                          (null == o ? void 0 : o.BIsTabFilteringEnabled()) &&
-                            (_ = Math.max(_, 100)),
+                          (_ = !0),
+                          (v = Math.max(m, e + 1)),
+                          (null == s ? void 0 : s.BIsTabFilteringEnabled()) &&
+                            (v = Math.max(v, 100)),
                           N.a.GetTimeNowWithOverride(),
                           3600,
                           86400,
-                          s.enable_faceted_browsing &&
-                            f.SetFromURLParam(
+                          c.enable_faceted_browsing &&
+                            b.SetFromURLParam(
                               Object(me.a)(
                                 this.props.location,
-                                "facets" + s.unique_id
+                                "facets" + c.unique_id
                               )
                             ),
                           (a.label = 2);
                       case 2:
-                        if (!(u.length <= e && b)) return [3, 12];
-                        (g = this.m_nHighestSentRequestID),
-                          (y = void 0),
+                        if (!(d.length <= e && _)) return [3, 12];
+                        (y = this.m_nHighestSentRequestID),
+                          (M = void 0),
                           (a.label = 3);
                       case 3:
                         return (
@@ -9093,32 +9123,37 @@ var CLSTAMP = "6605937";
                           [
                             4,
                             E.GetSaleGamesByFlavor(
+                              o,
+                              null == s ? void 0 : s.GetActiveTabUniqueID(),
                               i,
-                              null == o ? void 0 : o.GetActiveTabUniqueID(),
-                              r,
-                              l,
-                              f,
-                              _,
+                              u,
+                              b,
+                              v,
                               0,
-                              h,
+                              f,
+                              this.GetContentHubName(c, s),
+                              null === (n = c.item_browse_section_data) ||
+                                void 0 === n
+                                ? void 0
+                                : n.content_hub_discounted_only,
                               this.m_cancelSignal
                             ),
                           ]
                         );
                       case 4:
                         return (
-                          (M = a.sent()),
-                          (y = M.appids),
-                          (v = M.facetCounts),
-                          (b = M.bHasPossibleMoreResults),
+                          (S = a.sent()),
+                          (M = S.appids),
+                          (g = S.facetCounts),
+                          (_ = S.bHasPossibleMoreResults),
                           [3, 6]
                         );
                       case 5:
                         return (
-                          (S = a.sent()),
+                          (O = a.sent()),
                           this.m_cancelSignal.token.reason ||
                             (console.error(
-                              "Failed to load games for browser;" + S.message
+                              "Failed to load games for browser;" + O.message
                             ),
                             this.setState({
                               bInitialLoadComplete: !0,
@@ -9127,76 +9162,77 @@ var CLSTAMP = "6605937";
                           [2]
                         );
                       case 6:
-                        return this.m_nHighestReceivedRequestID > g
+                        return this.m_nHighestReceivedRequestID > y
                           ? [2]
-                          : ((this.m_nHighestReceivedRequestID = g),
-                            (u = y.map(function (e) {
+                          : ((this.m_nHighestReceivedRequestID = y),
+                            (d = M.map(function (e) {
                               return { id: e, type: "game" };
                             })),
                             this.state.strSearchQuery ||
-                              (u = u.filter(function (e) {
-                                return !o || o.ShouldShowCapsule(e);
+                              this.BUsesContentHubForItemSource(c) ||
+                              (d = d.filter(function (e) {
+                                return !s || s.ShouldShowCapsule(e);
                               })),
-                            [4, Object(w.h)(u)]);
+                            [4, Object(w.h)(d)]);
                       case 7:
                         return (
                           a.sent(),
-                          (O = new Array()),
-                          f
-                            ? ((L = f.BHasHideIgnoredItemsFacetValue()),
-                              [4, Object(w.b)(u, !1, !1, !1, L, !1, O)])
+                          (A = new Array()),
+                          b
+                            ? ((T = b.BHasHideIgnoredItemsFacetValue()),
+                              [4, Object(w.b)(d, !1, !1, !1, T, !1, A)])
                             : [3, 9]
                         );
                       case 8:
-                        return (u = a.sent()), [3, 11];
+                        return (d = a.sent()), [3, 11];
                       case 9:
-                        return [4, Object(w.a)(u, !1, O)];
+                        return [4, Object(w.a)(d, !1, A)];
                       case 10:
-                        (u = a.sent()), (a.label = 11);
+                        (d = a.sent()), (a.label = 11);
                       case 11:
                         return (
-                          (m = O.length), u.length <= e && (_ += 8), [3, 2]
+                          (h = A.length), d.length <= e && (v += 8), [3, 2]
                         );
                       case 12:
                         return this.m_cancelSignal.token.reason
                           ? [2]
-                          : ((A = u.length > e || b),
-                            f
-                              ? ((B = (B = Object(pe.e)(s.facets)).filter(
+                          : ((B = d.length > e || _),
+                            b
+                              ? ((I = (I = Object(pe.e)(c.facets)).filter(
                                   function (e) {
-                                    return o.ShouldShowCapsule(e);
+                                    return s.ShouldShowCapsule(e);
                                   }
                                 )),
-                                t && f.SetPotentiallyVisibleCapsules(B),
-                                (I = f.FilterCapsules(B)),
-                                f.SetFilteredCapsules(I, u.length, A),
-                                v && f.SetFacetCounts(v),
-                                f.BIsAnyUserPreferenceEnabled()
-                                  ? ((L = f.BHasHideIgnoredItemsFacetValue()),
-                                    (T = f.BIsUserPreferenceEnabled(
+                                t && b.SetPotentiallyVisibleCapsules(I),
+                                (L = b.FilterCapsules(I)),
+                                b.SetFilteredCapsules(L, d.length, B),
+                                g && b.SetFacetCounts(g),
+                                b.BIsAnyUserPreferenceEnabled()
+                                  ? ((T = b.BHasHideIgnoredItemsFacetValue()),
+                                    (D = b.BIsUserPreferenceEnabled(
                                       p.m.k_EHideOwnedItems
                                     )),
-                                    (D = f.BIsUserPreferenceEnabled(
+                                    (j = b.BIsUserPreferenceEnabled(
                                       p.m.k_EHideWishlistedItems
                                     )),
-                                    (j = f.BIsUserPreferenceEnabled(
+                                    (R = b.BIsUserPreferenceEnabled(
                                       p.m.k_EHideIgnoredItems
                                     )),
-                                    [4, Object(w.b)(u, !1, T, D, L, j)])
+                                    [4, Object(w.b)(d, !1, D, j, T, R)])
                                   : [3, 14])
                               : [3, 14]);
                       case 13:
-                        (u = a.sent()), (a.label = 14);
+                        (d = a.sent()), (a.label = 14);
                       case 14:
                         return (
                           this.setState({
                             bInitialLoadComplete: !0,
-                            rgCapsules: u,
+                            rgCapsules: d,
                             nVisibleRows: e,
-                            nNumRequestedLastTime: _,
-                            bIsMoreAvailable: A,
+                            nNumRequestedLastTime: v,
+                            bIsMoreAvailable: B,
                             bAwaitingMoreRowsLoading: !1,
-                            nHiddenCapsules: m,
+                            nHiddenCapsules: h,
                           }),
                           [2]
                         );
@@ -18213,35 +18249,35 @@ var CLSTAMP = "6605937";
     },
     AvbV: function (e, t, n) {
       var r = {
-        "./main_brazilian.json": ["TFAN", 40],
-        "./main_bulgarian.json": ["c2SO", 41],
-        "./main_czech.json": ["peP3", 42],
-        "./main_danish.json": ["0bnV", 43],
-        "./main_dutch.json": ["wcLc", 44],
-        "./main_english.json": ["/rNK", 45],
-        "./main_finnish.json": ["iywU", 46],
-        "./main_french.json": ["Xnpc", 47],
-        "./main_german.json": ["pmKi", 48],
-        "./main_greek.json": ["mTRv", 49],
-        "./main_hungarian.json": ["WkHb", 50],
-        "./main_italian.json": ["Jz5U", 51],
-        "./main_japanese.json": ["3Dk9", 52],
-        "./main_koreana.json": ["neQD", 53],
-        "./main_latam.json": ["6oHD", 54],
-        "./main_norwegian.json": ["2OvS", 55],
-        "./main_polish.json": ["3pwE", 56],
-        "./main_portuguese.json": ["hY40", 57],
-        "./main_romanian.json": ["Q95+", 58],
-        "./main_russian.json": ["bsPT", 59],
-        "./main_sc_schinese.json": ["GOaQ", 60],
-        "./main_schinese.json": ["B/Zz", 61],
-        "./main_spanish.json": ["U6iL", 62],
-        "./main_swedish.json": ["4uPU", 63],
-        "./main_tchinese.json": ["rgC9", 64],
-        "./main_thai.json": ["87dp", 65],
-        "./main_turkish.json": ["yMpO", 66],
-        "./main_ukrainian.json": ["zTWm", 67],
-        "./main_vietnamese.json": ["wqiy", 68],
+        "./main_brazilian.json": ["TFAN", 69],
+        "./main_bulgarian.json": ["c2SO", 70],
+        "./main_czech.json": ["peP3", 71],
+        "./main_danish.json": ["0bnV", 72],
+        "./main_dutch.json": ["wcLc", 73],
+        "./main_english.json": ["/rNK", 74],
+        "./main_finnish.json": ["iywU", 75],
+        "./main_french.json": ["Xnpc", 76],
+        "./main_german.json": ["pmKi", 77],
+        "./main_greek.json": ["mTRv", 78],
+        "./main_hungarian.json": ["WkHb", 79],
+        "./main_italian.json": ["Jz5U", 80],
+        "./main_japanese.json": ["3Dk9", 81],
+        "./main_koreana.json": ["neQD", 82],
+        "./main_latam.json": ["6oHD", 83],
+        "./main_norwegian.json": ["2OvS", 84],
+        "./main_polish.json": ["3pwE", 85],
+        "./main_portuguese.json": ["hY40", 86],
+        "./main_romanian.json": ["Q95+", 87],
+        "./main_russian.json": ["bsPT", 88],
+        "./main_sc_schinese.json": ["GOaQ", 89],
+        "./main_schinese.json": ["B/Zz", 90],
+        "./main_spanish.json": ["U6iL", 91],
+        "./main_swedish.json": ["4uPU", 92],
+        "./main_tchinese.json": ["rgC9", 93],
+        "./main_thai.json": ["87dp", 94],
+        "./main_turkish.json": ["yMpO", 95],
+        "./main_ukrainian.json": ["zTWm", 96],
+        "./main_vietnamese.json": ["wqiy", 97],
       };
       function a(e) {
         if (!n.o(r, e))
@@ -53655,13 +53691,14 @@ var CLSTAMP = "6605937";
                     })
                   : this.m_prunedFacets.forEach(function (t) {
                       t.facetValues.forEach(function (t) {
-                        var n,
-                          r = t.facetValue.nAtomicStoreTagID,
-                          a =
-                            (null === (n = e.m_facetCounts) || void 0 === n
-                              ? void 0
-                              : n.get(r)) || 1;
-                        t.bDeactivated = !t.bEnabled && !a;
+                        var n = t.facetValue.nAtomicStoreTagID,
+                          r = 1;
+                        n &&
+                          e.m_facetCounts &&
+                          (r = e.m_facetCounts.has(n)
+                            ? e.m_facetCounts.get(n)
+                            : 0),
+                          (t.bDeactivated = !t.bEnabled && !r);
                       });
                     });
             }),
@@ -54204,9 +54241,14 @@ var CLSTAMP = "6605937";
         return e.type + e.id;
       }
       function B(e) {
+        var t;
         return (
           !e.smart_section ||
-          new Set(["popularpurchased"]).has(e.smart_section_type)
+          ("sale_item_browser" === e.section_type
+            ? !(null === (t = e.item_browse_section_data) || void 0 === t
+                ? void 0
+                : t.source_content_hub)
+            : new Set(["popularpurchased"]).has(e.smart_section_type))
         );
       }
       function I(e) {
@@ -56374,12 +56416,12 @@ var CLSTAMP = "6605937";
           return Promise.all([n.e(0), n.e(8)]).then(n.bind(null, "3WEt"));
         }),
         pe = s.a.lazy(function () {
-          return Promise.all([n.e(0), n.e(2), n.e(38)]).then(
+          return Promise.all([n.e(0), n.e(2), n.e(67)]).then(
             n.bind(null, "CGeh")
           );
         }),
         me = s.a.lazy(function () {
-          return Promise.all([n.e(0), n.e(2), n.e(72)]).then(
+          return Promise.all([n.e(0), n.e(2), n.e(101)]).then(
             n.bind(null, "tPo2")
           );
         }),
@@ -72931,36 +72973,36 @@ var CLSTAMP = "6605937";
     },
     rCDf: function (e, t, n) {
       var r = {
-        "./shared_arabic.json": ["d1TB", 73],
-        "./shared_brazilian.json": ["Pg9r", 74],
-        "./shared_bulgarian.json": ["ENge", 75],
-        "./shared_czech.json": ["Ts6V", 76],
-        "./shared_danish.json": ["9oiU", 77],
-        "./shared_dutch.json": ["nxN4", 78],
-        "./shared_english.json": ["TYjx", 79],
-        "./shared_finnish.json": ["NuB8", 80],
-        "./shared_french.json": ["bOPj", 81],
-        "./shared_german.json": ["svuF", 82],
-        "./shared_greek.json": ["eJKB", 83],
-        "./shared_hungarian.json": ["T7i2", 84],
-        "./shared_italian.json": ["w96W", 85],
-        "./shared_japanese.json": ["XQ4S", 86],
-        "./shared_koreana.json": ["4hyI", 87],
-        "./shared_latam.json": ["3qrw", 88],
-        "./shared_norwegian.json": ["XA4Q", 89],
-        "./shared_polish.json": ["TpXn", 90],
-        "./shared_portuguese.json": ["Q8UV", 91],
-        "./shared_romanian.json": ["Eme1", 92],
-        "./shared_russian.json": ["BUiO", 93],
-        "./shared_sc_schinese.json": ["O0N/", 94],
-        "./shared_schinese.json": ["3UpY", 95],
-        "./shared_spanish.json": ["4Fxc", 96],
-        "./shared_swedish.json": ["0JhB", 97],
-        "./shared_tchinese.json": ["OYRc", 98],
-        "./shared_thai.json": ["lhAZ", 99],
-        "./shared_turkish.json": ["RSoU", 100],
-        "./shared_ukrainian.json": ["lNXI", 101],
-        "./shared_vietnamese.json": ["RSmC", 102],
+        "./shared_arabic.json": ["d1TB", 102],
+        "./shared_brazilian.json": ["Pg9r", 103],
+        "./shared_bulgarian.json": ["ENge", 104],
+        "./shared_czech.json": ["Ts6V", 105],
+        "./shared_danish.json": ["9oiU", 106],
+        "./shared_dutch.json": ["nxN4", 107],
+        "./shared_english.json": ["TYjx", 108],
+        "./shared_finnish.json": ["NuB8", 109],
+        "./shared_french.json": ["bOPj", 110],
+        "./shared_german.json": ["svuF", 111],
+        "./shared_greek.json": ["eJKB", 112],
+        "./shared_hungarian.json": ["T7i2", 113],
+        "./shared_italian.json": ["w96W", 114],
+        "./shared_japanese.json": ["XQ4S", 115],
+        "./shared_koreana.json": ["4hyI", 116],
+        "./shared_latam.json": ["3qrw", 117],
+        "./shared_norwegian.json": ["XA4Q", 118],
+        "./shared_polish.json": ["TpXn", 119],
+        "./shared_portuguese.json": ["Q8UV", 120],
+        "./shared_romanian.json": ["Eme1", 121],
+        "./shared_russian.json": ["BUiO", 122],
+        "./shared_sc_schinese.json": ["O0N/", 123],
+        "./shared_schinese.json": ["3UpY", 124],
+        "./shared_spanish.json": ["4Fxc", 125],
+        "./shared_swedish.json": ["0JhB", 126],
+        "./shared_tchinese.json": ["OYRc", 127],
+        "./shared_thai.json": ["lhAZ", 128],
+        "./shared_turkish.json": ["RSoU", 129],
+        "./shared_ukrainian.json": ["lNXI", 130],
+        "./shared_vietnamese.json": ["RSmC", 131],
       };
       function a(e) {
         if (!n.o(r, e))
@@ -86547,5 +86589,5 @@ var CLSTAMP = "6605937";
       );
     },
   },
-  [["gfbn", 69, 0]],
+  [["gfbn", 98, 0]],
 ]);

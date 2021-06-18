@@ -9392,7 +9392,7 @@
                 });
               });
             }),
-            (e.prototype.GetFlavorCacheKey = function (e, t, n, r, a) {
+            (e.prototype.GetFlavorCacheKey = function (e, t, n, r, a, i, o) {
               return (
                 "key-" +
                 e +
@@ -9403,7 +9403,11 @@
                 "-" +
                 (r || "") +
                 "-" +
-                a
+                a +
+                "-" +
+                i +
+                "-" +
+                o
               );
             }),
             (e.prototype.ValidateDataGameByFlavor = function (e) {
@@ -9428,47 +9432,49 @@
               c,
               l,
               u,
-              p
+              p,
+              m,
+              h
             ) {
-              var m, h, f;
+              var f, _, v;
               return (
                 void 0 === l && (l = 0),
                 void 0 === u && (u = void 0),
                 Object(a.b)(this, void 0, void 0, function () {
-                  var _, v, b, y, E, C, O, w, I, B, D, j, T, A;
+                  var b, y, E, C, O, w, I, B, D, j, T, A, M, L;
                   return Object(a.e)(this, function (a) {
                     switch (a.label) {
                       case 0:
                         if (
-                          ((_ = this.m_mapSaleGameListsByFlavor.get(e)) ||
-                            ((v =
+                          ((b = this.m_mapSaleGameListsByFlavor.get(e)) ||
+                            ((y =
                               "browser_" +
                               o +
                               (null == s ? void 0 : s.GetQuery()) +
                               (r ? "_" + r : "_*") +
                               (t ? u : "")),
-                            (b = Object(S.g)(v, "application_config")),
-                            this.ValidateDataGameByFlavor(b)
-                              ? ((_ = b),
-                                this.m_mapSaleGameListsByFlavor.set(e, b))
-                              : ((_ = {
+                            (E = Object(S.g)(y, "application_config")),
+                            this.ValidateDataGameByFlavor(E)
+                              ? ((b = E),
+                                this.m_mapSaleGameListsByFlavor.set(e, E))
+                              : ((b = {
                                   appids: [],
                                   solr_index: 0,
                                   possible_has_more: !0,
                                 }),
-                                this.m_mapSaleGameListsByFlavor.set(e, _))),
-                          (y = _.appids.length),
-                          !((E = l + c - y) > 0 && _.possible_has_more))
+                                this.m_mapSaleGameListsByFlavor.set(e, b))),
+                          (C = b.appids.length),
+                          !((O = l + c - C) > 0 && b.possible_has_more))
                         )
                           return [3, 5];
                         if (
-                          ((C =
+                          ((w =
                             S.c.STORE_BASE_URL +
                             (n
                               ? "saleaction/ajaxpreviewsaledynamicappquery"
                               : "saleaction/ajaxgetsaledynamicappquery")),
-                          (O = null),
-                          (w = {
+                          (I = null),
+                          (B = {
                             cc: S.c.COUNTRY,
                             l: S.c.LANGUAGE,
                             clanAccountID:
@@ -9479,76 +9485,78 @@
                               (null == i ? void 0 : i.AnnouncementGID) || null,
                             flavor: o,
                             strFacetFilter: null == s ? void 0 : s.GetQuery(),
-                            start: _.solr_index,
-                            count: Math.max(E, 25),
+                            start: b.solr_index,
+                            count: Math.max(O, 25),
                             tabuniqueid: r,
                             return_capsules: !0,
                             search: t ? u : void 0,
                             origin: self.origin,
                             bForceUseSaleTag: !0,
+                            strContentHub: p,
+                            bContentHubDiscountedOnly: m,
                           }),
                           !(s && s.GetQuery().length > 0))
                         )
                           return [3, 2];
-                        for (B in ((I = new FormData()), w))
-                          I.append("" + B, "" + w[B]);
+                        for (j in ((D = new FormData()), B))
+                          D.append("" + j, "" + B[j]);
                         return [
                           4,
-                          g.a.post(C, I, {
+                          g.a.post(w, D, {
                             withCredentials: n,
-                            cancelToken: null == p ? void 0 : p.token,
+                            cancelToken: null == h ? void 0 : h.token,
                           }),
                         ];
                       case 1:
-                        return (O = a.sent()), [3, 4];
+                        return (I = a.sent()), [3, 4];
                       case 2:
                         return [
                           4,
-                          g.a.get(C, {
-                            params: w,
+                          g.a.get(w, {
+                            params: B,
                             withCredentials: n,
-                            cancelToken: null == p ? void 0 : p.token,
+                            cancelToken: null == h ? void 0 : h.token,
                           }),
                         ];
                       case 3:
-                        (O = a.sent()), (a.label = 4);
+                        (I = a.sent()), (a.label = 4);
                       case 4:
                         if (
-                          200 != (null == O ? void 0 : O.status) ||
+                          200 != (null == I ? void 0 : I.status) ||
                           1 !=
-                            (null === (m = O.data) || void 0 === m
+                            (null === (f = I.data) || void 0 === f
                               ? void 0
-                              : m.success) ||
-                          !(null === (h = O.data) || void 0 === h
+                              : f.success) ||
+                          !(null === (_ = I.data) || void 0 === _
                             ? void 0
-                            : h.appids)
+                            : _.appids)
                         )
                           throw new Error(
                             "query failed, status=" +
-                              (null == O ? void 0 : O.status) +
+                              (null == I ? void 0 : I.status) +
                               " success: " +
-                              (null === (f = null == O ? void 0 : O.data) ||
-                              void 0 === f
+                              (null === (v = null == I ? void 0 : I.data) ||
+                              void 0 === v
                                 ? void 0
-                                : f.success)
+                                : v.success)
                           );
-                        for (D = 0, j = O.data.appids; D < j.length; D++)
-                          (T = j[D]), _.appids.push(T);
-                        (_.facetCounts = O.data.faceting),
-                          (_.possible_has_more = O.data.possible_has_more),
-                          (_.solr_index = O.data.solr_index),
-                          O.data.app_info && d.a.AddAppLinks(O.data.app_info),
+                        for (T = 0, A = I.data.appids; T < A.length; T++)
+                          (M = A[T]), b.appids.push(M);
+                        (b.facetCounts = I.data.faceting),
+                          (b.possible_has_more = I.data.possible_has_more),
+                          (b.solr_index = I.data.solr_index),
+                          I.data.app_info && d.a.AddAppLinks(I.data.app_info),
                           (a.label = 5);
                       case 5:
                         return (
-                          this.m_mapSaleGameListsByFlavor.set(e, _),
-                          (A = _.possible_has_more || l + c < _.appids.length),
+                          this.m_mapSaleGameListsByFlavor.set(e, b),
+                          (L = b.possible_has_more || l + c < b.appids.length),
                           [
                             2,
                             {
-                              appids: _.appids.slice(l, c),
-                              facetCounts: _.facetCounts,
-                              bHasPossibleMoreResults: A,
+                              appids: b.appids.slice(l, c),
+                              facetCounts: b.facetCounts,
+                              bHasPossibleMoreResults: L,
                             },
                           ]
                         );
@@ -9566,48 +9574,53 @@
               o,
               s,
               c,
-              l
+              l,
+              u,
+              d
             ) {
               return (
                 void 0 === s && (s = 0),
                 void 0 === c && (c = void 0),
                 Object(a.b)(this, void 0, void 0, function () {
-                  var u,
-                    d,
-                    p,
-                    m = this;
-                  return Object(a.e)(this, function (h) {
-                    switch (h.label) {
+                  var p,
+                    m,
+                    h,
+                    f = this;
+                  return Object(a.e)(this, function (_) {
+                    switch (_.label) {
                       case 0:
                         (c = null == c ? void 0 : c.trim()),
-                          (u = Boolean(c)) && ((r = "search"), (t = void 0)),
-                          (d = this.GetFlavorCacheKey(
+                          (p = Boolean(c)) && ((r = "search"), (t = void 0)),
+                          l && (t = void 0),
+                          (m = this.GetFlavorCacheKey(
                             r,
                             i,
                             t,
                             c,
-                            (null == n ? void 0 : n.AnnouncementGID) || "0"
+                            (null == n ? void 0 : n.AnnouncementGID) || "0",
+                            l,
+                            u
                           )),
-                          (h.label = 1);
+                          (_.label = 1);
                       case 1:
-                        if (!this.m_mapPromisesByFlavor.has(d)) return [3, 6];
-                        h.label = 2;
+                        if (!this.m_mapPromisesByFlavor.has(m)) return [3, 6];
+                        _.label = 2;
                       case 2:
                         return (
-                          h.trys.push([2, 4, , 5]),
-                          [4, this.m_mapPromisesByFlavor.get(d)]
+                          _.trys.push([2, 4, , 5]),
+                          [4, this.m_mapPromisesByFlavor.get(m)]
                         );
                       case 3:
-                        return h.sent(), [3, 5];
+                        return _.sent(), [3, 5];
                       case 4:
-                        return h.sent(), [3, 5];
+                        return _.sent(), [3, 5];
                       case 5:
                         return [3, 1];
                       case 6:
                         return (
-                          (p = this.InternalGetSaleGamesByFlavor(
-                            d,
-                            u,
+                          (h = this.InternalGetSaleGamesByFlavor(
+                            m,
+                            p,
                             e,
                             t,
                             n,
@@ -9616,22 +9629,24 @@
                             o,
                             s,
                             c,
-                            l
+                            l,
+                            u,
+                            d
                           )),
-                          this.m_mapPromisesByFlavor.set(d, p),
+                          this.m_mapPromisesByFlavor.set(m, h),
                           (function () {
-                            return Object(a.b)(m, void 0, void 0, function () {
+                            return Object(a.b)(f, void 0, void 0, function () {
                               return Object(a.e)(this, function (e) {
                                 switch (e.label) {
                                   case 0:
-                                    return e.trys.push([0, 2, 3, 4]), [4, p];
+                                    return e.trys.push([0, 2, 3, 4]), [4, h];
                                   case 1:
                                     return e.sent(), [3, 4];
                                   case 2:
                                     return e.sent(), [3, 4];
                                   case 3:
                                     return (
-                                      this.m_mapPromisesByFlavor.delete(d), [7]
+                                      this.m_mapPromisesByFlavor.delete(m), [7]
                                     );
                                   case 4:
                                     return [2];
@@ -9639,7 +9654,7 @@
                               });
                             });
                           })(),
-                          [2, p]
+                          [2, h]
                         );
                     }
                   });
@@ -15537,13 +15552,14 @@
                     })
                   : this.m_prunedFacets.forEach(function (t) {
                       t.facetValues.forEach(function (t) {
-                        var n,
-                          r = t.facetValue.nAtomicStoreTagID,
-                          a =
-                            (null === (n = e.m_facetCounts) || void 0 === n
-                              ? void 0
-                              : n.get(r)) || 1;
-                        t.bDeactivated = !t.bEnabled && !a;
+                        var n = t.facetValue.nAtomicStoreTagID,
+                          r = 1;
+                        n &&
+                          e.m_facetCounts &&
+                          (r = e.m_facetCounts.has(n)
+                            ? e.m_facetCounts.get(n)
+                            : 0),
+                          (t.bDeactivated = !t.bEnabled && !r);
                       });
                     });
             }),
@@ -16089,9 +16105,14 @@
         return e.type + e.id;
       }
       function zn(e) {
+        var t;
         return (
           !e.smart_section ||
-          new Set(["popularpurchased"]).has(e.smart_section_type)
+          ("sale_item_browser" === e.section_type
+            ? !(null === (t = e.item_browse_section_data) || void 0 === t
+                ? void 0
+                : t.source_content_hub)
+            : new Set(["popularpurchased"]).has(e.smart_section_type))
         );
       }
       function Vn(e) {
@@ -16542,12 +16563,26 @@
                   });
                 });
             }),
+            (t.prototype.BUsesContentHubForItemSource = function (e) {
+              return Boolean(e.item_browse_section_data.source_content_hub);
+            }),
+            (t.prototype.GetContentHubName = function (e, t) {
+              var n, r;
+              return (
+                (null === (n = null == t ? void 0 : t.GetTab()) || void 0 === n
+                  ? void 0
+                  : n.source_content_hub_override) ||
+                (null === (r = e.item_browse_section_data) || void 0 === r
+                  ? void 0
+                  : r.source_content_hub)
+              );
+            }),
             (t.prototype.LoadCapsules = function (e, t) {
+              var n;
               return (
                 void 0 === t && (t = !0),
                 Object(a.b)(this, void 0, void 0, function () {
-                  var n,
-                    r,
+                  var r,
                     i,
                     o,
                     s,
@@ -16572,46 +16607,47 @@
                     T,
                     M,
                     L,
-                    R;
+                    R,
+                    k;
                   return Object(a.e)(this, function (a) {
                     switch (a.label) {
                       case 0:
                         return (
-                          (n = this.props),
-                          (r = n.event),
-                          (i = n.bIsPreview),
-                          (o = n.activeTab),
-                          (s = n.section),
-                          (c = this.state),
-                          (l = c.currentFlavor),
-                          (d = c.rgCapsules),
-                          (p = c.nNumRequestedLastTime),
-                          (m = c.nHiddenCapsules),
-                          (h = c.strSearchQuery),
-                          (f = c.facetFilterState),
+                          (r = this.props),
+                          (i = r.event),
+                          (o = r.bIsPreview),
+                          (s = r.activeTab),
+                          (c = r.section),
+                          (l = this.state),
+                          (d = l.currentFlavor),
+                          (p = l.rgCapsules),
+                          (m = l.nNumRequestedLastTime),
+                          (h = l.nHiddenCapsules),
+                          (f = l.strSearchQuery),
+                          (_ = l.facetFilterState),
                           [4, C.a.Get().HintLoad()]
                         );
                       case 1:
                         a.sent(),
-                          (_ = !0),
-                          (v = Math.max(p, e + 1)),
-                          (null == o ? void 0 : o.BIsTabFilteringEnabled()) &&
-                            (v = Math.max(v, 100)),
+                          (v = !0),
+                          (b = Math.max(m, e + 1)),
+                          (null == s ? void 0 : s.BIsTabFilteringEnabled()) &&
+                            (b = Math.max(b, 100)),
                           A.a.GetTimeNowWithOverride(),
                           3600,
                           86400,
-                          s.enable_faceted_browsing &&
-                            f.SetFromURLParam(
+                          c.enable_faceted_browsing &&
+                            _.SetFromURLParam(
                               Object(Rt.a)(
                                 this.props.location,
-                                "facets" + s.unique_id
+                                "facets" + c.unique_id
                               )
                             ),
                           (a.label = 2);
                       case 2:
-                        if (!(d.length <= e && _)) return [3, 12];
-                        (g = this.m_nHighestSentRequestID),
-                          (y = void 0),
+                        if (!(p.length <= e && v)) return [3, 12];
+                        (y = this.m_nHighestSentRequestID),
+                          (S = void 0),
                           (a.label = 3);
                       case 3:
                         return (
@@ -16619,32 +16655,37 @@
                           [
                             4,
                             E.GetSaleGamesByFlavor(
+                              o,
+                              null == s ? void 0 : s.GetActiveTabUniqueID(),
                               i,
-                              null == o ? void 0 : o.GetActiveTabUniqueID(),
-                              r,
-                              l,
-                              f,
-                              v,
+                              d,
+                              _,
+                              b,
                               0,
-                              h,
+                              f,
+                              this.GetContentHubName(c, s),
+                              null === (n = c.item_browse_section_data) ||
+                                void 0 === n
+                                ? void 0
+                                : n.content_hub_discounted_only,
                               this.m_cancelSignal
                             ),
                           ]
                         );
                       case 4:
                         return (
-                          (S = a.sent()),
-                          (y = S.appids),
-                          (b = S.facetCounts),
-                          (_ = S.bHasPossibleMoreResults),
+                          (O = a.sent()),
+                          (S = O.appids),
+                          (g = O.facetCounts),
+                          (v = O.bHasPossibleMoreResults),
                           [3, 6]
                         );
                       case 5:
                         return (
-                          (O = a.sent()),
+                          (I = a.sent()),
                           this.m_cancelSignal.token.reason ||
                             (console.error(
-                              "Failed to load games for browser;" + O.message
+                              "Failed to load games for browser;" + I.message
                             ),
                             this.setState({
                               bInitialLoadComplete: !0,
@@ -16653,74 +16694,75 @@
                           [2]
                         );
                       case 6:
-                        return this.m_nHighestReceivedRequestID > g
+                        return this.m_nHighestReceivedRequestID > y
                           ? [2]
-                          : ((this.m_nHighestReceivedRequestID = g),
-                            (d = y.map(function (e) {
+                          : ((this.m_nHighestReceivedRequestID = y),
+                            (p = S.map(function (e) {
                               return { id: e, type: "game" };
                             })),
                             this.state.strSearchQuery ||
-                              (d = d.filter(function (e) {
-                                return !o || o.ShouldShowCapsule(e);
+                              this.BUsesContentHubForItemSource(c) ||
+                              (p = p.filter(function (e) {
+                                return !s || s.ShouldShowCapsule(e);
                               })),
-                            [4, Object(w.i)(d)]);
+                            [4, Object(w.i)(p)]);
                       case 7:
                         return (
                           a.sent(),
-                          (I = new Array()),
-                          f
-                            ? ((T = f.BHasHideIgnoredItemsFacetValue()),
-                              [4, Object(w.b)(d, !1, !1, !1, T, !1, I)])
+                          (B = new Array()),
+                          _
+                            ? ((M = _.BHasHideIgnoredItemsFacetValue()),
+                              [4, Object(w.b)(p, !1, !1, !1, M, !1, B)])
                             : [3, 9]
                         );
                       case 8:
-                        return (d = a.sent()), [3, 11];
+                        return (p = a.sent()), [3, 11];
                       case 9:
-                        return [4, Object(w.a)(d, !1, I)];
+                        return [4, Object(w.a)(p, !1, B)];
                       case 10:
-                        (d = a.sent()), (a.label = 11);
+                        (p = a.sent()), (a.label = 11);
                       case 11:
                         return (
-                          (m = I.length), d.length <= e && (v += 8), [3, 2]
+                          (h = B.length), p.length <= e && (b += 8), [3, 2]
                         );
                       case 12:
                         return this.m_cancelSignal.token.reason
                           ? [2]
-                          : ((B = d.length > e || _),
-                            f
-                              ? ((D = (D = Vn(s.facets)).filter(function (e) {
-                                  return o.ShouldShowCapsule(e);
+                          : ((D = p.length > e || v),
+                            _
+                              ? ((j = (j = Vn(c.facets)).filter(function (e) {
+                                  return s.ShouldShowCapsule(e);
                                 })),
-                                t && f.SetPotentiallyVisibleCapsules(D),
-                                (j = f.FilterCapsules(D)),
-                                f.SetFilteredCapsules(j, d.length, B),
-                                b && f.SetFacetCounts(b),
-                                f.BIsAnyUserPreferenceEnabled()
-                                  ? ((T = f.BHasHideIgnoredItemsFacetValue()),
-                                    (M = f.BIsUserPreferenceEnabled(
+                                t && _.SetPotentiallyVisibleCapsules(j),
+                                (T = _.FilterCapsules(j)),
+                                _.SetFilteredCapsules(T, p.length, D),
+                                g && _.SetFacetCounts(g),
+                                _.BIsAnyUserPreferenceEnabled()
+                                  ? ((M = _.BHasHideIgnoredItemsFacetValue()),
+                                    (L = _.BIsUserPreferenceEnabled(
                                       u.m.k_EHideOwnedItems
                                     )),
-                                    (L = f.BIsUserPreferenceEnabled(
+                                    (R = _.BIsUserPreferenceEnabled(
                                       u.m.k_EHideWishlistedItems
                                     )),
-                                    (R = f.BIsUserPreferenceEnabled(
+                                    (k = _.BIsUserPreferenceEnabled(
                                       u.m.k_EHideIgnoredItems
                                     )),
-                                    [4, Object(w.b)(d, !1, M, L, T, R)])
+                                    [4, Object(w.b)(p, !1, L, R, M, k)])
                                   : [3, 14])
                               : [3, 14]);
                       case 13:
-                        (d = a.sent()), (a.label = 14);
+                        (p = a.sent()), (a.label = 14);
                       case 14:
                         return (
                           this.setState({
                             bInitialLoadComplete: !0,
-                            rgCapsules: d,
+                            rgCapsules: p,
                             nVisibleRows: e,
-                            nNumRequestedLastTime: v,
-                            bIsMoreAvailable: B,
+                            nNumRequestedLastTime: b,
+                            bIsMoreAvailable: D,
                             bAwaitingMoreRowsLoading: !1,
-                            nHiddenCapsules: m,
+                            nHiddenCapsules: h,
                           }),
                           [2]
                         );
