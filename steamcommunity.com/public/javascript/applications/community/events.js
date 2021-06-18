@@ -1315,7 +1315,7 @@
                 return e.clan_event_gid == m.GetGID();
               }),
               _ = !b && o.length >= 2 && !u,
-              h = !b && m.BPublished() && !u;
+              h = !b && m.GetGID() && m.BPublished() && !u;
             return h && !p.i.is_support
               ? s.createElement(
                   "div",
@@ -1370,7 +1370,7 @@
                       { className: V.a.Summary },
                       Object(f.f)("#EventCategory_SteamGameFestival_Summary")
                     ),
-                    Boolean(h && p.i.is_support) &&
+                    Boolean(_ && p.i.is_support) &&
                       s.createElement(
                         "div",
                         { className: K.WarningStylesWithIcon },
@@ -1383,7 +1383,7 @@
                           )
                         )
                       ),
-                    Boolean(_ && p.i.is_support) &&
+                    Boolean(h && p.i.is_support) &&
                       s.createElement(
                         "div",
                         { className: K.WarningStylesWithIcon },

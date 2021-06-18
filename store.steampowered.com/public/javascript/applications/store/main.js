@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6611430";
+var CLSTAMP = "6612696";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [68],
   {
@@ -12212,11 +12212,11 @@ var CLSTAMP = "6611430";
                         .forEach(function (e) {
                           t.ShouldShowSection(e) &&
                             e.capsules.forEach(function (r) {
-                              (function (e) {
+                              !(function (e) {
                                 return "sub" !== e.type && "bundle" !== e.type;
-                              })(r) &&
-                                (e.diable_tab_id_filtering ||
-                                  t.BIsTabFilteringEnabled()) &&
+                              })(r) ||
+                                (!e.diable_tab_id_filtering &&
+                                  t.BIsTabFilteringEnabled()) ||
                                 n.add(r.id);
                             });
                         }),
