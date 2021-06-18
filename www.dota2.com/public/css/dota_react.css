@@ -19410,14 +19410,7 @@ a {
   color: #999;
   margin-right: 12px;
 }
-.dpcregionstandings_DPCRegionStandings_3H8ng {
-  width: 100%;
-  max-width: 1200px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.dpcregionstandings_DPCStandingsDivision_3lnne {
+.dpcstandings_DPCStandingsDivision_KkUW3 {
   width: 100%;
   max-width: 1200px;
   display: flex;
@@ -19426,7 +19419,7 @@ a {
   justify-content: space-between;
   gap: 30px;
 }
-.dpcregionstandings_DPCStandingsTeamList_3UBv8 {
+.dpcstandings_DPCStandingsTeamList_jVT-8 {
   width: 380px;
   height: fit-content;
   display: flex;
@@ -19434,8 +19427,7 @@ a {
   align-items: center;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
 }
-.dpcregionstandings_DPCStandingsTeamList_3UBv8
-  .dpcregionstandings_Header_1iLRR {
+.dpcstandings_DPCStandingsTeamList_jVT-8 .dpcstandings_Header_3Kf0X {
   width: 100%;
   text-align: center;
   padding: 10px 0px;
@@ -19446,7 +19438,7 @@ a {
   letter-spacing: 1px;
   border-bottom: 1px solid #151518;
 }
-.dpcregionstandings_DPCStandingsTeam_3-bln {
+.dpcstandings_DPCStandingsTeam_25wGh {
   width: 100%;
   height: 70px;
   background-color: #27272d;
@@ -19456,31 +19448,31 @@ a {
   align-items: center;
   border-bottom: 1px solid #151518;
 }
-.dpcregionstandings_DPCStandingsTeam_3-bln.dpcregionstandings_Larger_3FS6Q {
+.dpcstandings_DPCStandingsTeam_25wGh.dpcstandings_Larger_8xn4E {
   height: 90px;
 }
-.dpcregionstandings_DPCStandingsTeam_3-bln.dpcregionstandings_Larger_3FS6Q
-  .dpcregionstandings_Standing_2uvLI {
+.dpcstandings_DPCStandingsTeam_25wGh.dpcstandings_Larger_8xn4E
+  .dpcstandings_Standing_33ZWb {
   font-size: 17px;
 }
-.dpcregionstandings_DPCStandingsTeam_3-bln.dpcregionstandings_Larger_3FS6Q
-  .dpcregionstandings_TeamName_Utar5 {
+.dpcstandings_DPCStandingsTeam_25wGh.dpcstandings_Larger_8xn4E
+  .dpcstandings_TeamName_QK1FS {
   font-size: 17px;
 }
-.dpcregionstandings_DPCStandingsTeam_3-bln.dpcregionstandings_Larger_3FS6Q
-  .dpcregionstandings_TeamLogo_p6D7N {
+.dpcstandings_DPCStandingsTeam_25wGh.dpcstandings_Larger_8xn4E
+  .dpcstandings_TeamLogo_KU9ho {
   width: 50px;
   min-width: 50px;
   height: 50px;
 }
-.dpcregionstandings_DPCStandingsTeam_3-bln.dpcregionstandings_Promoted_3x4hW {
+.dpcstandings_DPCStandingsTeam_25wGh.dpcstandings_Promoted_2yUII {
   background-color: #213823;
 }
-.dpcregionstandings_DPCStandingsTeam_3-bln.dpcregionstandings_Demoted_2Njjx,
-.dpcregionstandings_DPCStandingsTeam_3-bln.dpcregionstandings_Removed_UpOFm {
+.dpcstandings_DPCStandingsTeam_25wGh.dpcstandings_Demoted_aNSAu,
+.dpcstandings_DPCStandingsTeam_25wGh.dpcstandings_Removed_2YjFV {
   background-color: #382121;
 }
-.dpcregionstandings_DPCStandingsTeam_3-bln .dpcregionstandings_Standing_2uvLI {
+.dpcstandings_DPCStandingsTeam_25wGh .dpcstandings_Standing_33ZWb {
   width: 60px;
   min-width: 60px;
   text-align: center;
@@ -19488,14 +19480,14 @@ a {
   color: #a3a3a3;
   font-weight: 800;
 }
-.dpcregionstandings_DPCStandingsTeam_3-bln .dpcregionstandings_TeamLogo_p6D7N {
+.dpcstandings_DPCStandingsTeam_25wGh .dpcstandings_TeamLogo_KU9ho {
   width: 32px;
   min-width: 32px;
   height: 32px;
   margin-right: 15px;
   filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.4));
 }
-.dpcregionstandings_DPCStandingsTeam_3-bln .dpcregionstandings_TeamName_Utar5 {
+.dpcstandings_DPCStandingsTeam_25wGh .dpcstandings_TeamName_QK1FS {
   flex-grow: 1;
   color: #a3a3a3;
   text-transform: uppercase;
@@ -19504,7 +19496,7 @@ a {
   font-weight: 700;
   margin-left: 10px;
 }
-.dpcregionstandings_DPCStandingsTeam_3-bln .dpcregionstandings_Record_1h4rU {
+.dpcstandings_DPCStandingsTeam_25wGh .dpcstandings_Record_3WL3i {
   width: 60px;
   min-width: 60px;
   text-align: center;
@@ -19513,34 +19505,33 @@ a {
   font-weight: 700;
   color: #a3a3a3;
 }
-.dpcregionstandings_DPCStandingsBracket_2QBD2 {
+.dpcstandings_DPCStandingsBracket_9iCXI {
   width: 100%;
   margin-top: 30px;
 }
-.dpcregionstandings_DPCStandingsBracket_2QBD2
-  .dpcregionstandings_BracketContainer_3clp- {
+.dpcstandings_DPCStandingsBracket_9iCXI .dpcstandings_BracketContainer_3v7JH {
   width: 1400px;
   height: 1000px;
   margin: 0px auto;
   position: relative;
 }
-.dpcregionstandings_DPCStandingsBracket_2QBD2
-  .dpcregionstandings_BracketContainer_3clp-
-  .dpcregionstandings_BracketNodeContainer_1cykg {
+.dpcstandings_DPCStandingsBracket_9iCXI
+  .dpcstandings_BracketContainer_3v7JH
+  .dpcstandings_BracketNodeContainer_3Kqe4 {
   position: absolute;
 }
-.dpcregionstandings_DPCStandingsBracket_2QBD2
-  .dpcregionstandings_BracketContainer_3clp-
-  .dpcregionstandings_BracketConnectorContainer_2-QIa {
+.dpcstandings_DPCStandingsBracket_9iCXI
+  .dpcstandings_BracketContainer_3v7JH
+  .dpcstandings_BracketConnectorContainer_23fuG {
   position: absolute;
 }
-.dpcregionstandings_BracketNode_Gmw1F {
+.dpcstandings_BracketNode_29UKw {
   background-color: #27272d;
   display: flex;
   flex-direction: column;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
 }
-.dpcregionstandings_BracketNode_Gmw1F .dpcregionstandings_NodeHeader_EiKFT {
+.dpcstandings_BracketNode_29UKw .dpcstandings_NodeHeader_NdaUP {
   width: 100%;
   background-color: #36363e;
   border-bottom: #222;
@@ -19552,7 +19543,7 @@ a {
   text-align: left;
   padding: 2px 5px;
 }
-.dpcregionstandings_BracketNode_Gmw1F .dpcregionstandings_Teams_cpjR8 {
+.dpcstandings_BracketNode_29UKw .dpcstandings_Teams_2W8jh {
   width: 100%;
   flex-grow: 1;
   display: flex;
@@ -19560,43 +19551,43 @@ a {
   justify-content: space-evenly;
   padding-top: 6px;
 }
-.dpcregionstandings_BracketNode_Gmw1F
-  .dpcregionstandings_Teams_cpjR8
-  .dpcregionstandings_Team_3va1W {
+.dpcstandings_BracketNode_29UKw
+  .dpcstandings_Teams_2W8jh
+  .dpcstandings_Team_V9K9p {
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   color: #959596;
 }
-.dpcregionstandings_BracketNode_Gmw1F
-  .dpcregionstandings_Teams_cpjR8
-  .dpcregionstandings_Team_3va1W.dpcregionstandings_Winner_1u9z7 {
+.dpcstandings_BracketNode_29UKw
+  .dpcstandings_Teams_2W8jh
+  .dpcstandings_Team_V9K9p.dpcstandings_Winner_1MMzM {
   color: #ccc;
 }
-.dpcregionstandings_BracketNode_Gmw1F
-  .dpcregionstandings_Teams_cpjR8
-  .dpcregionstandings_Team_3va1W
-  .dpcregionstandings_TeamLogo_p6D7N {
+.dpcstandings_BracketNode_29UKw
+  .dpcstandings_Teams_2W8jh
+  .dpcstandings_Team_V9K9p
+  .dpcstandings_TeamLogo_KU9ho {
   width: 20px;
   height: 20px;
   margin-left: 8px;
   margin-right: 4px;
 }
-.dpcregionstandings_BracketNode_Gmw1F
-  .dpcregionstandings_Teams_cpjR8
-  .dpcregionstandings_Team_3va1W
-  .dpcregionstandings_TeamName_Utar5 {
+.dpcstandings_BracketNode_29UKw
+  .dpcstandings_Teams_2W8jh
+  .dpcstandings_Team_V9K9p
+  .dpcstandings_TeamName_QK1FS {
   flex-grow: 1;
   font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
-.dpcregionstandings_BracketNode_Gmw1F
-  .dpcregionstandings_Teams_cpjR8
-  .dpcregionstandings_Team_3va1W
-  .dpcregionstandings_Score_35zvc {
+.dpcstandings_BracketNode_29UKw
+  .dpcstandings_Teams_2W8jh
+  .dpcstandings_Team_V9K9p
+  .dpcstandings_Score_2veZP {
   width: 16px;
   margin-right: 8px;
   text-align: right;
@@ -19605,61 +19596,58 @@ a {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-.dpcregionstandings_BracketConnectorStraight_2O_OH {
+.dpcstandings_BracketConnectorStraight_3uw8A {
   height: 100%;
   position: relative;
 }
-.dpcregionstandings_BracketConnectorStraight_2O_OH
-  .dpcregionstandings_ConnectorLine_1HmRK {
+.dpcstandings_BracketConnectorStraight_3uw8A .dpcstandings_ConnectorLine_2FuUX {
   width: 100%;
   height: 1px;
   background-color: #555;
   position: absolute;
 }
-.dpcregionstandings_BracketConnectorCombine_TfH0M {
+.dpcstandings_BracketConnectorCombine_2RX6w {
   height: 100%;
   display: flex;
   flex-direction: row;
 }
-.dpcregionstandings_BracketConnectorCombine_TfH0M
-  .dpcregionstandings_Segment1_3igGD {
+.dpcstandings_BracketConnectorCombine_2RX6w .dpcstandings_Segment1_InAiB {
   width: 20px;
   height: 100%;
   position: relative;
 }
-.dpcregionstandings_BracketConnectorCombine_TfH0M
-  .dpcregionstandings_Segment1_3igGD
-  .dpcregionstandings_ConnectorLineTop_1mNMj {
+.dpcstandings_BracketConnectorCombine_2RX6w
+  .dpcstandings_Segment1_InAiB
+  .dpcstandings_ConnectorLineTop_35LQJ {
   width: 100%;
   height: 1px;
   background-color: #555;
   position: absolute;
 }
-.dpcregionstandings_BracketConnectorCombine_TfH0M
-  .dpcregionstandings_Segment1_3igGD
-  .dpcregionstandings_ConnectorLineBottom_2XXFW {
+.dpcstandings_BracketConnectorCombine_2RX6w
+  .dpcstandings_Segment1_InAiB
+  .dpcstandings_ConnectorLineBottom_3CasC {
   width: 100%;
   height: 1px;
   background-color: #555;
   position: absolute;
 }
-.dpcregionstandings_BracketConnectorCombine_TfH0M
-  .dpcregionstandings_ConnectorLineVertical_3oUHN {
+.dpcstandings_BracketConnectorCombine_2RX6w
+  .dpcstandings_ConnectorLineVertical_YvI1G {
   width: 1px;
   background-color: #555;
   position: absolute;
 }
-.dpcregionstandings_BracketConnectorCombine_TfH0M
-  .dpcregionstandings_Segment3_1hljF {
+.dpcstandings_BracketConnectorCombine_2RX6w .dpcstandings_Segment3_cMM1h {
   flex-grow: 1;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.dpcregionstandings_BracketConnectorCombine_TfH0M
-  .dpcregionstandings_Segment3_1hljF
-  .dpcregionstandings_ConnectorLineCombined_2fdZP {
+.dpcstandings_BracketConnectorCombine_2RX6w
+  .dpcstandings_Segment3_cMM1h
+  .dpcstandings_ConnectorLineCombined_Bm2SH {
   width: 100%;
   height: 1px;
   background-color: #555;
@@ -21039,316 +21027,238 @@ a {
 .dpcschedulepage_DPCSchedulePage_1OBQH {
   width: 100%;
   color: #fff;
-  background-color: #2f363b;
+  background-color: #222226;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.dpcschedulepage_DPCScheduleOptions_1oHZW {
+.dpcschedulepage_DPCScheduleHeader_2DFwc {
   width: 100%;
-  max-width: 1200px;
-  height: 120px;
+  height: 80px;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  gap: 40px;
   align-items: center;
-  background-color: #292d31;
-  margin-top: 30px;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.6);
+  position: sticky;
+  top: 180px;
+  background-color: #222226;
+  z-index: 998;
 }
-.dpcschedulepage_DPCScheduleOptions_1oHZW
-  .dpcschedulepage_ScheduleOptionsContainer_12Acw {
-  width: 1200px;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-}
-.dpcschedulepage_DPCScheduleMatches_1gNwY {
-  width: 1200px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  overflow: auto !important;
-  min-height: 0;
+.dpcschedulepage_DPCScheduleList_3QIzq {
+  width: 100%;
+  min-height: 1000px;
   display: flex;
   flex-direction: column;
-}
-.dpcschedulepage_DPCScheduleMatches_1gNwY.dpcschedulepage_AfterFirstScroll_2WIH2 {
-  scroll-behavior: smooth;
-}
-.dpcschedulepage_DPCScheduleMatches_1gNwY::-webkit-scrollbar-track {
-  padding: 8px 0px;
-  background-color: transparent;
-}
-.dpcschedulepage_DPCScheduleMatches_1gNwY::-webkit-scrollbar {
-  width: 12px;
-  border-radius: 10px;
-  background-color: #00000033;
-}
-.dpcschedulepage_DPCScheduleMatches_1gNwY::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #5c5c5c;
+  align-items: center;
+  gap: 6px;
+  padding: 30px 0px;
 }
 .dpcschedulepage_DPCScheduleEntry_b1AHp {
-  width: 1180px;
-  height: 80px;
-  min-height: 80px;
-  margin-bottom: 8px;
-  background-color: #242a2e;
+  width: 100%;
+  max-width: 1200px;
+  height: 70px;
+  background-color: #27272d;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
 }
-.dpcschedulepage_DPCScheduleEntry_b1AHp.dpcschedulepage_IsExpanded_a8Kvk.dpcschedulepage_OneMatch_3m43E {
-  height: 160px;
-  min-height: 160px;
+.dpcschedulepage_DPCScheduleEntry_b1AHp.dpcschedulepage_WithDayHeader_2EMAc {
+  height: 106px;
+  margin-top: 30px;
 }
-.dpcschedulepage_DPCScheduleEntry_b1AHp.dpcschedulepage_IsExpanded_a8Kvk.dpcschedulepage_TwoMatch_1kZtt {
-  height: 241px;
-  min-height: 241px;
-}
-.dpcschedulepage_DPCScheduleEntry_b1AHp.dpcschedulepage_IsExpanded_a8Kvk.dpcschedulepage_ThreeMatch_37XcD {
-  height: 321px;
-  min-height: 321px;
-}
-.dpcschedulepage_DPCScheduleEntry_b1AHp.dpcschedulepage_IsExpanded_a8Kvk.dpcschedulepage_FourMatch_3kK5U {
-  height: 401px;
-  min-height: 401px;
-}
-.dpcschedulepage_DPCScheduleEntry_b1AHp.dpcschedulepage_IsExpanded_a8Kvk.dpcschedulepage_FiveMatch_2lXNx {
-  height: 481px;
-  min-height: 481px;
-}
-.dpcschedulepage_DPCScheduleEntry_b1AHp.dpcschedulepage_IsExpanded_a8Kvk
-  .dpcschedulepage_DetailsSection_2UyAr {
+.dpcschedulepage_DPCScheduleEntry_b1AHp.dpcschedulepage_WithDayHeader_2EMAc
+  .dpcschedulepage_DayHeader_1HEm- {
   display: flex;
-  flex-direction: column;
+}
+.dpcschedulepage_DPCScheduleEntry_b1AHp .dpcschedulepage_DayHeader_1HEm- {
+  width: 100%;
+  height: 36px;
+  background-color: #36363e;
+  display: none;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
 }
-.dpcschedulepage_DPCScheduleEntry_b1AHp .dpcschedulepage_SummarySection_2UNb7 {
+.dpcschedulepage_DPCScheduleEntry_b1AHp
+  .dpcschedulepage_DayHeader_1HEm-
+  .dpcschedulepage_DateLabel_SDGyM {
+  color: #fff;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+}
+.dpcschedulepage_DPCScheduleEntry_b1AHp .dpcschedulepage_Body_2Lj7M {
   width: 100%;
-  height: 100%;
+  flex-grow: 1;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 .dpcschedulepage_DPCScheduleEntry_b1AHp
-  .dpcschedulepage_SummarySection_2UNb7
-  .dpcschedulepage_DateSection_5HxlZ {
+  .dpcschedulepage_Body_2Lj7M
+  .dpcschedulepage_LeftSection_1Tx1F {
   width: 250px;
   height: 100%;
-  min-height: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-right: 1px solid #000;
+  padding-left: 40px;
 }
 .dpcschedulepage_DPCScheduleEntry_b1AHp
-  .dpcschedulepage_SummarySection_2UNb7
-  .dpcschedulepage_DateSection_5HxlZ
-  .dpcschedulepage_Day_1DV6c {
-  color: #fff;
-  font-size: 18px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: bold;
-  margin-bottom: 2px;
-}
-.dpcschedulepage_DPCScheduleEntry_b1AHp
-  .dpcschedulepage_SummarySection_2UNb7
-  .dpcschedulepage_DateSection_5HxlZ
-  .dpcschedulepage_Time_3jI-0 {
-  color: #fff;
-  font-size: 16px;
-}
-.dpcschedulepage_DPCScheduleEntry_b1AHp
-  .dpcschedulepage_SummarySection_2UNb7
-  .dpcschedulepage_MatchupSection_28Hxi {
-  flex-grow: 1;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.dpcschedulepage_DPCScheduleEntry_b1AHp
-  .dpcschedulepage_SummarySection_2UNb7
-  .dpcschedulepage_MatchupSection_28Hxi
-  .dpcschedulepage_VS_3dTs- {
-  width: 60px;
-  font-size: 24px;
-  text-align: center;
-}
-.dpcschedulepage_DPCScheduleEntry_b1AHp
-  .dpcschedulepage_SummarySection_2UNb7
-  .dpcschedulepage_DetailsButton_2GvKx {
-  width: 200px;
-  height: 100%;
-  border-left: 1px solid #000;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #242a2e;
-}
-.dpcschedulepage_DPCScheduleEntry_b1AHp
-  .dpcschedulepage_SummarySection_2UNb7
-  .dpcschedulepage_DetailsButton_2GvKx.dpcschedulepage_Active_3IFkJ
-  .dpcschedulepage_DetailsLabel_8Rzxe {
-  display: block;
-}
-.dpcschedulepage_DPCScheduleEntry_b1AHp
-  .dpcschedulepage_SummarySection_2UNb7
-  .dpcschedulepage_DetailsButton_2GvKx.dpcschedulepage_Active_3IFkJ:hover {
-  cursor: pointer;
-  filter: brightness(1.1);
-}
-.dpcschedulepage_DPCScheduleEntry_b1AHp
-  .dpcschedulepage_SummarySection_2UNb7
-  .dpcschedulepage_DetailsButton_2GvKx
-  .dpcschedulepage_DetailsLabel_8Rzxe {
-  display: none;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #999;
-}
-.dpcschedulepage_DPCScheduleEntry_b1AHp .dpcschedulepage_DetailsSection_2UyAr {
-  display: none;
-  background-color: #2f363b;
-  border-left: 1px solid #242a2e;
-  border-right: 1px solid #242a2e;
-  border-bottom: 1px solid #242a2e;
-}
-.dpcschedulepage_DPCScheduleEntryMatch_3NQfg {
-  width: 100%;
-  height: 80px;
-  min-height: 80px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.dpcschedulepage_DPCScheduleEntryMatch_3NQfg .dpcschedulepage_LeftSection_1Tx1F,
-.dpcschedulepage_DPCScheduleEntryMatch_3NQfg
-  .dpcschedulepage_RightSection_2HVyi {
-  width: 200px;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.dpcschedulepage_DPCScheduleEntryMatch_3NQfg
+  .dpcschedulepage_Body_2Lj7M
   .dpcschedulepage_LeftSection_1Tx1F
-  .dpcschedulepage_GameLabel_2cSHd,
-.dpcschedulepage_DPCScheduleEntryMatch_3NQfg
-  .dpcschedulepage_RightSection_2HVyi
-  .dpcschedulepage_GameLabel_2cSHd {
-  font-size: 18px;
-  font-weight: bold;
+  .dpcschedulepage_NodeType_2cS46 {
+  color: #a3a3a3;
+  font-size: 14px;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 3px;
   text-align: center;
 }
-.dpcschedulepage_DPCScheduleEntryMatch_3NQfg
+.dpcschedulepage_DPCScheduleEntry_b1AHp
+  .dpcschedulepage_Body_2Lj7M
+  .dpcschedulepage_LeftSection_1Tx1F
+  .dpcschedulepage_TimeLabel_3WzgS {
+  color: #a3a3a3;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+}
+.dpcschedulepage_DPCScheduleEntry_b1AHp
+  .dpcschedulepage_Body_2Lj7M
   .dpcschedulepage_CenterSection__4qR4 {
   flex-grow: 1;
   height: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  color: #a3a3a3;
 }
-.dpcschedulepage_DPCScheduleEntryMatch_3NQfg
+.dpcschedulepage_DPCScheduleEntry_b1AHp
+  .dpcschedulepage_Body_2Lj7M
   .dpcschedulepage_CenterSection__4qR4
-  .dpcschedulepage_HeroList_19hC7 {
-  height: 32px;
-  display: flex;
-  flex-direction: row;
-}
-.dpcschedulepage_DPCScheduleEntryMatch_3NQfg
-  .dpcschedulepage_CenterSection__4qR4
-  .dpcschedulepage_HeroList_19hC7
-  .dpcschedulepage_HeroImage_h-96H {
-  width: 32px;
-  height: 32px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin: 0px 4px;
-}
-.dpcschedulepage_DPCScheduleEntryMatch_3NQfg
-  .dpcschedulepage_CenterSection__4qR4
-  .dpcschedulepage_MatchScore_48P1C {
-  width: 64px;
-  font-size: 18px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-align: center;
-}
-.dpcschedulepage_DPCScheduleEntryTeam_a7qyS {
-  width: 40%;
-  display: flex;
-  align-items: center;
-}
-.dpcschedulepage_DPCScheduleEntryTeam_a7qyS.dpcschedulepage_Left_3oMQk {
-  flex-direction: row;
-  justify-content: right;
-}
-.dpcschedulepage_DPCScheduleEntryTeam_a7qyS.dpcschedulepage_Left_3oMQk
-  .dpcschedulepage_NameAndRecord_1ugCn
-  .dpcschedulepage_TeamName_1DIrh {
-  text-align: right;
-}
-.dpcschedulepage_DPCScheduleEntryTeam_a7qyS.dpcschedulepage_Left_3oMQk
-  .dpcschedulepage_NameAndRecord_1ugCn
-  .dpcschedulepage_TeamRecord_3U_R5 {
-  text-align: right;
-}
-.dpcschedulepage_DPCScheduleEntryTeam_a7qyS.dpcschedulepage_Right_2FiuT {
-  justify-content: left;
-  flex-direction: row-reverse;
-}
-.dpcschedulepage_DPCScheduleEntryTeam_a7qyS.dpcschedulepage_Right_2FiuT
-  .dpcschedulepage_NameAndRecord_1ugCn
-  .dpcschedulepage_TeamName_1DIrh {
-  text-align: left;
-}
-.dpcschedulepage_DPCScheduleEntryTeam_a7qyS.dpcschedulepage_Right_2FiuT
-  .dpcschedulepage_NameAndRecord_1ugCn
-  .dpcschedulepage_TeamRecord_3U_R5 {
-  text-align: left;
-}
-.dpcschedulepage_DPCScheduleEntryTeam_a7qyS
-  .dpcschedulepage_NameAndRecord_1ugCn {
+  .dpcschedulepage_TeamSection_fp7w7 {
   flex-grow: 1;
-  min-height: 0;
+  flex-basis: 0;
   display: flex;
   flex-direction: column;
 }
-.dpcschedulepage_DPCScheduleEntryTeam_a7qyS
-  .dpcschedulepage_NameAndRecord_1ugCn
+.dpcschedulepage_DPCScheduleEntry_b1AHp
+  .dpcschedulepage_Body_2Lj7M
+  .dpcschedulepage_CenterSection__4qR4
+  .dpcschedulepage_TeamSection_fp7w7.dpcschedulepage_Left_3oMQk {
+  text-align: right;
+  margin-right: 10px;
+}
+.dpcschedulepage_DPCScheduleEntry_b1AHp
+  .dpcschedulepage_Body_2Lj7M
+  .dpcschedulepage_CenterSection__4qR4
+  .dpcschedulepage_TeamSection_fp7w7.dpcschedulepage_Right_2FiuT {
+  text-align: left;
+  margin-left: 10px;
+}
+.dpcschedulepage_DPCScheduleEntry_b1AHp
+  .dpcschedulepage_Body_2Lj7M
+  .dpcschedulepage_CenterSection__4qR4
+  .dpcschedulepage_TeamSection_fp7w7
   .dpcschedulepage_TeamName_1DIrh {
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: bold;
-  margin-bottom: 2px;
+  letter-spacing: 2px;
 }
-.dpcschedulepage_DPCScheduleEntryTeam_a7qyS
-  .dpcschedulepage_NameAndRecord_1ugCn
-  .dpcschedulepage_TeamRecord_3U_R5 {
-  font-size: 12px;
+.dpcschedulepage_DPCScheduleEntry_b1AHp
+  .dpcschedulepage_Body_2Lj7M
+  .dpcschedulepage_CenterSection__4qR4
+  .dpcschedulepage_TeamSection_fp7w7
+  .dpcschedulepage_Record_3w6xs {
+  font-size: 13px;
 }
-.dpcschedulepage_DPCScheduleEntryTeam_a7qyS .dpcschedulepage_TeamLogo_2Thg1 {
-  width: 48px;
-  height: 48px;
-  margin: 0px 12px;
-  background-size: cover;
-  background-repeat: no-repeat;
+.dpcschedulepage_DPCScheduleEntry_b1AHp
+  .dpcschedulepage_Body_2Lj7M
+  .dpcschedulepage_CenterSection__4qR4
+  .dpcschedulepage_TeamLogo_2Thg1 {
+  width: 52px;
+  height: 52px;
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.6));
+}
+.dpcschedulepage_DPCScheduleEntry_b1AHp
+  .dpcschedulepage_Body_2Lj7M
+  .dpcschedulepage_CenterSection__4qR4
+  .dpcschedulepage_LiveBannerContainer_fxbyy {
+  width: 100px;
+}
+.dpcschedulepage_DPCScheduleEntry_b1AHp
+  .dpcschedulepage_Body_2Lj7M
+  .dpcschedulepage_CenterSection__4qR4
+  .dpcschedulepage_LiveBannerContainer_fxbyy
+  .dpcschedulepage_LiveBanner_3gH8Q {
+  background-color: #00ab30;
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 11px;
+  border-radius: 2px;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  display: flex;
+  flex-direction: row;
+}
+.dpcschedulepage_DPCScheduleEntry_b1AHp
+  .dpcschedulepage_Body_2Lj7M
+  .dpcschedulepage_CenterSection__4qR4
+  .dpcschedulepage_LiveBannerContainer_fxbyy
+  .dpcschedulepage_LiveBanner_3gH8Q
+  .dpcschedulepage_Dot_39ck7 {
+  width: 8px;
+  height: 8px;
+  margin-left: 6px;
+  border-radius: 4px;
+  background-color: #fff;
+}
+.dpcschedulepage_DPCScheduleEntry_b1AHp
+  .dpcschedulepage_Body_2Lj7M
+  .dpcschedulepage_CenterSection__4qR4
+  .dpcschedulepage_Versus_39sGW {
+  width: 100px;
+  text-align: center;
+}
+.dpcschedulepage_DPCScheduleEntry_b1AHp
+  .dpcschedulepage_Body_2Lj7M
+  .dpcschedulepage_CenterSection__4qR4
+  .dpcschedulepage_Score_29AMa {
+  width: 100px;
+  text-align: center;
+}
+.dpcschedulepage_DPCScheduleEntry_b1AHp
+  .dpcschedulepage_Body_2Lj7M
+  .dpcschedulepage_RightSection_2HVyi {
+  width: 250px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.dpcschedulepage_DPCScheduleEntry_b1AHp
+  .dpcschedulepage_Body_2Lj7M
+  .dpcschedulepage_RightSection_2HVyi
+  .dpcschedulepage_MatchDetailsButton_3DdXj {
+  padding: 4px 20px;
+  border: 1px solid #48505a;
+  color: #49525c;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
 }
 * {
   box-sizing: border-box;
