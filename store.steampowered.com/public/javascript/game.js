@@ -1888,7 +1888,10 @@ function ReparentAppLandingPageForMobileUX()
 		$J('#reportBtn').appendTo('#rowBtnActions');
 		$J('#ignoreBtn').appendTo('#rowBtnActions');
 
-		// purchase banner
+		// place discovery queue below the action buttons
+		$J('#nextInDiscoveryQueue').appendTo('#queueCtn');
+		
+		// place purchase options where they'll be controlled by the purchase options banner 
 		$J('#game_area_purchase').appendTo('#purchaseOptionsContent');
 
 		// move DLC section below the recent events and announcements (instead of below the list of purchase options)
@@ -1899,7 +1902,7 @@ function ReparentAppLandingPageForMobileUX()
 		$J('#appReviewsAll').appendTo('#userReviews');
 		$J('#appReviewsRecent').appendTo('#userReviews');
 
-		// move reviews location
+		// move app reviews location
 		$J('#reviewsHeader').appendTo('#glanceCtnResponsiveRight');
 		$J('#userReviews').appendTo('#glanceCtnResponsiveRight');
 
@@ -1909,6 +1912,10 @@ function ReparentAppLandingPageForMobileUX()
 		$J('#bannerItemStore').appendTo('#appLinksAndInfo');
 		$J('#bannerCommunity').appendTo('#appLinksAndInfo');
 		$J('#appDetailsUnderlinedLinks').appendTo('#appLinksAndInfo');
+
+		// move some of the links and info content to the bottom 
+		// testing this - we may need to move this again  
+		$J('#genresAndManufacturer').appendTo('#appLinksAndInfo');
 	}
 }
 
@@ -1939,8 +1946,8 @@ function TogglePurchaseOptionsModal( divContentID )
 			$height -= GetResponsiveHeaderFixedOffsetAdjustment();
 
 			// we may not want the max height.  only use the screen space we need  
-			var $content = $J('#game_area_purchase');
-			var $contentHeight = parseInt( $content.height() ) + parseInt( $content.css('padding-top') );
+			var $content = $J('#purchaseOptionsContent');
+			var $contentHeight = parseInt( $content.height() );
 			$height = Math.min( $contentHeight, $height );
 
 			$modalDiv.css('height', $height);
