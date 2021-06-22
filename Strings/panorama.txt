@@ -21,8 +21,8 @@ __unwind_info
 __TEXT
 __eh_frame
 __TEXT
-0k?
-0k?
+k?
+k?
 __DATA
 __nl_symbol_ptr
 __DATA
@@ -54,17 +54,16 @@ __data
 __DATA
 __thread_vars
 __DATA
-GM
-GM
+PGM
+PGM
 __thread_bss
 __DATA
-@GM
+pGM
 __common
 __DATA
-@KM
+pKM
 __bss
 __DATA
-P4N
 H
 __LINKEDIT
 PM
@@ -73,13 +72,12 @@ PM
 @loader_path/panorama.dylib
 "
 PM
-0_M
-pM
-@rM
+8_M
+HrM
 `]
-,{N
+4{N
 P
-hcN
+pcN
 
 8
 @loader_path/libtier0_s.dylib
@@ -158,20 +156,14 @@ h
 6
 6
 3
-J
-J
-EM
 3
-3M
 6
-)M
 
 
 
 
 
 
-M
 M
 M
 M
@@ -2834,7 +2826,7 @@ SteelSeries Stratus Duo
 Amazon Luna Gamepad
 Xbox One Controller
 Xbox One S Controller
-Xbox One Series X Controller
+Xbox Series X Controller
 PDP Xbox One Afterglow
 PDP Xbox One Face-Off Controller
 PDP MK X Fight Pad
@@ -2872,7 +2864,10 @@ PDP Xbox One Cranblast
 PDP Xbox One Aqualime
 PDP Xbox One Red Camo
 PDP Xbox One RC Gamepad
-PowerA Xbox One Series X Controller
+PDP Xbox Series X Afterglow
+PDP Xbox Series X Midnight Blue
+PowerA Xbox Series X Controller
+PowerA Fusion Pro 2 Controller
 PowerA Xbox One Controller
 Xbox One Elite Controller
 Xbox One Elite 2 Controller
@@ -5132,8 +5127,8 @@ linux
 Linux;tenfoot
 X-ValveUserAgent
 panorama %s %s
-Jun 15 2021
-22:31:52
+Jun 21 2021
+14:16:14
 X-SteamClientVersion
 Assertion Failed: hostName
 Assertion Failed: pchRemoteHost
@@ -7690,20 +7685,14 @@ Assertion Failed: src.IsValid()
 6
 6
 3
-J
-J
-EM
 3
-3M
 6
-)M
 
 
 
 
 
 
-M
 M
 M
 M
@@ -7719,28 +7708,29 @@ D
 '
 '
 #
+fL
 "
+CL
 2
 2
 @
-JK
+I
+UK
 '
 ,
 g1
 v'
-iH
 1
 1
 1
 1
 !
 '
-=K
+6I
 X
 I!
 q0
 :&
-G
 !
 0
 &
@@ -7748,17 +7738,20 @@ q0
 &
 &
 &
+@G
 %
 G
 %
 %
+[I
 /
 F
 f.
-.H
-G
 .
 .
+SH
+bF
+E
 j-
 -
 -
@@ -7767,18 +7760,21 @@ j-
 {,
 0
 ,
+W/
 ,
 2
 2
 t1Mcu
 ?
+/
 %
 S
-A.
++
+D
 +
 +
 +
-+
+I+
 *+
 @
 @
@@ -7789,8 +7785,11 @@ A.
 &
 *
 *
+w*
 F%
 2%
+*
+*
 C
 @
 @
@@ -7800,10 +7799,10 @@ C
 @
 @
 @
+w+
 )
 @
 @
-d)
 &$
 @
 @
@@ -7818,7 +7817,8 @@ H=
 #
 2#
 ?
-U(
+?
+M(
 #
 #
 #
@@ -7830,15 +7830,13 @@ B
 B
 B
 B
-B
-B
-B
-@
 "
-f@
-L@
-F@
-?
+e@
+d@
+a@
+C@
+.@
+-@
 @
 $
 @
@@ -7858,23 +7856,22 @@ $
 @
 ?
 ?
-?
-X@
+_@
 @
 @
 @
 @
 @
 @
+o=
 %
 %
 %
->
 ?
 ?
-<
 }#
 j#
+=
 @
 @
 @
@@ -7885,11 +7882,10 @@ j#
 @
 @
 @
-W<
 @
 @
+k=
 #
-^=
 "
 @
 P
@@ -7898,6 +7894,7 @@ P
 P
 H!
 :!
+z8
 A
 "
 A
@@ -7905,12 +7902,14 @@ A
 A
 (
 $
+$
 !
 !
 !
 !
 !
 !
+*8
 @
 @
 A
@@ -7928,50 +7927,50 @@ $
 5
 7
 !
-`"
+7
 9
 9
-<
+9
+9
+9
+7
 0
 p
 w
-s!
 7
 7
-7
-7
-7
-7
-7
-7
-7
-y6
+>!
+!
 @
 @
-/5
 0
 p
 ?
 |
 
 2
+2
+4
 =
 m
-S0
+2
 Hi
-{1
-_1
 1
+H2
 @
 @
+.
 .
 .
 
 
-0
+L955X0
 -
+-
+/
 @
 @
+,
 .
 @
 @
@@ -7989,6 +7988,7 @@ _1
 @
 @
 @
+3+
 @
 @
 @
@@ -8096,7 +8096,6 @@ _1
 @
 @
 @
-t-
 @
 @
 @
@@ -8109,7 +8108,8 @@ t-
 @
 @
 @
-l-
+@
+@
 @
 @
 @
@@ -8263,8 +8263,6 @@ l-
 @
 @
 -
-@
-@
 @
 @
 @
@@ -8313,13 +8311,12 @@ l-
 @
 @
 o,
-R,
-O,
-F,
+3,
 @
 F
 @
 @
+f*
 C
 @
 @
@@ -8393,21 +8390,14 @@ C
 A
 Hc
 =
-'
 ]
 
 
-L(
-L95FA&
-L95 4&
-%
+M(
+0
+L95e%&
 Hc
-e
-M
-;
-(
-
-
+I
 
 
 
@@ -8463,7 +8453,6 @@ HcU
 #
 i[
 ~
-6
 B
 ?
 E
@@ -8500,7 +8489,7 @@ P
 v
 H=
 =
-~
+L
 
 =
 @
