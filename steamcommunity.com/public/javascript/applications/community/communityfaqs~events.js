@@ -352,6 +352,9 @@
           MigrateEvents: function () {
             return "/(migrateevents|migrate)";
           },
+          MigrateSaleEvents: function () {
+            return "/migrate/migratesale";
+          },
           WorkshopHub: function (e) {
             return "/app/" + e + "/workshop/";
           },

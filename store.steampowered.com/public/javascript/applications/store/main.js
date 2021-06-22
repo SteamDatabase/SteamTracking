@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6612696";
+var CLSTAMP = "6618346";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [68],
   {
@@ -2705,8 +2705,11 @@ var CLSTAMP = "6612696";
             }),
             (e.prototype.GetImageURL = function (e, t, n) {
               void 0 === t && (t = 0), void 0 === n && (n = u.c.full);
-              var r = this.GetImgArray(e);
-              return r && r.length > t && null != r[t]
+              var r = this.GetImgArray(e),
+                a = r && r.length > t && null != r[t];
+              return a && r[t].startsWith("http")
+                ? r[t]
+                : a
                 ? u.a.GenerateArtworkURLFromHashAndExtensions(
                     this.clanSteamID,
                     r[t],
@@ -37459,21 +37462,22 @@ var CLSTAMP = "6612696";
           S.Get().GetListDetails(t)
         );
       }
-      function E() {
-        var e = parseInt(
-            Object(v.h)("curator_account_id", "application_config")
-          ),
-          t = e && l.a.GetClanInfoByClanAccountID(e),
-          n = !!t;
+      function E(e) {
+        var t = e && l.a.GetClanInfoByClanAccountID(e),
+          n = Object(s.useState)(!!t),
+          r = n[0],
+          a = n[1];
         return (
           Object(s.useEffect)(
             function () {
-              if (n && e) {
+              if (r && e) {
                 var t = c.a.InitFromClanID(e);
-                l.a.LoadClanInfoForClanSteamID(t);
+                l.a.LoadClanInfoForClanSteamID(t).finally(function () {
+                  a(!0);
+                });
               }
             },
-            [n, e]
+            [r, e]
           ),
           t
         );
@@ -55652,40 +55656,43 @@ var CLSTAMP = "6612696";
         L = n("3Gzo"),
         T = function (e) {
           var t,
-            n = Object(M.f)(),
-            r = Object(M.g)(null == n ? void 0 : n.clanSteamID, e.listid),
-            a = Object(M.d)(r),
-            i = Object(M.e)(r);
-          if (!r) return null;
-          var o = Object(u.h)("showlisttitle", "application_config"),
-            c = Object(u.h)("titleareaheight", "application_config"),
-            l = 1 == r.list_type,
-            m =
-              r.list_jsondata.youtube_link &&
-              Object(g.b)(r.list_jsondata.youtube_link),
-            h = Object(p.g)(u.d.LANGUAGE),
-            f = d.a.GetWithFallback(r.localized_flat_title, h),
-            b = d.a.GetWithFallback(r.localized_flat_blurb, h),
-            _ = d.a.GetWithFallback(r.localized_flat_link, h),
-            v = Object(M.a)(r)
-              ? null === (t = r.apps) || void 0 === t
+            n = parseInt(
+              Object(u.h)("curator_account_id", "application_config")
+            ),
+            r = Object(M.f)(n),
+            a = Object(M.g)(null == r ? void 0 : r.clanSteamID, e.listid),
+            i = Object(M.d)(a),
+            o = Object(M.e)(a);
+          if (!a) return null;
+          var c = Object(u.h)("showlisttitle", "application_config"),
+            l = Object(u.h)("titleareaheight", "application_config"),
+            m = 1 == a.list_type,
+            h =
+              a.list_jsondata.youtube_link &&
+              Object(g.b)(a.list_jsondata.youtube_link),
+            f = Object(p.g)(u.d.LANGUAGE),
+            b = d.a.GetWithFallback(a.localized_flat_title, f),
+            _ = d.a.GetWithFallback(a.localized_flat_blurb, f),
+            v = d.a.GetWithFallback(a.localized_flat_link, f),
+            y = Object(M.a)(a)
+              ? null === (t = a.apps) || void 0 === t
                 ? void 0
                 : t.filter(function (e) {
                     var t;
-                    return null == i
+                    return null == o
                       ? void 0
-                      : i.has(
+                      : o.has(
                           null === (t = e.recommended_app) || void 0 === t
                             ? void 0
                             : t.appid
                         );
                   })
-              : r.apps,
-            y =
-              a &&
-              a.GetImageURL(
+              : a.apps,
+            S =
+              i &&
+              i.GetImageURL(
                 Object(L.a)() ? "product_mobile_banner" : "product_banner",
-                h
+                f
               );
           return s.a.createElement(
             "div",
@@ -55693,25 +55700,25 @@ var CLSTAMP = "6612696";
             s.a.createElement(
               "div",
               { className: I.a.TopReviewInfo },
-              y &&
+              S &&
                 s.a.createElement(
                   "a",
-                  { href: a.GetSaleURL() },
+                  { href: i.GetSaleURL() },
                   s.a.createElement("img", {
                     className: I.a.SaleBanner,
-                    src: y,
+                    src: S,
                   })
                 ),
-              o && f && s.a.createElement("div", { className: I.a.Title }, f),
-              o && b && s.a.createElement("div", { className: I.a.Blurb }, b),
-              c > 0 && s.a.createElement("div", { style: { height: c } }),
-              m &&
+              c && b && s.a.createElement("div", { className: I.a.Title }, b),
+              c && _ && s.a.createElement("div", { className: I.a.Blurb }, _),
+              l > 0 && s.a.createElement("div", { style: { height: l } }),
+              h &&
                 s.a.createElement(
                   "div",
                   { className: I.a.VideoReviewCtn },
                   s.a.createElement(C.b, {
-                    video: m.strVideoID,
-                    startSeconds: m.nStartSeconds,
+                    video: h.strVideoID,
+                    startSeconds: h.nStartSeconds,
                     autoplay: !0,
                     autopause: !0,
                     showFullscreenBtn: !0,
@@ -55721,21 +55728,21 @@ var CLSTAMP = "6612696";
                     imageClassnames: I.a.YouTubePreviewImage,
                   })
                 ),
-              _ && s.a.createElement(R, { url: _ })
+              v && s.a.createElement(R, { url: v })
             ),
             s.a.createElement(
               "div",
               {
                 className: Object(A.a)(
                   I.a.CuratorList,
-                  l && I.a.CuratorListGrid
+                  m && I.a.CuratorListGrid
                 ),
               },
-              v.map(function (e) {
+              y.map(function (e) {
                 return s.a.createElement(D, {
                   key: "rec_" + e.recommended_app.appid,
                   item: e,
-                  listDetails: r,
+                  listDetails: a,
                 });
               })
             ),
@@ -55749,8 +55756,8 @@ var CLSTAMP = "6612696";
               ),
               s.a.createElement(
                 "a",
-                { href: n.vanity_url },
-                Object(d.n)("#SteamCurator_MoreReviews", n.group_name)
+                { href: r.vanity_url },
+                Object(d.n)("#SteamCurator_MoreReviews", r.group_name)
               )
             )
           );
@@ -55760,36 +55767,39 @@ var CLSTAMP = "6612696";
             n,
             r = e.item,
             a = e.listDetails,
-            i = Object(M.f)();
+            i = parseInt(
+              Object(u.h)("curator_account_id", "application_config")
+            ),
+            o = Object(M.f)(i);
           if (
-            !i ||
+            !o ||
             !(null === (t = null == r ? void 0 : r.recommended_app) ||
             void 0 === t
               ? void 0
               : t.appid)
           )
             return null;
-          var o = r.recommended_app,
-            c = o.appid,
-            l = o.link_url,
-            u = o.blurb,
-            p = o.time_recommended,
-            m = o.recommendation_state,
-            h = y.a.GetAppLinkInfo(c);
-          if (!h) return null;
-          if (!Object(v.b)(h.type)) return null;
-          var f = i.is_creator_home,
-            b =
+          var c = r.recommended_app,
+            l = c.appid,
+            p = c.link_url,
+            m = c.blurb,
+            h = c.time_recommended,
+            f = c.recommendation_state,
+            b = y.a.GetAppLinkInfo(l);
+          if (!b) return null;
+          if (!Object(v.b)(b.type)) return null;
+          var _ = o.is_creator_home,
+            O =
               null === (n = a.list_jsondata.app_data) || void 0 === n
                 ? void 0
-                : n[c],
-            _ = l && Object(g.b)(l),
-            O = u != M.c && u,
-            C = S.a.Get().BHasDemoAppID(c),
-            A = null == b ? void 0 : b.img_url,
-            w =
+                : n[l],
+            C = p && Object(g.b)(p),
+            A = m != M.c && m,
+            w = S.a.Get().BHasDemoAppID(l),
+            B = null == O ? void 0 : O.img_url,
+            L =
               "curator_clanid=" +
-              i.clanAccountID +
+              o.clanAccountID +
               "&curator_listid=" +
               a.listid;
           return s.a.createElement(
@@ -55798,20 +55808,20 @@ var CLSTAMP = "6612696";
             s.a.createElement(
               "div",
               { className: I.a.CapsuleCtn },
-              _
+              C
                 ? s.a.createElement(N, {
-                    strVideoID: _.strVideoID,
-                    nStartSeconds: _.nStartSeconds,
-                    appInfo: h,
-                    strImgOverrideUrl: A,
-                    bShowDemoButton: C,
-                    strExtraParams: w,
+                    strVideoID: C.strVideoID,
+                    nStartSeconds: C.nStartSeconds,
+                    appInfo: b,
+                    strImgOverrideUrl: B,
+                    bShowDemoButton: w,
+                    strExtraParams: L,
                   })
                 : s.a.createElement(E.m, {
                     imageType: "header",
-                    capsule: h,
-                    bShowDemoButton: C,
-                    strExtraParams: w,
+                    capsule: b,
+                    bShowDemoButton: w,
+                    strExtraParams: L,
                   })
             ),
             s.a.createElement(
@@ -55820,25 +55830,25 @@ var CLSTAMP = "6612696";
               s.a.createElement(
                 "div",
                 { className: I.a.GameTitle },
-                null == h ? void 0 : h.name
+                null == b ? void 0 : b.name
               ),
               s.a.createElement(
                 "div",
                 { className: I.a.RecommendationTypeAndDate },
-                s.a.createElement(j, { type: m }),
+                s.a.createElement(j, { type: f }),
                 s.a.createElement(
                   "div",
                   { className: I.a.ReviewDate },
-                  f ? h.release : Object(d.o)(p)
+                  _ ? b.release : Object(d.o)(h)
                 )
               ),
-              O &&
+              A &&
                 s.a.createElement(
                   "div",
                   { className: I.a.ReviewBlurb },
-                  Object(d.f)("#SteamCurator_ReviewTextQuoted", O)
+                  Object(d.f)("#SteamCurator_ReviewTextQuoted", A)
                 ),
-              !!l && s.a.createElement(R, { url: l })
+              !!p && s.a.createElement(R, { url: p })
             )
           );
         }),

@@ -1872,3 +1872,21 @@ input.partnereventemails_HeadlineInput_2lHX9::placeholder {
 .migratetool_MigrateToolCtn_fGggy .migratetool_MigrateEventsButton_3-jPB:hover {
   background-color: gray;
 }
+.migratesaletool_SectionContainer_3ZElG {
+  min-height: 250px;
+}
+.migratesaletool_SectionTitle_1-ftd {
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.migratesaletool_RecordCtn_1gW9g {
+  display: flex;
+}
+.migratesaletool_RecordInfoCtn_6eQgp {
+  flex-grow: 4;
+}
+.search_curator_SearchResults_1roMu {
+  overflow: scroll;
+  max-height: 300px;
+}

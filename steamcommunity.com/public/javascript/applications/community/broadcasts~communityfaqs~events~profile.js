@@ -2605,8 +2605,11 @@
             }),
             (e.prototype.GetImageURL = function (e, t, n) {
               void 0 === t && (t = 0), void 0 === n && (n = u.c.full);
-              var r = this.GetImgArray(e);
-              return r && r.length > t && null != r[t]
+              var r = this.GetImgArray(e),
+                a = r && r.length > t && null != r[t];
+              return a && r[t].startsWith("http")
+                ? r[t]
+                : a
                 ? u.a.GenerateArtworkURLFromHashAndExtensions(
                     this.clanSteamID,
                     r[t],
@@ -36732,31 +36735,37 @@
     UCyf: function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
-        return h;
-      });
+        return v;
+      }),
+        n.d(t, "b", function () {
+          return b;
+        });
       var r = n("mrSG"),
         a = n("vDqi"),
         i = n.n(a),
         o = n("2vnA"),
-        s = (n("q1tI"), n("kLLr"), n("TQGK"), n("gOcu"), n("ee7K")),
-        c = (n("6oCP"), n("gyoR"), n("Kw0F")),
-        l = n("r64O"),
-        u = n("bDQf"),
-        d = (n("bxiW"), n("lkRc"));
-      function p(e) {
+        s = n("q1tI"),
+        c = n("kLLr"),
+        l = n("TQGK"),
+        u = (n("gOcu"), n("ee7K")),
+        d = (n("6oCP"), n("gyoR"), n("Kw0F")),
+        p = n("r64O"),
+        m = n("bDQf"),
+        h = (n("bxiW"), n("lkRc"));
+      function f(e) {
         e.list_jsondata && "string" == typeof e.list_jsondata
           ? (e.list_jsondata = JSON.parse(e.list_jsondata))
-          : (Object(l.a)(
+          : (Object(p.a)(
               !e.list_jsondata,
               "Found unexpected ListDetails_t.list_jsondata type: " +
                 typeof e.list_jsondata
             ),
             (e.list_jsondata = {}));
       }
-      function m(e, t) {
-        (t.localized_flat_title = Object(c.e)([], 30, null)),
-          (t.localized_flat_blurb = Object(c.e)([], 30, null)),
-          (t.localized_flat_link = Object(c.e)([], 30, null)),
+      function _(e, t) {
+        (t.localized_flat_title = Object(d.e)([], 30, null)),
+          (t.localized_flat_blurb = Object(d.e)([], 30, null)),
+          (t.localized_flat_link = Object(d.e)([], 30, null)),
           "0" !== t.title && (t.localized_flat_title[e] = t.title),
           "0" !== t.blurb && (t.localized_flat_blurb[e] = t.blurb),
           "0" !== t.link && (t.localized_flat_link[e] = t.link),
@@ -36782,15 +36791,15 @@
               (t.localized_flat_link[e.language] = e.localized_string);
           });
       }
-      var h = (function () {
+      var v = (function () {
         function e() {
           var e = this;
           (this.m_mapList = new Map()),
             (this.m_mapEventGIDToLists = new Map()),
             (this.m_mapListIDToClanAccount = new Map()),
-            "dev" == d.c.WEB_UNIVERSE && (window.g_curatorListStore = this);
-          var t = Object(d.g)("curatorlistdata", "application_config");
-          ("dev" != d.c.WEB_UNIVERSE && "beta" != d.c.WEB_UNIVERSE) ||
+            "dev" == h.c.WEB_UNIVERSE && (window.g_curatorListStore = this);
+          var t = Object(h.g)("curatorlistdata", "application_config");
+          ("dev" != h.c.WEB_UNIVERSE && "beta" != h.c.WEB_UNIVERSE) ||
             console.log(
               "DEV_DEBUG: CCuratorListStore loading list payload: " +
                 (null == t ? void 0 : t.length),
@@ -36800,8 +36809,8 @@
               Object(o.G)(function () {
                 t.forEach(function (t) {
                   t.multi_detail_lists.forEach(function (n) {
-                    p(n),
-                      m(t.curation_language, n),
+                    f(n),
+                      _(t.curation_language, n),
                       e.m_mapList.set(n.listid, n);
                   });
                 });
@@ -36820,14 +36829,14 @@
           (e.prototype.LoadListDetails = function (e, t, n) {
             var a;
             return Object(r.b)(this, void 0, void 0, function () {
-              var o, s, c, h, f, _;
+              var o, s, c, l, u, d;
               return Object(r.e)(this, function (v) {
                 switch (v.label) {
                   case 0:
                     if (this.m_mapList.has(t))
                       return [2, this.m_mapList.get(t)];
                     (o =
-                      d.c.STORE_BASE_URL +
+                      h.c.STORE_BASE_URL +
                       "curator/" +
                       e.GetAccountID() +
                       "/admin/ajaxgetlistdetails"),
@@ -36852,32 +36861,32 @@
                       void 0 === a
                         ? void 0
                         : a.success)
-                        ? ((h = Object(r.a)({}, c.data.list_details)),
-                          Object(l.a)(
-                            t == (null == h ? void 0 : h.listid),
+                        ? ((l = Object(r.a)({}, c.data.list_details)),
+                          Object(p.a)(
+                            t == (null == l ? void 0 : l.listid),
                             "Wanted" +
                               t +
                               "but got" +
-                              (null == h ? void 0 : h.listid)
+                              (null == l ? void 0 : l.listid)
                           ),
-                          p(h),
-                          m(c.data.curation_language, h),
-                          this.m_mapList.set(t, h),
+                          f(l),
+                          _(c.data.curation_language, l),
+                          this.m_mapList.set(t, l),
                           this.m_mapListIDToClanAccount.set(
                             t,
                             e.GetAccountID()
                           ),
-                          [2, h])
+                          [2, l])
                         : [3, 4]
                     );
                   case 3:
                     return (
-                      (f = v.sent()),
-                      (_ = Object(u.a)(f)),
+                      (u = v.sent()),
+                      (d = Object(m.a)(u)),
                       console.error(
                         "CCuratorListStore.LoadListDetails: error on load: " +
-                          _.strErrorMsg,
-                        _
+                          d.strErrorMsg,
+                        d
                       ),
                       [3, 4]
                     );
@@ -36891,19 +36900,19 @@
             return Object(r.b)(this, void 0, void 0, function () {
               var a, i;
               return Object(r.e)(this, function (r) {
-                return !d.i.logged_in ||
-                  (s.a.Get().BIsLoaded() &&
-                    0 == s.a.Get().GetFollowedCuratorCount())
+                return !h.i.logged_in ||
+                  (u.a.Get().BIsLoaded() &&
+                    0 == u.a.Get().GetFollowedCuratorCount())
                   ? [2, []]
                   : ((a =
-                      d.c.STORE_BASE_URL +
+                      h.c.STORE_BASE_URL +
                       "curators/ajaxgetmycuratorsalelists"),
                     (i = {
                       clan_account_id: e.GetAccountID(),
                       clan_event_gid: t,
                       origin: self.origin,
-                      curator_clan_account_followed: s.a.Get().BIsLoaded()
-                        ? s.a.Get().GetFollowedCuratorsAccountID().join(",")
+                      curator_clan_account_followed: u.a.Get().BIsLoaded()
+                        ? u.a.Get().GetFollowedCuratorsAccountID().join(",")
                         : void 0,
                     }),
                     [
@@ -36926,7 +36935,7 @@
               return Object(r.e)(this, function (r) {
                 return this.m_mapEventGIDToLists.has(t)
                   ? [2, this.m_mapEventGIDToLists.get(t)]
-                  : ((a = d.c.STORE_BASE_URL + "curators/ajaxfindcuratorlists"),
+                  : ((a = h.c.STORE_BASE_URL + "curators/ajaxfindcuratorlists"),
                     (i = {
                       clan_account_id: e.GetAccountID(),
                       clan_event_gid: t,
@@ -36957,10 +36966,10 @@
             var l;
             return Object(r.b)(this, void 0, void 0, function () {
               var a,
+                u,
                 d,
-                h,
-                f,
-                _ = this;
+                p,
+                h = this;
               return Object(r.e)(this, function (r) {
                 switch (r.label) {
                   case 0:
@@ -36982,31 +36991,31 @@
                       void 0 === l
                         ? void 0
                         : l.success)
-                        ? ((d = new Array()),
+                        ? ((u = new Array()),
                           Object(o.G)(function () {
                             a.data.matches &&
                               a.data.matches.forEach(function (e) {
                                 e.multi_detail_lists.forEach(function (t) {
-                                  _.m_mapListIDToClanAccount.set(
+                                  h.m_mapListIDToClanAccount.set(
                                     t.listid,
                                     e.clan_account_id
                                   ),
-                                    p(t),
-                                    m(e.curation_language, t),
-                                    _.m_mapList.set(t.listid, t),
-                                    d.push(t);
+                                    f(t),
+                                    _(e.curation_language, t),
+                                    h.m_mapList.set(t.listid, t),
+                                    u.push(t);
                                 });
                               }),
-                              _.m_mapEventGIDToLists.set(s, d);
+                              h.m_mapEventGIDToLists.set(s, u);
                           }),
-                          [2, d])
+                          [2, u])
                         : [3, 3]
                     );
                   case 2:
                     return (
-                      (h = r.sent()),
-                      (f = Object(u.a)(h)),
-                      console.error(n + ": error on load: " + f.strErrorMsg, f),
+                      (d = r.sent()),
+                      (p = Object(m.a)(d)),
+                      console.error(n + ": error on load: " + p.strErrorMsg, p),
                       [3, 3]
                     );
                   case 3:
@@ -37036,6 +37045,26 @@
           e
         );
       })();
+      function b(e) {
+        var t = e && l.a.GetClanInfoByClanAccountID(e),
+          n = Object(s.useState)(!!t),
+          r = n[0],
+          a = n[1];
+        return (
+          Object(s.useEffect)(
+            function () {
+              if (r && e) {
+                var t = c.a.InitFromClanID(e);
+                l.a.LoadClanInfoForClanSteamID(t).finally(function () {
+                  a(!0);
+                });
+              }
+            },
+            [r, e]
+          ),
+          t
+        );
+      }
     },
     UWWC: function (e, t, n) {
       "use strict";
