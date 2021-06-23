@@ -1022,7 +1022,8 @@
         (e[(e.Hidden = 0)] = "Hidden"),
           (e[(e.Notification = 1)] = "Notification"),
           (e[(e.Overlay = 2)] = "Overlay"),
-          (e[(e.Opaque = 3)] = "Opaque");
+          (e[(e.Opaque = 3)] = "Opaque"),
+          (e[(e.OverlayKeyboard = 4)] = "OverlayKeyboard");
       })(k || (k = {}));
     var v = t("gM6l");
     function f(e) {
