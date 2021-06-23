@@ -1285,6 +1285,11 @@ p.deprecated.star::before {
     padding-bottom: 3px;
 }
 
+.actionWarning {
+    font-weight: bold;
+    color: gold;
+}
+
 @media screen and (max-width: 910px) {
 
 	html .responsive_footer_ctn {

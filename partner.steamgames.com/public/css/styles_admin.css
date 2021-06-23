@@ -3477,16 +3477,23 @@ span.new {
 
 .checklist_incomplete
 {
-	/* color: #e24044; */
+	color: #e24044;
 }
 
 .checklist_suggested
 {
-	/* color: orange; */
+	color: orange;
+}
+.checklist_complete {
+    color: #a4d007;
 }
 
 .release_checklist_table {
     width: 100%;
+}
+.release_checklist_table tr.checklist_incomplete,
+.release_checklist_table tr.checklist_suggested {
+    color: #acacac;
 }
 .release_checklist_table tr.checklist_complete
 {

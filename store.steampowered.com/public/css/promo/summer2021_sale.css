@@ -2,13 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&display=swap');
 
 body.v6.sale_summer2021 {
-                background: #1A1A1A;
+                background: url('https://cdn.cloudflare.steamstatic.com/store/promo/summer2021/summer_sale_2021_front_page_background_1.jpg?v=1') no-repeat center top, #E0CDA3;
             }
 
 body.v6.sale_summer2021 .responsive_page_template_content {
-                max-width: 1800px;
                 margin: 0 auto;
-                background: url('https://cdn.cloudflare.steamstatic.com/store/promo/summer2021/main_page_bg_temp_wide.jpg?v=1') no-repeat center top, url('https://cdn.cloudflare.steamstatic.com/store/promo/summer2021/main_page_tile_temp_wide.jpg?v=1') repeat-y center top, #1A1A1A;
+                background: url('https://cdn.cloudflare.steamstatic.com/store/promo/summer2021/summer_sale_2021_front_page_frame.jpg?v=1') no-repeat center top, url('https://cdn.cloudflare.steamstatic.com/store/promo/summer2021/summer_sale_2021_front_page_frame_tile.jpg?v=1') repeat-y center top;
             }
 body.v6.sale_summer2021 .page_background_holder {
                 background-size: contain !important;
@@ -39,10 +38,10 @@ body.v6.sale_summer2021 .fullscreen-bg {
 
 body.v6.sale_summer2021 .home_header_textimage_ctn {
                 width: 940px;
+                max-width: 95vw;
                 z-index: 100;
                 position: absolute;
                 margin: 0;
-                top: 90px;
                 height: 70%;
                 max-height: 508px;
                 display: block;
@@ -75,6 +74,69 @@ body.v6.sale_summer2021 .home_ctn.discovery_queue_ctn, body.v6.sale_summer2021 .
     padding: 10px;
     background: linear-gradient(90deg, #0b2136, #706aa0);
     border-radius: 20px;
+}
+
+.bookmark_triangle {
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 15px solid transparent;
+    border-bottom-color: lightgray;
+    border-top-color: lightgray;
+}
+
+.bookmark_img {
+    width: 44px;
+    padding-top: 12px;
+    padding-right: 10px;
+    background-color: lightgray;
+}
+
+.bookmark_text {
+    font-size: 11px;
+    font-weight: 400;
+    font-family: "Big Shoulders Display";
+    color: #fefeef;
+    text-overflow: ellipsis;
+    background-color: lightgray;
+    padding: 14px 12px;
+    letter-spacing: 1px;
+}
+
+.bookmark_text > div {
+    font-size: 13px;
+    font-weight: 900;
+    color: #fefeef;
+    text-overflow: ellipsis;
+}
+
+.bookmark_ctn:hover {
+    filter: drop-shadow(2px 4px 16px #3D3E38cc);
+    transform: rotate(
+            3deg
+    ) scale(1.07);
+    -webkit-transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -moz-transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.bookmark_ctn {
+    margin-left: auto;
+    width: fit-content;
+    user-select: none;
+    height: 60px;
+    display: flex;
+    max-width: 25vw;
+    margin-top: 9%;
+    cursor: pointer;
+    filter: drop-shadow(2px 4px 12px #3D3E3899);
+    transform: rotate(
+            0deg
+    ) scale(1);
+    -webkit-transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -moz-transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .summer_top_text {
@@ -179,7 +241,6 @@ body.v6.sale_summer2021 .home_ctn.discovery_queue_ctn, body.v6.sale_summer2021 .
 
 
 .home_sticker_ctn {
-    background: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2020/winter_sale_2020_bird_banner.gif?v=1') no-repeat right top;
     background-size: cover;
     min-height: 240px;
     -webkit-filter: drop-shadow(12px px 7px rgba(0,0,0,0.5));
@@ -452,7 +513,6 @@ body.v6 .discount_block {}
 }
 
 .home_featured_ctn {
-    margin-bottom: 140px;
     margin-top: 40px;
 }
 .home_featured_ctn.hero_parent_ctn {
@@ -666,7 +726,7 @@ body.v6 .page_content_ctn.dark
 
 .home_category_ctn .home_category_title_ctn::after {
     content: "";
-    background: linear-gradient( to top left, #282f14 15.74%, #665e22 100% );
+	background: url('https://cdn.cloudflare.steamstatic.com/store/promo/summer2021/pink_page.jpg?v=1') no-repeat center top;
     background-size: cover;
     opacity: 1.0;
     top: 0;
@@ -717,7 +777,7 @@ body.v6 .page_content_ctn.dark
     letter-spacing: 0.03em;
     font-size: 36px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.45);
-    color: #ffffff;
+    color: #fefeef;
     word-wrap: break-word;
     min-width: 70%;
     max-width: 100%;
@@ -744,7 +804,7 @@ body.v6 .page_content_ctn.dark
     max-width: 100%;
     position: relative;
     text-transform: uppercase;
-    color: #ffffff;
+    color: #fefeef;
     word-wrap: break-word;
     font-weight: 900;
     font-size: 36px;
@@ -759,7 +819,7 @@ body.v6 .page_content_ctn.dark
     letter-spacing: 0.02em;
     font-size: 14px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.45);
-    color: #FFFFFF;
+    color: #fefeef;
     word-wrap: break-word;
     line-height: 48px;
     min-width: 70%;
@@ -861,6 +921,10 @@ body.v6 .page_content_ctn.dark
 		font-weight: normal; /* normal */
 
 		}
+
+body.forgeyourfate {
+    background: #000000;
+}
 
 @media screen and (min-width: 2300px )
 {
@@ -1029,8 +1093,8 @@ body.v6 .page_content_ctn.dark
         font-size: 28px;
     }
     body.responsive_page .page_background_holder,
-    body.responsive_page .page_background_holder, body.responsive_page .home_page_body_ctn.has_takeover .home_page_takeover_sizer {
-        height: 70vw !important;
+    body.responsive_page .page_background_holder, body.responsive_page .home_page_body_ctn .home_page_takeover_sizer {
+        height: 65vw !important;
     }
 
     .body.responsive_page .hero_ctn .hero_row {
@@ -1077,9 +1141,7 @@ body.v6 .page_content_ctn.dark
     html.responsive .home_topsellers_ctn .home_topsellers_games_ctn .TopSellerCapsule:nth-child(even) {
         transform: none;
     }
-    body.responsive_page .main_content_ctn {
-        margin-top: 100px;
-    }
+
     body.responsive_page .franchise_capsule {
         margin: 0 1%;
     }
@@ -1176,12 +1238,11 @@ body.v6 .page_content_ctn.dark
 
     body.v6.sale_summer2021 .home_page_takeover_sizer {
                     min-height: unset;
-                    height: 40vw !important;
+                    height: 30vw !important;
                 }
 
     html.responsive body.v6.sale_summer2021 .home_header_textimage_ctn {
-                                    width: 80vw;
-                                    height: 85%;
+
                                 }
 
     .home_category_title {
@@ -1235,8 +1296,14 @@ body.v6 .page_content_ctn.dark
     html.responsive .home_broadcast_ctn .home_broadcast_sections .home_broadcast_more_ctn {
         background: unset;
     }
+
+    html.responsive .tag_square_ribbon {
+        max-width: 25%;
+    }
+
     html.responsive .tag_square {
         max-width: 42vw;
+        margin: 0;
     }
     html.responsive .tag_genre_title {
         font-size: 18px;
@@ -1260,22 +1327,34 @@ body.v6 .page_content_ctn.dark
                                     background: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2020/winter_sale_2020_header_alpha2b.png?v=2') no-repeat center top 12vw, url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2020/winter_sale_folliage_tile_b.png?v=2') repeat center top, #101928;
                                     background-size: auto, contain;
                                 }
+    html.responsive body.v6.sale_summer2021 .home_header_textimage_ctn {
+    display: none;
+    }
+
+    html.responsive body.v6.sale_summer2021 .fullscreen-bg {
+    display: none;
+    }
+
+    body.v6.sale_summer2021 .home_page_takeover_sizer {
+                    min-height: unset;
+                    height: 65vw !important;
+                }
 
     .page_background_holder_mobile {
         display: block;
         width: 100%;
-        height: 100vw;
-        max-height: 510px;
-
+        height: 86vw;
+        max-height: 278px;
+        margin-top: 20px;
     }
+
     .home_header_textimage_mobile {
         background-size: contain;
         display: block;
         width: 100%;
         height: 100%;
         background-repeat: no-repeat;
-        -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 99%);
-        mask-image: linear-gradient(to bottom, black 80%, transparent 99%);
+        background-position: center;
     }
 
     .event_nav_element {
@@ -1471,12 +1550,6 @@ body.v6 .page_content_ctn.dark
 .tag_genre_ctn .floating_image {
     margin-bottom: -35px;
     margin-left: -75px;
-}
-
-.tag_genre_ctn .home_title_ctn,
-.tag_genre_ctn .home_subtitle_ctn {
-    margin-left: 86px;
-    margin-bottom: 0px;
 }
 
 .home_discovery_queue_ctn {
@@ -2402,12 +2475,14 @@ img.franchise_placeholder {
     transition-duration: 0.3s;
     transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
     transition-property: transform;
+    max-height: 221px;
+    max-width: 221px;
 }
 
 .tag_genre_title {
     font-size: 18px;
     line-height: 20px;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.45);
+    text-shadow: 0 1px 3px rgb(0 0 0);
     text-transform: uppercase;
     position: absolute;
     text-align: center;
@@ -2424,27 +2499,28 @@ img.franchise_placeholder {
     transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
 }
 
-.tag_square img {
+.tag_square_ribbon {
+    position: absolute;
+    top: 0;
+    z-index: 5;
+    left: 10%;
+}
+
+.tag_square_img {
+    width: 100%;
     transition-property: transform, filter;
     transition-duration: 0.3s;
     transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
-    -webkit-filter: contrast(150%) saturate(0);
-    filter: contrast(150%) saturate(0);
-    background-blend-mode: overlay;
-    gaussian-blur: (0.5);
+    display: block;
 }
 
 .tag_square_overlay {
     position: abosolute;
-    background-blend-mode: overlay;
-    background: -webkit-linear-gradient( 315deg, #34526F 5%, #01c5c2 95%);
-    background: linear-gradient( 315deg, #34526F 5%, #01c5c2 95%);
     opacity: 0.5;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    position: absolute;
     transition-property: box-shadow;
     transition-duration: 0.3s;
     transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
@@ -2456,15 +2532,6 @@ img.franchise_placeholder {
     z-index: 10;
 }
 
-.tag_square:hover .tag_square_img
-{
-    -webkit-filter: contrast(100%) saturate(1) blur(0px);
-    filter: contrast(100%) saturate(1);
-}
-
-.tag_square:hover .tag_square_overlay {
-    box-shadow: inset 0px 0px 160px 30px rgba(115, 58, 248, 0.8);
-}
 .home_discount_games_ctn
 {
     display: flex;
@@ -2499,16 +2566,14 @@ img.franchise_placeholder {
     padding: 0px 0px 5px 0px;
 }
 
-.tag_square
-{
+.tag_square {
     margin: 1% 1%;
-    max-width: 25vw;
     flex: 1;
 }
 
 .carousel_container .carousel_items:not(.no_paging) > .tag_squares_ctn
 {
-    width: auto;
+    width: 100%;
 }
 
 .carousel_container .arrow {
@@ -2519,18 +2584,3 @@ img.franchise_placeholder {
 {
     margin-left: 0;
 }
-
-img.tag_square_img
-{
-    width: 100%;
-    display: block;
-    filter: saturate(0.3);
-}
-
-img.tag_square_img
-{
-    width: 100%;
-    display: block;
-    filter: saturate(0.3);
-}
-

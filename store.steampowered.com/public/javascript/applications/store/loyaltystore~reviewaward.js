@@ -2041,7 +2041,7 @@
                 r,
                 0,
                 -1,
-                [1, 3, 9, 10, 11, 12, 13, 14, 15],
+                [1, 3, 9, 10, 11, 12, 13, 14, 15, 17, 18],
                 null
               ),
               n
@@ -2141,6 +2141,20 @@
                         n: 16,
                         br: o.d.readBool,
                         bw: o.h.writeBool,
+                      },
+                      excluded_content_descriptors: {
+                        n: 17,
+                        r: !0,
+                        q: !0,
+                        br: o.d.readUint32,
+                        bw: o.h.writeRepeatedUint32,
+                      },
+                      excluded_appids: {
+                        n: 18,
+                        r: !0,
+                        q: !0,
+                        br: o.d.readUint32,
+                        bw: o.h.writeRepeatedUint32,
                       },
                     },
                   }),

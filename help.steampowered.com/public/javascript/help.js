@@ -1503,7 +1503,7 @@ HelpWizard = {
 		return false;
 	},
 
-		SendAccountRecoveryCode: function( strSessionID, eMethod, strErrorID, strLoadingID, strCodeResentID ) {
+		SendAccountRecoveryCode: function( strSessionID, eMethod, strLink, strErrorID, strLoadingID, strCodeResentID ) {
 		var elError = $J( strErrorID );
 
 		try
@@ -1524,7 +1524,8 @@ HelpWizard = {
 			url: "https://help.steampowered.com/wizard/AjaxSendAccountRecoveryCode",
 			data: $J.extend( {}, g_rgDefaultWizardPageParams, {
 				s: strSessionID,
-				method: eMethod
+				method: eMethod,
+				link: strLink,
 			} )
 		}).fail( function( xhr ) {
 			elError.text( 'An error occurred trying to handle that request. Please give us a few minutes and try again.' ).slideDown();

@@ -542,8 +542,7 @@ function TagBoxTopDecoration()
 
 function SaleTagTexture( suffix )
 {
-	var strStyle = 'background-image: url("https://cdn.cloudflare.steamstatic.com/store/promo/summer2020/wave_tile.png"); background-repeat: repeat;';
-	return '';
+	return 'background-image: url("https://cdn.cloudflare.steamstatic.com/store/promo/summer2021/' + suffix + '_page.jpg"); background-repeat: repeat;';
 }
 
 function SaleTagGradient( colorsIn )
@@ -569,7 +568,7 @@ function PrioritizeTagGenreList( rgTagGenres )
 
 	// put completed genres to the end of the list until there are none left
 	rgCompletedGenres = [];
-	if ( GHomepage && GHomepage.rgMapGenreChoices && Object.keys(GHomepage.rgMapGenreChoices).length && Object.keys(GHomepage.rgMapGenreChoices).length != 15 )
+	if ( GHomepage && GHomepage.rgMapGenreChoices && Object.keys(GHomepage.rgMapGenreChoices).length && Object.keys(GHomepage.rgMapGenreChoices).length != 14 )
 	{
 		rgTagGenres.forEach( function ( TagGenre, index ) {
 			if ( GHomepage.rgMapGenreChoices[ TagGenre.egenre ] )
@@ -635,15 +634,13 @@ function RenderTagGenreBlock( rgTagGenres )
 		var $elScrollRow = $J( $elCtn.children()[ nScrollRowIndex] );
 		var $Link = $J('<a/>', { 'class': 'tag_square', 'href': TagGenre.url  } );
 
-		var strTagGenreSquare = TagGenre.square;
 		if ( GHomepage && GHomepage.rgMapGenreChoices && GHomepage.rgMapGenreChoices[ TagGenre.egenre ] )
 		{
-			strTagGenreSquare = TagGenre.square_completed;
+			$Link.append( $J('<img/>', { 'class': 'tag_square_ribbon', 'src': 'https://cdn.cloudflare.steamstatic.com/store/promo/summer2021/genre_tiles/genre_tile_ribbon.png'  } ) );
 		}
 
-		$Link.append( $J('<img/>', { 'class': 'tag_square_img', 'src': strTagGenreSquare } ) );
+		$Link.append( $J('<img/>', { 'class': 'tag_square_img', 'src': TagGenre.square } ) );
 		$Link.append( $J('<div/>', { 'class': 'tag_genre_title' } ).html( TagGenre.name ) );
-		// $Link.append( $J('<div/>', { 'class': 'tag_square_overlay' } ) );
 
 		$elScrollRow.append( $Link );
 	});
@@ -671,16 +668,17 @@ function SaleTagBlock( $Parent, rgPersonalizedTagData )
 	var strTagMethod = rgTagData.method;
 	var focusedAppId = rgTagData.focusedAppId;
 	var rgKeyTags = rgTagData.keyTags;
-
-	var texture = "";
 	var title = "";
 	var noTags = false;
 
-	
-	if(strTagMethod === "tags") { title='<b>GAMES </b><br/>SIMILAR TO'; texture = "L";}
-	else if(strTagMethod === "gems") { title='<b>GEMS </b><br/>SIMILAR TO'; texture = "J";}
-	else if(strTagMethod === "default") { title='<b>POPULAR GAMES </b><br/>SIMILAR TO'; texture="I";}
-	else {texture="G"; noTags = true;}
+	if(strTagMethod === "tags") { title='<b>GAMES </b><br/>SIMILAR TO';}
+	else if(strTagMethod === "gems") { title='<b>GEMS </b><br/>SIMILAR TO';}
+	else if(strTagMethod === "default") { title='<b>POPULAR GAMES </b><br/>SIMILAR TO';}
+	else { noTags = true;}
+
+	var rgTextures = [ 'green', 'orange', 'pink', 'teal' ];
+	var randomKey = Math.floor( Math.random() * rgTextures.length );
+	var texture = rgTextures[ randomKey ];
 
 	TryPopulateSaleItems( rgItemsPassingFilter, rgTagData.items, 6, 6 );
 

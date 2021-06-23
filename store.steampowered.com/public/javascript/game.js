@@ -1916,6 +1916,20 @@ function ReparentAppLandingPageForMobileUX()
 		// move some of the links and info content to the bottom 
 		// testing this - we may need to move this again  
 		$J('#genresAndManufacturer').appendTo('#appLinksAndInfo');
+
+		// hide the purchase options banner if usable screen height is significantly below actual screen height (keyboard causes this) 
+		var responsiveOnWindowResize = function()
+		{
+			if ( screen.availHeight - window.innerHeight > 300 )
+				$J('#purchaseOptionsContainer').css('display', 'none');
+			else
+				$J('#purchaseOptionsContainer').css('display', 'flex');
+		}
+		window.addEventListener( 'resize', responsiveOnWindowResize );
+	
+		// Set the purchase options container max height and display it
+		$J('#purchaseOptionsContainer').css('max-height', parseInt( window.innerHeight ) - parseInt( GetResponsiveHeaderFixedOffsetAdjustment() ) + 'px' );
+		$J('#purchaseOptionsContainer').css('display', 'flex');
 	}
 }
 
@@ -1931,27 +1945,10 @@ function TogglePurchaseOptionsModal( divContentID )
 		$J('#purchaseOptionsBanner_visible').css('display', $bShowing ? 'flex' : 'none');
 		$J('#purchaseOptionsBanner_hidden').css('display', !$bShowing ? 'flex' : 'none');
 
-		// toggle visibility of purchase options 
-		if ( !$bShowing ) 
-		{
-			$modalDiv.hide('fast');
-		}
-		else
-		{
-			$modalDiv.css('display', 'flex');
+		$modalDiv.css('display', $bShowing ? 'block' : 'none');
 
-			// max height for the purchase content is: window height - bottom banner height - page header height
-			var $floatingBanner = $J('#purchaseOptionsBanner_visible');
-			var $height = window.innerHeight - parseInt( $floatingBanner.height() );
-			$height -= GetResponsiveHeaderFixedOffsetAdjustment();
-
-			// we may not want the max height.  only use the screen space we need  
-			var $content = $J('#purchaseOptionsContent');
-			var $contentHeight = parseInt( $content.height() );
-			$height = Math.min( $contentHeight, $height );
-
-			$modalDiv.css('height', $height);
-		}
+		// TODO: Capture scroll events when purchase options are displayed and consume them if content is not scrollable.  Otherwise
+		// the parent page gets the request and moves the page.
 	}
 }
 

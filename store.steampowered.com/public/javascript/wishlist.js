@@ -45,11 +45,17 @@ var CWishlistController = function()
 		'discount_75': "Discount",
 		'ex_earlyaccess': "Exclude",
 		'ex_prerelease': "Exclude",
-		'ex_vr': "Exclude",
-		'platform_windows': "Platform",
-		'platform_mac': "Platform",
-		'platform_linux': "Platform"
-	}
+		'ex_vr': "Exclude"	}
+
+	// 'last_sort' and 'term' are not in this list because they are not saved
+	this.rgValidSavedSettings = [ 
+		'platform', 
+		'type',
+		'sort',
+		'price_1', 'price_2', 'price_wallet', 
+		'ex_earlyaccess', 'ex_prerelease', 'ex_vr',
+		'discount_any', 'discount_50', 'discount_75' 
+	];
 
 	// Hook up dropdowns
 	$J('#dropdown_sort .item').on('click', function(){
@@ -112,12 +118,7 @@ var CWishlistController = function()
 		_this.Update();
 	});
 
-
-
-
 	this.LoadAdditionalPages();
-
-
 }
 
 CWishlistController.prototype.LoadAdditionalPages = function()
@@ -248,8 +249,6 @@ CWishlistController.prototype.BuildElements = function()
 		_this.MoveToPosition( appId, $J('.order_input',$el ).val() - 1 );
 		_this.Update( true );
 		_this.SaveOrder();
-
-
 	}
 
 	var fnFocusTextBox = function( e )
@@ -446,16 +445,18 @@ CWishlistController.prototype.ApplyDefaultPlatform = function()
 CWishlistController.prototype.LoadSettings = function()
 {
 	var lsValue = WebStorage.GetLocal('wishlistSettings');
-
 	var rgPairs = location.hash.substring(1).split('&');
 	if( rgPairs.length > 0 && rgPairs[0] )
 	{
 		for ( var i = 0; i < rgPairs.length; i++ )
 		{
 			var rgKV = rgPairs[ i ].split ( '=' );
-			this.rgFilterSettings[ rgKV[ 0 ] ] = decodeURIComponent( rgKV[ 1 ] ) ;
 
-			$J('input[name=\''+V_EscapeHTML( rgKV[ 0 ] )+'\']').attr('checked',true);
+			if ( this.rgValidSavedSettings.includes( rgKV[ 0 ] ) )
+			{
+				this.rgFilterSettings[ rgKV[ 0 ] ] = decodeURIComponent( rgKV[ 1 ] );
+				$J('input[name=\''+V_EscapeHTML( rgKV[ 0 ] )+'\']').attr('checked',true);
+			}
 		}
 	} 
 	else if( lsValue != null )
@@ -493,6 +494,21 @@ CWishlistController.prototype.LoadSettings = function()
 	{
 		this.ApplyDefaultView();
 	}
+
+	// price checkboxes
+	$J('input[name=' + 'price_1' + ']').attr( 'checked', this.rgFilterSettings.price_1 );
+	$J('input[name=' + 'price_2' + ']').attr( 'checked', this.rgFilterSettings.price_2 );
+	$J('input[name=' + 'price_wallet' + ']').attr( 'checked', this.rgFilterSettings.price_wallet );
+
+	// discount checkboxes
+	$J('input[name=' + 'discount_any' + ']').attr( 'checked', this.rgFilterSettings.discount_any );
+	$J('input[name=' + 'discount_50' + ']').attr( 'checked', this.rgFilterSettings.discount_50 );
+	$J('input[name=' + 'discount_75' + ']').attr( 'checked', this.rgFilterSettings.discount_75 );
+
+	// exclude checkboxes
+	$J('input[name=' + 'ex_earlyaccess' + ']').attr( 'checked', this.rgFilterSettings.ex_earlyaccess );
+	$J('input[name=' + 'ex_prerelease' + ']').attr( 'checked', this.rgFilterSettings.ex_prerelease );
+	$J('input[name=' + 'ex_vr' + ']').attr( 'checked', this.rgFilterSettings.ex_vr );
 }
 
 CWishlistController.prototype.SaveSettings = function()
@@ -817,20 +833,18 @@ CWishlistController.prototype.Update = function( bForceSort )
 			continue;
 		}
 		if( this.BPassesFilters( this.rgAllApps[ i ], this.rgFilterSettings ) )
+		{
 			this.rgVisibleApps.push( this.rgAllApps[ i ] );
-
-
+		}
 	}
 
 	if( this.rgVisibleApps.length == this.rgAllApps.length && this.rgFilterSettings.sort == "order" && g_bCanEdit )
 	{
-
 		$J( '#wishlist_ctn' ).addClass ( 'sort_order' );
 
 		$J.each(this.rgElements, function(i, j){
 			$J('.hover_handle',j).attr('draggable', true );
 		});
-
 	}
 	else
 	{
@@ -839,9 +853,6 @@ CWishlistController.prototype.Update = function( bForceSort )
 			$J('.hover_handle',j).attr('draggable', false );
 		});
 	}
-
-
-
 
 
 	this.rgFilterSettings.last_sort = this.rgFilterSettings.sort;
@@ -894,7 +905,9 @@ CWishlistController.prototype.UpdateFilterDisplay = function()
 
 	if ( this.rgFilterSettings.type && this.rgFilterSettings.type != 'all' )
 	{
-		var $el = $J('<div></div>').text( "Type" + ": " + this.rgFilterSettings.type);
+		var strText = $J('#type_'+this.rgFilterSettings.type).closest('label').text();
+
+		var $el = $J('<div></div>').text( "Type" + ": " + strText );
 
 		$el.on('click', function(){
 			_this.ApplyDefaultType();

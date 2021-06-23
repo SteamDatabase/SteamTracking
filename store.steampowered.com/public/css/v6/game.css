@@ -5709,6 +5709,7 @@ body.v6 .page_content.notes {
 .responsive_release_date_text,
 .responsive_reviewdesc_short,
 .responsive_add_to_wishlist,
+.responsive_purchase_options_ctn,
 .responsive_block_header  {
 	display: none;
 }

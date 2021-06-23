@@ -668,7 +668,7 @@ GHomepage = {
 	BuildMainCapsuleItem: function( rgItem, strFeatureContext, nDepth )
 	{
 		var rgOptions = $J.extend({
-			'class': 'store_main_capsule',
+			'class': 'store_main_capsule responsive_scroll_snap_start',
 		}, rgOptions ? rgOptions : {} );
 
 		var unAppID = rgItem.appid;
@@ -1464,7 +1464,7 @@ GHomepage = {
 
 				if ( !$Col )
 				{
-					$Col = $J('<div/>', { 'class': 'spotlight_col', 'data-panel': '{"flow-children":"column"}' } );
+					$Col = $J('<div/>', { 'class': 'spotlight_col responsive_scroll_snap_start', 'data-panel': '{"flow-children":"column"}' } );
 					$Page.append( $Col );
 				}
 
@@ -1897,7 +1897,7 @@ GHomepage = {
 	BuildHomePageGenericCap: function( strFeatureContext, unAppID, unPackageID, unBundleID, rgOptions, nDepth )
 	{
 		var rgOptions = $J.extend({
-			'class': 'store_capsule',
+			'class': 'store_capsule responsive_scroll_snap_start',
 			'include_title': false,
 			'discount_class': 'discount_block_inline',
 			'capsule_size': 'headerv5',
@@ -1969,7 +1969,7 @@ GHomepage = {
 	BuildCommunityRecommendationCap: function( strFeatureContext, oItem )
 	{
 		var unAppID = oItem.appid;
-		var params = { 'class' : 'community_recommendation_capsule' };
+		var params = { 'class' : 'community_recommendation_capsule responsive_scroll_snap_start' };
 		var rgItemData = GStoreItemData.GetCapParamsForItem( strFeatureContext, oItem, params );
 
 		var rgReviews = GHomepage.rgCommunityRecommendationsByAppID[ unAppID ] || [];
@@ -1977,7 +1977,7 @@ GHomepage = {
 		if ( !rgItemData || !rgReviews || rgReviews.length == 0 )
 			return null;
 
-		let $Item = $J( '<div>', { 'class' : 'community_recommendation_app' } );
+		let $Item = $J( '<div>', { 'class' : 'community_recommendation_app responsive_scroll_snap_start' } );
 		GStoreItemData.BindHoverEventsForItem( $Item, oItem );
 
 		var $ItemLink = $J('<a/>', params );
