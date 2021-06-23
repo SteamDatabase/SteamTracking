@@ -1926,9 +1926,20 @@ function ReparentAppLandingPageForMobileUX()
 				$J('#purchaseOptionsContainer').css('display', 'flex');
 		}
 		window.addEventListener( 'resize', responsiveOnWindowResize );
-	
-		// Set the purchase options container max height and display it
-		$J('#purchaseOptionsContainer').css('max-height', parseInt( window.innerHeight ) - parseInt( GetResponsiveHeaderFixedOffsetAdjustment() ) + 'px' );
+
+		// set the empty space div shown above purchase options to eat touch events
+		$J('#purchaseOptionsEmptySpace').bind('touchstart click', function (e) {
+			return false;
+		});
+
+		// iphone has a system menu which appears if you tap near the bottom.  Adding bottom padding to reduce odds of accidently
+		// bringing up the system menu when you're trying to open the purchase options.
+		if ( navigator.userAgent.toLowerCase().indexOf( 'iphone' ) != -1 )
+		{
+			$J('#purchaseOptionsBanners').css('padding-bottom', '30px');
+		}
+
+		// display the purchase options container
 		$J('#purchaseOptionsContainer').css('display', 'flex');
 	}
 }
@@ -1945,10 +1956,22 @@ function TogglePurchaseOptionsModal( divContentID )
 		$J('#purchaseOptionsBanner_visible').css('display', $bShowing ? 'flex' : 'none');
 		$J('#purchaseOptionsBanner_hidden').css('display', !$bShowing ? 'flex' : 'none');
 
-		$modalDiv.css('display', $bShowing ? 'block' : 'none');
+		if ( $bShowing )
+		{
+			// set purchase container height to entire window under the header
+			var $purchaseContentHeight = parseInt( window.innerHeight ) - parseInt( GetResponsiveHeaderFixedOffsetAdjustment() );
+			$J('#purchaseOptionsContainer').css('height', $purchaseContentHeight + 'px' );
+		}
+		else
+		{
+			$J('#purchaseOptionsContainer').css('height', 'unset' );
+		}
 
-		// TODO: Capture scroll events when purchase options are displayed and consume them if content is not scrollable.  Otherwise
-		// the parent page gets the request and moves the page.
+		// grey out the screen above the purchase options
+		$J('#purchaseOptionsEmptySpace').css('display', $bShowing ? 'block' : 'none');
+
+		// display the purchase options
+		$modalDiv.css('display', $bShowing ? 'block' : 'none');
 	}
 }
 
