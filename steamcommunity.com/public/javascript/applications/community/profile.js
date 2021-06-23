@@ -138,7 +138,7 @@
           return Zr;
         }),
         r.d(t, "default", function () {
-          return Qr;
+          return Jr;
         });
       var i = r("mrSG"),
         a = r("q1tI"),
@@ -1129,7 +1129,7 @@
             t
           );
         })(W),
-        J = (function (e) {
+        Q = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var i = e.call(this) || this;
@@ -1146,7 +1146,7 @@
                 t.sm_m ||
                   (t.sm_m = {
                     proto: t,
-                    fields: { item_definitions: { n: 1, c: Q, r: !0, q: !0 } },
+                    fields: { item_definitions: { n: 1, c: J, r: !0, q: !0 } },
                   }),
                 t.sm_m
               );
@@ -1184,7 +1184,7 @@
             t
           );
         })(W),
-        Q = (function (e) {
+        J = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var i = e.call(this) || this;
@@ -1440,7 +1440,7 @@
           });
         }),
           (e.GetCommunityItemDefinitions = function (e, t) {
-            return e.SendMsg("Quest.GetCommunityItemDefinitions#1", t, J, {
+            return e.SendMsg("Quest.GetCommunityItemDefinitions#1", t, Q, {
               bConstMethod: !0,
               ePrivilege: 2,
               eWebAPIKeyRequirement: 4,
@@ -2030,6 +2030,24 @@
             (e.prototype.RevertProfileModifierChanges = function () {
               this.m_ProfileModifiers.Revert();
             }),
+            (e.prototype.ReloadEquippedItems = function () {
+              var e = H.b.Init(q.c);
+              e.Body().set_steamid(h.i.steamid),
+                e.Body().set_language(h.c.LANGUAGE),
+                (this.m_promiseEquipped = q.o.GetProfileItemsEquipped(
+                  this.m_SteamInterface.GetServiceTransport(),
+                  e
+                )),
+                this.m_AvatarFrames.SetEquipped(null, !0),
+                (this.m_AvatarFrames.m_bEquippedLoaded = !1),
+                this.GetEquippedAvatarFrame(),
+                this.m_Backgrounds.SetEquipped(null, !0),
+                (this.m_Backgrounds.m_bEquippedLoaded = !1),
+                this.GetEquippedBackground(),
+                this.m_MiniProfileBackgrounds.SetEquipped(null, !0),
+                (this.m_MiniProfileBackgrounds.m_bEquippedLoaded = !1),
+                this.GetEquippedMiniProfileBackground();
+            }),
             (e.prototype.CommitProfileModifierChanges = function () {
               return Object(i.b)(this, void 0, void 0, function () {
                 var e,
@@ -2040,82 +2058,77 @@
                   switch (i.label) {
                     case 0:
                       return this.m_ProfileModifiers.BIsUncomitted()
-                        ? this.m_ProfileModifiers.m_CommittedEquippedItem &&
+                        ? ((e = !1),
+                          this.m_ProfileModifiers.m_CommittedEquippedItem &&
                           this.m_ProfileModifiers.m_CommittedEquippedItem !=
                             this.m_ProfileModifiers.m_EquippedItem
-                          ? ((t = H.b.Init(X))
-                              .Body()
-                              .set_communityitemid(
-                                this.m_ProfileModifiers.m_CommittedEquippedItem
-                                  .communityitemid
-                              ),
-                            t
-                              .Body()
-                              .set_appid(
-                                this.m_ProfileModifiers.m_CommittedEquippedItem
-                                  .appid
-                              ),
-                            t.Body().set_activate(!1),
-                            [
-                              4,
-                              V.ActivateProfileModifierItem(
-                                this.m_SteamInterface.GetServiceTransport(),
-                                t
-                              ),
-                            ])
-                          : [3, 2]
+                            ? ((t = H.b.Init(X))
+                                .Body()
+                                .set_communityitemid(
+                                  this.m_ProfileModifiers
+                                    .m_CommittedEquippedItem.communityitemid
+                                ),
+                              t
+                                .Body()
+                                .set_appid(
+                                  this.m_ProfileModifiers
+                                    .m_CommittedEquippedItem.appid
+                                ),
+                              t.Body().set_activate(!1),
+                              [
+                                4,
+                                V.ActivateProfileModifierItem(
+                                  this.m_SteamInterface.GetServiceTransport(),
+                                  t
+                                ),
+                              ])
+                            : [3, 2])
                         : [3, 5];
                     case 1:
                       if (1 != (r = i.sent()).GetEResult())
                         return [2, r.GetEResult()];
-                      i.label = 2;
+                      (e = !0), (i.label = 2);
                     case 2:
-                      return (
-                        (e = !!this.m_ProfileModifiers.m_EquippedItem),
-                        this.m_ProfileModifiers.m_EquippedItem
-                          ? ((t = H.b.Init(X))
-                              .Body()
-                              .set_communityitemid(
-                                this.m_ProfileModifiers.m_EquippedItem
-                                  .communityitemid
-                              ),
-                            t
-                              .Body()
-                              .set_appid(
-                                this.m_ProfileModifiers.m_EquippedItem.appid
-                              ),
-                            t.Body().set_activate(!0),
-                            [
-                              4,
-                              V.ActivateProfileModifierItem(
-                                this.m_SteamInterface.GetServiceTransport(),
-                                t
-                              ),
-                            ])
-                          : [3, 4]
-                      );
+                      return this.m_ProfileModifiers.m_EquippedItem
+                        ? ((t = H.b.Init(X))
+                            .Body()
+                            .set_communityitemid(
+                              this.m_ProfileModifiers.m_EquippedItem
+                                .communityitemid
+                            ),
+                          t
+                            .Body()
+                            .set_appid(
+                              this.m_ProfileModifiers.m_EquippedItem.appid
+                            ),
+                          t.Body().set_activate(!0),
+                          [
+                            4,
+                            V.ActivateProfileModifierItem(
+                              this.m_SteamInterface.GetServiceTransport(),
+                              t
+                            ),
+                          ])
+                        : [3, 4];
                     case 3:
                       if (1 != (r = i.sent()).GetEResult())
                         return [2, r.GetEResult()];
-                      i.label = 4;
+                      (e = !0), (i.label = 4);
                     case 4:
                       this.m_ProfileModifiers.SetComitted(),
-                        Object(m.G)(function () {
-                          e &&
-                            (a.m_AvatarFrames.SetEquipped(null),
-                            a.m_AvatarFrames.SetComitted(),
-                            a.m_Backgrounds.SetEquipped(null),
-                            a.m_Backgrounds.SetComitted(),
-                            a.m_MiniProfileBackgrounds.SetEquipped(null),
-                            a.m_MiniProfileBackgrounds.SetComitted()),
-                            a.m_OnAvatarEquipmentChangedCallbacks.Dispatch();
-                        }),
+                        e &&
+                          Object(m.G)(function () {
+                            a.ReloadEquippedItems();
+                          }),
                         (i.label = 5);
                     case 5:
                       return [2, 1];
                   }
                 });
               });
+            }),
+            (e.prototype.BIsLegacyGoldenProfile = function (e) {
+              return this.m_mapGoldenProfileConfigByAppID.has(e);
             }),
             (e.prototype.GetGoldenProfileConfigValue = function (e) {
               var t = this.GetEquippedProfileModifier();
@@ -2164,6 +2177,7 @@
               null
             ),
             Object(i.c)([m.k], e.prototype, "RevertAvatarChanges", null),
+            Object(i.c)([m.k], e.prototype, "ReloadEquippedItems", null),
             e
           );
         })(),
@@ -4398,7 +4412,7 @@
       function Ze(e) {
         return Object(_.f)(e).replace(/%s/g, "");
       }
-      var Je = (function (e) {
+      var Qe = (function (e) {
         function t() {
           var t = (null !== e && e.apply(this, arguments)) || this;
           return (t.state = { activeItem: void 0, bSaving: !1 }), t;
@@ -4498,7 +4512,7 @@
           t
         );
       })(a.Component);
-      function Qe(e) {
+      function Je(e) {
         return e ? e.toLocaleLowerCase().replace(/\W/g, "") : "";
       }
       var Xe = (function (e) {
@@ -4538,7 +4552,7 @@
                             (o.m_rgSearchableItems = n.map(function (e, t) {
                               return {
                                 key: "" + t,
-                                normalized_search_strings: r && r(e).map(Qe),
+                                normalized_search_strings: r && r(e).map(Je),
                                 OnSelected: function () {
                                   a(e);
                                 },
@@ -5092,8 +5106,9 @@
             i = t.GetAvatarHash(),
             n = r.GetEquippedAvatar(),
             o = r.GetEquippedAvatarFrame(),
-            s = !o && r.GetEquippedProfileModifier(),
-            c = null;
+            s = !o && r.GetEquippedProfileModifier();
+          s && !r.BIsLegacyGoldenProfile(s.appid) && (s = null);
+          var c = null;
           return (
             s ? (c = r.GetProfileModifierAvatarFrameURL()) : o && (c = te(o)),
             a.createElement(
@@ -6288,43 +6303,46 @@
             n = e.MiniProfileOverrideData,
             o = e.onDismiss,
             s = r.GetEquippedProfileModifier();
-          return a.createElement(Je, {
-            fnRevertChanges: o,
-            getSearchFields: Wt,
-            getItems: function () {
-              return r.GetOwnedMiniProfileBackgrounds();
-            },
-            fnCommitChanges: function (e) {
-              return Object(i.b)(void 0, void 0, void 0, function () {
-                return Object(i.e)(this, function (t) {
-                  return (
-                    r.SetEquippedMiniProfileBackground(e),
-                    [2, r.CommitMiniProfileChanges()]
-                  );
+          return (
+            s && !r.BIsLegacyGoldenProfile(s.appid) && (s = null),
+            a.createElement(Qe, {
+              fnRevertChanges: o,
+              getSearchFields: Wt,
+              getItems: function () {
+                return r.GetOwnedMiniProfileBackgrounds();
+              },
+              fnCommitChanges: function (e) {
+                return Object(i.b)(void 0, void 0, void 0, function () {
+                  return Object(i.e)(this, function (t) {
+                    return (
+                      r.SetEquippedMiniProfileBackground(e),
+                      [2, r.CommitMiniProfileChanges()]
+                    );
+                  });
                 });
-              });
-            },
-            ItemComponent: Jt,
-            RenderDefaultComponent: function (e) {
-              var t = e.onSelected,
-                r = e.active;
-              return a.createElement(Qt, {
-                onSelected: t,
-                active: r,
-                Modifier: s,
-              });
-            },
-            ActiveItem: r.GetEquippedMiniProfileBackground(),
-            fnIsSameItem: Vt,
-            fnRenderPreview: function (e) {
-              return a.createElement(Zt, {
-                MiniProfileBackground: e,
-                Profile: t,
-                ProfileItems: r,
-                MiniProfileOverrideData: n,
-              });
-            },
-          });
+              },
+              ItemComponent: Qt,
+              RenderDefaultComponent: function (e) {
+                var t = e.onSelected,
+                  r = e.active;
+                return a.createElement(Jt, {
+                  onSelected: t,
+                  active: r,
+                  Modifier: s,
+                });
+              },
+              ActiveItem: r.GetEquippedMiniProfileBackground(),
+              fnIsSameItem: Vt,
+              fnRenderPreview: function (e) {
+                return a.createElement(Zt, {
+                  MiniProfileBackground: e,
+                  Profile: t,
+                  ProfileItems: r,
+                  MiniProfileOverrideData: n,
+                });
+              },
+            })
+          );
         }),
         Zt = function (e) {
           var t,
@@ -6357,7 +6375,7 @@
             )
           );
         },
-        Jt = function (e) {
+        Qt = function (e) {
           var t = e.Item,
             r = e.onSelected,
             i = e.children,
@@ -6399,13 +6417,13 @@
             )
           );
         },
-        Qt = function (e) {
+        Jt = function (e) {
           var t = e.Modifier,
             r = e.onSelected,
             i = e.children,
             n = e.active;
           return t
-            ? a.createElement(Jt, { Item: t, onSelected: r, active: n })
+            ? a.createElement(Qt, { Item: t, onSelected: r, active: n })
             : a.createElement(
                 "div",
                 {
@@ -7393,47 +7411,50 @@
                 t = e.ProfileItems,
                 r = e.ProfileTheme,
                 i = (t.GetEquippedBackground(), t.GetEquippedProfileModifier());
-              return a.createElement(
-                a.Fragment,
-                null,
+              return (
+                i && !t.BIsLegacyGoldenProfile(i.appid) && (i = null),
                 a.createElement(
-                  Ie.l,
+                  a.Fragment,
                   null,
-                  Object(_.f)("#Profile_Edit_ChooseBackground")
-                ),
-                a.createElement(
-                  Ie.c,
-                  null,
-                  Object(_.f)("#Profile_Edit_Background_Instructions")
-                ),
-                a.createElement(Je, {
-                  className: fr.BackgroundPickerPage,
-                  getSearchFields: Wt,
-                  getItems: function () {
-                    return t.GetOwnedBackgrounds();
-                  },
-                  fnCommitChanges: this.CommitChanges,
-                  fnRevertChanges: this.RevertChanges,
-                  ItemComponent: Cr,
-                  RenderDefaultComponent: function (e) {
-                    var t = e.onSelected,
-                      r = e.active;
-                    return a.createElement(Sr, {
-                      Modifier: i,
-                      onSelected: t,
-                      active: r,
-                    });
-                  },
-                  ActiveItem: t.GetEquippedBackground(),
-                  fnIsSameItem: Vt,
-                  fnRenderPreview: function (e) {
-                    return a.createElement(Er, {
-                      Background: e,
-                      ProfileItems: t,
-                      theme: r.ActiveTheme.theme_id,
-                    });
-                  },
-                })
+                  a.createElement(
+                    Ie.l,
+                    null,
+                    Object(_.f)("#Profile_Edit_ChooseBackground")
+                  ),
+                  a.createElement(
+                    Ie.c,
+                    null,
+                    Object(_.f)("#Profile_Edit_Background_Instructions")
+                  ),
+                  a.createElement(Qe, {
+                    className: fr.BackgroundPickerPage,
+                    getSearchFields: Wt,
+                    getItems: function () {
+                      return t.GetOwnedBackgrounds();
+                    },
+                    fnCommitChanges: this.CommitChanges,
+                    fnRevertChanges: this.RevertChanges,
+                    ItemComponent: Cr,
+                    RenderDefaultComponent: function (e) {
+                      var t = e.onSelected,
+                        r = e.active;
+                      return a.createElement(Sr, {
+                        Modifier: i,
+                        onSelected: t,
+                        active: r,
+                      });
+                    },
+                    ActiveItem: t.GetEquippedBackground(),
+                    fnIsSameItem: Vt,
+                    fnRenderPreview: function (e) {
+                      return a.createElement(Er, {
+                        Background: e,
+                        ProfileItems: t,
+                        theme: r.ActiveTheme.theme_id,
+                      });
+                    },
+                  })
+                )
               );
             }),
             Object(i.c)([we.a], t.prototype, "CommitChanges", null),
@@ -7668,10 +7689,7 @@
             ),
             a.createElement(
               wr,
-              Object(i.a)({}, o, {
-                to: s.Theme(),
-                fnDisabled: n.ThemesDisabled,
-              }),
+              Object(i.a)({}, o, { to: s.Theme() }),
               Object(_.f)("#Profile_Edit_Theme")
             ),
             a.createElement(
@@ -7847,7 +7865,7 @@
                   null,
                   Object(_.f)("#Profile_Edit_ProfileModifier_Instructions")
                 ),
-                a.createElement(Je, {
+                a.createElement(Qe, {
                   fnRevertChanges: this.OnDismiss,
                   getSearchFields: Wt,
                   getItems: function () {
@@ -8001,7 +8019,7 @@
                 ),
                 a.createElement($e, { strHTMLError: this.state.strHTMLError }),
                 o && a.createElement(zr, null),
-                a.createElement(Je, {
+                a.createElement(Qe, {
                   getSearchFields: null,
                   ActiveItem: r.ActiveTheme,
                   getItems: function () {
@@ -8289,12 +8307,6 @@
                   ShowcasesAvailable: function () {
                     return null != mr;
                   },
-                  ThemesDisabled: function () {
-                    return (
-                      i.GetEquippedProfileModifier() &&
-                      Object(_.f)("#Profile_Edit_GoldenProfileOverridesTheme")
-                    );
-                  },
                 };
               return a.createElement(
                 a.Fragment,
@@ -8461,14 +8473,14 @@
             return "/showcases";
           },
         };
-      function Jr(e) {
+      function Qr(e) {
         return a.createElement(
           "div",
           null,
           a.createElement(Yr.a, { targetType: 3 })
         );
       }
-      function Qr(e) {
+      function Jr(e) {
         var t = e.match.path;
         return a.createElement(
           n.e,
@@ -8485,7 +8497,7 @@
               return a.createElement(o.a, {
                 config: {
                   "profile-rewards": function () {
-                    return a.createElement(Jr, Object(i.a)({}, e));
+                    return a.createElement(Qr, Object(i.a)({}, e));
                   },
                 },
               });
@@ -9124,6 +9136,12 @@
         MidnightTheme: "profilethemecolors_MidnightTheme_AH86R",
         DarkModeTheme: "profilethemecolors_DarkModeTheme_3bM7i",
         SteelTheme: "profilethemecolors_SteelTheme_2EmRD",
+        CandyTheme: "profilethemecolors_CandyTheme_3OFr5",
+        CherryTheme: "profilethemecolors_CherryTheme_27t_1",
+        SteamGreenTheme: "profilethemecolors_SteamGreenTheme_3mIx0",
+        SeafoamTheme: "profilethemecolors_SeafoamTheme_12rwZ",
+        AutumnTheme: "profilethemecolors_AutumnTheme_PlZKA",
+        BluescreenTheme: "profilethemecolors_BluescreenTheme_1bCKl",
       };
     },
     mQc3: function (e, t, r) {
@@ -9140,60 +9158,6 @@
         App: "miniprofilepreview_App_xmRMR",
         WithVideo: "miniprofilepreview_WithVideo_1BBIS",
       };
-    },
-    u2yL: function (e, t, r) {
-      "use strict";
-      var i = r("mrSG"),
-        a = (function (e) {
-          function t() {
-            return (null !== e && e.apply(this, arguments)) || this;
-          }
-          return (
-            Object(i.d)(t, e),
-            (t.prototype.GetString = function (e) {
-              return Promise.resolve(localStorage.getItem(e));
-            }),
-            (t.prototype.StoreString = function (e, t) {
-              return localStorage.setItem(e, t), Promise.resolve();
-            }),
-            (t.prototype.RemoveObject = function (e) {
-              return localStorage.removeItem(e), Promise.resolve();
-            }),
-            t
-          );
-        })(
-          (function () {
-            function e() {}
-            return (
-              (e.prototype.GetObject = function (e) {
-                return Object(i.b)(this, void 0, void 0, function () {
-                  var t;
-                  return Object(i.e)(this, function (r) {
-                    switch (r.label) {
-                      case 0:
-                        return r.trys.push([0, 2, , 3]), [4, this.GetString(e)];
-                      case 1:
-                        return [2, (t = r.sent()) ? JSON.parse(t) : null];
-                      case 2:
-                        return r.sent(), [2, null];
-                      case 3:
-                        return [2];
-                    }
-                  });
-                });
-              }),
-              (e.prototype.StoreObject = function (e, t) {
-                return Object(i.b)(this, void 0, void 0, function () {
-                  return Object(i.e)(this, function (r) {
-                    return [2, this.StoreString(e, JSON.stringify(t))];
-                  });
-                });
-              }),
-              e
-            );
-          })()
-        );
-      t.a = a;
     },
     yJIw: function (e, t, r) {
       e.exports = {

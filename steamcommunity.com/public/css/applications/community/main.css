@@ -423,6 +423,9 @@
   pointer-events: none;
   border: 4px solid #add8e6;
 }
+.focusring_FocusRing_1sTuv.focusring_Animated_3afwW {
+  transition: left 0.1s, top 0.1s, height 0.1s, width 0.1s;
+}
 .contextmenu_ContextMenuMouseOverlay_3Knd7 {
   position: fixed;
   top: 0;

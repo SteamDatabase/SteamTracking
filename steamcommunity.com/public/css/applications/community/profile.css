@@ -1917,6 +1917,84 @@ input.DialogTextInputBase:focus {
   --btn-outline: rgb(104, 119, 143);
   --edit-background: rgb(66, 72, 82);
 }
+.profilethemecolors_CandyTheme_3OFr5 {
+  --gradient-right: rgb(51 132 253 / 23%);
+  --gradient-left: rgb(239 135 241 / 37%);
+  --gradient-background: rgba(130 42 80 / 93%);
+  --gradient-background-right: rgb(253 51 51 / 0%);
+  --gradient-background-left: rgb(241 12 149 / 13%);
+  --color-showcase-header: rgb(61 24 51);
+  --gradient-showcase-header-left: rgb(162 73 139 / 93%);
+  --btn-background: rgb(111 45 97);
+  --btn-background-hover: rgb(130 36 114);
+  --btn-outline: rgb(108 86 101);
+  --edit-background: rgb(156, 70, 133);
+}
+.profilethemecolors_CherryTheme_27t_1 {
+  --gradient-right: rgb(253 51 51 / 23%);
+  --gradient-left: rgb(241 12 12 / 37%);
+  --gradient-background: rgba(32, 13, 10, 0.93);
+  --gradient-background-right: rgb(253 51 51 / 0%);
+  --gradient-background-left: rgba(241, 12, 12, 0.13);
+  --color-showcase-header: rgb(61 24 24);
+  --gradient-showcase-header-left: rgb(132 27 27 / 93%);
+  --btn-background: rgb(111 45 45);
+  --btn-background-hover: rgb(130 36 36);
+  --btn-outline: rgb(108, 90, 86);
+  --edit-background: rgb(113 29 29);
+}
+.profilethemecolors_SteamGreenTheme_3mIx0 {
+  --gradient-right: #5a6d44;
+  --gradient-left: rgb(191 181 110 / 37%);
+  --gradient-background: rgb(26 32 10 / 93%);
+  --gradient-background-right: rgb(194 253 51 / 0%);
+  --gradient-background-left: rgb(206 241 12 / 13%);
+  --color-showcase-header: rgb(57 61 24);
+  --gradient-showcase-header-left: rgb(132 98 47 / 93%);
+  --btn-background: rgb(92 111 45);
+  --btn-background-hover: rgb(90 130 36);
+  --btn-outline: rgb(99 108 86);
+  --edit-background: rgb(77 80 29);
+}
+.profilethemecolors_SeafoamTheme_12rwZ {
+  --gradient-right: rgb(51 225 253 / 23%);
+  --gradient-left: rgb(12 230 241 / 37%);
+  --gradient-background: rgb(10 25 32 / 93%);
+  --gradient-background-right: rgb(51 234 253 / 0%);
+  --gradient-background-left: rgb(12 241 241 / 13%);
+  --color-showcase-header: rgb(24 54 61);
+  --gradient-showcase-header-left: rgb(27 113 132 / 93%);
+  --btn-background: rgb(45 93 111);
+  --btn-background-hover: rgb(36 121 130);
+  --btn-outline: rgb(86 105 108);
+  --edit-background: rgb(27, 110, 128);
+}
+.profilethemecolors_AutumnTheme_PlZKA {
+  --gradient-right: rgb(253 219 51 / 23%);
+  --gradient-left: rgb(241 223 12 / 37%);
+  --gradient-background: rgb(64 40 26 / 93%);
+  --gradient-background-right: rgb(253 219 51 / 0%);
+  --gradient-background-left: rgb(241 192 12 / 13%);
+  --color-showcase-header: rgb(134 67 19);
+  --gradient-showcase-header-left: rgb(187 149 9 / 93%);
+  --btn-background: rgb(154 116 45);
+  --btn-background-hover: rgb(185 147 41);
+  --btn-outline: rgb(108, 90, 86);
+  --edit-background: rgb(153, 99, 15);
+}
+.profilethemecolors_BluescreenTheme_1bCKl {
+  --gradient-right: #008ada8a;
+  --gradient-left: rgb(47 137 188);
+  --gradient-background: #0203048a;
+  --gradient-background-right: rgb(253 51 51 / 0%);
+  --gradient-background-left: rgb(12 61 241 / 13%);
+  --color-showcase-header: rgb(24 32 61);
+  --gradient-showcase-header-left: rgb(31 53 113 / 93%);
+  --btn-background: rgb(61 101 150);
+  --btn-background-hover: rgb(57 116 206);
+  --btn-outline: rgb(86 91 108);
+  --edit-background: rgb(61, 101, 150);
+}
 .profileeditshell_Shell_2kqKZ {
   display: flex;
   flex-direction: row;

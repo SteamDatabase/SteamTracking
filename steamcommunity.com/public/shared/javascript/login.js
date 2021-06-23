@@ -29,7 +29,7 @@ function CLoginPromptManager( strBaseURL, rgOptions )
 		this.UpdateCaptcha( rgOptions.gidCaptcha );
 	else
 		this.RefreshCaptcha();	// check if needed
-
+	
 
 	this.m_bLoginInFlight = false;
 	this.m_bInEmailAuthProcess = false;
@@ -401,7 +401,7 @@ CLoginPromptManager.prototype.OnAuthCodeResponse = function( results, authCode )
 		emailsteamid: this.m_steamidEmailAuth,
 		rsatimestamp: results.timestamp,
 		remember_login: ( form.elements['remember_login'] && form.elements['remember_login'].checked ) ? 'true' : 'false'
-	};
+			};
 
 	if (this.m_bIsMobile)
 		rgParameters.oauth_client_id = form.elements['oauth_client_id'].value;

@@ -111,7 +111,7 @@ LocalizationManifestReady("profile", "manifest", {
   Profile_Edit_BackgroundEquipFlag_FullScreen: "Full Screen",
   Profile_Edit_BackgroundEquipFlag_OriginalSize: "Original Size",
   Profile_Edit_GoldenProfileOverridesTheme:
-    "The Special Profile overrides any profile theme setting.",
+    "A Special Profile overrides any profile theme setting.",
   Profile_FieldPrimaryGroup: "Primary Group",
   Profile_ChangePrimaryGroup: "Change primary group",
   Error_Error: "Error",
@@ -127,6 +127,13 @@ LocalizationManifestReady("profile", "manifest", {
   ProfileTheme_Midnight: "Midnight",
   ProfileTheme_DarkMode: "Dark Mode",
   ProfileTheme_Steel: "Steel",
+  ProfileTheme_Candy: "Candy",
+  ProfileTheme_Cherry: "Cherry",
+  ProfileTheme_SteamGreen: "Steam Green",
+  ProfileTheme_Seafoam: "Sea Foam",
+  ProfileTheme_Autumn: "Autumn",
+  ProfileTheme_Bluescreen: "Blue Screen",
+  ProfileTheme_Summer2021: "Summer 2021",
   Profile_PersonaNameCooldown:
     "This account has been banned from changing its profile name for:",
   Profile_PersonaNameCooldown_Desc:

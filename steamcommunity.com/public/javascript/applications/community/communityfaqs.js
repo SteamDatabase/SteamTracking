@@ -10800,102 +10800,95 @@
             l = n.a.useState(void 0),
             p = l[0],
             d = l[1],
-            h = n.a.useState(void 0),
-            c = h[0],
-            u = h[1],
-            m = n.a.useState(!1),
-            f = m[0],
-            g = m[1],
-            y = n.a.createElement(
+            h = n.a.createElement(
               "div",
               null,
               Object(Oe.f)("#FAQEditor_DeleteDesc")
             );
-          if (s)
-            y = n.a.createElement(Me.a, {
-              position: "center",
-              size: "medium",
-              string: Object(Oe.f)("#FAQEditor_DeletingInProgress"),
-            });
-          else if (p)
-            y = n.a.createElement(
-              "div",
-              null,
-              Object(Oe.f)("#FAQEditor_DeleteSuccess")
-            );
-          else if (c)
-            y = n.a.createElement(
-              "div",
-              null,
-              Object(Oe.f)(
-                "Error_Description",
-                c,
-                Object(Oe.f)("#Error_GenericFailureDescription")
-              )
-            );
-          else if (f)
-            return n.a.createElement(we.b, {
-              push: !0,
-              to: xe(fe.k_eCommunityDashboard),
-            });
-          return n.a.createElement(
-            ot.a,
-            null,
+          return (
+            s
+              ? (h = n.a.createElement(Me.a, {
+                  position: "center",
+                  size: "medium",
+                  string: Object(Oe.f)("#FAQEditor_DeletingInProgress"),
+                }))
+              : p &&
+                (h = n.a.createElement(
+                  "div",
+                  null,
+                  Object(Oe.f)(
+                    "Error_Description",
+                    p,
+                    Object(Oe.f)("#Error_GenericFailureDescription")
+                  )
+                )),
             n.a.createElement(
-              Pe.h,
-              { onEscKeypress: a },
+              ot.a,
+              null,
               n.a.createElement(
-                Te.f,
-                null,
+                Pe.h,
+                { onEscKeypress: a },
                 n.a.createElement(
-                  Te.l,
+                  Te.f,
                   null,
-                  Object(Oe.f)("#FAQEditor_DeleteAction")
-                ),
-                n.a.createElement(Te.b, null, n.a.createElement(Te.c, null, y)),
-                n.a.createElement(
-                  Te.k,
-                  null,
-                  n.a.createElement(Te.o, {
-                    onCancel: p
-                      ? function () {
-                          return g(!0);
-                        }
-                      : a,
-                    bOKDisabled: Boolean(s || p || c),
-                    strOKText: Object(Oe.f)("#FAQEditor_DeleteAction"),
-                    strCancelText: Boolean(s || p || c)
-                      ? Object(Oe.f)("#Button_OK")
-                      : void 0,
-                    onOK: function () {
-                      return Object(o.b)(void 0, void 0, void 0, function () {
-                        return Object(o.e)(this, function (e) {
-                          return (
-                            r(!0),
-                            pe
-                              .Get()
-                              .DeleteFAQ(t.GetFAQID())
-                              .then(function (e) {
-                                1 == e && d(!0), u(e);
-                              })
-                              .catch(function (e) {
-                                var t = Object(P.a)(e);
-                                console.error(
-                                  "FAQDeleteDialog: hit error: " +
-                                    t.strErrorMsg,
-                                  t
-                                ),
-                                  u(2);
-                              })
-                              .finally(function () {
-                                return r(!1);
-                              }),
-                            [2]
-                          );
+                  n.a.createElement(
+                    Te.l,
+                    null,
+                    Object(Oe.f)("#FAQEditor_DeleteAction")
+                  ),
+                  n.a.createElement(
+                    Te.b,
+                    null,
+                    n.a.createElement(Te.c, null, h)
+                  ),
+                  n.a.createElement(
+                    Te.k,
+                    null,
+                    n.a.createElement(Te.o, {
+                      onCancel: a,
+                      bOKDisabled: Boolean(s || p),
+                      strOKText: Object(Oe.f)("#FAQEditor_DeleteAction"),
+                      strCancelText: Boolean(s || p)
+                        ? Object(Oe.f)("#Button_OK")
+                        : void 0,
+                      onOK: function () {
+                        return Object(o.b)(void 0, void 0, void 0, function () {
+                          return Object(o.e)(this, function (e) {
+                            return (
+                              r(!0),
+                              pe
+                                .Get()
+                                .DeleteFAQ(t.GetFAQID())
+                                .then(function (e) {
+                                  if (1 == e) {
+                                    var t =
+                                      u.c.COMMUNITY_BASE_URL.substr(
+                                        0,
+                                        u.c.COMMUNITY_BASE_URL.length - 1
+                                      ) + xe(fe.k_eCommunityDashboard);
+                                    window.location.href = t;
+                                  }
+                                  d(e);
+                                })
+                                .catch(function (e) {
+                                  var t = Object(P.a)(e);
+                                  console.error(
+                                    "FAQDeleteDialog: hit error: " +
+                                      t.strErrorMsg,
+                                    t
+                                  ),
+                                    d(2);
+                                })
+                                .finally(function () {
+                                  return r(!1);
+                                }),
+                              [2]
+                            );
+                          });
                         });
-                      });
-                    },
-                  })
+                      },
+                    })
+                  )
                 )
               )
             )

@@ -1322,7 +1322,7 @@
             return h && !p.i.is_support
               ? s.createElement(
                   "div",
-                  { className: V.a.EventCategory_SteamGameFestival },
+                  { className: V.a.EventCategory_SpecialCategory },
                   s.createElement(
                     "div",
                     { className: V.a.TitleCtn },
@@ -1341,7 +1341,7 @@
               : _ && !p.i.is_support
               ? s.createElement(
                   "div",
-                  { className: V.a.EventCategory_SteamGameFestival },
+                  { className: V.a.EventCategory_SpecialCategory },
                   s.createElement(
                     "div",
                     { className: V.a.TitleCtn },
@@ -1359,7 +1359,7 @@
                 )
               : s.createElement(
                   "div",
-                  { className: V.a.EventCategory_SteamGameFestival },
+                  { className: V.a.EventCategory_SpecialCategory },
                   s.createElement(
                     "div",
                     { className: V.a.TitleCtn },
@@ -1377,7 +1377,7 @@
                       s.createElement(
                         "div",
                         { className: K.WarningStylesWithIcon },
-                        Object(f.f)("#EventCategory_SteamGameFestival_Max", 2),
+                        Object(f.l)("#EventCategory_SteamGameFestival_Max", 2),
                         s.createElement(
                           "div",
                           null,
@@ -1456,7 +1456,7 @@
               console.log("debug opt-in categpry type", Object(I.I)(a)),
             s.createElement(
               "div",
-              { className: V.a.EventCategory_SteamGameFestival },
+              { className: V.a.EventCategory_SpecialCategory },
               s.createElement(
                 "div",
                 { className: V.a.TitleCtn },
@@ -4795,7 +4795,7 @@
                 data: "general",
               },
             ],
-            i = a.GetWhiteListAccountPriority(e.accountid, "primary");
+            i = a.GetWhiteListAccountPriority(e.accountid, "general");
           return s.createElement(
             bt.a,
             {

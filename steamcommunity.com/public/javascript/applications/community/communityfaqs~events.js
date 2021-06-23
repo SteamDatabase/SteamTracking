@@ -863,13 +863,13 @@
         C = n("Vitc"),
         j = n("as1E"),
         I = n("k3PP"),
-        w = n("oqmg"),
-        M = n("IMce"),
+        M = n("oqmg"),
+        w = n("IMce"),
         D = n("UvY0"),
         k = n("vBFs"),
         G = n("gyoR"),
-        L = n("5eAM"),
-        A = Object(m.a)(function (e) {
+        A = n("5eAM"),
+        L = Object(m.a)(function (e) {
           var t = e.language,
             n = e.facetValue,
             a = e.editModel,
@@ -1019,7 +1019,7 @@
                       {
                         onClick: function () {
                           Object(v.c)(
-                            _.createElement(w.a, {
+                            _.createElement(M.a, {
                               editModel: a,
                               filter: n.filter,
                               title: Object(O.f)("#Sale_TagFilter_EditFilter"),
@@ -1161,7 +1161,7 @@
                     o();
                   },
                   render: function (e) {
-                    return _.createElement(A, {
+                    return _.createElement(L, {
                       language: t,
                       facetValue: e,
                       editModel: i,
@@ -1364,13 +1364,13 @@
                         ) {
                           return t.type === c.l.k_ELanguage
                             ? e.some(function (e) {
-                                return L.a
+                                return A.a
                                   .GetAppLinkInfo(e.capsule.id)
                                   .localized_langs.includes(t.language);
                               })
                             : t.type === c.l.k_EContentDescriptor
                             ? e.some(function (e) {
-                                var n = L.a.GetAppLinkInfo(e.capsule.id);
+                                var n = A.a.GetAppLinkInfo(e.capsule.id);
                                 return (
                                   Boolean(n) &&
                                   n.content_descriptors.includes(
@@ -1380,7 +1380,7 @@
                               })
                             : t.type === c.l.k_EAppType
                             ? e.some(function (e) {
-                                var n = L.a.GetAppLinkInfo(e.capsule.id);
+                                var n = A.a.GetAppLinkInfo(e.capsule.id);
                                 return Boolean(n) && n.type === t.appType;
                               })
                             : t.type === c.l.k_EUserPreference ||
@@ -1418,19 +1418,19 @@
                   { className: j.FilterDisplayCtn },
                   _.createElement(
                     "div",
-                    { className: M.FilterDisplayCtn },
+                    { className: w.FilterDisplayCtn },
                     _.createElement(
                       "div",
-                      { className: M.FilterTitle },
+                      { className: w.FilterTitle },
                       Object(O.f)("#FacetedBrowseEditor_FacetsSection")
                     )
                   ),
                   _.createElement(
                     "div",
-                    { className: M.FilterDisplayCtn },
+                    { className: w.FilterDisplayCtn },
                     _.createElement(
                       "div",
-                      { className: M.FilterActionsCtn },
+                      { className: w.FilterActionsCtn },
                       _.createElement("span", null),
                       _.createElement(
                         h.d,
@@ -1456,7 +1456,7 @@
                     ),
                     _.createElement(
                       "div",
-                      { className: M.FilterActionsCtn },
+                      { className: w.FilterActionsCtn },
                       _.createElement("span", null),
                       _.createElement(
                         h.d,
@@ -1480,7 +1480,7 @@
                     ),
                     _.createElement(
                       "div",
-                      { className: M.FilterActionsCtn },
+                      { className: w.FilterActionsCtn },
                       _.createElement(
                         "span",
                         null,
@@ -1498,7 +1498,7 @@
                             var e,
                               t = function () {
                                 Object(v.c)(
-                                  _.createElement(V, {
+                                  _.createElement(H, {
                                     onOK: function (e) {
                                       return (function (e) {
                                         return Object(a.b)(
@@ -1572,7 +1572,7 @@
                     s &&
                       _.createElement(
                         "div",
-                        { className: M.FilterActionsCtn },
+                        { className: w.FilterActionsCtn },
                         _.createElement(
                           "span",
                           null,
@@ -1591,7 +1591,7 @@
                       ),
                     _.createElement(
                       "div",
-                      { className: M.FilterActionsCtn },
+                      { className: w.FilterActionsCtn },
                       _.createElement(
                         "span",
                         null,
@@ -1604,7 +1604,7 @@
                       ),
                       _.createElement(
                         "div",
-                        { className: M.FilterSettingRightCol },
+                        { className: w.FilterSettingRightCol },
                         _.createElement(h.m, {
                           mustBeNumeric: !0,
                           rangeMin: 1,
@@ -1620,7 +1620,7 @@
                     ),
                     _.createElement(
                       "div",
-                      { className: M.FilterActionsCtn },
+                      { className: w.FilterActionsCtn },
                       _.createElement(
                         "span",
                         null,
@@ -1633,7 +1633,7 @@
                       ),
                       _.createElement(
                         "div",
-                        { className: M.FilterSettingRightCol },
+                        { className: w.FilterSettingRightCol },
                         _.createElement(h.m, {
                           mustBeNumeric: !0,
                           rangeMin: 1,
@@ -1649,7 +1649,7 @@
                     ),
                     _.createElement(
                       "div",
-                      { className: M.FilterActionsCtn },
+                      { className: w.FilterActionsCtn },
                       _.createElement(
                         "span",
                         null,
@@ -1662,7 +1662,7 @@
                       ),
                       _.createElement(
                         "div",
-                        { className: M.FilterSettingRightCol },
+                        { className: w.FilterSettingRightCol },
                         _.createElement(h.i, {
                           rgOptions: E,
                           selectedOption: n.facet_sort_order,
@@ -1675,10 +1675,10 @@
                     _.createElement(
                       D.b,
                       { clanSteamID: o.GetClanSteamID(), requireAdmin: !0 },
-                      H(t) &&
+                      V(t) &&
                         _.createElement(
                           "div",
-                          { className: M.FilterActionsCtn },
+                          { className: w.FilterActionsCtn },
                           _.createElement(
                             "span",
                             null,
@@ -1688,7 +1688,7 @@
                           ),
                           _.createElement(
                             "div",
-                            { className: M.FilterSettingRightCol },
+                            { className: w.FilterSettingRightCol },
                             _.createElement(h.e, {
                               checked: n.facets_generate_debug_info,
                               onChange: function (e) {
@@ -1958,7 +1958,7 @@
       function U(e) {
         return Object(r.f)(e, r.j.Store);
       }
-      var V = Object(m.a)(function (e) {
+      var H = Object(m.a)(function (e) {
         var t = e.closeModal,
           n = e.onOK,
           a = Object(_.useState)(!1),
@@ -2001,7 +2001,7 @@
           )
         );
       });
-      function H(e) {
+      function V(e) {
         return (
           !("items" !== e.section_type || !e.smart_section) ||
           "sale_item_browser" === e.section_type
@@ -2025,7 +2025,7 @@
                       };
                     }),
                     l = t.map(function (e) {
-                      var t = L.a.GetAppLinkInfo(e.capsule.id);
+                      var t = A.a.GetAppLinkInfo(e.capsule.id);
                       return {
                         languages: Boolean(t)
                           ? new Set(t.localized_langs)
@@ -2034,7 +2034,7 @@
                       };
                     }),
                     s = t.map(function (e) {
-                      var t = L.a.GetAppLinkInfo(e.capsule.id);
+                      var t = A.a.GetAppLinkInfo(e.capsule.id);
                       return {
                         contentDescriptors: Boolean(t)
                           ? new Set(t.content_descriptors)
@@ -2043,7 +2043,7 @@
                       };
                     }),
                     u = t.map(function (e) {
-                      var t = L.a.GetAppLinkInfo(e.capsule.id);
+                      var t = A.a.GetAppLinkInfo(e.capsule.id);
                       return {
                         appType: Boolean(t) ? t.type : null,
                         capsule: e.capsule,
@@ -2057,7 +2057,7 @@
                   for (m = p[d], _ = 0, g = m.facetValues; _ < g.length; _++)
                     if (
                       (((h = g[_]).matchingCapsules = []),
-                      H(e) && !1 === e.facets_generate_debug_info)
+                      V(e) && !1 === e.facets_generate_debug_info)
                     )
                       h.matchingCapsules = void 0;
                     else if (h.type === c.l.k_ELanguage)
@@ -2423,10 +2423,10 @@
     "6yBx": function (e, t, n) {
       "use strict";
       n.d(t, "b", function () {
-        return w;
+        return M;
       }),
         n.d(t, "a", function () {
-          return M;
+          return w;
         }),
         n.d(t, "c", function () {
           return D;
@@ -2456,7 +2456,7 @@
         C = n("NrWE"),
         j = n("as1E"),
         I = n.n(j),
-        w = (function (e) {
+        M = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -2697,7 +2697,7 @@
                     }),
                   r.createElement("div", { className: I.a.UploadPreviewCtn }, o)
                 ),
-                r.createElement(M, {
+                r.createElement(w, {
                   clanImageUploader: this.m_clanImageUploader,
                   fnOnUploadImageRequested: this.OnUploadImages,
                 })
@@ -2709,7 +2709,7 @@
             (t = Object(a.c)([i.a], t))
           );
         })(r.Component),
-        M = Object(i.a)(function (e) {
+        w = Object(i.a)(function (e) {
           var t = e.clanImageUploader,
             n = e.fnOnUploadImageRequested;
           return r.createElement(
@@ -2796,7 +2796,7 @@
           return C.push({ label: e.label, data: e.data });
         });
         var j = t.IsValidImage(e.supported, e.forceResolution, e.forceFileType),
-          w = j.needsCrop
+          M = j.needsCrop
             ? Object(y.f)("#ImageUpload_NeedsCrop")
             : j.error
             ? Object(y.f)("#ImageUpload_Invalid")
@@ -2849,8 +2849,8 @@
           r.createElement(
             "div",
             { className: Object(E.a)(m.a.FlexColumnContainer) },
-            w,
-            Boolean("uploading" == w) &&
+            M,
+            Boolean("uploading" == M) &&
               r.createElement(
                 "div",
                 { className: f.a.FlexCenter },
@@ -3285,7 +3285,7 @@
           return I;
         }),
         n.d(t, "b", function () {
-          return w;
+          return M;
         });
       var a = n("mrSG"),
         i = n("1fPh"),
@@ -3489,7 +3489,7 @@
             t
           );
         })(s.Component),
-        w = (function (e) {
+        M = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -3857,14 +3857,14 @@
             j < I.length;
             j++
           ) {
-            var w = I[j],
-              M = p.b.GetELanguageFallback(w);
-            if (!e.BHasLanguageRequiredOrFallback(w, M)) {
-              T = Object(p.f)("#Language_" + Object(o.a)(w));
+            var M = I[j],
+              w = p.b.GetELanguageFallback(M);
+            if (!e.BHasLanguageRequiredOrFallback(M, w)) {
+              T = Object(p.f)("#Language_" + Object(o.a)(M));
               n.push(
                 r.createElement(
                   "li",
-                  { key: "EventEdit_Error_MissingChinaTitleAndDesc" + w },
+                  { key: "EventEdit_Error_MissingChinaTitleAndDesc" + M },
                   r.createElement(
                     "div",
                     { className: u.a.ErrorStyles },
@@ -4383,10 +4383,10 @@
           return I;
         }),
         n.d(t, "k", function () {
-          return w;
+          return M;
         }),
         n.d(t, "d", function () {
-          return M;
+          return w;
         }),
         n.d(t, "t", function () {
           return k;
@@ -4395,10 +4395,10 @@
           return G;
         }),
         n.d(t, "r", function () {
-          return L;
+          return A;
         }),
         n.d(t, "u", function () {
-          return A;
+          return L;
         }),
         n.d(t, "v", function () {
           return B;
@@ -4443,13 +4443,13 @@
               C,
               j,
               I,
-              w,
               M,
+              w,
               D,
               G,
-              L = this;
-            return Object(i.e)(this, function (A) {
-              switch (A.label) {
+              A = this;
+            return Object(i.e)(this, function (L) {
+              switch (L.label) {
                 case 0:
                   return (
                     (h = null),
@@ -4457,7 +4457,7 @@
                     _ && f ? [4, l.a.Get().HintLoadOptInPageData(f)] : [3, 2]
                   );
                 case 1:
-                  A.sent(), (A.label = 2);
+                  L.sent(), (L.label = 2);
                 case 2:
                   return (
                     (b = _ && f ? l.a.Get().GetOptInPageData(f) : null),
@@ -4472,7 +4472,7 @@
                   );
                 case 3:
                   return (
-                    A.sent(),
+                    L.sent(),
                     [
                       4,
                       Object(p.g)(
@@ -4483,8 +4483,8 @@
                     ]
                   );
                 case 4:
-                  if (((v = A.sent()), (E = new Map()), !n)) return [3, 8];
-                  (S = 0), (y = t), (A.label = 5);
+                  if (((v = L.sent()), (E = new Map()), !n)) return [3, 8];
+                  (S = 0), (y = t), (L.label = 5);
                 case 5:
                   return S < y.length
                     ? ((O = y[S]),
@@ -4493,7 +4493,7 @@
                       [4, Object(p.f)(O.capsule)])
                     : [3, 8];
                 case 6:
-                  C.apply(T, j.concat([A.sent()])), (A.label = 7);
+                  C.apply(T, j.concat([L.sent()])), (L.label = 7);
                 case 7:
                   return S++, [3, 5];
                 case 8:
@@ -4558,13 +4558,13 @@
                     for (
                       I.push(u.a.Get().LoadAppIDsBatch(v)),
                         100,
-                        w = Promise.resolve(null),
-                        M = function (e) {
+                        M = Promise.resolve(null),
+                        w = function (e) {
                           var t = Math.min(100, v.length - e),
                             n = v.slice(e, e + t),
                             a = function () {
                               return Object(i.b)(
-                                L,
+                                A,
                                 void 0,
                                 void 0,
                                 function () {
@@ -4585,17 +4585,17 @@
                                 }
                               );
                             };
-                          (w = w.then(a, a)), I.push(w);
+                          (M = M.then(a, a)), I.push(M);
                         },
                         D = 0;
                       D < v.length;
                       D += 100
                     )
-                      M(D);
+                      w(D);
                   return [4, Promise.all(I)];
                 case 9:
                   return (
-                    A.sent(),
+                    L.sent(),
                     (G = !1),
                     Object(s.G)(function () {
                       for (var i = 0, o = t; i < o.length; i++) {
@@ -4674,7 +4674,7 @@
                 );
               case 1:
                 return (
-                  i.sent(), a.push(r), A(e), e.SetDirty(_.c.jsondata_sales), [2]
+                  i.sent(), a.push(r), L(e), e.SetDirty(_.c.jsondata_sales), [2]
                 );
             }
           });
@@ -4773,12 +4773,12 @@
       function I(e) {
         return e.replace(/^\[(.+)\]/, "").trim();
       }
-      function w(e) {
+      function M(e) {
         var t = /^\[(.+)\]/.exec(e);
         return t ? t[1] : void 0;
       }
-      function M(e, t) {
-        return w(e) === t;
+      function w(e, t) {
+        return M(e) === t;
       }
       function D(e, t) {
         return (
@@ -4793,7 +4793,7 @@
         var i = !1,
           r = new Map();
         t.forEach(function (e) {
-          var t = w(e);
+          var t = M(e);
           if (!t || t === n) {
             var a = t ? e : j(e, n);
             r.set(a.toLocaleLowerCase(), a);
@@ -4805,7 +4805,7 @@
           a &&
             ((l = new Set()),
             a.forEach(function (e) {
-              var t = w(e);
+              var t = M(e);
               if (!t || t === n) {
                 var a = t ? e : j(e, n);
                 l.add(a.toLocaleLowerCase());
@@ -4841,7 +4841,7 @@
         }
         return !0;
       }
-      function L(e, t, n) {
+      function A(e, t, n) {
         for (var a = new Map(), i = 0, r = n; i < r.length; i++) {
           var o = r[i];
           a.set(o.type + o.id, !1);
@@ -4861,7 +4861,7 @@
         });
         return _.push.apply(_, s), _;
       }
-      function A(e) {
+      function L(e) {
         Object(s.G)(function () {
           var t = F(e);
           if (e.GetEventModel().jsondata.sorting_tiers)
@@ -4872,7 +4872,7 @@
             ) {
               var i = a[n];
               i.sale_tag_filter &&
-                (i.capsules = L(t, i.sale_tag_filter, i.capsules));
+                (i.capsules = A(t, i.sale_tag_filter, i.capsules));
             }
           for (
             var r = 0, o = e.GetEventModel().GetSaleSections();
@@ -4882,13 +4882,13 @@
             var l = o[r];
             if (
               (l.sale_tag_filter &&
-                (l.capsules = L(t, l.sale_tag_filter, l.capsules)),
+                (l.capsules = A(t, l.sale_tag_filter, l.capsules)),
               l.tabs)
             )
               for (var s = 0, c = l.tabs; s < c.length; s++) {
                 var u = c[s];
                 u.sale_tag_filter &&
-                  (u.capsules = L(t, u.sale_tag_filter, u.capsules));
+                  (u.capsules = A(t, u.sale_tag_filter, u.capsules));
               }
           }
         });
@@ -5021,13 +5021,13 @@
         C = n("lkRc"),
         j = "email_headline_",
         I = "email_body_",
-        w = "sale_section_label_id_",
-        M = "sale_section_text_id_",
+        M = "sale_section_label_id_",
+        w = "sale_section_text_id_",
         D = "email_subject",
         k = "sale_tab_name_",
         G = "sale_facet_name_",
-        L = "sale_facetvalue_name_",
-        A = "sale_facetvalue_subtitle_";
+        A = "sale_facetvalue_name_",
+        L = "sale_facetvalue_subtitle_";
       function B(e, t, n, a) {
         var i = new y.b();
         if (t)
@@ -5067,13 +5067,13 @@
                     if (
                       (e.BHasSaleSectionLabelLocalization(a, n) &&
                         i.SetLocalization(
-                          w + t.unique_id,
+                          M + t.unique_id,
                           a,
                           t.localized_label[a]
                         ),
                       e.BHasSaleSectionTextLocalization(a, n) &&
                         i.SetLocalization(
-                          M + t.unique_id,
+                          w + t.unique_id,
                           a,
                           t.text_section_contents[a]
                         ),
@@ -5101,7 +5101,7 @@
                         n.facetValues.forEach(function (r) {
                           e.BHasSaleSectionFacetValueName(a, r) &&
                             i.SetLocalization(
-                              L +
+                              A +
                                 t.unique_id +
                                 "_" +
                                 n.unique_id +
@@ -5112,7 +5112,7 @@
                             ),
                             e.BHasSaleSectionFacetValueSubtitle(a, r) &&
                               i.SetLocalization(
-                                A +
+                                L +
                                   t.unique_id +
                                   "_" +
                                   n.unique_id +
@@ -5186,7 +5186,7 @@
                   e.GetSaleSections().forEach(function (t, o) {
                     if (
                       ((a !== "sale_section_label_" + o &&
-                        a !== w + t.unique_id) ||
+                        a !== M + t.unique_id) ||
                         ((i || e.BHasSaleSectionLabelLocalization(n, o)) &&
                           e.SetSaleSectionLabelLocalization(n, o, i) &&
                           (r = !0)),
@@ -5200,7 +5200,7 @@
                           (r = !0);
                       }
                     "text_section" === t.section_type &&
-                      a === M + t.unique_id &&
+                      a === w + t.unique_id &&
                       (i || e.BHasSaleSectionTextLocalization(n, o)) &&
                       e.SetSaleSectionTextLocalization(n, o, i) &&
                       (r = !0),
@@ -5212,7 +5212,7 @@
                             (r = !0),
                             o.facetValues.forEach(function (l) {
                               a ===
-                                L +
+                                A +
                                   t.unique_id +
                                   "_" +
                                   o.unique_id +
@@ -5222,7 +5222,7 @@
                                 e.SetSaleSectionFacetValueName(n, l, i) &&
                                 (r = !0),
                                 a ===
-                                  A +
+                                  L +
                                     t.unique_id +
                                     "_" +
                                     o.unique_id +
@@ -5960,7 +5960,7 @@
         return k;
       }),
         n.d(t, "b", function () {
-          return L;
+          return A;
         });
       var a = n("mrSG"),
         i = n("vDqi"),
@@ -5987,7 +5987,7 @@
         C = n("6yBx"),
         j = n("bVxH"),
         I = n("R5ed"),
-        w = (function (e) {
+        M = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -6194,7 +6194,7 @@
             (t = Object(a.c)([o.a], t))
           );
         })(l.Component),
-        M = n("blFj"),
+        w = n("blFj"),
         D = n("Yamg"),
         k = (function (e) {
           function t() {
@@ -6260,7 +6260,7 @@
                 for (var a = 0, i = n; a < i.length; a++) {
                   var r = i[a];
                   e.push(
-                    l.createElement(A, {
+                    l.createElement(L, {
                       key: r.imageid,
                       clanImage: r,
                       searchStringHilight: t,
@@ -6423,7 +6423,7 @@
             (t.prototype.InternalOpenLocalizeImageGroup = function (e) {
               var t = this.props.clanSteamID;
               Object(g.d)(
-                l.createElement(w, {
+                l.createElement(M, {
                   primaryLocalizedImage: e,
                   clanSteamID: t,
                   fnSetImageURL: this.props.fnSetImageURL,
@@ -6483,7 +6483,7 @@
                     onDismiss: this.onUploaderDismiss,
                   }),
                 !this.props.bHideDragAndDrop &&
-                  l.createElement(L, {
+                  l.createElement(A, {
                     onDropFiles: this.OnDropFiles,
                     fnSetImageURL: this.props.fnSetImageURL,
                     clanSteamID: i,
@@ -6610,7 +6610,7 @@
             t
           );
         })(l.Component),
-        L = (function (e) {
+        A = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -6763,7 +6763,7 @@
             (t = n = Object(a.c)([o.a], t))
           );
         })(l.Component),
-        A = (function (e) {
+        L = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -6888,7 +6888,7 @@
                 t = this.props.clanImage.file_name
                   ? this.props.clanImage.file_name
                   : "",
-                n = Object(M.b)(
+                n = Object(w.b)(
                   this.props.searchStringHilight,
                   t,
                   String(this.props.clanImage.imageid),
@@ -7813,7 +7813,7 @@
           return q;
         }),
         n.d(t, "c", function () {
-          return ie;
+          return re;
         });
       var a,
         i = n("mrSG"),
@@ -7840,13 +7840,13 @@
         C = n("vBFs"),
         j = n("fpVW"),
         I = n.n(j),
-        w = n("Txw1"),
-        M = n.n(w),
+        M = n("Txw1"),
+        w = n.n(M),
         D = n("exH9"),
         k = n("bxiW"),
         G = n("UxvL"),
-        L = n("lkRc"),
-        A = (function (e) {
+        A = n("lkRc"),
+        L = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -7866,7 +7866,7 @@
                 a = e.headerNavElement,
                 i = e.fnImageFailureCallback,
                 r = e.fnFilterImageURLsForKnownFailures,
-                o = e.langOverride || Object(d.d)(L.c.LANGUAGE),
+                o = e.langOverride || Object(d.d)(A.c.LANGUAGE),
                 l =
                   void 0 !== n
                     ? [n]
@@ -7882,7 +7882,7 @@
               c = c.replace(/https:\/\/[^ ]*/gi, "").trimLeft();
               var m = s.createElement(
                 "span",
-                { className: M.a.EventType },
+                { className: w.a.EventType },
                 p,
                 " - "
               );
@@ -7891,14 +7891,14 @@
                 null,
                 s.createElement(
                   "div",
-                  { className: M.a.MajorEvent_Ctn },
+                  { className: w.a.MajorEvent_Ctn },
                   s.createElement(
                     "div",
-                    { className: M.a.MajorEventHeader },
-                    s.createElement("div", { className: M.a.EventType }, m),
+                    { className: w.a.MajorEventHeader },
+                    s.createElement("div", { className: w.a.EventType }, m),
                     s.createElement(
                       "div",
-                      { className: M.a.PartnerEventLargeImage_Title },
+                      { className: w.a.PartnerEventLargeImage_Title },
                       u
                     ),
                     a
@@ -7907,16 +7907,16 @@
                     "div",
                     {
                       className: Object(D.a)(
-                        M.a.AppDetailsSpotlightContainer,
-                        M.a.MajorEventContainer
+                        w.a.AppDetailsSpotlightContainer,
+                        w.a.MajorEventContainer
                       ),
                       onClick: this.OnClick,
                     },
                     s.createElement(
                       "div",
-                      { className: M.a.MajorEventBackground },
+                      { className: w.a.MajorEventBackground },
                       s.createElement(G.a, {
-                        className: M.a.MajorEventImageBackgroundBlur,
+                        className: w.a.MajorEventImageBackgroundBlur,
                         rgSources: l,
                         onIncrementalError: function (e, t, n) {
                           return i && i(t);
@@ -7925,26 +7925,26 @@
                     ),
                     s.createElement(
                       "div",
-                      { className: M.a.MajorEventImageContainer },
+                      { className: w.a.MajorEventImageContainer },
                       s.createElement(G.a, {
-                        className: M.a.MajorEventImage,
+                        className: w.a.MajorEventImage,
                         rgSources: l,
                         onIncrementalError: function (e, t, n) {
                           return i && i(t);
                         },
                       }),
                       s.createElement("div", {
-                        className: M.a.MajorEventImageTemplate,
+                        className: w.a.MajorEventImageTemplate,
                       }),
                       s.createElement(
                         "div",
-                        { className: M.a.MajoreEventImageContentContainer },
+                        { className: w.a.MajoreEventImageContentContainer },
                         t.BShowLibrarySpotlightText() &&
                           s.createElement(
                             "div",
-                            { className: M.a.MajorEventContent },
+                            { className: w.a.MajorEventContent },
                             s.createElement(G.a, {
-                              className: M.a.MajorEventSpotlightBackground,
+                              className: w.a.MajorEventSpotlightBackground,
                               rgSources: l,
                               onIncrementalError: function (e, t, n) {
                                 return i && i(t);
@@ -7952,22 +7952,22 @@
                             }),
                             s.createElement(
                               "div",
-                              { className: M.a.MajorEventTextCtn },
+                              { className: w.a.MajorEventTextCtn },
                               s.createElement(
                                 "div",
-                                { className: M.a.MajorEventTitle },
+                                { className: w.a.MajorEventTitle },
                                 t.GetNameWithFallback(o)
                               ),
                               s.createElement(
                                 "div",
-                                { className: M.a.MajorEventSummary },
+                                { className: w.a.MajorEventSummary },
                                 c
                               )
                             )
                           )
                       )
                     ),
-                    s.createElement("div", { className: M.a.BottomShadow })
+                    s.createElement("div", { className: w.a.BottomShadow })
                   )
                 )
               );
@@ -7983,8 +7983,8 @@
         x = n("TLQK"),
         P = n("6h0J"),
         U = n.n(P),
-        V = n("75vw"),
-        H = n("bVxH"),
+        H = n("75vw"),
+        V = n("bVxH"),
         z = n("6Oks"),
         W = n.n(z);
       !(function (e) {
@@ -8181,7 +8181,7 @@
                         {
                           href:
                             "https://partner.steamgames.com/doc/store/localization#supported_languages",
-                          target: L.c.IN_CLIENT ? void 0 : "_blank",
+                          target: A.c.IN_CLIENT ? void 0 : "_blank",
                         },
                         Object(x.f)("#ImagePickerLoc_URL")
                       )
@@ -8325,10 +8325,25 @@
                 e.elEventArtworkExample,
                 " ",
                 s.createElement("br", null),
-                e.elAdditionalControls
+                e.elAdditionalControls,
+                Boolean(e.fnRemoveAllArtwork) &&
+                  s.createElement(
+                    E.d,
+                    {
+                      onClick: function (t) {
+                        Object(N.d)(
+                          s.createElement(K, {
+                            fnRemoveAllArtwork: e.fnRemoveAllArtwork,
+                          }),
+                          Object(R.m)(t)
+                        );
+                      },
+                    },
+                    Object(x.f)("#Sale_RemoveAll")
+                  )
               ),
             !e.bIsMinimized &&
-              s.createElement(K, {
+              s.createElement(Y, {
                 clanSteamID: e.clanSteamID,
                 title: e.title,
                 imageWidth: u,
@@ -8337,7 +8352,19 @@
               })
           );
         }),
-        K = (function (e) {
+        K = function (e) {
+          var t = e.fnRemoveAllArtwork,
+            n = e.closeModal;
+          return s.createElement(B.d, {
+            strTitle: Object(x.f)("#Sale_RemoveAll"),
+            strDescription: Object(x.f)("#ImageUpload_DeleteAll_Confirm"),
+            onOK: function () {
+              t(), n();
+            },
+            onCancel: n,
+          });
+        },
+        Y = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -8419,7 +8446,7 @@
                         style: { textTransform: "uppercase", width: "200px" },
                         onClick: function () {
                           return window.open(
-                            L.c.PARTNER_BASE_URL +
+                            A.c.PARTNER_BASE_URL +
                               "admin/game/edit/" +
                               e.GetStoreItemID() +
                               "?activetab=tab_graphicalassets"
@@ -8432,7 +8459,7 @@
                 : s.createElement(
                     "div",
                     null,
-                    s.createElement(Y, {
+                    s.createElement(Q, {
                       list: this.state.lastSelection,
                       fnOnArtworkLanguageChange: this
                         .OnUpdateAndMoveClanImageLang,
@@ -8484,7 +8511,7 @@
                             W.a.MainPreviewBlock
                           ),
                         },
-                        s.createElement(ae, {
+                        s.createElement(ie, {
                           clanSteamID: this.props.clanSteamID,
                           fnOnLanguagePreviewChange: this.OnLanguageChange,
                           langOverride: this.state.langOverride,
@@ -8517,7 +8544,7 @@
             (t = Object(i.c)([l.a], t))
           );
         })(s.Component),
-        Y = (function (e) {
+        Q = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -8526,7 +8553,7 @@
             (t.prototype.ShowLangChangeDialog = function (e, t) {
               var n = this.props.fnOnArtworkLanguageChange;
               Object(N.d)(
-                s.createElement(Q, {
+                s.createElement(J, {
                   clanImage: e,
                   lang: t,
                   fnOnArtworkLangChange: n,
@@ -8577,13 +8604,13 @@
               var e = this.props.list;
               if (!e || 0 == e.length) return s.createElement("div", null);
               var t = this.GenerateImageMappings();
-              return s.createElement("div", { className: V.UploadSuccess }, t);
+              return s.createElement("div", { className: H.UploadSuccess }, t);
             }),
             Object(i.c)([k.a], t.prototype, "ShowLangChangeDialog", null),
             (t = Object(i.c)([l.a], t))
           );
         })(s.Component),
-        Q = (function (e) {
+        J = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.state = { selectedLang: t.props.lang }), t;
@@ -8654,7 +8681,7 @@
             t
           );
         })(s.Component),
-        J = Object(l.a)(function (e) {
+        Z = Object(l.a)(function (e) {
           var t = e.imgURL,
             n = r.c.GetEditModel(),
             a = b.a.Get().GetCurEditLanguage();
@@ -8668,7 +8695,7 @@
             })
           );
         }),
-        Z = function (e) {
+        X = function (e) {
           var t = e.lang,
             n = r.c.GetEditModel().GetEventModel(),
             a = n.GetNameWithFallback(t),
@@ -8764,14 +8791,14 @@
               )
           );
         },
-        X = function (e) {
+        $ = function (e) {
           var t = h.a.GetStoreCapsuleInfo(e.event.appid).GetAppStoreData(),
             n = t.title,
             a = t.icon_url;
           return s.createElement(
             "div",
             { className: W.a.SpotlightExample },
-            s.createElement(A, {
+            s.createElement(L, {
               event: e.event,
               strDisplayName: n,
               gameIconUrl: a,
@@ -8780,7 +8807,7 @@
             })
           );
         },
-        $ = function (e) {
+        ee = function (e) {
           var t = [
             s.createElement("img", { key: "img", src: e.imgURL }),
             s.createElement("div", {
@@ -8797,13 +8824,6 @@
             )
           );
         },
-        ee = function (e) {
-          return s.createElement(
-            "div",
-            { className: W.a.SaleHeaderPreviewContainer },
-            s.createElement("img", { style: { width: "100%" }, src: e.imgURL })
-          );
-        },
         te = function (e) {
           return s.createElement(
             "div",
@@ -8818,7 +8838,14 @@
             s.createElement("img", { style: { width: "100%" }, src: e.imgURL })
           );
         },
-        ae = (function (e) {
+        ae = function (e) {
+          return s.createElement(
+            "div",
+            { className: W.a.SaleHeaderPreviewContainer },
+            s.createElement("img", { style: { width: "100%" }, src: e.imgURL })
+          );
+        },
+        ie = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -8842,25 +8869,25 @@
                 ? s.createElement(
                     "div",
                     { className: W.a.ImagePreviewContainer },
-                    "capsule" === n && s.createElement(J, { imgURL: l }),
+                    "capsule" === n && s.createElement(Z, { imgURL: l }),
                     "background" === n &&
-                      s.createElement(Z, {
+                      s.createElement(X, {
                         imgURL: l,
                         lang: b.a.Get().GetCurEditLanguage(),
                       }),
                     "spotlight" === n &&
-                      s.createElement(X, {
+                      s.createElement($, {
                         imgURL: l,
                         event: o.GetEventModel(),
                         lang: o.GetCurEditLanguage(),
                       }),
                     ("broadcast_left" === n || "broadcast_right" === n) &&
-                      s.createElement($, {
+                      s.createElement(ee, {
                         imgURL: l,
                         side: "broadcast_right" === n ? "right" : "left",
                       }),
-                    "sale_header" === n && s.createElement(ee, { imgURL: l }),
-                    "sale_overlay" === n && s.createElement(te, { imgURL: l }),
+                    "sale_header" === n && s.createElement(te, { imgURL: l }),
+                    "sale_overlay" === n && s.createElement(ne, { imgURL: l }),
                     Boolean(
                       "localized_image_group" === n ||
                         "link_capsule" === n ||
@@ -8870,14 +8897,14 @@
                         "schedule_track_art" === n
                     ) &&
                       s.createElement("img", {
-                        className: H.previewimg,
+                        className: V.previewimg,
                         src: f.d.GetLocalizedImageGroupForEditAsURL(i, t),
                       }),
                     "product_banner" === n &&
-                      s.createElement(ne, { imgURL: l }),
+                      s.createElement(ae, { imgURL: l }),
                     "product_mobile_banner" === n &&
-                      s.createElement(ne, { imgURL: l }),
-                    s.createElement(ie, {
+                      s.createElement(ae, { imgURL: l }),
+                    s.createElement(re, {
                       langOverride: t,
                       clanSteamID: i,
                       fnOnLanguagePreviewChange: a,
@@ -8892,22 +8919,22 @@
                     "div",
                     { className: W.a.ImagePreviewContainer },
                     "capsule" === n &&
-                      s.createElement(J, {
-                        imgURL:
-                          L.c.IMG_URL + "events/defaults/default_img_cover.jpg",
-                      }),
-                    "background" === n &&
                       s.createElement(Z, {
                         imgURL:
-                          L.c.IMG_URL +
+                          A.c.IMG_URL + "events/defaults/default_img_cover.jpg",
+                      }),
+                    "background" === n &&
+                      s.createElement(X, {
+                        imgURL:
+                          A.c.IMG_URL +
                           "events/defaults/default_img_header.jpg",
                         lang: o.GetCurEditLanguage(),
                       }),
                     "spotlight" === n &&
-                      s.createElement(X, {
+                      s.createElement($, {
                         lang: b.a.Get().GetCurEditLanguage(),
                         imgURL:
-                          L.c.IMG_URL +
+                          A.c.IMG_URL +
                           "events/defaults/default_img_spotlight.jpg",
                         event: o.GetEventModel(),
                       }),
@@ -8921,7 +8948,7 @@
             (t = Object(i.c)([l.a], t))
           );
         })(s.Component),
-        ie = (function (e) {
+        re = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -8942,7 +8969,7 @@
                 var o = f.d.GetClanImageByImageHash(a, r);
                 o &&
                   Object(N.d)(
-                    s.createElement(Q, {
+                    s.createElement(J, {
                       clanImage: o,
                       lang: i,
                       fnOnArtworkLangChange: this.props.fnOnArtworkLangChange,
@@ -9916,8 +9943,8 @@
         EventCategory: "partnereventeditor_EventCategory_1rJ2O",
         EventCategory_SteamAwardsVoteRequest:
           "partnereventeditor_EventCategory_SteamAwardsVoteRequest_RxhoL",
-        EventCategory_SteamGameFestival:
-          "partnereventeditor_EventCategory_SteamGameFestival_1DanT",
+        EventCategory_SpecialCategory:
+          "partnereventeditor_EventCategory_SpecialCategory_2Hm22",
         TitleCtn: "partnereventeditor_TitleCtn_oGmJd",
         Title: "partnereventeditor_Title_1iEFY",
         Summary: "partnereventeditor_Summary_2eQap",
@@ -10042,6 +10069,35 @@
         EventEditorVisibilityCtn:
           "partnereventshareddates_EventEditorVisibilityCtn_4gWwy",
       };
+    },
+    "d+Me": function (e, t, n) {
+      "use strict";
+      n.d(t, "a", function () {
+        return o;
+      });
+      var a = n("mrSG"),
+        i = n("q1tI"),
+        r = n("uuth"),
+        o = function (e) {
+          var t = e.onPositionChange,
+            n = e.onLeave,
+            o = i.useCallback(
+              function (e) {
+                return (
+                  void 0 === e.previousPosition &&
+                    e.currentPosition === r.a.above &&
+                    n &&
+                    n(e),
+                  t && t(e)
+                );
+              },
+              [t, n]
+            );
+          return i.createElement(
+            r.a,
+            Object(a.a)({}, e, { onPositionChange: o })
+          );
+        };
     },
     dZOt: function (e, t, n) {
       "use strict";
@@ -10680,10 +10736,10 @@
           return o;
         }),
         n.d(t, "f", function () {
-          return w;
+          return M;
         }),
         n.d(t, "e", function () {
-          return M;
+          return w;
         });
       var a,
         i,
@@ -10733,17 +10789,17 @@
         (function (e) {
           (e.k_EHour = "hour"), (e.k_EDay = "day"), (e.k_EWeek = "week");
         })(o || (o = {}));
-      var w;
+      var M;
       !(function (e) {
         (e[(e.immediate = 0)] = "immediate"),
           (e[(e.event_start = 1)] = "event_start"),
           (e[(e.specified_time = 2)] = "specified_time");
-      })(w || (w = {}));
-      var M = (function () {
+      })(M || (M = {}));
+      var w = (function () {
         function e(e) {
           (this.m_bChanged = !1),
             (this.m_changes = r.None),
-            (this.visibilitySetting = w.immediate),
+            (this.visibilitySetting = M.immediate),
             (this.m_startTimeEditChoice = a.k_ENow),
             (this.m_endTimeEditChoice = i.k_EDuration),
             (this.m_originalEvent = e),
@@ -11428,10 +11484,10 @@
             if (this.BHidden()) {
               var e = this.m_curModel.startTime,
                 t = this.m_curModel.visibilityStartTime;
-              (this.visibilitySetting = w.specified_time),
+              (this.visibilitySetting = M.specified_time),
                 !t || t <= 1
-                  ? (this.visibilitySetting = w.immediate)
-                  : t == e && (this.visibilitySetting = w.event_start);
+                  ? (this.visibilitySetting = M.immediate)
+                  : t == e && (this.visibilitySetting = M.event_start);
             }
           }),
           (e.CalculateEndTimeFromStartAndDuration = function (e, t, n) {
@@ -11518,11 +11574,11 @@
                 return (
                   console.error("Unexpected: " + this.visibilitySetting), 0
                 );
-              case w.immediate:
+              case M.immediate:
                 return 0;
-              case w.event_start:
+              case M.event_start:
                 return t <= 1 ? e : t;
-              case w.specified_time:
+              case M.specified_time:
                 return this.m_curModel.visibilityStartTime < e
                   ? e
                   : this.m_curModel.visibilityStartTime;
@@ -11554,7 +11610,7 @@
             var e = b.a.GetTimeNowWithOverride();
             return (
               !!(
-                this.visibilitySetting != w.specified_time ||
+                this.visibilitySetting != M.specified_time ||
                 !this.m_curModel.visibilityStartTime ||
                 0 == this.m_curModel.visibilityStartTime ||
                 this.m_curModel.startTime < e ||
@@ -11919,9 +11975,9 @@
             var e = this.m_curModel.startTime;
             return (
               this.m_startTimeEditChoice == a.k_ESpecified &&
-              ((this.visibilitySetting == w.immediate &&
+              ((this.visibilitySetting == M.immediate &&
                 e > b.a.GetTimeNowWithOverride()) ||
-                (this.visibilitySetting == w.specified_time &&
+                (this.visibilitySetting == M.specified_time &&
                   this.m_curModel.visibilityStartTime < e))
             );
           }),
@@ -12722,7 +12778,7 @@
               p.a.createElement("h2", null, "Packages:"),
               Boolean(y.packages)
                 ? y.packages.map(function (e) {
-                    return p.a.createElement(w, {
+                    return p.a.createElement(M, {
                       subid: e.subid,
                       key: "subid_" + e.subid,
                       strFilter: u,
@@ -12843,7 +12899,7 @@
             },
           });
         },
-        w = function (e) {
+        M = function (e) {
           var t = e.subid,
             n = e.strFilter,
             a = g.b.GetPackageInfo(t);
@@ -13019,13 +13075,13 @@
         C = n("h5LU"),
         j = n("fpVW"),
         I = n.n(j),
-        w = n("f1ZV"),
-        M = n("ka0M"),
+        M = n("f1ZV"),
+        w = n("ka0M"),
         D = n("0rc7"),
         k = n("5E+2"),
         G = n("Kw0F"),
-        L = n("exH9"),
-        A = n("X3Ds"),
+        A = n("exH9"),
+        L = n("X3Ds"),
         B = n("N0Ye"),
         N = n("lkRc"),
         F = n("nvcf"),
@@ -13033,8 +13089,8 @@
         x = n("kyHq"),
         P = n("kLLr"),
         U = n("TQGK"),
-        V = n("uIWk"),
-        H = (function () {
+        H = n("uIWk"),
+        V = (function () {
           function e() {
             (this.m_mapEventGIDToSolrData = new Map()),
               (this.m_listEvents = new Array());
@@ -13213,7 +13269,7 @@
                 this.props.saleSection.events.some(function (t) {
                   return (null == t ? void 0 : t.announcement_gid) == e.id;
                 })
-                  ? Object(M.d)(
+                  ? Object(w.d)(
                       d.createElement(h.d, {
                         strTitle: Object(f.f)("#Sale_DuplicateCapsule"),
                         strDescription: Object(f.f)(
@@ -13441,12 +13497,12 @@
                               switch (a.label) {
                                 case 0:
                                   return (
-                                    (e = V.a.GetCreatorHome(
+                                    (e = H.a.GetCreatorHome(
                                       new P.a(N.b.CLANSTEAMID)
                                     )),
                                     [
                                       4,
-                                      H.Get().GetLatestPartnerEvents(
+                                      V.Get().GetLatestPartnerEvents(
                                         r.a.CancelToken.source(),
                                         0,
                                         20,
@@ -13816,7 +13872,7 @@
                   d.createElement(
                     "div",
                     {
-                      className: Object(L.a)(
+                      className: Object(A.a)(
                         j.ValveOnlyBackground,
                         F.EventCategoryCtn
                       ),
@@ -13840,7 +13896,7 @@
             k.a,
             {
               direction: "top",
-              className: Object(L.a)(F.EventCategoryWidth),
+              className: Object(A.a)(F.EventCategoryWidth),
               toolTipContent: Object(f.f)(t.description),
             },
             d.createElement(_.e, {
@@ -13871,7 +13927,7 @@
               ? d.createElement(D.a, {
                   items: n.event_schedule_tracks,
                   onDelete: function (e) {
-                    Object(M.d)(
+                    Object(w.d)(
                       d.createElement(h.d, {
                         strTitle: Object(f.f)(
                           "#EventSchedule_DeletePrompt_Title"
@@ -13933,7 +13989,7 @@
           return d.createElement(
             "div",
             {
-              className: Object(L.a)(
+              className: Object(A.a)(
                 y.TabsSelectorEntry,
                 e.selected && y.TabsSelectorEntrySelected
               ),
@@ -13981,7 +14037,7 @@
               _.d,
               {
                 onClick: function (e) {
-                  Object(M.d)(
+                  Object(w.d)(
                     d.createElement(S, {
                       loc_images: n.localized_track_image,
                       fnSetImage: function (e, t) {
@@ -13994,7 +14050,7 @@
                       editModel: a,
                       artworkType: "schedule_track_art",
                     }),
-                    Object(A.m)(e)
+                    Object(L.m)(e)
                   );
                 },
               },
@@ -14096,7 +14152,7 @@
             d.createElement(
               d.Fragment,
               null,
-              d.createElement(w.a, {
+              d.createElement(M.a, {
                 strDescription: Object(f.f)("#EventEditor_Starts"),
                 nEarliestTime: 0,
                 fnGetTimeToUpdate: function () {
@@ -14122,7 +14178,7 @@
                   { className: F.SingleLine },
                   e.elSetStartTime
                 ),
-              d.createElement(w.a, {
+              d.createElement(M.a, {
                 strDescription: Object(f.f)("#EventEditor_Ends"),
                 nEarliestTime: 0,
                 fnGetTimeToUpdate: function () {
@@ -14298,7 +14354,7 @@
                       d.createElement(
                         "div",
                         {
-                          className: Object(L.a)(
+                          className: Object(A.a)(
                             j.FlexRowContainer,
                             J.CustomTitleCtn
                           ),
@@ -14549,7 +14605,7 @@
                       "div",
                       {
                         key: "ImportSaleItemsDialog_" + t,
-                        className: Object(L.a)(
+                        className: Object(A.a)(
                           j.FlexRowContainer,
                           j.RadioOption
                         ),
@@ -14643,14 +14699,14 @@
         Ce = n("qD+2"),
         je = n("YLyR"),
         Ie = n("r64O"),
-        we = -1,
-        Me = (function (e) {
+        Me = -1,
+        we = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
               (t.state = {
-                nImportCapsuleVisibiltyIndex: we,
-                nShowVisibilityIndexOnly: we,
+                nImportCapsuleVisibiltyIndex: Me,
+                nShowVisibilityIndexOnly: Me,
               }),
               t
             );
@@ -14677,7 +14733,7 @@
                 id: e,
                 type: t,
                 visibility_index:
-                  this.state.nImportCapsuleVisibiltyIndex == we
+                  this.state.nImportCapsuleVisibiltyIndex == Me
                     ? void 0
                     : this.state.nImportCapsuleVisibiltyIndex,
               };
@@ -14706,9 +14762,9 @@
               }
             }),
             (t.prototype.ImportSaleItems = function (e) {
-              Object(M.d)(
+              Object(w.d)(
                 d.createElement(Te, { fnAddCapsule: this.AddCapsule }),
-                Object(A.m)(e)
+                Object(L.m)(e)
               );
             }),
             (t.prototype.OnChangeVisibilityDate = function (e) {
@@ -14718,7 +14774,7 @@
               this.setState({ nShowVisibilityIndexOnly: e });
             }),
             (t.prototype.OnRemoveAllPrompt = function () {
-              Object(M.d)(
+              Object(w.d)(
                 d.createElement(h.d, {
                   strTitle: Object(f.f)("#Sale_RemoveAllConfirm_Title"),
                   strDescription: Object(f.f)("#Sale_RemoveAllConfirm_Body"),
@@ -14732,12 +14788,12 @@
                 this.props.editModel.SetDirty(o.c.jsondata_sales);
             }),
             (t.prototype.OnEditRaw = function (e) {
-              Object(M.d)(
+              Object(w.d)(
                 d.createElement(De, {
                   editModel: this.props.editModel,
                   capsuleContainer: this.props.capsuleContainer,
                 }),
-                Object(A.m)(e)
+                Object(L.m)(e)
               );
             }),
             (t.prototype.OnUseTagFilterChangeConfirmed = function (e) {
@@ -14770,7 +14826,7 @@
               if (e) {
                 if (i.sale_tag_filter) return;
                 i.capsules.length
-                  ? Object(M.d)(
+                  ? Object(w.d)(
                       d.createElement(h.d, {
                         strTitle: Object(f.f)(
                           "#Sale_TaggedItemFilter_EnableTitle"
@@ -14792,7 +14848,7 @@
                     ? void 0
                     : t.length
                 )
-                  ? Object(M.d)(
+                  ? Object(w.d)(
                       d.createElement(h.d, {
                         strTitle: Object(f.f)(
                           "#Sale_TaggedItemFilter_DisableTitle"
@@ -14853,7 +14909,7 @@
                     d.createElement(
                       "div",
                       {
-                        className: Object(L.a)(
+                        className: Object(A.a)(
                           j.FlexColumnContainer,
                           j.EventDefaultRowContainer
                         ),
@@ -14876,11 +14932,11 @@
             }),
             (t.prototype.OnSelectDiscountEvent = function (e) {
               var t = this;
-              Object(M.d)(
+              Object(w.d)(
                 d.createElement(Se.a, {
                   onDiscountEventSelected: function (e, n) {
                     var a =
-                        t.state.nImportCapsuleVisibiltyIndex == we
+                        t.state.nImportCapsuleVisibiltyIndex == Me
                           ? void 0
                           : t.state.nImportCapsuleVisibiltyIndex,
                       i = t.props.capsuleContainer;
@@ -14911,7 +14967,7 @@
                       t.props.editModel.SetDirty(o.c.jsondata_sales);
                   },
                 }),
-                Object(A.m)(e)
+                Object(L.m)(e)
               );
             }),
             (t.prototype.renderItemView = function () {
@@ -14922,7 +14978,7 @@
                 i = [
                   {
                     label: Object(f.f)("#Sale_VisibilityIndex_Default"),
-                    data: we,
+                    data: Me,
                   },
                 ],
                 r = n.GetNumberOfDays(),
@@ -14959,17 +15015,17 @@
                   d.createElement(
                     "div",
                     {
-                      key: "CountFilter_sale" + this.props.uniqueKey + "_" + we,
-                      className: Object(L.a)(j.FlexRowContainer, j.RadioOption),
+                      key: "CountFilter_sale" + this.props.uniqueKey + "_" + Me,
+                      className: Object(A.a)(j.FlexRowContainer, j.RadioOption),
                     },
                     d.createElement("input", {
                       type: "radio",
                       name: h,
                       id: b,
-                      value: we,
-                      checked: we == this.state.nShowVisibilityIndexOnly,
+                      value: Me,
+                      checked: Me == this.state.nShowVisibilityIndexOnly,
                       onChange: function () {
-                        return e.OnVisibilityIndexFilterChange(we);
+                        return e.OnVisibilityIndexFilterChange(Me);
                       },
                     }),
                     d.createElement(
@@ -14991,7 +15047,7 @@
                         "div",
                         {
                           key: "CountFilter_sale" + e.props.uniqueKey + "_" + n,
-                          className: Object(L.a)(
+                          className: Object(A.a)(
                             j.FlexRowContainer,
                             j.RadioOption
                           ),
@@ -15057,7 +15113,7 @@
                   d.createElement(
                     "div",
                     {
-                      className: Object(L.a)(
+                      className: Object(A.a)(
                         j.FlexColumnContainer,
                         j.EventDefaultRowContainer
                       ),
@@ -15149,9 +15205,9 @@
                       )
                     ),
                     d.createElement(D.a, {
-                      bDisabled: this.state.nShowVisibilityIndexOnly != we,
+                      bDisabled: this.state.nShowVisibilityIndexOnly != Me,
                       items:
-                        this.state.nShowVisibilityIndexOnly === we
+                        this.state.nShowVisibilityIndexOnly === Me
                           ? a.capsules
                           : a.capsules.filter(function (t) {
                               return (
@@ -15440,8 +15496,8 @@
         })(d.Component),
         ke = n("NF5x"),
         Ge = n("bDQf"),
-        Le = n("K3tN"),
-        Ae = Object(u.a)(function (e) {
+        Ae = n("K3tN"),
+        Le = Object(u.a)(function (e) {
           var t = e.saleSection,
             n = e.editModel,
             a = d.useState(null),
@@ -15515,7 +15571,7 @@
           return d.createElement(
             "div",
             {
-              className: Object(L.a)(
+              className: Object(A.a)(
                 y.TabsSelectorEntry,
                 e.selected && y.TabsSelectorEntrySelected
               ),
@@ -15526,7 +15582,7 @@
             },
             d.createElement("span", null, r),
             Boolean(l) &&
-              d.createElement("img", { className: Le.ImgPreview, src: l })
+              d.createElement("img", { className: Ae.ImgPreview, src: l })
           );
         }),
         Fe = (function (e) {
@@ -15559,7 +15615,7 @@
             (t.prototype.OnDeleteTabPrompt = function (e) {
               var t = this,
                 n = this.props.saleSection.tabs[e];
-              Object(M.d)(
+              Object(w.d)(
                 d.createElement(h.d, {
                   strTitle: Object(f.f)("#Sale_Tabs_DeletePrompt_Title"),
                   strDescription: Object(f.f)(
@@ -15630,7 +15686,7 @@
                 }),
                 d.createElement(
                   "div",
-                  { className: Le.CurrentTabsCtn },
+                  { className: Ae.CurrentTabsCtn },
                   d.createElement(
                     "div",
                     { className: j.EventEditorTextTitle },
@@ -15641,7 +15697,7 @@
                   ),
                   d.createElement(
                     "div",
-                    { className: Le.AddButton },
+                    { className: Ae.AddButton },
                     d.createElement(
                       k.a,
                       { toolTipContent: Object(f.f)("#Sale_Tabs_AddTab_ttip") },
@@ -15739,7 +15795,7 @@
                 }),
                 !i && this.RenderHideItemFilter(),
                 i &&
-                  d.createElement(Me, {
+                  d.createElement(we, {
                     key: "TabItems" + t.unique_id,
                     capsuleContainer: t,
                     editModel: this.props.editModel,
@@ -15925,7 +15981,7 @@
                               "TabSaleBackgroundImageEditor.OnDropFiles: failed file=" +
                                 e[0].name
                             ),
-                            Object(M.d)(
+                            Object(w.d)(
                               d.createElement(h.f, {
                                 strDescription: Object(f.f)(
                                   "#ImagePicker_Error",
@@ -16007,7 +16063,7 @@
               })
           );
         }),
-        Ve = function (e) {
+        He = function (e) {
           var t = function () {
               return e.closeModal && e.closeModal();
             },
@@ -16029,7 +16085,7 @@
           Object(d.useEffect)(function () {
             var e = r.a.CancelToken.source();
             return (
-              He().then(function () {
+              Ve().then(function () {
                 e.token.reason || i(!0);
               }),
               function () {
@@ -16094,7 +16150,7 @@
                     bOKDisabled: !c,
                     strOKText: Object(f.f)("#Button_Delete"),
                     onOK: function () {
-                      Object(M.d)(
+                      Object(w.d)(
                         p.a.createElement(h.d, {
                           title: Object(f.f)("#EventEditor_GenericAreYouSure"),
                           strDescription: Object(f.f)("#Sale_Debug_Delete"),
@@ -16142,7 +16198,7 @@
             )
           );
         };
-      function He() {
+      function Ve() {
         return Object(a.b)(this, void 0, void 0, function () {
           var e;
           return Object(a.e)(this, function (t) {
@@ -16449,7 +16505,7 @@
           Object(d.useEffect)(function () {
             var e = r.a.CancelToken.source();
             return (
-              He().then(function () {
+              Ve().then(function () {
                 e.token.reason || a(!0);
               }),
               s(
@@ -16635,7 +16691,7 @@
                           document.removeChild(n);
                         } catch (e) {}
                       })(new Blob([j], { type: "text/csv:charset=utf-8;" }), I),
-                        Object(M.b)(
+                        Object(w.b)(
                           p.a.createElement(h.d, {
                             strTitle: Object(f.f)("#Sale_GameExport_Title"),
                             bAlertDialog: !0,
@@ -16727,7 +16783,7 @@
               onChange: function (e) {
                 var t = l.c.GetEditModel();
                 t.GetEventModel().jsondata.sale_num_headers !== e.data &&
-                  Object(M.d)(
+                  Object(w.d)(
                     d.createElement(h.d, {
                       strTitle: Object(f.f)("#Button_Confirm"),
                       strDescription: Object(f.f)(
@@ -16813,22 +16869,36 @@
         }),
         et = n("AIbc"),
         tt = Object(u.a)(function (e) {
-          var t = e.editModel,
-            n = Boolean(
-              t.BHasSomeImage("product_banner") &&
-                t.GetEventModel().BHasTag("hide_store")
+          var t,
+            n,
+            a = e.editModel,
+            i = Boolean(
+              a.BHasSomeImage("product_banner") &&
+                a.GetEventModel().BHasTag("hide_store")
             ),
-            a = Boolean(
-              t.BHasSomeImage("product_mobile_banner") &&
-                t.GetEventModel().BHasTag("hide_store")
+            r = Boolean(
+              a.BHasSomeImage("product_mobile_banner") &&
+                a.GetEventModel().BHasTag("hide_store")
             ),
-            i = function (e, n) {
-              return void 0 === n && (n = !1), Wt.IsMinimized(t, e, n);
+            l = function (e, t) {
+              return void 0 === t && (t = !1), Wt.IsMinimized(a, e, t);
             },
-            r = function (e, n) {
-              return void 0 === n && (n = !1), Wt.ToggleMinimized(t, e, n);
+            s = function (e, t) {
+              return void 0 === t && (t = !1), Wt.ToggleMinimized(a, e, t);
             },
-            o = i("all_artwork_ctn");
+            c = l("all_artwork_ctn"),
+            u =
+              (null ===
+                (t = a.GetEventModel().jsondata
+                  .localized_sale_product_banner) || void 0 === t
+                ? void 0
+                : t.length) || 0,
+            p =
+              (null ===
+                (n = a.GetEventModel().jsondata
+                  .localized_sale_product_mobile_banner) || void 0 === n
+                ? void 0
+                : n.length) || 0;
           return d.createElement(
             "div",
             { className: J.SettingCtn },
@@ -16837,10 +16907,10 @@
               d.createElement(
                 "div",
                 {
-                  className: Object(L.a)(J.Title),
+                  className: Object(A.a)(J.Title),
                   id: "SalePageEdit_AllArtworkCtn",
                   onDoubleClick: function () {
-                    return r("all_artwork_ctn");
+                    return s("all_artwork_ctn");
                   },
                 },
                 d.createElement(
@@ -16849,81 +16919,99 @@
                   Object(f.f)("#Sale_Artwork_Sections")
                 ),
                 d.createElement(Sn, {
-                  bIsMinimized: o,
+                  bIsMinimized: c,
                   fnToggleMinimize: function () {
-                    return r("all_artwork_ctn");
+                    return s("all_artwork_ctn");
                   },
                 })
               )
             ),
-            !o &&
+            !c &&
               d.createElement(
                 d.Fragment,
                 null,
                 d.createElement(v.b, {
-                  clanSteamID: t.GetClanSteamID(),
+                  clanSteamID: a.GetClanSteamID(),
                   rgSupportArtwork: [
                     "sale_header",
                     "product_banner",
                     "product_mobile_banner",
                   ],
-                  fnSetImageURL: t.SetImageURL,
-                  rgRealmList: t.GetIncludedRealmList(),
+                  fnSetImageURL: a.SetImageURL,
+                  rgRealmList: a.GetIncludedRealmList(),
                 }),
                 zt.WrapWithNavWaypoint(
                   "SalePageEdit_SaleBgImg",
                   d.createElement(E.b, {
                     id: "SalePageEdit_SaleBgImg",
-                    clanSteamID: t.GetClanSteamID(),
+                    clanSteamID: a.GetClanSteamID(),
                     title: Object(f.f)("#EventEditor_ArtworkType_sale_header"),
                     artworkType: "sale_header",
                     elEventArtworkExample: d.createElement(et.b, {
                       artworkType: "sale_header",
                     }),
-                    bIsMinimized: i("sale_header"),
+                    bIsMinimized: l("sale_header"),
                     fnToggleMinimize: function () {
-                      return r("sale_header");
+                      return s("sale_header");
                     },
-                    elAdditionalControls: d.createElement($e, { editModel: t }),
+                    elAdditionalControls: d.createElement($e, { editModel: a }),
                   })
                 ),
                 zt.WrapWithNavWaypoint(
                   "SalePageEdit_SaleBanner",
                   d.createElement(E.b, {
                     id: "SalePageEdit_SaleBanner",
-                    clanSteamID: t.GetClanSteamID(),
+                    clanSteamID: a.GetClanSteamID(),
                     title: Object(f.f)(
                       "#EventEditor_ArtworkType_sale_product_banner"
                     ),
                     artworkType: "product_banner",
-                    bIsMinimized: i("product_banner"),
+                    bIsMinimized: l("product_banner"),
                     fnToggleMinimize: function () {
-                      return r("product_banner");
+                      return s("product_banner");
                     },
-                    strWarning: n
+                    strWarning: i
                       ? Object(f.f)("#Sale_BannerVisibility_Warning")
                       : void 0,
                     elEventArtworkExample: d.createElement(et.b, {
                       artworkType: "product_banner",
                     }),
+                    fnRemoveAllArtwork:
+                      0 == u
+                        ? void 0
+                        : function () {
+                            Object(O.G)(function () {
+                              (a.GetEventModel().jsondata.localized_sale_product_banner = []),
+                                a.SetDirty(o.c.jsondata_sales);
+                            });
+                          },
                   })
                 ),
                 zt.WrapWithNavWaypoint(
                   "SalePageEdit_SaleMobileBanner",
                   d.createElement(E.b, {
                     id: "SalePageEdit_SaleMobileBanner",
-                    clanSteamID: t.GetClanSteamID(),
+                    clanSteamID: a.GetClanSteamID(),
                     title: Object(f.f)(
                       "#EventEditor_ArtworkType_sale_product_mobile_banner"
                     ),
                     artworkType: "product_mobile_banner",
-                    bIsMinimized: i("product_mobile_banner"),
+                    bIsMinimized: l("product_mobile_banner"),
                     fnToggleMinimize: function () {
-                      return r("product_mobile_banner");
+                      return s("product_mobile_banner");
                     },
-                    strWarning: a
+                    strWarning: r
                       ? Object(f.f)("#Sale_BannerVisibility_Warning")
                       : void 0,
+                    fnRemoveAllArtwork:
+                      0 == p
+                        ? void 0
+                        : function () {
+                            Object(O.G)(function () {
+                              (a.GetEventModel().jsondata.localized_sale_product_mobile_banner = []),
+                                a.SetDirty(o.c.jsondata_sales);
+                            });
+                          },
                   })
                 )
               )
@@ -17017,7 +17105,7 @@
                         },
                         value: s,
                       }),
-                      d.createElement(w.a, {
+                      d.createElement(M.a, {
                         strDescription: Object(f.f)("#Sale_New_Start"),
                         nEarliestTime: 0,
                         fnGetTimeToUpdate: function () {
@@ -17029,7 +17117,7 @@
                         },
                         bShowTimeZone: !0,
                       }),
-                      d.createElement(w.a, {
+                      d.createElement(M.a, {
                         strDescription: Object(f.f)("#Sale_New_End"),
                         nEarliestTime: 0,
                         fnGetTimeToUpdate: function () {
@@ -17072,7 +17160,7 @@
               (e[a] = n), t.SetDirty(o.c.jsondata_sales);
             },
             l = function (e) {
-              Object(M.d)(
+              Object(w.d)(
                 d.createElement(S, {
                   loc_images: e
                     ? n.localized_sale_product_mobile_banner_override
@@ -17130,7 +17218,7 @@
               { style: { display: "flex" }, className: J.BackgroundSettings },
               d.createElement(
                 "div",
-                { className: Object(L.a)(j.HalfColumn, J.HalfColumn) },
+                { className: Object(A.a)(j.HalfColumn, J.HalfColumn) },
                 d.createElement(
                   "div",
                   { className: j.EventEditorTextTitle },
@@ -17213,7 +17301,7 @@
               Boolean(p && !n.disable_background) &&
                 d.createElement(
                   "div",
-                  { className: Object(L.a)(j.HalfColumn, J.HalfColumn) },
+                  { className: Object(A.a)(j.HalfColumn, J.HalfColumn) },
                   d.createElement(
                     "div",
                     { className: j.EventEditorTextTitle },
@@ -17244,7 +17332,7 @@
                                     "SaleSection.OnDropFiles: failed file=" +
                                       e[0].name
                                   ),
-                                  Object(M.d)(
+                                  Object(w.d)(
                                     d.createElement(h.f, {
                                       strDescription: Object(f.f)(
                                         "#ImagePicker_Error",
@@ -17366,9 +17454,9 @@
                   _.d,
                   {
                     onClick: function (t) {
-                      return Object(M.d)(
+                      return Object(w.d)(
                         d.createElement(dt, { editModel: e.editModel }),
-                        Object(A.m)(t)
+                        Object(L.m)(t)
                       );
                     },
                   },
@@ -17441,7 +17529,7 @@
               ),
               i),
             p = function (e) {
-              Object(M.d)(
+              Object(w.d)(
                 d.createElement(h.d, {
                   strTitle: Object(f.f)("#EventEditor_VersionsPrompt_Title"),
                   strDescription: Object(f.f)(
@@ -17449,7 +17537,7 @@
                   ),
                   onOK: function () {
                     return (function (e, t) {
-                      Object(M.d)(
+                      Object(w.d)(
                         d.createElement(pt, { editModel: e, versionID: t }),
                         window
                       );
@@ -17502,7 +17590,7 @@
             me.a,
             null,
             d.createElement(
-              M.a,
+              w.a,
               { onEscKeypress: c },
               d.createElement(
                 _.f,
@@ -17614,11 +17702,11 @@
                       )
                     )
                   )),
-            d.createElement(me.a, null, d.createElement(M.a, null, s))
+            d.createElement(me.a, null, d.createElement(w.a, null, s))
           );
         },
         mt = n("tzvv"),
-        _t = function (e) {
+        _t = Object(u.a)(function (e) {
           var t,
             n,
             a,
@@ -17639,16 +17727,14 @@
                 ? void 0
                 : a.length) || 0,
             o = function (e, t) {
-              return void 0 === t && (t = !1), Wt.IsMinimized(i, e, t);
-            },
-            l = function (e, t) {
               return void 0 === t && (t = !1), Wt.ToggleMinimized(i, e, t);
-            };
+            },
+            l = Wt.IsMinimized(i, "SalePageEdit_SortingTiers", !0);
           return d.createElement(
             "div",
             {
               id: "SalePageEdit_SortingTiers",
-              className: Object(L.a)(
+              className: Object(A.a)(
                 ((t = {}),
                 (t[I.a.ValveOnlyBackground] = !0),
                 (t[J.SettingCtn] = !0),
@@ -17660,7 +17746,7 @@
               {
                 className: J.Title,
                 onDoubleClick: function () {
-                  return l("SalePageEdit_SortingTiers", !0);
+                  return o("SalePageEdit_SortingTiers", !0);
                 },
               },
               Object(f.f)("#Sale_SortingTiersSection", r),
@@ -17668,21 +17754,20 @@
                 tooltip: Object(f.f)("#Sale_SortingTiers_SectionTooltip"),
               }),
               d.createElement(Sn, {
-                bIsMinimized: o("SalePageEdit_SortingTiers", !0),
+                bIsMinimized: l,
                 fnToggleMinimize: function () {
-                  return l("SalePageEdit_SortingTiers", !0);
+                  return o("SalePageEdit_SortingTiers", !0);
                 },
               })
             ),
-            !o("SalePageEdit_SortingTiers", !0) &&
-              d.createElement(ht, { editModel: i })
+            !l && d.createElement(ht, { editModel: i })
           );
-        },
+        }),
         gt = function (e) {
           return d.createElement(
             "div",
             { className: mt.SortTierControls },
-            d.createElement(Me, {
+            d.createElement(we, {
               capsuleContainer: e.sortTier,
               editModel: e.editModel,
               uniqueKey: "sort_tier_" + e.tierIndex,
@@ -17700,14 +17785,15 @@
               null !== (t = n.GetEventModel().jsondata.sorting_tiers) &&
               void 0 !== t
                 ? t
-                : [];
+                : [],
+            s = n.GetEventModel().GetTaggedItems();
           return i || l.length
             ? d.createElement(
                 "div",
                 null,
                 d.createElement(
                   "div",
-                  null,
+                  { className: mt.SortTierExplanation },
                   Object(f.f)("#Sale_SortTier_Description")
                 ),
                 (n.GetSaleSections() || []).map(function (e) {
@@ -17720,6 +17806,49 @@
                       })
                     : null;
                 }),
+                0 == l.length &&
+                  s.length > 0 &&
+                  d.createElement(
+                    _.d,
+                    {
+                      onClick: function () {
+                        n.GetEventModel().jsondata.sorting_tiers = [];
+                        var e = s.map(function (e) {
+                          return e.capsule;
+                        });
+                        if (e.length < 4)
+                          n.GetEventModel().jsondata.sorting_tiers.push({
+                            capsules: e,
+                          });
+                        else {
+                          var t = Math.floor(e.length / 4),
+                            a = Math.floor((2 * e.length) / 4),
+                            i = Math.floor((3 * e.length) / 4);
+                          n
+                            .GetEventModel()
+                            .jsondata.sorting_tiers.push({
+                              capsules: e.slice(0, t),
+                            }),
+                            n
+                              .GetEventModel()
+                              .jsondata.sorting_tiers.push({
+                                capsules: e.slice(t, a),
+                              }),
+                            n
+                              .GetEventModel()
+                              .jsondata.sorting_tiers.push({
+                                capsules: e.slice(a, i),
+                              }),
+                            n
+                              .GetEventModel()
+                              .jsondata.sorting_tiers.push({
+                                capsules: e.slice(i),
+                              });
+                        }
+                      },
+                    },
+                    Object(f.f)("#Sale_SortTier_PopulateButton")
+                  ),
                 d.createElement(D.a, {
                   items: l,
                   onDelete: function (e) {
@@ -17779,7 +17908,7 @@
                   {
                     key: "tc_" + n.strSectionId,
                     id: "tc_" + n.strSectionId,
-                    className: Object(L.a)(
+                    className: Object(A.a)(
                       ft.TOCEntry,
                       n.bSectionIsVisible && ft.SectionOnScreen,
                       n.strClassName,
@@ -17840,13 +17969,13 @@
         Ct = n("nxSy"),
         jt = n("MnIK"),
         It = n("6Y59"),
-        wt = n("+d9t"),
-        Mt = n("d+Me"),
+        Mt = n("+d9t"),
+        wt = n("d+Me"),
         Dt = n("YyVH"),
         kt = n("IzPI"),
         Gt = n("UCyf"),
-        Lt = n("5izx"),
-        At = n("BRUS"),
+        At = n("5izx"),
+        Lt = n("BRUS"),
         Bt = n("66At"),
         Nt = (function (e) {
           function t() {
@@ -17973,7 +18102,7 @@
                               case 0:
                                 return [
                                   4,
-                                  V.a.SearchCreatorHomeStore(
+                                  H.a.SearchCreatorHomeStore(
                                     t,
                                     !1,
                                     this.m_cancelSignal
@@ -18067,7 +18196,7 @@
                   })
                 ),
                 Boolean(t.curator_clan_id) &&
-                  d.createElement(At.a, {
+                  d.createElement(Lt.a, {
                     creatorID: {
                       name: null,
                       clan_account_id: t.curator_clan_id,
@@ -18161,7 +18290,7 @@
               Object(f.f)("#Sale_CuratorRecommendation_desc")
             ),
             d.createElement("br", null),
-            d.createElement(w.a, {
+            d.createElement(M.a, {
               strDescription: Object(f.f)(
                 "#Sale_CuratorRecommendation_StartTime"
               ),
@@ -18213,9 +18342,9 @@
               _.d,
               {
                 onClick: function (t) {
-                  Object(M.d)(
+                  Object(w.d)(
                     d.createElement(Ut, Object(a.a)({}, e, { saleSection: s })),
-                    Object(A.m)(t)
+                    Object(L.m)(t)
                   );
                 },
               },
@@ -18275,7 +18404,7 @@
             },
             v =
               n.GetEventModel().BIsVisibleEvent() &&
-              n.GetEventStartTime() < Lt.a.GetTimeNowWithOverride();
+              n.GetEventStartTime() < At.a.GetTimeNowWithOverride();
           d.useEffect(
             function () {
               var e = null;
@@ -18412,8 +18541,8 @@
             )
           );
         }),
-        Vt = n("GOhU"),
-        Ht = (function () {
+        Ht = n("GOhU"),
+        Vt = (function () {
           function e() {}
           return (
             (e.prototype.EnsureLoaded = function () {
@@ -18487,7 +18616,7 @@
                 me.a,
                 { key: "eb_sale_sect_" + e },
                 d.createElement(
-                  Mt.a,
+                  wt.a,
                   {
                     key: "waypoint_sale_sect_" + e,
                     onEnter: function () {
@@ -18591,7 +18720,7 @@
                     case 0:
                       return [
                         4,
-                        V.a.LoadCreatorHome(
+                        H.a.LoadCreatorHome(
                           this.props.editModel.GetClanSteamID(),
                           this.m_cancelSignal
                         ),
@@ -18659,7 +18788,7 @@
                 Wt.SetMinimizedList(this.props.editModel, e, !0);
             }),
             (t.prototype.ReorderSaleSections = function () {
-              Object(M.c)(
+              Object(w.c)(
                 d.createElement(En, { editModel: this.props.editModel }),
                 window
               );
@@ -18708,7 +18837,7 @@
               (this.props.editModel.GetEventModel().jsondata.bSaleEnabled = e),
                 this.props.editModel.SetDirty(o.c.jsondata_sales),
                 e &&
-                  Object(M.d)(
+                  Object(w.d)(
                     d.createElement(nt, { editModel: this.props.editModel }),
                     window
                   );
@@ -18932,7 +19061,7 @@
                         this.props.editModel.GetEventModel().jsondata
                           .sale_discount_event_id ||
                           (this.props.editModel.GetEventModel().jsondata.sale_discount_event_id = i),
-                        Object(M.c)(
+                        Object(w.c)(
                           d.createElement(ot.b, {
                             editModel: this.props.editModel,
                             bSkipChecks: !0,
@@ -19091,7 +19220,7 @@
                   : i && h && (S = N.c.STORE_BASE_URL + "sale/" + i),
                 d.createElement(
                   "div",
-                  { className: Object(L.a)(J.SaleContainer, "SaleContainer") },
+                  { className: Object(A.a)(J.SaleContainer, "SaleContainer") },
                   d.createElement(
                     "div",
                     { className: j.EventEditorTextTitleCtn },
@@ -19101,12 +19230,12 @@
                       Object(f.f)("#Sale_title")
                     ),
                     d.createElement(
-                      wt.b,
+                      Mt.b,
                       {
                         href:
                           N.c.PARTNER_BASE_URL +
                           "doc/resources/Sales_Feature_Beta",
-                        className: Object(L.a)(j.doclink),
+                        className: Object(A.a)(j.doclink),
                       },
                       d.createElement(
                         "span",
@@ -19153,9 +19282,9 @@
                               _.d,
                               {
                                 onClick: function (e) {
-                                  return Object(M.d)(
-                                    d.createElement(Ve, null),
-                                    Object(A.m)(e)
+                                  return Object(w.d)(
+                                    d.createElement(He, null),
+                                    Object(L.m)(e)
                                   );
                                 },
                               },
@@ -19177,9 +19306,9 @@
                               _.d,
                               {
                                 onClick: function (e) {
-                                  return Object(M.d)(
+                                  return Object(w.d)(
                                     d.createElement(Je, null),
-                                    Object(A.m)(e)
+                                    Object(L.m)(e)
                                   );
                                 },
                               },
@@ -19562,7 +19691,7 @@
                           "div",
                           {
                             id: "SalePageEdit_TaggedItems",
-                            className: Object(L.a)(J.SettingCtn),
+                            className: Object(A.a)(J.SettingCtn),
                           },
                           d.createElement(
                             "div",
@@ -19603,7 +19732,7 @@
                       d.createElement(
                         "div",
                         {
-                          className: Object(L.a)(
+                          className: Object(A.a)(
                             j.EventEditorTextTitle,
                             J.CustomSectionsTitle
                           ),
@@ -19878,7 +20007,7 @@
                 checked: i.has(n.unique_id),
               });
             });
-          Object(M.d)(
+          Object(w.d)(
             d.createElement(
               h.d,
               {
@@ -19983,7 +20112,7 @@
                       d.createElement(
                         "div",
                         {
-                          className: Object(L.a)(
+                          className: Object(A.a)(
                             j.EventEditorTextTitle,
                             y.ShowOnTabsLabel
                           ),
@@ -20031,7 +20160,7 @@
             "div",
             {
               id: "NoSaleSections",
-              className: Object(L.a)(J.SaleSection, J.InEditor),
+              className: Object(A.a)(J.SaleSection, J.InEditor),
             },
             d.createElement(
               "div",
@@ -20088,7 +20217,7 @@
           }),
           (t.prototype.RemoveSection = function (e) {
             var t = this;
-            Object(M.d)(
+            Object(w.d)(
               d.createElement(h.d, {
                 strTitle: Object(f.f)("#Button_Remove"),
                 strDescription: Object(f.f)("#Sale_RemoveSectionConfirmation"),
@@ -20136,7 +20265,7 @@
           (t.prototype.OnShowTitleImageUpload = function (e, t) {
             e.preventDefault(),
               e.stopPropagation(),
-              Object(M.d)(
+              Object(w.d)(
                 d.createElement(S, {
                   loc_images: t.localized_label_image,
                   fnSetImage: function (e, n) {
@@ -20281,7 +20410,7 @@
               "div",
               {
                 id: "SaleSection_" + i.unique_id,
-                className: Object(L.a)(J.SaleSection, J.InEditor),
+                className: Object(A.a)(J.SaleSection, J.InEditor),
                 style: Object(a.a)(Object(a.a)({}, Kt(i, n.GetEventModel())), {
                   opacity: this.state.bIsExiting ? 0 : 1,
                   transition: "opacity 500ms",
@@ -20304,7 +20433,7 @@
                 nn(i, this.props.editLanguage, n, this.props.index, !1),
                 d.createElement(
                   "div",
-                  { className: Object(L.a)(j.CloseSectionTools) },
+                  { className: Object(A.a)(j.CloseSectionTools) },
                   d.createElement(
                     "div",
                     { className: j.FlexRowContainer },
@@ -20428,7 +20557,7 @@
                                 d.createElement(
                                   "div",
                                   {
-                                    className: Object(L.a)(
+                                    className: Object(A.a)(
                                       j.FlexColumnContainer,
                                       j.EventDefaultRowContainer
                                     ),
@@ -20644,7 +20773,7 @@
                   d.createElement(
                     d.Fragment,
                     null,
-                    d.createElement(Me, {
+                    d.createElement(we, {
                       capsuleContainer: this.props.saleSection,
                       editModel: this.props.editModel,
                       uniqueKey: "Section" + this.props.saleSection.unique_id,
@@ -20718,7 +20847,7 @@
             (t.prototype.OnShowLinkCapsuleUpload = function (e, t) {
               e.preventDefault(),
                 e.stopPropagation(),
-                Object(M.d)(
+                Object(w.d)(
                   d.createElement(S, {
                     loc_images: t.localized_link_capsule,
                     fnSetImage: function (e, n) {
@@ -20756,7 +20885,7 @@
                     return d.createElement(
                       _e.i,
                       {
-                        className: Object(L.a)(Y.a.FlexCenter, J.UploadLinkRow),
+                        className: Object(A.a)(Y.a.FlexCenter, J.UploadLinkRow),
                         url: t.url,
                       },
                       a,
@@ -21202,6 +21331,13 @@
               ),
               data: "library",
             },
+            {
+              label: Object(f.f)("#Sale_Section_SingleItemDisplay_animated"),
+              tooltip: Object(f.f)(
+                "#Sale_Section_SingleItemDisplay_animated_ttip"
+              ),
+              data: "animated",
+            },
           ];
           return d.createElement(_.i, {
             disabled: a,
@@ -21349,9 +21485,9 @@
                   d.createElement(
                     "div",
                     {
-                      className: Object(L.a)(
+                      className: Object(A.a)(
                         j.RightCol,
-                        Vt.DescEditorPadding,
+                        Ht.DescEditorPadding,
                         J.TextSectionImages
                       ),
                     },
@@ -21559,7 +21695,7 @@
             m =
               (null === (t = Jt(r, l)) || void 0 === t ? void 0 : t.tabs) || [],
             g =
-              ((a = Ht.Get()),
+              ((a = Vt.Get()),
               Object(d.useEffect)(
                 function () {
                   a.EnsureLoaded();
@@ -21713,7 +21849,7 @@
               },
               contextMenuPositionOptions: { bDisablePopTop: !0 },
             }),
-            d.createElement(Me, {
+            d.createElement(we, {
               capsuleContainer: n,
               editModel: t,
               uniqueKey: "Section" + n.unique_id,
@@ -21782,7 +21918,7 @@
             case "vo_internal":
               return d.createElement(fn, Object(a.a)({}, e));
             case "tabs":
-              return d.createElement(Ae, Object(a.a)({}, e));
+              return d.createElement(Le, Object(a.a)({}, e));
             case "tab_buttons":
               return null;
             case "doors":
@@ -21926,9 +22062,9 @@
                 });
             }),
             (t.prototype.OnChooseMasterSubscriptionID = function (e) {
-              Object(M.d)(
+              Object(w.d)(
                 d.createElement(Te, { fnAddCapsule: this.SetMasterAppID }),
-                Object(A.m)(e)
+                Object(L.m)(e)
               );
             }),
             (t.prototype.render = function () {
@@ -21956,7 +22092,7 @@
                   label: "(VO) Tag Recommender (?)",
                   tooltip:
                     "Orders games featured on this sales page by their original store tags mashed against the recommended tags for the logged in users.",
-                  strOptionClass: Object(L.a)(j.ValveOnlyBackground),
+                  strOptionClass: Object(A.a)(j.ValveOnlyBackground),
                   data: "tag_recommender",
                 }),
                 i.push({
@@ -21966,7 +22102,7 @@
                     " (?)",
                   tooltip:
                     "Orders games featured on this sales page by all time wishlist data.",
-                  strOptionClass: Object(L.a)(j.ValveOnlyBackground),
+                  strOptionClass: Object(A.a)(j.ValveOnlyBackground),
                   data: "topwishlisted",
                 }),
                 i.push({
@@ -21976,7 +22112,7 @@
                     " (?)",
                   tooltip:
                     "Orders games featured on this sales page by using trending wishlist data from last 2 weeks as a sliding window.",
-                  strOptionClass: Object(L.a)(j.ValveOnlyBackground),
+                  strOptionClass: Object(A.a)(j.ValveOnlyBackground),
                   data: "trendingwishlisted",
                 }),
                 i.push({
@@ -21986,7 +22122,7 @@
                     " (?)",
                   tooltip:
                     "Show games featured on this sale page, ordered by their recent trending sales data",
-                  strOptionClass: Object(L.a)(j.ValveOnlyBackground),
+                  strOptionClass: Object(A.a)(j.ValveOnlyBackground),
                   data: "popularpurchased",
                 }),
                 i.push({
@@ -21998,7 +22134,7 @@
                     " (?)",
                   tooltip:
                     "Shows games featured on this sale page that also have a DISCOUNT NOW, and orders them by their recent trending sales data",
-                  strOptionClass: Object(L.a)(j.ValveOnlyBackground),
+                  strOptionClass: Object(A.a)(j.ValveOnlyBackground),
                   data: "popularpurchaseddiscounted",
                 }),
                 i.push({
@@ -22008,7 +22144,7 @@
                     " (?)",
                   tooltip:
                     "Shows games in a similar fashion to the front pages New and Trending tab. Mix of recency of release, review score and play count",
-                  strOptionClass: Object(L.a)(j.ValveOnlyBackground),
+                  strOptionClass: Object(A.a)(j.ValveOnlyBackground),
                   data: "newandtrending",
                 }),
                 i.push({
@@ -22018,7 +22154,7 @@
                     " (?)",
                   tooltip:
                     "Orders not released games featured on this sales page by their all time wishlists data.",
-                  strOptionClass: Object(L.a)(j.ValveOnlyBackground),
+                  strOptionClass: Object(A.a)(j.ValveOnlyBackground),
                   data: "popularcomingsoon",
                 }),
                 i.push({
@@ -22028,7 +22164,7 @@
                     " (?)",
                   tooltip:
                     "Orders games featured on this sales page by total demo player count (all-time).",
-                  strOptionClass: Object(L.a)(j.ValveOnlyBackground),
+                  strOptionClass: Object(A.a)(j.ValveOnlyBackground),
                   data: "mostplayeddemo",
                 }),
                 i.push({
@@ -22038,7 +22174,7 @@
                     " (?)",
                   tooltip:
                     "Orders games featured on this sales page by yesterdays peak player count.",
-                  strOptionClass: Object(L.a)(j.ValveOnlyBackground),
+                  strOptionClass: Object(A.a)(j.ValveOnlyBackground),
                   data: "dailyactiveuserdemo",
                 }),
                 i.push({
@@ -22048,7 +22184,7 @@
                     " (?)",
                   tooltip:
                     "This is limited to Demo AppIDs. Using only featured games from this sale page. Will sort games using live server player count data with a 5 minute.",
-                  strOptionClass: Object(L.a)(j.ValveOnlyBackground),
+                  strOptionClass: Object(A.a)(j.ValveOnlyBackground),
                   data: "playednowdemo",
                 }),
                 i.push({
@@ -22056,14 +22192,14 @@
                     "(VO) Show ANY discounted item from user's wishlist (?)",
                   tooltip:
                     "This will pull the ANY discount game that is also on the logged in users wishlist across the entire Steam catalog. Not limited to the games featured on this sale page.",
-                  strOptionClass: Object(L.a)(j.ValveOnlyBackground),
+                  strOptionClass: Object(A.a)(j.ValveOnlyBackground),
                   data: "wishlist_onsale",
                 }),
                 i.push({
                   label: "(VO) Show ANY discounted DLC from user's library (?)",
                   tooltip:
                     "This will pull the ANY DLC for a game in the users library that is on Sale. Not limited to the DLCs featured on this sale page.",
-                  strOptionClass: Object(L.a)(j.ValveOnlyBackground),
+                  strOptionClass: Object(A.a)(j.ValveOnlyBackground),
                   data: "dlc_onsale",
                 }),
                 i.push({
@@ -22071,21 +22207,21 @@
                     "(VO) Show ANY discounted Soundtracks from user's library (?)",
                   tooltip:
                     "This will pull any soundtrack (specific DLC) for a game the user owns that is on sale across the entire Steam catalog",
-                  strOptionClass: Object(L.a)(j.ValveOnlyBackground),
+                  strOptionClass: Object(A.a)(j.ValveOnlyBackground),
                   data: "dlc_music_onsale",
                 }),
                 i.push({
                   label: "(VO) Show ANY discounted Top Seller (?)",
                   tooltip:
                     "This will pull the TOP discounted apps across the ENTIRE Steam catalog and it is not limited to the games specifically featured in this sales page.",
-                  strOptionClass: Object(L.a)(j.ValveOnlyBackground),
+                  strOptionClass: Object(A.a)(j.ValveOnlyBackground),
                   data: "top_n",
                 }),
                 i.push({
                   label: "(VO) Show ANY discounted (?)",
                   tooltip:
                     "This will pull ALL discounted apps across the ENTIRE Steam catalog and it is not limited to the games specifically featured in this sales page.",
-                  strOptionClass: Object(L.a)(j.ValveOnlyBackground),
+                  strOptionClass: Object(A.a)(j.ValveOnlyBackground),
                   data: "all_discounted",
                 }),
                 i.push({
@@ -22093,7 +22229,7 @@
                     "(VO) Show ANY discounted interactive recommendations (?)",
                   tooltip:
                     "This will use the interactive recommender results for logged in users to pull the TOP recommended that are also on discount across the ENTIRE Steam catalog. It is not limited to the games specifically featured in this sales page.",
-                  strOptionClass: Object(L.a)(j.ValveOnlyBackground),
+                  strOptionClass: Object(A.a)(j.ValveOnlyBackground),
                   data: "interactive_recommender_onsale",
                 }),
                 i.push({
@@ -22101,7 +22237,7 @@
                     "(VO) Show Various TAGs as clickable links to hub pages (?)",
                   tooltip:
                     "Displays a carousel of tag related images that will direct for a set of curated tags backed by Steam Tag Content hubs",
-                  strOptionClass: Object(L.a)(j.ValveOnlyBackground),
+                  strOptionClass: Object(A.a)(j.ValveOnlyBackground),
                   data: "sale_tabhub",
                 }),
                 i.push({
@@ -22109,7 +22245,7 @@
                     "(VO) Show Interactive Recommended Games from Subscription (?)",
                   tooltip:
                     "Specific to a Master Subscription (ie, EA Play) on Steam.  Will only displayed IR recommended games for a logged in users that part of the master subscription",
-                  strOptionClass: Object(L.a)(j.ValveOnlyBackground),
+                  strOptionClass: Object(A.a)(j.ValveOnlyBackground),
                   data: "ir_subscription",
                 }));
               var r = this.props.saleSection,
@@ -22119,7 +22255,7 @@
                 null,
                 d.createElement(
                   "div",
-                  { className: Object(L.a)(j.FlexRowContainer) },
+                  { className: Object(A.a)(j.FlexRowContainer) },
                   d.createElement(_.i, {
                     strClassName: J.SmartSelType,
                     label: Object(f.f)("#Sale_SmartSectionType"),
@@ -22135,7 +22271,7 @@
                     d.createElement(
                       "label",
                       {
-                        className: Object(L.a)("DialogLabel", J.SmartSelLabel),
+                        className: Object(A.a)("DialogLabel", J.SmartSelLabel),
                       },
                       Object(f.f)("#Sale_SmartSection_MaxApps")
                     ),
@@ -22143,10 +22279,11 @@
                       "div",
                       null,
                       d.createElement("input", {
-                        className: Object(L.a)(J.SmartSelCount),
+                        className: Object(A.a)(J.SmartSelCount),
                         type: "number",
                         min: "0",
-                        value: this.props.saleSection.smart_section_max_apps,
+                        value:
+                          this.props.saleSection.smart_section_max_apps || 0,
                         onChange: this.OnSmartSectionMaxAppChange,
                       })
                     )
@@ -22170,6 +22307,7 @@
                       },
                       type: "text",
                       label: Object(f.f)("#Sale_SelectTag"),
+                      value: this.props.saleSection.smart_section_tag || "",
                       onChange: this.UpdateTagSuggestions,
                     }),
                     d.createElement(
@@ -22477,13 +22615,13 @@
         C = n("fpVW"),
         j = n("gyoR"),
         I = n("MnIK"),
-        w = n("Jqb/"),
-        M = n("ka0M"),
+        M = n("Jqb/"),
+        w = n("ka0M"),
         D = n("xnZ7"),
         k = n.n(D),
         G = n("0OaU"),
-        L = n("+d9t"),
-        A = n("qiKp"),
+        A = n("+d9t"),
+        L = n("qiKp"),
         B = n("exH9"),
         N = n("TLQK"),
         F = n("bxiW"),
@@ -22491,8 +22629,8 @@
         x = n("IzPI"),
         P = n("lkRc"),
         U = n("as1E"),
-        V = n("k3PP"),
-        H = n("JiI5"),
+        H = n("k3PP"),
+        V = n("JiI5"),
         z = n("IMce");
       function W(e) {
         return (e = (e = (e = e.replace('"', " ")).replace("<", " ")).replace(
@@ -22555,7 +22693,7 @@
                 "div",
                 { className: z.FilterDisplayNoFilter },
                 Object(N.f)("#Sale_TagFilter_NoFilter"),
-                m.createElement(V.d, {
+                m.createElement(H.d, {
                   tooltip: Object(N.f)("#Sale_TagFilter_NoFilter_ttip"),
                 })
               )
@@ -22618,7 +22756,7 @@
             " ",
             m.createElement("span", null, "(", t, ")"),
             " ",
-            m.createElement("span", { className: H.SmallText }, "(", n, ")")
+            m.createElement("span", { className: V.SmallText }, "(", n, ")")
           );
         }),
         X = (function (e) {
@@ -22720,7 +22858,7 @@
                                     (this.m_searchResultsMenu = Object(b.a)(
                                       m.createElement(
                                         y.c,
-                                        { className: H.SearchResults },
+                                        { className: V.SearchResults },
                                         e.map(function (e) {
                                           return m.createElement(
                                             y.d,
@@ -22764,7 +22902,7 @@
               var e = this;
               return m.createElement(
                 "div",
-                { className: H.SaleImportURL },
+                { className: V.SaleImportURL },
                 m.createElement(O.m, {
                   type: "text",
                   label: Object(N.f)("#Sale_SelectApps"),
@@ -22803,7 +22941,7 @@
             }),
             (t.prototype.OnEditFilter = function () {
               var e = this.props.capsuleContainer;
-              Object(M.d)(
+              Object(w.d)(
                 m.createElement(se, {
                   editModel: this.props.editModel,
                   filter: e.sale_tag_filter,
@@ -22823,7 +22961,7 @@
                   "div",
                   { className: z.FilterTitle },
                   Object(N.f)("#Sale_TagFilter_CurrentFilter"),
-                  m.createElement(V.d, {
+                  m.createElement(H.d, {
                     tooltip: Object(N.f)("#Sale_TagFilter_EditFilter_ttip"),
                   })
                 ),
@@ -22873,7 +23011,7 @@
             }),
             (t.prototype.OnExploreTags = function () {
               var e = { clauses: new Array() };
-              Object(M.d)(
+              Object(w.d)(
                 m.createElement(se, {
                   editModel: this.props.editModel,
                   filter: e,
@@ -22883,13 +23021,13 @@
               );
             }),
             (t.prototype.OnBatchEditTags = function () {
-              Object(M.d)(
+              Object(w.d)(
                 m.createElement(oe, { editModel: this.props.editModel }),
                 window
               );
             }),
             (t.prototype.OnEditAutoTags = function () {
-              Object(M.d)(
+              Object(w.d)(
                 m.createElement(pe, { editModel: this.props.editModel }),
                 window
               );
@@ -22902,7 +23040,7 @@
             }),
             (t.prototype.OnEditFilter = function () {
               var e = this.props.editModel;
-              Object(M.d)(
+              Object(w.d)(
                 m.createElement(se, {
                   editModel: e,
                   filter: Object(l.p)(e),
@@ -22920,7 +23058,7 @@
               this.setState({ bShowItemEditor: !0 });
             }),
             (t.prototype.OnEditRaw = function (e) {
-              Object(M.d)(
+              Object(w.d)(
                 m.createElement(ce, {
                   editModel: this.props.editModel,
                   bRemoveMissingEntries: !0,
@@ -22929,7 +23067,7 @@
               );
             }),
             (t.prototype.OnEditRawCustom = function (e) {
-              Object(M.d)(
+              Object(w.d)(
                 m.createElement(ce, {
                   editModel: this.props.editModel,
                   collection: l.j.Custom,
@@ -22943,14 +23081,14 @@
               Object(l.g)(e) && e.SetDirty(o.c.jsondata_sales);
             }),
             (t.prototype.OnSync = function (e) {
-              Object(M.d)(
+              Object(w.d)(
                 m.createElement(ue, { editModel: this.props.editModel }),
                 window
               );
             }),
             (t.prototype.OnImportDiscountEvent = function (e) {
               var t = this;
-              Object(M.d)(
+              Object(w.d)(
                 m.createElement(c.a, {
                   onDiscountEventSelected: function (e, n) {
                     return Object(a.b)(t, void 0, void 0, function () {
@@ -23060,7 +23198,7 @@
                 }),
                 p =
                   (i.GetEventModel().jsondata.sale_opt_in_page_name,
-                  V.g.IsMinimized(i, "TaggedItemList", !1));
+                  H.g.IsMinimized(i, "TaggedItemList", !1));
               return m.createElement(
                 "div",
                 { className: z.ItemListCtn },
@@ -23076,14 +23214,14 @@
                       s > 0
                         ? Object(N.f)("#Sale_TaggedItemsCountFiltered", o, s)
                         : Object(N.f)("#Sale_TaggedItemsCount", o),
-                      m.createElement(V.d, {
+                      m.createElement(H.d, {
                         tooltip: Object(N.f)("#Sale_TaggedItemsCount_ttip"),
                       })
                     ),
-                    m.createElement(V.b, {
+                    m.createElement(H.b, {
                       bIsMinimized: p,
                       fnToggleMinimize: function () {
-                        return V.g.ToggleMinimized(i, "TaggedItemList", !1);
+                        return H.g.ToggleMinimized(i, "TaggedItemList", !1);
                       },
                     })
                   ),
@@ -23097,7 +23235,7 @@
                         O.d,
                         { onClick: this.OnExploreTags },
                         Object(N.f)("#Sale_Explore"),
-                        m.createElement(V.d, {
+                        m.createElement(H.d, {
                           tooltip: Object(N.f)("#Sale_ExploreTaggedItems_ttip"),
                         })
                       ),
@@ -23105,7 +23243,7 @@
                         O.d,
                         { onClick: this.OnEditRaw },
                         Object(N.f)("#Sale_EditRaw"),
-                        m.createElement(V.d, {
+                        m.createElement(H.d, {
                           tooltip: Object(N.f)("#Sale_EditRawTaggedItems_ttip"),
                         })
                       )
@@ -23120,7 +23258,7 @@
                           O.d,
                           { onClick: this.OnEditFilter },
                           Object(N.f)("#Sale_EditTaggedItemFilter"),
-                          m.createElement(V.d, {
+                          m.createElement(H.d, {
                             tooltip: Object(N.f)(
                               "#Sale_EditTaggedItemFilter_ttip"
                             ),
@@ -23130,7 +23268,7 @@
                           O.d,
                           { onClick: this.OnSync },
                           Object(N.f)("#Sale_SyncTaggedItems"),
-                          m.createElement(V.d, {
+                          m.createElement(H.d, {
                             tooltip: Object(N.f)("#Sale_SyncTaggedItems_ttip"),
                           })
                         ),
@@ -23138,7 +23276,7 @@
                           O.d,
                           { onClick: this.OnImportDiscountEvent },
                           Object(N.f)("#Sale_DiscountEvent_Add"),
-                          m.createElement(V.d, {
+                          m.createElement(H.d, {
                             tooltip: Object(N.f)("#Sale_DiscountEvent_ttip"),
                           })
                         ),
@@ -23146,7 +23284,7 @@
                           O.d,
                           { onClick: this.OnEditRawCustom },
                           Object(N.f)("#Sale_EditRawCustom"),
-                          m.createElement(V.d, {
+                          m.createElement(H.d, {
                             tooltip: Object(N.f)(
                               "#Sale_EditRawCustomTaggedItems_ttip"
                             ),
@@ -23156,7 +23294,7 @@
                           O.d,
                           { onClick: this.OnBatchEditTags },
                           Object(N.f)("#Sale_BatchEditTaggedItems"),
-                          m.createElement(V.d, {
+                          m.createElement(H.d, {
                             tooltip: Object(N.f)(
                               "#Sale_BatchEditTaggedItems_ttip"
                             ),
@@ -23166,7 +23304,7 @@
                           O.d,
                           { onClick: this.OnEditAutoTags },
                           Object(N.f)("#Sale_EditAutoTags"),
-                          m.createElement(V.d, {
+                          m.createElement(H.d, {
                             tooltip: Object(N.f)("#Sale_EditAutoTags_ttip"),
                           })
                         ),
@@ -23175,7 +23313,7 @@
                             O.d,
                             { onClick: this.OnDeleteFiltered },
                             Object(N.f)("#Sale_DeleteFilteredItems"),
-                            m.createElement(V.d, {
+                            m.createElement(H.d, {
                               tooltip: Object(N.f)(
                                 "#Sale_DeleteFilteredItems_ttip"
                               ),
@@ -23247,7 +23385,7 @@
           return (
             Object(a.d)(t, e),
             (t.prototype.OnEditTags = function () {
-              Object(M.d)(
+              Object(w.d)(
                 m.createElement(re, {
                   editModel: this.props.editModel,
                   item: this.props.item,
@@ -23286,7 +23424,7 @@
                 I.a,
                 { className: z.TagItemCtn },
                 m.createElement(
-                  L.b,
+                  A.b,
                   {
                     className: z.TagItemImageCtn,
                     bDisableContextMenu: !0,
@@ -23295,7 +23433,7 @@
                   c
                     ? m.createElement("img", {
                         loading: "lazy",
-                        className: H.SaleCapsuleImg,
+                        className: V.SaleCapsuleImg,
                         src: c.header_image_url,
                       })
                     : null
@@ -23312,7 +23450,7 @@
                     ") ",
                     m.createElement(
                       "span",
-                      { className: H.SmallText },
+                      { className: V.SmallText },
                       "(",
                       p,
                       ")"
@@ -23320,9 +23458,9 @@
                     d &&
                       m.createElement(
                         "div",
-                        { className: H.SaleCapsuleConflict },
+                        { className: V.SaleCapsuleConflict },
                         Object(N.f)("#Sale_NotFoundCapsule"),
-                        m.createElement(V.d, {
+                        m.createElement(H.d, {
                           tooltip: Object(N.f)(
                             "#Sale_NotFoundCapsule_Tooltip",
                             p,
@@ -23520,7 +23658,7 @@
                         )),
                       o &&
                         i.push(
-                          Object(V.a)(t, n.GetCurEditLanguage(), n, a, !0)
+                          Object(H.a)(t, n.GetCurEditLanguage(), n, a, !0)
                         );
                   }),
                 i.sort(function (e, t) {
@@ -23718,7 +23856,7 @@
                   return { label: e, value: e };
                 });
               return m.createElement(
-                w.e,
+                M.e,
                 {
                   onCancel: i,
                   closeModal: i,
@@ -23731,7 +23869,7 @@
                   { className: z.EditTagsTitle },
                   b
                     ? m.createElement("img", {
-                        className: H.SaleCapsuleImg,
+                        className: V.SaleCapsuleImg,
                         src: b.header_image_url,
                       })
                     : null,
@@ -23760,7 +23898,7 @@
                           "div",
                           { className: z.TagColumnTitle },
                           Object(N.f)("#Sale_EditTags_Applied", o.length),
-                          m.createElement(V.d, {
+                          m.createElement(H.d, {
                             tooltip: Object(N.f)("#Sale_EditTags_Applied_ttip"),
                           })
                         ),
@@ -23781,7 +23919,7 @@
                               "div",
                               { className: z.TagColumnTitle },
                               Object(N.f)("#Sale_EditTags_Store", _.length),
-                              m.createElement(V.d, {
+                              m.createElement(H.d, {
                                 tooltip: Object(N.f)(
                                   "#Sale_EditTags_Store_ttip"
                                 ),
@@ -23800,7 +23938,7 @@
                             "div",
                             { className: z.TagColumnTitle },
                             Object(N.f)("#Sale_EditTags_RecentTags"),
-                            m.createElement(V.d, {
+                            m.createElement(H.d, {
                               tooltip: Object(N.f)(
                                 "#Sale_EditTags_RecentTags_ttip"
                               ),
@@ -23820,7 +23958,7 @@
                           "div",
                           { className: z.TagColumnTitle },
                           Object(N.f)("#Sale_EditTags_Sections", f.length),
-                          m.createElement(V.d, {
+                          m.createElement(H.d, {
                             tooltip: Object(N.f)(
                               "#Sale_EditTags_Sections_ttip"
                             ),
@@ -23840,7 +23978,7 @@
                         "div",
                         { className: z.TagColumnTitle },
                         Object(N.f)("#Sale_EditTags_NewTagName"),
-                        m.createElement(V.d, {
+                        m.createElement(H.d, {
                           tooltip: Object(N.f)(
                             "#Sale_EditTags_NewTagName_ttip"
                           ),
@@ -23882,7 +24020,7 @@
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
-              (t.m_timerForChange = new A.b()),
+              (t.m_timerForChange = new L.b()),
               (t.state = {
                 editItems: t.props.editModel.GetEventModel().GetTaggedItems(),
                 modifiedTags: new Map(),
@@ -23926,7 +24064,7 @@
             }),
             (t.prototype.OnPopulateFromFilter = function () {
               new Array();
-              Object(M.d)(
+              Object(w.d)(
                 m.createElement(se, {
                   editModel: this.props.editModel,
                   filter: this.state.filter,
@@ -24093,7 +24231,7 @@
                     { key: e.capsule.id },
                     t
                       ? m.createElement("img", {
-                          className: H.SaleCapsuleImg,
+                          className: V.SaleCapsuleImg,
                           src: t.header_image_url,
                         })
                       : null,
@@ -24117,7 +24255,7 @@
                   return { label: e.tag + " (" + e.count + ")", value: e.tag };
                 });
               return m.createElement(
-                w.e,
+                M.e,
                 {
                   onCancel: t,
                   closeModal: t,
@@ -24141,7 +24279,7 @@
                           "div",
                           { className: z.TagColumnTitle },
                           Object(N.f)("#Sale_EditTags_BatchItemText", d.length),
-                          m.createElement(V.d, {
+                          m.createElement(H.d, {
                             tooltip: Object(N.f)(
                               "#Sale_EditTags_BatchItemText_ttip"
                             ),
@@ -24161,7 +24299,7 @@
                             onClick: this.OnPopulateFromFilter,
                           },
                           Object(N.f)("#Sale_EditTags_BatchFilter"),
-                          m.createElement(V.d, {
+                          m.createElement(H.d, {
                             tooltip: Object(N.f)(
                               "#Sale_EditTags_BatchFilter_ttip"
                             ),
@@ -24175,7 +24313,7 @@
                           "div",
                           { className: z.TagColumnTitle },
                           Object(N.f)("#Sale_EditTags_BatchItems", d.length),
-                          m.createElement(V.d, {
+                          m.createElement(H.d, {
                             tooltip: Object(N.f)(
                               "#Sale_EditTags_BatchItems_ttip"
                             ),
@@ -24194,7 +24332,7 @@
                           "div",
                           { className: z.TagColumnTitle },
                           Object(N.f)("#Sale_EditTags_Applied", r.size),
-                          m.createElement(V.d, {
+                          m.createElement(H.d, {
                             tooltip: Object(N.f)("#Sale_EditTags_Applied_ttip"),
                           })
                         ),
@@ -24214,7 +24352,7 @@
                             "div",
                             { className: z.TagColumnTitle },
                             Object(N.f)("#Sale_EditTags_RecentTags"),
-                            m.createElement(V.d, {
+                            m.createElement(H.d, {
                               tooltip: Object(N.f)(
                                 "#Sale_EditTags_RecentTags_ttip"
                               ),
@@ -24235,7 +24373,7 @@
                         "div",
                         { className: z.TagColumnTitle },
                         Object(N.f)("#Sale_EditTags_NewTagName"),
-                        m.createElement(V.d, {
+                        m.createElement(H.d, {
                           tooltip: Object(N.f)(
                             "#Sale_EditTags_NewTagName_ttip"
                           ),
@@ -24257,7 +24395,7 @@
                         "div",
                         { className: z.TagColumnTitle },
                         Object(N.f)("#Sale_EditTags_RemoveTagName"),
-                        m.createElement(V.d, {
+                        m.createElement(H.d, {
                           tooltip: Object(N.f)(
                             "#Sale_EditTags_RemoveTagName_ttip"
                           ),
@@ -24597,7 +24735,7 @@
                     },
                     "+",
                     Object(N.f)("#Sale_TagFilter_Or"),
-                    m.createElement(V.d, {
+                    m.createElement(H.d, {
                       tooltip: Object(N.f)("#Sale_TagFilter_Or_ttip"),
                     })
                   )
@@ -24616,7 +24754,7 @@
                   "div",
                   { className: z.SectionTitle },
                   Object(N.f)("#Sale_TagFilter_Filter"),
-                  m.createElement(V.d, {
+                  m.createElement(H.d, {
                     tooltip: Object(N.f)("#Sale_TagFilter_Filter_ttip"),
                   })
                 ),
@@ -24630,7 +24768,7 @@
                       { onClick: this.OnAddClause },
                       "+",
                       Object(N.f)("#Sale_TagFilter_And"),
-                      m.createElement(V.d, {
+                      m.createElement(H.d, {
                         tooltip: Object(N.f)("#Sale_TagFilter_And_ttip"),
                       })
                     )
@@ -24815,7 +24953,7 @@
                       m.Fragment,
                       null,
                       Object(N.f)("#Sale_TagFilter_MatchingItems", d.length),
-                      m.createElement(V.d, {
+                      m.createElement(H.d, {
                         tooltip: Object(N.f)(
                           "#Sale_TagFilter_MatchingItems_ttip"
                         ),
@@ -24828,7 +24966,7 @@
                       m.Fragment,
                       null,
                       Object(N.f)("#Sale_TagFilter_FilteredItems", _.length),
-                      m.createElement(V.d, {
+                      m.createElement(H.d, {
                         tooltip: Object(N.f)(
                           "#Sale_TagFilter_FilteredItems_ttip"
                         ),
@@ -24841,7 +24979,7 @@
                       m.Fragment,
                       null,
                       Object(N.f)("#Sale_TagFilter_UnusedItems", h.length),
-                      m.createElement(V.d, {
+                      m.createElement(H.d, {
                         tooltip: Object(N.f)(
                           "#Sale_TagFilter_UnusedItems_ttip"
                         ),
@@ -24864,7 +25002,7 @@
                 }),
                 C = c ? z.ShowTagBreakdown : z.HideTagBreakdown;
               return m.createElement(
-                w.e,
+                M.e,
                 {
                   closeModal: a,
                   bDisableBackgroundDismiss: !0,
@@ -24908,7 +25046,7 @@
                             ? "#Sale_TagFilter_HideTagBreakdown"
                             : "#Sale_TagFilter_ShowTagBreakdown"
                         ),
-                        m.createElement(V.d, {
+                        m.createElement(H.d, {
                           tooltip: Object(N.f)(
                             "#Sale_TagFilter_TagBreakdown_ttip"
                           ),
@@ -25142,7 +25280,7 @@
             (t.prototype.render = function () {
               var e = this.props.closeModal;
               return m.createElement(
-                w.e,
+                M.e,
                 {
                   onCancel: e,
                   closeModal: e,
@@ -25425,7 +25563,7 @@
                 a = t.editModel,
                 i = Boolean(a.GetEventModel().jsondata.sale_opt_in_page_name);
               return m.createElement(
-                w.e,
+                M.e,
                 {
                   onCancel: n,
                   closeModal: n,
@@ -25584,7 +25722,7 @@
               });
             });
           return m.createElement(
-            w.e,
+            M.e,
             {
               onCancel: t,
               closeModal: t,
@@ -25690,7 +25828,7 @@
                 O.d,
                 {
                   onClick: function () {
-                    Object(M.d)(
+                    Object(w.d)(
                       m.createElement(se, {
                         editModel: e.editModel,
                         filter: r,
@@ -26056,8 +26194,8 @@
                 C,
                 j,
                 I,
-                w,
                 M,
+                w,
                 D,
                 k = this;
               return Object(a.e)(this, function (a) {
@@ -26320,10 +26458,10 @@
                     );
                   case 5:
                     return (
-                      (w = a.sent())
+                      (M = a.sent())
                         ? this.m_editModel.MarkUpdateSuccessful(
-                            w.last_update_rtime,
-                            w.last_updater_steamid
+                            M.last_update_rtime,
+                            M.last_updater_steamid
                           )
                         : this.m_editModel.MarkUpdateSuccessful(
                             Math.floor(Date.now() / 1e3),
@@ -26335,8 +26473,8 @@
                     );
                   case 6:
                     return (
-                      (M = a.sent()),
-                      (D = Object(y.a)(M)),
+                      (w = a.sent()),
+                      (D = Object(y.a)(w)),
                       console.error(
                         "InternalSaveAction failed: " + D.strErrorMsg,
                         D
@@ -26769,6 +26907,8 @@
     tzvv: function (e, t, n) {
       e.exports = {
         SortTierControls: "partnereventsalesorttiers_SortTierControls_1_f_6",
+        SortTierExplanation:
+          "partnereventsalesorttiers_SortTierExplanation_1U8SA",
       };
     },
     vBFs: function (e, t, n) {

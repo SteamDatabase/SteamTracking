@@ -358,36 +358,36 @@ input.clanimagepicker_SearchInput_lwt4u {
   );
   margin-bottom: 20px;
 }
-.partnereventeditor_EventCategory_SteamGameFestival_1DanT
+.partnereventeditor_EventCategory_SpecialCategory_2Hm22
   .partnereventeditor_EventCategory_1rJ2O {
-  background-image: linear-gradient(to right, #2c584b 0%, #264b40 90%);
+  background-image: linear-gradient(to right, #2f333b 0%, #2f333b 90%);
   margin-bottom: 20px;
 }
-.partnereventeditor_EventCategory_SteamGameFestival_1DanT {
-  background-color: #1f3d34;
+.partnereventeditor_EventCategory_SpecialCategory_2Hm22 {
+  background-color: #4186b4;
   padding: 16px 16px 1px 16px;
   margin-bottom: 16px;
   border-radius: 4px;
 }
-.partnereventeditor_EventCategory_SteamGameFestival_1DanT
+.partnereventeditor_EventCategory_SpecialCategory_2Hm22
   .partnereventeditor_TitleCtn_oGmJd {
   margin-bottom: 16px;
 }
-.partnereventeditor_EventCategory_SteamGameFestival_1DanT
+.partnereventeditor_EventCategory_SpecialCategory_2Hm22
   .partnereventeditor_Title_1iEFY {
   font-size: 21px;
-  color: #ff763d;
+  color: #fff;
   font-weight: 600;
 }
-.partnereventeditor_EventCategory_SteamGameFestival_1DanT
+.partnereventeditor_EventCategory_SpecialCategory_2Hm22
   .partnereventeditor_Summary_2eQap {
   font-size: 14px;
-  color: #ff763d;
+  color: #fff;
   margin-bottom: 12px;
   margin-top: 8px;
   display: inline-block;
 }
-.partnereventeditor_EventCategory_SteamGameFestival_1DanT
+.partnereventeditor_EventCategory_SpecialCategory_2Hm22
   .partnereventeditor_Link_3s-fD {
   background: #2c584b;
 }
@@ -2597,6 +2597,9 @@ p a:hover {
   flex-direction: column;
   width: 100%;
   padding-top: 10px;
+}
+.partnereventsalesorttiers_SortTierExplanation_1U8SA {
+  padding-bottom: 8px;
 }
 .tableofcontents_TableOfContentsContainer_2VyHw {
   position: absolute;

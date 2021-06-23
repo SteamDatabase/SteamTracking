@@ -10144,59 +10144,5 @@
         rightPanel: "broadcast_embeddable_rightPanel_16MsC",
       };
     },
-    u2yL: function (e, t, r) {
-      "use strict";
-      var n = r("mrSG"),
-        i = (function (e) {
-          function t() {
-            return (null !== e && e.apply(this, arguments)) || this;
-          }
-          return (
-            Object(n.d)(t, e),
-            (t.prototype.GetString = function (e) {
-              return Promise.resolve(localStorage.getItem(e));
-            }),
-            (t.prototype.StoreString = function (e, t) {
-              return localStorage.setItem(e, t), Promise.resolve();
-            }),
-            (t.prototype.RemoveObject = function (e) {
-              return localStorage.removeItem(e), Promise.resolve();
-            }),
-            t
-          );
-        })(
-          (function () {
-            function e() {}
-            return (
-              (e.prototype.GetObject = function (e) {
-                return Object(n.b)(this, void 0, void 0, function () {
-                  var t;
-                  return Object(n.e)(this, function (r) {
-                    switch (r.label) {
-                      case 0:
-                        return r.trys.push([0, 2, , 3]), [4, this.GetString(e)];
-                      case 1:
-                        return [2, (t = r.sent()) ? JSON.parse(t) : null];
-                      case 2:
-                        return r.sent(), [2, null];
-                      case 3:
-                        return [2];
-                    }
-                  });
-                });
-              }),
-              (e.prototype.StoreObject = function (e, t) {
-                return Object(n.b)(this, void 0, void 0, function () {
-                  return Object(n.e)(this, function (r) {
-                    return [2, this.StoreString(e, JSON.stringify(t))];
-                  });
-                });
-              }),
-              e
-            );
-          })()
-        );
-      t.a = i;
-    },
   },
 ]);

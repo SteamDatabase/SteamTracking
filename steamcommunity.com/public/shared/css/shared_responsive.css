@@ -735,3 +735,11 @@ html.force_desktop body #footer_responsive_optin_spacer {
 	border-radius: 3px;
 	margin-right: 3px;
 }
+
+.responsive_scroll_snap_ctn {
+	scroll-snap-type: x mandatory;
+}
+
+.responsive_scroll_snap_start {
+	scroll-snap-align: start;
+}

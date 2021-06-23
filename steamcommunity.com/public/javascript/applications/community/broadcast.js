@@ -8,8 +8,8 @@
       a.r(t);
       var r = a("mrSG"),
         n = a("vDqi"),
-        s = a.n(n),
-        o = a("TyAF"),
+        o = a.n(n),
+        s = a("TyAF"),
         i = a("q1tI"),
         c = a.n(i),
         l = a("eN6m"),
@@ -23,14 +23,14 @@
         f = a("dfs5"),
         v = a("0OaU"),
         S = a("exH9"),
-        E = a("lkRc"),
-        g = a("dLk7"),
-        O = a.n(g),
-        j = Object(o.a)(function (e) {
+        g = a("lkRc"),
+        E = a("dLk7"),
+        O = a.n(E),
+        j = Object(s.a)(function (e) {
           var t = e.appid,
             a = Object(u.c)(t, 0, !0),
             n = (a[0], a[1]),
-            s = Object(f.c)();
+            o = Object(f.c)();
           Object(i.useEffect)(
             function () {
               if (!p.a.BHasAppLinkLoaded(t)) {
@@ -48,38 +48,38 @@
             },
             [t]
           );
-          var o = O.a.StoreSaleWidgetContainer_mini,
+          var s = O.a.StoreSaleWidgetContainer_mini,
             l = O.a.StoreSaleWidgetImage_mini,
             d = O.a.StoreSaleImage_mini,
-            g = (O.a.StoreSaleWidgetShortDesc_mini, p.a.GetAppLinkInfo(t));
-          if (!n || !g)
+            E = (O.a.StoreSaleWidgetShortDesc_mini, p.a.GetAppLinkInfo(t));
+          if (!n || !E)
             return c.a.createElement(
               "div",
-              { className: o },
+              { className: s },
               c.a.createElement(v.a, { size: "medium" }),
               ";"
             );
-          var j = "series" != g.type,
-            y = Object(m.b)(g.capsule_link, s);
-          return g && g.title
+          var j = "series" != E.type,
+            y = Object(m.b)(E.capsule_link, o);
+          return E && E.title
             ? c.a.createElement(
                 "div",
-                { className: o },
+                { className: s },
                 c.a.createElement(
                   "div",
                   { className: _.Actions },
                   c.a.createElement(
                     "a",
-                    { href: y, target: E.c.IN_CLIENT ? void 0 : "_blank" },
+                    { href: y, target: g.c.IN_CLIENT ? void 0 : "_blank" },
                     c.a.createElement(
                       b.b,
-                      { type: "app", id: g.appid },
+                      { type: "app", id: E.appid },
                       c.a.createElement(
                         "div",
                         { className: l },
                         c.a.createElement("img", {
                           className: d,
-                          src: g.capsule,
+                          src: E.capsule,
                         })
                       )
                     )
@@ -93,10 +93,10 @@
                     { className: _.Actions },
                     c.a.createElement(
                       "a",
-                      { href: y, target: E.c.IN_CLIENT ? void 0 : "_blank" },
+                      { href: y, target: g.c.IN_CLIENT ? void 0 : "_blank" },
                       c.a.createElement(
                         b.b,
-                        { type: "app", id: g.appid },
+                        { type: "app", id: E.appid },
                         c.a.createElement(
                           "div",
                           {
@@ -105,7 +105,7 @@
                               "StoreSaleWidgetTitle"
                             ),
                           },
-                          g.title
+                          E.title
                         )
                       )
                     )
@@ -113,11 +113,11 @@
                   c.a.createElement(
                     "div",
                     { className: _.StoreSaleWidgetRelease },
-                    g.release
+                    E.release
                   ),
                   j &&
-                    c.a.createElement(h.j, {
-                      info: g,
+                    c.a.createElement(h.o, {
+                      info: E,
                       bShowDemoButton: !0,
                       bStackedButtons: !0,
                     })
@@ -131,31 +131,31 @@
         C = a("1BdX"),
         I = a("boaH"),
         w = a("nWbB"),
-        N = a("02Wr"),
-        B = a("MnIK"),
-        P = a("6Y59"),
+        P = a("02Wr"),
+        N = a("MnIK"),
+        B = a("6Y59"),
         G = a("d+Me"),
         A = a("TLQK"),
         k = a("bxiW"),
-        D = a("kLLr"),
-        L = a("uIWk"),
+        L = a("kLLr"),
+        D = a("uIWk"),
         x = a("rKv1"),
         T = a.n(x),
-        W = Object(o.a)(function (e) {
+        W = Object(s.a)(function (e) {
           var t = e.event,
             a = t.clanSteamID.GetAccountID(),
             n = !t || !t.jsondata || !t.jsondata.broadcast_item_drops_enabled,
-            o = Object(i.useRef)(null),
+            s = Object(i.useRef)(null),
             l = Object(i.useState)(
-              t ? L.a.GetCreatorHome(t.clanSteamID) : null
+              t ? D.a.GetCreatorHome(t.clanSteamID) : null
             ),
             d = l[0],
             p = l[1];
           if (
             (Object(i.useEffect)(
               function () {
-                var e = s.a.CancelToken.source();
-                o.current = e.cancel;
+                var e = o.a.CancelToken.source();
+                s.current = e.cancel;
                 return (
                   Object(r.b)(void 0, void 0, void 0, function () {
                     var t, n;
@@ -163,8 +163,8 @@
                       switch (r.label) {
                         case 0:
                           return (
-                            (t = D.a.InitFromClanID(a)),
-                            [4, L.a.LoadCreatorHome(t, e)]
+                            (t = L.a.InitFromClanID(a)),
+                            [4, D.a.LoadCreatorHome(t, e)]
                           );
                         case 1:
                           return (n = r.sent()), e.token.reason || p(n), [2];
@@ -172,7 +172,7 @@
                     });
                   }),
                   function () {
-                    o.current && o.current("BroadcastDropsDisplay: unmounting");
+                    s.current && s.current("BroadcastDropsDisplay: unmounting");
                   }
                 );
               },
@@ -182,7 +182,7 @@
           )
             return null;
           var m =
-            E.c.COMMUNITY_BASE_URL +
+            g.c.COMMUNITY_BASE_URL +
             "gid/" +
             t.jsondata.broadcast_item_drops_details_clan_accountid +
             "/partnerevents/view/" +
@@ -213,7 +213,7 @@
               Boolean(t.jsondata.broadcast_item_drops_details_clan_accountid) &&
                 c.a.createElement(
                   "a",
-                  { href: m, target: E.c.IN_CLIENT ? "" : "_blank" },
+                  { href: m, target: g.c.IN_CLIENT ? "" : "_blank" },
                   Object(A.f)("#SalePage_WatchForDrop_LearnMore")
                 )
             )
@@ -250,7 +250,7 @@
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
-              (t.m_cancelSignal = s.a.CancelToken.source()),
+              (t.m_cancelSignal = o.a.CancelToken.source()),
               (t.state = {
                 bShowPopoutHeader: !1,
                 bExpanded: !1,
@@ -275,7 +275,7 @@
             Object(r.d)(t, e),
             (a = t),
             (t.IsBroadcastAllowed = function () {
-              return E.c.EREALM != y.f.k_ESteamRealmChina;
+              return g.c.EREALM != y.f.k_ESteamRealmChina;
             }),
             (t.prototype.componentDidMount = function () {
               return Object(r.b)(this, void 0, void 0, function () {
@@ -415,7 +415,7 @@
               if (this.props.bWidePlayer) return a;
               var r = w.a.Get().GetConcurrentStreams(this.props) > 1,
                 n = I.a.GetOrCreateBroadcastInfo(e.steamid).m_nAppID,
-                s = i.createElement(
+                o = i.createElement(
                   "div",
                   { className: T.a.rightPanel },
                   i.createElement(F, {
@@ -423,7 +423,7 @@
                     ImgUrl: e.right_panel,
                   })
                 ),
-                o = i.createElement(F, {
+                s = i.createElement(F, {
                   key: "left" + n,
                   ImgUrl: e.left_panel,
                 });
@@ -441,13 +441,13 @@
                 ) ||
                   (this.props.event &&
                     this.props.event.jsondata.broadcast_force_banner) ||
-                  ((s = i.createElement(j, {
+                  ((o = i.createElement(j, {
                     key: "mini" + e.accountid,
                     appid: n,
                   })),
                   (a.bRightPanelArtworkOrEmpty = !1)),
                 r && !t
-                  ? ((a.leftPanel = i.createElement(K, {
+                  ? ((a.leftPanel = i.createElement(q, {
                       broadcastEmbedContext: this.props,
                       key: "selector" + n,
                       curStream: e,
@@ -455,7 +455,7 @@
                       fnFilterStreams: this.props.fnFilterStreams,
                       bShowCapsuleArt: this.props.bShowCapsuleArt,
                     })),
-                    (a.rightPanel = s))
+                    (a.rightPanel = o))
                   : t
                   ? ((a.leftPanel = i.createElement("div", null)),
                     (a.rightPanel = i.createElement(J, {
@@ -463,7 +463,7 @@
                       orientation: "rightside",
                     })),
                     (a.bRightPanelArtworkOrEmpty = !1))
-                  : ((a.leftPanel = o), (a.rightPanel = s)),
+                  : ((a.leftPanel = s), (a.rightPanel = o)),
                 a
               );
             }),
@@ -473,28 +473,28 @@
                 return null;
               var n = w.a.Get().GetPlayReadyStream(this.props);
               if (n) {
-                var s = "show" === w.a.Get().GetChatVisibility(),
-                  o = this.props,
-                  c = o.event,
-                  l = o.language,
-                  d = o.fnRenderBroadcastContext,
-                  p = o.fnOnVideoEnd;
+                var o = "show" === w.a.Get().GetChatVisibility(),
+                  s = this.props,
+                  c = s.event,
+                  l = s.language,
+                  d = s.fnRenderBroadcastContext,
+                  p = s.fnOnVideoEnd;
                 c &&
                   (n = Object(r.a)(Object(r.a)({}, n), {
                     left_panel: c.GetImageURL(
                       "broadcast_left",
-                      l || Object(y.h)(E.c.LANGUAGE)
+                      l || Object(y.h)(g.c.LANGUAGE)
                     ),
                     right_panel: c.GetImageURL(
                       "broadcast_right",
-                      l || Object(y.h)(E.c.LANGUAGE)
+                      l || Object(y.h)(g.c.LANGUAGE)
                     ),
                     store_title: c.GetBroadcastTitle(
-                      l || Object(y.h)(E.c.LANGUAGE)
+                      l || Object(y.h)(g.c.LANGUAGE)
                     ),
                     broadcast_chat_visibility: c.GetBroadcastChatVisibility(),
                   }));
-                var m = this.ConstructSidePanels(n, s),
+                var m = this.ConstructSidePanels(n, o),
                   u = n.store_title ? n.store_title : n.title,
                   _ = w.a.Get().GetConcurrentStreams(this.props) > 1;
                 c && c.jsondata && c.jsondata.broadcast_gradient_inner_color,
@@ -527,7 +527,7 @@
                             "bordered_title_trgt"
                           ),
                         },
-                        i.createElement(h.e, null),
+                        i.createElement(h.i, null),
                         u,
                         i.createElement(
                           "div",
@@ -540,7 +540,7 @@
                               ),
                               onClick: function () {
                                 return window.open(
-                                  E.c.STORE_BASE_URL +
+                                  g.c.STORE_BASE_URL +
                                     "account/preferences/#store_broadcast_settings"
                                 );
                               },
@@ -573,7 +573,7 @@
                               (t.multistream = _),
                               (t.broadcast_right_panel_simple =
                                 m.bRightPanelArtworkOrEmpty),
-                              (t.broadcast_chat_expanded = s),
+                              (t.broadcast_chat_expanded = o),
                               t)
                             ),
                             style: Object(r.a)({}, this.state.innerStyle),
@@ -617,7 +617,7 @@
             ),
             Object(r.c)([k.a], t.prototype, "OnShrinkTransitionEnd", null),
             Object(r.c)([k.a], t.prototype, "onStreamSelect", null),
-            (t = a = Object(r.c)([o.a], t))
+            (t = a = Object(r.c)([s.a], t))
           );
         })(i.Component),
         H =
@@ -728,7 +728,7 @@
               if (a) {
                 var r = a.url;
                 return (
-                  (E.c.IN_CLIENT ||
+                  (g.c.IN_CLIENT ||
                     navigator.userAgent.indexOf("Valve Steam Client") >= 0 ||
                     navigator.userAgent.indexOf("Valve Steam GameOverlay") >=
                       0 ||
@@ -742,17 +742,17 @@
                 );
               }
               var n = this.props.stream.steamid,
-                s = E.c.COMMUNITY_BASE_URL + "broadcast/watch/" + n;
+                o = g.c.COMMUNITY_BASE_URL + "broadcast/watch/" + n;
               return i.createElement(
                 "a",
                 {
-                  href: s,
+                  href: o,
                   className: T.a.external_link,
                   "data-tooltip-text": Object(A.f)(
                     "#BroadcastWatch_View_Broadcast_Page"
                   ),
                 },
-                i.createElement(P.v, null)
+                i.createElement(B.v, null)
               );
             }),
             (t.prototype.OnToggleChat = function (e) {
@@ -785,7 +785,7 @@
                 i.createElement(
                   "div",
                   { className: Object(S.a)(T.a.viewer_count, "viewer_count") },
-                  i.createElement(P.gb, null),
+                  i.createElement(B.gb, null),
                   a.toLocaleString(A.e.GetPreferredLocales())
                 ),
                 i.createElement(
@@ -795,7 +795,7 @@
                     i.createElement(
                       "div",
                       { className: T.a.chat_link },
-                      i.createElement(P.j, null),
+                      i.createElement(B.j, null),
                       i.createElement(
                         "a",
                         {
@@ -815,15 +815,15 @@
                     "a",
                     {
                       href:
-                        E.c.STORE_BASE_URL +
+                        g.c.STORE_BASE_URL +
                         "account/preferences/#store_broadcast_settings",
-                      target: E.c.IN_CLIENT ? void 0 : "_blank",
+                      target: g.c.IN_CLIENT ? void 0 : "_blank",
                       className: T.a.settings_link,
                       "data-tooltip-text": Object(A.f)(
                         "#StoreBroadcast_Change_store_Broadcast_settings"
                       ),
                     },
-                    i.createElement(P.U, null)
+                    i.createElement(B.U, null)
                   ),
                   e
                 )
@@ -831,7 +831,7 @@
             }),
             Object(r.c)([k.a], t.prototype, "OnToggleChat", null),
             Object(r.c)([k.a], t.prototype, "onWatchBroadcastPage", null),
-            (t = Object(r.c)([o.a], t))
+            (t = Object(r.c)([s.a], t))
           );
         })(i.Component),
         F = (function (e) {
@@ -856,12 +856,12 @@
             t
           );
         })(i.Component),
-        M = Object(o.a)(function (e) {
+        M = Object(s.a)(function (e) {
           var t = e.stream,
             a = Object(f.c)(),
             r = I.a.GetOrCreateBroadcastInfo(t.steamid).m_nAppID,
             n = p.a.GetAppLinkInfo(r),
-            s = n
+            o = n
               ? i.createElement(
                   b.a,
                   {
@@ -880,7 +880,7 @@
           return i.createElement(
             "div",
             { className: [T.a.PopOutVideoTitleBar, T.a.NoSeslect].join(" ") },
-            s,
+            o,
             i.createElement(
               "button",
               {
@@ -890,11 +890,11 @@
                 ),
                 onClick: e.OnPreventPopup,
               },
-              i.createElement(P.kb, null)
+              i.createElement(B.kb, null)
             )
           );
         }),
-        K = (function (e) {
+        q = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.itemRef = i.createRef()), t;
@@ -948,7 +948,7 @@
               var e = this,
                 t = this.GetFilteredStreamList(),
                 a = t.map(function (t) {
-                  return i.createElement(q, {
+                  return i.createElement(K, {
                     key: t.accountid,
                     stream: t,
                     bSelected: e.props.curStream.accountid == t.accountid,
@@ -973,7 +973,7 @@
             t
           );
         })(i.Component),
-        q = (function (e) {
+        K = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -993,7 +993,7 @@
               if (e) {
                 var r = I.a.GetOrCreateBroadcastInfo(t.steamid).m_nAppID,
                   n = p.a.GetAppLinkInfo(r),
-                  s = [t.thumbnail_http_address];
+                  o = [t.thumbnail_http_address];
                 return i.createElement(
                   i.Fragment,
                   null,
@@ -1002,9 +1002,9 @@
                       className: Object(S.a)(a, T.a.stream_icon_hide_on_hover),
                       src: n.header_image_url,
                     }),
-                  i.createElement(N.b, {
+                  i.createElement(P.b, {
                     className: Object(S.a)(a, T.a.stream_icon_show_on_hover),
-                    srcs: s,
+                    srcs: o,
                   })
                 );
               }
@@ -1026,8 +1026,8 @@
                 r = e.bShowCapsuleArt;
               if (!Object(w.d)(t)) return null;
               var n = I.a.GetOrCreateBroadcastInfo(t.steamid).m_nAppID,
-                s = p.a.GetAppLinkInfo(n),
-                o = Boolean(r && (null == s ? void 0 : s.header_image_url)),
+                o = p.a.GetAppLinkInfo(n),
+                s = Boolean(r && (null == o ? void 0 : o.header_image_url)),
                 c = Number.parseInt("" + t.viewer_count);
               return i.createElement(
                 "div",
@@ -1035,20 +1035,20 @@
                   className: Object(S.a)(
                     T.a.stream_icon_and_viewer_container,
                     a.GetClassForStreamPriority(t.current_selection_priority),
-                    o && T.a.display_capsule_art
+                    s && T.a.display_capsule_art
                   ),
                 },
                 i.createElement(
                   b.b,
                   { type: "app", id: n },
                   i.createElement(
-                    B.a,
+                    N.a,
                     {
                       className: T.a.stream_icon_container,
                       onClick: this.onClick,
                       rootMargin: "100px 0px 100px 0px",
                     },
-                    this.generateThumbnail(o),
+                    this.generateThumbnail(s),
                     this.props.bSelected &&
                       i.createElement("div", {
                         className: T.a.stream_icon_arrow,
@@ -1058,13 +1058,13 @@
                 i.createElement(
                   "div",
                   { className: T.a.viewer_count },
-                  i.createElement(P.gb, null),
+                  i.createElement(B.gb, null),
                   c.toLocaleString(A.e.GetPreferredLocales())
                 )
               );
             }),
             Object(r.c)([k.a], t.prototype, "onClick", null),
-            (t = a = Object(r.c)([o.a], t))
+            (t = a = Object(r.c)([s.a], t))
           );
         })(i.Component),
         J = (function (e) {
@@ -1100,9 +1100,38 @@
                   )
                 : null;
             }),
-            (t = Object(r.c)([o.a], t))
+            (t = Object(r.c)([s.a], t))
           );
         })(i.Component);
+    },
+    "d+Me": function (e, t, a) {
+      "use strict";
+      a.d(t, "a", function () {
+        return s;
+      });
+      var r = a("mrSG"),
+        n = a("q1tI"),
+        o = a("uuth"),
+        s = function (e) {
+          var t = e.onPositionChange,
+            a = e.onLeave,
+            s = n.useCallback(
+              function (e) {
+                return (
+                  void 0 === e.previousPosition &&
+                    e.currentPosition === o.a.above &&
+                    a &&
+                    a(e),
+                  t && t(e)
+                );
+              },
+              [t, a]
+            );
+          return n.createElement(
+            o.a,
+            Object(r.a)({}, e, { onPositionChange: s })
+          );
+        };
     },
     dLk7: function (e, t, a) {
       e.exports = {
