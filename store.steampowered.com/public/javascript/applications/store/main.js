@@ -1,8 +1,8 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6623100";
+var CLSTAMP = "6627862";
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [68],
+  [69],
   {
     "+VX6": function (e, t, n) {
       "use strict";
@@ -9371,11 +9371,13 @@ var CLSTAMP = "6623100";
                         return this.m_nHighestReceivedRequestID > M
                           ? [2]
                           : ((this.m_nHighestReceivedRequestID = M),
-                            (d = (d = S.map(function (e) {
+                            (d = S.map(function (e) {
                               return { id: e, type: "game" };
-                            })).filter(function (e) {
-                              return y.has(e.id);
                             })),
+                            this.BUsesContentHubForItemSource(c) ||
+                              (d = d.filter(function (e) {
+                                return y.has(e.id);
+                              })),
                             this.state.strSearchQuery ||
                               this.BUsesContentHubForItemSource(c) ||
                               (d = d.filter(function (e) {
@@ -18465,35 +18467,35 @@ var CLSTAMP = "6623100";
     },
     AvbV: function (e, t, n) {
       var r = {
-        "./main_brazilian.json": ["TFAN", 69],
-        "./main_bulgarian.json": ["c2SO", 70],
-        "./main_czech.json": ["peP3", 71],
-        "./main_danish.json": ["0bnV", 72],
-        "./main_dutch.json": ["wcLc", 73],
-        "./main_english.json": ["/rNK", 74],
-        "./main_finnish.json": ["iywU", 75],
-        "./main_french.json": ["Xnpc", 76],
-        "./main_german.json": ["pmKi", 77],
-        "./main_greek.json": ["mTRv", 78],
-        "./main_hungarian.json": ["WkHb", 79],
-        "./main_italian.json": ["Jz5U", 80],
-        "./main_japanese.json": ["3Dk9", 81],
-        "./main_koreana.json": ["neQD", 82],
-        "./main_latam.json": ["6oHD", 83],
-        "./main_norwegian.json": ["2OvS", 84],
-        "./main_polish.json": ["3pwE", 85],
-        "./main_portuguese.json": ["hY40", 86],
-        "./main_romanian.json": ["Q95+", 87],
-        "./main_russian.json": ["bsPT", 88],
-        "./main_sc_schinese.json": ["GOaQ", 89],
-        "./main_schinese.json": ["B/Zz", 90],
-        "./main_spanish.json": ["U6iL", 91],
-        "./main_swedish.json": ["4uPU", 92],
-        "./main_tchinese.json": ["rgC9", 93],
-        "./main_thai.json": ["87dp", 94],
-        "./main_turkish.json": ["yMpO", 95],
-        "./main_ukrainian.json": ["zTWm", 96],
-        "./main_vietnamese.json": ["wqiy", 97],
+        "./main_brazilian.json": ["TFAN", 70],
+        "./main_bulgarian.json": ["c2SO", 71],
+        "./main_czech.json": ["peP3", 72],
+        "./main_danish.json": ["0bnV", 73],
+        "./main_dutch.json": ["wcLc", 74],
+        "./main_english.json": ["/rNK", 75],
+        "./main_finnish.json": ["iywU", 76],
+        "./main_french.json": ["Xnpc", 77],
+        "./main_german.json": ["pmKi", 78],
+        "./main_greek.json": ["mTRv", 79],
+        "./main_hungarian.json": ["WkHb", 80],
+        "./main_italian.json": ["Jz5U", 81],
+        "./main_japanese.json": ["3Dk9", 82],
+        "./main_koreana.json": ["neQD", 83],
+        "./main_latam.json": ["6oHD", 84],
+        "./main_norwegian.json": ["2OvS", 85],
+        "./main_polish.json": ["3pwE", 86],
+        "./main_portuguese.json": ["hY40", 87],
+        "./main_romanian.json": ["Q95+", 88],
+        "./main_russian.json": ["bsPT", 89],
+        "./main_sc_schinese.json": ["GOaQ", 90],
+        "./main_schinese.json": ["B/Zz", 91],
+        "./main_spanish.json": ["U6iL", 92],
+        "./main_swedish.json": ["4uPU", 93],
+        "./main_tchinese.json": ["rgC9", 94],
+        "./main_thai.json": ["87dp", 95],
+        "./main_turkish.json": ["yMpO", 96],
+        "./main_ukrainian.json": ["zTWm", 97],
+        "./main_vietnamese.json": ["wqiy", 98],
       };
       function a(e) {
         if (!n.o(r, e))
@@ -32264,14 +32266,15 @@ var CLSTAMP = "6623100";
         "./sales_portuguese.json": ["EQQ2", 27],
         "./sales_romanian.json": ["oXR9", 28],
         "./sales_russian.json": ["kQHt", 29],
-        "./sales_schinese.json": ["AVwL", 30],
-        "./sales_spanish.json": ["lRrx", 31],
-        "./sales_swedish.json": ["7tPl", 32],
-        "./sales_tchinese.json": ["mQlZ", 33],
-        "./sales_thai.json": ["yDdk", 34],
-        "./sales_turkish.json": ["mjwq", 35],
-        "./sales_ukrainian.json": ["gWvs", 36],
-        "./sales_vietnamese.json": ["VsX2", 37],
+        "./sales_sc_schinese.json": ["VTAw", 30],
+        "./sales_schinese.json": ["AVwL", 31],
+        "./sales_spanish.json": ["lRrx", 32],
+        "./sales_swedish.json": ["7tPl", 33],
+        "./sales_tchinese.json": ["mQlZ", 34],
+        "./sales_thai.json": ["yDdk", 35],
+        "./sales_turkish.json": ["mjwq", 36],
+        "./sales_ukrainian.json": ["gWvs", 37],
+        "./sales_vietnamese.json": ["VsX2", 38],
       };
       function a(e) {
         if (!n.o(r, e))
@@ -56854,12 +56857,12 @@ var CLSTAMP = "6623100";
           return Promise.all([n.e(0), n.e(8)]).then(n.bind(null, "3WEt"));
         }),
         pe = s.a.lazy(function () {
-          return Promise.all([n.e(0), n.e(2), n.e(67)]).then(
+          return Promise.all([n.e(0), n.e(2), n.e(68)]).then(
             n.bind(null, "CGeh")
           );
         }),
         me = s.a.lazy(function () {
-          return Promise.all([n.e(0), n.e(2), n.e(101)]).then(
+          return Promise.all([n.e(0), n.e(2), n.e(102)]).then(
             n.bind(null, "tPo2")
           );
         }),
@@ -73429,36 +73432,36 @@ var CLSTAMP = "6623100";
     },
     rCDf: function (e, t, n) {
       var r = {
-        "./shared_arabic.json": ["d1TB", 102],
-        "./shared_brazilian.json": ["Pg9r", 103],
-        "./shared_bulgarian.json": ["ENge", 104],
-        "./shared_czech.json": ["Ts6V", 105],
-        "./shared_danish.json": ["9oiU", 106],
-        "./shared_dutch.json": ["nxN4", 107],
-        "./shared_english.json": ["TYjx", 108],
-        "./shared_finnish.json": ["NuB8", 109],
-        "./shared_french.json": ["bOPj", 110],
-        "./shared_german.json": ["svuF", 111],
-        "./shared_greek.json": ["eJKB", 112],
-        "./shared_hungarian.json": ["T7i2", 113],
-        "./shared_italian.json": ["w96W", 114],
-        "./shared_japanese.json": ["XQ4S", 115],
-        "./shared_koreana.json": ["4hyI", 116],
-        "./shared_latam.json": ["3qrw", 117],
-        "./shared_norwegian.json": ["XA4Q", 118],
-        "./shared_polish.json": ["TpXn", 119],
-        "./shared_portuguese.json": ["Q8UV", 120],
-        "./shared_romanian.json": ["Eme1", 121],
-        "./shared_russian.json": ["BUiO", 122],
-        "./shared_sc_schinese.json": ["O0N/", 123],
-        "./shared_schinese.json": ["3UpY", 124],
-        "./shared_spanish.json": ["4Fxc", 125],
-        "./shared_swedish.json": ["0JhB", 126],
-        "./shared_tchinese.json": ["OYRc", 127],
-        "./shared_thai.json": ["lhAZ", 128],
-        "./shared_turkish.json": ["RSoU", 129],
-        "./shared_ukrainian.json": ["lNXI", 130],
-        "./shared_vietnamese.json": ["RSmC", 131],
+        "./shared_arabic.json": ["d1TB", 103],
+        "./shared_brazilian.json": ["Pg9r", 104],
+        "./shared_bulgarian.json": ["ENge", 105],
+        "./shared_czech.json": ["Ts6V", 106],
+        "./shared_danish.json": ["9oiU", 107],
+        "./shared_dutch.json": ["nxN4", 108],
+        "./shared_english.json": ["TYjx", 109],
+        "./shared_finnish.json": ["NuB8", 110],
+        "./shared_french.json": ["bOPj", 111],
+        "./shared_german.json": ["svuF", 112],
+        "./shared_greek.json": ["eJKB", 113],
+        "./shared_hungarian.json": ["T7i2", 114],
+        "./shared_italian.json": ["w96W", 115],
+        "./shared_japanese.json": ["XQ4S", 116],
+        "./shared_koreana.json": ["4hyI", 117],
+        "./shared_latam.json": ["3qrw", 118],
+        "./shared_norwegian.json": ["XA4Q", 119],
+        "./shared_polish.json": ["TpXn", 120],
+        "./shared_portuguese.json": ["Q8UV", 121],
+        "./shared_romanian.json": ["Eme1", 122],
+        "./shared_russian.json": ["BUiO", 123],
+        "./shared_sc_schinese.json": ["O0N/", 124],
+        "./shared_schinese.json": ["3UpY", 125],
+        "./shared_spanish.json": ["4Fxc", 126],
+        "./shared_swedish.json": ["0JhB", 127],
+        "./shared_tchinese.json": ["OYRc", 128],
+        "./shared_thai.json": ["lhAZ", 129],
+        "./shared_turkish.json": ["RSoU", 130],
+        "./shared_ukrainian.json": ["lNXI", 131],
+        "./shared_vietnamese.json": ["RSmC", 132],
       };
       function a(e) {
         if (!n.o(r, e))
@@ -87145,5 +87148,5 @@ var CLSTAMP = "6623100";
       );
     },
   },
-  [["gfbn", 98, 0]],
+  [["gfbn", 99, 0]],
 ]);

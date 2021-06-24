@@ -16890,11 +16890,13 @@
                         return this.m_nHighestReceivedRequestID > S
                           ? [2]
                           : ((this.m_nHighestReceivedRequestID = S),
-                            (d = (d = E.map(function (e) {
+                            (d = E.map(function (e) {
                               return { id: e, type: "game" };
-                            })).filter(function (e) {
-                              return y.has(e.id);
                             })),
+                            this.BUsesContentHubForItemSource(c) ||
+                              (d = d.filter(function (e) {
+                                return y.has(e.id);
+                              })),
                             this.state.strSearchQuery ||
                               this.BUsesContentHubForItemSource(c) ||
                               (d = d.filter(function (e) {
