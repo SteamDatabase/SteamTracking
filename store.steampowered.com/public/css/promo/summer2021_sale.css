@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&display=swap');
 
 body.v6.sale_summer2021 {
-                background: url('https://cdn.cloudflare.steamstatic.com/store/promo/summer2021/summer_sale_2021_front_page_background_1.jpg?v=1') no-repeat center top, #E0CDA3;
+                background: url('https://cdn.cloudflare.steamstatic.com/store/promo/summer2021/summer_sale_2021_front_page_background_2.jpg?v=1') no-repeat center top, #E0CDA3;
             }
 
 body.v6.sale_summer2021 .responsive_page_template_content {
@@ -150,7 +150,10 @@ html.responsive .home_sticker_ctn.mobile {
     -webkit-transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     -moz-transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
 
 .summer_top_text {
     font-size: 16px;
@@ -1363,6 +1366,10 @@ body.forgeyourfate {
     display: none;
     }
 
+    html.responsive body.v6.sale_summer2021 .tag_carousel .carousel_items:not(.no_paging) > * {
+        width: auto;
+    }
+
     body.v6.sale_summer2021 .home_page_takeover_sizer {
                     min-height: unset;
                     height: 65vw !important;
@@ -1480,10 +1487,6 @@ body.forgeyourfate {
 
     html.responsive .tag_genre_ctn .floating_image {
         display: none;
-    }
-
-    html.responsive .home_browsemore_ctn.tag_genre_ctn .home_title_ctn {
-        margin: 0;
     }
 }
 
@@ -2120,6 +2123,11 @@ body.v6 .sale_capsule .discount_block_inline
     {
         font-size: 10px;
     }
+
+    html.responsive body.v6.sale_summer2021 .tag_carousel .carousel_items:not(.no_paging) > * {
+                                    width: auto;
+                                }
+
 }
 
 @media screen and (max-width: 830px )
