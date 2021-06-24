@@ -65,7 +65,7 @@ body.v6.sale_summer2021 .home_ctn.discovery_queue_ctn, body.v6.sale_summer2021 .
 body.v6.sale_summer2021.infinite_scrolling #footer.small_footer {
     background: transparent;
             }
-html.responsive .home_sticker_ctn.mobile {
+body.v6.sale_summer2021 .home_sticker_ctn.mobile {
     display: none;
 }
 .page_background_holder_mobile {
@@ -1096,11 +1096,11 @@ body.forgeyourfate {
         margin-bottom: 0;
     }
 
-    html.responsive .home_sticker_ctn.desktop {
+    body.v6.sale_summer2021 .home_sticker_ctn.desktop {
         display: none;
     }
 
-    html.responsive .home_sticker_ctn.mobile {
+    body.v6.sale_summer2021 .home_sticker_ctn.mobile {
         display: block;
     }
 
@@ -1414,7 +1414,7 @@ body.forgeyourfate {
     }
     body.responsive_page .discovery_queue_static .begin_exploring.begin_exploring_mobile {
         display: block;
-        margin-top: 14%;
+        margin-top: 15%;
     }
     body.responsive_page .home_discovery_queue_ctn .cards, body.responsive_page .home_browsemore_ctn .cards {
         display: none;
