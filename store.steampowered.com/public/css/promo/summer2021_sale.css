@@ -44,9 +44,10 @@ body.v6.sale_summer2021 .home_header_textimage_ctn {
                 margin: 0;
                 height: 70%;
                 max-height: 508px;
-                display: block;
+                display: flex;
                 background-repeat: no-repeat;
                 background-size: contain;
+                justify-content: flex-end;
                 /*-webkit-filter: drop-shadow(8px 8px 7px rgba(0,0,0,0.2));
                 filter: drop-shadow(8px 8px 7px rgba(0,0,0,0.2));*/
             }
@@ -55,8 +56,17 @@ body.v6.sale_summer2021 .home_ctn.discovery_queue_ctn, body.v6.sale_summer2021 .
                                                                          background: transparent;
                                                                      }
 
+
+
 .fullscreen-bg__video {
     max-width: 1800px;
+}
+
+body.v6.sale_summer2021.infinite_scrolling #footer.small_footer {
+    background: transparent;
+            }
+html.responsive .home_sticker_ctn.mobile {
+    display: none;
 }
 .page_background_holder_mobile {
     display: none;
@@ -82,15 +92,15 @@ body.v6.sale_summer2021 .home_ctn.discovery_queue_ctn, body.v6.sale_summer2021 .
     border-top: 30px solid transparent;
     border-bottom: 30px solid transparent;
     border-left: 15px solid transparent;
-    border-bottom-color: lightgray;
-    border-top-color: lightgray;
+    border-bottom-color: #BE4328;
+    border-top-color: #BE4328;
 }
 
 .bookmark_img {
     width: 44px;
     padding-top: 12px;
     padding-right: 10px;
-    background-color: lightgray;
+    background-color: #BE4328;
 }
 
 .bookmark_text {
@@ -99,9 +109,11 @@ body.v6.sale_summer2021 .home_ctn.discovery_queue_ctn, body.v6.sale_summer2021 .
     font-family: "Big Shoulders Display";
     color: #fefeef;
     text-overflow: ellipsis;
-    background-color: lightgray;
+    background-color: #BE4328;
     padding: 14px 12px;
     letter-spacing: 1px;
+    border-right: 3px solid #BE4328;
+    border-left: 1px solid #BE4328;
 }
 
 .bookmark_text > div {
@@ -129,6 +141,7 @@ body.v6.sale_summer2021 .home_ctn.discovery_queue_ctn, body.v6.sale_summer2021 .
     display: flex;
     max-width: 25vw;
     margin-top: 9%;
+    margin-right: -9%;
     cursor: pointer;
     filter: drop-shadow(2px 4px 12px #3D3E3899);
     transform: rotate(
@@ -200,10 +213,9 @@ body.v6.sale_summer2021 .home_ctn.discovery_queue_ctn, body.v6.sale_summer2021 .
 }
 
 .summer_banner_ctn {
-    background-size: cover;
     display: flex;
-
-    justify-content: space-between;
+    background-repeat: no-repeat;
+    background-position: center;
     flex-wrap: nowrap;
     margin: 20px 0;
     		font-family: "Motiva Sans", Sans-serif;
@@ -241,7 +253,7 @@ body.v6.sale_summer2021 .home_ctn.discovery_queue_ctn, body.v6.sale_summer2021 .
 
 
 .home_sticker_ctn {
-    background-size: cover;
+    background-size: contain;
     min-height: 240px;
     -webkit-filter: drop-shadow(12px px 7px rgba(0,0,0,0.5));
     filter: drop-shadow(12px 12px 7px rgba(0,0,0,0.5));
@@ -1077,6 +1089,14 @@ body.forgeyourfate {
 @media screen and (max-width: 910px )
 {
 
+    html.responsive .home_sticker_ctn.desktop {
+        display: none;
+    }
+
+    html.responsive .home_sticker_ctn.mobile {
+        display: block;
+    }
+
     body.responsive_page .home_page_body_ctn.has_takeover .home_header_textimage_ctn {
         margin-top: 42px;
     }
@@ -1234,6 +1254,10 @@ body.forgeyourfate {
 {
     html.responsive .fullscreen-bg__video {
         width: 95vw;
+    }
+
+    html.responsive .bookmark_ctn {
+        display: none;
     }
 
     body.v6.sale_summer2021 .home_page_takeover_sizer {
@@ -1445,7 +1469,6 @@ body.forgeyourfate {
     }
 
     html.responsive .home_sticker_ctn {
-        background: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2020/winter_sale_2020_bird_banner_mobile.gif?v=1') no-repeat right top;
         max-width: 900px;
         justify-content: center;
         flex-direction: row;

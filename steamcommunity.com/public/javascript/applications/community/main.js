@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6629105";
+var CLSTAMP = "6629965";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [100],
   {
@@ -527,7 +527,7 @@ var CLSTAMP = "6629105";
         n.d(t, "s", function () {
           return d;
         }),
-        n.d(t, "Y", function () {
+        n.d(t, "Z", function () {
           return h;
         }),
         n.d(t, "B", function () {
@@ -536,19 +536,19 @@ var CLSTAMP = "6629105";
         n.d(t, "P", function () {
           return f;
         }),
-        n.d(t, "kb", function () {
+        n.d(t, "lb", function () {
           return g;
         }),
-        n.d(t, "lb", function () {
+        n.d(t, "mb", function () {
           return b;
         }),
         n.d(t, "L", function () {
           return v;
         }),
-        n.d(t, "hb", function () {
+        n.d(t, "ib", function () {
           return _;
         }),
-        n.d(t, "fb", function () {
+        n.d(t, "gb", function () {
           return y;
         }),
         n.d(t, "O", function () {
@@ -566,7 +566,7 @@ var CLSTAMP = "6629105";
         n.d(t, "D", function () {
           return S;
         }),
-        n.d(t, "Z", function () {
+        n.d(t, "ab", function () {
           return D;
         }),
         n.d(t, "d", function () {
@@ -599,7 +599,7 @@ var CLSTAMP = "6629105";
         n.d(t, "X", function () {
           return A;
         }),
-        n.d(t, "gb", function () {
+        n.d(t, "hb", function () {
           return N;
         }),
         n.d(t, "j", function () {
@@ -620,7 +620,7 @@ var CLSTAMP = "6629105";
         n.d(t, "K", function () {
           return W;
         }),
-        n.d(t, "eb", function () {
+        n.d(t, "fb", function () {
           return V;
         }),
         n.d(t, "C", function () {
@@ -629,10 +629,10 @@ var CLSTAMP = "6629105";
         n.d(t, "t", function () {
           return K;
         }),
-        n.d(t, "cb", function () {
+        n.d(t, "db", function () {
           return Y;
         }),
-        n.d(t, "bb", function () {
+        n.d(t, "cb", function () {
           return X;
         }),
         n.d(t, "i", function () {
@@ -659,7 +659,7 @@ var CLSTAMP = "6629105";
         n.d(t, "b", function () {
           return ne;
         }),
-        n.d(t, "ib", function () {
+        n.d(t, "jb", function () {
           return re;
         }),
         n.d(t, "a", function () {
@@ -677,10 +677,10 @@ var CLSTAMP = "6629105";
         n.d(t, "m", function () {
           return ce;
         }),
-        n.d(t, "ab", function () {
+        n.d(t, "bb", function () {
           return le;
         }),
-        n.d(t, "db", function () {
+        n.d(t, "eb", function () {
           return ue;
         }),
         n.d(t, "E", function () {
@@ -689,7 +689,7 @@ var CLSTAMP = "6629105";
         n.d(t, "Q", function () {
           return de;
         }),
-        n.d(t, "jb", function () {
+        n.d(t, "kb", function () {
           return he;
         }),
         n.d(t, "h", function () {
@@ -703,6 +703,9 @@ var CLSTAMP = "6629105";
         }),
         n.d(t, "V", function () {
           return be;
+        }),
+        n.d(t, "Y", function () {
+          return ve;
         });
       var r = n("mrSG"),
         o = n("q1tI"),
@@ -2889,6 +2892,42 @@ var CLSTAMP = "6629105";
           })
         );
       }
+      function ve() {
+        return o.createElement(
+          "svg",
+          {
+            version: "1.1",
+            id: "Layer_1",
+            xmlns: "http://www.w3.org/2000/svg",
+            x: "0px",
+            y: "0px",
+            viewBox: "0 0 44 44",
+            enableBackground: "new 0 0 44 44",
+          },
+          o.createElement(
+            "g",
+            null,
+            o.createElement("path", {
+              d:
+                "M2 5.90007C2 5.90007 4.92505 2 11.7502 2C18.5753 2 21.5003 5.90007 21.5003 5.90007V33.2005C21.5003 33.2005 18.5753 31.2505 11.7502 31.2505C4.92505 31.2505 2 33.2005 2 33.2005V5.90007Z",
+              stroke: "#fefeef",
+              fill: "none",
+              strokeWidth: "3",
+              strokeLinecap: "round",
+              strokeLinejoin: "round",
+            }),
+            o.createElement("path", {
+              d:
+                "M21.4998 5.90007C21.4998 5.90007 24.4248 2 31.2499 2C38.075 2 41.0001 5.90007 41.0001 5.90007V33.2005C41.0001 33.2005 38.075 31.2505 31.2499 31.2505C24.4248 31.2505 21.4998 33.2005 21.4998 33.2005V5.90007Z",
+              stroke: "#fefeef",
+              fill: "none",
+              strokeWidth: "3",
+              strokeLinecap: "round",
+              strokeLinejoin: "round",
+            })
+          )
+        );
+      }
     },
     "7Whv": function (e, t, n) {
       "use strict";
@@ -4747,7 +4786,7 @@ var CLSTAMP = "6629105";
                 o.createElement(
                   "div",
                   { className: "closeButton", onClick: e.onEscKeypress },
-                  o.createElement(p.lb, null)
+                  o.createElement(p.mb, null)
                 )
               ),
             o.createElement(l.a, null, e.children)
@@ -5999,7 +6038,7 @@ var CLSTAMP = "6629105";
                         className: "DialogInput_ClearAction",
                         onClick: this.OnClearClick,
                       },
-                      o.createElement(a.lb, null)
+                      o.createElement(a.mb, null)
                     )
                 ),
                 g

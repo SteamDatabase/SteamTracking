@@ -20,6 +20,7 @@
         TileTextContainer: "partnereventtile_TileTextContainer_31yes",
         TileTextAppName: "partnereventtile_TileTextAppName_3x6bH",
         TileTextEventType: "partnereventtile_TileTextEventType_2DMSl",
+        TileHasSale: "partnereventtile_TileHasSale_1trq1",
         TileTextStartsIn: "partnereventtile_TileTextStartsIn_3jRSO",
         TileTextSubTitle: "partnereventtile_TileTextSubTitle_3Sc1E",
         TileDescriptionContainer:
@@ -1884,12 +1885,13 @@
                 var v = [i.GetImageURLWithFallback("capsule", E)],
                   b = i.GetNameWithFallback(E),
                   _ = i.BHasSubTitle(E),
-                  h = i.visibility_state != fe.b.k_EEventStateUnpublished,
-                  O = i.visibility_state != fe.b.k_EEventStateVisible,
-                  S = void 0;
-                O &&
-                  h &&
-                  (S =
+                  h = i.BHasSaleEnabled(),
+                  O = i.visibility_state != fe.b.k_EEventStateUnpublished,
+                  S = i.visibility_state != fe.b.k_EEventStateVisible,
+                  C = void 0;
+                S &&
+                  O &&
+                  (C =
                     i.visibilityStartTime == i.startTime
                       ? s.createElement(
                           "div",
@@ -1909,24 +1911,24 @@
                             })
                           )
                         ));
-                var C = void 0;
-                if (!O && h) {
-                  var y = D.a.GetTimeNowWithOverride();
-                  i.GetStartTimeAndDateUnixSeconds() > y
-                    ? (C = s.createElement(
+                var y = void 0;
+                if (!S && O) {
+                  var j = D.a.GetTimeNowWithOverride();
+                  i.GetStartTimeAndDateUnixSeconds() > j
+                    ? (y = s.createElement(
                         "span",
                         { className: Pe.EventStateUpcoming },
                         Object(f.f)("#EventDisplay_Upcoming")
                       ))
                     : Object(R.a)(i.type) &&
-                      i.GetEndTimeAndDateUnixSeconds() > y
-                    ? (C = s.createElement(
+                      i.GetEndTimeAndDateUnixSeconds() > j
+                    ? (y = s.createElement(
                         "span",
                         { className: Pe.EventStateActive },
                         Object(f.f)("#EventDisplay_Active")
                       ))
-                    : i.GetStartTimeAndDateUnixSeconds() > y + 3600 &&
-                      (C = s.createElement(
+                    : i.GetStartTimeAndDateUnixSeconds() > j + 3600 &&
+                      (y = s.createElement(
                         "span",
                         { className: Pe.EventStateRecent },
                         Object(f.f)("#EventDisplay_RecentlyActive")
@@ -1937,16 +1939,16 @@
                     m.a.GetStoreCapsuleInfo(i.appid).GetAppStoreData().title +
                     ": " +
                     b);
-                var j =
+                var A =
                     i.BIsPartnerEvent() &&
                     i.BIsVisibleEvent() &&
                     ge.a.GetStatsFor(i.clanSteamID, d),
-                  A = g.a.GetOGGClanInfo(i.appid),
-                  T = Boolean(
+                  T = g.a.GetOGGClanInfo(i.appid),
+                  I = Boolean(
                     u &&
-                      A &&
-                      A.is_ogg &&
-                      A.clanAccountID !=
+                      T &&
+                      T.is_ogg &&
+                      T.clanAccountID !=
                         i.announcementClanSteamID.GetAccountID()
                   );
                 return s.createElement(
@@ -1999,7 +2001,14 @@
                           s.createElement(
                             "div",
                             { className: Pe.TileTextEventType },
-                            i.GetCategoryAsString()
+                            i.GetCategoryAsString(),
+                            h &&
+                              s.createElement(
+                                "span",
+                                { className: Pe.TileHasSale },
+                                " | ",
+                                Object(f.f)("#EventEditor_Status_HasSale")
+                              )
                           )
                         ),
                         _ && !1,
@@ -2013,7 +2022,7 @@
                               dateAndTime: i.GetStartTimeAndDateUnixSeconds(),
                               bSingleLine: !0,
                             }),
-                            C,
+                            y,
                             i.BHasTag("auto_rssfeed") &&
                               s.createElement(
                                 s.Fragment,
@@ -2035,7 +2044,7 @@
                                 )
                               )
                           ),
-                          Boolean(j) &&
+                          Boolean(A) &&
                             s.createElement(
                               "div",
                               { className: Pe.TileStats },
@@ -2044,7 +2053,7 @@
                                 s.createElement(
                                   "span",
                                   null,
-                                  j.m_stats.total_showm.toLocaleString()
+                                  A.m_stats.total_showm.toLocaleString()
                                 )
                               ),
                               s.createElement("br", null),
@@ -2053,13 +2062,13 @@
                                 s.createElement(
                                   "span",
                                   null,
-                                  j.m_stats.total_read.toLocaleString()
+                                  A.m_stats.total_read.toLocaleString()
                                 )
                               )
                             )
                         ),
-                        S,
-                        T
+                        C,
+                        I
                           ? s.createElement(
                               "div",
                               {
@@ -12144,7 +12153,7 @@
             d.a.createElement(
               "div",
               { className: Qn.LatestUpdateIcon },
-              d.a.createElement(zn.db, null)
+              d.a.createElement(zn.eb, null)
             ),
             d.a.createElement(
               "div",

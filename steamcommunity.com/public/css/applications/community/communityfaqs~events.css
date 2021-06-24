@@ -2601,6 +2601,10 @@ p a:hover {
 .partnereventsalesorttiers_SortTierExplanation_1U8SA {
   padding-bottom: 8px;
 }
+button.DialogButton.partnereventsalesorttiers_AutoTierButton_3uDH_:disabled {
+  background-color: rgba(80, 84, 90, 0.35);
+  color: #9f9396;
+}
 .tableofcontents_TableOfContentsContainer_2VyHw {
   position: absolute;
   top: 0;

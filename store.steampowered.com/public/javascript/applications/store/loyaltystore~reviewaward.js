@@ -1764,6 +1764,11 @@
                       },
                       animated: { n: 8, br: o.d.readBool, bw: o.h.writeBool },
                       badge_data: { n: 9, c: T, r: !0, q: !0 },
+                      profile_theme_id: {
+                        n: 12,
+                        br: o.d.readString,
+                        bw: o.h.writeString,
+                      },
                     },
                   }),
                 t.sm_m

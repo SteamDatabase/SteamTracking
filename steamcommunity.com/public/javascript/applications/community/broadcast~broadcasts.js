@@ -9986,7 +9986,7 @@
                               title: Object(Mt.f)("#ChatEntryButton_Submit"),
                               onClick: this.SendMessage,
                             },
-                            o.createElement(rr.Y, null)
+                            o.createElement(rr.Z, null)
                           )
                         ),
                         o.createElement(

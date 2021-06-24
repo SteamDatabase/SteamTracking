@@ -343,5 +343,18 @@
     "LNYSale2020_Rules_2_Desc2_China": "The Stickers are not substitutable, and there are no cash alternatives to the prizes listed.  The Stickers are not tradeable or marketable.",
     "LNYSale2020_Rules_3_Desc_China": "Steam users may participate in the Giveaway by visiting the Steam Points shop page and clicking a button to claim a random Sticker once within each 24-hour period for the period of February 11, 2021 at 10 am Pacific Time until February 15, 2021 at 10 am Pacific Time (one example of such a 24-hour period is between 10 am Pacific Time on February 11 and 9:59:59 am Pacific Time on February 12).  If a Steam user visits the Steam Points shop and obtains a Sticker during each of the four (4) 24-hour periods, that Steam User will have obtained all of the Stickers available through the Giveaway.  The selection of the random Sticker given to each Steam user within each 24-hour period will be performed by a random computer process.",
     "LNYSale2020_Rules_3_Desc2_China": "Decisions of Valve regarding the Giveaway are final and binding. A random Sticker will be added to the Steam Accounts inventory immediately after the eligible Steam user has clicked on the button to claim the random Sticker.",
-    "LNYSale2020_Rules_4_Desc_China": "Valve will collect and process the personally identifiable information of the participants that participates in the Giveaway. Any data recorded will be used for the conduct of the Giveaway. Valve\u2019s Privacy Policy applies to each entrant\u2019s use of its Steam Account. For further information %1$s."
+    "LNYSale2020_Rules_4_Desc_China": "Valve will collect and process the personally identifiable information of the participants that participates in the Giveaway. Any data recorded will be used for the conduct of the Giveaway. Valve\u2019s Privacy Policy applies to each entrant\u2019s use of its Steam Account. For further information %1$s.",
+    "ShopNav_ProfileBundlesLink": "Game Profiles",
+    "ShopPageTitle_ProfileBundles": "Game Profiles",
+    "ShopPageTitle_ProfileBundles_Subtitle": "Show your fandom with special Game Profiles",
+    "ShopPageTitle_ProfileBundles_Subtitle2": "",
+    "RewardItemType_ProfileBundle": "Game Profile",
+    "RewardItemType_ProfileBundle_plural": "Game Profiles",
+    "Redeem_UsePoints_ProfileBundle": "Use your Steam Points to get this Game Profile, which contains exclusive items and a theme not available separately. All items will be equipped when you activate this, except for the Animated Avatar.",
+    "Redeem_Equip_ProfileBundle": "Congratulations! You now own this Game Profile. All items will be equipped when you activate this, except for the Animated Avatar.",
+    "Redeem_ProfileBundleItemOwned": "Already Owned",
+    "ProfileBundle_LoadingPreview": "Loading a preview of '%1$s'",
+    "FeaturedBanner_SummerSale2021_Headline": "Introducing Game Profiles",
+    "FeaturedBanner_SummerSale2021_Subhead": "Equip all new Game Profiles and show off your fandom for your favorite games",
+    "FeaturedBanner_SummerSale2021_CallToAction": "Learn more"
 }

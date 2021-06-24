@@ -9984,7 +9984,7 @@
                               title: Object(vt.f)("#ChatEntryButton_Submit"),
                               onClick: this.SendMessage,
                             },
-                            s.createElement(rr.bb, null)
+                            s.createElement(rr.cb, null)
                           )
                         ),
                         s.createElement(
@@ -10863,7 +10863,7 @@
                   {
                     className: Object(nr.a)(Ir.a.viewer_count, "viewer_count"),
                   },
-                  s.createElement(rr.kb, null),
+                  s.createElement(rr.lb, null),
                   r.toLocaleString(vt.e.GetPreferredLocales())
                 ),
                 s.createElement(
@@ -10970,7 +10970,7 @@
                 ),
                 onClick: e.OnPreventPopup,
               },
-              s.createElement(rr.ob, null)
+              s.createElement(rr.pb, null)
             )
           );
         }),
@@ -11141,7 +11141,7 @@
                 s.createElement(
                   "div",
                   { className: Ir.a.viewer_count },
-                  s.createElement(rr.kb, null),
+                  s.createElement(rr.lb, null),
                   c.toLocaleString(vt.e.GetPreferredLocales())
                 )
               );

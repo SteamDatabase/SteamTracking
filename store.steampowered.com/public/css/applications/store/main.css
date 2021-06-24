@@ -6316,7 +6316,7 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
 .SliderBody.CarouselSlidingLeft
   .carousel__slide.carousel__slide--visible
   .animated_featured_capsule_Artwork_3htJK {
-  animation-name: animated_featured_capsule_ArtworkSlideleft_3VcTK;
+  animation-name: animated_featured_capsule_ArtworkSlideLeft_2q_52;
   animation-duration: 1s;
   animation-timing-function: ease-out;
   animation-delay: 0s;
@@ -6412,15 +6412,15 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
   0% {
     transform: translateX(-100px);
   }
-  30% {
-    transform: translateX(-100px);
-  }
   100% {
     transform: translateX(0px);
   }
 }
 @keyframes animated_featured_capsule_ArtworkSlideLeft_2q_52 {
   0% {
+    transform: translateX(-100px);
+  }
+  30% {
     transform: translateX(-100px);
   }
   100% {
