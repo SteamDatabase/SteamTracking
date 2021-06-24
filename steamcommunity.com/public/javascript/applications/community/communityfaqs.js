@@ -55,7 +55,7 @@
       "use strict";
       a.r(t),
         a.d(t, "FAQRoutes", function () {
-          return la;
+          return ha;
         });
       var o = a("mrSG"),
         i = a("TyAF"),
@@ -188,14 +188,16 @@
         };
       var k,
         x = a("mgoM"),
-        _ = a("2lpH"),
+        _ = a("vDqi"),
         I = a.n(_),
-        A = a("2vnA"),
-        C = a("bxBv"),
-        T = a("r64O"),
-        P = a("bDQf"),
-        D = a("XxJJ"),
-        q = (function () {
+        A = a("2lpH"),
+        C = a.n(A),
+        T = a("2vnA"),
+        P = a("bxBv"),
+        D = a("r64O"),
+        q = a("bDQf"),
+        M = a("XxJJ"),
+        z = (function () {
           function e(e, t) {
             (this.m_summary = e),
               (this.m_mapStoredDrafts = t),
@@ -227,7 +229,7 @@
                   switch (o.label) {
                     case 0:
                       for (
-                        Object(T.a)(
+                        Object(D.a)(
                           Boolean(
                             null === (e = this.m_summary) || void 0 === e
                               ? void 0
@@ -254,7 +256,7 @@
                             ) {
                               var o = l.GetDraftTitle(e),
                                 r = l.GetDraftContent(e),
-                                p = pe
+                                p = he
                                   .Get()
                                   .UpdateDraft(
                                     null === (i = l.m_summary) || void 0 === i
@@ -267,7 +269,7 @@
                               p
                                 .then(function (t) {
                                   1 == t.eResult
-                                    ? Object(A.G)(function () {
+                                    ? Object(T.G)(function () {
                                         d.m_mapStoredDrafts.has(e)
                                           ? ((d.m_mapStoredDrafts.get(
                                               e
@@ -318,7 +320,7 @@
                                 .catch(function (e) {
                                   console.error(
                                     "FAQModel.SaveDrafts: Hit error " +
-                                      Object(P.a)(e).strErrorMsg
+                                      Object(q.a)(e).strErrorMsg
                                   ),
                                     1 == s && (s = 2);
                                 }),
@@ -452,7 +454,7 @@
                 this.m_summary.visible_in_global_realm &&
                   e.push(p.f.k_ESteamRealmChina),
                 0 == e.length && e.push(p.f.k_ESteamRealmGlobal),
-                Object(T.a)(
+                Object(D.a)(
                   e.length > 0,
                   "FAQ " +
                     this.m_summary.faq_id +
@@ -485,23 +487,23 @@
             (e.prototype.GetSummary = function () {
               return this.m_summary;
             }),
-            Object(o.c)([A.C], e.prototype, "m_mapLocalUpdates", void 0),
-            Object(o.c)([D.a], e.prototype, "BHasSomeTextForLanguage", null),
-            Object(o.c)([D.a], e.prototype, "GetLastTimeLanguageUpdated", null),
+            Object(o.c)([T.C], e.prototype, "m_mapLocalUpdates", void 0),
+            Object(o.c)([M.a], e.prototype, "BHasSomeTextForLanguage", null),
+            Object(o.c)([M.a], e.prototype, "GetLastTimeLanguageUpdated", null),
             e
           );
         })(),
-        M = a("WBba"),
-        z = a("hRO2"),
-        O = a("OS8t"),
-        E = z.Message,
-        F = (function (e) {
+        O = a("WBba"),
+        E = a("hRO2"),
+        F = a("OS8t"),
+        R = E.Message,
+        W = (function (e) {
           function t(a) {
             void 0 === a && (a = null);
             var o = e.call(this) || this;
             return (
-              t.prototype.faq_id || O.a(t.M()),
-              E.initialize(o, a, 0, -1, [6], null),
+              t.prototype.faq_id || F.a(t.M()),
+              R.initialize(o, a, 0, -1, [6], null),
               o
             );
           }
@@ -515,34 +517,34 @@
                     fields: {
                       faq_id: {
                         n: 1,
-                        br: O.d.readUint64String,
-                        bw: O.h.writeUint64String,
+                        br: F.d.readUint64String,
+                        bw: F.h.writeUint64String,
                       },
                       internal_name: {
                         n: 2,
-                        br: O.d.readString,
-                        bw: O.h.writeString,
+                        br: F.d.readString,
+                        bw: F.h.writeString,
                       },
                       visible_in_global_realm: {
                         n: 3,
-                        br: O.d.readBool,
-                        bw: O.h.writeBool,
+                        br: F.d.readBool,
+                        bw: F.h.writeBool,
                       },
                       visible_in_china_realm: {
                         n: 4,
-                        br: O.d.readBool,
-                        bw: O.h.writeBool,
+                        br: F.d.readBool,
+                        bw: F.h.writeBool,
                       },
                       json_data: {
                         n: 5,
-                        br: O.d.readString,
-                        bw: O.h.writeString,
+                        br: F.d.readString,
+                        bw: F.h.writeString,
                       },
-                      per_language_info: { n: 6, c: R, r: !0, q: !0 },
+                      per_language_info: { n: 6, c: N, r: !0, q: !0 },
                       url_code: {
                         n: 7,
-                        br: O.d.readString,
-                        bw: O.h.writeString,
+                        br: F.d.readString,
+                        bw: F.h.writeString,
                       },
                     },
                   }),
@@ -550,45 +552,45 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = O.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = F.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, a) {
-              return O.g(t.M(), e, a);
+              return F.g(t.M(), e, a);
             }),
             (t.fromObject = function (e) {
-              return O.c(t.M(), e);
+              return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new z.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
             (t.deserializeBinaryFromReader = function (e, a) {
-              return O.b(t.MBF(), e, a);
+              return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new z.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
-              O.f(t.M(), e, a);
+              F.f(t.M(), e, a);
             }),
             (t.prototype.getClassName = function () {
               return "CClanFAQSummary";
             }),
             t
           );
-        })(E),
-        R = (function (e) {
+        })(R),
+        N = (function (e) {
           function t(a) {
             void 0 === a && (a = null);
             var o = e.call(this) || this;
             return (
-              t.prototype.language || O.a(t.M()),
-              E.initialize(o, a, 0, -1, void 0, null),
+              t.prototype.language || F.a(t.M()),
+              R.initialize(o, a, 0, -1, void 0, null),
               o
             );
           }
@@ -602,18 +604,18 @@
                     fields: {
                       language: {
                         n: 1,
-                        br: O.d.readUint32,
-                        bw: O.h.writeUint32,
+                        br: F.d.readUint32,
+                        bw: F.h.writeUint32,
                       },
                       last_update_timestamp: {
                         n: 2,
-                        br: O.d.readFixed32,
-                        bw: O.h.writeFixed32,
+                        br: F.d.readFixed32,
+                        bw: F.h.writeFixed32,
                       },
                       last_publish_timestamp: {
                         n: 3,
-                        br: O.d.readFixed32,
-                        bw: O.h.writeFixed32,
+                        br: F.d.readFixed32,
+                        bw: F.h.writeFixed32,
                       },
                     },
                   }),
@@ -621,45 +623,45 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = O.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = F.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, a) {
-              return O.g(t.M(), e, a);
+              return F.g(t.M(), e, a);
             }),
             (t.fromObject = function (e) {
-              return O.c(t.M(), e);
+              return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new z.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
             (t.deserializeBinaryFromReader = function (e, a) {
-              return O.b(t.MBF(), e, a);
+              return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new z.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
-              O.f(t.M(), e, a);
+              F.f(t.M(), e, a);
             }),
             (t.prototype.getClassName = function () {
               return "CClanFAQSummary_CLanguageInfo";
             }),
             t
           );
-        })(E),
-        W = (function (e) {
+        })(R),
+        L = (function (e) {
           function t(a) {
             void 0 === a && (a = null);
             var o = e.call(this) || this;
             return (
-              t.prototype.faq_id || O.a(t.M()),
-              E.initialize(o, a, 0, -1, void 0, null),
+              t.prototype.faq_id || F.a(t.M()),
+              R.initialize(o, a, 0, -1, void 0, null),
               o
             );
           }
@@ -673,34 +675,34 @@
                     fields: {
                       faq_id: {
                         n: 1,
-                        br: O.d.readUint64String,
-                        bw: O.h.writeUint64String,
+                        br: F.d.readUint64String,
+                        bw: F.h.writeUint64String,
                       },
                       language: {
                         n: 2,
-                        br: O.d.readUint32,
-                        bw: O.h.writeUint32,
+                        br: F.d.readUint32,
+                        bw: F.h.writeUint32,
                       },
                       version: {
                         n: 3,
-                        br: O.d.readUint64String,
-                        bw: O.h.writeUint64String,
+                        br: F.d.readUint64String,
+                        bw: F.h.writeUint64String,
                       },
                       content: {
                         n: 4,
-                        br: O.d.readString,
-                        bw: O.h.writeString,
+                        br: F.d.readString,
+                        bw: F.h.writeString,
                       },
-                      title: { n: 5, br: O.d.readString, bw: O.h.writeString },
+                      title: { n: 5, br: F.d.readString, bw: F.h.writeString },
                       timestamp: {
                         n: 6,
-                        br: O.d.readFixed32,
-                        bw: O.h.writeFixed32,
+                        br: F.d.readFixed32,
+                        bw: F.h.writeFixed32,
                       },
                       author_account_id: {
                         n: 7,
-                        br: O.d.readUint64String,
-                        bw: O.h.writeUint64String,
+                        br: F.d.readUint64String,
+                        bw: F.h.writeUint64String,
                       },
                     },
                   }),
@@ -708,45 +710,45 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = O.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = F.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, a) {
-              return O.g(t.M(), e, a);
+              return F.g(t.M(), e, a);
             }),
             (t.fromObject = function (e) {
-              return O.c(t.M(), e);
+              return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new z.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
             (t.deserializeBinaryFromReader = function (e, a) {
-              return O.b(t.MBF(), e, a);
+              return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new z.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
-              O.f(t.M(), e, a);
+              F.f(t.M(), e, a);
             }),
             (t.prototype.getClassName = function () {
               return "CClanFAQContent";
             }),
             t
           );
-        })(E),
-        N = (function (e) {
+        })(R),
+        H = (function (e) {
           function t(a) {
             void 0 === a && (a = null);
             var o = e.call(this) || this;
             return (
-              t.prototype.steamid || O.a(t.M()),
-              E.initialize(o, a, 0, -1, void 0, null),
+              t.prototype.steamid || F.a(t.M()),
+              R.initialize(o, a, 0, -1, void 0, null),
               o
             );
           }
@@ -760,18 +762,18 @@
                     fields: {
                       steamid: {
                         n: 1,
-                        br: O.d.readUint64String,
-                        bw: O.h.writeUint64String,
+                        br: F.d.readUint64String,
+                        bw: F.h.writeUint64String,
                       },
                       internal_name: {
                         n: 2,
-                        br: O.d.readString,
-                        bw: O.h.writeString,
+                        br: F.d.readString,
+                        bw: F.h.writeString,
                       },
                       json_data: {
                         n: 3,
-                        br: O.d.readString,
-                        bw: O.h.writeString,
+                        br: F.d.readString,
+                        bw: F.h.writeString,
                       },
                     },
                   }),
@@ -779,45 +781,45 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = O.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = F.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, a) {
-              return O.g(t.M(), e, a);
+              return F.g(t.M(), e, a);
             }),
             (t.fromObject = function (e) {
-              return O.c(t.M(), e);
+              return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new z.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
             (t.deserializeBinaryFromReader = function (e, a) {
-              return O.b(t.MBF(), e, a);
+              return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new z.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
-              O.f(t.M(), e, a);
+              F.f(t.M(), e, a);
             }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_Create_Request";
             }),
             t
           );
-        })(E),
-        L = (function (e) {
+        })(R),
+        V = (function (e) {
           function t(a) {
             void 0 === a && (a = null);
             var o = e.call(this) || this;
             return (
-              t.prototype.faq_id || O.a(t.M()),
-              E.initialize(o, a, 0, -1, void 0, null),
+              t.prototype.faq_id || F.a(t.M()),
+              R.initialize(o, a, 0, -1, void 0, null),
               o
             );
           }
@@ -831,8 +833,8 @@
                     fields: {
                       faq_id: {
                         n: 1,
-                        br: O.d.readUint64String,
-                        bw: O.h.writeUint64String,
+                        br: F.d.readUint64String,
+                        bw: F.h.writeUint64String,
                       },
                     },
                   }),
@@ -840,45 +842,45 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = O.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = F.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, a) {
-              return O.g(t.M(), e, a);
+              return F.g(t.M(), e, a);
             }),
             (t.fromObject = function (e) {
-              return O.c(t.M(), e);
+              return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new z.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
             (t.deserializeBinaryFromReader = function (e, a) {
-              return O.b(t.MBF(), e, a);
+              return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new z.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
-              O.f(t.M(), e, a);
+              F.f(t.M(), e, a);
             }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_Create_Response";
             }),
             t
           );
-        })(E),
-        H = (function (e) {
+        })(R),
+        j = (function (e) {
           function t(a) {
             void 0 === a && (a = null);
             var o = e.call(this) || this;
             return (
-              t.prototype.steamid || O.a(t.M()),
-              E.initialize(o, a, 0, -1, void 0, null),
+              t.prototype.steamid || F.a(t.M()),
+              R.initialize(o, a, 0, -1, void 0, null),
               o
             );
           }
@@ -892,13 +894,13 @@
                     fields: {
                       steamid: {
                         n: 1,
-                        br: O.d.readUint64String,
-                        bw: O.h.writeUint64String,
+                        br: F.d.readUint64String,
+                        bw: F.h.writeUint64String,
                       },
                       faq_id: {
                         n: 2,
-                        br: O.d.readUint64String,
-                        bw: O.h.writeUint64String,
+                        br: F.d.readUint64String,
+                        bw: F.h.writeUint64String,
                       },
                     },
                   }),
@@ -906,43 +908,43 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = O.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = F.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, a) {
-              return O.g(t.M(), e, a);
+              return F.g(t.M(), e, a);
             }),
             (t.fromObject = function (e) {
-              return O.c(t.M(), e);
+              return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new z.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
             (t.deserializeBinaryFromReader = function (e, a) {
-              return O.b(t.MBF(), e, a);
+              return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new z.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
-              O.f(t.M(), e, a);
+              F.f(t.M(), e, a);
             }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_Delete_Request";
             }),
             t
           );
-        })(E),
-        V = (function (e) {
+        })(R),
+        B = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var a = e.call(this) || this;
-            return E.initialize(a, t, 0, -1, void 0, null), a;
+            return R.initialize(a, t, 0, -1, void 0, null), a;
           }
           return (
             Object(o.d)(t, e),
@@ -956,7 +958,7 @@
               return new t();
             }),
             (t.deserializeBinary = function (e) {
-              var a = new z.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
@@ -964,7 +966,7 @@
               return e;
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new z.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, t) {}),
@@ -973,14 +975,14 @@
             }),
             t
           );
-        })(E),
-        j = (function (e) {
+        })(R),
+        G = (function (e) {
           function t(a) {
             void 0 === a && (a = null);
             var o = e.call(this) || this;
             return (
-              t.prototype.steamid || O.a(t.M()),
-              E.initialize(o, a, 0, -1, void 0, null),
+              t.prototype.steamid || F.a(t.M()),
+              R.initialize(o, a, 0, -1, void 0, null),
               o
             );
           }
@@ -994,18 +996,18 @@
                     fields: {
                       steamid: {
                         n: 1,
-                        br: O.d.readUint64String,
-                        bw: O.h.writeUint64String,
+                        br: F.d.readUint64String,
+                        bw: F.h.writeUint64String,
                       },
                       faq_id: {
                         n: 2,
-                        br: O.d.readUint64String,
-                        bw: O.h.writeUint64String,
+                        br: F.d.readUint64String,
+                        bw: F.h.writeUint64String,
                       },
                       internal_name: {
                         n: 3,
-                        br: O.d.readString,
-                        bw: O.h.writeString,
+                        br: F.d.readString,
+                        bw: F.h.writeString,
                       },
                     },
                   }),
@@ -1013,43 +1015,43 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = O.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = F.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, a) {
-              return O.g(t.M(), e, a);
+              return F.g(t.M(), e, a);
             }),
             (t.fromObject = function (e) {
-              return O.c(t.M(), e);
+              return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new z.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
             (t.deserializeBinaryFromReader = function (e, a) {
-              return O.b(t.MBF(), e, a);
+              return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new z.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
-              O.f(t.M(), e, a);
+              F.f(t.M(), e, a);
             }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_UpdateInternalName_Request";
             }),
             t
           );
-        })(E),
-        B = (function (e) {
+        })(R),
+        U = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var a = e.call(this) || this;
-            return E.initialize(a, t, 0, -1, void 0, null), a;
+            return R.initialize(a, t, 0, -1, void 0, null), a;
           }
           return (
             Object(o.d)(t, e),
@@ -1063,7 +1065,7 @@
               return new t();
             }),
             (t.deserializeBinary = function (e) {
-              var a = new z.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
@@ -1071,7 +1073,7 @@
               return e;
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new z.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, t) {}),
@@ -1080,14 +1082,14 @@
             }),
             t
           );
-        })(E),
-        G = (function (e) {
+        })(R),
+        Y = (function (e) {
           function t(a) {
             void 0 === a && (a = null);
             var o = e.call(this) || this;
             return (
-              t.prototype.steamid || O.a(t.M()),
-              E.initialize(o, a, 0, -1, void 0, null),
+              t.prototype.steamid || F.a(t.M()),
+              R.initialize(o, a, 0, -1, void 0, null),
               o
             );
           }
@@ -1101,18 +1103,18 @@
                     fields: {
                       steamid: {
                         n: 1,
-                        br: O.d.readUint64String,
-                        bw: O.h.writeUint64String,
+                        br: F.d.readUint64String,
+                        bw: F.h.writeUint64String,
                       },
                       faq_id: {
                         n: 2,
-                        br: O.d.readUint64String,
-                        bw: O.h.writeUint64String,
+                        br: F.d.readUint64String,
+                        bw: F.h.writeUint64String,
                       },
                       json_data: {
                         n: 3,
-                        br: O.d.readString,
-                        bw: O.h.writeString,
+                        br: F.d.readString,
+                        bw: F.h.writeString,
                       },
                     },
                   }),
@@ -1120,43 +1122,43 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = O.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = F.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, a) {
-              return O.g(t.M(), e, a);
+              return F.g(t.M(), e, a);
             }),
             (t.fromObject = function (e) {
-              return O.c(t.M(), e);
+              return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new z.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
             (t.deserializeBinaryFromReader = function (e, a) {
-              return O.b(t.MBF(), e, a);
+              return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new z.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
-              O.f(t.M(), e, a);
+              F.f(t.M(), e, a);
             }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_UpdateJsonData_Request";
             }),
             t
           );
-        })(E),
-        U = (function (e) {
+        })(R),
+        Q = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var a = e.call(this) || this;
-            return E.initialize(a, t, 0, -1, void 0, null), a;
+            return R.initialize(a, t, 0, -1, void 0, null), a;
           }
           return (
             Object(o.d)(t, e),
@@ -1170,7 +1172,7 @@
               return new t();
             }),
             (t.deserializeBinary = function (e) {
-              var a = new z.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
@@ -1178,7 +1180,7 @@
               return e;
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new z.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, t) {}),
@@ -1187,14 +1189,14 @@
             }),
             t
           );
-        })(E),
-        Y = (function (e) {
+        })(R),
+        X = (function (e) {
           function t(a) {
             void 0 === a && (a = null);
             var o = e.call(this) || this;
             return (
-              t.prototype.steamid || O.a(t.M()),
-              E.initialize(o, a, 0, -1, void 0, null),
+              t.prototype.steamid || F.a(t.M()),
+              R.initialize(o, a, 0, -1, void 0, null),
               o
             );
           }
@@ -1208,23 +1210,23 @@
                     fields: {
                       steamid: {
                         n: 1,
-                        br: O.d.readUint64String,
-                        bw: O.h.writeUint64String,
+                        br: F.d.readUint64String,
+                        bw: F.h.writeUint64String,
                       },
                       faq_id: {
                         n: 2,
-                        br: O.d.readUint64String,
-                        bw: O.h.writeUint64String,
+                        br: F.d.readUint64String,
+                        bw: F.h.writeUint64String,
                       },
                       visible_in_global_realm: {
                         n: 3,
-                        br: O.d.readBool,
-                        bw: O.h.writeBool,
+                        br: F.d.readBool,
+                        bw: F.h.writeBool,
                       },
                       visible_in_china_realm: {
                         n: 4,
-                        br: O.d.readBool,
-                        bw: O.h.writeBool,
+                        br: F.d.readBool,
+                        bw: F.h.writeBool,
                       },
                     },
                   }),
@@ -1232,43 +1234,43 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = O.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = F.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, a) {
-              return O.g(t.M(), e, a);
+              return F.g(t.M(), e, a);
             }),
             (t.fromObject = function (e) {
-              return O.c(t.M(), e);
+              return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new z.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
             (t.deserializeBinaryFromReader = function (e, a) {
-              return O.b(t.MBF(), e, a);
+              return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new z.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
-              O.f(t.M(), e, a);
+              F.f(t.M(), e, a);
             }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_SetVisibility_Request";
             }),
             t
           );
-        })(E),
-        Q = (function (e) {
+        })(R),
+        $ = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var a = e.call(this) || this;
-            return E.initialize(a, t, 0, -1, void 0, null), a;
+            return R.initialize(a, t, 0, -1, void 0, null), a;
           }
           return (
             Object(o.d)(t, e),
@@ -1282,7 +1284,7 @@
               return new t();
             }),
             (t.deserializeBinary = function (e) {
-              var a = new z.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
@@ -1290,7 +1292,7 @@
               return e;
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new z.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, t) {}),
@@ -1299,14 +1301,14 @@
             }),
             t
           );
-        })(E),
-        X = (function (e) {
+        })(R),
+        K = (function (e) {
           function t(a) {
             void 0 === a && (a = null);
             var o = e.call(this) || this;
             return (
-              t.prototype.steamid || O.a(t.M()),
-              E.initialize(o, a, 0, -1, void 0, null),
+              t.prototype.steamid || F.a(t.M()),
+              R.initialize(o, a, 0, -1, void 0, null),
               o
             );
           }
@@ -1320,70 +1322,70 @@
                     fields: {
                       steamid: {
                         n: 1,
-                        br: O.d.readUint64String,
-                        bw: O.h.writeUint64String,
+                        br: F.d.readUint64String,
+                        bw: F.h.writeUint64String,
                       },
                       faq_id: {
                         n: 2,
-                        br: O.d.readUint64String,
-                        bw: O.h.writeUint64String,
+                        br: F.d.readUint64String,
+                        bw: F.h.writeUint64String,
                       },
                       language: {
                         n: 3,
-                        br: O.d.readUint32,
-                        bw: O.h.writeUint32,
+                        br: F.d.readUint32,
+                        bw: F.h.writeUint32,
                       },
                       content: {
                         n: 4,
-                        br: O.d.readString,
-                        bw: O.h.writeString,
+                        br: F.d.readString,
+                        bw: F.h.writeString,
                       },
-                      title: { n: 5, br: O.d.readString, bw: O.h.writeString },
+                      title: { n: 5, br: F.d.readString, bw: F.h.writeString },
                     },
                   }),
                 t.sm_m
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = O.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = F.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, a) {
-              return O.g(t.M(), e, a);
+              return F.g(t.M(), e, a);
             }),
             (t.fromObject = function (e) {
-              return O.c(t.M(), e);
+              return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new z.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
             (t.deserializeBinaryFromReader = function (e, a) {
-              return O.b(t.MBF(), e, a);
+              return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new z.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
-              O.f(t.M(), e, a);
+              F.f(t.M(), e, a);
             }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_UpdateDraft_Request";
             }),
             t
           );
-        })(E),
-        $ = (function (e) {
+        })(R),
+        J = (function (e) {
           function t(a) {
             void 0 === a && (a = null);
             var o = e.call(this) || this;
             return (
-              t.prototype.last_update_timestamp || O.a(t.M()),
-              E.initialize(o, a, 0, -1, void 0, null),
+              t.prototype.last_update_timestamp || F.a(t.M()),
+              R.initialize(o, a, 0, -1, void 0, null),
               o
             );
           }
@@ -1397,8 +1399,8 @@
                     fields: {
                       last_update_timestamp: {
                         n: 1,
-                        br: O.d.readFixed32,
-                        bw: O.h.writeFixed32,
+                        br: F.d.readFixed32,
+                        bw: F.h.writeFixed32,
                       },
                     },
                   }),
@@ -1406,45 +1408,45 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = O.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = F.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, a) {
-              return O.g(t.M(), e, a);
+              return F.g(t.M(), e, a);
             }),
             (t.fromObject = function (e) {
-              return O.c(t.M(), e);
+              return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new z.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
             (t.deserializeBinaryFromReader = function (e, a) {
-              return O.b(t.MBF(), e, a);
+              return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new z.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
-              O.f(t.M(), e, a);
+              F.f(t.M(), e, a);
             }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_UpdateDraft_Response";
             }),
             t
           );
-        })(E),
-        K = (function (e) {
+        })(R),
+        Z = (function (e) {
           function t(a) {
             void 0 === a && (a = null);
             var o = e.call(this) || this;
             return (
-              t.prototype.steamid || O.a(t.M()),
-              E.initialize(o, a, 0, -1, [3], null),
+              t.prototype.steamid || F.a(t.M()),
+              R.initialize(o, a, 0, -1, [3], null),
               o
             );
           }
@@ -1458,20 +1460,20 @@
                     fields: {
                       steamid: {
                         n: 1,
-                        br: O.d.readUint64String,
-                        bw: O.h.writeUint64String,
+                        br: F.d.readUint64String,
+                        bw: F.h.writeUint64String,
                       },
                       faq_id: {
                         n: 2,
-                        br: O.d.readUint64String,
-                        bw: O.h.writeUint64String,
+                        br: F.d.readUint64String,
+                        bw: F.h.writeUint64String,
                       },
                       language: {
                         n: 3,
                         r: !0,
                         q: !0,
-                        br: O.d.readUint32,
-                        bw: O.h.writeRepeatedUint32,
+                        br: F.d.readUint32,
+                        bw: F.h.writeRepeatedUint32,
                       },
                     },
                   }),
@@ -1479,45 +1481,45 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = O.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = F.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, a) {
-              return O.g(t.M(), e, a);
+              return F.g(t.M(), e, a);
             }),
             (t.fromObject = function (e) {
-              return O.c(t.M(), e);
+              return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new z.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
             (t.deserializeBinaryFromReader = function (e, a) {
-              return O.b(t.MBF(), e, a);
+              return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new z.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
-              O.f(t.M(), e, a);
+              F.f(t.M(), e, a);
             }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_PublishDraft_Request";
             }),
             t
           );
-        })(E),
-        J = (function (e) {
+        })(R),
+        ee = (function (e) {
           function t(a) {
             void 0 === a && (a = null);
             var o = e.call(this) || this;
             return (
-              t.prototype.last_publish_timestamp || O.a(t.M()),
-              E.initialize(o, a, 0, -1, void 0, null),
+              t.prototype.last_publish_timestamp || F.a(t.M()),
+              R.initialize(o, a, 0, -1, void 0, null),
               o
             );
           }
@@ -1531,8 +1533,8 @@
                     fields: {
                       last_publish_timestamp: {
                         n: 1,
-                        br: O.d.readFixed32,
-                        bw: O.h.writeFixed32,
+                        br: F.d.readFixed32,
+                        bw: F.h.writeFixed32,
                       },
                     },
                   }),
@@ -1540,45 +1542,45 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = O.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = F.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, a) {
-              return O.g(t.M(), e, a);
+              return F.g(t.M(), e, a);
             }),
             (t.fromObject = function (e) {
-              return O.c(t.M(), e);
+              return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new z.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
             (t.deserializeBinaryFromReader = function (e, a) {
-              return O.b(t.MBF(), e, a);
+              return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new z.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
-              O.f(t.M(), e, a);
+              F.f(t.M(), e, a);
             }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_PublishDraft_Response";
             }),
             t
           );
-        })(E),
-        Z = (function (e) {
+        })(R),
+        te = (function (e) {
           function t(a) {
             void 0 === a && (a = null);
             var o = e.call(this) || this;
             return (
-              t.prototype.faq || O.a(t.M()),
-              E.initialize(o, a, 0, -1, void 0, null),
+              t.prototype.faq || F.a(t.M()),
+              R.initialize(o, a, 0, -1, void 0, null),
               o
             );
           }
@@ -1587,50 +1589,50 @@
             (t.M = function () {
               return (
                 t.sm_m ||
-                  (t.sm_m = { proto: t, fields: { faq: { n: 1, c: W } } }),
+                  (t.sm_m = { proto: t, fields: { faq: { n: 1, c: L } } }),
                 t.sm_m
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = O.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = F.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, a) {
-              return O.g(t.M(), e, a);
+              return F.g(t.M(), e, a);
             }),
             (t.fromObject = function (e) {
-              return O.c(t.M(), e);
+              return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new z.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
             (t.deserializeBinaryFromReader = function (e, a) {
-              return O.b(t.MBF(), e, a);
+              return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new z.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
-              O.f(t.M(), e, a);
+              F.f(t.M(), e, a);
             }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_PreviewDraft_Response";
             }),
             t
           );
-        })(E),
-        ee = (function (e) {
+        })(R),
+        ae = (function (e) {
           function t(a) {
             void 0 === a && (a = null);
             var o = e.call(this) || this;
             return (
-              t.prototype.faq || O.a(t.M()),
-              E.initialize(o, a, 0, -1, void 0, null),
+              t.prototype.faq || F.a(t.M()),
+              R.initialize(o, a, 0, -1, void 0, null),
               o
             );
           }
@@ -1639,50 +1641,50 @@
             (t.M = function () {
               return (
                 t.sm_m ||
-                  (t.sm_m = { proto: t, fields: { faq: { n: 1, c: W } } }),
+                  (t.sm_m = { proto: t, fields: { faq: { n: 1, c: L } } }),
                 t.sm_m
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = O.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = F.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, a) {
-              return O.g(t.M(), e, a);
+              return F.g(t.M(), e, a);
             }),
             (t.fromObject = function (e) {
-              return O.c(t.M(), e);
+              return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new z.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
             (t.deserializeBinaryFromReader = function (e, a) {
-              return O.b(t.MBF(), e, a);
+              return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new z.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
-              O.f(t.M(), e, a);
+              F.f(t.M(), e, a);
             }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_GetFAQ_Response";
             }),
             t
           );
-        })(E),
-        te = (function (e) {
+        })(R),
+        oe = (function (e) {
           function t(a) {
             void 0 === a && (a = null);
             var o = e.call(this) || this;
             return (
-              t.prototype.faq || O.a(t.M()),
-              E.initialize(o, a, 0, -1, void 0, null),
+              t.prototype.faq || F.a(t.M()),
+              R.initialize(o, a, 0, -1, void 0, null),
               o
             );
           }
@@ -1691,50 +1693,50 @@
             (t.M = function () {
               return (
                 t.sm_m ||
-                  (t.sm_m = { proto: t, fields: { faq: { n: 1, c: W } } }),
+                  (t.sm_m = { proto: t, fields: { faq: { n: 1, c: L } } }),
                 t.sm_m
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = O.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = F.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, a) {
-              return O.g(t.M(), e, a);
+              return F.g(t.M(), e, a);
             }),
             (t.fromObject = function (e) {
-              return O.c(t.M(), e);
+              return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new z.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
             (t.deserializeBinaryFromReader = function (e, a) {
-              return O.b(t.MBF(), e, a);
+              return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new z.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
-              O.f(t.M(), e, a);
+              F.f(t.M(), e, a);
             }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_GetFAQVersion_Response";
             }),
             t
           );
-        })(E),
-        ae = (function (e) {
+        })(R),
+        ie = (function (e) {
           function t(a) {
             void 0 === a && (a = null);
             var o = e.call(this) || this;
             return (
-              t.prototype.steamid || O.a(t.M()),
-              E.initialize(o, a, 0, -1, void 0, null),
+              t.prototype.steamid || F.a(t.M()),
+              R.initialize(o, a, 0, -1, void 0, null),
               o
             );
           }
@@ -1748,13 +1750,13 @@
                     fields: {
                       steamid: {
                         n: 1,
-                        br: O.d.readUint64String,
-                        bw: O.h.writeUint64String,
+                        br: F.d.readUint64String,
+                        bw: F.h.writeUint64String,
                       },
                       faq_id: {
                         n: 2,
-                        br: O.d.readUint64String,
-                        bw: O.h.writeUint64String,
+                        br: F.d.readUint64String,
+                        bw: F.h.writeUint64String,
                       },
                     },
                   }),
@@ -1762,45 +1764,45 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = O.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = F.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, a) {
-              return O.g(t.M(), e, a);
+              return F.g(t.M(), e, a);
             }),
             (t.fromObject = function (e) {
-              return O.c(t.M(), e);
+              return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new z.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
             (t.deserializeBinaryFromReader = function (e, a) {
-              return O.b(t.MBF(), e, a);
+              return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new z.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
-              O.f(t.M(), e, a);
+              F.f(t.M(), e, a);
             }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_GetAllDrafts_Request";
             }),
             t
           );
-        })(E),
-        oe = (function (e) {
+        })(R),
+        se = (function (e) {
           function t(a) {
             void 0 === a && (a = null);
             var o = e.call(this) || this;
             return (
-              t.prototype.summary || O.a(t.M()),
-              E.initialize(o, a, 0, -1, [2], null),
+              t.prototype.summary || F.a(t.M()),
+              R.initialize(o, a, 0, -1, [2], null),
               o
             );
           }
@@ -1812,53 +1814,53 @@
                   (t.sm_m = {
                     proto: t,
                     fields: {
-                      summary: { n: 1, c: F },
-                      draft: { n: 2, c: W, r: !0, q: !0 },
+                      summary: { n: 1, c: W },
+                      draft: { n: 2, c: L, r: !0, q: !0 },
                     },
                   }),
                 t.sm_m
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = O.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = F.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, a) {
-              return O.g(t.M(), e, a);
+              return F.g(t.M(), e, a);
             }),
             (t.fromObject = function (e) {
-              return O.c(t.M(), e);
+              return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new z.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
             (t.deserializeBinaryFromReader = function (e, a) {
-              return O.b(t.MBF(), e, a);
+              return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new z.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
-              O.f(t.M(), e, a);
+              F.f(t.M(), e, a);
             }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_GetAllDrafts_Response";
             }),
             t
           );
-        })(E),
-        ie = (function (e) {
+        })(R),
+        ne = (function (e) {
           function t(a) {
             void 0 === a && (a = null);
             var o = e.call(this) || this;
             return (
-              t.prototype.faq || O.a(t.M()),
-              E.initialize(o, a, 0, -1, [1], null),
+              t.prototype.faq || F.a(t.M()),
+              R.initialize(o, a, 0, -1, [1], null),
               o
             );
           }
@@ -1869,51 +1871,51 @@
                 t.sm_m ||
                   (t.sm_m = {
                     proto: t,
-                    fields: { faq: { n: 1, c: F, r: !0, q: !0 } },
+                    fields: { faq: { n: 1, c: W, r: !0, q: !0 } },
                   }),
                 t.sm_m
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = O.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = F.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, a) {
-              return O.g(t.M(), e, a);
+              return F.g(t.M(), e, a);
             }),
             (t.fromObject = function (e) {
-              return O.c(t.M(), e);
+              return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new z.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
             (t.deserializeBinaryFromReader = function (e, a) {
-              return O.b(t.MBF(), e, a);
+              return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new z.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
-              O.f(t.M(), e, a);
+              F.f(t.M(), e, a);
             }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_GetAllFAQsForClan_Response";
             }),
             t
           );
-        })(E),
-        se = (function (e) {
+        })(R),
+        re = (function (e) {
           function t(a) {
             void 0 === a && (a = null);
             var o = e.call(this) || this;
             return (
-              t.prototype.faqs || O.a(t.M()),
-              E.initialize(o, a, 0, -1, [1], null),
+              t.prototype.faqs || F.a(t.M()),
+              R.initialize(o, a, 0, -1, [1], null),
               o
             );
           }
@@ -1924,49 +1926,49 @@
                 t.sm_m ||
                   (t.sm_m = {
                     proto: t,
-                    fields: { faqs: { n: 1, c: W, r: !0, q: !0 } },
+                    fields: { faqs: { n: 1, c: L, r: !0, q: !0 } },
                   }),
                 t.sm_m
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = O.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = F.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, a) {
-              return O.g(t.M(), e, a);
+              return F.g(t.M(), e, a);
             }),
             (t.fromObject = function (e) {
-              return O.c(t.M(), e);
+              return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new z.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
             (t.deserializeBinaryFromReader = function (e, a) {
-              return O.b(t.MBF(), e, a);
+              return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new z.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
-              O.f(t.M(), e, a);
+              F.f(t.M(), e, a);
             }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_GetAllLatestVersionPublishedFAQS_Response";
             }),
             t
           );
-        })(E),
-        ne = (function (e) {
+        })(R),
+        le = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var a = e.call(this) || this;
-            return E.initialize(a, t, 0, -1, void 0, null), a;
+            return R.initialize(a, t, 0, -1, void 0, null), a;
           }
           return (
             Object(o.d)(t, e),
@@ -1980,7 +1982,7 @@
               return new t();
             }),
             (t.deserializeBinary = function (e) {
-              var a = new z.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
@@ -1988,7 +1990,7 @@
               return e;
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new z.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, t) {}),
@@ -1997,14 +1999,14 @@
             }),
             t
           );
-        })(E),
-        re = (function (e) {
+        })(R),
+        pe = (function (e) {
           function t(a) {
             void 0 === a && (a = null);
             var o = e.call(this) || this;
             return (
-              t.prototype.faqs || O.a(t.M()),
-              E.initialize(o, a, 0, -1, [1], null),
+              t.prototype.faqs || F.a(t.M()),
+              R.initialize(o, a, 0, -1, [1], null),
               o
             );
           }
@@ -2016,16 +2018,16 @@
                   (t.sm_m = {
                     proto: t,
                     fields: {
-                      faqs: { n: 1, c: le, r: !0, q: !0 },
+                      faqs: { n: 1, c: de, r: !0, q: !0 },
                       num_total_results: {
                         n: 2,
-                        br: O.d.readInt32,
-                        bw: O.h.writeInt32,
+                        br: F.d.readInt32,
+                        bw: F.h.writeInt32,
                       },
                       next_cursor: {
                         n: 3,
-                        br: O.d.readString,
-                        bw: O.h.writeString,
+                        br: F.d.readString,
+                        bw: F.h.writeString,
                       },
                     },
                   }),
@@ -2033,45 +2035,45 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = O.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = F.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, a) {
-              return O.g(t.M(), e, a);
+              return F.g(t.M(), e, a);
             }),
             (t.fromObject = function (e) {
-              return O.c(t.M(), e);
+              return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new z.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
             (t.deserializeBinaryFromReader = function (e, a) {
-              return O.b(t.MBF(), e, a);
+              return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new z.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
-              O.f(t.M(), e, a);
+              F.f(t.M(), e, a);
             }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_SearchFAQs_Response";
             }),
             t
           );
-        })(E),
-        le = (function (e) {
+        })(R),
+        de = (function (e) {
           function t(a) {
             void 0 === a && (a = null);
             var o = e.call(this) || this;
             return (
-              t.prototype.articleid || O.a(t.M()),
-              E.initialize(o, a, 0, -1, void 0, null),
+              t.prototype.articleid || F.a(t.M()),
+              R.initialize(o, a, 0, -1, void 0, null),
               o
             );
           }
@@ -2085,24 +2087,24 @@
                     fields: {
                       articleid: {
                         n: 1,
-                        br: O.d.readUint64String,
-                        bw: O.h.writeUint64String,
+                        br: F.d.readUint64String,
+                        bw: F.h.writeUint64String,
                       },
-                      name: { n: 2, br: O.d.readString, bw: O.h.writeString },
+                      name: { n: 2, br: F.d.readString, bw: F.h.writeString },
                       content: {
                         n: 3,
-                        br: O.d.readString,
-                        bw: O.h.writeString,
+                        br: F.d.readString,
+                        bw: F.h.writeString,
                       },
                       clan_accountid: {
                         n: 4,
-                        br: O.d.readUint32,
-                        bw: O.h.writeUint32,
+                        br: F.d.readUint32,
+                        bw: F.h.writeUint32,
                       },
                       url_code: {
                         n: 5,
-                        br: O.d.readString,
-                        bw: O.h.writeString,
+                        br: F.d.readString,
+                        bw: F.h.writeString,
                       },
                     },
                   }),
@@ -2110,92 +2112,92 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = O.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = F.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, a) {
-              return O.g(t.M(), e, a);
+              return F.g(t.M(), e, a);
             }),
             (t.fromObject = function (e) {
-              return O.c(t.M(), e);
+              return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new z.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
             (t.deserializeBinaryFromReader = function (e, a) {
-              return O.b(t.MBF(), e, a);
+              return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new z.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
-              O.f(t.M(), e, a);
+              F.f(t.M(), e, a);
             }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_SearchFAQs_Response_CFAQSearchResult";
             }),
             t
           );
-        })(E);
+        })(R);
       !(function (e) {
         (e.Create = function (e, t) {
-          return e.SendMsg("ClanFAQS.Create#1", t, L, { ePrivilege: 1 });
+          return e.SendMsg("ClanFAQS.Create#1", t, V, { ePrivilege: 1 });
         }),
           (e.Delete = function (e, t) {
-            return e.SendMsg("ClanFAQS.Delete#1", t, V, { ePrivilege: 1 });
+            return e.SendMsg("ClanFAQS.Delete#1", t, B, { ePrivilege: 1 });
           }),
           (e.UpdateInternalName = function (e, t) {
-            return e.SendMsg("ClanFAQS.UpdateInternalName#1", t, B, {
+            return e.SendMsg("ClanFAQS.UpdateInternalName#1", t, U, {
               ePrivilege: 1,
             });
           }),
           (e.UpdateJsonData = function (e, t) {
-            return e.SendMsg("ClanFAQS.UpdateJsonData#1", t, U, {
+            return e.SendMsg("ClanFAQS.UpdateJsonData#1", t, Q, {
               ePrivilege: 1,
             });
           }),
           (e.SetVisibility = function (e, t) {
-            return e.SendMsg("ClanFAQS.SetVisibility#1", t, Q, {
+            return e.SendMsg("ClanFAQS.SetVisibility#1", t, $, {
               ePrivilege: 1,
             });
           }),
           (e.UpdateDraft = function (e, t) {
-            return e.SendMsg("ClanFAQS.UpdateDraft#1", t, $, { ePrivilege: 1 });
+            return e.SendMsg("ClanFAQS.UpdateDraft#1", t, J, { ePrivilege: 1 });
           }),
           (e.PublishDraft = function (e, t) {
-            return e.SendMsg("ClanFAQS.PublishDraft#1", t, J, {
+            return e.SendMsg("ClanFAQS.PublishDraft#1", t, ee, {
               ePrivilege: 1,
             });
           }),
           (e.PreviewDraft = function (e, t) {
-            return e.SendMsg("ClanFAQS.PreviewDraft#1", t, Z, {
+            return e.SendMsg("ClanFAQS.PreviewDraft#1", t, te, {
               ePrivilege: 1,
             });
           }),
           (e.GetFAQ = function (e, t) {
-            return e.SendMsg("ClanFAQS.GetFAQ#1", t, ee, {
+            return e.SendMsg("ClanFAQS.GetFAQ#1", t, ae, {
               bConstMethod: !0,
               ePrivilege: 0,
               eWebAPIKeyRequirement: 1,
             });
           }),
           (e.GetFAQVersion = function (e, t) {
-            return e.SendMsg("ClanFAQS.GetFAQVersion#1", t, te, {
+            return e.SendMsg("ClanFAQS.GetFAQVersion#1", t, oe, {
               ePrivilege: 1,
             });
           }),
           (e.GetAllDrafts = function (e, t) {
-            return e.SendMsg("ClanFAQS.GetAllDrafts#1", t, oe, {
+            return e.SendMsg("ClanFAQS.GetAllDrafts#1", t, se, {
               ePrivilege: 1,
             });
           }),
           (e.GetAllFAQsForClan = function (e, t) {
-            return e.SendMsg("ClanFAQS.GetAllFAQsForClan#1", t, ie, {
+            return e.SendMsg("ClanFAQS.GetAllFAQsForClan#1", t, ne, {
               ePrivilege: 1,
             });
           }),
@@ -2203,24 +2205,24 @@
             return e.SendMsg(
               "ClanFAQS.GetAllLatestVersionPublishedFAQS#1",
               t,
-              se,
+              re,
               { ePrivilege: 1 }
             );
           }),
           (e.CheckFAQPermissions = function (e, t) {
-            return e.SendMsg("ClanFAQS.CheckFAQPermissions#1", t, ne, {
+            return e.SendMsg("ClanFAQS.CheckFAQPermissions#1", t, le, {
               ePrivilege: 1,
             });
           }),
           (e.SearchFAQs = function (e, t) {
-            return e.SendMsg("ClanFAQS.SearchFAQs#1", t, re, {
+            return e.SendMsg("ClanFAQS.SearchFAQs#1", t, pe, {
               bConstMethod: !0,
               ePrivilege: 0,
               eWebAPIKeyRequirement: 1,
             });
           });
       })(k || (k = {}));
-      var pe = (function () {
+      var he = (function () {
           function e() {
             (this.m_mapFAQSummaries = new Map()),
               (this.m_mapFAQPublishedContent = new Map()),
@@ -2241,7 +2243,7 @@
             (e.prototype.SetUpWebAPIInterface = function () {
               var e = Object(u.g)("faqstore", "application_config"),
                 t = null == e ? void 0 : e.webapi_token;
-              this.m_steamInterface = new M.a(u.c.WEBAPI_BASE_URL, t);
+              this.m_steamInterface = new O.a(u.c.WEBAPI_BASE_URL, t);
             }),
             (e.prototype.ReadInitialPayload = function () {
               var e = Object(u.g)("faqstore", "application_config");
@@ -2274,7 +2276,7 @@
                       }
                       this.m_mapFAQDrafts.set(
                         t,
-                        new q(this.m_mapFAQSummaries.get(t), i)
+                        new z(this.m_mapFAQSummaries.get(t), i)
                       );
                     }
                   }
@@ -2303,7 +2305,7 @@
                 return Object(o.e)(this, function (o) {
                   switch (o.label) {
                     case 0:
-                      (t = C.b.Init(N)).Body().set_steamid(u.b.CLANSTEAMID),
+                      (t = P.b.Init(H)).Body().set_steamid(u.b.CLANSTEAMID),
                         t.Body().set_internal_name(e),
                         (a = 2),
                         (i = void 0),
@@ -2335,7 +2337,7 @@
                     case 3:
                       return (
                         (r = o.sent()),
-                        (l = Object(P.a)(r)),
+                        (l = Object(q.a)(r)),
                         console.error(
                           "FAQStore.CreateFAQ: caught error " + l.strErrorMsg,
                           l
@@ -2354,7 +2356,7 @@
                 return Object(o.e)(this, function (o) {
                   switch (o.label) {
                     case 0:
-                      (s = C.b.Init(X)).Body().set_steamid(u.b.CLANSTEAMID),
+                      (s = P.b.Init(K)).Body().set_steamid(u.b.CLANSTEAMID),
                         s.Body().set_faq_id(e),
                         s.Body().set_language(t),
                         s.Body().set_content(i),
@@ -2387,7 +2389,7 @@
                     case 3:
                       return (
                         (p = o.sent()),
-                        (d = Object(P.a)(p)),
+                        (d = Object(q.a)(p)),
                         console.error(
                           "FAQStore.UpdateDraft: caught error " + d.strErrorMsg,
                           d
@@ -2407,7 +2409,7 @@
                   switch (o.label) {
                     case 0:
                       (a = JSON.stringify(t)),
-                        (i = C.b.Init(G)).Body().set_steamid(u.b.CLANSTEAMID),
+                        (i = P.b.Init(Y)).Body().set_steamid(u.b.CLANSTEAMID),
                         i.Body().set_faq_id(e),
                         i.Body().set_json_data(a),
                         (s = 2),
@@ -2437,7 +2439,7 @@
                     case 3:
                       return (
                         (r = o.sent()),
-                        (l = Object(P.a)(r)),
+                        (l = Object(q.a)(r)),
                         console.error(
                           "FAQStore.UpdateJsonData: caught error " +
                             l.strErrorMsg,
@@ -2457,7 +2459,7 @@
                 return Object(o.e)(this, function (o) {
                   switch (o.label) {
                     case 0:
-                      (t = C.b.Init(H)).Body().set_steamid(u.b.CLANSTEAMID),
+                      (t = P.b.Init(j)).Body().set_steamid(u.b.CLANSTEAMID),
                         t.Body().set_faq_id(e),
                         (a = 2),
                         (o.label = 1);
@@ -2488,7 +2490,7 @@
                     case 3:
                       return (
                         (s = o.sent()),
-                        (n = Object(P.a)(s)),
+                        (n = Object(q.a)(s)),
                         console.error(
                           "FAQStore.DeleteFAQ: caught error " + n.strErrorMsg,
                           n
@@ -2525,7 +2527,7 @@
                     case 0:
                       if (this.m_mapFAQDrafts.has(e))
                         return [2, this.m_mapFAQDrafts.get(e)];
-                      (t = C.b.Init(ae)).Body().set_steamid(u.b.CLANSTEAMID),
+                      (t = P.b.Init(ie)).Body().set_steamid(u.b.CLANSTEAMID),
                         t.Body().set_faq_id(e),
                         (a = 2),
                         (o.label = 1);
@@ -2558,14 +2560,14 @@
                               .forEach(function (e) {
                                 return n.set(e.language(), e.toObject());
                               }),
-                            (r = new q(this.m_mapFAQSummaries.get(e), n)),
+                            (r = new z(this.m_mapFAQSummaries.get(e), n)),
                             this.m_mapFAQDrafts.set(e, r),
                             [2, r])
                       );
                     case 3:
                       return (
                         (l = o.sent()),
-                        (p = Object(P.a)(l)),
+                        (p = Object(q.a)(l)),
                         console.error(
                           "FaqStore.LoadFAQDraftContent: exception " +
                             p.strErrorMsg,
@@ -2585,7 +2587,7 @@
                 return Object(o.e)(this, function (o) {
                   switch (o.label) {
                     case 0:
-                      (i = C.b.Init(Y)).Body().set_steamid(u.b.CLANSTEAMID),
+                      (i = P.b.Init(X)).Body().set_steamid(u.b.CLANSTEAMID),
                         i.Body().set_faq_id(e),
                         i.Body().set_visible_in_global_realm(t),
                         i.Body().set_visible_in_china_realm(a),
@@ -2618,7 +2620,7 @@
                     case 3:
                       return (
                         (l = o.sent()),
-                        (p = Object(P.a)(l)),
+                        (p = Object(q.a)(l)),
                         console.error(
                           "FaqStore.UpdateVisibility: exception " +
                             p.strErrorMsg,
@@ -2645,7 +2647,7 @@
                   switch (o.label) {
                     case 0:
                       if (!t || 0 == t.length) return [2, 1];
-                      (a = C.b.Init(K)).Body().set_steamid(u.b.CLANSTEAMID),
+                      (a = P.b.Init(Z)).Body().set_steamid(u.b.CLANSTEAMID),
                         a.Body().set_faq_id(e),
                         t.forEach(function (e) {
                           return a.Body().add_language(e);
@@ -2668,7 +2670,7 @@
                         (s = o.sent()),
                         1 === (i = s.GetEResult())
                           ? (n = this.m_mapFAQSummaries.get(e)) &&
-                            Object(A.G)(function () {
+                            Object(T.G)(function () {
                               p.m_mapFAQPublishedContent.has(e) ||
                                 p.m_mapFAQPublishedContent.set(e, new Map()),
                                 n.per_language_info.forEach(function (a) {
@@ -2693,7 +2695,7 @@
                     case 3:
                       return (
                         (r = o.sent()),
-                        (l = Object(P.a)(r)),
+                        (l = Object(q.a)(r)),
                         console.error(
                           "FaqStore.PublishDraftByLanguage: exception " +
                             l.strErrorMsg,
@@ -2718,7 +2720,7 @@
                 return Object(o.e)(this, function (o) {
                   switch (o.label) {
                     case 0:
-                      (a = C.b.Init(j)).Body().set_steamid(u.b.CLANSTEAMID),
+                      (a = P.b.Init(G)).Body().set_steamid(u.b.CLANSTEAMID),
                         a.Body().set_faq_id(e),
                         a.Body().set_internal_name(t),
                         (i = 2),
@@ -2738,7 +2740,7 @@
                       return (
                         (s = o.sent()),
                         1 === (i = s.GetEResult())
-                          ? Object(A.G)(function () {
+                          ? Object(T.G)(function () {
                               var a, o, i;
                               (null === (a = l.m_mapFAQSummaries.get(e)) ||
                               void 0 === a
@@ -2765,7 +2767,7 @@
                     case 3:
                       return (
                         (n = o.sent()),
-                        (r = Object(P.a)(n)),
+                        (r = Object(q.a)(n)),
                         console.error(
                           "FaqStore.UpdateInternalName: exception " +
                             r.strErrorMsg,
@@ -2806,20 +2808,76 @@
             (e.prototype.BHasFAQEdit = function () {
               return this.m_bHasFAQEdit;
             }),
-            Object(o.c)([A.C], e.prototype, "m_mapFAQSummaries", void 0),
-            Object(o.c)([A.k], e.prototype, "RemoveAllDirtyDrafts", null),
+            (e.prototype.ExportEnglishDraftToCrowdin = function (e) {
+              return Object(o.b)(this, void 0, void 0, function () {
+                var t;
+                return Object(o.e)(this, function (a) {
+                  switch (a.label) {
+                    case 0:
+                      return (
+                        (t =
+                          u.c.COMMUNITY_BASE_URL +
+                          "faqs/" +
+                          u.b.VANITY_ID +
+                          "/ajaxpushtocrowdin/" +
+                          me(e)),
+                        [4, I.a.get(t)]
+                      );
+                    case 1:
+                      return a.sent(), [2];
+                  }
+                });
+              });
+            }),
+            (e.prototype.ImportNonEnglishDraftsFromCrowdin = function (e) {
+              return Object(o.b)(this, void 0, void 0, function () {
+                var t;
+                return Object(o.e)(this, function (a) {
+                  switch (a.label) {
+                    case 0:
+                      return (
+                        (t =
+                          u.c.COMMUNITY_BASE_URL +
+                          "faqs/" +
+                          u.b.VANITY_ID +
+                          "/ajaxpullfromcrowdin/" +
+                          me(e)),
+                        [4, I.a.get(t)]
+                      );
+                    case 1:
+                      return a.sent(), [2];
+                  }
+                });
+              });
+            }),
+            Object(o.c)([T.C], e.prototype, "m_mapFAQSummaries", void 0),
+            Object(o.c)([T.k], e.prototype, "RemoveAllDirtyDrafts", null),
             e
           );
         })(),
-        de = /^[0-9a-fA-F]+$/;
-      function he(e) {
+        ce = /^[0-9a-fA-F]+$/;
+      function ue(e) {
         var t = null == e ? void 0 : e.replace(/-/g, "");
-        return 16 == (null == t ? void 0 : t.length) && de.test(t)
-          ? I.a.fromString(t, !0, 16).toString()
+        return 16 == (null == t ? void 0 : t.length) && ce.test(t)
+          ? C.a.fromString(t, !0, 16).toString()
           : null;
       }
-      function ce(e) {
-        var t = n.a.useState(pe.Get().GetFAQDraftContent(e)),
+      function me(e) {
+        var t = ("0000000000000000" + C.a.fromString(e, !0, 10).toString(16))
+          .slice(-16)
+          .toUpperCase();
+        return (
+          t.slice(0, 4) +
+          "-" +
+          t.slice(4, 8) +
+          "-" +
+          t.slice(8, 12) +
+          "-" +
+          t.slice(12, 16)
+        );
+      }
+      function fe(e) {
+        var t = n.a.useState(he.Get().GetFAQDraftContent(e)),
           a = t[0],
           o = t[1],
           i = n.a.useState(!!a),
@@ -2828,7 +2886,7 @@
         return (
           Object(s.useEffect)(
             function () {
-              pe.Get()
+              he.Get()
                 .LoadFAQDraftContent(e)
                 .then(function (e) {
                   return o(e);
@@ -2842,17 +2900,17 @@
           [a, r]
         );
       }
-      function ue(e) {
-        return [pe.Get().GetFAQArticleSummary(e), !0];
+      function ge(e) {
+        return [he.Get().GetFAQArticleSummary(e), !0];
       }
-      function me() {
-        var e = pe.Get().GetAllFAQSummaries();
+      function ye() {
+        var e = he.Get().GetAllFAQSummaries();
         return n.a.useRef([e, !0]).current;
       }
-      var fe,
-        ge = a("45aE"),
-        ye = a.n(ge),
-        be = [
+      var be,
+        we = a("45aE"),
+        ve = a.n(we),
+        Se = [
           [
             "55",
             "1558-QYAX-1965",
@@ -9926,33 +9984,19 @@
             "",
           ],
         ],
-        we = a("Ty5D"),
-        ve = a("55Ip");
-      function Se(e) {
-        var t = ("0000000000000000" + I.a.fromString(e, !0, 10).toString(16))
-          .slice(-16)
-          .toUpperCase();
-        return (
-          t.slice(0, 4) +
-          "-" +
-          t.slice(4, 8) +
-          "-" +
-          t.slice(8, 12) +
-          "-" +
-          t.slice(12, 16)
-        );
-      }
+        ke = a("Ty5D"),
+        xe = a("55Ip");
       !(function (e) {
         (e.k_eView = "view"),
           (e.k_eCommunityView = "communityview"),
           (e.k_eCommunityEdit = "edit"),
           (e.k_eCommunityDashboard = "dashboard"),
           (e.k_eCommunityPreview = "preview");
-      })(fe || (fe = {}));
-      var ke = function (e) {
-        var t = xe(e.route, e.faqid);
+      })(be || (be = {}));
+      var _e = function (e) {
+        var t = Ie(e.route, e.faqid);
         return e.bForceRedirect
-          ? s.createElement(we.b, { push: !0, to: t })
+          ? s.createElement(ke.b, { push: !0, to: t })
           : e.bForceAnchor
           ? s.createElement(
               "a",
@@ -9963,31 +10007,31 @@
               e.children
             )
           : s.createElement(
-              ve.b,
+              xe.b,
               { to: t, className: e.className },
               e.children
             );
       };
-      function xe(e, t) {
+      function Ie(e, t) {
         var a = "/faqs/" + u.b.VANITY_ID + "/";
         switch (e) {
-          case fe.k_eView:
-          case fe.k_eCommunityView:
-            a += "view/" + Se(t);
+          case be.k_eView:
+          case be.k_eCommunityView:
+            a += "view/" + me(t);
             break;
-          case fe.k_eCommunityEdit:
-            a += "edit/" + Se(t);
+          case be.k_eCommunityEdit:
+            a += "edit/" + me(t);
             break;
-          case fe.k_eCommunityDashboard:
+          case be.k_eCommunityDashboard:
             a += "dashboard";
             break;
-          case fe.k_eCommunityPreview:
-            a += "preview/" + Se(t);
+          case be.k_eCommunityPreview:
+            a += "preview/" + me(t);
         }
         return a;
       }
-      var _e = Object(i.a)(function (e) {
-        var t = me(),
+      var Ae = Object(i.a)(function (e) {
+        var t = ye(),
           a = t[0],
           i = (t[1], n.a.useState(null)),
           r = i[0],
@@ -10006,30 +10050,29 @@
               return Object(o.e)(this, function (e) {
                 return (
                   p(
-                    be
-                      .map(function (e) {
-                        return (
-                          (t = e)[13] &&
-                            t[14] &&
-                            console.error("redirect dupes on", t),
-                          {
-                            id: parseInt(t[0]),
-                            strRef: t[1],
-                            strTitle: t[2],
-                            strQuestion: t[3] || "",
-                            strAnswer: t[4] || "",
-                            rgKeywords: (t[5] || "").split(","),
-                            nViewCount: parseInt(t[6]),
-                            nVoteCount: parseInt(t[7]),
-                            nCategory: parseInt(t[10]),
-                            nAppID: parseInt(t[11]) || 0,
-                            nOldFaqID: parseInt(t[12]) || void 0,
-                            strRedirect: t[13] || void 0,
-                            custom1: t[14] || void 0,
-                          }
-                        );
-                        var t;
-                      })
+                    Se.map(function (e) {
+                      return (
+                        (t = e)[13] &&
+                          t[14] &&
+                          console.error("redirect dupes on", t),
+                        {
+                          id: parseInt(t[0]),
+                          strRef: t[1],
+                          strTitle: t[2],
+                          strQuestion: t[3] || "",
+                          strAnswer: t[4] || "",
+                          rgKeywords: (t[5] || "").split(","),
+                          nViewCount: parseInt(t[6]),
+                          nVoteCount: parseInt(t[7]),
+                          nCategory: parseInt(t[10]),
+                          nAppID: parseInt(t[11]) || 0,
+                          nOldFaqID: parseInt(t[12]) || void 0,
+                          strRedirect: t[13] || void 0,
+                          custom1: t[14] || void 0,
+                        }
+                      );
+                      var t;
+                    })
                       .filter(function (e) {
                         return (
                           !e.strRedirect ||
@@ -10072,7 +10115,7 @@
               if (r && 0 != h.size)
                 for (
                   var e = function (e) {
-                      if (!g.has(e.id)) {
+                      if (!g.has(e.id) && h.has(e.id)) {
                         return (
                           (function (e, t) {
                             var a, i, s, r, p, d, h, c, u, m;
@@ -10083,7 +10126,7 @@
                                   case 0:
                                     return (
                                       (f = new Array(30)),
-                                      [4, pe.Get().LoadFAQDraftContent(e)]
+                                      [4, he.Get().LoadFAQDraftContent(e)]
                                     );
                                   case 1:
                                     for (
@@ -10106,7 +10149,7 @@
                                                         : a.content) ||
                                                   void 0 === i
                                                     ? void 0
-                                                    : i.match(Ie)) ||
+                                                    : i.match(Ce)) ||
                                               void 0 === s
                                                 ? void 0
                                                 : s.length) && void 0 !== r
@@ -10146,7 +10189,7 @@
                                           (I =
                                             null !==
                                               (c =
-                                                null === (h = _.match(Ie)) ||
+                                                null === (h = _.match(Ce)) ||
                                                 void 0 === h
                                                   ? void 0
                                                   : h.length) && void 0 !== c
@@ -10155,7 +10198,7 @@
                                           (A =
                                             null !==
                                               (m =
-                                                null === (u = k.match(Ie)) ||
+                                                null === (u = k.match(Ce)) ||
                                                 void 0 === u
                                                   ? void 0
                                                   : u.length) && void 0 !== m
@@ -10224,24 +10267,24 @@
               : "Imported " + w + "/" + b + " FAQs");
         return n.a.createElement(
           "div",
-          { className: ye.a.ImportToolCtn },
+          { className: ve.a.ImportToolCtn },
           n.a.createElement(
             "div",
-            { className: ye.a.ToolHeader },
+            { className: ve.a.ToolHeader },
             "FAQ Importer"
           ),
-          n.a.createElement("div", { className: ye.a.StatusMessage }, v),
+          n.a.createElement("div", { className: ve.a.StatusMessage }, v),
           n.a.createElement(
             "div",
-            { className: ye.a.FAQRow },
-            n.a.createElement("div", { className: ye.a.ID }, "KB ID"),
-            n.a.createElement("div", { className: ye.a.Ref }, "KB REF"),
-            n.a.createElement("div", { className: ye.a.Text }, "KB Title"),
-            n.a.createElement("div", { className: ye.a.Ref }, "Imported ID"),
-            n.a.createElement("div", { className: ye.a.Ref }, "Languages")
+            { className: ve.a.FAQRow },
+            n.a.createElement("div", { className: ve.a.ID }, "KB ID"),
+            n.a.createElement("div", { className: ve.a.Ref }, "KB REF"),
+            n.a.createElement("div", { className: ve.a.Text }, "KB Title"),
+            n.a.createElement("div", { className: ve.a.Ref }, "Imported ID"),
+            n.a.createElement("div", { className: ve.a.Ref }, "Languages")
           ),
           r.map(function (e) {
-            return n.a.createElement(Ae, {
+            return n.a.createElement(Te, {
               key: "faq" + e.id,
               legacyInfo: e,
               matchingSummary: h.get(e.id),
@@ -10251,8 +10294,8 @@
           })
         );
       });
-      var Ie = /\[(exlude_realm|expand|img|th|td|tr|table|section|h1|h2|h3|h4|h5|h6|url|b\]|u\]|i\]|list|olist|\*\]|code|hr|previewyoutube|video)/gim;
-      var Ae = function (e) {
+      var Ce = /\[(exlude_realm|expand|img|th|td|tr|table|section|h1|h2|h3|h4|h5|h6|url|b\]|u\]|i\]|list|olist|\*\]|code|hr|previewyoutube|video)/gim;
+      var Te = function (e) {
         for (
           var t,
             a = e.legacyInfo,
@@ -10265,7 +10308,7 @@
                 u.c.COMMUNITY_BASE_URL.substr(
                   0,
                   u.c.COMMUNITY_BASE_URL.length - 1
-                ) + xe(fe.k_eCommunityPreview, o.faq_id)),
+                ) + Ie(be.k_eCommunityPreview, o.faq_id)),
             l = new Array(31),
             p = 0;
           p < 30;
@@ -10277,15 +10320,15 @@
                 ? t
                 : 0) && i[p],
             h = Object(c.a)(
-              ye.a.ShortCode,
-              !d && ye.a.Missing,
-              "good" == (null == s ? void 0 : s[p]) && ye.a.Good,
-              "missing" == (null == s ? void 0 : s[p]) && ye.a.Missing,
-              "suspicious" == (null == s ? void 0 : s[p]) && ye.a.Suspicious,
-              "bad" == (null == s ? void 0 : s[p]) && ye.a.Bad,
-              "badimport" == (null == s ? void 0 : s[p]) && ye.a.BadImport
+              ve.a.ShortCode,
+              !d && ve.a.Missing,
+              "good" == (null == s ? void 0 : s[p]) && ve.a.Good,
+              "missing" == (null == s ? void 0 : s[p]) && ve.a.Missing,
+              "suspicious" == (null == s ? void 0 : s[p]) && ve.a.Suspicious,
+              "bad" == (null == s ? void 0 : s[p]) && ve.a.Bad,
+              "badimport" == (null == s ? void 0 : s[p]) && ve.a.BadImport
             );
-          l[Ce[p]] = n.a.createElement(
+          l[Pe[p]] = n.a.createElement(
             "a",
             { key: "loc-" + p, className: h, href: r + "?l=" + Object(x.a)(p) },
             Object(x.b)(p)
@@ -10293,30 +10336,30 @@
         }
         return n.a.createElement(
           "div",
-          { className: ye.a.FAQRow },
-          n.a.createElement("div", { className: ye.a.ID }, a.id),
+          { className: ve.a.FAQRow },
+          n.a.createElement("div", { className: ve.a.ID }, a.id),
           n.a.createElement(
             "a",
             {
               href:
                 "https://support.steampowered.com/kb_article.php?ref=" +
                 a.strRef,
-              className: ye.a.Ref,
+              className: ve.a.Ref,
             },
             a.strRef
           ),
-          n.a.createElement("div", { className: ye.a.Text }, a.strTitle),
+          n.a.createElement("div", { className: ve.a.Text }, a.strTitle),
           !!(null == o ? void 0 : o.faq_id) &&
             n.a.createElement(
               "a",
-              { className: ye.a.Ref, href: r },
+              { className: ve.a.Ref, href: r },
               " ",
-              Se(o.faq_id)
+              me(o.faq_id)
             ),
           l
         );
       };
-      var Ce = [
+      var Pe = [
         0,
         9,
         8,
@@ -10348,40 +10391,40 @@
         27,
         29,
       ];
-      var Te = a("Mgs7"),
-        Pe = a("Jqb/"),
-        De = a("ka0M"),
-        qe = a("6Y59"),
-        Me = a("0OaU"),
-        ze = a("5E+2"),
-        Oe = a("TLQK"),
-        Ee = a("bS9Q"),
-        Fe = a("Lcls"),
-        Re = a.n(Fe),
-        We = a("YLyR"),
-        Ne = a("Ee63"),
-        Le = a.n(Ne),
-        He = a("WQlG"),
+      var De = a("Mgs7"),
+        qe = a("Jqb/"),
+        Me = a("ka0M"),
+        ze = a("6Y59"),
+        Oe = a("0OaU"),
+        Ee = a("5E+2"),
+        Fe = a("TLQK"),
+        Re = a("bS9Q"),
+        We = a("Lcls"),
+        Ne = a.n(We),
+        Le = a("YLyR"),
+        He = a("Ee63"),
         Ve = a.n(He),
-        je = function (e) {
+        je = a("WQlG"),
+        Be = a.n(je),
+        Ge = function (e) {
           var t = e.rtTimestamp,
             a = e.bShowAsWarning;
           if (!t)
             return n.a.createElement(
               "div",
-              { className: Ve.a.Never },
-              Object(Oe.f)("#FAQDashboard_TimeNever")
+              { className: Be.a.Never },
+              Object(Fe.f)("#FAQDashboard_TimeNever")
             );
           var o = Date.now() / 1e3 - t,
-            i = o < 86400 ? Object(Oe.q)(o, !1, !0) : Object(Oe.o)(t);
+            i = o < 86400 ? Object(Fe.q)(o, !1, !0) : Object(Fe.o)(t);
           return n.a.createElement(
-            We.f,
-            { className: a && Ve.a.Warning, rtFullDate: t, stylesmodule: Le.a },
+            Le.f,
+            { className: a && Be.a.Warning, rtFullDate: t, stylesmodule: Ve.a },
             i
           );
         },
-        Be = Object(i.a)(function (e) {
-          var t = me(),
+        Ue = Object(i.a)(function (e) {
+          var t = ye(),
             a = t[0],
             o = t[1],
             i = n.a.useState(1),
@@ -10428,34 +10471,34 @@
                 ];
               })
               .sort(function (e, t) {
-                return 1 == r ? Object(Ee.f)(e[1], t[1]) : t[r] - e[r];
+                return 1 == r ? Object(Re.f)(e[1], t[1]) : t[r] - e[r];
               });
           return (
             Object(s.useEffect)(function () {
-              pe.Get().RemoveAllDirtyDrafts();
+              he.Get().RemoveAllDirtyDrafts();
             }, []),
             n.a.createElement(
               "div",
-              { className: Re.a.FAQDashboardPage },
+              { className: Ne.a.FAQDashboardPage },
               n.a.createElement(
                 "div",
-                { className: Re.a.FAQDashboard },
-                n.a.createElement(Ge, null),
-                n.a.createElement(Ye, {
+                { className: Ne.a.FAQDashboard },
+                n.a.createElement(Ye, null),
+                n.a.createElement(Xe, {
                   eCurrentSortColumn: r,
                   SetSortColumn: l,
                 }),
                 0 == a.length &&
                   n.a.createElement(
                     "div",
-                    { className: Re.a.ErrorMsg },
-                    Object(Oe.f)("#FAQDashboard_Empty")
+                    { className: Ne.a.ErrorMsg },
+                    Object(Fe.f)("#FAQDashboard_Empty")
                   ),
                 p.map(function (e) {
-                  return n.a.createElement(Ke, { key: e[0], rgColumns: e });
+                  return n.a.createElement(Ze, { key: e[0], rgColumns: e });
                 }),
                 !o &&
-                  n.a.createElement(Me.a, {
+                  n.a.createElement(Oe.a, {
                     position: "center",
                     size: "xlarge",
                   })
@@ -10463,62 +10506,62 @@
             )
           );
         }),
-        Ge = function (e) {
+        Ye = function (e) {
           var t = n.a.useCallback(function () {
-            return Object(De.b)(n.a.createElement(Ue, null), window, {
-              strTitle: Object(Oe.f)("#FAQDashboard_CreateFAQButton"),
+            return Object(Me.b)(n.a.createElement(Qe, null), window, {
+              strTitle: Object(Fe.f)("#FAQDashboard_CreateFAQButton"),
             });
           }, []);
           return n.a.createElement(
             "div",
-            { className: Re.a.DashboardHeader },
+            { className: Ne.a.DashboardHeader },
             n.a.createElement(
               "div",
-              { className: Re.a.DashboardHeaderTitle },
-              Object(Oe.f)("#FAQDashboard_Header")
+              { className: Ne.a.DashboardHeaderTitle },
+              Object(Fe.f)("#FAQDashboard_Header")
             ),
             n.a.createElement(
               "div",
-              { className: Re.a.DashboardCreateFAQButtonCtn },
+              { className: Ne.a.DashboardCreateFAQButtonCtn },
               n.a.createElement(
-                Te.r,
+                De.r,
                 { onClick: t },
-                Object(Oe.f)("#FAQDashboard_CreateFAQButton")
+                Object(Fe.f)("#FAQDashboard_CreateFAQButton")
               )
             )
           );
         },
-        Ue = function (e) {
+        Qe = function (e) {
           var t = n.a.useState(""),
             a = t[0],
             o = t[1];
           return n.a.createElement(
-            Pe.d,
+            qe.d,
             {
               onOK: function () {
-                return pe.Get().CreateFAQ(a);
+                return he.Get().CreateFAQ(a);
               },
               bOKDisabled: 0 == a.length,
               closeModal: e.closeModal,
-              className: Re.a.CreateFAQDialog,
+              className: Ne.a.CreateFAQDialog,
             },
             n.a.createElement(
-              Te.l,
+              De.l,
               null,
-              Object(Oe.f)("#FAQDashboard_CreateFAQButton")
+              Object(Fe.f)("#FAQDashboard_CreateFAQButton")
             ),
             n.a.createElement(
-              Te.b,
+              De.b,
               null,
               n.a.createElement(
-                Te.c,
+                De.c,
                 null,
-                Object(Oe.f)("#FAQDashboard_CreateFAQInstructions"),
+                Object(Fe.f)("#FAQDashboard_CreateFAQInstructions"),
                 n.a.createElement("input", {
                   type: "text",
-                  className: Re.a.NameInput,
+                  className: Ne.a.NameInput,
                   value: a,
-                  placeholder: Object(Oe.f)("#FAQDashboard_NamePlaceHolder"),
+                  placeholder: Object(Fe.f)("#FAQDashboard_NamePlaceHolder"),
                   onFocus: function (e) {
                     return e.target.select();
                   },
@@ -10531,12 +10574,12 @@
             )
           );
         },
-        Ye = function (e) {
+        Xe = function (e) {
           return n.a.createElement(
             "div",
-            { className: Re.a.DashboardListHeaderRow },
+            { className: Ne.a.DashboardListHeaderRow },
             n.a.createElement(
-              Qe,
+              $e,
               Object(o.a)(
                 {
                   strLabelLocToken: "#FAQDashboard_NameColumn",
@@ -10547,7 +10590,7 @@
               )
             ),
             n.a.createElement(
-              Qe,
+              $e,
               Object(o.a)(
                 {
                   strLabelLocToken: "#FAQDashboard_DraftTimetampColumn",
@@ -10557,7 +10600,7 @@
               )
             ),
             n.a.createElement(
-              Qe,
+              $e,
               Object(o.a)(
                 {
                   strLabelLocToken: "#FAQDashboard_UpdatedLanguagesColumn",
@@ -10567,7 +10610,7 @@
               )
             ),
             n.a.createElement(
-              Qe,
+              $e,
               Object(o.a)(
                 {
                   strLabelLocToken: "#FAQDashboard_StaleLanguagesColumn",
@@ -10577,7 +10620,7 @@
               )
             ),
             n.a.createElement(
-              Qe,
+              $e,
               Object(o.a)(
                 {
                   strLabelLocToken: "#FAQDashboard_PublishedLanguagesColumn",
@@ -10587,7 +10630,7 @@
               )
             ),
             n.a.createElement(
-              Qe,
+              $e,
               Object(o.a)(
                 {
                   strLabelLocToken: "#FAQDashboard_NeedPublishColumn",
@@ -10597,7 +10640,7 @@
               )
             ),
             n.a.createElement(
-              Qe,
+              $e,
               Object(o.a)(
                 {
                   strLabelLocToken: "#FAQDashboard_VisibilityColumn",
@@ -10607,7 +10650,7 @@
               )
             ),
             n.a.createElement(
-              Qe,
+              $e,
               Object(o.a)(
                 {
                   strLabelLocToken: "#FAQDashboard_SteamChinaVisibilityColumn",
@@ -10618,57 +10661,57 @@
             )
           );
         },
-        Qe = function (e) {
+        $e = function (e) {
           var t = e.strLabelLocToken,
             a = e.bIsNameColumn,
             o = e.eThisColumn,
             i = e.eCurrentSortColumn,
             s = e.SetSortColumn,
             r = Object(c.a)(
-              Re.a.EntryColumn,
-              Re.a.ClickableHeader,
-              a ? Re.a.NameCol : Re.a.DataCol,
-              i == o && Re.a.Selected
+              Ne.a.EntryColumn,
+              Ne.a.ClickableHeader,
+              a ? Ne.a.NameCol : Ne.a.DataCol,
+              i == o && Ne.a.Selected
             );
           return n.a.createElement(
-            ze.a,
+            Ee.a,
             {
-              toolTipContent: Object(Oe.f)(t + "_ttip"),
+              toolTipContent: Object(Fe.f)(t + "_ttip"),
               direction: "top",
               className: r,
               onClick: function () {
                 return s(o);
               },
             },
-            Object(Oe.f)(t),
+            Object(Fe.f)(t),
             n.a.createElement(
               "div",
-              { className: Re.a.DownArrow },
-              n.a.createElement(qe.q, null)
+              { className: Ne.a.DownArrow },
+              n.a.createElement(ze.q, null)
             )
           );
         },
-        Xe = function (e) {
+        Ke = function (e) {
           var t = e.nCount,
             a = e.nTotal,
             o = e.nGoal;
           return n.a.createElement(
             "div",
-            { className: t == o ? Re.a.GoodCount : Re.a.BadCount },
+            { className: t == o ? Ne.a.GoodCount : Ne.a.BadCount },
             t + " / " + a
           );
         },
-        $e = function (e) {
+        Je = function (e) {
           var t = e.bIsVisible;
           return n.a.createElement(
             "div",
-            { className: t ? Re.a.Visible : Re.a.Hidden },
-            Object(Oe.f)(
+            { className: t ? Ne.a.Visible : Ne.a.Hidden },
+            Object(Fe.f)(
               t ? "#FAQDashboard_Visible" : "#FAQDashboard_Invisible"
             )
           );
         },
-        Ke = function (e) {
+        Ze = function (e) {
           var t = e.rgColumns,
             a = t[0],
             o = t[1],
@@ -10682,60 +10725,60 @@
             u = l + p,
             m = s + r;
           return n.a.createElement(
-            ke,
+            _e,
             {
-              route: fe.k_eCommunityEdit,
+              route: be.k_eCommunityEdit,
               faqid: a,
-              className: Re.a.DashboardEntry,
+              className: Ne.a.DashboardEntry,
             },
             n.a.createElement(
               "div",
-              { className: Object(c.a)(Re.a.EntryColumn, Re.a.NameCol) },
-              n.a.createElement("div", { className: Re.a.EntryInternalName }, o)
+              { className: Object(c.a)(Ne.a.EntryColumn, Ne.a.NameCol) },
+              n.a.createElement("div", { className: Ne.a.EntryInternalName }, o)
             ),
             n.a.createElement(
               "div",
-              { className: Object(c.a)(Re.a.EntryColumn, Re.a.DataCol) },
-              n.a.createElement(je, { rtTimestamp: i })
+              { className: Object(c.a)(Ne.a.EntryColumn, Ne.a.DataCol) },
+              n.a.createElement(Ge, { rtTimestamp: i })
             ),
             n.a.createElement(
               "div",
-              { className: Object(c.a)(Re.a.EntryColumn, Re.a.DataCol) },
-              n.a.createElement(Xe, { nCount: s, nTotal: m, nGoal: m })
+              { className: Object(c.a)(Ne.a.EntryColumn, Ne.a.DataCol) },
+              n.a.createElement(Ke, { nCount: s, nTotal: m, nGoal: m })
             ),
             n.a.createElement(
               "div",
-              { className: Object(c.a)(Re.a.EntryColumn, Re.a.DataCol) },
-              n.a.createElement(Xe, { nCount: r, nTotal: m, nGoal: 0 })
+              { className: Object(c.a)(Ne.a.EntryColumn, Ne.a.DataCol) },
+              n.a.createElement(Ke, { nCount: r, nTotal: m, nGoal: 0 })
             ),
             n.a.createElement(
               "div",
-              { className: Object(c.a)(Re.a.EntryColumn, Re.a.DataCol) },
-              n.a.createElement(Xe, { nCount: l, nTotal: u, nGoal: u })
+              { className: Object(c.a)(Ne.a.EntryColumn, Ne.a.DataCol) },
+              n.a.createElement(Ke, { nCount: l, nTotal: u, nGoal: u })
             ),
             n.a.createElement(
               "div",
-              { className: Object(c.a)(Re.a.EntryColumn, Re.a.DataCol) },
-              n.a.createElement(Xe, { nCount: p, nTotal: u, nGoal: 0 })
+              { className: Object(c.a)(Ne.a.EntryColumn, Ne.a.DataCol) },
+              n.a.createElement(Ke, { nCount: p, nTotal: u, nGoal: 0 })
             ),
             n.a.createElement(
               "div",
-              { className: Object(c.a)(Re.a.EntryColumn, Re.a.DataCol) },
-              n.a.createElement($e, { bIsVisible: d })
+              { className: Object(c.a)(Ne.a.EntryColumn, Ne.a.DataCol) },
+              n.a.createElement(Je, { bIsVisible: d })
             ),
             n.a.createElement(
               "div",
-              { className: Object(c.a)(Re.a.EntryColumn, Re.a.DataCol) },
-              n.a.createElement($e, { bIsVisible: h })
+              { className: Object(c.a)(Ne.a.EntryColumn, Ne.a.DataCol) },
+              n.a.createElement(Je, { bIsVisible: h })
             )
           );
         },
-        Je = function (e) {
-          return s.createElement(we.a, {
+        et = function (e) {
+          return s.createElement(ke.a, {
             message: function (e) {
               var t,
                 a,
-                o = pe.Get().GetLoadedDraftObjs();
+                o = he.Get().GetLoadedDraftObjs();
               return (
                 !Boolean(
                   (null ===
@@ -10748,48 +10791,48 @@
                     ? void 0
                     : t.length) > 0
                 ) ||
-                (e.pathname != la.DashboardFAQ(u.b.VANITY_ID) &&
+                (e.pathname != ha.DashboardFAQ(u.b.VANITY_ID) &&
                   !(null === (a = e.pathname) || void 0 === a
                     ? void 0
                     : a.startsWith(
-                        la.ViewFAQ(u.b.VANITY_ID, "").slice(0, -1)
+                        ha.ViewFAQ(u.b.VANITY_ID, "").slice(0, -1)
                       ))) ||
-                Object(Oe.f)("#EventEditor_UnsavedChanges")
+                Object(Fe.f)("#EventEditor_UnsavedChanges")
               );
             },
           });
         },
-        Ze = a("Yamg"),
-        et = a("kLLr"),
-        tt = a("I/R6"),
-        at = a("4P4B"),
-        ot = a("IjL/"),
-        it = a("fpVW"),
-        st = a.n(it),
-        nt = a("NrWE"),
-        rt = a("BXmN"),
-        lt = a.n(rt),
-        pt = a("X3Ds"),
-        dt = function (e) {
+        tt = a("Yamg"),
+        at = a("kLLr"),
+        ot = a("I/R6"),
+        it = a("4P4B"),
+        st = a("IjL/"),
+        nt = a("fpVW"),
+        rt = a.n(nt),
+        lt = a("NrWE"),
+        pt = a("BXmN"),
+        dt = a.n(pt),
+        ht = a("X3Ds"),
+        ct = function (e) {
           return n.a.createElement(
-            ze.a,
-            { toolTipContent: Object(Oe.f)("#FAQEditor_DeleteAction_ttip") },
+            Ee.a,
+            { toolTipContent: Object(Fe.f)("#FAQEditor_DeleteAction_ttip") },
             n.a.createElement(
               "div",
               {
-                className: Object(c.a)(it.EditPreviewButton, it.Delete),
+                className: Object(c.a)(nt.EditPreviewButton, nt.Delete),
                 onClick: function (t) {
-                  Object(De.d)(
-                    n.a.createElement(ht, { draft: e.draft }),
-                    Object(pt.m)(t)
+                  Object(Me.d)(
+                    n.a.createElement(ut, { draft: e.draft }),
+                    Object(ht.m)(t)
                   );
                 },
               },
-              Object(Oe.f)("#FAQEditor_DeleteAction")
+              Object(Fe.f)("#FAQEditor_DeleteAction")
             )
           );
         },
-        ht = function (e) {
+        ut = function (e) {
           var t = e.draft,
             a = function () {
               return e.closeModal && e.closeModal();
@@ -10803,60 +10846,60 @@
             h = n.a.createElement(
               "div",
               null,
-              Object(Oe.f)("#FAQEditor_DeleteDesc")
+              Object(Fe.f)("#FAQEditor_DeleteDesc")
             );
           return (
             s
-              ? (h = n.a.createElement(Me.a, {
+              ? (h = n.a.createElement(Oe.a, {
                   position: "center",
                   size: "medium",
-                  string: Object(Oe.f)("#FAQEditor_DeletingInProgress"),
+                  string: Object(Fe.f)("#FAQEditor_DeletingInProgress"),
                 }))
               : p &&
                 (h = n.a.createElement(
                   "div",
                   null,
-                  Object(Oe.f)(
+                  Object(Fe.f)(
                     "Error_Description",
                     p,
-                    Object(Oe.f)("#Error_GenericFailureDescription")
+                    Object(Fe.f)("#Error_GenericFailureDescription")
                   )
                 )),
             n.a.createElement(
-              ot.a,
+              st.a,
               null,
               n.a.createElement(
-                Pe.h,
+                qe.h,
                 { onEscKeypress: a },
                 n.a.createElement(
-                  Te.f,
+                  De.f,
                   null,
                   n.a.createElement(
-                    Te.l,
+                    De.l,
                     null,
-                    Object(Oe.f)("#FAQEditor_DeleteAction")
+                    Object(Fe.f)("#FAQEditor_DeleteAction")
                   ),
                   n.a.createElement(
-                    Te.b,
+                    De.b,
                     null,
-                    n.a.createElement(Te.c, null, h)
+                    n.a.createElement(De.c, null, h)
                   ),
                   n.a.createElement(
-                    Te.k,
+                    De.k,
                     null,
-                    n.a.createElement(Te.o, {
+                    n.a.createElement(De.o, {
                       onCancel: a,
                       bOKDisabled: Boolean(s || p),
-                      strOKText: Object(Oe.f)("#FAQEditor_DeleteAction"),
+                      strOKText: Object(Fe.f)("#FAQEditor_DeleteAction"),
                       strCancelText: Boolean(s || p)
-                        ? Object(Oe.f)("#Button_OK")
+                        ? Object(Fe.f)("#Button_OK")
                         : void 0,
                       onOK: function () {
                         return Object(o.b)(void 0, void 0, void 0, function () {
                           return Object(o.e)(this, function (e) {
                             return (
                               r(!0),
-                              pe
+                              he
                                 .Get()
                                 .DeleteFAQ(t.GetFAQID())
                                 .then(function (e) {
@@ -10865,13 +10908,13 @@
                                       u.c.COMMUNITY_BASE_URL.substr(
                                         0,
                                         u.c.COMMUNITY_BASE_URL.length - 1
-                                      ) + xe(fe.k_eCommunityDashboard);
+                                      ) + Ie(be.k_eCommunityDashboard);
                                     window.location.href = t;
                                   }
                                   d(e);
                                 })
                                 .catch(function (e) {
-                                  var t = Object(P.a)(e);
+                                  var t = Object(q.a)(e);
                                   console.error(
                                     "FAQDeleteDialog: hit error: " +
                                       t.strErrorMsg,
@@ -10894,34 +10937,34 @@
             )
           );
         },
-        ct = a("yKSN"),
-        ut = a("P2lf"),
-        mt = "title",
-        ft = "content";
-      var gt = function (e) {
+        mt = a("yKSN"),
+        ft = a("P2lf"),
+        gt = "title",
+        yt = "content";
+      var bt = function (e) {
           var t = e.draft,
             a = e.eLanguage;
           return s.createElement(
             "div",
-            { className: it.FlexRowContainer },
-            s.createElement(yt, { draft: t, eLanguage: a }),
-            s.createElement(ct.b, {
-              strToolTip: Object(Oe.f)("#FAQEditor_Loc_Import_ttip"),
-              strLabel: Object(Oe.f)("#EventEditor_Loc_Import_Short"),
+            { className: nt.FlexRowContainer },
+            s.createElement(vt, { draft: t, eLanguage: a }),
+            s.createElement(mt.b, {
+              strToolTip: Object(Fe.f)("#FAQEditor_Loc_Import_ttip"),
+              strLabel: Object(Fe.f)("#EventEditor_Loc_Import_Short"),
               fnOnImportLocData: function (e, a) {
                 return (function (e, t, a) {
                   var o = new Set(),
                     i = t.GetSortedTokenList();
                   return (
-                    Object(A.G)(function () {
+                    Object(T.G)(function () {
                       a.forEach(function (a) {
                         i.forEach(function (o) {
                           var i = t.GetLocalization(o, a) || "";
-                          if (o === mt) {
+                          if (o === gt) {
                             var s = e.GetDraftTitle(a);
                             (i || (s && s.length > 0)) && e.SetDraftTitle(a, i);
                           }
-                          if (o === ft) {
+                          if (o === yt) {
                             var n = e.GetDraftContent(a);
                             (i || (n && n.length > 0)) &&
                               e.SetDraftContent(a, i);
@@ -10937,31 +10980,88 @@
             })
           );
         },
-        yt = function (e) {
+        wt = function (e) {
           var t = e.draft,
-            a = e.eLanguage;
+            a =
+              (e.eLanguage,
+              function () {
+                return he.Get().ExportEnglishDraftToCrowdin(t.GetFAQID());
+              }),
+            o = function () {
+              return he.Get().ImportNonEnglishDraftsFromCrowdin(t.GetFAQID());
+            };
           return s.createElement(
-            ze.a,
-            { toolTipContent: Object(Oe.f)("#FAQEditor_Loc_Export_ttip") },
+            "div",
+            { className: nt.FlexRowContainer },
             s.createElement(
               "div",
               {
-                className: it.EditPreviewButton,
+                className: nt.EditPreviewButton,
                 onClick: function (e) {
-                  Object(De.d)(
+                  Object(Me.d)(
+                    s.createElement(qe.d, {
+                      strTitle: Object(Fe.f)(
+                        "#EventEditor_Loc_CrowdinIntegration_ExportTitle"
+                      ),
+                      strDescription: Object(Fe.f)(
+                        "#EventEditor_Loc_Export_Crowdin_Confirm"
+                      ),
+                      onOK: a,
+                    }),
+                    Object(ht.m)(e)
+                  );
+                },
+              },
+              Object(Fe.f)("#EventEditor_Loc_Export_Short")
+            ),
+            s.createElement(
+              "div",
+              {
+                className: nt.EditPreviewButton,
+                onClick: function (e) {
+                  Object(Me.d)(
+                    s.createElement(qe.d, {
+                      strTitle: Object(Fe.f)(
+                        "#EventEditor_Loc_CrowdinIntegration_ImportTitle"
+                      ),
+                      strDescription: Object(Fe.f)(
+                        "#EventEditor_Loc_Import_Crowdin_Confirm"
+                      ),
+                      onOK: o,
+                    }),
+                    Object(ht.m)(e)
+                  );
+                },
+              },
+              Object(Fe.f)("#EventEditor_Loc_Import_Short")
+            )
+          );
+        },
+        vt = function (e) {
+          var t = e.draft,
+            a = e.eLanguage;
+          return s.createElement(
+            Ee.a,
+            { toolTipContent: Object(Fe.f)("#FAQEditor_Loc_Export_ttip") },
+            s.createElement(
+              "div",
+              {
+                className: nt.EditPreviewButton,
+                onClick: function (e) {
+                  Object(Me.d)(
                     s.createElement(
-                      Pe.d,
+                      qe.d,
                       {
-                        strTitle: Object(Oe.f)("#EventEditor_Loc_Export"),
+                        strTitle: Object(Fe.f)("#EventEditor_Loc_Export"),
                         bAlertDialog: !0,
                       },
-                      s.createElement(ct.a, {
+                      s.createElement(mt.a, {
                         fnGetLocData: function () {
                           return (function (e, t) {
-                            for (var a, o, i = new ut.b(), s = 0; s < 30; ++s)
+                            for (var a, o, i = new ft.b(), s = 0; s < 30; ++s)
                               (e.BHasSomeTextForLanguage(s) || 0 == t) &&
                                 (i.SetLocalization(
-                                  mt,
+                                  gt,
                                   s,
                                   null !== (a = e.GetDraftTitle(s)) &&
                                     void 0 !== a
@@ -10969,7 +11069,7 @@
                                     : ""
                                 ),
                                 i.SetLocalization(
-                                  ft,
+                                  yt,
                                   s,
                                   null !== (o = e.GetDraftContent(s)) &&
                                     void 0 !== o
@@ -10985,46 +11085,46 @@
                         lang: a,
                       })
                     ),
-                    Object(pt.m)(e)
+                    Object(ht.m)(e)
                   );
                 },
               },
-              Object(Oe.f)("#EventEditor_Loc_Export_Short")
+              Object(Fe.f)("#EventEditor_Loc_Export_Short")
             )
           );
         },
-        bt = a("Qcoi"),
-        wt = Object(i.a)(function (e) {
+        St = a("Qcoi"),
+        kt = Object(i.a)(function (e) {
           var t = e.draft.BNeedsSaving();
           return n.a.createElement(
-            ze.a,
+            Ee.a,
             {
-              toolTipContent: Object(Oe.f)(
+              toolTipContent: Object(Fe.f)(
                 t ? "#FAQPublish_SaveRequire_ttip" : "#FAQPublish_Publish_ttip"
               ),
             },
             n.a.createElement(
               "div",
               {
-                className: it.EditPreviewButton,
+                className: nt.EditPreviewButton,
                 onClick: function (a) {
-                  Object(De.d)(
+                  Object(Me.d)(
                     t
-                      ? n.a.createElement(Pe.f, {
-                          strDescription: Object(Oe.f)(
+                      ? n.a.createElement(qe.f, {
+                          strDescription: Object(Fe.f)(
                             "#FAQPublish_SaveRequire_ttip"
                           ),
                         })
-                      : n.a.createElement(vt, { draft: e.draft }),
-                    Object(pt.m)(a)
+                      : n.a.createElement(xt, { draft: e.draft }),
+                    Object(ht.m)(a)
                   );
                 },
               },
-              Object(Oe.f)("#FAQPublish_Publish")
+              Object(Fe.f)("#FAQPublish_Publish")
             )
           );
         }),
-        vt = function (e) {
+        xt = function (e) {
           var t,
             a,
             i = e.draft,
@@ -11040,7 +11140,7 @@
             u = n.a.useState(void 0),
             m = u[0],
             f = u[1],
-            g = ue(i.GetFAQID()),
+            g = ge(i.GetFAQID()),
             y = g[0],
             b = g[1],
             w = n.a.useState(new Array()),
@@ -11063,25 +11163,25 @@
             x = null;
           if (b)
             if (l)
-              x = n.a.createElement(Me.a, {
+              x = n.a.createElement(Oe.a, {
                 position: "center",
                 size: "medium",
-                string: Object(Oe.f)("#FAQPublish_Publishing"),
+                string: Object(Fe.f)("#FAQPublish_Publishing"),
               });
             else if (h)
               x = n.a.createElement(
                 "div",
                 null,
-                Object(Oe.f)("#FAQPublish_Success")
+                Object(Fe.f)("#FAQPublish_Success")
               );
             else if (m)
               x = n.a.createElement(
                 "div",
                 null,
-                Object(Oe.f)(
+                Object(Fe.f)(
                   "#Error_Description",
                   m,
-                  Object(Oe.f)("#Error_GenericFailureDescription")
+                  Object(Fe.f)("#Error_GenericFailureDescription")
                 )
               );
             else if (y) {
@@ -11099,7 +11199,7 @@
                   })) || void 0 === a
                   ? void 0
                   : a.map(function (e) {
-                      return n.a.createElement(St, {
+                      return n.a.createElement(_t, {
                         key: "selrow" + e.language + i.GetFAQID(),
                         draft: i,
                         eLang: e.language,
@@ -11112,13 +11212,13 @@
                 n.a.createElement(
                   "div",
                   null,
-                  Object(Oe.f)("#FAQPublish_Desc")
+                  Object(Fe.f)("#FAQPublish_Desc")
                 ),
                 n.a.createElement("br", null),
                 n.a.createElement(
                   "div",
                   null,
-                  Object(Oe.f)("#FAQPublish_Desc2")
+                  Object(Fe.f)("#FAQPublish_Desc2")
                 ),
                 n.a.createElement("br", null),
                 null != _
@@ -11126,59 +11226,59 @@
                   : n.a.createElement(
                       "div",
                       null,
-                      Object(Oe.f)("#FAQPublish_None")
+                      Object(Fe.f)("#FAQPublish_None")
                     )
               );
             } else
               x = n.a.createElement(
                 "div",
                 null,
-                Object(Oe.f)("#FAQPublish_LoadError")
+                Object(Fe.f)("#FAQPublish_LoadError")
               );
           else
-            x = n.a.createElement(Me.a, {
+            x = n.a.createElement(Oe.a, {
               size: "small",
               position: "center",
-              string: Object(Oe.f)("#FAQPublish_PublishWait"),
+              string: Object(Fe.f)("#FAQPublish_PublishWait"),
             });
           return n.a.createElement(
-            ot.a,
+            st.a,
             null,
             n.a.createElement(
-              Pe.h,
+              qe.h,
               { onEscKeypress: s },
               n.a.createElement(
-                Te.f,
+                De.f,
                 null,
                 n.a.createElement(
-                  Te.l,
+                  De.l,
                   null,
-                  Object(Oe.f)("#FAQPublish_Publish")
+                  Object(Fe.f)("#FAQPublish_Publish")
                 ),
-                n.a.createElement(Te.b, null, n.a.createElement(Te.c, null, x)),
+                n.a.createElement(De.b, null, n.a.createElement(De.c, null, x)),
                 n.a.createElement(
-                  Te.k,
+                  De.k,
                   null,
-                  n.a.createElement(Te.o, {
+                  n.a.createElement(De.o, {
                     onCancel: s,
                     bOKDisabled: Boolean(l || h || m || 0 == v.length),
-                    strOKText: Object(Oe.f)("#FAQPublish_Publish"),
+                    strOKText: Object(Fe.f)("#FAQPublish_Publish"),
                     strCancelText: Boolean(l || h || m)
-                      ? Object(Oe.f)("#Button_OK")
+                      ? Object(Fe.f)("#Button_OK")
                       : void 0,
                     onOK: function () {
                       return Object(o.b)(void 0, void 0, void 0, function () {
                         return Object(o.e)(this, function (e) {
                           return (
                             p(!0),
-                            pe
+                            he
                               .Get()
                               .PublishDraftByLanguage(i.GetFAQID(), v)
                               .then(function (e) {
                                 1 == e && c(!0), f(e);
                               })
                               .catch(function (e) {
-                                var t = Object(P.a)(e);
+                                var t = Object(q.a)(e);
                                 console.error(
                                   "FAQPublishDialog: hit error: " +
                                     t.strErrorMsg,
@@ -11200,50 +11300,50 @@
             )
           );
         },
-        St = function (e) {
+        _t = function (e) {
           var t,
             a = e.draft,
             o = e.eLang,
             i = e.fnOnChecked,
             s = a.GetLastSavedDraftVersion(o),
-            r = et.a.InitFromAccountID(Number.parseInt(s.author_account_id)),
-            l = Object(bt.b)(r.ConvertTo64BitString()),
+            r = at.a.InitFromAccountID(Number.parseInt(s.author_account_id)),
+            l = Object(St.b)(r.ConvertTo64BitString()),
             p = (l[0], l[1]),
-            d = Object(Oe.f)(
+            d = Object(Fe.f)(
               "#FAQPublish_DraftInfo",
-              Object(Oe.f)("#Language_" + Object(x.a)(o)),
-              Object(Oe.k)(s.timestamp) + " @ " + Object(Oe.m)(s.timestamp),
+              Object(Fe.f)("#Language_" + Object(x.a)(o)),
+              Object(Fe.k)(s.timestamp) + " @ " + Object(Fe.m)(s.timestamp),
               null !== (t = null == p ? void 0 : p.persona_name) && void 0 !== t
                 ? t
                 : s.author_account_id
             );
-          return n.a.createElement(Te.e, {
+          return n.a.createElement(De.e, {
             label: d,
             onChange: function (e) {
               return i(e, o);
             },
           });
         },
-        kt = function (e) {
+        It = function (e) {
           return n.a.createElement(
-            ze.a,
-            { toolTipContent: Object(Oe.f)("#FAQEditor_ChangeVisible_ttip") },
+            Ee.a,
+            { toolTipContent: Object(Fe.f)("#FAQEditor_ChangeVisible_ttip") },
             n.a.createElement(
               "div",
               {
-                className: it.EditPreviewButton,
+                className: nt.EditPreviewButton,
                 onClick: function (t) {
-                  Object(De.d)(
-                    n.a.createElement(xt, { draft: e.draft }),
-                    Object(pt.m)(t)
+                  Object(Me.d)(
+                    n.a.createElement(At, { draft: e.draft }),
+                    Object(ht.m)(t)
                   );
                 },
               },
-              Object(Oe.f)("#FAQEditor_EditVisible")
+              Object(Fe.f)("#FAQEditor_EditVisible")
             )
           );
         },
-        xt = function (e) {
+        At = function (e) {
           var t = e.draft,
             a = function () {
               return e.closeModal && e.closeModal();
@@ -11257,7 +11357,7 @@
             h = n.a.useState(void 0),
             c = h[0],
             u = h[1],
-            m = pe.Get().GetFAQArticleSummary(t.GetFAQID()),
+            m = he.Get().GetFAQArticleSummary(t.GetFAQID()),
             f = n.a.useState(m.visible_in_global_realm),
             g = f[0],
             y = f[1],
@@ -11270,19 +11370,19 @@
               n.a.createElement(
                 "div",
                 null,
-                Object(Oe.f)("#FAQEditor_ChangeVisible_Desc")
+                Object(Fe.f)("#FAQEditor_ChangeVisible_Desc")
               ),
-              n.a.createElement(Te.e, {
-                label: Object(Oe.f)("#FAQEditor_VisibleInGlobal"),
+              n.a.createElement(De.e, {
+                label: Object(Fe.f)("#FAQEditor_VisibleInGlobal"),
                 checked: g,
                 onChange: function (e) {
                   return y(e);
                 },
               }),
-              n.a.createElement(Te.e, {
-                label: Object(Oe.f)("#FAQEditor_VisibleInChina"),
+              n.a.createElement(De.e, {
+                label: Object(Fe.f)("#FAQEditor_VisibleInChina"),
                 checked: w,
-                tooltip: Object(Oe.f)("#FAQEditor_VisibleInChina_ttip"),
+                tooltip: Object(Fe.f)("#FAQEditor_VisibleInChina_ttip"),
                 onChange: function (e) {
                   return v(e);
                 },
@@ -11290,69 +11390,69 @@
             );
           return (
             s
-              ? (S = n.a.createElement(Me.a, {
+              ? (S = n.a.createElement(Oe.a, {
                   position: "center",
                   size: "medium",
-                  string: Object(Oe.f)("#FAQEditor_ChangeVisible_InProgress"),
+                  string: Object(Fe.f)("#FAQEditor_ChangeVisible_InProgress"),
                 }))
               : p
               ? (S = n.a.createElement(
                   "div",
                   null,
-                  Object(Oe.f)("#FAQEditor_ChangeVisible_Success")
+                  Object(Fe.f)("#FAQEditor_ChangeVisible_Success")
                 ))
               : c &&
                 (S = n.a.createElement(
                   "div",
                   null,
-                  Object(Oe.f)(
+                  Object(Fe.f)(
                     "Error_Description",
                     c,
-                    Object(Oe.f)("#Error_GenericFailureDescription")
+                    Object(Fe.f)("#Error_GenericFailureDescription")
                   )
                 )),
             n.a.createElement(
-              ot.a,
+              st.a,
               null,
               n.a.createElement(
-                Pe.h,
+                qe.h,
                 { onEscKeypress: a },
                 n.a.createElement(
-                  Te.f,
+                  De.f,
                   null,
                   n.a.createElement(
-                    Te.l,
+                    De.l,
                     null,
-                    Object(Oe.f)("#FAQEditor_ChangeVisible")
+                    Object(Fe.f)("#FAQEditor_ChangeVisible")
                   ),
                   n.a.createElement(
-                    Te.b,
+                    De.b,
                     null,
-                    n.a.createElement(Te.c, null, S)
+                    n.a.createElement(De.c, null, S)
                   ),
                   n.a.createElement(
-                    Te.k,
+                    De.k,
                     null,
-                    n.a.createElement(Te.o, {
+                    n.a.createElement(De.o, {
                       onCancel: a,
                       bOKDisabled: Boolean(s || p || c),
-                      strOKText: Object(Oe.f)("#FAQEditor_ChangeVisible"),
+                      strOKText: Object(Fe.f)("#FAQEditor_ChangeVisible"),
                       strCancelText: Boolean(s || p || c)
-                        ? Object(Oe.f)("#Button_OK")
+                        ? Object(Fe.f)("#Button_OK")
                         : void 0,
                       onOK: function () {
                         return Object(o.b)(void 0, void 0, void 0, function () {
                           return Object(o.e)(this, function (e) {
                             return (
                               r(!0),
-                              pe
+                              he
                                 .Get()
                                 .UpdateVisibility(t.GetFAQID(), g, w)
                                 .then(function (e) {
                                   1 == e && d(!0), u(e);
                                 })
                                 .catch(function (e) {
-                                  var t = Object(P.a)(e);
+                                  var t = Object(q.a)(e);
                                   console.error(
                                     "FAQChangeVisibilityDialog: hit error: " +
                                       t.strErrorMsg,
@@ -11375,8 +11475,8 @@
             )
           );
         },
-        _t = a("ggIn"),
-        It = Object(i.a)(function (e) {
+        Ct = a("ggIn"),
+        Tt = Object(i.a)(function (e) {
           var t,
             a,
             o,
@@ -11384,7 +11484,7 @@
             s,
             r = e.draft,
             l = e.eLanguage,
-            p = ue(r.GetFAQID()),
+            p = ge(r.GetFAQID()),
             d = p[0];
           if (!p[1]) return null;
           var h =
@@ -11416,102 +11516,115 @@
                       })) || void 0 === s
                 ? void 0
                 : s.map(function (e) {
-                    return n.a.createElement(At, {
+                    return n.a.createElement(Pt, {
                       key: e.language,
                       info: e,
                       rtEnglishUpdateTime: h,
                     });
                   });
           return n.a.createElement(
-            ot.a,
+            st.a,
             null,
             n.a.createElement(
               "div",
-              { className: _t.LeftMenu },
+              { className: Ct.LeftMenu },
               n.a.createElement(
                 "div",
-                { className: _t.Section },
+                { className: Ct.Section },
                 n.a.createElement(
                   "div",
-                  { className: _t.SectionTitle },
-                  Object(Oe.f)("#FAQDashboard_VisibilityColumn"),
+                  { className: Ct.SectionTitle },
+                  Object(Fe.f)("#FAQDashboard_VisibilityColumn"),
                   " "
                 ),
                 n.a.createElement(
                   "div",
-                  { className: _t.SectionContents },
+                  { className: Ct.SectionContents },
                   n.a.createElement(
                     "div",
-                    { className: _t.VisibilityCtn },
+                    { className: Ct.VisibilityCtn },
                     n.a.createElement(
                       "div",
-                      { className: Object(c.a)(_t.StatusRow, _t.Global) },
-                      Object(Oe.f)("#FAQDashboard_VisibleInGlobalRealmLabel"),
+                      { className: Object(c.a)(Ct.StatusRow, Ct.Global) },
+                      Object(Fe.f)("#FAQDashboard_VisibleInGlobalRealmLabel"),
                       " ",
-                      n.a.createElement($e, {
+                      n.a.createElement(Je, {
                         bIsVisible: d.visible_in_global_realm,
                       })
                     ),
                     n.a.createElement(
                       "div",
-                      { className: Object(c.a)(_t.StatusRow, _t.China) },
-                      Object(Oe.f)("#FAQDashboard_VisibleInChinaRealmLabel"),
+                      { className: Object(c.a)(Ct.StatusRow, Ct.China) },
+                      Object(Fe.f)("#FAQDashboard_VisibleInChinaRealmLabel"),
                       " ",
-                      n.a.createElement($e, {
+                      n.a.createElement(Je, {
                         bIsVisible: d.visible_in_china_realm,
                       })
                     ),
                     n.a.createElement(
                       "div",
-                      { className: _t.StatusBtnCtn },
-                      n.a.createElement(kt, { draft: r })
+                      { className: Ct.StatusBtnCtn },
+                      n.a.createElement(It, { draft: r })
                     )
                   ),
                   u &&
                     n.a.createElement(
                       "div",
-                      { className: _t.PublishCtn },
+                      { className: Ct.PublishCtn },
                       n.a.createElement(
                         "div",
-                        { className: _t.PublishStatus },
-                        Object(Oe.f)("#FAQStatus_DraftVersionsDesc")
+                        { className: Ct.PublishStatus },
+                        Object(Fe.f)("#FAQStatus_DraftVersionsDesc")
                       ),
                       n.a.createElement(
                         "div",
-                        { className: _t.PublishBtn },
-                        n.a.createElement(wt, { draft: r })
+                        { className: Ct.PublishBtn },
+                        n.a.createElement(kt, { draft: r })
                       )
                     )
                 )
               ),
               n.a.createElement(
                 "div",
-                { className: _t.Section },
+                { className: Ct.Section },
                 n.a.createElement(
                   "div",
-                  { className: _t.SectionTitle },
-                  Object(Oe.f)("#FAQDashboard_LocalizationSection"),
+                  { className: Ct.SectionTitle },
+                  Object(Fe.f)("#FAQDashboard_LocalizationSection"),
                   " "
                 ),
                 n.a.createElement(
                   "div",
-                  { className: _t.SectionContents },
-                  Object(Oe.f)("#FAQDashboard_LocalizationSectionDesc"),
-                  n.a.createElement("br", null),
-                  n.a.createElement(gt, { draft: r, eLanguage: l })
+                  { className: Ct.SectionContents },
+                  n.a.createElement(
+                    "div",
+                    { className: Ct.SectionDescription },
+                    Object(Fe.f)("#FAQDashboard_LocalizationSectionDesc")
+                  ),
+                  n.a.createElement(bt, { draft: r, eLanguage: l })
+                ),
+                n.a.createElement(
+                  "div",
+                  { className: Ct.SectionContents },
+                  n.a.createElement(
+                    "div",
+                    { className: Ct.SectionDescription },
+                    Object(Fe.f)("#EventEditor_Loc_CrowdinIntegration_Desc")
+                  ),
+                  n.a.createElement(wt, { draft: r, eLanguage: l })
                 )
               ),
               n.a.createElement(
                 "div",
-                { className: _t.Section },
+                { className: Ct.Section },
                 n.a.createElement(
                   "div",
-                  { className: _t.SectionTitle },
-                  Object(Oe.f)("#FAQStatus_LocalizedVersionStatusHeader")
+                  { className: Ct.SectionTitle },
+                  Object(Fe.f)("#FAQStatus_LocalizedVersionStatusHeader")
                 ),
                 n.a.createElement(
                   "table",
-                  { className: _t.FaqStatusTable },
+                  { className: Ct.FaqStatusTable },
                   n.a.createElement(
                     "thead",
                     null,
@@ -11521,17 +11634,17 @@
                       n.a.createElement(
                         "th",
                         null,
-                        Object(Oe.f)("#LanguageTitle")
+                        Object(Fe.f)("#LanguageTitle")
                       ),
                       n.a.createElement(
                         "th",
                         null,
-                        Object(Oe.f)("#FAQStatus_LastUpdated")
+                        Object(Fe.f)("#FAQStatus_LastUpdated")
                       ),
                       n.a.createElement(
                         "th",
                         null,
-                        Object(Oe.f)("#FAQStatus_LastPublished")
+                        Object(Fe.f)("#FAQStatus_LastPublished")
                       )
                     )
                   ),
@@ -11540,13 +11653,13 @@
               ),
               n.a.createElement(
                 "div",
-                { className: _t.Section },
-                n.a.createElement(dt, { draft: r })
+                { className: Ct.Section },
+                n.a.createElement(ct, { draft: r })
               )
             )
           );
         }),
-        At = Object(i.a)(function (e) {
+        Pt = Object(i.a)(function (e) {
           var t = e.info,
             a = e.rtEnglishUpdateTime,
             o = !!a && a > t.last_update_timestamp,
@@ -11557,12 +11670,12 @@
             n.a.createElement(
               "td",
               null,
-              Object(Oe.f)("#Language_" + Object(x.a)(t.language))
+              Object(Fe.f)("#Language_" + Object(x.a)(t.language))
             ),
             n.a.createElement(
               "td",
               null,
-              n.a.createElement(je, {
+              n.a.createElement(Ge, {
                 rtTimestamp: t.last_update_timestamp,
                 bShowAsWarning: o,
               })
@@ -11570,30 +11683,30 @@
             n.a.createElement(
               "td",
               null,
-              n.a.createElement(je, {
+              n.a.createElement(Ge, {
                 rtTimestamp: t.last_publish_timestamp,
                 bShowAsWarning: i,
               })
             )
           );
         }),
-        Ct = (a("jZUi"), a("vBFs")),
-        Tt = a("6h0J"),
-        Pt = a.n(Tt),
-        Dt = a("wst7"),
-        qt = a("hvYe"),
+        Dt = (a("jZUi"), a("vBFs")),
+        qt = a("6h0J"),
         Mt = a.n(qt),
-        zt = a("aXcg"),
-        Ot = Object(i.a)(function (e) {
+        zt = a("wst7"),
+        Ot = a("hvYe"),
+        Et = a.n(Ot),
+        Ft = a("aXcg"),
+        Rt = Object(i.a)(function (e) {
           var t = e.draft.BNeedsSaving();
           return n.a.createElement(
             "div",
             {
               className: "btn_green_steamui btn_medium",
               onClick: function (t) {
-                return Object(De.d)(
-                  n.a.createElement(Et, { draft: e.draft }),
-                  Object(pt.m)(t)
+                return Object(Me.d)(
+                  n.a.createElement(Wt, { draft: e.draft }),
+                  Object(ht.m)(t)
                 );
               },
             },
@@ -11602,14 +11715,14 @@
               null,
               !t &&
                 n.a.createElement("img", {
-                  className: zt.SavedImage,
-                  src: Mt.a,
+                  className: Ft.SavedImage,
+                  src: Et.a,
                 }),
-              Object(Oe.f)(t ? "#Button_Save" : "#Button_Saved")
+              Object(Fe.f)(t ? "#Button_Save" : "#Button_Saved")
             )
           );
         }),
-        Et = function (e) {
+        Wt = function (e) {
           var t = e.draft,
             a = e.closeModal,
             i = n.a.useState(!0),
@@ -11637,7 +11750,7 @@
                           d(2),
                           console.log(
                             "FAQSaveProgressDialog hit exception " +
-                              Object(P.a)(a).strErrorMsg
+                              Object(q.a)(a).strErrorMsg
                           ),
                           [3, 5]
                         );
@@ -11652,21 +11765,21 @@
               [t]
             ),
             n.a.createElement(
-              Pe.e,
+              qe.e,
               { bAllowFullSize: !0, onCancel: a, closeModal: a },
               n.a.createElement(
-                Te.l,
+                De.l,
                 null,
                 s
                   ? n.a.createElement(
                       "div",
                       null,
-                      Object(Oe.f)("#FAQSave_Saving")
+                      Object(Fe.f)("#FAQSave_Saving")
                     )
                   : n.a.createElement(
                       "div",
                       null,
-                      Object(Oe.f)(
+                      Object(Fe.f)(
                         Boolean(1 == p)
                           ? "#FAQSave_SaveSuccess"
                           : "#FAQSave_Error"
@@ -11675,10 +11788,10 @@
                     )
               ),
               n.a.createElement(
-                Te.b,
+                De.b,
                 null,
                 s
-                  ? n.a.createElement(Me.a, {
+                  ? n.a.createElement(Oe.a, {
                       size: "medium",
                       position: "center",
                     })
@@ -11689,62 +11802,62 @@
                         ? n.a.createElement(
                             "div",
                             null,
-                            Object(Oe.f)("#FAQSave_SaveSuccess_desc")
+                            Object(Fe.f)("#FAQSave_SaveSuccess_desc")
                           )
                         : n.a.createElement(
                             "div",
                             null,
-                            Object(Oe.f)(
+                            Object(Fe.f)(
                               "#Error_Description",
                               p,
-                              Object(Oe.f)("#Error_GenericFailureDescription")
+                              Object(Fe.f)("#Error_GenericFailureDescription")
                             )
                           )
                     )
               ),
               n.a.createElement(
-                Te.k,
+                De.k,
                 null,
                 !s &&
                   n.a.createElement(
-                    Te.r,
+                    De.r,
                     { onClick: a },
-                    Object(Oe.f)("#Button_OK")
+                    Object(Fe.f)("#Button_OK")
                   )
               )
             )
           );
         },
-        Ft = a("eYkW"),
-        Rt = a.n(Ft),
-        Wt = Object(i.a)(function (e) {
+        Nt = a("eYkW"),
+        Lt = a.n(Nt),
+        Ht = Object(i.a)(function (e) {
           var t,
             a = e.draft,
             o = e.bPreview,
             i = a.BHasPublished();
           return n.a.createElement(
-            ot.a,
+            st.a,
             null,
             n.a.createElement(
               "div",
               {
                 className: Object(c.a)(
                   ((t = {}),
-                  (t[Dt.EventEditorTopBarContainer] = !0),
-                  (t[Dt.EventUnPublished] = !o && !i),
-                  (t[Dt.EventPublished] = !o && i),
-                  (t[Rt.a.FAQPreview] = o),
+                  (t[zt.EventEditorTopBarContainer] = !0),
+                  (t[zt.EventUnPublished] = !o && !i),
+                  (t[zt.EventPublished] = !o && i),
+                  (t[Lt.a.FAQPreview] = o),
                   t)
                 ),
               },
               n.a.createElement(
-                ke,
+                _e,
                 {
-                  route: o ? fe.k_eCommunityEdit : fe.k_eCommunityDashboard,
+                  route: o ? be.k_eCommunityEdit : be.k_eCommunityDashboard,
                   faqid: a.GetFAQID(),
-                  className: st.a.EditPreviewButton,
+                  className: rt.a.EditPreviewButton,
                 },
-                Object(Oe.f)(
+                Object(Fe.f)(
                   o ? "#FAQEditor_EditFAQ" : "#EventDisplay_EventsDashBtn"
                 )
               ),
@@ -11753,8 +11866,8 @@
                 null,
                 n.a.createElement(
                   "div",
-                  { className: Rt.a.EditorInternalNameLabel },
-                  Object(Oe.f)(
+                  { className: Lt.a.EditorInternalNameLabel },
+                  Object(Fe.f)(
                     o
                       ? "#FAQEditor_InternalName_Preview"
                       : "#FAQEditor_InternalName"
@@ -11762,14 +11875,14 @@
                 ),
                 n.a.createElement(
                   "div",
-                  { className: Rt.a.EditorInternalName },
+                  { className: Lt.a.EditorInternalName },
                   a.GetFAQInternalName(),
                   n.a.createElement("img", {
-                    src: Pt.a,
+                    src: Mt.a,
                     onClick: function (e) {
-                      return Object(De.d)(
-                        n.a.createElement(Nt, { draft: a }),
-                        Object(pt.m)(e)
+                      return Object(Me.d)(
+                        n.a.createElement(Vt, { draft: a }),
+                        Object(ht.m)(e)
                       );
                     },
                   })
@@ -11777,10 +11890,10 @@
               ),
               n.a.createElement(
                 "div",
-                { className: st.a.EventOptions },
-                n.a.createElement(Ct.a, {
-                  selectedLang: tt.a.Get().GetCurEditLanguage(),
-                  fnOnLanguageChanged: tt.a.Get().SetCurEditLanguage,
+                { className: rt.a.EventOptions },
+                n.a.createElement(Dt.a, {
+                  selectedLang: ot.a.Get().GetCurEditLanguage(),
+                  fnOnLanguageChanged: ot.a.Get().SetCurEditLanguage,
                   fnLangHasData: a.BHasSomeTextForLanguage,
                   fnIsLangSupported: function (e) {
                     return !0;
@@ -11790,19 +11903,19 @@
                 }),
                 !o &&
                   n.a.createElement(
-                    ke,
+                    _e,
                     {
-                      route: fe.k_eCommunityPreview,
+                      route: be.k_eCommunityPreview,
                       faqid: a.GetFAQID(),
-                      className: st.a.EditPreviewButton,
+                      className: rt.a.EditPreviewButton,
                     },
-                    Object(Oe.f)("#Button_Preview")
+                    Object(Fe.f)("#Button_Preview")
                   )
               )
             )
           );
         }),
-        Nt = function (e) {
+        Vt = function (e) {
           var t = e.closeModal,
             a = e.draft,
             i = n.a.useState(a.GetFAQInternalName() || ""),
@@ -11818,25 +11931,25 @@
             f = m[0],
             g = m[1];
           return n.a.createElement(
-            Pe.e,
+            qe.e,
             { bAllowFullSize: !0, onCancel: t, closeModal: t },
             n.a.createElement(
-              Te.l,
+              De.l,
               null,
-              Object(Oe.f)("#FAQEditor_ChangeInternalName")
+              Object(Fe.f)("#FAQEditor_ChangeInternalName")
             ),
             n.a.createElement(
-              Te.b,
+              De.b,
               null,
               n.a.createElement(
                 "div",
                 null,
-                Object(Oe.f)("#FAQEditor_ChangeInternalName_desc")
+                Object(Fe.f)("#FAQEditor_ChangeInternalName_desc")
               ),
               n.a.createElement("input", {
                 type: "text",
                 value: s,
-                placeholder: Object(Oe.f)("#FAQEditor_ChangeInternalName"),
+                placeholder: Object(Fe.f)("#FAQEditor_ChangeInternalName"),
                 onFocus: function (e) {
                   return e.target.select();
                 },
@@ -11847,8 +11960,8 @@
                 disabled: p,
               }),
               Boolean(p && !f) &&
-                n.a.createElement(Me.a, {
-                  string: Object(Oe.f)("#Updating"),
+                n.a.createElement(Oe.a, {
+                  string: Object(Fe.f)("#Updating"),
                   position: "center",
                   size: "medium",
                 }),
@@ -11857,29 +11970,29 @@
                   "span",
                   null,
                   1 == c
-                    ? Object(Oe.f)("#EventDisplay_Share_Success")
-                    : Object(Oe.f)(
+                    ? Object(Fe.f)("#EventDisplay_Share_Success")
+                    : Object(Fe.f)(
                         "#Error_Description",
                         c,
-                        Object(Oe.f)("#Error_GenericFailureDescription")
+                        Object(Fe.f)("#Error_GenericFailureDescription")
                       )
                 )
             ),
             n.a.createElement(
-              Te.k,
+              De.k,
               null,
-              n.a.createElement(Te.o, {
+              n.a.createElement(De.o, {
                 bOKDisabled: 0 == s.trim().length || p,
                 onCancel: t,
                 strCancelText: f
-                  ? Object(Oe.f)("#Button_Close")
-                  : Object(Oe.f)("#Button_Cancel"),
+                  ? Object(Fe.f)("#Button_Close")
+                  : Object(Fe.f)("#Button_Cancel"),
                 onOK: function () {
                   return Object(o.b)(void 0, void 0, void 0, function () {
                     return Object(o.e)(this, function (e) {
                       return (
                         d(!0),
-                        pe
+                        he
                           .Get()
                           .UpdateInternalName(a.GetFAQID(), s)
                           .then(function (e) {
@@ -11897,11 +12010,11 @@
             )
           );
         },
-        Lt = Object(i.a)(function (e) {
+        jt = Object(i.a)(function (e) {
           var t = e.draft,
             a = e.eLanguage,
             o = t.GetFAQID(),
-            i = ue(o),
+            i = ge(o),
             s = i[0],
             r = i[1],
             l =
@@ -11917,98 +12030,98 @@
                   s.visible_in_china_realm)) &&
               !!(null == l ? void 0 : l.last_publish_timestamp);
           return n.a.createElement(
-            ot.a,
+            st.a,
             null,
             n.a.createElement(
               "div",
-              { className: Object(c.a)(st.a.SaveBackground) },
+              { className: Object(c.a)(rt.a.SaveBackground) },
               n.a.createElement(
                 "div",
                 {
-                  className: st.a.FlexRowWrapFlexStartContainer,
+                  className: rt.a.FlexRowWrapFlexStartContainer,
                   style: { width: "unset", justifyContent: "center" },
                 },
-                n.a.createElement(Ot, { draft: t }),
+                n.a.createElement(Rt, { draft: t }),
                 Boolean(d) &&
                   n.a.createElement(
                     "div",
-                    { className: st.a.EditPreviewButton },
+                    { className: rt.a.EditPreviewButton },
                     n.a.createElement(
-                      ke,
-                      { faqid: o, route: fe.k_eCommunityView },
-                      Object(Oe.f)("#FAQEditir_ViewLiveFAQ")
+                      _e,
+                      { faqid: o, route: be.k_eCommunityView },
+                      Object(Fe.f)("#FAQEditir_ViewLiveFAQ")
                     )
                   )
               )
             )
           );
         }),
-        Ht = Object(i.a)(function (e) {
-          var t = ce(e.faqid),
+        Bt = Object(i.a)(function (e) {
+          var t = fe(e.faqid),
             a = t[0],
             o = t[1],
             i = n.a.useRef();
           if (!o)
-            return n.a.createElement(Me.a, {
+            return n.a.createElement(Oe.a, {
               position: "center",
               size: "xlarge",
-              string: Object(Oe.f)("#Loading"),
+              string: Object(Fe.f)("#Loading"),
             });
           if (!a)
-            return n.a.createElement(Gt, {
-              strError: Object(Oe.f)("#FAQEditor_NoFAQFound"),
+            return n.a.createElement(Qt, {
+              strError: Object(Fe.f)("#FAQEditor_NoFAQFound"),
             });
-          var s = tt.a.Get().GetCurEditLanguage();
+          var s = ot.a.Get().GetCurEditLanguage();
           return n.a.createElement(
             "div",
             null,
-            n.a.createElement(Wt, { draft: a }),
+            n.a.createElement(Ht, { draft: a }),
             n.a.createElement(
               "div",
-              { className: lt.a.FAQEditPage },
+              { className: dt.a.FAQEditPage },
               n.a.createElement(
                 "div",
-                { className: lt.a.FAQMenuCtn },
-                n.a.createElement(It, { draft: a, eLanguage: s })
+                { className: dt.a.FAQMenuCtn },
+                n.a.createElement(Tt, { draft: a, eLanguage: s })
               ),
               n.a.createElement(
                 "div",
-                { className: lt.a.FAQEditorCtn },
+                { className: dt.a.FAQEditorCtn },
                 n.a.createElement(
                   "div",
-                  { className: lt.a.FAQEditor },
+                  { className: dt.a.FAQEditor },
                   n.a.createElement(
                     "div",
-                    { className: st.a.Columns },
+                    { className: rt.a.Columns },
                     n.a.createElement(
                       "div",
-                      { className: Object(c.a)(st.a.LeftCol) },
-                      n.a.createElement(jt, { draft: a, eLanguage: s }),
-                      n.a.createElement(Bt, {
+                      { className: Object(c.a)(rt.a.LeftCol) },
+                      n.a.createElement(Ut, { draft: a, eLanguage: s }),
+                      n.a.createElement(Yt, {
                         bbcodeEditorRef: i,
                         draft: a,
                         eLanguage: s,
                       })
                     ),
-                    n.a.createElement(Vt, {
+                    n.a.createElement(Gt, {
                       draft: a,
                       bbcodeEditorRef: i,
-                      className: st.a.RightCol,
+                      className: rt.a.RightCol,
                     })
                   )
                 )
               )
             ),
-            n.a.createElement(Lt, { draft: a, eLanguage: s })
+            n.a.createElement(jt, { draft: a, eLanguage: s })
           );
         }),
-        Vt = function (e) {
+        Gt = function (e) {
           if (!Boolean(u.b.CAN_UPLOAD_IMAGES)) return null;
-          var t = new et.a(u.b.CLANSTEAMID),
+          var t = new at.a(u.b.CLANSTEAMID),
             a = e.draft,
             o = e.bbcodeEditorRef;
           return n.a.createElement(
-            ot.a,
+            st.a,
             null,
             n.a.createElement(
               "div",
@@ -12016,15 +12129,15 @@
               n.a.createElement(
                 "div",
                 null,
-                Object(Oe.f)("#FAQEditor_ImageTitle")
+                Object(Fe.f)("#FAQEditor_ImageTitle")
               ),
-              n.a.createElement(nt.a, {
+              n.a.createElement(lt.a, {
                 bShowLightBox: !1,
                 clanSteamID: t,
                 imageInsertCallBack: function (e, t) {
                   return (
                     o.current &&
-                    Object(Ze.b)(null == o ? void 0 : o.current, e, t)
+                    Object(tt.b)(null == o ? void 0 : o.current, e, t)
                   );
                 },
                 fnSetImageURL: function () {},
@@ -12033,22 +12146,22 @@
             )
           );
         },
-        jt = Object(i.a)(function (e) {
+        Ut = Object(i.a)(function (e) {
           var t = e.draft,
             a = e.eLanguage;
           return n.a.createElement(
             "div",
-            { className: lt.a.EditorTitleField },
+            { className: dt.a.EditorTitleField },
             n.a.createElement(
               "div",
-              { className: lt.a.EditorLabel },
-              Object(Oe.f)("#FAQEditor_TitleLabel")
+              { className: dt.a.EditorLabel },
+              Object(Fe.f)("#FAQEditor_TitleLabel")
             ),
             n.a.createElement("input", {
               type: "text",
-              className: lt.a.EditorTitleFieldInput,
+              className: dt.a.EditorTitleFieldInput,
               value: t.GetDraftTitle(a) || "",
-              placeholder: Object(Oe.f)("#FAQEditor_TitlePlaceHolder"),
+              placeholder: Object(Fe.f)("#FAQEditor_TitlePlaceHolder"),
               onFocus: function (e) {
                 return e.target.select();
               },
@@ -12059,19 +12172,19 @@
             })
           );
         }),
-        Bt = Object(i.a)(function (e) {
+        Yt = Object(i.a)(function (e) {
           var t = e.draft,
             a = e.eLanguage,
             o = e.bbcodeEditorRef;
           return n.a.createElement(
             "div",
-            { className: lt.a.EditorPane },
+            { className: dt.a.EditorPane },
             n.a.createElement(
               "div",
-              { className: lt.a.EditorLabel },
-              Object(Oe.f)("#FAQEditor_ContentLabel")
+              { className: dt.a.EditorLabel },
+              Object(Fe.f)("#FAQEditor_ContentLabel")
             ),
-            n.a.createElement(at.a, {
+            n.a.createElement(it.a, {
               ref: o,
               fnGetCurText: function () {
                 return t.GetDraftContent(a) || "";
@@ -12082,120 +12195,120 @@
               fnSetText: function (e) {
                 return t.SetDraftContent(a, e);
               },
-              strPlaceholder: Object(Oe.f)("#FAQEditor_ContentPlaceHolder"),
+              strPlaceholder: Object(Fe.f)("#FAQEditor_ContentPlaceHolder"),
               bSupportHTMLImport: !0,
               showFormatHelp: "PartnerEvents",
-              classNameForTextArea: lt.a.EditorPaneTextArea,
+              classNameForTextArea: dt.a.EditorPaneTextArea,
             })
           );
         }),
-        Gt = function (e) {
+        Qt = function (e) {
           return n.a.createElement(
             "div",
-            { className: lt.a.ErrorCtn },
-            n.a.createElement("div", { className: lt.a.ErrorMsg }, e.strError),
+            { className: dt.a.ErrorCtn },
+            n.a.createElement("div", { className: dt.a.ErrorMsg }, e.strError),
             n.a.createElement(
-              ke,
-              { route: fe.k_eCommunityDashboard, className: lt.a.EscapeLink },
-              Object(Oe.f)("#FAQEditor_GoToDashboard")
+              _e,
+              { route: be.k_eCommunityDashboard, className: dt.a.EscapeLink },
+              Object(Fe.f)("#FAQEditor_GoToDashboard")
             )
           );
         },
-        Ut = a("orBq"),
-        Yt = function (e) {
+        Xt = a("orBq"),
+        $t = function (e) {
           var t = e.title,
             a = e.content,
             o = e.bIsPreview,
             i = e.elSideBars;
           return n.a.createElement(
             "div",
-            { className: Ut.FAQViewPage },
+            { className: Xt.FAQViewPage },
             n.a.createElement(
               "a",
-              { className: Ut.SupportTitle, href: "" + u.c.HELP_BASE_URL },
-              Object(Oe.f)("#FAQViewer_SteamSupport")
+              { className: Xt.SupportTitle, href: "" + u.c.HELP_BASE_URL },
+              Object(Fe.f)("#FAQViewer_SteamSupport")
             ),
             n.a.createElement(
               "div",
-              { className: Ut.Columns },
+              { className: Xt.Columns },
               n.a.createElement(
                 "div",
-                { className: Object(c.a)(Ut.LeftCol) },
-                n.a.createElement("div", { className: Ut.TopColorBar }),
+                { className: Object(c.a)(Xt.LeftCol) },
+                n.a.createElement("div", { className: Xt.TopColorBar }),
                 n.a.createElement(
                   "div",
-                  { className: Ut.FAQTopicCtn },
-                  n.a.createElement("div", { className: Ut.FAQTitle }, t),
+                  { className: Xt.FAQTopicCtn },
+                  n.a.createElement("div", { className: Xt.FAQTitle }, t),
                   n.a.createElement(
                     "div",
-                    { className: Ut.FAQContent },
+                    { className: Xt.FAQContent },
                     n.a.createElement(S, { text: a, bShowErrorInfo: o })
                   )
                 )
               ),
               n.a.createElement(
                 "div",
-                { className: Ut.RightCol },
-                n.a.createElement("div", { className: Ut.SectionCtn }, i)
+                { className: Xt.RightCol },
+                n.a.createElement("div", { className: Xt.SectionCtn }, i)
               )
             )
           );
         },
-        Qt = function (e) {
+        Kt = function (e) {
           return n.a.createElement(
             "div",
-            { className: Ut.FAQViewPage },
+            { className: Xt.FAQViewPage },
             e.children
           );
         },
-        Xt = a("3tbG"),
-        $t = a("0zs6"),
-        Kt = function (e) {
+        Jt = a("3tbG"),
+        Zt = a("0zs6"),
+        ea = function (e) {
           var t = e.faqContent;
-          return pe.Get().BHasFAQEdit()
+          return he.Get().BHasFAQEdit()
             ? n.a.createElement(
                 "div",
-                { className: Object(c.a)($t.Section, it.ValveOnlyBackground) },
+                { className: Object(c.a)(Zt.Section, nt.ValveOnlyBackground) },
                 n.a.createElement(
                   "div",
-                  { className: $t.TopicHeader },
-                  Object(Oe.f)("#FAQViewer_AdminLinks")
+                  { className: Zt.TopicHeader },
+                  Object(Fe.f)("#FAQViewer_AdminLinks")
                 ),
                 n.a.createElement(
                   "div",
                   null,
-                  Object(Oe.n)(
+                  Object(Fe.n)(
                     "#FAQViewer_Admin_LastUpdate",
                     t.author_account_id
-                      ? n.a.createElement(Jt, {
+                      ? n.a.createElement(ta, {
                           authorAccountID: Number.parseInt(t.author_account_id),
                         })
-                      : Object(Oe.f)("#Sale_Debug_Unknown"),
+                      : Object(Fe.f)("#Sale_Debug_Unknown"),
                     n.a.createElement(
                       "span",
                       null,
-                      Object(Oe.k)(t.timestamp) +
+                      Object(Fe.k)(t.timestamp) +
                         "@" +
-                        Object(Oe.m)(t.timestamp)
+                        Object(Fe.m)(t.timestamp)
                     )
                   )
                 ),
-                n.a.createElement(Zt, { faqContent: t }),
+                n.a.createElement(aa, { faqContent: t }),
                 n.a.createElement(
-                  ke,
+                  _e,
                   {
                     faqid: t.faq_id,
-                    route: fe.k_eCommunityEdit,
+                    route: be.k_eCommunityEdit,
                     bForceAnchor: !0,
                   },
-                  Object(Oe.f)("#FAQViewer_GotoEditor")
+                  Object(Fe.f)("#FAQViewer_GotoEditor")
                 )
               )
             : null;
         },
-        Jt = function (e) {
-          var t = et.a.InitFromAccountID(e.authorAccountID),
-            a = Object(bt.b)(t.ConvertTo64BitString()),
+        ta = function (e) {
+          var t = at.a.InitFromAccountID(e.authorAccountID),
+            a = Object(St.b)(t.ConvertTo64BitString()),
             o = a[0],
             i = a[1];
           return n.a.createElement(
@@ -12207,7 +12320,7 @@
                   n.a.Fragment,
                   null,
                   n.a.createElement("img", {
-                    className: Xt.SmallAvatar,
+                    className: Jt.SmallAvatar,
                     src: i.avatar_url,
                     "data-miniprofile": "s" + t.ConvertTo64BitString(),
                   }),
@@ -12215,9 +12328,9 @@
                 )
           );
         },
-        Zt = function (e) {
+        aa = function (e) {
           var t = e.faqContent,
-            a = ce(t.faq_id),
+            a = fe(t.faq_id),
             o = a[0],
             i = a[1];
           if (
@@ -12230,130 +12343,130 @@
           return n.a.createElement(
             "div",
             null,
-            Object(Oe.n)(
+            Object(Fe.n)(
               "#FAQViewer_DraftNewer",
-              n.a.createElement(Jt, {
+              n.a.createElement(ta, {
                 authorAccountID: Number.parseInt(s.author_account_id),
               }),
               n.a.createElement(
                 "span",
                 null,
-                Object(Oe.k)(s.timestamp) + "@" + Object(Oe.m)(s.timestamp)
+                Object(Fe.k)(s.timestamp) + "@" + Object(Fe.m)(s.timestamp)
               )
             )
           );
         },
-        ea = a("rTBr"),
-        ta = a.n(ea),
-        aa = function (e) {
+        oa = a("rTBr"),
+        ia = a.n(oa),
+        sa = function (e) {
           return n.a.createElement(
             n.a.Fragment,
             null,
             n.a.createElement(
               "div",
-              { className: Object(c.a)($t.Section, $t.NeedHelp) },
+              { className: Object(c.a)(Zt.Section, Zt.NeedHelp) },
               n.a.createElement(
                 "div",
-                { className: $t.LeftCol },
-                n.a.createElement(qe.z, null)
+                { className: Zt.LeftCol },
+                n.a.createElement(ze.z, null)
               ),
               n.a.createElement(
                 "div",
-                { className: $t.RightCol },
+                { className: Zt.RightCol },
                 n.a.createElement(
                   "div",
-                  { className: $t.TopicHeader },
-                  Object(Oe.f)("#FAQViewer_SideBar_ProblemWithSteam_Title")
+                  { className: Zt.TopicHeader },
+                  Object(Fe.f)("#FAQViewer_SideBar_ProblemWithSteam_Title")
                 ),
                 n.a.createElement(
                   "div",
                   null,
-                  Object(Oe.f)("#FAQViewer_SideBar_ProblemWithSteam_Desc")
+                  Object(Fe.f)("#FAQViewer_SideBar_ProblemWithSteam_Desc")
                 ),
                 n.a.createElement(
                   "div",
-                  { className: $t.CenterButtonCtn },
+                  { className: Zt.CenterButtonCtn },
                   n.a.createElement(
                     "a",
                     {
                       href: u.c.HELP_BASE_URL,
-                      className: it.EditPreviewButton,
+                      className: nt.EditPreviewButton,
                     },
-                    Object(Oe.f)("#FAQViewer_SideBar_ProblemWithSteam_Link")
+                    Object(Fe.f)("#FAQViewer_SideBar_ProblemWithSteam_Link")
                   )
                 )
               )
             ),
             n.a.createElement(
               "div",
-              { className: Object(c.a)($t.Section, $t.CommunityHelp) },
+              { className: Object(c.a)(Zt.Section, Zt.CommunityHelp) },
               n.a.createElement(
                 "div",
-                { className: $t.LeftCol },
-                n.a.createElement(qe.j, null)
+                { className: Zt.LeftCol },
+                n.a.createElement(ze.j, null)
               ),
               n.a.createElement(
                 "div",
-                { className: $t.RightCol },
+                { className: Zt.RightCol },
                 n.a.createElement(
                   "div",
-                  { className: $t.TopicHeader },
-                  Object(Oe.f)("#FAQViewer_SideBar_CommunityHelp_Title")
+                  { className: Zt.TopicHeader },
+                  Object(Fe.f)("#FAQViewer_SideBar_CommunityHelp_Title")
                 ),
                 n.a.createElement(
                   "div",
                   null,
-                  Object(Oe.f)("#FAQViewer_SideBar_CommunityHelp_Desc")
+                  Object(Fe.f)("#FAQViewer_SideBar_CommunityHelp_Desc")
                 ),
                 n.a.createElement(
                   "div",
-                  { className: $t.CenterButtonCtn },
+                  { className: Zt.CenterButtonCtn },
                   n.a.createElement(
                     "a",
                     {
                       href: u.c.COMMUNITY_BASE_URL + "discussions",
-                      className: it.EditPreviewButton,
+                      className: nt.EditPreviewButton,
                     },
-                    Object(Oe.f)("#FAQViewer_SideBar_CommunityHelp_Link")
+                    Object(Fe.f)("#FAQViewer_SideBar_CommunityHelp_Link")
                   )
                 )
               )
             )
           );
         },
-        oa = function (e) {
+        na = function (e) {
           var t = (function (e, t) {
-              return [e && pe.Get().GetFAQPublishedContent(e, t), !0];
+              return [e && he.Get().GetFAQPublishedContent(e, t), !0];
             })(e.faqid, Object(x.d)(u.c.LANGUAGE)),
             a = t[0];
           return t[1]
             ? a
-              ? n.a.createElement(Yt, {
+              ? n.a.createElement($t, {
                   title: a.title,
                   content: a.content,
                   elSideBars: [
-                    n.a.createElement(aa, { key: "sidebar", faqContent: a }),
-                    n.a.createElement(Kt, { key: "adminbar", faqContent: a }),
+                    n.a.createElement(sa, { key: "sidebar", faqContent: a }),
+                    n.a.createElement(ea, { key: "adminbar", faqContent: a }),
                   ],
                 })
               : n.a.createElement(
-                  Qt,
+                  Kt,
                   null,
-                  n.a.createElement(ia, {
-                    strError: Object(Oe.f)("#FAQViewer_NoFAQFound"),
+                  n.a.createElement(ra, {
+                    strError: Object(Fe.f)("#FAQViewer_NoFAQFound"),
                   })
                 )
             : n.a.createElement(
-                Qt,
+                Kt,
                 null,
-                n.a.createElement(Me.a, {
+                n.a.createElement(Oe.a, {
                   position: "center",
                   size: "xlarge",
-                  string: Object(Oe.f)("#Loading"),
+                  string: Object(Fe.f)("#Loading"),
                 })
               );
         },
-        ia = function (e) {
+        ra = function (e) {
           var t,
             a =
               u.c.COMMUNITY_BASE_URL +
@@ -12363,52 +12476,52 @@
                 : "gid/" + u.b.CLANSTEAMID);
           return n.a.createElement(
             "div",
-            { className: ta.a.ErrorCtn },
-            n.a.createElement("div", { className: ta.a.ErrorMsg }, e.strError),
+            { className: ia.a.ErrorCtn },
+            n.a.createElement("div", { className: ia.a.ErrorMsg }, e.strError),
             n.a.createElement(
               "a",
-              { className: ta.a.EscapeLink, href: a },
-              Object(Oe.f)("#FAQViewer_GoToHomepage")
+              { className: ia.a.EscapeLink, href: a },
+              Object(Fe.f)("#FAQViewer_GoToHomepage")
             )
           );
         },
-        sa = Object(i.a)(function (e) {
-          var t = ce(e.faqid),
+        la = Object(i.a)(function (e) {
+          var t = fe(e.faqid),
             a = t[0],
             o = t[1],
-            i = tt.a.Get().GetCurEditLanguage();
+            i = ot.a.Get().GetCurEditLanguage();
           return o
             ? a
               ? n.a.createElement(
                   n.a.Fragment,
                   null,
-                  n.a.createElement(Wt, { draft: a, bPreview: !0 }),
-                  n.a.createElement(Yt, {
+                  n.a.createElement(Ht, { draft: a, bPreview: !0 }),
+                  n.a.createElement($t, {
                     title: a.GetDraftTitleWithFallback(i, u.c.EREALM),
                     content: a.GetDraftContentWithFallback(i, u.c.EREALM),
                   }),
-                  n.a.createElement(Lt, { draft: a, eLanguage: i })
+                  n.a.createElement(jt, { draft: a, eLanguage: i })
                 )
               : n.a.createElement(
-                  Qt,
+                  Kt,
                   null,
-                  n.a.createElement(ia, {
-                    strError: Object(Oe.f)("#FAQViewer_NoFAQFound"),
+                  n.a.createElement(ra, {
+                    strError: Object(Fe.f)("#FAQViewer_NoFAQFound"),
                   })
                 )
             : n.a.createElement(
-                Qt,
+                Kt,
                 null,
-                n.a.createElement(Me.a, {
+                n.a.createElement(Oe.a, {
                   position: "center",
                   size: "xlarge",
-                  string: Object(Oe.f)("#Loading"),
+                  string: Object(Fe.f)("#Loading"),
                 })
               );
         }),
-        na = a("9w6b"),
-        ra = a("WplJ"),
-        la = {
+        pa = a("9w6b"),
+        da = a("WplJ"),
+        ha = {
           ViewFAQ: function (e, t) {
             return "/faqs/" + e + "/view/" + t + "*";
           },
@@ -12425,7 +12538,7 @@
             return "/faqs/" + e + "/import";
           },
         },
-        pa = Object(i.a)(function (e) {
+        ca = Object(i.a)(function (e) {
           var t = n.a.useState(!0),
             a = t[0],
             i = t[1];
@@ -12435,7 +12548,7 @@
                 return Object(o.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
-                      return [4, na.a.InitGlobal()];
+                      return [4, pa.a.InitGlobal()];
                     case 1:
                       return e.sent(), i(!1), [2];
                   }
@@ -12443,91 +12556,91 @@
               });
             }, []),
             a
-              ? n.a.createElement(Me.a, {
+              ? n.a.createElement(Oe.a, {
                   position: "center",
                   size: "medium",
-                  string: Object(Oe.f)("#Loading"),
+                  string: Object(Fe.f)("#Loading"),
                 })
               : n.a.createElement(
                   n.a.Fragment,
                   null,
-                  n.a.createElement(Je, null),
+                  n.a.createElement(et, null),
                   n.a.createElement(
-                    we.e,
+                    ke.e,
                     null,
-                    n.a.createElement(we.c, {
-                      path: la.ViewFAQ(":vanity_str", ":faqid"),
+                    n.a.createElement(ke.c, {
+                      path: ha.ViewFAQ(":vanity_str", ":faqid"),
                       render: function (e) {
-                        return n.a.createElement(ra.a, {
+                        return n.a.createElement(da.a, {
                           config: {
                             "faqs-root": function () {
-                              var t = he(e.match.params.faqid);
-                              return n.a.createElement(oa, { faqid: t });
+                              var t = ue(e.match.params.faqid);
+                              return n.a.createElement(na, { faqid: t });
                             },
                           },
                         });
                       },
                     }),
-                    n.a.createElement(we.c, {
-                      path: la.EditFAQ(":vanity_str", ":faqid"),
+                    n.a.createElement(ke.c, {
+                      path: ha.EditFAQ(":vanity_str", ":faqid"),
                       render: function (e) {
-                        return n.a.createElement(ra.a, {
+                        return n.a.createElement(da.a, {
                           config: {
                             "faqs-root": function () {
                               var t = e.match.params.faqid;
                               if (t) {
-                                var a = he(t);
+                                var a = ue(t);
                                 return a
-                                  ? n.a.createElement(Ht, { faqid: a })
-                                  : n.a.createElement(we.b, {
+                                  ? n.a.createElement(Bt, { faqid: a })
+                                  : n.a.createElement(ke.b, {
                                       push: !0,
-                                      to: xe(fe.k_eCommunityDashboard),
+                                      to: Ie(be.k_eCommunityDashboard),
                                     });
                               }
-                              return n.a.createElement(Be, null);
+                              return n.a.createElement(Ue, null);
                             },
                           },
                         });
                       },
                     }),
-                    n.a.createElement(we.c, {
-                      path: la.DashboardFAQ(":vanity_str"),
+                    n.a.createElement(ke.c, {
+                      path: ha.DashboardFAQ(":vanity_str"),
                       render: function (e) {
-                        return n.a.createElement(ra.a, {
+                        return n.a.createElement(da.a, {
                           config: {
                             "faqs-root": function () {
-                              return n.a.createElement(Be, null);
+                              return n.a.createElement(Ue, null);
                             },
                           },
                         });
                       },
                     }),
-                    n.a.createElement(we.c, {
-                      path: la.PreviewFAQ(":vanity_str", ":faqid"),
+                    n.a.createElement(ke.c, {
+                      path: ha.PreviewFAQ(":vanity_str", ":faqid"),
                       render: function (e) {
-                        return n.a.createElement(ra.a, {
+                        return n.a.createElement(da.a, {
                           config: {
                             "faqs-root": function () {
-                              var t = he(e.match.params.faqid);
-                              return n.a.createElement(sa, { faqid: t });
+                              var t = ue(e.match.params.faqid);
+                              return n.a.createElement(la, { faqid: t });
                             },
                           },
                         });
                       },
                     }),
-                    n.a.createElement(we.c, {
-                      path: la.ImportTool(":vanity_str"),
-                      component: _e,
+                    n.a.createElement(ke.c, {
+                      path: ha.ImportTool(":vanity_str"),
+                      component: Ae,
                     }),
-                    n.a.createElement(we.c, { component: da })
+                    n.a.createElement(ke.c, { component: ua })
                   )
                 )
           );
         });
-      t.default = pa;
-      function da(e) {
+      t.default = ca;
+      function ua(e) {
         return "dev" !== u.c.WEB_UNIVERSE
-          ? n.a.createElement(we.b, { to: "/" })
+          ? n.a.createElement(ke.b, { to: "/" })
           : n.a.createElement(
               "div",
               null,
@@ -12592,6 +12705,7 @@
         LeftMenu: "faqstatus_LeftMenu_1txme",
         Section: "faqstatus_Section_2j-hh",
         SectionContents: "faqstatus_SectionContents_3lz4J",
+        SectionDescription: "faqstatus_SectionDescription_3L68i",
         SectionTitle: "faqstatus_SectionTitle_23FTZ",
         VisibilityCtn: "faqstatus_VisibilityCtn_16zch",
         StatusRow: "faqstatus_StatusRow_272D2",

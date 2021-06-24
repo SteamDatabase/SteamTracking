@@ -386,6 +386,11 @@ button.faqeditor_EditorSaveButton_22iwd.faqeditor_EditorSaveButton_22iwd:disable
 }
 .faqstatus_LeftMenu_1txme
   .faqstatus_Section_2j-hh
+  .faqstatus_SectionDescription_3L68i {
+  padding: 8px;
+}
+.faqstatus_LeftMenu_1txme
+  .faqstatus_Section_2j-hh
   .faqstatus_SectionTitle_23FTZ {
   font-size: 14px;
   padding: 4px 0px;
