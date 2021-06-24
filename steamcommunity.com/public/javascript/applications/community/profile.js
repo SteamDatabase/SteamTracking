@@ -2563,7 +2563,9 @@
                   title: Object(_.f)(e.title),
                 });
               })),
-              this.SetActiveTheme((t && t.theme_id) || "Default", !0);
+              void 0 === t || "" === t.theme_id
+                ? this.SetActiveTheme("Default", !0)
+                : ((this.m_ActiveTheme = t), (this.m_ComittedActiveTheme = t));
           }
           return (
             Object.defineProperty(e.prototype, "ActiveTheme", {

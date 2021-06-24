@@ -1379,6 +1379,13 @@ span.partnereventeditor_RequiredFieldLabel_11TnL {
   .partnereventsale_HalfColumn_3F_CF:first-child {
   margin-right: 40px;
 }
+.partnereventsale_ContentHubOverrideCtn_3IkY7 {
+  display: flex;
+}
+.partnereventsale_ContentHubOverrideInnerCtn_3aA7g {
+  flex-grow: 1;
+  padding-right: 16px;
+}
 .partnersaledebug_SearchResults_26iJ3 {
   overflow: scroll;
   max-height: 300px;

@@ -9578,7 +9578,7 @@
                 });
               });
             }),
-            (e.prototype.GetFlavorCacheKey = function (e, t, n, r, a, i, o) {
+            (e.prototype.GetFlavorCacheKey = function (e, t, n, r, a, i, o, s) {
               return (
                 "key-" +
                 e +
@@ -9593,7 +9593,9 @@
                 "-" +
                 i +
                 "-" +
-                o
+                o +
+                "-" +
+                s
               );
             }),
             (e.prototype.ValidateDataGameByFlavor = function (e) {
@@ -9620,47 +9622,48 @@
               u,
               d,
               p,
-              h
+              h,
+              f
             ) {
-              var f, _, v;
+              var _, v, b;
               return (
                 void 0 === l && (l = 0),
                 void 0 === u && (u = void 0),
                 Object(a.b)(this, void 0, void 0, function () {
-                  var b, g, y, E, O, w, I, B, D, j, T, A, M, L;
+                  var g, y, E, O, w, I, B, D, j, T, A, M, L, R;
                   return Object(a.e)(this, function (a) {
                     switch (a.label) {
                       case 0:
                         if (
-                          ((b = this.m_mapSaleGameListsByFlavor.get(e)) ||
-                            ((g =
+                          ((g = this.m_mapSaleGameListsByFlavor.get(e)) ||
+                            ((y =
                               "browser_" +
                               o +
                               (null == s ? void 0 : s.GetQuery()) +
                               (r ? "_" + r : "_*") +
                               (t ? u : "")),
-                            (y = Object(C.g)(g, "application_config")),
-                            this.ValidateDataGameByFlavor(y)
-                              ? ((b = y),
-                                this.m_mapSaleGameListsByFlavor.set(e, y))
-                              : ((b = {
+                            (E = Object(C.g)(y, "application_config")),
+                            this.ValidateDataGameByFlavor(E)
+                              ? ((g = E),
+                                this.m_mapSaleGameListsByFlavor.set(e, E))
+                              : ((g = {
                                   appids: [],
                                   solr_index: 0,
                                   possible_has_more: !0,
                                 }),
-                                this.m_mapSaleGameListsByFlavor.set(e, b))),
-                          (E = b.appids.length),
-                          !((O = l + c - E) > 0 && b.possible_has_more))
+                                this.m_mapSaleGameListsByFlavor.set(e, g))),
+                          (O = g.appids.length),
+                          !((w = l + c - O) > 0 && g.possible_has_more))
                         )
                           return [3, 5];
                         if (
-                          ((w =
+                          ((I =
                             C.c.STORE_BASE_URL +
                             (n
                               ? "saleaction/ajaxpreviewsaledynamicappquery"
                               : "saleaction/ajaxgetsaledynamicappquery")),
-                          (I = null),
-                          (B = {
+                          (B = null),
+                          (D = {
                             cc: C.c.COUNTRY,
                             l: C.c.LANGUAGE,
                             clanAccountID:
@@ -9671,78 +9674,79 @@
                               (null == i ? void 0 : i.AnnouncementGID) || null,
                             flavor: o,
                             strFacetFilter: null == s ? void 0 : s.GetQuery(),
-                            start: b.solr_index,
-                            count: Math.max(O, 25),
+                            start: g.solr_index,
+                            count: Math.max(w, 25),
                             tabuniqueid: r,
                             return_capsules: !0,
                             search: t ? u : void 0,
                             origin: self.origin,
                             bForceUseSaleTag: !0,
                             strContentHub: d,
-                            bContentHubDiscountedOnly: p,
+                            nContentHubTagID: p,
+                            bContentHubDiscountedOnly: h,
                           }),
                           !(s && s.GetQuery().length > 0))
                         )
                           return [3, 2];
-                        for (j in ((D = new FormData()), B))
-                          D.append("" + j, "" + B[j]);
+                        for (T in ((j = new FormData()), D))
+                          j.append("" + T, "" + D[T]);
                         return [
                           4,
-                          S.a.post(w, D, {
+                          S.a.post(I, j, {
                             withCredentials: n,
-                            cancelToken: null == h ? void 0 : h.token,
+                            cancelToken: null == f ? void 0 : f.token,
                           }),
                         ];
                       case 1:
-                        return (I = a.sent()), [3, 4];
+                        return (B = a.sent()), [3, 4];
                       case 2:
                         return [
                           4,
-                          S.a.get(w, {
-                            params: B,
+                          S.a.get(I, {
+                            params: D,
                             withCredentials: n,
-                            cancelToken: null == h ? void 0 : h.token,
+                            cancelToken: null == f ? void 0 : f.token,
                           }),
                         ];
                       case 3:
-                        (I = a.sent()), (a.label = 4);
+                        (B = a.sent()), (a.label = 4);
                       case 4:
                         if (
-                          200 != (null == I ? void 0 : I.status) ||
+                          200 != (null == B ? void 0 : B.status) ||
                           1 !=
-                            (null === (f = I.data) || void 0 === f
+                            (null === (_ = B.data) || void 0 === _
                               ? void 0
-                              : f.success) ||
-                          !(null === (_ = I.data) || void 0 === _
+                              : _.success) ||
+                          !(null === (v = B.data) || void 0 === v
                             ? void 0
-                            : _.appids)
+                            : v.appids)
                         )
                           throw new Error(
                             "query failed, status=" +
-                              (null == I ? void 0 : I.status) +
+                              (null == B ? void 0 : B.status) +
                               " success: " +
-                              (null === (v = null == I ? void 0 : I.data) ||
-                              void 0 === v
+                              (null === (b = null == B ? void 0 : B.data) ||
+                              void 0 === b
                                 ? void 0
-                                : v.success)
+                                : b.success)
                           );
-                        for (T = 0, A = I.data.appids; T < A.length; T++)
-                          (M = A[T]), b.appids.push(M);
-                        (b.facetCounts = I.data.faceting),
-                          (b.possible_has_more = I.data.possible_has_more),
-                          (b.solr_index = I.data.solr_index),
-                          I.data.app_info && m.a.AddAppLinks(I.data.app_info),
+                        for (A = 0, M = B.data.appids; A < M.length; A++)
+                          (L = M[A]), g.appids.push(L);
+                        (g.facetCounts = B.data.faceting),
+                          (g.possible_has_more = B.data.possible_has_more),
+                          (g.solr_index = B.data.solr_index),
+                          B.data.app_info && m.a.AddAppLinks(B.data.app_info),
                           (a.label = 5);
                       case 5:
                         return (
-                          this.m_mapSaleGameListsByFlavor.set(e, b),
-                          (L = b.possible_has_more || l + c < b.appids.length),
+                          this.m_mapSaleGameListsByFlavor.set(e, g),
+                          (R = g.possible_has_more || l + c < g.appids.length),
                           [
                             2,
                             {
-                              appids: b.appids.slice(l, c),
-                              facetCounts: b.facetCounts,
-                              bHasPossibleMoreResults: L,
+                              appids: g.appids.slice(l, c),
+                              facetCounts: g.facetCounts,
+                              bHasPossibleMoreResults: R,
                             },
                           ]
                         );
@@ -9762,51 +9766,53 @@
               c,
               l,
               u,
-              d
+              d,
+              p
             ) {
               return (
                 void 0 === s && (s = 0),
                 void 0 === c && (c = void 0),
                 Object(a.b)(this, void 0, void 0, function () {
-                  var p,
-                    m,
+                  var m,
                     h,
-                    f = this;
-                  return Object(a.e)(this, function (_) {
-                    switch (_.label) {
+                    f,
+                    _ = this;
+                  return Object(a.e)(this, function (v) {
+                    switch (v.label) {
                       case 0:
                         (c = null == c ? void 0 : c.trim()),
-                          (p = Boolean(c)) && ((r = "search"), (t = void 0)),
+                          (m = Boolean(c)) && ((r = "search"), (t = void 0)),
                           l && (t = void 0),
-                          (m = this.GetFlavorCacheKey(
+                          (h = this.GetFlavorCacheKey(
                             r,
                             i,
                             t,
                             c,
                             (null == n ? void 0 : n.AnnouncementGID) || "0",
                             l,
-                            u
+                            u,
+                            d
                           )),
-                          (_.label = 1);
+                          (v.label = 1);
                       case 1:
-                        if (!this.m_mapPromisesByFlavor.has(m)) return [3, 6];
-                        _.label = 2;
+                        if (!this.m_mapPromisesByFlavor.has(h)) return [3, 6];
+                        v.label = 2;
                       case 2:
                         return (
-                          _.trys.push([2, 4, , 5]),
-                          [4, this.m_mapPromisesByFlavor.get(m)]
+                          v.trys.push([2, 4, , 5]),
+                          [4, this.m_mapPromisesByFlavor.get(h)]
                         );
                       case 3:
-                        return _.sent(), [3, 5];
+                        return v.sent(), [3, 5];
                       case 4:
-                        return _.sent(), [3, 5];
+                        return v.sent(), [3, 5];
                       case 5:
                         return [3, 1];
                       case 6:
                         return (
-                          (h = this.InternalGetSaleGamesByFlavor(
+                          (f = this.InternalGetSaleGamesByFlavor(
+                            h,
                             m,
-                            p,
                             e,
                             t,
                             n,
@@ -9817,22 +9823,23 @@
                             c,
                             l,
                             u,
-                            d
+                            d,
+                            p
                           )),
-                          this.m_mapPromisesByFlavor.set(m, h),
+                          this.m_mapPromisesByFlavor.set(h, f),
                           (function () {
-                            return Object(a.b)(f, void 0, void 0, function () {
+                            return Object(a.b)(_, void 0, void 0, function () {
                               return Object(a.e)(this, function (e) {
                                 switch (e.label) {
                                   case 0:
-                                    return e.trys.push([0, 2, 3, 4]), [4, h];
+                                    return e.trys.push([0, 2, 3, 4]), [4, f];
                                   case 1:
                                     return e.sent(), [3, 4];
                                   case 2:
                                     return e.sent(), [3, 4];
                                   case 3:
                                     return (
-                                      this.m_mapPromisesByFlavor.delete(m), [7]
+                                      this.m_mapPromisesByFlavor.delete(h), [7]
                                     );
                                   case 4:
                                     return [2];
@@ -9840,7 +9847,7 @@
                               });
                             });
                           })(),
-                          [2, h]
+                          [2, f]
                         );
                     }
                   });
@@ -16770,6 +16777,13 @@
                   : r.source_content_hub)
               );
             }),
+            (t.prototype.GetContentHubTagID = function (e) {
+              var t;
+              return null === (t = null == e ? void 0 : e.GetTab()) ||
+                void 0 === t
+                ? void 0
+                : t.source_content_hub_tagid;
+            }),
             (t.prototype.LoadCapsules = function (e, t) {
               var n;
               return (
@@ -16859,6 +16873,7 @@
                               0,
                               f,
                               this.GetContentHubName(c, s),
+                              this.GetContentHubTagID(s),
                               null === (n = c.item_browse_section_data) ||
                                 void 0 === n
                                 ? void 0

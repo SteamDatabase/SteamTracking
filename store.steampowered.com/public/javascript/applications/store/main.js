@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6630825";
+var CLSTAMP = "6631215";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [69],
   {
@@ -7362,7 +7362,7 @@ var CLSTAMP = "6630825";
                 });
               });
             }),
-            (e.prototype.GetFlavorCacheKey = function (e, t, n, r, a, i, o) {
+            (e.prototype.GetFlavorCacheKey = function (e, t, n, r, a, i, o, s) {
               return (
                 "key-" +
                 e +
@@ -7377,7 +7377,9 @@ var CLSTAMP = "6630825";
                 "-" +
                 i +
                 "-" +
-                o
+                o +
+                "-" +
+                s
               );
             }),
             (e.prototype.ValidateDataGameByFlavor = function (e) {
@@ -7404,47 +7406,48 @@ var CLSTAMP = "6630825";
               u,
               d,
               p,
-              h
+              h,
+              f
             ) {
-              var f, b, _;
+              var b, _, v;
               return (
                 void 0 === l && (l = 0),
                 void 0 === u && (u = void 0),
                 Object(a.b)(this, void 0, void 0, function () {
-                  var v, g, y, S, E, C, A, w, B, I, L, T, D, N;
+                  var g, y, S, E, C, A, w, B, I, L, T, D, N, j;
                   return Object(a.e)(this, function (a) {
                     switch (a.label) {
                       case 0:
                         if (
-                          ((v = this.m_mapSaleGameListsByFlavor.get(e)) ||
-                            ((g =
+                          ((g = this.m_mapSaleGameListsByFlavor.get(e)) ||
+                            ((y =
                               "browser_" +
                               o +
                               (null == s ? void 0 : s.GetQuery()) +
                               (r ? "_" + r : "_*") +
                               (t ? u : "")),
-                            (y = Object(O.h)(g, "application_config")),
-                            this.ValidateDataGameByFlavor(y)
-                              ? ((v = y),
-                                this.m_mapSaleGameListsByFlavor.set(e, y))
-                              : ((v = {
+                            (S = Object(O.h)(y, "application_config")),
+                            this.ValidateDataGameByFlavor(S)
+                              ? ((g = S),
+                                this.m_mapSaleGameListsByFlavor.set(e, S))
+                              : ((g = {
                                   appids: [],
                                   solr_index: 0,
                                   possible_has_more: !0,
                                 }),
-                                this.m_mapSaleGameListsByFlavor.set(e, v))),
-                          (S = v.appids.length),
-                          !((E = l + c - S) > 0 && v.possible_has_more))
+                                this.m_mapSaleGameListsByFlavor.set(e, g))),
+                          (E = g.appids.length),
+                          !((C = l + c - E) > 0 && g.possible_has_more))
                         )
                           return [3, 5];
                         if (
-                          ((C =
+                          ((A =
                             O.d.STORE_BASE_URL +
                             (n
                               ? "saleaction/ajaxpreviewsaledynamicappquery"
                               : "saleaction/ajaxgetsaledynamicappquery")),
-                          (A = null),
-                          (w = {
+                          (w = null),
+                          (B = {
                             cc: O.d.COUNTRY,
                             l: O.d.LANGUAGE,
                             clanAccountID:
@@ -7455,78 +7458,79 @@ var CLSTAMP = "6630825";
                               (null == i ? void 0 : i.AnnouncementGID) || null,
                             flavor: o,
                             strFacetFilter: null == s ? void 0 : s.GetQuery(),
-                            start: v.solr_index,
-                            count: Math.max(E, 25),
+                            start: g.solr_index,
+                            count: Math.max(C, 25),
                             tabuniqueid: r,
                             return_capsules: !0,
                             search: t ? u : void 0,
                             origin: self.origin,
                             bForceUseSaleTag: !0,
                             strContentHub: d,
-                            bContentHubDiscountedOnly: p,
+                            nContentHubTagID: p,
+                            bContentHubDiscountedOnly: h,
                           }),
                           !(s && s.GetQuery().length > 0))
                         )
                           return [3, 2];
-                        for (I in ((B = new FormData()), w))
-                          B.append("" + I, "" + w[I]);
+                        for (L in ((I = new FormData()), B))
+                          I.append("" + L, "" + B[L]);
                         return [
                           4,
-                          M.a.post(C, B, {
+                          M.a.post(A, I, {
                             withCredentials: n,
-                            cancelToken: null == h ? void 0 : h.token,
+                            cancelToken: null == f ? void 0 : f.token,
                           }),
                         ];
                       case 1:
-                        return (A = a.sent()), [3, 4];
+                        return (w = a.sent()), [3, 4];
                       case 2:
                         return [
                           4,
-                          M.a.get(C, {
-                            params: w,
+                          M.a.get(A, {
+                            params: B,
                             withCredentials: n,
-                            cancelToken: null == h ? void 0 : h.token,
+                            cancelToken: null == f ? void 0 : f.token,
                           }),
                         ];
                       case 3:
-                        (A = a.sent()), (a.label = 4);
+                        (w = a.sent()), (a.label = 4);
                       case 4:
                         if (
-                          200 != (null == A ? void 0 : A.status) ||
+                          200 != (null == w ? void 0 : w.status) ||
                           1 !=
-                            (null === (f = A.data) || void 0 === f
+                            (null === (b = w.data) || void 0 === b
                               ? void 0
-                              : f.success) ||
-                          !(null === (b = A.data) || void 0 === b
+                              : b.success) ||
+                          !(null === (_ = w.data) || void 0 === _
                             ? void 0
-                            : b.appids)
+                            : _.appids)
                         )
                           throw new Error(
                             "query failed, status=" +
-                              (null == A ? void 0 : A.status) +
+                              (null == w ? void 0 : w.status) +
                               " success: " +
-                              (null === (_ = null == A ? void 0 : A.data) ||
-                              void 0 === _
+                              (null === (v = null == w ? void 0 : w.data) ||
+                              void 0 === v
                                 ? void 0
-                                : _.success)
+                                : v.success)
                           );
-                        for (L = 0, T = A.data.appids; L < T.length; L++)
-                          (D = T[L]), v.appids.push(D);
-                        (v.facetCounts = A.data.faceting),
-                          (v.possible_has_more = A.data.possible_has_more),
-                          (v.solr_index = A.data.solr_index),
-                          A.data.app_info && m.a.AddAppLinks(A.data.app_info),
+                        for (T = 0, D = w.data.appids; T < D.length; T++)
+                          (N = D[T]), g.appids.push(N);
+                        (g.facetCounts = w.data.faceting),
+                          (g.possible_has_more = w.data.possible_has_more),
+                          (g.solr_index = w.data.solr_index),
+                          w.data.app_info && m.a.AddAppLinks(w.data.app_info),
                           (a.label = 5);
                       case 5:
                         return (
-                          this.m_mapSaleGameListsByFlavor.set(e, v),
-                          (N = v.possible_has_more || l + c < v.appids.length),
+                          this.m_mapSaleGameListsByFlavor.set(e, g),
+                          (j = g.possible_has_more || l + c < g.appids.length),
                           [
                             2,
                             {
-                              appids: v.appids.slice(l, c),
-                              facetCounts: v.facetCounts,
-                              bHasPossibleMoreResults: N,
+                              appids: g.appids.slice(l, c),
+                              facetCounts: g.facetCounts,
+                              bHasPossibleMoreResults: j,
                             },
                           ]
                         );
@@ -7546,51 +7550,53 @@ var CLSTAMP = "6630825";
               c,
               l,
               u,
-              d
+              d,
+              p
             ) {
               return (
                 void 0 === s && (s = 0),
                 void 0 === c && (c = void 0),
                 Object(a.b)(this, void 0, void 0, function () {
-                  var p,
-                    m,
+                  var m,
                     h,
-                    f = this;
-                  return Object(a.e)(this, function (b) {
-                    switch (b.label) {
+                    f,
+                    b = this;
+                  return Object(a.e)(this, function (_) {
+                    switch (_.label) {
                       case 0:
                         (c = null == c ? void 0 : c.trim()),
-                          (p = Boolean(c)) && ((r = "search"), (t = void 0)),
+                          (m = Boolean(c)) && ((r = "search"), (t = void 0)),
                           l && (t = void 0),
-                          (m = this.GetFlavorCacheKey(
+                          (h = this.GetFlavorCacheKey(
                             r,
                             i,
                             t,
                             c,
                             (null == n ? void 0 : n.AnnouncementGID) || "0",
                             l,
-                            u
+                            u,
+                            d
                           )),
-                          (b.label = 1);
+                          (_.label = 1);
                       case 1:
-                        if (!this.m_mapPromisesByFlavor.has(m)) return [3, 6];
-                        b.label = 2;
+                        if (!this.m_mapPromisesByFlavor.has(h)) return [3, 6];
+                        _.label = 2;
                       case 2:
                         return (
-                          b.trys.push([2, 4, , 5]),
-                          [4, this.m_mapPromisesByFlavor.get(m)]
+                          _.trys.push([2, 4, , 5]),
+                          [4, this.m_mapPromisesByFlavor.get(h)]
                         );
                       case 3:
-                        return b.sent(), [3, 5];
+                        return _.sent(), [3, 5];
                       case 4:
-                        return b.sent(), [3, 5];
+                        return _.sent(), [3, 5];
                       case 5:
                         return [3, 1];
                       case 6:
                         return (
-                          (h = this.InternalGetSaleGamesByFlavor(
+                          (f = this.InternalGetSaleGamesByFlavor(
+                            h,
                             m,
-                            p,
                             e,
                             t,
                             n,
@@ -7601,22 +7607,23 @@ var CLSTAMP = "6630825";
                             c,
                             l,
                             u,
-                            d
+                            d,
+                            p
                           )),
-                          this.m_mapPromisesByFlavor.set(m, h),
+                          this.m_mapPromisesByFlavor.set(h, f),
                           (function () {
-                            return Object(a.b)(f, void 0, void 0, function () {
+                            return Object(a.b)(b, void 0, void 0, function () {
                               return Object(a.e)(this, function (e) {
                                 switch (e.label) {
                                   case 0:
-                                    return e.trys.push([0, 2, 3, 4]), [4, h];
+                                    return e.trys.push([0, 2, 3, 4]), [4, f];
                                   case 1:
                                     return e.sent(), [3, 4];
                                   case 2:
                                     return e.sent(), [3, 4];
                                   case 3:
                                     return (
-                                      this.m_mapPromisesByFlavor.delete(m), [7]
+                                      this.m_mapPromisesByFlavor.delete(h), [7]
                                     );
                                   case 4:
                                     return [2];
@@ -7624,7 +7631,7 @@ var CLSTAMP = "6630825";
                               });
                             });
                           })(),
-                          [2, h]
+                          [2, f]
                         );
                     }
                   });
@@ -9259,6 +9266,13 @@ var CLSTAMP = "6630825";
                   : r.source_content_hub)
               );
             }),
+            (t.prototype.GetContentHubTagID = function (e) {
+              var t;
+              return null === (t = null == e ? void 0 : e.GetTab()) ||
+                void 0 === t
+                ? void 0
+                : t.source_content_hub_tagid;
+            }),
             (t.prototype.LoadCapsules = function (e, t) {
               var n;
               return (
@@ -9348,6 +9362,7 @@ var CLSTAMP = "6630825";
                               0,
                               f,
                               this.GetContentHubName(c, s),
+                              this.GetContentHubTagID(s),
                               null === (n = c.item_browse_section_data) ||
                                 void 0 === n
                                 ? void 0

@@ -1612,6 +1612,7 @@
     "Sale_BrowseSection_ContentHubDiscountedOnly": "Only pull discounted and free-to-play items",
     "Sale_BrowseSection_ContentHubTabOverridesDesc": "Each tab can pull items from a different content hub. This way, the section can show (and allow faceting on) a narrower set of items on a specific tab, for a better browsing experience.",
     "Sale_BrowseSection_ContentHubTabOverride": "Override For Tab: %1$s",
+    "Sale_BrowseSection_ContentHubTabTagID": "Additional tag ID to filter by",
     "FAQViewer_SteamSupport": "Steam Support",
     "FAQViewer_NoFAQFound": "Sorry, we could not find that page.",
     "FAQViewer_GoToHomepage": "Return to community homepage",

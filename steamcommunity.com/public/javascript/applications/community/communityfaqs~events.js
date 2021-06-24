@@ -4324,6 +4324,9 @@
         SaleImportURL: "partnereventsale_SaleImportURL_1AmwV",
         BackgroundSettings: "partnereventsale_BackgroundSettings_3_B1e",
         HalfColumn: "partnereventsale_HalfColumn_3F_CF",
+        ContentHubOverrideCtn: "partnereventsale_ContentHubOverrideCtn_3IkY7",
+        ContentHubOverrideInnerCtn:
+          "partnereventsale_ContentHubOverrideInnerCtn_3aA7g",
       };
     },
     K1T0: function (e, t, n) {
@@ -21781,31 +21784,57 @@
                             "div",
                             { key: "tab_override_" + e.unique_id },
                             d.createElement(
-                              _.n,
-                              null,
-                              Object(f.f)(
-                                "#Sale_BrowseSection_ContentHubTabOverride",
-                                e.localized_label
-                                  ? e.localized_label[Object(x.h)(N.c.LANGUAGE)]
-                                  : Object(f.f)(e.default_label)
-                              )
-                            ),
-                            d.createElement(ve.a, {
-                              options: i,
-                              value: i.find(function (t) {
-                                return (
-                                  t.value === e.source_content_hub_override
-                                );
-                              }),
-                              onChange: function (t) {
-                                return (function (e, t) {
-                                  p(),
-                                    (e.source_content_hub_override = t.value),
-                                    r.SetDirty(o.c.jsondata_sales);
-                                })(e, t);
-                              },
-                              isSearchable: !0,
-                            })
+                              "div",
+                              { className: J.ContentHubOverrideCtn },
+                              d.createElement(
+                                "div",
+                                { className: J.ContentHubOverrideInnerCtn },
+                                d.createElement(
+                                  _.n,
+                                  null,
+                                  Object(f.f)(
+                                    "#Sale_BrowseSection_ContentHubTabOverride",
+                                    e.localized_label
+                                      ? e.localized_label[
+                                          Object(x.h)(N.c.LANGUAGE)
+                                        ]
+                                      : Object(f.f)(e.default_label)
+                                  )
+                                ),
+                                d.createElement(ve.a, {
+                                  options: i,
+                                  value: i.find(function (t) {
+                                    return (
+                                      t.value === e.source_content_hub_override
+                                    );
+                                  }),
+                                  onChange: function (t) {
+                                    return (function (e, t) {
+                                      p(),
+                                        (e.source_content_hub_override =
+                                          t.value),
+                                        r.SetDirty(o.c.jsondata_sales);
+                                    })(e, t);
+                                  },
+                                  isSearchable: !0,
+                                })
+                              ),
+                              d.createElement(_.m, {
+                                type: "number",
+                                label: Object(f.f)(
+                                  "#Sale_BrowseSection_ContentHubTabTagID"
+                                ),
+                                value: e.source_content_hub_tagid || 0,
+                                onChange: function (t) {
+                                  return (function (e, t) {
+                                    p(),
+                                      (e.source_content_hub_tagid =
+                                        Number(t) > 0 ? Number(t) : void 0),
+                                      r.SetDirty(o.c.jsondata_sales);
+                                  })(e, t.target.value);
+                                },
+                              })
+                            )
                           );
                         })
                   )
