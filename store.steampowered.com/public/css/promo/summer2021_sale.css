@@ -138,7 +138,7 @@ html.responsive .home_sticker_ctn.mobile {
     width: fit-content;
     user-select: none;
     height: 60px;
-    display: flex;
+    display: none;
     max-width: 25vw;
     margin-top: 9%;
     margin-right: -9%;
@@ -1089,6 +1089,10 @@ body.forgeyourfate {
 @media screen and (max-width: 910px )
 {
 
+    html.responsive body.responsive_page .carousel_container.tag_carousel .carousel_items:not(.no_paging) > * {
+        margin-bottom: 0;
+    }
+
     html.responsive .home_sticker_ctn.desktop {
         display: none;
     }
@@ -1436,8 +1440,8 @@ body.forgeyourfate {
         display: none !important;
     }
     html.responsive .home_browsemore_ctn {
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 40px;
+        margin-bottom: 40px;
     }
     html.responsive .token_count.mobile {
         position: absolute;
