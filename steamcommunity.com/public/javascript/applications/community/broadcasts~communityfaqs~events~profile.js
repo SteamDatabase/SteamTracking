@@ -7077,24 +7077,26 @@
                     r.name
                   ),
                   c.a.createElement("div", { className: Z.Reason }, s),
-                  c.a.createElement(
-                    "div",
-                    { className: Z.StoreSaleItemRelease },
-                    Object(q.n)(
-                      "#Sale_ReleaseDate",
-                      c.a.createElement("span", null, a.release)
-                    )
-                  ),
-                  c.a.createElement(
-                    "div",
-                    {
-                      className: Object(W.a)(
-                        J.StoreSaleItemReview,
-                        Z.StoreSaleItemReview
-                      ),
-                    },
-                    c.a.createElement($.b, { appInfo: a })
-                  ),
+                  !!a &&
+                    c.a.createElement(
+                      "div",
+                      { className: Z.StoreSaleItemRelease },
+                      Object(q.n)(
+                        "#Sale_ReleaseDate",
+                        c.a.createElement("span", null, a.release)
+                      )
+                    ),
+                  !!a &&
+                    c.a.createElement(
+                      "div",
+                      {
+                        className: Object(W.a)(
+                          J.StoreSaleItemReview,
+                          Z.StoreSaleItemReview
+                        ),
+                      },
+                      c.a.createElement($.b, { appInfo: a })
+                    ),
                   c.a.createElement(he, { appInfo: a, instanceNum: i })
                 )
               )
