@@ -17756,16 +17756,14 @@
         Icon: "profilebundle_Icon_2oFfA",
         CheckmarkCircle: "profilebundle_CheckmarkCircle_7u7WR",
         AlreadyOwned: "profilebundle_AlreadyOwned_2D02B",
-        SmallItemHand: "profilebundle_SmallItemHand_3QZ-4",
-        ProfileBackground: "profilebundle_ProfileBackground_2PbBK",
-        Avatar: "profilebundle_Avatar_3yoLj",
-        AvatarFrameContainer: "profilebundle_AvatarFrameContainer_QUXBQ",
-        AvatarFrame: "profilebundle_AvatarFrame_1SfXc",
-        DefaultAvatarImage: "profilebundle_DefaultAvatarImage_2yzRR",
-        MiniProfileBackground: "profilebundle_MiniProfileBackground_1ceo3",
         ItemHand: "profilebundle_ItemHand_3LKW5",
         ItemCard: "profilebundle_ItemCard_1MOjA",
         OwnedItem: "profilebundle_OwnedItem_yHKq7",
+        Avatar: "profilebundle_Avatar_3yoLj",
+        AvatarFrame: "profilebundle_AvatarFrame_1SfXc",
+        DefaultAvatarImage: "profilebundle_DefaultAvatarImage_2yzRR",
+        MiniProfileBackground: "profilebundle_MiniProfileBackground_1ceo3",
+        ProfileBackground: "profilebundle_ProfileBackground_2PbBK",
         ItemCardImage: "profilebundle_ItemCardImage_1FUjB",
         ProfileBundleContainer: "profilebundle_ProfileBundleContainer_1ydA_",
         AppIcon: "profilebundle_AppIcon_nVFnh",
@@ -18054,9 +18052,9 @@
             a = e.cost,
             o = (e.bOwned, e.name, e.desc),
             s = e.attributes,
-            l =
-              (e.className,
-              e.style,
+            l = e.className,
+            c =
+              (e.style,
               Object(r.f)(e, [
                 "appName",
                 "appIcon",
@@ -18070,19 +18068,20 @@
                 "className",
                 "style",
               ])),
-            c = n.community_item_data.item_title;
+            m = n.community_item_data.item_title;
           return i.a.createElement(
             d.a,
             Object(r.a)(
               {
-                name: c,
+                name: m,
                 cost: a,
                 attributes: s,
                 appIcon: t,
                 iconComponent: g.w,
                 desc: o,
+                className: l,
               },
-              l
+              c
             ),
             i.a.createElement("img", {
               src: Object(p.b)(n),
@@ -18138,125 +18137,45 @@
                 },
               },
               p && i.a.createElement(b.b, { theme: y[p + "Theme"] }),
-              i.a.createElement(S, { items: n.items, offer: n })
+              i.a.createElement(E, { items: n.items, offer: n })
             ),
             i.a.createElement(j, { label: d, cost: o, bOwned: s })
           );
         }),
-        j =
-          (Object(o.a)(function (e) {
-            e.appName;
-            var t = e.appIcon,
-              n = e.bundle,
-              a = e.definition,
-              o = e.cost,
-              s = (e.bOwned, e.name, e.desc),
-              l = e.attributes,
-              c =
-                (e.className,
-                e.style,
-                Object(r.f)(e, [
-                  "appName",
-                  "appIcon",
-                  "bundle",
-                  "definition",
-                  "cost",
-                  "bOwned",
-                  "name",
-                  "desc",
-                  "attributes",
-                  "className",
-                  "style",
-                ])),
-              m = a.community_item_data.item_title,
-              u = a.community_item_data.profile_theme_id;
-            return i.a.createElement(
-              d.a,
-              Object(r.a)(
-                {
-                  name: m,
-                  cost: o,
-                  attributes: l,
-                  appIcon: t,
-                  iconComponent: g.w,
-                  desc: s,
-                },
-                c
-              ),
-              u && i.a.createElement(b.b, { theme: y[u + "Theme"] }),
-              i.a.createElement(N, { items: n.items, offer: n })
-            );
-          }),
-          function (e) {
-            var t = e.cost,
-              n = e.label,
-              r = e.bOwned;
-            return i.a.createElement(
-              u.a,
-              {
-                padding: "small",
-                display: "flex",
-                alignItems: "center",
-                flexDirection: "row",
-                className: f.ProfileBundleFooter,
-                title: n,
-              },
-              i.a.createElement("div", { className: f.ProfileBundleName }, n),
-              r
-                ? i.a.createElement(
-                    i.a.Fragment,
-                    null,
-                    i.a.createElement(
-                      "span",
-                      { className: f.AlreadyOwned },
-                      Object(m.f)("#Redeem_BundleItemOwned")
-                    ),
-                    i.a.createElement(g.i, { className: f.CheckmarkCircle })
-                  )
-                : i.a.createElement(
-                    i.a.Fragment,
-                    null,
-                    i.a.createElement(_.a, { amount: t })
-                  )
-            );
-          }),
-        N = Object(o.a)(function (e) {
-          var t = e.offer,
-            n = e.items,
-            r = E(n, 15),
-            a = E(n, 14),
-            o = E(n, 13),
-            s = E(n, 3);
+        j = function (e) {
+          var t = e.cost,
+            n = e.label,
+            r = e.bOwned;
           return i.a.createElement(
-            "div",
-            { style: { position: "relative" }, className: f.SmallItemHand },
-            s &&
-              i.a.createElement(O, {
-                item: s,
-                offer: t,
-                className: f.ProfileBackground,
-              }),
-            o &&
-              i.a.createElement(O, {
-                item: o,
-                offer: t,
-                className: f.MiniProfileBackground,
-              }),
-            r &&
-              i.a.createElement(O, { item: r, offer: t, className: f.Avatar }),
-            a &&
-              i.a.createElement(
-                "div",
-                { className: f.AvatarFrameContainer },
-                i.a.createElement(O, {
-                  item: a,
-                  offer: t,
-                  className: f.AvatarFrame,
-                })
-              )
+            u.a,
+            {
+              padding: "small",
+              display: "flex",
+              alignItems: "center",
+              flexDirection: "row",
+              className: f.ProfileBundleFooter,
+              title: n,
+            },
+            i.a.createElement("div", { className: f.ProfileBundleName }, n),
+            r
+              ? i.a.createElement(
+                  i.a.Fragment,
+                  null,
+                  i.a.createElement(
+                    "span",
+                    { className: f.AlreadyOwned },
+                    Object(m.f)("#Redeem_BundleItemOwned")
+                  ),
+                  i.a.createElement(g.i, { className: f.CheckmarkCircle })
+                )
+              : i.a.createElement(
+                  i.a.Fragment,
+                  null,
+                  i.a.createElement(_.a, { amount: t })
+                )
           );
-        });
-      function E(e, t) {
+        };
+      function N(e, t) {
         var n = e
           .filter(function (e) {
             return e.community_item_class == t;
@@ -18264,39 +18183,39 @@
           .slice(0, 1);
         return 1 == n.length ? n[0] : null;
       }
-      var S = Object(o.a)(function (e) {
+      var E = Object(o.a)(function (e) {
           var t = e.offer,
             n = e.items,
-            r = E(n, 15),
-            a = E(n, 14),
-            o = E(n, 13),
-            s = E(n, 3);
+            r = N(n, 15),
+            a = N(n, 14),
+            o = N(n, 13),
+            s = N(n, 3);
           return i.a.createElement(
             "div",
             { style: { position: "relative" }, className: f.ItemHand },
             r &&
-              i.a.createElement(O, { item: r, offer: t, className: f.Avatar }),
+              i.a.createElement(S, { item: r, offer: t, className: f.Avatar }),
             a &&
-              i.a.createElement(O, {
+              i.a.createElement(S, {
                 item: a,
                 offer: t,
                 className: f.AvatarFrame,
               }),
             o &&
-              i.a.createElement(O, {
+              i.a.createElement(S, {
                 item: o,
                 offer: t,
                 className: f.MiniProfileBackground,
               }),
             s &&
-              i.a.createElement(O, {
+              i.a.createElement(S, {
                 item: s,
                 offer: t,
                 className: f.ProfileBackground,
               })
           );
         }),
-        O = Object(o.a)(function (e) {
+        S = Object(o.a)(function (e) {
           e.offer;
           var t = e.item,
             n = e.className,
