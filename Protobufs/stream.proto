@@ -192,6 +192,7 @@ enum EStreamActivity {
 	k_EStreamActivityGame = 2;
 	k_EStreamActivityDesktop = 3;
 	k_EStreamActivitySecureDesktop = 4;
+	k_EStreamActivityMusic = 5;
 }
 
 enum EStreamDataMessage {

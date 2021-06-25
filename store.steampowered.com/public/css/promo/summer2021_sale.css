@@ -11,12 +11,13 @@ body.v6.sale_summer2021 .responsive_page_template_content {
             }
 body.v6.sale_summer2021 .page_background_holder {
                 background-size: contain !important;
-                max-height: 730px;
+                max-height: 360px;
+                margin-top: 50px;
             }
 
 body.v6.sale_summer2021 .home_page_takeover_sizer {
                 max-height: 350px;
-                min-height: 257px;
+                min-height: 270px;
                 display: inline-block;
             }
 
@@ -42,14 +43,13 @@ body.v6.sale_summer2021 .home_header_textimage_ctn {
                 z-index: 100;
                 position: absolute;
                 margin: 0;
-                height: 70%;
-                max-height: 508px;
+                height: 100%;
+                max-height: 300px;
                 display: flex;
                 background-repeat: no-repeat;
                 background-size: contain;
                 justify-content: flex-end;
-                /*-webkit-filter: drop-shadow(8px 8px 7px rgba(0,0,0,0.2));
-                filter: drop-shadow(8px 8px 7px rgba(0,0,0,0.2));*/
+                align-items: flex-end;
             }
 
 body.v6.sale_summer2021 .home_ctn.discovery_queue_ctn, body.v6.sale_summer2021 .home_ctn.top_new_releases {
@@ -87,13 +87,9 @@ body.v6.sale_summer2021 .home_sticker_ctn.mobile {
 }
 
 .bookmark_triangle {
-    width: 0;
-    height: 0;
-    border-top: 30px solid transparent;
-    border-bottom: 30px solid transparent;
-    border-left: 15px solid transparent;
-    border-bottom-color: #BE4328;
-    border-top-color: #BE4328;
+    width: 18px;
+    margin-right: -1px;
+    color: #BE4328;
 }
 
 .bookmark_img {
@@ -134,14 +130,12 @@ body.v6.sale_summer2021 .home_sticker_ctn.mobile {
 }
 
 .bookmark_ctn {
-    margin-left: auto;
     width: fit-content;
     user-select: none;
     height: 60px;
-    display: none;
-    max-width: 25vw;
-    margin-top: 9%;
-    margin-right: -9%;
+    display: flex;
+    margin-bottom: 3%;
+    margin-right: 7px;
     cursor: pointer;
     filter: drop-shadow(2px 4px 12px #3D3E3899);
     transform: rotate(
@@ -1263,13 +1257,17 @@ body.forgeyourfate {
         width: 95vw;
     }
 
+    html.responsive  body.v6.sale_summer2021 .page_background_holder {
+        margin: 0;
+    }
+
     html.responsive .bookmark_ctn {
         display: none;
     }
 
     body.v6.sale_summer2021 .home_page_takeover_sizer {
                     min-height: unset;
-                    height: 30vw !important;
+                    height: 22vw !important;
                 }
 
     html.responsive body.v6.sale_summer2021 .home_header_textimage_ctn {

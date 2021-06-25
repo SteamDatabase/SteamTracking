@@ -2823,7 +2823,7 @@ PDP MK X Fight Stick
 PDP Xbox 360 Marvel Controller
 PDP Xbox 360 Controller
 SteelSeries Stratus Duo
-Amazon Luna Gamepad
+Amazon Luna Controller
 Xbox One Controller
 Xbox One S Controller
 Xbox Series X Controller
@@ -5127,8 +5127,8 @@ linux
 Linux;tenfoot
 X-ValveUserAgent
 panorama %s %s
-Jun 21 2021
-14:16:14
+Jun 25 2021
+11:26:56
 X-SteamClientVersion
 Assertion Failed: hostName
 Assertion Failed: pchRemoteHost
@@ -7774,7 +7774,6 @@ D
 +
 +
 +
-I+
 *+
 @
 @
@@ -7785,7 +7784,7 @@ I+
 &
 *
 *
-w*
+?*
 F%
 2%
 *
@@ -7818,7 +7817,6 @@ H=
 2#
 ?
 ?
-M(
 #
 #
 #
@@ -7895,6 +7893,7 @@ P
 H!
 :!
 z8
+"
 A
 "
 A
@@ -7933,7 +7932,7 @@ $
 9
 9
 9
-7
+5
 0
 p
 w
@@ -8394,7 +8393,6 @@ Hc
 
 
 M(
-0
 L95e%&
 Hc
 I
