@@ -270,6 +270,20 @@ body.FlatGreyTheme {
     --btn-outline: rgb(105 110 113);
 }
 
+/* (Outriders - Mantra) */  
+body.PurpleTheme {
+--gradient-right: #2c0652;
+    --gradient-left: #4a099494;
+    --gradient-background: #20024380;
+    --gradient-background-right: #0f021f;
+    --gradient-background-left: #150329;
+    --color-showcase-header: #40126d;
+    --gradient-showcase-header-left: #1b072e;
+    --btn-background: #3f126b;
+    --btn-background-hover: #581a94;
+    --btn-outline: #571b91;
+}
+
 div.profile_page {
 	position: relative;
 	min-width: 950px;
