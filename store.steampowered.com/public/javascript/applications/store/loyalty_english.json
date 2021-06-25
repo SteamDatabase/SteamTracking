@@ -356,5 +356,8 @@
     "ProfileBundle_LoadingPreview": "Loading a preview of '%1$s'",
     "FeaturedBanner_SummerSale2021_Headline": "Introducing Game Profiles",
     "FeaturedBanner_SummerSale2021_Subhead": "Equip all new Game Profiles and show off your fandom for your favorite games",
-    "FeaturedBanner_SummerSale2021_CallToAction": "Learn more"
+    "FeaturedBanner_SummerSale2021_CallToAction": "Learn more",
+    "ProfileModifier_PreviewLinkText": "Open Preview in a New Tab",
+    "HiddenItems_Explanation": "%1$s item has been hidden based on your account preferences.",
+    "HiddenItems_Explanation_Plural": "%1$s items have been hidden based on your account preferences."
 }
