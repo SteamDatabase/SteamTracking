@@ -53777,7 +53777,7 @@ PERFORMANCE OF THIS SOFTWARE.
       return "";
     }
     function p() {
-      return "springmajor21";
+      return "ti10qual";
     }
     function h(e) {
       var t = i.a.Get().GetNextLeagueNode(e, null, null, !0).nLeagueID;
