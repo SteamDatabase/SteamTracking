@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [68],
+  [39],
   {
     "++az": function (e, t, n) {
       e.exports =
@@ -3915,6 +3915,7 @@
         "./italian.png": "qYHL",
         "./japanese.png": "MAH9",
         "./korean.png": "LUpu",
+        "./koreana.png": "ygOc",
         "./latam.png": "Opir",
         "./norwegian.png": "rAtD",
         "./polish.png": "2iUv",
@@ -4455,35 +4456,35 @@
     },
     Aqke: function (e, t, n) {
       var r = {
-        "./loyalty_brazilian.json": ["jJTi", 39],
-        "./loyalty_bulgarian.json": ["YXmX", 40],
-        "./loyalty_czech.json": ["Yw6T", 41],
-        "./loyalty_danish.json": ["LeJ7", 42],
-        "./loyalty_dutch.json": ["3s9e", 43],
-        "./loyalty_english.json": ["nz6u", 44],
-        "./loyalty_finnish.json": ["cCRj", 45],
-        "./loyalty_french.json": ["WjZg", 46],
-        "./loyalty_german.json": ["2HFY", 47],
-        "./loyalty_greek.json": ["puzw", 48],
-        "./loyalty_hungarian.json": ["h+vV", 49],
-        "./loyalty_italian.json": ["1xjJ", 50],
-        "./loyalty_japanese.json": ["KhFN", 51],
-        "./loyalty_koreana.json": ["0T2E", 52],
-        "./loyalty_latam.json": ["SFVQ", 53],
-        "./loyalty_norwegian.json": ["6qpk", 54],
-        "./loyalty_polish.json": ["c9AW", 55],
-        "./loyalty_portuguese.json": ["H3eu", 56],
-        "./loyalty_romanian.json": ["gt0D", 57],
-        "./loyalty_russian.json": ["4nQk", 58],
-        "./loyalty_sc_schinese.json": ["0Z0/", 59],
-        "./loyalty_schinese.json": ["svug", 60],
-        "./loyalty_spanish.json": ["x/nm", 61],
-        "./loyalty_swedish.json": ["d/hP", 62],
-        "./loyalty_tchinese.json": ["EWje", 63],
-        "./loyalty_thai.json": ["SnkP", 64],
-        "./loyalty_turkish.json": ["cD82", 65],
-        "./loyalty_ukrainian.json": ["jV8j", 66],
-        "./loyalty_vietnamese.json": ["TxFk", 67],
+        "./loyalty_brazilian.json": ["jJTi", 106],
+        "./loyalty_bulgarian.json": ["YXmX", 107],
+        "./loyalty_czech.json": ["Yw6T", 108],
+        "./loyalty_danish.json": ["LeJ7", 109],
+        "./loyalty_dutch.json": ["3s9e", 110],
+        "./loyalty_english.json": ["nz6u", 111],
+        "./loyalty_finnish.json": ["cCRj", 112],
+        "./loyalty_french.json": ["WjZg", 113],
+        "./loyalty_german.json": ["2HFY", 114],
+        "./loyalty_greek.json": ["puzw", 115],
+        "./loyalty_hungarian.json": ["h+vV", 116],
+        "./loyalty_italian.json": ["1xjJ", 117],
+        "./loyalty_japanese.json": ["KhFN", 118],
+        "./loyalty_koreana.json": ["0T2E", 119],
+        "./loyalty_latam.json": ["SFVQ", 120],
+        "./loyalty_norwegian.json": ["6qpk", 121],
+        "./loyalty_polish.json": ["c9AW", 122],
+        "./loyalty_portuguese.json": ["H3eu", 123],
+        "./loyalty_romanian.json": ["gt0D", 124],
+        "./loyalty_russian.json": ["4nQk", 125],
+        "./loyalty_sc_schinese.json": ["0Z0/", 126],
+        "./loyalty_schinese.json": ["svug", 127],
+        "./loyalty_spanish.json": ["x/nm", 128],
+        "./loyalty_swedish.json": ["d/hP", 129],
+        "./loyalty_tchinese.json": ["EWje", 130],
+        "./loyalty_thai.json": ["SnkP", 131],
+        "./loyalty_turkish.json": ["cD82", 132],
+        "./loyalty_ukrainian.json": ["jV8j", 133],
+        "./loyalty_vietnamese.json": ["TxFk", 134],
       };
       function a(e) {
         if (!n.o(r, e))
@@ -5982,10 +5983,10 @@
           return e.toString().padStart(2, "0");
         },
         He = i.a.lazy(function () {
-          return n.e(101).then(n.bind(null, "yDev"));
+          return n.e(72).then(n.bind(null, "yDev"));
         }),
         Ue = i.a.lazy(function () {
-          return n.e(100).then(n.bind(null, "f4w8"));
+          return n.e(71).then(n.bind(null, "f4w8"));
         }),
         We = (function (e) {
           function t() {
@@ -18466,6 +18467,10 @@
     vbhM: function (e, t, n) {
       e.exports =
         n.p + "images/applications/store/spanish.png?v=valveisgoodatcaching";
+    },
+    ygOc: function (e, t, n) {
+      e.exports =
+        n.p + "images/applications/store/koreana.png?v=valveisgoodatcaching";
     },
     ywEf: function (e, t, n) {
       e.exports =
