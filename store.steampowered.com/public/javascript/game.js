@@ -1347,6 +1347,7 @@ function BuildReviewHistogram()
 
 		var funcViewReviewsDuringEvent = function( bCountAllReviews, startDate, endDate ) {
 			$J( '#review_type_all' ).attr( 'checked', true );
+			$J('#reviews_offtopic_activity_checkbox').attr( 'checked', false );
 			FilterReviewsGraph( bCountAllReviews, startDate, endDate, false );
 			if ( flotRecent )
 			{
@@ -1357,6 +1358,7 @@ function BuildReviewHistogram()
 
 		var funcViewReviewsExcludingEvent = function( bCountAllReviews, startDate, endDate ) {
 			$J( '#review_type_all' ).attr( 'checked', true );
+			$J('#reviews_offtopic_activity_checkbox').attr( 'checked', false );
 			FilterReviewsGraph( bCountAllReviews, startDate, endDate, true );
 			if ( flotRecent )
 			{
