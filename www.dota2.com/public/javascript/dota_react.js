@@ -214,7 +214,7 @@
                 3: "8381d544dddaa44d4305",
                 4: "6c1b11ae6709ab860ddd",
                 5: "51312fe19a4659ab0f62",
-                6: "809f4950349dc4c5c745",
+                6: "cff188c8321178eee342",
                 7: "2ad485284f302a4186b3",
                 8: "8895ca1452379edc6afc",
                 9: "8cd635f8a7ace20c0dc4",
@@ -39168,19 +39168,20 @@ object-assign
         var t = e.options,
           a = e.selectedOption,
           n = e.setOption,
-          r = t.findIndex(function (e) {
+          r = e.nWidth,
+          i = t.findIndex(function (e) {
             return a == e.value;
           });
         return o.a.createElement(
           "div",
-          { className: fa.a.DropdownSelector },
+          { className: fa.a.DropdownSelector, style: { width: r } },
           o.a.createElement(
             "select",
             {
               onChange: function (e) {
                 return n(t[parseInt(e.target.value)].value);
               },
-              value: r,
+              value: i,
             },
             t.map(function (e, t) {
               return o.a.createElement(
@@ -40087,7 +40088,24 @@ object-assign
           a = Object(da.k)(e),
           n = Object(i.useState)(Ia.a.Get().GetSpoilerBlockEnabled()),
           r = n[0],
-          s = n[1];
+          s = n[1],
+          d = Object(i.useState)(
+            e == ma.c.INVALID ? Object(da.j)(Object(da.b)()) : e
+          ),
+          m = d[0],
+          _ = d[1],
+          h = [
+            { value: ma.c.SPRING_2021_LEAGUE, strLabel: "#dpc_event_spring21" },
+            {
+              value: ma.c.SPRING_2021_MAJOR,
+              strLabel: "#dpc_event_springmajor21",
+            },
+            {
+              value: ma.c.INTERNATIONAL_2021_QUALIFIERS,
+              strLabel: "#dpc_event_ti10qual",
+            },
+            { value: ma.c.INTERNATIONAL_2021, strLabel: "#dpc_event_ti10" },
+          ];
         return (
           Object(i.useEffect)(
             function () {
@@ -40095,77 +40113,90 @@ object-assign
             },
             [r]
           ),
-          o.a.createElement(
-            "div",
-            { className: Ra.a.DPCHeader },
-            o.a.createElement(
-              "div",
-              { className: Ra.a.DPCHeaderContents },
-              o.a.createElement("div", { className: Ra.a.DPCTitle }),
-              o.a.createElement(
+          m != e
+            ? o.a.createElement(c.a, {
+                to: u.a.dpc_watch_root(Object(da.k)(m)),
+              })
+            : o.a.createElement(
                 "div",
-                { className: Ra.a.DPCOptions },
-                o.a.createElement(
-                  l.b,
-                  {
-                    to: u.a.dpc_watch(a),
-                    className: Object(le.a)(
-                      Ra.a.DPCLink,
-                      0 == t.pathname.indexOf(u.a.dpc_watch_root(a)) &&
-                        Ra.a.Active
-                    ),
-                  },
-                  o.a.createElement(
-                    "div",
-                    { className: Ra.a.Label },
-                    Object(p.a)("#dpc_header_home")
-                  )
-                ),
-                o.a.createElement(
-                  l.b,
-                  {
-                    to: u.a.dpc_schedule(a),
-                    className: Object(le.a)(
-                      Ra.a.DPCLink,
-                      0 == t.pathname.indexOf(u.a.dpc_schedule_root(a)) &&
-                        Ra.a.Active
-                    ),
-                  },
-                  o.a.createElement(
-                    "div",
-                    { className: Ra.a.Label },
-                    Object(p.a)("#dpc_header_schedule")
-                  )
-                ),
-                o.a.createElement(
-                  l.b,
-                  {
-                    to: u.a.dpc_standings(a),
-                    className: Object(le.a)(
-                      Ra.a.DPCLink,
-                      0 == t.pathname.indexOf(u.a.dpc_standings_root(a)) &&
-                        Ra.a.Active
-                    ),
-                  },
-                  o.a.createElement(
-                    "div",
-                    { className: Ra.a.Label },
-                    Object(p.a)("#dpc_header_standings")
-                  )
-                )
-              ),
-              o.a.createElement(
-                "div",
-                { className: Ra.a.DPCSpoilerBlock },
+                { className: Ra.a.DPCHeader },
                 o.a.createElement(
                   "div",
-                  { className: Ra.a.SpoilerText },
-                  Object(p.a)("#dpc_header_spoiler_block")
-                ),
-                o.a.createElement(ya, { bEnabled: r, setEnabled: s })
+                  { className: Ra.a.DPCHeaderContents },
+                  o.a.createElement(
+                    "div",
+                    { className: Ra.a.DPCEventSelector },
+                    o.a.createElement(va, {
+                      options: h,
+                      selectedOption: m,
+                      setOption: _,
+                      nWidth: 250,
+                    })
+                  ),
+                  o.a.createElement(
+                    "div",
+                    { className: Ra.a.DPCOptions },
+                    o.a.createElement(
+                      l.b,
+                      {
+                        to: u.a.dpc_watch(a),
+                        className: Object(le.a)(
+                          Ra.a.DPCLink,
+                          0 == t.pathname.indexOf(u.a.dpc_watch_root(a)) &&
+                            Ra.a.Active
+                        ),
+                      },
+                      o.a.createElement(
+                        "div",
+                        { className: Ra.a.Label },
+                        Object(p.a)("#dpc_header_watch")
+                      )
+                    ),
+                    o.a.createElement(
+                      l.b,
+                      {
+                        to: u.a.dpc_schedule(a),
+                        className: Object(le.a)(
+                          Ra.a.DPCLink,
+                          0 == t.pathname.indexOf(u.a.dpc_schedule_root(a)) &&
+                            Ra.a.Active
+                        ),
+                      },
+                      o.a.createElement(
+                        "div",
+                        { className: Ra.a.Label },
+                        Object(p.a)("#dpc_header_schedule")
+                      )
+                    ),
+                    o.a.createElement(
+                      l.b,
+                      {
+                        to: u.a.dpc_standings(a),
+                        className: Object(le.a)(
+                          Ra.a.DPCLink,
+                          0 == t.pathname.indexOf(u.a.dpc_standings_root(a)) &&
+                            Ra.a.Active
+                        ),
+                      },
+                      o.a.createElement(
+                        "div",
+                        { className: Ra.a.Label },
+                        Object(p.a)("#dpc_header_standings")
+                      )
+                    )
+                  ),
+                  o.a.createElement(
+                    "div",
+                    { className: Ra.a.DPCSpoilerBlock },
+                    o.a.createElement(
+                      "div",
+                      { className: Ra.a.SpoilerText },
+                      Object(p.a)("#dpc_header_spoiler_block")
+                    ),
+                    o.a.createElement(ya, { bEnabled: r, setEnabled: s })
+                  )
+                )
               )
-            )
-          )
         );
       },
       Ga = a("pitT"),
