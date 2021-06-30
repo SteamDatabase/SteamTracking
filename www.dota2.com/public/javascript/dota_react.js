@@ -20608,10 +20608,7 @@ object-assign
                     }),
                     i == s)
                   )
-                    return (
-                      console.log("NODE LIVE", t, a, "due to stream", e),
-                      { value: !0 }
-                    );
+                    return { value: !0 };
                 },
                 d = 0,
                 m = l;
@@ -40512,65 +40509,47 @@ object-assign
         );
       }),
       Za = Object(s.a)(function () {
-        var e = Ia.a.Get().GetHomePageContext(),
-          t = Ia.a.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
-          a =
-            e.eSeriesDisplay == da.i.SERIES &&
-            (null == t ? void 0 : t.is_completed),
-          n = t && t.team_1_wins == t.team_2_wins,
-          r = n ? "#dpc_draw" : "#dpc_victory",
-          i =
-            (null == t ? void 0 : t.team_1_wins) >
-            (null == t ? void 0 : t.team_2_wins)
-              ? null == t
+        var e = Gn(),
+          t = Ia.a.Get().GetHomePageContext(),
+          a = Ia.a.Get().GetLeagueNode(t.nLeagueID, t.nNodeID),
+          n =
+            t.eSeriesDisplay == da.i.SERIES &&
+            (null == a ? void 0 : a.is_completed) &&
+            !Ia.a.Get().IsLeagueNodeLive(e, t.nLeagueID, t.nNodeID),
+          r = a && a.team_1_wins == a.team_2_wins,
+          i = r ? "#dpc_draw" : "#dpc_victory",
+          s =
+            (null == a ? void 0 : a.team_1_wins) >
+            (null == a ? void 0 : a.team_2_wins)
+              ? null == a
                 ? void 0
-                : t.team_id_1
-              : null == t
+                : a.team_id_1
+              : null == a
               ? void 0
-              : t.team_id_2,
-          s = Math.max(
-            null == t ? void 0 : t.team_1_wins,
-            null == t ? void 0 : t.team_2_wins
+              : a.team_id_2,
+          l = Math.max(
+            null == a ? void 0 : a.team_1_wins,
+            null == a ? void 0 : a.team_2_wins
           ),
-          l = Math.min(
-            null == t ? void 0 : t.team_1_wins,
-            null == t ? void 0 : t.team_2_wins
+          c = Math.min(
+            null == a ? void 0 : a.team_1_wins,
+            null == a ? void 0 : a.team_2_wins
           ),
-          c = Ia.a.Get().GetTeamInfo(null == t ? void 0 : t.team_id_1),
-          u = Ia.a.Get().GetTeamInfo(null == t ? void 0 : t.team_id_2),
-          d =
-            c && t && (n || i == t.team_id_1)
-              ? c.color_primary + "44"
-              : "#131313",
+          u = Ia.a.Get().GetTeamInfo(null == a ? void 0 : a.team_id_1),
+          d = Ia.a.Get().GetTeamInfo(null == a ? void 0 : a.team_id_2),
           m =
-            u && t && (n || i == t.team_id_2)
+            u && a && (r || s == a.team_id_1)
               ? u.color_primary + "44"
               : "#131313",
-          _ = Ia.a.Get().GetTeamNames(i),
-          h = n ? "" : null == _ ? void 0 : _.name,
-          f = [];
-        ((null == c ? void 0 : c.registered_member_account_ids) || []).forEach(
+          _ =
+            d && a && (r || s == a.team_id_2)
+              ? d.color_primary + "44"
+              : "#131313",
+          h = Ia.a.Get().GetTeamNames(s),
+          f = r ? "" : null == h ? void 0 : h.name,
+          g = [];
+        ((null == u ? void 0 : u.registered_member_account_ids) || []).forEach(
           function (e) {
-            var t = c.members.find(function (t) {
-              return t.account_id == e;
-            });
-            t &&
-              f.push({
-                nAccountID: t.account_id,
-                strProName: t.pro_name,
-                nHeroID: void 0,
-                nLevel: void 0,
-                nKills: void 0,
-                nDeaths: void 0,
-                nAssists: void 0,
-              });
-          }
-        );
-        var g = [];
-        return (
-          (
-            (null == u ? void 0 : u.registered_member_account_ids) || []
-          ).forEach(function (e) {
             var t = u.members.find(function (t) {
               return t.account_id == e;
             });
@@ -40584,90 +40563,125 @@ object-assign
                 nDeaths: void 0,
                 nAssists: void 0,
               });
+          }
+        );
+        var v = [];
+        return (
+          (
+            (null == d ? void 0 : d.registered_member_account_ids) || []
+          ).forEach(function (e) {
+            var t = d.members.find(function (t) {
+              return t.account_id == e;
+            });
+            t &&
+              v.push({
+                nAccountID: t.account_id,
+                strProName: t.pro_name,
+                nHeroID: void 0,
+                nLevel: void 0,
+                nKills: void 0,
+                nDeaths: void 0,
+                nAssists: void 0,
+              });
           }),
-          o.a.createElement(
-            "div",
-            {
-              className: Object(le.a)(
-                Fa.a.DPCSeriesDetailsOverview,
-                a && Fa.a.Visible
-              ),
-              style: {
-                background: "linear-gradient( 120deg, " + d + ", " + m + " )",
-              },
-            },
-            o.a.createElement(
-              "div",
-              { className: Fa.a.PlayerList },
-              za(0, 5).map(function (e) {
-                return e < f.length
-                  ? o.a.createElement(rn, {
-                      key: f[e].nAccountID,
-                      bLeft: !1,
-                      strName: f[e].strProName,
-                      nAccountID: f[e].nAccountID,
-                    })
-                  : e < f.length - 1
-                  ? o.a.createElement("div", {
-                      key: "div" + e,
-                      className: Fa.a.MatchSectionDivider,
-                    })
-                  : null;
-              })
-            ),
-            o.a.createElement(
-              "div",
-              { className: Fa.a.CenterContainer },
-              o.a.createElement(
-                "div",
-                { className: Fa.a.Results },
-                Object(p.a)(r)
-              ),
-              o.a.createElement(
-                "div",
-                { className: Object(le.a)(Fa.a.TeamsDraw, n && Fa.a.Visible) },
-                o.a.createElement(Wa, {
-                  nTeamID: null == t ? void 0 : t.team_id_1,
-                }),
-                o.a.createElement(Wa, {
-                  nTeamID: null == t ? void 0 : t.team_id_2,
-                })
-              ),
-              o.a.createElement(
+          n
+            ? o.a.createElement(
                 "div",
                 {
-                  className: Object(le.a)(Fa.a.TeamWinner, !n && Fa.a.Visible),
+                  className: Object(le.a)(
+                    Fa.a.DPCSeriesDetailsOverview,
+                    n && Fa.a.Visible
+                  ),
+                  style: {
+                    background:
+                      "linear-gradient( 120deg, " + m + ", " + _ + " )",
+                  },
                 },
-                o.a.createElement(Wa, { nTeamID: i })
-              ),
-              o.a.createElement("div", { className: Fa.a.WinningTeamName }, h),
-              !n &&
                 o.a.createElement(
                   "div",
-                  { className: Fa.a.WinningRecord },
-                  Object(p.a)("#dpc_wins_score", s, l)
+                  { className: Fa.a.PlayerList },
+                  za(0, 5).map(function (e) {
+                    return e < g.length
+                      ? o.a.createElement(rn, {
+                          key: g[e].nAccountID,
+                          bLeft: !1,
+                          strName: g[e].strProName,
+                          nAccountID: g[e].nAccountID,
+                        })
+                      : e < g.length - 1
+                      ? o.a.createElement("div", {
+                          key: "div" + e,
+                          className: Fa.a.MatchSectionDivider,
+                        })
+                      : null;
+                  })
+                ),
+                o.a.createElement(
+                  "div",
+                  { className: Fa.a.CenterContainer },
+                  o.a.createElement(
+                    "div",
+                    { className: Fa.a.Results },
+                    Object(p.a)(i)
+                  ),
+                  o.a.createElement(
+                    "div",
+                    {
+                      className: Object(le.a)(
+                        Fa.a.TeamsDraw,
+                        r && Fa.a.Visible
+                      ),
+                    },
+                    o.a.createElement(Wa, {
+                      nTeamID: null == a ? void 0 : a.team_id_1,
+                    }),
+                    o.a.createElement(Wa, {
+                      nTeamID: null == a ? void 0 : a.team_id_2,
+                    })
+                  ),
+                  o.a.createElement(
+                    "div",
+                    {
+                      className: Object(le.a)(
+                        Fa.a.TeamWinner,
+                        !r && Fa.a.Visible
+                      ),
+                    },
+                    o.a.createElement(Wa, { nTeamID: s })
+                  ),
+                  o.a.createElement(
+                    "div",
+                    { className: Fa.a.WinningTeamName },
+                    f
+                  ),
+                  !r &&
+                    o.a.createElement(
+                      "div",
+                      { className: Fa.a.WinningRecord },
+                      Object(p.a)("#dpc_wins_score", l, c)
+                    )
+                ),
+                o.a.createElement(
+                  "div",
+                  { className: Fa.a.PlayerList },
+                  za(0, 5).map(function (e) {
+                    return e < v.length
+                      ? o.a.createElement(rn, {
+                          key: v[e].nAccountID,
+                          bLeft: !0,
+                          strName: v[e].strProName,
+                          nAccountID: v[e].nAccountID,
+                        })
+                      : e < v.length - 1
+                      ? o.a.createElement("div", {
+                          key: "div" + e,
+                          className: Fa.a.MatchSectionDivider,
+                        })
+                      : null;
+                  })
                 )
-            ),
-            o.a.createElement(
-              "div",
-              { className: Fa.a.PlayerList },
-              za(0, 5).map(function (e) {
-                return e < g.length
-                  ? o.a.createElement(rn, {
-                      key: g[e].nAccountID,
-                      bLeft: !0,
-                      strName: g[e].strProName,
-                      nAccountID: g[e].nAccountID,
-                    })
-                  : e < g.length - 1
-                  ? o.a.createElement("div", {
-                      key: "div" + e,
-                      className: Fa.a.MatchSectionDivider,
-                    })
-                  : null;
-              })
-            )
-          )
+              )
+            : null
         );
       }),
       $a = Object(s.a)(function () {
@@ -40824,37 +40838,19 @@ object-assign
         );
       }),
       en = Object(s.a)(function () {
-        var e = Ia.a.Get().GetHomePageContext(),
-          t = Ia.a.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
-          a = Ia.a.Get().GetTeamInfo(null == t ? void 0 : t.team_id_1),
-          n = Ia.a.Get().GetTeamInfo(null == t ? void 0 : t.team_id_2),
-          r =
-            e.eSeriesDisplay == da.i.SERIES &&
-            !(null == t ? void 0 : t.is_completed) &&
-            !(null == t ? void 0 : t.has_started),
-          i = [];
-        ((null == a ? void 0 : a.registered_member_account_ids) || []).forEach(
+        var e = Gn(),
+          t = Ia.a.Get().GetHomePageContext(),
+          a = Ia.a.Get().GetLeagueNode(t.nLeagueID, t.nNodeID),
+          n = Ia.a.Get().GetTeamInfo(null == a ? void 0 : a.team_id_1),
+          r = Ia.a.Get().GetTeamInfo(null == a ? void 0 : a.team_id_2),
+          i =
+            t.eSeriesDisplay == da.i.SERIES &&
+            !(null == a ? void 0 : a.is_completed) &&
+            !(null == a ? void 0 : a.has_started) &&
+            !Ia.a.Get().IsLeagueNodeLive(e, t.nLeagueID, t.nNodeID),
+          s = [];
+        ((null == n ? void 0 : n.registered_member_account_ids) || []).forEach(
           function (e) {
-            var t = a.members.find(function (t) {
-              return t.account_id == e;
-            });
-            t &&
-              i.push({
-                nAccountID: t.account_id,
-                strProName: t.pro_name,
-                nHeroID: void 0,
-                nLevel: void 0,
-                nKills: void 0,
-                nDeaths: void 0,
-                nAssists: void 0,
-              });
-          }
-        );
-        var s = [];
-        return (
-          (
-            (null == n ? void 0 : n.registered_member_account_ids) || []
-          ).forEach(function (e) {
             var t = n.members.find(function (t) {
               return t.account_id == e;
             });
@@ -40868,52 +40864,74 @@ object-assign
                 nDeaths: void 0,
                 nAssists: void 0,
               });
+          }
+        );
+        var l = [];
+        return (
+          (
+            (null == r ? void 0 : r.registered_member_account_ids) || []
+          ).forEach(function (e) {
+            var t = r.members.find(function (t) {
+              return t.account_id == e;
+            });
+            t &&
+              l.push({
+                nAccountID: t.account_id,
+                strProName: t.pro_name,
+                nHeroID: void 0,
+                nLevel: void 0,
+                nKills: void 0,
+                nDeaths: void 0,
+                nAssists: void 0,
+              });
           }),
-          o.a.createElement(
-            "div",
-            {
-              className: Object(le.a)(
-                Fa.a.DPCSeriesUpcoming,
-                r && Fa.a.Visible
-              ),
-            },
-            o.a.createElement(
-              "div",
-              { className: Fa.a.PlayerList },
-              za(0, 5).map(function (e) {
-                return e < i.length
-                  ? o.a.createElement(rn, {
-                      key: i[e].nAccountID,
-                      bLeft: !1,
-                      strName: i[e].strProName,
-                      nAccountID: i[e].nAccountID,
-                    })
-                  : e < i.length - 1
-                  ? o.a.createElement("div", {
-                      className: Fa.a.MatchSectionDivider,
-                    })
-                  : null;
-              })
-            ),
-            o.a.createElement(
-              "div",
-              { className: Fa.a.PlayerList },
-              za(0, 5).map(function (e) {
-                return e < s.length
-                  ? o.a.createElement(rn, {
-                      key: s[e].nAccountID,
-                      bLeft: !0,
-                      strName: s[e].strProName,
-                      nAccountID: s[e].nAccountID,
-                    })
-                  : e < s.length - 1
-                  ? o.a.createElement("div", {
-                      className: Fa.a.MatchSectionDivider,
-                    })
-                  : null;
-              })
-            )
-          )
+          i
+            ? o.a.createElement(
+                "div",
+                {
+                  className: Object(le.a)(
+                    Fa.a.DPCSeriesUpcoming,
+                    i && Fa.a.Visible
+                  ),
+                },
+                o.a.createElement(
+                  "div",
+                  { className: Fa.a.PlayerList },
+                  za(0, 5).map(function (e) {
+                    return e < s.length
+                      ? o.a.createElement(rn, {
+                          key: s[e].nAccountID,
+                          bLeft: !1,
+                          strName: s[e].strProName,
+                          nAccountID: s[e].nAccountID,
+                        })
+                      : e < s.length - 1
+                      ? o.a.createElement("div", {
+                          className: Fa.a.MatchSectionDivider,
+                        })
+                      : null;
+                  })
+                ),
+                o.a.createElement(
+                  "div",
+                  { className: Fa.a.PlayerList },
+                  za(0, 5).map(function (e) {
+                    return e < l.length
+                      ? o.a.createElement(rn, {
+                          key: l[e].nAccountID,
+                          bLeft: !0,
+                          strName: l[e].strProName,
+                          nAccountID: l[e].nAccountID,
+                        })
+                      : e < l.length - 1
+                      ? o.a.createElement("div", {
+                          className: Fa.a.MatchSectionDivider,
+                        })
+                      : null;
+                  })
+                )
+              )
+            : null
         );
       }),
       tn = Object(s.a)(function () {
@@ -41404,10 +41422,7 @@ object-assign
           t = Ia.a.Get().GetHomePageContext(),
           a = Ia.a.Get().GetLeagueData(t.nLeagueID),
           n = Ia.a.Get().GetLeagueNode(t.nLeagueID, t.nNodeID),
-          r =
-            t.eSeriesDisplay == da.i.SERIES &&
-            !(null == n ? void 0 : n.is_completed) &&
-            (null == n ? void 0 : n.has_started),
+          r = Ia.a.Get().IsLeagueNodeLive(e, t.nLeagueID, t.nNodeID),
           s = null == n ? void 0 : n.stream_ids,
           l =
             null == a
@@ -41454,22 +41469,14 @@ object-assign
                 }),
           m =
             -1 !=
-            d
-              .filter(function (e) {
-                return e.language == f;
-              })
-              .findIndex(function (e) {
-                return e.broadcast_provider == ma.a.LEAGUE_BROADCAST_TWITCH;
-              }),
+            d.findIndex(function (e) {
+              return e.broadcast_provider == ma.a.LEAGUE_BROADCAST_TWITCH;
+            }),
           p =
             -1 !=
-            d
-              .filter(function (e) {
-                return e.language == f;
-              })
-              .findIndex(function (e) {
-                return e.broadcast_provider == ma.a.LEAGUE_BROADCAST_STEAM;
-              }),
+            d.findIndex(function (e) {
+              return e.broadcast_provider == ma.a.LEAGUE_BROADCAST_STEAM;
+            }),
           h = Object(i.useState)(-1),
           f = h[0],
           v = h[1],
@@ -41478,13 +41485,29 @@ object-assign
           E = b[1];
         Object(i.useEffect)(
           function () {
-            d &&
-              0 != d.length &&
-              (-1 == f && v(d[0].language),
-              y == ma.a.LEAGUE_BROADCAST_UNKNOWN && E(d[0].broadcast_provider));
+            v(-1);
           },
-          [d, y, f]
-        );
+          [y]
+        ),
+          Object(i.useEffect)(
+            function () {
+              var e;
+              d &&
+                0 != d.length &&
+                (-1 == f &&
+                  v(
+                    null ===
+                      (e = d.find(function (e) {
+                        return e.broadcast_provider == y;
+                      })) || void 0 === e
+                      ? void 0
+                      : e.language
+                  ),
+                y == ma.a.LEAGUE_BROADCAST_UNKNOWN &&
+                  E(d[0].broadcast_provider));
+            },
+            [d, y, f]
+          );
         var L,
           w =
             null == d
@@ -41493,7 +41516,7 @@ object-assign
                   return e.broadcast_provider == y && f == e.language;
                 });
         if (w)
-          switch (d[0].broadcast_provider) {
+          switch (w.broadcast_provider) {
             case ma.a.LEAGUE_BROADCAST_TWITCH:
               L =
                 "https://player.twitch.tv/?channel=" +
@@ -41512,12 +41535,11 @@ object-assign
                 ) +
                 "?origin=https://www.dota2.com&enablechat=0&enablevideo=1&showasiframe=1";
           }
-        console.log(L);
         for (
           var S = [],
             M = function (e) {
               d.find(function (t) {
-                return t.language == e;
+                return t.language == e && t.broadcast_provider == y;
               }) &&
                 S.push({ value: e, strLabel: "#Language_" + Object(g.a)(e) });
             },
@@ -41526,52 +41548,62 @@ object-assign
           T++
         )
           M(T);
-        return o.a.createElement(
-          "div",
-          { className: Object(le.a)(Fa.a.DPCSeriesLive, r && Fa.a.Visible) },
-          o.a.createElement(
-            "div",
-            { className: Fa.a.VideoContainer },
-            o.a.createElement("iframe", {
-              src: L,
-              height: "100%",
-              width: "100%",
-              allowFullScreen: !0,
-              frameBorder: "0",
-            })
-          ),
-          o.a.createElement(
-            "div",
-            { className: Fa.a.OptionContainer },
-            o.a.createElement(va, {
-              options: S,
-              selectedOption: f,
-              setOption: v,
-            }),
-            m &&
+        return r
+          ? o.a.createElement(
+              "div",
+              {
+                className: Object(le.a)(Fa.a.DPCSeriesLive, r && Fa.a.Visible),
+              },
               o.a.createElement(
                 "div",
-                {
-                  className: Object(le.a)(Fa.a.StreamingOption, !1),
-                  onClick: function () {
-                    return E(ma.a.LEAGUE_BROADCAST_TWITCH);
-                  },
-                },
-                "Twitch"
+                { className: Fa.a.VideoContainer },
+                o.a.createElement("iframe", {
+                  src: L,
+                  height: "100%",
+                  width: "100%",
+                  allowFullScreen: !0,
+                  frameBorder: "0",
+                })
               ),
-            p &&
               o.a.createElement(
                 "div",
-                {
-                  className: Object(le.a)(Fa.a.StreamingOption, Fa.a.Enabled),
-                  onClick: function () {
-                    return E(ma.a.LEAGUE_BROADCAST_STEAM);
-                  },
-                },
-                "Steam"
+                { className: Fa.a.OptionContainer },
+                o.a.createElement(va, {
+                  options: S,
+                  selectedOption: f,
+                  setOption: v,
+                }),
+                m &&
+                  o.a.createElement(
+                    "div",
+                    {
+                      className: Object(le.a)(
+                        Fa.a.StreamingOption,
+                        y == ma.a.LEAGUE_BROADCAST_TWITCH && Fa.a.Enabled
+                      ),
+                      onClick: function () {
+                        return E(ma.a.LEAGUE_BROADCAST_TWITCH);
+                      },
+                    },
+                    "Twitch"
+                  ),
+                p &&
+                  o.a.createElement(
+                    "div",
+                    {
+                      className: Object(le.a)(
+                        Fa.a.StreamingOption,
+                        y == ma.a.LEAGUE_BROADCAST_STEAM && Fa.a.Enabled
+                      ),
+                      onClick: function () {
+                        return E(ma.a.LEAGUE_BROADCAST_STEAM);
+                      },
+                    },
+                    "Steam"
+                  )
               )
-          )
-        );
+            )
+          : null;
       }),
       ln = a("HYeu"),
       cn = a.n(ln),
