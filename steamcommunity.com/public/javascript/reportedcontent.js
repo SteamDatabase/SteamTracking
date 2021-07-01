@@ -93,7 +93,6 @@ function ResetReports( id )
 {
 	var item = gItems[id];
 	var appid = item['consumer_appid'];
-	var title = V_EscapeHTML( item['title'] );
 	var options = {
 		method: 'post',
 		postBody: 'id=' + id + '&appid=' + appid + '&sessionid=' + g_sessionID,
@@ -106,6 +105,26 @@ function ResetReports( id )
 	};
 	new Ajax.Request(
 		'https://steamcommunity.com/sharedfiles/resetreportedcount',
+		options
+	);
+}
+
+function UGCClearContentCheckFlag( id )
+{
+	var item = gItems[id];
+	var appid = item['consumer_appid'];
+	var options = {
+		method: 'post',
+		postBody: 'id=' + id + '&appid=' + appid + '&sessionid=' + g_sessionID,
+		onComplete: (function(id){
+			return function(transport)
+			{
+				$J( "#ModerationControls_" + id ).html( '<span style="color: green">Cleared Content Check Result</span>' );
+			}
+		}(id))
+	};
+	new Ajax.Request(
+		'https://steamcommunity.com/sharedfiles/ignoretextcontentcheckresults',
 		options
 	);
 }
@@ -187,6 +206,12 @@ function SelectedItems_MarkIncompatible()
 function SelectedItems_ResetReports()
 {
 	ApplyFuncOnSelectedItems( ResetReports );
+}
+
+function SelectedItems_ClearContentCheckAndReports()
+{
+	ApplyFuncOnSelectedItems( ResetReports );
+	ApplyFuncOnSelectedItems( UGCClearContentCheckFlag );
 }
 
 function BanReview( id )
