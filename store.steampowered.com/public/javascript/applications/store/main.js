@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6645001";
+var CLSTAMP = "6645409";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [69],
   {
@@ -7427,12 +7427,12 @@ var CLSTAMP = "6645001";
                 void 0 === l && (l = 0),
                 void 0 === u && (u = void 0),
                 Object(a.b)(this, void 0, void 0, function () {
-                  var y, S, E, C, A, w, B, I, L, T, D, N, j, R;
+                  var y, S, E, C, A, w, B, I, L, T, D, N;
                   return Object(a.e)(this, function (a) {
                     switch (a.label) {
                       case 0:
-                        if (
-                          ((y = this.m_mapSaleGameListsByFlavor.get(e)) ||
+                        return (
+                          (y = this.m_mapSaleGameListsByFlavor.get(e)) ||
                             ((S =
                               "browser_" +
                               o +
@@ -7450,67 +7450,51 @@ var CLSTAMP = "6645001";
                                 }),
                                 this.m_mapSaleGameListsByFlavor.set(e, y))),
                           (C = y.appids.length),
-                          !((A = l + c - C) > 0 && y.possible_has_more))
-                        )
-                          return [3, 5];
-                        if (
-                          ((w =
-                            O.d.STORE_BASE_URL +
-                            (n
-                              ? "saleaction/ajaxpreviewsaledynamicappquery"
-                              : "saleaction/ajaxgetsaledynamicappquery")),
-                          (B = null),
-                          (I = {
-                            cc: O.d.COUNTRY,
-                            l: O.d.LANGUAGE,
-                            clanAccountID:
-                              (null == i
-                                ? void 0
-                                : i.clanSteamID.GetAccountID()) || null,
-                            clanAnnouncementGID:
-                              (null == i ? void 0 : i.AnnouncementGID) || null,
-                            flavor: o,
-                            strFacetFilter: null == s ? void 0 : s.GetQuery(),
-                            start: y.solr_index,
-                            count: Math.max(A, 25),
-                            tabuniqueid: r,
-                            return_capsules: !0,
-                            search: t ? u : void 0,
-                            origin: self.origin,
-                            bForceUseSaleTag: !0,
-                            strContentHub: d,
-                            nContentHubTagID: p,
-                            bContentHubDiscountedOnly: h,
-                            strTabFilter: f,
-                          }),
-                          !(s && s.GetQuery().length > 0))
-                        )
-                          return [3, 2];
-                        for (T in ((L = new FormData()), I))
-                          L.append("" + T, "" + I[T]);
-                        return [
-                          4,
-                          M.a.post(w, L, {
-                            withCredentials: n,
-                            cancelToken: null == b ? void 0 : b.token,
-                          }),
-                        ];
+                          (A = l + c - C) > 0 && y.possible_has_more
+                            ? ((w =
+                                O.d.STORE_BASE_URL +
+                                (n
+                                  ? "saleaction/ajaxpreviewsaledynamicappquery"
+                                  : "saleaction/ajaxgetsaledynamicappquery")),
+                              (B = null),
+                              (I = {
+                                cc: O.d.COUNTRY,
+                                l: O.d.LANGUAGE,
+                                clanAccountID:
+                                  (null == i
+                                    ? void 0
+                                    : i.clanSteamID.GetAccountID()) || null,
+                                clanAnnouncementGID:
+                                  (null == i ? void 0 : i.AnnouncementGID) ||
+                                  null,
+                                flavor: o,
+                                strFacetFilter:
+                                  null == s ? void 0 : s.GetQuery(),
+                                start: y.solr_index,
+                                count: Math.max(A, 25),
+                                tabuniqueid: r,
+                                return_capsules: !0,
+                                search: t ? u : void 0,
+                                origin: self.origin,
+                                bForceUseSaleTag: !0,
+                                strContentHub: d,
+                                nContentHubTagID: p,
+                                bContentHubDiscountedOnly: h,
+                                strTabFilter: f,
+                              }),
+                              [
+                                4,
+                                M.a.get(w, {
+                                  params: I,
+                                  withCredentials: n,
+                                  cancelToken: null == b ? void 0 : b.token,
+                                }),
+                              ])
+                            : [3, 2]
+                        );
                       case 1:
-                        return (B = a.sent()), [3, 4];
-                      case 2:
-                        return [
-                          4,
-                          M.a.get(w, {
-                            params: I,
-                            withCredentials: n,
-                            cancelToken: null == b ? void 0 : b.token,
-                          }),
-                        ];
-                      case 3:
-                        (B = a.sent()), (a.label = 4);
-                      case 4:
                         if (
-                          200 != (null == B ? void 0 : B.status) ||
+                          200 != (null == (B = a.sent()) ? void 0 : B.status) ||
                           1 !=
                             (null === (_ = B.data) || void 0 === _
                               ? void 0
@@ -7528,23 +7512,23 @@ var CLSTAMP = "6645001";
                                 ? void 0
                                 : g.success)
                           );
-                        for (D = 0, N = B.data.appids; D < N.length; D++)
-                          (j = N[D]), y.appids.push(j);
+                        for (L = 0, T = B.data.appids; L < T.length; L++)
+                          (D = T[L]), y.appids.push(D);
                         (y.facetCounts = B.data.faceting),
                           (y.possible_has_more = B.data.possible_has_more),
                           (y.solr_index = B.data.solr_index),
                           B.data.app_info && m.a.AddAppLinks(B.data.app_info),
-                          (a.label = 5);
-                      case 5:
+                          (a.label = 2);
+                      case 2:
                         return (
                           this.m_mapSaleGameListsByFlavor.set(e, y),
-                          (R = y.possible_has_more || l + c < y.appids.length),
+                          (N = y.possible_has_more || l + c < y.appids.length),
                           [
                             2,
                             {
                               appids: y.appids.slice(l, c),
                               facetCounts: y.facetCounts,
-                              bHasPossibleMoreResults: R,
+                              bHasPossibleMoreResults: N,
                             },
                           ]
                         );
