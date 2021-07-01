@@ -17080,12 +17080,12 @@
               Object(d.a)(m.d.EREALM)
                 ? j.push(i(1526200))
                 : j.push(
+                    i(680420),
                     i(1196590),
                     i(1658760),
                     i(1091500),
                     i(1314563),
-                    i(870780),
-                    i(1190460, void 0, void 0, { itemclass: [3] })
+                    i(870780)
                   ),
                 (M = {
                   type: "banner",

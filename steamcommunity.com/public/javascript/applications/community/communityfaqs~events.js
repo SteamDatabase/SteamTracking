@@ -2093,7 +2093,7 @@
       }
       function W(e) {
         return Object(a.b)(this, void 0, void 0, function () {
-          var t, n, i, r, o, l, u, d;
+          var t, n, i, r, o, l, u, d, m;
           return Object(a.e)(this, function (a) {
             switch (a.label) {
               case 0:
@@ -2118,56 +2118,76 @@
                       ? console.error("Duplicate tag name: " + e)
                       : o.set(n, t);
                   }),
-                  (l = 0),
-                  (u = e.GetSaleSections()),
+                  (l = (function (e) {
+                    var t,
+                      n,
+                      a =
+                        null ===
+                          (n =
+                            null ===
+                              (t = null == e ? void 0 : e.GetEventModel()) ||
+                            void 0 === t
+                              ? void 0
+                              : t.jsondata) || void 0 === n
+                          ? void 0
+                          : n.auto_item_tags;
+                    if (!a) return null;
+                    for (var i = new Map(), r = 0, o = a; r < o.length; r++) {
+                      var l = o[r];
+                      i.set(l.tag_name.toLocaleLowerCase(), l.filter);
+                    }
+                    return i;
+                  })(e)),
+                  (u = 0),
+                  (d = e.GetSaleSections()),
                   (a.label = 4);
               case 4:
-                return l < u.length
-                  ? "tabs" === (d = u[l]).section_type && d.tabs
-                    ? (d.tabs.forEach(function (e) {
+                return u < d.length
+                  ? "tabs" === (m = d[u]).section_type && m.tabs
+                    ? (m.tabs.forEach(function (e) {
                         e.sale_tag_filter &&
-                          (e.store_filter = q(e.sale_tag_filter, o));
+                          (e.store_filter = q(e.sale_tag_filter, o, l));
                       }),
                       [3, 7])
                     : [3, 5]
                   : [3, 8];
               case 5:
-                return d.enable_faceted_browsing
-                  ? [4, z(d, t, d.facets)]
+                return m.enable_faceted_browsing
+                  ? [4, z(m, t, m.facets)]
                   : [3, 7];
               case 6:
                 a.sent(),
-                  (function (e, t) {
+                  (function (e, t, n) {
                     for (
-                      var n = function (e) {
+                      var a = function (e) {
                           for (
-                            var n = new Map(),
-                              a = new Map(),
-                              i = 0,
-                              r = e.facetValues;
-                            i < r.length;
-                            i++
+                            var a = new Map(),
+                              i = new Map(),
+                              r = 0,
+                              o = e.facetValues;
+                            r < o.length;
+                            r++
                           ) {
-                            (s = r[i]).type === c.l.k_ELanguage
-                              ? n.set(s, Y(s.language))
-                              : s.type === c.l.k_EContentDescriptor
-                              ? n.set(s, Q(s.contentDescriptor))
-                              : s.type === c.l.k_EUserPreference
-                              ? n.set(s, null)
-                              : s.type === c.l.k_EPrice
-                              ? n.set(s, {
+                            (u = o[r]).type === c.l.k_ELanguage
+                              ? a.set(u, Y(u.language))
+                              : u.type === c.l.k_EContentDescriptor
+                              ? a.set(u, Q(u.contentDescriptor))
+                              : u.type === c.l.k_EUserPreference
+                              ? a.set(u, null)
+                              : u.type === c.l.k_EPrice
+                              ? a.set(u, {
                                   type: c.n.k_EStoreFilterClauseTypePrice,
                                 })
-                              : s.type === c.l.k_EAppType
-                              ? n.set(s, J(s.appType))
-                              : (n.set(s, q(s.filter, t)),
-                                a.set(s, K(s.filter, t)));
+                              : u.type === c.l.k_EAppType
+                              ? a.set(u, J(u.appType))
+                              : (a.set(u, q(u.filter, t, n)),
+                                i.set(u, K(u.filter, t)));
                           }
                           if (
                             e.facetValues.every(function (e) {
                               return (
                                 e.type !== c.l.k_EUserPreference &&
-                                null === n.get(e)
+                                null === a.get(e)
                               );
                             })
                           )
@@ -2180,24 +2200,24 @@
                               "continue"
                             );
                           for (
-                            var o = 0, l = e.facetValues;
-                            o < l.length;
-                            o++
+                            var l = 0, s = e.facetValues;
+                            l < s.length;
+                            l++
                           ) {
-                            var s;
-                            (s = l[o]).rgStoreTagFilter = n.get(s);
-                            var u = a.get(s);
-                            u > 0 && (s.nAtomicStoreTagID = u);
+                            var u;
+                            (u = s[l]).rgStoreTagFilter = a.get(u);
+                            var d = i.get(u);
+                            d > 0 && (u.nAtomicStoreTagID = d);
                           }
                         },
-                        a = 0,
-                        i = e.facets;
-                      a < i.length;
-                      a++
+                        i = 0,
+                        r = e.facets;
+                      i < r.length;
+                      i++
                     ) {
-                      n(i[a]);
+                      a(r[i]);
                     }
-                  })(d, o),
+                  })(m, o, l),
                   (function (e, t, n, a) {
                     e.facets.forEach(function (e) {
                       e.facetValues.forEach(function (e) {
@@ -2225,68 +2245,74 @@
                           });
                       });
                     });
-                  })(d, n, i, r),
-                  d.metadata_matching_capsules &&
-                    (d.metadata_matching_capsules = void 0),
+                  })(m, n, i, r),
+                  m.metadata_matching_capsules &&
+                    (m.metadata_matching_capsules = void 0),
                   (a.label = 7);
               case 7:
-                return l++, [3, 4];
+                return u++, [3, 4];
               case 8:
                 return [2];
             }
           });
         });
       }
-      function q(e, t) {
+      function q(e, t, n) {
         for (
-          var n = {
+          var a = {
               type: c.n.k_EStoreFilterClauseTypeAnd,
               rgSubexpressions: new Array(),
             },
-            a = 0,
-            i = e.clauses;
-          a < i.length;
-          a++
+            i = 0,
+            o = e.clauses;
+          i < o.length;
+          i++
         ) {
           for (
-            var o = i[a],
-              l = {
+            var l = o[i],
+              s = {
                 type: c.n.k_EStoreFilterClauseTypeOr,
-                bNegated: "Must not have" === o.type,
+                bNegated: "Must not have" === l.type,
                 rgSubexpressions: new Array(),
               },
-              s = 0,
-              u = o.or_tags;
-            s < u.length;
-            s++
+              u = 0,
+              d = l.or_tags;
+            u < d.length;
+            u++
           ) {
-            var d = u[s],
-              p = Object(r.k)(d),
-              m = Object(r.s)(d).toLocaleLowerCase();
-            if (p === r.j.Store) {
-              if (!t.has(m)) {
+            var p = d[u],
+              m = Object(r.k)(p),
+              _ = Object(r.s)(p).toLocaleLowerCase();
+            if (m === r.j.Store) {
+              if (!(null == t ? void 0 : t.has(_))) {
                 console.error(
-                  "No matching categorized store tag found for sale tag: " + d
+                  "No matching categorized store tag found for sale tag: " + p
                 );
                 continue;
               }
-              var _ = t.get(m);
-              l.rgSubexpressions.push({
+              var g = t.get(_);
+              s.rgSubexpressions.push({
                 type: c.n.k_EStoreFilterClauseTypeStoreTag,
+                value: g,
+              });
+            } else if (m == r.j.Feature)
+              s.rgSubexpressions.push({
+                type: c.n.k_EStoreFilterClauseTypeFeatureTag,
                 value: _,
               });
-            } else
-              p == r.j.Feature
-                ? l.rgSubexpressions.push({
-                    type: c.n.k_EStoreFilterClauseTypeFeatureTag,
-                    value: m,
-                  })
-                : console.warn("Sale tag not implemented for faceting: " + d);
+            else if (m === r.j.Auto) {
+              if (!n.has(_)) {
+                console.error("Could not find auto tag: " + p);
+                continue;
+              }
+              var h = n.get(_);
+              s.rgSubexpressions.push(q(h, t, n));
+            } else console.warn("Sale tag not implemented for faceting: " + p);
           }
-          if (0 === l.rgSubexpressions.length) return null;
-          n.rgSubexpressions.push(l);
+          if (0 === s.rgSubexpressions.length) return null;
+          a.rgSubexpressions.push(s);
         }
-        return n;
+        return 0 === a.rgSubexpressions.length ? null : a;
       }
       function K(e, t) {
         for (var n = 0, a = e.clauses; n < a.length; n++)
@@ -21818,22 +21844,7 @@
                                   },
                                   isSearchable: !0,
                                 })
-                              ),
-                              d.createElement(_.m, {
-                                type: "number",
-                                label: Object(f.f)(
-                                  "#Sale_BrowseSection_ContentHubTabTagID"
-                                ),
-                                value: e.source_content_hub_tagid || 0,
-                                onChange: function (t) {
-                                  return (function (e, t) {
-                                    p(),
-                                      (e.source_content_hub_tagid =
-                                        Number(t) > 0 ? Number(t) : void 0),
-                                      r.SetDirty(o.c.jsondata_sales);
-                                  })(e, t.target.value);
-                                },
-                              })
+                              )
                             )
                           );
                         })
