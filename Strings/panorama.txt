@@ -54,14 +54,12 @@ __data
 __DATA
 __thread_vars
 __DATA
-PGM
-PGM
+`GM
+`GM
 __thread_bss
 __DATA
-pGM
 __common
 __DATA
-pKM
 __bss
 __DATA
 H
@@ -156,6 +154,7 @@ h
 6
 6
 3
+IM
 3
 6
 
@@ -163,6 +162,7 @@ h
 
 
 
+8L
 
 M
 M
@@ -5127,8 +5127,8 @@ linux
 Linux;tenfoot
 X-ValveUserAgent
 panorama %s %s
-Jun 25 2021
-11:26:56
+Jun 30 2021
+16:05:45
 X-SteamClientVersion
 Assertion Failed: hostName
 Assertion Failed: pchRemoteHost
@@ -7685,6 +7685,7 @@ Assertion Failed: src.IsValid()
 6
 6
 3
+IM
 3
 6
 
@@ -7692,6 +7693,7 @@ Assertion Failed: src.IsValid()
 
 
 
+8L
 
 M
 M
@@ -7708,14 +7710,11 @@ D
 '
 '
 #
-fL
 "
-CL
 2
 2
 @
 I
-UK
 '
 ,
 g1
@@ -7726,7 +7725,6 @@ v'
 1
 !
 '
-6I
 X
 I!
 q0
@@ -7738,19 +7736,18 @@ q0
 &
 &
 &
+KJ
 @G
 %
 G
 %
 %
-[I
 /
 F
 f.
 .
 .
-SH
-bF
+vF
 E
 j-
 -
@@ -7770,7 +7767,6 @@ t1Mcu
 %
 S
 +
-D
 +
 +
 +
@@ -7828,13 +7824,11 @@ B
 B
 B
 B
+B
+B
 "
-e@
-d@
-a@
-C@
-.@
--@
+E@
++@
 @
 $
 @
@@ -7854,21 +7848,21 @@ $
 @
 ?
 ?
-_@
 @
 @
 @
 @
 @
 @
-o=
 %
 %
 %
 ?
 ?
+r=
 }#
 j#
+=
 =
 @
 @
@@ -7882,7 +7876,7 @@ j#
 @
 @
 @
-k=
+J;
 #
 "
 @
@@ -7910,6 +7904,7 @@ $
 !
 *8
 @
+_:
 @
 A
 A
@@ -7932,13 +7927,14 @@ $
 9
 9
 9
+#8
 5
 0
 p
 w
 7
-7
 >!
+)7
 !
 @
 @
@@ -7952,10 +7948,11 @@ p
 4
 =
 m
+P2
 2
+n2
 Hi
 1
-H2
 @
 @
 .
@@ -7963,7 +7960,7 @@ H2
 .
 
 
-L955X0
+L95EX0
 -
 -
 /
@@ -8309,13 +8306,11 @@ L955X0
 @
 @
 @
-o,
-3,
+\.
 @
 F
 @
 @
-f*
 C
 @
 @
@@ -8392,8 +8387,7 @@ Hc
 ]
 
 
-M(
-L95e%&
+L95u%&
 Hc
 I
 
@@ -8487,7 +8481,6 @@ P
 v
 H=
 =
-L
 
 =
 @

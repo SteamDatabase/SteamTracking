@@ -2,8 +2,6 @@ h
 __TEXT
 __text
 __TEXT
-7
-7
 __stubs
 __TEXT
 __stub_helper
@@ -279,8 +277,6 @@ Exceeded limit of number of vpk files supported (%d)!
 .%s
 %s%s%s crc=0x%x metadatasz=%d
 fnumber=%d ofs=0x%x sz=%d
-Assertion Failed: (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 Assertion Failed: count >= 0
 Assertion Failed: !pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
 Assertion Failed: (elem == Count()) || IsValidIndex(elem)
@@ -453,6 +449,7 @@ enablelzma
 disablelzma
 nocegsniff
 enablesymlinks
+rebuildcache
 .
 Preparing update...
 Building file mapping...
@@ -491,6 +488,8 @@ ERROR! Failed to parse application info for app %d
 depotfromapp
 workshopdepot
 ERROR! No depots defined for appID %d.
+Assertion Failed: (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 %s%cdepot_build_%d.vdf
 Building depot %u from '%s'.
 ERROR! Depot config file does not exist %s.
@@ -505,6 +504,7 @@ Successfully finished appID %u build (BuildID %d).
 ERROR! App build file does not exist: %s.
 appbuild
 ERROR! App build file  has invalid format: %s.
+appid
 ERROR! App build file %s has invalid appid.
 setlive
 local
@@ -709,7 +709,6 @@ workshop_download_item <appid> <PublishedFileId> : download a workshop item
 ERROR! Failed to load build config file "%s".
 workshopitem
 ERROR! Failed to parse build config file "%s".
-appid
 ERROR! Missing AppID in build config file "%s".
 publishedfileid
 filetype
@@ -1233,7 +1232,8 @@ Assertion Failed: (unsigned)elem <= (unsigned)m_Size
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/string_misc.cpp
 E
 @
-t
+0
+#
 @
 @
 \
