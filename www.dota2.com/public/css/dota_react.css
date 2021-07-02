@@ -19562,17 +19562,17 @@ a {
   border: 1px solid #4a587c;
   box-shadow: inset 0 0 30px rgba(74, 94, 119, 0.6);
 }
-.dpcmatchbanner_DPCMatchBannerNode_1bw0U.dpcmatchbanner_IsInProgress_OrFVh
+.dpcmatchbanner_DPCMatchBannerNode_1bw0U.dpcmatchbanner_IsLive_1bg0S
   .dpcmatchbanner_UpperContainer_2ymob
   .dpcmatchbanner_LiveBanner_DQm2h {
   display: flex;
 }
-.dpcmatchbanner_DPCMatchBannerNode_1bw0U.dpcmatchbanner_IsInProgress_OrFVh
+.dpcmatchbanner_DPCMatchBannerNode_1bw0U.dpcmatchbanner_IsLive_1bg0S
   .dpcmatchbanner_UpperContainer_2ymob
   .dpcmatchbanner_Time_27Dq- {
   opacity: 0;
 }
-.dpcmatchbanner_DPCMatchBannerNode_1bw0U.dpcmatchbanner_IsInProgress_OrFVh.dpcmatchbanner_IsSelected_3zmDQ {
+.dpcmatchbanner_DPCMatchBannerNode_1bw0U.dpcmatchbanner_IsLive_1bg0S.dpcmatchbanner_IsSelected_3zmDQ {
   border-image: linear-gradient(
       128deg,
       rgba(0, 171, 48, 0.1),
@@ -20461,13 +20461,7 @@ a {
   width: 100%;
   height: 100%;
   padding: 0px 10%;
-  background: -webkit-linear-gradient(
-    left,
-    #13131500,
-    #131315,
-    #131315,
-    #13131500
-  );
+  background: -webkit-linear-gradient(left, #222222, #131315, #131315, #222226);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -22316,6 +22310,8 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #151515;
+  padding-bottom: 30px;
 }
 .dpcteamlist_DPCTeamList_wkwPY .dpcteamlist_Header_6xmj_ {
   width: 100%;
@@ -22324,7 +22320,8 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
+  padding-bottom: 14px;
 }
 .dpcteamlist_DPCTeamList_wkwPY
   .dpcteamlist_Header_6xmj_
@@ -22334,6 +22331,7 @@ a {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 1px;
+  padding-left: 4px;
 }
 .dpcteamlist_DPCTeamList_wkwPY .dpcteamlist_TeamList_q1HCH {
   width: 100%;
@@ -22344,49 +22342,62 @@ a {
   flex-direction: column;
   align-items: center;
 }
+.dpcteamlist_DPCTeamList_wkwPY
+  .dpcteamlist_TeamList_q1HCH::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.dpcteamlist_DPCTeamList_wkwPY .dpcteamlist_TeamList_q1HCH::-webkit-scrollbar {
+  width: 5px;
+  background-color: #373d44;
+}
+.dpcteamlist_DPCTeamList_wkwPY
+  .dpcteamlist_TeamList_q1HCH::-webkit-scrollbar-thumb {
+  background-color: #667281;
+}
 .dpcteamlist_TeamEntry_2GaFH {
-  width: 100%;
-  height: 100px;
+  width: calc(100% - 20px);
+  height: 110px;
   min-height: 100px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 8px;
-  background-color: #27272d;
-  border-bottom: 3px solid #36363e;
+  margin-bottom: 6px;
+  margin-right: 20px;
+  background: linear-gradient(to right, #242428, #2c2c32);
   color: #a3a3a3;
 }
 .dpcteamlist_TeamEntry_2GaFH .dpcteamlist_TeamLogo_5EwbL {
-  width: 48px;
-  height: 48px;
-  margin-left: 40px;
+  width: 64px;
+  height: 64px;
+  margin-left: 24px;
   margin-right: 18px;
 }
-.dpcteamlist_TeamEntry_2GaFH .dpcteamlist_MidSection_1lz3x {
+.dpcteamlist_TeamEntry_2GaFH .dpcteamlist_TeamInfoSection_IDxoK {
   flex-grow: 1;
   flex-basis: 0;
   display: flex;
   flex-direction: column;
 }
 .dpcteamlist_TeamEntry_2GaFH
-  .dpcteamlist_MidSection_1lz3x
+  .dpcteamlist_TeamInfoSection_IDxoK
   .dpcteamlist_TeamInfo_15TYo {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 .dpcteamlist_TeamEntry_2GaFH
-  .dpcteamlist_MidSection_1lz3x
+  .dpcteamlist_TeamInfoSection_IDxoK
   .dpcteamlist_TeamInfo_15TYo
   .dpcteamlist_TeamName_1cBjy {
-  font-size: 18px;
+  color: #fff;
+  font-size: 26px;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 3px;
   margin-right: 10px;
 }
 .dpcteamlist_TeamEntry_2GaFH
-  .dpcteamlist_MidSection_1lz3x
+  .dpcteamlist_TeamInfoSection_IDxoK
   .dpcteamlist_TeamInfo_15TYo
   .dpcteamlist_Record_yTd05 {
   font-size: 15px;
@@ -22395,60 +22406,71 @@ a {
   letter-spacing: 1px;
 }
 .dpcteamlist_TeamEntry_2GaFH
-  .dpcteamlist_MidSection_1lz3x
-  .dpcteamlist_Separator_RIRIx {
-  width: 70%;
-  height: 1px;
-  background-color: #545461;
-  margin: 8px 0px;
-}
-.dpcteamlist_TeamEntry_2GaFH
-  .dpcteamlist_MidSection_1lz3x
-  .dpcteamlist_RegionDivision_Z7IYN {
+  .dpcteamlist_TeamInfoSection_IDxoK
+  .dpcteamlist_Region_hGIUf {
   font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-.dpcteamlist_TeamEntry_2GaFH .dpcteamlist_VerticalSeparator_2Fw18 {
-  width: 1px;
-  height: 80%;
-  background-color: #545461;
-  margin-right: 40px;
+.dpcteamlist_TeamEntry_2GaFH
+  .dpcteamlist_TeamInfoSection_IDxoK
+  .dpcteamlist_Division_13II8 {
+  color: #6b7785;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
-.dpcteamlist_TeamEntry_2GaFH .dpcteamlist_RightSection_3XRGb {
-  flex-grow: 1;
-  flex-basis: 0;
+.dpcteamlist_TeamEntry_2GaFH .dpcteamlist_MatchSection_1JycZ {
+  width: 350px;
+  height: 100%;
+  background-color: #222227;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 60px;
+  clip-path: polygon(30px 0px, 100% 0px, calc(100% - 30px) 100%, 0% 100%);
 }
 .dpcteamlist_TeamEntry_2GaFH
-  .dpcteamlist_RightSection_3XRGb
+  .dpcteamlist_MatchSection_1JycZ
   .dpcteamlist_Next_3HjDq,
 .dpcteamlist_TeamEntry_2GaFH
-  .dpcteamlist_RightSection_3XRGb
-  .dpcteamlist_Prev_9S0sa {
+  .dpcteamlist_MatchSection_1JycZ
+  .dpcteamlist_Last_1PtuY {
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
 }
 .dpcteamlist_TeamEntry_2GaFH
-  .dpcteamlist_RightSection_3XRGb
+  .dpcteamlist_MatchSection_1JycZ
   .dpcteamlist_NextMatch_3QU7N {
   font-size: 11px;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 .dpcteamlist_TeamEntry_2GaFH
-  .dpcteamlist_RightSection_3XRGb
+  .dpcteamlist_MatchSection_1JycZ
+  .dpcteamlist_NodeLabel_23a2v {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding-left: 4px;
+}
+.dpcteamlist_TeamEntry_2GaFH
+  .dpcteamlist_MatchSection_1JycZ
   .dpcteamlist_NextTeam_MFMgb {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-top: 5px;
 }
 .dpcteamlist_TeamEntry_2GaFH
-  .dpcteamlist_RightSection_3XRGb
+  .dpcteamlist_MatchSection_1JycZ
   .dpcteamlist_NextTeam_MFMgb
   .dpcteamlist_TeamLogo_5EwbL {
   width: 20px;
@@ -22457,39 +22479,33 @@ a {
   margin-right: 8px;
 }
 .dpcteamlist_TeamEntry_2GaFH
-  .dpcteamlist_RightSection_3XRGb
+  .dpcteamlist_MatchSection_1JycZ
   .dpcteamlist_NextTeam_MFMgb
   .dpcteamlist_TeamName_1cBjy {
+  color: #6b7785;
   font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 .dpcteamlist_TeamEntry_2GaFH
-  .dpcteamlist_RightSection_3XRGb
-  .dpcteamlist_Separator_RIRIx {
-  width: 70%;
-  height: 1px;
-  background-color: #545461;
-  margin: 4px 0px;
-}
-.dpcteamlist_TeamEntry_2GaFH
-  .dpcteamlist_RightSection_3XRGb
+  .dpcteamlist_MatchSection_1JycZ
   .dpcteamlist_LastMatch_IQTkk {
   font-size: 11px;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 .dpcteamlist_TeamEntry_2GaFH
-  .dpcteamlist_RightSection_3XRGb
+  .dpcteamlist_MatchSection_1JycZ
   .dpcteamlist_PrevTeam_3dEUb {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-top: 5px;
 }
 .dpcteamlist_TeamEntry_2GaFH
-  .dpcteamlist_RightSection_3XRGb
+  .dpcteamlist_MatchSection_1JycZ
   .dpcteamlist_PrevTeam_3dEUb
   .dpcteamlist_TeamLogo_5EwbL {
   width: 20px;
@@ -22498,86 +22514,94 @@ a {
   margin-right: 8px;
 }
 .dpcteamlist_TeamEntry_2GaFH
-  .dpcteamlist_RightSection_3XRGb
+  .dpcteamlist_MatchSection_1JycZ
   .dpcteamlist_PrevTeam_3dEUb
   .dpcteamlist_TeamName_1cBjy {
+  color: #6b7785;
   font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
-.dpcteamlist_TeamEntry_2GaFH .dpcteamlist_FavoriteStar_1CK8C {
-  width: 40px;
-  height: 105%;
-  background-color: #36363e;
-  clip-path: polygon(10px 60%, 40px 60%, 40px 100%, 0px 100%);
+.dpcteamlist_TeamEntry_2GaFH .dpcteamlist_FavoriteSection_2-En1 {
+  width: 200px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.dpcteamlist_TeamEntry_2GaFH
+  .dpcteamlist_FavoriteSection_2-En1
+  .dpcteamlist_FollowingLine_Mot01 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.dpcteamlist_TeamEntry_2GaFH
+  .dpcteamlist_FavoriteSection_2-En1
+  .dpcteamlist_FollowingLine_Mot01.dpcteamlist_IsFollowing_251I0 {
+  filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.5));
+}
+.dpcteamlist_TeamEntry_2GaFH
+  .dpcteamlist_FavoriteSection_2-En1
+  .dpcteamlist_FollowingLine_Mot01.dpcteamlist_IsFollowing_251I0
+  .dpcteamlist_FollowingLabel_30y9X {
+  color: #fedb92;
+}
+.dpcteamlist_TeamEntry_2GaFH
+  .dpcteamlist_FavoriteSection_2-En1
+  .dpcteamlist_FollowingLine_Mot01
+  .dpcteamlist_Star_103DO {
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-right: 8px;
+}
+.dpcteamlist_TeamEntry_2GaFH
+  .dpcteamlist_FavoriteSection_2-En1
+  .dpcteamlist_FollowingLine_Mot01
+  .dpcteamlist_FollowingLabel_30y9X {
+  color: #a3a3a3;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 .dpcnextbanner_DPCNextBanner_2Mgev {
   width: 100%;
-  max-width: 1200px;
-  height: 110px;
+  height: 200px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  padding: 12px 30px;
-  margin: 20px 0px;
-  border-radius: 2px;
+  justify-content: center;
   position: relative;
 }
-.dpcnextbanner_DPCNextBanner_2Mgev .dpcnextbanner_Background_2Dm9Z {
+.dpcnextbanner_DPCNextBanner_2Mgev .dpcnextbanner_BannerContents_2KKse {
   width: 100%;
   height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  max-width: 1200px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
-  overflow: hidden;
+  position: relative;
+  padding: 0px 100px;
 }
 .dpcnextbanner_DPCNextBanner_2Mgev
-  .dpcnextbanner_Background_2Dm9Z
-  .dpcnextbanner_Teams_2kveE {
-  display: flex;
-  flex-direction: row;
-  transform: rotate(-14deg);
-}
-.dpcnextbanner_DPCNextBanner_2Mgev
-  .dpcnextbanner_Background_2Dm9Z
-  .dpcnextbanner_Teams_2kveE
-  .dpcnextbanner_TeamLogo_3DsIY {
-  width: 150px;
-  height: 150px;
-  filter: saturate(0) blur(4px);
-  margin: 0px 60px;
-  opacity: 0;
-}
-.dpcnextbanner_DPCNextBanner_2Mgev
-  .dpcnextbanner_Background_2Dm9Z
-  .dpcnextbanner_Teams_2kveE
-  .dpcnextbanner_TeamLogo_3DsIY.dpcnextbanner_Visible_3HOVg {
-  opacity: 1;
-}
-.dpcnextbanner_DPCNextBanner_2Mgev
-  .dpcnextbanner_Background_2Dm9Z
-  .dpcnextbanner_Gradient_1FSbc {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: linear-gradient(to right, #253052d0, #303036d0);
-  background-blend-mode: multiply;
-}
-.dpcnextbanner_DPCNextBanner_2Mgev .dpcnextbanner_LeftLabels_ldAHh {
+  .dpcnextbanner_BannerContents_2KKse
+  .dpcnextbanner_LeftLabels_ldAHh {
+  width: 500px;
   display: flex;
   flex-direction: column;
   color: #fff;
   z-index: 1;
 }
 .dpcnextbanner_DPCNextBanner_2Mgev
+  .dpcnextbanner_BannerContents_2KKse
   .dpcnextbanner_LeftLabels_ldAHh
   .dpcnextbanner_ComingUp_1m_NU {
+  color: #a3a3a3;
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
@@ -22585,54 +22609,144 @@ a {
   margin-bottom: 8px;
 }
 .dpcnextbanner_DPCNextBanner_2Mgev
+  .dpcnextbanner_BannerContents_2KKse
   .dpcnextbanner_LeftLabels_ldAHh
-  .dpcnextbanner_Teams_2kveE {
-  font-size: 26px;
-  font-weight: bold;
-  font-family: "Reaver", serif;
+  .dpcnextbanner_TeamNames_1-a9S {
+  display: flex;
+  flex-direction: row;
   opacity: 0;
+  margin-bottom: 10px;
 }
 .dpcnextbanner_DPCNextBanner_2Mgev
+  .dpcnextbanner_BannerContents_2KKse
   .dpcnextbanner_LeftLabels_ldAHh
-  .dpcnextbanner_Teams_2kveE.dpcnextbanner_Visible_3HOVg {
+  .dpcnextbanner_TeamNames_1-a9S.dpcnextbanner_Visible_3HOVg {
   opacity: 1;
 }
 .dpcnextbanner_DPCNextBanner_2Mgev
+  .dpcnextbanner_BannerContents_2KKse
+  .dpcnextbanner_LeftLabels_ldAHh
+  .dpcnextbanner_TeamNames_1-a9S
+  .dpcnextbanner_TeamName_3cRp3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Reaver", serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.dpcnextbanner_DPCNextBanner_2Mgev
+  .dpcnextbanner_BannerContents_2KKse
+  .dpcnextbanner_LeftLabels_ldAHh
+  .dpcnextbanner_TeamNames_1-a9S
+  .dpcnextbanner_Versus_3GMgA {
+  color: #fff;
+  font-size: 20px;
+  font-family: "Reaver", serif;
+  margin: 0px 8px;
+}
+.dpcnextbanner_DPCNextBanner_2Mgev
+  .dpcnextbanner_BannerContents_2KKse
   .dpcnextbanner_LeftLabels_ldAHh
   .dpcnextbanner_WatchLive_1U_-3 {
-  font-size: 13px;
+  color: #a3a3a3;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 1px;
   opacity: 0;
 }
 .dpcnextbanner_DPCNextBanner_2Mgev
+  .dpcnextbanner_BannerContents_2KKse
   .dpcnextbanner_LeftLabels_ldAHh
   .dpcnextbanner_WatchLive_1U_-3.dpcnextbanner_Visible_3HOVg {
   opacity: 1;
 }
-.dpcnextbanner_DPCNextBanner_2Mgev .dpcnextbanner_ScheduleButton_3VONE {
-  height: 44px;
+.dpcnextbanner_DPCNextBanner_2Mgev
+  .dpcnextbanner_BannerContents_2KKse
+  .dpcnextbanner_LeftLabels_ldAHh
+  .dpcnextbanner_Timestamp_3FXLd {
+  font-family: "Reaver", serif;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  opacity: 0;
+}
+.dpcnextbanner_DPCNextBanner_2Mgev
+  .dpcnextbanner_BannerContents_2KKse
+  .dpcnextbanner_LeftLabels_ldAHh
+  .dpcnextbanner_Timestamp_3FXLd.dpcnextbanner_Visible_3HOVg {
+  opacity: 1;
+}
+.dpcnextbanner_DPCNextBanner_2Mgev
+  .dpcnextbanner_BannerContents_2KKse
+  .dpcnextbanner_TeamWrapper_33aT7 {
+  filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.3));
+  height: 100%;
+  position: relative;
+}
+.dpcnextbanner_DPCNextBanner_2Mgev
+  .dpcnextbanner_BannerContents_2KKse
+  .dpcnextbanner_TeamWrapper_33aT7.dpcnextbanner_First_1xsjR {
+  z-index: 3;
+}
+.dpcnextbanner_DPCNextBanner_2Mgev
+  .dpcnextbanner_BannerContents_2KKse
+  .dpcnextbanner_TeamWrapper_33aT7.dpcnextbanner_Second_CYqds {
+  z-index: 2;
+}
+.dpcnextbanner_DPCNextBanner_2Mgev
+  .dpcnextbanner_BannerContents_2KKse
+  .dpcnextbanner_TeamWrapper_33aT7
+  .dpcnextbanner_TeamDiagonal_f27Mo {
+  width: 175px;
+  min-width: 175px;
+  height: 100%;
+  filter: saturate(0.5) brightness(0.5);
+  background-position: center;
+  background-size: cover;
+  background-color: #181818;
+  clip-path: polygon(50px 0px, 175px 0px, 125px 100%, 0px 100%);
+  margin-right: -50px;
+}
+.dpcnextbanner_DPCNextBanner_2Mgev
+  .dpcnextbanner_BannerContents_2KKse
+  .dpcnextbanner_ScheduleButtonContainer_2Msqn {
+  width: 400px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.dpcnextbanner_DPCNextBanner_2Mgev
+  .dpcnextbanner_BannerContents_2KKse
+  .dpcnextbanner_ScheduleButtonContainer_2Msqn
+  .dpcnextbanner_ScheduleButton_3VONE {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  padding: 0px 12px;
+  padding: 7px 16px;
   z-index: 1;
-  border: 2px solid #fff;
-  border-radius: 6px;
+  border: 1px solid #fff;
+  border-radius: 2px;
   cursor: pointer;
   user-select: none;
 }
-.dpcnextbanner_DPCNextBanner_2Mgev .dpcnextbanner_ScheduleButton_3VONE:hover {
+.dpcnextbanner_DPCNextBanner_2Mgev
+  .dpcnextbanner_BannerContents_2KKse
+  .dpcnextbanner_ScheduleButtonContainer_2Msqn
+  .dpcnextbanner_ScheduleButton_3VONE:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 .dpcnextbanner_DPCNextBanner_2Mgev
+  .dpcnextbanner_BannerContents_2KKse
+  .dpcnextbanner_ScheduleButtonContainer_2Msqn
   .dpcnextbanner_ScheduleButton_3VONE
   .dpcnextbanner_Label_2bfCJ {
   height: 16px;
   color: #fff;
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 1px;
 }

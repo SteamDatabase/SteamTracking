@@ -5710,6 +5710,35 @@ body.v6 .page_content.notes {
 .responsive_reviewdesc_short,
 .responsive_add_to_wishlist,
 .responsive_purchase_options_ctn,
+.newux_optin_banner,
 .responsive_block_header  {
 	display: none;
+}
+
+@media screen and ( max-width: 500px )
+{
+		html.responsive .newux_optin_banner {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		margin: 5px 5px;
+		padding: 10px 0px;
+		border-radius: 4px;
+	}
+	html.responsive .newux_optin_banner.optin {
+		background: linear-gradient(90deg, #06BFFF 0%, #2D73FF 100%);
+	}
+	html.responsive .newux_optin_banner span {
+		font-size: 14px;
+		flex-grow: 1;
+		text-align: right;
+	}
+	html.responsive .newux_optin_banner img {
+		display: block;
+		margin: auto 0px;
+		height: 16px;
+		width: 16px;
+		padding-left: 5px;
+		padding-right: 10px;
+	}
 }

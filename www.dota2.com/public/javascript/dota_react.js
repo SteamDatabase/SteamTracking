@@ -214,7 +214,7 @@
                 3: "74e7fc91c74f3de30fd5",
                 4: "7db37138fcc39bcd37b4",
                 5: "6b295f0fe54363de4530",
-                6: "a76f28d6cf24becb1333",
+                6: "cba46a3ccf787d388be1",
                 7: "01d2b60d31c2a1aec7f5",
                 8: "d08daa360d0142912051",
                 9: "2fdc556efc59b0b9e37d",
@@ -6793,21 +6793,25 @@ and limitations under the License.
       TeamList: "dpcteamlist_TeamList_q1HCH",
       TeamEntry: "dpcteamlist_TeamEntry_2GaFH",
       TeamLogo: "dpcteamlist_TeamLogo_5EwbL",
-      MidSection: "dpcteamlist_MidSection_1lz3x",
+      TeamInfoSection: "dpcteamlist_TeamInfoSection_IDxoK",
       TeamInfo: "dpcteamlist_TeamInfo_15TYo",
       TeamName: "dpcteamlist_TeamName_1cBjy",
       Record: "dpcteamlist_Record_yTd05",
-      Separator: "dpcteamlist_Separator_RIRIx",
-      RegionDivision: "dpcteamlist_RegionDivision_Z7IYN",
-      VerticalSeparator: "dpcteamlist_VerticalSeparator_2Fw18",
-      RightSection: "dpcteamlist_RightSection_3XRGb",
+      Region: "dpcteamlist_Region_hGIUf",
+      Division: "dpcteamlist_Division_13II8",
+      MatchSection: "dpcteamlist_MatchSection_1JycZ",
       Next: "dpcteamlist_Next_3HjDq",
-      Prev: "dpcteamlist_Prev_9S0sa",
+      Last: "dpcteamlist_Last_1PtuY",
       NextMatch: "dpcteamlist_NextMatch_3QU7N",
+      NodeLabel: "dpcteamlist_NodeLabel_23a2v",
       NextTeam: "dpcteamlist_NextTeam_MFMgb",
       LastMatch: "dpcteamlist_LastMatch_IQTkk",
       PrevTeam: "dpcteamlist_PrevTeam_3dEUb",
-      FavoriteStar: "dpcteamlist_FavoriteStar_1CK8C",
+      FavoriteSection: "dpcteamlist_FavoriteSection_2-En1",
+      FollowingLine: "dpcteamlist_FollowingLine_Mot01",
+      IsFollowing: "dpcteamlist_IsFollowing_251I0",
+      FollowingLabel: "dpcteamlist_FollowingLabel_30y9X",
+      Star: "dpcteamlist_Star_103DO",
     };
   },
   "5oMp": function (e, t, a) {
@@ -11966,7 +11970,7 @@ and limitations under the License.
       ViewScheduleButton: "dpcmatchbanner_ViewScheduleButton_SyIjt",
       DPCMatchBannerNode: "dpcmatchbanner_DPCMatchBannerNode_1bw0U",
       IsSelected: "dpcmatchbanner_IsSelected_3zmDQ",
-      IsInProgress: "dpcmatchbanner_IsInProgress_OrFVh",
+      IsLive: "dpcmatchbanner_IsLive_1bg0S",
       UpperContainer: "dpcmatchbanner_UpperContainer_2ymob",
       LiveBanner: "dpcmatchbanner_LiveBanner_DQm2h",
       Time: "dpcmatchbanner_Time_27Dq-",
@@ -20465,26 +20469,31 @@ object-assign
           }),
           (e.prototype.GetNextLeagueNode = function (t, a, n) {
             var r = this,
-              i = void 0,
-              o = void 0;
-            return (
-              this.GetEventNodes(t, 0).forEach(function (t) {
-                var s = r.GetLeagueNodeInfo(t.nLeagueID, t.nNodeID);
-                if (!a || (null == s ? void 0 : s.ePhase) == a) {
-                  var l = e.Get().GetLeagueNode(t.nLeagueID, t.nNodeID);
-                  (n &&
-                    (null == l ? void 0 : l.team_id_1) != n &&
-                    (null == l ? void 0 : l.team_id_2) != n) ||
-                    (null == l ? void 0 : l.is_completed) ||
-                    0 == (null == l ? void 0 : l.scheduled_time) ||
-                    ((!o ||
-                      (null == l ? void 0 : l.scheduled_time) <
-                        o.scheduled_time) &&
-                      ((i = t.nLeagueID), (o = l)));
-                }
-              }),
-              { nLeagueID: i, nNodeID: null == o ? void 0 : o.node_id }
-            );
+              i = this.GetEventNodes(t, 0).filter(function (t) {
+                var i = r.GetLeagueNodeInfo(t.nLeagueID, t.nNodeID);
+                if (a && (null == i ? void 0 : i.ePhase) != a) return !1;
+                var o = e.Get().GetLeagueNode(t.nLeagueID, t.nNodeID);
+                return (
+                  (!n ||
+                    (null == o ? void 0 : o.team_id_1) == n ||
+                    (null == o ? void 0 : o.team_id_2) == n) &&
+                  0 != (null == o ? void 0 : o.team_id_1) &&
+                  0 != (null == o ? void 0 : o.team_id_2) &&
+                  !(null == o ? void 0 : o.has_started) &&
+                  !(null == o ? void 0 : o.is_completed) &&
+                  0 != (null == o ? void 0 : o.scheduled_time)
+                );
+              });
+            console.log(t, this.GetEventDates(t, 3));
+            var o = i.sort(function (t, a) {
+              var n = e.Get().GetLeagueNode(t.nLeagueID, t.nNodeID),
+                r = e.Get().GetLeagueNode(a.nLeagueID, a.nNodeID);
+              return (
+                (null == n ? void 0 : n.scheduled_time) -
+                (null == r ? void 0 : r.scheduled_time)
+              );
+            });
+            return o.length > 0 ? o[0] : { nLeagueID: 0, nNodeID: 0 };
           }),
           (e.prototype.GetBestCurrentLeagueNode = function (e) {
             var t = this,
@@ -20577,49 +20586,82 @@ object-assign
                   : r.actual_time
                 : r.scheduled_time,
               o = Date.now() / 1e3,
-              s = Math.abs(i - o);
+              s = Math.abs(i - o),
+              l =
+                (null == r ? void 0 : r.has_started) &&
+                !(null == r ? void 0 : r.is_completed);
             if (!r) return !1;
             if (!r.has_started && r.scheduled_time - o > 10800) return !1;
             if (r.is_completed && o - r.actual_time > 32400) return !1;
-            var l = ((null == r ? void 0 : r.stream_ids) || []).filter(
+            var c = ((null == r ? void 0 : r.stream_ids) || []).filter(
               function (t) {
                 return n.IsStreamLive(e, t);
               }
             );
-            if (0 == l.length) return !1;
-            for (
-              var c = this.GetEventNodes(e, 3),
-                u = function (e) {
-                  var i = s;
-                  if (
-                    (c.forEach(function (s) {
-                      if (s.nLeagueID != t || s.nNodeID != a) {
-                        var l = n.GetLeagueNode(s.nLeagueID, s.nNodeID),
-                          c = (null == l ? void 0 : l.actual_time)
-                            ? null == l
-                              ? void 0
-                              : l.actual_time
-                            : r.scheduled_time;
-                        if (l.stream_ids.includes(e) && c && 0 != c) {
-                          var u = Math.abs(c - o);
-                          (u < i ||
-                            ((null == l ? void 0 : l.has_started) &&
-                              !(null == r ? void 0 : r.has_started))) &&
-                            ((i = u), s);
-                        }
+            if (0 == c.length) return !1;
+            var u = this.GetEventNodes(e, 3);
+            for (var d = 0, m = c; d < m.length; d++) {
+              var _ = m[d],
+                p = !0;
+              0 == a && console.log(" checking stream", _);
+              for (var h = 0, f = u; h < f.length; h++) {
+                var g = f[h];
+                if (
+                  (0 == a && console.log("  checking vs ", g.nNodeID),
+                  g.nLeagueID != t || g.nNodeID != a)
+                ) {
+                  var v = this.GetLeagueNode(g.nLeagueID, g.nNodeID);
+                  if (-1 != (null == v ? void 0 : v.stream_ids.indexOf(_))) {
+                    var b =
+                      (null == v ? void 0 : v.has_started) &&
+                      !(null == v ? void 0 : v.is_completed);
+                    if (
+                      (0 == a &&
+                        console.log(
+                          "   testing node ",
+                          a,
+                          " against ",
+                          g.nNodeID,
+                          "inprogress",
+                          l,
+                          b
+                        ),
+                      b && !l)
+                    ) {
+                      0 == a && console.log("   not best due to inprogress"),
+                        (p = !1);
+                      break;
+                    }
+                    if (b || !l) {
+                      var y = (null == v ? void 0 : v.actual_time)
+                          ? null == v
+                            ? void 0
+                            : v.actual_time
+                          : v.scheduled_time,
+                        E = Math.abs(y - o);
+                      if (
+                        (0 == a &&
+                          console.log("   testing time distance", y, i),
+                        E < s)
+                      ) {
+                        0 == a &&
+                          console.log("   not best due to time distance"),
+                          (p = !1);
+                        break;
                       }
-                    }),
-                    i == s)
-                  )
-                    return { value: !0 };
-                },
-                d = 0,
-                m = l;
-              d < m.length;
-              d++
-            ) {
-              var _ = u(m[d]);
-              if ("object" == typeof _) return _.value;
+                    }
+                  } else
+                    0 == a &&
+                      console.log(
+                        "  doesn't have stream, skipping",
+                        null == v ? void 0 : v.stream_ids
+                      );
+                }
+              }
+              if (p)
+                return (
+                  console.log("node", a, "IS LIVE because of stream", _), !0
+                );
             }
             return !1;
           }),
@@ -39746,10 +39788,13 @@ object-assign
             .Get()
             .GetTeamStanding(d.eEvent, d.ePhase, d.eRegion, d.eDivision, h),
           v = Na.a.Get().IsLeagueNodeLive(n, t, a),
-          b = null == c ? void 0 : c.is_completed,
-          y = (null == d ? void 0 : d.eNodeGroupType) == ma.f.ROUND_ROBIN,
-          E = Na.a.Get().GetNodeLabelStrings(n, t, a, !1),
-          L =
+          b =
+            (null == c ? void 0 : c.has_started) &&
+            !(null == c ? void 0 : c.is_completed),
+          y = null == c ? void 0 : c.is_completed,
+          E = (null == d ? void 0 : d.eNodeGroupType) == ma.f.ROUND_ROBIN,
+          L = Na.a.Get().GetNodeLabelStrings(n, t, a, !1),
+          w =
             0 != (null == c ? void 0 : c.actual_time)
               ? null == c
                 ? void 0
@@ -39757,42 +39802,42 @@ object-assign
               : null == c
               ? void 0
               : c.scheduled_time,
-          w = Na.a
+          S = Na.a
             .Get()
             .GetEventDates(n, 3)
             .sort()
             .findIndex(function (e) {
-              return L > e && L < e + 86400;
+              return w > e && w < e + 86400;
             }),
-          S = Na.a.Get().GetSpoilerBlockEnabled(),
-          M =
-            f && y
+          M = Na.a.Get().GetSpoilerBlockEnabled(),
+          T =
+            f && E
               ? (null == f ? void 0 : f.wins) +
                 " - " +
                 (null == f ? void 0 : f.losses)
               : "",
-          T =
-            g && y
+          D =
+            g && E
               ? (null == g ? void 0 : g.wins) +
                 " - " +
                 (null == g ? void 0 : g.losses)
               : "",
-          D = S ? "" : v || b ? "" + (null == c ? void 0 : c.team_1_wins) : M,
-          k = S ? "" : v || b ? "" + (null == c ? void 0 : c.team_2_wins) : T,
-          O = (null == r ? void 0 : r.nLeagueID) == t && r.nNodeID == a,
-          j = O ? 0 : t,
-          N = O ? 0 : a;
+          k = M ? "" : b || y ? "" + (null == c ? void 0 : c.team_1_wins) : T,
+          O = M ? "" : b || y ? "" + (null == c ? void 0 : c.team_2_wins) : D,
+          j = (null == r ? void 0 : r.nLeagueID) == t && r.nNodeID == a,
+          N = j ? 0 : t,
+          I = j ? 0 : a;
         return o.a.createElement(
           "div",
           {
             className: Object(le.a)(
               pa.a.DPCMatchBannerNode,
-              O && pa.a.IsSelected,
-              v && pa.a.IsInProgress,
-              b && pa.a.IsCompleted,
-              0 == w && pa.a.First,
-              1 == w && pa.a.Second,
-              2 == w && pa.a.Third
+              j && pa.a.IsSelected,
+              v && pa.a.IsLive,
+              y && pa.a.IsCompleted,
+              0 == S && pa.a.First,
+              1 == S && pa.a.Second,
+              2 == S && pa.a.Third
             ),
           },
           o.a.createElement(
@@ -39801,12 +39846,12 @@ object-assign
             o.a.createElement(
               "div",
               { className: pa.a.Time },
-              o.a.createElement(La.a, { date: 1e3 * L, format: "LT" })
+              o.a.createElement(La.a, { date: 1e3 * w, format: "LT" })
             ),
             o.a.createElement(
               "div",
               { className: pa.a.Description },
-              E.map(function (e, t) {
+              L.map(function (e, t) {
                 return o.a.createElement(
                   "div",
                   {
@@ -39834,19 +39879,19 @@ object-assign
             { className: pa.a.TeamsContainer },
             o.a.createElement(i, {
               nTeamID: m,
-              strTeamInfo: D,
+              strTeamInfo: k,
               bWinner:
-                b &&
-                !S &&
+                y &&
+                !M &&
                 (null == c ? void 0 : c.team_1_wins) >
                   (null == c ? void 0 : c.team_2_wins),
             }),
             o.a.createElement(i, {
               nTeamID: h,
-              strTeamInfo: k,
+              strTeamInfo: O,
               bWinner:
-                b &&
-                !S &&
+                y &&
+                !M &&
                 (null == c ? void 0 : c.team_2_wins) >
                   (null == c ? void 0 : c.team_1_wins),
             })
@@ -39855,11 +39900,11 @@ object-assign
             "div",
             { className: pa.a.Overlay },
             !v &&
-              b &&
+              y &&
               o.a.createElement(
                 l.b,
                 {
-                  to: u.a.dpc_watch(Object(da.k)(n), "" + j, "" + N),
+                  to: u.a.dpc_watch(Object(da.k)(n), "" + N, "" + I),
                   className: pa.a.HoverOption,
                 },
                 Object(p.a)("#dpc_series_details")
@@ -39868,13 +39913,13 @@ object-assign
               o.a.createElement(
                 l.b,
                 {
-                  to: u.a.dpc_watch(Object(da.k)(n), "" + j, "" + N),
+                  to: u.a.dpc_watch(Object(da.k)(n), "" + N, "" + I),
                   className: pa.a.HoverOption,
                 },
                 Object(p.a)("#dpc_watch_live")
               ),
             !v &&
-              !b &&
+              !y &&
               o.a.createElement(
                 l.b,
                 {
@@ -41696,18 +41741,12 @@ object-assign
           r = a[1],
           s = [
             { value: Va.POPULAR, strLabel: "#dpc_popular" },
-            { value: Va.FAVORITE, strLabel: "#dpc_favorites" },
+            { value: Va.FAVORITE, strLabel: "#dpc_following" },
           ],
           l = n == Va.POPULAR ? t : e;
         return o.a.createElement(
           "div",
-          {
-            className: yn.a.DPCTeamList,
-            style: {
-              backgroundImage:
-                "url( " + _.a.IMG_URL + "backgrounds/featured.jpg )",
-            },
-          },
+          { className: yn.a.DPCTeamList },
           o.a.createElement(
             "div",
             { className: yn.a.Header },
@@ -41716,7 +41755,7 @@ object-assign
               { className: yn.a.Title },
               Object(p.a)("#dpc_header_teams")
             ),
-            o.a.createElement(ga, {
+            o.a.createElement(va, {
               options: s,
               selectedOption: n,
               setOption: r,
@@ -41738,116 +41777,138 @@ object-assign
       }),
       Ln = Object(s.a)(function (e) {
         var t = e.nTeamID,
-          a = Gn();
+          a = Gn(),
+          n = Na.a.Get().GetFavoriteTeams();
         if (-1 == Na.a.Get().GetEventTeams(a).indexOf(t)) return null;
-        var n = Na.a.Get().GetTeamNames(t),
-          r = Na.a.Get().GetCurrentPhase(a),
-          i = Na.a.Get().GetTeamRegion(a, t),
-          s = Na.a.Get().GetTeamDivision(a, t),
-          c = Na.a.Get().GetTeamStanding(a, r, i, s, t),
-          d = c ? c.wins + " - " + c.losses : "",
-          m = Na.a.Get().GetRegionDivisionString(i, s, !1),
-          _ = Na.a.Get().GetNextLeagueNode(a, null, t),
-          h = Na.a.Get().GetMostRecentLeagueNode(a, null, t),
-          f = Na.a
+        var r = Na.a.Get().GetTeamNames(t),
+          i = Na.a.Get().GetCurrentPhase(a),
+          s = Na.a.Get().GetTeamRegion(a, t),
+          c = Na.a.Get().GetTeamDivision(a, t),
+          d = Na.a.Get().GetTeamStanding(a, i, s, c, t),
+          m = d ? d.wins + " - " + d.losses : "",
+          h = Na.a.Get().GetRegionString(s),
+          f = Na.a.Get().GetDivisionString(c),
+          g = Na.a.Get().GetNextLeagueNode(a, null, t),
+          v = Na.a.Get().GetMostRecentLeagueNode(a, null, t),
+          b = Na.a
             .Get()
             .GetLeagueNode(
-              null == _ ? void 0 : _.nLeagueID,
-              null == _ ? void 0 : _.nNodeID
+              null == g ? void 0 : g.nLeagueID,
+              null == g ? void 0 : g.nNodeID
             ),
-          g =
-            (null == f ? void 0 : f.team_id_1) == t
-              ? null == f
+          y =
+            (null == b ? void 0 : b.team_id_1) == t
+              ? null == b
                 ? void 0
-                : f.team_id_2
-              : null == f
+                : b.team_id_2
+              : null == b
               ? void 0
-              : f.team_id_1,
-          v = Na.a.Get().GetTeamNames(g),
-          b = 0 == g ? "#dpc_tbd" : null == v ? void 0 : v.name,
-          y = B()(1e3 * (null == f ? void 0 : f.scheduled_time))
+              : b.team_id_1,
+          E = Na.a.Get().GetTeamNames(y),
+          L = 0 == y ? "#dpc_tbd" : null == E ? void 0 : E.name,
+          w = B()(1e3 * (null == b ? void 0 : b.scheduled_time))
             .format("DD MMM LT")
             .toString(),
-          E = Na.a
+          S = Na.a
+            .Get()
+            .GetNodeLabelStrings(
+              a,
+              null == g ? void 0 : g.nLeagueID,
+              null == g ? void 0 : g.nNodeID,
+              !1
+            ),
+          M = Na.a
+            .Get()
+            .GetNodeLabelStrings(
+              a,
+              null == v ? void 0 : v.nLeagueID,
+              null == v ? void 0 : v.nNodeID,
+              !1
+            ),
+          T = Na.a
             .Get()
             .GetLeagueNode(
-              null == h ? void 0 : h.nLeagueID,
-              null == h ? void 0 : h.nNodeID
+              null == v ? void 0 : v.nLeagueID,
+              null == v ? void 0 : v.nNodeID
             ),
-          L =
-            (null == E ? void 0 : E.team_id_1) == t
-              ? null == E
-                ? void 0
-                : E.team_id_2
-              : null == E
-              ? void 0
-              : E.team_id_1,
-          w = Na.a.Get().GetTeamNames(L),
-          S = 0 == L ? "#dpc_tbd" : null == w ? void 0 : w.name,
-          M =
-            (null == E ? void 0 : E.team_1_wins) ==
-            (null == E ? void 0 : E.team_2_wins),
-          T =
-            !M &&
-            ((null == E ? void 0 : E.team_id_1) == t
-              ? (null == E ? void 0 : E.team_1_wins) >
-                (null == E ? void 0 : E.team_2_wins)
-              : (null == E ? void 0 : E.team_2_wins) >
-                (null == E ? void 0 : E.team_1_wins)),
           D =
-            (null == E ? void 0 : E.team_id_1) == t
-              ? null == E
+            (null == T ? void 0 : T.team_id_1) == t
+              ? null == T
                 ? void 0
-                : E.team_1_wins
-              : null == E
+                : T.team_id_2
+              : null == T
               ? void 0
-              : E.team_2_wins,
-          k =
-            (null == E ? void 0 : E.team_id_1) == t
-              ? null == E
+              : T.team_id_1,
+          k = Na.a.Get().GetTeamNames(D),
+          O = 0 == D ? "#dpc_tbd" : null == k ? void 0 : k.name,
+          j =
+            (null == T ? void 0 : T.team_1_wins) ==
+            (null == T ? void 0 : T.team_2_wins),
+          N =
+            !j &&
+            ((null == T ? void 0 : T.team_id_1) == t
+              ? (null == T ? void 0 : T.team_1_wins) >
+                (null == T ? void 0 : T.team_2_wins)
+              : (null == T ? void 0 : T.team_2_wins) >
+                (null == T ? void 0 : T.team_1_wins)),
+          I =
+            (null == T ? void 0 : T.team_id_1) == t
+              ? null == T
                 ? void 0
-                : E.team_2_wins
-              : null == E
+                : T.team_1_wins
+              : null == T
               ? void 0
-              : E.team_1_wins;
+              : T.team_2_wins,
+          C =
+            (null == T ? void 0 : T.team_id_1) == t
+              ? null == T
+                ? void 0
+                : T.team_2_wins
+              : null == T
+              ? void 0
+              : T.team_1_wins,
+          A = -1 != (null == n ? void 0 : n.indexOf(t));
         return o.a.createElement(
           "div",
           { className: yn.a.TeamEntry },
           o.a.createElement(Wa, { className: yn.a.TeamLogo, nTeamID: t }),
           o.a.createElement(
             "div",
-            { className: yn.a.MidSection },
+            { className: yn.a.TeamInfoSection },
             o.a.createElement(
               "div",
               { className: yn.a.TeamInfo },
               o.a.createElement(
                 "div",
                 { className: yn.a.TeamName },
-                null == n ? void 0 : n.name
+                null == r ? void 0 : r.name
               ),
-              o.a.createElement("div", { className: yn.a.Record }, d)
+              o.a.createElement("div", { className: yn.a.Record }, m)
             ),
-            (null == m ? void 0 : m.length) > 0 &&
-              o.a.createElement("div", { className: yn.a.Separator }),
-            (null == m ? void 0 : m.length) > 0 &&
+            (null == h ? void 0 : h.length) > 0 &&
               o.a.createElement(
                 "div",
-                { className: yn.a.RegionDivision },
-                Object(p.a)(m)
+                { className: yn.a.Region },
+                Object(p.a)(h)
+              ),
+            (null == f ? void 0 : f.length) > 0 &&
+              o.a.createElement(
+                "div",
+                { className: yn.a.Division },
+                Object(p.a)(f)
               )
           ),
-          o.a.createElement("div", { className: yn.a.VerticalSeparator }),
           o.a.createElement(
             "div",
-            { className: yn.a.RightSection },
-            f &&
+            { className: yn.a.MatchSection },
+            b &&
               o.a.createElement(
                 l.b,
                 {
                   to: u.a.dpc_watch(
                     Object(da.k)(a),
-                    "" + (null == _ ? void 0 : _.nLeagueID),
-                    "" + (null == _ ? void 0 : _.nNodeID),
+                    "" + (null == g ? void 0 : g.nLeagueID),
+                    "" + (null == g ? void 0 : g.nNodeID),
                     Object(da.o)(0, da.i.SERIES)
                   ),
                   className: yn.a.Next,
@@ -41855,31 +41916,42 @@ object-assign
                 o.a.createElement(
                   "div",
                   { className: yn.a.NextMatch },
-                  Object(p.a)("#dpc_next_match", y)
+                  Object(p.a)("#dpc_next_match", w)
                 ),
+                S.map(function (e, t) {
+                  return o.a.createElement(
+                    "div",
+                    {
+                      key: (null == b ? void 0 : b.node_id) + "_" + t,
+                      className: yn.a.NodeLabel,
+                    },
+                    Object(p.a)(e)
+                  );
+                }),
                 o.a.createElement(
                   "div",
                   { className: yn.a.NextTeam },
                   o.a.createElement(Wa, {
                     className: yn.a.TeamLogo,
-                    nTeamID: g,
+                    nTeamID: y,
                   }),
                   o.a.createElement(
                     "div",
                     { className: yn.a.TeamName },
-                    Object(p.a)(b)
+                    Object(p.a)(L)
                   )
                 )
               ),
-            f && E && o.a.createElement("div", { className: yn.a.Separator }),
-            E &&
+            b && T && o.a.createElement("div", { className: yn.a.Separator }),
+            !b &&
+              T &&
               o.a.createElement(
                 l.b,
                 {
                   to: u.a.dpc_watch(
                     Object(da.k)(a),
-                    "" + (null == h ? void 0 : h.nLeagueID),
-                    "" + (null == h ? void 0 : h.nNodeID),
+                    "" + (null == v ? void 0 : v.nLeagueID),
+                    "" + (null == v ? void 0 : v.nNodeID),
                     Object(da.o)(0, da.i.SERIES)
                   ),
                   className: yn.a.Last,
@@ -41888,30 +41960,68 @@ object-assign
                   "div",
                   { className: yn.a.LastMatch },
                   Object(p.a)("#last_match"),
-                  !M &&
+                  !j &&
                     Object(p.a)(
-                      T ? "#last_match_win" : "#last_match_loss",
-                      D,
-                      k
+                      N ? "#last_match_win" : "#last_match_loss",
+                      I,
+                      C
                     ),
-                  M && Object(p.a)("#last_match_draw", D, k)
+                  j && Object(p.a)("#last_match_draw", I, C)
                 ),
+                M.map(function (e, t) {
+                  return o.a.createElement(
+                    "div",
+                    {
+                      key: (null == b ? void 0 : b.node_id) + "_" + t,
+                      className: yn.a.NodeLabel,
+                    },
+                    Object(p.a)(e)
+                  );
+                }),
                 o.a.createElement(
                   "div",
                   { className: yn.a.PrevTeam },
                   o.a.createElement(Wa, {
                     className: yn.a.TeamLogo,
-                    nTeamID: L,
+                    nTeamID: D,
                   }),
                   o.a.createElement(
                     "div",
                     { className: yn.a.TeamName },
-                    Object(p.a)(S)
+                    Object(p.a)(O)
                   )
                 )
               )
           ),
-          o.a.createElement("div", { className: yn.a.FavoriteStar })
+          o.a.createElement(
+            "div",
+            { className: yn.a.FavoriteSection },
+            o.a.createElement(
+              "div",
+              {
+                className: Object(le.a)(
+                  yn.a.FollowingLine,
+                  A && yn.a.IsFollowing
+                ),
+              },
+              o.a.createElement("div", {
+                className: yn.a.Star,
+                style: {
+                  backgroundImage:
+                    "url( " +
+                    _.a.IMG_URL +
+                    "icons/" +
+                    (A ? "star_gold" : "star_black") +
+                    ".png )",
+                },
+              }),
+              o.a.createElement(
+                "div",
+                { className: yn.a.FollowingLabel },
+                Object(p.a)("#dpc_following")
+              )
+            )
+          )
         );
       }),
       wn = a("yUx/"),
@@ -41923,80 +42033,94 @@ object-assign
           n = t.nNodeID,
           r = Na.a.Get().GetLeagueNode(a, n);
         if (!r) return null;
-        var i = Na.a.Get().GetTeamNames(null == r ? void 0 : r.team_id_1),
-          s = Na.a.Get().GetTeamNames(null == r ? void 0 : r.team_id_2);
+        var i = Na.a.Get().GetTeamNames(r.team_id_1),
+          s = Na.a.Get().GetTeamNames(r.team_id_2);
         if (!i || !s) return null;
-        var c = B()(1e3 * (null == r ? void 0 : r.scheduled_time))
-          .format("DD MMM LT")
-          .toString();
+        var c =
+            _.a.IMG_URL +
+            "teams/" +
+            (r.team_id_1 ? r.team_id_1 : "team_unknown_web") +
+            ".png",
+          d =
+            _.a.IMG_URL +
+            "teams/" +
+            (r.team_id_2 ? r.team_id_2 : "team_unknown_web") +
+            ".png",
+          m = B()(1e3 * (null == r ? void 0 : r.scheduled_time))
+            .format("DD MMM LT")
+            .toString();
         return o.a.createElement(
           "div",
           { className: Sn.a.DPCNextBanner },
           o.a.createElement(
             "div",
-            { className: Sn.a.Background },
+            { className: Sn.a.BannerContents },
             o.a.createElement(
               "div",
-              { className: Sn.a.Teams },
-              o.a.createElement("div", {
-                className: Object(le.a)(Sn.a.TeamLogo, r && Sn.a.Visible),
-                style: {
-                  backgroundSize: "cover",
-                  backgroundRepeat: "no-repeat",
-                  backgroundImage:
-                    "url( " +
-                    _.a.IMG_URL +
-                    "teams/" +
-                    (null == r ? void 0 : r.team_id_1) +
-                    ".png )",
-                },
-              }),
-              o.a.createElement("div", {
-                className: Object(le.a)(Sn.a.TeamLogo, r && Sn.a.Visible),
-                style: {
-                  backgroundSize: "cover",
-                  backgroundRepeat: "no-repeat",
-                  backgroundImage:
-                    "url( " +
-                    _.a.IMG_URL +
-                    "teams/" +
-                    (null == r ? void 0 : r.team_id_2) +
-                    ".png )",
-                },
-              })
-            ),
-            o.a.createElement("div", { className: Sn.a.Gradient })
-          ),
-          o.a.createElement(
-            "div",
-            { className: Sn.a.LeftLabels },
-            o.a.createElement(
-              "div",
-              { className: Sn.a.ComingUp },
-              Object(p.a)("#dpc_coming_up")
-            ),
-            o.a.createElement(
-              "div",
-              { className: Object(le.a)(Sn.a.Teams, r && Sn.a.Visible) },
-              Object(p.a)(
-                "#dpc_team_versus",
-                null == i ? void 0 : i.name,
-                null == s ? void 0 : s.name
+              { className: Sn.a.LeftLabels },
+              o.a.createElement(
+                "div",
+                { className: Sn.a.ComingUp },
+                Object(p.a)("#dpc_coming_up")
+              ),
+              o.a.createElement(
+                "div",
+                { className: Object(le.a)(Sn.a.TeamNames, r && Sn.a.Visible) },
+                o.a.createElement(
+                  "div",
+                  { className: Sn.a.TeamName },
+                  null == i ? void 0 : i.name
+                ),
+                o.a.createElement(
+                  "div",
+                  { className: Sn.a.Versus },
+                  Object(p.a)("#dpc_vs")
+                ),
+                o.a.createElement(
+                  "div",
+                  { className: Sn.a.TeamName },
+                  null == s ? void 0 : s.name
+                )
+              ),
+              o.a.createElement(
+                "div",
+                { className: Object(le.a)(Sn.a.WatchLive, r && Sn.a.Visible) },
+                Object(p.a)("#dpc_watch_live")
+              ),
+              o.a.createElement(
+                "div",
+                { className: Object(le.a)(Sn.a.Timestamp, r && Sn.a.Visible) },
+                m
               )
             ),
             o.a.createElement(
               "div",
-              { className: Object(le.a)(Sn.a.WatchLive, r && Sn.a.Visible) },
-              Object(p.a)("#dpc_watch_live_time", c)
-            )
-          ),
-          o.a.createElement(
-            l.b,
-            { to: u.a.dpc_schedule(), className: Sn.a.ScheduleButton },
+              { className: Object(le.a)(Sn.a.TeamWrapper, Sn.a.First) },
+              o.a.createElement("div", {
+                className: Sn.a.TeamDiagonal,
+                style: { backgroundImage: "url( " + c + " )" },
+              })
+            ),
             o.a.createElement(
               "div",
-              { className: Sn.a.Label },
-              Object(p.a)("#dpc_view_schedule")
+              { className: Object(le.a)(Sn.a.TeamWrapper, Sn.a.Second) },
+              o.a.createElement("div", {
+                className: Sn.a.TeamDiagonal,
+                style: { backgroundImage: "url( " + d + " )" },
+              })
+            ),
+            o.a.createElement(
+              "div",
+              { className: Sn.a.ScheduleButtonContainer },
+              o.a.createElement(
+                l.b,
+                { to: u.a.dpc_schedule(), className: Sn.a.ScheduleButton },
+                o.a.createElement(
+                  "div",
+                  { className: Sn.a.Label },
+                  Object(p.a)("#dpc_view_schedule")
+                )
+              )
             )
           )
         );
@@ -59720,14 +59844,20 @@ PERFORMANCE OF THIS SOFTWARE.
   "yUx/": function (e, t, a) {
     e.exports = {
       DPCNextBanner: "dpcnextbanner_DPCNextBanner_2Mgev",
-      Background: "dpcnextbanner_Background_2Dm9Z",
-      Teams: "dpcnextbanner_Teams_2kveE",
-      TeamLogo: "dpcnextbanner_TeamLogo_3DsIY",
-      Visible: "dpcnextbanner_Visible_3HOVg",
-      Gradient: "dpcnextbanner_Gradient_1FSbc",
+      BannerContents: "dpcnextbanner_BannerContents_2KKse",
       LeftLabels: "dpcnextbanner_LeftLabels_ldAHh",
       ComingUp: "dpcnextbanner_ComingUp_1m_NU",
+      TeamNames: "dpcnextbanner_TeamNames_1-a9S",
+      Visible: "dpcnextbanner_Visible_3HOVg",
+      TeamName: "dpcnextbanner_TeamName_3cRp3",
+      Versus: "dpcnextbanner_Versus_3GMgA",
       WatchLive: "dpcnextbanner_WatchLive_1U_-3",
+      Timestamp: "dpcnextbanner_Timestamp_3FXLd",
+      TeamWrapper: "dpcnextbanner_TeamWrapper_33aT7",
+      First: "dpcnextbanner_First_1xsjR",
+      Second: "dpcnextbanner_Second_CYqds",
+      TeamDiagonal: "dpcnextbanner_TeamDiagonal_f27Mo",
+      ScheduleButtonContainer: "dpcnextbanner_ScheduleButtonContainer_2Msqn",
       ScheduleButton: "dpcnextbanner_ScheduleButton_3VONE",
       Label: "dpcnextbanner_Label_2bfCJ",
     };

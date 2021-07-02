@@ -1886,15 +1886,22 @@ function ReparentAppLandingPageForMobileUX()
 
 		// order the action buttons
 		$J('#shareBtn').appendTo('#rowBtnActions');
-		$J('#queueBtnFollow').appendTo('#rowBtnActions');
 		$J('#reportBtn').appendTo('#rowBtnActions');
+		$J('#queueBtnFollow').appendTo('#rowBtnActions');
 		$J('#ignoreBtn').appendTo('#rowBtnActions');
 
+		$J('#rowBtnActions').appendTo('#queueActionsCtn');
+		
 		// place discovery queue below the action buttons
 		$J('#nextInDiscoveryQueue').appendTo('#queueCtn');
 		
 		// place purchase options where they'll be controlled by the purchase options banner 
 		$J('#game_area_purchase').appendTo('#purchaseOptionsContent');
+
+		// add a copy of 'content for this game' to the purchase options content.  we 
+		// probably want to remove it from the main page body, but testing it first as a copy.
+		var $dlcList = $J('#gameAreaDLCSection').clone();
+		$dlcList.appendTo('#purchaseOptionsContent');
 
 		// move DLC section below the recent events and announcements (instead of below the list of purchase options)
 		if ( $J('#gameAreaDLCSection') !== null )
@@ -1919,37 +1926,76 @@ function ReparentAppLandingPageForMobileUX()
 		// testing this - we may need to move this again  
 		$J('#genresAndManufacturer').appendTo('#appLinksAndInfo');
 
-		// hide the purchase options banner if usable screen height is significantly below actual screen height (keyboard causes this) 
 		var responsiveOnWindowResize = function()
 		{
+			// hide the purchase options banner if usable screen height is significantly below actual screen height (keyboard causes this) 
 			if ( screen.availHeight - window.innerHeight > 300 )
 				$J('#purchaseOptionsContainer').css('display', 'none');
 			else
 				$J('#purchaseOptionsContainer').css('display', 'flex');
+
+			// purchase content height may need to change if it's visible 
+			if ( $J('#purchaseOptionsContent').is(':visible') )
+				_AdjustPurchaseContentHeight();
 		}
 		window.addEventListener( 'resize', responsiveOnWindowResize );
 
-		// set the empty space div shown above purchase options to eat touch events
+		// have the empty space div which is shown above purchase options eat touch events
 		$J('#purchaseOptionsEmptySpace').bind('touchstart click', function (e) {
 			return false;
 		});
 
-		// iphone has a system menu which appears if you tap near the bottom.  Adding bottom padding to reduce odds of accidently
-		// bringing up the system menu when you're trying to open the purchase options.
-		if ( navigator.userAgent.toLowerCase().indexOf( 'iphone' ) != -1 )
+		/* COMMENTING THIS OUT TO TEST
+			// iphone has a system menu which appears if you tap near the bottom.  Adding bottom padding to reduce odds of accidently
+			// bringing up the system menu when you're trying to open the purchase options.
+			if ( navigator.userAgent.toLowerCase().indexOf( 'iphone' ) != -1 )
+			{
+				$J('#purchaseOptionsBanners').css('padding-bottom', '30px');
+			} 
+		*/
+
+		// re-order DLC rows so price follows the DLC name.  This is so we no longer need to use
+		// absolute positioning, which allows us to use a flexbox to prevent content overlap
+		var $MoveElements = $J('.game_area_dlc_price');
+		$MoveElements.each( function() {
+			var $Element = $J(this);
+			var $ParentElement = $Element.closest('a');
+			$Element.appendTo( $ParentElement );
+		} );
+
+		// remove cursor and tooltip text from review summary section
+		$J('.user_reviews_summary_row').removeAttr('data-tooltip-html');
+
+		// if one of the wishlist buttons are visible make the action buttons flex grow so the two rows of buttons match width.
+		if ( $J('#add_to_wishlist_area').is(':visible') || $J('#add_to_wishlist_area_success').is(':visible') || $J('#add_to_wishlist_area_fail').is(':visible') )
 		{
-			$J('#purchaseOptionsBanners').css('padding-bottom', '30px');
+			$J('#shareBtn').css('flex-grow', '1');
+			$J('#queueBtnFollow').css('flex-grow', '1');
+			$J('#reportBtn').css('flex-grow', '1');
 		}
 
 		// display the purchase options container
 		$J('#purchaseOptionsContainer').css('display', 'flex');
+
+		// on iOS use the iOS share icon.  the default is Android.
+		if ( navigator.userAgent.toLowerCase().indexOf( 'iphone' ) != -1 )
+		{
+			$J('#shareImg').attr('src', 'https://store.cloudflare.steamstatic.com/public/shared/images/icon_share_ios.png' );
+		} 
 	}
 }
 
-// called by Mobile UX to reveal a list of purchase options for an app
-function TogglePurchaseOptionsModal( divContentID )
+// calculate the size of the container which holds the purchase banner, purchase option content, and empty space which greys out the rest of the page
+function _AdjustPurchaseContentHeight()
 {
-	var $modalDiv = $J(divContentID);
+	var $purchaseContentHeight = parseInt( window.innerHeight ) - parseInt( GetResponsiveHeaderFixedOffsetAdjustment() );
+	$J('#purchaseOptionsContainer').css('height', $purchaseContentHeight + 'px' );
+}
+
+// called by Mobile UX to reveal a list of purchase options for an app
+function TogglePurchaseOptionsModal()
+{
+	var $modalDiv = $J('#purchaseOptionsContent');
 	if ( $modalDiv !== null )
 	{
 		var $bShowing = !$modalDiv.is(':visible');
@@ -1959,21 +2005,50 @@ function TogglePurchaseOptionsModal( divContentID )
 		$J('#purchaseOptionsBanner_hidden').css('display', !$bShowing ? 'flex' : 'none');
 
 		if ( $bShowing )
-		{
-			// set purchase container height to entire window under the header
-			var $purchaseContentHeight = parseInt( window.innerHeight ) - parseInt( GetResponsiveHeaderFixedOffsetAdjustment() );
-			$J('#purchaseOptionsContainer').css('height', $purchaseContentHeight + 'px' );
-		}
-		else
-		{
+			_AdjustPurchaseContentHeight();
+		else 
 			$J('#purchaseOptionsContainer').css('height', 'unset' );
-		}
 
 		// grey out the screen above the purchase options
 		$J('#purchaseOptionsEmptySpace').css('display', $bShowing ? 'block' : 'none');
 
 		// display the purchase options
 		$modalDiv.css('display', $bShowing ? 'block' : 'none');
+	}
+}
+
+// Popup for customers to optin/out of the new mobile UX 
+var g_newMobileUXPopup = null;
+function ShowUseNewMobileUXPopup()
+{
+	
+	var $ModalContent = $J("\r\n<div>\r\n<div id=\"popupNewMobileUX\" style=\"background: #121A24; font-size: 14px; margin: 10px; padding: 20px 15px;\">\r\n\t<div style=\"display: flex; flex-direction: row;\">\r\n\t\t<span style=\"color: white;\">Opt in to the new mobile version of the game details page<\/span>\r\n\t\t<input type=\"checkbox\" id=\"checkboxNewMobileUX\" style=\"width: 25px; height: 25px; margin-left: 20px;\">\r\n\t<\/div>\r\n\t<div>\r\n\t\t<div style=\"margin-top:20px;\">We're improving this page for smaller screens<\/div>\r\n\t\t<div style=\"margin-top:20px;\">Please send questions\/comments\/concerns to <a href=\"mailto:SteamMobile@valvesoftware.com\"><u>SteamMobile@valvesoftware.com<\/u><\/a><\/div>\r\n\t<\/div>\r\n\t<div id=\"popupNewMobileUXCloseBtn\" style=\"margin-top: 20px; font-weight: bold; color:white; padding: 7px; text-align:center; background: #364454; font-size:16px;\" \r\n\t\tonclick=\"OnNewMobileUXPopupClosed();\">Done<\/div>\r\n<\/div>\r\n<\/div>");
+
+	// set the correct checkbox state
+	if ( V_GetCookie('use_new_mobile_ux') == 1 )
+		$ModalContent.find('#checkboxNewMobileUX').attr('checked', true);
+
+	g_newMobileUXPopup = new CModal( $ModalContent );
+	g_newMobileUXPopup.SetRemoveContentOnDismissal( true );
+	g_newMobileUXPopup.Show();
+}
+
+// check if customer selection for viewing the new mobile UX has changed
+function OnNewMobileUXPopupClosed()
+{
+	var bPreviousValue = V_GetCookie('use_new_mobile_ux') == 1;
+	var bChecked = $J('#checkboxNewMobileUX').attr('checked') === 'checked';
+
+	// if selection changed update the coookie and reload the page
+	if ( bPreviousValue != bChecked )
+	{
+		V_SetCookie('use_new_mobile_ux', bChecked ? 1 : 0, 30, '/');
+		g_newMobileUXPopup.Dismiss();
+		location.reload();
+	}
+	else if ( typeof g_newMobileUXPopup !== 'undefined' )
+	{
+		g_newMobileUXPopup.Dismiss();
 	}
 }
 
