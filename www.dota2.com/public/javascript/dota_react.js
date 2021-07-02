@@ -6238,12 +6238,11 @@ and limitations under the License.
   "3Rkk": function (e, t, a) {
     "use strict";
     a.d(t, "a", function () {
-      return o;
+      return i;
     });
     var n = a("tkkQ"),
       r = a("sjx6"),
-      i = a("knzx"),
-      o = {
+      i = {
         base: function () {
           return "" + n.a.PROJECT_ROOT;
         },
@@ -6254,7 +6253,7 @@ and limitations under the License.
           return "/";
         },
         react: function (e) {
-          return o.base() + "/react/" + e;
+          return i.base() + "/react/" + e;
         },
         news: function (e) {
           return "/news" + (e ? "/" + e : "");
@@ -6281,20 +6280,20 @@ and limitations under the License.
           return "/dpc_react";
         },
         dpc_event_root: function (e) {
-          return o.dpc_root() + "/" + (e || Object(r.b)());
+          return i.dpc_root() + "/" + (e || Object(r.b)());
         },
         dpc_watch_root: function (e) {
-          return o.dpc_event_root(e) + "/watch";
+          return i.dpc_event_root(e) + "/watch";
         },
         dpc_schedule_root: function (e) {
-          return o.dpc_event_root(e) + "/schedule";
+          return i.dpc_event_root(e) + "/schedule";
         },
         dpc_standings_root: function (e) {
-          return o.dpc_event_root(e) + "/standings";
+          return i.dpc_event_root(e) + "/standings";
         },
         dpc_watch: function (e, t, a, n) {
           return (
-            o.dpc_watch_root(e) +
+            i.dpc_watch_root(e) +
             "/" +
             (t || 0) +
             "/" +
@@ -6305,33 +6304,27 @@ and limitations under the License.
         },
         dpc_schedule: function (e, t, a) {
           return (
-            o.dpc_schedule_root(e) +
+            i.dpc_schedule_root(e) +
             "/" +
             (t || Object(r.e)()) +
             "/" +
             (a || Object(r.e)())
           );
         },
-        dpc_standings: function (e, t, a) {
-          return (
-            o.dpc_standings_root(e) +
-            "/" +
-            (t || Object(r.e)()) +
-            "/" +
-            (a || Object(r.h)(i.b.DIVISION_I))
-          );
+        dpc_standings: function (e) {
+          return i.dpc_standings_root(e);
         },
         dpc_ti_standings: function (e) {
-          return o.dpc_event_root(e) + "/tistandings";
+          return i.dpc_event_root(e) + "/tistandings";
         },
         dpc_teams: function (e) {
-          return o.dpc_event_root(e) + "/teams";
+          return i.dpc_event_root(e) + "/teams";
         },
         dpc_team: function (e, t) {
-          return o.dpc_event_root(e) + "/teams/" + t;
+          return i.dpc_event_root(e) + "/teams/" + t;
         },
         dpc_about: function (e) {
-          return o.dpc_event_root(e) + "/about";
+          return i.dpc_event_root(e) + "/about";
         },
         patchnotes: function (e) {
           return "/patches" + (e ? "/" + e : "");
@@ -19850,6 +19843,8 @@ object-assign
                 ],
               },
             ]),
+            (this.m_mapStreamBestNodes = new Map()),
+            (this.m_nLastLiveUpdateTimestamp = 0),
             (this.m_bSpoilerBlockEnabled =
               "1" == localStorage.getItem("bSpoilerBlockEnabled"));
         }
@@ -20425,16 +20420,17 @@ object-assign
                     l.a.BASE_URL + "webapi/IDOTA2League/GetLeaguesData/v001",
                     { params: { league_ids: i } }
                   )
-                  .then(function (e) {
-                    var a = null == e ? void 0 : e.data;
+                  .then(function (a) {
+                    var n = null == a ? void 0 : a.data;
                     Object(r.F)(function () {
-                      null == a ||
-                        a.leagues.forEach(function (e) {
+                      null == n ||
+                        n.leagues.forEach(function (e) {
                           t.m_asyncLeagueData
                             .getAsyncDataWrapper(e.info.league_id)
                             .setData(600, e),
                             t.UpdateDerivedLeagueData(e);
-                        });
+                        }),
+                        t.UpdateLiveLeagueNodes(e);
                     });
                   });
             }
@@ -20469,31 +20465,31 @@ object-assign
           }),
           (e.prototype.GetNextLeagueNode = function (t, a, n) {
             var r = this,
-              i = this.GetEventNodes(t, 0).filter(function (t) {
-                var i = r.GetLeagueNodeInfo(t.nLeagueID, t.nNodeID);
-                if (a && (null == i ? void 0 : i.ePhase) != a) return !1;
-                var o = e.Get().GetLeagueNode(t.nLeagueID, t.nNodeID);
-                return (
-                  (!n ||
-                    (null == o ? void 0 : o.team_id_1) == n ||
-                    (null == o ? void 0 : o.team_id_2) == n) &&
-                  0 != (null == o ? void 0 : o.team_id_1) &&
-                  0 != (null == o ? void 0 : o.team_id_2) &&
-                  !(null == o ? void 0 : o.has_started) &&
-                  !(null == o ? void 0 : o.is_completed) &&
-                  0 != (null == o ? void 0 : o.scheduled_time)
-                );
-              });
-            console.log(t, this.GetEventDates(t, 3));
-            var o = i.sort(function (t, a) {
-              var n = e.Get().GetLeagueNode(t.nLeagueID, t.nNodeID),
-                r = e.Get().GetLeagueNode(a.nLeagueID, a.nNodeID);
-              return (
-                (null == n ? void 0 : n.scheduled_time) -
-                (null == r ? void 0 : r.scheduled_time)
-              );
-            });
-            return o.length > 0 ? o[0] : { nLeagueID: 0, nNodeID: 0 };
+              i = this.GetEventNodes(t, 0)
+                .filter(function (t) {
+                  var i = r.GetLeagueNodeInfo(t.nLeagueID, t.nNodeID);
+                  if (a && (null == i ? void 0 : i.ePhase) != a) return !1;
+                  var o = e.Get().GetLeagueNode(t.nLeagueID, t.nNodeID);
+                  return (
+                    (!n ||
+                      (null == o ? void 0 : o.team_id_1) == n ||
+                      (null == o ? void 0 : o.team_id_2) == n) &&
+                    0 != (null == o ? void 0 : o.team_id_1) &&
+                    0 != (null == o ? void 0 : o.team_id_2) &&
+                    !(null == o ? void 0 : o.has_started) &&
+                    !(null == o ? void 0 : o.is_completed) &&
+                    0 != (null == o ? void 0 : o.scheduled_time)
+                  );
+                })
+                .sort(function (t, a) {
+                  var n = e.Get().GetLeagueNode(t.nLeagueID, t.nNodeID),
+                    r = e.Get().GetLeagueNode(a.nLeagueID, a.nNodeID);
+                  return (
+                    (null == n ? void 0 : n.scheduled_time) -
+                    (null == r ? void 0 : r.scheduled_time)
+                  );
+                });
+            return i.length > 0 ? i[0] : { nLeagueID: 0, nNodeID: 0 };
           }),
           (e.prototype.GetBestCurrentLeagueNode = function (e) {
             var t = this,
@@ -20577,93 +20573,111 @@ object-assign
                 : a.live)
             );
           }),
-          (e.prototype.IsLeagueNodeLive = function (e, t, a) {
-            var n = this,
-              r = this.GetLeagueNode(t, a),
-              i = (null == r ? void 0 : r.actual_time)
-                ? null == r
-                  ? void 0
-                  : r.actual_time
-                : r.scheduled_time,
-              o = Date.now() / 1e3,
-              s = Math.abs(i - o),
-              l =
-                (null == r ? void 0 : r.has_started) &&
-                !(null == r ? void 0 : r.is_completed);
-            if (!r) return !1;
-            if (!r.has_started && r.scheduled_time - o > 10800) return !1;
-            if (r.is_completed && o - r.actual_time > 32400) return !1;
-            var c = ((null == r ? void 0 : r.stream_ids) || []).filter(
-              function (t) {
-                return n.IsStreamLive(e, t);
-              }
-            );
-            if (0 == c.length) return !1;
-            var u = this.GetEventNodes(e, 3);
-            for (var d = 0, m = c; d < m.length; d++) {
-              var _ = m[d],
-                p = !0;
-              0 == a && console.log(" checking stream", _);
-              for (var h = 0, f = u; h < f.length; h++) {
-                var g = f[h];
-                if (
-                  (0 == a && console.log("  checking vs ", g.nNodeID),
-                  g.nLeagueID != t || g.nNodeID != a)
-                ) {
-                  var v = this.GetLeagueNode(g.nLeagueID, g.nNodeID);
-                  if (-1 != (null == v ? void 0 : v.stream_ids.indexOf(_))) {
-                    var b =
-                      (null == v ? void 0 : v.has_started) &&
-                      !(null == v ? void 0 : v.is_completed);
-                    if (
-                      (0 == a &&
-                        console.log(
-                          "   testing node ",
-                          a,
-                          " against ",
-                          g.nNodeID,
-                          "inprogress",
-                          l,
-                          b
-                        ),
-                      b && !l)
-                    ) {
-                      0 == a && console.log("   not best due to inprogress"),
-                        (p = !1);
-                      break;
-                    }
-                    if (b || !l) {
-                      var y = (null == v ? void 0 : v.actual_time)
-                          ? null == v
-                            ? void 0
-                            : v.actual_time
-                          : v.scheduled_time,
-                        E = Math.abs(y - o);
-                      if (
-                        (0 == a &&
-                          console.log("   testing time distance", y, i),
-                        E < s)
-                      ) {
-                        0 == a &&
-                          console.log("   not best due to time distance"),
-                          (p = !1);
-                        break;
+          (e.prototype.UpdateLiveLeagueNodes = function (e) {
+            var t = this,
+              a = Math.floor(Date.now() / 1e3);
+            if (
+              !(a < this.m_nLastLiveUpdateTimestamp + 30) &&
+              null != this.GetLiveStreams(e)
+            ) {
+              this.m_nLastLiveUpdateTimestamp = a;
+              var n = new Set(),
+                r = this.GetEventNodes(e, 0);
+              r.forEach(function (e) {
+                var a = t.GetLeagueNode(e.nLeagueID, e.nNodeID);
+                a &&
+                  a.stream_ids.forEach(function (e) {
+                    return n.add(e);
+                  });
+              }),
+                Array.from(n.values()).forEach(function (n) {
+                  if (t.IsStreamLive(e, n)) {
+                    console.log("Scanning for best node for live stream", n);
+                    var i = void 0;
+                    r.forEach(function (e) {
+                      var r = t.GetLeagueNode(e.nLeagueID, e.nNodeID);
+                      if (r && -1 != r.stream_ids.indexOf(n)) {
+                        var o = r.actual_time
+                          ? r.actual_time
+                          : r.scheduled_time;
+                        if (!(o < a - 32400 || o > a + 7200)) {
+                          if (
+                            (console.log(
+                              " node",
+                              r.node_id,
+                              "has this stream and is in time range"
+                            ),
+                            null == i)
+                          )
+                            return (
+                              console.log("  is first and currently best"),
+                              void (i = e)
+                            );
+                          var s = t.GetLeagueNode(i.nLeagueID, i.nNodeID),
+                            l = s.has_started && !s.is_completed,
+                            c = r.has_started && !r.is_completed;
+                          if (!l || c) {
+                            if (c && !l)
+                              return (
+                                console.log(
+                                  "  best isn't in progress and we are, we're new best"
+                                ),
+                                void (i = e)
+                              );
+                            var u = s.actual_time
+                                ? s.actual_time
+                                : s.scheduled_time,
+                              d = Math.abs(a - u),
+                              m = Math.abs(a - o);
+                            return m < d
+                              ? (console.log(
+                                  "  our timestamp is better, we're new best: ",
+                                  m,
+                                  "<",
+                                  d
+                                ),
+                                void (i = e))
+                              : void 0;
+                          }
+                          console.log(
+                            "  best is in progress and we aren't, bailing"
+                          );
+                        }
                       }
-                    }
-                  } else
-                    0 == a &&
-                      console.log(
-                        "  doesn't have stream, skipping",
-                        null == v ? void 0 : v.stream_ids
-                      );
-                }
-              }
-              if (p)
-                return (
-                  console.log("node", a, "IS LIVE because of stream", _), !0
-                );
+                    }),
+                      i
+                        ? (console.log("Stream", n, "has best node", i.nNodeID),
+                          t.m_mapStreamBestNodes.set(n, i))
+                        : t.m_mapStreamBestNodes.delete(n);
+                  }
+                });
+            }
+          }),
+          (e.prototype.GetStreamLeagueNode = function (e) {
+            return this.m_mapStreamBestNodes.get(e);
+          }),
+          (e.prototype.IsLeagueNodeLive = function (e, t, a) {
+            this.UpdateLiveLeagueNodes(e);
+            var n = this.GetLeagueNode(t, a);
+            if (!n) return !1;
+            for (var r = 0, i = n.stream_ids; r < i.length; r++) {
+              var o = i[r],
+                s = this.GetStreamLeagueNode(o);
+              if (s && s.nLeagueID == t && s.nNodeID == a) return !0;
             }
             return !1;
+          }),
+          (e.prototype.GetLeagueNodeLiveStreams = function (e, t, a) {
+            this.UpdateLiveLeagueNodes(e);
+            var n = [],
+              r = this.GetLeagueNode(t, a);
+            if (r)
+              for (var i = 0, o = r.stream_ids; i < o.length; i++) {
+                var s = o[i],
+                  l = this.GetStreamLeagueNode(s);
+                l && l.nLeagueID == t && l.nNodeID == a && n.push(s);
+              }
+            return n;
           }),
           (e.prototype.GetFavoriteTeams = function () {
             var e = this;
@@ -20782,6 +20796,8 @@ object-assign
           Object(n.c)([r.B], e.prototype, "m_bSpoilerBlockEnabled", void 0),
           Object(n.c)([r.B], e.prototype, "GetNextLeagueNode", null),
           Object(n.c)([r.B], e.prototype, "GetMostRecentLeagueNode", null),
+          Object(n.c)([r.B], e.prototype, "m_mapStreamBestNodes", void 0),
+          Object(n.c)([r.B], e.prototype, "GetLeagueNodeLiveStreams", null),
           e
         );
       })();
@@ -40142,7 +40158,10 @@ object-assign
           ),
           m = d[0],
           _ = d[1],
-          h = [
+          h = 0 == t.pathname.indexOf(u.a.dpc_watch_root(a)),
+          f = 0 == t.pathname.indexOf(u.a.dpc_schedule_root(a)),
+          g = 0 == t.pathname.indexOf(u.a.dpc_standings_root(a)),
+          v = [
             { value: ma.c.SPRING_2021_LEAGUE, strLabel: "#dpc_event_spring21" },
             {
               value: ma.c.SPRING_2021_MAJOR,
@@ -40154,97 +40173,95 @@ object-assign
             },
             { value: ma.c.INTERNATIONAL_2021, strLabel: "#dpc_event_ti10" },
           ];
-        return (
-          Object(i.useEffect)(
+        if (
+          (Object(i.useEffect)(
             function () {
               Na.a.Get().SetSpoilerBlockEnabled(r);
             },
             [r]
           ),
-          m != e
-            ? o.a.createElement(c.a, {
-                to: u.a.dpc_watch_root(Object(da.k)(m)),
+          m != e)
+        ) {
+          if (h)
+            return o.a.createElement(c.a, {
+              to: u.a.dpc_watch(Object(da.k)(m)),
+            });
+          if (f)
+            return o.a.createElement(c.a, {
+              to: u.a.dpc_schedule(Object(da.k)(m)),
+            });
+          if (g)
+            return o.a.createElement(c.a, {
+              to: u.a.dpc_standings(Object(da.k)(m)),
+            });
+        }
+        return o.a.createElement(
+          "div",
+          { className: Ra.a.DPCHeader },
+          o.a.createElement(
+            "div",
+            { className: Ra.a.DPCHeaderContents },
+            o.a.createElement(
+              "div",
+              { className: Ra.a.DPCEventSelector },
+              o.a.createElement(va, {
+                options: v,
+                selectedOption: m,
+                setOption: _,
+                nWidth: 250,
               })
-            : o.a.createElement(
-                "div",
-                { className: Ra.a.DPCHeader },
+            ),
+            o.a.createElement(
+              "div",
+              { className: Ra.a.DPCOptions },
+              o.a.createElement(
+                l.b,
+                {
+                  to: u.a.dpc_watch(a),
+                  className: Object(le.a)(Ra.a.DPCLink, h && Ra.a.Active),
+                },
                 o.a.createElement(
                   "div",
-                  { className: Ra.a.DPCHeaderContents },
-                  o.a.createElement(
-                    "div",
-                    { className: Ra.a.DPCEventSelector },
-                    o.a.createElement(va, {
-                      options: h,
-                      selectedOption: m,
-                      setOption: _,
-                      nWidth: 250,
-                    })
-                  ),
-                  o.a.createElement(
-                    "div",
-                    { className: Ra.a.DPCOptions },
-                    o.a.createElement(
-                      l.b,
-                      {
-                        to: u.a.dpc_watch(a),
-                        className: Object(le.a)(
-                          Ra.a.DPCLink,
-                          0 == t.pathname.indexOf(u.a.dpc_watch_root(a)) &&
-                            Ra.a.Active
-                        ),
-                      },
-                      o.a.createElement(
-                        "div",
-                        { className: Ra.a.Label },
-                        Object(p.a)("#dpc_header_watch")
-                      )
-                    ),
-                    o.a.createElement(
-                      l.b,
-                      {
-                        to: u.a.dpc_schedule(a),
-                        className: Object(le.a)(
-                          Ra.a.DPCLink,
-                          0 == t.pathname.indexOf(u.a.dpc_schedule_root(a)) &&
-                            Ra.a.Active
-                        ),
-                      },
-                      o.a.createElement(
-                        "div",
-                        { className: Ra.a.Label },
-                        Object(p.a)("#dpc_header_schedule")
-                      )
-                    ),
-                    o.a.createElement(
-                      l.b,
-                      {
-                        to: u.a.dpc_standings(a),
-                        className: Object(le.a)(
-                          Ra.a.DPCLink,
-                          0 == t.pathname.indexOf(u.a.dpc_standings_root(a)) &&
-                            Ra.a.Active
-                        ),
-                      },
-                      o.a.createElement(
-                        "div",
-                        { className: Ra.a.Label },
-                        Object(p.a)("#dpc_header_standings")
-                      )
-                    )
-                  ),
-                  o.a.createElement(
-                    "div",
-                    { className: Ra.a.DPCSpoilerBlock },
-                    o.a.createElement(
-                      "div",
-                      { className: Ra.a.SpoilerText },
-                      Object(p.a)("#dpc_header_spoiler_block")
-                    ),
-                    o.a.createElement(ya, { bEnabled: r, setEnabled: s })
-                  )
+                  { className: Ra.a.Label },
+                  Object(p.a)("#dpc_header_watch")
+                )
+              ),
+              o.a.createElement(
+                l.b,
+                {
+                  to: u.a.dpc_schedule(a),
+                  className: Object(le.a)(Ra.a.DPCLink, f && Ra.a.Active),
+                },
+                o.a.createElement(
+                  "div",
+                  { className: Ra.a.Label },
+                  Object(p.a)("#dpc_header_schedule")
+                )
+              ),
+              o.a.createElement(
+                l.b,
+                {
+                  to: u.a.dpc_standings(a),
+                  className: Object(le.a)(Ra.a.DPCLink, g && Ra.a.Active),
+                },
+                o.a.createElement(
+                  "div",
+                  { className: Ra.a.Label },
+                  Object(p.a)("#dpc_header_standings")
                 )
               )
+            ),
+            o.a.createElement(
+              "div",
+              { className: Ra.a.DPCSpoilerBlock },
+              o.a.createElement(
+                "div",
+                { className: Ra.a.SpoilerText },
+                Object(p.a)("#dpc_header_spoiler_block")
+              ),
+              o.a.createElement(ya, { bEnabled: r, setEnabled: s })
+            )
+          )
         );
       },
       Ga = a("pitT"),
@@ -40336,10 +40353,7 @@ object-assign
             l = 3;
         }
         var c = Na.a.Get().GetNodeLabelStrings(e, t.nLeagueID, t.nNodeID, !1),
-          u =
-            (null == a || a.team_1_wins,
-            null == a || a.team_2_wins,
-            !(null == a ? void 0 : a.has_started)),
+          u = !(null == a ? void 0 : a.has_started),
           d = Na.a.Get().IsLeagueNodeLive(e, t.nLeagueID, t.nNodeID),
           m = null == a ? void 0 : a.is_completed;
         return o.a.createElement(
@@ -40370,12 +40384,14 @@ object-assign
               );
             }),
             u &&
+              !d &&
               o.a.createElement(La.a, {
                 className: Fa.a.Timestamp,
                 date: 1e3 * (null == a ? void 0 : a.scheduled_time),
                 format: "MMM DD LT",
               }),
             m &&
+              !d &&
               o.a.createElement(La.a, {
                 className: Fa.a.Timestamp,
                 date: 1e3 * (null == a ? void 0 : a.actual_time),
@@ -41226,42 +41242,40 @@ object-assign
         var e = Gn(),
           t = Na.a.Get().GetHomePageContext(),
           a = Na.a.Get().GetLeagueData(t.nLeagueID),
-          n = Na.a.Get().GetLeagueNode(t.nLeagueID, t.nNodeID),
-          r = Na.a.Get().IsLeagueNodeLive(e, t.nLeagueID, t.nNodeID),
-          s = null == n ? void 0 : n.stream_ids,
-          l =
+          n =
+            (Na.a.Get().GetLeagueNode(t.nLeagueID, t.nNodeID),
+            Na.a.Get().IsLeagueNodeLive(e, t.nLeagueID, t.nNodeID)),
+          r = Na.a.Get().GetLeagueNodeLiveStreams(e, t.nLeagueID, t.nNodeID),
+          s =
             null == a
               ? void 0
-              : a.streams.filter(function (t) {
-                  return (
-                    (null == s ? void 0 : s.includes(t.stream_id)) &&
-                    Na.a.Get().IsStreamLive(e, t.stream_id)
-                  );
+              : a.streams.filter(function (e) {
+                  return null == r ? void 0 : r.includes(e.stream_id);
                 }),
-          c = Na.a.Get().GetDefaultRegion(),
-          u = [];
-        switch (c) {
+          l = Na.a.Get().GetDefaultRegion(),
+          c = [];
+        switch (l) {
           case ma.h.NA:
           case ma.h.WEU:
-            u.push.apply(u, [0, 8, 6, 5, 11]);
+            c.push.apply(c, [0, 8, 6, 5, 11]);
             break;
           case ma.h.SA:
-            u.push.apply(u, [11, 5, 0, 8, 6]);
+            c.push.apply(c, [11, 5, 0, 8, 6]);
             break;
           case ma.h.EEU:
-            u.push.apply(u, [8, 0, 6, 5, 11]);
+            c.push.apply(c, [8, 0, 6, 5, 11]);
             break;
           case ma.h.CN:
-            u.push.apply(u, [6, 0, 8, 5, 11]);
+            c.push.apply(c, [6, 0, 8, 5, 11]);
             break;
           case ma.h.SEA:
-            u.push.apply(u, [0, 6, 8, 5, 11]);
+            c.push.apply(c, [0, 6, 8, 5, 11]);
         }
-        var d =
-            null == l
+        var u =
+            null == s
               ? void 0
-              : l.sort(function (e, t) {
-                  var a = u.indexOf(e.language) - u.indexOf(t.language);
+              : s.sort(function (e, t) {
+                  var a = c.indexOf(e.language) - c.indexOf(t.language);
                   return a && 0 != a
                     ? a
                     : e.broadcast_provider == ma.a.LEAGUE_BROADCAST_STEAM &&
@@ -41272,98 +41286,98 @@ object-assign
                     ? 1
                     : 0;
                 }),
-          m =
+          d =
             -1 !=
-            d.findIndex(function (e) {
+            u.findIndex(function (e) {
               return e.broadcast_provider == ma.a.LEAGUE_BROADCAST_TWITCH;
             }),
-          p =
+          m =
             -1 !=
-            d.findIndex(function (e) {
+            u.findIndex(function (e) {
               return e.broadcast_provider == ma.a.LEAGUE_BROADCAST_STEAM;
             }),
-          h = Object(i.useState)(-1),
-          f = h[0],
-          v = h[1],
-          b = Object(i.useState)(ma.a.LEAGUE_BROADCAST_UNKNOWN),
-          y = b[0],
-          E = b[1];
+          p = Object(i.useState)(-1),
+          h = p[0],
+          f = p[1],
+          v = Object(i.useState)(ma.a.LEAGUE_BROADCAST_UNKNOWN),
+          b = v[0],
+          y = v[1];
         Object(i.useEffect)(
           function () {
-            v(-1);
+            f(-1);
           },
-          [y]
+          [b]
         ),
           Object(i.useEffect)(
             function () {
               var e;
-              d &&
-                0 != d.length &&
-                (-1 == f &&
-                  v(
+              u &&
+                0 != u.length &&
+                (-1 == h &&
+                  f(
                     null ===
-                      (e = d.find(function (e) {
-                        return e.broadcast_provider == y;
+                      (e = u.find(function (e) {
+                        return e.broadcast_provider == b;
                       })) || void 0 === e
                       ? void 0
                       : e.language
                   ),
-                y == ma.a.LEAGUE_BROADCAST_UNKNOWN &&
-                  E(d[0].broadcast_provider));
+                b == ma.a.LEAGUE_BROADCAST_UNKNOWN &&
+                  y(u[0].broadcast_provider));
             },
-            [d, y, f]
+            [u, b, h]
           );
-        var L,
-          w =
-            null == d
+        var E,
+          L =
+            null == u
               ? void 0
-              : d.find(function (e) {
-                  return e.broadcast_provider == y && f == e.language;
+              : u.find(function (e) {
+                  return e.broadcast_provider == b && h == e.language;
                 });
-        if (w)
-          switch (w.broadcast_provider) {
+        if (L)
+          switch (L.broadcast_provider) {
             case ma.a.LEAGUE_BROADCAST_TWITCH:
-              L =
+              E =
                 "https://player.twitch.tv/?channel=" +
-                w.stream_url
+                L.stream_url
                   .replace("https://www.twitch.tv/", "")
                   .replace("twitch.tv/", "") +
                 "&parent=www.dota2.com";
               break;
             case ma.a.LEAGUE_BROADCAST_STEAM:
-              L =
+              E =
                 _.a.COMMUNITY_URL +
                 "broadcast/watchnew/" +
-                w.stream_url.replace(
+                L.stream_url.replace(
                   "https://steamcommunity.com/broadcast/watch/",
                   ""
                 ) +
                 "?origin=https://www.dota2.com&enablechat=0&enablevideo=1&showasiframe=1";
           }
         for (
-          var S = [],
-            M = function (e) {
-              d.find(function (t) {
-                return t.language == e && t.broadcast_provider == y;
+          var w = [],
+            S = function (e) {
+              u.find(function (t) {
+                return t.language == e && t.broadcast_provider == b;
               }) &&
-                S.push({ value: e, strLabel: "#Language_" + Object(g.a)(e) });
+                w.push({ value: e, strLabel: "#Language_" + Object(g.a)(e) });
             },
-            T = -1;
-          T < 30;
-          T++
+            M = -1;
+          M < 30;
+          M++
         )
-          M(T);
-        return r
+          S(M);
+        return n
           ? o.a.createElement(
               "div",
               {
-                className: Object(le.a)(Fa.a.DPCSeriesLive, r && Fa.a.Visible),
+                className: Object(le.a)(Fa.a.DPCSeriesLive, n && Fa.a.Visible),
               },
               o.a.createElement(
                 "div",
                 { className: Fa.a.VideoContainer },
                 o.a.createElement("iframe", {
-                  src: L,
+                  src: E,
                   height: "100%",
                   width: "100%",
                   allowFullScreen: !0,
@@ -41374,34 +41388,34 @@ object-assign
                 "div",
                 { className: Fa.a.OptionContainer },
                 o.a.createElement(va, {
-                  options: S,
-                  selectedOption: f,
-                  setOption: v,
+                  options: w,
+                  selectedOption: h,
+                  setOption: f,
                 }),
+                d &&
+                  o.a.createElement(
+                    "div",
+                    {
+                      className: Object(le.a)(
+                        Fa.a.StreamingOption,
+                        b == ma.a.LEAGUE_BROADCAST_TWITCH && Fa.a.Enabled
+                      ),
+                      onClick: function () {
+                        return y(ma.a.LEAGUE_BROADCAST_TWITCH);
+                      },
+                    },
+                    "Twitch"
+                  ),
                 m &&
                   o.a.createElement(
                     "div",
                     {
                       className: Object(le.a)(
                         Fa.a.StreamingOption,
-                        y == ma.a.LEAGUE_BROADCAST_TWITCH && Fa.a.Enabled
+                        b == ma.a.LEAGUE_BROADCAST_STEAM && Fa.a.Enabled
                       ),
                       onClick: function () {
-                        return E(ma.a.LEAGUE_BROADCAST_TWITCH);
-                      },
-                    },
-                    "Twitch"
-                  ),
-                p &&
-                  o.a.createElement(
-                    "div",
-                    {
-                      className: Object(le.a)(
-                        Fa.a.StreamingOption,
-                        y == ma.a.LEAGUE_BROADCAST_STEAM && Fa.a.Enabled
-                      ),
-                      onClick: function () {
-                        return E(ma.a.LEAGUE_BROADCAST_STEAM);
+                        return y(ma.a.LEAGUE_BROADCAST_STEAM);
                       },
                     },
                     "Steam"
@@ -42152,7 +42166,7 @@ object-assign
               { className: Ba.a.Label },
               Object(p.a)("#dpc_header_standings")
             ),
-            o.a.createElement(ga, {
+            o.a.createElement(va, {
               options: r,
               selectedOption: a,
               setOption: n,
@@ -42284,20 +42298,12 @@ object-assign
         );
       }),
       In = Object(s.a)(function () {
-        var e = Object(c.i)();
-        return e.strRegion && e.strDivision
-          ? o.a.createElement(
-              "div",
-              { className: On.a.DPCStandingsPage },
-              o.a.createElement(jn, null),
-              o.a.createElement(Nn, null)
-            )
-          : o.a.createElement(c.a, {
-              to: u.a.dpc_standings(
-                e.strRegion || Object(da.e)(),
-                e.strDivision || Object(da.a)()
-              ),
-            });
+        return o.a.createElement(
+          "div",
+          { className: On.a.DPCStandingsPage },
+          o.a.createElement(jn, null),
+          o.a.createElement(Nn, null)
+        );
       }),
       Cn = a("X40S"),
       An = a.n(Cn),
@@ -42702,11 +42708,7 @@ object-assign
                   component: Dn,
                 }),
                 o.a.createElement(oa, {
-                  path: u.a.dpc_standings(
-                    ":strEvent?",
-                    ":strRegion?",
-                    ":strDivision?"
-                  ),
+                  path: u.a.dpc_standings(":strEvent?"),
                   component: In,
                 }),
                 o.a.createElement(oa, {
