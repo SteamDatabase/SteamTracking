@@ -41304,10 +41304,16 @@ object-assign
           y = v[1];
         Object(i.useEffect)(
           function () {
-            f(-1);
+            f(-1), y(ma.a.LEAGUE_BROADCAST_UNKNOWN);
           },
-          [b]
+          [t.nLeagueID, t.nNodeID]
         ),
+          Object(i.useEffect)(
+            function () {
+              f(-1);
+            },
+            [b]
+          ),
           Object(i.useEffect)(
             function () {
               var e;
