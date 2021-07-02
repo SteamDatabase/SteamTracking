@@ -22042,13 +22042,12 @@ a {
 }
 .dpcseriesdetails_DPCSeriesLive_1bOMe .dpcseriesdetails_OptionContainer_3ik_p {
   width: 100%;
-  height: 50px;
-  margin-top: 10px;
+  flex-grow: 1;
+  border-top: 2px solid #131923;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  border: 1px solid red;
 }
 .dpcseriesdetails_DPCSeriesLive_1bOMe
   .dpcseriesdetails_OptionContainer_3ik_p

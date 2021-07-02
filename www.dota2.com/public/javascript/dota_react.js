@@ -41375,7 +41375,7 @@ object-assign
               },
               o.a.createElement(
                 "div",
-                { className: Fa.a.VideoContainer },
+                { key: E, className: Fa.a.VideoContainer },
                 o.a.createElement("iframe", {
                   src: E,
                   height: "100%",
@@ -41391,6 +41391,7 @@ object-assign
                   options: w,
                   selectedOption: h,
                   setOption: f,
+                  nWidth: 250,
                 }),
                 d &&
                   o.a.createElement(
