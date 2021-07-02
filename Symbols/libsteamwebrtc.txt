@@ -15,7 +15,9 @@
  AudioObjectIsPropertySettable
  AudioObjectRemovePropertyListener
  AudioObjectSetPropertyData
- B CICESession::s_nInstaneCount
+ B CICESession::s_nInstanceCount
+ B CICESession::s_pDefaultNetworkManager
+ B CICESession::s_pDefaultSocketFactory
  B CICESession::s_pSocketServer
  B CICESession::s_pSocketThread
  B CustomH264Encoder::s_pH264EncoderFactoryFunc
@@ -683,6 +685,7 @@
  D vtable for rtc::FunctorMessageHandler<std::__1::unique_ptr<webrtc::Call, std::__1::default_delete<webrtc::Call> >, rtc::MethodFunctor<webrtc::PeerConnectionFactory, std::__1::unique_ptr<webrtc::Call, std::__1::default_delete<webrtc::Call> > (webrtc::PeerConnectionFactory::*)(webrtc::RtcEventLog*), std::__1::unique_ptr<webrtc::Call, std::__1::default_delete<webrtc::Call> >, webrtc::RtcEventLog*> >
  D vtable for rtc::FunctorMessageHandler<std::__1::unique_ptr<webrtc::RtcEventLog, std::__1::default_delete<webrtc::RtcEventLog> >, rtc::MethodFunctor<webrtc::PeerConnectionFactory, std::__1::unique_ptr<webrtc::RtcEventLog, std::__1::default_delete<webrtc::RtcEventLog> > (webrtc::PeerConnectionFactory::*)(), std::__1::unique_ptr<webrtc::RtcEventLog, std::__1::default_delete<webrtc::RtcEventLog> >> >
  D vtable for rtc::FunctorMessageHandler<std::__1::vector<cricket::IceParameters, std::__1::allocator<cricket::IceParameters> >, rtc::MethodFunctor<cricket::PortAllocator, std::__1::vector<cricket::IceParameters, std::__1::allocator<cricket::IceParameters> > (cricket::PortAllocator::*)(), std::__1::vector<cricket::IceParameters, std::__1::allocator<cricket::IceParameters> >> >
+ D vtable for rtc::FunctorMessageHandler<void, rtc::Functor<void (*)(), void> >
  D vtable for rtc::FunctorMessageHandler<void, rtc::MethodFunctor<CICESession, void (CICESession::*)(), void> >
  D vtable for rtc::FunctorMessageHandler<void, rtc::MethodFunctor<CWebRTCTURNServer, void (CWebRTCTURNServer::*)(), void> >
  D vtable for rtc::FunctorMessageHandler<void, rtc::MethodFunctor<cricket::BaseChannel, void (cricket::BaseChannel::*)(), void> >
@@ -2381,6 +2384,7 @@
  T CICESession::CICESession(IICESessionDelegate*)
  T CICESession::Destroy()
  T CICESession::DestroyOnSocketThread()
+ T CICESession::DestroySharedNetworkOnSocketThread()
  T CICESession::GetPing()
  T CICESession::GetRoute(EICECandidateType&, EICECandidateType&, char (&) [64])
  T CICESession::GetWritableState()
@@ -6416,6 +6420,8 @@
  T rtc::FunctorMessageHandler<std::__1::unique_ptr<webrtc::RtcEventLog, std::__1::default_delete<webrtc::RtcEventLog> >, rtc::MethodFunctor<webrtc::PeerConnectionFactory, std::__1::unique_ptr<webrtc::RtcEventLog, std::__1::default_delete<webrtc::RtcEventLog> > (webrtc::PeerConnectionFactory::*)(), std::__1::unique_ptr<webrtc::RtcEventLog, std::__1::default_delete<webrtc::RtcEventLog> >> >::~FunctorMessageHandler()
  T rtc::FunctorMessageHandler<std::__1::vector<cricket::IceParameters, std::__1::allocator<cricket::IceParameters> >, rtc::MethodFunctor<cricket::PortAllocator, std::__1::vector<cricket::IceParameters, std::__1::allocator<cricket::IceParameters> > (cricket::PortAllocator::*)(), std::__1::vector<cricket::IceParameters, std::__1::allocator<cricket::IceParameters> >> >::OnMessage(rtc::Message*)
  T rtc::FunctorMessageHandler<std::__1::vector<cricket::IceParameters, std::__1::allocator<cricket::IceParameters> >, rtc::MethodFunctor<cricket::PortAllocator, std::__1::vector<cricket::IceParameters, std::__1::allocator<cricket::IceParameters> > (cricket::PortAllocator::*)(), std::__1::vector<cricket::IceParameters, std::__1::allocator<cricket::IceParameters> >> >::~FunctorMessageHandler()
+ T rtc::FunctorMessageHandler<void, rtc::Functor<void (*)(), void> >::OnMessage(rtc::Message*)
+ T rtc::FunctorMessageHandler<void, rtc::Functor<void (*)(), void> >::~FunctorMessageHandler()
  T rtc::FunctorMessageHandler<void, rtc::MethodFunctor<CICESession, void (CICESession::*)(), void> >::OnMessage(rtc::Message*)
  T rtc::FunctorMessageHandler<void, rtc::MethodFunctor<CICESession, void (CICESession::*)(), void> >::~FunctorMessageHandler()
  T rtc::FunctorMessageHandler<void, rtc::MethodFunctor<CWebRTCTURNServer, void (CWebRTCTURNServer::*)(), void> >::OnMessage(rtc::Message*)

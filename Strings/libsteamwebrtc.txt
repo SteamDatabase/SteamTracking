@@ -1,15 +1,18 @@
 __TEXT
 __text
 __TEXT
+]#\
 __stubs
 __TEXT
 __stub_helper
 __TEXT
 __gcc_except_tab__TEXT
+lJ\
+lJ\
 __cstring
 __TEXT
-@k\
-@k\
+k\
+k\
 __const
 __TEXT
 __objc_methname
@@ -30,16 +33,16 @@ __got
 __DATA
 __la_symbol_ptr
 __DATA
-h e
-h e
+x e
+x e
 __mod_init_func
 __DATA
-@)e
-@)e
+P)e
+P)e
 __const
 __DATA
-`)e
-`)e
+p)e
+p)e
 __objc_imageinfo__DATA
 __objc_selrefs
 __DATA
@@ -54,7 +57,7 @@ __thread_data
 __DATA
 __common
 __DATA
-$
+0$
 __bss
 __DATA
 H
@@ -65,6 +68,7 @@ __LINKEDIT
 libsteamwebrtc.dylib
 "
 8
+R
 P
 
 
@@ -87,6 +91,7 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
+`yi
 88
 1
 $
@@ -4993,20 +4998,21 @@ SteamH264
 profile_string
 allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
 ~CICESession
-ice_session.cpp:182
+ice_session.cpp:197
+ice_session.cpp:202
 BInitialize
-ice_session.cpp:205
+ice_session.cpp:222
 stun:
 Invalid STUN server address '%s'
 PortAllocator::SetConfiguration failed
 Failed to create P2PTransportChannel
 Error parsing ICE candidate '%s': %s
 AddRemoteIceCandidate
-ice_session.cpp:483
+ice_session.cpp:492
 BSendData
-ice_session.cpp:525
+ice_session.cpp:534
 SetRemoteAuth
-ice_session.cpp:536
+ice_session.cpp:545
 P2PTransportChannel::OnTransportGatheringState now %d
 Ignoring removal of %d ICE candidate
 ICE role conflict detected!
@@ -12179,9 +12185,6 @@ j
 j
 j
 j
-f
-f
-f
 j
 j
 j
@@ -12233,8 +12236,9 @@ j
 j
 j
 j
-b
-b
+(b
+QY
+;\
 @
 @
 @
@@ -12243,15 +12247,14 @@ b
 @
 @
 @
-!Y
-1Y
 j
 j
 vX
 X
 X
+XX
+H[
 2
-.X
 ARj
 Sj
 Sj
@@ -12260,31 +12263,30 @@ Sj
 Sj
 X
 X
+X
 
-fZ
 :W
+U`
 W
 W
 W
 W
 j
 j
-`
-AW
-__
 j
 j
 j
+_
 $V
 V
 V
 V
-IV
 [
 H= N
 =!N
 j
 j
+^
 ^
 j
 j
@@ -12298,11 +12300,7 @@ j
 j
 j
 j
-r`
-F`
-k`
-$`
-`
+/`
 `
 d
 
@@ -12314,8 +12312,7 @@ T
 0
 0
 0
-+_
-_
+,_
 _
 <
 <
@@ -12332,7 +12329,6 @@ j
 j
 j
 S
-+S
 Pj
 ARj
 j
@@ -12345,15 +12341,14 @@ j
 @
 V
 R
+R
 0
 0
 E9e
 E9e
 E9e
-]Q
 @
 o
-SP
 \
 \
 `
@@ -12363,6 +12358,8 @@ p
 @
 $
 @
+Hc5g6Z
+;Z
 S
 =N
 N
@@ -12375,7 +12372,6 @@ j
 
 0
 @
-V
 0
 j
 j
@@ -12389,10 +12385,9 @@ I;]
 `
 `
 @
-zM
-8U
 A
 B
+/M
 "
 (
 &
@@ -12400,6 +12395,7 @@ A
 >
 ?
 @
+)M
 B
 @
 
@@ -12426,9 +12422,6 @@ l
 @
 @
 @
-P
-P
-DK
 %
 =
 @
@@ -12453,7 +12446,7 @@ V
 8
 j
 d
-?S
+@J
 P
 
 I
@@ -12463,6 +12456,7 @@ I
 =
 B=
 ~q=
+J
 A
 A
 A
@@ -12480,12 +12474,10 @@ j
 @
 
 !
-I
 j
 j
 j
 j
-M
 M
 j
 I
@@ -12565,7 +12557,6 @@ Montgomery Multiplication with scatter/gather for x86_64, CRYPTOGAMS by <appro@o
 @
 @
 @
-CP
 *
 @
 @
@@ -12585,7 +12576,6 @@ M
 @
 @
 @
-J
 @
 @
 @
@@ -12632,6 +12622,7 @@ H
 }
 A
 ?
+H
 3
 3
 }
@@ -12647,14 +12638,16 @@ A
 <
 x
 }
+bI
 }
 }
 0
+kG
 0
+?G
 A
+fM
 !
-G
-G
 !
 (
 @
@@ -12678,12 +12671,7 @@ s
 ;
 P
 P
-yF
-yF
-PF
-PF
-PF
-PF
+lF
 }
 F
 -@
@@ -12692,6 +12680,8 @@ H
 A
 A
 J
+J
+rE
 ]?
 E
 <?
@@ -12705,12 +12695,12 @@ j
 j
 j
 G
-G
 j
 PATj
 j
 @
 j
+%!iC
 =
 =
 P
@@ -12753,18 +12743,22 @@ j
 j
 
 :
-LD
-Z;
+S;
+?
 :
-N?
+&;
+;
 j
 <
 <
+;
+;
 
+{C
 }
 <
 x
->
+dC
 @
 @
 @
@@ -12800,13 +12794,14 @@ j
 0
 }
 }
+c=
 8
 8
-^=
 j
 0
 @
 @
+v=
 (7
 <
 @
@@ -12872,7 +12867,6 @@ j
 i3
 Z3
 3
-p>
 }
 :
 6
@@ -12890,6 +12884,7 @@ p>
 }
 =
 }
+F;
 }
 }
 }
@@ -12903,7 +12898,6 @@ x
 @
 @
 X
-)8
 }
 }
 }
@@ -12911,14 +12905,15 @@ X
 }
 }
 1
-j;
 H
 X
 
 0
 <
+M;
 @
 @
+0;
 =
 }
 @
@@ -12935,7 +12930,6 @@ s0
 @
 }
 }
-B2
 }
 }
 @
@@ -12984,11 +12978,13 @@ j
 @
 @
 c
+;
 @
 }
 }
 }
 }
+38
 }
 @
 @
@@ -12999,15 +12995,15 @@ d
 8
 8
 8
+8
 H=AKL
 /
+b9
 H=
 2.
 .
 .
 H=
-8
-8
 8
 M-
 -
@@ -13021,6 +13017,7 @@ j
 j
 j
 j
+{7
 j
 j
 j
@@ -13078,7 +13075,6 @@ j
 j
 j
 j
-f8
 j
 j
 j
@@ -13093,7 +13089,6 @@ j
 j
 j
 i,
-18
 j
 j
 \,
@@ -13129,9 +13124,7 @@ j
 j
 j
 j
-H4
-c-
-13
+S4
 -
 
 j
@@ -13143,11 +13136,9 @@ j
 j
 sh=
 d
-c1
+a1
 5*
-3
 !*
-",
 *
 *
 *
@@ -13157,11 +13148,8 @@ c1
 *
 *
 =
-4
-N+
 9
 E(
-s*
 Hc
 1
 (
@@ -13169,14 +13157,11 @@ Hc
 @
 6'
 Pj
-0
 AVj
-M)
 '
 .
 .
 .
-%)
 
 9
 @
@@ -13184,13 +13169,11 @@ v
 @
 9
 @
-L/
 1
 T
 @
 &
 (
-Q.
 
 }
 }
@@ -13239,12 +13222,14 @@ j
 j
 j
 j
+P0
 Hc
 j$
 $
 $
 $
 2
+n&
 2
 }
 }
@@ -13259,7 +13244,6 @@ j
 j
 j
 j
-?&
 j
 j
 j
@@ -13269,7 +13253,6 @@ j
 j
 j
 j
-'&
 }
 u$
 j
@@ -13289,7 +13272,7 @@ j
 &
 j
 j
-M/
+&
 &
 &
 j
@@ -13298,6 +13281,7 @@ j
 j
 }
 u$
+.
 @
 @
 @
@@ -13316,6 +13300,7 @@ u$
 
 
 
+Y-
 x
 d
 P
@@ -13340,8 +13325,9 @@ $
 
 
 
-~'
+#
 @
+(
 '
 '
 d
@@ -13368,6 +13354,7 @@ t%
 =
 =
 |A=
+B'
 H=
 &
 j
@@ -13376,8 +13363,7 @@ j
 j
 j
 j
-Z$
-M$
+BX$
 O$
 j
 j
@@ -13467,7 +13453,7 @@ j
 j
 j
 j
-#
+)#
 ?
 ?
 ?
@@ -13584,7 +13570,6 @@ l
 @
 @
 @
-"
 "
 "
 G"
@@ -13634,7 +13619,6 @@ j
 j
 j
 j
-x
 j
 j
 j
@@ -14126,12 +14110,6 @@ j
 j
 j
 
-z
-j
-j
-j
-j
-X
 j
 j
 j
@@ -14144,6 +14122,11 @@ j
 j
 j
 j
+j
+j
+j
+j
+
 
 W
 j
@@ -14186,6 +14169,8 @@ j
 j
 j
 j
+~
+9
 Hc
 P
 X
