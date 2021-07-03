@@ -28,7 +28,7 @@
         O = a.n(g),
         j = Object(s.a)(function (e) {
           var t = e.appid,
-            a = Object(u.c)(t, 0, !0),
+            a = Object(u.d)(t, 0, !0),
             n = (a[0], a[1]),
             o = Object(f.c)();
           Object(i.useEffect)(

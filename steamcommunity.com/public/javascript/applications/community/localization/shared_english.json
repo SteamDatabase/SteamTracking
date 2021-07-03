@@ -1177,6 +1177,7 @@
     "Sale_EventSchedulePlaceHolder": "Preview Mode: There are currently no events associated with this schedule, this will not appear in the current state on the sale",
     "Sale_EventSchedulePlaceHolder_Tab": "Preview Mode: For the currently select TAB there are no events associated with this schedule. Other tabs may show events in the schedule. This will not appear in the current state on the sale",
     "Sale_SmartPlaceHolder": "Preview Mode: This smart section has no apps for you. This would not appear on user page if it is empty.",
+    "Sale_ReserveNow": "Reserve Now",
     "Sale_default_label": "(no title)",
     "Sale_default_label_custom": "(custom title)",
     "Sale_default_label_OnSale": "On Sale",
