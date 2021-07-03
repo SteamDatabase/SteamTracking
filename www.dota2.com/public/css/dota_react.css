@@ -22182,6 +22182,15 @@ a {
   display: flex;
   flex-direction: column;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  transition-property: width, height, margin;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+}
+.dpcstandings_BracketNode_29UKw.dpcstandings_Expanded_3xyWp {
+  z-index: 2;
 }
 .dpcstandings_BracketNode_29UKw .dpcstandings_NodeHeader_NdaUP {
   width: 100%;
@@ -22584,13 +22593,13 @@ a {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   position: relative;
-  padding: 0px 100px;
 }
 .dpcnextbanner_DPCNextBanner_2Mgev
   .dpcnextbanner_BannerContents_2KKse
   .dpcnextbanner_LeftLabels_ldAHh {
-  width: 500px;
+  width: 600px;
   display: flex;
   flex-direction: column;
   color: #fff;
@@ -23292,6 +23301,19 @@ a {
   margin-bottom: 50px;
   margin-top: 50px;
   padding: 0px 40px;
+}
+.dpcstandingspage_DPCStandingsPageTIQualifiers_1z6AW {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.dpcstandingspage_DPCStandingsPageTIQualifiers_1z6AW
+  .dpcstandingspage_Header_1EgAU {
+  margin-top: 50px;
+  margin-bottom: 30px;
 }
 * {
   box-sizing: border-box;
