@@ -2,7 +2,7 @@ __TEXT
 __text
 __TEXT
 @
-$r
+dr
 @
 __stubs
 __TEXT
@@ -11,7 +11,9 @@ __TEXT
 __gcc_except_tab__TEXT
 __cstring
 __TEXT
+`
 "
+`
 "
 __const
 __TEXT
@@ -22,6 +24,8 @@ __unwind_info
 __TEXT
 __eh_frame
 __TEXT
+0c(
+0c(
 __DATA
 
 __nl_symbol_ptr
@@ -89,9 +93,7 @@ h
 O,
 Hi
 H=
-]!
 ?
-,!
 10CIPCServer
 11CPipeWaiter
 10IIPCServer
@@ -7686,6 +7688,7 @@ rb
 unReadAheadChunkSize should be zero when using bUnbuffered = true
 Assertion Failed: unReadAheadChunkSize < INT32_MAX/2
 unsupported flags 0x%x passed to CFileReader::BOpenFile
+Assertion Failed: BIsOpen()
 Assertion Failed: cubBytesToRead < INT32_MAX
 Unbuffered read should be called with pvData buffer that is aligned to system page size (4kb)
 Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
@@ -7871,8 +7874,8 @@ crashhandler.dylib
 CreateInterface
 %u
 1.0
-Jul  2 2021
-11:54:15
+Jul  6 2021
+13:03:12
 Jan
 Feb
 Mar
@@ -8435,11 +8438,11 @@ Assertion Failed: m_cCurrentDepth > 0
 O,
 Hi
 H=
-]!
 ?
-,!
 #
-e
+~
+|
+V
 N
 @
 @
@@ -8818,6 +8821,7 @@ H
 
 *
 Hc
+,
 AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 %
 @

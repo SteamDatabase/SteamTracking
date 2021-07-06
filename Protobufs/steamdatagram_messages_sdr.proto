@@ -475,7 +475,8 @@ message CMsgSteamDatagramP2PRoutes {
 	message Route {
 		optional fixed32 my_pop_id = 1;
 		optional fixed32 your_pop_id = 2;
-		optional uint32 score = 3;
+		optional uint32 legacy_score = 3;
+		optional uint32 interior_score = 4;
 	}
 
 	repeated .CMsgSteamDatagramP2PRoutes.RelayCluster relay_clusters = 1;

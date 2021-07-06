@@ -1187,17 +1187,17 @@
     {
         "id": 1301,
         "size": 12,
-        "posted_in": "void CClientJobRemoteStorageSync::PostCallbackToUIAndApp<RemoteStorageAppSyncedClient_t>(RemoteStorageAppSyncedClient_t*)"
+        "posted_in": "CClientJobRemoteStorageSync::BYldInternalRunJob()"
     },
     {
         "id": 1302,
         "size": 12,
-        "posted_in": "void CClientJobRemoteStorageSync::PostCallbackToUIAndApp<RemoteStorageAppSyncedServer_t>(RemoteStorageAppSyncedServer_t*)"
+        "posted_in": "CClientJobRemoteStorageSync::BYldInternalRunJob()"
     },
     {
         "id": 1303,
         "size": 280,
-        "posted_in": "void CClientJobRemoteStorageSync::PostCallbackToUIAndApp<RemoteStorageAppSyncProgress_t>(RemoteStorageAppSyncProgress_t*)"
+        "posted_in": "CClientJobRemoteStorageSync::PostProgress(char const*, unsigned int, unsigned int, unsigned int)"
     },
     {
         "id": 1304,
@@ -1207,12 +1207,12 @@
     {
         "id": 1305,
         "size": 8,
-        "posted_in": "void CClientJobRemoteStorageSync::PostCallbackToUIAndApp<RemoteStorageAppSyncStatusCheck_t>(RemoteStorageAppSyncStatusCheck_t*)"
+        "posted_in": "CClientJobRemoteStorageSync::BYldInternalRunJob()"
     },
     {
         "id": 1306,
         "size": 8,
-        "posted_in": "void CClientJobRemoteStorageSync::PostCallbackToUIAndApp<RemoteStorageConflictResolution_t>(RemoteStorageConflictResolution_t*)"
+        "posted_in": "CClientJobRemoteStorageSync::BYldInternalRunJob()"
     },
     {
         "id": 1307,
@@ -2003,6 +2003,11 @@
         "id": 3418,
         "size": 4,
         "posted_in": "CUserWorkshopItems::OnWorkshopSubscriptionsChanged(unsigned int)"
+    },
+    {
+        "id": 3420,
+        "size": 20,
+        "posted_in": "void CBaseAPIJob::PostAPIResult<WorkshopEULAStatus_t>(WorkshopEULAStatus_t*)"
     },
     {
         "id": 3501,

@@ -2,6 +2,8 @@ h
 __TEXT
 __text
 __TEXT
+P6
+P6
 __stubs
 __TEXT
 __stub_helper
@@ -790,6 +792,7 @@ fsync %s failed, errno = %d
 unReadAheadChunkSize should be zero when using bUnbuffered = true
 Assertion Failed: unReadAheadChunkSize < INT32_MAX/2
 unsupported flags 0x%x passed to CFileReader::BOpenFile
+Assertion Failed: BIsOpen()
 Assertion Failed: cubBytesToRead < INT32_MAX
 Unbuffered read should be called with pvData buffer that is aligned to system page size (4kb)
 Unbuffered read should be called with cubData length that is aligned to system page size (4kb)

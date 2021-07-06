@@ -72,7 +72,7 @@ public:
     virtual unknown_ret HaveLatestFilesLocally(unsigned int) = 0;
     virtual unknown_ret GetConflictingFileTimestamps(unsigned int, unsigned int*, unsigned int*) = 0;
     virtual unknown_ret ResolveSyncConflict(unsigned int, bool) = 0;
-    virtual unknown_ret SynchronizeApp(unsigned int, bool, bool) = 0;
+    virtual unknown_ret SynchronizeApp(unsigned int, ERemoteStorageSyncDirection, unsigned long long) = 0;
     virtual unknown_ret IsAppSyncInProgress(unsigned int) = 0;
     virtual unknown_ret RunAutoCloudOnAppLaunch(unsigned int) = 0;
     virtual unknown_ret RunAutoCloudOnAppExit(unsigned int) = 0;

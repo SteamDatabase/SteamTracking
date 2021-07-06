@@ -1,6 +1,8 @@
 __TEXT
 __text
 __TEXT
+Pm
+Pm
 __stubs
 __TEXT
 __stub_helper
@@ -1448,6 +1450,7 @@ rb
 unReadAheadChunkSize should be zero when using bUnbuffered = true
 Assertion Failed: unReadAheadChunkSize < INT32_MAX/2
 unsupported flags 0x%x passed to CFileReader::BOpenFile
+Assertion Failed: BIsOpen()
 Assertion Failed: cubBytesToRead < INT32_MAX
 Unbuffered read should be called with pvData buffer that is aligned to system page size (4kb)
 Unbuffered read should be called with cubData length that is aligned to system page size (4kb)

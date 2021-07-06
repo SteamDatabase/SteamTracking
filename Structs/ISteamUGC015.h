@@ -83,4 +83,6 @@ public:
     virtual unknown_ret RemoveAppDependency(unsigned long long, unsigned int) = 0;
     virtual unknown_ret GetAppDependencies(unsigned long long) = 0;
     virtual unknown_ret DeleteItem(unsigned long long) = 0;
+    virtual unknown_ret ShowWorkshopEULA() = 0;
+    virtual unknown_ret GetWorkshopEULAStatus() = 0;
 };
