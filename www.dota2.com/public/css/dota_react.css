@@ -22066,10 +22066,46 @@ a {
   width: 100%;
   max-width: 1200px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dpcstandings_DPCStandingsDivision_KkUW3 .dpcstandings_TeamLists_22PiN {
+  width: 100%;
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 30px;
+}
+.dpcstandings_LegendContainer_rde9K {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 50px;
+}
+.dpcstandings_LegendContainer_rde9K .dpcstandings_LegendItem_1JF4X {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.dpcstandings_LegendContainer_rde9K
+  .dpcstandings_LegendItem_1JF4X
+  .dpcstandings_ColorSquare_ud1oU {
+  width: 50px;
+  height: 50px;
+}
+.dpcstandings_LegendContainer_rde9K
+  .dpcstandings_LegendItem_1JF4X
+  .dpcstandings_Description_1I5ee {
+  color: #a3a3a3;
+  max-width: 300px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 .dpcstandings_DPCStandingsTeamList_jVT-8 {
   width: 380px;
@@ -22077,7 +22113,6 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
 }
 .dpcstandings_DPCStandingsTeamList_jVT-8 .dpcstandings_Header_3Kf0X {
   width: 100%;
@@ -22089,6 +22124,21 @@ a {
   text-transform: uppercase;
   letter-spacing: 1px;
   border-bottom: 1px solid #151518;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+}
+.dpcstandings_DPCStandingsTeamList_jVT-8 .dpcstandings_Teams_2W8jh {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.dpcstandings_DPCStandingsTeamList_jVT-8
+  .dpcstandings_Teams_2W8jh
+  .dpcstandings_HighlightOverlay_3Fhsy {
+  width: 100%;
+  position: absolute;
+  left: 0;
 }
 .dpcstandings_DPCStandingsTeam_25wGh {
   width: 100%;
@@ -22098,18 +22148,17 @@ a {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #151518;
 }
 .dpcstandings_DPCStandingsTeam_25wGh.dpcstandings_Larger_8xn4E {
   height: 90px;
 }
 .dpcstandings_DPCStandingsTeam_25wGh.dpcstandings_Larger_8xn4E
   .dpcstandings_Standing_33ZWb {
-  font-size: 17px;
+  font-size: 18px;
 }
 .dpcstandings_DPCStandingsTeam_25wGh.dpcstandings_Larger_8xn4E
   .dpcstandings_TeamName_QK1FS {
-  font-size: 17px;
+  font-size: 18px;
 }
 .dpcstandings_DPCStandingsTeam_25wGh.dpcstandings_Larger_8xn4E
   .dpcstandings_TeamLogo_KU9ho {
@@ -22117,12 +22166,18 @@ a {
   min-width: 50px;
   height: 50px;
 }
+.dpcstandings_DPCStandingsTeam_25wGh.dpcstandings_LastLarger_jBnTV {
+  margin-bottom: 4px;
+}
 .dpcstandings_DPCStandingsTeam_25wGh.dpcstandings_Promoted_2yUII {
   background-color: #213823;
 }
 .dpcstandings_DPCStandingsTeam_25wGh.dpcstandings_Demoted_aNSAu,
 .dpcstandings_DPCStandingsTeam_25wGh.dpcstandings_Removed_2YjFV {
   background-color: #382121;
+}
+.dpcstandings_DPCStandingsTeam_25wGh * {
+  z-index: 2;
 }
 .dpcstandings_DPCStandingsTeam_25wGh .dpcstandings_Standing_33ZWb {
   width: 60px;
@@ -22161,6 +22216,19 @@ a {
   width: 100%;
   margin-top: 30px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dpcstandings_DPCStandingsBracket_9iCXI .dpcstandings_Title_1j7g0 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 .dpcstandings_DPCStandingsBracket_9iCXI .dpcstandings_BracketContainer_3v7JH {
   width: 1400px;
@@ -22187,6 +22255,9 @@ a {
   position: absolute;
   top: 0;
   right: 0;
+}
+.dpcstandings_DayDisplayContainer_24Hld.dpcstandings_TitleSpacing_2fLNa {
+  top: 40px;
 }
 .dpcstandings_DayDisplayContainer_24Hld .dpcstandings_ShowButton_ySTS2,
 .dpcstandings_DayDisplayContainer_24Hld .dpcstandings_HideButton_xD_TR {
