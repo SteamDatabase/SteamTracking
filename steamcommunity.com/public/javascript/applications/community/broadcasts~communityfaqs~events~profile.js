@@ -9946,6 +9946,7 @@
                           (m = r.bContentHubDiscountedOnly),
                           (h = null == (h = r.strSearch) ? void 0 : h.trim()),
                           (f = Boolean(h)) && ((n = "search"), (c = void 0)),
+                          d && (c = void 0),
                           (_ = this.GetFlavorCacheKey(
                             n,
                             u,
