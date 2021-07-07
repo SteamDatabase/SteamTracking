@@ -1,18 +1,18 @@
 {
-  "revision": 319,
+  "revision": 320,
   "certs": [
-    "Ii4IARIgmuygThdRzmJo1WkALKHh+hstvCbTa06joAg603KCm4RFkPT3XU2QNv5vKT6tfJIvitz8MkD3ci0ZVZsXX+Vu3VQ6HRQQq8Zn7bE3HyG8sQFMqiRbNhQ/BLQk1ZdYJyPAJdWajpB5b/OHt10fN6qJLG6KpEAD",
-    "Ij4IARIgpdtY6tZuJOfB3FHhsMDlJWo6EFDmRXVNMgEkptCg+YpFe+tzXk17UjZiUJrVEFCO0iNQ+pQ+UIy8TSk+rXySL4rc/DJAI0GYYUD51fy96jEEnZ8wdvdkmKsJHIaSYTeeKoiVPL3s8ISdD5lgafQshu7LvKdIZWl/OQgvoTWkp3sVRk5hAQ==",
-    "IjIIARIgaMVHur3UExsppAQNmlq0lEm4VJJ2R+HAu3V2JFKxV8FFkPT3XU2QW7phULLKNCk+rXySL4rc/DJAbLtp6gz5mlfS38tyySVkSdouS/KjLsODT7aJBeWIp0qkzeS75qm7LhRS84MLrF8Ng15o7DTrPpM+yLWYUo5yBA==",
-    "IjIIARIgpPJHtQVj8i8katUqP+SUJg9ii7nf00CWUrvoxrvqwa9FoBz9XU2gg79hUNiiQSk+rXySL4rc/DJAUk8ODaJ7xR7HXdjIrl7TH6LYIr9t2UpGcS41+Ok9n3m/9eGFGr/V/j0FMR+HZLH9bQdx1P0Kv6zTDj/0y9w9Dg==",
-    "IjYIARIg++XfexpF6c9GsYI97ywrpHyPZHvM5KeaY5k/c1NGgkpF1CH+X03UiMBjUKSZFVDcoUIpPq18ki+K3PwyQMGRoToSbX/lxGxN9jNV6cVjHcFAQdkwOUGYS4TgCG5xME8l8pk0yIBDPtb+1nZCvwp2ate78quEM+ddS0NZFQQ=",
-    "IjYIARIgW0/njCUOhyUxNFu2OH4blGOOymFUKvVUuitYBC2WL7VFkPT3XU2QW7phUJrWE1CK+BQpPq18ki+K3PwyQOJfPtnjDkq/wb0xqN27PbxKe93w6OEV/M8zTI14EF6T/6ON0dzpsxQEvrSyskB6Eu3eMZ+GfZhmJEnBrHW3vQ4=",
-    "IjYIARIgXGZn3LJaYaLSiDnoQYGkHWpnY+M0Q00fHh9ni6+NLcBFkPT3XU2QW7phUKSZFVDcoUIpPq18ki+K3PwyQF5P8nt8dX9vu9MbeboR98IOMmESeCCOMNsXz/45Dl5vrnRt8o4ZYkrAbYHO2ANmXyAWuKOslXJqncLBk3wzcwA=",
-    "IjcIARIgIlvA41Mpb2Ja+PfJVrFEYx90ECXf55F5FxI1Pk79iY5FkPT3XU2QW7phULgDUIgEUKoGKT6tfJIvitz8MkA4p6iVqd4N3CqM0S1fkTldHg3z3fVC1UB+v3ZKT4FMc9Jnru2DjzeDqDALj9zx6DL5zNHz59yxIZMmK5dX28kF",
-    "IjoIARIg8+9JL2vE+dNmhBPauZ/QZg7uQfZxiNCseZkk4XzGPlJFkPT3XU2QW7phUKLCPlCS8z9Qmr5DKT6tfJIvitz8MkCGwzi5bBUDxSGkSeHWzyhAYQCLZvyd1TxixJLUJMze19YoWyU5K9m4yfcfSd25VhhkP7Ho1t3J0zBxuSBLpg4A",
-    "IjsIARIgeRDuFHa02m4l6xEIdUXY2jNxMKAPNn++rjUXeGxctqlFkPT3XU2QW7phUMYFUNAFUNoFUJixECk+rXySL4rc/DJAoYeuTgzpiMNzI/jHLMFOiQ4UatOrXKC+sFtbxGu+8NXuy/h7XBZvHwlMDp4qW8zfe0wLCoqXhQsPIYjmHUeVDg==",
-    "IkgIARIg1Dgd2R8FszAqcaMuEmzMoli/lZC8dEqopsWXmQRE8dlFkPT3XU2QW7phULoEULAGUICKD1DexwxQosI+UJLzP1CavkMpPq18ki+K3PwyQOwKKW6kEbVa9fvARVa7tuuw8SCiFw5mXoTqL2iMlzzEOdxUYv5LH6mVMTP2PsX5sl/8+b/K06v4nUs6RRweyA0=",
-    "IkoIARIgAMdpGLGVnpcF3RtvKZld2zISFKdkviQmghM9RBMrurdFkPT3XU2QW7phUOyjHFDtoxxQ7qMcULLkHlC41DVQxIsaUNrcOCk+rXySL4rc/DJAjRsa3PpZK8c8twoK9hKmLTg3Ou8NhoFxer8T3k3EBSwo/2teOmPL7Sa9R+1xzSHqVIj56v+CB1ni9c/bL4ggCg=="
+    "Ii4IARIgmuygThdRzmJo1WkALKHh+hstvCbTa06joAg603KCm4RFu+TkYE27JutyKT6tfJIvitz8MkBaXzlTtPZow863CN0tcByuYSphd0CEOEtlUNMD92DaJXMKwFn5/XEOVwDpNBwNnON7mQJ2rGMDcLWC6sU2aEQN",
+    "Ij4IARIgpdtY6tZuJOfB3FHhsMDlJWo6EFDmRXVNMgEkptCg+YpFu+TkYE27S6dkUJrVEFCO0iNQ+pQ+UIy8TSk+rXySL4rc/DJAY1C1lwR/XncgtnCGj0zsgC7pgg6MIq4wWHGsAhUANcY17f6LbondXTCOLpVuF8gxXs8WJH0nadsmKrsJvD4SDQ==",
+    "IjIIARIgpPJHtQVj8i8katUqP+SUJg9ii7nf00CWUrvoxrvqwa9Fu+TkYE27S6dkUNiiQSk+rXySL4rc/DJAcqTV+akGVOeLct5Vai8zfPYrbQWor/tXIMEgn8aV7f7BB28cuZ4y05BX7nrPXrAwAPElSFjeCZBUjhm41NfDCw==",
+    "IjYIARIg++XfexpF6c9GsYI97ywrpHyPZHvM5KeaY5k/c1NGgkpFu+TkYE27S6dkUKSZFVDcoUIpPq18ki+K3PwyQGr9miGsxNSqpMFIw+Pe1IbKi5kOkNpSP+Avrh7JzvLgZx+LeM0OimGaxQNSwT0KHP9dbAZxrnkAPqN31aA5fwg=",
+    "IjYIARIgW0/njCUOhyUxNFu2OH4blGOOymFUKvVUuitYBC2WL7VFu+TkYE27S6dkUJrWE1CK+BQpPq18ki+K3PwyQICMtF/eBKo5/p6bEpkbTX6UaoVst5sev1kjNSdtIe5/JZTsKdjEBL/gUYMmMlMd9egiRGu5QoAcxMLjHentjQU=",
+    "IjYIARIgXGZn3LJaYaLSiDnoQYGkHWpnY+M0Q00fHh9ni6+NLcBFu+TkYE27S6dkUKSZFVDcoUIpPq18ki+K3PwyQGrE6gTTYK3XGwCr5EVD/bjK0n4ICFktO+zPoDh8fyjziCQiO5D64pV7NCUvyTnnznYzJeYsAdSoUa5XYzUnGQM=",
+    "IjYIARIgaMVHur3UExsppAQNmlq0lEm4VJJ2R+HAu3V2JFKxV8FFu+TkYE27S6dkULLKNFDy6FYpPq18ki+K3PwyQPvJfXSNeadtxxXnCFI2QpLQLaRs83uISa+9jSB4nuyHUyjuxPeZKILzpCExgfCSKaG8+gLhG/RVlzucGvROMAw=",
+    "IjcIARIgIlvA41Mpb2Ja+PfJVrFEYx90ECXf55F5FxI1Pk79iY5Fu+TkYE27S6dkULgDUIgEUKoGKT6tfJIvitz8MkCtakRU9YHwtksICgAT8IM5S07cufK4CG4jri1qQbcFe+D0kOEHu9rKCwr6PS56/3Ud1KABM83ooycnhKPKZrsO",
+    "IjoIARIg8+9JL2vE+dNmhBPauZ/QZg7uQfZxiNCseZkk4XzGPlJFu+TkYE27S6dkUKLCPlCS8z9Qmr5DKT6tfJIvitz8MkBMmX58kVoqMw70LnItJPfq8rlkqoRb7GTmvIDeHC38ZpT3i6Hr4g7kXxfWUxfcMo3f7K0RSSV6DFJPxCILi5IN",
+    "IjsIARIgeRDuFHa02m4l6xEIdUXY2jNxMKAPNn++rjUXeGxctqlFu+TkYE27S6dkUMYFUNAFUNoFUJixECk+rXySL4rc/DJALuecmi699xF6OGbyhnv4kwMyG5KbGiESRc3GxfHZzNQ9hyhufJQQm7MoqnZSTx1j3LhjGaUE6GVN/Atdp/QiCw==",
+    "IkgIARIg1Dgd2R8FszAqcaMuEmzMoli/lZC8dEqopsWXmQRE8dlFu+TkYE27S6dkULoEULAGUICKD1DexwxQosI+UJLzP1CavkMpPq18ki+K3PwyQEiTKiqIKmqXgsn20+hGHpxzoBjc6RApLCIG2ce2dDEJl3vEtzGu7zR4Cuv7DG3P39wiKG2Ye0AnRX5606mAXg4=",
+    "IkoIARIgAMdpGLGVnpcF3RtvKZld2zISFKdkviQmghM9RBMrurdFu+TkYE27S6dkUOyjHFDtoxxQ7qMcULLkHlC41DVQxIsaUNrcOCk+rXySL4rc/DJAEgvKFcpK24gJZcra4+JUchb4uRfvEk57eR9MZSP/Ra1J+nf6rmoAHjOOxWNItNdpPddK6tsaRur8WCFIGdyjBw=="
   ],
   "p2p_share_ip": {
     "cn": 20,
@@ -26,6 +26,13 @@
       "groups": [
         "steam-global",
         "valve"
+      ],
+      "partners": 1,
+      "relay_addresses": [
+        "155.133.248.50:27015-27068",
+        "155.133.248.51:27015-27068",
+        "155.133.248.52:27015-27068",
+        "155.133.248.53:27015-27068"
       ],
       "relays": [
         {
@@ -52,6 +59,13 @@
       "groups": [
         "steam-global",
         "valve"
+      ],
+      "partners": 1,
+      "relay_addresses": [
+        "162.254.199.4:27015-27044",
+        "162.254.199.5:27015-27060",
+        "162.254.199.170:27015-27052",
+        "162.254.199.178:27015-27052"
       ],
       "relays": [
         {
@@ -83,6 +97,11 @@
         "steam-global",
         "valve"
       ],
+      "partners": 1,
+      "relay_addresses": [
+        "155.133.233.98:27015-27052",
+        "155.133.233.99:27015-27060"
+      ],
       "relays": [
         {
           "ipv4": "155.133.233.98",
@@ -104,6 +123,7 @@
         "steam-china",
         "perfectworld"
       ],
+      "partners": 2,
       "service_address_ranges": [
         "125.88.174.0/24"
       ]
@@ -112,6 +132,15 @@
       "groups": [
         "steam-china",
         "perfectworld"
+      ],
+      "partners": 2,
+      "relay_addresses": [
+        "183.232.229.200:27015-27068",
+        "183.232.229.201:27015-27068",
+        "183.232.229.202:27015-27068",
+        "183.232.229.203:27015-27068",
+        "183.232.229.204:27015-27068",
+        "183.232.229.205:27015-27068"
       ],
       "relays": [
         {
@@ -145,6 +174,15 @@
         "steam-china",
         "perfectworld"
       ],
+      "partners": 2,
+      "relay_addresses": [
+        "125.88.174.11:27015-27068",
+        "125.88.174.12:27015-27068",
+        "125.88.174.13:27015-27068",
+        "125.88.174.14:27015-27068",
+        "125.88.174.15:27015-27068",
+        "125.88.174.16:27015-27068"
+      ],
       "relays": [
         {
           "ipv4": "125.88.174.11",
@@ -176,6 +214,15 @@
       "groups": [
         "steam-china",
         "perfectworld"
+      ],
+      "partners": 2,
+      "relay_addresses": [
+        "157.255.37.14:27015-27068",
+        "157.255.37.15:27015-27068",
+        "157.255.37.16:27015-27068",
+        "157.255.37.17:27015-27068",
+        "157.255.37.18:27015-27068",
+        "157.255.37.19:27015-27068"
       ],
       "relays": [
         {
@@ -211,6 +258,11 @@
         "steam-global",
         "valve"
       ],
+      "partners": 1,
+      "relay_addresses": [
+        "155.133.253.38:27015-27060",
+        "155.133.253.54:27015-27060"
+      ],
       "relays": [
         {
           "ipv4": "155.133.253.38",
@@ -228,6 +280,11 @@
       "groups": [
         "steam-global",
         "valve"
+      ],
+      "partners": 1,
+      "relay_addresses": [
+        "185.25.183.178:27015-27052",
+        "185.25.183.162:27015-27052"
       ],
       "relays": [
         {
@@ -256,6 +313,11 @@
         "valve",
         "perfectworld"
       ],
+      "partners": 2,
+      "relay_addresses": [
+        "155.133.235.18:27015-27052",
+        "155.133.235.34:27015-27052"
+      ],
       "relays": [
         {
           "ipv4": "155.133.235.18",
@@ -278,6 +340,13 @@
       "groups": [
         "steam-global",
         "valve"
+      ],
+      "partners": 1,
+      "relay_addresses": [
+        "155.133.255.98:27015-27060",
+        "155.133.255.99:27015-27060",
+        "155.133.255.162:27015-27060",
+        "155.133.255.163:27015-27060"
       ],
       "relays": [
         {
@@ -307,6 +376,18 @@
       "groups": [
         "steam-global",
         "valve"
+      ],
+      "partners": 1,
+      "relay_addresses": [
+        "162.254.197.36:27015-27060",
+        "162.254.197.37:27015-27060",
+        "162.254.197.52:27015-27060",
+        "155.133.226.68:27015-27037",
+        "155.133.226.69:27015-27037",
+        "155.133.226.70:27015-27037",
+        "155.133.226.71:27015-27037",
+        "155.133.226.72:27015-27037",
+        "155.133.226.73:27015-27037"
       ],
       "relays": [
         {
@@ -360,6 +441,17 @@
         "steam-global",
         "valve"
       ],
+      "partners": 1,
+      "relay_addresses": [
+        "205.185.194.34:27015-27055",
+        "205.185.194.50:27015-27052",
+        "205.185.194.36:27015-27068",
+        "205.185.194.35:27015-27068",
+        "205.185.194.51:27015-27068",
+        "205.185.194.52:27015-27068",
+        "205.185.194.196:27015-27075",
+        "205.185.194.212:27015-27075"
+      ],
       "relays": [
         {
           "ipv4": "205.185.194.34",
@@ -407,6 +499,21 @@
         "steam-china",
         "valve",
         "perfectworld"
+      ],
+      "partners": 2,
+      "relay_addresses": [
+        "153.254.86.164:27015-27060",
+        "153.254.86.180:27015-27060",
+        "153.254.86.165:27015-27052",
+        "153.254.86.26:27015-27068",
+        "153.254.86.27:27015-27068",
+        "153.254.86.28:27015-27068",
+        "153.254.86.182:27015-27060",
+        "153.254.86.183:27015-27060",
+        "153.254.86.184:27015-27060",
+        "153.254.86.166:27015-27060",
+        "153.254.86.167:27015-27060",
+        "153.254.86.168:27015-27060"
       ],
       "relays": [
         {
@@ -470,6 +577,16 @@
         "steam-global",
         "valve"
       ],
+      "partners": 1,
+      "relay_addresses": [
+        "162.254.192.66:27015-27052",
+        "162.254.192.67:27015-27052",
+        "162.254.192.69:27015-27060",
+        "162.254.192.70:27015-27060",
+        "162.254.192.83:27015-27052",
+        "162.254.192.86:27015-27044",
+        "162.254.192.99:27015-27068"
+      ],
       "relays": [
         {
           "ipv4": "162.254.192.66",
@@ -512,6 +629,11 @@
         "steam-global",
         "valve"
       ],
+      "partners": 1,
+      "relay_addresses": [
+        "155.133.238.162:27015-27068",
+        "155.133.238.163:27015-27068"
+      ],
       "relays": [
         {
           "ipv4": "155.133.238.162",
@@ -533,6 +655,11 @@
       "groups": [
         "steam-global",
         "valve"
+      ],
+      "partners": 1,
+      "relay_addresses": [
+        "162.254.195.70:27015-27052",
+        "162.254.195.86:27015-27052"
       ],
       "relays": [
         {
@@ -556,6 +683,12 @@
         "steam-global",
         "valve"
       ],
+      "partners": 1,
+      "relay_addresses": [
+        "162.254.196.66:27015-27052",
+        "162.254.196.70:27015-27044",
+        "162.254.196.82:27015-27052"
+      ],
       "relays": [
         {
           "ipv4": "162.254.196.66",
@@ -577,6 +710,12 @@
       "groups": [
         "steam-global",
         "valve"
+      ],
+      "partners": 1,
+      "relay_addresses": [
+        "190.217.33.34:27015-27052",
+        "190.217.33.50:27015-27052",
+        "190.217.33.66:27015-27068"
       ],
       "relays": [
         {
@@ -605,6 +744,10 @@
         "steam-global",
         "valve"
       ],
+      "partners": 1,
+      "relay_addresses": [
+        "155.133.232.98:27015-27060"
+      ],
       "relays": [
         {
           "ipv4": "155.133.232.98",
@@ -622,6 +765,13 @@
       "groups": [
         "steam-global",
         "valve"
+      ],
+      "partners": 1,
+      "relay_addresses": [
+        "155.133.246.50:27015-27052",
+        "155.133.246.34:27015-27052",
+        "155.133.246.66:27015-27068",
+        "155.133.246.67:27015-27068"
       ],
       "relays": [
         {
@@ -652,6 +802,16 @@
       "groups": [
         "steam-global",
         "valve"
+      ],
+      "partners": 1,
+      "relay_addresses": [
+        "162.254.193.71:27015-27052",
+        "162.254.193.72:27015-27060",
+        "162.254.193.73:27015-27060",
+        "162.254.193.98:27015-27052",
+        "162.254.193.99:27015-27060",
+        "162.254.193.100:27015-27060",
+        "162.254.193.101:27015-27060"
       ],
       "relays": [
         {
@@ -695,6 +855,13 @@
         "steam-global",
         "valve"
       ],
+      "partners": 1,
+      "relay_addresses": [
+        "185.25.182.66:27015-27068",
+        "185.25.182.67:27015-27068",
+        "185.25.182.68:27015-27068",
+        "185.25.182.69:27015-27068"
+      ],
       "relays": [
         {
           "ipv4": "185.25.182.66",
@@ -719,6 +886,13 @@
       "groups": [
         "steam-china",
         "perfectworld"
+      ],
+      "partners": 2,
+      "relay_addresses": [
+        "125.88.173.11:27015-27068",
+        "125.88.173.12:27015-27068",
+        "125.88.173.13:27015-27068",
+        "125.88.173.14:27015-27068"
       ],
       "relays": [
         {
@@ -748,6 +922,13 @@
         "steam-china",
         "perfectworld"
       ],
+      "partners": 2,
+      "relay_addresses": [
+        "220.194.68.11:27015-27068",
+        "220.194.68.12:27015-27068",
+        "220.194.68.13:27015-27068",
+        "220.194.68.14:27015-27068"
+      ],
       "relays": [
         {
           "ipv4": "220.194.68.11",
@@ -775,6 +956,13 @@
       "groups": [
         "steam-china",
         "perfectworld"
+      ],
+      "partners": 2,
+      "relay_addresses": [
+        "61.182.135.15:27015-27068",
+        "61.182.135.16:27015-27068",
+        "61.182.135.72:27015-27068",
+        "61.182.135.18:27015-27068"
       ],
       "relays": [
         {
@@ -807,6 +995,13 @@
         "steam-china",
         "perfectworld"
       ],
+      "partners": 2,
+      "relay_addresses": [
+        "116.211.132.11:27015-27068",
+        "116.211.132.12:27015-27068",
+        "116.211.132.13:27015-27068",
+        "116.211.132.14:27015-27068"
+      ],
       "relays": [
         {
           "ipv4": "116.211.132.11",
@@ -834,6 +1029,13 @@
       "groups": [
         "steam-china",
         "perfectworld"
+      ],
+      "partners": 2,
+      "relay_addresses": [
+        "183.136.230.11:27015-27068",
+        "183.136.230.12:27015-27068",
+        "183.136.230.13:27015-27068",
+        "183.136.230.14:27015-27068"
       ],
       "relays": [
         {
@@ -864,6 +1066,12 @@
         "steam-global",
         "valve"
       ],
+      "partners": 1,
+      "relay_addresses": [
+        "155.133.249.162:27015-27052",
+        "155.133.249.178:27015-27052",
+        "155.133.249.194:27015-27068"
+      ],
       "relays": [
         {
           "ipv4": "155.133.249.162",
@@ -889,6 +1097,13 @@
       "groups": [
         "steam-global",
         "valve"
+      ],
+      "partners": 1,
+      "relay_addresses": [
+        "205.196.6.66:27015-27052",
+        "205.196.6.68:27015-27052",
+        "205.196.6.74:27015-27068",
+        "205.196.6.76:27015-27068"
       ],
       "relays": [
         {
@@ -917,6 +1132,17 @@
         "steam-china",
         "valve",
         "perfectworld"
+      ],
+      "partners": 2,
+      "relay_addresses": [
+        "103.10.124.40:27015-27052",
+        "103.10.124.43:27015-27052",
+        "103.10.124.44:27015-27052",
+        "103.10.124.45:27015-27052",
+        "103.10.124.99:27015-27052",
+        "103.10.124.100:27015-27052",
+        "103.10.124.101:27015-27052",
+        "103.10.124.102:27015-27052"
       ],
       "relays": [
         {
@@ -965,6 +1191,7 @@
         "steam-china",
         "perfectworld"
       ],
+      "partners": 2,
       "service_address_ranges": [
         "121.46.225.0/24",
         "218.78.184.0/24"
@@ -975,6 +1202,15 @@
       "groups": [
         "steam-china",
         "perfectworld"
+      ],
+      "partners": 2,
+      "relay_addresses": [
+        "117.184.42.132:27015-27068",
+        "117.184.42.133:27015-27068",
+        "117.184.42.134:27015-27068",
+        "117.184.42.135:27015-27068",
+        "117.184.42.136:27015-27068",
+        "117.184.42.137:27015-27068"
       ],
       "relays": [
         {
@@ -1009,6 +1245,15 @@
         "steam-china",
         "perfectworld"
       ],
+      "partners": 2,
+      "relay_addresses": [
+        "121.46.225.11:27015-27068",
+        "121.46.225.12:27015-27068",
+        "121.46.225.13:27015-27068",
+        "121.46.225.14:27015-27068",
+        "121.46.225.15:27015-27068",
+        "121.46.225.16:27015-27068"
+      ],
       "relays": [
         {
           "ipv4": "121.46.225.11",
@@ -1041,6 +1286,15 @@
       "groups": [
         "steam-china",
         "perfectworld"
+      ],
+      "partners": 2,
+      "relay_addresses": [
+        "211.95.37.141:27015-27068",
+        "211.95.37.142:27015-27068",
+        "211.95.37.143:27015-27068",
+        "211.95.37.144:27015-27068",
+        "211.95.37.145:27015-27068",
+        "211.95.37.146:27015-27068"
       ],
       "relays": [
         {
@@ -1079,6 +1333,13 @@
         "steam-china",
         "perfectworld"
       ],
+      "partners": 2,
+      "relay_addresses": [
+        "180.153.252.11:27015-27068",
+        "180.153.252.12:27015-27068",
+        "180.153.252.13:27015-27068",
+        "180.153.252.14:27015-27068"
+      ],
       "relays": [
         {
           "ipv4": "180.153.252.11",
@@ -1108,6 +1369,10 @@
         "steam-global",
         "valve"
       ],
+      "partners": 1,
+      "relay_addresses": [
+        "139.45.193.10:27015-27019"
+      ],
       "relays": [
         {
           "ipv4": "139.45.193.10",
@@ -1121,6 +1386,17 @@
       "groups": [
         "steam-global",
         "valve"
+      ],
+      "partners": 1,
+      "relay_addresses": [
+        "162.254.198.40:27015-27034",
+        "162.254.198.41:27015-27034",
+        "162.254.198.42:27015-27034",
+        "162.254.198.43:27015-27034",
+        "162.254.198.100:27015-27034",
+        "162.254.198.101:27015-27034",
+        "162.254.198.102:27015-27034",
+        "162.254.198.103:27015-27034"
       ],
       "relays": [
         {
@@ -1169,6 +1445,21 @@
       "groups": [
         "steam-global",
         "valve"
+      ],
+      "partners": 1,
+      "relay_addresses": [
+        "155.133.252.35:27015-27068",
+        "155.133.252.36:27015-27060",
+        "155.133.252.37:27015-27037",
+        "155.133.252.38:27015-27060",
+        "155.133.252.50:27015-27068",
+        "155.133.252.51:27015-27068",
+        "155.133.252.52:27015-27060",
+        "155.133.252.53:27015-27060",
+        "155.133.252.66:27015-27051",
+        "155.133.252.67:27015-27051",
+        "155.133.252.68:27015-27051",
+        "155.133.252.69:27015-27051"
       ],
       "relays": [
         {
@@ -1230,6 +1521,12 @@
         "valve",
         "perfectworld"
       ],
+      "partners": 2,
+      "relay_addresses": [
+        "103.10.125.146:27015-27068",
+        "103.10.125.154:27015-27068",
+        "103.10.125.162:27015-27068"
+      ],
       "relays": [
         {
           "ipv4": "103.10.125.146",
@@ -1255,6 +1552,7 @@
         "steam-china",
         "perfectworld"
       ],
+      "partners": 2,
       "service_address_ranges": [
         "125.39.181.0-125.39.181.127",
         "60.28.165.128/25"
@@ -1264,6 +1562,15 @@
       "groups": [
         "steam-china",
         "perfectworld"
+      ],
+      "partners": 2,
+      "relay_addresses": [
+        "111.32.164.141:27015-27068",
+        "111.32.164.142:27015-27068",
+        "111.32.164.143:27015-27068",
+        "111.32.164.144:27015-27068",
+        "111.32.164.145:27015-27068",
+        "111.32.164.146:27015-27068"
       ],
       "relays": [
         {
@@ -1297,6 +1604,15 @@
         "steam-china",
         "perfectworld"
       ],
+      "partners": 2,
+      "relay_addresses": [
+        "42.81.120.140:27015-27068",
+        "42.81.120.141:27015-27068",
+        "42.81.120.142:27015-27068",
+        "42.81.120.143:27015-27068",
+        "42.81.120.144:27015-27068",
+        "42.81.120.145:27015-27068"
+      ],
       "relays": [
         {
           "ipv4": "42.81.120.140",
@@ -1328,6 +1644,15 @@
       "groups": [
         "steam-china",
         "perfectworld"
+      ],
+      "partners": 2,
+      "relay_addresses": [
+        "125.39.181.11:27015-27068",
+        "125.39.181.12:27015-27068",
+        "125.39.181.13:27015-27068",
+        "125.39.181.14:27015-27068",
+        "125.39.181.15:27015-27068",
+        "125.39.181.16:27015-27068"
       ],
       "relays": [
         {
@@ -1367,6 +1692,15 @@
         "steam-china",
         "valve",
         "perfectworld"
+      ],
+      "partners": 2,
+      "relay_addresses": [
+        "155.133.239.19:27015-27060",
+        "155.133.239.25:27015-27052",
+        "155.133.239.26:27015-27052",
+        "155.133.239.50:27015-27060",
+        "155.133.239.52:27015-27060",
+        "155.133.239.59:27015-27052"
       ],
       "relays": [
         {
@@ -1408,6 +1742,11 @@
         "valve",
         "perfectworld"
       ],
+      "partners": 2,
+      "relay_addresses": [
+        "155.133.245.34:27015-27068",
+        "155.133.245.35:27015-27068"
+      ],
       "relays": [
         {
           "ipv4": "155.133.245.34",
@@ -1425,6 +1764,17 @@
       "groups": [
         "steam-global",
         "valve"
+      ],
+      "partners": 1,
+      "relay_addresses": [
+        "146.66.155.34:27015-27068",
+        "146.66.155.35:27015-27068",
+        "146.66.155.36:27015-27068",
+        "146.66.155.37:27015-27052",
+        "146.66.155.50:27015-27068",
+        "146.66.155.51:27015-27068",
+        "146.66.155.52:27015-27068",
+        "146.66.155.53:27015-27052"
       ],
       "relays": [
         {
@@ -1472,6 +1822,17 @@
       "groups": [
         "steam-global",
         "valve"
+      ],
+      "partners": 1,
+      "relay_addresses": [
+        "155.133.230.35:27015-27068",
+        "155.133.230.36:27015-27068",
+        "155.133.230.51:27015-27068",
+        "155.133.230.52:27015-27068",
+        "155.133.230.66:27015-27068",
+        "155.133.230.67:27015-27068",
+        "155.133.230.68:27015-27068",
+        "155.133.230.69:27015-27068"
       ],
       "relays": [
         {
