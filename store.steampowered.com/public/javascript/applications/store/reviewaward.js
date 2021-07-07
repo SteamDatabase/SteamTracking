@@ -900,7 +900,7 @@
             r.createElement(
               "div",
               { className: l.Left },
-              r.createElement(O.H, { className: l.BalanceIcon }),
+              r.createElement(O.I, { className: l.BalanceIcon }),
               r.createElement(
                 "div",
                 { className: l.BalanceDetails },
@@ -1005,7 +1005,7 @@
           return r.createElement(
             "span",
             Object(n.a)({}, o, { className: Object(w.a)(a, l.PointsAmount) }),
-            r.createElement(O.H, { className: l.PointsAmountIcon }),
+            r.createElement(O.I, { className: l.PointsAmountIcon }),
             t
           );
         };

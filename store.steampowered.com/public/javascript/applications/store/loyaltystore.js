@@ -840,7 +840,7 @@
                   "balloon_yellow",
                 ];
             }
-            return W.e(n.m_rgImages), n.GenerateBalloons(), n;
+            return W.f(n.m_rgImages), n.GenerateBalloons(), n;
           }
           return (
             Object(r.d)(t, e),
@@ -869,7 +869,7 @@
                 this.m_rgBalloons.push(this.GenerateSingleBalloon(n, r));
               }
               var a = [70, 20];
-              W.e(a);
+              W.f(a);
               for (
                 var i = 20 == a[1],
                   o = 0,
@@ -1822,7 +1822,7 @@
               a.createElement(
                 "div",
                 { className: m.PointsContainer },
-                a.createElement(w.H, { className: m.Icon }),
+                a.createElement(w.I, { className: m.Icon }),
                 a.createElement(
                   "div",
                   { className: m.BalanceColumn },
@@ -3360,7 +3360,7 @@
               { className: Object(M.a)(m.WarningTextContainer, e.className) },
               t
             ),
-            a.createElement(w.fb, { className: m.TimeWarning }),
+            a.createElement(w.gb, { className: m.TimeWarning }),
             e.children
           );
         },
@@ -5386,7 +5386,7 @@
                   },
                   i
                 ),
-                a.createElement(pe.N, null)
+                a.createElement(pe.O, null)
               ),
             s &&
               a.createElement(
@@ -5403,7 +5403,7 @@
                   },
                   i
                 ),
-                a.createElement(pe.jb, null)
+                a.createElement(pe.kb, null)
               ),
             l &&
               a.createElement(
@@ -5614,7 +5614,7 @@
                               className: be.a.gameIsPrivateIcon,
                               title: Object(g.f)("#User_GameInfoHidden"),
                             },
-                            a.createElement(pe.D, null)
+                            a.createElement(pe.E, null)
                           ),
                         j
                       ),
@@ -6542,7 +6542,7 @@
                   alignItems: "center",
                   className: rt.Header,
                 },
-                i.a.createElement(pe.U, { className: rt.Icon }),
+                i.a.createElement(pe.V, { className: rt.Icon }),
                 i.a.createElement(
                   "div",
                   { className: rt.Title },
@@ -6620,7 +6620,7 @@
             i.a.createElement(
               "div",
               null,
-              i.a.createElement(pe.U, { className: rt.Icon }),
+              i.a.createElement(pe.V, { className: rt.Icon }),
               i.a.createElement("div", null, "+", o)
             )
           );
@@ -8389,7 +8389,7 @@
                 alignItems: "center",
                 className: sn.PointsContainer,
               },
-              i.a.createElement(pe.H, { className: sn.Icon }),
+              i.a.createElement(pe.I, { className: sn.Icon }),
               i.a.createElement(
                 _.a,
                 {
@@ -10401,7 +10401,7 @@
           return i.a.createElement(
             "div",
             Object(r.a)({ className: Object(o.a)(s.Container, n) }, m),
-            i.a.createElement(c.H, { className: s.Icon }),
+            i.a.createElement(c.I, { className: s.Icon }),
             i.a.createElement(
               "div",
               {

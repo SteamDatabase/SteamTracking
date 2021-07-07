@@ -7212,7 +7212,7 @@
                   { href: h, className: Object(W.a)(J.Artwork) },
                   c.a.createElement($.c, {
                     snr: f,
-                    appInfo: a,
+                    appID: null == a ? void 0 : a.appid,
                     classOverride: Object(W.a)(
                       j.a.WishlistButtonNotTop,
                       "WishlistButton"
@@ -7672,7 +7672,7 @@
                   "div",
                   { className: X.a.StoreSaleWidgetCrossCenterRight },
                   c.a.createElement($.c, {
-                    appInfo: i,
+                    appID: null == i ? void 0 : i.appid,
                     classOverride: Object(W.a)(
                       j.a.WishlistButtonNotTop,
                       "WishlistButton"
@@ -7852,7 +7852,7 @@
                 "div",
                 { className: X.a.StoreSaleWidgetHalfRight },
                 c.a.createElement($.c, {
-                  appInfo: o,
+                  appID: null == o ? void 0 : o.appid,
                   classOverride: Object(W.a)(
                     j.a.WishlistButtonNotTop,
                     "WishlistButton"
@@ -26152,14 +26152,16 @@
           );
         },
         V = Object(o.a)(function (e) {
-          var t = e.appInfo,
-            n = t && f.a.Get().BIsGameWishlisted(t.appid),
-            a = Object(s.useState)(!1),
-            o = a[0],
-            l = a[1],
-            u = c.a.useRef(i.a.CancelToken.source());
+          var t = e.appID,
+            n = e.snr,
+            a = e.classOverride,
+            o = t && f.a.Get().BIsGameWishlisted(t),
+            l = Object(s.useState)(!1),
+            u = l[0],
+            d = l[1],
+            p = c.a.useRef(i.a.CancelToken.source());
           c.a.useEffect(function () {
-            var e = u;
+            var e = p;
             return function () {
               var t;
               return null === (t = e.current) || void 0 === t
@@ -26170,25 +26172,24 @@
           return c.a.createElement(
             "div",
             {
-              className: Object(y.a)(D.a.WishlistButton, e.classOverride),
-              onClick: function (a) {
+              className: Object(y.a)(D.a.WishlistButton, a),
+              onClick: function (e) {
                 return Object(r.b)(void 0, void 0, void 0, function () {
                   return Object(r.e)(this, function (r) {
                     switch (r.label) {
                       case 0:
                         return (
-                          a.preventDefault(),
-                          a.stopPropagation(),
+                          e.preventDefault(),
+                          e.stopPropagation(),
                           O.i.logged_in ? [3, 1] : (Object(j.a)(), [3, 3])
                         );
                       case 1:
                         return (
-                          l(!0),
-                          [4, f.a.Get().UpdateGameWishlist(t.appid, !n, e.snr)]
+                          d(!0), [4, f.a.Get().UpdateGameWishlist(t, !o, n)]
                         );
                       case 2:
                         r.sent(),
-                          u.current.token.reason || l(!1),
+                          p.current.token.reason || d(!1),
                           (r.label = 3);
                       case 3:
                         return [2];
@@ -26203,11 +26204,11 @@
               {
                 className: Object(y.a)(
                   D.a.WishlistButtonText,
-                  o && D.a.WishlistLoadingText
+                  u && D.a.WishlistLoadingText
                 ),
               },
               Object(E.f)(
-                n ? "#Sale_RemoveFromWishlist" : "#Sale_AddToWishlist"
+                o ? "#Sale_RemoveFromWishlist" : "#Sale_AddToWishlist"
               )
             )
           );
@@ -26353,7 +26354,11 @@
                 target: O.c.IN_CLIENT ? void 0 : "_blank",
                 className: D.a.TrailerAnchorStoreLink,
               },
-              n && c.a.createElement(V, { appInfo: n, snr: e.strSNR }),
+              n &&
+                c.a.createElement(V, {
+                  appID: null == n ? void 0 : n.appid,
+                  snr: e.strSNR,
+                }),
               c.a.createElement(x, { info: t })
             ),
             c.a.createElement(H, Object(r.a)({}, e))
@@ -71259,44 +71264,232 @@
     zoRj: function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
-        return w;
+        return V;
       }),
         n.d(t, "b", function () {
-          return D;
+          return Y;
         });
       var r,
-        a = n("TyAF"),
-        i = n("q1tI"),
-        o = n.n(i),
-        s = n("I/R6"),
-        c = n("6oCP"),
-        l = n("b3LC"),
-        u = n("Mgs7"),
-        d = n("bWts"),
+        a = n("mrSG"),
+        i = n("TyAF"),
+        o = n("q1tI"),
+        s = n.n(o),
+        c = n("VQ2A"),
+        l = n("ee7K"),
+        u = n("I/R6"),
+        d = n("vDqi"),
         p = n.n(d),
-        m = n("0rc7"),
-        h = n("Kw0F"),
-        f = n("exH9"),
-        _ = n("TLQK"),
-        v = n("4P4B"),
-        b = n("MnIK"),
-        g = n("Jqb/"),
-        y = n("ka0M"),
-        S = n("dfs5"),
-        E = n("TOXn"),
-        C = n("6AJf"),
-        O = n("ZlHF"),
-        w = Object(a.a)(function (e) {
+        m = n("bDQf"),
+        h = n("lkRc");
+      !(function (e) {
+        (e[(e.k_EPurchaseReservationState_NotReserved = 0)] =
+          "k_EPurchaseReservationState_NotReserved"),
+          (e[(e.k_EPurchaseReservationState_Reserved = 1)] =
+            "k_EPurchaseReservationState_Reserved"),
+          (e[(e.k_EPurchaseReservationState_Cancelled = 2)] =
+            "k_EPurchaseReservationState_Cancelled"),
+          (e[(e.k_EPurchaseReservationState_Allocated = 3)] =
+            "k_EPurchaseReservationState_Allocated"),
+          (e[(e.k_EPurchaseReservationState_Consumed = 4)] =
+            "k_EPurchaseReservationState_Consumed"),
+          (e[(e.k_EPurchaseReservationState_CancelPendingRefund = 5)] =
+            "k_EPurchaseReservationState_CancelPendingRefund");
+      })(r || (r = {}));
+      var f = (function () {
+        function e() {
+          (this.m_mapUserReservationState = new Map()),
+            (this.m_inflightRequests = new Map());
+        }
+        return (
+          (e.prototype.GetMyReservationState = function (e, t) {
+            var n = this.GetKey(e, t);
+            return this.m_mapUserReservationState.has(n)
+              ? this.m_mapUserReservationState.get(n)
+              : { bLoaded: !1 };
+          }),
+          (e.prototype.GetKey = function (e, t) {
+            return (
+              e.sort(),
+              t && t.sort(),
+              JSON.stringify(e) + "_" + JSON.stringify(t)
+            );
+          }),
+          (e.prototype.LoadUserReservationState = function (e, t, n) {
+            return Object(a.b)(this, void 0, void 0, function () {
+              var r;
+              return Object(a.e)(this, function (a) {
+                switch (a.label) {
+                  case 0:
+                    return (
+                      (r = this.GetKey(t, n)),
+                      this.m_inflightRequests.has(r) ||
+                        this.m_inflightRequests.set(
+                          r,
+                          this.InternalLoadUserReservationState(e, t, n)
+                        ),
+                      [4, this.m_inflightRequests.get(r)]
+                    );
+                  case 1:
+                    return [2, a.sent()];
+                }
+              });
+            });
+          }),
+          (e.prototype.InternalLoadUserReservationState = function (e, t, n) {
+            var r;
+            return Object(a.b)(this, void 0, void 0, function () {
+              var i, o, s, c, l, u;
+              return Object(a.e)(this, function (a) {
+                switch (a.label) {
+                  case 0:
+                    if (((i = this.GetKey(t, n)), !h.i.logged_in))
+                      return (
+                        this.m_mapUserReservationState.set(i, { bLoaded: !0 }),
+                        [2, this.m_mapUserReservationState.get(i)]
+                      );
+                    a.label = 1;
+                  case 1:
+                    return (
+                      a.trys.push([1, 3, , 4]),
+                      (o = {
+                        rgReservationPackageIDs: JSON.stringify(t),
+                        rgDepositPackageIDs: JSON.stringify(n),
+                      }),
+                      e && (o.beta = 1),
+                      (s = h.c.STORE_BASE_URL + "reservation/ajaxgetuserstate"),
+                      [4, p.a.get(s, { params: o, withCredentials: !0 })]
+                    );
+                  case 2:
+                    return (
+                      200 == (null == (c = a.sent()) ? void 0 : c.status) &&
+                      1 ==
+                        (null === (r = null == c ? void 0 : c.data) ||
+                        void 0 === r
+                          ? void 0
+                          : r.success)
+                        ? ((c.data.bLoaded = !0),
+                          this.m_mapUserReservationState.set(i, c.data))
+                        : ((u = Object(m.a)(c)),
+                          console.error(
+                            "CReservationStore.LoadUserReservationState: response with " +
+                              u.strErrorMsg,
+                            u
+                          )),
+                      [3, 4]
+                    );
+                  case 3:
+                    return (
+                      (l = a.sent()),
+                      (u = Object(m.a)(l)),
+                      console.error(
+                        "CReservationStore.LoadUserReservationState: failed with " +
+                          u.strErrorMsg,
+                        u
+                      ),
+                      [3, 4]
+                    );
+                  case 4:
+                    return [2, this.m_mapUserReservationState.get(i)];
+                }
+              });
+            });
+          }),
+          (e.prototype.CancelUserReservation = function () {
+            var e;
+            return Object(a.b)(this, void 0, void 0, function () {
+              var t, n, r, i, o;
+              return Object(a.e)(this, function (a) {
+                switch (a.label) {
+                  case 0:
+                    return (
+                      a.trys.push([0, 2, , 3]),
+                      (t =
+                        h.c.STORE_BASE_URL + "reservation/cancelreservation"),
+                      (n = new FormData()).append("sessionid", h.c.SESSIONID),
+                      [4, p.a.post(t, n, { withCredentials: !0 })]
+                    );
+                  case 1:
+                    return 200 ==
+                      (null == (r = a.sent()) ? void 0 : r.status) &&
+                      1 ==
+                        (null === (e = r.data) || void 0 === e
+                          ? void 0
+                          : e.success)
+                      ? [2, !0]
+                      : ((o = Object(m.a)(r)),
+                        console.error(
+                          "CReservationStore.CancelUserReservation: response with " +
+                            o.strErrorMsg,
+                          o
+                        ),
+                        [3, 3]);
+                  case 2:
+                    return (
+                      (i = a.sent()),
+                      (o = Object(m.a)(i)),
+                      console.error(
+                        "CReservationStore.CancelUserReservation: failed with " +
+                          o.strErrorMsg,
+                        o
+                      ),
+                      [3, 3]
+                    );
+                  case 3:
+                    return [2, !1];
+                }
+              });
+            });
+          }),
+          (e.Get = function () {
+            return (
+              e.s_Singleton ||
+                ((e.s_Singleton = new e()),
+                ("dev" != h.c.WEB_UNIVERSE && "beta" != h.c.WEB_UNIVERSE) ||
+                  (window.g_ReservationStore = e.s_Singleton)),
+              e.s_Singleton
+            );
+          }),
+          e
+        );
+      })();
+      var _,
+        v = n("6oCP"),
+        b = n("b3LC"),
+        g = n("Mgs7"),
+        y = n("bWts"),
+        S = n.n(y),
+        E = n("XTKY"),
+        C = n.n(E),
+        O = n("fpVW"),
+        w = n.n(O),
+        I = n("YLyR"),
+        B = n("0rc7"),
+        D = n("0OaU"),
+        j = n("Kw0F"),
+        T = n("exH9"),
+        A = n("X3Ds"),
+        M = n("TLQK"),
+        R = n("4P4B"),
+        L = n("MnIK"),
+        k = n("Jqb/"),
+        G = n("ka0M"),
+        N = n("dfs5"),
+        F = n("TOXn"),
+        P = n("Fmfl"),
+        x = n("BFsE"),
+        U = n("6AJf"),
+        z = n("ZlHF"),
+        V = Object(i.a)(function (e) {
           var t,
             n,
             r = e.fnOnDirty,
             a = e.saleSection,
             i = e.event;
-          return o.a.createElement(
+          return s.a.createElement(
             "div",
             null,
-            o.a.createElement("h1", null, "Reservation Widget Editor"),
-            o.a.createElement(m.a, {
+            s.a.createElement("h1", null, Object(M.f)("#Sale_ReserveEditor")),
+            s.a.createElement(B.a, {
               items:
                 null !==
                   (n =
@@ -71310,83 +71503,90 @@
               },
               onReorder: r,
               render: function (e) {
-                return o.a.createElement(B, {
+                return s.a.createElement(W, {
                   event: i,
                   reservation: e,
                   fnOnDirty: r,
                 });
               },
             }),
-            o.a.createElement(
-              u.d,
+            s.a.createElement(
+              g.d,
               {
                 onClick: function () {
                   a.internal_section_data.reservation_options ||
-                    (a.internal_section_data.reservation_options = []),
-                    a.internal_section_data.reservation_options.push({
-                      unique_id:
-                        "reservation_" + Math.floor(1e6 * Math.random()),
-                    }),
+                    (a.internal_section_data.reservation_options = []);
+                  for (
+                    var e = "reservation_" + Math.floor(1e6 * Math.random());
+                    a.internal_section_data.reservation_options.find(function (
+                      t
+                    ) {
+                      return t.unique_id == e;
+                    });
+
+                  )
+                    e = "reservation_" + Math.floor(1e6 * Math.random());
+                  a.internal_section_data.reservation_options.push({
+                    unique_id: e,
+                    localized_reservation_desc: [],
+                  }),
                     r();
                 },
               },
-              "Add Reservation Option"
+              Object(M.f)("#Sale_ReserveEditor_Add")
             )
           );
         });
-      function I(e) {
+      function H(e) {
         return (
-          r ||
-            (r = new Intl.NumberFormat("en-US", {
+          _ ||
+            (_ = new Intl.NumberFormat("en-US", {
               style: "currency",
               currency: "USD",
             })),
-          r.format(Number(e) / 100)
+          _.format(Number(e) / 100)
         );
       }
-      var B = Object(a.a)(function (e) {
+      var W = Object(i.a)(function (e) {
           var t,
             n,
             r = e.reservation,
             a = e.fnOnDirty,
             i = e.event,
-            d = s.a.Get().GetCurEditLanguage(),
-            p = Object(l.c)(r.reservation_package, {
+            o = u.a.Get().GetCurEditLanguage(),
+            c = Object(b.c)(r.reservation_package, {
+              include_basic_info: !0,
+              include_all_purchase_options: !0,
+            }),
+            l = c[0],
+            d = c[1],
+            p = Object(b.c)(r.deposit_package, {
               include_basic_info: !0,
               include_all_purchase_options: !0,
             }),
             m = p[0],
-            f = p[1],
-            b = Object(l.c)(r.deposit_package, {
-              include_basic_info: !0,
-              include_all_purchase_options: !0,
-            }),
-            S = b[0],
-            C = b[1],
-            O = function (e) {
-              (!r.localized_reservation_desc ||
-                r.localized_reservation_desc.length < 30) &&
-                (r.localized_reservation_desc = Object(h.e)(
-                  r.localized_reservation_desc || [],
-                  30,
-                  null
-                )),
-                (r.localized_reservation_desc[d] = e),
+            h = p[1],
+            f = function (e) {
+              (r.localized_reservation_desc = Object(j.e)(
+                r.localized_reservation_desc || [],
+                30,
+                null
+              )),
+                (r.localized_reservation_desc[o] = e),
                 a();
             },
-            w = _.b.GetELanguageFallback(d),
-            B =
-              r.localized_reservation_desc[d] ||
-              r.localized_reservation_desc[w] ||
+            _ = M.b.GetELanguageFallback(o),
+            y =
+              r.localized_reservation_desc[o] ||
+              r.localized_reservation_desc[_] ||
               "";
-          return o.a.createElement(
+          return s.a.createElement(
             "div",
             null,
-            o.a.createElement(u.m, {
+            s.a.createElement(g.m, {
               type: "number",
-              label: "Reservation Package",
-              tooltip:
-                "The hardware item the user actually wants to purchase when their reservation comes up",
+              label: Object(M.f)("#Sale_ReserveEditor_ReservePack"),
+              tooltip: Object(M.f)("#Sale_ReserveEditor_ReservePack_ttip"),
               value:
                 null !== (t = r.reservation_package) && void 0 !== t ? t : 0,
               onChange: function (e) {
@@ -71396,70 +71596,67 @@
                   a();
               },
             }),
-            Boolean(3 == f) &&
-              o.a.createElement(
+            Boolean(3 == d) &&
+              s.a.createElement(
                 "div",
                 null,
                 'Reservation Package Found: "',
-                m.GetName(),
+                l.GetName(),
                 '" Price: ',
-                I(m.GetBestPurchaseOption().final_price_in_cents)
+                H(l.GetBestPurchaseOption().final_price_in_cents)
               ),
-            o.a.createElement(u.m, {
+            s.a.createElement(g.m, {
               type: "number",
-              label: "Optional: Deposit Package",
-              tooltip:
-                "If the user needs to put a deposit, then enter it here, they will be require to purchase prior to be included in the reservation",
+              label: Object(M.f)("#Sale_ReserveEditor_Deposit"),
+              tooltip: Object(M.f)("#Sale_ReserveEditor_Deposit_ttip"),
               value: null !== (n = r.deposit_package) && void 0 !== n ? n : 0,
               onChange: function (e) {
                 (r.deposit_package = Number.parseInt(e.currentTarget.value)),
                   a();
               },
             }),
-            Boolean(3 == C) &&
-              o.a.createElement(
+            Boolean(3 == h) &&
+              s.a.createElement(
                 "div",
                 null,
-                'Despot Package Found: "',
-                S.GetName(),
+                'Deposit Package Found: "',
+                m.GetName(),
                 '" Price: ',
-                I(S.GetBestPurchaseOption().final_price_in_cents)
+                H(m.GetBestPurchaseOption().final_price_in_cents)
               ),
-            o.a.createElement(E.a, {
-              text: B,
-              partnerEventStore: c.d,
+            s.a.createElement(F.a, {
+              text: y,
+              partnerEventStore: v.d,
               showErrorInfo: !0,
               event: i,
-              languageOverride: d,
+              languageOverride: o,
             }),
-            o.a.createElement(
-              u.d,
+            s.a.createElement(
+              g.d,
               {
                 onClick: function () {
-                  Object(y.d)(
-                    o.a.createElement(
-                      g.d,
+                  Object(G.d)(
+                    s.a.createElement(
+                      k.d,
                       {
                         bAlertDialog: !0,
-                        strTitle: "Edit Description",
-                        strDescription:
-                          "Edit the short description that will appear around the reservation",
+                        strTitle: Object(M.f)("#Sale_ReserveEditor_EditTitle"),
+                        strDescription: Object(M.f)(
+                          "#Sale_ReserveEditor_EditDesc"
+                        ),
                       },
-                      o.a.createElement(v.a, {
+                      s.a.createElement(R.a, {
                         strPlaceholder: "Enter Item Description",
                         fnGetCurText: function () {
-                          var e;
-                          return (null === (e = r.localized_reservation_desc) ||
-                          void 0 === e
-                            ? void 0
-                            : e.length) > d
-                            ? r.localized_reservation_desc[d]
+                          return r.localized_reservation_desc &&
+                            r.localized_reservation_desc.length > o
+                            ? r.localized_reservation_desc[o]
                             : "";
                         },
                         fnOnTextChange: function (e) {
-                          return O(e.currentTarget.value);
+                          return f(e.currentTarget.value);
                         },
-                        fnSetText: O,
+                        fnSetText: f,
                         bSupportHTMLImport: !0,
                         bEmbeddedInDialog: !0,
                       })
@@ -71468,108 +71665,355 @@
                   );
                 },
               },
-              "Edit Description"
+              Object(M.f)("#Sale_ReserveEditor_EditTitle")
             )
           );
         }),
-        D = function (e) {
+        q = function (e) {
+          var t,
+            n = e.myReserveState,
+            i = e.fnSetTestReservationState,
+            o = e.closeModal,
+            c = s.a.useState(0),
+            l = c[0],
+            u = c[1],
+            d = [];
+          d.push({ label: "None", data: 0 }),
+            d.push({ label: "User Not Permitted to Reserve", data: 1 }),
+            d.push({
+              label: "User Country does not support shipping",
+              data: 2,
+            }),
+            d.push({ label: "Already Reserved", data: 3 }),
+            d.push({ label: "Some Inventory Exhausted", data: 4 });
+          return s.a.createElement(
+            k.d,
+            {
+              strTitle: "Reservation Preview Testing",
+              strDescription:
+                "Change the settings to preview the reservation display in various state that users may see",
+              onOK: function () {
+                var e = Object(a.a)({}, n),
+                  t = Math.floor(
+                    Math.random() * n.rgReservationPackageInfo.length
+                  ),
+                  s = Math.floor(Math.random() * n.rgDepositPackageInfo.length);
+                switch (l) {
+                  default:
+                  case 0:
+                    i(null);
+                    break;
+                  case 1:
+                    (e.bAllowedToReserve = !1), i(e);
+                    break;
+                  case 2:
+                    (e.rgDepositPackageInfo = e.rgDepositPackageInfo.map(
+                      function (e) {
+                        return Object(a.a)(Object(a.a)({}, e), {
+                          bVisible: !1,
+                        });
+                      }
+                    )),
+                      i(e);
+                    break;
+                  case 3:
+                    (e.bAlreadyReserved = !0),
+                      (e.nReservationPackage =
+                        n.rgReservationPackageInfo[t].unPackageID),
+                      (e.oReservationStatus =
+                        r.k_EPurchaseReservationState_Reserved),
+                      (e.rtReserveTime = Math.floor(Date.now() / 1e3)),
+                      i(e);
+                    break;
+                  case 4:
+                    e.rgDepositPackageInfo[s].bPurchaseable = !1;
+                }
+                o();
+              },
+              onCancel: o,
+            },
+            Boolean(!n || !n.bLoaded)
+              ? s.a.createElement(D.a, {
+                  size: "medium",
+                  position: "center",
+                  string: Object(M.f)("#Loading"),
+                })
+              : s.a.createElement(
+                  s.a.Fragment,
+                  null,
+                  0 ==
+                    (null === (t = n.rgReservationPackageInfo) || void 0 === t
+                      ? void 0
+                      : t.length)
+                    ? s.a.createElement(
+                        "div",
+                        null,
+                        "Reservation Packages not setup or visible; required for previewing"
+                      )
+                    : s.a.createElement(g.i, {
+                        strDropDownClassName: w.a.DropDownScroll,
+                        rgOptions: d,
+                        selectedOption: l,
+                        onChange: function (e) {
+                          return u(e.data);
+                        },
+                      })
+                )
+          );
+        },
+        Y = function (e) {
           var t = e.section,
             n = e.language,
             r = e.event,
             a = e.bIsPreview,
-            i = t.internal_section_data.reservation_options;
-          return o.a.createElement(
-            S.b,
+            i = s.a.useState(null),
+            l = i[0],
+            u = i[1],
+            d = t.internal_section_data.reservation_options,
+            p = (function (e, t, n) {
+              var r = Object(o.useState)(f.Get().GetMyReservationState(t, n)),
+                a = r[0],
+                i = r[1];
+              return (
+                Object(o.useEffect)(
+                  function () {
+                    f.Get().LoadUserReservationState(e, t, n).then(i);
+                  },
+                  [e, t, n]
+                ),
+                a
+              );
+            })(
+              a,
+              d.map(function (e) {
+                return e.reservation_package;
+              }),
+              d.map(function (e) {
+                return e.deposit_package;
+              })
+            ),
+            m = Object(N.c)(),
+            _ = Object(c.c)(m);
+          return s.a.createElement(
+            N.b,
             { feature: "salereservations" },
-            o.a.createElement(
-              b.a,
+            s.a.createElement(
+              L.a,
               {
                 placeholderHeight: "100vh",
                 rootMargin: "0px 0px 100% 0px",
                 mode: "LoadAndUnload",
-                className: Object(f.a)(
-                  O.SaleSection,
-                  p.a.SaleSectionCtn,
+                className: Object(T.a)(
+                  z.SaleSection,
+                  S.a.SaleSectionCtn,
                   "ReservationCustomCSS"
                 ),
-                style: Object(C.f)(t, r),
+                style: Object(U.f)(t, r),
               },
-              o.a.createElement(C.h, { section: t, event: r, language: n }),
-              i.map(function (e) {
-                return o.a.createElement(j, {
-                  key: e.unique_id,
-                  reservation: e,
-                  language: n,
-                  eventModel: r,
-                  bIsPreview: a,
-                });
-              })
+              Boolean(a) &&
+                s.a.createElement(
+                  g.d,
+                  {
+                    onClick: function (e) {
+                      Object(G.d)(
+                        s.a.createElement(q, {
+                          myReserveState: p,
+                          fnSetTestReservationState: u,
+                        }),
+                        Object(A.m)(e)
+                      );
+                    },
+                  },
+                  "Preview Mode Only: Test Reservation States"
+                ),
+              s.a.createElement(U.h, { section: t, event: r, language: n }),
+              s.a.createElement(P.c, {
+                snr: _,
+                appID: p.unReserveAppID,
+                classOverride: Object(T.a)(
+                  C.a.WishlistButtonNotTop,
+                  "WishlistButton"
+                ),
+              }),
+              Boolean(h.i.logged_in && !window.reserve_fake_logged_out)
+                ? s.a.createElement(Q, {
+                    section: t,
+                    event: r,
+                    language: n,
+                    bIsPreview: a,
+                    myReserveState: l || p,
+                  })
+                : s.a.createElement(
+                    "div",
+                    { className: z.SaleSectionLoginPrompt },
+                    Object(M.f)("#SalePage_LoginReservationPrompt"),
+                    s.a.createElement(
+                      "button",
+                      { onClick: x.a, className: z.LoginButton },
+                      Object(M.f)("#Login_SignIn")
+                    )
+                  )
             )
           );
         },
-        j = function (e) {
-          var t = e.reservation,
+        Q = function (e) {
+          var t = e.section,
+            n = (e.language, e.event, e.bIsPreview, e.myReserveState),
+            i = t.internal_section_data.reservation_options,
+            o = i.map(function (e) {
+              return e.deposit_package;
+            });
+          return n && n.bLoaded
+            ? n.bAllowedToReserve
+              ? (null == o ? void 0 : o.length) > 0 &&
+                0 ==
+                  n.rgDepositPackageInfo.filter(function (e) {
+                    return e.bVisible;
+                  }).length
+                ? s.a.createElement(
+                    "div",
+                    null,
+                    Object(M.f)("#Sale_Reservation_NotAvailableCountry")
+                  )
+                : n.oReservationStatus ==
+                  r.k_EPurchaseReservationState_CancelPendingRefund
+                ? s.a.createElement(
+                    "div",
+                    null,
+                    Object(M.f)("#Sale_Reservation_CanceledPendingRefund")
+                  )
+                : s.a.createElement(
+                    "div",
+                    null,
+                    i
+                      .filter(function (e) {
+                        return n.rgReservationPackageInfo.find(function (t) {
+                          return (
+                            t.unPackageID == e.reservation_package && t.bVisible
+                          );
+                        });
+                      })
+                      .map(function (t) {
+                        return s.a.createElement(
+                          K,
+                          Object(a.a)(
+                            { key: t.unique_id, reservationDef: t },
+                            e
+                          )
+                        );
+                      })
+                  )
+              : s.a.createElement(
+                  "div",
+                  null,
+                  Object(M.f)("#Sale_Reservation_NotAllowedAccount")
+                )
+            : s.a.createElement(D.a, {
+                size: "medium",
+                position: "center",
+                string: Object(M.f)("#Loading"),
+              });
+        },
+        K = function (e) {
+          var t = e.reservationDef,
             n = e.language,
-            r = e.eventModel,
+            r = e.event,
             a = e.bIsPreview,
-            i = Object(l.c)(t.reservation_package, {
-              include_basic_info: !0,
-              include_all_purchase_options: !0,
-            }),
-            s = i[0],
-            d = i[1],
-            p = Object(l.c)(t.deposit_package, {
-              include_basic_info: !0,
-              include_all_purchase_options: !0,
-            }),
-            m = p[0],
-            h = p[1],
-            f = _.b.GetELanguageFallback(n),
-            v =
+            i = e.myReserveState,
+            o = M.b.GetELanguageFallback(n),
+            c =
               t.localized_reservation_desc[n] ||
-              t.localized_reservation_desc[f] ||
-              "";
-          return o.a.createElement(
+              t.localized_reservation_desc[o] ||
+              "",
+            l = i.rgReservationPackageInfo.find(function (e) {
+              return e.unPackageID == t.reservation_package;
+            });
+          return s.a.createElement(
             "div",
             null,
-            Boolean(3 == d) &&
-              o.a.createElement(
+            Boolean(null == l ? void 0 : l.strFormattedFinalPrice) &&
+              s.a.createElement(
                 "div",
                 null,
-                I(s.GetBestPurchaseOption().final_price_in_cents)
+                null == l ? void 0 : l.strFormattedFinalPrice
               ),
-            o.a.createElement(E.a, {
-              text: v,
-              partnerEventStore: c.d,
+            s.a.createElement(F.a, {
+              text: c,
+              partnerEventStore: v.d,
               showErrorInfo: a,
               event: r,
               languageOverride: n,
             }),
-            o.a.createElement(
-              "div",
-              null,
-              Boolean(3 == h) &&
-                o.a.createElement(
+            s.a.createElement(J, { reservationDef: t, myReserveState: i })
+          );
+        },
+        J = function (e) {
+          var t = e.reservationDef,
+            n = e.myReserveState,
+            r = Object(N.c)();
+          if (n.bAlreadyReserved) {
+            return t.reservation_package != n.nReservationPackage
+              ? null
+              : s.a.createElement(
                   "div",
                   null,
-                  I(m.GetBestPurchaseOption().final_price_in_cents)
-                ),
-              o.a.createElement(
-                u.d,
-                {
-                  onClick: function () {
-                    Object(y.d)(
-                      o.a.createElement(
-                        g.d,
-                        { bAlertDialog: !0 },
-                        "TODO Do Reservation Action"
-                      ),
-                      window
-                    );
-                  },
+                  s.a.createElement(
+                    "div",
+                    null,
+                    Object(M.n)(
+                      "#Sale_AlreadyReserved",
+                      s.a.createElement(I.a, {
+                        bSingleLine: !0,
+                        dateAndTime: n.rtReserveTime,
+                      })
+                    )
+                  ),
+                  s.a.createElement(
+                    g.d,
+                    {
+                      onClick: function (e) {
+                        Object(G.d)(
+                          s.a.createElement(k.d, {
+                            strTitle: Object(M.f)("#Sale_CancelReservation"),
+                            strDescription: Object(M.f)("#Dialog_AreYouSure"),
+                            onOK: function () {
+                              f.Get()
+                                .CancelUserReservation()
+                                .finally(function () {
+                                  return window.location.reload();
+                                });
+                            },
+                          }),
+                          Object(A.m)(e)
+                        );
+                      },
+                    },
+                    Object(M.f)("#Sale_CancelReservation")
+                  )
+                );
+          }
+          var a = n.rgDepositPackageInfo.find(function (e) {
+              return e.unPackageID == t.deposit_package;
+            }),
+            i = !(null == a ? void 0 : a.bVisible),
+            o = a && a.bVisible && !a.bPurchaseable;
+          return s.a.createElement(
+            "div",
+            null,
+            Boolean(null == a ? void 0 : a.strFormattedFinalPrice) &&
+              s.a.createElement("div", null, a.strFormattedFinalPrice),
+            s.a.createElement(
+              g.d,
+              {
+                onClick: function (e) {
+                  var n = h.c.STORE_BASE_URL + "cart",
+                    a = h.c.STORE_BASE_URL + "cart/addtocart",
+                    i = Object(c.c)(r);
+                  l.a.Get().AddToCart(e, t.deposit_package, a, n, i);
                 },
-                Object(_.f)("#Sale_ReserveNow")
-              )
+                disabled: i || o,
+              },
+              Object(M.f)(o ? "#Sale_ReserveExhausted" : "#Sale_ReserveNow")
             )
           );
         };

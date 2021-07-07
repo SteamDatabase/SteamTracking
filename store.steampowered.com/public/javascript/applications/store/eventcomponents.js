@@ -4211,7 +4211,7 @@
             o.a.createElement(
               "div",
               { className: Ze.LatestUpdateIcon },
-              o.a.createElement(Xe.ib, null)
+              o.a.createElement(Xe.jb, null)
             ),
             o.a.createElement(
               "div",
@@ -4557,8 +4557,8 @@
                     },
                   },
                   i
-                    ? o.a.createElement(Xe.J, null)
-                    : o.a.createElement(Xe.M, null)
+                    ? o.a.createElement(Xe.K, null)
+                    : o.a.createElement(Xe.N, null)
                 )
               ),
               i &&

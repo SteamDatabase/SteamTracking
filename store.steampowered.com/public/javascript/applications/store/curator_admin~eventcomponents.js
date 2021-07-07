@@ -2312,7 +2312,7 @@
               var i = this.props.admin.GetFeedLanguageHandleUnset();
               !a.jsondata.localized_summary &&
                 n.post.event_summary &&
-                ((a.jsondata.localized_summary = Object(F.d)(
+                ((a.jsondata.localized_summary = Object(F.e)(
                   a.jsondata.localized_summary,
                   30,
                   null
@@ -2322,7 +2322,7 @@
                   (a.jsondata.localized_summary[i] = n.post.event_summary)),
                 !a.jsondata.localized_subtitle &&
                   n.post.event_subtitle &&
-                  ((a.jsondata.localized_subtitle = Object(F.d)(
+                  ((a.jsondata.localized_subtitle = Object(F.e)(
                     a.jsondata.localized_subtitle,
                     30,
                     null

@@ -9984,7 +9984,7 @@
                               title: Object(vt.f)("#ChatEntryButton_Submit"),
                               onClick: this.SendMessage,
                             },
-                            s.createElement(rr.cb, null)
+                            s.createElement(rr.db, null)
                           )
                         ),
                         s.createElement(
@@ -10090,7 +10090,7 @@
         Mr = r.n(vr),
         Sr = Object(o.a)(function (e) {
           var t = e.appid,
-            r = Object(_r.c)(t, 0, !0),
+            r = Object(_r.d)(t, 0, !0),
             i = (r[0], r[1]),
             a = Object(gr.c)();
           Object(s.useEffect)(
@@ -10828,7 +10828,7 @@
                     "#BroadcastWatch_View_Broadcast_Page"
                   ),
                 },
-                s.createElement(rr.A, null)
+                s.createElement(rr.B, null)
               );
             }),
             (t.prototype.OnToggleChat = function (e) {
@@ -10863,7 +10863,7 @@
                   {
                     className: Object(nr.a)(Ir.a.viewer_count, "viewer_count"),
                   },
-                  s.createElement(rr.lb, null),
+                  s.createElement(rr.mb, null),
                   r.toLocaleString(vt.e.GetPreferredLocales())
                 ),
                 s.createElement(
@@ -10903,7 +10903,7 @@
                         "#StoreBroadcast_Change_store_Broadcast_settings"
                       ),
                     },
-                    s.createElement(rr.X, null)
+                    s.createElement(rr.Y, null)
                   ),
                   e
                 )
@@ -10970,7 +10970,7 @@
                 ),
                 onClick: e.OnPreventPopup,
               },
-              s.createElement(rr.pb, null)
+              s.createElement(rr.qb, null)
             )
           );
         }),
@@ -11141,7 +11141,7 @@
                 s.createElement(
                   "div",
                   { className: Ir.a.viewer_count },
-                  s.createElement(rr.lb, null),
+                  s.createElement(rr.mb, null),
                   c.toLocaleString(vt.e.GetPreferredLocales())
                 )
               );

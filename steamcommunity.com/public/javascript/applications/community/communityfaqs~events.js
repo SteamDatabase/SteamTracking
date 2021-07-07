@@ -4810,16 +4810,16 @@
     Mnbl: function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
-        return B;
+        return F;
       }),
         n.d(t, "b", function () {
-          return N;
+          return R;
         }),
         n.d(t, "d", function () {
-          return F;
+          return x;
         }),
         n.d(t, "c", function () {
-          return R;
+          return P;
         });
       var a = n("mrSG"),
         i = n("vDqi"),
@@ -4844,16 +4844,18 @@
         O = n("bDQf"),
         T = n("bxiW"),
         C = n("lkRc"),
-        j = "email_headline_",
-        I = "email_body_",
-        M = "sale_section_label_id_",
-        w = "sale_section_text_id_",
-        D = "email_subject",
-        k = "sale_tab_name_",
-        G = "sale_facet_name_",
-        L = "sale_facetvalue_name_",
-        A = "sale_facetvalue_subtitle_";
-      function B(e, t, n, a) {
+        j = n("fcuX"),
+        I = "email_headline_",
+        M = "email_body_",
+        w = "sale_section_label_id_",
+        D = "sale_section_text_id_",
+        k = "email_subject",
+        G = "sale_tab_name_",
+        L = "sale_facet_name_",
+        A = "sale_facetvalue_name_",
+        B = "sale_facetvalue_subtitle_",
+        N = "sale_reservation_bbcode_";
+      function F(e, t, n, a) {
         var i = new y.b();
         if (t)
           for (var r = 0; r < 30; ++r) {
@@ -4873,14 +4875,14 @@
             var s = new d.b(e.GetEmailSettings());
             for (r = 0; r < 30; ++r)
               s.BHasLocalizedSubject(r) &&
-                i.SetLocalization(D, r, s.GetLocalizedSubject(r));
+                i.SetLocalization(k, r, s.GetLocalizedSubject(r));
           }
           l.sections.forEach(function (e, t) {
             for (var n = new d.a(e), a = 0; a < 30; ++a)
               n.BHasHeadlineInLanguage(a) &&
-                i.SetLocalization(j + t, a, n.GetHeadline(a)),
+                i.SetLocalization(I + t, a, n.GetHeadline(a)),
                 n.BHasBodyInLanguage(a) &&
-                  i.SetLocalization(I + t, a, n.GetBody(a));
+                  i.SetLocalization(M + t, a, n.GetBody(a));
           });
         }
         return (
@@ -4888,77 +4890,102 @@
             e.BHasSaleEnabled() &&
             e.GetSaleSections().forEach(function (t, n) {
               for (
-                var a = function (a) {
+                var a,
+                  r = function (r) {
                     if (
-                      (e.BHasSaleSectionLabelLocalization(a, n) &&
-                        i.SetLocalization(
-                          M + t.unique_id,
-                          a,
-                          t.localized_label[a]
-                        ),
-                      e.BHasSaleSectionTextLocalization(a, n) &&
+                      (e.BHasSaleSectionLabelLocalization(r, n) &&
                         i.SetLocalization(
                           w + t.unique_id,
-                          a,
-                          t.text_section_contents[a]
+                          r,
+                          t.localized_label[r]
+                        ),
+                      e.BHasSaleSectionTextLocalization(r, n) &&
+                        i.SetLocalization(
+                          D + t.unique_id,
+                          r,
+                          t.text_section_contents[r]
                         ),
                       "tabs" === t.section_type && t.tabs)
                     )
-                      for (var r = 0, o = t.tabs; r < o.length; r++) {
-                        var l = o[r];
-                        e.BHasSaleSectionTabName(a, l) &&
+                      for (var o = 0, l = t.tabs; o < l.length; o++) {
+                        var s = l[o];
+                        e.BHasSaleSectionTabName(r, s) &&
                           i.SetLocalization(
-                            k + t.unique_id + "_" + l.unique_id,
-                            a,
-                            l.localized_label[a]
+                            G + t.unique_id + "_" + s.unique_id,
+                            r,
+                            s.localized_label[r]
                           );
                       }
                     t.enable_faceted_browsing &&
                       (t.facets.forEach(function (n) {
-                        e.BHasSaleSectionFacetName(a, n) &&
+                        e.BHasSaleSectionFacetName(r, n) &&
                           i.SetLocalization(
-                            G + t.unique_id + "_" + n.unique_id,
-                            a,
-                            n.name[a]
+                            L + t.unique_id + "_" + n.unique_id,
+                            r,
+                            n.name[r]
                           );
                       }),
                       t.facets.forEach(function (n) {
-                        n.facetValues.forEach(function (r) {
-                          e.BHasSaleSectionFacetValueName(a, r) &&
+                        n.facetValues.forEach(function (a) {
+                          e.BHasSaleSectionFacetValueName(r, a) &&
                             i.SetLocalization(
-                              L +
+                              A +
                                 t.unique_id +
                                 "_" +
                                 n.unique_id +
                                 "_" +
-                                r.unique_id,
-                              a,
-                              r.name[a]
+                                a.unique_id,
+                              r,
+                              a.name[r]
                             ),
-                            e.BHasSaleSectionFacetValueSubtitle(a, r) &&
+                            e.BHasSaleSectionFacetValueSubtitle(r, a) &&
                               i.SetLocalization(
-                                A +
+                                B +
                                   t.unique_id +
                                   "_" +
                                   n.unique_id +
                                   "_" +
-                                  r.unique_id,
-                                a,
-                                r.subtitle[a]
+                                  a.unique_id,
+                                r,
+                                a.subtitle[r]
                               );
                         });
-                      }));
+                      })),
+                      "vo_internal" == t.section_type &&
+                        "reservation_widget" ==
+                          (null === (l = t.internal_section_data) ||
+                          void 0 === l
+                            ? void 0
+                            : l.internal_type) &&
+                        (null ===
+                          (a = t.internal_section_data.reservation_options) ||
+                        void 0 === a
+                          ? void 0
+                          : a.length) > 0 &&
+                        t.internal_section_data.reservation_options.forEach(
+                          function (e) {
+                            e.localized_reservation_desc &&
+                              Boolean(
+                                S.a.Get(e.localized_reservation_desc, r)
+                              ) &&
+                              i.SetLocalization(
+                                N + t.unique_id + "_" + e.unique_id,
+                                r,
+                                e.localized_reservation_desc[r]
+                              );
+                          }
+                        );
                   },
-                  r = 0;
-                r < 30;
-                ++r
+                  o = 0;
+                o < 30;
+                ++o
               )
-                a(r);
+                r(o);
             }),
           i
         );
       }
-      function N(e, t, n) {
+      function R(e, t, n) {
         var a = new Array(),
           i = t.GetSortedTokenList();
         return (
@@ -4987,7 +5014,7 @@
                   e.BHasEmailEnabled())
                 ) {
                   var l = e.GetEmailSettings();
-                  if (C.b.IS_VALVE_GROUP && a === D) {
+                  if (C.b.IS_VALVE_GROUP && a === k) {
                     var s = new o.b(e);
                     (i || s.BHasLocalizedSubject(n)) &&
                       s.SetLocalizedSubject(n, i) &&
@@ -4996,12 +5023,12 @@
                   l.sections.forEach(function (t, l) {
                     var s = new o.a(t, e);
                     s.BHasHeadline() &&
-                      a === j + l &&
+                      a === I + l &&
                       (i || s.BHasHeadlineInLanguage(n)) &&
                       s.SetHeadline(i, n) &&
                       (r = !0),
                       s.BHasBody() &&
-                        a === I + l &&
+                        a === M + l &&
                         (i || s.BHasBodyInLanguage(n)) &&
                         s.SetBody(i, n) &&
                         (r = !0);
@@ -5009,35 +5036,36 @@
                 }
                 e.BHasSaleEnabled() &&
                   e.GetSaleSections().forEach(function (t, o) {
+                    var l, s;
                     if (
                       ((a !== "sale_section_label_" + o &&
-                        a !== M + t.unique_id) ||
+                        a !== w + t.unique_id) ||
                         ((i || e.BHasSaleSectionLabelLocalization(n, o)) &&
                           e.SetSaleSectionLabelLocalization(n, o, i) &&
                           (r = !0)),
                       "tabs" === t.section_type && t.tabs)
                     )
-                      for (var l = 0, s = t.tabs; l < s.length; l++) {
-                        var c = s[l];
-                        a === k + t.unique_id + "_" + c.unique_id &&
-                          (i || e.BHasSaleSectionTabName(n, c)) &&
-                          e.SetSaleSectionTabName(n, c, i) &&
+                      for (var c = 0, u = t.tabs; c < u.length; c++) {
+                        var d = u[c];
+                        a === G + t.unique_id + "_" + d.unique_id &&
+                          (i || e.BHasSaleSectionTabName(n, d)) &&
+                          e.SetSaleSectionTabName(n, d, i) &&
                           (r = !0);
                       }
                     "text_section" === t.section_type &&
-                      a === w + t.unique_id &&
+                      a === D + t.unique_id &&
                       (i || e.BHasSaleSectionTextLocalization(n, o)) &&
                       e.SetSaleSectionTextLocalization(n, o, i) &&
                       (r = !0),
                       t.enable_faceted_browsing &&
                         t.facets.forEach(function (o) {
-                          a === G + t.unique_id + "_" + o.unique_id &&
+                          a === L + t.unique_id + "_" + o.unique_id &&
                             (i || e.BHasSaleSectionFacetName(n, o)) &&
                             e.SetSaleSectionFacetName(n, o, i) &&
                             (r = !0),
                             o.facetValues.forEach(function (l) {
                               a ===
-                                L +
+                                A +
                                   t.unique_id +
                                   "_" +
                                   o.unique_id +
@@ -5047,7 +5075,7 @@
                                 e.SetSaleSectionFacetValueName(n, l, i) &&
                                 (r = !0),
                                 a ===
-                                  A +
+                                  B +
                                     t.unique_id +
                                     "_" +
                                     o.unique_id +
@@ -5061,7 +5089,36 @@
                                   e.SetSaleSectionFacetValueSubtitle(n, l, i) &&
                                   (r = !0);
                             });
-                        });
+                        }),
+                      "vo_internal" == t.section_type &&
+                        "reservation_widget" ==
+                          (null === (l = t.internal_section_data) ||
+                          void 0 === l
+                            ? void 0
+                            : l.internal_type) &&
+                        (null ===
+                          (s = t.internal_section_data.reservation_options) ||
+                        void 0 === s
+                          ? void 0
+                          : s.length) > 0 &&
+                        t.internal_section_data.reservation_options.forEach(
+                          function (o) {
+                            a === N + t.unique_id + "_" + o.unique_id &&
+                              (i ||
+                                (o.localized_reservation_desc &&
+                                  Boolean(
+                                    S.a.Get(o.localized_reservation_desc, n)
+                                  ))) &&
+                              S.a.Get(o.localized_reservation_desc, n) !== i &&
+                              ((o.localized_reservation_desc = S.a.Set(
+                                o.localized_reservation_desc || [],
+                                n,
+                                i
+                              )),
+                              e.SetDirty(j.c.jsondata_sales),
+                              (r = !0));
+                          }
+                        );
                   });
               }),
                 r && a.push(n);
@@ -5070,7 +5127,7 @@
           a
         );
       }
-      var F = (function (e) {
+      var x = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -5179,7 +5236,7 @@
               return u.createElement(
                 "div",
                 { className: Object(v.a)(_.FlexRowContainer) },
-                u.createElement(R, { editModel: this.props.editModel })
+                u.createElement(P, { editModel: this.props.editModel })
               );
             }),
             Object(a.c)([T.a], t.prototype, "OnRequestTranslations", null),
@@ -5187,7 +5244,7 @@
             (t = Object(a.c)([c.a], t))
           );
         })(u.Component),
-        R = function (e) {
+        P = function (e) {
           return u.createElement(
             u.Fragment,
             null,
@@ -5203,7 +5260,7 @@
                   onClick: function (t) {
                     t.preventDefault(),
                       Object(f.d)(
-                        u.createElement(x, { editModel: e.editModel }),
+                        u.createElement(U, { editModel: e.editModel }),
                         Object(E.m)(t)
                       );
                   },
@@ -5215,12 +5272,12 @@
               strToolTip: Object(S.f)("#EventEditor_Loc_Import_ttip"),
               strLabel: Object(S.f)("#EventEditor_Loc_Import_Short"),
               fnOnImportLocData: function (t, n) {
-                return N(e.editModel, t, n);
+                return R(e.editModel, t, n);
               },
             })
           );
         },
-        x = (function (e) {
+        U = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -5240,7 +5297,7 @@
               return (e && "" != e.trim()) || (e = "event"), e;
             }),
             (t.prototype.GetLocalizationModel = function () {
-              return B(
+              return F(
                 this.props.editModel,
                 this.state.bExportEventBody,
                 this.state.bExportEmail,
