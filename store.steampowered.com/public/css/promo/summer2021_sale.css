@@ -11,8 +11,8 @@ body.v6.sale_summer2021 .responsive_page_template_content {
             }
 body.v6.sale_summer2021 .page_background_holder {
                 background-size: contain !important;
-                max-height: 360px;
-                margin-top: 50px;
+                max-height: 400px;
+                margin-top: 30px;
             }
 
 body.v6.sale_summer2021 .home_page_takeover_sizer {
@@ -86,10 +86,28 @@ body.v6.sale_summer2021 .home_sticker_ctn.mobile {
     border-radius: 20px;
 }
 
+.bookmark_stickers {
+    background-image: url('https://cdn.cloudflare.steamstatic.com/store/promo/summer2021/home_stickers.png?v=1');
+    background-repeat: no-repeat;
+    max-width: 440px;
+    max-height: 355px;
+    position: absolute;
+    right: -55%;
+    top: -200px;
+    width: 50vw;
+    background-size: contain;
+    height: 30vw;
+}
+
 .bookmark_triangle {
     width: 18px;
-    margin-right: -1px;
-    color: #BE4328;
+    margin-left: -1px;
+    color: #E5502F;
+    transform: rotate(180deg);
+}
+
+.bookmark_triangle.top {
+    color: #B2292D;
 }
 
 .bookmark_img {
@@ -100,16 +118,28 @@ body.v6.sale_summer2021 .home_sticker_ctn.mobile {
 }
 
 .bookmark_text {
-    font-size: 11px;
+    font-size: 28px;
     font-weight: 400;
-    font-family: "Big Shoulders Display";
+    text-transform: uppercase;
     color: #fefeef;
     text-overflow: ellipsis;
-    background-color: #BE4328;
-    padding: 14px 12px;
+    background-color: #E5502F;
+    padding: 0px 10px;
     letter-spacing: 1px;
-    border-right: 3px solid #BE4328;
-    border-left: 1px solid #BE4328;
+    border-right: 3px solid #E5502F;
+    border-left: 1px solid #E5502F;
+}
+
+.bookmark_text.top {
+    border-right: 3px solid #B2292D;
+    border-left: 1px solid #B2292D;
+    background-color: #B2292D;
+    font-size: 14px;
+    padding: 7px 5px;
+}
+
+.bookmark_ctn.top {
+    height: 32px;
 }
 
 .bookmark_text > div {
@@ -119,25 +149,19 @@ body.v6.sale_summer2021 .home_sticker_ctn.mobile {
     text-overflow: ellipsis;
 }
 
-.bookmark_ctn:hover {
-    filter: drop-shadow(2px 4px 16px #3D3E38cc);
-    transform: rotate(
-            3deg
-    ) scale(1.07);
+.bookmarks_ctn:hover {
+    transform: rotate( 3deg ) scale(1.07);
     -webkit-transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     -moz-transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.bookmark_ctn {
-    width: fit-content;
-    user-select: none;
-    height: 60px;
+.bookmarks_ctn {
     display: flex;
     margin-bottom: 3%;
-    margin-right: 7px;
-    cursor: pointer;
-    filter: drop-shadow(2px 4px 12px #3D3E3899);
+    margin-right: 1vw;
+    position: relative;
+    flex-direction: column;
     transform: rotate(
             0deg
     ) scale(1);
@@ -145,9 +169,18 @@ body.v6.sale_summer2021 .home_sticker_ctn.mobile {
     -moz-transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     		font-family: "Motiva Sans", Sans-serif;
-		font-weight: normal; /* normal */
+		font-weight: 200; /* thin */
 
 		}
+
+.bookmark_ctn {
+    width: fit-content;
+    user-select: none;
+    height: 40px;
+    display: flex;
+    cursor: pointer;
+    z-index: 5;
+}
 
 .summer_top_text {
     font-size: 16px;
@@ -161,6 +194,7 @@ body.v6.sale_summer2021 .home_sticker_ctn.mobile {
     color: #FFF;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     align-self: center;
+    filter: drop-shadow(2px 4px 12px #3D3E3899);
     font-family: "Motiva Sans", Sans-serif;
 }
 
@@ -1261,13 +1295,25 @@ body.forgeyourfate {
         margin: 0;
     }
 
-    html.responsive .bookmark_ctn {
-        display: none;
+    html.responsive body.v6.sale_summer2021 .bookmark_stickers {
+        background-image: url('https://cdn.cloudflare.steamstatic.com/store/promo/summer2021/dog_sticker.png?v=1');
+        max-width: 160px;
+        max-height: 160px;
+        top: -110px;
+        left: -21%;
+    }
+
+    html.responsive body.v6.sale_summer2021 .bookmarks_ctn {
+        margin-bottom: 5%;
+    }
+
+    html.responsive body.v6.sale_summer2021 .home_header_textimage_ctn {
+        justify-content: flex-start;
     }
 
     body.v6.sale_summer2021 .home_page_takeover_sizer {
                     min-height: unset;
-                    height: 22vw !important;
+                    height: 42vw !important;
                 }
 
     html.responsive body.v6.sale_summer2021 .home_header_textimage_ctn {
@@ -1370,24 +1416,25 @@ body.forgeyourfate {
 
     body.v6.sale_summer2021 .home_page_takeover_sizer {
                     min-height: unset;
-                    height: 65vw !important;
+                    height: 75vw !important;
                 }
 
     .page_background_holder_mobile {
         display: block;
         width: 100%;
         height: 86vw;
-        max-height: 278px;
+        max-height: 400px;
         margin-top: 20px;
     }
 
     .home_header_textimage_mobile {
         background-size: contain;
-        display: block;
+        display: flex;
         width: 100%;
         height: 100%;
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: top center;
+        align-items: flex-end;
     }
 
     .event_nav_element {
