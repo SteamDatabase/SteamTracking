@@ -12137,6 +12137,7 @@ and limitations under the License.
       LegendItem: "dpcstandings_LegendItem_1JF4X",
       ColorSquare: "dpcstandings_ColorSquare_ud1oU",
       Description: "dpcstandings_Description_1I5ee",
+      DPCStandingsRoundRobin: "dpcstandings_DPCStandingsRoundRobin_3gskr",
       DPCStandingsGrid: "dpcstandings_DPCStandingsGrid_3w9B9",
       Header: "dpcstandings_Header_3Kf0X",
       ViewSelctor: "dpcstandings_ViewSelctor_1ylEQ",
@@ -12165,7 +12166,6 @@ and limitations under the License.
       Removed: "dpcstandings_Removed_2YjFV",
       Record: "dpcstandings_Record_3WL3i",
       DPCStandingsBracket: "dpcstandings_DPCStandingsBracket_9iCXI",
-      Title: "dpcstandings_Title_1j7g0",
       BracketContainer: "dpcstandings_BracketContainer_3v7JH",
       BracketNodeContainer: "dpcstandings_BracketNodeContainer_3Kqe4",
       BracketConnectorContainer: "dpcstandings_BracketConnectorContainer_23fuG",
@@ -20218,7 +20218,7 @@ object-assign
             var a = n ? "_abbrev" : "";
             switch (e) {
               case c.h.NA:
-                return "#dpc_gion" + a + "_na_" + t;
+                return "#dpc_region" + a + "_na_" + t;
               case c.h.SA:
                 return "#dpc_region" + a + "_sa_" + t;
               case c.h.WEU:
@@ -40647,35 +40647,37 @@ object-assign
     var Kn = Object(s.a)(function () {
         var e = Nn.a.Get().GetHomePageContext(),
           t = Nn.a.Get().GetLeagueNode(e.nLeagueID, e.nNodeID);
-        return o.a.createElement(
-          "div",
-          { className: Vn.a.DPCSeriesDetails },
-          o.a.createElement(
-            "div",
-            {
-              className: Vn.a.BGContainer,
-              style: {
-                backgroundImage:
-                  "url( " + p.a.IMG_URL + "backgrounds/grout01.png )",
-              },
-            },
-            t &&
+        return 0 == e.nLeagueID && 0 == e.nNodeID
+          ? null
+          : o.a.createElement(
+              "div",
+              { className: Vn.a.DPCSeriesDetails },
               o.a.createElement(
                 "div",
-                { className: Vn.a.Container },
-                o.a.createElement(Jn, null),
-                o.a.createElement(Qn, null),
-                o.a.createElement(Zn, null)
-              ),
-            o.a.createElement(_e, {
-              left: !0,
-              right: !0,
-              color: "#222226",
-              startPct: 80,
-              endPct: 100,
-            })
-          )
-        );
+                {
+                  className: Vn.a.BGContainer,
+                  style: {
+                    backgroundImage:
+                      "url( " + p.a.IMG_URL + "backgrounds/grout01.png )",
+                  },
+                },
+                t &&
+                  o.a.createElement(
+                    "div",
+                    { className: Vn.a.Container },
+                    o.a.createElement(Jn, null),
+                    o.a.createElement(Qn, null),
+                    o.a.createElement(Zn, null)
+                  ),
+                o.a.createElement(_e, {
+                  left: !0,
+                  right: !0,
+                  color: "#222226",
+                  startPct: 80,
+                  endPct: 100,
+                })
+              )
+            );
       }),
       Jn = Object(s.a)(function () {
         var e = No(),
@@ -46533,36 +46535,48 @@ object-assign
                 eRegion: _n.h.NA,
                 eDivision: n,
                 arrHighlights: a,
+                bShowLegend: !1,
+                bShowHeader: !0,
               }),
               o.a.createElement(to, {
                 ePhase: t,
                 eRegion: _n.h.SA,
                 eDivision: n,
                 arrHighlights: a,
+                bShowLegend: !1,
+                bShowHeader: !0,
               }),
               o.a.createElement(to, {
                 ePhase: t,
                 eRegion: _n.h.WEU,
                 eDivision: n,
                 arrHighlights: a,
+                bShowLegend: !1,
+                bShowHeader: !0,
               }),
               o.a.createElement(to, {
                 ePhase: t,
                 eRegion: _n.h.EEU,
                 eDivision: n,
                 arrHighlights: a,
+                bShowLegend: !1,
+                bShowHeader: !0,
               }),
               o.a.createElement(to, {
                 ePhase: t,
                 eRegion: _n.h.CN,
                 eDivision: n,
                 arrHighlights: a,
+                bShowLegend: !1,
+                bShowHeader: !0,
               }),
               o.a.createElement(to, {
                 ePhase: t,
                 eRegion: _n.h.SEA,
                 eDivision: n,
                 arrHighlights: a,
+                bShowLegend: !1,
+                bShowHeader: !0,
               })
             ),
             o.a.createElement(
@@ -46600,29 +46614,25 @@ object-assign
           n = e.eRegion,
           a = e.eDivision,
           r = e.arrHighlights,
-          s = e.bDrawLegend,
-          l = (No(), Object(i.useState)(!1)),
-          c = l[0],
-          u = l[1];
+          i = e.bShowLegend,
+          s = e.bShowHeader;
         return o.a.createElement(
           "div",
           { className: ca.a.DPCStandingsRoundRobin },
-          c &&
-            o.a.createElement(no, {
-              ePhase: t,
-              eRegion: n,
-              eDivision: a,
-              setShowGrid: u,
-            }),
-          !c &&
-            o.a.createElement(ao, {
-              ePhase: t,
-              eRegion: n,
-              eDivision: a,
-              arrHighlights: r,
-              bDrawLegend: s,
-              setShowGrid: u,
-            })
+          o.a.createElement(ao, {
+            ePhase: t,
+            eRegion: n,
+            eDivision: a,
+            arrHighlights: r,
+            bShowLegend: i,
+            bShowHeader: s,
+          }),
+          o.a.createElement(no, {
+            ePhase: t,
+            eRegion: n,
+            eDivision: a,
+            bShowHeader: s,
+          })
         );
       }),
       no = Object(s.a)(function (e) {
@@ -46631,15 +46641,15 @@ object-assign
           a = e.ePhase,
           r = e.eRegion,
           s = e.eDivision,
-          c = e.setShowGrid,
+          c = e.bShowHeader,
           d = No(),
           m = Object(i.useState)(void 0),
-          h = m[0],
-          f = m[1],
-          g = Object(i.useState)(0),
-          v = g[0],
-          b = g[1],
-          y =
+          p = m[0],
+          h = m[1],
+          f = Object(i.useState)(0),
+          g = f[0],
+          v = f[1],
+          b =
             null === (t = Nn.a.Get().GetEventNodes(d, 0)) || void 0 === t
               ? void 0
               : t.filter(function (e) {
@@ -46650,45 +46660,37 @@ object-assign
                     (null == t ? void 0 : t.eDivision) == s
                   );
                 }),
-          E =
+          y =
             null === (n = Nn.a.Get().GetEventTeams(d)) || void 0 === n
               ? void 0
               : n.filter(function (e) {
                   return null != Nn.a.Get().GetTeamStanding(d, a, r, s, e);
                 }),
-          L = "";
+          E = "";
         switch (Nn.a.Get().GetEventType(d)) {
           case _n.e.LEAGUE:
-            L = Nn.a.Get().GetRegionString(r);
+            E = Nn.a.Get().GetRegionString(r);
             break;
           case _n.e.MAJOR:
           case _n.e.INTERNATIONAL:
           case _n.e.INTERNATIONAL_QUALIFIERS:
-            L = Nn.a.Get().GetEventPhaseString(a);
+            E = Nn.a.Get().GetEventPhaseString(a);
         }
-        var w = Nn.a
+        var L = Nn.a
           .Get()
           .GetLeagueNode(
-            null == h ? void 0 : h.nLeagueID,
-            null == h ? void 0 : h.nNodeID
+            null == p ? void 0 : p.nLeagueID,
+            null == p ? void 0 : p.nNodeID
           );
         return o.a.createElement(
           "div",
           { className: ca.a.DPCStandingsGrid },
-          o.a.createElement(
-            "div",
-            { className: ca.a.Header },
-            Object(_.a)(L),
-            o.a.createElement("div", {
-              className: ca.a.ViewSelctor,
-              onClick: function () {
-                return c(!1);
-              },
-              style: {
-                backgroundImage: "url( " + p.a.IMG_URL + "icons/list.png )",
-              },
-            })
-          ),
+          c &&
+            o.a.createElement(
+              "div",
+              { className: ca.a.Header },
+              Object(_.a)(E)
+            ),
           o.a.createElement(
             "div",
             { className: ca.a.GridContainer },
@@ -46698,34 +46700,34 @@ object-assign
               o.a.createElement("div", {
                 className: Object(ce.a)(ca.a.GridCell, ca.a.HeaderCell),
               }),
-              E.map(function (e) {
+              y.map(function (e) {
                 var t =
-                    e == v &&
-                    (null == w ? void 0 : w.is_completed) &&
-                    (((null == w ? void 0 : w.team_id_1) == e &&
-                      (null == w ? void 0 : w.team_1_wins) >
-                        (null == w ? void 0 : w.team_2_wins)) ||
-                      ((null == w ? void 0 : w.team_id_2) == e &&
-                        (null == w ? void 0 : w.team_2_wins) >
-                          (null == w ? void 0 : w.team_1_wins))),
+                    e == g &&
+                    (null == L ? void 0 : L.is_completed) &&
+                    (((null == L ? void 0 : L.team_id_1) == e &&
+                      (null == L ? void 0 : L.team_1_wins) >
+                        (null == L ? void 0 : L.team_2_wins)) ||
+                      ((null == L ? void 0 : L.team_id_2) == e &&
+                        (null == L ? void 0 : L.team_2_wins) >
+                          (null == L ? void 0 : L.team_1_wins))),
                   n =
-                    e == v &&
-                    (null == w ? void 0 : w.is_completed) &&
-                    (((null == w ? void 0 : w.team_id_1) == e &&
-                      (null == w ? void 0 : w.team_1_wins) <
-                        (null == w ? void 0 : w.team_2_wins)) ||
-                      ((null == w ? void 0 : w.team_id_2) == e &&
-                        (null == w ? void 0 : w.team_2_wins) <
-                          (null == w ? void 0 : w.team_1_wins))),
+                    e == g &&
+                    (null == L ? void 0 : L.is_completed) &&
+                    (((null == L ? void 0 : L.team_id_1) == e &&
+                      (null == L ? void 0 : L.team_1_wins) <
+                        (null == L ? void 0 : L.team_2_wins)) ||
+                      ((null == L ? void 0 : L.team_id_2) == e &&
+                        (null == L ? void 0 : L.team_2_wins) <
+                          (null == L ? void 0 : L.team_1_wins))),
                   a =
-                    e == v &&
-                    (null == w ? void 0 : w.is_completed) &&
-                    (((null == w ? void 0 : w.team_id_1) == e &&
-                      (null == w ? void 0 : w.team_1_wins) ==
-                        (null == w ? void 0 : w.team_2_wins)) ||
-                      ((null == w ? void 0 : w.team_id_2) == e &&
-                        (null == w ? void 0 : w.team_2_wins) ==
-                          (null == w ? void 0 : w.team_1_wins)));
+                    e == g &&
+                    (null == L ? void 0 : L.is_completed) &&
+                    (((null == L ? void 0 : L.team_id_1) == e &&
+                      (null == L ? void 0 : L.team_1_wins) ==
+                        (null == L ? void 0 : L.team_2_wins)) ||
+                      ((null == L ? void 0 : L.team_id_2) == e &&
+                        (null == L ? void 0 : L.team_2_wins) ==
+                          (null == L ? void 0 : L.team_1_wins)));
                 return o.a.createElement(
                   "div",
                   {
@@ -46742,34 +46744,34 @@ object-assign
                 );
               })
             ),
-            E.map(function (e) {
+            y.map(function (e) {
               var t =
-                  e != v &&
-                  (null == w ? void 0 : w.is_completed) &&
-                  (((null == w ? void 0 : w.team_id_1) == e &&
-                    (null == w ? void 0 : w.team_1_wins) >
-                      (null == w ? void 0 : w.team_2_wins)) ||
-                    ((null == w ? void 0 : w.team_id_2) == e &&
-                      (null == w ? void 0 : w.team_2_wins) >
-                        (null == w ? void 0 : w.team_1_wins))),
+                  e != g &&
+                  (null == L ? void 0 : L.is_completed) &&
+                  (((null == L ? void 0 : L.team_id_1) == e &&
+                    (null == L ? void 0 : L.team_1_wins) >
+                      (null == L ? void 0 : L.team_2_wins)) ||
+                    ((null == L ? void 0 : L.team_id_2) == e &&
+                      (null == L ? void 0 : L.team_2_wins) >
+                        (null == L ? void 0 : L.team_1_wins))),
                 n =
-                  e != v &&
-                  (null == w ? void 0 : w.is_completed) &&
-                  (((null == w ? void 0 : w.team_id_1) == e &&
-                    (null == w ? void 0 : w.team_1_wins) <
-                      (null == w ? void 0 : w.team_2_wins)) ||
-                    ((null == w ? void 0 : w.team_id_2) == e &&
-                      (null == w ? void 0 : w.team_2_wins) <
-                        (null == w ? void 0 : w.team_1_wins))),
+                  e != g &&
+                  (null == L ? void 0 : L.is_completed) &&
+                  (((null == L ? void 0 : L.team_id_1) == e &&
+                    (null == L ? void 0 : L.team_1_wins) <
+                      (null == L ? void 0 : L.team_2_wins)) ||
+                    ((null == L ? void 0 : L.team_id_2) == e &&
+                      (null == L ? void 0 : L.team_2_wins) <
+                        (null == L ? void 0 : L.team_1_wins))),
                 a =
-                  e != v &&
-                  (null == w ? void 0 : w.is_completed) &&
-                  (((null == w ? void 0 : w.team_id_1) == e &&
-                    (null == w ? void 0 : w.team_1_wins) ==
-                      (null == w ? void 0 : w.team_2_wins)) ||
-                    ((null == w ? void 0 : w.team_id_2) == e &&
-                      (null == w ? void 0 : w.team_2_wins) ==
-                        (null == w ? void 0 : w.team_1_wins)));
+                  e != g &&
+                  (null == L ? void 0 : L.is_completed) &&
+                  (((null == L ? void 0 : L.team_id_1) == e &&
+                    (null == L ? void 0 : L.team_1_wins) ==
+                      (null == L ? void 0 : L.team_2_wins)) ||
+                    ((null == L ? void 0 : L.team_id_2) == e &&
+                      (null == L ? void 0 : L.team_2_wins) ==
+                        (null == L ? void 0 : L.team_1_wins)));
               return o.a.createElement(
                 "div",
                 { key: "r" + e, className: ca.a.GridRow },
@@ -46786,8 +46788,8 @@ object-assign
                   },
                   o.a.createElement(zn, { nTeamID: e, nSize: 32 })
                 ),
-                E.map(function (t) {
-                  var n = y.find(function (n) {
+                y.map(function (t) {
+                  var n = b.find(function (n) {
                       var a = Nn.a.Get().GetLeagueNode(n.nLeagueID, n.nNodeID);
                       return (
                         ((null == a ? void 0 : a.team_id_1) == e &&
@@ -46836,11 +46838,11 @@ object-assign
                       "" + (null == n ? void 0 : n.nNodeID),
                       Object(pn.o)(0, pn.i.SERIES)
                     ),
-                    h = u.a.dpc_schedule(Object(pn.k)(d));
+                    f = u.a.dpc_schedule(Object(pn.k)(d));
                   return o.a.createElement(
                     l.b,
                     {
-                      to: e == t ? void 0 : r || i ? _ : h,
+                      to: e == t ? void 0 : r || i ? _ : f,
                       key: "c" + e + "_" + t,
                       className: Object(ce.a)(
                         ca.a.GridCell,
@@ -46849,10 +46851,10 @@ object-assign
                         s && ca.a.Self
                       ),
                       onMouseEnter: function () {
-                        (r || i) && (f(n), b(t));
+                        (r || i) && (h(n), v(t));
                       },
                       onMouseLeave: function () {
-                        (r || i) && (f(void 0), b(0));
+                        (r || i) && (h(void 0), v(0));
                       },
                     },
                     (r || i) &&
@@ -46891,8 +46893,8 @@ object-assign
           a = e.eRegion,
           r = e.eDivision,
           i = e.arrHighlights,
-          s = e.bDrawLegend,
-          l = e.setShowGrid,
+          s = e.bShowLegend,
+          l = e.bShowHeader,
           c = No(),
           u = (null === (t = Nn.a.Get().GetEventTeams(c)) || void 0 === t
             ? void 0
@@ -46920,20 +46922,12 @@ object-assign
         return o.a.createElement(
           "div",
           { className: Object(ce.a)(ca.a.DPCStandingsTeamList) },
-          o.a.createElement(
-            "div",
-            { className: ca.a.Header },
-            Object(_.a)(d),
-            o.a.createElement("div", {
-              className: ca.a.ViewSelctor,
-              onClick: function () {
-                return l(!0);
-              },
-              style: {
-                backgroundImage: "url( " + p.a.IMG_URL + "icons/grid.png )",
-              },
-            })
-          ),
+          l &&
+            o.a.createElement(
+              "div",
+              { className: ca.a.Header },
+              Object(_.a)(d)
+            ),
           o.a.createElement(
             "div",
             { className: ca.a.Teams },
@@ -47453,18 +47447,17 @@ object-assign
         var t = e.ePhase,
           n = e.eRegion,
           a = e.eDivision,
-          r = e.strTitle,
-          s = No(),
-          l = Object(i.useState)(!1),
-          c = l[0],
-          u = l[1],
-          d = Nn.a.Get().GetEventPhaseNodeGroupID(s, t, a, n),
-          m = d.nLeagueID,
-          p = d.nNodeGroupID,
-          h = Nn.a.Get().GetLeagueNodeGroup(m, p),
-          f = new Set();
-        null == h ||
-          h.nodes.forEach(function (e) {
+          r = No(),
+          s = Object(i.useState)(!1),
+          l = s[0],
+          c = s[1],
+          u = Nn.a.Get().GetEventPhaseNodeGroupID(r, t, a, n),
+          d = u.nLeagueID,
+          m = u.nNodeGroupID,
+          p = Nn.a.Get().GetLeagueNodeGroup(d, m),
+          h = new Set();
+        null == p ||
+          p.nodes.forEach(function (e) {
             var t = (null == e ? void 0 : e.actual_time)
               ? null == e
                 ? void 0
@@ -47474,34 +47467,27 @@ object-assign
               : e.scheduled_time;
             if (0 != t) {
               var n = new Date(1e3 * t).setHours(0, 0, 0, 0) / 1e3;
-              f.add(n);
+              h.add(n);
             }
           });
-        var g = Array.from(f.values()).sort();
+        var f = Array.from(h.values()).sort();
         return o.a.createElement(
           "div",
           { className: Object(ce.a)(ca.a.DPCStandingsBracket) },
-          r &&
-            o.a.createElement("div", { className: ca.a.Title }, Object(_.a)(r)),
           o.a.createElement(lo, {
-            nLeagueID: m,
-            nNodeGroupID: p,
-            bShowingDays: c,
+            nLeagueID: d,
+            nNodeGroupID: m,
+            bShowingDays: l,
           }),
           o.a.createElement(
             "div",
-            {
-              className: Object(ce.a)(
-                ca.a.DayDisplayContainer,
-                r && ca.a.TitleSpacing
-              ),
-            },
+            { className: ca.a.DayDisplayContainer },
             o.a.createElement(
               "div",
               {
-                className: Object(ce.a)(ca.a.ShowButton, c && ca.a.Hidden),
+                className: Object(ce.a)(ca.a.ShowButton, l && ca.a.Hidden),
                 onClick: function () {
-                  return u(!0);
+                  return c(!0);
                 },
               },
               Object(_.a)("#dpc_show_days")
@@ -47509,17 +47495,17 @@ object-assign
             o.a.createElement(
               "div",
               {
-                className: Object(ce.a)(ca.a.HideButton, !c && ca.a.Hidden),
+                className: Object(ce.a)(ca.a.HideButton, !l && ca.a.Hidden),
                 onClick: function () {
-                  return u(!1);
+                  return c(!1);
                 },
               },
               Object(_.a)("#hide")
             ),
             o.a.createElement(
               "div",
-              { className: Object(ce.a)(ca.a.DayList, !c && ca.a.Hidden) },
-              g.map(function (e, t) {
+              { className: Object(ce.a)(ca.a.DayList, !l && ca.a.Hidden) },
+              f.map(function (e, t) {
                 return o.a.createElement(
                   "div",
                   {
@@ -47974,13 +47960,15 @@ object-assign
         if (
           (Object(i.useEffect)(
             function () {
-              var t;
-              (null === (t = e.state) || void 0 === t
+              var n;
+              (null === (n = e.state) || void 0 === n
                 ? void 0
-                : t.bPreventScroll) ||
+                : n.bPreventScroll) ||
+                "0" == t.strLeagueID ||
+                "0" == t.strNodeID ||
                 window.scrollTo({ top: 490, left: 0, behavior: "smooth" });
             },
-            [e]
+            [e, t]
           ),
           !t.strLeagueID || !t.strNodeID || !t.strSeriesDisplay)
         )
@@ -48062,119 +48050,166 @@ object-assign
             );
       }),
       wo = Object(s.a)(function () {
-        var e = No();
-        if (Nn.a.Get().GetEventType(e) != _n.e.MAJOR) return null;
-        return o.a.createElement(
-          "div",
-          { className: Eo.a.DPCStandingsPageMajor },
-          o.a.createElement(to, {
-            ePhase: _n.d.WILD_CARD,
-            eRegion: _n.h.UNSET,
-            eDivision: _n.b.UNSET,
-            arrHighlights: [
-              {
-                nMin: 1,
-                nMax: 2,
-                strColor: "#117C30",
-                strDescription: "#dpc_advance_to_group",
+        var e = No(),
+          t = Object(c.g)(),
+          n = Object(c.i)(),
+          a = [
+            { value: _n.d.WILD_CARD, strLabel: "#dpc_wild_card" },
+            { value: _n.d.GROUP_STAGE, strLabel: "#dpc_group_stage" },
+            { value: _n.d.PLAYOFF, strLabel: "#dpc_playoff" },
+          ],
+          r = parseInt(n.strSelection);
+        return Nn.a.Get().GetEventType(e) != _n.e.MAJOR
+          ? null
+          : _n.d[r] && r != _n.d.INVALID
+          ? o.a.createElement(
+              "div",
+              { className: Eo.a.DPCStandingsPageMajor },
+              o.a.createElement(
+                "div",
+                { className: Eo.a.Header },
+                o.a.createElement(yn, {
+                  options: a,
+                  selectedOption: r,
+                  setOption: function (n) {
+                    t.push(u.a.dpc_standings(Object(pn.k)(e), "" + n));
+                  },
+                })
+              ),
+              r == _n.d.WILD_CARD &&
+                o.a.createElement(to, {
+                  ePhase: _n.d.WILD_CARD,
+                  eRegion: _n.h.UNSET,
+                  eDivision: _n.b.UNSET,
+                  arrHighlights: [
+                    {
+                      nMin: 1,
+                      nMax: 2,
+                      strColor: "#117C30",
+                      strDescription: "#dpc_advance_to_group",
+                    },
+                    {
+                      nMin: 3,
+                      nMax: 6,
+                      strColor: "#922820",
+                      strDescription: "#dpc_eliminated",
+                    },
+                  ],
+                  bShowLegend: !0,
+                  bShowHeader: !1,
+                }),
+              r == _n.d.GROUP_STAGE &&
+                o.a.createElement(to, {
+                  ePhase: _n.d.GROUP_STAGE,
+                  eRegion: _n.h.UNSET,
+                  eDivision: _n.b.UNSET,
+                  arrHighlights: [
+                    {
+                      nMin: 1,
+                      nMax: 2,
+                      strColor: "#117C30",
+                      strDescription: "#dpc_advance_to_upper_bracket",
+                    },
+                    {
+                      nMin: 3,
+                      nMax: 6,
+                      strColor: "#929820",
+                      strDescription: "#dpc_advance_to_lower_bracket",
+                    },
+                    {
+                      nMin: 7,
+                      nMax: 8,
+                      strColor: "#922820",
+                      strDescription: "#dpc_eliminated",
+                    },
+                  ],
+                  bShowLegend: !0,
+                  bShowHeader: !1,
+                }),
+              r == _n.d.PLAYOFF &&
+                o.a.createElement(co, {
+                  ePhase: _n.d.PLAYOFF,
+                  eRegion: _n.h.UNSET,
+                  eDivision: _n.b.UNSET,
+                })
+            )
+          : o.a.createElement(c.a, {
+              to: {
+                state: { bPreventScroll: !0 },
+                pathname: u.a.dpc_standings(
+                  Object(pn.k)(e),
+                  "" + _n.d.WILD_CARD
+                ),
               },
-              {
-                nMin: 3,
-                nMax: 6,
-                strColor: "#922820",
-                strDescription: "#dpc_eliminated",
-              },
-            ],
-            bDrawLegend: !0,
-          }),
-          o.a.createElement(to, {
-            ePhase: _n.d.GROUP_STAGE,
-            eRegion: _n.h.UNSET,
-            eDivision: _n.b.UNSET,
-            arrHighlights: [
-              {
-                nMin: 1,
-                nMax: 2,
-                strColor: "#117C30",
-                strDescription: "#dpc_advance_to_upper_bracket",
-              },
-              {
-                nMin: 3,
-                nMax: 6,
-                strColor: "#929820",
-                strDescription: "#dpc_advance_to_lower_bracket",
-              },
-              {
-                nMin: 7,
-                nMax: 8,
-                strColor: "#922820",
-                strDescription: "#dpc_eliminated",
-              },
-            ],
-            bDrawLegend: !0,
-          }),
-          o.a.createElement(co, {
-            ePhase: _n.d.PLAYOFF,
-            eRegion: _n.h.UNSET,
-            eDivision: _n.b.UNSET,
-            strTitle: "#dpc_playoff",
-          })
-        );
+            });
       }),
       So = Object(s.a)(function () {
         var e = No(),
           t = Object(c.g)(),
           n = Object(c.i)(),
-          a = Object(pn.l)(n.strSelection),
-          r = Object(i.useState)(
-            a != _n.h.UNSET ? a : Nn.a.Get().GetDefaultRegion()
-          ),
-          s = r[0],
-          l = r[1],
-          d = [
+          a = [
             { value: _n.h.NA, strLabel: "#dpc_region_na" },
             { value: _n.h.SA, strLabel: "#dpc_region_sa" },
             { value: _n.h.WEU, strLabel: "#dpc_region_weu" },
             { value: _n.h.EEU, strLabel: "#dpc_region_eeu" },
             { value: _n.h.CN, strLabel: "#dpc_region_cn" },
             { value: _n.h.SEA, strLabel: "#dpc_region_sea" },
-          ];
+          ],
+          r = parseInt(n.strSelection);
+        return Nn.a.Get().GetEventType(e) != _n.e.INTERNATIONAL_QUALIFIERS
+          ? null
+          : _n.h[r] && r != _n.h.UNSET
+          ? o.a.createElement(
+              "div",
+              { className: Eo.a.DPCStandingsPageTIQualifiers },
+              o.a.createElement(
+                "div",
+                { className: Eo.a.Header },
+                o.a.createElement(yn, {
+                  options: a,
+                  selectedOption: r,
+                  setOption: function (n) {
+                    t.push(u.a.dpc_standings(Object(pn.k)(e), "" + n));
+                  },
+                })
+              ),
+              o.a.createElement(co, {
+                ePhase: _n.d.PLAYOFF,
+                eRegion: r,
+                eDivision: _n.b.UNSET,
+              })
+            )
+          : o.a.createElement(c.a, {
+              to: {
+                state: { bPreventScroll: !0 },
+                pathname: u.a.dpc_standings(
+                  Object(pn.k)(e),
+                  "" + Nn.a.Get().GetDefaultRegion()
+                ),
+              },
+            });
+      }),
+      Mo = Object(s.a)(function () {
+        var e = Object(c.h)(),
+          t = Object(c.i)();
         return (
           Object(i.useEffect)(
             function () {
-              t.push(u.a.dpc_standings(Object(pn.k)(e), "" + s));
+              var t;
+              (null === (t = e.state) || void 0 === t
+                ? void 0
+                : t.bPreventScroll) ||
+                window.scrollTo({ top: 490, left: 0, behavior: "smooth" });
             },
-            [s, e, t]
+            [e, t]
           ),
-          Nn.a.Get().GetEventType(e) != _n.e.INTERNATIONAL_QUALIFIERS
-            ? null
-            : o.a.createElement(
-                "div",
-                { className: Eo.a.DPCStandingsPageTIQualifiers },
-                o.a.createElement(
-                  "div",
-                  { className: Eo.a.Header },
-                  o.a.createElement(yn, {
-                    options: d,
-                    selectedOption: s,
-                    setOption: l,
-                  })
-                ),
-                o.a.createElement(co, {
-                  ePhase: _n.d.PLAYOFF,
-                  eRegion: s,
-                  eDivision: _n.b.UNSET,
-                })
-              )
-        );
-      }),
-      Mo = Object(s.a)(function () {
-        return o.a.createElement(
-          "div",
-          { className: Eo.a.DPCStandingsPage },
-          o.a.createElement(Lo, null),
-          o.a.createElement(wo, null),
-          o.a.createElement(So, null)
+          o.a.createElement(
+            "div",
+            { className: Eo.a.DPCStandingsPage },
+            o.a.createElement(Lo, null),
+            o.a.createElement(wo, null),
+            o.a.createElement(So, null)
+          )
         );
       }),
       Do = n("X40S"),
@@ -49660,9 +49695,9 @@ object-assign
       DPCStandingsPageLeague: "dpcstandingspage_DPCStandingsPageLeague_34H1h",
       DivisionHeader: "dpcstandingspage_DivisionHeader_3713C",
       DPCStandingsPageMajor: "dpcstandingspage_DPCStandingsPageMajor_3rfFl",
+      Header: "dpcstandingspage_Header_1EgAU",
       DPCStandingsPageTIQualifiers:
         "dpcstandingspage_DPCStandingsPageTIQualifiers_1z6AW",
-      Header: "dpcstandingspage_Header_1EgAU",
     };
   },
   iYuL: function (e, t, n) {
