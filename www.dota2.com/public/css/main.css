@@ -1150,7 +1150,7 @@ a {
   align-items: center;
   justify-content: center;
   height: 80px;
-  padding: 0px 20px;
+  padding: 0px 30px;
   background-color: #000;
   position: relative;
 }
@@ -1162,7 +1162,6 @@ a {
 }
 .microheader_MicroHeader_U7wdC .microheader_HeaderContents_RsnZk {
   width: 100%;
-  max-width: 1600px;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -1268,6 +1267,9 @@ a {
   .microheader_NavItems_3WYkc
   .microheader_NavLink_15Uwp.microheader_GameDropdown_2cfJE {
   border: 2px solid transparent;
+  transition-duration: 0.2s;
+  padding: 12px 20px;
+  margin: 0px;
 }
 .microheader_MicroHeader_U7wdC
   .microheader_HeaderContents_RsnZk
@@ -1277,9 +1279,10 @@ a {
   margin: 0px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  background-color: rgba(64, 64, 64, 0.8);
-  backdrop-filter: blur(2px);
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(244, 244, 244, 0.2);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  transition-duration: 0.2s;
 }
 .microheader_MicroHeader_U7wdC
   .microheader_HeaderContents_RsnZk
@@ -1338,14 +1341,15 @@ a {
   color: #fff;
   padding-top: 10px;
   padding-bottom: 5px;
-  background-color: rgba(64, 64, 64, 0.8);
-  backdrop-filter: blur(2px);
+  background-color: rgba(244, 244, 244, 0.2);
+  backdrop-filter: blur(10px);
   opacity: 1;
   z-index: 10000;
   min-height: 0;
   display: flex;
   flex-direction: column;
-  border: 2px solid #777;
+  transition-duration: 0.2s;
+  border: 2px solid rgba(255, 255, 255, 0.6);
 }
 .microheader_MicroHeader_U7wdC
   .microheader_HeaderContents_RsnZk
@@ -1353,6 +1357,7 @@ a {
   .microheader_GameDropdownContents_18ww9.microheader_Hidden_3P4BK {
   opacity: 0;
   pointer-events: none;
+  transition-duration: 0.2s;
 }
 .microheader_MicroHeader_U7wdC
   .microheader_HeaderContents_RsnZk
@@ -1360,7 +1365,6 @@ a {
   .microheader_GameDropdownContents_18ww9
   a {
   font-size: 14px;
-  font-weight: 600;
   letter-spacing: 2px;
   margin-top: 5px;
   opacity: 0.8;
@@ -1368,6 +1372,7 @@ a {
   margin-bottom: 4px;
   padding-left: 10px;
   padding-right: 10px;
+  transition-duration: 0.2s;
 }
 .microheader_MicroHeader_U7wdC
   .microheader_HeaderContents_RsnZk
@@ -1376,6 +1381,8 @@ a {
   a:hover {
   opacity: 1;
   cursor: pointer;
+  transition-duration: 0.2s;
+  transform: translateX(5px);
 }
 .microheader_MicroHeader_U7wdC
   .microheader_HeaderContents_RsnZk
@@ -1405,8 +1412,19 @@ a {
   .microheader_OptionsSide_11feq
   .microheader_AccountLanguage_22B7Z
   .microheader_Login_1RIIB {
-  font-size: 18px;
+  font-size: 14px;
   margin-bottom: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff90;
+}
+.microheader_MicroHeader_U7wdC
+  .microheader_HeaderContents_RsnZk
+  .microheader_OptionsSide_11feq
+  .microheader_AccountLanguage_22B7Z
+  .microheader_Login_1RIIB:hover {
+  color: #fff;
 }
 .microheader_MicroHeader_U7wdC
   .microheader_HeaderContents_RsnZk
@@ -1449,6 +1467,13 @@ a {
   .microheader_Logout_rirOy:hover {
   color: #ccc;
 }
+.microheader_MicroHeader_U7wdC
+  .microheader_HeaderContents_RsnZk
+  .microheader_OptionsSide_11feq
+  .microheader_PlayForFree_3viea
+  .microheader_StandardButton_3mkXB {
+  margin: 10px 0px 10px 20px;
+}
 @media (max-width: 1200px) {
   .microheader_MicroHeader_U7wdC
     .microheader_HeaderContents_RsnZk
@@ -1464,7 +1489,7 @@ a {
   min-width: 50px;
   height: 50px;
   min-height: 50px;
-  padding: 10px;
+  padding: 10px 0px 10px 10px;
   margin-left: 40px;
   opacity: 0.8;
   display: none;
@@ -1644,7 +1669,13 @@ a {
   .microheader_LoginLanguage_204pi
   .microheader_Login_1RIIB {
   font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   margin-left: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff90;
 }
 .microheader_MicroHeader_U7wdC
   .microheader_MobilePopup_27Q74
@@ -1694,7 +1725,7 @@ a {
   .microheader_PlayForFree_3viea
   .microheader_StandardButton_3mkXB {
   width: calc(100% - 20px);
-  margin: 10px 10px;
+  margin: 10px 0px 10px 10px;
 }
 * {
   box-sizing: border-box;
@@ -16503,6 +16534,649 @@ a {
 .__react_component_tooltip.show {
   opacity: 1 !important;
 }
+.pastupdates_Tooltip_1sIHR {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.pastupdates_CarouselFade_2mPQa {
+  mask-image: linear-gradient(
+    to left,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to left,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.ttf")
+      format("truetype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.svg#ywftsvg")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.ttf")
+      format("truetype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.svg#ywftsvg")
+      format("svg");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.ttf")
+      format("truetype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.svg#ywftsvg")
+      format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.ttf")
+      format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-regular.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-regular.ttf")
+      format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-semibold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-semibold.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-bold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-bold.ttf")
+      format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Averia Serif Libre";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/averiaseriflibre-regular.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/averiaseriflibre-regular.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Averia Serif Libre";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/averiaseriflibre-italic.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/averiaseriflibre-italic.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular.ttf")
+      format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Light.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Light.ttf")
+      format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-SemiBold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular-SemiBold.ttf")
+      format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Bold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Bold.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Black.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Black.ttf")
+      format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+.pastupdates_StandardButton_2_Cmv {
+  border: 3px solid #ffffff50;
+  padding: 15px 25px;
+  margin: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.2s;
+}
+.pastupdates_StandardButton_2_Cmv:hover {
+  border: 3px solid #ff6046;
+  transform: translateY(-2px);
+  color: #ff6046;
+}
+.pastupdates_StandardButton_2_Cmv .pastupdates_ButtonText_UxxIi {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.pastupdates_StandardButton_2_Cmv .pastupdates_SteamLogo_2xqa- {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//icons/steam_icon.svg");
+}
+.pastupdates_HorizBar_3Uwtq {
+  width: 80px;
+  height: 3px;
+  min-height: 3px;
+  background-color: #ff6046;
+  border-radius: 1px;
+}
+.pastupdates_RightArrow_3irwI {
+  width: 20px;
+  height: 20px;
+  margin: 0px 8px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: rotateZ(180deg);
+}
+.pastupdates_UpRightArrow_3iPUU {
+  width: 20px;
+  height: 20px;
+  margin: 0px 4px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: rotateZ(135deg);
+  filter: brightness(0.7);
+}
+.pastupdates_Headline_15-a4 {
+  color: #fefefe;
+  font-size: 50px;
+  font-family: Reaver, serif;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 20px #000;
+  letter-spacing: 3px;
+  line-height: 112%;
+}
+@media (max-width: 600px) {
+  .pastupdates_Headline_15-a4 {
+    font-size: 40px;
+    margin-top: 80px;
+  }
+}
+.pastupdates_Description_3j_E1 {
+  font-family: "Radiance", sans-serif;
+  color: #ffffffee;
+  font-size: 22px;
+  text-align: center;
+  line-height: 28px;
+  max-width: 1000px;
+  text-shadow: 2px 2px 5px #000;
+}
+.pastupdates_PastUpdates_2NDSi {
+  width: 100%;
+  color: #fff;
+  overflow: hidden;
+  background-size: cover;
+}
+.pastupdates_PastUpdates_2NDSi .pastupdates_HeaderSection_WLRZ2 {
+  width: 100%;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  position: relative;
+  padding-top: 150px;
+  overflow: hidden;
+  display: block;
+}
+.pastupdates_PastUpdates_2NDSi .pastupdates_UpdatesContainer_fJ31i {
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 150px;
+  position: relative;
+  max-width: 2048px;
+  margin: 0 auto;
+}
+.pastupdates_PastUpdates_2NDSi .pastupdates_UpdatesContainer_fJ31i a {
+  display: block;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  filter: brightness(1);
+}
+.pastupdates_PastUpdates_2NDSi .pastupdates_UpdatesContainer_fJ31i a:hover {
+  transform: scale(1.03) translateY(-2px);
+  filter: brightness(1.2);
+  opacity: 1;
+}
+.pastupdates_PastUpdates_2NDSi
+  .pastupdates_UpdatesContainer_fJ31i
+  .pastupdates_UpdateBlock_2ao7w {
+  width: 500px;
+  height: 281px;
+  border: 1px solid #727272;
+  box-shadow: 0px 0px 20px #000;
+  background-color: #00000020;
+  background-size: cover;
+  background-position: center bottom;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  margin: 10px;
+}
+@media (max-width: 600px) {
+  .pastupdates_PastUpdates_2NDSi
+    .pastupdates_UpdatesContainer_fJ31i
+    .pastupdates_UpdateBlock_2ao7w {
+    margin: 5px;
+  }
+}
+.pastupdates_PastUpdates_2NDSi
+  .pastupdates_UpdatesContainer_fJ31i
+  .pastupdates_UpdateBlock_2ao7w:hover {
+  border: 1px solid #ff6046;
+}
+.pastupdates_PastUpdates_2NDSi
+  .pastupdates_UpdatesContainer_fJ31i
+  .pastupdates_UpdateBlock_2ao7w
+  .pastupdates_Date_3AU7D {
+  background-color: #00000090;
+  padding: 2px 5px;
+  border-radius: 3px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  opacity: 0;
+}
+.pastupdates_PastUpdates_2NDSi
+  .pastupdates_UpdatesContainer_fJ31i
+  .pastupdates_UpdateBlock_2ao7w:hover
+  .pastupdates_Date_3AU7D {
+  opacity: 1;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Radiance", "Noto Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.Bold {
+  font-weight: bold;
+}
+[data-aos="fade-zoom-in"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: scale(0);
+}
+[data-aos="fade-zoom-in"] &.aos-animate {
+  opacity: 1;
+  transform: scale(1);
+}
+[data-aos="fade-slide-right"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateX(-40%);
+}
+[data-aos="fade-slide-right"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-left"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateX(40%);
+}
+[data-aos="fade-slide-left"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-up"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateY(40%);
+}
+[data-aos="fade-slide-up"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-down"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateY(-40%);
+}
+[data-aos="fade-slide-down"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="rotate"] {
+  transition-property: transform;
+  transform: rotateZ(0deg);
+}
+[data-aos="rotate"] &[data-aos-rotate-bottom] {
+  transform-origin: bottom center;
+}
+[data-aos="rotate"] &[data-aos-rotate="10"].aos-animate {
+  transform: rotateZ(10deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="20"].aos-animate {
+  transform: rotateZ(20deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="30"].aos-animate {
+  transform: rotateZ(30deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="40"].aos-animate {
+  transform: rotateZ(40deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="50"].aos-animate {
+  transform: rotateZ(50deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="60"].aos-animate {
+  transform: rotateZ(60deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="70"].aos-animate {
+  transform: rotateZ(70deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="80"].aos-animate {
+  transform: rotateZ(80deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="90"].aos-animate {
+  transform: rotateZ(90deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="100"].aos-animate {
+  transform: rotateZ(100deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="110"].aos-animate {
+  transform: rotateZ(110deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="120"].aos-animate {
+  transform: rotateZ(120deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="130"].aos-animate {
+  transform: rotateZ(130deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="140"].aos-animate {
+  transform: rotateZ(140deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="150"].aos-animate {
+  transform: rotateZ(150deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="160"].aos-animate {
+  transform: rotateZ(160deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="170"].aos-animate {
+  transform: rotateZ(170deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="180"].aos-animate {
+  transform: rotateZ(180deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="190"].aos-animate {
+  transform: rotateZ(190deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="200"].aos-animate {
+  transform: rotateZ(200deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="210"].aos-animate {
+  transform: rotateZ(210deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="220"].aos-animate {
+  transform: rotateZ(220deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="230"].aos-animate {
+  transform: rotateZ(230deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="240"].aos-animate {
+  transform: rotateZ(240deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="250"].aos-animate {
+  transform: rotateZ(250deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="260"].aos-animate {
+  transform: rotateZ(260deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="270"].aos-animate {
+  transform: rotateZ(270deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="280"].aos-animate {
+  transform: rotateZ(280deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="290"].aos-animate {
+  transform: rotateZ(290deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="300"].aos-animate {
+  transform: rotateZ(300deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="310"].aos-animate {
+  transform: rotateZ(310deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="320"].aos-animate {
+  transform: rotateZ(320deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="330"].aos-animate {
+  transform: rotateZ(330deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="340"].aos-animate {
+  transform: rotateZ(340deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="350"].aos-animate {
+  transform: rotateZ(350deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-10"].aos-animate {
+  transform: rotateZ(-10deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-20"].aos-animate {
+  transform: rotateZ(-20deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-30"].aos-animate {
+  transform: rotateZ(-30deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-40"].aos-animate {
+  transform: rotateZ(-40deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-50"].aos-animate {
+  transform: rotateZ(-50deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-60"].aos-animate {
+  transform: rotateZ(-60deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-70"].aos-animate {
+  transform: rotateZ(-70deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-80"].aos-animate {
+  transform: rotateZ(-80deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-90"].aos-animate {
+  transform: rotateZ(-90deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-100"].aos-animate {
+  transform: rotateZ(-100deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-110"].aos-animate {
+  transform: rotateZ(-110deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-120"].aos-animate {
+  transform: rotateZ(-120deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-130"].aos-animate {
+  transform: rotateZ(-130deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-140"].aos-animate {
+  transform: rotateZ(-140deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-150"].aos-animate {
+  transform: rotateZ(-150deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-160"].aos-animate {
+  transform: rotateZ(-160deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-170"].aos-animate {
+  transform: rotateZ(-170deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-180"].aos-animate {
+  transform: rotateZ(-180deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-190"].aos-animate {
+  transform: rotateZ(-190deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-200"].aos-animate {
+  transform: rotateZ(-200deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-210"].aos-animate {
+  transform: rotateZ(-210deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-220"].aos-animate {
+  transform: rotateZ(-220deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-230"].aos-animate {
+  transform: rotateZ(-230deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-240"].aos-animate {
+  transform: rotateZ(-240deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-250"].aos-animate {
+  transform: rotateZ(-250deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-260"].aos-animate {
+  transform: rotateZ(-260deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-270"].aos-animate {
+  transform: rotateZ(-270deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-280"].aos-animate {
+  transform: rotateZ(-280deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-290"].aos-animate {
+  transform: rotateZ(-290deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-300"].aos-animate {
+  transform: rotateZ(-300deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-310"].aos-animate {
+  transform: rotateZ(-310deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-320"].aos-animate {
+  transform: rotateZ(-320deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-330"].aos-animate {
+  transform: rotateZ(-330deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-340"].aos-animate {
+  transform: rotateZ(-340deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-350"].aos-animate {
+  transform: rotateZ(-350deg);
+}
+.carousel__slide-focus-ring {
+  outline: none !important;
+}
+.carousel__dot:focus {
+  outline: none !important;
+}
+.__react_component_tooltip.show {
+  opacity: 1 !important;
+}
 .patchnotespage_Tooltip_16NOt {
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -25078,7 +25752,7 @@ a {
   align-items: center;
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.6);
   position: sticky;
-  top: 180px;
+  top: 200px;
   background-color: #222226;
   z-index: 998;
 }

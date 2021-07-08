@@ -344,8 +344,8 @@
 				$OriginalFile === 'Scripts/WebUI/steammobile_android.js' ||
 				str_ends_with( $File, 'english-json.js' ) ||
 				str_starts_with( $OriginalFile, 'www.underlords.com/' ) ||
+				str_starts_with( $OriginalFile, 'www.dota2.com/' ) ||
 				str_contains( $OriginalFile, '/webui/' ) ||
-				str_contains( $OriginalFile, '/dota_react' ) ||
 				str_contains( $OriginalFile, '/applications/' )
 			)
 			{
