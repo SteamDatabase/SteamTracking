@@ -160,6 +160,7 @@ message CCloud_BeginAppUploadBatch_Request {
 	optional string machine_name = 2 [(description) = "Client machine name (may be user's alias)."];
 	repeated string files_to_upload = 3 [(description) = "Filenames of files to upload in this batch"];
 	repeated string files_to_delete = 4 [(description) = "Filenames of files to delete in this batch"];
+	optional uint64 client_id = 5 [(description) = "Client ID"];
 }
 
 message CCloud_BeginAppUploadBatch_Response {
