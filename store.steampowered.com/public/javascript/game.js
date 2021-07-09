@@ -709,6 +709,9 @@ function LoadMoreReviews( appid, cursor, dayRange, startDate, endDate, context )
 				CollapseLongReviews();
 				RequestCurrentUserRecommendationVotes( recommendationIDs );
 			}
+
+			// if customer is on a mobile size screen make content changes in the reviews section  
+			ReparentReviewsForMobileUX();
 		}
 		else
 		{
@@ -1871,6 +1874,43 @@ function ToggleBannerContentVisibility( divContentID, divIconID )
 	}
 };
 
+// The review detail section is simplified for mobile screens
+// which requires some section moves here, and formatting changes in .css 
+function ReparentReviewsForMobileUX()
+{
+	// Only want to re-parent if we're actually mobile-sized
+	var bMatch = window.matchMedia( '(max-width: 500px)' ).matches;
+	if ( !bMatch ) 
+		return;
+
+	var $MoveReviewSections = $J('.user_reviews_container');
+	$MoveReviewSections.each( function() {
+
+		// move content within each review detail section 
+		var $SummarySection = $J(this).find('[id^="ReviewContent"]');
+		$SummarySection.each( function() {
+
+			var $LeftColContent = $J(this).find('.leftcol');
+			var $NewLeftLocation = $J(this).find('.responsive_review_leftcol_ctn');
+			var $ReviewAwardCtn = $J(this).find('.review_award_ctn');
+			var $NewAwardLocation = $J(this).find('.rightcol');
+
+			// if we don't have the required destination containers bail (this shouldn't happen)
+			if ( $NewLeftLocation.length == 0 || $NewAwardLocation.length == 0 )
+				return;
+
+			// move the avatar, name, row to fit new ux design
+			$LeftColContent.appendTo($NewLeftLocation);
+
+			// move the awards to the end of the review detail section 
+			$ReviewAwardCtn.appendTo($NewAwardLocation);
+
+			// remove tooltip from review detail section
+			$NewAwardLocation.find('.vote_header').removeAttr('data-tooltip-text');
+		} );
+	} );
+}
+
 function ReparentAppLandingPageForMobileUX()
 {
 	// Only want to re-parent if we're actually mobile-sized
@@ -1898,20 +1938,26 @@ function ReparentAppLandingPageForMobileUX()
 		// place purchase options where they'll be controlled by the purchase options banner 
 		$J('#game_area_purchase').appendTo('#purchaseOptionsContent');
 
-		// add a copy of 'content for this game' to the purchase options content.  we 
-		// probably want to remove it from the main page body, but testing it first as a copy.
-		var $dlcList = $J('#gameAreaDLCSection').clone();
-		$dlcList.appendTo('#purchaseOptionsContent');
-
-		// move DLC section below the recent events and announcements (instead of below the list of purchase options)
+		// We may want to instead make a copy so it's also kept in the main page body
 		if ( $J('#gameAreaDLCSection') !== null )
-			$J('#gameAreaDLCSection').appendTo('#contentForThisGame_ctn');
+			$J('#gameAreaDLCSection').appendTo('#purchaseOptionsContent');
 
-		// swap order of app review rows
+		// copy the review summary content to the review details section
+		var $appReviewsAll = $J('#appReviewsAll').clone();
+		$appReviewsAll.attr( 'id', 'appReviewsAll_Detail' );
+		$appReviewsAll.appendTo('.reviews_info_ctn');
+		var $appReviewsRecent = $J('#appReviewsRecent').clone();
+		$appReviewsRecent.attr( 'id', 'appReviewsRecent_Detail' );
+		$appReviewsRecent.appendTo('.reviews_info_ctn');
+
+		// place the active review filter list in the review details section
+		$J('#reviews_active_filters').appendTo('.reviews_info_ctn');
+
+		// swap the order of all/recent reviews
 		$J('#appReviewsAll').appendTo('#userReviews');
 		$J('#appReviewsRecent').appendTo('#userReviews');
 
-		// move app reviews location
+		// move app reviews summary near the top
 		$J('#reviewsHeader').appendTo('#glanceCtnResponsiveRight');
 		$J('#userReviews').appendTo('#glanceCtnResponsiveRight');
 
@@ -1926,13 +1972,25 @@ function ReparentAppLandingPageForMobileUX()
 		// testing this - we may need to move this again  
 		$J('#genresAndManufacturer').appendTo('#appLinksAndInfo');
 
+		// Populate the reviews settings popup
+		$J('#review_histograms_container').appendTo('#reviewSettingsPopupContent');
+		$J('#reviews_filter_options').appendTo('#reviewSettingsPopupContent');
+
 		var responsiveOnWindowResize = function()
 		{
+			// TODO: investigate a flicker of the purchase banner on android as you scroll the page.  Guessing we're toggling display state more often than intended
+
 			// hide the purchase options banner if usable screen height is significantly below actual screen height (keyboard causes this) 
 			if ( screen.availHeight - window.innerHeight > 300 )
-				$J('#purchaseOptionsContainer').css('display', 'none');
+			{
+				if ( $J('#purchaseOptionsContainer').is(':visible') )
+					$J('#purchaseOptionsContainer').css('display', 'none');
+			}
 			else
-				$J('#purchaseOptionsContainer').css('display', 'flex');
+			{
+				if ( !$J('#purchaseOptionsContainer').is(':visible') )
+					$J('#purchaseOptionsContainer').css('display', 'flex');
+			}
 
 			// purchase content height may need to change if it's visible 
 			if ( $J('#purchaseOptionsContent').is(':visible') )
@@ -1963,9 +2021,6 @@ function ReparentAppLandingPageForMobileUX()
 			$Element.appendTo( $ParentElement );
 		} );
 
-		// remove cursor and tooltip text from review summary section
-		$J('.user_reviews_summary_row').removeAttr('data-tooltip-html');
-
 		// if one of the wishlist buttons are visible make the action buttons flex grow so the two rows of buttons match width.
 		if ( $J('#add_to_wishlist_area').is(':visible') || $J('#add_to_wishlist_area_success').is(':visible') || $J('#add_to_wishlist_area_fail').is(':visible') )
 		{
@@ -1980,12 +2035,25 @@ function ReparentAppLandingPageForMobileUX()
 		// on iOS use the iOS share icon.  the default is Android.
 		if ( navigator.userAgent.toLowerCase().indexOf( 'iphone' ) != -1 )
 		{
-			$J('#shareImg').attr('src', 'https://store.cloudflare.steamstatic.com/public/shared/images/icon_share_ios.png' );
-		} 
+			$J('#shareImg').attr('src', 'https://store.cloudflare.steamstatic.com/public/shared/images/icon_share_ios.svg' );
+		}
+
+		// to reduce popup noise remove toolip text if element doesn't include tooltip class 
+		var $TooltipTextElements = $J("[data-tooltip-text]");
+		$TooltipTextElements.each( function() {
+			if ( !$J(this).hasClass('tooltip') )
+				$J(this).removeAttr('data-tooltip-text');
+		} );
+		var $TooltipHTMLElements = $J("[data-tooltip-html]");
+		$TooltipHTMLElements.each( function() {
+			if ( !$J(this).hasClass('tooltip') )
+				$J(this).removeAttr('data-tooltip-html');
+		} );
 	}
 }
 
 // calculate the size of the container which holds the purchase banner, purchase option content, and empty space which greys out the rest of the page
+// TODO: Investigate bugs when rotating the screen.  We may need to check orientation.
 function _AdjustPurchaseContentHeight()
 {
 	var $purchaseContentHeight = parseInt( window.innerHeight ) - parseInt( GetResponsiveHeaderFixedOffsetAdjustment() );
@@ -2039,16 +2107,31 @@ function OnNewMobileUXPopupClosed()
 	var bPreviousValue = V_GetCookie('use_new_mobile_ux') == 1;
 	var bChecked = $J('#checkboxNewMobileUX').attr('checked') === 'checked';
 
+	if ( typeof g_newMobileUXPopup !== 'undefined' )
+		g_newMobileUXPopup.Dismiss();
+
 	// if selection changed update the coookie and reload the page
 	if ( bPreviousValue != bChecked )
 	{
-		V_SetCookie('use_new_mobile_ux', bChecked ? 1 : 0, 30, '/');
-		g_newMobileUXPopup.Dismiss();
+		V_SetCookie('use_new_mobile_ux', bChecked ? 1 : 0, 14, '/');
 		location.reload();
 	}
-	else if ( typeof g_newMobileUXPopup !== 'undefined' )
-	{
-		g_newMobileUXPopup.Dismiss();
-	}
+}
+
+// called by Mobile UX to show a settings dialog with Review filters
+var g_reviewSettingsPopup = null;
+function ShowReviewSettingsModal()
+{
+	var $ModalContent = $J('#reviewSettingsPopupCtn');
+	if ( 0 == $ModalContent.length )
+		return;
+
+	g_reviewSettingsPopup = new CModal( $ModalContent );
+	g_reviewSettingsPopup.Show();
+}
+function CloseReviewSettingsModal()
+{
+	if ( typeof g_reviewSettingsPopup !== 'undefined' )
+		g_reviewSettingsPopup.Dismiss();
 }
 

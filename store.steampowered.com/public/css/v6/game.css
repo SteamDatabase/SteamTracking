@@ -5711,6 +5711,10 @@ body.v6 .page_content.notes {
 .responsive_add_to_wishlist,
 .responsive_purchase_options_ctn,
 .newux_optin_banner,
+.responsive_review_menu_ctn,
+.responsive_purchase_source,
+.responsive_voting_image,
+.responsive_review_settings_img,
 .responsive_block_header  {
 	display: none;
 }
