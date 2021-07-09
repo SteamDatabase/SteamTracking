@@ -45,6 +45,34 @@
         summaryTextArea: "summary_summaryTextArea_2ipSt",
       };
     },
+    "8Uds": function (e, t, r) {
+      e.exports = {
+        DefaultTheme: "profilethemecolors_DefaultTheme_tedMf",
+        CosmicTheme: "profilethemecolors_CosmicTheme_17vHy",
+        SummerTheme: "profilethemecolors_SummerTheme_2skFv",
+        MidnightTheme: "profilethemecolors_MidnightTheme_M8Pf4",
+        DarkModeTheme: "profilethemecolors_DarkModeTheme_2p-_x",
+        SteelTheme: "profilethemecolors_SteelTheme_xdD8L",
+        PinkTealTheme: "profilethemecolors_PinkTealTheme_3M7cl",
+        MutedRedTheme: "profilethemecolors_MutedRedTheme_3lp4R",
+        SteamGreenTheme: "profilethemecolors_SteamGreenTheme_335yQ",
+        BlueRedTheme: "profilethemecolors_BlueRedTheme_2wH82",
+        GoldBurgundyTheme: "profilethemecolors_GoldBurgundyTheme_YGKfX",
+        VibrantBlueTheme: "profilethemecolors_VibrantBlueTheme_3DOwB",
+        GoldenProfileDebutTheme:
+          "profilethemecolors_GoldenProfileDebutTheme_3BHT2",
+        WinterProfile2020Theme:
+          "profilethemecolors_WinterProfile2020Theme_3jPiA",
+        GoldenWeekProfile2021Theme:
+          "profilethemecolors_GoldenWeekProfile2021Theme_24NEV",
+        Summer2021Theme: "profilethemecolors_Summer2021Theme_2bB_m",
+        MutedBlueTheme: "profilethemecolors_MutedBlueTheme_3-7Wk",
+        GoldTheme: "profilethemecolors_GoldTheme_l3sX-",
+        BurntOrangeTheme: "profilethemecolors_BurntOrangeTheme_37pNJ",
+        FlatGreyTheme: "profilethemecolors_FlatGreyTheme_2AFCa",
+        PurpleTheme: "profilethemecolors_PurpleTheme_KM8jQ",
+      };
+    },
     "9g5v": function (e, t, r) {
       e.exports = {
         ProfileThemePicker: "profiletheme_ProfileThemePicker_37I7q",
@@ -138,7 +166,7 @@
           return Zr;
         }),
         r.d(t, "default", function () {
-          return Jr;
+          return Xr;
         });
       var i = r("mrSG"),
         a = r("q1tI"),
@@ -919,8 +947,8 @@
             ? a.createElement(E.a, Object(i.a)({ strAvatarURL: o }, s), n)
             : a.createElement(E.b, Object(i.a)({ persona: t }, s), n);
         },
-        D = r("kLLr"),
-        T = r("a5LV"),
+        T = r("kLLr"),
+        D = r("a5LV"),
         U = r("UWWC"),
         H = r("bxBv"),
         q = r("oFam"),
@@ -1146,7 +1174,7 @@
                 t.sm_m ||
                   (t.sm_m = {
                     proto: t,
-                    fields: { item_definitions: { n: 1, c: J, r: !0, q: !0 } },
+                    fields: { item_definitions: { n: 1, c: X, r: !0, q: !0 } },
                   }),
                 t.sm_m
               );
@@ -1184,7 +1212,7 @@
             t
           );
         })(W),
-        J = (function (e) {
+        X = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var i = e.call(this) || this;
@@ -1333,7 +1361,7 @@
             t
           );
         })(W),
-        X = (function (e) {
+        J = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var i = e.call(this) || this;
@@ -2062,7 +2090,7 @@
                           this.m_ProfileModifiers.m_CommittedEquippedItem &&
                           this.m_ProfileModifiers.m_CommittedEquippedItem !=
                             this.m_ProfileModifiers.m_EquippedItem
-                            ? ((t = H.b.Init(X))
+                            ? ((t = H.b.Init(J))
                                 .Body()
                                 .set_communityitemid(
                                   this.m_ProfileModifiers
@@ -2090,7 +2118,7 @@
                       (e = !0), (i.label = 2);
                     case 2:
                       return this.m_ProfileModifiers.m_EquippedItem
-                        ? ((t = H.b.Init(X))
+                        ? ((t = H.b.Init(J))
                             .Body()
                             .set_communityitemid(
                               this.m_ProfileModifiers.m_EquippedItem
@@ -3002,7 +3030,7 @@
             (this.m_bLoaded = !1),
               e &&
                 (this.m_CommittedPrimaryGroup = this.m_PrimaryGroup = new be(
-                  new D.a(e.steamid),
+                  new T.a(e.steamid),
                   e.name,
                   e.avatarHash
                 ));
@@ -3061,7 +3089,7 @@
                           e.data &&
                             (t.m_rgUserGroups = e.data.map(function (e) {
                               return new be(
-                                new D.a(e.steamid),
+                                new T.a(e.steamid),
                                 e.name,
                                 e.avatarHash
                               );
@@ -3403,7 +3431,7 @@
             var r = this;
             (this.m_OGGAvatars = new fe()),
               (this.m_EmoticonStore = new U.a()),
-              (this.m_EmoticonHoverStore = new T.a()),
+              (this.m_EmoticonHoverStore = new D.a()),
               (this.m_Profile = new Se(e)),
               (this.m_WebAPI = new p.a(h.c.WEBAPI_BASE_URL, e.webapi_token)),
               (this.m_AppInfoStore = new d.b()),
@@ -3539,7 +3567,7 @@
               c = r.locCityCode;
             (this.m_Location = new ce(i, a, n, o, s, c)),
               (this.m_GroupList = new _e(e.PrimaryGroup));
-            var l = new D.a(h.i.steamid);
+            var l = new T.a(h.i.steamid);
             (this.m_MiniProfileData = new w(l.GetAccountID())),
               (this.m_persona = new v.b(l)),
               Object(m.l)(function () {
@@ -4050,14 +4078,14 @@
             a.Fragment,
             null,
             a.createElement(Fe, { rgAnimatedAvatars: t, onSelected: o }),
-            a.createElement(De, { rgAvatars: l, onSelected: c }),
-            a.createElement(Te, {
+            a.createElement(Te, { rgAvatars: l, onSelected: c }),
+            a.createElement(De, {
               rgAvatars: m,
               onSelected: s,
               title: Object(_.f)("#Profile_Edit_YourGameAvatars"),
             }),
             m.length < 20 &&
-              a.createElement(Te, {
+              a.createElement(De, {
                 rgAvatars: r.GetOtherGameAvatars(),
                 onSelected: s,
                 title: Object(_.f)("#Profile_Edit_MoreGameAvatars"),
@@ -4090,7 +4118,7 @@
               )
             : null;
         },
-        De = Object(f.a)(function (e) {
+        Te = Object(f.a)(function (e) {
           var t = e.rgAvatars,
             r = e.onSelected;
           return t.length
@@ -4116,7 +4144,7 @@
               )
             : null;
         }),
-        Te = function (e) {
+        De = function (e) {
           var t = e.rgAvatars,
             r = e.onSelected,
             i = e.title;
@@ -4492,7 +4520,7 @@
                     He.a,
                     null,
                     a.createElement(
-                      Xe,
+                      Je,
                       Object(i.a)({}, s, {
                         onItemSelected: this.OnItemSelected,
                         activeItem: l,
@@ -4514,10 +4542,10 @@
           t
         );
       })(a.Component);
-      function Je(e) {
+      function Xe(e) {
         return e ? e.toLocaleLowerCase().replace(/\W/g, "") : "";
       }
-      var Xe = (function (e) {
+      var Je = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -4554,7 +4582,7 @@
                             (o.m_rgSearchableItems = n.map(function (e, t) {
                               return {
                                 key: "" + t,
-                                normalized_search_strings: r && r(e).map(Je),
+                                normalized_search_strings: r && r(e).map(Xe),
                                 OnSelected: function () {
                                   a(e);
                                 },
@@ -5979,7 +6007,7 @@
                 a.createElement($e, { strHTMLError: s }),
                 c && a.createElement(Nt, { badge: c }),
                 !c && a.createElement(Lt, { count: t.Badges.length }),
-                a.createElement(Xe, {
+                a.createElement(Je, {
                   getSearchFields: kt,
                   getItems: function () {
                     return Object(i.b)(e, void 0, void 0, function () {
@@ -6144,9 +6172,9 @@
                   Object(_.f)("#Profile_Edit_Group_Instructions")
                 ),
                 a.createElement($e, { strHTMLError: s }),
-                l && a.createElement(Dt, { group: l }),
-                a.createElement(Xe, {
-                  getSearchFields: Tt,
+                l && a.createElement(Tt, { group: l }),
+                a.createElement(Je, {
+                  getSearchFields: Dt,
                   getItems: function () {
                     return Object(i.b)(e, void 0, void 0, function () {
                       return Object(i.e)(this, function (e) {
@@ -6176,7 +6204,7 @@
             (t = Object(i.c)([f.a], t))
           );
         })(a.Component),
-        Dt = function (e) {
+        Tt = function (e) {
           var t = e.group;
           e.children;
           return a.createElement(
@@ -6193,7 +6221,7 @@
             )
           );
         },
-        Tt = function (e) {
+        Dt = function (e) {
           return [e.GetName()];
         },
         Ut = function (e) {
@@ -6327,7 +6355,7 @@
               RenderDefaultComponent: function (e) {
                 var t = e.onSelected,
                   r = e.active;
-                return a.createElement(Jt, {
+                return a.createElement(Xt, {
                   onSelected: t,
                   active: r,
                   Modifier: s,
@@ -6419,7 +6447,7 @@
             )
           );
         },
-        Jt = function (e) {
+        Xt = function (e) {
           var t = e.Modifier,
             r = e.onSelected,
             i = e.children,
@@ -6460,7 +6488,7 @@
                 )
               );
         },
-        Xt = r("TtDX"),
+        Jt = r("TtDX"),
         $t = r("y+6m"),
         er = (function (e) {
           function t() {
@@ -6648,7 +6676,7 @@
             var t = this.props.PrivacyStore.GetPrivacySetting(
               this.props.PrivacyKey
             );
-            Object(Xt.a)(
+            Object(Jt.a)(
               a.createElement(pr, {
                 OnChange: this.OnSettingChanged,
                 eCurrentPrivacy: t,
@@ -6778,7 +6806,7 @@
             Object(i.d)(t, e),
             (t.prototype.OnClick = function (e) {
               var t = this.props.PrivacyStore.CommentPermission;
-              Object(Xt.a)(
+              Object(Jt.a)(
                 a.createElement(dr, {
                   OnChange: this.OnSettingChanged,
                   eCurrentPermission: t,
@@ -6950,7 +6978,7 @@
         })(a.Component),
         fr = r("YtMT"),
         hr = r("gCuR"),
-        vr = r("l8s2"),
+        vr = r("8Uds"),
         _r = function (e) {
           var t = e.className,
             r = e.width,
@@ -7965,8 +7993,8 @@
             )
           );
         },
-        Dr = r("9g5v"),
-        Tr = (function (e) {
+        Tr = r("9g5v"),
+        Dr = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.state = { bSaving: !1, strHTMLError: "" }), t;
@@ -8038,8 +8066,8 @@
                   },
                   fnIsSameItem: qr,
                   ItemComponent: xr,
-                  classNameItemPicker: Dr.ProfileThemePicker,
-                  className: Object(b.a)(o && Dr.ThemePickerDisabled),
+                  classNameItemPicker: Tr.ProfileThemePicker,
+                  className: Object(b.a)(o && Tr.ThemePickerDisabled),
                 })
               );
             }),
@@ -8056,7 +8084,7 @@
             (t =
               "string" == typeof r
                 ? r + "Theme"
-                : (r.theme_id || "Default") + "Theme"),
+                : ((null == r ? void 0 : r.theme_id) || "Default") + "Theme"),
             a.createElement("div", { className: vr[t] }, i)
           );
         },
@@ -8065,7 +8093,7 @@
             r = e.ProfileItems;
           return a.createElement(
             "div",
-            { className: Dr.ProfileThemePreviewCtn },
+            { className: Tr.ProfileThemePreviewCtn },
             a.createElement(br, { ProfileItems: r, theme: t.theme_id })
           );
         }),
@@ -8083,20 +8111,20 @@
             "div",
             {
               className: Object(b.a)(
-                Dr.ProfileTheme,
-                r && Dr.Option,
-                i && Dr.Active,
+                Tr.ProfileTheme,
+                r && Tr.Option,
+                i && Tr.Active,
                 vr[o]
               ),
               onClick: r,
             },
             a.createElement(
               "div",
-              { className: Dr.PreviewCtn },
+              { className: Tr.PreviewCtn },
               a.createElement(
                 "svg",
                 {
-                  className: Object(b.a)(Dr.Preview),
+                  className: Object(b.a)(Tr.Preview),
                   viewBox: "0 0 382 382",
                   width: "100%",
                   height: "100%",
@@ -8105,26 +8133,26 @@
                   width: "382",
                   height: "382",
                   fill: "var(--edit-background)",
-                  className: Dr.EditBackground,
+                  className: Tr.EditBackground,
                 }),
                 a.createElement("rect", {
                   width: "382",
                   height: "382",
                   fill: "var(--gradient-background)",
                   fillOpacity: "0.23",
-                  className: Dr.ThemeBackground,
+                  className: Tr.ThemeBackground,
                 }),
                 a.createElement("rect", {
                   width: "382",
                   height: "382",
                   fill: "url(#" + s + "paint0_radial)",
-                  className: Dr.PaintRadial0,
+                  className: Tr.PaintRadial0,
                 }),
                 a.createElement("rect", {
                   width: "382",
                   height: "382",
                   fill: "url(#" + s + "paint1_radial)",
-                  className: Dr.PaintRadial1,
+                  className: Tr.PaintRadial1,
                 }),
                 a.createElement(
                   "defs",
@@ -8175,8 +8203,8 @@
             ),
             a.createElement(
               "div",
-              { className: Dr.Details },
-              a.createElement("div", { className: Dr.Title }, t.title),
+              { className: Tr.Details },
+              a.createElement("div", { className: Tr.Title }, t.title),
               n
             )
           );
@@ -8185,10 +8213,10 @@
           e.children;
           return a.createElement(
             "div",
-            { className: Dr.ThemesDisabledNotice },
+            { className: Tr.ThemesDisabledNotice },
             a.createElement(
               "div",
-              { className: Dr.Notice },
+              { className: Tr.Notice },
               Object(_.f)("#Profile_Edit_GoldenProfileOverridesTheme")
             )
           );
@@ -8358,7 +8386,7 @@
                     a.createElement(
                       n.c,
                       { path: "" + e + l.Theme() },
-                      a.createElement(Tr, { ProfileTheme: o, ProfileItems: i })
+                      a.createElement(Dr, { ProfileTheme: o, ProfileItems: i })
                     ),
                     a.createElement(
                       n.c,
@@ -8482,7 +8510,7 @@
           a.createElement(Yr.a, { targetType: 3 })
         );
       }
-      function Jr(e) {
+      function Xr(e) {
         var t = e.match.path;
         return a.createElement(
           n.e,
@@ -9129,22 +9157,6 @@
           e
         );
       })();
-    },
-    l8s2: function (e, t, r) {
-      e.exports = {
-        DefaultTheme: "profilethemecolors_DefaultTheme_1bf2x",
-        CosmicTheme: "profilethemecolors_CosmicTheme_B0JwR",
-        SummerTheme: "profilethemecolors_SummerTheme_HJIK8",
-        MidnightTheme: "profilethemecolors_MidnightTheme_AH86R",
-        DarkModeTheme: "profilethemecolors_DarkModeTheme_3bM7i",
-        SteelTheme: "profilethemecolors_SteelTheme_2EmRD",
-        CandyTheme: "profilethemecolors_CandyTheme_3OFr5",
-        CherryTheme: "profilethemecolors_CherryTheme_27t_1",
-        SteamGreenTheme: "profilethemecolors_SteamGreenTheme_3mIx0",
-        SeafoamTheme: "profilethemecolors_SeafoamTheme_12rwZ",
-        AutumnTheme: "profilethemecolors_AutumnTheme_PlZKA",
-        BluescreenTheme: "profilethemecolors_BluescreenTheme_1bCKl",
-      };
     },
     mQc3: function (e, t, r) {
       e.exports = {

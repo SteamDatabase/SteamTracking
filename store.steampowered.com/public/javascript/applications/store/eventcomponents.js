@@ -395,7 +395,7 @@
                       case 3:
                         return (
                           (u = l.sent()),
-                          (m = Object(j.a)(u)),
+                          (m = Object(j.c)(u)),
                           console.error(
                             "LoadPartnerEventForModerationIncremental failed:" +
                               m.strErrorMsg,
@@ -655,7 +655,7 @@
                       case 3:
                         return (
                           (n = r.sent()),
-                          (a = Object(j.a)(n)),
+                          (a = Object(j.c)(n)),
                           console.error(
                             "EventModerationTile profile load : " +
                               a.strErrorMsg,
@@ -948,7 +948,7 @@
                 (this.m_IntervalTimer = void 0));
             }),
             (t.prototype.HandleError = function (e) {
-              var t = Object(j.a)(e);
+              var t = Object(j.c)(e);
               console.error(
                 "EventModerationLanding error: " + t.strErrorMsg,
                 t
@@ -1407,7 +1407,7 @@
                     return e.setState({ bLoadingEvent: !1 });
                   })
                   .catch(function (t) {
-                    var n = Object(j.a)(t);
+                    var n = Object(j.c)(t);
                     console.error(
                       "EventModerationTile: Event Load: " + n.strErrorMsg,
                       n
@@ -1498,7 +1498,7 @@
                         case 3:
                           return (
                             (i = l.sent()),
-                            (c = Object(j.a)(i)),
+                            (c = Object(j.c)(i)),
                             console.error(
                               "UpdateTagsOnPartnerEvent " + c.strErrorMsg,
                               c
@@ -1779,7 +1779,7 @@
                           case 2:
                             return (
                               (e = o.sent()),
-                              (r = Object(j.a)(e)),
+                              (r = Object(j.c)(e)),
                               console.error(
                                 "EventModerationChannelInfo: App Load: " +
                                   r.strErrorMsg,
@@ -2070,7 +2070,7 @@
                     case 4:
                       return (
                         (s = l.sent()),
-                        (u = Object(j.a)(s)),
+                        (u = Object(j.c)(s)),
                         console.error(
                           "ChangeEventTypeDialog error " + u.strErrorMsg,
                           u
@@ -2267,7 +2267,7 @@
                     case 3:
                       return (
                         (r = i.sent()),
-                        (o = Object(j.a)(r)),
+                        (o = Object(j.c)(r)),
                         console.error(
                           "EventModerationTile " + o.strErrorMsg,
                           o
@@ -2887,7 +2887,7 @@
                     return e.setState({ eBackfillState: "success" });
                   })
                   .catch(function (t) {
-                    var n = Object(j.a)(t);
+                    var n = Object(j.c)(t);
                     console.error(
                       "EventBackfillLanding: error " + n.strErrorMsg,
                       n
@@ -2920,7 +2920,7 @@
               );
             }),
             (t.prototype.HandleErrorFatal = function (e, t, n, a) {
-              var r = Object(j.a)(t),
+              var r = Object(j.c)(t),
                 o =
                   "EventBackfillLanding: " +
                   n +
@@ -3037,7 +3037,7 @@
                                     })
                                     .catch(function (e) {
                                       n.bFailed = !0;
-                                      var t = Object(j.a)(e);
+                                      var t = Object(j.c)(e);
                                       (n.strMessage = t.strErrorMsg),
                                         console.error(
                                           "Resize: " + t.strErrorMsg,
@@ -3522,7 +3522,7 @@
                     case 3:
                       return (
                         (a = o.sent()),
-                        (r = Object(j.a)(a)),
+                        (r = Object(j.c)(a)),
                         console.error(
                           "CCuratorListStore.InternalLoadAppApprovalPriviledge: error on load: " +
                             r.strErrorMsg,
@@ -3708,7 +3708,7 @@
                                 case 3:
                                   return (
                                     (d = l.sent()),
-                                    (u = Object(j.a)(d)),
+                                    (u = Object(j.c)(d)),
                                     (o = u.errorCode),
                                     console.error(
                                       "RemoveEventFromSteamChinaButton: error " +
@@ -3804,7 +3804,7 @@
                 })(e));
             },
             E = function (e) {
-              var t = Object(j.a)(e);
+              var t = Object(j.c)(e);
               console.error("StoreEventDetailView failed " + t.strErrorMsg, t),
                 v(!0);
             };
@@ -4397,7 +4397,7 @@
                     case 3:
                       return (
                         (o = l.sent()),
-                        (i = Object(j.a)(o)),
+                        (i = Object(j.c)(o)),
                         console.error(
                           "Failed to ReindexClanEventsAndReloadAccount: " +
                             i.strErrorMsg,

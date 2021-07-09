@@ -1373,7 +1373,7 @@ function getQText(id)
 {
 	switch(id){
 		case "start_text":
-			return 'The tags associated with your title help users discover it on Steam.<br><br>In this wizard, you will select up to 20 Steam tags to associate with your title. Then you will prioritize this list. These 20 tags will help Steam determine where to surface your game to customers across browse veiws, search results, and recommendations.<br><br>Let\'s begin!<br><br>' + getBanTagsText();
+			return 'The tags associated with your title help users discover it on Steam.<br><br>In this wizard, you will select up to 20 Steam tags to associate with your title. Then you will prioritize this list. These 20 tags will help Steam determine where to surface your game to customers across browse views, search results, and recommendations.<br><br>Let\'s begin!<br><br>' + getBanTagsText();
 			break;
 		case "end_text":
 			return 'As a last step, please prioritize your tags using Drag & Drop.<BR><BR>\nThe top 20 tags are used to determine where your title is displayed throughout Steam. Tags at the top of your list are weighted most heavily when displaying or recommending your title. <BR><BR>\nWe suggest prioritization which places sub-genres and other tags which are both meaningful and specific near the top. <BR><BR>\nWhen you\'re happy with your work, click Publish. Please note that any unfinished changes will be lost.' 

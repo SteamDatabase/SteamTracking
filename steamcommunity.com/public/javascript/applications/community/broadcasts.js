@@ -86,7 +86,7 @@
                     case 3:
                       return (
                         (n = c.sent()),
-                        (o = Object(p.a)(n)),
+                        (o = Object(p.c)(n)),
                         console.error(
                           "LoadBroadcastDebugInfo: Failed " + o.strErrorMsg,
                           o
@@ -148,7 +148,7 @@
                     case 3:
                       return (
                         (s = i.sent()),
-                        (m = Object(p.a)(s)),
+                        (m = Object(p.c)(s)),
                         console.error(
                           "UpdateBroadcastSettings: Failed " + m.strErrorMsg,
                           m
@@ -323,7 +323,7 @@
                     case 2:
                       return (
                         (o = i.sent()),
-                        (c = Object(p.a)(o)),
+                        (c = Object(p.c)(o)),
                         console.error(
                           "CCommunityBroadcastStore:" +
                             e +

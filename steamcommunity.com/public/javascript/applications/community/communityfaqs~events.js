@@ -254,7 +254,7 @@
                         (c = a.sent()),
                         console.error(
                           "Failed getting opt in summary: " +
-                            Object(o.a)(c).strErrorMsg
+                            Object(o.c)(c).strErrorMsg
                         ),
                         [3, 4]
                       );
@@ -483,7 +483,7 @@
                         (n = a.sent()),
                         console.error(
                           "Unable to load tag category data: " +
-                            Object(u.a)(n).strErrorMsg
+                            Object(u.c)(n).strErrorMsg
                         ),
                         [2, null]
                       );
@@ -2486,7 +2486,7 @@
                                 case 2:
                                   return (
                                     (o = a.sent()),
-                                    (l = Object(O.a)(o)),
+                                    (l = Object(O.c)(o)),
                                     console.error(
                                       "AddExistingClanImage: " + l.strErrorMsg,
                                       l
@@ -3252,7 +3252,12 @@
                     a &&
                       s.createElement(
                         "span",
-                        { className: O.a.PendingVisibilityText },
+                        {
+                          className: Object(f.a)(
+                            O.a.PendingVisibilityText,
+                            "PendingVisibilityText"
+                          ),
+                        },
                         "  ",
                         Object(b.f)("#EventEditor_Status_PendingModeration")
                       ),
@@ -3398,6 +3403,7 @@
         LanguageControlsCtn:
           "partnereventdescriptiontab_LanguageControlsCtn_14o5K",
         DescEditorPadding: "partnereventdescriptiontab_DescEditorPadding_3mLVV",
+        ImagePickerCtn: "partnereventdescriptiontab_ImagePickerCtn_Mc28x",
       };
     },
     IMce: function (e, t, n) {
@@ -4810,16 +4816,16 @@
     Mnbl: function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
-        return F;
+        return R;
       }),
         n.d(t, "b", function () {
-          return R;
-        }),
-        n.d(t, "d", function () {
           return x;
         }),
-        n.d(t, "c", function () {
+        n.d(t, "d", function () {
           return P;
+        }),
+        n.d(t, "c", function () {
+          return U;
         });
       var a = n("mrSG"),
         i = n("vDqi"),
@@ -4854,8 +4860,9 @@
         L = "sale_facet_name_",
         A = "sale_facetvalue_name_",
         B = "sale_facetvalue_subtitle_",
-        N = "sale_reservation_bbcode_";
-      function F(e, t, n, a) {
+        N = "sale_reservation_bbcode_",
+        F = "sale_section_desc_";
+      function R(e, t, n, a) {
         var i = new y.b();
         if (t)
           for (var r = 0; r < 30; ++r) {
@@ -4904,6 +4911,12 @@
                           D + t.unique_id,
                           r,
                           t.text_section_contents[r]
+                        ),
+                      e.BHasSaleSectionDescriptionBBCode(r, n) &&
+                        i.SetLocalization(
+                          F + t.unique_id,
+                          r,
+                          t.localized_description[r]
                         ),
                       "tabs" === t.section_type && t.tabs)
                     )
@@ -4985,7 +4998,7 @@
           i
         );
       }
-      function R(e, t, n) {
+      function x(e, t, n) {
         var a = new Array(),
           i = t.GetSortedTokenList();
         return (
@@ -5043,6 +5056,10 @@
                         ((i || e.BHasSaleSectionLabelLocalization(n, o)) &&
                           e.SetSaleSectionLabelLocalization(n, o, i) &&
                           (r = !0)),
+                      a === F + t.unique_id &&
+                        (i || e.BHasSaleSectionDescriptionBBCode(n, o)) &&
+                        e.SetSaleSectionDescriptionBBCode(n, o, i) &&
+                        (r = !0),
                       "tabs" === t.section_type && t.tabs)
                     )
                       for (var c = 0, u = t.tabs; c < u.length; c++) {
@@ -5127,7 +5144,7 @@
           a
         );
       }
-      var x = (function (e) {
+      var P = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -5225,7 +5242,7 @@
                             null,
                             "Encountered the following error attempting to send the event information to CrowdIn:"
                           ),
-                          u.createElement("p", null, Object(O.a)(t).strErrorMsg)
+                          u.createElement("p", null, Object(O.c)(t).strErrorMsg)
                         )
                       ),
                       window
@@ -5236,7 +5253,7 @@
               return u.createElement(
                 "div",
                 { className: Object(v.a)(_.FlexRowContainer) },
-                u.createElement(P, { editModel: this.props.editModel })
+                u.createElement(U, { editModel: this.props.editModel })
               );
             }),
             Object(a.c)([T.a], t.prototype, "OnRequestTranslations", null),
@@ -5244,7 +5261,7 @@
             (t = Object(a.c)([c.a], t))
           );
         })(u.Component),
-        P = function (e) {
+        U = function (e) {
           return u.createElement(
             u.Fragment,
             null,
@@ -5260,7 +5277,7 @@
                   onClick: function (t) {
                     t.preventDefault(),
                       Object(f.d)(
-                        u.createElement(U, { editModel: e.editModel }),
+                        u.createElement(H, { editModel: e.editModel }),
                         Object(E.m)(t)
                       );
                   },
@@ -5272,12 +5289,12 @@
               strToolTip: Object(S.f)("#EventEditor_Loc_Import_ttip"),
               strLabel: Object(S.f)("#EventEditor_Loc_Import_Short"),
               fnOnImportLocData: function (t, n) {
-                return R(e.editModel, t, n);
+                return x(e.editModel, t, n);
               },
             })
           );
         },
-        U = (function (e) {
+        H = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -5297,7 +5314,7 @@
               return (e && "" != e.trim()) || (e = "event"), e;
             }),
             (t.prototype.GetLocalizationModel = function () {
-              return F(
+              return R(
                 this.props.editModel,
                 this.state.bExportEventBody,
                 this.state.bExportEmail,
@@ -5639,7 +5656,7 @@
                       case 3:
                         return (
                           (n = i.sent()),
-                          (a = Object(u.a)(n)),
+                          (a = Object(u.c)(n)),
                           console.error(
                             "EventModerationTile profile load : " +
                               a.strErrorMsg,
@@ -5922,7 +5939,7 @@
                     case 2:
                       return (
                         (i = a.sent()),
-                        (r = Object(E.a)(i)),
+                        (r = Object(E.c)(i)),
                         console.error(
                           "LocalizedImageDialog : " + r.strErrorMsg,
                           r
@@ -5960,7 +5977,7 @@
                     case 2:
                       return (
                         (e = n.sent()),
-                        (t = Object(E.a)(e)),
+                        (t = Object(E.c)(e)),
                         console.error(
                           "LocalizedImageDialog : " + t.strErrorMsg,
                           t
@@ -6118,7 +6135,7 @@
                   e.m_cancelSignal.token.reason || e.setState({ bLoading: !1 });
                 })
                 .catch(function (t) {
-                  var n = Object(E.a)(t);
+                  var n = Object(E.c)(t);
                   console.error(
                     "ClanImagePicker Failed: " +
                       n.strErrorMsg +
@@ -6748,11 +6765,11 @@
                 .DeleteClanImage(t, this.props.clanImage)
                 .then(function (t) {
                   1 != t.success &&
-                    e.ShowDeleteError(Object(E.a)(t).strErrorMsg),
+                    e.ShowDeleteError(Object(E.c)(t).strErrorMsg),
                     e.setState({ bDeleting: !1 });
                 })
                 .catch(function (t) {
-                  e.ShowDeleteError(Object(E.a)(t).strErrorMsg),
+                  e.ShowDeleteError(Object(E.c)(t).strErrorMsg),
                     e.setState({ bDeleting: !1 });
                 }),
                 this.m_linkPopupRef &&
@@ -9366,7 +9383,7 @@
                         e.setState(
                           Object(a.a)(
                             { dialogState: "displayerror" },
-                            Object(v.a)(t)
+                            Object(v.c)(t)
                           )
                         );
                       })
@@ -9379,7 +9396,7 @@
                         e.setState(
                           Object(a.a)(
                             { dialogState: "displayerror" },
-                            Object(v.a)(t)
+                            Object(v.c)(t)
                           )
                         );
                       });
@@ -9617,7 +9634,7 @@
                   .catch(function (e) {
                     var n = Object(a.a)(
                       { dialogState: "error" },
-                      Object(v.a)(e)
+                      Object(v.c)(e)
                     );
                     !n.strErrorMsg &&
                       Object(b.f)("#EventEditor_Error_" + n.errorCode) &&
@@ -11070,6 +11087,27 @@
               !0)
             );
           }),
+          (e.prototype.BHasSaleSectionDescriptionBBCode = function (e, t) {
+            var n = this.GetSaleSections()[t];
+            return Boolean(
+              n.localized_description &&
+                n.localized_description.length > e &&
+                n.localized_description[e]
+            );
+          }),
+          (e.prototype.SetSaleSectionDescriptionBBCode = function (e, t, n) {
+            var a = this.GetSaleSections()[t];
+            return (
+              S.a.Get(a.localized_description, e) != n &&
+              ((a.localized_description = S.a.Set(
+                a.localized_description || [],
+                e,
+                n
+              )),
+              this.SetDirty(r.jsondata_sales),
+              !0)
+            );
+          }),
           (e.prototype.BHasSaleSectionTabName = function (e, t) {
             return Boolean(t && S.a.Get(t.localized_label, e));
           }),
@@ -12255,7 +12293,7 @@
                     case 3:
                       return (
                         (s = a.sent()),
-                        (c = Object(l.a)(s)),
+                        (c = Object(l.c)(s)),
                         console.error(
                           "LoadDiscountEvents failed: " + c.strErrorMsg,
                           c
@@ -12300,7 +12338,7 @@
                     case 3:
                       return (
                         (c = a.sent()),
-                        (u = Object(l.a)(c)),
+                        (u = Object(l.c)(c)),
                         console.error(
                           "LoadDiscountEventDetails failed: " + u.strErrorMsg,
                           u
@@ -12413,7 +12451,7 @@
                       case 2:
                         return (
                           (t = a.sent()),
-                          (n = Object(l.a)(t)),
+                          (n = Object(l.c)(t)),
                           console.error(
                             "DiscountEventChooser failed to load: " +
                               n.strErrorMsg,
@@ -12539,7 +12577,7 @@
                           case 5:
                             return (
                               (c = a.sent()),
-                              (u = Object(l.a)(c)),
+                              (u = Object(l.c)(c)),
                               console.error(
                                 "SelectAppsAndPackagesFromDiscountEvent failed: " +
                                   u.strErrorMsg,
@@ -15884,7 +15922,7 @@
                       case 6:
                         return (
                           (_ = a.sent()),
-                          (g = Object(Ge.a)(_)),
+                          (g = Object(Ge.c)(_)),
                           console.error(
                             "TabSaleBackgroundImageEditor: failed add " +
                               g.strErrorMsg,
@@ -17390,7 +17428,7 @@
                         })
                         .catch(function (t) {
                           if (!e.token.reason) {
-                            var n = Object(Ge.a)(t);
+                            var n = Object(Ge.c)(t);
                             console.error(
                               "useEventHistory: " + n.strErrorMsg,
                               n
@@ -18562,7 +18600,10 @@
         Kt = function (e) {
           return d.createElement(
             "span",
-            { "data-tooltip-text": e.tooltip, className: j.HelperTooltip },
+            {
+              "data-tooltip-text": e.tooltip,
+              className: Object(L.a)(j.HelperTooltip, "HelperTooltip"),
+            },
             " ",
             d.createElement(It.z, null)
           );
@@ -21440,7 +21481,8 @@
                 d.Fragment,
                 null,
                 t ? Object(f.f)(t.label) : e,
-                d.createElement(Kt, { tooltip: Object(f.f)(t.tooltip) })
+                Boolean(null == t ? void 0 : t.tooltip) &&
+                  d.createElement(Kt, { tooltip: Object(f.f)(t.tooltip) })
               );
             }),
             (t.prototype.render = function () {
@@ -21998,20 +22040,36 @@
                   return { label: e.name, data: e.categoryid };
                 }),
                 i = [
-                  { label: Object(f.f)("#Sale_Wishlist"), data: "wishlist" },
                   {
-                    label: Object(f.f)("#Sale_InteractiveRecommender"),
+                    label: Object(f.f)("#Sale_Wishlist") + " (?)",
+                    tooltip: Object(f.f)("#Sale_Wishlist_ttip"),
+                    data: "wishlist",
+                  },
+                  {
+                    label: Object(f.f)("#Sale_InteractiveRecommender") + " (?)",
+                    tooltip: Object(f.f)("#Sale_InteractiveRecommender_ttip"),
                     data: "interactive_recommender",
                   },
-                  { label: Object(f.f)("#Sale_Tag"), data: "tag" },
-                  { label: Object(f.f)("#Sale_Category"), data: "category" },
                   {
-                    label: Object(f.f)("#Sale_BrowserSortOption_Discounted"),
+                    label: Object(f.f)("#Sale_SmartSection_Discount") + " (?)",
+                    tooltip: Object(f.f)("#Sale_SmartSection_Discount_ttip"),
                     data: "discounted",
                   },
                 ];
               Object(R.a)(n.GetClanSteamID()) &&
                 (i.push({
+                  label: "(VO) " + Object(f.f)("#Sale_Tag"),
+                  tooltip: Object(f.f)("#Sale_Tag_ttip"),
+                  strOptionClass: Object(L.a)(j.ValveOnlyBackground),
+                  data: "tag",
+                }),
+                i.push({
+                  label: "(VO) " + Object(f.f)("#Sale_Category"),
+                  tooltip: Object(f.f)("#Sale_Category_ttip"),
+                  strOptionClass: Object(L.a)(j.ValveOnlyBackground),
+                  data: "category",
+                }),
+                i.push({
                   label: "(VO) Tag Recommender (?)",
                   tooltip:
                     "Orders games featured on this sales page by their original store tags mashed against the recommended tags for the logged in users.",
@@ -26056,7 +26114,7 @@
                       (p = a.sent()),
                       console.error(
                         "We failed to create a video image, not a blocker: " +
-                          Object(y.a)(p).strErrorMsg
+                          Object(y.c)(p).strErrorMsg
                       ),
                       [3, 5]
                     );
@@ -26397,7 +26455,7 @@
                   case 6:
                     return (
                       (w = a.sent()),
-                      (D = Object(y.a)(w)),
+                      (D = Object(y.c)(w)),
                       console.error(
                         "InternalSaveAction failed: " + D.strErrorMsg,
                         D
@@ -26674,7 +26732,7 @@
                   case 3:
                     return (
                       (s = a.sent()),
-                      (c = Object(y.a)(s)),
+                      (c = Object(y.c)(s)),
                       console.error(
                         "GetLastUpdateTimeForEvent: Failed to get last update time: " +
                           c.strErrorMsg,
@@ -26801,7 +26859,7 @@
                       });
                   },
                   function (e) {
-                    var t = Object(y.a)(e);
+                    var t = Object(y.c)(e);
                     console.error(
                       "LoadSteamAwardVoteDefinitionsForPartner: Request failed: " +
                         t.strErrorMsg,
@@ -27230,7 +27288,7 @@
                     case 5:
                       return (
                         (_ = a.sent()),
-                        (g = Object(v.a)(_)),
+                        (g = Object(v.c)(_)),
                         d({
                           code: "",
                           message: Object(f.f)(

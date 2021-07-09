@@ -1839,161 +1839,262 @@ input.DialogTextInputBase:focus {
     height: 36vw;
   }
 }
-.profilethemecolors_DefaultTheme_1bf2x {
-  --gradient-right: rgba(114, 49, 56, 0.726);
-  --gradient-left: rgba(50, 255, 193, 0.541);
-  --gradient-background: rgba(16, 35, 95, 1);
-  --gradient-background-right: rgba(109, 38, 44, 1);
-  --gradient-background-left: rgba(50, 255, 193, 1);
+.profilethemecolors_DefaultTheme_tedMf {
+  --gradient-right: rgba(109, 38, 44, 0.301);
+  --gradient-left: rgba(50, 255, 193, 0.103);
+  --gradient-background: rgba(34, 35, 48, 0.93);
+  --gradient-background-right: rgba(109, 38, 44, 0);
+  --gradient-background-left: rgba(50, 255, 193, 0.103);
   --color-showcase-header: rgba(43, 45, 68, 0.93);
   --gradient-showcase-header-left: rgba(115, 173, 184, 0.247);
-  --btn-background: rgba(43, 52, 68, 1);
-  --btn-background-hover: rgba(48, 57, 73, 1);
-  --btn-outline: rgb(73, 87, 110);
+  --btn-background: rgba(43, 52, 68);
+  --btn-background-hover: rgb(53, 62, 78);
+  --btn-outline: rgb(93, 102, 118);
   --edit-background: rgb(43, 52, 54);
 }
-.profilethemecolors_CosmicTheme_B0JwR {
-  --gradient-right: rgba(196, 21, 143, 0.842);
-  --gradient-left: rgba(9, 243, 99, 0.74);
-  --gradient-background: rgba(46, 13, 36, 1);
-  --gradient-background-right: rgba(201, 25, 157, 0.788);
-  --gradient-background-left: rgba(239, 243, 9, 1);
+.profilethemecolors_CosmicTheme_17vHy {
+  --gradient-right: rgba(248, 70, 180, 0.301);
+  --gradient-left: rgba(9, 243, 99, 0.247);
+  --gradient-background: rgba(46, 13, 36, 0.93);
+  --gradient-background-right: rgba(70, 227, 248, 0);
+  --gradient-background-left: rgba(239, 243, 9, 0.13);
   --color-showcase-header: rgba(57, 24, 61, 0.93);
   --gradient-showcase-header-left: rgba(20, 60, 68, 0.93);
   --btn-background: rgb(90, 40, 92);
-  --btn-background-hover: rgb(112, 51, 114);
-  --btn-outline: rgba(175, 71, 179, 1);
+  --btn-background-hover: rgb(100, 50, 102);
+  --btn-outline: rgba(140, 90, 142);
   --edit-background: rgb(94, 46, 109);
 }
-.profilethemecolors_SummerTheme_HJIK8 {
-  --gradient-right: rgba(252, 169, 16, 0.753);
-  --gradient-left: rgb(9, 138, 243);
-  --gradient-background: rgba(51, 27, 16, 1);
-  --gradient-background-right: rgba(252, 197, 16, 1);
-  --gradient-background-left: rgba(9, 149, 243, 1);
+.profilethemecolors_SummerTheme_2skFv {
+  --gradient-right: rgba(252, 197, 16, 0.301);
+  --gradient-left: rgba(9, 243, 153, 0.247);
+  --gradient-background: rgba(51, 27, 16, 0.93);
+  --gradient-background-right: rgba(252, 197, 16, 0);
+  --gradient-background-left: rgba(48, 243, 9, 0.13);
   --color-showcase-header: rgba(70, 53, 31, 0.93);
   --gradient-showcase-header-left: rgba(33, 78, 76, 0.93);
   --btn-background: rgb(95, 76, 39);
-  --btn-background-hover: rgb(122, 103, 50);
-  --btn-outline: rgb(179, 168, 71);
+  --btn-background-hover: rgb(105, 86, 49);
+  --btn-outline: rgb(145, 126, 89);
   --edit-background: rgb(129, 95, 31);
 }
-.profilethemecolors_MidnightTheme_AH86R {
-  --gradient-right: rgba(51, 54, 253, 1);
-  --gradient-left: rgba(12, 85, 241, 1);
-  --gradient-background: rgba(10, 14, 32, 1);
-  --gradient-background-right: rgba(51, 54, 253, 1);
-  --gradient-background-left: rgba(12, 85, 241, 1);
+.profilethemecolors_MidnightTheme_M8Pf4 {
+  --gradient-right: rgba(51, 54, 253, 0.233);
+  --gradient-left: rgba(12, 85, 241, 0.37);
+  --gradient-background: rgba(10, 14, 32, 0.93);
+  --gradient-background-right: rgba(51, 54, 253, 0);
+  --gradient-background-left: rgba(12, 85, 241, 0.13);
   --color-showcase-header: rgba(34, 32, 61, 0.93);
   --gradient-showcase-header-left: rgba(20, 33, 68, 0.93);
   --btn-background: rgb(38, 36, 68);
-  --btn-background-hover: rgb(47, 48, 109);
-  --btn-outline: rgb(71, 82, 179);
-  --edit-background: rgb(41, 37, 59);
+  --btn-background-hover: rgb(48, 46, 78);
+  --btn-outline: rgb(88, 86, 108);
 }
-.profilethemecolors_DarkModeTheme_3bM7i {
-  --gradient-right: rgb(37, 37, 37);
-  --gradient-left: rgb(41, 41, 41);
-  --gradient-background: rgb(17, 17, 17);
-  --gradient-background-right: rgba(34, 34, 34, 1);
-  --gradient-background-left: rgba(32, 32, 32, 1);
-  --color-showcase-header: rgba(44, 44, 44, 0.93);
-  --gradient-showcase-header-left: rgba(51, 51, 51, 0.93);
-  --btn-background: rgb(44, 44, 44);
-  --btn-background-hover: rgb(56, 56, 56);
-  --btn-outline: rgb(92, 92, 92);
+.profilethemecolors_DarkModeTheme_2p-_x {
+  --gradient-right: rgba(49, 49, 49, 0.233);
+  --gradient-left: rgba(51, 51, 51, 0.37);
+  --gradient-background: rgba(24, 24, 24, 0.93);
+  --gradient-background-right: rgba(34, 34, 34, 0);
+  --gradient-background-left: rgba(32, 32, 32, 0.13);
+  --color-showcase-header: rgba(0, 0, 0, 0.5);
+  --gradient-showcase-header-left: rgba(0, 0, 0, 0.5);
+  --btn-background: rgba(0, 0, 0, 0.5);
+  --btn-background-hover: rgba(40, 40, 40, 1);
+  --btn-outline: rgb(80, 80, 80);
   --edit-background: rgb(22, 22, 22);
 }
-.profilethemecolors_SteelTheme_2EmRD {
-  --gradient-right: rgb(88, 107, 119);
-  --gradient-left: rgb(112, 101, 101);
-  --gradient-background: rgba(44, 49, 54, 1);
-  --gradient-background-right: rgba(34, 34, 34, 1);
-  --gradient-background-left: rgba(75, 61, 61, 1);
-  --color-showcase-header: rgba(28, 30, 34, 0.93);
-  --gradient-showcase-header-left: rgba(44, 49, 49, 0.93);
+.profilethemecolors_SteelTheme_xdD8L {
+  --gradient-right: rgba(70, 106, 128, 0.233);
+  --gradient-left: rgba(86, 120, 134, 0.37);
+  --gradient-background: rgba(41, 46, 51, 0.93);
+  --gradient-background-right: rgba(17, 24, 29, 0);
+  --gradient-background-left: rgba(19, 27, 31, 0);
+  --color-showcase-header: rgba(55, 62, 76, 0.93);
+  --gradient-showcase-header-left: rgba(68, 83, 93, 0.93);
   --btn-background: rgb(66, 76, 92);
-  --btn-background-hover: rgb(82, 95, 112);
-  --btn-outline: rgb(104, 119, 143);
+  --btn-background-hover: rgb(76, 86, 102);
+  --btn-outline: rgb(106, 126, 142);
   --edit-background: rgb(66, 72, 82);
 }
-.profilethemecolors_CandyTheme_3OFr5 {
-  --gradient-right: rgb(51 132 253 / 23%);
-  --gradient-left: rgb(239 135 241 / 37%);
-  --gradient-background: rgba(130 42 80 / 93%);
-  --gradient-background-right: rgb(253 51 51 / 0%);
-  --gradient-background-left: rgb(241 12 149 / 13%);
-  --color-showcase-header: rgb(61 24 51);
-  --gradient-showcase-header-left: rgb(162 73 139 / 93%);
-  --btn-background: rgb(111 45 97);
-  --btn-background-hover: rgb(130 36 114);
-  --btn-outline: rgb(108 86 101);
-  --edit-background: rgb(156, 70, 133);
+.profilethemecolors_PinkTealTheme_3M7cl {
+  --gradient-right: rgb(139 29 68);
+  --gradient-left: rgb(137 30 67);
+  --gradient-background: rgb(0 255 255 / 15%);
+  --gradient-background-right: rgb(0 0 0 / 0%);
+  --gradient-background-left: rgb(0 0 0 / 0%);
+  --color-showcase-header: rgb(42 117 122);
+  --gradient-showcase-header-left: rgb(42 117 122);
+  --btn-background: rgb(42 117 122);
+  --btn-background-hover: rgb(57 166 173);
+  --btn-outline: rgb(55 162 169);
 }
-.profilethemecolors_CherryTheme_27t_1 {
-  --gradient-right: rgb(253 51 51 / 23%);
-  --gradient-left: rgb(241 12 12 / 37%);
-  --gradient-background: rgba(32, 13, 10, 0.93);
+.profilethemecolors_MutedRedTheme_3lp4R {
+  --gradient-right: rgb(142 40 40 / 23%);
+  --gradient-left: rgb(163 53 53 / 37%);
+  --gradient-background: rgb(96 17 2 / 30%);
   --gradient-background-right: rgb(253 51 51 / 0%);
   --gradient-background-left: rgba(241, 12, 12, 0.13);
-  --color-showcase-header: rgb(61 24 24);
-  --gradient-showcase-header-left: rgb(132 27 27 / 93%);
-  --btn-background: rgb(111 45 45);
-  --btn-background-hover: rgb(130 36 36);
+  --color-showcase-header: rgb(49 9 9 / 81%);
+  --gradient-showcase-header-left: rgb(182 27 23 / 35%);
+  --btn-background: rgb(58 13 10);
+  --btn-background-hover: rgb(105 26 21);
   --btn-outline: rgb(108, 90, 86);
-  --edit-background: rgb(113 29 29);
 }
-.profilethemecolors_SteamGreenTheme_3mIx0 {
-  --gradient-right: #5a6d44;
-  --gradient-left: rgb(191 181 110 / 37%);
-  --gradient-background: rgb(26 32 10 / 93%);
+.profilethemecolors_SteamGreenTheme_335yQ {
+  --gradient-right: #393e2b;
+  --gradient-left: rgb(71 78 52);
+  --gradient-background: rgb(53 58 39);
   --gradient-background-right: rgb(194 253 51 / 0%);
-  --gradient-background-left: rgb(206 241 12 / 13%);
-  --color-showcase-header: rgb(57 61 24);
-  --gradient-showcase-header-left: rgb(132 98 47 / 93%);
-  --btn-background: rgb(92 111 45);
-  --btn-background-hover: rgb(90 130 36);
-  --btn-outline: rgb(99 108 86);
-  --edit-background: rgb(77 80 29);
+  --gradient-background-left: rgb(206 241 12 / 0%);
+  --color-showcase-header: rgb(62 69 44);
+  --gradient-showcase-header-left: rgb(83 92 60);
+  --btn-background: rgb(73 82 53);
+  --btn-background-hover: rgb(82 91 59);
+  --btn-outline: rgb(92 111 45);
 }
-.profilethemecolors_SeafoamTheme_12rwZ {
-  --gradient-right: rgb(51 225 253 / 23%);
+.profilethemecolors_BlueRedTheme_2wH82 {
+  --gradient-right: rgb(253 56 51 / 23%);
   --gradient-left: rgb(12 230 241 / 37%);
-  --gradient-background: rgb(10 25 32 / 93%);
-  --gradient-background-right: rgb(51 234 253 / 0%);
+  --gradient-background: rgb(10 25 32 / 30%);
+  --gradient-background-right: rgb(253 51 51 / 15%);
   --gradient-background-left: rgb(12 241 241 / 13%);
-  --color-showcase-header: rgb(24 54 61);
+  --color-showcase-header: rgb(64 23 23 / 50%);
   --gradient-showcase-header-left: rgb(27 113 132 / 93%);
   --btn-background: rgb(45 93 111);
   --btn-background-hover: rgb(36 121 130);
   --btn-outline: rgb(86 105 108);
-  --edit-background: rgb(27, 110, 128);
 }
-.profilethemecolors_AutumnTheme_PlZKA {
+.profilethemecolors_GoldBurgundyTheme_YGKfX {
   --gradient-right: rgb(253 219 51 / 23%);
-  --gradient-left: rgb(241 223 12 / 37%);
-  --gradient-background: rgb(64 40 26 / 93%);
-  --gradient-background-right: rgb(253 219 51 / 0%);
-  --gradient-background-left: rgb(241 192 12 / 13%);
-  --color-showcase-header: rgb(134 67 19);
-  --gradient-showcase-header-left: rgb(187 149 9 / 93%);
-  --btn-background: rgb(154 116 45);
-  --btn-background-hover: rgb(185 147 41);
+  --gradient-left: rgb(97 75 37);
+  --gradient-background: rgb(39 27 16 / 50%);
+  --gradient-background-right: rgb(0 0 0 / 35%);
+  --gradient-background-left: rgb(0 0 0 / 35%);
+  --color-showcase-header: rgb(53 28 22 / 76%);
+  --gradient-showcase-header-left: rgb(120 92 20 / 69%);
+  --btn-background: rgb(57 38 25);
+  --btn-background-hover: rgb(77 52 36);
   --btn-outline: rgb(108, 90, 86);
-  --edit-background: rgb(153, 99, 15);
 }
-.profilethemecolors_BluescreenTheme_1bCKl {
+.profilethemecolors_VibrantBlueTheme_3DOwB {
   --gradient-right: #008ada8a;
   --gradient-left: rgb(47 137 188);
   --gradient-background: #0203048a;
   --gradient-background-right: rgb(253 51 51 / 0%);
-  --gradient-background-left: rgb(12 61 241 / 13%);
-  --color-showcase-header: rgb(24 32 61);
-  --gradient-showcase-header-left: rgb(31 53 113 / 93%);
-  --btn-background: rgb(61 101 150);
-  --btn-background-hover: rgb(57 116 206);
+  --gradient-background-left: rgb(12 140 241 / 17%);
+  --color-showcase-header: rgb(19 57 95);
+  --gradient-showcase-header-left: rgb(39 106 141);
+  --btn-background: rgb(25 70 107);
+  --btn-background-hover: rgb(35 87 130);
+  --btn-outline: rgb(34 88 133);
+}
+.profilethemecolors_GoldenProfileDebutTheme_3BHT2 {
+  --gradient-right: rgba(156, 66, 17, 0.18);
+  --gradient-left: rgba(213, 172, 81, 0.62);
+  --gradient-background: rgba(61, 47, 20, 0.6);
+  --gradient-background-right: rgba(0, 0, 0, 0);
+  --gradient-background-left: rgba(243, 200, 9, 0.13);
+  --color-showcase-header: rgba(95, 72, 33, 0.82);
+  --gradient-showcase-header-left: rgba(155, 122, 54, 0.9);
+  --btn-background: rgb(125, 98, 44);
+  --btn-background-hover: rgb(135, 108, 54);
+  --btn-outline: rgb(175, 148, 94);
+}
+.profilethemecolors_WinterProfile2020Theme_3jPiA {
+  --gradient-right: #7770a988;
+  --gradient-left: #34526f88;
+  --gradient-background: #34526f88;
+  --gradient-background-right: rgba(25, 20, 65, 0.333);
+  --gradient-background-left: rgba(3, 7, 12, 0.333);
+  --color-showcase-header: #07817f;
+  --gradient-showcase-header-left: #34526f;
+  --btn-background: #34526f;
+  --btn-background-hover: rgb(54, 104, 151);
+  --btn-outline: #34526f;
+}
+.profilethemecolors_GoldenWeekProfile2021Theme_24NEV {
+  --gradient-right: #389bb0aa;
+  --gradient-left: #2c5e83aa;
+  --gradient-background: #134061aa;
+  --gradient-background-right: #389bb066;
+  --gradient-background-left: #2c5e8333;
+  --color-showcase-header: #389bb0;
+  --gradient-showcase-header-left: #2c5e83;
+  --btn-background: #2c5e83;
+  --btn-background-hover: #1b6daa;
+  --btn-outline: #2c5e83;
+}
+.profilethemecolors_Summer2021Theme_2bB_m {
+  --gradient-right: #344f68;
+  --gradient-left: #ee3b57b8;
+  --gradient-background: #000000cc;
+  --gradient-background-right: #c1ad4c52;
+  --gradient-background-left: #2e6ea2a3;
+  --color-showcase-header: #b03849a1;
+  --gradient-showcase-header-left: #2e6986;
+  --btn-background: #309186;
+  --btn-background-hover: #3aa89c;
+  --btn-outline: #2c5e83;
+}
+.profilethemecolors_MutedBlueTheme_3-7Wk {
+  --gradient-right: #737d96;
+  --gradient-left: rgb(115 124 147);
+  --gradient-background: #2127338c;
+  --gradient-background-right: rgb(253 51 51 / 0%);
+  --gradient-background-left: rgb(20 26 49 / 13%);
+  --color-showcase-header: rgb(30 44 66 / 54%);
+  --gradient-showcase-header-left: rgb(69 79 108 / 75%);
+  --btn-background: rgb(44 55 74);
+  --btn-background-hover: rgb(63 81 111);
   --btn-outline: rgb(86 91 108);
-  --edit-background: rgb(61, 101, 150);
+}
+.profilethemecolors_GoldTheme_l3sX- {
+  --gradient-right: rgb(197 164 79 / 73%);
+  --gradient-left: rgb(128 94 36);
+  --gradient-background: rgb(116 93 44 / 64%);
+  --gradient-background-right: rgb(0 0 0 / 35%);
+  --gradient-background-left: rgb(0 0 0 / 35%);
+  --color-showcase-header: rgb(185 145 76 / 76%);
+  --gradient-showcase-header-left: rgb(120 95 31 / 69%);
+  --btn-background: rgb(145 116 66);
+  --btn-background-hover: rgb(169 132 68);
+  --btn-outline: rgb(108, 90, 86);
+}
+.profilethemecolors_BurntOrangeTheme_37pNJ {
+  --gradient-right: rgb(136 66 8 / 66%);
+  --gradient-left: rgb(251 250 251 / 48%);
+  --gradient-background: rgb(47 24 6 / 65%);
+  --gradient-background-right: rgb(19 8 2);
+  --gradient-background-left: rgb(8 2 5 / 0%);
+  --color-showcase-header: rgb(48 12 5 / 88%);
+  --gradient-showcase-header-left: rgb(168 99 5 / 67%);
+  --btn-background: rgb(50 15 7);
+  --btn-background-hover: rgb(89 31 17);
+  --btn-outline: rgb(86 30 17);
+}
+.profilethemecolors_FlatGreyTheme_2AFCa {
+  --gradient-right: #3b3e4100;
+  --gradient-left: rgb(59 62 65 / 0%);
+  --gradient-background: rgb(59 62 65);
+  --gradient-background-right: rgb(59 62 65 / 0%);
+  --gradient-background-left: rgb(59 62 65 / 0%);
+  --color-showcase-header: rgb(105 110 113);
+  --gradient-showcase-header-left: rgb(105 110 113);
+  --btn-background: rgb(105 110 113);
+  --btn-background-hover: rgb(118 122 124);
+  --btn-outline: rgb(105 110 113);
+}
+.profilethemecolors_PurpleTheme_KM8jQ {
+  --gradient-right: #2c0652;
+  --gradient-left: #4a099494;
+  --gradient-background: #20024380;
+  --gradient-background-right: #0f021f;
+  --gradient-background-left: #150329;
+  --color-showcase-header: #40126d;
+  --gradient-showcase-header-left: #1b072e;
+  --btn-background: #3f126b;
+  --btn-background-hover: #581a94;
+  --btn-outline: #571b91;
 }
 .profileeditshell_Shell_2kqKZ {
   display: flex;

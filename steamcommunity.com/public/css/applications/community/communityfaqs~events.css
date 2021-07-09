@@ -132,6 +132,10 @@ input.clanimagepicker_SearchInput_lwt4u {
 }
 .clanimagepicker_ResultNotification_1mERN {
   color: #fff;
+  padding: 24px;
+  text-align: center;
+  display: block;
+  width: 100%;
 }
 .clanimagepicker_errorcode_2f4ad {
   color: red;
@@ -3038,6 +3042,9 @@ strong {
 }
 .partnereventdescriptiontab_DescEditorPadding_3mLVV {
   padding-top: 15px;
+}
+.partnereventdescriptiontab_DescEditorPadding_3mLVV.partnereventdescriptiontab_ImagePickerCtn_Mc28x {
+  width: 395px;
 }
 .partnereventsavebutton_SavedImage_1y3QV {
   height: 12px;

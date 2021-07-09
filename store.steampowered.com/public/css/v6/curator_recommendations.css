@@ -13,6 +13,8 @@ body.v6.creatorhome.game_bg {
 	background-size: contain;
 	background-color: rgba(146, 137, 119, 0.2);
 	background-blend-mode: difference;
+    position: absolute;
+    overflow: hidden;
 }
 .creatorhome .page_background.lowtint {
 	background: -webkit-linear-gradient( 290deg, rgba(188, 151, 78, 0.2) 5%,rgba( 266, 244, 255, 0.2) 95%);
@@ -398,7 +400,8 @@ body.v6 h2.curator_name a {
 	letter-spacing: 0;
 }
 body.v6 h2.curator_name a:hover {
-	color: #66c0f4;
+	color: #fff;
+    text-decoration: underline;
 }
 
 .follow_controls,
@@ -1682,6 +1685,9 @@ background: -webkit-linear-gradient( top, rgba(78, 102, 115, 0.3) 5%, rgba(78, 1
 		padding-top: 90px;
 	}
 
+    html.responsive .curator_header_area_ctn {
+        height: 209px;
+    }
 
 }
 

@@ -1537,7 +1537,7 @@ body.forgeyourfate {
 
 .home_franchises_ctn {
     padding: 10px 0;
-
+    width: 100vw;
 }
 
 .home_franchises_ctn .home_section_title, .home_browsemore_ctn .home_section_title {
@@ -2345,6 +2345,16 @@ body.v6 .sale_capsule .discount_block_inline
 {
     position: relative;
     padding: 0;
+}
+@media screen and (max-width: 1250px ) and (min-width: 910px)
+{
+
+    html.responsive .franchise_carousel {
+        width: calc(100vw - 100px);
+    }
+    #sale_tag_genre.home_pagecontent_ctn {
+        width: calc(100vw - 100px);
+    }
 }
 
 .franchise_paging

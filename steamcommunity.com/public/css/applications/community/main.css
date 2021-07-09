@@ -820,6 +820,18 @@ body.modals_BodyNoScrollDialog_105OB {
 .app_Error_2yM3d {
   color: red;
 }
+.logsettings_ManualOverlayContainer_jKuCG {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9001;
+}
+.logsettings_ManualOverlayContainer_jKuCG .ModalPosition_Content {
+  max-width: 100%;
+  max-height: 100%;
+}
 body,
 body.shared_common_v6_2Lxgd {
   color: #969696;

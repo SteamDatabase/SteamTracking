@@ -801,7 +801,7 @@
                   m
                     .LoadProfiles([t.ConvertTo64BitString()])
                     .catch(function (e) {
-                      var n = Object(d.a)(e);
+                      var n = Object(d.c)(e);
                       console.error(
                         "useUserProfile failed to load profile for " +
                           t.ConvertTo64BitString() +

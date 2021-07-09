@@ -341,6 +341,12 @@
                     "name": "ecurrency",
                     "type": "int32",
                     "optional": false
+                },
+                {
+                    "name": "currency_code",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Standard short code of the requested currency (preferred)"
                 }
             ]
         },

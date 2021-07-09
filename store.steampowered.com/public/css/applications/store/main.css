@@ -3920,9 +3920,21 @@ b {
 .partnereventshared_EventBarTitleCtn_WfVze {
   text-align: center;
   color: #32373f;
-  background: rgba(0, 0, 0, 0.2);
-  padding: 4px 6px;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 8px 10px;
   border-radius: 2px;
+}
+.partnereventshared_EventBarTitleCtn_WfVze .PendingVisibilityText {
+  margin-left: 20px;
+  color: #b12100;
+}
+.partnereventshared_EventBarTitleCtn_WfVze .HelperTooltip {
+  display: flex;
+  flex-direction: row;
+  margin-left: 3px;
+}
+.partnereventshared_EventBarTitleCtn_WfVze .HelperTooltip svg {
+  fill: #545454;
 }
 .partnereventshared_EventBarTitle_29kVX {
   font-size: 22px;
@@ -6180,7 +6192,6 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
   width: 100%;
   height: 478px;
   position: relative;
-  background: #202327;
 }
 .animated_featured_capsule_BGVideo_XXdrS {
   position: absolute;
@@ -6202,20 +6213,14 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: radial-gradient(
-    38% 61% at 59% 42%,
-    rgba(32, 35, 39, 0) 65%,
-    rgba(32, 35, 39, 0.2) 75%,
-    rgba(32, 35, 39, 0.6) 100%,
-    rgba(32, 35, 39, 0.7) 130%
-  );
+  -webkit-mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%);
+  mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%);
   z-index: 2;
 }
 .animated_featured_capsule_BGGradientTwo_21GjW {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgba(32, 35, 39, 0) 58%, #202327 95%);
   z-index: 3;
 }
 .animated_featured_capsule_CapsuleDecorators_jaTSi {
@@ -6276,6 +6281,9 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
   font-size: 20px;
   font-weight: 200;
   text-shadow: 1px 1px 0px #000;
+}
+.SaleSectionCarousel .carousel__slider {
+  margin: -10px 0px 0px 0px;
 }
 .carousel__slide .animated_featured_capsule_BGImage_30XmW {
   opacity: 0;
@@ -6377,7 +6385,7 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
     transform: translateX(0px);
   }
   20% {
-    opacity: 1;
+    opacity: 0;
     transform: translateX(0px);
   }
   90% {
@@ -13343,7 +13351,6 @@ html.responsive.touch
 }
 .eventcalendar_EventCalendarContainer_1e3Wb .eventcalendar_RowContainer_3yqpP {
   transition: transform 0.15s ease-in-out;
-  will-change: transform;
   min-height: 100vh;
   width: 100%;
 }
@@ -16742,6 +16749,44 @@ html:not(.touch)
     U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
     U+FEFF, U+FFFD;
 }
+.reservations_description_1oXNi {
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-bottom: 20px;
+  color: #fff;
+}
+.reservations_j1_1IuhK {
+  border: solid 2px #fff;
+  border-radius: 3px;
+  width: 300px;
+  padding: 20px;
+  margin: 10px;
+  color: #fff;
+}
+.reservations_options_1ShIC {
+  display: flex;
+  justify-content: space-evenly;
+}
+.reservations_price__K9Gw {
+  text-align: right;
+  padding-right: 5px;
+}
+.reservations_CommunityPreviewReservationWidgetControl_k82ad {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.reservations_reserverow_1DB5F {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+.reservations_reserverow_1DB5F > div {
+  margin: 10px;
+}
+.reservations_reservebutton_3I2SP {
+  background: #fff;
+}
 .salecuratorrecommendations_CuratorCtn_3dOtc {
   position: relative;
   background: #1f2225;
@@ -17584,6 +17629,18 @@ html:not(.touch)
   .demoandquickpitch_TileActionInnerText_-piyE {
   font-size: 12px;
   font-weight: normal;
+}
+.logsettings_ManualOverlayContainer_jKuCG {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9001;
+}
+.logsettings_ManualOverlayContainer_jKuCG .ModalPosition_Content {
+  max-width: 100%;
+  max-height: 100%;
 }
 button.DialogButton {
   -webkit-box-sizing: content-box;

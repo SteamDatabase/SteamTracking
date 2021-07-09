@@ -7740,7 +7740,7 @@
             var e = new Et.a();
             (this.m_TextFilterPreferences.eTextFilterSetting = e.text_filter_setting()),
               (this.m_TextFilterPreferences.bIgnoreFriends = e.text_filter_ignore_friends()),
-              (this.m_TextFilterWords = new Et.m());
+              (this.m_TextFilterWords = new Et.l());
           }
           return (
             (e.prototype.Init = function (e, t, r) {
@@ -7833,7 +7833,7 @@
                         : [3, 2];
                     case 1:
                       (e = t.sent()) &&
-                        (this.m_TextFilterWords = Et.m.fromObject(e)),
+                        (this.m_TextFilterWords = Et.l.fromObject(e)),
                         (t.label = 2);
                     case 2:
                       return [2];
@@ -7909,7 +7909,7 @@
                           ? ((t = m.b.Init(Et.b)),
                             [
                               4,
-                              Et.n.GetCommunityPreferences(this.m_Transport, t),
+                              Et.m.GetCommunityPreferences(this.m_Transport, t),
                             ])
                           : [3, 3]
                       );
@@ -7948,7 +7948,7 @@
                       )
                         return [3, 15];
                       if (
-                        ((i = new Et.m()), 0 === e.text_filter_words_revision())
+                        ((i = new Et.l()), 0 === e.text_filter_words_revision())
                       )
                         return [3, 14];
                       n.label = 8;
@@ -7956,8 +7956,8 @@
                       return (
                         n.trys.push([8, 13, , 14]),
                         this.m_Transport
-                          ? ((o = m.b.Init(Et.g)),
-                            [4, Et.n.GetTextFilterWords(this.m_Transport, o)])
+                          ? ((o = m.b.Init(Et.f)),
+                            [4, Et.m.GetTextFilterWords(this.m_Transport, o)])
                           : [3, 10]
                       );
                     case 9:
@@ -7979,7 +7979,7 @@
                       );
                     case 11:
                       (u = n.sent()),
-                        (i = Et.m.fromObject(u.data.words)),
+                        (i = Et.l.fromObject(u.data.words)),
                         (n.label = 12);
                     case 12:
                       return [3, 14];

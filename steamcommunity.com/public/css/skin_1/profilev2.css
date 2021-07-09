@@ -270,18 +270,18 @@ body.FlatGreyTheme {
     --btn-outline: rgb(105 110 113);
 }
 
-/* (Outriders - Mantra) */  
+/* (Outriders - Main) */  
 body.PurpleTheme {
---gradient-right: #2c0652;
-    --gradient-left: #4a099494;
+	--gradient-right: #3c2c4c;
+    --gradient-left: #52298094;
     --gradient-background: #20024380;
     --gradient-background-right: #0f021f;
     --gradient-background-left: #150329;
-    --color-showcase-header: #40126d;
-    --gradient-showcase-header-left: #1b072e;
-    --btn-background: #3f126b;
-    --btn-background-hover: #581a94;
-    --btn-outline: #571b91;
+    --color-showcase-header: #4c2f69;
+    --gradient-showcase-header-left: #29113f;
+    --btn-background: #40245c;
+    --btn-background-hover: #5f3c80;
+    --btn-outline: #603689;
 }
 
 div.profile_page {

@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6655183";
+var CLSTAMP = "6658904";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [100],
   {
@@ -585,13 +585,13 @@ var CLSTAMP = "6655183";
           return j;
         }),
         n.d(t, "J", function () {
-          return T;
-        }),
-        n.d(t, "R", function () {
           return k;
         }),
-        n.d(t, "y", function () {
+        n.d(t, "R", function () {
           return L;
+        }),
+        n.d(t, "y", function () {
+          return T;
         }),
         n.d(t, "H", function () {
           return B;
@@ -1668,7 +1668,7 @@ var CLSTAMP = "6655183";
           })
         );
       }
-      function T() {
+      function k() {
         return o.createElement(
           "svg",
           {
@@ -1694,7 +1694,7 @@ var CLSTAMP = "6655183";
           })
         );
       }
-      function k() {
+      function L() {
         return o.createElement(
           "svg",
           {
@@ -1727,7 +1727,7 @@ var CLSTAMP = "6655183";
           })
         );
       }
-      function L(e) {
+      function T(e) {
         return o.createElement(
           "svg",
           {
@@ -4133,6 +4133,10 @@ var CLSTAMP = "6655183";
       var g = (function () {
           function e(e, t) {
             (this.m_bFocused = !1),
+              Object(h.a)(
+                e,
+                "Name is required.  This is an internal name, different from title."
+              ),
               (this.m_strName = e),
               (this.m_rgParams = t),
               this.m_rgParams.target_browser &&
@@ -4900,9 +4904,24 @@ var CLSTAMP = "6655183";
                 this.props.closeModal && this.props.closeModal();
             }),
             (t.prototype.OK = function () {
-              this.props.bOKDisabled ||
-                (this.props.onOK && this.props.onOK(),
-                this.props.closeModal && this.props.closeModal());
+              return Object(r.b)(this, void 0, void 0, function () {
+                return Object(r.e)(this, function (e) {
+                  switch (e.label) {
+                    case 0:
+                      return this.props.bOKDisabled
+                        ? [2]
+                        : this.props.onOK
+                        ? [4, this.props.onOK()]
+                        : [3, 2];
+                    case 1:
+                      e.sent(), (e.label = 2);
+                    case 2:
+                      return (
+                        this.props.closeModal && this.props.closeModal(), [2]
+                      );
+                  }
+                });
+              });
             }),
             (t.prototype.render = function () {
               return o.createElement(
@@ -5037,6 +5056,13 @@ var CLSTAMP = "6655183";
             (e.prototype.UnregisterOverlay = function (e) {
               Object(g.a)(this.m_ActiveOverlay == e, "Active overlay mismatch"),
                 this.m_ActiveOverlay == e && (this.m_ActiveOverlay = null);
+            }),
+            Object.defineProperty(e.prototype, "hasOverlay", {
+              get: function () {
+                return null != this.m_ActiveOverlay;
+              },
+              enumerable: !1,
+              configurable: !0,
             }),
             (e.prototype.ForceUpdate = function () {
               var e = this;
@@ -5218,13 +5244,13 @@ var CLSTAMP = "6655183";
           return I;
         }),
         n.d(t, "h", function () {
-          return T;
-        }),
-        n.d(t, "r", function () {
           return k;
         }),
-        n.d(t, "d", function () {
+        n.d(t, "r", function () {
           return L;
+        }),
+        n.d(t, "d", function () {
+          return T;
         }),
         n.d(t, "u", function () {
           return B;
@@ -5257,7 +5283,7 @@ var CLSTAMP = "6655183";
           return fe;
         }),
         n.d(t, "a", function () {
-          return Te;
+          return ke;
         });
       var r = n("mrSG"),
         o = n("q1tI"),
@@ -5405,12 +5431,12 @@ var CLSTAMP = "6655183";
           return o.createElement(
             p.f,
             Object(r.a)(
-              { component: n.BaseButton, fallback: T, componentRef: t },
+              { component: n.BaseButton, fallback: k, componentRef: t },
               e
             )
           );
         }),
-        T = o.forwardRef(function (e, t) {
+        k = o.forwardRef(function (e, t) {
           var n = e.svgicon,
             i = (e.primary, e.renderButtonElement),
             a = Object(r.f)(e, ["svgicon", "primary", "renderButtonElement"]),
@@ -5426,7 +5452,7 @@ var CLSTAMP = "6655183";
             e.children
           );
         }),
-        k = o.forwardRef(function (e, t) {
+        L = o.forwardRef(function (e, t) {
           return o.createElement(
             j,
             Object(r.a)(
@@ -5444,7 +5470,7 @@ var CLSTAMP = "6655183";
             )
           );
         }),
-        L = o.forwardRef(function (e, t) {
+        T = o.forwardRef(function (e, t) {
           return o.createElement(
             j,
             Object(r.a)({ type: "button" }, e, {
@@ -5484,13 +5510,13 @@ var CLSTAMP = "6655183";
           S,
           null,
           o.createElement(
-            k,
+            L,
             { onClick: e.onOK, disabled: e.bOKDisabled },
             e.strOKText || Object(s.f)("#Button_Confirm"),
             " "
           ),
           o.createElement(
-            L,
+            T,
             { onClick: e.onCancel },
             e.strCancelText || Object(s.f)("#Button_Cancel")
           )
@@ -5501,19 +5527,19 @@ var CLSTAMP = "6655183";
           D,
           null,
           o.createElement(
-            k,
+            L,
             { onClick: e.onOK, disabled: e.bOKDisabled },
             e.strOKText || Object(s.f)("#Button_Confirm"),
             " "
           ),
           o.createElement(
-            k,
+            L,
             { onClick: e.onUpdate, disabled: e.bUpdateDisabled },
             e.strUpdateText || Object(s.f)("#Button_Update"),
             " "
           ),
           o.createElement(
-            L,
+            T,
             { onClick: e.onCancel },
             e.strCancelText || Object(s.f)("#Button_Cancel")
           )
@@ -6018,7 +6044,7 @@ var CLSTAMP = "6655183";
                       "div",
                       { className: "displayRow" },
                       o.createElement(
-                        L,
+                        T,
                         {
                           className: "DialogInput_CopyAction Primary",
                           onClick: this.OnCopyClick,
@@ -7455,7 +7481,7 @@ var CLSTAMP = "6655183";
           )
         );
       });
-      var Te = (function (e) {
+      var ke = (function (e) {
         function t() {
           var t = (null !== e && e.apply(this, arguments)) || this;
           return (
@@ -10202,63 +10228,69 @@ var CLSTAMP = "6655183";
     },
     X3Ds: function (e, t, n) {
       "use strict";
-      n.d(t, "e", function () {
+      n.d(t, "p", function () {
         return o;
       }),
-        n.d(t, "d", function () {
+        n.d(t, "e", function () {
           return i;
         }),
-        n.d(t, "h", function () {
+        n.d(t, "d", function () {
           return a;
         }),
-        n.d(t, "m", function () {
+        n.d(t, "h", function () {
           return s;
         }),
-        n.d(t, "l", function () {
+        n.d(t, "m", function () {
           return c;
         }),
-        n.d(t, "i", function () {
+        n.d(t, "l", function () {
           return l;
         }),
-        n.d(t, "j", function () {
+        n.d(t, "i", function () {
           return u;
         }),
-        n.d(t, "b", function () {
+        n.d(t, "j", function () {
           return p;
         }),
-        n.d(t, "p", function () {
+        n.d(t, "b", function () {
           return d;
         }),
-        n.d(t, "g", function () {
+        n.d(t, "q", function () {
           return h;
         }),
-        n.d(t, "q", function () {
+        n.d(t, "g", function () {
           return m;
         }),
-        n.d(t, "f", function () {
+        n.d(t, "r", function () {
           return f;
         }),
-        n.d(t, "k", function () {
+        n.d(t, "f", function () {
           return g;
         }),
-        n.d(t, "o", function () {
+        n.d(t, "k", function () {
           return b;
         }),
-        n.d(t, "c", function () {
+        n.d(t, "o", function () {
           return v;
         }),
-        n.d(t, "r", function () {
+        n.d(t, "c", function () {
           return _;
         }),
-        n.d(t, "n", function () {
+        n.d(t, "s", function () {
           return y;
         }),
-        n.d(t, "a", function () {
+        n.d(t, "n", function () {
           return O;
+        }),
+        n.d(t, "a", function () {
+          return w;
         });
       var r = n("mrSG");
       n("Kw0F"), n("r64O");
-      function o(e, t) {
+      function o(e) {
+        return null != e && void 0 !== e.focus;
+      }
+      function i(e, t) {
         for (; t; ) {
           if (
             (t.parentNode.nodeType == Node.DOCUMENT_FRAGMENT_NODE &&
@@ -10270,11 +10302,11 @@ var CLSTAMP = "6655183";
         }
         return !1;
       }
-      function i(e, t) {
+      function a(e, t) {
         for (; t; ) if ((t = t.parentElement) == e) return !0;
         return !1;
       }
-      function a(e, t) {
+      function s(e, t) {
         return {
           width: t.width,
           height: t.height,
@@ -10284,22 +10316,20 @@ var CLSTAMP = "6655183";
           right: e.screenLeft + t.right,
         };
       }
-      function s(e) {
-        var t,
-          n = void 0;
+      function c(e) {
+        var t = void 0;
         return (
           e &&
-            null != (t = e.currentTarget) &&
-            void 0 !== t.focus &&
-            (n = e.currentTarget.ownerDocument.defaultView),
-          n
+            o(e.currentTarget) &&
+            (t = e.currentTarget.ownerDocument.defaultView),
+          t
         );
       }
-      function c(e) {
+      function l(e) {
         var t = void 0;
         return e && (t = e.ownerDocument.defaultView), t;
       }
-      function l(e) {
+      function u(e) {
         var t = document.createElement("textarea");
         (t.textContent = e),
           (t.style.position = "fixed"),
@@ -10313,11 +10343,11 @@ var CLSTAMP = "6655183";
           document.body.removeChild(t);
         }
       }
-      function u(e) {
-        var t = "steam://openurl/";
-        e.startsWith(t) && (e = e.slice(t.length)), l(e);
-      }
       function p(e) {
+        var t = "steam://openurl/";
+        e.startsWith(t) && (e = e.slice(t.length)), u(e);
+      }
+      function d(e) {
         var t = e.ownerDocument;
         return (
           t.fullscreen ||
@@ -10326,7 +10356,7 @@ var CLSTAMP = "6655183";
           t.msFullscreenElement
         );
       }
-      function d(e, t) {
+      function h(e, t) {
         var n = e;
         n.requestFullscreen
           ? n.requestFullscreen()
@@ -10338,7 +10368,7 @@ var CLSTAMP = "6655183";
           ? n.mozRequestFullScreen()
           : n.msRequestFullscreen && n.msRequestFullscreen();
       }
-      function h(e) {
+      function m(e) {
         var t = e.ownerDocument;
         t.cancelFullscreen
           ? t.cancelFullscreen()
@@ -10348,12 +10378,12 @@ var CLSTAMP = "6655183";
           ? t.mozCancelFullScreen()
           : t.msExitFullscreen && t.msExitFullscreen();
       }
-      function m(e) {
+      function f(e) {
         "loading" == document.readyState
           ? document.addEventListener("DOMContentLoaded", e)
           : e();
       }
-      function f(e, t) {
+      function g(e, t) {
         var n = e;
         return (
           (n.lastModifiedDate = new Date()),
@@ -10361,13 +10391,13 @@ var CLSTAMP = "6655183";
           e
         );
       }
-      function g(e, t) {
+      function b(e, t) {
         for (; e; ) {
           if (t(e)) return e;
           e = e.parentElement;
         }
       }
-      function b(e) {
+      function v(e) {
         for (
           var t = 1, n = e.ownerDocument.defaultView, r = e;
           null != r;
@@ -10378,7 +10408,7 @@ var CLSTAMP = "6655183";
         }
         return t;
       }
-      function v(e, t) {
+      function _(e, t) {
         if ("x" === t) {
           if (e.scrollWidth <= e.clientWidth) return !1;
         } else if (e.scrollHeight <= e.clientHeight) return !1;
@@ -10386,7 +10416,7 @@ var CLSTAMP = "6655183";
           r = "x" === t ? n.overflowX : n.overflowY;
         return "auto" === r || "scroll" === r;
       }
-      function _(e, t) {
+      function y(e, t) {
         return Object(r.b)(this, void 0, void 0, function () {
           var n, o;
           return Object(r.e)(this, function (r) {
@@ -10404,7 +10434,7 @@ var CLSTAMP = "6655183";
           });
         });
       }
-      function y() {
+      function O() {
         return (
           (e = document),
           (t = {}),
@@ -10415,7 +10445,7 @@ var CLSTAMP = "6655183";
         );
         var e, t;
       }
-      function O(e, t) {
+      function w(e, t) {
         !(function (e, t, n) {
           for (
             var r = Object.assign({}, t),
@@ -10807,58 +10837,383 @@ var CLSTAMP = "6655183";
     },
     bDQf: function (e, t, n) {
       "use strict";
-      n.d(t, "b", function () {
-        return s;
+      n.d(t, "d", function () {
+        return h;
       }),
         n.d(t, "a", function () {
-          return c;
+          return f;
+        }),
+        n.d(t, "b", function () {
+          return g;
+        }),
+        n.d(t, "e", function () {
+          return b;
+        }),
+        n.d(t, "c", function () {
+          return w;
         });
-      var r = n("mrSG"),
-        o = n("vDqi"),
-        i = n.n(o),
-        a = n("XxJJ"),
-        s = (function () {
-          function e(e, t, n) {
-            (this.enabled = t),
-              (this.trace = n),
-              (this.idGenerator =
-                e ||
-                function () {
-                  return "";
-                });
+      var r,
+        o = n("mrSG"),
+        i = n("vDqi"),
+        a = n.n(i),
+        s = n("XxJJ"),
+        c = n("u2yL"),
+        l = n("qiKp"),
+        u = n("bxiW"),
+        p = n("q1tI"),
+        d = n.n(p),
+        h = [
+          "ActionDescription",
+          "GroupMemberStore",
+          "Chat",
+          "ChatRoom",
+          "ChatRoomGroup",
+          "ChatHistory",
+          "AppOverviewImplObservable",
+          "ReducedValue",
+        ];
+      function m(e) {
+        return h.includes(e);
+      }
+      !(function (e) {
+        (e[(e.Debug = 0)] = "Debug"),
+          (e[(e.Info = 1)] = "Info"),
+          (e[(e.Warning = 2)] = "Warning"),
+          (e[(e.Error = 3)] = "Error");
+      })(r || (r = {}));
+      var f = (function () {
+          function e(e, t) {
+            (this.m_fnIdGenerator = null),
+              (this.m_sName = e),
+              (this.m_fnIdGenerator = t);
           }
           return (
-            (e.prototype.Log = function () {
+            (e.prototype.Debug = function () {
               for (var e = [], t = 0; t < arguments.length; t++)
                 e[t] = arguments[t];
-              if (this.enabled) {
-                var n = Object(r.g)(
-                  [
-                    "%c" + this.idGenerator(),
-                    "color: white; background: rgba(32,33,36,0.6); border: solid 1px rgba(255,255,255,0.4); padding: 0 1ch",
-                  ],
-                  e
+              this.Log.apply(this, Object(o.g)([r.Debug], e));
+            }),
+            (e.prototype.Info = function () {
+              for (var e = [], t = 0; t < arguments.length; t++)
+                e[t] = arguments[t];
+              this.Log.apply(this, Object(o.g)([r.Info], e));
+            }),
+            (e.prototype.Warning = function () {
+              for (var e = [], t = 0; t < arguments.length; t++)
+                e[t] = arguments[t];
+              this.Log.apply(this, Object(o.g)([r.Warning], e));
+            }),
+            (e.prototype.Error = function () {
+              for (var e = [], t = 0; t < arguments.length; t++)
+                e[t] = arguments[t];
+              this.Log.apply(this, Object(o.g)([r.Error], e));
+            }),
+            (e.prototype.Assert = function (e) {
+              for (var t = [], n = 1; n < arguments.length; n++)
+                t[n - 1] = arguments[n];
+              e ||
+                this.Log.apply(
+                  this,
+                  Object(o.g)([r.Error, "Assertion failed:"], t)
                 );
-                this.trace
-                  ? (console.groupCollapsed.apply(console, n),
-                    console.trace("Callstack"),
-                    console.groupEnd())
-                  : console.log.apply(console, n);
+            }),
+            (e.prototype.Log = function (e) {
+              for (var t, n, i = [], a = 1; a < arguments.length; a++)
+                i[a - 1] = arguments[a];
+              if (e != r.Debug || g.Get().IsDebugLogEnabled(this.m_sName)) {
+                var s = this.m_sName,
+                  c =
+                    null !==
+                      (n =
+                        null === (t = this.m_fnIdGenerator) || void 0 === t
+                          ? void 0
+                          : t.call(this)) && void 0 !== n
+                      ? n
+                      : null;
+                null != c && (s += " (" + c + ")");
+                var l = g.Get().IncludeBacktraceInLog;
+                O.apply(void 0, Object(o.g)([e, l, s, this.m_sName], i));
               }
             }),
-            (e.create = function (t, n, r) {
-              return (
-                void 0 === n && (n = !1),
-                void 0 === r && (r = !1),
-                new e(t, n, r).Log
+            Object(o.c)([s.a], e.prototype, "Debug", null),
+            Object(o.c)([s.a], e.prototype, "Info", null),
+            Object(o.c)([s.a], e.prototype, "Warning", null),
+            Object(o.c)([s.a], e.prototype, "Error", null),
+            Object(o.c)([s.a], e.prototype, "Assert", null),
+            e
+          );
+        })(),
+        g = (function () {
+          function e() {
+            (this.m_Storage = null),
+              (this.m_setEnabledDebugLogs = new Set()),
+              (this.m_bIncludeBacktraceInLog = !1),
+              (this.m_SettingsChangedCallback = new l.a()),
+              (this.m_bLoading = !1),
+              (this.m_Storage = new c.a()),
+              this.LoadSettings();
+          }
+          return (
+            (e.prototype.LogAsLogManager = function () {
+              for (var e = [], t = 0; t < arguments.length; t++)
+                e[t] = arguments[t];
+              O.apply(
+                void 0,
+                Object(o.g)(
+                  [
+                    r.Info,
+                    this.IncludeBacktraceInLog,
+                    "LogManager",
+                    "LogManager",
+                  ],
+                  e
+                )
               );
             }),
-            Object(r.c)([a.a], e.prototype, "Log", null),
+            (e.prototype.LoadSettings = function () {
+              return Object(o.b)(this, void 0, void 0, function () {
+                var t, n;
+                return Object(o.e)(this, function (r) {
+                  switch (r.label) {
+                    case 0:
+                      return (
+                        (this.m_bLoading = !0),
+                        (t = this),
+                        [
+                          4,
+                          this.m_Storage.GetObject(
+                            e.k_IncludeBacktraceInLog_StorageKey
+                          ),
+                        ]
+                      );
+                    case 1:
+                      return (
+                        (t.m_bIncludeBacktraceInLog = !!r.sent()),
+                        [
+                          4,
+                          this.m_Storage.GetObject(
+                            e.k_EnabledLogNames_StorageKey
+                          ),
+                        ]
+                      );
+                    case 2:
+                      return (
+                        (n = r.sent()),
+                        Array.isArray(n) &&
+                          ((this.m_setEnabledDebugLogs = new Set(n.filter(m))),
+                          this.LogAsLogManager(
+                            "Loaded debug enabled log names. Will print log messages for:",
+                            Array.from(this.m_setEnabledDebugLogs)
+                          )),
+                        (this.m_bLoading = !1),
+                        this.m_SettingsChangedCallback.Dispatch(),
+                        [2]
+                      );
+                  }
+                });
+              });
+            }),
+            (e.prototype.SaveSettings = function () {
+              return Object(o.b)(this, void 0, void 0, function () {
+                return Object(o.e)(this, function (t) {
+                  switch (t.label) {
+                    case 0:
+                      return [
+                        4,
+                        this.m_Storage.StoreObject(
+                          e.k_EnabledLogNames_StorageKey,
+                          Array.from(this.m_setEnabledDebugLogs)
+                        ),
+                      ];
+                    case 1:
+                      return (
+                        t.sent(),
+                        [
+                          4,
+                          this.m_Storage.StoreObject(
+                            e.k_IncludeBacktraceInLog_StorageKey,
+                            this.m_bIncludeBacktraceInLog
+                          ),
+                        ]
+                      );
+                    case 2:
+                      return (
+                        t.sent(),
+                        this.LogAsLogManager(
+                          "Saved enabled debug log names. Will print log messages for:",
+                          Array.from(this.m_setEnabledDebugLogs)
+                        ),
+                        [2]
+                      );
+                  }
+                });
+              });
+            }),
+            (e.Get = function () {
+              return (
+                null == e.s_Singleton && (e.s_Singleton = new e()),
+                e.s_Singleton
+              );
+            }),
+            Object.defineProperty(e.prototype, "Loading", {
+              get: function () {
+                return this.m_bLoading;
+              },
+              enumerable: !1,
+              configurable: !0,
+            }),
+            Object.defineProperty(e.prototype, "LogNames", {
+              get: function () {
+                return h;
+              },
+              enumerable: !1,
+              configurable: !0,
+            }),
+            (e.prototype.IsDebugLogEnabled = function (e) {
+              return this.m_setEnabledDebugLogs.has(e);
+            }),
+            (e.prototype.SetDebugLogEnabled = function (e, t) {
+              return Object(o.b)(this, void 0, void 0, function () {
+                return Object(o.e)(this, function (n) {
+                  switch (n.label) {
+                    case 0:
+                      return (
+                        t
+                          ? this.m_setEnabledDebugLogs.add(e)
+                          : this.m_setEnabledDebugLogs.delete(e),
+                        this.m_SettingsChangedCallback.Dispatch(),
+                        [4, this.SaveSettings()]
+                      );
+                    case 1:
+                      return n.sent(), [2];
+                  }
+                });
+              });
+            }),
+            (e.prototype.SetAllDebugLogsEnabled = function (e) {
+              return Object(o.b)(this, void 0, void 0, function () {
+                return Object(o.e)(this, function (t) {
+                  switch (t.label) {
+                    case 0:
+                      return (
+                        (this.m_setEnabledDebugLogs = new Set(e ? h : [])),
+                        this.m_SettingsChangedCallback.Dispatch(),
+                        [4, this.SaveSettings()]
+                      );
+                    case 1:
+                      return t.sent(), [2];
+                  }
+                });
+              });
+            }),
+            (e.prototype.RegisterForSettingsChanges = function (e) {
+              return this.m_SettingsChangedCallback.Register(e);
+            }),
+            Object.defineProperty(e.prototype, "IncludeBacktraceInLog", {
+              get: function () {
+                return this.m_bIncludeBacktraceInLog;
+              },
+              enumerable: !1,
+              configurable: !0,
+            }),
+            (e.prototype.SetIncludeBacktraceInLog = function (e) {
+              return Object(o.b)(this, void 0, void 0, function () {
+                return Object(o.e)(this, function (t) {
+                  switch (t.label) {
+                    case 0:
+                      return (
+                        (this.m_bIncludeBacktraceInLog = e),
+                        this.m_SettingsChangedCallback.Dispatch(),
+                        [4, this.SaveSettings()]
+                      );
+                    case 1:
+                      return t.sent(), [2];
+                  }
+                });
+              });
+            }),
+            (e.k_EnabledLogNames_StorageKey = "EnabledWebLogs"),
+            (e.k_IncludeBacktraceInLog_StorageKey = "IncludeBacktraceInLog"),
+            (e.s_Singleton = null),
             e
           );
         })();
-      function c(e) {
-        if (i.a.isCancel(e))
+      function b() {
+        var e = Object(u.e)(),
+          t = d.a.useMemo(
+            function () {
+              return g.Get().RegisterForSettingsChanges(e).Unregister;
+            },
+            [e]
+          );
+        d.a.useEffect(function () {
+          return t;
+        });
+      }
+      function v(e) {
+        for (var t = 0, n = 0; n < e.length; n++)
+          t = e.charCodeAt(n) + ((t << 5) - t);
+        return [(t >> 0) & 255, (t >> 8) & 255, (t >> 16) & 255];
+      }
+      function _(e) {
+        return (299 * e[0] + 587 * e[1] + 114 * e[2]) / 1e3 >= 128;
+      }
+      function y(e) {
+        switch (e) {
+          case r.Debug:
+            return String.fromCodePoint(128027);
+          case r.Info:
+            return String.fromCodePoint(8505);
+          case r.Warning:
+            return String.fromCodePoint(9888);
+          case r.Error:
+            return String.fromCodePoint(128165);
+        }
+      }
+      function O(e, t, n, i) {
+        for (var a = [], s = 4; s < arguments.length; s++)
+          a[s - 4] = arguments[s];
+        var c = v(i),
+          l = c.map(function (e, t) {
+            return Math.max(
+              0,
+              Math.min(255, 255 * (0.8 * (e / 255 - 0.5) + 0.15))
+            );
+          }),
+          u = _(l),
+          p = n;
+        t && (p = y(e) + " " + p);
+        var d = Object(o.g)(
+          [
+            "%c" + p + "%c:",
+            "color: " +
+              (u ? "black" : "white") +
+              "; background: rgb(" +
+              l.join(",") +
+              "); padding: 0 1ch",
+            "color: transparent; margin-right: -1ch",
+          ],
+          a
+        );
+        if (t)
+          console.groupCollapsed.apply(console, d),
+            console.trace("Callstack"),
+            console.groupEnd();
+        else
+          switch (e) {
+            case r.Debug:
+            case r.Info:
+              console.log.apply(console, d);
+              break;
+            case r.Warning:
+              console.warn.apply(console, d);
+              break;
+            case r.Error:
+              console.error.apply(console, d);
+          }
+      }
+      function w(e) {
+        if (a.a.isCancel(e))
           return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };
         if (
           void 0 !== e.response &&
@@ -11102,7 +11457,10 @@ var CLSTAMP = "6655183";
         return [e, t, n];
       }
       function a(e, t) {
-        null != e && ("function" == typeof e ? e(t) : (e.current = t));
+        null != e &&
+          ("function" == typeof e
+            ? e(t)
+            : Object.keys(e).includes("current") && (e.current = t));
       }
       function s() {
         for (var e = [], t = 0; t < arguments.length; t++) e[t] = arguments[t];
@@ -11113,12 +11471,12 @@ var CLSTAMP = "6655183";
         }, e);
       }
       function c() {
-        var e = r.useState(0),
-          t = e[0],
-          n = e[1];
-        return function () {
-          return n(t + 1);
-        };
+        var e = r.useState(0)[1];
+        return r.useCallback(function () {
+          return e(function (e) {
+            return e + 1;
+          });
+        }, []);
       }
       function l(e, t) {
         r.useLayoutEffect(
@@ -11221,6 +11579,11 @@ var CLSTAMP = "6655183";
         }, "");
       };
     },
+    gCFW: function (e, t, n) {
+      e.exports = {
+        ManualOverlayContainer: "logsettings_ManualOverlayContainer_jKuCG",
+      };
+    },
     gQFo: function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
@@ -11247,8 +11610,9 @@ var CLSTAMP = "6655183";
         d = n("WBba"),
         h = n("uobO"),
         m = (n("5izx"), n("X3Ds"));
+      n("Mgs7"), n("bDQf"), n("Jqb/"), n("ka0M"), n("gCFW");
       n("xnZ7"), n("idvb");
-      Object(m.q)(function () {
+      Object(m.r)(function () {
         return Object(r.b)(void 0, void 0, void 0, function () {
           return Object(r.e)(this, function (e) {
             switch (e.label) {
@@ -12245,6 +12609,369 @@ var CLSTAMP = "6655183";
           );
         })();
     },
+    ka0M: function (e, t, n) {
+      "use strict";
+      n.d(t, "a", function () {
+        return c.h;
+      }),
+        n.d(t, "b", function () {
+          return f;
+        }),
+        n.d(t, "d", function () {
+          return g;
+        }),
+        n.d(t, "c", function () {
+          return b;
+        });
+      var r = n("mrSG"),
+        o = n("q1tI"),
+        i = n("i8i4"),
+        a = n("JMS6"),
+        s = n("y+6m"),
+        c = n("Jqb/"),
+        l = n("6Y59"),
+        u = n("bxiW"),
+        p = (function (e) {
+          function t(t) {
+            var n = e.call(this, t) || this;
+            return (n.state = { maximized: n.BIsMaximized() }), n;
+          }
+          return (
+            Object(r.d)(t, e),
+            (t.prototype.BIsMaximized = function () {
+              var e =
+                  this.props.popup.screen.availWidth -
+                  this.props.popup.innerWidth,
+                t =
+                  this.props.popup.screen.availHeight -
+                  this.props.popup.innerHeight;
+              return 0 === e && 0 === t;
+            }),
+            (t.prototype.componentDidMount = function () {
+              this.props.popup.addEventListener(
+                "resize",
+                this.UpdateMaximizeState
+              );
+            }),
+            (t.prototype.componentWillUnmount = function () {
+              this.props.popup.removeEventListener(
+                "resize",
+                this.UpdateMaximizeState
+              );
+            }),
+            (t.prototype.UpdateMaximizeState = function () {
+              var e = this.BIsMaximized();
+              e != this.state.maximized && this.setState({ maximized: e });
+            }),
+            (t.prototype.render = function () {
+              var e = this.props.popup,
+                t = "title-area-icon";
+              this.state.maximized
+                ? (t += " restoreButton")
+                : (t += " maximizeButton");
+              var n = "TitleBar title-area";
+              return (
+                this.props.className && (n = n + " " + this.props.className),
+                o.createElement(
+                  "div",
+                  { className: n, style: this.props.style },
+                  o.createElement("div", { className: "title-area-highlight" }),
+                  o.createElement(
+                    "div",
+                    { className: "title-area-children" },
+                    this.props.children
+                  ),
+                  !this.props.hideActions &&
+                    o.createElement(
+                      "div",
+                      { className: "title-bar-actions" },
+                      o.createElement(
+                        "div",
+                        {
+                          className: "title-area-icon closeButton",
+                          onClick: function () {
+                            e && e.close();
+                          },
+                        },
+                        o.createElement(l.mb, null)
+                      ),
+                      !this.props.hideMinMax &&
+                        o.createElement(
+                          "div",
+                          {
+                            className: t,
+                            onClick: function () {
+                              e.SteamClient.Window.ToggleMaximize();
+                            },
+                          },
+                          this.state.maximized && o.createElement(l.R, null),
+                          !this.state.maximized && o.createElement(l.G, null)
+                        ),
+                      !this.props.hideMinMax &&
+                        o.createElement(
+                          "div",
+                          {
+                            className: "title-area-icon minimizeButton",
+                            onClick: function () {
+                              e.SteamClient.Window.Minimize();
+                            },
+                          },
+                          o.createElement(l.J, null)
+                        )
+                    )
+                )
+              );
+            }),
+            Object(r.c)([u.a], t.prototype, "UpdateMaximizeState", null),
+            t
+          );
+        })(o.Component),
+        d = n("r64O"),
+        h = n("TLQK"),
+        m = n("lkRc");
+      function f(e, t, n) {
+        return Object(r.b)(this, void 0, void 0, function () {
+          var o, i, a, s, c, l, u;
+          return Object(r.e)(this, function (r) {
+            switch (r.label) {
+              case 0:
+                return (
+                  (o = !0 === (null == n ? void 0 : n.bNeverPopOut)),
+                  (i = !o && v(null, t)),
+                  (a =
+                    (null == n ? void 0 : n.bForcePopOut) &&
+                    (null == n ? void 0 : n.popupWidth) &&
+                    (null == n ? void 0 : n.popupHeight)),
+                  (c = i && !a)
+                    ? [4, _(e, t, null == n ? void 0 : n.promiseRenderComplete)]
+                    : [3, 2]
+                );
+              case 1:
+                (c = r.sent()), (r.label = 2);
+              case 2:
+                return (
+                  (l =
+                    (s = c) &&
+                    s.height / t.innerHeight < 0.9 &&
+                    s.width / t.innerWidth < 0.8),
+                  o || (!(null == n ? void 0 : n.bForcePopOut) && l)
+                    ? [2, b(e, t)]
+                    : ((u = {
+                        strTitle:
+                          (null == n ? void 0 : n.strTitle) ||
+                          Object(h.f)("#Dialog_DefaultWindowTitle"),
+                        fnOnClose: null == n ? void 0 : n.fnOnClose,
+                        popupWidth:
+                          (null == n ? void 0 : n.popupWidth) ||
+                          (null == s ? void 0 : s.width),
+                        popupHeight:
+                          (null == n ? void 0 : n.popupHeight) ||
+                          (null == s ? void 0 : s.height),
+                        bHideMainWindowForPopouts:
+                          null == n ? void 0 : n.bHideMainWindowForPopouts,
+                      }),
+                      [
+                        2,
+                        b(
+                          e,
+                          t,
+                          u.strTitle,
+                          u,
+                          null == n ? void 0 : n.browserContext
+                        ),
+                      ])
+                );
+            }
+          });
+        });
+      }
+      function g(e, t, n) {
+        return Object(r.b)(this, void 0, void 0, function () {
+          return Object(r.e)(this, function (o) {
+            return [
+              2,
+              f(
+                e,
+                t,
+                Object(r.a)(Object(r.a)({}, n), {
+                  bHideMainWindowForPopouts: !0,
+                })
+              ),
+            ];
+          });
+        });
+      }
+      function b(e, t, n, i, a, s, l) {
+        var u,
+          p,
+          d = e.props.closeModal,
+          h = function () {
+            p && p.Close(),
+              d && d(),
+              (null == i ? void 0 : i.fnOnClose) && i.fnOnClose();
+          },
+          m = function () {
+            u && u.Close(), h();
+          },
+          f = o.cloneElement(e, { closeModal: m });
+        if (v((l = l || Object(c.g)(t)), t) && i && n) {
+          if (i.bHideMainWindowForPopouts) {
+            var g = o.createElement(
+              c.h,
+              {
+                className: "Hidden",
+                onEscKeypress: !f.props.bDisableBackgroundDismiss && m,
+              },
+              o.createElement("div", null)
+            );
+            p = l.ShowModal(g);
+          }
+          var b = Object(r.a)(Object(r.a)({}, i), { fnOnClose: h }),
+            _ = new y(t, n, b, f, a, s);
+          _.Show(), (u = _);
+        } else u = l.ShowModal(f);
+        return u;
+      }
+      function v(e, t) {
+        return (
+          (e = e || Object(c.g)(t || window)), m.c.USE_POPUPS && e.BUsePopups()
+        );
+      }
+      function _(e, t, n) {
+        return Object(r.b)(this, void 0, void 0, function () {
+          var o, a, s, c, l;
+          return Object(r.e)(this, function (r) {
+            switch (r.label) {
+              case 0:
+                return (
+                  ((o = t.document.createElement("div")).style.position =
+                    "absolute"),
+                  (o.style.visibility = "hidden"),
+                  t.document.body.appendChild(o),
+                  i.render(e, o),
+                  [4, n]
+                );
+              case 1:
+                return (
+                  r.sent(),
+                  (a = document),
+                  m.c.IN_LIBRARY && a.fonts ? [4, a.fonts.ready] : [3, 3]
+                );
+              case 2:
+                r.sent(), (r.label = 3);
+              case 3:
+                return (
+                  (s = o.getBoundingClientRect()),
+                  (c = Math.ceil(s.height)),
+                  (l = Math.ceil(s.width)),
+                  i.unmountComponentAtNode(o),
+                  t.document.body.removeChild(o),
+                  [2, { height: c, width: l }]
+                );
+            }
+          });
+        });
+      }
+      var y = (function (e) {
+        function t(t, n, r, o, i, a) {
+          var s =
+            e.call(this, n, {
+              title: r.strTitle,
+              html_class: "client_chat_frame fullheight ModalDialogPopup",
+              body_class: "fullheight ModalDialogBody",
+              owner_window: void 0,
+              replace_existing_popup: !0,
+              target_browser: i,
+              availscreenwidth: t.screen.availWidth,
+              availscreenheight: t.screen.availHeight,
+            }) || this;
+          return (
+            (s.m_windowOpener = t),
+            (s.m_modalProps = r),
+            (s.m_modalElement = o),
+            (s.m_options = a),
+            s
+          );
+        }
+        return (
+          Object(r.d)(t, e),
+          (t.prototype.Update = function (e) {
+            Object(d.a)(!1, "NYI");
+          }),
+          (t.prototype.UpdateParamsBeforeShow = function (e) {
+            var t,
+              n,
+              o,
+              i = void 0,
+              a = void 0,
+              s = this.m_modalProps.popupWidth || 500,
+              c = this.m_modalProps.popupHeight || 400,
+              l = void 0;
+            if (
+              m.c.IN_CLIENT &&
+              (null ===
+                (o =
+                  null ===
+                    (n =
+                      null === (t = this.m_windowOpener) || void 0 === t
+                        ? void 0
+                        : t.SteamClient) || void 0 === n
+                    ? void 0
+                    : n.Window) || void 0 === o
+                ? void 0
+                : o.GetBrowserID)
+            )
+              l = this.m_windowOpener.SteamClient.Window.GetBrowserID();
+            else {
+              var u = this.m_windowOpener.screen;
+              (i = (u.availWidth - s) / 2), (a = (u.availHeight - c) / 2);
+              var p = u;
+              void 0 !== p.availLeft &&
+                void 0 !== p.availTop &&
+                ((i += p.availLeft), (a += p.availTop));
+            }
+            return Object(r.a)(Object(r.a)({}, e), {
+              dimensions: { width: s, height: c, left: i, top: a },
+              window_opener_id: l,
+            });
+          }),
+          (t.prototype.OnLoad = function () {}),
+          (t.prototype.OnResize = function () {}),
+          (t.prototype.OnClose = function () {
+            this.m_modalProps.fnOnClose && this.m_modalProps.fnOnClose();
+          }),
+          (t.prototype.Render = function (e, t) {
+            if (
+              (t.setAttribute("class", "fullheight popup_chat_frame"),
+              this.m_modalElement)
+            ) {
+              var n = this.m_options ? this.m_options.bHideActions : void 0,
+                r =
+                  this.m_options &&
+                  "number" == typeof this.m_options.nDragAreaHeight
+                    ? { height: this.m_options.nDragAreaHeight }
+                    : void 0;
+              i.render(
+                o.createElement(
+                  "div",
+                  { className: "PopupFullWindow", onContextMenu: s.g },
+                  o.createElement(p, {
+                    hideMinMax: !0,
+                    popup: e,
+                    hideActions: n,
+                    style: r,
+                  }),
+                  o.createElement(c.c, { ModalManager: Object(c.g)(e) }),
+                  this.m_modalElement
+                ),
+                t
+              );
+            }
+          }),
+          t
+        );
+      })(a.a);
+    },
     kyHq: function (e, t, n) {
       "use strict";
       n.d(t, "c", function () {
@@ -12549,6 +13276,7 @@ var CLSTAMP = "6655183";
           SNR: "",
           LAUNCHER_TYPE: 0,
           EREALM: 0,
+          IN_CHROMEOS: !1,
           LOCAL_HOSTNAME: "",
           WEBAPI_BASE_URL: "",
           TOKEN_URL: "",
@@ -13082,13 +13810,13 @@ var CLSTAMP = "6655183";
         j = function () {
           return "/id/:vanity_url/recommended/:appid/";
         },
-        T = function () {
+        k = function () {
           return "/profiles/:steamid/recommended/:appid/";
         },
-        k = function () {
+        L = function () {
           return "/profiles/:steamid/recommended";
         },
-        L = function () {
+        T = function () {
           return "/id/:vanity_url/recommended";
         },
         B = function () {
@@ -13190,6 +13918,12 @@ var CLSTAMP = "6655183";
                       },
                     }),
                     i.a.createElement(l.c, {
+                      path: k(),
+                      render: function (e) {
+                        return i.a.createElement(v, Object(r.a)({}, e));
+                      },
+                    }),
+                    i.a.createElement(l.c, {
                       path: T(),
                       render: function (e) {
                         return i.a.createElement(v, Object(r.a)({}, e));
@@ -13197,12 +13931,6 @@ var CLSTAMP = "6655183";
                     }),
                     i.a.createElement(l.c, {
                       path: L(),
-                      render: function (e) {
-                        return i.a.createElement(v, Object(r.a)({}, e));
-                      },
-                    }),
-                    i.a.createElement(l.c, {
-                      path: k(),
                       render: function (e) {
                         return i.a.createElement(v, Object(r.a)({}, e));
                       },
@@ -13692,6 +14420,85 @@ var CLSTAMP = "6655183";
             e
           );
         })();
+    },
+    u2yL: function (e, t, n) {
+      "use strict";
+      n.d(t, "b", function () {
+        return a;
+      });
+      var r = n("mrSG"),
+        o = n("q1tI"),
+        i = (function (e) {
+          function t() {
+            return (null !== e && e.apply(this, arguments)) || this;
+          }
+          return (
+            Object(r.d)(t, e),
+            (t.prototype.GetString = function (e) {
+              return Promise.resolve(localStorage.getItem(e));
+            }),
+            (t.prototype.StoreString = function (e, t) {
+              return localStorage.setItem(e, t), Promise.resolve();
+            }),
+            (t.prototype.RemoveObject = function (e) {
+              return localStorage.removeItem(e), Promise.resolve();
+            }),
+            t
+          );
+        })(
+          (function () {
+            function e() {}
+            return (
+              (e.prototype.GetObject = function (e) {
+                return Object(r.b)(this, void 0, void 0, function () {
+                  var t;
+                  return Object(r.e)(this, function (n) {
+                    switch (n.label) {
+                      case 0:
+                        return n.trys.push([0, 2, , 3]), [4, this.GetString(e)];
+                      case 1:
+                        return [2, (t = n.sent()) ? JSON.parse(t) : null];
+                      case 2:
+                        return n.sent(), [2, null];
+                      case 3:
+                        return [2];
+                    }
+                  });
+                });
+              }),
+              (e.prototype.StoreObject = function (e, t) {
+                return Object(r.b)(this, void 0, void 0, function () {
+                  return Object(r.e)(this, function (n) {
+                    return [2, this.StoreString(e, JSON.stringify(t))];
+                  });
+                });
+              }),
+              e
+            );
+          })()
+        );
+      t.a = i;
+      function a(e) {
+        var t = o.useState(window.localStorage.getItem(e)),
+          n = t[0],
+          r = t[1],
+          i = o.useRef(e);
+        return (
+          o.useEffect(
+            function () {
+              e != i.current &&
+                (r(window.localStorage.getItem(e)), (i.current = e));
+            },
+            [e]
+          ),
+          [
+            e == i.current ? n : window.localStorage.getItem(e),
+            function (t) {
+              window.localStorage.setItem(e, t), r(t);
+            },
+          ]
+        );
+      }
     },
     umRa: function (e, t, n) {
       e.exports = {
@@ -14519,14 +15326,14 @@ var CLSTAMP = "6655183";
                     I = R > 0,
                     j = (a.bPreferPopTop || !I) && x && !a.bDisablePopTop;
                   if (!x && !I) {
-                    var T =
+                    var k =
                       void 0 !== a.bShiftToFitWindow
                         ? a.bShiftToFitWindow
                         : a.bFitToWindow && !a.bOverlapHorizontal;
                     (j = M > R && !a.bDisablePopTop),
-                      T && (j ? (s.menuTop = 4) : (s.menuBottom = 4)),
+                      k && (j ? (s.menuTop = 4) : (s.menuBottom = 4)),
                       a.bFitToWindow &&
-                        (T ? (D = Math.min(D, p - 8)) : (D += j ? M : R),
+                        (k ? (D = Math.min(D, p - 8)) : (D += j ? M : R),
                         (s.menuHeight = D - 8));
                   }
                   void 0 === s.menuBottom &&

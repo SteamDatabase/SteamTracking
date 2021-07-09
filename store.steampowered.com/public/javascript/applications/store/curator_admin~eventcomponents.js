@@ -1418,7 +1418,7 @@
                                             }
                                           );
                                       })
-                                    : ((m = Object(P.a)(d.data || {})),
+                                    : ((m = Object(P.c)(d.data || {})),
                                       console.error(
                                         "LoadBatchedClanRSSAdminInfo error:" +
                                           m.strErrorMsg,
@@ -1429,7 +1429,7 @@
                               case 3:
                                 return (
                                   (u = r.sent()),
-                                  (m = Object(P.a)(u)),
+                                  (m = Object(P.c)(u)),
                                   console.error(
                                     "LoadBatchedClanRSSAdminInfo catched error:" +
                                       m.strErrorMsg,
@@ -2170,7 +2170,7 @@
                             strTitle: Object(B.f)(
                               "#CuratorAdmin_RSSFeed_scannow"
                             ),
-                            strDescription: Object(j.a)(t),
+                            strDescription: Object(j.c)(t),
                           }),
                           Object(y.m)(e)
                         );

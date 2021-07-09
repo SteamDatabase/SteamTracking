@@ -719,7 +719,7 @@
                         (a = r.sent()),
                         console.error(
                           "Unable to load tag category data: " +
-                            Object(K.a)(a).strErrorMsg
+                            Object(K.c)(a).strErrorMsg
                         ),
                         [2, null]
                       );
@@ -1178,7 +1178,7 @@
                     case 4:
                       return (
                         (y = n.sent()),
-                        (T = Object(K.a)(y)),
+                        (T = Object(K.c)(y)),
                         console.error(
                           "CContentHubTabStore.InternalLoadTabPage: failed with " +
                             T.strErrorMsg,

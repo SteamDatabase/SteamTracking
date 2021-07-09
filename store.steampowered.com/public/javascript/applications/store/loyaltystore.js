@@ -4952,6 +4952,7 @@
           return (
             Object(r.d)(t, e),
             (t.prototype.render = function () {
+              if (1 != this.props.descriptor.type) return null;
               var e = this.props,
                 t = e.descriptor,
                 n = t.cluster,
@@ -4960,20 +4961,22 @@
                 s = n.GetRewards,
                 l = t.title,
                 c = t.subtitle,
-                m = e.linkedPage,
-                d = e.additionalFilter,
-                u = {
+                m = t.bHideHiddenItemCount,
+                d = e.linkedPage,
+                u = e.additionalFilter,
+                p = {
                   getItems: function (e, t) {
-                    return s(e, t, d);
+                    return s(e, t, u);
                   },
                   title: l || a,
                   subtitle: c || o,
-                  route: m ? Object(f.e)(m) : void 0,
+                  route: d ? Object(f.e)(d) : void 0,
+                  bHideHiddenItemCount: !!m,
                 };
               return i.a.createElement(_.b, null, function (e) {
                 return "mobile" === e
-                  ? i.a.createElement(V, Object(r.a)({}, u))
-                  : i.a.createElement(Q, Object(r.a)({}, u));
+                  ? i.a.createElement(V, Object(r.a)({}, p))
+                  : i.a.createElement(Q, Object(r.a)({}, p));
               });
             }),
             (t = Object(r.c)([m.a], t))
@@ -4983,19 +4986,20 @@
           var t = e.title,
             n = (e.subtitle, e.route),
             r = e.getItems,
-            a = i.a.useState(10),
-            o = a[0],
-            s = a[1],
-            l = r(0, o),
-            c = l.rewards,
-            m = l.bLoadingMore;
-          if (0 === l.cTotalMatching) return null;
-          var u = !n && U(l);
+            a = e.bHideHiddenItemCount,
+            o = i.a.useState(10),
+            s = o[0],
+            l = o[1],
+            c = r(0, s),
+            m = c.rewards,
+            u = c.bLoadingMore;
+          if (0 === c.cTotalMatching) return null;
+          var p = !a && !n && U(c);
           return i.a.createElement(
             P.b,
             {
               title: t,
-              subtitle: u || void 0,
+              subtitle: p || void 0,
               rightActions: n
                 ? i.a.createElement(
                     d.b,
@@ -5005,11 +5009,11 @@
                 : void 0,
             },
             i.a.createElement(D, {
-              items: c,
+              items: m,
               loadMore: function () {
-                return s(o + 10);
+                return l(s + 10);
               },
-              bLoadingMore: m,
+              bLoadingMore: u,
               renderItem: function (e) {
                 return i.a.createElement(K, { definition: e, key: e.defid });
               },
@@ -5021,8 +5025,9 @@
             n = e.subtitle,
             a = e.route,
             o = e.getItems,
-            s = o(0, 0),
-            l = w(
+            s = e.bHideHiddenItemCount,
+            l = o(0, 0),
+            c = w(
               function (e, t) {
                 return o(e, t).rewards;
               },
@@ -5036,42 +5041,42 @@
                 },
               }
             ),
-            c = l.bAllowNext || l.bAllowPrev,
-            m = "";
+            m = c.bAllowNext || c.bAllowPrev,
+            u = "";
           if (
-            ((m =
-              s.cMaxToReturn > 0
+            ((u =
+              l.cMaxToReturn > 0
                 ? Object(g.f)("#SeeAllButton")
-                : s.cTotalMatching > 0
+                : l.cTotalMatching > 0
                 ? Object(g.f)(
                     "#SeeAllWithCountButton",
-                    s.cTotalMatching.toLocaleString()
+                    l.cTotalMatching.toLocaleString()
                   )
                 : Object(g.f)("#SeeAllButton")),
-            0 === s.cTotalMatching && !s.bLoadingMore)
+            0 === l.cTotalMatching && !l.bLoadingMore)
           )
             return null;
-          var u = !c || !a,
-            p = u && W(s),
-            f = [],
-            _ = [];
+          var p = !m || !a,
+            f = !s && p && W(l),
+            _ = [],
+            h = [];
           return (
-            !u &&
-              f.push(
+            !p &&
+              _.push(
                 i.a.createElement(
                   d.b,
                   { to: a },
-                  i.a.createElement(P.a, null, m)
+                  i.a.createElement(P.a, null, u)
                 )
               ),
-            c && _.push(i.a.createElement(j, Object(r.a)({}, l))),
-            p && (0 == _.length ? _.push(p) : 0 == f.length && f.push(p)),
+            m && h.push(i.a.createElement(j, Object(r.a)({}, c))),
+            f && (0 == h.length ? h.push(f) : 0 == _.length && _.push(f)),
             i.a.createElement(
               P.b,
-              { title: t, subtitle: n, leftActions: f, rightActions: _ },
+              { title: t, subtitle: n, leftActions: _, rightActions: h },
               i.a.createElement(
                 M,
-                Object(r.a)({ style: { width: "100%", flexWrap: "wrap" } }, l)
+                Object(r.a)({ style: { width: "100%", flexWrap: "wrap" } }, c)
               )
             )
           );
@@ -13387,22 +13392,22 @@
     prdU: function (e, t, n) {
       "use strict";
       n.d(t, "d", function () {
-        return re;
+        return ae;
       }),
         n.d(t, "f", function () {
-          return ae;
+          return ie;
         }),
         n.d(t, "b", function () {
-          return oe;
-        }),
-        n.d(t, "e", function () {
           return se;
         }),
+        n.d(t, "e", function () {
+          return le;
+        }),
         n.d(t, "a", function () {
-          return pe;
+          return fe;
         }),
         n.d(t, "c", function () {
-          return ve;
+          return Ie;
         });
       var r = n("mrSG"),
         a = n("2lpH"),
@@ -14996,8 +15001,9 @@
         $ = n("1fPh"),
         ee = n("r64O"),
         te = n("qD+2"),
-        ne = n("ee7K");
-      function re(e, t) {
+        ne = n("ee7K"),
+        re = n("CdLH");
+      function ae(e, t) {
         void 0 === t && (t = !1);
         var n = function (e) {
           return Object(s.f)(t ? e + "_Plural" : e);
@@ -15024,13 +15030,13 @@
         }
         return "Unknown ECommunityItemClass";
       }
-      var ae = "home",
-        ie = (function () {
+      var ie = "home",
+        oe = (function () {
           return function () {
             (this.items = []), (this.mapItemOwnership = new Map());
           };
         })(),
-        oe = (function () {
+        se = (function () {
           function e() {
             var e = this;
             (this.m_lPointsAvailable = new i.a(0, 0)),
@@ -15055,8 +15061,6 @@
               (this.m_rgRecentlyPlayed = []),
               (this.m_bSortedGamesWithRewards = !1),
               (this.m_rgSortedAppsWithRewards = o.C.array([], { deep: !1 })),
-              (this.m_bLoadedOwnedGames = !1),
-              (this.m_rgOwnedGames = o.C.array([], { deep: !1 })),
               (this.m_bLoadedEligibleApps = !1),
               (this.m_rgEligibleApps = []),
               (this.m_mapEligibleApps = new Map()),
@@ -15064,7 +15068,7 @@
               (this.m_bLoadedAwardCost = !1),
               (this.m_unAwardPointsTransferred = 0),
               (this.m_bIsSaleActive = !1),
-              (this.m_HeroImageFallbackLoader = new ye(
+              (this.m_HeroImageFallbackLoader = new ve(
                 function (e) {
                   return fetch(
                     m.d.STORE_BASE_URL + "points/heroimage?appid=" + e
@@ -15080,7 +15084,7 @@
                   return e.toString();
                 }
               )),
-              (this.m_batchedRewardItemLoader = new he(
+              (this.m_batchedRewardItemLoader = new be(
                 function (t) {
                   return _.o.BatchedQueryRewardItems(e.m_anonymousTransport, t);
                 },
@@ -15103,7 +15107,7 @@
                       []);
                 }
               )),
-              (this.m_batchedCommunityInventoryLoader = new he(
+              (this.m_batchedCommunityInventoryLoader = new be(
                 function (t) {
                   return y.GetCommunityInventory(e.m_transport, t);
                 },
@@ -15166,11 +15170,6 @@
                   (this.m_rgRecentlyPlayed = this.ProcessRecentlyPlayedApps(
                     t.last_played.games
                   ))),
-                t.owned_games &&
-                  ((this.m_bLoadedOwnedGames = !0),
-                  (this.m_rgOwnedGames = t.owned_games.games.map(function (e) {
-                    return e.appid;
-                  }))),
                 t.profile_items_equipped
                   ? (this.m_equippedItems = t.profile_items_equipped)
                   : this.RefreshEquippedProfileItems(),
@@ -15189,7 +15188,7 @@
                 t.golden_profiles &&
                   (this.m_goldenProfileConfigs = t.golden_profiles || []),
                 t.can_claim_sale_reward &&
-                  ve.Get().InitFreeItemReward(t.can_claim_sale_reward),
+                  Ie.Get().InitFreeItemReward(t.can_claim_sale_reward),
                 t.is_sale_active && (this.m_bIsSaleActive = t.is_sale_active),
                 t.free_item_header &&
                   (this.m_strFreeItemHeader = t.free_item_header),
@@ -15460,7 +15459,7 @@
                     e.excludedContentDescriptors || [],
                   excludedAppIDs: e.excludedAppIDs || [],
                 },
-                l = me(s);
+                l = de(s);
               s.maxToReturn &&
                 t + n > s.maxToReturn &&
                 (n = Math.max(0, s.maxToReturn - t));
@@ -15595,7 +15594,7 @@
                         (c = e.categoryTag),
                         (d = e.excludedContentDescriptors),
                         (u = e.excludedAppIDs),
-                        (p = de(o)),
+                        (p = ue(o)),
                         (f = new _.h()),
                         i.forEach(function (e) {
                           return f.add_appids(e);
@@ -15792,7 +15791,7 @@
             }),
             (e.prototype.GetBundleOfferForUser = function (e) {
               var t = this,
-                n = new ie();
+                n = new oe();
               if (
                 ((n.original_point_cost = 0),
                 (n.point_cost = 0),
@@ -16003,12 +16002,12 @@
                       return (
                         (t = { eResult: 2, strMessage: "" }),
                         this.BIsLoggedIn()
-                          ? ((n = f.b.Init(S.l))
+                          ? ((n = f.b.Init(S.k))
                               .Body()
                               .set_communityitemid(
                                 this.GetOwnedCommunityItemID(e)
                               ),
-                            [4, S.n.SetProfileBackground(this.m_transport, n)])
+                            [4, S.m.SetProfileBackground(this.m_transport, n)])
                           : [
                               2,
                               (t = {
@@ -16041,12 +16040,12 @@
                       return (
                         (t = { eResult: 2, strMessage: "" }),
                         this.BIsLoggedIn()
-                          ? ((n = f.b.Init(S.j))
+                          ? ((n = f.b.Init(S.i))
                               .Body()
                               .set_communityitemid(
                                 this.GetOwnedCommunityItemID(e)
                               ),
-                            [4, S.n.SetAvatarFrame(this.m_transport, n)])
+                            [4, S.m.SetAvatarFrame(this.m_transport, n)])
                           : [
                               2,
                               (t = {
@@ -16080,12 +16079,12 @@
                       return (
                         (t = { eResult: 2, strMessage: "" }),
                         this.BIsLoggedIn()
-                          ? ((n = f.b.Init(S.i))
+                          ? ((n = f.b.Init(S.h))
                               .Body()
                               .set_communityitemid(
                                 this.GetOwnedCommunityItemID(e)
                               ),
-                            [4, S.n.SetAnimatedAvatar(this.m_transport, n)])
+                            [4, S.m.SetAnimatedAvatar(this.m_transport, n)])
                           : [
                               2,
                               (t = {
@@ -16119,14 +16118,14 @@
                       return (
                         (t = { eResult: 2, strMessage: "" }),
                         this.BIsLoggedIn()
-                          ? ((n = f.b.Init(S.k))
+                          ? ((n = f.b.Init(S.j))
                               .Body()
                               .set_communityitemid(
                                 this.GetOwnedCommunityItemID(e)
                               ),
                             [
                               4,
-                              S.n.SetMiniProfileBackground(this.m_transport, n),
+                              S.m.SetMiniProfileBackground(this.m_transport, n),
                             ])
                           : [
                               2,
@@ -16430,7 +16429,7 @@
                     case 3:
                       return (
                         (a = r.sent()),
-                        (i = Object(u.a)(a)),
+                        (i = Object(u.c)(a)),
                         console.error(
                           "Error when calling ajaxredeemtokensforcartdiscount: " +
                             i.strErrorMsg,
@@ -16562,38 +16561,26 @@
                     this.m_bLoadedRecentlyPlayed
                       ? this.m_rgRecentlyPlayed
                       : this.LoadRecentlyPlayedApps(),
-                    this.m_bLoadedOwnedGames
-                      ? this.m_rgOwnedGames
-                      : this.LoadOwnedGames(),
                   ]).then(function (t) {
                     var n = t[0],
-                      r = t[1],
-                      a = t[2];
+                      r = t[1];
                     (e.m_rgEligibleApps = n),
-                      (e.m_rgOwnedGames = a),
                       (e.m_mapEligibleApps = new Map(
                         e.m_rgEligibleApps.map(function (e) {
                           return [e.appid, e];
                         })
                       ));
-                    var i = r.filter(function (t) {
-                        return a.includes(t) && e.m_mapEligibleApps.has(t);
+                    var a = r.filter(function (t) {
+                        return e.m_mapEligibleApps.has(t);
                       }),
-                      o = a.filter(function (t) {
-                        return 0 == i.includes(t) && e.m_mapEligibleApps.has(t);
-                      }),
-                      s = Array.from(e.m_mapEligibleApps.keys()).filter(
-                        function (t) {
-                          if (i.includes(t)) return !1;
-                          if (o.includes(t)) return !1;
-                          var n = e.m_mapEligibleApps.get(t);
-                          return !(!n || !n.has_items_anyone_can_purchase);
-                        }
-                      );
-                    (e.m_rgSortedAppsWithRewards = i.concat(s)),
-                      (e.m_rgSortedAppsWithRewards = e.m_rgSortedAppsWithRewards.concat(
-                        o
-                      ));
+                      i = n
+                        .filter(function (e) {
+                          return 0 == a.includes(e.appid);
+                        })
+                        .map(function (e) {
+                          return e.appid;
+                        });
+                    e.m_rgSortedAppsWithRewards = a.concat(i);
                   })),
                 this.m_rgSortedAppsWithRewards
               );
@@ -16620,29 +16607,32 @@
             }),
             (e.prototype.LoadRecentlyPlayedApps = function () {
               return Object(r.b)(this, void 0, void 0, function () {
-                var e, t;
-                return Object(r.e)(this, function (n) {
-                  switch (n.label) {
+                var e, t, n;
+                return Object(r.e)(this, function (r) {
+                  switch (r.label) {
                     case 0:
                       return (
                         (this.m_bLoadedRecentlyPlayed = !0),
                         this.BIsLoggedIn()
-                          ? ((e = f.b.Init(S.c)).Body().set_min_last_played(0),
+                          ? ((e = f.b.Init(S.c)),
+                            (t =
+                              Math.floor(Date.now() / 1e3) - 14 * re.e.PerDay),
+                            e.Body().set_min_last_played(t),
                             [
                               4,
-                              S.n.ClientGetLastPlayedTimes(this.m_transport, e),
+                              S.m.ClientGetLastPlayedTimes(this.m_transport, e),
                             ])
                           : [2, []]
                       );
                     case 1:
-                      return 1 == (t = n.sent()).GetEResult()
+                      return 1 == (n = r.sent()).GetEResult()
                         ? ((this.m_rgRecentlyPlayed = this.ProcessRecentlyPlayedApps(
-                            t.Body().toObject().games
+                            n.Body().toObject().games
                           )),
                           [2, this.m_rgRecentlyPlayed])
                         : (console.error(
                             "Error when calling PlayerService.ClientGetLastPlayedTimes: EResult=" +
-                              t.GetEResult()
+                              n.GetEResult()
                           ),
                           [2, []]);
                   }
@@ -16662,43 +16652,6 @@
                   return e.appid;
                 })
               );
-            }),
-            (e.prototype.LoadOwnedGames = function () {
-              return Object(r.b)(this, void 0, void 0, function () {
-                var e, t;
-                return Object(r.e)(this, function (n) {
-                  switch (n.label) {
-                    case 0:
-                      return (
-                        (this.m_bLoadedOwnedGames = !0),
-                        this.BIsLoggedIn()
-                          ? ((e = f.b.Init(S.d)).SetBodyFields({
-                              steamid: m.k.steamid,
-                              include_played_free_games: !0,
-                              include_free_sub: !0,
-                            }),
-                            [4, S.n.GetOwnedGames(this.m_transport, e)])
-                          : [2, []]
-                      );
-                    case 1:
-                      return 1 == (t = n.sent()).GetEResult()
-                        ? [
-                            2,
-                            t
-                              .Body()
-                              .games()
-                              .map(function (e) {
-                                return e.appid();
-                              }),
-                          ]
-                        : (console.error(
-                            "Error when calling PlayerService.GetOwnedGames: EResult=" +
-                              t.GetEResult()
-                          ),
-                          [2, []]);
-                  }
-                });
-              });
             }),
             (e.prototype.LoadEligibleApps = function () {
               return Object(r.b)(this, void 0, void 0, function () {
@@ -16734,10 +16687,10 @@
                   switch (n.label) {
                     case 0:
                       return this.BIsLoggedIn()
-                        ? ((e = f.b.Init(S.e)).SetBodyFields({
+                        ? ((e = f.b.Init(S.d)).SetBodyFields({
                             steamid: m.k.steamid,
                           }),
-                          [4, S.n.GetProfileItemsEquipped(this.m_transport, e)])
+                          [4, S.m.GetProfileItemsEquipped(this.m_transport, e)])
                         : [2];
                     case 1:
                       return (
@@ -16760,12 +16713,12 @@
                   switch (r.label) {
                     case 0:
                       return this.BIsLoggedIn()
-                        ? ((e = f.b.Init(S.f)).SetBodyFields({
+                        ? ((e = f.b.Init(S.e)).SetBodyFields({
                             steamid: m.k.steamid,
                           }),
                           [
                             4,
-                            S.n.GetPurchasedAndUpgradedProfileCustomizations(
+                            S.m.GetPurchasedAndUpgradedProfileCustomizations(
                               this.m_transport,
                               e
                             ),
@@ -16898,15 +16851,15 @@
             }),
             (e.prototype.GetPageDescriptor = function (e) {
               return (
-                this.m_mapPages.has(le(e)) ||
-                  this.m_mapPages.set(le(e), this.BuildPage(e)),
-                this.m_mapPages.get(le(e))
+                this.m_mapPages.has(ce(e)) ||
+                  this.m_mapPages.set(ce(e), this.BuildPage(e)),
+                this.m_mapPages.get(ce(e))
               );
             }),
             (e.prototype.BuildPage = function (e) {
               switch (e.type) {
                 case "app":
-                  return new fe(
+                  return new _e(
                     e.appid,
                     e.appid === this.GetCurrentSeasonalAppID()
                       ? Object(s.f)("#HeroCluster_Premier_Collection_Subtitle")
@@ -16926,7 +16879,7 @@
             (e.prototype.HydrateCustomPages = function () {
               var t = this,
                 a = function (e, n, a) {
-                  var i = new ue(
+                  var i = new pe(
                     e,
                     n,
                     Object(r.a)({ grouping: 2, maxToReturn: 0 }, a)
@@ -16938,7 +16891,7 @@
                 },
                 i = function (n, r, a, i) {
                   var o = (function (e, n, r) {
-                    var a = new pe(e, n, be({ grouping: 2 }, r));
+                    var a = new fe(e, n, ye({ grouping: 2 }, r));
                     return (
                       t.m_mapClusters.has(a.id) || t.m_mapClusters.set(a.id, a),
                       a
@@ -16967,7 +16920,7 @@
                   };
                 },
                 l = function (e) {
-                  return t.m_mapPages.set(le(e.params), e);
+                  return t.m_mapPages.set(ce(e.params), e);
                 },
                 c = a(
                   Object(s.f)(
@@ -16977,7 +16930,7 @@
                   Object(s.f)("#RewardCluster_Popular_Subtitle")
                 ),
                 u = a(
-                  re(13, !0),
+                  ae(13, !0),
                   Object(s.f)("#RewardCluster_MiniProfileBackgrounds_Subtitle"),
                   { itemclass: [13] }
                 ),
@@ -16987,7 +16940,7 @@
                   { itemclass: [15, 14] }
                 ),
                 f = a(
-                  re(3, !0),
+                  ae(3, !0),
                   Object(s.f)("#RewardCluster_Backgrounds_Subtitle"),
                   { itemclass: [3] }
                 ),
@@ -17016,12 +16969,12 @@
                   { itemclass: [4] }
                 ),
                 b = a(
-                  Object(s.f)("#RewardCluster_All_Title", re(15, !0)),
+                  Object(s.f)("#RewardCluster_All_Title", ae(15, !0)),
                   Object(s.f)("#RewardCluster_AnimatedAvatar_Subtitle"),
                   { itemclass: [15] }
                 ),
                 y = a(
-                  Object(s.f)("#RewardCluster_All_Title", re(14, !0)),
+                  Object(s.f)("#RewardCluster_All_Title", ae(14, !0)),
                   Object(s.f)("#RewardCluster_AvatarFrames_Subtitle"),
                   { itemclass: [14] }
                 ),
@@ -17046,7 +16999,12 @@
                   }
                 ),
                 C = [
-                  { cluster: c, type: 1, linkedPage: null },
+                  {
+                    cluster: c,
+                    type: 1,
+                    linkedPage: null,
+                    bHideHiddenItemCount: !0,
+                  },
                   {
                     cluster: g,
                     type: 1,
@@ -17109,22 +17067,22 @@
                     N.push({ type: "clusterview", view: E[0][S] }),
                   S < E[1].length &&
                     N.push({ type: "clusterview", view: E[1][S] });
-              l(new _e(ae, N)),
+              l(new ge(ie, N)),
                 l(
-                  new ge(
+                  new he(
                     "stickers",
                     [{ cluster: g, type: 0 }],
                     Object(s.f)("#ShopPageTitle_Stickers")
                   )
                 ),
                 l(
-                  new ge(
+                  new he(
                     "emoticons",
                     [{ cluster: h, type: 0 }],
                     Object(s.f)("#ShopPageTitle_Emoticons")
                   )
                 ),
-                l(new ge("chateffects", [{ cluster: _, type: 0 }], re(12, !0)));
+                l(new he("chateffects", [{ cluster: _, type: 0 }], ae(12, !0)));
               var O = a(
                   Object(s.f)(
                     "#RewardCluster_AnimatedProfileBackgrounds_Title"
@@ -17152,7 +17110,7 @@
                   { itemclass: [13], queryFilter: [2] }
                 );
               l(
-                new ge(
+                new he(
                   "backgrounds",
                   [
                     { cluster: O, type: 1 },
@@ -17164,7 +17122,7 @@
                 )
               ),
                 l(
-                  new ge(
+                  new he(
                     "avatar",
                     [
                       { cluster: b, type: 1 },
@@ -17174,7 +17132,7 @@
                   )
                 ),
                 l(
-                  new ge(
+                  new he(
                     "itembundles",
                     [{ cluster: v, type: 0 }],
                     Object(s.f)("#ShopPageTitle_ItemBundles"),
@@ -17182,7 +17140,7 @@
                   )
                 ),
                 l(
-                  new ge(
+                  new he(
                     "profilebundles",
                     [{ cluster: I, type: 0, bHomogeneous: !0 }],
                     void 0,
@@ -17194,7 +17152,7 @@
                   Object(o.L)(function () {
                     return !!e.Get().GetSortedGamesWithRewards().length;
                   }).then(function () {
-                    var n = new ue(
+                    var n = new pe(
                       Object(s.f)("#HeroCluster_YourGamesTitle"),
                       void 0,
                       {
@@ -17226,7 +17184,7 @@
                               return (
                                 "clusterview" === n.type &&
                                 ((r = n.view.cluster),
-                                ((a = t.m_mapClusters.get(r)) && a instanceof pe
+                                ((a = t.m_mapClusters.get(r)) && a instanceof fe
                                   ? a.appid
                                   : null) === e)
                               );
@@ -17251,8 +17209,8 @@
                       if ("break" === l(m[c])) break;
                     }
                     t.m_mapPages.set(
-                      le({ type: "custom", pageid: ae }),
-                      new _e(ae, N)
+                      ce({ type: "custom", pageid: ie }),
+                      new ge(ie, N)
                     );
                   });
             }),
@@ -17289,7 +17247,6 @@
               "m_rgSortedAppsWithRewards",
               void 0
             ),
-            Object(r.c)([o.C], e.prototype, "m_rgOwnedGames", void 0),
             Object(r.c)([o.C], e.prototype, "m_rgEligibleApps", void 0),
             Object(r.c)([o.C], e.prototype, "m_mapEligibleApps", void 0),
             Object(r.c)(
@@ -17322,7 +17279,7 @@
             e
           );
         })();
-      function se(e) {
+      function le(e) {
         var t = $.b.LoyaltyStore();
         switch (e.type) {
           case "app":
@@ -17347,13 +17304,13 @@
             return console.error("Unknown page type " + e.type), t;
         }
       }
-      function le(e) {
+      function ce(e) {
         return btoa(JSON.stringify(e));
       }
-      function ce(e, t) {
-        return e.join("_") + "__" + me(t);
+      function me(e, t) {
+        return e.join("_") + "__" + de(t);
       }
-      function me(e) {
+      function de(e) {
         if (!e) return "";
         var t = e.appid,
           n = e.itemclass,
@@ -17362,7 +17319,7 @@
           o = e.queryFilter,
           s = e.categoryTag,
           l = e.excludedContentDescriptors,
-          c = de(i);
+          c = ue(i);
         return [
           t ? Object(r.g)(t).sort().join("_") : "",
           n ? n.join("_") : "",
@@ -17374,7 +17331,7 @@
           l ? l.join("_") : "",
         ].join("__");
       }
-      function de(e) {
+      function ue(e) {
         var t = { sort: 1, sort_descending: !0 };
         switch (e) {
           case 1:
@@ -17385,13 +17342,13 @@
         }
         return t;
       }
-      var ue = (function () {
+      var pe = (function () {
           function e(e, t, n) {
             void 0 === n && (n = {}),
               (this.m_filter = n),
               (this.m_strTitle = e),
               (this.m_strSubtitle = t),
-              (this.m_strId = ce([], n));
+              (this.m_strId = me([], n));
           }
           return (
             Object.defineProperty(e.prototype, "id", {
@@ -17416,20 +17373,20 @@
               configurable: !0,
             }),
             (e.prototype.GetRewards = function (e, t, n) {
-              var r = be(this.m_filter, n);
-              return oe.Get().QueryRewardDefinitions(r, e, t);
+              var r = ye(this.m_filter, n);
+              return se.Get().QueryRewardDefinitions(r, e, t);
             }),
             Object(r.c)([p.a], e.prototype, "GetRewards", null),
             e
           );
         })(),
-        pe = (function () {
+        fe = (function () {
           function e(e, t, n) {
             (this.m_appid = e),
               (this.m_strSubtitle = t || ""),
               (this.m_additionalFilter = n || {}),
               te.a.GetAppInfo(this.m_appid),
-              (this.m_strId = ce([this.m_appid], this.m_additionalFilter));
+              (this.m_strId = me([this.m_appid], this.m_additionalFilter));
           }
           return (
             Object.defineProperty(e.prototype, "id", {
@@ -17461,14 +17418,14 @@
               configurable: !0,
             }),
             (e.prototype.GetRewards = function (e, t, n) {
-              var r = be({ appid: [this.m_appid] }, this.m_additionalFilter, n);
-              return oe.Get().QueryRewardDefinitions(r, e, t);
+              var r = ye({ appid: [this.m_appid] }, this.m_additionalFilter, n);
+              return se.Get().QueryRewardDefinitions(r, e, t);
             }),
             Object(r.c)([p.a], e.prototype, "GetRewards", null),
             e
           );
         })(),
-        fe = (function () {
+        _e = (function () {
           function e(e, t) {
             void 0 === t && (t = ""),
               (this.m_appid = e),
@@ -17508,14 +17465,14 @@
                     view: {
                       type: 1,
                       cluster: {
-                        id: ce([this.m_appid], { rewardtype: [5] }),
+                        id: me([this.m_appid], { rewardtype: [5] }),
                         title: Object(s.f)("#RewardItemType_Bundle_plural"),
                         subtitle: "",
                         GetRewards: function (t, n, r) {
-                          return oe
+                          return se
                             .Get()
                             .QueryRewardDefinitions(
-                              be({ appid: [e.m_appid], rewardtype: [5, 6] }, r),
+                              ye({ appid: [e.m_appid], rewardtype: [5, 6] }, r),
                               t,
                               n
                             );
@@ -17530,14 +17487,14 @@
                     view: {
                       type: 1,
                       cluster: {
-                        id: ce([e.m_appid], { itemclass: [t] }),
-                        title: re(t, !0),
+                        id: me([e.m_appid], { itemclass: [t] }),
+                        title: ae(t, !0),
                         subtitle: "",
                         GetRewards: function (n, r, a) {
-                          return oe
+                          return se
                             .Get()
                             .QueryRewardDefinitions(
-                              be({ appid: [e.m_appid], itemclass: [t] }, a),
+                              ye({ appid: [e.m_appid], itemclass: [t] }, a),
                               n,
                               r
                             );
@@ -17554,7 +17511,7 @@
             e
           );
         })(),
-        _e = (function () {
+        ge = (function () {
           function e(e, t, n, r, a) {
             (this.m_pageid = e),
               (this.m_strTitle = n),
@@ -17602,7 +17559,7 @@
                         return {
                           type: "clusterview",
                           view: Object(r.a)(Object(r.a)({}, e.view), {
-                            cluster: oe
+                            cluster: se
                               .Get()
                               .GetClusterDescriptor(e.view.cluster),
                           }),
@@ -17617,7 +17574,7 @@
             e
           );
         })();
-      var ge = (function (e) {
+      var he = (function (e) {
           function t(t, n, r, a, i) {
             return (
               e.call(
@@ -17633,8 +17590,8 @@
             );
           }
           return Object(r.d)(t, e), t;
-        })(_e),
-        he = (function () {
+        })(ge),
+        be = (function () {
           function e(e, t, n) {
             (this.m_rgRequestParts = []),
               (this.m_fnMakeRequest = e),
@@ -17667,7 +17624,7 @@
             e
           );
         })();
-      function be(e) {
+      function ye(e) {
         for (var t = [], n = 1; n < arguments.length; n++)
           t[n - 1] = arguments[n];
         return t && t.length
@@ -17724,7 +17681,7 @@
             })
           : e;
       }
-      var ye = (function () {
+      var ve = (function () {
         function e(e, t) {
           (this.m_fnRequest = e), (this.m_fnBuildRequestKey = t), this.Reset();
         }
@@ -17755,7 +17712,7 @@
           e
         );
       })();
-      var ve = (function () {
+      var Ie = (function () {
         function e() {
           this.m_bCanClaimFreeItem = !1;
         }
@@ -17774,7 +17731,7 @@
               this.SetClaimTimer();
           }),
           (e.prototype.BCanClaimFreeSaleReward = function () {
-            return !oe.Get().BIsLoggedIn() || this.m_bCanClaimFreeItem;
+            return !se.Get().BIsLoggedIn() || this.m_bCanClaimFreeItem;
           }),
           (e.prototype.GetCurrentSaleRewardAppID = function () {
             return 1526200;
@@ -17788,11 +17745,11 @@
               return Object(r.e)(this, function (n) {
                 switch (n.label) {
                   case 0:
-                    return oe.Get().BIsLoggedIn()
+                    return se.Get().BIsLoggedIn()
                       ? ((e = f.b.Init(_.m)),
                         [
                           4,
-                          _.p.CanClaimItem(oe.Get().GetServiceTransport(), e),
+                          _.p.CanClaimItem(se.Get().GetServiceTransport(), e),
                         ])
                       : [2];
                   case 1:
@@ -17816,9 +17773,9 @@
                   case 0:
                     return (
                       (e = { eResult: 2, strMessage: "" }),
-                      oe.Get().BIsLoggedIn()
+                      se.Get().BIsLoggedIn()
                         ? ((t = f.b.Init(_.n)),
-                          [4, _.p.ClaimItem(oe.Get().GetServiceTransport(), t)])
+                          [4, _.p.ClaimItem(se.Get().GetServiceTransport(), t)])
                         : [
                             2,
                             (e = {
@@ -17836,7 +17793,7 @@
                             .Body()
                             .reward_item()
                             .toObject()),
-                          oe
+                          se
                             .Get()
                             .GetCommunityItemInventory(
                               this.m_claimedFreeItemDef.appid
