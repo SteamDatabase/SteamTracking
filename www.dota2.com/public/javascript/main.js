@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6659089";
+var CLSTAMP = "6661599";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [1],
   {
@@ -4744,7 +4744,7 @@ var CLSTAMP = "6659089";
             (e.prototype.GetLeagueData = function (e, t) {
               var a = this;
               return this.m_asyncLeagueData.getAsyncDataWrapper(e).getData(
-                600,
+                30,
                 function () {
                   return Object(n.b)(a, void 0, void 0, function () {
                     return Object(n.e)(this, function (a) {
@@ -4852,7 +4852,7 @@ var CLSTAMP = "6659089";
                           n.leagues.forEach(function (e) {
                             a.m_asyncLeagueData
                               .getAsyncDataWrapper(e.info.league_id)
-                              .setData(600, e),
+                              .setData(30, e),
                               a.UpdateDerivedLeagueData(e);
                           }),
                           a.UpdateLiveLeagueNodes(e);
@@ -30084,6 +30084,11 @@ var CLSTAMP = "6659089";
               Da.a
                 .Get()
                 .CacheDPCLeagueData(t, Da.a.Get().GetEventDelaySeconds(t)),
+            setInterval(function () {
+              return Da.a
+                .Get()
+                .CacheDPCLeagueData(t, Da.a.Get().GetEventDelaySeconds(t));
+            }, 30),
             i.a.createElement(
               "div",
               { className: ca.a.DPCRoot },
