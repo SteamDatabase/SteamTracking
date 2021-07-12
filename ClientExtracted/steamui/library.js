@@ -1,5 +1,5 @@
 /* Third-party software licenses can be found at licenses.txt */
-var CLSTAMP = "6579787";
+var CLSTAMP = "6663432";
 !(function (e) {
   function t(t) {
     for (
@@ -11092,7 +11092,12 @@ var CLSTAMP = "6579787";
                         (_ = r.sent()),
                         (y = _.data.event),
                         (v = this.GetEventLookupKey(y)),
-                        this.m_mapExistingEvents.has(v) ||
+                        (!this.m_mapExistingEvents.has(v) ||
+                          this.m_mapExistingEvents.get(v)
+                            .rtime32_last_modified < y.rtime32_last_modified ||
+                          this.m_mapExistingEvents.get(v)
+                            .rtime32_moderator_reviewed <
+                            y.rtime_mod_reviewed) &&
                           (Object(p.a)(
                             y.clan_steamid,
                             "ClanSteamID is missing from data we received"
@@ -54416,7 +54421,6 @@ var CLSTAMP = "6579787";
           return (
             (o.m_gidAnnouncement = ""),
             (o.m_unTimeLastMod = 0),
-            (o.m_gidForumTopic = ""),
             o.InitFromUserNewsEvent(p.c.PostedAnnouncement, t, n),
             (o.m_gidAnnouncement = r),
             (o.m_unTimeLastMod = i),
@@ -54428,23 +54432,41 @@ var CLSTAMP = "6579787";
           (t.prototype.GetParentalFeature = function () {
             return 0;
           }),
+          Object.defineProperty(t.prototype, "eventModel", {
+            get: function () {
+              return b.b.GetClanEventFromAnnouncementGID(
+                this.m_gidAnnouncement
+              );
+            },
+            enumerable: !1,
+            configurable: !0,
+          }),
           Object.defineProperty(t.prototype, "upvotes", {
             get: function () {
-              return this.m_EventModel.nVotesUp;
+              var e;
+              return null === (e = this.eventModel) || void 0 === e
+                ? void 0
+                : e.nVotesUp;
             },
             enumerable: !1,
             configurable: !0,
           }),
           Object.defineProperty(t.prototype, "downvotes", {
             get: function () {
-              return this.m_EventModel.nVotesDown;
+              var e;
+              return null === (e = this.eventModel) || void 0 === e
+                ? void 0
+                : e.nVotesDown;
             },
             enumerable: !1,
             configurable: !0,
           }),
           Object.defineProperty(t.prototype, "comment_count", {
             get: function () {
-              return this.m_EventModel.nCommentCount;
+              var e;
+              return null === (e = this.eventModel) || void 0 === e
+                ? void 0
+                : e.nCommentCount;
             },
             enumerable: !1,
             configurable: !0,
@@ -54458,14 +54480,20 @@ var CLSTAMP = "6579787";
           }),
           Object.defineProperty(t.prototype, "forumTopicGID", {
             get: function () {
-              return this.m_gidForumTopic;
+              var e;
+              return null === (e = this.eventModel) || void 0 === e
+                ? void 0
+                : e.forumTopicGID;
             },
             enumerable: !1,
             configurable: !0,
           }),
           Object.defineProperty(t.prototype, "appid", {
             get: function () {
-              return this.m_appID;
+              var e;
+              return null === (e = this.eventModel) || void 0 === e
+                ? void 0
+                : e.appid;
             },
             enumerable: !1,
             configurable: !0,
@@ -54473,7 +54501,7 @@ var CLSTAMP = "6579787";
           Object.defineProperty(t.prototype, "rtPartnerEventSortDate", {
             get: function () {
               var e;
-              return null === (e = this.m_EventModel) || void 0 === e
+              return null === (e = this.eventModel) || void 0 === e
                 ? void 0
                 : e.rtime32_moderator_reviewed;
             },
@@ -54484,56 +54512,36 @@ var CLSTAMP = "6579787";
             return !0;
           }),
           (t.prototype.IsEventLoaded = function () {
-            return void 0 !== this.m_EventModel && null !== this.m_EventModel;
+            return void 0 !== this.eventModel && null !== this.eventModel;
           }),
           (t.prototype.GetEvent = function () {
             return Object(i.b)(this, void 0, void 0, function () {
-              var e;
-              return Object(i.e)(this, function (t) {
-                switch (t.label) {
-                  case 0:
-                    if (this.m_EventModel) return [3, 4];
-                    t.label = 1;
-                  case 1:
-                    return (
-                      t.trys.push([1, 3, , 4]),
-                      [
-                        4,
-                        b.b.LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
-                          this.steamIDActor,
-                          this.m_gidAnnouncement,
-                          this.m_unTimeLastMod
-                        ),
-                      ]
-                    );
-                  case 2:
-                    return (
-                      (e = t.sent()) &&
-                        ((this.m_gidForumTopic = e.forumTopicGID),
-                        (this.m_appID = e.appid)),
-                      (this.m_EventModel = e),
-                      [3, 4]
-                    );
-                  case 3:
-                    return t.sent(), (this.m_EventModel = null), [3, 4];
-                  case 4:
-                    return [2, this.m_EventModel];
-                }
+              return Object(i.e)(this, function (e) {
+                try {
+                  return [
+                    2,
+                    b.b.LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
+                      this.steamIDActor,
+                      this.m_gidAnnouncement,
+                      this.m_unTimeLastMod
+                    ),
+                  ];
+                } catch (e) {}
+                return [2, null];
               });
             });
           }),
-          (t.prototype.ReloadEvent = function () {
+          (t.prototype.ReloadEvent = function (e) {
             return Object(i.b)(this, void 0, void 0, function () {
-              return Object(i.e)(this, function (e) {
+              return Object(i.e)(this, function (t) {
                 return (
+                  (this.m_unTimeLastMod = e),
                   b.b.FlushEventFromCache(null, this.m_gidAnnouncement),
-                  (this.m_EventModel = null),
                   [2, this.GetEvent()]
                 );
               });
             });
           }),
-          Object(i.c)([a.C.shallow], t.prototype, "m_EventModel", void 0),
           t
         );
       })(j),

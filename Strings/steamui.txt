@@ -67,7 +67,6 @@ __LINKEDIT
 @loader_path/steamui.dylib
 "
 P
-;
 
 8
 @loader_path/libtier0_s.dylib
@@ -20251,9 +20250,9 @@ ShowLegalInformation
 SettingsPanel_About
 file://{resources}/layout/settings/settings_about.xml
 build_date
-Jul  9 2021
+Jul 12 2021
 build_time
-13:53:14
+14:06:52
 package_version
 local
 SteamClient020
@@ -28244,7 +28243,7 @@ https://steamchina.com
 https://www.steampowered.com
 WebsiteURL
 steam/cached/aboutdialog.res
-13:55:06
+14:08:33
 CAboutDialog
 ValveSurveySummarizeData
 #steam_systeminfo_title

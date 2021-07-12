@@ -39089,7 +39089,7 @@
               e.GetEvent().then(function (t) {
                 t &&
                   e.rtEventTime > t.rtime32_moderator_reviewed &&
-                  e.ReloadEvent();
+                  e.ReloadEvent(e.rtEventTime);
               });
             }),
             (t.prototype.componentWillUnmount = function () {
