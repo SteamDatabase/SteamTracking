@@ -788,8 +788,8 @@
           );
         })())();
       function _(e) {
-        var t = e ? ("string" == typeof e ? new l.a(e) : e) : null,
-          n = Object(o.useState)(!!t && !m.BHasProfileBySteamID(t)),
+        var t = "string" == typeof e ? new l.a(e) : e,
+          n = Object(o.useState)(!m.BHasProfileBySteamID(t)),
           a = n[0],
           i = n[1];
         return (
@@ -797,8 +797,7 @@
             function () {
               var e = r.a.CancelToken.source();
               return (
-                t &&
-                  !m.BHasProfileBySteamID(t) &&
+                m.BHasProfileBySteamID(t) ||
                   m
                     .LoadProfiles([t.ConvertTo64BitString()])
                     .catch(function (e) {
@@ -821,7 +820,7 @@
             },
             [e]
           ),
-          [a, !!t && m.GetProfileBySteamID(t)]
+          [a, m.GetProfileBySteamID(t)]
         );
       }
       window.g_ProfileStore = m;
