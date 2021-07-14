@@ -375,6 +375,35 @@ button.faqeditor_EditorSaveButton_22iwd.faqeditor_EditorSaveButton_22iwd:disable
   font-size: 16px;
   text-decoration: underline;
 }
+.faqlocalization_LanguageListDialog_vp5PF .DialogBodyText {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.faqlocalization_ChecklistHeader_1Vzmz {
+  display: flex;
+  padding: 14px 30px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.faqlocalization_ChecklistRows_3qgdW {
+  overflow: auto;
+}
+.faqlocalization_CheckAll_1I_jA.DialogCheckbox_Container {
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid dimgray;
+}
+.faqlocalization_LanguageCheckbox_1llVI.DialogCheckbox_Container {
+  padding: 0;
+}
+.faqlocalization_LanguageCheckboxLabel_2S_PZ {
+  display: flex;
+  font-size: 15px;
+}
+.faqlocalization_Language_13DIW {
+  width: 200px;
+}
 .faqstatus_LeftMenu_1txme .faqstatus_Section_2j-hh {
   margin-bottom: 24px;
 }
