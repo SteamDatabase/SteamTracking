@@ -17457,10 +17457,8 @@
             Object.defineProperty(e.prototype, "items", {
               get: function () {
                 var e = this,
-                  t = [15, 14, 13, 3, 11, 4];
-                t.unshift(8);
-                var n = [],
-                  r = {
+                  t = [],
+                  n = {
                     type: "clusterview",
                     view: {
                       type: 1,
@@ -17480,8 +17478,8 @@
                       },
                     },
                   };
-                n.push(r);
-                var a = t.map(function (t) {
+                t.push(n);
+                var r = [8, 15, 14, 13, 3, 11, 4].map(function (t) {
                   return {
                     type: "clusterview",
                     view: {
@@ -17503,7 +17501,7 @@
                     },
                   };
                 });
-                return (n = n.concat(a));
+                return (t = t.concat(r));
               },
               enumerable: !1,
               configurable: !0,

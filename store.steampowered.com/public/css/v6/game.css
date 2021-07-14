@@ -271,8 +271,11 @@ body.v6 #game_area_purchase h2.package_group {
 	color: #556772;
 	margin-top: 10px;
 }
+
+.glance_ctn .dev_row .subtitle,
+.glance_ctn .release_date .subtitle,
 .glance_ctn .user_reviews .title {
-	color: #8f98a0;
+	color: #556772;
 }
 
 .glance_ctn .more_btn {

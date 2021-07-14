@@ -1280,7 +1280,7 @@
               return (
                 a[1], 0 == e ? [!1, null] : [n, G.Get().GetOptInForApp(e, t)]
               );
-            })(a, "sale_game_festival_summer2021"),
+            })(a, "sale_nextfest_oct_2021"),
             r = (i[0], i[1]),
             o = (function (e, t) {
               var a = d.a.useState(!y.Get().BHasLoadCompleted()),
@@ -1407,7 +1407,7 @@
                       "a",
                       {
                         href:
-                          "https://partner.steamgames.com/doc/marketing/steamgamefestival/2021summer",
+                          "https://partner.steamgames.com/doc/marketing/steamnextfest/2021oct",
                         target: "_blank",
                         className: Object(B.a)(M.a.Button, $.Link),
                       },

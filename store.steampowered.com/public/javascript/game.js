@@ -1918,18 +1918,11 @@ function ReparentAppLandingPageForMobileUX()
 
 	if ( bMatch ) {
 
-		// move the app name below the header image
-		$J('#appHubAppName').appendTo('#gameHeaderImageCtn');
-
-		// place the dev, publisher, and release date grid below the header image
-		$J('#appHeaderGridContainer').appendTo('#gameHeaderImageCtn');
-
 		// order the action buttons
 		$J('#shareBtn').appendTo('#rowBtnActions');
 		$J('#reportBtn').appendTo('#rowBtnActions');
 		$J('#queueBtnFollow').appendTo('#rowBtnActions');
 		$J('#ignoreBtn').appendTo('#rowBtnActions');
-
 		$J('#rowBtnActions').appendTo('#queueActionsCtn');
 		
 		// place discovery queue below the action buttons
@@ -1943,23 +1936,15 @@ function ReparentAppLandingPageForMobileUX()
 			$J('#gameAreaDLCSection').appendTo('#purchaseOptionsContent');
 
 		// copy the review summary content to the review details section
-		var $appReviewsAll = $J('#appReviewsAll').clone();
+		var $appReviewsAll = $J('#appReviewsAll_responsive').clone();
 		$appReviewsAll.attr( 'id', 'appReviewsAll_Detail' );
 		$appReviewsAll.appendTo('.reviews_info_ctn');
-		var $appReviewsRecent = $J('#appReviewsRecent').clone();
+		var $appReviewsRecent = $J('#appReviewsRecent_responsive').clone();
 		$appReviewsRecent.attr( 'id', 'appReviewsRecent_Detail' );
 		$appReviewsRecent.appendTo('.reviews_info_ctn');
 
 		// place the active review filter list in the review details section
 		$J('#reviews_active_filters').appendTo('.reviews_info_ctn');
-
-		// swap the order of all/recent reviews
-		$J('#appReviewsAll').appendTo('#userReviews');
-		$J('#appReviewsRecent').appendTo('#userReviews');
-
-		// move app reviews summary near the top
-		$J('#reviewsHeader').appendTo('#glanceCtnResponsiveRight');
-		$J('#userReviews').appendTo('#glanceCtnResponsiveRight');
 
 		// place banners and game details into the links and info section
 		$J('#bannerAchievements').appendTo('#appLinksAndInfo');
@@ -1994,7 +1979,10 @@ function ReparentAppLandingPageForMobileUX()
 
 			// purchase content height may need to change if it's visible 
 			if ( $J('#purchaseOptionsContent').is(':visible') )
+			{
 				_AdjustPurchaseContentHeight();
+				_UpdatePurchaseOptionsScrollEnabled();
+			}
 		}
 		window.addEventListener( 'resize', responsiveOnWindowResize );
 
@@ -2052,12 +2040,22 @@ function ReparentAppLandingPageForMobileUX()
 	}
 }
 
-// calculate the size of the container which holds the purchase banner, purchase option content, and empty space which greys out the rest of the page
 // TODO: Investigate bugs when rotating the screen.  We may need to check orientation.
+
+// calculate the size of the container which holds the purchase banner, purchase option content, and empty space which greys out the rest of the page
 function _AdjustPurchaseContentHeight()
 {
 	var $purchaseContentHeight = parseInt( window.innerHeight ) - parseInt( GetResponsiveHeaderFixedOffsetAdjustment() );
 	$J('#purchaseOptionsContainer').css('height', $purchaseContentHeight + 'px' );
+}
+
+// setting touch-action to none blocks the swipe/scroll events from reaching the main page.  
+// Otherwise the main page will scroll underneath the purchase options modal window
+
+// TODO: A scenario this doesn't support is when the content height within the div changes - need to add a listener for that event 
+function _UpdatePurchaseOptionsScrollEnabled()
+{
+	$J('#purchaseOptionsContent').css( 'touch-action', parseInt( $J('#purchaseOptionsEmptySpace').height() ) > 0 ? 'none' : 'unset' );
 }
 
 // called by Mobile UX to reveal a list of purchase options for an app
@@ -2082,6 +2080,8 @@ function TogglePurchaseOptionsModal()
 
 		// display the purchase options
 		$modalDiv.css('display', $bShowing ? 'block' : 'none');
+
+		_UpdatePurchaseOptionsScrollEnabled();
 	}
 }
 
