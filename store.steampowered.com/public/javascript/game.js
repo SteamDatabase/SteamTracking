@@ -1931,7 +1931,7 @@ function ReparentAppLandingPageForMobileUX()
 		// place purchase options where they'll be controlled by the purchase options banner 
 		$J('#game_area_purchase').appendTo('#purchaseOptionsContent');
 
-		// We may want to instead make a copy so it's also kept in the main page body
+		// We may want to instead make a copy so it's also kept in the main page body.  If so move the DLC content to contentForThisGame_ctn
 		if ( $J('#gameAreaDLCSection') !== null )
 			$J('#gameAreaDLCSection').appendTo('#purchaseOptionsContent');
 
@@ -1963,9 +1963,7 @@ function ReparentAppLandingPageForMobileUX()
 
 		var responsiveOnWindowResize = function()
 		{
-			// TODO: investigate a flicker of the purchase banner on android as you scroll the page.  Guessing we're toggling display state more often than intended
-
-			// hide the purchase options banner if usable screen height is significantly below actual screen height (keyboard causes this) 
+			// hide the purchase options banner if usable screen height is significantly below actual screen height (keyboard causes this)
 			if ( screen.availHeight - window.innerHeight > 300 )
 			{
 				if ( $J('#purchaseOptionsContainer').is(':visible') )
@@ -1977,19 +1975,13 @@ function ReparentAppLandingPageForMobileUX()
 					$J('#purchaseOptionsContainer').css('display', 'flex');
 			}
 
-			// purchase content height may need to change if it's visible 
-			if ( $J('#purchaseOptionsContent').is(':visible') )
-			{
-				_AdjustPurchaseContentHeight();
-				_UpdatePurchaseOptionsScrollEnabled();
-			}
+			// Update purchase banner and content layout
+			_AdjustPurchaseOptionsLayout();
 		}
 		window.addEventListener( 'resize', responsiveOnWindowResize );
 
-		// have the empty space div which is shown above purchase options eat touch events
-		$J('#purchaseOptionsEmptySpace').bind('touchstart click', function (e) {
-			return false;
-		});
+		// when the DLC list expands re-calc the purchase options layout  
+		$J('#game_area_dlc_expanded').resize( function() { _AdjustPurchaseOptionsLayout(); } );
 
 		/* COMMENTING THIS OUT TO TEST
 			// iphone has a system menu which appears if you tap near the bottom.  Adding bottom padding to reduce odds of accidently
@@ -2040,22 +2032,25 @@ function ReparentAppLandingPageForMobileUX()
 	}
 }
 
-// TODO: Investigate bugs when rotating the screen.  We may need to check orientation.
-
-// calculate the size of the container which holds the purchase banner, purchase option content, and empty space which greys out the rest of the page
-function _AdjustPurchaseContentHeight()
+// called anytime the window size changes, purchase options are shown/hidden, or DLC list within it changes size 
+function _AdjustPurchaseOptionsLayout()
 {
-	var $purchaseContentHeight = parseInt( window.innerHeight ) - parseInt( GetResponsiveHeaderFixedOffsetAdjustment() );
-	$J('#purchaseOptionsContainer').css('height', $purchaseContentHeight + 'px' );
-}
+	var $bPurchaseOptionsVisible = $J('#purchaseOptionsContent').is(':visible');
+	if ( $bPurchaseOptionsVisible )
+	{
+		var $purchaseContentHeight = parseInt( window.innerHeight ) - parseInt( GetResponsiveHeaderFixedOffsetAdjustment() );
+		$J('#purchaseOptionsContainer').css('height', $purchaseContentHeight + 'px');
+	}
+	else 
+	{
+		$J('#purchaseOptionsContainer').css('height', 'unset');
+	}
 
-// setting touch-action to none blocks the swipe/scroll events from reaching the main page.  
-// Otherwise the main page will scroll underneath the purchase options modal window
+	// if the purchase options content is visible grey out empty space above it
+	$J('#purchaseOptionsEmptySpace').css('display', $bPurchaseOptionsVisible ? 'block' : 'none');
 
-// TODO: A scenario this doesn't support is when the content height within the div changes - need to add a listener for that event 
-function _UpdatePurchaseOptionsScrollEnabled()
-{
-	$J('#purchaseOptionsContent').css( 'touch-action', parseInt( $J('#purchaseOptionsEmptySpace').height() ) > 0 ? 'none' : 'unset' );
+	// if the purchase options content is visible and not scrollable, disable touch actions to prevent the main page from receiving scroll events   
+	$J('#purchaseOptionsContent').css('touch-action', $bPurchaseOptionsVisible && parseInt( $J('#purchaseOptionsEmptySpace').height() ) > 0 ? 'none' : 'unset');
 }
 
 // called by Mobile UX to reveal a list of purchase options for an app
@@ -2070,18 +2065,11 @@ function TogglePurchaseOptionsModal()
 		$J('#purchaseOptionsBanner_visible').css('display', $bShowing ? 'flex' : 'none');
 		$J('#purchaseOptionsBanner_hidden').css('display', !$bShowing ? 'flex' : 'none');
 
-		if ( $bShowing )
-			_AdjustPurchaseContentHeight();
-		else 
-			$J('#purchaseOptionsContainer').css('height', 'unset' );
-
-		// grey out the screen above the purchase options
-		$J('#purchaseOptionsEmptySpace').css('display', $bShowing ? 'block' : 'none');
-
-		// display the purchase options
+		// update displaying the purchase options content
 		$modalDiv.css('display', $bShowing ? 'block' : 'none');
 
-		_UpdatePurchaseOptionsScrollEnabled();
+		// update layout
+		_AdjustPurchaseOptionsLayout();
 	}
 }
 
