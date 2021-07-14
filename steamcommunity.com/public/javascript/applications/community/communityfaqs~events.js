@@ -9281,8 +9281,8 @@
             tags: ["curator", "curator_public", "audience_followers"],
           },
         },
-        s = i()("2021-06-16T10:00:00-07:00").unix(),
-        c = i()("2021-06-22T10:00:00-07:00").unix(),
+        s = i()("2021-10-01T10:00:00-07:00").unix(),
+        c = i()("2021-10-07T10:00:00-07:00").unix(),
         u = {
           artist_statement: {
             name: "#EventCategory_SteamGameFestival_ArtistStatement",
@@ -20967,7 +20967,7 @@
                       data: this.ConvertRowConfigToString([3], ["tall"]),
                     }
                   );
-              var r = Object(Ct.b)(n),
+              var r = Object(Ct.c)(n),
                 o = this.ConvertRowConfigToString(
                   r,
                   n.capsule_style_per_row_array
