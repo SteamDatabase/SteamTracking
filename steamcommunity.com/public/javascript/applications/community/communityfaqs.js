@@ -55,7 +55,7 @@
       "use strict";
       a.r(t),
         a.d(t, "FAQRoutes", function () {
-          return ga;
+          return ca;
         });
       var o = a("mrSG"),
         i = a("TyAF"),
@@ -493,10 +493,10 @@
             e
           );
         })(),
-        E = a("WBba"),
-        O = a("hRO2"),
+        O = a("WBba"),
+        E = a("hRO2"),
         F = a("OS8t"),
-        R = O.Message,
+        R = E.Message,
         W = (function (e) {
           function t(a) {
             void 0 === a && (a = null);
@@ -564,7 +564,7 @@
               return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new O.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
@@ -572,7 +572,7 @@
               return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new O.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
@@ -635,7 +635,7 @@
               return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new O.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
@@ -643,7 +643,7 @@
               return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new O.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
@@ -722,7 +722,7 @@
               return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new O.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
@@ -730,7 +730,7 @@
               return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new O.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
@@ -793,7 +793,7 @@
               return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new O.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
@@ -801,7 +801,7 @@
               return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new O.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
@@ -854,7 +854,7 @@
               return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new O.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
@@ -862,7 +862,7 @@
               return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new O.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
@@ -920,7 +920,7 @@
               return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new O.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
@@ -928,7 +928,7 @@
               return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new O.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
@@ -958,7 +958,7 @@
               return new t();
             }),
             (t.deserializeBinary = function (e) {
-              var a = new O.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
@@ -966,7 +966,7 @@
               return e;
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new O.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, t) {}),
@@ -1027,7 +1027,7 @@
               return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new O.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
@@ -1035,7 +1035,7 @@
               return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new O.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
@@ -1065,7 +1065,7 @@
               return new t();
             }),
             (t.deserializeBinary = function (e) {
-              var a = new O.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
@@ -1073,7 +1073,7 @@
               return e;
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new O.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, t) {}),
@@ -1134,7 +1134,7 @@
               return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new O.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
@@ -1142,7 +1142,7 @@
               return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new O.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
@@ -1172,7 +1172,7 @@
               return new t();
             }),
             (t.deserializeBinary = function (e) {
-              var a = new O.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
@@ -1180,7 +1180,7 @@
               return e;
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new O.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, t) {}),
@@ -1246,7 +1246,7 @@
               return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new O.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
@@ -1254,7 +1254,7 @@
               return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new O.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
@@ -1284,7 +1284,7 @@
               return new t();
             }),
             (t.deserializeBinary = function (e) {
-              var a = new O.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
@@ -1292,7 +1292,7 @@
               return e;
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new O.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, t) {}),
@@ -1359,7 +1359,7 @@
               return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new O.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
@@ -1367,7 +1367,7 @@
               return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new O.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
@@ -1420,7 +1420,7 @@
               return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new O.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
@@ -1428,7 +1428,7 @@
               return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new O.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
@@ -1493,7 +1493,7 @@
               return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new O.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
@@ -1501,7 +1501,7 @@
               return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new O.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
@@ -1554,7 +1554,7 @@
               return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new O.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
@@ -1562,7 +1562,7 @@
               return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new O.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
@@ -1606,7 +1606,7 @@
               return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new O.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
@@ -1614,7 +1614,7 @@
               return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new O.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
@@ -1658,7 +1658,7 @@
               return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new O.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
@@ -1666,7 +1666,7 @@
               return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new O.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
@@ -1710,7 +1710,7 @@
               return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new O.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
@@ -1718,7 +1718,7 @@
               return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new O.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
@@ -1776,7 +1776,7 @@
               return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new O.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
@@ -1784,7 +1784,7 @@
               return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new O.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
@@ -1834,7 +1834,7 @@
               return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new O.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
@@ -1842,7 +1842,7 @@
               return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new O.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
@@ -1889,7 +1889,7 @@
               return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new O.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
@@ -1897,7 +1897,7 @@
               return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new O.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
@@ -1944,7 +1944,7 @@
               return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new O.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
@@ -1952,7 +1952,7 @@
               return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new O.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
@@ -1982,7 +1982,7 @@
               return new t();
             }),
             (t.deserializeBinary = function (e) {
-              var a = new O.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
@@ -1990,7 +1990,7 @@
               return e;
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new O.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, t) {}),
@@ -2047,7 +2047,7 @@
               return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new O.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
@@ -2055,7 +2055,7 @@
               return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new O.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
@@ -2124,7 +2124,7 @@
               return F.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var a = new O.BinaryReader(e),
+              var a = new E.BinaryReader(e),
                 o = new t();
               return t.deserializeBinaryFromReader(o, a);
             }),
@@ -2132,7 +2132,7 @@
               return F.b(t.MBF(), e, a);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new O.BinaryWriter();
+              var e = new E.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, a) {
@@ -2243,7 +2243,7 @@
             (e.prototype.SetUpWebAPIInterface = function () {
               var e = Object(u.g)("faqstore", "application_config"),
                 t = null == e ? void 0 : e.webapi_token;
-              this.m_steamInterface = new E.a(u.c.WEBAPI_BASE_URL, t);
+              this.m_steamInterface = new O.a(u.c.WEBAPI_BASE_URL, t);
             }),
             (e.prototype.ReadInitialPayload = function () {
               var e = Object(u.g)("faqstore", "application_config");
@@ -2829,25 +2829,23 @@
                 });
               });
             }),
-            (e.prototype.ImportNonEnglishDraftsFromCrowdin = function (e, t) {
+            (e.prototype.ImportNonEnglishDraftsFromCrowdin = function (e) {
               return Object(o.b)(this, void 0, void 0, function () {
-                var a;
-                return Object(o.e)(this, function (o) {
-                  switch (o.label) {
+                var t;
+                return Object(o.e)(this, function (a) {
+                  switch (a.label) {
                     case 0:
                       return (
-                        (a =
+                        (t =
                           u.c.COMMUNITY_BASE_URL +
                           "faqs/" +
                           u.b.VANITY_ID +
                           "/ajaxpullfromcrowdin/" +
-                          me(e) +
-                          "?languages=" +
-                          t.join(",")),
-                        [4, I.a.get(a)]
+                          me(e)),
+                        [4, I.a.get(t)]
                       );
                     case 1:
-                      return o.sent(), [2];
+                      return a.sent(), [2];
                   }
                 });
               });
@@ -10397,8 +10395,8 @@
         qe = a("Jqb/"),
         Me = a("ka0M"),
         ze = a("6Y59"),
-        Ee = a("0OaU"),
-        Oe = a("5E+2"),
+        Oe = a("0OaU"),
+        Ee = a("5E+2"),
         Fe = a("TLQK"),
         Re = a("bS9Q"),
         We = a("Lcls"),
@@ -10500,7 +10498,7 @@
                   return n.a.createElement(Ze, { key: e[0], rgColumns: e });
                 }),
                 !o &&
-                  n.a.createElement(Ee.a, {
+                  n.a.createElement(Oe.a, {
                     position: "center",
                     size: "xlarge",
                   })
@@ -10676,7 +10674,7 @@
               i == o && Ne.a.Selected
             );
           return n.a.createElement(
-            Oe.a,
+            Ee.a,
             {
               toolTipContent: Object(Fe.f)(t + "_ttip"),
               direction: "top",
@@ -10793,11 +10791,11 @@
                     ? void 0
                     : t.length) > 0
                 ) ||
-                (e.pathname != ga.DashboardFAQ(u.b.VANITY_ID) &&
+                (e.pathname != ca.DashboardFAQ(u.b.VANITY_ID) &&
                   !(null === (a = e.pathname) || void 0 === a
                     ? void 0
                     : a.startsWith(
-                        ga.ViewFAQ(u.b.VANITY_ID, "").slice(0, -1)
+                        ca.ViewFAQ(u.b.VANITY_ID, "").slice(0, -1)
                       ))) ||
                 Object(Fe.f)("#EventEditor_UnsavedChanges")
               );
@@ -10817,7 +10815,7 @@
         ht = a("X3Ds"),
         ct = function (e) {
           return n.a.createElement(
-            Oe.a,
+            Ee.a,
             { toolTipContent: Object(Fe.f)("#FAQEditor_DeleteAction_ttip") },
             n.a.createElement(
               "div",
@@ -10852,7 +10850,7 @@
             );
           return (
             s
-              ? (h = n.a.createElement(Ee.a, {
+              ? (h = n.a.createElement(Oe.a, {
                   position: "center",
                   size: "medium",
                   string: Object(Fe.f)("#FAQEditor_DeletingInProgress"),
@@ -10939,20 +10937,18 @@
             )
           );
         },
-        mt = a("Qcoi"),
-        ft = a("yKSN"),
-        gt = a("P2lf"),
-        yt = a("ZYuD"),
-        bt = "title",
-        wt = "content";
-      var vt = function (e) {
+        mt = a("yKSN"),
+        ft = a("P2lf"),
+        gt = "title",
+        yt = "content";
+      var bt = function (e) {
           var t = e.draft,
             a = e.eLanguage;
           return s.createElement(
             "div",
             { className: nt.FlexRowContainer },
-            s.createElement(xt, { draft: t, eLanguage: a }),
-            s.createElement(ft.b, {
+            s.createElement(St, { draft: t, eLanguage: a }),
+            s.createElement(mt.b, {
               strToolTip: Object(Fe.f)("#FAQEditor_Loc_Import_ttip"),
               strLabel: Object(Fe.f)("#EventEditor_Loc_Import_Short"),
               fnOnImportLocData: function (e, a) {
@@ -10964,11 +10960,11 @@
                       a.forEach(function (a) {
                         i.forEach(function (o) {
                           var i = t.GetLocalization(o, a) || "";
-                          if (o === bt) {
+                          if (o === gt) {
                             var s = e.GetDraftTitle(a);
                             (i || (s && s.length > 0)) && e.SetDraftTitle(a, i);
                           }
-                          if (o === wt) {
+                          if (o === yt) {
                             var n = e.GetDraftContent(a);
                             (i || (n && n.length > 0)) &&
                               e.SetDraftContent(a, i);
@@ -10984,8 +10980,42 @@
             })
           );
         },
-        St = function (e) {
-          var t = e.draft;
+        wt = function (e) {
+          var t = e.draft,
+            a =
+              (e.eLanguage,
+              function () {
+                return Object(o.b)(void 0, void 0, void 0, function () {
+                  return Object(o.e)(this, function (e) {
+                    switch (e.label) {
+                      case 0:
+                        return [
+                          4,
+                          he.Get().ExportEnglishDraftToCrowdin(t.GetFAQID()),
+                        ];
+                      case 1:
+                        return [2, e.sent()];
+                    }
+                  });
+                });
+              }),
+            i = function () {
+              return Object(o.b)(void 0, void 0, void 0, function () {
+                return Object(o.e)(this, function (e) {
+                  switch (e.label) {
+                    case 0:
+                      return [
+                        4,
+                        he
+                          .Get()
+                          .ImportNonEnglishDraftsFromCrowdin(t.GetFAQID()),
+                      ];
+                    case 1:
+                      return [2, e.sent()];
+                  }
+                });
+              });
+            };
           return s.createElement(
             "div",
             { className: nt.FlexRowContainer },
@@ -10995,7 +11025,15 @@
                 className: nt.EditPreviewButton,
                 onClick: function (e) {
                   Object(Me.d)(
-                    s.createElement(kt, { direction: "export", draft: t }, " "),
+                    s.createElement(vt, {
+                      strTitle: Object(Fe.f)(
+                        "#EventEditor_Loc_CrowdinIntegration_ExportTitle"
+                      ),
+                      strBody: Object(Fe.f)(
+                        "#EventEditor_Loc_Export_Crowdin_Confirm"
+                      ),
+                      onOK: a,
+                    }),
                     Object(ht.m)(e)
                   );
                 },
@@ -11008,7 +11046,15 @@
                 className: nt.EditPreviewButton,
                 onClick: function (e) {
                   Object(Me.d)(
-                    s.createElement(kt, { direction: "import", draft: t }, " "),
+                    s.createElement(vt, {
+                      strTitle: Object(Fe.f)(
+                        "#EventEditor_Loc_CrowdinIntegration_ImportTitle"
+                      ),
+                      strBody: Object(Fe.f)(
+                        "#EventEditor_Loc_Import_Crowdin_Confirm"
+                      ),
+                      onOK: i,
+                    }),
                     Object(ht.m)(e)
                   );
                 },
@@ -11017,95 +11063,42 @@
             )
           );
         },
-        kt = function (e) {
+        vt = function (e) {
           var t = e.closeModal,
-            a = e.direction,
-            i = e.draft,
-            n = s.useState(!1),
-            r = n[0],
-            l = n[1],
-            p = s.useState(new Array()),
-            d = p[0],
-            h = p[1],
-            c =
-              (r || d.length,
-              Object(Fe.f)(
-                "import" == a
-                  ? "#EventEditor_Loc_CrowdinIntegration_ImportTitle"
-                  : "#EventEditor_Loc_CrowdinIntegration_ExportTitle"
-              )),
-            u = Object(Fe.f)(
-              "import" == a
-                ? "#EventEditor_Loc_Import_Crowdin_Confirm"
-                : "#EventEditor_Loc_Export_Crowdin_Confirm"
-            ),
-            m =
-              "import" == a
-                ? s.createElement(At, {
-                    draft: i,
-                    rgAllLanguages: It,
-                    rgLanguagesSelected: d,
-                    fnSelectLanguages: h,
-                  })
-                : null;
+            a = e.onOK,
+            i = e.strTitle,
+            n = e.strBody,
+            r = s.useState(!1),
+            l = r[0],
+            p = r[1];
           return s.createElement(
             qe.d,
             {
-              className: yt.LanguageListDialog,
               closeModal: t,
-              strTitle: c,
-              strDescription: u,
+              strTitle: i,
+              strDescription: n,
               onOK: function () {
                 return Object(o.b)(void 0, void 0, void 0, function () {
-                  var e;
-                  return Object(o.e)(this, function (t) {
-                    switch (t.label) {
+                  return Object(o.e)(this, function (e) {
+                    switch (e.label) {
                       case 0:
-                        l(!0), (t.label = 1);
+                        return p(!0), [4, a()];
                       case 1:
-                        return (
-                          t.trys.push([1, 6, , 7]),
-                          "import" != a
-                            ? [3, 3]
-                            : [
-                                4,
-                                he
-                                  .Get()
-                                  .ImportNonEnglishDraftsFromCrowdin(
-                                    i.GetFAQID(),
-                                    d
-                                  ),
-                              ]
-                        );
-                      case 2:
-                        return t.sent(), [3, 5];
-                      case 3:
-                        return [
-                          4,
-                          he.Get().ExportEnglishDraftToCrowdin(i.GetFAQID()),
-                        ];
-                      case 4:
-                        t.sent(), (t.label = 5);
-                      case 5:
-                        return [3, 7];
-                      case 6:
-                        return (e = t.sent()), console.error(e), [3, 7];
-                      case 7:
-                        return l(!1), [2];
+                        return e.sent(), p(!1), [2];
                     }
                   });
                 });
               },
-              bOKDisabled: r,
+              bOKDisabled: l,
             },
-            r ? s.createElement(Ee.a, { position: "center" }) : m
+            l && s.createElement(Oe.a, { position: "center" })
           );
         },
-        xt = function (e) {
+        St = function (e) {
           var t = e.draft,
             a = e.eLanguage;
           return s.createElement(
-            Oe.a,
+            Ee.a,
             { toolTipContent: Object(Fe.f)("#FAQEditor_Loc_Export_ttip") },
             s.createElement(
               "div",
@@ -11119,13 +11112,13 @@
                         strTitle: Object(Fe.f)("#EventEditor_Loc_Export"),
                         bAlertDialog: !0,
                       },
-                      s.createElement(ft.a, {
+                      s.createElement(mt.a, {
                         fnGetLocData: function () {
                           return (function (e, t) {
-                            for (var a, o, i = new gt.b(), s = 0; s < 30; ++s)
+                            for (var a, o, i = new ft.b(), s = 0; s < 30; ++s)
                               (e.BHasSomeTextForLanguage(s) || 0 == t) &&
                                 (i.SetLocalization(
-                                  bt,
+                                  gt,
                                   s,
                                   null !== (a = e.GetDraftTitle(s)) &&
                                     void 0 !== a
@@ -11133,7 +11126,7 @@
                                     : ""
                                 ),
                                 i.SetLocalization(
-                                  wt,
+                                  yt,
                                   s,
                                   null !== (o = e.GetDraftContent(s)) &&
                                     void 0 !== o
@@ -11157,266 +11150,121 @@
             )
           );
         },
-        _t = [
-          0,
-          9,
-          8,
-          12,
-          14,
-          21,
-          2,
-          3,
-          20,
-          24,
-          13,
-          17,
-          16,
-          5,
-          6,
-          7,
-          15,
-          23,
-          11,
-          4,
-          19,
-          25,
-          18,
-          1,
-          10,
-          28,
-          26,
-          22,
-          27,
-          29,
-        ],
-        It = [
-          23,
-          6,
-          7,
-          19,
-          13,
-          14,
-          15,
-          2,
-          1,
-          24,
-          18,
-          3,
-          10,
-          4,
-          16,
-          12,
-          11,
-          22,
-          20,
-          8,
-          5,
-          27,
-          17,
-          9,
-          21,
-          26,
-          28,
-        ],
-        At = function (e) {
-          var t = e.draft,
-            a = e.rgAllLanguages,
-            o = e.rgLanguagesSelected,
-            i = e.fnSelectLanguages,
-            n = function (e, t) {
-              var a = o.includes(t);
-              if (e && !a) (s = o.slice()).push(t), i(s);
-              else if (!e && a) {
-                var s = o.filter(function (e) {
-                  return e !== t;
-                });
-                i(s);
-              }
-            },
-            r = a
-              .sort(function (e, t) {
-                return _t[e] - _t[t];
-              })
-              .map(function (e) {
-                return s.createElement(Ct, {
-                  key: "langrow" + e + t.GetFAQID(),
-                  draft: t,
-                  eLang: e,
-                  bInitialState: o.includes(e),
-                  fnOnChecked: n,
-                });
-              });
-          return s.createElement(
-            s.Fragment,
-            null,
-            s.createElement(
-              "div",
-              { className: yt.ChecklistHeader },
-              s.createElement(
-                "div",
-                { className: yt.Language },
-                Object(Fe.f)("#FAQCrowdin_LanguageHeader")
-              ),
-              s.createElement(
-                "div",
-                { className: yt.Timestamp },
-                Object(Fe.f)("#FAQCrowdin_DraftTimestampHeader")
-              )
-            ),
-            s.createElement(De.e, {
-              classname: yt.CheckAll,
-              label: Object(Fe.f)("#FAQCrowdin_SelectAllCheckboxes"),
-              onChange: function (e) {
-                i(e ? a.slice() : []);
-              },
-            }),
-            s.createElement(
-              "div",
-              { className: yt.ChecklistRows },
-              null != r
-                ? r
-                : s.createElement(
-                    "div",
-                    null,
-                    Object(Fe.f)("#FAQCrowdin_NoDraftFound")
-                  )
-            )
-          );
-        },
-        Ct = function (e) {
-          var t,
-            a = e.draft,
-            o = e.eLang,
-            i = e.bInitialState,
-            n = e.fnOnChecked,
-            r = a.GetLastSavedDraftVersion(o),
-            l = r
-              ? at.a.InitFromAccountID(Number.parseInt(r.author_account_id))
-              : null,
-            p = Object(mt.b)(l),
-            d = (p[0], p[1]),
-            h = r
-              ? Object(Fe.f)(
-                  "#FAQCrowdin_SavedAtTimeByAuthor",
-                  Object(Fe.k)(r.timestamp) + " @ " + Object(Fe.m)(r.timestamp),
-                  null !== (t = null == d ? void 0 : d.persona_name) &&
-                    void 0 !== t
-                    ? t
-                    : r.author_account_id
-                )
-              : Object(Fe.f)("#FAQCrowdin_NoDraftFound"),
-            c = s.createElement(
-              "div",
-              { className: yt.LanguageCheckboxLabel },
-              s.createElement(
-                "div",
-                { className: yt.Language },
-                Object(Fe.f)("#Language_" + Object(x.a)(o))
-              ),
-              s.createElement("div", { className: yt.Timestamp }, h)
-            );
-          return s.createElement(De.e, {
-            classname: yt.LanguageCheckbox,
-            label: c,
-            checked: i,
-            onChange: function (e) {
-              return n(e, o);
-            },
-          });
-        },
-        Tt = Object(i.a)(function (e) {
-          var t = e.draft,
-            a = e.bDisabled,
-            o = t.BNeedsSaving();
+        kt = a("Qcoi"),
+        xt = Object(i.a)(function (e) {
+          var t = e.draft.BNeedsSaving();
           return n.a.createElement(
-            Oe.a,
+            Ee.a,
             {
               toolTipContent: Object(Fe.f)(
-                o ? "#FAQPublish_SaveRequire_ttip" : "#FAQPublish_Publish_ttip"
+                t ? "#FAQPublish_SaveRequire_ttip" : "#FAQPublish_Publish_ttip"
               ),
             },
             n.a.createElement(
               "div",
               {
-                className: Object(c.a)(nt.EditPreviewButton, a && nt.Disabled),
-                onClick: function (t) {
-                  a ||
-                    Object(Me.d)(
-                      o
-                        ? n.a.createElement(qe.f, {
-                            strDescription: Object(Fe.f)(
-                              "#FAQPublish_SaveRequire_ttip"
-                            ),
-                          })
-                        : n.a.createElement(Pt, { draft: e.draft }),
-                      Object(ht.m)(t)
-                    );
+                className: nt.EditPreviewButton,
+                onClick: function (a) {
+                  Object(Me.d)(
+                    t
+                      ? n.a.createElement(qe.f, {
+                          strDescription: Object(Fe.f)(
+                            "#FAQPublish_SaveRequire_ttip"
+                          ),
+                        })
+                      : n.a.createElement(_t, { draft: e.draft }),
+                    Object(ht.m)(a)
+                  );
                 },
               },
               Object(Fe.f)("#FAQPublish_Publish")
             )
           );
         }),
-        Pt = function (e) {
+        _t = function (e) {
           var t,
-            a = e.draft,
-            i = function () {
+            a,
+            i = e.draft,
+            s = function () {
               return e.closeModal && e.closeModal();
             },
-            s = n.a.useState(!1),
-            r = s[0],
-            l = s[1],
-            p = n.a.useState(void 0),
-            d = p[0],
-            h = p[1],
-            c = n.a.useState(void 0),
-            u = c[0],
-            m = c[1],
-            f = ge(a.GetFAQID()),
-            g = f[0],
-            y = f[1],
-            b = n.a.useState(new Array()),
-            w = b[0],
-            v = b[1],
-            S = null;
-          if (y)
-            if (r)
-              S = n.a.createElement(Ee.a, {
+            r = n.a.useState(!1),
+            l = r[0],
+            p = r[1],
+            d = n.a.useState(void 0),
+            h = d[0],
+            c = d[1],
+            u = n.a.useState(void 0),
+            m = u[0],
+            f = u[1],
+            g = ge(i.GetFAQID()),
+            y = g[0],
+            b = g[1],
+            w = n.a.useState(new Array()),
+            v = w[0],
+            S = w[1],
+            k = function (e, t) {
+              var a = v.includes(t);
+              if (e && !a)
+                (o = v.filter(function (e) {
+                  return !0;
+                })).push(t),
+                  S(o);
+              else if (!e && a) {
+                var o = v.filter(function (e) {
+                  return e !== t;
+                });
+                S(o);
+              }
+            },
+            x = null;
+          if (b)
+            if (l)
+              x = n.a.createElement(Oe.a, {
                 position: "center",
                 size: "medium",
                 string: Object(Fe.f)("#FAQPublish_Publishing"),
               });
-            else if (d)
-              S = n.a.createElement(
+            else if (h)
+              x = n.a.createElement(
                 "div",
                 null,
                 Object(Fe.f)("#FAQPublish_Success")
               );
-            else if (u)
-              S = n.a.createElement(
+            else if (m)
+              x = n.a.createElement(
                 "div",
                 null,
                 Object(Fe.f)(
                   "#Error_Description",
-                  u,
+                  m,
                   Object(Fe.f)("#Error_GenericFailureDescription")
                 )
               );
-            else if (g) {
-              var k =
-                null === (t = g.per_language_info) || void 0 === t
-                  ? void 0
-                  : t
-                      .filter(function (e) {
+            else if (y) {
+              var _ =
+                null ===
+                  (a = (null === (t = y.per_language_info) || void 0 === t
+                    ? void 0
+                    : t.filter(function (e) {
                         return (
                           e.last_publish_timestamp < e.last_update_timestamp
                         );
                       })
-                      .map(function (e) {
-                        return e.language;
+                  ).sort(function (e, t) {
+                    return e.language - t.language;
+                  })) || void 0 === a
+                  ? void 0
+                  : a.map(function (e) {
+                      return n.a.createElement(It, {
+                        key: "selrow" + e.language + i.GetFAQID(),
+                        draft: i,
+                        eLang: e.language,
+                        fnOnChecked: k,
                       });
-              S = n.a.createElement(
-                n.a.Fragment,
+                    });
+              x = n.a.createElement(
+                "div",
                 null,
                 n.a.createElement(
                   "div",
@@ -11430,21 +11278,22 @@
                   Object(Fe.f)("#FAQPublish_Desc2")
                 ),
                 n.a.createElement("br", null),
-                n.a.createElement(At, {
-                  draft: a,
-                  rgAllLanguages: k,
-                  rgLanguagesSelected: w,
-                  fnSelectLanguages: v,
-                })
+                null != _
+                  ? _
+                  : n.a.createElement(
+                      "div",
+                      null,
+                      Object(Fe.f)("#FAQPublish_None")
+                    )
               );
             } else
-              S = n.a.createElement(
+              x = n.a.createElement(
                 "div",
                 null,
                 Object(Fe.f)("#FAQPublish_LoadError")
               );
           else
-            S = n.a.createElement(Ee.a, {
+            x = n.a.createElement(Oe.a, {
               size: "small",
               position: "center",
               string: Object(Fe.f)("#FAQPublish_PublishWait"),
@@ -11454,36 +11303,36 @@
             null,
             n.a.createElement(
               qe.h,
-              { onEscKeypress: i },
+              { onEscKeypress: s },
               n.a.createElement(
                 De.f,
-                { className: yt.LanguageListDialog },
+                null,
                 n.a.createElement(
                   De.l,
                   null,
                   Object(Fe.f)("#FAQPublish_Publish")
                 ),
-                n.a.createElement(De.b, null, n.a.createElement(De.c, null, S)),
+                n.a.createElement(De.b, null, n.a.createElement(De.c, null, x)),
                 n.a.createElement(
                   De.k,
                   null,
                   n.a.createElement(De.o, {
-                    onCancel: i,
-                    bOKDisabled: Boolean(r || d || u || 0 == w.length),
+                    onCancel: s,
+                    bOKDisabled: Boolean(l || h || m || 0 == v.length),
                     strOKText: Object(Fe.f)("#FAQPublish_Publish"),
-                    strCancelText: Boolean(r || d || u)
+                    strCancelText: Boolean(l || h || m)
                       ? Object(Fe.f)("#Button_OK")
                       : void 0,
                     onOK: function () {
                       return Object(o.b)(void 0, void 0, void 0, function () {
                         return Object(o.e)(this, function (e) {
                           return (
-                            l(!0),
+                            p(!0),
                             he
                               .Get()
-                              .PublishDraftByLanguage(a.GetFAQID(), w)
+                              .PublishDraftByLanguage(i.GetFAQID(), v)
                               .then(function (e) {
-                                1 == e && h(!0), m(e);
+                                1 == e && c(!0), f(e);
                               })
                               .catch(function (e) {
                                 var t = Object(q.c)(e);
@@ -11492,10 +11341,10 @@
                                     t.strErrorMsg,
                                   t
                                 ),
-                                  m(2);
+                                  f(2);
                               })
                               .finally(function () {
-                                return l(!1);
+                                return p(!1);
                               }),
                             [2]
                           );
@@ -11508,9 +11357,33 @@
             )
           );
         },
-        Dt = function (e) {
+        It = function (e) {
+          var t,
+            a = e.draft,
+            o = e.eLang,
+            i = e.fnOnChecked,
+            s = a.GetLastSavedDraftVersion(o),
+            r = at.a.InitFromAccountID(Number.parseInt(s.author_account_id)),
+            l = Object(kt.b)(r.ConvertTo64BitString()),
+            p = (l[0], l[1]),
+            d = Object(Fe.f)(
+              "#FAQPublish_DraftInfo",
+              Object(Fe.f)("#Language_" + Object(x.a)(o)),
+              Object(Fe.k)(s.timestamp) + " @ " + Object(Fe.m)(s.timestamp),
+              null !== (t = null == p ? void 0 : p.persona_name) && void 0 !== t
+                ? t
+                : s.author_account_id
+            );
+          return n.a.createElement(De.e, {
+            label: d,
+            onChange: function (e) {
+              return i(e, o);
+            },
+          });
+        },
+        At = function (e) {
           return n.a.createElement(
-            Oe.a,
+            Ee.a,
             { toolTipContent: Object(Fe.f)("#FAQEditor_ChangeVisible_ttip") },
             n.a.createElement(
               "div",
@@ -11518,7 +11391,7 @@
                 className: nt.EditPreviewButton,
                 onClick: function (t) {
                   Object(Me.d)(
-                    n.a.createElement(qt, { draft: e.draft }),
+                    n.a.createElement(Ct, { draft: e.draft }),
                     Object(ht.m)(t)
                   );
                 },
@@ -11527,7 +11400,7 @@
             )
           );
         },
-        qt = function (e) {
+        Ct = function (e) {
           var t = e.draft,
             a = function () {
               return e.closeModal && e.closeModal();
@@ -11574,7 +11447,7 @@
             );
           return (
             s
-              ? (S = n.a.createElement(Ee.a, {
+              ? (S = n.a.createElement(Oe.a, {
                   position: "center",
                   size: "medium",
                   string: Object(Fe.f)("#FAQEditor_ChangeVisible_InProgress"),
@@ -11659,8 +11532,8 @@
             )
           );
         },
-        Mt = a("ggIn"),
-        zt = Object(i.a)(function (e) {
+        Tt = a("ggIn"),
+        Pt = Object(i.a)(function (e) {
           var t,
             a,
             o,
@@ -11696,11 +11569,11 @@
                   void 0 === i
                     ? void 0
                     : i.slice().sort(function (e, t) {
-                        return _t[e.language] - _t[t.language];
+                        return e.language - t.language;
                       })) || void 0 === s
                 ? void 0
                 : s.map(function (e) {
-                    return n.a.createElement(Et, {
+                    return n.a.createElement(Dt, {
                       key: e.language,
                       info: e,
                       rtEnglishUpdateTime: h,
@@ -11711,25 +11584,25 @@
             null,
             n.a.createElement(
               "div",
-              { className: Mt.LeftMenu },
+              { className: Tt.LeftMenu },
               n.a.createElement(
                 "div",
-                { className: Mt.Section },
+                { className: Tt.Section },
                 n.a.createElement(
                   "div",
-                  { className: Mt.SectionTitle },
+                  { className: Tt.SectionTitle },
                   Object(Fe.f)("#FAQDashboard_VisibilityColumn"),
                   " "
                 ),
                 n.a.createElement(
                   "div",
-                  { className: Mt.SectionContents },
+                  { className: Tt.SectionContents },
                   n.a.createElement(
                     "div",
-                    { className: Mt.VisibilityCtn },
+                    { className: Tt.VisibilityCtn },
                     n.a.createElement(
                       "div",
-                      { className: Object(c.a)(Mt.StatusRow, Mt.Global) },
+                      { className: Object(c.a)(Tt.StatusRow, Tt.Global) },
                       Object(Fe.f)("#FAQDashboard_VisibleInGlobalRealmLabel"),
                       " ",
                       n.a.createElement(Je, {
@@ -11738,7 +11611,7 @@
                     ),
                     n.a.createElement(
                       "div",
-                      { className: Object(c.a)(Mt.StatusRow, Mt.China) },
+                      { className: Object(c.a)(Tt.StatusRow, Tt.China) },
                       Object(Fe.f)("#FAQDashboard_VisibleInChinaRealmLabel"),
                       " ",
                       n.a.createElement(Je, {
@@ -11747,73 +11620,68 @@
                     ),
                     n.a.createElement(
                       "div",
-                      { className: Mt.StatusBtnCtn },
-                      n.a.createElement(Dt, { draft: r })
+                      { className: Tt.StatusBtnCtn },
+                      n.a.createElement(At, { draft: r })
                     )
                   ),
-                  n.a.createElement(
-                    "div",
-                    { className: Mt.PublishCtn },
-                    u
-                      ? n.a.createElement(
-                          "div",
-                          { className: Mt.PublishStatus },
-                          Object(Fe.f)("#FAQStatus_DraftVersionsDesc")
-                        )
-                      : n.a.createElement(
-                          "div",
-                          { className: Mt.PublishStatus },
-                          Object(Fe.f)("#FAQStatus_NothingToPublish")
-                        ),
+                  u &&
                     n.a.createElement(
                       "div",
-                      { className: Mt.PublishBtn },
-                      n.a.createElement(Tt, { draft: r, bDisabled: !u })
+                      { className: Tt.PublishCtn },
+                      n.a.createElement(
+                        "div",
+                        { className: Tt.PublishStatus },
+                        Object(Fe.f)("#FAQStatus_DraftVersionsDesc")
+                      ),
+                      n.a.createElement(
+                        "div",
+                        { className: Tt.PublishBtn },
+                        n.a.createElement(xt, { draft: r })
+                      )
                     )
-                  )
                 )
               ),
               n.a.createElement(
                 "div",
-                { className: Mt.Section },
+                { className: Tt.Section },
                 n.a.createElement(
                   "div",
-                  { className: Mt.SectionTitle },
+                  { className: Tt.SectionTitle },
                   Object(Fe.f)("#FAQDashboard_LocalizationSection"),
                   " "
                 ),
                 n.a.createElement(
                   "div",
-                  { className: Mt.SectionContents },
+                  { className: Tt.SectionContents },
                   n.a.createElement(
                     "div",
-                    { className: Mt.SectionDescription },
+                    { className: Tt.SectionDescription },
                     Object(Fe.f)("#FAQDashboard_LocalizationSectionDesc")
                   ),
-                  n.a.createElement(vt, { draft: r, eLanguage: l })
+                  n.a.createElement(bt, { draft: r, eLanguage: l })
                 ),
                 n.a.createElement(
                   "div",
-                  { className: Mt.SectionContents },
+                  { className: Tt.SectionContents },
                   n.a.createElement(
                     "div",
-                    { className: Mt.SectionDescription },
+                    { className: Tt.SectionDescription },
                     Object(Fe.f)("#EventEditor_Loc_CrowdinIntegration_Desc")
                   ),
-                  n.a.createElement(St, { draft: r })
+                  n.a.createElement(wt, { draft: r, eLanguage: l })
                 )
               ),
               n.a.createElement(
                 "div",
-                { className: Mt.Section },
+                { className: Tt.Section },
                 n.a.createElement(
                   "div",
-                  { className: Mt.SectionTitle },
+                  { className: Tt.SectionTitle },
                   Object(Fe.f)("#FAQStatus_LocalizedVersionStatusHeader")
                 ),
                 n.a.createElement(
                   "table",
-                  { className: Mt.FaqStatusTable },
+                  { className: Tt.FaqStatusTable },
                   n.a.createElement(
                     "thead",
                     null,
@@ -11842,13 +11710,13 @@
               ),
               n.a.createElement(
                 "div",
-                { className: Mt.Section },
+                { className: Tt.Section },
                 n.a.createElement(ct, { draft: r })
               )
             )
           );
         }),
-        Et = Object(i.a)(function (e) {
+        Dt = Object(i.a)(function (e) {
           var t = e.info,
             a = e.rtEnglishUpdateTime,
             o = !!a && a > t.last_update_timestamp,
@@ -11879,14 +11747,14 @@
             )
           );
         }),
-        Ot = (a("jZUi"), a("vBFs")),
-        Ft = a("6h0J"),
-        Rt = a.n(Ft),
-        Wt = a("wst7"),
-        Nt = a("hvYe"),
-        Lt = a.n(Nt),
-        Ht = a("aXcg"),
-        Vt = Object(i.a)(function (e) {
+        qt = (a("jZUi"), a("vBFs")),
+        Mt = a("6h0J"),
+        zt = a.n(Mt),
+        Ot = a("wst7"),
+        Et = a("hvYe"),
+        Ft = a.n(Et),
+        Rt = a("aXcg"),
+        Wt = Object(i.a)(function (e) {
           var t = e.draft.BNeedsSaving();
           return n.a.createElement(
             "div",
@@ -11894,7 +11762,7 @@
               className: "btn_green_steamui btn_medium",
               onClick: function (t) {
                 return Object(Me.d)(
-                  n.a.createElement(jt, { draft: e.draft }),
+                  n.a.createElement(Nt, { draft: e.draft }),
                   Object(ht.m)(t)
                 );
               },
@@ -11904,14 +11772,14 @@
               null,
               !t &&
                 n.a.createElement("img", {
-                  className: Ht.SavedImage,
-                  src: Lt.a,
+                  className: Rt.SavedImage,
+                  src: Ft.a,
                 }),
               Object(Fe.f)(t ? "#Button_Save" : "#Button_Saved")
             )
           );
         }),
-        jt = function (e) {
+        Nt = function (e) {
           var t = e.draft,
             a = e.closeModal,
             i = n.a.useState(!0),
@@ -11980,7 +11848,7 @@
                 De.b,
                 null,
                 s
-                  ? n.a.createElement(Ee.a, {
+                  ? n.a.createElement(Oe.a, {
                       size: "medium",
                       position: "center",
                     })
@@ -12017,9 +11885,9 @@
             )
           );
         },
-        Bt = a("eYkW"),
-        Gt = a.n(Bt),
-        Ut = Object(i.a)(function (e) {
+        Lt = a("eYkW"),
+        Ht = a.n(Lt),
+        Vt = Object(i.a)(function (e) {
           var t,
             a = e.draft,
             o = e.bPreview,
@@ -12032,10 +11900,10 @@
               {
                 className: Object(c.a)(
                   ((t = {}),
-                  (t[Wt.EventEditorTopBarContainer] = !0),
-                  (t[Wt.EventUnPublished] = !o && !i),
-                  (t[Wt.EventPublished] = !o && i),
-                  (t[Gt.a.FAQPreview] = o),
+                  (t[Ot.EventEditorTopBarContainer] = !0),
+                  (t[Ot.EventUnPublished] = !o && !i),
+                  (t[Ot.EventPublished] = !o && i),
+                  (t[Ht.a.FAQPreview] = o),
                   t)
                 ),
               },
@@ -12055,7 +11923,7 @@
                 null,
                 n.a.createElement(
                   "div",
-                  { className: Gt.a.EditorInternalNameLabel },
+                  { className: Ht.a.EditorInternalNameLabel },
                   Object(Fe.f)(
                     o
                       ? "#FAQEditor_InternalName_Preview"
@@ -12064,13 +11932,13 @@
                 ),
                 n.a.createElement(
                   "div",
-                  { className: Gt.a.EditorInternalName },
+                  { className: Ht.a.EditorInternalName },
                   a.GetFAQInternalName(),
                   n.a.createElement("img", {
-                    src: Rt.a,
+                    src: zt.a,
                     onClick: function (e) {
                       return Object(Me.d)(
-                        n.a.createElement(Yt, { draft: a }),
+                        n.a.createElement(jt, { draft: a }),
                         Object(ht.m)(e)
                       );
                     },
@@ -12080,7 +11948,7 @@
               n.a.createElement(
                 "div",
                 { className: rt.a.EventOptions },
-                n.a.createElement(Ot.a, {
+                n.a.createElement(qt.a, {
                   selectedLang: ot.a.Get().GetCurEditLanguage(),
                   fnOnLanguageChanged: ot.a.Get().SetCurEditLanguage,
                   fnLangHasData: a.BHasSomeTextForLanguage,
@@ -12104,7 +11972,7 @@
             )
           );
         }),
-        Yt = function (e) {
+        jt = function (e) {
           var t = e.closeModal,
             a = e.draft,
             i = n.a.useState(a.GetFAQInternalName() || ""),
@@ -12149,7 +12017,7 @@
                 disabled: p,
               }),
               Boolean(p && !f) &&
-                n.a.createElement(Ee.a, {
+                n.a.createElement(Oe.a, {
                   string: Object(Fe.f)("#Updating"),
                   position: "center",
                   size: "medium",
@@ -12199,7 +12067,7 @@
             )
           );
         },
-        Qt = Object(i.a)(function (e) {
+        Bt = Object(i.a)(function (e) {
           var t = e.draft,
             a = e.eLanguage,
             o = t.GetFAQID(),
@@ -12230,7 +12098,7 @@
                   className: rt.a.FlexRowWrapFlexStartContainer,
                   style: { width: "unset", justifyContent: "center" },
                 },
-                n.a.createElement(Vt, { draft: t }),
+                n.a.createElement(Wt, { draft: t }),
                 Boolean(d) &&
                   n.a.createElement(
                     "div",
@@ -12245,33 +12113,33 @@
             )
           );
         }),
-        Xt = Object(i.a)(function (e) {
+        Gt = Object(i.a)(function (e) {
           var t = fe(e.faqid),
             a = t[0],
             o = t[1],
             i = n.a.useRef();
           if (!o)
-            return n.a.createElement(Ee.a, {
+            return n.a.createElement(Oe.a, {
               position: "center",
               size: "xlarge",
               string: Object(Fe.f)("#Loading"),
             });
           if (!a)
-            return n.a.createElement(Zt, {
+            return n.a.createElement(Xt, {
               strError: Object(Fe.f)("#FAQEditor_NoFAQFound"),
             });
           var s = ot.a.Get().GetCurEditLanguage();
           return n.a.createElement(
             "div",
             null,
-            n.a.createElement(Ut, { draft: a }),
+            n.a.createElement(Vt, { draft: a }),
             n.a.createElement(
               "div",
               { className: dt.a.FAQEditPage },
               n.a.createElement(
                 "div",
                 { className: dt.a.FAQMenuCtn },
-                n.a.createElement(zt, { draft: a, eLanguage: s })
+                n.a.createElement(Pt, { draft: a, eLanguage: s })
               ),
               n.a.createElement(
                 "div",
@@ -12285,14 +12153,14 @@
                     n.a.createElement(
                       "div",
                       { className: Object(c.a)(rt.a.LeftCol) },
-                      n.a.createElement(Kt, { draft: a, eLanguage: s }),
-                      n.a.createElement(Jt, {
+                      n.a.createElement(Yt, { draft: a, eLanguage: s }),
+                      n.a.createElement(Qt, {
                         bbcodeEditorRef: i,
                         draft: a,
                         eLanguage: s,
                       })
                     ),
-                    n.a.createElement($t, {
+                    n.a.createElement(Ut, {
                       draft: a,
                       bbcodeEditorRef: i,
                       className: rt.a.RightCol,
@@ -12301,10 +12169,10 @@
                 )
               )
             ),
-            n.a.createElement(Qt, { draft: a, eLanguage: s })
+            n.a.createElement(Bt, { draft: a, eLanguage: s })
           );
         }),
-        $t = function (e) {
+        Ut = function (e) {
           if (!Boolean(u.b.CAN_UPLOAD_IMAGES)) return null;
           var t = new at.a(u.b.CLANSTEAMID),
             a = e.draft,
@@ -12335,7 +12203,7 @@
             )
           );
         },
-        Kt = Object(i.a)(function (e) {
+        Yt = Object(i.a)(function (e) {
           var t = e.draft,
             a = e.eLanguage;
           return n.a.createElement(
@@ -12361,7 +12229,7 @@
             })
           );
         }),
-        Jt = Object(i.a)(function (e) {
+        Qt = Object(i.a)(function (e) {
           var t = e.draft,
             a = e.eLanguage,
             o = e.bbcodeEditorRef;
@@ -12391,7 +12259,7 @@
             })
           );
         }),
-        Zt = function (e) {
+        Xt = function (e) {
           return n.a.createElement(
             "div",
             { className: dt.a.ErrorCtn },
@@ -12403,64 +12271,64 @@
             )
           );
         },
-        ea = a("orBq"),
-        ta = function (e) {
+        $t = a("orBq"),
+        Kt = function (e) {
           var t = e.title,
             a = e.content,
             o = e.bIsPreview,
             i = e.elSideBars;
           return n.a.createElement(
             "div",
-            { className: ea.FAQViewPage },
+            { className: $t.FAQViewPage },
             n.a.createElement(
               "a",
-              { className: ea.SupportTitle, href: "" + u.c.HELP_BASE_URL },
+              { className: $t.SupportTitle, href: "" + u.c.HELP_BASE_URL },
               Object(Fe.f)("#FAQViewer_SteamSupport")
             ),
             n.a.createElement(
               "div",
-              { className: ea.Columns },
+              { className: $t.Columns },
               n.a.createElement(
                 "div",
-                { className: Object(c.a)(ea.LeftCol) },
-                n.a.createElement("div", { className: ea.TopColorBar }),
+                { className: Object(c.a)($t.LeftCol) },
+                n.a.createElement("div", { className: $t.TopColorBar }),
                 n.a.createElement(
                   "div",
-                  { className: ea.FAQTopicCtn },
-                  n.a.createElement("div", { className: ea.FAQTitle }, t),
+                  { className: $t.FAQTopicCtn },
+                  n.a.createElement("div", { className: $t.FAQTitle }, t),
                   n.a.createElement(
                     "div",
-                    { className: ea.FAQContent },
+                    { className: $t.FAQContent },
                     n.a.createElement(S, { text: a, bShowErrorInfo: o })
                   )
                 )
               ),
               n.a.createElement(
                 "div",
-                { className: ea.RightCol },
-                n.a.createElement("div", { className: ea.SectionCtn }, i)
+                { className: $t.RightCol },
+                n.a.createElement("div", { className: $t.SectionCtn }, i)
               )
             )
           );
         },
-        aa = function (e) {
+        Jt = function (e) {
           return n.a.createElement(
             "div",
-            { className: ea.FAQViewPage },
+            { className: $t.FAQViewPage },
             e.children
           );
         },
-        oa = a("3tbG"),
-        ia = a("0zs6"),
-        sa = function (e) {
+        Zt = a("3tbG"),
+        ea = a("0zs6"),
+        ta = function (e) {
           var t = e.faqContent;
           return he.Get().BHasFAQEdit()
             ? n.a.createElement(
                 "div",
-                { className: Object(c.a)(ia.Section, nt.ValveOnlyBackground) },
+                { className: Object(c.a)(ea.Section, nt.ValveOnlyBackground) },
                 n.a.createElement(
                   "div",
-                  { className: ia.TopicHeader },
+                  { className: ea.TopicHeader },
                   Object(Fe.f)("#FAQViewer_AdminLinks")
                 ),
                 n.a.createElement(
@@ -12469,7 +12337,7 @@
                   Object(Fe.n)(
                     "#FAQViewer_Admin_LastUpdate",
                     t.author_account_id
-                      ? n.a.createElement(na, {
+                      ? n.a.createElement(aa, {
                           authorAccountID: Number.parseInt(t.author_account_id),
                         })
                       : Object(Fe.f)("#Sale_Debug_Unknown"),
@@ -12482,7 +12350,7 @@
                     )
                   )
                 ),
-                n.a.createElement(ra, { faqContent: t }),
+                n.a.createElement(oa, { faqContent: t }),
                 n.a.createElement(
                   _e,
                   {
@@ -12495,9 +12363,9 @@
               )
             : null;
         },
-        na = function (e) {
+        aa = function (e) {
           var t = at.a.InitFromAccountID(e.authorAccountID),
-            a = Object(mt.b)(t.ConvertTo64BitString()),
+            a = Object(kt.b)(t.ConvertTo64BitString()),
             o = a[0],
             i = a[1];
           return n.a.createElement(
@@ -12509,7 +12377,7 @@
                   n.a.Fragment,
                   null,
                   n.a.createElement("img", {
-                    className: oa.SmallAvatar,
+                    className: Zt.SmallAvatar,
                     src: i.avatar_url,
                     "data-miniprofile": "s" + t.ConvertTo64BitString(),
                   }),
@@ -12517,7 +12385,7 @@
                 )
           );
         },
-        ra = function (e) {
+        oa = function (e) {
           var t = e.faqContent,
             a = fe(t.faq_id),
             o = a[0],
@@ -12534,7 +12402,7 @@
             null,
             Object(Fe.n)(
               "#FAQViewer_DraftNewer",
-              n.a.createElement(na, {
+              n.a.createElement(aa, {
                 authorAccountID: Number.parseInt(s.author_account_id),
               }),
               n.a.createElement(
@@ -12545,26 +12413,26 @@
             )
           );
         },
-        la = a("rTBr"),
-        pa = a.n(la),
-        da = function (e) {
+        ia = a("rTBr"),
+        sa = a.n(ia),
+        na = function (e) {
           return n.a.createElement(
             n.a.Fragment,
             null,
             n.a.createElement(
               "div",
-              { className: Object(c.a)(ia.Section, ia.NeedHelp) },
+              { className: Object(c.a)(ea.Section, ea.NeedHelp) },
               n.a.createElement(
                 "div",
-                { className: ia.LeftCol },
+                { className: ea.LeftCol },
                 n.a.createElement(ze.z, null)
               ),
               n.a.createElement(
                 "div",
-                { className: ia.RightCol },
+                { className: ea.RightCol },
                 n.a.createElement(
                   "div",
-                  { className: ia.TopicHeader },
+                  { className: ea.TopicHeader },
                   Object(Fe.f)("#FAQViewer_SideBar_ProblemWithSteam_Title")
                 ),
                 n.a.createElement(
@@ -12574,7 +12442,7 @@
                 ),
                 n.a.createElement(
                   "div",
-                  { className: ia.CenterButtonCtn },
+                  { className: ea.CenterButtonCtn },
                   n.a.createElement(
                     "a",
                     {
@@ -12588,18 +12456,18 @@
             ),
             n.a.createElement(
               "div",
-              { className: Object(c.a)(ia.Section, ia.CommunityHelp) },
+              { className: Object(c.a)(ea.Section, ea.CommunityHelp) },
               n.a.createElement(
                 "div",
-                { className: ia.LeftCol },
+                { className: ea.LeftCol },
                 n.a.createElement(ze.j, null)
               ),
               n.a.createElement(
                 "div",
-                { className: ia.RightCol },
+                { className: ea.RightCol },
                 n.a.createElement(
                   "div",
-                  { className: ia.TopicHeader },
+                  { className: ea.TopicHeader },
                   Object(Fe.f)("#FAQViewer_SideBar_CommunityHelp_Title")
                 ),
                 n.a.createElement(
@@ -12609,7 +12477,7 @@
                 ),
                 n.a.createElement(
                   "div",
-                  { className: ia.CenterButtonCtn },
+                  { className: ea.CenterButtonCtn },
                   n.a.createElement(
                     "a",
                     {
@@ -12623,39 +12491,39 @@
             )
           );
         },
-        ha = function (e) {
+        ra = function (e) {
           var t = (function (e, t) {
               return [e && he.Get().GetFAQPublishedContent(e, t), !0];
             })(e.faqid, Object(x.d)(u.c.LANGUAGE)),
             a = t[0];
           return t[1]
             ? a
-              ? n.a.createElement(ta, {
+              ? n.a.createElement(Kt, {
                   title: a.title,
                   content: a.content,
                   elSideBars: [
-                    n.a.createElement(da, { key: "sidebar", faqContent: a }),
-                    n.a.createElement(sa, { key: "adminbar", faqContent: a }),
+                    n.a.createElement(na, { key: "sidebar", faqContent: a }),
+                    n.a.createElement(ta, { key: "adminbar", faqContent: a }),
                   ],
                 })
               : n.a.createElement(
-                  aa,
+                  Jt,
                   null,
-                  n.a.createElement(ca, {
+                  n.a.createElement(la, {
                     strError: Object(Fe.f)("#FAQViewer_NoFAQFound"),
                   })
                 )
             : n.a.createElement(
-                aa,
+                Jt,
                 null,
-                n.a.createElement(Ee.a, {
+                n.a.createElement(Oe.a, {
                   position: "center",
                   size: "xlarge",
                   string: Object(Fe.f)("#Loading"),
                 })
               );
         },
-        ca = function (e) {
+        la = function (e) {
           var t,
             a =
               u.c.COMMUNITY_BASE_URL +
@@ -12665,16 +12533,16 @@
                 : "gid/" + u.b.CLANSTEAMID);
           return n.a.createElement(
             "div",
-            { className: pa.a.ErrorCtn },
-            n.a.createElement("div", { className: pa.a.ErrorMsg }, e.strError),
+            { className: sa.a.ErrorCtn },
+            n.a.createElement("div", { className: sa.a.ErrorMsg }, e.strError),
             n.a.createElement(
               "a",
-              { className: pa.a.EscapeLink, href: a },
+              { className: sa.a.EscapeLink, href: a },
               Object(Fe.f)("#FAQViewer_GoToHomepage")
             )
           );
         },
-        ua = Object(i.a)(function (e) {
+        pa = Object(i.a)(function (e) {
           var t = fe(e.faqid),
             a = t[0],
             o = t[1],
@@ -12684,33 +12552,33 @@
               ? n.a.createElement(
                   n.a.Fragment,
                   null,
-                  n.a.createElement(Ut, { draft: a, bPreview: !0 }),
-                  n.a.createElement(ta, {
+                  n.a.createElement(Vt, { draft: a, bPreview: !0 }),
+                  n.a.createElement(Kt, {
                     title: a.GetDraftTitleWithFallback(i, u.c.EREALM),
                     content: a.GetDraftContentWithFallback(i, u.c.EREALM),
                   }),
-                  n.a.createElement(Qt, { draft: a, eLanguage: i })
+                  n.a.createElement(Bt, { draft: a, eLanguage: i })
                 )
               : n.a.createElement(
-                  aa,
+                  Jt,
                   null,
-                  n.a.createElement(ca, {
+                  n.a.createElement(la, {
                     strError: Object(Fe.f)("#FAQViewer_NoFAQFound"),
                   })
                 )
             : n.a.createElement(
-                aa,
+                Jt,
                 null,
-                n.a.createElement(Ee.a, {
+                n.a.createElement(Oe.a, {
                   position: "center",
                   size: "xlarge",
                   string: Object(Fe.f)("#Loading"),
                 })
               );
         }),
-        ma = a("9w6b"),
-        fa = a("WplJ"),
-        ga = {
+        da = a("9w6b"),
+        ha = a("WplJ"),
+        ca = {
           ViewFAQ: function (e, t) {
             return "/faqs/" + e + "/view/" + t + "*";
           },
@@ -12727,7 +12595,7 @@
             return "/faqs/" + e + "/import";
           },
         },
-        ya = Object(i.a)(function (e) {
+        ua = Object(i.a)(function (e) {
           var t = n.a.useState(!0),
             a = t[0],
             i = t[1];
@@ -12737,7 +12605,7 @@
                 return Object(o.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
-                      return [4, ma.a.InitGlobal()];
+                      return [4, da.a.InitGlobal()];
                     case 1:
                       return e.sent(), i(!1), [2];
                   }
@@ -12745,7 +12613,7 @@
               });
             }, []),
             a
-              ? n.a.createElement(Ee.a, {
+              ? n.a.createElement(Oe.a, {
                   position: "center",
                   size: "medium",
                   string: Object(Fe.f)("#Loading"),
@@ -12758,29 +12626,29 @@
                     ke.e,
                     null,
                     n.a.createElement(ke.c, {
-                      path: ga.ViewFAQ(":vanity_str", ":faqid"),
+                      path: ca.ViewFAQ(":vanity_str", ":faqid"),
                       render: function (e) {
-                        return n.a.createElement(fa.a, {
+                        return n.a.createElement(ha.a, {
                           config: {
                             "faqs-root": function () {
                               var t = ue(e.match.params.faqid);
-                              return n.a.createElement(ha, { faqid: t });
+                              return n.a.createElement(ra, { faqid: t });
                             },
                           },
                         });
                       },
                     }),
                     n.a.createElement(ke.c, {
-                      path: ga.EditFAQ(":vanity_str", ":faqid"),
+                      path: ca.EditFAQ(":vanity_str", ":faqid"),
                       render: function (e) {
-                        return n.a.createElement(fa.a, {
+                        return n.a.createElement(ha.a, {
                           config: {
                             "faqs-root": function () {
                               var t = e.match.params.faqid;
                               if (t) {
                                 var a = ue(t);
                                 return a
-                                  ? n.a.createElement(Xt, { faqid: a })
+                                  ? n.a.createElement(Gt, { faqid: a })
                                   : n.a.createElement(ke.b, {
                                       push: !0,
                                       to: Ie(be.k_eCommunityDashboard),
@@ -12793,9 +12661,9 @@
                       },
                     }),
                     n.a.createElement(ke.c, {
-                      path: ga.DashboardFAQ(":vanity_str"),
+                      path: ca.DashboardFAQ(":vanity_str"),
                       render: function (e) {
-                        return n.a.createElement(fa.a, {
+                        return n.a.createElement(ha.a, {
                           config: {
                             "faqs-root": function () {
                               return n.a.createElement(Ue, null);
@@ -12805,29 +12673,29 @@
                       },
                     }),
                     n.a.createElement(ke.c, {
-                      path: ga.PreviewFAQ(":vanity_str", ":faqid"),
+                      path: ca.PreviewFAQ(":vanity_str", ":faqid"),
                       render: function (e) {
-                        return n.a.createElement(fa.a, {
+                        return n.a.createElement(ha.a, {
                           config: {
                             "faqs-root": function () {
                               var t = ue(e.match.params.faqid);
-                              return n.a.createElement(ua, { faqid: t });
+                              return n.a.createElement(pa, { faqid: t });
                             },
                           },
                         });
                       },
                     }),
                     n.a.createElement(ke.c, {
-                      path: ga.ImportTool(":vanity_str"),
+                      path: ca.ImportTool(":vanity_str"),
                       component: Ae,
                     }),
-                    n.a.createElement(ke.c, { component: ba })
+                    n.a.createElement(ke.c, { component: ma })
                   )
                 )
           );
         });
-      t.default = ya;
-      function ba(e) {
+      t.default = ua;
+      function ma(e) {
         return "dev" !== u.c.WEB_UNIVERSE
           ? n.a.createElement(ke.b, { to: "/" })
           : n.a.createElement(
@@ -12879,17 +12747,6 @@
         Important: "faqbbcode_Important_mRx2I",
         Warning: "faqbbcode_Warning_3Hvtr",
         FAQImage: "faqbbcode_FAQImage_3Eebt",
-      };
-    },
-    ZYuD: function (e, t, a) {
-      e.exports = {
-        LanguageListDialog: "faqlocalization_LanguageListDialog_vp5PF",
-        ChecklistHeader: "faqlocalization_ChecklistHeader_1Vzmz",
-        ChecklistRows: "faqlocalization_ChecklistRows_3qgdW",
-        CheckAll: "faqlocalization_CheckAll_1I_jA",
-        LanguageCheckbox: "faqlocalization_LanguageCheckbox_1llVI",
-        LanguageCheckboxLabel: "faqlocalization_LanguageCheckboxLabel_2S_PZ",
-        Language: "faqlocalization_Language_13DIW",
       };
     },
     eYkW: function (e, t, a) {
