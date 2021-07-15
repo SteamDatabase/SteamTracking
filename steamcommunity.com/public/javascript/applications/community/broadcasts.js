@@ -795,7 +795,7 @@
                 n.a.createElement(
                   "a",
                   {
-                    href: Object(Z.e)(
+                    href: Object(Z.f)(
                       b.c.STORE_BASE_URL + (s ? "app/" + s.appid : "")
                     ),
                     className: $.GameCapsule,
@@ -867,7 +867,7 @@
               n.a.createElement(
                 "a",
                 {
-                  href: Object(Z.e)(
+                  href: Object(Z.f)(
                     b.c.STORE_BASE_URL + (c ? "app/" + c.appid : "")
                   ),
                 },
