@@ -2531,7 +2531,7 @@
                             "a",
                             {
                               className: Object(E.a)(S.a.Button, M.PreviewBtn),
-                              href: Object(I.f)(
+                              href: Object(I.g)(
                                 s.d.STORE_BASE_URL +
                                   "app/" +
                                   e.post.appids[0] +

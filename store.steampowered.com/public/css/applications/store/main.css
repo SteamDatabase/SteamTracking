@@ -12293,6 +12293,14 @@ img.broadcastplayer_BroadcastPlaceholderImg_3hxn9 {
   padding: 0px;
   line-height: 16px;
 }
+.packagepricewidget_StoreSaleDiscountedPriceCtn_2M2uu
+  .packagepricewidget_StoreSaleReservationPriceBox_2KER4 {
+  background: none;
+  color: #fff;
+  font-size: 0.7em;
+  font-weight: 600;
+  padding: 0px;
+}
 .packagepricewidget_StoreSaleDiscountBox_XMxka {
   font-size: 16px;
   font-weight: 500;
@@ -12320,6 +12328,13 @@ img.broadcastplayer_BroadcastPlaceholderImg_3hxn9 {
   background-color: #000;
   align-items: center;
   display: flex;
+}
+.packagepricewidget_StoreSaleReservationPriceBox_2KER4 {
+  background: none;
+  color: #fff;
+  font-size: 0.7em;
+  font-weight: 600;
+  padding: 0px;
 }
 .storesuggest_SuggestContainer_2gBFq ._DialogLayout {
   margin-bottom: 2px;
@@ -16753,9 +16768,17 @@ html:not(.touch)
     U+FEFF, U+FFFD;
 }
 .reservations_description_1oXNi {
-  padding-left: 35px;
-  padding-right: 35px;
-  padding-bottom: 20px;
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-bottom: 2em;
+  padding-top: 3em;
+  color: #fff;
+}
+.reservations_description2_1KF2M {
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-bottom: 2em;
+  padding-top: 0px;
   color: #fff;
 }
 .reservations_j1_1IuhK {
@@ -16808,7 +16831,6 @@ html:not(.touch)
   background: #fff;
 }
 .reservations_noreserve_UsTrT {
-  background: #00000024;
   border-radius: 3px;
   margin-right: auto;
   margin-left: auto;
@@ -16830,6 +16852,16 @@ html:not(.touch)
 }
 .reservations_expecteddate_1-QAW {
   text-align: center;
+}
+@media screen and (max-width: 940px) {
+  .reservations_description_1oXNi {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .reservations_description2_1KF2M {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
 }
 .salecuratorrecommendations_CuratorCtn_3dOtc {
   position: relative;

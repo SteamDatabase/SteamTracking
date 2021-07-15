@@ -1928,13 +1928,6 @@ function ReparentAppLandingPageForMobileUX()
 		// place discovery queue below the action buttons
 		$J('#nextInDiscoveryQueue').appendTo('#queueCtn');
 		
-		// place purchase options where they'll be controlled by the purchase options banner 
-		$J('#game_area_purchase').appendTo('#purchaseOptionsContent');
-
-		// We may want to instead make a copy so it's also kept in the main page body.  If so move the DLC content to contentForThisGame_ctn
-		if ( $J('#gameAreaDLCSection') !== null )
-			$J('#gameAreaDLCSection').appendTo('#purchaseOptionsContent');
-
 		// copy the review summary content to the review details section
 		var $appReviewsAll = $J('#appReviewsAll_responsive').clone();
 		$appReviewsAll.attr( 'id', 'appReviewsAll_Detail' );
@@ -1961,37 +1954,6 @@ function ReparentAppLandingPageForMobileUX()
 		$J('#review_histograms_container').appendTo('#reviewSettingsPopupContent');
 		$J('#reviews_filter_options').appendTo('#reviewSettingsPopupContent');
 
-		var responsiveOnWindowResize = function()
-		{
-			// hide the purchase options banner if usable screen height is significantly below actual screen height (keyboard causes this)
-			if ( screen.availHeight - window.innerHeight > 300 )
-			{
-				if ( $J('#purchaseOptionsContainer').is(':visible') )
-					$J('#purchaseOptionsContainer').css('display', 'none');
-			}
-			else
-			{
-				if ( !$J('#purchaseOptionsContainer').is(':visible') )
-					$J('#purchaseOptionsContainer').css('display', 'flex');
-			}
-
-			// Update purchase banner and content layout
-			_AdjustPurchaseOptionsLayout();
-		}
-		window.addEventListener( 'resize', responsiveOnWindowResize );
-
-		// when the DLC list expands re-calc the purchase options layout  
-		$J('#game_area_dlc_expanded').resize( function() { _AdjustPurchaseOptionsLayout(); } );
-
-		/* COMMENTING THIS OUT TO TEST
-			// iphone has a system menu which appears if you tap near the bottom.  Adding bottom padding to reduce odds of accidently
-			// bringing up the system menu when you're trying to open the purchase options.
-			if ( navigator.userAgent.toLowerCase().indexOf( 'iphone' ) != -1 )
-			{
-				$J('#purchaseOptionsBanners').css('padding-bottom', '30px');
-			} 
-		*/
-
 		// re-order DLC rows so price follows the DLC name.  This is so we no longer need to use
 		// absolute positioning, which allows us to use a flexbox to prevent content overlap
 		var $MoveElements = $J('.game_area_dlc_price');
@@ -2008,9 +1970,6 @@ function ReparentAppLandingPageForMobileUX()
 			$J('#queueBtnFollow').css('flex-grow', '1');
 			$J('#reportBtn').css('flex-grow', '1');
 		}
-
-		// display the purchase options container
-		$J('#purchaseOptionsContainer').css('display', 'flex');
 
 		// on iOS use the iOS share icon.  the default is Android.
 		if ( navigator.userAgent.toLowerCase().indexOf( 'iphone' ) != -1 )
@@ -2029,49 +1988,10 @@ function ReparentAppLandingPageForMobileUX()
 			if ( !$J(this).hasClass('tooltip') )
 				$J(this).removeAttr('data-tooltip-html');
 		} );
+
 	}
 }
 
-// called anytime the window size changes, purchase options are shown/hidden, or DLC list within it changes size 
-function _AdjustPurchaseOptionsLayout()
-{
-	var $bPurchaseOptionsVisible = $J('#purchaseOptionsContent').is(':visible');
-	if ( $bPurchaseOptionsVisible )
-	{
-		var $purchaseContentHeight = parseInt( window.innerHeight ) - parseInt( GetResponsiveHeaderFixedOffsetAdjustment() );
-		$J('#purchaseOptionsContainer').css('height', $purchaseContentHeight + 'px');
-	}
-	else 
-	{
-		$J('#purchaseOptionsContainer').css('height', 'unset');
-	}
-
-	// if the purchase options content is visible grey out empty space above it
-	$J('#purchaseOptionsEmptySpace').css('display', $bPurchaseOptionsVisible ? 'block' : 'none');
-
-	// if the purchase options content is visible and not scrollable, disable touch actions to prevent the main page from receiving scroll events   
-	$J('#purchaseOptionsContent').css('touch-action', $bPurchaseOptionsVisible && parseInt( $J('#purchaseOptionsEmptySpace').height() ) > 0 ? 'none' : 'unset');
-}
-
-// called by Mobile UX to reveal a list of purchase options for an app
-function TogglePurchaseOptionsModal()
-{
-	var $modalDiv = $J('#purchaseOptionsContent');
-	if ( $modalDiv !== null )
-	{
-		var $bShowing = !$modalDiv.is(':visible');
-
-		// update which purchase option banner to display
-		$J('#purchaseOptionsBanner_visible').css('display', $bShowing ? 'flex' : 'none');
-		$J('#purchaseOptionsBanner_hidden').css('display', !$bShowing ? 'flex' : 'none');
-
-		// update displaying the purchase options content
-		$modalDiv.css('display', $bShowing ? 'block' : 'none');
-
-		// update layout
-		_AdjustPurchaseOptionsLayout();
-	}
-}
 
 // Popup for customers to optin/out of the new mobile UX 
 var g_newMobileUXPopup = null;

@@ -13135,12 +13135,12 @@
                 i.a.useEffect(
                   function () {
                     var t = !0,
-                      n = Object(g.c)(e);
+                      n = Object(g.d)(e);
                     r(n);
                     var a = new Image();
                     return (
                       (a.onerror = function () {
-                        return t && r(Object(g.b)(e));
+                        return t && r(Object(g.c)(e));
                       }),
                       (a.src = n),
                       function () {
