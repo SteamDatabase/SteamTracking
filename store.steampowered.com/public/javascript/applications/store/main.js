@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6671743";
+var CLSTAMP = "6675096";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [69],
   {
@@ -60156,38 +60156,37 @@ var CLSTAMP = "6671743";
     ee7K: function (e, t, n) {
       "use strict";
       n.d(t, "b", function () {
-        return p;
+        return d;
       }),
         n.d(t, "a", function () {
-          return m;
+          return p;
         });
       var r = n("mrSG"),
         a = n("vDqi"),
         i = n.n(a),
         o = n("2vnA"),
-        s = n("+d9t"),
-        c = n("bDQf"),
-        l = n("lkRc"),
-        u = n("q1tI"),
-        d = "unUserdataVersion";
-      function p() {
-        var e = Object(u.useState)(!m.Get().BIsLoaded()),
+        s = n("bDQf"),
+        c = n("lkRc"),
+        l = n("q1tI"),
+        u = "unUserdataVersion";
+      function d() {
+        var e = Object(l.useState)(!p.Get().BIsLoaded()),
           t = e[0],
           n = e[1];
         return (
-          Object(u.useEffect)(function () {
-            m.Get().BIsLoaded() ||
-              m
+          Object(l.useEffect)(function () {
+            p.Get().BIsLoaded() ||
+              p
                 .Get()
                 .HintLoad()
                 .finally(function () {
-                  return n(!m.Get().BIsLoaded());
+                  return n(!p.Get().BIsLoaded());
                 });
           }, []),
-          [t, m.Get()]
+          [t, p.Get()]
         );
       }
-      var m = (function () {
+      var p = (function () {
         function e() {
           (this.m_setWishList = new Set()),
             (this.m_wishlistInOrder = Array()),
@@ -60315,20 +60314,20 @@ var CLSTAMP = "6671743";
                 t,
                 n,
                 a,
-                s,
-                u,
+                l,
+                d,
                 p = this;
               return Object(r.e)(this, function (r) {
                 switch (r.label) {
                   case 0:
-                    (e = window.localStorage.getItem(d) || "0"),
+                    (e = window.localStorage.getItem(u) || "0"),
                       (t = {
                         v: "0" == e ? void 0 : e,
-                        id: "" + l.k.accountid,
-                        cc: "" + l.d.COUNTRY,
+                        id: "" + c.k.accountid,
+                        cc: "" + c.d.COUNTRY,
                         origin: self.origin,
                       }),
-                      (n = l.d.STORE_BASE_URL + "dynamicstore/userdata/"),
+                      (n = c.d.STORE_BASE_URL + "dynamicstore/userdata/"),
                       (r.label = 1);
                   case 1:
                     return (
@@ -60440,12 +60439,12 @@ var CLSTAMP = "6671743";
                     );
                   case 3:
                     return (
-                      (s = r.sent()),
-                      (u = Object(c.c)(s)),
+                      (l = r.sent()),
+                      (d = Object(s.c)(l)),
                       console.error(
                         "CDynamicStore.InternalLoad",
-                        u.strErrorMsg,
-                        u
+                        d.strErrorMsg,
+                        d
                       ),
                       [3, 4]
                     );
@@ -60457,35 +60456,35 @@ var CLSTAMP = "6671743";
           }),
           (e.prototype.UpdateFollowOrIgnoreCurator = function (e, t, n) {
             return Object(r.b)(this, void 0, void 0, function () {
-              var a, o, s, c, u;
+              var a, o, s, l, u;
               return Object(r.e)(this, function (r) {
                 switch (r.label) {
                   case 0:
                     return (
                       (a =
-                        l.d.STORE_BASE_URL +
+                        c.d.STORE_BASE_URL +
                         "curators/" +
                         (t ? "ajaxfollow/" : "ajaxignore/")),
                       (o = e.GetAccountID()),
                       (s = new FormData()).append(
                         "authwgtoken",
-                        l.k.authwgtoken
+                        c.k.authwgtoken
                       ),
                       s.append("clanid", "" + o),
-                      s.append("sessionid", l.d.SESSIONID),
+                      s.append("sessionid", c.d.SESSIONID),
                       s.append(t ? "follow" : "ignore", n ? "1" : "0"),
                       [4, i.a.post(a, s, { withCredentials: !0 })]
                     );
                   case 1:
                     return (
-                      (c = r.sent()) &&
-                        200 == c.status &&
+                      (l = r.sent()) &&
+                        200 == l.status &&
                         (this.InvalidateCache(),
                         (u = t
                           ? this.m_setCuratorsFollowed
                           : this.m_setCuratorsIgnored),
                         n ? u.add(o) : u.delete(o)),
-                      [2, c.data]
+                      [2, l.data]
                     );
                 }
               });
@@ -60496,7 +60495,7 @@ var CLSTAMP = "6671743";
               void 0 === n && (n = 0),
               Object(r.b)(this, void 0, void 0, function () {
                 var a,
-                  s,
+                  l,
                   u,
                   d,
                   p,
@@ -60505,18 +60504,18 @@ var CLSTAMP = "6671743";
                   switch (r.label) {
                     case 0:
                       (a =
-                        l.d.STORE_BASE_URL +
+                        c.d.STORE_BASE_URL +
                         "recommended/ignorerecommendation"),
-                        (s = new FormData()).append("sessionid", l.d.SESSIONID),
-                        s.append("appid", "" + e),
-                        s.append("remove", t ? "0" : "1"),
-                        s.append("snr", l.d.SNR),
-                        s.append("ignore_reason", "" + n),
+                        (l = new FormData()).append("sessionid", c.d.SESSIONID),
+                        l.append("appid", "" + e),
+                        l.append("remove", t ? "0" : "1"),
+                        l.append("snr", c.d.SNR),
+                        l.append("ignore_reason", "" + n),
                         (r.label = 1);
                     case 1:
                       return (
                         r.trys.push([1, 3, , 4]),
-                        [4, i.a.post(a, s, { withCredentials: !0 })]
+                        [4, i.a.post(a, l, { withCredentials: !0 })]
                       );
                     case 2:
                       return (
@@ -60533,7 +60532,7 @@ var CLSTAMP = "6671743";
                     case 3:
                       return (
                         (d = r.sent()),
-                        (p = Object(c.c)(d)),
+                        (p = Object(s.c)(d)),
                         console.error("UpdateAppIgnore", p.strErrorMsg, p),
                         [3, 4]
                       );
@@ -60546,17 +60545,17 @@ var CLSTAMP = "6671743";
           }),
           (e.prototype.UpdateGameWishlist = function (e, t, n, a) {
             return Object(r.b)(this, void 0, void 0, function () {
-              var o, s, c, u;
+              var o, s, l, u;
               return Object(r.e)(this, function (r) {
                 switch (r.label) {
                   case 0:
                     return (
                       (o =
-                        l.d.STORE_BASE_URL +
+                        c.d.STORE_BASE_URL +
                         "api/" +
                         (t ? "addtowishlist" : "removefromwishlist")),
                       (s = new FormData()).append("appid", "" + e),
-                      s.append("sessionid", l.d.SESSIONID),
+                      s.append("sessionid", c.d.SESSIONID),
                       n && s.append("snr", n),
                       [
                         4,
@@ -60568,11 +60567,11 @@ var CLSTAMP = "6671743";
                     );
                   case 1:
                     return (
-                      (c = r.sent()),
+                      (l = r.sent()),
                       a && a.token.reason
                         ? [2, { success: 52 }]
-                        : ((c.data.success = 1 == c.data.success ? 1 : 2),
-                          1 == c.data.success &&
+                        : ((l.data.success = 1 == l.data.success ? 1 : 2),
+                          1 == l.data.success &&
                             (this.InvalidateCache(),
                             (e = Number(e)),
                             t
@@ -60588,47 +60587,47 @@ var CLSTAMP = "6671743";
                                     )) &&
                                   this.m_wishlistInOrder.splice(u, 1),
                                 this.m_setWishList.delete(e))),
-                          [2, c.data])
+                          [2, l.data])
                     );
                 }
               });
             });
           }),
-          (e.prototype.AddToCart = function (e, t, n, a, o, c) {
+          (e.prototype.AddToCart = function (e, t, n, a, o, s) {
             return Object(r.b)(this, void 0, void 0, function () {
-              var u, d, p, m;
+              var l, u, d, p;
               return Object(r.e)(this, function (r) {
                 switch (r.label) {
                   case 0:
-                    (u = new FormData()).append("action", "add_to_cart"),
-                      c
-                        ? u.append("bundleid", c.toString())
-                        : u.append("subid", "" + t),
-                      o && u.append("snr", o),
-                      (d = l.k.authwgtoken)
-                        ? u.append("authwgtoken", d)
-                        : u.append("sessionid", l.d.SESSIONID),
-                      u.append("quantity", "1"),
+                    (l = new FormData()).append("action", "add_to_cart"),
+                      s
+                        ? l.append("bundleid", s.toString())
+                        : l.append("subid", "" + t),
+                      o && l.append("snr", o),
+                      (u = c.k.authwgtoken)
+                        ? l.append("authwgtoken", u)
+                        : l.append("sessionid", c.d.SESSIONID),
+                      l.append("quantity", "1"),
                       (r.label = 1);
                   case 1:
                     return (
                       r.trys.push([1, 3, , 4]),
-                      [4, i.a.post(n, u, { withCredentials: !0 })]
+                      [4, i.a.post(n, l, { withCredentials: !0 })]
                     );
                   case 2:
                     return (
                       r.sent(),
-                      (p = l.d.IN_CLIENT ? "steam://url/StoreCart" : a),
+                      (d = c.d.IN_CLIENT ? "steam://url/StoreCart" : a),
                       e.preventDefault(),
                       this.InvalidateCache(),
-                      Object(s.c)(window, p),
+                      (window.location.href = d),
                       [3, 4]
                     );
                   case 3:
                     return (
-                      (m = r.sent()),
+                      (p = r.sent()),
                       console.log("HandleOnAddToCart"),
-                      console.log(m),
+                      console.log(p),
                       [3, 4]
                     );
                   case 4:
@@ -60639,7 +60638,7 @@ var CLSTAMP = "6671743";
           }),
           (e.prototype.AddLicenseForFreeGame = function (e) {
             return Object(r.b)(this, void 0, void 0, function () {
-              var t, n, a, o, s;
+              var t, n, a, o, l;
               return Object(r.e)(this, function (r) {
                 switch (r.label) {
                   case 0:
@@ -60648,12 +60647,12 @@ var CLSTAMP = "6671743";
                   case 1:
                     return (
                       r.trys.push([1, 3, , 4]),
-                      (t = new FormData()).append("sessionid", l.d.SESSIONID),
-                      t.append("authwgtoken", l.k.authwgtoken),
+                      (t = new FormData()).append("sessionid", c.d.SESSIONID),
+                      t.append("authwgtoken", c.k.authwgtoken),
                       t.append("appid", "" + e),
-                      t.append("cc", l.d.COUNTRY),
+                      t.append("cc", c.d.COUNTRY),
                       (n =
-                        l.d.STORE_BASE_URL +
+                        c.d.STORE_BASE_URL +
                         "actions/addappformastersubscription"),
                       [4, i.a.post(n, t, { withCredentials: !0 })]
                     );
@@ -60668,11 +60667,11 @@ var CLSTAMP = "6671743";
                   case 3:
                     return (
                       (o = r.sent()),
-                      (s = Object(c.c)(o)),
+                      (l = Object(s.c)(o)),
                       console.log(
                         "AddLicense request failed:",
-                        s.strErrorMsg,
-                        s
+                        l.strErrorMsg,
+                        l
                       ),
                       [2, 2]
                     );
@@ -60690,9 +60689,9 @@ var CLSTAMP = "6671743";
                   case 0:
                     return (
                       r.trys.push([0, 2, , 3]),
-                      (n = l.d.STORE_BASE_URL + "explore/followgame"),
+                      (n = c.d.STORE_BASE_URL + "explore/followgame"),
                       (a = new FormData()).append("appid", "" + e),
-                      a.append("sessionid", l.d.SESSIONID),
+                      a.append("sessionid", c.d.SESSIONID),
                       t || a.append("unfollow", "1"),
                       [4, i.a.post(n, a, { withCredentials: !0 })]
                     );
@@ -60730,9 +60729,9 @@ var CLSTAMP = "6671743";
           }),
           (e.prototype.InvalidateCache = function () {
             window.localStorage.setItem(
-              d,
+              u,
               (
-                Number.parseInt(window.localStorage.getItem(d) || "0") + 1
+                Number.parseInt(window.localStorage.getItem(u) || "0") + 1
               ).toString()
             );
           }),
@@ -60740,7 +60739,7 @@ var CLSTAMP = "6671743";
             return (
               e.s_globalSingletonStore ||
                 ((e.s_globalSingletonStore = new e()),
-                "dev" == l.d.WEB_UNIVERSE &&
+                "dev" == c.d.WEB_UNIVERSE &&
                   (window.DUS = e.s_globalSingletonStore)),
               e.s_globalSingletonStore
             );
