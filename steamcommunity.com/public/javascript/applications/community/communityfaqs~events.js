@@ -20799,7 +20799,7 @@
                       t.localized_link_capsule.forEach(function (e) {
                         n += e ? 1 : 0;
                       });
-                    var a = Object(kt.b)(t.url, N.c.STORE_BASE_URL);
+                    var a = Object(kt.a)(t.url, N.c.STORE_BASE_URL);
                     return d.createElement(
                       _e.i,
                       {
@@ -22729,7 +22729,7 @@
               "div",
               { className: k.a.GameImageContainer },
               m.createElement("img", {
-                src: Object(x.c)(Number(t)),
+                src: Object(x.b)(Number(t)),
                 className: k.a.AvatarImage,
               })
             ),
