@@ -12689,16 +12689,6 @@ html.responsive.touch .partnersaledisplay_SaleSectionTabs_1FPIV {
 .reservations_expecteddate_1-QAW {
   text-align: center;
 }
-@media screen and (max-width: 940px) {
-  .reservations_description_1oXNi {
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-  .reservations_description2_1KF2M {
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-}
 .salecuratorrecommendations_CuratorCtn_3dOtc {
   position: relative;
   background: #1f2225;
