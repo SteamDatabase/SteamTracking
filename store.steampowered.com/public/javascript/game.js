@@ -1913,7 +1913,16 @@ function ReparentReviewsForMobileUX()
 
 function ReparentAppLandingPageForMobileUX()
 {
-	// Only want to re-parent if we're actually mobile-sized
+	// Re-order the DLC rows so price follows the DLC name on all screen sizes.  
+	// This is so we no longer need to use absolute positioning, allowing us to use a flexbox to prevent content overlap
+	var $MoveElements = $J('.game_area_dlc_price');
+	$MoveElements.each( function() {
+		var $Element = $J(this);
+		var $ParentElement = $Element.closest('a');
+		$Element.appendTo( $ParentElement );
+	} );
+
+	// For the rest of the changes we only want to re-parent if we're actually mobile-sized
 	var bMatch = window.matchMedia( '(max-width: 500px)' ).matches;
 
 	if ( bMatch ) {
@@ -1954,15 +1963,6 @@ function ReparentAppLandingPageForMobileUX()
 		$J('#review_histograms_container').appendTo('#reviewSettingsPopupContent');
 		$J('#reviews_filter_options').appendTo('#reviewSettingsPopupContent');
 
-		// re-order DLC rows so price follows the DLC name.  This is so we no longer need to use
-		// absolute positioning, which allows us to use a flexbox to prevent content overlap
-		var $MoveElements = $J('.game_area_dlc_price');
-		$MoveElements.each( function() {
-			var $Element = $J(this);
-			var $ParentElement = $Element.closest('a');
-			$Element.appendTo( $ParentElement );
-		} );
-
 		// if one of the wishlist buttons are visible make the action buttons flex grow so the two rows of buttons match width.
 		if ( $J('#add_to_wishlist_area').is(':visible') || $J('#add_to_wishlist_area_success').is(':visible') || $J('#add_to_wishlist_area_fail').is(':visible') )
 		{
@@ -1989,6 +1989,14 @@ function ReparentAppLandingPageForMobileUX()
 				$J(this).removeAttr('data-tooltip-html');
 		} );
 
+		/* move the purchase options and 'you already own this game' message higher in the page */
+		$J(".game_area_already_owned.page_content").appendTo('#purchaseOptionsContent');
+		$J('#game_area_purchase').appendTo('#purchaseOptionsContent');
+
+	}
+	else
+	{
+		// TODO: make !bMatch do  work to move elements where they were.  Try the helper which exists for this.
 	}
 }
 
@@ -2001,10 +2009,6 @@ function ShowUseNewMobileUXPopup()
 	if ( 0 == $ModalContent.length )
 		return;
 
-	// set the correct checkbox state
-	if ( V_GetCookie('use_new_mobile_ux') == 1 )
-		$ModalContent.find('#checkboxNewMobileUX').attr('checked', true);
-
 	g_newMobileUXPopup = new CModal( $ModalContent );
 	g_newMobileUXPopup.Show();
 }
@@ -2012,27 +2016,20 @@ function ShowUseNewMobileUXPopup()
 // check if customer selection for viewing the new mobile UX has changed
 function OnNewMobileUXPopupClosed()
 {
-	var bPreviousValue = V_GetCookie('use_new_mobile_ux') == 1;
-	var bChecked = $J('#checkboxNewMobileUX').attr('checked') === 'checked';
-
 	if ( typeof g_newMobileUXPopup !== 'undefined' )
 		g_newMobileUXPopup.Dismiss();
-
-	// if selection changed update the coookie and reload the page
-	if ( bPreviousValue != bChecked )
-	{
-		V_SetCookie('use_new_mobile_ux', bChecked ? 1 : 0, 14, '/');
-		location.reload();
-	}
 }
 
 // called by Mobile UX to show a settings dialog with Review filters
 var g_reviewSettingsPopup = null;
 function ShowReviewSettingsModal()
 {
+	// bail if we can't find the popup content, or it's not populated
 	var $ModalContent = $J('#reviewSettingsPopupCtn');
-	if ( 0 == $ModalContent.length )
+	if ( 0 == $ModalContent.length || 0 == $ModalContent.find('#reviews_filter_options').length )
+	{
 		return;
+	}
 
 	g_reviewSettingsPopup = new CModal( $ModalContent );
 	g_reviewSettingsPopup.Show();

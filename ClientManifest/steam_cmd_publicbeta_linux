@@ -1,6 +1,6 @@
 "linux"
 {
-	"version"		"1626461563"
+	"version"		"1626735212"
 	"steamcmd_public_all"
 	{
 		"file"		"steamcmd_public_all.zip.716674556427db82df7272603a00b5affcd9bb7b"
@@ -9,11 +9,11 @@
 	}
 	"steamcmd_bins_linux"
 	{
-		"file"		"steamcmd_bins_linux.zip.95a8f7214fcf9b556f058d3dafec5cd945dc8c6c"
-		"size"		"24047347"
-		"sha2"		"899a8624fb6d101faa1636426e731c0bed3f9a029c47255d91044f969b107c49"
-		"zipvz"		"steamcmd_bins_linux.zip.vz.8127b39c78b1fa289d56c74161fd074b5cd2812c_16767545"
-		"sha2vz"		"1ac541d7e0e188ad477e019702f68dbf90414ac7bdba86550b816ad98a0ab1d9"
+		"file"		"steamcmd_bins_linux.zip.51807d8edc531901f64d09c7392528f3c205be0d"
+		"size"		"24047342"
+		"sha2"		"67692cb1a019c3e9ce006c02e4045f766ab514bf4224181fbbe36496f291a0dd"
+		"zipvz"		"steamcmd_bins_linux.zip.vz.8a59ed7cd104aa998132d974047799db4c962cc6_16773370"
+		"sha2vz"		"48175fca1073728c1dc06517b014475c9f83eae77a7be6e11cc6692a346e47be"
 	}
 	"steamcmd_siteserverui_linux"
 	{
@@ -25,19 +25,19 @@
 	}
 	"steamcmd_linux"
 	{
-		"file"		"steamcmd_linux.zip.1c8f8d9b532e868d9cc332f3ea0552df1cea905f"
-		"size"		"2653356"
-		"sha2"		"a124c6f1c686f0a17a143c717976fb14e758bbf798baae74218914e8e39b9245"
-		"zipvz"		"steamcmd_linux.zip.vz.3bbca528b77c3d953a46ef24dff147a6fd1b5853_2088178"
-		"sha2vz"		"3853bee92320b110eb086b295c762ac185d671074c0c0f4d47683473cf33d380"
+		"file"		"steamcmd_linux.zip.64275c959a3766b8b43da3af56573fd8398b8f27"
+		"size"		"2653355"
+		"sha2"		"eefbce55e76d9e419e2491d2d769fded07d4de0515182e6d01b17a4c2fe14ce3"
+		"zipvz"		"steamcmd_linux.zip.vz.e246a0df088caf93632238d7bffb4cc5445edc80_2088318"
+		"sha2vz"		"a76c031c0cbe35a4561b045775476e646bfdb6fc920ec7c097ffbebb1b78f74d"
 		"IsBootstrapperPackage"		"1"
 	}
 }
 "kvsign2"
 {
-	"linux"		"936c1b3bbfe13b178188327e939e8cf4821f6335fccbf3155c1ca13240a7e89c168f67ce436e75fd023d6e520e6180c7b16b1620bb1d1e87feb6b30cd8f8970a"
+	"linux"		"4638ab183b61843f304abd57a4466dc91ae240d6ba6292b9b50518521c1c80e7ee72746942c473a1eab39129f21a82585c7b2789784c3d8fb3674c051470c708"
 }
 "kvsignatures"
 {
-	"linux"		"718d8c80ea066a969d4dccb4d13351bf59fbfb5e7033f1e77c3b6483eb08cc99235f30dc578fe82a379e3eb058b90cb684018d0e405c503ea6a56d3838f7f78c29771a7d8455e456187fd9fb92dbfb04bbf4bf465a71cbee1ffb45c9409a07a6f8f68568e2594b3608826a8d63121dd9d84197e420d5e2d797a9e7a47312d5e5"
+	"linux"		"b6efd208a001791099e8e0412283361ef0604226953dbe68006fec1ff285d8632097dfa34527faed20e2a68bb18ddb3ee727ece790e0a19638240408df6ea77e35d6f13f7ea85e286f43e05122b00582f1ea56c1891d9df28b4e8f87cdc9cfa75529793ccac2a70ccddda564a10d87a10eee8cd623ab6a4e647153f5cd8a319d"
 }
