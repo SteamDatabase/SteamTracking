@@ -1,5 +1,5 @@
 {
-  "revision": 324,
+  "revision": 325,
   "certs": [
     "Ii4IARIgmuygThdRzmJo1WkALKHh+hstvCbTa06joAg603KCm4RFu+TkYE27JutyKT6tfJIvitz8MkBaXzlTtPZow863CN0tcByuYSphd0CEOEtlUNMD92DaJXMKwFn5/XEOVwDpNBwNnON7mQJ2rGMDcLWC6sU2aEQN",
     "Ij4IARIgpdtY6tZuJOfB3FHhsMDlJWo6EFDmRXVNMgEkptCg+YpFu+TkYE27S6dkUJrVEFCO0iNQ+pQ+UIy8TSk+rXySL4rc/DJAY1C1lwR/XncgtnCGj0zsgC7pgg6MIq4wWHGsAhUANcY17f6LbondXTCOLpVuF8gxXs8WJH0nadsmKrsJvD4SDQ==",
@@ -62,16 +62,12 @@
       ],
       "partners": 1,
       "relay_addresses": [
-        "162.254.199.5:27015-27060",
         "162.254.199.170:27015-27052",
         "162.254.199.173:27015-27060",
-        "162.254.199.178:27015-27052"
+        "162.254.199.178:27015-27052",
+        "162.254.199.180:27015-27060"
       ],
       "relays": [
-        {
-          "ipv4": "162.254.199.5",
-          "port_range": [ 27015, 27060 ]
-        },
         {
           "ipv4": "162.254.199.170",
           "port_range": [ 27015, 27052 ]
@@ -83,6 +79,10 @@
         {
           "ipv4": "162.254.199.178",
           "port_range": [ 27015, 27052 ]
+        },
+        {
+          "ipv4": "162.254.199.180",
+          "port_range": [ 27015, 27060 ]
         }
       ],
       "service_address_ranges": [
