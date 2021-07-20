@@ -3253,7 +3253,32 @@ background: -webkit-linear-gradient( 134deg, #e8f5fc 5%,#cce9f9 95%);
 
 
 
-/* Valve Index Banner */
+/* Hardware Banner */
+
+.home_hardware_banner {
+	display: flex;
+	justify-content: space-between;
+}
+
+.home_hardware_banner > a {
+	display: block;
+	max-width: 455px;
+	width: 100%;
+	height: 60px;
+	background-size: contain;
+}
+
+.home_hardware_banner > a:hover {
+	box-shadow: 0 0 12px #66c0f4;
+}
+
+.hardware_index_banner {
+	background: url('https://cdn.cloudflare.steamstatic.com/store/home/front_page_hardware_banner_valve_index.jpg?v=1' ) center no-repeat;
+}
+
+.hardware_steamdeck_banner {
+	background: url('https://cdn.cloudflare.steamstatic.com/store/home/front_page_hardware_banner_steam_deck.jpg?v=1' ) center no-repeat;
+}
 
 .home_index_banner {
 	margin: 40px auto 0px auto;
@@ -4461,6 +4486,16 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 /* Responsive */
 @media screen and (max-width: 910px)
 {
+
+	html.responsive .home_hardware_banner {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	html.responsive .home_hardware_banner > a {
+		margin-top: 15px;
+	}
+
 	html.responsive .home_page_content > h2,
 	html.responsive .home_page_content_title {
 		font-size: 14px;
