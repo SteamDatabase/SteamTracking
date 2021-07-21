@@ -3788,7 +3788,7 @@
         Ae = (r("xnZ7"), r("idvb"), r("i8i4")),
         Be = r("yJIw"),
         Ie = r("Mgs7"),
-        we = r("bxiW"),
+        we = r("opsS"),
         Ge = r("5y7u"),
         Ne = (function (e) {
           function t() {
@@ -9021,7 +9021,7 @@
             if (0 == this.last_seen_online)
               return Object(s.f)("#PersonaStateOffline");
             var e = this.GetOfflineStatusUpdateRate();
-            (!c.c.IN_MOBILE || e <= 60) && Object(n.c)(e);
+            (!c.c.IN_MOBILE || e <= 60) && Object(n.b)(e);
             var t = o.a.CMInterface.GetServerRTime32() - this.last_seen_online;
             return t < 60
               ? Object(s.f)("#PersonaStateLastSeen_JustNow")
