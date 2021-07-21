@@ -736,10 +736,10 @@ html.force_desktop body #footer_responsive_optin_spacer {
 	margin-right: 3px;
 }
 
-.responsive_scroll_snap_ctn {
+.responsive_scroll_snap_ctn:not(.legacy_mobile .responsive_scroll_snap_ctn) {
 	scroll-snap-type: x mandatory;
 }
 
-.responsive_scroll_snap_start {
+.responsive_scroll_snap_start:not(.legacy_mobile .responsive_scroll_snap_start) {
 	scroll-snap-align: start;
 }
