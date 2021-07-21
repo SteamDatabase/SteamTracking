@@ -95,7 +95,7 @@
         i = n.n(a),
         o = n("2vnA"),
         s = n("TyAF"),
-        l = n("bxiW"),
+        l = n("opsS"),
         c = n("55Ip"),
         m = n("oydz"),
         d = n("Jqb/"),
@@ -5970,7 +5970,7 @@
         Ge = Object(m.a)(function (e) {
           var t = e.time,
             n = Object(r.f)(e, ["time"]),
-            a = Math.floor(Math.max(0, t - Le.c()) / 1e3),
+            a = Math.floor(Math.max(0, t - Le.b()) / 1e3),
             o = Math.floor(a / ke.e.PerHour),
             s = Math.floor((a - o * ke.e.PerHour) / ke.e.PerMinute),
             l = Math.floor(a - (o * ke.e.PerHour + s * ke.e.PerMinute));
@@ -8166,7 +8166,7 @@
           );
         },
         sn = n("1Gs6"),
-        ln = n("bxiW"),
+        ln = n("opsS"),
         cn = n("y+6m"),
         mn = n("TtDX"),
         dn = n("1U4k");
@@ -12550,7 +12550,7 @@
             if (0 == this.last_seen_online)
               return Object(s.f)("#PersonaStateOffline");
             var e = this.GetOfflineStatusUpdateRate();
-            (!l.d.IN_MOBILE || e <= 60) && Object(i.c)(e);
+            (!l.d.IN_MOBILE || e <= 60) && Object(i.b)(e);
             var t = o.a.CMInterface.GetServerRTime32() - this.last_seen_online;
             return t < 60
               ? Object(s.f)("#PersonaStateLastSeen_JustNow")
@@ -13419,7 +13419,7 @@
         m = n("lkRc"),
         d = n("kyHq"),
         u = n("bDQf"),
-        p = n("bxiW"),
+        p = n("opsS"),
         f = n("bxBv"),
         _ = n("OU48"),
         g = n("hRO2"),

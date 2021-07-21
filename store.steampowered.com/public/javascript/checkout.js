@@ -3194,6 +3194,7 @@ function UpdatePaymentInfoForm()
 		var bPaymentMethodDelaysInProcessing = rgPaymentMethodProperties[ method.value ].delaysinprocessing;		
 		var bShowCafeFundedInstructions = false;
 		var bShowSaveMyAddressOverride = false;
+		var nMaxCreditCardDigits = 16;
 		
 		$J('#payment_row_one').show();
 		$J('#payment_row_eight').hide();
@@ -3242,6 +3243,11 @@ function UpdatePaymentInfoForm()
 			bShowCreditCardNumberExp = true;
 			bShowPhoneNumber = true;
 						bShowCVV = !card_is_stored; 
+
+			if ( method.value == 'mir' )
+			{
+				nMaxCreditCardDigits = 19;
+			}
 		}
 		else if ( method.value == 'paypal' )
 		{
@@ -3401,7 +3407,11 @@ function UpdatePaymentInfoForm()
 		
 		var $CCFields = $J('#credit_card_row, #card_number_label, #card_number, #expiration_date_cvv_label, #expiration_date_label, #expiration_month_dselect_container, #expiration_year_dselect_container')
 		if ( bShowCreditCardNumberExp )
+		{
 			$CCFields.show();
+			$('card_number').maxLength = nMaxCreditCardDigits;
+			$('card_number').value = $('card_number').value.substring( 0, nMaxCreditCardDigits );
+		}
 		else
 			$CCFields.hide();
 

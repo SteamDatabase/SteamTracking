@@ -2059,7 +2059,7 @@
             if (0 == this.last_seen_online)
               return Object(i.f)("#PersonaStateOffline");
             var e = this.GetOfflineStatusUpdateRate();
-            (!s.c.IN_MOBILE || e <= 60) && Object(o.c)(e);
+            (!s.c.IN_MOBILE || e <= 60) && Object(o.b)(e);
             var t = c.a.CMInterface.GetServerRTime32() - this.last_seen_online;
             return t < 60
               ? Object(i.f)("#PersonaStateLastSeen_JustNow")

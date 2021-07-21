@@ -1779,6 +1779,7 @@ input.partnereventemails_HeadlineInput_2lHX9::placeholder {
   display: flex;
   margin-bottom: 5px;
   margin-top: 5px;
+  overflow-x: auto;
 }
 .partnereventwebrowembed_LatestUpdateButtonCtn_2vEwZ {
   display: flex;

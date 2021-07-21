@@ -360,15 +360,16 @@ CSteamUser::OnShutdownLauncher
 CSteamUser::OnSteamLogon
 CSteamUser::OnLoggedOff
 CSteamUser::OnLogonFailure
-Extended
 CSteamUser::OnPostLogonState
 m_strAccountName
-Logging in user '%s' to Steam %s ...
+Logging in user '%s' to Steam %s...
 This computer has not been authenticated for your account using Steam Guard.Please check your email for the message from Steam, and enter the Steam Guard code from that message.You can also enter this code at any time using 'set_steam_guard_code' at the console.Steam Guard code:
 Enter the current code from your Steam Guard Mobile Authenticator appTwo-factor code:
-FAILED login with result code %s
+FAILED (%s)
 Logging of current session...
 password:
+Waiting for client config...
+Extended
 Waiting for user info...
 Connecting anonymously to Steam %s...
 Account: %s
@@ -389,13 +390,11 @@ Offline Mode: %s
 yes
 no
 CellID: %u
-FAILED login with invalid cached credentials
+FAILED (invalid cached credentials)
 This computer has not been authenticated for your account using Steam Guard.Please check your email for the message from Steam, and usethe command 'set_steam_guard_code' to enter the code here.
-Logged in OK
 Retrying. . .
-Login Failure: No cached credentials and @NoPromptForPassword is set, failing.
-OK
-FAILED. Timed out.
+FAILED (No cached credentials and @NoPromptForPassword is set)
+FAILED (Timed out)
 upload_controller_config
 upload_controller_config <appid> <filename> : upload controller config to cloud
 Usage: <appid> <filename>
@@ -622,6 +621,7 @@ SITE_SERVER_GUI
 1
 SteamAppId
 steam_appid.txt
+FAILED (%u)
 +quit
 Running as Site License provider
 -attachui
@@ -636,8 +636,7 @@ Help topics - type "help <topic>" or run with "--help <topic>" for more informat
 You can also type "find <string>" to see a list of all commands and convars that contain or reference <string>.
 Steam Console Client (c) Valve Corporation
 -- type 'quit' to exit --
-OK.
-FAILED.
+OK
 sign_install_script
 sign_install_script <appid> <input filename> <output filename> : upload install script to back end for signing
 drm_wrap
@@ -1235,8 +1234,6 @@ Assertion Failed: (unsigned)elem <= (unsigned)m_Size
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/string_misc.cpp
 E
 @
-0
-#
 @
 @
 \

@@ -10,7 +10,7 @@ a:link {
   padding: 40px;
   position: relative;
 }
-@media (max-width: 414px) {
+@media (max-width: 777px) {
   .interactiverecommender_App_u3SD8 {
     padding: 10px;
   }
@@ -28,7 +28,7 @@ a:link {
   margin-bottom: 20px;
 }
 .interactiverecommender_App_u3SD8 .interactiverecommender_Container_2g8SX {
-  max-width: 1000px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -99,7 +99,15 @@ a:link {
   flex-grow: 1;
   display: flex;
   flex-direction: row;
-  overflow: clip;
+  overflow-y: clip;
+  overflow-x: visible;
+}
+@media (max-width: 1000px) {
+  .interactiverecommender_App_u3SD8
+    .interactiverecommender_Container_2g8SX
+    .interactiverecommender_BottomSection_3A60h {
+    overflow: visible;
+  }
 }
 .interactiverecommender_App_u3SD8
   .interactiverecommender_Container_2g8SX
@@ -297,7 +305,7 @@ a:link {
   margin-left: 20px;
   margin-right: 20px;
 }
-@media screen and (max-width: 414px) {
+@media (max-width: 777px) {
   .interactiverecommender_RecommendationList_1krh3 {
     margin-left: 10px;
     margin-right: 10px;
@@ -496,7 +504,6 @@ a:link {
 .interactiverecommender_RecommendationEntry_3opuX {
   width: 100%;
   height: 106px;
-  max-width: 667px;
   background-color: #151f2b;
   overflow: hidden;
   cursor: pointer;
@@ -825,11 +832,11 @@ a:link {
   background-color: #121b25;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
   z-index: 4;
-  width: 740px;
   height: 144px;
+  width: calc(100% + 80px);
   margin-left: -40px;
   margin-top: -34px;
-  max-width: 740px;
+  margin-right: -80px;
 }
 .interactiverecommender_RecommendationEntry_3opuX.interactiverecommender_Hovered_3b9wG
   .interactiverecommender_RightSection_27p3s {

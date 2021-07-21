@@ -300,10 +300,10 @@
     "4lry": function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
-        return R;
+        return x;
       }),
         n.d(t, "b", function () {
-          return W;
+          return q;
         });
       var a = n("mrSG"),
         i = n("fcuX"),
@@ -706,7 +706,8 @@
         k = n("vBFs"),
         G = n("gyoR"),
         L = n("5eAM"),
-        A = Object(m.a)(function (e) {
+        A = n("dpTt"),
+        B = Object(m.a)(function (e) {
           var t = e.language,
             n = e.facetValue,
             a = e.editModel,
@@ -953,7 +954,7 @@
               )
           );
         }),
-        B = Object(m.a)(function (e) {
+        N = Object(m.a)(function (e) {
           var t = e.language,
             n = e.facet,
             a = e.facetValueArray,
@@ -998,7 +999,7 @@
                     o();
                   },
                   render: function (e) {
-                    return _.createElement(A, {
+                    return _.createElement(B, {
                       language: t,
                       facetValue: e,
                       editModel: i,
@@ -1027,7 +1028,7 @@
               )
           );
         }),
-        N = Object(m.a)(function (e) {
+        F = Object(m.a)(function (e) {
           var t = e.language,
             n = e.facet,
             a = e.editModel,
@@ -1056,7 +1057,7 @@
                 r();
               },
             }),
-            _.createElement(B, {
+            _.createElement(N, {
               language: t,
               facet: n,
               facetValueArray: n.facetValues,
@@ -1067,7 +1068,7 @@
             })
           );
         }),
-        F = Object(m.a)(function (e) {
+        R = Object(m.a)(function (e) {
           var t = e.language,
             n = e.section,
             a = e.facetArray,
@@ -1117,7 +1118,7 @@
                     o();
                   },
                   render: function (e) {
-                    return _.createElement(N, {
+                    return _.createElement(F, {
                       language: t,
                       facet: e,
                       editModel: i,
@@ -1145,7 +1146,7 @@
               )
           );
         }),
-        R = Object(m.a)(function (e) {
+        x = Object(m.a)(function (e) {
           var t = e.section,
             n = e.capsuleContainer,
             o = e.editModel,
@@ -1192,7 +1193,7 @@
                     case 0:
                       return (
                         (e = o.GetEventModel().GetTaggedItems()),
-                        [4, x(n.facets, e)]
+                        [4, P(n.facets, e)]
                       );
                     case 1:
                       for (a.sent(), t = 0, l = n.facets; t < l.length; t++)
@@ -1335,7 +1336,7 @@
                             var e,
                               t = function () {
                                 Object(v.c)(
-                                  _.createElement(H, {
+                                  _.createElement(V, {
                                     onOK: function (e) {
                                       return (function (e) {
                                         return Object(a.b)(
@@ -1354,7 +1355,7 @@
                                                     return (
                                                       a.trys.push([1, , 5, 6]),
                                                       (t = n),
-                                                      [4, P(e)]
+                                                      [4, U(e)]
                                                     );
                                                   case 2:
                                                     return (
@@ -1512,7 +1513,7 @@
                     _.createElement(
                       D.b,
                       { clanSteamID: o.GetClanSteamID(), requireAdmin: !0 },
-                      V(t) &&
+                      z(t) &&
                         _.createElement(
                           "div",
                           { className: w.FilterActionsCtn },
@@ -1538,7 +1539,7 @@
                   ),
                   d
                     ? _.createElement(S.a, null)
-                    : _.createElement(F, {
+                    : _.createElement(R, {
                         language: o.GetCurEditLanguage(),
                         section: t,
                         facetArray: n.facets,
@@ -1550,7 +1551,7 @@
             )
           );
         });
-      function x(e, t) {
+      function P(e, t) {
         return Object(a.b)(this, void 0, void 0, function () {
           var n, i;
           return Object(a.e)(this, function (a) {
@@ -1584,7 +1585,7 @@
           });
         });
       }
-      function P(e) {
+      function U(e) {
         return Object(a.b)(this, void 0, void 0, function () {
           var t;
           return Object(a.e)(this, function (n) {
@@ -1611,7 +1612,7 @@
                               })
                             : [n.get(s)];
                         (u = u.map(function (e) {
-                          return U(e);
+                          return H(e);
                         })),
                           (l.type = c.l.k_ESaleTagFilter),
                           (l.filter = {
@@ -1792,10 +1793,10 @@
           });
         });
       }
-      function U(e) {
+      function H(e) {
         return Object(r.f)(e, r.j.Store);
       }
-      var H = Object(m.a)(function (e) {
+      var V = Object(m.a)(function (e) {
         var t = e.closeModal,
           n = e.onOK,
           a = Object(_.useState)(!1),
@@ -1838,20 +1839,20 @@
           )
         );
       });
-      function V(e) {
+      function z(e) {
         return (
           !("items" !== e.section_type || !e.smart_section) ||
           "sale_item_browser" === e.section_type
         );
       }
-      function z(e, t, n) {
+      function W(e, t, n) {
         var i;
         return Object(a.b)(this, void 0, void 0, function () {
           var o, l, s, u, d, p, m, _, g, h, f, b, v, E, S, y, O, T, C, j;
           return Object(a.e)(this, function (a) {
             switch (a.label) {
               case 0:
-                return [4, x(n, t)];
+                return [4, P(n, t)];
               case 1:
                 for (
                   a.sent(),
@@ -1894,7 +1895,7 @@
                   for (m = p[d], _ = 0, g = m.facetValues; _ < g.length; _++)
                     if (
                       (((h = g[_]).matchingCapsules = []),
-                      V(e) && !1 === e.facets_generate_debug_info)
+                      z(e) && !1 === e.facets_generate_debug_info)
                     )
                       h.matchingCapsules = void 0;
                     else if (h.type === c.l.k_ELanguage)
@@ -1928,7 +1929,7 @@
           });
         });
       }
-      function W(e) {
+      function q(e) {
         return Object(a.b)(this, void 0, void 0, function () {
           var t, n, i, r, o, l, u, d, m;
           return Object(a.e)(this, function (a) {
@@ -1983,14 +1984,14 @@
                   ? "tabs" === (m = d[u]).section_type && m.tabs
                     ? (m.tabs.forEach(function (e) {
                         e.sale_tag_filter &&
-                          (e.store_filter = q(e.sale_tag_filter, o, l));
+                          (e.store_filter = K(e.sale_tag_filter, o, l));
                       }),
                       [3, 7])
                     : [3, 5]
                   : [3, 8];
               case 5:
                 return m.enable_faceted_browsing
-                  ? [4, z(m, t, m.facets)]
+                  ? [4, W(m, t, m.facets)]
                   : [3, 7];
               case 6:
                 a.sent(),
@@ -2006,9 +2007,9 @@
                             r++
                           ) {
                             (u = o[r]).type === c.l.k_ELanguage
-                              ? a.set(u, Q(u.language))
+                              ? a.set(u, Y(u.language))
                               : u.type === c.l.k_EContentDescriptor
-                              ? a.set(u, Y(u.contentDescriptor))
+                              ? a.set(u, J(u.contentDescriptor))
                               : u.type === c.l.k_EUserPreference
                               ? a.set(u, null)
                               : u.type === c.l.k_EPrice
@@ -2016,9 +2017,9 @@
                                   type: c.n.k_EStoreFilterClauseTypePrice,
                                 })
                               : u.type === c.l.k_EAppType
-                              ? a.set(u, J(u.appType))
-                              : (a.set(u, q(u.filter, t, n)),
-                                i.set(u, K(u.filter, t)));
+                              ? a.set(u, Z(u.appType))
+                              : (a.set(u, K(u.filter, t, n)),
+                                i.set(u, Q(u.filter, t)));
                           }
                           if (
                             e.facetValues.every(function (e) {
@@ -2094,7 +2095,7 @@
           });
         });
       }
-      function q(e, t, n) {
+      function K(e, t, n) {
         for (
           var a = {
               type: c.n.k_EStoreFilterClauseTypeAnd,
@@ -2143,15 +2144,15 @@
                 continue;
               }
               var h = n.get(_);
-              s.rgSubexpressions.push(q(h, t, n));
+              s.rgSubexpressions.push(K(h, t, n));
             } else console.warn("Sale tag not implemented for faceting: " + p);
           }
           if (0 === s.rgSubexpressions.length) return null;
           a.rgSubexpressions.push(s);
         }
-        return 0 === a.rgSubexpressions.length ? null : a;
+        return 0 === a.rgSubexpressions.length ? null : Object(A.e)(a);
       }
-      function K(e, t) {
+      function Q(e, t) {
         for (var n = 0, a = e.clauses; n < a.length; n++)
           for (var i = 0, o = a[n].or_tags; i < o.length; i++) {
             var l = o[i],
@@ -2170,19 +2171,19 @@
           }
         return 0;
       }
-      function Q(e) {
+      function Y(e) {
         return {
           type: c.n.k_EStoreFilterClauseTypeLanguage,
           value: Object(s.a)(e),
         };
       }
-      function Y(e) {
+      function J(e) {
         return {
           type: c.n.k_EStoreFilterClauseTypeContentDescriptor,
           value: e,
         };
       }
-      function J(e) {
+      function Z(e) {
         return { type: c.n.k_EStoreFilterClauseTypeAppType, value: e };
       }
     },
@@ -2311,7 +2312,7 @@
         S = n("NOFC"),
         y = n("TLQK"),
         O = n("bDQf"),
-        T = n("bxiW"),
+        T = n("opsS"),
         C = n("NrWE"),
         j = n("as1E"),
         I = n.n(j),
@@ -3162,7 +3163,7 @@
         h = n("YLyR"),
         f = n("exH9"),
         b = n("TLQK"),
-        v = n("bxiW"),
+        v = n("opsS"),
         E = n("lkRc"),
         S = n("k3PP"),
         y = n("K1T0"),
@@ -4848,7 +4849,7 @@
         S = n("TLQK"),
         y = n("P2lf"),
         O = n("bDQf"),
-        T = n("bxiW"),
+        T = n("opsS"),
         C = n("lkRc"),
         j = n("fcuX"),
         I = "email_headline_",
@@ -5879,7 +5880,7 @@
         b = n("X3Ds"),
         v = n("TLQK"),
         E = n("bDQf"),
-        S = n("bxiW"),
+        S = n("opsS"),
         y = n("75vw"),
         O = n.n(y),
         T = n("Mgs7"),
@@ -7742,7 +7743,7 @@
         M = n("Txw1"),
         w = n.n(M),
         D = n("exH9"),
-        k = n("bxiW"),
+        k = n("opsS"),
         G = n("UxvL"),
         L = n("lkRc"),
         A = (function (e) {
@@ -9342,7 +9343,7 @@
         f = n("exH9"),
         b = n("TLQK"),
         v = n("bDQf"),
-        E = n("bxiW"),
+        E = n("opsS"),
         S = n("J/GH"),
         y = n("Mgs7"),
         O = n("N0Ye"),
@@ -10393,7 +10394,7 @@
         p = n.n(d),
         m = n("exH9"),
         _ = n("TLQK"),
-        g = n("bxiW"),
+        g = n("opsS"),
         h = n("5E+2"),
         f = n("ba6i"),
         b = n.n(f),
@@ -10656,7 +10657,7 @@
         E = n("r64O"),
         S = n("TLQK"),
         y = n("N0Ye"),
-        O = n("bxiW"),
+        O = n("opsS"),
         T = n("lkRc"),
         C = n("Q47U"),
         j = n("KP/B"),
@@ -12180,7 +12181,7 @@
       var a = n("mrSG"),
         i = n("q1tI"),
         r = n("WFjJ"),
-        o = n("bxiW"),
+        o = n("opsS"),
         l = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
@@ -12883,7 +12884,7 @@
         g = n("qP7j"),
         h = n("Jqb/"),
         f = n("TLQK"),
-        b = n("bxiW"),
+        b = n("opsS"),
         v = n("6yBx"),
         E = n("R5ed"),
         S = (function (e) {
@@ -22605,7 +22606,7 @@
         A = n("qiKp"),
         B = n("exH9"),
         N = n("TLQK"),
-        F = n("bxiW"),
+        F = n("opsS"),
         R = n("bS9Q"),
         x = n("IzPI"),
         P = n("lkRc"),
@@ -26907,7 +26908,7 @@
         c = n.n(s),
         u = n("exH9"),
         d = n("TLQK"),
-        p = n("bxiW"),
+        p = n("opsS"),
         m = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;

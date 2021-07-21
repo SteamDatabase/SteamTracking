@@ -15042,9 +15042,17 @@ html.responsive.touch .partnersaledisplay_SaleSectionTabs_QhcTn {
     U+FEFF, U+FFFD;
 }
 .reservations_description_3Ubep {
-  padding-left: 35px;
-  padding-right: 35px;
-  padding-bottom: 20px;
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-bottom: 2em;
+  padding-top: 3em;
+  color: #fff;
+}
+.reservations_description2_1mvr1 {
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-bottom: 2em;
+  padding-top: 0px;
   color: #fff;
 }
 .reservations_j1_3rNUK {
@@ -15097,7 +15105,6 @@ html.responsive.touch .partnersaledisplay_SaleSectionTabs_QhcTn {
   background: #fff;
 }
 .reservations_noreserve_2N07E {
-  background: #00000024;
   border-radius: 3px;
   margin-right: auto;
   margin-left: auto;
@@ -15119,6 +15126,16 @@ html.responsive.touch .partnersaledisplay_SaleSectionTabs_QhcTn {
 }
 .reservations_expecteddate_2ZGaP {
   text-align: center;
+}
+@media screen and (max-width: 940px) {
+  .reservations_description_3Ubep {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .reservations_description2_1mvr1 {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
 }
 .salecuratorrecommendations_CuratorCtn_cE4dP {
   position: relative;
@@ -16203,6 +16220,14 @@ html.responsive.touch .partnersaledisplay_SaleSectionTabs_QhcTn {
   padding: 0px;
   line-height: 16px;
 }
+.packagepricewidget_StoreSaleDiscountedPriceCtn_14IVg
+  .packagepricewidget_StoreSaleReservationPriceBox_35nMS {
+  background: none;
+  color: #fff;
+  font-size: 0.7em;
+  font-weight: 600;
+  padding: 0px;
+}
 .packagepricewidget_StoreSaleDiscountBox_3NtOh {
   font-size: 16px;
   font-weight: 500;
@@ -16230,6 +16255,13 @@ html.responsive.touch .partnersaledisplay_SaleSectionTabs_QhcTn {
   background-color: #000;
   align-items: center;
   display: flex;
+}
+.packagepricewidget_StoreSaleReservationPriceBox_35nMS {
+  background: none;
+  color: #fff;
+  font-size: 0.7em;
+  font-weight: 600;
+  padding: 0px;
 }
 .salesectionsubscription_MainBlock_33wZe {
   margin-left: auto;

@@ -59,7 +59,7 @@
         l = r("Jqb/"),
         u = r("ARGL"),
         d = r("TLQK"),
-        m = r("bxiW"),
+        m = r("opsS"),
         f = r("lkRc"),
         b = r("WBba"),
         y = r("2lpH"),
