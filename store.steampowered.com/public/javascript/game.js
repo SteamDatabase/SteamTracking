@@ -37,6 +37,9 @@ function ShowShareDialog( )
 
 	ShowAlertDialog( "Share", $Content).always(
 		function() {
+			// if results field exists clear it
+			$Content.find('#shareDialogResult').text('');
+
 			// save it away again for later
 			$Content.hide();
 			$J(document.body).append( $Content );
@@ -1909,6 +1912,20 @@ function ReparentReviewsForMobileUX()
 			$NewAwardLocation.find('.vote_header').removeAttr('data-tooltip-text');
 		} );
 	} );
+}
+
+// Share dialog calls this to copy the store page link to the clipboard
+function ShareDialogCopyToClipboard()
+{
+	// select the text and copy to clipboard
+	$J('#shareDialogLinkStoreLink').select();
+	var $res = document.execCommand( "copy" ) 
+
+	// report the result
+	$J('#shareDialogResult').text( $res ? 'Store link copied to the clipboard' : 'Failed copying store link to the clipboard');
+
+	// clear the selection
+	document.getSelection().removeAllRanges();
 }
 
 function ReparentAppLandingPageForMobileUX()

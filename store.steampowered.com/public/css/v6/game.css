@@ -5728,8 +5728,8 @@ body.v6 .page_content.notes {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
-		margin: 5px 5px;
-		padding: 10px 0px;
+		margin: 0px 5px 5px 5px;
+		padding-bottom: 10px;
 		border-radius: 4px;
 	}
 	html.responsive .newux_optin_banner.optin {
