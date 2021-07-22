@@ -20004,6 +20004,13 @@ a {
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 1300px) {
+  .dpcmatchbanner_OptionSelector_2FabK {
+    min-width: 0px;
+    max-width: 0px;
+    overflow: hidden;
+  }
+}
 .dpcmatchbanner_OptionSelector_2FabK .dpcmatchbanner_DPCBlock_a1Zii {
   width: 100%;
   display: flex;
@@ -20064,7 +20071,7 @@ a {
   flex-direction: column;
   justify-content: space-between;
   overflow-y: scroll;
-  background-color: #000;
+  background-color: #131313;
   padding-left: 50px;
   padding-right: 50px;
 }
@@ -20093,13 +20100,13 @@ a {
   .dpcmatchbanner_ScheduleBumper_3ul_W {
   width: 240px;
   min-width: 240px;
-  height: 100%;
+  height: 118%;
   margin: 0px 2px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #19191a;
+  background-color: transparent;
 }
 .dpcmatchbanner_MatchesContainer_T5fzO
   .dpcmatchbanner_MatchesScroller_2vFED
@@ -20269,10 +20276,10 @@ a {
   top: 0;
   transition-property: opacity;
   transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
+  transition-duration: 0.17s;
   opacity: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(8px);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -20283,8 +20290,9 @@ a {
   .dpcmatchbanner_HoverOption_bNdVA {
   max-width: 150px;
   border: 1px solid #a3a3a3;
-  padding: 4px 8px;
-  background-color: #000;
+  border-radius: 2px;
+  padding: 6px 15px;
+  background-color: transparent;
   color: #a3a3a3;
   font-size: 12px;
   font-weight: 700;
@@ -20297,8 +20305,8 @@ a {
 .dpcmatchbanner_DPCMatchBannerNode_1bw0U
   .dpcmatchbanner_Overlay_3NGHs
   .dpcmatchbanner_HoverOption_bNdVA:hover {
-  border-color: #ccc;
-  color: #ccc;
+  border-color: #fff;
+  color: #fff;
 }
 .dpcmatchbanner_DPCMatchBannerNode_1bw0U .dpcmatchbanner_UpperContainer_2ymob {
   width: 100%;
@@ -20655,6 +20663,509 @@ a {
   border-radius: 4px;
   transition: margin-left 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
+* {
+  box-sizing: border-box;
+  font-family: "Radiance", "Noto Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.Bold {
+  font-weight: bold;
+}
+[data-aos="fade-zoom-in"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: scale(0);
+}
+[data-aos="fade-zoom-in"] &.aos-animate {
+  opacity: 1;
+  transform: scale(1);
+}
+[data-aos="fade-slide-right"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateX(-40%);
+}
+[data-aos="fade-slide-right"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-left"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateX(40%);
+}
+[data-aos="fade-slide-left"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-up"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateY(40%);
+}
+[data-aos="fade-slide-up"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-down"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateY(-40%);
+}
+[data-aos="fade-slide-down"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="rotate"] {
+  transition-property: transform;
+  transform: rotateZ(0deg);
+}
+[data-aos="rotate"] &[data-aos-rotate-bottom] {
+  transform-origin: bottom center;
+}
+[data-aos="rotate"] &[data-aos-rotate="10"].aos-animate {
+  transform: rotateZ(10deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="20"].aos-animate {
+  transform: rotateZ(20deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="30"].aos-animate {
+  transform: rotateZ(30deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="40"].aos-animate {
+  transform: rotateZ(40deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="50"].aos-animate {
+  transform: rotateZ(50deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="60"].aos-animate {
+  transform: rotateZ(60deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="70"].aos-animate {
+  transform: rotateZ(70deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="80"].aos-animate {
+  transform: rotateZ(80deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="90"].aos-animate {
+  transform: rotateZ(90deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="100"].aos-animate {
+  transform: rotateZ(100deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="110"].aos-animate {
+  transform: rotateZ(110deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="120"].aos-animate {
+  transform: rotateZ(120deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="130"].aos-animate {
+  transform: rotateZ(130deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="140"].aos-animate {
+  transform: rotateZ(140deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="150"].aos-animate {
+  transform: rotateZ(150deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="160"].aos-animate {
+  transform: rotateZ(160deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="170"].aos-animate {
+  transform: rotateZ(170deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="180"].aos-animate {
+  transform: rotateZ(180deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="190"].aos-animate {
+  transform: rotateZ(190deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="200"].aos-animate {
+  transform: rotateZ(200deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="210"].aos-animate {
+  transform: rotateZ(210deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="220"].aos-animate {
+  transform: rotateZ(220deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="230"].aos-animate {
+  transform: rotateZ(230deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="240"].aos-animate {
+  transform: rotateZ(240deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="250"].aos-animate {
+  transform: rotateZ(250deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="260"].aos-animate {
+  transform: rotateZ(260deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="270"].aos-animate {
+  transform: rotateZ(270deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="280"].aos-animate {
+  transform: rotateZ(280deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="290"].aos-animate {
+  transform: rotateZ(290deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="300"].aos-animate {
+  transform: rotateZ(300deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="310"].aos-animate {
+  transform: rotateZ(310deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="320"].aos-animate {
+  transform: rotateZ(320deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="330"].aos-animate {
+  transform: rotateZ(330deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="340"].aos-animate {
+  transform: rotateZ(340deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="350"].aos-animate {
+  transform: rotateZ(350deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-10"].aos-animate {
+  transform: rotateZ(-10deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-20"].aos-animate {
+  transform: rotateZ(-20deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-30"].aos-animate {
+  transform: rotateZ(-30deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-40"].aos-animate {
+  transform: rotateZ(-40deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-50"].aos-animate {
+  transform: rotateZ(-50deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-60"].aos-animate {
+  transform: rotateZ(-60deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-70"].aos-animate {
+  transform: rotateZ(-70deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-80"].aos-animate {
+  transform: rotateZ(-80deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-90"].aos-animate {
+  transform: rotateZ(-90deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-100"].aos-animate {
+  transform: rotateZ(-100deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-110"].aos-animate {
+  transform: rotateZ(-110deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-120"].aos-animate {
+  transform: rotateZ(-120deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-130"].aos-animate {
+  transform: rotateZ(-130deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-140"].aos-animate {
+  transform: rotateZ(-140deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-150"].aos-animate {
+  transform: rotateZ(-150deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-160"].aos-animate {
+  transform: rotateZ(-160deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-170"].aos-animate {
+  transform: rotateZ(-170deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-180"].aos-animate {
+  transform: rotateZ(-180deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-190"].aos-animate {
+  transform: rotateZ(-190deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-200"].aos-animate {
+  transform: rotateZ(-200deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-210"].aos-animate {
+  transform: rotateZ(-210deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-220"].aos-animate {
+  transform: rotateZ(-220deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-230"].aos-animate {
+  transform: rotateZ(-230deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-240"].aos-animate {
+  transform: rotateZ(-240deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-250"].aos-animate {
+  transform: rotateZ(-250deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-260"].aos-animate {
+  transform: rotateZ(-260deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-270"].aos-animate {
+  transform: rotateZ(-270deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-280"].aos-animate {
+  transform: rotateZ(-280deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-290"].aos-animate {
+  transform: rotateZ(-290deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-300"].aos-animate {
+  transform: rotateZ(-300deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-310"].aos-animate {
+  transform: rotateZ(-310deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-320"].aos-animate {
+  transform: rotateZ(-320deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-330"].aos-animate {
+  transform: rotateZ(-330deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-340"].aos-animate {
+  transform: rotateZ(-340deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-350"].aos-animate {
+  transform: rotateZ(-350deg);
+}
+.carousel__slide-focus-ring {
+  outline: none !important;
+}
+.carousel__dot:focus {
+  outline: none !important;
+}
+.__react_component_tooltip.show {
+  opacity: 1 !important;
+}
+.dpcseriesdetails_Tooltip_mB2Fy {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.dpcseriesdetails_CarouselFade_3-EPb {
+  mask-image: linear-gradient(
+    to left,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to left,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.ttf")
+      format("truetype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.svg#ywftsvg")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.ttf")
+      format("truetype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.svg#ywftsvg")
+      format("svg");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.ttf")
+      format("truetype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.svg#ywftsvg")
+      format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.ttf")
+      format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-regular.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-regular.ttf")
+      format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-semibold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-semibold.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-bold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-bold.ttf")
+      format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Averia Serif Libre";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/averiaseriflibre-regular.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/averiaseriflibre-regular.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Averia Serif Libre";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/averiaseriflibre-italic.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/averiaseriflibre-italic.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular.ttf")
+      format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Light.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Light.ttf")
+      format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-SemiBold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular-SemiBold.ttf")
+      format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Bold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Bold.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Black.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Black.ttf")
+      format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+.dpcseriesdetails_StandardButton_1UWyb {
+  border: 3px solid #ffffff50;
+  padding: 15px 25px;
+  margin: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.2s;
+}
+.dpcseriesdetails_StandardButton_1UWyb:hover {
+  border: 3px solid #ff6046;
+  transform: translateY(-2px);
+  color: #ff6046;
+}
+.dpcseriesdetails_StandardButton_1UWyb .dpcseriesdetails_ButtonText_1VQck {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.dpcseriesdetails_StandardButton_1UWyb .dpcseriesdetails_SteamLogo_3Uopc {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//icons/steam_icon.svg");
+}
 .dpcseriesdetails_DPCSeriesDetails_cpS5D {
   width: 100%;
   min-height: 900px;
@@ -20662,6 +21173,7 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   position: relative;
 }
 .dpcseriesdetails_DPCSeriesDetails_cpS5D .dpcseriesdetails_BGContainer_1INUQ {
@@ -20698,6 +21210,20 @@ a {
   transition-property: max-width;
   transition-timing-function: ease-in-out;
   transition-duration: 0.2s;
+}
+@media (max-width: 1000px) {
+  .dpcseriesdetails_DPCSeriesDetails_cpS5D
+    .dpcseriesdetails_BGContainer_1INUQ
+    .dpcseriesdetails_Container_2jjhf {
+    max-width: 800px;
+  }
+}
+@media (max-width: 800px) {
+  .dpcseriesdetails_DPCSeriesDetails_cpS5D
+    .dpcseriesdetails_BGContainer_1INUQ
+    .dpcseriesdetails_Container_2jjhf {
+    max-width: 600px;
+  }
 }
 .dpcseriesdetails_DPCSeriesDetailsHeader_2HQCI {
   width: 100%;
@@ -20800,7 +21326,7 @@ a {
   .dpcseriesdetails_TopSection_3-mWp {
   flex-direction: row;
   padding-right: 30px;
-  padding-left: 10px;
+  padding-left: 30px;
 }
 .dpcseriesdetails_DPCSeriesDetailsHeaderTeam_1Ffo-.dpcseriesdetails_Left_2at7C
   .dpcseriesdetails_TopSection_3-mWp
@@ -20820,7 +21346,7 @@ a {
   .dpcseriesdetails_TopSection_3-mWp {
   flex-direction: row-reverse;
   padding-left: 30px;
-  padding-right: 10px;
+  padding-right: 30px;
 }
 .dpcseriesdetails_DPCSeriesDetailsHeaderTeam_1Ffo-.dpcseriesdetails_Right__VHXn
   .dpcseriesdetails_TopSection_3-mWp
@@ -20865,6 +21391,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  gap: 12px;
 }
 .dpcseriesdetails_DPCSeriesDetailsHeaderTeam_1Ffo-
   .dpcseriesdetails_TopSection_3-mWp
@@ -20897,9 +21424,8 @@ a {
 .dpcseriesdetails_DPCSeriesDetailsHeaderTeam_1Ffo-
   .dpcseriesdetails_TopSection_3-mWp
   .dpcseriesdetails_TeamLogo_3nXHf {
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin: 0px 12px;
+  width: 70px;
+  height: 70px;
   filter: drop-shadow(0px 0px 4px #000000);
 }
 .dpcseriesdetails_DPCSeriesDetailsHeaderTeam_1Ffo-
@@ -20959,6 +21485,51 @@ a {
   .dpcseriesdetails_TeamLinkSection_1sly3
   .dpcseriesdetails_TeamLink_3NYHd:hover {
   filter: brightness(1.3);
+}
+@media (max-width: 1000px) {
+  .dpcseriesdetails_DPCSeriesDetailsHeaderTeam_1Ffo- {
+    width: 284px;
+  }
+  .dpcseriesdetails_DPCSeriesDetailsHeaderTeam_1Ffo-
+    .dpcseriesdetails_TopSection_3-mWp
+    .dpcseriesdetails_TeamLogo_3nXHf {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (max-width: 800px) {
+  .dpcseriesdetails_DPCSeriesDetailsHeaderTeam_1Ffo- {
+    width: 184px;
+  }
+  .dpcseriesdetails_DPCSeriesDetailsHeaderTeam_1Ffo-
+    .dpcseriesdetails_TopSection_3-mWp
+    .dpcseriesdetails_TeamLogo_3nXHf {
+    display: none;
+  }
+  .dpcseriesdetails_DPCSeriesDetailsHeaderTeam_1Ffo-
+    .dpcseriesdetails_TopSection_3-mWp
+    .dpcseriesdetails_Pips_1ArlQ {
+    height: 15px;
+  }
+  .dpcseriesdetails_DPCSeriesDetailsHeaderTeam_1Ffo-
+    .dpcseriesdetails_TopSection_3-mWp
+    .dpcseriesdetails_Pips_1ArlQ
+    .dpcseriesdetails_Pip__Xdhu {
+    width: 5px;
+    margin-right: 5px;
+  }
+  .dpcseriesdetails_DPCSeriesDetailsHeaderTeam_1Ffo-
+    .dpcseriesdetails_TopSection_3-mWp
+    .dpcseriesdetails_Labels_1SgxR
+    .dpcseriesdetails_TeamName_Y--ke {
+    font-size: 14px;
+  }
+  .dpcseriesdetails_DPCSeriesDetailsHeaderTeam_1Ffo-
+    .dpcseriesdetails_TopSection_3-mWp
+    .dpcseriesdetails_Labels_1SgxR
+    .dpcseriesdetails_Record_17N2Z {
+    font-size: 12px;
+  }
 }
 .dpcseriesdetails_DPCSeriesGameSelector_1ydxZ {
   width: 100%;
@@ -21035,6 +21606,16 @@ a {
 .dpcseriesdetails_DPCSeriesDetailsBody_2Yo9C.dpcseriesdetails_Large_3nOXZ {
   height: 810px;
 }
+@media (max-width: 1000px) {
+  .dpcseriesdetails_DPCSeriesDetailsBody_2Yo9C {
+    height: 450px;
+  }
+}
+@media (max-width: 800px) {
+  .dpcseriesdetails_DPCSeriesDetailsBody_2Yo9C {
+    height: 337px;
+  }
+}
 .dpcseriesdetails_DPCSeriesDetailsOverview_3LX-5 {
   width: 100%;
   height: 100%;
@@ -21057,8 +21638,8 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #121316;
-  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.4);
+  background-color: #0b0b0c99;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
 }
 .dpcseriesdetails_DPCSeriesDetailsOverview_3LX-5
   .dpcseriesdetails_CenterContainer_8B-ZB
@@ -21152,8 +21733,8 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #121316;
-  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.4);
+  background-color: #0b0b0c99;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
 }
 .dpcseriesdetails_DPCSeriesDetailsGameOverview_KLWaH
   .dpcseriesdetails_CenterContainer_8B-ZB
@@ -21184,28 +21765,56 @@ a {
 }
 .dpcseriesdetails_DPCSeriesDetailsGameOverview_KLWaH
   .dpcseriesdetails_CenterContainer_8B-ZB
-  .dpcseriesdetails_WatchVod_2jhTZ,
-.dpcseriesdetails_DPCSeriesDetailsGameOverview_KLWaH
-  .dpcseriesdetails_CenterContainer_8B-ZB
-  .dpcseriesdetails_Details_-mnLW {
+  .dpcseriesdetails_WatchVod_2jhTZ {
   min-width: 160px;
-  padding: 8px 0px;
-  background-color: #1d1e22;
+  padding: 6px 0px;
+  background-color: #5e6976;
   border: 2px solid #5e6976;
   border-radius: 3px;
-  color: #5e6976;
-  font-size: 14px;
-  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  font-size: 12px;
+  font-weight: regular;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
-  transition-property: background-color, color;
+  transition-property: background-color, color, border-color, color;
   transition-timing-function: ease-in-out;
   transition-duration: 0.1s;
 }
 .dpcseriesdetails_DPCSeriesDetailsGameOverview_KLWaH
   .dpcseriesdetails_CenterContainer_8B-ZB
-  .dpcseriesdetails_WatchVod_2jhTZ.dpcseriesdetails_Disabled_1hb2S,
+  .dpcseriesdetails_WatchVod_2jhTZ.dpcseriesdetails_Disabled_1hb2S {
+  filter: brightness(0.6);
+  cursor: inherit;
+  user-select: none;
+}
+.dpcseriesdetails_DPCSeriesDetailsGameOverview_KLWaH
+  .dpcseriesdetails_CenterContainer_8B-ZB
+  .dpcseriesdetails_WatchVod_2jhTZ:hover:not(.dpcseriesdetails_Disabled_1hb2S) {
+  background-color: #767f8a;
+  border-color: #767f8a;
+  color: #fff;
+}
+.dpcseriesdetails_DPCSeriesDetailsGameOverview_KLWaH
+  .dpcseriesdetails_CenterContainer_8B-ZB
+  .dpcseriesdetails_Details_-mnLW {
+  min-width: 160px;
+  padding: 6px 0px;
+  background-color: #2e3339;
+  border: 2px solid #2e3339;
+  border-radius: 3px;
+  color: #9099a3;
+  font-size: 12px;
+  font-weight: regular;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition-property: background-color, color, border-color, color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
+}
 .dpcseriesdetails_DPCSeriesDetailsGameOverview_KLWaH
   .dpcseriesdetails_CenterContainer_8B-ZB
   .dpcseriesdetails_Details_-mnLW.dpcseriesdetails_Disabled_1hb2S {
@@ -21215,18 +21824,10 @@ a {
 }
 .dpcseriesdetails_DPCSeriesDetailsGameOverview_KLWaH
   .dpcseriesdetails_CenterContainer_8B-ZB
-  .dpcseriesdetails_WatchVod_2jhTZ:hover:not(.dpcseriesdetails_Disabled_1hb2S),
-.dpcseriesdetails_DPCSeriesDetailsGameOverview_KLWaH
-  .dpcseriesdetails_CenterContainer_8B-ZB
   .dpcseriesdetails_Details_-mnLW:hover:not(.dpcseriesdetails_Disabled_1hb2S) {
-  background-color: #5e6976;
+  background-color: #41474e;
+  border-color: #41474e;
   color: #fff;
-}
-.dpcseriesdetails_DPCSeriesDetailsGameOverview_KLWaH
-  .dpcseriesdetails_CenterContainer_8B-ZB
-  .dpcseriesdetails_WatchVod_2jhTZ {
-  margin-bottom: 10px;
-  margin-top: 20px;
 }
 .dpcseriesdetails_DPCSeriesUpcoming_1yiu5 {
   width: 100%;
@@ -21477,6 +22078,60 @@ a {
   transition-timing-function: ease-in-out;
   transition-duration: 0.1s;
 }
+@media (max-width: 1000px) {
+  .dpcseriesdetails_MatchSectionPlayer_Ej-PQ
+    .dpcseriesdetails_HeroAndLevel_3YDGB
+    .dpcseriesdetails_HeroName_2mmen {
+    font-size: 14px;
+  }
+  .dpcseriesdetails_MatchSectionPlayer_Ej-PQ
+    .dpcseriesdetails_HeroAndLevel_3YDGB
+    .dpcseriesdetails_Level_3hTHU {
+    font-size: 10px;
+  }
+  .dpcseriesdetails_MatchSectionPlayer_Ej-PQ
+    .dpcseriesdetails_NameAndStats_1alLL
+    .dpcseriesdetails_PlayerName_2I7vG {
+    font-size: 13px;
+  }
+  .dpcseriesdetails_MatchSectionPlayer_Ej-PQ
+    .dpcseriesdetails_NameAndStats_1alLL
+    .dpcseriesdetails_Stats_1JAD9 {
+    font-size: 10px;
+  }
+  .dpcseriesdetails_MatchSectionPlayer_Ej-PQ
+    .dpcseriesdetails_HeroPlayer_1S-In {
+    width: 48px;
+    height: 48px;
+  }
+}
+@media (max-width: 800px) {
+  .dpcseriesdetails_MatchSectionPlayer_Ej-PQ
+    .dpcseriesdetails_HeroAndLevel_3YDGB
+    .dpcseriesdetails_HeroName_2mmen {
+    font-size: 12px;
+  }
+  .dpcseriesdetails_MatchSectionPlayer_Ej-PQ
+    .dpcseriesdetails_HeroAndLevel_3YDGB
+    .dpcseriesdetails_Level_3hTHU {
+    font-size: 8px;
+  }
+  .dpcseriesdetails_MatchSectionPlayer_Ej-PQ
+    .dpcseriesdetails_NameAndStats_1alLL
+    .dpcseriesdetails_PlayerName_2I7vG {
+    font-size: 11px;
+  }
+  .dpcseriesdetails_MatchSectionPlayer_Ej-PQ
+    .dpcseriesdetails_NameAndStats_1alLL
+    .dpcseriesdetails_Stats_1JAD9 {
+    font-size: 8px;
+  }
+  .dpcseriesdetails_MatchSectionPlayer_Ej-PQ
+    .dpcseriesdetails_HeroPlayer_1S-In {
+    width: 32px;
+    height: 32px;
+  }
+}
 .dpcseriesdetails_MatchSectionDetailsOverlay_3e5Em {
   height: 100%;
   width: calc(50% - 4px);
@@ -21564,8 +22219,39 @@ a {
   .dpcseriesdetails_TopSection_3-mWp
   .dpcseriesdetails_Player_2Rhr8
   .dpcseriesdetails_TeamLogo_3nXHf {
+  width: 70px;
+  height: 70px;
   margin-top: -32px;
   filter: drop-shadow(2px 2px 7px rgba(0, 0, 0, 0.5));
+}
+@media (max-width: 800px) {
+  .dpcseriesdetails_MatchSectionDetailsOverlay_3e5Em
+    .dpcseriesdetails_TopSection_3-mWp
+    .dpcseriesdetails_Player_2Rhr8
+    .dpcseriesdetails_PlayerName_2I7vG {
+    font-size: 15px;
+  }
+  .dpcseriesdetails_MatchSectionDetailsOverlay_3e5Em
+    .dpcseriesdetails_TopSection_3-mWp
+    .dpcseriesdetails_Player_2Rhr8
+    .dpcseriesdetails_TeamName_Y--ke {
+    font-size: 12px;
+  }
+  .dpcseriesdetails_MatchSectionDetailsOverlay_3e5Em
+    .dpcseriesdetails_TopSection_3-mWp
+    .dpcseriesdetails_Player_2Rhr8
+    .dpcseriesdetails_PlayerImage_1K0J3 {
+    width: 70px;
+    height: 70px;
+  }
+  .dpcseriesdetails_MatchSectionDetailsOverlay_3e5Em
+    .dpcseriesdetails_TopSection_3-mWp
+    .dpcseriesdetails_Player_2Rhr8
+    .dpcseriesdetails_TeamLogo_3nXHf {
+    width: 35px;
+    height: 35px;
+    margin-top: -16px;
+  }
 }
 .dpcseriesdetails_MatchSectionDetailsOverlay_3e5Em
   .dpcseriesdetails_TopSection_3-mWp
@@ -21595,6 +22281,14 @@ a {
   background-repeat: no-repeat;
   border: 1px solid #000;
   box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 800px) {
+  .dpcseriesdetails_MatchSectionDetailsOverlay_3e5Em
+    .dpcseriesdetails_ItemSection_3K3XM
+    .dpcseriesdetails_ItemIcon_tS-pP {
+    width: 33px;
+    height: 24px;
+  }
 }
 .dpcseriesdetails_MatchSectionDetailsOverlay_3e5Em
   .dpcseriesdetails_PlaystyleSection_3KGiE {
@@ -21886,6 +22580,102 @@ a {
   height: 24px;
   background-size: contain;
   background-repeat: no-repeat;
+}
+@media (max-width: 1000px) {
+  .dpcseriesdetails_DPCSeriesFooter_3m_vu {
+    height: 53px;
+  }
+  .dpcseriesdetails_DPCSeriesFooter_3m_vu
+    .dpcseriesdetails_CenterOptions_1nAlD {
+    transform: scale(85%);
+  }
+  .dpcseriesdetails_DPCSeriesFooter_3m_vu .dpcseriesdetails_LeftTabs_1AAPM,
+  .dpcseriesdetails_DPCSeriesFooter_3m_vu .dpcseriesdetails_RightTabs_xaEuz {
+    width: 150px;
+  }
+  .dpcseriesdetails_DPCSeriesFooter_3m_vu
+    .dpcseriesdetails_LeftTabs_1AAPM
+    .dpcseriesdetails_SizeTab_15EXl
+    .dpcseriesdetails_SizeTabImage_3QGgN,
+  .dpcseriesdetails_DPCSeriesFooter_3m_vu
+    .dpcseriesdetails_LeftTabs_1AAPM
+    .dpcseriesdetails_SizeTab_15EXl
+    .dpcseriesdetails_SeriesViewTabImage_Sc3Th,
+  .dpcseriesdetails_DPCSeriesFooter_3m_vu
+    .dpcseriesdetails_LeftTabs_1AAPM
+    .dpcseriesdetails_SeriesViewTab_3aLEj
+    .dpcseriesdetails_SizeTabImage_3QGgN,
+  .dpcseriesdetails_DPCSeriesFooter_3m_vu
+    .dpcseriesdetails_LeftTabs_1AAPM
+    .dpcseriesdetails_SeriesViewTab_3aLEj
+    .dpcseriesdetails_SeriesViewTabImage_Sc3Th,
+  .dpcseriesdetails_DPCSeriesFooter_3m_vu
+    .dpcseriesdetails_RightTabs_xaEuz
+    .dpcseriesdetails_SizeTab_15EXl
+    .dpcseriesdetails_SizeTabImage_3QGgN,
+  .dpcseriesdetails_DPCSeriesFooter_3m_vu
+    .dpcseriesdetails_RightTabs_xaEuz
+    .dpcseriesdetails_SizeTab_15EXl
+    .dpcseriesdetails_SeriesViewTabImage_Sc3Th,
+  .dpcseriesdetails_DPCSeriesFooter_3m_vu
+    .dpcseriesdetails_RightTabs_xaEuz
+    .dpcseriesdetails_SeriesViewTab_3aLEj
+    .dpcseriesdetails_SizeTabImage_3QGgN,
+  .dpcseriesdetails_DPCSeriesFooter_3m_vu
+    .dpcseriesdetails_RightTabs_xaEuz
+    .dpcseriesdetails_SeriesViewTab_3aLEj
+    .dpcseriesdetails_SeriesViewTabImage_Sc3Th {
+    width: 26px;
+    height: 18px;
+  }
+}
+@media (max-width: 800px) {
+  .dpcseriesdetails_DPCSeriesFooter_3m_vu {
+    height: 35px;
+  }
+  .dpcseriesdetails_DPCSeriesFooter_3m_vu
+    .dpcseriesdetails_CenterOptions_1nAlD {
+    transform: scale(70%);
+  }
+  .dpcseriesdetails_DPCSeriesFooter_3m_vu .dpcseriesdetails_LeftTabs_1AAPM,
+  .dpcseriesdetails_DPCSeriesFooter_3m_vu .dpcseriesdetails_RightTabs_xaEuz {
+    width: 100px;
+  }
+  .dpcseriesdetails_DPCSeriesFooter_3m_vu
+    .dpcseriesdetails_LeftTabs_1AAPM
+    .dpcseriesdetails_SizeTab_15EXl
+    .dpcseriesdetails_SizeTabImage_3QGgN,
+  .dpcseriesdetails_DPCSeriesFooter_3m_vu
+    .dpcseriesdetails_LeftTabs_1AAPM
+    .dpcseriesdetails_SizeTab_15EXl
+    .dpcseriesdetails_SeriesViewTabImage_Sc3Th,
+  .dpcseriesdetails_DPCSeriesFooter_3m_vu
+    .dpcseriesdetails_LeftTabs_1AAPM
+    .dpcseriesdetails_SeriesViewTab_3aLEj
+    .dpcseriesdetails_SizeTabImage_3QGgN,
+  .dpcseriesdetails_DPCSeriesFooter_3m_vu
+    .dpcseriesdetails_LeftTabs_1AAPM
+    .dpcseriesdetails_SeriesViewTab_3aLEj
+    .dpcseriesdetails_SeriesViewTabImage_Sc3Th,
+  .dpcseriesdetails_DPCSeriesFooter_3m_vu
+    .dpcseriesdetails_RightTabs_xaEuz
+    .dpcseriesdetails_SizeTab_15EXl
+    .dpcseriesdetails_SizeTabImage_3QGgN,
+  .dpcseriesdetails_DPCSeriesFooter_3m_vu
+    .dpcseriesdetails_RightTabs_xaEuz
+    .dpcseriesdetails_SizeTab_15EXl
+    .dpcseriesdetails_SeriesViewTabImage_Sc3Th,
+  .dpcseriesdetails_DPCSeriesFooter_3m_vu
+    .dpcseriesdetails_RightTabs_xaEuz
+    .dpcseriesdetails_SeriesViewTab_3aLEj
+    .dpcseriesdetails_SizeTabImage_3QGgN,
+  .dpcseriesdetails_DPCSeriesFooter_3m_vu
+    .dpcseriesdetails_RightTabs_xaEuz
+    .dpcseriesdetails_SeriesViewTab_3aLEj
+    .dpcseriesdetails_SeriesViewTabImage_Sc3Th {
+    width: 17px;
+    height: 12px;
+  }
 }
 .throbber_LoadingWrapper_chtlD {
   display: flex;
@@ -22824,6 +23614,16 @@ a {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 1200px) {
+  .dpcheader_DPCHeader_1l1bz .dpcheader_DPCHeaderContents_i0tSQ {
+    padding: 0px 5%;
+  }
+}
+@media (max-width: 1200px) {
+  .dpcheader_DPCHeader_1l1bz .dpcheader_DPCHeaderContents_i0tSQ {
+    padding: 0px 2%;
+  }
 }
 .dpcheader_DPCHeader_1l1bz
   .dpcheader_DPCHeaderContents_i0tSQ
