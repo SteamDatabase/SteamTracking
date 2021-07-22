@@ -24529,6 +24529,7 @@ a {
 .dpcstandings_DPCStandingsBracket_9iCXI {
   width: 100%;
   margin-top: 30px;
+  padding: 0px 30px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -25327,12 +25328,13 @@ html.contextmenu_ContextMenuPopup_152-v .contextmenu_contextMenuItem_3hJA5 {
 }
 .dpcteamlist_DPCTeamList_wkwPY .dpcteamlist_Header_6xmj_ {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1240px;
   height: 80px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
+  padding: 0px 40px;
   padding-bottom: 14px;
 }
 .dpcteamlist_DPCTeamList_wkwPY
@@ -25348,7 +25350,7 @@ html.contextmenu_ContextMenuPopup_152-v .contextmenu_contextMenuItem_3hJA5 {
 .dpcteamlist_DPCTeamList_wkwPY .dpcteamlist_TeamList_q1HCH {
   width: 100%;
   max-width: 1240px;
-  padding-left: 20px;
+  padding-left: 40px;
   padding-right: 10px;
   max-height: 1000px;
   overflow-y: scroll;
@@ -26871,9 +26873,10 @@ a {
 .dpcschedulepage_DPCScheduleList_3QIzq
   .dpcschedulepage_DaySection_5TTvp
   .dpcschedulepage_DayHeader_1HEm- {
-  width: 100%;
-  max-width: 1200px;
+  width: calc(100% - 40px);
+  max-width: 1240px;
   height: 40px;
+  margin: 0px 20px;
   background-color: #36363e;
   display: flex;
   flex-direction: row;
@@ -26899,6 +26902,8 @@ a {
   .dpcschedulepage_DaySection_5TTvp
   .dpcschedulepage_DayNodeList_3jDYf {
   width: 100%;
+  max-width: 1240px;
+  padding: 0px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26932,6 +26937,8 @@ a {
   .dpcschedulepage_Body_2Lj7M
   .dpcschedulepage_LeftSection_1Tx1F {
   width: 250px;
+  min-width: 250px;
+  max-width: 250px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -26975,6 +26982,25 @@ a {
   text-transform: uppercase;
   letter-spacing: 3px;
   text-align: center;
+}
+@media (max-width: 1000px) {
+  .dpcschedulepage_DPCScheduleEntry_b1AHp
+    .dpcschedulepage_Body_2Lj7M
+    .dpcschedulepage_LeftSection_1Tx1F {
+    width: 200px;
+    min-width: 200px;
+    max-width: 200px;
+  }
+  .dpcschedulepage_DPCScheduleEntry_b1AHp
+    .dpcschedulepage_Body_2Lj7M
+    .dpcschedulepage_LeftSection_1Tx1F
+    .dpcschedulepage_NodeType_2cS46.dpcschedulepage_Upper_3IkFQ,
+  .dpcschedulepage_DPCScheduleEntry_b1AHp
+    .dpcschedulepage_Body_2Lj7M
+    .dpcschedulepage_LeftSection_1Tx1F
+    .dpcschedulepage_NodeType_2cS46.dpcschedulepage_Lower_15rEI {
+    font-size: 12px;
+  }
 }
 .dpcschedulepage_DPCScheduleEntry_b1AHp
   .dpcschedulepage_Body_2Lj7M
@@ -27095,11 +27121,21 @@ a {
   .dpcschedulepage_RightSection_2HVyi {
   width: 250px;
   max-width: 250px;
+  min-width: 250px;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 1000px) {
+  .dpcschedulepage_DPCScheduleEntry_b1AHp
+    .dpcschedulepage_Body_2Lj7M
+    .dpcschedulepage_RightSection_2HVyi {
+    width: 200px;
+    min-width: 200px;
+    max-width: 200px;
+  }
 }
 .dpcschedulepage_DPCScheduleEntry_b1AHp
   .dpcschedulepage_Body_2Lj7M
