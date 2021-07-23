@@ -22480,30 +22480,37 @@ a {
   .dpcseriesdetails_OutlineButton_2-gEl {
   width: 180px;
   padding: 6px 0px;
-  background-color: #1d1e22;
-  border: 2px solid #5e6976;
+  background-color: #2e3339;
+  border: 2px solid #2e3339;
   border-radius: 3px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   cursor: pointer;
   user-select: none;
-  transition-property: background-color;
+  transition-property: background-color, border-color;
   transition-timing-function: ease-in-out;
   transition-duration: 0.1s;
 }
 .dpcseriesdetails_DPCSeriesFooter_3m_vu
   .dpcseriesdetails_CenterOptions_1nAlD
   .dpcseriesdetails_OutlineButton_2-gEl:hover {
-  background-color: #2d2e35;
+  background-color: #41474e;
+  border-color: #41474e;
 }
 .dpcseriesdetails_DPCSeriesFooter_3m_vu
   .dpcseriesdetails_CenterOptions_1nAlD
   .dpcseriesdetails_OutlineButton_2-gEl:hover
   .dpcseriesdetails_Contents_aiYFX {
   color: #fff;
+}
+.dpcseriesdetails_DPCSeriesFooter_3m_vu
+  .dpcseriesdetails_CenterOptions_1nAlD
+  .dpcseriesdetails_OutlineButton_2-gEl:hover
+  .dpcseriesdetails_ExternalLinkIcon_jUjvT {
+  filter: brightness(800%);
 }
 .dpcseriesdetails_DPCSeriesFooter_3m_vu
   .dpcseriesdetails_CenterOptions_1nAlD
@@ -22518,7 +22525,7 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   transition-property: color;
   transition-timing-function: ease-in-out;
   transition-duration: 0.1s;
@@ -22528,14 +22535,18 @@ a {
   .dpcseriesdetails_OutlineButton_2-gEl
   .dpcseriesdetails_Contents_aiYFX
   .dpcseriesdetails_ExternalLinkIcon_jUjvT {
-  width: 12px;
-  height: 12px;
+  color: #9099a3;
+  width: 10px;
+  height: 10px;
   background-size: contain;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  transition-property: filter;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
 }
 .dpcseriesdetails_DPCSeriesFooter_3m_vu .dpcseriesdetails_RightTabs_xaEuz {
   width: 200px;
@@ -24252,6 +24263,145 @@ a {
   letter-spacing: 2px;
   color: #fff;
   margin-bottom: -20px;
+}
+.dpchomepage_DPCFollowedTeamMatches_-BVSo {
+  width: 100%;
+  height: 400px;
+  background-color: #27272c;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.dpchomepage_DPCFollowedTeamMatches_-BVSo .dpchomepage_MatchesContainer_3vVvL {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+}
+.dpchomepage_DPCFollowedTeamMatches_-BVSo
+  .dpchomepage_MatchesContainer_3vVvL
+  .dpchomepage_Header_ks44o {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.dpchomepage_DPCFollowedTeamMatches_-BVSo
+  .dpchomepage_MatchesContainer_3vVvL
+  .dpchomepage_SeriesList_3uP-N {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.dpchomepage_DPCFollowedTeamSeries_20KHP {
+  width: 360px;
+  height: 300px;
+  background-color: #222;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.4);
+}
+.dpchomepage_DPCFollowedTeamSeries_20KHP .dpchomepage_Gradient_2Du5Z {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dpchomepage_DPCFollowedTeamSeries_20KHP
+  .dpchomepage_Gradient_2Du5Z
+  .dpchomepage_Header_ks44o {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.dpchomepage_DPCFollowedTeamSeries_20KHP
+  .dpchomepage_Gradient_2Du5Z
+  .dpchomepage_Header_ks44o
+  .dpchomepage_Timestamp_1VXYK {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.dpchomepage_DPCFollowedTeamSeries_20KHP
+  .dpchomepage_Gradient_2Du5Z
+  .dpchomepage_Body_36kB2 {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.dpchomepage_DPCFollowedTeamSeries_20KHP
+  .dpchomepage_Gradient_2Du5Z
+  .dpchomepage_Body_36kB2
+  .dpchomepage_TeamsVS_36Zek {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  font-size: 18px;
+  color: #a3a3a3;
+  margin-bottom: 20px;
+}
+.dpchomepage_DPCFollowedTeamSeries_20KHP
+  .dpchomepage_Gradient_2Du5Z
+  .dpchomepage_Body_36kB2
+  .dpchomepage_Description1_slMAE {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.dpchomepage_DPCFollowedTeamSeries_20KHP
+  .dpchomepage_Gradient_2Du5Z
+  .dpchomepage_Body_36kB2
+  .dpchomepage_Description2_gvoIk {
+  color: #a3a3a3;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+.dpchomepage_DPCFollowedTeamSeries_20KHP
+  .dpchomepage_Gradient_2Du5Z
+  .dpchomepage_Body_36kB2
+  .dpchomepage_WatchVod_124se {
+  min-width: 160px;
+  padding: 6px 0px;
+  background-color: #5e6976;
+  border: 2px solid #5e6976;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: regular;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition-property: background-color, color, border-color, color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
+}
+.dpchomepage_DPCFollowedTeamSeries_20KHP
+  .dpchomepage_Gradient_2Du5Z
+  .dpchomepage_Body_36kB2
+  .dpchomepage_WatchVod_124se:hover {
+  background-color: #767f8a;
+  border-color: #767f8a;
+  color: #fff;
 }
 .dpcstandings_DPCStandingsDivision_KkUW3 {
   width: 100%;
@@ -26849,10 +26999,9 @@ a {
   justify-content: center;
   gap: 40px;
   align-items: center;
-  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.6);
   position: sticky;
   top: 200px;
-  background-color: #222226;
+  background-color: #000;
   z-index: 998;
 }
 .dpcschedulepage_DPCScheduleList_3QIzq {
@@ -26874,10 +27023,10 @@ a {
   .dpcschedulepage_DaySection_5TTvp
   .dpcschedulepage_DayHeader_1HEm- {
   width: calc(100% - 40px);
-  max-width: 1240px;
+  max-width: 1200px;
   height: 40px;
   margin: 0px 20px;
-  background-color: #36363e;
+  background-color: #28282e;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -26886,7 +27035,7 @@ a {
   position: sticky;
   top: 279px;
   z-index: 2;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.4);
 }
 .dpcschedulepage_DPCScheduleList_3QIzq
   .dpcschedulepage_DaySection_5TTvp
@@ -26907,12 +27056,12 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 3px;
 }
 .dpcschedulepage_DPCScheduleEntry_b1AHp {
   width: 100%;
   max-width: 1200px;
-  background-color: #202026;
+  background-color: #27272dbf;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
@@ -26928,7 +27077,7 @@ a {
 }
 .dpcschedulepage_DPCScheduleEntry_b1AHp .dpcschedulepage_Body_2Lj7M {
   width: 100%;
-  height: 90px;
+  height: 100px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -26951,36 +27100,37 @@ a {
   .dpcschedulepage_LeftSection_1Tx1F
   .dpcschedulepage_NodeType_2cS46 {
   color: #a3a3a3;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 3px;
   text-align: center;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 .dpcschedulepage_DPCScheduleEntry_b1AHp
   .dpcschedulepage_Body_2Lj7M
   .dpcschedulepage_LeftSection_1Tx1F
   .dpcschedulepage_NodeType_2cS46.dpcschedulepage_Upper_3IkFQ {
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 3px;
   color: #fff;
-  margin-bottom: 0px;
+  margin-bottom: 2px;
 }
 .dpcschedulepage_DPCScheduleEntry_b1AHp
   .dpcschedulepage_Body_2Lj7M
   .dpcschedulepage_LeftSection_1Tx1F
   .dpcschedulepage_NodeType_2cS46.dpcschedulepage_Lower_15rEI {
-  font-size: 14px;
+  font-size: 12px;
+  letter-spacing: 1px;
 }
 .dpcschedulepage_DPCScheduleEntry_b1AHp
   .dpcschedulepage_Body_2Lj7M
   .dpcschedulepage_LeftSection_1Tx1F
   .dpcschedulepage_TimeLabel_3WzgS {
   color: #6b7785;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   text-align: center;
 }
 @media (max-width: 1000px) {
@@ -27141,13 +27291,13 @@ a {
   .dpcschedulepage_Body_2Lj7M
   .dpcschedulepage_RightSection_2HVyi
   .dpcschedulepage_MatchDetailsButton_3DdXj {
-  padding: 4px 20px;
-  border: 1px solid #5e6976;
-  color: #5e6976;
-  font-size: 13px;
-  font-weight: 800;
+  padding: 8px 30px;
+  background-color: #2e3339;
+  color: #9099a3;
+  font-size: 12px;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-align: center;
   border-radius: 2px;
   cursor: pointer;
@@ -27165,7 +27315,7 @@ a {
   .dpcschedulepage_RightSection_2HVyi
   .dpcschedulepage_MatchDetailsButton_3DdXj.dpcschedulepage_Expanded_3Nr8I {
   color: #fff;
-  background-color: #5e6976;
+  background-color: #41474e;
 }
 .dpcschedulepage_DPCScheduleEntry_b1AHp .dpcschedulepage_Expansion_Uo0Hi {
   width: 100%;
@@ -27275,14 +27425,15 @@ a {
 .dpcschedulepage_DPCScheduleGameDetails_vZFal
   .dpcschedulepage_RightSection_2HVyi
   .dpcschedulepage_WatchVODButton_3awzP {
-  padding: 4px 20px;
-  border: 1px solid #373d44;
-  color: #373d44;
-  font-size: 13px;
-  font-weight: 800;
+  padding: 8px 35px;
+  background-color: #2e3339;
+  font-size: 12px;
+  color: #9099a3;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-align: center;
+  border-color: #2e3339;
   border-radius: 2px;
   user-select: none;
   pointer-events: none;
@@ -27293,8 +27444,8 @@ a {
 .dpcschedulepage_DPCScheduleGameDetails_vZFal
   .dpcschedulepage_RightSection_2HVyi
   .dpcschedulepage_WatchVODButton_3awzP.dpcschedulepage_Enabled_1yQvW {
-  border: 1px solid #5e6976;
-  color: #5e6976;
+  border: 1px solid #2e3339;
+  color: #9099a3;
   cursor: pointer;
   pointer-events: inherit;
 }
@@ -27302,6 +27453,6 @@ a {
   .dpcschedulepage_RightSection_2HVyi
   .dpcschedulepage_WatchVODButton_3awzP.dpcschedulepage_Enabled_1yQvW:hover {
   color: #fff;
-  background-color: #5e6976;
+  background-color: #41474e;
   cursor: pointer;
 }
