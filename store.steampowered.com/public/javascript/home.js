@@ -2507,7 +2507,7 @@ GSteamCurators = {
 	{
 		var unAppID = oItem.appid;
 		var unPackageID = 0;
-		var params = { 'class': 'store_capsule' };
+		var params = { 'class': 'store_capsule responsive_scroll_snap_start' };
 		if ( oItem.rgCurators.length > 0 )
 		{
 			params['curator_clanid'] = oItem.rgCurators[0];
@@ -2648,6 +2648,62 @@ GSteamCurators = {
 		return $Item;
 	},
 
+    BuildResponsiveHomePageGiantCap: function( strFeatureContext, oItem )
+	{
+        var unClanId = Object.keys( oItem.rgRecommendationByCurator )[0] || false;
+
+        var unAppID = oItem.appid;
+        var unPackageID = 0;
+        var params = { 'class': 'curator_giant_capsule', 'curator_clanid' : unClanId };
+        var rgItemData = GStoreItemData.GetCapParamsForItem( strFeatureContext, oItem, params );
+
+        var rgRecommendation = oItem.rgRecommendationByCurator[ unClanId ] || '';
+
+        var curator = GHomepage.rgCuratedAppsData.curators[ unClanId ] || false;
+
+        if ( !rgItemData || !curator || !rgItemData.screenshots || rgItemData.screenshots.length < 4 )
+            return null;
+
+        var $Item = $J('<a/>', params );
+
+        var $Image = $J('<img/>', { src: rgItemData.main_capsule, 'class': 'capsule_image' } );
+        $Image.bind('error', function(){
+            $Image.attr('src', rgItemData.headerv5  );
+            $Image.css({'width': '470px'  });
+        });
+        $Item.append( $Image );
+
+        var $ItemContent = $J('<div/>', {'class': 'curator_content'});
+
+        var $DetailsRow = $J('<div/>', { 'class': 'curator_details_row' } );
+        $DetailsRow.append( $J('<div/>').html( rgItemData.discount_block ? $J( rgItemData.discount_block ).addClass( '' ) : '&nbsp;' ) );
+        $ItemContent.append( $DetailsRow );
+
+        var $CuratorText = $J('<div/>', {'class': 'curator_text'} ).text( '"' + rgRecommendation.blurb + '"' );
+        $ItemContent.append( $CuratorText );
+
+        var $StatusAndDate = $J('<div/>', {'class': 'date_row'} );
+
+        var $Thumb = $J('<img/>', {'class': 'recommendation_thumb', src: 'https://store.cloudflare.steamstatic.com/public/images/recommended_thumb.png'});
+        var $Status = $J('<div/>', {'class': 'recommendation_status recommended'}).text( "Recommended" );
+        var $Date = $J('<div/>', {'class': 'recommendation_date'}).text( new Date( rgRecommendation.time_recommended * 1000 ).toLocaleDateString( undefined, { month: 'long', day: 'numeric' } ) );
+        $StatusAndDate.append( $Thumb );
+        $StatusAndDate.append( $Status );
+        $StatusAndDate.append( $Date );
+
+        $ItemContent.append( $StatusAndDate );
+
+        // Curator ID
+		var $CuratorIdentifier = $J('<div/>', {'class': 'curator_identifier'} );
+		$CuratorIdentifier.append( $J( '<img/>', {'class': 'curator_img', src: GetAvatarURL( curator.strAvatarHash, '_full' ) } ) );
+		$CuratorIdentifier.append( $J( '<div/>', {'class': 'curator_name' } ).text( curator.name ) );
+        $ItemContent.append( $CuratorIdentifier );
+
+        $Item.append( $ItemContent );
+
+        return $Item;
+	},
+
 	BuildCuratorItem: function( curator, nDepth )
 	{
 		var strLink = GStoreItemData.AddNavEventParamsToURL( curator.link, 'curator_recommended', nDepth );
@@ -2725,6 +2781,13 @@ GSteamCurators = {
 					$J('.giant_curator_controls').show();
 					$J('.giant_curator_title').show();
 
+                    var $ResponsiveItem = GSteamCurators.BuildResponsiveHomePageGiantCap( 'curated_main_app', oItem );
+
+                    if ( $ResponsiveItem )
+					{
+                        $J('.responsive_giant_curator_capsule').empty().append($ResponsiveItem);
+                        $J('.responsive_giant_curator_capsule').show();
+                    }
 
 					var $elButtonWishlist = $J('<span />').text("Add to Wishlist");
 

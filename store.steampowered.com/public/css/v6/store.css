@@ -4106,7 +4106,18 @@ a.cluster_capsule:hover {
 	text-decoration: none;
 }
 
-/* ds_options defines the per-app prefernces dropdown */
+@media screen and (max-width: 910px)
+{
+	html.responsive #live_streams_carousel {
+		padding-bottom: 0;
+	}
+
+	html.responsive .live_streams_ctn .store_capsule:not(:last-child) {
+		margin-bottom: 0px; /* We don't wrap in responsive */
+	}
+}
+
+/* ds_options defines the per-app preferences dropdown */
 .ds_options {
 	display: block;
 	position: absolute;
@@ -4230,6 +4241,12 @@ body.v6 .store_capsule_frame > h3, body.v6 .store_capsule_frame > h3 > a {
 
 	html.responsive .main_cluster_ctn.large_cluster_responsive {
 		max-width: 462px;
+	}
+
+	html.responsive .specials_under10_content,
+	html.responsive .live_streams_ctn {
+		margin-top: 0;
+		margin-bottom: 0;
 	}
 }
 
@@ -5074,8 +5091,23 @@ body.v6 .quadscreenshot_carousel h2 {
 
 .quadscreenshot_carousel .main .maincap {
 	width: 465px;
+}
 
+.carousel_container.quadscreenshot_carousel .discount_block > .discount_prices {
+	display: inline-block;
+	padding: 4px 8px;
+	background-color: rgba(20,31,44,0.4);
+	border-radius: 1px;
+}
+.carousel_container.quadscreenshot_carousel .discount_block_inline {
+	font-size: 15px;
+}
+.carousel_container.quadscreenshot_carousel .discount_block_inline .no_discount .discount_final_price {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
 
+			color: #acdbf5;
+	font-size: 17px;
 }
 
 @media screen and (max-width: 910px)
@@ -5102,10 +5134,19 @@ body.v6 .quadscreenshot_carousel h2 {
 		display: none;
 	}
 
-	.quadscreenshot_carousel .recommendation_reason, .quadscreenshot_carousel .appTitle {
+	.quadscreenshot_carousel .recommendation_reason {
 		top: auto;
 		bottom: 0px;
+	}
 
+	.quadscreenshot_carousel .appTitle {
+		bottom: calc( 2% + 75px );
+		right: 0;
+		top: auto;
+	}
+
+	.carousel_container.quadscreenshot_carousel .discount_block > .discount_prices {
+		background: black;
 	}
 
 	body.v6 .quadscreenshot_carousel h2 {
@@ -5148,7 +5189,7 @@ body.v6 .quadscreenshot_carousel h2 {
 }
 
 .carousel_items:not(.no_paging) > *.focus {
-	position: relative;
+    position: relative;
 }
 
 .carousel_container {
@@ -5164,23 +5205,6 @@ body.v6 .quadscreenshot_carousel h2 {
 }
 .carousel_container.curator_cluster_expanded .carousel_items > .curator_page {
 	pointer-events: auto;
-}
-
-.carousel_container.quadscreenshot_carousel .discount_block > .discount_prices {
-	display: inline-block;
-	padding: 4px 8px;
-	background-color: rgba(20,31,44,0.4);
-	border-radius: 1px;
-}
-.carousel_container.quadscreenshot_carousel .discount_block_inline {
-	font-size: 15px;
-}
-.carousel_container.quadscreenshot_carousel .discount_block_inline .no_discount .discount_final_price {
-			font-family: "Motiva Sans", Sans-serif;
-		font-weight: 300; /* light */
-
-			color: #acdbf5;
-	font-size: 17px;
 }
 
 .carousel_items.no_paging .store_capsule {
@@ -5286,11 +5310,6 @@ body.v6 .quadscreenshot_carousel h2 {
 		opacity: 1;
 		margin-right: 11px;
 	}
-
-	html.responsive .carousel_container .carousel_items:not(.no_paging) > *	{
-		margin-bottom: -20px;
-	}
-
 }
 
 .carousel_container .carousel_items > *.focus {
@@ -5809,6 +5828,26 @@ background: -webkit-linear-gradient( 297deg, rgba( 255, 255, 255, 0.2) 5%,rgba( 
 
 .popup_menu_browse .spacer {
 	flex: 1;
+}
+
+.content_dive_arrow {
+	padding-top: 6px;
+}
+
+.responsive_content_dive {
+	opacity: 0.5;
+	color: white;
+	font-size: 12px;
+	letter-spacing: normal;
+	text-transform: none;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.responsive_content_dive_chevron {
+	margin-left: 4px;
 }
 
 .responsive_options_flyout {
