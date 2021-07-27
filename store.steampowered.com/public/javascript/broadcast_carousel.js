@@ -40,7 +40,7 @@ GSteamBroadcasts = {
 
 	CreateBroadcastCapsule: function( oItem, bAddTitleBar )
 	{
-		var params = { 'class': 'store_capsule broadcast_capsule', 'href': oItem.app_link };
+		var params = { 'class': 'store_capsule broadcast_capsule responsive_scroll_snap_start', 'href': oItem.app_link };
 
 		var rgItemData = GStoreItemData.GetCapParams( 'live_broadcast', oItem.appid, 0, null, params );
 		var $CapCtn = $J('<a/>', params );

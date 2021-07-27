@@ -4248,6 +4248,11 @@ body.v6 .store_capsule_frame > h3, body.v6 .store_capsule_frame > h3 > a {
 		margin-top: 0;
 		margin-bottom: 0;
 	}
+
+	html.responsive *:hover > .ds_options,
+	html.responsive .ds_hover.ds_options {
+		opacity: 0;
+	}
 }
 
 
