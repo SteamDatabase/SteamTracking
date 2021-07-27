@@ -24257,8 +24257,8 @@ a {
 .dpchomepage_DPCHomePageStandingsLeague_3C6rF
   .dpchomepage_Header_ks44o
   .dpchomepage_Label_2RE-0 {
-  font-size: 17px;
-  font-weight: 800;
+  font-size: 14px;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #fff;
@@ -24266,11 +24266,12 @@ a {
 }
 .dpchomepage_DPCFollowedTeamMatches_-BVSo {
   width: 100%;
-  height: 400px;
-  background-color: #27272c;
+  height: 480px;
+  background: linear-gradient(to right, #27272d, #313138);
   display: flex;
   flex-direction: row;
   justify-content: center;
+  padding-bottom: 30px;
 }
 .dpchomepage_DPCFollowedTeamMatches_-BVSo .dpchomepage_MatchesContainer_3vVvL {
   width: 100%;
@@ -24285,8 +24286,8 @@ a {
   .dpchomepage_MatchesContainer_3vVvL
   .dpchomepage_Header_ks44o {
   color: #fff;
-  font-size: 22px;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -24300,10 +24301,10 @@ a {
   align-items: center;
 }
 .dpchomepage_DPCFollowedTeamSeries_20KHP {
-  width: 360px;
-  height: 300px;
-  background-color: #222;
-  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.4);
+  width: 340px;
+  height: 350px;
+  background-color: #25252a;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2);
 }
 .dpchomepage_DPCFollowedTeamSeries_20KHP .dpchomepage_Gradient_2Du5Z {
   width: 100%;
@@ -24321,17 +24322,17 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #19191cb3;
 }
 .dpchomepage_DPCFollowedTeamSeries_20KHP
   .dpchomepage_Gradient_2Du5Z
   .dpchomepage_Header_ks44o
   .dpchomepage_Timestamp_1VXYK {
   color: #fff;
-  font-size: 20px;
-  font-weight: 800;
+  font-size: 16px;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 .dpchomepage_DPCFollowedTeamSeries_20KHP
   .dpchomepage_Gradient_2Du5Z
@@ -24350,31 +24351,33 @@ a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
   font-size: 18px;
   color: #a3a3a3;
-  margin-bottom: 20px;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
 }
 .dpchomepage_DPCFollowedTeamSeries_20KHP
   .dpchomepage_Gradient_2Du5Z
   .dpchomepage_Body_36kB2
   .dpchomepage_Description1_slMAE {
   color: #fff;
-  font-size: 18px;
-  font-weight: 800;
+  font-size: 14px;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+  margin-bottom: 3px;
 }
 .dpchomepage_DPCFollowedTeamSeries_20KHP
   .dpchomepage_Gradient_2Du5Z
   .dpchomepage_Body_36kB2
   .dpchomepage_Description2_gvoIk {
   color: #a3a3a3;
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 12px;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 20px;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
 }
 .dpchomepage_DPCFollowedTeamSeries_20KHP
   .dpchomepage_Gradient_2Du5Z
@@ -24401,6 +24404,78 @@ a {
   .dpchomepage_WatchVod_124se:hover {
   background-color: #767f8a;
   border-color: #767f8a;
+  color: #fff;
+}
+.dpchomepage_DPCAboutBanner_2Ta23 {
+  width: 100%;
+  background-color: #1d2c42;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+.dpchomepage_DPCAboutBanner_2Ta23 .dpchomepage_Background_2R9e9 {
+  width: 1904px;
+  height: 332px;
+  background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.dpchomepage_DPCAboutBanner_2Ta23
+  .dpchomepage_Background_2R9e9
+  .dpchomepage_Content_3C7_3 {
+  width: 100%;
+  padding: 0px 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.dpchomepage_DPCAboutBanner_2Ta23
+  .dpchomepage_Background_2R9e9
+  .dpchomepage_Content_3C7_3
+  .dpchomepage_Title_2yhlb {
+  color: #fff;
+  font-family: "Reaver", serif;
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+.dpchomepage_DPCAboutBanner_2Ta23
+  .dpchomepage_Background_2R9e9
+  .dpchomepage_Content_3C7_3
+  .dpchomepage_Body_36kB2 {
+  color: #a3a3a3;
+  font-family: "Reaver", serif;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 1px;
+  width: 430px;
+  margin-bottom: 16px;
+}
+.dpchomepage_DPCAboutBanner_2Ta23
+  .dpchomepage_Background_2R9e9
+  .dpchomepage_Content_3C7_3
+  .dpchomepage_Button_17QQl {
+  border: 1px solid #a3a3a3;
+  border-radius: 2px;
+  padding: 10px 15px;
+  background-color: transparent;
+  color: #a3a3a3;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition-property: color, border-color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
+}
+.dpchomepage_DPCAboutBanner_2Ta23
+  .dpchomepage_Background_2R9e9
+  .dpchomepage_Content_3C7_3
+  .dpchomepage_Button_17QQl:hover {
+  border-color: #fff;
   color: #fff;
 }
 .dpcstandings_DPCStandingsDivision_KkUW3 {
@@ -25491,10 +25566,10 @@ html.contextmenu_ContextMenuPopup_152-v .contextmenu_contextMenuItem_3hJA5 {
   .dpcteamlist_Header_6xmj_
   .dpcteamlist_Title_I3mIO {
   color: #fff;
-  font-size: 17px;
-  font-weight: 800;
+  font-size: 14px;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   padding-left: 4px;
 }
 .dpcteamlist_DPCTeamList_wkwPY .dpcteamlist_TeamList_q1HCH {
@@ -25513,12 +25588,12 @@ html.contextmenu_ContextMenuPopup_152-v .contextmenu_contextMenuItem_3hJA5 {
   background-color: transparent;
 }
 .dpcteamlist_DPCTeamList_wkwPY .dpcteamlist_TeamList_q1HCH::-webkit-scrollbar {
-  width: 2px;
-  background-color: #3f464f;
+  width: 3px;
+  background-color: #2e3339;
 }
 .dpcteamlist_DPCTeamList_wkwPY
   .dpcteamlist_TeamList_q1HCH::-webkit-scrollbar-thumb {
-  width: 5px;
+  width: 3px;
   background-color: #5e6976;
 }
 .dpcteamlist_TeamEntry_2GaFH {
@@ -25555,10 +25630,10 @@ html.contextmenu_ContextMenuPopup_152-v .contextmenu_contextMenuItem_3hJA5 {
   .dpcteamlist_TeamInfo_15TYo
   .dpcteamlist_TeamName_1cBjy {
   color: #fff;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 4px;
   margin-right: 10px;
 }
 .dpcteamlist_TeamEntry_2GaFH
@@ -25573,19 +25648,19 @@ html.contextmenu_ContextMenuPopup_152-v .contextmenu_contextMenuItem_3hJA5 {
 .dpcteamlist_TeamEntry_2GaFH
   .dpcteamlist_TeamInfoSection_IDxoK
   .dpcteamlist_Region_hGIUf {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 .dpcteamlist_TeamEntry_2GaFH
   .dpcteamlist_TeamInfoSection_IDxoK
   .dpcteamlist_Division_13II8 {
   color: #6b7785;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 .dpcteamlist_TeamEntry_2GaFH .dpcteamlist_MatchSection_1JycZ {
   width: 350px;
@@ -25613,18 +25688,20 @@ html.contextmenu_ContextMenuPopup_152-v .contextmenu_contextMenuItem_3hJA5 {
 .dpcteamlist_TeamEntry_2GaFH
   .dpcteamlist_MatchSection_1JycZ
   .dpcteamlist_NextMatch_3QU7N {
-  font-size: 11px;
-  font-weight: 800;
+  font-size: 14px;
+  font-weight: 750;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 .dpcteamlist_TeamEntry_2GaFH
   .dpcteamlist_MatchSection_1JycZ
   .dpcteamlist_NodeLabel_23a2v {
-  font-size: 11px;
+  color: #6b7785;
+  font-size: 10px;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
-  padding-left: 4px;
+  padding-left: 0px;
 }
 .dpcteamlist_TeamEntry_2GaFH
   .dpcteamlist_MatchSection_1JycZ
@@ -25632,32 +25709,32 @@ html.contextmenu_ContextMenuPopup_152-v .contextmenu_contextMenuItem_3hJA5 {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 5px;
+  margin-bottom: 5px;
 }
 .dpcteamlist_TeamEntry_2GaFH
   .dpcteamlist_MatchSection_1JycZ
   .dpcteamlist_NextTeam_MFMgb
   .dpcteamlist_TeamLogo_5EwbL {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   margin-left: 0px;
-  margin-right: 8px;
+  margin-right: 4px;
 }
 .dpcteamlist_TeamEntry_2GaFH
   .dpcteamlist_MatchSection_1JycZ
   .dpcteamlist_NextTeam_MFMgb
   .dpcteamlist_TeamName_1cBjy {
   color: #6b7785;
-  font-size: 10px;
-  font-weight: 700;
+  font-size: 12px;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 .dpcteamlist_TeamEntry_2GaFH
   .dpcteamlist_MatchSection_1JycZ
   .dpcteamlist_LastMatch_IQTkk {
-  font-size: 11px;
-  font-weight: 800;
+  font-size: 14px;
+  font-weight: 750;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -25667,24 +25744,24 @@ html.contextmenu_ContextMenuPopup_152-v .contextmenu_contextMenuItem_3hJA5 {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 5px;
+  margin-bottom: 5px;
 }
 .dpcteamlist_TeamEntry_2GaFH
   .dpcteamlist_MatchSection_1JycZ
   .dpcteamlist_PrevTeam_3dEUb
   .dpcteamlist_TeamLogo_5EwbL {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   margin-left: 0px;
-  margin-right: 8px;
+  margin-right: 4px;
 }
 .dpcteamlist_TeamEntry_2GaFH
   .dpcteamlist_MatchSection_1JycZ
   .dpcteamlist_PrevTeam_3dEUb
   .dpcteamlist_TeamName_1cBjy {
   color: #6b7785;
-  font-size: 10px;
-  font-weight: 700;
+  font-size: 12px;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -27011,7 +27088,7 @@ a {
   flex-direction: column;
   align-items: center;
   gap: 6px;
-  padding: 30px 0px;
+  padding: 0px 0px;
 }
 .dpcschedulepage_DPCScheduleList_3QIzq .dpcschedulepage_DaySection_5TTvp {
   width: 100%;
@@ -27025,7 +27102,7 @@ a {
   width: calc(100% - 40px);
   max-width: 1200px;
   height: 40px;
-  margin: 0px 20px;
+  margin: 0px 0px;
   background-color: #28282e;
   display: flex;
   flex-direction: row;
@@ -27455,4 +27532,707 @@ a {
   color: #fff;
   background-color: #41474e;
   cursor: pointer;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Radiance", "Noto Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.Bold {
+  font-weight: bold;
+}
+[data-aos="fade-zoom-in"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: scale(0);
+}
+[data-aos="fade-zoom-in"] &.aos-animate {
+  opacity: 1;
+  transform: scale(1);
+}
+[data-aos="fade-slide-right"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateX(-40%);
+}
+[data-aos="fade-slide-right"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-left"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateX(40%);
+}
+[data-aos="fade-slide-left"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-up"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateY(40%);
+}
+[data-aos="fade-slide-up"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-down"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateY(-40%);
+}
+[data-aos="fade-slide-down"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="rotate"] {
+  transition-property: transform;
+  transform: rotateZ(0deg);
+}
+[data-aos="rotate"] &[data-aos-rotate-bottom] {
+  transform-origin: bottom center;
+}
+[data-aos="rotate"] &[data-aos-rotate="10"].aos-animate {
+  transform: rotateZ(10deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="20"].aos-animate {
+  transform: rotateZ(20deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="30"].aos-animate {
+  transform: rotateZ(30deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="40"].aos-animate {
+  transform: rotateZ(40deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="50"].aos-animate {
+  transform: rotateZ(50deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="60"].aos-animate {
+  transform: rotateZ(60deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="70"].aos-animate {
+  transform: rotateZ(70deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="80"].aos-animate {
+  transform: rotateZ(80deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="90"].aos-animate {
+  transform: rotateZ(90deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="100"].aos-animate {
+  transform: rotateZ(100deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="110"].aos-animate {
+  transform: rotateZ(110deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="120"].aos-animate {
+  transform: rotateZ(120deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="130"].aos-animate {
+  transform: rotateZ(130deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="140"].aos-animate {
+  transform: rotateZ(140deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="150"].aos-animate {
+  transform: rotateZ(150deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="160"].aos-animate {
+  transform: rotateZ(160deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="170"].aos-animate {
+  transform: rotateZ(170deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="180"].aos-animate {
+  transform: rotateZ(180deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="190"].aos-animate {
+  transform: rotateZ(190deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="200"].aos-animate {
+  transform: rotateZ(200deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="210"].aos-animate {
+  transform: rotateZ(210deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="220"].aos-animate {
+  transform: rotateZ(220deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="230"].aos-animate {
+  transform: rotateZ(230deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="240"].aos-animate {
+  transform: rotateZ(240deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="250"].aos-animate {
+  transform: rotateZ(250deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="260"].aos-animate {
+  transform: rotateZ(260deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="270"].aos-animate {
+  transform: rotateZ(270deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="280"].aos-animate {
+  transform: rotateZ(280deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="290"].aos-animate {
+  transform: rotateZ(290deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="300"].aos-animate {
+  transform: rotateZ(300deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="310"].aos-animate {
+  transform: rotateZ(310deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="320"].aos-animate {
+  transform: rotateZ(320deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="330"].aos-animate {
+  transform: rotateZ(330deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="340"].aos-animate {
+  transform: rotateZ(340deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="350"].aos-animate {
+  transform: rotateZ(350deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-10"].aos-animate {
+  transform: rotateZ(-10deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-20"].aos-animate {
+  transform: rotateZ(-20deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-30"].aos-animate {
+  transform: rotateZ(-30deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-40"].aos-animate {
+  transform: rotateZ(-40deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-50"].aos-animate {
+  transform: rotateZ(-50deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-60"].aos-animate {
+  transform: rotateZ(-60deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-70"].aos-animate {
+  transform: rotateZ(-70deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-80"].aos-animate {
+  transform: rotateZ(-80deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-90"].aos-animate {
+  transform: rotateZ(-90deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-100"].aos-animate {
+  transform: rotateZ(-100deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-110"].aos-animate {
+  transform: rotateZ(-110deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-120"].aos-animate {
+  transform: rotateZ(-120deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-130"].aos-animate {
+  transform: rotateZ(-130deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-140"].aos-animate {
+  transform: rotateZ(-140deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-150"].aos-animate {
+  transform: rotateZ(-150deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-160"].aos-animate {
+  transform: rotateZ(-160deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-170"].aos-animate {
+  transform: rotateZ(-170deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-180"].aos-animate {
+  transform: rotateZ(-180deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-190"].aos-animate {
+  transform: rotateZ(-190deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-200"].aos-animate {
+  transform: rotateZ(-200deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-210"].aos-animate {
+  transform: rotateZ(-210deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-220"].aos-animate {
+  transform: rotateZ(-220deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-230"].aos-animate {
+  transform: rotateZ(-230deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-240"].aos-animate {
+  transform: rotateZ(-240deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-250"].aos-animate {
+  transform: rotateZ(-250deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-260"].aos-animate {
+  transform: rotateZ(-260deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-270"].aos-animate {
+  transform: rotateZ(-270deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-280"].aos-animate {
+  transform: rotateZ(-280deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-290"].aos-animate {
+  transform: rotateZ(-290deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-300"].aos-animate {
+  transform: rotateZ(-300deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-310"].aos-animate {
+  transform: rotateZ(-310deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-320"].aos-animate {
+  transform: rotateZ(-320deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-330"].aos-animate {
+  transform: rotateZ(-330deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-340"].aos-animate {
+  transform: rotateZ(-340deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-350"].aos-animate {
+  transform: rotateZ(-350deg);
+}
+.carousel__slide-focus-ring {
+  outline: none !important;
+}
+.carousel__dot:focus {
+  outline: none !important;
+}
+.__react_component_tooltip.show {
+  opacity: 1 !important;
+}
+.dpcaboutpage_Tooltip_1dq7b {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.dpcaboutpage_CarouselFade_11lr2 {
+  mask-image: linear-gradient(
+    to left,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to left,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.ttf")
+      format("truetype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.svg#ywftsvg")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.ttf")
+      format("truetype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.svg#ywftsvg")
+      format("svg");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.ttf")
+      format("truetype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.svg#ywftsvg")
+      format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.ttf")
+      format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-regular.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-regular.ttf")
+      format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-semibold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-semibold.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-bold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-bold.ttf")
+      format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Averia Serif Libre";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/averiaseriflibre-regular.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/averiaseriflibre-regular.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Averia Serif Libre";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/averiaseriflibre-italic.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/averiaseriflibre-italic.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular.ttf")
+      format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Light.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Light.ttf")
+      format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-SemiBold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular-SemiBold.ttf")
+      format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Bold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Bold.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Black.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Black.ttf")
+      format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+.dpcaboutpage_StandardButton_9VDdw {
+  border: 3px solid #ffffff50;
+  padding: 15px 25px;
+  margin: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.2s;
+}
+.dpcaboutpage_StandardButton_9VDdw:hover {
+  border: 3px solid #ff6046;
+  transform: translateY(-2px);
+  color: #ff6046;
+}
+.dpcaboutpage_StandardButton_9VDdw .dpcaboutpage_ButtonText_1Q3_D {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.dpcaboutpage_StandardButton_9VDdw .dpcaboutpage_SteamLogo_1Y1IL {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//icons/steam_icon.svg");
+}
+.dpcaboutpage_DPCAboutPage_1bwEV {
+  width: 100%;
+  min-height: 1000px;
+  color: #fff;
+  background-color: #222226;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV .dpcaboutpage_Header_2812Y {
+  width: 100%;
+  padding: 100px 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #37373d;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV
+  .dpcaboutpage_Header_2812Y
+  .dpcaboutpage_ProCircuit_3A8s8 {
+  color: #a3a3a3;
+  font-size: 30px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-family: "Reaver", serif;
+  margin-bottom: 10px;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV
+  .dpcaboutpage_Header_2812Y
+  .dpcaboutpage_Global_1yssd {
+  color: #fff;
+  font-size: 40px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-family: "Reaver", serif;
+  margin-bottom: 20px;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV
+  .dpcaboutpage_Header_2812Y
+  .dpcaboutpage_GlobalDesc_2l0r2 {
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV .dpcaboutpage_Events_26D0_ {
+  width: 100%;
+  padding: 80px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: #0c0d0f;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV
+  .dpcaboutpage_Events_26D0_
+  .dpcaboutpage_Title_uDKKo {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 32px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-family: "Reaver", serif;
+  margin-bottom: 40px;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV
+  .dpcaboutpage_Events_26D0_
+  .dpcaboutpage_EventContainer_2QvD3 {
+  width: 1200px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV
+  .dpcaboutpage_Events_26D0_
+  .dpcaboutpage_EventContainer_2QvD3
+  .dpcaboutpage_EventImage_b9E48 {
+  width: 600px;
+  height: 400px;
+  background-color: #37373d;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV
+  .dpcaboutpage_Events_26D0_
+  .dpcaboutpage_EventContainer_2QvD3
+  .dpcaboutpage_EventDescription_22Z0_ {
+  width: 600px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV
+  .dpcaboutpage_Events_26D0_
+  .dpcaboutpage_EventContainer_2QvD3
+  .dpcaboutpage_EventDescription_22Z0_
+  .dpcaboutpage_EventTitle_3BAy4 {
+  width: 100%;
+  padding: 0px 50px;
+  color: #fff;
+  font-size: 28px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-family: "Reaver", serif;
+  margin-bottom: 20px;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV
+  .dpcaboutpage_Events_26D0_
+  .dpcaboutpage_EventContainer_2QvD3
+  .dpcaboutpage_EventDescription_22Z0_
+  .dpcaboutpage_EventDesc_2DZ9P {
+  width: 100%;
+  padding: 0px 50px;
+  color: #aaa;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV .dpcaboutpage_TheInternational_3aVid {
+  width: 100%;
+  padding: 100px 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #37373d;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV
+  .dpcaboutpage_TheInternational_3aVid
+  .dpcaboutpage_Title_uDKKo {
+  color: #fff;
+  font-size: 28px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-family: "Reaver", serif;
+  margin-bottom: 20px;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV
+  .dpcaboutpage_TheInternational_3aVid
+  .dpcaboutpage_Desc_3AwI_ {
+  color: #aaa;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV .dpcaboutpage_FAQ_2_DGo {
+  width: 100%;
+  padding: 80px 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #252626;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV
+  .dpcaboutpage_FAQ_2_DGo
+  .dpcaboutpage_Title_uDKKo {
+  color: #fff;
+  font-size: 32px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-family: "Reaver", serif;
+  margin-bottom: 20px;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV
+  .dpcaboutpage_FAQ_2_DGo
+  .dpcaboutpage_LastUpdated_1sSuS {
+  color: #a3a3a3;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-family: "Reaver", serif;
+  margin-bottom: 40px;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV
+  .dpcaboutpage_FAQ_2_DGo
+  .dpcaboutpage_FAQEntry_3tyXO {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV
+  .dpcaboutpage_FAQ_2_DGo
+  .dpcaboutpage_FAQEntry_3tyXO
+  .dpcaboutpage_Question_25bVM {
+  color: #fff;
+  font-size: 15px;
+  font-family: "Reaver", serif;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV
+  .dpcaboutpage_FAQ_2_DGo
+  .dpcaboutpage_FAQEntry_3tyXO
+  .dpcaboutpage_Answer_3L-3t {
+  color: #a3a3a3;
+  font-size: 14px;
+  letter-spacing: 1px;
 }
