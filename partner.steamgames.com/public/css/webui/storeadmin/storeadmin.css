@@ -4285,6 +4285,11 @@ iframe.youtubeembed_PreviewYouTubeVideo_3ebu4.youtubeembed_floatRight_3NCOz {
   font-size: 16px;
   line-height: 22px;
 }
+.bbcodes_SmallText_38kjs {
+  color: #fff;
+  font-size: 11px;
+  line-height: 13px;
+}
 .bbcodes_Underline_2r-_U {
   display: inline;
   text-decoration: underline;
@@ -4486,6 +4491,23 @@ iframe.youtubeembed_PreviewYouTubeVideo_3ebu4.youtubeembed_floatRight_3NCOz {
   .bbcodes_EmbedArrow_3FT4d
   svg {
   margin-right: 8px;
+}
+a.bbcodes_LinkButton_14_Fn {
+  background-color: #2681da;
+  font-size: 14px;
+  padding: 6px 20px;
+  display: inline-block;
+  border-radius: 3px;
+  margin: 4px 0px;
+}
+a.bbcodes_LinkButton_14_Fn span {
+  color: #fff;
+  padding-bottom: 6px;
+}
+a.bbcodes_LinkButton_14_Fn:hover {
+  background-color: #3691fa;
+  color: #fff;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 .image_ErrorDiv_bxLsI {
   background-color: hotpink;

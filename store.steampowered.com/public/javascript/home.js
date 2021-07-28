@@ -1006,7 +1006,7 @@ GHomepage = {
 
 			if( rgLookup.item )
 			{
-				$el.on('hover', function(){
+				$el.on('hover focus', function(){
 
 					var fnShowElement = function()
 					{

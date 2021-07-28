@@ -4573,44 +4573,46 @@
           f = u[1],
           g = e(0, p).map(function (e) {
             return t(e);
-          });
-        if (0 === g.length) for (var h = 0; h < p; h++) g.push(l());
-        var y = (function (e, t) {
+          }),
+          h = 0 === g.length;
+        if (h) for (var y = 0; y < p; y++) g.push(l());
+        var v = (function (e, t, n) {
           void 0 === t && (t = {});
-          var n = e.length,
-            r = Object(a.useState)(0),
-            o = r[0],
-            s = r[1],
-            l = N(),
-            c = l[0],
-            m = l[1],
-            d = N(),
-            u = d[0],
-            p = d[1],
-            f = Object(_.i)("padding-right", C),
-            g = Object(_.g)().spacing.none,
-            h = 1;
-          m.width &&
-            void 0 !== p.width &&
-            (h = Math.floor((p.width + g) / m.width));
-          var y = o + h < n,
-            v = function () {
-              return y && s(o + h);
+          void 0 === n && (n = !1);
+          var r = e.length,
+            o = Object(a.useState)(0),
+            s = o[0],
+            l = o[1],
+            c = N(),
+            m = c[0],
+            d = c[1],
+            u = N(),
+            p = u[0],
+            f = u[1],
+            g = Object(_.i)("padding-right", C),
+            h = Object(_.g)().spacing.none,
+            y = 1;
+          d.width &&
+            void 0 !== f.width &&
+            (y = Math.floor((f.width + h) / d.width));
+          var v = !n && s + y < r,
+            I = function () {
+              return v && l(s + y);
             },
-            I = o > 0,
-            w = function () {
-              return I && s(Math.max(0, o - h));
+            w = s > 0,
+            M = function () {
+              return w && l(Math.max(0, s - y));
             },
-            M = o,
-            j = o + h,
-            E = e.slice(M, j).map(function (e, n) {
+            j = s,
+            E = s + y,
+            S = e.slice(j, E).map(function (e, n) {
               return i.a.createElement(
                 "div",
                 {
-                  key: n + M,
-                  ref: 0 === n ? c : void 0,
+                  key: n + j,
+                  ref: 0 === n ? m : void 0,
                   className: Object(b.a)(
-                    0 === n || n < h - 1 ? f : void 0,
+                    0 === n || n < y - 1 ? g : void 0,
                     t.itemClassName
                   ),
                 },
@@ -4618,20 +4620,20 @@
               );
             });
           return {
-            containerRef: u,
-            rgVisibleItems: E,
-            bAllowNext: y,
-            bAllowPrev: I,
-            fnNext: v,
-            fnPrev: w,
-            iPosition: o,
+            containerRef: p,
+            rgVisibleItems: S,
+            bAllowNext: v,
+            bAllowPrev: w,
+            fnNext: I,
+            fnPrev: M,
+            iPosition: s,
           };
-        })(g, c);
-        return Object(r.a)(Object(r.a)({}, y), {
+        })(g, c, h);
+        return Object(r.a)(Object(r.a)({}, v), {
           fnNext: function () {
-            y.iPosition + y.rgVisibleItems.length > p - d &&
-              f(p + y.rgVisibleItems.length),
-              y.fnNext();
+            v.iPosition + v.rgVisibleItems.length > p - d &&
+              f(p + v.rgVisibleItems.length),
+              v.fnNext();
           },
         });
       }

@@ -498,7 +498,12 @@ var templ_DiscountDiv = new Template( ''
 		+ '				<div class="formdata">'
 		+ '					<input maxlength="2" style="width: 50px" class="Description" id="#{DiscountId}_discount_quantity" name="#{DiscountId}[quantity]" value="#{DiscountQuantity}">'
 		+ '				</div>'
-		+ '			</div>'		+ '			<div class="formrow">'
+		+ '			</div>'
+		+ '			<div class="formrow">'
+		+ '				<div><input type="checkbox" name="#{DiscountId}[flag_singleuse]" id="#{DiscountId}_flag_singleuse" value="#{DiscountSingleUse}"><label for="#{DiscountId}_flag_singleuse">Single Use</label></div>'
+		+ '				<div><input type="checkbox" name="#{DiscountId}[flag_taxable]" id="#{DiscountId}_flag_taxable" value="#{DiscountTaxable}"><label for="#{DiscountId}_flag_taxable">Taxable</label></div>'
+		+ '			</div>'
+		+ '			<div class="formrow">'
 		+ '				<div class="formlabel">Discount amounts:</div>'
 		+ '				<div class="formdata">'
 		+ '					<div style="margin-left: 100px;float:left">Discount in cents:</div>'
@@ -541,6 +546,7 @@ var templ_DiscountDiv = new Template( ''
 		+ '				</div>'
 		+ '				<div style="clear: both;"></div>'
 		+ '			</div>'
+		+ '		<input type="hidden" name="#{DiscountId}[flags]" value="#{DiscountFlags}" />'
 		+ '		<input type="hidden" name="sessionid" value="#{SessionId}" />'
 		+ '		<input id="packageDiscount#{DiscountId}Submit" style="float: right;" type="submit" value="Save Discount" onclick="SetPackageCost( #{PackageId}, \'packageDiscount#{DiscountNumber}Form\', \'packageDiscount#{DiscountId}Submit\', true ); return false;" />'
 		+ '		</div>'
@@ -586,11 +592,15 @@ function CreateDiscount( target, id, discount, packageid )
 	var discount_quantity = (discount['quantity'] == null ) ? 1 : discount['quantity'];
 	var discount_number = (discount['discount_id'] == null) ? '' : discount['discount_id']; // the actual discountID used by the rack, not the HTML elementID
 	var master_discountid = (discount['master_discountid'] == null) ? 0 : discount['master_discountid'];
+	var flags = (discount['flags'] == null) ? 0 : discount['flags'];
+
+	var flagSingleUse = flags & 16 ? 0 : 1;
+	var flagTaxable = flags & 16 ? 0 : 1;
 
 	// Base Discounts
 	var strDiscountPrices = GetRequiredCurrencyBlock( id + '[discount]', g_RequiredCurrencies, amt['base'], true, false );
 
-	var discountBlock = templ_DiscountDiv.evaluate( { DiscountId: id, SessionId: g_sessionID, PackageId: packageid, Name: name, DiscountNumber: discount_number, Description: description, DiscountPercentage: discount_percent, DiscountQuantity: discount_quantity, DiscountPrices: strDiscountPrices, Group: group } );
+	var discountBlock = templ_DiscountDiv.evaluate( { DiscountId: id, SessionId: g_sessionID, PackageId: packageid, Name: name, DiscountNumber: discount_number, Description: description, DiscountPercentage: discount_percent, DiscountQuantity: discount_quantity, DiscountPrices: strDiscountPrices, Group: group, DiscountFlags: flags, DiscountSingleUse: flagSingleUse, DiscountTaxable: flagTaxable } );
 	target.insert( discountBlock );
 
 	if ( master_discountid && master_discountid != 0 )

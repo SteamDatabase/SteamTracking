@@ -641,22 +641,22 @@
                         name: a.get(d),
                         subtitle: new Array(),
                         rgStoreTagFilter: {
-                          type: c.n.k_EStoreFilterClauseTypeAnd,
+                          type: c.o.k_EStoreFilterClauseTypeAnd,
                           rgSubexpressions: [
                             {
-                              type: c.n.k_EStoreFilterClauseTypeOr,
+                              type: c.o.k_EStoreFilterClauseTypeOr,
                               rgSubexpressions: t.has(d)
                                 ? t.get(d).map(function (e) {
                                     return {
                                       type:
-                                        c.n.k_EStoreFilterClauseTypeStoreTag,
+                                        c.o.k_EStoreFilterClauseTypeStoreTag,
                                       value: e,
                                     };
                                   })
                                 : [
                                     {
                                       type:
-                                        c.n.k_EStoreFilterClauseTypeStoreTag,
+                                        c.o.k_EStoreFilterClauseTypeStoreTag,
                                       value: d,
                                     },
                                   ],
@@ -979,7 +979,7 @@
                   a.length.toString()
                 )
               ),
-              _.createElement(I.b, {
+              _.createElement(I.c, {
                 bIsMinimized: !c,
                 fnToggleMinimize: function () {
                   l(!c), u(!c);
@@ -1098,7 +1098,7 @@
                   a.length.toString()
                 )
               ),
-              _.createElement(I.b, {
+              _.createElement(I.c, {
                 bIsMinimized: !s,
                 fnToggleMinimize: function () {
                   c(!s);
@@ -1323,7 +1323,7 @@
                         "span",
                         null,
                         Object(O.f)("#FacetedBrowseEditor_AutoGenerate"),
-                        _.createElement(I.d, {
+                        _.createElement(I.e, {
                           tooltip: Object(O.f)(
                             "#FacetedBrowseEditor_Tooltip_AutoGenerate"
                           ),
@@ -1415,7 +1415,7 @@
                           "span",
                           null,
                           Object(O.f)("#FacetedBrowseEditor_PruneUnused"),
-                          _.createElement(I.d, {
+                          _.createElement(I.e, {
                             tooltip: Object(O.f)(
                               "#FacetedBrowseEditor_Tooltip_PruneUnused"
                             ),
@@ -1434,7 +1434,7 @@
                         "span",
                         null,
                         Object(O.f)("#FacetedBrowseEditor_MinMatchesText"),
-                        _.createElement(I.d, {
+                        _.createElement(I.e, {
                           tooltip: Object(O.f)(
                             "#FacetedBrowseEditor_Tooltip_MinMatches"
                           ),
@@ -1463,7 +1463,7 @@
                         "span",
                         null,
                         Object(O.f)("#FacetedBrowseEditor_MaxFacetValuesText"),
-                        _.createElement(I.d, {
+                        _.createElement(I.e, {
                           tooltip: Object(O.f)(
                             "#FacetedBrowseEditor_Tooltip_MaxFacetValues"
                           ),
@@ -1492,7 +1492,7 @@
                         "span",
                         null,
                         Object(O.f)("#FacetedBrowseEditor_SortFacetValuesText"),
-                        _.createElement(I.d, {
+                        _.createElement(I.e, {
                           tooltip: Object(O.f)(
                             "#FacetedBrowseEditor_Tooltip_SortFacetValues"
                           ),
@@ -2014,7 +2014,7 @@
                               ? a.set(u, null)
                               : u.type === c.l.k_EPrice
                               ? a.set(u, {
-                                  type: c.n.k_EStoreFilterClauseTypePrice,
+                                  type: c.o.k_EStoreFilterClauseTypePrice,
                                 })
                               : u.type === c.l.k_EAppType
                               ? a.set(u, Z(u.appType))
@@ -2098,7 +2098,7 @@
       function K(e, t, n) {
         for (
           var a = {
-              type: c.n.k_EStoreFilterClauseTypeAnd,
+              type: c.o.k_EStoreFilterClauseTypeAnd,
               rgSubexpressions: new Array(),
             },
             i = 0,
@@ -2109,7 +2109,7 @@
           for (
             var l = o[i],
               s = {
-                type: c.n.k_EStoreFilterClauseTypeOr,
+                type: c.o.k_EStoreFilterClauseTypeOr,
                 bNegated: "Must not have" === l.type,
                 rgSubexpressions: new Array(),
               },
@@ -2130,12 +2130,12 @@
               }
               var g = t.get(_);
               s.rgSubexpressions.push({
-                type: c.n.k_EStoreFilterClauseTypeStoreTag,
+                type: c.o.k_EStoreFilterClauseTypeStoreTag,
                 value: g,
               });
             } else if (m == r.j.Feature)
               s.rgSubexpressions.push({
-                type: c.n.k_EStoreFilterClauseTypeFeatureTag,
+                type: c.o.k_EStoreFilterClauseTypeFeatureTag,
                 value: _,
               });
             else if (m === r.j.Auto) {
@@ -2173,18 +2173,18 @@
       }
       function Y(e) {
         return {
-          type: c.n.k_EStoreFilterClauseTypeLanguage,
+          type: c.o.k_EStoreFilterClauseTypeLanguage,
           value: Object(s.a)(e),
         };
       }
       function J(e) {
         return {
-          type: c.n.k_EStoreFilterClauseTypeContentDescriptor,
+          type: c.o.k_EStoreFilterClauseTypeContentDescriptor,
           value: e,
         };
       }
       function Z(e) {
-        return { type: c.n.k_EStoreFilterClauseTypeAppType, value: e };
+        return { type: c.o.k_EStoreFilterClauseTypeAppType, value: e };
       }
     },
     "66At": function (e, t, n) {
@@ -3247,7 +3247,7 @@
                       Object(b.f)("#EventEditor_Status_Public")
                     ),
                     n &&
-                      s.createElement(S.d, {
+                      s.createElement(S.e, {
                         tooltip: Object(b.f)("#EventEditor_Status_Public_ttip"),
                       }),
                     a &&
@@ -3264,7 +3264,7 @@
                       ),
                     n &&
                       a &&
-                      s.createElement(S.d, {
+                      s.createElement(S.e, {
                         tooltip: Object(b.f)(
                           "#EventDashBoard_ModerationQueueWarning"
                         ),
@@ -3286,7 +3286,7 @@
                       "span",
                       { className: g.a.FlexRowContainer },
                       s.createElement(h.a, { bSingleLine: !0, dateAndTime: i }),
-                      s.createElement(S.d, {
+                      s.createElement(S.e, {
                         tooltip: Object(b.f)("#EventEditor_Status_Staged_ttip"),
                       })
                     )
@@ -3302,7 +3302,7 @@
                   Object(b.f)("#EventEditor_Status") +
                     ": " +
                     Object(b.f)("#EventEditor_Status_Draft"),
-                  s.createElement(S.d, {
+                  s.createElement(S.e, {
                     tooltip: Object(b.f)("#EventEditor_Status_Draft_ttip"),
                   })
                 )
@@ -4156,6 +4156,7 @@
         ContentHubOverrideCtn: "partnereventsale_ContentHubOverrideCtn_3IkY7",
         ContentHubOverrideInnerCtn:
           "partnereventsale_ContentHubOverrideInnerCtn_3aA7g",
+        SetupCtn: "partnereventsale_SetupCtn_yrYBA",
       };
     },
     K1T0: function (e, t, n) {
@@ -10699,7 +10700,7 @@
             (this.m_startTimeEditChoice = a.k_ENow),
             (this.m_endTimeEditChoice = i.k_EDuration),
             (this.m_originalEvent = e),
-            (this.m_curModel = e.clone()),
+            (this.m_curModel = e.clone(!0)),
             this.DeriveTimeEditChoices(),
             this.DeriveVisibilitySetting(),
             this.EnsureCurrentLanguageValid(),
@@ -11293,7 +11294,7 @@
             }
             (this.m_originalEvent = new v.c()),
               (this.m_originalEvent.loadedAllLanguages = !0),
-              Object(m.u)(this.m_curModel.jsondata),
+              Object(m.v)(this.m_curModel.jsondata),
               this.SetDirty(
                 r.description |
                   r.name |
@@ -11507,7 +11508,7 @@
           (e.prototype.Refresh = function (e) {
             this.m_curModel.GID == e.GID &&
               ((this.m_originalEvent = e),
-              (this.m_curModel = e.clone()),
+              (this.m_curModel = e.clone(!0)),
               this.DeriveTimeEditChoices(),
               this.DeriveVisibilitySetting(),
               this.EnsureCurrentLanguageValid(),
@@ -12497,7 +12498,7 @@
               "div",
               null,
               Object(S.f)("#Sale_DiscountEvent_Choose"),
-              p.a.createElement(y.d, {
+              p.a.createElement(y.e, {
                 tooltip: Object(S.f)("#Sale_DiscountEvent_Choose_ttip"),
               })
             ),
@@ -12845,28 +12846,31 @@
     jZUi: function (e, t, n) {},
     k3PP: function (e, t, n) {
       "use strict";
-      n.d(t, "h", function () {
+      n.d(t, "i", function () {
         return Wt;
       }),
-        n.d(t, "g", function () {
+        n.d(t, "h", function () {
           return qt;
         }),
-        n.d(t, "d", function () {
+        n.d(t, "e", function () {
           return Kt;
         }),
-        n.d(t, "c", function () {
+        n.d(t, "d", function () {
           return Yt;
         }),
-        n.d(t, "f", function () {
+        n.d(t, "g", function () {
           return $t;
         }),
         n.d(t, "a", function () {
           return an;
         }),
-        n.d(t, "e", function () {
+        n.d(t, "f", function () {
           return _n;
         }),
         n.d(t, "b", function () {
+          return fn;
+        }),
+        n.d(t, "c", function () {
           return yn;
         });
       var a = n("mrSG"),
@@ -16992,7 +16996,7 @@
                     null,
                     d.createElement(
                       "div",
-                      null,
+                      { className: J.SetupCtn },
                       d.createElement(
                         "span",
                         null,
@@ -20856,8 +20860,8 @@
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
               (t.state = {
-                maxRowsString: Object(St.q)(t.props.saleSection).toString(),
-                capItemCountString: Object(St.s)(
+                maxRowsString: Object(St.r)(t.props.saleSection).toString(),
+                capItemCountString: Object(St.t)(
                   t.props.saleSection
                 ).toString(),
               }),
@@ -20869,14 +20873,14 @@
             (t.prototype.OnRandomChange = function (e, t) {
               t || (e.cap_item_count = 0),
                 this.setState({
-                  maxRowsString: Object(St.s)(
+                  maxRowsString: Object(St.t)(
                     this.props.saleSection
                   ).toString(),
                 });
             }),
             (t.prototype.OnCapSectionChange = function (e, t) {
               this.setState({
-                maxRowsString: Object(St.q)(this.props.saleSection).toString(),
+                maxRowsString: Object(St.r)(this.props.saleSection).toString(),
               });
             }),
             (t.prototype.OnCapItemCountChange = function (e, t) {
@@ -21042,7 +21046,7 @@
                         showValue: !0,
                         min: 1,
                         max: 3,
-                        value: Object(St.r)(r),
+                        value: Object(St.s)(r),
                         onChange: function (e) {
                           return a.OnCarouselRowsChange(r, e);
                         },
@@ -21134,6 +21138,15 @@
                             value: this.state.maxRowsString,
                           })
                       ),
+                    r.show_as_carousel &&
+                      d.createElement(_n, {
+                        varName: "carousel_auto_advance",
+                        valveOnly: !0,
+                        editModel: l,
+                        section: r,
+                        textToken: "#Sale_Section_CarouselAutoAdvance",
+                        ttipToken: "#Sale_Section_CarouselAutoAdvance_Tooltip",
+                      }),
                     c && d.createElement(pn, { editModel: l, section: r }),
                     d.createElement(mn, {
                       editModel: l,
@@ -21272,7 +21285,7 @@
                 : "#Sale_Section_SingleItemDisplay_ttip"
             ),
             strDropDownClassName: j.DropDownScroll,
-            selectedOption: n.single_item_style || St.w,
+            selectedOption: n.single_item_style || St.x,
             onChange: function (e) {
               n.single_item_style !== e.data &&
                 ((n.single_item_style = e.data),
@@ -21475,7 +21488,7 @@
                 this.props.editModel.SetDirty(o.c.jsondata_sales);
             }),
             (t.prototype.RenderTabName = function (e) {
-              var t = St.D.find(function (t) {
+              var t = St.E.find(function (t) {
                 return t.flavor === e;
               });
               return d.createElement(
@@ -21491,7 +21504,7 @@
                 t = this.props.saleSection.item_browse_section_data || {},
                 n = t.master_subscription,
                 a = t.tabs || [],
-                i = St.E.filter(function (e) {
+                i = St.F.filter(function (e) {
                   return (
                     void 0 ===
                     a.find(function (t) {
@@ -21539,17 +21552,6 @@
                   onChange: this.OnSubscriptionIDChange,
                   value: n,
                 }),
-                d.createElement(
-                  R.b,
-                  {
-                    clanSteamID: this.props.editModel.GetClanSteamID(),
-                    requireAdmin: !0,
-                  },
-                  d.createElement(fn, {
-                    editModel: this.props.editModel,
-                    section: this.props.saleSection,
-                  })
-                ),
                 d.createElement(
                   "div",
                   { className: j.EventEditorTextTitle },
@@ -21602,35 +21604,37 @@
         fn = Object(u.a)(function (e) {
           var t,
             n,
-            a,
-            i,
-            r = e.editModel,
-            l = e.section,
-            s = Object(d.useState)(!0),
-            c = s[0],
-            u = s[1],
-            p = function () {
-              l.item_browse_section_data || (l.item_browse_section_data = {});
-            },
-            m =
-              (null === (t = Zt(r, l)) || void 0 === t ? void 0 : t.tabs) || [],
-            g =
-              ((a = Vt.Get()),
+            a = e.editModel,
+            i = Object(d.useState)(!1),
+            r = i[0],
+            l = i[1],
+            s = [
+              {
+                label: Object(f.f)("#SaleItemSource_TaggedItems"),
+                data: St.n.k_ETaggedItems,
+              },
+              {
+                label: Object(f.f)("#SaleItemSource_ContentHub"),
+                data: St.n.k_EContentHub,
+              },
+            ],
+            c =
+              ((t = Vt.Get()),
               Object(d.useEffect)(
                 function () {
-                  a.EnsureLoaded();
+                  t.EnsureLoaded();
                 },
-                [a]
+                [t]
               ),
-              a.GetHubs());
+              t.GetHubs());
           return (
-            g &&
-              (i = Array.from(null == g ? void 0 : g.keys()).map(function (e) {
+            c &&
+              (n = Array.from(null == c ? void 0 : c.keys()).map(function (e) {
                 return {
                   label:
                     (null == e ? void 0 : e.length) > 0
-                      ? g.get(e) + " (" + e + ")"
-                      : "" + g.get(e),
+                      ? c.get(e) + " (" + e + ")"
+                      : "" + c.get(e),
                   value: e,
                 };
               })),
@@ -21640,108 +21644,68 @@
                 title: Object(f.f)("#Sale_BrowseSection_ContentHubTitle"),
                 tooltip: Object(f.f)("#Sale_BrowseSection_ContentHubTooltip"),
                 getMinimized: function () {
-                  return c;
+                  return r;
                 },
                 toggleMinimized: function () {
-                  return u(!c);
+                  return l(!r);
                 },
               },
-              Boolean(g)
+              Boolean(c)
                 ? d.createElement(
                     d.Fragment,
                     null,
                     d.createElement(
                       _.n,
                       null,
-                      Object(f.f)("#Sale_BrowseSection_ContentHub")
+                      Object(f.f)("#SaleItemSource_Title")
                     ),
-                    d.createElement(ve.a, {
-                      options: i,
-                      value: i.find(function (e) {
-                        var t;
-                        return (
-                          e.value ===
-                          (null === (t = l.item_browse_section_data) ||
-                          void 0 === t
-                            ? void 0
-                            : t.source_content_hub)
-                        );
-                      }),
+                    d.createElement(_.i, {
+                      rgOptions: s,
+                      selectedOption:
+                        a.GetEventModel().jsondata.item_source_type ||
+                        St.n.k_ETaggedItems,
                       onChange: function (e) {
-                        p(),
-                          (l.item_browse_section_data.source_content_hub =
-                            e.value),
-                          r.SetDirty(o.c.jsondata_sales);
-                      },
-                      isSearchable: !0,
-                    }),
-                    d.createElement(_.e, {
-                      label: Object(f.f)(
-                        "#Sale_BrowseSection_ContentHubDiscountedOnly"
-                      ),
-                      checked:
-                        null === (n = l.item_browse_section_data) ||
-                        void 0 === n
-                          ? void 0
-                          : n.content_hub_discounted_only,
-                      onChange: function (e) {
-                        p(),
-                          (l.item_browse_section_data.content_hub_discounted_only = e),
-                          r.SetDirty(o.c.jsondata_sales);
+                        (a.GetEventModel().jsondata.item_source_type = e.data),
+                          a.SetDirty(o.c.jsondata_sales);
                       },
                     }),
-                    d.createElement(
-                      "p",
-                      null,
-                      Object(f.f)(
-                        "#Sale_BrowseSection_ContentHubTabOverridesDesc"
-                      )
-                    ),
-                    null == m
-                      ? void 0
-                      : m.map(function (e) {
-                          return d.createElement(
-                            "div",
-                            { key: "tab_override_" + e.unique_id },
-                            d.createElement(
-                              "div",
-                              { className: J.ContentHubOverrideCtn },
-                              d.createElement(
-                                "div",
-                                { className: J.ContentHubOverrideInnerCtn },
-                                d.createElement(
-                                  _.n,
-                                  null,
-                                  Object(f.f)(
-                                    "#Sale_BrowseSection_ContentHubTabOverride",
-                                    e.localized_label
-                                      ? e.localized_label[
-                                          Object(x.h)(N.c.LANGUAGE)
-                                        ]
-                                      : Object(f.f)(e.default_label)
-                                  )
-                                ),
-                                d.createElement(ve.a, {
-                                  options: i,
-                                  value: i.find(function (t) {
-                                    return (
-                                      t.value === e.source_content_hub_override
-                                    );
-                                  }),
-                                  onChange: function (t) {
-                                    return (function (e, t) {
-                                      p(),
-                                        (e.source_content_hub_override =
-                                          t.value),
-                                        r.SetDirty(o.c.jsondata_sales);
-                                    })(e, t);
-                                  },
-                                  isSearchable: !0,
-                                })
-                              )
-                            )
-                          );
+                    a.GetEventModel().jsondata.item_source_type ===
+                      St.n.k_EContentHub &&
+                      d.createElement(
+                        d.Fragment,
+                        null,
+                        d.createElement(
+                          _.n,
+                          null,
+                          Object(f.f)("#Sale_BrowseSection_ContentHub")
+                        ),
+                        d.createElement(ve.a, {
+                          options: n,
+                          value: n.find(function (e) {
+                            return (
+                              e.value ===
+                              a.GetEventModel().jsondata.source_content_hub
+                            );
+                          }),
+                          onChange: function (e) {
+                            (a.GetEventModel().jsondata.source_content_hub =
+                              e.value),
+                              a.SetDirty(o.c.jsondata_sales);
+                          },
+                          isSearchable: !0,
+                        }),
+                        d.createElement(_.e, {
+                          label: Object(f.f)(
+                            "#Sale_BrowseSection_ContentHubDiscountedOnly"
+                          ),
+                          checked: a.GetEventModel().jsondata
+                            .content_hub_discounted_only,
+                          onChange: function (e) {
+                            (a.GetEventModel().jsondata.content_hub_discounted_only = e),
+                              a.SetDirty(o.c.jsondata_sales);
+                          },
                         })
+                      )
                   )
                 : d.createElement(he.a, { size: "medium", position: "center" })
             )
@@ -22558,19 +22522,19 @@
     oqmg: function (e, t, n) {
       "use strict";
       n.d(t, "b", function () {
-        return q;
+        return K;
       }),
         n.d(t, "c", function () {
-          return X;
-        }),
-        n.d(t, "d", function () {
           return $;
         }),
-        n.d(t, "e", function () {
+        n.d(t, "d", function () {
           return ee;
         }),
+        n.d(t, "e", function () {
+          return te;
+        }),
         n.d(t, "a", function () {
-          return se;
+          return ce;
         });
       var a = n("mrSG"),
         i = n("vDqi"),
@@ -22588,106 +22552,107 @@
         h = n("dsQf"),
         f = n.n(h),
         b = n("TtDX"),
-        v = n("5eAM"),
-        E = n("R+8l"),
-        S = n("oVVc"),
-        y = n("y+6m"),
-        O = n("Mgs7"),
-        T = n("qP7j"),
-        C = n("fpVW"),
-        j = n("gyoR"),
-        I = n("MnIK"),
-        M = n("Jqb/"),
-        w = n("ka0M"),
-        D = n("xnZ7"),
-        k = n.n(D),
-        G = n("0OaU"),
-        L = n("+d9t"),
-        A = n("qiKp"),
-        B = n("exH9"),
-        N = n("TLQK"),
-        F = n("opsS"),
-        R = n("bS9Q"),
-        x = n("IzPI"),
-        P = n("lkRc"),
-        U = n("as1E"),
-        H = n("k3PP"),
-        V = n("JiI5"),
-        z = n("IMce");
-      function W(e) {
+        v = n("3+zv"),
+        E = n("5eAM"),
+        S = n("R+8l"),
+        y = n("oVVc"),
+        O = n("y+6m"),
+        T = n("Mgs7"),
+        C = n("qP7j"),
+        j = n("fpVW"),
+        I = n("gyoR"),
+        M = n("MnIK"),
+        w = n("Jqb/"),
+        D = n("ka0M"),
+        k = n("xnZ7"),
+        G = n.n(k),
+        L = n("0OaU"),
+        A = n("+d9t"),
+        B = n("qiKp"),
+        N = n("exH9"),
+        F = n("TLQK"),
+        R = n("opsS"),
+        x = n("bS9Q"),
+        P = n("IzPI"),
+        U = n("lkRc"),
+        H = n("as1E"),
+        V = n("k3PP"),
+        z = n("JiI5"),
+        W = n("IMce");
+      function q(e) {
         return (e = (e = (e = e.replace('"', " ")).replace("<", " ")).replace(
           ">",
           " "
         )).trim();
       }
-      function q(e) {
+      function K(e) {
         var t = null,
           n = "",
           a = !1,
           i = null == e ? void 0 : e.type;
         if ("bundle" === i)
-          (t = E.a.GetBundleInfo(e.id)),
-            (n = P.c.STORE_BASE_URL + "bundle/" + e.id),
+          (t = S.a.GetBundleInfo(e.id)),
+            (n = U.c.STORE_BASE_URL + "bundle/" + e.id),
             (a = !t);
         else if ("sub" === i)
-          (t = S.b.GetPackageInfo(e.id)),
-            (n = P.c.STORE_BASE_URL + "sub/" + e.id),
+          (t = y.b.GetPackageInfo(e.id)),
+            (n = U.c.STORE_BASE_URL + "sub/" + e.id),
             (a = !t);
         else if (i) {
-          v.a.LoadAppLinkInfo([e.id]);
-          var r = v.a.GetAppLinkInfo(e.id);
+          E.a.LoadAppLinkInfo([e.id]);
+          var r = E.a.GetAppLinkInfo(e.id);
           (t = r && r.name ? r : null),
-            (n = P.c.STORE_BASE_URL + "app/" + e.id),
-            (a = !t && v.a.BHasAppLinkLoaded(e.id));
+            (n = U.c.STORE_BASE_URL + "app/" + e.id),
+            (a = !t && E.a.BHasAppLinkLoaded(e.id));
         }
         return { appData: t, linkURL: n, bInvalidID: a };
       }
-      var K = function (e) {
+      var Q = function (e) {
           return m.createElement("img", {
-            className: k.a.RemoveIcon,
+            className: G.a.RemoveIcon,
             src: f.a,
             onClick: e.onClick,
           });
         },
-        Q = function (e) {
+        Y = function (e) {
           var t,
             n = e.clause;
           if (!(null === (t = n.or_tags) || void 0 === t ? void 0 : t.length))
             return null;
           var a =
               ("Must have" === n.type
-                ? Object(N.f)("#Sale_TagFilter_MustHave")
-                : Object(N.f)("#Sale_TagFilter_MustNotHave")) +
+                ? Object(F.f)("#Sale_TagFilter_MustHave")
+                : Object(F.f)("#Sale_TagFilter_MustNotHave")) +
               " '" +
-              n.or_tags.join("' " + Object(N.f)("#Sale_TagFilter_Or") + " '") +
+              n.or_tags.join("' " + Object(F.f)("#Sale_TagFilter_Or") + " '") +
               "'",
-            i = "Must have" === n.type ? z.MustHaveClause : z.MustNotHaveClause;
+            i = "Must have" === n.type ? W.MustHaveClause : W.MustNotHaveClause;
           return m.createElement(
             "div",
-            { className: Object(B.a)(i, z.ClauseRowCtn) },
+            { className: Object(N.a)(i, W.ClauseRowCtn) },
             a
           );
         },
-        Y = function (e) {
+        J = function (e) {
           var t = e.filter;
           return Object(l.q)(t)
             ? m.createElement(
                 "div",
-                { className: z.FilterDisplayNoFilter },
-                Object(N.f)("#Sale_TagFilter_NoFilter"),
-                m.createElement(H.d, {
-                  tooltip: Object(N.f)("#Sale_TagFilter_NoFilter_ttip"),
+                { className: W.FilterDisplayNoFilter },
+                Object(F.f)("#Sale_TagFilter_NoFilter"),
+                m.createElement(V.e, {
+                  tooltip: Object(F.f)("#Sale_TagFilter_NoFilter_ttip"),
                 })
               )
             : m.createElement(
                 "div",
-                { className: z.FilterDisplayList },
+                { className: W.FilterDisplayList },
                 t.clauses.map(function (e, t) {
-                  return m.createElement(Q, { clause: e, key: "clause" + t });
+                  return m.createElement(Y, { clause: e, key: "clause" + t });
                 })
               );
         },
-        J = (function () {
+        Z = (function () {
           function e(e) {
             this.m_storageKey = "RecentTags_" + e;
             var t = window.localStorage.getItem(this.m_storageKey);
@@ -22719,7 +22684,7 @@
             e
           );
         })(),
-        Z = Object(p.a)(function (e) {
+        X = Object(p.a)(function (e) {
           var t = e.id,
             n = e.type,
             a = e.name;
@@ -22728,20 +22693,20 @@
             { style: { display: "flex", alignItems: "center" } },
             m.createElement(
               "div",
-              { className: k.a.GameImageContainer },
+              { className: G.a.GameImageContainer },
               m.createElement("img", {
-                src: Object(x.c)(Number(t)),
-                className: k.a.AvatarImage,
+                src: Object(P.c)(Number(t)),
+                className: G.a.AvatarImage,
               })
             ),
-            Object(R.b)(a),
+            Object(x.b)(a),
             " ",
             m.createElement("span", null, "(", t, ")"),
             " ",
-            m.createElement("span", { className: V.SmallText }, "(", n, ")")
+            m.createElement("span", { className: z.SmallText }, "(", n, ")")
           );
         }),
-        X = (function (e) {
+        $ = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.m_currentRequest = 0), (t.m_refInput = m.createRef()), t;
@@ -22816,12 +22781,12 @@
                               case 1:
                                 return (
                                   (d =
-                                    P.c.STORE_BASE_URL +
+                                    U.c.STORE_BASE_URL +
                                     "events_promotion_admin/ajaxitemsuggest"),
                                   (p = {
                                     term: t.replace(" ", "+"),
-                                    cc: P.c.COUNTRY,
-                                    l: P.c.LANGUAGE,
+                                    cc: U.c.COUNTRY,
+                                    l: U.c.LANGUAGE,
                                   }),
                                   [
                                     4,
@@ -22839,11 +22804,11 @@
                                   e &&
                                     (this.m_searchResultsMenu = Object(b.a)(
                                       m.createElement(
-                                        y.c,
-                                        { className: V.SearchResults },
+                                        O.c,
+                                        { className: z.SearchResults },
                                         e.map(function (e) {
                                           return m.createElement(
-                                            y.d,
+                                            O.d,
                                             {
                                               key: e.id,
                                               onSelected: function () {
@@ -22853,7 +22818,7 @@
                                                 );
                                               },
                                             },
-                                            m.createElement(Z, {
+                                            m.createElement(X, {
                                               name: e.name,
                                               id: Number(e.id),
                                               type: e.type,
@@ -22884,12 +22849,12 @@
               var e = this;
               return m.createElement(
                 "div",
-                { className: V.SaleImportURL },
-                m.createElement(O.m, {
+                { className: z.SaleImportURL },
+                m.createElement(T.m, {
                   type: "text",
-                  label: Object(N.f)("#Sale_SelectApps"),
+                  label: Object(F.f)("#Sale_SelectApps"),
                   onChange: this.UpdateAppSuggestions,
-                  placeholder: Object(N.f)("#Sale_SelectApps_Placeholder"),
+                  placeholder: Object(F.f)("#Sale_SelectApps_Placeholder"),
                   onBlur: function () {
                     setTimeout(function () {
                       return (
@@ -22898,16 +22863,16 @@
                     }, 200);
                   },
                   ref: this.m_refInput,
-                  tooltip: Object(N.f)("#Sale_SelectApps_Tooltip"),
+                  tooltip: Object(F.f)("#Sale_SelectApps_Tooltip"),
                 })
               );
             }),
-            Object(a.c)([F.a], t.prototype, "OnAddItem", null),
-            Object(a.c)([F.a], t.prototype, "UpdateAppSuggestions", null),
+            Object(a.c)([R.a], t.prototype, "OnAddItem", null),
+            Object(a.c)([R.a], t.prototype, "UpdateAppSuggestions", null),
             t
           );
         })(m.Component),
-        $ = (function (e) {
+        ee = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -22923,11 +22888,11 @@
             }),
             (t.prototype.OnEditFilter = function () {
               var e = this.props.capsuleContainer;
-              Object(w.d)(
-                m.createElement(se, {
+              Object(D.d)(
+                m.createElement(ce, {
                   editModel: this.props.editModel,
                   filter: e.sale_tag_filter,
-                  title: Object(N.f)("#Sale_TagFilter_EditFilter"),
+                  title: Object(F.f)("#Sale_TagFilter_EditFilter"),
                   onApplyFilter: this.OnApplyFilter,
                   ignoreStartingReferences: e,
                 }),
@@ -22938,33 +22903,33 @@
               var e = this.props.capsuleContainer;
               return m.createElement(
                 "div",
-                { className: z.FilterDisplayCtn },
+                { className: W.FilterDisplayCtn },
                 m.createElement(
                   "div",
-                  { className: z.FilterTitle },
-                  Object(N.f)("#Sale_TagFilter_CurrentFilter"),
-                  m.createElement(H.d, {
-                    tooltip: Object(N.f)("#Sale_TagFilter_EditFilter_ttip"),
+                  { className: W.FilterTitle },
+                  Object(F.f)("#Sale_TagFilter_CurrentFilter"),
+                  m.createElement(V.e, {
+                    tooltip: Object(F.f)("#Sale_TagFilter_EditFilter_ttip"),
                   })
                 ),
                 m.createElement(
                   "div",
-                  { className: z.FilterActionsCtn },
-                  m.createElement(Y, { filter: e.sale_tag_filter }),
+                  { className: W.FilterActionsCtn },
+                  m.createElement(J, { filter: e.sale_tag_filter }),
                   m.createElement(
-                    O.d,
+                    T.d,
                     { onClick: this.OnEditFilter },
-                    Object(N.f)("#Sale_TagFilter_EditFilter")
+                    Object(F.f)("#Sale_TagFilter_EditFilter")
                   )
                 )
               );
             }),
-            Object(a.c)([F.a], t.prototype, "OnApplyFilter", null),
-            Object(a.c)([F.a], t.prototype, "OnEditFilter", null),
+            Object(a.c)([R.a], t.prototype, "OnApplyFilter", null),
+            Object(a.c)([R.a], t.prototype, "OnEditFilter", null),
             (t = Object(a.c)([p.a], t))
           );
         })(m.Component),
-        ee = (function (e) {
+        te = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -22993,24 +22958,24 @@
             }),
             (t.prototype.OnExploreTags = function () {
               var e = { clauses: new Array() };
-              Object(w.d)(
-                m.createElement(se, {
+              Object(D.d)(
+                m.createElement(ce, {
                   editModel: this.props.editModel,
                   filter: e,
-                  title: Object(N.f)("#Sale_TagFilter_Explore"),
+                  title: Object(F.f)("#Sale_TagFilter_Explore"),
                 }),
                 window
               );
             }),
             (t.prototype.OnBatchEditTags = function () {
-              Object(w.d)(
-                m.createElement(oe, { editModel: this.props.editModel }),
+              Object(D.d)(
+                m.createElement(le, { editModel: this.props.editModel }),
                 window
               );
             }),
             (t.prototype.OnEditAutoTags = function () {
-              Object(w.d)(
-                m.createElement(pe, { editModel: this.props.editModel }),
+              Object(D.d)(
+                m.createElement(me, { editModel: this.props.editModel }),
                 window
               );
             }),
@@ -23022,11 +22987,11 @@
             }),
             (t.prototype.OnEditFilter = function () {
               var e = this.props.editModel;
-              Object(w.d)(
-                m.createElement(se, {
+              Object(D.d)(
+                m.createElement(ce, {
                   editModel: e,
                   filter: Object(l.p)(e),
-                  title: Object(N.f)("#Sale_TagFilter_EditFilter"),
+                  title: Object(F.f)("#Sale_TagFilter_EditFilter"),
                   onApplyFilter: this.OnApplyFilter,
                   ignoreEventFilter: !0,
                 }),
@@ -23040,8 +23005,8 @@
               this.setState({ bShowItemEditor: !0 });
             }),
             (t.prototype.OnEditRaw = function (e) {
-              Object(w.d)(
-                m.createElement(ce, {
+              Object(D.d)(
+                m.createElement(ue, {
                   editModel: this.props.editModel,
                   bRemoveMissingEntries: !0,
                 }),
@@ -23049,8 +23014,8 @@
               );
             }),
             (t.prototype.OnEditRawCustom = function (e) {
-              Object(w.d)(
-                m.createElement(ce, {
+              Object(D.d)(
+                m.createElement(ue, {
                   editModel: this.props.editModel,
                   collection: l.j.Custom,
                   bRemoveMissingEntries: !1,
@@ -23063,14 +23028,14 @@
               Object(l.g)(e) && e.SetDirty(o.c.jsondata_sales);
             }),
             (t.prototype.OnSync = function (e) {
-              Object(w.d)(
-                m.createElement(ue, { editModel: this.props.editModel }),
+              Object(D.d)(
+                m.createElement(de, { editModel: this.props.editModel }),
                 window
               );
             }),
             (t.prototype.OnImportDiscountEvent = function (e) {
               var t = this;
-              Object(w.d)(
+              Object(D.d)(
                 m.createElement(c.a, {
                   onDiscountEventSelected: function (e, n) {
                     return Object(a.b)(t, void 0, void 0, function () {
@@ -23091,7 +23056,7 @@
                                     );
                                   })
                                 ) {
-                                  var t = v.a.GetAppLinkInfo(e);
+                                  var t = E.a.GetAppLinkInfo(e);
                                   r.push({
                                     capsule: {
                                       id: e,
@@ -23133,16 +23098,16 @@
             (t.prototype.RenderEditPrompt = function () {
               return m.createElement(
                 "div",
-                { className: z.TagItemEditorCtn },
+                { className: W.TagItemEditorCtn },
                 m.createElement(
                   "div",
-                  { className: z.ItemEditDescription },
-                  Object(N.f)("#Sale_EditTags_EnableItemEditingDesc")
+                  { className: W.ItemEditDescription },
+                  Object(F.f)("#Sale_EditTags_EnableItemEditingDesc")
                 ),
                 m.createElement(
-                  O.r,
+                  T.r,
                   { onClick: this.OnShowItemEditor },
-                  Object(N.f)("#Sale_EditTags_EnableItemEditing")
+                  Object(F.f)("#Sale_EditTags_EnableItemEditing")
                 )
               );
             }),
@@ -23156,7 +23121,7 @@
                 o = 0,
                 s = 0,
                 c = i.GetEventModel().GetTaggedItems();
-              Object(j.i)(
+              Object(I.i)(
                 c.map(function (e) {
                   return e.capsule;
                 })
@@ -23166,7 +23131,7 @@
                   return (
                     u ? o++ : s++,
                     u || a
-                      ? m.createElement(te, {
+                      ? m.createElement(ne, {
                           key: t.capsule.type + t.capsule.id,
                           item: t,
                           strSearchFilter: n,
@@ -23180,53 +23145,53 @@
                 }),
                 p =
                   (i.GetEventModel().jsondata.sale_opt_in_page_name,
-                  H.g.IsMinimized(i, "TaggedItemList", !1));
+                  V.h.IsMinimized(i, "TaggedItemList", !1));
               return m.createElement(
                 "div",
-                { className: z.ItemListCtn },
+                { className: W.ItemListCtn },
                 m.createElement(
                   "div",
-                  { className: z.ItemListTitle },
+                  { className: W.ItemListTitle },
                   m.createElement(
                     "div",
-                    { className: U.SaleSectionTitleHeader },
+                    { className: H.SaleSectionTitleHeader },
                     m.createElement(
                       "div",
-                      { className: C.EventEditorTextTitle },
+                      { className: j.EventEditorTextTitle },
                       s > 0
-                        ? Object(N.f)("#Sale_TaggedItemsCountFiltered", o, s)
-                        : Object(N.f)("#Sale_TaggedItemsCount", o),
-                      m.createElement(H.d, {
-                        tooltip: Object(N.f)("#Sale_TaggedItemsCount_ttip"),
+                        ? Object(F.f)("#Sale_TaggedItemsCountFiltered", o, s)
+                        : Object(F.f)("#Sale_TaggedItemsCount", o),
+                      m.createElement(V.e, {
+                        tooltip: Object(F.f)("#Sale_TaggedItemsCount_ttip"),
                       })
                     ),
-                    m.createElement(H.b, {
+                    m.createElement(V.c, {
                       bIsMinimized: p,
                       fnToggleMinimize: function () {
-                        return H.g.ToggleMinimized(i, "TaggedItemList", !1);
+                        return V.h.ToggleMinimized(i, "TaggedItemList", !1);
                       },
                     })
                   ),
                   m.createElement(
                     "div",
-                    { className: z.ItemListControls },
+                    { className: W.ItemListControls },
                     m.createElement(
                       "div",
-                      { className: z.ButtonRow },
+                      { className: W.ButtonRow },
                       m.createElement(
-                        O.d,
+                        T.d,
                         { onClick: this.OnExploreTags },
-                        Object(N.f)("#Sale_Explore"),
-                        m.createElement(H.d, {
-                          tooltip: Object(N.f)("#Sale_ExploreTaggedItems_ttip"),
+                        Object(F.f)("#Sale_Explore"),
+                        m.createElement(V.e, {
+                          tooltip: Object(F.f)("#Sale_ExploreTaggedItems_ttip"),
                         })
                       ),
                       m.createElement(
-                        O.d,
+                        T.d,
                         { onClick: this.OnEditRaw },
-                        Object(N.f)("#Sale_EditRaw"),
-                        m.createElement(H.d, {
-                          tooltip: Object(N.f)("#Sale_EditRawTaggedItems_ttip"),
+                        Object(F.f)("#Sale_EditRaw"),
+                        m.createElement(V.e, {
+                          tooltip: Object(F.f)("#Sale_EditRawTaggedItems_ttip"),
                         })
                       )
                     ),
@@ -23235,68 +23200,68 @@
                       { clanSteamID: i.GetClanSteamID() },
                       m.createElement(
                         "div",
-                        { className: z.ButtonRow },
+                        { className: W.ButtonRow },
                         m.createElement(
-                          O.d,
+                          T.d,
                           { onClick: this.OnEditFilter },
-                          Object(N.f)("#Sale_EditTaggedItemFilter"),
-                          m.createElement(H.d, {
-                            tooltip: Object(N.f)(
+                          Object(F.f)("#Sale_EditTaggedItemFilter"),
+                          m.createElement(V.e, {
+                            tooltip: Object(F.f)(
                               "#Sale_EditTaggedItemFilter_ttip"
                             ),
                           })
                         ),
                         m.createElement(
-                          O.d,
+                          T.d,
                           { onClick: this.OnSync },
-                          Object(N.f)("#Sale_SyncTaggedItems"),
-                          m.createElement(H.d, {
-                            tooltip: Object(N.f)("#Sale_SyncTaggedItems_ttip"),
+                          Object(F.f)("#Sale_SyncTaggedItems"),
+                          m.createElement(V.e, {
+                            tooltip: Object(F.f)("#Sale_SyncTaggedItems_ttip"),
                           })
                         ),
                         m.createElement(
-                          O.d,
+                          T.d,
                           { onClick: this.OnImportDiscountEvent },
-                          Object(N.f)("#Sale_DiscountEvent_Add"),
-                          m.createElement(H.d, {
-                            tooltip: Object(N.f)("#Sale_DiscountEvent_ttip"),
+                          Object(F.f)("#Sale_DiscountEvent_Add"),
+                          m.createElement(V.e, {
+                            tooltip: Object(F.f)("#Sale_DiscountEvent_ttip"),
                           })
                         ),
                         m.createElement(
-                          O.d,
+                          T.d,
                           { onClick: this.OnEditRawCustom },
-                          Object(N.f)("#Sale_EditRawCustom"),
-                          m.createElement(H.d, {
-                            tooltip: Object(N.f)(
+                          Object(F.f)("#Sale_EditRawCustom"),
+                          m.createElement(V.e, {
+                            tooltip: Object(F.f)(
                               "#Sale_EditRawCustomTaggedItems_ttip"
                             ),
                           })
                         ),
                         m.createElement(
-                          O.d,
+                          T.d,
                           { onClick: this.OnBatchEditTags },
-                          Object(N.f)("#Sale_BatchEditTaggedItems"),
-                          m.createElement(H.d, {
-                            tooltip: Object(N.f)(
+                          Object(F.f)("#Sale_BatchEditTaggedItems"),
+                          m.createElement(V.e, {
+                            tooltip: Object(F.f)(
                               "#Sale_BatchEditTaggedItems_ttip"
                             ),
                           })
                         ),
                         m.createElement(
-                          O.d,
+                          T.d,
                           { onClick: this.OnEditAutoTags },
-                          Object(N.f)("#Sale_EditAutoTags"),
-                          m.createElement(H.d, {
-                            tooltip: Object(N.f)("#Sale_EditAutoTags_ttip"),
+                          Object(F.f)("#Sale_EditAutoTags"),
+                          m.createElement(V.e, {
+                            tooltip: Object(F.f)("#Sale_EditAutoTags_ttip"),
                           })
                         ),
                         s > 0 &&
                           m.createElement(
-                            O.d,
+                            T.d,
                             { onClick: this.OnDeleteFiltered },
-                            Object(N.f)("#Sale_DeleteFilteredItems"),
-                            m.createElement(H.d, {
-                              tooltip: Object(N.f)(
+                            Object(F.f)("#Sale_DeleteFilteredItems"),
+                            m.createElement(V.e, {
+                              tooltip: Object(F.f)(
                                 "#Sale_DeleteFilteredItems_ttip"
                               ),
                             })
@@ -23308,22 +23273,22 @@
                 !p &&
                   m.createElement(
                     "div",
-                    { className: z.ItemList },
+                    { className: W.ItemList },
                     s > 0 &&
-                      m.createElement(O.e, {
-                        label: Object(N.f)("#Sale_ShowFilteredTaggedItems"),
-                        tooltip: Object(N.f)(
+                      m.createElement(T.e, {
+                        label: Object(F.f)("#Sale_ShowFilteredTaggedItems"),
+                        tooltip: Object(F.f)(
                           "#Sale_ShowFilteredTaggedItems_ttip"
                         ),
                         checked: this.state.bShowFiltered,
                         onChange: this.OnShowFiltered,
                       }),
-                    m.createElement(O.m, {
+                    m.createElement(T.m, {
                       type: "text",
-                      label: Object(N.f)("#Sale_TaggedItemsFilter"),
-                      placeholder: Object(N.f)("#Sale_TaggedItemsFilter"),
+                      label: Object(F.f)("#Sale_TaggedItemsFilter"),
+                      placeholder: Object(F.f)("#Sale_TaggedItemsFilter"),
                       onChange: this.UpdateSearchText,
-                      tooltip: Object(N.f)("#Sale_TaggedItemsFilter_ttip"),
+                      tooltip: Object(F.f)("#Sale_TaggedItemsFilter_ttip"),
                     }),
                     d
                   )
@@ -23331,35 +23296,47 @@
             }),
             (t.prototype.render = function () {
               var e = this.state.bShowItemEditor,
-                t = this.props.editModel.GetEventModel().GetTaggedItems();
-              return (null == t ? void 0 : t.length) || e
+                t = this.props.editModel,
+                n = t.GetEventModel().GetTaggedItems();
+              return (null == n ? void 0 : n.length) || e
                 ? m.createElement(
                     "div",
-                    { className: z.TagItemEditorCtn },
-                    m.createElement(X, { onAddItem: this.AddTagItem }),
-                    this.RenderItemList()
+                    { className: W.TagItemEditorCtn },
+                    m.createElement(
+                      u.b,
+                      { clanSteamID: t.GetClanSteamID(), requireAdmin: !0 },
+                      m.createElement(V.b, { editModel: t })
+                    ),
+                    t.GetEventModel().jsondata.item_source_type !==
+                      v.n.k_EContentHub &&
+                      m.createElement(
+                        m.Fragment,
+                        null,
+                        m.createElement($, { onAddItem: this.AddTagItem }),
+                        this.RenderItemList()
+                      )
                   )
                 : this.RenderEditPrompt();
             }),
-            Object(a.c)([F.a], t.prototype, "RemoveTagItem", null),
-            Object(a.c)([F.a], t.prototype, "AddTagItem", null),
-            Object(a.c)([F.a], t.prototype, "UpdateSearchText", null),
-            Object(a.c)([F.a], t.prototype, "OnExploreTags", null),
-            Object(a.c)([F.a], t.prototype, "OnBatchEditTags", null),
-            Object(a.c)([F.a], t.prototype, "OnEditAutoTags", null),
-            Object(a.c)([F.a], t.prototype, "OnApplyFilter", null),
-            Object(a.c)([F.a], t.prototype, "OnEditFilter", null),
-            Object(a.c)([F.a], t.prototype, "OnShowFiltered", null),
-            Object(a.c)([F.a], t.prototype, "OnShowItemEditor", null),
-            Object(a.c)([F.a], t.prototype, "OnEditRaw", null),
-            Object(a.c)([F.a], t.prototype, "OnEditRawCustom", null),
-            Object(a.c)([F.a], t.prototype, "OnDeleteFiltered", null),
-            Object(a.c)([F.a], t.prototype, "OnSync", null),
-            Object(a.c)([F.a], t.prototype, "OnImportDiscountEvent", null),
+            Object(a.c)([R.a], t.prototype, "RemoveTagItem", null),
+            Object(a.c)([R.a], t.prototype, "AddTagItem", null),
+            Object(a.c)([R.a], t.prototype, "UpdateSearchText", null),
+            Object(a.c)([R.a], t.prototype, "OnExploreTags", null),
+            Object(a.c)([R.a], t.prototype, "OnBatchEditTags", null),
+            Object(a.c)([R.a], t.prototype, "OnEditAutoTags", null),
+            Object(a.c)([R.a], t.prototype, "OnApplyFilter", null),
+            Object(a.c)([R.a], t.prototype, "OnEditFilter", null),
+            Object(a.c)([R.a], t.prototype, "OnShowFiltered", null),
+            Object(a.c)([R.a], t.prototype, "OnShowItemEditor", null),
+            Object(a.c)([R.a], t.prototype, "OnEditRaw", null),
+            Object(a.c)([R.a], t.prototype, "OnEditRawCustom", null),
+            Object(a.c)([R.a], t.prototype, "OnDeleteFiltered", null),
+            Object(a.c)([R.a], t.prototype, "OnSync", null),
+            Object(a.c)([R.a], t.prototype, "OnImportDiscountEvent", null),
             (t = Object(a.c)([p.a], t))
           );
         })(m.Component),
-        te = (function (e) {
+        ne = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.state = { expanded: !1 }), t;
@@ -23367,8 +23344,8 @@
           return (
             Object(a.d)(t, e),
             (t.prototype.OnEditTags = function () {
-              Object(w.d)(
-                m.createElement(re, {
+              Object(D.d)(
+                m.createElement(oe, {
                   editModel: this.props.editModel,
                   item: this.props.item,
                   onTagsModified: this.props.onTagsModified,
@@ -23388,11 +23365,11 @@
                 r = t.tagHighlight,
                 o = t.filter,
                 l = n.capsule,
-                s = q(l),
+                s = K(l),
                 c = s.appData,
                 u = s.linkURL,
                 d = s.bInvalidID,
-                p = Object(N.f)("#AppType_" + l.type),
+                p = Object(F.f)("#AppType_" + l.type),
                 _ = c ? c.appid || c.bundleid || c.packageid : l.id,
                 g = c ? c.name : null;
               if (
@@ -23403,36 +23380,36 @@
                 return null;
               var h = r ? r.toLocaleLowerCase() : void 0;
               return m.createElement(
-                I.a,
-                { className: z.TagItemCtn },
+                M.a,
+                { className: W.TagItemCtn },
                 m.createElement(
-                  L.b,
+                  A.b,
                   {
-                    className: z.TagItemImageCtn,
+                    className: W.TagItemImageCtn,
                     bDisableContextMenu: !0,
                     href: u,
                   },
                   c
                     ? m.createElement("img", {
                         loading: "lazy",
-                        className: V.SaleCapsuleImg,
+                        className: z.SaleCapsuleImg,
                         src: c.header_image_url,
                       })
                     : null
                 ),
                 m.createElement(
                   "div",
-                  { className: z.NameAndTagCtn },
+                  { className: W.NameAndTagCtn },
                   m.createElement(
                     "div",
-                    { className: z.NameCtn },
+                    { className: W.NameCtn },
                     g,
                     " (",
                     _,
                     ") ",
                     m.createElement(
                       "span",
-                      { className: V.SmallText },
+                      { className: z.SmallText },
                       "(",
                       p,
                       ")"
@@ -23440,10 +23417,10 @@
                     d &&
                       m.createElement(
                         "div",
-                        { className: V.SaleCapsuleConflict },
-                        Object(N.f)("#Sale_NotFoundCapsule"),
-                        m.createElement(H.d, {
-                          tooltip: Object(N.f)(
+                        { className: z.SaleCapsuleConflict },
+                        Object(F.f)("#Sale_NotFoundCapsule"),
+                        m.createElement(V.e, {
+                          tooltip: Object(F.f)(
                             "#Sale_NotFoundCapsule_Tooltip",
                             p,
                             l.id
@@ -23453,11 +23430,11 @@
                   ),
                   m.createElement(
                     "div",
-                    { className: z.TagSummaryCtn },
+                    { className: W.TagSummaryCtn },
                     m.createElement(
                       "span",
-                      { className: z.TagSummary, onClick: this.OnEditTags },
-                      Object(N.f)(
+                      { className: W.TagSummary, onClick: this.OnEditTags },
+                      Object(F.f)(
                         "#Sale_EditTags_TagCount",
                         (null === (e = n.tags) || void 0 === e
                           ? void 0
@@ -23467,10 +23444,10 @@
                     m.createElement(
                       "span",
                       {
-                        className: z.TagShowToggle,
+                        className: W.TagShowToggle,
                         onClick: this.OnToggleTags,
                       },
-                      Object(N.f)(
+                      Object(F.f)(
                         this.state.expanded
                           ? "#Sale_EditTags_Hide"
                           : "#Sale_EditTags_Show"
@@ -23481,25 +23458,25 @@
                     m.createElement(
                       "div",
                       { onClick: this.OnEditTags },
-                      m.createElement(ae, {
+                      m.createElement(ie, {
                         item: n,
                         lowerTagHighlight: h,
                         filter: o,
                       })
                     )
                 ),
-                a && m.createElement(K, { onClick: a })
+                a && m.createElement(Q, { onClick: a })
               );
             }),
-            Object(a.c)([F.a], t.prototype, "OnEditTags", null),
-            Object(a.c)([F.a], t.prototype, "OnToggleTags", null),
+            Object(a.c)([R.a], t.prototype, "OnEditTags", null),
+            Object(a.c)([R.a], t.prototype, "OnToggleTags", null),
             (t = Object(a.c)([p.a], t))
           );
         })(m.Component);
-      function ne(e, t, n) {
+      function ae(e, t, n) {
         var a,
           i = e.toLocaleLowerCase();
-        if (t && i === t) return z.TagHighlight;
+        if (t && i === t) return W.TagHighlight;
         if (null == n ? void 0 : n.clauses)
           for (var r = 0, o = n.clauses; r < o.length; r++) {
             var l = o[r];
@@ -23510,11 +23487,11 @@
                     return i === e.toLocaleLowerCase();
                   })
             )
-              return "Must have" === l.type ? z.TagMustHave : z.TagMustNotHave;
+              return "Must have" === l.type ? W.TagMustHave : W.TagMustNotHave;
           }
         return null;
       }
-      var ae = Object(p.a)(function (e) {
+      var ie = Object(p.a)(function (e) {
           var t = e.item,
             n = Array.from(t.tags),
             a = (function (e, t) {
@@ -23547,9 +23524,9 @@
                   s > 0 &&
                     !l &&
                     (a = a || []).push(
-                      Object(N.f)("#Sale_TagFilter_Missing") +
+                      Object(F.f)("#Sale_TagFilter_Missing") +
                         o.or_tags.join(
-                          " " + Object(N.f)("#Sale_TagFilter_Or") + " "
+                          " " + Object(F.f)("#Sale_TagFilter_Or") + " "
                         )
                     );
                 }
@@ -23562,36 +23539,36 @@
               }),
               m.createElement(
                 "div",
-                { className: z.TagListCtn },
+                { className: W.TagListCtn },
                 n.map(function (t) {
-                  return m.createElement(ie, {
+                  return m.createElement(re, {
                     key: t,
                     tag: t,
-                    className: ne(t, e.lowerTagHighlight, e.filter),
+                    className: ae(t, e.lowerTagHighlight, e.filter),
                   });
                 }),
                 a &&
                   a.map(function (e) {
-                    return m.createElement(ie, {
+                    return m.createElement(re, {
                       key: e,
                       tag: e,
-                      className: z.TagMissingMustHave,
+                      className: W.TagMissingMustHave,
                     });
                   })
               ))
             : m.createElement(
                 "div",
-                { className: z.TagListCtn },
-                Object(N.f)("#Sale_TagFilter_AddTags")
+                { className: W.TagListCtn },
+                Object(F.f)("#Sale_TagFilter_AddTags")
               );
         }),
-        ie = function (e) {
+        re = function (e) {
           var t = Object(l.k)(e.tag);
           return m.createElement(
             "div",
             {
-              className: Object(B.a)(
-                z.ItemTag,
+              className: Object(N.a)(
+                W.ItemTag,
                 e.className,
                 t && "TagCollection_" + t
               ),
@@ -23599,7 +23576,7 @@
             e.tag
           );
         },
-        re = (function (e) {
+        oe = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -23640,7 +23617,7 @@
                         )),
                       o &&
                         i.push(
-                          Object(H.a)(t, n.GetCurEditLanguage(), n, a, !0)
+                          Object(V.a)(t, n.GetCurEditLanguage(), n, a, !0)
                         );
                   }),
                 i.sort(function (e, t) {
@@ -23704,9 +23681,9 @@
             }),
             (t.prototype.AddTag = function (e) {
               var t = this.state.currentTags,
-                n = (e = W(e)).toLocaleLowerCase();
+                n = (e = q(e)).toLocaleLowerCase();
               if (
-                (J.Get(this.props.editModel).AddRecentTag(e),
+                (Z.Get(this.props.editModel).AddRecentTag(e),
                 !t.find(function (e) {
                   return e.toLocaleLowerCase() === n;
                 }))
@@ -23737,7 +23714,7 @@
                   "div",
                   {
                     key: n,
-                    className: a ? z.SectionAdded : z.SectionUnchanged,
+                    className: a ? W.SectionAdded : W.SectionUnchanged,
                   },
                   e
                 );
@@ -23752,7 +23729,7 @@
                 o = r.currentTags,
                 l = r.defaultTags,
                 s = r.otherTags;
-              if (!l) return m.createElement(G.a, null);
+              if (!l) return m.createElement(L.a, null);
               var c = new Set();
               o.forEach(function (e) {
                 return c.add(e.toLocaleLowerCase());
@@ -23763,7 +23740,7 @@
               });
               var d = u.map(function (t) {
                   var n = l.has(t),
-                    a = Object(B.a)(z.EditTag, z.AppliedTag, n && z.DefaultTag);
+                    a = Object(N.a)(W.EditTag, W.AppliedTag, n && W.DefaultTag);
                   return m.createElement(
                     "div",
                     {
@@ -23786,7 +23763,7 @@
               var _ = [];
               p.forEach(function (t) {
                 if (l.has(t)) {
-                  var n = Object(B.a)(z.EditTag, z.OtherTag, z.DefaultTag);
+                  var n = Object(N.a)(W.EditTag, W.OtherTag, W.DefaultTag);
                   _.push(
                     m.createElement(
                       "div",
@@ -23803,12 +23780,12 @@
                 }
               });
               var h = [];
-              J.Get(this.props.editModel)
+              Z.Get(this.props.editModel)
                 .GetRecentTags()
                 .forEach(function (t) {
                   if (!c.has(t.toLocaleLowerCase())) {
                     var n = l.has(t),
-                      a = Object(B.a)(z.EditTag, z.OtherTag, n && z.DefaultTag);
+                      a = Object(N.a)(W.EditTag, W.OtherTag, n && W.DefaultTag);
                     h.push(
                       m.createElement(
                         "div",
@@ -23825,7 +23802,7 @@
                   }
                 });
               var f = this.RenderSectionList(),
-                b = q(n.capsule).appData,
+                b = K(n.capsule).appData,
                 v = b ? b.appid || b.bundleid || b.packageid : n.capsule.id,
                 E = {
                   option: function (e) {
@@ -23838,26 +23815,26 @@
                   return { label: e, value: e };
                 });
               return m.createElement(
-                M.e,
+                w.e,
                 {
                   onCancel: i,
                   closeModal: i,
                   bDisableBackgroundDismiss: !0,
                   bAllowFullSize: !0,
-                  className: T.NotTooWideModal,
+                  className: C.NotTooWideModal,
                 },
                 m.createElement(
-                  O.l,
-                  { className: z.EditTagsTitle },
+                  T.l,
+                  { className: W.EditTagsTitle },
                   b
                     ? m.createElement("img", {
-                        className: V.SaleCapsuleImg,
+                        className: z.SaleCapsuleImg,
                         src: b.header_image_url,
                       })
                     : null,
                   m.createElement(
                     "div",
-                    { className: z.EditTagsTitleText },
+                    { className: W.EditTagsTitleText },
                     b ? b.name : null,
                     " (",
                     v,
@@ -23865,103 +23842,103 @@
                   )
                 ),
                 m.createElement(
-                  O.b,
+                  T.b,
                   null,
                   m.createElement(
                     "div",
-                    { className: z.EditTagsBody },
+                    { className: W.EditTagsBody },
                     m.createElement(
                       "div",
-                      { className: z.ColumnList },
+                      { className: W.ColumnList },
                       m.createElement(
                         "div",
-                        { className: z.TagColumn },
+                        { className: W.TagColumn },
                         m.createElement(
                           "div",
-                          { className: z.TagColumnTitle },
-                          Object(N.f)("#Sale_EditTags_Applied", o.length),
-                          m.createElement(H.d, {
-                            tooltip: Object(N.f)("#Sale_EditTags_Applied_ttip"),
+                          { className: W.TagColumnTitle },
+                          Object(F.f)("#Sale_EditTags_Applied", o.length),
+                          m.createElement(V.e, {
+                            tooltip: Object(F.f)("#Sale_EditTags_Applied_ttip"),
                           })
                         ),
                         m.createElement(
                           "div",
-                          { className: z.TagColumnList },
+                          { className: W.TagColumnList },
                           d
                         )
                       ),
                       m.createElement(
                         "div",
-                        { className: z.TagColumn },
+                        { className: W.TagColumn },
                         _.length > 0 &&
                           m.createElement(
                             "div",
-                            { className: z.SmallColumn },
+                            { className: W.SmallColumn },
                             m.createElement(
                               "div",
-                              { className: z.TagColumnTitle },
-                              Object(N.f)("#Sale_EditTags_Store", _.length),
-                              m.createElement(H.d, {
-                                tooltip: Object(N.f)(
+                              { className: W.TagColumnTitle },
+                              Object(F.f)("#Sale_EditTags_Store", _.length),
+                              m.createElement(V.e, {
+                                tooltip: Object(F.f)(
                                   "#Sale_EditTags_Store_ttip"
                                 ),
                               })
                             ),
                             m.createElement(
                               "div",
-                              { className: z.TagColumnList },
+                              { className: W.TagColumnList },
                               _
                             )
                           ),
                         m.createElement(
                           "div",
-                          { className: z.FillColumn },
+                          { className: W.FillColumn },
                           m.createElement(
                             "div",
-                            { className: z.TagColumnTitle },
-                            Object(N.f)("#Sale_EditTags_RecentTags"),
-                            m.createElement(H.d, {
-                              tooltip: Object(N.f)(
+                            { className: W.TagColumnTitle },
+                            Object(F.f)("#Sale_EditTags_RecentTags"),
+                            m.createElement(V.e, {
+                              tooltip: Object(F.f)(
                                 "#Sale_EditTags_RecentTags_ttip"
                               ),
                             })
                           ),
                           m.createElement(
                             "div",
-                            { className: z.TagColumnList },
+                            { className: W.TagColumnList },
                             h
                           )
                         )
                       ),
                       m.createElement(
                         "div",
-                        { className: z.TagColumn },
+                        { className: W.TagColumn },
                         m.createElement(
                           "div",
-                          { className: z.TagColumnTitle },
-                          Object(N.f)("#Sale_EditTags_Sections", f.length),
-                          m.createElement(H.d, {
-                            tooltip: Object(N.f)(
+                          { className: W.TagColumnTitle },
+                          Object(F.f)("#Sale_EditTags_Sections", f.length),
+                          m.createElement(V.e, {
+                            tooltip: Object(F.f)(
                               "#Sale_EditTags_Sections_ttip"
                             ),
                           })
                         ),
                         m.createElement(
                           "div",
-                          { className: z.TagColumnList },
+                          { className: W.TagColumnList },
                           f
                         )
                       )
                     ),
                     m.createElement(
                       "div",
-                      { className: z.AddTagCtn },
+                      { className: W.AddTagCtn },
                       m.createElement(
                         "div",
-                        { className: z.TagColumnTitle },
-                        Object(N.f)("#Sale_EditTags_NewTagName"),
-                        m.createElement(H.d, {
-                          tooltip: Object(N.f)(
+                        { className: W.TagColumnTitle },
+                        Object(F.f)("#Sale_EditTags_NewTagName"),
+                        m.createElement(V.e, {
+                          tooltip: Object(F.f)(
                             "#Sale_EditTags_NewTagName_ttip"
                           ),
                         })
@@ -23981,28 +23958,28 @@
                     ),
                     m.createElement(
                       "div",
-                      { className: z.OKButton },
+                      { className: W.OKButton },
                       m.createElement(
-                        O.r,
+                        T.r,
                         { onClick: this.OnOK },
-                        Object(N.f)("#Sale_TagFilter_OK")
+                        Object(F.f)("#Sale_TagFilter_OK")
                       )
                     )
                   )
                 )
               );
             }),
-            Object(a.c)([F.a], t.prototype, "RemoveTag", null),
-            Object(a.c)([F.a], t.prototype, "AddTag", null),
-            Object(a.c)([F.a], t.prototype, "OnOK", null),
+            Object(a.c)([R.a], t.prototype, "RemoveTag", null),
+            Object(a.c)([R.a], t.prototype, "AddTag", null),
+            Object(a.c)([R.a], t.prototype, "OnOK", null),
             (t = Object(a.c)([p.a], t))
           );
         })(m.Component),
-        oe = (function (e) {
+        le = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
-              (t.m_timerForChange = new A.b()),
+              (t.m_timerForChange = new B.b()),
               (t.state = {
                 editItems: t.props.editModel.GetEventModel().GetTaggedItems(),
                 modifiedTags: new Map(),
@@ -24046,12 +24023,12 @@
             }),
             (t.prototype.OnPopulateFromFilter = function () {
               new Array();
-              Object(w.d)(
-                m.createElement(se, {
+              Object(D.d)(
+                m.createElement(ce, {
                   editModel: this.props.editModel,
                   filter: this.state.filter,
                   onApplyFilter: this.OnApplyFilter,
-                  title: Object(N.f)("#Sale_TagFilter_EditFilter"),
+                  title: Object(F.f)("#Sale_TagFilter_EditFilter"),
                 }),
                 window
               );
@@ -24078,11 +24055,11 @@
             }),
             (t.prototype.AddTag = function (e) {
               var t = this,
-                n = (e = W(e)).toLocaleLowerCase(),
+                n = (e = q(e)).toLocaleLowerCase(),
                 i = this.state.otherTags.get(n);
               i && (e = i.properCaseString);
               var r = this.CloneModifiedTags();
-              J.Get(this.props.editModel).AddRecentTag(e);
+              Z.Get(this.props.editModel).AddRecentTag(e);
               for (var o = 0, l = this.state.editItems; o < l.length; o++) {
                 var s = l[o],
                   c = r.get(s) || s.tags || [];
@@ -24167,7 +24144,7 @@
                   return e.tag.localeCompare(t.tag);
                 });
               var s = l.map(function (t) {
-                  var n = Object(B.a)(z.EditTag, z.AppliedTag);
+                  var n = Object(N.a)(W.EditTag, W.AppliedTag);
                   return m.createElement(
                     "div",
                     {
@@ -24188,10 +24165,10 @@
                   return e.localeCompare(t);
                 });
               var u = [];
-              J.Get(this.props.editModel)
+              Z.Get(this.props.editModel)
                 .GetRecentTags()
                 .forEach(function (t) {
-                  var n = Object(B.a)(z.EditTag, z.OtherTag);
+                  var n = Object(N.a)(W.EditTag, W.OtherTag);
                   u.push(
                     m.createElement(
                       "div",
@@ -24207,13 +24184,13 @@
                   );
                 });
               var d = i.map(function (e) {
-                  var t = q(e.capsule).appData;
+                  var t = K(e.capsule).appData;
                   return m.createElement(
                     "div",
                     { key: e.capsule.id },
                     t
                       ? m.createElement("img", {
-                          className: V.SaleCapsuleImg,
+                          className: z.SaleCapsuleImg,
                           src: t.header_image_url,
                         })
                       : null,
@@ -24237,32 +24214,32 @@
                   return { label: e.tag + " (" + e.count + ")", value: e.tag };
                 });
               return m.createElement(
-                M.e,
+                w.e,
                 {
                   onCancel: t,
                   closeModal: t,
                   bDisableBackgroundDismiss: !0,
                   bAllowFullSize: !0,
-                  className: T.NotTooWideModal,
+                  className: C.NotTooWideModal,
                 },
                 m.createElement(
-                  O.b,
+                  T.b,
                   null,
                   m.createElement(
                     "div",
-                    { className: z.EditTagsBody },
+                    { className: W.EditTagsBody },
                     m.createElement(
                       "div",
-                      { className: z.ColumnList },
+                      { className: W.ColumnList },
                       m.createElement(
                         "div",
-                        { className: z.TagColumn },
+                        { className: W.TagColumn },
                         m.createElement(
                           "div",
-                          { className: z.TagColumnTitle },
-                          Object(N.f)("#Sale_EditTags_BatchItemText", d.length),
-                          m.createElement(H.d, {
-                            tooltip: Object(N.f)(
+                          { className: W.TagColumnTitle },
+                          Object(F.f)("#Sale_EditTags_BatchItemText", d.length),
+                          m.createElement(V.e, {
+                            tooltip: Object(F.f)(
                               "#Sale_EditTags_BatchItemText_ttip"
                             ),
                           })
@@ -24277,12 +24254,12 @@
                         m.createElement(
                           "div",
                           {
-                            className: z.PopulateByFilter,
+                            className: W.PopulateByFilter,
                             onClick: this.OnPopulateFromFilter,
                           },
-                          Object(N.f)("#Sale_EditTags_BatchFilter"),
-                          m.createElement(H.d, {
-                            tooltip: Object(N.f)(
+                          Object(F.f)("#Sale_EditTags_BatchFilter"),
+                          m.createElement(V.e, {
+                            tooltip: Object(F.f)(
                               "#Sale_EditTags_BatchFilter_ttip"
                             ),
                           })
@@ -24290,59 +24267,59 @@
                       ),
                       m.createElement(
                         "div",
-                        { className: z.TagColumn },
+                        { className: W.TagColumn },
                         m.createElement(
                           "div",
-                          { className: z.TagColumnTitle },
-                          Object(N.f)("#Sale_EditTags_BatchItems", d.length),
-                          m.createElement(H.d, {
-                            tooltip: Object(N.f)(
+                          { className: W.TagColumnTitle },
+                          Object(F.f)("#Sale_EditTags_BatchItems", d.length),
+                          m.createElement(V.e, {
+                            tooltip: Object(F.f)(
                               "#Sale_EditTags_BatchItems_ttip"
                             ),
                           })
                         ),
                         m.createElement(
                           "div",
-                          { className: z.TagColumnList },
+                          { className: W.TagColumnList },
                           d
                         )
                       ),
                       m.createElement(
                         "div",
-                        { className: z.TagColumn },
+                        { className: W.TagColumn },
                         m.createElement(
                           "div",
-                          { className: z.TagColumnTitle },
-                          Object(N.f)("#Sale_EditTags_Applied", r.size),
-                          m.createElement(H.d, {
-                            tooltip: Object(N.f)("#Sale_EditTags_Applied_ttip"),
+                          { className: W.TagColumnTitle },
+                          Object(F.f)("#Sale_EditTags_Applied", r.size),
+                          m.createElement(V.e, {
+                            tooltip: Object(F.f)("#Sale_EditTags_Applied_ttip"),
                           })
                         ),
                         m.createElement(
                           "div",
-                          { className: z.TagColumnList },
+                          { className: W.TagColumnList },
                           s
                         )
                       ),
                       m.createElement(
                         "div",
-                        { className: z.TagColumn },
+                        { className: W.TagColumn },
                         m.createElement(
                           "div",
-                          { className: z.FillColumn },
+                          { className: W.FillColumn },
                           m.createElement(
                             "div",
-                            { className: z.TagColumnTitle },
-                            Object(N.f)("#Sale_EditTags_RecentTags"),
-                            m.createElement(H.d, {
-                              tooltip: Object(N.f)(
+                            { className: W.TagColumnTitle },
+                            Object(F.f)("#Sale_EditTags_RecentTags"),
+                            m.createElement(V.e, {
+                              tooltip: Object(F.f)(
                                 "#Sale_EditTags_RecentTags_ttip"
                               ),
                             })
                           ),
                           m.createElement(
                             "div",
-                            { className: z.TagColumnList },
+                            { className: W.TagColumnList },
                             u
                           )
                         )
@@ -24350,13 +24327,13 @@
                     ),
                     m.createElement(
                       "div",
-                      { className: z.AddTagCtn },
+                      { className: W.AddTagCtn },
                       m.createElement(
                         "div",
-                        { className: z.TagColumnTitle },
-                        Object(N.f)("#Sale_EditTags_NewTagName"),
-                        m.createElement(H.d, {
-                          tooltip: Object(N.f)(
+                        { className: W.TagColumnTitle },
+                        Object(F.f)("#Sale_EditTags_NewTagName"),
+                        m.createElement(V.e, {
+                          tooltip: Object(F.f)(
                             "#Sale_EditTags_NewTagName_ttip"
                           ),
                         })
@@ -24375,10 +24352,10 @@
                       }),
                       m.createElement(
                         "div",
-                        { className: z.TagColumnTitle },
-                        Object(N.f)("#Sale_EditTags_RemoveTagName"),
-                        m.createElement(H.d, {
-                          tooltip: Object(N.f)(
+                        { className: W.TagColumnTitle },
+                        Object(F.f)("#Sale_EditTags_RemoveTagName"),
+                        m.createElement(V.e, {
+                          tooltip: Object(F.f)(
                             "#Sale_EditTags_RemoveTagName_ttip"
                           ),
                         })
@@ -24399,28 +24376,28 @@
                     ),
                     m.createElement(
                       "div",
-                      { className: z.OKButton },
+                      { className: W.OKButton },
                       m.createElement(
-                        O.r,
+                        T.r,
                         { onClick: this.OnOK },
-                        Object(N.f)("#Sale_TagFilter_OK")
+                        Object(F.f)("#Sale_TagFilter_OK")
                       )
                     )
                   )
                 )
               );
             }),
-            Object(a.c)([F.a], t.prototype, "OnApplyFilter", null),
-            Object(a.c)([F.a], t.prototype, "OnPopulateFromFilter", null),
-            Object(a.c)([F.a], t.prototype, "RemoveTag", null),
-            Object(a.c)([F.a], t.prototype, "AddTag", null),
-            Object(a.c)([F.a], t.prototype, "OnOK", null),
-            Object(a.c)([F.a], t.prototype, "OnUpdateItemListFromText", null),
-            Object(a.c)([F.a], t.prototype, "OnTextChanged", null),
+            Object(a.c)([R.a], t.prototype, "OnApplyFilter", null),
+            Object(a.c)([R.a], t.prototype, "OnPopulateFromFilter", null),
+            Object(a.c)([R.a], t.prototype, "RemoveTag", null),
+            Object(a.c)([R.a], t.prototype, "AddTag", null),
+            Object(a.c)([R.a], t.prototype, "OnOK", null),
+            Object(a.c)([R.a], t.prototype, "OnUpdateItemListFromText", null),
+            Object(a.c)([R.a], t.prototype, "OnTextChanged", null),
             (t = Object(a.c)([p.a], t))
           );
         })(m.Component);
-      function le(e) {
+      function se(e) {
         var t = e.onClauseChanged,
           n = e.value,
           i = e.taggedItems,
@@ -24430,7 +24407,7 @@
           c = m.useState(new Array()),
           u = c[0],
           d = c[1],
-          p = { label: Object(N.f)("#Sale_TagFilter_SelectTag"), value: "" },
+          p = { label: Object(F.f)("#Sale_TagFilter_SelectTag"), value: "" },
           g = n ? { label: n, value: n } : p,
           h = {
             option: function (e) {
@@ -24493,7 +24470,7 @@
           menuPlacement: "bottom",
         });
       }
-      var se = (function (e) {
+      var ce = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.state = t.GenerateInitialState()), t;
@@ -24574,7 +24551,7 @@
               var e = Object(l.n)(this.GetFilteredItems()),
                 t = [
                   {
-                    label: Object(N.f)("#Sale_TagFilter_SelectTag"),
+                    label: Object(F.f)("#Sale_TagFilter_SelectTag"),
                     value: "",
                   },
                 ];
@@ -24625,11 +24602,11 @@
               var n = this,
                 a = [
                   {
-                    label: Object(N.f)("#Sale_TagFilter_MustHave"),
+                    label: Object(F.f)("#Sale_TagFilter_MustHave"),
                     data: "Must have",
                   },
                   {
-                    label: Object(N.f)("#Sale_TagFilter_MustNotHave"),
+                    label: Object(F.f)("#Sale_TagFilter_MustNotHave"),
                     data: "Must not have",
                   },
                 ],
@@ -24637,17 +24614,17 @@
                 r = e.or_tags.map(function (e, a) {
                   return m.createElement(
                     "div",
-                    { className: z.ClauseTagList, key: "Clause" + t + "_" + a },
+                    { className: W.ClauseTagList, key: "Clause" + t + "_" + a },
                     a > 0 &&
                       m.createElement(
                         "div",
-                        { className: z.OrLabel },
-                        Object(N.f)("#Sale_TagFilter_Or")
+                        { className: W.OrLabel },
+                        Object(F.f)("#Sale_TagFilter_Or")
                       ),
                     m.createElement(
                       "div",
-                      { className: z.TagDropDown },
-                      m.createElement(le, {
+                      { className: W.TagDropDown },
+                      m.createElement(se, {
                         taggedItems: i,
                         value: e,
                         onClauseChanged: function (e) {
@@ -24659,7 +24636,7 @@
                       })
                     ),
                     a > 0 &&
-                      m.createElement(K, {
+                      m.createElement(Q, {
                         onClick: function () {
                           return n.OnRemoveClauseTagSlot(t, a);
                         },
@@ -24668,37 +24645,37 @@
                 }),
                 o =
                   "Must have" === e.type
-                    ? z.MustHaveClause
-                    : z.MustNotHaveClause;
+                    ? W.MustHaveClause
+                    : W.MustNotHaveClause;
               return m.createElement(
                 "div",
                 {
                   key: "Clause" + t,
-                  className: Object(B.a)(
-                    z.ClauseRowCtn,
+                  className: Object(N.a)(
+                    W.ClauseRowCtn,
                     o,
-                    0 === t && z.FirstClause
+                    0 === t && W.FirstClause
                   ),
                 },
                 t > 0 &&
                   m.createElement(
                     m.Fragment,
                     null,
-                    m.createElement(K, {
+                    m.createElement(Q, {
                       onClick: function () {
                         return n.OnRemoveClause(t);
                       },
                     }),
                     m.createElement(
                       "div",
-                      { className: z.AndLabel },
-                      Object(N.f)("#Sale_TagFilter_And")
+                      { className: W.AndLabel },
+                      Object(F.f)("#Sale_TagFilter_And")
                     )
                   ),
                 m.createElement(
                   "div",
-                  { className: z.ClauseTypeDropDown },
-                  m.createElement(O.i, {
+                  { className: W.ClauseTypeDropDown },
+                  m.createElement(T.i, {
                     rgOptions: a,
                     selectedOption: e.type,
                     onChange: function (e) {
@@ -24709,16 +24686,16 @@
                 r,
                 e.or_tags.length < 3 &&
                   m.createElement(
-                    O.d,
+                    T.d,
                     {
                       onClick: function () {
                         return n.OnAddClauseTagSlot(t);
                       },
                     },
                     "+",
-                    Object(N.f)("#Sale_TagFilter_Or"),
-                    m.createElement(H.d, {
-                      tooltip: Object(N.f)("#Sale_TagFilter_Or_ttip"),
+                    Object(F.f)("#Sale_TagFilter_Or"),
+                    m.createElement(V.e, {
+                      tooltip: Object(F.f)("#Sale_TagFilter_Or_ttip"),
                     })
                   )
               );
@@ -24731,27 +24708,27 @@
                 });
               return m.createElement(
                 "div",
-                { className: z.FilterControlsCtn },
+                { className: W.FilterControlsCtn },
                 m.createElement(
                   "div",
-                  { className: z.SectionTitle },
-                  Object(N.f)("#Sale_TagFilter_Filter"),
-                  m.createElement(H.d, {
-                    tooltip: Object(N.f)("#Sale_TagFilter_Filter_ttip"),
+                  { className: W.SectionTitle },
+                  Object(F.f)("#Sale_TagFilter_Filter"),
+                  m.createElement(V.e, {
+                    tooltip: Object(F.f)("#Sale_TagFilter_Filter_ttip"),
                   })
                 ),
                 m.createElement(
                   "div",
-                  { className: z.FilterControlBox },
+                  { className: W.FilterControlBox },
                   n,
                   t.clauses.length < 5 &&
                     m.createElement(
-                      O.d,
+                      T.d,
                       { onClick: this.OnAddClause },
                       "+",
-                      Object(N.f)("#Sale_TagFilter_And"),
-                      m.createElement(H.d, {
-                        tooltip: Object(N.f)("#Sale_TagFilter_And_ttip"),
+                      Object(F.f)("#Sale_TagFilter_And"),
+                      m.createElement(V.e, {
+                        tooltip: Object(F.f)("#Sale_TagFilter_And_ttip"),
                       })
                     )
                 )
@@ -24777,9 +24754,9 @@
                   "div",
                   {
                     key: t.tag,
-                    className: Object(B.a)(
-                      z.TagBreakdownEntry,
-                      a === t.tag && z.Selected
+                    className: Object(N.a)(
+                      W.TagBreakdownEntry,
+                      a === t.tag && W.Selected
                     ),
                     onClick: function () {
                       return n.OnHighlightTag(t.tag);
@@ -24787,15 +24764,15 @@
                   },
                   m.createElement(
                     "div",
-                    { className: z.TextStats },
-                    m.createElement("div", { className: z.TagName }, t.tag),
-                    m.createElement("div", { className: z.TagUses }, t.count)
+                    { className: W.TextStats },
+                    m.createElement("div", { className: W.TagName }, t.tag),
+                    m.createElement("div", { className: W.TagUses }, t.count)
                   ),
                   m.createElement(
                     "div",
-                    { className: z.PercentageBar },
+                    { className: W.PercentageBar },
                     m.createElement("div", {
-                      className: z.PercentageBarFill,
+                      className: W.PercentageBarFill,
                       style: { width: (100 * t.count) / e + "%" },
                     })
                   )
@@ -24806,8 +24783,8 @@
                 null,
                 m.createElement(
                   "div",
-                  { className: z.TagBreakdownCtn },
-                  m.createElement("div", { className: z.TagBreakdownList }, r)
+                  { className: W.TagBreakdownCtn },
+                  m.createElement("div", { className: W.TagBreakdownList }, r)
                 )
               );
             }),
@@ -24910,7 +24887,7 @@
                 v = "active" === o ? p : "filtered" === o ? g : f,
                 E = ("active" === o ? d : "filtered" === o ? _ : h).map(
                   function (e) {
-                    var t = q(e.capsule).appData;
+                    var t = K(e.capsule).appData;
                     return {
                       item: e,
                       name: t && t.name,
@@ -24934,9 +24911,9 @@
                     label: m.createElement(
                       m.Fragment,
                       null,
-                      Object(N.f)("#Sale_TagFilter_MatchingItems", d.length),
-                      m.createElement(H.d, {
-                        tooltip: Object(N.f)(
+                      Object(F.f)("#Sale_TagFilter_MatchingItems", d.length),
+                      m.createElement(V.e, {
+                        tooltip: Object(F.f)(
                           "#Sale_TagFilter_MatchingItems_ttip"
                         ),
                       })
@@ -24947,9 +24924,9 @@
                     label: m.createElement(
                       m.Fragment,
                       null,
-                      Object(N.f)("#Sale_TagFilter_FilteredItems", _.length),
-                      m.createElement(H.d, {
-                        tooltip: Object(N.f)(
+                      Object(F.f)("#Sale_TagFilter_FilteredItems", _.length),
+                      m.createElement(V.e, {
+                        tooltip: Object(F.f)(
                           "#Sale_TagFilter_FilteredItems_ttip"
                         ),
                       })
@@ -24960,9 +24937,9 @@
                     label: m.createElement(
                       m.Fragment,
                       null,
-                      Object(N.f)("#Sale_TagFilter_UnusedItems", h.length),
-                      m.createElement(H.d, {
-                        tooltip: Object(N.f)(
+                      Object(F.f)("#Sale_TagFilter_UnusedItems", h.length),
+                      m.createElement(V.e, {
+                        tooltip: Object(F.f)(
                           "#Sale_TagFilter_UnusedItems_ttip"
                         ),
                       })
@@ -24972,7 +24949,7 @@
                 ],
                 y = E.map(function (t) {
                   var a = t.item;
-                  return m.createElement(te, {
+                  return m.createElement(ne, {
                     key: a.capsule.type + a.capsule.id,
                     editModel: n,
                     item: a,
@@ -24982,30 +24959,30 @@
                     filter: "filtered" === o && l,
                   });
                 }),
-                C = c ? z.ShowTagBreakdown : z.HideTagBreakdown;
+                O = c ? W.ShowTagBreakdown : W.HideTagBreakdown;
               return m.createElement(
-                M.e,
+                w.e,
                 {
                   closeModal: a,
                   bDisableBackgroundDismiss: !0,
                   bAllowFullSize: !0,
-                  className: T.NotTooWideModal,
+                  className: C.NotTooWideModal,
                 },
-                m.createElement(O.l, null, i),
+                m.createElement(T.l, null, i),
                 m.createElement(
-                  O.b,
+                  T.b,
                   null,
                   m.createElement(
                     "div",
-                    { className: Object(B.a)(z.EditFitlerCtn, C) },
+                    { className: Object(N.a)(W.EditFitlerCtn, O) },
                     this.RenderFilterControls(),
                     m.createElement(
                       "div",
-                      { className: z.TopTabs },
+                      { className: W.TopTabs },
                       m.createElement(
                         "div",
-                        { className: z.TagSelector },
-                        m.createElement(O.i, {
+                        { className: W.TagSelector },
+                        m.createElement(T.i, {
                           rgOptions: S,
                           selectedOption: o,
                           onChange: function (t) {
@@ -25014,22 +24991,22 @@
                         })
                       ),
                       m.createElement(
-                        O.d,
+                        T.d,
                         {
-                          className: Object(B.a)(
-                            z.ShowTagBreakdown,
-                            z.SectionTab,
-                            c && z.TabActive
+                          className: Object(N.a)(
+                            W.ShowTagBreakdown,
+                            W.SectionTab,
+                            c && W.TabActive
                           ),
                           onClick: this.OnToggleTagBreakdown,
                         },
-                        Object(N.f)(
+                        Object(F.f)(
                           this.state.showTagBreakdown
                             ? "#Sale_TagFilter_HideTagBreakdown"
                             : "#Sale_TagFilter_ShowTagBreakdown"
                         ),
-                        m.createElement(H.d, {
-                          tooltip: Object(N.f)(
+                        m.createElement(V.e, {
+                          tooltip: Object(F.f)(
                             "#Sale_TagFilter_TagBreakdown_ttip"
                           ),
                         })
@@ -25037,50 +25014,50 @@
                     ),
                     m.createElement(
                       "div",
-                      { className: z.TopSection },
+                      { className: W.TopSection },
                       m.createElement(
                         "div",
-                        { className: z.MatchingItemsCtn },
-                        m.createElement("div", { className: z.ItemList }, y)
+                        { className: W.MatchingItemsCtn },
+                        m.createElement("div", { className: W.ItemList }, y)
                       ),
                       this.RenderTagBreakdown(y.length, v)
                     ),
-                    m.createElement(O.m, {
+                    m.createElement(T.m, {
                       type: "text",
-                      label: Object(N.f)("#Sale_TaggedItemsFilter"),
+                      label: Object(F.f)("#Sale_TaggedItemsFilter"),
                       onChange: this.UpdateSearchText,
                       focusOnMount: !0,
-                      tooltip: Object(N.f)("#Sale_TaggedItemsFilter_ttip"),
+                      tooltip: Object(F.f)("#Sale_TaggedItemsFilter_ttip"),
                     }),
                     m.createElement(
                       "div",
-                      { className: z.OKButton },
+                      { className: W.OKButton },
                       m.createElement(
-                        O.r,
+                        T.r,
                         { onClick: this.OnOK },
-                        Object(N.f)("#Sale_TagFilter_OK")
+                        Object(F.f)("#Sale_TagFilter_OK")
                       )
                     )
                   )
                 )
               );
             }),
-            Object(a.c)([F.a], t.prototype, "OnChangeClauseType", null),
-            Object(a.c)([F.a], t.prototype, "OnChangeClauseTag", null),
-            Object(a.c)([F.a], t.prototype, "OnAddClause", null),
-            Object(a.c)([F.a], t.prototype, "OnRemoveClause", null),
-            Object(a.c)([F.a], t.prototype, "OnAddClauseTagSlot", null),
-            Object(a.c)([F.a], t.prototype, "OnRemoveClauseTagSlot", null),
-            Object(a.c)([F.a], t.prototype, "OnHighlightTag", null),
-            Object(a.c)([F.a], t.prototype, "OnToggleTagBreakdown", null),
-            Object(a.c)([F.a], t.prototype, "OnSetViewMode", null),
-            Object(a.c)([F.a], t.prototype, "OnTagsModified", null),
-            Object(a.c)([F.a], t.prototype, "UpdateSearchText", null),
-            Object(a.c)([F.a], t.prototype, "OnOK", null),
+            Object(a.c)([R.a], t.prototype, "OnChangeClauseType", null),
+            Object(a.c)([R.a], t.prototype, "OnChangeClauseTag", null),
+            Object(a.c)([R.a], t.prototype, "OnAddClause", null),
+            Object(a.c)([R.a], t.prototype, "OnRemoveClause", null),
+            Object(a.c)([R.a], t.prototype, "OnAddClauseTagSlot", null),
+            Object(a.c)([R.a], t.prototype, "OnRemoveClauseTagSlot", null),
+            Object(a.c)([R.a], t.prototype, "OnHighlightTag", null),
+            Object(a.c)([R.a], t.prototype, "OnToggleTagBreakdown", null),
+            Object(a.c)([R.a], t.prototype, "OnSetViewMode", null),
+            Object(a.c)([R.a], t.prototype, "OnTagsModified", null),
+            Object(a.c)([R.a], t.prototype, "UpdateSearchText", null),
+            Object(a.c)([R.a], t.prototype, "OnOK", null),
             t
           );
         })(m.Component),
-        ce = (function (e) {
+        ue = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -25106,7 +25083,7 @@
                 var r = i[a],
                   o = r.capsule,
                   s = r.tags,
-                  c = q(o).appData,
+                  c = K(o).appData,
                   u = o.id + "\t" + o.type;
                 u +=
                   '\t"' +
@@ -25152,7 +25129,7 @@
                   d = new Array();
                 if (c)
                   for (var p = 0, m = c[1].split(";"); p < m.length; p++) {
-                    var _ = W(m[p]);
+                    var _ = q(m[p]);
                     if (_) {
                       var g = _.toLocaleLowerCase();
                       u.has(g) || (u.add(g), d.push(_));
@@ -25262,7 +25239,7 @@
             (t.prototype.render = function () {
               var e = this.props.closeModal;
               return m.createElement(
-                M.e,
+                w.e,
                 {
                   onCancel: e,
                   closeModal: e,
@@ -25270,56 +25247,56 @@
                   bAllowFullSize: !0,
                   bHideCloseIcon: this.state.bImporting,
                 },
-                m.createElement(O.l, null, Object(N.f)("#Sale_EditRaw_Title")),
+                m.createElement(T.l, null, Object(F.f)("#Sale_EditRaw_Title")),
                 m.createElement(
-                  O.b,
+                  T.b,
                   null,
                   m.createElement(
                     "div",
                     null,
-                    Object(N.f)("#Sale_EditRaw_Desc_1")
+                    Object(F.f)("#Sale_EditRaw_Desc_1")
                   ),
                   m.createElement(
                     "div",
                     null,
-                    Object(N.f)("#Sale_EditRaw_Desc_2")
+                    Object(F.f)("#Sale_EditRaw_Desc_2")
                   ),
                   m.createElement(
                     "div",
-                    { className: U.EditRawExample },
-                    Object(N.f)("#Sale_EditRaw_Example_Title")
+                    { className: H.EditRawExample },
+                    Object(F.f)("#Sale_EditRaw_Example_Title")
                   ),
                   m.createElement(
                     "div",
-                    { className: U.EditRawExample },
-                    Object(N.f)("#Sale_EditTagItems_Example_1")
+                    { className: H.EditRawExample },
+                    Object(F.f)("#Sale_EditTagItems_Example_1")
                   ),
                   m.createElement(
                     "div",
-                    { className: U.EditRawExample },
-                    Object(N.f)("#Sale_EditTagItems_Example_2")
+                    { className: H.EditRawExample },
+                    Object(F.f)("#Sale_EditTagItems_Example_2")
                   ),
                   m.createElement(
                     "div",
-                    { className: U.EditRawExample },
-                    Object(N.f)("#Sale_EditTagItems_Example_3")
+                    { className: H.EditRawExample },
+                    Object(F.f)("#Sale_EditTagItems_Example_3")
                   ),
                   Boolean(this.state.errMsg) &&
                     m.createElement(
                       "p",
-                      { className: T.ErrorStyles },
+                      { className: C.ErrorStyles },
                       this.state.errMsg
                     ),
                   this.state.bImporting &&
-                    m.createElement(G.a, {
+                    m.createElement(L.a, {
                       size: "medium",
                       position: "center",
                     }),
                   !this.state.bImporting &&
                     m.createElement("textarea", {
-                      className: Object(B.a)(
-                        U.EditRawTextArea,
-                        z.EditRawTextArea
+                      className: Object(N.a)(
+                        H.EditRawTextArea,
+                        W.EditRawTextArea
                       ),
                       value: this.state.editValue,
                       cols: 80,
@@ -25329,29 +25306,29 @@
                 ),
                 !this.state.bImporting &&
                   m.createElement(
-                    O.k,
+                    T.k,
                     null,
                     m.createElement(
-                      O.r,
+                      T.r,
                       { onClick: this.OnCompleteEdit, disabled: !1 },
-                      Object(N.f)("#Button_Confirm"),
+                      Object(F.f)("#Button_Confirm"),
                       " "
                     ),
                     m.createElement(
-                      O.d,
+                      T.d,
                       { onClick: e, disabled: !1 },
-                      Object(N.f)("#Button_Cancel")
+                      Object(F.f)("#Button_Cancel")
                     )
                   )
               );
             }),
-            Object(a.c)([F.a], t.prototype, "OnCompleteEdit", null),
-            Object(a.c)([F.a], t.prototype, "DoImport", null),
-            Object(a.c)([F.a], t.prototype, "OnTextChange", null),
+            Object(a.c)([R.a], t.prototype, "OnCompleteEdit", null),
+            Object(a.c)([R.a], t.prototype, "DoImport", null),
+            Object(a.c)([R.a], t.prototype, "OnTextChange", null),
             (t = Object(a.c)([p.a], t))
           );
         })(m.Component),
-        ue = (function (e) {
+        de = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -25387,7 +25364,7 @@
                         (n = this.props.editModel),
                         (i = n.GetEventModel().jsondata.sale_opt_in_page_name)
                           ? (this.setState({
-                              statusMsg: Object(N.f)(
+                              statusMsg: Object(F.f)(
                                 "#Sale_ImportOptIn_Progress_LoadOptIn"
                               ),
                             }),
@@ -25484,7 +25461,7 @@
                           .GetEventModel()
                           .GetTaggedItems()),
                         this.setState({
-                          statusMsg: Object(N.f)(
+                          statusMsg: Object(F.f)(
                             "#Sale_SyncTaggedItems_Progress_LoadingStore",
                             c.length
                           ),
@@ -25523,7 +25500,7 @@
                 {
                   bImporting: !0,
                   errMsg: void 0,
-                  statusMsg: Object(N.f)(
+                  statusMsg: Object(F.f)(
                     "#Sale_ImportOptIn_Progress_LoadOptIn"
                   ),
                 },
@@ -25545,7 +25522,7 @@
                 a = t.editModel,
                 i = Boolean(a.GetEventModel().jsondata.sale_opt_in_page_name);
               return m.createElement(
-                M.e,
+                w.e,
                 {
                   onCancel: n,
                   closeModal: n,
@@ -25554,17 +25531,17 @@
                   bHideCloseIcon: this.state.bImporting,
                 },
                 m.createElement(
-                  O.l,
+                  T.l,
                   null,
-                  Object(N.f)("#Sale_SyncTaggedItems_Title")
+                  Object(F.f)("#Sale_SyncTaggedItems_Title")
                 ),
                 m.createElement(
-                  O.b,
+                  T.b,
                   null,
                   Boolean(this.state.errMsg) &&
                     m.createElement(
                       "p",
-                      { className: T.ErrorStyles },
+                      { className: C.ErrorStyles },
                       this.state.errMsg
                     ),
                   this.state.bImporting &&
@@ -25573,7 +25550,7 @@
                       null,
                       this.state.statusMsg &&
                         m.createElement("p", null, this.state.statusMsg),
-                      m.createElement(G.a, {
+                      m.createElement(L.a, {
                         size: "medium",
                         position: "center",
                       })
@@ -25583,37 +25560,37 @@
                       m.Fragment,
                       null,
                       i &&
-                        m.createElement(O.e, {
-                          label: Object(N.f)("#Sale_SyncTag_OptInItems"),
-                          tooltip: Object(N.f)("#Sale_SyncTag_OptInItems_ttip"),
+                        m.createElement(T.e, {
+                          label: Object(F.f)("#Sale_SyncTag_OptInItems"),
+                          tooltip: Object(F.f)("#Sale_SyncTag_OptInItems_ttip"),
                           checked: this.state.sync_opt_in_items,
                           onChange: function (t) {
                             return e.setState({ sync_opt_in_items: t });
                           },
                         }),
                       i &&
-                        m.createElement(O.e, {
-                          label: Object(N.f)("#Sale_SyncTag_OptInTags"),
-                          tooltip: Object(N.f)("#Sale_SyncTag_OptInTags_ttip"),
+                        m.createElement(T.e, {
+                          label: Object(F.f)("#Sale_SyncTag_OptInTags"),
+                          tooltip: Object(F.f)("#Sale_SyncTag_OptInTags_ttip"),
                           checked: this.state.sync_opt_in_tags,
                           onChange: function (t) {
                             return e.setState({ sync_opt_in_tags: t });
                           },
                         }),
-                      m.createElement(O.e, {
-                        label: Object(N.f)("#Sale_SyncTag_StoreTags"),
-                        tooltip: Object(N.f)("#Sale_SyncTag_StoreTags_ttip"),
+                      m.createElement(T.e, {
+                        label: Object(F.f)("#Sale_SyncTag_StoreTags"),
+                        tooltip: Object(F.f)("#Sale_SyncTag_StoreTags_ttip"),
                         checked: this.state.sync_store_tags,
                         onChange: function (t) {
                           return e.setState({ sync_store_tags: t });
                         },
                       }),
                       this.state.sync_store_tags &&
-                        m.createElement(O.e, {
-                          label: Object(N.f)(
+                        m.createElement(T.e, {
+                          label: Object(F.f)(
                             "#FacetedBrowseEditor_SyncTopNTags"
                           ),
-                          tooltip: Object(N.f)(
+                          tooltip: Object(F.f)(
                             "#FacetedBrowseEditor_SyncTopNTags_Tooltip"
                           ),
                           checked: this.state.bSyncTop20StoreTags,
@@ -25621,9 +25598,9 @@
                             return e.setState({ bSyncTop20StoreTags: t });
                           },
                         }),
-                      m.createElement(O.e, {
-                        label: Object(N.f)("#Sale_SyncTag_Features"),
-                        tooltip: Object(N.f)("#Sale_SyncTag_Features"),
+                      m.createElement(T.e, {
+                        label: Object(F.f)("#Sale_SyncTag_Features"),
+                        tooltip: Object(F.f)("#Sale_SyncTag_Features"),
                         checked: this.state.sync_feature_tags,
                         onChange: function (t) {
                           return e.setState({ sync_feature_tags: t });
@@ -25633,30 +25610,30 @@
                 ),
                 !this.state.bImporting &&
                   m.createElement(
-                    O.k,
+                    T.k,
                     null,
                     m.createElement(
-                      O.r,
+                      T.r,
                       {
                         onClick: this.OnPerformSync,
                         disabled: !this.CanPerformSync(),
                       },
-                      Object(N.f)("#Button_Confirm")
+                      Object(F.f)("#Button_Confirm")
                     ),
                     m.createElement(
-                      O.d,
+                      T.d,
                       { onClick: n, disabled: !1 },
-                      Object(N.f)("#Button_Cancel")
+                      Object(F.f)("#Button_Cancel")
                     )
                   )
               );
             }),
-            Object(a.c)([F.a], t.prototype, "ImportOptInPage", null),
-            Object(a.c)([F.a], t.prototype, "OnPerformSync", null),
+            Object(a.c)([R.a], t.prototype, "ImportOptInPage", null),
+            Object(a.c)([R.a], t.prototype, "OnPerformSync", null),
             (t = Object(a.c)([p.a], t))
           );
         })(m.Component);
-      function de(e) {
+      function pe(e) {
         for (var t = new Set(), n = 0, a = e; n < a.length; n++) {
           var i = a[n],
             r = i.tag_name.trim().toLocaleLowerCase();
@@ -25667,7 +25644,7 @@
         }
         return !0;
       }
-      var pe = function (e) {
+      var me = function (e) {
           var t = e.closeModal,
             n = e.editModel,
             i = n.GetEventModel().jsondata,
@@ -25681,10 +25658,10 @@
             h = g[0],
             f = g[1],
             b = function () {
-              c(de(h)), _(!0);
+              c(pe(h)), _(!0);
             },
             v = h.map(function (e, t) {
-              return m.createElement(me, {
+              return m.createElement(_e, {
                 key: "AutoTag" + t,
                 editModel: n,
                 fnOnEdited: b,
@@ -25696,7 +25673,7 @@
                         return n != e;
                       })
                     ),
-                    void c(de(h))
+                    void c(pe(h))
                   );
                   var e;
                 },
@@ -25704,26 +25681,26 @@
               });
             });
           return m.createElement(
-            M.e,
+            w.e,
             {
               onCancel: t,
               closeModal: t,
               bDisableBackgroundDismiss: !0,
               bAllowFullSize: !0,
             },
-            m.createElement(O.l, null, Object(N.f)("#Sale_EditAutoTags_Title")),
+            m.createElement(T.l, null, Object(F.f)("#Sale_EditAutoTags_Title")),
             m.createElement(
-              O.b,
+              T.b,
               null,
               m.createElement(
                 "div",
-                { className: z.EditAutoTagsBody },
+                { className: W.EditAutoTagsBody },
                 m.createElement(
                   "div",
-                  { className: z.AutoTagList },
+                  { className: W.AutoTagList },
                   v,
                   m.createElement(
-                    O.d,
+                    T.d,
                     {
                       onClick: function () {
                         f(
@@ -25734,16 +25711,16 @@
                           c(!1);
                       },
                     },
-                    Object(N.f)("#Sale_EditTags_NewTagButton")
+                    Object(F.f)("#Sale_EditTags_NewTagButton")
                   )
                 )
               )
             ),
             m.createElement(
-              O.k,
+              T.k,
               null,
               m.createElement(
-                O.d,
+                T.d,
                 {
                   onClick: function () {
                     s &&
@@ -25764,12 +25741,12 @@
                   },
                   disabled: !s,
                 },
-                Object(N.f)("#Button_OK")
+                Object(F.f)("#Button_OK")
               )
             )
           );
         },
-        me = function (e) {
+        _e = function (e) {
           var t = m.useState(e.autoTag.tag_name),
             n = t[0],
             a = t[1],
@@ -25781,22 +25758,22 @@
             };
           return m.createElement(
             "div",
-            { className: z.AutoTag },
+            { className: W.AutoTag },
             m.createElement(
               "div",
-              { className: z.AutoTagRow },
-              m.createElement(O.m, {
+              { className: W.AutoTagRow },
+              m.createElement(T.m, {
                 type: "text",
                 onChange: function (t) {
                   a(t.target.value),
                     (e.autoTag.tag_name = t.target.value.trim()),
                     e.fnOnEdited();
                 },
-                placeholder: Object(N.f)("#Sale_EditAutoTags_Placeholder"),
-                tooltip: Object(N.f)("#Sale_EditAutoTags_Tooltip"),
+                placeholder: Object(F.f)("#Sale_EditAutoTags_Placeholder"),
+                tooltip: Object(F.f)("#Sale_EditAutoTags_Tooltip"),
                 value: n,
               }),
-              m.createElement(K, {
+              m.createElement(Q, {
                 onClick: function () {
                   return e.fnOnDeleted();
                 },
@@ -25804,24 +25781,24 @@
             ),
             m.createElement(
               "div",
-              { className: z.AutoTagRow },
-              m.createElement(Y, { filter: r }),
+              { className: W.AutoTagRow },
+              m.createElement(J, { filter: r }),
               m.createElement(
-                O.d,
+                T.d,
                 {
                   onClick: function () {
-                    Object(w.d)(
-                      m.createElement(se, {
+                    Object(D.d)(
+                      m.createElement(ce, {
                         editModel: e.editModel,
                         filter: r,
-                        title: Object(N.f)("#Sale_TagFilter_EditFilter"),
+                        title: Object(F.f)("#Sale_TagFilter_EditFilter"),
                         onApplyFilter: l,
                       }),
                       window
                     );
                   },
                 },
-                Object(N.f)("#Sale_TagFilter_EditFilter")
+                Object(F.f)("#Sale_TagFilter_EditFilter")
               )
             )
           );
@@ -25928,10 +25905,10 @@
                 "Invalid Clan SteamID: " + n.clanSteamID.ConvertTo64BitString()
               ),
               (n.appid = O.b.APPID),
-              (n.bOldAnnouncement = e && e.startsWith(p.F)),
+              (n.bOldAnnouncement = e && e.startsWith(p.G)),
               (n.bLoaded = !0),
               null == e && (n.loadedAllLanguages = !0),
-              n.appid == p.B &&
+              n.appid == p.C &&
                 (n.vecTags.push("hide_library_overview"),
                 n.vecTags.push("steam_blog"),
                 n.vecTags.push("mod_reviewed")),
@@ -26186,7 +26163,7 @@
                     return (
                       (o =
                         !!this.m_editModel.GetGID() &&
-                        !this.m_editModel.GetGID().startsWith(p.F)),
+                        !this.m_editModel.GetGID().startsWith(p.G)),
                       t && !o
                         ? [
                             2,

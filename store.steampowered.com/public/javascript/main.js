@@ -1143,7 +1143,13 @@ function EnableSearchSuggestions( elemTerm, navcontext, cc, realm, l, rgUserPref
 
 	$Term.on( 'keydown', function( event ) { SearchSuggestOnKeyDown( event, $Term, $SuggestionsCtn, $Suggestions ); } );
 	$Term.on( 'click focus', function( event ) { SearchSuggestClearDefaultSearchText( $Term, $SuggestionsCtn, $Suggestions ); } );
-	$Term.on( 'blur', function( event ) { SearchSuggestSetDefaultSearchText( $Term, $SuggestionsCtn, $Suggestions ); } );
+	$Term.add( $SuggestionsCtn ).on( 'focusout', function( event ) {
+		if ( event.relatedTarget && ( $J.contains( $Term[0], event.relatedTarget ) || $Term.is( event.relatedTarget ) || $J.contains( $SuggestionsCtn[0], event.relatedTarget ) ) )
+		{
+			return;
+		}
+		SearchSuggestSetDefaultSearchText( $Term, $SuggestionsCtn, $Suggestions );
+	} );
 	g_oSuggestParams = $J.extend( {
 		cc: cc,
 		realm: realm,

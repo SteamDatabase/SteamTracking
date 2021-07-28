@@ -620,7 +620,7 @@ button.faqeditor_EditorSaveButton_22iwd.faqeditor_EditorSaveButton_22iwd:disable
   color: #9ad5e4;
   text-decoration: underline;
 }
-.faqviewadmin_SmallAvatar_1FpSi {
+.faqviewadmin_SmallAvatar_2rdPs {
   max-width: 32px;
   max-height: 32px;
   float: left;
@@ -628,44 +628,44 @@ button.faqeditor_EditorSaveButton_22iwd.faqeditor_EditorSaveButton_22iwd:disable
   margin-top: 2px;
   border-radius: 3px;
 }
-.faqviewsidebar_Section_nmn4X {
+.faqviewsidebar_Section_3S-Xz {
   position: relative;
   margin-bottom: 12px;
   padding: 16px 0px 16px 16px;
   box-sizing: border-box;
   color: #a5adb6;
 }
-.faqviewsidebar_Section_nmn4X.faqviewsidebar_CommunityHelp_1gLYG {
+.faqviewsidebar_Section_3S-Xz.faqviewsidebar_CommunityHelp_2TGFI {
   display: flex;
   flex-direction: row;
 }
-.faqviewsidebar_Section_nmn4X.faqviewsidebar_NeedHelp_goe9f {
+.faqviewsidebar_Section_3S-Xz.faqviewsidebar_NeedHelp_1DywX {
   display: flex;
   flex-direction: row;
   padding-top: 0px;
 }
 @media screen and (max-width: 910px) {
-  .faqviewsidebar_Section_nmn4X.faqviewsidebar_NeedHelp_goe9f {
+  .faqviewsidebar_Section_3S-Xz.faqviewsidebar_NeedHelp_1DywX {
     padding-top: 16px;
   }
 }
-.faqviewsidebar_Section_nmn4X .faqviewsidebar_LeftCol_346P0 svg {
+.faqviewsidebar_Section_3S-Xz .faqviewsidebar_LeftCol_3gfCn svg {
   width: 32px;
   height: 32px;
   margin-right: 8px;
   fill: #a5adb6;
 }
-.faqviewsidebar_TopicHeader_3AxoX {
+.faqviewsidebar_TopicHeader_3X6hu {
   font-size: 18px;
   font-weight: bold;
   color: #d5d8dd;
   margin-bottom: 4px;
 }
-.faqviewsidebar_CenterButtonCtn_2Lnit {
+.faqviewsidebar_CenterButtonCtn_3sZ58 {
   text-align: center;
   margin-top: 8px;
 }
-.faqviewsidebar_CenterButtonCtn_2Lnit a {
+.faqviewsidebar_CenterButtonCtn_3sZ58 a {
   margin-left: 0px;
   display: block;
 }

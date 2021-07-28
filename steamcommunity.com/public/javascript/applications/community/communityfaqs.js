@@ -3,19 +3,6 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [10],
   {
-    "0zs6": function (e, t, a) {
-      e.exports = {
-        Section: "faqviewsidebar_Section_nmn4X",
-        CommunityHelp: "faqviewsidebar_CommunityHelp_1gLYG",
-        NeedHelp: "faqviewsidebar_NeedHelp_goe9f",
-        LeftCol: "faqviewsidebar_LeftCol_346P0",
-        TopicHeader: "faqviewsidebar_TopicHeader_3AxoX",
-        CenterButtonCtn: "faqviewsidebar_CenterButtonCtn_2Lnit",
-      };
-    },
-    "3tbG": function (e, t, a) {
-      e.exports = { SmallAvatar: "faqviewadmin_SmallAvatar_1FpSi" };
-    },
     "45aE": function (e, t, a) {
       e.exports = {
         ImportToolCtn: "bbcodeimporter_ImportToolCtn_TQZns",
@@ -195,8 +182,8 @@
         T = a("2vnA"),
         P = a("bxBv"),
         D = a("r64O"),
-        q = a("bDQf"),
-        M = a("XxJJ"),
+        q = a("XxJJ"),
+        M = a("bDQf"),
         z = (function () {
           function e(e, t) {
             (this.m_summary = e),
@@ -270,21 +257,20 @@
                                 .then(function (t) {
                                   1 == t.eResult
                                     ? Object(T.G)(function () {
-                                        d.m_mapStoredDrafts.has(e)
-                                          ? ((d.m_mapStoredDrafts.get(
-                                              e
-                                            ).title = o),
-                                            (d.m_mapStoredDrafts.get(
-                                              e
-                                            ).content = r),
-                                            (d.m_mapStoredDrafts.get(
-                                              e
-                                            ).timestamp = t.rtUpdateTime))
-                                          : d.m_mapStoredDrafts.set(e, {
-                                              title: o,
-                                              content: r,
-                                              timestamp: t.rtUpdateTime,
-                                            }),
+                                        d.m_mapStoredDrafts.has(e) ||
+                                          d.m_mapStoredDrafts.set(e, {}),
+                                          (d.m_mapStoredDrafts.get(
+                                            e
+                                          ).title = o),
+                                          (d.m_mapStoredDrafts.get(
+                                            e
+                                          ).content = r),
+                                          (d.m_mapStoredDrafts.get(
+                                            e
+                                          ).timestamp = t.rtUpdateTime),
+                                          (d.m_mapStoredDrafts.get(
+                                            e
+                                          ).author_account_id = u.i.accountid.toString()),
                                           (d.m_mapLocalUpdates.get(
                                             e
                                           ).strTitle = null),
@@ -320,7 +306,7 @@
                                 .catch(function (e) {
                                   console.error(
                                     "FAQModel.SaveDrafts: Hit error " +
-                                      Object(q.c)(e).strErrorMsg
+                                      Object(M.c)(e).strErrorMsg
                                   ),
                                     1 == s && (s = 2);
                                 }),
@@ -488,8 +474,8 @@
               return this.m_summary;
             }),
             Object(o.c)([T.C], e.prototype, "m_mapLocalUpdates", void 0),
-            Object(o.c)([M.a], e.prototype, "BHasSomeTextForLanguage", null),
-            Object(o.c)([M.a], e.prototype, "GetLastTimeLanguageUpdated", null),
+            Object(o.c)([q.a], e.prototype, "BHasSomeTextForLanguage", null),
+            Object(o.c)([q.a], e.prototype, "GetLastTimeLanguageUpdated", null),
             e
           );
         })(),
@@ -2337,7 +2323,7 @@
                     case 3:
                       return (
                         (r = o.sent()),
-                        (l = Object(q.c)(r)),
+                        (l = Object(M.c)(r)),
                         console.error(
                           "FAQStore.CreateFAQ: caught error " + l.strErrorMsg,
                           l
@@ -2389,7 +2375,7 @@
                     case 3:
                       return (
                         (p = o.sent()),
-                        (d = Object(q.c)(p)),
+                        (d = Object(M.c)(p)),
                         console.error(
                           "FAQStore.UpdateDraft: caught error " + d.strErrorMsg,
                           d
@@ -2439,7 +2425,7 @@
                     case 3:
                       return (
                         (r = o.sent()),
-                        (l = Object(q.c)(r)),
+                        (l = Object(M.c)(r)),
                         console.error(
                           "FAQStore.UpdateJsonData: caught error " +
                             l.strErrorMsg,
@@ -2490,7 +2476,7 @@
                     case 3:
                       return (
                         (s = o.sent()),
-                        (n = Object(q.c)(s)),
+                        (n = Object(M.c)(s)),
                         console.error(
                           "FAQStore.DeleteFAQ: caught error " + n.strErrorMsg,
                           n
@@ -2567,7 +2553,7 @@
                     case 3:
                       return (
                         (l = o.sent()),
-                        (p = Object(q.c)(l)),
+                        (p = Object(M.c)(l)),
                         console.error(
                           "FaqStore.LoadFAQDraftContent: exception " +
                             p.strErrorMsg,
@@ -2620,7 +2606,7 @@
                     case 3:
                       return (
                         (l = o.sent()),
-                        (p = Object(q.c)(l)),
+                        (p = Object(M.c)(l)),
                         console.error(
                           "FaqStore.UpdateVisibility: exception " +
                             p.strErrorMsg,
@@ -2695,7 +2681,7 @@
                     case 3:
                       return (
                         (r = o.sent()),
-                        (l = Object(q.c)(r)),
+                        (l = Object(M.c)(r)),
                         console.error(
                           "FaqStore.PublishDraftByLanguage: exception " +
                             l.strErrorMsg,
@@ -2767,7 +2753,7 @@
                     case 3:
                       return (
                         (n = o.sent()),
-                        (r = Object(q.c)(n)),
+                        (r = Object(M.c)(n)),
                         console.error(
                           "FaqStore.UpdateInternalName: exception " +
                             r.strErrorMsg,
@@ -2910,9 +2896,55 @@
         return n.a.useRef([e, !0]).current;
       }
       var be,
-        we = a("45aE"),
-        ve = a.n(we),
-        Se = [
+        we = a("Ty5D"),
+        ve = a("55Ip");
+      !(function (e) {
+        (e.k_eView = "view"),
+          (e.k_eCommunityView = "communityview"),
+          (e.k_eCommunityEdit = "edit"),
+          (e.k_eCommunityDashboard = "dashboard"),
+          (e.k_eCommunityPreview = "preview");
+      })(be || (be = {}));
+      var Se = function (e) {
+        var t = ke(e.route, e.faqid);
+        return e.bForceRedirect
+          ? s.createElement(we.b, { push: !0, to: t })
+          : e.bForceAnchor
+          ? s.createElement(
+              "a",
+              {
+                href: u.c.COMMUNITY_BASE_URL.slice(0, -1) + t,
+                className: e.className,
+              },
+              e.children
+            )
+          : s.createElement(
+              ve.b,
+              { to: t, className: e.className },
+              e.children
+            );
+      };
+      function ke(e, t) {
+        var a = "/faqs/" + u.b.VANITY_ID + "/";
+        switch (e) {
+          case be.k_eView:
+          case be.k_eCommunityView:
+            a += "view/" + me(t);
+            break;
+          case be.k_eCommunityEdit:
+            a += "edit/" + me(t);
+            break;
+          case be.k_eCommunityDashboard:
+            a += "dashboard";
+            break;
+          case be.k_eCommunityPreview:
+            a += "preview/" + me(t);
+        }
+        return a;
+      }
+      var xe = a("45aE"),
+        _e = a.n(xe),
+        Ie = [
           [
             "55",
             "1558-QYAX-1965",
@@ -9986,316 +10018,272 @@
             "",
           ],
         ],
-        ke = a("Ty5D"),
-        xe = a("55Ip");
-      !(function (e) {
-        (e.k_eView = "view"),
-          (e.k_eCommunityView = "communityview"),
-          (e.k_eCommunityEdit = "edit"),
-          (e.k_eCommunityDashboard = "dashboard"),
-          (e.k_eCommunityPreview = "preview");
-      })(be || (be = {}));
-      var _e = function (e) {
-        var t = Ie(e.route, e.faqid);
-        return e.bForceRedirect
-          ? s.createElement(ke.b, { push: !0, to: t })
-          : e.bForceAnchor
-          ? s.createElement(
-              "a",
-              {
-                href: u.c.COMMUNITY_BASE_URL.slice(0, -1) + t,
-                className: e.className,
-              },
-              e.children
-            )
-          : s.createElement(
-              xe.b,
-              { to: t, className: e.className },
-              e.children
-            );
-      };
-      function Ie(e, t) {
-        var a = "/faqs/" + u.b.VANITY_ID + "/";
-        switch (e) {
-          case be.k_eView:
-          case be.k_eCommunityView:
-            a += "view/" + me(t);
-            break;
-          case be.k_eCommunityEdit:
-            a += "edit/" + me(t);
-            break;
-          case be.k_eCommunityDashboard:
-            a += "dashboard";
-            break;
-          case be.k_eCommunityPreview:
-            a += "preview/" + me(t);
-        }
-        return a;
-      }
-      var Ae = Object(i.a)(function (e) {
-        var t = ye(),
-          a = t[0],
-          i = (t[1], n.a.useState(null)),
-          r = i[0],
-          p = i[1],
-          d = n.a.useState(new Map()),
-          h = d[0],
-          c = d[1],
-          u = n.a.useState(new Map()),
-          m = u[0],
-          f = (u[1], n.a.useState(new Map())),
-          g = f[0],
-          y = f[1];
-        if (
-          (Object(s.useEffect)(function () {
-            Object(o.b)(void 0, void 0, void 0, function () {
-              return Object(o.e)(this, function (e) {
-                return (
-                  p(
-                    Se.map(function (e) {
-                      return (
-                        (t = e)[13] &&
-                          t[14] &&
-                          console.error("redirect dupes on", t),
-                        {
-                          id: parseInt(t[0]),
-                          strRef: t[1],
-                          strTitle: t[2],
-                          strQuestion: t[3] || "",
-                          strAnswer: t[4] || "",
-                          rgKeywords: (t[5] || "").split(","),
-                          nViewCount: parseInt(t[6]),
-                          nVoteCount: parseInt(t[7]),
-                          nCategory: parseInt(t[10]),
-                          nAppID: parseInt(t[11]) || 0,
-                          nOldFaqID: parseInt(t[12]) || void 0,
-                          strRedirect: t[13] || void 0,
-                          custom1: t[14] || void 0,
-                        }
-                      );
-                      var t;
-                    })
-                      .filter(function (e) {
+        Ae = Object(i.a)(function (e) {
+          var t = ye(),
+            a = t[0],
+            i = (t[1], n.a.useState(null)),
+            r = i[0],
+            p = i[1],
+            d = n.a.useState(new Map()),
+            h = d[0],
+            c = d[1],
+            u = n.a.useState(new Map()),
+            m = u[0],
+            f = (u[1], n.a.useState(new Map())),
+            g = f[0],
+            y = f[1];
+          if (
+            (Object(s.useEffect)(function () {
+              Object(o.b)(void 0, void 0, void 0, function () {
+                return Object(o.e)(this, function (e) {
+                  return (
+                    p(
+                      Ie.map(function (e) {
                         return (
-                          !e.strRedirect ||
-                          (console.log(
-                            "Skipping redirected KB",
-                            e.id,
-                            e.strRef,
-                            e.strTitle
-                          ),
-                          !1)
+                          (t = e)[13] &&
+                            t[14] &&
+                            console.error("redirect dupes on", t),
+                          {
+                            id: parseInt(t[0]),
+                            strRef: t[1],
+                            strTitle: t[2],
+                            strQuestion: t[3] || "",
+                            strAnswer: t[4] || "",
+                            rgKeywords: (t[5] || "").split(","),
+                            nViewCount: parseInt(t[6]),
+                            nVoteCount: parseInt(t[7]),
+                            nCategory: parseInt(t[10]),
+                            nAppID: parseInt(t[11]) || 0,
+                            nOldFaqID: parseInt(t[12]) || void 0,
+                            strRedirect: t[13] || void 0,
+                            custom1: t[14] || void 0,
+                          }
                         );
+                        var t;
                       })
-                      .sort(function (e, t) {
-                        return t.nViewCount - e.nViewCount;
-                      })
-                  ),
-                  [2]
-                );
+                        .filter(function (e) {
+                          return (
+                            !e.strRedirect ||
+                            (console.log(
+                              "Skipping redirected KB",
+                              e.id,
+                              e.strRef,
+                              e.strTitle
+                            ),
+                            !1)
+                          );
+                        })
+                        .sort(function (e, t) {
+                          return t.nViewCount - e.nViewCount;
+                        })
+                    ),
+                    [2]
+                  );
+                });
               });
-            });
-          }, []),
-          n.a.useEffect(
-            function () {
-              for (var e, t = new Map(), o = 0, i = a; o < i.length; o++) {
-                var s = i[o];
-                if (s.json_data) {
-                  var n =
-                    null === (e = JSON.parse(s.json_data)) || void 0 === e
-                      ? void 0
-                      : e.legacyDeskProInfo;
-                  (null == n ? void 0 : n.id) && t.set(n.id, s);
+            }, []),
+            n.a.useEffect(
+              function () {
+                for (var e, t = new Map(), o = 0, i = a; o < i.length; o++) {
+                  var s = i[o];
+                  if (s.json_data) {
+                    var n =
+                      null === (e = JSON.parse(s.json_data)) || void 0 === e
+                        ? void 0
+                        : e.legacyDeskProInfo;
+                    (null == n ? void 0 : n.id) && t.set(n.id, s);
+                  }
                 }
-              }
-              c(t);
-            },
-            [a]
-          ),
-          n.a.useEffect(
-            function () {
-              if (r && 0 != h.size)
-                for (
-                  var e = function (e) {
-                      if (!g.has(e.id) && h.has(e.id)) {
-                        return (
-                          (function (e, t) {
-                            var a, i, s, r, p, d, h, c, u, m;
-                            Object(o.b)(this, void 0, void 0, function () {
-                              var f, g, y, b, w, v, k, _, I, A, C;
-                              return Object(o.e)(this, function (o) {
-                                switch (o.label) {
-                                  case 0:
-                                    return (
-                                      (f = new Array(30)),
-                                      [4, he.Get().LoadFAQDraftContent(e)]
-                                    );
-                                  case 1:
-                                    for (
-                                      g = o.sent(),
-                                        y =
-                                          null !==
-                                            (r =
-                                              null ===
-                                                (s =
-                                                  null ===
-                                                    (i =
-                                                      null ===
-                                                        (a =
-                                                          null == g
-                                                            ? void 0
-                                                            : g.GetLastSavedDraftVersion(
-                                                                0
-                                                              )) || void 0 === a
-                                                        ? void 0
-                                                        : a.content) ||
-                                                  void 0 === i
-                                                    ? void 0
-                                                    : i.match(Ce)) ||
-                                              void 0 === s
-                                                ? void 0
-                                                : s.length) && void 0 !== r
-                                            ? r
-                                            : 0,
-                                        b =
-                                          null !==
-                                            (d =
-                                              null ===
-                                                (p =
-                                                  null == g
-                                                    ? void 0
-                                                    : g.GetLastSavedDraftVersion(
-                                                        0
-                                                      )) || void 0 === p
-                                                ? void 0
-                                                : p.title) && void 0 !== d
-                                            ? d
-                                            : "unknown",
-                                        w = 0;
-                                      w < 30;
-                                      w++
-                                    )
-                                      (
-                                        null ==
-                                        (v =
-                                          null == g
-                                            ? void 0
-                                            : g.GetLastSavedDraftVersion(w))
-                                          ? void 0
-                                          : v.content
+                c(t);
+              },
+              [a]
+            ),
+            n.a.useEffect(
+              function () {
+                if (r && 0 != h.size)
+                  for (
+                    var e = function (e) {
+                        if (!g.has(e.id) && h.has(e.id)) {
+                          return (
+                            (function (e, t) {
+                              var a, i, s, r, p, d, h, c, u, m;
+                              Object(o.b)(this, void 0, void 0, function () {
+                                var f, g, y, b, w, v, k, _, I, A, C;
+                                return Object(o.e)(this, function (o) {
+                                  switch (o.label) {
+                                    case 0:
+                                      return (
+                                        (f = new Array(30)),
+                                        [4, he.Get().LoadFAQDraftContent(e)]
+                                      );
+                                    case 1:
+                                      for (
+                                        g = o.sent(),
+                                          y =
+                                            null !==
+                                              (r =
+                                                null ===
+                                                  (s =
+                                                    null ===
+                                                      (i =
+                                                        null ===
+                                                          (a =
+                                                            null == g
+                                                              ? void 0
+                                                              : g.GetLastSavedDraftVersion(
+                                                                  0
+                                                                )) ||
+                                                        void 0 === a
+                                                          ? void 0
+                                                          : a.content) ||
+                                                    void 0 === i
+                                                      ? void 0
+                                                      : i.match(Ce)) ||
+                                                void 0 === s
+                                                  ? void 0
+                                                  : s.length) && void 0 !== r
+                                              ? r
+                                              : 0,
+                                          b =
+                                            null !==
+                                              (d =
+                                                null ===
+                                                  (p =
+                                                    null == g
+                                                      ? void 0
+                                                      : g.GetLastSavedDraftVersion(
+                                                          0
+                                                        )) || void 0 === p
+                                                  ? void 0
+                                                  : p.title) && void 0 !== d
+                                              ? d
+                                              : "unknown",
+                                          w = 0;
+                                        w < 30;
+                                        w++
                                       )
-                                        ? ((k = v.content),
-                                          (_ = l.a.renderToString(
-                                            n.a.createElement(S, { text: k })
-                                          )),
-                                          (I =
-                                            null !==
-                                              (c =
-                                                null === (h = _.match(Ce)) ||
-                                                void 0 === h
-                                                  ? void 0
-                                                  : h.length) && void 0 !== c
-                                              ? c
-                                              : 0),
-                                          (A =
-                                            null !==
-                                              (m =
-                                                null === (u = k.match(Ce)) ||
-                                                void 0 === u
-                                                  ? void 0
-                                                  : u.length) && void 0 !== m
-                                              ? m
-                                              : 0),
-                                          (C = y > 0 ? A / y : 0 == A ? 1 : 0),
-                                          0 == I && C > 0.95 && C < 1.05
-                                            ? (f[w] = "good")
-                                            : I > 0
-                                            ? (console.log(
-                                                Object(x.a)(w),
-                                                b,
-                                                I,
-                                                "unrendered"
-                                              ),
-                                              (f[w] = "badimport"))
-                                            : C > 0.6 && C < 1.5
-                                            ? (console.log(
-                                                Object(x.a)(w),
-                                                b,
-                                                "tag ratio:",
-                                                C
-                                              ),
-                                              (f[w] = "suspicious"))
-                                            : (console.log(
-                                                Object(x.a)(w),
-                                                b,
-                                                "tag ratio (BAD):",
-                                                C
-                                              ),
-                                              (f[w] = "bad")))
-                                        : (f[w] = "missing");
-                                    return t(f), [2, !0];
-                                }
+                                        (
+                                          null ==
+                                          (v =
+                                            null == g
+                                              ? void 0
+                                              : g.GetLastSavedDraftVersion(w))
+                                            ? void 0
+                                            : v.content
+                                        )
+                                          ? ((k = v.content),
+                                            (_ = l.a.renderToString(
+                                              n.a.createElement(S, { text: k })
+                                            )),
+                                            (I =
+                                              null !==
+                                                (c =
+                                                  null === (h = _.match(Ce)) ||
+                                                  void 0 === h
+                                                    ? void 0
+                                                    : h.length) && void 0 !== c
+                                                ? c
+                                                : 0),
+                                            (A =
+                                              null !==
+                                                (m =
+                                                  null === (u = k.match(Ce)) ||
+                                                  void 0 === u
+                                                    ? void 0
+                                                    : u.length) && void 0 !== m
+                                                ? m
+                                                : 0),
+                                            (C =
+                                              y > 0 ? A / y : 0 == A ? 1 : 0),
+                                            0 == I && C > 0.95 && C < 1.05
+                                              ? (f[w] = "good")
+                                              : I > 0
+                                              ? (console.log(
+                                                  Object(x.a)(w),
+                                                  b,
+                                                  I,
+                                                  "unrendered"
+                                                ),
+                                                (f[w] = "badimport"))
+                                              : C > 0.6 && C < 1.5
+                                              ? (console.log(
+                                                  Object(x.a)(w),
+                                                  b,
+                                                  "tag ratio:",
+                                                  C
+                                                ),
+                                                (f[w] = "suspicious"))
+                                              : (console.log(
+                                                  Object(x.a)(w),
+                                                  b,
+                                                  "tag ratio (BAD):",
+                                                  C
+                                                ),
+                                                (f[w] = "bad")))
+                                          : (f[w] = "missing");
+                                      return t(f), [2, !0];
+                                  }
+                                });
                               });
-                            });
-                          })(h.get(e.id).faq_id, function (t) {
-                            var a = new Map(g.entries());
-                            a.set(e.id, t), y(a);
-                          }),
-                          { value: void 0 }
-                        );
-                      }
-                    },
-                    t = 0,
-                    a = r;
-                  t < a.length;
-                  t++
-                ) {
-                  var i = e(a[t]);
-                  if ("object" == typeof i) return i.value;
-                }
-            },
-            [r, h, g]
-          ),
-          !r)
-        )
-          return null;
-        var b = r.length,
-          w = h.size,
-          v = "Found " + b + " FAQs to import";
-        w > 0 &&
-          (v =
-            w == b
-              ? "Imported total of " + b + " FAQs"
-              : "Imported " + w + "/" + b + " FAQs");
-        return n.a.createElement(
-          "div",
-          { className: ve.a.ImportToolCtn },
-          n.a.createElement(
+                            })(h.get(e.id).faq_id, function (t) {
+                              var a = new Map(g.entries());
+                              a.set(e.id, t), y(a);
+                            }),
+                            { value: void 0 }
+                          );
+                        }
+                      },
+                      t = 0,
+                      a = r;
+                    t < a.length;
+                    t++
+                  ) {
+                    var i = e(a[t]);
+                    if ("object" == typeof i) return i.value;
+                  }
+              },
+              [r, h, g]
+            ),
+            !r)
+          )
+            return null;
+          var b = r.length,
+            w = h.size,
+            v = "Found " + b + " FAQs to import";
+          w > 0 &&
+            (v =
+              w == b
+                ? "Imported total of " + b + " FAQs"
+                : "Imported " + w + "/" + b + " FAQs");
+          return n.a.createElement(
             "div",
-            { className: ve.a.ToolHeader },
-            "FAQ Importer"
-          ),
-          n.a.createElement("div", { className: ve.a.StatusMessage }, v),
-          n.a.createElement(
-            "div",
-            { className: ve.a.FAQRow },
-            n.a.createElement("div", { className: ve.a.ID }, "KB ID"),
-            n.a.createElement("div", { className: ve.a.Ref }, "KB REF"),
-            n.a.createElement("div", { className: ve.a.Text }, "KB Title"),
-            n.a.createElement("div", { className: ve.a.Ref }, "Imported ID"),
-            n.a.createElement("div", { className: ve.a.Ref }, "Languages")
-          ),
-          r.map(function (e) {
-            return n.a.createElement(Te, {
-              key: "faq" + e.id,
-              legacyInfo: e,
-              matchingSummary: h.get(e.id),
-              rgLocalizedFAQs: m.get(e.id),
-              rgLocFlags: g.get(e.id),
-            });
-          })
-        );
-      });
+            { className: _e.a.ImportToolCtn },
+            n.a.createElement(
+              "div",
+              { className: _e.a.ToolHeader },
+              "FAQ Importer"
+            ),
+            n.a.createElement("div", { className: _e.a.StatusMessage }, v),
+            n.a.createElement(
+              "div",
+              { className: _e.a.FAQRow },
+              n.a.createElement("div", { className: _e.a.ID }, "KB ID"),
+              n.a.createElement("div", { className: _e.a.Ref }, "KB REF"),
+              n.a.createElement("div", { className: _e.a.Text }, "KB Title"),
+              n.a.createElement("div", { className: _e.a.Ref }, "Imported ID"),
+              n.a.createElement("div", { className: _e.a.Ref }, "Languages")
+            ),
+            r.map(function (e) {
+              return n.a.createElement(Te, {
+                key: "faq" + e.id,
+                legacyInfo: e,
+                matchingSummary: h.get(e.id),
+                rgLocalizedFAQs: m.get(e.id),
+                rgLocFlags: g.get(e.id),
+              });
+            })
+          );
+        });
       var Ce = /\[(exlude_realm|expand|img|th|td|tr|table|section|h1|h2|h3|h4|h5|h6|url|b\]|u\]|i\]|list|olist|\*\]|code|hr|previewyoutube|video)/gim;
       var Te = function (e) {
         for (
@@ -10310,7 +10298,7 @@
                 u.c.COMMUNITY_BASE_URL.substr(
                   0,
                   u.c.COMMUNITY_BASE_URL.length - 1
-                ) + Ie(be.k_eCommunityPreview, o.faq_id)),
+                ) + ke(be.k_eCommunityPreview, o.faq_id)),
             l = new Array(31),
             p = 0;
           p < 30;
@@ -10322,13 +10310,13 @@
                 ? t
                 : 0) && i[p],
             h = Object(c.a)(
-              ve.a.ShortCode,
-              !d && ve.a.Missing,
-              "good" == (null == s ? void 0 : s[p]) && ve.a.Good,
-              "missing" == (null == s ? void 0 : s[p]) && ve.a.Missing,
-              "suspicious" == (null == s ? void 0 : s[p]) && ve.a.Suspicious,
-              "bad" == (null == s ? void 0 : s[p]) && ve.a.Bad,
-              "badimport" == (null == s ? void 0 : s[p]) && ve.a.BadImport
+              _e.a.ShortCode,
+              !d && _e.a.Missing,
+              "good" == (null == s ? void 0 : s[p]) && _e.a.Good,
+              "missing" == (null == s ? void 0 : s[p]) && _e.a.Missing,
+              "suspicious" == (null == s ? void 0 : s[p]) && _e.a.Suspicious,
+              "bad" == (null == s ? void 0 : s[p]) && _e.a.Bad,
+              "badimport" == (null == s ? void 0 : s[p]) && _e.a.BadImport
             );
           l[Pe[p]] = n.a.createElement(
             "a",
@@ -10338,23 +10326,23 @@
         }
         return n.a.createElement(
           "div",
-          { className: ve.a.FAQRow },
-          n.a.createElement("div", { className: ve.a.ID }, a.id),
+          { className: _e.a.FAQRow },
+          n.a.createElement("div", { className: _e.a.ID }, a.id),
           n.a.createElement(
             "a",
             {
               href:
                 "https://support.steampowered.com/kb_article.php?ref=" +
                 a.strRef,
-              className: ve.a.Ref,
+              className: _e.a.Ref,
             },
             a.strRef
           ),
-          n.a.createElement("div", { className: ve.a.Text }, a.strTitle),
+          n.a.createElement("div", { className: _e.a.Text }, a.strTitle),
           !!(null == o ? void 0 : o.faq_id) &&
             n.a.createElement(
               "a",
-              { className: ve.a.Ref, href: r },
+              { className: _e.a.Ref, href: r },
               " ",
               me(o.faq_id)
             ),
@@ -10727,7 +10715,7 @@
             u = l + p,
             m = s + r;
           return n.a.createElement(
-            _e,
+            Se,
             {
               route: be.k_eCommunityEdit,
               faqid: a,
@@ -10776,7 +10764,7 @@
           );
         },
         et = function (e) {
-          return s.createElement(ke.a, {
+          return s.createElement(we.a, {
             message: function (e) {
               var t,
                 a,
@@ -10910,13 +10898,13 @@
                                       u.c.COMMUNITY_BASE_URL.substr(
                                         0,
                                         u.c.COMMUNITY_BASE_URL.length - 1
-                                      ) + Ie(be.k_eCommunityDashboard);
+                                      ) + ke(be.k_eCommunityDashboard);
                                     window.location.href = t;
                                   }
                                   d(e);
                                 })
                                 .catch(function (e) {
-                                  var t = Object(q.c)(e);
+                                  var t = Object(M.c)(e);
                                   console.error(
                                     "FAQDeleteDialog: hit error: " +
                                       t.strErrorMsg,
@@ -11486,7 +11474,7 @@
                                 1 == e && h(!0), m(e);
                               })
                               .catch(function (e) {
-                                var t = Object(q.c)(e);
+                                var t = Object(M.c)(e);
                                 console.error(
                                   "FAQPublishDialog: hit error: " +
                                     t.strErrorMsg,
@@ -11636,7 +11624,7 @@
                                   1 == e && d(!0), u(e);
                                 })
                                 .catch(function (e) {
-                                  var t = Object(q.c)(e);
+                                  var t = Object(M.c)(e);
                                   console.error(
                                     "FAQChangeVisibilityDialog: hit error: " +
                                       t.strErrorMsg,
@@ -11939,7 +11927,7 @@
                           d(2),
                           console.log(
                             "FAQSaveProgressDialog hit exception " +
-                              Object(q.c)(a).strErrorMsg
+                              Object(M.c)(a).strErrorMsg
                           ),
                           [3, 5]
                         );
@@ -12040,7 +12028,7 @@
                 ),
               },
               n.a.createElement(
-                _e,
+                Se,
                 {
                   route: o ? be.k_eCommunityEdit : be.k_eCommunityDashboard,
                   faqid: a.GetFAQID(),
@@ -12092,7 +12080,7 @@
                 }),
                 !o &&
                   n.a.createElement(
-                    _e,
+                    Se,
                     {
                       route: be.k_eCommunityPreview,
                       faqid: a.GetFAQID(),
@@ -12236,7 +12224,7 @@
                     "div",
                     { className: rt.a.EditPreviewButton },
                     n.a.createElement(
-                      _e,
+                      Se,
                       { faqid: o, route: be.k_eCommunityView },
                       Object(Fe.f)("#FAQEditir_ViewLiveFAQ")
                     )
@@ -12397,7 +12385,7 @@
             { className: dt.a.ErrorCtn },
             n.a.createElement("div", { className: dt.a.ErrorMsg }, e.strError),
             n.a.createElement(
-              _e,
+              Se,
               { route: be.k_eCommunityDashboard, className: dt.a.EscapeLink },
               Object(Fe.f)("#FAQEditor_GoToDashboard")
             )
@@ -12450,8 +12438,8 @@
             e.children
           );
         },
-        oa = a("3tbG"),
-        ia = a("0zs6"),
+        oa = a("OJ5K"),
+        ia = a("jIVP"),
         sa = function (e) {
           var t = e.faqContent;
           return he.Get().BHasFAQEdit()
@@ -12472,7 +12460,7 @@
                       ? n.a.createElement(na, {
                           authorAccountID: Number.parseInt(t.author_account_id),
                         })
-                      : Object(Fe.f)("#Sale_Debug_Unknown"),
+                      : Object(Fe.f)("#FAQViewer_UnknownUser"),
                     n.a.createElement(
                       "span",
                       null,
@@ -12484,7 +12472,7 @@
                 ),
                 n.a.createElement(ra, { faqContent: t }),
                 n.a.createElement(
-                  _e,
+                  Se,
                   {
                     faqid: t.faq_id,
                     route: be.k_eCommunityEdit,
@@ -12545,9 +12533,7 @@
             )
           );
         },
-        la = a("rTBr"),
-        pa = a.n(la),
-        da = function (e) {
+        la = function (e) {
           return n.a.createElement(
             n.a.Fragment,
             null,
@@ -12623,6 +12609,8 @@
             )
           );
         },
+        pa = a("rTBr"),
+        da = a.n(pa),
         ha = function (e) {
           var t = (function (e, t) {
               return [e && he.Get().GetFAQPublishedContent(e, t), !0];
@@ -12634,7 +12622,7 @@
                   title: a.title,
                   content: a.content,
                   elSideBars: [
-                    n.a.createElement(da, { key: "sidebar", faqContent: a }),
+                    n.a.createElement(la, { key: "sidebar", faqContent: a }),
                     n.a.createElement(sa, { key: "adminbar", faqContent: a }),
                   ],
                 })
@@ -12665,11 +12653,11 @@
                 : "gid/" + u.b.CLANSTEAMID);
           return n.a.createElement(
             "div",
-            { className: pa.a.ErrorCtn },
-            n.a.createElement("div", { className: pa.a.ErrorMsg }, e.strError),
+            { className: da.a.ErrorCtn },
+            n.a.createElement("div", { className: da.a.ErrorMsg }, e.strError),
             n.a.createElement(
               "a",
-              { className: pa.a.EscapeLink, href: a },
+              { className: da.a.EscapeLink, href: a },
               Object(Fe.f)("#FAQViewer_GoToHomepage")
             )
           );
@@ -12755,9 +12743,9 @@
                   null,
                   n.a.createElement(et, null),
                   n.a.createElement(
-                    ke.e,
+                    we.e,
                     null,
-                    n.a.createElement(ke.c, {
+                    n.a.createElement(we.c, {
                       path: ga.ViewFAQ(":vanity_str", ":faqid"),
                       render: function (e) {
                         return n.a.createElement(fa.a, {
@@ -12770,7 +12758,7 @@
                         });
                       },
                     }),
-                    n.a.createElement(ke.c, {
+                    n.a.createElement(we.c, {
                       path: ga.EditFAQ(":vanity_str", ":faqid"),
                       render: function (e) {
                         return n.a.createElement(fa.a, {
@@ -12781,9 +12769,9 @@
                                 var a = ue(t);
                                 return a
                                   ? n.a.createElement(Xt, { faqid: a })
-                                  : n.a.createElement(ke.b, {
+                                  : n.a.createElement(we.b, {
                                       push: !0,
-                                      to: Ie(be.k_eCommunityDashboard),
+                                      to: ke(be.k_eCommunityDashboard),
                                     });
                               }
                               return n.a.createElement(Ue, null);
@@ -12792,7 +12780,7 @@
                         });
                       },
                     }),
-                    n.a.createElement(ke.c, {
+                    n.a.createElement(we.c, {
                       path: ga.DashboardFAQ(":vanity_str"),
                       render: function (e) {
                         return n.a.createElement(fa.a, {
@@ -12804,7 +12792,7 @@
                         });
                       },
                     }),
-                    n.a.createElement(ke.c, {
+                    n.a.createElement(we.c, {
                       path: ga.PreviewFAQ(":vanity_str", ":faqid"),
                       render: function (e) {
                         return n.a.createElement(fa.a, {
@@ -12817,11 +12805,11 @@
                         });
                       },
                     }),
-                    n.a.createElement(ke.c, {
+                    n.a.createElement(we.c, {
                       path: ga.ImportTool(":vanity_str"),
                       component: Ae,
                     }),
-                    n.a.createElement(ke.c, { component: ba })
+                    n.a.createElement(we.c, { component: ba })
                   )
                 )
           );
@@ -12829,7 +12817,7 @@
       t.default = ya;
       function ba(e) {
         return "dev" !== u.c.WEB_UNIVERSE
-          ? n.a.createElement(ke.b, { to: "/" })
+          ? n.a.createElement(we.b, { to: "/" })
           : n.a.createElement(
               "div",
               null,
@@ -12864,6 +12852,9 @@
         DashboardEntry: "faqdashboard_DashboardEntry_kcPTy",
         EntryInternalName: "faqdashboard_EntryInternalName_1sL5y",
       };
+    },
+    OJ5K: function (e, t, a) {
+      e.exports = { SmallAvatar: "faqviewadmin_SmallAvatar_2rdPs" };
     },
     WQlG: function (e, t, a) {
       e.exports = {
@@ -12916,6 +12907,16 @@
         PublishStatus: "faqstatus_PublishStatus_uvzu3",
         PublishBtn: "faqstatus_PublishBtn_3P52v",
         FaqStatusTable: "faqstatus_FaqStatusTable_pCBfT",
+      };
+    },
+    jIVP: function (e, t, a) {
+      e.exports = {
+        Section: "faqviewsidebar_Section_3S-Xz",
+        CommunityHelp: "faqviewsidebar_CommunityHelp_2TGFI",
+        NeedHelp: "faqviewsidebar_NeedHelp_1DywX",
+        LeftCol: "faqviewsidebar_LeftCol_3gfCn",
+        TopicHeader: "faqviewsidebar_TopicHeader_3X6hu",
+        CenterButtonCtn: "faqviewsidebar_CenterButtonCtn_3sZ58",
       };
     },
     orBq: function (e, t, a) {

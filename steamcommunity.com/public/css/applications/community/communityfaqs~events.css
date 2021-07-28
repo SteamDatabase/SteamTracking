@@ -1390,6 +1390,9 @@ span.partnereventeditor_RequiredFieldLabel_11TnL {
   flex-grow: 1;
   padding-right: 16px;
 }
+.partnereventsale_SetupCtn_yrYBA {
+  min-height: 600px;
+}
 .partnersaledebug_SearchResults_26iJ3 {
   overflow: scroll;
   max-height: 300px;

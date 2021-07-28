@@ -4638,40 +4638,52 @@ var g_TooltipMutationObserver;
 var g_bTooltipMutationObserverDisabled = false;
 function SetupTooltips( rgOptions )
 {
-	BindTooltips(document, rgOptions);
-
-	if ( g_TooltipMutationObserver || g_bTooltipMutationObserverDisabled )
-		return;
-
-	try
-	{
-		var config = {
-			attributes: true,	// not clear if we actually support this, as we only look at addedNodes
-			childList: true,
-			subtree: true,
-			attributeFilter: [ "data-tooltip-html", "data-tooltip-text" ]
-		};
-
-		var callback = function ( mutationsList )
+	function InnerSetupTooltips() {
+        if ( window.UseSmallScreenMode && window.UseSmallScreenMode() )
 		{
-			for ( var i=0; i<mutationsList.length; i++ )
+			// We don't want tooltips in small screen mode
+			// However, for now we won't unbind any that were previously bound.
+			return;
+		}
+
+        BindTooltips(document, rgOptions);
+
+        if (g_TooltipMutationObserver || g_bTooltipMutationObserverDisabled)
+            return;
+
+        try
+		{
+            var config = {
+                attributes: true,	// not clear if we actually support this, as we only look at addedNodes
+                childList: true,
+                subtree: true,
+                attributeFilter: ["data-tooltip-html", "data-tooltip-text"]
+            };
+
+            var callback = function (mutationsList)
 			{
-				var mutation = mutationsList[i];
-				if ( mutation.addedNodes && mutation.addedNodes.length )
-					BindTooltips( mutation.addedNodes, rgOptions );
-			}
-		};
+                for (var i = 0; i < mutationsList.length; i++)
+                {
+                    var mutation = mutationsList[i];
+                    if (mutation.addedNodes && mutation.addedNodes.length)
+                        BindTooltips(mutation.addedNodes, rgOptions);
+                }
+            };
 
-		// Create an observer instance linked to the callback function
-		g_TooltipMutationObserver = new MutationObserver ( callback );
+            // Create an observer instance linked to the callback function
+            g_TooltipMutationObserver = new MutationObserver(callback);
 
-		// Start observing the target node for configured mutations
-		g_TooltipMutationObserver.observe ( document, config );
-	}
-	catch( e )
-	{
-		// Swallow exceptions for browsers that don't support mutationobservers
-	}
+            // Start observing the target node for configured mutations
+            g_TooltipMutationObserver.observe(document, config);
+        }
+        catch (e)
+		{
+            // Swallow exceptions for browsers that don't support mutationobservers
+        }
+    }
+
+    InnerSetupTooltips();
+    $J( window ).on( 'Responsive_SmallScreenModeToggled', InnerSetupTooltips );
 }
 
 // for perf sensitive pages

@@ -611,6 +611,14 @@ html.responsive body {
 		display: inline;
 	}
 
+	html.responsive img.nonresponsive_hidden {
+		display: block;
+	}
+
+	html.responsive a.nonresponsive_hidden {
+		display: block;
+	}
+
 	html.responsive h2.nonresponsive_hidden {
 		display: block;
 	}
@@ -736,10 +744,15 @@ html.force_desktop body #footer_responsive_optin_spacer {
 	margin-right: 3px;
 }
 
-.responsive_scroll_snap_ctn:not(.legacy_mobile .responsive_scroll_snap_ctn) {
-	scroll-snap-type: x mandatory;
-}
+@media screen and (max-width: 910px)
+{
+	html.responsive .responsive_scroll_snap_ctn:not(.legacy_mobile .responsive_scroll_snap_ctn) {
+		scroll-snap-type: x mandatory;
+		-webkit-overflow-scrolling: touch;
+	}
 
-.responsive_scroll_snap_start:not(.legacy_mobile .responsive_scroll_snap_start) {
-	scroll-snap-align: start;
+	html.responsive .responsive_scroll_snap_start:not(.legacy_mobile .responsive_scroll_snap_start) {
+		scroll-snap-align: start;
+		overflow: visible;
+	}
 }
