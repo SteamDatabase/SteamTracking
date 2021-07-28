@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6690491";
+var CLSTAMP = "6692273";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [1],
   {
@@ -1369,33 +1369,29 @@ var CLSTAMP = "6690491";
         ColorSquare: "dpcstandings_ColorSquare_ud1oU",
         Description: "dpcstandings_Description_1I5ee",
         DPCStandingsRoundRobin: "dpcstandings_DPCStandingsRoundRobin_3gskr",
+        Title: "dpcstandings_Title_1j7g0",
+        Standings: "dpcstandings_Standings_2xuCM",
         DPCStandingsGrid: "dpcstandings_DPCStandingsGrid_3w9B9",
         Header: "dpcstandings_Header_3Kf0X",
-        ViewSelctor: "dpcstandings_ViewSelctor_1ylEQ",
         GridContainer: "dpcstandings_GridContainer_1bSmg",
+        GridBody: "dpcstandings_GridBody_pcU8h",
         GridRow: "dpcstandings_GridRow_2f1YL",
         GridCell: "dpcstandings_GridCell_4wUCQ",
-        HeaderCell: "dpcstandings_HeaderCell_2zOIN",
-        Winner: "dpcstandings_Winner_1MMzM",
-        Loser: "dpcstandings_Loser_3_sxX",
-        Draw: "dpcstandings_Draw_9Kz-M",
-        Self: "dpcstandings_Self_dUXiy",
-        TeamLogo: "dpcstandings_TeamLogo_KU9ho",
-        Result: "dpcstandings_Result_pl1-I",
-        Completed: "dpcstandings_Completed_rt8K9",
-        Date: "dpcstandings_Date_3wTMY",
+        RowHighlightContainer: "dpcstandings_RowHighlightContainer_2UdT2",
+        RowHighlight: "dpcstandings_RowHighlight_DyFRj",
+        ColumnHighlightContainer: "dpcstandings_ColumnHighlightContainer_31N_H",
+        ColumnHighlight: "dpcstandings_ColumnHighlight_1B6Sh",
         DPCStandingsTeamList: "dpcstandings_DPCStandingsTeamList_jVT-8",
+        Heading: "dpcstandings_Heading_1XGog",
+        ViewSelctor: "dpcstandings_ViewSelctor_1ylEQ",
         Teams: "dpcstandings_Teams_2W8jh",
         HighlightOverlay: "dpcstandings_HighlightOverlay_3Fhsy",
         DPCStandingsTeam: "dpcstandings_DPCStandingsTeam_25wGh",
-        Larger: "dpcstandings_Larger_8xn4E",
         Standing: "dpcstandings_Standing_33ZWb",
+        TeamLogo: "dpcstandings_TeamLogo_KU9ho",
         TeamName: "dpcstandings_TeamName_QK1FS",
-        LastLarger: "dpcstandings_LastLarger_jBnTV",
-        Promoted: "dpcstandings_Promoted_2yUII",
-        Demoted: "dpcstandings_Demoted_aNSAu",
-        Removed: "dpcstandings_Removed_2YjFV",
-        Record: "dpcstandings_Record_3WL3i",
+        Wins: "dpcstandings_Wins_1mwia",
+        Losses: "dpcstandings_Losses_1X-xs",
         DPCStandingsBracket: "dpcstandings_DPCStandingsBracket_9iCXI",
         BracketContainer: "dpcstandings_BracketContainer_3v7JH",
         BracketNodeContainer: "dpcstandings_BracketNodeContainer_3Kqe4",
@@ -1414,6 +1410,7 @@ var CLSTAMP = "6690491";
         BestOf: "dpcstandings_BestOf_1B8JO",
         ContentsContainer: "dpcstandings_ContentsContainer_3Ztt3",
         Team: "dpcstandings_Team_V9K9p",
+        Winner: "dpcstandings_Winner_1MMzM",
         Score: "dpcstandings_Score_2veZP",
         Details: "dpcstandings_Details_r2wew",
         Separator: "dpcstandings_Separator_3CUPS",
@@ -6547,7 +6544,7 @@ var CLSTAMP = "6690491";
       "use strict";
       a.r(t),
         a.d(t, "g_App", function () {
-          return Ji;
+          return Zi;
         });
       var n = a("mrSG"),
         r = (a("RYZ7"), a("i8i4")),
@@ -7202,8 +7199,8 @@ var CLSTAMP = "6690491";
           );
         })())();
       window.g_AppCapsuleStore = B;
-      var k = a("I8QC"),
-        P = (function () {
+      var P = a("I8QC"),
+        k = (function () {
           function e(e) {
             (this.m_appidList = new Array()),
               (this.m_socialList = new Array()),
@@ -7401,7 +7398,7 @@ var CLSTAMP = "6690491";
                   a.forEach(function (a) {
                     var n = Number(a.creator_clan_id),
                       r = I.a.InitFromClanID(n),
-                      o = new P(r);
+                      o = new k(r);
                     o.Initialize(a),
                       (o.m_promise = e.GetAsPromise(o)),
                       t.m_mapClanToCreatorHome.set(n, o);
@@ -7474,7 +7471,7 @@ var CLSTAMP = "6690491";
                         this.LazyInit(),
                         this.m_mapClanToCreatorHome.has(e.GetAccountID())
                           ? [3, 2]
-                          : (((a = new P(
+                          : (((a = new k(
                               e
                             )).m_promise = this.InternalCreatorHome(a, t)),
                             [4, a.m_promise])
@@ -7591,7 +7588,7 @@ var CLSTAMP = "6690491";
                                 !l.m_mapClanToCreatorHome.has(e.creator_clan_id)
                               ) {
                                 var t = I.a.InitFromClanID(e.creator_clan_id),
-                                  a = new P(t);
+                                  a = new k(t);
                                 a.Initialize(e),
                                   l.m_mapClanToCreatorHome.set(
                                     e.creator_clan_id,
@@ -8346,7 +8343,7 @@ var CLSTAMP = "6690491";
                     "product_mobile_banner_override" === e ||
                     "sale_section_title" === e ||
                     "schedule_track_art" === e
-                  ? (t = k.c.GetLocalizedImageGroupForEditAsImgArray(
+                  ? (t = P.c.GetLocalizedImageGroupForEditAsImgArray(
                       this.clanSteamID
                     ))
                   : "product_banner" === e
@@ -8356,13 +8353,13 @@ var CLSTAMP = "6690491";
               return t;
             }),
             (e.prototype.GetImageURL = function (e, t, a) {
-              void 0 === t && (t = 0), void 0 === a && (a = k.b.full);
+              void 0 === t && (t = 0), void 0 === a && (a = P.b.full);
               var n = this.GetImgArray(e),
                 r = n && n.length > t && null != n[t];
               return r && n[t].startsWith("http")
                 ? n[t]
                 : r
-                ? k.a.GenerateArtworkURLFromHashAndExtensions(
+                ? P.a.GenerateArtworkURLFromHashAndExtensions(
                     this.clanSteamID,
                     n[t],
                     a
@@ -8472,7 +8469,7 @@ var CLSTAMP = "6690491";
             }),
             (e.prototype.GetImageURLWithFallback = function (e, t, a) {
               var n, r;
-              void 0 === a && (a = k.b.full);
+              void 0 === a && (a = P.b.full);
               var o = this.GetImageURL(e, t, a);
               if (o && o.trim().length > 0) return o;
               var i = z.b.GetELanguageFallback(t);
@@ -8556,8 +8553,8 @@ var CLSTAMP = "6690491";
               var r = new Array();
               this.BImageNeedScreenshotFallback(e, t) ||
                 (r.push(this.GetImageURLWithFallback(e, t, a)),
-                a != k.b.full &&
-                  r.push(this.GetImageURLWithFallback(e, t, k.b.full)));
+                a != P.b.full &&
+                  r.push(this.GetImageURLWithFallback(e, t, P.b.full)));
               var o = this.GetFallbackArtworkScreenshot();
               return o && !n && r.push(o), r;
             }),
@@ -10819,7 +10816,7 @@ var CLSTAMP = "6690491";
                 : N.push(i.a.createElement(he, { event: B, key: B.GID }));
             }
           }
-          var k = Math.ceil((T - 1) / 15);
+          var P = Math.ceil((T - 1) / 15);
           L.push(
             i.a.createElement(
               "div",
@@ -10838,7 +10835,7 @@ var CLSTAMP = "6690491";
             )
           );
           for (
-            var P = function (e) {
+            var k = function (e) {
                 L.push(
                   i.a.createElement(
                     "div",
@@ -10857,10 +10854,10 @@ var CLSTAMP = "6690491";
                 );
               },
               M = 0;
-            M < k;
+            M < P;
             M += 1
           )
-            P(M);
+            k(M);
           return (
             L.push(
               i.a.createElement(
@@ -10869,7 +10866,7 @@ var CLSTAMP = "6690491";
                   className: Object(ce.a)(
                     Ie.a.PageNumber,
                     Ie.a.PageChange,
-                    m == k - 1 && Ie.a.Hidden
+                    m == P - 1 && Ie.a.Hidden
                   ),
                   key: "page_next",
                   onClick: function () {
@@ -11196,7 +11193,7 @@ var CLSTAMP = "6690491";
             )
           );
         },
-        ke = function () {
+        Pe = function () {
           var e = Object(c.h)().pathname.substr(1);
           return i.a.createElement(
             "div",
@@ -11275,8 +11272,8 @@ var CLSTAMP = "6690491";
             )
           );
         },
-        Pe = a("HMs9"),
-        Me = a.n(Pe),
+        ke = a("HMs9"),
+        Me = a.n(ke),
         xe = a("mZMQ"),
         Ue = a("cpGi"),
         He = (a("hmtA"), (0, a("SjWX").detect)());
@@ -12287,12 +12284,12 @@ var CLSTAMP = "6690491";
             }),
             (t.prototype.render = function () {
               var e = this,
-                t = Ji.getPrizePool();
+                t = Zi.getPrizePool();
               return i.a.createElement(
                 "div",
                 { className: je.a.BattlepassPage },
                 i.a.createElement(h.a, null),
-                i.a.createElement(ke, null),
+                i.a.createElement(Pe, null),
                 i.a.createElement(
                   "div",
                   { className: je.a.TopHeader },
@@ -17787,7 +17784,7 @@ var CLSTAMP = "6690491";
                               top: document.body.scrollHeight,
                               behavior: "smooth",
                             }),
-                              Ji.setSelectedAbilityIndex(a);
+                              Zi.setSelectedAbilityIndex(a);
                           },
                         },
                         i.a.createElement("img", {
@@ -18195,7 +18192,7 @@ var CLSTAMP = "6690491";
             n = a[0],
             r = a[1];
           if (!t) return null;
-          var s = Ji.getSelectedAbilityIndex(),
+          var s = Zi.getSelectedAbilityIndex(),
             l =
               t.abilities.filter(function (e) {
                 return e.ability_is_granted_by_shard;
@@ -18327,7 +18324,7 @@ var CLSTAMP = "6690491";
           m && !d.ability_is_granted_by_shard && (N = I),
             u && !d.ability_is_granted_by_scepter && (N = y);
           var S = function (e) {
-              Ji.setSelectedAbilityIndex(e), r(!0);
+              Zi.setSelectedAbilityIndex(e), r(!0);
             },
             L = u && d.ability_has_scepter && !d.ability_is_granted_by_scepter,
             T = m && d.ability_has_shard && !d.ability_is_granted_by_shard,
@@ -18717,7 +18714,7 @@ var CLSTAMP = "6690491";
             )
           );
         }),
-        kt = function (e) {
+        Pt = function (e) {
           var t = e.heroData;
           return i.a.createElement(
             "div",
@@ -18731,7 +18728,7 @@ var CLSTAMP = "6690491";
             i.a.createElement(Bt, { heroData: t })
           );
         },
-        Pt = function (e) {
+        kt = function (e) {
           var t = e.prevhero,
             a = e.nexthero;
           return i.a.createElement(
@@ -18932,7 +18929,7 @@ var CLSTAMP = "6690491";
           return (
             Object(o.useEffect)(
               function () {
-                return Ji.setSelectedAbilityIndex(0);
+                return Zi.setSelectedAbilityIndex(0);
               },
               [g.pathname]
             ),
@@ -18956,7 +18953,7 @@ var CLSTAMP = "6690491";
                 i.a.createElement("div", {
                   className: Dt.a.BackgroundGradient,
                 }),
-                i.a.createElement(Pt, { prevhero: l, nexthero: d }),
+                i.a.createElement(kt, { prevhero: l, nexthero: d }),
                 i.a.createElement(St, {
                   key: r ? r.name : "",
                   heroname: r ? r.name : "",
@@ -18991,7 +18988,7 @@ var CLSTAMP = "6690491";
                       "backgrounds/grey_painterly.png )",
                   },
                 },
-                i.a.createElement(kt, { heroData: r }),
+                i.a.createElement(Pt, { heroData: r }),
                 i.a.createElement(xt, { nNextHeroID: u, nPrevHeroID: m })
               ),
               i.a.createElement(be.a, null)
@@ -20375,7 +20372,7 @@ var CLSTAMP = "6690491";
             var a = e.call(this, t) || this;
             return (
               (a.handleClick = function (e) {
-                if (Ji.getShortFilmOwnership()) {
+                if (Zi.getShortFilmOwnership()) {
                   var t =
                     p.a.BASE_URL +
                     d.a.shortfilm() +
@@ -20384,7 +20381,7 @@ var CLSTAMP = "6690491";
                 } else a.setState({ bPopupVisible: e });
               }),
               (a.handleAccepted = function () {
-                Ji.grantShortFilmAppIDOwnership();
+                Zi.grantShortFilmAppIDOwnership();
                 var e =
                   p.a.BASE_URL +
                   d.a.shortfilm() +
@@ -20392,7 +20389,7 @@ var CLSTAMP = "6690491";
                 history.pushState("", "", e), history.go();
               }),
               (a.BGetOwnsApp = function () {
-                return Ji.getShortFilmOwnership();
+                return Zi.getShortFilmOwnership();
               }),
               (a.state = { bPopupVisible: !1 }),
               a
@@ -21331,7 +21328,7 @@ var CLSTAMP = "6690491";
         );
       }
       var Ba,
-        ka = (function (e) {
+        Pa = (function (e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -21389,10 +21386,10 @@ var CLSTAMP = "6690491";
           (e[(e.Loading = 1)] = "Loading"),
           (e[(e.Loaded = 2)] = "Loaded");
       })(Ba || (Ba = {}));
-      var Pa = Ba.NotLoaded,
+      var ka = Ba.NotLoaded,
         Ma = [];
       function xa() {
-        Pa = Ba.Loaded;
+        ka = Ba.Loaded;
         for (var e = 0, t = Ma; e < t.length; e++) {
           (0, t[e])();
         }
@@ -21450,8 +21447,8 @@ var CLSTAMP = "6690491";
                 this.DestroyPlayer(),
                 this.m_playerContainer &&
                   (function (e) {
-                    if (Pa != Ba.Loaded) {
-                      if (Pa == Ba.NotLoaded) {
+                    if (ka != Ba.Loaded) {
+                      if (ka == Ba.NotLoaded) {
                         var t = document.createElement("script");
                         t.src = "https://www.youtube.com/iframe_api";
                         var a = document.getElementsByTagName("script")[0];
@@ -21553,7 +21550,7 @@ var CLSTAMP = "6690491";
                     this.props.classnames
                   ),
                 },
-                o.createElement(ka, { className: "YoutubePlayerThrobber" })
+                o.createElement(Pa, { className: "YoutubePlayerThrobber" })
               );
               return this.props.autopause
                 ? o.createElement(La.a, { onLeave: this.OnPlayerLeftView }, e)
@@ -21691,7 +21688,7 @@ var CLSTAMP = "6690491";
           );
         }),
         Ya = Object(s.a)(function (e) {
-          var t = Wi(),
+          var t = zi(),
             a = Da.a.Get().GetHomePageContext(),
             n = Da.a
               .Get()
@@ -21917,7 +21914,7 @@ var CLSTAMP = "6690491";
           );
         }),
         Ka = Object(s.a)(function () {
-          var e = Wi(),
+          var e = zi(),
             t = Va(),
             a = Da.a.Get().GetHomePageContext(),
             n = Da.a.Get().GetLeagueNode(a.nLeagueID, a.nNodeID),
@@ -22021,7 +22018,7 @@ var CLSTAMP = "6690491";
         qa = Object(s.a)(function () {
           var e,
             t,
-            a = Wi(),
+            a = zi(),
             n = (Va(), Da.a.Get().GetHomePageContext()),
             r = Da.a.Get().GetLeagueNode(n.nLeagueID, n.nNodeID),
             o = null == r ? void 0 : r.is_completed,
@@ -22080,7 +22077,7 @@ var CLSTAMP = "6690491";
             r = e.nWins,
             o = e.nPossibleWins,
             s = e.bShowRecord,
-            l = Wi(),
+            l = zi(),
             c = Va(),
             d = Da.a.Get().GetHomePageContext(),
             m = Da.a.Get().GetLeagueNodeInfo(d.nLeagueID, d.nNodeID),
@@ -22169,7 +22166,7 @@ var CLSTAMP = "6690491";
           );
         }),
         Ja = Object(s.a)(function () {
-          var e = Wi(),
+          var e = zi(),
             t = Da.a.Get().GetHomePageContext(),
             a = Da.a.Get().GetLeagueNode(t.nLeagueID, t.nNodeID),
             n =
@@ -22261,7 +22258,7 @@ var CLSTAMP = "6690491";
             : null;
         }),
         Za = Object(s.a)(function () {
-          var e = Wi(),
+          var e = zi(),
             t = Da.a.Get().GetHomePageContext(),
             a = Da.a.Get().GetLeagueNode(t.nLeagueID, t.nNodeID),
             n =
@@ -22757,7 +22754,7 @@ var CLSTAMP = "6690491";
           );
         }),
         nn = Object(s.a)(function () {
-          var e = Wi(),
+          var e = zi(),
             t = Va(),
             a = Da.a.Get().GetHomePageContext(),
             n = Da.a
@@ -22796,7 +22793,7 @@ var CLSTAMP = "6690491";
         }),
         rn = Object(s.a)(function () {
           var e,
-            t = Wi(),
+            t = zi(),
             a = Va(),
             n = Da.a.Get().GetHomePageContext(),
             r = Da.a.Get().IsLeagueNodeLive(t, n.nLeagueID, n.nNodeID),
@@ -22914,7 +22911,7 @@ var CLSTAMP = "6690491";
         ln = Object(s.a)(function (e) {
           var t = e.eDivision,
             a = e.setDivision,
-            n = Wi(),
+            n = zi(),
             r = [
               { value: ua.b.UNSET, strLabel: "#dpc_division_filter_all" },
               { value: ua.b.DIVISION_I, strLabel: "#dpc_division_i" },
@@ -22954,7 +22951,7 @@ var CLSTAMP = "6690491";
         cn = Object(s.a)(function (e) {
           var t = e.nLeagueID,
             a = e.nNodeID,
-            n = Wi(),
+            n = zi(),
             r = Da.a.Get().GetHomePageContext(),
             o = Object(s.a)(function (e) {
               var t = e.nTeamID,
@@ -23145,7 +23142,7 @@ var CLSTAMP = "6690491";
           );
         }),
         dn = Object(s.a)(function () {
-          var e = Wi(),
+          var e = zi(),
             t = Da.a.Get().GetHomePageContext(),
             a = Object(o.useState)(ua.b.UNSET),
             n = a[0],
@@ -23344,7 +23341,7 @@ var CLSTAMP = "6690491";
         mn = a("k9bf"),
         un = a.n(mn),
         pn = function () {
-          var e = Wi(),
+          var e = zi(),
             t = Object(c.h)(),
             a = Object(ma.h)(e),
             n = Object(o.useState)(Da.a.Get().GetSpoilerBlockEnabled()),
@@ -24112,8 +24109,8 @@ var CLSTAMP = "6690491";
       }
       var Rn = ai("DialogHeader"),
         Bn = (ai("DialogSubHeader"), ai("DialogFooter")),
-        kn = (ai("DialogLabel _DialogLayout"), ai("DialogBodyText")),
-        Pn = ai("DialogBody"),
+        Pn = (ai("DialogLabel _DialogLayout"), ai("DialogBodyText")),
+        kn = ai("DialogBody"),
         Mn =
           (Gn("DialogBody"),
           ai("DialogInnerBody"),
@@ -24893,13 +24890,13 @@ var CLSTAMP = "6690491";
       o.createContext(void 0), o.createContext(void 0), o.createContext(void 0);
       o.Component, new Map();
       var vr,
-        fr = Po("div");
-      Po("button"),
-        Po("input"),
-        Po("span"),
-        Po("textarea"),
-        Po("a"),
-        Po("input");
+        fr = ko("div");
+      ko("button"),
+        ko("input"),
+        ko("span"),
+        ko("textarea"),
+        ko("a"),
+        ko("input");
       !(function (e) {
         (e.Geometry = "Geometry"),
           (e.DomOrder = "DomOrder"),
@@ -25364,14 +25361,14 @@ var CLSTAMP = "6690491";
             }
           }
       }
-      function kr(e) {
+      function Pr(e) {
         var t = Tn();
         return o.createElement(
           ti,
-          Object(n.a)({ component: t.DropDownField, fallback: Pr }, e)
+          Object(n.a)({ component: t.DropDownField, fallback: kr }, e)
         );
       }
-      function Pr(e) {
+      function kr(e) {
         var t = e.label,
           a = e.tooltip,
           r = e.strClassName,
@@ -26649,9 +26646,9 @@ var CLSTAMP = "6690491";
                 Object(n.a)({}, c),
                 o.createElement(Rn, null, " ", t, " "),
                 o.createElement(
-                  Pn,
+                  kn,
                   null,
-                  o.createElement(kn, null, a, l),
+                  o.createElement(Pn, null, a, l),
                   o.createElement(
                     Bn,
                     null,
@@ -26987,9 +26984,9 @@ var CLSTAMP = "6690491";
           )
         );
       });
-      Po("div"), Po("button");
-      var wo = Po("input");
-      Po("textarea");
+      ko("div"), ko("button");
+      var wo = ko("input");
+      ko("textarea");
       a("4MUT");
       var jo = Sn(0, function () {
           return i.a.createContext(null);
@@ -27153,7 +27150,7 @@ var CLSTAMP = "6690491";
           { elemProps: i, navOptions: t, gamepadEvents: r }
         );
       }
-      function ko(e) {
+      function Po(e) {
         var t = e.focusClassName,
           a = e.className,
           r = e.divRef,
@@ -27170,7 +27167,7 @@ var CLSTAMP = "6690491";
           )
         );
       }
-      function Po(e) {
+      function ko(e) {
         return i.a.forwardRef(function (t, a) {
           var r = Bo(t),
             s = r.elemProps,
@@ -27250,7 +27247,7 @@ var CLSTAMP = "6690491";
             { value: g },
             g
               ? i.a.createElement(
-                  ko,
+                  Po,
                   Object(n.a)({}, c, {
                     divRef: b,
                     node: g,
@@ -28189,9 +28186,16 @@ var CLSTAMP = "6690491";
           );
         });
       }
-      var ni,
-        ri = [void 0, "#442222", "#224422", "#222244", "#444422", "#442244"],
-        oi = Object(s.a)(function (e) {
+      function ni(e, t) {
+        return Array.from(
+          Array.from(Array(t - e + 1).keys()).map(function (t) {
+            return t + e;
+          })
+        );
+      }
+      var ri,
+        oi = [void 0, "#442222", "#224422", "#222244", "#444422", "#442244"],
+        ii = Object(s.a)(function (e) {
           var t = e.ePhase,
             a = e.eDivision,
             n = [];
@@ -28222,53 +28226,71 @@ var CLSTAMP = "6690491";
               i.a.createElement(
                 "div",
                 { className: bn.a.TeamLists },
-                i.a.createElement(ii, {
+                i.a.createElement(si, {
                   ePhase: t,
                   eRegion: ua.h.NA,
                   eDivision: a,
                   arrHighlights: n,
                   bShowLegend: !1,
                   bShowHeader: !0,
+                  bShowList: !0,
+                  bShowListDPCPoints: !1,
+                  bShowGrid: !1,
                 }),
-                i.a.createElement(ii, {
+                i.a.createElement(si, {
                   ePhase: t,
                   eRegion: ua.h.SA,
                   eDivision: a,
                   arrHighlights: n,
                   bShowLegend: !1,
                   bShowHeader: !0,
+                  bShowList: !0,
+                  bShowListDPCPoints: !1,
+                  bShowGrid: !1,
                 }),
-                i.a.createElement(ii, {
+                i.a.createElement(si, {
                   ePhase: t,
                   eRegion: ua.h.WEU,
                   eDivision: a,
                   arrHighlights: n,
                   bShowLegend: !1,
                   bShowHeader: !0,
+                  bShowList: !0,
+                  bShowListDPCPoints: !1,
+                  bShowGrid: !1,
                 }),
-                i.a.createElement(ii, {
+                i.a.createElement(si, {
                   ePhase: t,
                   eRegion: ua.h.EEU,
                   eDivision: a,
                   arrHighlights: n,
                   bShowLegend: !1,
                   bShowHeader: !0,
+                  bShowList: !0,
+                  bShowListDPCPoints: !1,
+                  bShowGrid: !1,
                 }),
-                i.a.createElement(ii, {
+                i.a.createElement(si, {
                   ePhase: t,
                   eRegion: ua.h.CN,
                   eDivision: a,
                   arrHighlights: n,
                   bShowLegend: !1,
                   bShowHeader: !0,
+                  bShowList: !0,
+                  bShowListDPCPoints: !1,
+                  bShowGrid: !1,
                 }),
-                i.a.createElement(ii, {
+                i.a.createElement(si, {
                   ePhase: t,
                   eRegion: ua.h.SEA,
                   eDivision: a,
                   arrHighlights: n,
                   bShowLegend: !1,
                   bShowHeader: !0,
+                  bShowList: !0,
+                  bShowListDPCPoints: !1,
+                  bShowGrid: !1,
                 })
               ),
               i.a.createElement(
@@ -28301,415 +28323,387 @@ var CLSTAMP = "6690491";
             )
           );
         }),
-        ii = Object(s.a)(function (e) {
-          var t = e.ePhase,
-            a = e.eRegion,
-            n = e.eDivision,
-            r = e.arrHighlights,
-            o = e.bShowLegend,
-            s = e.bShowHeader;
-          return i.a.createElement(
-            "div",
-            { className: bn.a.DPCStandingsRoundRobin },
-            i.a.createElement(li, {
-              ePhase: t,
-              eRegion: a,
-              eDivision: n,
-              arrHighlights: r,
-              bShowLegend: o,
-              bShowHeader: s,
-            }),
-            i.a.createElement(si, {
-              ePhase: t,
-              eRegion: a,
-              eDivision: n,
-              bShowHeader: s,
-            })
-          );
-        }),
         si = Object(s.a)(function (e) {
-          var t,
-            a,
-            n = e.ePhase,
-            r = e.eRegion,
-            s = e.eDivision,
-            c = e.bShowHeader,
-            m = Wi(),
-            u = Object(o.useState)(void 0),
-            p = u[0],
-            h = u[1],
-            g = Object(o.useState)(0),
-            b = g[0],
-            v = g[1],
-            f =
-              null === (t = Da.a.Get().GetEventNodes(m, 0)) || void 0 === t
-                ? void 0
-                : t.filter(function (e) {
-                    var t = Da.a
-                      .Get()
-                      .GetLeagueNodeInfo(e.nLeagueID, e.nNodeID);
-                    return (
-                      (null == t ? void 0 : t.eRegion) == r &&
-                      (null == t ? void 0 : t.ePhase) == n &&
-                      (null == t ? void 0 : t.eDivision) == s
-                    );
-                  }),
-            E =
-              null === (a = Da.a.Get().GetEventTeams(m)) || void 0 === a
-                ? void 0
-                : a.filter(function (e) {
-                    return null != Da.a.Get().GetTeamStanding(m, n, r, s, e);
-                  }),
-            y = "";
-          switch (Da.a.Get().GetEventType(m)) {
+          var t = zi(),
+            a = "";
+          switch (Da.a.Get().GetEventType(t)) {
             case ua.e.LEAGUE:
-              y = Da.a.Get().GetRegionString(r);
+              a = Da.a.Get().GetRegionString(e.eRegion);
               break;
             case ua.e.MAJOR:
             case ua.e.INTERNATIONAL:
             case ua.e.INTERNATIONAL_QUALIFIERS:
-              y = Da.a.Get().GetEventPhaseString(n);
+              a = Da.a.Get().GetEventPhaseString(e.ePhase);
           }
-          var I = Da.a
-            .Get()
-            .GetLeagueNode(
-              null == p ? void 0 : p.nLeagueID,
-              null == p ? void 0 : p.nNodeID
-            );
           return i.a.createElement(
             "div",
-            { className: bn.a.DPCStandingsGrid },
-            c &&
+            { className: bn.a.DPCStandingsRoundRobin },
+            e.bShowHeader &&
               i.a.createElement(
                 "div",
-                { className: bn.a.Header },
-                Object(_.a)(y)
+                { className: bn.a.Title },
+                Object(_.a)(a)
               ),
             i.a.createElement(
               "div",
-              { className: bn.a.GridContainer },
-              i.a.createElement(
-                "div",
-                { className: bn.a.GridRow },
-                i.a.createElement("div", {
-                  className: Object(ce.a)(bn.a.GridCell, bn.a.HeaderCell),
+              { className: bn.a.Standings },
+              e.bShowList &&
+                i.a.createElement(ci, {
+                  ePhase: e.ePhase,
+                  eRegion: e.eRegion,
+                  eDivision: e.eDivision,
+                  arrHighlights: e.arrHighlights,
+                  bShowDPCPoints: e.bShowListDPCPoints,
+                  bShowLegend: e.bShowLegend,
                 }),
-                E.map(function (e) {
-                  var t =
-                      e == b &&
-                      (null == I ? void 0 : I.is_completed) &&
-                      (((null == I ? void 0 : I.team_id_1) == e &&
-                        (null == I ? void 0 : I.team_1_wins) >
-                          (null == I ? void 0 : I.team_2_wins)) ||
-                        ((null == I ? void 0 : I.team_id_2) == e &&
-                          (null == I ? void 0 : I.team_2_wins) >
-                            (null == I ? void 0 : I.team_1_wins))),
-                    a =
-                      e == b &&
-                      (null == I ? void 0 : I.is_completed) &&
-                      (((null == I ? void 0 : I.team_id_1) == e &&
-                        (null == I ? void 0 : I.team_1_wins) <
-                          (null == I ? void 0 : I.team_2_wins)) ||
-                        ((null == I ? void 0 : I.team_id_2) == e &&
-                          (null == I ? void 0 : I.team_2_wins) <
-                            (null == I ? void 0 : I.team_1_wins))),
-                    n =
-                      e == b &&
-                      (null == I ? void 0 : I.is_completed) &&
-                      (((null == I ? void 0 : I.team_id_1) == e &&
-                        (null == I ? void 0 : I.team_1_wins) ==
-                          (null == I ? void 0 : I.team_2_wins)) ||
-                        ((null == I ? void 0 : I.team_id_2) == e &&
-                          (null == I ? void 0 : I.team_2_wins) ==
-                            (null == I ? void 0 : I.team_1_wins)));
-                  return i.a.createElement(
-                    "div",
-                    {
-                      key: "gh" + e,
-                      className: Object(ce.a)(
-                        bn.a.GridCell,
-                        bn.a.HeaderCell,
-                        t && bn.a.Winner,
-                        a && bn.a.Loser,
-                        n && bn.a.Draw
-                      ),
-                    },
-                    i.a.createElement(Ha, { nTeamID: e, nSize: 32 })
-                  );
+              e.bShowGrid &&
+                i.a.createElement(li, {
+                  ePhase: e.ePhase,
+                  eRegion: e.eRegion,
+                  eDivision: e.eDivision,
+                  bShowLegend: e.bShowLegend,
                 })
-              ),
-              E.map(function (e) {
-                var t =
-                    e != b &&
-                    (null == I ? void 0 : I.is_completed) &&
-                    (((null == I ? void 0 : I.team_id_1) == e &&
-                      (null == I ? void 0 : I.team_1_wins) >
-                        (null == I ? void 0 : I.team_2_wins)) ||
-                      ((null == I ? void 0 : I.team_id_2) == e &&
-                        (null == I ? void 0 : I.team_2_wins) >
-                          (null == I ? void 0 : I.team_1_wins))),
-                  a =
-                    e != b &&
-                    (null == I ? void 0 : I.is_completed) &&
-                    (((null == I ? void 0 : I.team_id_1) == e &&
-                      (null == I ? void 0 : I.team_1_wins) <
-                        (null == I ? void 0 : I.team_2_wins)) ||
-                      ((null == I ? void 0 : I.team_id_2) == e &&
-                        (null == I ? void 0 : I.team_2_wins) <
-                          (null == I ? void 0 : I.team_1_wins))),
-                  n =
-                    e != b &&
-                    (null == I ? void 0 : I.is_completed) &&
-                    (((null == I ? void 0 : I.team_id_1) == e &&
-                      (null == I ? void 0 : I.team_1_wins) ==
-                        (null == I ? void 0 : I.team_2_wins)) ||
-                      ((null == I ? void 0 : I.team_id_2) == e &&
-                        (null == I ? void 0 : I.team_2_wins) ==
-                          (null == I ? void 0 : I.team_1_wins)));
-                return i.a.createElement(
-                  "div",
-                  { key: "r" + e, className: bn.a.GridRow },
-                  i.a.createElement(
-                    "div",
-                    {
-                      className: Object(ce.a)(
-                        bn.a.GridCell,
-                        bn.a.HeaderCell,
-                        t && bn.a.Winner,
-                        a && bn.a.Loser,
-                        n && bn.a.Draw
-                      ),
-                    },
-                    i.a.createElement(Ha, { nTeamID: e, nSize: 32 })
-                  ),
-                  E.map(function (t) {
-                    var a = f.find(function (a) {
-                        var n = Da.a
-                          .Get()
-                          .GetLeagueNode(a.nLeagueID, a.nNodeID);
-                        return (
-                          ((null == n ? void 0 : n.team_id_1) == e &&
-                            (null == n ? void 0 : n.team_id_2) == t) ||
-                          ((null == n ? void 0 : n.team_id_1) == t &&
-                            (null == n ? void 0 : n.team_id_2) == e)
-                        );
-                      }),
-                      n = Da.a
-                        .Get()
-                        .GetLeagueNode(
-                          null == a ? void 0 : a.nLeagueID,
-                          null == a ? void 0 : a.nNodeID
-                        ),
-                      r = null == n ? void 0 : n.is_completed,
-                      o =
-                        (null == n ? void 0 : n.has_started) &&
-                        !(null == n ? void 0 : n.is_completed),
-                      s = e == t,
-                      c =
-                        (null == n ? void 0 : n.team_id_1) == e
-                          ? null == n
-                            ? void 0
-                            : n.team_1_wins
-                          : null == n
-                          ? void 0
-                          : n.team_2_wins,
-                      u =
-                        (null == n ? void 0 : n.team_id_1) == e
-                          ? null == n
-                            ? void 0
-                            : n.team_2_wins
-                          : null == n
-                          ? void 0
-                          : n.team_1_wins,
-                      p = (null == n ? void 0 : n.actual_time)
-                        ? null == n
-                          ? void 0
-                          : n.actual_time
-                        : null == n
-                        ? void 0
-                        : n.scheduled_time,
-                      _ = d.a.dpc_watch(
-                        Object(ma.h)(m),
-                        "" + (null == a ? void 0 : a.nLeagueID),
-                        "" + (null == a ? void 0 : a.nNodeID),
-                        Object(ma.j)(0, ma.f.SERIES)
-                      ),
-                      g = d.a.dpc_schedule(
-                        Object(ma.h)(m),
-                        "" + (null == a ? void 0 : a.nLeagueID),
-                        "" + (null == a ? void 0 : a.nNodeID)
-                      );
-                    return i.a.createElement(
-                      l.b,
-                      {
-                        to: {
-                          state: { bAutoScroll: r || o },
-                          pathname: e == t ? void 0 : r || o ? _ : g,
-                        },
-                        key: "c" + e + "_" + t,
-                        className: Object(ce.a)(
-                          bn.a.GridCell,
-                          r && bn.a.Completed,
-                          o && bn.a.InProgress,
-                          s && bn.a.Self
-                        ),
-                        onMouseEnter: function () {
-                          (r || o) && (h(a), v(t));
-                        },
-                        onMouseLeave: function () {
-                          (r || o) && (h(void 0), v(0));
-                        },
-                      },
-                      (r || o) &&
-                        e != t &&
-                        i.a.createElement(
-                          "div",
-                          {
-                            className: Object(ce.a)(
-                              bn.a.Result,
-                              r && bn.a.Completed
-                            ),
-                          },
-                          c + " - " + u
-                        ),
-                      !r &&
-                        !o &&
-                        e != t &&
-                        i.a.createElement(
-                          "div",
-                          { className: bn.a.Date },
-                          i.a.createElement(ya.a, {
-                            date: 1e3 * p,
-                            format: "MMM DD LT",
-                          })
-                        )
-                    );
-                  })
-                );
-              })
             )
           );
         }),
         li = Object(s.a)(function (e) {
           var t,
-            a = e.ePhase,
-            n = e.eRegion,
-            r = e.eDivision,
-            o = e.arrHighlights,
-            s = e.bShowLegend,
-            l = e.bShowHeader,
-            c = Wi(),
-            d = (null === (t = Da.a.Get().GetEventTeams(c)) || void 0 === t
-              ? void 0
-              : t.filter(function (e) {
-                  return null != Da.a.Get().GetTeamStanding(c, a, n, r, e);
-                })
-            ).sort(function (e, t) {
-              var o = Da.a.Get().GetTeamStanding(c, a, n, r, e),
-                i = Da.a.Get().GetTeamStanding(c, a, n, r, t);
+            a,
+            n = zi(),
+            r = Object(o.useState)({
+              nRow: -1,
+              nColumn: -1,
+              nRowTeam: 0,
+              nColumnTeam: 0,
+            }),
+            s = r[0],
+            l = r[1],
+            c =
+              null === (t = Da.a.Get().GetEventNodes(n, 0)) || void 0 === t
+                ? void 0
+                : t.filter(function (t) {
+                    var a = Da.a
+                      .Get()
+                      .GetLeagueNodeInfo(t.nLeagueID, t.nNodeID);
+                    return (
+                      (null == a ? void 0 : a.eRegion) == e.eRegion &&
+                      (null == a ? void 0 : a.ePhase) == e.ePhase &&
+                      (null == a ? void 0 : a.eDivision) == e.eDivision
+                    );
+                  }),
+            m =
+              null === (a = Da.a.Get().GetEventTeams(n)) || void 0 === a
+                ? void 0
+                : a.filter(function (t) {
+                    return (
+                      null !=
+                      Da.a
+                        .Get()
+                        .GetTeamStanding(n, e.ePhase, e.eRegion, e.eDivision, t)
+                    );
+                  }),
+            u = c.find(function (e) {
+              if (-1 == s.nRow || -1 == s.nRow) return !1;
+              var t = Da.a.Get().GetLeagueNode(e.nLeagueID, e.nNodeID);
               return (
-                (null == o ? void 0 : o.standing) -
-                (null == i ? void 0 : i.standing)
+                !!t &&
+                ((t.team_id_1 == m[s.nRow] && t.team_id_2 == m[s.nColumn]) ||
+                  (t.team_id_1 == m[s.nColumn] && t.team_id_2 == m[s.nRow]))
               );
             }),
-            m = "";
-          switch (Da.a.Get().GetEventType(c)) {
-            case ua.e.LEAGUE:
-              m = Da.a.Get().GetRegionString(n);
-              break;
-            case ua.e.MAJOR:
-            case ua.e.INTERNATIONAL:
-            case ua.e.INTERNATIONAL_QUALIFIERS:
-              m = Da.a.Get().GetEventPhaseString(a);
-          }
+            p = Da.a
+              .Get()
+              .GetLeagueNode(
+                null == u ? void 0 : u.nLeagueID,
+                null == u ? void 0 : u.nNodeID
+              ),
+            h = "#117C30",
+            g = "#922820",
+            b = "#929820",
+            v =
+              (null == p ? void 0 : p.team_id_1) == s.nRowTeam
+                ? null == p
+                  ? void 0
+                  : p.team_1_wins
+                : null == p
+                ? void 0
+                : p.team_2_wins,
+            f =
+              (null == p ? void 0 : p.team_id_1) == s.nColumnTeam
+                ? null == p
+                  ? void 0
+                  : p.team_1_wins
+                : null == p
+                ? void 0
+                : p.team_2_wins,
+            E = p && p.is_completed && v > f,
+            y = p && p.is_completed && v < f,
+            I = p && p.is_completed && v == f,
+            O = void 0,
+            D = void 0;
+          E
+            ? ((O = h), (D = g))
+            : y
+            ? ((O = g), (D = h))
+            : I && ((O = b), (D = b)),
+            console.log(I);
+          var N = 70 * m.length;
+          return i.a.createElement(
+            "div",
+            {
+              className: bn.a.DPCStandingsGrid,
+              style: { width: N, height: 40 + N },
+            },
+            i.a.createElement(
+              "div",
+              { className: bn.a.Header },
+              Object(_.a)("#dpc_grid")
+            ),
+            i.a.createElement(
+              "div",
+              { className: bn.a.GridContainer },
+              i.a.createElement(
+                "div",
+                { className: bn.a.GridBody },
+                ni(-1, m.length - 1).map(function (e) {
+                  var t = -1 == e,
+                    a = e == m.length - 1,
+                    r = t ? 0 : m[e];
+                  return i.a.createElement(
+                    "div",
+                    { className: bn.a.GridRow, key: "r" + e },
+                    ni(-1, m.length - 1).map(function (o) {
+                      var s = -1 == o,
+                        u = o == m.length - 1,
+                        p = s ? 0 : m[o],
+                        _ = c.find(function (t) {
+                          var a = Da.a
+                            .Get()
+                            .GetLeagueNode(t.nLeagueID, t.nNodeID);
+                          return (
+                            !!a &&
+                            ((a.team_id_1 == m[e] && a.team_id_2 == m[o]) ||
+                              (a.team_id_1 == m[o] && a.team_id_2 == m[e]))
+                          );
+                        }),
+                        h = Da.a
+                          .Get()
+                          .GetLeagueNode(
+                            null == _ ? void 0 : _.nLeagueID,
+                            null == _ ? void 0 : _.nNodeID
+                          ),
+                        g =
+                          (null == h ? void 0 : h.team_id_1) == r
+                            ? null == h
+                              ? void 0
+                              : h.team_1_wins
+                            : null == h
+                            ? void 0
+                            : h.team_2_wins,
+                        b =
+                          (null == h ? void 0 : h.team_id_1) == p
+                            ? null == h
+                              ? void 0
+                              : h.team_1_wins
+                            : null == h
+                            ? void 0
+                            : h.team_2_wins,
+                        v = (null == h ? void 0 : h.is_completed)
+                          ? g + " - " + b
+                          : "";
+                      return i.a.createElement(
+                        ma.a,
+                        {
+                          key: "c" + o,
+                          className: bn.a.LinkWrapper,
+                          condition: null != h,
+                          to: d.a.dpc_watch(
+                            Object(ma.h)(n),
+                            "" + (null == _ ? void 0 : _.nLeagueID),
+                            "" + (null == _ ? void 0 : _.nNodeID),
+                            Object(ma.j)(0, ma.f.SERIES)
+                          ),
+                        },
+                        i.a.createElement(
+                          "div",
+                          {
+                            className: bn.a.GridCell,
+                            onMouseEnter: function () {
+                              return l({
+                                nRow: e,
+                                nColumn: o,
+                                nRowTeam: r,
+                                nColumnTeam: p,
+                              });
+                            },
+                            onMouseLeave: function () {
+                              return l({
+                                nRow: -1,
+                                nColumn: -1,
+                                nRowTeam: 0,
+                                nColumnTeam: 0,
+                              });
+                            },
+                            style: {
+                              borderRight: u ? "" : "0.5px solid #444444",
+                              borderLeft: s ? "" : "0.5px solid #444444",
+                              borderTop: t ? "" : "0.5px solid #444444",
+                              borderBottom: a ? "" : "0.5px solid #444444",
+                            },
+                          },
+                          t &&
+                            !s &&
+                            i.a.createElement(Ha, { nTeamID: m[o], nSize: 44 }),
+                          !t &&
+                            s &&
+                            i.a.createElement(Ha, { nTeamID: m[e], nSize: 44 }),
+                          !t &&
+                            !s &&
+                            i.a.createElement(
+                              "div",
+                              { className: bn.a.GridMatch },
+                              v
+                            )
+                        )
+                      );
+                    })
+                  );
+                })
+              ),
+              i.a.createElement(
+                "div",
+                {
+                  className: bn.a.RowHighlightContainer,
+                  style: { height: 56 * (m.length + 1), right: 0 },
+                },
+                O &&
+                  i.a.createElement("div", {
+                    className: bn.a.RowHighlight,
+                    style: {
+                      top: 56 * (s.nRow + 1),
+                      opacity: s.nRow >= 0 ? 1 : 0,
+                      borderLeft: "1px solid " + O,
+                      background:
+                        "linear-gradient( to right, " +
+                        O +
+                        "60 0%, " +
+                        O +
+                        "16 20%, " +
+                        O +
+                        "16 100% )",
+                    },
+                  })
+              ),
+              i.a.createElement(
+                "div",
+                {
+                  className: bn.a.ColumnHighlightContainer,
+                  style: { width: 56 * (m.length + 1), top: 0 },
+                },
+                D &&
+                  i.a.createElement("div", {
+                    className: bn.a.ColumnHighlight,
+                    style: {
+                      left: 56 * (s.nColumn + 1),
+                      opacity: s.nColumn >= 0 ? 1 : 0,
+                      borderTop: "1px solid " + D,
+                      background:
+                        "linear-gradient( to bottom, " +
+                        D +
+                        "60 0%, " +
+                        D +
+                        "16 20%, " +
+                        D +
+                        "16 100% )",
+                    },
+                  })
+              )
+            )
+          );
+        }),
+        ci = Object(s.a)(function (e) {
+          var t,
+            a = zi(),
+            n = (null === (t = Da.a.Get().GetEventTeams(a)) || void 0 === t
+              ? void 0
+              : t.filter(function (t) {
+                  return (
+                    null !=
+                    Da.a
+                      .Get()
+                      .GetTeamStanding(a, e.ePhase, e.eRegion, e.eDivision, t)
+                  );
+                })
+            ).sort(function (t, n) {
+              var r = Da.a
+                  .Get()
+                  .GetTeamStanding(a, e.ePhase, e.eRegion, e.eDivision, t),
+                o = Da.a
+                  .Get()
+                  .GetTeamStanding(a, e.ePhase, e.eRegion, e.eDivision, n);
+              return (
+                (null == r ? void 0 : r.standing) -
+                (null == o ? void 0 : o.standing)
+              );
+            });
           return i.a.createElement(
             "div",
             { className: Object(ce.a)(bn.a.DPCStandingsTeamList) },
-            l &&
-              i.a.createElement(
-                "div",
-                { className: bn.a.Header },
-                Object(_.a)(m)
-              ),
             i.a.createElement(
               "div",
               { className: bn.a.Teams },
-              d.map(function (e, t) {
-                var s = Da.a.Get().GetTeamStanding(c, a, n, r, e),
-                  l = Da.a.Get().GetTeamStanding(c, a, n, r, d[t + 1]),
-                  m =
-                    null == o
-                      ? void 0
-                      : o.findIndex(function (e) {
-                          return s.standing >= e.nMin && s.standing <= e.nMax;
-                        }),
-                  u = o[m],
-                  p =
-                    (null == u ? void 0 : u.bLarge) &&
-                    (null == s ? void 0 : s.standing) ==
-                      (null == u ? void 0 : u.nMax) &&
-                    t != d.length - 1 &&
-                    (null == s ? void 0 : s.standing) !=
-                      (null == l ? void 0 : l.standing);
-                return i.a.createElement(ci, {
-                  key: r + "_" + n + "_" + e,
-                  ePhase: a,
-                  eRegion: n,
-                  eDivision: r,
-                  nTeamID: e,
-                  bLarge: null == u ? void 0 : u.bLarge,
-                  bLastLarge: p,
+              i.a.createElement(di, {
+                key: e.eDivision + "_" + e.eRegion + "_header",
+                bHeader: !0,
+                ePhase: e.ePhase,
+                eRegion: e.eRegion,
+                eDivision: e.eDivision,
+                nTeamID: 0,
+                bShowDPCPoints: e.bShowDPCPoints,
+              }),
+              n.map(function (t) {
+                return i.a.createElement(di, {
+                  key: e.eDivision + "_" + e.eRegion + "_" + t,
+                  ePhase: e.ePhase,
+                  eRegion: e.eRegion,
+                  eDivision: e.eDivision,
+                  nTeamID: t,
+                  bShowDPCPoints: e.bShowDPCPoints,
                 });
               }),
-              o.map(function (e) {
-                for (
-                  var t = 0,
-                    s = 0,
-                    l = function (i) {
-                      var l = Da.a.Get().GetTeamStanding(c, a, n, r, i),
-                        d =
-                          null == o
-                            ? void 0
-                            : o.find(function (e) {
-                                return (
-                                  l.standing >= e.nMin && l.standing <= e.nMax
-                                );
-                              }),
-                        m = (null == d ? void 0 : d.bLarge) ? 90 : 70;
-                      (null == l ? void 0 : l.standing) < e.nMin && (t += m),
-                        (null == l ? void 0 : l.standing) <= e.nMax && (s += m);
-                    },
-                    m = 0,
-                    u = d;
-                  m < u.length;
-                  m++
-                ) {
-                  l(u[m]);
+              e.arrHighlights.map(function (t) {
+                for (var r = 40, o = 40, s = 0, l = n; s < l.length; s++) {
+                  var c = l[s],
+                    d = Da.a
+                      .Get()
+                      .GetTeamStanding(a, e.ePhase, e.eRegion, e.eDivision, c);
+                  (null == d ? void 0 : d.standing) < t.nMin && (r += 70),
+                    (null == d ? void 0 : d.standing) <= t.nMax && (o += 70);
                 }
-                return t == s
+                return r == o
                   ? null
                   : i.a.createElement("div", {
-                      key: "h" + t + "_" + s,
+                      key: "h" + r + "_" + o,
                       className: bn.a.HighlightOverlay,
                       style: {
                         background:
                           "linear-gradient( " +
-                          e.strColor +
-                          "30, " +
-                          e.strColor +
-                          "08 )",
-                        borderTop: "1px solid " + e.strColor,
-                        top: t,
-                        height: s - t,
+                          t.strColor +
+                          "33, " +
+                          t.strColor +
+                          "0F )",
+                        borderTop: "1px solid " + t.strColor,
+                        top: r,
+                        height: o - r,
                       },
                     });
               })
             ),
-            s &&
+            e.bShowLegend &&
               i.a.createElement(
                 "div",
                 { className: bn.a.LegendContainer },
-                o.map(function (e, t) {
+                e.arrHighlights.map(function (e, t) {
                   return i.a.createElement(
                     "div",
                     { key: "hl" + t, className: bn.a.LegendItem },
@@ -28735,153 +28729,179 @@ var CLSTAMP = "6690491";
               )
           );
         }),
-        ci = Object(s.a)(function (e) {
-          var t = e.ePhase,
-            a = e.eRegion,
-            n = e.eDivision,
-            r = e.nTeamID,
-            o = e.bLarge,
-            s = e.bLastLarge,
-            l = Wi(),
-            c = Da.a.Get().GetTeamStanding(l, t, a, n, r),
-            d = Da.a.Get().GetTeamNames(r),
-            m = c ? c.wins + " - " + c.losses : "";
-          return i.a.createElement(
-            "div",
-            {
-              className: Object(ce.a)(
-                bn.a.DPCStandingsTeam,
-                o && bn.a.Larger,
-                s && bn.a.LastLarger
-              ),
-            },
-            i.a.createElement(
-              "div",
-              { className: bn.a.Standing },
-              (function (e) {
-                var t = e % 100,
-                  a = "#LOC_Ordinal_Prefix_" + t,
-                  n = Object(z.e)(a);
-                n === a && (n = Object(z.e)("#LOC_Ordinal_Prefix_Default")),
-                  "<none>" === n && (n = "");
-                var r = "#LOC_Ordinal_Suffix_" + t,
-                  o = Object(z.e)(r);
-                return (
-                  o === r && (o = Object(z.e)("#LOC_Ordinal_Suffix_Default")),
-                  "<none>" === o && (o = ""),
-                  n + e + o
-                );
-              })(null == c ? void 0 : c.standing)
-            ),
-            i.a.createElement(Ha, {
-              className: bn.a.TeamLogo,
-              nTeamID: r,
-              nSize: o ? 50 : 32,
-            }),
-            i.a.createElement(
-              "div",
-              { className: bn.a.TeamName },
-              null == d ? void 0 : d.name
-            ),
-            i.a.createElement("div", { className: bn.a.Record }, m)
-          );
-        }),
         di = Object(s.a)(function (e) {
-          var t,
-            a,
-            n = e.nLeagueID,
-            r = e.nNodeID,
-            o = e.strNodeTitle,
-            s = e.nExpandedNodeID,
-            c = e.setExpandedNodeID,
-            m = e.strBackgroundColor,
-            u = Wi(),
-            p = Da.a.Get().GetLeagueNode(n, r),
-            h = Da.a.Get().GetTeamNames(null == p ? void 0 : p.team_id_1),
-            g = Da.a.Get().GetTeamNames(null == p ? void 0 : p.team_id_2),
+          var t = zi(),
+            a = Da.a
+              .Get()
+              .GetTeamStanding(t, e.ePhase, e.eRegion, e.eDivision, e.nTeamID),
+            n = Da.a.Get().GetTeamNames(e.nTeamID);
+          return e.bHeader
+            ? i.a.createElement(
+                "div",
+                { className: Object(ce.a)(bn.a.DPCStandingsTeam, bn.a.Header) },
+                i.a.createElement(
+                  "div",
+                  { className: bn.a.Standing },
+                  Object(_.a)("#dpc_rank")
+                ),
+                i.a.createElement(
+                  "div",
+                  { className: bn.a.TeamName },
+                  Object(_.a)("#dpc_team")
+                ),
+                i.a.createElement(
+                  "div",
+                  { className: bn.a.Wins },
+                  Object(_.a)("#dpc_wins")
+                ),
+                i.a.createElement(
+                  "div",
+                  { className: bn.a.Losses },
+                  Object(_.a)("#dpc_losses")
+                ),
+                e.bShowDPCPoints &&
+                  i.a.createElement("div", { className: bn.a.DPCPoints }, "0")
+              )
+            : i.a.createElement(
+                "div",
+                { className: bn.a.DPCStandingsTeam },
+                i.a.createElement(
+                  "div",
+                  { className: bn.a.Standing },
+                  (function (e) {
+                    var t = e % 100,
+                      a = "#LOC_Ordinal_Prefix_" + t,
+                      n = Object(z.e)(a);
+                    n === a && (n = Object(z.e)("#LOC_Ordinal_Prefix_Default")),
+                      "<none>" === n && (n = "");
+                    var r = "#LOC_Ordinal_Suffix_" + t,
+                      o = Object(z.e)(r);
+                    return (
+                      o === r &&
+                        (o = Object(z.e)("#LOC_Ordinal_Suffix_Default")),
+                      "<none>" === o && (o = ""),
+                      n + e + o
+                    );
+                  })(null == a ? void 0 : a.standing)
+                ),
+                i.a.createElement(Ha, {
+                  className: bn.a.TeamLogo,
+                  nTeamID: e.nTeamID,
+                  nSize: 32,
+                }),
+                i.a.createElement(
+                  "div",
+                  { className: bn.a.TeamName },
+                  null == n ? void 0 : n.name
+                ),
+                i.a.createElement(
+                  "div",
+                  { className: bn.a.Wins },
+                  null == a ? void 0 : a.wins
+                ),
+                i.a.createElement(
+                  "div",
+                  { className: bn.a.Losses },
+                  null == a ? void 0 : a.losses
+                ),
+                e.bShowDPCPoints &&
+                  i.a.createElement("div", { className: bn.a.DPCPoints }, "0")
+              );
+        }),
+        mi = Object(s.a)(function (e) {
+          var t = e.nLeagueID,
+            a = e.nNodeID,
+            n = e.strNodeTitle,
+            r = e.nExpandedNodeID,
+            o = e.setExpandedNodeID,
+            s = e.strBackgroundColor,
+            c = zi(),
+            m = Da.a.Get().GetLeagueNode(t, a),
+            u = Da.a.Get().GetTeamNames(null == m ? void 0 : m.team_id_1),
+            p = Da.a.Get().GetTeamNames(null == m ? void 0 : m.team_id_2),
+            h =
+              (null == m ? void 0 : m.is_completed) &&
+              (null == m ? void 0 : m.team_1_wins) >
+                (null == m ? void 0 : m.team_2_wins),
+            g =
+              (null == m ? void 0 : m.is_completed) &&
+              (null == m ? void 0 : m.team_2_wins) >
+                (null == m ? void 0 : m.team_1_wins),
             b =
-              (null == p ? void 0 : p.is_completed) &&
-              (null == p ? void 0 : p.team_1_wins) >
-                (null == p ? void 0 : p.team_2_wins),
-            v =
-              (null == p ? void 0 : p.is_completed) &&
-              (null == p ? void 0 : p.team_2_wins) >
-                (null == p ? void 0 : p.team_1_wins),
-            f =
-              0 != (null == p ? void 0 : p.incoming_node_id_1) ||
-              0 != (null == p ? void 0 : p.incoming_node_id_2),
-            E = Da.a
+              0 != (null == m ? void 0 : m.incoming_node_id_1) ||
+              0 != (null == m ? void 0 : m.incoming_node_id_2),
+            v = Da.a
               .Get()
-              .GetLeagueNode(n, null == p ? void 0 : p.incoming_node_id_1),
-            y = Da.a
+              .GetLeagueNode(t, null == m ? void 0 : m.incoming_node_id_1),
+            f = Da.a
               .Get()
-              .GetLeagueNode(n, null == p ? void 0 : p.incoming_node_id_2),
-            I =
-              0 != (null == E ? void 0 : E.team_id_1) ||
-              0 != (null == E ? void 0 : E.team_id_2),
-            O =
-              0 != (null == y ? void 0 : y.team_id_1) ||
-              0 != (null == y ? void 0 : y.team_id_2),
-            D = (null == p ? void 0 : p.actual_time)
-              ? null == p
+              .GetLeagueNode(t, null == m ? void 0 : m.incoming_node_id_2),
+            E =
+              0 != (null == v ? void 0 : v.team_id_1) ||
+              0 != (null == v ? void 0 : v.team_id_2),
+            y =
+              0 != (null == f ? void 0 : f.team_id_1) ||
+              0 != (null == f ? void 0 : f.team_id_2),
+            I = (null == m ? void 0 : m.actual_time)
+              ? null == m
                 ? void 0
-                : p.actual_time
-              : null == p
+                : m.actual_time
+              : null == m
               ? void 0
-              : p.scheduled_time,
-            N = f && I && O ? "#dpc_tbd" : "#dpc_bye",
-            S = h ? h.name : g ? N : "#dpc_tbd",
-            L = g ? g.name : h ? N : "#dpc_tbd",
-            T =
-              0 != (null == p ? void 0 : p.team_id_1) &&
-              0 != (null == p ? void 0 : p.team_id_2) &&
-              (null == p ? void 0 : p.has_started)
-                ? "" + (null == p ? void 0 : p.team_1_wins)
+              : m.scheduled_time,
+            O = b && E && y ? "#dpc_tbd" : "#dpc_bye",
+            D = u ? u.name : p ? O : "#dpc_tbd",
+            N = p ? p.name : u ? O : "#dpc_tbd",
+            S =
+              0 != (null == m ? void 0 : m.team_id_1) &&
+              0 != (null == m ? void 0 : m.team_id_2) &&
+              (null == m ? void 0 : m.has_started)
+                ? "" + (null == m ? void 0 : m.team_1_wins)
                 : "",
-            C =
-              0 != (null == p ? void 0 : p.team_id_2) &&
-              0 != (null == p ? void 0 : p.team_id_1) &&
-              (null == p ? void 0 : p.has_started)
-                ? "" + (null == p ? void 0 : p.team_2_wins)
+            L =
+              0 != (null == m ? void 0 : m.team_id_2) &&
+              0 != (null == m ? void 0 : m.team_id_1) &&
+              (null == m ? void 0 : m.has_started)
+                ? "" + (null == m ? void 0 : m.team_2_wins)
                 : "",
-            w = r == s,
-            j = Da.a
+            T = a == r,
+            C = Da.a
               .Get()
-              .GetNodeTypeGameCount(null == p ? void 0 : p.node_type),
-            A = 100 + 30 * j,
-            G = w ? 1.5 * vn.e : vn.e,
-            R = w ? A : vn.c,
-            B = w ? -vn.e / 3 : 0,
-            k = w ? -vn.c / 2 : 0,
-            P = Da.a.Get().GetNodeTypeString(null == p ? void 0 : p.node_type);
-          return 0 == (null == p ? void 0 : p.team_id_1) &&
-            0 == (null == p ? void 0 : p.team_id_2) &&
-            0 == (null == p ? void 0 : p.incoming_node_id_1) &&
-            0 == (null == p ? void 0 : p.incoming_node_id_2)
+              .GetNodeTypeGameCount(null == m ? void 0 : m.node_type),
+            w = 100 + 30 * C,
+            j = T ? 1.5 * vn.e : vn.e,
+            A = T ? w : vn.c,
+            G = T ? -vn.e / 3 : 0,
+            R = T ? -vn.c / 2 : 0,
+            B = Da.a.Get().GetNodeTypeString(null == m ? void 0 : m.node_type);
+          return 0 == (null == m ? void 0 : m.team_id_1) &&
+            0 == (null == m ? void 0 : m.team_id_2) &&
+            0 == (null == m ? void 0 : m.incoming_node_id_1) &&
+            0 == (null == m ? void 0 : m.incoming_node_id_2)
             ? null
             : i.a.createElement(
                 "div",
                 {
-                  className: Object(ce.a)(bn.a.BracketNode, w && bn.a.Expanded),
+                  className: Object(ce.a)(bn.a.BracketNode, T && bn.a.Expanded),
                   style: {
-                    backgroundColor: m,
-                    width: G,
-                    height: R,
-                    marginLeft: B,
-                    marginTop: k,
+                    backgroundColor: s,
+                    width: j,
+                    height: A,
+                    marginLeft: G,
+                    marginTop: R,
                   },
                   onClick: function () {
-                    return c(s == r ? 0 : r);
+                    return o(r == a ? 0 : a);
                   },
                 },
                 i.a.createElement(
                   "div",
                   { className: bn.a.NodeHeader },
-                  Object(_.a)(o),
+                  Object(_.a)(n),
                   i.a.createElement(
                     "div",
                     { className: bn.a.BestOf },
-                    Object(_.a)(P)
+                    Object(_.a)(B)
                   )
                 ),
                 i.a.createElement(
@@ -28889,101 +28909,95 @@ var CLSTAMP = "6690491";
                   { className: bn.a.ContentsContainer },
                   i.a.createElement(
                     "div",
-                    { className: Object(ce.a)(bn.a.Teams, w && bn.a.Hidden) },
+                    { className: Object(ce.a)(bn.a.Teams, T && bn.a.Hidden) },
                     i.a.createElement(
                       "div",
-                      { className: Object(ce.a)(bn.a.Team, b && bn.a.Winner) },
+                      { className: Object(ce.a)(bn.a.Team, h && bn.a.Winner) },
                       i.a.createElement(Ha, {
-                        nTeamID: null == p ? void 0 : p.team_id_1,
+                        nTeamID: null == m ? void 0 : m.team_id_1,
                         className: bn.a.TeamLogo,
                         nSize: 20,
                       }),
                       i.a.createElement(
                         "div",
                         { className: bn.a.TeamName },
-                        Object(_.a)(S)
+                        Object(_.a)(D)
                       ),
-                      i.a.createElement("div", { className: bn.a.Score }, T)
+                      i.a.createElement("div", { className: bn.a.Score }, S)
                     ),
                     i.a.createElement(
                       "div",
-                      { className: Object(ce.a)(bn.a.Team, v && bn.a.Winner) },
+                      { className: Object(ce.a)(bn.a.Team, g && bn.a.Winner) },
                       i.a.createElement(Ha, {
-                        nTeamID: null == p ? void 0 : p.team_id_2,
+                        nTeamID: null == m ? void 0 : m.team_id_2,
                         className: bn.a.TeamLogo,
                         nSize: 20,
                       }),
                       i.a.createElement(
                         "div",
                         { className: bn.a.TeamName },
-                        Object(_.a)(L)
+                        Object(_.a)(N)
                       ),
-                      i.a.createElement("div", { className: bn.a.Score }, C)
+                      i.a.createElement("div", { className: bn.a.Score }, L)
                     )
                   ),
                   i.a.createElement(
                     "div",
                     {
-                      className: Object(ce.a)(bn.a.Details, !w && bn.a.Hidden),
+                      className: Object(ce.a)(bn.a.Details, !T && bn.a.Hidden),
                     },
                     i.a.createElement(ya.a, {
                       className: bn.a.Timestamp,
-                      date: 1e3 * D,
+                      date: 1e3 * I,
                       format: "MMM DD LT",
                     }),
                     i.a.createElement("div", { className: bn.a.Separator }),
                     i.a.createElement(
                       "div",
-                      { className: Object(ce.a)(bn.a.Team, b && bn.a.Winner) },
+                      { className: Object(ce.a)(bn.a.Team, h && bn.a.Winner) },
                       i.a.createElement(Ha, {
-                        nTeamID: null == p ? void 0 : p.team_id_1,
+                        nTeamID: null == m ? void 0 : m.team_id_1,
                         className: bn.a.TeamLogo,
                         nSize: 20,
                       }),
                       i.a.createElement(
                         "div",
                         { className: bn.a.TeamName },
-                        Object(_.a)(S)
+                        Object(_.a)(D)
                       ),
-                      i.a.createElement("div", { className: bn.a.Score }, T)
+                      i.a.createElement("div", { className: bn.a.Score }, S)
                     ),
                     i.a.createElement(
                       "div",
-                      { className: Object(ce.a)(bn.a.Team, v && bn.a.Winner) },
+                      { className: Object(ce.a)(bn.a.Team, g && bn.a.Winner) },
                       i.a.createElement(Ha, {
-                        nTeamID: null == p ? void 0 : p.team_id_2,
+                        nTeamID: null == m ? void 0 : m.team_id_2,
                         className: bn.a.TeamLogo,
                         nSize: 20,
                       }),
                       i.a.createElement(
                         "div",
                         { className: bn.a.TeamName },
-                        Object(_.a)(L)
+                        Object(_.a)(N)
                       ),
-                      i.a.createElement("div", { className: bn.a.Score }, C)
+                      i.a.createElement("div", { className: bn.a.Score }, L)
                     ),
                     i.a.createElement("div", { className: bn.a.Separator }),
-                    ((t = 1),
-                    (a = j),
-                    Array.from(
-                      Array.from(Array(a - t + 1).keys()).map(function (e) {
-                        return e + t;
-                      })
-                    )).map(function (e) {
-                      var t = d.a.dpc_watch(
-                          Object(ma.h)(u),
-                          "" + n,
-                          "" + r,
+                    ni(1, C).map(function (e) {
+                      var n = d.a.dpc_watch(
+                          Object(ma.h)(c),
+                          "" + t,
+                          "" + a,
                           Object(ma.j)(e, ma.f.GAME)
                         ),
-                        a = e - 1 < (null == p ? void 0 : p.matches.length);
+                        r = e - 1 < (null == m ? void 0 : m.matches.length);
                       return i.a.createElement(
                         "div",
                         {
                           key: "SG" + e,
                           className: Object(ce.a)(
                             bn.a.SeriesGame,
-                            !a && bn.a.Disabled
+                            !r && bn.a.Disabled
                           ),
                         },
                         i.a.createElement(
@@ -28993,7 +29007,7 @@ var CLSTAMP = "6690491";
                         ),
                         i.a.createElement(
                           l.b,
-                          { to: t, className: bn.a.DetailsButton },
+                          { to: n, className: bn.a.DetailsButton },
                           Object(_.a)("#dpc_game_details")
                         )
                       );
@@ -29002,7 +29016,7 @@ var CLSTAMP = "6690491";
                 )
               );
         }),
-        mi = function () {
+        ui = function () {
           return i.a.createElement(
             "div",
             { className: bn.a.BracketConnectorCombine },
@@ -29035,7 +29049,7 @@ var CLSTAMP = "6690491";
             )
           );
         },
-        ui = function () {
+        pi = function () {
           return i.a.createElement(
             "div",
             { className: bn.a.BracketConnectorStraight },
@@ -29045,7 +29059,7 @@ var CLSTAMP = "6690491";
             })
           );
         },
-        pi = Object(s.a)(function (e) {
+        _i = Object(s.a)(function (e) {
           var t = e.nLeagueID,
             a = e.nNodeGroupID,
             n = e.bShowingDays,
@@ -29112,13 +29126,13 @@ var CLSTAMP = "6690491";
                       className: bn.a.BracketNodeContainer,
                       style: { left: vn.b[a].nPosX, top: vn.b[a].nPosY },
                     },
-                    i.a.createElement(di, {
+                    i.a.createElement(mi, {
                       nLeagueID: t,
                       nNodeID: e.node_id,
                       strNodeTitle: vn.b[a].strLabel,
                       nExpandedNodeID: s,
                       setExpandedNodeID: l,
-                      strBackgroundColor: ri[c],
+                      strBackgroundColor: oi[c],
                     })
                   );
                 }),
@@ -29153,18 +29167,18 @@ var CLSTAMP = "6690491";
                         height: e.nHeight,
                       },
                     },
-                    e.bStraight && i.a.createElement(ui, null),
-                    !e.bStraight && i.a.createElement(mi, null)
+                    e.bStraight && i.a.createElement(pi, null),
+                    !e.bStraight && i.a.createElement(ui, null)
                   )
                 : null;
             })
           );
         }),
-        _i = Object(s.a)(function (e) {
+        hi = Object(s.a)(function (e) {
           var t = e.ePhase,
             a = e.eRegion,
             n = e.eDivision,
-            r = Wi(),
+            r = zi(),
             s = Object(o.useState)(!1),
             l = s[0],
             c = s[1],
@@ -29191,7 +29205,7 @@ var CLSTAMP = "6690491";
           return i.a.createElement(
             Ia.a,
             { className: Object(ce.a)(bn.a.DPCStandingsBracket) },
-            i.a.createElement(pi, {
+            i.a.createElement(_i, {
               nLeagueID: m,
               nNodeGroupID: u,
               bShowingDays: l,
@@ -29228,7 +29242,7 @@ var CLSTAMP = "6690491";
                     {
                       key: "time" + e,
                       className: bn.a.Timestamp,
-                      style: { backgroundColor: ri[t + 1] },
+                      style: { backgroundColor: oi[t + 1] },
                     },
                     i.a.createElement(ya.a, {
                       date: 1e3 * e,
@@ -29240,31 +29254,31 @@ var CLSTAMP = "6690491";
             )
           );
         }),
-        hi = a("56qU"),
-        gi = a.n(hi);
+        gi = a("56qU"),
+        bi = a.n(gi);
       !(function (e) {
         (e[(e.POPULAR = 1)] = "POPULAR"), (e[(e.FAVORITE = 2)] = "FAVORITE");
-      })(ni || (ni = {}));
-      var bi = Object(s.a)(function () {
+      })(ri || (ri = {}));
+      var vi = Object(s.a)(function () {
           var e = Da.a.Get().GetFavoriteTeams(),
             t = Da.a.Get().GetPopularTeams(),
-            a = Object(o.useState)(ni.POPULAR),
+            a = Object(o.useState)(ri.POPULAR),
             n = a[0],
             r = a[1],
             s = [
-              { value: ni.POPULAR, strLabel: "#dpc_popular" },
-              { value: ni.FAVORITE, strLabel: "#dpc_following" },
+              { value: ri.POPULAR, strLabel: "#dpc_popular" },
+              { value: ri.FAVORITE, strLabel: "#dpc_following" },
             ],
-            l = n == ni.POPULAR ? t : e;
+            l = n == ri.POPULAR ? t : e;
           return i.a.createElement(
             "div",
-            { className: gi.a.DPCTeamList },
+            { className: bi.a.DPCTeamList },
             i.a.createElement(
               "div",
-              { className: gi.a.Header },
+              { className: bi.a.Header },
               i.a.createElement(
                 "div",
-                { className: gi.a.Title },
+                { className: bi.a.Title },
                 Object(_.a)("#dpc_header_teams")
               ),
               i.a.createElement(ba, {
@@ -29275,11 +29289,11 @@ var CLSTAMP = "6690491";
             ),
             i.a.createElement(
               "div",
-              { className: gi.a.TeamList },
+              { className: bi.a.TeamList },
               null == l
                 ? void 0
                 : l.map(function (e) {
-                    return i.a.createElement(vi, {
+                    return i.a.createElement(fi, {
                       key: "Team_" + e,
                       nTeamID: e,
                     });
@@ -29287,9 +29301,9 @@ var CLSTAMP = "6690491";
             )
           );
         }),
-        vi = Object(s.a)(function (e) {
+        fi = Object(s.a)(function (e) {
           var t = e.nTeamID,
-            a = Wi(),
+            a = zi(),
             n = Da.a.Get().GetFavoriteTeams();
           if (-1 == Da.a.Get().GetEventTeams(a).indexOf(t)) return null;
           var r = Da.a.Get().GetTeamNames(t),
@@ -29382,41 +29396,41 @@ var CLSTAMP = "6690491";
             R = -1 != (null == n ? void 0 : n.indexOf(t));
           return i.a.createElement(
             "div",
-            { className: gi.a.TeamEntry },
+            { className: bi.a.TeamEntry },
             i.a.createElement(Ha, {
-              className: gi.a.TeamLogo,
+              className: bi.a.TeamLogo,
               nTeamID: t,
               nSize: 64,
             }),
             i.a.createElement(
               "div",
-              { className: gi.a.TeamInfoSection },
+              { className: bi.a.TeamInfoSection },
               i.a.createElement(
                 "div",
-                { className: gi.a.TeamInfo },
+                { className: bi.a.TeamInfo },
                 i.a.createElement(
                   "div",
-                  { className: gi.a.TeamName },
+                  { className: bi.a.TeamName },
                   null == r ? void 0 : r.name
                 ),
-                i.a.createElement("div", { className: gi.a.Record }, u)
+                i.a.createElement("div", { className: bi.a.Record }, u)
               ),
               (null == h ? void 0 : h.length) > 0 &&
                 i.a.createElement(
                   "div",
-                  { className: gi.a.Region },
+                  { className: bi.a.Region },
                   Object(_.a)(h)
                 ),
               (null == g ? void 0 : g.length) > 0 &&
                 i.a.createElement(
                   "div",
-                  { className: gi.a.Division },
+                  { className: bi.a.Division },
                   Object(_.a)(g)
                 )
             ),
             i.a.createElement(
               "div",
-              { className: gi.a.MatchSection },
+              { className: bi.a.MatchSection },
               f &&
                 i.a.createElement(
                   l.b,
@@ -29427,24 +29441,24 @@ var CLSTAMP = "6690491";
                       "" + (null == b ? void 0 : b.nNodeID),
                       Object(ma.j)(0, ma.f.SERIES)
                     ),
-                    className: gi.a.Next,
+                    className: bi.a.Next,
                   },
                   i.a.createElement(
                     "div",
-                    { className: gi.a.NextMatch },
+                    { className: bi.a.NextMatch },
                     Object(_.a)("#dpc_next_match", O)
                   ),
                   i.a.createElement(
                     "div",
-                    { className: gi.a.NextTeam },
+                    { className: bi.a.NextTeam },
                     i.a.createElement(Ha, {
-                      className: gi.a.TeamLogo,
+                      className: bi.a.TeamLogo,
                       nTeamID: E,
                       nSize: 20,
                     }),
                     i.a.createElement(
                       "div",
-                      { className: gi.a.TeamName },
+                      { className: bi.a.TeamName },
                       Object(_.a)(I)
                     )
                   ),
@@ -29453,13 +29467,13 @@ var CLSTAMP = "6690491";
                       "div",
                       {
                         key: (null == f ? void 0 : f.node_id) + "_" + t,
-                        className: gi.a.NodeLabel,
+                        className: bi.a.NodeLabel,
                       },
                       Object(_.a)(e)
                     );
                   })
                 ),
-              f && S && i.a.createElement("div", { className: gi.a.Separator }),
+              f && S && i.a.createElement("div", { className: bi.a.Separator }),
               !f &&
                 S &&
                 i.a.createElement(
@@ -29471,11 +29485,11 @@ var CLSTAMP = "6690491";
                       "" + (null == v ? void 0 : v.nNodeID),
                       Object(ma.j)(0, ma.f.SERIES)
                     ),
-                    className: gi.a.Last,
+                    className: bi.a.Last,
                   },
                   i.a.createElement(
                     "div",
-                    { className: gi.a.LastMatch },
+                    { className: bi.a.LastMatch },
                     Object(_.a)("#last_match"),
                     !w &&
                       Object(_.a)(
@@ -29487,15 +29501,15 @@ var CLSTAMP = "6690491";
                   ),
                   i.a.createElement(
                     "div",
-                    { className: gi.a.PrevTeam },
+                    { className: bi.a.PrevTeam },
                     i.a.createElement(Ha, {
-                      className: gi.a.TeamLogo,
+                      className: bi.a.TeamLogo,
                       nTeamID: L,
                       nSize: 20,
                     }),
                     i.a.createElement(
                       "div",
-                      { className: gi.a.TeamName },
+                      { className: bi.a.TeamName },
                       Object(_.a)(C)
                     )
                   ),
@@ -29504,7 +29518,7 @@ var CLSTAMP = "6690491";
                       "div",
                       {
                         key: (null == f ? void 0 : f.node_id) + "_" + t,
-                        className: gi.a.NodeLabel,
+                        className: bi.a.NodeLabel,
                       },
                       Object(_.a)(e)
                     );
@@ -29513,17 +29527,17 @@ var CLSTAMP = "6690491";
             ),
             i.a.createElement(
               "div",
-              { className: gi.a.FavoriteSection },
+              { className: bi.a.FavoriteSection },
               i.a.createElement(
                 "div",
                 {
                   className: Object(ce.a)(
-                    gi.a.FollowingLine,
-                    R && gi.a.IsFollowing
+                    bi.a.FollowingLine,
+                    R && bi.a.IsFollowing
                   ),
                 },
                 i.a.createElement("div", {
-                  className: gi.a.Star,
+                  className: bi.a.Star,
                   style: {
                     backgroundImage:
                       "url( " +
@@ -29535,17 +29549,17 @@ var CLSTAMP = "6690491";
                 }),
                 i.a.createElement(
                   "div",
-                  { className: gi.a.FollowingLabel },
+                  { className: bi.a.FollowingLabel },
                   Object(_.a)("#dpc_following")
                 )
               )
             )
           );
         }),
-        fi = a("yUx/"),
-        Ei = a.n(fi),
-        yi = Object(s.a)(function () {
-          var e = Wi(),
+        Ei = a("yUx/"),
+        yi = a.n(Ei),
+        Ii = Object(s.a)(function () {
+          var e = zi(),
             t = Da.a.Get().GetNextLeagueNode(e, null, null),
             a = t.nLeagueID,
             n = t.nNodeID,
@@ -29569,79 +29583,79 @@ var CLSTAMP = "6690491";
               .toString();
           return i.a.createElement(
             "div",
-            { className: Ei.a.DPCNextBanner },
+            { className: yi.a.DPCNextBanner },
             i.a.createElement(
               "div",
-              { className: Ei.a.BannerContents },
+              { className: yi.a.BannerContents },
               i.a.createElement(
                 "div",
-                { className: Ei.a.LeftLabels },
+                { className: yi.a.LeftLabels },
                 i.a.createElement(
                   "div",
-                  { className: Ei.a.ComingUp },
+                  { className: yi.a.ComingUp },
                   Object(_.a)("#dpc_coming_up")
                 ),
                 i.a.createElement(
                   "div",
                   {
-                    className: Object(ce.a)(Ei.a.TeamNames, r && Ei.a.Visible),
+                    className: Object(ce.a)(yi.a.TeamNames, r && yi.a.Visible),
                   },
                   i.a.createElement(
                     "div",
-                    { className: Ei.a.TeamName },
+                    { className: yi.a.TeamName },
                     null == o ? void 0 : o.name
                   ),
                   i.a.createElement(
                     "div",
-                    { className: Ei.a.Versus },
+                    { className: yi.a.Versus },
                     Object(_.a)("#dpc_vs")
                   ),
                   i.a.createElement(
                     "div",
-                    { className: Ei.a.TeamName },
+                    { className: yi.a.TeamName },
                     null == s ? void 0 : s.name
                   )
                 ),
                 i.a.createElement(
                   "div",
                   {
-                    className: Object(ce.a)(Ei.a.WatchLive, r && Ei.a.Visible),
+                    className: Object(ce.a)(yi.a.WatchLive, r && yi.a.Visible),
                   },
                   Object(_.a)("#dpc_watch_live")
                 ),
                 i.a.createElement(
                   "div",
                   {
-                    className: Object(ce.a)(Ei.a.Timestamp, r && Ei.a.Visible),
+                    className: Object(ce.a)(yi.a.Timestamp, r && yi.a.Visible),
                   },
                   u
                 )
               ),
               i.a.createElement(
                 "div",
-                { className: Object(ce.a)(Ei.a.TeamWrapper, Ei.a.First) },
+                { className: Object(ce.a)(yi.a.TeamWrapper, yi.a.First) },
                 i.a.createElement("div", {
-                  className: Ei.a.TeamDiagonal,
+                  className: yi.a.TeamDiagonal,
                   style: { backgroundImage: "url( " + c + " )" },
                 })
               ),
               i.a.createElement(
                 "div",
-                { className: Object(ce.a)(Ei.a.TeamWrapper, Ei.a.Second) },
+                { className: Object(ce.a)(yi.a.TeamWrapper, yi.a.Second) },
                 i.a.createElement("div", {
-                  className: Ei.a.TeamDiagonal,
+                  className: yi.a.TeamDiagonal,
                   style: { backgroundImage: "url( " + m + " )" },
                 })
               ),
               i.a.createElement(
                 "div",
-                { className: Ei.a.ScheduleButtonContainer },
+                { className: yi.a.ScheduleButtonContainer },
                 i.a.createElement(
                   l.b,
-                  { to: d.a.dpc_schedule(), className: Ei.a.ScheduleButton },
+                  { to: d.a.dpc_schedule(), className: yi.a.ScheduleButton },
                   i.a.createElement(
                     "div",
-                    { className: Ei.a.Label },
+                    { className: yi.a.Label },
                     Object(_.a)("#dpc_view_schedule")
                   )
                 )
@@ -29649,8 +29663,8 @@ var CLSTAMP = "6690491";
             )
           );
         }),
-        Ii = Object(s.a)(function () {
-          var e = Wi(),
+        Oi = Object(s.a)(function () {
+          var e = zi(),
             t = Object(o.useState)(ua.b.DIVISION_I),
             a = t[0],
             n = t[1];
@@ -29682,11 +29696,11 @@ var CLSTAMP = "6690491";
                 setOption: n,
               })
             ),
-            i.a.createElement(oi, { ePhase: ua.d.OVERALL, eDivision: a })
+            i.a.createElement(ii, { ePhase: ua.d.OVERALL, eDivision: a })
           );
         }),
-        Oi = Object(s.a)(function (e) {
-          var t = Wi(),
+        Di = Object(s.a)(function (e) {
+          var t = zi(),
             a = Da.a.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
             n = null == a ? void 0 : a.actual_time,
             r = Da.a.Get().GetNodeLabelStrings(t, e.nLeagueID, e.nNodeID, !1),
@@ -29765,8 +29779,8 @@ var CLSTAMP = "6690491";
             )
           );
         }),
-        Di = Object(s.a)(function () {
-          var e = Wi(),
+        Ni = Object(s.a)(function () {
+          var e = zi(),
             t = Da.a.Get().GetFavoriteTeams(),
             a = Da.a
               .Get()
@@ -29807,7 +29821,7 @@ var CLSTAMP = "6690491";
                     a.map(function (e, t) {
                       return t >= 3
                         ? null
-                        : i.a.createElement(Oi, {
+                        : i.a.createElement(Di, {
                             key: e.nLeagueID + "_" + e.nNodeID,
                             nLeagueID: e.nLeagueID,
                             nNodeID: e.nNodeID,
@@ -29817,8 +29831,8 @@ var CLSTAMP = "6690491";
                 )
               );
         }),
-        Ni = Object(s.a)(function () {
-          var e = Wi();
+        Si = Object(s.a)(function () {
+          var e = zi();
           return i.a.createElement(
             "div",
             { className: hn.a.DPCAboutBanner },
@@ -29859,9 +29873,9 @@ var CLSTAMP = "6690491";
             )
           );
         }),
-        Si = Object(s.a)(function () {
+        Li = Object(s.a)(function () {
           var e = Object(c.i)(),
-            t = Wi();
+            t = zi();
           if (!e.strLeagueID || !e.strNodeID || !e.strSeriesDisplay)
             return i.a.createElement(c.a, {
               to: d.a.dpc_watch(
@@ -29899,45 +29913,45 @@ var CLSTAMP = "6690491";
               "div",
               { className: hn.a.DPCHomePage },
               i.a.createElement(za, null),
-              i.a.createElement(yi, null),
               i.a.createElement(Ii, null),
-              i.a.createElement(Di, null),
-              i.a.createElement(bi, null),
-              i.a.createElement(Ni, null)
+              i.a.createElement(Oi, null),
+              i.a.createElement(Ni, null),
+              i.a.createElement(vi, null),
+              i.a.createElement(Si, null)
             )
           );
         }),
-        Li = a("iUDg"),
-        Ti = a.n(Li),
-        Ci = Object(s.a)(function () {
-          var e = Wi();
+        Ti = a("iUDg"),
+        Ci = a.n(Ti),
+        wi = Object(s.a)(function () {
+          var e = zi();
           return Da.a.Get().GetEventType(e) != ua.e.LEAGUE
             ? null
             : i.a.createElement(
                 "div",
-                { className: Ti.a.DPCStandingsPageLeague },
+                { className: Ci.a.DPCStandingsPageLeague },
                 i.a.createElement(
                   "div",
-                  { className: Ti.a.DivisionHeader },
+                  { className: Ci.a.DivisionHeader },
                   Object(_.a)("#dpc_division_i")
                 ),
-                i.a.createElement(oi, {
+                i.a.createElement(ii, {
                   ePhase: ua.d.OVERALL,
                   eDivision: ua.b.DIVISION_I,
                 }),
                 i.a.createElement(
                   "div",
-                  { className: Ti.a.DivisionHeader },
+                  { className: Ci.a.DivisionHeader },
                   Object(_.a)("#dpc_division_ii")
                 ),
-                i.a.createElement(oi, {
+                i.a.createElement(ii, {
                   ePhase: ua.d.OVERALL,
                   eDivision: ua.b.DIVISION_II,
                 })
               );
         }),
-        wi = Object(s.a)(function () {
-          var e = Wi(),
+        ji = Object(s.a)(function () {
+          var e = zi(),
             t = Object(c.g)(),
             a = Object(c.i)(),
             n = [
@@ -29951,10 +29965,10 @@ var CLSTAMP = "6690491";
             : ua.d[r] && r != ua.d.INVALID
             ? i.a.createElement(
                 "div",
-                { className: Ti.a.DPCStandingsPageMajor },
+                { className: Ci.a.DPCStandingsPageMajor },
                 i.a.createElement(
                   "div",
-                  { className: Ti.a.Header },
+                  { className: Ci.a.Header },
                   i.a.createElement(ba, {
                     options: n,
                     selectedOption: r,
@@ -29964,7 +29978,7 @@ var CLSTAMP = "6690491";
                   })
                 ),
                 r == ua.d.WILD_CARD &&
-                  i.a.createElement(ii, {
+                  i.a.createElement(si, {
                     ePhase: ua.d.WILD_CARD,
                     eRegion: ua.h.UNSET,
                     eDivision: ua.b.UNSET,
@@ -29984,9 +29998,12 @@ var CLSTAMP = "6690491";
                     ],
                     bShowLegend: !0,
                     bShowHeader: !1,
+                    bShowList: !0,
+                    bShowListDPCPoints: !1,
+                    bShowGrid: !0,
                   }),
                 r == ua.d.GROUP_STAGE &&
-                  i.a.createElement(ii, {
+                  i.a.createElement(si, {
                     ePhase: ua.d.GROUP_STAGE,
                     eRegion: ua.h.UNSET,
                     eDivision: ua.b.UNSET,
@@ -30012,9 +30029,12 @@ var CLSTAMP = "6690491";
                     ],
                     bShowLegend: !0,
                     bShowHeader: !1,
+                    bShowList: !0,
+                    bShowListDPCPoints: !1,
+                    bShowGrid: !0,
                   }),
                 r == ua.d.PLAYOFF &&
-                  i.a.createElement(_i, {
+                  i.a.createElement(hi, {
                     ePhase: ua.d.PLAYOFF,
                     eRegion: ua.h.UNSET,
                     eDivision: ua.b.UNSET,
@@ -30024,8 +30044,8 @@ var CLSTAMP = "6690491";
                 to: d.a.dpc_standings(Object(ma.h)(e), "" + ua.d.WILD_CARD),
               });
         }),
-        ji = Object(s.a)(function () {
-          var e = Wi(),
+        Ai = Object(s.a)(function () {
+          var e = zi(),
             t = Object(c.g)(),
             a = Object(c.i)(),
             n = [
@@ -30042,10 +30062,10 @@ var CLSTAMP = "6690491";
             : ua.h[r] && r != ua.h.UNSET
             ? i.a.createElement(
                 "div",
-                { className: Ti.a.DPCStandingsPageTIQualifiers },
+                { className: Ci.a.DPCStandingsPageTIQualifiers },
                 i.a.createElement(
                   "div",
-                  { className: Ti.a.Header },
+                  { className: Ci.a.Header },
                   i.a.createElement(ba, {
                     options: n,
                     selectedOption: r,
@@ -30054,7 +30074,7 @@ var CLSTAMP = "6690491";
                     },
                   })
                 ),
-                i.a.createElement(_i, {
+                i.a.createElement(hi, {
                   ePhase: ua.d.PLAYOFF,
                   eRegion: r,
                   eDivision: ua.b.UNSET,
@@ -30067,19 +30087,19 @@ var CLSTAMP = "6690491";
                 ),
               });
         }),
-        Ai = Object(s.a)(function () {
+        Gi = Object(s.a)(function () {
           return i.a.createElement(
             "div",
-            { className: Ti.a.DPCStandingsPage },
-            i.a.createElement(Ci, null),
+            { className: Ci.a.DPCStandingsPage },
             i.a.createElement(wi, null),
-            i.a.createElement(ji, null)
+            i.a.createElement(ji, null),
+            i.a.createElement(Ai, null)
           );
         }),
-        Gi = a("X40S"),
-        Ri = a.n(Gi),
-        Bi = Object(s.a)(function (e) {
-          var t = Wi(),
+        Ri = a("X40S"),
+        Bi = a.n(Ri),
+        Pi = Object(s.a)(function (e) {
+          var t = zi(),
             a = !1,
             n = !1;
           switch (Da.a.Get().GetEventType(t)) {
@@ -30105,7 +30125,7 @@ var CLSTAMP = "6690491";
             ];
           return i.a.createElement(
             "div",
-            { className: Ri.a.DPCScheduleHeader },
+            { className: Bi.a.DPCScheduleHeader },
             a &&
               i.a.createElement(ba, {
                 options: r,
@@ -30125,7 +30145,7 @@ var CLSTAMP = "6690491";
           );
         }),
         ki = Object(s.a)(function (e) {
-          var t = Wi(),
+          var t = zi(),
             a = Object(c.g)(),
             n = Object(o.useState)({ nLeagueID: 0, nNodeID: 0 }),
             r = n[0],
@@ -30247,7 +30267,7 @@ var CLSTAMP = "6690491";
             ),
             i.a.createElement(
               "div",
-              { className: Ri.a.DPCScheduleList },
+              { className: Bi.a.DPCScheduleList },
               l.map(function (e) {
                 var t = m.filter(function (t) {
                   var a = Da.a.Get().GetLeagueNode(t.nLeagueID, t.nNodeID),
@@ -30264,24 +30284,24 @@ var CLSTAMP = "6690491";
                   ? null
                   : i.a.createElement(
                       "div",
-                      { key: "day_" + e, className: Ri.a.DaySection },
+                      { key: "day_" + e, className: Bi.a.DaySection },
                       i.a.createElement(
                         "div",
-                        { className: Ri.a.DayHeader },
+                        { className: Bi.a.DayHeader },
                         i.a.createElement(ya.a, {
                           date: 1e3 * e,
                           format: "dddd, MMMM Do",
-                          className: Ri.a.DateLabel,
+                          className: Bi.a.DateLabel,
                         })
                       ),
                       i.a.createElement(
                         "div",
-                        { className: Ri.a.DayNodeList },
+                        { className: Bi.a.DayNodeList },
                         t.map(function (t) {
                           var a =
                             t.nLeagueID == r.nLeagueID &&
                             t.nNodeID == r.nNodeID;
-                          return i.a.createElement(Pi, {
+                          return i.a.createElement(Mi, {
                             key: e + "_" + t.nLeagueID + "_" + t.nNodeID,
                             nLeagueID: t.nLeagueID,
                             nNodeID: t.nNodeID,
@@ -30295,8 +30315,8 @@ var CLSTAMP = "6690491";
             )
           );
         }),
-        Pi = Object(s.a)(function (e) {
-          var t = Wi(),
+        Mi = Object(s.a)(function (e) {
+          var t = zi(),
             a = Da.a.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
             n = Da.a.Get().GetLeagueNodeInfo(e.nLeagueID, e.nNodeID),
             r = (null == a ? void 0 : a.actual_time)
@@ -30345,17 +30365,17 @@ var CLSTAMP = "6690491";
             "div",
             {
               className: Object(ce.a)(
-                Ri.a.DPCScheduleEntry,
-                h && Ri.a.Live,
-                e.bExpanded && Ri.a.Expanded
+                Bi.a.DPCScheduleEntry,
+                h && Bi.a.Live,
+                e.bExpanded && Bi.a.Expanded
               ),
             },
             i.a.createElement(
               "div",
-              { className: Ri.a.Body },
+              { className: Bi.a.Body },
               i.a.createElement(
                 "div",
-                { className: Ri.a.LeftSection },
+                { className: Bi.a.LeftSection },
                 s.map(function (t, a) {
                   var n = s.length > 1 && 0 == a,
                     r = s.length > 1 && 1 == a;
@@ -30364,9 +30384,9 @@ var CLSTAMP = "6690491";
                     {
                       key: e.nLeagueID + "_" + e.nNodeID + "_" + a,
                       className: Object(ce.a)(
-                        Ri.a.NodeType,
-                        n && Ri.a.Upper,
-                        r && Ri.a.Lower
+                        Bi.a.NodeType,
+                        n && Bi.a.Upper,
+                        r && Bi.a.Lower
                       ),
                     },
                     Object(_.a)(t),
@@ -30376,53 +30396,53 @@ var CLSTAMP = "6690491";
                 i.a.createElement(ya.a, {
                   date: 1e3 * r,
                   format: "LT",
-                  className: Ri.a.TimeLabel,
+                  className: Bi.a.TimeLabel,
                 })
               ),
               i.a.createElement(
                 "div",
-                { className: Ri.a.CenterSection },
+                { className: Bi.a.CenterSection },
                 i.a.createElement(
                   "div",
                   {
                     className: Object(ce.a)(
-                      Ri.a.TeamSection,
-                      Ri.a.Left,
-                      v && Ri.a.Winner
+                      Bi.a.TeamSection,
+                      Bi.a.Left,
+                      v && Bi.a.Winner
                     ),
                   },
                   i.a.createElement(
                     "div",
-                    { className: Ri.a.TeamName },
+                    { className: Bi.a.TeamName },
                     null == l ? void 0 : l.name
                   ),
-                  o && i.a.createElement("div", { className: Ri.a.Record }, m)
+                  o && i.a.createElement("div", { className: Bi.a.Record }, m)
                 ),
                 i.a.createElement(Ha, {
-                  className: Ri.a.TeamLogo,
+                  className: Bi.a.TeamLogo,
                   nTeamID: null == a ? void 0 : a.team_id_1,
                   nSize: 52,
                 }),
                 h &&
                   i.a.createElement(
                     "div",
-                    { className: Ri.a.LiveBannerContainer },
+                    { className: Bi.a.LiveBannerContainer },
                     i.a.createElement(
                       "div",
-                      { className: Ri.a.LiveBanner },
+                      { className: Bi.a.LiveBanner },
                       Object(_.a)("#dpc_live"),
-                      i.a.createElement("div", { className: Ri.a.Dot })
+                      i.a.createElement("div", { className: Bi.a.Dot })
                     )
                   ),
                 g &&
                   i.a.createElement(
                     "div",
-                    { className: Ri.a.Versus },
+                    { className: Bi.a.Versus },
                     Object(_.a)("#dpc_vs")
                   ),
-                b && i.a.createElement("div", { className: Ri.a.Score }, E),
+                b && i.a.createElement("div", { className: Bi.a.Score }, E),
                 i.a.createElement(Ha, {
-                  className: Ri.a.TeamLogo,
+                  className: Bi.a.TeamLogo,
                   nTeamID: null == a ? void 0 : a.team_id_2,
                   nSize: 52,
                 }),
@@ -30430,29 +30450,29 @@ var CLSTAMP = "6690491";
                   "div",
                   {
                     className: Object(ce.a)(
-                      Ri.a.TeamSection,
-                      Ri.a.Right,
-                      f && Ri.a.Winner
+                      Bi.a.TeamSection,
+                      Bi.a.Right,
+                      f && Bi.a.Winner
                     ),
                   },
                   i.a.createElement(
                     "div",
-                    { className: Ri.a.TeamName },
+                    { className: Bi.a.TeamName },
                     null == c ? void 0 : c.name
                   ),
-                  o && i.a.createElement("div", { className: Ri.a.Record }, p)
+                  o && i.a.createElement("div", { className: Bi.a.Record }, p)
                 )
               ),
               i.a.createElement(
                 "div",
-                { className: Ri.a.RightSection },
+                { className: Bi.a.RightSection },
                 b &&
                   i.a.createElement(
                     "div",
                     {
                       className: Object(ce.a)(
-                        Ri.a.MatchDetailsButton,
-                        e.bExpanded && Ri.a.Expanded
+                        Bi.a.MatchDetailsButton,
+                        e.bExpanded && Bi.a.Expanded
                       ),
                       onClick: function () {
                         return e.setExpanded({
@@ -30469,8 +30489,8 @@ var CLSTAMP = "6690491";
               "div",
               {
                 className: Object(ce.a)(
-                  Ri.a.Expansion,
-                  e.bExpanded && Ri.a.Expanded
+                  Bi.a.Expansion,
+                  e.bExpanded && Bi.a.Expanded
                 ),
                 style: {
                   height: e.bExpanded ? 120 * y : 0,
@@ -30480,7 +30500,7 @@ var CLSTAMP = "6690491";
               null == a
                 ? void 0
                 : a.matches.map(function (t, n) {
-                    return i.a.createElement(Mi, {
+                    return i.a.createElement(xi, {
                       key: "m" + t.match_id,
                       nLeagueID: e.nLeagueID,
                       nNodeID: e.nNodeID,
@@ -30493,8 +30513,8 @@ var CLSTAMP = "6690491";
             )
           );
         }),
-        Mi = Object(s.a)(function (e) {
-          var t = Wi(),
+        xi = Object(s.a)(function (e) {
+          var t = zi(),
             a = e.nLeagueID,
             n = e.nNodeID,
             r = e.match,
@@ -30526,22 +30546,22 @@ var CLSTAMP = "6690491";
             "div",
             {
               className: Object(ce.a)(
-                Ri.a.DPCScheduleGameDetails,
-                c && Ri.a.IsLast
+                Bi.a.DPCScheduleGameDetails,
+                c && Bi.a.IsLast
               ),
             },
             i.a.createElement(
               "div",
-              { className: Ri.a.Time },
+              { className: Bi.a.Time },
               i.a.createElement(ya.a, {
                 date: 1e3 * (null == b ? void 0 : b.start_time),
                 format: "LT",
-                className: Ri.a.TimeLabel,
+                className: Bi.a.TimeLabel,
               })
             ),
             i.a.createElement(
               "div",
-              { className: Ri.a.HeroList },
+              { className: Bi.a.HeroList },
               null == b
                 ? void 0
                 : b.players
@@ -30563,7 +30583,7 @@ var CLSTAMP = "6690491";
                             : a.replace("npc_dota_hero_", "");
                       return i.a.createElement("div", {
                         key: "0h" + t,
-                        className: Ri.a.HeroIcon,
+                        className: Bi.a.HeroIcon,
                         style: {
                           backgroundImage:
                             "url( " +
@@ -30577,7 +30597,7 @@ var CLSTAMP = "6690491";
             ),
             i.a.createElement(
               "div",
-              { className: Ri.a.Center },
+              { className: Bi.a.Center },
               i.a.createElement(
                 l.b,
                 {
@@ -30590,23 +30610,23 @@ var CLSTAMP = "6690491";
                       Object(ma.j)(s, ma.f.GAME)
                     ),
                   },
-                  className: Ri.a.FirstLine,
+                  className: Bi.a.FirstLine,
                 },
                 i.a.createElement(Ha, { nTeamID: y, nSize: 32 }),
                 i.a.createElement(
                   "div",
-                  { className: Ri.a.GameNumber },
+                  { className: Bi.a.GameNumber },
                   Object(_.a)("#dpc_game_number", s)
                 )
               ),
               i.a.createElement(
                 "div",
-                { className: Ri.a.WinningTeam },
+                { className: Bi.a.WinningTeam },
                 I && Object(_.a)("#dpc_team_win", I.name)
               ),
               i.a.createElement(
                 "div",
-                { className: Ri.a.Duration },
+                { className: Bi.a.Duration },
                 b &&
                   i.a.createElement(ya.a, {
                     date: 1e3 * b.duration,
@@ -30616,7 +30636,7 @@ var CLSTAMP = "6690491";
             ),
             i.a.createElement(
               "div",
-              { className: Ri.a.HeroList },
+              { className: Bi.a.HeroList },
               null == b
                 ? void 0
                 : b.players
@@ -30638,7 +30658,7 @@ var CLSTAMP = "6690491";
                             : a.replace("npc_dota_hero_", "");
                       return i.a.createElement("div", {
                         key: "1h" + t,
-                        className: Ri.a.HeroIcon,
+                        className: Bi.a.HeroIcon,
                         style: {
                           backgroundImage:
                             "url( " +
@@ -30652,7 +30672,7 @@ var CLSTAMP = "6690491";
             ),
             i.a.createElement(
               "div",
-              { className: Ri.a.RightSection },
+              { className: Bi.a.RightSection },
               i.a.createElement(
                 l.b,
                 {
@@ -30666,8 +30686,8 @@ var CLSTAMP = "6690491";
                     ),
                   },
                   className: Object(ce.a)(
-                    Ri.a.WatchVODButton,
-                    E && Ri.a.Enabled
+                    Bi.a.WatchVODButton,
+                    E && Bi.a.Enabled
                   ),
                 },
                 Object(_.a)(E ? "#dpc_watch_vod" : "#dpc_no_vod")
@@ -30675,8 +30695,8 @@ var CLSTAMP = "6690491";
             )
           );
         }),
-        xi = Object(s.a)(function () {
-          var e = Wi(),
+        Ui = Object(s.a)(function () {
+          var e = zi(),
             t = Object(o.useState)(""),
             a = t[0],
             n = t[1],
@@ -30711,8 +30731,8 @@ var CLSTAMP = "6690491";
               (p = new Date().setHours(0, 0, 0, 0) / 1e3),
             i.a.createElement(
               "div",
-              { className: Ri.a.DPCSchedulePage },
-              i.a.createElement(Bi, {
+              { className: Bi.a.DPCSchedulePage },
+              i.a.createElement(Pi, {
                 eDivision: s,
                 setDivision: l,
                 eRegion: m,
@@ -30730,44 +30750,44 @@ var CLSTAMP = "6690491";
             )
           );
         }),
-        Ui = a("d7zl"),
-        Hi = a.n(Ui),
-        Fi = Object(s.a)(function () {
+        Hi = a("d7zl"),
+        Fi = a.n(Hi),
+        Vi = Object(s.a)(function () {
           return i.a.createElement(
             "div",
-            { className: Hi.a.DPCAboutPage },
+            { className: Fi.a.DPCAboutPage },
             i.a.createElement(
               "div",
-              { className: Hi.a.Header },
+              { className: Fi.a.Header },
               i.a.createElement(
                 "div",
-                { className: Hi.a.ProCircuit },
+                { className: Fi.a.ProCircuit },
                 Object(_.a)("#dpc_about_procircuit")
               ),
               i.a.createElement(
                 "div",
-                { className: Hi.a.Global },
+                { className: Fi.a.Global },
                 Object(_.a)("#dpc_about_global_esports")
               ),
               i.a.createElement(
                 "div",
-                { className: Hi.a.GlobalDesc },
+                { className: Fi.a.GlobalDesc },
                 Object(_.a)("#dpc_about_global_esports_desc")
               )
             ),
             i.a.createElement(
               "div",
-              { className: Hi.a.Events },
+              { className: Fi.a.Events },
               i.a.createElement(
                 "div",
-                { className: Hi.a.Title },
+                { className: Fi.a.Title },
                 Object(_.a)("#dpc_about_events_title")
               ),
               i.a.createElement(
                 "div",
-                { className: Hi.a.EventContainer },
+                { className: Fi.a.EventContainer },
                 i.a.createElement("div", {
-                  className: Hi.a.EventImage,
+                  className: Fi.a.EventImage,
                   style: {
                     backgroundImage:
                       "url( " + p.a.IMG_URL + "dpc_about_seasons.png )",
@@ -30775,41 +30795,41 @@ var CLSTAMP = "6690491";
                 }),
                 i.a.createElement(
                   "div",
-                  { className: Hi.a.EventDescription },
+                  { className: Fi.a.EventDescription },
                   i.a.createElement(
                     "div",
-                    { className: Hi.a.EventTitle },
+                    { className: Fi.a.EventTitle },
                     Object(_.a)("#dpc_about_seasons")
                   ),
                   i.a.createElement(
                     "div",
-                    { className: Hi.a.EventDesc },
+                    { className: Fi.a.EventDesc },
                     Object(_.a)("#dpc_about_seasons_desc")
                   )
                 ),
                 i.a.createElement(
                   "div",
-                  { className: Hi.a.EventDescription },
+                  { className: Fi.a.EventDescription },
                   i.a.createElement(
                     "div",
-                    { className: Hi.a.EventTitle },
+                    { className: Fi.a.EventTitle },
                     Object(_.a)("#dpc_about_tournaments")
                   ),
                   i.a.createElement(
                     "div",
-                    { className: Hi.a.EventDesc },
+                    { className: Fi.a.EventDesc },
                     Object(_.a)("#dpc_about_tournaments_desc")
                   )
                 ),
                 i.a.createElement("div", {
-                  className: Hi.a.EventImage,
+                  className: Fi.a.EventImage,
                   style: {
                     backgroundImage:
                       "url( " + p.a.IMG_URL + "dpc_about_tournaments.png )",
                   },
                 }),
                 i.a.createElement("div", {
-                  className: Hi.a.EventImage,
+                  className: Fi.a.EventImage,
                   style: {
                     backgroundImage:
                       "url( " + p.a.IMG_URL + "dpc_about_divisions.png )",
@@ -30817,15 +30837,15 @@ var CLSTAMP = "6690491";
                 }),
                 i.a.createElement(
                   "div",
-                  { className: Hi.a.EventDescription },
+                  { className: Fi.a.EventDescription },
                   i.a.createElement(
                     "div",
-                    { className: Hi.a.EventTitle },
+                    { className: Fi.a.EventTitle },
                     Object(_.a)("#dpc_about_divisions")
                   ),
                   i.a.createElement(
                     "div",
-                    { className: Hi.a.EventDesc },
+                    { className: Fi.a.EventDesc },
                     Object(_.a)("#dpc_about_divisions_desc")
                   )
                 )
@@ -30833,90 +30853,90 @@ var CLSTAMP = "6690491";
             ),
             i.a.createElement(
               "div",
-              { className: Hi.a.TheInternational },
+              { className: Fi.a.TheInternational },
               i.a.createElement(
                 "div",
-                { className: Hi.a.Title },
+                { className: Fi.a.Title },
                 Object(_.a)("#dpc_about_theinternational")
               ),
               i.a.createElement(
                 "div",
-                { className: Hi.a.Desc },
+                { className: Fi.a.Desc },
                 Object(_.a)("#dpc_about_theinternational_desc")
               )
             ),
             i.a.createElement(
               "div",
-              { className: Hi.a.FAQ },
+              { className: Fi.a.FAQ },
               i.a.createElement(
                 "div",
-                { className: Hi.a.Title },
+                { className: Fi.a.Title },
                 Object(_.a)("#dpc_about_faq")
               ),
               i.a.createElement(
                 "div",
-                { className: Hi.a.LastUpdated },
+                { className: Fi.a.LastUpdated },
                 Object(_.a)("#dpc_about_faq_last_updated")
               ),
               i.a.createElement(
                 "div",
-                { className: Hi.a.FAQEntry },
+                { className: Fi.a.FAQEntry },
                 i.a.createElement(
                   "div",
-                  { className: Hi.a.Question },
+                  { className: Fi.a.Question },
                   Object(_.a)("#dpc_about_faq_question1")
                 ),
                 i.a.createElement(
                   "div",
-                  { className: Hi.a.Answer },
+                  { className: Fi.a.Answer },
                   Object(_.a)("#dpc_about_faq_answer1")
                 )
               ),
               i.a.createElement(
                 "div",
-                { className: Hi.a.FAQEntry },
+                { className: Fi.a.FAQEntry },
                 i.a.createElement(
                   "div",
-                  { className: Hi.a.Question },
+                  { className: Fi.a.Question },
                   Object(_.a)("#dpc_about_faq_question2")
                 ),
                 i.a.createElement(
                   "div",
-                  { className: Hi.a.Answer },
+                  { className: Fi.a.Answer },
                   Object(_.a)("#dpc_about_faq_answer2")
                 )
               ),
               i.a.createElement(
                 "div",
-                { className: Hi.a.FAQEntry },
+                { className: Fi.a.FAQEntry },
                 i.a.createElement(
                   "div",
-                  { className: Hi.a.Question },
+                  { className: Fi.a.Question },
                   Object(_.a)("#dpc_about_faq_question3")
                 ),
                 i.a.createElement(
                   "div",
-                  { className: Hi.a.Answer },
+                  { className: Fi.a.Answer },
                   Object(_.a)("#dpc_about_faq_answer3")
                 )
               )
             )
           );
         }),
-        Vi = Object(o.createContext)(null),
-        Wi = function () {
-          return Object(o.useContext)(Vi);
+        Wi = Object(o.createContext)(null),
+        zi = function () {
+          return Object(o.useContext)(Wi);
         };
-      function zi(e) {
+      function Yi(e) {
         return i.a.createElement(
-          Vi.Provider,
+          Wi.Provider,
           { value: e.eventContext },
           e.children
         );
       }
-      var Yi,
-        Ki,
-        qi = Object(s.a)(function () {
+      var Ki,
+        qi,
+        Qi = Object(s.a)(function () {
           var e = (function () {
               var e = Object(o.useState)(!0),
                 t = e[0],
@@ -30992,7 +31012,7 @@ var CLSTAMP = "6690491";
               "div",
               { className: da.a.DPCRoot },
               i.a.createElement(
-                zi,
+                Yi,
                 { eventContext: v },
                 i.a.createElement(ge.a, { bOverlapping: !1 }),
                 i.a.createElement(dn, null),
@@ -31047,11 +31067,11 @@ var CLSTAMP = "6690491";
                       ":strNodeID?",
                       ":strSeriesDisplay?"
                     ),
-                    component: Si,
+                    component: Li,
                   }),
                   i.a.createElement(ia, {
                     path: d.a.dpc_standings(":strEvent?", ":strSelection"),
-                    component: Ai,
+                    component: Gi,
                   }),
                   i.a.createElement(ia, {
                     path: d.a.dpc_schedule(
@@ -31059,11 +31079,11 @@ var CLSTAMP = "6690491";
                       ":strMonthOrLeague?",
                       ":strDayOrNode?"
                     ),
-                    component: xi,
+                    component: Ui,
                   }),
                   i.a.createElement(ia, {
                     path: d.a.dpc_about(":strEvent?"),
-                    component: Fi,
+                    component: Vi,
                   })
                 ),
                 i.a.createElement(be.a, null)
@@ -31071,13 +31091,13 @@ var CLSTAMP = "6690491";
             )
           );
         });
-      (Yi = i.a.lazy(function () {
+      (Ki = i.a.lazy(function () {
         return Promise.all([a.e(0), a.e(63)]).then(a.bind(null, "Bqrr"));
       })),
-        (Ki = i.a.lazy(function () {
+        (qi = i.a.lazy(function () {
           return a.e(62).then(a.bind(null, "QoBx"));
         }));
-      var Qi = (function (e) {
+      var Xi = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -31145,7 +31165,7 @@ var CLSTAMP = "6690491";
                       }),
                       i.a.createElement(ia, {
                         path: d.a.dpc_event_root(":strEvent?"),
-                        component: qi,
+                        component: Qi,
                       }),
                       i.a.createElement(ia, {
                         path: d.a.patchnotes(":version?"),
@@ -31153,7 +31173,7 @@ var CLSTAMP = "6690491";
                       }),
                       i.a.createElement(ia, {
                         path: d.a.dawnbreaker(),
-                        component: Yi,
+                        component: Ki,
                       }),
                       i.a.createElement(ia, {
                         path: d.a.shortfilm(),
@@ -31161,7 +31181,7 @@ var CLSTAMP = "6690491";
                       }),
                       i.a.createElement(ia, {
                         path: d.a.nemestice(),
-                        component: Ki,
+                        component: qi,
                       }),
                       i.a.createElement(ia, {
                         path: d.a.other(":page"),
@@ -31177,21 +31197,21 @@ var CLSTAMP = "6690491";
             (t = Object(n.c)([s.a], t))
           );
         })(i.a.Component),
-        Xi = a("6rKP"),
-        Ji = new ((function () {
+        Ji = a("6rKP"),
+        Zi = new ((function () {
           function e() {
-            (this.m_asyncPrizePool = new Xi.a()),
-              (this.m_asyncPatchNotesListData = new Xi.a()),
-              (this.m_asyncPatchNotesData = new Xi.b()),
-              (this.m_asyncBPPrice = new Xi.b()),
+            (this.m_asyncPrizePool = new Ji.a()),
+              (this.m_asyncPatchNotesListData = new Ji.a()),
+              (this.m_asyncPatchNotesData = new Ji.b()),
+              (this.m_asyncBPPrice = new Ji.b()),
               (this.m_nSelectedAbilityIndex = 0),
-              (this.m_asyncShortFilmOwnership = new Xi.a()),
+              (this.m_asyncShortFilmOwnership = new Ji.a()),
               Object(_.c)();
           }
           return (
             (e.prototype.Init = function () {
               r.render(
-                o.createElement(Qi, { app: this }),
+                o.createElement(Xi, { app: this }),
                 document.getElementById("dota_react_root")
               );
             }),
@@ -31393,7 +31413,7 @@ var CLSTAMP = "6690491";
             e
           );
         })())();
-      function Zi(e) {
+      function $i(e) {
         return Object(n.b)(this, void 0, void 0, function () {
           var t, r, o, i, s, l, c, d, m;
           return Object(n.e)(this, function (u) {
@@ -31448,10 +31468,10 @@ var CLSTAMP = "6690491";
                 return (
                   Object(v.e)("application_config"),
                   Object(p.b)(),
-                  [4, Zi(p.a.LANGUAGE)]
+                  [4, $i(p.a.LANGUAGE)]
                 );
               case 1:
-                return e.sent(), Ji.Init(), [2];
+                return e.sent(), Zi.Init(), [2];
             }
           });
         });
