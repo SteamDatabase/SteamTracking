@@ -24525,123 +24525,132 @@ a {
 }
 .dpcstandings_DPCStandingsRoundRobin_3gskr {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-.dpcstandings_DPCStandingsRoundRobin_3gskr .dpcstandings_Title_1j7g0 {
-  color: #fff;
-  font-size: 16px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 8px;
-}
-.dpcstandings_DPCStandingsRoundRobin_3gskr .dpcstandings_Standings_2xuCM {
-  display: flex;
   flex-direction: row;
-  gap: 6px;
+  gap: 100px;
 }
 .dpcstandings_DPCStandingsGrid_3w9B9 {
-  width: 500px;
-  background-color: #1f1f1f;
+  width: fit-content;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .dpcstandings_DPCStandingsGrid_3w9B9 .dpcstandings_Header_3Kf0X {
   width: 100%;
-  height: 40px;
+  text-align: center;
+  padding: 10px 0px;
   background-color: #36363e;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   color: #fff;
-  font-size: 11px;
+  font-size: 14px;
   text-transform: uppercase;
-  letter-spacing: 3px;
-  font-weight: 700;
-}
-.dpcstandings_DPCStandingsGrid_3w9B9 .dpcstandings_GridContainer_1bSmg {
-  width: 100%;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #151518;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
   position: relative;
 }
 .dpcstandings_DPCStandingsGrid_3w9B9
-  .dpcstandings_GridContainer_1bSmg
-  .dpcstandings_GridBody_pcU8h {
+  .dpcstandings_Header_3Kf0X
+  .dpcstandings_ViewSelctor_1ylEQ {
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.dpcstandings_DPCStandingsGrid_3w9B9 .dpcstandings_GridContainer_1bSmg {
   display: flex;
   flex-direction: column;
-  z-index: 2;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
 }
 .dpcstandings_DPCStandingsGrid_3w9B9
   .dpcstandings_GridContainer_1bSmg
-  .dpcstandings_GridBody_pcU8h
   .dpcstandings_GridRow_2f1YL {
   display: flex;
   flex-direction: row;
 }
 .dpcstandings_DPCStandingsGrid_3w9B9
   .dpcstandings_GridContainer_1bSmg
-  .dpcstandings_GridBody_pcU8h
   .dpcstandings_GridRow_2f1YL
   .dpcstandings_GridCell_4wUCQ {
-  width: 56px;
-  height: 56px;
+  width: 50px;
+  height: 50px;
+  background-color: #222;
+  border: 1px solid #444;
+  padding: 4px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  color: #818181;
 }
 .dpcstandings_DPCStandingsGrid_3w9B9
   .dpcstandings_GridContainer_1bSmg
-  .dpcstandings_GridBody_pcU8h
   .dpcstandings_GridRow_2f1YL
-  .dpcstandings_GridCell_4wUCQ:hover {
+  .dpcstandings_GridCell_4wUCQ.dpcstandings_HeaderCell_2zOIN.dpcstandings_Winner_1MMzM {
+  background-color: #117c3033;
+}
+.dpcstandings_DPCStandingsGrid_3w9B9
+  .dpcstandings_GridContainer_1bSmg
+  .dpcstandings_GridRow_2f1YL
+  .dpcstandings_GridCell_4wUCQ.dpcstandings_HeaderCell_2zOIN.dpcstandings_Loser_3_sxX {
+  background-color: #92282033;
+}
+.dpcstandings_DPCStandingsGrid_3w9B9
+  .dpcstandings_GridContainer_1bSmg
+  .dpcstandings_GridRow_2f1YL
+  .dpcstandings_GridCell_4wUCQ.dpcstandings_HeaderCell_2zOIN.dpcstandings_Draw_9Kz-M {
+  background-color: #92982033;
+}
+.dpcstandings_DPCStandingsGrid_3w9B9
+  .dpcstandings_GridContainer_1bSmg
+  .dpcstandings_GridRow_2f1YL
+  .dpcstandings_GridCell_4wUCQ:hover:not(.dpcstandings_Self_dUXiy):not(.dpcstandings_HeaderCell_2zOIN) {
+  cursor: pointer;
+  user-select: none;
   color: #fff;
-  background-color: #27272d;
+  background-color: #282828;
 }
 .dpcstandings_DPCStandingsGrid_3w9B9
   .dpcstandings_GridContainer_1bSmg
-  .dpcstandings_RowHighlightContainer_2UdT2 {
-  width: 100%;
-  position: absolute;
+  .dpcstandings_GridRow_2f1YL
+  .dpcstandings_GridCell_4wUCQ
+  .dpcstandings_TeamLogo_KU9ho {
+  width: 32px;
+  height: 32px;
 }
 .dpcstandings_DPCStandingsGrid_3w9B9
   .dpcstandings_GridContainer_1bSmg
-  .dpcstandings_RowHighlightContainer_2UdT2
-  .dpcstandings_RowHighlight_DyFRj {
-  position: absolute;
-  width: 100%;
-  height: 56px;
+  .dpcstandings_GridRow_2f1YL
+  .dpcstandings_GridCell_4wUCQ
+  .dpcstandings_Result_pl1-I {
+  color: #a3a3a3;
+  font-size: 14px;
 }
 .dpcstandings_DPCStandingsGrid_3w9B9
   .dpcstandings_GridContainer_1bSmg
-  .dpcstandings_ColumnHighlightContainer_31N_H {
-  height: 100%;
-  position: absolute;
+  .dpcstandings_GridRow_2f1YL
+  .dpcstandings_GridCell_4wUCQ
+  .dpcstandings_Result_pl1-I.dpcstandings_Completed_rt8K9 {
+  font-weight: 700;
 }
 .dpcstandings_DPCStandingsGrid_3w9B9
   .dpcstandings_GridContainer_1bSmg
-  .dpcstandings_ColumnHighlightContainer_31N_H
-  .dpcstandings_ColumnHighlight_1B6Sh {
-  position: absolute;
-  width: 56px;
-  height: 100%;
+  .dpcstandings_GridRow_2f1YL
+  .dpcstandings_GridCell_4wUCQ
+  .dpcstandings_Date_3wTMY {
+  color: #a3a3a3;
+  font-size: 10px;
+  text-align: center;
 }
 .dpcstandings_DPCStandingsTeamList_jVT-8 {
-  width: 500px;
+  width: 380px;
   height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.dpcstandings_DPCStandingsTeamList_jVT-8 .dpcstandings_Heading_1XGog {
+.dpcstandings_DPCStandingsTeamList_jVT-8 .dpcstandings_Header_3Kf0X {
   width: 100%;
   text-align: center;
   padding: 10px 0px;
@@ -24655,7 +24664,7 @@ a {
   position: relative;
 }
 .dpcstandings_DPCStandingsTeamList_jVT-8
-  .dpcstandings_Heading_1XGog
+  .dpcstandings_Header_3Kf0X
   .dpcstandings_ViewSelctor_1ylEQ {
   position: absolute;
   right: 10px;
@@ -24682,12 +24691,32 @@ a {
 .dpcstandings_DPCStandingsTeam_25wGh {
   width: 100%;
   height: 70px;
-  background-color: #1f1f24;
+  background-color: #27272d;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 20px;
+}
+.dpcstandings_DPCStandingsTeam_25wGh.dpcstandings_Larger_8xn4E {
+  height: 90px;
+}
+.dpcstandings_DPCStandingsTeam_25wGh.dpcstandings_Larger_8xn4E
+  .dpcstandings_Standing_33ZWb {
+  font-size: 18px;
+}
+.dpcstandings_DPCStandingsTeam_25wGh.dpcstandings_Larger_8xn4E
+  .dpcstandings_TeamName_QK1FS {
+  font-size: 18px;
+}
+.dpcstandings_DPCStandingsTeam_25wGh.dpcstandings_LastLarger_jBnTV {
+  margin-bottom: 4px;
+}
+.dpcstandings_DPCStandingsTeam_25wGh.dpcstandings_Promoted_2yUII {
+  background-color: #213823;
+}
+.dpcstandings_DPCStandingsTeam_25wGh.dpcstandings_Demoted_aNSAu,
+.dpcstandings_DPCStandingsTeam_25wGh.dpcstandings_Removed_2YjFV {
+  background-color: #382121;
 }
 .dpcstandings_DPCStandingsTeam_25wGh * {
   z-index: 2;
@@ -24699,7 +24728,6 @@ a {
   font-size: 15px;
   color: #a3a3a3;
   font-weight: 800;
-  letter-spacing: 1px;
 }
 .dpcstandings_DPCStandingsTeam_25wGh .dpcstandings_TeamLogo_KU9ho {
   margin-right: 15px;
@@ -24712,28 +24740,16 @@ a {
   letter-spacing: 2px;
   font-size: 15px;
   font-weight: 700;
-  text-align: left;
   margin-left: 10px;
 }
-.dpcstandings_DPCStandingsTeam_25wGh .dpcstandings_Wins_1mwia,
-.dpcstandings_DPCStandingsTeam_25wGh .dpcstandings_Losses_1X-xs {
-  width: 70px;
-  min-width: 70px;
+.dpcstandings_DPCStandingsTeam_25wGh .dpcstandings_Record_3WL3i {
+  width: 60px;
+  min-width: 60px;
   text-align: center;
+  margin: 0px 20px;
   font-size: 15px;
   font-weight: 700;
   color: #a3a3a3;
-}
-.dpcstandings_DPCStandingsTeam_25wGh.dpcstandings_Header_3Kf0X {
-  background-color: #36363e;
-  height: 40px;
-}
-.dpcstandings_DPCStandingsTeam_25wGh.dpcstandings_Header_3Kf0X * {
-  color: #fff;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-weight: 700;
 }
 .dpcstandings_DPCStandingsBracket_9iCXI {
   width: 100%;
@@ -26486,7 +26502,7 @@ a {
   width: 100%;
   min-height: 1000px;
   color: #fff;
-  background-color: #050606;
+  background-color: #222226;
   position: relative;
   display: flex;
   flex-direction: column;
