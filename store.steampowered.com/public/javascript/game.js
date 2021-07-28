@@ -1918,8 +1918,14 @@ function ReparentReviewsForMobileUX()
 function ShareDialogCopyToClipboard()
 {
 	// select the text and copy to clipboard
-	$J('#shareDialogLinkStoreLink').select();
-	var $res = document.execCommand( "copy" ) 
+	var $res = false;
+	var $linkText = document.getElementById('shareDialogLinkStoreLink');
+	if ( $linkText )
+	{
+		// using .select() instead causes the copy command to fail on iOS 12
+		$linkText.setSelectionRange(0, $linkText.value.length);
+		$res = document.execCommand( "copy" );
+	}
 
 	// report the result
 	$J('#shareDialogResult').text( $res ? 'Store link copied to the clipboard' : 'Failed copying store link to the clipboard');
