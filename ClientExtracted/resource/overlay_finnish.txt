@@ -184,7 +184,7 @@
 "Overlay_MicroTxnAuth_Insufficient_Funds" "Ei riittävästi varoja"
 "Overlay_MicroTxnAuth_Insufficient_Funds_Info" "Steam-lompakossa ei ole riittävästi varoja tähän ostokseen. Haluatko lisätä varoja jatkaaksesi?"
 
-"Overlay_Screenshots_Title" "Kuvankaappausten lataaja"
+"Overlay_Screenshots_Title" "Kuvakaappausten lataaja"
 "Overlay_Screenshots_Panel_Title" "Kuvakaappaukset"
 "Overlay_Screenshots_Show" "Näytä:"
 "Overlay_Screenshots_Size_Cloud" "%selected_ss_size%"

@@ -280,6 +280,21 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_CloudConflict_Older" " - 古い"
 "Steam_CloudConflict_Unknown" "不明"
 
+"Steam_CloudPendingSessions_Title" "Steam－クラウドアップロードを保留中"
+"Steam_CloudPendingSessions_Text" "%game%の%pendingops%セッションが、Steamクラウドにまだアップロードされていません。"
+"Steam_CloudPendingSessions_Sessions" "最新のセッション："
+"Steam_CloudPendingSessions_RemoteTime" "最終更新：%remotetime%"
+"Steam_CloudPendingSessions_RemoteMachine" "デバイス：%remotemachine%"
+"Steam_CloudPendingSessions_RemoteState" "状態：%remotestate%"
+"Steam_CloudPendingSessions_IgnoreAndContinue" "無視して続行"
+"Steam_CloudPendingSessions_Cancel" "起動をキャンセル"
+"Steam_CloudPendingSessions_Note" "注意：無視すると、他のセッションが再開した時にSteamクラウドでファイルの不一致が発生する場合があります。"
+"Steam_CloudPendingSessions_Unknown" "不明"
+"Steam_CloudPendingSessions_UploadNotStarted"	"アップロードが開始されませんでした"
+"Steam_CloudPendingSessions_GameActive"	"実行中"
+"Steam_CloudPendingSessions_UploadInProgress"	"アップロード中"
+"Steam_CloudPendingSessions_GameSuspended"	"一時停止中"
+
 "CloudFiles_RemoveFile_Title"	"Steamクラウド－ファイルを削除"
 "CloudFiles_RemoveFile_Info"				"Steamクラウドから%filename%を削除してもよろしいですか？\n\nこれにより、このファイルのローカルコピーは永久的に削除されます。\n\n（この操作は元に戻すことができません。）\n"
 "CloudFiles_RemoveFile_Button"			"削除"
@@ -1289,7 +1304,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 
 "Steam_ContentServersBusy_Title"	"Steam - エラー"
 "Steam_ContentServersBusy_Info"		"Steam サーバーの混雑のため現在リクエストを処理することができません。\n数分待ってから、もう一度お試しください。"
-"Steam_NoContentServers_Info"		"このゲームのコンテンツを配信するように設定された Steam コンテンツサーバーが現在ありません。\nこの問題はまもなく解決されます。 数分間待ってから、もう一度お試しください。"
+"Steam_NoContentServers_Info"		"このゲームのコンテンツを配信するように設定されたSteamコンテンツサーバーが現在ありません。\nこの問題はまもなく解決されます。数分間待ってから、もう一度お試しください。"
 
 "Steam_UpdateNewsButton"		"更新を見る"
 
@@ -1459,7 +1474,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "SteamUI_No_Throttle"							"無制限"
 "SteamUI_ThrottleEditLabel"				"以下に新しい値を入力："
 "SteamUI_ThrottleApplyChange"			"適用"
-"Steam_AutoUpdateTimeRestrictionLabel"	"ゲームを自動アップデートする時間帯:"
+"Steam_AutoUpdateTimeRestrictionLabel"	"ゲームを自動アップデートする時間帯："
 "Steam_AutoUpdateTimeRestrictionEnd"		"および"
 "Steam_AllowDownloadsDuringGameplay"	"ゲームプレイ中にダウンロードを許可"
 "Steam_AllowDownloadsDuringGameplayDetails"	"ここをチェックすると、ゲーム中や別の Steam アプリケーションを実行中でも\nSteam はダウンロードを開始したり続行することができます。また、各ゲームのプロパティページでゲーム毎にこの設定を変更できます"
@@ -2271,6 +2286,8 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_Install_CreateApplicationIcon"			"システムアプリケーションアイコンを作成する"
 "Steam_Install_CreateMultipleApplicationIcon"	"各ゲーム用にシステムアプリケーションアイコンを作成する"
 
+"Steam_Install_ShowLauncherShortcut"			"ランチャーショートカットを作成"
+
 "Steam_Install_InstallRetailFiles"			"ゲームコンテンツのインストールを開始します。"
 "Steam_Install_WillVerifyExistingFiles"		"ゲームのインストール状況を確認します。"
 
@@ -2292,7 +2309,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_Install_AutoLaunchGameStart"		"今すぐ起動"
 "Steam_Install_DontShowPageAgain"		"今後このページを表示しない"
 
-"Steam_InstallComplete_DownloadInfo"		"%game% をダウンロードしています。 Steam の「ダウンロード」画面でダウンロードの進行状況を確認できます。\n\nSteam を終了や再起動させても問題ありません。ダウンロードは自動的に再開されます。"
+"Steam_InstallComplete_DownloadInfo"		"%game%をダウンロードしています。Steamの「ダウンロード」画面でダウンロードの進行状況を確認できます。\n\nSteamを終了・再起動しても問題ありません。ダウンロードは自動的に再開されます。"
 "Steam_InstallComplete_DownloadInfo_Queued"		"Steamは%game%のダウンロードをキューしました。ダウンロードは先にキューに入っている他のダウンロードが完了した後に開始されます。キューの管理はSteamの「ダウンロード」画面で行えます。"
 "Steam_InstallComplete_DownloadInfo_Queued_Multiple"		"ゲームをダウンロードのキューに入れました。 ダウンロードは先にキューに入っている他のダウンロードが完了した後に開始されます。 キューの管理はSteam の「ダウンロード」画面で行えます。"
 "Steam_InstallComplete_DownloadInfo_Media"		"選択したメディアファイルは現在 Steam ゲームライブラリ\nで利用できます。"
@@ -3405,6 +3422,9 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "SteamUI_JoinDialog_Updating_Title" 	"%game%をアップデート中"
 "SteamUI_JoinDialog_Ready_Title"	"準備完了 - %game%"
 "SteamUI_JoinDialog_NoName_Title" 	"Steam"
+"SteamUI_JoinDialog_InstallScriptInfo"	"初回セットアップを行っています%dots%\n\nインストール中：%stepname%（ステップ%step%/%steptotal%）"
+
+
 "SteamUI_GameRequires_NTFS_Detail"	"このゲームをインストールするには、NTFSファイルシステムのドライブが必要です。\nFAT32ファイルシステムでフォーマットされたドライブにはインストールできません。\n詳細については、下記のリンクからサポート情報を参照してください。"
 "SteamUI_GameRequires_64BitOS_Detail"	"インストールしようとしているゲームには、64ビットのWindowsコンピューターが必要です。\n必要条件を満たすコンピューターがない場合は、以下をクリックして返金をリクエストするための情報をお読みください。"
 
@@ -3624,6 +3644,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "steam_downloads_downloading"	"ダウンロード中"
 "steam_downloads_preloading"	"プリロード中"
 "steam_downloads_unpacking"	"解凍中"
+"steam_downloads_patching"	"パッチ適用中"
 "steam_downloads_paused"	"要アップデート"
 "steam_downloads_queued"	"キュー内"
 "steam_downloads_delayed"	"%delayeduntil% に予定"
@@ -4025,7 +4046,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "SteamUI_ContentMgr_SelectInstallFolder" "作成するか新しいSteam ライブラリフォルダーを選択する："
 "SteamUI_ContentMgr_RemoveFailed" "選択したSteamライブラリフォルダーの削除に失敗しました。"
 "SteamUI_ContentMgr_RemoveFailedDefaultFolder" "デフォルトの Steam インストールフォルダーは削除できません。"
-"SteamUI_ContentMgr_RemoveFailedUsedFolder" "空の Steam ライブラリフォルダーのみを削除することができます。"
+"SteamUI_ContentMgr_RemoveFailedUsedFolder" "このSteamライブラリフォルダーは現在、%game%によって使用中のため削除できません。"
 "SteamUI_ContentMgr_FlushDownloadConfig" "ダウンロードキャッシュをクリアする"
 "SteamUI_ContentMgr_FlushDownloadConfigInfo" "ダウンロードキャッシュをクリアすることで、アプリのダウンロードや開始の際の問題が解決する場合があります。"
 "SteamUI_ContentMgr_FlushDownloadConfigTip" "これによるインストール済みのゲームやセーブゲームへの影響はありません。"
@@ -4674,7 +4695,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "Steam_Screenshots_UploadImage" "アップロード"
 "Steam_Screenshots_DeleteImage" "削除"
 "Steam_Screenshots_CancelUpload" "キャンセル"
-"Steam_Screenshots_ShowOnDisk" "ディスク上のスクリーンショットを表示"
+"Steam_Screenshots_ShowOnDisk" "フォルダーを表示"
 "Steam_Screenshots_ShowOnline" "オンラインのスクリーンショットを表示"
 "Steam_Screenshots_IsSpoiler" "ネタバレタグを追加"
 "Steam_Screenshots_Private" "非公開"

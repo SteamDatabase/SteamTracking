@@ -1,0 +1,2 @@
+/Users/buildbot/buildslave/libav_osx/build/libvorbis/lib/
+/Users/buildbot/buildslave/libav_osx/build/libvorbis/lib/.libs/vorbisfile.o

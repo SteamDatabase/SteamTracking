@@ -28,4 +28,5 @@
 	"origin_xbox360_shoulder_r"						"Rechte Schultertaste"
 	"origin_xbox360_button_start"					"Starttaste"
 	"origin_xbox360_button_back"					"Zurücktaste"
-	}
+	"origin_xbox360_button_dpad_move"				"Steuerkreuzbewegung"
+}

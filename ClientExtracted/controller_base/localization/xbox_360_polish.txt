@@ -28,4 +28,5 @@
 	"origin_xbox360_shoulder_r"						"Prawy bumper"
 	"origin_xbox360_button_start"					"Przycisk Start"
 	"origin_xbox360_button_back"					"Przycisk Back"
-	}
+	"origin_xbox360_button_dpad_move"				"Krzyżak – ruch"
+}

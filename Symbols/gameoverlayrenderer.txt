@@ -2,7 +2,6 @@
  .objc_class_name_MTLRenderPassDescriptor
  .objc_class_name_MTLRenderPipelineDescriptor
  .objc_class_name_MTLTextureDescriptor
- .objc_class_name_NSAutoreleasePool
  .objc_class_name_NSCursor
  .objc_class_name_NSDate
  .objc_class_name_NSEvent
@@ -113,16 +112,13 @@
  __bzero
  __cxa_atexit
  __error
- __fixunsdfdi
  __stack_chk_fail
  __stack_chk_guard
  __stderrp
  __udivdi3
- __umoddi3
  _dispatch_main_q
  _dyld_get_image_name
  _objc_empty_cache
- _objc_empty_vtable
  abort
  atoi
  bootstrap_look_up
@@ -191,6 +187,7 @@
  launch_data_new_string
  launch_msg
  lround
+ lroundf
  mach_absolute_time
  mach_msg
  mach_port_allocate
@@ -213,6 +210,8 @@
  munmap$UNIX2003
  nanosleep
  nanosleep$UNIX2003
+ objc_alloc
+ objc_autorelease
  objc_autoreleasePoolPop
  objc_autoreleasePoolPush
  objc_enumerationMutation
@@ -221,8 +220,11 @@
  objc_msgSend
  objc_msgSend_fpret
  objc_msgSend_stret
+ objc_release
+ objc_retain
  objc_setAssociatedObject
  objc_setProperty
+ objc_setProperty_nonatomic
  open
  open$UNIX2003
  protocol_getName
@@ -259,6 +261,7 @@
  sprintf
  sscanf
  std::__1::__vector_base_common<true>::__throw_length_error() const
+ std::logic_error::logic_error(char const*)
  strcat
  strcmp
  strcpy

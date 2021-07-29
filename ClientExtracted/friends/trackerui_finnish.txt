@@ -740,7 +740,7 @@
 "Steam_Settings_Broadcast_HelpHeader" "Tarvitsetko apua?"
 "Steam_Settings_Broadcast_HelpURL_Desc" "Näytä suoratoiston tukisivut"
 "Steam_Settings_Broadcast_HelpURL_URL" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497"
-"Steam_Settings_Broadcast_PermissionsHeader" "Katselurajoitukset:"
+"Steam_Settings_Broadcast_PermissionsHeader" "Katseluvalinnat:"
 "Steam_Settings_Broadcast_BitrateHeader" "Enimmäisbittinopeus:"
 "Steam_Settings_Broadcast_DimensionsHeader" "Videon koko:"
 "Steam_Settings_Broadcast_EncoderHeader" "Koodauksen optimointi:"
@@ -796,7 +796,7 @@
 "Steam_Settings_Browser_ClearWebCacheMsg"	"Poista kaikki tiedostot Steamin verkkoselaimen välimuistista?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
-"RemotePlayTogether_Notification_AvailableToInvite" "Klikkaa hiiren oikealla painikkeella nimeä kaverilistalta lähettääksesi pelikutsun."
+"RemotePlayTogether_Notification_AvailableToInvite" "Kutsu kuka tahansa kaverilistaltasi pelaamaan linkillä."
 
 } 
 }  

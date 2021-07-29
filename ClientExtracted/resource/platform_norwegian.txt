@@ -59,10 +59,10 @@
 
 "SteamGuardBanner"				"Steam Guard med Intel® Identity Protection-Teknologi"
 "LoginIPTNotDetected"			"2. generasjon Intel® Core™-prosessor ikke oppdaget.\nDenne kontoen kan ikke brukes på denne datamaskinen."
-"LoginIPTDetected"				"2. generasjon Intel® Core™\nprocessor oppdaget..."
-"LoginIPTNotEnabledOnAccount"	"IPT ikke aktivert for denne kontoen..."
-"LoginIPTAuthenticatingWithSteam" "Autentiserer IPT med Steam..."
-"LoginIPTConfirmed"				"Autentisering bekreftet, logger inn..."
+"LoginIPTDetected"				"2. generasjon Intel® Core™\nprocessor oppdaget …"
+"LoginIPTNotEnabledOnAccount"	"IPT ikke aktivert for denne kontoen …"
+"LoginIPTAuthenticatingWithSteam" "Autentiserer IPT med Steam …"
+"LoginIPTConfirmed"				"Autentisering bekreftet, logger inn …"
 "LoginIPTNotConfirmed"			"IPT kunne ikke verifiseres. Denne kontoen\nkan ikke brukes på denne datamaskinen."
 "LoginIPTConnectFailed"		"Kan ikke kontakte Steam-tjenerne.\n Prøv igjen senere."
 

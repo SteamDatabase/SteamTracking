@@ -32,4 +32,5 @@
 	"origin_xboxone_button_paddle_2"				"Alavanca traseira P2"
 	"origin_xboxone_button_paddle_3"				"Alavanca traseira P3"
 	"origin_xboxone_button_paddle_4"				"Alavanca traseira P4"
-	}
+	"origin_xboxone_button_share"					"Botão Compartilhar"
+}

@@ -57,30 +57,30 @@
 "Friends_InShortcut"		"I spill som ikke er fra Steam"
 "Friends_Blocked"		"Blokkert"
 
-"Friends_AddFriend"		"Legg til en venn..."
-"Friends_Edit_Profile"	"Rediger profil..."
+"Friends_AddFriend"		"Legg til en venn …"
+"Friends_Edit_Profile"	"Rediger profil …"
 
 "Friends_FriendList_CurrentGame"	"GJELDENDE SPILL"
 "Friends_FriendList_InGame"		"I SPILL"
 "Friends_FriendList_Online"		"TILKOBLET"
 "Friends_FriendList_Offline"		"FRAKOBLET"
 
-"Friends_SendInstantMessage"		"Send melding..."
-"Friends_Ignore"			"Blokker all kommunikasjon..."
+"Friends_SendInstantMessage"		"Send melding …"
+"Friends_Ignore"			"Blokker all kommunikasjon …"
 "Friends_UnIgnore"			"Opphev blokkering"
 "Friends_InviteFriendToGame"		"Inviter til spill"
 "Friends_JoinGame"				"Bli med i spillet"
 "Friends_LaunchGame"				"Start spill"
 "Friends_ViewGameInfo"			"Vis spillinfo"
 "Friends_UserDetails"				"Vis brukerdetaljer"
-"Friends_RemoveUser"				"Fjern denne vennen..."
+"Friends_RemoveUser"				"Fjern denne vennen …"
 
 "Friends_RemoveFriend_Title"			"Venner – fjern bruker"
 "Friends_RemoveFriend_Info"				"Er du sikker på at du vil fjerne %friend% fra vennelisten?\n\n(Du kan legge dem til på nytt senere ved hjelp av menyalternativet Legg til venner.)\n"
 "Friends_RemoveFriend_Button"			"Fjern %friend%"
 
 "Friends_HideFriend_Title"				"Venner - Ignorer bruker"
-"Friends_HideFriend_Info"				"Er du sikker på at du vil ignorere og fjerne %friend% fra listen med foreslåtte venner?\n\n(Du kan legge dem til igjen senere ved å bruke knappen 'Legg til en venn...'.)\n"
+"Friends_HideFriend_Info"				"Er du sikker på at du vil ignorere og fjerne %friend% fra listen med foreslåtte venner?\n\n(Du kan legge dem til igjen senere ved å bruke knappen «Legg til en venn …».)\n"
 "Friends_HideFriend_Button"				"Ignorer %friend%"
 "Friends_HideFriend_Failed"				"Kunne ikke ignorere vennen din %friend%"
 
@@ -93,7 +93,7 @@
 
 
 "Friends_EnterAccountNameOrEmailAddress"	"Skriv inn Steam-kontonavnet ELLER e-postadressen for personen du vil legge til i Venner-listen."
-"Friends_SearchingForFriend"				"Søker etter %search%..."
+"Friends_SearchingForFriend"				"Søker etter %search% …"
 "Friends_FriendHasBeenAddedToYourListUnderName" "%search% er blitt lagt til på vennelisten under navnet %friend%."
 "Friends_FriendHasBeenAddedToYourList"		"%friend% er blitt lagt til på vennelisten."
 "Friends_UnableToFindFriendByThatName"		"Finner ikke %search%. Trykk på Tilbake hvis du vil søke på nytt."
@@ -103,10 +103,10 @@
 "Friends_ConnectedButOffline"					"Du er satt til å vises som frakoblet for alle vennene dine."
 "Friends_NoFriendsInList"						"Du har ikke lagt til noen i Venner-listen din ennå."
 "Friends_GoOnline"							"Logg på"
-"Friends_SignIn_RefreshPassword"				"Logg på..."
-"Friends_SignIn_ActivateFriends"				"Bli med i venners betaversjon..."
-"Friends_ConnectingToFriendsNetwork"			"Kobler til venners nettverk..."
-"Friends_ScanningForFriends"					"Laster ned Venner-liste..."
+"Friends_SignIn_RefreshPassword"				"Logg på …"
+"Friends_SignIn_ActivateFriends"				"Bli med i venners betaversjon …"
+"Friends_ConnectingToFriendsNetwork"			"Kobler til venners nettverk …"
+"Friends_ScanningForFriends"					"Laster ned venneliste …"
 
 "Friends_NotConnectedToFriendsNetwork"		"Kunne ikke opprette en tilkobling til vennenettverket. Steam forsøker å koble til på nytt automatisk til tjenesten blir tilgjengelig."
 "Friends_NotConnectedToFriendsNetwork_InvalidPassword"	"Du må logge på Steam på nytt for å kunne bruke Venner."
@@ -162,7 +162,7 @@
 "Friends_TargetHasTooManyFriends"		"Venner-listen til %search% er full."
 "Friends_DefaultAddError"	 			"Det oppstod et problem da du skulle legge til %search% i vennelisten."
 "Friends_UnableToFindFriendByThatNameInvitePrompt"		"Finner ikke en Steam-bruker med e-postadressen %search%.\n\nHvis du vil invitere %search% til å bli med i Steam og bli lagt til i Venner-listen, trykker du på Neste, eller på Tilbake for å søke på nytt."
-"Friends_InvitingFriend"				"Sender invitasjon til %search%..."
+"Friends_InvitingFriend"				"Sender invitasjon til %search% …"
 "Friends_InvitationPending"			"%search% er nylig blitt invitert til å bli med i Steam. Når de svarer, legges de til i Venner-listen.\n"
 "Friends_InvitationSent"				"%search% har fått tilsendt en invitasjon via e-post, og de blir lagt til i Venner-listen når de svarer.\n"
 "Friends_DefaultInviteError"			"Det oppstod et problem ved sending av en invitasjon til %search%." 
@@ -202,7 +202,7 @@
 "Friends_menu_view_showsteamids"		"Vis konto-IDer"
 "Friends_menu_view_sortbyname"			"Sorter etter navn"
 "Friends_menu_view_onlineonly"			"Vis bare påloggede brukere"
-"Friends_menu_view_settings"			"Innstillinger ..."
+"Friends_menu_view_settings"			"Innstillinger …"
 "Friends_menu_players_current"			"Spillerliste – gjeldende spill"
 "Friends_menu_players_recent"			"Spillerliste – nylige spill"
 
@@ -305,8 +305,8 @@
 "Friends_MsgNotification_Sender"		"%name% sier"
 "Friends_MsgNotification_Body"		"%message%"
 
-"Friends_AddUser"				"Legg til venner ..."
-"Friends_HideUser"				"Ignorer bruker..."
+"Friends_AddUser"				"Legg til venner …"
+"Friends_HideUser"				"Ignorer bruker …"
 
 "Friends_Voice_Call"				"Start stemmesamtale"
 "Friends_Voice_EndCall"			"Avslutt stemmesamtale"
@@ -317,7 +317,7 @@
 "Friends_Voice_AudioSettings"		"Innstillinger"
 "Friends_Voice_Answer"			"Svar"
 "Friends_Voice_IncomingStatus"	"%friend% vil starte en stemmesamtale."
-"Friends_Voice_OutgoingStatus"	"Anroper %friend%..."
+"Friends_Voice_OutgoingStatus"	"Anroper %friend% …"
 "Friends_Voice_Resume"			"Fortsett"
 "Friends_Voice_ResumeStatusLocalHold"		"På vent"
 "Friends_Voice_ResumeStatusRemoteHold"	"%friend% har satt denne stemmesamtalen på vent"
@@ -355,7 +355,7 @@
 "Friends_LeaveThisGroup"				"Forlat denne gruppen"
 
 "Friends_SteamIDLink"					"Vis profil"
-"Friends_EditAlias"						"Rediger alias..."
+"Friends_EditAlias"						"Rediger alias …"
 "Friends_UnsetAlias"					"Tilbakestill"
 "Friends_ViewAliases"					"Vis aliaser"
 "Friends_NotificationOptions"			"Varslingsinnstillinger"
@@ -409,7 +409,7 @@
 "Friends_PlayersDialog_Title"				"Spillere – Steam"
 "Friends_CurrentPlayers_TabTitle"			"Gjeldende spill"
 "Friends_RecentPlayers_TabTitle"			"Tidligere spill"
-"Friends_AddPlayerAsFriend"				"Legg til en venn..."
+"Friends_AddPlayerAsFriend"				"Legg til en venn …"
 "Friends_NoRecentlyPlayedWithUsers"		"Du har ikke spilt Steam-spill med noen av vennene dine nylig."
 "Friends_NoCurrentlyPlayedWithUsers"		"Ingen Steam-brukere rapportert av spilltjener."
 "Friends_PlayerName"						"Kallenavn"
@@ -442,11 +442,11 @@
 "Friends_InviteInfo_BeenInvited"				"Du har fått en invitasjon"
 "Friends_InviteInfo_JoinGroup"				"til å bli med i Steam-gruppen"
 "Friends_GroupEvent_NewEventScheduled"		"har planlagt et nytt arrangement"
-"Friends_GroupEvent_NowStarting"				"har et arrangement som starter"
+"Friends_GroupEvent_NowStarting"				"har en begivenhet som starter"
 "Friends_GroupEvent_NewAccouncement"			"har lagt ut en ny kunngjøring"
 
-"Friends_GroupEvent_Title"					"%group% – arrangement startet"
-"Friends_GroupEvent_View"						"Vis arrangement"
+"Friends_GroupEvent_Title"					"%group% – begivenhet startet"
+"Friends_GroupEvent_View"						"Vis begivenhet"
 
 "Voice_Settings_NewTabTitle"		"Stemme i spillet"
 "Voice_Settings_TabTitle"		"Stemme"
@@ -507,7 +507,7 @@
 "Friends_ChatIntro_WarningInfo" "Påminnelse: Steams kundestøtte vil aldri trenge passordet ditt. Ignorer alle forespørsler om passord."
 
 "Friends_Voice_MicrophoneDeviceLabel"	"Innspillingsenhet (lydinnenhet)"
-"Friends_Voice_ChangeDevice"			"Bytt enhet..."
+"Friends_Voice_ChangeDevice"			"Bytt enhet …"
 "Friends_Voice_ChangeDeviceNote"		"(dette åpner talekontrollpanelet i Windows)"
 "Friends_Voice_ChangingDevice_Title"	"Steam – bytter innspillingsenhet"
 "Friends_Voice_ChangingDevice_Info"		"Lydkontrollpanelet i Windows er nå åpent. Trykk på OK når du har endret innstillinger."
@@ -602,7 +602,7 @@
 "friends_trade_invite_action"		"KLIKK HER FOR Å BYTTE"
 
 "friends_trade_invite_sent"	"Det er blitt sendt en bytteforespørsel til %friend%"
-"friends_trade_invite_sent_waiting"	"Venter på svar..."
+"friends_trade_invite_sent_waiting"	"Venter på svar …"
 
 "friends_trade_generic_failure"		"Du kan ikke bytte med %friend%."
 "friends_trade_declined"		"%friend% har avslått bytteforespørselen."
@@ -649,12 +649,12 @@
 
 "friends_voice_usedbygame"			"Mikrofon i bruk av spillet"
 
-"friends_group_tag_as"			"Merk som..."
+"friends_group_tag_as"			"Merk som …"
 "friends_group_edit_categories" 	"Merk denne vennen så du kan finne dem raskt. Merkede venner vil bli gruppert sammen i vennelisten din."
 "friends_group_addtag"			"LEGG TIL MERKE"
 "friends_group_edittags_title"		"%friend% - Merker"
 
-"friends_insertitem"			"Vis fram en gjenstand fra lageret ditt..."
+"friends_insertitem"			"Vis fram en gjenstand fra lageret ditt …"
 "group_enterchatroom"			"Bli med i gruppesamtale"
 
 "friends_giftreceived_info"		"har sendt deg en gave"
@@ -685,7 +685,7 @@
 "Friends_BroadcastApprove_Ignore" "IGNORER"
 
 "Broadcast_FirstTime_Header" "Velkommen til Steam-kringkasting! Du kan nå se på andre spillere og kringkaste dine egne spill med Steam."
-"Broadcast_FirstTime_PermissionHeader" "Ta deg tid til å sette opp preferansene dine..."
+"Broadcast_FirstTime_PermissionHeader" "Ta deg tid til å sette opp preferansene dine …"
 "Broadcast_FirstTime_DesktopOnly" "Som standard, vil det kun være mulig å se innholdet i spillet ditt. Skrivebordet ditt vil ikke bli sendt."
 "Broadcast_FirstTime_FAQ" "Les vanlige spørsmål om Steam-kringkasting"
 "Broadcast_FirstTime_FAQLink" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497"
@@ -796,7 +796,7 @@
 "Steam_Settings_Browser_ClearWebCacheMsg"	"Slett alle filene i bufferen til den innebygde nettleseren?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
-"RemotePlayTogether_Notification_AvailableToInvite" "Høyreklikk på venner for å invitere dem til å spille."
+"RemotePlayTogether_Notification_AvailableToInvite" "Inviter hvem som helst til å spille med en lenke fra vennelisten."
 
 } 
 }  

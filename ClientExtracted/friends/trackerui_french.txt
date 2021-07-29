@@ -55,7 +55,7 @@
 "Friends_InApp"			"Dans une application"
 "Friends_InMod"			"Dans un Mod"
 "Friends_InShortcut"		"Dans un jeu non Steam"
-"Friends_Blocked"		"Bloqué"
+"Friends_Blocked"		"Bloqué(e)"
 
 "Friends_AddFriend"		"Ajouter un contact..."
 "Friends_Edit_Profile"	"Modifier profil..."
@@ -188,8 +188,8 @@
 "Friends_Friendlist_Chat"				"CHAT"
 "Friends_ViewSteamIDPage"				"Afficher la page ID Steam"
 "Friends_ViewFacebookIDPage"			"Voir sa page Facebook"
-"Friends_Tooltip_GroupOfficer"		"Officier du groupe"
-"Friends_Tooltip_GroupModerator"		"Modérateur du groupe"
+"Friends_Tooltip_GroupOfficer"		"Responsable du groupe"
+"Friends_Tooltip_GroupModerator"		"Modération du groupe"
 
 "Friends_InviteFriendToGroup"			"Inviter dans le groupe"
 "Friends_InviteToGroupConfirmation_Title"	"Contacts - invitation envoyée"
@@ -406,12 +406,12 @@
 "Friends_InviteNotification_Hotkey"		"Appuyez sur %hotkey% pour afficher"
 "Friends_ChatNotification_Hotkey"			"Appuyez sur %hotkey% pour répondre"
 
-"Friends_PlayersDialog_Title"				"Joueurs - Steam"
+"Friends_PlayersDialog_Title"				"Joueurs et joueuses"
 "Friends_CurrentPlayers_TabTitle"			"Partie actuelle"
 "Friends_RecentPlayers_TabTitle"			"Parties précédentes"
-"Friends_AddPlayerAsFriend"				"Ajouter un contact..."
+"Friends_AddPlayerAsFriend"				"Ajouter à la liste de contacts..."
 "Friends_NoRecentlyPlayedWithUsers"		"Vous n'avez joué à aucun jeu Steam avec vos contacts récemment."
-"Friends_NoCurrentlyPlayedWithUsers"		"Aucun utilisateur Steam signalé par le serveur de jeux."
+"Friends_NoCurrentlyPlayedWithUsers"		"Il n'y a personne sur ce serveur de jeu."
 "Friends_PlayerName"						"Surnom"
 "Friends_SteamIDURLHeader"				"Profil Steam"
 "Friends_PlayerRelationship"				"Relation"
@@ -504,7 +504,7 @@
 "Friends_ChatIntro_Request"	"Voulez-vous accepter cette demande de conversation ?"		
 "Friends_ChatIntro_DontShowCheckBox" "Toujours accepter les demandes de cet utilisateur."
 
-"Friends_ChatIntro_WarningInfo" "Attention : le support Steam n'a pas besoin de votre mot de passe. Ignorez les demandes de mots de passe que vous recevez."
+"Friends_ChatIntro_WarningInfo" "Attention : le Support Steam n'a pas besoin de votre mot de passe. Ignorez les demandes de mots de passe que vous recevez."
 
 "Friends_Voice_MicrophoneDeviceLabel"	"Périphérique d'enregistrement (entrée audio)"
 "Friends_Voice_ChangeDevice"			"Changer de périphérique..."
@@ -558,12 +558,12 @@
 "Limited_ForDetails"	"Consultez le Support Steam pour plus d'informations."
 "Limited_ForDetails_URL"	"https://help.steampowered.com/fr/wizard/HelpWithLimitedAccount"
 
-"Friends_Chat_RoomModerated_Entry"		"La salle de discussion a été réservée aux officiers par %member_making_change%.\n"
+"Friends_Chat_RoomModerated_Entry"		"La salle de discussion a été réservée aux responsables par %member_making_change%.\n"
 "Friends_Chat_RoomUnmoderated_Entry"		"%member_making_change% a passé la salle de discussion en mode ouvert : tous les utilisateurs peuvent parler.\n"
-"Friends_Chat_RoomUnmoderated_Info"			"Seuls les officiers du groupe peuvent envoyer des messages en mode de discussion réservé aux officiers"
-"Friends_Chat_ModerateRoom"				"Activer la discussion réservée aux officiers"
-"Friends_Chat_UnmoderateRoom"			"Désactiver le mode de chat réservé aux officiers (tout le monde pourra discuter)"
-"Friends_Chat_ModerateRoom_Status"			"Seuls les officiers de ce groupe peuvent parler"
+"Friends_Chat_RoomUnmoderated_Info"			"Cette salle de discussion est réservée aux responsables du groupe"
+"Friends_Chat_ModerateRoom"				"Activer la discussion réservée aux responsables"
+"Friends_Chat_UnmoderateRoom"			"Désactiver la limitation aux responsables (tout le monde pourra discuter)"
+"Friends_Chat_ModerateRoom_Status"			"L'envoi de messages est réservé aux responsables de ce groupe"
 
 "Friends_InviteToGame_Title"	"Choisissez des contacts à inviter"
 "Friends_InviteToGame_Close"	"Retourner au jeu"
@@ -616,7 +616,7 @@
 "friends_trade_you_need_verified_email"		"Vous devez vérifier votre adresse e-mail avant de pouvoir participer à un échange. Vous pouvez le faire depuis la fenêtre « Paramètres » de Steam."
 "friends_trade_you_have_steam_guard_disabled"	"Vous devez activer Steam Guard avant de pouvoir participer à un échange. Steam Guard peut être activé depuis la fenêtre « Paramètres » de Steam."
 "friends_trade_you_havent_had_steam_guard_enabled_long_enough"	"Steam Guard doit être activé pendant au moins %days% jours avant de pouvoir participer à un échange."
-"friends_trade_you_are_using_new_device"	"Vous êtes connecté à partir d'un nouveau périphérique. Afin de protéger les objets de votre inventaire, vous ne pourrez pas faire d'échange depuis ce périphérique pendant %days% jour(s)."
+"friends_trade_you_are_using_new_device"	"Vous êtes connecté(e) à partir d'un nouvel appareil. Afin de protéger les items de votre inventaire, vous ne pourrez pas faire d'échange depuis cet appareil pendant %days% jour(s)."
 "friends_trade_you_recently_reset_password"	"Vous avez récemment oublié et ensuite réinitialisé le mot de passe de votre compte Steam. Vous ne pourrez pas faire d'échange durant les cinq jours suivant la réinitialisation de votre dernier mot de passe."
 "friends_trade_you_recently_reset_password_long" "Vous avez récemment oublié et ensuite réinitialisé le mot de passe de votre compte Steam après plusieurs mois d'inactivité. Afin de protéger les objets de votre inventaire, les échanges ont été désactivés pour encore %days% jours."
 "friends_trade_you_recently_reset_password_short" "Vous avez récemment oublié et ensuite réinitialisé le mot de passe de votre compte Steam. Afin de protéger les objets de votre inventaire, les échanges ont été désactivés pour encore %days% jours."
@@ -687,9 +687,9 @@
 "Broadcast_FirstTime_Header" "Grâce aux diffusions Steam, vous pouvez maintenant regarder d'autres joueurs et joueuses et diffuser vos parties grâce à Steam."
 "Broadcast_FirstTime_PermissionHeader" "Prenez une minute pour configurer vos préférences..."
 "Broadcast_FirstTime_DesktopOnly" "Par défaut, seul le contenu de votre jeu peut être regardé. Votre bureau ne sera pas diffusé."
-"Broadcast_FirstTime_FAQ" "Lire la FAQ Steam Broadcasting"
+"Broadcast_FirstTime_FAQ" "Lire la FAQ des diffusions Steam"
 "Broadcast_FirstTime_FAQLink" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497&l=french"
-"Broadcast_FirstTime_Title" "Steam Broadcasting"
+"Broadcast_FirstTime_Title" "Diffusions Steam"
 "Broadcast_FirstTime_OK" "OK"
 "Broadcast_FirstTime_Cancel" "Annuler"
 "Broadcast_FirstTime_ViewerRequest" "%friend% souhaite vous regarder jouer à %gamename%"
@@ -753,7 +753,7 @@
 "Steam_Settings_Broadcast_ShowChat_RightTop" "En haut à droite"
 "Steam_Settings_Broadcast_ShowChat_RightBottom" "En bas à droite"
 "Steam_Settings_Broadcast_ShowChat_LeftBottom" "En bas à gauche"
-"Steam_Settings_Broadcast_Disabled_System" "Steam Broadcasting n'est actuellement pas pris en charge sur ce système d'exploitation."
+"Steam_Settings_Broadcast_Disabled_System" "Les diffusions Steam ne sont actuellement pas prises en charge sur ce système d'exploitation."
 "Steam_Settings_Broadcast_Disabled_Overlay" "L'Overlay Steam doit être activé pour pouvoir diffuser en direct."
 "Steam_Settings_Broadcast_Disabled_User" "Votre compte ne dispose pas des droits suffisants pour diffuser des streams en direct."
 "Steam_Settings_Broadcast_Disabled_System_Windows_Compat_Enabled" "Steam n'est pas en mesure de démarrer la diffusion sur cette machine.\n\nSteam est actuellement en cours d’exécution via le mode Compatibilité de Windows qui peut empêcher le bon fonctionnement de Steam Broadcasting. Si cette machine utilise Windows 7 ou une version ultérieure, veuillez suivre la page du support ci-dessous pour enlever le mode Compatibilité."
@@ -796,7 +796,7 @@
 "Steam_Settings_Browser_ClearWebCacheMsg"	"Supprimer tous les fichiers du cache du navigateur intégré ?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
-"RemotePlayTogether_Notification_AvailableToInvite" "Faites un clic droit sur un membre de votre liste de contacts pour l'inviter à jouer."
+"RemotePlayTogether_Notification_AvailableToInvite" "Invitez qui vous voulez avec un lien depuis votre liste de contacts."
 
 } 
 }  

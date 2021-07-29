@@ -796,7 +796,7 @@
 "Steam_Settings_Browser_ClearWebCacheMsg"	"Изтриване на всички файлове във вградения кеш на уеб браузъра?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Steam Remote Play Together"
-"RemotePlayTogether_Notification_AvailableToInvite" "Кликнете с десния бутон на мишката върху някого в списъка Ви с приятели, за да го поканите към игра."
+"RemotePlayTogether_Notification_AvailableToInvite" "Поканете с линк за игра когото и да е от списъка Ви с приятели."
 
 } 
 }  

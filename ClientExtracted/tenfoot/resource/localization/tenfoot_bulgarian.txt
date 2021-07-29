@@ -1997,6 +1997,7 @@
 	"Library_Details_ControllerBindingsGordon_ApplyConfiguration"	"ПРИЛАГАНЕ НА КОНФИГУРАЦИЯТА"
 	"Library_Details_ControllerBindingsGordon_Share"	"СПОДЕЛЯНЕ НА КОНФИГУРАЦИЯТА"	
 	"Library_Details_ControllerBindingsGordon_ListenForBinding"	"ОСЛУШВАНЕ ЗА КЛАВИШ"
+	"Library_Details_ControllerBindingsGordon_Reset"			"НУЛИРАНЕ ДО КОМБИНАЦИЯ ЗА НАБОР ОТ ДЕЙСТВИЯ"
 	
 	"Library_Details_CopyToClipboard_Title"				"Споделяне на конфигурацията"
 	"Library_Details_CopyToClipboard_Desc"				"Връзката към тази конфигурация е копирана в клипборда Ви."
@@ -2038,6 +2039,7 @@
 	"Library_Details_GameActionsHeader"				"ИЗБИРАНЕ НА ДЕЙСТВИЕ В ИГРАТА"
 	"Library_Details_FieldLabel_InputStyle_GA"		"Действие в игра"
 	"Library_GameAction_None"						"Няма"
+	"Library_GameAction_ResetToParent"				"Нулиране до комбинация за набор от действия"
 
 	"Library_Details_Binding_Custom_Description"		"Персонализирано описание…"
 
@@ -2095,8 +2097,7 @@
 	"Library_Details_SourceMode_SingleButton_Title"		"ЕДИНЕН БУТОН"
 	"Library_Details_SourceMode_FlickStick_Title"		"ЗАПРАЩАНЕ НА СТИКА"
 	"Library_Details_SourceMode_FlickStick_Acton_Title"	"ЗС: {s:action}"
-	"Library_Details_SourceMode_Mouse_Joystick_Acton_Title"	"МД: {s:action}"
-
+	"Library_Details_SourceMode_Mouse_Joystick_Acton_Title"	"ДКМ: {s:action}"
 	"Library_Details_Source_Title_none"			"НЕОПРЕДЕЛЕН"
 	"Library_Details_Source_Title_left_trackpad"		"Ляв тракпад"
 	"Library_Details_Source_Title_right_trackpad"		"Десен тракпад"
@@ -2395,6 +2396,8 @@
 	"Library_Details_SourceMode_Title_FlickStick"		"Запращане на стика"
 	"Library_Details_SourceMode_Title_2DScroll"		"Дирекционно плъзгане"
 	"Library_Details_SourceMode_Title_Hotbar"		"Меню за бърз достъп"
+	"Library_Details_SourceMode_Title_LayerInherit"			"Наследяване от набора с действия"
+	"Library_Details_SourceMode_Title_LayerNullOverride"	"Няма"
 
 	"Library_Details_ModeShift_Title_None"				"Няма"
 	"Library_Details_ModeShift_Title_LeftTrigger"		"Пълно издърпване на левия спусък"
@@ -3425,6 +3428,7 @@
 	"Downloads_Status_downloading"	"Сваляне {s:downloadpercent}"
 	"Downloads_Status_preloading"	"Предварително сваляне {s:downloadpercent}"
 	"Downloads_Status_unpacking"	"Разопаковане {s:downloadpercent}"
+	"Downloads_Status_patching"	"Нанасяне на промени: {s:downloadpercent}"
 	"Downloads_Status_paused"	"Паузирано"
 	"Downloads_Status_queued"	"В опашката"
 	"Downloads_Status_ready"	"Готово за пускане"
@@ -3434,6 +3438,7 @@
 	"Downloads_Status_finished"	"Свалянето приключи в {t:t:downloadfinished}"
 	"Downloads_Status_deferred"	"Насрочено сваляне за {t:t:downloadstart}"
 	"Downloads_Status_locked"	"Използват се всички лицензи за този продукт"
+	"Downloads_Status_uninstalled"	"Не е инсталирано"
 
 
 	"Quit_LabelStreamingClient0"	"{s:streamingclient0}"
@@ -5089,6 +5094,8 @@
 	"ControllerBinding_ModeDropDown_InGameAction_Description"	"Изберете тази опция, така че стикът или падът да изпълняват посоченото действие в играта."
 	"ControllerBinding_ModeDropDown_OtherAction"				"Друго действие в игра…"
 	"ControllerBinding_ModeDropDown_OtherAction_Description"	"В тази игра има действия, специално проектирани, така че да се ползват спусъците на контролера. Ако искате да определите други действия в играта към този спусък, изберете тази опция."
+	"ControllerBinding_ModeDropDown_LayerInherit"				"Наследяване от набора с действия"
+	"ControllerBinding_ModeDropDown_LayerInherit_Description"	"Изберете тази опция, за да отмените нанесените промени в този режим и да позволите наследяване на режима, дефиниран с набора от действия, съдържащ този слой."
 	"ControllerBinding_ModeDropDown_GenericDPad"				"Обикновен дирекционен пад"
 	"ControllerBinding_ModeDropDown_GenericDPad_Description"	"Изберете тази опция, ако бихте искали да зададете този стик или пад, така че да действа като обикновен дирекционен пад."
 
@@ -7297,6 +7304,7 @@
 	"controller_unknown"								"Неизвестен контролер"
 	"controller_steamcontroller_unknown"				"Steam Controller"
 	"controller_steamcontroller_gordon" 				"Steam Controller"
+	"controller_steamcontroller_neptune"				"Steam Deck контролер"
 	"controller_generic"								"Общ геймпад"
 	"controller_xbox360"								"Xbox 360 контролер"
 	"controller_xboxone"								"Xbox One контролер"

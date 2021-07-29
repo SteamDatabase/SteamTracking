@@ -1289,7 +1289,7 @@ Com o modo joystick estilo rato, podes jogar com um comando mas com a precisão 
 	"Store_PackagePurchaseSection_Bundle"			"Custo do pacote"
 	"Store_PackagePurchaseSection_BundleSavings"	"Com este pacote tu poupas"
 
-	"Store_AppPurchaseSection_Options"			"{i:purchase_option_count} opções de compra"
+	"Store_AppPurchaseSection_Options"			"Opções de compra ({i:purchase_option_count})"
 	"Store_NotAvailableForPurchase"				"Não disponível para compra"
 	"Store_AppPurchaseSection_PurchaseDLC"		"Ver DLC disponível ({i:purchase_dlc_count})"
 	"Store_AppPurchaseSection_Demo"				"Descarregar demo grátis"
@@ -1377,8 +1377,8 @@ Com o modo joystick estilo rato, podes jogar com um comando mas com a precisão 
 	"Checkout_Failed_Finalize_GenericError"						"Ocorreu um erro inesperado. A compra não foi concluída. Por favor, contacta o Suporte Steam."
 	"Checkout_Failed_CCAVSError"								"A compra não foi concluída. As informações do cartão de crédito foram recusadas pela empresa emissora devido a um endereço incorreto ter sido introduzido.\n\nNota: Em alguns casos, a empresa emissora pode suspender fundos na tua conta, mas não te será cobrado nada. Após corrigires quaisquer erros nas informações abaixo, por favor, tenta fazer a tua compra novamente."
 	"Checkout_Failed_TimeoutError"								"O teu computador não consegue comunicar com os servidores do Steam ou o serviço está temporariamente desativado. Tenta novamente mais tarde."
-	"Checkout_Failed_CC_DeclinedError"							"A compra não foi concluída. As informações do cartão de crédito foram recusadas pela empresa emissora.\n\nNota: Em alguns casos, a empresa emissora pode 'suspender' fundos na sua conta, mas não será debitado. Depois de corrigir quaisquer erros nas informações abaixo, por favor tente efetuar novamente a sua compra."
-	"Checkout_Failed_CC_InsufficientFunds"						"A compra não foi concluída. As informações do cartão de crédito foram recusadas pela empresa emissora devido a fundos insuficientes na conta.\n\nNota: Em alguns casos, a empresa emissora pode suspender fundos na sua conta, mas não lhe será cobrado nada."
+	"Checkout_Failed_CC_DeclinedError"							"A compra não foi concluída. As informações do cartão de crédito foram recusadas pela empresa emissora.\n\nNota: Em alguns casos, a empresa emissora pode suspender fundos na tua conta, mas não te será cobrado nada. Após corrigires quaisquer erros nas informações abaixo, por favor, tenta fazer a tua compra novamente."
+	"Checkout_Failed_CC_InsufficientFunds"						"A compra não foi concluída. As informações do cartão de crédito foram recusadas pela empresa emissora devido a fundos insuficientes na conta.\n\nNota: Em alguns casos, a empresa emissora pode suspender fundos na tua conta, mas não te será cobrado nada."
 	"Checkout_Failed_CC_RestrictedCountry"						"Lamentamos, mas um dos itens que tentaste comprar não está disponível para compra neste país. A compra foi cancelada."
 	"Checkout_Failed_ExceedWalletMax"							"A compra não foi concluída.\nO montante a ser adicionado à Carteira Steam iria exceder o saldo máximo permitido."
 	"Checkout_Failed_AccountLocked"								"A compra não foi concluída. Esta conta está de momento impedida de efetuar compras. Por favor, contacta o Suporte Steam para detalhes."
@@ -1998,6 +1998,7 @@ Com o modo joystick estilo rato, podes jogar com um comando mas com a precisão 
 	"Library_Details_ControllerBindingsGordon_ApplyConfiguration"	"APLICAR CONFIGURAÇÃO"
 	"Library_Details_ControllerBindingsGordon_Share"	"PARTILHAR CONFIG."	
 	"Library_Details_ControllerBindingsGordon_ListenForBinding"	"AGUARDAR POR TECLA"
+	"Library_Details_ControllerBindingsGordon_Reset"			"USAR DESIGNAÇÃO DO CONJ. DE AÇÕES"
 	
 	"Library_Details_CopyToClipboard_Title"				"Partilhar configuração"
 	"Library_Details_CopyToClipboard_Desc"				"Um link para esta configuração foi copiado para a área de transferência."
@@ -2039,6 +2040,7 @@ Com o modo joystick estilo rato, podes jogar com um comando mas com a precisão 
 	"Library_Details_GameActionsHeader"				"SELECIONA UMA AÇÃO NO JOGO"
 	"Library_Details_FieldLabel_InputStyle_GA"		"Ação no jogo"
 	"Library_GameAction_None"						"Nada"
+	"Library_GameAction_ResetToParent"				"Usar designação do conj. de ações"
 
 	"Library_Details_Binding_Custom_Description"		"Descrição personalizada..."
 
@@ -2096,8 +2098,7 @@ Com o modo joystick estilo rato, podes jogar com um comando mas com a precisão 
 	"Library_Details_SourceMode_SingleButton_Title"		"BOTÃO ÚNICO"
 	"Library_Details_SourceMode_FlickStick_Title"		"FLICK STICK"
 	"Library_Details_SourceMode_FlickStick_Acton_Title"	"FS: {s:action}"
-	"Library_Details_SourceMode_Mouse_Joystick_Acton_Title"	"RJ: {s:action}"
-
+	"Library_Details_SourceMode_Mouse_Joystick_Acton_Title"	"JR: {s:action}"
 	"Library_Details_Source_Title_none"			"NÃO ATRIBUÍDO"
 	"Library_Details_Source_Title_left_trackpad"		"Pad esq."
 	"Library_Details_Source_Title_right_trackpad"		"Pad dir."
@@ -2396,6 +2397,8 @@ Com o modo joystick estilo rato, podes jogar com um comando mas com a precisão 
 	"Library_Details_SourceMode_Title_FlickStick"		"Flick Stick"
 	"Library_Details_SourceMode_Title_2DScroll"		"Deslize direcional"
 	"Library_Details_SourceMode_Title_Hotbar"		"Menu de atalhos"
+	"Library_Details_SourceMode_Title_LayerInherit"			"Herdar de conjunto de ações"
+	"Library_Details_SourceMode_Title_LayerNullOverride"	"Nenhum"
 
 	"Library_Details_ModeShift_Title_None"				"Nenhum"
 	"Library_Details_ModeShift_Title_LeftTrigger"		"Pressionar completo do gatilho esquerdo"
@@ -2861,7 +2864,7 @@ Com o modo joystick estilo rato, podes jogar com um comando mas com a precisão 
 	"Profile_TradeOffers_Title"	"Propostas de troca"
 	"Profile_NewTradeOffer_Title"	   "Proposta de troca"
 
-	"SteamUI_JoinDialog_DataRequest_Text" "A concluir instalação... {d:progress}%"
+	"SteamUI_JoinDialog_DataRequest_Text" "A concluir a instalação... {d:progress}%"
 
 	"Notification_GameInviteBody"		"convidou-te para jogar {s:gamename}"
 	"Notification_TheSteamCommunity"	"A Comunidade Steam"
@@ -2986,7 +2989,7 @@ Com o modo joystick estilo rato, podes jogar com um comando mas com a precisão 
 	"Steam_InstallAborted_InfoAppUnreleased"	"{s:game} não pode ser instalado, porque ainda não foi lançado."
 	"Steam_InstallAborted_InfoAppNoDemo"		"{s:game} não pode ser instalado, porque é uma versão demo, e tens a versão completa do produto. Por favor, instala a versão completa do jogo."
 
-	"Steam_NoContentServers_Info"		"Não há servidores do Steam configurados para fornecer conteúdo para este jogo.\nIsto será corrigido em breve. Tenta novamente dentro de alguns minutos."
+	"Steam_NoContentServers_Info"		"Não há servidores de conteúdo do Steam configurados para fornecer conteúdo para este jogo.\nIsto será corrigido em breve. Tenta novamente dentro de alguns minutos."
 	"Steam_App_Install_Failed_Title"	"Erro"
 	"Steam_App_Install_Failed_Text"	"Ocorreu um erro ao instalar o {s:game} ({s:reason})"
 	"Steam_App_Update_Failed_Title"	"Erro"
@@ -3425,6 +3428,7 @@ Com o modo joystick estilo rato, podes jogar com um comando mas com a precisão 
 	"Downloads_Status_downloading"	"A transferir {s:downloadpercent}"
 	"Downloads_Status_preloading"	"A pré-carregar {s:downloadpercent}"
 	"Downloads_Status_unpacking"	"A extrair {s:downloadpercent}"
+	"Downloads_Status_patching"	"A aplicar atualização {s:downloadpercent}"
 	"Downloads_Status_paused"	"Em pausa"
 	"Downloads_Status_queued"	"Na fila"
 	"Downloads_Status_ready"	"Pronto a jogar"
@@ -3434,6 +3438,7 @@ Com o modo joystick estilo rato, podes jogar com um comando mas com a precisão 
 	"Downloads_Status_finished"	"Download terminado às {t:t:downloadfinished}"
 	"Downloads_Status_deferred"	"Download agendado para: {t:t:downloadstart}"
 	"Downloads_Status_locked"	"Todas as licenças deste produto estão em uso"
+	"Downloads_Status_uninstalled"	"Não instalado"
 
 
 	"Quit_LabelStreamingClient0"	"{s:streamingclient0}"
@@ -3448,7 +3453,7 @@ Com o modo joystick estilo rato, podes jogar com um comando mas com a precisão 
 	"Quit_StopStreamingAndSuspendClient3"		"Desligar {s:streamingclient3}"
 	"Quit_MinimizeBigPicture"	"Minimizar o Big Picture"
 	"Quit_QuitBigPicture"		"Sair do Big Picture"
-	"Quit_ExitBigPicture"		"Sair do modo Big Picture"
+	"Quit_ExitBigPicture"		"Voltar ao amb. trabalho"
 	"Quit_EnterSteamOSDesktop"	"Aceder ao Amb. Trabalho"
 	"Quit_ExitSteam"			"Sair do Steam"
 	"Quit_ExitGame"				"Fechar aplicação..."
@@ -5087,6 +5092,8 @@ Com o modo joystick estilo rato, podes jogar com um comando mas com a precisão 
 	"ControllerBinding_ModeDropDown_InGameAction_Description"	"Seleciona esta opção para que o stick ou o pad desempenhem a ação no jogo especificada."
 	"ControllerBinding_ModeDropDown_OtherAction"				"Outra ação no jogo..."
 	"ControllerBinding_ModeDropDown_OtherAction_Description"	"Este jogo tem ações especificamente pensadas para o uso com os gatilhos. Se gostarias de designar outra ação a este gatilho, seleciona esta opção."
+	"ControllerBinding_ModeDropDown_LayerInherit"				"Herdar de conjunto de ações"
+	"ControllerBinding_ModeDropDown_LayerInherit_Description"	"Seleciona esta opção para apagares as alterações efetuadas neste modo e fazeres com que herde o modo definido no conjunto de ações que contém este layer."
 	"ControllerBinding_ModeDropDown_GenericDPad"				"Pad direcional genérico"
 	"ControllerBinding_ModeDropDown_GenericDPad_Description"	"Se queres que este stick ou pad funcione como um Pad direcional genérico, seleciona esta opção."
 
@@ -7296,6 +7303,7 @@ Com o modo joystick estilo rato, podes jogar com um comando mas com a precisão 
 	"controller_unknown"								"Comando desconhecido"
 	"controller_steamcontroller_unknown"				"Comando Steam"
 	"controller_steamcontroller_gordon" 				"Comando Steam"
+	"controller_steamcontroller_neptune"				"Controlos do Steam Deck"
 	"controller_generic"								"Comando genérico"
 	"controller_xbox360"								"Comando Xbox 360"
 	"controller_xboxone"								"Comando Xbox One"

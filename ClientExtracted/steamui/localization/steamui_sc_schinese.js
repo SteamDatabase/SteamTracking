@@ -18,6 +18,7 @@
 	"DisplayStatus_DownloadDisabled": "蒸汽平台处于离线模式，因此无法进行下载。上线以完成此游戏下载。",
 	"DisplayStatus_Compact_Synchronizing": "正在与蒸汽平台云同步",
 	"DisplayStatus_Compact_ParentalBlocked": "受蒸汽平台家庭监护屏蔽",
+	"ContentManagement_Description": "蒸汽平台库文件夹允许将蒸汽平台内容安装到多个驱动器上。",
 	"AppDetails_Feature_SteamWorkshop": "蒸汽平台创意工坊",
 	"AppDetails_TradingCards_Tooltip1": "集换式卡牌会在您游玩过程中掉落。您可以与好友（或在蒸汽平台社区市场中）交易未掉落的卡牌。",
 	"AppDetails_TradingCards_Tooltip2": "集齐一套集换式卡牌并将其合成为游戏徽章。徽章可以提高您的蒸汽平台等级，并将效果解锁至您的个人资料和帐户。",

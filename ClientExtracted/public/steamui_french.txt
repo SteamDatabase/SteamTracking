@@ -154,7 +154,7 @@ Cela devrait prendre moins d'une minute."
 "SteamUI_CreatingAccount"	"Création de votre compte..."
 
 "SteamUI_InstallServiceTitle" "Erreur du service Steam"
-"SteamUI_InstallServiceText" "Une maintenance est requise sur cet ordinateur pour le service Steam.\nCe service offre une aide à l'installation ou à la mise à jour de jeux sur Steam, il permet la mise en place de l'outil anti-triche pour certains titres et prend en charge d'autres tâches au niveau du système.\nLa réinstallation du service Steam requiert des droits d'administrateur."
+"SteamUI_InstallServiceText" "Une maintenance est requise sur cet ordinateur pour le service Steam.\nCe service offre une aide à l'installation ou à la mise à jour de jeux sur Steam, il permet la mise en place de l'outil antitriche pour certains titres et prend en charge d'autres tâches au niveau du système.\nLa réinstallation du service Steam requiert des droits d'administrateur."
 "SteamUI_InstallServiceOk" "Installer le service"
 "SteamUI_InstallServiceCancel" "Annuler"
 
@@ -278,6 +278,21 @@ Cela devrait prendre moins d'une minute."
 "Steam_CloudConflict_Older" " - FICHIERS ANCIENS"
 "Steam_CloudConflict_Unknown" "Inconnue"
 
+"Steam_CloudPendingSessions_Title" "Steam : téléchargements sur le cloud en attente"
+"Steam_CloudPendingSessions_Text" "%pendingops% sessions de %game% n'ont pas été téléchargées en totalité sur Steam Cloud."
+"Steam_CloudPendingSessions_Sessions" "Session la plus récente :"
+"Steam_CloudPendingSessions_RemoteTime" "Dernière modification : %remotetime%"
+"Steam_CloudPendingSessions_RemoteMachine" "Appareil : %remotemachine%"
+"Steam_CloudPendingSessions_RemoteState" "État : %remotestate%"
+"Steam_CloudPendingSessions_IgnoreAndContinue" "Ignorer et continuer"
+"Steam_CloudPendingSessions_Cancel" "Annuler le lancement"
+"Steam_CloudPendingSessions_Note" "Remarque : en ignorant cet avertissement, vous risquez de créer un conflit de fichiers Steam Cloud au moment où la ou les autres sessions reprendront."
+"Steam_CloudPendingSessions_Unknown" "Inconnue"
+"Steam_CloudPendingSessions_UploadNotStarted"	"Téléchargement non commencé"
+"Steam_CloudPendingSessions_GameActive"	"Jeu en cours d'exécution"
+"Steam_CloudPendingSessions_UploadInProgress"	"Téléchargement en cours"
+"Steam_CloudPendingSessions_GameSuspended"	"Interrompu"
+
 "CloudFiles_RemoveFile_Title"	"Steam Cloud - Suppression de fichier"
 "CloudFiles_RemoveFile_Info"				"Voulez-vous vraiment supprimer %filename% de votre Steam Cloud ? Ceci effacera également votre copie locale.\n\n(Cette action est irréversible.)\n"
 "CloudFiles_RemoveFile_Button"			"Supprimer"
@@ -332,7 +347,7 @@ Cela devrait prendre moins d'une minute."
 "SteamUI_AccountDialog_Subscriptions"	"Inscriptions"
 "SteamUI_AccountDialog_AccountDetails"	"Compte"
 "Steam_LogoutDialogTitle"			"Déconnexion"
-"Steam_LogoutDialogMsg"				"Cette action entraînera votre déconnexion de Steam. Vous devrez de nouveau\nsaisir le nom de votre compte et votre mot de passe pour utiliser Steam.\n\nSouhaitez-vous continuer ?"
+"Steam_LogoutDialogMsg"				"Cette action entrainera votre déconnexion de Steam. Vous devrez de nouveau\nsaisir le nom de votre compte et votre mot de passe pour utiliser Steam.\n\nSouhaitez-vous continuer ?"
 "Steam_LogoutDialogOKButton"			"Déconnexion"
 "Steam_LogoutDialogLabel"			"Nom du compte :"
 
@@ -566,7 +581,7 @@ Cela devrait prendre moins d'une minute."
 "Steam_PreloadInProgress"		"Préchargement en cours"
 "Steam_PreloadPause"			"Pause"
 "Steam_PreloadContinue"		"Continuer"
-"Steam_PreloadCancel"		"Vous avez choisi d'annuler le préchargement. Cette opération entraînera la suppression des données que vous avez déjà téléchargées.\n\nChoisissez « OK » pour continuer ou « Annuler » pour conserver ces données."
+"Steam_PreloadCancel"		"Vous avez choisi d'annuler le préchargement. Cette opération entrainera la suppression des données que vous avez déjà téléchargées.\n\nChoisissez « OK » pour continuer ou « Annuler » pour conserver ces données."
 "Steam_CancelPreloading"		"Annuler le préchargement"
 "Steam_PreloadProgressNotes"	"%game% est en cours de préchargement sur votre ordinateur.\n\nSi vous précommandez ce jeu, il sera déverrouillé et prêt à jouer le jour même de sa sortie officielle."
 "Steam_PreloadProgressNotesPayed"	"%game% est en cours de préchargement sur votre ordinateur.\n\nVeuillez patienter, le préchargement peut être long. Vous pouvez fermer cette fenêtre mais laissez Steam fonctionner et vérifiez plus tard."
@@ -929,7 +944,7 @@ Cela devrait prendre moins d'une minute."
 "SteamUI_ValveSurvey_Summary_Month_5"								"mai"
 "SteamUI_ValveSurvey_Summary_Month_6"								"juin"
 "SteamUI_ValveSurvey_Summary_Month_7"								"juillet"
-"SteamUI_ValveSurvey_Summary_Month_8"								"août"
+"SteamUI_ValveSurvey_Summary_Month_8"								"aout"
 "SteamUI_ValveSurvey_Summary_Month_9"								"sept"
 "SteamUI_ValveSurvey_Summary_Month_10"								"oct"
 "SteamUI_ValveSurvey_Summary_Month_11"								"nov"
@@ -1171,7 +1186,7 @@ Cela devrait prendre moins d'une minute."
 
 "Steam_SubscriptionCancelled_InvalidCDKey_Headline" "Code produit non valide"
 "Steam_SubscriptionCancelled_InvalidCDKey" "Le code produit que vous avez saisi n'est pas valide. \n\nVérifiez que vous n'avez pas fait d'erreur en saisissant votre clé. Par exemple, I, L, et 1 peuvent facilement être confondus, tout comme V et Y ou encore 0 et O."
-"Steam_SubscriptionCancelled_InvalidCDKey2" "Si vous voulez activer un code de porte-monnaie Steam ou une carte cadeau, cliquez ici pour l'activer sur le magasin Steam."
+"Steam_SubscriptionCancelled_InvalidCDKey2" "Si vous voulez activer un code de portemonnaie Steam ou une carte cadeau, cliquez ici pour l'activer sur le magasin Steam."
 
 "Steam_SubscriptionCancelled_CDKey_MustOwnOtherApp_Headline" "Veuillez tout d'abord activer le jeu original"
 "Steam_SubscriptionCancelled_CDKey_MustOwnOtherApp" "Le code produit que vous avez indiqué nécessite que vous disposiez d'un autre produit avant de pouvoir être activé.\n\nSi vous essayez actuellement d'activer un pack d'extension ou du contenu téléchargeable, activez tout d'abord le jeu original, puis le contenu complémentaire."
@@ -1206,8 +1221,6 @@ Cela devrait prendre moins d'une minute."
 "Steam_Subscription_Preorder_Timeout" "Votre précommande pour %subscription% n'a pas été effectuée car Steam est actuellement saturé et n'est pas en mesure de traiter votre demande.\n\nNous vous avertirons de la progression de la transaction."
 
 "Steam_SubscriptionCancelled_Cancelled_Headline" "Abonnement annulé"
-"Steam_SubscriptionCancelled_Cancelled"	"Votre abonnement à %subscription% a été annulé. Cet annulation a été effectuée à la demande du propriétaire du compte Steam ou de Valve, conformément à l'accord de souscription Steam."
-
 "Steam_SubscriptionCancelled_ServerFailed_Headline" "Le serveur Steam est actuellement saturé."
 "Steam_SubscriptionCancelled_ServerFailed" "Impossible de vous abonner à %subscription%. Les serveurs Steam sont actuellement saturés et ne peuvent traiter votre requête. \n\nVeuillez nous excuser pour la gêne occasionnée. Essayez de renouveler votre transaction dans quelques heures."
 
@@ -1273,7 +1286,7 @@ Cela devrait prendre moins d'une minute."
 "Steam_BrowseGames"		"Parcourir les jeux..."
 "Steam_Storefront_Title"	"Steam - Parcourir les jeux"
 "Steam_RegisterProductCode"	"Activer un produit sur Steam..."
-"Steam_RedeemWalletVoucher"	"Activer un code de porte-monnaie Steam..."
+"Steam_RedeemWalletVoucher"	"Activer un code de portemonnaie Steam..."
 "Steam_Wallet_PendingBalance" "%amount% (%amount_delayed% en attente)"
 
 "Steam_PurchaseError_SubscriptionAlreadyOwned"	"Vous avez déjà acheté %subscription%."
@@ -1470,12 +1483,12 @@ Vous devrez vous déconnecter de OSX pour que le changement prenne effet."
 
 "Steam_CloudLabel"					"Steam Cloud"
 "Steam_CloudInfo"					"Le Steam Cloud enregistre des informations permettant de partager votre expérience du produit sur plusieurs ordinateurs."
-"Steam_EnableCloud"					"Activer la synchronisation du Steam Cloud pour les applications compatibles"
+"Steam_EnableCloud"					"Activer la synchronisation Steam Cloud pour les applications compatibles"
 "Steam_EnableCloudForApp"			"Activer la synchronisation Steam Cloud pour %game%"
 "Steam_EnableCloudScreenshots"		"Ouvrir le gestionnaire de captures d'écran après la fermeture des jeux si des captures d'écran ont été prises"
 "Steam_CloudUsage"					"%used% enregistré / %available% disponible"
 "Steam_CloudEnableLink"				"Consulter les paramètres / Téléchargements + Cloud"
-"Steam_CloudEnableLinkContinued"	"pour réactiver le Steam Cloud pour votre compte."
+"Steam_CloudEnableLinkContinued"	"pour réactiver Steam Cloud pour votre compte."
 
 "Start_Server_FSMount_Error_Title"	"Serveur dédié - Erreur système de fichiers"
 "Start_Server_FSMount_Error" 		"Échec du montage du système de fichiers Steam."
@@ -1504,11 +1517,9 @@ Vous devrez vous déconnecter de OSX pour que le changement prenne effet."
 "Steam_SteamSubscriberAgreement"	    "Accord de souscription Steam"
 "Steam_SteamSubscriberAgreement_china"	"Accord de licence Steam China"
 "Steam_ComplianceRequired_Title"	"Steam - Attention"
-"Steam_ComplianceRequired_Info"		"L'acceptation des termes de l'accord de souscription Steam est nécessaire pour continuer."
-
 "Steam_Legal_UnreleasedProduct"	"* Ce produit n'est pas encore sorti et ne sera mis à la disposition des acheteurs que lors de sa commercialisation. La date de sortie de ce produit étant indéterminée, les acheteurs ne doivent pas tenir compte des dates de sortie prévisionnelles."
 "Steam_Legal_TimeToShipGoods"	"** Délai de livraison des produits (dont Half-Life 2 Gold) : entre 6 et 8 semaines."
-"Steam_Legal_SSACheckbox"	"Je reconnais que l'accord de souscription Steam ainsi que les termes de l'offre décrits dans la présente s'appliquent à cet achat."
+"Steam_Legal_SSACheckbox"	"Je reconnais que l'Accord de souscription Steam ainsi que les termes de l'offre décrits dans la présente s'appliquent à cet achat."
 "Steam_Legal_SSANext"	"Je suis d'accord"
 "Steam_Legal_SSADisagree"	"Je ne suis pas d'accord"
 "SteamUI_HardwarePromoWizard_Title" "Enregistrement d'une offre promotionnelle"
@@ -1627,7 +1638,6 @@ Vous devrez vous déconnecter de OSX pour que le changement prenne effet."
 "SteamUI_NetworkTroubleshootingTips_URL"	"https://support.steampowered.com/kb_article.php?ref=1456-EUDN-2493&l=french"
 
 
-"SteamUI_SSA_Agree"				"Veuillez lire cet accord entièrement. Vous devez accepter les termes de l'accord de souscription Steam pour continuer."
 "SteamUI_SSA_CybercafeAgree"		"Je suis un opérateur de cybercafé agréé et j'accepte ces termes"
 "SteamUI_SSA_ActivateProduct"		"Pour enregistrer votre produit auprès de Steam et l'ajouter à votre bibliothèque Steam, saisissez ici le code produit fourni avec le CD/DVD ou une autre clé produit Steam. Cliquez sur Suivant pour continuer."
 "SteamUI_ActivateProductLockedDown"		"Votre compte est actuellement auto-verrouillé  ou verrouillé par le Support Steam. Vous ne pouvez pas activer de nouveaux produit tant que ce problème n'est pas résolu."
@@ -1715,7 +1725,7 @@ Vous devrez vous déconnecter de OSX pour que le changement prenne effet."
 "steam_menu_account_details" "Détails du compte"
 "steam_menu_account_view_profile" "Afficher mon profil"
 "steam_menu_account_preferences" "Préférences du magasin"
-"steam_menu_account_wallet" "Afficher mon porte-monnaie"
+"steam_menu_account_wallet" "Afficher mon portemonnaie"
 "steam_menu_account_logout" "Se déconnecter du compte :"
 
 
@@ -1814,7 +1824,7 @@ Vous devrez vous déconnecter de OSX pour que le changement prenne effet."
 "Steam_CloudFile_SyncState_Unknown"	"Inconnu"
 
 "Steam_PublishFile_Title"						"Partager un fichier avec la communauté : %filename%"
-"Steam_PublishFile_Description"			"Partager ce fichier avec la Communauté Steam ?"
+"Steam_PublishFile_Description"			"Partager ce fichier avec la communauté Steam ?"
 "Steam_PublishFile_TitleLabel"			"Titre :"
 "Steam_PublishFile_DescriptionLabel"	"Description :"
 "Steam_PublishFile_VisibilityLabel"	"Visibilité :"
@@ -1823,12 +1833,12 @@ Vous devrez vous déconnecter de OSX pour que le changement prenne effet."
 "Steam_PublishFile_Visibility_Public"	"Publique"
 "Steam_PublishFile_TargetAppLabel" "Publier pour :"
 "Steam_PublishFile_ConfirmButton"		"Envoyer"
-"Steam_PublishFile_Success_VisibilityPrivate"		"Félicitations ! Vous avez envoyé votre fichier dans le cloud. Vous pouvez maintenant partager le lien vers celui-ci, mais ce fichier ne sera pas partagé publiquement avec le reste de la Communauté Steam."
+"Steam_PublishFile_Success_VisibilityPrivate"		"Félicitations ! Vous avez envoyé votre fichier dans le cloud. Vous pouvez maintenant partager le lien vers celui-ci, mais ce fichier ne sera pas partagé publiquement avec le reste de la communauté Steam."
 "Steam_PublishFile_Success_VisibilityFriendsOnly"		"Félicitations ! Vous avez partagé votre fichier avec vos contacts ainsi qu'avec tous ceux à qui vous avez donné le lien vers ce fichier."
-"Steam_PublishFile_Success_VisibilityPublic"		"Félicitations ! Vous avez partagé votre fichier avec le reste de la Communauté Steam."
+"Steam_PublishFile_Success_VisibilityPublic"		"Félicitations ! Vous avez partagé votre fichier avec le reste de la communauté Steam."
 "Steam_PublishFile_Success"		"Remarque : si vous modifiez ce fichier et que vous souhaitez partager ces modifications, il vous faudra publier le fichier à nouveau. Si vous gardez le même titre, toute personne suivant ce fichier recevra automatiquement la dernière version."
-"Steam_PublishFile_Progress"  "Publication du fichier sur la Communauté Steam..."
-"Steam_PublishFile_Failed"		"Un problème a été rencontré lors de la publication du fichier vers la Communauté Steam. Veuillez réessayer plus tard."
+"Steam_PublishFile_Progress"  "Publication du fichier sur la communauté Steam..."
+"Steam_PublishFile_Failed"		"Un problème a été rencontré lors de la publication du fichier vers la communauté Steam. Veuillez réessayer plus tard."
 "Steam_PublishFile_Failed_DuplicateName"	"Un fichier portant le nom que vous avez choisi existe déjà. Veuillez sélectionner un titre différent, ou cocher la case « remplacer » dans les options de publication."
 "Steam_PublishFile_Failed_AccessDenied"		"Vous ne possédez pas le programme pour lequel vous voulez publier des fichiers. Veuillez acheter ce produit avant d'essayer de publier un fichier."
 "Steam_PublishFile_Failed_SyncError"	"Une erreur de synchronisation a été rencontrée lors de la mise à jour de votre fichier. Il se peut que vous ayez à résoudre un conflit de version entre votre copie locale et la copie stockée dans Steam Cloud avant de pouvoir publier ce fichier."
@@ -1920,7 +1930,6 @@ Vous devrez vous déconnecter de OSX pour que le changement prenne effet."
 "ServerBrowser_AppNotFound" "Impossible de se connecter au serveur,\n l'ID de l'application spécifiée par le serveur est invalide."
 "ServerBrowser_NotInitialized" "Steam n'est pas initialisé. Veuillez réessayer."
 
-"SteamUI_SSAUpdatedInfo"	"La version de l'accord de souscription Steam a été mise à jour le %SSA_date%. En utilisant Steam et les jeux Steam vous confirmez avoir lu ces changements et les acceptez."
 "Steam_SSAUpdated_Link"	"Cliquez ici pour voir la version de l'accord mise à jour."
 
 "Steam_Settings_Title"		"Paramètres"
@@ -2271,6 +2280,8 @@ Vous devrez vous déconnecter de OSX pour que le changement prenne effet."
 
 "Steam_Install_CreateApplicationIcon"			"Créez une icône application système"
 "Steam_Install_CreateMultipleApplicationIcon"	"Créez une icône application système pour chaque jeu"
+
+"Steam_Install_ShowLauncherShortcut"			"Créer un raccourci de lancement"
 
 "Steam_Install_InstallRetailFiles"			"Steam va commencer l'installation du contenu du jeu."
 "Steam_Install_WillVerifyExistingFiles"		"Steam va vérifier l'installation de votre jeu."
@@ -3052,17 +3063,17 @@ Invitez sans plus attendre votre premier ami en lui envoyant un cadeau."
 "SteamUI_P2P_DownloadTime"		"Durée du téléchargement :"
 
 "Steam_Win98Warning_Title"	"Steam - Fin de la prise en charge du système d'exploitation"
-"Steam_Win98Warning_Info"		"Steam n'offrira plus d'assistance pour votre version de Windows après le 31 août 2012.
+"Steam_Win98Warning_Info"		"Steam n'offrira plus d'assistance pour votre version de Windows après le 31 aout 2012.
 
 Pour continuer à utiliser Steam sur votre ordinateur, vous devez mettre à jour votre 
 version de Windows vers Windows XP Service Pack 2 ou toute version plus récente."
 
 "Steam_OSEOLWarning_Title"	"Steam - Fin de prise en charge de système d'exploitation"
-"Steam_MacOSX105Warning_Info"		"La prise en charge de Steam sur Mac OS X 10.5 s'arrêtera en août 2014.
+"Steam_MacOSX105Warning_Info"		"La prise en charge de Steam sur Mac OS X 10.5 s'arrêtera en aout 2014.
 Afin de continuer à utiliser Steam sur cet ordinateur, vous devez
 mettre à jour Mac OS X en version 10.6 ou ultérieure."
 
-"Steam_MacOSX105_SupportArticle"  "Veuillez consulter l'article du support Steam pour plus d'informations."
+"Steam_MacOSX105_SupportArticle"  "Veuillez consulter l'article du Support Steam pour plus d'informations."
 "Steam_MacOSX105_SupportURL" "https://support.steampowered.com/kb_article.php?ref=5953-QTIO-1764"
 
 "Steam_MacOSX106Warning_Info"		"Steam n'offrira plus d'assistance pour les ordinateurs Mac OS X 10.6 à partir de novembre 2015.
@@ -3070,7 +3081,7 @@ mettre à jour Mac OS X en version 10.6 ou ultérieure."
 Afin de continuer à utiliser Steam sur cet ordinateur, vous devez
 mettre à jour Mac OS X en version 10.7 ou ultérieure."
 
-"Steam_MacOSX106_SupportArticle"  "Veuillez consulter l'article du support Steam pour plus d'informations."
+"Steam_MacOSX106_SupportArticle"  "Veuillez consulter l'article du Support Steam pour plus d'informations."
 "Steam_MacOSX106_SupportURL" "https://support.steampowered.com/kb_article.php?ref=5953-QTIO-1764&l=french"
 
 "Steam_CPUSSEWarning_Title"	"Steam - Processeur non pris en charge détecté"
@@ -3443,7 +3454,7 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 "SteamUI_Settings_Security_Status_TwoFactor" "Protégé par l'authentificateur mobile Steam Guard"
 "SteamUI_Settings_Security_ManageTwoFactor_Title" "Gérer l'authentificateur mobile Steam Guard"
 "SteamUI_Settings_Security_ManageTwoFactor" "Vous utilisez l'authentificateur mobile Steam Guard. Pour gérer vos paramètres Steam Guard, veuillez ouvrir l'application Steam Mobile sur votre smartphone."
-"SteamUI_Settings_Security_ManageTwoFactor_2" "Si votre téléphone est indisponible de façon permanente, contactez le support Steam pour recevoir de l'aide."
+"SteamUI_Settings_Security_ManageTwoFactor_2" "Si votre téléphone est indisponible de façon permanente, contactez le Support Steam pour recevoir de l'aide."
 
 "SteamUI_ManageSecurity_ChooseName" "Choisissez un nom familier pour cette machine :"
 
@@ -3464,7 +3475,7 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 "SteamUI_ManageSecurity_InfoLabel3" "Steam enverra un message à adresse e-mail associée à votre compte la première fois que vous essaierez d'accéder à votre compte Steam depuis un ordinateur ou un navigateur non reconnu. Ce message comprendra un code d'accès spécial qu'il sera nécessaire d'entrer pour pouvoir vous connecter à votre compte."
 "SteamUI_ManageSecurity_NothingRadio" "Garder mon compte protégé par Steam Guard"
 "SteamUI_ManageSecurity_UnlockRadio" "Désactiver Steam Guard (non recommandé)"
-"SteamUI_ManageSecurity_UnlockWarning" "Remarque : le système d'échange et le Marché de la Communauté Steam seront indisponibles tant que Steam Guard sera désactivé. Ces fonctionnalités resteront indisponibles pendant les 15 jours suivants la réactivation de Steam Guard."
+"SteamUI_ManageSecurity_UnlockWarning" "Remarque : le système d'échange et le marché de la communauté Steam seront indisponibles tant que Steam Guard sera désactivé. Ces fonctionnalités resteront indisponibles pendant les 15 jours suivants la réactivation de Steam Guard."
 
 "SteamUI_ManageSecurity_RemoveOtherComputersButton" "Retirer l'autorisation des autres ordinateurs"
 
@@ -3508,7 +3519,7 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 "Steam_LockedAccountRecover_Title" "Steam Guard - Autorisation de l'ordinateur requise"
 "Steam_RecoverLocked_Info" "Bonjour ! Nous constatons que vous vous connectez à partir d'un nouvel ordinateur."
 "Steam_RecoverLocked_Details" "Par mesure de sécurité supplémentaire, vous allez devoir donner accès à cet ordinateur en saisissant le code spécial que nous venons de vous faire parvenir à votre adresse chez %s1."
-"Steam_RecoverLocked_UseCode" "J'ai reçu le message du support Steam et je suis prêt à saisir mon code d'accès spécial."
+"Steam_RecoverLocked_UseCode" "J'ai reçu le message du Support Steam et je suis prêt à saisir mon code d'accès spécial."
 "Steam_RecoverLocked_MustRecover" "Quel message ? Je ne l'ai pas reçu..."
 "Steam_RecoverLocked_WhyIsThisHappening" "Pourquoi est-ce que cela arrive ?"
 "Steam_RecoverLocked_WhyIsThisHappening_URL" "https://support.steampowered.com/kb_article.php?ref=4020-ALZM-5519&l=french"
@@ -3519,7 +3530,7 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 "Steam_RecoverLocked_WrongCodeDetails" "Revenez en arrière pour entrer votre code si vous l'avez trouvé, ou cliquez sur Suivant pour recevoir l'aide nécessaire afin de vous connecter à votre compte Steam depuis cet ordinateur."
 "Steam_RecoverLocked_ExpiredCodeDetails" "Vérifiez votre boite de courrier électronique pour un e-mail plus récent et cliquez sur retour pour réessayer, ou cliquez sur le bouton suivant pour demander un nouvel e-mail avec un nouveau code."
 "Steam_RecoverLocked_NoEmail" "Avez-vous vérifié dans votre dossier de spam ?"
-"Steam_RecoverLocked_NoEmailDetails" "Si vous ne voyez pas de message récent du support Steam dans votre boîte, essayez de regarder dans le dossier de spam de votre compte e-mail."
+"Steam_RecoverLocked_NoEmailDetails" "Si vous ne voyez pas de message récent du Support Steam dans votre boîte, essayez de regarder dans le dossier de spam de votre compte e-mail."
 "Steam_RecoverLocked_NoEmailDetails2" "Revenez en arrière pour entrer votre code si vous l'avez trouvé, ou cliquez sur Suivant pour recevoir l'aide nécessaire afin de vous connecter à votre compte Steam depuis cet ordinateur."
 "Steam_RecoverLocked_StartRecovery" "Nous sommes là pour vous aider !"
 "Steam_RecoverLocked_StartRecovery2" "Nous savons combien votre compte Steam est important pour vous, et nous faisons tout notre possible pour vous aider à en garder le contrôle."
@@ -3629,6 +3640,7 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 "steam_downloads_downloading"	"Téléchargement en cours"
 "steam_downloads_preloading"	"Préchargement"
 "steam_downloads_unpacking"	"Décompression"
+"steam_downloads_patching"	"Réorganisation..."
 "steam_downloads_paused"	"Mise à jour nécessaire"
 "steam_downloads_queued"	"En attente"
 "steam_downloads_delayed"	"Planifiée pour %delayeduntil%"
@@ -3789,9 +3801,9 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 "steam_welcomemessage_nofriends$apptype=video" "Pour trouver d'autres personnes qui regardent %gamename%, rejoignez <a href=steam://url/CommunityGroupSearch/%encodedsearch%>le groupe de la communauté Steam</a> du produit. Pour voir quelles vidéos vos contacts regardent, <a href=steam://friends/add/>ajoutez-les</a> à votre liste de contacts Steam."
 "steam_welcomemessage_nofriends$apptype=demo" "Pour trouver d'autres personnes qui jouent à %gamename%, rejoignez <a href=steam://url/CommunityGroupSearch/%encodedsearch%>le groupe de la communauté Steam</a> du produit. Pour voir à quels jeux vos contacts jouent, <a href=steam://friends/add/>ajoutez-les</a> à votre liste de contacts Steam."
 
-"steam_welcomemessage_help$apptype=game"	"Si vous avez besoin d'une assistance technique pour ce jeu, consultez les <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>forums Steam de %gamename%</a> ou visitez le site du <a href=http://support.steampowered.com/>support Steam</a>."
-"steam_welcomemessage_help$apptype=application"	"Si vous avez besoin d'une assistance technique pour cette application, consultez les <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>forums Steam de %gamename%</a> ou visitez le site du <a href=http://support.steampowered.com/>support Steam</a>."
-"steam_welcomemessage_help$apptype=video"	"Si vous avez besoin d'une assistance technique pour cette vidéo, consultez les <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>forums Steam de %gamename%</a> ou visitez le <a href=http://support.steampowered.com/>site du support Steam</a>."
+"steam_welcomemessage_help$apptype=game"	"Si vous avez besoin d'une assistance technique pour ce jeu, consultez les <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>forums Steam de %gamename%</a> ou visitez le site du <a href=http://support.steampowered.com/>Support Steam</a>."
+"steam_welcomemessage_help$apptype=application"	"Si vous avez besoin d'une assistance technique pour cette application, consultez les <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>forums Steam de %gamename%</a> ou visitez le site du <a href=http://support.steampowered.com/>Support Steam</a>."
+"steam_welcomemessage_help$apptype=video"	"Si vous avez besoin d'une assistance technique pour cette vidéo, consultez les <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>forums Steam de %gamename%</a> ou visitez le <a href=http://support.steampowered.com/>site du Support Steam</a>."
 "steam_welcomemessage_help$apptype=tool"	"Si vous avez besoin d'une assistance technique pour cet outil, consultez les <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>forums Steam de %gamename%</a> ou visitez le site du <a href=http://support.steampowered.com/>Support Steam</a>."
 "steam_welcomemessage_help$apptype=demo"	"Si vous avez besoin d'une assistance technique pour cette démo, consultez les <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>forums Steam de  %gamename%</a> ou visitez le site du <a href=http://support.steampowered.com/>Support Steam</a>."
 
@@ -3889,7 +3901,7 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 
 "NoBigPicture_Title"		"Mode Big Picture"
 "NoBigPicture_Explanation"	"Le mode Big Picture Steam n'est pas compatible avec votre plate-forme ou votre matériel."
-"NoBigPicture_Anchor"		"Visitez le support Steam pour plus d'informations."
+"NoBigPicture_Anchor"		"Visitez le Support Steam pour plus d'informations."
 
 "NoBigPictureVista_Title"		"Mode Big Picture"
 "NoBigPictureVista_Explanation"	"Le mode Big Picture de Steam nécessite DirectWrite. Il semblerait que vous êtes sous Windows Vista qui prend en charge DirectWrite, mais vous devez installer le SP2 et la mise à jour de la plateforme Windows Vista (disponible via Windows Update)."
@@ -3953,8 +3965,8 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 "steam_published" "Publiée"
 "steam_public" "Publique"
 "steam_friendsonly" "Contacts uniquement"
-"steam_screenshot_upload_info" "Envoi de la capture d'écran sur le Steam Cloud"
-"steam_screenshots_upload_info" "Envoi de %upload_screenshot_count% captures d'écran sur le Steam Cloud"
+"steam_screenshot_upload_info" "Envoi de la capture d'écran sur Steam Cloud"
+"steam_screenshots_upload_info" "Envoi de %upload_screenshot_count% captures d'écran sur Steam Cloud"
 "steam_also_delete_from_cloud" "Supprimer aussi du Steam Cloud"
 "steam_screenshots_error_info" "Une erreur est survenue lors de l'envoi de %ScreenshotsErrors% captures d'écran. Il se peut que Steam Cloud soit temporairement indisponible."
 "steam_screenshots_error_accountban" "Vous n'êtes pas autorisé(e) à télécharger du contenu dans ce hub car votre compte est actuellement banni."
@@ -4029,7 +4041,7 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 "SteamUI_ContentMgr_SelectInstallFolder" "Créez ou sélectionnez un nouveau dossier Steam :"
 "SteamUI_ContentMgr_RemoveFailed" "La suppression du dossier Steam sélectionné a échoué."
 "SteamUI_ContentMgr_RemoveFailedDefaultFolder" "Le dossier d'installation par défaut ne peut pas être supprimé."
-"SteamUI_ContentMgr_RemoveFailedUsedFolder" "Seuls les dossiers Steam vides peuvent être supprimés."
+"SteamUI_ContentMgr_RemoveFailedUsedFolder" "Ce fichier de la bibliothèque est en cours d'utilisation par le jeu %game% et ne peut être supprimé."
 "SteamUI_ContentMgr_FlushDownloadConfig" "Effacer le cache de téléchargement"
 "SteamUI_ContentMgr_FlushDownloadConfigInfo" "Cette opération peut résoudre des problèmes de téléchargement ou de lancement d'applications."
 "SteamUI_ContentMgr_FlushDownloadConfigTip" "Cette opération n'affectera pas les jeux déjà installés ou vos sauvegardes de jeux."
@@ -4254,8 +4266,8 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 "steam_inbox_moderatormessage"	"1 message de la communauté"
 "steam_inbox_moderatormessages"	"%count% messages de la communauté"
 
-"steam_inbox_helprequestreply"		"1 réponse du support Steam"
-"steam_inbox_helprequestreplies"	"%count% réponses du support Steam"
+"steam_inbox_helprequestreply"		"1 réponse du Support Steam"
+"steam_inbox_helprequestreplies"	"%count% réponses du Support Steam"
 
 "Steam_AllowGameLaunch_Info"	"%game% souhaite se lancer avec les paramètres facultatifs affichés ci-dessous."
 "Steam_AllowGameLaunch_Info_args"	"« %arguments% »\n"
@@ -4271,17 +4283,17 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 "Steam_Parental_UnlockFailure"			"Bien essayé ! Veuillez entrer le bon code."
 "Steam_Parental_UnlockFailureExceeded"	"Trop de tentatives ratées. Veuillez redémarrer Steam pour réessayer."
 "Steam_Parental_GameBlocked_Title"		"Mode famille"
-"Steam_Parental_GameBlocked"			"Ce jeu est indisponible en Mode famille."
+"Steam_Parental_GameBlocked"			"Ce jeu est indisponible en mode famille."
 
 "Steam_Parental_LockTitle"				"Mode famille"
-"Steam_Parental_LockInstructions"		"Veuillez confirmer que vous souhaitez revenir au Mode famille."
+"Steam_Parental_LockInstructions"		"Veuillez confirmer que vous souhaitez revenir au mode famille."
 
 "Steam_SiteLicense_Tip_Lock"			"Le mode restreint est activé. Cliquez ici pour plus d'informations."
 "Steam_SiteLicense_LockTitle"			"Mode restreint"
 "Steam_SiteLicense_LockInfo"			"Votre opérateur réseau a restreint l'utilisation de Steam. Certaines fonctionnalités peuvent ne pas être disponibles depuis cet endroit."
 
-"SteamUI_ParentalControl_Tip_Locked"	"Vous êtes en Mode famille. Sélectionnez pour changer."
-"SteamUI_ParentalControl_Tip_Unlocked"	"Vous n'êtes pas en Mode famille. Sélectionnez pour changer."
+"SteamUI_ParentalControl_Tip_Locked"	"Vous êtes en mode famille. Sélectionnez pour changer."
+"SteamUI_ParentalControl_Tip_Unlocked"	"Vous n'êtes pas en mode famille. Sélectionnez pour changer."
 
 "Steam_Parental_Manage"					"Gérer le mode famille"
 
@@ -4526,7 +4538,7 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 "Steam_Settings_StreamingTitle" "Remote Play"
 
 "Steam_Settings_Streaming_Description" "Streamez depuis votre ordinateur vers d'autres appareils. Pour vous connecter, enregistrez-vous avec ce compte Steam sur un autre ordinateur, ou sélectionnez l'option « Autre ordinateur » sur Steam Link."
-"Steam_Settings_Streaming_DeviceName" "NOM DU PÉRIPHÉRIQUE"
+"Steam_Settings_Streaming_DeviceName" "NOM DE L'APPAREIL"
 "Steam_Settings_Streaming_Status" "ÉTAT"
 "Steam_Settings_Streaming_EnableStreaming" "Activer Remote Play"
 "Steam_Settings_Streaming_Pair" "Associer le Steam Link"
@@ -4556,7 +4568,7 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 "Steam_Settings_Streaming_EnableHardwareDecoding" "Activer le décodage matériel"
 "Steam_Settings_Streaming_EnableTrafficPriority_Description" "Si vous avez un routeur haut de gamme ou récent, vous pouvez également activer la hiérarchisation du trafic réseau."
 "Steam_Settings_Streaming_EnableTrafficPriority" "Privilégier le trafic réseau"
-"Steam_Settings_Streaming_PerformanceOverlay" "Superposition des performances"
+"Steam_Settings_Streaming_PerformanceOverlay" "Overlay des performances"
 "Steam_Settings_Streaming_PerformanceOverlayDisabled" "Désactivé"
 "Steam_Settings_Streaming_PerformanceOverlayIcons" "Icônes"
 "Steam_Settings_Streaming_PerformanceOverlayDetails" "Détails"
@@ -4689,7 +4701,7 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 "Steam_Screenshots_ViewOnline" "Voir en ligne"
 "Steam_Screenshots_Caption" "\"%imagecaption%\""
 "Steam_Screenshots_UploadQuota" "Taille de l'envoi %imagesize%, espace restant %storagesize%"
-"Steam_Screenshots_UploadProgress" "Téléchargement de la capture d'écran sur la Communauté Steam..."
+"Steam_Screenshots_UploadProgress" "Téléchargement de la capture d'écran sur la communauté Steam..."
 
 
 "VR_Error_Title"				"Erreur de démarrage de SteamVR"
@@ -4728,7 +4740,7 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 "Steam_WindowsCompat_Continue" "Continuer"
 
 "Steam_WindowsCompat_BigPicture" "Steam est actuellement en cours d’exécution via le mode Compatibilité de Windows. Cela peut empêcher le lancement de Big Picture ou bien signifier que Steam est en cours d’exécution sur Windows XP ou sur une version antérieure."
-"Steam_WindowsCompat_Webhelper" "Le navigateur internet Steam est actuellement en cours d’exécution via le mode Compatibilité de Windows. Ce paramètre peut provoquer des problèmes d'affichage de contenus web.\n\nSteam va corriger ce problème et redémarrer. \n\nSi le problème persiste, veuillez suivre les instructions ci-dessous pour supprimer le mode de comptabilité."
+"Steam_WindowsCompat_Webhelper" "Le navigateur Internet Steam est actuellement en cours d’exécution via le mode Compatibilité de Windows. Ce paramètre peut provoquer des problèmes d'affichage de contenus web.\n\nSteam va corriger ce problème et redémarrer. \n\nSi le problème persiste, veuillez suivre les instructions ci-dessous pour supprimer le mode de comptabilité."
 
 "Steam_InstallIssue_FolderReadOnly"	"Le dossier d'installation de Steam n'est actuellement pas accessible en écriture, ce qui peut provoquer des problèmes lors de l'utilisation de certaines fonctionnalités Steam ou lors du lancement de jeux. \n\nSteam doit réparer ce problème puis redémarrer."
 "Steam_InstallIssue_WindowsRegistry" 	"Le chemin du registre de Steam n'est actuellement pas accessible en écriture, ce qui peut provoquer des problèmes lors de l'utilisation de certaines fonctionnalités Steam ou lors du lancement de jeux. \n\nSteam doit réparer ce problème puis redémarrer."
@@ -4757,8 +4769,6 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 "Steam_Browser_Disabled_NoBrowser" "Le navigateur Steam est désactivé car le paramètre « -no-browser » a été ajouté à la ligne de commande de Steam."
 "Steam_Browser_Disabled_KB" "Consultez cet article du support pour plus d'informations"
 "Steam_Browser_Disabled_KB_URL" "https://support.steampowered.com/kb_article.php?ref=4090-RTKZ-4347"
-"Steam_ViewSSAInBrowser" "Vous devez lire et accepter l'accord de souscription Steam.\n<a href=\"%url%\">Cliquez ici</a> pour ouvrir l'accord dans votre navigateur. Revenez à cette fenêtre pour continuer."
-
 "Steam_VR2DGameWarning_Title" "Avertissement"
 "Steam_VR2DGameWarning_Desc" "%launching_app% se lancera dans un environnement dans votre casque VR ainsi que sur votre écran.\nIl se peut que les performances en souffrent. Pour ne lancer ce jeu que sur votre écran, veuillez quitter SteamVR avant de lancer le jeu."
 "Steam_VR2DGameWarning_Desc_Old" "%launching_app% ne prend pas en charge la VR. Ce titre apparaitra sur votre bureau et pourra affecter les performances VR."

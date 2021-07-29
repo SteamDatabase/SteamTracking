@@ -796,7 +796,7 @@
 "Steam_Settings_Browser_ClearWebCacheMsg"	"Slet alle filer i den indbyggede webbrowser-cache?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
-"RemotePlayTogether_Notification_AvailableToInvite" "Højreklik en ven på din venneliste for at invitere til at spille."
+"RemotePlayTogether_Notification_AvailableToInvite" "Inviter andre til at spille med et link fra din venneliste."
 
 } 
 }  

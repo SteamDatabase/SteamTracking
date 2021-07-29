@@ -34,7 +34,7 @@
 "ServerBrowser_PasswordRequired"		"Αυτός ο διακομιστής απαιτεί συνθηματικό για να συνδεθείτε."
 "ServerBrowser_ServerLabel"			"Διακομιστής:"
 "ServerBrowser_PasswordLabel"			"Συνθηματικό"
-"ServerBrowser_Cancel"				"ΑΚΥΡΟ"
+"ServerBrowser_Cancel"				"ΑΚΥΡΩΣΗ"
 "ServerBrowser_JoinGame"			"ΣΥΝΔΕΣΗ"
 "ServerBrowser_Close"				"ΚΛΕΙΣΙΜΟ"
 "ServerBrowser_AutoRetry"			"ΑΥΤΟΜΑΤΑ"

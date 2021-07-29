@@ -336,7 +336,7 @@
 
 	"MainMenu_Welcome_Sub_Security_PhoneA"					"添加一组短信手机号码"
 	"MainMenu_Welcome_Sub_Security_PhoneB"					"如果您忘记了密码或者完全无法登录您的帐户，Steam 会向您发送文字短信，帮助您找回帐户，继续开心地游戏。"
-	"MainMenu_Welcome_Sub_Security_TwoFactorA"				"双重身份验证\n让您的帐户安全系数飙升"
+	"MainMenu_Welcome_Sub_Security_TwoFactorA"				"双因素验证\n让您的帐户更加安全"
 	"MainMenu_Welcome_Sub_Security_TwoFactorB"				"电子邮件帐户极易被入侵。确保只有您才能访问您的 Steam 帐户，从而保护您的游戏和物品。立即获取 Steam 移动应用。"
 	"MainMenu_Welcome_Sub_Security_DescAction_Phone_Controller"		"按下 <img src=\"file://{images}/library/controller/controller_button_a.png\"/> 键向您的帐户添加手机号码"
 	"MainMenu_Welcome_Sub_Security_DescAction_Phone_MouseKB"		"点击这里向您的帐户添加手机号码"
@@ -1997,6 +1997,7 @@
 	"Library_Details_ControllerBindingsGordon_ApplyConfiguration"	"应用配置"
 	"Library_Details_ControllerBindingsGordon_Share"	"分享配置"	
 	"Library_Details_ControllerBindingsGordon_ListenForBinding"	"侦听键"
+	"Library_Details_ControllerBindingsGordon_Reset"			"重置为操作集按键设置"
 	
 	"Library_Details_CopyToClipboard_Title"				"分享配置"
 	"Library_Details_CopyToClipboard_Desc"				"该配置的链接已复制到您的剪贴板上。"
@@ -2038,6 +2039,7 @@
 	"Library_Details_GameActionsHeader"				"选择一个游戏中操作"
 	"Library_Details_FieldLabel_InputStyle_GA"		"游戏中操作"
 	"Library_GameAction_None"						"无"
+	"Library_GameAction_ResetToParent"				"重置为操作集按键设置"
 
 	"Library_Details_Binding_Custom_Description"		"自定义描述…"
 
@@ -2095,8 +2097,7 @@
 	"Library_Details_SourceMode_SingleButton_Title"		"单一按键"
 	"Library_Details_SourceMode_FlickStick_Title"		"轻推摇杆"
 	"Library_Details_SourceMode_FlickStick_Acton_Title"	"轻推摇杆：{s:action}"
-	"Library_Details_SourceMode_Mouse_Joystick_Acton_Title"	"摇杆：{s:action}"
-
+	"Library_Details_SourceMode_Mouse_Joystick_Acton_Title"	"仿鼠标摇杆：{s:action}"
 	"Library_Details_Source_Title_none"			"未分配"
 	"Library_Details_Source_Title_left_trackpad"		"左触板"
 	"Library_Details_Source_Title_right_trackpad"		"右触板"
@@ -2395,6 +2396,8 @@
 	"Library_Details_SourceMode_Title_FlickStick"		"轻推摇杆"
 	"Library_Details_SourceMode_Title_2DScroll"		"方向性滑动"
 	"Library_Details_SourceMode_Title_Hotbar"		"快捷菜单"
+	"Library_Details_SourceMode_Title_LayerInherit"			"从操作集继承"
+	"Library_Details_SourceMode_Title_LayerNullOverride"	"无"
 
 	"Library_Details_ModeShift_Title_None"				"无"
 	"Library_Details_ModeShift_Title_LeftTrigger"		"LT 键全扣"
@@ -3424,6 +3427,7 @@
 	"Downloads_Status_downloading"	"正在下载 {s:downloadpercent}"
 	"Downloads_Status_preloading"	"正在预先载入 {s:downloadpercent}"
 	"Downloads_Status_unpacking"	"正在解压 {s:downloadpercent}"
+	"Downloads_Status_patching"	"正在修补 {s:downloadpercent}"
 	"Downloads_Status_paused"	"已暂停"
 	"Downloads_Status_queued"	"队列中"
 	"Downloads_Status_ready"	"准备就绪"
@@ -3433,6 +3437,7 @@
 	"Downloads_Status_finished"	"下载结束于 {t:t:downloadfinished}"
 	"Downloads_Status_deferred"	"下载计划于 {t:t:downloadstart}"
 	"Downloads_Status_locked"	"该产品的所有许可已在使用中"
+	"Downloads_Status_uninstalled"	"尚未安装"
 
 
 	"Quit_LabelStreamingClient0"	"{s:streamingclient0}"
@@ -3524,7 +3529,7 @@
 	"SettingsAccount_ManageDeviceAuth" "管理家庭库共享"
 
 	"Settings_Family_Sharing_Title" "家庭库共享"
-	"Settings_Family_Sharing_ManageSharing" "管理其它电脑…"
+	"Settings_Family_Sharing_ManageSharing" "管理其他计算机…"
 	"Settings_Family_Sharing_StateAuthorized" "此计算机目前已被您授权用于家庭库共享。\n选中的帐户在此处登录时可以使用您的游戏库。"
 	"Settings_Family_Sharing_StateNotAuthorized" "授权此计算机用于家庭库共享将允许选中的帐户在您不玩时使用您的游戏库。"
 	"Settings_Family_Sharing_AuthorizeDevice" "授权此计算机"
@@ -4381,7 +4386,7 @@
 	"LostAuthenticator_UseSms"					"发送一条短信代码到我的手机"
 	"LostAuthenticator_EnterRecoveryCode_Description"	"请在下方输入验证器的注册代码（以字母“R”开头并以一些数字结尾）。"
 	"LostAuthenticator_EnterSmsCode_Description"		"请输入我们刚刚发送给您的手机的短信代码。"
-	"LostAuthenticator_RCode"					"救援代码（以字母“R”开头……）"
+	"LostAuthenticator_RCode"					"恢复码（以字母“R”开头……）"
 	"LostAuthenticator_SmsCode"					"短信代码"
 	"LostAuthenticator_Working"					"请稍候…"
 	"LostAuthenticator_Success_Description"		"成功！您已将 Steam 令牌验证器从帐户中移除。\n\n您现在不需要验证器就能登录帐户了。"
@@ -5086,6 +5091,8 @@
 	"ControllerBinding_ModeDropDown_InGameAction_Description"	"选中此选项使摇杆或按键执行指定游戏中操作。"
 	"ControllerBinding_ModeDropDown_OtherAction"				"其他游戏中操作…"
 	"ControllerBinding_ModeDropDown_OtherAction_Description"	"此游戏拥有特别指定使用控制器扳机键的游戏中操作。如果您希望将其他游戏中操作设置在此扳机键上，请选中此选项。"
+	"ControllerBinding_ModeDropDown_LayerInherit"				"从操作集继承"
+	"ControllerBinding_ModeDropDown_LayerInherit_Description"	"选择此选项以清除在此模式中所作的更改，并让其继承包含此操作层的操作集中定义的模式。"
 	"ControllerBinding_ModeDropDown_GenericDPad"				"通用十字键"
 	"ControllerBinding_ModeDropDown_GenericDPad_Description"	"如果您想要将该摇杆或按键与通用十字键执行一样的操作，请选中此选项。"
 
@@ -7298,6 +7305,7 @@
 	"controller_unknown"								"未知控制器"
 	"controller_steamcontroller_unknown"				"Steam 控制器"
 	"controller_steamcontroller_gordon" 				"Steam 控制器"
+	"controller_steamcontroller_neptune"				"Steam Deck 上的控制器"
 	"controller_generic"								"通用手柄"
 	"controller_xbox360"								"Xbox 360 控制器"
 	"controller_xboxone"								"Xbox One 控制器"

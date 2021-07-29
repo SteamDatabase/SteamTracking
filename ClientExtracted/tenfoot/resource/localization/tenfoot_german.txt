@@ -1710,7 +1710,7 @@ Mit dem mausähnlichen Analogstick können Sie mit dem Gamepad spielen und dabei
 	"Controller_Registration_AbortDesc"		"Vorerst wird die Konfiguration von {s:accountname} übernommen. Sobald Sie sich wieder mit Ihrem eigenen Account anmelden, werden wir Ihre Controllerkonfiguration übernehmen."
 	"Controller_Registration_MigrateFail"		"Umstellung fehlgeschlagen"
 	"Controller_Registration_MigrateFailDesc"	"Ein Fehler ist aufgetreten. Bitte versuchen Sie die Registrierung später erneut. Für jetzt melden wir Sie als Gast an."
-	"Controller_Registration_GuestTitle"	"Benutzt einen Gastaccount"
+	"Controller_Registration_GuestTitle"	"Einen Gastaccount verwenden"
 	"Controller_Registration_GuestDesc"		"Ok, wir werden die Einstellungen von {s:accountname} verwenden."
 	"Controller_Registration_ProgressTitle"	"Wird registriert …"
 	"Controller_Registration_Personalize_Title" "PERSONALISIEREN SIE IHREN CONTROLLER"
@@ -2000,6 +2000,7 @@ Mit dem mausähnlichen Analogstick können Sie mit dem Gamepad spielen und dabei
 	"Library_Details_ControllerBindingsGordon_ApplyConfiguration"	"KONFIGURATION ANWENDEN"
 	"Library_Details_ControllerBindingsGordon_Share"	"KONFIGURATION TEILEN"	
 	"Library_Details_ControllerBindingsGordon_ListenForBinding"	"AUF TASTE WARTEN"
+	"Library_Details_ControllerBindingsGordon_Reset"			"AUF TASTENBELEGUNG DES AKTIONSSETS ZURÜCKSETZEN"
 	
 	"Library_Details_CopyToClipboard_Title"				"Konfiguration teilen"
 	"Library_Details_CopyToClipboard_Desc"				"Ein Link zu dieser Konfiguration wurde in die Zwischenablage kopiert."
@@ -2041,6 +2042,7 @@ Mit dem mausähnlichen Analogstick können Sie mit dem Gamepad spielen und dabei
 	"Library_Details_GameActionsHeader"				"SPIELAKTION AUSWÄHLEN"
 	"Library_Details_FieldLabel_InputStyle_GA"		"Aktion im Spiel"
 	"Library_GameAction_None"						"Keine"
+	"Library_GameAction_ResetToParent"				"Auf Tastenbelegung des Aktionssets zurücksetzen"
 
 	"Library_Details_Binding_Custom_Description"		"Eigene Beschreibung …"
 
@@ -2092,14 +2094,13 @@ Mit dem mausähnlichen Analogstick können Sie mit dem Gamepad spielen und dabei
 	"Library_Details_SourceMode_Hotbar_Title"		"HOTBAR-MENÜ"
 	"Library_Details_SourceMode_DPad_Title"				"STEUERKREUZ"
 	"Library_Details_SourceMode_ABXY_Title"				"TASTENFELD"
-	"Library_Details_SourceMode_MouseJoystick_Title"	"MAUSÄHNLICHER ANALOGSTICK"
+	"Library_Details_SourceMode_MouseJoystick_Title"	"MAUSÄHNLICHER JOYSTICK"
 	"Library_Details_SourceMode_MouseRegion_Title"		"MAUSBEREICH"
 	"Library_Details_SourceMode_RadialMenu_Title"		"RADIALMENÜ"
 	"Library_Details_SourceMode_SingleButton_Title"		"EINFACHE TASTE"
 	"Library_Details_SourceMode_FlickStick_Title"		"FLICKSTICK"
 	"Library_Details_SourceMode_FlickStick_Acton_Title"	"FS: {s:action}"
-	"Library_Details_SourceMode_Mouse_Joystick_Acton_Title"	"MA: {s:action}"
-
+	"Library_Details_SourceMode_Mouse_Joystick_Acton_Title"	"MJ: {s:action}"
 	"Library_Details_Source_Title_none"			"NICHT ZUGEWIESEN"
 	"Library_Details_Source_Title_left_trackpad"		"L-Pad"
 	"Library_Details_Source_Title_right_trackpad"		"R-Pad"
@@ -2398,6 +2399,8 @@ Mit dem mausähnlichen Analogstick können Sie mit dem Gamepad spielen und dabei
 	"Library_Details_SourceMode_Title_FlickStick"		"Flickstick"
 	"Library_Details_SourceMode_Title_2DScroll"		"Direktionales Wischen"
 	"Library_Details_SourceMode_Title_Hotbar"		"Hotbar-Menü"
+	"Library_Details_SourceMode_Title_LayerInherit"			"Vom Aktionsset übernehmen"
+	"Library_Details_SourceMode_Title_LayerNullOverride"	"Keine"
 
 	"Library_Details_ModeShift_Title_None"				"Deaktiviert"
 	"Library_Details_ModeShift_Title_LeftTrigger"		"Linker Trigger (Klick)"
@@ -3427,6 +3430,7 @@ Mit dem mausähnlichen Analogstick können Sie mit dem Gamepad spielen und dabei
 	"Downloads_Status_downloading"	"Wird heruntergeladen {s:downloadpercent}"
 	"Downloads_Status_preloading"	"Wird vorausgeladen {s:downloadpercent}"
 	"Downloads_Status_unpacking"	"Wird entpackt {s:downloadpercent}"
+	"Downloads_Status_patching"	"Daten werden verschoben {s:downloadpercent}"
 	"Downloads_Status_paused"	"Pausiert"
 	"Downloads_Status_queued"	"In Warteschlange"
 	"Downloads_Status_ready"	"Bereit zum Spielen"
@@ -3436,6 +3440,7 @@ Mit dem mausähnlichen Analogstick können Sie mit dem Gamepad spielen und dabei
 	"Downloads_Status_finished"	"Download um {t:t:downloadfinished} abgeschlossen"
 	"Downloads_Status_deferred"	"Download geplant für {t:t:downloadstart}"
 	"Downloads_Status_locked"	"Für dieses Produkt sind alle Lizenzen in Benutzung"
+	"Downloads_Status_uninstalled"	"Nicht installiert"
 
 
 	"Quit_LabelStreamingClient0"	"{s:streamingclient0}"
@@ -5088,6 +5093,8 @@ Mit dem mausähnlichen Analogstick können Sie mit dem Gamepad spielen und dabei
 	"ControllerBinding_ModeDropDown_InGameAction_Description"	"Wählen Sie diese Option, um die festgelegte Aktion im Spiel mit einem Stick oder Pad auszuführen."
 	"ControllerBinding_ModeDropDown_OtherAction"				"Andere Aktion im Spiel …"
 	"ControllerBinding_ModeDropDown_OtherAction_Description"	"Dieses Spiel hat Spielaktionen, die speziell für die Nutzung der Trigger des Controllers entworfen wurden. Wenn Sie diesen Trigger lieber mit anderen Spielaktionen belegen möchten, wählen Sie diese Option."
+	"ControllerBinding_ModeDropDown_LayerInherit"				"Vom Aktionsset übernehmen"
+	"ControllerBinding_ModeDropDown_LayerInherit_Description"	"Wählen Sie diese Option aus, um die in diesem Modus vorgenommenen Änderungen zu löschen und den im Aktionsset mit dieser Ebene definierten Modus zu übernehmen."
 	"ControllerBinding_ModeDropDown_GenericDPad"				"Typisches Steuerkreuz"
 	"ControllerBinding_ModeDropDown_GenericDPad_Description"	"Wenn Sie möchten, dass dieser Stick oder Pad als typisches Steuerkreuz fungiert, wählen Sie diese Option aus."
 
@@ -7296,6 +7303,7 @@ Mit dem mausähnlichen Analogstick können Sie mit dem Gamepad spielen und dabei
 	"controller_unknown"								"Unbekannter Controller"
 	"controller_steamcontroller_unknown"				"Steam Controller"
 	"controller_steamcontroller_gordon" 				"Steam Controller"
+	"controller_steamcontroller_neptune"				"Steam Deck Controller"
 	"controller_generic"								"Typisches Gamepad"
 	"controller_xbox360"								"Xbox 360 Controller"
 	"controller_xboxone"								"Xbox One Controller"

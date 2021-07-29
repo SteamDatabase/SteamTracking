@@ -796,7 +796,7 @@
 "Steam_Settings_Browser_ClearWebCacheMsg"	"Alle cachegegevens van de ingebouwde browser verwijderen?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
-"RemotePlayTogether_Notification_AvailableToInvite" "Klik met de rechtermuisknop op iemand in je vriendenlijst om hem of haar uit te nodigen om te spelen."
+"RemotePlayTogether_Notification_AvailableToInvite" "Nodig wie je maar wilt in je vriendenlijst uit om te spelen, gewoon met een link."
 
 } 
 }  

@@ -796,7 +796,7 @@
 "Steam_Settings_Browser_ClearWebCacheMsg"	"是否删除内置网页浏览器中的所有缓存文件？"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "远程同乐"
-"RemotePlayTogether_Notification_AvailableToInvite" "在您的好友列表中右键点击任意好友，即可邀请他们一起游戏。"
+"RemotePlayTogether_Notification_AvailableToInvite" "用您好友列表中的链接邀请任何人畅玩。"
 
 } 
 }  

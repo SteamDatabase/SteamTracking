@@ -1,5 +1,6 @@
 import "steammessages_unified_base.steamclient.proto";
 import "enums.proto";
+import "iclient_objects.proto";
 
 option cc_generic_services = true;
 
@@ -20,6 +21,7 @@ message CCloud_BeginHTTPUpload_Request {
 	repeated string platforms_to_sync = 6 [(description) = "Array of string specifying which platforms to sync; value values: all, Windows, MacOS, linux, Switch, iPhoneOS, Android."];
 	repeated string request_headers_names = 7 [(description) = "Names for headers you'll want to set on your upload request. May be left blank."];
 	repeated string request_headers_values = 8 [(description) = "Values for headers you'll want to set on your upload request. The number of names must equal the number of values."];
+	optional uint64 upload_batch_id = 9 [(description) = "ID of this batch returned by prior BeginAppUploadBatch call."];
 }
 
 message CCloud_BeginHTTPUpload_Response {
@@ -117,6 +119,7 @@ message CCloud_EnumerateUserFiles_Response {
 message CCloud_Delete_Request {
 	optional string filename = 1;
 	optional uint32 appid = 2 [(description) = "App ID the file belongs to."];
+	optional uint64 upload_batch_id = 3 [(description) = "ID of this batch returned by prior BeginAppUploadBatch call."];
 }
 
 message CCloud_Delete_Response {
@@ -160,7 +163,7 @@ message CCloud_BeginAppUploadBatch_Request {
 	optional string machine_name = 2 [(description) = "Client machine name (may be user's alias)."];
 	repeated string files_to_upload = 3 [(description) = "Filenames of files to upload in this batch"];
 	repeated string files_to_delete = 4 [(description) = "Filenames of files to delete in this batch"];
-	optional uint64 client_id = 5 [(description) = "Client ID"];
+	optional uint64 client_id = 5 [(description) = "Client ID number"];
 }
 
 message CCloud_BeginAppUploadBatch_Response {
@@ -299,6 +302,41 @@ message CCloud_GetAppFileChangelist_Response {
 	repeated string machine_names = 5 [(description) = "string table of machine names"];
 }
 
+message CCloud_AppSessionSuspend_Request {
+	optional uint32 appid = 1;
+	optional uint64 client_id = 2;
+	optional string machine_name = 3;
+	optional bool cloud_sync_completed = 4;
+}
+
+message CCloud_AppSessionSuspend_Response {
+}
+
+message CCloud_AppSessionResume_Request {
+	optional uint32 appid = 1;
+	optional uint64 client_id = 2;
+}
+
+message CCloud_AppSessionResume_Response {
+}
+
+message CCloud_AppLaunchIntent_Request {
+	optional uint32 appid = 1;
+	optional uint64 client_id = 2;
+	optional string machine_name = 3;
+	optional bool ignore_pending_operations = 4;
+}
+
+message CCloud_AppLaunchIntent_Response {
+	repeated .CCloud_PendingRemoteOperation pending_remote_operations = 1 [(description) = "pending remote operations you should be aware of"];
+}
+
+message CCloud_AppExitSyncDone_Notification {
+	optional uint32 appid = 1;
+	optional uint64 client_id = 2;
+	optional bool uploads_completed = 3;
+}
+
 message CCloud_AppCloudStateChange_Notification {
 	optional uint32 appid = 1 [(description) = "App which has had a change in cloud state"];
 	optional uint64 app_change_number = 2 [(description) = "New App Change Number"];
@@ -385,6 +423,22 @@ service Cloud {
 
 	rpc GetAppFileChangelist (.CCloud_GetAppFileChangelist_Request) returns (.CCloud_GetAppFileChangelist_Response) {
 		option (method_description) = "Get a list of Cloud file changes for an app given a starting Change Number.";
+	}
+
+	rpc SuspendAppSession (.CCloud_AppSessionSuspend_Request) returns (.CCloud_AppSessionSuspend_Response) {
+		option (method_description) = "An app session is being suspended";
+	}
+
+	rpc ResumeAppSession (.CCloud_AppSessionResume_Request) returns (.CCloud_AppSessionResume_Response) {
+		option (method_description) = "An app session is being resumed";
+	}
+
+	rpc SignalAppLaunchIntent (.CCloud_AppLaunchIntent_Request) returns (.CCloud_AppLaunchIntent_Response) {
+		option (method_description) = "Client intends to launch an app";
+	}
+
+	rpc SignalAppExitSyncDone (.CCloud_AppExitSyncDone_Notification) returns (.NoResponse) {
+		option (method_description) = "Client is done trying to sync after a game session";
 	}
 }
 

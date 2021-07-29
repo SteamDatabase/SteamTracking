@@ -796,7 +796,7 @@
 "Steam_Settings_Browser_ClearWebCacheMsg"	"내장 웹 브라우저 캐시를 모두 삭제하시겠습니까?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
-"RemotePlayTogether_Notification_AvailableToInvite" "친구 목록에서 친구를 오른쪽 클릭하여 게임에 초대하세요."
+"RemotePlayTogether_Notification_AvailableToInvite" "친구 목록에 있는 링크를 통해 누구든지 초대하여 플레이할 수 있습니다."
 
 } 
 }  

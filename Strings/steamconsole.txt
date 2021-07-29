@@ -1,9 +1,9 @@
-h
+(
 __TEXT
 __text
 __TEXT
-P6
-P6
+0?
+0?
 __stubs
 __TEXT
 __stub_helper
@@ -15,16 +15,13 @@ __TEXT
 __gcc_except_tab__TEXT
 __unwind_info
 __TEXT
-__eh_frame
-__TEXT
 __DATA
-0
+@
 
 __nl_symbol_ptr
 __DATA
 __got
 __DATA
-x
 __la_symbol_ptr
 __DATA
 __mod_init_func
@@ -49,6 +46,7 @@ __LINKEDIT
 "
 P
 
+*
 8
 @loader_path/libtier0_s.dylib
 8
@@ -70,13 +68,13 @@ h
 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
 &
 )
-0+
 public
 local
 anonymous
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 13CCallbackImplILi16EE
+13CCallbackBase
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb1EE
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb1EE
 N@
@@ -94,7 +92,6 @@ N12CAppLauncher29CCallback_OnAppLifetimeNoticeE
 10CSteamUser
 N10CSteamUser36CCallbackInternal_OnShutdownLauncherE
 13CCallbackImplILi2EE
-13CCallbackBase
 N10CSteamUser22CCallback_OnSteamLogonE
 9CCallbackI10CSteamUser23SteamServersConnected_tLb0EE
 13CCallbackImplILi1EE
@@ -107,6 +104,7 @@ N10CSteamUser24CCallback_OnLogonFailureE
 N10CSteamUser26CCallback_OnPostLogonStateE
 9CCallbackI10CSteamUser16PostLogonState_tLb0EE
 13CCallbackImplILi7EE
+10CUtlString
 N25CControllerConfigUploader40CCallback_OnRemoteStorageAppSyncedClientE
 9CCallbackI25CControllerConfigUploader30RemoteStorageAppSyncedClient_tLb0EE
 N25CControllerConfigUploader40CCallback_OnRemoteStorageAppSyncedServerE
@@ -118,21 +116,17 @@ N25CControllerConfigUploader40CCallback_OnRemoteStorageAppSyncedServerE
 N20CAppInstallerBuilder27CCallback_OnAppBackupStatusE
 9CCallbackI20CAppInstallerBuilder17AppBackupStatus_tLb0EE
 13CCallbackImplILi40EE
-19CConsoleInputThread
 25SteamClientConVarAccessor
 23IConCommandBaseAccessor
-20CMultipleCallResultsI19CPreDepotOperations27InstallScriptSignResponse_tE
 20CMultipleCallResultsI19CPreDepotOperations17DRMWrapResponse_tE
 20CMultipleCallResultsI19CPreDepotOperations17CEGWrapResponse_tE
 N23CWorkshopItemDownloader30CCallback_OnDownloadItemResultE
 9CCallbackI23CWorkshopItemDownloader20DownloadItemResult_tLb0EE
-_
-convar_
+_convar_
 14ConCommandBase
 10ConCommand
 6ConVar
 NSt3__117bad_function_callE
-11CFileWriter
 11CPathString
 17CFileWriterThread
 N17CFileWriterThread16FileWriterItem_tE
@@ -146,12 +140,10 @@ a
 l
 s
 e
-21CUtlCStringConversion
 18CUtlCharConversion
 19CUtlNoEscConversion
 14CUtlMemoryBase
 Logger
-10CUtlString
 console
 generic
 publish
@@ -169,6 +161,7 @@ vac
 client
 content
 cloud
+logon
 clping
 threads
 test
@@ -204,6 +197,16 @@ Invalid spew group
 CLIENTENGINE_INTERFACE_VERSION005
 ClientAPI_InitGlobalInstance: InternalAPI_Init_Internal failed, most likely because you are missing a 32-bit dependency of steamclient.dylib (the Steam client is a 32-bit app).
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/client_api.cpp
+ClientAPI_Init(GlobalInstance): GetIClientProductBuilder returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientDepotBuilder returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientInventory returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientBluetoothManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientParties returned NULL.
+ClientAPI_RunCallbacks
+com.valvesoftware.steam.ipctool
+ipcserver restart: expected: %d, got: %d
+StopJob
+CreateInterface
 ClientAPI_Init(GlobalInstance): GetIClientUser returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientFriends returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientBilling returned NULL.
@@ -218,8 +221,6 @@ ClientAPI_Init(GlobalInstance): GetIClientUserStats returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientRemoteStorage returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientScreenshots returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientGameCoordinator returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientProductBuilder returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientDepotBuilder returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientAppManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientConfigStore returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientHTTP returned NULL.
@@ -237,20 +238,14 @@ ClientAPI_Init(GlobalInstance): GetIClientShortcuts returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientVR returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientHTMLSurface returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientVideo returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientInventory returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientGameNotifications returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientControllerSerialized returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientBluetoothManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSharedConnection returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientShader returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientCompat returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientParties returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSTARInternal returned NULL.
-ClientAPI_RunCallbacks
-com.valvesoftware.steam.ipctool
-ipcserver restart: expected: %d, got: %d
-StopJob
-CreateInterface
+ClientAPI_Init(GlobalInstance): GetIClientNetworkingUtils returned NULL.
+[SteamNetworkingSockets] %s
 -quicklogin
 Set the base used to construct quick login URLs
 -community
@@ -262,6 +257,7 @@ Set the store URL
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 Missing String for %s (%d)
 Unknown
+OK
 Assertion Failed: 0
 Steam_BGetCallback
 Steam_FreeLastCallback
@@ -279,9 +275,12 @@ Exceeded limit of number of vpk files supported (%d)!
 .%s
 %s%s%s crc=0x%x metadatasz=%d
 fnumber=%d ofs=0x%x sz=%d
+Assertion Failed: (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 Assertion Failed: count >= 0
 Assertion Failed: !pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
-Assertion Failed: (elem == Count()) || IsValidIndex(elem)
+appid
+1
 stopping
 reconfiguring
 preallocating
@@ -307,6 +306,7 @@ Success! App '%u' already up to date.
 Error! App '%u' state is 0x%X after update job.
 Success! App '%u' fully installed.
 Updating Workshop items for App '%u'.
+app_update
 app_update <appid> [-validate] [-language <lang>] [-beta <betaname>] [-betapassword <pwd>] make sure a Steam application is up-to-date
 set_app_beta_password
 set_app_beta_password <appid> -betapassword <pwd>  -- opt-in to the app beta with the given password
@@ -329,6 +329,7 @@ Assertion Failed: m_eAppInfoResult != k_EResultPending
 CAppInfoUpdater::OnAppInfoUpdate
 ERROR! AppInfo request for AppId %d returned error %s.
 CAppUpdater::OnCheckAppBetaPasswordResponse
+%s
 CAppLauncher::OnAppLifetimeNotice
 ERROR! AppId %u launch failed (%s)
 App info request sent.
@@ -344,8 +345,8 @@ ERROR! Failed to request AppInfo update, not online or not logged in to Steam.
 ERROR! Timed out waiting for AppInfo update.
 ERROR! Timed out waiting for password check.
 @NoPromptForPassword
+0
 anonymous
-logon
 see 'login'
 login
 <username> [<password>] [<Steam guard code>] - login to Steam
@@ -433,13 +434,11 @@ Assertion Failed: IsText()
 @DepotBuilderContentRoot
 @DepotBuilderOutputRoot
 @DepotBuilderNoReslist
-0
 @DepotBuilderProgressTimeout
 1000
 %s%capp_build_%u.log
 [%s]:
 
-%s
 preview
 setpublic
 nobaseline
@@ -479,6 +478,8 @@ download_chunk
 download_chunk <appid> <depotid> <sha>: download a single chunk from a depot
 desc
 depotconfigpath
+contentroot
+buildoutput
 %s/%u
 ERROR! Depot config root folder does not exist: %s.
 ERROR! Content root folder does not exist: %s.
@@ -489,8 +490,6 @@ ERROR! Failed to parse application info for app %d
 depotfromapp
 workshopdepot
 ERROR! No depots defined for appID %d.
-Assertion Failed: (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 %s%cdepot_build_%d.vdf
 Building depot %u from '%s'.
 ERROR! Depot config file does not exist %s.
@@ -505,7 +504,6 @@ Successfully finished appID %u build (BuildID %d).
 ERROR! App build file does not exist: %s.
 appbuild
 ERROR! App build file  has invalid format: %s.
-appid
 ERROR! App build file %s has invalid appid.
 setlive
 local
@@ -539,6 +537,7 @@ Chunk download to "%s"
 Chunk download failed : %s
 ERROR! Failed to parse parameters
 -globaluser
+-master_ipc_name_override
 @ShutdownOnFailedCommand
 Exit steamcmd immediately upon any failed build-related command
 @LogFileFolderName
@@ -556,7 +555,6 @@ commandline
 scripts
 convars
 app_build
-app_update
 No specific help topic found for '%s', returning 'find' results. . .
 %20s : %s
 Logging in to Steam
@@ -618,9 +616,9 @@ STEAM_CLIENT_LOG_FOLDER
 -sitelicense
 -gui
 SITE_SERVER_GUI
-1
 SteamAppId
 steam_appid.txt
+steam_master_ipc_name_override
 FAILED (%u)
 +quit
 Running as Site License provider
@@ -636,7 +634,6 @@ Help topics - type "help <topic>" or run with "--help <topic>" for more informat
 You can also type "find <string>" to see a list of all commands and convars that contain or reference <string>.
 Steam Console Client (c) Valve Corporation
 -- type 'quit' to exit --
-OK
 sign_install_script
 sign_install_script <appid> <input filename> <output filename> : upload install script to back end for signing
 drm_wrap
@@ -685,8 +682,6 @@ TC command line: %s
 ERROR %u running TC tool!
 GetBucketManifest ERROR %u!
 GetBucketManifest SUCCESS: baseline manifest: %llu size: %llu bucketID: %llu
-contentroot
-buildoutput
 baselinemanifest
 filemapping
 localpath
@@ -741,17 +736,16 @@ ERROR! Timeout downloading item %llu
 Success. Downloaded item %llu to "%s" (%llu bytes)
 ERROR! Failed to get install info for item %llu.
 ERROR! Download item %llu failed (%s).
-ERROR! Failed to create new workshop item.
-ERROR! ClientRemoteStorage()->FileShare() failed.
-ERROR! ClientRemoteStorage()->PublishWorkshopFile() failed.
 ERROR! Missing build config file.
 ERROR! Not logged on.
 ERROR! Missing parameters.
+ERROR! Failed to create new workshop item.
+ERROR! ClientRemoteStorage()->FileShare() failed.
+ERROR! ClientRemoteStorage()->PublishWorkshopFile() failed.
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/bitstring.cpp
 Assertion Failed: resizeNumBits >= 0
 Assertion Failed: !m_pInt
 Assertion Failed: GetInts()
-{}()'
 {}()':
 Assertion Failed: pName
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/convar.cpp
@@ -812,7 +806,6 @@ m_Memory
 m_queueItemsPending
 m_vecRegisteredWriters
 static_cast<Node_t*>(pNode)->elem
-Assertion Failed: s_bExit
 Assertion Failed: m_queueItemsPending.Count() == 0
 Assertion Failed: m_vecRegisteredWriters.Count() == 0
 CFileWriterThread already exited
@@ -820,7 +813,6 @@ Assertion Failed: pFile
 Assertion Failed: cubData < FIO_MAX_IO_BYTES
 Assertion Failed: pFile->m_hFileDest != INVALID_OSFILEHANDLE
 Assertion Failed: m_vecRegisteredWriters.HasElement( pFile )
-*.*
 CPathString
 .dylib
 %s/%s%s
@@ -1073,6 +1065,7 @@ Must agree to SSA
 Client no longer supported
 The current Steam realm does not match the requested resource
 Signature check failed
+Failed to parse input
 Invalid
 Public
 Beta
@@ -1155,7 +1148,6 @@ CLogger::PublishLogEvent
 %s\%s
 CLogger::EmitEventInternal
 Hit absolute maximum emit event queue size -- NOT adding this event
-Assertion Failed: pLogEvent
 CLogger::FlushEventQueue
 Log event queue grew unreasonably large in a short time!
 Assertion Failed: sm_bShuttingDown && sm_pLogInstance
@@ -1207,7 +1199,6 @@ Assertion Failed: bitNum >= 0 && bitNum < this->Size()
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/bitstring.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/threadtools.h
 Assertion Failed: m_cReentrancyCount >= 0
-Assertion Failed: (unsigned)elem <= (unsigned)m_Size
 @nSpewThrottlePeriodMs
 @nSpewThrottleTriggerThreshold
 10
@@ -1233,21 +1224,35 @@ Assertion Failed: (unsigned)elem <= (unsigned)m_Size
 [i:%u:%u]
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/string_misc.cpp
 E
+0
+@
+=
+0
+0
+0
 @
 @
-@
-\
+0
+0
+Ic
+W
 
 =
 @
-a
+=*.*
 @
 @
-#
-@
-@
-@
+0
 @
 @
 @
-Z
+@
+@
+@
+0
+0
+0
+0
+W
+0
+0

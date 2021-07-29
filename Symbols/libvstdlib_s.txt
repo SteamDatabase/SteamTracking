@@ -331,7 +331,7 @@
  g_VProfile
  g_pMemAllocSteam
  getcwd
- log
+ logf
  longjmp
  lseek
  memchr

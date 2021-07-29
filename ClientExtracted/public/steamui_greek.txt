@@ -152,7 +152,7 @@
 "SteamUI_InstallServiceTitle" "Σφάλμα υπηρεσίας Steam"
 "SteamUI_InstallServiceText" "Το στοιχείο υπηρεσίας Steam στη συσκευή σας απαιτεί κάποια συντήρηση.\nΑυτή η υπηρεσία βοηθάει το Steam να εγκαταστήσει ή να ενημερώσει παιχνίδια, επιτρέπει εντοπισμό κατά κλεψιών και βοηθάει με άλλα καθήκοντα επιπέδου συστήματος.\nΗ επανεγκατάσταση της υπηρεσίας Steam απαιτεί δικαιώματα διαχειριστή."
 "SteamUI_InstallServiceOk" "ΕΓΚΑΤΑΣΤΑΣΗ ΥΠΗΡΕΣΙΑΣ"
-"SteamUI_InstallServiceCancel" "ΑΚΥΡΟ"
+"SteamUI_InstallServiceCancel" "ΑΚΥΡΩΣΗ"
 
 "SteamUI_GamesDialog_MyGames"		"ΤΑ ΠΑΙΧΝΙΔΙΑ ΜΟΥ"
 "SteamUI_GamesDialog_MyMedia"		"ΠΟΛΥΜΕΣΑ"
@@ -193,7 +193,7 @@
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=tool"    	"ΕΚΤΕΛΕΣΗ ΕΡΓΑΛΕΙΟΥ"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=media"    	"Παίξτε"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=music"    	"Αναπαραγωγή"
-"SteamUI_JoinDialog_Cancel_Btn"		"ΑΚΥΡΟ"
+"SteamUI_JoinDialog_Cancel_Btn"		"ΑΚΥΡΩΣΗ"
 "SteamUI_JoinDialog_OverrideThrottle"	"Υπέρβαση ορίου ταχύτητας λήψης"
 "SteamUI_JoinDialog_SkipUpdateInfo" "Παράλειψη ενημέρωσης και εκκίνηση τώρα"
 
@@ -274,6 +274,21 @@
 "Steam_CloudConflict_Older" " - ΠΑΛΑΙΟΤΕΡΟ"
 "Steam_CloudConflict_Unknown" "Άγνωστο"
 
+"Steam_CloudPendingSessions_Title" "Steam – Εκκρεμείς μεταφορτώσεις Steam Cloud"
+"Steam_CloudPendingSessions_Text" "Έχετε %pendingops% συνεδρίες για το %game% που δεν έχουν ολοκληρώσει μεταφορτώσεις στο Steam Cloud."
+"Steam_CloudPendingSessions_Sessions" "Πιο πρόσφατη συνεδρία:"
+"Steam_CloudPendingSessions_RemoteTime" "Τελευταία τροποποίηση: %remotetime%"
+"Steam_CloudPendingSessions_RemoteMachine" "Συσκευή: %remotemachine%"
+"Steam_CloudPendingSessions_RemoteState" "Κατάσταση: %remotestate%"
+"Steam_CloudPendingSessions_IgnoreAndContinue" "Αγνόηση και συνέχεια"
+"Steam_CloudPendingSessions_Cancel" "Ακύρωση εκκίνησης"
+"Steam_CloudPendingSessions_Note" "Σημείωση: Η αγνόηση μπορεί να δημιουργήσει διένεξη αρχείων Steam Cloud όταν οι άλλες συνεδρίες συνεχίσουν."
+"Steam_CloudPendingSessions_Unknown" "Άγνωστες"
+"Steam_CloudPendingSessions_UploadNotStarted"	"Η μεταφόρτωση δεν ξεκίνησε"
+"Steam_CloudPendingSessions_GameActive"	"Εκτελείται"
+"Steam_CloudPendingSessions_UploadInProgress"	"Γίνεται μεταφόρτωση"
+"Steam_CloudPendingSessions_GameSuspended"	"Σε αναστολή"
+
 "CloudFiles_RemoveFile_Title"	"Steam Cloud - Αφαίρεση αρχείου"
 "CloudFiles_RemoveFile_Info"				"Θέλετε σίγουρα να αφαιρέσετε το %filename% από το Steam Cloud σας; Το τοπικό αντίγραφο του αρχείου σας θα διαγραφεί επίσης μόνιμα.\n\n(Αυτή η πράξη δεν μπορεί να αντιστραφεί.)\n"
 "CloudFiles_RemoveFile_Button"			"Αφαίρεση"
@@ -298,7 +313,7 @@
 "SteamUI_GamePropertiesVersion_GameVersionLabel" "Πληροφορίες έκδοσης παιχνιδιού"
 
 "SteamUI_SubscribeProgress_Title"		"Steam - Γίνετε συνδρομητής"
-"SteamUI_SubscribeProgress_Cancel_Btn"		"ΑΚΥΡΟ"
+"SteamUI_SubscribeProgress_Cancel_Btn"		"ΑΚΥΡΩΣΗ"
 
 "SteamUI_WelcomeCreatingAccount_Title"		"Steam - Δημιουργία λογαριασμού"
 "SteamUI_WelcomeCreatingAccount_Failure_Title"	"Steam - Αποτυχία δημιουργίας λογαριασμού"
@@ -1086,7 +1101,7 @@
 "SteamUI_SpecialSurvey_ForwardToWeb"	"Το βήμα 1, η συλλογή πληροφοριών υλικού, ολοκληρώθηκε.\n\nΠατήστε «Τέλος» για να ανοίξετε μια ιστοσελίδα για να ξεκινήσει το βήμα 2. Η δημοσκόπηση δε θα τελειώσει μέχρι να ολοκληρώσετε το βήμα 2."
 "SteamUI_SpecialSurvey_Complete"		"Ευχαριστούμε που ολοκληρώσατε την έρευνα. Η απάντησή σας έχει καταγραφεί."
 "SteamUI_SpecialSurvey_Sending_Data"	"Αποστολή συγκεντρωμένων δεδομένων..."
-"SteamUI_SpecialSurvey_Cancel"			"ΑΚΥΡΟ"
+"SteamUI_SpecialSurvey_Cancel"			"ΑΚΥΡΩΣΗ"
 
 "SteamUI_CZ_SellPage" "http://www.steampowered.com/platform/game_info/czero/"
 "SteamUI_CZ_ReleasedPage" "http://www.steampowered.com/platform/game_info/czero/released.html"
@@ -1626,7 +1641,7 @@
 
 "SteamUI_SSA_Agree"				"Διαβάστε ολόκληρο το συμφωνητικό. Πρέπει να συμφωνείτε με τους όρους του Συμφωνητικού συνδρομητή του Steam για να συνεχίσετε."
 "SteamUI_SSA_CybercafeAgree"		"Είμαι ένας πιστοποιημένος χειριστής Cybercafe και συμφωνώ σε αυτούς τους όρους"
-"SteamUI_SSA_ActivateProduct"		"Για να εγγράψετε το προϊόν σας στο Steam και να το προσθέσετε στη συλλογή σας, εισάγετε τον κωδικό προϊόντος που διανέμεται με ένα CD/DVD λιανικής ή έναν άλλο κωδικό προϊόντος Steam εδώ. Πατήστε «Επόμενο» για να συνεχίσετε."
+"SteamUI_SSA_ActivateProduct"		"Για να ενεργοποιήσετε το προϊόν σας και να το προσθέσετε στη Συλλογή Steam σας, εισαγάγετε τον κωδικό προϊόντος που παρέχεται μαζί με CD/DVD λιανικής ή έναν άλλον κωδικό προϊόντος Steam εδώ. Κάντε κλικ στο κουμπί «Επόμενο» για να συνεχίσετε."
 "SteamUI_ActivateProductLockedDown"		"Ο λογαριασμός σας είναι αυτή τη στιγμή κλειδωμένος από εσάς ή από την Υποστήριξη Steam. Δεν μπορείτε να ενεργοποιήσετε νέα προϊόντα σε αυτόν τον λογαριασμό μέχρι να επιλυθεί το ζήτημα."
 "SteamUI_ActivateProduct_ViewSupportMessage" "Προβολή ενεργών ειδοποιήσεων από την Υποστήριξη Steam"
 
@@ -2076,7 +2091,7 @@
 "Steam_Game_VerifyGameFiles$appType=demo"				"ΕΠΑΛΗΘΕΥΣΗ ΑΡΧΕΙΩΝ DEMO..."
 "Steam_Game_VerifyGameFiles$appType=media"				"ΕΠΑΛΗΘΕΥΣΗ ΑΡΧΕΙΩΝ ΠΟΛΥΜΕΣΟΥ..."
 "Steam_Game_VerifyGameFiles$appType=music"				"ΕΠΑΛΗΘΕΥΣΗ ΑΡΧΕΙΩΝ..."
-"Steam_Game_VerifyGameFiles$appType=tool"				"ΕΠΑΛΗΘΕΥΣΗ ΑΡΧΕΙΩΝ ΕΡΓΑΛΕΙΟΥ..."
+"Steam_Game_VerifyGameFiles$appType=tool"				"ΕΠΑΛΗΘΕΥΣΗ ΑΡΧΕΙΩΝ ΕΡΓΑΛΕΙΟΥ…"
 
 "Steam_DeleteLocalGameContent$appType=application"		"ΑΠΕΓΚΑΤΑΣΤΑΣΗ ΕΦΑΡΜΟΓΗΣ..."
 "Steam_DeleteLocalGameContent$appType=game"		"ΑΠΕΓΚΑΤΑΣΤΑΣΗ ΠΑΙΧΝΙΔΙΟΥ..."
@@ -2268,6 +2283,8 @@
 
 "Steam_Install_CreateApplicationIcon"			"Δημιουργία εικονιδίου εφαρμογής συστήματος"
 "Steam_Install_CreateMultipleApplicationIcon"	"Δημιουργία εικονιδίου εφαρμογής για κάθε παιχνίδι"
+
+"Steam_Install_ShowLauncherShortcut"			"Δημιουργία συντόμευσης προγράμματος εκκίνησης"
 
 "Steam_Install_InstallRetailFiles"			"Το Steam τώρα θα αρχίσει να εγκαθιστά το περιεχόμενο του παιχνιδιού."
 "Steam_Install_WillVerifyExistingFiles"		"Το Steam θα επαληθεύσει την εγκατάσταση του παιχνιδιού σας."
@@ -2918,8 +2935,8 @@
 
 "Steam_GamesDialog_RightClick_RemoveFromHidden"	"Αφαίρεση από τα κρυμμένα"
 
-"Steam_GamesDialog_RightClick_AddToUnblockedGames"			"Προσθήκη σε Παιχνίδια κοινής χρήσης"
-"Steam_GamesDialog_RightClick_RemoveFromUnblockedGames"		"Αφαίρεση από Παιχνίδια κοινής χρήσης"
+"Steam_GamesDialog_RightClick_AddToUnblockedGames"			"Προσθήκη σε οικογενειακά παιχνίδια"
+"Steam_GamesDialog_RightClick_RemoveFromUnblockedGames"		"Αφαίρεση από οικογενειακά παιχνίδια"
 
 "steam_menu_checkforupdates"						"Έλεγχος για ενημερώσεις του Steam..."
 "steam_menu_checkforupdates_osx"					"Έλεγχος για ενημερώσεις…"
@@ -3399,7 +3416,7 @@
 "SteamUI_JoinDialog_PreparingToPlay" 	"Προετοιμασία για εκκίνηση %game% %dots%"
 "SteamUI_JoinDialog_Title"		"%game% - Steam"
 "SteamUI_JoinDialog_Updating_Title" 	"Ενημέρωση του %game%"
-"SteamUI_JoinDialog_Ready_Title"	"Έτοιμο — %game%"
+"SteamUI_JoinDialog_Ready_Title"	"Έτοιμο – %game%"
 "SteamUI_JoinDialog_NoName_Title" 	"Steam"
 "SteamUI_JoinDialog_InstallScriptInfo"	"Πραγματοποιείται εγκατάσταση για πρώτη φορά %dots% \n\\Εγκατάσταση: %stepname% (βήμα %step% από %steptotal%)"
 
@@ -3588,7 +3605,7 @@
 "steam_library_filter_installedlocallygames"	"Τοπικά"
 "steam_library_filter_addtag"	"Προσθήκη νέας κατηγορίας..."
 "steam_library_filter_owner" "ΠΑΙΧΝΙΔΙΑ ΤΟΥ %owner%"
-"steam_library_filter_unblocked"		"Παιχνίδια κοινής χρήσης"
+"steam_library_filter_unblocked"		"Παιχνίδια οικογένειας"
 "steam_library_unknown_owner" "Άλλα παιχνίδια"
 "steam_library_filter_mygames" "ΤΑ ΠΑΙΧΝΙΔΙΑ ΜΟΥ"
 "steam_library_filter_screenshots"	"Στιγμιότυπα"
@@ -3622,6 +3639,7 @@
 "steam_downloads_downloading"	"ΛΗΨΗ"
 "steam_downloads_preloading"	"Προφόρτωση"
 "steam_downloads_unpacking"	"Ξεπακετάρισμα"
+"steam_downloads_patching"	"Γίνεται ενημέρωση"
 "steam_downloads_paused"	"Απαιτείται ενημέρωση"
 "steam_downloads_queued"	"Σε σειρά"
 "steam_downloads_delayed"	"Προγραμματίστηκε για %delayeduntil%"
@@ -4022,7 +4040,7 @@
 "SteamUI_ContentMgr_SelectInstallFolder" "Δημιουργία ή επιλογή νέου φακέλου Steam:"
 "SteamUI_ContentMgr_RemoveFailed" "Αποτυχία αφαίρεσης φακέλου συλλογής Steam."
 "SteamUI_ContentMgr_RemoveFailedDefaultFolder" "Ο προεπιλεγμένος φάκελος εγκατάστασης Steam δεν μπορεί να αφαιρεθεί."
-"SteamUI_ContentMgr_RemoveFailedUsedFolder" "Μόνο κενοί φάκελοι συλλογής Steam μπορούν να αφαιρεθούν."
+"SteamUI_ContentMgr_RemoveFailedUsedFolder" "Αυτός ο φάκελος συλλογής Steam χρησιμοποιείται αυτή τη στιγμή από το «%game%» και δεν μπορεί να αφαιρεθεί."
 "SteamUI_ContentMgr_FlushDownloadConfig" "ΕΚΚΑΘΑΡΙΣΗ ΜΝΗΜΗΣ ΛΗΨΕΩΝ"
 "SteamUI_ContentMgr_FlushDownloadConfigInfo" "Η εκκαθάριση της μνήμης λήψεων μπορεί να επιλύσει προβλήματα για τη λήψη ή την εκκίνηση εφαρμογών"
 "SteamUI_ContentMgr_FlushDownloadConfigTip" "Αυτό δε θα επηρεάσει τα ήδη εγκατεστημένα ή αποθηκευμένα παιχνίδια σας"
@@ -4043,7 +4061,7 @@
 "Steam_MoveAppFolder_Title" "Μετακίνηση φακέλου εγκατάστασης"
 "Steam_MoveAppFolder_SelectFolder" "Επιλέξτε τον φάκελο συλλογής Steam στον οποίο θα μεταφερθούν τα αρχεία:"
 "Steam_MoveAppFolder_Move" "ΜΕΤΑΚΙΝΗΣΗ ΦΑΚΕΛΟΥ"
-"Steam_MoveAppFolder_Cancel" "ΑΚΥΡΟ"
+"Steam_MoveAppFolder_Cancel" "ΑΚΥΡΩΣΗ"
 "Steam_MoveAppFolder_Close" "ΚΛΕΙΣΙΜΟ"
 "Steam_MoveAppFolder_Info" "Το %game% είναι εγκατεστημένο στον φάκελο συλλογής «%folder%». "
 "Steam_MoveAppFolder_Success" "Επιτυχία, μετακινήθηκαν %numfiles% αρχεία στον νέο φάκελο συλλογής."
@@ -4189,7 +4207,7 @@
 "Steam_DeviceAuth_RequestDialog_From" "Ευχαριστώ,\n%user%"
 "Steam_DeviceAuth_RequestDialog_Text" "Θέλετε να παρέχετε πρόσβαση της συλλογής Steam σας σε αυτόν τον υπολογιστή;"
 "Steam_DeviceAuth_RequestDialog_Description" "Ονομάστε αυτόν τον υπολογιστή:"
-"Steam_DeviceAuth_RequestDialog_Cancel" "ΑΚΥΡΟ"
+"Steam_DeviceAuth_RequestDialog_Cancel" "ΑΚΥΡΩΣΗ"
 "Steam_DeviceAuth_RequestDialog_Send" "Αποστολή αιτήματος"
 "Steam_DeviceAuth_RequestDialog_SendOK" "Ο κάτοχος έχει ήδη εξουσιοδοτήσει αυτή τη συσκευή για κοινή χρήση παιχνιδιών. Είστε έτοιμος."
 "Steam_DeviceAuth_RequestDialog_SendError" "Αποτυχία αποστολής αιτήματος εξουσιοδότησης (%reason%)"

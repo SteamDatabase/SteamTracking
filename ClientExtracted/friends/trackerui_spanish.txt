@@ -796,7 +796,7 @@
 "Steam_Settings_Browser_ClearWebCacheMsg"	"¿Borrar todos los archivos de la caché del navegador web integrado?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
-"RemotePlayTogether_Notification_AvailableToInvite" "Haz clic derecho sobre cualquier amigo para invitarlo a jugar."
+"RemotePlayTogether_Notification_AvailableToInvite" "Invita a jugar, con un enlace, a quien quieras de tu lista de amigos."
 
 } 
 }  

@@ -87,7 +87,7 @@
 "Steam_ErrorPasswordTooShort" "Noua ta parolă trebuie să aibă cel puțin 8 caractere."
 "Steam_ErrorPasswordsDontMatch" "Parolele introduse nu corespund.\nTe rugăm să introduci aceeași parolă în ambele câmpuri."
 "Steam_ErrorCantStartGame" "Momentan acest joc nu este disponibil.\nTe rugăm să încerci din nou altădată."
-"Steam_ErrorCantStartGameDetailed" "Lansarea jocului a eșuat (%error%)."
+"Steam_ErrorCantStartGameDetailed" "Jocul nu a putut porni (%error%)."
 "Steam_ErrorCantRunBecauseRequires64bitOS"	"Jocul nu a putut porni deoarece rulezi o versiune pe 32 de biți a Windowsului, iar o versiune pe 64 de biți este necesară.\n\nDacă jocul dispune de o opțiune de lansare pe 32 de biți, te rugăm să o selectezi, altfel vei avea nevoie de un PC cu o versiune pe 64 de biți a Windowsului.\nDacă nu ai un PC compatibil, apasă mai jos pentru a afla mai multe despre rambursări.\n"
 "Steam_ErrorCantStartGameDependency" "Jocul nu a putut fi pornit cu conținutul împărtășit. Te rugăm să actualizezi mai întâi jocurile:\n\n %detail%"
 "Steam_ErrorUsernameTooShort" "Trebuie să introduci un nume de cel puțin 3 caractere."
@@ -221,13 +221,13 @@
 "SteamUI_JoinDialog_VerifyingFiles_Error" "Nu s-au putut verifica fișierele semnate pentru %game%. Este necesară validarea conținutului."
 "SteamUI_JoinDialog_CreateProcess_Error" "Pornirea procesului pentru %game% a eșuat:\n\n%detail%"
 
-"SteamUI_JoinDialog_OpenVRStartupFailure" "Pornirea jocului %game% în modul VR a eșuat. (Eroare: %error%)"
+"SteamUI_JoinDialog_OpenVRStartupFailure" "%game% nu a putut porni în modul RV. (Eroare: %error%)"
 "SteamUI_JoinDialog_OpenVRWaitingForQuit" "Se așteaptă ca %quitting_game% să părăsească %dots%"
 
 "SteamUI_JoinDialog_UpdatingAppInfo" "Se actualizează configurația %dots%"
 "SteamUI_JoinDialog_UpdatingAppTicket" "Se actualizează tichetul %dots%"
 
-"SteamUI_JoinDialog_TimedTrial_Error" "Perioada de probă pentru %game% nu a putut începe. (Eroare: %error%)"
+"SteamUI_JoinDialog_TimedTrial_Error" "%game% nu a putut porni ca perioadă de probă. (Eroare: %error%)"
 
 "SteamUI_SetCustomImage_Title" "%gamename% - Setează imagine personalizată"
 "SteamUI_SetCustomImage_ChooseImage" "Alege o imagine care să reprezinte %gamename% în afişarea tip grilă din Steam."
@@ -272,6 +272,21 @@
 "Steam_CloudConflict_Newer" " - MAI NOU"
 "Steam_CloudConflict_Older" " - MAI VECHI"
 "Steam_CloudConflict_Unknown" "Necunoscut"
+
+"Steam_CloudPendingSessions_Title" "Steam – Există sesiuni pentru care se așteaptă încărcarea în cloud"
+"Steam_CloudPendingSessions_Text" "Există %pendingops% sesiuni ale jocului %game% pentru care încărcarea în Steam Cloud nu a fost finalizată."
+"Steam_CloudPendingSessions_Sessions" "Cea mai recentă sesiune:"
+"Steam_CloudPendingSessions_RemoteTime" "Ultima modificare: %remotetime%"
+"Steam_CloudPendingSessions_RemoteMachine" "Dispozitiv: %remotemachine%"
+"Steam_CloudPendingSessions_RemoteState" "Stare: %remotestate%"
+"Steam_CloudPendingSessions_IgnoreAndContinue" "Ignoră și continuă"
+"Steam_CloudPendingSessions_Cancel" "Anulează lansarea"
+"Steam_CloudPendingSessions_Note" "Notă: ignorarea poate crea un conflict de fișiere în Steam Cloud atunci când sunt reluate celelalte sesiuni."
+"Steam_CloudPendingSessions_Unknown" "Necunoscută"
+"Steam_CloudPendingSessions_UploadNotStarted"	"Încărcarea nu a pornit"
+"Steam_CloudPendingSessions_GameActive"	"În desfășurare"
+"Steam_CloudPendingSessions_UploadInProgress"	"Se încarcă"
+"Steam_CloudPendingSessions_GameSuspended"	"Suspendată"
 
 "CloudFiles_RemoveFile_Title"	"Steam Cloud - Elimină fișierul"
 "CloudFiles_RemoveFile_Info"				"Ești sigur că vrei să ștergi %filename% din Steam Cloud? Acest lucru va duce și la ștergerea definitivă a copiei locale a fișierului.\n\n(Această acțiune e ireversibilă.)\n"
@@ -331,8 +346,8 @@
 "Steam_LogoutDialogOKButton"			"Deconectare"
 "Steam_LogoutDialogLabel"			"Nume cont:"
 
-"Steam_FlushConfigDialogTitle"			"Steam - Șterge cache-ul descărcat"
-"Steam_FlushConfigDialogMsg"			"Fișierele descărcate local vor fi șterse și va trebui să te autentifici din nou pe Steam.\n\nDorești să continui?"
+"Steam_FlushConfigDialogTitle"			"Steam - Golește cache-ul de descărcare"
+"Steam_FlushConfigDialogMsg"			"Fișierele descărcate local vor fi șterse și va trebui să te conectezi din nou pe Steam.\n\nDorești să continui?"
 
 "Steam_AccountDialog_Logout"			"Deconectare..."
 "Steam_RunGame_Title_Error"			"Steam - Eroare"
@@ -468,7 +483,7 @@
 "Steam_ConversionNotEnoughDiskSpace_Info"	"Nu ai spațiu suficient pe disc pentru a instala jocurile selectate.\nTe rugăm să eliberezi spațiu pe disc sau să apeși butonul „Înapoi” și să debifezi câteva titluri."
 "Steam_ConversionNotEnoughDiskSpaceForConversion_Info"	"Nu este spațiu suficient pe disc pentru a converti jocurile selectate la Steam.\nTe rugăm să eliberezi %s1 Mb de spațiu pe disc și să încerci din nou."
 "Steam_Interface"				"Interfață"
-"Steam_EnableGPUWebViews_Option"		"Activează randarea accelerată cu GPU în vederea pe web (necesită restartare)"
+"Steam_EnableGPUWebViews_Option"		"Activează randarea accelerată pentru placa video în vizualizările web (necesită restartare)"
 "Steam_SmoothScrollWebViews_Option"		"Activează derularea lină pentru vizualizarea web (necesită repornire)"
 "Steam_SetJumplistOptions"		"Setări Listă Rapidă"
 "Steam_ShowOnlineStatusOptions"	"Alege opțiunile online care vor fi afișate"
@@ -1298,8 +1313,8 @@ Te rugăm să reintroduci parola dorită."
 "Steam_InstallGameInfo_Preload"		"Ești pe cale să pre-încarci %game%.\n"
 
 "Steam_App_Install_Failed_Title"	"Steam - Eroare"
-"Steam_App_Install_Failed_Text"		"A intervenit o eroare la instalarea %game% (%reason%)"
-"Steam_App_Install_Failed_Text_Long"	"A apărut o eroare în timpul instalării %game% (%reason%) :\n\n%detail%"
+"Steam_App_Install_Failed_Text"		"A apărut o eroare în timpul instalării jocului %game% (%reason%)"
+"Steam_App_Install_Failed_Text_Long"	"A apărut o eroare în timpul instalării jocului %game% (%reason%) :\n\n%detail%"
 
 "Steam_App_LegacyKey_Denied_Title" "Steam - Avertisment"
 
@@ -1311,8 +1326,8 @@ Te rugăm să reintroduci parola dorită."
 "Steam_App_LegacyKey_OutOfKeys_Text" "Pentru moment, Steam nu mai are coduri de produs neutilizate necesare pentru %game%.\n\nVom putea să-ți oferim un cod de produs după ce primim mai multe coduri de la distribuitor.\nTe rugăm să încerci din nou mai târziu sau poți solicita o rambursare acum."
 
 "Steam_App_Update_Failed_Title"	"Steam - Eroare"
-"Steam_App_Update_Failed_Text" "A apărut o eroare la actualizarea %game% (%reason%)"
-"Steam_App_Update_Failed_Text_Long" "A apărut o eroare în timpul actualizării %game% (%reason%) :\n\n%detail%"
+"Steam_App_Update_Failed_Text" "A apărut o eroare în timpul actualizării jocului %game% (%reason%)"
+"Steam_App_Update_Failed_Text_Long" "A apărut o eroare în timpul actualizării jocului %game% (%reason%) :\n\n%detail%"
 "Steam_App_Update_NotEnoughDiskSpace" "Insuficient spațiu disponibil pe disc pentru a actualiza %game% (%detail% necesar)		"
 "Steam_App_Update_NotEnoughDiskQuota" "Insuficientă cotă disponibilă pe disc pentru a actualiza %game% (%detail% necesar)"
 "Steam_App_Update_LockedByProcess" "Un fișier al %game% a fost blocat de către %program% și nu poate fi actualizat. Te rugăm să închizi acest program și să încerci din nou.\n\n Program: %executable%\n Fișier: %detail%"
@@ -1441,7 +1456,7 @@ Te rugăm să reintroduci parola dorită."
 "Steam_SubscribeShippingInfo"	"Te rugăm să introduci adresa de expediere curentă."
 
 "Steam_ChangeUser" "Conectează-te cu alt cont..."
-"Steam_NoSavePersonalInfoCheck" "Nu salva datele contului pe acest PC"
+"Steam_NoSavePersonalInfoCheck" "Nu salva datele de conectare pe acest computer"
 "Steam_NoSavePersonalInfoCheckDescription" "Opţiune recomandată pentru PC-urile publice.\n\nReţine că asta va dezactiva modul 'Offline'."
 
 "Steam_PurchaseZipCodeInfoInvalid"    "Te rugăm să introduci un cod poștal valid, de 5 cifre"
@@ -2265,6 +2280,8 @@ Te rugăm să reintroduci parola dorită."
 
 "Steam_Install_CreateApplicationIcon"			"Creează o iconiță a unei aplicații de sistem"
 "Steam_Install_CreateMultipleApplicationIcon"	"Creează o pictogramă de sistem pentru fiecare joc"
+
+"Steam_Install_ShowLauncherShortcut"			"Creează scurtătură pentru lansator"
 
 "Steam_Install_InstallRetailFiles"			"Steam va începe acum instalarea conţinutului jocului."
 "Steam_Install_WillVerifyExistingFiles"		"Steam va verifica acum instalarea jocului."
@@ -3095,7 +3112,7 @@ Pentru a juca acest joc trebuie fie să faci upgrade de sistem, fie să foloseş
 Pentru a participa la unul dintre testele beta, alege-l din lista de mai jos şi dă clic pe 'OK'. (Pentru a părăsi toate programele beta, alege FĂRĂ)."
 
 "Steam_ReadMoreAboutBetas"	"Află mai multe despre testele beta Steam"
-"Steam_SelectNoBeta"	"FĂRĂ - Optează pentru a părăsi toate programele beta"
+"Steam_SelectNoBeta"	"NICIUNUL - Părăsește toate programele beta"
 "Steam_BetaIsOver" "Mulţumim pentru participarea la programul beta %betaname% din Steam.  
 
 Acum beta s-a încheiat - te rugăm restartează Steam pentru a te reîntoarce la starea iniţială."
@@ -3277,7 +3294,7 @@ Fă-ţi un prieten nou pe Steam, trimiţând un cadou prin e-mail către cineva 
 "SteamUI_AgeOver17" "Da, am peste 17 ani."
 
 "SteamUI_RootDialog_Start_Problem_Title" "Steam - Lansarea jocului a eşuat"
-"SteamUI_RootDialog_Start_Problem_Text" "Pornirea %game% a eşuat (cod de eroare %error%)."
+"SteamUI_RootDialog_Start_Problem_Text" "%game% nu a putut porni (cod de eroare: %error%)."
 "Steam_ExternalSignup" "Administrează contul jocului..."
 "Steam_ExternalRegistrationURL"			"Înregistrează jocul..."
 
@@ -3419,7 +3436,7 @@ Fă-ţi un prieten nou pe Steam, trimiţând un cadou prin e-mail către cineva 
 "SteamUI_VerifyEmail_Unverified" " | Neverificată"
 
 "SteamUI_ManageSecurityButton" "Administrează securitatea Steam Guard a contului..."
-"SteamUI_ManageSecurity_Title" "Configurare Steam Guard"
+"SteamUI_ManageSecurity_Title" "Gestionează Steam Guard"
 
 "SteamUI_Settings_Security_Status_Label" "Stare de securitate:"
 "SteamUI_Settings_Security_Status_State_0" "Adresa de e-mail nu este verificată"
@@ -3617,7 +3634,8 @@ Fă-ţi un prieten nou pe Steam, trimiţând un cadou prin e-mail către cineva 
 "steam_downloads_updating"	"Se actualizează"
 "steam_downloads_downloading"	"Se descarcă"
 "steam_downloads_preloading"	"Se preîncarcă"
-"steam_downloads_unpacking"	"Se despachetează"
+"steam_downloads_unpacking"	"Se dezarhivează"
+"steam_downloads_patching"	"Se corectează"
 "steam_downloads_paused"	"Necesită actualizare"
 "steam_downloads_queued"	"În așteptare"
 "steam_downloads_delayed"	"Programat pentru %delayeduntil%"
@@ -4018,9 +4036,9 @@ Fă-ţi un prieten nou pe Steam, trimiţând un cadou prin e-mail către cineva 
 "SteamUI_ContentMgr_SelectInstallFolder" "Creează sau selectează un folder nou pentru biblioteca Steam:"
 "SteamUI_ContentMgr_RemoveFailed" "Eliminarea folderului selectat din biblioteca Steam a eșuat."
 "SteamUI_ContentMgr_RemoveFailedDefaultFolder" "Folderul implicit Steam pentru instalare nu poate fi eliminat."
-"SteamUI_ContentMgr_RemoveFailedUsedFolder" "Numai folderele goale din biblioteca Steam pot fi eliminate."
-"SteamUI_ContentMgr_FlushDownloadConfig" "Curăță cache-ul de descărcări"
-"SteamUI_ContentMgr_FlushDownloadConfigInfo" "Curățarea cache-ului de descărcări ar putea rezolva problemele legate de descărcări sau pornirea aplicațiilor"
+"SteamUI_ContentMgr_RemoveFailedUsedFolder" "Acest folder din biblioteca Steam este folosit momentan de „%game%” și nu poate fi eliminat."
+"SteamUI_ContentMgr_FlushDownloadConfig" "Golește cache-ul de descărcare"
+"SteamUI_ContentMgr_FlushDownloadConfigInfo" "Golirea cache-ului de descărcare ar putea rezolva problemele legate de descărcări sau pornirea aplicațiilor."
 "SteamUI_ContentMgr_FlushDownloadConfigTip" "Aceasta nu va afecta jocurile tale deja instalate sau salvările de joc"
 
 "SteamUI_ContentMgr_Repair_Title" "Repararea bibliotecii Steam"
@@ -4108,7 +4126,7 @@ Fă-ţi un prieten nou pe Steam, trimiţând un cadou prin e-mail către cineva 
 "Steam_AppUpdateError_25"		"aplicația nu a fost încă lansată"
 "Steam_AppUpdateError_26"		"acces restricționat geografic"
 "Steam_AppUpdateError_27"		"fișiere cache de conținut deteriorate"
-"Steam_AppUpdateError_28"		"lipsă fișier executabil"
+"Steam_AppUpdateError_28"		"lipsește executabilul"
 "Steam_AppUpdateError_29"		"platformă nevalidă"
 "Steam_AppUpdateError_30"		"sistem de fișiere nesuportat"
 "Steam_AppUpdateError_31"		"fișiere de actualizare corupte"
@@ -4475,11 +4493,11 @@ Artiști"
 "Steam_Settings_Controller"					"Controler"
 "Steam_SettingsControllerTitle"				"Configurarea controllerului"
 "Steam_SettingsControllerDescription"		"Setările generale ale controllerului permit activarea sau dezactivarea suportului de configurare, personalizarea și alte opțiuni."
-"Steam_SettingsControllerGeneralSettings"	"Setările generale ale controllerului"
+"Steam_SettingsControllerGeneralSettings"	"Setările generale ale controlerului"
 "Steam_SettingsControllerBindingDescription"		"Configurările controlerului îi permit unui controler să aibă anumite setări în anumite contexte în afara unui joc."
 "Steam_SettingsControllerBigPictureConfig"	"Configurarea pentru Big Picture"
 "Steam_SettingsControllerDesktopConfig"		"Configurație Desktop"
-"Steam_SettingsControllerGuideConfig"		"Configurarea pentru comenzile rapide ale butonului Steam"
+"Steam_SettingsControllerGuideConfig"		"Configurarea pentru comenzile rapide\nale butonului Steam"
 "Steam_SteamInputDisableNotifications"		"Dezactivează notificările de conectare ale controlerelor din clientul desktop."
 
 "Steam_Settings_ShaderCache"			"Shader pre-cache"
@@ -4522,7 +4540,7 @@ Artiști"
 "Steam_Settings_Streaming_Pair" "Asociază Steam Linkul"
 "Steam_Settings_Streaming_Unpair" "Anulează asocierea\ndispozitivelor"
 "Steam_Settings_Streaming_UnpairConfirmation" "Sigur dorești să anulezi asocierea tuturor dispozitivelor?"
-"Steam_Settings_Streaming_SetPIN" "Setează codul de securitate"
+"Steam_Settings_Streaming_SetPIN" "Setează codul\nde securitate"
 "Steam_Settings_Streaming_UnsupportedPlatform" "Găzduirea nu este disponibilă momentan pe această platformă"
 "Steam_Settings_Streaming_HostLabel" "Opțiuni gazdă:"
 "Steam_Settings_Streaming_HostPlayAudioAlways" "Redă sunetul pe calculatorul gazdă"

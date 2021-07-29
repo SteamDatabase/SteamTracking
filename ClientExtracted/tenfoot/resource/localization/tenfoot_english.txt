@@ -7309,6 +7309,7 @@
 	"controller_unknown"								"Unknown Controller"
 	"controller_steamcontroller_unknown"				"Steam Controller"
 	"controller_steamcontroller_gordon" 				"Steam Controller"
+	"controller_steamcontroller_neptune"				"Steam Deck Controller"
 	"controller_generic"								"Generic Gamepad"
 	"controller_xbox360"								"Xbox 360 Controller"
 	"controller_xboxone"								"Xbox One Controller"

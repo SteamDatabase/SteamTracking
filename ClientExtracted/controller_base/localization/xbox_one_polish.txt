@@ -33,4 +33,5 @@
 	"origin_xboxone_button_paddle_2"				"Łopatka P2"
 	"origin_xboxone_button_paddle_3"				"Łopatka P3"
 	"origin_xboxone_button_paddle_4"				"Łopatka P4"
-	}
+	"origin_xboxone_button_share"					"Przycisk Share"
+}

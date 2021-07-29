@@ -1,37 +1,38 @@
 __TEXT
+*
+*
 __text
 __TEXT
 @
-dr
 @
 __stubs
 __TEXT
 __stub_helper
 __TEXT
 __gcc_except_tab__TEXT
-__cstring
-__TEXT
-`
-"
-`
-"
 __const
+__TEXT
+v#
+v#
+__cstring
 __TEXT
 __objc_methname
 __TEXT
 7
 __unwind_info
 __TEXT
-__eh_frame
-__TEXT
-0c(
-0c(
+$o
 __DATA
-
+*
+*
 __nl_symbol_ptr
 __DATA
+*
+*
 __got
 __DATA
+*
+*
 __la_symbol_ptr
 __DATA
 __mod_init_func
@@ -44,29 +45,28 @@ __DATA
 __objc_classrefs__DATA
 __data
 __DATA
-8N
 __thread_vars
 __DATA
-__thread_bss
+0
+__thread_data
 __DATA
-__common
+@
+__thread_bss
 __DATA
 __bss
 __DATA
+__common
+__DATA
 H
 __LINKEDIT
-`/
+/
 
 8
 @loader_path/steamservice.dylib
 "
-`/
-p/
-H
 P
-{
-|
 
+*
 `
 h
 >
@@ -84,19 +84,46 @@ x
 /usr/lib/libc++.1.dylib
 8
 /usr/lib/libSystem.B.dylib
+`
+/System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork
 h
 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
 8
 /usr/lib/libobjc.A.dylib
 &
 )
-O,
+Hc8z,
+0
+0
+!
+Z,
 Hi
 H=
+"
+
+=)
+3&
 ?
+&
+Ic
+Hc
+Hc
+Hc
+0
+L!
+0
+AT=
+AT5
+AT5
+AT=
+?
+D
+@
+@
+10CUtlString
 10CIPCServer
-11CPipeWaiter
 10IIPCServer
+11CPipeWaiter
 11IPipeWaiter
 21CWorkThreadPoolSignal
 21IWorkThreadPoolSignal
@@ -145,24 +172,23 @@ IClientProcessMonitor
 RegisterProcess
 UnregisterProcess
 TerminateProcess
+SuspendProcess
+ResumeProcess
 IClientSecureDesktop
 BStartStreaming
 StopStreaming
 SendSAS
 14CServiceEngine
-25CClientModuleManagerAsync
 21CWorkItemFunctionCall
-25CFastTimerCumulativeTimer
-16CCumulativeTimerIdLy1EE
 14CUtlLinkedListIP21CWorkItemFunctionCalliE
 24CClientModuleManagerBase
 20IClientModuleManager
 20CClientModuleManager
 N20ClientProcessMonitor21CClientProcessMonitorE
-N20ClientProcessMonitor17CMonitoredProcessE
 21IClientProcessMonitor
 N17VacProcessMonitor9CProviderE
 N17VacProcessMonitor9IProviderE
+N20ClientProcessMonitor17CMonitoredProcessE
 11CRefCountedI20CRefCountServiceBaseILb0E6CRefSTEE
 20CRefCountServiceBaseILb0E6CRefSTE
 18CScheduledFunctionIN20ClientProcessMonitor21CClientProcessMonitorEE
@@ -173,99 +199,142 @@ N17VacProcessMonitor9IProviderE
 19CClientInstallUtils
 19IClientInstallUtils
 N6google8protobuf14FatalExceptionE
-N6google8protobuf7ClosureE
-N6google8protobuf8internal16FunctionClosure0E
+NSt3__119basic_ostringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE
+NSt3__115basic_stringbufIcNS_11char_traitsIcEENS_9allocatorIcEEEE
+type.googleapis.com/
+type.googleprod.com/
 N6google8protobuf8internal15ExtensionFinderE
 N6google8protobuf8internal24GeneratedExtensionFinderE
+N6google8protobuf8internal12ExtensionSet8KeyValueE
+N6google8protobuf13RepeatedFieldIiEE
+N6google8protobuf13RepeatedFieldIxEE
+N6google8protobuf13RepeatedFieldIjEE
+N6google8protobuf13RepeatedFieldIyEE
+N6google8protobuf13RepeatedFieldIfEE
+N6google8protobuf13RepeatedFieldIdEE
+N6google8protobuf13RepeatedFieldIbEE
+N6google8protobuf16RepeatedPtrFieldINSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEEE
+N6google8protobuf8internal20RepeatedPtrFieldBaseE
+N6google8protobuf16RepeatedPtrFieldINS0_11MessageLiteEEE
+NSt3__13mapIiN6google8protobuf8internal12ExtensionSet9ExtensionENS_4lessIiEENS_9allocatorINS_4pairIKiS5_EEEEEE
 N6google8protobuf11MessageLiteE
-
-
-N6google8protobuf8internal12FieldSkipperE
 N6google8protobuf2io19ZeroCopyInputStreamE
-N6google8protobuf2io20ZeroCopyOutputStreamE
+
+
 N6google8protobuf2io16ArrayInputStreamE
-N6google8protobuf2io17ArrayOutputStreamE
 N6google8protobuf2io18StringOutputStreamE
-!
-!
-!
-!
-1
-!
-A
-9
-!
 
 
 N6google8protobuf12_GLOBAL__N_123AggregateErrorCollectorE
 N6google8protobuf17DescriptorBuilder17OptionInterpreter21AggregateOptionFinderE
-(
-@
-P
+N6google8protobuf18DescriptorDatabaseE
+N6google8protobuf25EncodedDescriptorDatabaseE
+0
+H
 `
 x
-8
-P
-h
 $
-8
-(
+x
 0
-@
-<
 H
-8
-(
-8
+`
+H
+T
+X
 (
 0
-0
+L
 8
 @
-A
-B
-D
-H
-C
-h
-i
-j
 P
+
+h
+0
 H
+(
+8
+(
+0
+8
+9
+(
+P
+X
+`
+h
+p
+x
+0
+
+
 I
 J
+K
 0
+L
+P
+M
+N
+O
 0
-4
-5
-6
-8
-7
-@
-H
+(
 I
 0
-H
-0
-H
-0
-H
 0
 0
-8
-@
+L
+0
+0
 H
 P
 X
+8
+@
 0
+`
+h
 H
+0
+8
+<
+#
++
+(
+.
+5
+7
+F
 P
+V
+f
+`
+q
+x
+(
+z
+p
+0
+@
+@
+P
+X
+P
+P
+P
+P
+(
+`
+p
+@
 N6google8protobuf17FileDescriptorSetE
 N6google8protobuf19FileDescriptorProtoE
 N6google8protobuf30DescriptorProto_ExtensionRangeE
+N6google8protobuf29DescriptorProto_ReservedRangeE
 N6google8protobuf15DescriptorProtoE
+N6google8protobuf21ExtensionRangeOptionsE
 N6google8protobuf20FieldDescriptorProtoE
 N6google8protobuf20OneofDescriptorProtoE
+N6google8protobuf37EnumDescriptorProto_EnumReservedRangeE
 N6google8protobuf19EnumDescriptorProtoE
 N6google8protobuf24EnumValueDescriptorProtoE
 N6google8protobuf22ServiceDescriptorProtoE
@@ -273,6 +342,7 @@ N6google8protobuf21MethodDescriptorProtoE
 N6google8protobuf11FileOptionsE
 N6google8protobuf14MessageOptionsE
 N6google8protobuf12FieldOptionsE
+N6google8protobuf12OneofOptionsE
 N6google8protobuf11EnumOptionsE
 N6google8protobuf16EnumValueOptionsE
 N6google8protobuf14ServiceOptionsE
@@ -281,48 +351,48 @@ N6google8protobuf28UninterpretedOption_NamePartE
 N6google8protobuf19UninterpretedOptionE
 N6google8protobuf23SourceCodeInfo_LocationE
 N6google8protobuf14SourceCodeInfoE
-N6google8protobuf18DescriptorDatabaseE
-N6google8protobuf25EncodedDescriptorDatabaseE
+N6google8protobuf28GeneratedCodeInfo_AnnotationE
+N6google8protobuf17GeneratedCodeInfoE
+NSt3__121__basic_string_commonILb1EEE
+N6google8protobuf8internal16InternalMetadata9ContainerINS0_15UnknownFieldSetEEE
+N6google8protobuf8internal16InternalMetadata13ContainerBaseE
 N6google8protobuf14DynamicMessageE
 N6google8protobuf21DynamicMessageFactoryE
 N6google8protobuf8internal29DescriptorPoolExtensionFinderE
-N6google8protobuf8internal26GeneratedMessageReflectionE
+N6google8protobuf8internal12MapFieldBaseE
+N6google8protobuf8internal15DynamicMapFieldE
+N6google8protobuf8internal23TypeDefinedMapFieldBaseINS0_6MapKeyENS0_11MapValueRefEEE
+N6google8protobuf16RepeatedPtrFieldINS0_7MessageEEE
+NSt3__13mapINS_17reference_wrapperIKN6google8protobuf6MapKeyEEEPvNS_4lessIS4_EENS3_8internal12MapAllocatorINS_4pairIKS6_S7_EEEEEE
 N6google8protobuf7MessageE
-N6google8protobuf10ReflectionE
 N6google8protobuf14MessageFactoryE
 N6google8protobuf12_GLOBAL__N_123GeneratedMessageFactoryE
-!
+N6google8protobuf8internal30RepeatedFieldPrimitiveAccessorIiEE
+N6google8protobuf8internal20RepeatedFieldWrapperIiEE
+N6google8protobuf8internal33RandomAccessRepeatedFieldAccessorE
+N6google8protobuf8internal21RepeatedFieldAccessorE
+N6google8protobuf8internal30RepeatedFieldPrimitiveAccessorIjEE
+N6google8protobuf8internal20RepeatedFieldWrapperIjEE
+N6google8protobuf8internal30RepeatedFieldPrimitiveAccessorIxEE
+N6google8protobuf8internal20RepeatedFieldWrapperIxEE
+N6google8protobuf8internal30RepeatedFieldPrimitiveAccessorIyEE
+N6google8protobuf8internal20RepeatedFieldWrapperIyEE
+N6google8protobuf8internal30RepeatedFieldPrimitiveAccessorIfEE
+N6google8protobuf8internal20RepeatedFieldWrapperIfEE
+N6google8protobuf8internal30RepeatedFieldPrimitiveAccessorIdEE
+N6google8protobuf8internal20RepeatedFieldWrapperIdEE
+N6google8protobuf8internal30RepeatedFieldPrimitiveAccessorIbEE
+N6google8protobuf8internal20RepeatedFieldWrapperIbEE
+N6google8protobuf8internal30RepeatedPtrFieldStringAccessorE
+N6google8protobuf8internal23RepeatedPtrFieldWrapperINSt3__112basic_stringIcNS3_11char_traitsIcEENS3_9allocatorIcEEEEEE
+N6google8protobuf8internal16MapFieldAccessorE
+N6google8protobuf8internal31RepeatedPtrFieldMessageAccessorE
+N6google8protobuf8internal23RepeatedPtrFieldWrapperINS0_7MessageEEE
+N6google8protobuf10TextFormat17BaseTextGeneratorE
 N6google8protobuf10TextFormat6FinderE
-N6google8protobuf10TextFormat17FieldValuePrinterE
+N6google8protobuf10TextFormat21FastFieldValuePrinterE
 N6google8protobuf10TextFormat6Parser10ParserImpl20ParserErrorCollectorE
-N6google8protobuf12_GLOBAL__N_129FieldValuePrinterUtf8EscapingE
-N6google8protobuf8internal27UnknownFieldSetFieldSkipperE
-A
-=
-A
-0
-1
-(
-1
-*
-1
--
-!
-1
-$
-A
-4
-1
-)
-A
->
-1
-'
-A
-<
-!
-1
-/
+N6google8protobuf10TextFormat7Printer13TextGeneratorE
 N6google8protobuf2io14ErrorCollectorE
 @
 6
@@ -590,7 +660,6 @@ nnn
 BBB
 LLL
 333
-
 @
 @
 @
@@ -1168,13 +1237,11 @@ N11SteamStdLib12ICommandLineE
 17IDebugStatsSystem
 16CKeyValuesSystem
 16IKeyValuesSystem
-20CUniformRandomStream
 20IUniformRandomStream
 0@
 zD
+$tI
 6ConVar
-11CPathString
-21CUtlCStringConversion
 18CUtlCharConversion
 19CUtlNoEscConversion
 14CUtlMemoryBase
@@ -1183,8 +1250,10 @@ _12CStdMemAlloc
 0C
 0E
 0C
-0EN16SteamThreadTools7CThreadE
+0E
+N16SteamThreadTools7CThreadE
 Y@
+14CCryptoKeyBase
 24CCryptoKeyBase_RawBuffer
 11CRSAKeyBase
 13CRSAPublicKey
@@ -1196,32 +1265,56 @@ N10OSXHelpers13CCompatThreadE
 12CIPRangeList
 10CUtlVectorI9IPRange_t10CUtlMemoryIS0_EE
 10CUtlVectorI8CNetMask10CUtlMemoryIS0_EE
-10CUtlString
 14CFrameFunctionI7CJobMgrE
 14CUtlLinkedListIN7CJobMgr13JobYielding_tEiE
 kvsignatures
 kvsign2
 Logger
+11CRefCountedI20CRefCountServiceBaseILb1E6CRefMTEE
 6CTHashIP18IUDPSocketCallbackjE
 6CTHashIP16ITCPHostCallbackjE
+20CRefCountServiceBaseILb1E6CRefMTE
+25CFastTimerCumulativeTimer
+16CCumulativeTimerIdLy1EE
+22CBaseScheduledFunction
 14CFrameFunctionI21CScheduledFunctionMgrE
 14CUtlLinkedListIP22CBaseScheduledFunctioniE
-22CBaseScheduledFunction
-(
-0
-4
-8
-8
-(
-0
-<
-=
->
-?
 @
 H
+L
+(
+h
+0
+@
+@P
+d
+l
+T
+`
+X
+p
+m
+t
+8
+x
+|
+
+
+<
+0
+,
+8
+(
+0
+L
+M
+N
+O
+8
+@
 P
 Q
+
 !
 "
 #
@@ -1229,14 +1322,22 @@ $
 %
 &
 '
-$
-%
+(
+
+
+T
+U
+V
+W
+\
+]
+X
 (
 8
+@
 H
-P
-X
-&
+^
+
 (
 $
 0
@@ -1245,34 +1346,36 @@ $
 <
 @
 D
+4
 8
-(
-0
-8
-<
-@
-`
 H
+P
+0
+X
+\
+8
+`
 d
 p
 h
 x
 t
+
+
+h
 (
+p
 0
-4
 8
+t
+x
+|
 @
 H
-L
-p
-P
 X
-`
-h
-x
-t
-u
+P
+
+
 (
 0
 8
@@ -1283,9 +1386,29 @@ P
 X
 $
 (
+,
 0
 4
 8
+(
+1
+K
+R
+(
+T
+Z
+[
+g
+@
+n
+X
+0
+`
+(
+H
+@
+h
+@
 13CMsgIPAddress
 19CMsgIPAddressBucket
 18CMsgProtoBufHeader
@@ -1302,66 +1425,7 @@ $
 14CClanEventData
 16CBilling_Address
 25CPackageReservationStatus
-0
-(
-$
-0
-(
-4
-8
-H
-@
-L
-`
-P
-X
-h
-d
-p
-t
-x
-$
-(
-,
-8
-0
-@
-<
-H
-h
-l
-P
-X
-`
-p
-x
-m
-$
-(
-,
-0
-8
-H
-@
-I
-L
-J
-K
-19CMsgClientHeartBeat
-32CMsgClientServerTimestampRequest
-33CMsgClientServerTimestampResponse
-16CMsgClientSecret
-15CMsgClientLogon
-23CMsgClientLogonResponse
-44CMsgClientRequestWebAPIAuthenticateUserNonce
-52CMsgClientRequestWebAPIAuthenticateUserNonceResponse
-16CMsgClientLogOff
-19CMsgClientLoggedOff
-21CMsgClientNewLoginKey
-29CMsgClientNewLoginKeyAccepted
-21CMsgClientAccountInfo
-26CMsgClientChallengeRequest
-27CMsgClientChallengeResponse
+NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 14CWSASendThread
 6CTHashIP14CTCPConnectionjE
 26CSharedUDPSocketPollHelper
@@ -1370,8 +1434,6 @@ K
 9CWorkItem
 11CWorkThread
 15CWorkThreadPool
-11CRefCountedI20CRefCountServiceBaseILb1E6CRefMTEE
-20CRefCountServiceBaseILb1E6CRefMTE
 unknown
 Stop spewing for %s::%s, too many calls
 %08u %s:%02u > %s::%s(
@@ -1411,6 +1473,9 @@ Steam3 Client Engine
 CIPCServer::Thread_MainLoop() -- Sleep
 Assertion Failed: m_pWaiter->Count()
 Assertion Failed: m_bThreadActive != m_ThreadClient.IsAlive()
+RunInterface returned true but didn't produce a result?
+Assertion Failed: bufRet.TellPut() == 0
+Assertion Failed: bufRet.TellPut() > 0
 Assertion Failed: !"Unknown IPC command code"
 IPC client is in my process, could/should be using an in-process pipe.
 connectpipe should occur on the client pipe, not the master pipe
@@ -1427,7 +1492,6 @@ Assertion Failed: m_TotalElements != InvalidIndex()
 %s overflow!
 Assertion Failed: IsValidIndex(elem)
 Assertion Failed: IsInList(before)
-Assertion Failed: IsValidIndex( elem )
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
 Assertion Failed: _IsValidIndex( elem, unNodeSize, pMemBase )
 Assertion Failed: _IsValidIndex( y, unNodeSize, pMemBase )
@@ -1442,7 +1506,6 @@ Assertion Failed: false
 Assertion Failed: m_dwThreadID == ThreadGetCurrentId()
 CServerPipe::SerializeCallbacks()
 Assertion Failed: !pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
-Assertion Failed: (elem == Count()) || IsValidIndex(elem)
 Assertion Failed: bManualReset
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/processpipe_posix.cpp
 Assertion Failed: m_fds[1] != k_SOCKET_WRAPPER
@@ -1455,7 +1518,6 @@ socket listen failed: %s
 BConnectToPipe - couldn't set SO_NOSIGPIPE
 accept called on uninitialized socket - m_hPipeFd = %d, m_bInit = %s
 true
-false
 accept called on a client socket
 accept with a null output pointer
 127.0.0.1
@@ -1508,6 +1570,7 @@ Assertion Failed: pModule->m_pModule == NULL
 Assertion Failed: pModule->m_hModule == NULL
 _runfunc
 vsrvmodule
+Assertion Failed: IsValidIndex( elem )
 Assertion Failed: m_activeProcessIdToImagePath.NextInorder( nNewIndex ) == nMapIndex
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/SteamServiceClient/serviceprocessmonitor.cpp
 Assertion Failed: !m_bIsInCallback
@@ -1530,15 +1593,6 @@ SteamService: invalid signature %s
 SteamService: parsing failed %s
 SteamService: file missing %s
 SteamService: registry key not in white list: %s (%d)
-google/protobuf/stubs/common.cc
-This program requires version
-of the Protocol Buffer runtime library, but the installed version is
-.  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
-".)
-This program was compiled against version
-of the Protocol Buffer runtime library, which is not compatible with the installed version (
-).  Contact the program author for an update.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
-%d.%d.%d
 INFO
 WARNING
 ERROR
@@ -1546,86 +1600,169 @@ FATAL
 [libprotobuf %s %s:%d] %s
 %ld
 %lu
-pthread_mutex_lock:
-pthread_mutex_unlock:
+:
+google/protobuf/stubs/stringpiece.cc
+size too big:
+details:
+google/protobuf/stubs/strutil.cc
+CHECK failed: errors == nullptr:
+Error reporting not implemented.
+CHECK failed: (digits) < (100):
+-inf
+%.*g
+CHECK failed: snprintf_result > 0 && snprintf_result < kDoubleToBufferSize:
+CHECK failed: value != nullptr:
+t
+yes
+y
+false
+f
+no
+CHECK failed: snprintf_result > 0 && snprintf_result < kFloatToBufferSize:
+0123456789abcdef
+CHECK failed: (out) == (begin + result.size()):
+CHECK failed: (uintptr_t((a).data() - (*result).data())) > (uintptr_t((*result).size())):
+operator[]
+0 <= i
+i < length_
+size_t to int conversion
+%.1f
+CHECK failed: (temp[0]) == ('1'):
+CHECK failed: (temp[size - 1]) == ('5'):
+CHECK failed: (size) <= (6):
+google/protobuf/arena.cc
+CHECK failed: (kBlockHeaderSize + ThreadSafeArena::kSerialArenaSize) <= (mem.size):
+./google/protobuf/arena_impl.h
+CHECK failed: n <= size:
+CHECK failed: (internal::AlignUpTo8(n)) == (n):
+CHECK failed: (limit_) >= (ptr_):
+CHECK failed: (min_bytes) <= (std::numeric_limits<size_t>::max() - SerialArena::kBlockHeaderSize):
+google/protobuf/arenastring.cc
+CHECK failed: IsDefault(default_value):
+./google/protobuf/arenastring.h
+CHECK failed: !tagged_ptr_.IsTagged():
+CHECK failed: tagged_ptr_.UnsafeGet() != nullptr:
 google/protobuf/extension_set.cc
 CHECK failed: (type) != (WireFormatLite::TYPE_ENUM):
 CHECK failed: (type) != (WireFormatLite::TYPE_MESSAGE):
 CHECK failed: (type) != (WireFormatLite::TYPE_GROUP):
-CHECK failed: !iter->second.is_repeated:
-CHECK failed: ((iter->second).is_repeated ? REPEATED : OPTIONAL) == (OPTIONAL):
-CHECK failed: (cpp_type((iter->second).type)) == (WireFormatLite::CPPTYPE_INT32):
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_INT32):
-CHECK failed: ((*extension).is_repeated ? REPEATED : OPTIONAL) == (OPTIONAL):
+CHECK failed: !ext->is_repeated:
+CHECK failed: ((*extension).is_repeated ? REPEATED_FIELD : OPTIONAL_FIELD) == (OPTIONAL_FIELD):
 CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_INT32):
-CHECK failed: iter != extensions_.end():
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_INT32):
+CHECK failed: extension != NULL:
 Index out-of-bounds (field is empty).
-CHECK failed: ((iter->second).is_repeated ? REPEATED : OPTIONAL) == (REPEATED):
-CHECK failed: ((*extension).is_repeated ? REPEATED : OPTIONAL) == (REPEATED):
+CHECK failed: ((*extension).is_repeated ? REPEATED_FIELD : OPTIONAL_FIELD) == (REPEATED_FIELD):
 CHECK failed: (extension->is_packed) == (packed):
-CHECK failed: (cpp_type((iter->second).type)) == (WireFormatLite::CPPTYPE_INT64):
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_INT64):
 CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_INT64):
-CHECK failed: (cpp_type((iter->second).type)) == (WireFormatLite::CPPTYPE_UINT32):
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_UINT32):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_INT64):
 CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_UINT32):
-CHECK failed: (cpp_type((iter->second).type)) == (WireFormatLite::CPPTYPE_UINT64):
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_UINT64):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_UINT32):
 CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_UINT64):
-CHECK failed: (cpp_type((iter->second).type)) == (WireFormatLite::CPPTYPE_FLOAT):
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_FLOAT):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_UINT64):
 CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_FLOAT):
-CHECK failed: (cpp_type((iter->second).type)) == (WireFormatLite::CPPTYPE_DOUBLE):
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_DOUBLE):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_FLOAT):
 CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_DOUBLE):
-CHECK failed: (cpp_type((iter->second).type)) == (WireFormatLite::CPPTYPE_BOOL):
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_BOOL):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_DOUBLE):
 CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_BOOL):
-CHECK failed: (cpp_type((iter->second).type)) == (WireFormatLite::CPPTYPE_ENUM):
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_ENUM):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_BOOL):
 CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_ENUM):
-CHECK failed: (cpp_type((iter->second).type)) == (WireFormatLite::CPPTYPE_STRING):
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_STRING):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_ENUM):
 CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_STRING):
-CHECK failed: (cpp_type((iter->second).type)) == (WireFormatLite::CPPTYPE_MESSAGE):
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_MESSAGE):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_STRING):
 CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_MESSAGE):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_MESSAGE):
 CHECK failed: extension->is_repeated:
-CHECK failed: cpp_type(extension->type) == WireFormatLite::CPPTYPE_MESSAGE:
 CHECK failed: (extension->type) == (other_extension.type):
 CHECK failed: (extension->is_packed) == (other_extension.is_packed):
 CHECK failed: !extension->is_repeated:
-Non-primitive types can't be packed.
 CHECK failed: is_repeated:
+FindOrNullInLargeMap
+is_large()
 Multiple extension registrations for type "
 ", field number
+flat_end
 CHECK failed: type > 0 && type <= WireFormatLite::MAX_FIELD_TYPE:
-CHECK failed: (current_size_) > (0):
+_InternalSerialize
+./google/protobuf/extension_set.h
+!is_large()
 google/protobuf/message_lite.cc
-CHECK failed: !coded_out.HadError():
+parse
 CHECK failed: IsInitialized():
 serialize
-parse
+exceeded maximum protobuf size of 2GB:
+./google/protobuf/parse_context.h
 Can't
 message of type "
 " because it is missing required fields:
-CHECK failed: (byte_size_before_serialization) == (byte_size_after_serialization):
-Protocol message was modified concurrently during serialization.
-CHECK failed: (bytes_produced_by_serialization) == (byte_size_before_serialization):
-Byte size calculation and serialization were inconsistent.  This may indicate a bug in protocol buffers or it may be caused by concurrent modification of the message.
-This shouldn't be called if all the sizes are equal.
+StringPiece
+./google/protobuf/stubs/stringpiece.h
+len >= 0
+CHECK failed: target + size == res:
+./google/protobuf/io/coded_stream.h
+CHECK failed: cur_:
+./google/protobuf/metadata_lite.h
+CHECK failed: arena != nullptr:
+CHECK failed: owning_arena == nullptr:
+google/protobuf/parse_context.cc
+CHECK failed: limit_ > kSlopBytes:
+CHECK failed: overrun != limit_:
+CHECK failed: overrun < limit_:
+CHECK failed: limit_end_ == buffer_end_ + (std::min)(0, limit_):
+CHECK failed: limit_ > 0:
+CHECK failed: limit_end_ == buffer_end_:
+parsing
+CHECK failed: size_ > kSlopBytes:
+CHECK failed: size_ == 0:
+CHECK failed: size > chunk_size:
+CHECK failed: limit >= 0 && limit <= INT_MAX - kSlopBytes:
+CHECK failed: overrun >= 0 && overrun <= kSlopBytes:
+CHECK failed: (size) > (0):
+Can't happen
+./google/protobuf/repeated_field.h
+CHECK failed: (index) >= (0):
+CHECK failed: (index) < (current_size_):
+CHECK failed: (current_size_) > (0):
+CHECK failed: (&other) != (this):
+CHECK failed: (static_cast<size_t>(new_size)) <= ((std::numeric_limits<size_t>::max() - kRepHeaderSize) / sizeof(Element)):
+Requested size is too large to fit into size_t.
+CHECK failed: (total_size_ - current_size_) >= (n):
+CHECK failed: this != other:
+CHECK failed: GetArena() == other->GetArena():
+CHECK failed: (total_size_) > (0):
+CHECK failed: (new_size) > (kRepeatedFieldUpperClampLimit):
+./google/protobuf/message_lite.h
+CHECK failed: (size) <= (static_cast<size_t>(2147483647)):
+CHECK failed: (n) >= (0):
+CHECK failed: other->GetArena() != GetArena():
 google/protobuf/wire_format_lite.cc
-CHECK failed: value.size() <= kint32max:
-CHECK failed: (end - target) == (size):
+'%s'
+String field
+contains invalid
+UTF-8 data when
+a protocol
+buffer. Use the 'bytes' type if you intend to send raw
+bytes.
+serializing
 google/protobuf/io/coded_stream.cc
-The total number of bytes read was
 A protocol message was rejected because it was too big (more than
-bytes).  To increase the limit (or to disable these warnings), see CodedInputStream::SetTotalBytesLimit() in google/protobuf/io/coded_stream.h.
+bytes).  To increase the limit (or to disable these warnings), see CodedInputStream::SetTotalBytesLimit() in third_party/protobuf/src/google/protobuf/io/coded_stream.h.
+CHECK failed: z.first != NULL:
+CHECK failed: (first_byte_or_zero) != (0):
+Caller should provide us with *buffer_ when buffer is non-empty
+CHECK failed: (first_byte_or_zero) == (buffer_[0]):
 CHECK failed: (0) == (BufferSize()):
-Reading dangerously large protocol message.  If the message turns out to be larger than
-bytes, parsing will be halted for security reasons.  To increase the limit (or to disable these warnings), see CodedInputStream::SetTotalBytesLimit() in google/protobuf/io/coded_stream.h.
 CHECK failed: (buffer_size) >= (0):
-CHECK failed: (str.size()) <= (kuint32max):
+CHECK failed: !had_error_:
+CHECK failed: overrun <= kSlopBytes:
+CHECK failed: s >= 0:
+CHECK failed: overrun >= 0:
+CHECK failed: ptr < end_:
+CHECK failed: (*buffer) == (first_byte):
+CHECK failed: (first_byte & 0x80) == (0x80):
+CHECK failed: (buffer[0]) >= (128):
+CHECK failed: size > 0:
+CHECK failed: ptr <= end_ + kSlopBytes:
 google/protobuf/io/zero_copy_stream.cc
 This ZeroCopyOutputStream doesn't support aliasing. Reaching here usually means a ZeroCopyOutputStream implementation bug.
 google/protobuf/io/zero_copy_stream_impl_lite.cc
@@ -1633,31 +1770,8 @@ CHECK failed: (last_returned_size_) > (0):
 BackUp() can only be called after a successful Next().
 CHECK failed: (count) <= (last_returned_size_):
 CHECK failed: (count) >= (0):
-Cannot allocate buffer larger than kint32max for
-StringOutputStream.
-CHECK failed: (count) <= (target_->size()):
-google/protobuf/stubs/strutil.cc
-CHECK failed: errors == NULL:
-Error reporting not implemented.
-\x%02x
-\%03o
-CHECK failed: (len) >= (0):
-CHECK failed: (digits) < (100):
--inf
-%.*g
-CHECK failed: snprintf_result > 0 && snprintf_result < kDoubleToBufferSize:
-CHECK failed: snprintf_result > 0 && snprintf_result < kFloatToBufferSize:
-0123456789abcdef
-hex_digit_to_int
-isxdigit(c)
-allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
-CHECK failed: result != NULL:
-google/protobuf/stubs/substitute.cc
-strings::Substitute format string invalid: asked for "$
-", but only
-args were given.  Full format string was: "
-Invalid strings::Substitute() format string: "
-CHECK failed: (target - output->data()) == (output->size()):
+CHECK failed: target_ != NULL:
+CHECK failed: (static_cast<size_t>(count)) <= (target_->size()):
 float
 int64
 uint64
@@ -1677,30 +1791,59 @@ sint32
 sint64
 required
 repeated
+proto2
+proto3
 google/protobuf/descriptor.cc
+can't reach here.
+google.protobuf.DoubleValue
+google.protobuf.FloatValue
+google.protobuf.Int64Value
+google.protobuf.UInt64Value
+google.protobuf.Int32Value
+google.protobuf.UInt32Value
+google.protobuf.StringValue
+google.protobuf.BytesValue
+google.protobuf.BoolValue
+google.protobuf.Any
+google.protobuf.FieldMask
+google.protobuf.Duration
+google.protobuf.Timestamp
+google.protobuf.Value
+google.protobuf.ListValue
+google.protobuf.Struct
 CHECK failed: checkpoints_.empty():
 CHECK failed: !checkpoints_.empty():
-CHECK failed: generated_database_->Add(encoded_file_descriptor, size):
+CHECK failed: GeneratedDatabase()->Add(encoded_file_descriptor, size):
+CHECK failed: (field_count()) == (2):
 CHECK failed: has_default_value():
 No default value
 Messages can't have default values!
 Can't get here: failed to get default value as string
 extend .$0 {
+$0message $1
 {
-$0  message $1
 $0  extensions $1 to $2;
 $0  }
 $0  extend .$1 {
+$0  reserved
+$0,
+$0 to max,
+$0 to $1,
+;
+"$0",
 $0}
+map<$0, $1>
 $0$1$2 $3 = $4
 [default = $0
 [
-]
-;
-$0 oneof $1 {
+json_name = "
+{ ... };
+$0oneof $1 {
+... }
 $0enum $1 {
 $0$1 = $2
 [$0]
+CHECK failed: out_location != nullptr:
 Invalid proto descriptor for file "
 ":
 " is not defined.
@@ -1710,23 +1853,42 @@ Invalid proto descriptor for file "
 " is resolved to "
 ", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., ".
 ") to start from the outermost scope.
-" is already defined (as something other than a package) in file "
+.placeholder.proto
+PLACEHOLDER_VALUE
+.PLACEHOLDER_VALUE
+" contains null character.
+" not previously defined in symbols_by_name_, but was defined in symbols_by_parent_; this shouldn't be possible.
+" is already defined.
+" is already defined in "
 ".
+" is already defined in file "
+" is already defined (as something other than a package) in file "
 Missing name.
 " is not a valid identifier.
 .dummy
+google.protobuf.FileOptions
+File recursively imports itself:
 ->
 Import "
 " was listed twice.
 " has not been loaded.
 " was not found or had errors.
 Missing field: FileDescriptorProto.name.
+Unrecognized syntax:
 A file with this name is already in the pool.
 Invalid public dependency index.
 Invalid weak dependency index.
+google.protobuf.MessageOptions
+Reserved range $0 to $1 overlaps with already-defined range $2 to $3.
+Field name "$0" is reserved multiple times.
 Extension range $0 to $1 includes field "$2" ($3).
+Field "$0" uses reserved number $1.
+Field name "$0" is reserved.
+Extension range $0 to $1 overlaps with reserved range $2 to $3.
 Extension range $0 to $1 overlaps with already-defined range $2 to $3.
-Message extensions cannot have required fields.
+The [proto3_optional=true] option may only be set on proto3fields, not
+The extension
+cannot be required.
 Repeated fields can't have default values.
 inf
 nan
@@ -1740,17 +1902,37 @@ FieldDescriptorProto.extendee not set for extension field.
 FieldDescriptorProto.oneof_index should not be set for extensions.
 FieldDescriptorProto.extendee set for non-extension field.
 FieldDescriptorProto.oneof_index $0 is out of range for type "$1".
+google.protobuf.FieldOptions
 Extension numbers must be positive integers.
 Extension range end number must be greater than start number.
+google.protobuf.ExtensionRangeOptions
+Reserved numbers must be positive integers.
+Reserved range end number must be greater than start number.
+google.protobuf.OneofOptions
+Enum name
+has the same name as
+if you ignore case and strip out the enum name prefix (if any). This is error-prone and can lead to undefined behavior. Please avoid doing this. If you are using allow_alias, please assign the same numeric value to both enums.
 Enums must contain at least one value.
+google.protobuf.EnumOptions
+Enum value "$0" is reserved multiple times.
+Enum value "$0" uses reserved number $1.
+Enum value "$0" is reserved.
+google.protobuf.EnumValueOptions
 the global scope
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
 " must be unique within
 , not just within "
+google.protobuf.ServiceOptions
+google.protobuf.MethodOptions
+Fields in the same oneof must be defined consecutively. "$0" cannot be defined before the completion of the "$1" oneof definition.
 Oneof must have at least one field.
+Fields with proto3_optional set must be a member of a one-field oneof
+Synthetic oneofs must be after all other oneofs
 " is not a message type.
+google.protobuf.bridge.MessageSet
 "$0" does not declare $1 as an extension number.
 Fields of oneofs must themselves have label LABEL_OPTIONAL.
+google.protobuf.Empty
 " is not a type.
 " is not an enum type.
 Default value for an enum field must be an identifier.
@@ -1763,30 +1945,51 @@ Field number $0 has already been used in "$1" by field "$2".
 Extension number $0 has already been used in "$1" by extension "$2" defined in $3.
 Files that do not use optimize_for = LITE_RUNTIME cannot import files which do use this option.  This file is not lite, but it imports "
 " which is.
+Extension ranges are not allowed in proto3.
+MessageSet is not supported in proto3.
+The JSON camel-case name of field "
+" conflicts with field "
+". This is not
+allowed in proto3.
+Extensions in proto3 are only allowed for defining options.
+Required fields are not allowed in proto3.
+Explicit default values are not allowed in proto3.
+" is not a proto3 enum, but is used in "
+" which is a proto3 message type.
+Groups are not supported in proto3 syntax.
+The first enum value must be zero in proto3.
 Extension numbers cannot be greater than $0.
 [lazy = true] can only be specified for submessage fields.
 [packed = true] can only be specified for repeated primitive fields.
 Extensions of MessageSets must be optional messages.
 MessageSets cannot have fields, only extensions.
 Extensions to non-lite types can only be declared in non-lite files.  Note that you cannot extend a non-lite type to contain a lite type, but the reverse is allowed.
+map_entry should not be set explicitly. Use map<KeyType, ValueType> instead.
+option json_name is not allowed on extension fields.
 " uses the same enum value as "
 ". If this is intended, set 'option allow_alias = true;' to the enum definition.
-Files with optimize_for = LITE_RUNTIME cannot define services unless you set both options cc_generic_services and java_generic_sevices to false.
-map type is only allowed for repeated fields.
-map type is only allowed for fields with a message type.
-Could not find field type.
-Could not find field named "
-" in type "
-map_key must not name a repeated field.
-map key must name a scalar or string field.
+Files with optimize_for = LITE_RUNTIME cannot define services unless you set both options cc_generic_services and java_generic_services to false.
+Entry
+Key in map fields cannot be enum types.
+Key in map fields cannot be float/double, bytes or message types.
+Enum value in map must define 0 as the first value.
+Expanded map entry type
+conflicts with an existing nested message type.
+conflicts with an existing field.
+conflicts with an existing enum type.
+conflicts with an existing oneof type.
+Illegal jstype for int64, uint64, sint64, fixed64 or sfixed64 field:
+jstype is only allowed on int64, uint64, sint64, fixed64 or sfixed64 fields.
 CHECK failed: builder_:
+Option must have a name.
 uninterpreted_option
+Option must not use reserved name "uninterpreted_option".
 CHECK failed: options_descriptor:
-(
 Option "
 " is resolved to "(
 )", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., "(.
-" unknown.
+" unknown. Ensure that your proto
+definition file imports the proto which defines the option.
 Option field "
 " is not a field or extension of message "
 " is an atomic type, not a message.
@@ -1794,7 +1997,7 @@ Option field "
 CHECK failed: !out.HadError():
 Unexpected failure while serializing option submessage
 Invalid wire type for CPPTYPE_MESSAGE:
-CHECK failed: field != NULL:
+CHECK failed: field != nullptr:
 " was already set.
 Value out of range for int32 option "
 Value must be integer for int32 option "
@@ -1814,7 +2017,7 @@ Value must be quoted string for string option "
 " is a message. To set the entire message, use syntax like "
 = { <proto text format> }". To set fields within it, use syntax like "
 .foo = value".
-CHECK failed: dynamic.get() != NULL:
+CHECK failed: dynamic.get() != nullptr:
 Could not create an instance of
 Error while parsing option value for "
 CHECK failed: (option_field->type()) == (FieldDescriptor::TYPE_GROUP):
@@ -1822,161 +2025,177 @@ Invalid wire type for CPPTYPE_INT32:
 Invalid wire type for CPPTYPE_INT64:
 Invalid wire type for CPPTYPE_UINT32:
 Invalid wire type for CPPTYPE_UINT64:
-Warning: Unused import: "
-" imports "
-" which is not used.
-GetEmptyStringAlreadyInited
-./google/protobuf/generated_message_util.h
-empty_string_ != NULL
-set_label
+Import
+is unused.
+CHECK failed: file()->finished_building_ == true:
+CHECK failed: enum_type_->value_count():
+CHECK failed: finished_building_ == true:
+CHECK failed: !name_:
+CHECK failed: !once_:
+CHECK failed: !file_:
+CHECK failed: !descriptor_:
+CHECK failed: file && file->pool_:
+CHECK failed: file->pool_->lazily_build_dependencies_:
+CHECK failed: !file->finished_building_:
+CHECK failed: file_->finished_building_:
+UNKNOWN_ENUM_VALUE_%s_%d
 ./google/protobuf/descriptor.pb.h
-::google::protobuf::FieldDescriptorProto_Label_IsValid(value)
-set_type
-::google::protobuf::FieldDescriptorProto_Type_IsValid(value)
+_internal_set_label
+PROTOBUF_NAMESPACE_ID::FieldDescriptorProto_Label_IsValid(value)
+_internal_set_type
+PROTOBUF_NAMESPACE_ID::FieldDescriptorProto_Type_IsValid(value)
+$0// $1
 $0option $1;
+Found invalid proto option data for:
 }
 (.
-./google/protobuf/repeated_field.h
-CHECK failed: (index) >= (0):
-CHECK failed: (index) < (size()):
-" not previously defined in symbols_by_name_, but was defined in symbols_by_parent_; this shouldn't be possible.
-" is already defined.
-" is already defined in "
-" is already defined in file "
-.placeholder.proto
-.PLACEHOLDER_VALUE
-CHECK failed: uninterpreted_options_field != NULL:
+CHECK failed: !value || source_code_info_ != nullptr:
+CHECK failed: !value || options_ != nullptr:
+remove_prefix
+length_ >= n
+FileOptions
+MessageOptions
+FieldOptions
+EnumOptions
+EnumValueOptions
+ServiceOptions
+MethodOptions
+OneofOptions
+google.protobuf.
+proto
+2.
+CHECK failed: uninterpreted_options_field != nullptr:
 No field named "uninterpreted_option" in the Options proto.
-CHECK failed: original_uninterpreted_options_field != NULL:
-CHECK failed: options->ParseFromString(buf):
-Protocol message serialized itself in invalid fashion.
+CHECK failed: original_uninterpreted_options_field != nullptr:
+Some options could not be correctly parsed using the proto descriptors compiled into this binary.Unparsed options:
+Parsing attempt:
 down_cast
-./google/protobuf/stubs/common.h
-f == NULL || dynamic_cast<To>(f) != NULL
+./google/protobuf/stubs/casts.h
+f == nullptr || dynamic_cast<To>(f) != nullptr
 length_delimited
 ./google/protobuf/unknown_field_set.h
 type() == TYPE_LENGTH_DELIMITED
-operator->
-ptr_ != NULL
-operator*
-google/protobuf/descriptor.proto
-google/protobuf/descriptor.pb.cc
-package
-dependency
-extendee
-type_name
-default_value
-input_type
-output_type
-java_package
-java_outer_classname
-go_package
-experimental_map_key
-name_part
-identifier_value
-aggregate_value
-leading_comments
-trailing_comments
-set_optimize_for
-::google::protobuf::FileOptions_OptimizeMode_IsValid(value)
-set_ctype
-::google::protobuf::FieldOptions_CType_IsValid(value)
-CHECK failed: (size()) < (Capacity()):
+Uninterpreted option is missing name or value.
 google/protobuf/descriptor_database.cc
 Invalid file descriptor data passed to EncodedDescriptorDatabase::Add().
-File already exists in database:
 Invalid symbol name:
+File already exists in database:
 Symbol name "
 " conflicts with the existing symbol "
 Extension conflicts with extension already in database: extend
-}
+} from:
+Invalid package name:
+google/protobuf/descriptor.proto
+google/protobuf/descriptor.pb.cc
+CHECK failed: (&from) != (this):
+CHECK failed: options_ != nullptr:
+CHECK failed: source_code_info_ != nullptr:
+google.protobuf.FileDescriptorProto.name
+google.protobuf.FileDescriptorProto.package
+google.protobuf.FileDescriptorProto.dependency
+google.protobuf.FileDescriptorProto.syntax
+google.protobuf.DescriptorProto.name
+google.protobuf.DescriptorProto.reserved_name
+google.protobuf.FieldDescriptorProto.name
+google.protobuf.FieldDescriptorProto.extendee
+google.protobuf.FieldDescriptorProto.type_name
+google.protobuf.FieldDescriptorProto.default_value
+google.protobuf.FieldDescriptorProto.json_name
+google.protobuf.OneofDescriptorProto.name
+google.protobuf.EnumDescriptorProto.name
+google.protobuf.EnumDescriptorProto.reserved_name
+google.protobuf.EnumValueDescriptorProto.name
+google.protobuf.ServiceDescriptorProto.name
+google.protobuf.MethodDescriptorProto.name
+google.protobuf.MethodDescriptorProto.input_type
+google.protobuf.MethodDescriptorProto.output_type
+google.protobuf.FileOptions.java_package
+google.protobuf.FileOptions.java_outer_classname
+google.protobuf.FileOptions.go_package
+google.protobuf.FileOptions.objc_class_prefix
+google.protobuf.FileOptions.csharp_namespace
+google.protobuf.FileOptions.swift_prefix
+google.protobuf.FileOptions.php_class_prefix
+google.protobuf.FileOptions.php_namespace
+google.protobuf.FileOptions.php_metadata_namespace
+google.protobuf.FileOptions.ruby_package
+google.protobuf.UninterpretedOption.NamePart.name_part
+google.protobuf.UninterpretedOption.identifier_value
+google.protobuf.UninterpretedOption.aggregate_value
+google.protobuf.SourceCodeInfo.Location.leading_comments
+google.protobuf.SourceCodeInfo.Location.trailing_comments
+google.protobuf.SourceCodeInfo.Location.leading_detached_comments
+google.protobuf.GeneratedCodeInfo.Annotation.source_file
+CHECK failed: GetArena() == nullptr:
 google/protobuf/dynamic_message.cc
 CHECK failed: is_prototype():
-Can't get here.
-operator[]
-i >= 0
-array_ != NULL
 google/protobuf/extension_set_heavy.cc
-CHECK failed: ((iter->second).is_repeated ? FieldDescriptor::LABEL_REPEATED : FieldDescriptor::LABEL_OPTIONAL) == (FieldDescriptor::LABEL_OPTIONAL):
-CHECK failed: (cpp_type((iter->second).type)) == (FieldDescriptor::CPPTYPE_MESSAGE):
-CHECK failed: (cpp_type(extension->type)) == (FieldDescriptor::CPPTYPE_MESSAGE):
 CHECK failed: ((*extension).is_repeated ? FieldDescriptor::LABEL_REPEATED : FieldDescriptor::LABEL_OPTIONAL) == (FieldDescriptor::LABEL_OPTIONAL):
 CHECK failed: (cpp_type((*extension).type)) == (FieldDescriptor::CPPTYPE_MESSAGE):
+CHECK failed: (cpp_type(extension->type)) == (FieldDescriptor::CPPTYPE_MESSAGE):
 CHECK failed: ((*extension).is_repeated ? FieldDescriptor::LABEL_REPEATED : FieldDescriptor::LABEL_OPTIONAL) == (FieldDescriptor::LABEL_REPEATED):
 CHECK failed: prototype != NULL:
-CHECK failed: output->message_prototype != NULL:
+CHECK failed: output->message_info.prototype != nullptr:
 Extension factory's GetPrototype() returned NULL for extension:
-CHECK failed: type > 0 && type <= FieldDescriptor::MAX_TYPE:
+./google/protobuf/extension_set_inl.h
+Non-primitive types can't be packed.
 google/protobuf/generated_message_reflection.cc
 Unimplemented type:
+CHECK failed: !oneof_descriptor->is_synthetic():
 CHECK failed: (message1->GetReflection()) == (this):
 First argument to Swap() (of type "
 ") is not compatible with this reflection object (which is for type "
 ").  Note that the exact same class is required; not just the same descriptor.
 CHECK failed: (message2->GetReflection()) == (this):
 Second argument to Swap() (of type "
-First argument to SwapFields() (of type "
-Second argument to SwapFields() (of type "
 HasField
 Field does not match message type.
 Field is repeated; the method requires a singular field.
 FieldSize
 Field is singular; the method requires a repeated field.
+Can't get here.
 ClearField
-RemoveLast
-ReleaseLast
-Swap
 GetInt32
 SetInt32
 GetRepeatedInt32
-SetRepeatedInt32
 AddInt32
 GetInt64
 SetInt64
 GetRepeatedInt64
-SetRepeatedInt64
 AddInt64
 GetUInt32
 SetUInt32
 GetRepeatedUInt32
-SetRepeatedUInt32
 AddUInt32
 GetUInt64
 SetUInt64
 GetRepeatedUInt64
-SetRepeatedUInt64
 AddUInt64
 GetFloat
 SetFloat
 GetRepeatedFloat
-SetRepeatedFloat
 AddFloat
 GetDouble
 SetDouble
 GetRepeatedDouble
-SetRepeatedDouble
 AddDouble
 GetBool
 SetBool
 GetRepeatedBool
-SetRepeatedBool
 AddBool
 GetString
 GetStringReference
 SetString
 GetRepeatedString
 GetRepeatedStringReference
-SetRepeatedString
 AddString
-GetEnum
-Value
-is not valid for field
-of type
+GetEnumValue
 SetEnum
-GetRepeatedEnum
-SetRepeatedEnum
+SetEnumValue
+GetRepeatedEnumValue
 AddEnum
 GetMessage
+MutableMessage
 SetAllocatedMessage
 ReleaseMessage
 GetRepeatedMessage
@@ -1984,14 +2203,29 @@ MutableRepeatedMessage
 AddMessage
 "MutableRawRepeatedField"
 MutableRawRepeatedField
-CHECK failed: (field->options().ctype()) == (ctype):
-subtype mismatch
 CHECK failed: (field->message_type()) == (desc):
 wrong submessage type
+"GetRawRepeatedField"
+GetRawRepeatedField
+CHECK failed: (field->options().ctype()) == (ctype):
+subtype mismatch
+"LookupMapValue"
+Field is not a map field.
+"MapBegin"
+"MapEnd"
+CHECK failed: field->is_repeated():
+CHECK failed: field->cpp_type() == cpp_type || (field->cpp_type() == FieldDescriptor::CPPTYPE_ENUM && cpp_type == FieldDescriptor::CPPTYPE_INT32):
+The type parameter T in RepeatedFieldRef<T> API doesn't match
+the actual field type (for enums T should be the generated enum
+type or int32).
+CHECK failed: (message_type) == (field->message_type()):
+"GetMapData"
 Protocol Buffer reflection usage error:  Method      : google::protobuf::Reflection::
 Message type:
 Field       :
 Problem     :
+./google/protobuf/generated_message_reflection.h
+CHECK failed: HasHasbits():
 Problem     : Field is not the right type for this message:    Expected  :
 Field type:
 INVALID_CPPTYPE
@@ -2005,14 +2239,55 @@ CPPTYPE_BOOL
 CPPTYPE_ENUM
 CPPTYPE_STRING
 CPPTYPE_MESSAGE
+CHECK failed: (has_bit_index) != (~0u):
 Problem     : Enum value did not match field type:    Expected  :
 Actual    :
-CHECK failed: (extensions_offset_) != (-1):
+CHECK failed: schema_.HasHasbits():
+CHECK failed: HasExtensionSet():
+CHECK failed: !field->options().weak():
+Reached impossible case in HasBit().
+CHECK failed: !schema_.InRealOneof(field) || HasOneofField(message, field):
+Field =
+CHECK failed: !InRealOneof(field):
+CHECK failed: file != nullptr:
+google/protobuf/map_field.cc
+CHECK failed: IsMapValid() && other.IsMapValid():
+MapValueRef::SetInt32Value
+MapValueRef::SetInt64Value
+MapValueRef::SetUInt32Value
+MapValueRef::SetUInt64Value
+MapValueRef::SetFloatValue
+MapValueRef::SetDoubleValue
+MapValueRef::SetBoolValue
+MapValueRef::SetStringValue
+MapValueRef::SetEnumValue
+./google/protobuf/map.h
+CHECK failed: table_[b] == table_[b + 1] && (b & 1) == 0:
+CHECK failed: m_->index_of_first_non_null_ == m_->num_buckets_ || m_->table_[m_->index_of_first_non_null_] != nullptr:
+CHECK failed: !tree->empty():
+CHECK failed: (bucket_index_ & 1) == (0u):
+CHECK failed: node_ != nullptr && m_ != nullptr:
+CHECK failed: (table_[b]) == (table_[b ^ 1]):
+Unsupported: type mismatch
+CHECK failed: (bucket_index_ % 2) == (0u):
+CHECK failed: (new_num_buckets) >= (kMinTableSize):
+CHECK failed: n >= kMinTableSize:
+CHECK failed: (n & (n - 1)) == (0):
+CHECK failed: index_of_first_non_null_ == num_buckets_ || table_[index_of_first_non_null_] != nullptr:
+CHECK failed: find(node->kv.first) == end():
+CHECK failed: (result.bucket_index_) == (b & ~static_cast<size_type>(1)):
+CHECK failed: (count) <= (kMaxLength):
+CHECK failed: !TableEntryIsTree(b) && !TableEntryIsTree(b ^ 1):
+CHECK failed: (count) == (tree->size()):
+CHECK failed: (it.m_) == (this):
+CHECK failed: TableEntryIsNonEmptyList(b):
+CHECK failed: TableEntryIsTree(b):
 google/protobuf/message.cc
 CHECK failed: (from.GetDescriptor()) == (descriptor):
 : Tried to merge from a message with a different type.  to:
 , from:
 : Tried to copy from a message with a different type. to:
+Should not reach here.
 File appears to be in generated pool but wasn't registered:
 Type appears to be in generated pool but wasn't
 registered:
@@ -2020,31 +2295,74 @@ File is already registered:
 CHECK failed: (descriptor->file()->pool()) == (DescriptorPool::generated_pool()):
 Tried to register a non-generated type with the generated type registry.
 Type is already registered:
+./google/protobuf/reflection_internal.h
+CHECK failed: this == other_mutator:
 google/protobuf/reflection_ops.cc
 CHECK failed: (&from) != (to):
 CHECK failed: (to->GetDescriptor()) == (descriptor):
 Tried to merge messages of different types
 (merge
+to
+Message does not support reflection (type
+).
+./google/protobuf/map_field.h
+Protocol Buffer map usage error:
+MapValueConstRef::GetMessageValue
+type does not match
+Expected :
+Actual   :
+MapValueConstRef::type MapValueConstRef is not initialized.
+MapValueRef::MutableMessageValue
+(
+[
+]
+google/protobuf/stubs/substitute.cc
+strings::Substitute format string invalid: asked for "$
+", but only
+args were given.  Full format string was: "
+Invalid strings::Substitute() format string: "
+SubstituteAndAppend
+index < 10
+CHECK failed: (target - output->data()) == (output->size()):
 google/protobuf/text_format.cc
 Message missing required fields:
-[
 {
 }
 CHECK failed: output:
-output specified is NULL
+output specified is nullptr
+Can't print proto content: proto type
+not found
+: failed to parse contents
+Not supported.
 : [
 ]
 CHECK failed: field->is_repeated() || (index == -1):
 Index must be -1 for non-repeated fields
+...<truncated>...
 CHECK failed: (field->type()) == (FieldDescriptor::TYPE_BYTES):
 : 0x
 : "
+"
 Warning parsing text-format
+Input size too large:
+>
+bytes.
+CHECK failed: had_errors_ || recursion_limit_ == initial_recursion_limit_:
+Recursion limit at end of parse should be
+, but was
+. Difference of
+stack frames not accounted for stack unwind.
+Could not find type "
+" stored in google.protobuf.Any.
+Non-repeated Any specified multiple times.
 Extension "
 " is not defined or is not an extension of "
+Ignoring extension "
+" which is not defined or is not an extension of "
 Message type "
 " has no field named "
-CHECK failed: allow_unknown_field_:
+CHECK failed: allow_unknown_field_ || allow_unknown_extension_ || reserved_field:
+{
 Non-repeated field "
 " is specified multiple times.
 Field "
@@ -2053,45 +2371,90 @@ Field "
 text format contains deprecated field "
 Expected "
 ", found "
+Value of type "
+" stored in google.protobuf.Any has missing required fields
+Expected identifier, got:
+Message is too deep, the parser exceeded the configured recursion limit of
+Cannot skip field value, unexpected token:
 infinity
 Invalid float number:
+Expected string, got:
 True
 False
 Invalid value for boolean field "
 ". Value: "
+Expected integer or identifier, got:
 Unknown enumeration value of "
 " for field "
 Reached an unintended state: CPPTYPE_MESSAGE
+Expected integer, got:
+Integer out of range (
+Expected double, got:
+Expect a decimal number, got:
 Error parsing text-format
 Outdent() without matching Indent().
+CHECK failed: !failed_:
 varint
 type() == TYPE_VARINT
 type() == TYPE_FIXED32
 type() == TYPE_FIXED64
-type() == TYPE_GROUP
 google/protobuf/unknown_field_set.cc
-CHECK failed: fields_ != NULL:
+CHECK failed: !fields_.empty():
 CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()):
 google/protobuf/wire_format.cc
-CHECK failed: (output->ByteCount()) == (expected_endpoint):
-: Protocol message serialized to a size different from what was originally expected.  Perhaps it was modified by another thread during serialization?
-parsing
-serializing
-'%s'
-String field
-contains invalid
-UTF-8 data when
-a protocol
-buffer. Use the 'bytes' type if you intend to send raw
-bytes.
-%.1f
-google/protobuf/io/strtod.cc
-CHECK failed: (temp[0]) == ('1'):
-CHECK failed: (temp[size-1]) == ('5'):
-CHECK failed: (size) <= (6):
+CHECK failed: descriptor:
+CHECK failed: reflection:
+Can't reach
+Unsupported
+Invalid descriptor
+CHECK failed: (FieldDescriptor::TypeToCppType(field->type())) == (value.type()):
+Cannot get here
+type() == TYPE_GROUP
+MapKey::GetInt64Value
+MapKey::GetUInt64Value
+MapKey::GetInt32Value
+MapKey::GetUInt32Value
+MapKey::GetBoolValue
+MapKey::GetStringValue
+CHECK failed: a.type() == b.type():
+Invalid key for map field.
+MapValueConstRef::GetInt64Value
+MapValueConstRef::GetUInt64Value
+MapValueConstRef::GetInt32Value
+MapValueConstRef::GetUInt32Value
+MapValueConstRef::GetBoolValue
+MapValueConstRef::GetEnumValue
+MapValueConstRef::GetDoubleValue
+MapValueConstRef::GetFloatValue
+MapValueConstRef::GetStringValue
+./google/protobuf/dynamic_message.h
+internal error in map key sorting
+map keys are not unique
+operator!=
+./google/protobuf/reflection.h
+data_ == other.data_
+accessor_ == other.accessor_
+MapKey::type MapKey is not initialized.
+Call set methods to initialize MapKey.
+Unexpected end of string.
+String literals cannot cross line boundaries.
+Expected hex digits for escape sequence.
+Expected four hex digits for \u escape sequence.
+Expected eight hex digits up to 10ffff for \U escape sequence
+Invalid escape sequence in string literal.
+"0x" must be followed by hex digits.
+Numbers starting with leading zero must be in octal.
+"e" must be followed by exponent.
+Need space between number and identifier.
+Already saw decimal point or exponent; can't have another one.
+Hex and octal numbers must be integers.
+"/*" inside block comment.  Block comments cannot be nested.
+End-of-file inside block comment.
+Comment started here.
+Invalid control characters encountered in text.
+Need space between identifier and decimal point.
 Interpreting non ascii codepoint %d.
 google/protobuf/io/tokenizer.cc
-Tokenizer::ParseInteger() passed text that could not have been tokenized as an integer:
 Tokenizer::ParseFloat() passed text that could not have been tokenized as a float:
 Tokenizer::ParseStringAppend() passed text that could not have been tokenized as a string:
 \U%08x
@@ -2105,7 +2468,6 @@ crypto/asn1/a_object.c
 ;
 =
 =
-:
 crypto/asn1/a_strnid.c
 a2d_ASN1_OBJECT
 a2i_ASN1_INTEGER
@@ -6270,7 +6632,6 @@ sys$qiow error
 unknown control command
 unknown ttyget errno value
 user data duplication unsupported
-to
 /usr/local/ssl
 add_cert_dir
 build_chain
@@ -6382,12 +6743,12 @@ max
 section:
 ,name:
 ,value:
+value
 base
 crypto/x509v3/v3_utl.c
 TRUE
 FALSE
 Y
-y
 YES
 N
 NO
@@ -7562,6 +7923,7 @@ m_strCmdLine
 m_vecParms
 m_vecParms[i]
 m_listCommandLineOption
+Assertion Failed: (elem == Count()) || IsValidIndex(elem)
 Not continuing coroutine due to g_bPreventCoroutineContinue, %s
 Assertion Failed: GCoroutineMgr().IsValidCoroutine(hCoroutine)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vstdlib/coroutine.cpp
@@ -7685,8 +8047,8 @@ Assertion Failed: written == count
 fsync %s failed, errno = %d
 rb
 %s%c%s
-unReadAheadChunkSize should be zero when using bUnbuffered = true
-Assertion Failed: unReadAheadChunkSize < INT32_MAX/2
+.tmp.swap
+.tmp.save
 unsupported flags 0x%x passed to CFileReader::BOpenFile
 Assertion Failed: BIsOpen()
 Assertion Failed: cubBytesToRead < INT32_MAX
@@ -7696,7 +8058,6 @@ Seeking to a position which is not sector aligned will break unbuffered io
 /
 ..
 Assertion Failed: cbActual < (uint32)nBufSizeWithTerminator
-*.*
 CPathString
 .dylib
 %s/%s%s
@@ -7714,7 +8075,6 @@ ReadToken overflow
 {
 KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.
 }
-:
 ]
 GetUint64FromString() did not get correct peCS parameter
 can't convert int64 to uint64 (negative number)
@@ -7769,7 +8129,6 @@ broadcast
 %i.%i.%i.%i
 %i.%i.%i.%i:%i
 Address too small!
-CIPAndPort::GetIPv4 called on IPv6 address
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/netadr.h
 Assertion Failed: ( blockSize % TSLIST_NODE_ALIGNMENT ) == 0
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/tsmempool.cpp
@@ -7790,10 +8149,8 @@ Assertion Failed: offset >= -m_Put && offset <= INT_MAX-m_Put
 Assertion Failed: offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
 %f
 n
-t
 v
 b
-f
 a
 \
 '
@@ -7830,7 +8187,6 @@ CUtlStringBuilder::Data::MoveToHeap
 %s
 %s (%d) :
 Exiting on SPEW_ABORT
-*
 IsSpewActive
 Assertion Failed: %s
 Fatal Assertion Failed: %s
@@ -7874,8 +8230,8 @@ crashhandler.dylib
 CreateInterface
 %u
 1.0
-Jul 20 2021
-15:25:46
+Jul 29 2021
+12:50:47
 Jan
 Feb
 Mar
@@ -7993,6 +8349,7 @@ WARNING: Disabling vprof spike dumping and stopping profile for thread %d - %s b
 Assertion Failed: m_pParent
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h
 Assertion Failed: m_pszName
+allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto_digest_openssl.cpp
 CCrypto::GenerateSHA1Digest
 Assertion Failed: pOutDigest
@@ -8059,8 +8416,6 @@ path
 domain
 version
 enums_clientserver.proto
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/enums_clientserver.pb.cc
-CHECK failed: file != NULL:
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/enum_names.cpp
 EUniverse
 Invalid
@@ -8072,12 +8427,12 @@ INVALID
 INT
 Private
 >
+<
 stats
 vac
 drm
 default
 none
-no
 generic
 httpclient
 RSA
@@ -8140,6 +8495,7 @@ metrics
 china
 Invalid spew group
 RequestHeaders
+;
 @bHttpClientRecordHostnameDimension
 Group HTTP metrics by hostname.  Careful, the cardinality of your in-memory map might be large.
 @bEnableHTTP2OnAllCHTTPClients
@@ -8163,7 +8519,6 @@ user-agent
 Transfer-Encoding
 Range
 Set-Cookie
-yes
 m_vecpHTTPClients
 private
 Unexpected thread race for CIOPollingHelper construction
@@ -8179,20 +8534,24 @@ m_vecIPFilterRangesV6
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/job.cpp
 undefined
 Assertion Failed: this != g_pJobCur
+(unspecified)
+wait details: [%s] - %s
 CJobMgr::BFrameFuncRun
 CJobMgr::BFrameFuncRunUntilCompleted
 CJobMgr::m_WorkThreadPool
 CJobMgr::BFrameFuncRunSleepingJobs
 Assertion Failed: m_stackDoNotYieldGuards.Count() == 0
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/jobmgr.cpp
+CJobMgr -- Process Wait Detail Updates
 CJobMgr::BResumeYieldingJobs
 CJobMgr -- Dispatch completed work items
 Assertion Failed: m_MapJob.InvalidIndex() != iJob || !bShouldExist
 BRouteWorkItemCompleted called for a job that could not be found!
 Assertion Failed: m_MapJob[iJob]->GetPauseReason() == k_EJobPauseReasonYield
-Unexpected sleep reason %d in CJobMgr::BResumeSleepingJobs.
+Unexpected sleep reason %d in CJobMgr::BResumeSleepingJobs. Job %s Yield Info %s
 CJobMgr::CheckForJobTimeouts
 name
+:
 @bEnableSpewThrottle
 1
 @bEnableLogTearOff
@@ -8205,7 +8564,6 @@ CLogger::PublishLogEvent
 %s\%s
 CLogger::EmitEventInternal
 Hit absolute maximum emit event queue size -- NOT adding this event
-Assertion Failed: pLogEvent
 CLogger::FlushEventQueue
 Log event queue grew unreasonably large in a short time!
 Assertion Failed: sm_bShuttingDown && sm_pLogInstance
@@ -8247,11 +8605,13 @@ Failed to find time in logfile name
 Persistent Logfiles created which have no cleanup limit specified!
 CLogInstance::EmitEventNow
 Last Message Repeated %d times.%s
-Assertion Failed: (unsigned)elem <= (unsigned)m_Size
+CIPAndPort::GetIPv4 called on IPv6 address
 double
 ":
 @bMetricsEnabled
 Enabling allows jobs to collect and report metrics through IMetricsReporters.
+@bMetricsUseMemPool
+If true, we'll use the mempool.  If false, just use malloc.
 @metricsEnabledCatalogs
 Comma separated list of metrics catalogs - enable list.  Inclusion in this list bypasses operation whitelist.  Probably every catalog other than job_metrics should be in here.
 @metricsEnabledOperations
@@ -8304,6 +8664,7 @@ ECONNRESET
 [no name available]
 commonName
 sha256
+null
 DES
 VALVE_CRYPTO_dbg_malloc
 VALVE_CRYPTO_dbg_realloc
@@ -8376,12 +8737,6 @@ Assertion Failed: scheduledItem.m_ulTime
 30819D300D06092A864886F70D010101050003818B003081870281810093AFCC20E2393BFD1234FC5552E9A9D5610ECC4AC6891EBCC77C28018FCB31404C09A5DC11636CD97C1A022188AB680CFF063C830BA693A0F1A90E9A3E21E33EE731BD5B6AAB09B40A1A951C21ECD6B11CAB63B4840894F4F2F0CC9D24924DF7DB216FE7D9C0C5914A88DF501EF27ACB00D08101CC2AEC32DFAD498289DCF4BD020111
 30819d300d06092a864886f70d010101050003818b0030818702818100baeee6ba4093c07f86fb34fa2ed0c9660484dd02e2d7b4e2dbc0a7b80f088f42c34dffd633b4f79fd4956aa6b901d480da5d5f783fefd681b9fc517804b00451dfc3ecc7e16b11dcb0379dc1f9d00d0a7ab8f5d6aba57115f12256ed0c9e9bd4bf994dbbdd42cd019c5b023b3fd0005430c5305bdd46cce39a492753b0b5b355020111
 steammessages_base.proto
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_base.pb.cc
-CHECK failed: (&from) != (this):
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/protobuf-2.6.1/src/google/protobuf/repeated_field.h
-CHECK failed: (&other) != (this):
-steammessages_clientserver_login.proto
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_clientserver_login.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/string_misc.cpp
 @net_loopback
 @net_backlog_time_allowed_sec
@@ -8435,32 +8790,88 @@ Work thread '%s' is marked exited, but we could not immediately join prior to de
 CWorkItem::DispatchCompletedWorkItem: got a work item with no job ID
 Assertion Failed: m_cCurrentDepth > 0
 %s%s%s
-O,
+Hc8z,
+0
+0
+!
+Z,
 Hi
 H=
+"
+
+=)
+3&
 ?
-#
-~
-|
+&
+Ic
+Hc
+Hc
+Hc
+0
+L!
+0
+AT=
+AT5
+AT5
+AT=
+?
+D
+@
+@
+m%
+!
+`%
+X%
+@
+Hc
+Hc
+@
+@
+@
+Hc
+@
+@
+@
+@
+=
+@
+@
+@
+@
+@
+=
+@
+@
+@
+Hc
+@
+@
+@
+@
+@
+IcE
+IcE
+@
+@
 V
-N
-@
-@
 =
-@
-@
-?
-?
-A
-Hc
+#
+=#
+&&
+#
+#
 =
-I,
-L95s0+
-+
-(
-+
-+
-Hc
+N%
+%
+@
+@
+##
+D!
+7
+@
+M9e
+@
+@
 ?
 ?
 ?
@@ -8472,7 +8883,7 @@ Hc
 ?
 ?
 ?
-?
+:
 ?
 ?
 ?
@@ -8482,7 +8893,6 @@ AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 @
 AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
-
 
 Pj
 ARj
@@ -8794,7 +9204,6 @@ ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 @
 0
-#
 H=
 Ic]
 j
@@ -8821,7 +9230,6 @@ H
 
 *
 Hc
-,
 AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 %
 @
@@ -8845,6 +9253,7 @@ rc4(16x,int)
 RC4 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 j
 j
+j
 $
 $
 
@@ -8854,66 +9263,65 @@ SHA1 block transform for x86_64, CRYPTOGAMS by <appro@openssl.org>
 0
 @
 @
+0
 H=
 
 =
 @
+=*.*
 @
 @
+Q
+J
+J
+>
 P
 P
+:
 @
 @
 @
 @
 @
 @
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
 H=
+0
 &
-=
 @
 @
 @
 @
+0
 Hi
 E
-$
-(
 0
-8
-@
-D
-H
-P
-T
-h
-`
-X
-d
-l
-p
-x
-i
-|
+0
+Hc
+Hc
+0
+
 @
 @
+
+
+@
+?
+?
+?
 @
 @
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
+0
+0
 Hi

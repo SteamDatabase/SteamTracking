@@ -13,6 +13,7 @@
  GetOSType
  GetSpewOutputFunc
  KeyValuesSystemSteam
+ Log
  Msg
  Plat_CommandLineParamExists
  Plat_FloatTime
@@ -134,7 +135,6 @@
  __error
  __gxx_personality_v0
  __maskrune
- __snprintf_chk
  __stack_chk_fail
  __stack_chk_guard
  __stderrp

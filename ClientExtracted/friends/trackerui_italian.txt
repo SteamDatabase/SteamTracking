@@ -796,7 +796,7 @@
 "Steam_Settings_Browser_ClearWebCacheMsg"	"Eliminare tutti i file nella cache del browser di Steam?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
-"RemotePlayTogether_Notification_AvailableToInvite" "Clicca con il pulsante destro sugli amici nella tua lista \"Amici\" per invitarli a giocare."
+"RemotePlayTogether_Notification_AvailableToInvite" "Invita chiunque a giocare dalla tua lista amici con un link."
 
 } 
 }  

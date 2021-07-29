@@ -944,7 +944,7 @@ message CMsgSetTopWindow {
 	optional uint32 browser_handle = 1;
 }
 
-message CMsgBrowserViewPostMessageRequest {
+message CMsgBrowserViewPostMessageToParentRequest {
 	optional uint32 browser_handle = 1;
 	optional string message = 2;
 	optional string args = 3;

@@ -2,6 +2,84 @@ import "steammessages_unified_base.steamclient.proto";
 
 option cc_generic_services = true;
 
+enum EAuthSessionGuardType {
+	k_EAuthSessionGuardType_Unknown = 0;
+	k_EAuthSessionGuardType_None = 1;
+	k_EAuthSessionGuardType_EmailCode = 2;
+	k_EAuthSessionGuardType_DeviceCode = 3;
+	k_EAuthSessionGuardType_DeviceConfirmation = 4;
+	k_EAuthSessionGuardType_EmailConfirmation = 5;
+}
+
+message CAuthentication_BeginAuthSessionViaQR_Request {
+	optional string device_friendly_name = 1;
+}
+
+message CAuthentication_BeginAuthSessionViaQR_Response {
+	optional uint64 client_id = 1 [(description) = "unique identifier of requestor, also used for routing, portion of QR code"];
+	optional string challenge_url = 2 [(description) = "URL based on client ID, which will be rendered as QR code"];
+	optional bytes request_id = 3 [(description) = "unique request ID to be presented by requestor at poll time - must not be rendered in QR"];
+	optional float interval = 4 [(description) = "refresh interval with which requestor should call PollAuthSessionStatus"];
+	repeated .EAuthSessionGuardType allowed_confirmations = 5 [(description) = "the confirmation types that will be able to confirm the request"];
+}
+
+message CAuthentication_BeginAuthSessionViaCredentials_Request {
+	optional string device_friendly_name = 1;
+	optional string account_name = 2;
+	optional string encrypted_password = 3 [(description) = "password, RSA encrypted client side"];
+	optional uint64 encryption_timestamp = 4 [(description) = "timestamp to map to a key - STime"];
+	optional bool remember_login = 5;
+}
+
+message CAuthentication_BeginAuthSessionViaCredentials_Response {
+	optional uint64 client_id = 1 [(description) = "unique identifier of requestor, also used for routing"];
+	optional bytes request_id = 2 [(description) = "unique request ID to be presented by requestor at poll time - must not be transferred or displayed"];
+	optional float interval = 3 [(description) = "refresh interval with which requestor should call PollAuthSessionStatus"];
+	repeated .EAuthSessionGuardType allowed_confirmations = 4 [(description) = "the confirmation types that will be able to confirm the request"];
+	optional uint64 steamid = 5 [(description) = "steamid of the account logging in - will only be included if the credentials were correct"];
+}
+
+message CAuthentication_PollAuthSessionStatus_Request {
+	optional uint64 client_id = 1;
+	optional bytes request_id = 2;
+}
+
+message CAuthentication_PollAuthSessionStatus_Response {
+	optional uint64 new_client_id = 1 [(description) = "if challenge is old, this is the new client id"];
+	optional string new_challenge_url = 2 [(description) = "if challenge is old, this is the new challenge ID to re-render for mobile confirmation"];
+	optional string refresh_token = 3 [(description) = "if login has been confirmed, this is the requestor's new refresh token"];
+}
+
+message CAuthentication_GetAuthSessionInfo_Request {
+	optional uint64 client_id = 1 [(description) = "client ID from scanned QR Code, used for routing"];
+}
+
+message CAuthentication_GetAuthSessionInfo_Response {
+	optional string ip = 1 [(description) = "IP address of requestor"];
+	optional string geoloc = 2 [(description) = "geoloc info of requestor"];
+}
+
+message CAuthentication_UpdateAuthSessionWithMobileConfirmation_Request {
+	optional int32 version = 1 [(description) = "version field"];
+	optional uint64 client_id = 2 [(description) = "pending client ID, from scanned QR Code"];
+	optional fixed64 steamid = 3 [(description) = "user who wants to login"];
+	optional bytes signature = 4 [(description) = "HMAC digest over {version,client_id,steamid} via user's private key"];
+	optional bool confirm = 5 [default = false, (description) = "Whether to confirm the login (true) or deny the login (false)"];
+}
+
+message CAuthentication_UpdateAuthSessionWithMobileConfirmation_Response {
+}
+
+message CAuthentication_UpdateAuthSessionWithSteamGuardCode_Request {
+	optional uint64 client_id = 1 [(description) = "pending client ID, from initialized session"];
+	optional fixed64 steamid = 2 [(description) = "user who wants to login"];
+	optional string code = 3 [(description) = "confirmation code"];
+	optional .EAuthSessionGuardType code_type = 4 [default = k_EAuthSessionGuardType_Unknown, (description) = "type of confirmation code"];
+}
+
+message CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response {
+}
+
 message CCloudGaming_CreateNonce_Request {
 	optional string platform = 1;
 	optional uint32 appid = 2;
@@ -24,6 +102,34 @@ message CCloudGaming_TimeRemaining {
 
 message CCloudGaming_GetTimeRemaining_Response {
 	repeated .CCloudGaming_TimeRemaining entries = 2;
+}
+
+service Authentication {
+	option (service_description) = "Authentication Service";
+
+	rpc BeginAuthSessionViaQR (.CAuthentication_BeginAuthSessionViaQR_Request) returns (.CAuthentication_BeginAuthSessionViaQR_Response) {
+		option (method_description) = "start authentication process";
+	}
+
+	rpc BeginAuthSessionViaCredentials (.CAuthentication_BeginAuthSessionViaCredentials_Request) returns (.CAuthentication_BeginAuthSessionViaCredentials_Response) {
+		option (method_description) = "start authentication process";
+	}
+
+	rpc PollAuthSessionStatus (.CAuthentication_PollAuthSessionStatus_Request) returns (.CAuthentication_PollAuthSessionStatus_Response) {
+		option (method_description) = "poll during authentication process";
+	}
+
+	rpc GetAuthSessionInfo (.CAuthentication_GetAuthSessionInfo_Request) returns (.CAuthentication_GetAuthSessionInfo_Response) {
+		option (method_description) = "get metadata of specific auth session";
+	}
+
+	rpc UpdateAuthSessionWithMobileConfirmation (.CAuthentication_UpdateAuthSessionWithMobileConfirmation_Request) returns (.CAuthentication_UpdateAuthSessionWithMobileConfirmation_Response) {
+		option (method_description) = "approve an authentication session via mobile 2fa";
+	}
+
+	rpc UpdateAuthSessionWithSteamGuardCode (.CAuthentication_UpdateAuthSessionWithSteamGuardCode_Request) returns (.CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response) {
+		option (method_description) = "approve an authentication session via steam guard code";
+	}
 }
 
 service CloudGaming {

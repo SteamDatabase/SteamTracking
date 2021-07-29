@@ -4,8 +4,44 @@ option cc_generic_services = true;
 enum EClientNotificationType {
 	k_EClientNotificationType_Invalid = 0;
 	k_EClientNotificationType_DownloadCompleted = 1;
+	k_EClientNotificationType_FriendInvite = 2;
+	k_EClientNotificationType_FriendInGame = 3;
+	k_EClientNotificationType_FriendOnline = 4;
+	k_EClientNotificationType_Achievement = 5;
+	k_EClientNotificationType_LowBattery = 6;
 }
 
 message CClientNotificationDownloadCompleted {
 	optional uint32 appid = 1;
+}
+
+message CClientNotificationFriendInvite {
+	optional fixed64 steamid = 1;
+}
+
+message CClientNotificationFriendInGame {
+	optional fixed64 steamid = 1;
+	optional string game_name = 2;
+}
+
+message CClientNotificationFriendOnline {
+	optional fixed64 steamid = 1;
+}
+
+message CClientNotificationAchievement {
+	optional string achievement_id = 1;
+	optional uint32 appid = 2;
+	optional string name = 3;
+	optional string description = 4;
+	optional string image_url = 5;
+	optional bool achieved = 6;
+	optional uint32 rtime_unlocked = 7;
+	optional float min_progress = 8;
+	optional float current_progress = 9;
+	optional float max_progress = 10;
+	optional float global_achieved_pct = 11;
+}
+
+message CClientNotificationLowBattery {
+	optional float pct_remaining = 1;
 }

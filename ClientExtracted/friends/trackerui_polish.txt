@@ -796,7 +796,7 @@
 "Steam_Settings_Browser_ClearWebCacheMsg"	"Usunąć wszystkie pliki z pamięci podręcznej wbudowanej przeglądarki internetowej?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
-"RemotePlayTogether_Notification_AvailableToInvite" "Kliknij PPM na kimś z listy znajomych, by zaprosić go do gry."
+"RemotePlayTogether_Notification_AvailableToInvite" "Zaproś kogokolwiek do gry linkiem z twojej listy znajomych."
 
 } 
 }  

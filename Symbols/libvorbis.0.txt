@@ -1,0 +1,222 @@
+
+ D _floor_P
+ D _mapping_P
+ D _residue_P
+ D floor0_exportbundle
+ D floor1_exportbundle
+ D mapping0_exportbundle
+ D residue0_exportbundle
+ D residue1_exportbundle
+ D residue2_exportbundle
+ T _book_maptype1_quantvals
+ T _book_unquantize
+ T _float32_pack
+ T _float32_unpack
+ T _make_words
+ T _ve_envelope_clear
+ T _ve_envelope_init
+ T _ve_envelope_mark
+ T _ve_envelope_search
+ T _ve_envelope_shift
+ T _vi_gpsy_free
+ T _vi_psy_free
+ T _vorbis_apply_window
+ T _vorbis_block_alloc
+ T _vorbis_block_ripcord
+ T _vorbis_window_get
+ T _vp_ampmax_decay
+ T _vp_couple_quantize_normalize
+ T _vp_global_free
+ T _vp_global_look
+ T _vp_noisemask
+ T _vp_offset_and_mix
+ T _vp_psy_clear
+ T _vp_psy_init
+ T _vp_tonemask
+ T drft_backward
+ T drft_clear
+ T drft_forward
+ T drft_init
+ T floor1_encode
+ T floor1_fit
+ T floor1_interpolate_fit
+ T mdct_backward
+ T mdct_clear
+ T mdct_forward
+ T mdct_init
+ T ov_ilog
+ T res0_free_info
+ T res0_free_look
+ T res0_inverse
+ T res0_look
+ T res0_pack
+ T res0_unpack
+ T res1_class
+ T res1_forward
+ T res1_inverse
+ T res2_class
+ T res2_forward
+ T res2_inverse
+ T vorbis_analysis
+ T vorbis_analysis_blockout
+ T vorbis_analysis_buffer
+ T vorbis_analysis_headerout
+ T vorbis_analysis_init
+ T vorbis_analysis_wrote
+ T vorbis_bitrate_addblock
+ T vorbis_bitrate_clear
+ T vorbis_bitrate_flushpacket
+ T vorbis_bitrate_init
+ T vorbis_bitrate_managed
+ T vorbis_block_clear
+ T vorbis_block_init
+ T vorbis_book_clear
+ T vorbis_book_codelen
+ T vorbis_book_codeword
+ T vorbis_book_decode
+ T vorbis_book_decodev_add
+ T vorbis_book_decodev_set
+ T vorbis_book_decodevs_add
+ T vorbis_book_decodevv_add
+ T vorbis_book_encode
+ T vorbis_book_init_decode
+ T vorbis_book_init_encode
+ T vorbis_comment_add
+ T vorbis_comment_add_tag
+ T vorbis_comment_clear
+ T vorbis_comment_init
+ T vorbis_comment_query
+ T vorbis_comment_query_count
+ T vorbis_commentheader_out
+ T vorbis_dsp_clear
+ T vorbis_granule_time
+ T vorbis_info_blocksize
+ T vorbis_info_clear
+ T vorbis_info_init
+ T vorbis_lpc_from_data
+ T vorbis_lpc_predict
+ T vorbis_lpc_to_lsp
+ T vorbis_lsp_to_curve
+ T vorbis_packet_blocksize
+ T vorbis_staticbook_destroy
+ T vorbis_staticbook_pack
+ T vorbis_staticbook_unpack
+ T vorbis_synthesis
+ T vorbis_synthesis_blockin
+ T vorbis_synthesis_halfrate
+ T vorbis_synthesis_halfrate_p
+ T vorbis_synthesis_headerin
+ T vorbis_synthesis_idheader
+ T vorbis_synthesis_init
+ T vorbis_synthesis_lapout
+ T vorbis_synthesis_pcmout
+ T vorbis_synthesis_read
+ T vorbis_synthesis_restart
+ T vorbis_synthesis_trackonly
+ T vorbis_version_string
+ T vorbis_window
+ __bzero
+ __sincos_stret
+ __stack_chk_fail
+ __stack_chk_guard
+ __strcat_chk
+ acos
+ atan
+ calloc
+ ceil
+ cos
+ d vwin
+ dyld_stub_binder
+ exit
+ exp
+ floor
+ free
+ ldexp
+ log
+ malloc
+ memcmp
+ memcpy
+ memmove
+ memset
+ memset_pattern16
+ oggpack_adv
+ oggpack_bytes
+ oggpack_get_buffer
+ oggpack_look
+ oggpack_read
+ oggpack_readinit
+ oggpack_reset
+ oggpack_write
+ oggpack_writeclear
+ oggpack_writeinit
+ oggpack_writetrunc
+ pow
+ qsort
+ r .memset_pattern
+ r .memset_pattern1
+ r .memset_pattern2
+ r ATH
+ r FLOOR1_fromdB_LOOKUP
+ r drfti1.ntryh
+ r stereo_threshholds
+ r stereo_threshholds_limited
+ r tonemasks
+ r vwin1024
+ r vwin128
+ r vwin2048
+ r vwin256
+ r vwin4096
+ r vwin512
+ r vwin64
+ r vwin8192
+ realloc
+ rint
+ rintf
+ sin
+ strcpy
+ strlen
+ t Laguerre_With_Deflation
+ t Newton_Raphson
+ t _01forward
+ t _01inverse
+ t _preextrapolate_helper
+ t _vds_shared_init
+ t _ve_amp
+ t _vorbis_pack_comment
+ t accumulate_fit
+ t apsort
+ t bark_noise_hybridmp
+ t comp
+ t decode_packed_entry_number
+ t dradb2
+ t dradb3
+ t dradb4
+ t dradbg
+ t dradf2
+ t dradf4
+ t dradfg
+ t fit_line
+ t floor0_free_info
+ t floor0_free_look
+ t floor0_inverse1
+ t floor0_inverse2
+ t floor0_look
+ t floor0_unpack
+ t floor1_free_info
+ t floor1_free_look
+ t floor1_inverse1
+ t floor1_inverse2
+ t floor1_look
+ t floor1_pack
+ t floor1_unpack
+ t icomp
+ t mapping0_forward
+ t mapping0_free_info
+ t mapping0_inverse
+ t mapping0_pack
+ t mapping0_unpack
+ t mdct_butterflies
+ t noise_normalize
+ t seed_chase
+ t setup_tone_curves
+ t sort32a

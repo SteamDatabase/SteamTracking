@@ -487,7 +487,7 @@
 "Friends_BlockCommunicationWarning_LinkInfo"	"Περισσότερες πληροφορίες για αυτόματη εύρεση παιχνιδιών μέσω Steamworks."
 "Friends_BlockCommunicationWarning_DontAskAgainCheck"	"Να μην εμφανιστεί αυτό ξανά."
 "Friends_BlockCommunicationWarning_Block"	"ΑΠΟΚΛΕΙΣΜΟΣ ΧΡΗΣΤΗ"
-"Friends_BlockCommunicationWArning_Cancel"	"ΑΚΥΡΟ"
+"Friends_BlockCommunicationWArning_Cancel"	"ΑΚΥΡΩΣΗ"
 "Friends_BlockCommunicationResult"	"Ο %username% αποκλείστηκε!\n\nΓια να καταργήσετε τον αποκλεισμό του χρήστη, επισκεφθείτε τη λίστα αποκλεισμένων σας στην Κοινότητα Steam."
 "Friends_BlockCommunicationResultUnblock"	"Άρθηκε ο αποκλεισμός του χρήστη %username%!\n\nΜπορείτε να δείτε τη λίστα αποκλεισμού σας στην Κοινότητα του Steam."
 "Friends_BlockCommunicationResult_YourBlockedList"	"Προβολή λίστας αποκλεισμένων"
@@ -796,7 +796,7 @@
 "Steam_Settings_Browser_ClearWebCacheMsg"	"Διαγραφή όλων των αρχείων στη μνήμη του περιηγητή;"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
-"RemotePlayTogether_Notification_AvailableToInvite" "Κάντε δεξί κλικ σε φίλους σας για πρόσκληση παιχνιδιού."
+"RemotePlayTogether_Notification_AvailableToInvite" "Προσκαλέστε οποιονδήποτε να παίξει με έναν σύνδεσμο από τη λίστα φίλων σας."
 
 } 
 }  

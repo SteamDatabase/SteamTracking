@@ -13,7 +13,7 @@
 "Overlay_SettingsEnable"	"Aktiver Steam-overlegget mens du er i spill"
 "Overlay_SettingsEnableApp"	"Aktiver Steam-samfunnet i programmet"
 "Overlay_SettingsSCTenfootEnable"	"Bruk Big Picture-overlegg når du bruker en kontroller med Steam Input fra skrivebordet"
-"Overlay_SettingsHotKeyLabel"	"Overlay-hurtigtaster"
+"Overlay_SettingsHotKeyLabel"	"Hurtigtaster for overlegg"
 "Overlay_SettingsScreenshotHotKeyLabel"	"Snarveistaster for skjermbilde"
 "Overlay_SettingsScreenshotActionLabel" "Når et skjermbilde er tatt"
 "Overlay_SettingsEnableVRDesktopGameTheaterCheck" "Bruk spillkino når det kjøres spill fra skrivebordet, mens SteamVR er aktivt"
@@ -101,7 +101,7 @@
 "Overlay_Achievement_Title"		"Prestasjoner / %percent%%"
 "Overlay_Achievement_Progress"	"Du har klart %earned% av totalt %total% prestasjoner"
 "Overlay_Achievement_Recent"	"Nyeste"
-"Overlay_Achievement_Soon"		"Så nære..."
+"Overlay_Achievement_Soon"		"Så nære …"
 
 "Overlay_WebBrowser_Back"		"TILBAKE"
 "Overlay_WebBrowser_Forward"	"FREMOVER"

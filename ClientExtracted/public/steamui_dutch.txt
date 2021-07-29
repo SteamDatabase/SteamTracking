@@ -280,6 +280,21 @@ Dit duurt niet langer dan een minuut."
 "Steam_CloudConflict_Older" " - OUDER"
 "Steam_CloudConflict_Unknown" "Onbekend"
 
+"Steam_CloudPendingSessions_Title" "Steam Cloud-uploads in de wachtrij"
+"Steam_CloudPendingSessions_Text" "%pendingops% sessies van het spel %game% zijn nog niet volledig geüpload naar Steam Cloud."
+"Steam_CloudPendingSessions_Sessions" "De meest recente sessie:"
+"Steam_CloudPendingSessions_RemoteTime" "Laatst gewijzigd: %remotetime%"
+"Steam_CloudPendingSessions_RemoteMachine" "Apparaat: %remotemachine%"
+"Steam_CloudPendingSessions_RemoteState" "Status: %remotestate%"
+"Steam_CloudPendingSessions_IgnoreAndContinue" "Negeren en doorgaan"
+"Steam_CloudPendingSessions_Cancel" "Opstarten annuleren"
+"Steam_CloudPendingSessions_Note" "Opmerking: door te negeren, kan er een conflict optreden tussen Steam Cloud-bestanden wanneer de andere sessie(s) hervatten."
+"Steam_CloudPendingSessions_Unknown" "Onbekend"
+"Steam_CloudPendingSessions_UploadNotStarted"	"Upload nog niet begonnen"
+"Steam_CloudPendingSessions_GameActive"	"Actief"
+"Steam_CloudPendingSessions_UploadInProgress"	"Uploaden..."
+"Steam_CloudPendingSessions_GameSuspended"	"Onderbroken"
+
 "CloudFiles_RemoveFile_Title"	"Steam Cloud - Bestand verwijderen"
 "CloudFiles_RemoveFile_Info"				"Weet je zeker dat je %filename% van je Steam Cloud wilt verwijderen? Hiermee wordt de lokale kopie van het bestand ook permanent verwijderd.\n\n(Deze actie kan niet ongedaan worden gemaakt.)\n"
 "CloudFiles_RemoveFile_Button"			"Verwijderen"
@@ -1289,7 +1304,7 @@ Dit duurt niet langer dan een minuut."
 
 "Steam_ContentServersBusy_Title"	"Steam - Fout"
 "Steam_ContentServersBusy_Info"		"De Steam-servers kunnen je aanvraag vanwege de drukte op dit moment niet verwerken.\nProbeer het over enkele minuten opnieuw."
-"Steam_NoContentServers_Info"		"Er zijn momenteel geen Steam-servers geconfigureerd om content te leveren voor dit spel.\nDit probleem wordt spoedig verholpen. Probeer het over enkele minuten opnieuw."
+"Steam_NoContentServers_Info"		"Er zijn momenteel geen Steam-servers geconfigureerd om inhoud te leveren voor dit spel.\nDit probleem wordt spoedig verholpen. Probeer het over enkele minuten opnieuw."
 
 "Steam_UpdateNewsButton"		"Updates weergeven"
 
@@ -2275,6 +2290,8 @@ Je moet uitloggen op OSX om de veranderingen door te voeren."
 "Steam_Install_CreateApplicationIcon"			"Systeemapplicatiepictogram maken"
 "Steam_Install_CreateMultipleApplicationIcon"	"Snelkoppeling voor elk spel maken"
 
+"Steam_Install_ShowLauncherShortcut"			"Snelkoppeling voor launcher aanmaken"
+
 "Steam_Install_InstallRetailFiles"			"Steam begint nu met het installeren van de spelcontent."
 "Steam_Install_WillVerifyExistingFiles"		"Steam controleert nu de installatie van het spel."
 
@@ -3155,7 +3172,7 @@ De bètaperiode is afgelopen. Start Steam opnieuw op om terug te gaan naar de hu
 "Steam_PrevCBAccountNum" "%accountnum%"
 
 "Steam_AddNonSteamGame"		"Niet-Steam-spel toevoegen..."
-"Steam_ViewCDKey"			"CD-code weergeven"
+"Steam_ViewCDKey"			"Cd-code weergeven"
 
 "Steam_SendGuestPass_Title$type=gift"		"Geschenk verzenden"
 
@@ -3631,6 +3648,7 @@ Maak een nieuwe Steam-vriend door een geschenk naar een bekende te e-mailen."
 "steam_downloads_downloading"	"Downloaden"
 "steam_downloads_preloading"	"Bezig met voorladen"
 "steam_downloads_unpacking"	"Bezig met uitpakken"
+"steam_downloads_patching"	"Herordenen..."
 "steam_downloads_paused"	"Update vereist"
 "steam_downloads_queued"	"In wachtrij"
 "steam_downloads_delayed"	"Gepland voor %delayeduntil%"
@@ -4032,7 +4050,7 @@ Stel een categorie in voor dit spel, zodat je het snel kunt vinden en je spellen
 "SteamUI_ContentMgr_SelectInstallFolder" "Maak of selecteer een nieuwe Steam-spelmap:"
 "SteamUI_ContentMgr_RemoveFailed" "Verwijderen van de geselecteerde Steam-spelmap mislukt."
 "SteamUI_ContentMgr_RemoveFailedDefaultFolder" "De standaardinstallatiemap van Steam kan niet worden verwijderd."
-"SteamUI_ContentMgr_RemoveFailedUsedFolder" "Alleen lege Steam-spelmappen kunnen worden verwijderd."
+"SteamUI_ContentMgr_RemoveFailedUsedFolder" "Deze Steam-bibliotheekmap is momenteel in gebruik door %game% en kan niet worden verwijderd."
 "SteamUI_ContentMgr_FlushDownloadConfig" "Downloadcache wissen"
 "SteamUI_ContentMgr_FlushDownloadConfigInfo" "Hiermee kunnen problemen met het downloaden of starten van applicaties worden opgelost."
 "SteamUI_ContentMgr_FlushDownloadConfigTip" "Dit heeft geen invloed op al geïnstalleerde of opgeslagen spellen"

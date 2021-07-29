@@ -33,5 +33,5 @@
 	"origin_xboxone_button_paddle_2"				"P2-paddle-painike"
 	"origin_xboxone_button_paddle_3"				"P3-paddle-painike"
 	"origin_xboxone_button_paddle_4"				"P4-paddle-painike"
-	"origin_xboxone_button_share"					"Share-painike"
+	"origin_xboxone_button_share"					"Jaa-painike"
 }

@@ -772,7 +772,7 @@ La modalità \"Joystick simile a mouse\" ti permetterà di giocare con un gamepa
 	"SettingsAccount_InBeta" 				"{s:electedbeta}"
 	"SettingsAccount_UserCantSetBeta" 		"{s:electedbeta} (solo l'utente che ha installato Steam può cambiare la partecipazione alle beta)."
 	"VAC_NoBans"	"Stato valido"
-	"VAC_BannedFromServers"	"Bandito da alcuni server protetti a causa di un'infrazione delle regole sui trucchi."
+	"VAC_BannedFromServers"	"Bandito da alcuni server protetti a causa dell'uso di cheat."
 	"SettingsAccount_StartBPM"			 	"Avvia Steam in modalità Big Picture"
 	"SettingsAccount_StartWindowed"			"Avvia Big Picture in modalità finestra"
 
@@ -1293,7 +1293,7 @@ La modalità \"Joystick simile a mouse\" ti permetterà di giocare con un gamepa
 	"Store_NotAvailableForPurchase"				"Non disponibile per l'acquisto"
 	"Store_AppPurchaseSection_PurchaseDLC"		"Contenuti scaricabili disponibili ({i:purchase_dlc_count})"
 	"Store_AppPurchaseSection_Demo"				"Scarica la demo gratuita"
-	"Store_AppPurchaseSection_AddToWishlist"	"Aggiungi alla lista dei desideri"
+	"Store_AppPurchaseSection_AddToWishlist"	"Aggiungi alla Lista dei desideri"
 	"Store_AppPurchaseSection_AddingToWishlist"	"Aggiunta alla lista dei desideri"
 	"Store_AppPurchaseSection_ViewWishlist"		"Mostra nella lista dei desideri"
 	"Store_AppPurchaseSection_DLC"				"Contenuto scaricabile"
@@ -1998,6 +1998,7 @@ La modalità \"Joystick simile a mouse\" ti permetterà di giocare con un gamepa
 	"Library_Details_ControllerBindingsGordon_ApplyConfiguration"	"APPLICA LA CONFIGURAZIONE"
 	"Library_Details_ControllerBindingsGordon_Share"	"CONDIVIDI LA CONFIGURAZIONE"	
 	"Library_Details_ControllerBindingsGordon_ListenForBinding"	"IN ATTESA DEL TASTO"
+	"Library_Details_ControllerBindingsGordon_Reset"			"REIMPOSTA ALL'ASSEGNAZIONE DEL SET DI AZIONI"
 	
 	"Library_Details_CopyToClipboard_Title"				"Condividi la configurazione"
 	"Library_Details_CopyToClipboard_Desc"				"Un link per questa configurazione è stato copiato nei tuoi appunti."
@@ -2039,6 +2040,7 @@ La modalità \"Joystick simile a mouse\" ti permetterà di giocare con un gamepa
 	"Library_Details_GameActionsHeader"				"SELEZIONA UN'AZIONE NEL GIOCO"
 	"Library_Details_FieldLabel_InputStyle_GA"		"Azione nel gioco"
 	"Library_GameAction_None"						"Nessuno"
+	"Library_GameAction_ResetToParent"				"Reimposta all'assegnazione del set di azioni"
 
 	"Library_Details_Binding_Custom_Description"		"Descrizione personalizzata..."
 
@@ -2096,8 +2098,7 @@ La modalità \"Joystick simile a mouse\" ti permetterà di giocare con un gamepa
 	"Library_Details_SourceMode_SingleButton_Title"		"PULSANTE SINGOLO"
 	"Library_Details_SourceMode_FlickStick_Title"		"LEVETTA VISUALE"
 	"Library_Details_SourceMode_FlickStick_Acton_Title"	"Levetta visuale: {s:action}"
-	"Library_Details_SourceMode_Mouse_Joystick_Acton_Title"	"Mouse simile a joystick: {s:action}"
-
+	"Library_Details_SourceMode_Mouse_Joystick_Acton_Title"	"JM: {s:action}"
 	"Library_Details_Source_Title_none"			"NON ASSEGNATO"
 	"Library_Details_Source_Title_left_trackpad"		"Pad sx"
 	"Library_Details_Source_Title_right_trackpad"		"Pad dx"
@@ -2396,6 +2397,8 @@ La modalità \"Joystick simile a mouse\" ti permetterà di giocare con un gamepa
 	"Library_Details_SourceMode_Title_FlickStick"		"Levetta visuale"
 	"Library_Details_SourceMode_Title_2DScroll"		"Scorrimento direzionale"
 	"Library_Details_SourceMode_Title_Hotbar"		"Menu di accesso rapido"
+	"Library_Details_SourceMode_Title_LayerInherit"			"Eredita dal set di azioni"
+	"Library_Details_SourceMode_Title_LayerNullOverride"	"Nessuno"
 
 	"Library_Details_ModeShift_Title_None"				"Nessuno"
 	"Library_Details_ModeShift_Title_LeftTrigger"		"Pressione completa di LT"
@@ -3425,6 +3428,7 @@ La modalità \"Joystick simile a mouse\" ti permetterà di giocare con un gamepa
 	"Downloads_Status_downloading"	"Download {s:downloadpercent}"
 	"Downloads_Status_preloading"	"Pre-scaricamento {s:downloadpercent}"
 	"Downloads_Status_unpacking"	"Decompressione {s:downloadpercent}"
+	"Downloads_Status_patching"	"Applicazione patch: {s:downloadpercent}"
 	"Downloads_Status_paused"	"In pausa"
 	"Downloads_Status_queued"	"In coda"
 	"Downloads_Status_ready"	"Pronto al gioco"
@@ -3434,6 +3438,7 @@ La modalità \"Joystick simile a mouse\" ti permetterà di giocare con un gamepa
 	"Downloads_Status_finished"	"Download completato alle {t:t:downloadfinished}"
 	"Downloads_Status_deferred"	"Download programmato: {t:t:downloadstart}"
 	"Downloads_Status_locked"	"Tutte le licenze per questo prodotto sono in uso"
+	"Downloads_Status_uninstalled"	"Non installato"
 
 
 	"Quit_LabelStreamingClient0"	"{s:streamingclient0}"
@@ -3568,7 +3573,7 @@ La modalità \"Joystick simile a mouse\" ti permetterà di giocare con un gamepa
 	"Settings_RemoteClients_EnableHardwareEncodingAMD" "Abilita codifica hardware su GPU AMD"
 	"Settings_RemoteClients_EnableHardwareEncodingIntel" "Abilita codifica hardware su Intel iGPU"
 	"Settings_RemoteClients_EnableHardwareDecoding" "Abilita la decodifica hardware"
-	"Settings_RemoteClients_EnableTrafficPriority" "Prioritizza traffico della rete"
+	"Settings_RemoteClients_EnableTrafficPriority" "Assegna la priorità al traffico di rete"
 	"Settings_RemoteClients_EnableTrafficPriority_Description" "Se hai un router nuovo o di fascia alta, dovresti attivare la prioritizzazione del traffico della rete."
 	"Settings_RemoteClients_PerformanceOverlay" "Overlay delle prestazioni"
 	"Settings_RemoteClients_PerformanceOverlayDisabled" "Disabilitato"
@@ -5086,6 +5091,8 @@ La modalità \"Joystick simile a mouse\" ti permetterà di giocare con un gamepa
 	"ControllerBinding_ModeDropDown_InGameAction_Description"	"Seleziona questa opzione per effettuare l'azione nel gioco specificata con la levetta o con il trackpad."
 	"ControllerBinding_ModeDropDown_OtherAction"				"Altra azione nel gioco..."
 	"ControllerBinding_ModeDropDown_OtherAction_Description"	"Sono presenti azioni nel gioco progettate specificatamente per l'utilizzo sui pulsanti del grilletto del controller. Per associare altre azioni a questo grilletto, seleziona questa opzione."
+	"ControllerBinding_ModeDropDown_LayerInherit"				"Eredita dal set di azioni"
+	"ControllerBinding_ModeDropDown_LayerInherit_Description"	"Seleziona questa opzione per annullare le modifiche effettuate in questa modalità e far ereditare la modalità definita nel set di azioni che contiene questo layer."
 	"ControllerBinding_ModeDropDown_GenericDPad"				"Pad direzionale generico"
 	"ControllerBinding_ModeDropDown_GenericDPad_Description"	"Seleziona questa opzione per impostare l'utilizzo della levetta o del trackpad come pad direzionale generico."
 
@@ -7294,6 +7301,7 @@ La modalità \"Joystick simile a mouse\" ti permetterà di giocare con un gamepa
 	"controller_unknown"								"Controller sconosciuto"
 	"controller_steamcontroller_unknown"				"Steam Controller"
 	"controller_steamcontroller_gordon" 				"Steam Controller"
+	"controller_steamcontroller_neptune"				"Controlli di Steam Deck"
 	"controller_generic"								"Controller generico"
 	"controller_xbox360"								"Controller Xbox 360"
 	"controller_xboxone"								"Controller Xbox One"

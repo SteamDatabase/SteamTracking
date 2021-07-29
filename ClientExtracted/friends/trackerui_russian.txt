@@ -796,7 +796,7 @@
 "Steam_Settings_Browser_ClearWebCacheMsg"	"Удалить все файлы из кэша браузера Steam?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
-"RemotePlayTogether_Notification_AvailableToInvite" "Откройте список друзей и пригласите их играть вместе!"
+"RemotePlayTogether_Notification_AvailableToInvite" "Пригласите в игру кого угодно с помощью ссылки из списка друзей."
 
 } 
 }  

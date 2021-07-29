@@ -16,8 +16,8 @@
 "Overlay_SettingsHotKeyLabel"	"界面快捷键"
 "Overlay_SettingsScreenshotHotKeyLabel"	"截图快捷键"
 "Overlay_SettingsScreenshotActionLabel" "截图截取完成时"
-"Overlay_SettingsEnableVRDesktopGameTheaterCheck" "在 SteamVR 作用时，通过桌面游乐剧院运行桌面游戏应用"
-"Overlay_SettingsDesktopGameTheaterCheck" "在 SteamVR 作用时使用桌面游乐剧院"
+"Overlay_SettingsEnableVRDesktopGameTheaterCheck" "在 SteamVR 启用时，通过桌面游乐剧院运行桌面游戏"
+"Overlay_SettingsDesktopGameTheaterCheck" "在 SteamVR 启用时使用桌面游乐剧院"
 "Overlay_SettingsIsVRShortcut"			"纳入虚拟现实库"
 
 "Steam_Settings_Ingame_ShowFPS_Title"	"游戏中帧数显示"

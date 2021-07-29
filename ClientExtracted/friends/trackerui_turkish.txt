@@ -788,15 +788,15 @@
 
 "Steam_Settings_Browser"	"İnternet Tarayıcısı"
 "Overlay_SettingsBrowserDesc" "Buradaki ayarlar, Steam istemcisi ve Steam oyun içi arayüzünde kullanılan internet tarayıcısına uygulanacaktır."
-"Steam_SettingsBrowserClearWebCache"	"İnternet Tarayıcısının Önbelleğini Sil"
-"Steam_SettingsBrowserClearAllCookies"	"Bütün Tarayıcı Çerezlerini Sil"
+"Steam_SettingsBrowserClearWebCache"	"İNTERNET TARAYICISININ ÖNBELLEĞİNİ SİL"
+"Steam_SettingsBrowserClearAllCookies"	"BÜTÜN TARAYICI ÇEREZLERİNİ SİL"
 "Steam_Settings_Browser_DeleteTitle"	"Çerezleri Sil"
 "Steam_Settings_Browser_DeleteMsg"	"Bütün Steam tarayıcı çerezi verileri silinsin mi?"
 "Steam_Settings_Browser_ClearWebCacheTitle"	"Tarayıcı Önbelleğini Temizle"
 "Steam_Settings_Browser_ClearWebCacheMsg"	"Dahili web tarayıcısının önbelleğindeki bütün dosyalar silinsin mi?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
-"RemotePlayTogether_Notification_AvailableToInvite" "Arkadaş listenizden birine sağ tıklayarak oyun oynamaya davet edin."
+"RemotePlayTogether_Notification_AvailableToInvite" "Arkadaş listenizden temin edeceğiniz bir bağlantıyla istediğiniz herkesi oyununuza davet edin."
 
 } 
 }  

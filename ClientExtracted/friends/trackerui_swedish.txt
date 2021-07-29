@@ -796,7 +796,7 @@
 "Steam_Settings_Browser_ClearWebCacheMsg"	"Rensa cache i den inbyggda webbläsaren?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
-"RemotePlayTogether_Notification_AvailableToInvite" "Högerklicka på någon i din vänlista för att bjuda in dem till att spela."
+"RemotePlayTogether_Notification_AvailableToInvite" "Bjud in andra till att spela via en länk från din vänlista."
 
 } 
 }  

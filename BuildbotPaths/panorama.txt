@@ -4,7 +4,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto_aescbc_openssl.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto_textencode.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/enum_names.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/enums_clientserver.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/framefunction.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/iopollinghelpers_osx.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/jpegloader.cpp
@@ -15,14 +14,10 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/platform_sockets_posix.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/sdlhelpers.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/client_api.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_base.pb.cc
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_clientserver_login.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/string_misc.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/udpconnection.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/uifontfile.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/uifontfile_format.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/workthreadpool.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/protobuf-2.6.1/src/google/protobuf/repeated_field.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/mathlib/mathlib_base.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/common/shmemstream.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/../common/clientdirectories.h
@@ -43,7 +38,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/localization/localize.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/localization/localize.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/renderer/opengllazyshaders.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/renderer/rendermessages.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/renderer/sdlopenglsurface.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/renderer/sdlopenglsurface.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/renderer/styleproperties.cpp
@@ -67,7 +61,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/uitoplevelwindowoverlay.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/uitoplevelwindowsdl.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/uitoplevelwindowsdl.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/htmlmessages.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/mathlib/vector.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/mathlib/vector2d.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/mathlib/vector4d.h

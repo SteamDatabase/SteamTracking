@@ -24,15 +24,17 @@
  _Unwind_Resume
  __CFConstantStringClassReference
  __bzero
+ __cxa_allocate_exception
  __cxa_atexit
  __cxa_begin_catch
  __cxa_end_catch
+ __cxa_free_exception
  __cxa_guard_abort
  __cxa_guard_acquire
  __cxa_guard_release
  __cxa_rethrow
+ __cxa_throw
  __error
- __fixunsdfdi
  __gxx_personality_v0
  __stack_chk_fail
  __stack_chk_guard
@@ -99,8 +101,10 @@
  mkdir
  nanosleep
  nanosleep$UNIX2003
+ objc_alloc
  objc_msgSend
  objc_msgSend_stret
+ objc_release
  operator delete(void*)
  operator delete[](void*)
  operator new(unsigned long)
@@ -141,6 +145,8 @@
  stat$INODE64
  std::__1::__next_prime(unsigned long)
  std::__1::__vector_base_common<true>::__throw_length_error() const
+ std::length_error::~length_error()
+ std::logic_error::logic_error(char const*)
  std::terminate()
  strcasecmp
  strchr
@@ -154,6 +160,7 @@
  system
  system$UNIX2003
  time
+ typeinfo for std::length_error
  unlink
  usleep
  usleep$UNIX2003
@@ -162,5 +169,6 @@
  vsnprintf
  vtable for __cxxabiv1::__class_type_info
  vtable for __cxxabiv1::__si_class_type_info
+ vtable for std::length_error
  waitpid
  waitpid$UNIX2003

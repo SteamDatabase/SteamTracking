@@ -359,6 +359,7 @@
  T avcodec_send_packet
  T avcodec_string
  T avcodec_version
+ T average_split_mvs
  T avpicture_alloc
  T avpicture_fill
  T avpicture_free
@@ -390,13 +391,16 @@
  __error
  __memcpy_chk
  __memset_chk
+ __moddi3
  __sincos_stret
  __sincosf_stret
  __snprintf_chk
  __stack_chk_fail
  __stack_chk_guard
+ __stderrp
  __tolower
  __udivdi3
+ __vsnprintf_chk
  abort
  atan
  atan2f
@@ -541,6 +545,7 @@
  avpriv_slicethread_execute
  avpriv_slicethread_free
  bsearch
+ calloc
  cbrt
  cbrtf
  cos
@@ -549,9 +554,12 @@
  exp
  exp2
  floor
+ fprintf
+ free
  frexp
  getenv
  getpid
+ gettimeofday
  hypot
  iconv
  iconv_close
@@ -569,15 +577,23 @@
  kCVPixelBufferWidthKey
  ldexp
  llrint
+ log
+ log10
  log2f
+ logf
+ longjmp
  lrint
  lrintf
+ mach_task_self_
+ malloc
  memcmp
  memcpy
  memmove
  memset
  memset_pattern16
+ pow
  powf
+ printf
  proc_pidpath
  pthread_cond_broadcast
  pthread_cond_destroy
@@ -592,9 +608,17 @@
  pthread_mutex_destroy
  pthread_mutex_init
  pthread_mutex_lock
+ pthread_mutex_trylock
  pthread_mutex_unlock
  pthread_once
  qsort
+ rand
+ round
+ semaphore_create
+ semaphore_destroy
+ semaphore_signal
+ semaphore_wait
+ setjmp
  sin
  sinf
  sscanf
@@ -604,4 +628,6 @@
  strncmp
  strstr
  strtol
+ strtoul
+ sysconf
  tan

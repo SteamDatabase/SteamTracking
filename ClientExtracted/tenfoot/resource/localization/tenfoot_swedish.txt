@@ -1292,7 +1292,7 @@
 	"Store_NotAvailableForPurchase"				"Ej tillgängligt för köp"
 	"Store_AppPurchaseSection_PurchaseDLC"		"Bläddra bland tillgängliga DLC ({i:purchase_dlc_count})"
 	"Store_AppPurchaseSection_Demo"				"Hämta kostnadsfri demo"
-	"Store_AppPurchaseSection_AddToWishlist"	"Lägg till i önskelistan"
+	"Store_AppPurchaseSection_AddToWishlist"	"Lägg till på önskelistan"
 	"Store_AppPurchaseSection_AddingToWishlist"	"Lägger till i önskelista"
 	"Store_AppPurchaseSection_ViewWishlist"		"Visa i önskelista"
 	"Store_AppPurchaseSection_DLC"				"Nedladdningsbart innehåll"
@@ -1997,6 +1997,7 @@
 	"Library_Details_ControllerBindingsGordon_ApplyConfiguration"	"VERKSTÄLL KONFIGURATION"
 	"Library_Details_ControllerBindingsGordon_Share"	"DELA KONFIGURATION"	
 	"Library_Details_ControllerBindingsGordon_ListenForBinding"	"LYSSNAR EFTER INMATNING"
+	"Library_Details_ControllerBindingsGordon_Reset"			"ÅTERSTÄLL TILL ÅTGÄRDSSETBINDNING"
 	
 	"Library_Details_CopyToClipboard_Title"				"Dela konfiguration"
 	"Library_Details_CopyToClipboard_Desc"				"En länk till denna konfiguration har kopierats till ditt urklipp."
@@ -2038,6 +2039,7 @@
 	"Library_Details_GameActionsHeader"				"VÄLJ EN SPELÅTGÄRD"
 	"Library_Details_FieldLabel_InputStyle_GA"		"Spelåtgärd"
 	"Library_GameAction_None"						"Inga"
+	"Library_GameAction_ResetToParent"				"Återställ till åtgärdssetbindning"
 
 	"Library_Details_Binding_Custom_Description"		"Anpassad beskrivning..."
 
@@ -2095,8 +2097,7 @@
 	"Library_Details_SourceMode_SingleButton_Title"		"ENSKILD KNAPP"
 	"Library_Details_SourceMode_FlickStick_Title"		"SPAKSNÄRTNING"
 	"Library_Details_SourceMode_FlickStick_Acton_Title"	"SS: {s:action}"
-	"Library_Details_SourceMode_Mouse_Joystick_Acton_Title"	"SM: {s:action}"
-
+	"Library_Details_SourceMode_Mouse_Joystick_Acton_Title"	"MS: {s:action}"
 	"Library_Details_Source_Title_none"			"OTILLDELAD"
 	"Library_Details_Source_Title_left_trackpad"		"Vänster platta"
 	"Library_Details_Source_Title_right_trackpad"		"Höger platta"
@@ -2395,6 +2396,8 @@
 	"Library_Details_SourceMode_Title_FlickStick"		"Spaksnärtning"
 	"Library_Details_SourceMode_Title_2DScroll"		"Riktningssvep"
 	"Library_Details_SourceMode_Title_Hotbar"		"Snabbvalsmeny"
+	"Library_Details_SourceMode_Title_LayerInherit"			"Ärv från åtgärdsset"
+	"Library_Details_SourceMode_Title_LayerNullOverride"	"Ingen"
 
 	"Library_Details_ModeShift_Title_None"				"Ingen"
 	"Library_Details_ModeShift_Title_LeftTrigger"		"Vänster avtryckare - Heldrag"
@@ -3424,6 +3427,7 @@
 	"Downloads_Status_downloading"	"Laddar ned {s:downloadpercent}"
 	"Downloads_Status_preloading"	"Förladdar {s:downloadpercent}"
 	"Downloads_Status_unpacking"	"Packar upp {s:downloadpercent}"
+	"Downloads_Status_patching"	"Utför korrigeringar {s:downloadpercent}"
 	"Downloads_Status_paused"	"Pausad"
 	"Downloads_Status_queued"	"I kö"
 	"Downloads_Status_ready"	"Klar att spela"
@@ -3433,6 +3437,7 @@
 	"Downloads_Status_finished"	"Nedladdningen blev klar {t:t:downloadfinished}"
 	"Downloads_Status_deferred"	"Nedladdning schemalagd {t:t:downloadstart}"
 	"Downloads_Status_locked"	"Alla licenser för denna produkt är i bruk"
+	"Downloads_Status_uninstalled"	"Ej installerat"
 
 
 	"Quit_LabelStreamingClient0"	"{s:streamingclient0}"
@@ -4136,7 +4141,7 @@
 	"SteamUI_StreamingIntro"		"Du är på väg att köra detta spel på en annan dator och spela det här med Steam Remote Play."
 	"SteamUI_StreamingIntro2"		"Din upplevelse kan variera beroende på din hårdvara och ditt hemnätverk. Besök inställningarna för Remote Play för att förbättra prestandan."
 	"SteamUI_StreamClient_Failed_Title"	"Strömningsklienten misslyckades"
-	"SteamUI_StreamClient_Failed"		"Strömningsklienten avslutades oväntat ({d:error})"
+	"SteamUI_StreamClient_Failed"		"Streamingklienten avslutades oväntat ({d:error})"
 	"SteamUI_StreamClient_Failed_Connect"	"Kunde ej ansluta till fjärrdatorn."
 	"SteamUI_StreamClient_Failed_Proto"	"Steam-versionerna installerade på den lokala datorn och fjärrdatorn stämmer inte överens."
 	"SteamUI_StreamClient_Failed_Auth"	"Autentisering misslyckades."
@@ -5085,6 +5090,8 @@
 	"ControllerBinding_ModeDropDown_InGameAction_Description"	"Välj detta alternativ för att få styrspaken eller -korset att utföra den angivna spelåtgärden."
 	"ControllerBinding_ModeDropDown_OtherAction"				"Annan spelåtgärd..."
 	"ControllerBinding_ModeDropDown_OtherAction_Description"	"Detta spel har spelåtgärder som specifikt utformats till att användas med handkontrollens avtryckare. Om du vill binda andra spelåtgärder till denna avtryckare istället, välj detta alternativ."
+	"ControllerBinding_ModeDropDown_LayerInherit"				"Ärv från åtgärdsset"
+	"ControllerBinding_ModeDropDown_LayerInherit_Description"	"Välj detta alternativ för att återställa ändringarna gjorda i detta läge, och använd det läge som är definierat i åtgärdssetet som innehåller detta lager."
 	"ControllerBinding_ModeDropDown_GenericDPad"				"Generiskt styrkors"
 	"ControllerBinding_ModeDropDown_GenericDPad_Description"	"Om du vill ställa in denna styrspak eller -kors så att den fungerar som ett generiskt styrkors, välj detta alternativ."
 
@@ -7295,6 +7302,7 @@ Justera detta värde uppåt tills långsamma rörelser varken stannar av eller �
 	"controller_unknown"								"Okänd kontroll"
 	"controller_steamcontroller_unknown"				"Steam Controller"
 	"controller_steamcontroller_gordon" 				"Steam Controller"
+	"controller_steamcontroller_neptune"				"Steam Deck-kontroll"
 	"controller_generic"								"Generisk handkontroll"
 	"controller_xbox360"								"Xbox 360-kontroll"
 	"controller_xboxone"								"Xbox One-kontroll"

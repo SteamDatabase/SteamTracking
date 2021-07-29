@@ -33,5 +33,5 @@
 	"origin_xboxone_button_paddle_2"				"P2-paddle"
 	"origin_xboxone_button_paddle_3"				"P3-paddle"
 	"origin_xboxone_button_paddle_4"				"P4-paddle"
-	"origin_xboxone_button_share"					"Share-knop"
+	"origin_xboxone_button_share"					"Knop Delen"
 }

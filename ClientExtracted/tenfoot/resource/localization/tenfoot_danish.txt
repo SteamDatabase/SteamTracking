@@ -1997,6 +1997,7 @@
 	"Library_Details_ControllerBindingsGordon_ApplyConfiguration"	"ANVEND KONFIGURATION"
 	"Library_Details_ControllerBindingsGordon_Share"	"DEL KONFIGURATION"	
 	"Library_Details_ControllerBindingsGordon_ListenForBinding"	"VENTER PÅ TAST"
+	"Library_Details_ControllerBindingsGordon_Reset"			"NULSTIL TIL HANDLINGSSÆTBINDING"
 	
 	"Library_Details_CopyToClipboard_Title"				"Del konfiguration"
 	"Library_Details_CopyToClipboard_Desc"				"Et link til denne konfiguration er blev kopieret til din udklipsholder."
@@ -2038,6 +2039,7 @@
 	"Library_Details_GameActionsHeader"				"VÆLG EN HANDLING I SPILLET"
 	"Library_Details_FieldLabel_InputStyle_GA"		"Handling i spillet"
 	"Library_GameAction_None"						"Ingen"
+	"Library_GameAction_ResetToParent"				"Nulstil til handlingssætbinding"
 
 	"Library_Details_Binding_Custom_Description"		"Tilpasset beskrivelse..."
 
@@ -2095,8 +2097,7 @@
 	"Library_Details_SourceMode_SingleButton_Title"		"ENKELT KNAP"
 	"Library_Details_SourceMode_FlickStick_Title"		"SVIRP MED JOYSTICK"
 	"Library_Details_SourceMode_FlickStick_Acton_Title"	"Svirp m. joystick: {s:action}"
-	"Library_Details_SourceMode_Mouse_Joystick_Acton_Title"	"Joystickmus: {s:action}"
-
+	"Library_Details_SourceMode_Mouse_Joystick_Acton_Title"	"MJ: {s:action}"
 	"Library_Details_Source_Title_none"			"IKKE TILKNYTTET"
 	"Library_Details_Source_Title_left_trackpad"		"Venstre trackpad"
 	"Library_Details_Source_Title_right_trackpad"		"Højre trackpad"
@@ -2395,6 +2396,8 @@
 	"Library_Details_SourceMode_Title_FlickStick"		"Svirp med joystick"
 	"Library_Details_SourceMode_Title_2DScroll"		"Retningsswipe"
 	"Library_Details_SourceMode_Title_Hotbar"		"Handlingsmenu"
+	"Library_Details_SourceMode_Title_LayerInherit"			"Nedarv fra handlingssæt"
+	"Library_Details_SourceMode_Title_LayerNullOverride"	"Ingen"
 
 	"Library_Details_ModeShift_Title_None"				"Ingen"
 	"Library_Details_ModeShift_Title_LeftTrigger"		"Fuldt tryk på venstre aftrækker"
@@ -3424,6 +3427,7 @@
 	"Downloads_Status_downloading"	"Downloader {s:downloadpercent}"
 	"Downloads_Status_preloading"	"Forudindlæser {s:downloadpercent}"
 	"Downloads_Status_unpacking"	"Udpakker {s:downloadpercent}"
+	"Downloads_Status_patching"	"Udfører rettelser {s:downloadpercent}"
 	"Downloads_Status_paused"	"Sat på pause"
 	"Downloads_Status_queued"	"I kø"
 	"Downloads_Status_ready"	"Klar til at spille"
@@ -3433,6 +3437,7 @@
 	"Downloads_Status_finished"	"Download gennemført kl. {t:t:downloadfinished}"
 	"Downloads_Status_deferred"	"Download planlagt kl. {t:t:downloadstart}"
 	"Downloads_Status_locked"	"Alle licenser er i brug for dette produkt"
+	"Downloads_Status_uninstalled"	"Ikke installeret"
 
 
 	"Quit_LabelStreamingClient0"	"{s:streamingclient0}"
@@ -3698,7 +3703,7 @@
 	"Parental_All_Store"			"Steam-butikken"
 	"Parental_All_Community"		"Indhold af fællesskabet"
 	"Parental_All_Friends"			"Venner, chat og grupper"
-	"Parental_All_Profile"			"Min online-profil, skærmbilleder og præstationer"
+	"Parental_All_Profile"			"Min onlineprofil, skærmbilleder og præstationer"
 
 
 	"Parental_Set_Big_Switch" 	"Brug familievisning på denne konto"
@@ -5086,6 +5091,8 @@
 	"ControllerBinding_ModeDropDown_InGameAction_Description"	"Vælg denne valgmulighed for at få styrepinden eller fladen til at udføre en bestemt handling i spillet."
 	"ControllerBinding_ModeDropDown_OtherAction"				"Anden handling i spillet..."
 	"ControllerBinding_ModeDropDown_OtherAction_Description"	"Dette spil har handlinger i spillet, som specifikt er designet til brug med controllerens aftrækkere. Hvis du i stedet vil tildele andre handlinger i spillet til denne aftrækker så vælg denne indstilling."
+	"ControllerBinding_ModeDropDown_LayerInherit"				"Nedarv fra handlingssæt"
+	"ControllerBinding_ModeDropDown_LayerInherit_Description"	"Vælg denne indstilling for at nulstille de ændringer, der er foretaget i denne tilstand, og bruge den tilstand, der er defineret i handlingssættet med dette lag."
 	"ControllerBinding_ModeDropDown_GenericDPad"				"Almindelig retningsknap"
 	"ControllerBinding_ModeDropDown_GenericDPad_Description"	"Hvis du vil have din styrepind eller flade til at fungere som en almindelig retningsknap så vælg denne mulighed."
 
@@ -7294,6 +7301,7 @@
 	"controller_unknown"								"Ukendt controller"
 	"controller_steamcontroller_unknown"				"Steam Controller"
 	"controller_steamcontroller_gordon" 				"Steam Controller"
+	"controller_steamcontroller_neptune"				"Steam Deck-controller"
 	"controller_generic"								"Almindelig gamepad"
 	"controller_xbox360"								"Xbox 360-controller"
 	"controller_xboxone"								"Xbox One-controller"

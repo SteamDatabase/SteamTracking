@@ -1531,7 +1531,7 @@
 	"Checkout_Confirmation_Code"				"Mã xác nhận"
 	"Checkout_Confirmation_GoToLibrary"			"Đến thư viện của bạn"
 	"Checkout_Confirmation_ReturnToStore"		"Quay lại cửa hàng"
-	"Checkout_Confirmation_ReturnToMarket"		"Quay về Chợ cộng đồng"
+	"Checkout_Confirmation_ReturnToMarket"		"Quay về chợ cộng đồng"
 	"Checkout_Confirmation_ReturnTransaction"	"Trở lại việc chuyển khoản của bạn"
 	"Checkout_Confirmation_Update_Billing_Info_Title"	"Thông tin hóa đơn của bạn đã được lưu!"
 	"Checkout_Confirmation_Update_Billing_Info_Description"	"Thông tin hóa đơn của bạn đã được lưu để mua hàng trong tương lai."
@@ -1550,7 +1550,7 @@
 	"Checkout_MicroTxnAuth_Approve"				"Đồng ý giao dịch"
 	"Checkout_MicroTxnAuth_Cancel"				"Hủy giao dịch"
 	"Checkout_MicroTxnAuth_PayWithWallet"	"Tiếp tục chi trả bằng ví Steam"
-	"Checkout_MicroTxnAuth_SubscriptionText"	"Steam sẽ tự động tính phí bằng hình thức thanh toán được lưu khi bạn làm mới đăng ký thuê bao sản phẩm. Nếu bạn không có thông tin thanh toán được lưu, Steam sẽ dùng quỹ tiền còn lại trong ví Steam."
+	"Checkout_MicroTxnAuth_SubscriptionText"	"Steam sẽ tự động tính phí bằng hình thức thanh toán được lưu khi bạn làm mới gói đăng ký sản phẩm. Nếu bạn không có thông tin thanh toán được lưu, Steam sẽ dùng quỹ tiền còn lại trong ví Steam."
 
 	"Checkout_MicroTxnAuth_Error"				"Đã có lỗi xảy ra trong khi tải thông tin về giao dịch Steam cho trò chơi này . Xin vui lòng thử lại."
 	"Checkout_MicroTxnAuth_Quantity"			"SL {i:quantity}"
@@ -1997,6 +1997,7 @@
 	"Library_Details_ControllerBindingsGordon_ApplyConfiguration"	"ÁP DỤNG THIẾT LẬP"
 	"Library_Details_ControllerBindingsGordon_Share"	"CHIA SẺ THIẾT LẬP"	
 	"Library_Details_ControllerBindingsGordon_ListenForBinding"	"ĐỢI PHÍM ĐẦU VÀO"
+	"Library_Details_ControllerBindingsGordon_Reset"			"ĐẶT LẠI NÚT CHO BỘ HÀNH ĐỘNG"
 	
 	"Library_Details_CopyToClipboard_Title"				"Chia sẻ thiết lập"
 	"Library_Details_CopyToClipboard_Desc"				"Một đường dẫn đến thiết lập này đã được lưu lại trong bộ nhớ của bạn."
@@ -2038,6 +2039,7 @@
 	"Library_Details_GameActionsHeader"				"CHỌN HÀNH ĐỘNG TRONG TRÒ CHƠI"
 	"Library_Details_FieldLabel_InputStyle_GA"		"Hàng động trong trò chơi"
 	"Library_GameAction_None"						"Trống"
+	"Library_GameAction_ResetToParent"				"Đặt lại nút cho bộ hành động"
 
 	"Library_Details_Binding_Custom_Description"		"Mô tả tự tạo..."
 
@@ -2089,14 +2091,13 @@
 	"Library_Details_SourceMode_Hotbar_Title"		"BẢNG HOTBAR"
 	"Library_Details_SourceMode_DPad_Title"				"NÚT CHỈNH HƯỚNG"
 	"Library_Details_SourceMode_ABXY_Title"				"NÚT TAY CẦM"
-	"Library_Details_SourceMode_MouseJoystick_Title"	"CẦN ĐẨY TƯƠNG TỰ CHUỘT"
+	"Library_Details_SourceMode_MouseJoystick_Title"	"CẦN TRỎ TƯƠNG TỰ CHUỘT"
 	"Library_Details_SourceMode_MouseRegion_Title"		"VÙNG CHUỘT"
 	"Library_Details_SourceMode_RadialMenu_Title"		"MENU TRÒN"
 	"Library_Details_SourceMode_SingleButton_Title"		"NÚT ĐƠN"
 	"Library_Details_SourceMode_FlickStick_Title"		"VẨY CẦN XOAY"
 	"Library_Details_SourceMode_FlickStick_Acton_Title"	"Vẩy cần xoay: {s:action}"
 	"Library_Details_SourceMode_Mouse_Joystick_Acton_Title"	"Cần trỏ chuột: {s:action}"
-
 	"Library_Details_Source_Title_none"			"CHƯA GÁN"
 	"Library_Details_Source_Title_left_trackpad"		"Cảm ứng trái"
 	"Library_Details_Source_Title_right_trackpad"		"Cảm ứng phải"
@@ -2395,6 +2396,8 @@
 	"Library_Details_SourceMode_Title_FlickStick"		"Vẩy cần xoay"
 	"Library_Details_SourceMode_Title_2DScroll"		"Vuốt có định hướng"
 	"Library_Details_SourceMode_Title_Hotbar"		"Bảng hotbar"
+	"Library_Details_SourceMode_Title_LayerInherit"			"Kế thừa từ bộ hành động"
+	"Library_Details_SourceMode_Title_LayerNullOverride"	"Không"
 
 	"Library_Details_ModeShift_Title_None"				"Trống"
 	"Library_Details_ModeShift_Title_LeftTrigger"		"Kéo hết cò trái (LT)"
@@ -3414,7 +3417,7 @@
 
 	"Downloads_Status_installing"	"Đang cài {s:downloadpercent}"
 	"Downloads_Status_starting"	"Đang bắt đầu"
-	"Downloads_Status_verifying"	"Xác thực {s:downloadpercent}"
+	"Downloads_Status_verifying"	"Đang kiểm tra {s:downloadpercent}"
 	"Downloads_Status_validating"	"Đang xác thực {s:downloadpercent}"
 	"Downloads_Status_preallocating" "Đang xác định trước {s:downloadpercent}"
 	"Downloads_Status_stopping"	"Đang dừng"
@@ -3424,6 +3427,7 @@
 	"Downloads_Status_downloading"	"Đang tải {s:downloadpercent}"
 	"Downloads_Status_preloading"	"Đang tải trước {s:downloadpercent}"
 	"Downloads_Status_unpacking"	"Đang giải nén {s:downloadpercent}"
+	"Downloads_Status_patching"	"Đang sắp đặt lại {s:downloadpercent}"
 	"Downloads_Status_paused"	"Đã tạm dừng"
 	"Downloads_Status_queued"	"Đang chờ"
 	"Downloads_Status_ready"	"Sẵn sàng để chạy"
@@ -3433,6 +3437,7 @@
 	"Downloads_Status_finished"	"Tải về xong lúc {t:t:downloadfinished}"
 	"Downloads_Status_deferred"	"Hẹn tải lúc {t:t:downloadstart}"
 	"Downloads_Status_locked"	"Mọi giấy phép đang được dùng cho sản phẩm này"
+	"Downloads_Status_uninstalled"	"Chưa cài"
 
 
 	"Quit_LabelStreamingClient0"	"{s:streamingclient0}"
@@ -5085,6 +5090,8 @@
 	"ControllerBinding_ModeDropDown_InGameAction_Description"	"Chọn mục này để làm cần trỏ hoặc bàn cảm ứng thực hiện hành động được chỉ định trong trò chơi."
 	"ControllerBinding_ModeDropDown_OtherAction"				"Hành động khác trong trò chơi..."
 	"ControllerBinding_ModeDropDown_OtherAction_Description"	"Trò chơi này có tương tác được thiết kể đặc biệt riêng cho nút cò của tay cầm. Nếu bạn muốn gán tương tác khác của trò chơi vào nút cò này, thì chọn mục này."
+	"ControllerBinding_ModeDropDown_LayerInherit"				"Kế thừa từ bộ hành động"
+	"ControllerBinding_ModeDropDown_LayerInherit_Description"	"Chọn mục này sẽ xóa các thay đổi đã thực hiện trong chế độ hiện tại, và cho phép kế thừa chế độ được thiết lập trong bộ hành động chứa lớp này."
 	"ControllerBinding_ModeDropDown_GenericDPad"				"Nút chỉnh hướng phổ thông"
 	"ControllerBinding_ModeDropDown_GenericDPad_Description"	"Nếu bạn muốn biến cần trỏ hoặc tay cầm này hoạt động như nút chỉnh hướng phổ thông, chọn mục này."
 
@@ -7293,6 +7300,7 @@
 	"controller_unknown"								"Tay cầm không xác định"
 	"controller_steamcontroller_unknown"				"Steam Controller"
 	"controller_steamcontroller_gordon" 				"Steam Controller"
+	"controller_steamcontroller_neptune"				"Tay cầm Steam Deck"
 	"controller_generic"								"Tay cầm phổ thông"
 	"controller_xbox360"								"Tay cầm Xbox 360"
 	"controller_xboxone"								"Tay cầm Xbox One"

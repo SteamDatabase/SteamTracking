@@ -1228,7 +1228,7 @@
 	"Store_Reviews"					"RECENZJE"
 	"Store_ReviewsOverview"			"Wynik + recenzje"
 	"Store_ViewSystemRequirements"	"Zobacz wymagania systemowe"
-	"Store_SupportedLanguages"		"Wspierane języki"
+	"Store_SupportedLanguages"		"Obsługiwane języki"
 	"Store_ViewLegal"				"Przeczytaj uwagi o DRM i prawne"
 	"Store_Genres"					"Gatunek"
 	"Store_Metacritic"				"Metacritic"
@@ -1285,8 +1285,8 @@
 	"Store_FriendsOfficialWebsite"	"Odwiedź oficjalną stronę"
 
 	"Store_PackagePurchaseSection_IndividualPrice"	"Koszt przy zakupie gier osobno"
-	"Store_PackagePurchaseSection_Bundle"			"Koszt pakietu"
-	"Store_PackagePurchaseSection_BundleSavings"	"Kupując ten pakiet oszczędzisz"
+	"Store_PackagePurchaseSection_Bundle"			"Koszt zestawu"
+	"Store_PackagePurchaseSection_BundleSavings"	"Kupując ten zestaw, oszczędzisz"
 
 	"Store_AppPurchaseSection_Options"			"Opcje zakupu ({i:purchase_option_count})"
 	"Store_NotAvailableForPurchase"				"Nie można zakupić"
@@ -1339,7 +1339,7 @@
 	"Store_Cart_PurchaseForSelf"				"Kup dla siebie"
 	"Store_Cart_PurchaseAsGift"					"Kup jako prezent"
 	"Store_Cart_ContinueShopping"				"Kontynuuj zakupy"
-	"Store_Cart_PartiallyOwned"					"Już posiadasz niektóre gry z tego pakietu"
+	"Store_Cart_PartiallyOwned"					"Już posiadasz niektóre gry z tego zestawu"
 	"Store_Cart_EmptyCart"						"Twój koszyk jest pusty"
 	"Store_Cart_FailedToLoad"					"Nie udało się uzyskać informacji o zawartości koszyka"
 	"Store_Cart_UpdatingCart"					"Aktualizowanie koszyka"
@@ -1997,6 +1997,7 @@
 	"Library_Details_ControllerBindingsGordon_ApplyConfiguration"	"ZASTOSUJ KONFIGURACJĘ"
 	"Library_Details_ControllerBindingsGordon_Share"	"UDOSTĘPNIJ KONFIGURACJĘ"	
 	"Library_Details_ControllerBindingsGordon_ListenForBinding"	"NASŁUCHUJ KLAWISZ"
+	"Library_Details_ControllerBindingsGordon_Reset"			"ZRESETUJ DO PRZYPISANIA ZESTAWU DZIAŁAŃ"
 	
 	"Library_Details_CopyToClipboard_Title"				"Udostępnij konfigurację"
 	"Library_Details_CopyToClipboard_Desc"				"Link do tej konfiguracji został skopiowany do twojego schowka."
@@ -2038,6 +2039,7 @@
 	"Library_Details_GameActionsHeader"				"WYBIERZ DZIAŁANIE W GRZE"
 	"Library_Details_FieldLabel_InputStyle_GA"		"Działanie w grze"
 	"Library_GameAction_None"						"Brak"
+	"Library_GameAction_ResetToParent"				"Zresetuj do przypisania zestawu działań"
 
 	"Library_Details_Binding_Custom_Description"		"Niestandardowy opis..."
 
@@ -2089,14 +2091,13 @@
 	"Library_Details_SourceMode_Hotbar_Title"		"MENU PASKA SKRÓTÓW"
 	"Library_Details_SourceMode_DPad_Title"				"KRZYŻAK"
 	"Library_Details_SourceMode_ABXY_Title"				"PRZYCISKI PADA"
-	"Library_Details_SourceMode_MouseJoystick_Title"	"JOYSTICK STYLIZOWANY NA MYSZ"
+	"Library_Details_SourceMode_MouseJoystick_Title"	"DRĄŻEK IMITUJĄCY MYSZ"
 	"Library_Details_SourceMode_MouseRegion_Title"		"REGION MYSZY"
 	"Library_Details_SourceMode_RadialMenu_Title"		"MENU KOŁOWE"
 	"Library_Details_SourceMode_SingleButton_Title"		"POJEDYNCZY PRZYCISK"
 	"Library_Details_SourceMode_FlickStick_Title"		"SZYBKI RUCH DRĄŻKA"
 	"Library_Details_SourceMode_FlickStick_Acton_Title"	"SRD: {s:action}"
-	"Library_Details_SourceMode_Mouse_Joystick_Acton_Title"	"JJM: {s:action}"
-
+	"Library_Details_SourceMode_Mouse_Joystick_Acton_Title"	"DIM: {s:action}"
 	"Library_Details_Source_Title_none"			"NIEPRZYPISANY"
 	"Library_Details_Source_Title_left_trackpad"		"Lewy panel"
 	"Library_Details_Source_Title_right_trackpad"		"Prawy panel"
@@ -2395,6 +2396,8 @@
 	"Library_Details_SourceMode_Title_FlickStick"		"Szybki ruch drążka"
 	"Library_Details_SourceMode_Title_2DScroll"		"Przesunięcie kierunkowe"
 	"Library_Details_SourceMode_Title_Hotbar"		"Menu paska skrótów"
+	"Library_Details_SourceMode_Title_LayerInherit"			"Odziedzicz z zestawu działań"
+	"Library_Details_SourceMode_Title_LayerNullOverride"	"Brak"
 
 	"Library_Details_ModeShift_Title_None"				"Brak"
 	"Library_Details_ModeShift_Title_LeftTrigger"		"Pełne pociągnięcie lewego spustu"
@@ -2946,7 +2949,7 @@
 	"SteamUI_ParentalControl_Title" "Kontrola rodzicielska systemu Windows"
 	"SteamUI_ParentalControl_Blocked" "Gra została zablokowana dla aktualnego użytkownika przez funkcję Kontrola rodzicielska systemu Windows."
 	"SteamUI_WrongPlatform_Title" "Gra niedostępna"
-	"SteamUI_WrongPlatform" "Produkt {s:gamename} nie jest dostępny na twojej platformie sprzętowej."
+	"SteamUI_WrongPlatform" "Produkt {s:gamename} nie jest dostępny na twojej obecnej platformie."
 	"SteamUI_Game_Requires_NTFS"		"Gra wymaga systemu plików NTFS"
 	"SteamUI_GameRequires_NTFS_Detail"	"Instalowana gra wymaga dysku z systemem plików NTFS i nie może być zainstalowana na systemie FAT32."
 	"SteamUI_OfflineMode_GameNotReady"		"Ta gra nie jest gotowa do działania w trybie offline."
@@ -2985,7 +2988,7 @@
 	"Steam_InstallAborted_InfoAppUnreleased"	"Nie można jeszcze zainstalować {s:game} - premiera nie miała miejsca."
 	"Steam_InstallAborted_InfoAppNoDemo"		"Nie można zainstalować {s:game}, gdyż jest to demo, a ty posiadasz pełną wersję tego produktu. Zainstaluj pełną wersję gry."
 
-	"Steam_NoContentServers_Info"		"Żaden z serwerów zawartości Steam nie jest obecnie skonfigurowany, aby dostarczyć zawartość tej gry.\nTo zostanie wkrótce naprawione. Spróbuj ponownie za kilka minut."
+	"Steam_NoContentServers_Info"		"Żaden z serwerów zawartości Steam nie jest obecnie skonfigurowany, aby dostarczyć zawartość tej gry.\nWkrótce zostanie to poprawione. Spróbuj ponownie za kilka minut."
 	"Steam_App_Install_Failed_Title"	"Błąd"
 	"Steam_App_Install_Failed_Text"	"Wystąpił błąd podczas instalacji {s:game} ({s:reason})."
 	"Steam_App_Update_Failed_Title"	"Błąd"
@@ -3424,6 +3427,7 @@
 	"Downloads_Status_downloading"	"Pobieranie {s:downloadpercent}"
 	"Downloads_Status_preloading"	"Pobieranie wstępne {s:downloadpercent}"
 	"Downloads_Status_unpacking"	"Rozpakowywanie {s:downloadpercent}"
+	"Downloads_Status_patching"	"Łatanie {s:downloadpercent}"
 	"Downloads_Status_paused"	"Zatrzymane"
 	"Downloads_Status_queued"	"W kolejce"
 	"Downloads_Status_ready"	"Gotowe do gry"
@@ -3433,6 +3437,7 @@
 	"Downloads_Status_finished"	"Pobieranie zakończone o {t:t:downloadfinished}"
 	"Downloads_Status_deferred"	"Pobieranie zaplanowane na {t:t:downloadstart}"
 	"Downloads_Status_locked"	"Wszystkie licencje dla tego produktu są w użyciu"
+	"Downloads_Status_uninstalled"	"Niezainstalowane"
 
 
 	"Quit_LabelStreamingClient0"	"{s:streamingclient0}"
@@ -5085,6 +5090,8 @@
 	"ControllerBinding_ModeDropDown_InGameAction_Description"	"Zaznacz tę opcję, aby przypisać dane działanie w grze do drążka lub panelu."
 	"ControllerBinding_ModeDropDown_OtherAction"				"Inne działanie w grze..."
 	"ControllerBinding_ModeDropDown_OtherAction_Description"	"Ta gra posiada działania w grze, które wymagają użycia spustów w kontrolerze. Jeżeli chcesz przypisać inne działanie w grze do tego spustu, wybierz tę opcję."
+	"ControllerBinding_ModeDropDown_LayerInherit"				"Odziedzicz z zestawu działań"
+	"ControllerBinding_ModeDropDown_LayerInherit_Description"	"Wybierz tę opcję, by wyczyścić zmiany dokonane w tym trybie i by dziedziczony był tryb zdefiniowany w zestawie działań zawierającym tę nakładkę."
 	"ControllerBinding_ModeDropDown_GenericDPad"				"Standardowy krzyżak"
 	"ControllerBinding_ModeDropDown_GenericDPad_Description"	"Jeżeli chcesz ustawić ten drążek lub krzyżak, aby działały jak standardowy krzyżak, zaznacz tę opcję."
 
@@ -7293,6 +7300,7 @@
 	"controller_unknown"								"Nieznany kontroler"
 	"controller_steamcontroller_unknown"				"Steam Controller"
 	"controller_steamcontroller_gordon" 				"Steam Controller"
+	"controller_steamcontroller_neptune"				"Kontroler Steam Deck"
 	"controller_generic"								"Standardowy kontroler"
 	"controller_xbox360"								"Kontroler Xbox 360"
 	"controller_xboxone"								"Kontroler Xbox One"

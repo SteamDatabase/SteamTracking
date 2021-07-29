@@ -536,7 +536,7 @@
 "controller_unknown"								"Tay cầm không xác định"
 "controller_steamcontroller_unknown"				"Steam Controller"
 "controller_steamcontroller_gordon" 				"Steam Controller"
-"controller_generic"								"Gamepad phổ thông"
+"controller_generic"								"Tay cầm phổ thông"
 "controller_xbox360"								"Tay cầm Xbox 360"
 "controller_xboxone"								"Tay cầm Xbox One"
 "controller_ps3"									"Tay cầm PlayStation 3"
@@ -796,7 +796,7 @@
 "Steam_Settings_Browser_ClearWebCacheMsg"	"Bạn có muốn xóa mọi tệp cache của trình duyệt web cài sẵn của Steam?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
-"RemotePlayTogether_Notification_AvailableToInvite" "Nhấp chuột phải vào danh sách bạn bè để mời ai đó cùng chơi."
+"RemotePlayTogether_Notification_AvailableToInvite" "Mời bất kì ai chơi cùng chỉ với một liên kết lấy từ danh sách bạn bè."
 
 } 
 }  

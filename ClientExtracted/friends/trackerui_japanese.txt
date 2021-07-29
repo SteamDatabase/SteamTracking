@@ -204,7 +204,7 @@
 "Friends_menu_view_onlineonly"			"オンラインのユーザーのみを表示"
 "Friends_menu_view_settings"			"設定..."
 "Friends_menu_players_current"			"プレイヤーリスト - 現在のゲーム"
-"Friends_menu_players_recent"			"プレイヤーリスト - 最近のゲーム"
+"Friends_menu_players_recent"			"プレイヤーリスト - 最近プレイ"
 
 
 "Friends_JoinGroupChat"				"%group% チャットに参加"
@@ -442,7 +442,7 @@
 "Friends_InviteInfo_BeenInvited"				"Steam グループに参加するように"
 "Friends_InviteInfo_JoinGroup"				"招待されました"
 "Friends_GroupEvent_NewEventScheduled"		"が新しいイベントをスケジュールしました"
-"Friends_GroupEvent_NowStarting"				"の次のイベントが開始します:"
+"Friends_GroupEvent_NowStarting"				"の次のイベントが開始されます："
 "Friends_GroupEvent_NewAccouncement"			"が新しいお知らせを投稿しました"
 
 "Friends_GroupEvent_Title"					"%group% - イベントが開始されました"
@@ -797,7 +797,7 @@
 "Steam_Settings_Browser_ClearWebCacheMsg"	"内蔵Webブラウザーのキャッシュ内のファイルをすべて削除しますか？"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
-"RemotePlayTogether_Notification_AvailableToInvite" "フレンドリストでフレンドを右クリックして、プレイに招待しよう。"
+"RemotePlayTogether_Notification_AvailableToInvite" "フレンドリストからのリンクで誰でもプレイに招待しよう。"
 
 } 
 }  

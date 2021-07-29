@@ -78,7 +78,7 @@
 "Overlay_ForceQuit_Title"		"Fermeture de l'application"
 "Overlay_ForceQuit_Description"		"Les données non sauvegardées seront perdues."
 
-"Overlay_Taskbar_EditControllerConfig"	"Configuration de la manette"
+"Overlay_Taskbar_EditControllerConfig"	"Configuration du contrôleur"
 
 "Overlay_Playtime_Stats"		"Stats Temps de jeu"
 "Overlay_Playtime_Intro"		"Vous avez joué à ce jeu"
@@ -93,8 +93,8 @@
 "Overlay_Friends_ThisManyOnline"	"Vous avez %numfriends% contacts en ligne"
 "Overlay_Friends_ThisManyInThisGame"	"Vous avez %numfriends% contacts sur ce serveur"
 
-"Overlay_Friends_ViewAll"		"Afficher tous les contacts"
-"Overlay_Friends_ViewPlayers"	"Afficher les joueurs"
+"Overlay_Friends_ViewAll"		"Contacts"
+"Overlay_Friends_ViewPlayers"	"Joueurs et joueuses"
 "Overlay_Friends_ViewAchievements"	"Afficher tous les succès"
 "Overlay_Friends_ViewNews"	"Afficher toutes les actualités"
 
@@ -152,9 +152,9 @@
 
 "Overlay_MicroTxnAuth_Title"		"Transaction Steam"
 "Overlay_MicroTxnAuth_Authorize"	"Autoriser"
-"Overlay_MicroTxnAuth_PayWithWallet"	"Régler avec le porte-monnaie"
+"Overlay_MicroTxnAuth_PayWithWallet"	"Régler avec le portemonnaie"
 "Overlay_MicroTxnAuth_UpdateBillingInformation" "Modifier les info de paiement"
-"Overlay_MicroTxnAuth_SubscriptionText"	"Steam utilisera automatiquement le moyen de paiement enregistré sur votre compte pour renouveler l'abonnement. Si aucun moyen de paiement n'est enregistré, Steam essayera d'utiliser les fonds de votre porte-monnaie Steam."
+"Overlay_MicroTxnAuth_SubscriptionText"	"Steam utilisera automatiquement le moyen de paiement enregistré sur votre compte pour renouveler l'abonnement. Si aucun moyen de paiement n'est enregistré, Steam essayera d'utiliser les fonds de votre portemonnaie Steam."
 "Overlay_MicroTxnAuth_AddFunds"		"Ajouter des fonds"
 "Overlay_MicroTxnAuth_Cancel"		"Annuler"
 "Overlay_MicroTxnAuth_Description"	"%game% nécessite votre autorisation pour :"
@@ -182,7 +182,7 @@
 "Overlay_MicroTxnAuth_ConnectionError" "Erreur de connexion"
 "Overlay_MicroTxnAuth_ConnectionError_Info" "Votre transaction n´a pas pu être finalisée à cause d´un problème de communication avec Steam."
 "Overlay_MicroTxnAuth_Insufficient_Funds" "Fonds insuffisants"
-"Overlay_MicroTxnAuth_Insufficient_Funds_Info" "Les fonds de votre porte-monnaie Steam sont insuffisants pour finaliser votre achat. Voulez-vous ajouter des fonds pour continuer ?"
+"Overlay_MicroTxnAuth_Insufficient_Funds_Info" "Les fonds de votre portemonnaie Steam sont insuffisants pour finaliser votre achat. Voulez-vous ajouter des fonds pour continuer ?"
 
 "Overlay_Screenshots_Title" "Gestionnaire de captures d'écran"
 "Overlay_Screenshots_Panel_Title" "Captures d'écran"
@@ -216,7 +216,7 @@
 "Overlay_Share"						"Partager sur Facebook"
 "Overlay_ToBeSharedToFacebook"		"Si vous partagez cette capture d'écran sur Facebook, sa visibilité sera réglée sur « publique »."
 "Overlay_WontBeSharedToFacebook"	"Vous ne pouvez partager qu'une capture d'écran à la fois sur Facebook."
-"Overlay_PrivateScreenshot"			"Cette application n'est pas encore publique. Vos captures d'écran ne pourront pas être rendues publiques sur la Communauté Steam ou partagées sur Facebook."
+"Overlay_PrivateScreenshot"			"Cette application n'est pas encore publique. Vos captures d'écran ne pourront pas être rendues publiques sur la communauté Steam ou partagées sur Facebook."
 "Overlay_ScreenshotOnSteam"			"Consultez cette capture d'écran sur Steam"
 "Overlay_ScreenshotOnSteamNamed"	"Consultez cette capture d'écran de %gamename% sur Steam"
 "Overlay_Taskbar_GameHub"		"Hub de la communauté"

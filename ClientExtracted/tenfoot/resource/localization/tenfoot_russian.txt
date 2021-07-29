@@ -1999,6 +1999,7 @@
 	"Library_Details_ControllerBindingsGordon_ApplyConfiguration"	"ПРИМЕНИТЬ НАСТРОЙКИ"
 	"Library_Details_ControllerBindingsGordon_Share"	"ПОДЕЛИТЬСЯ НАСТРОЙКАМИ"	
 	"Library_Details_ControllerBindingsGordon_ListenForBinding"	"ВЫБРАТЬ КЛАВИШУ"
+	"Library_Details_ControllerBindingsGordon_Reset"			"СБРОСИТЬ ДО НАБОРА ДЕЙСТВИЙ"
 	
 	"Library_Details_CopyToClipboard_Title"				"Поделиться настройками"
 	"Library_Details_CopyToClipboard_Desc"				"Ссылка на эти настройки управления скопирована в буфер обмена."
@@ -2040,6 +2041,7 @@
 	"Library_Details_GameActionsHeader"				"ВЫБЕРИТЕ ДЕЙСТВИЕ"
 	"Library_Details_FieldLabel_InputStyle_GA"		"Действие в игре"
 	"Library_GameAction_None"						"Нет"
+	"Library_GameAction_ResetToParent"				"Сбросить до набора действий"
 
 	"Library_Details_Binding_Custom_Description"		"Свое описание…"
 
@@ -2098,7 +2100,6 @@
 	"Library_Details_SourceMode_FlickStick_Title"		"FLICK STICK"
 	"Library_Details_SourceMode_FlickStick_Acton_Title"	"FS: {s:action}"
 	"Library_Details_SourceMode_Mouse_Joystick_Acton_Title"	"ДМ: {s:action}"
-
 	"Library_Details_Source_Title_none"			"НЕ НАЗНАЧЕНО"
 	"Library_Details_Source_Title_left_trackpad"		"Левый трекпад"
 	"Library_Details_Source_Title_right_trackpad"		"Правый трекпад"
@@ -2397,6 +2398,8 @@
 	"Library_Details_SourceMode_Title_FlickStick"		"Flick Stick"
 	"Library_Details_SourceMode_Title_2DScroll"		"Свайп в сторону"
 	"Library_Details_SourceMode_Title_Hotbar"		"Панель быстрого доступа"
+	"Library_Details_SourceMode_Title_LayerInherit"			"Наследовать из набора действий"
+	"Library_Details_SourceMode_Title_LayerNullOverride"	"Нет"
 
 	"Library_Details_ModeShift_Title_None"				"Нет"
 	"Library_Details_ModeShift_Title_LeftTrigger"		"Полное нажатие на левый триггер"
@@ -3426,6 +3429,7 @@
 	"Downloads_Status_downloading"	"Загрузка: {s:downloadpercent}"
 	"Downloads_Status_preloading"	"Предзагрузка: {s:downloadpercent}"
 	"Downloads_Status_unpacking"	"Распаковка: {s:downloadpercent}"
+	"Downloads_Status_patching"	"Внесение изменений: {s:downloadpercent}"
 	"Downloads_Status_paused"	"Приостановлено"
 	"Downloads_Status_queued"	"В очереди"
 	"Downloads_Status_ready"	"Готово к запуску"
@@ -3435,6 +3439,7 @@
 	"Downloads_Status_finished"	"Загрузка завершена {t:t:downloadfinished}"
 	"Downloads_Status_deferred"	"Запланирована на {t:t:downloadstart}"
 	"Downloads_Status_locked"	"Все лицензии на данный продукт уже используются"
+	"Downloads_Status_uninstalled"	"Не установлено"
 
 
 	"Quit_LabelStreamingClient0"	"{s:streamingclient0}"
@@ -5090,6 +5095,8 @@
 	"ControllerBinding_ModeDropDown_InGameAction_Description"	"Выберите эту настройку, чтобы стик или трекпад выполняли определенное внутриигровое действие."
 	"ControllerBinding_ModeDropDown_OtherAction"				"Другое действие…"
 	"ControllerBinding_ModeDropDown_OtherAction_Description"	"В этой игре есть действия, предназначенные для кнопок-триггеров на контроллере. Выберите эту опцию, если хотите назначить на этот триггер другие действия."
+	"ControllerBinding_ModeDropDown_LayerInherit"				"Наследовать из набора действий"
+	"ControllerBinding_ModeDropDown_LayerInherit_Description"	"Выберите, чтобы отменить изменения, сделанные в этом режиме, и унаследовать режим, указанный в наборе действий с этим слоем."
 	"ControllerBinding_ModeDropDown_GenericDPad"				"Классическая крестовина"
 	"ControllerBinding_ModeDropDown_GenericDPad_Description"	"Выберите эту настройку, если хотите, чтобы этот стик или трекпад работал как обычная крестовина."
 
@@ -7298,6 +7305,7 @@
 	"controller_unknown"								"Неизвестный контроллер"
 	"controller_steamcontroller_unknown"				"Steam Controller"
 	"controller_steamcontroller_gordon" 				"Steam Controller"
+	"controller_steamcontroller_neptune"				"Контроллер Steam Deck"
 	"controller_generic"								"Обычный геймпад"
 	"controller_xbox360"								"Контроллер Xbox 360"
 	"controller_xboxone"								"Контроллер Xbox One"

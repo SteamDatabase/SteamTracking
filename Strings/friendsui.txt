@@ -1,10 +1,11 @@
 __TEXT
-PQ
-PQ
+D
+D
 __text
 __TEXT
-P
-P
+`
+#69
+`
 __stubs
 __TEXT
 __stub_helper
@@ -12,31 +13,29 @@ __TEXT
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
+tJ=
+tJ=
 __const
 __TEXT
 __unwind_info
 __TEXT
 __eh_frame
 __TEXT
-@E
-@E
 __DATA
-PQ
-PQ
+D
+D
 __nl_symbol_ptr
 __DATA
-PQ
-PQ
+D
+D
 __got
 __DATA
+D
+D
 __la_symbol_ptr
 __DATA
-`QQ
-`QQ
 __mod_init_func
 __DATA
-]Q
-]Q
 __const
 __DATA
 __cfstring
@@ -45,31 +44,33 @@ __data
 __DATA
 __thread_vars
 __DATA
-ug
-ug
+@AZ
+0
+@AZ
+__thread_data
+__DATA
+@
 __thread_bss
 __DATA
-@ug
 __bss
 __DATA
-@yg
-0
+~
 __common
 __DATA
+`.
 H
 __LINKEDIT
-@h
+[
 
 8
 @loader_path/friendsui.dylib
 "
-9
-(Xh
-*
+@;
+H(
 P
-w
-x
+
 
+*
 8
 @loader_path/libtier0_s.dylib
 8
@@ -98,33 +99,8 @@ x
 h
 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
 &
-p^
 )
-7&
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
+P`[
 22CJSCallbackFunc_HTMLJS
 15CJSCallbackFunc
 11CRefCountedI20CRefCountServiceBaseILb1E6CRefMTEE
@@ -135,77 +111,74 @@ g
 0C
 0E
 C
-14CParentalCache
 23IClientParentalSettings
 N14CParentalCache35CCallback_OnParentalLockChangeBeginE
 9CCallbackI14CParentalCache25ParentalLockChangeBegin_tLb0EE
-13CCallbackImplILi1EE
+8
+(
+0
+<
+@
+D
+H
+L
+P
+
+
+(
+.
+X
+9
+?
 36CClientNotificationDownloadCompleted
+31CClientNotificationFriendInvite
+31CClientNotificationFriendInGame
+31CClientNotificationFriendOnline
+30CClientNotificationAchievement
+29CClientNotificationLowBattery
+N6google8protobuf8internal16InternalMetadata9ContainerINS0_15UnknownFieldSetEEE
+N6google8protobuf8internal16InternalMetadata13ContainerBaseE
 20CFriendsImageManager
-N4vgui9RGBAImageE
-N4vgui6IImageE
 7CUtlMapIiPN4vgui6IImageEi8CDefLessE
 10CUtlRBTreeIN7CUtlMapIiPN4vgui6IImageEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEiE
 15CEmoticonButton
 17CItemImageManager
-10CUtlString
 8GridMenu
-N4vgui12IClientPanelE
 10CHTTPImage
 11CCallResultI10CHTTPImage22HTTPRequestCompleted_tE
-13CCallbackBase
 11CCallResultI17CItemImageManager22HTTPRequestCompleted_tE
-10CUtlVectorIi10CUtlMemoryIiEE
 7CUtlMapIPKcii22CDefCaselessStringLessE
 10CUtlRBTreeIN7CUtlMapIPKcii22CDefCaselessStringLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlVectorI10CUtlString10CUtlMemoryIS0_EE
 10CUtlVectorIN17CItemImageManager18ImagesToDownload_tE10CUtlMemoryIS1_EE
 11CHTMLWindow
 11IHTMLWindow
-7IHTMLJS
 14IHTMLResponses
 20CJSMethodCallHandlerI11CHTMLWindowJ9CSmartPtrI15CJSCallbackFuncEEE
-20IJSMethodCallHandler
 16CHTMLProtoBufMsgI11CMsgPostURLE
 20CHTMLBaseProtoBufMsg
 16CHTMLProtoBufMsgI31CMsgDisableBackgroundThrottlingE
-16CHTMLProtoBufMsgI12CMsgSetFocusE
 16CHTMLProtoBufMsgI28CMsgSetTouchGesturesToCancelE
-16CHTMLProtoBufMsgI20CMsgJSRegisterMethodE
 NSt3__117bad_function_callE
-16CHTMLProtoBufMsgI16CMsgOpenDevToolsE
 16CHTMLProtoBufMsgI17CMsgBrowserRemoveE
-16CHTMLProtoBufMsgI10CMsgReloadE
 16CHTMLProtoBufMsgI24CMsgStartRequestResponseE
-16CHTMLProtoBufMsgI26CMsgFileLoadDialogResponseE
-16CHTMLProtoBufMsgI20CMsgJSDialogResponseE
-16CHTMLProtoBufMsgI21CMsgExecuteJavaScriptE
 16CHTMLProtoBufMsgI21CMsgJSExecuteCallbackE
 16CHTMLProtoBufMsgI21CMsgJSReleaseCallbackE
 16CHTMLProtoBufMsgI20CMsgJSRaiseExceptionE
-16CHTMLProtoBufMsgI15CMsgBrowserSizeE
 16CHTMLProtoBufMsgI21CMsgBrowserSetMinSizeE
-16CHTMLProtoBufMsgI30CMsgSetLocalFileRequestMappingE
 16CHTMLProtoBufMsgI28CMsgSetGameOverlayTargetPIDsE
 16CHTMLProtoBufMsgI13CMsgMouseMoveE
-16CHTMLProtoBufMsgI13CMsgMouseDownE
-16CHTMLProtoBufMsgI11CMsgMouseUpE
-16CHTMLProtoBufMsgI14CMsgMouseWheelE
 16CHTMLProtoBufMsgI11CMsgKeyDownE
 16CHTMLProtoBufMsgI9CMsgKeyUpE
-16CHTMLProtoBufMsgI11CMsgKeyCharE
 21CHTMLWindowController
 21IHTMLWindowController
 14CUtlLinkedListIP11CHTMLWindowiE
 20CBroadcastController
 13IUIController
 N20CBroadcastController35CCallbackInternal_OnBroadcastStatusE
-13CCallbackImplILi24EE
 N20CBroadcastController39CCallbackInternal_OnViewerNeedsApprovalE
 13CCallbackImplILi8EE
 N20CBroadcastController40CCallbackInternal_OnViewerApprovalResultE
-13CCallbackImplILi16EE
-10CUtlVectorI9CSmartPtrI15CJSCallbackFuncE10CUtlMemoryIS2_EE
 20CJSMethodCallHandlerI20CBroadcastControllerJ9CSmartPtrI15CJSCallbackFuncEEE
 20CJSMethodCallHandlerI20CBroadcastControllerJPKcjEE
 20CJSMethodCallHandlerI20CBroadcastControllerJPKc9CSmartPtrI18CJSCallbackPromiseEEE
@@ -223,9 +196,7 @@ N21CRemotePlayController44CCallbackInternal_OnStreamingClientConnectedE
 N21CRemotePlayController44CCallbackInternal_OnStreamingClientUsedInputE
 N21CRemotePlayController51CCallbackInternal_OnRemoteClientInputSettingsChangeE
 N21CRemotePlayController46CCallbackInternal_OnRemoteClientStreamLifetimeE
-13CCallbackImplILi25EE
 N21CRemotePlayController44CCallbackInternal_OnRemoteClientLaunchFailedE
-13CCallbackImplILi4EE
 N21CRemotePlayController42CCallbackInternal_OnPlaceholderStateChangeE
 N21CRemotePlayController50CCallbackInternal_OnRemotePlayTogetherGroupCreatedE
 N21CRemotePlayController52CCallbackInternal_OnRemotePlayTogetherGroupDisbandedE
@@ -233,7 +204,6 @@ N21CRemotePlayController50CCallbackInternal_OnRemotePlayTogetherPlayerJoinedE
 13CCallbackImplILi52EE
 N21CRemotePlayController48CCallbackInternal_OnRemotePlayTogetherPlayerLeftE
 N21CRemotePlayController69CCallbackInternal_OnRemoteClientStreamSessionUpdateNetworkUtilizationE
-13CCallbackImplILi44EE
 N21CRemotePlayController58CCallbackInternal_OnRemoteClientRemotePlayClearControllersE
 N21CRemotePlayController60CCallbackInternal_OnRemoteClientRemotePlayControllerIndexSetE
 N21CRemotePlayController57CCallbackInternal_OnRemoteClientRemotePlayQualityOverrideE
@@ -309,34 +279,50 @@ $
 -
 .
 0
+
 $
 (
 ,
+@
+D
 0
+E
+F
+G
+H
 1
+8
 2
 3
-8
+4
+
+
+$
+0
 4
 9
 :
-;
-@
-<
-H
+(
+9
+:
+(
 $
-8
-9
-:
-8
-(
-9
-:
-(
 (
 ,
+$
 (
 ,
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
 $
 (
 $
@@ -349,6 +335,7 @@ $
 (
 ,
 0
+4
 $
 (
 ,
@@ -357,17 +344,18 @@ $
 8
 $
 (
-(
+,
 0
+4
+8
+9
+:
 (
 H
 0
 8
 @
-8
-9
-:
-0
+4
 8
 <
 @
@@ -377,11 +365,69 @@ L
 P
 T
 X
+
 $
 0
-8
-4
+L
 (
+@
+@
+@
+&
+'
+-
+.
+6
+0
+9
+@
+B
+G
+Q
+0
+V
+`
+0
+e
+u
+8
+P
+(
+@
+@
+0
+0
+0
+0
+0
+0
+0
+0
+(
+(
+(
+8
+(
+@
+(
+0
+(
+8
+(
+(
+0
+@
+P
+(
+(
+`
+(
+P
+(
+(
+(
+0
+8
 21CDiscoveryPingRequest
 22CDiscoveryPingResponse
 29CStreamingClientHandshakeInfo
@@ -481,7 +527,7 @@ $
 43CTransportSignalMsg_WebRTCMessage_Candidate
 33CTransportSignalMsg_WebRTCMessage
 19CTransportSignalMsg
-N4vgui17NotificationFrameE
+26CAppDownloadedNotification
 31CAppDownloadNotificationManager
 N31CAppDownloadNotificationManager31CCallback_OnAppEventStateChangeE
 9CCallbackI31CAppDownloadNotificationManager21AppEventStateChange_tLb0EE
@@ -489,19 +535,17 @@ N31CAppDownloadNotificationManager24CCallback_OnDlcInstalledE
 9CCallbackI31CAppDownloadNotificationManager14DlcInstalled_tLb0EE
 20CMultipleCallResultsI31CAppDownloadNotificationManager22HTTPRequestCompleted_tE
 10CUtlRBTreeIyi8CDefLess25CDefRBTreeBalanceListenerIiEyE
-26CAppDownloadedNotification
 @
 A32CFriendNotificationOptionsDialog
 14CFriendsDialog
+21IFriendPanelContainer
 20CFriendsNotification
 24CAchievementNotification
 17CFriendsClansPage
 19CFriendsFriendsPage
-21IFriendPanelContainer
 20CFriendAliasesDialog
 N20CFriendAliasesDialog30CCallback_OnPersonaStateChangeE
 9CCallbackI20CFriendAliasesDialog20PersonaStateChange_tLb0EE
-13CCallbackImplILi12EE
 N14CFriendsDialog23CCallback_OnLobbyInviteE
 9CCallbackI14CFriendsDialog13LobbyInvite_tLb0EE
 N14CFriendsDialog30CCallback_OnRichInviteReceivedE
@@ -512,7 +556,6 @@ N14CFriendsDialog31CCallback_OnParentalLockChangedE
 13CCallbackImplILi2EE
 N14CFriendsDialog25CCallback_OnFriendChatMsgE
 9CCallbackI14CFriendsDialog15FriendChatMsg_tLb0EE
-13CCallbackImplILi32EE
 N14CFriendsDialog36CCallback_OnUserRequestingFriendshipE
 9CCallbackI14CFriendsDialog26UserRequestingFriendship_tLb0EE
 N14CFriendsDialog30CCallback_OnPersonaStateChangeE
@@ -593,7 +636,6 @@ N4vgui12SimpleDialogE
 29CBroadcastApproveNotification
 30CBroadcastRecorderNotification
 37CBroadcastCantStartFriendNotification
-10CUtlVectorIN4vgui7PHandleE10CUtlMemoryIS1_EE
 11CCallResultI20CFriendAliasesDialog21NameHistoryResponse_tE
 14CUtlLinkedListIN4vgui13DialogManagerI12CChatRoomDlg8CSteamIDE12DialogItem_tEiE
 14CUtlLinkedListIN4vgui13DialogManagerI23CChatIntroductionDialog8CSteamIDE12DialogItem_tEiE
@@ -616,14 +658,13 @@ N4vgui12SimpleDialogE
 24CEditFriendsGroupsDialog
 N22CEditFriendsGroupsPage24CCallback_OnGroupCreatedE
 9CCallbackI22CEditFriendsGroupsPage21FriendsGroupCreated_tLb0EE
+42CSteamInputControllerConnectedNotification
+42CSteamInputPlayerNumberChangedNotification
 N30CSteamInputNotificationManager45CCallback_OnReceivedControllerPersonalizationE
 9CCallbackI30CSteamInputNotificationManager34ControllerPersonalizationUpdated_tLb0EE
 N30CSteamInputNotificationManager49CCallback_OnReceivedControllerPlayerNumberChangedE
 9CCallbackI30CSteamInputNotificationManager31ControllerPlayerNumberChanged_tLb0EE
-42CSteamInputControllerConnectedNotification
-42CSteamInputPlayerNumberChangedNotification
 4@
-
 %
 l
 l
@@ -646,6 +687,7 @@ N12CChatRoomDlg31CCallback_OnChatRoomInfoChangedE
 9CCallbackI12CChatRoomDlg21ChatRoomInfoChanged_tLb0EE
 N12CChatRoomDlg31CCallback_OnChatRoomDlgUIChangeE
 9CCallbackI12CChatRoomDlg21ChatRoomDlgUIChange_tLb0EE
+13CCallbackImplILi12EE
 N12CChatRoomDlg29CCallback_OnSteamRackBouncingE
 9CCallbackI12CChatRoomDlg19SteamRackBouncing_tLb0EE
 N12CChatRoomDlg25CCallback_OnFriendChatMsgE
@@ -668,6 +710,7 @@ N12CChatRoomDlg25CCallback_OnRequestResumeE
 9CCallbackI12CChatRoomDlg21NotifyRequestResume_tLb0EE
 N12CChatRoomDlg31CCallback_OnParentalLockChangedE
 9CCallbackI12CChatRoomDlg21ParentalLockChanged_tLb0EE
+N4vgui12IClientPanelE
 14CGameInviteBar
 15CTradeInviteBar
 N15CTradeInviteBar29CCallback_OnTradeStartSessionE
@@ -682,12 +725,13 @@ N15CTradeInviteBar31CCallback_OnTradeInviteCanceledE
 N4vgui16EasyNotificationE
 28CVoiceChatInviteNotification
 13CChatTabPanel
+11KeyValuesAD
 20CMultipleCallResultsI12CChatRoomDlg22HTTPRequestCompleted_tE
 15CChatTitlePanel
 N15CChatTitlePanel27CCallback_OnClanInfoChangedE
 9CCallbackI15CChatTitlePanel17ClanInfoChanged_tLb0EE
 25CChatTitlePanelAffordance
-17CFriendPanelLabel
+#Friends_online
 12CFriendPanel
 10CClanPanel
 19CFriendListItemBase
@@ -726,15 +770,12 @@ N25CFriendsListSectionHeader30CCallback_OnPersonaStateChangeE
 9CCallbackI25CFriendsListSectionHeader20PersonaStateChange_tLb0EE
 N25CFriendsListSectionHeader27CCallback_OnClanInfoChangedE
 9CCallbackI25CFriendsListSectionHeader17ClanInfoChanged_tLb0EE
-11KeyValuesAD
 7CUtlMapI8CSteamIDii8CDefLessE
 10CUtlRBTreeIN7CUtlMapI8CSteamIDii8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeIP19CFriendListItemBaseiPFbRKS1_S3_E25CDefRBTreeBalanceListenerIiES1_E
 7CUtlMapIsii8CDefLessE
 10CUtlRBTreeIN7CUtlMapIsii8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEsE
 16CFriendsUIModule
-NSt3__110__function6__funcIZN16CFriendsUIModule11EnterVRModeEvE3$_0NS_9allocatorIS3_EEFvP11IHTMLWindowEEE
-ZN16CFriendsUIModule11EnterVRModeEvE3$_0
 11IVGuiModule
 14IBaseInterface
 10IFriendsUI
@@ -759,28 +800,40 @@ N16CFriendsUIModule28CFriendPanelContainerGenericE
 25CGiftReceivedNotification
 25CItemReceivedNotification
 21CNewTurnsNotification
+NSt3__110__function6__funcIZN16CFriendsUIModule11EnterVRModeEvE3$_0NS_9allocatorIS3_EEFvP11IHTMLWindowEEE
 NSt3__110__function6__baseIFvP11IHTMLWindowEEE
+ZN16CFriendsUIModule11EnterVRModeEvE3$_0
+N4vgui17NotificationFrameE
 34CFriendsWebChatMsgBaseNotification
 24CFriendsWebChatVguiFrame
 N15CFriendsWebChat49CCallbackInternal_OnOverlayChatBrowserInfoChangedE
+13CCallbackImplILi1EE
+13CCallbackBase
 N15CFriendsWebChat40CCallbackInternal_OnClientUINotificationE
 13CCallbackImplILi24584EE
 N15CFriendsWebChat48CCallbackInternal_OnClientUINotificationResponseE
+13CCallbackImplILi16EE
 N15CFriendsWebChat35CCallbackInternal_OnClientUICommandE
 13CCallbackImplILi264EE
 N15CFriendsWebChat45CCallbackInternal_OnComputerActiveStateChangeE
 N15CFriendsWebChat43CCallbackInternal_OnSetPersonaStateInternalE
+13CCallbackImplILi4EE
 N15CFriendsWebChat35CCallbackInternal_OnOpenURLInClientE
 13CCallbackImplILi1032EE
 N15CFriendsWebChat43CCallbackInternal_OnVoiceHotKeyStateChangedE
 N15CFriendsWebChat43CCallbackInternal_OnShowChatRoomGroupInviteE
+13CCallbackImplILi32EE
 N15CFriendsWebChat36CCallbackInternal_OnChatRoomDlgCloseE
+13CCallbackImplILi44EE
+13CCallbackImplILi25EE
+13CCallbackImplILi24EE
 39CFriendsWebChatMsgGroupChatNotification
 40CFriendsWebChatMsgFriendChatNotification
 39CFriendsWebChatFriendInGameNotification
 39CFriendsWebChatFriendOnlineNotification
 11CCallResultI15CFriendsWebChat24SetPersonaNameResponse_tE
 20CJSMethodCallHandlerI15CFriendsWebChatJ9CSmartPtrI15CJSCallbackFuncEEE
+20IJSMethodCallHandler
 20CJSMethodCallHandlerI15CFriendsWebChatJ9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI15CFriendsWebChatJiPKc9CSmartPtrI15CJSCallbackFuncEEE
 20CJSMethodCallHandlerI15CFriendsWebChatJPKcibEE
@@ -799,14 +852,15 @@ N15CFriendsWebChat36CCallbackInternal_OnChatRoomDlgCloseE
 N24CPlayersSubRecentPlayers30CCallback_OnPersonaStateChangeE
 9CCallbackI24CPlayersSubRecentPlayers20PersonaStateChange_tLb0EE
 27CSharedLibraryNotifications
+13CCallbackImplILi76EE
 N27CSharedLibraryNotifications27CCallback_OnAuthorizeDeviceE
 9CCallbackI27CSharedLibraryNotifications23AuthorizeDeviceResult_tLb0EE
 13CCallbackImplILi88EE
 N27CSharedLibraryNotifications29CCallback_OnDeauthorizeDeviceE
 9CCallbackI27CSharedLibraryNotifications25DeauthorizeDeviceResult_tLb0EE
-13CCallbackImplILi76EE
 N27CSharedLibraryNotifications23CCallback_OnStopPlayingE
 9CCallbackI27CSharedLibraryNotifications24StopPlayingBorrowedApp_tLb0EE
+13CCallbackImplILi84EE
 N27CSharedLibraryNotifications32CCallback_OnSharedLibraryChangedE
 9CCallbackI27CSharedLibraryNotifications26SharedLibraryLockChanged_tLb0EE
 25SharedLibraryNotification
@@ -820,99 +874,143 @@ A
 @
 C
 N6google8protobuf14FatalExceptionE
-N6google8protobuf7ClosureE
-N6google8protobuf8internal16FunctionClosure0E
+NSt3__119basic_ostringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE
+NSt3__115basic_stringbufIcNS_11char_traitsIcEENS_9allocatorIcEEEE
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+type.googleapis.com/
+type.googleprod.com/
 N6google8protobuf8internal15ExtensionFinderE
 N6google8protobuf8internal24GeneratedExtensionFinderE
+N6google8protobuf8internal12ExtensionSet8KeyValueE
+N6google8protobuf13RepeatedFieldIiEE
+N6google8protobuf13RepeatedFieldIxEE
+N6google8protobuf13RepeatedFieldIjEE
+N6google8protobuf13RepeatedFieldIyEE
+N6google8protobuf13RepeatedFieldIfEE
+N6google8protobuf13RepeatedFieldIdEE
+N6google8protobuf13RepeatedFieldIbEE
+N6google8protobuf16RepeatedPtrFieldINSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEEE
+N6google8protobuf8internal20RepeatedPtrFieldBaseE
+N6google8protobuf16RepeatedPtrFieldINS0_11MessageLiteEEE
+NSt3__13mapIiN6google8protobuf8internal12ExtensionSet9ExtensionENS_4lessIiEENS_9allocatorINS_4pairIKiS5_EEEEEE
 N6google8protobuf11MessageLiteE
-
-
-N6google8protobuf8internal12FieldSkipperE
 N6google8protobuf2io19ZeroCopyInputStreamE
-N6google8protobuf2io20ZeroCopyOutputStreamE
+
+
 N6google8protobuf2io16ArrayInputStreamE
-N6google8protobuf2io17ArrayOutputStreamE
 N6google8protobuf2io18StringOutputStreamE
-!
-!
-!
-!
-1
-!
-A
-9
-!
 
 
 N6google8protobuf12_GLOBAL__N_123AggregateErrorCollectorE
 N6google8protobuf17DescriptorBuilder17OptionInterpreter21AggregateOptionFinderE
-(
-@
-P
+N6google8protobuf18DescriptorDatabaseE
+N6google8protobuf25EncodedDescriptorDatabaseE
+0
+H
 `
 x
-8
-P
-h
 $
-8
-(
+x
 0
-@
-<
 H
-8
-(
-8
+`
+H
+T
+X
 (
 0
-0
+L
 8
 @
-A
-B
-D
-H
-C
-h
-i
-j
 P
+
+h
+0
 H
+(
+8
+(
+0
+8
+9
+(
+P
+X
+`
+h
+p
+x
+0
+
+
 I
 J
+K
 0
+L
+P
+M
+N
+O
 0
-4
-5
-6
-8
-7
-@
-H
+(
 I
 0
-H
-0
-H
-0
-H
 0
 0
-8
-@
+L
+0
+0
 H
 P
 X
+8
+@
 0
+`
+h
 H
+0
+8
+<
+#
++
+(
+.
+5
+7
+F
 P
+V
+f
+`
+q
+x
+(
+z
+p
+0
+@
+@
+P
+X
+P
+P
+P
+P
+(
+`
+p
+@
 N6google8protobuf17FileDescriptorSetE
 N6google8protobuf19FileDescriptorProtoE
 N6google8protobuf30DescriptorProto_ExtensionRangeE
+N6google8protobuf29DescriptorProto_ReservedRangeE
 N6google8protobuf15DescriptorProtoE
+N6google8protobuf21ExtensionRangeOptionsE
 N6google8protobuf20FieldDescriptorProtoE
 N6google8protobuf20OneofDescriptorProtoE
+N6google8protobuf37EnumDescriptorProto_EnumReservedRangeE
 N6google8protobuf19EnumDescriptorProtoE
 N6google8protobuf24EnumValueDescriptorProtoE
 N6google8protobuf22ServiceDescriptorProtoE
@@ -920,6 +1018,7 @@ N6google8protobuf21MethodDescriptorProtoE
 N6google8protobuf11FileOptionsE
 N6google8protobuf14MessageOptionsE
 N6google8protobuf12FieldOptionsE
+N6google8protobuf12OneofOptionsE
 N6google8protobuf11EnumOptionsE
 N6google8protobuf16EnumValueOptionsE
 N6google8protobuf14ServiceOptionsE
@@ -928,48 +1027,45 @@ N6google8protobuf28UninterpretedOption_NamePartE
 N6google8protobuf19UninterpretedOptionE
 N6google8protobuf23SourceCodeInfo_LocationE
 N6google8protobuf14SourceCodeInfoE
-N6google8protobuf18DescriptorDatabaseE
-N6google8protobuf25EncodedDescriptorDatabaseE
+N6google8protobuf28GeneratedCodeInfo_AnnotationE
+N6google8protobuf17GeneratedCodeInfoE
 N6google8protobuf14DynamicMessageE
 N6google8protobuf21DynamicMessageFactoryE
 N6google8protobuf8internal29DescriptorPoolExtensionFinderE
-N6google8protobuf8internal26GeneratedMessageReflectionE
+N6google8protobuf8internal12MapFieldBaseE
+N6google8protobuf8internal15DynamicMapFieldE
+N6google8protobuf8internal23TypeDefinedMapFieldBaseINS0_6MapKeyENS0_11MapValueRefEEE
+N6google8protobuf16RepeatedPtrFieldINS0_7MessageEEE
+NSt3__13mapINS_17reference_wrapperIKN6google8protobuf6MapKeyEEEPvNS_4lessIS4_EENS3_8internal12MapAllocatorINS_4pairIKS6_S7_EEEEEE
 N6google8protobuf7MessageE
-N6google8protobuf10ReflectionE
 N6google8protobuf14MessageFactoryE
 N6google8protobuf12_GLOBAL__N_123GeneratedMessageFactoryE
-!
+N6google8protobuf8internal30RepeatedFieldPrimitiveAccessorIiEE
+N6google8protobuf8internal20RepeatedFieldWrapperIiEE
+N6google8protobuf8internal33RandomAccessRepeatedFieldAccessorE
+N6google8protobuf8internal21RepeatedFieldAccessorE
+N6google8protobuf8internal30RepeatedFieldPrimitiveAccessorIjEE
+N6google8protobuf8internal20RepeatedFieldWrapperIjEE
+N6google8protobuf8internal30RepeatedFieldPrimitiveAccessorIxEE
+N6google8protobuf8internal20RepeatedFieldWrapperIxEE
+N6google8protobuf8internal30RepeatedFieldPrimitiveAccessorIyEE
+N6google8protobuf8internal20RepeatedFieldWrapperIyEE
+N6google8protobuf8internal30RepeatedFieldPrimitiveAccessorIfEE
+N6google8protobuf8internal20RepeatedFieldWrapperIfEE
+N6google8protobuf8internal30RepeatedFieldPrimitiveAccessorIdEE
+N6google8protobuf8internal20RepeatedFieldWrapperIdEE
+N6google8protobuf8internal30RepeatedFieldPrimitiveAccessorIbEE
+N6google8protobuf8internal20RepeatedFieldWrapperIbEE
+N6google8protobuf8internal30RepeatedPtrFieldStringAccessorE
+N6google8protobuf8internal23RepeatedPtrFieldWrapperINSt3__112basic_stringIcNS3_11char_traitsIcEENS3_9allocatorIcEEEEEE
+N6google8protobuf8internal16MapFieldAccessorE
+N6google8protobuf8internal31RepeatedPtrFieldMessageAccessorE
+N6google8protobuf8internal23RepeatedPtrFieldWrapperINS0_7MessageEEE
+N6google8protobuf10TextFormat17BaseTextGeneratorE
 N6google8protobuf10TextFormat6FinderE
-N6google8protobuf10TextFormat17FieldValuePrinterE
+N6google8protobuf10TextFormat21FastFieldValuePrinterE
 N6google8protobuf10TextFormat6Parser10ParserImpl20ParserErrorCollectorE
-N6google8protobuf12_GLOBAL__N_129FieldValuePrinterUtf8EscapingE
-N6google8protobuf8internal27UnknownFieldSetFieldSkipperE
-A
-=
-A
-0
-1
-(
-1
-*
-1
--
-!
-1
-$
-A
-4
-1
-)
-A
->
-1
-'
-A
-<
-!
-1
-/
+N6google8protobuf10TextFormat7Printer13TextGeneratorE
 N6google8protobuf2io14ErrorCollectorE
 @
 6
@@ -2084,26 +2180,26 @@ $
 ,
 $
 $
-(
-@
-,
-A
-0
-4
-8
-B
-H
-D
 P
+D
+h
+H
+L
+(
+Q
+0
 T
-C
+l
+d
+R
+8
 X
 `
-h
-@
+
+
 (
-(
-P
+0
+8
 (
 0
 8
@@ -2113,9 +2209,7 @@ $
 (
 $
 (
-(
-$
-(
+,
 $
 (
 ,
@@ -2124,40 +2218,34 @@ $
 ,
 $
 %
-(
-(
-,
-0
--
-!
-(
-$
-0
-"
-(
-@
-(
-(
-(
-0
-,
-$
-(
-$
-$
-(
-,
-0
 4
+(
+5
+)
+,
+0
+*
+0
 8
 (
+4
+$
+(
+$
+4
+8
+$
+(
+,
+0
+$
+(
 ,
 0
 4
-(
 0
-,
-0
+8
+D
 8
 (
 0
@@ -2179,15 +2267,13 @@ $
 (
 ,
 0
+$
 (
 ,
 -
 $
-(
-$
+,
 0
-(
-(
 (
 0
 8
@@ -2195,12 +2281,11 @@ $
 =
 (
 0
-8
-$
-(
 0
-%
-8
+<
+(
+=
+0
 $
 (
 ,
@@ -2209,24 +2294,22 @@ $
 8
 <
 @
+
 $
-p
-(
-0
-8
-q
-@
-r
 X
-8
-8
-(
-(
+\
+`
+H
+h
+P
+q
+r
+0
+0
 0
 (
 (
-@
-(
+P
 0
 $
 (
@@ -2235,14 +2318,120 @@ $
 ,
 0
 0
-0
 (
 8
 @
 4
 (
+(
+
+0
+&
+0
++
+3
+(
+6
+A
+0
+G
+O
+(
+R
+[
+(
+_
+h
+(
+l
+r
+s
+p
+0
+H
+X
+(
+(
+0
+0
+0
 0
 (
+0
+0
+(
+(
+0
+8
+(
+8
+0
+H
+0
+8
+0
+(
+@
+(
+(
+(
+8
+H
+8
+(
+(
+(
+@
+8
+@
+8
+8
+(
+0
+(
+(
+(
+8
+0
+(
+(
+0
+@
+(
+8
+@
+@
+(
+(
+H
+(
+(
+(
+x
+@
+@
+(
+(
+0
+0
+8
+X
+0
+(
+0
+8
+(
+8
+(
+8
+H
+0
+(
+(
+(
+(
+(
+8
 9CMsgKeyUp
 11CMsgKeyDown
 11CMsgKeyChar
@@ -2400,9 +2589,9 @@ $
 13CMsgDisableF5
 17CMsgStartDownload
 16CMsgSetTopWindow
-33CMsgBrowserViewPostMessageRequest
+41CMsgBrowserViewPostMessageToParentRequest
+NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 N4vgui19AnimatingImagePanelE
-N4vgui19AnimationControllerE
 25CPanelAnimationDictionary
 7CUtlMapIPKcN25CPanelAnimationDictionary32PanelAnimationMapDictionaryEntryEi22CDefCaselessStringLessE
 10CUtlRBTreeIN7CUtlMapIPKcN25CPanelAnimationDictionary32PanelAnimationMapDictionaryEntryEi22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
@@ -2438,14 +2627,13 @@ N4vgui13EditablePanelE
 *
 N4vgui18FileCompletionEditE
 N4vgui14FileOpenDialogE
+N4vgui18FileCompletionMenuE
+N4vgui18CFileOpenListPanelE
 F
 i
 l
 e
-N4vgui18FileCompletionMenuE
-N4vgui18CFileOpenListPanelE
 N4vgui13FocusNavGroupE
-333@N4vgui5FrameE
 N4vgui9GripPanelE
 N4vgui16CaptionGripPanelE
 N4vgui10FrameTitleE
@@ -2459,7 +2647,6 @@ N4vgui10GraphPanelE
 14CUtlLinkedListIN4vgui10GraphPanel8Sample_tEiE
 10CUtlVectorIf10CUtlMemoryIfEE
 @
-C
 E
 F
 R
@@ -2530,39 +2717,54 @@ r
 :
 16HTMLComboBoxHost
 N4vgui4HTMLE
+7IHTMLJS
 N4vgui4HTML12CHTMLFindBarE
 22CFrameEventPerfTracker
+NSt3__121__basic_string_commonILb1EEE
+10CUtlVectorIN4vgui4HTML18CustomURLHandler_tE10CUtlMemoryIS2_EE
+10CUtlVectorI9CSmartPtrI15CJSCallbackFuncE10CUtlMemoryIS2_EE
 16CHTMLProtoBufMsgI15CMsgFullRepaintE
 16CHTMLProtoBufMsgI19CMsgBrowserPositionE
 16CHTMLProtoBufMsgI28CMsgScreenInformationChangedE
 16CHTMLProtoBufMsgI12CMsgStopLoadE
+16CHTMLProtoBufMsgI10CMsgReloadE
 16CHTMLProtoBufMsgI10CMsgGoBackE
 16CHTMLProtoBufMsgI13CMsgGoForwardE
 16CHTMLProtoBufMsgI13CMsgWasHiddenE
+16CHTMLProtoBufMsgI21CMsgExecuteJavaScriptE
+16CHTMLProtoBufMsgI13CMsgMouseDownE
+16CHTMLProtoBufMsgI11CMsgMouseUpE
 16CHTMLProtoBufMsgI17CMsgMouseDblClickE
+16CHTMLProtoBufMsgI11CMsgKeyCharE
+16CHTMLProtoBufMsgI16CMsgOpenDevToolsE
+16CHTMLProtoBufMsgI14CMsgMouseWheelE
 16CHTMLProtoBufMsgI21CMsgImeSetCompositionE
 16CHTMLProtoBufMsgI17CMsgImeCommitTextE
 16CHTMLProtoBufMsgI24CMsgImeCancelCompositionE
 16CHTMLProtoBufMsgI13CMsgScreenDPIE
+16CHTMLProtoBufMsgI15CMsgBrowserSizeE
+16CHTMLProtoBufMsgI12CMsgSetFocusE
 16CHTMLProtoBufMsgI14CMsgMouseLeaveE
 16CHTMLProtoBufMsgI28CMsgHandleContextMenuCommandE
 16CHTMLProtoBufMsgI14CMsgViewSourceE
 16CHTMLProtoBufMsgI8CMsgCopyE
 16CHTMLProtoBufMsgI9CMsgPasteE
 16CHTMLProtoBufMsgI18CMsgInspectElementE
+16CHTMLProtoBufMsgI26CMsgFileLoadDialogResponseE
 16CHTMLProtoBufMsgI8CMsgFindE
 16CHTMLProtoBufMsgI12CMsgStopFindE
 16CHTMLProtoBufMsgI23CMsgBrowserErrorStringsE
 16CHTMLProtoBufMsgI16CMsgPauseRepaintE
 16CHTMLProtoBufMsgI13CMsgHidePopupE
+16CHTMLProtoBufMsgI20CMsgJSDialogResponseE
 16CHTMLProtoBufMsgI18CMsgLinkAtPositionE
+16CHTMLProtoBufMsgI20CMsgJSRegisterMethodE
 16CHTMLProtoBufMsgI18CMsgExitFullScreenE
+16CHTMLProtoBufMsgI30CMsgSetLocalFileRequestMappingE
 16CHTMLProtoBufMsgI13CMsgDisableF5E
 N4vgui18HTMLFramelessPopupE
 20HTMLFramelessWrapper
-10CUtlVectorIN4vgui4HTML18CustomURLHandler_tE10CUtlMemoryIS2_EE
 10CUtlVectorIN4vgui4HTML19CustomCursorCache_tE10CUtlMemoryIS2_EE
-N4vgui9HTMLPopupE
 N4vgui9HTMLPopup9PopupHTMLE
 N4vgui5ImageE
 N4vgui14CompositeImageE
@@ -2579,12 +2781,19 @@ s
 N4vgui9CIMEPanelE
 N4vgui11InputDialogE
 N4vgui5LabelE
+10CUtlString
 10CUtlVectorIN4vgui5Label10TImageInfoE10CUtlMemoryIS2_EE
+N4vgui21ListPanelColumnHeaderE
+N4vgui13ListPanelItemE
+16ListPanelDragger
+N4vgui9ListPanelE
 N4vgui18CTypingJumpHandler17ITypingJumpClientE
 N4vgui17ListPanelInteriorE
 27ListPanelColumnSelectButton
 N4vgui22ListPanelSectionHeaderE
 N4vgui25ListPanelSectionCollapserE
+N4vgui9RGBAImageE
+N4vgui6IImageE
 14CUtlLinkedListIN4vgui9ListPanel8column_tEhE
 14CUtlLinkedListIPN4vgui13ListPanelItemEiE
 14CUtlLinkedListIP8CUtlDictIb22CDefCaselessStringLessiEiE
@@ -2593,16 +2802,13 @@ N4vgui25ListPanelSectionCollapserE
 7CUtlMapIPKcbi22CDefCaselessStringLessE
 10CUtlRBTreeIN7CUtlMapIPKcbi22CDefCaselessStringLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlVectorIPN4vgui8URLLabelE10CUtlMemoryIS2_EE
-N4vgui21ListPanelColumnHeaderE
-N4vgui13ListPanelItemE
-16ListPanelDragger
-N4vgui9ListPanelE
 N4vgui22ListPanelCollapserBaseE
 N4vgui13ListViewPanelE
 N4vgui12ListViewItemE
 14CUtlLinkedListIPN4vgui12ListViewItemEiE
 N4vgui4MenuE
 N4vgui13MenuSeparatorE
+10CUtlVectorIi10CUtlMemoryIiEE
 14CUtlLinkedListIPN4vgui8MenuItemEiE
 10CUtlVectorIPN4vgui13MenuSeparatorE10CUtlMemoryIS2_EE
 N4vgui7MenuBarE
@@ -2610,7 +2816,6 @@ N4vgui7MenuBarE
 N4vgui10MenuButtonE
 N4vgui8MenuItemE
 N4vgui18MenuItemCheckImageE
-N4vgui10MessageBoxE
 %
 s
 %
@@ -2622,15 +2827,16 @@ i
 N4vgui5PanelE
 14CFloatProperty
 N4vgui32IPanelAnimationPropertyConverterE
-26CProportionalFloatProperty
 12CIntProperty
-24CProportionalIntProperty
 14CColorProperty
 13CBoolProperty
 15CStringProperty
 14CHFontProperty
+26CProportionalFloatProperty
+24CProportionalIntProperty
 18CTextureIdProperty
 10CUtlVectorIP9KeyValues10CUtlMemoryIS1_EE
+10CUtlVectorIN4vgui7PHandleE10CUtlMemoryIS1_EE
 26CPanelMessageMapDictionary
 7CUtlMapIPKcN26CPanelMessageMapDictionary30PanelMessageMapDictionaryEntryEi22CDefCaselessStringLessE
 10CUtlRBTreeIN7CUtlMapIPKcN26CPanelMessageMapDictionary30PanelMessageMapDictionaryEntryEi22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
@@ -2702,7 +2908,6 @@ N4vgui10ClickPanelE
 N4vgui15CFontWidthCacheE
 11CUtlHashMapIN4vgui15CFontWidthCache5key_tEf10CDefEqualsIS2_E28HashFunctorUnpaddedStructureIS2_ES2_E
 10CUtlVectorIN11CUtlHashMapIN4vgui15CFontWidthCache5key_tEf10CDefEqualsIS3_E28HashFunctorUnpaddedStructureIS3_ES3_E12HashBucket_tE10CUtlMemoryIS9_EE
-10CUtlVectorIw10CUtlMemoryIwEE
 10CUtlVectorIN4vgui8RichText13TFormatStreamE10CUtlMemoryIS2_EE
 10CUtlVectorIN4vgui8RichText11LineBreak_tE10CUtlMemoryIS2_EE
 10CUtlVectorIPN4vgui10ClickPanelE10CUtlMemoryIS2_EE
@@ -2726,12 +2931,13 @@ N4vgui22SectionedListPanelItemE
 E
 N
 N4vgui9TextEntryE
-"
-"
-"
-"
 10CHintLabel
 N4vgui20TextEntryClearButtonE
+10CUtlVectorIw10CUtlMemoryIwEE
+"
+"
+"
+"
 N4vgui9TextImageE
 10CUtlVectorIPw10CUtlMemoryIS0_EE
 10CUtlVectorIN4vgui9TextImage22PerLineTrncationData_tE10CUtlMemoryIS2_EE
@@ -2754,8 +2960,7 @@ N4vgui20CTreeViewListControlE
 N4vgui18CTypingJumpHandlerE
 N4vgui8URLLabelE
 10CUtlVectorIPN4vgui10ToolWindowE10CUtlMemoryIS2_EE
-_
-14ConCommandBase
+_14ConCommandBase
 6ConVar
 13CPlainAutoPtrI7CUtlMapIybi8CDefLessEE
 7CUtlMapIybi8CDefLessE
@@ -2795,6 +3000,7 @@ d
 18CUtlCharConversion
 19CUtlNoEscConversion
 14CUtlMemoryBase
+14CCryptoKeyBase
 24CCryptoKeyBase_RawBuffer
 11CRSAKeyBase
 13CRSAPublicKey
@@ -2805,7 +3011,295 @@ d
 12CDynamicFuncIPFbvEE
 12CDynamicFuncIPFPKcN2vr12EVRInitErrorEEE
 12CDynamicFuncIPFPvPKcPN2vr12EVRInitErrorEEE
-jjjjjjjjjjjjjjjjkvsignatures
+jjjjjjjjjjjjjjjj
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+6
+6
+7
+7
+8
+8
+
+9
+9
+A
+a
+B
+b
+
+C
+c
+D
+d
+E
+e
+F
+f
+G
+g
+H
+h
+I
+"
+i
+J
+&
+j
+K
+(
+k
+L
+%
+l
+M
+.
+m
+N
+-
+n
+O
+o
+P
+#
+p
+Q
+q
+R
+r
+S
+s
+T
+t
+U
+u
+V
+v
+!
+W
+
+w
+"
+X
+x
+#
+Y
+y
+$
+Z
+z
+%
+`
+R
+&
+a
+S
+'
+b
+T
+(
+c
+U
+)
+d
+V
+*
+e
+W
++
+f
+X
+,
+g
+Y
+-
+h
+[
+.
+i
+\
+/
+o
+K
+0
+j
+C
+1
+m
+N
+2
+k
+E
+3
+
+L
+4
+n
+A
+5
+Q
+6
+G
+7
+!
+[
+8
+]
+9
+)
+;
+:
+'
+'
+;
+2
+`
+<
++
+,
+=
+/
+.
+>
+,
+/
+?
+*
+\
+@
+-
+A
+=
+B
+
+$
+C
+1
+D
+3
+E
+0
+F
+9
+G
+H
+5
+I
+J
+-
+r
+K
+.
+u
+L
+$
+s
+M
+#
+w
+N
+!
+t
+O
+"
+y
+P
+R
+Q
+T
+S
+V
+U
+W
+[
+X
+\
+Y
+]
+n
+Z
+&
+~
+[
+%
+{
+\
+(
+}
+]
+'
+|
+^
+p
+z
+_
+q
+x
+`
+r
+c
+a
+s
+v
+b
+t
+`
+c
+u
+a
+d
+v
+b
+e
+w
+d
+f
+x
+e
+g
+y
+m
+h
+z
+g
+i
+{
+o
+j
+|
+i
+k
+}
+k
+l
+~
+q
+m
+
+j
+n
+@
+o
+O
+p
+P
+q
+Z
+r
+s
+t
+u
+kvsignatures
 kvsign2
 none
 -friendsui
@@ -2824,12 +3318,24 @@ Assertion Failed: m_pObj == NULL
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/smartptr.h
 Assertion Failed: (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlvector.h
+bool
+int
+double
+string
+bytes
+object
+Unknown
+%s
+true
+%d
+%u
+%f
+%s
 result
 message
 %lld
 %llu
 Assertion Failed: !pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
-Assertion Failed: (elem == Count()) || IsValidIndex(elem)
 Assertion Failed: row_stride_out >= row_stride
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/jpegloader.cpp
 Assertion Failed: row_stride == (int)( nImageWidth * jpegInfo.output_components )
@@ -2846,6 +3352,16 @@ PNG load warning %s
 [S_API FAIL] SteamAPI_Init() failed; ipcserver GetSteamPath failed.
 CLIENTENGINE_INTERFACE_VERSION005
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/client_api.cpp
+ClientAPI_Init: InternalAPI_Init_Internal failed.
+ClientAPI_Init: Cannot create pipe.  Steam not running?
+ClientAPI_Init(GlobalInstance): GetIClientRemotePlay returned NULL.
+ClientAPI_RunCallbacks
+g_pClientController
+CUtlSymbol
+com.valvesoftware.steam.ipctool
+ipcserver restart: expected: %d, got: %d
+StopJob
+CreateInterface
 ClientAPI_Init(GlobalInstance): GetIClientUser returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientFriends returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientBilling returned NULL.
@@ -2883,21 +3399,10 @@ ClientAPI_Init(GlobalInstance): GetIClientSharedConnection returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientShader returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientCompat returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSTARInternal returned NULL.
-ClientAPI_Init: InternalAPI_Init_Internal failed.
-ClientAPI_Init: Cannot create pipe.  Steam not running?
-ClientAPI_Init(GlobalInstance): GetIClientRemotePlay returned NULL.
-ClientAPI_RunCallbacks
-g_pClientController
-CUtlSymbol
-com.valvesoftware.steam.ipctool
-ipcserver restart: expected: %d, got: %d
-StopJob
-CreateInterface
+ClientAPI_Init(GlobalInstance): GetIClientNetworkingUtils returned NULL.
+[SteamNetworkingSockets] %s
 CParentalCache::OnParentalLockChangeBegin
 steammessages_clientnotificationtypes.proto
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_clientnotificationtypes.pb.cc
-CHECK failed: file != NULL:
-CHECK failed: (&from) != (this):
 graphics/avatarBorderOffline
 graphics/avatarBorderOnline
 graphics/avatarBorderInGame
@@ -2945,7 +3450,6 @@ m_vecImageDownloadQueue
 m_strBaseURL
 m_strLanguage
 InsertString
-string
 EmoticonMenuItemStyle
 economy/emoticonhover/%s?client=1&l=%s
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlstring.h
@@ -3221,7 +3725,6 @@ RemotePlay.SetClientStreamingQuality
 RemotePlay.GetClientStreamingBitrate
 RemotePlay.SetClientStreamingBitrate
 RemotePlay.BRemotePlayTogetherGuestSupported
-Assertion Failed: count >= 0
 Element( i )
 m_pObj
 screenshots/%s
@@ -3315,9 +3818,6 @@ Steam_BGetCallback
 Steam_FreeLastCallback
 Steam_GetAPICallResult
 stream.proto
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/streaming/proto/stream.pb.cc
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/protobuf-2.6.1/src/google/protobuf/repeated_field.h
-CHECK failed: (&other) != (this):
 common/icon
 %simages/apps/%d/%s.jpg
 Assertion Failed: bufRGBA.TellPut() == width*height*4
@@ -3348,7 +3848,6 @@ OKButton
 OK
 friends/friendnotificationoptionsdialog.res
 FriendName
-%d
 FriendAliasesDialog
 friends/friendaliasesdialog.res
 FriendNameOld%d
@@ -3806,6 +4305,7 @@ iButton
 friends/ClanEventNotification.res
 CClanEventNotification
 Assertion Failed: !pArray || (Base() >= (pArray + size)) || (pArray >= (Base() + Count()) )
+Assertion Failed: count >= 0
 CAchievementNotification
 CFriendsClansPage
 vgui::PropertyPage
@@ -3850,7 +4350,6 @@ friends/ChatIntroductionDialog.res
 CheckButton1
 CChatIntroductionDialog
 vgui::SimpleDialog
-Assertion Failed: (unsigned)elem <= (unsigned)m_Size
 ClanEventDialog
 CClanEventDialog
 friends/setnicknamedialog.layout
@@ -4197,6 +4696,7 @@ LabelBody
 resource/EasyNotification.res
 friends/VoiceChatInviteNotification.res
 CVoiceChatInviteNotification
+linkfilter/
 friends/icon_groupchat_activity
 friends/icon_groupchat_idle
 friends/icon_chat_activity
@@ -4365,6 +4865,7 @@ Could not get SERVERBROWSER and RUNGAMEENGINE interfaces.
 Assertion Failed: m_eUIMode == k_EFriendsUIMode_WebChat_MainWindow || m_hFriendsDialog.Get()
 CFriendsUIModule::RunFrame
 FriendGameInviteDialog
+dashboard
 useNewSteamChat
 steam.chat
 Valve Steam GameOverlay
@@ -4380,7 +4881,6 @@ CFriendsUIModule::OnOpenJoinGameDialog
 CFriendsUIModule::OnOpenGameInfoDialog
 CFriendsUIModule::OnOpenInviteToTradeDialog
 CFriendsUIModule::OnUIModeChanged
-dashboard
 friends/giftreceivednotification.res
 CGiftReceivedNotification
 friends/itemreceivednotification.res
@@ -4585,94 +5085,165 @@ CVoiceBar::OnGameUsingVoice
 #Friends_Tooltip_VoiceSettings
 friends/icon_microphone
 CVoiceTraffic
-google/protobuf/stubs/common.cc
-This program requires version
-of the Protocol Buffer runtime library, but the installed version is
-.  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
-".)
-This program was compiled against version
-of the Protocol Buffer runtime library, which is not compatible with the installed version (
-).  Contact the program author for an update.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
-%d.%d.%d
 INFO
 WARNING
 FATAL
 [libprotobuf %s %s:%d] %s
 %ld
 %lu
-pthread_mutex_lock:
-pthread_mutex_unlock:
+google/protobuf/stubs/stringpiece.cc
+size too big:
+details:
+google/protobuf/stubs/strutil.cc
+CHECK failed: errors == nullptr:
+Error reporting not implemented.
+CHECK failed: (digits) < (100):
+%.*g
+CHECK failed: snprintf_result > 0 && snprintf_result < kDoubleToBufferSize:
+CHECK failed: value != nullptr:
+t
+yes
+y
+false
+f
+no
+CHECK failed: snprintf_result > 0 && snprintf_result < kFloatToBufferSize:
+0123456789abcdef
+CHECK failed: (out) == (begin + result.size()):
+CHECK failed: (uintptr_t((a).data() - (*result).data())) > (uintptr_t((*result).size())):
+operator[]
+i < length_
+size_t to int conversion
+%.1f
+CHECK failed: (temp[0]) == ('1'):
+CHECK failed: (temp[size - 1]) == ('5'):
+CHECK failed: (size) <= (6):
+google/protobuf/arena.cc
+CHECK failed: (kBlockHeaderSize + ThreadSafeArena::kSerialArenaSize) <= (mem.size):
+./google/protobuf/arena_impl.h
+CHECK failed: n <= size:
+CHECK failed: (internal::AlignUpTo8(n)) == (n):
+CHECK failed: (limit_) >= (ptr_):
+CHECK failed: (min_bytes) <= (std::numeric_limits<size_t>::max() - SerialArena::kBlockHeaderSize):
+google/protobuf/arenastring.cc
+CHECK failed: IsDefault(default_value):
+./google/protobuf/arenastring.h
+CHECK failed: !tagged_ptr_.IsTagged():
+CHECK failed: tagged_ptr_.UnsafeGet() != nullptr:
 google/protobuf/extension_set.cc
-CHECK failed: !iter->second.is_repeated:
-CHECK failed: ((iter->second).is_repeated ? REPEATED : OPTIONAL) == (OPTIONAL):
-CHECK failed: (cpp_type((iter->second).type)) == (WireFormatLite::CPPTYPE_INT32):
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_INT32):
-CHECK failed: ((*extension).is_repeated ? REPEATED : OPTIONAL) == (OPTIONAL):
+CHECK failed: !ext->is_repeated:
+CHECK failed: ((*extension).is_repeated ? REPEATED_FIELD : OPTIONAL_FIELD) == (OPTIONAL_FIELD):
 CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_INT32):
-CHECK failed: iter != extensions_.end():
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_INT32):
+CHECK failed: extension != NULL:
 Index out-of-bounds (field is empty).
-CHECK failed: ((iter->second).is_repeated ? REPEATED : OPTIONAL) == (REPEATED):
-CHECK failed: ((*extension).is_repeated ? REPEATED : OPTIONAL) == (REPEATED):
+CHECK failed: ((*extension).is_repeated ? REPEATED_FIELD : OPTIONAL_FIELD) == (REPEATED_FIELD):
 CHECK failed: (extension->is_packed) == (packed):
-CHECK failed: (cpp_type((iter->second).type)) == (WireFormatLite::CPPTYPE_INT64):
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_INT64):
 CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_INT64):
-CHECK failed: (cpp_type((iter->second).type)) == (WireFormatLite::CPPTYPE_UINT32):
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_UINT32):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_INT64):
 CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_UINT32):
-CHECK failed: (cpp_type((iter->second).type)) == (WireFormatLite::CPPTYPE_UINT64):
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_UINT64):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_UINT32):
 CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_UINT64):
-CHECK failed: (cpp_type((iter->second).type)) == (WireFormatLite::CPPTYPE_FLOAT):
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_FLOAT):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_UINT64):
 CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_FLOAT):
-CHECK failed: (cpp_type((iter->second).type)) == (WireFormatLite::CPPTYPE_DOUBLE):
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_DOUBLE):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_FLOAT):
 CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_DOUBLE):
-CHECK failed: (cpp_type((iter->second).type)) == (WireFormatLite::CPPTYPE_BOOL):
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_BOOL):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_DOUBLE):
 CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_BOOL):
-CHECK failed: (cpp_type((iter->second).type)) == (WireFormatLite::CPPTYPE_ENUM):
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_ENUM):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_BOOL):
 CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_ENUM):
-CHECK failed: (cpp_type((iter->second).type)) == (WireFormatLite::CPPTYPE_STRING):
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_STRING):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_ENUM):
 CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_STRING):
-CHECK failed: (cpp_type((iter->second).type)) == (WireFormatLite::CPPTYPE_MESSAGE):
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_MESSAGE):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_STRING):
 CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_MESSAGE):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_MESSAGE):
 CHECK failed: extension->is_repeated:
-CHECK failed: cpp_type(extension->type) == WireFormatLite::CPPTYPE_MESSAGE:
 CHECK failed: (extension->type) == (other_extension.type):
 CHECK failed: (extension->is_packed) == (other_extension.is_packed):
 CHECK failed: !extension->is_repeated:
 CHECK failed: is_repeated:
+FindOrNullInLargeMap
+is_large()
+flat_end
 CHECK failed: type > 0 && type <= WireFormatLite::MAX_FIELD_TYPE:
+_InternalSerialize
+./google/protobuf/extension_set.h
+!is_large()
 google/protobuf/message_lite.cc
-CHECK failed: !coded_out.HadError():
+parse
 CHECK failed: IsInitialized():
 serialize
-parse
+exceeded maximum protobuf size of 2GB:
+./google/protobuf/parse_context.h
 Can't
 message of type "
 " because it is missing required fields:
-CHECK failed: (byte_size_before_serialization) == (byte_size_after_serialization):
-Protocol message was modified concurrently during serialization.
-CHECK failed: (bytes_produced_by_serialization) == (byte_size_before_serialization):
-Byte size calculation and serialization were inconsistent.  This may indicate a bug in protocol buffers or it may be caused by concurrent modification of the message.
-This shouldn't be called if all the sizes are equal.
+StringPiece
+./google/protobuf/stubs/stringpiece.h
+len >= 0
+CHECK failed: target + size == res:
+./google/protobuf/io/coded_stream.h
+CHECK failed: cur_:
+allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
+./google/protobuf/metadata_lite.h
+CHECK failed: arena != nullptr:
+CHECK failed: owning_arena == nullptr:
+google/protobuf/parse_context.cc
+CHECK failed: limit_ > kSlopBytes:
+CHECK failed: overrun != limit_:
+CHECK failed: overrun < limit_:
+CHECK failed: limit_end_ == buffer_end_ + (std::min)(0, limit_):
+CHECK failed: limit_ > 0:
+CHECK failed: limit_end_ == buffer_end_:
+CHECK failed: size_ > kSlopBytes:
+CHECK failed: size_ == 0:
+CHECK failed: size > chunk_size:
+CHECK failed: limit >= 0 && limit <= INT_MAX - kSlopBytes:
+./google/protobuf/repeated_field.h
+CHECK failed: (index) >= (0):
+CHECK failed: (index) < (current_size_):
+CHECK failed: (current_size_) > (0):
+CHECK failed: (&other) != (this):
+CHECK failed: (static_cast<size_t>(new_size)) <= ((std::numeric_limits<size_t>::max() - kRepHeaderSize) / sizeof(Element)):
+Requested size is too large to fit into size_t.
+CHECK failed: (total_size_ - current_size_) >= (n):
+CHECK failed: this != other:
+CHECK failed: GetArena() == other->GetArena():
+CHECK failed: (total_size_) > (0):
+CHECK failed: (new_size) > (kRepeatedFieldUpperClampLimit):
+./google/protobuf/message_lite.h
+CHECK failed: (size) <= (static_cast<size_t>(2147483647)):
+CHECK failed: (n) >= (0):
+CHECK failed: other->GetArena() != GetArena():
 google/protobuf/wire_format_lite.cc
-CHECK failed: value.size() <= kint32max:
-CHECK failed: (end - target) == (size):
+'%s'
+String field
+contains invalid
+UTF-8 data when
+a protocol
+buffer. Use the 'bytes' type if you intend to send raw
+bytes.
+parsing
+serializing
 google/protobuf/io/coded_stream.cc
-The total number of bytes read was
 A protocol message was rejected because it was too big (more than
-bytes).  To increase the limit (or to disable these warnings), see CodedInputStream::SetTotalBytesLimit() in google/protobuf/io/coded_stream.h.
+bytes).  To increase the limit (or to disable these warnings), see CodedInputStream::SetTotalBytesLimit() in third_party/protobuf/src/google/protobuf/io/coded_stream.h.
+CHECK failed: z.first != NULL:
+CHECK failed: (first_byte_or_zero) != (0):
+Caller should provide us with *buffer_ when buffer is non-empty
+CHECK failed: (first_byte_or_zero) == (buffer_[0]):
 CHECK failed: (0) == (BufferSize()):
-Reading dangerously large protocol message.  If the message turns out to be larger than
-bytes, parsing will be halted for security reasons.  To increase the limit (or to disable these warnings), see CodedInputStream::SetTotalBytesLimit() in google/protobuf/io/coded_stream.h.
 CHECK failed: (buffer_size) >= (0):
-CHECK failed: (str.size()) <= (kuint32max):
+CHECK failed: !had_error_:
+CHECK failed: overrun <= kSlopBytes:
+CHECK failed: s >= 0:
+CHECK failed: overrun >= 0:
+CHECK failed: ptr < end_:
+CHECK failed: (*buffer) == (first_byte):
+CHECK failed: (first_byte & 0x80) == (0x80):
+CHECK failed: (buffer[0]) >= (128):
+CHECK failed: size > 0:
+CHECK failed: ptr <= end_ + kSlopBytes:
 google/protobuf/io/zero_copy_stream.cc
 This ZeroCopyOutputStream doesn't support aliasing. Reaching here usually means a ZeroCopyOutputStream implementation bug.
 google/protobuf/io/zero_copy_stream_impl_lite.cc
@@ -4680,39 +5251,14 @@ CHECK failed: (last_returned_size_) > (0):
 BackUp() can only be called after a successful Next().
 CHECK failed: (count) <= (last_returned_size_):
 CHECK failed: (count) >= (0):
-Cannot allocate buffer larger than kint32max for
-StringOutputStream.
-CHECK failed: (count) <= (target_->size()):
-google/protobuf/stubs/strutil.cc
-CHECK failed: errors == NULL:
-Error reporting not implemented.
-\x%02x
-\%03o
-CHECK failed: (len) >= (0):
-CHECK failed: (digits) < (100):
--inf
-%.*g
-CHECK failed: snprintf_result > 0 && snprintf_result < kDoubleToBufferSize:
-CHECK failed: snprintf_result > 0 && snprintf_result < kFloatToBufferSize:
-0123456789abcdef
-hex_digit_to_int
-isxdigit(c)
-allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
-CHECK failed: result != NULL:
-google/protobuf/stubs/substitute.cc
-strings::Substitute format string invalid: asked for "$
-", but only
-args were given.  Full format string was: "
-Invalid strings::Substitute() format string: "
-CHECK failed: (target - output->data()) == (output->size()):
+CHECK failed: target_ != NULL:
+CHECK failed: (static_cast<size_t>(count)) <= (target_->size()):
 ERROR
-double
 int64
 uint64
 int32
 fixed64
 fixed32
-bytes
 uint32
 enum
 sfixed32
@@ -4721,29 +5267,59 @@ sint32
 sint64
 required
 repeated
+proto2
+proto3
 google/protobuf/descriptor.cc
+can't reach here.
+google.protobuf.DoubleValue
+google.protobuf.FloatValue
+google.protobuf.Int64Value
+google.protobuf.UInt64Value
+google.protobuf.Int32Value
+google.protobuf.UInt32Value
+google.protobuf.StringValue
+google.protobuf.BytesValue
+google.protobuf.BoolValue
+google.protobuf.Any
+google.protobuf.FieldMask
+google.protobuf.Duration
+google.protobuf.Timestamp
+google.protobuf.Value
+google.protobuf.ListValue
+google.protobuf.Struct
 CHECK failed: checkpoints_.empty():
 CHECK failed: !checkpoints_.empty():
-CHECK failed: generated_database_->Add(encoded_file_descriptor, size):
+CHECK failed: GeneratedDatabase()->Add(encoded_file_descriptor, size):
+CHECK failed: (field_count()) == (2):
 CHECK failed: has_default_value():
 No default value
 Messages can't have default values!
 Can't get here: failed to get default value as string
 extend .$0 {
+$0message $1
 {
-$0  message $1
 $0  extensions $1 to $2;
 $0  }
 $0  extend .$1 {
+$0  reserved
+$0,
+$0 to max,
+$0 to $1,
+;
+"$0",
 $0}
+map<$0, $1>
 $0$1$2 $3 = $4
 [default = $0
 [
-;
-$0 oneof $1 {
+json_name = "
+{ ... };
+$0oneof $1 {
+... }
 $0enum $1 {
 $0$1 = $2
 [$0]
+CHECK failed: out_location != nullptr:
 Invalid proto descriptor for file "
 ":
 " is not defined.
@@ -4753,25 +5329,46 @@ Invalid proto descriptor for file "
 " is resolved to "
 ", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., ".
 ") to start from the outermost scope.
-" is already defined (as something other than a package) in file "
+.placeholder.proto
+PLACEHOLDER_VALUE
+.PLACEHOLDER_VALUE
+" contains null character.
+" not previously defined in symbols_by_name_, but was defined in symbols_by_parent_; this shouldn't be possible.
+" is already defined.
+" is already defined in "
 ".
+" is already defined in file "
+null
+" is already defined (as something other than a package) in file "
 Missing name.
 " is not a valid identifier.
 .dummy
+google.protobuf.FileOptions
+File recursively imports itself:
 ->
 Import "
 " was listed twice.
 " has not been loaded.
 " was not found or had errors.
 Missing field: FileDescriptorProto.name.
+Unrecognized syntax:
 A file with this name is already in the pool.
 Invalid public dependency index.
 Invalid weak dependency index.
+google.protobuf.MessageOptions
+Reserved range $0 to $1 overlaps with already-defined range $2 to $3.
+Field name "$0" is reserved multiple times.
 Extension range $0 to $1 includes field "$2" ($3).
+Field "$0" uses reserved number $1.
+Field name "$0" is reserved.
+Extension range $0 to $1 overlaps with reserved range $2 to $3.
 Extension range $0 to $1 overlaps with already-defined range $2 to $3.
-Message extensions cannot have required fields.
+The [proto3_optional=true] option may only be set on proto3fields, not
+The extension
+cannot be required.
 Repeated fields can't have default values.
 inf
+-inf
 nan
 Boolean default must be true or false.
 Messages can't have default values.
@@ -4783,17 +5380,37 @@ FieldDescriptorProto.extendee not set for extension field.
 FieldDescriptorProto.oneof_index should not be set for extensions.
 FieldDescriptorProto.extendee set for non-extension field.
 FieldDescriptorProto.oneof_index $0 is out of range for type "$1".
+google.protobuf.FieldOptions
 Extension numbers must be positive integers.
 Extension range end number must be greater than start number.
+google.protobuf.ExtensionRangeOptions
+Reserved numbers must be positive integers.
+Reserved range end number must be greater than start number.
+google.protobuf.OneofOptions
+Enum name
+has the same name as
+if you ignore case and strip out the enum name prefix (if any). This is error-prone and can lead to undefined behavior. Please avoid doing this. If you are using allow_alias, please assign the same numeric value to both enums.
 Enums must contain at least one value.
+google.protobuf.EnumOptions
+Enum value "$0" is reserved multiple times.
+Enum value "$0" uses reserved number $1.
+Enum value "$0" is reserved.
+google.protobuf.EnumValueOptions
 the global scope
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
 " must be unique within
 , not just within "
+google.protobuf.ServiceOptions
+google.protobuf.MethodOptions
+Fields in the same oneof must be defined consecutively. "$0" cannot be defined before the completion of the "$1" oneof definition.
 Oneof must have at least one field.
+Fields with proto3_optional set must be a member of a one-field oneof
+Synthetic oneofs must be after all other oneofs
 " is not a message type.
+google.protobuf.bridge.MessageSet
 "$0" does not declare $1 as an extension number.
 Fields of oneofs must themselves have label LABEL_OPTIONAL.
+google.protobuf.Empty
 " is not a type.
 " is not an enum type.
 Default value for an enum field must be an identifier.
@@ -4806,29 +5423,53 @@ Field number $0 has already been used in "$1" by field "$2".
 Extension number $0 has already been used in "$1" by extension "$2" defined in $3.
 Files that do not use optimize_for = LITE_RUNTIME cannot import files which do use this option.  This file is not lite, but it imports "
 " which is.
+Extension ranges are not allowed in proto3.
+MessageSet is not supported in proto3.
+The JSON camel-case name of field "
+" conflicts with field "
+". This is not
+allowed in proto3.
+Extensions in proto3 are only allowed for defining options.
+Required fields are not allowed in proto3.
+Explicit default values are not allowed in proto3.
+" is not a proto3 enum, but is used in "
+" which is a proto3 message type.
+Groups are not supported in proto3 syntax.
+The first enum value must be zero in proto3.
 Extension numbers cannot be greater than $0.
 [lazy = true] can only be specified for submessage fields.
 [packed = true] can only be specified for repeated primitive fields.
 Extensions of MessageSets must be optional messages.
 MessageSets cannot have fields, only extensions.
 Extensions to non-lite types can only be declared in non-lite files.  Note that you cannot extend a non-lite type to contain a lite type, but the reverse is allowed.
+map_entry should not be set explicitly. Use map<KeyType, ValueType> instead.
+option json_name is not allowed on extension fields.
 " uses the same enum value as "
 ". If this is intended, set 'option allow_alias = true;' to the enum definition.
-Files with optimize_for = LITE_RUNTIME cannot define services unless you set both options cc_generic_services and java_generic_sevices to false.
-map type is only allowed for repeated fields.
-map type is only allowed for fields with a message type.
-Could not find field type.
-Could not find field named "
-" in type "
-map_key must not name a repeated field.
-map key must name a scalar or string field.
+Files with optimize_for = LITE_RUNTIME cannot define services unless you set both options cc_generic_services and java_generic_services to false.
+Entry
+key
+value
+Key in map fields cannot be enum types.
+Key in map fields cannot be float/double, bytes or message types.
+Enum value in map must define 0 as the first value.
+Expanded map entry type
+conflicts with an existing nested message type.
+conflicts with an existing field.
+conflicts with an existing enum type.
+conflicts with an existing oneof type.
+Illegal jstype for int64, uint64, sint64, fixed64 or sfixed64 field:
+jstype is only allowed on int64, uint64, sint64, fixed64 or sfixed64 fields.
 CHECK failed: builder_:
+Option must have a name.
 uninterpreted_option
+Option must not use reserved name "uninterpreted_option".
 CHECK failed: options_descriptor:
 Option "
 " is resolved to "(
 )", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., "(.
-" unknown.
+" unknown. Ensure that your proto
+definition file imports the proto which defines the option.
 Option field "
 " is not a field or extension of message "
 " is an atomic type, not a message.
@@ -4836,7 +5477,7 @@ Option field "
 CHECK failed: !out.HadError():
 Unexpected failure while serializing option submessage
 Invalid wire type for CPPTYPE_MESSAGE:
-CHECK failed: field != NULL:
+CHECK failed: field != nullptr:
 " was already set.
 Value out of range for int32 option "
 Value must be integer for int32 option "
@@ -4856,7 +5497,7 @@ Value must be quoted string for string option "
 " is a message. To set the entire message, use syntax like "
 = { <proto text format> }". To set fields within it, use syntax like "
 .foo = value".
-CHECK failed: dynamic.get() != NULL:
+CHECK failed: dynamic.get() != nullptr:
 Could not create an instance of
 Error while parsing option value for "
 ":
@@ -4865,101 +5506,130 @@ Invalid wire type for CPPTYPE_INT32:
 Invalid wire type for CPPTYPE_INT64:
 Invalid wire type for CPPTYPE_UINT32:
 Invalid wire type for CPPTYPE_UINT64:
-Warning: Unused import: "
-" imports "
-" which is not used.
-GetEmptyStringAlreadyInited
-./google/protobuf/generated_message_util.h
-empty_string_ != NULL
-set_label
+Import
+is unused.
+CHECK failed: file()->finished_building_ == true:
+CHECK failed: enum_type_->value_count():
+CHECK failed: finished_building_ == true:
+CHECK failed: !name_:
+CHECK failed: !once_:
+CHECK failed: !file_:
+CHECK failed: !descriptor_:
+CHECK failed: file && file->pool_:
+CHECK failed: file->pool_->lazily_build_dependencies_:
+CHECK failed: !file->finished_building_:
+CHECK failed: file_->finished_building_:
+UNKNOWN_ENUM_VALUE_%s_%d
 ./google/protobuf/descriptor.pb.h
-::google::protobuf::FieldDescriptorProto_Label_IsValid(value)
-set_type
-::google::protobuf::FieldDescriptorProto_Type_IsValid(value)
+_internal_set_label
+PROTOBUF_NAMESPACE_ID::FieldDescriptorProto_Label_IsValid(value)
+_internal_set_type
+PROTOBUF_NAMESPACE_ID::FieldDescriptorProto_Type_IsValid(value)
+$0// $1
 $0option $1;
+Found invalid proto option data for:
 (.
-./google/protobuf/repeated_field.h
-CHECK failed: (index) >= (0):
-CHECK failed: (index) < (size()):
-" not previously defined in symbols_by_name_, but was defined in symbols_by_parent_; this shouldn't be possible.
-" is already defined.
-" is already defined in "
-" is already defined in file "
-.placeholder.proto
-.PLACEHOLDER_VALUE
-CHECK failed: uninterpreted_options_field != NULL:
+0 <= i
+CHECK failed: !value || source_code_info_ != nullptr:
+CHECK failed: !value || options_ != nullptr:
+remove_prefix
+length_ >= n
+FileOptions
+MessageOptions
+FieldOptions
+EnumOptions
+EnumValueOptions
+ServiceOptions
+MethodOptions
+OneofOptions
+google.protobuf.
+proto
+2.
+CHECK failed: uninterpreted_options_field != nullptr:
 No field named "uninterpreted_option" in the Options proto.
-CHECK failed: original_uninterpreted_options_field != NULL:
-CHECK failed: options->ParseFromString(buf):
-Protocol message serialized itself in invalid fashion.
+CHECK failed: original_uninterpreted_options_field != nullptr:
+Some options could not be correctly parsed using the proto descriptors compiled into this binary.Unparsed options:
+Parsing attempt:
 down_cast
-./google/protobuf/stubs/common.h
-f == NULL || dynamic_cast<To>(f) != NULL
+./google/protobuf/stubs/casts.h
+f == nullptr || dynamic_cast<To>(f) != nullptr
 length_delimited
 ./google/protobuf/unknown_field_set.h
 type() == TYPE_LENGTH_DELIMITED
 ;
-operator->
-ptr_ != NULL
-operator*
-google/protobuf/descriptor.proto
-google/protobuf/descriptor.pb.cc
-package
-dependency
-extendee
-type_name
-default_value
-input_type
-output_type
-java_package
-java_outer_classname
-go_package
-experimental_map_key
-name_part
-identifier_value
-aggregate_value
-leading_comments
-trailing_comments
-set_optimize_for
-::google::protobuf::FileOptions_OptimizeMode_IsValid(value)
-set_ctype
-::google::protobuf::FieldOptions_CType_IsValid(value)
-CHECK failed: (size()) < (Capacity()):
+Uninterpreted option is missing name or value.
 google/protobuf/descriptor_database.cc
 Invalid file descriptor data passed to EncodedDescriptorDatabase::Add().
-File already exists in database:
 Invalid symbol name:
+File already exists in database:
 Symbol name "
 " conflicts with the existing symbol "
 Extension conflicts with extension already in database: extend
-}
+} from:
+Invalid package name:
+google/protobuf/descriptor.proto
+google/protobuf/descriptor.pb.cc
+CHECK failed: (&from) != (this):
+CHECK failed: options_ != nullptr:
+CHECK failed: source_code_info_ != nullptr:
+google.protobuf.FileDescriptorProto.name
+google.protobuf.FileDescriptorProto.package
+google.protobuf.FileDescriptorProto.dependency
+google.protobuf.FileDescriptorProto.syntax
+google.protobuf.DescriptorProto.name
+google.protobuf.DescriptorProto.reserved_name
+google.protobuf.FieldDescriptorProto.name
+google.protobuf.FieldDescriptorProto.extendee
+google.protobuf.FieldDescriptorProto.type_name
+google.protobuf.FieldDescriptorProto.default_value
+google.protobuf.FieldDescriptorProto.json_name
+google.protobuf.OneofDescriptorProto.name
+google.protobuf.EnumDescriptorProto.name
+google.protobuf.EnumDescriptorProto.reserved_name
+google.protobuf.EnumValueDescriptorProto.name
+google.protobuf.ServiceDescriptorProto.name
+google.protobuf.MethodDescriptorProto.name
+google.protobuf.MethodDescriptorProto.input_type
+google.protobuf.MethodDescriptorProto.output_type
+google.protobuf.FileOptions.java_package
+google.protobuf.FileOptions.java_outer_classname
+google.protobuf.FileOptions.go_package
+google.protobuf.FileOptions.objc_class_prefix
+google.protobuf.FileOptions.csharp_namespace
+google.protobuf.FileOptions.swift_prefix
+google.protobuf.FileOptions.php_class_prefix
+google.protobuf.FileOptions.php_namespace
+google.protobuf.FileOptions.php_metadata_namespace
+google.protobuf.FileOptions.ruby_package
+google.protobuf.UninterpretedOption.NamePart.name_part
+google.protobuf.UninterpretedOption.identifier_value
+google.protobuf.UninterpretedOption.aggregate_value
+google.protobuf.SourceCodeInfo.Location.leading_comments
+google.protobuf.SourceCodeInfo.Location.trailing_comments
+google.protobuf.SourceCodeInfo.Location.leading_detached_comments
+google.protobuf.GeneratedCodeInfo.Annotation.source_file
+CHECK failed: GetArena() == nullptr:
 google/protobuf/dynamic_message.cc
 CHECK failed: is_prototype():
-operator[]
-i >= 0
-array_ != NULL
 google/protobuf/extension_set_heavy.cc
-CHECK failed: ((iter->second).is_repeated ? FieldDescriptor::LABEL_REPEATED : FieldDescriptor::LABEL_OPTIONAL) == (FieldDescriptor::LABEL_OPTIONAL):
-CHECK failed: (cpp_type((iter->second).type)) == (FieldDescriptor::CPPTYPE_MESSAGE):
-CHECK failed: (cpp_type(extension->type)) == (FieldDescriptor::CPPTYPE_MESSAGE):
 CHECK failed: ((*extension).is_repeated ? FieldDescriptor::LABEL_REPEATED : FieldDescriptor::LABEL_OPTIONAL) == (FieldDescriptor::LABEL_OPTIONAL):
 CHECK failed: (cpp_type((*extension).type)) == (FieldDescriptor::CPPTYPE_MESSAGE):
+CHECK failed: (cpp_type(extension->type)) == (FieldDescriptor::CPPTYPE_MESSAGE):
 CHECK failed: ((*extension).is_repeated ? FieldDescriptor::LABEL_REPEATED : FieldDescriptor::LABEL_OPTIONAL) == (FieldDescriptor::LABEL_REPEATED):
 CHECK failed: prototype != NULL:
-CHECK failed: output->message_prototype != NULL:
+CHECK failed: output->message_info.prototype != nullptr:
 Extension factory's GetPrototype() returned NULL for extension:
+./google/protobuf/extension_set_inl.h
 Non-primitive types can't be packed.
-CHECK failed: type > 0 && type <= FieldDescriptor::MAX_TYPE:
 google/protobuf/generated_message_reflection.cc
 Unimplemented type:
+CHECK failed: !oneof_descriptor->is_synthetic():
 CHECK failed: (message1->GetReflection()) == (this):
 First argument to Swap() (of type "
 ") is not compatible with this reflection object (which is for type "
 ").  Note that the exact same class is required; not just the same descriptor.
 CHECK failed: (message2->GetReflection()) == (this):
 Second argument to Swap() (of type "
-First argument to SwapFields() (of type "
-Second argument to SwapFields() (of type "
 HasField
 Field does not match message type.
 Field is repeated; the method requires a singular field.
@@ -4967,59 +5637,46 @@ FieldSize
 Field is singular; the method requires a repeated field.
 Can't get here.
 ClearField
-RemoveLast
-ReleaseLast
-Swap
 GetInt32
 SetInt32
 GetRepeatedInt32
-SetRepeatedInt32
 AddInt32
 GetInt64
 SetInt64
 GetRepeatedInt64
-SetRepeatedInt64
 AddInt64
 GetUInt32
 SetUInt32
 GetRepeatedUInt32
-SetRepeatedUInt32
 AddUInt32
 GetUInt64
 SetUInt64
 GetRepeatedUInt64
-SetRepeatedUInt64
 AddUInt64
 GetFloat
 SetFloat
 GetRepeatedFloat
-SetRepeatedFloat
 AddFloat
 GetDouble
 SetDouble
 GetRepeatedDouble
-SetRepeatedDouble
 AddDouble
 GetBool
 SetBool
 GetRepeatedBool
-SetRepeatedBool
 AddBool
 GetString
 GetStringReference
 GetRepeatedString
 GetRepeatedStringReference
-SetRepeatedString
 AddString
-GetEnum
-Value
-is not valid for field
-of type
+GetEnumValue
 SetEnum
-GetRepeatedEnum
-SetRepeatedEnum
+SetEnumValue
+GetRepeatedEnumValue
 AddEnum
 GetMessage
+MutableMessage
 SetAllocatedMessage
 ReleaseMessage
 GetRepeatedMessage
@@ -5027,14 +5684,28 @@ MutableRepeatedMessage
 AddMessage
 "MutableRawRepeatedField"
 MutableRawRepeatedField
-CHECK failed: (field->options().ctype()) == (ctype):
-subtype mismatch
 CHECK failed: (field->message_type()) == (desc):
 wrong submessage type
+"GetRawRepeatedField"
+GetRawRepeatedField
+CHECK failed: (field->options().ctype()) == (ctype):
+subtype mismatch
+"LookupMapValue"
+Field is not a map field.
+"MapBegin"
+"MapEnd"
+CHECK failed: field->cpp_type() == cpp_type || (field->cpp_type() == FieldDescriptor::CPPTYPE_ENUM && cpp_type == FieldDescriptor::CPPTYPE_INT32):
+The type parameter T in RepeatedFieldRef<T> API doesn't match
+the actual field type (for enums T should be the generated enum
+type or int32).
+CHECK failed: (message_type) == (field->message_type()):
+"GetMapData"
 Protocol Buffer reflection usage error:  Method      : google::protobuf::Reflection::
 Message type:
 Field       :
 Problem     :
+./google/protobuf/generated_message_reflection.h
+CHECK failed: HasHasbits():
 Problem     : Field is not the right type for this message:    Expected  :
 Field type:
 INVALID_CPPTYPE
@@ -5048,15 +5719,56 @@ CPPTYPE_BOOL
 CPPTYPE_ENUM
 CPPTYPE_STRING
 CPPTYPE_MESSAGE
+CHECK failed: (has_bit_index) != (~0u):
 Problem     : Enum value did not match field type:    Expected  :
 Actual    :
-CHECK failed: (extensions_offset_) != (-1):
-CHECK failed: (current_size_) > (0):
+CHECK failed: schema_.HasHasbits():
+CHECK failed: HasExtensionSet():
+CHECK failed: !field->options().weak():
+Reached impossible case in HasBit().
+CHECK failed: !schema_.InRealOneof(field) || HasOneofField(message, field):
+Field =
+CHECK failed: !InRealOneof(field):
+CHECK failed: file != nullptr:
+google/protobuf/map_field.cc
+CHECK failed: IsMapValid() && other.IsMapValid():
+MapValueRef::SetInt32Value
+MapValueRef::SetInt64Value
+MapValueRef::SetUInt32Value
+MapValueRef::SetUInt64Value
+MapValueRef::SetFloatValue
+MapValueRef::SetDoubleValue
+MapValueRef::SetBoolValue
+MapValueRef::SetStringValue
+MapValueRef::SetEnumValue
+./google/protobuf/map.h
+CHECK failed: table_[b] == table_[b + 1] && (b & 1) == 0:
+CHECK failed: m_->index_of_first_non_null_ == m_->num_buckets_ || m_->table_[m_->index_of_first_non_null_] != nullptr:
+CHECK failed: !tree->empty():
+CHECK failed: (bucket_index_ & 1) == (0u):
+CHECK failed: node_ != nullptr && m_ != nullptr:
+CHECK failed: (table_[b]) == (table_[b ^ 1]):
+Unsupported: type mismatch
+CHECK failed: (bucket_index_ % 2) == (0u):
+CHECK failed: (new_num_buckets) >= (kMinTableSize):
+CHECK failed: n >= kMinTableSize:
+CHECK failed: (n & (n - 1)) == (0):
+CHECK failed: index_of_first_non_null_ == num_buckets_ || table_[index_of_first_non_null_] != nullptr:
+CHECK failed: find(node->kv.first) == end():
+CHECK failed: (result.bucket_index_) == (b & ~static_cast<size_type>(1)):
+CHECK failed: (count) <= (kMaxLength):
+CHECK failed: !TableEntryIsTree(b) && !TableEntryIsTree(b ^ 1):
+CHECK failed: (count) == (tree->size()):
+CHECK failed: (it.m_) == (this):
+CHECK failed: TableEntryIsNonEmptyList(b):
+CHECK failed: TableEntryIsTree(b):
 google/protobuf/message.cc
 CHECK failed: (from.GetDescriptor()) == (descriptor):
 : Tried to merge from a message with a different type.  to:
 , from:
 : Tried to copy from a message with a different type. to:
+CHECK failed: field->is_repeated():
+Should not reach here.
 File appears to be in generated pool but wasn't registered:
 Type appears to be in generated pool but wasn't
 registered:
@@ -5064,31 +5776,64 @@ File is already registered:
 CHECK failed: (descriptor->file()->pool()) == (DescriptorPool::generated_pool()):
 Tried to register a non-generated type with the generated type registry.
 Type is already registered:
+./google/protobuf/reflection_internal.h
+CHECK failed: this == other_mutator:
 google/protobuf/reflection_ops.cc
 CHECK failed: (&from) != (to):
 CHECK failed: (to->GetDescriptor()) == (descriptor):
 Tried to merge messages of different types
 (merge
 to
+Message does not support reflection (type
+).
+MapValueRef::MutableMessageValue
+google/protobuf/stubs/substitute.cc
+strings::Substitute format string invalid: asked for "$
+", but only
+args were given.  Full format string was: "
+Invalid strings::Substitute() format string: "
+SubstituteAndAppend
+index < 10
+CHECK failed: (target - output->data()) == (output->size()):
 google/protobuf/text_format.cc
 Message missing required fields:
 {
 }
 CHECK failed: output:
-output specified is NULL
+output specified is nullptr
+Can't print proto content: proto type
+not found
+: failed to parse contents
+Not supported.
 : [
 ]
 CHECK failed: field->is_repeated() || (index == -1):
 Index must be -1 for non-repeated fields
+...<truncated>...
 CHECK failed: (field->type()) == (FieldDescriptor::TYPE_BYTES):
 : 0x
 : "
+"
 Warning parsing text-format
+Input size too large:
+bytes
+>
+bytes.
+CHECK failed: had_errors_ || recursion_limit_ == initial_recursion_limit_:
+Recursion limit at end of parse should be
+, but was
+. Difference of
+stack frames not accounted for stack unwind.
+Could not find type "
+" stored in google.protobuf.Any.
+Non-repeated Any specified multiple times.
 Extension "
 " is not defined or is not an extension of "
+Ignoring extension "
+" which is not defined or is not an extension of "
 Message type "
 " has no field named "
-CHECK failed: allow_unknown_field_:
+CHECK failed: allow_unknown_field_ || allow_unknown_extension_ || reserved_field:
 Non-repeated field "
 " is specified multiple times.
 Field "
@@ -5097,45 +5842,100 @@ Field "
 text format contains deprecated field "
 Expected "
 ", found "
+Value of type "
+" stored in google.protobuf.Any has missing required fields
+Expected identifier, got:
+Message is too deep, the parser exceeded the configured recursion limit of
+Cannot skip field value, unexpected token:
 infinity
 Invalid float number:
+Expected string, got:
 True
 False
 Invalid value for boolean field "
 ". Value: "
+Expected integer or identifier, got:
 Unknown enumeration value of "
 " for field "
 Reached an unintended state: CPPTYPE_MESSAGE
+Expected integer, got:
+Integer out of range (
+Expected double, got:
+Expect a decimal number, got:
 Error parsing text-format
 Outdent() without matching Indent().
-google/protobuf/unknown_field_set.cc
-CHECK failed: fields_ != NULL:
-CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()):
-google/protobuf/wire_format.cc
-CHECK failed: (output->ByteCount()) == (expected_endpoint):
-: Protocol message serialized to a size different from what was originally expected.  Perhaps it was modified by another thread during serialization?
-parsing
-serializing
-'%s'
-String field
-contains invalid
-UTF-8 data when
-a protocol
-buffer. Use the 'bytes' type if you intend to send raw
-bytes.
+CHECK failed: !failed_:
 varint
 type() == TYPE_VARINT
 type() == TYPE_FIXED32
 type() == TYPE_FIXED64
+google/protobuf/unknown_field_set.cc
+CHECK failed: !fields_.empty():
+CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()):
+Can't happen
+google/protobuf/wire_format.cc
+CHECK failed: descriptor:
+CHECK failed: reflection:
+Can't reach
+Unsupported
+Invalid descriptor
+CHECK failed: (FieldDescriptor::TypeToCppType(field->type())) == (value.type()):
+Cannot get here
 type() == TYPE_GROUP
-%.1f
-google/protobuf/io/strtod.cc
-CHECK failed: (temp[0]) == ('1'):
-CHECK failed: (temp[size-1]) == ('5'):
-CHECK failed: (size) <= (6):
+./google/protobuf/map_field.h
+Protocol Buffer map usage error:
+MapKey::GetInt64Value
+type does not match
+Expected :
+Actual   :
+MapKey::GetUInt64Value
+MapKey::GetInt32Value
+MapKey::GetUInt32Value
+MapKey::GetBoolValue
+MapKey::GetStringValue
+CHECK failed: a.type() == b.type():
+Invalid key for map field.
+MapValueConstRef::GetInt64Value
+MapValueConstRef::type MapValueConstRef is not initialized.
+MapValueConstRef::GetUInt64Value
+MapValueConstRef::GetInt32Value
+MapValueConstRef::GetUInt32Value
+MapValueConstRef::GetBoolValue
+MapValueConstRef::GetEnumValue
+MapValueConstRef::GetDoubleValue
+MapValueConstRef::GetFloatValue
+MapValueConstRef::GetStringValue
+MapValueConstRef::GetMessageValue
+./google/protobuf/dynamic_message.h
+internal error in map key sorting
+map keys are not unique
+operator!=
+./google/protobuf/reflection.h
+data_ == other.data_
+accessor_ == other.accessor_
+MapKey::type MapKey is not initialized.
+Call set methods to initialize MapKey.
+CHECK failed: overrun >= 0 && overrun <= kSlopBytes:
+CHECK failed: (size) > (0):
+Unexpected end of string.
+String literals cannot cross line boundaries.
+Expected hex digits for escape sequence.
+Expected four hex digits for \u escape sequence.
+Expected eight hex digits up to 10ffff for \U escape sequence
+Invalid escape sequence in string literal.
+"0x" must be followed by hex digits.
+Numbers starting with leading zero must be in octal.
+"e" must be followed by exponent.
+Need space between number and identifier.
+Already saw decimal point or exponent; can't have another one.
+Hex and octal numbers must be integers.
+"/*" inside block comment.  Block comments cannot be nested.
+End-of-file inside block comment.
+Comment started here.
+Invalid control characters encountered in text.
+Need space between identifier and decimal point.
 Interpreting non ascii codepoint %d.
 google/protobuf/io/tokenizer.cc
-Tokenizer::ParseInteger() passed text that could not have been tokenized as an integer:
 Tokenizer::ParseFloat() passed text that could not have been tokenized as a float:
 Tokenizer::ParseStringAppend() passed text that could not have been tokenized as a string:
 \U%08x
@@ -5683,7 +6483,6 @@ BUF_MEM_new
 crypto/buffer/buffer.c
 OpenSSL CMAC method
 cipher
-key
 hexkey
 crypto/cmac/cmac.c
 CMS_SharedInfo
@@ -9419,7 +10218,6 @@ unknown trust id
 wrong lookup type
 wrong type
 X509_ATTRIBUTE
-object
 X509_PUBKEY
 crypto/x509/x_pubkey.c
 algor
@@ -9431,7 +10229,6 @@ crypto/x509v3/v3_utl.c
 TRUE
 FALSE
 YES
-yes
 NO
 a2i_GENERAL_NAME
 addr_validate_path_internal
@@ -11001,7 +11798,6 @@ ssl/ssl_init.c
 ssl3-md5
 ssl3-sha1
 htmlmessages.proto
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/htmlmessages.pb.cc
 CUIProtoBufMsg::SerializeCrossProc
 Assertion Failed: unSize < 128 * 1024 * 1024
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/htmlprotobuf.cpp
@@ -11065,7 +11861,6 @@ m_Sequences[ iSequence ].cmdList
 m_ActiveAnimations
 m_PostedMessages
 vgui::
-%s
 g_ScriptSymbols
 GetAnimationController()
 GetPanelAnimationDictionary()
@@ -11215,6 +12010,7 @@ filterinfo
 %s %s
 Couldn't format time value %llu
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/FileOpenDialog.cpp
+*.*
 Assertion Failed: curFilter[0] == '*' && curFilter[1] == '.'
 .app
 FileCompletionEdit
@@ -11410,6 +12206,24 @@ isevcert
 certname
 OnSetHTMLTitle
 OnSetStatusText
+.jpg
+JPEG Image (*.jpg)
+.jpeg
+JPEG Image (*.jpeg)
+.png
+PNG Image (*.png)
+.gif
+GIF Image (*.gif)
+.webm
+WebM Video File (*.webm)
+.mpg
+MPEG Media File (*.mpg)
+.mpeg
+MPEG Media File (*.mpeg)
+.mp4
+MP4 Media File (*.mp4)
+.ogv
+Ogg Media File (*.ogv)
 *%s
 findcount
 findactive
@@ -11455,7 +12269,6 @@ steam://close
 AddActionSignalTarget
 vpanel
 x
-y
 width
 height
 minWidth
@@ -11819,9 +12632,7 @@ Message '%s' not handled by panel '%s'
 Assertion Failed: target
 Already have converter for type %s, ignoring...
 float
-int
 Color
-bool
 char
 HFont
 vgui::HFont
@@ -11908,6 +12719,7 @@ MOUSE_LAST
 +%s
 Can't add Keybindings Context for unnamed panels
 Assertion Failed: entry
+Assertion Failed: scheme
 vgui::DragDrop_t
 m_DragData
 m_DragPanels
@@ -11921,7 +12733,6 @@ m_MessageMaps[ iMessageMap ].map->boundkeys
 m_PanelKeyBindingMapPool
 Assertion Failed: nIndex < ( unsigned int )m_list.Count()
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlhandletable.h
-Assertion Failed: scheme
 ProgressBar
 progress
 continuous
@@ -11984,6 +12795,7 @@ PageDragFrame
 DragPropertySheet
 resource/layout/pagedragframe.layout
 PageDragPanel
+Assertion Failed: (unsigned)elem <= (unsigned)m_Size
 #QueryBox_Cancel
 TimerDone
 QueryBoxTimed
@@ -12063,7 +12875,6 @@ ScrollBarSlider.Horizontal
 ScrollBar.Horizontal
 ScrollBar.Wide
 ScrollButtonPressed
-value
 ScrollBarHandle
 SliderHoriz
 SectionedScrollBar
@@ -12154,6 +12965,7 @@ IMELanguageList
 IMEConversionModes
 IMESentenceModes
 TextEntryClearButton
+Assertion Failed: (elem == Count()) || IsValidIndex(elem)
 TextImage::Paint()
 Assertion Failed: echar >= schar
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/TextImage.cpp
@@ -12241,7 +13053,6 @@ Assertion Failed: resizeNumBits >= 0
 Assertion Failed: !m_pInt
 Assertion Failed: GetInts()
 CVariableBitStringBase
-{}()'
 {}()':
 Assertion Failed: pName
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/convar.cpp
@@ -12278,8 +13089,6 @@ fcntl failed to set F_NOCACHE
 *
 rb
 %s%c%s
-unReadAheadChunkSize should be zero when using bUnbuffered = true
-Assertion Failed: unReadAheadChunkSize < INT32_MAX/2
 unsupported flags 0x%x passed to CFileReader::BOpenFile
 Assertion Failed: BIsOpen()
 Assertion Failed: cubBytesToRead < INT32_MAX
@@ -12295,7 +13104,6 @@ m_strWatchPath
 m_mapFileWatchData
 m_mapFileWatchData.Key( i )
 Assertion Failed: cbActual < (uint32)nBufSizeWithTerminator
-*.*
 CPathString
 .dylib
 %s/%s%s
@@ -12303,7 +13111,6 @@ Assertion Failed: strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICO
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/interface.cpp
 .cpl
 %s%s
-%s
 g_VecLoadedModules
 Assertion Failed: g_VecLoadedModules[ iLoadedModules ].m_cRef > 0
 port
@@ -12325,10 +13132,7 @@ GetIntFromString() did not get correct peCS parameter
 GetUint64FromString() did not get correct peCS parameter
 GetFloatFromString() did not get correct peCS parameter
 can't convert uint64 to int32 (data loss)
-true
-false
 can't convert int64 to uint64 (negative number)
-%f
 RGBA: %.2X %.2X %.2X %.2X
 %f %f %f %f
 $0
@@ -12403,11 +13207,9 @@ Assertion Failed: m_Put >= 0
 Assertion Failed: offset >= 0
 Assertion Failed: offset >= -m_Put && offset <= INT_MAX-m_Put
 Assertion Failed: offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
-t
 v
 b
 r
-f
 a
 ?
 '
@@ -12730,7 +13532,6 @@ Assertion Failed: ( pDesc->macKeyCode & 0xff ) == 0xff || s_pVirtualKeyToKeyCode
 Assertion Failed: s_pKeyCodeToVirtualKey[keyMap[i].keyCode] == 0
 Missing String for %s (%d)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/enum_names.cpp
-Unknown
 unknown
 ELauncherType
 EControllerType
@@ -12751,7 +13552,6 @@ steamhdl
 steamchina
 singleapp
 gameserver
-no
 RSA
 Default
 audio
@@ -12791,144 +13591,81 @@ COpenSSLContext
 COpenSSLConnection
 OpenSSL random number system reports not enough entropy
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/opensslwrapper.cpp
-%u
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steamid.cpp
 Assertion Failed: steamIDClan.GetEAccountType() == k_EAccountTypeClan
 Assertion Failed: k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
 30819D300D06092A864886F70D010101050003818B0030818702818100B1260881BDFE84463D88C6AB8DB914A2E593893C10508B8A5ABDF692E9A5419A3EDBAE86A052849983B75E3B425C18178B260003D857DF0B6505C6CF9C84F5859FCE3B63F1FB2D4818501F6C5FA4AD1430EEB081A74ABD74CD1F4AA1FCCA3B88DD0548AED34443CEB52444EAE9099AA4FE66B2E6224D02381C248025C7044079020111
 30819D300D06092A864886F70D010101050003818B003081870281810093AFCC20E2393BFD1234FC5552E9A9D5610ECC4AC6891EBCC77C28018FCB31404C09A5DC11636CD97C1A022188AB680CFF063C830BA693A0F1A90E9A3E21E33EE731BD5B6AAB09B40A1A951C21ECD6B11CAB63B4840894F4F2F0CC9D24924DF7DB216FE7D9C0C5914A88DF501EF27ACB00D08101CC2AEC32DFAD498289DCF4BD020111
 30819d300d06092a864886f70d010101050003818b0030818702818100baeee6ba4093c07f86fb34fa2ed0c9660484dd02e2d7b4e2dbc0a7b80f088f42c34dffd633b4f79fd4956aa6b901d480da5d5f783fefd681b9fc517804b00451dfc3ecc7e16b11dcb0379dc1f9d00d0a7ab8f5d6aba57115f12256ed0c9e9bd4bf994dbbdd42cd019c5b023b3fd0005430c5305bdd46cce39a492753b0b5b355020111
-6
-<
-N
-<
-7&
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-s8
-n8
-.
-Y8
-p
-.
-.
 0
 p
 p
 0
 0
+p
 0
-0
-!
-0
+C
+-
+I8
+78
+aY
+8
+8
+8
+8
 p
 0
 p
 0
 p
-u7
-A
-7
-7
-0
-p
-0
-p
-0
-p
-p
-0
-p
-0
-0
-0
-
-7
-7
-7
-7
-7
-7
-XO
-UO
-A#U
-7
-H=
-2
-(
 0
 8
-@
-H
 P
+p
+0
+p
+0
+p
+0
+p
+0
+p
+0
 
-
-3e
-"
-e
-e
-e
-e
-e
-e
-e
-e
-e
+Y7
+V7
+U7
+T7
+U
+7
+7
+0
+f6
+H=
+@
 6
-@
-Q
-5
-jc
 x
-X
-mM
+5
+@
+x
+|?
+>*
+j
+H4
+
+4
+4
 
 
--4
-4
-4
-4
-b
-b
-s3
-L
 3
-3
-3
-3
-3
-3
-3
-3
-K
-K
-M-
-0
+_>
 p
 0
 p
+0
+j
+j
+AVj
 @
 @
 @
@@ -12938,219 +13675,416 @@ p
 @
 @
 
-H2
-0
+
+9
+9
+
+>
+>
+>
+>
 0
 0
 0
 p
-p
-0
-0
-p
-p
-0
-0
-p
-0
 0
 .
+p
+0
+p
+0
+f3
+p
+0
+p
+0
+p
 0
 p
 0
 p
 p
-p
 0
 p
 0
 p
+p
+0
+\T
+(3
+p
+0
+p
+0
+3
+3
 2
-I#E
+2
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+)=
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+@
+!2
+j
+j
+j
+3
+j
+j
+j
+j
+j
+3
+3
+3
+(
+3
+p
+AWj
+>2
+
+HR
 p
 0
 p
+0
+p
+0
+p
+0
+p
+0
+[1
+p
+0
+p
+0
+0
+p
+0
+0
+p
+0
+p
+0
+0
+0
+p
+0
+p
+0
+p
+0
+p
+0
+p
+0
+0
+'
+r1
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+2
+Y1
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+,
+p
+0
+p
+0
+?1
+51
+tA
+1
+f;
+p
+0
+p
+0
+p
+0
+p
+0
+Q
+Q
+Q
++2
+p
+1
+,1
+p
+T+
+p
+
+p
+p
+p
+p
+p
+j
+j
+j
+j
+p
+0
+p
+0
 1
 p
 0
-0
-p
-0
-0
-2
-2
-9
-V
-oV
-p
-@&
-6_
-G
-0
-p
-p
-p
-0
-0
-p
-0
-0
-p
-0
-p
-0
-0
-p
-0
-0
-p
-0
-0
-0
-0
-p
-A0
-0
-0
-0
-p
-0
-p
-0
-0
-p
-0
-0
-0
-#0
-0
-p
-0
-p
-41
-0
-p
-0
-p
-y0
-0
-p
-0
-p
-N0
 p
 0
 p
 0
 p
 0
-p
-%
-p
-p
-p
-
-p
-p
-p
-p
-p
-p
-p
-/
-/
-p
-0
-0
-p
-0
-0
-p
-0
-p
-0
-0
-p
-H
-@
-0
-p
 p
 0
 E
+E0
+E0
+<0
+-
++
++
+p
+0
+u
+p
+7P
+0
+0
+b/
+Q$
+:
+p
+d/
+p
+0
+p
+0
+p
+0
+p
+0
+0
+0
+0
+p
+p
+Ic
+p
+0
 $
-F)
-0
-p
-p
-:/
-vW
-)
-%
 /
 /
-/
-/
-p
-.
-.
-t-
-H.
-0
-p
-0
-p
 0
 0
-p
-0
-p
-p
-p
-0
-p
-}-
-MQ
-u5
-j-
-?.
-.
-.
-.
-.
-5
-.
+AT=
+AT5
+AT5
+AT=
+?
+D
+@
+@
+^/
+I/
+=/
+@
+Hc
+Hc
+@
+@
+@
+Hc
+@
+@
 @
 @
 =
 @
 @
-?
-?
-F-
-1-
-A
-,
-,
-,
-Hc
+@
+@
+@
 =
-N
-+Y
-L958dY
-U*
-L95r)Y
-_*
-*
-Y
-Y
-Y
+@
+@
+@
 Hc
-}(
-q)
-e)
-Y'
-E'
+@
+@
+@
+@
+@
+IcE
+IcE
+@
+@
+.
+.
+.
+.
+.
+.
+v.
+V
+-
+-
+-
+=
+R,
+,
+,
+,
+=
+6
+u+
+B,
+@,
+(+
++
++
++
++
++
+Y+
++
+@
+(
+.
+<
+a'
+3'
+'
+'
+'
+['
+i&
+@
+M9e
+@
+@
+0
 ?
 ?
 ?
@@ -13162,7 +14096,7 @@ E'
 ?
 ?
 ?
-?
+:
 ?
 ?
 ?
@@ -13172,21 +14106,18 @@ AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 @
 AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
-%&
-
-
-
-
-!'
-&
-&
-%'
-&
+E
+S$
 Pj
 ARj
 j
+$
 0
 0
+%
+%
+.
+.
 =
 =
 @
@@ -13487,14 +14418,15 @@ ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 =
 @
-#
 
-WQ
 @
 @
 @
 0
+$+
 H=
+"
+"
 Ic]
 j
 j
@@ -13503,27 +14435,22 @@ j
 j
 j
 
-T9
-9
-"
-"
+m)
+
 t$I;M
-S!
-M!
-7
-7
-(
-(
 e
 W
 ,7~5d
+#m-;
+#*;
+#M ;
+#- ;
+#M;
 H
-E
 0
 
 
 
-vI
 
 
 
@@ -13532,14 +14459,14 @@ vI
 
 *
 Hc
-L95
+H;5L+8
+L)5K%8
 AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 %
 @
 @8
 `$
-"
-"
+k7
 @
 ,
 *
@@ -13547,7 +14474,6 @@ AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 
 @
 Poly1305 for x86_64, CRYPTOGAMS by <appro@openssl.org>
-B
 0
 0
 N
@@ -13642,7 +14568,6 @@ B
 B
 "
 B
-*
 "
 B
 "
@@ -13672,54 +14597,227 @@ P
 @
 |
 |
-"
-x?
-3
-D
-f?
-?
-a?
 @
-,
-]-
-*
-*
+@
+$
 
-
-
-"
-L95(Z;
-*
-d
 #
-#
-f
-@
-
-
-
-
-
+-
+_"
+o"
 d
-&
-&
-d
-,
-t=
-=
-=
-@
-~3
-uV%
-
-
 E
+fD9-{,
+,
+,
+,
+A+M
+,
+,
+,
+
+j
+j
+j
+j
+j
+j
+v
+=
+0
+%
 
 
 
+
+
+
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+\"
+c"
+
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+
+.*
+#
+d
+&
+&
+d
+0
+A+4$A+u
+~m=
+=
+=
+=
 @
-r1
-s&
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+=
+
+
+
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+E
+j
+j
+j
+j
+j
+j
+j
+j
+j
+"
+j
+j
+j
+j
+&
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+d%
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+@
+j
+j
+j
+j
+j
+j
+j
+j
+j
 @
 @
 &
@@ -13735,10 +14833,14 @@ s&
 @
 @
 @
-1
-1
-=
-
+j
+j
+j
+j
+j
+j
+j
+0
 @
 @
 @
@@ -13759,51 +14861,62 @@ s&
 @
 @
 @
-M0
-.
-.
-.
-.
-.
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
 .
 d
-%
-0
-0
-0
-0
-0
-0
+b"
 =
-f0
+Lc%_K"
+HcrI"
 
 =
 @
-0
-0
-0
-0
+=*.*
 =
 @
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
 0
 0
-@
-@
-3
-@
-@
-@
-@
-@
-@
-S
+0
+0
+0
+0
 &
-=
 @
 @
 @
 @
-@
+Hc
+A!
+M!
 p
 p
 p

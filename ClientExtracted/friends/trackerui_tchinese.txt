@@ -797,7 +797,5 @@
 "Steam_Settings_Browser_ClearWebCacheMsg"	"刪除內建瀏覽器的所有快取檔案？"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "遠端同樂"
-"RemotePlayTogether_Notification_AvailableToInvite" "在您的好友名單中右鍵點擊好友名稱，即可邀請他們一起遊戲。"
-
 } 
 }  

@@ -122,6 +122,7 @@
  T Plat_IsSteamConsoleMode
  T Plat_IsSteamOS
  T Plat_IsSteamOS3
+ T Plat_IsSteamPal
  T Plat_MSTime
  T Plat_MSTime64
  T Plat_OutputDebugString
@@ -350,6 +351,7 @@
  T ThreadIsThreadRunning
  T ThreadMicroSleepPOSIX
  T ThreadOpenProcess
+ T ThreadResumeProcess
  T ThreadSetAffinity
  T ThreadSetBackgroundPriority
  T ThreadSetDebugName
@@ -358,6 +360,7 @@
  T ThreadShellExecuteNoWindow
  T ThreadSleep
  T ThreadSpinWaitForValue
+ T ThreadSuspendProcess
  T ThreadTerminate
  T ThreadTerminateProcessCode
  T ThreadWaitForProcessExit
@@ -382,6 +385,7 @@
  __cxa_atexit
  __cxa_begin_catch
  __cxa_end_catch
+ __cxa_free_exception
  __cxa_guard_abort
  __cxa_guard_acquire
  __cxa_guard_release
@@ -390,7 +394,6 @@
  __cxa_throw
  __divdi3
  __error
- __fixunsdfdi
  __gxx_personality_v0
  __maskrune
  __stack_chk_fail
@@ -517,6 +520,8 @@
  stat$INODE64
  std::__1::__next_prime(unsigned long)
  std::__1::__vector_base_common<true>::__throw_length_error() const
+ std::length_error::~length_error()
+ std::logic_error::logic_error(char const*)
  std::terminate()
  strcasecmp
  strchr
@@ -538,11 +543,13 @@
  timezone
  timezone$UNIX2003
  typeinfo for int
+ typeinfo for std::length_error
  usleep
  usleep$UNIX2003
  vfprintf
  vsnprintf
  vtable for __cxxabiv1::__class_type_info
  vtable for __cxxabiv1::__si_class_type_info
+ vtable for std::length_error
  waitpid
  waitpid$UNIX2003

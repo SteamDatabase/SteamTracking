@@ -1,0 +1,108 @@
+
+ T ov_bitrate
+ T ov_bitrate_instant
+ T ov_clear
+ T ov_comment
+ T ov_crosslap
+ T ov_fopen
+ T ov_halfrate
+ T ov_halfrate_p
+ T ov_info
+ T ov_open
+ T ov_open_callbacks
+ T ov_pcm_seek
+ T ov_pcm_seek_lap
+ T ov_pcm_seek_page
+ T ov_pcm_seek_page_lap
+ T ov_pcm_tell
+ T ov_pcm_total
+ T ov_raw_seek
+ T ov_raw_seek_lap
+ T ov_raw_tell
+ T ov_raw_total
+ T ov_read
+ T ov_read_filter
+ T ov_read_float
+ T ov_seekable
+ T ov_serialnumber
+ T ov_streams
+ T ov_test
+ T ov_test_callbacks
+ T ov_test_open
+ T ov_time_seek
+ T ov_time_seek_lap
+ T ov_time_seek_page
+ T ov_time_seek_page_lap
+ T ov_time_tell
+ T ov_time_total
+ __bzero
+ __error
+ __stack_chk_fail
+ __stack_chk_guard
+ calloc
+ dyld_stub_binder
+ fclose
+ fopen
+ fopen$UNIX2003
+ fread
+ free
+ fseek
+ ftell
+ malloc
+ memcpy
+ ogg_page_bos
+ ogg_page_continued
+ ogg_page_eos
+ ogg_page_granulepos
+ ogg_page_serialno
+ ogg_stream_clear
+ ogg_stream_init
+ ogg_stream_packetout
+ ogg_stream_packetpeek
+ ogg_stream_pagein
+ ogg_stream_reset
+ ogg_stream_reset_serialno
+ ogg_sync_buffer
+ ogg_sync_clear
+ ogg_sync_init
+ ogg_sync_pageseek
+ ogg_sync_reset
+ ogg_sync_wrote
+ realloc
+ rint
+ rintf
+ t _bisect_forward_serialno
+ t _fetch_and_process_packet
+ t _fetch_headers
+ t _fseek64_wrap
+ t _get_next_page
+ t _get_prev_page_serial
+ t _initial_pcmoffset
+ t _ov_64_seek_lap
+ t _ov_d_seek_lap
+ t _ov_getlap
+ t _ov_open1
+ t _ov_open2
+ t _ov_splice
+ vorbis_block_clear
+ vorbis_block_init
+ vorbis_comment_clear
+ vorbis_comment_init
+ vorbis_dsp_clear
+ vorbis_info_blocksize
+ vorbis_info_clear
+ vorbis_info_init
+ vorbis_packet_blocksize
+ vorbis_synthesis
+ vorbis_synthesis_blockin
+ vorbis_synthesis_halfrate
+ vorbis_synthesis_halfrate_p
+ vorbis_synthesis_headerin
+ vorbis_synthesis_idheader
+ vorbis_synthesis_init
+ vorbis_synthesis_lapout
+ vorbis_synthesis_pcmout
+ vorbis_synthesis_read
+ vorbis_synthesis_restart
+ vorbis_synthesis_trackonly
+ vorbis_window

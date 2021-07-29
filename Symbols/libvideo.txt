@@ -23,12 +23,17 @@
  CFStringCreateWithFormat
  CFStringGetCString
  CFURLCreateWithBytes
+ D typeinfo for std::__1::__basic_string_common<true>
  D typeinfo for std::__1::bad_function_call
+ D typeinfo for std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >
+ D typeinfo for std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >
+ D typeinfo for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  OBJC_CLASS_$_NSProcessInfo
- OSAtomicCompareAndSwap32Barrier
- OSAtomicCompareAndSwap64Barrier
- OSMemoryBarrier
+ R typeinfo name for std::__1::__basic_string_common<true>
  R typeinfo name for std::__1::bad_function_call
+ R typeinfo name for std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >
+ R typeinfo name for std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >
+ R typeinfo name for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  SCDynamicStoreCopyProxies
  SCDynamicStoreKeyCreateProxies
  SecCertificateCreateWithData
@@ -235,15 +240,12 @@
  __divdi3
  __dynamic_cast
  __error
- __fixunsdfdi
- __fixunssfdi
  __gxx_personality_v0
  __maskrune
  __memcpy_chk
  __memmove_chk
  __memset_chk
  __moddi3
- __snprintf_chk
  __sprintf_chk
  __stack_chk_fail
  __stack_chk_guard
@@ -443,6 +445,7 @@
  operator delete(void*)
  operator delete[](void*)
  operator new(unsigned long)
+ operator new(unsigned long, std::nothrow_t const&)
  operator new[](unsigned long)
  pclose
  pipe
@@ -527,20 +530,34 @@
  signal
  snprintf
  socket
- sprintf
  sscanf
  stat$INODE64
  std::__1::__basic_string_common<true>::__throw_length_error() const
+ std::__1::__call_once(unsigned long volatile&, void*, void (*)(void*))
  std::__1::__next_prime(unsigned long)
  std::__1::__vector_base_common<true>::__throw_length_error() const
+ std::__1::basic_ios<char, std::__1::char_traits<char> >::~basic_ios()
+ std::__1::basic_ostream<char, std::__1::char_traits<char> >::~basic_ostream()
+ std::__1::basic_streambuf<char, std::__1::char_traits<char> >::imbue(std::__1::locale const&)
+ std::__1::basic_streambuf<char, std::__1::char_traits<char> >::setbuf(char*, int)
+ std::__1::basic_streambuf<char, std::__1::char_traits<char> >::setbuf(char*, long)
+ std::__1::basic_streambuf<char, std::__1::char_traits<char> >::showmanyc()
+ std::__1::basic_streambuf<char, std::__1::char_traits<char> >::sync()
+ std::__1::basic_streambuf<char, std::__1::char_traits<char> >::uflow()
+ std::__1::basic_streambuf<char, std::__1::char_traits<char> >::xsgetn(char*, int)
+ std::__1::basic_streambuf<char, std::__1::char_traits<char> >::xsgetn(char*, long)
+ std::__1::basic_streambuf<char, std::__1::char_traits<char> >::xsputn(char const*, int)
+ std::__1::basic_streambuf<char, std::__1::char_traits<char> >::xsputn(char const*, long)
+ std::__1::basic_streambuf<char, std::__1::char_traits<char> >::~basic_streambuf()
+ std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > std::__1::operator+<char, std::__1::char_traits<char>, std::__1::allocator<char> >(char const*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__grow_by(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long)
- std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__init(char const*, unsigned long)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::append(char const*)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::append(char const*, unsigned long)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::append(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, unsigned long, unsigned long)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::append(unsigned long, char)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::assign(char const*)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::assign(char const*, unsigned long)
+ std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::at(unsigned long)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::at(unsigned long) const
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::basic_string(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::basic_string(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, unsigned long, unsigned long, std::__1::allocator<char> const&)
@@ -550,14 +567,18 @@
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::insert(unsigned long, char const*)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::operator=(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::push_back(char)
+ std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::replace(unsigned long, unsigned long, char const*)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::reserve(unsigned long)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::resize(unsigned long, char)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::rfind(char, unsigned long) const
- std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_string()
+ std::__1::mutex::lock()
+ std::__1::mutex::unlock()
+ std::__1::mutex::~mutex()
  std::exception::what() const
  std::exception::~exception()
  std::length_error::~length_error()
  std::logic_error::logic_error(char const*)
+ std::nothrow
  std::terminate()
  strcasecmp
  strchr
@@ -593,14 +614,26 @@
  tcsetattr
  time
  timegm
+ typeinfo for bool
+ typeinfo for char
+ typeinfo for double
+ typeinfo for float
+ typeinfo for int
+ typeinfo for long long
+ typeinfo for std::__1::basic_ostream<char, std::__1::char_traits<char> >
+ typeinfo for std::__1::basic_streambuf<char, std::__1::char_traits<char> >
  typeinfo for std::exception
  typeinfo for std::length_error
+ typeinfo for unsigned char
+ typeinfo for unsigned int
+ typeinfo for unsigned long long
  unlink
  usleep
  usleep$UNIX2003
  utime
  vasprintf
  vfprintf
+ virtual thunk to std::__1::basic_ostream<char, std::__1::char_traits<char> >::~basic_ostream()
  vsnprintf
  vtable for __cxxabiv1::__class_type_info
  vtable for __cxxabiv1::__function_type_info

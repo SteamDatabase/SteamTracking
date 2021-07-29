@@ -1999,6 +1999,7 @@
 	"Library_Details_ControllerBindingsGordon_ApplyConfiguration"	"設定を適用"
 	"Library_Details_ControllerBindingsGordon_Share"	"設定を共有"	
 	"Library_Details_ControllerBindingsGordon_ListenForBinding"	"キーの入力待ち"
+	"Library_Details_ControllerBindingsGordon_Reset"			"アクションセットのバインドにリセット"
 	
 	"Library_Details_CopyToClipboard_Title"				"設定の共有"
 	"Library_Details_CopyToClipboard_Desc"				"この設定へのリンクがクリップボードにコピーされています。"
@@ -2040,6 +2041,7 @@
 	"Library_Details_GameActionsHeader"				"ゲーム内アクションを選択"
 	"Library_Details_FieldLabel_InputStyle_GA"		"ゲーム内アクション"
 	"Library_GameAction_None"						"なし"
+	"Library_GameAction_ResetToParent"				"アクションセットのバインドにリセット"
 
 	"Library_Details_Binding_Custom_Description"		"カスタム説明..."
 
@@ -2097,8 +2099,7 @@
 	"Library_Details_SourceMode_SingleButton_Title"		"シングルボタン"
 	"Library_Details_SourceMode_FlickStick_Title"		"フリックスティック"
 	"Library_Details_SourceMode_FlickStick_Acton_Title"	"FS：{s:action}"
-	"Library_Details_SourceMode_Mouse_Joystick_Acton_Title"	"JM：{s:action}"
-
+	"Library_Details_SourceMode_Mouse_Joystick_Acton_Title"	"MJ：{s:action}"
 	"Library_Details_Source_Title_none"			"割り当てなし"
 	"Library_Details_Source_Title_left_trackpad"		"左パッド"
 	"Library_Details_Source_Title_right_trackpad"		"右パッド"
@@ -2397,6 +2398,8 @@
 	"Library_Details_SourceMode_Title_FlickStick"		"フリックスティック"
 	"Library_Details_SourceMode_Title_2DScroll"		"方向スワイプ"
 	"Library_Details_SourceMode_Title_Hotbar"		"ホットバーメニュー"
+	"Library_Details_SourceMode_Title_LayerInherit"			"アクションセットから継承"
+	"Library_Details_SourceMode_Title_LayerNullOverride"	"なし"
 
 	"Library_Details_ModeShift_Title_None"				"なし"
 	"Library_Details_ModeShift_Title_LeftTrigger"		"左トリガー フルプル"
@@ -2650,6 +2653,7 @@
 	"Library_WaitingOnGamesDesc"		"Steam は設定とゲームのアップデートをスキャンしています... {s:progress}"
 	"Library_WaitingOnGamesCancel"		"取り消し"
 	"Library_JoinDialog_InstallScript"	"初回セットアップを行っています"
+	"Library_JoinDialog_InstallScriptDetailed"	"初回セットアップを行っています\n\n インストール中：{S:stepname}（ステップ{d:step}/{d:steptotal}）"
 	"Library_Details_ManageAccount"		"アカウント管理"
 	"Library_ExternalSignupTitle"		"{s:gamename} アカウント"
 	"Library_ExternalSignupDesc"		"インストールを完了するには、あなたの{s:gamename}アカウントをSteamでのご購入とリンクする必要があります。\n\n公式Webサイトを開き、既存の{s:gamename}アカウントにログインするか、新しいアカウントを作成してください。"
@@ -2923,7 +2927,7 @@
 	"Notification_Controller_Player_Number_Changed1"	"{s:controller}"
 	"Notification_Controller_Player_Number_Changed2"    "はプレイヤー{d:player_number}です"
 	"Notification_NetworkStateChange"	"ネットワーク状態が変更されました"
-	"Friends_GroupEvent_NowStarting"		"の次のイベントが開始します:"
+	"Friends_GroupEvent_NowStarting"		"の次のイベントが開始されます："
 
 	"Friends_GroupEvent_NewEventScheduled"	"がイベントを計画しました"
 	"Friends_GroupEvent_NewAccouncement"	"がお知らせを投稿しました"
@@ -2986,7 +2990,7 @@
 	"Steam_InstallAborted_InfoAppUnreleased"	"{s:game} はまだリリースされていないため、インストールできません。"
 	"Steam_InstallAborted_InfoAppNoDemo"		"すでに完全版を持っているので、{s:game} の体験版はインストールできません。ゲームの完全版をインストールしてください。"
 
-	"Steam_NoContentServers_Info"		"このゲームのコンテンツを配信するように設定された Steam コンテンツサーバーが現在ありません。\nこの問題はまもなく解決されます。 数分間待ってから、もう一度お試しください。"
+	"Steam_NoContentServers_Info"		"このゲームのコンテンツを配信するように設定されたSteamコンテンツサーバーが現在ありません。\nこの問題はまもなく解決されます。数分間待ってから、もう一度お試しください。"
 	"Steam_App_Install_Failed_Title"	"エラー"
 	"Steam_App_Install_Failed_Text"	"{s:game} をインストール中にエラーが発生しました ({s:reason})"
 	"Steam_App_Update_Failed_Title"	"エラー"
@@ -3425,6 +3429,7 @@
 	"Downloads_Status_downloading"	"ダウンロード中 {s:downloadpercent}"
 	"Downloads_Status_preloading"	"プリロード中 {s:downloadpercent}"
 	"Downloads_Status_unpacking"	"解凍中 {s:downloadpercent}"
+	"Downloads_Status_patching"	"パッチ適用中 {s:downloadpercent}"
 	"Downloads_Status_paused"	"一時停止中"
 	"Downloads_Status_queued"	"キュー内"
 	"Downloads_Status_ready"	"プレイ可能"
@@ -3434,6 +3439,7 @@
 	"Downloads_Status_finished"	"{t:t:downloadfinished} にダウンロード終了"
 	"Downloads_Status_deferred"	"{t:t:downloadstart} にダウンロード予定"
 	"Downloads_Status_locked"	"この製品のライセンスはすべて使用中です"
+	"Downloads_Status_uninstalled"	"未インストール"
 
 
 	"Quit_LabelStreamingClient0"	"{s:streamingclient0}"
@@ -5086,6 +5092,8 @@
 	"ControllerBinding_ModeDropDown_InGameAction_Description"	"このオプションを選択すると、スティックまたはパッドは指定したゲーム内アクションを行います。"
 	"ControllerBinding_ModeDropDown_OtherAction"				"他のゲーム内アクション..."
 	"ControllerBinding_ModeDropDown_OtherAction_Description"	"このゲームにはコントローラのトリガーボタン用にデザインされたゲーム内アクションが存在します。このトリガーにそれ以外のゲーム内アクションをバインドしたい場合は、このオプションを選択してください。"
+	"ControllerBinding_ModeDropDown_LayerInherit"				"アクションセットから継承"
+	"ControllerBinding_ModeDropDown_LayerInherit_Description"	"このオプションを選択すると、このモードで行われた変更を削除し、このレイヤーを含むアクションセットで定義されたモードが継承されます。"
 	"ControllerBinding_ModeDropDown_GenericDPad"				"一般的な十字キー"
 	"ControllerBinding_ModeDropDown_GenericDPad_Description"	"このスティックもしくはパッドを十字キーの操作に設定したい場合は、このオプションを選択してください。"
 
@@ -7295,6 +7303,7 @@ XInput ボタンは XInput ゲームパッド対応のゲームでしか使う�
 	"controller_unknown"								"不明なコントローラ"
 	"controller_steamcontroller_unknown"				"Steamコントローラ"
 	"controller_steamcontroller_gordon" 				"Steam コントローラ"
+	"controller_steamcontroller_neptune"				"Steam Deckコントローラ"
 	"controller_generic"								"一般的なゲームパッド"
 	"controller_xbox360"								"Xbox 360 コントローラ"
 	"controller_xboxone"								"Xbox One コントローラー"

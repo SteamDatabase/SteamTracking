@@ -176,9 +176,15 @@
  D pcre_stack_free
  D pcre_stack_malloc
  D typeinfo for CAException
+ D typeinfo for std::__1::__basic_string_common<true>
  D typeinfo for std::__1::bad_function_call
+ D typeinfo for std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  D typeinfo for std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
+ D typeinfo for std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >
+ D typeinfo for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  D typeinfo for std::__1::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
+ D typeinfo for void ()
+ D typeinfo for void (*)()
  D vtable for ASWAVCapture
  D vtable for ASWAVCaptureCodec
  D vtable for ASWAVCaptureCodecFactory
@@ -240,8 +246,10 @@
  IOSurfaceCreate
  IOSurfaceDecrementUseCount
  IOSurfaceGetBaseAddress
+ IOSurfaceGetBaseAddressOfPlane
  IOSurfaceGetBytesPerElement
  IOSurfaceGetBytesPerRow
+ IOSurfaceGetBytesPerRowOfPlane
  IOSurfaceGetHeight
  IOSurfaceGetWidth
  IOSurfaceIncrementUseCount
@@ -296,17 +304,17 @@
  OBJC_METACLASS_$_NSMenuItem
  OBJC_METACLASS_$_NSObject
  OSAtomicAdd32Barrier
- OSAtomicCompareAndSwap64Barrier
- OSMemoryBarrier
  OSTypesAreCompatible
  Plat_CommandLineParamExists
  Plat_CommandLineParamValue
  Plat_FloatTime
  Plat_GetExecutablePath
  Plat_GetExecutablePathUTF8
+ Plat_IsChromeOS
  Plat_IsInDebugSession
  Plat_IsSteamConsoleMode
  Plat_IsSteamOS
+ Plat_IsSteamPal
  Plat_MSTime
  Plat_MSTime64
  Plat_OutputDebugString
@@ -321,9 +329,15 @@
  Plat_timegm
  Plat_timezone
  R typeinfo name for CAException
+ R typeinfo name for std::__1::__basic_string_common<true>
  R typeinfo name for std::__1::bad_function_call
+ R typeinfo name for std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  R typeinfo name for std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
+ R typeinfo name for std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >
+ R typeinfo name for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  R typeinfo name for std::__1::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
+ R typeinfo name for void ()
+ R typeinfo name for void (*)()
  RealGetCallStack
  RealPrintCallStack
  RescaleBase
@@ -1166,7 +1180,7 @@
  __maskrune
  __memcpy_chk
  __memset_chk
- __snprintf_chk
+ __sincosf_stret
  __sprintf_chk
  __stack_chk_fail
  __stack_chk_guard
@@ -1180,17 +1194,16 @@
  _dyld_image_count
  _exit
  _objc_empty_cache
- _objc_empty_vtable
  _strlwr
  _tlv_bootstrap
  abort
  accept
  access
- acos
+ acosf
  alphasort$INODE64
- atan
  atan2
  atan2f
+ atanf
  atoi
  atoll
  bcopy
@@ -1208,7 +1221,6 @@
  copyfile_state_alloc
  copyfile_state_free
  cos
- cosf
  crc32
  deflate
  deflateEnd
@@ -1237,6 +1249,7 @@
  exit
  exp
  exp2
+ expf
  fclose
  fcntl
  feof
@@ -1246,7 +1259,7 @@
  flock
  floor
  floorf
- fmod
+ fmodf
  fnmatch
  fopen
  fprintf
@@ -1358,6 +1371,7 @@
  localtime_r
  log
  log10
+ logf
  longjmp
  lrintf
  lroundf
@@ -1390,12 +1404,14 @@
  mmap
  mprotect
  munmap
+ objc_alloc
  objc_autoreleasePoolPop
  objc_autoreleasePoolPush
  objc_enumerationMutation
  objc_msgSend
  objc_msgSendSuper2
  objc_msgSend_stret
+ objc_release
  open
  opendir$INODE64
  operator delete(void*)
@@ -1453,7 +1469,6 @@
  round
  roundf
  scandir$INODE64
- sched_yield
  select$DARWIN_EXTSN
  sem_close
  sem_open
@@ -1482,11 +1497,22 @@
  stat$INODE64
  statfs$INODE64
  std::__1::__basic_string_common<true>::__throw_length_error() const
+ std::__1::__call_once(unsigned long volatile&, void*, void (*)(void*))
  std::__1::__next_prime(unsigned long)
  std::__1::__vector_base_common<true>::__throw_length_error() const
+ std::__1::basic_ios<char, std::__1::char_traits<char> >::~basic_ios()
  std::__1::basic_ios<wchar_t, std::__1::char_traits<wchar_t> >::~basic_ios()
+ std::__1::basic_ostream<char, std::__1::char_traits<char> >::~basic_ostream()
  std::__1::basic_ostream<wchar_t, std::__1::char_traits<wchar_t> >::operator<<(double)
  std::__1::basic_ostream<wchar_t, std::__1::char_traits<wchar_t> >::~basic_ostream()
+ std::__1::basic_streambuf<char, std::__1::char_traits<char> >::imbue(std::__1::locale const&)
+ std::__1::basic_streambuf<char, std::__1::char_traits<char> >::setbuf(char*, long)
+ std::__1::basic_streambuf<char, std::__1::char_traits<char> >::showmanyc()
+ std::__1::basic_streambuf<char, std::__1::char_traits<char> >::sync()
+ std::__1::basic_streambuf<char, std::__1::char_traits<char> >::uflow()
+ std::__1::basic_streambuf<char, std::__1::char_traits<char> >::xsgetn(char*, long)
+ std::__1::basic_streambuf<char, std::__1::char_traits<char> >::xsputn(char const*, long)
+ std::__1::basic_streambuf<char, std::__1::char_traits<char> >::~basic_streambuf()
  std::__1::basic_streambuf<wchar_t, std::__1::char_traits<wchar_t> >::basic_streambuf()
  std::__1::basic_streambuf<wchar_t, std::__1::char_traits<wchar_t> >::imbue(std::__1::locale const&)
  std::__1::basic_streambuf<wchar_t, std::__1::char_traits<wchar_t> >::setbuf(wchar_t*, long)
@@ -1496,34 +1522,32 @@
  std::__1::basic_streambuf<wchar_t, std::__1::char_traits<wchar_t> >::xsgetn(wchar_t*, long)
  std::__1::basic_streambuf<wchar_t, std::__1::char_traits<wchar_t> >::xsputn(wchar_t const*, long)
  std::__1::basic_streambuf<wchar_t, std::__1::char_traits<wchar_t> >::~basic_streambuf()
+ std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > std::__1::operator+<char, std::__1::char_traits<char>, std::__1::allocator<char> >(char const*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__grow_by(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long)
- std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__init(char const*, unsigned long)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::append(char const*)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::append(char const*, unsigned long)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::append(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, unsigned long, unsigned long)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::append(unsigned long, char)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::assign(char const*)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::assign(char const*, unsigned long)
+ std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::at(unsigned long)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::at(unsigned long) const
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::basic_string(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::basic_string(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, unsigned long, unsigned long, std::__1::allocator<char> const&)
- std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::compare(char const*) const
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::compare(unsigned long, unsigned long, char const*, unsigned long) const
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::erase(unsigned long, unsigned long)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::find(char, unsigned long) const
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::insert(unsigned long, char const*)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::operator=(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::push_back(char)
+ std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::replace(unsigned long, unsigned long, char const*)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::replace(unsigned long, unsigned long, char const*, unsigned long)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::reserve(unsigned long)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::resize(unsigned long, char)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::rfind(char, unsigned long) const
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_string()
- std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::__init(wchar_t const*, unsigned long)
- std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::operator=(std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> > const&)
  std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::push_back(wchar_t)
  std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::resize(unsigned long, wchar_t)
- std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::~basic_string()
  std::__1::ios_base::getloc() const
  std::__1::ios_base::imbue(std::__1::locale const&)
  std::__1::ios_base::init(void*)
@@ -1531,6 +1555,9 @@
  std::__1::locale::locale(std::__1::locale const&)
  std::__1::locale::operator=(std::__1::locale const&)
  std::__1::locale::~locale()
+ std::__1::mutex::lock()
+ std::__1::mutex::unlock()
+ std::__1::mutex::~mutex()
  std::exception::what() const
  std::exception::~exception()
  std::length_error::~length_error()
@@ -1574,11 +1601,22 @@
  timegm
  truncf
  typeinfo for SteamThreadTools::CThread
+ typeinfo for bool
  typeinfo for bool*
+ typeinfo for char
+ typeinfo for double
+ typeinfo for float
+ typeinfo for int
+ typeinfo for long long
+ typeinfo for std::__1::basic_ostream<char, std::__1::char_traits<char> >
  typeinfo for std::__1::basic_ostream<wchar_t, std::__1::char_traits<wchar_t> >
+ typeinfo for std::__1::basic_streambuf<char, std::__1::char_traits<char> >
  typeinfo for std::__1::basic_streambuf<wchar_t, std::__1::char_traits<wchar_t> >
  typeinfo for std::exception
  typeinfo for std::length_error
+ typeinfo for unsigned char
+ typeinfo for unsigned int
+ typeinfo for unsigned long long
  typeinfo for void*
  umask
  unlink
@@ -1634,6 +1672,7 @@
  vImagePermuteChannels_ARGB8888
  valloc
  vasprintf
+ virtual thunk to std::__1::basic_ostream<char, std::__1::char_traits<char> >::~basic_ostream()
  virtual thunk to std::__1::basic_ostream<wchar_t, std::__1::char_traits<wchar_t> >::~basic_ostream()
  vm_allocate
  vm_deallocate
@@ -1656,4 +1695,5 @@
  wcstol
  wctob
  wctype
+ wmemcpy
  write

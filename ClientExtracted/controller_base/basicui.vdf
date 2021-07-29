@@ -36,11 +36,23 @@
 				"RSHOULDER"		"#Action_RSilo"
 				"LTRIGGER"		"#Action_LCycle"
 				"RTRIGGER"		"#Action_RCycle"
-				"LEFTSTICK_UP"		"#Action_Up"
+				"LEFTSTICK_UP"			"#Action_Up"
 				"LEFTSTICK_DOWN"		"#Action_Down"
 				"LEFTSTICK_LEFT"		"#Action_Left"
 				"LEFTSTICK_RIGHT"		"#Action_Right"
-				"CursorSelect"		"#Action_CursorSelect"
+				"CursorSelect"			"#Action_CursorSelect"
+				"LEFTSTICK_CLICK"		"#Action_LeftStickClick"
+				"RIGHTSTICK_CLICK"		"#Action_RightStickClick"
+				"LeftStick"				"#Action_LeftStick"
+				"RightStick"			"#Action_RightStick"
+				"LeftTrackpad"			"#Action_LeftTrackpad"
+				"LeftTrackpadClick"		"#Action_LeftTrackpadClick"
+				"RightTrackpad"			"#Action_RightTrackpad"
+				"RightTrackpadClick"	"#Action_RightTrackpadClick"
+				"RearLeftUpper"			"#Action_RearLeftUpper"
+				"RearLeftLower"			"#Action_RearLeftLower"
+				"RearRightUpper"		"#Action_RearRightUpper"
+				"RearRightLower"		"#Action_RearRightLower"
 			}
 		}
 		"WebBrowser"
@@ -1939,7 +1951,7 @@
 		{
 		}
 	}
-"group"
+	"group"
 	{
 		"id"		"4"
 		"mode"		"trigger"
@@ -1953,7 +1965,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"mouse_button RIGHT"
+							"binding"		"game_action Default LTRIGGER"
 						}
 						"settings"
 						{
@@ -2200,6 +2212,19 @@
 						"bindings"
 						{
 							"binding"		"game_action Default LEFTSTICK_LEFT"
+						}
+					}
+				}
+			}
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Default LEFTSTICK_CLICK"
 						}
 					}
 				}
@@ -3585,6 +3610,32 @@
 					}
 				}
 			}
+			"button_back_left"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Default RearLeftLower"
+						}
+					}
+				}
+			}
+			"button_back_right"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Default RearRightLower"
+						}
+					}
+				}
+			}
 			"button_back_left_upper"
 			{
 				"activators"
@@ -3593,7 +3644,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"game_action Default B, Back"
+							"binding"		"game_action Default RearLeftUpper"
 						}
 					}
 				}
@@ -3606,7 +3657,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"game_action Default y, UI Action 2"
+							"binding"		"game_action Default RearRightUpper"
 						}
 					}
 				}

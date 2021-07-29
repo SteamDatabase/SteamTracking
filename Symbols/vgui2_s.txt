@@ -261,7 +261,6 @@
  _dispatch_main_q
  _exit
  _objc_empty_cache
- _objc_empty_vtable
  abort
  accept
  atoi
@@ -309,6 +308,8 @@
  memcpy
  memmove
  memset
+ objc_alloc
+ objc_autorelease
  objc_autoreleasePoolPop
  objc_autoreleasePoolPush
  objc_enumerationMutation
@@ -316,6 +317,8 @@
  objc_msgSend
  objc_msgSendSuper2
  objc_msgSend_stret
+ objc_release
+ objc_retain
  objc_setAssociatedObject
  open
  opendir$INODE64

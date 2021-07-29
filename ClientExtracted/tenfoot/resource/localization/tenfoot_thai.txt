@@ -1997,6 +1997,7 @@
 	"Library_Details_ControllerBindingsGordon_ApplyConfiguration"	"ปรับใช้การกำหนดค่า"
 	"Library_Details_ControllerBindingsGordon_Share"	"แบ่งปันการกำหนดค่า"	
 	"Library_Details_ControllerBindingsGordon_ListenForBinding"	"กำลังรอปุ่มคีย์"
+	"Library_Details_ControllerBindingsGordon_Reset"			"รีเซ็ตเป็นการกำหนดชุดคำสั่ง"
 	
 	"Library_Details_CopyToClipboard_Title"				"แบ่งปันการกำหนดค่า"
 	"Library_Details_CopyToClipboard_Desc"				"ลิงก์ของการกำหนดค่านี้ได้ถูกคัดลอกไปยังคลิปบอร์ดของคุณแล้ว"
@@ -2038,6 +2039,7 @@
 	"Library_Details_GameActionsHeader"				"เลือกคำสั่งในเกม"
 	"Library_Details_FieldLabel_InputStyle_GA"		"คำสั่งในเกม"
 	"Library_GameAction_None"						"ไม่มี"
+	"Library_GameAction_ResetToParent"				"รีเซ็ตเป็นการกำหนดชุดคำสั่ง"
 
 	"Library_Details_Binding_Custom_Description"		"คำอธิบายแบบกำหนดเอง..."
 
@@ -2095,8 +2097,7 @@
 	"Library_Details_SourceMode_SingleButton_Title"		"ปุ่มเดี่ยว"
 	"Library_Details_SourceMode_FlickStick_Title"		"สติกตวัด"
 	"Library_Details_SourceMode_FlickStick_Acton_Title"	"สติกตวัด: {s:action}"
-	"Library_Details_SourceMode_Mouse_Joystick_Acton_Title"	"เมาส์จอยสติก: {s:action}"
-
+	"Library_Details_SourceMode_Mouse_Joystick_Acton_Title"	"จอยสติกเมาส์: {s:action}"
 	"Library_Details_Source_Title_none"			"ไม่ได้กำหนด"
 	"Library_Details_Source_Title_left_trackpad"		"แพดซ้าย"
 	"Library_Details_Source_Title_right_trackpad"		"แพดขวา"
@@ -2395,6 +2396,8 @@
 	"Library_Details_SourceMode_Title_FlickStick"		"สติกตวัด"
 	"Library_Details_SourceMode_Title_2DScroll"		"การปัดแบบมีทิศทาง"
 	"Library_Details_SourceMode_Title_Hotbar"		"เมนูฮอตบาร์"
+	"Library_Details_SourceMode_Title_LayerInherit"			"นำมาจากชุดคำสั่ง"
+	"Library_Details_SourceMode_Title_LayerNullOverride"	"ไม่มี"
 
 	"Library_Details_ModeShift_Title_None"				"ไม่มี"
 	"Library_Details_ModeShift_Title_LeftTrigger"		"ทริกเกอร์ซ้ายแบบเหนี่ยวสุด"
@@ -3424,6 +3427,7 @@
 	"Downloads_Status_downloading"	"กำลังดาวน์โหลด {s:downloadpercent}"
 	"Downloads_Status_preloading"	"กำลังโหลดล่วงหน้า {s:downloadpercent}"
 	"Downloads_Status_unpacking"	"กำลังแยกไฟล์ {s:downloadpercent}"
+	"Downloads_Status_patching"	"กำลังแพตช์ {s:downloadpercent}"
 	"Downloads_Status_paused"	"หยุดชั่วคราว"
 	"Downloads_Status_queued"	"อยู่ในคิว"
 	"Downloads_Status_ready"	"พร้อมเล่น"
@@ -3433,6 +3437,7 @@
 	"Downloads_Status_finished"	"ดาวน์โหลดเสร็จสิ้น {t:t:downloadfinished}"
 	"Downloads_Status_deferred"	"ดาวน์โหลดตามกำหนดการ {t:t:downloadstart}"
 	"Downloads_Status_locked"	"ใบอนุญาตสิทธิ์ทั้งหมดที่กำลังใช้งานสำหรับผลิตภัณฑ์นี้"
+	"Downloads_Status_uninstalled"	"ไม่ได้ติดตั้ง"
 
 
 	"Quit_LabelStreamingClient0"	"{s:streamingclient0}"
@@ -5087,6 +5092,8 @@
 	"ControllerBinding_ModeDropDown_InGameAction_Description"	"เลือกตัวเลือกนี้เพื่อทำให้สติกหรือแพดดำเนินคำสั่งในเกมที่ระบุ"
 	"ControllerBinding_ModeDropDown_OtherAction"				"คำสั่งในเกมแบบอื่น..."
 	"ControllerBinding_ModeDropDown_OtherAction_Description"	"เกมนี้มีคำสั่งในเกมที่ออกแบบมาโดยเฉพาะสำหรับใช้บนปุ่มทริกเกอร์ของคอนโทรลเลอร์ หากคุณต้องการจะกำหนดคำสั่งอื่นในเกมไปยังทริกเกอร์นี้แทน กรุณาเลือกตัวเลือกนี้"
+	"ControllerBinding_ModeDropDown_LayerInherit"				"นำมาจากชุดคำสั่ง"
+	"ControllerBinding_ModeDropDown_LayerInherit_Description"	"เลือกตัวเลือกนี้เพื่อลบการเปลี่ยนแปลงที่เกิดขึ้นในโหมดนี้ และให้นำมาจากโหมดซึ่งกำหนดไว้ในชุดคำสั่งที่มีเลเยอร์นี้"
 	"ControllerBinding_ModeDropDown_GenericDPad"				"แพดทิศทางทั่วไป"
 	"ControllerBinding_ModeDropDown_GenericDPad_Description"	"หากคุณต้องการจะกำหนดให้สติกหรือแพดนี้ทำงานเหมือนแพดทิศทางทั่วไป เลือกตัวเลือกนี้"
 
@@ -7295,6 +7302,7 @@
 	"controller_unknown"								"คอนโทรลเลอร์ที่ไม่รู้จัก"
 	"controller_steamcontroller_unknown"				"Steam Controller"
 	"controller_steamcontroller_gordon" 				"Steam Controller"
+	"controller_steamcontroller_neptune"				"ส่วนควบคุม Steam Deck"
 	"controller_generic"								"เกมแพดทั่วไป"
 	"controller_xbox360"								"คอนโทรลเลอร์ Xbox 360"
 	"controller_xboxone"								"คอนโทรลเลอร์ Xbox One"

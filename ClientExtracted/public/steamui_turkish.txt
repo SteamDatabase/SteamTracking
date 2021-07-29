@@ -199,7 +199,7 @@ Bu işlem bir dakikadan az sürer."
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=media"    	"Yürüt"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=music"    	"Oynat"
 "SteamUI_JoinDialog_Cancel_Btn"		"İptal"
-"SteamUI_JoinDialog_OverrideThrottle"	"Mevcut ağ limitini yoksay"
+"SteamUI_JoinDialog_OverrideThrottle"	"Mevcut ağ limitini yok say"
 "SteamUI_JoinDialog_SkipUpdateInfo" "Güncellemeyi atla ve şimdi oyna"
 
 "SteamUI_JoinDialog_ProcessingShaderCache" "Vulkan gölgelendiricileri işleniyor..."
@@ -279,6 +279,21 @@ Oyunu açmak %borrower% adlı kullanıcıya oyunu bırakma zamanının geldiğin
 "Steam_CloudConflict_Newer" " - DAHA YENİ"
 "Steam_CloudConflict_Older" " - DAHA ESKİ"
 "Steam_CloudConflict_Unknown" "Bilinmiyor"
+
+"Steam_CloudPendingSessions_Title" "Steam - Bekleyen Bulut Yüklemeleri"
+"Steam_CloudPendingSessions_Text" "%game% oyununun Steam Cloud'a yüklemediğiniz %pendingops% oturumu var."
+"Steam_CloudPendingSessions_Sessions" "Son oturum:"
+"Steam_CloudPendingSessions_RemoteTime" "Son değiştirilme: %remotetime%"
+"Steam_CloudPendingSessions_RemoteMachine" "Aygıt: %remotemachine%"
+"Steam_CloudPendingSessions_RemoteState" "Durum: %remotestate%"
+"Steam_CloudPendingSessions_IgnoreAndContinue" "Yok say ve devam et"
+"Steam_CloudPendingSessions_Cancel" "Başlatmayı İptal Et"
+"Steam_CloudPendingSessions_Note" "Not: Bunu yok saymak diğer oturum veya oturumlar devam ettiğinde, bir Steam Cloud dosyası çakışmasına neden olabilir."
+"Steam_CloudPendingSessions_Unknown" "Bilinmiyor"
+"Steam_CloudPendingSessions_UploadNotStarted"	"Yükleme başlamadı"
+"Steam_CloudPendingSessions_GameActive"	"Çalışıyor"
+"Steam_CloudPendingSessions_UploadInProgress"	"Yükleniyor"
+"Steam_CloudPendingSessions_GameSuspended"	"Askıya alındı"
 
 "CloudFiles_RemoveFile_Title"	"Steam Cloud - Dosyayı Sil"
 "CloudFiles_RemoveFile_Info"				"%filename% dosyasını Steam Cloud'tan silmek istediğinizden emin misiniz? Bu aynı zamanda dosyanın yerel kopyasını da siler.\n\n(İşlem geri alınamaz.)\n"
@@ -502,7 +517,7 @@ Oyunu açmak %borrower% adlı kullanıcıya oyunu bırakma zamanının geldiğin
 "Steam_ExitSteam"				"Çıkış"
 "Steam_ExitLogoutSteam"				"Oturumu Kapat ve Çık"
 
-"Steam_ChangePassword"				"Parola değiştir..."
+"Steam_ChangePassword"				"PAROLA DEĞİŞTİR..."
 "Steam_ChangePasswordWizard_Title"		"Steam - Parola Değiştirme Sihirbazı"
 "Steam_ChangePasswordError_Title"		"Steam - Hata"
 "Steam_ChangePasswordOrSecret"		"Hangi ögeleri değiştirmek istersiniz?"
@@ -593,7 +608,7 @@ Oyunu açmak %borrower% adlı kullanıcıya oyunu bırakma zamanının geldiğin
 "Steam_Monitor_AppAcquiredPercentage"	"Edinilen Miktar"
 
 "Steam_ChangeContactEmailLabel"		"İletişim e-postası:"
-"Steam_ChangeContactEmail"			"İletişim e-posta adresini değiştir..."
+"Steam_ChangeContactEmail"			"İLETİŞİM E-POSTA ADRESİNİ DEĞİŞTİR..."
 "Steam_VerifyContactEmaill"			"E-POSTA ADRESİNİ DOĞRULA..."
 "Steam_EmailAddressUnverified"		"Belirtilmedi"
 "Steam_VerifyContactEmail_Working"	"Doğrulama e-postası gönderiliyor..."
@@ -2275,6 +2290,8 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "Steam_Install_CreateApplicationIcon"			"Bir sistem uygulaması simgesi oluştur"
 "Steam_Install_CreateMultipleApplicationIcon"	"Her bir oyun için sistem uygulaması simgesi oluştur"
 
+"Steam_Install_ShowLauncherShortcut"			"Başlatıcı kısayolu oluştur"
+
 "Steam_Install_InstallRetailFiles"			"Steam şimdi oyun içeriğinizi yükleyecek."
 "Steam_Install_WillVerifyExistingFiles"		"Steam şimdi oyun yüklemenizi doğrulayacak."
 
@@ -2924,7 +2941,7 @@ Tanıdığınız birine e-posta aracılığıyla bir hediye göndererek arkadaş
 
 "Steam_GamesDialog_RightClick_RemoveFromHidden"	"Gizlilerden Kaldır"
 
-"Steam_GamesDialog_RightClick_AddToUnblockedGames"			"Aile Oyunları'na Ekle"
+"Steam_GamesDialog_RightClick_AddToUnblockedGames"			"Aile Oyunlarına Ekle"
 "Steam_GamesDialog_RightClick_RemoveFromUnblockedGames"		"Aile Oyunlarından Kaldır"
 
 "steam_menu_checkforupdates"						"Steam Güncellemelerini Denetle..."
@@ -3094,7 +3111,7 @@ Eğer devam ederseniz, oyunu çalıştırmada sorunlar yaşayabilirsiniz."
 
 Eğer bu oyunu oynamak istiyorsanız sisteminizi yükseltin ya da başka bilgisayar kullanın."
 
-"Steam_AccountPage_BetaParticipation"	"Beta katılımı:"
+"Steam_AccountPage_BetaParticipation"	"Beta Katılımı:"
 "Steam_NoBetaAvailable"	"(Şu anda yok)"
 "Steam_NoBetaChosen"	"Katılım yok\n(Şu anda %numbetas% adet mevcut)"
 "Steam_NoBetaChosenNonAdmin"	"Şu an %numbetas% adet mevcut\n(Sadece Steam yükleyen kulanıcılar Beta katılımını değiştirebilir.)"
@@ -3324,7 +3341,7 @@ Steam üzerinden yeni bir arkadaş edinmek istiyorsanız tanıdığınız birine
 "Steam_Subscription_Success_WithShippingCart$purchasetype=gift"	"Hediyeniz bu eşyalar %giftee% adlı kullanıcıya gönderildi. Eşyalarınız gönderildiğinde bir e-posta iletisi alacaksınız. Siparişiniz için teşekkür ederiz!"
 "Steam_Subscription_Success_WithShippingCart$purchasetype=unknown"	"Bu ögeleri başarıyla satın aldınız. Eşyalarınız gönderildiğinde bir e-posta iletisi alacaksınız. Siparişiniz için teşekkür ederiz!"
 "Steam_SubscriptionCancelled_PaymentCardUseLimitHit_InfoCart" 	"Ödeme gerçekleştirilemiyor çünkü kartınız çok uzun süre Steam üzerinde kullanılmış.\n\nMüşterilerimizi kredi kartı dolandırıcılığından korumak için böyle bir politika uyguluyoruz. Biz, dolandırıcılığa karşı yasalar çerçevesinde dava açarız."
-"Steam_Subscription_ContactSupportCart" "Beklenmedik bir hata oluştu. Bu ögeler için ödemeniz tamamlanmadı. \n\nLütfen aşağıdaki bağlantıyı kullanarak Steam Destek ile irtibata geçin."
+"Steam_Subscription_ContactSupportCart" "Beklenmedik bir hata meydana geldi. Bu öğeler için ödemeniz tamamlanmadı. \n\nLütfen aşağıdaki bağlantıyı kullanarak Steam Destek ile irtibata geçin."
 "Steam_SubscriptionCancelled_PayPalDeclinedCart" "Bu ögelerin satış işlemi tamamlanmadı.\n\n%provider% onayın verilmediğini raporladı. Lütfen farklı bir ödeme yöntemi kullanarak tekrar satın almayı deneyin."
 "Steam_SubscriptionCancelled_PayPalDeclined_InvalidShippingAddressCart"	"Bu ögelerin satış işlemi tamamlanmadı.\n\n%provider%, %provider% hesap adresininzle ilgili bir sorun olduğunu raporladı. Sorununuzu %provider% ile çözebilir ya da farklı bir ödeme yöntemi kullanarak tekrar satın almayı deneyebilirsiniz."
 "Steam_SubscriptionCancelled_PayPalDeclined_UseOtherFundingSourceCart"	"Bu ögelerin satış işlemi tamamlanmadı.\n\n%provider%, %provider% hesap bakiyenizin yetersiz olduğunu raporladı. Sorununuzu %provider% ile çözebilir ya da farklı bir ödeme yöntemi kullanarak tekrar satın almayı deneyebilirsiniz."
@@ -3429,7 +3446,7 @@ Steam üzerinden yeni bir arkadaş edinmek istiyorsanız tanıdığınız birine
 "SteamUI_VerifyEmail_Verified" " | Doğrulandı"
 "SteamUI_VerifyEmail_Unverified" " | Doğrulanmadı"
 
-"SteamUI_ManageSecurityButton" "Steam Guard Hesap Güvenliğini Yönet..."
+"SteamUI_ManageSecurityButton" "STEAM GUARD HESAP GÜVENLİĞİNİ YÖNET..."
 "SteamUI_ManageSecurity_Title" "Steam Guard Ayarları"
 
 "SteamUI_Settings_Security_Status_Label" "Güvenlik Durumu:"
@@ -3524,7 +3541,7 @@ Steam üzerinden yeni bir arkadaş edinmek istiyorsanız tanıdığınız birine
 "Steam_RecoverLocked_StartRecovery" "Sorun yaşadığınız için üzgünüz. Yardım etmemize izin verin!"
 "Steam_RecoverLocked_StartRecovery2" "Steam hesabınızın sizin için değerli olduğunu biliyoruz ve ona erişim sağlamanıza yardımcı olmak görevimizdir."
 "Steam_RecoverLocked_StartRecovery3" "Bir elemanımızın size yardımcı olması için lütfen Steam Destek ile iletişime geçin. Hesap erişimi yardımı için mantıklı talepler bir numaralı önceliğimizdir."
-"Steam_RecoverLocked_RecoverySupportLink" "Steam Desteğine Ulaşın"
+"Steam_RecoverLocked_RecoverySupportLink" "Steam Destek'e Ulaşın"
 "Steam_RecoverLocked_RecoverySupportLink_URL" "https://support.steampowered.com"
 "Steam_RecoverLocked_LearnMore" "Intel® Kimlik Koruma Teknolojisi hakkında daha fazlasını öğrenin"
 "Steam_RecoverLocked_LearnMore_URL" "https://support.steampowered.com/kb_article.php?ref=9400-IPAX-9398&auth=e39b5c227cffc8ae65414aba013e5fef"
@@ -3629,6 +3646,7 @@ Steam üzerinden yeni bir arkadaş edinmek istiyorsanız tanıdığınız birine
 "steam_downloads_downloading"	"İndiriliyor"
 "steam_downloads_preloading"	"Ön Yükleniyor"
 "steam_downloads_unpacking"	"Çıkarılıyor"
+"steam_downloads_patching"	"Güncelleme Uygulanıyor"
 "steam_downloads_paused"	"Güncelleme Gerekli"
 "steam_downloads_queued"	"Kuyrukta"
 "steam_downloads_delayed"	"%delayeduntil% için Zamanlandı"
@@ -3677,7 +3695,7 @@ Steam üzerinden yeni bir arkadaş edinmek istiyorsanız tanıdığınız birine
 "steam_downloads_locked"	"Bu ürün için tüm lisanslar kullanımda"
 
 "steam_client_add_game" "Oyun Ekle"
-"steam_addgame_addshortcut"	"Oyun Kısayolu Ekle..."
+"steam_addgame_addshortcut"	"Steam Dışı Oyun Ekle..."
 "steam_addgame_activate"	"Steam'de Ürün Etkinleştir..."
 "steam_addgame_browse"		"Steam Mağazasına Uğra..."
 
@@ -4030,7 +4048,7 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "SteamUI_ContentMgr_SelectInstallFolder" "Yeni kütüphane klasörü oluştur ya da seç:"
 "SteamUI_ContentMgr_RemoveFailed" "Steam kütüphane klasörü silinemedi."
 "SteamUI_ContentMgr_RemoveFailedDefaultFolder" "Varsayılan Steam yükleme klasörü silinemez."
-"SteamUI_ContentMgr_RemoveFailedUsedFolder" "Sadece boş kütüphane klasörleri silinebilir."
+"SteamUI_ContentMgr_RemoveFailedUsedFolder" "Steam kütüphane dosyaları şu anda \"%game%\" tarafından kullanıldığı için silinemez."
 "SteamUI_ContentMgr_FlushDownloadConfig" "İNDİRME ÖNBELLEĞİNİ TEMİZLE"
 "SteamUI_ContentMgr_FlushDownloadConfigInfo" "Önbelleği temizlemek, indirmeyle ilgili veya uygulamalar başlatılırken yaşanan sorunları çözebilir"
 "SteamUI_ContentMgr_FlushDownloadConfigTip" "Bu, sizin hâlihazırda yüklü olan oyunlarınızı veya kayıtlı oyunlarınızı etkilemeyecektir"
@@ -4227,7 +4245,7 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "Steam_Settings_Family_Show_Notifications" "Kütüphaneler tekrar erişilebilir olduğunda bildirimleri görüntüle"
 
 "Steam_Settings_Family_Options_Title" "Aile Görünümü"
-"Steam_Settings_Family_Options_Text" "Aile Görünümü, PIN Korumalı Aile Görünümündeyken içerik ve özelliklere erişimi kısıtlamak için kullanılabilir."
+"Steam_Settings_Family_Options_Text" "Aile Görünümü, PIN korumalı Aile Görünümü'ndeyken içerik ve özelliklere erişimi kısıtlamak için kullanılabilir."
 
 "Steam_Game_Family_Sharing_Unsupported" "Steam Aile Paylaşımı şu an itibarıyla bu ürün tarafından desteklenmemektedir."
 
@@ -4249,7 +4267,7 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "Steam_TimedTrial_Minutes" "%minutes% dakika oyun süresi kaldı"
 "Steam_TimedTrial_Hours" "%hours% saat %minutes% dakika oyun süresi kaldı"
 
-"steam_inbox_tradeoffer"	"1 bekleyen takas isteği"
+"steam_inbox_tradeoffer"	"1 bekleyen takas teklifi"
 "steam_inbox_tradeoffers"	"%count% bekleyen takas isteği"
 
 "steam_inbox_moderatormessage"	"1 topluluk mesajı"
@@ -4284,7 +4302,7 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "SteamUI_ParentalControl_Tip_Locked"	"Aile Görünümündesiniz. Değiştirmek için seçin."
 "SteamUI_ParentalControl_Tip_Unlocked"	"Aile Görünümünde değilsiniz. Değiştirmek için seçin."
 
-"Steam_Parental_Manage"					"Aile Görünümünü Yönet"
+"Steam_Parental_Manage"					"Aile Görünümü'nü Yönet"
 
 "steam_inbox_asyncgame"			"1 yeni el beklemede"
 "steam_inbox_asyncgames"		"%count% yeni el beklemede"
@@ -4420,11 +4438,11 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "Music_Settings_Library_Header" "Müzik Kütüphanesi"
 "Music_Settings_Library_Add" "Ekle"
 "Music_Settings_Library_Remove" "Kaldır"
-"Music_Settings_Library_StartCrawling" "Şimdi Tara"
+"Music_Settings_Library_StartCrawling" "ŞİMDİ TARA"
 "Music_Settings_Database_Header" "Veritabanı"
 "Music_Settings_Database_CrawlAtStartup" "Başlangıçta Tara"
 "Music_Settings_CrawlSteamInstallFolders" "Steam'de Müzik dosyalarını taratın"
-"Music_Settings_Database_ResetDatabase" "Veritabanını Sıfırla"
+"Music_Settings_Database_ResetDatabase" "Veri tabanını Sıfırla"
 "Music_Settings_Database_StopCrawling" "Taramayı Durdur"
 "Music_Settings_Database_BuildingMusicLibrary" "Müzik Kütüphanesi Oluşturuluyor..."
 "Music_Settings_Database_NoAlbum" "Herhangi bir albüm yok."
@@ -4441,7 +4459,7 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "Music_Settings_LoggingCrawling" "Tarama aktivitesi günlüğünü kaydet"
 "Music_Settings__SelectDirectory_Title"	"Müzik Kütüphanesi Seç"
 "Music_Settings_ResetDatabase_Title" "Yerel Müzik Veritabanını Sıfırla"
-"Music_Settings_ResetDatabase_Text" "Müzik veritabanını sıfırlamak istediğinize emin misiniz?"
+"Music_Settings_ResetDatabase_Text" "Müzik veri tabanını sıfırlamak istediğinize emin misiniz?"
 "Music_Settings_AdditionalFiles_Header" "Ek Dosyalar"
 "Music_Settings_AdditionalFiles_HighQuality" "Yüksek kaliteli ses dosyalarını indirin"
 
@@ -4542,7 +4560,7 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "Steam_Settings_Streaming_QualityFast" "Hızlı"
 "Steam_Settings_Streaming_QualityBalanced" "Dengeli"
 "Steam_Settings_Streaming_QualityBeautiful" "Güzel"
-"Steam_Settings_Streaming_AdvancedHostOptions" "Gelişmiş Ana Makine Seçenekleri"
+"Steam_Settings_Streaming_AdvancedHostOptions" "GELİŞMİŞ ANA MAKİNE SEÇENEKLERİ"
 "Steam_Settings_Streaming_AdvancedHostOptions_Title" "Gelişmiş Ana Makine Seçenekleri"
 "Steam_Settings_Streaming_AdvancedHostOptions_Description" "Bu bilgisayardan olan yayın performansını artırmak için, oyununuzun çözünürlüğünü düşürmeyi veya aşağıdaki ayarları uygulamayı deneyin."
 "Steam_Settings_Streaming_AdvancedClientOptions" "GELİŞMİŞ İSTEMCİ AYARLARI"
@@ -4645,8 +4663,8 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "SteamUI_StreamingIntro"			"Bu oyunu başka bir bilgisayar üzerinde çalıştırmak ve Steam Remote Play kullanarak buradan oynamak üzeresiniz."
 "SteamUI_StreamingIntro2"			"Deneyiminiz, donanımınıza ve ev ağınıza göre değişebilir. Performansınızı artırmak için Remote Play ayarlarını ziyaret edin."
 "SteamUI_StreamLaunch_ProgressTitle"		"%game% - Yayın Başlangıcı"
-"SteamUI_StreamLaunch_ServerProgress"			"%game% oyunu yayın için hazırlanıyor..."
-"SteamUI_StreamLaunch_RemoteStart"				"%game% oyununu yayınlamak için hazırlanılıyor..."
+"SteamUI_StreamLaunch_ServerProgress"			"%game% yayına hazırlanıyor..."
+"SteamUI_StreamLaunch_RemoteStart"				"%game% yayına hazırlanıyor..."
 
 "SteamUI_RemoteDeviceAuthorization_Title"		"Aygıt Yetkilendirme"
 "SteamUI_RemoteDeviceAuthorization_Text"		"%devicename% aygıtının Steam'e bağlanıp oyun oynamasına olanak tanımak için lütfen yetkilendirme kodunuzu girin."

@@ -34,11 +34,23 @@
 				"RSHOULDER"		"#Action_RSilo"
 				"LTRIGGER"		"#Action_LCycle"
 				"RTRIGGER"		"#Action_RCycle"
-				"LEFTSTICK_UP"		"#Action_Up"
+				"LEFTSTICK_UP"			"#Action_Up"
 				"LEFTSTICK_DOWN"		"#Action_Down"
 				"LEFTSTICK_LEFT"		"#Action_Left"
 				"LEFTSTICK_RIGHT"		"#Action_Right"
-				"CursorSelect"		"#Action_CursorSelect"
+				"CursorSelect"			"#Action_CursorSelect"
+				"LEFTSTICK_CLICK"		"#Action_LeftStickClick"
+				"RIGHTSTICK_CLICK"		"#Action_RightStickClick"
+				"LeftStick"				"#Action_LeftStick"
+				"RightStick"			"#Action_RightStick"
+				"LeftTrackpad"			"#Action_LeftTrackpad"
+				"LeftTrackpadClick"		"#Action_LeftTrackpadClick"
+				"RightTrackpad"			"#Action_RightTrackpad"
+				"RightTrackpadClick"	"#Action_RightTrackpadClick"
+				"RearLeftUpper"			"#Action_RearLeftUpper"
+				"RearLeftLower"			"#Action_RearLeftLower"
+				"RearRightUpper"		"#Action_RearRightUpper"
+				"RearRightLower"		"#Action_RearRightLower"
 			}
 		}
 		"WebBrowser"
@@ -544,6 +556,19 @@
 						"bindings"
 						{
 							"binding"		"game_action Default LEFTSTICK_LEFT"
+						}
+					}
+				}
+			}
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Default LEFTSTICK_CLICK"
 						}
 					}
 				}
@@ -1848,6 +1873,58 @@
 					}
 				}
 			}
+						"button_back_left"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Default RearLeftLower"
+						}
+					}
+				}
+			}
+			"button_back_right"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Default RearRightLower"
+						}
+					}
+				}
+			}
+			"button_back_left_upper"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Default RearLeftUpper"
+						}
+					}
+				}
+			}
+			"button_back_right_upper"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Default RearRightUpper"
+						}
+					}
+				}
+			}
 		}
 	}
 	"group"
@@ -2106,7 +2183,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"mouse_button LEFT"
+							"binding"		"game_action Default RIGHTSTICK_CLICK"
 						}
 					}
 				}
@@ -2127,7 +2204,7 @@
 			"15"		"switch active"
 			"19"		"right_trackpad inactive"
 			"36"		"right_joystick inactive"
-			"55"		"right_joystick active"
+			"55"		"right_joystick inactive"
 			"10"		"button_diamond active"
 			"4"		"left_trigger active"
 			"5"		"right_trigger active"

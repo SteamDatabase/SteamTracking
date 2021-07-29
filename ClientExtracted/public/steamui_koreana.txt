@@ -280,6 +280,21 @@
 "Steam_CloudConflict_Older" " - 오래됨"
 "Steam_CloudConflict_Unknown" "알 수 없음"
 
+"Steam_CloudPendingSessions_Title" "Steam - 대기 중인 클라우드 업로드"
+"Steam_CloudPendingSessions_Text" "Steam 클라우드에 업로드를 완료하지 않은 %game%의 %pendingops% 세션이 있습니다."
+"Steam_CloudPendingSessions_Sessions" "가장 최근 세션:"
+"Steam_CloudPendingSessions_RemoteTime" "마지막 수정: %remotetime%"
+"Steam_CloudPendingSessions_RemoteMachine" "기기: %remotemachine%"
+"Steam_CloudPendingSessions_RemoteState" "상태: %remotestate%"
+"Steam_CloudPendingSessions_IgnoreAndContinue" "무시 후 계속하기"
+"Steam_CloudPendingSessions_Cancel" "시작 취소"
+"Steam_CloudPendingSessions_Note" "참고: 무시하면 다른 세션이 재개될 때 Steam Cloud 파일 충돌이 발생할 수 있습니다."
+"Steam_CloudPendingSessions_Unknown" "알 수 없음"
+"Steam_CloudPendingSessions_UploadNotStarted"	"업로드가 시작되지 않음"
+"Steam_CloudPendingSessions_GameActive"	"실행 중"
+"Steam_CloudPendingSessions_UploadInProgress"	"업로드 중"
+"Steam_CloudPendingSessions_GameSuspended"	"중단됨"
+
 "CloudFiles_RemoveFile_Title"	"Steam 클라우드 - 파일 삭제"
 "CloudFiles_RemoveFile_Info"				"정말로 %filename% 파일을 Steam 클라우드에서 삭제할까요? 파일의 로컬 복사본도 영구적으로 삭제됩니다.\n\n(이 작업은 되돌릴 수 없습니다.)\n"
 "CloudFiles_RemoveFile_Button"			"삭제"
@@ -1274,7 +1289,7 @@
 
 "Steam_BrowseGames"		"게임 검색..."
 "Steam_Storefront_Title"	"Steam - 게임 검색"
-"Steam_RegisterProductCode"	"Steam에 제품 등록"
+"Steam_RegisterProductCode"	"Steam에 제품 등록..."
 "Steam_RedeemWalletVoucher"	"Steam 지갑 코드 등록..."
 "Steam_Wallet_PendingBalance" "%amount% (%amount_delayed% 대기 중)"
 
@@ -2274,6 +2289,8 @@
 
 "Steam_Install_CreateApplicationIcon"			"시스템 애플리케이션 아이콘 만들기"
 "Steam_Install_CreateMultipleApplicationIcon"	"각각의 게임에 대한 시스템 애플리케이션 아이콘 만들기"
+
+"Steam_Install_ShowLauncherShortcut"			"런처 바로가기 만들기"
 
 "Steam_Install_InstallRetailFiles"			"Steam에서 게임 콘텐츠를 설치하기 시작합니다."
 "Steam_Install_WillVerifyExistingFiles"		"Steam에서 게임 설치를 확인합니다."
@@ -3426,7 +3443,7 @@ Windows에 관리자로 로그인해야 합니다.
 "SteamUI_VisitSteamSupport" "Steam 고객지원에 문의하기"
 "SteamUI_ValidateEmailWorking" "Steam 서버에 접속하여 메일을 발송합니다."
 "SteamUI_VerifyEmail_Title" "메일 확인"
-"SteamUI_VerifyEmail_Verified" " | 확인됨"
+"SteamUI_VerifyEmail_Verified" " | 인증됨 "
 "SteamUI_VerifyEmail_Unverified" " | 확인되지 않음"
 
 "SteamUI_ManageSecurityButton" "Steam Guard 계정 보안 관리"
@@ -3629,6 +3646,7 @@ Windows에 관리자로 로그인해야 합니다.
 "steam_downloads_downloading"	"다운로드 중"
 "steam_downloads_preloading"	"설치 준비 중"
 "steam_downloads_unpacking"	"설치 중"
+"steam_downloads_patching"	"업데이트 적용 중"
 "steam_downloads_paused"	"업데이트 필요"
 "steam_downloads_queued"	"대기 중"
 "steam_downloads_delayed"	"예약 시각: %delayeduntil%"
@@ -3678,7 +3696,7 @@ Windows에 관리자로 로그인해야 합니다.
 
 "steam_client_add_game" "게임 추가"
 "steam_addgame_addshortcut"	"비 Steam 게임 추가"
-"steam_addgame_activate"	"Steam에 제품 등록"
+"steam_addgame_activate"	"Steam에 제품 등록..."
 "steam_addgame_browse"		"Steam 상점에서 게임 찾아보기"
 
 "steam_lastplayedcolumn"	"최근 플레이"
@@ -4029,7 +4047,7 @@ Windows에 관리자로 로그인해야 합니다.
 "SteamUI_ContentMgr_SelectInstallFolder" "새 Steam 라이브러리 폴더를 만들거나 선택하세요."
 "SteamUI_ContentMgr_RemoveFailed" "선택한 Steam 라이브러리 폴더를 삭제하지 못했습니다."
 "SteamUI_ContentMgr_RemoveFailedDefaultFolder" "기본 Steam 설치 폴더는 삭제할 수 없습니다."
-"SteamUI_ContentMgr_RemoveFailedUsedFolder" "빈 Steam 라이브러리 폴더만 삭제할 수 있습니다."
+"SteamUI_ContentMgr_RemoveFailedUsedFolder" "해당 Steam 라이브러리 폴더는 현재 %game% 게임이 사용하고 있으며 삭제할 수 없습니다."
 "SteamUI_ContentMgr_FlushDownloadConfig" "다운로드 캐시 지우기"
 "SteamUI_ContentMgr_FlushDownloadConfigInfo" "다운로드 캐시를 지우는 것은 다운로드하거나 앱을 시작하는 문제를 해결할 수 있습니다."
 "SteamUI_ContentMgr_FlushDownloadConfigTip" "이미 설치된 게임 또는 저장된 게임에 영향을 주지 않습니다."

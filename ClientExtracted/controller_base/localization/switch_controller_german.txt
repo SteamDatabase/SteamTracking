@@ -46,4 +46,5 @@
 	"origin_switch_r_gyro_pitch"				"Rechter JoyCon-Gyro (Neigen)"
 	"origin_switch_r_gyro_yaw"					"Rechter JoyCon-Gyro (Gieren)"
 	"origin_switch_r_gyro_roll"					"Rechter JoyCon-Gyro (Rollen)"
-	}
+	"origin_switch_button_dpad_move"			"Steuerkreuzbewegung"
+}

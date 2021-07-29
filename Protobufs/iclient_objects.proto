@@ -1,20 +1,14 @@
+import "enums.proto";
+
 option optimize_for = SPEED;
 option cc_generic_services = false;
 
-message ClientAppInfo {
-	optional uint32 appid = 1;
-	optional bool favorite = 2;
-	optional bool installed = 3;
-	optional bool auto_update = 4;
-	optional string category = 5;
-	optional string app_type = 6;
-	optional bool downloading = 7;
-	optional bool download_paused = 8;
-	optional uint32 bytes_download_rate = 9;
-	optional uint64 bytes_downloaded = 10;
-	optional uint64 bytes_needed = 11;
-	optional bool changing = 12;
-	optional bool available_on_platform = 13;
+enum ECloudPendingRemoteOperation {
+	k_ECloudPendingRemoteOperationNone = 0;
+	k_ECloudPendingRemoteOperationAppSessionActive = 1;
+	k_ECloudPendingRemoteOperationUploadInProgress = 2;
+	k_ECloudPendingRemoteOperationUploadPending = 3;
+	k_ECloudPendingRemoteOperationAppSessionSuspended = 4;
 }
 
 message CMsgNetworkDevicesData {
@@ -109,4 +103,39 @@ message CMsgStorageDevicesData {
 
 	repeated .CMsgStorageDevicesData.Drive drives = 1;
 	repeated .CMsgStorageDevicesData.BlockDevice block_devices = 2;
+}
+
+message CCloud_PendingRemoteOperation {
+	optional .ECloudPendingRemoteOperation operation = 1 [default = k_ECloudPendingRemoteOperationNone];
+	optional string machine_name = 2;
+	optional uint64 client_id = 3;
+	optional uint32 time_last_updated = 4;
+}
+
+message CMsgCloudPendingRemoteOperations {
+	repeated .CCloud_PendingRemoteOperation operations = 1;
+}
+
+message CMsgBluetoothDevicesData {
+	message Adapter {
+		optional uint32 id = 1 [default = 0];
+		optional string mac = 2;
+		optional string name = 3;
+		optional bool is_enabled = 4;
+		optional bool is_discovering = 5;
+	}
+
+	message Device {
+		optional uint32 id = 1 [default = 0];
+		optional uint32 adapter_id = 2 [default = 0];
+		optional .EBluetoothDeviceType etype = 3 [default = k_BluetoothDeviceType_Invalid];
+		optional string mac = 4;
+		optional string name = 5;
+		optional bool is_connected = 6;
+		optional bool is_paired = 7;
+		optional int32 strength_raw = 8;
+	}
+
+	repeated .CMsgBluetoothDevicesData.Adapter adapters = 1;
+	repeated .CMsgBluetoothDevicesData.Device devices = 2;
 }

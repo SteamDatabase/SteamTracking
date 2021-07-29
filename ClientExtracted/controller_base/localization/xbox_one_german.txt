@@ -28,8 +28,10 @@
 	"origin_xboxone_shoulder_r"						"Rechte Schultertaste"
 	"origin_xboxone_button_menu"					"Menütaste"
 	"origin_xboxone_button_view"					"Ansicht-Taste"
+	"origin_xboxone_button_dpad_move"				"Steuerkreuzbewegung"
 	"origin_xboxone_button_paddle_1"				"P1-Paddle"
 	"origin_xboxone_button_paddle_2"				"P2-Paddle"
 	"origin_xboxone_button_paddle_3"				"P3-Paddle"
 	"origin_xboxone_button_paddle_4"				"P4-Paddle"
-	}
+	"origin_xboxone_button_share"					"Share-Taste"
+}

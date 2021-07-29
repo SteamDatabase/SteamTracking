@@ -645,7 +645,7 @@
 	"Shutdown_WaitingForGame"		"正在等待 {s:game} 關閉"
 	"Shutdown_WaitingForDownload"	"正在停止下載 {s:game}"
 	"Shutdown_FinishingDownload"	"{s:game} 下載即將完成"
-	"Shutdown_WaitingForCloud" 		"正在完成 Steam 雲端服務同步"
+	"Shutdown_WaitingForCloud" 		"正在完成 Steam 雲端同步"
 	"Shutdown_WaitingForLogoff"		"正在登出"
 	"Shutdown_ForceQuit"			"強制離開"
 	"Shutdown_AllAppsMustBeClosedToQuit_Title"	"Steam - 錯誤"
@@ -1751,7 +1751,7 @@
 	"Library_Details_NewsDate"		"{t:l:date}"
 	"Library_Details_NewsByline"	"{s:feed}"
 	"Library_Details_ViewNewsPost"	"檢視新聞"
-	"Library_Details_ScreenshotHowTo1"	"透過控制器指南和絃配置指定的遊戲內快捷鍵"
+	"Library_Details_ScreenshotHowTo1"	"透過控制器導覽鍵和絃配置指定的遊戲內快捷鍵"
 	"Library_Details_ScreenshotHowTo2"	"遊戲內螢幕擷圖熱鍵"
 	"Library_Details_ManageScreenshots"	"管理螢幕擷圖"
 	"Library_Details_ViewGameBadge"	"檢視徽章"
@@ -2003,6 +2003,7 @@
 	"Library_Details_ControllerBindingsGordon_ApplyConfiguration"	"套用配置"
 	"Library_Details_ControllerBindingsGordon_Share"	"分享配置"	
 	"Library_Details_ControllerBindingsGordon_ListenForBinding"	"監聽按鍵"
+	"Library_Details_ControllerBindingsGordon_Reset"			"重設為操作組合綁定"
 	
 	"Library_Details_CopyToClipboard_Title"				"分享配置"
 	"Library_Details_CopyToClipboard_Desc"				"本配置的連結已複製於您的剪貼簿中。"
@@ -2044,6 +2045,7 @@
 	"Library_Details_GameActionsHeader"				"請選擇一個遊戲中動作"
 	"Library_Details_FieldLabel_InputStyle_GA"		"遊戲中動作"
 	"Library_GameAction_None"						"無"
+	"Library_GameAction_ResetToParent"				"重設為操作組合綁定"
 
 	"Library_Details_Binding_Custom_Description"		"自訂說明..."
 
@@ -2095,14 +2097,11 @@
 	"Library_Details_SourceMode_Hotbar_Title"		"快捷列選單"
 	"Library_Details_SourceMode_DPad_Title"				"方向鍵"
 	"Library_Details_SourceMode_ABXY_Title"				"按鍵區域"
-	"Library_Details_SourceMode_MouseJoystick_Title"	"類滑鼠搖桿"
 	"Library_Details_SourceMode_MouseRegion_Title"		"滑鼠區域"
 	"Library_Details_SourceMode_RadialMenu_Title"		"放射狀選單"
 	"Library_Details_SourceMode_SingleButton_Title"		"單一按鈕"
 	"Library_Details_SourceMode_FlickStick_Title"		"輕推搖桿"
 	"Library_Details_SourceMode_FlickStick_Acton_Title"	"輕推搖桿：{s:action}"
-	"Library_Details_SourceMode_Mouse_Joystick_Acton_Title"	"搖桿：{s:action}"
-
 	"Library_Details_Source_Title_none"			"未指定"
 	"Library_Details_Source_Title_left_trackpad"		"左觸控板"
 	"Library_Details_Source_Title_right_trackpad"		"右觸控板"
@@ -2401,6 +2400,8 @@
 	"Library_Details_SourceMode_Title_FlickStick"		"輕推搖桿"
 	"Library_Details_SourceMode_Title_2DScroll"		"方向性滑動"
 	"Library_Details_SourceMode_Title_Hotbar"		"快捷列選單"
+	"Library_Details_SourceMode_Title_LayerInherit"			"從操作組合繼承"
+	"Library_Details_SourceMode_Title_LayerNullOverride"	"無"
 
 	"Library_Details_ModeShift_Title_None"				"無"
 	"Library_Details_ModeShift_Title_LeftTrigger"		"LT 鍵全扣"
@@ -3430,6 +3431,7 @@
 	"Downloads_Status_downloading"	"下載中 {s:downloadpercent}"
 	"Downloads_Status_preloading"	"預先載入中 {s:downloadpercent}"
 	"Downloads_Status_unpacking"	"解壓中 {s:downloadpercent}"
+	"Downloads_Status_patching"	"修補程式中 {s:downloadpercent}"
 	"Downloads_Status_paused"	"已暫停"
 	"Downloads_Status_queued"	"等待下載"
 	"Downloads_Status_ready"	"準備就緒"
@@ -3439,6 +3441,7 @@
 	"Downloads_Status_finished"	"於 {t:t:downloadfinished} 完成下載"
 	"Downloads_Status_deferred"	"排定下載時間：{t:t:downloadstart}"
 	"Downloads_Status_locked"	"所有授權正被此產品使用"
+	"Downloads_Status_uninstalled"	"未安裝"
 
 
 	"Quit_LabelStreamingClient0"	"{s:streamingclient0}"
@@ -5095,6 +5098,8 @@
 	"ControllerBinding_ModeDropDown_InGameAction_Description"	"選取此模式指定搖桿或控制器執行遊戲內之特定動作。"
 	"ControllerBinding_ModeDropDown_OtherAction"				"其它的遊戲中動作…"
 	"ControllerBinding_ModeDropDown_OtherAction_Description"	"遊戲本身已將控制器的板機鍵與遊戲內之特定動作綁定，如欲更改預設，將此板機鍵綁定遊戲內其他動作，請選擇此模式。"
+	"ControllerBinding_ModeDropDown_LayerInherit"				"從操作組合繼承"
+	"ControllerBinding_ModeDropDown_LayerInherit_Description"	"選擇此選項以清除對這個模式所做的變更，並讓它繼承本階層內的操作組合所定義的模式。"
 	"ControllerBinding_ModeDropDown_GenericDPad"				"通用方向鍵"
 	"ControllerBinding_ModeDropDown_GenericDPad_Description"	"如欲將搖桿或觸控板當成一般常見的方向鍵來操控，請選取此選項。"
 
@@ -7312,6 +7317,7 @@
 	"controller_unknown"								"未知的控制器"
 	"controller_steamcontroller_unknown"				"Steam 控制器"
 	"controller_steamcontroller_gordon" 				"Steam 控制器"
+	"controller_steamcontroller_neptune"				"Steam Deck 控制器"
 	"controller_generic"								"通用手把"
 	"controller_xbox360"								"Xbox 360 控制器"
 	"controller_xboxone"								"Xbox One 控制器"

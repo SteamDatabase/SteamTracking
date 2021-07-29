@@ -154,7 +154,7 @@
 "Overlay_MicroTxnAuth_Authorize"	"Xác thực"
 "Overlay_MicroTxnAuth_PayWithWallet"	"Tiếp tục trả bằng ví Steam"
 "Overlay_MicroTxnAuth_UpdateBillingInformation" "Cập nhật thông tin thanh toán"
-"Overlay_MicroTxnAuth_SubscriptionText"	"Steam sẽ tự động tính phí bằng hình thức thanh toán được lưu khi bạn làm mới đăng ký thuê bao sản phẩm. Nếu bạn không có thông tin thanh toán được lưu, Steam sẽ dùng quỹ tiền còn lại trong ví Steam."
+"Overlay_MicroTxnAuth_SubscriptionText"	"Steam sẽ tự động tính phí bằng hình thức thanh toán được lưu khi bạn làm mới gói đăng ký sản phẩm. Nếu bạn không có thông tin thanh toán được lưu, Steam sẽ dùng quỹ tiền còn lại trong ví Steam."
 "Overlay_MicroTxnAuth_AddFunds"		"Nạp tiền"
 "Overlay_MicroTxnAuth_Cancel"		"Hủy"
 "Overlay_MicroTxnAuth_Description"	"%game% đã yêu cầu cấp phép cho:"
@@ -237,7 +237,7 @@
 "Overlay_SetScreenshotFolder" "Chọn thư mục hình chụp ngoài"
 
 
-"Overlay_SetScreenshotFolder_NoDriveRoot" "Bạn không được phép chọn gốc của một ổ dĩa"
+"Overlay_SetScreenshotFolder_NoDriveRoot" "Bạn không được phép chọn gốc của một ổ đĩa"
 "Overlay_SetScreenshotFolder_InvalidFolder" "Bạn phải chọn một thư mục hình chụp hợp lệ"
 
 "Overlay_AsyncNotificatoinsRequestedDialog_Title" "Cho phép thông báo?"

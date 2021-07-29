@@ -615,7 +615,7 @@
 	"ManageSteamGuard_SuccessOn_Title"		"Успішно!"
 	"ManageSteamGuard_SuccessOn_Description" "Тепер ваш акаунт перебуває під захистом Steam Guard, і доступ до нього з інших комп’ютерів без вашого дозволу неможливий."
 	"ManageSteamGuard_SuccessOff_Title"		"Тепер Steam Guard вимкнений"
-	"ManageSteamGuard_SuccessOff_Description" "Захист Steam Guard вилучено із вашого акаунта. Valve рекомендує активувати Steam Guard, тому що він є важливою складовою захисту вашого акаунта. Без Steam Guard будь-хто зможе користуватися вашим акаунтом без вашого дозволу, знаючи логін і пароль."
+	"ManageSteamGuard_SuccessOff_Description" "Steam Guard на вашому акаунті вимкнено. Valve рекомендує активувати Steam Guard, тому що він є важливою складовою захисту вашого акаунта. Без Steam Guard будь-хто, хто знає ваш логін і пароль, може користуватися вашим акаунтом без вашого дозволу."
 	"ManageSteamGuard_Fail_Title"			"Отакої!"
 	"ManageSteamGuard_Fail_Description"		"Наразі Steam не може змінити ваші налаштування Steam Guard. Будь ласка, спробуйте ще раз пізніше."
 	"ManageSteamGuard_Fail_TryAgain"		"Спробувати знову"
@@ -792,7 +792,7 @@
 	"SettingsFriends_SetPersonaName"		"ОБРАТИ ІМ’Я ПРОФІЛЮ"
 
 	// Settings, display screen
-	"SettingsDisplay_Intro"					"Steam запускається в безрамковому вікні, що має розміри робочого столу. Обрана вами нижче роздільна здатність керує максимальною внутрішньою роздільною здатністю рендерінгу, до того як інтерфейс буде висвітлено у вікні.\n\nЗадля покращення продуктивності зменшіть бажану роздільну здатність до 720p нижче."
+	"SettingsDisplay_Intro"					"Steam запускається в безрамковому вікні, що має розміри робочого столу. Обрана вами нижче роздільна здатність керує максимальною внутрішньою роздільною здатністю візуалізації до того, як інтерфейс буде висвітлено у вікні.\n\nЗадля покращення продуктивності зменште бажану роздільну здатність до 720 пікселів чи нижче."
 	"SettingsDisplay_DisplayDevice"				"Відеоадаптер"
 	"SettingsDisplay_DisplayDeviceValue"			"{s:gpuinfostring}"
 	"SettingsDisplay_WindowSize"				"Розмір вікна"
@@ -1997,6 +1997,7 @@
 	"Library_Details_ControllerBindingsGordon_ApplyConfiguration"	"ЗАСТОСУВАТИ КОНФІГУРАЦІЮ"
 	"Library_Details_ControllerBindingsGordon_Share"	"ПОДІЛИТИСЯ КОНФІГУРАЦІЄЮ"	
 	"Library_Details_ControllerBindingsGordon_ListenForBinding"	"ОБЕРІТЬ КЛАВІШУ"
+	"Library_Details_ControllerBindingsGordon_Reset"			"СКИНУТИ ДО ПРИЗНАЧЕННЯ НАБОРУ ДІЙ"
 	
 	"Library_Details_CopyToClipboard_Title"				"Поділитися конфігурацією"
 	"Library_Details_CopyToClipboard_Desc"				"Посилання на цю конфігурацію скопійовано до буферу обміну."
@@ -2038,6 +2039,7 @@
 	"Library_Details_GameActionsHeader"				"ОБРАТИ ІГРОВУ ДІЮ"
 	"Library_Details_FieldLabel_InputStyle_GA"		"Ігрова дія"
 	"Library_GameAction_None"						"Жодної"
+	"Library_GameAction_ResetToParent"				"Скинути до призначення набору дій"
 
 	"Library_Details_Binding_Custom_Description"		"Власний опис…"
 
@@ -2095,8 +2097,7 @@
 	"Library_Details_SourceMode_SingleButton_Title"		"ОКРЕМА КНОПКА"
 	"Library_Details_SourceMode_FlickStick_Title"		"РІЗКИЙ НАХИЛ СТІКА"
 	"Library_Details_SourceMode_FlickStick_Acton_Title"	"РНС: {s:action}"
-	"Library_Details_SourceMode_Mouse_Joystick_Acton_Title"	"ДМ: {s:action}"
-
+	"Library_Details_SourceMode_Mouse_Joystick_Acton_Title"	"МД: {s:action}"
 	"Library_Details_Source_Title_none"			"НЕ ПРИЗНАЧЕНО"
 	"Library_Details_Source_Title_left_trackpad"		"лівий трекпад"
 	"Library_Details_Source_Title_right_trackpad"		"правий трекпад"
@@ -2395,6 +2396,8 @@
 	"Library_Details_SourceMode_Title_FlickStick"		"Різкий нахил стіка"
 	"Library_Details_SourceMode_Title_2DScroll"		"Проведення вбік"
 	"Library_Details_SourceMode_Title_Hotbar"		"Меню швидкого доступу"
+	"Library_Details_SourceMode_Title_LayerInherit"			"Перейняти з набору дій"
+	"Library_Details_SourceMode_Title_LayerNullOverride"	"Немає"
 
 	"Library_Details_ModeShift_Title_None"				"Немає"
 	"Library_Details_ModeShift_Title_LeftTrigger"		"Повне натискання лівого триґера"
@@ -3040,7 +3043,7 @@
 	"Steam_AppUpdateError_13"		"файли вмісту пошкоджені"
 	"Steam_AppUpdateError_14"		"очікування на інсталяційний диск"
 	"Steam_AppUpdateError_15"		"неприпустиме розташування для інсталяції"
-	"Steam_AppUpdateError_16"		"продукт уже запущено"
+	"Steam_AppUpdateError_16"		"застосунок уже запущено"
 	"Steam_AppUpdateError_17"		"відсутній спільний вміст"
 	"Steam_AppUpdateError_18"		"не інстальовано"
 	"Steam_AppUpdateError_19"		"необхідне оновлення"
@@ -3057,7 +3060,7 @@
 	"Steam_AppUpdateError_30"		"непідтримувана файлова система"
 	"Steam_AppUpdateError_31"		"пошкоджені файли оновлення"
 	"Steam_AppUpdateError_32"		"завантаження відключені"
-	"Steam_AppUpdateError_33"		"бібліотека позики заблокована"
+	"Steam_AppUpdateError_33"		"спільна бібліотека заблокована"
 	"Steam_AppUpdateError_34"		"в очікуванні ліцензії"
 	"Steam_AppUpdateError_35"		"запущено інший сеанс"
 	"Steam_AppUpdateError_36"		"завантаження пошкоджено"
@@ -3424,6 +3427,7 @@
 	"Downloads_Status_downloading"	"Завантажується {s:downloadpercent}"
 	"Downloads_Status_preloading"	"Завчасно завантажується {s:downloadpercent}"
 	"Downloads_Status_unpacking"	"Розпаковується {s:downloadpercent}"
+	"Downloads_Status_patching"	"Внесення змін: {s:downloadpercent}"
 	"Downloads_Status_paused"	"Призупинено"
 	"Downloads_Status_queued"	"У черзі"
 	"Downloads_Status_ready"	"Готово до гри"
@@ -3433,6 +3437,7 @@
 	"Downloads_Status_finished"	"Завантаження завершено о {t:t:downloadfinished}"
 	"Downloads_Status_deferred"	"Завантаження заплановано на {t:t:downloadstart}"
 	"Downloads_Status_locked"	"Усі ліцензії для даного продукту вже використовуються"
+	"Downloads_Status_uninstalled"	"Не інстальовано"
 
 
 	"Quit_LabelStreamingClient0"	"{s:streamingclient0}"
@@ -3492,12 +3497,12 @@
 	"DeviceAuth_RequestDialog_Text" "Вітаємо, {s:owner}! Чи бажаєте ви надати доступ до бібліотеки Steam на цьому комп’ютері?"
 	"DeviceAuth_RequestDialog_Description" "Будь ласка, назвіть цей комп’ютер"
 	"DeviceAuth_RequestDialog_Send" "НАДІСЛАТИ ЗАПИТ"
-	"DeviceAuth_RequestDialog_SendOK" "Ми виявили, що власник вже надав дозвіл на позику ігор для цього пристрою. Все готово."
+	"DeviceAuth_RequestDialog_SendOK" "Ми виявили, що власник уже надав дозвіл на спільний доступ до ігор для цього пристрою. Все готово."
 	"DeviceAuth_RequestDialog_SendPending" "Поштовий запит надіслано. Сподіваємося, що скоро вам надійне підтвердження!"
 	"DeviceAuth_RequestDialog_SendError" "Не вдалося подати запит на отримання дозволу ({s:reason})"
 
 	"DeviceAuth_Authorized_Notification" "Тепер ви можете грати в ігри {s:owner} на цьому комп’ютері."
-	"DeviceAuth_Deauthorized_Notification" "{s:owner} відкликав позику. Деякі ігри можуть бути недоступними."
+	"DeviceAuth_Deauthorized_Notification" "{s:owner} скасував спільний доступ. Тепер деякі ігри можуть бути недоступними."
 	"DeviceAuth_StopPlaying_Notification" "Агов, {s:owner} бажає забрати позичені ігри! Вам ще залишилося грати {s:minutes} хв.…"
 	"DeviceAuth_SharedLibraryAvaliable_Notification" "Ура, тепер ви можете грати в ігри, які позичив {s:owner}…"
 
@@ -4136,7 +4141,7 @@
 	"SteamUI_StreamingIntro"		"Ви збираєтеся запустити гру на іншому комп’ютері і зіграти у неї тут за допомогою Steam Remote Play."
 	"SteamUI_StreamingIntro2"		"Якість трансляції може різнитися залежно від вашого устаткування і конфігурації домашньої мережі. Для поліпшення продуктивності відвідайте сторінку налаштувань Remote Play."
 	"SteamUI_StreamClient_Failed_Title"	"Помилка клієнта транслювання"
-	"SteamUI_StreamClient_Failed"		"Клієнт транслювання раптово завершився ({d:error})"
+	"SteamUI_StreamClient_Failed"		"Клієнт транслювання неочікувано завершив роботу ({d:error})"
 	"SteamUI_StreamClient_Failed_Connect"	"Не вдалося підключитися до віддаленого комп’ютера."
 	"SteamUI_StreamClient_Failed_Proto"	"Не збігаються версії Steam на локальному і віддаленому комп’ютерах."
 	"SteamUI_StreamClient_Failed_Auth"	"Невдала авторизація."
@@ -5085,6 +5090,8 @@
 	"ControllerBinding_ModeDropDown_InGameAction_Description"	"Оберіть цю опцію, щоб назначити стік чи щиток на певну ігрову дію."
 	"ControllerBinding_ModeDropDown_OtherAction"				"Інші ігрові дії…"
 	"ControllerBinding_ModeDropDown_OtherAction_Description"	"Ця гра має ігрові дії, які спеціально розроблені під використання кнопок Триґера. Якщо ви бажаєте назначити інші дії на цей Триґер, оберіть цю опцію."
+	"ControllerBinding_ModeDropDown_LayerInherit"				"Перейняти з набору дій"
+	"ControllerBinding_ModeDropDown_LayerInherit_Description"	"Виберіть цей варіант, щоб скинути внесені в цьому режимі зміни й перейняти режим із набору дій, що містить цей шар."
 	"ControllerBinding_ModeDropDown_GenericDPad"				"Загальна хрестовина"
 	"ControllerBinding_ModeDropDown_GenericDPad_Description"	"Якщо ви хочете встановити цей стік або щиток як загальна хрестовина, виберіть цю опцію."
 
@@ -7293,6 +7300,7 @@
 	"controller_unknown"								"Невідомий контролер"
 	"controller_steamcontroller_unknown"				"Контролер Steam"
 	"controller_steamcontroller_gordon" 				"Контролер Steam"
+	"controller_steamcontroller_neptune"				"Контролер Steam Deck"
 	"controller_generic"								"Стандартний ґеймпад"
 	"controller_xbox360"								"Контролер Xbox 360"
 	"controller_xboxone"								"Контролер Xbox One"

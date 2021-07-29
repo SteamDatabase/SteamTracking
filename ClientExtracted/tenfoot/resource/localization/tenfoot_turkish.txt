@@ -1362,7 +1362,7 @@ Fare Benzeri Kumanda Kolu ile oyun kumandası girdisi ile oynayarak fare hassasi
 	"Checkout_Failed_InitTransaction_ExpiredCard"				"Kredi kartınızın süresi sona erdiğinden dolayı ödeme işleminiz tamamlanamadı. Lütfen kredi kartı bilgilerinizi güncelleyin ve tekrar deneyin."
 	"Checkout_Failed_InitTransaction_RequiredApp"				"Satın almaya çalıştığınız oyun, sahip olmadığınız farklı bir oyuna ihtiyaç duyduğu için işleminiz başarısız oldu. Lütfen hatayı düzeltip tekrar deneyin."
 	"Checkout_Failed_InitTransaction_AlreadyOwned"				"Satın almaya çalıştığınız oyunlardan bir tanesine zaten sahip olduğunuz için, siparişiniz tamamlanamadı. Sahip olmadığınız bir ürünü satın aldığınıza emin olmak için, lütfen hesabınızı ve alışveriş sepetinizi kontrol edin."
-	"Checkout_Failed_InitTransaction_WalletCurrencyMismatch"	"Ödeme işleminiz tamamlanmadı çünkü Steam Cüzdanınızdaki para birimi ile satın almaya çalıştığınız ürünün para birimi uyuşmadı."
+	"Checkout_Failed_InitTransaction_WalletCurrencyMismatch"	"Ödeme işleminiz tamamlanmadı çünkü Steam cüzdanınızdaki para birimi ile bu satın alımın para birimi uyuşmadı."
 	"Checkout_Failed_InitTransaction_CannotGift"				"Sepetinizde hediye olarak gönderilemeyecek ürünler bulunduğundan satın alma işleminiz tamamlanamadı."
 	"Checkout_Failed_InitTransaction_CannotShipInternationally"	"Sepetinizde Amerika Birleşik Devletleri dışına gönderilemeyecek ürünler bulunduğundan satın alma işleminiz tamamlanamadı."
 	"Checkout_Failed_InitTransaction_OutOfInventory"			"Siparişinizdeki bir veya birkaç ürün stoklarda bulunmadığından siparişiniz tamamlanamadı. Lütfen daha sonra tekrar deneyin."
@@ -1374,7 +1374,7 @@ Fare Benzeri Kumanda Kolu ile oyun kumandası girdisi ile oynayarak fare hassasi
 
 	"Checkout_Failed_GetFinalPrice_StoreCountry"				"Fatura adresiniz yaşadığınız ülke ile eşleşmemektedir. Lütfen yardım için destek ile irtibata geçiniz ya da şu anki adresinize kayıtlı farklı bir ödeme yöntemi seçiniz."
 	"Checkout_Failed_Finalize_ExceedWalletMax"					"Ödeme işleminiz tamamlanmadı.\nSteam cüzdanınıza eklenen değer, Steam Cüzdan bakiyesi için verilen maksimum değeri aştı."
-	"Checkout_Failed_Finalize_GenericError"						"Beklenmedik bir hata oluştu. Ödeme işleminiz tamamlanmadı. Lütfen Steam Destek ile irtibata geçiniz."
+	"Checkout_Failed_Finalize_GenericError"						"Beklenmedik bir hata meydana geldi. Ödeme işleminiz tamamlanmadı. Lütfen Steam Destek ile irtibata geçin."
 	"Checkout_Failed_CCAVSError"								"Ödeme işleminiz tamamlanmadı. Kredi kartı bilgileriniz yanlış adres girildiği için kredi kartı şirketiniz tarafından reddedildi.\n\nNot: Bazen kredi kartı şirketleri bu işlemleri hesap ekstrenizde tutar fakat sizden ödeme almaz. Aşağıda gösterilen bilgilerdeki hataları düzelttikten sonra lütfen tekrar satın almayı deneyiniz."
 	"Checkout_Failed_TimeoutError"								"Bilgisayarınız geçici olarak Steam sunucularına ulaşamıyor veya servis geçici olarak devre dışı bırakılmış. Lütfen daha sonra tekrar deneyin."
 	"Checkout_Failed_CC_DeclinedError"							"Ödeme işleminiz tamamlanmadı. Kredi kartı bilgileriniz kredi kartı şirketiniz tarafından reddedildi.\n\nNot: Bazen kredi kartı şirketleri bu işlemleri hesap ekstrenizde tutar fakat sizden ödeme almaz. Aşağıda gösterilen bilgilerdeki hataları düzelttikten sonra, lütfen tekrar satın almayı deneyin."
@@ -1998,6 +1998,7 @@ Fare Benzeri Kumanda Kolu ile oyun kumandası girdisi ile oynayarak fare hassasi
 	"Library_Details_ControllerBindingsGordon_ApplyConfiguration"	"YAPILANDIRMAYI UYGULA"
 	"Library_Details_ControllerBindingsGordon_Share"	"YAPILANDIRMAYI PAYLAŞ"	
 	"Library_Details_ControllerBindingsGordon_ListenForBinding"	"TUŞ BEKLENİYOR"
+	"Library_Details_ControllerBindingsGordon_Reset"			"EYLEM SETİ ATAMASINA SIFIRLA"
 	
 	"Library_Details_CopyToClipboard_Title"				"Yapılandırmayı Paylaş"
 	"Library_Details_CopyToClipboard_Desc"				"Bu yapılandırma için bir bağlantı panonuza kopyalandı."
@@ -2039,6 +2040,7 @@ Fare Benzeri Kumanda Kolu ile oyun kumandası girdisi ile oynayarak fare hassasi
 	"Library_Details_GameActionsHeader"				"BİR OYUN İÇİ EYLEM SEÇİN"
 	"Library_Details_FieldLabel_InputStyle_GA"		"Oyun İçi Eylemi"
 	"Library_GameAction_None"						"Hiçbiri"
+	"Library_GameAction_ResetToParent"				"Eylem Seti Atamasına Sıfırla"
 
 	"Library_Details_Binding_Custom_Description"		"Özel Açıklama..."
 
@@ -2096,8 +2098,7 @@ Fare Benzeri Kumanda Kolu ile oyun kumandası girdisi ile oynayarak fare hassasi
 	"Library_Details_SourceMode_SingleButton_Title"		"TEK BUTON"
 	"Library_Details_SourceMode_FlickStick_Title"		"DÖNDÜRME ÇUBUĞU"
 	"Library_Details_SourceMode_FlickStick_Acton_Title"	"DÇ: {s:action}"
-	"Library_Details_SourceMode_Mouse_Joystick_Acton_Title"	"KKF: {s:action}"
-
+	"Library_Details_SourceMode_Mouse_Joystick_Acton_Title"	"Fare Benzeri Kumanda Kolu: {s:action}"
 	"Library_Details_Source_Title_none"			"ATANMAMIŞ"
 	"Library_Details_Source_Title_left_trackpad"		"Sol Pad"
 	"Library_Details_Source_Title_right_trackpad"		"Sağ Pad"
@@ -2396,6 +2397,8 @@ Fare Benzeri Kumanda Kolu ile oyun kumandası girdisi ile oynayarak fare hassasi
 	"Library_Details_SourceMode_Title_FlickStick"		"Döndürme Çubuğu"
 	"Library_Details_SourceMode_Title_2DScroll"		"Yönsel Kaydırma"
 	"Library_Details_SourceMode_Title_Hotbar"		"Hızlı Seçim Menüsü"
+	"Library_Details_SourceMode_Title_LayerInherit"			"Eylem Setindeki Atamaları Kullan"
+	"Library_Details_SourceMode_Title_LayerNullOverride"	"Hiçbiri"
 
 	"Library_Details_ModeShift_Title_None"				"Yok"
 	"Library_Details_ModeShift_Title_LeftTrigger"		"Sol Tetik Tam Çekmesi"
@@ -3012,9 +3015,9 @@ Fare Benzeri Kumanda Kolu ile oyun kumandası girdisi ile oynayarak fare hassasi
 	"Steam_ErrorCantStartGameLink" "Yardım"
 	"Steam_ContentServersBusy_Title"	"Hata"
 	"Steam_ContentServersBusy_Info"		"Steam sunucuları isteğinizle ilgilenemeyecek kadar meşgul.\nLütfen birkaç dakika sonra tekrar deneyin."
-	"SteamUI_JoinDialog_PreparingToPlay1" 	"{s:game} başlatılıyor."
-	"SteamUI_JoinDialog_PreparingToPlay2" 	"{s:game} başlatılıyor.."
-	"SteamUI_JoinDialog_PreparingToPlay3" 	"{s:game} başlatılıyor..."
+	"SteamUI_JoinDialog_PreparingToPlay1" 	"{s:game} başlatılmaya hazırlanıyor."
+	"SteamUI_JoinDialog_PreparingToPlay2" 	"{s:game} başlatılmaya hazırlanıyor.."
+	"SteamUI_JoinDialog_PreparingToPlay3" 	"{s:game} başlatılmaya hazırlanıyor..."
 	"JoinDialog_UpdateAvailable_Title"				"Güncelleme Mevcut"
 	"JoinDialog_UpdateAvailable_Text"					"{s:game} oyunu için bir güncelleme mevcut. Oyunu şimdi çalıştırmak mı, yoksa önce güncellemeyi mi indirmek istersiniz?"
 	"JoinDialog_UpdateAvailable_LaunchNow"					"Şimdi Çalıştır"
@@ -3425,6 +3428,7 @@ Fare Benzeri Kumanda Kolu ile oyun kumandası girdisi ile oynayarak fare hassasi
 	"Downloads_Status_downloading"	"İndiriliyor {s:downloadpercent}"
 	"Downloads_Status_preloading"	"Ön Yükleme {s:downloadpercent}"
 	"Downloads_Status_unpacking"	"Çıkarılıyor {s:downloadpercent}"
+	"Downloads_Status_patching"	"Güncelleme Uygulanıyor: {s:downloadpercent}"
 	"Downloads_Status_paused"	"Duraklatıldı"
 	"Downloads_Status_queued"	"Kuyrukta"
 	"Downloads_Status_ready"	"Oynanmaya Hazır"
@@ -3434,6 +3438,7 @@ Fare Benzeri Kumanda Kolu ile oyun kumandası girdisi ile oynayarak fare hassasi
 	"Downloads_Status_finished"	"İndirmenin tamamlandığı zaman {t:t:downloadfinished}"
 	"Downloads_Status_deferred"	"İndirmenin planlandığı zaman {t:t:downloadstart}"
 	"Downloads_Status_locked"	"Bu ürün için tüm lisanslar kullanımda"
+	"Downloads_Status_uninstalled"	"Yüklenmedi"
 
 
 	"Quit_LabelStreamingClient0"	"{s:streamingclient0}"
@@ -3666,7 +3671,7 @@ Fare Benzeri Kumanda Kolu ile oyun kumandası girdisi ile oynayarak fare hassasi
 	"Parental_UnlockFailureExceeded"	"Çok fazla başarısız girişimde bulunuldu. Tekrar denemek için lütfen Steam'i tekrar başlatınız."
 	"Parental_UnlockFailureExceededSteamOS"	 "Çok fazla başarısız girişimde bulunuldu. Tekrar denemek için lütfen bilgisayarınızı tekrar başlatınız."
 	"Parental_Recovery_Title"				 "Kurtarma E-postası Gönderildi"
-	"Parental_Recovery_Text"				 "Hesap kurtarma adresiniz olan {s:email} adresine Steam Destek'ten bir mesaj gönderdik. E-postanızı şimdi kontrol edin ve mesajdaki bağlantıya tıklayarak bu hesapta Aile Görünümünü etkisiz hale getirin."
+	"Parental_Recovery_Text"				 "Hesap kurtarma adresiniz olan {s:email} adresine Steam Destek'ten bir mesaj gönderdik. E-postanızı şimdi kontrol edin ve mesajdaki bağlantıya tıklayarak bu hesapta Aile Görünümü'nü etkisiz hale getirin."
 	"Parental_No_Recovery_Email_Title"		 "Kurtarma E-posta Adresi Yok"
 	"Parental_No_Recovery_Email_Text"		 "Hesabınız için bir kurtarma e-posta adresi bulunmuyor. Kurtarma e-posta adresinizi güncellemek için, lütfen Aile Görünümünü kapatın ve tekrar başlatın."
 	"Parental_LockTitle"	"Aile Görünümü"
@@ -3734,10 +3739,10 @@ Fare Benzeri Kumanda Kolu ile oyun kumandası girdisi ile oynayarak fare hassasi
 	"Parental_Set_Success_CommInstr"	"Bu adresi değiştirmek için, Hesap Ayarlarında bulunan \"İletişim e-posta adresini değiştir\" sihirbazını kullanın."
 
 	"Parental_Disable_Success_Title"	"Aile Görünümü artık devre dışı"
-	"Parental_Disable_Success_Instr"	"Aile Görünümünü istediğiniz zaman yeniden etkinleştirmek için, bu ayarlara geri dönün."
+	"Parental_Disable_Success_Instr"	"Aile Görünümü'nü istediğiniz zaman yeniden etkinleştirmek için, bu ayarlara geri dönün."
 
-	"Parental_DisableTitle"		"Aile Görünümünü Devre Dışı Bırak"
-	"Parental_DisablePrompt"	"Bu hesapla ilişkilendirilmiş Aile Görünümünü devre dışı bırakmak istediğinize emin misiniz?"
+	"Parental_DisableTitle"		"Aile Görünümü'nü Devre Dışı Bırak"
+	"Parental_DisablePrompt"	"Bu hesapla ilişkilendirilmiş Aile Görünümü'nü devre dışı bırakmak istediğinize emin misiniz?"
 	"Parental_Disable"			"DEVRE DIŞI BIRAK"
 	"Parental_Disable_Cancel"	"İPTAL"
 
@@ -4021,12 +4026,12 @@ Fare Benzeri Kumanda Kolu ile oyun kumandası girdisi ile oynayarak fare hassasi
 	"Music_Settings_Stop_Crawling_Text"	"Kütüphane yapımını durdurmak istediğinize emin misiniz?"
 	"Music_Settings_Stop_Crawling_Yes" "Evet"
 	"Music_Settings_Stop_Crawling_Cancel" "İptal"
-	"Music_Settings_Reset_Database_Header" "Yerel Müzik Veritabanını Sıfırla"
-	"Music_Settings_Reset_Database_Text" "Müzik veritabanını sıfırlamak istediğinize emin misiniz?"
+	"Music_Settings_Reset_Database_Header" "Yerel Müzik Veri Tabanını Sıfırla"
+	"Music_Settings_Reset_Database_Text" "Müzik veri tabanını sıfırlamak istediğinize emin misiniz?"
 	"Music_Settings_Reset_Database_Yes" "Evet"
 	"Music_Settings_Reset_Database_Cancel" "İptal"
 
-	"Music_Settings_Reset_Database"	"Veritabanını sıfırla"
+	"Music_Settings_Reset_Database"	"Veri tabanını sıfırla"
 	"Music_Settings_Stop_Scanning"	"Taramayı Durdur"
 	"Music_Settings_Setup_Music_Library"	"Müzik kütüphanesini ayarla"
 	"Music_Settings_Audio_Header"	"Ses"
@@ -5086,6 +5091,8 @@ Fare Benzeri Kumanda Kolu ile oyun kumandası girdisi ile oynayarak fare hassasi
 	"ControllerBinding_ModeDropDown_InGameAction_Description"	"Belirtilmiş Oyun İçi Eylemi gerçekleştirmesi için çubuğu veya padi seçmek için bu ayarı seçin."
 	"ControllerBinding_ModeDropDown_OtherAction"				"Diğer Oyun İçi Eylemi..."
 	"ControllerBinding_ModeDropDown_OtherAction_Description"	"Bu oyun kontrolcünün Tetik Düğmeleri ile kullanılmak üzere tasarlanmış Oyun İçi Eylemlere sahip. Bunun yerine bu Tetik Düğmesine başka Oyun İçi Eylemler atamak isterseniz, bu seçeneği işaretleyin."
+	"ControllerBinding_ModeDropDown_LayerInherit"				"Eylem Setindeki Atamaları Kullan"
+	"ControllerBinding_ModeDropDown_LayerInherit_Description"	"Bu modda yapılan değişiklikleri temizlemek ve bu katmanı içeren eylem setinde bulunan tanımlanmış modu kullanmak için bu seçeneği seçin."
 	"ControllerBinding_ModeDropDown_GenericDPad"				"Genel Yön Tuşları"
 	"ControllerBinding_ModeDropDown_GenericDPad_Description"	"Eğer bu çubuğun veya pad'in genel Yön Tuşları gibi davranmasını istiyorsanız, bu seçeneği seçin."
 
@@ -7294,6 +7301,7 @@ Fare Benzeri Kumanda Kolu ile oyun kumandası girdisi ile oynayarak fare hassasi
 	"controller_unknown"								"Bilinmeyen Kontrolcü"
 	"controller_steamcontroller_unknown"				"Steam Kontrolcüsü"
 	"controller_steamcontroller_gordon" 				"Steam Kontrolcüsü"
+	"controller_steamcontroller_neptune"				"Steam Deck Kontrolcüsü"
 	"controller_generic"								"Genel Kontrolcü"
 	"controller_xbox360"								"Xbox 360 Kontrolcüsü"
 	"controller_xboxone"								"Xbox One Kontrolcüsü"

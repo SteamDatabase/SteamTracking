@@ -1997,6 +1997,7 @@
 	"Library_Details_ControllerBindingsGordon_ApplyConfiguration"	"KONFIGURÁCIÓ ALKALMAZÁSA"
 	"Library_Details_ControllerBindingsGordon_Share"	"KONFIGURÁCIÓ MEGOSZTÁSA"	
 	"Library_Details_ControllerBindingsGordon_ListenForBinding"	"VÁRAKOZÁS BILLENTYŰRE"
+	"Library_Details_ControllerBindingsGordon_Reset"			"VISSZAÁLLÍTÁS MŰVELETKÉSZLET-KIOSZTÁSRA"
 	
 	"Library_Details_CopyToClipboard_Title"				"Konfiguráció megosztása"
 	"Library_Details_CopyToClipboard_Desc"				"A vágólapra másoltunk egy hivatkozást ehhez a konfigurációhoz."
@@ -2038,6 +2039,7 @@
 	"Library_Details_GameActionsHeader"				"VÁLASSZ JÁTÉKON BELÜLI MŰVELETET"
 	"Library_Details_FieldLabel_InputStyle_GA"		"Játékbeli művelet"
 	"Library_GameAction_None"						"Nincs"
+	"Library_GameAction_ResetToParent"				"Visszaállítás műveletkészlet-kiosztásra"
 
 	"Library_Details_Binding_Custom_Description"		"Egyedi leírás..."
 
@@ -2095,8 +2097,7 @@
 	"Library_Details_SourceMode_SingleButton_Title"		"EGYETLEN GOMB"
 	"Library_Details_SourceMode_FlickStick_Title"		"PÖCCINTŐ KAR"
 	"Library_Details_SourceMode_FlickStick_Acton_Title"	"PK: {s:action}"
-	"Library_Details_SourceMode_Mouse_Joystick_Acton_Title"	"BKE: {s:action}"
-
+	"Library_Details_SourceMode_Mouse_Joystick_Acton_Title"	"EB: {s:action}"
 	"Library_Details_Source_Title_none"			"KIOSZTATLAN"
 	"Library_Details_Source_Title_left_trackpad"		"B felület"
 	"Library_Details_Source_Title_right_trackpad"		"J felület"
@@ -2395,6 +2396,8 @@
 	"Library_Details_SourceMode_Title_FlickStick"		"Pöccintő kar"
 	"Library_Details_SourceMode_Title_2DScroll"		"Iránycsúsztatás"
 	"Library_Details_SourceMode_Title_Hotbar"		"Gyorselérés menü"
+	"Library_Details_SourceMode_Title_LayerInherit"			"Öröklés a műveletkészletből"
+	"Library_Details_SourceMode_Title_LayerNullOverride"	"Nincs"
 
 	"Library_Details_ModeShift_Title_None"				"Nincs"
 	"Library_Details_ModeShift_Title_LeftTrigger"		"Bal ravasz teljes elhúzás"
@@ -3424,6 +3427,7 @@
 	"Downloads_Status_downloading"	"Letöltés {s:downloadpercent}"
 	"Downloads_Status_preloading"	"Előtöltés {s:downloadpercent}"
 	"Downloads_Status_unpacking"	"Kicsomagolás {s:downloadpercent}"
+	"Downloads_Status_patching"	"Fájlmódosítás {s:downloadpercent}"
 	"Downloads_Status_paused"	"Szüneteltetve"
 	"Downloads_Status_queued"	"Sorban áll"
 	"Downloads_Status_ready"	"Játékra kész"
@@ -3433,6 +3437,7 @@
 	"Downloads_Status_finished"	"Letöltés befejezési ideje: {t:t:downloadfinished}"
 	"Downloads_Status_deferred"	"Letöltés előjegyzett ideje: {t:t:downloadstart}"
 	"Downloads_Status_locked"	"E termék összes licence használatban van"
+	"Downloads_Status_uninstalled"	"Nem telepített"
 
 
 	"Quit_LabelStreamingClient0"	"{s:streamingclient0}"
@@ -5085,6 +5090,8 @@
 	"ControllerBinding_ModeDropDown_InGameAction_Description"	"Válaszd ezt a lehetőséget, hogy a kar vagy a felület végrehajtsa a megadott játékbeli műveletet."
 	"ControllerBinding_ModeDropDown_OtherAction"				"Más játékbeli művelet..."
 	"ControllerBinding_ModeDropDown_OtherAction_Description"	"Ennek a játéknak kimondottan a játékvezérlő ravasz-gombjainak használatára tervezett műveletei vannak. Ha más játékbeli műveletet szeretnél helyette kiosztani erre a ravaszra, válaszd ezt a lehetőséget."
+	"ControllerBinding_ModeDropDown_LayerInherit"				"Öröklés a műveletkészletből"
+	"ControllerBinding_ModeDropDown_LayerInherit_Description"	"Válaszd ezt a lehetőséget az e módban végrehajtott módosítások törlésére, és az e réteget tartalmazó műveletkészletben definiált mód öröklésére."
 	"ControllerBinding_ModeDropDown_GenericDPad"				"Általános iránygombok"
 	"ControllerBinding_ModeDropDown_GenericDPad_Description"	"Ha úgy szeretnéd beállítani ezt a kart vagy felület, hogy általános iránygombokként viselkedjen, válaszd ezt a lehetőséget."
 
@@ -7293,6 +7300,7 @@
 	"controller_unknown"								"Ismeretlen játékvezérlő"
 	"controller_steamcontroller_unknown"				"Steam Játékvezérlő"
 	"controller_steamcontroller_gordon" 				"Steam Játékvezérlő"
+	"controller_steamcontroller_neptune"				"Steam Deck játékvezérlő"
 	"controller_generic"								"Általános gamepad"
 	"controller_xbox360"								"Xbox 360 játékvezérlő"
 	"controller_xboxone"								"Xbox One játékvezérlő"

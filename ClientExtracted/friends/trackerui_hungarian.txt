@@ -796,7 +796,7 @@
 "Steam_Settings_Browser_ClearWebCacheMsg"	"Törlöd a beépített webböngésző összes gyorsítótár-fájlját?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
-"RemotePlayTogether_Notification_AvailableToInvite" "A játékra meghíváshoz kattints jobb egérgombbal bárkire a barátlistádon."
+"RemotePlayTogether_Notification_AvailableToInvite" "Hívj meg bárkit játszani egy hivatkozással a Barátlistádról."
 
 } 
 }  

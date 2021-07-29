@@ -158,7 +158,7 @@
 
 // need to remove the VAC line from this when we have our authentication system going via the Steam servers (when it should change to a login failure)
 "Steam_ValidLoginRequired"	"Det gick inte att skapa anslutning till Steam VAC-servrarna.  Om du vill felsöka problem med nätverket kan du klicka på länken nedan."
-"VAC_ConnectionIssuesSupport_Title"	"Den säkra anslutningen misslyckades"
+"VAC_ConnectionIssuesSupport_Title"	"Säker anslutning misslyckades"
 "VAC_ConnectionIssuesSupportSite"	"Klicka här för att gå till Steams support"
 "VAC_ConnectionIssuesSupportURL"	"https://support.steampowered.com/kb/7579-RPSX-6098/"
 "VAC_LoggedInElsewhere_Title"		"Kontot används från annan dator"

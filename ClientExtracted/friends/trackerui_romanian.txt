@@ -797,7 +797,7 @@ Nu poți face schimburi cu %friend% pentru că ți-ai anulat recent toate oferte
 "Steam_Settings_Browser_ClearWebCacheMsg"	"Ștergi toate fișierele din cache-ul browserului web integrat?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
-"RemotePlayTogether_Notification_AvailableToInvite" "Apasă clic dreapta pe oricare din prietenii tăi pentru a-i invita să joace."
+"RemotePlayTogether_Notification_AvailableToInvite" "Invită pe oricine dorești să joace prin intermediul unui link din lista ta de prieteni."
 
 } 
 }  

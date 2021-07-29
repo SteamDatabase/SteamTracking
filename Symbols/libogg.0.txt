@@ -1,0 +1,88 @@
+
+ T ogg_packet_clear
+ T ogg_page_bos
+ T ogg_page_checksum_set
+ T ogg_page_continued
+ T ogg_page_eos
+ T ogg_page_granulepos
+ T ogg_page_packets
+ T ogg_page_pageno
+ T ogg_page_serialno
+ T ogg_page_version
+ T ogg_stream_check
+ T ogg_stream_clear
+ T ogg_stream_destroy
+ T ogg_stream_eos
+ T ogg_stream_flush
+ T ogg_stream_flush_fill
+ T ogg_stream_init
+ T ogg_stream_iovecin
+ T ogg_stream_packetin
+ T ogg_stream_packetout
+ T ogg_stream_packetpeek
+ T ogg_stream_pagein
+ T ogg_stream_pageout
+ T ogg_stream_pageout_fill
+ T ogg_stream_reset
+ T ogg_stream_reset_serialno
+ T ogg_sync_buffer
+ T ogg_sync_check
+ T ogg_sync_clear
+ T ogg_sync_destroy
+ T ogg_sync_init
+ T ogg_sync_pageout
+ T ogg_sync_pageseek
+ T ogg_sync_reset
+ T ogg_sync_wrote
+ T oggpackB_adv
+ T oggpackB_adv1
+ T oggpackB_bits
+ T oggpackB_bytes
+ T oggpackB_get_buffer
+ T oggpackB_look
+ T oggpackB_look1
+ T oggpackB_read
+ T oggpackB_read1
+ T oggpackB_readinit
+ T oggpackB_reset
+ T oggpackB_write
+ T oggpackB_writealign
+ T oggpackB_writecheck
+ T oggpackB_writeclear
+ T oggpackB_writecopy
+ T oggpackB_writeinit
+ T oggpackB_writetrunc
+ T oggpack_adv
+ T oggpack_adv1
+ T oggpack_bits
+ T oggpack_bytes
+ T oggpack_get_buffer
+ T oggpack_look
+ T oggpack_look1
+ T oggpack_read
+ T oggpack_read1
+ T oggpack_readinit
+ T oggpack_reset
+ T oggpack_write
+ T oggpack_writealign
+ T oggpack_writecheck
+ T oggpack_writeclear
+ T oggpack_writecopy
+ T oggpack_writeinit
+ T oggpack_writetrunc
+ __bzero
+ dyld_stub_binder
+ free
+ malloc
+ memchr
+ memcpy
+ memmove
+ r crc_lookup
+ r mask
+ r mask8B
+ realloc
+ t _os_lacing_expand
+ t _os_update_crc
+ t _packetout
+ t ogg_stream_flush_i
+ t oggpack_writecopy_helper

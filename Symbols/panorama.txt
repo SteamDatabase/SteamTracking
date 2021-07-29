@@ -39,8 +39,12 @@
  CVProfile_ExitScope
  CatchAndWriteMiniDumpForVoidPtrFn
  CreateVideoPlayer
+ D typeinfo for std::__1::__basic_string_common<true>
  D typeinfo for std::__1::bad_function_call
+ D typeinfo for std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  D typeinfo for std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
+ D typeinfo for std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >
+ D typeinfo for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  D typeinfo for std::__1::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
  DebugStatsSystem
  DeclareCurrentThreadIsMainThread
@@ -90,20 +94,23 @@
  OBJC_CLASS_$_NSWindow
  OBJC_CLASS_$_NSWorkspace
  OBJC_METACLASS_$_NSObject
- OSAtomicCompareAndSwap64Barrier
- OSMemoryBarrier
  Plat_FloatTime
  Plat_GetExecutablePath
  Plat_GetExecutablePathUTF8
  Plat_IsInDebugSession
  Plat_IsSteamOS
+ Plat_IsSteamPal
  Plat_MSTime
  Plat_OutputDebugString
  Plat_RelativeTickFrequency
  Plat_RelativeTicks
  Plat_localtime
+ R typeinfo name for std::__1::__basic_string_common<true>
  R typeinfo name for std::__1::bad_function_call
+ R typeinfo name for std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  R typeinfo name for std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
+ R typeinfo name for std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >
+ R typeinfo name for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  R typeinfo name for std::__1::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
  RealGetCallStack
  RealPrintCallStack
@@ -333,7 +340,7 @@
  __gxx_personality_v0
  __maskrune
  __memcpy_chk
- __snprintf_chk
+ __sincosf_stret
  __sprintf_chk
  __stack_chk_fail
  __stack_chk_guard
@@ -344,10 +351,9 @@
  _dispatch_source_type_read
  _exit
  _objc_empty_cache
- _objc_empty_vtable
  _tlv_bootstrap
  abort
- acos
+ acosf
  alphasort$INODE64
  atan2f
  atoi
@@ -360,7 +366,6 @@
  ceilf
  close
  closedir
- cosf
  crc32
  dispatch_get_context
  dispatch_get_global_queue
@@ -385,7 +390,7 @@
  flock
  floor
  floorf
- fmod
+ fmodf
  fnmatch
  fontconfig_ft2_new_face_substitute
  fopen
@@ -513,6 +518,7 @@
  mach_timebase_info
  malloc
  malloc_size
+ memchr
  memcmp
  memcpy
  memmove
@@ -641,7 +647,6 @@
  rindex
  roundf
  scandir$INODE64
- sched_yield
  sem_close
  sem_open
  sem_post
@@ -659,15 +664,25 @@
  sin
  sinf
  snprintf
- sprintf
  sscanf
  stat$INODE64
  std::__1::__basic_string_common<true>::__throw_length_error() const
+ std::__1::__call_once(unsigned long volatile&, void*, void (*)(void*))
  std::__1::__next_prime(unsigned long)
  std::__1::__vector_base_common<true>::__throw_length_error() const
+ std::__1::basic_ios<char, std::__1::char_traits<char> >::~basic_ios()
  std::__1::basic_ios<wchar_t, std::__1::char_traits<wchar_t> >::~basic_ios()
+ std::__1::basic_ostream<char, std::__1::char_traits<char> >::~basic_ostream()
  std::__1::basic_ostream<wchar_t, std::__1::char_traits<wchar_t> >::operator<<(double)
  std::__1::basic_ostream<wchar_t, std::__1::char_traits<wchar_t> >::~basic_ostream()
+ std::__1::basic_streambuf<char, std::__1::char_traits<char> >::imbue(std::__1::locale const&)
+ std::__1::basic_streambuf<char, std::__1::char_traits<char> >::setbuf(char*, long)
+ std::__1::basic_streambuf<char, std::__1::char_traits<char> >::showmanyc()
+ std::__1::basic_streambuf<char, std::__1::char_traits<char> >::sync()
+ std::__1::basic_streambuf<char, std::__1::char_traits<char> >::uflow()
+ std::__1::basic_streambuf<char, std::__1::char_traits<char> >::xsgetn(char*, long)
+ std::__1::basic_streambuf<char, std::__1::char_traits<char> >::xsputn(char const*, long)
+ std::__1::basic_streambuf<char, std::__1::char_traits<char> >::~basic_streambuf()
  std::__1::basic_streambuf<wchar_t, std::__1::char_traits<wchar_t> >::basic_streambuf()
  std::__1::basic_streambuf<wchar_t, std::__1::char_traits<wchar_t> >::imbue(std::__1::locale const&)
  std::__1::basic_streambuf<wchar_t, std::__1::char_traits<wchar_t> >::setbuf(wchar_t*, long)
@@ -677,14 +692,15 @@
  std::__1::basic_streambuf<wchar_t, std::__1::char_traits<wchar_t> >::xsgetn(wchar_t*, long)
  std::__1::basic_streambuf<wchar_t, std::__1::char_traits<wchar_t> >::xsputn(wchar_t const*, long)
  std::__1::basic_streambuf<wchar_t, std::__1::char_traits<wchar_t> >::~basic_streambuf()
+ std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > std::__1::operator+<char, std::__1::char_traits<char>, std::__1::allocator<char> >(char const*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__grow_by(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long)
- std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__init(char const*, unsigned long)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::append(char const*)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::append(char const*, unsigned long)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::append(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, unsigned long, unsigned long)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::append(unsigned long, char)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::assign(char const*)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::assign(char const*, unsigned long)
+ std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::at(unsigned long)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::at(unsigned long) const
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::basic_string(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::basic_string(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, unsigned long, unsigned long, std::__1::allocator<char> const&)
@@ -694,14 +710,12 @@
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::insert(unsigned long, char const*)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::operator=(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::push_back(char)
+ std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::replace(unsigned long, unsigned long, char const*)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::reserve(unsigned long)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::resize(unsigned long, char)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::rfind(char, unsigned long) const
- std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_string()
- std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::operator=(std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> > const&)
  std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::push_back(wchar_t)
  std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::resize(unsigned long, wchar_t)
- std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::~basic_string()
  std::__1::ios_base::getloc() const
  std::__1::ios_base::imbue(std::__1::locale const&)
  std::__1::ios_base::init(void*)
@@ -709,6 +723,9 @@
  std::__1::locale::locale(std::__1::locale const&)
  std::__1::locale::operator=(std::__1::locale const&)
  std::__1::locale::~locale()
+ std::__1::mutex::lock()
+ std::__1::mutex::unlock()
+ std::__1::mutex::~mutex()
  std::exception::what() const
  std::exception::~exception()
  std::length_error::~length_error()
@@ -734,10 +751,21 @@
  sysconf
  time
  typeinfo for SteamThreadTools::CThread
+ typeinfo for bool
+ typeinfo for char
+ typeinfo for double
+ typeinfo for float
+ typeinfo for int
+ typeinfo for long long
+ typeinfo for std::__1::basic_ostream<char, std::__1::char_traits<char> >
  typeinfo for std::__1::basic_ostream<wchar_t, std::__1::char_traits<wchar_t> >
+ typeinfo for std::__1::basic_streambuf<char, std::__1::char_traits<char> >
  typeinfo for std::__1::basic_streambuf<wchar_t, std::__1::char_traits<wchar_t> >
  typeinfo for std::exception
  typeinfo for std::length_error
+ typeinfo for unsigned char
+ typeinfo for unsigned int
+ typeinfo for unsigned long long
  typeinfo for void*
  unlink
  usleep
@@ -830,6 +858,7 @@
  v8::Value::Uint32Value() const
  vasprintf
  vfprintf
+ virtual thunk to std::__1::basic_ostream<char, std::__1::char_traits<char> >::~basic_ostream()
  virtual thunk to std::__1::basic_ostream<wchar_t, std::__1::char_traits<wchar_t> >::~basic_ostream()
  vsnprintf
  vtable for __cxxabiv1::__class_type_info

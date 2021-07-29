@@ -60,24 +60,7 @@
         d = r("TtDX"),
         l = r("A5MU"),
         m = r("bxBv"),
-        f = (function (e) {
-          function t() {
-            return (null !== e && e.apply(this, arguments)) || this;
-          }
-          return (
-            Object(n.d)(t, e),
-            (t.prototype.GetString = function (e) {
-              return Promise.resolve(localStorage.getItem(e));
-            }),
-            (t.prototype.StoreString = function (e, t) {
-              return localStorage.setItem(e, t), Promise.resolve();
-            }),
-            (t.prototype.RemoveObject = function (e) {
-              return localStorage.removeItem(e), Promise.resolve();
-            }),
-            t
-          );
-        })(r("75qM").a),
+        f = r("u2yL"),
         b = r("WBba"),
         p = r("kLLr"),
         _ = r("hRO2"),
@@ -7148,7 +7131,7 @@
               (this.m_regexBannedWords = null),
               (this.m_regexCleanWords = null),
               (this.m_bShownFilterTip = !1),
-              (this.m_TextFilterPreferences = new Ot.x());
+              (this.m_TextFilterPreferences = new Ot.y());
             var e = new Mt.a();
             (this.m_TextFilterPreferences.eTextFilterSetting = e.text_filter_setting()),
               (this.m_TextFilterPreferences.bIgnoreFriends = e.text_filter_ignore_friends()),
@@ -7684,10 +7667,10 @@
                       : r.CreateProfanityReplacement(e.length);
                   });
             }),
-            Object(n.c)([u.B], e.prototype, "m_TextFilterPreferences", void 0),
-            Object(n.c)([u.B], e.prototype, "m_mapPlayerCache", void 0),
-            Object(n.c)([u.B], e.prototype, "m_regexBannedWords", void 0),
-            Object(n.c)([u.B], e.prototype, "m_regexCleanWords", void 0),
+            Object(n.c)([u.C], e.prototype, "m_TextFilterPreferences", void 0),
+            Object(n.c)([u.C], e.prototype, "m_mapPlayerCache", void 0),
+            Object(n.c)([u.C], e.prototype, "m_regexBannedWords", void 0),
+            Object(n.c)([u.C], e.prototype, "m_regexCleanWords", void 0),
             Object(n.c)([u.k], e.prototype, "UpdateCommunityPreferences", null),
             Object(n.c)([u.k], e.prototype, "SetFriendsList", null),
             Object(n.c)([u.k], e.prototype, "BRebuildFilter", null),
@@ -7706,7 +7689,7 @@
               var r = this.GetChat(e, t);
               return r || ((r = new Ft()), this.m_mapChats.set(e || t, r)), r;
             }),
-            Object(n.c)([u.B], e.prototype, "m_mapChats", void 0),
+            Object(n.c)([u.C], e.prototype, "m_mapChats", void 0),
             e
           );
         })(),
@@ -7748,7 +7731,7 @@
               this.m_textFilterStore = new Rt();
               var e = 0;
               "" !== vt.h.steamid && (e = new p.a(vt.h.steamid).GetAccountID());
-              this.m_textFilterStore.Init(e, null, new f());
+              this.m_textFilterStore.Init(e, null, new f.a());
             }),
             Object.defineProperty(e.prototype, "TextFilterStore", {
               get: function () {
@@ -7951,7 +7934,7 @@
                       return (
                         (r = n.sent()),
                         (e && e.token.reason) ||
-                          Object(u.F)(function () {
+                          Object(u.G)(function () {
                             var e = r.data;
                             (o.m_strChatURL = e.view_url_template),
                               (o.m_ulChatID = e.chat_id),
@@ -8796,20 +8779,20 @@
                 (this.m_rgChatMessages = []);
             }),
             Object(n.c)(
-              [u.B],
+              [u.C],
               e.prototype,
               "m_mapChannelModeratorUsers",
               void 0
             ),
             Object(n.c)(
-              [u.B],
+              [u.C],
               e.prototype,
               "m_mapBroadcastModeratorUsers",
               void 0
             ),
-            Object(n.c)([u.B], e.prototype, "m_nRateLimitSeconds", void 0),
-            Object(n.c)([u.B], e.prototype, "m_bRateLimited", void 0),
-            Object(n.c)([u.B], e.prototype, "m_rgChatMessages", void 0),
+            Object(n.c)([u.C], e.prototype, "m_nRateLimitSeconds", void 0),
+            Object(n.c)([u.C], e.prototype, "m_bRateLimited", void 0),
+            Object(n.c)([u.C], e.prototype, "m_rgChatMessages", void 0),
             Object(n.c)([wt.a], e.prototype, "FetchChatModerators", null),
             Object(n.c)([wt.a], e.prototype, "RequestLoop", null),
             Object(n.c)([wt.a], e.prototype, "MuteUserForSession", null),
@@ -8848,7 +8831,7 @@
         },
         Vt = r("6Y59"),
         qt = r("exH9"),
-        Ht = r("bxiW"),
+        Ht = r("opsS"),
         Kt = r("3sYe"),
         Yt = r.n(Kt),
         Jt = new RegExp("ː([^ː]*)ː", "g"),
@@ -9396,7 +9379,7 @@
                               title: Object(gt.f)("#ChatEntryButton_Submit"),
                               onClick: this.SendMessage,
                             },
-                            s.createElement(Vt.tb, null)
+                            s.createElement(Vt.ub, null)
                           )
                         ),
                         s.createElement(
@@ -9439,7 +9422,7 @@
                   : null
               );
             }),
-            Object(n.c)([u.B], t.prototype, "m_chat", void 0),
+            Object(n.c)([u.C], t.prototype, "m_chat", void 0),
             Object(n.c)([Ht.a], t.prototype, "StartChat", null),
             Object(n.c)([Ht.a], t.prototype, "ChatBoxChange", null),
             Object(n.c)([Ht.a], t.prototype, "ChatBoxKeypress", null),
@@ -9502,7 +9485,7 @@
         lr = r.n(dr),
         mr = Object(o.a)(function (e) {
           var t = e.appid,
-            r = Object(ir.c)(t, 0, !0),
+            r = Object(ir.d)(t, 0, !0),
             i = (r[0], r[1]),
             a = Object(cr.c)();
           Object(s.useEffect)(
@@ -9590,7 +9573,7 @@
                     l.release
                   ),
                   m &&
-                    c.a.createElement(ar.i, {
+                    c.a.createElement(ar.o, {
                       info: l,
                       bShowDemoButton: !0,
                       bStackedButtons: !0,
@@ -9605,17 +9588,37 @@
         br = r("nWbB"),
         pr = r("02Wr"),
         _r = r("MnIK"),
-        hr = r("d+Me"),
-        Br = r("uIWk"),
-        yr = r("rKv1"),
-        gr = r.n(yr),
-        wr = Object(o.a)(function (e) {
+        hr = r("uuth"),
+        Br = function (e) {
+          var t = e.onPositionChange,
+            r = e.onLeave,
+            i = s.useCallback(
+              function (e) {
+                return (
+                  void 0 === e.previousPosition &&
+                    e.currentPosition === hr.a.above &&
+                    r &&
+                    r(e),
+                  t && t(e)
+                );
+              },
+              [t, r]
+            );
+          return s.createElement(
+            hr.a,
+            Object(n.a)({}, e, { onPositionChange: i })
+          );
+        },
+        yr = r("uIWk"),
+        gr = r("rKv1"),
+        wr = r.n(gr),
+        vr = Object(o.a)(function (e) {
           var t = e.event,
             r = t.clanSteamID.GetAccountID(),
             i = !t || !t.jsondata || !t.jsondata.broadcast_item_drops_enabled,
             o = Object(s.useRef)(null),
             u = Object(s.useState)(
-              t ? Br.a.GetCreatorHome(t.clanSteamID) : null
+              t ? yr.a.GetCreatorHome(t.clanSteamID) : null
             ),
             d = u[0],
             l = u[1];
@@ -9632,7 +9635,7 @@
                         case 0:
                           return (
                             (t = p.a.InitFromClanID(r)),
-                            [4, Br.a.LoadCreatorHome(t, e)]
+                            [4, yr.a.LoadCreatorHome(t, e)]
                           );
                         case 1:
                           return (i = n.sent()), e.token.reason || l(i), [2];
@@ -9657,7 +9660,7 @@
             t.jsondata.broadcast_item_drops_details_event_gid;
           return c.a.createElement(
             "div",
-            { className: gr.a.item_drop_ctn },
+            { className: wr.a.item_drop_ctn },
             c.a.createElement(
               "div",
               null,
@@ -9687,7 +9690,7 @@
             )
           );
         }),
-        vr = {
+        Sr = {
           list: [
             { appid: 444090, url: "https://steam.tv/paladins" },
             { appid: 386360, url: "https://steam.tv/smite" },
@@ -9714,7 +9717,7 @@
             },
           ],
         },
-        Sr = (function (e) {
+        Mr = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -9885,13 +9888,13 @@
                 i = fr.a.GetOrCreateBroadcastInfo(e.steamid).m_nAppID,
                 a = s.createElement(
                   "div",
-                  { className: gr.a.rightPanel },
-                  s.createElement(Or, {
+                  { className: wr.a.rightPanel },
+                  s.createElement(jr, {
                     key: "right" + i,
                     ImgUrl: e.right_panel,
                   })
                 ),
-                o = s.createElement(Or, {
+                o = s.createElement(jr, {
                   key: "left" + i,
                   ImgUrl: e.left_panel,
                 });
@@ -9915,7 +9918,7 @@
                   })),
                   (r.bRightPanelArtworkOrEmpty = !1)),
                 n && !t
-                  ? ((r.leftPanel = s.createElement(Rr, {
+                  ? ((r.leftPanel = s.createElement(zr, {
                       broadcastEmbedContext: this.props,
                       key: "selector" + i,
                       curStream: e,
@@ -9926,7 +9929,7 @@
                     (r.rightPanel = a))
                   : t
                   ? ((r.leftPanel = s.createElement("div", null)),
-                    (r.rightPanel = s.createElement(Fr, {
+                    (r.rightPanel = s.createElement(Tr, {
                       stream: e,
                       orientation: "rightside",
                     })),
@@ -9951,32 +9954,22 @@
                   (i = Object(n.a)(Object(n.a)({}, i), {
                     left_panel: c.GetImageURL(
                       "broadcast_left",
-                      u || Object(Ot.u)(vt.c.LANGUAGE)
+                      u || Object(Ot.v)(vt.c.LANGUAGE)
                     ),
                     right_panel: c.GetImageURL(
                       "broadcast_right",
-                      u || Object(Ot.u)(vt.c.LANGUAGE)
+                      u || Object(Ot.v)(vt.c.LANGUAGE)
                     ),
                     store_title: c.GetBroadcastTitle(
-                      u || Object(Ot.u)(vt.c.LANGUAGE)
+                      u || Object(Ot.v)(vt.c.LANGUAGE)
                     ),
                     broadcast_chat_visibility: c.GetBroadcastChatVisibility(),
                   }));
                 var m = this.ConstructSidePanels(i, a),
                   f = i.store_title ? i.store_title : i.title,
-                  b = br.a.Get().GetConcurrentStreams(this.props) > 1,
-                  p =
-                    "radial-gradient(100% 80% at 64% 95%, " +
-                    ((c &&
-                      c.jsondata &&
-                      c.jsondata.broadcast_gradient_inner_color) ||
-                      "rgba(108, 119, 134, 0.4)") +
-                    " 40%, " +
-                    ((c &&
-                      c.jsondata &&
-                      c.jsondata.broadcast_gradient_outer_color) ||
-                      "rgba(83, 104, 104, 0.4)") +
-                    " 100%)";
+                  b = br.a.Get().GetConcurrentStreams(this.props) > 1;
+                c && c.jsondata && c.jsondata.broadcast_gradient_inner_color,
+                  c && c.jsondata && c.jsondata.broadcast_gradient_outer_color;
                 return s.createElement(
                   s.Fragment,
                   null,
@@ -9989,11 +9982,10 @@
                     s.createElement(
                       "div",
                       {
-                        style: { background: p },
                         className: Object(qt.a)(
                           ((e = {}),
-                          (e[gr.a.bordered_container] = !0),
-                          (e[gr.a.Event] = Boolean(c)),
+                          (e[wr.a.bordered_container] = !0),
+                          (e[wr.a.Event] = Boolean(c)),
                           (e.broadcast_brd_ctn_trgt = !0),
                           e)
                         ),
@@ -10002,18 +9994,18 @@
                         "div",
                         {
                           className: Object(qt.a)(
-                            gr.a.bordered_title,
+                            wr.a.bordered_title,
                             "bordered_title_trgt"
                           ),
                         },
-                        s.createElement(ar.d, null),
+                        s.createElement(ar.i, null),
                         f,
                         s.createElement(
                           "div",
-                          { className: gr.a.bordered_corner_container },
+                          { className: wr.a.bordered_corner_container },
                           !this.state.bExpanded &&
                             s.createElement("div", {
-                              className: gr.a.broadcast_settings_icon,
+                              className: wr.a.broadcast_settings_icon,
                               "data-tooltip-text": Object(gt.f)(
                                 "#StoreBroadcast_Change_store_Broadcast_settings"
                               ),
@@ -10026,8 +10018,8 @@
                             }),
                           s.createElement("div", {
                             className: this.state.bExpanded
-                              ? gr.a.bordered_corner_expanded
-                              : gr.a.bordered_corner_shrinked,
+                              ? wr.a.bordered_corner_expanded
+                              : wr.a.bordered_corner_shrinked,
                             "data-tooltip-text": Object(gt.f)(
                               "#StoreBroadcast_Hide_Tooltip"
                             ),
@@ -10037,7 +10029,7 @@
                         Boolean(i.gamedata_subtitle) &&
                           s.createElement(
                             "div",
-                            { className: gr.a.bordered_subtitle },
+                            { className: wr.a.bordered_subtitle },
                             i.gamedata_subtitle
                           )
                       ),
@@ -10047,7 +10039,7 @@
                           {
                             className: Object(qt.a)(
                               ((t = {}),
-                              (t[gr.a.container] = !0),
+                              (t[wr.a.container] = !0),
                               (t.embeddable_ctn_trgt = !0),
                               (t.multistream = b),
                               (t.broadcast_right_panel_simple =
@@ -10059,7 +10051,7 @@
                             onTransitionEnd: this.OnShrinkTransitionEnd,
                           },
                           m.leftPanel,
-                          s.createElement(Mr, {
+                          s.createElement(Cr, {
                             stream: i,
                             bStartMuted: this.state.bStartMuted,
                             fnRenderBroadcastContext: d,
@@ -10068,19 +10060,19 @@
                           }),
                           m.rightPanel,
                           this.state.bExpanded &&
-                            s.createElement(Cr, { stream: i })
+                            s.createElement(Or, { stream: i })
                         )
                     ),
                     Boolean(
                       c && c.jsondata && c.jsondata.broadcast_item_drops_enabled
-                    ) && s.createElement(wr, { event: c }),
+                    ) && s.createElement(vr, { event: c }),
                     this.state.bExpanded &&
                       s.createElement(
                         "div",
-                        { className: "" + (c ? gr.a.Event : "") },
-                        s.createElement(Cr, { stream: i })
+                        { className: "" + (c ? wr.a.Event : "") },
+                        s.createElement(Or, { stream: i })
                       ),
-                    s.createElement("div", { className: gr.a.clear_div })
+                    s.createElement("div", { className: wr.a.clear_div })
                   )
                 );
               }
@@ -10099,8 +10091,8 @@
             (t = r = Object(n.c)([o.a], t))
           );
         })(s.Component),
-        Mr =
-          ((t.default = Sr),
+        Cr =
+          ((t.default = Mr),
           (function (e) {
             function t(t) {
               var r = e.call(this, t) || this;
@@ -10135,18 +10127,18 @@
                 var e;
                 return s.createElement(
                   "div",
-                  { className: gr.a.wrapper },
+                  { className: wr.a.wrapper },
                   s.createElement(
-                    hr.a,
+                    Br,
                     { onEnter: this.OnEnter, onLeave: this.OnLeave },
                     s.createElement(
                       "div",
                       {
                         className: Object(qt.a)(
                           ((e = {}),
-                          (e[gr.a.video_placeholder] = !0),
+                          (e[wr.a.video_placeholder] = !0),
                           (e.video_placeholder_trgt = !0),
-                          (e[gr.a.WidePlayer] = this.props.bWidePlayer),
+                          (e[wr.a.WidePlayer] = this.props.bWidePlayer),
                           e)
                         ),
                         ref: this.m_iVideoContainerRef,
@@ -10155,17 +10147,17 @@
                         "div",
                         {
                           className: this.state.bPopout
-                            ? gr.a.broadcast_floating
-                            : gr.a.video_container,
+                            ? wr.a.broadcast_floating
+                            : wr.a.video_container,
                         },
                         this.state.bPopout &&
-                          s.createElement(jr, {
+                          s.createElement(Rr, {
                             stream: this.props.stream,
                             OnPreventPopup: this.CloseBroadcastPopup,
                           }),
                         s.createElement(
                           "div",
-                          { className: gr.a.BroadcastPlayerContainer },
+                          { className: wr.a.BroadcastPlayerContainer },
                           s.createElement(tr.a, {
                             steamIDBroadcast: this.props.stream.steamid,
                             watchLocation: 6,
@@ -10187,7 +10179,7 @@
               t
             );
           })(s.Component)),
-        Cr = (function (e) {
+        Or = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -10197,7 +10189,7 @@
               var e = this.props.stream,
                 t = fr.a.GetOrCreateBroadcastInfo(this.props.stream.steamid)
                   .m_nAppID,
-                r = vr.list.find(function (r) {
+                r = Sr.list.find(function (r) {
                   return (
                     r.appid == t &&
                     (!r.broadcasterAccountID ||
@@ -10226,7 +10218,7 @@
                 "a",
                 {
                   href: a,
-                  className: gr.a.external_link,
+                  className: wr.a.external_link,
                   "data-tooltip-text": Object(gt.f)(
                     "#BroadcastWatch_View_Broadcast_Page"
                   ),
@@ -10260,30 +10252,30 @@
                 );
               return s.createElement(
                 "div",
-                { className: Object(qt.a)(gr.a.viewer_bar, "viewer_bar") },
+                { className: Object(qt.a)(wr.a.viewer_bar, "viewer_bar") },
                 s.createElement(
                   "div",
                   {
-                    className: Object(qt.a)(gr.a.viewer_count, "viewer_count"),
+                    className: Object(qt.a)(wr.a.viewer_count, "viewer_count"),
                   },
-                  s.createElement(Vt.Cb, null),
+                  s.createElement(Vt.Db, null),
                   r.toLocaleString(gt.e.GetPreferredLocales())
                 ),
                 s.createElement(
                   "div",
                   {
-                    className: Object(qt.a)(gr.a.viewer_links, "viewer_links"),
+                    className: Object(qt.a)(wr.a.viewer_links, "viewer_links"),
                   },
                   t &&
                     s.createElement(
                       "div",
-                      { className: gr.a.chat_link },
+                      { className: wr.a.chat_link },
                       s.createElement(Vt.m, null),
                       s.createElement(
                         "a",
                         {
                           href: "#",
-                          className: gr.a.ChatToggle,
+                          className: wr.a.ChatToggle,
                           onClick: this.OnToggleChat,
                         },
                         Object(gt.f)(
@@ -10293,7 +10285,7 @@
                         )
                       )
                     ),
-                  t && s.createElement("span", { className: gr.a.ChatToggle }),
+                  t && s.createElement("span", { className: wr.a.ChatToggle }),
                   s.createElement(
                     "a",
                     {
@@ -10301,12 +10293,12 @@
                         vt.c.STORE_BASE_URL +
                         "account/preferences/#store_broadcast_settings",
                       target: vt.c.IN_CLIENT ? void 0 : "_blank",
-                      className: gr.a.settings_link,
+                      className: wr.a.settings_link,
                       "data-tooltip-text": Object(gt.f)(
                         "#StoreBroadcast_Change_store_Broadcast_settings"
                       ),
                     },
-                    s.createElement(Vt.lb, null)
+                    s.createElement(Vt.mb, null)
                   ),
                   e
                 )
@@ -10317,7 +10309,7 @@
             (t = Object(n.c)([o.a], t))
           );
         })(s.Component),
-        Or = (function (e) {
+        jr = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -10330,16 +10322,16 @@
                 null,
                 e &&
                   s.createElement("img", {
-                    className: gr.a.side_panels,
+                    className: wr.a.side_panels,
                     src: this.props.ImgUrl,
                   }),
-                !e && s.createElement("div", { className: gr.a.side_panels })
+                !e && s.createElement("div", { className: wr.a.side_panels })
               );
             }),
             t
           );
         })(s.Component),
-        jr = Object(o.a)(function (e) {
+        Rr = Object(o.a)(function (e) {
           var t = e.stream,
             r = Object(cr.c)(),
             n = fr.a.GetOrCreateBroadcastInfo(t.steamid).m_nAppID,
@@ -10351,33 +10343,33 @@
                     type: "app",
                     id: n,
                     strURL: Object(nr.b)(i.capsule_link, r),
-                    className: gr.a.PopOutVideoTitleText,
+                    className: wr.a.PopOutVideoTitleText,
                   },
                   Object(gt.f)("#StoreBroadcast_Detault_popout_Title")
                 )
               : s.createElement(
                   "div",
-                  { className: gr.a.PopOutVideoTitleText },
+                  { className: wr.a.PopOutVideoTitleText },
                   Object(gt.f)("#StoreBroadcast_Detault_popout_Title")
                 );
           return s.createElement(
             "div",
-            { className: [gr.a.PopOutVideoTitleBar, gr.a.NoSeslect].join(" ") },
+            { className: [wr.a.PopOutVideoTitleBar, wr.a.NoSeslect].join(" ") },
             a,
             s.createElement(
               "button",
               {
-                className: gr.a.PopOutVideoCloseButton,
+                className: wr.a.PopOutVideoCloseButton,
                 "data-tooltip-text": Object(gt.f)(
                   "#StoreBroadcast_close_broadcast_popup"
                 ),
                 onClick: e.OnPreventPopup,
               },
-              s.createElement(Vt.Hb, null)
+              s.createElement(Vt.Ib, null)
             )
           );
         }),
-        Rr = (function (e) {
+        zr = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.itemRef = s.createRef()), t;
@@ -10410,8 +10402,8 @@
                 r = rr.a.GetAppLinkInfo(t);
               return this.props.bShowCapsuleArt &&
                 (null == r ? void 0 : r.header_image_url)
-                ? parseInt(gr.a.strStreamIconCapsuleArtHeight)
-                : parseInt(gr.a.strStreamIconScreenshotArtHeight);
+                ? parseInt(wr.a.strStreamIconCapsuleArtHeight)
+                : parseInt(wr.a.strStreamIconScreenshotArtHeight);
             }),
             (t.prototype.componentDidMount = function () {
               if (this.itemRef && this.itemRef.current) {
@@ -10431,7 +10423,7 @@
               var e = this,
                 t = this.GetFilteredStreamList(),
                 r = t.map(function (t) {
-                  return s.createElement(zr, {
+                  return s.createElement(Fr, {
                     key: t.accountid,
                     stream: t,
                     bSelected: e.props.curStream.accountid == t.accountid,
@@ -10444,10 +10436,10 @@
                 {
                   ref: this.itemRef,
                   className: Object(qt.a)(
-                    gr.a.side_panels,
+                    wr.a.side_panels,
                     "side_panels",
-                    gr.a.multistream,
-                    t.length > 3 ? gr.a.scrollingstreams : ""
+                    wr.a.multistream,
+                    t.length > 3 ? wr.a.scrollingstreams : ""
                   ),
                 },
                 r
@@ -10456,7 +10448,7 @@
             t
           );
         })(s.Component),
-        zr = (function (e) {
+        Fr = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -10471,8 +10463,8 @@
             (t.prototype.generateThumbnail = function (e) {
               var t = this.props.stream,
                 r = this.props.bSelected
-                  ? gr.a.stream_icon_selected
-                  : gr.a.stream_icon;
+                  ? wr.a.stream_icon_selected
+                  : wr.a.stream_icon;
               if (e) {
                 var n = fr.a.GetOrCreateBroadcastInfo(t.steamid).m_nAppID,
                   i = rr.a.GetAppLinkInfo(n),
@@ -10484,12 +10476,12 @@
                     s.createElement("img", {
                       className: Object(qt.a)(
                         r,
-                        gr.a.stream_icon_hide_on_hover
+                        wr.a.stream_icon_hide_on_hover
                       ),
                       src: i.header_image_url,
                     }),
                   s.createElement(pr.b, {
-                    className: Object(qt.a)(r, gr.a.stream_icon_show_on_hover),
+                    className: Object(qt.a)(r, wr.a.stream_icon_show_on_hover),
                     srcs: a,
                   })
                 );
@@ -10502,7 +10494,7 @@
             (t.GetClassForStreamPriority = function (e) {
               switch (e) {
                 case br.b.k_eFeatured:
-                  return gr.a.stream_featured;
+                  return wr.a.stream_featured;
               }
               return null;
             }),
@@ -10519,9 +10511,9 @@
                 "div",
                 {
                   className: Object(qt.a)(
-                    gr.a.stream_icon_and_viewer_container,
+                    wr.a.stream_icon_and_viewer_container,
                     r.GetClassForStreamPriority(t.current_selection_priority),
-                    o && gr.a.display_capsule_art
+                    o && wr.a.display_capsule_art
                   ),
                 },
                 s.createElement(
@@ -10530,21 +10522,21 @@
                   s.createElement(
                     _r.a,
                     {
-                      className: gr.a.stream_icon_container,
+                      className: wr.a.stream_icon_container,
                       onClick: this.onClick,
                       rootMargin: "100px 0px 100px 0px",
                     },
                     this.generateThumbnail(o),
                     this.props.bSelected &&
                       s.createElement("div", {
-                        className: gr.a.stream_icon_arrow,
+                        className: wr.a.stream_icon_arrow,
                       })
                   )
                 ),
                 s.createElement(
                   "div",
-                  { className: gr.a.viewer_count },
-                  s.createElement(Vt.Cb, null),
+                  { className: wr.a.viewer_count },
+                  s.createElement(Vt.Db, null),
                   c.toLocaleString(gt.e.GetPreferredLocales())
                 )
               );
@@ -10553,7 +10545,7 @@
             (t = r = Object(n.c)([o.a], t))
           );
         })(s.Component),
-        Fr = (function (e) {
+        Tr = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -10568,14 +10560,14 @@
                     {
                       className: Object(qt.a)(
                         e
-                          ? gr.a.chat_below_container
-                          : gr.a.chat_rightside_container,
-                        gr.a.store_chat_ctn
+                          ? wr.a.chat_below_container
+                          : wr.a.chat_rightside_container,
+                        wr.a.store_chat_ctn
                       ),
                     },
                     s.createElement(
                       "div",
-                      { className: gr.a.ChatContainer },
+                      { className: wr.a.ChatContainer },
                       s.createElement(Zt, {
                         emoticonStore: br.f,
                         watchLocation: 6,
@@ -10601,7 +10593,7 @@
         c = r("ionH"),
         u = r("TLQK"),
         d = r("kLLr"),
-        l = r("bxiW"),
+        l = r("opsS"),
         m = r("Fq2z"),
         f = r("QIS/"),
         b = r.n(f),

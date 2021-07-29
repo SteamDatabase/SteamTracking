@@ -10,7 +10,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto_textencode.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/cumulativetimer.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/enum_names.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/enums_clientserver.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/framefunction.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/interfacemap_service.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/iopollinghelpers_osx.cpp
@@ -26,11 +25,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/registry.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/scheduledfunction.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/scheduledfunction.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_base.pb.cc
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_clientserver_login.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/string_misc.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/workthreadpool.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/protobuf-2.6.1/src/google/protobuf/repeated_field.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/stat.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/memblockhdr.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/threadtools.h
