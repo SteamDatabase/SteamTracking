@@ -2012,8 +2012,7 @@ function ReparentAppLandingPageForMobileUX()
 				$J(this).removeAttr('data-tooltip-html');
 		} );
 
-		/* move the purchase options and 'you already own this game' message higher in the page */
-		$J(".game_area_already_owned.page_content").appendTo('#purchaseOptionsContent');
+		/* move the purchase options higher in the page */
 		$J('#game_area_purchase').appendTo('#purchaseOptionsContent');
 
 	}

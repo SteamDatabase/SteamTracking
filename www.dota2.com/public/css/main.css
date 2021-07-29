@@ -19940,7 +19940,6 @@ a {
   flex-direction: row;
   justify-content: center;
   z-index: 1000;
-  overflow: hidden;
   position: sticky;
   top: 0px;
   box-shadow: 0px 7px 14px rgba(0, 0, 0, 0.7);

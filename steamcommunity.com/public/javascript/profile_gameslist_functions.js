@@ -178,7 +178,8 @@ function ShowAchievementHover( elem, divHover )
 }
 
 
-var gameTemplate = new Template( "<div class=\"gameListRowLogo #{logo_class}\">\r\n\t<a href=\"#{link}\">\r\n\t\t<img class=\"game_capsule\" src=\"https:\/\/community.cloudflare.steamstatic.com\/public\/images\/trans.gif\" id=\"delayedimage_game_logo_#{appid}_0\">\r\n\t<\/a>\r\n<\/div>\r\n<div class=\"gameListRowItem\">\r\n\t#{achievement_block}\r\n\t<div class=\"gameListRowItemTop\">\r\n\t\t<div class=\"gameListRowItemTopPrimary\">\r\n\t\t\t<div class=\"gameListRowItemName ellipsis #{text_color}\">#{name_escaped}<\/div>\r\n\t\t\t<h5 class=\"ellipsis hours_played\">#{hours_message}<\/h5>\r\n\t\t<\/div>\r\n\t\t<div class=\"gameListRowItemTopSecondary\">\r\n    \t\t#{client_block}\r\n\t\t<\/div>\r\n\t<\/div>\r\n\t<div class=\"bottom_controls\">\r\n\t\t<div class=\"pullup_item\" onclick=\"ShowMenuCumulative( this, 'links_dropdown_#{appid}', 'left' );\">\r\n\t\t\t<div class=\"menu_ico\">\r\n\t\t\t\t<img src=\"https:\/\/community.cloudflare.steamstatic.com\/public\/images\/skin_1\/ico_www.png\" width=\"16\" height=\"16\" border=\"0\" \/>\r\n\t\t\t<\/div>\r\n\t\t\tLinks\t\t\t<img src=\"https:\/\/community.cloudflare.steamstatic.com\/public\/images\/header\/btn_arrow_down.png\" border=\"0\" class=\"menuarrow\" \/>\r\n\t\t<\/div>\r\n\r\n\t\t\t#{stats_button} #{gcpd_button}\r\n\t\t\t<a class=\"pullup_item\" href=\"https:\/\/store.steampowered.com\/recommended\/recommendgame\/#{appid}\">\r\n\t\t\t\t<div class=\"menu_ico\">\r\n\t\t\t\t\t<img src=\"https:\/\/community.cloudflare.steamstatic.com\/public\/images\/skin_1\/icon_rate.png\" width=\"16\" height=\"16\" border=\"0\" \/>\r\n\t\t\t\t<\/div>\r\n\t\t\t\tReview\t\t\t<\/a>\r\n\t\t<\/div>\r\n\t<\/div>\r\n<\/div>\r\n" );
+
+var gameTemplate = new Template( "<div class=\"gameListRowLogo #{logo_class}\">\r\n\t<a href=\"#{link}\">\r\n\t\t<img class=\"game_capsule\" src=\"https:\/\/community.cloudflare.steamstatic.com\/public\/images\/trans.gif\" id=\"delayedimage_game_logo_#{appid}_0\">\r\n\t<\/a>\r\n<\/div>\r\n<div class=\"gameListRowItem\">\r\n\t#{achievement_block}\r\n\t<div class=\"gameListRowItemTop\">\r\n\t\t<div class=\"gameListRowItemTopPrimary\">\r\n\t\t\t<div class=\"gameListRowItemName ellipsis #{text_color}\">#{name_escaped}<\/div>\r\n\t\t\t<h5 class=\"ellipsis hours_played\">#{hours_message}<\/h5>\r\n\t\t<\/div>\r\n\t\t<div class=\"gameListRowItemTopSecondary\">\r\n    \t\t#{client_block}\r\n\t\t<\/div>\r\n\t<\/div>\r\n\t<div class=\"bottom_controls\">\r\n\t\t<div class=\"pullup_item\" onclick=\"ShowMenuCumulative( this, 'links_dropdown_#{appid}', 'left' );\">\r\n\t\t\t<div class=\"menu_ico\">\r\n\t\t\t\t<img src=\"https:\/\/community.cloudflare.steamstatic.com\/public\/images\/skin_1\/ico_www.png\" width=\"16\" height=\"16\" border=\"0\" \/>\r\n\t\t\t<\/div>\r\n\t\t\tLinks\t\t\t<img src=\"https:\/\/community.cloudflare.steamstatic.com\/public\/images\/header\/btn_arrow_down.png\" border=\"0\" class=\"menuarrow\" \/>\r\n\t\t<\/div>\r\n\t\t\t#{stats_button} #{gcpd_button} #{review_button}\r\n\t\t<\/div>\r\n\t<\/div>\r\n<\/div>\r\n" );
 var changingGameTemplate = new Template( "<div class=\"changingGameListRowLogo\">\r\n\t<div class=\"changingGameLogoHolder\">\r\n        <div class=\"changingGameLogo\">\r\n            <a href=\"#{link}\">\r\n\t\t\t\t<img src=\"https:\/\/community.cloudflare.steamstatic.com\/public\/images\/trans.gif\" id=\"delayedimage_game_logo_#{appid}\">\r\n            <\/a>\r\n        <\/div>\r\n    <\/div>\r\n<\/div>\r\n<div class=\"changingGameListRowItem\">\r\n\t<div class=\"gameListRowItemName #{text_color}\">#{name_escaped}<\/div>\r\n\t<h5>#{hours_message}<\/h5>\r\n<\/div>\r\n" );
 var gameHoursForeverTemplate = new Template ( '#{hours_forever} hrs on record' );
 var gameHoursRecentTemplate = new Template ( '#{hours} hrs last two weeks / #{hours_forever} hrs on record' );
@@ -197,6 +198,7 @@ var gameStatsGlobalAchievementsTemplate = new Template( '<a class="popup_menu_it
 var gameStatsGlobalLeaderboardsTemplate = new Template( '<a class="popup_menu_item2 tight" href="https://steamcommunity.com/stats/#{friendlyURL}/leaderboards/"><h5>Global Leaderboards</h5></a>' );
 var gameAchievementItemTemplate = new Template( '<img class="recentAchievementsImg" style="position:relative;" onmouseover="AchievementHover( this, event, $(\'global_hover\') )" onmouseout="HideAchievementHover( this, event, $(\'global_hover\') )" width="32" height="32" border="0" src="#{icon_closed}" data-ach-name="#{ach_name}" data-ach-description="#{ach_description}">');
 var gameInfoBarTextTemplate = new Template( '#{items_start} - #{items_end} of #{items_total} items' );
+var gameReviewButtonTemplate = new Template( "<a class=\"pullup_item\" href=\"https:\/\/store.steampowered.com\/recommended\/recommendgame\/#{appid}\">\r\n    <div class=\"menu_ico\">\r\n    <img src=\"https:\/\/community.cloudflare.steamstatic.com\/public\/images\/skin_1\/icon_rate.png\" width=\"16\" height=\"16\" border=\"0\" \/>\r\n<\/div>\r\nReview<\/a>\r\n" );
 
 function BuildGameRow( gameInfo, bViewingOwnProfile )
 {
@@ -267,6 +269,11 @@ function BuildGameRow( gameInfo, bViewingOwnProfile )
 				gameInfo['hours_message'] = gameHoursForeverTemplate.evaluate( gameInfo );
 			}
 		}
+	}
+
+	if ( bViewingOwnProfile )
+	{
+		gameInfo['review_button'] = gameReviewButtonTemplate.evaluate(gameInfo);
 	}
 
 	var linkspopup = gameLinksPopupTemplate.evaluate( gameInfo );
