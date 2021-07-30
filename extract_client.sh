@@ -87,10 +87,15 @@ echo Prettifying javascript
 
 while IFS= read -r -d '' file
 do
+	if [[ "$file" == steamui/localization/* ]]
+	then
+		continue
+	fi
+
 	echo "Prettifying $file"
 
 	npm run prettier "$(pwd)/$file"
-done <   <(find steamui/ clientui/ -maxdepth 1 -name '*.js' -print0)
+done <   <(find steamui/ clientui/ \( -name '*.js' -o -name '*.css' \) -print0)
 
 #
 # CHANGE CRAPPY ENCODINGS TO UTF-8
