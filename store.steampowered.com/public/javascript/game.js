@@ -2000,6 +2000,12 @@ function ReparentAppLandingPageForMobileUX()
 			$J('#shareImg').attr('src', 'https://store.cloudflare.steamstatic.com/public/shared/images/icon_share_ios.svg' );
 		}
 
+		// reveal all language options within the languageTable
+		var $LanguageOptions = $J('#languageTable').find('tr');
+		$LanguageOptions.each( function() {
+			$J(this).css('display','');
+		} );
+
 		// to reduce popup noise remove toolip text if element doesn't include tooltip class 
 		var $TooltipTextElements = $J("[data-tooltip-text]");
 		$TooltipTextElements.each( function() {

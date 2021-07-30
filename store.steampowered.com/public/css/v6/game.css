@@ -5709,6 +5709,53 @@ body.v6 .page_content.notes {
     color: #9aa8b7;
 }
 
+/* to make the dlc list look good on mobile we make the row a flex row, and
+   re-order the elements so price is last.  Apply these changes to all screen sizes so we
+   can easily support resizing between small and large screens */
+.game_area_dlc_row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 4px !important;
+}
+.game_area_dlc_name {
+	padding-right: 5px;
+	padding-left: 8px;
+}
+.game_area_dlc_price {
+	text-align: right;
+	padding-right: 5px;
+	position: unset;
+	flex-shrink: 0;
+}
+
+/* Share dialog styles */
+.share.share_dialog .share_dialog_content {
+	margin-top: 20px;
+	margin-right: 12px;
+}
+.share.share_dialog .share_dialog_value {
+	font-family: "Motiva Sans", Sans-serif;
+	font-size: 16px;
+	width: 100%;
+	background-color: unset;
+	color: white;
+	padding: 4px;
+	border: 1px solid #333333;
+	box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.4);
+	outline: none;
+	resize: none;
+}
+.share.share_dialog .share_dialog_result {
+	margin-top: 10px;
+	text-align: center;
+	min-height: 24px;
+}
+.share.share_dialog > a > img {
+	height: 48px;
+	width: 48px;
+}
+
 .responsive_release_date_text,
 .responsive_reviewdesc_short,
 .responsive_add_to_wishlist,
