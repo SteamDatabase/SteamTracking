@@ -1,8 +1,8 @@
 __TEXT
 __text
 __TEXT
-PZ
-PZ
+`Z
+`Z
 __stubs
 __TEXT
 __stub_helper
@@ -105,7 +105,7 @@ echo ERROR: must set fs_target=targetpath (ie. "set fs_target=u:\destdir")!
 ---FS:  %s %s
 open
 ---FS:  close %s %p %i
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/filesystem/BaseFileSystem.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/filesystem/BaseFileSystem.cpp
 Tried to close unknown file pointer %p
 ---FS:  read %s %llu %p
 Tried to read %llu bytes from unknown file pointer %p
@@ -202,16 +202,16 @@ m_OpenedFiles
 m_OpenedFileHandles
 m_FileNames
 Assertion Failed: (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlvector.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 Assertion Failed: static_cast<_in>( ret ) == i
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/dbg.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/dbg.h
 Assertion Failed: ( i < 0 ) == ( ret < 0 )
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlsymbol.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlsymbol.h
 Assertion Failed: pPool->m_SpaceUsed < 0xFFFF
 Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
 Assertion Failed: (unsigned)elem <= (unsigned)m_Size
 Assertion Failed: IsValidIndex(elem)
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utldict.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utldict.h
 m_Memory
 CUtlDict
 m_Elements
@@ -220,7 +220,7 @@ CUtlSymbolTable
 m_StringPools
 m_Lookup
 Assertion Failed: !m_bMounted
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/filesystem/filesystem_stdio/filesystem_stdio.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/filesystem/filesystem_stdio/filesystem_stdio.cpp
 Assertion Failed: !strchr(filename, '\n') && !strchr(filename, '\r')
 VFileSystem014
 VBaseFileSystem008
@@ -232,7 +232,7 @@ g_PathIDTable
 CUtlSymbol::ValidateGlobals
 .
 V_RemoveDotSlashes failed for "%s".
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/fileio.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
 %s%c%s
 /
 ..
@@ -240,7 +240,7 @@ CPathString
 .dylib
 %s/%s%s
 Assertion Failed: strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/interface.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/interface.cpp
 .cpl
 %s
 g_VecLoadedModules
@@ -248,7 +248,7 @@ Assertion Failed: g_VecLoadedModules[ iLoadedModules ].m_cRef > 0
 CreateInterface
 "
 Assertion Failed: info.m_pReplacementString == 0
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
 n
 t
 v
@@ -259,13 +259,13 @@ a
 ?
 '
 Assertion Failed: nSizeOfType > 0
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
 Assertion Failed: nGrowSize >= 0
 Assertion Failed: m_nAllocationCount >= 0
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 Assertion Failed: num > 0
 Assertion Failed: s_bAllowStaticSymbolTable
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
 s_pSymbolTable
 0
 
@@ -279,3 +279,4 @@ s_pSymbolTable
 @
 =*.*
 Ic
+%

@@ -100,9 +100,9 @@ Z,
 Hi
 H=
 "
+K&
 
 =)
-3&
 ?
 &
 Ic
@@ -1463,7 +1463,7 @@ Force Steam to run on your primary CPU only
 CIPCServer::m_ThreadClient
 Terminating m_ThreadClient, likely to crash down the line... but avoiding hang on exit
 Illegal character (\) in IPC name.
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/ipcserver.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/ipcserver.cpp
 error: InitIPC called on an initialized IPCServer with conflicting cross-process/session flag.
 error: IPCServer can't be cross user session but not cross process.
 Assertion Failed: m_ThreadClient.IsAlive() == false
@@ -1485,21 +1485,21 @@ adding pipe event to the same waiter twice
 Assertion Failed: m_count > 0
 CPipeWaiter::BRemove(%d) -- not present
 Assertion Failed: m_pObj
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/scheduledfunction.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/scheduledfunction.h
 Assertion Failed: m_Func
 Assertion Failed: m_TotalElements != InvalidIndex()
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utllinkedlist.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utllinkedlist.h
 %s overflow!
 Assertion Failed: IsValidIndex(elem)
 Assertion Failed: IsInList(before)
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
 Assertion Failed: _IsValidIndex( elem, unNodeSize, pMemBase )
 Assertion Failed: _IsValidIndex( y, unNodeSize, pMemBase )
 Invalid index %u
 m_Memory
 %s-%x
 Assertion Failed: m_dwProcessID
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/pipes.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/pipes.cpp
 Assertion Failed: m_pSingleProcessPipe == NULL
 Accept returned true but returned a NULL pipe
 Assertion Failed: false
@@ -1507,7 +1507,7 @@ Assertion Failed: m_dwThreadID == ThreadGetCurrentId()
 CServerPipe::SerializeCallbacks()
 Assertion Failed: !pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
 Assertion Failed: bManualReset
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/processpipe_posix.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/processpipe_posix.cpp
 Assertion Failed: m_fds[1] != k_SOCKET_WRAPPER
 invalid name/address:port string provided to BSetIpPortFromName %s
 socket creation failed: %s
@@ -1534,16 +1534,16 @@ Steam3Master
 127.0.0.1:57343
 SteamClientService
 127.0.0.1:57344
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/tslist.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/tslist.h
 Assertion Failed: m_Count == 0
 Assertion Failed: pNode && pNode->Next == QueueEnd()
 Missing String for %s (%d)
 Unknown
 Assertion Failed: hSteamUser == 0
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/SteamServiceClient/serviceengine.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/SteamServiceClient/serviceengine.cpp
 Assertion Failed: !"Interface type not found"
 Fencepost deserialize mismatch in %s::%s
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/interfacemap_service.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/interfacemap_service.h
 )
 ) =
 Unknown IPC call %s::0x%x
@@ -1551,17 +1551,17 @@ Unknown IPC call %s::0x%x
 0x%llX,
 ClientModuleManagerPool
 Assertion Failed: m_pWorkThread == NULL
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/SteamServiceClient/servicemodulemanagerasync.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/SteamServiceClient/servicemodulemanagerasync.cpp
 ClientModuleManagerThread
 Assertion Failed: eCallResult != k_ECallResultNone
 Assertion Failed: IsRunning()
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/cumulativetimer.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/cumulativetimer.h
 CWorkItemFunctionCall
 CWorkItemFunctionCall::ThreadProcess
 Assertion Failed: m_iRefs > 0 && m_iRefs < 0x1000000
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/refcount.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/refcount.h
 Assertion Failed: *pCallResult != k_ECallResultNone
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/SteamServiceClient/servicemodulemanagerbase.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/SteamServiceClient/servicemodulemanagerbase.cpp
 Assertion Failed: pModule->m_nLastResult != k_ECallResultNone
 Unimplemented function
 Invalid service module
@@ -1572,19 +1572,19 @@ _runfunc
 vsrvmodule
 Assertion Failed: IsValidIndex( elem )
 Assertion Failed: m_activeProcessIdToImagePath.NextInorder( nNewIndex ) == nMapIndex
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/SteamServiceClient/serviceprocessmonitor.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/SteamServiceClient/serviceprocessmonitor.cpp
 Assertion Failed: !m_bIsInCallback
 Assertion Failed: !GetRefCount()
 Assertion Failed: pEventHeaders
 Assertion Failed: static_cast<int>( nStartEventIndex ) <= m_eventHeaders.Count()
 Assertion Failed: bitNum >= 0 && bitNum < this->Size()
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/bitstring.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/bitstring.h
 Assertion Failed: m_iRefs >= 0 && m_iRefs < 0x0ffffff
 CUtlHashMap::RemoveAt - Invalid index
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlhashmap.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlhashmap.h
 CUtlHashMap::RemoveAt - couldn't find bucket for item
 Assertion Failed: m_heap.IsValidIndex(index)
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlpriorityqueue.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlpriorityqueue.h
 SOFTWARE\Khronos\Vulkan
 resource\registrykeys.vdf
 whitelist
@@ -7908,7 +7908,7 @@ RSA-SHA1-2
 RSA-SHA1
 RSA-PSS
 Assertion Failed: (int)(intp)m_hParam != -1
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vstdlib/commandline.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/commandline.cpp
 Assertion Failed: m_bInitialized
 Parameter file '%s' not found, skipping...
 %s=%s
@@ -7926,7 +7926,7 @@ m_listCommandLineOption
 Assertion Failed: (elem == Count()) || IsValidIndex(elem)
 Not continuing coroutine due to g_bPreventCoroutineContinue, %s
 Assertion Failed: GCoroutineMgr().IsValidCoroutine(hCoroutine)
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vstdlib/coroutine.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/coroutine.cpp
 Assertion Failed: Coroutine_IsActive()
 (main)
 (none)
@@ -7935,7 +7935,7 @@ Assertion Failed: m_pStackHigh
 Assertion Failed: m_pSavedStack
 Restoring saved stack over RestoreStackFrame (%p, %p, %p, %p)
 Assertion Failed: m_VecCoroutineStack.Count() > 1
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vstdlib/debugstatssystem.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/debugstatssystem.cpp
 String pool bytes used %u, max %u, %u pools
 Total number of strings %u, longest string size %u, avg size %u
 Total of %u buckets with %u hash collisions
@@ -7945,13 +7945,13 @@ nTotal number of strings %u, longest string size %u, avg size %u
 Leaked KeyValues (%u):
 %s (%u)
 Assertion Failed: size < INT_MAX
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vstdlib/keyvaluessystem.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/keyvaluessystem.cpp
 CKeyValuesSystem::AddStringToPool: key name too long (%u chars)
 CKeyValuesSystem::AddStringToPool: out of memory
 CKeyValuesSystem::AddStringToPool: running out of memory (%u bytes left)
 /System/Library/Frameworks/OpenGL.framework/OpenGL
 Failed to load opengl framework!!!
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
 CGLSetCurrentContext
 CGLGetCurrentContext
 CGLChoosePixelFormat
@@ -7961,7 +7961,7 @@ CGLDestroyContext
 CGLGetParameter
 defaults read /System/Library/CoreServices/SystemVersion.plist ProductVersion
 Assertion Failed: dest != NULL
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vstdlib/strtools.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/strtools.cpp
 Assertion Failed: src != NULL
 Assertion Failed: count == 0 || s1 != NULL
 Assertion Failed: count == 0 || s2 != NULL
@@ -7981,7 +7981,6 @@ Assertion Failed: destCapacity != 0
 .
 bytes
 GB
-MB
 KB
 %i%s
 %lld
@@ -8002,21 +8001,22 @@ p
 0123456789ABCDEF
 Assertion Failed: str != NULL
 Assertion Failed: prefix != NULL
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlstring.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 Assertion Failed: !pszString || pszString[nChars] == '\0'
 Assertion Failed: nBytes
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
 Assertion Failed: (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlvector.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
+%u
 %llu
 invalid input pointer
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vstdlib/strtools_unicode.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/bitstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/strtools_unicode.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/bitstring.cpp
 Assertion Failed: resizeNumBits >= 0
 Assertion Failed: !m_pInt
 Assertion Failed: GetInts()
 Assertion Failed: pName
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/convar.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/convar.cpp
 Assertion Failed: m_vecCallbacks.Count() == 0 || !callback
 Assertion Failed: m_pParent == this
 ConVar::InternalSetValue: called with NULL
@@ -8029,7 +8029,7 @@ Attempted to change replicated CVar when you are not the GM
 FCVAR_NEVER_AS_STRING
 Bad expression token: %c at %d in %s
 Bad expression token: %c %c
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/fileio.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s
 flock LOCK_EX request but file is not opened for writing, ignoring: %s
 flock %s %s failed. errno = %d
@@ -8062,7 +8062,7 @@ CPathString
 .dylib
 %s/%s%s
 Assertion Failed: strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/interface.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/interface.cpp
 .cpl
 %s%s
 0123456789abcdef
@@ -8070,7 +8070,7 @@ Assertion Failed: strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICO
 ]:%u
 port
 ReadToken overflow
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/KeyValues.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/KeyValues.cpp
 "
 {
 KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.
@@ -8116,28 +8116,28 @@ KeyValues Error: %s in file %s [offset: %d]
 *),
 Memory leak: mempool blocks left in memory: %d
 CMemoryPool::AddNewBlob: mode == GROW_NONE
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/mempool.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/mempool.cpp
 Assertion Failed: blobSize <= nMaxBlobSize
 Fatal Assertion Failed: pBlob
 CMemoryPool::Alloc: ran out of memory
 Assertion Failed: k_nMemPoolMagic_Free == *(( (int *) returnBlock) - 1)
 Assertion Failed: k_nMemPoolMagic_InUse == *(( (int *) pMem) - 1)
 CMemoryPool
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/netadr.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/netadr.cpp
 loopback
 broadcast
 %i.%i.%i.%i
 %i.%i.%i.%i:%i
 Address too small!
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/netadr.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/netadr.h
 Assertion Failed: ( blockSize % TSLIST_NODE_ALIGNMENT ) == 0
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/tsmempool.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/tsmempool.cpp
 Assertion Failed: blockSize > sizeof(FreeListItem_t)
 Assertion Failed: (int)amount <= m_cubBlockSize
 Failed MemAlloc_AllocAligned in CThreadSafeMemoryPool::Alloc, out of memory?
 Assertion Failed: m_cBlocksInUse.GetRaw() > 0
 Assertion Failed: info.m_pReplacementString == 0
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
 Expected %lld but got %lld!
 Assertion Failed: pConv && pConv->GetDelimiterLength() > 0
 Assertion Failed: pFmt
@@ -8156,7 +8156,7 @@ a
 '
 %.18g
 Assertion Failed: nSizeOfType > 0
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
 Assertion Failed: nGrowSize >= 0
 Assertion Failed: m_nAllocationCount >= 0
 Assertion Failed: m_unSizeOfElements == mem.m_unSizeOfElements
@@ -8165,11 +8165,11 @@ nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 Assertion Failed: num > 0
 Assertion Failed: num >= 0
 Assertion Failed: IsPowerOfTwo( nNewCapacity )
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlqueue.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlqueue.cpp
 Assertion Failed: nPreSplit > 0 && nPreSplit + nPostSplit == nCount
 Assertion Failed: ( m_iHead & nNewCapacityMask ) == nNewCapacity - nPreSplit
 CUtlString::SetValue
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
 CUtlString::VFormat
 CUtlString::VAppendFormat
 Assertion failed: length > k_cchMaxString
@@ -8195,17 +8195,17 @@ DONT_BREAK_ON_ASSERT
 Fatal assert; application exiting
 Fatal assert
 _ExitOnFatalAssert
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/threadtools.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/threadtools.h
 Assertion Failed: m_cReentrancyCount >= 0
 Failed to generate callstack
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/memblockhdr.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memblockhdr.cpp
 Assertion Failed: stack%2d: %s
 Stack%2d: %s
 Assertion Failed: stack%2d: 0x%llX
 Stack%2d: 0x%llX
 Assertion Failed: ppFrames[iFrame] != NULL
 Assertion Failed: ((size_t)(m_nLogicalBytesAllocated) % 8) == 0
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/memstd.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memstd.cpp
 No tracked allocs currently in use. Total %d
 Tracked allocs currently in use. %d Total %d
 item %p sentinel corrupted. skipping.
@@ -8217,9 +8217,9 @@ OUT OF MEMORY
 Assertion Failed: (iub & (m_nSizeWithStack-1)) == 0
 Assertion Failed: pAllocTracker->m_uSentinel == 0xaa110ced
 Assertion Failed: pLeft->m_iStackPC <= V_ARRAYSIZE(pLeft->m_StackPC)
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/memblockhdr.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/memblockhdr.h
 Someone called SetWritingMinidump without holding the minidump lock.
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/minidump.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/minidump.cpp
 Someone called ClearWritingMinidump without holding the minidump lock.
 Assert( %s ):%s:%d
 MacOS
@@ -8228,10 +8228,9 @@ crashhandler003
 crashhandler002
 crashhandler.dylib
 CreateInterface
-%u
 1.0
 Jul 29 2021
-12:50:47
+17:12:52
 Jan
 Feb
 Mar
@@ -8251,13 +8250,13 @@ CatchAndWriteContext_t::Invoke with bogus void *ptr
 CatchAndWriteContext_t::Set w/o a function pointer!
 /dev/urandom
 Fatal Assertion Failed: s_dev_urandom_fd >= 0
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/platform_posix.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/platform_posix.cpp
 Fatal Assertion Failed: urandom_result > 0 || ( urandom_result < 0 && errno == EINTR )
 MainThrd
 pthread_setname_np
 r
 Thread synchronization object is unuseable
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/threadtools.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/threadtools.cpp
 Semaphore name (%s) is longer than POSIX can handle, truncating.
 m
 USER
@@ -8276,19 +8275,20 @@ Thread cannot be joined with self
 Probably deadlock or failure waiting for thread to initialize.
 CTSListBase: Misaligned list
 %d.%d.%d.%d:%d
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/validator.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/validator.cpp
 CValidator : too many memory nodes to store, try again with a higher threshold value
 Assertion Failed: NULL != m_pValObjectCur
 s
 console
 GiB
 MiB
+MB
 KiB
 %%.%if%s
 Assertion Failed: NULL == pValObjectPrev->m_pValObjectNext
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/valobject.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/valobject.cpp
 Assertion Failed: !g_VProfile
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/vprof.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/vprof.cpp
 Assertion Failed: pszName
 Assertion Failed: m_nRecursions > 0
 Avg Time/Frame (ms)
@@ -8347,19 +8347,19 @@ Assertion Failed: eGroup < VPROF_BUDGETGROUP_MAX
 No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
 WARNING: Disabling vprof spike dumping and stopping profile for thread %d - %s because of exceeded rate limit, try a higher threshold.
 Assertion Failed: m_pParent
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/vprof.h
 Assertion Failed: m_pszName
 allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto_digest_openssl.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_digest_openssl.cpp
 CCrypto::GenerateSHA1Digest
 Assertion Failed: pOutDigest
 Fatal Assertion Failed: SHA1_Init( &c )
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto_rsa_openssl.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_rsa_openssl.cpp
 Assertion Failed: pubData
 Assertion Failed: rsaKey.IsValid()
 Assertion Failed: pubSignature
 CCrypto::RSAVerifySignature
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto_textencode.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_textencode.cpp
 CCrypto::HexDecode
 Assertion Failed: pchData
 Assertion Failed: pDecodedData
@@ -8376,7 +8376,7 @@ NULL output buffer with non-zero size passed to Base64Decode
 CCrypto::Base64Decode: insufficient output buffer (up to n*3/4+2 bytes required)
 BEGIN
 END
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/keypair.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/keypair.cpp
 Key type %d doesn't know how to load from buffer
 PRIVATE KEY
 Assertion Failed: eKeyType == k_ECryptoKeyTypeRSAPublic
@@ -8392,16 +8392,16 @@ NIL
 %04u%02u%02u%02u%02u%02u
 %04u-%02u-%02u %02u:%02u:%02u
 CStatT<T>::Update: called on class that was not initialized.
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/stat.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/stat.cpp
 Assertion Failed: m_iSampleBucketCurrent < m_cSampleBuckets
 Assertion Failed: m_iSampleBucketLast < m_cSampleBuckets
 @nIOCPThreadCount
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/completionportmanager.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/completionportmanager.cpp
 DispatchCompletedItem
 DispatchCompletedItem - error
 Assertion Failed: ulResult != 0
 CCompletionPortManager::IOCPWorkerThread: got 100 consecutive errors, last error %d (%s), IOCP thread aborting and exiting
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/completionportmanager_posix.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/completionportmanager_posix.cpp
 Assertion Failed: BStarted()
 Assertion Failed: !m_bDispatchStopped
 Assertion Failed: pCompletionData->pNext == NULL && pCompletionData->nPollFlags != 0
@@ -8416,7 +8416,7 @@ path
 domain
 version
 enums_clientserver.proto
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/enum_names.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/enum_names.cpp
 EUniverse
 Invalid
 Public
@@ -8445,7 +8445,7 @@ optional
 0
 This turns on the spew in SPEW_MISC at level 4, still need to adjust spew levels to see it.
 Assertion Failed: eFrameType < k_EFrameTypeMax
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/framefunction.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/framefunction.cpp
 Assertion Failed: pchName
 Assertion Failed: V_strlen( pchName ) < V_ARRAYSIZE( m_rgchName )
 Assertion Failed: m_iHistory < V_ARRAYSIZE( m_rgunMicroSecRunHistory )
@@ -8522,7 +8522,7 @@ Set-Cookie
 m_vecpHTTPClients
 private
 Unexpected thread race for CIOPollingHelper construction
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/iopollinghelpers_osx.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/iopollinghelpers_osx.cpp
 Assertion Failed: nStateFlags != 0
 Assertion Failed: m_watchTable.InvalidIndex() == m_watchTable.Find( socket )
 KQ: Error Unregistering read event KQ:%s
@@ -8531,7 +8531,7 @@ KQ: Error reading KQ:%s
 Assertion Failed: nPollRetVal > 0
 m_vecIPFilterRanges
 m_vecIPFilterRangesV6
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/job.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/job.cpp
 undefined
 Assertion Failed: this != g_pJobCur
 (unspecified)
@@ -8541,7 +8541,7 @@ CJobMgr::BFrameFuncRunUntilCompleted
 CJobMgr::m_WorkThreadPool
 CJobMgr::BFrameFuncRunSleepingJobs
 Assertion Failed: m_stackDoNotYieldGuards.Count() == 0
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/jobmgr.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/jobmgr.cpp
 CJobMgr -- Process Wait Detail Updates
 CJobMgr::BResumeYieldingJobs
 CJobMgr -- Dispatch completed work items
@@ -8555,7 +8555,7 @@ name
 @bEnableSpewThrottle
 1
 @bEnableLogTearOff
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/logger.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/logger.cpp
 Assertion Failed: pLogInstance == sm_pLogInstance
 Assertion Failed: sm_cRef > 0
 Assertion Failed: sm_bShuttingDown
@@ -8672,8 +8672,8 @@ VALVE_CRYPTO_dbg_free
 COpenSSLContext
 COpenSSLConnection
 OpenSSL random number system reports not enough entropy
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/opensslwrapper.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/platform_sockets_posix.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/opensslwrapper.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/platform_sockets_posix.cpp
 nBufferCount > %d not supported in %s
 AsyncSocketWrite
 Assertion Failed: pCompletion->type == IOTYPE_SEND || pCompletion->type == IOTYPE_UNBUFFEREDSEND
@@ -8683,7 +8683,7 @@ GetClientLauncherType
 /registry.vdf
 registry
 Failed loading registry KV.
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/registry.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/registry.cpp
 Could not read existing registry file.
 Overwriting on-disk registry with newly created registry.
 On-disk registry has changed and is marked dirty - we're about to lose data.
@@ -8707,13 +8707,13 @@ HKLM64
 Library/Application Support/Steam
 HOME
 Unable to get home directory
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/clientdirectories.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/clientdirectories.h
 SteamUniverse
 SteamRealm
 China
 CBaseScheduledFunction
 Assertion Failed: nMicroSeconds >= 0
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/scheduledfunction.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/scheduledfunction.cpp
 CScheduledFunctionMgr::BFrameFuncRun
 Assertion Failed: pBaseScheduledFunction->m_iScheduledItem == scheduledItem.m_iScheduledFunction
 Assertion Failed: pBaseScheduledFunction->GetDeadlineTime().LTime() >= m_lTimeNextDeadline
@@ -8737,7 +8737,7 @@ Assertion Failed: scheduledItem.m_ulTime
 30819D300D06092A864886F70D010101050003818B003081870281810093AFCC20E2393BFD1234FC5552E9A9D5610ECC4AC6891EBCC77C28018FCB31404C09A5DC11636CD97C1A022188AB680CFF063C830BA693A0F1A90E9A3E21E33EE731BD5B6AAB09B40A1A951C21ECD6B11CAB63B4840894F4F2F0CC9D24924DF7DB216FE7D9C0C5914A88DF501EF27ACB00D08101CC2AEC32DFAD498289DCF4BD020111
 30819d300d06092a864886f70d010101050003818b0030818702818100baeee6ba4093c07f86fb34fa2ed0c9660484dd02e2d7b4e2dbc0a7b80f088f42c34dffd633b4f79fd4956aa6b901d480da5d5f783fefd681b9fc517804b00451dfc3ecc7e16b11dcb0379dc1f9d00d0a7ab8f5d6aba57115f12256ed0c9e9bd4bf994dbbdd42cd019c5b023b3fd0005430c5305bdd46cce39a492753b0b5b355020111
 steammessages_base.proto
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/string_misc.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/string_misc.cpp
 @net_loopback
 @net_backlog_time_allowed_sec
 8
@@ -8764,7 +8764,7 @@ client/UDPSocket/SentPacket
 client/UDPSocket/RecvPacket
 CWorkThread -- Sleep
 Assertion Failed: pszThreadName != NULL
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/workthreadpool.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/workthreadpool.cpp
 CWorkThreadPool::~CWorkThreadPool(): Thread pool %s shutdown incorrectly.
 Assertion Failed: 0 == m_WorkThreads.Count()
 Assertion Failed: 0 == (int)m_cThreadsRunning
@@ -8798,9 +8798,9 @@ Z,
 Hi
 H=
 "
+K&
 
 =)
-3&
 ?
 &
 Ic
@@ -8818,10 +8818,10 @@ AT=
 D
 @
 @
-m%
+s%
 !
-`%
-X%
+O%
+:%
 @
 Hc
 Hc
@@ -8856,13 +8856,13 @@ IcE
 V
 =
 #
-=#
 &&
 #
 #
 =
 N%
 %
+d!
 @
 @
 ##
@@ -9253,8 +9253,8 @@ rc4(16x,int)
 RC4 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 j
 j
-j
 $
+[
 $
 
 
@@ -9271,13 +9271,10 @@ H=
 =*.*
 @
 @
-Q
+W
 J
-J
->
 P
 P
-:
 @
 @
 @
@@ -9285,6 +9282,7 @@ P
 @
 @
 0
+!
 0
 0
 0

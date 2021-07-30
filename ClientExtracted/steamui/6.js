@@ -15,12 +15,6 @@
           MainTabsSettings: "Settings",
           MainTabsSearch: "Search",
           MainTabsDownload: "Downloads",
-          ActionButtonLabelMenu: "Menu",
-          ActionButtonLabelSelect: "Select",
-          ActionButtonLabelBack: "Back",
-          ActionButtonLabelDismiss: "Dismiss",
-          ActionButtonLabelContextMenu: "Options",
-          ActionButtonLabelSearch: "Search",
           BigPictureMode: "Big Picture",
           BigPictureModeRunning: "Big Picture is Running",
           BigPictureModeRunningWithCancel:

@@ -2,8 +2,8 @@
 __TEXT
 __text
 __TEXT
-0?
-0?
+P?
+P?
 __stubs
 __TEXT
 __stub_helper
@@ -196,7 +196,7 @@ Invalid spew group
 [S_API FAIL] SteamAPI_Init() failed; ipcserver GetSteamPath failed.
 CLIENTENGINE_INTERFACE_VERSION005
 ClientAPI_InitGlobalInstance: InternalAPI_Init_Internal failed, most likely because you are missing a 32-bit dependency of steamclient.dylib (the Steam client is a 32-bit app).
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/client_api.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/steam/client_api.cpp
 ClientAPI_Init(GlobalInstance): GetIClientProductBuilder returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientDepotBuilder returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientInventory returned NULL.
@@ -254,7 +254,7 @@ Set the community URL
 Set the store URL
 /
 %s/
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlstring.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 Missing String for %s (%d)
 Unknown
 OK
@@ -268,7 +268,7 @@ Unknown version %d for vpk %s
 %s_%03d.vpk
 /../
 fread() failed
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vpklib/packedstore.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vpklib/packedstore.cpp
 Assertion Failed: nRead == nNumBytes
 rb
 Exceeded limit of number of vpk files supported (%d)!
@@ -276,7 +276,7 @@ Exceeded limit of number of vpk files supported (%d)!
 %s%s%s crc=0x%x metadatasz=%d
 fnumber=%d ofs=0x%x sz=%d
 Assertion Failed: (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlvector.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 Assertion Failed: count >= 0
 Assertion Failed: !pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
 appid
@@ -325,7 +325,7 @@ app_license_request
 app_install_script
 <AppID> [uninstall:0|1]- Runs app install script.
 Assertion Failed: m_eAppInfoResult != k_EResultPending
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamconsole/appupdater.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamconsole/appupdater.cpp
 CAppInfoUpdater::OnAppInfoUpdate
 ERROR! AppInfo request for AppId %d returned error %s.
 CAppUpdater::OnCheckAppBetaPasswordResponse
@@ -407,7 +407,7 @@ version_%d
 Failed to publish file (1b)
 Failed to publish file (1c)
 Assertion Failed: IsValidIndex( elem )
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
 Assertion Failed: _IsValidIndex( elem, unNodeSize, pMemBase )
 Assertion Failed: _IsValidIndex( y, unNodeSize, pMemBase )
 m_mapAPICalls
@@ -428,7 +428,7 @@ Not valid controller config file or localization file: %s.
 ~
 %s%s
 Assertion Failed: IsText()
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
 @DepotBuilderConfigRoot
 ./depotscripts
 @DepotBuilderContentRoot
@@ -516,7 +516,7 @@ deltabranch
 ERROR! No valid depot specified for AppID %u
 Starting AppID %u build (flags 0x%x).
 Assertion Failed: m_vecDepotConfigKVs.Count() == m_vecDepotIDs.Count()
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamconsole/depotbuilder.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamconsole/depotbuilder.cpp
 Building depot %u...
 Successfully finished AppID %u build preview.
 ERROR! Failed to commit build for AppID %u : %s
@@ -742,13 +742,13 @@ ERROR! Missing parameters.
 ERROR! Failed to create new workshop item.
 ERROR! ClientRemoteStorage()->FileShare() failed.
 ERROR! ClientRemoteStorage()->PublishWorkshopFile() failed.
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/bitstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/bitstring.cpp
 Assertion Failed: resizeNumBits >= 0
 Assertion Failed: !m_pInt
 Assertion Failed: GetInts()
 {}()':
 Assertion Failed: pName
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/convar.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/convar.cpp
 Assertion Failed: m_fnCompletionCallback
 Assertion Failed: m_vecCallbacks.Count() == 0 || !callback
 Assertion Failed: m_pParent == this
@@ -769,7 +769,7 @@ Assertion Failed: !pszString || pszString[nChars] == '\0'
 Bad expression token: %c at %d in %s
 Bad expression token: %c %c
 V_RemoveDotSlashes failed for "%s".
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/fileio.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s
 flock LOCK_EX request but file is not opened for writing, ignoring: %s
 flock %s %s failed. errno = %d
@@ -795,7 +795,7 @@ Waited %u iterations in CFileWriter::Flush - m_cubOutstanding = %d
 ..
 Assertion Failed: cbActual < (uint32)nBufSizeWithTerminator
 CFileWriterThread
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/tslist.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/tslist.h
 Assertion Failed: m_Count == 0
 Assertion Failed: pNode && pNode->Next == QueueEnd()
 %s.async%u.tmp
@@ -817,13 +817,13 @@ CPathString
 .dylib
 %s/%s%s
 Assertion Failed: strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/interface.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/interface.cpp
 .cpl
 0123456789abcdef
 %%%d
 ]:%u
 ReadToken overflow
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/KeyValues.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/KeyValues.cpp
 "
 {
 KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.
@@ -870,13 +870,13 @@ KeyValues Error: %s in file %s [offset: %d]
 ,
 (*
 *),
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/netadr.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/netadr.cpp
 loopback
 %i.%i.%i.%i
 %i.%i.%i.%i:%i
 "
 Assertion Failed: info.m_pReplacementString == 0
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
 CUtlBuffer::GetStringFast: binary buffers only
 Expected %lld but got %lld!
 Assertion Failed: pConv && pConv->GetDelimiterLength() > 0
@@ -899,18 +899,18 @@ a
 '
 %.18g
 Assertion Failed: nSizeOfType > 0
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
 Assertion Failed: nGrowSize >= 0
 Assertion Failed: m_nAllocationCount >= 0
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 Assertion Failed: num > 0
 Assertion Failed: num >= 0
 Assertion Failed: IsPowerOfTwo( nNewCapacity )
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlqueue.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlqueue.cpp
 Assertion Failed: nPreSplit > 0 && nPreSplit + nPostSplit == nCount
 Assertion Failed: ( m_iHead & nNewCapacityMask ) == nNewCapacity - nPreSplit
 CUtlString::SetValue
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
 CUtlString::VFormat
 CUtlString::ReplaceInternal
 Assertion Failed: pstrNew + nNewLength == pstrDestination + 1
@@ -927,7 +927,7 @@ CUtlStringBuilder::Data::MoveToHeap
 %02d/%02d/%02d
 00:00:00
 01/01/00
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/rtime.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/rtime.cpp
 Assertion Failed: V_strlen( pchTime ) == 25
 Infinite time value
 Nil time value
@@ -939,7 +939,7 @@ NIL
 %04u-%02u-%02u %02u:%02u:%02u
 steamclient.dylib
 EResult
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/enum_names.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/enum_names.cpp
 EUniverse
 false
 true
@@ -1139,7 +1139,7 @@ broadcast
 PS3
 @bEnableSpewThrottle
 @bEnableLogTearOff
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/logger.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/logger.cpp
 Assertion Failed: pLogInstance == sm_pLogInstance
 Assertion Failed: sm_cRef > 0
 Assertion Failed: sm_bShuttingDown
@@ -1193,11 +1193,11 @@ CLogInstance::EmitEventNow
 Last Message Repeated %d times.%s
 Assertion Failed: eGroup >= static_cast< ESpewGroup >( 0 ) && eGroup < k_ESpew_ArraySize
 CIPAndPort::GetIPv4 called on IPv6 address
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/netadr.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/netadr.h
 Assertion Failed: nBytes
 Assertion Failed: bitNum >= 0 && bitNum < this->Size()
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/bitstring.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/threadtools.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/bitstring.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/threadtools.h
 Assertion Failed: m_cReentrancyCount >= 0
 @nSpewThrottlePeriodMs
 @nSpewThrottleTriggerThreshold
@@ -1222,7 +1222,7 @@ Assertion Failed: m_cReentrancyCount >= 0
 [U:%u:%u]
 [a:%u:%u]
 [i:%u:%u]
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/string_misc.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/string_misc.cpp
 E
 0
 @

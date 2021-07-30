@@ -7667,10 +7667,10 @@
                       : r.CreateProfanityReplacement(e.length);
                   });
             }),
-            Object(n.c)([u.C], e.prototype, "m_TextFilterPreferences", void 0),
-            Object(n.c)([u.C], e.prototype, "m_mapPlayerCache", void 0),
-            Object(n.c)([u.C], e.prototype, "m_regexBannedWords", void 0),
-            Object(n.c)([u.C], e.prototype, "m_regexCleanWords", void 0),
+            Object(n.c)([u.B], e.prototype, "m_TextFilterPreferences", void 0),
+            Object(n.c)([u.B], e.prototype, "m_mapPlayerCache", void 0),
+            Object(n.c)([u.B], e.prototype, "m_regexBannedWords", void 0),
+            Object(n.c)([u.B], e.prototype, "m_regexCleanWords", void 0),
             Object(n.c)([u.k], e.prototype, "UpdateCommunityPreferences", null),
             Object(n.c)([u.k], e.prototype, "SetFriendsList", null),
             Object(n.c)([u.k], e.prototype, "BRebuildFilter", null),
@@ -7689,7 +7689,7 @@
               var r = this.GetChat(e, t);
               return r || ((r = new Ft()), this.m_mapChats.set(e || t, r)), r;
             }),
-            Object(n.c)([u.C], e.prototype, "m_mapChats", void 0),
+            Object(n.c)([u.B], e.prototype, "m_mapChats", void 0),
             e
           );
         })(),
@@ -7934,7 +7934,7 @@
                       return (
                         (r = n.sent()),
                         (e && e.token.reason) ||
-                          Object(u.G)(function () {
+                          Object(u.F)(function () {
                             var e = r.data;
                             (o.m_strChatURL = e.view_url_template),
                               (o.m_ulChatID = e.chat_id),
@@ -8779,20 +8779,20 @@
                 (this.m_rgChatMessages = []);
             }),
             Object(n.c)(
-              [u.C],
+              [u.B],
               e.prototype,
               "m_mapChannelModeratorUsers",
               void 0
             ),
             Object(n.c)(
-              [u.C],
+              [u.B],
               e.prototype,
               "m_mapBroadcastModeratorUsers",
               void 0
             ),
-            Object(n.c)([u.C], e.prototype, "m_nRateLimitSeconds", void 0),
-            Object(n.c)([u.C], e.prototype, "m_bRateLimited", void 0),
-            Object(n.c)([u.C], e.prototype, "m_rgChatMessages", void 0),
+            Object(n.c)([u.B], e.prototype, "m_nRateLimitSeconds", void 0),
+            Object(n.c)([u.B], e.prototype, "m_bRateLimited", void 0),
+            Object(n.c)([u.B], e.prototype, "m_rgChatMessages", void 0),
             Object(n.c)([wt.a], e.prototype, "FetchChatModerators", null),
             Object(n.c)([wt.a], e.prototype, "RequestLoop", null),
             Object(n.c)([wt.a], e.prototype, "MuteUserForSession", null),
@@ -9422,7 +9422,7 @@
                   : null
               );
             }),
-            Object(n.c)([u.C], t.prototype, "m_chat", void 0),
+            Object(n.c)([u.B], t.prototype, "m_chat", void 0),
             Object(n.c)([Ht.a], t.prototype, "StartChat", null),
             Object(n.c)([Ht.a], t.prototype, "ChatBoxChange", null),
             Object(n.c)([Ht.a], t.prototype, "ChatBoxKeypress", null),

@@ -790,7 +790,7 @@ r
 ../Info.plist
 ../..
 Assertion Failed: (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlvector.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 1.5.26
 PNG load error %s
 PNG load warning %s
@@ -798,7 +798,7 @@ LoadTGA: Only type 2 and 10 targa RGB images supported
 Texture_LoadTGA: Only 32 or 24 bit images supported (no colormaps)
 Assertion Failed: 0
 Assertion Failed: m_Fonts[i].font->IsValid()
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/vgui_surfacelib/FontAmalgam.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/vgui_surfacelib/FontAmalgam.cpp
 CFontAmalgam
 m_Fonts
 m_strName
@@ -806,7 +806,7 @@ m_Memory
 deferredFontName
 en_US.UTF-8
 Assertion Failed: font != vgui::INVALID_FONT
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/vgui_surfacelib/FontManager.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/vgui_surfacelib/FontManager.cpp
 Assertion Failed: descs.Count() >= 1
 Assertion Failed: m_FontAmalgams.IsValidIndex( font )
 Marlett
@@ -832,7 +832,7 @@ name
 CFontDataFile
 Assertion Failed: !pArray || (Base() >= (pArray + size)) || (pArray >= (Base() + Count()) )
 Assertion Failed: count >= 0
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlsymbol.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlsymbol.h
 Assertion Failed: pPool->m_SpaceUsed < 0xFFFF
 Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
 Assertion Failed: !pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
@@ -843,7 +843,7 @@ m_StringPools
 m_Lookup
 bold
 Assertion Failed: !"Context ref not setup to allow GetStringRGBA"
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/vgui_surfacelib/osxfont.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/vgui_surfacelib/osxfont.cpp
 Assertion Failed: !"Unable to convert string"
 Assertion Failed: !"Unable to set layout"
 Assertion Failed: !"Unable to set matching"
@@ -854,10 +854,10 @@ COSXFont
 m_ExtendedABCWidthsCache
 Helvetica Bold
 vgui::Bitmap
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vector2d.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/vector2d.h
 Assertion Failed: vOther.IsValid()
 Assertion Failed: texCoords
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/src/fonttexturecache.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/fonttexturecache.cpp
 No valid page for string texture of %dx%d size
 Invalid width or height to AllocatePageForString()
 Assertion Failed: m_rgPageLists[pagetype].IsValidIndex( pageIndex )
@@ -865,12 +865,12 @@ Assertion Failed: drawY >= 0
 Assertion Failed: drawY < page.tall
 Assertion Failed: false
 Assertion Failed: IsValidIndex(elem)
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utllinkedlist.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utllinkedlist.h
 Assertion Failed: IsInList(before)
 Assertion Failed: m_TotalElements != InvalidIndex()
 %s overflow!
 Assertion Failed: IsValidIndex( elem )
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
 Assertion Failed: _IsValidIndex( elem, unNodeSize, pMemBase )
 Assertion Failed: _IsValidIndex( y, unNodeSize, pMemBase )
 Invalid index %u
@@ -927,7 +927,7 @@ zZKEY_Z
 =+KEY_EQUAL, L
 KEY_SPACE
 Assertion Failed: context != DEFAULT_INPUT_CONTEXT
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/src/inputbase.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/inputbase.cpp
 Assertion Failed: (context == DEFAULT_INPUT_CONTEXT) || m_Contexts.IsValidIndex(context)
 -vguifocus
 Print out details of which panel has keyboard focus
@@ -997,13 +997,13 @@ g_pInputBase
 VGUI_Input005
 VGUI_InputInternal001
 CInputOSX SetCursorPos not implemented
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/src/inputosx.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/inputosx.cpp
 LayoutFile
 render
 render_bg
 style
 Assertion Failed: !style->IsDirty()
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/src/layoutfile.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/layoutfile.cpp
 parsing of file '%s' failed
 error loading file '%s', %s
 %d %d %d %d
@@ -1148,7 +1148,7 @@ m_dictColors
 m_vecBaseStyleSets
 m_mapStyleLists
 m_kvSettings
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlstring.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 font-outerglow-filtersize
 textcolor
 bgcolor
@@ -1156,7 +1156,7 @@ shadowtextcolor
 selectedtextcolor
 selectedbgcolor
 Assertion Failed: bitNum >= 0 && bitNum < this->Size()
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/bitstring.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/bitstring.h
 m_pkv
 Element( i )
 m_sName
@@ -1170,7 +1170,7 @@ m_pRef->m_pT
 m_vecHashBuckets
 m_memNodes
 m_bitsMigratedBuckets
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utldict.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utldict.h
 m_vecParentNames
 -ccsyntax
 Spew details about the localized strings we load
@@ -1198,7 +1198,7 @@ wb
 }}
 reloading localization file %s
 Assertion Failed: s_pTable
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/src/LocalizedStringTable.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/LocalizedStringTable.cpp
 Bad format string in CLocalizeStringTable::ConstructString
 Assertion Failed: !("CLocalizedStringTable::ConstructString - Found a %s# escape sequence who's index was more than the number of args.")
 CLocalizedStringTable
@@ -1229,7 +1229,7 @@ None
 Vertical
 SetAlpha
 Assertion Failed: flFrameTime < panel.m_flLastEventTime + m_flFadeOutTime
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/src/NotificationManager.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/NotificationManager.cpp
 Invalid m_Position for NotificationManager!
 VGUI_NotificationManager002
 CNotificationManager
@@ -1238,7 +1238,7 @@ m_vecPanelList
 g_NotificationManager
 VGUI_Scheme010
 Assertion Failed: !"Invalid scheme requested."
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/src/Scheme.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/Scheme.cpp
 Scheme
 SKIN
 GAME
@@ -1298,7 +1298,7 @@ CUtlDict
 -pid
 Pid that we should be watching for
 Assertion Failed: m_fdShMemFDSender >= 0
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/src/SerializedSurface.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/SerializedSurface.cpp
 /tmp/steam_chrome_overlay_uid%d_spid%s
 Assertion Failed: top >= 0
 Assertion Failed: m_PaintStateStack[top].m_pPanel == pPanel
@@ -1341,13 +1341,13 @@ oldwide
 oldtall
 Valve Steam GameOverlay
 Assertion Failed: nBytes
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/src/surface_base.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/surface_base.h
 CUtlHashMap::RemoveAt - Invalid index
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlhashmap.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlhashmap.h
 CUtlHashMap::RemoveAt - couldn't find bucket for item
 ChromeHTML_Controller_003
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/src/surface_base.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/surface_base.cpp
 CBaseSurface::PushMakeCurrent
 Assertion Failed: !"Warning: VPanel with no drawing context"
 Assertion Failed: font != INVALID_FONT
@@ -1409,7 +1409,7 @@ g_pInternalSurface
 FontManager()
 Assertion Failed: !pszString || pszString[nChars] == '\0'
 Assertion Failed: m_iStart <= m_iEnd
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vgui/ISurface.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/vgui/ISurface.h
 Assertion Failed: IsInList(after)
 Assertion Failed: !"Current texture not set"
 Assertion Failed: wide && tall
@@ -1423,7 +1423,7 @@ description
 T@"NSString",R,C
 debugDescription
 unmarkText was called, this is unexpected
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/src/surface_osx.mm
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/surface_osx.mm
 ApplyBlurAndTransparencyToTextBitmap
 MainMenu
 Apple
@@ -1483,7 +1483,7 @@ Assertion Failed: plat->m_pNSWindow == window
 IsPointInCaptureRegion
 Assertion Failed: !"Failed to create CGLayer"
 Assertion Failed: !"Implement me"
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/src/surface_osx.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/surface_osx.h
 DeviceChange
 v16@?0@"NSNotification"8
 template <class T> CBaseOSXSurface<T>::RunFrame - nextEvent
@@ -1508,7 +1508,7 @@ com.apple.pasteboard.clipboard
 /usr/bin/open
 public.utf8-plain-text
 Assertion Failed: dialogName && *dialogName
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/src/system_posix.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/system_posix.cpp
 %s_%d
 UserConfigData
 Assertion Failed: !"CSystem::CreateShortcut"
@@ -1518,7 +1518,7 @@ Assertion Failed: !"CSystem::ModifyShortcutTarget"
 m_pUserConfigData
 g_System
 Assertion Failed: maxUnitCount == 1 || maxUnitCount == 2
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/src/timeutils.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/timeutils.cpp
 Assertion Failed: secondsInterval >= 0
 #vgui_TimeLeft
 Remaining
@@ -1530,7 +1530,7 @@ Total Panels %u, total size in Kb %u
 -vguimessages
 set to see debug vgiui2 messages
 Assertion Failed: context != DEFAULT_VGUI_CONTEXT
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/src/vgui.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/vgui.cpp
 Assertion Failed: (context == DEFAULT_VGUI_CONTEXT) || m_Contexts.IsValidIndex(context)
 INotificationManager()->RunFrame()
 surface()->RunFrame()
@@ -1573,7 +1573,7 @@ g_VGui
 CUtlSymbol::ValidateGlobals
 VGUI_Surface039
 opengl vgui not supported on mac
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/src/vguisetup.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/vguisetup.cpp
 VGUISetup
 m_Factories
 m_GraphicsOptions
@@ -1581,7 +1581,7 @@ VGUI_Setup001
 g_VGuiSetup
 VGuiModuleLoader004
 Platform Error: module '%s' failed to initialize
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/src/vguisystemmoduleloader.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/vguisystemmoduleloader.cpp
 Platform
 steam/games/PlatformMenu.vdf
 PLATFORM
@@ -1602,7 +1602,7 @@ VFileSystem014
 VGUI_Panel010
 VGUI_Application_001
 Keycode not in range of s_pVirtualKeyToVGUI
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/src/vgui_key_translation.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/vgui_key_translation.cpp
 Assertion Failed: pDesc->macKeyCode == -1 || s_pVirtualKeyToVGUI[ pDesc->macKeyCode ] == 0
 Assertion Failed: s_pVGUIToVirtualKey[ keyMap[i].vguiKeyCode ] == 0
 Assertion Failed: s_pCharToVGUI[ (size_t)charForLayoutResolution ] == 0
@@ -1842,7 +1842,7 @@ Out of Memory
 libpng error: %s
 undefined
 libpng warning: %s
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/bitstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/bitstring.cpp
 Assertion Failed: resizeNumBits >= 0
 Assertion Failed: !m_pInt
 Assertion Failed: GetInts()
@@ -1859,7 +1859,7 @@ Bad expression token: %c at %d in %s
 Bad expression token: %c %c
 .
 V_RemoveDotSlashes failed for "%s".
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/fileio.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s
 flock LOCK_EX request but file is not opened for writing, ignoring: %s
 flock %s %s failed. errno = %d
@@ -1880,13 +1880,13 @@ m_listChangedFiles
 Assertion Failed: cbActual < (uint32)nBufSizeWithTerminator
 CPathString
 %s/%s%s
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/interface.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/interface.cpp
 g_VecLoadedModules
 Assertion Failed: g_VecLoadedModules[ iLoadedModules ].m_cRef > 0
 CreateInterface
 ReadToken overflow
 Assertion Failed: filesystem
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/KeyValues.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/KeyValues.cpp
 You should clear the KeyValues instance before calling this function or call MergeFromFile instead.
 "
 "
@@ -1942,7 +1942,7 @@ KeyValues Error: %s in file %s [offset: %d]
 %.18g
 %u
 Assertion Failed: info.m_pReplacementString == 0
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
 Expected %lld but got %lld!
 Assertion Failed: pConv && pConv->GetDelimiterLength() > 0
 Assertion Failed: nSize >= 0
@@ -1960,7 +1960,7 @@ a
 ?
 '
 Assertion Failed: nSizeOfType > 0
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
 Assertion Failed: nGrowSize >= 0
 Assertion Failed: m_nAllocationCount >= 0
 Assertion Failed: m_unSizeOfElements == mem.m_unSizeOfElements
@@ -1971,7 +1971,7 @@ Assertion Failed: num >= 0
 Assertion Failed: numElements <= m_nAllocationCount
 Assertion Failed: m_pMemory
 CUtlString::SetValue
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
 CUtlString::VFormat
 Assertion failed: length > k_cchMaxString
 CUtlStringBuilder::InternalPrepareBuffer
@@ -1981,14 +1981,14 @@ Assertion Failed: nMinCapacity <= k_nMaxStringSize
 Error State on string being set.
 CUtlStringBuilder::Data::MoveToHeap
 Assertion Failed: s_bAllowStaticSymbolTable
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
 s_pSymbolTable
 %02d:%02d:%02d
 %02d/%02d/%02d
 00:00:00
 01/01/00
 Missing String for %s (%d)
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/enum_names.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/enum_names.cpp
 Unknown
 EUniverse
 Invalid
@@ -1998,9 +1998,9 @@ Internal
 Dev
 SaveBufferToFile: couldn't open file "%s" in path "%s".
 LoadFileIntoBuffer: NULL parameters
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/filesystem_helpers.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/filesystem_helpers.cpp
 Assertion Failed: !"enum ELanguage order mismatched from Language_t s_LanguageNames, fix it!"
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/language.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/language.cpp
 zh_CN
 none
 English
@@ -2203,7 +2203,7 @@ SteamBootstrapper_GetEUniverse
 Registry
 registry
 Failed loading registry KV.
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/registry.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/registry.cpp
 Could not read existing registry file.
 %s/%s/%s
 HKLM
@@ -2220,11 +2220,11 @@ HKEY_LOCAL_MACHINE_WOW64_64
 HKLM64
 Library/Application Support/Steam
 Unable to get home directory
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/clientdirectories.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/clientdirectories.h
 SteamUniverse
 SteamRealm
 China
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/timeutils.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/timeutils.cpp
 vars
 days
 hours

@@ -1365,5 +1365,12 @@
 	"SteamNetSockets_PeerClose_App_Unusual": "Closed by remote application due to unusual or exceptional condition",
 	"SteamNetSockets_PeerClose_Ununusual": "The remote host encountered an unusual situation and closed the connection",
 	"SteamNetSockets_AppClose_Normal": "Closed",
-	"SteamNetSockets_AppClose_Unusual": "Closed by application due to unusual or exceptional condition"
+	"SteamNetSockets_AppClose_Unusual": "Closed by application due to unusual or exceptional condition",
+
+	"ActionButtonLabelMenu": "Menu",
+	"ActionButtonLabelSelect": "Select",
+	"ActionButtonLabelBack": "Back",
+	"ActionButtonLabelDismiss": "Dismiss",
+	"ActionButtonLabelContextMenu": "Options",
+	"ActionButtonLabelSearch": "Search"
 }

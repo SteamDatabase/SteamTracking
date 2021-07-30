@@ -2,8 +2,8 @@ __TEXT
 
 __text
 __TEXT
-@
-@
+`
+`
 __stubs
 __TEXT
 __stub_helper
@@ -829,7 +829,7 @@ com.valvesoftware.steam.ipctool
 ipcserver restart: expected: %d, got: %d
 StopJob
 Assertion Failed: (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlvector.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 Fatal on Lock(): Locked the floor, couldn't release the ceiling: %s
 Fatal on Release(): Locked the ceiling, couldn't release the floor: %s
 /BSem/%x
@@ -861,7 +861,7 @@ Failed creating read event %s
 Failed creating file mapping %s
 Failed creating view of file for %s
 Size on connection to existing CSharedMemStream doesn't match actual: %s, %u, %u
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/common/shmemstream.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/common/shmemstream.cpp
 Warning: Memory was locked for put while destructing!
 CSharedMemStream::Clear()
 Warning: Blocking wait on mutex failed in Clear: %d
@@ -885,7 +885,7 @@ m_pMapFile
 htmlmessages.proto
 CUIProtoBufMsg::SerializeCrossProc
 Assertion Failed: unSize < 128 * 1024 * 1024
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/htmlprotobuf.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/html/htmlprotobuf.cpp
 Assertion Failed: eCmd > 0 && eCmd < eHTMLCommands_None
 Assertion Failed: pBuffer->TellPut() == 0
 CUIProtoBufMsg::BDeserialize
@@ -894,7 +894,7 @@ Assertion Failed: 0
 Disables new faster overlay HTML path (or enables if on a branch it's not on by default for)
 ChromeHTML_Controller_003
 Assertion Failed: BOffScreenRendererBrowser( eBrowserType )
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/html/chromewrapper.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/html/chromewrapper.cpp
 Assertion Failed: BDirectRendererBrowser( eBrowserType )
 Assertion Failed: pchVROverlayKey && pchVROverlayKey[0]
 widevine
@@ -975,17 +975,17 @@ m_mapBrowsers[i].m_sCustomCSS
 m_mapBrowsers[i].m_sUserAgent
 m_tsQueuedCommands
 HTMLController Commands
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/tslist.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/tslist.h
 Assertion Failed: m_Count == 0
 Assertion Failed: pNode && pNode->Next == QueueEnd()
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlstring.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 Assertion Failed: pCmd->m_eCmd == eHTMLCommands_SetSharedPaintBuffers
 -pid
 Pid that we should be watching for
 Assertion Failed: pCmd->m_eCmd > 0 && pCmd->m_eCmd < eHTMLCommands_None
 Assertion Failed: m_bExit
 Assertion Failed: IsValidIndex( elem )
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
 Assertion Failed: _IsValidIndex( elem, unNodeSize, pMemBase )
 Assertion Failed: _IsValidIndex( y, unNodeSize, pMemBase )
 Assertion Failed: IsValidIndex(elem)
@@ -1033,7 +1033,7 @@ disables Chromium window occlusion testing on Windows
 -no-browser
 unconditionally disables CEF
 Assertion Failed: GetCPUInformation().m_bSSE2 || IsARM()
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/html/chrome_ipc_client.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/html/chrome_ipc_client.cpp
 Assertion Failed: !"Failed to kill existing helper process"
 Assertion Failed: m_hCEFHandle == INVALID_PROCESS_HANDLE
 wt
@@ -1122,7 +1122,7 @@ Assertion Failed: !pszString || pszString[nChars] == '\0'
 %s_server
 %s_client
 Assertion Failed: unHostPid != 0
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/html/chrome_ipc_shared.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/html/chrome_ipc_shared.cpp
 SteamChrome_MasterStream_uid%d_spid%u
 SteamChrome_MasterStream_Event_uid%d_spid%u
 /tmp/steam_chrome_shmem_uid%d_spid%u
@@ -2015,7 +2015,7 @@ Tokenizer::ParseStringAppend() passed text that could not have been tokenized as
 \U%08x
 .
 V_RemoveDotSlashes failed for "%s".
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/fileio.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s
 flock LOCK_EX request but file is not opened for writing, ignoring: %s
 flock %s %s failed. errno = %d
@@ -2027,7 +2027,7 @@ Assertion Failed: ret != 0
 CPathString
 "
 Assertion Failed: info.m_pReplacementString == 0
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
 Expected %lld but got %lld!
 Assertion Failed: pFmt
 Assertion Failed: nSize >= 0
@@ -2045,14 +2045,14 @@ a
 ?
 '
 Assertion Failed: nSizeOfType > 0
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
 Assertion Failed: nGrowSize >= 0
 Assertion Failed: m_nAllocationCount >= 0
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 Assertion Failed: num > 0
 Assertion Failed: num >= 0
 CUtlString::SetValue
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
 CUtlString::VFormat
 Assertion failed: length > k_cchMaxString
 CUtlStringBuilder::InternalPrepareBuffer
@@ -2063,7 +2063,7 @@ Assertion Failed: len > 0 || HasError()
 Error State on string being set.
 CUtlStringBuilder::Data::MoveToHeap
 Assertion Failed: !"enum ELanguage order mismatched from Language_t s_LanguageNames, fix it!"
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/language.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/language.cpp
 zh_CN
 None
 none
@@ -2285,8 +2285,8 @@ v
 @
 
 O
+q
 D
-F
 0
 0
 Hi
@@ -2333,7 +2333,7 @@ IcE
 @
 @
 V
-V
+H;5rq
 =
 =
 @
