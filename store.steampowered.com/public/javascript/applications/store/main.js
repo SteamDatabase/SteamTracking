@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6691980";
+var CLSTAMP = "6696946";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [69],
   {
@@ -30585,33 +30585,34 @@ var CLSTAMP = "6691980";
               t || p.k_EEvents
             );
           }),
-          (e.prototype.InitDefaultCheckboxes = function (e, t) {
+          (e.prototype.InitDefaultCheckboxes = function (e, t, n) {
             (this.m_bInitializedForUpdatesOnly = t),
               (this.m_mapEventTypeGroupsAllowed = v(t ? [p.k_EUpdates] : b));
-            var n = l.d.EREALM === o.g.k_ESteamRealmChina ? h : m;
-            this.m_mapGameSources = v(e ? n : f);
+            var a = l.d.EREALM === o.g.k_ESteamRealmChina ? h : m;
+            (this.m_mapGameSources = v(e ? a : f)),
+              n && this.m_mapGameSources.set(r.k_EFeatured, !0);
           }),
-          (e.prototype.Init = function (e, t, n, r) {
-            (this.m_eStorageType = r), (this.m_strStorageKey = n);
-            var a = this.GetStorageObject(),
-              i = a ? a.getItem(this.GetPreferencesStorageKey()) : null;
-            if (i) {
-              var o = JSON.parse(i);
-              if (o.rgEventTypeGroupsAllowed && o.rgGameSources) {
-                var s = o.rgEventTypeGroupsAllowed,
-                  c = o.rgGameSources;
+          (e.prototype.Init = function (e, t, n, r, a) {
+            (this.m_eStorageType = a), (this.m_strStorageKey = r);
+            var i = this.GetStorageObject(),
+              o = i ? i.getItem(this.GetPreferencesStorageKey()) : null;
+            if (o) {
+              var s = JSON.parse(o);
+              if (s.rgEventTypeGroupsAllowed && s.rgGameSources) {
+                var c = s.rgEventTypeGroupsAllowed,
+                  l = s.rgGameSources;
                 return (
-                  (this.m_mapEventTypeGroupsAllowed = v(s)),
-                  (this.m_mapGameSources = v(c)),
+                  (this.m_mapEventTypeGroupsAllowed = v(c)),
+                  (this.m_mapGameSources = v(l)),
                   void (
-                    void 0 !== o.bCuratorUnhideOnFollowDismissed &&
+                    void 0 !== s.bCuratorUnhideOnFollowDismissed &&
                     (this.m_bCuratorUnhideOnFollowDialogDismissed =
-                      o.bCuratorUnhideOnFollowDismissed)
+                      s.bCuratorUnhideOnFollowDismissed)
                   )
                 );
               }
             }
-            this.InitDefaultCheckboxes(e, t);
+            this.InitDefaultCheckboxes(e, t, n);
           }),
           (e.prototype.SaveFilterPreferences = function () {
             var e = this.GetStorageObject();
@@ -58361,6 +58362,7 @@ var CLSTAMP = "6691980";
                         a.m_visibilityStore.Init(
                           i,
                           this.BShowUpdatesOnly(),
+                          a.BIsShowingFeaturedFeed(),
                           s,
                           o
                         ),
