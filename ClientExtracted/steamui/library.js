@@ -1,5 +1,5 @@
 /* Third-party software licenses can be found at licenses.txt */
-var CLSTAMP = "6696914";
+var CLSTAMP = "6698610";
 !(function (e) {
   function t(t) {
     for (
@@ -85169,6 +85169,8 @@ var CLSTAMP = "6696914";
           switch (e) {
             case 22:
               return Object(u.f)("#ContentManagement_MoveApps_CantMove");
+            case 17:
+              return Object(u.f)("#ContentManagement_MoveApps_SharedContent");
             case 15:
               return Object(u.f)("#ContentManagement_MoveApps_InvalidPath");
             default:

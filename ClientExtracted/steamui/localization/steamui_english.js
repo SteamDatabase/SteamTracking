@@ -623,10 +623,11 @@
 	"ContentManagement_MoveApps_Button" : "Move",
 	"ContentManagement_MoveApps_Working": "Moving content for \"%1$s\" ... ",
 	"ContentManagement_MoveApps_Done" : "All content moved succesfully",
-	"ContentManagement_MoveApps_Failed" : "Moving content for the following apps failed",
+	"ContentManagement_MoveApps_Failed" : "Moving content for the following apps has failed :",
 
 	"ContentManagement_MoveApps_CantMove" : "can't be moved",
 	"ContentManagement_MoveApps_InvalidPath" : "folder already exists",
+	"ContentManagement_MoveApps_SharedContent" : "has shared content",
 
 	"LaunchApp_Action_Starting":	"Starting launch",
 	"LaunchApp_Action_UpdatingAppInfo":	"Checking configuration",

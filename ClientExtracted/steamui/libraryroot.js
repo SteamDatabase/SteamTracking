@@ -51809,73 +51809,83 @@
                 r.createElement("div", { className: Vc.a.Status }, n, " "),
                 r.createElement(
                   "div",
-                  { className: Vc.a.Stats },
+                  { className: Vc.a.StatsWrapper },
                   r.createElement(
                     "div",
-                    {
-                      className: Object(D.a)(
-                        Vc.a.Stat,
-                        Vc.a.CurrentNetworkUsage
+                    { className: Vc.a.Stats },
+                    r.createElement(
+                      "div",
+                      {
+                        className: Object(D.a)(
+                          Vc.a.Stat,
+                          Vc.a.CurrentNetworkUsage
+                        ),
+                      },
+                      r.createElement(
+                        "div",
+                        { className: Vc.a.Figure },
+                        Zc(e.update_network_bytes_per_second)
                       ),
-                    },
-                    r.createElement(
-                      "div",
-                      { className: Vc.a.Figure },
-                      Zc(e.update_network_bytes_per_second)
+                      r.createElement(
+                        "div",
+                        { className: Vc.a.Label },
+                        Object(I.f)("#Downloads_Stats_CurrentRate")
+                      )
                     ),
                     r.createElement(
                       "div",
-                      { className: Vc.a.Label },
-                      Object(I.f)("#Downloads_Stats_CurrentRate")
-                    )
-                  ),
-                  r.createElement(
-                    "div",
-                    {
-                      className: Object(D.a)(Vc.a.Stat, Vc.a.PeakNetworkUsage),
-                    },
-                    r.createElement(
-                      "div",
-                      { className: Vc.a.Figure },
-                      Zc(e.update_peak_network_bytes_per_second)
+                      {
+                        className: Object(D.a)(
+                          Vc.a.Stat,
+                          Vc.a.PeakNetworkUsage
+                        ),
+                      },
+                      r.createElement(
+                        "div",
+                        { className: Vc.a.Figure },
+                        Zc(e.update_peak_network_bytes_per_second)
+                      ),
+                      r.createElement(
+                        "div",
+                        { className: Vc.a.Label },
+                        Object(I.f)("#Downloads_Stats_PeakRate")
+                      )
                     ),
                     r.createElement(
                       "div",
-                      { className: Vc.a.Label },
-                      Object(I.f)("#Downloads_Stats_PeakRate")
-                    )
-                  ),
-                  r.createElement(
-                    "div",
-                    {
-                      className: Object(D.a)(Vc.a.Stat, Vc.a.TotalNetworkUsage),
-                    },
-                    r.createElement(
-                      "div",
-                      { className: Vc.a.Figure },
-                      Object(da.a)(t, {
-                        nDigitsAfterDecimal: 1,
-                        bUseBinary1K: !1,
-                      })
+                      {
+                        className: Object(D.a)(
+                          Vc.a.Stat,
+                          Vc.a.TotalNetworkUsage
+                        ),
+                      },
+                      r.createElement(
+                        "div",
+                        { className: Vc.a.Figure },
+                        Object(da.a)(t, {
+                          nDigitsAfterDecimal: 1,
+                          bUseBinary1K: !1,
+                        })
+                      ),
+                      r.createElement(
+                        "div",
+                        { className: Vc.a.Label },
+                        Object(I.f)("#Downloads_Stats_TotalBytes")
+                      )
                     ),
                     r.createElement(
                       "div",
-                      { className: Vc.a.Label },
-                      Object(I.f)("#Downloads_Stats_TotalBytes")
-                    )
-                  ),
-                  r.createElement(
-                    "div",
-                    { className: Object(D.a)(Vc.a.Stat, Vc.a.DiskUsage) },
-                    r.createElement(
-                      "div",
-                      { className: Vc.a.Figure },
-                      Zc(e.update_disc_bytes_per_second)
-                    ),
-                    r.createElement(
-                      "div",
-                      { className: Vc.a.Label },
-                      Object(I.f)("#Downloads_Stats_DiskRate")
+                      { className: Object(D.a)(Vc.a.Stat, Vc.a.DiskUsage) },
+                      r.createElement(
+                        "div",
+                        { className: Vc.a.Figure },
+                        Zc(e.update_disc_bytes_per_second)
+                      ),
+                      r.createElement(
+                        "div",
+                        { className: Vc.a.Label },
+                        Object(I.f)("#Downloads_Stats_DiskRate")
+                      )
                     )
                   )
                 ),
@@ -82223,9 +82233,11 @@
         RightPanel: "downloadgraph_RightPanel_XBpGP",
         StatsPanel: "downloadgraph_StatsPanel_3mdnp",
         Status: "downloadgraph_Status_3BdWq",
+        StatsWrapper: "downloadgraph_StatsWrapper_3YaPa",
         Stats: "downloadgraph_Stats_3RfkF",
         Stat: "downloadgraph_Stat_5TdA4",
         Figure: "downloadgraph_Figure_eXF8x",
+        Label: "downloadgraph_Label_34H1w",
         Throttle: "downloadgraph_Throttle_38T9T",
         DownloadGraph: "downloadgraph_DownloadGraph_1BxZD",
         Gradient: "downloadgraph_Gradient_RfMM3",

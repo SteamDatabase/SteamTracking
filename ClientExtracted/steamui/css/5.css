@@ -13084,10 +13084,17 @@ div.ShortWindow
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-.downloadgraph_StatsPanel_3mdnp .downloadgraph_Stats_3RfkF {
+.downloadgraph_StatsPanel_3mdnp .downloadgraph_StatsWrapper_3YaPa {
+  height: 33%;
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+.downloadgraph_StatsPanel_3mdnp .downloadgraph_Stats_3RfkF {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
 }
 .downloadgraph_StatsPanel_3mdnp .downloadgraph_Stat_5TdA4 {
   width: 100%;
@@ -13109,6 +13116,10 @@ div.ShortWindow
   letter-spacing: 0.25px;
   text-transform: uppercase;
   color: #8b929a;
+  padding-right: 5px;
+}
+.downloadgraph_StatsPanel_3mdnp .downloadgraph_Stat_5TdA4:last-child {
+  padding-right: 0px;
 }
 .downloadgraph_StatsPanel_3mdnp .downloadgraph_Figure_eXF8x {
   font-family: "Motiva Sans", Helvetica, sans-serif;
@@ -13131,6 +13142,11 @@ div.ShortWindow
   text-transform: none;
   color: #fff;
   margin-bottom: -6px;
+  white-space: nowrap;
+}
+.downloadgraph_StatsPanel_3mdnp .downloadgraph_Label_34H1w {
+  line-height: initial;
+  margin-top: 2px;
 }
 .downloadgraph_StatsPanel_3mdnp .downloadgraph_Throttle_38T9T {
   margin-top: 5px;

@@ -2820,6 +2820,7 @@
 	"Steam_LaunchOption_Application"			"Launch {s:gamename}"
 	"Steam_LaunchOption_SafeMode"					"Launch {s:gamename} in Safe Mode"
 	"Steam_LaunchOption_VR"								"Launch {s:gamename} in Steam VR Mode"
+	"Steam_LaunchOption_openxr"							"Launch {s:gamename} in OpenXR Mode"
 	"Steam_LaunchOption_othervr"						"Launch {s:gamename} in Other VR Mode"
 	"Steam_LaunchOption_openvroverlay"					"Launch {s:gamename} as Steam VR Overlay"
 	"Steam_LaunchOption_Server"						"Launch Dedicated Server"
