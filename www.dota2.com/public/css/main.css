@@ -20523,10 +20523,10 @@ a {
   background: linear-gradient(
     108deg,
     transparent 0%,
-    transparent calc(100% - 40px),
-    #41474e calc(100% - 39px),
-    #41474e calc(100% - 30px),
-    transparent calc(100% - 30px),
+    transparent calc(100% - 38px),
+    #41474e calc(100% - 38px),
+    #41474e calc(100% - 28px),
+    transparent calc(100% - 28px),
     transparent 100%
   );
   padding-right: 9px;
@@ -20735,7 +20735,7 @@ a {
 }
 .dpcselectors_Switch_26we-.dpcselectors_On_IFTP8
   .dpcselectors_Background_3oinv {
-  background-color: #fff;
+  background-color: #3f464f;
 }
 .dpcselectors_Switch_26we-.dpcselectors_On_IFTP8 .dpcselectors_Selector_17u1z {
   background-color: #ff6046;
@@ -21716,7 +21716,7 @@ a {
 .dpcseriesdetails_DPCSeriesDetailsOverview_3LX-5 {
   width: 100%;
   height: 100%;
-  display: none;
+  display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -21724,22 +21724,34 @@ a {
   background-repeat: no-repeat;
   position: absolute;
 }
-.dpcseriesdetails_DPCSeriesDetailsOverview_3LX-5.dpcseriesdetails_Visible_1sQWs {
-  display: flex;
-}
 .dpcseriesdetails_DPCSeriesDetailsOverview_3LX-5
   .dpcseriesdetails_CenterContainer_8B-ZB {
   width: 300px;
   height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background-color: #0b0b0c99;
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
 }
 .dpcseriesdetails_DPCSeriesDetailsOverview_3LX-5
   .dpcseriesdetails_CenterContainer_8B-ZB
+  .dpcseriesdetails_ResultsAllowSpoilers_1XQKx,
+.dpcseriesdetails_DPCSeriesDetailsOverview_3LX-5
+  .dpcseriesdetails_CenterContainer_8B-ZB
+  .dpcseriesdetails_ResultsSpoilersBlocked_1CxC6 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+.dpcseriesdetails_DPCSeriesDetailsOverview_3LX-5
+  .dpcseriesdetails_CenterContainer_8B-ZB
+  .dpcseriesdetails_ResultsAllowSpoilers_1XQKx
+  .dpcseriesdetails_Results_3ppDd,
+.dpcseriesdetails_DPCSeriesDetailsOverview_3LX-5
+  .dpcseriesdetails_CenterContainer_8B-ZB
+  .dpcseriesdetails_ResultsSpoilersBlocked_1CxC6
   .dpcseriesdetails_Results_3ppDd {
   font-size: 36px;
   font-weight: 700;
@@ -21752,6 +21764,11 @@ a {
 }
 .dpcseriesdetails_DPCSeriesDetailsOverview_3LX-5
   .dpcseriesdetails_CenterContainer_8B-ZB
+  .dpcseriesdetails_ResultsAllowSpoilers_1XQKx
+  .dpcseriesdetails_TeamsDraw_36p9P,
+.dpcseriesdetails_DPCSeriesDetailsOverview_3LX-5
+  .dpcseriesdetails_CenterContainer_8B-ZB
+  .dpcseriesdetails_ResultsSpoilersBlocked_1CxC6
   .dpcseriesdetails_TeamsDraw_36p9P {
   width: 150px;
   display: none;
@@ -21761,6 +21778,12 @@ a {
 }
 .dpcseriesdetails_DPCSeriesDetailsOverview_3LX-5
   .dpcseriesdetails_CenterContainer_8B-ZB
+  .dpcseriesdetails_ResultsAllowSpoilers_1XQKx
+  .dpcseriesdetails_TeamsDraw_36p9P
+  .dpcseriesdetails_TeamLogo_3nXHf,
+.dpcseriesdetails_DPCSeriesDetailsOverview_3LX-5
+  .dpcseriesdetails_CenterContainer_8B-ZB
+  .dpcseriesdetails_ResultsSpoilersBlocked_1CxC6
   .dpcseriesdetails_TeamsDraw_36p9P
   .dpcseriesdetails_TeamLogo_3nXHf {
   width: 64px;
@@ -21768,17 +21791,33 @@ a {
 }
 .dpcseriesdetails_DPCSeriesDetailsOverview_3LX-5
   .dpcseriesdetails_CenterContainer_8B-ZB
+  .dpcseriesdetails_ResultsAllowSpoilers_1XQKx
+  .dpcseriesdetails_TeamsDraw_36p9P.dpcseriesdetails_Visible_1sQWs,
+.dpcseriesdetails_DPCSeriesDetailsOverview_3LX-5
+  .dpcseriesdetails_CenterContainer_8B-ZB
+  .dpcseriesdetails_ResultsSpoilersBlocked_1CxC6
   .dpcseriesdetails_TeamsDraw_36p9P.dpcseriesdetails_Visible_1sQWs {
   display: flex;
 }
 .dpcseriesdetails_DPCSeriesDetailsOverview_3LX-5
   .dpcseriesdetails_CenterContainer_8B-ZB
+  .dpcseriesdetails_ResultsAllowSpoilers_1XQKx
+  .dpcseriesdetails_TeamWinner_359-B,
+.dpcseriesdetails_DPCSeriesDetailsOverview_3LX-5
+  .dpcseriesdetails_CenterContainer_8B-ZB
+  .dpcseriesdetails_ResultsSpoilersBlocked_1CxC6
   .dpcseriesdetails_TeamWinner_359-B {
   display: none;
   margin: 10px 0px;
 }
 .dpcseriesdetails_DPCSeriesDetailsOverview_3LX-5
   .dpcseriesdetails_CenterContainer_8B-ZB
+  .dpcseriesdetails_ResultsAllowSpoilers_1XQKx
+  .dpcseriesdetails_TeamWinner_359-B
+  .dpcseriesdetails_TeamLogo_3nXHf,
+.dpcseriesdetails_DPCSeriesDetailsOverview_3LX-5
+  .dpcseriesdetails_CenterContainer_8B-ZB
+  .dpcseriesdetails_ResultsSpoilersBlocked_1CxC6
   .dpcseriesdetails_TeamWinner_359-B
   .dpcseriesdetails_TeamLogo_3nXHf {
   width: 64px;
@@ -21786,11 +21825,21 @@ a {
 }
 .dpcseriesdetails_DPCSeriesDetailsOverview_3LX-5
   .dpcseriesdetails_CenterContainer_8B-ZB
+  .dpcseriesdetails_ResultsAllowSpoilers_1XQKx
+  .dpcseriesdetails_TeamWinner_359-B.dpcseriesdetails_Visible_1sQWs,
+.dpcseriesdetails_DPCSeriesDetailsOverview_3LX-5
+  .dpcseriesdetails_CenterContainer_8B-ZB
+  .dpcseriesdetails_ResultsSpoilersBlocked_1CxC6
   .dpcseriesdetails_TeamWinner_359-B.dpcseriesdetails_Visible_1sQWs {
   display: flex;
 }
 .dpcseriesdetails_DPCSeriesDetailsOverview_3LX-5
   .dpcseriesdetails_CenterContainer_8B-ZB
+  .dpcseriesdetails_ResultsAllowSpoilers_1XQKx
+  .dpcseriesdetails_WinningTeamName_3TzTM,
+.dpcseriesdetails_DPCSeriesDetailsOverview_3LX-5
+  .dpcseriesdetails_CenterContainer_8B-ZB
+  .dpcseriesdetails_ResultsSpoilersBlocked_1CxC6
   .dpcseriesdetails_WinningTeamName_3TzTM {
   font-size: 24px;
   color: #fff;
@@ -21800,6 +21849,11 @@ a {
 }
 .dpcseriesdetails_DPCSeriesDetailsOverview_3LX-5
   .dpcseriesdetails_CenterContainer_8B-ZB
+  .dpcseriesdetails_ResultsAllowSpoilers_1XQKx
+  .dpcseriesdetails_WinningRecord_21kkz,
+.dpcseriesdetails_DPCSeriesDetailsOverview_3LX-5
+  .dpcseriesdetails_CenterContainer_8B-ZB
+  .dpcseriesdetails_ResultsSpoilersBlocked_1CxC6
   .dpcseriesdetails_WinningRecord_21kkz {
   font-size: 18px;
   color: #a3a3a3;
@@ -21810,7 +21864,7 @@ a {
 .dpcseriesdetails_DPCSeriesDetailsGameOverview_KLWaH {
   width: 100%;
   height: 100%;
-  display: none;
+  display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -21818,9 +21872,6 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
-}
-.dpcseriesdetails_DPCSeriesDetailsGameOverview_KLWaH.dpcseriesdetails_Visible_1sQWs {
-  display: flex;
 }
 .dpcseriesdetails_DPCSeriesDetailsGameOverview_KLWaH
   .dpcseriesdetails_CenterContainer_8B-ZB {
@@ -21968,6 +22019,14 @@ a {
   justify-content: space-between;
   position: relative;
 }
+.dpcseriesdetails_DPCSeriesDetailsGameDetails_36t5S
+  .dpcseriesdetails_NoGame_3kqw7 {
+  color: #fff;
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
 .dpcseriesdetails_MatchSectionTeam_2VVM9 {
   width: calc(50% - 4px);
   height: 100%;
@@ -21993,8 +22052,8 @@ a {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 8px;
-  margin-bottom: 8px;
+  gap: 18px;
+  padding: 8px 20px;
   background-color: #2a2a30;
   color: #a3a3a3;
 }
@@ -22010,13 +22069,13 @@ a {
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 1px;
+  margin-top: 3px;
 }
 .dpcseriesdetails_MatchSectionTeam_2VVM9
   .dpcseriesdetails_TeamHeading_LPdJQ
   .dpcseriesdetails_Score_2wmlq {
   font-size: 30px;
   font-weight: 700;
-  margin: 0px 18px;
 }
 .dpcseriesdetails_MatchSectionTeam_2VVM9 .dpcseriesdetails_PlayerList_ftJxP {
   width: 100%;
@@ -22085,14 +22144,13 @@ a {
 .dpcseriesdetails_MatchSectionPlayer_Ej-PQ
   .dpcseriesdetails_HeroAndLevel_3YDGB {
   flex-grow: 1;
-  flex-basis: 50px;
+  flex-basis: 0px;
   min-height: 0;
   display: flex;
   flex-direction: column;
 }
 .dpcseriesdetails_MatchSectionPlayer_Ej-PQ
   .dpcseriesdetails_HeroAndLevel_3YDGB.dpcseriesdetails_Collapsed_-YO-Y {
-  max-width: 50px;
   opacity: 0;
 }
 .dpcseriesdetails_MatchSectionPlayer_Ej-PQ
@@ -22131,49 +22189,14 @@ a {
   font-size: 12px;
   font-weight: bold;
 }
-.dpcseriesdetails_MatchSectionPlayer_Ej-PQ .dpcseriesdetails_HeroPlayer_1S-In {
+.dpcseriesdetails_MatchSectionPlayer_Ej-PQ .dpcseriesdetails_HeroIcon_1AFRB {
   width: 64px;
   height: 64px;
-  position: relative;
-  border: 1px solid #000;
   margin: 0px 12px;
-}
-.dpcseriesdetails_MatchSectionPlayer_Ej-PQ
-  .dpcseriesdetails_HeroPlayer_1S-In.dpcseriesdetails_AlwaysShowPlayer_2hXcn
-  .dpcseriesdetails_HeroIcon_1AFRB {
-  opacity: 0;
-}
-.dpcseriesdetails_MatchSectionPlayer_Ej-PQ
-  .dpcseriesdetails_HeroPlayer_1S-In.dpcseriesdetails_AlwaysShowPlayer_2hXcn
-  .dpcseriesdetails_PlayerImage_1K0J3 {
-  opacity: 1;
-}
-.dpcseriesdetails_MatchSectionPlayer_Ej-PQ
-  .dpcseriesdetails_HeroPlayer_1S-In
-  .dpcseriesdetails_HeroIcon_1AFRB {
-  width: 100%;
-  height: 100%;
-  position: absolute;
+  border: 1px solid #000;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  transition-property: opacity;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
-}
-.dpcseriesdetails_MatchSectionPlayer_Ej-PQ
-  .dpcseriesdetails_HeroPlayer_1S-In
-  .dpcseriesdetails_PlayerImage_1K0J3 {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 2;
-  background-size: cover;
-  background-repeat: no-repeat;
-  opacity: 0;
-  transition-property: opacity;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
 }
 @media (max-width: 1000px) {
   .dpcseriesdetails_MatchSectionPlayer_Ej-PQ
@@ -22196,8 +22219,7 @@ a {
     .dpcseriesdetails_Stats_1JAD9 {
     font-size: 10px;
   }
-  .dpcseriesdetails_MatchSectionPlayer_Ej-PQ
-    .dpcseriesdetails_HeroPlayer_1S-In {
+  .dpcseriesdetails_MatchSectionPlayer_Ej-PQ .dpcseriesdetails_HeroIcon_1AFRB {
     width: 48px;
     height: 48px;
   }
@@ -22223,8 +22245,7 @@ a {
     .dpcseriesdetails_Stats_1JAD9 {
     font-size: 8px;
   }
-  .dpcseriesdetails_MatchSectionPlayer_Ej-PQ
-    .dpcseriesdetails_HeroPlayer_1S-In {
+  .dpcseriesdetails_MatchSectionPlayer_Ej-PQ .dpcseriesdetails_HeroIcon_1AFRB {
     width: 32px;
     height: 32px;
   }
@@ -22453,6 +22474,10 @@ a {
   transition-property: height;
   transition-timing-function: ease-in-out;
   transition-duration: 0.2s;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 .dpcseriesdetails_DPCSeriesDetailsGameVOD_2-Wc8
   .dpcseriesdetails_VideoContainer_VjKmb
@@ -22466,6 +22491,12 @@ a {
   > iframe {
   width: 100%;
   height: 100%;
+}
+.dpcseriesdetails_DPCSeriesDetailsGameVOD_2-Wc8
+  .dpcseriesdetails_VideoContainer_VjKmb
+  .dpcseriesdetails_NoVOD_2RPG0 {
+  font-size: 24px;
+  color: #fff;
 }
 .dpcseriesdetails_DPCSeriesDetailsGameVOD_2-Wc8
   .dpcseriesdetails_OptionContainer_3ik_p {
@@ -23198,6 +23229,412 @@ a {
 .shared_svg_library_EmoticonBow_st1_2NIMu {
   fill: #e41e25;
 }
+.toggle_Toggle_1rqtP {
+  width: 40px;
+  height: 16px;
+  position: relative;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+}
+.toggle_Toggle_1rqtP.toggle_Disabled_nZbOp {
+  cursor: default;
+  opacity: 0.6;
+}
+.toggle_Toggle_1rqtP .toggle_ToggleRail_Yef-_ {
+  height: 10.6666666667px;
+  width: 36px;
+  border-radius: 5.3333333333px;
+  box-shadow: inset 1px 1px 1px #0007;
+  position: absolute;
+  left: 2.6666666667px;
+  top: 2.6666666667px;
+  background-color: #26292e;
+}
+.toggle_Toggle_1rqtP .toggle_ToggleRail_Yef-_.toggle_Highlight_2fxbl {
+  background-color: #2d5a81;
+  transition: width 0.2s ease-in-out;
+}
+.toggle_Toggle_1rqtP
+  .toggle_ToggleRail_Yef-_.toggle_Highlight_2fxbl.toggle_On_2VSKd {
+  width: 36px;
+}
+.toggle_Toggle_1rqtP
+  .toggle_ToggleRail_Yef-_.toggle_Highlight_2fxbl.toggle_Off_33SSs {
+  width: 0;
+}
+.toggle_Toggle_1rqtP .toggle_ToggleSwitch_3Pr6O {
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 3px #000a;
+  position: absolute;
+  left: 0;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+.toggle_Toggle_1rqtP .toggle_ToggleSwitch_3Pr6O.toggle_On_2VSKd {
+  background-color: #16a1e1;
+  background-image: linear-gradient(to bottom, #01c7f9, #3066f5);
+  transform: translateX(25.3333333333px);
+}
+.toggle_Toggle_1rqtP .toggle_ToggleSwitch_3Pr6O.toggle_Off_33SSs {
+  background-color: #4b525d;
+}
+.toggle_ToggleRow_3gte5 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-radius: 3px;
+  background-color: rgba(59, 63, 72, 0.5);
+}
+.toggle_ToggleRow_3gte5 .toggle_Label_2mzt3 {
+  color: #dfe3e6;
+  font-size: 14px;
+  font-weight: 300;
+}
+.toggle_ToggleRow_3gte5 .toggle_Label_2mzt3.toggle_Disabled_nZbOp {
+  opacity: 0.3;
+}
+.dropdown_DialogDropDownMenu_Item_3HD54 {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+.dropdown_DialogDropDownMenu_Item_3HD54:hover {
+  background: #3e444d;
+}
+.dropdown_DialogDropDownMenu_27Awt._DialogInputContainer {
+  background: #373c44;
+  box-shadow: 0px 8px 26px 2px rgba(0, 0, 0, 0.2);
+  margin-top: 2px;
+}
+.hoverposition_HoverPosition_1tQrX {
+  position: fixed;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.25s;
+  pointer-events: none;
+}
+.hoverposition_HoverPosition_1tQrX.hoverposition_Ready_12dDx {
+  opacity: 1;
+}
+.hoverposition_HoverPosition_1tQrX.hoverposition_NoSpace_2RE0x {
+  display: none;
+}
+.hoverposition_EnablePointerEvents_346UO {
+  pointer-events: all;
+}
+.hoverposition_HoverAboveModal_2znvo {
+  z-index: 2000;
+}
+.tooltip_TextToolTip_1y-4v {
+  box-sizing: border-box;
+  font-size: 13px;
+  background-color: #696773;
+  border-radius: 2px;
+  color: #e0e1e6;
+  padding: 6px 8px;
+  box-shadow: 1px 1px 8px #0005, 2px 2px 16px 1px #0005;
+  max-width: 300px;
+  user-select: none;
+}
+.tooltip_ToolTipCustom_3g-WB {
+  box-sizing: border-box;
+  font-size: 13px;
+  background-color: #696773;
+  border-radius: 2px;
+  color: #e0e1e6;
+  padding: 6px 8px;
+  box-shadow: 1px 1px 8px #0005, 2px 2px 16px 1px #0005;
+  max-width: 300px;
+  user-select: none;
+}
+.tooltip_ToolTipCustom_3g-WB .tooltip_ToolTipTitle_DE02N {
+  color: #e0e1e6;
+}
+.tooltip_ToolTipCustom_3g-WB .tooltip_ToolTipTitle_DE02N.tooltip_Center_3PLe5 {
+  text-align: center;
+}
+.tooltip_ToolTipCustom_3g-WB .tooltip_ToolTipInsetContent_1SHdU {
+  color: #aaacb6;
+  margin: 6px 4px;
+}
+.pagedsettings_PagedSettingsDialog_379hM {
+  display: flex;
+  flex-direction: row;
+  height: 720px;
+}
+.pagedsettings_PagedSettingsDialog_PageContent_26LM5 {
+  flex: 3;
+}
+.pagedsettings_PagedSettingsDialog_PageContent_26LM5 .DialogHeader {
+  margin-right: 0;
+}
+.pagedsettings_PagedSettingsDialog_PageListColumn_2Cma8 {
+  background: #2a2d34;
+  flex: 1;
+  min-width: 140px;
+  max-width: 220px;
+  padding-left: 24px;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.pagedsettings_PagedSettingsDialog_Title_3gBLR {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #4297f8;
+  font-weight: 300;
+  font-size: 13px;
+  user-select: none;
+}
+.pagedsettings_PagedSettingsDialog_PageList_2f7v2 {
+  line-height: 16px;
+  white-space: nowrap;
+  overflow-y: overlay;
+  flex-shrink: 1;
+}
+.pagedsettings_PagedSettingsDialog_PageListItem_15qhi {
+  white-space: normal;
+  max-width: 180px;
+  text-overflow: ellipsis;
+  color: #7e7e7e;
+  font-size: 15px;
+  font-weight: normal;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-bottom: 14px;
+  user-select: none;
+}
+.pagedsettings_PagedSettingsDialog_PageListItem_15qhi.pagedsettings_DisabledItem_2CiVW,
+.pagedsettings_PagedSettingsDialog_PageListItem_15qhi.pagedsettings_DisabledItem_2CiVW:hover,
+.pagedsettings_PagedSettingsDialog_PageListItem_15qhi.pagedsettings_DisabledItem_2CiVW:not(.pagedsettings_Active_bTXaV):hover {
+  color: #414141;
+}
+.pagedsettings_PagedSettingsDialog_PageListItem_15qhi:not(.pagedsettings_Active_bTXaV):hover {
+  color: #ccc;
+}
+.pagedsettings_PagedSettingsDialog_PageListItem_15qhi.pagedsettings_Active_bTXaV {
+  color: #fff;
+  cursor: default;
+}
+body.modals_BodyNoScroll_1JTaq {
+  overflow-y: hidden;
+  height: 100vh;
+}
+body.modals_BodyNoScrollDialog_t0EzL {
+  overflow-y: hidden;
+  height: 100vh;
+}
+.modals_OverlayModal_1GJbF {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1500;
+}
+.focusring_FocusRingRoot_2BQL2 {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.focusring_FocusRing_3ARGF {
+  position: absolute;
+  pointer-events: none;
+  border: 4px solid #add8e6;
+}
+.focusring_FocusRing_3ARGF.focusring_Animated_1VmCg {
+  transition: left 0.1s, top 0.1s, height 0.1s, width 0.1s;
+}
+.contextmenu_ContextMenuMouseOverlay_3EgM8 {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1599;
+}
+.contextmenu_ContextMenuFocusContainer_2QK-x:focus {
+  outline: none;
+}
+.contextmenu_contextMenu_4fpUg {
+  position: absolute;
+  background: radial-gradient(
+    ellipse farthest-corner at 50% 0%,
+    #3c4047 0%,
+    #3c4047 50%,
+    #33363d 100%
+  );
+  box-shadow: 0 10px 32px 0px #000000ab;
+  opacity: 1;
+  transition: opacity 200ms;
+  z-index: 1600;
+  user-select: none;
+  padding: 4px;
+}
+.web_chat_frame .contextmenu_contextMenu_4fpUg {
+  max-height: calc(100% - 128px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+html.contextmenu_ContextMenuPopup_152-v .contextmenu_contextMenu_4fpUg {
+  position: static;
+  box-shadow: none;
+  display: inline-block;
+  padding: 0;
+}
+html.contextmenu_ContextMenuPopup_152-v .contextmenu_contextMenuContents_3te6b {
+  padding: 4px;
+}
+html.contextmenu_ContextMenuPopup_152-v .contextmenu_contextMenuItem_3hJA5 {
+  min-width: fit-content;
+}
+.contextmenu_contextMenuContents_3te6b {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  font-size: 14px;
+  -webkit-app-region: no-drag;
+}
+.contextmenu_contextMenu_4fpUg:not(.visible) {
+  opacity: 0;
+  pointer-events: none;
+}
+.contextmenu_contextMenuItem_3hJA5 {
+  padding: 4px 6px;
+  line-height: 17px;
+  color: #9ca4a7;
+  border-top: 0.5px solid rgba(80, 87, 94, 0.5);
+  border-bottom: 0.5px solid rgba(80, 87, 94, 0);
+  cursor: default;
+  position: relative;
+  min-width: 120px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.contextmenu_contextMenuItem_3hJA5:first-child {
+  border-top: 0.5px solid rgba(80, 87, 94, 0);
+}
+.contextmenu_contextMenuItem_3hJA5:hover,
+.contextmenu_contextMenuItem_3hJA5.contextmenu_active_1NWFM {
+  background: #5a6069;
+  color: #b8c5c9;
+}
+.contextmenu_contextMenuItem_3hJA5.disabled {
+  background: none;
+  color: #6b7072;
+  cursor: default;
+  pointer-events: none;
+}
+.contextmenu_contextMenuItem_3hJA5.disabled:hover {
+  background: none;
+  color: #6b7072;
+  cursor: default;
+}
+.contextmenu_contextMenuItem_3hJA5.menuChecked {
+  color: #6dcff6;
+}
+.contextmenu_contextMenuItem_3hJA5.menuChecked.contextMenuCheckMark {
+  display: block;
+}
+.contextmenu_contextMenuItem_3hJA5.contextmenu_MenuSectionHeader_2b55g {
+  padding-top: 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.contextmenu_ContextMenuSeparator_LXVyl + .contextmenu_contextMenuItem_3hJA5 {
+  border-top-color: dimgray;
+}
+.contextmenu_contextMenuItem_3hJA5.contextmenu_NoSeparation_2ct40 {
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+.contextmenu_contextMenuItem_3hJA5.contextmenu_UpperCase_3aR4r {
+  text-transform: uppercase;
+}
+.contextmenu_contextMenuItem_3hJA5 .SVGIcon_Button {
+  height: 10px;
+  width: 10px;
+  margin-right: 4px;
+}
+.contextmenu_contextMenuItem_3hJA5.contextmenu_SubMenu_2o_UY {
+  display: flex;
+  padding-right: 2px;
+}
+.contextmenu_contextMenuItem_3hJA5.contextmenu_SubMenu_2o_UY
+  .contextmenu_Label_KM3XP {
+  flex: 1 0 auto;
+}
+.contextmenu_contextMenuItem_3hJA5.contextmenu_SubMenu_2o_UY
+  .contextmenu_Arrow_2hT07 {
+  flex: 0 0 auto;
+  margin: 0px 0px 0px 4px;
+}
+.contextmenu_contextMenuItem_3hJA5.contextmenu_SubMenu_2o_UY
+  .SVGIcon_DownArrowContextMenu {
+  height: 14px;
+  width: 14px;
+  transform: rotateZ(-90deg);
+  fill: #9ca4a7;
+  margin: 0px 3px;
+}
+.contextmenu_contextMenuItem_3hJA5 svg {
+  height: 12px;
+  width: 12px;
+  margin-right: 6px;
+}
+.contextmenu_contextMenuItem_3hJA5 .SVGIcon_PlusCircle {
+  height: 16px;
+  width: 16px;
+  margin-left: -3px;
+  margin-bottom: -3px;
+}
+.contextmenu_contextMenuItem_3hJA5 .SVGIcon_PlusCircle line {
+  stroke: gray;
+  shape-rendering: crispEdges;
+  stroke-width: 20px;
+}
+.contextmenu_contextMenuItem_3hJA5 .SVGIcon_PlusCircle circle {
+  opacity: 0;
+}
+.contextMenuCheckMark {
+  width: 4px;
+  height: 18px;
+  background-color: #6dcff6;
+  min-height: 1px;
+  display: inline-block;
+  position: absolute;
+  left: -4px;
+  margin-top: 0px;
+  display: none;
+}
+.contextmenu_PopoutSubMenu_3TVcU {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+}
+.contextmenu_PopoutSubMenu_3TVcU .contextmenu_PopoutSubMenuItems_2Et1H {
+  position: absolute;
+  width: 60%;
+  height: fit-content;
+  left: 100%;
+  top: 0;
+  background: radial-gradient(
+    ellipse farthest-corner at 50% 0%,
+    #3c4047 0%,
+    #3c4047 50%,
+    #33363d 100%
+  );
+  box-shadow: 0 10px 32px 0px #000000ab;
+  opacity: 1;
+  word-wrap: break-word;
+}
 * {
   box-sizing: border-box;
   font-family: "Radiance", "Noto Sans", sans-serif;
@@ -23811,6 +24248,13 @@ a {
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
+  user-select: none;
+}
+.dpcheader_DPCHeader_1l1bz
+  .dpcheader_DPCHeaderContents_i0tSQ
+  .dpcheader_DPCSpoilerBlock_BzI9z.dpcheader_Disabled_2WXE4 {
+  filter: brightness(0.5);
+  pointer-events: none;
 }
 .dpcheader_DPCHeader_1l1bz
   .dpcheader_DPCHeaderContents_i0tSQ
@@ -24360,6 +24804,7 @@ a {
   letter-spacing: 2px;
   color: #fff;
   margin-bottom: -20px;
+  padding-left: 25px;
 }
 .dpchomepage_DPCFollowedTeamMatches_-BVSo {
   width: 100%;
@@ -24534,10 +24979,10 @@ a {
   .dpchomepage_Title_2yhlb {
   color: #fff;
   font-family: "Reaver", serif;
-  font-weight: 700;
-  font-size: 32px;
+  font-weight: 650;
+  font-size: 30px;
   letter-spacing: 1px;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 .dpchomepage_DPCAboutBanner_2Ta23
   .dpchomepage_Background_2R9e9
@@ -24545,11 +24990,11 @@ a {
   .dpchomepage_Body_36kB2 {
   color: #a3a3a3;
   font-family: "Reaver", serif;
-  font-weight: 700;
-  font-size: 22px;
+  font-weight: 550;
+  font-size: 20px;
   letter-spacing: 1px;
   width: 430px;
-  margin-bottom: 16px;
+  margin-bottom: 35px;
 }
 .dpchomepage_DPCAboutBanner_2Ta23
   .dpchomepage_Background_2R9e9
@@ -24557,14 +25002,14 @@ a {
   .dpchomepage_Button_17QQl {
   border: 1px solid #a3a3a3;
   border-radius: 2px;
-  padding: 10px 15px;
+  padding: 10px 35px;
   background-color: transparent;
   color: #a3a3a3;
   font-size: 15px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  transition-property: color, border-color;
+  transition-property: color, border-color, background-color;
   transition-timing-function: ease-in-out;
   transition-duration: 0.1s;
 }
@@ -24574,6 +25019,7 @@ a {
   .dpchomepage_Button_17QQl:hover {
   border-color: #fff;
   color: #fff;
+  background-color: #ffffff1a;
 }
 .dpcstandings_DPCStandingsDivision_KkUW3 {
   width: 100%;
@@ -24591,14 +25037,14 @@ a {
   gap: 30px;
 }
 .dpcstandings_LegendContainer_rde9K {
-  margin-top: 30px;
+  margin-top: 50px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
 }
 .dpcstandings_LegendContainer_rde9K .dpcstandings_LegendCenter_rhVMV {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
 }
 .dpcstandings_LegendContainer_rde9K
@@ -24607,15 +25053,15 @@ a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 20px;
-  margin-bottom: 20px;
+  gap: 15px;
+  margin-left: 30px;
 }
 .dpcstandings_LegendContainer_rde9K
   .dpcstandings_LegendCenter_rhVMV
   .dpcstandings_LegendItem_1JF4X
   .dpcstandings_ColorSquare_ud1oU {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 .dpcstandings_LegendContainer_rde9K
   .dpcstandings_LegendCenter_rhVMV
@@ -24633,18 +25079,20 @@ a {
   flex-direction: column;
   justify-content: flex-start;
 }
-.dpcstandings_DPCStandingsRoundRobin_3gskr .dpcstandings_Title_1j7g0 {
-  color: #fff;
-  font-size: 16px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 8px;
-}
 .dpcstandings_DPCStandingsRoundRobin_3gskr .dpcstandings_Standings_2xuCM {
   display: flex;
   flex-direction: row;
   gap: 6px;
+}
+.dpcstandings_DPCStandingsRoundRobin_3gskr .dpcstandings_Title_1j7g0 {
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 .dpcstandings_DPCStandingsGrid_3w9B9 {
   display: flex;
@@ -25246,429 +25694,25 @@ a {
   height: 1px;
   background-color: #555;
 }
-.toggle_Toggle_1rqtP {
-  width: 40px;
-  height: 16px;
-  position: relative;
-  cursor: pointer;
-  transition: opacity 0.2s ease-in-out;
-}
-.toggle_Toggle_1rqtP.toggle_Disabled_nZbOp {
-  cursor: default;
-  opacity: 0.6;
-}
-.toggle_Toggle_1rqtP .toggle_ToggleRail_Yef-_ {
-  height: 10.6666666667px;
-  width: 36px;
-  border-radius: 5.3333333333px;
-  box-shadow: inset 1px 1px 1px #0007;
-  position: absolute;
-  left: 2.6666666667px;
-  top: 2.6666666667px;
-  background-color: #26292e;
-}
-.toggle_Toggle_1rqtP .toggle_ToggleRail_Yef-_.toggle_Highlight_2fxbl {
-  background-color: #2d5a81;
-  transition: width 0.2s ease-in-out;
-}
-.toggle_Toggle_1rqtP
-  .toggle_ToggleRail_Yef-_.toggle_Highlight_2fxbl.toggle_On_2VSKd {
-  width: 36px;
-}
-.toggle_Toggle_1rqtP
-  .toggle_ToggleRail_Yef-_.toggle_Highlight_2fxbl.toggle_Off_33SSs {
-  width: 0;
-}
-.toggle_Toggle_1rqtP .toggle_ToggleSwitch_3Pr6O {
-  width: 16px;
-  height: 16px;
-  border-radius: 8px;
-  box-shadow: 0px 0px 3px #000a;
-  position: absolute;
-  left: 0;
-  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
-}
-.toggle_Toggle_1rqtP .toggle_ToggleSwitch_3Pr6O.toggle_On_2VSKd {
-  background-color: #16a1e1;
-  background-image: linear-gradient(to bottom, #01c7f9, #3066f5);
-  transform: translateX(25.3333333333px);
-}
-.toggle_Toggle_1rqtP .toggle_ToggleSwitch_3Pr6O.toggle_Off_33SSs {
-  background-color: #4b525d;
-}
-.toggle_ToggleRow_3gte5 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px;
-  border-radius: 3px;
-  background-color: rgba(59, 63, 72, 0.5);
-}
-.toggle_ToggleRow_3gte5 .toggle_Label_2mzt3 {
-  color: #dfe3e6;
-  font-size: 14px;
-  font-weight: 300;
-}
-.toggle_ToggleRow_3gte5 .toggle_Label_2mzt3.toggle_Disabled_nZbOp {
-  opacity: 0.3;
-}
-.dropdown_DialogDropDownMenu_Item_3HD54 {
-  padding: 10px 15px;
-  cursor: pointer;
-}
-.dropdown_DialogDropDownMenu_Item_3HD54:hover {
-  background: #3e444d;
-}
-.dropdown_DialogDropDownMenu_27Awt._DialogInputContainer {
-  background: #373c44;
-  box-shadow: 0px 8px 26px 2px rgba(0, 0, 0, 0.2);
-  margin-top: 2px;
-}
-.hoverposition_HoverPosition_1tQrX {
-  position: fixed;
-  z-index: 100;
-  opacity: 0;
-  transition: opacity 0.25s;
-  pointer-events: none;
-}
-.hoverposition_HoverPosition_1tQrX.hoverposition_Ready_12dDx {
-  opacity: 1;
-}
-.hoverposition_HoverPosition_1tQrX.hoverposition_NoSpace_2RE0x {
-  display: none;
-}
-.hoverposition_EnablePointerEvents_346UO {
-  pointer-events: all;
-}
-.hoverposition_HoverAboveModal_2znvo {
-  z-index: 2000;
-}
-.tooltip_TextToolTip_1y-4v {
-  box-sizing: border-box;
-  font-size: 13px;
-  background-color: #696773;
-  border-radius: 2px;
-  color: #e0e1e6;
-  padding: 6px 8px;
-  box-shadow: 1px 1px 8px #0005, 2px 2px 16px 1px #0005;
-  max-width: 300px;
-  user-select: none;
-}
-.tooltip_ToolTipCustom_3g-WB {
-  box-sizing: border-box;
-  font-size: 13px;
-  background-color: #696773;
-  border-radius: 2px;
-  color: #e0e1e6;
-  padding: 6px 8px;
-  box-shadow: 1px 1px 8px #0005, 2px 2px 16px 1px #0005;
-  max-width: 300px;
-  user-select: none;
-}
-.tooltip_ToolTipCustom_3g-WB .tooltip_ToolTipTitle_DE02N {
-  color: #e0e1e6;
-}
-.tooltip_ToolTipCustom_3g-WB .tooltip_ToolTipTitle_DE02N.tooltip_Center_3PLe5 {
-  text-align: center;
-}
-.tooltip_ToolTipCustom_3g-WB .tooltip_ToolTipInsetContent_1SHdU {
-  color: #aaacb6;
-  margin: 6px 4px;
-}
-.pagedsettings_PagedSettingsDialog_379hM {
-  display: flex;
-  flex-direction: row;
-  height: 720px;
-}
-.pagedsettings_PagedSettingsDialog_PageContent_26LM5 {
-  flex: 3;
-}
-.pagedsettings_PagedSettingsDialog_PageContent_26LM5 .DialogHeader {
-  margin-right: 0;
-}
-.pagedsettings_PagedSettingsDialog_PageListColumn_2Cma8 {
-  background: #2a2d34;
-  flex: 1;
-  min-width: 140px;
-  max-width: 220px;
-  padding-left: 24px;
-  padding-top: 40px;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-.pagedsettings_PagedSettingsDialog_Title_3gBLR {
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  color: #4297f8;
-  font-weight: 300;
-  font-size: 13px;
-  user-select: none;
-}
-.pagedsettings_PagedSettingsDialog_PageList_2f7v2 {
-  line-height: 16px;
-  white-space: nowrap;
-  overflow-y: overlay;
-  flex-shrink: 1;
-}
-.pagedsettings_PagedSettingsDialog_PageListItem_15qhi {
-  white-space: normal;
-  max-width: 180px;
-  text-overflow: ellipsis;
-  color: #7e7e7e;
-  font-size: 15px;
-  font-weight: normal;
-  text-transform: uppercase;
-  cursor: pointer;
-  margin-bottom: 14px;
-  user-select: none;
-}
-.pagedsettings_PagedSettingsDialog_PageListItem_15qhi.pagedsettings_DisabledItem_2CiVW,
-.pagedsettings_PagedSettingsDialog_PageListItem_15qhi.pagedsettings_DisabledItem_2CiVW:hover,
-.pagedsettings_PagedSettingsDialog_PageListItem_15qhi.pagedsettings_DisabledItem_2CiVW:not(.pagedsettings_Active_bTXaV):hover {
-  color: #414141;
-}
-.pagedsettings_PagedSettingsDialog_PageListItem_15qhi:not(.pagedsettings_Active_bTXaV):hover {
-  color: #ccc;
-}
-.pagedsettings_PagedSettingsDialog_PageListItem_15qhi.pagedsettings_Active_bTXaV {
-  color: #fff;
-  cursor: default;
-}
-body.modals_BodyNoScroll_1JTaq {
-  overflow-y: hidden;
-  height: 100vh;
-}
-body.modals_BodyNoScrollDialog_t0EzL {
-  overflow-y: hidden;
-  height: 100vh;
-}
-.modals_OverlayModal_1GJbF {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 1500;
-}
-.focusring_FocusRingRoot_2BQL2 {
-  position: absolute;
-  pointer-events: none;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-.focusring_FocusRing_3ARGF {
-  position: absolute;
-  pointer-events: none;
-  border: 4px solid #add8e6;
-}
-.focusring_FocusRing_3ARGF.focusring_Animated_1VmCg {
-  transition: left 0.1s, top 0.1s, height 0.1s, width 0.1s;
-}
-.contextmenu_ContextMenuMouseOverlay_3EgM8 {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: 1599;
-}
-.contextmenu_ContextMenuFocusContainer_2QK-x:focus {
-  outline: none;
-}
-.contextmenu_contextMenu_4fpUg {
-  position: absolute;
-  background: radial-gradient(
-    ellipse farthest-corner at 50% 0%,
-    #3c4047 0%,
-    #3c4047 50%,
-    #33363d 100%
-  );
-  box-shadow: 0 10px 32px 0px #000000ab;
-  opacity: 1;
-  transition: opacity 200ms;
-  z-index: 1600;
-  user-select: none;
-  padding: 4px;
-}
-.web_chat_frame .contextmenu_contextMenu_4fpUg {
-  max-height: calc(100% - 128px);
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-html.contextmenu_ContextMenuPopup_152-v .contextmenu_contextMenu_4fpUg {
-  position: static;
-  box-shadow: none;
-  display: inline-block;
-  padding: 0;
-}
-html.contextmenu_ContextMenuPopup_152-v .contextmenu_contextMenuContents_3te6b {
-  padding: 4px;
-}
-html.contextmenu_ContextMenuPopup_152-v .contextmenu_contextMenuItem_3hJA5 {
-  min-width: fit-content;
-}
-.contextmenu_contextMenuContents_3te6b {
-  display: flex;
-  flex-direction: column;
-  padding: 0px;
-  font-size: 14px;
-  -webkit-app-region: no-drag;
-}
-.contextmenu_contextMenu_4fpUg:not(.visible) {
-  opacity: 0;
-  pointer-events: none;
-}
-.contextmenu_contextMenuItem_3hJA5 {
-  padding: 4px 6px;
-  line-height: 17px;
-  color: #9ca4a7;
-  border-top: 0.5px solid rgba(80, 87, 94, 0.5);
-  border-bottom: 0.5px solid rgba(80, 87, 94, 0);
-  cursor: default;
-  position: relative;
-  min-width: 120px;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-}
-.contextmenu_contextMenuItem_3hJA5:first-child {
-  border-top: 0.5px solid rgba(80, 87, 94, 0);
-}
-.contextmenu_contextMenuItem_3hJA5:hover,
-.contextmenu_contextMenuItem_3hJA5.contextmenu_active_1NWFM {
-  background: #5a6069;
-  color: #b8c5c9;
-}
-.contextmenu_contextMenuItem_3hJA5.disabled {
-  background: none;
-  color: #6b7072;
-  cursor: default;
-  pointer-events: none;
-}
-.contextmenu_contextMenuItem_3hJA5.disabled:hover {
-  background: none;
-  color: #6b7072;
-  cursor: default;
-}
-.contextmenu_contextMenuItem_3hJA5.menuChecked {
-  color: #6dcff6;
-}
-.contextmenu_contextMenuItem_3hJA5.menuChecked.contextMenuCheckMark {
-  display: block;
-}
-.contextmenu_contextMenuItem_3hJA5.contextmenu_MenuSectionHeader_2b55g {
-  padding-top: 8px;
-  font-size: 12px;
-  text-transform: uppercase;
-}
-.contextmenu_ContextMenuSeparator_LXVyl + .contextmenu_contextMenuItem_3hJA5 {
-  border-top-color: dimgray;
-}
-.contextmenu_contextMenuItem_3hJA5.contextmenu_NoSeparation_2ct40 {
-  border-top-color: transparent;
-  border-bottom-color: transparent;
-}
-.contextmenu_contextMenuItem_3hJA5.contextmenu_UpperCase_3aR4r {
-  text-transform: uppercase;
-}
-.contextmenu_contextMenuItem_3hJA5 .SVGIcon_Button {
-  height: 10px;
-  width: 10px;
-  margin-right: 4px;
-}
-.contextmenu_contextMenuItem_3hJA5.contextmenu_SubMenu_2o_UY {
-  display: flex;
-  padding-right: 2px;
-}
-.contextmenu_contextMenuItem_3hJA5.contextmenu_SubMenu_2o_UY
-  .contextmenu_Label_KM3XP {
-  flex: 1 0 auto;
-}
-.contextmenu_contextMenuItem_3hJA5.contextmenu_SubMenu_2o_UY
-  .contextmenu_Arrow_2hT07 {
-  flex: 0 0 auto;
-  margin: 0px 0px 0px 4px;
-}
-.contextmenu_contextMenuItem_3hJA5.contextmenu_SubMenu_2o_UY
-  .SVGIcon_DownArrowContextMenu {
-  height: 14px;
-  width: 14px;
-  transform: rotateZ(-90deg);
-  fill: #9ca4a7;
-  margin: 0px 3px;
-}
-.contextmenu_contextMenuItem_3hJA5 svg {
-  height: 12px;
-  width: 12px;
-  margin-right: 6px;
-}
-.contextmenu_contextMenuItem_3hJA5 .SVGIcon_PlusCircle {
-  height: 16px;
-  width: 16px;
-  margin-left: -3px;
-  margin-bottom: -3px;
-}
-.contextmenu_contextMenuItem_3hJA5 .SVGIcon_PlusCircle line {
-  stroke: gray;
-  shape-rendering: crispEdges;
-  stroke-width: 20px;
-}
-.contextmenu_contextMenuItem_3hJA5 .SVGIcon_PlusCircle circle {
-  opacity: 0;
-}
-.contextMenuCheckMark {
-  width: 4px;
-  height: 18px;
-  background-color: #6dcff6;
-  min-height: 1px;
-  display: inline-block;
-  position: absolute;
-  left: -4px;
-  margin-top: 0px;
-  display: none;
-}
-.contextmenu_PopoutSubMenu_3TVcU {
-  position: relative;
-  width: 100%;
-  overflow: visible;
-}
-.contextmenu_PopoutSubMenu_3TVcU .contextmenu_PopoutSubMenuItems_2Et1H {
-  position: absolute;
-  width: 60%;
-  height: fit-content;
-  left: 100%;
-  top: 0;
-  background: radial-gradient(
-    ellipse farthest-corner at 50% 0%,
-    #3c4047 0%,
-    #3c4047 50%,
-    #33363d 100%
-  );
-  box-shadow: 0 10px 32px 0px #000000ab;
-  opacity: 1;
-  word-wrap: break-word;
-}
 .dpcteamlist_DPCTeamList_wkwPY {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #151515;
-  padding-bottom: 30px;
+  padding-bottom: 150px;
+  padding-top: 30px;
 }
 .dpcteamlist_DPCTeamList_wkwPY .dpcteamlist_Header_6xmj_ {
   width: 100%;
-  max-width: 1240px;
+  max-width: 1324px;
   height: 80px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 0px 40px;
+  padding-right: 40px;
+  padding-left: 80px;
   padding-bottom: 14px;
 }
 .dpcteamlist_DPCTeamList_wkwPY
@@ -25891,24 +25935,43 @@ html.contextmenu_ContextMenuPopup_152-v .contextmenu_contextMenuItem_3hJA5 {
 }
 .dpcteamlist_TeamEntry_2GaFH
   .dpcteamlist_FavoriteSection_2-En1
+  .dpcteamlist_FollowingLine_Mot01
+  .dpcteamlist_Star_103DO {
+  width: 15px;
+  height: 15px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-right: 8px;
+}
+.dpcteamlist_TeamEntry_2GaFH
+  .dpcteamlist_FavoriteSection_2-En1
   .dpcteamlist_FollowingLine_Mot01.dpcteamlist_IsFollowing_251I0 {
   filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.5));
 }
 .dpcteamlist_TeamEntry_2GaFH
   .dpcteamlist_FavoriteSection_2-En1
   .dpcteamlist_FollowingLine_Mot01.dpcteamlist_IsFollowing_251I0
-  .dpcteamlist_FollowingLabel_30y9X {
-  color: #fedb92;
-}
-.dpcteamlist_TeamEntry_2GaFH
-  .dpcteamlist_FavoriteSection_2-En1
-  .dpcteamlist_FollowingLine_Mot01
   .dpcteamlist_Star_103DO {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   background-size: cover;
   background-repeat: no-repeat;
   margin-right: 8px;
+}
+.dpcteamlist_TeamEntry_2GaFH
+  .dpcteamlist_FavoriteSection_2-En1
+  .dpcteamlist_FollowingLine_Mot01.dpcteamlist_IsFollowing_251I0
+  .dpcteamlist_FollowingLabel_30y9X {
+  color: transparent;
+  background-image: linear-gradient(180deg, #ffeca4, #ffa05c);
+  background-size: 100%;
+  background-repeat: repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  filter: drop-shadow(0 0 0.5rem #ffffffbf);
 }
 .dpcteamlist_TeamEntry_2GaFH
   .dpcteamlist_FavoriteSection_2-En1
@@ -27514,11 +27577,6 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px 24px;
-}
-.dpcschedulepage_DPCScheduleEntry_b1AHp
-  .dpcschedulepage_Expansion_Uo0Hi.dpcschedulepage_Expanded_3Nr8I {
-  padding: 12px 24px;
 }
 .dpcschedulepage_DPCScheduleGameDetails_vZFal {
   width: 100%;
@@ -27527,13 +27585,21 @@ a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  border-bottom: 1px solid #31363f;
+  position: relative;
 }
-.dpcschedulepage_DPCScheduleGameDetails_vZFal.dpcschedulepage_IsLast_3WAO1 {
-  border-bottom: none;
-}
-.dpcschedulepage_DPCScheduleGameDetails_vZFal .dpcschedulepage_Time_3jI-0 {
+.dpcschedulepage_DPCScheduleGameDetails_vZFal
+  .dpcschedulepage_LeftSection_1Tx1F {
   width: 250px;
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.dpcschedulepage_DPCScheduleGameDetails_vZFal
+  .dpcschedulepage_LeftSection_1Tx1F
+  .dpcschedulepage_Time_3jI-0 {
   color: #6b7785;
   font-size: 13px;
   font-weight: 700;
@@ -27541,19 +27607,33 @@ a {
   letter-spacing: 3px;
   text-align: center;
 }
+.dpcschedulepage_DPCScheduleGameDetails_vZFal
+  .dpcschedulepage_LeftSection_1Tx1F
+  .dpcschedulepage_WatchedBox_2UkRa {
+  padding: 4px 8px;
+  background-color: #007acc;
+  border-radius: 3px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 10px;
+}
 .dpcschedulepage_DPCScheduleGameDetails_vZFal .dpcschedulepage_HeroList_19hC7 {
   width: 170px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin: 0px 10px;
+  margin: 0px 40px;
 }
 .dpcschedulepage_DPCScheduleGameDetails_vZFal
   .dpcschedulepage_HeroList_19hC7
   .dpcschedulepage_HeroIcon_3Fgzz {
   width: 32px;
   height: 32px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .dpcschedulepage_DPCScheduleGameDetails_vZFal .dpcschedulepage_Center_31Hvu {
   flex-grow: 1;
@@ -27601,8 +27681,7 @@ a {
 }
 .dpcschedulepage_DPCScheduleGameDetails_vZFal
   .dpcschedulepage_RightSection_2HVyi {
-  width: 210px;
-  margin-left: 24px;
+  width: 250px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27612,9 +27691,10 @@ a {
   .dpcschedulepage_RightSection_2HVyi
   .dpcschedulepage_WatchVODButton_3awzP {
   padding: 8px 30px;
+  width: 60%;
   background-color: #2e3339;
   font-size: 12px;
-  color: #9099a3;
+  color: #0f1113;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -27633,7 +27713,7 @@ a {
   border: 1px solid #2e3339;
   color: #9099a3;
   cursor: pointer;
-  pointer-events: inherit;
+  pointer-events: initial;
 }
 .dpcschedulepage_DPCScheduleGameDetails_vZFal
   .dpcschedulepage_RightSection_2HVyi
@@ -27642,24 +27722,17 @@ a {
   background-color: #41474e;
   cursor: pointer;
 }
-.dpcschedulepage_DPCScheduleGameDetails_vZFal
-  .dpcschedulepage_RightSection_2HVyi
-  .dpcschedulepage_WatchVODButton_3awzP {
-  width: 60%;
-  background-color: #2e3339;
-  font-size: 12px;
-  color: #0f1113;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-align: center;
-  border-color: #2e3339;
-  border-radius: 2px;
-  user-select: none;
+.dpcschedulepage_DPCScheduleGameDetails_vZFal::after {
+  width: calc(100% - 48px);
+  height: 100%;
+  position: absolute;
+  content: "";
+  margin: 0px 24px;
+  border-bottom: 1px solid #31363f;
   pointer-events: none;
-  transition-property: background-color, color;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
+}
+.dpcschedulepage_DPCScheduleGameDetails_vZFal::after.dpcschedulepage_IsLast_3WAO1 {
+  border-bottom: none;
 }
 * {
   box-sizing: border-box;
