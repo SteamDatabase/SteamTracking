@@ -5709,9 +5709,7 @@ body.v6 .page_content.notes {
     color: #9aa8b7;
 }
 
-/* to make the dlc list look good on mobile we make the row a flex row, and
-   re-order the elements so price is last.  Apply these changes to all screen sizes so we
-   can easily support resizing between small and large screens */
+/* Have DLC list use a flex row to support responsive UX */
 .game_area_dlc_row {
 	display: flex;
 	flex-direction: row;

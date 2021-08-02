@@ -1936,15 +1936,6 @@ function ShareDialogCopyToClipboard()
 
 function ReparentAppLandingPageForMobileUX()
 {
-	// Re-order the DLC rows so price follows the DLC name on all screen sizes.  
-	// This is so we no longer need to use absolute positioning, allowing us to use a flexbox to prevent content overlap
-	var $MoveElements = $J('.game_area_dlc_price');
-	$MoveElements.each( function() {
-		var $Element = $J(this);
-		var $ParentElement = $Element.closest('a');
-		$Element.appendTo( $ParentElement );
-	} );
-
 	// For the rest of the changes we only want to re-parent if we're actually mobile-sized
 	var bMatch = window.matchMedia( '(max-width: 500px)' ).matches;
 
