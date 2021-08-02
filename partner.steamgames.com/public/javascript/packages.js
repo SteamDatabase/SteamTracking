@@ -500,8 +500,8 @@ var templ_DiscountDiv = new Template( ''
 		+ '				</div>'
 		+ '			</div>'
 		+ '			<div class="formrow">'
-		+ '				<div><input type="checkbox" name="#{DiscountId}[flag_singleuse]" id="#{DiscountId}_flag_singleuse" value="#{DiscountSingleUse}"><label for="#{DiscountId}_flag_singleuse">Single Use</label></div>'
-		+ '				<div><input type="checkbox" name="#{DiscountId}[flag_taxable]" id="#{DiscountId}_flag_taxable" value="#{DiscountTaxable}"><label for="#{DiscountId}_flag_taxable">Taxable</label></div>'
+		+ '				<div><input type="checkbox" name="#{DiscountId}[flag_singleuse]" id="#{DiscountId}_flag_singleuse" value="1" #{DiscountSingleUse}><label for="#{DiscountId}_flag_singleuse">Single Use</label></div>'
+		+ '				<div><input type="checkbox" name="#{DiscountId}[flag_taxable]" id="#{DiscountId}_flag_taxable" value="1" #{DiscountTaxable}><label for="#{DiscountId}_flag_taxable">Taxable</label></div>'
 		+ '			</div>'
 		+ '			<div class="formrow">'
 		+ '				<div class="formlabel">Discount amounts:</div>'
@@ -594,8 +594,8 @@ function CreateDiscount( target, id, discount, packageid )
 	var master_discountid = (discount['master_discountid'] == null) ? 0 : discount['master_discountid'];
 	var flags = (discount['flags'] == null) ? 0 : discount['flags'];
 
-	var flagSingleUse = flags & 16 ? 0 : 1;
-	var flagTaxable = flags & 16 ? 0 : 1;
+	var flagSingleUse = flags & 32 ? 'checked' : '';
+	var flagTaxable = flags & 16 ? 'checked' : '';
 
 	// Base Discounts
 	var strDiscountPrices = GetRequiredCurrencyBlock( id + '[discount]', g_RequiredCurrencies, amt['base'], true, false );
