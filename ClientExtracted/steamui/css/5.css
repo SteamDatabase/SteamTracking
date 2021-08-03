@@ -34333,8 +34333,13 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   .contentmanagement_AppInfo__g4ce
   .contentmanagement_AppUsageText_1G9v2 {
   margin-left: 4px;
-  cursor: pointer;
   color: #b8bcbf;
+}
+.contentmanagement_AppsGrid_2n6FN
+  .contentmanagement_AppBodyLeft_d9dlN
+  .contentmanagement_AppInfo__g4ce
+  .contentmanagement_AppUsageLink_3VH5f {
+  cursor: pointer;
 }
 .contentmanagement_AppsGrid_2n6FN
   .contentmanagement_AppBodyLeft_d9dlN
