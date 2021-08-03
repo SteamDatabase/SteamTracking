@@ -20520,15 +20520,6 @@ a {
 .dpcselectors_DropdownSelector_3jmb0.dpcselectors_StyleLine_1w-4f
   .dpcselectors_DropdownBody_1u6rb {
   border: 2px solid #3f464f;
-  background: linear-gradient(
-    108deg,
-    transparent 0%,
-    transparent calc(100% - 38px),
-    #41474e calc(100% - 38px),
-    #41474e calc(100% - 28px),
-    transparent calc(100% - 28px),
-    transparent 100%
-  );
   padding-right: 9px;
   color: #687381;
 }
@@ -20541,6 +20532,16 @@ a {
   .dpcselectors_DropdownBody_1u6rb
   .dpcselectors_RightArrow_3XoYb {
   filter: brightness(0.5);
+}
+.dpcselectors_DropdownSelector_3jmb0.dpcselectors_StyleLine_1w-4f
+  .dpcselectors_AngleFill_2297x {
+  height: calc(100% + 20px);
+  width: 9px;
+  position: absolute;
+  right: 26px;
+  top: -10px;
+  transform: rotate(19deg);
+  background-color: #3f464f;
 }
 .dpcselectors_DropdownSelector_3jmb0 .dpcselectors_DropdownBody_1u6rb {
   width: 100%;
@@ -24778,11 +24779,15 @@ a {
   align-items: center;
 }
 .dpchomepage_DPCHomePageStandingsLeague_3C6rF {
-  width: 100%;
-  background-position: center;
+  width: 1920px;
+  background-position: top, center;
+  background-repeat: repeat-y;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  position: relative;
   padding-top: 50px;
   padding-bottom: 30px;
 }
@@ -25037,7 +25042,7 @@ a {
   gap: 30px;
 }
 .dpcstandings_LegendContainer_rde9K {
-  margin-top: 50px;
+  margin-top: 40px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -25046,6 +25051,8 @@ a {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  padding: 0px 20px;
+  gap: 20px;
 }
 .dpcstandings_LegendContainer_rde9K
   .dpcstandings_LegendCenter_rhVMV
@@ -25054,13 +25061,13 @@ a {
   flex-direction: row;
   align-items: center;
   gap: 15px;
-  margin-left: 30px;
 }
 .dpcstandings_LegendContainer_rde9K
   .dpcstandings_LegendCenter_rhVMV
   .dpcstandings_LegendItem_1JF4X
   .dpcstandings_ColorSquare_ud1oU {
   width: 40px;
+  min-width: 40px;
   height: 40px;
 }
 .dpcstandings_LegendContainer_rde9K
@@ -25255,7 +25262,7 @@ a {
 .dpcstandings_DPCStandingsTeam_25wGh {
   width: 100%;
   height: 70px;
-  background-color: #1f1f24;
+  background-color: #1f1f24e6;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -25694,14 +25701,115 @@ a {
   height: 1px;
   background-color: #555;
 }
-.dpcteamlist_DPCTeamList_wkwPY {
+.dpcstandings_DPCLeagueResults_IAy8B {
   width: 100%;
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #151515;
+  gap: 10px;
+}
+.dpcstandings_LeagueResult_3wkjK {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: linear-gradient(
+    108deg,
+    #2a2a32 0%,
+    #2a2a32 65%,
+    #36363e 65%,
+    #36363e 100%
+  );
+}
+.dpcstandings_LeagueResult_3wkjK .dpcstandings_Placement_1acRh {
+  width: 60px;
+  padding: 8px 0px;
+  margin: 0px 40px;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #fff;
+  background-color: #36363e;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+}
+.dpcstandings_LeagueResult_3wkjK
+  .dpcstandings_Placement_1acRh.dpcstandings_First_2EW0H,
+.dpcstandings_LeagueResult_3wkjK
+  .dpcstandings_Placement_1acRh.dpcstandings_Second_3c4-c,
+.dpcstandings_LeagueResult_3wkjK
+  .dpcstandings_Placement_1acRh.dpcstandings_Third_3uWC9 {
+  color: #000;
+}
+.dpcstandings_LeagueResult_3wkjK
+  .dpcstandings_Placement_1acRh.dpcstandings_First_2EW0H {
+  background: linear-gradient(108deg, #786957, #d1ccbc, #786957);
+}
+.dpcstandings_LeagueResult_3wkjK
+  .dpcstandings_Placement_1acRh.dpcstandings_Second_3c4-c {
+  background: linear-gradient(108deg, #475164, #a1a4b0, #475164);
+}
+.dpcstandings_LeagueResult_3wkjK
+  .dpcstandings_Placement_1acRh.dpcstandings_Third_3uWC9 {
+  background: linear-gradient(108deg, #554044, #bea090, #554044);
+}
+.dpcstandings_LeagueResult_3wkjK .dpcstandings_TeamName_QK1FS {
+  flex-grow: 1;
+  margin-left: 40px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+.dpcstandings_LeagueResult_3wkjK .dpcstandings_EarningsContainer_KM0P8,
+.dpcstandings_LeagueResult_3wkjK .dpcstandings_PointsContainer_2U_Ui {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.dpcstandings_LeagueResult_3wkjK
+  .dpcstandings_EarningsContainer_KM0P8
+  .dpcstandings_Title_1j7g0,
+.dpcstandings_LeagueResult_3wkjK
+  .dpcstandings_PointsContainer_2U_Ui
+  .dpcstandings_Title_1j7g0 {
+  color: #7f7f81;
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.dpcstandings_LeagueResult_3wkjK
+  .dpcstandings_EarningsContainer_KM0P8
+  .dpcstandings_Value_1wtsk,
+.dpcstandings_LeagueResult_3wkjK
+  .dpcstandings_PointsContainer_2U_Ui
+  .dpcstandings_Value_1wtsk {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.dpcteamlist_DPCTeamList_wkwPY {
+  width: 1920px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-bottom: 150px;
-  padding-top: 30px;
+  background-color: #222226;
+  background-position: top, center;
+  background-repeat: repeat-y;
+  background-size: cover;
+  justify-content: center;
+  position: relative;
 }
 .dpcteamlist_DPCTeamList_wkwPY .dpcteamlist_Header_6xmj_ {
   width: 100%;
@@ -26689,17 +26797,14 @@ a {
   justify-content: space-around;
   margin-bottom: 50px;
 }
-.dpcstandingspage_DPCStandingsPageLeague_34H1h
-  .dpcstandingspage_DivisionHeader_3713C {
-  font-size: 35px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  color: #fff;
+.dpcstandingspage_DPCStandingsPageLeague_34H1h .dpcstandingspage_Header_1EgAU {
   width: 100%;
-  text-align: center;
-  padding: 30px 0px;
-  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 30px 0px;
 }
 .dpcstandingspage_DPCStandingsPageMajor_3rfFl {
   width: 100%;
