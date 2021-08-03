@@ -1,6 +1,8 @@
 __TEXT
 __text
 __TEXT
+i
+i
 __stubs
 __TEXT
 __stub_helper
@@ -55,7 +57,7 @@ __LINKEDIT
 @loader_path/serverbrowser.dylib
 "
 @'
-h'
+`'
 P
 
 
@@ -1212,7 +1214,6 @@ ClientAPI_Init(GlobalInstance): GetIClientShader returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientCompat returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSTARInternal returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientNetworkingUtils returned NULL.
-[SteamNetworkingSockets] %s
 Assertion Failed: 0
 Steam_BGetCallback
 Steam_FreeLastCallback
@@ -3803,6 +3804,7 @@ Assertion Failed: s_bAllowStaticSymbolTable
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
 s_pSymbolTable
 0
+z&
 j
 j
 j
@@ -3836,7 +3838,7 @@ j
 j
 j
 j
-z%
+c%
 0
 p
 0
@@ -3845,7 +3847,7 @@ j
 j
 j
 %
-%
+9%
 0
 0
 AT=
@@ -3912,6 +3914,7 @@ M9e
 ?
 @
 @
+H
 
 
 
@@ -4174,4 +4177,3 @@ d
 @
 @
 @
-S

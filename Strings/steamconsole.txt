@@ -2,8 +2,6 @@
 __TEXT
 __text
 __TEXT
-P?
-P?
 __stubs
 __TEXT
 __stub_helper
@@ -245,7 +243,6 @@ ClientAPI_Init(GlobalInstance): GetIClientShader returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientCompat returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSTARInternal returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientNetworkingUtils returned NULL.
-[SteamNetworkingSockets] %s
 -quicklogin
 Set the base used to construct quick login URLs
 -community

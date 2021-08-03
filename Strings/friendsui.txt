@@ -63,7 +63,7 @@ __LINKEDIT
 @loader_path/friendsui.dylib
 "
 @;
-H(
+@(
 P
 
 
@@ -97,7 +97,7 @@ h
 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
 &
 )
-X`[
+H`[
 22CJSCallbackFunc_HTMLJS
 15CJSCallbackFunc
 11CRefCountedI20CRefCountServiceBaseILb1E6CRefMTEE
@@ -3397,7 +3397,6 @@ ClientAPI_Init(GlobalInstance): GetIClientShader returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientCompat returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSTARInternal returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientNetworkingUtils returned NULL.
-[SteamNetworkingSockets] %s
 CParentalCache::OnParentalLockChangeBegin
 steammessages_clientnotificationtypes.proto
 graphics/avatarBorderOffline
@@ -4971,6 +4970,7 @@ jpg;png
 WebChat.RegisterForFriendPostMessage
 WebChat.GetWebChatURL
 WebChat.GetWebChatLanguage
+WebChat.GetUIMode
 WebChat.RegisterOverlayChatBrowserInfoChanged
 WebChat.GetOverlayChatBrowserInfo
 WebChat.RegisterForComputerActiveStateChange
@@ -4996,7 +4996,6 @@ WebChat.SetNumChatsWithUnreadPriorityMessages
 OpenVR.GetWebSecret
 WebChat.OnNewGroupChatMsgAdded
 WebChat.OnGroupChatUserStateChange
-UI.GetUIMode
 LimitedUserDialog
 public/LimitedUserDialog.res
 LimitedFeature
@@ -13596,6 +13595,7 @@ Assertion Failed: k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
 30819D300D06092A864886F70D010101050003818B003081870281810093AFCC20E2393BFD1234FC5552E9A9D5610ECC4AC6891EBCC77C28018FCB31404C09A5DC11636CD97C1A022188AB680CFF063C830BA693A0F1A90E9A3E21E33EE731BD5B6AAB09B40A1A951C21ECD6B11CAB63B4840894F4F2F0CC9D24924DF7DB216FE7D9C0C5914A88DF501EF27ACB00D08101CC2AEC32DFAD498289DCF4BD020111
 30819d300d06092a864886f70d010101050003818b0030818702818100baeee6ba4093c07f86fb34fa2ed0c9660484dd02e2d7b4e2dbc0a7b80f088f42c34dffd633b4f79fd4956aa6b901d480da5d5f783fefd681b9fc517804b00451dfc3ecc7e16b11dcb0379dc1f9d00d0a7ab8f5d6aba57115f12256ed0c9e9bd4bf994dbbdd42cd019c5b023b3fd0005430c5305bdd46cce39a492753b0b5b355020111
 0
+'9
 9
 9
 9
@@ -13605,6 +13605,9 @@ Assertion Failed: k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
 9
 9
 9
+9
+9
+TC
 p
 p
 0
@@ -13614,25 +13617,21 @@ p
 8
 8
 8
-O8
-qY
 C
 R
 R
-Z9
-R
+8
 p
 0
 p
 0
 p
 0
-[7
 8
 P
 p
 0
-(7
+)7
 p
 0
 B
@@ -13643,32 +13642,36 @@ p
 p
 0
 
-_7
+i7
+h7
+g7
 U
-r7
+I7
+7
 0
-k6
-,7
+)7
 H=
 @
+:6
 6
 x
 @
 @
 @
 x
+U
 /
 /
 /
 /
-N*
+ZT
 j
 
 
 
-o>
 p
 0
+^4
 4
 p
 0
@@ -13683,8 +13686,9 @@ AVj
 @
 @
 @
-%@
 
+#@
+O3
 
 
 9
@@ -13709,10 +13713,23 @@ p
 4
 p
 0
+<T
 p
 0
 p
 0
+p
+0
+p
+0
+p
+0
+p
+p
+0
+p
+0
+p
 p
 0
 .
@@ -13720,26 +13737,6 @@ p
 0
 p
 0
-p
-p
-0
-p
-0
-p
-p
-0
-lT
-.
-p
-0
--3
-p
-0
-;3
-52
-*2
-3
-3
 3
 3
 3
@@ -13763,7 +13760,6 @@ j
 j
 j
 j
-9=
 j
 j
 j
@@ -13785,6 +13781,7 @@ j
 j
 j
 j
+E3
 j
 j
 j
@@ -13850,6 +13847,7 @@ j
 j
 j
 p
+2
 2
 2
 2
@@ -13857,9 +13855,7 @@ p
 A
 A
 AWj
-f2
 
-XR
 p
 0
 p
@@ -13887,7 +13883,6 @@ p
 0
 0
 0
-B2
 p
 0
 p
@@ -13897,7 +13892,6 @@ p
 2
 p
 0
-<
 p
 0
 <
@@ -13935,9 +13929,10 @@ p
 0
 p
 0
-d0
-11
-]Q
+,
+G1
+.1
+VQ
 p
 0
 p
@@ -13948,8 +13943,11 @@ p
 0
 1
 1
+1
+1
+J1
 p
-P1
+,2
 p
 p
 
@@ -13962,6 +13960,7 @@ j
 j
 j
 j
+^Q
 p
 0
 p
@@ -13977,17 +13976,16 @@ p
 p
 0
 E
-a0
 1
-L0
 1
 p
 0
 p
-0
+%
 /
-u0
+/
 p
+:
 /
 p
 0
@@ -14010,8 +14008,11 @@ p
 Ic
 p
 0
-$/
-EO
+%/
+#/
+HO
+QO
+;O
 /
 /
 /
@@ -14068,33 +14069,36 @@ IcE
 .
 .
 V
+X-
+I-
 =
-d,
-a,
+t,
 ;-
 =
 ,
+)+
+$+
 +
+*
 *
 @
 )
 )
 )
-=
-t(
+)
 })
-Z(
 j)
+'(
 8)
 (
-t'
+R'
+J'
 '
 '
 '
 -
 (
 0*
-r&
 @
 M9e
 @
@@ -14110,6 +14114,7 @@ M9e
 ?
 ?
 ?
+%
 :
 ?
 ?
@@ -14125,10 +14130,11 @@ AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
 
 
 
+
 Pj
 ARj
 j
-L.
+M%
 0
 0
 =
@@ -14431,7 +14437,6 @@ OO
 expand 32-byte k
 ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
-tA
 =
 @
 
@@ -14439,21 +14444,20 @@ tA
 @
 @
 0
-!
-'+
-#+
+)
 H=
 Ic]
 j
 j
 j
 j
+"
 j
 j
 
-&
-'
+|)
 t$I;M
+%
 e
 W
 ,7~5d
@@ -14638,7 +14642,8 @@ j
 j
 =
 0
-8
+$
+
 
 
 
@@ -14920,7 +14925,6 @@ S"
 0
 0
 0
-y
 0
 &
 @

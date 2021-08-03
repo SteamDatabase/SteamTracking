@@ -4,8 +4,6 @@ __text
 __TEXT
 __stubs
 __TEXT
-VF2
-VF2
 __stub_helper
 __TEXT
 __cstring
@@ -13,10 +11,10 @@ __TEXT
 __const
 __TEXT
 __gcc_except_tab__TEXT
-p8
-p8
 __objc_methname
 __TEXT
+$~:
+$~:
 __objc_classname__TEXT
 __objc_methtype
 __TEXT
@@ -168,8 +166,10 @@ W1
 =
 =
 =
+91
 0
-L1
+?=
+?=
 
 
 
@@ -178,13 +178,13 @@ L1
 @
 
 1
+<1
 1
 1
 1
 1
 1
 0
-`%
 @
 8
 HC
@@ -2826,7 +2826,6 @@ ClientAPI_Init(GlobalInstance): GetIClientShader returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientCompat returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSTARInternal returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientNetworkingUtils returned NULL.
-[SteamNetworkingSockets] %s
 LoadTGA: Only type 2 and 10 targa RGB images supported
 Texture_LoadTGA: Only 32 or 24 bit images supported (no colormaps)
 Assertion Failed: m_pFontPackagePB->package_version() == 1
@@ -5336,8 +5335,8 @@ linux
 Linux;tenfoot
 X-ValveUserAgent
 panorama %s %s
-Aug  2 2021
-16:03:59
+Aug  3 2021
+12:04:51
 X-SteamClientVersion
 Assertion Failed: hostName
 Assertion Failed: pchRemoteHost
@@ -8230,8 +8229,10 @@ W1
 =
 =
 =
+91
 0
-L1
+?=
+?=
 
 
 
@@ -8240,52 +8241,51 @@ L1
 @
 
 1
+<1
 1
 1
 1
 1
 1
 0
-`%
 '
 @
 @
 l
-40
+4/
 0
 /
-';
+x$
 '
-m/
+9
 $
+9
 &
-&
+%
 &
 8
 -
-!7
+-
 -
 -
 *
 7
 +
 -
+6
 @
 @
-,
 j
 @
 @
-W,
 @
 @
 @
 @
+$8
 2
 2
 ?
-6/
-4/
 >
 ;
 F
@@ -8294,11 +8294,7 @@ F
 +
 !
 &
-]+
 j
-a+
-<5
-85
 @
 @
 @
@@ -8349,7 +8345,6 @@ a+
 @
 @
 @
-+
 +
 +
 +
@@ -8404,14 +8399,13 @@ K
 @
 @
 @
+8'
 ,
+>6
 '
 *
-K4
-Q3
 0
 Ic
-&
 @
 @
 @
@@ -8423,53 +8417,46 @@ Ic
 0
 @
 @
+y2
 @
 @
 )
+m2
 0
-y)
+u)
 =
 @
 @
-V(
-g(
-)
-)
 )
 )
 H=
 )
-N(
 (
 (
 (
 >
 $
-!)
-<'
-5'
+2
 '
 @
 =
-1
 @
 @
 %
 0
+k%
 1
 %
-o/
+`0
 @
 @
 ?
 0
 0
-0
-o/
-g/
+:.
+I.
 @
-e#
-R#
+`#
 P
 0
 (
@@ -8484,59 +8471,61 @@ A
 #
 #
 '
-^&
 @
 ,
 E9u
-x"
 E9u
-m"
+P"
+L"
 @
 A
 A
 A
 A
 A
-I%
 A
 A
 A
+B&
 "
 "
 "
 0
+L/
+"
+!"
 !
 !
 !
 !
-y!
-i"
 .
 @
 !
-R-
 #
-5+
 -
 +
 +
 +
+("
 #
+(
 )
+m)
 g
 #
 @
+=(
+Q$
+$
 Hi
-P#
 #
-|$
 @
+H"
 @
 0
 0
 
 
-L9%8A&
 
 
 
@@ -8544,6 +8533,7 @@ L9%8A&
 
 0
 IcE
+Q
 @
 @
 @
@@ -8651,7 +8641,6 @@ IcE
 @
 @
 @
-V#
 @
 @
 @
@@ -8668,6 +8657,7 @@ V#
 @
 @
 @
+K#
 @
 @
 @
@@ -8730,6 +8720,7 @@ V#
 @
 @
 @
+#
 @
 @
 @
@@ -8919,8 +8910,6 @@ V#
 @
 @
 @
-r"
-m"
 @
 j
 @
@@ -9028,7 +9017,7 @@ V
 
 
 @
-1
+$
 
 
 
@@ -9090,6 +9079,7 @@ I;E
 I;E
 B
 ?
+
 `
 `
 !
@@ -9118,7 +9108,6 @@ P
 |
 H=
 =
-
 
 =
 @
@@ -9151,7 +9140,6 @@ E
 
 
 @
-
 ?
 ?
 ?

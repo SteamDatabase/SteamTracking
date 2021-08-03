@@ -13,7 +13,6 @@
  GetOSType
  GetSpewOutputFunc
  KeyValuesSystemSteam
- Log
  Msg
  Plat_CommandLineParamExists
  Plat_FloatTime

@@ -41,7 +41,6 @@
  GetLocalHostname
  GetOSType
  KeyValuesSystemSteam
- Log
  Msg
  OSTypesAreCompatible
  Plat_CommandLineParamExists

@@ -8213,7 +8213,6 @@ ClientAPI_Init(GlobalInstance): GetIClientShader returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientCompat returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSTARInternal returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientNetworkingUtils returned NULL.
-[SteamNetworkingSockets] %s
 CParentalCache::OnParentalLockChangeBegin
 BroadcastLiveBanner
 LiveImage
@@ -9819,8 +9818,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-Aug  2 2021
-16:03:01
+Aug  3 2021
+12:04:19
 crashhandler003
 gameoverlayui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -13804,8 +13803,9 @@ Nov
 Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
-gG(
-G(
+qK(
+GG(
+_G(
 0
 0
 -
@@ -13815,14 +13815,12 @@ p
 0
 p
 0
-p%
-Z%
-V%
 -
-#%
+^%
 A
 A
 A
+7%
 j
 j
 j
@@ -13832,14 +13830,10 @@ j
 j
 j
 j
-%
 %
 %
 %
 0
-d#
-~$
-_@
 p
 0
 j
@@ -13848,16 +13842,8 @@ j
 j
 j
 j
-R$
-1$
 j
 j
-Y$
-#
-#
-B$
-~"
-+
 +
 j
 j
@@ -13881,6 +13867,7 @@ j
 j
 j
 j
+^?
 j
 j
 j
@@ -13902,6 +13889,7 @@ j
 j
 j
 j
+Y?
 j
 j
 j
@@ -13916,9 +13904,8 @@ j
 j
 j
 j
-q#
-J#
 4$
+Q#
 ($
 j
 j
@@ -13939,6 +13926,9 @@ j
 j
 j
 j
+)#
+'#
+#
 #
 #
 #
@@ -13950,10 +13940,9 @@ j
 "
 "
 "
-#
-c#
 M
 d
+0>
 j
 j
 j
@@ -13966,7 +13955,7 @@ j
 j
 j
 j
-%!
+,>
 #
 
 
@@ -13976,8 +13965,7 @@ j
 @
 
 0
-'"
-Y)
+<)
 "
 "
 "
@@ -14002,20 +13990,18 @@ p
 p
 p
 p
+].
 )
 )
 )
 @
 =
-""
 
-q!
+^!
 .
 0
 0
-H
 \
-3!
 j
 j
 j
@@ -14051,14 +14037,14 @@ j
 !
 !
 j
+!
 !
 Ic
 !
+Z<
 Hi
-Q!
+h
 !
-H
-G
 j
 j
 j
@@ -14069,8 +14055,6 @@ j
 !
 !
 !
-$
-0
 j
 j
 j
@@ -14087,7 +14071,7 @@ j
 0
 p
 0
-(
+L
 j
 j
 j
@@ -14100,8 +14084,6 @@ j
 j
 j
 j
-;
-;
 j
 ;
 ;
@@ -14165,14 +14147,16 @@ IcE
 IcE
 @
 @
+S%
 V
-G9
 =
+P.
 =
 #
 @
 +
 +
+x3
 @
 M9e
 @
@@ -14373,7 +14357,8 @@ P
 !
 6
 d
-A
+
+
 
 
 
@@ -14436,6 +14421,7 @@ A+4$A+u
 =
 =
 @
+
 
 
 j
