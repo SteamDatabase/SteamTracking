@@ -7893,7 +7893,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   return (
                     (n = e.sent()),
                     fe.SetCurrentLoggedInAccountID(n),
-                    [4, SteamClient.UI.GetUIMode()]
+                    [4, SteamClient.WebChat.GetUIMode()]
                   );
                 case 8:
                   return ($t = e.sent()), nn("tracked_frame_friends_chat"), [2];
