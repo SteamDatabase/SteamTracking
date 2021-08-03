@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6702412";
+var CLSTAMP = "6704133";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [1],
   {
@@ -431,7 +431,7 @@ var CLSTAMP = "6702412";
             return "/item_react/" + (e || "");
           },
           dpc_root: function () {
-            return "/dpc_react";
+            return "/esports";
           },
           dpc_event_root: function (e) {
             return o.dpc_root() + "/" + (e || Object(r.b)());
@@ -1320,6 +1320,30 @@ var CLSTAMP = "6702412";
             }
           : { strErrorMsg: "Unknown Error: " + e, errorCode: 2 };
       }
+    },
+    E6C8: function (e, t, a) {
+      e.exports = {
+        Tooltip: "dpctistandingspage_Tooltip_NM-z6",
+        CarouselFade: "dpctistandingspage_CarouselFade_1l35x",
+        StandardButton: "dpctistandingspage_StandardButton_mLA6c",
+        ButtonText: "dpctistandingspage_ButtonText_176Cb",
+        SteamLogo: "dpctistandingspage_SteamLogo_DSZ2a",
+        DPCTIStandingsPage: "dpctistandingspage_DPCTIStandingsPage_1kBk0",
+        TeamEntry: "dpctistandingspage_TeamEntry_1hUXO",
+        TeamBody: "dpctistandingspage_TeamBody_VD4ay",
+        TeamName: "dpctistandingspage_TeamName_2uAht",
+        Points: "dpctistandingspage_Points_1iUhY",
+        TeamExpansion: "dpctistandingspage_TeamExpansion_Cqzek",
+        Expanded: "dpctistandingspage_Expanded_3go0v",
+        LeagueResult: "dpctistandingspage_LeagueResult_6kSPA",
+        Timestamp: "dpctistandingspage_Timestamp_2EIrk",
+        PlayerLeft: "dpctistandingspage_PlayerLeft_3as8u",
+        PlayerName: "dpctistandingspage_PlayerName_1fhL3",
+        PointPenalty: "dpctistandingspage_PointPenalty_Ltxf2",
+        LeagueLogo: "dpctistandingspage_LeagueLogo_8m70d",
+        LeaguePlace: "dpctistandingspage_LeaguePlace_XFoiE",
+        LeagueName: "dpctistandingspage_LeagueName_25WbB",
+      };
     },
     FBel: function (e, t, a) {
       e.exports = {
@@ -4053,6 +4077,7 @@ var CLSTAMP = "6702412";
               (this.m_asyncTwitchStreamLive = new o.b()),
               (this.m_asyncDPCStandings = new o.a()),
               (this.m_asyncDPCLeagueResults = new o.b()),
+              (this.m_asyncDPCPlayerInfo = new o.b()),
               (this.m_mapLeagueNodeGroup = new Map()),
               (this.m_mapLeagueNode = new Map()),
               (this.m_mapEventPhaseDates = new Map()),
@@ -4145,6 +4170,7 @@ var CLSTAMP = "6702412";
                       arrPhaseInfos: [{ ePhase: c.d.OVERALL, nNodeGroupID: 3 }],
                     },
                   ],
+                  nRegistrationPeriod: 6,
                 },
                 {
                   eEvent: c.c.SPRING_2021_MAJOR,
@@ -4173,6 +4199,7 @@ var CLSTAMP = "6702412";
                       arrPhaseInfos: [{ ePhase: c.d.PLAYOFF, nNodeGroupID: 4 }],
                     },
                   ],
+                  nRegistrationPeriod: 6,
                 },
                 {
                   eEvent: c.c.INTERNATIONAL_2021_QUALIFIERS,
@@ -4225,6 +4252,7 @@ var CLSTAMP = "6702412";
                       ],
                     },
                   ],
+                  nRegistrationPeriod: 6,
                 },
                 {
                   eEvent: c.c.INTERNATIONAL_2021,
@@ -4255,6 +4283,7 @@ var CLSTAMP = "6702412";
                       ],
                     },
                   ],
+                  nRegistrationPeriod: 6,
                 },
               ]),
               (this.m_mapStreamBestNodes = new Map()),
@@ -4854,53 +4883,56 @@ var CLSTAMP = "6702412";
               });
             }),
             (e.prototype.CacheDPCLeagueData = function (e, t) {
-              var a = this,
-                n = new Set();
-              this.GetEventInfo(e).arrEventLeagues.forEach(function (e) {
-                return n.add(e.nLeagueID);
-              });
-              var o = !1;
-              if (
-                (Array.from(n.values()).forEach(function (e) {
-                  var t, n;
-                  o ||
-                    (o =
-                      !(null ===
-                        (t = a.m_asyncLeagueData.getAsyncDataWrapper(e)) ||
-                      void 0 === t
-                        ? void 0
-                        : t.isDataPending()) &&
-                      (null ===
-                        (n = a.m_asyncLeagueData.getAsyncDataWrapper(e)) ||
-                      void 0 === n
-                        ? void 0
-                        : n.isExpired()));
-                }),
-                o)
-              ) {
-                var i = "";
-                Array.from(n.values()).forEach(function (e) {
-                  a.m_asyncLeagueData.getAsyncDataWrapper(e).setDataPending(),
-                    (i += e + ",");
-                }),
-                  s.a
-                    .get(
-                      l.a.BASE_URL + "webapi/IDOTA2League/GetLeaguesData/v001",
-                      { params: { league_ids: i, delay_seconds: t } }
-                    )
-                    .then(function (t) {
-                      var n = null == t ? void 0 : t.data;
-                      Object(r.F)(function () {
-                        null == n ||
-                          n.leagues.forEach(function (e) {
-                            a.m_asyncLeagueData
-                              .getAsyncDataWrapper(e.info.league_id)
-                              .setData(30, e),
-                              a.UpdateDerivedLeagueData(e);
-                          }),
-                          a.UpdateLiveLeagueNodes(e);
+              var a = this;
+              if (e != c.c.INVALID) {
+                var n = new Set();
+                this.GetEventInfo(e).arrEventLeagues.forEach(function (e) {
+                  return n.add(e.nLeagueID);
+                });
+                var o = !1;
+                if (
+                  (Array.from(n.values()).forEach(function (e) {
+                    var t, n;
+                    o ||
+                      (o =
+                        !(null ===
+                          (t = a.m_asyncLeagueData.getAsyncDataWrapper(e)) ||
+                        void 0 === t
+                          ? void 0
+                          : t.isDataPending()) &&
+                        (null ===
+                          (n = a.m_asyncLeagueData.getAsyncDataWrapper(e)) ||
+                        void 0 === n
+                          ? void 0
+                          : n.isExpired()));
+                  }),
+                  o)
+                ) {
+                  var i = "";
+                  Array.from(n.values()).forEach(function (e) {
+                    a.m_asyncLeagueData.getAsyncDataWrapper(e).setDataPending(),
+                      (i += e + ",");
+                  }),
+                    s.a
+                      .get(
+                        l.a.BASE_URL +
+                          "webapi/IDOTA2League/GetLeaguesData/v001",
+                        { params: { league_ids: i, delay_seconds: t } }
+                      )
+                      .then(function (t) {
+                        var n = null == t ? void 0 : t.data;
+                        Object(r.F)(function () {
+                          null == n ||
+                            n.leagues.forEach(function (e) {
+                              a.m_asyncLeagueData
+                                .getAsyncDataWrapper(e.info.league_id)
+                                .setData(30, e),
+                                a.UpdateDerivedLeagueData(e);
+                            }),
+                            a.UpdateLiveLeagueNodes(e);
+                        });
                       });
-                    });
+                }
               }
             }),
             (e.prototype.GetMatchData = function (e, t) {
@@ -5288,6 +5320,34 @@ var CLSTAMP = "6702412";
                     return e.data;
                   }
                 );
+            }),
+            (e.prototype.GetDPCPlayerInfo = function (e) {
+              var t = this;
+              return this.m_asyncDPCPlayerInfo.getAsyncDataWrapper(e).getData(
+                600,
+                function () {
+                  return Object(n.b)(t, void 0, void 0, function () {
+                    return Object(n.e)(this, function (t) {
+                      switch (t.label) {
+                        case 0:
+                          return [
+                            4,
+                            s.a.get(
+                              l.a.BASE_URL +
+                                "webapi/IDOTA2DPC/GetPlayerInfo/v001",
+                              { params: { account_id: e } }
+                            ),
+                          ];
+                        case 1:
+                          return [2, t.sent()];
+                      }
+                    });
+                  });
+                },
+                function (e) {
+                  return e.data;
+                }
+              );
             }),
             (e.prototype.GetFavoriteTeams = function () {
               var e = this;
@@ -6624,7 +6684,7 @@ var CLSTAMP = "6702412";
       "use strict";
       a.r(t),
         a.d(t, "g_App", function () {
-          return rs;
+          return ss;
         });
       var n = a("mrSG"),
         r = (a("RYZ7"), a("i8i4")),
@@ -7279,8 +7339,8 @@ var CLSTAMP = "6702412";
           );
         })())();
       window.g_AppCapsuleStore = B;
-      var k = a("I8QC"),
-        P = (function () {
+      var P = a("I8QC"),
+        k = (function () {
           function e(e) {
             (this.m_appidList = new Array()),
               (this.m_socialList = new Array()),
@@ -7478,7 +7538,7 @@ var CLSTAMP = "6702412";
                   a.forEach(function (a) {
                     var n = Number(a.creator_clan_id),
                       r = I.a.InitFromClanID(n),
-                      o = new P(r);
+                      o = new k(r);
                     o.Initialize(a),
                       (o.m_promise = e.GetAsPromise(o)),
                       t.m_mapClanToCreatorHome.set(n, o);
@@ -7551,7 +7611,7 @@ var CLSTAMP = "6702412";
                         this.LazyInit(),
                         this.m_mapClanToCreatorHome.has(e.GetAccountID())
                           ? [3, 2]
-                          : (((a = new P(
+                          : (((a = new k(
                               e
                             )).m_promise = this.InternalCreatorHome(a, t)),
                             [4, a.m_promise])
@@ -7668,7 +7728,7 @@ var CLSTAMP = "6702412";
                                 !l.m_mapClanToCreatorHome.has(e.creator_clan_id)
                               ) {
                                 var t = I.a.InitFromClanID(e.creator_clan_id),
-                                  a = new P(t);
+                                  a = new k(t);
                                 a.Initialize(e),
                                   l.m_mapClanToCreatorHome.set(
                                     e.creator_clan_id,
@@ -8423,7 +8483,7 @@ var CLSTAMP = "6702412";
                     "product_mobile_banner_override" === e ||
                     "sale_section_title" === e ||
                     "schedule_track_art" === e
-                  ? (t = k.c.GetLocalizedImageGroupForEditAsImgArray(
+                  ? (t = P.c.GetLocalizedImageGroupForEditAsImgArray(
                       this.clanSteamID
                     ))
                   : "product_banner" === e
@@ -8433,13 +8493,13 @@ var CLSTAMP = "6702412";
               return t;
             }),
             (e.prototype.GetImageURL = function (e, t, a) {
-              void 0 === t && (t = 0), void 0 === a && (a = k.b.full);
+              void 0 === t && (t = 0), void 0 === a && (a = P.b.full);
               var n = this.GetImgArray(e),
                 r = n && n.length > t && null != n[t];
               return r && n[t].startsWith("http")
                 ? n[t]
                 : r
-                ? k.a.GenerateArtworkURLFromHashAndExtensions(
+                ? P.a.GenerateArtworkURLFromHashAndExtensions(
                     this.clanSteamID,
                     n[t],
                     a
@@ -8549,7 +8609,7 @@ var CLSTAMP = "6702412";
             }),
             (e.prototype.GetImageURLWithFallback = function (e, t, a) {
               var n, r;
-              void 0 === a && (a = k.b.full);
+              void 0 === a && (a = P.b.full);
               var o = this.GetImageURL(e, t, a);
               if (o && o.trim().length > 0) return o;
               var i = z.b.GetELanguageFallback(t);
@@ -8633,8 +8693,8 @@ var CLSTAMP = "6702412";
               var r = new Array();
               this.BImageNeedScreenshotFallback(e, t) ||
                 (r.push(this.GetImageURLWithFallback(e, t, a)),
-                a != k.b.full &&
-                  r.push(this.GetImageURLWithFallback(e, t, k.b.full)));
+                a != P.b.full &&
+                  r.push(this.GetImageURLWithFallback(e, t, P.b.full)));
               var o = this.GetFallbackArtworkScreenshot();
               return o && !n && r.push(o), r;
             }),
@@ -10896,7 +10956,7 @@ var CLSTAMP = "6702412";
                 : N.push(i.a.createElement(he, { event: B, key: B.GID }));
             }
           }
-          var k = Math.ceil((T - 1) / 15);
+          var P = Math.ceil((T - 1) / 15);
           L.push(
             i.a.createElement(
               "div",
@@ -10915,7 +10975,7 @@ var CLSTAMP = "6702412";
             )
           );
           for (
-            var P = function (e) {
+            var k = function (e) {
                 L.push(
                   i.a.createElement(
                     "div",
@@ -10934,10 +10994,10 @@ var CLSTAMP = "6702412";
                 );
               },
               M = 0;
-            M < k;
+            M < P;
             M += 1
           )
-            P(M);
+            k(M);
           return (
             L.push(
               i.a.createElement(
@@ -10946,7 +11006,7 @@ var CLSTAMP = "6702412";
                   className: Object(ce.a)(
                     Ie.a.PageNumber,
                     Ie.a.PageChange,
-                    m == k - 1 && Ie.a.Hidden
+                    m == P - 1 && Ie.a.Hidden
                   ),
                   key: "page_next",
                   onClick: function () {
@@ -11273,7 +11333,7 @@ var CLSTAMP = "6702412";
             )
           );
         },
-        ke = function () {
+        Pe = function () {
           var e = Object(c.h)().pathname.substr(1);
           return i.a.createElement(
             "div",
@@ -11352,8 +11412,8 @@ var CLSTAMP = "6702412";
             )
           );
         },
-        Pe = a("HMs9"),
-        Me = a.n(Pe),
+        ke = a("HMs9"),
+        Me = a.n(ke),
         xe = a("mZMQ"),
         Ue = a("cpGi"),
         He = (a("hmtA"), (0, a("SjWX").detect)());
@@ -12364,12 +12424,12 @@ var CLSTAMP = "6702412";
             }),
             (t.prototype.render = function () {
               var e = this,
-                t = rs.getPrizePool();
+                t = ss.getPrizePool();
               return i.a.createElement(
                 "div",
                 { className: je.a.BattlepassPage },
                 i.a.createElement(h.a, null),
-                i.a.createElement(ke, null),
+                i.a.createElement(Pe, null),
                 i.a.createElement(
                   "div",
                   { className: je.a.TopHeader },
@@ -17864,7 +17924,7 @@ var CLSTAMP = "6702412";
                               top: document.body.scrollHeight,
                               behavior: "smooth",
                             }),
-                              rs.setSelectedAbilityIndex(a);
+                              ss.setSelectedAbilityIndex(a);
                           },
                         },
                         i.a.createElement("img", {
@@ -18272,7 +18332,7 @@ var CLSTAMP = "6702412";
             n = a[0],
             r = a[1];
           if (!t) return null;
-          var s = rs.getSelectedAbilityIndex(),
+          var s = ss.getSelectedAbilityIndex(),
             l =
               t.abilities.filter(function (e) {
                 return e.ability_is_granted_by_shard;
@@ -18404,7 +18464,7 @@ var CLSTAMP = "6702412";
           m && !d.ability_is_granted_by_shard && (N = I),
             u && !d.ability_is_granted_by_scepter && (N = y);
           var S = function (e) {
-              rs.setSelectedAbilityIndex(e), r(!0);
+              ss.setSelectedAbilityIndex(e), r(!0);
             },
             L = u && d.ability_has_scepter && !d.ability_is_granted_by_scepter,
             T = m && d.ability_has_shard && !d.ability_is_granted_by_shard,
@@ -18794,7 +18854,7 @@ var CLSTAMP = "6702412";
             )
           );
         }),
-        kt = function (e) {
+        Pt = function (e) {
           var t = e.heroData;
           return i.a.createElement(
             "div",
@@ -18808,7 +18868,7 @@ var CLSTAMP = "6702412";
             i.a.createElement(Bt, { heroData: t })
           );
         },
-        Pt = function (e) {
+        kt = function (e) {
           var t = e.prevhero,
             a = e.nexthero;
           return i.a.createElement(
@@ -19009,7 +19069,7 @@ var CLSTAMP = "6702412";
           return (
             Object(o.useEffect)(
               function () {
-                return rs.setSelectedAbilityIndex(0);
+                return ss.setSelectedAbilityIndex(0);
               },
               [g.pathname]
             ),
@@ -19033,7 +19093,7 @@ var CLSTAMP = "6702412";
                 i.a.createElement("div", {
                   className: Dt.a.BackgroundGradient,
                 }),
-                i.a.createElement(Pt, { prevhero: l, nexthero: d }),
+                i.a.createElement(kt, { prevhero: l, nexthero: d }),
                 i.a.createElement(St, {
                   key: r ? r.name : "",
                   heroname: r ? r.name : "",
@@ -19068,7 +19128,7 @@ var CLSTAMP = "6702412";
                       "backgrounds/grey_painterly.png )",
                   },
                 },
-                i.a.createElement(kt, { heroData: r }),
+                i.a.createElement(Pt, { heroData: r }),
                 i.a.createElement(xt, { nNextHeroID: u, nPrevHeroID: m })
               ),
               i.a.createElement(be.a, null)
@@ -20453,7 +20513,7 @@ var CLSTAMP = "6702412";
             var a = e.call(this, t) || this;
             return (
               (a.handleClick = function (e) {
-                if (rs.getShortFilmOwnership()) {
+                if (ss.getShortFilmOwnership()) {
                   var t =
                     p.a.BASE_URL +
                     d.a.shortfilm() +
@@ -20462,7 +20522,7 @@ var CLSTAMP = "6702412";
                 } else a.setState({ bPopupVisible: e });
               }),
               (a.handleAccepted = function () {
-                rs.grantShortFilmAppIDOwnership();
+                ss.grantShortFilmAppIDOwnership();
                 var e =
                   p.a.BASE_URL +
                   d.a.shortfilm() +
@@ -20470,7 +20530,7 @@ var CLSTAMP = "6702412";
                 history.pushState("", "", e), history.go();
               }),
               (a.BGetOwnsApp = function () {
-                return rs.getShortFilmOwnership();
+                return ss.getShortFilmOwnership();
               }),
               (a.state = { bPopupVisible: !1 }),
               a
@@ -21282,7 +21342,7 @@ var CLSTAMP = "6702412";
           })
         );
       }
-      function ka(e) {
+      function Pa(e) {
         var t = "SVGIcon_Button SVGIcon_Throbber ";
         return (
           e.className && (t += e.className),
@@ -21526,7 +21586,7 @@ var CLSTAMP = "6702412";
           )
         );
       }
-      var Pa,
+      var ka,
         Ma = (function (e) {
           function t(t) {
             return e.call(this, t) || this;
@@ -21556,8 +21616,8 @@ var CLSTAMP = "6702412";
                 i.a.createElement(
                   "div",
                   { className: Ga.a.Throbber },
-                  i.a.createElement(ka, { className: Ga.a.base }),
-                  i.a.createElement(ka, { className: Ga.a.blur })
+                  i.a.createElement(Pa, { className: Ga.a.base }),
+                  i.a.createElement(Pa, { className: Ga.a.blur })
                 )
               );
               return i.a.createElement(
@@ -21584,11 +21644,11 @@ var CLSTAMP = "6702412";
         (e[(e.NotLoaded = 0)] = "NotLoaded"),
           (e[(e.Loading = 1)] = "Loading"),
           (e[(e.Loaded = 2)] = "Loaded");
-      })(Pa || (Pa = {}));
-      var xa = Pa.NotLoaded,
+      })(ka || (ka = {}));
+      var xa = ka.NotLoaded,
         Ua = [];
       function Ha() {
-        xa = Pa.Loaded;
+        xa = ka.Loaded;
         for (var e = 0, t = Ua; e < t.length; e++) {
           (0, t[e])();
         }
@@ -21646,8 +21706,8 @@ var CLSTAMP = "6702412";
                 this.DestroyPlayer(),
                 this.m_playerContainer &&
                   (function (e) {
-                    if (xa != Pa.Loaded) {
-                      if (xa == Pa.NotLoaded) {
+                    if (xa != ka.Loaded) {
+                      if (xa == ka.NotLoaded) {
                         var t = document.createElement("script");
                         t.src = "https://www.youtube.com/iframe_api";
                         var a = document.getElementsByTagName("script")[0];
@@ -21882,7 +21942,7 @@ var CLSTAMP = "6702412";
           );
         }),
         qa = Object(s.a)(function (e) {
-          var t = Ji(),
+          var t = es(),
             a = Sa.a.Get().GetHomePageContext(),
             n = Sa.a
               .Get()
@@ -22109,7 +22169,7 @@ var CLSTAMP = "6702412";
           );
         }),
         Qa = Object(s.a)(function () {
-          var e = Ji(),
+          var e = es(),
             t = za(),
             a = Sa.a.Get().GetHomePageContext(),
             n = Sa.a.Get().GetLeagueNode(a.nLeagueID, a.nNodeID),
@@ -22213,7 +22273,7 @@ var CLSTAMP = "6702412";
         Xa = Object(s.a)(function () {
           var e,
             t,
-            a = Ji(),
+            a = es(),
             n = Sa.a.Get().GetHomePageContext(),
             r = Sa.a.Get().GetLeagueNode(n.nLeagueID, n.nNodeID),
             o = null == r ? void 0 : r.is_completed,
@@ -22278,7 +22338,7 @@ var CLSTAMP = "6702412";
             r = e.nWins,
             o = e.nPossibleWins,
             s = e.bShowRecord,
-            l = Ji(),
+            l = es(),
             c = za(),
             d = Sa.a.Get().GetHomePageContext(),
             m = Sa.a.Get().GetLeagueNodeInfo(d.nLeagueID, d.nNodeID),
@@ -22367,7 +22427,7 @@ var CLSTAMP = "6702412";
           );
         }),
         $a = Object(s.a)(function () {
-          var e = Ji(),
+          var e = es(),
             t = Sa.a.Get().GetHomePageContext(),
             a = Sa.a.Get().GetLeagueNode(t.nLeagueID, t.nNodeID),
             n =
@@ -22479,7 +22539,7 @@ var CLSTAMP = "6702412";
             : null;
         }),
         en = Object(s.a)(function () {
-          var e = Ji(),
+          var e = es(),
             t = Sa.a.Get().GetHomePageContext(),
             a = Sa.a.Get().GetLeagueNode(t.nLeagueID, t.nNodeID),
             n =
@@ -22984,7 +23044,7 @@ var CLSTAMP = "6702412";
           );
         }),
         on = Object(s.a)(function () {
-          Ji();
+          es();
           var e = za(),
             t = Sa.a.Get().GetHomePageContext(),
             a = Sa.a
@@ -23034,7 +23094,7 @@ var CLSTAMP = "6702412";
         }),
         sn = Object(s.a)(function () {
           var e,
-            t = Ji(),
+            t = es(),
             a = za(),
             n = Sa.a.Get().GetHomePageContext(),
             r = Sa.a.Get().IsLeagueNodeLive(t, n.nLeagueID, n.nNodeID),
@@ -23830,7 +23890,7 @@ var CLSTAMP = "6702412";
             )
           );
         }),
-        kn = o.forwardRef(function (e, t) {
+        Pn = o.forwardRef(function (e, t) {
           return o.createElement(
             An,
             Object(n.a)({ type: "button" }, e, {
@@ -23865,7 +23925,7 @@ var CLSTAMP = "6702412";
             })
           );
         });
-      function Pn(e) {
+      function kn(e) {
         return o.createElement(
           Tn,
           null,
@@ -23876,7 +23936,7 @@ var CLSTAMP = "6702412";
             " "
           ),
           o.createElement(
-            kn,
+            Pn,
             { onClick: e.onCancel },
             e.strCancelText || Object(z.e)("#Button_Cancel")
           )
@@ -25640,7 +25700,7 @@ var CLSTAMP = "6702412";
             (t.prototype.renderDragGhost = function () {
               return this.props.fnRenderDragGhost
                 ? this.props.fnRenderDragGhost()
-                : o.createElement(kr, {
+                : o.createElement(Pr, {
                     elContent: this.GetClone(),
                     offsetX: this.m_DragInfo.startOffsetX,
                     offsetY: this.m_DragInfo.startOffsetY,
@@ -25691,7 +25751,7 @@ var CLSTAMP = "6702412";
             t
           );
         })(o.Component),
-        kr = (function (e) {
+        Pr = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -25759,7 +25819,7 @@ var CLSTAMP = "6702412";
             t
           );
         })(o.Component),
-        Pr = (function (e) {
+        kr = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -26252,7 +26312,7 @@ var CLSTAMP = "6702412";
                     null,
                     s
                       ? o.createElement(Bn, null, d)
-                      : o.createElement(Pn, {
+                      : o.createElement(kn, {
                           bOKDisabled: this.props.bOKDisabled,
                           strOKText: r,
                           onCancel: this.Cancel,
@@ -27449,12 +27509,12 @@ var CLSTAMP = "6702412";
             t
           );
         })(un);
-      function ko(e) {
+      function Po(e) {
         return o.createElement("div", {
           className: Co.a.ContextMenuMouseOverlay,
         });
       }
-      var Po = (function () {
+      var ko = (function () {
           function e() {}
           return (
             (e.GetBrowserInfoForPopup = function (e) {
@@ -27488,7 +27548,7 @@ var CLSTAMP = "6702412";
                 ? (this.m_popupContextMenu = new Bo(
                     e,
                     t,
-                    Po.GetBrowserInfoForPopup(this.m_ownerWindow)
+                    ko.GetBrowserInfoForPopup(this.m_ownerWindow)
                   ))
                 : ((this.m_embeddedElementInstance = Kn(
                     this.m_ownerWindow.document
@@ -27643,13 +27703,13 @@ var CLSTAMP = "6702412";
             Object(n.c)([N.B], t.prototype, "m_bVisible", void 0),
             t
           );
-        })(Po),
+        })(ko),
         xo = (function (e) {
           function t(t, a, n, r, o) {
             var i = e.call(this, a.ownerDocument.defaultView) || this;
-            Po.sm_iActiveContextMenuInstance &&
-              Po.sm_iActiveContextMenuInstance.Hide(),
-              (Po.sm_iActiveContextMenuInstance = i),
+            ko.sm_iActiveContextMenuInstance &&
+              ko.sm_iActiveContextMenuInstance.Hide(),
+              (ko.sm_iActiveContextMenuInstance = i),
               (i.m_options = o || {});
             var s = {
               element: a,
@@ -27671,7 +27731,7 @@ var CLSTAMP = "6702412";
                   this.m_ownerWindow.document
                 )),
                 this.m_embeddedElementInstanceOverlay.Show(
-                  o.createElement(ko)
+                  o.createElement(Po)
                 )),
                 e.prototype.Show.call(this);
             }),
@@ -27867,7 +27927,7 @@ var CLSTAMP = "6702412";
         Xo = Object(s.a)(function (e) {
           var t = e.eDivision,
             a = e.setDivision,
-            n = Ji(),
+            n = es(),
             r = [
               { value: pa.b.UNSET, strLabel: "#dpc_division_filter_all" },
               { value: pa.b.DIVISION_I, strLabel: "#dpc_division_i" },
@@ -27908,7 +27968,7 @@ var CLSTAMP = "6702412";
         Jo = Object(s.a)(function (e) {
           var t = e.nLeagueID,
             a = e.nNodeID,
-            n = Ji(),
+            n = es(),
             r = Sa.a.Get().GetHomePageContext(),
             o = Object(s.a)(function (e) {
               var t = e.nTeamID,
@@ -27993,8 +28053,8 @@ var CLSTAMP = "6702412";
             R = G ? G.name : "#dpc_tbd";
           N && !S && ((A = "#dpc_hidden"), (R = "#dpc_hidden"));
           var B = (null == r ? void 0 : r.nLeagueID) == t && r.nNodeID == a,
-            k = B ? 0 : t,
-            P = B ? 0 : a;
+            P = B ? 0 : t,
+            k = B ? 0 : a;
           return i.a.createElement(
             "div",
             {
@@ -28076,7 +28136,7 @@ var CLSTAMP = "6702412";
                   {
                     to: {
                       state: { bAutoScroll: !0 },
-                      pathname: d.a.dpc_watch(Object(ua.h)(n), "" + k, "" + P),
+                      pathname: d.a.dpc_watch(Object(ua.h)(n), "" + P, "" + k),
                     },
                     className: ha.a.HoverOption,
                   },
@@ -28088,7 +28148,7 @@ var CLSTAMP = "6702412";
                   {
                     to: {
                       state: { bAutoScroll: !0 },
-                      pathname: d.a.dpc_watch(Object(ua.h)(n), "" + k, "" + P),
+                      pathname: d.a.dpc_watch(Object(ua.h)(n), "" + P, "" + k),
                     },
                     className: ha.a.HoverOption,
                   },
@@ -28115,7 +28175,7 @@ var CLSTAMP = "6702412";
           );
         }),
         Zo = Object(s.a)(function () {
-          var e = Ji(),
+          var e = es(),
             t = Sa.a.Get().GetHomePageContext(),
             a = Object(o.useState)(pa.b.UNSET),
             n = a[0],
@@ -28314,7 +28374,7 @@ var CLSTAMP = "6702412";
         $o = a("k9bf"),
         ei = a.n($o),
         ti = function () {
-          var e = Ji(),
+          var e = es(),
             t = Object(c.h)(),
             a = Object(ua.h)(e),
             n = Object(o.useState)(Sa.a.Get().GetSpoilerBlockEnabled()),
@@ -28617,7 +28677,7 @@ var CLSTAMP = "6702412";
           );
         }),
         mi = Object(s.a)(function (e) {
-          var t = Ji(),
+          var t = es(),
             a = "";
           switch (Sa.a.Get().GetEventType(t)) {
             case pa.e.LEAGUE:
@@ -28661,7 +28721,7 @@ var CLSTAMP = "6702412";
         ui = Object(s.a)(function (e) {
           var t,
             a,
-            n = Ji(),
+            n = es(),
             r = Object(o.useState)({
               nRow: -1,
               nColumn: -1,
@@ -28985,7 +29045,7 @@ var CLSTAMP = "6702412";
         pi = Object(s.a)(function (e) {
           var t,
             a,
-            n = Ji(),
+            n = es(),
             r = (null === (t = Sa.a.Get().GetEventTeams(n)) || void 0 === t
               ? void 0
               : t.filter(function (t) {
@@ -29103,7 +29163,7 @@ var CLSTAMP = "6702412";
           );
         }),
         _i = Object(s.a)(function (e) {
-          var t = Ji(),
+          var t = es(),
             a = Sa.a
               .Get()
               .GetTeamStanding(t, e.ePhase, e.eRegion, e.eDivision, e.nTeamID),
@@ -29170,7 +29230,7 @@ var CLSTAMP = "6702412";
             r = e.nExpandedNodeID,
             o = e.setExpandedNodeID,
             s = e.strBackgroundColor,
-            c = Ji(),
+            c = es(),
             m = Sa.a.Get().GetLeagueNode(t, a),
             u = Sa.a.Get().GetTeamNames(null == m ? void 0 : m.team_id_1),
             p = Sa.a.Get().GetTeamNames(null == m ? void 0 : m.team_id_2),
@@ -29533,7 +29593,7 @@ var CLSTAMP = "6702412";
           var t = e.ePhase,
             a = e.eRegion,
             n = e.eDivision,
-            r = Ji(),
+            r = es(),
             s = Object(o.useState)(!1),
             l = s[0],
             c = s[1],
@@ -29671,7 +29731,7 @@ var CLSTAMP = "6702412";
         }),
         yi = Object(s.a)(function (e) {
           var t,
-            a = Ji(),
+            a = es(),
             n = Sa.a.Get().GetEventInfo(a),
             r =
               null ===
@@ -29767,7 +29827,7 @@ var CLSTAMP = "6702412";
                   Object(_.a)("#dpc_header_teams")
                 ),
                 i.a.createElement(fa, {
-                  eStyle: Yt.LINE,
+                  eStyle: Yt.FILLED,
                   options: s,
                   selectedOption: n,
                   setOption: r,
@@ -29790,7 +29850,7 @@ var CLSTAMP = "6702412";
         }),
         Ni = Object(s.a)(function (e) {
           var t = e.nTeamID,
-            a = Ji(),
+            a = es(),
             n = Sa.a.Get().GetFavoriteTeams();
           if (-1 == Sa.a.Get().GetEventTeams(a).indexOf(t)) return null;
           var r = Sa.a.Get().GetTeamNames(t),
@@ -30048,7 +30108,7 @@ var CLSTAMP = "6702412";
         Si = a("yUx/"),
         Li = a.n(Si),
         Ti = Object(s.a)(function () {
-          var e = Ji(),
+          var e = es(),
             t = Sa.a.Get().GetNextLeagueNode(e, null, null),
             a = t.nLeagueID,
             n = t.nNodeID,
@@ -30153,7 +30213,7 @@ var CLSTAMP = "6702412";
           );
         }),
         Ci = Object(s.a)(function () {
-          var e = Ji(),
+          var e = es(),
             t = Object(o.useState)(pa.b.DIVISION_I),
             a = t[0],
             n = t[1];
@@ -30193,7 +30253,7 @@ var CLSTAMP = "6702412";
           );
         }),
         wi = Object(s.a)(function (e) {
-          var t = Ji(),
+          var t = es(),
             a = Sa.a.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
             n = null == a ? void 0 : a.actual_time,
             r = Sa.a.Get().GetNodeLabelStrings(t, e.nLeagueID, e.nNodeID, !1),
@@ -30273,7 +30333,7 @@ var CLSTAMP = "6702412";
           );
         }),
         ji = Object(s.a)(function () {
-          var e = Ji(),
+          var e = es(),
             t = Sa.a.Get().GetFavoriteTeams(),
             a = Sa.a
               .Get()
@@ -30303,7 +30363,15 @@ var CLSTAMP = "6702412";
             ? null
             : i.a.createElement(
                 "div",
-                { className: ni.a.DPCFollowedTeamMatches },
+                {
+                  className: ni.a.DPCFollowedTeamMatches,
+                  style: {
+                    backgroundImage:
+                      "url( " +
+                      p.a.IMG_URL +
+                      "backgrounds/stone_texture_fade.png )",
+                  },
+                },
                 i.a.createElement(
                   "div",
                   { className: ni.a.MatchesContainer },
@@ -30329,7 +30397,7 @@ var CLSTAMP = "6702412";
               );
         }),
         Gi = Object(s.a)(function () {
-          var e = Ji();
+          var e = es();
           return i.a.createElement(
             "div",
             { className: ni.a.DPCAboutBanner },
@@ -30372,7 +30440,7 @@ var CLSTAMP = "6702412";
         }),
         Ai = Object(s.a)(function () {
           var e = Object(c.i)(),
-            t = Ji();
+            t = es();
           if (!e.strLeagueID || !e.strNodeID || !e.strSeriesDisplay)
             return i.a.createElement(c.a, {
               to: d.a.dpc_watch(
@@ -30420,8 +30488,8 @@ var CLSTAMP = "6702412";
         }),
         Ri = a("iUDg"),
         Bi = a.n(Ri),
-        ki = Object(s.a)(function () {
-          var e = Ji(),
+        Pi = Object(s.a)(function () {
+          var e = es(),
             t = Object(c.g)(),
             a = Object(c.i)();
           if (Sa.a.Get().GetEventType(e) != pa.e.LEAGUE) return null;
@@ -30513,8 +30581,8 @@ var CLSTAMP = "6702412";
               })
           );
         }),
-        Pi = Object(s.a)(function () {
-          var e = Ji(),
+        ki = Object(s.a)(function () {
+          var e = es(),
             t = Object(c.g)(),
             a = Object(c.i)(),
             n = [
@@ -30614,7 +30682,7 @@ var CLSTAMP = "6702412";
               });
         }),
         Mi = Object(s.a)(function () {
-          var e = Ji(),
+          var e = es(),
             t = Object(c.g)(),
             a = Object(c.i)(),
             n = [
@@ -30661,15 +30729,15 @@ var CLSTAMP = "6702412";
           return i.a.createElement(
             "div",
             { className: Bi.a.DPCStandingsPage },
-            i.a.createElement(ki, null),
             i.a.createElement(Pi, null),
+            i.a.createElement(ki, null),
             i.a.createElement(Mi, null)
           );
         }),
         Ui = a("X40S"),
         Hi = a.n(Ui),
         Fi = Object(s.a)(function (e) {
-          var t = Ji(),
+          var t = es(),
             a = !1,
             n = !1;
           switch (Sa.a.Get().GetEventType(t)) {
@@ -30717,7 +30785,7 @@ var CLSTAMP = "6702412";
           );
         }),
         Vi = Object(s.a)(function (e) {
-          var t = Ji(),
+          var t = es(),
             a = Object(c.g)(),
             n = Object(o.useState)({ nLeagueID: 0, nNodeID: 0 }),
             r = n[0],
@@ -30888,7 +30956,7 @@ var CLSTAMP = "6702412";
           );
         }),
         Wi = Object(s.a)(function (e) {
-          var t = Ji(),
+          var t = es(),
             a = Sa.a.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
             n = Sa.a.Get().GetLeagueNodeInfo(e.nLeagueID, e.nNodeID),
             r = (null == a ? void 0 : a.actual_time)
@@ -31121,7 +31189,7 @@ var CLSTAMP = "6702412";
           );
         }),
         zi = Object(s.a)(function (e) {
-          var t = Ji(),
+          var t = es(),
             a = e.nLeagueID,
             n = e.nNodeID,
             r = e.match,
@@ -31359,7 +31427,7 @@ var CLSTAMP = "6702412";
           );
         }),
         Yi = Object(s.a)(function () {
-          var e = Ji(),
+          var e = es(),
             t = Object(o.useState)(""),
             a = t[0],
             n = t[1],
@@ -31586,20 +31654,175 @@ var CLSTAMP = "6702412";
             )
           );
         }),
-        Xi = Object(o.createContext)(null),
-        Ji = function () {
-          return Object(o.useContext)(Xi);
+        Xi = a("E6C8"),
+        Ji = a.n(Xi),
+        Zi = Object(s.a)(function () {
+          var e = es(),
+            t = Sa.a.Get().GetEventInfo(e),
+            a = Object(o.useState)(0),
+            n = a[0],
+            r = a[1],
+            s = Sa.a
+              .Get()
+              .GetDPCStandings(null == t ? void 0 : t.nRegistrationPeriod);
+          return i.a.createElement(
+            "div",
+            { className: Ji.a.DPCTIStandingsPage },
+            null == s
+              ? void 0
+              : s.results.map(function (e) {
+                  var t = n == e.team_id;
+                  return i.a.createElement(
+                    "div",
+                    {
+                      key: "" + e.team_id,
+                      className: Ji.a.TeamEntry,
+                      onClick: function () {
+                        return r(n == e.team_id ? 0 : e.team_id);
+                      },
+                    },
+                    i.a.createElement(
+                      "div",
+                      { className: Ji.a.TeamBody },
+                      i.a.createElement(Va, { nTeamID: e.team_id, nSize: 48 }),
+                      i.a.createElement(
+                        "div",
+                        { className: Ji.a.TeamName },
+                        e.team_name
+                      ),
+                      i.a.createElement(
+                        "div",
+                        { className: Ji.a.Points },
+                        e.total_points
+                      )
+                    ),
+                    i.a.createElement(
+                      "div",
+                      {
+                        className: Object(ce.a)(
+                          Ji.a.TeamExpansion,
+                          t && Ji.a.Expanded
+                        ),
+                      },
+                      e.league_results.map(function (a) {
+                        var n = t
+                          ? Sa.a.Get().GetLeagueData(a.league_id, 0)
+                          : void 0;
+                        if (2 == a.audit_action) {
+                          var r = t
+                            ? Sa.a.Get().GetDPCPlayerInfo(a.audit_data)
+                            : void 0;
+                          return i.a.createElement(
+                            "div",
+                            {
+                              key: "p15_" + a.timestamp,
+                              className: Ji.a.LeagueResult,
+                            },
+                            i.a.createElement(Oa.a, {
+                              className: Ji.a.Timestamp,
+                              date: 1e3 * a.timestamp,
+                              format: "MMM DD YYYY",
+                            }),
+                            i.a.createElement(
+                              "div",
+                              { className: Ji.a.PlayerLeft },
+                              Object(_.a)("#dpc_player_left"),
+                              i.a.createElement(
+                                "div",
+                                { className: Ji.a.PlayerName },
+                                null == r ? void 0 : r.name
+                              )
+                            ),
+                            i.a.createElement(
+                              "div",
+                              { className: Ji.a.PointPenalty },
+                              Object(_.a)("#dpc_penalty_15pct")
+                            )
+                          );
+                        }
+                        return 20 == a.audit_action
+                          ? i.a.createElement(
+                              "div",
+                              {
+                                key: "p20_" + a.timestamp,
+                                className: Ji.a.LeagueResult,
+                              },
+                              i.a.createElement(Oa.a, {
+                                className: Ji.a.Timestamp,
+                                date: 1e3 * a.timestamp,
+                                format: "MMM DD YYYY",
+                              }),
+                              i.a.createElement(
+                                "div",
+                                { className: Ji.a.PlayerLeft },
+                                Object(_.a)("#dpc_penalty")
+                              ),
+                              i.a.createElement(
+                                "div",
+                                { className: Ji.a.PointPenalty },
+                                Object(_.a)("#dpc_penalty_20pct")
+                              )
+                            )
+                          : a.league_id
+                          ? i.a.createElement(
+                              "div",
+                              {
+                                key: "l_" + e.team_id + "_" + a.timestamp,
+                                className: Ji.a.LeagueResult,
+                              },
+                              i.a.createElement(Oa.a, {
+                                className: Ji.a.Timestamp,
+                                date: 1e3 * a.timestamp,
+                                format: "MMM DD YYYY",
+                              }),
+                              i.a.createElement("div", {
+                                className: Ji.a.LeagueLogo,
+                                style: {
+                                  backgroundImage:
+                                    "url( " +
+                                    p.a.CDN_URL +
+                                    "apps/dota2/images/leagues/" +
+                                    a.league_id +
+                                    "/images/image_8.png",
+                                },
+                              }),
+                              i.a.createElement(
+                                "div",
+                                { className: Ji.a.LeaguePlace },
+                                Ko(a.standing)
+                              ),
+                              i.a.createElement(
+                                "div",
+                                { className: Ji.a.LeagueName },
+                                Object(_.a)(null == n ? void 0 : n.info.name)
+                              ),
+                              i.a.createElement(
+                                "div",
+                                { className: Ji.a.Points },
+                                a.points
+                              )
+                            )
+                          : null;
+                      })
+                    )
+                  );
+                })
+          );
+        }),
+        $i = Object(o.createContext)(null),
+        es = function () {
+          return Object(o.useContext)($i);
         };
-      function Zi(e) {
+      function ts(e) {
         return i.a.createElement(
-          Xi.Provider,
+          $i.Provider,
           { value: e.eventContext },
           e.children
         );
       }
-      var $i,
-        es,
-        ts = Object(s.a)(function () {
+      var as,
+        ns,
+        rs = Object(s.a)(function () {
           var e = (function () {
               var e = Object(o.useState)(!0),
                 t = e[0],
@@ -31671,83 +31894,75 @@ var CLSTAMP = "6702412";
               },
               [h]
             ),
-            i.a.createElement(
-              "div",
-              { className: ma.a.DPCRoot },
-              i.a.createElement(
-                Zi,
-                { eventContext: b },
-                i.a.createElement(ge.a, { bOverlapping: !1 }),
-                i.a.createElement(Zo, null),
-                i.a.createElement(
+            b == pa.c.INVALID
+              ? i.a.createElement(c.a, { to: d.a.dpc_watch(Object(ua.b)()) })
+              : i.a.createElement(
                   "div",
-                  {
-                    className: ma.a.DPCHeaderSpacer,
-                    style: {
-                      backgroundImage:
-                        "url( " +
-                        p.a.IMG_URL +
-                        "backgrounds/dpc_banner_02.png )",
-                    },
-                  },
-                  i.a.createElement(_e, {
-                    bottom: !0,
-                    startPct: 80,
-                    midPct: 90,
-                    endPct: 100,
-                    color: "#222226",
-                  }),
-                  i.a.createElement(_e, {
-                    left: !0,
-                    right: !0,
-                    startPct: 80,
-                    midPct: 90,
-                    endPct: 100,
-                    color: "#222226",
-                  })
-                ),
-                i.a.createElement(ti, null),
-                i.a.createElement(
-                  c.d,
-                  null,
-                  i.a.createElement(sa, {
-                    path: d.a.dpc_watch(
-                      ":strEvent?",
-                      ":strLeagueID?",
-                      ":strNodeID?",
-                      ":strSeriesDisplay?"
+                  { className: ma.a.DPCRoot },
+                  i.a.createElement(
+                    ts,
+                    { eventContext: b },
+                    i.a.createElement(ge.a, { bOverlapping: !1 }),
+                    i.a.createElement(Zo, null),
+                    i.a.createElement("div", {
+                      className: ma.a.DPCHeaderSpacer,
+                      style: {
+                        backgroundImage:
+                          "url( " +
+                          p.a.IMG_URL +
+                          "backgrounds/dpc_banner_02.png )",
+                      },
+                    }),
+                    i.a.createElement(ti, null),
+                    i.a.createElement(
+                      c.d,
+                      null,
+                      i.a.createElement(sa, {
+                        path: d.a.dpc_watch(
+                          ":strEvent?",
+                          ":strLeagueID?",
+                          ":strNodeID?",
+                          ":strSeriesDisplay?"
+                        ),
+                        component: Ai,
+                      }),
+                      i.a.createElement(sa, {
+                        path: d.a.dpc_standings(":strEvent?", ":strSelection"),
+                        component: xi,
+                      }),
+                      i.a.createElement(sa, {
+                        path: d.a.dpc_schedule(
+                          ":strEvent?",
+                          ":strMonthOrLeague?",
+                          ":strDayOrNode?"
+                        ),
+                        component: Yi,
+                      }),
+                      i.a.createElement(sa, {
+                        path: d.a.dpc_about(":strEvent?"),
+                        component: Qi,
+                      }),
+                      i.a.createElement(sa, {
+                        path: d.a.dpc_ti_standings(":strEvent?"),
+                        component: Zi,
+                      }),
+                      i.a.createElement(c.a, {
+                        from: d.a.dpc_root(),
+                        to: d.a.dpc_watch(Object(ua.b)()),
+                      })
                     ),
-                    component: Ai,
-                  }),
-                  i.a.createElement(sa, {
-                    path: d.a.dpc_standings(":strEvent?", ":strSelection"),
-                    component: xi,
-                  }),
-                  i.a.createElement(sa, {
-                    path: d.a.dpc_schedule(
-                      ":strEvent?",
-                      ":strMonthOrLeague?",
-                      ":strDayOrNode?"
-                    ),
-                    component: Yi,
-                  }),
-                  i.a.createElement(sa, {
-                    path: d.a.dpc_about(":strEvent?"),
-                    component: Qi,
-                  })
-                ),
-                i.a.createElement(be.a, null)
-              )
-            )
+                    i.a.createElement(be.a, null)
+                  )
+                )
           );
         });
-      ($i = i.a.lazy(function () {
+      (as = i.a.lazy(function () {
         return Promise.all([a.e(0), a.e(63)]).then(a.bind(null, "Bqrr"));
       })),
-        (es = i.a.lazy(function () {
+        (ns = i.a.lazy(function () {
           return a.e(62).then(a.bind(null, "QoBx"));
         }));
-      var as = (function (e) {
+      var os = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -31815,7 +32030,7 @@ var CLSTAMP = "6702412";
                       }),
                       i.a.createElement(sa, {
                         path: d.a.dpc_event_root(":strEvent?"),
-                        component: ts,
+                        component: rs,
                       }),
                       i.a.createElement(sa, {
                         path: d.a.patchnotes(":version?"),
@@ -31823,7 +32038,7 @@ var CLSTAMP = "6702412";
                       }),
                       i.a.createElement(sa, {
                         path: d.a.dawnbreaker(),
-                        component: $i,
+                        component: as,
                       }),
                       i.a.createElement(sa, {
                         path: d.a.shortfilm(),
@@ -31831,7 +32046,7 @@ var CLSTAMP = "6702412";
                       }),
                       i.a.createElement(sa, {
                         path: d.a.nemestice(),
-                        component: es,
+                        component: ns,
                       }),
                       i.a.createElement(sa, {
                         path: d.a.other(":page"),
@@ -31847,21 +32062,21 @@ var CLSTAMP = "6702412";
             (t = Object(n.c)([s.a], t))
           );
         })(i.a.Component),
-        ns = a("6rKP"),
-        rs = new ((function () {
+        is = a("6rKP"),
+        ss = new ((function () {
           function e() {
-            (this.m_asyncPrizePool = new ns.a()),
-              (this.m_asyncPatchNotesListData = new ns.a()),
-              (this.m_asyncPatchNotesData = new ns.b()),
-              (this.m_asyncBPPrice = new ns.b()),
+            (this.m_asyncPrizePool = new is.a()),
+              (this.m_asyncPatchNotesListData = new is.a()),
+              (this.m_asyncPatchNotesData = new is.b()),
+              (this.m_asyncBPPrice = new is.b()),
               (this.m_nSelectedAbilityIndex = 0),
-              (this.m_asyncShortFilmOwnership = new ns.a()),
+              (this.m_asyncShortFilmOwnership = new is.a()),
               Object(_.c)();
           }
           return (
             (e.prototype.Init = function () {
               r.render(
-                o.createElement(as, { app: this }),
+                o.createElement(os, { app: this }),
                 document.getElementById("dota_react_root")
               );
             }),
@@ -32063,7 +32278,7 @@ var CLSTAMP = "6702412";
             e
           );
         })())();
-      function os(e) {
+      function ls(e) {
         return Object(n.b)(this, void 0, void 0, function () {
           var t, r, o, i, s, l, c, d, m;
           return Object(n.e)(this, function (u) {
@@ -32118,10 +32333,10 @@ var CLSTAMP = "6702412";
                 return (
                   Object(v.e)("application_config"),
                   Object(p.b)(),
-                  [4, os(p.a.LANGUAGE)]
+                  [4, ls(p.a.LANGUAGE)]
                 );
               case 1:
-                return e.sent(), rs.Init(), [2];
+                return e.sent(), ss.Init(), [2];
             }
           });
         });
@@ -32543,7 +32758,7 @@ var CLSTAMP = "6702412";
     },
     knzx: function (e, t, a) {
       "use strict";
-      var n, r, o, i, s, l, c, d, m, u, p, _, h;
+      var n, r, o, i, s, l, c, d, m, u, p, _, h, g;
       a.d(t, "i", function () {
         return r;
       }),
@@ -32708,7 +32923,14 @@ var CLSTAMP = "6702412";
             (e[(e.MAJOR = 2)] = "MAJOR"),
             (e[(e.INTERNATIONAL_QUALIFIERS = 3)] = "INTERNATIONAL_QUALIFIERS"),
             (e[(e.INTERNATIONAL = 4)] = "INTERNATIONAL");
-        })(h || (h = {}));
+        })(h || (h = {})),
+        (function (e) {
+          (e[(e.UNDEFINED = 0)] = "UNDEFINED"),
+            (e[(e.CORE = 1)] = "CORE"),
+            (e[(e.SUPPORT = 2)] = "SUPPORT"),
+            (e[(e.OFFLANE = 3)] = "OFFLANE"),
+            (e[(e.MID = 4)] = "MID");
+        })(g || (g = {}));
     },
     "lT+T": function (e, t, a) {
       "use strict";
