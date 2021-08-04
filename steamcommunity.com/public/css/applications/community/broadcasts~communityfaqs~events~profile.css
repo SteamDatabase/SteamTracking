@@ -421,6 +421,7 @@ a.bbcodes_LinkButton_jPpgc:hover {
 }
 .emoticon_EmoticonSelector_1_1QI {
   max-height: 50vh;
+  max-width: 40vw;
   display: flex;
   flex-direction: column;
   max-width: 302px;
@@ -494,6 +495,7 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
 }
 .emoticon_GetFestive_1tX6q > a {
   color: #fff;
+  text-color: #fff;
   text-decoration: none;
 }
 .emoticon_TopDivider_2A8Fl {
@@ -1610,6 +1612,8 @@ b {
 }
 .partnereventshared_ArtworkAgeNotAppropriate_3V64Z {
   position: relative;
+}
+.partnereventshared_ArtworkAgeNotAppropriate_3V64Z {
   filter: blur(30px) saturate(0.9);
 }
 .partnereventshared_EventDashboardHeader_2kZr_ {
@@ -1637,7 +1641,7 @@ b {
   border-radius: 4px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
-.partnereventshared_EventDashboardStatsCtn_3IptF p {
+.partnereventshared_EventDashboardStatsCtn_3IptF P {
   color: #c5cdd8;
   margin-bottom: 0px;
   margin-top: 4px;
@@ -1894,7 +1898,6 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
 .login_AccountPasswordForm_2Mp7X select:-webkit-autofill:focus {
   -webkit-text-fill-color: #d3eaeb;
   -webkit-box-shadow: 0 0 0px 100px #53523f inset;
-  box-shadow: 0 0 0px 100px #53523f inset;
 }
 .login_AccountPasswordForm_2Mp7X .DialogButton.Primary {
   height: 44px;
@@ -1928,15 +1931,9 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
 }
 .login_CreateAccountLink_x0Czn a {
   color: #bfc6d4;
-  text-decoration: underline;
-  text-decoration-color: #4b4b4b;
 }
 .login_CreateAccountLink_x0Czn a:visited {
   color: #bfc6d4;
-}
-.login_CreateAccountLink_x0Czn a:hover {
-  color: #fff;
-  text-decoration-color: #b6b6b6;
 }
 .login_LoginCreateSeperator__TANI {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -1998,6 +1995,15 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   color: #969696;
   font-size: 12px;
 }
+.login_CreateAccountLink_x0Czn a {
+  color: #bfc6d4;
+  text-decoration: underline;
+  text-decoration-color: #4b4b4b;
+}
+.login_CreateAccountLink_x0Czn a:hover {
+  color: #fff;
+  text-decoration-color: #b6b6b6;
+}
 .login_CaptchaContainer_1waDj .login_CaptchaBlock_1ltax {
   display: flex;
   flex-direction: row;
@@ -2035,6 +2041,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   letter-spacing: 10px;
   max-width: 159px;
   background-color: #2a3649;
+  border: 0.5px solid #737373;
   padding: 6px 14px 6px 30px;
   font-family: monospace;
   font-size: 28px;
@@ -2881,6 +2888,10 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   width: 100%;
   position: relative;
   overflow: hidden;
+}
+.salepreviewwidgets_HeaderCapsuleImageContainer_2oW_y,
+.salepreviewwidgets_MainCapsuleImageContainer_1vpxH,
+.salepreviewwidgets_LibraryAssetImageContainer_1ziMX {
   padding: 46.7391304348% 0 0 0;
 }
 .salepreviewwidgets_MainCapsuleImageContainer_1vpxH {
@@ -3765,7 +3776,6 @@ html.touch
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 1;
 }
 .animated_featured_capsule_BGImage_30XmW {
   position: absolute;
@@ -4525,9 +4535,6 @@ body.v6.partner_events {
     rgba(255, 255, 255, 0) 80%
   );
 }
-.partnereventdisplay_EventDetailTimeInfo_2KsEb {
-  margin-bottom: 24px;
-}
 .partnereventdisplay_EventDetailTimeInfo_2KsEb
   .partnereventdisplay_StartDate_1Maw_,
 .partnereventdisplay_EventDetailTimeInfo_2KsEb
@@ -4574,17 +4581,6 @@ body.v6.partner_events {
     flex-direction: column;
   }
 }
-.partnereventdisplay_InLibraryView_3_SEi
-  .partnereventdisplay_EventDetailTimeInfo_2KsEb {
-  font-size: 12px;
-  margin-bottom: 0;
-  color: #868f98;
-}
-.partnereventdisplay_InLibraryView_3_SEi
-  .partnereventdisplay_EventDetailTimeInfo_2KsEb
-  div {
-  display: flex;
-}
 .partnereventdisplay_RightSideTitles_efy3k,
 .partnereventdisplay_DisplayAdminPanel_Title_1lmj3 {
   font-size: 11px;
@@ -4599,6 +4595,20 @@ body.v6.partner_events {
 .partnereventdisplay_InLibraryView_3_SEi
   .partnereventdisplay_DisplayAdminPanel_Title_1lmj3 {
   display: none;
+}
+.partnereventdisplay_EventDetailTimeInfo_2KsEb {
+  margin-bottom: 24px;
+}
+.partnereventdisplay_InLibraryView_3_SEi
+  .partnereventdisplay_EventDetailTimeInfo_2KsEb {
+  font-size: 12px;
+  margin-bottom: 0;
+  color: #868f98;
+}
+.partnereventdisplay_InLibraryView_3_SEi
+  .partnereventdisplay_EventDetailTimeInfo_2KsEb
+  div {
+  display: flex;
 }
 .partnereventdisplay_EventDetailTimeInfo_2KsEb
   .partnereventdisplay_DateAndTime_3Sy57 {
@@ -6044,6 +6054,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   color: #c9c9c9;
   margin: 0px;
   margin-top: 2px;
+  min-width: 16px;
   max-width: 46px;
   max-height: 46px;
   padding: 0;
@@ -6059,8 +6070,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   flex: 0;
   min-width: 46px;
   position: relative;
-  color: #898989;
-  background-color: #2c3036;
+  color: #c9c9c9;
   margin: 0px;
   margin-top: 0px;
   max-width: 46px;
@@ -6096,6 +6106,11 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
 .chatentry_chatSubmitButton_RVIs8.chatentry_disabled_jaQN2 {
   color: #898989;
   cursor: default;
+  background-color: #2c3036;
+}
+.chatentry_chatSubmitButton_RVIs8.chatentry_EmoticonPickerButton_Aupsw,
+.chatentry_chatSubmitButton_RVIs8.chatentry_EmbedButton_3zOBe {
+  color: #898989;
   background-color: #2c3036;
 }
 .chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2):hover
@@ -6256,6 +6271,8 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   text-align: center;
   color: #74c069;
   background-color: #0005;
+}
+.ChatMessageEntryVoice .activeVoicePushToTalk {
   font-size: 10px;
   margin-top: 0px;
 }
@@ -6495,7 +6512,6 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
 }
 .linkregionbox_LinkRegionEdge_2stP4.linkregionbox_Middle_1Heco {
   cursor: move;
-  background-color: rgba(191, 202, 250, 0.133);
 }
 .linkregionbox_LinkRegionEdge_2stP4.linkregionbox_Middle_1Heco
   .linkregionbox_LinkRegionDelete_3Hb3w {
@@ -6597,6 +6613,9 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
 }
 .linkregionbox_LinkRegionEdge_2stP4:hover {
   border-color: #7eadf8;
+}
+.linkregionbox_LinkRegionEdge_2stP4.linkregionbox_Middle_1Heco {
+  background-color: rgba(191, 202, 250, 0.133);
 }
 .linkregionbox_EdgeDown_i9zrH.linkregionbox_middle_1CS75
   .linkregionbox_LinkRegionEdge_2stP4.linkregionbox_Middle_1Heco,
@@ -10467,6 +10486,8 @@ html:not(.touch)
     .eventcalendartile_TileTextAppName_71phF {
     padding: 0 8px;
     font-size: 13px;
+    height: 32px;
+    display: flex;
     flex-direction: row;
     align-items: center;
     height: 20px;
@@ -11296,7 +11317,7 @@ html:not(.touch)
   opacity: 85%;
 }
 .facetedbrowse_FacetedBrowseControls_1JM3A h2 {
-  margin-top: 25px !important;
+  margin-top: 25x !important;
   margin-bottom: 0px !important;
 }
 .facetedbrowse_Facet_Qa8BX {
@@ -11810,25 +11831,6 @@ html:not(.touch)
 .steam_awards_vote_section .nominationandvote_SteamAwardContainer_3n6v2 {
   margin-left: 0px;
   margin-top: 0px;
-  margin-right: 0px;
-}
-.steam_awards_vote_section
-  .nominationandvote_SteamAwardContainer_3n6v2
-  .nominationandvote_SteamAwardHeader_2jgrT {
-  height: 115px;
-}
-.steam_awards_vote_section
-  .nominationandvote_SteamAwardContainer_3n6v2
-  .nominationandvote_SteamAwardHeader_2jgrT
-  .nominationandvote_SteamAwardHeaderImage__lRFQ {
-  height: 143px;
-}
-.steam_awards_vote_section
-  .nominationandvote_SteamAwardContainer_3n6v2
-  .nominationandvote_SteamAwardHeader_2jgrT
-  .nominationandvote_SteamAwardMainTitle_161Yb {
-  font-size: 28px;
-  line-height: 28px;
 }
 .steam_awards_vote_section .nominationandvote_AwardCategoriesCtn_2u4z7 {
   display: flex;
@@ -11856,6 +11858,27 @@ html:not(.touch)
   .nominationandvote_SteamAwardVoteButtonArea_1v9LH
   .nominationandvote_SteamAwardCategoryTitle_JVE9O {
   padding-left: 8px;
+}
+.steam_awards_vote_section .nominationandvote_SteamAwardContainer_3n6v2 {
+  margin-right: 0px;
+}
+.steam_awards_vote_section
+  .nominationandvote_SteamAwardContainer_3n6v2
+  .nominationandvote_SteamAwardHeader_2jgrT {
+  height: 115px;
+}
+.steam_awards_vote_section
+  .nominationandvote_SteamAwardContainer_3n6v2
+  .nominationandvote_SteamAwardHeader_2jgrT
+  .nominationandvote_SteamAwardHeaderImage__lRFQ {
+  height: 143px;
+}
+.steam_awards_vote_section
+  .nominationandvote_SteamAwardContainer_3n6v2
+  .nominationandvote_SteamAwardHeader_2jgrT
+  .nominationandvote_SteamAwardMainTitle_161Yb {
+  font-size: 28px;
+  line-height: 28px;
 }
 .partnereventreferencedapps_ReferencedApps_1bfua {
   font-size: 14px;
@@ -12133,6 +12156,7 @@ html.responsive.touch .partnersaledisplay_SaleSectionTabs_1FPIV {
 .partnersaledisplay_SaleSectionTabs_1FPIV
   .partnersaledisplay_SaleSectionTabsTab_3BgHm {
   background-color: #000;
+  padding: 0px 12px;
   color: #888;
   font-size: 16px;
   min-width: max-content;
@@ -12405,7 +12429,6 @@ html.responsive.touch .partnersaledisplay_SaleSectionTabs_1FPIV {
   transform: scale(1);
   z-index: 2;
   -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
   transition: filter 0.24s ease-in-out, transform 0.24s ease-in-out,
     color 0.24s ease-in-out;
 }
@@ -12422,7 +12445,6 @@ html.responsive.touch .partnersaledisplay_SaleSectionTabs_1FPIV {
   transform: scale(1);
   z-index: 2;
   -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
   transition: filter 0.24s ease-in-out, transform 0.24s ease-in-out,
     color 0.24s ease-in-out;
 }
@@ -13809,6 +13831,9 @@ html.responsive.touch .partnersaledisplay_SaleSectionTabs_1FPIV {
 }
 .packagepricewidget_StoreSalePriceBox_pk-Lo {
   background: #000;
+  padding: 3px 5px;
+}
+.packagepricewidget_StoreSalePriceBox_pk-Lo {
   font-size: 14px;
   padding: 5px;
   background-color: #000;
@@ -13844,7 +13869,7 @@ html.responsive.touch .partnersaledisplay_SaleSectionTabs_1FPIV {
   box-sizing: border-box;
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.1);
-  background-image: linear-gradient(
+  background: linear-gradient(
     -35deg,
     rgba(255, 255, 255, 0.1) 5%,
     rgba(255, 255, 255, 0.2) 78.58%
@@ -14094,7 +14119,7 @@ html.responsive.touch .partnersaledisplay_SaleSectionTabs_1FPIV {
   font-family: "Noto Serif", "Noto Serif JP", serif;
 }
 .storywidget_StoryPage_1aYkE.korean {
-  font-family: "Noto Serif", "Noto Serif KR", serif;
+  font-family: "Noto Serif", "Noto Serif KR	", serif;
 }
 .storywidget_StoryPage_1aYkE.storywidget_Opening__sHoz,
 .storywidget_StoryPage_1aYkE.storywidget_Open_3S_UF,
@@ -14142,7 +14167,7 @@ html.responsive.touch .partnersaledisplay_SaleSectionTabs_1FPIV {
 .storywidget_Page_2ZeaB {
   margin: auto;
   padding-right: 20px;
-  font-family: "Big Shoulders Display", sans-serif;
+  font-family: "Big Shoulders Display";
   font-size: 17px;
   letter-spacing: 0.03em;
   color: #3d3e38;
@@ -15166,13 +15191,13 @@ a.storywidget_BadgeFooter_3Yte6:hover {
   background-color: #405358;
 }
 .STV_timelineMinimapLine.Played {
+  background-color: #216c91;
   background: linear-gradient(
     to right,
     #368fa7 0px,
     #368fa7 calc(100% - 6px),
     #5dc3ff 100%
   );
-  background-color: #216c91;
   position: absolute;
   top: 7px;
   transition: all 0.2s ease-in-out;
@@ -16269,6 +16294,9 @@ iframe.steamTVLogin {
   justify-content: flex-start;
   align-items: center;
 }
+.bbcodeeditor_YouTubePreviewInsertOption_6ocli:selected {
+  background-color: #9199a3;
+}
 .bbcodeeditor_YouTubePreviewInsertOption_6ocli input {
   margin-right: 5px;
 }
@@ -16420,6 +16448,7 @@ img.broadcastplayer_BroadcastPlaceholderImg_3hxn9 {
   background-repeat: no-repeat;
 }
 .clanimagechooser_ImageFilename_2jzLZ {
+  white-space: nowrap;
   text-overflow: ellipsis;
   word-break: break-all;
   word-wrap: break-word;
