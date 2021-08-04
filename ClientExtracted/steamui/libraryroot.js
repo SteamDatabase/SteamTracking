@@ -34849,8 +34849,8 @@
                         return n.has(e);
                       });
                     })(e, t),
-              h = m.includes("CreateDesktopShortcut"),
-              _ = m.includes("RemoveShortcut"),
+              h = m.includes("CreateDesktopShortcut") && !g.c.IN_CHROMEOS,
+              _ = m.includes("RemoveShortcut") && !g.c.IN_CHROMEOS,
               v = m.includes("Uninstall"),
               f = "play-next" == this.props.strCollectionId,
               b = !1;
@@ -49910,7 +49910,10 @@
                 { className: uc.a.AutoUpdate },
                 r.createElement(
                   "div",
-                  { className: uc.a.AutoUpdateHours, onClick: hc },
+                  {
+                    className: Object(D.a)(uc.a.AutoUpdateHours, uc.a.NoHours),
+                    onClick: hc,
+                  },
                   Object(I.f)("#Downloads_AutoUpdates_Enabled")
                 )
               )
@@ -50369,10 +50372,28 @@
         wc = function (e) {
           return r.createElement(
             "div",
-            { className: uc.a.ContentType },
+            {
+              className: Object(D.a)(
+                uc.a.ContentType,
+                (e.active || e.completed) && uc.a.Highlight
+              ),
+            },
             e.elIcon,
             e.includeText &&
-              r.createElement("span", null, " ", Object(I.f)(e.strToken))
+              r.createElement(
+                "span",
+                { className: uc.a.Text },
+                " ",
+                Object(I.f)(e.strToken)
+              ),
+            e.active &&
+              r.createElement(Hl.s, {
+                className: Object(D.a)(uc.a.Icon, uc.a.Status),
+              }),
+            e.completed &&
+              r.createElement(Hl.d, {
+                className: Object(D.a)(uc.a.Icon, uc.a.Status, uc.a.Check),
+              })
           );
         },
         Ac = function (e) {
@@ -50395,24 +50416,34 @@
         Dc = function (e) {
           var t = [],
             n = !0,
-            a = {
+            a = e.item.appid == e.overview.update_appid,
+            o = {
               elIcon: r.createElement(Hl.k, { className: uc.a.Icon }),
               strToken: e.app.BIsApplicationOrTool()
                 ? "#Downloads_ContentType_AppContent"
                 : "#Downloads_ContentType_Content",
-            },
-            o = {
-              elIcon: r.createElement(Hl.t, { className: uc.a.Icon }),
-              strToken: "#Downloads_ContentType_Workshop",
+              active:
+                a &&
+                !e.overview.update_is_shader &&
+                !e.overview.update_is_workshop,
+              completed: e.item.content_update_complete,
             },
             i = {
+              elIcon: r.createElement(Hl.u, { className: uc.a.Icon }),
+              strToken: "#Downloads_ContentType_Workshop",
+              active: a && e.overview.update_is_workshop,
+              completed: e.item.workshop_update_complete,
+            },
+            s = {
               elIcon: r.createElement(Hl.r, { className: uc.a.Icon }),
               strToken: "#Downloads_ContentType_Shader",
+              active: a && e.overview.update_is_shader,
+              completed: e.item.shader_update_complete,
             };
           return (
-            e.item.content_update && t.push(a),
-            e.item.workshop_update && (t.push(o), (n = !1)),
-            e.item.shader_update && (t.push(i), (n = !1)),
+            e.item.shader_update && (t.push(s), (n = !1)),
+            e.item.content_update && t.push(o),
+            e.item.workshop_update && (t.push(i), (n = !1)),
             !n && t.length > 0
               ? r.createElement(
                   M.d,
@@ -63622,6 +63653,9 @@
           }
           return (
             Object(a.d)(t, e),
+            (t.prototype.componentDidMount = function () {
+              Bm.a.OnInstallFolderChanges(0);
+            }),
             (t.prototype.AddFolder = function () {
               SteamClient.InstallFolder.PromptToAddNewFolder();
             }),
@@ -63705,7 +63739,7 @@
                     " ",
                     o,
                     ": ",
-                    e.bIsDefaultFolder && r.createElement(Hl.s, null),
+                    e.bIsDefaultFolder && r.createElement(Hl.t, null),
                     " "
                   ),
                   r.createElement(
@@ -63718,10 +63752,10 @@
                 )
               );
             }),
-            (t.prototype.RenderApp = function (e, t) {
-              var n,
-                a = this,
-                o = p.a.GetAppOverviewByAppID(e.nAppID);
+            (t.prototype.RenderApp = function (e, t, n) {
+              var a,
+                o = this,
+                i = p.a.GetAppOverviewByAppID(e.nAppID);
               return r.createElement(
                 r.Fragment,
                 { key: e.nAppID },
@@ -63730,24 +63764,25 @@
                   {
                     className: jm.a.AppBody,
                     actionDescriptionMap:
-                      ((n = {}),
-                      (n[ya.a.SECONDARY] = Object(I.f)(
+                      ((a = {}),
+                      (a[ya.a.SECONDARY] = Object(I.f)(
                         "#ContentManagement_UninstallButton"
                       )),
-                      (n[ya.a.OPTIONS] = Object(I.f)(
+                      (a[ya.a.OPTIONS] = Object(I.f)(
                         "#ContentManagement_MoveApps_Title"
                       )),
-                      n),
+                      a),
                     onButtonDown: function (t) {
-                      a.OnGamepadButtonDown(t, e.nAppID);
+                      o.OnGamepadButtonDown(t, e.nAppID);
                     },
                   },
-                  o &&
+                  i &&
+                    n &&
                     r.createElement(
                       "div",
                       { className: jm.a.AppBodyPortrait },
                       r.createElement(mp, {
-                        app: o,
+                        app: i,
                         bShowFriendsAsIcons: !1,
                         bFeatured: !0,
                         bHideFooter: !0,
@@ -63805,7 +63840,7 @@
                           r.createElement(
                             "div",
                             { className: jm.a.AppInfoItem },
-                            r.createElement(Hl.t, null),
+                            r.createElement(Hl.u, null),
                             r.createElement(
                               "span",
                               {
@@ -63875,7 +63910,7 @@
                           disabled: !t,
                           checked: this.state.selectedApps.includes(e.nAppID),
                           onChange: function (t) {
-                            return a.SetAppSelected(e.nAppID, t);
+                            return o.SetAppSelected(e.nAppID, t);
                           },
                         })
                       )
@@ -63903,8 +63938,9 @@
                 h = (100 * p) / a,
                 _ = n.vecApps.slice();
               Mm(_, this.state.sortBy, this.state.sortAsc);
-              var v = this.state.selectedApps.length > 0,
-                f = Bm.a.MountedInstallFolders.length > 1;
+              var v = _.length > 500,
+                f = this.state.selectedApps.length > 0,
+                g = Bm.a.MountedInstallFolders.length > 1;
               return r.createElement(
                 Z.b,
                 {
@@ -64164,7 +64200,7 @@
                       { className: jm.a.LibraryInventory },
                       " ",
                       _.map(function (t, a) {
-                        return e.RenderApp(t, n.bIsMounted);
+                        return e.RenderApp(t, n.bIsMounted, !v);
                       }),
                       " "
                     )
@@ -64178,9 +64214,9 @@
                     {
                       className: Object(D.a)(
                         jm.a.ActionButton,
-                        v && jm.a.ActionButtonActive
+                        f && jm.a.ActionButtonActive
                       ),
-                      disabled: !v,
+                      disabled: !f,
                       onClick: this.UninstallApps,
                     },
                     Object(I.f)("#ContentManagement_UninstallButton")
@@ -64190,9 +64226,9 @@
                     {
                       className: Object(D.a)(
                         jm.a.ActionButton,
-                        v && f && jm.a.ActionButtonActive
+                        f && g && jm.a.ActionButtonActive
                       ),
-                      disabled: !(v && f),
+                      disabled: !(f && g),
                       onClick: this.MoveApps,
                     },
                     Object(I.f)("#ContentManagement_MoveButton")
@@ -71360,6 +71396,10 @@
         DetailsAndType: "downloads_DetailsAndType_Bku7J",
         ContentTypes: "downloads_ContentTypes_1IKba",
         ContentTypeTooltip: "downloads_ContentTypeTooltip_38Kbc",
+        Text: "downloads_Text_1nCT-",
+        Status: "downloads_Status_-PT6m",
+        Check: "downloads_Check_3q465",
+        Highlight: "downloads_Highlight_29JXx",
         SectionItemStatus: "downloads_SectionItemStatus_1Sygg",
         SectionItemStatusLine: "downloads_SectionItemStatusLine_17xMw",
         State: "downloads_State_2ns4w",
@@ -71372,8 +71412,8 @@
         ToggleButton: "downloads_ToggleButton_2T7up",
         AutoUpdateHours: "downloads_AutoUpdateHours_117rQ",
         UpdateHours: "downloads_UpdateHours_34F9w",
+        NoHours: "downloads_NoHours_Sil68",
         EmptyTransfers: "downloads_EmptyTransfers_1zv2D",
-        Text: "downloads_Text_1nCT-",
         SectionItemButtons: "downloads_SectionItemButtons_31Ig9",
         DownloadsIcon: "downloads_DownloadsIcon_Mw50k",
         TopBar: "downloads_TopBar_SEmVp",

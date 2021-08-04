@@ -1,5 +1,5 @@
 /* Third-party software licenses can be found at licenses.txt */
-var CLSTAMP = "6702270";
+var CLSTAMP = "6705814";
 !(function (e) {
   function t(t) {
     for (
@@ -12432,8 +12432,20 @@ var CLSTAMP = "6702270";
               }),
               o = r.filter(function (e) {
                 return !i.includes(e);
+              }),
+              a = i.filter(function (e) {
+                return !r.includes(e);
               });
-            (this.m_DownloadItems = t),
+            e || a.length || o.length
+              ? ((this.m_DownloadItems = t), (e = !0))
+              : this.m_DownloadItems.forEach(function (e, r) {
+                  Object.assign(
+                    n.m_DownloadItems[r],
+                    t.find(function (t) {
+                      return t.appid == e.appid;
+                    })
+                  );
+                }),
               (this.m_DownloadHistory.totalBytes =
                 this.m_DownloadItems.reduce(function (e, t) {
                   return t.appid == n.m_DownloadOverview.update_appid &&
@@ -41593,70 +41605,76 @@ var CLSTAMP = "6702270";
   },
   VSEn: function (e, t, n) {
     "use strict";
-    n.d(t, "t", function () {
-      return o;
+    n.d(t, "u", function () {
+      return c;
     }),
       n.d(t, "q", function () {
-        return a;
-      }),
-      n.d(t, "g", function () {
-        return s;
-      }),
-      n.d(t, "s", function () {
-        return c;
-      }),
-      n.d(t, "j", function () {
         return u;
       }),
-      n.d(t, "d", function () {
+      n.d(t, "g", function () {
         return l;
       }),
-      n.d(t, "c", function () {
+      n.d(t, "t", function () {
         return d;
       }),
-      n.d(t, "h", function () {
+      n.d(t, "j", function () {
         return p;
       }),
-      n.d(t, "l", function () {
+      n.d(t, "d", function () {
         return m;
       }),
-      n.d(t, "m", function () {
+      n.d(t, "c", function () {
         return f;
       }),
-      n.d(t, "o", function () {
+      n.d(t, "h", function () {
         return h;
       }),
-      n.d(t, "a", function () {
+      n.d(t, "l", function () {
         return b;
       }),
-      n.d(t, "f", function () {
+      n.d(t, "m", function () {
         return _;
       }),
-      n.d(t, "b", function () {
+      n.d(t, "o", function () {
         return y;
       }),
-      n.d(t, "r", function () {
+      n.d(t, "a", function () {
         return g;
       }),
-      n.d(t, "n", function () {
+      n.d(t, "f", function () {
         return v;
       }),
-      n.d(t, "i", function () {
+      n.d(t, "b", function () {
         return w;
       }),
-      n.d(t, "e", function () {
+      n.d(t, "r", function () {
         return B;
       }),
-      n.d(t, "p", function () {
+      n.d(t, "n", function () {
         return O;
       }),
-      n.d(t, "k", function () {
+      n.d(t, "i", function () {
         return S;
+      }),
+      n.d(t, "e", function () {
+        return C;
+      }),
+      n.d(t, "p", function () {
+        return M;
+      }),
+      n.d(t, "s", function () {
+        return j;
+      }),
+      n.d(t, "k", function () {
+        return A;
       });
     var r = n("mrSG"),
-      i = n("q1tI");
-    n("kyHq"), n("exH9"), n("pbpZ"), n("YyVH");
-    function o(e) {
+      i = n("q1tI"),
+      o = (n("kyHq"), n("exH9")),
+      a = n("pbpZ"),
+      s = n.n(a);
+    n("YyVH");
+    function c(e) {
       return i.createElement(
         "svg",
         Object(r.a)(
@@ -41678,7 +41696,7 @@ var CLSTAMP = "6702270";
         })
       );
     }
-    function a(e) {
+    function u(e) {
       return i.createElement(
         "svg",
         Object(r.a)(
@@ -41698,7 +41716,7 @@ var CLSTAMP = "6702270";
         })
       );
     }
-    function s(e) {
+    function l(e) {
       return i.createElement(
         "svg",
         Object(r.a)(
@@ -41718,7 +41736,7 @@ var CLSTAMP = "6702270";
         })
       );
     }
-    function c(e) {
+    function d(e) {
       return i.createElement(
         "svg",
         Object(r.a)(
@@ -41738,7 +41756,7 @@ var CLSTAMP = "6702270";
         })
       );
     }
-    function u(e) {
+    function p(e) {
       return i.createElement(
         "svg",
         Object(r.a)(
@@ -41760,7 +41778,7 @@ var CLSTAMP = "6702270";
         })
       );
     }
-    function l(e) {
+    function m(e) {
       return i.createElement(
         "svg",
         Object(r.a)(
@@ -41780,7 +41798,7 @@ var CLSTAMP = "6702270";
         })
       );
     }
-    function d(e) {
+    function f(e) {
       var t = e.charging,
         n = e.batteryLevel,
         o = Object(r.f)(e, ["charging", "batteryLevel"]);
@@ -41822,7 +41840,7 @@ var CLSTAMP = "6702270";
         )
       );
     }
-    function p(e) {
+    function h(e) {
       return i.createElement(
         "svg",
         Object(r.a)(
@@ -41846,7 +41864,7 @@ var CLSTAMP = "6702270";
         })
       );
     }
-    function m(e) {
+    function b(e) {
       return i.createElement(
         "svg",
         Object(r.a)(
@@ -41865,7 +41883,7 @@ var CLSTAMP = "6702270";
         })
       );
     }
-    function f(e) {
+    function _(e) {
       return i.createElement(
         "svg",
         Object(r.a)(
@@ -41884,7 +41902,7 @@ var CLSTAMP = "6702270";
         })
       );
     }
-    function h(e) {
+    function y(e) {
       return i.createElement(
         "svg",
         Object(r.a)(
@@ -41903,7 +41921,7 @@ var CLSTAMP = "6702270";
         })
       );
     }
-    function b(e) {
+    function g(e) {
       return i.createElement(
         "svg",
         Object(r.a)(
@@ -41922,7 +41940,7 @@ var CLSTAMP = "6702270";
         })
       );
     }
-    function _(e) {
+    function v(e) {
       return i.createElement(
         "svg",
         Object(r.a)(
@@ -41942,7 +41960,7 @@ var CLSTAMP = "6702270";
         })
       );
     }
-    function y(e) {
+    function w(e) {
       return i.createElement(
         "svg",
         Object(r.a)(
@@ -41969,7 +41987,7 @@ var CLSTAMP = "6702270";
         })
       );
     }
-    function g(e) {
+    function B(e) {
       return i.createElement(
         "svg",
         Object(r.a)(
@@ -41991,7 +42009,7 @@ var CLSTAMP = "6702270";
         })
       );
     }
-    function v(e) {
+    function O(e) {
       return i.createElement(
         "svg",
         Object(r.a)(
@@ -42009,7 +42027,7 @@ var CLSTAMP = "6702270";
         })
       );
     }
-    function w(e) {
+    function S(e) {
       return i.createElement(
         "svg",
         Object(r.a)(
@@ -42031,7 +42049,7 @@ var CLSTAMP = "6702270";
         })
       );
     }
-    function B(e) {
+    function C(e) {
       return i.createElement(
         "svg",
         Object(r.a)(
@@ -42053,7 +42071,7 @@ var CLSTAMP = "6702270";
         })
       );
     }
-    function O(e) {
+    function M(e) {
       return i.createElement(
         "svg",
         Object(r.a)(
@@ -42073,7 +42091,63 @@ var CLSTAMP = "6702270";
         })
       );
     }
-    function S(e) {
+    function j(e) {
+      return i.createElement(
+        "svg",
+        Object(r.a)(
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+          },
+          e,
+          { className: Object(o.a)(e.className, s.a.Spinner) }
+        ),
+        i.createElement("path", {
+          d:
+            "M18 10C17.4696 10 16.9609 9.78929 16.5858 9.41421C16.2107 9.03914 16 8.53043 16 8V3H20V8C20 8.53043 19.7893 9.03914 19.4142 9.41421C19.0391 9.78929 18.5304 10 18 10Z",
+          fill: "currentColor",
+        }),
+        i.createElement("path", {
+          d:
+            "M23.66 12.34C23.2875 11.9653 23.0784 11.4584 23.0784 10.93C23.0784 10.4016 23.2875 9.89473 23.66 9.52L27.19 6L30 8.81L26.47 12.34C26.0957 12.7095 25.5909 12.9166 25.065 12.9166C24.5391 12.9166 24.0343 12.7095 23.66 12.34Z",
+          fill: "currentColor",
+        }),
+        i.createElement("path", {
+          d:
+            "M33 20H28C27.4696 20 26.9609 19.7893 26.5858 19.4142C26.2107 19.0391 26 18.5304 26 18C26 17.4696 26.2107 16.9609 26.5858 16.5858C26.9609 16.2107 27.4696 16 28 16H33V20Z",
+          fill: "currentColor",
+        }),
+        i.createElement("path", {
+          d:
+            "M27.19 30L23.66 26.46C23.2875 26.0853 23.0784 25.5783 23.0784 25.05C23.0784 24.5216 23.2875 24.0147 23.66 23.64C23.8458 23.454 24.0663 23.3065 24.3091 23.2059C24.5519 23.1052 24.8122 23.0534 25.075 23.0534C25.3378 23.0534 25.5981 23.1052 25.8409 23.2059C26.0837 23.3065 26.3043 23.454 26.49 23.64L30 27.19L27.19 30Z",
+          fill: "currentColor",
+        }),
+        i.createElement("path", {
+          d:
+            "M20 33H16V28C16 27.4696 16.2107 26.9609 16.5858 26.5858C16.9609 26.2107 17.4696 26 18 26C18.5304 26 19.0391 26.2107 19.4142 26.5858C19.7893 26.9609 20 27.4696 20 28V33Z",
+          fill: "currentColor",
+        }),
+        i.createElement("path", {
+          d:
+            "M8.81 30L6 27.19L9.53 23.66C9.71575 23.474 9.93632 23.3265 10.1791 23.2259C10.4219 23.1252 10.6822 23.0734 10.945 23.0734C11.2078 23.0734 11.4681 23.1252 11.7109 23.2259C11.9537 23.3265 12.1743 23.474 12.36 23.66C12.7325 24.0347 12.9416 24.5416 12.9416 25.07C12.9416 25.5984 12.7325 26.1053 12.36 26.48L8.81 30Z",
+          fill: "currentColor",
+        }),
+        i.createElement("path", {
+          d:
+            "M8 20H3V16H8C8.53043 16 9.03914 16.2107 9.41421 16.5858C9.78929 16.9609 10 17.4696 10 18C10 18.5304 9.78929 19.0391 9.41421 19.4142C9.03914 19.7893 8.53043 20 8 20Z",
+          fill: "currentColor",
+        }),
+        i.createElement("path", {
+          d:
+            "M9.51 12.34L6 8.81L8.81 6L12.34 9.54C12.7125 9.91472 12.9216 10.4216 12.9216 10.95C12.9216 11.4784 12.7125 11.9853 12.34 12.36C12.1529 12.5446 11.9313 12.6906 11.6878 12.7895C11.4443 12.8885 11.1837 12.9385 10.9209 12.9366C10.658 12.9347 10.3981 12.8811 10.156 12.7787C9.91396 12.6764 9.69443 12.5273 9.51 12.34Z",
+          fill: "currentColor",
+        })
+      );
+    }
+    function A(e) {
       return i.createElement(
         "svg",
         Object(r.a)(

@@ -12415,7 +12415,7 @@ div.ShortWindow
   line-height: 34px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  text-transform: capitalize;
+  text-transform: none;
   font-weight: 400;
 }
 .downloads_SectionTitle_qq2xI.downloads_Collapsible_26A3x {
@@ -12773,6 +12773,7 @@ div.ShortWindow
 }
 .downloads_ContentTypeTooltip_38Kbc {
   padding: 15px;
+  background-color: #23262e;
 }
 .downloads_ContentTypeTooltip_38Kbc .downloads_Title_TK9wv {
   text-transform: uppercase;
@@ -12782,6 +12783,7 @@ div.ShortWindow
   display: flex;
   align-items: center;
   padding-bottom: 5px;
+  color: #67707b;
 }
 .downloads_ContentTypeTooltip_38Kbc
   .downloads_ContentType_Rgy-7
@@ -12789,6 +12791,26 @@ div.ShortWindow
   height: 22px;
   width: 22px;
   margin-right: 5px;
+  flex-grow: 0;
+}
+.downloads_ContentTypeTooltip_38Kbc
+  .downloads_ContentType_Rgy-7
+  .downloads_Text_1nCT- {
+  flex-grow: 1;
+}
+.downloads_ContentTypeTooltip_38Kbc
+  .downloads_ContentType_Rgy-7
+  .downloads_Icon_-OgRz.downloads_Status_-PT6m {
+  margin-left: 10px;
+}
+.downloads_ContentTypeTooltip_38Kbc
+  .downloads_ContentType_Rgy-7
+  .downloads_Icon_-OgRz.downloads_Check_3q465 {
+  color: #59bf40;
+}
+.downloads_ContentTypeTooltip_38Kbc
+  .downloads_ContentType_Rgy-7.downloads_Highlight_29JXx {
+  color: #fff;
 }
 .downloads_SectionItemStatus_1Sygg {
   flex-basis: 25%;
@@ -12919,7 +12941,8 @@ div.ShortWindow
 .downloads_AutoUpdateHours_117rQ .downloads_UpdateHours_34F9w {
   color: #dcdedf;
 }
-.downloads_AutoUpdateHours_117rQ:hover .downloads_UpdateHours_34F9w {
+.downloads_AutoUpdateHours_117rQ:hover .downloads_UpdateHours_34F9w,
+.downloads_AutoUpdateHours_117rQ:hover.downloads_NoHours_Sil68 {
   color: #1a9fff;
 }
 .downloads_AutoUpdateHours_117rQ:active .downloads_UpdateHours_34F9w {
@@ -13011,9 +13034,6 @@ div.ShortWindow
 }
 .downloads_AutoUpdateSettings_22mb5:hover {
   color: #fff;
-}
-.downloads_ContextMenuItem_1Lsip {
-  text-transform: capitalize;
 }
 .downloads_ContextMenuItem_1Lsip .downloads_LaunchOnCompletion_1i_SN {
   display: none;
@@ -13301,8 +13321,11 @@ div.ShortWindow
   color: #b8bcbf;
 }
 .downloadgraph_Throttle_38T9T .downloadgraph_ThrottleValue_3XTah {
-  color: #1a9fff;
+  color: #fff;
   text-transform: none;
+}
+.downloadgraph_Throttle_38T9T:hover .downloadgraph_ThrottleValue_3XTah {
+  color: #1a9fff;
 }
 .downloadgraph_Throttle_38T9T.downloadgraph_Suspended_17abq
   .downloadgraph_ThrottleValue_3XTah,
