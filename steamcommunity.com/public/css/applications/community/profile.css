@@ -197,7 +197,7 @@
   margin-left: 2px;
 }
 .personastatusicons_PersonaStatusIcon_KxAI_.personastatusicons_MobilePhoneIcon_1iRFj {
-  margin-top: -2px;
+  margin-top: -2x;
   margin-left: -1px;
 }
 .personastatusicons_PersonaStatusIcon_KxAI_.ingame .SVGIcon_VR path,
@@ -615,6 +615,12 @@
   font-size: 12px;
 }
 .miniprofile_miniProfileContent_1xTAT
+  .miniprofile_miniProfilePlayer_2jZ0A.watchingbroadcast
+  .miniprofile_playerContent_2-pwJ
+  .miniprofile_awayStatusLabel_1FgWI {
+  color: #c9bdf7;
+}
+.miniprofile_miniProfileContent_1xTAT
   .miniprofile_miniProfilePlayer_2jZ0A.in-game
   .miniprofile_playerContent_2-pwJ
   .miniprofile_awayStatusLabel_1FgWI {
@@ -730,9 +736,7 @@
 .friendPlayerLevel.lvl_4700,
 .friendPlayerLevel.lvl_4800,
 .friendPlayerLevel.lvl_4900,
-.friendPlayerLevel.lvl_5000,
-.friendPlayerLevel.lvl_5100,
-.friendPlayerLevel.lvl_5200 {
+.friendPlayerLevel.lvl_5000 {
   border: none;
   border-radius: 0;
   background-repeat: no-repeat;
@@ -889,15 +893,6 @@
 }
 .friendPlayerLevel.lvl_4900 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_grunge_5.png?v=2");
-}
-.friendPlayerLevel.lvl_5000 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_halftone_1.png?v=2");
-}
-.friendPlayerLevel.lvl_5100 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_halftone_2.png?v=2");
-}
-.friendPlayerLevel.lvl_5200 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_halftone_3.png?v=2");
 }
 .friendPlayerLevel.lvl_plus_10 {
   background-position: 0 -32px;
