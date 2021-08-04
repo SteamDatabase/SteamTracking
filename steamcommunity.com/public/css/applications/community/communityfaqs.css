@@ -52,11 +52,6 @@
 .BB_TableData {
   vertical-align: top;
 }
-.schinese .BB_Italic,
-.sc_schinese .BB_Italic {
-  font-style: normal;
-  font-weight: bold;
-}
 .bbcodeimporter_ImportToolCtn_TQZns {
   padding: 20px;
   overflow: auto;
@@ -585,7 +580,7 @@ button.faqeditor_EditorSaveButton_22iwd.faqeditor_EditorSaveButton_22iwd:disable
   .faqsharedviewpage_RightCol_2Ta3c
   .faqsharedviewpage_SectionCtn_2wa31 {
   position: sticky;
-  top: 24px;
+  top: 0;
 }
 @media screen and (max-width: 910px) {
   .faqsharedviewpage_FAQViewPage_Ya530
@@ -632,9 +627,6 @@ button.faqeditor_EditorSaveButton_22iwd.faqeditor_EditorSaveButton_22iwd:disable
   margin-right: 10px;
   margin-top: 2px;
   border-radius: 3px;
-}
-.faqviewadmin_InfoRow_3AG-7 {
-  padding: 4px 0;
 }
 .faqviewsidebar_Section_3S-Xz {
   position: relative;
