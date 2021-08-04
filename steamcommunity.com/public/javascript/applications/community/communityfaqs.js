@@ -2489,12 +2489,17 @@
                 });
               });
             }),
-            (e.prototype.GetFAQPublishedContent = function (e, t) {
-              var a;
-              return null === (a = this.m_mapFAQPublishedContent.get(e)) ||
-                void 0 === a
-                ? void 0
-                : a.get(t);
+            (e.prototype.GetFAQPublishedContent = function (t, a) {
+              var o = this.m_mapFAQPublishedContent.get(t);
+              if (!o) return null;
+              var i = o.get(a);
+              return (
+                !i &&
+                  e.sm_mapFallbackLanguages.has(a) &&
+                  (i = o.get(e.sm_mapFallbackLanguages.get(a))),
+                i || 0 == a || Object(p.a)(u.c.EREALM) || (i = o.get(0)),
+                i
+              );
             }),
             (e.prototype.GetFAQDraftContent = function (e) {
               return this.m_mapFAQDrafts.get(e);
@@ -2838,6 +2843,11 @@
                 });
               });
             }),
+            (e.sm_mapFallbackLanguages = new Map([
+              [5, 27],
+              [27, 5],
+              [29, 6],
+            ])),
             Object(o.c)([T.C], e.prototype, "m_mapFAQSummaries", void 0),
             Object(o.c)([T.k], e.prototype, "RemoveAllDirtyDrafts", null),
             e
@@ -12399,7 +12409,7 @@
             i = e.elSideBars;
           return n.a.createElement(
             "div",
-            { className: ea.FAQViewPage },
+            { className: Object(c.a)(ea.FAQViewPage, u.c.LANGUAGE) },
             n.a.createElement(
               "a",
               { className: ea.SupportTitle, href: "" + u.c.HELP_BASE_URL },
@@ -12453,7 +12463,7 @@
                 ),
                 n.a.createElement(
                   "div",
-                  null,
+                  { className: oa.InfoRow },
                   Object(Fe.n)(
                     "#FAQViewer_Admin_LastUpdate",
                     t.author_account_id
@@ -12519,7 +12529,7 @@
           var s = o.GetLastSavedDraftVersion(t.language);
           return n.a.createElement(
             "div",
-            null,
+            { className: oa.InfoRow },
             Object(Fe.n)(
               "#FAQViewer_DraftNewer",
               n.a.createElement(na, {
@@ -12854,7 +12864,10 @@
       };
     },
     OJ5K: function (e, t, a) {
-      e.exports = { SmallAvatar: "faqviewadmin_SmallAvatar_2rdPs" };
+      e.exports = {
+        SmallAvatar: "faqviewadmin_SmallAvatar_2rdPs",
+        InfoRow: "faqviewadmin_InfoRow_3AG-7",
+      };
     },
     WQlG: function (e, t, a) {
       e.exports = {

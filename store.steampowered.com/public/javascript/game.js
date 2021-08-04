@@ -1376,19 +1376,7 @@ function BuildReviewHistogram()
 		// recent events
 		if ( bExpandGraph )
 		{
-			var event = data.results.recent_events[0];
 			var container = $J( "#review_recent_events_container" );
-			container.addClass( event.type );
-			$J( "#recent_review_event_title" ).text( data.results.recent_events_title );
-			$J( "#recent_review_event_dates" ).text( data.results.recent_event_dates );
-			$J( "#recent_review_event_text" ).text( data.results.recent_events_text );
-			$J( "#filter_reviews_to_event_btn" ).click( function() {
-				funcViewReviewsDuringEvent( bCountAllReviews, event.start_date, event.end_date );
-			});
-			$J( "#filter_reviews_exclude_event_btn" ).click( function() {
-				funcViewReviewsExcludingEvent( bCountAllReviews, event.start_date, event.end_date );
-			});
-			$J( "#review_recent_events_controls" ).show();
 			container.show();
 
 			flotRollup.draw();
@@ -2009,7 +1997,8 @@ function ReparentAppLandingPageForMobileUX()
 				$J(this).removeAttr('data-tooltip-html');
 		} );
 
-		/* move the purchase options higher in the page */
+		/* move the early access and purchase options higher in the page */
+		$J('.early_access_header').appendTo('#purchaseOptionsContent');
 		$J('#game_area_purchase').appendTo('#purchaseOptionsContent');
 
 	}

@@ -1787,7 +1787,7 @@ GStoreItemData = {
 			}
 		}
 
-		if ( rgItemData.vr_htcvive || rgItemData.vr_oculusrift || rgItemData.vr_razerosvr || rgItemData.vr_windowsmr )
+		if ( rgItemData.vr_htcvive || rgItemData.vr_oculusrift || rgItemData.vr_windowsmr )
 		{
 			strHTML += '<span class="platform_img hmd_separator"></span>';
 
@@ -1798,10 +1798,6 @@ GStoreItemData = {
 			if ( rgItemData.vr_oculusrift )
 			{
 				strHTML += '<span class="platform_img oculusrift"></span>';
-			}
-			if ( rgItemData.vr_razerosvr )
-			{
-				strHTML += '<span class="platform_img razerosvr"></span>';
 			}
 			if ( rgItemData.vr_windowsmr )
 			{

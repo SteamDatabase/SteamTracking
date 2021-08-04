@@ -2664,10 +2664,6 @@ span.platform_img.oculusrift {
 	background-image: url( '/public/images/v6/icon_platform_oculusrift.png' );
 }
 
-span.platform_img.razerosvr {
-	background-image: url( '/public/images/v6/icon_platform_razerosvr.png' );
-}
-
 span.platform_img.windowsmr {
 	background-image: url( '/public/images/v6/icon_platform_windowsmr.png' );
 }
@@ -2700,10 +2696,6 @@ span.vr_required {
 
 .hover_release span.platform_img.oculusrift {
 	background-image: url( '/public/images/v6/icon_platform_oculusrift_dark.png' );
-}
-
-.hover_release span.platform_img.razerosvr {
-	background-image: url( '/public/images/v6/icon_platform_razerosvr_dark.png' );
 }
 
 .hover_release span.platform_img.windowsmr {

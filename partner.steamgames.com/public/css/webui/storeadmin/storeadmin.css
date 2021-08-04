@@ -243,10 +243,6 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
 }
 .sharedappdetailsheader_BoxSizerContainer_1jEv7 {
   position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
   -webkit-app-region: no-drag;
   display: flex;
   flex-direction: column;
@@ -1748,7 +1744,6 @@ html.contextmenu_ContextMenuPopup_152-v .contextmenu_contextMenuItem_3hJA5 {
   height: 18px;
   background-color: #6dcff6;
   min-height: 1px;
-  display: inline-block;
   position: absolute;
   left: -4px;
   margin-top: 0px;
@@ -2520,8 +2515,6 @@ b {
 }
 .partnereventshared_ArtworkAgeNotAppropriate_2Iqn7 {
   position: relative;
-}
-.partnereventshared_ArtworkAgeNotAppropriate_2Iqn7 {
   filter: blur(30px) saturate(0.9);
 }
 .partnereventshared_EventDashboardHeader_342N0 {
@@ -2549,7 +2542,7 @@ b {
   border-radius: 4px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
-.partnereventshared_EventDashboardStatsCtn_RcSUI P {
+.partnereventshared_EventDashboardStatsCtn_RcSUI p {
   color: #c5cdd8;
   margin-bottom: 0px;
   margin-top: 4px;
@@ -3207,7 +3200,6 @@ hr {
 }
 .emoticon_EmoticonSelector_3edp7 {
   max-height: 50vh;
-  max-width: 40vw;
   display: flex;
   flex-direction: column;
   max-width: 302px;
@@ -3281,7 +3273,6 @@ img.emoticon_emoticon_qjpFK.emoticon_large_rB2Pc {
 }
 .emoticon_GetFestive_2DF3r > a {
   color: #fff;
-  text-color: #fff;
   text-decoration: none;
 }
 .emoticon_TopDivider_19a4f {
@@ -3673,7 +3664,6 @@ span.suggestdialog_mentionSearchMatch_1t0Xl {
   color: #c9c9c9;
   margin: 0px;
   margin-top: 2px;
-  min-width: 16px;
   max-width: 46px;
   max-height: 46px;
   padding: 0;
@@ -3689,7 +3679,8 @@ span.suggestdialog_mentionSearchMatch_1t0Xl {
   flex: 0;
   min-width: 46px;
   position: relative;
-  color: #c9c9c9;
+  color: #898989;
+  background-color: #2c3036;
   margin: 0px;
   margin-top: 0px;
   max-width: 46px;
@@ -3725,11 +3716,6 @@ span.suggestdialog_mentionSearchMatch_1t0Xl {
 .chatentry_chatSubmitButton_nLfX9.chatentry_disabled_25WK3 {
   color: #898989;
   cursor: default;
-  background-color: #2c3036;
-}
-.chatentry_chatSubmitButton_nLfX9.chatentry_EmoticonPickerButton_3AOY3,
-.chatentry_chatSubmitButton_nLfX9.chatentry_EmbedButton_cyYZC {
-  color: #898989;
   background-color: #2c3036;
 }
 .chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):hover
@@ -3890,8 +3876,6 @@ span.suggestdialog_mentionSearchMatch_1t0Xl {
   text-align: center;
   color: #74c069;
   background-color: #0005;
-}
-.ChatMessageEntryVoice .activeVoicePushToTalk {
   font-size: 10px;
   margin-top: 0px;
 }
@@ -5069,6 +5053,7 @@ html.touch .gamehover_WishlistButton_1lp6v .gamehover_WishlistButtonText_3SsXJ,
 .login_AccountPasswordForm_3Xvha select:-webkit-autofill:focus {
   -webkit-text-fill-color: #d3eaeb;
   -webkit-box-shadow: 0 0 0px 100px #53523f inset;
+  box-shadow: 0 0 0px 100px #53523f inset;
 }
 .login_AccountPasswordForm_3Xvha .DialogButton.Primary {
   height: 44px;
@@ -5102,9 +5087,15 @@ html.touch .gamehover_WishlistButton_1lp6v .gamehover_WishlistButtonText_3SsXJ,
 }
 .login_CreateAccountLink_1Z8dj a {
   color: #bfc6d4;
+  text-decoration: underline;
+  text-decoration-color: #4b4b4b;
 }
 .login_CreateAccountLink_1Z8dj a:visited {
   color: #bfc6d4;
+}
+.login_CreateAccountLink_1Z8dj a:hover {
+  color: #fff;
+  text-decoration-color: #b6b6b6;
 }
 .login_LoginCreateSeperator_2CV0x {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -5166,15 +5157,6 @@ html.touch .gamehover_WishlistButton_1lp6v .gamehover_WishlistButtonText_3SsXJ,
   color: #969696;
   font-size: 12px;
 }
-.login_CreateAccountLink_1Z8dj a {
-  color: #bfc6d4;
-  text-decoration: underline;
-  text-decoration-color: #4b4b4b;
-}
-.login_CreateAccountLink_1Z8dj a:hover {
-  color: #fff;
-  text-decoration-color: #b6b6b6;
-}
 .login_CaptchaContainer_3-gMp .login_CaptchaBlock_3NzFT {
   display: flex;
   flex-direction: row;
@@ -5212,7 +5194,6 @@ html.touch .gamehover_WishlistButton_1lp6v .gamehover_WishlistButtonText_3SsXJ,
   letter-spacing: 10px;
   max-width: 159px;
   background-color: #2a3649;
-  border: 0.5px solid #737373;
   padding: 6px 14px 6px 30px;
   font-family: monospace;
   font-size: 28px;
@@ -6059,10 +6040,6 @@ html.touch .gamehover_WishlistButton_1lp6v .gamehover_WishlistButtonText_3SsXJ,
   width: 100%;
   position: relative;
   overflow: hidden;
-}
-.salepreviewwidgets_HeaderCapsuleImageContainer_38USo,
-.salepreviewwidgets_MainCapsuleImageContainer_1AAo3,
-.salepreviewwidgets_LibraryAssetImageContainer_MVrpO {
   padding: 46.7391304348% 0 0 0;
 }
 .salepreviewwidgets_MainCapsuleImageContainer_1AAo3 {
@@ -6947,6 +6924,7 @@ html.touch
   width: 100%;
   height: 100%;
   object-fit: cover;
+  z-index: 1;
 }
 .animated_featured_capsule_BGImage_1vLqA {
   position: absolute;
@@ -7654,6 +7632,9 @@ body.v6.partner_events {
     rgba(255, 255, 255, 0) 80%
   );
 }
+.partnereventdisplay_EventDetailTimeInfo_1LYF7 {
+  margin-bottom: 24px;
+}
 .partnereventdisplay_EventDetailTimeInfo_1LYF7
   .partnereventdisplay_StartDate_3wOrc,
 .partnereventdisplay_EventDetailTimeInfo_1LYF7
@@ -7700,6 +7681,17 @@ body.v6.partner_events {
     flex-direction: column;
   }
 }
+.partnereventdisplay_InLibraryView_1wfkI
+  .partnereventdisplay_EventDetailTimeInfo_1LYF7 {
+  font-size: 12px;
+  margin-bottom: 0;
+  color: #868f98;
+}
+.partnereventdisplay_InLibraryView_1wfkI
+  .partnereventdisplay_EventDetailTimeInfo_1LYF7
+  div {
+  display: flex;
+}
 .partnereventdisplay_RightSideTitles_2-qfS,
 .partnereventdisplay_DisplayAdminPanel_Title_3uePT {
   font-size: 11px;
@@ -7714,20 +7706,6 @@ body.v6.partner_events {
 .partnereventdisplay_InLibraryView_1wfkI
   .partnereventdisplay_DisplayAdminPanel_Title_3uePT {
   display: none;
-}
-.partnereventdisplay_EventDetailTimeInfo_1LYF7 {
-  margin-bottom: 24px;
-}
-.partnereventdisplay_InLibraryView_1wfkI
-  .partnereventdisplay_EventDetailTimeInfo_1LYF7 {
-  font-size: 12px;
-  margin-bottom: 0;
-  color: #868f98;
-}
-.partnereventdisplay_InLibraryView_1wfkI
-  .partnereventdisplay_EventDetailTimeInfo_1LYF7
-  div {
-  display: flex;
 }
 .partnereventdisplay_EventDetailTimeInfo_1LYF7
   .partnereventdisplay_DateAndTime_pm2OB {
@@ -9422,6 +9400,25 @@ div.curatorfeedbrowse_CuratorHoverToolTip_201Gt {
 .steam_awards_vote_section .nominationandvote_SteamAwardContainer_1URX_ {
   margin-left: 0px;
   margin-top: 0px;
+  margin-right: 0px;
+}
+.steam_awards_vote_section
+  .nominationandvote_SteamAwardContainer_1URX_
+  .nominationandvote_SteamAwardHeader_3y5EI {
+  height: 115px;
+}
+.steam_awards_vote_section
+  .nominationandvote_SteamAwardContainer_1URX_
+  .nominationandvote_SteamAwardHeader_3y5EI
+  .nominationandvote_SteamAwardHeaderImage_3qbCX {
+  height: 143px;
+}
+.steam_awards_vote_section
+  .nominationandvote_SteamAwardContainer_1URX_
+  .nominationandvote_SteamAwardHeader_3y5EI
+  .nominationandvote_SteamAwardMainTitle_3pJ_b {
+  font-size: 28px;
+  line-height: 28px;
 }
 .steam_awards_vote_section .nominationandvote_AwardCategoriesCtn_2UFWM {
   display: flex;
@@ -9449,27 +9446,6 @@ div.curatorfeedbrowse_CuratorHoverToolTip_201Gt {
   .nominationandvote_SteamAwardVoteButtonArea_19hlK
   .nominationandvote_SteamAwardCategoryTitle_1D2VY {
   padding-left: 8px;
-}
-.steam_awards_vote_section .nominationandvote_SteamAwardContainer_1URX_ {
-  margin-right: 0px;
-}
-.steam_awards_vote_section
-  .nominationandvote_SteamAwardContainer_1URX_
-  .nominationandvote_SteamAwardHeader_3y5EI {
-  height: 115px;
-}
-.steam_awards_vote_section
-  .nominationandvote_SteamAwardContainer_1URX_
-  .nominationandvote_SteamAwardHeader_3y5EI
-  .nominationandvote_SteamAwardHeaderImage_3qbCX {
-  height: 143px;
-}
-.steam_awards_vote_section
-  .nominationandvote_SteamAwardContainer_1URX_
-  .nominationandvote_SteamAwardHeader_3y5EI
-  .nominationandvote_SteamAwardMainTitle_3pJ_b {
-  font-size: 28px;
-  line-height: 28px;
 }
 html:not(.client)
   .events_listing
@@ -13561,8 +13537,6 @@ html:not(.touch)
     .eventcalendartile_TileTextAppName_b4Ttr {
     padding: 0 8px;
     font-size: 13px;
-    height: 32px;
-    display: flex;
     flex-direction: row;
     align-items: center;
     height: 20px;
@@ -14074,7 +14048,7 @@ html:not(.touch)
   opacity: 85%;
 }
 .facetedbrowse_FacetedBrowseControls_2SS84 h2 {
-  margin-top: 25x !important;
+  margin-top: 25px !important;
   margin-bottom: 0px !important;
 }
 .facetedbrowse_Facet_hvtGW {
@@ -14594,7 +14568,6 @@ html.responsive.touch .partnersaledisplay_SaleSectionTabs_QhcTn {
 .partnersaledisplay_SaleSectionTabs_QhcTn
   .partnersaledisplay_SaleSectionTabsTab_6P59P {
   background-color: #000;
-  padding: 0px 12px;
   color: #888;
   font-size: 16px;
   min-width: max-content;
@@ -14867,6 +14840,7 @@ html.responsive.touch .partnersaledisplay_SaleSectionTabs_QhcTn {
   transform: scale(1);
   z-index: 2;
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   transition: filter 0.24s ease-in-out, transform 0.24s ease-in-out,
     color 0.24s ease-in-out;
 }
@@ -14883,6 +14857,7 @@ html.responsive.touch .partnersaledisplay_SaleSectionTabs_QhcTn {
   transform: scale(1);
   z-index: 2;
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   transition: filter 0.24s ease-in-out, transform 0.24s ease-in-out,
     color 0.24s ease-in-out;
 }
@@ -16269,9 +16244,6 @@ html.responsive.touch .partnersaledisplay_SaleSectionTabs_QhcTn {
 }
 .packagepricewidget_StoreSalePriceBox_1RMFX {
   background: #000;
-  padding: 3px 5px;
-}
-.packagepricewidget_StoreSalePriceBox_1RMFX {
   font-size: 14px;
   padding: 5px;
   background-color: #000;
@@ -16307,7 +16279,7 @@ html.responsive.touch .partnersaledisplay_SaleSectionTabs_QhcTn {
   box-sizing: border-box;
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.1);
-  background: linear-gradient(
+  background-image: linear-gradient(
     -35deg,
     rgba(255, 255, 255, 0.1) 5%,
     rgba(255, 255, 255, 0.2) 78.58%
@@ -16557,7 +16529,7 @@ html.responsive.touch .partnersaledisplay_SaleSectionTabs_QhcTn {
   font-family: "Noto Serif", "Noto Serif JP", serif;
 }
 .storywidget_StoryPage_1-7YE.korean {
-  font-family: "Noto Serif", "Noto Serif KR	", serif;
+  font-family: "Noto Serif", "Noto Serif KR", serif;
 }
 .storywidget_StoryPage_1-7YE.storywidget_Opening_21i2V,
 .storywidget_StoryPage_1-7YE.storywidget_Open_Dgz7i,
@@ -16605,7 +16577,7 @@ html.responsive.touch .partnersaledisplay_SaleSectionTabs_QhcTn {
 .storywidget_Page_1q_th {
   margin: auto;
   padding-right: 20px;
-  font-family: "Big Shoulders Display";
+  font-family: "Big Shoulders Display", sans-serif;
   font-size: 17px;
   letter-spacing: 0.03em;
   color: #3d3e38;
@@ -16897,6 +16869,7 @@ a.storywidget_BadgeFooter_24Cq8:hover {
 }
 .linkregionbox_LinkRegionEdge_15F07.linkregionbox_Middle_wV64J {
   cursor: move;
+  background-color: rgba(191, 202, 250, 0.133);
 }
 .linkregionbox_LinkRegionEdge_15F07.linkregionbox_Middle_wV64J
   .linkregionbox_LinkRegionDelete_3K61p {
@@ -16998,9 +16971,6 @@ a.storywidget_BadgeFooter_24Cq8:hover {
 }
 .linkregionbox_LinkRegionEdge_15F07:hover {
   border-color: #7eadf8;
-}
-.linkregionbox_LinkRegionEdge_15F07.linkregionbox_Middle_wV64J {
-  background-color: rgba(191, 202, 250, 0.133);
 }
 .linkregionbox_EdgeDown_2Bt49.linkregionbox_middle_2wo5w
   .linkregionbox_LinkRegionEdge_15F07.linkregionbox_Middle_wV64J,
@@ -17825,13 +17795,13 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   background-color: #405358;
 }
 .STV_timelineMinimapLine.Played {
-  background-color: #216c91;
   background: linear-gradient(
     to right,
     #368fa7 0px,
     #368fa7 calc(100% - 6px),
     #5dc3ff 100%
   );
+  background-color: #216c91;
   position: absolute;
   top: 7px;
   transition: all 0.2s ease-in-out;
@@ -19169,9 +19139,6 @@ img.broadcastplayer_BroadcastPlaceholderImg_1LIEZ {
   justify-content: flex-start;
   align-items: center;
 }
-.bbcodeeditor_YouTubePreviewInsertOption_3t0_B:selected {
-  background-color: #9199a3;
-}
 .bbcodeeditor_YouTubePreviewInsertOption_3t0_B input {
   margin-right: 5px;
 }
@@ -19286,7 +19253,6 @@ img.broadcastplayer_BroadcastPlaceholderImg_1LIEZ {
   background-repeat: no-repeat;
 }
 .clanimagechooser_ImageFilename_2Gjp4 {
-  white-space: nowrap;
   text-overflow: ellipsis;
   word-break: break-all;
   word-wrap: break-word;
@@ -20315,13 +20281,8 @@ button.DialogButton {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
-}
-button.DialogButton {
-  background: none;
   border: 0;
-  color: inherit;
   font: inherit;
-  line-height: normal;
   overflow: visible;
   padding: 0;
   margin: 2px 0;
@@ -20329,6 +20290,19 @@ button.DialogButton {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  display: block;
+  line-height: 32px;
+  color: #dfe3e6;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 2px;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.2s ease-out;
+  background: #3d4450;
+  background-position: 99% 1%;
+  background-size: 300% 300%;
+  position: relative;
 }
 input.DialogInput::-moz-focus-inner,
 button.DialogButton::-moz-focus-inner {
@@ -20712,6 +20686,9 @@ button.DialogButton::-moz-focus-inner {
 }
 .DialogInput {
   border: 1px solid #fff;
+  display: block;
+  line-height: 22px;
+  padding: 10px;
 }
 .DialogLabelExplainer.Left {
   text-align: left;
@@ -20748,7 +20725,7 @@ button.DialogButton::-moz-focus-inner {
   box-shadow: inset 1px 1px 8px #000a;
   padding-left: 11px;
 }
-.DialogTextInputBase:not(disabled):hover {
+.DialogTextInputBase:not(:disabled):hover {
   background: rgba(67, 73, 83, 0.6);
 }
 .DialogTextInputBase:disabled:hover {
@@ -20832,28 +20809,6 @@ button.DialogButton.DialogInput_CopyAction {
 }
 .DialogInput_ClearAction:hover .SVGIcon_X_Line line {
   stroke: #fff;
-}
-.DialogInput {
-  display: block;
-  line-height: 22px;
-  padding: 10px;
-}
-button.DialogButton {
-  display: block;
-  line-height: 32px;
-  color: #dfe3e6;
-  font-size: 14px;
-  text-align: center;
-  border-radius: 2px;
-  cursor: pointer;
-  transition: 0.1s all;
-  width: 100%;
-  background: transparent;
-  transition: all 0.2s ease-out;
-  background: #3d4450;
-  background-position: 99% 1%;
-  background-size: 300% 300%;
-  position: relative;
 }
 button.DialogButton::before {
   pointer-events: none;
@@ -21021,8 +20976,6 @@ button.TextButton:focus {
 }
 .Disabled .DialogOnOffToggle_Option.Active {
   color: #666;
-}
-.Disabled .DialogOnOffToggle_Option.Active {
   background-color: #434953;
 }
 .DialogToggle_Description {
@@ -21455,6 +21408,14 @@ body.in_global_drag .title-area {
     rgba(0, 0, 0, 0.2) 8px,
     rgba(0, 0, 0, 0) 100%
   );
+  mask: linear-gradient(
+    to bottom,
+    black 0px,
+    black 1px,
+    rgba(0, 0, 0, 0.4) 1px,
+    rgba(0, 0, 0, 0.2) 8px,
+    rgba(0, 0, 0, 0) 100%
+  );
   position: absolute;
   top: 0;
   opacity: 0;
@@ -21470,6 +21431,14 @@ body.in_global_drag .title-area {
   height: 24px;
   background: linear-gradient(to right, #007896, #1f3d96);
   -webkit-mask: linear-gradient(
+    to bottom,
+    black 0px,
+    black 1px,
+    rgba(0, 0, 0, 0.4) 1px,
+    rgba(0, 0, 0, 0.2) 8px,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask: linear-gradient(
     to bottom,
     black 0px,
     black 1px,
@@ -21646,8 +21615,6 @@ body.in_global_drag .title-area {
   width: 25%;
   height: 100%;
   background-color: #67c1f5;
-}
-.throbber > div {
   animation: loading_throbber_bar 1s ease-in-out infinite;
 }
 .throbber > div:nth-child(1) {
@@ -21759,7 +21726,4 @@ body.in_global_drag .title-area {
 .textLink {
   color: #fff;
   text-decoration: underline;
-}
-.allCaps {
-  text-transform: uppercase;
 }

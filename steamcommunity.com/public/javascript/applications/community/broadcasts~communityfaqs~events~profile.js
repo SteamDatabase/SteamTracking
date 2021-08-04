@@ -2694,8 +2694,8 @@
                   return n.vecTags.push(e);
                 }),
                 t &&
-                  ((n.build_id = this.build_id),
-                  (n.build_branch = this.build_branch)),
+                  ((n.m_nBuildID = this.m_nBuildID),
+                  (n.m_strBuildBranch = this.m_strBuildBranch)),
                 n
               );
             }),
@@ -3471,8 +3471,8 @@
             Object(r.c)([a.C], e.prototype, "endTime", void 0),
             Object(r.c)([a.C], e.prototype, "visibilityStartTime", void 0),
             Object(r.c)([a.C], e.prototype, "visibilityEndTime", void 0),
-            Object(r.c)([a.C], e.prototype, "build_id", void 0),
-            Object(r.c)([a.C], e.prototype, "build_branch", void 0),
+            Object(r.c)([a.C], e.prototype, "m_nBuildID", void 0),
+            Object(r.c)([a.C], e.prototype, "m_strBuildBranch", void 0),
             Object(r.c)([a.C], e.prototype, "postTime", void 0),
             Object(r.c)([a.C], e.prototype, "visibility_state", void 0),
             Object(r.c)([a.C], e.prototype, "broadcaster", void 0),
@@ -15954,8 +15954,8 @@
                 (n.video_preview_id = t.video_preview_id),
                 (n.has_live_stream = t.has_live_stream),
                 (n.live_stream_viewer_count = t.live_stream_viewer_count),
-                (n.build_id = t.build_id),
-                (n.build_branch = t.build_branch),
+                (n.m_nBuildID = t.build_id),
+                (n.m_strBuildBranch = t.build_branch),
                 t.announcement_body)
               ) {
                 var a = t.announcement_body;
@@ -21419,8 +21419,8 @@
     },
     FhLd: function (e, t, n) {
       e.exports = {
-        strWidescreenWidth: "1420px",
-        strPhoneWidth: "768px",
+        strwidescreenwidth: "1420px",
+        strphonewidth: "768px",
         FacetedBrowseCtn: "facetedbrowse_FacetedBrowseCtn_1Drr-",
         FacetedBrowseInnerCtn: "facetedbrowse_FacetedBrowseInnerCtn_3vjDu",
         FacetedBrowseControls: "facetedbrowse_FacetedBrowseControls_1JM3A",
@@ -24075,33 +24075,34 @@
               t || p.k_EEvents
             );
           }),
-          (e.prototype.InitDefaultCheckboxes = function (e, t) {
+          (e.prototype.InitDefaultCheckboxes = function (e, t, n) {
             (this.m_bInitializedForUpdatesOnly = t),
               (this.m_mapEventTypeGroupsAllowed = b(t ? [p.k_EUpdates] : _));
-            var n = l.c.EREALM === o.f.k_ESteamRealmChina ? h : m;
-            this.m_mapGameSources = b(e ? n : f);
+            var a = l.c.EREALM === o.f.k_ESteamRealmChina ? h : m;
+            (this.m_mapGameSources = b(e ? a : f)),
+              n && this.m_mapGameSources.set(r.k_EFeatured, !0);
           }),
-          (e.prototype.Init = function (e, t, n, r) {
-            (this.m_eStorageType = r), (this.m_strStorageKey = n);
-            var a = this.GetStorageObject(),
-              i = a ? a.getItem(this.GetPreferencesStorageKey()) : null;
-            if (i) {
-              var o = JSON.parse(i);
-              if (o.rgEventTypeGroupsAllowed && o.rgGameSources) {
-                var s = o.rgEventTypeGroupsAllowed,
-                  c = o.rgGameSources;
+          (e.prototype.Init = function (e, t, n, r, a) {
+            (this.m_eStorageType = a), (this.m_strStorageKey = r);
+            var i = this.GetStorageObject(),
+              o = i ? i.getItem(this.GetPreferencesStorageKey()) : null;
+            if (o) {
+              var s = JSON.parse(o);
+              if (s.rgEventTypeGroupsAllowed && s.rgGameSources) {
+                var c = s.rgEventTypeGroupsAllowed,
+                  l = s.rgGameSources;
                 return (
-                  (this.m_mapEventTypeGroupsAllowed = b(s)),
-                  (this.m_mapGameSources = b(c)),
+                  (this.m_mapEventTypeGroupsAllowed = b(c)),
+                  (this.m_mapGameSources = b(l)),
                   void (
-                    void 0 !== o.bCuratorUnhideOnFollowDismissed &&
+                    void 0 !== s.bCuratorUnhideOnFollowDismissed &&
                     (this.m_bCuratorUnhideOnFollowDialogDismissed =
-                      o.bCuratorUnhideOnFollowDismissed)
+                      s.bCuratorUnhideOnFollowDismissed)
                   )
                 );
               }
             }
-            this.InitDefaultCheckboxes(e, t);
+            this.InitDefaultCheckboxes(e, t, n);
           }),
           (e.prototype.SaveFilterPreferences = function () {
             var e = this.GetStorageObject();
@@ -46685,6 +46686,7 @@
                         a.m_visibilityStore.Init(
                           i,
                           this.BShowUpdatesOnly(),
+                          a.BIsShowingFeaturedFeed(),
                           s,
                           o
                         ),
@@ -63523,7 +63525,7 @@
               Constructor: function (e) {
                 return a.createElement(
                   "div",
-                  { className: S.a.Italic },
+                  { className: Object(h.a)(S.a.Italic, "BB_Italic") },
                   e.children
                 );
               },
@@ -72974,7 +72976,7 @@
                 languageOverride: n,
               })
             ),
-            l.a.createElement(X, {
+            l.a.createElement(ne, {
               reservationDef: t,
               myReserveState: i,
               oDepositPackageInfo: o,
@@ -72988,92 +72990,160 @@
                 " "
               )
           );
-        },
-        X = function (e) {
-          var t = e.oDepositPackageInfo,
-            n = e.reservationDef,
-            r = e.myReserveState,
-            a = e.disabled,
-            i = Object(G.c)();
-          if (!h.i.logged_in || r.bFakeUserLoggedOut)
-            return l.a.createElement(
-              "div",
-              { className: z.reserverow },
-              l.a.createElement(
-                b.d,
-                { onClick: F.a },
-                Object(A.f)("#SalePage_LoginReservationPrompt")
-              )
-            );
-          if (r.bAlreadyReserved) {
-            return n.reservation_package != r.nReservationPackage
-              ? null
-              : l.a.createElement(
-                  "div",
-                  { className: z.reserverowReserved },
-                  l.a.createElement(
-                    "div",
-                    { className: z.alreadyreserved },
-                    Object(A.n)(
-                      "#Sale_AlreadyReserved",
-                      l.a.createElement(w.a, {
-                        bSingleLine: !0,
-                        dateAndTime: r.rtReserveTime,
-                        bOnlyDate: !0,
-                      })
-                    )
+        };
+      function X(e) {
+        var t = e.disabled;
+        return l.a.createElement(
+          b.d,
+          {
+            onClick: function (e) {
+              Object(L.d)(
+                l.a.createElement(k.d, {
+                  strTitle: Object(A.f)("#Sale_CancelReservation"),
+                  strDescription: Object(A.f)(
+                    "#Sale_Reservation_CancelAreYouSure"
                   ),
-                  l.a.createElement(
-                    b.d,
-                    {
-                      onClick: function (e) {
-                        Object(L.d)(
-                          l.a.createElement(k.d, {
-                            strTitle: Object(A.f)("#Sale_CancelReservation"),
-                            strDescription: Object(A.f)(
-                              "#Sale_Reservation_CancelAreYouSure"
-                            ),
-                            onOK: function () {
-                              f.Get()
-                                .CancelUserReservation()
-                                .finally(function () {
-                                  return window.location.reload();
-                                });
-                            },
-                          }),
-                          Object(D.m)(e)
-                        );
-                      },
-                      disabled: a,
-                    },
-                    Object(A.f)("#Sale_CancelReservation")
-                  )
-                );
-          }
-          var o = !(null == t ? void 0 : t.bVisible),
-            s = !a && (null == t ? void 0 : t.bVisible) && !t.bPurchaseable;
+                  onOK: function () {
+                    f.Get()
+                      .CancelUserReservation()
+                      .finally(function () {
+                        return window.location.reload();
+                      });
+                  },
+                }),
+                Object(D.m)(e)
+              );
+            },
+            disabled: t,
+          },
+          Object(A.f)("#Sale_CancelReservation")
+        );
+      }
+      function $(e) {
+        e.oDepositPackageInfo;
+        var t = e.reservationDef,
+          n = e.myReserveState;
+        e.disabled;
+        return t.reservation_package != n.nReservationPackage
+          ? null
+          : l.a.createElement(
+              "div",
+              { className: z.reserverowReserved },
+              l.a.createElement(
+                "div",
+                { className: z.alreadyreserved },
+                Object(A.n)(
+                  "#Sale_AlreadyReserved",
+                  l.a.createElement(w.a, {
+                    bSingleLine: !0,
+                    dateAndTime: n.rtReserveTime,
+                    bOnlyDate: !0,
+                  })
+                )
+              ),
+              l.a.createElement(X, Object(a.a)({}, e))
+            );
+      }
+      function ee(e) {
+        var t = e.reservationDef,
+          n = e.myReserveState,
+          r = e.disabled,
+          i = Object(G.c)();
+        if (t.reservation_package != n.nAllocatedReservationPackage)
+          return null;
+        return l.a.createElement(
+          "div",
+          { className: z.reserverowReserved },
+          l.a.createElement(
+            "div",
+            { className: z.alreadyreserved },
+            l.a.createElement(
+              "div",
+              null,
+              Object(A.f)("#Sale_Reservation_CompleteBy")
+            ),
+            l.a.createElement(w.a, {
+              dateAndTime: n.rtAllocationExpires,
+              bOnlyDate: !0,
+            }),
+            l.a.createElement(
+              "div",
+              null,
+              Object(A.f)("#Sale_Reservation_CancelAuto")
+            )
+          ),
+          l.a.createElement(
+            b.d,
+            {
+              onClick: function (e) {
+                var t = h.c.STORE_BASE_URL + "cart",
+                  r = h.c.STORE_BASE_URL + "cart/addtocart",
+                  a = Object(u.c)(i);
+                d.a.Get().AddToCart(e, n.nAllocatedReservationPackage, r, t, a);
+              },
+              disabled: r,
+            },
+            Object(A.f)("#Sale_Reservation_CompletePurchase")
+          ),
+          l.a.createElement(X, Object(a.a)({}, e))
+        );
+      }
+      function te(e) {
+        var t = e.oDepositPackageInfo,
+          n = e.reservationDef,
+          r = (e.myReserveState, e.disabled),
+          a = Object(G.c)(),
+          i = !(null == t ? void 0 : t.bVisible),
+          o = !r && (null == t ? void 0 : t.bVisible) && !t.bPurchaseable;
+        return l.a.createElement(
+          "div",
+          { className: z.reserverow },
+          l.a.createElement(
+            b.d,
+            {
+              onClick: function (e) {
+                var t = h.c.STORE_BASE_URL + "cart",
+                  r = h.c.STORE_BASE_URL + "cart/addtocart",
+                  i = Object(u.c)(a);
+                d.a.Get().AddToCart(e, n.deposit_package, r, t, i);
+              },
+              className: z.reservebutton,
+              disabled: i || o || r,
+            },
+            Object(A.f)(
+              o ? "#Sale_ReserveExhausted" : "#Sale_ReserveNow",
+              (null == t ? void 0 : t.strFormattedFinalPrice) || ""
+            )
+          )
+        );
+      }
+      var ne = function (e) {
+        e.oDepositPackageInfo, e.reservationDef;
+        var t = e.myReserveState;
+        e.disabled;
+        if (!h.i.logged_in || t.bFakeUserLoggedOut)
           return l.a.createElement(
             "div",
             { className: z.reserverow },
             l.a.createElement(
               b.d,
-              {
-                onClick: function (e) {
-                  var t = h.c.STORE_BASE_URL + "cart",
-                    r = h.c.STORE_BASE_URL + "cart/addtocart",
-                    a = Object(u.c)(i);
-                  d.a.Get().AddToCart(e, n.deposit_package, r, t, a);
-                },
-                className: z.reservebutton,
-                disabled: o || s || a,
-              },
-              Object(A.f)(
-                s ? "#Sale_ReserveExhausted" : "#Sale_ReserveNow",
-                (null == t ? void 0 : t.strFormattedFinalPrice) || ""
-              )
+              { onClick: F.a },
+              Object(A.f)("#SalePage_LoginReservationPrompt")
             )
           );
-        };
+        switch (t.oReservationStatus) {
+          case r.k_EPurchaseReservationState_Reserved:
+            return l.a.createElement($, Object(a.a)({}, e));
+          case r.k_EPurchaseReservationState_Allocated:
+            return l.a.createElement(ee, Object(a.a)({}, e));
+          case r.k_EPurchaseReservationState_CancelPendingRefund:
+          case r.k_EPurchaseReservationState_NotReserved:
+          case r.k_EPurchaseReservationState_Consumed:
+          case r.k_EPurchaseReservationState_Cancelled:
+          default:
+            return l.a.createElement(te, Object(a.a)({}, e));
+        }
+      };
     },
     zvcZ: function (e, t, n) {
       "use strict";

@@ -4055,10 +4055,6 @@ background: -webkit-linear-gradient( left, #95bbd4 5%,#859bac 95%);
 	background-image: url( '/public/images/v6/icon_platform_oculusrift_dark.png' );
 }
 
-.tab_item.focus .tab_item_details span.platform_img.razerosvr {
-	background-image: url( '/public/images/v6/icon_platform_razerosvr_dark.png' );
-}
-
 .tab_item.focus .tab_item_details span.platform_img.windowsmr {
 	background-image: url( '/public/images/v6/icon_platform_windowsmr_dark.png' );
 }

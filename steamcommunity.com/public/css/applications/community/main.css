@@ -583,7 +583,6 @@ html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenuItem_1n7Wl {
   height: 18px;
   background-color: #6dcff6;
   min-height: 1px;
-  display: inline-block;
   position: absolute;
   left: -4px;
   margin-top: 0px;
@@ -987,13 +986,8 @@ button.DialogButton {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
-}
-button.DialogButton {
-  background: none;
   border: 0;
-  color: inherit;
   font: inherit;
-  line-height: normal;
   overflow: visible;
   padding: 0;
   margin: 2px 0;
@@ -1001,6 +995,19 @@ button.DialogButton {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  display: block;
+  line-height: 32px;
+  color: #dfe3e6;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 2px;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.2s ease-out;
+  background: #3d4450;
+  background-position: 99% 1%;
+  background-size: 300% 300%;
+  position: relative;
 }
 input.DialogInput::-moz-focus-inner,
 button.DialogButton::-moz-focus-inner {
@@ -1384,6 +1391,9 @@ button.DialogButton::-moz-focus-inner {
 }
 .DialogInput {
   border: 1px solid #fff;
+  display: block;
+  line-height: 22px;
+  padding: 10px;
 }
 .DialogLabelExplainer.Left {
   text-align: left;
@@ -1420,7 +1430,7 @@ button.DialogButton::-moz-focus-inner {
   box-shadow: inset 1px 1px 8px #000a;
   padding-left: 11px;
 }
-.DialogTextInputBase:not(disabled):hover {
+.DialogTextInputBase:not(:disabled):hover {
   background: rgba(67, 73, 83, 0.6);
 }
 .DialogTextInputBase:disabled:hover {
@@ -1504,28 +1514,6 @@ button.DialogButton.DialogInput_CopyAction {
 }
 .DialogInput_ClearAction:hover .SVGIcon_X_Line line {
   stroke: #fff;
-}
-.DialogInput {
-  display: block;
-  line-height: 22px;
-  padding: 10px;
-}
-button.DialogButton {
-  display: block;
-  line-height: 32px;
-  color: #dfe3e6;
-  font-size: 14px;
-  text-align: center;
-  border-radius: 2px;
-  cursor: pointer;
-  transition: 0.1s all;
-  width: 100%;
-  background: transparent;
-  transition: all 0.2s ease-out;
-  background: #3d4450;
-  background-position: 99% 1%;
-  background-size: 300% 300%;
-  position: relative;
 }
 button.DialogButton::before {
   pointer-events: none;
@@ -1693,8 +1681,6 @@ button.TextButton:focus {
 }
 .Disabled .DialogOnOffToggle_Option.Active {
   color: #666;
-}
-.Disabled .DialogOnOffToggle_Option.Active {
   background-color: #434953;
 }
 .DialogToggle_Description {
@@ -2127,6 +2113,14 @@ body.in_global_drag .title-area {
     rgba(0, 0, 0, 0.2) 8px,
     rgba(0, 0, 0, 0) 100%
   );
+  mask: linear-gradient(
+    to bottom,
+    black 0px,
+    black 1px,
+    rgba(0, 0, 0, 0.4) 1px,
+    rgba(0, 0, 0, 0.2) 8px,
+    rgba(0, 0, 0, 0) 100%
+  );
   position: absolute;
   top: 0;
   opacity: 0;
@@ -2142,6 +2136,14 @@ body.in_global_drag .title-area {
   height: 24px;
   background: linear-gradient(to right, #007896, #1f3d96);
   -webkit-mask: linear-gradient(
+    to bottom,
+    black 0px,
+    black 1px,
+    rgba(0, 0, 0, 0.4) 1px,
+    rgba(0, 0, 0, 0.2) 8px,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask: linear-gradient(
     to bottom,
     black 0px,
     black 1px,
@@ -2318,8 +2320,6 @@ body.in_global_drag .title-area {
   width: 25%;
   height: 100%;
   background-color: #67c1f5;
-}
-.throbber > div {
   animation: loading_throbber_bar 1s ease-in-out infinite;
 }
 .throbber > div:nth-child(1) {
@@ -2431,7 +2431,4 @@ body.in_global_drag .title-area {
 .textLink {
   color: #fff;
   text-decoration: underline;
-}
-.allCaps {
-  text-transform: uppercase;
 }

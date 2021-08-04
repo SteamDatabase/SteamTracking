@@ -2620,36 +2620,6 @@ body.recommendgame #review_create h1  {
 	display: block;
 }
 
-#review_recent_events_controls {
-	display: none;
-}
-
-.review_recent_event_detail {
-	margin-left: 51px;
-}
-
-.review_recent_events_icon {
-	float: left;
-	margin-right: 10px;
-	margin-top: 2px;
-}
-
-.recent_review_title {
-	font-size: 20px;
-	color: #000000;
-	font-weight: bold;
-}
-.recent_review_title .recent_review_event_dates {
-	font-weight: normal;
-}
-
-.recent_review_event_text {
-	color: #ded7c9;
-}
-.high_volume_all .recent_review_event_text {
-	color: #d3dade;
-}
-
 .review_anomalous_events_icon
 {
 	height: 36px;
