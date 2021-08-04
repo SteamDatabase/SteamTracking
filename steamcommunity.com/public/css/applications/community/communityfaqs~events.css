@@ -2850,20 +2850,12 @@ strong {
     black calc(100% - 44px),
     transparent 100%
   );
-  mask-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0) 0%,
-    black 44px,
-    black calc(100% - 44px),
-    transparent 100%
-  );
   -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
   -webkit-mask-size: 100% 100%;
-  mask-size: 100% 100%;
 }
 .spotlight_MajorEventImage_25fL1 {
   object-fit: contain;
+  position: absolute;
   top: 0;
   width: 1053px;
   max-width: 100%;
