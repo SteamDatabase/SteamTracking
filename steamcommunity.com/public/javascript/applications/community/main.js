@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6699540";
+var CLSTAMP = "6704583";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [100],
   {
@@ -6243,50 +6243,55 @@ var CLSTAMP = "6699540";
                   e.mustBeEmail,
                   e.focusOnMount,
                   e.tooltip,
-                  Object(r.f)(e, [
-                    "label",
-                    "explainer",
-                    "requiredLabel",
-                    "bShowCopyAction",
-                    "bShowClearAction",
-                    "bAlwaysShowClearAction",
-                    "bIsPassword",
-                    "rangeMin",
-                    "rangeMax",
-                    "mustBeNumeric",
-                    "mustBeURL",
-                    "mustBeEmail",
-                    "focusOnMount",
-                    "tooltip",
-                  ])),
-                d =
+                  e.inlineControls),
+                d = Object(r.f)(e, [
+                  "label",
+                  "explainer",
+                  "requiredLabel",
+                  "bShowCopyAction",
+                  "bShowClearAction",
+                  "bAlwaysShowClearAction",
+                  "bIsPassword",
+                  "rangeMin",
+                  "rangeMax",
+                  "mustBeNumeric",
+                  "mustBeURL",
+                  "mustBeEmail",
+                  "focusOnMount",
+                  "tooltip",
+                  "inlineControls",
+                ]),
+                h =
                   "DialogInput DialogInputPlaceholder DialogTextInputBase" +
-                  (p.className ? " " + p.className : ""),
-                h = "copiedAnimation",
-                m = this.state.m_bCompletedCopiedAnimation;
+                  (d.className ? " " + d.className : ""),
+                m = "copiedAnimation",
+                f = this.state.m_bCompletedCopiedAnimation;
               this.m_CopiedAnimation &&
-                (h = "copiedAnimation animationPlaying"),
-                m && (h = "copiedAnimation animationComplete");
-              var f = {};
+                (m = "copiedAnimation animationPlaying"),
+                f && (m = "copiedAnimation animationComplete");
+              var b = {};
               void 0 !== this.state.m_CopiedYPos &&
-                (f.transform = "translateY(" + this.state.m_CopiedYPos + "px)");
-              var g = void 0;
+                (b.transform = "translateY(" + this.state.m_CopiedYPos + "px)");
+              var v = void 0;
               n &&
-                (g = o.createElement(
+                (v = o.createElement(
                   "div",
                   { className: "DialogLabelExplainer" },
                   n
                 ));
-              var b = o.createElement(
+              var _ = o.createElement(
                 o.Fragment,
                 null,
                 o.createElement(
-                  "div",
-                  { className: "DialogInput_Wrapper _DialogLayout" },
+                  g.a,
+                  {
+                    className: "DialogInput_Wrapper _DialogLayout",
+                    "flow-children": "row",
+                  },
                   o.createElement(
                     Y,
-                    Object(r.a)({ type: u ? "password" : "text" }, p, {
-                      className: d,
+                    Object(r.a)({ type: u ? "password" : "text" }, d, {
+                      className: h,
                       htmlElementRef: this.OnInputRef,
                       onChange: this.OnChanged,
                     })
@@ -6305,11 +6310,11 @@ var CLSTAMP = "6699540";
                       ),
                       o.createElement(
                         "div",
-                        { style: f, className: h },
+                        { style: b, className: m },
                         "Link Copied"
                       )
                     ),
-                  (l || (c && p.value)) &&
+                  (l || (c && d.value)) &&
                     o.createElement(
                       "div",
                       {
@@ -6317,9 +6322,10 @@ var CLSTAMP = "6699540";
                         onClick: this.OnClearClick,
                       },
                       o.createElement(a.mb, null)
-                    )
+                    ),
+                  p
                 ),
-                g
+                v
               );
               return t
                 ? o.createElement(
@@ -6346,7 +6352,7 @@ var CLSTAMP = "6699540";
                         ),
                         " "
                       ),
-                      b,
+                      _,
                       this.state.m_bNumberBelowMinRange
                         ? o.createElement(
                             "div",
@@ -6394,7 +6400,7 @@ var CLSTAMP = "6699540";
                         : null
                     )
                   )
-                : b;
+                : _;
             }),
             Object(r.c)([c.a], t.prototype, "OnInputRef", null),
             Object(r.c)([c.a], t.prototype, "OnChanged", null),
@@ -13421,7 +13427,7 @@ var CLSTAMP = "6699540";
           (e[(e.k_BluetoothDeviceType_Keyboard = 11)] =
             "k_BluetoothDeviceType_Keyboard");
       })(g || (g = {}));
-      var b, v, _, y, O, w;
+      var b, v, _, y, O;
       !(function (e) {
         (e[(e.Unknown = 0)] = "Unknown"),
           (e[(e.Wired = 1)] = "Wired"),
@@ -13455,16 +13461,24 @@ var CLSTAMP = "6699540";
             (e[(e.Unsupported = 32768)] = "Unsupported");
         })(y || (y = {})),
         (function (e) {
-          (e[(e.SystemKey0 = 0)] = "SystemKey0"),
-            (e[(e.SystemKey1 = 1)] = "SystemKey1");
-        })(O || (O = {})),
+          (e[(e.k_EHTTPProxyMode_Invalid = 0)] = "k_EHTTPProxyMode_Invalid"),
+            (e[(e.k_EHTTPProxyMode_None = 1)] = "k_EHTTPProxyMode_None"),
+            (e[(e.k_EHTTPProxyMode_Manual = 2)] = "k_EHTTPProxyMode_Manual"),
+            (e[(e.k_EHTTPProxyMode_Automatic = 3)] =
+              "k_EHTTPProxyMode_Automatic");
+        })(O || (O = {}));
+      var w, E;
+      !(function (e) {
+        (e[(e.SystemKey0 = 0)] = "SystemKey0"),
+          (e[(e.SystemKey1 = 1)] = "SystemKey1");
+      })(w || (w = {})),
         (function (e) {
           (e[(e.Hidden = 0)] = "Hidden"),
             (e[(e.Notification = 1)] = "Notification"),
             (e[(e.Overlay = 2)] = "Overlay"),
             (e[(e.Opaque = 3)] = "Opaque"),
             (e[(e.OverlayKeyboard = 4)] = "OverlayKeyboard");
-        })(w || (w = {}));
+        })(E || (E = {}));
     },
     lkRc: function (e, t, n) {
       "use strict";

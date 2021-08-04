@@ -11194,20 +11194,16 @@
               this.SetDirty(r.visibility));
           }),
           (e.prototype.SetStartTimeEditChoice = function (e) {
-            this.m_startTimeEditChoice != e &&
-              ((this.m_startTimeEditChoice = e), this.SetDirty(r.visibility));
+            this.m_startTimeEditChoice != e && (this.m_startTimeEditChoice = e);
           }),
           (e.prototype.SetEndTimeEditChoice = function (e) {
-            this.m_endTimeEditChoice != e &&
-              ((this.m_endTimeEditChoice = e), this.SetDirty(r.visibility));
+            this.m_endTimeEditChoice != e && (this.m_endTimeEditChoice = e);
           }),
           (e.prototype.SetEndEditDurationType = function (e) {
-            this.m_editDurationType != e &&
-              ((this.m_editDurationType = e), this.SetDirty(r.visibility));
+            this.m_editDurationType != e && (this.m_editDurationType = e);
           }),
           (e.prototype.SetEndEditDurationValue = function (e) {
-            this.m_editDurationValue != e &&
-              ((this.m_editDurationValue = e), this.SetDirty(r.visibility));
+            this.m_editDurationValue != e && (this.m_editDurationValue = e);
           }),
           (e.prototype.UpdateVisibilityState = function (e, t) {
             this.m_curModel.visibility_state = e
@@ -11326,7 +11322,6 @@
             var t = Math.abs(e - (e % 60));
             this.m_curModel.startTime != t &&
               ((this.m_curModel.startTime = t),
-              t && this.SetStartTimeEditChoice(a.k_ESpecified),
               this.m_curModel.endTime < this.m_curModel.startTime &&
                 (this.m_curModel.endTime = this.m_curModel.startTime + 3600),
               this.SetDirty(r.time));
@@ -11334,9 +11329,7 @@
           (e.prototype.SetEventEndTime = function (e) {
             var t = e - (e % 60);
             this.m_curModel.endTime != t &&
-              ((this.m_curModel.endTime = t),
-              t && this.SetEndTimeEditChoice(i.k_ESpecified),
-              this.SetDirty(r.time));
+              ((this.m_curModel.endTime = t), this.SetDirty(r.time));
           }),
           (e.prototype.SetSaleVanityID = function (e) {
             var t,
