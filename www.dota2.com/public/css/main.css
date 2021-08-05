@@ -13,6 +13,13 @@ a {
 .Bold {
   font-weight: bold;
 }
+.Spoiler {
+  background-color: #000 !important;
+  color: #000 !important;
+}
+.Spoiler:hover {
+  color: #fff !important;
+}
 [data-aos="fade-zoom-in"] {
   opacity: 0;
   transition-property: transform, opacity;
@@ -650,6 +657,13 @@ a {
 }
 .Bold {
   font-weight: bold;
+}
+.Spoiler {
+  background-color: #000 !important;
+  color: #000 !important;
+}
+.Spoiler:hover {
+  color: #fff !important;
 }
 [data-aos="fade-zoom-in"] {
   opacity: 0;
@@ -1738,6 +1752,13 @@ a {
 .Bold {
   font-weight: bold;
 }
+.Spoiler {
+  background-color: #000 !important;
+  color: #000 !important;
+}
+.Spoiler:hover {
+  color: #fff !important;
+}
 [data-aos="fade-zoom-in"] {
   opacity: 0;
   transition-property: transform, opacity;
@@ -2320,6 +2341,13 @@ a {
 .Bold {
   font-weight: bold;
 }
+.Spoiler {
+  background-color: #000 !important;
+  color: #000 !important;
+}
+.Spoiler:hover {
+  color: #fff !important;
+}
 [data-aos="fade-zoom-in"] {
   opacity: 0;
   transition-property: transform, opacity;
@@ -2873,6 +2901,13 @@ a {
 .Bold {
   font-weight: bold;
 }
+.Spoiler {
+  background-color: #000 !important;
+  color: #000 !important;
+}
+.Spoiler:hover {
+  color: #fff !important;
+}
 [data-aos="fade-zoom-in"] {
   opacity: 0;
   transition-property: transform, opacity;
@@ -3425,6 +3460,13 @@ a {
 }
 .Bold {
   font-weight: bold;
+}
+.Spoiler {
+  background-color: #000 !important;
+  color: #000 !important;
+}
+.Spoiler:hover {
+  color: #fff !important;
 }
 [data-aos="fade-zoom-in"] {
   opacity: 0;
@@ -4344,6 +4386,13 @@ a {
 .Bold {
   font-weight: bold;
 }
+.Spoiler {
+  background-color: #000 !important;
+  color: #000 !important;
+}
+.Spoiler:hover {
+  color: #fff !important;
+}
 [data-aos="fade-zoom-in"] {
   opacity: 0;
   transition-property: transform, opacity;
@@ -5049,6 +5098,13 @@ a {
 }
 .Bold {
   font-weight: bold;
+}
+.Spoiler {
+  background-color: #000 !important;
+  color: #000 !important;
+}
+.Spoiler:hover {
+  color: #fff !important;
 }
 [data-aos="fade-zoom-in"] {
   opacity: 0;
@@ -10691,6 +10747,13 @@ a {
 .Bold {
   font-weight: bold;
 }
+.Spoiler {
+  background-color: #000 !important;
+  color: #000 !important;
+}
+.Spoiler:hover {
+  color: #fff !important;
+}
 [data-aos="fade-zoom-in"] {
   opacity: 0;
   transition-property: transform, opacity;
@@ -11602,6 +11665,13 @@ a {
 }
 .Bold {
   font-weight: bold;
+}
+.Spoiler {
+  background-color: #000 !important;
+  color: #000 !important;
+}
+.Spoiler:hover {
+  color: #fff !important;
 }
 [data-aos="fade-zoom-in"] {
   opacity: 0;
@@ -12946,6 +13016,13 @@ a {
 }
 .Bold {
   font-weight: bold;
+}
+.Spoiler {
+  background-color: #000 !important;
+  color: #000 !important;
+}
+.Spoiler:hover {
+  color: #fff !important;
 }
 [data-aos="fade-zoom-in"] {
   opacity: 0;
@@ -15334,6 +15411,13 @@ a {
 .Bold {
   font-weight: bold;
 }
+.Spoiler {
+  background-color: #000 !important;
+  color: #000 !important;
+}
+.Spoiler:hover {
+  color: #fff !important;
+}
 [data-aos="fade-zoom-in"] {
   opacity: 0;
   transition-property: transform, opacity;
@@ -16263,6 +16347,13 @@ a {
 .Bold {
   font-weight: bold;
 }
+.Spoiler {
+  background-color: #000 !important;
+  color: #000 !important;
+}
+.Spoiler:hover {
+  color: #fff !important;
+}
 [data-aos="fade-zoom-in"] {
   opacity: 0;
   transition-property: transform, opacity;
@@ -16905,6 +16996,13 @@ a {
 }
 .Bold {
   font-weight: bold;
+}
+.Spoiler {
+  background-color: #000 !important;
+  color: #000 !important;
+}
+.Spoiler:hover {
+  color: #fff !important;
 }
 [data-aos="fade-zoom-in"] {
   opacity: 0;
@@ -17759,6 +17857,13 @@ a {
 }
 .Bold {
   font-weight: bold;
+}
+.Spoiler {
+  background-color: #000 !important;
+  color: #000 !important;
+}
+.Spoiler:hover {
+  color: #fff !important;
 }
 [data-aos="fade-zoom-in"] {
   opacity: 0;
@@ -18883,6 +18988,13 @@ a {
 .Bold {
   font-weight: bold;
 }
+.Spoiler {
+  background-color: #000 !important;
+  color: #000 !important;
+}
+.Spoiler:hover {
+  color: #fff !important;
+}
 [data-aos="fade-zoom-in"] {
   opacity: 0;
   transition-property: transform, opacity;
@@ -19473,6 +19585,13 @@ a {
 }
 .Bold {
   font-weight: bold;
+}
+.Spoiler {
+  background-color: #000 !important;
+  color: #000 !important;
+}
+.Spoiler:hover {
+  color: #fff !important;
 }
 [data-aos="fade-zoom-in"] {
   opacity: 0;
@@ -20786,6 +20905,13 @@ a {
 }
 .Bold {
   font-weight: bold;
+}
+.Spoiler {
+  background-color: #000 !important;
+  color: #000 !important;
+}
+.Spoiler:hover {
+  color: #fff !important;
 }
 [data-aos="fade-zoom-in"] {
   opacity: 0;
@@ -23664,6 +23790,13 @@ a {
 .Bold {
   font-weight: bold;
 }
+.Spoiler {
+  background-color: #000 !important;
+  color: #000 !important;
+}
+.Spoiler:hover {
+  color: #fff !important;
+}
 [data-aos="fade-zoom-in"] {
   opacity: 0;
   transition-property: transform, opacity;
@@ -24295,6 +24428,13 @@ a {
 }
 .Bold {
   font-weight: bold;
+}
+.Spoiler {
+  background-color: #000 !important;
+  color: #000 !important;
+}
+.Spoiler:hover {
+  color: #fff !important;
 }
 [data-aos="fade-zoom-in"] {
   opacity: 0;
@@ -26322,6 +26462,13 @@ a {
 .Bold {
   font-weight: bold;
 }
+.Spoiler {
+  background-color: #000 !important;
+  color: #000 !important;
+}
+.Spoiler:hover {
+  color: #fff !important;
+}
 [data-aos="fade-zoom-in"] {
   opacity: 0;
   transition-property: transform, opacity;
@@ -26879,6 +27026,13 @@ a {
 }
 .Bold {
   font-weight: bold;
+}
+.Spoiler {
+  background-color: #000 !important;
+  color: #000 !important;
+}
+.Spoiler:hover {
+  color: #fff !important;
 }
 [data-aos="fade-zoom-in"] {
   opacity: 0;
@@ -27887,6 +28041,13 @@ a {
 .Bold {
   font-weight: bold;
 }
+.Spoiler {
+  background-color: #000 !important;
+  color: #000 !important;
+}
+.Spoiler:hover {
+  color: #fff !important;
+}
 [data-aos="fade-zoom-in"] {
   opacity: 0;
   transition-property: transform, opacity;
@@ -28589,6 +28750,13 @@ a {
 }
 .Bold {
   font-weight: bold;
+}
+.Spoiler {
+  background-color: #000 !important;
+  color: #000 !important;
+}
+.Spoiler:hover {
+  color: #fff !important;
 }
 [data-aos="fade-zoom-in"] {
   opacity: 0;

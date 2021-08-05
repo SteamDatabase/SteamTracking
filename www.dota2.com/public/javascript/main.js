@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6706962";
+var CLSTAMP = "6709185";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [1],
   {
@@ -6275,16 +6275,16 @@ var CLSTAMP = "6706962";
     dkia: function (e, t, a) {
       "use strict";
       a.d(t, "c", function () {
-        return N;
+        return S;
       }),
         a.d(t, "a", function () {
-          return S;
-        }),
-        a.d(t, "d", function () {
           return L;
         }),
-        a.d(t, "b", function () {
+        a.d(t, "d", function () {
           return T;
+        }),
+        a.d(t, "b", function () {
+          return C;
         });
       var n = a("mrSG"),
         r = a("q1tI"),
@@ -6413,7 +6413,7 @@ var CLSTAMP = "6706962";
             (t.prototype.toReact = function () {
               return r.createElement(
                 "span",
-                { className: "Minor" },
+                { className: "Spoiler" },
                 this.getComponents()
               );
             }),
@@ -6421,6 +6421,22 @@ var CLSTAMP = "6706962";
           );
         })(o.Tag),
         f = (function (e) {
+          function t() {
+            return (null !== e && e.apply(this, arguments)) || this;
+          }
+          return (
+            Object(n.d)(t, e),
+            (t.prototype.toReact = function () {
+              return r.createElement(
+                "span",
+                { className: "Minor" },
+                this.getComponents()
+              );
+            }),
+            t
+          );
+        })(o.Tag),
+        E = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -6437,7 +6453,7 @@ var CLSTAMP = "6706962";
             t
           );
         })(o.Tag),
-        E = (function (e) {
+        y = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -6449,7 +6465,7 @@ var CLSTAMP = "6706962";
             t
           );
         })(o.Tag),
-        y = (function (e) {
+        I = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -6465,7 +6481,7 @@ var CLSTAMP = "6706962";
             t
           );
         })(o.Tag),
-        I = (function (e) {
+        O = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -6486,7 +6502,7 @@ var CLSTAMP = "6706962";
             t
           );
         })(o.Tag),
-        O = (function (e) {
+        D = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -6502,7 +6518,7 @@ var CLSTAMP = "6706962";
             t
           );
         })(o.Tag),
-        D = (function (e) {
+        N = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -6541,28 +6557,29 @@ var CLSTAMP = "6706962";
             t
           );
         })(o.Tag);
-      function N() {
-        i.a.registerTag("color", O),
+      function S() {
+        i.a.registerTag("color", D),
           i.a.registerTag("block", b),
-          i.a.registerTag("minor", v),
-          i.a.registerTag("br", f),
+          i.a.registerTag("spoiler", v),
+          i.a.registerTag("minor", f),
+          i.a.registerTag("br", E),
           i.a.registerTag("b", g),
-          i.a.registerTag("nbsp", E),
-          i.a.registerTag("superscript", y),
-          i.a.registerTag("previewyoutube", I),
-          i.a.registerTag("img", D);
-      }
-      function S(e) {
-        for (var t = [], a = 1; a < arguments.length; a++)
-          t[a - 1] = arguments[a];
-        return i.a.toReact(T.apply(void 0, Object(n.g)([e], t)));
+          i.a.registerTag("nbsp", y),
+          i.a.registerTag("superscript", I),
+          i.a.registerTag("previewyoutube", O),
+          i.a.registerTag("img", N);
       }
       function L(e) {
+        for (var t = [], a = 1; a < arguments.length; a++)
+          t[a - 1] = arguments[a];
+        return i.a.toReact(C.apply(void 0, Object(n.g)([e], t)));
+      }
+      function T(e) {
         return null == e
           ? void 0
           : e.replace(/\<span class="(\w*)"\>/g, "").replace(/\<\/span\>/g, "");
       }
-      function T(e) {
+      function C(e) {
         for (var t = [], a = 1; a < arguments.length; a++)
           t[a - 1] = arguments[a];
         if (!e) return "";
