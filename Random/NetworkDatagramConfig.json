@@ -1,5 +1,5 @@
 {
-  "revision": 329,
+  "revision": 330,
   "certs": [
     "Ii4IARIgmuygThdRzmJo1WkALKHh+hstvCbTa06joAg603KCm4RFu+TkYE27JutyKT6tfJIvitz8MkBaXzlTtPZow863CN0tcByuYSphd0CEOEtlUNMD92DaJXMKwFn5/XEOVwDpNBwNnON7mQJ2rGMDcLWC6sU2aEQN",
     "Ij4IARIgpdtY6tZuJOfB3FHhsMDlJWo6EFDmRXVNMgEkptCg+YpFu+TkYE27S6dkUJrVEFCO0iNQ+pQ+UIy8TSk+rXySL4rc/DJAY1C1lwR/XncgtnCGj0zsgC7pgg6MIq4wWHGsAhUANcY17f6LbondXTCOLpVuF8gxXs8WJH0nadsmKrsJvD4SDQ==",
@@ -1533,22 +1533,27 @@
       ],
       "partners": 2,
       "relay_addresses": [
-        "103.10.125.146:27015-27068",
-        "103.10.125.154:27015-27068",
-        "103.10.125.162:27015-27068"
+        "103.10.125.146:27015-27060",
+        "103.10.125.147:27015-27060",
+        "103.10.125.154:27015-27060",
+        "103.10.125.155:27015-27060"
       ],
       "relays": [
         {
           "ipv4": "103.10.125.146",
-          "port_range": [ 27015, 27068 ]
+          "port_range": [ 27015, 27060 ]
+        },
+        {
+          "ipv4": "103.10.125.147",
+          "port_range": [ 27015, 27060 ]
         },
         {
           "ipv4": "103.10.125.154",
-          "port_range": [ 27015, 27068 ]
+          "port_range": [ 27015, 27060 ]
         },
         {
-          "ipv4": "103.10.125.162",
-          "port_range": [ 27015, 27068 ]
+          "ipv4": "103.10.125.155",
+          "port_range": [ 27015, 27060 ]
         }
       ],
       "service_address_ranges": [
