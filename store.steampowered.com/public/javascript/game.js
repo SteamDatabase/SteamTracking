@@ -714,7 +714,7 @@ function LoadMoreReviews( appid, cursor, dayRange, startDate, endDate, context )
 			}
 
 			// if customer is on a mobile size screen make content changes in the reviews section  
-			ReparentReviewsForMobileUX();
+			ReparentReviewsForSmallScreens();
 		}
 		else
 		{
@@ -1867,17 +1867,15 @@ function ToggleBannerContentVisibility( divContentID, divIconID )
 
 // The review detail section is simplified for mobile screens
 // which requires some section moves here, and formatting changes in .css 
-function ReparentReviewsForMobileUX()
+function ReparentReviewsForSmallScreens()
 {
-	// Only want to re-parent if we're actually mobile-sized
-	var bMatch = window.matchMedia( '(max-width: 500px)' ).matches;
-	if ( !bMatch ) 
-		return;
+	var bSupportTabletMode = window.SupportTabletScreenMode && window.SupportTabletScreenMode(); 
+	var fn_reparent = bSupportTabletMode ? Responsive_ReparentItemsInResponsiveMode : Responsive_ReparentItemsInMobileMode;
 
 	var $MoveReviewSections = $J('.user_reviews_container');
 	$MoveReviewSections.each( function() {
 
-		// move content within each review detail section 
+		// move content within each review detail section for small screen layout
 		var $SummarySection = $J(this).find('[id^="ReviewContent"]');
 		$SummarySection.each( function() {
 
@@ -1890,15 +1888,15 @@ function ReparentReviewsForMobileUX()
 			if ( $NewLeftLocation.length == 0 || $NewAwardLocation.length == 0 )
 				return;
 
-			// move the avatar, name, row to fit new ux design
-			$LeftColContent.appendTo($NewLeftLocation);
-
-			// move the awards to the end of the review detail section 
-			$ReviewAwardCtn.appendTo($NewAwardLocation);
-
-			// remove tooltip from review detail section
-			$NewAwardLocation.find('.vote_header').removeAttr('data-tooltip-text');
+			fn_reparent( '#' + $LeftColContent.attr('id'), $J( '#' + $NewLeftLocation.attr('id') ) );
+			fn_reparent( '#' + $ReviewAwardCtn.attr('id'), $J( '#' + $NewAwardLocation.attr('id') ) );
 		} );
+
+		// move voting buttons to a popup menu
+		var $MenuSections = $J(this).find('.vote_button_ctn');
+		$MenuSections.each( function() {
+			fn_reparent( '#' + $J(this).attr('id'), $J( '#' + $J(this).attr('id') + '_menu_ctn' ) );
+		});
 	} );
 }
 
@@ -1922,89 +1920,124 @@ function ShareDialogCopyToClipboard()
 	document.getSelection().removeAllRanges();
 }
 
-function ReparentAppLandingPageForMobileUX()
+// applies layout changes for mobile and tablet screen sizes
+function ReparentAppLandingPageForSmallScreens()
 {
-	// For the rest of the changes we only want to re-parent if we're actually mobile-sized
-	var bMatch = window.matchMedia( '(max-width: 500px)' ).matches;
+	// copy the review summary content to the review details section
+	// CSS will set when to make these visible
+	var $appReviewsAll = $J('#appReviewsAll_responsive').clone();
+	$appReviewsAll.attr( 'id', 'appReviewsAll_Detail' );
+	$appReviewsAll.css( 'display', 'none' );
+	$appReviewsAll.appendTo('.reviews_info_ctn');
+	var $appReviewsRecent = $J('#appReviewsRecent_responsive').clone();
+	$appReviewsRecent.attr( 'id', 'appReviewsRecent_Detail' );
+	$appReviewsRecent.css( 'display', 'none' );
+	$appReviewsRecent.appendTo('.reviews_info_ctn');
 
-	if ( bMatch ) {
+	// on iOS use the iOS share icon.  the default is Android.
+	if ( navigator.userAgent.toLowerCase().indexOf( 'iphone' ) != -1 )
+	{
+		$J('#shareImg').attr('src', 'https://store.cloudflare.steamstatic.com/public/shared/images/icon_share_ios.svg' );
+	}
 
-		// order the action buttons
-		$J('#shareBtn').appendTo('#rowBtnActions');
-		$J('#reportBtn').appendTo('#rowBtnActions');
-		$J('#queueBtnFollow').appendTo('#rowBtnActions');
-		$J('#ignoreBtn').appendTo('#rowBtnActions');
-		$J('#rowBtnActions').appendTo('#queueActionsCtn');
-		
-		// place discovery queue below the action buttons
-		$J('#nextInDiscoveryQueue').appendTo('#queueCtn');
-		
-		// copy the review summary content to the review details section
-		var $appReviewsAll = $J('#appReviewsAll_responsive').clone();
-		$appReviewsAll.attr( 'id', 'appReviewsAll_Detail' );
-		$appReviewsAll.appendTo('.reviews_info_ctn');
-		var $appReviewsRecent = $J('#appReviewsRecent_responsive').clone();
-		$appReviewsRecent.attr( 'id', 'appReviewsRecent_Detail' );
-		$appReviewsRecent.appendTo('.reviews_info_ctn');
+	var bSupportTabletMode = window.SupportTabletScreenMode && window.SupportTabletScreenMode();
 
-		// place the active review filter list in the review details section
-		$J('#reviews_active_filters').appendTo('.reviews_info_ctn');
+	// tablet mode has its own purchase options container (shown on side of screen)
+	if ( bSupportTabletMode )
+	{
+		Responsive_ReparentItemsInTabletMode( '#purchaseOptionsContent', $J('#purchaseOptionsContentTablet') );
+	}
 
-		// place banners and game details into the links and info section
-		$J('#bannerAchievements').appendTo('#appLinksAndInfo');
-		$J('#bannerPointsShop').appendTo('#appLinksAndInfo');
-		$J('#bannerItemStore').appendTo('#appLinksAndInfo');
-		$J('#bannerCommunity').appendTo('#appLinksAndInfo');
-		$J('#appDetailsUnderlinedLinks').appendTo('#appLinksAndInfo');
+		var fn_reparent = bSupportTabletMode ? Responsive_ReparentItemsInResponsiveMode : Responsive_ReparentItemsInMobileMode;
 
-		// move some of the links and info content to the bottom 
-		// testing this - we may need to move this again  
-		$J('#genresAndManufacturer').appendTo('#appLinksAndInfo');
+	// move purchase options into a new container for responsive UX
+	fn_reparent( '.early_access_header', $J('#purchaseOptionsContent') );
+	fn_reparent( '#game_area_purchase', $J('#purchaseOptionsContent') );
 
-		// Populate the reviews settings popup
-		$J('#review_histograms_container').appendTo('#reviewSettingsPopupContent');
-		$J('#reviews_filter_options').appendTo('#reviewSettingsPopupContent');
+	// order the action buttons
+	fn_reparent( '#shareBtn', $J('#rowBtnActions') );
+	fn_reparent( '#reportBtn', $J('#rowBtnActions') );
+	fn_reparent( '#queueBtnFollow', $J('#rowBtnActions') );
+	fn_reparent( '#ignoreBtn', $J('#rowBtnActions') );
+	fn_reparent( '#rowBtnActions', $J('#queueActionsCtn') );
+			
+	// place discovery queue below the action buttons
+	fn_reparent( '#nextInDiscoveryQueue', $J('#queueCtn') );
+
+	// place banners and game details into the links and info section
+	fn_reparent( '#bannerAchievements', $J( '#appLinksAndInfo' ) );
+	fn_reparent( '#bannerPointsShop', $J( '#appLinksAndInfo' ) );
+	fn_reparent( '#bannerItemStore', $J( '#appLinksAndInfo' ) );
+	fn_reparent( '#bannerCommunity', $J( '#appLinksAndInfo' ) );
+	fn_reparent( '#appDetailsUnderlinedLinks', $J( '#appLinksAndInfo' ) );
+
+	// place the active review filter list in the review details section
+	fn_reparent( '#reviews_active_filters', $J('.reviews_info_ctn') );
+
+	// populate the reviews settings popup
+	fn_reparent( '#review_histograms_container', $J( '#reviewSettingsPopupContent' ) );
+	fn_reparent( '#reviews_filter_options', $J( '#reviewSettingsPopupContent' ) );
+
+	// move some of the links and info content to the bottom 
+	// testing this - we may need to move this again  
+	fn_reparent( '#genresAndManufacturer', $J( '#appLinksAndInfo' ) );
+
+	// the window resize message handler is for layout adjustements that require more logic than reparenting based on screen size
+	var defaultShareFlex = $J('#shareBtn').css('flex-grow');
+	var defaultFollowFlex = $J('#queueBtnFollow').css('flex-grow');
+	var defaultReportFlex = $J('#reportBtn').css('flex-grow');
+	var defaultLanguageTableDisplay = $J('#languageTable').css('display');
+
+	var msgWatch = bSupportTabletMode ? 'Responsive_SmallScreenModeToggled' : 'Responsive_MobileScreenModeToggled';
+	$J(window).on( msgWatch, function() {
+
+		var bUseNewUX = ( bSupportTabletMode && window.UseSmallScreenMode && window.UseSmallScreenMode() ) || 
+			( window.UseMobileScreenMode && window.UseMobileScreenMode() );
 
 		// if one of the wishlist buttons are visible make the action buttons flex grow so the two rows of buttons match width.
-		if ( $J('#add_to_wishlist_area').is(':visible') || $J('#add_to_wishlist_area_success').is(':visible') || $J('#add_to_wishlist_area_fail').is(':visible') )
+		if ( bUseNewUX && ( $J('#add_to_wishlist_area').is(':visible') 
+			|| $J('#add_to_wishlist_area_success').is(':visible') 
+			|| $J('#add_to_wishlist_area_fail').is(':visible') ) )
 		{
 			$J('#shareBtn').css('flex-grow', '1');
 			$J('#queueBtnFollow').css('flex-grow', '1');
-			$J('#reportBtn').css('flex-grow', '1');
+			$J('#reportBtn').css('flex-grow', '1'); 
 		}
-
-		// on iOS use the iOS share icon.  the default is Android.
-		if ( navigator.userAgent.toLowerCase().indexOf( 'iphone' ) != -1 )
+		else
 		{
-			$J('#shareImg').attr('src', 'https://store.cloudflare.steamstatic.com/public/shared/images/icon_share_ios.svg' );
+			$J('#shareBtn').css('flex-grow', defaultShareFlex);
+			$J('#queueBtnFollow').css('flex-grow', defaultFollowFlex);
+			$J('#reportBtn').css('flex-grow', defaultReportFlex);
 		}
 
-		// reveal all language options within the languageTable
-		var $LanguageOptions = $J('#languageTable').find('tr');
-		$LanguageOptions.each( function() {
-			$J(this).css('display','');
-		} );
+		// if we're in a small screen layout reveal all language options within the languageTable
+		// don't bother trying to re-hide these if the user later resizes outside small screen
+		if ( bUseNewUX )
+		{
+			var $LanguageOptions = $J('#languageTable').find('tr');
+			$LanguageOptions.each( function() {
+				$J(this).css('display','');
+			} );
 
-		// to reduce popup noise remove toolip text if element doesn't include tooltip class 
-		var $TooltipTextElements = $J("[data-tooltip-text]");
-		$TooltipTextElements.each( function() {
-			if ( !$J(this).hasClass('tooltip') )
-				$J(this).removeAttr('data-tooltip-text');
-		} );
-		var $TooltipHTMLElements = $J("[data-tooltip-html]");
-		$TooltipHTMLElements.each( function() {
-			if ( !$J(this).hasClass('tooltip') )
-				$J(this).removeAttr('data-tooltip-html');
-		} );
+			// hide the 'see all X languages" link since all languages are now visible
+			$J('#languageTable').find('.all_languages').css('display', 'none');
+		}
 
-		/* move the early access and purchase options higher in the page */
-		$J('.early_access_header').appendTo('#purchaseOptionsContent');
-		$J('#game_area_purchase').appendTo('#purchaseOptionsContent');
+		// hide the language table on small screens since a banner is clicked to reveal it
+		// 
+		// putting a display:none in CSS for small screen sizes doesn't work well because the 
+		// CSS values don't override the display state set by the language banner click handler 
+		$J('#languageTable').css('display', bUseNewUX ? 'none' : defaultLanguageTableDisplay );
+	});
+	$J(window).trigger( msgWatch );
 
-	}
-	else
+	// if we're specifically in tablet screen mode resize the tablet's purchase options content
+	if ( bSupportTabletMode && window.UseTabletScreenMode && window.UseTabletScreenMode() )
 	{
-		// TODO: make !bMatch do  work to move elements where they were.  Try the helper which exists for this.
+		var $purchaseContentHeight = parseInt( window.innerHeight ) - parseInt( GetResponsiveHeaderFixedOffsetAdjustment() );
+		$J('#purchaseOptionsContentTablet').css('height', $purchaseContentHeight + 'px');
+		$J('#purchaseOptionsContentTablet').css('top', parseInt( GetResponsiveHeaderFixedOffsetAdjustment() ) + 'px' );
+		$J('#purchaseOptionsContentTablet').css('scrollTop', 0);
 	}
 }
 
