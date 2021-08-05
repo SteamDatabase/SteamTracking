@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6704583";
+var CLSTAMP = "6707162";
 !(function (e) {
   function t(t) {
     for (
@@ -124,7 +124,7 @@ var CLSTAMP = "6704583";
                 12: "ee62e09b74669c98db3d",
                 13: "1097496cace1b964cd8c",
                 14: "6e4ac9daeb66131d81ef",
-                15: "3bf9a6e8d60ff85a5585",
+                15: "2ebeddaef69635dedbb5",
                 16: "05bbd27fee5f598ea0ce",
                 17: "0955529a8bd5ce5d4dc1",
                 18: "2a134fac026ff77c6569",
@@ -1264,7 +1264,7 @@ var CLSTAMP = "6704583";
               (this.m_bValid = !0),
               (this.m_bReady = !0);
           }),
-          Object(r.c)([i.B], e.prototype, "m_bReady", void 0),
+          Object(r.c)([i.C], e.prototype, "m_bReady", void 0),
           Object(r.c)([i.k], e.prototype, "InitInvalid", null),
           Object(r.c)([i.k], e.prototype, "InitDirectInvite", null),
           e
@@ -1831,12 +1831,12 @@ var CLSTAMP = "6704583";
             (this.customlist = void 0);
         }
         return (
-          Object(r.c)([o.B], e.prototype, "enabled", void 0),
-          Object(r.c)([o.B], e.prototype, "locked", void 0),
-          Object(r.c)([o.B], e.prototype, "features", void 0),
-          Object(r.c)([o.B], e.prototype, "allowallapps", void 0),
-          Object(r.c)([o.B], e.prototype, "baselist", void 0),
-          Object(r.c)([o.B], e.prototype, "customlist", void 0),
+          Object(r.c)([o.C], e.prototype, "enabled", void 0),
+          Object(r.c)([o.C], e.prototype, "locked", void 0),
+          Object(r.c)([o.C], e.prototype, "features", void 0),
+          Object(r.c)([o.C], e.prototype, "allowallapps", void 0),
+          Object(r.c)([o.C], e.prototype, "baselist", void 0),
+          Object(r.c)([o.C], e.prototype, "customlist", void 0),
           e
         );
       })(),
@@ -2769,15 +2769,15 @@ PERFORMANCE OF THIS SOFTWARE.
               c.b
                 .ShowChatRoomGroupInvite(this.m_invite.GetInviteCode())
                 .then(function (t) {
-                  Object(l.F)(function () {
+                  Object(l.G)(function () {
                     (e.m_bConnectingToClient = !1),
                       (e.m_connectResult = t),
                       console.log(t);
                   });
                 }));
           }),
-          Object(r.c)([l.B], e.prototype, "m_bConnectingToClient", void 0),
-          Object(r.c)([l.B], e.prototype, "m_connectResult", void 0),
+          Object(r.c)([l.C], e.prototype, "m_bConnectingToClient", void 0),
+          Object(r.c)([l.C], e.prototype, "m_connectResult", void 0),
           e
         );
       })(),
@@ -2966,7 +2966,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   )
             );
           }),
-          Object(r.c)([l.B], t.prototype, "m_bTriedToLaunchSteam", void 0),
+          Object(r.c)([l.C], t.prototype, "m_bTriedToLaunchSteam", void 0),
           Object(r.c)([_.a], t.prototype, "LaunchWebChat", null),
           Object(r.c)([_.a], t.prototype, "OpenInSteamIgnoreAccount", null),
           Object(r.c)([_.a], t.prototype, "LaunchSteamClient", null),

@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6704583";
+var CLSTAMP = "6707162";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [100],
   {
@@ -3563,6 +3563,7 @@ var CLSTAMP = "6704583";
             navKey: e.navKey,
             noFocusRing: e.noFocusRing,
             focusable: e.focusable,
+            focusableIfNoChildren: e.focusableIfNoChildren,
             navRef: e.navRef,
             onMoveUp: e.onMoveUp,
             onMoveRight: e.onMoveRight,
@@ -3583,6 +3584,7 @@ var CLSTAMP = "6704583";
               "navKey",
               "noFocusRing",
               "focusable",
+              "focusableIfNoChildren",
               "navRef",
               "onMoveUp",
               "onMoveRight",
@@ -12414,56 +12416,59 @@ var CLSTAMP = "6704583";
             var n = Object(f.a)(t),
               r = this.m_Properties,
               o = r.focusable,
-              a = r.childFocusDisabled,
-              s = r.fnCanTakeFocus;
-            if (s && !s(this)) return !1;
-            if (o) return this.m_Tree.TransferFocus(e, this, n), !0;
-            if (a) return !1;
+              a = r.focusableIfNoChildren,
+              s = r.childFocusDisabled,
+              c = r.fnCanTakeFocus;
+            if (c && !c(this)) return !1;
+            if (o || (a && s) || (a && 0 == this.m_rgChildren.length))
+              return this.m_Tree.TransferFocus(e, this, n), !0;
+            if (s) return !1;
             if (this.m_rgChildren.length) {
               this.EnsureChildrenSorted();
-              var c = this.m_iActiveChild;
-              if (c < 0 || c >= this.m_rgChildren.length) {
-                c = 0;
-                var l = this.GetLayout();
-                (l != u.ROW_REVERSE && l != u.COLUMN_REVERSE) ||
-                  (c = this.m_rgChildren.length - 1);
+              var l = this.m_iActiveChild;
+              if (l < 0 || l >= this.m_rgChildren.length) {
+                l = 0;
+                var d = this.GetLayout();
+                (d != u.ROW_REVERSE && d != u.COLUMN_REVERSE) ||
+                  (l = this.m_rgChildren.length - 1);
               }
-              var d = this.m_Properties.navEntryPreferPosition;
+              var b = this.m_Properties.navEntryPreferPosition;
               if (
-                (d == p.MAINTAIN_X && "y" == n) ||
-                (d == p.MAINTAIN_Y && "x" == n)
+                (b == p.MAINTAIN_X && "y" == n) ||
+                (b == p.MAINTAIN_Y && "x" == n)
               ) {
-                var b = i.b[n],
-                  v = this.m_Tree.GetLastFocusedMovementNode(b);
+                var v = i.b[n],
+                  _ = this.m_Tree.GetLastFocusedMovementNode(v);
                 g(
-                  "Taking focus while preserving " + p[d] + ", node:",
-                  null == v ? void 0 : v.m_element
+                  "Taking focus while preserving " + p[b] + ", node:",
+                  null == _ ? void 0 : _.m_element
                 );
-                var _ = this.ComputeRelativeDirection(t, u.GRID);
-                if (v) {
-                  var y = Object(f.f)(v.GetBoundingRect()),
-                    O = _ == h.BACKWARD ? this.m_rgChildren.length - 1 : 0;
+                var y = this.ComputeRelativeDirection(t, u.GRID);
+                if (_) {
+                  var O = Object(f.f)(_.GetBoundingRect()),
+                    w = y == h.BACKWARD ? this.m_rgChildren.length - 1 : 0;
                   if (
                     this.BFocusClosestChildInNextAxiallyAlignedSet(
-                      b,
-                      _,
-                      t,
+                      v,
                       y,
+                      t,
                       O,
-                      this.m_rgChildren[O].GetBoundingRect()
+                      w,
+                      this.m_rgChildren[w].GetBoundingRect()
                     )
                   )
                     return !0;
                 }
-              } else if (d == p.PREFERRED_CHILD)
-                for (var w = 0, E = this.m_rgChildren; w < E.length; w++) {
-                  var C = E[w];
-                  if (C.BWantsPreferredFocus() && C.BTakeFocus(m.b.GAMEPAD, t))
+              } else if (b == p.PREFERRED_CHILD)
+                for (var E = 0, C = this.m_rgChildren; E < C.length; E++) {
+                  var S = C[E];
+                  if (S.BWantsPreferredFocus() && S.BTakeFocus(m.b.GAMEPAD, t))
                     return !0;
                 }
               return (
-                !!this.BFocusNextChildInDirection(e, c - 1, h.FORWARD, t) ||
-                !!this.BFocusNextChildInDirection(e, c, h.BACKWARD, t)
+                !!this.BFocusNextChildInDirection(e, l - 1, h.FORWARD, t) ||
+                !!this.BFocusNextChildInDirection(e, l, h.BACKWARD, t) ||
+                (!!a && (this.m_Tree.TransferFocus(e, this, n), !0))
               );
             }
             return !1;
