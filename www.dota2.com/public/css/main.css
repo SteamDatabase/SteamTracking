@@ -20653,14 +20653,14 @@ a {
 }
 .dpcselectors_DropdownSelector_3jmb0.dpcselectors_StyleLine_1w-4f
   .dpcselectors_DropdownBody_1u6rb {
-  border: 2px solid #3f464f;
-  padding-right: 9px;
-  color: #687381;
+  background-color: #2e3339;
+  padding-right: 10px;
+  color: #9099a3;
 }
 .dpcselectors_DropdownSelector_3jmb0.dpcselectors_StyleLine_1w-4f
   .dpcselectors_DropdownBody_1u6rb
   .dpcselectors_LeftSegment_2BgYM {
-  color: #687381;
+  color: #9099a3;
 }
 .dpcselectors_DropdownSelector_3jmb0.dpcselectors_StyleLine_1w-4f
   .dpcselectors_DropdownBody_1u6rb
@@ -20675,7 +20675,7 @@ a {
   right: 26px;
   top: -10px;
   transform: rotate(19deg);
-  background-color: #3f464f;
+  background-color: #2e3339;
 }
 .dpcselectors_DropdownSelector_3jmb0 .dpcselectors_DropdownBody_1u6rb {
   width: 100%;
@@ -20755,11 +20755,38 @@ a {
   transition-timing-function: ease-in-out;
   transition-duration: 0.1s;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .dpcselectors_DropdownSelector_3jmb0
   .dpcselectors_DropdownOptions_3heSt.dpcselectors_IsOpen_1LwZv {
   opacity: 1;
   pointer-events: initial;
+}
+.dpcselectors_DropdownSelector_3jmb0
+  .dpcselectors_DropdownOptions_3heSt
+  .dpcselectors_Separator_2wK3P {
+  width: calc(100% - 20px);
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #606875;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.dpcselectors_DropdownSelector_3jmb0
+  .dpcselectors_DropdownOptions_3heSt
+  .dpcselectors_Separator_2wK3P
+  .dpcselectors_Line_3rnxf {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #515863;
 }
 .dpcselectors_DropdownSelector_3jmb0
   .dpcselectors_DropdownOptions_3heSt
@@ -20781,7 +20808,7 @@ a {
   .dpcselectors_DropdownOptions_3heSt
   .dpcselectors_Option_1qN-o
   .dpcselectors_OptionLabel_SGKBi {
-  color: #b3b3b3;
+  color: #a3a3a3;
   text-transform: uppercase;
   font-size: 13px;
   font-weight: 700;
@@ -20831,14 +20858,23 @@ a {
   height: 100%;
   appearance: none;
   outline: none;
-  color: #fff;
+  color: #9099a3;
   font-size: 13px;
   font-weight: 400;
   letter-spacing: 1px;
-  border: 2px solid #3f464f;
+  border: 2px solid;
+  border-color: #2e3339;
   border-radius: 3px;
   padding: 0px 8px;
   background-color: transparent;
+  transition-property: color, border-color, background-color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
+}
+.dpcselectors_TextInput_33HiC input:hover {
+  color: #fff;
+  border-color: #41474e;
+  background-color: #ffffff08;
 }
 .dpcselectors_TextInput_33HiC .dpcselectors_AngleFill_2297x {
   height: calc(100% + 20px);
@@ -20847,7 +20883,13 @@ a {
   right: 28px;
   top: -10px;
   transform: rotate(19deg);
-  background-color: #3f464f;
+  background-color: #2e3339;
+  transition-property: background-color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
+}
+.dpcselectors_TextInput_33HiC .dpcselectors_AngleFill_2297x:hover {
+  background-color: #41474e;
 }
 .dpcselectors_TextInput_33HiC .dpcselectors_MagnifyingGlass_3N27p {
   width: 13px;
@@ -20858,6 +20900,12 @@ a {
   bottom: 0;
   color: #3f464f;
   pointer-events: none;
+  transition-property: color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
+}
+.dpcselectors_TextInput_33HiC .dpcselectors_MagnifyingGlass_3N27p:hover {
+  color: #fff;
 }
 .dpcselectors_Switch_26we- {
   position: relative;
@@ -25382,6 +25430,50 @@ a {
 .dpcstandings_DPCStandingsGrid_3w9B9
   .dpcstandings_GridMain_1PVyp
   .dpcstandings_GridContainer_1bSmg
+  .dpcstandings_GridBody_pcU8h
+  .dpcstandings_GridRow_2f1YL
+  .dpcstandings_GridCell_4wUCQ
+  .dpcstandings_GridMatch_2IjIp {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.dpcstandings_DPCStandingsGrid_3w9B9
+  .dpcstandings_GridMain_1PVyp
+  .dpcstandings_GridContainer_1bSmg
+  .dpcstandings_GridBody_pcU8h
+  .dpcstandings_GridRow_2f1YL
+  .dpcstandings_GridCell_4wUCQ
+  .dpcstandings_GridMatch_2IjIp
+  .dpcstandings_Date_3wTMY {
+  font-size: 13px;
+  text-align: center;
+}
+.dpcstandings_DPCStandingsGrid_3w9B9
+  .dpcstandings_GridMain_1PVyp
+  .dpcstandings_GridContainer_1bSmg
+  .dpcstandings_GridBody_pcU8h
+  .dpcstandings_GridRow_2f1YL
+  .dpcstandings_GridCell_4wUCQ
+  .dpcstandings_GridMatch_2IjIp
+  .dpcstandings_Live_1IiHp {
+  background-color: #00ab30;
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-radius: 2px;
+  flex-direction: row;
+  align-items: center;
+}
+.dpcstandings_DPCStandingsGrid_3w9B9
+  .dpcstandings_GridMain_1PVyp
+  .dpcstandings_GridContainer_1bSmg
   .dpcstandings_RowHighlightContainer_2UdT2 {
   width: 100%;
   position: absolute;
@@ -25622,6 +25714,7 @@ a {
 }
 .dpcstandings_DPCStandingsBracket_9iCXI .dpcstandings_BracketScroller_1eoNP {
   padding: 60px;
+  padding-bottom: 80px;
   padding-right: 0px;
   max-width: 90vw;
 }
@@ -26055,7 +26148,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 150px;
+  padding-bottom: 70px;
   background-color: #161618;
   background-position: top, center;
   background-repeat: no-repeat;
@@ -26093,23 +26186,24 @@ a {
   align-items: center;
 }
 .dpcteamlist_DPCTeamList_wkwPY .dpcteamlist_ShowMoreButton_338Nb {
-  padding: 8px 20px;
-  background-color: #2d2d34;
-  border-radius: 3px;
-  margin-top: 10px;
-  color: #fff;
+  padding: 8px 50px;
+  background-color: #2e3339;
+  border-radius: 2px;
+  margin-top: 20px;
+  color: #9099a3;
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
   cursor: pointer;
   user-select: none;
-  transition-property: background-color;
+  transition-property: background-color, color;
   transition-timing-function: ease-in-out;
   transition-duration: 0.1s;
 }
 .dpcteamlist_DPCTeamList_wkwPY .dpcteamlist_ShowMoreButton_338Nb:hover {
-  background-color: #42424d;
+  background-color: #41474e;
+  color: #fff;
 }
 .dpcteamlist_TeamEntry_2GaFH {
   width: calc(100%);
@@ -26291,15 +26385,21 @@ a {
 .dpcteamlist_TeamEntry_2GaFH
   .dpcteamlist_FavoriteSection_2-En1
   .dpcteamlist_FollowingLine_Mot01 {
+  max-width: 170px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  cursor: pointer;
+  justify-content: center;
   user-select: none;
 }
 .dpcteamlist_TeamEntry_2GaFH
   .dpcteamlist_FavoriteSection_2-En1
-  .dpcteamlist_FollowingLine_Mot01:hover {
+  .dpcteamlist_FollowingLine_Mot01.dpcteamlist_CanFollow_3Tg7i {
+  cursor: pointer;
+}
+.dpcteamlist_TeamEntry_2GaFH
+  .dpcteamlist_FavoriteSection_2-En1
+  .dpcteamlist_FollowingLine_Mot01.dpcteamlist_CanFollow_3Tg7i:hover {
   filter: brightness(1.3);
 }
 .dpcteamlist_TeamEntry_2GaFH
@@ -26319,7 +26419,7 @@ a {
 }
 .dpcteamlist_TeamEntry_2GaFH
   .dpcteamlist_FavoriteSection_2-En1
-  .dpcteamlist_FollowingLine_Mot01.dpcteamlist_IsFollowing_251I0:hover {
+  .dpcteamlist_FollowingLine_Mot01.dpcteamlist_IsFollowing_251I0.dpcteamlist_CanFollow_3Tg7i:hover {
   filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.5)) brightness(1.3);
 }
 .dpcteamlist_TeamEntry_2GaFH
@@ -27618,17 +27718,21 @@ a {
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//icons/steam_icon.svg");
 }
 .dpcschedulepage_DPCSchedulePage_1OBQH {
-  width: 100%;
   color: #fff;
-  background-color: #08090e;
+  width: 1920px;
+  background-color: #161618;
+  background-position: top, center;
+  background-repeat: repeat-y;
+  justify-content: center;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 150px;
 }
 .dpcschedulepage_DPCScheduleHeader_2DFwc {
   width: 100%;
-  height: 80px;
+  height: 90px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -27636,7 +27740,13 @@ a {
   align-items: center;
   position: sticky;
   top: 200px;
-  background-color: #000;
+  background: linear-gradient(
+    180deg,
+    #161618 0%,
+    #161618 0%,
+    #161618 75%,
+    rgba(22, 22, 24, 0) 100%
+  );
   z-index: 998;
 }
 .dpcschedulepage_DPCScheduleList_3QIzq {
