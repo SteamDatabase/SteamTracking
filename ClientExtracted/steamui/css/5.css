@@ -12961,6 +12961,10 @@ div.ShortWindow
   flex-grow: 0;
   flex-shrink: 1;
 }
+.downloads_PlayButton_sQZ70.downloads_Hide_2yMFW {
+  opacity: 0;
+  pointer-events: none;
+}
 .downloads_DownloadsIcon_Mw50k {
   display: flex;
   align-items: center;

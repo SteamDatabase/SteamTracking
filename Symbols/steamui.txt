@@ -1039,6 +1039,7 @@
  ThreadIsProcessIdActive
  ThreadSetPriority
  ThreadShellExecute
+ ThreadShellExecuteNoWindow
  ThreadSleep
  VProfInternalEnterScopeCurrentThread
  VProfInternalGetProfileForCurrentThread

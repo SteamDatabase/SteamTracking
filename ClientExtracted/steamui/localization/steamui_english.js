@@ -616,6 +616,13 @@
 	"ContentManagement_RemoveDriveFailed": "Drive is currently in use by %1$s and can't be removed",
 	"ContentManagement_BrowseFolder": "Browse Folder",
 
+	"ContentManagement_RepairFolder": "Repair Folder",
+	"ContentManagement_RepairFolder_Text": "Repairing library folder \"%1$s\" ... ",
+	"ContentManagement_RepairFolder_Starting": "Starting",
+	"ContentManagement_RepairFolder_Working": "Working",
+	"ContentManagement_RepairFolder_Failed": "Failed",
+	"ContentManagement_RepairFolder_Done": "Done",
+
 	"ContentManagement_MoveApps_Title" : "Move Content",
 	"ContentManagement_MoveApps_Drive": "Drive %1$s: (%2$s available)",
 	"ContentManagement_MoveApps_TextSingle": "Select the target drive \"%1$s\" (%2$s) should be moved to :",
@@ -1190,6 +1197,8 @@
 	"Downloads_RemoveFromList_Tooltip": "Remove from List",
 	"Downloads_LaunchWhenComplete": "Launch when Complete",
 	"Downloads_OverrideDownloadThrottle": "Suspend Download Limit",
+	"Downloads_ViewSubscriptions": "View Subscribed Items",
+	"Downloads_ViewPatchNotes": "View Patch Notes",
 	"Downloads_ThrottleSuspended": "Suspended",
 	"Downloads_Pause_Tooltip": "Pause download",
 	"Downloads_Resume_Tooltip": "Resume download",

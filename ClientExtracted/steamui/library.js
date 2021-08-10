@@ -1,5 +1,5 @@
 /* Third-party software licenses can be found at licenses.txt */
-var CLSTAMP = "6705814";
+var CLSTAMP = "6714019";
 !(function (e) {
   function t(t) {
     for (
@@ -86079,7 +86079,7 @@ var CLSTAMP = "6705814";
             return !this.selected_clientid || "0" == this.selected_clientid;
           }),
           (e.prototype.BIsPerClientDataLocal = function (e) {
-            return !e.clientid || "0" == e.clientid;
+            return e && (!e.clientid || "0" == e.clientid);
           }),
           (e.prototype.BHasCustomImages = function () {
             return this.rt_custom_image_mtime > 0;
