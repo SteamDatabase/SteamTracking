@@ -116,7 +116,7 @@
                     g.release
                   ),
                   j &&
-                    c.a.createElement(h.p, {
+                    c.a.createElement(h.o, {
                       info: g,
                       bShowDemoButton: !0,
                       bStackedButtons: !0,
