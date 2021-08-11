@@ -2716,6 +2716,44 @@ button.DialogButton.partnereventsalesorttiers_AutoTierButton_3uDH_:disabled {
   position: absolute;
   width: 90%;
 }
+.partnereventdescriptiontab_ToolContainer_1YUip {
+  padding: 10px 0px;
+}
+.partnereventdescriptiontab_LanguageControlsCtn_14o5K {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px 5px 10px;
+  background: rgba(61, 84, 107, 0.2);
+  margin-top: -16px;
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+.SaleContainer .partnereventdescriptiontab_LanguageControlsCtn_14o5K {
+  margin-top: 10px;
+}
+.partnereventdescriptiontab_DescEditorPadding_3mLVV {
+  padding-top: 15px;
+}
+.partnereventdescriptiontab_DescEditorPadding_3mLVV.partnereventdescriptiontab_ImagePickerCtn_Mc28x {
+  width: 395px;
+}
+.requirevalvepublishapproval_ApprovalRequiredCtn_2pKjC {
+  background-color: #abb2bd;
+  padding: 12px;
+  color: #000;
+  display: flex;
+  flex-direction: row;
+}
+.requirevalvepublishapproval_ApprovalRequiredCtn_2pKjC
+  .requirevalvepublishapproval_Right_2lUXd {
+  border-left: 1px solid #000;
+  padding-left: 18px;
+  margin-left: 18px;
+  min-width: 200px;
+}
+.requirevalvepublishapproval_Title_Oc0UN {
+  font-weight: bold;
+}
 :root {
   --main-text-color: #ffffff;
   --main-light-blue-background: #68a2c8;
@@ -3036,26 +3074,10 @@ strong {
 .spotlight_AppDetailsSpotlightContainer_1zDJ1 .spotlight_BottomShadow_1ueE9 {
   display: none;
 }
-.partnereventdescriptiontab_ToolContainer_1YUip {
-  padding: 10px 0px;
-}
-.partnereventdescriptiontab_LanguageControlsCtn_14o5K {
-  display: flex;
-  flex-direction: column;
-  padding: 10px 10px 5px 10px;
-  background: rgba(61, 84, 107, 0.2);
-  margin-top: -16px;
-  margin-bottom: 20px;
-  font-size: 13px;
-}
-.SaleContainer .partnereventdescriptiontab_LanguageControlsCtn_14o5K {
-  margin-top: 10px;
-}
-.partnereventdescriptiontab_DescEditorPadding_3mLVV {
-  padding-top: 15px;
-}
-.partnereventdescriptiontab_DescEditorPadding_3mLVV.partnereventdescriptiontab_ImagePickerCtn_Mc28x {
-  width: 395px;
+.saleguidelinedialog_ValveOnlyGuidelineSummary_G_5BB {
+  background-color: pink;
+  padding: 12px;
+  color: #000;
 }
 .partnereventsavebutton_SavedImage_1y3QV {
   height: 12px;
