@@ -1419,7 +1419,6 @@ button.DialogButton::-moz-focus-inner {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   font-weight: 300;
   margin: 0;
-  padding: 0;
   border: none;
   border-radius: 3px;
   box-shadow: inset 0px 0px 0px #0000;
