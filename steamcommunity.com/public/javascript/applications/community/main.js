@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6717640";
+var CLSTAMP = "6711384";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [100],
   {
@@ -14336,7 +14336,7 @@ var CLSTAMP = "6717640";
       function c(e, t) {
         r.useLayoutEffect(
           function () {
-            if (t && e) {
+            if (t) {
               var n = e.Register(t);
               return function () {
                 return n.Unregister();
@@ -15268,40 +15268,37 @@ var CLSTAMP = "6717640";
                 c = s.children,
                 u = s.className,
                 p = (s.label, s.onCancel),
-                h = s.cancelText,
-                m = Object(r.f)(s, [
+                h = Object(r.f)(s, [
                   "children",
                   "className",
                   "label",
                   "onCancel",
-                  "cancelText",
                 ]),
-                g =
+                m =
                   null !==
                     (o =
                       null === (n = this.context) || void 0 === n
                         ? void 0
                         : n.styles) && void 0 !== o
                     ? o
-                    : _.a,
-                b = null != h ? h : "#Cancel";
+                    : _.a;
               if (this.context && 1 == this.context.presentation) {
-                var v = function () {
+                var g = function () {
                   p && p(), a.context.Hide();
                 };
                 return i.createElement(
                   l.a,
-                  Object(r.a)({}, m, {
+                  Object(r.a)({}, h, {
                     className: Object(d.a)(
-                      g.contextMenuContents,
+                      m.contextMenuContents,
                       ((e = {}),
-                      (e[g.hasSubMenu] = this.context.BIsSubMenuVisible()),
+                      (e[m.hasSubMenu] = this.context.BIsSubMenuVisible()),
                       e),
                       u
                     ),
                     "flow-children": "column",
                     onMoveLeft: this.HideIfSubmenu,
-                    onCancel: this.context.BIsSubMenu() ? this.HideMenu : v,
+                    onCancel: this.context.BIsSubMenu() ? this.HideMenu : g,
                     style: {
                       overflowY: this.context.BIsSubMenuVisible()
                         ? "hidden"
@@ -15316,30 +15313,30 @@ var CLSTAMP = "6717640";
                       i.createElement(C, null),
                       i.createElement(
                         w,
-                        { className: g.Cancel, onSelected: v },
-                        Object(f.f)(b)
+                        { className: m.Cancel, onSelected: g },
+                        Object(f.f)("#Cancel")
                       )
                     ),
                   this.context.BIsSubMenuVisible() &&
                     i.createElement("div", {
-                      className: g.contextMenuFade,
+                      className: m.contextMenuFade,
                       onClick: function () {
                         return a.context.HideSubMenu();
                       },
                     })
                 );
               }
-              var y =
+              var b =
                 this.context &&
                 this.context.options &&
                 this.context.options.bUseWebStyles;
               return i.createElement(
                 "div",
-                Object(r.a)({}, m, {
+                Object(r.a)({}, h, {
                   className: Object(d.a)(
-                    ((t = { popup_menu: y, popup_body: y }),
-                    (t[g.contextMenuContents] = !y),
-                    (t[g.hasSubMenu] =
+                    ((t = { popup_menu: b, popup_body: b }),
+                    (t[m.contextMenuContents] = !b),
+                    (t[m.hasSubMenu] =
                       this.context && this.context.BIsSubMenuVisible()),
                     t),
                     u
