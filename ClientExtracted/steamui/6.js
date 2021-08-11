@@ -223,6 +223,13 @@
           Settings_System_VideoCard: "Video Card",
           Settings_System_VideoDriver: "Video Driver",
           Settings_System_VRAMSize: "VRAM Size",
+          Settings_System_Devkit: "Development Kit",
+          Settings_System_Devkit_Enable: "Enable Development Kit Mode",
+          Settings_System_Devkit_PairingLabel: "Development host pairing",
+          Settings_System_Devkit_DoPairing: "Pair new host",
+          Settings_System_Devkit_Pairing: "Pairing...",
+          Settings_System_Devkit_Pairing_Confirmation:
+            "Please review pairing request:",
           Settings_Updates_Title: "%1$s Updates",
           Settings_Updates_ClientUpdaterName: "Steam Client",
           Settings_Updates_SystemUpdaterName: "System",

@@ -1285,3 +1285,9 @@ TextFilterSettings
 	method		"internal"
 	filter		"store"
 }
+WorkshopEula
+{
+	url			"%store%/workshopeula/%p1%/"
+	method		"internal"
+	filter		"store"
+}

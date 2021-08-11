@@ -151,6 +151,7 @@
         DriveSettingsButton: "contentmanagement_DriveSettingsButton_1WKUO",
         ActionButton: "contentmanagement_ActionButton_O_nD7",
         ActionButtonActive: "contentmanagement_ActionButtonActive_19KE2",
+        AppActionSelected: "contentmanagement_AppActionSelected_1dFOk",
         AppActionBar: "contentmanagement_AppActionBar_35T-O",
         focusAnimation: "contentmanagement_focusAnimation_3RpqO",
         hoverAnimation: "contentmanagement_hoverAnimation_1my5w",
@@ -63631,28 +63632,33 @@
           return (
             Object(a.d)(t, e),
             (t.prototype.RemoveFolder = function (e) {
-              var t = Object(w.n)(e);
+              var t = this,
+                n = Object(w.n)(e);
               SteamClient.InstallFolder.RemoveInstallFolder(
                 this.props.drive.nFolderIndex
-              ).catch(function (e) {
-                var n = Number(e.message),
-                  a = "Steam";
-                if (n > 7) {
-                  var o = p.a.GetAppOverviewByAppID(n);
-                  o && (a = o.display_name);
-                }
-                Object(J.d)(
-                  r.createElement(q.d, {
-                    bAlertDialog: !0,
-                    strDescription: Object(I.f)(
-                      "#ContentManagement_RemoveDriveFailed",
-                      a
-                    ),
-                  }),
-                  t,
-                  {}
-                );
-              });
+              )
+                .then(function () {
+                  return t.props.parent.setState({ selectedFolder: 0 });
+                })
+                .catch(function (e) {
+                  var t = Number(e.message),
+                    a = "Steam";
+                  if (t > 7) {
+                    var o = p.a.GetAppOverviewByAppID(t);
+                    o && (a = o.display_name);
+                  }
+                  Object(J.d)(
+                    r.createElement(q.d, {
+                      bAlertDialog: !0,
+                      strDescription: Object(I.f)(
+                        "#ContentManagement_RemoveDriveFailed",
+                        a
+                      ),
+                    }),
+                    n,
+                    {}
+                  );
+                });
             }),
             (t.prototype.RenameFolder = function (e) {
               var t = Object(w.n)(e);
@@ -63790,6 +63796,7 @@
               (t.state = {
                 selectedFolder: 0,
                 selectedApps: [],
+                selectedSize: 0,
                 sortAsc: !0,
                 sortBy: 8,
                 strErrorMsg: "",
@@ -63809,17 +63816,20 @@
               this.setState({
                 selectedFolder: e,
                 selectedApps: [],
+                selectedSize: 0,
                 strErrorMsg: "",
               });
             }),
-            (t.prototype.SetAppSelected = function (e, t) {
-              var n = this.state.selectedApps.slice();
-              if (t) n.includes(e) || n.push(e);
+            (t.prototype.SetAppSelected = function (e, t, n) {
+              var a = this.state.selectedSize,
+                r = this.state.selectedApps.slice();
+              if (t) r.includes(e) || (r.push(e), (a += n));
               else {
-                var a = n.indexOf(e);
-                a > -1 && n.splice(a, 1);
+                var o = r.indexOf(e);
+                o > -1 && (r.splice(o, 1), (a -= n));
               }
-              this.setState({ selectedApps: n });
+              0 == r.length && (a = 0),
+                this.setState({ selectedApps: r, selectedSize: a });
             }),
             (t.prototype.OnSortChanged = function (e) {
               5 == e
@@ -63829,7 +63839,7 @@
             (t.prototype.UninstallApps = function (e) {
               var t = Object(w.n)(e),
                 n = kl.c.UninstallApps(this.state.selectedApps, !1);
-              this.setState({ selectedApps: [] }),
+              this.setState({ selectedApps: [], selectedSize: 0 }),
                 Object(J.b)(r.createElement(on.c, { handler: n }), t, {
                   strTitle: on.c.Title(),
                   popupWidth: 720,
@@ -63852,48 +63862,64 @@
                   bNeverPopOut: !0,
                 }
               ),
-                this.setState({ selectedApps: [] });
+                this.setState({ selectedApps: [], selectedSize: 0 });
             }),
             (t.prototype.RenderFolder = function (e, t) {
               var n = this,
                 a = e.nFolderIndex == this.state.selectedFolder,
-                o = (e.bIsMounted, e.strFolderPath.split(":")[0].toUpperCase());
-              return r.createElement(
-                H.a,
-                {
-                  focusable: !0,
-                  className: Object(D.a)(
-                    jm.a.InstallFolder,
-                    a && jm.a.IsSelected
-                  ),
-                  key: e.nFolderIndex,
-                  onFocus: function (t) {
-                    return n.SelectFolder(e.nFolderIndex);
-                  },
-                  onActivate: function (t) {
-                    return n.SelectFolder(e.nFolderIndex);
-                  },
-                },
-                r.createElement(Hl.i, null),
+                o = (e.bIsMounted, e.strUserLabel);
+              return (
+                e.strUserLabel.length > 0
+                  ? ((o = e.strUserLabel),
+                    e.strDriveName.length < 4 &&
+                      (o += " (" + e.strDriveName + ")"))
+                  : (o =
+                      e.strDriveName.length < 4
+                        ? e.bIsFixed
+                          ? Object(I.f)("#ContentManagement_FixedDrive") +
+                            " (" +
+                            e.strDriveName +
+                            ")"
+                          : Object(I.f)("#ContentManagement_RemovableDrive") +
+                            " (" +
+                            e.strDriveName +
+                            ")"
+                        : e.strDriveName),
                 r.createElement(
-                  "div",
-                  { className: jm.a.FolderInfo },
+                  H.a,
+                  {
+                    focusable: !0,
+                    className: Object(D.a)(
+                      jm.a.InstallFolder,
+                      a && jm.a.IsSelected
+                    ),
+                    key: e.nFolderIndex,
+                    onFocus: function (t) {
+                      return n.SelectFolder(e.nFolderIndex);
+                    },
+                    onActivate: function (t) {
+                      return n.SelectFolder(e.nFolderIndex);
+                    },
+                  },
+                  r.createElement(Hl.i, null),
                   r.createElement(
                     "div",
-                    { className: jm.a.DriveName },
-                    Object(I.f)("#ContentManagement_Drive"),
-                    " ",
-                    o,
-                    ": ",
-                    e.bIsDefaultFolder && r.createElement(Hl.t, null),
-                    " "
-                  ),
-                  r.createElement(
-                    "div",
-                    { className: jm.a.DriveSize },
-                    Object(da.a)(Number(e.strFreeSpace), 1),
-                    " / ",
-                    Object(da.a)(Number(e.strCapacity), 1)
+                    { className: jm.a.FolderInfo },
+                    r.createElement(
+                      "div",
+                      { className: jm.a.DriveName },
+                      o,
+                      " ",
+                      e.bIsDefaultFolder && r.createElement(Hl.t, null),
+                      " "
+                    ),
+                    r.createElement(
+                      "div",
+                      { className: jm.a.DriveSize },
+                      Object(da.a)(Number(e.strFreeSpace), 1),
+                      " / ",
+                      Object(da.a)(Number(e.strCapacity), 1)
+                    )
                   )
                 )
               );
@@ -64056,7 +64082,11 @@
                           disabled: !t,
                           checked: this.state.selectedApps.includes(e.nAppID),
                           onChange: function (t) {
-                            return o.SetAppSelected(e.nAppID, t);
+                            return o.SetAppSelected(
+                              e.nAppID,
+                              t,
+                              Number(e.strUsedSize)
+                            );
                           },
                         })
                       )
@@ -64309,7 +64339,7 @@
                         )
                       )
                     ),
-                    r.createElement(Gm, { drive: n }),
+                    r.createElement(Gm, { drive: n, parent: this }),
                     this.state.strErrorMsg.length > 0 &&
                       r.createElement(
                         "div",
@@ -64355,6 +64385,19 @@
                 r.createElement(
                   H.a,
                   { className: jm.a.AppActionBar },
+                  f &&
+                    r.createElement(
+                      "div",
+                      { className: jm.a.AppActionSelected },
+                      " ",
+                      Object(I.f)(
+                        "#ContentManagement_SelectedApps",
+                        this.state.selectedApps.length
+                      ),
+                      " ( ",
+                      Object(da.a)(this.state.selectedSize),
+                      " ) "
+                    ),
                   r.createElement(
                     Z.e,
                     {

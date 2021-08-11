@@ -2,6 +2,8 @@
 __TEXT
 __text
 __TEXT
+P@
+P@
 __stubs
 __TEXT
 __stub_helper
@@ -101,7 +103,6 @@ N10CSteamUser24CCallback_OnLogonFailureE
 13CCallbackImplILi8EE
 N10CSteamUser26CCallback_OnPostLogonStateE
 9CCallbackI10CSteamUser16PostLogonState_tLb0EE
-13CCallbackImplILi7EE
 10CUtlString
 N25CControllerConfigUploader40CCallback_OnRemoteStorageAppSyncedClientE
 9CCallbackI25CControllerConfigUploader30RemoteStorageAppSyncedClient_tLb0EE
@@ -1250,6 +1251,5 @@ W
 0
 0
 0
-W
 0
 0

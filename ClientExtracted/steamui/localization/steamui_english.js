@@ -590,7 +590,8 @@
 
 	"ContentManagement_Title": "Storage Manager",
 	"ContentManagement_Capacity": "Capacity",
-	"ContentManagement_Drive": "Drive",
+	"ContentManagement_FixedDrive": "Local Drive",
+	"ContentManagement_RemovableDrive": "External Drive",
 	"ContentManagement_Path": "Path",
 	"ContentManagement_UsedByGames": "Games",
 	"ContentManagement_UsedByDLC": "DLC",
@@ -615,6 +616,7 @@
 	"ContentManagement_DriveSettings": "Settings",
 	"ContentManagement_RemoveDriveFailed": "Drive is currently in use by %1$s and can't be removed",
 	"ContentManagement_BrowseFolder": "Browse Folder",
+	"ContentManagement_SelectedApps": "Selected %1$s apps",
 
 	"ContentManagement_RepairFolder": "Repair Folder",
 	"ContentManagement_RepairFolder_Text": "Repairing library folder \"%1$s\" ... ",

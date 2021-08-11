@@ -34468,6 +34468,13 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   color: #fff;
   background: #67707b;
 }
+.contentmanagement_AppActionSelected_1dFOk {
+  text-align: center;
+  height: 100%;
+  position: absolute;
+  left: 48px;
+  top: 18px;
+}
 .contentmanagement_AppActionBar_35T-O {
   display: flex;
   flex-direction: row;

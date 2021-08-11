@@ -14119,21 +14119,6 @@ html.responsive.touch .partnersaledisplay_SaleSectionTabs_1FPIV {
     width: 75px;
   }
 }
-@media screen and (max-width: 700px) {
-  .ModalPosition_Content {
-    transform: scale(0.9);
-  }
-}
-@media screen and (max-width: 600px) {
-  .ModalPosition_Content {
-    transform: scale(0.75);
-  }
-}
-@media screen and (max-width: 500px) {
-  .ModalPosition_Content {
-    transform: scale(0.6);
-  }
-}
 .ModalPosition_TopBar {
   display: none;
 }

@@ -250,6 +250,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamurlcontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/streamingservergameactions.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/subpaneloptionsfamily.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/systemdevkitcontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/tenfoot/./library/library_launchoptions.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/tenfoot/account/ssa.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/tenfoot/account/tenfootconfirmpassworddialog.cpp
