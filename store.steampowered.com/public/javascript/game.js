@@ -1891,12 +1891,6 @@ function ReparentReviewsForSmallScreens()
 			fn_reparent( '#' + $LeftColContent.attr('id'), $J( '#' + $NewLeftLocation.attr('id') ) );
 			fn_reparent( '#' + $ReviewAwardCtn.attr('id'), $J( '#' + $NewAwardLocation.attr('id') ) );
 		} );
-
-		// move voting buttons to a popup menu
-		var $MenuSections = $J(this).find('.vote_button_ctn');
-		$MenuSections.each( function() {
-			fn_reparent( '#' + $J(this).attr('id'), $J( '#' + $J(this).attr('id') + '_menu_ctn' ) );
-		});
 	} );
 }
 

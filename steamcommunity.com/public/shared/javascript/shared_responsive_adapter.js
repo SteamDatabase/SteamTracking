@@ -3,6 +3,7 @@
 // build our menu on init
 jQuery( function($) {
 	var mqQueryMenuMode = window.matchMedia ? window.matchMedia("(max-width: 910px)") : {matches: false};
+	var mqMobileMode = window.matchMedia ? window.matchMedia("(max-width: 500px)") : {matches: false};
 
 	var $HTML = $J('html');
 	window.UseTouchFriendlyMode = function() {
@@ -11,7 +12,15 @@ jQuery( function($) {
 	window.UseSmallScreenMode = function() {
 		return $HTML.hasClass( 'responsive' ) && mqQueryMenuMode.matches;
 	};
-
+	window.UseMobileScreenMode = function() {
+		return $HTML.hasClass( 'responsive' ) && mqMobileMode.matches;
+	};
+	window.SupportTabletScreenMode = function() {
+		return $HTML.hasClass( 'responsive' ) && $HTML.hasClass( 'tablet' );
+	}
+	window.UseTabletScreenMode = function() {
+		return window.SupportTabletScreenMode() && !mqMobileMode.matches && mqQueryMenuMode.matches;
+	};
 
 	// main menu
 
@@ -585,7 +594,7 @@ function Responsive_UpdateResponsivePrefs( strFlag, bEnabled )
 function Responsive_InitResponsiveToggleEvents( $ )
 {
 	// initially undefined, so we will fire the events at at start
-	var bTouchFriendly, bSmallScreen;
+	var bTouchFriendly, bSmallScreen, bMobileScreen, bTabletScreen;
 
 	$(window).on('resize.ResponsiveToggle', function() {
 		if ( window.UseTouchFriendlyMode() !== bTouchFriendly )
@@ -599,26 +608,57 @@ function Responsive_InitResponsiveToggleEvents( $ )
 			bSmallScreen = window.UseSmallScreenMode();
 			$(window).trigger('Responsive_SmallScreenModeToggled');
 		}
+
+		if ( window.UseMobileScreenMode() !== bMobileScreen )
+		{
+			bMobileScreen = window.UseMobileScreenMode();
+			$(window).trigger('Responsive_MobileScreenModeToggled');
+		}
+
+		if ( window.UseTabletScreenMode() !== bTabletScreen )
+		{
+			bTabletScreen = window.UseTabletScreenMode();
+			$(window).trigger('Responsive_TabletScreenModeToggled');
+		}
+
+
 	} ).trigger( 'resize.ResponsiveToggle' );
 }
 
+/* reparent element when screen width is up to MOBILE_RESPONSIVE_CSS_MAXWIDTH */
+function Responsive_ReparentItemsInMobileMode( strItemSelector, $CtnOrFn )
+{
+	return _Responsive_ReparentItems( strItemSelector, $CtnOrFn, function() { return window.UseMobileScreenMode && window.UseMobileScreenMode(); }, 'Responsive_MobileScreenModeToggled' );
+}
+
+/* reparent element when screen width is greater than MOBILE_RESPONSIVE_CSS_MAXWIDTH and up to RESPONSIVE_CSS_MAXWIDTH */
+function Responsive_ReparentItemsInTabletMode( strItemSelector, $CtnOrFn )
+{
+	return _Responsive_ReparentItems( strItemSelector, $CtnOrFn, function() { return window.UseTabletScreenMode && window.UseTabletScreenMode(); }, 'Responsive_TabletScreenModeToggled' );
+}
+
+/* reparent element when screen width is up to RESPONSIVE_CSS_MAXWIDTH */
 function Responsive_ReparentItemsInResponsiveMode( strItemSelector, $CtnOrFn )
 {
+	return _Responsive_ReparentItems( strItemSelector, $CtnOrFn, function() { return window.UseSmallScreenMode && window.UseSmallScreenMode(); }, 'Responsive_SmallScreenModeToggled' );
+}
+
+function _Responsive_ReparentItems( strItemSelector, $CtnOrFn, fnShouldReparent, bEvent )
+{
 	var fnReparentItems = function() {
-		var bSmallScreenMode = window.UseSmallScreenMode && window.UseSmallScreenMode();
 
 		var $MoveElements = $J(strItemSelector);
 		$MoveElements.each( function() {
 			var $Element = $J(this);
-			var $OriginalSpot = $Element.data('originalSpot');
+			var $OriginalSpot = $Element.data('originalSpot' + bEvent);
 
-			if ( bSmallScreenMode )
+			if ( fnShouldReparent() )
 			{
                 if ( !$OriginalSpot )
                 {
                 	$OriginalSpot = $J( '<div/>' );
                     $Element.after( $OriginalSpot );
-                    $Element.data('originalSpot', $OriginalSpot );
+                    $Element.data('originalSpot' + bEvent, $OriginalSpot );
                 }
 
 				var $Ctn;
@@ -637,7 +677,7 @@ function Responsive_ReparentItemsInResponsiveMode( strItemSelector, $CtnOrFn )
 					// If we've tracked an original parent, put us back
 					$OriginalSpot.after( $Element );
 					$OriginalSpot.remove();
-					$Element.removeData( 'originalSpot' );
+					$Element.removeData( 'originalSpot' + bEvent );
 				}
 				// Otherwise, we should already be where we want
 			}
@@ -646,7 +686,7 @@ function Responsive_ReparentItemsInResponsiveMode( strItemSelector, $CtnOrFn )
 	};
 
 	fnReparentItems();
-	$J(window ).on('Responsive_SmallScreenModeToggled', fnReparentItems );
+	$J( window ).on( bEvent, fnReparentItems );
 }
 
 function Responsive_InitJQPlotHooks( $ )

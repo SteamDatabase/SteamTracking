@@ -2094,7 +2094,7 @@
           (e.GetEligibleApps = function (e, t) {
             return e.SendMsg("LoyaltyRewards.GetEligibleApps#1", t, x, {
               bConstMethod: !0,
-              ePrivilege: 0,
+              ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
             });
           }),

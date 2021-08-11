@@ -613,6 +613,7 @@ body.v6.remote_play_together .page_content {
 	margin: 0 auto;
 	justify-content: center;
 	align-items: left;
+	max-width: 320px;
 }
 
 .rpt_anywhere_apps_header {
@@ -675,6 +676,11 @@ body.v6.remote_play_together .page_content {
 
 .rpt_appstore_logo.apple {
 	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/remote_play_together/apple.png?v=2' );
+}
+
+.rpt_download_apklink {
+	font-size: 14px;
+	text-align: left;
 }
 
 /* LIFE IS STRANGE */

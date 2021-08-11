@@ -465,16 +465,19 @@ span.motd {
 		font-weight: normal;
 		font-size: 17px;
 		text-decoration: none;
+        display: block;
 	}
 	.panel.announcementPanel a.readMore:hover,
 	.panel.announcementPanel h1 a:hover {
 		color: #ffffff;
+        cursor: pointer;
 	}
 
 	.panel.announcementPanel .limited {
 		display: block;
 		max-height: 127px;
 		overflow: hidden;
+        pointer-events: none;
 	}
 
     .panel.announcementPanel .limited img {

@@ -9673,17 +9673,17 @@
     },
     POwH: function (e, t, n) {
       e.exports = {
-        confettidurationms: "7000s/s",
-        goldfettidurationms: "7000s/s",
-        goldfetticolorsnum: "3",
-        goldfettiemojinum: "4",
-        crackerdurationms: "300s/s",
-        balloonsdurationms: "4000s/s",
-        balloonsdurations: "4s/s",
-        balloonsdurationjitters: "1s/s",
-        balloonsdurationmaxms: "5000s/s",
-        snowballdurationms: "3010s/s",
-        snowballspeed: "1s",
+        confettiDurationMs: "7000s/s",
+        goldfettiDurationMs: "7000s/s",
+        goldfettiColorsNum: "3",
+        goldfettiEmojiNum: "4",
+        crackerDurationMs: "300s/s",
+        balloonsDurationMs: "4000s/s",
+        balloonsDurationS: "4s/s",
+        balloonsDurationJitterS: "1s/s",
+        balloonsDurationMaxMs: "5000s/s",
+        snowballDurationMs: "3010s/s",
+        snowballSpeed: "1s",
         "animation-container": "chatroomeffects_animation-container_3ZR8Q",
         Snowflake: "chatroomeffects_Snowflake_cZ5Au",
         "Snowflake-0": "chatroomeffects_Snowflake-0_2-hBh",
@@ -16664,9 +16664,7 @@
                       return (
                         (this.m_bLoadedEligibleApps = !0),
                         this.BIsLoggedIn()
-                          ? ((e = f.b.Init(_.d))
-                              .Body()
-                              .set_include_event_apps(!0),
+                          ? ((e = f.b.Init(_.d)),
                             [4, _.o.GetEligibleApps(this.m_transport, e)])
                           : [2, []]
                       );

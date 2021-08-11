@@ -1152,6 +1152,13 @@ a.home_headercap:hover {
 
 @media screen and (max-width: 480px)
 {
+	html.responsive .home_hardware_banner {
+		flex-wrap: wrap;
+	}
+	html.responsive .home_hardware_banner .hardware_index_banner {
+		margin: 10px 0 0 0;
+	}
+
 	html.responsive .steam_curator {
 		width: auto;
 		display: block;
@@ -4612,13 +4619,12 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 {
 
 	html.responsive .home_hardware_banner {
-		flex-wrap: wrap;
 		justify-content: center;
-		padding-bottom: 50px;
+		padding: 0 2% 50px 2%;
 	}
 
 	html.responsive .hardware_index_banner {
-		margin-top: 15px;
+		margin-left: 15px;
 	}
 
 	html.responsive .home_page_content > h2,
