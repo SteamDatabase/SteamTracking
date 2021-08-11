@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6717830";
+var CLSTAMP = "6717965";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [1],
   {
@@ -25131,26 +25131,34 @@ var CLSTAMP = "6717830";
         (e[(e.POPULAR = 1)] = "POPULAR"), (e[(e.FAVORITE = 2)] = "FAVORITE");
       })(En || (En = {}));
       var kn = Object(s.a)(function () {
-          var e = Object(o.useState)(8),
-            t = e[0],
-            a = e[1],
-            n = Sa.a.Get().GetFavoriteTeams(),
-            r = Sa.a.Get().GetPopularTeams(),
-            s = Object(o.useState)(En.POPULAR),
-            l = s[0],
-            c = s[1],
-            d = [
+          var e,
+            t = ur(),
+            a = Object(o.useState)(8),
+            n = a[0],
+            r = a[1],
+            s = Sa.a.Get().GetFavoriteTeams(),
+            l = Sa.a.Get().GetPopularTeams(),
+            c = Sa.a.Get().GetEventTeams(t),
+            d = Object(o.useState)(En.POPULAR),
+            m = d[0],
+            u = d[1],
+            g = [
               { value: En.POPULAR, strLabel: "#dpc_popular" },
               { value: En.FAVORITE, strLabel: "#dpc_following" },
             ],
-            m = l == En.POPULAR ? r : n,
-            u = t < (null == m ? void 0 : m.length);
+            h =
+              null === (e = m == En.POPULAR ? l : s) || void 0 === e
+                ? void 0
+                : e.filter(function (e) {
+                    return null == c ? void 0 : c.includes(e);
+                  }),
+            b = n < (null == h ? void 0 : h.length);
           return (
             Object(o.useEffect)(
               function () {
-                (null == n ? void 0 : n.length) > 1 && c(En.FAVORITE);
+                (null == s ? void 0 : s.length) > 1 && u(En.FAVORITE);
               },
-              [null == n ? void 0 : n.length]
+              [null == s ? void 0 : s.length]
             ),
             i.a.createElement(
               "div",
@@ -25176,19 +25184,19 @@ var CLSTAMP = "6717830";
                   ),
                   i.a.createElement(Ea, {
                     eStyle: zt.DIM,
-                    options: d,
-                    selectedOption: l,
-                    setOption: c,
+                    options: g,
+                    selectedOption: m,
+                    setOption: u,
                   })
                 ),
                 i.a.createElement(
                   "div",
                   { className: Bn.a.TeamList },
-                  null == m
+                  null == h
                     ? void 0
-                    : m.map(function (e, a) {
+                    : h.map(function (e, t) {
                         return (
-                          a < t &&
+                          t < n &&
                           i.a.createElement(Pn, {
                             key: "Team_" + e,
                             nTeamID: e,
@@ -25196,13 +25204,13 @@ var CLSTAMP = "6717830";
                         );
                       })
                 ),
-                u &&
+                b &&
                   i.a.createElement(
                     "div",
                     {
                       className: Bn.a.ShowMoreButton,
                       onClick: function () {
-                        return a(t + 4);
+                        return r(n + 4);
                       },
                     },
                     Object(_.a)("#dpc_show_more")
@@ -25214,9 +25222,8 @@ var CLSTAMP = "6717830";
         Pn = Object(s.a)(function (e) {
           var t = e.nTeamID,
             a = ur(),
-            n = Sa.a.Get().GetFavoriteTeams();
-          if (-1 == Sa.a.Get().GetEventTeams(a).indexOf(t)) return null;
-          var r = Sa.a.Get().GetTeamNames(t),
+            n = Sa.a.Get().GetFavoriteTeams(),
+            r = Sa.a.Get().GetTeamNames(t),
             o = Sa.a.Get().GetCurrentPhase(a),
             s = Sa.a.Get().GetTeamRegion(a, t),
             c = Sa.a.Get().GetTeamDivision(a, t),
@@ -25659,7 +25666,22 @@ var CLSTAMP = "6717830";
             n = null == a ? void 0 : a.actual_time,
             r = Sa.a.Get().GetNodeLabelStrings(t, e.nLeagueID, e.nNodeID, !1),
             o = Sa.a.Get().GetTeamInfo(null == a ? void 0 : a.team_id_1),
-            s = Sa.a.Get().GetTeamInfo(null == a ? void 0 : a.team_id_2);
+            s = Sa.a.Get().GetTeamInfo(null == a ? void 0 : a.team_id_2),
+            c = Sa.a.Get().GetSpoilerBlockEnabled(),
+            m = Sa.a.Get().IsAnyGameWatched(e.nLeagueID, e.nNodeID),
+            u = Sa.a.Get().AreAllGamesWatched(e.nLeagueID, e.nNodeID),
+            p =
+              !c || (null == a ? void 0 : a.team_id_1) == e.nFavoriteTeam || m
+                ? null == a
+                  ? void 0
+                  : a.team_id_1
+                : 0,
+            g =
+              !c || (null == a ? void 0 : a.team_id_2) == e.nFavoriteTeam || m
+                ? null == a
+                  ? void 0
+                  : a.team_id_2
+                : 0;
           return i.a.createElement(
             "div",
             { className: _n.a.DPCFollowedTeamSeries },
@@ -25691,23 +25713,19 @@ var CLSTAMP = "6717830";
                 i.a.createElement(
                   "div",
                   { className: _n.a.TeamsVS },
-                  i.a.createElement(xa, {
-                    nTeamID: null == a ? void 0 : a.team_id_1,
-                    nSize: 64,
-                  }),
+                  i.a.createElement(xa, { nTeamID: p, nSize: 64 }),
                   Object(_.a)("#dpc_vs"),
-                  i.a.createElement(xa, {
-                    nTeamID: null == a ? void 0 : a.team_id_2,
-                    nSize: 64,
-                  })
+                  i.a.createElement(xa, { nTeamID: g, nSize: 64 })
                 ),
-                r.length > 0 &&
+                (u || !c) &&
+                  r.length > 0 &&
                   i.a.createElement(
                     "div",
                     { className: _n.a.Description1 },
                     Object(_.a)(r[0])
                   ),
-                r.length > 1 &&
+                (u || !c) &&
+                  r.length > 1 &&
                   i.a.createElement(
                     "div",
                     { className: _n.a.Description2 },
@@ -25784,14 +25802,22 @@ var CLSTAMP = "6717830";
                   i.a.createElement(
                     "div",
                     { className: _n.a.SeriesList },
-                    a.map(function (e, t) {
-                      return t >= 3
-                        ? null
-                        : i.a.createElement(Fn, {
-                            key: e.nLeagueID + "_" + e.nNodeID,
-                            nLeagueID: e.nLeagueID,
-                            nNodeID: e.nNodeID,
-                          });
+                    a.map(function (e, a) {
+                      if (a >= 3) return null;
+                      var n = Sa.a.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
+                        r = t.includes(null == n ? void 0 : n.team_id_1)
+                          ? null == n
+                            ? void 0
+                            : n.team_id_1
+                          : null == n
+                          ? void 0
+                          : n.team_id_2;
+                      return i.a.createElement(Fn, {
+                        key: e.nLeagueID + "_" + e.nNodeID,
+                        nLeagueID: e.nLeagueID,
+                        nNodeID: e.nNodeID,
+                        nFavoriteTeam: r,
+                      });
                     })
                   )
                 )

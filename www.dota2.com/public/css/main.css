@@ -25071,6 +25071,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 40px;
 }
 .dpchomepage_DPCHomePageStandingsLeague_3C6rF {
   width: 1920px;
@@ -25107,7 +25108,6 @@ a {
 }
 .dpchomepage_DPCFollowedTeamMatches_-BVSo {
   width: 100%;
-  height: 480px;
   background-color: #2f2f36;
   background-position: top, center;
   background-repeat: repeat-x;
@@ -25117,10 +25117,11 @@ a {
   justify-content: center;
   position: relative;
   padding-bottom: 30px;
+  padding-top: 40px;
 }
 .dpchomepage_DPCFollowedTeamMatches_-BVSo .dpchomepage_MatchesContainer_3vVvL {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1600px;
   padding: 0px 30px;
   display: flex;
   flex-direction: column;
@@ -25142,8 +25143,11 @@ a {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  gap: 30px;
 }
 .dpchomepage_DPCFollowedTeamSeries_20KHP {
   width: 340px;
