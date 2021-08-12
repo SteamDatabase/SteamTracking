@@ -20,7 +20,7 @@ $Manifests =
 		],
 	],
 	[
-		'Manifest' => __DIR__ . '/help.steampowered.com/en/public/javascript/applications/help/manifest.js',
+		'Manifest' => __DIR__ . '/help.steampowered.com/public/javascript/applications/help/manifest.js',
 		'Paths' =>
 		[
 			[ 'Prepend' => 'https://help.steampowered.com/public/javascript/applications/help/', 'Append' => '.js?__TIME__&l=english' ],
