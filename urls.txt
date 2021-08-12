@@ -251,6 +251,8 @@ https://www.dota2.com/public/css/main.css?_cdn=cloudflare&__TIME__
 //
 // Javascript
 //
+https://help.steampowered.com/public/javascript/applications/help/main.js?__TIME__&l=english&_cdn=cloudflare
+https://help.steampowered.com/public/javascript/applications/help/manifest.js?__TIME__&l=english&_cdn=cloudflare
 https://help.steampowered.com/public/javascript/agents.js?__TIME__&l=english
 https://help.steampowered.com/public/javascript/help.js?__TIME__&l=english
 https://help.steampowered.com/public/javascript/ticketmaster.js?__TIME__&l=english
