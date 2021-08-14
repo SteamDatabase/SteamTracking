@@ -25829,16 +25829,6 @@ a {
   .dpcstandings_BestOf_1B8JO {
   opacity: 1;
 }
-.dpcstandings_BracketNode_29UKw.dpcstandings_Expanded_3xyWp
-  .dpcstandings_NodeHeader_NdaUP
-  .dpcstandings_Live_1IiHp {
-  opacity: 0;
-}
-.dpcstandings_BracketNode_29UKw.dpcstandings_IsLive_2fUhe:not(.dpcstandings_Expanded_3xyWp)
-  .dpcstandings_NodeHeader_NdaUP
-  .dpcstandings_Live_1IiHp {
-  opacity: 1;
-}
 .dpcstandings_BracketNode_29UKw.dpcstandings_OtherExpanded_3M4-X {
   filter: brightness(0.6);
 }
@@ -25860,18 +25850,6 @@ a {
   position: relative;
   text-align: left;
   padding: 2px 5px;
-}
-.dpcstandings_BracketNode_29UKw
-  .dpcstandings_NodeHeader_NdaUP
-  .dpcstandings_Live_1IiHp {
-  position: absolute;
-  right: 4px;
-  top: 2px;
-  opacity: 0;
-  color: #00ab30;
-  transition-property: opacity;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.2s;
 }
 .dpcstandings_BracketNode_29UKw
   .dpcstandings_NodeHeader_NdaUP
@@ -26031,16 +26009,6 @@ a {
 }
 .dpcstandings_BracketNode_29UKw
   .dpcstandings_Details_r2wew
-  .dpcstandings_LiveContainer_3x7X0 {
-  width: 100%;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.dpcstandings_BracketNode_29UKw
-  .dpcstandings_Details_r2wew
   .dpcstandings_SeriesGame_3-6cz {
   width: 100%;
   display: flex;
@@ -26083,6 +26051,7 @@ a {
 }
 .dpcstandings_BracketNode_29UKw
   .dpcstandings_Details_r2wew
+  .dpcstandings_SeriesGame_3-6cz
   .dpcstandings_DetailsButton_1Jtsm {
   padding: 4px 8px;
   margin: 4px 8px;
@@ -26096,6 +26065,7 @@ a {
 }
 .dpcstandings_BracketNode_29UKw
   .dpcstandings_Details_r2wew
+  .dpcstandings_SeriesGame_3-6cz
   .dpcstandings_DetailsButton_1Jtsm:hover {
   color: #ccc;
   background-color: #444;
