@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6722969";
+var CLSTAMP = "6717965";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [1],
   {
@@ -1464,7 +1464,6 @@ var CLSTAMP = "6722969";
         Expanded: "dpcstandings_Expanded_3xyWp",
         NodeHeader: "dpcstandings_NodeHeader_NdaUP",
         BestOf: "dpcstandings_BestOf_1B8JO",
-        IsLive: "dpcstandings_IsLive_2fUhe",
         OtherExpanded: "dpcstandings_OtherExpanded_3M4-X",
         ShowingColor: "dpcstandings_ShowingColor_3H44f",
         ContentsContainer: "dpcstandings_ContentsContainer_3Ztt3",
@@ -1474,7 +1473,6 @@ var CLSTAMP = "6722969";
         Score: "dpcstandings_Score_2veZP",
         Details: "dpcstandings_Details_r2wew",
         Separator: "dpcstandings_Separator_3CUPS",
-        LiveContainer: "dpcstandings_LiveContainer_3x7X0",
         SeriesGame: "dpcstandings_SeriesGame_3-6cz",
         Disabled: "dpcstandings_Disabled_3m4KV",
         GameNumber: "dpcstandings_GameNumber_38SyF",
@@ -4387,19 +4385,16 @@ var CLSTAMP = "6722969";
             (this.m_nLastLiveUpdateTimestamp = 0),
             (this.m_bGCDown = !1),
             (this.m_bSpoilerBlockEnabled =
-              "1" == localStorage.getItem("bSpoilerBlockEnabled")),
-            this.UpdateGamesWatchedFromLocalStorage();
+              "1" == localStorage.getItem("bSpoilerBlockEnabled"));
+          for (var e = 0; e < localStorage.length; e++) {
+            var t = localStorage.key(e);
+            t.startsWith("watched_") &&
+              this.m_mapGameWatched.set(t, "1" === localStorage.getItem(t));
+          }
         }
         return (
           (e.Get = function () {
             return e.g_Singleton || (e.g_Singleton = new e()), e.g_Singleton;
-          }),
-          (e.prototype.UpdateGamesWatchedFromLocalStorage = function () {
-            for (var e = 0; e < localStorage.length; e++) {
-              var t = localStorage.key(e);
-              t.startsWith("watched_") &&
-                this.m_mapGameWatched.set(t, "1" === localStorage.getItem(t));
-            }
           }),
           (e.prototype.IsGCDown = function () {
             return this.m_bGCDown;
@@ -4976,14 +4971,8 @@ var CLSTAMP = "6722969";
             );
           }),
           (e.prototype.SetGameWatched = function (e, t, a) {
-            if (!this.IsGameWatched(e, t, a)) {
-              0 != l.a.ACCOUNT_ID &&
-                s.a.post(l.a.BASE_URL + "react/setwatchedgame", {
-                  params: { league_id: e, node_id: t, game: a },
-                });
-              var n = "watched_" + e + "_" + t + "_" + a;
-              localStorage.setItem(n, "1"), this.m_mapGameWatched.set(n, !0);
-            }
+            var n = "watched_" + e + "_" + t + "_" + a;
+            localStorage.setItem(n, "1"), this.m_mapGameWatched.set(n, !0);
           }),
           (e.prototype.IsGameWatched = function (e, t, a) {
             var n = "watched_" + e + "_" + t + "_" + a;
@@ -5043,68 +5032,34 @@ var CLSTAMP = "6722969";
                 o)
               ) {
                 var i = "";
-                if (
-                  (Array.from(n.values()).forEach(function (e) {
-                    a.m_asyncLeagueData.getAsyncDataWrapper(e).setDataPending(),
-                      (i += e + ",");
-                  }),
-                  0 != l.a.ACCOUNT_ID)
-                ) {
-                  var d = parseInt(
-                      localStorage.getItem("watched_games_fetch") || "0"
-                    ),
-                    m = Math.floor(Date.now() / 1e3);
-                  m - d > 300 &&
-                    s.a
-                      .get(l.a.BASE_URL + "react/getwatchedgames", {
-                        params: { league_ids: i },
-                      })
-                      .then(function (e) {
-                        var t = null == e ? void 0 : e.data;
-                        t &&
-                          (t.leagues.forEach(function (e) {
-                            e.series.forEach(function (t) {
-                              t.game.forEach(function (a) {
-                                localStorage.setItem(
-                                  "watched_" +
-                                    e.league_id +
-                                    "_" +
-                                    t.node_id +
-                                    "_" +
-                                    a,
-                                  "1"
-                                );
-                              });
-                            });
-                          }),
-                          localStorage.setItem("watched_games_fetch", "" + m),
-                          a.UpdateGamesWatchedFromLocalStorage());
+                Array.from(n.values()).forEach(function (e) {
+                  a.m_asyncLeagueData.getAsyncDataWrapper(e).setDataPending(),
+                    (i += e + ",");
+                }),
+                  s.a
+                    .get(
+                      l.a.BASE_URL + "webapi/IDOTA2League/GetLeaguesData/v001",
+                      { params: { league_ids: i, delay_seconds: t } }
+                    )
+                    .then(function (t) {
+                      var n = null == t ? void 0 : t.data;
+                      Object(r.F)(function () {
+                        n
+                          ? (null == n ||
+                              n.leagues.forEach(function (e) {
+                                a.m_asyncLeagueData
+                                  .getAsyncDataWrapper(e.info.league_id)
+                                  .setData(30, e),
+                                  a.UpdateDerivedLeagueData(e);
+                              }),
+                            a.UpdateLiveLeagueNodes(e),
+                            (a.m_bGCDown = !1))
+                          : (a.m_bGCDown = !0);
                       });
-                }
-                s.a
-                  .get(
-                    l.a.BASE_URL + "webapi/IDOTA2League/GetLeaguesData/v001",
-                    { params: { league_ids: i, delay_seconds: t } }
-                  )
-                  .then(function (t) {
-                    var n = null == t ? void 0 : t.data;
-                    Object(r.F)(function () {
-                      n
-                        ? (null == n ||
-                            n.leagues.forEach(function (e) {
-                              a.m_asyncLeagueData
-                                .getAsyncDataWrapper(e.info.league_id)
-                                .setData(30, e),
-                                a.UpdateDerivedLeagueData(e);
-                            }),
-                          a.UpdateLiveLeagueNodes(e),
-                          (a.m_bGCDown = !1))
-                        : (a.m_bGCDown = !0);
+                    })
+                    .catch(function () {
+                      a.m_bGCDown = !0;
                     });
-                  })
-                  .catch(function () {
-                    a.m_bGCDown = !0;
-                  });
               }
             }
           }),
@@ -24588,8 +24543,7 @@ var CLSTAMP = "6722969";
                     hn.a.BracketNode,
                     N && hn.a.Expanded,
                     S && hn.a.OtherExpanded,
-                    e.strBackgroundColor && hn.a.ShowingColor,
-                    R && hn.a.IsLive
+                    e.strBackgroundColor && hn.a.ShowingColor
                   ),
                   style: {
                     background: e.strBackgroundColor
@@ -24632,11 +24586,6 @@ var CLSTAMP = "6722969";
                     "div",
                     { className: hn.a.BestOf },
                     Object(_.a)(A)
-                  ),
-                  i.a.createElement(
-                    "div",
-                    { className: hn.a.Live },
-                    Object(_.a)("#dpc_live")
                   )
                 ),
                 i.a.createElement(
@@ -24738,81 +24687,49 @@ var CLSTAMP = "6722969";
                       i.a.createElement("div", { className: hn.a.Score }, O)
                     ),
                     i.a.createElement("div", { className: hn.a.Separator }),
-                    !R &&
-                      fn(1, L).map(function (n) {
-                        var r =
-                            !o ||
-                            n - 1 < (null == a ? void 0 : a.matches.length),
-                          s =
-                            Sa.a
-                              .Get()
-                              .GetLeagueNodeVODs(e.nLeagueID, e.nNodeID, n)
-                              .length > 0 || !o,
-                          c = d.b.dpc_watch(
-                            Object(ma.j)(t),
-                            "" + e.nLeagueID,
-                            "" + e.nNodeID,
-                            Object(ma.l)(n, s ? ma.f.VOD : ma.f.GAME)
-                          ),
-                          m = d.b.dpc_watch(
-                            Object(ma.j)(t),
-                            "" + e.nLeagueID,
-                            "" + e.nNodeID,
-                            Object(ma.l)(n, ma.f.SERIES)
-                          ),
-                          u = R
-                            ? "#dpc_watch_live"
-                            : s
-                            ? "#dpc_watch_vod"
-                            : "#dpc_game_details";
-                        return i.a.createElement(
-                          "div",
-                          {
-                            key: "SG" + n,
-                            className: Object(le.a)(
-                              hn.a.SeriesGame,
-                              !r && hn.a.Disabled
-                            ),
-                          },
-                          i.a.createElement(
-                            "div",
-                            { className: hn.a.GameNumber },
-                            Object(_.a)("#dpc_game_" + (n - 1))
-                          ),
-                          i.a.createElement(
-                            l.b,
-                            {
-                              to: {
-                                state: { bAutoScroll: !0 },
-                                pathname: R ? m : c,
-                              },
-                              className: hn.a.DetailsButton,
-                            },
-                            Object(_.a)(u)
-                          )
-                        );
-                      }),
-                    R &&
-                      i.a.createElement(
+                    fn(1, L).map(function (n) {
+                      var r =
+                          !o || n - 1 < (null == a ? void 0 : a.matches.length),
+                        s =
+                          Sa.a
+                            .Get()
+                            .GetLeagueNodeVODs(e.nLeagueID, e.nNodeID, n)
+                            .length > 0 || !o,
+                        c = d.b.dpc_watch(
+                          Object(ma.j)(t),
+                          "" + e.nLeagueID,
+                          "" + e.nNodeID,
+                          Object(ma.l)(n, s ? ma.f.VOD : ma.f.GAME)
+                        ),
+                        m = R
+                          ? "#dpc_watch_live"
+                          : s
+                          ? "#dpc_watch_vod"
+                          : "#dpc_game_details";
+                      return i.a.createElement(
                         "div",
-                        { className: hn.a.LiveContainer },
+                        {
+                          key: "SG" + n,
+                          className: Object(le.a)(
+                            hn.a.SeriesGame,
+                            !r && hn.a.Disabled
+                          ),
+                        },
+                        i.a.createElement(
+                          "div",
+                          { className: hn.a.GameNumber },
+                          Object(_.a)("#dpc_game_" + (n - 1))
+                        ),
                         i.a.createElement(
                           l.b,
                           {
-                            to: {
-                              state: { bAutoScroll: !0 },
-                              pathname: d.b.dpc_watch(
-                                Object(ma.j)(t),
-                                "" + e.nLeagueID,
-                                "" + e.nNodeID,
-                                Object(ma.l)(0, ma.f.SERIES)
-                              ),
-                            },
+                            to: { state: { bAutoScroll: !0 }, pathname: c },
                             className: hn.a.DetailsButton,
                           },
-                          Object(_.a)("#dpc_watch_live")
+                          Object(_.a)(m)
                         )
-                      )
+                      );
+                    })
                   )
                 )
               );
