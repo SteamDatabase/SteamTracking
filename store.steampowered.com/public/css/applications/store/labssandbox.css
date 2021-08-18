@@ -1,0 +1,382 @@
+.labssandbox_AppSelector_2Fikz {
+  background-color: #161d1f;
+  width: 400px;
+  position: relative;
+  display: flex;
+  font-size: 16px;
+  color: #c6d4df;
+  margin: 2px;
+}
+.labssandbox_AppSelector_2Fikz .labssandbox_AppDisplay_3m6Sh {
+  display: flex;
+  flex-direction: row;
+}
+.labssandbox_AppSelector_2Fikz
+  .labssandbox_AppDisplay_3m6Sh
+  .labssandbox_LogoImage_3l4Ih {
+  width: 80px;
+  height: 30px;
+  flex-shrink: 0;
+  margin: 2px;
+  border-radius: 3px;
+}
+.labssandbox_AppSelector_2Fikz
+  .labssandbox_AppDisplay_3m6Sh
+  .labssandbox_AppName_3kXBT {
+  flex-grow: 1;
+  margin: 4px;
+}
+.labssandbox_AppSelector_2Fikz .labssandbox_AppSelect_2VQ8j {
+  flex-direction: column;
+  width: 100%;
+}
+.labssandbox_AppSelector_2Fikz
+  .labssandbox_AppSelect_2VQ8j
+  .labssandbox_Suggestions_102W4 {
+  position: absolute;
+  z-index: 5;
+  font-size: 14px;
+  background-color: #000;
+  margin: 5px;
+  border-radius: 5px;
+}
+.labssandbox_AppSelector_2Fikz
+  .labssandbox_AppSelect_2VQ8j
+  .labssandbox_Suggestions_102W4
+  .labssandbox_Suggestion_3VfDL {
+  display: flex;
+  flex-direction: row;
+  margin: 2px;
+  background-color: #202040;
+}
+.labssandbox_AppSelector_2Fikz
+  .labssandbox_AppSelect_2VQ8j
+  .labssandbox_Suggestions_102W4
+  .labssandbox_Suggestion_3VfDL
+  .labssandbox_LogoImage_3l4Ih {
+  width: 80px;
+  height: 30px;
+  flex-shrink: 0;
+  margin: 2px;
+  border-radius: 3px;
+}
+.labssandbox_AppSelector_2Fikz
+  .labssandbox_AppSelect_2VQ8j
+  .labssandbox_Suggestions_102W4
+  .labssandbox_Suggestion_3VfDL
+  .labssandbox_AppName_3kXBT {
+  flex-grow: 1;
+  margin: 4px;
+}
+.labssandbox_SimilarApp_3yV0M {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  margin: 2px;
+  background-color: #161d1f;
+}
+.labssandbox_SimilarApp_3yV0M .labssandbox_AppName_3kXBT {
+  font-size: 16px;
+  color: #c6d4df;
+  margin: 4px;
+}
+.labssandbox_SimilarApp_3yV0M .labssandbox_LogoImage_3l4Ih {
+  width: 80px;
+  height: 30px;
+  flex-shrink: 0;
+  margin: 2px;
+  border-radius: 3px;
+}
+.labssandbox_SimilarApp_3yV0M .labssandbox_Spacer_1lpCS {
+  flex-grow: 1;
+}
+.labssandbox_SimilarApp_3yV0M .labssandbox_Score_14zV9 {
+  margin: 4px;
+  width: 10%;
+  text-align: right;
+  font-size: 14px;
+  color: #40aee5;
+}
+.labssandbox_App_3xv8n {
+  margin: 0px auto;
+  min-height: 3840px;
+  font-family: "Motiva Sans", Sans-serif;
+  background-image: linear-gradient(#1b2838, #1b2838 400px, #1b2838 100%);
+  color: #fff;
+  padding: 40px;
+  position: relative;
+}
+.labssandbox_App_3xv8n .labssandbox_Container_3r507 {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.labssandbox_App_3xv8n
+  .labssandbox_Container_3r507
+  .labssandbox_TopSection_ZS7Sf {
+  color: #fbfcfc;
+  margin-bottom: 12px;
+  min-width: 300px;
+}
+.labssandbox_App_3xv8n
+  .labssandbox_Container_3r507
+  .labssandbox_TopSection_ZS7Sf
+  .labssandbox_Header_3PXzQ {
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #40aee5;
+  margin-bottom: 20px;
+}
+.labssandbox_App_3xv8n
+  .labssandbox_Container_3r507
+  .labssandbox_TopSection_ZS7Sf
+  .labssandbox_Body_LfOIb {
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 22px;
+  letter-spacing: 0px;
+  color: #c6d4df;
+}
+.labssandbox_App_3xv8n
+  .labssandbox_Container_3r507
+  .labssandbox_TopSection_ZS7Sf
+  .labssandbox_Spacer_1lpCS {
+  height: 20px;
+  min-height: 20px;
+}
+.labssandbox_App_3xv8n
+  .labssandbox_Container_3r507
+  .labssandbox_SandboxSection_-FZSw {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.labssandbox_App_3xv8n
+  .labssandbox_Container_3r507
+  .labssandbox_SandboxSection_-FZSw
+  .labssandbox_Spacer_1lpCS {
+  height: 30px;
+}
+.labssandbox_App_3xv8n
+  .labssandbox_Container_3r507
+  .labssandbox_SandboxSection_-FZSw
+  .labssandbox_LabsSimilarGames_3OMnQ
+  h1 {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.labssandbox_App_3xv8n
+  .labssandbox_Container_3r507
+  .labssandbox_SandboxSection_-FZSw
+  .labssandbox_LabsSimilarGames_3OMnQ
+  .labssandbox_AppSelection_1U331 {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+.labssandbox_App_3xv8n
+  .labssandbox_Container_3r507
+  .labssandbox_SandboxSection_-FZSw
+  .labssandbox_LabsSimilarGames_3OMnQ
+  .labssandbox_SimilarApps_3RByY {
+  display: flex;
+  flex-direction: column;
+}
+.labssandbox_App_3xv8n
+  .labssandbox_Container_3r507
+  .labssandbox_SandboxSection_-FZSw
+  .labssandbox_LabsSimilarity_32kTJ {
+  display: flex;
+  flex-direction: row;
+}
+.labssandbox_App_3xv8n
+  .labssandbox_Container_3r507
+  .labssandbox_SandboxSection_-FZSw
+  .labssandbox_LabsSimilarity_32kTJ
+  .labssandbox_HorizontalSpacer_1FnF8 {
+  flex-grow: 1;
+}
+.labssandbox_App_3xv8n
+  .labssandbox_Container_3r507
+  .labssandbox_SandboxSection_-FZSw
+  .labssandbox_LabsSimilarity_32kTJ
+  .labssandbox_Score_14zV9 {
+  width: auto;
+  font-size: 18px;
+}
+.labssandbox_App_3xv8n
+  .labssandbox_Container_3r507
+  .labssandbox_SandboxSection_-FZSw
+  .labssandbox_LabsPathfinder_1w-DU {
+  display: flex;
+  flex-direction: column;
+}
+.labssandbox_App_3xv8n
+  .labssandbox_Container_3r507
+  .labssandbox_SandboxSection_-FZSw
+  .labssandbox_LabsPathfinder_1w-DU
+  h1 {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.labssandbox_App_3xv8n
+  .labssandbox_Container_3r507
+  .labssandbox_SandboxSection_-FZSw
+  .labssandbox_LabsPathfinder_1w-DU
+  .labssandbox_SelectEndpoints_3QMII {
+  display: flex;
+  flex-direction: row;
+}
+.labssandbox_App_3xv8n
+  .labssandbox_Container_3r507
+  .labssandbox_SandboxSection_-FZSw
+  .labssandbox_LabsPathfinder_1w-DU
+  .labssandbox_ComputeButton_230zD {
+  width: 200px;
+  background-color: #161d1f;
+  border-color: #404080;
+  text-align: center;
+  border-radius: 5px;
+  border-width: 3px;
+  font-size: 18px;
+  margin: 4px;
+}
+.labssandbox_App_3xv8n
+  .labssandbox_Container_3r507
+  .labssandbox_SandboxSection_-FZSw
+  .labssandbox_LabsPathfinder_1w-DU
+  .labssandbox_ComputeButton_230zD
+  :hover {
+  background-color: #404080;
+}
+.labssandbox_App_3xv8n
+  .labssandbox_Container_3r507
+  .labssandbox_SandboxSection_-FZSw
+  .labssandbox_LabsPathfinder_1w-DU
+  .labssandbox_ComputeButton_230zD
+  .labssandbox_Disabled_3o1uE {
+  color: #2d2d2d;
+}
+.labssandbox_App_3xv8n
+  .labssandbox_Container_3r507
+  .labssandbox_SandboxSection_-FZSw
+  .labssandbox_LabsPathfinder_1w-DU
+  .labssandbox_ProgressMessage_2IvW- {
+  font-size: 18px;
+  margin: 4px;
+}
+.labssandbox_App_3xv8n
+  .labssandbox_Container_3r507
+  .labssandbox_SandboxSection_-FZSw
+  .labssandbox_LabsPathfinder_1w-DU
+  .labssandbox_Path_V_RIv {
+  display: flex;
+  flex-direction: column;
+}
+.labssandbox_App_3xv8n
+  .labssandbox_Container_3r507
+  .labssandbox_SandboxSection_-FZSw
+  .labssandbox_LabsMixer_1Cns3
+  h1 {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.labssandbox_App_3xv8n
+  .labssandbox_Container_3r507
+  .labssandbox_SandboxSection_-FZSw
+  .labssandbox_LabsMixer_1Cns3
+  .labssandbox_SimilarApps_3RByY {
+  display: flex;
+  flex-direction: column;
+}
+.labssandbox_App_3xv8n
+  .labssandbox_Container_3r507
+  .labssandbox_SandboxSection_-FZSw
+  .labssandbox_LabsMixer_1Cns3
+  .labssandbox_Operand_hILAx {
+  display: flex;
+  flex-direction: row;
+  margin: 4px;
+  height: 40px;
+}
+.labssandbox_App_3xv8n
+  .labssandbox_Container_3r507
+  .labssandbox_SandboxSection_-FZSw
+  .labssandbox_LabsMixer_1Cns3
+  .labssandbox_Operand_hILAx
+  .labssandbox_OperatorSelect_EM51K {
+  width: 80px;
+  margin: 3px;
+}
+.labssandbox_App_3xv8n
+  .labssandbox_Container_3r507
+  .labssandbox_SandboxSection_-FZSw
+  .labssandbox_LabsMixer_1Cns3
+  .labssandbox_AddOperand_tZPTB {
+  width: 100px;
+  justify-content: center;
+  text-align: center;
+  background-color: #404080;
+  border-color: #606090;
+  border-radius: 3px;
+  font-size: 20px;
+  margin: 20px;
+}
+.labssandbox_Tabs_3Uckh {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 2px solid #9090c0;
+}
+.labssandbox_Tabs_3Uckh .labssandbox_Tab_16ebk {
+  display: block;
+  line-height: 24px;
+  padding: 0 8px;
+  margin-right: 4px;
+  background: #606090;
+  color: #ccc;
+}
+.labssandbox_Tabs_3Uckh .labssandbox_Tab_16ebk.labssandbox_Active_2J9Kx,
+.labssandbox_Tabs_3Uckh .labssandbox_Tab_16ebk:hover {
+  color: #fff;
+}
+.labssandbox_Tabs_3Uckh .labssandbox_Tab_16ebk.labssandbox_Active_2J9Kx {
+  background: #9090c0;
+}
+.tagclustering_EntryError_1UGoD {
+  color: red;
+}
+.tagclustering_ClusterConfig_3Qp2u {
+  margin: 16px 0;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.3);
+}
+.tagclustering_PlaytimeCluster_2qGfq {
+  margin-bottom: 12px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.tagclustering_PlaytimeCluster_2qGfq .tagclustering_ClusterInfo_20dmp {
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.tagclustering_PlaytimeCluster_2qGfq .tagclustering_ClusterMembers_VeQtF {
+  padding: 16px;
+}
+.tagclustering_PlaytimeCluster_2qGfq ul li {
+  list-style-position: outside;
+}
+.tagclustering_SimilarTitle_gRxJT {
+  display: block;
+  line-height: 45px;
+}
+.tagclustering_SimilarTitle_gRxJT:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.tagclustering_SimilarTitle_gRxJT img {
+  width: 120px;
+  height: 45px;
+  display: block;
+  float: left;
+  margin-right: 12px;
+}
