@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [102],
+  [101],
   {
     "8H1D": function (e, t, n) {
       "use strict";
@@ -27,35 +27,35 @@
     },
     Cmuy: function (e, t, n) {
       var a = {
-        "./managefriends_brazilian.json": ["QEZI", 103],
-        "./managefriends_bulgarian.json": ["GBrP", 104],
-        "./managefriends_czech.json": ["Inia", 105],
-        "./managefriends_danish.json": ["mpv8", 106],
-        "./managefriends_dutch.json": ["0HlU", 107],
-        "./managefriends_english.json": ["nsfA", 108],
-        "./managefriends_finnish.json": ["dEJT", 109],
-        "./managefriends_french.json": ["2FtL", 110],
-        "./managefriends_german.json": ["vp55", 111],
-        "./managefriends_greek.json": ["lJ4a", 112],
-        "./managefriends_hungarian.json": ["Gspr", 113],
-        "./managefriends_italian.json": ["o9/S", 114],
-        "./managefriends_japanese.json": ["1dTH", 115],
-        "./managefriends_koreana.json": ["eLcJ", 116],
-        "./managefriends_latam.json": ["JPfx", 117],
-        "./managefriends_norwegian.json": ["SdNd", 118],
-        "./managefriends_polish.json": ["9Isg", 119],
-        "./managefriends_portuguese.json": ["rkGD", 120],
-        "./managefriends_romanian.json": ["EAZq", 121],
-        "./managefriends_russian.json": ["9GLV", 122],
-        "./managefriends_sc_schinese.json": ["pKcs", 123],
-        "./managefriends_schinese.json": ["uYkB", 124],
-        "./managefriends_spanish.json": ["5gvD", 125],
-        "./managefriends_swedish.json": ["ADK/", 126],
-        "./managefriends_tchinese.json": ["lro4", 127],
-        "./managefriends_thai.json": ["Ezt8", 128],
-        "./managefriends_turkish.json": ["UONk", 129],
-        "./managefriends_ukrainian.json": ["B7eG", 130],
-        "./managefriends_vietnamese.json": ["EcJa", 131],
+        "./managefriends_brazilian.json": ["QEZI", 102],
+        "./managefriends_bulgarian.json": ["GBrP", 103],
+        "./managefriends_czech.json": ["Inia", 104],
+        "./managefriends_danish.json": ["mpv8", 105],
+        "./managefriends_dutch.json": ["0HlU", 106],
+        "./managefriends_english.json": ["nsfA", 107],
+        "./managefriends_finnish.json": ["dEJT", 108],
+        "./managefriends_french.json": ["2FtL", 109],
+        "./managefriends_german.json": ["vp55", 110],
+        "./managefriends_greek.json": ["lJ4a", 111],
+        "./managefriends_hungarian.json": ["Gspr", 112],
+        "./managefriends_italian.json": ["o9/S", 113],
+        "./managefriends_japanese.json": ["1dTH", 114],
+        "./managefriends_koreana.json": ["eLcJ", 115],
+        "./managefriends_latam.json": ["JPfx", 116],
+        "./managefriends_norwegian.json": ["SdNd", 117],
+        "./managefriends_polish.json": ["9Isg", 118],
+        "./managefriends_portuguese.json": ["rkGD", 119],
+        "./managefriends_romanian.json": ["EAZq", 120],
+        "./managefriends_russian.json": ["9GLV", 121],
+        "./managefriends_sc_schinese.json": ["pKcs", 122],
+        "./managefriends_schinese.json": ["uYkB", 123],
+        "./managefriends_spanish.json": ["5gvD", 124],
+        "./managefriends_swedish.json": ["ADK/", 125],
+        "./managefriends_tchinese.json": ["lro4", 126],
+        "./managefriends_thai.json": ["Ezt8", 127],
+        "./managefriends_turkish.json": ["UONk", 128],
+        "./managefriends_ukrainian.json": ["B7eG", 129],
+        "./managefriends_vietnamese.json": ["EcJa", 130],
       };
       function i(e) {
         if (!n.o(a, e))
@@ -399,7 +399,7 @@
                         },
                         onClick: this.OnSearchSubmit,
                       },
-                      r.a.createElement(g.E, null)
+                      r.a.createElement(g.F, null)
                     )
                   )
                 )
