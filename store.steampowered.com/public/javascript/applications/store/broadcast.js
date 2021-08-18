@@ -9984,7 +9984,7 @@
                               title: Object(vt.f)("#ChatEntryButton_Submit"),
                               onClick: this.SendMessage,
                             },
-                            s.createElement(rr.db, null)
+                            s.createElement(rr.cb, null)
                           )
                         ),
                         s.createElement(
@@ -10863,7 +10863,7 @@
                   {
                     className: Object(nr.a)(Ir.a.viewer_count, "viewer_count"),
                   },
-                  s.createElement(rr.mb, null),
+                  s.createElement(rr.lb, null),
                   r.toLocaleString(vt.e.GetPreferredLocales())
                 ),
                 s.createElement(
@@ -10903,7 +10903,7 @@
                         "#StoreBroadcast_Change_store_Broadcast_settings"
                       ),
                     },
-                    s.createElement(rr.Y, null)
+                    s.createElement(rr.X, null)
                   ),
                   e
                 )
@@ -10970,7 +10970,7 @@
                 ),
                 onClick: e.OnPreventPopup,
               },
-              s.createElement(rr.qb, null)
+              s.createElement(rr.pb, null)
             )
           );
         }),
@@ -11141,7 +11141,7 @@
                 s.createElement(
                   "div",
                   { className: Ir.a.viewer_count },
-                  s.createElement(rr.mb, null),
+                  s.createElement(rr.lb, null),
                   c.toLocaleString(vt.e.GetPreferredLocales())
                 )
               );

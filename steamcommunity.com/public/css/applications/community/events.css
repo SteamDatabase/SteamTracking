@@ -844,6 +844,18 @@ td.rdtYear:hover {
 .partnereventtile_MetaDataCtn_3EXNJ {
   padding-bottom: 50px;
 }
+.eventmoderationaudit_ModeratorAuditActionCtn_f6z__ {
+  margin-bottom: 10px;
+}
+.eventmoderationaudit_ModeratorAuditActionCtn_f6z__ > div {
+  display: inline;
+}
+.eventmoderationaudit_ModeratorAuditActionCtn_f6z__ > span {
+  display: block;
+}
+.eventmoderationaudit_ExpandModActions_3nNMe {
+  cursor: pointer;
+}
 .partnereventpreview_PreviewBarContainer_2OUix {
   display: flex;
   flex-direction: row;
@@ -1610,6 +1622,23 @@ input.partnereventemails_HeadlineInput_2lHX9::placeholder {
   display: block;
   margin-right: 101px;
 }
+.requirevalvepublishapproval_ApprovalRequiredCtn_2pKjC {
+  background-color: #abb2bd;
+  padding: 12px;
+  color: #000;
+  display: flex;
+  flex-direction: row;
+}
+.requirevalvepublishapproval_ApprovalRequiredCtn_2pKjC
+  .requirevalvepublishapproval_Right_2lUXd {
+  border-left: 1px solid #000;
+  padding-left: 18px;
+  margin-left: 18px;
+  min-width: 200px;
+}
+.requirevalvepublishapproval_Title_Oc0UN {
+  font-weight: bold;
+}
 .partnereventpublishingcontrols_PublishContainer_2tCY6 {
   max-width: 30%;
 }
@@ -1690,6 +1719,185 @@ input.partnereventemails_HeadlineInput_2lHX9::placeholder {
 }
 .partnereventpublishingtab_ReachPendingVisibilityText_n1wAj {
   color: orange;
+}
+.saleguidelinedialog_ValveOnlyGuidelineSummary_G_5BB {
+  background-color: #2e3138;
+  padding: 12px;
+  color: #969696;
+}
+.saleguidelinedialog_ValveOnlyGuidelineSummary_G_5BB
+  .saleguidelinedialog_SignedBy_aFTva {
+  display: flex;
+}
+.saleguidelinedialog_GuidelinesNoticeCtn_2vRv8 {
+  width: 100%;
+  height: 300px;
+  padding: 24px;
+  box-sizing: border-box;
+  background-color: #2e3138;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.saleguidelinedialog_GuidelinesNoticeCtn_2vRv8
+  .saleguidelinedialog_OpenGuidelinesBtnCtn_1xJdi {
+  width: 50%;
+}
+.saleguidelinedialog_GuidelinesDoneCtn_-bMPu {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  background-color: #2e3138;
+}
+.saleguidelinedialog_GuidelinesDoneCtn_-bMPu button {
+  flex-basis: 30%;
+}
+.saleguidelinedialog_GuidelinesDoneCtn_-bMPu .saleguidelinedialog_Text_1yrjm {
+  flex-basis: 70%;
+}
+.saleguidelinedialog_Intro_yYvoX {
+  margin-bottom: 8px;
+}
+.saleguidelinedialog_AgreementsCtn_1TWap {
+  margin: 12px 0px;
+}
+.saleguidelinedialog_ContactSectionCtn_3gDWx {
+  display: flex;
+  flex-direction: column;
+}
+.saleguidelinedialog_ContactSectionCtn_3gDWx div {
+  margin-top: 8px;
+}
+.saleguidelinedialog_SectionTitle_3HeMo {
+  font-size: 13px;
+  color: #cacaca;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding-top: 24px;
+}
+.partnereventrevisionhistory_VersionListCtn_32hnY {
+  max-height: 500px;
+  overflow-y: scroll;
+}
+.partnereventrevisionhistory_VersionCtn_3vUSX {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-bottom: 1px solid #000;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+.partnereventrevisionhistory_VersionCtn_3vUSX
+  .partnereventrevisionhistory_VersionInfoCtn_1sI79 {
+  display: flex;
+  flex-direction: column;
+  min-width: 80%;
+}
+.partnereventsalesorttiers_SortTierControls_1_f_6 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 10px;
+}
+.partnereventsalesorttiers_SortTierExplanation_1U8SA {
+  padding-bottom: 8px;
+}
+button.DialogButton.partnereventsalesorttiers_AutoTierButton_3uDH_:disabled {
+  background-color: rgba(80, 84, 90, 0.35);
+  color: #9f9396;
+}
+.tableofcontents_TableOfContentsContainer_2VyHw {
+  position: absolute;
+  top: 0;
+  left: 940px;
+  box-sizing: border-box;
+  padding: 43px 0 0 30px;
+  height: 100%;
+}
+.tableofcontents_TableOfContentsContainer_2VyHw
+  .tableofcontents_TableOfContents_3-gNE {
+  position: sticky;
+  top: 100px;
+  height: calc(100vh - 180px);
+  overflow-y: auto;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+}
+.tableofcontents_TableOfContentsContainer_2VyHw
+  .tableofcontents_TableOfContents_3-gNE
+  .tableofcontents_TOCEntry_2fked {
+  box-sizing: border-box;
+  margin: 1px 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #d3d3d3;
+}
+.tableofcontents_TableOfContentsContainer_2VyHw
+  .tableofcontents_TableOfContents_3-gNE
+  .tableofcontents_TOCEntry_2fked
+  .tableofcontents_TOCEntryText_2E83D {
+  font-size: 12px;
+  padding: 8px;
+}
+.tableofcontents_TableOfContentsContainer_2VyHw
+  .tableofcontents_TableOfContents_3-gNE
+  .tableofcontents_TOCEntry_2fked:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  cursor: pointer;
+}
+.tableofcontents_TableOfContentsContainer_2VyHw
+  .tableofcontents_TableOfContents_3-gNE
+  .tableofcontents_TOCEntry_2fked.tableofcontents_SectionOnScreen_1ZlX0 {
+  margin-left: calc($defaultMarginX - $selectedWidth);
+  border-left: 6px solid rgba(162, 183, 226, 0.7);
+}
+.tableofcontents_TableOfContentsContainer_2VyHw
+  .tableofcontents_TableOfContents_3-gNE
+  .tableofcontents_TOCEntry_2fked.tableofcontents_TOCIndent_mtCjw {
+  margin-left: 16px;
+}
+.tableofcontents_TableOfContentsContainer_2VyHw
+  .tableofcontents_TableOfContents_3-gNE
+  .tableofcontents_TOCEntry_2fked.tableofcontents_TOCIndent_mtCjw.tableofcontents_SectionOnScreen_1ZlX0 {
+  margin-left: calc($indentWidth - $selectedWidth);
+}
+.tableofcontents_TableOfContentsContainer_2VyHw .tableofcontents_Header_1JRRC {
+  font-size: 17px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0px 0px 10px 0px;
+}
+.tableofcontents_TableOfContentsContainer_2VyHw
+  .tableofcontents_ManageLocCtn_1PmKQ {
+  margin-bottom: 20px;
+}
+.tableofcontents_TableOfContentsContainer_2VyHw
+  .tableofcontents_ManageLocCtn_1PmKQ
+  .tableofcontents_LocButtonsCtn_19-WG {
+  display: flex;
+  flex-direction: column;
+}
+.tableofcontents_TableOfContentsContainer_2VyHw
+  .tableofcontents_ManageLocCtn_1PmKQ
+  .tableofcontents_LocButtonsCtn_19-WG
+  > div {
+  margin: 8px 0px 0px 0px;
+}
+.tableofcontents_TableOfContentsContainer_2VyHw
+  .tableofcontents_ManageLocCtn_1PmKQ
+  .tableofcontents_ManageLocContents_N1BFb {
+  background: #30343b;
+  padding: 16px;
+}
+.partnersaledebug_SearchResults_26iJ3 {
+  overflow: scroll;
+  max-height: 300px;
 }
 .communityagegate_adult_content_age_gate_2PyPU {
   font-family: "Motiva Sans", Sans-serif;

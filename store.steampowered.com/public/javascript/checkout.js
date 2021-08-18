@@ -4827,6 +4827,19 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 				$('review_import_fee_value').style.display = 'none';
 			}			
 
+			if ( price_data.formattedDepositApplied && price_data.formattedDepositApplied != '' )
+			{
+				$('review_deposit_value').innerHTML = price_data.formattedDepositApplied;
+				$('cart_price_summary_deposit').style.display = 'block';
+				$('review_deposit_value').style.display = 'block';
+			}
+			else
+			{
+				$('cart_price_summary_deposit').style.display =  'none';
+				$('review_deposit_value').style.display = 'none';
+			}
+
+
 			if ( price_data.base )
 				$('review_total_value').innerHTML = price_data.formattedTotal;
 			else

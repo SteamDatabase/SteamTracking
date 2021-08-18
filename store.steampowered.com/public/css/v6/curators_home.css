@@ -85,12 +85,11 @@ background: -webkit-linear-gradient( left, rgba(27,40,56,0) 5%,rgba(27,40,56,1.0
 	background: linear-gradient( to bottom, rgba(0,0,0,1) 5%, rgba(27,40,56,1) 50%);
 }
 
-.highlighted_app_header
-{
-	position: relative;
-	float: left;
-	height: 270px;
+.highlighted_app_contents {
+	display: flex;
+	flex-direction: row;
 }
+
 .highlighted_app_capsule_image {
 	height: 270px;
 }
@@ -101,9 +100,8 @@ background: -webkit-linear-gradient( left, rgba(27,40,56,0) 5%,rgba(27,40,56,1.0
 .highlighted_app_details_ctn
 {
 	overflow: hidden;
-	min-height: 215px;
-	max-height: 271px;
 }
+
 .highlighted_app_details
 {
 	position: relative;
@@ -166,9 +164,7 @@ body.v6 .creator_home .page_content.dev_row_ctn {
 background: -webkit-linear-gradient( top, rgba(40,43,49,0) 60%, rgba(0,0,0,0.9) 100%);
 	background: linear-gradient( to bottom, rgba(40,43,49,0) 60%, rgba(0,0,0,0.9) 100%);
 }
-.page_content.steam_curator_header_text .header_area {
-	width: 520px;
-}
+
 .page_content.steam_curator_header_text .header_area span {
 	font-size: 18px;
 	text-transform: uppercase;
@@ -221,7 +217,6 @@ body.v6 .creator_home p {
 	color: #dee6ed;
 }
 .page_content_ctn.creator_home {
-	width: 940px;
 	margin: 20px auto 0 auto;
 
 }
@@ -264,8 +259,7 @@ background: -webkit-linear-gradient( top, rgba(255,255,255,0.1) 5%, rgba(255,255
 		font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
-			width: 940px;
-	margin: 0 auto;
+			margin: 0 auto;
 	min-height: 200px;
 	display: flex;
 	margin-top: 75px;
@@ -339,17 +333,21 @@ background: -webkit-linear-gradient( top, rgba(255,255,255,0.1) 5%, rgba(255,255
 	position: relative;
 	margin-top: 0px;
 	display: flex;
+	flex-direction: row;
+	align-items: center;
 }
 
 .curator_page_button {
-	float: left;
 	position: relative;
-	width: 463px;
-	height: 126px;
 	background: -webkit-linear-gradient( left, rgba( 197,230,248,1 ) 168px,rgba( 254,254,255,1 ) 95%);
 	background: linear-gradient( to right, rgba( 197,230,248,1 ) 168px,rgba( 254,254,255,1 ) 95%);
 	border: 1px solid #2a3e59;
 	border-radius: 3px;
+
+	padding: 53px 20px;
+
+	flex: 1;
+	z-index: 0;
 }
 .curator_page_button:nth-of-type(1) {
 	margin-right: 10px;
@@ -367,12 +365,12 @@ background: -webkit-linear-gradient( top, rgba(255,255,255,0.1) 5%, rgba(255,255
 
 .curator_tiles {
 	position: absolute;
-	left: 1px;
+	left: 0;
 	right: 0;
-	top: 1px;
+	top: 0;
 	bottom: 0;
 	overflow: hidden;
-	z-index: 3;
+	z-index: -1;
 	pointer-events: none
 }
 
@@ -391,7 +389,7 @@ background: -webkit-linear-gradient( top, rgba(255,255,255,0.1) 5%, rgba(255,255
 
 .curator_tile_row {
 	height: 42px;
-	width: 168px;
+	width: 167px;
 	background-color: #000;
 }
 
@@ -400,10 +398,8 @@ background: -webkit-linear-gradient( top, rgba(255,255,255,0.1) 5%, rgba(255,255
 }
 
 .curator_page_button_text {
-	margin-left: 169px;
-	margin-top: 42px;
 	font-size: 21px;
-	z-index: 2;
+	z-index: 0;
 	color: #263646;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -411,18 +407,14 @@ background: -webkit-linear-gradient( top, rgba(255,255,255,0.1) 5%, rgba(255,255
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
-		}
-.curator_page_button.more {
-	flex: 1;
+		
+	text-align: center;
 }
+
 .curator_page_button.more.no_curators {
 	margin-top: 50px;
 }
-.curator_page_button.more .curator_page_button_text {
-	margin-left: 0px;
-	margin-top: 53px;
-	text-align: center;
-}
+
 .curator_page_button:hover .curator_page_button_text {
 	color: #66c0f4;
 }
@@ -449,6 +441,14 @@ background: -webkit-linear-gradient( top, rgba(255,255,255,0.1) 5%, rgba(255,255
 
 .most_recommended {
 	padding-bottom: 40px;
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	/* "gap" property emulation */
+	margin-left: -20px;
+	margin-top: -20px;
 }
 
 .most_recommended .store_capsule {
@@ -461,18 +461,22 @@ background: -webkit-linear-gradient( top, rgba(255,255,255,0.1) 5%, rgba(255,255
 }
 
 .most_recommended .steam_curator_recommendation {
-	display: inline-block;
-	margin-bottom: 20px;
-	margin-right: 20px;
 	height: 215px;
+	width: 220px;
 	background-image: url( '/public/images/v6/home/background_spotlight.jpg' );
 	box-shadow: 0 0 5px #000;
 	background-position-y: 20px;
+
+	margin-left: 20px;
+	margin-top: 20px;
 }
+
 .most_recommended .steam_curator_recommendation.big {
 	background-position-x: 100px;
 	background-position-y: 0px;
 	background-size: 48%;
+
+	width: 700px;
 }
 
 .most_recommended .steam_curator_recommendation .store_capsule {
@@ -518,20 +522,11 @@ background: -webkit-linear-gradient( top, rgba(255,255,255,0.1) 5%, rgba(255,255
 	border-radius: 2px;
 }
 
-.steam_curator_recommendation.position2,
-.steam_curator_recommendation.position6,
-.steam_curator_recommendation.position8,
-.steam_curator_recommendation.position12
-{
-	margin-right: 0px;
-}
-
 /* curator spotlight */
 .curator_spotlight {
 	padding-bottom: 40px;
 }
 .curator_spotlight_curator_ctn {
-	float: left;
 	margin-right: 20px;
 }
 .curator_spotlight_image {
@@ -551,9 +546,11 @@ body.v6 .store_capsule_frame.curator_spotlight h2 b {
 
 			text-transform: none;
 }
-
+.short_curator_recommendation_ctn {
+	display: flex;
+	flex-direction: row;
+}
 .short_curator_recommendation {
-	float: left;
 	width: 254px;
 	margin-right: 20px;
 }
@@ -588,9 +585,6 @@ body.v6 .store_capsule_frame.curator_spotlight h2 b {
 	right: 35px;
 }
 
-.steam_curator_recommendation.big:nth-of-type(1) {
-	margin-right: 0px;
-}
 .steam_curator_recommendation.big .store_capsule {
 	width: 460px;
 	background: transparent;
@@ -730,4 +724,52 @@ body.v6 .all_devs_ctn .browse_container {
 }
 .paged_items_paging_summary {
 	margin-top: 3px;
+}
+
+.most_recommended .steam_curator_recommendation.nonresponsive_hidden {
+	display: none;
+}
+
+@media screen and (max-width: 910px) {
+	html.responsive .highlighted_app_contents {
+		flex-direction: column;
+	}
+
+	html.responsive .highlighted_app_capsule_image {
+		height: auto;
+		width: 100%;
+	}
+
+	html.responsive .highlighted_app_details {
+		padding: 14px 0 14px 0;
+	}
+
+	html.responsive .most_recommended .steam_curator_recommendation.nonresponsive_hidden {
+		display: block;
+	}
+
+	html.responsive .most_recommended .steam_curator_recommendation.responsive_hidden {
+		display: none;
+	}
+
+	html.responsive .short_curator_recommendation_ctn {
+		flex-direction: column;
+	}
+
+	html.responsive .curator_home_suggested {
+		display: none;
+	}
+
+	html.responsive .curator_big_buttons {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	html.responsive .curator_page_button {
+		padding: 30px 12px;
+	}
+
+	html.responsive .curator_page_button:nth-of-type(1) {
+		margin-right: 0;
+	}
 }

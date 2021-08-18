@@ -5794,3 +5794,54 @@ body.v6 .page_content.notes {
 		padding-right: 10px;
 	}
 }
+
+.saleEventBannerStyle {
+    object-fit: contain;
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    max-width: 100%;
+    cursor: pointer;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    z-index: 100;
+    transform: scale(1.00);
+    /*box-shadow: 0 0 10px #000;*/
+    filter: saturate(0.85);
+    transition: transform .21s ease-in-out, filter .21s ease-in-out;
+}
+.saleEventBannerStyle:hover {
+    filter: saturate(1.0);
+    transform: scale(1.03);
+}
+.saleEventBannerMobile {
+    display:none;
+}
+.saleEventBannerBig {
+    width: 1053px;
+}
+
+.saleEventBannerLink {
+    display: block;
+    margin-bottom: 16px;
+}
+
+@media screen and ( max-width: 940px ) {
+    .saleEventBannerLink {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and ( max-width: 600px ) {
+    html.responsive .saleEventBannerBig {
+        display: none;
+    }
+    html.responsive .saleEventBannerMobile {
+        display: block;
+        margin-bottom: 10px;
+        z-index: 100;
+    }
+}

@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [102],
+  [73],
   {
     ARGL: function (e, t, a) {
       e.exports = {
@@ -900,7 +900,7 @@
             r.createElement(
               "div",
               { className: l.Left },
-              r.createElement(O.I, { className: l.BalanceIcon }),
+              r.createElement(O.H, { className: l.BalanceIcon }),
               r.createElement(
                 "div",
                 { className: l.BalanceDetails },
@@ -1005,7 +1005,7 @@
           return r.createElement(
             "span",
             Object(n.a)({}, o, { className: Object(w.a)(a, l.PointsAmount) }),
-            r.createElement(O.I, { className: l.PointsAmountIcon }),
+            r.createElement(O.H, { className: l.PointsAmountIcon }),
             t
           );
         };

@@ -16554,24 +16554,6 @@ html.responsive.touch .partnersaledisplay_SaleSectionTabs_QhcTn {
     width: 75px;
   }
 }
-@media screen and (max-width: 700px) {
-  .ModalPosition_Content {
-    transform: scale(0.9);
-  }
-}
-@media screen and (max-width: 600px) {
-  .ModalPosition_Content {
-    transform: scale(0.75);
-  }
-}
-@media screen and (max-width: 500px) {
-  .ModalPosition_Content {
-    transform: scale(0.6);
-  }
-}
-.ModalPosition_TopBar {
-  display: none;
-}
 .DialogContent.storywidget_StoryDialog_31-P_ {
   padding: 0;
   width: 410px;
@@ -20382,6 +20364,10 @@ img.broadcastplayer_BroadcastPlaceholderImg_1LIEZ {
   margin-bottom: 5px;
   font-weight: 700;
 }
+.dailydealsdashboard_Row_2fsEu {
+  background-color: pink;
+  padding-bottom: 10px;
+}
 button.DialogButton {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -20598,6 +20584,9 @@ button.DialogButton::-moz-focus-inner {
 }
 .DialogToggle_Label {
   user-select: none;
+}
+.DialogToggle_Label span {
+  display: flex;
 }
 .contextMenuItem .DialogToggle_Label {
   white-space: nowrap;

@@ -1329,7 +1329,7 @@
                               return e.onMuteToggle(t);
                             },
                           },
-                          l.a.createElement(m.nb, { muted: T.shouldMute() })
+                          l.a.createElement(m.mb, { muted: T.shouldMute() })
                         ),
                       this.state.wishlisted &&
                         l.a.createElement(
