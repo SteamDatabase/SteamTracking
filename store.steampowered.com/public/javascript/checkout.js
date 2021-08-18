@@ -3966,6 +3966,7 @@ function SubmitPaymentInfoForm()
 				errorString = rgErrors[0] + '<br/>' + rgErrors[1] + '<br/>' + 'And find more errors highlighted below.' + '<br/>';
 			}		
 		
+      			SetTabEnabled( 'payment_info' );
 			DisplayErrorMessage( errorString );
 		}
 		else
