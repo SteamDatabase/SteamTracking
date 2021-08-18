@@ -1199,9 +1199,6 @@ button.DialogButton::-moz-focus-inner {
 .DialogToggle_Label {
   user-select: none;
 }
-.DialogToggle_Label span {
-  display: flex;
-}
 .contextMenuItem .DialogToggle_Label {
   white-space: nowrap;
 }
