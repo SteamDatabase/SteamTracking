@@ -2527,13 +2527,13 @@ CCommentThread.ShowHiddenComment = function( id, gidcomment )
 
 function levenshtein( a, b )
 {
-	let alen = a.length;
-	let blen = b.length;
+	var alen = a.length;
+	var blen = b.length;
 	if (alen === 0) return blen;
-	if (blen=== 0) return alen;
-	let tmp, i, j, prev, val, row, ma, mb, mc, md, bprev;
+	if (blen === 0) return alen;
+	var tmp, i, j, prev, val, row, ma, mb, mc, md, bprev;
 
-	if (alen> blen) {
+	if (alen > blen) {
 		tmp = a;
 		a = b;
 		b = tmp;
