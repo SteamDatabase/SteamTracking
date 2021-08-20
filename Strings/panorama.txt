@@ -2766,6 +2766,7 @@ canRepresentDisplayGamut:
 en_US
 HOME
 r
+Unknown
 com.valvesoftware.steam.ipctool
 ipcserver restart: expected: %d, got: %d
 StopJob
@@ -2843,7 +2844,6 @@ steampowered.com
 steamcommunity.com
 valvesoftware.com
 Missing String for %s (%d)
-Unknown
 OK
 Fatal on Lock(): Locked the floor, couldn't release the ceiling: %s
 Fatal on Release(): Locked the ceiling, couldn't release the floor: %s
@@ -5333,8 +5333,8 @@ linux
 Linux;tenfoot
 X-ValveUserAgent
 panorama %s %s
-Aug 19 2021
-15:24:46
+Aug 20 2021
+13:41:40
 X-SteamClientVersion
 Assertion Failed: hostName
 Assertion Failed: pchRemoteHost

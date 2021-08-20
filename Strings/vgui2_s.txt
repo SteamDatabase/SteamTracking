@@ -790,6 +790,7 @@ Assertion Failed: !"Unable to get home directory"
 r
 ../Info.plist
 ../..
+Unknown
 Assertion Failed: (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 1.5.26
@@ -1990,7 +1991,6 @@ s_pSymbolTable
 01/01/00
 Missing String for %s (%d)
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/enum_names.cpp
-Unknown
 EUniverse
 Invalid
 Public
