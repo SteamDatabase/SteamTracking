@@ -81,7 +81,6 @@
  OBJC_CLASS_$_NSURL
  OBJC_CLASS_$_NSUserDefaults
  OBJC_CLASS_$_NSWindow
- OBJC_CLASS_$_NSWorkspace
  OBJC_METACLASS_$_NSObject
  Plat_CommandLineParamExists
  Plat_CommandLineParamValue

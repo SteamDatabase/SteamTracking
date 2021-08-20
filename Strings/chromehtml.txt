@@ -2,8 +2,6 @@ __TEXT
 
 __text
 __TEXT
-`
-`
 __stubs
 __TEXT
 __stub_helper
@@ -2285,8 +2283,8 @@ v
 @
 
 O
-q
 D
+j
 0
 0
 Hi
@@ -2333,7 +2331,7 @@ IcE
 @
 @
 V
-H;5rq
+H;52q
 =
 =
 @

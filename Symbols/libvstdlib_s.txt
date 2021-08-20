@@ -1,5 +1,9 @@
 
+ .objc_class_name_NSArray
+ .objc_class_name_NSFileManager
  .objc_class_name_NSProcessInfo
+ .objc_class_name_NSString
+ .objc_class_name_NSURL
  AssertMsgImplementation
  CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(char const*, ...)
  CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(DbgFmtFatalMsgTag_t*, StringView)
@@ -15,7 +19,11 @@
  Error
  Is64BitOS
  Msg
+ OBJC_CLASS_$_NSArray
+ OBJC_CLASS_$_NSFileManager
  OBJC_CLASS_$_NSProcessInfo
+ OBJC_CLASS_$_NSString
+ OBJC_CLASS_$_NSURL
  Plat_GetProcessArgv
  Plat_OutputDebugString
  Plat_RelativeTicks
@@ -358,6 +366,7 @@
  snprintf
  sprintf
  sscanf
+ std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_string()
  std::exception::what() const
  std::exception::~exception()
  std::terminate()

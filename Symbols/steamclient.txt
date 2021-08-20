@@ -21,7 +21,6 @@
  .objc_class_name_NSURL
  .objc_class_name_NSUserDefaults
  .objc_class_name_NSWindow
- .objc_class_name_NSWorkspace
  AEBuildAppleEvent
  AESendMessage
  AssertMsgImplementation
@@ -220,7 +219,6 @@
  OBJC_CLASS_$_NSURL
  OBJC_CLASS_$_NSUserDefaults
  OBJC_CLASS_$_NSWindow
- OBJC_CLASS_$_NSWorkspace
  OBJC_METACLASS_$_NSObject
  OSAtomicAdd32Barrier
  OSAtomicCompareAndSwapPtrBarrier
@@ -232,6 +230,7 @@
  Plat_FloatTime
  Plat_GetExecutablePath
  Plat_GetExecutablePathUTF8
+ Plat_IsChromeOS
  Plat_IsInDebugSession
  Plat_IsSteamConsoleMode
  Plat_IsSteamOS

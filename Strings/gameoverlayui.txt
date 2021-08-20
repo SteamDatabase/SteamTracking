@@ -47,17 +47,17 @@ __DATA
 )B
 __objc_classrefs__DATA
 __objc_superrefs__DATA
-0,B
-0,B
+(,B
+(,B
 __objc_ivar
 __DATA
-8,B
-8,B
+0,B
+0,B
 __objc_data
 __DATA
-@,B
+8,B
 P
-@,B
+8,B
 __data
 __DATA
 G
@@ -85,10 +85,11 @@ C
 @
 @loader_path/gameoverlayui.dylib
 "
-HHC
+0HC
 P
 j
 k
+poC
 
 *
 8
@@ -9818,8 +9819,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-Aug 11 2021
-10:13:10
+Aug 19 2021
+15:24:13
 crashhandler003
 gameoverlayui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -13803,24 +13804,21 @@ Nov
 Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
-qK(
-GG(
-_G(
 0
 0
--
 -
 p
 0
 0
+zA
 p
 0
 -
-^%
+)%
+h%
 A
 A
 A
-7%
 j
 j
 j
@@ -13833,7 +13831,9 @@ j
 %
 %
 %
+%
 0
+w$
 p
 0
 j
@@ -13842,9 +13842,14 @@ j
 j
 j
 j
+~+
 j
 j
+w$
+#
 +
++
+&$
 j
 j
 j
@@ -13867,7 +13872,6 @@ j
 j
 j
 j
-^?
 j
 j
 j
@@ -13889,7 +13893,6 @@ j
 j
 j
 j
-Y?
 j
 j
 j
@@ -13904,9 +13907,9 @@ j
 j
 j
 j
-4$
+v#
+X$
 Q#
-($
 j
 j
 j
@@ -13926,8 +13929,7 @@ j
 j
 j
 j
-)#
-'#
+_#
 #
 #
 #
@@ -13940,9 +13942,10 @@ j
 "
 "
 "
+#
 M
 d
-0>
+5>
 j
 j
 j
@@ -13955,8 +13958,8 @@ j
 j
 j
 j
-,>
 #
+4>
 
 
 
@@ -13965,7 +13968,7 @@ j
 @
 
 0
-<)
+#"
 "
 "
 "
@@ -13990,18 +13993,19 @@ p
 p
 p
 p
-].
 )
 )
 )
 @
 =
+K"
 
-^!
-.
 0
 0
+H
 \
+.!
+!!
 j
 j
 j
@@ -14041,20 +14045,28 @@ j
 !
 Ic
 !
-Z<
+y<
 Hi
-h
+W!
+Q!
 !
 j
 j
 j
 j
 j
+B
 j
+>
 !
 !
 !
 !
+!
+0
+<
+<
+<
 j
 j
 j
@@ -14071,9 +14083,8 @@ j
 0
 p
 0
-L
-j
-j
+{
+(
 j
 j
 j
@@ -14097,6 +14108,8 @@ j
 ;
 ;
 j
+;
+;
 j
 j
 j
@@ -14104,7 +14117,8 @@ j
 j
 j
 j
-1
+j
+j
 0
 0
 AT=
@@ -14147,16 +14161,15 @@ IcE
 IcE
 @
 @
-S%
 V
+H;5rb$
 =
-P.
 =
 #
 @
 +
 +
-x3
+w*
 @
 M9e
 @
@@ -14354,8 +14367,7 @@ P
 @
 !
 !
-!
-6
+p(
 d
 
 
@@ -14366,8 +14378,7 @@ d
 
 
 A+M
-t7f9_]'
-t7f9LU'
+3'
 j
 j
 j
@@ -14377,6 +14388,8 @@ j
 =
 j
 0
+&
+&
 j
 j
 j
@@ -14432,13 +14445,13 @@ j
 j
 j
 j
-j
-j
 $
 $
 j
+j
 $
 $
+j
 $
 $
 j
@@ -14492,7 +14505,6 @@ j
 j
 j
 j
-J!
 j
 j
 j
@@ -14544,6 +14556,7 @@ j
 j
 j
 @
+t
 j
 j
 j
@@ -14584,6 +14597,7 @@ j
 @
 @
 @
+z
 @
 @
 @

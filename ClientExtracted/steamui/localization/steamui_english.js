@@ -212,7 +212,7 @@
 	"GameList_View_ReadyToPlay_ToolTip2": "• Can be streamed from another machine",
 	"GameList_Entry_ReadyToPlay_ToolTip": "Will be streamed from another machine",
 
-	"GameList_Entry_Invalid_OSType": "Your current macOS (Catalina) is unable to run 32-bit games. This game may not run.",
+	"GameList_Entry_Invalid_OSType": "Your current macOS version is unable to run 32-bit games. This game may not run.",
 	"GameList_Entry_Invalid_OSType2": "This game is Steam Play enabled, so you can play it on Windows via Bootcamp or by using a PC.",
 	"GameList_Entry_Invalid_OSType3": "Learn more.",
 

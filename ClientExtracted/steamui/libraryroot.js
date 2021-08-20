@@ -49894,8 +49894,10 @@
         return (e.active || 0 == e.queue_index) && pa.b.DownloadOverview;
       }
       function hc(e) {
-        (window.location.href = "steam://settings/downloads"),
-          e.stopPropagation();
+        if (!Dt.a.isLocked) {
+          (window.location.href = "steam://settings/downloads"),
+            e.stopPropagation();
+        }
       }
       var _c,
         vc = Object(l.a)(function () {
@@ -49909,7 +49911,11 @@
                 r.createElement(
                   "div",
                   {
-                    className: Object(D.a)(uc.a.AutoUpdateHours, uc.a.NoHours),
+                    className: Object(D.a)(
+                      uc.a.AutoUpdateHours,
+                      uc.a.NoHours,
+                      Dt.a.isLocked && uc.a.ParentalLocked
+                    ),
                     onClick: hc,
                   },
                   Object(I.f)("#Downloads_AutoUpdates_Enabled")
@@ -49920,7 +49926,13 @@
                 { className: uc.a.AutoUpdate },
                 r.createElement(
                   "div",
-                  { className: uc.a.AutoUpdateHours, onClick: hc },
+                  {
+                    className: Object(D.a)(
+                      uc.a.AutoUpdateHours,
+                      Dt.a.isLocked && uc.a.ParentalLocked
+                    ),
+                    onClick: hc,
+                  },
                   r.createElement(
                     "span",
                     null,
@@ -50137,9 +50149,16 @@
                         toolTipContent: r.createElement(Sc, null),
                       },
                       r.createElement(Cc, {
+                        currentBytes: s.update_bytes_downloaded,
+                        totalBytes: s.update_bytes_to_download,
+                        active: t.active,
+                        label: r.createElement(Hl.h, { className: uc.a.Icon }),
+                      }),
+                      r.createElement(Cc, {
                         currentBytes: c,
                         totalBytes: p,
                         active: t.active,
+                        label: r.createElement(Hl.i, { className: uc.a.Icon }),
                       })
                     )
                   ),
@@ -50337,6 +50356,7 @@
         return r.createElement(
           "div",
           { className: Object(D.a)(uc.a.Stat, uc.a.ProgressDetails) },
+          e.label && r.createElement("div", { className: uc.a.Label }, e.label),
           0 != e.currentBytes &&
             Object(I.o)(
               "#Downloads_DownloadedBytesInProgress",
@@ -50353,7 +50373,7 @@
               ),
               r.createElement(
                 "span",
-                { className: uc.a.Value },
+                { className: Object(D.a)(uc.a.Value, uc.a.Denominator) },
                 Object(da.a)(e.totalBytes, 1)
               )
             ),
@@ -50387,7 +50407,7 @@
                 Object(I.f)(e.strToken)
               ),
             e.active &&
-              r.createElement(Hl.s, {
+              r.createElement(Hl.t, {
                 className: Object(D.a)(uc.a.Icon, uc.a.Status),
               }),
             e.completed &&
@@ -50429,13 +50449,13 @@
               completed: e.item.content_update_complete,
             },
             i = {
-              elIcon: r.createElement(Hl.u, { className: uc.a.Icon }),
+              elIcon: r.createElement(Hl.v, { className: uc.a.Icon }),
               strToken: "#Downloads_ContentType_Workshop",
               active: a && e.overview.update_is_workshop,
               completed: e.item.workshop_update_complete,
             },
             s = {
-              elIcon: r.createElement(Hl.r, { className: uc.a.Icon }),
+              elIcon: r.createElement(Hl.s, { className: uc.a.Icon }),
               strToken: "#Downloads_ContentType_Shader",
               active: a && e.overview.update_is_shader,
               completed: e.item.shader_update_complete,
@@ -51766,7 +51786,8 @@
                 {
                   className: Object(D.a)(
                     Vc.a.Throttle,
-                    e.overview.throttling_suspended && Vc.a.Suspended
+                    e.overview.throttling_suspended && Vc.a.Suspended,
+                    Dt.a.isLocked && Vc.a.ParentalLocked
                   ),
                   onClick: hc,
                 },
@@ -51816,7 +51837,8 @@
             (t.prototype.render = function () {
               if (
                 this.props.appid != pc.b &&
-                tt.a.GetAppDetails(this.props.appid)
+                tt.a.GetAppDetails(this.props.appid) &&
+                !Dt.a.BIsAppBlocked(this.props.appid)
               ) {
                 var e = p.a.GetAppOverviewByAppID(this.props.appid),
                   t = tt.a.GetHeroImages(e),
@@ -51968,20 +51990,22 @@
             (t = Object(a.c)([l.a], t))
           );
         })(r.Component),
-        Xc = function () {
+        Xc = Object(l.a)(function () {
           return r.createElement(
             M.d,
             {
               className: Vc.a.SettingsButton,
-              toolTipContent: Object(I.f)("#Downloads_OpenSettings_Tooltip"),
+              toolTipContent:
+                !Dt.a.isLocked &&
+                Object(I.f)("#Downloads_OpenSettings_Tooltip"),
             },
             r.createElement(
               Z.e,
-              { className: Vc.a.Button, onClick: hc },
-              r.createElement(Hl.q, null)
+              { className: Vc.a.Button, onClick: hc, disabled: Dt.a.isLocked },
+              r.createElement(Hl.r, null)
             )
           );
-        },
+        }),
         $c = Object(l.a)(function (e) {
           var t =
             e.appidOverride ||
@@ -63632,19 +63656,16 @@
           return (
             Object(a.d)(t, e),
             (t.prototype.RemoveFolder = function (e) {
-              var t = this,
-                n = Object(w.n)(e);
+              var t = Object(w.n)(e);
               SteamClient.InstallFolder.RemoveInstallFolder(
                 this.props.drive.nFolderIndex
               )
-                .then(function () {
-                  return t.props.parent.setState({ selectedFolder: 0 });
-                })
+                .then()
                 .catch(function (e) {
-                  var t = Number(e.message),
+                  var n = Number(e.message),
                     a = "Steam";
-                  if (t > 7) {
-                    var o = p.a.GetAppOverviewByAppID(t);
+                  if (n > 7) {
+                    var o = p.a.GetAppOverviewByAppID(n);
                     o && (a = o.display_name);
                   }
                   Object(J.d)(
@@ -63655,7 +63676,7 @@
                         a
                       ),
                     }),
-                    n,
+                    t,
                     {}
                   );
                 });
@@ -63871,7 +63892,8 @@
               return (
                 e.strUserLabel.length > 0
                   ? ((o = e.strUserLabel),
-                    e.strDriveName.length < 4 &&
+                    e.strDriveName.length > 1 &&
+                      e.strDriveName.length < 4 &&
                       (o += " (" + e.strDriveName + ")"))
                   : (o =
                       e.strDriveName.length < 4
@@ -63901,7 +63923,8 @@
                       return n.SelectFolder(e.nFolderIndex);
                     },
                   },
-                  r.createElement(Hl.i, null),
+                  e.bIsFixed && r.createElement(Hl.i, null),
+                  !e.bIsFixed && r.createElement(Hl.q, null),
                   r.createElement(
                     "div",
                     { className: jm.a.FolderInfo },
@@ -63910,7 +63933,7 @@
                       { className: jm.a.DriveName },
                       o,
                       " ",
-                      e.bIsDefaultFolder && r.createElement(Hl.t, null),
+                      e.bIsDefaultFolder && r.createElement(Hl.u, null),
                       " "
                     ),
                     r.createElement(
@@ -64012,7 +64035,7 @@
                           r.createElement(
                             "div",
                             { className: jm.a.AppInfoItem },
-                            r.createElement(Hl.u, null),
+                            r.createElement(Hl.v, null),
                             r.createElement(
                               "span",
                               {
@@ -64097,26 +64120,36 @@
             }),
             (t.prototype.OnGamepadButtonDown = function (e, t) {}),
             (t.prototype.render = function () {
-              var e = this,
-                t = Bm.a.MountedInstallFolders,
-                n = Bm.a.GetFolder(this.state.selectedFolder),
-                a = Number(n.strCapacity),
-                o = Number(n.strUsedSize),
-                i = Number(n.strDLCSize),
-                s = Number(n.strWorkshopSize),
-                l = o - i - s,
-                c = Number(n.strFreeSpace),
-                p = a - o - c;
-              p < 0 && (p = 0);
-              var d = (100 * l) / a,
-                u = (100 * i) / a,
-                m = (100 * s) / a,
-                h = (100 * p) / a,
-                _ = n.vecApps.slice();
-              Pm(_, this.state.sortBy, this.state.sortAsc);
-              var v = _.length > 500,
-                f = this.state.selectedApps.length > 0,
-                b = Bm.a.MountedInstallFolders.length > 1;
+              var e,
+                t = this,
+                n = Bm.a.MountedInstallFolders,
+                a = n[0];
+              for (
+                e = 1;
+                e < n.length &&
+                !(n[e].nFolderIndex > this.state.selectedFolder);
+                e++
+              )
+                a = n[e];
+              a.nFolderIndex != this.state.selectedFolder &&
+                this.SelectFolder(a.nFolderIndex);
+              var o = Number(a.strCapacity),
+                i = Number(a.strUsedSize),
+                s = Number(a.strDLCSize),
+                l = Number(a.strWorkshopSize),
+                c = i - s - l,
+                p = Number(a.strFreeSpace),
+                d = o - i - p;
+              d < 0 && (d = 0);
+              var u = (100 * c) / o,
+                m = (100 * s) / o,
+                h = (100 * l) / o,
+                _ = (100 * d) / o,
+                v = a.vecApps.slice();
+              Pm(v, this.state.sortBy, this.state.sortAsc);
+              var f = v.length > 500,
+                b = this.state.selectedApps.length > 0,
+                g = Bm.a.MountedInstallFolders.length > 1;
               return r.createElement(
                 Z.b,
                 {
@@ -64143,16 +64176,16 @@
                 r.createElement(
                   Zs,
                   { className: jm.a.PageableCarousel },
-                  function (n, a) {
+                  function (e, a) {
                     return r.createElement(
                       Fs,
                       {
                         className: jm.a.NewDLCImages,
-                        ref: n,
+                        ref: e,
                         fnUpdateArrows: a,
                       },
-                      t.map(function (t, n) {
-                        return e.RenderFolder(t, n);
+                      n.map(function (e, n) {
+                        return t.RenderFolder(e, n);
                       }),
                       r.createElement(
                         H.a,
@@ -64162,8 +64195,8 @@
                             jm.a.InstallFolder,
                             jm.a.AddFolder
                           ),
-                          onClick: function (t) {
-                            return e.AddFolder();
+                          onClick: function (e) {
+                            return t.AddFolder();
                           },
                         },
                         r.createElement(Hl.a, null)
@@ -64188,28 +64221,28 @@
                             jm.a.DriveUsageBar,
                             jm.a.DriveUsageGames
                           ),
-                          style: { width: d + "%" },
+                          style: { width: u + "%" },
                         }),
                         r.createElement("div", {
                           className: Object(D.a)(
                             jm.a.DriveUsageBar,
                             jm.a.DriveUsageDLC
                           ),
-                          style: { width: u + "%" },
+                          style: { width: m + "%" },
                         }),
                         r.createElement("div", {
                           className: Object(D.a)(
                             jm.a.DriveUsageBar,
                             jm.a.DriveUsageWorkshop
                           ),
-                          style: { width: m + "%" },
+                          style: { width: h + "%" },
                         }),
                         r.createElement("div", {
                           className: Object(D.a)(
                             jm.a.DriveUsageBar,
                             jm.a.DriveUsageOther
                           ),
-                          style: { width: h + "%" },
+                          style: { width: _ + "%" },
                         })
                       ),
                       r.createElement(
@@ -64235,11 +64268,11 @@
                             "span",
                             { className: jm.a.DriveUsageNumber },
                             " ",
-                            Object(da.a)(l, 2),
+                            Object(da.a)(c, 2),
                             " "
                           )
                         ),
-                        i > 0 &&
+                        s > 0 &&
                           r.createElement(
                             "span",
                             { className: jm.a.AppUsageItem },
@@ -64260,11 +64293,11 @@
                               "span",
                               { className: jm.a.DriveUsageNumber },
                               " ",
-                              Object(da.a)(i, 2),
+                              Object(da.a)(s, 2),
                               " "
                             )
                           ),
-                        s > 0 &&
+                        l > 0 &&
                           r.createElement(
                             "span",
                             { className: jm.a.AppUsageItem },
@@ -64285,7 +64318,7 @@
                               "span",
                               { className: jm.a.DriveUsageNumber },
                               " ",
-                              Object(da.a)(s, 2),
+                              Object(da.a)(l, 2),
                               " "
                             )
                           ),
@@ -64309,7 +64342,7 @@
                             "span",
                             { className: jm.a.DriveUsageNumber },
                             " ",
-                            Object(da.a)(p, 2),
+                            Object(da.a)(d, 2),
                             " "
                           )
                         ),
@@ -64333,13 +64366,13 @@
                             "span",
                             { className: jm.a.DriveUsageNumber },
                             " ",
-                            Object(da.a)(c, 2),
+                            Object(da.a)(p, 2),
                             " "
                           )
                         )
                       )
                     ),
-                    r.createElement(Gm, { drive: n, parent: this }),
+                    r.createElement(Gm, { drive: a }),
                     this.state.strErrorMsg.length > 0 &&
                       r.createElement(
                         "div",
@@ -64361,7 +64394,7 @@
                           "div",
                           { className: jm.a.AppHeaderValue },
                           " ",
-                          n.vecApps.length,
+                          a.vecApps.length,
                           " "
                         ),
                         r.createElement("div", { className: jm.a.Rule }),
@@ -64375,8 +64408,8 @@
                       "div",
                       { className: jm.a.LibraryInventory },
                       " ",
-                      _.map(function (t, a) {
-                        return e.RenderApp(t, n.bIsMounted, !v);
+                      v.map(function (e, n) {
+                        return t.RenderApp(e, a.bIsMounted, !f);
                       }),
                       " "
                     )
@@ -64385,7 +64418,7 @@
                 r.createElement(
                   H.a,
                   { className: jm.a.AppActionBar },
-                  f &&
+                  b &&
                     r.createElement(
                       "div",
                       { className: jm.a.AppActionSelected },
@@ -64403,9 +64436,9 @@
                     {
                       className: Object(D.a)(
                         jm.a.ActionButton,
-                        f && jm.a.ActionButtonActive
+                        b && jm.a.ActionButtonActive
                       ),
-                      disabled: !f,
+                      disabled: !b,
                       onClick: this.UninstallApps,
                     },
                     Object(I.f)("#ContentManagement_UninstallButton")
@@ -64415,9 +64448,9 @@
                     {
                       className: Object(D.a)(
                         jm.a.ActionButton,
-                        f && b && jm.a.ActionButtonActive
+                        b && g && jm.a.ActionButtonActive
                       ),
-                      disabled: !(f && b),
+                      disabled: !(b && g),
                       onClick: this.MoveApps,
                     },
                     Object(I.f)("#ContentManagement_MoveButton")
@@ -71566,6 +71599,8 @@
         ProgressDetails: "downloads_ProgressDetails_sv3ZH",
         Value: "downloads_Value_1dHjj",
         InProgress: "downloads_InProgress_3Wavc",
+        Denominator: "downloads_Denominator_2ckIr",
+        Label: "downloads_Label_3a973",
         SectionItem: "downloads_SectionItem_1VNuY",
         Dragging: "downloads_Dragging_3-SbB",
         DragHandle: "downloads_DragHandle_14DhZ",
@@ -71600,6 +71635,7 @@
         AutoUpdate: "downloads_AutoUpdate_qrwf3",
         ToggleButton: "downloads_ToggleButton_2T7up",
         AutoUpdateHours: "downloads_AutoUpdateHours_117rQ",
+        ParentalLocked: "downloads_ParentalLocked_3-YeK",
         UpdateHours: "downloads_UpdateHours_34F9w",
         NoHours: "downloads_NoHours_Sil68",
         EmptyTransfers: "downloads_EmptyTransfers_1zv2D",
@@ -82505,6 +82541,7 @@
         LegendText: "downloadgraph_LegendText_1iulC",
         Network: "downloadgraph_Network_33jqE",
         Disk: "downloadgraph_Disk_1QHr4",
+        ParentalLocked: "downloadgraph_ParentalLocked_1Psip",
         ThrottleValue: "downloadgraph_ThrottleValue_3XTah",
         Suspended: "downloadgraph_Suspended_17abq",
         Empty: "downloadgraph_Empty_pHDI1",

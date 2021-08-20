@@ -11,6 +11,10 @@
  CValidator::Push(char const*, void*, char const*)
  FSPathMakeRef
  LSCopyKindStringForRef
+ OBJC_CLASS_$_NSArray
+ OBJC_CLASS_$_NSFileManager
+ OBJC_CLASS_$_NSString
+ OBJC_CLASS_$_NSURL
  Plat_GetExecutablePath
  Plat_ctime
  SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)

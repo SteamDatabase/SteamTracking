@@ -1,9 +1,8 @@
-(
 __TEXT
 __text
 __TEXT
-P@
-P@
+>
+>
 __stubs
 __TEXT
 __stub_helper
@@ -13,6 +12,8 @@ __TEXT
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
+__objc_methname
+__TEXT
 __unwind_info
 __TEXT
 __DATA
@@ -28,6 +29,10 @@ __mod_init_func
 __DATA
 __const
 __DATA
+__objc_imageinfo__DATA
+__objc_selrefs
+__DATA
+__objc_classrefs__DATA
 __data
 __DATA
 __thread_vars
@@ -66,6 +71,8 @@ x
 /usr/lib/libSystem.B.dylib
 h
 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+8
+/usr/lib/libobjc.A.dylib
 &
 )
 public

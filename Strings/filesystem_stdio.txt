@@ -1,8 +1,6 @@
 __TEXT
 __text
 __TEXT
-`Z
-`Z
 __stubs
 __TEXT
 __stub_helper
@@ -11,6 +9,8 @@ __cstring
 __TEXT
 __gcc_except_tab__TEXT
 __const
+__TEXT
+__objc_methname
 __TEXT
 __unwind_info
 __TEXT
@@ -28,9 +28,6 @@ __DATA
 __la_symbol_ptr
 __DATA
 d
-__mod_init_func
-__DATA
-(
 __
 15CBaseFileSystem
 11IFileSystem

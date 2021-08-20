@@ -1,8 +1,11 @@
 
+ .objc_class_name_NSArray
  .objc_class_name_NSAutoreleasePool
  .objc_class_name_NSBundle
+ .objc_class_name_NSFileManager
  .objc_class_name_NSProcessInfo
  .objc_class_name_NSString
+ .objc_class_name_NSURL
  BreakpadAddUploadParameter
  BreakpadCreate
  BreakpadGenerateAndSendReport
@@ -12,10 +15,13 @@
  CFDictionaryCreate
  CFRelease
  CFStringCreateWithCString
+ OBJC_CLASS_$_NSArray
  OBJC_CLASS_$_NSAutoreleasePool
  OBJC_CLASS_$_NSBundle
+ OBJC_CLASS_$_NSFileManager
  OBJC_CLASS_$_NSProcessInfo
  OBJC_CLASS_$_NSString
+ OBJC_CLASS_$_NSURL
  T Breakpad_SetSteamID
  T CreateInterface
  _NSGetArgc

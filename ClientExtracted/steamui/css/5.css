@@ -12510,12 +12510,33 @@ div.ShortWindow
   text-transform: uppercase;
   color: #8b929a;
 }
+.downloads_Active_IbePL .downloads_ProgressDetails_sv3ZH {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  padding-top: 4px;
+  line-height: 14px;
+}
 .downloads_ProgressDetails_sv3ZH .downloads_Value_1dHjj {
   color: #8b929a;
 }
 .downloads_ProgressDetails_sv3ZH
   .downloads_Value_1dHjj.downloads_InProgress_3Wavc {
   color: #dcdedf;
+}
+.downloads_ProgressDetails_sv3ZH
+  .downloads_Value_1dHjj.downloads_Denominator_2ckIr {
+  text-align: left;
+}
+.downloads_ProgressDetails_sv3ZH .downloads_Label_3a973 {
+  height: 18px;
+  width: 18px;
+  padding-right: 5px;
+  flex: 0 0 auto;
+}
+.downloads_ProgressDetails_sv3ZH .downloads_Icon_-OgRz {
+  height: 100%;
+  width: 100%;
 }
 .downloads_SectionItem_1VNuY {
   display: flex;
@@ -12732,11 +12753,22 @@ div.ShortWindow
   display: flex;
   height: 22px;
   align-items: center;
+  flex-direction: row;
 }
 .downloads_SectionItem_1VNuY
   .downloads_DetailsAndType_Bku7J
-  .downloads_ProgressDetails_sv3ZH {
-  margin-right: 5px;
+  .downloads_ProgressDetails_sv3ZH:not(:last-child) {
+  margin-right: 10px;
+}
+.downloads_SectionItem_1VNuY.downloads_Active_IbePL
+  .downloads_DetailsAndType_Bku7J {
+  flex-grow: 1;
+  height: auto;
+}
+.downloads_SectionItem_1VNuY.downloads_Active_IbePL
+  .downloads_Right_2WEwE
+  .downloads_DetailsAndType_Bku7J {
+  justify-content: flex-end;
 }
 .downloads_SectionItem_1VNuY .downloads_RemoveFromQueue_2xR-V {
   opacity: 0;
@@ -12849,7 +12881,7 @@ div.ShortWindow
   flex-grow: 1;
 }
 .downloads_SectionItemStatus_1Sygg .downloads_DetailsAndType_Bku7J {
-  display: block;
+  display: flex;
 }
 .downloads_SectionItemStatus_1Sygg
   .downloads_State_2ns4w.downloads_Downloading_33BlY {
@@ -12937,6 +12969,9 @@ div.ShortWindow
   color: #8b929a;
   display: flex;
   flex-direction: row;
+}
+.downloads_AutoUpdateHours_117rQ.downloads_ParentalLocked_3-YeK {
+  cursor: auto;
 }
 .downloads_AutoUpdateHours_117rQ .downloads_UpdateHours_34F9w {
   color: #dcdedf;
@@ -13323,6 +13358,9 @@ div.ShortWindow
   letter-spacing: 0.25px;
   text-transform: uppercase;
   color: #b8bcbf;
+}
+.downloadgraph_Throttle_38T9T.downloadgraph_ParentalLocked_1Psip {
+  cursor: auto;
 }
 .downloadgraph_Throttle_38T9T .downloadgraph_ThrottleValue_3XTah {
   color: #fff;

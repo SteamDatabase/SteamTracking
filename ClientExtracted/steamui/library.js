@@ -1,5 +1,5 @@
 /* Third-party software licenses can be found at licenses.txt */
-var CLSTAMP = "6716822";
+var CLSTAMP = "6735131";
 !(function (e) {
   function t(t) {
     for (
@@ -41605,16 +41605,16 @@ var CLSTAMP = "6716822";
   },
   VSEn: function (e, t, n) {
     "use strict";
-    n.d(t, "u", function () {
+    n.d(t, "v", function () {
       return c;
     }),
-      n.d(t, "q", function () {
+      n.d(t, "r", function () {
         return u;
       }),
       n.d(t, "g", function () {
         return l;
       }),
-      n.d(t, "t", function () {
+      n.d(t, "u", function () {
         return d;
       }),
       n.d(t, "j", function () {
@@ -41647,7 +41647,7 @@ var CLSTAMP = "6716822";
       n.d(t, "b", function () {
         return w;
       }),
-      n.d(t, "r", function () {
+      n.d(t, "s", function () {
         return B;
       }),
       n.d(t, "n", function () {
@@ -41659,14 +41659,17 @@ var CLSTAMP = "6716822";
       n.d(t, "e", function () {
         return C;
       }),
-      n.d(t, "p", function () {
+      n.d(t, "q", function () {
         return M;
       }),
-      n.d(t, "s", function () {
+      n.d(t, "p", function () {
         return j;
       }),
-      n.d(t, "k", function () {
+      n.d(t, "t", function () {
         return A;
+      }),
+      n.d(t, "k", function () {
+        return R;
       });
     var r = n("mrSG"),
       i = n("q1tI"),
@@ -42086,12 +42089,32 @@ var CLSTAMP = "6716822";
         ),
         i.createElement("path", {
           d:
-            "M28 6V2H24V6H12V2H8V6H4V32H26C27.5913 32 29.1174 31.3679 30.2426 30.2426C31.3679 29.1174 32 27.5913 32 26V6H28ZM18 25H10V21H18V25ZM26 17H10V13H26V17Z",
+            "M12 4L4 12V32H32V4H12ZM16 16H12V8H16V16ZM22 16H18V8H22V16ZM28 16H24V8H28V16Z",
           fill: "currentColor",
         })
       );
     }
     function j(e) {
+      return i.createElement(
+        "svg",
+        Object(r.a)(
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+          },
+          e
+        ),
+        i.createElement("path", {
+          d:
+            "M28 6V2H24V6H12V2H8V6H4V32H26C27.5913 32 29.1174 31.3679 30.2426 30.2426C31.3679 29.1174 32 27.5913 32 26V6H28ZM18 25H10V21H18V25ZM26 17H10V13H26V17Z",
+          fill: "currentColor",
+        })
+      );
+    }
+    function A(e) {
       return i.createElement(
         "svg",
         Object(r.a)(
@@ -42147,7 +42170,7 @@ var CLSTAMP = "6716822";
         })
       );
     }
-    function A(e) {
+    function R(e) {
       return i.createElement(
         "svg",
         Object(r.a)(
@@ -44072,9 +44095,6 @@ var CLSTAMP = "6716822";
             },
             enumerable: !1,
             configurable: !0,
-          }),
-          (e.prototype.GetFolder = function (e) {
-            return this.m_InstallFolders[e];
           }),
           Object(r.c)([i.C], e.prototype, "m_InstallFolders", void 0),
           Object(r.c)([i.k.bound], e.prototype, "OnInstallFolderChanges", null),

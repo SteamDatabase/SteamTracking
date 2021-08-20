@@ -11,7 +11,11 @@
  NSUnLinkModule
  NXFindBestFatArch
  NXGetLocalArchInfo
+ OBJC_CLASS_$_NSArray
+ OBJC_CLASS_$_NSFileManager
  OBJC_CLASS_$_NSProcessInfo
+ OBJC_CLASS_$_NSString
+ OBJC_CLASS_$_NSURL
  R typeinfo name for std::__1::__basic_string_common<true>
  R typeinfo name for std::__1::bad_function_call
  R typeinfo name for std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >

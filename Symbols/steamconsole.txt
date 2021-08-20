@@ -14,6 +14,10 @@
  GetSpewOutputFunc
  KeyValuesSystemSteam
  Msg
+ OBJC_CLASS_$_NSArray
+ OBJC_CLASS_$_NSFileManager
+ OBJC_CLASS_$_NSString
+ OBJC_CLASS_$_NSURL
  Plat_CommandLineParamExists
  Plat_FloatTime
  Plat_GetExecutablePath
