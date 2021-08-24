@@ -2502,6 +2502,8 @@ a {
   .microheader_LoginLanguage_204pi
   .microheader_Login_1RIIB {
   font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   margin-left: 20px;
   font-weight: 600;
   text-transform: uppercase;
@@ -18536,7 +18538,6 @@ a {
   .patchnotespage_AbilityIcon_2dkGQ {
   width: 55px;
   height: 55px;
-  min-width: 55px;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -21079,11 +21080,10 @@ a {
   .dpcmatchbanner_ScheduleBumper_3ul_W
   .dpcmatchbanner_ScheduleLink_nZIjX {
   border: 1px solid #a3a3a3;
-  border-radius: 2px;
-  padding: 10px 15px;
-  background-color: transparent;
+  padding: 4px 8px;
+  background-color: #000;
   color: #a3a3a3;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -21096,8 +21096,8 @@ a {
   .dpcmatchbanner_NodeList_2f4tt
   .dpcmatchbanner_ScheduleBumper_3ul_W
   .dpcmatchbanner_ScheduleLink_nZIjX:hover {
-  border-color: #fff;
-  color: #fff;
+  border-color: #ccc;
+  color: #ccc;
 }
 .dpcmatchbanner_MatchesContainer_T5fzO
   .dpcmatchbanner_MatchesScroller_2vFED
