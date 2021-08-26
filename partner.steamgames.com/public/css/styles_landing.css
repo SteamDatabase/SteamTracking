@@ -653,6 +653,7 @@ p {
 		font-weight: normal;
         position: sticky;
         top: 0;
+		z-index: 1px;
 	}
 
 	.landingTable tr:not(:first-child), .landingTable .tr:not(:first-child) {
@@ -3250,6 +3251,11 @@ div .cdkey_request_details_row
     padding: 10px 16px 10px 16px;
     background: #4a4a4a;
     border-bottom: 1px solid black;
+}
+
+.event_past {
+    opacity: 0.6;
+    filter: saturate(0);
 }
 
 .joined_text {

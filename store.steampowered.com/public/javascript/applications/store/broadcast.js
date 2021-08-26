@@ -9950,7 +9950,12 @@
                 St.k && St.k.logged_in && this.m_chat
                   ? s.createElement(
                       "div",
-                      null,
+                      {
+                        className: Object(nr.a)(
+                          or.a.ChatEntryCtn,
+                          "ChatEntryCtn"
+                        ),
+                      },
                       s.createElement(
                         "div",
                         {

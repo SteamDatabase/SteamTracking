@@ -381,6 +381,10 @@ a.home_block_footer_btn:hover {
 	box-shadow: none;
 }
 
+.home_tabs_content h2.tab_content_title {
+	display: none;
+}
+
 .home_specials_ctn .slider_ctn.store_autoslider {
 	margin-bottom: 2px;
 }
@@ -2369,7 +2373,7 @@ background: -webkit-linear-gradient( left, #bce2f7 5%,#b9e1f7 95%);
 /* Curators */
 .curator_giant_capsule {
 	position: relative;
-	box-shadow: 0 0 4px #000;	
+	box-shadow: 0 0 4px #000;
 	display: block;
 	clear: both;
 	overflow: hidden; /* Crops subpixels we get from percentage scaled screenshots */
@@ -2626,7 +2630,7 @@ background: -webkit-linear-gradient( left, #223b4f 5%,#25435b 95%);
 /*
  * Recommended by Steam Labs widget
  */
- 
+
 .labs_cluster {
 	background: none;
 
@@ -2657,7 +2661,7 @@ background: -webkit-linear-gradient( left, #223b4f 5%,#25435b 95%);
 	color: #fff;
 	letter-spacing: 2px;
 }
-	
+
 .recommended_by_steam_labs_ctn
 {
 	position: relative;
@@ -2698,7 +2702,7 @@ body.v6 .recommended_by_steam_labs_ctn .header_inline_reason {
 
 		;
 	font-size: 14px;
-	text-transform:uppercase;	
+	text-transform:uppercase;
 	letter-spacing: 1px;
     	font-weight: normal;
 	padding-top: 2px;
@@ -2764,7 +2768,7 @@ body.v6 .recommended_by_deep_dive_method {
 }
 
 .recommended_by_steam_labs_ctn .lower_pad_block {
-    
+
 }
 
 .recommended_by_steam_labs_ctn .lower_right_block {
@@ -2806,16 +2810,16 @@ body.v6 .recommended_by_deep_dive_method {
 	z-index: -1;
 }
 
-.recommended_by_steam_labs_ctn .btnv6_white_transparent { 
+.recommended_by_steam_labs_ctn .btnv6_white_transparent {
 		z-index: 10;
 }
 
 
-.recommended_by_steam_labs_ctn .btnv6_white_transparent { 
+.recommended_by_steam_labs_ctn .btnv6_white_transparent {
 		float: right;
 }
 
-.recommended_by_steam_labs_ctn.home_ctn.ir_ctn .btnv6_white_transparent { 
+.recommended_by_steam_labs_ctn.home_ctn.ir_ctn .btnv6_white_transparent {
 		margin-top: 32px;
 }
 
@@ -2844,11 +2848,11 @@ body.v6 .discovery_queue_ctn h2, body.v6 .steam_curators_ctn h2, body.v6 .apps_r
 
 .recommended_by_steam_labs_fore_img {
 	position: absolute;
-	transform: rotateY(-40deg) translateY(25px) translateZ(20px); 
+	transform: rotateY(-40deg) translateY(25px) translateZ(20px);
 	height: 93px;
 	box-shadow: 0px 0px 0px rgba(28, 95, 138);
 }
-	
+
 .recommended_by_steam_labs_back_img {
 	position: absolute;
 	top: 0;
@@ -4519,7 +4523,7 @@ body.v6 .discovery_queue_ctn h2 {
     background: -o-linear-gradient(top,  rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.5) 100%); /* Opera 11.10+ */
     background: -ms-linear-gradient(top,  rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.5) 100%); /* IE10+ */
     background: linear-gradient(to bottom,  rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.5) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d000000', endColorstr='#80000000',GradientType=0 ); /* IE6-9 */	 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d000000', endColorstr='#80000000',GradientType=0 ); /* IE6-9 */
 	background-image: url( '/public/images/v6/home/logo_steam_piston.png' );
 	background-repeat: no-repeat;
 	background-position: top center;
