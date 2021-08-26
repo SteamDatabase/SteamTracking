@@ -399,7 +399,7 @@
                         },
                         onClick: this.OnSearchSubmit,
                       },
-                      r.a.createElement(g.E, null)
+                      r.a.createElement(g.F, null)
                     )
                   )
                 )
