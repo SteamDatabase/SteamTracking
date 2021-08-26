@@ -9543,64 +9543,37 @@
           var t = e.title,
             a = e.content,
             o = e.bIsPreview,
-            i = e.elSideBars,
-            s = Object(u.i)();
-          return (
-            r.a.useEffect(
-              function () {
-                var e,
-                  t,
-                  a,
-                  o =
-                    null === (e = null == s ? void 0 : s.hash) || void 0 === e
-                      ? void 0
-                      : e.substr(
-                          "#" ===
-                            (null === (t = null == s ? void 0 : s.hash) ||
-                            void 0 === t
-                              ? void 0
-                              : t.substr(0, 1))
-                            ? 1
-                            : 0
-                        );
-                o &&
-                  (null === (a = document.getElementById(o)) ||
-                    void 0 === a ||
-                    a.scrollIntoView({ block: "start", behavior: "smooth" }));
-              },
-              [s]
+            i = e.elSideBars;
+          return r.a.createElement(
+            "div",
+            { className: Object(b.a)(Ze.FAQViewPage, f.c.LANGUAGE) },
+            r.a.createElement(
+              "a",
+              { className: Ze.SupportTitle, href: "" + f.c.HELP_BASE_URL },
+              Object(z.f)("#FAQViewer_SteamSupport")
             ),
             r.a.createElement(
               "div",
-              { className: Object(b.a)(Ze.FAQViewPage, f.c.LANGUAGE) },
+              { className: Ze.Columns },
               r.a.createElement(
-                "a",
-                { className: Ze.SupportTitle, href: "" + f.c.HELP_BASE_URL },
-                Object(z.f)("#FAQViewer_SteamSupport")
+                "div",
+                { className: Object(b.a)(Ze.LeftCol) },
+                r.a.createElement("div", { className: Ze.TopColorBar }),
+                r.a.createElement(
+                  "div",
+                  { className: Ze.FAQTopicCtn },
+                  r.a.createElement("div", { className: Ze.FAQTitle }, t),
+                  r.a.createElement(
+                    "div",
+                    { className: Ze.FAQContent },
+                    r.a.createElement(d.a, { text: a, bShowErrorInfo: o })
+                  )
+                )
               ),
               r.a.createElement(
                 "div",
-                { className: Ze.Columns },
-                r.a.createElement(
-                  "div",
-                  { className: Object(b.a)(Ze.LeftCol) },
-                  r.a.createElement("div", { className: Ze.TopColorBar }),
-                  r.a.createElement(
-                    "div",
-                    { className: Ze.FAQTopicCtn },
-                    r.a.createElement("div", { className: Ze.FAQTitle }, t),
-                    r.a.createElement(
-                      "div",
-                      { className: Ze.FAQContent },
-                      r.a.createElement(d.a, { text: a, bShowErrorInfo: o })
-                    )
-                  )
-                ),
-                r.a.createElement(
-                  "div",
-                  { className: Ze.RightCol },
-                  r.a.createElement("div", { className: Ze.SectionCtn }, i)
-                )
+                { className: Ze.RightCol },
+                r.a.createElement("div", { className: Ze.SectionCtn }, i)
               )
             )
           );
