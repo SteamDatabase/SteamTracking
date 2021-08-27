@@ -5435,25 +5435,6 @@ Body.v6.tag_page.contenthub_page {
   font-weight: 300;
   margin-bottom: 8px;
 }
-.contenthubmaincarousel_ContentHubTitleCtn_2cFtC {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 36px;
-}
-.contenthubmaincarousel_ContentHubTitle_saHqN {
-  font-size: 36px;
-  font-weight: 300;
-}
-.contenthubmaincarousel_ContentHubSubtitle_11kuP {
-  font-size: 18px;
-  font-weight: 300;
-  opacity: 50%;
-}
-.contenthubmaincarousel_ContentHubPlaceholder_ZZAuj {
-  font-size: 24px;
-  font-weight: bold;
-}
 .creatorhomeembed_DevSummaryCtn_1k0S- {
   flex-grow: 1;
   flex-basis: 0;
@@ -7760,7 +7741,6 @@ a.eventreminder_ReminderOption_26nnh
   z-index: 2000;
 }
 .eventreminder_ReminderCheckBox_vPo2j {
-  width: fit-content;
   display: flex;
   font-size: 14px;
   overflow: hidden;
@@ -10592,7 +10572,7 @@ html.responsive.touch .partnersaledisplay_SaleSectionTabs_1FPIV {
   font-size: 16px;
   min-width: max-content;
   width: auto;
-  padding: 0px 18px;
+  padding: 0px 6px;
   cursor: pointer;
   user-select: none;
 }

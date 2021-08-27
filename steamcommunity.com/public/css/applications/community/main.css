@@ -831,19 +831,6 @@ body.modals_BodyNoScrollDialog_105OB {
   max-width: 100%;
   max-height: 100%;
 }
-.logsettings_DropDownRow_cv_p8 {
-  display: flex;
-  width: 100%;
-}
-.logsettings_DropDownRow_cv_p8 .logsettings_IconContainer_ka3_o {
-  width: 2ch;
-  height: 100%;
-  flex-shrink: 0;
-  margin-right: 1ch;
-}
-.logsettings_DropDownRow_cv_p8 .logsettings_Label_3ces1 {
-  flex-grow: 1;
-}
 body,
 body.shared_common_v6_2Lxgd {
   color: #969696;
@@ -1211,8 +1198,6 @@ button.DialogButton::-moz-focus-inner {
 }
 .DialogToggle_Label {
   user-select: none;
-  display: flex;
-  flex-direction: row;
 }
 .DialogToggle_Label span {
   display: flex;
