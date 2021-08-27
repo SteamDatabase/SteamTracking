@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6730723";
+var CLSTAMP = "6741575";
 !(function (e) {
   function t(t) {
     for (
@@ -125,7 +125,7 @@ var CLSTAMP = "6730723";
                 13: "21f76cac7ec374ea4600",
                 14: "d538a2cefb69709eca61",
                 15: "9b8a3bff26f66f2a2229",
-                16: "c0d3d246b135b3f40f47",
+                16: "79fed8c1b1a1d7f2d036",
                 17: "1a068df0f412c8192af9",
                 18: "caddb2553ee7435599e4",
                 19: "fe2f68990e66a1c2131b",
@@ -155,11 +155,11 @@ var CLSTAMP = "6730723";
                 43: "688d3f08398931f00c62",
                 44: "d2126623557b50bd36d1",
                 45: "a654ea6b8c3c51d5b1fa",
-                46: "f9a456136762286dcb26",
+                46: "83f303a8920b635da253",
                 47: "7205f7f9e11b05a72f44",
-                48: "4223e46facb7c29c1707",
+                48: "e18c0b4ac58809b82f19",
                 49: "56bfcac8fbf8416378a6",
-                50: "5e6ef9d3c4db34fe5221",
+                50: "2c9b243292817fe2630f",
                 51: "a9409c65079e0cfbee18",
                 52: "06689d31954a6dc36018",
                 53: "26125e0eeb044a53dfa8",
@@ -167,16 +167,16 @@ var CLSTAMP = "6730723";
                 55: "9b7ce6805349b62fa32e",
                 56: "e4ce2f2c8f621618b9d8",
                 57: "1ed5b0e1776861201fae",
-                58: "d50ea8bfc2010f91f940",
+                58: "38b2d53085598ce6ebe0",
                 59: "52319e5b928686d48d6d",
                 60: "41b9ad95d01b2c1f7217",
                 61: "f8c88b409724a5e18a3f",
                 62: "8c630d9768c661688fc1",
-                63: "9aa686aacb62846675c3",
-                64: "b01f2175260d52658d29",
-                65: "3c4d8437a78e3345357e",
+                63: "291ca2cd18e09fb91ca5",
+                64: "21607172ca0f3378ebfc",
+                65: "73bb327b027283170fe9",
                 66: "08ed047a1e2ed6f8d835",
-                67: "95548a1026d57b380b2b",
+                67: "447a7206b84fd87b94a2",
                 68: "c9194cea18f23c6108f1",
               }[e]
             );
@@ -1265,7 +1265,7 @@ var CLSTAMP = "6730723";
               (this.m_bValid = !0),
               (this.m_bReady = !0);
           }),
-          Object(r.c)([i.C], e.prototype, "m_bReady", void 0),
+          Object(r.c)([i.B], e.prototype, "m_bReady", void 0),
           Object(r.c)([i.k], e.prototype, "InitInvalid", null),
           Object(r.c)([i.k], e.prototype, "InitDirectInvite", null),
           e
@@ -1832,12 +1832,12 @@ var CLSTAMP = "6730723";
             (this.customlist = void 0);
         }
         return (
-          Object(r.c)([o.C], e.prototype, "enabled", void 0),
-          Object(r.c)([o.C], e.prototype, "locked", void 0),
-          Object(r.c)([o.C], e.prototype, "features", void 0),
-          Object(r.c)([o.C], e.prototype, "allowallapps", void 0),
-          Object(r.c)([o.C], e.prototype, "baselist", void 0),
-          Object(r.c)([o.C], e.prototype, "customlist", void 0),
+          Object(r.c)([o.B], e.prototype, "enabled", void 0),
+          Object(r.c)([o.B], e.prototype, "locked", void 0),
+          Object(r.c)([o.B], e.prototype, "features", void 0),
+          Object(r.c)([o.B], e.prototype, "allowallapps", void 0),
+          Object(r.c)([o.B], e.prototype, "baselist", void 0),
+          Object(r.c)([o.B], e.prototype, "customlist", void 0),
           e
         );
       })(),
@@ -2770,15 +2770,15 @@ PERFORMANCE OF THIS SOFTWARE.
               c.b
                 .ShowChatRoomGroupInvite(this.m_invite.GetInviteCode())
                 .then(function (t) {
-                  Object(l.G)(function () {
+                  Object(l.F)(function () {
                     (e.m_bConnectingToClient = !1),
                       (e.m_connectResult = t),
                       console.log(t);
                   });
                 }));
           }),
-          Object(r.c)([l.C], e.prototype, "m_bConnectingToClient", void 0),
-          Object(r.c)([l.C], e.prototype, "m_connectResult", void 0),
+          Object(r.c)([l.B], e.prototype, "m_bConnectingToClient", void 0),
+          Object(r.c)([l.B], e.prototype, "m_connectResult", void 0),
           e
         );
       })(),
@@ -2967,7 +2967,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   )
             );
           }),
-          Object(r.c)([l.C], t.prototype, "m_bTriedToLaunchSteam", void 0),
+          Object(r.c)([l.B], t.prototype, "m_bTriedToLaunchSteam", void 0),
           Object(r.c)([_.a], t.prototype, "LaunchWebChat", null),
           Object(r.c)([_.a], t.prototype, "OpenInSteamIgnoreAccount", null),
           Object(r.c)([_.a], t.prototype, "LaunchSteamClient", null),
