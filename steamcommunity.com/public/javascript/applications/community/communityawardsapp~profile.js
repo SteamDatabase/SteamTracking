@@ -3445,7 +3445,7 @@
             i.createElement(
               "div",
               { className: u.Left },
-              i.createElement(ie.D, { className: u.BalanceIcon }),
+              i.createElement(ie.E, { className: u.BalanceIcon }),
               i.createElement(
                 "div",
                 { className: u.BalanceDetails },
@@ -3554,7 +3554,7 @@
           return i.createElement(
             "span",
             Object(n.a)({}, a, { className: Object(ee.a)(r, u.PointsAmount) }),
-            i.createElement(ie.D, { className: u.PointsAmountIcon }),
+            i.createElement(ie.E, { className: u.PointsAmountIcon }),
             t
           );
         };
