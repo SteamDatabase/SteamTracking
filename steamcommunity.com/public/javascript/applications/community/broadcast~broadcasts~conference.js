@@ -9952,12 +9952,7 @@
                 St.i && St.i.logged_in && this.m_chat
                   ? o.createElement(
                       "div",
-                      {
-                        className: Object(nr.a)(
-                          or.a.ChatEntryCtn,
-                          "ChatEntryCtn"
-                        ),
-                      },
+                      null,
                       o.createElement(
                         "div",
                         {
@@ -9991,7 +9986,7 @@
                               title: Object(Mt.f)("#ChatEntryButton_Submit"),
                               onClick: this.SendMessage,
                             },
-                            o.createElement(rr.bb, null)
+                            o.createElement(rr.Y, null)
                           )
                         ),
                         o.createElement(

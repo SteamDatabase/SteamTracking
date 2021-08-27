@@ -842,13 +842,13 @@
     "165M": function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
-        return g;
+        return _;
       }),
         n.d(t, "b", function () {
-          return h;
+          return g;
         }),
         n.d(t, "c", function () {
-          return f;
+          return h;
         });
       var a = n("mrSG"),
         i = n("mHFc"),
@@ -860,9 +860,8 @@
         u = n("JiI5"),
         d = n("2vnA"),
         p = n("IjL/"),
-        m = n("d+Me"),
-        _ = n("k3PP");
-      function g(e) {
+        m = n("d+Me");
+      function _(e) {
         var t = e.bIsMinimized,
           n = e.fnToggleMinimize,
           a = t
@@ -872,16 +871,15 @@
           o.d,
           { "data-tooltip-text": Object(l.f)(a), onClick: n },
           e.bIsMinimized
-            ? c.createElement(s.G, null)
-            : c.createElement(s.J, null)
+            ? c.createElement(s.F, null)
+            : c.createElement(s.I, null)
         );
       }
-      function h(e) {
+      function g(e) {
         var t = e.strToggleName,
           n = e.strTitle,
           a = e.children,
-          o = e.strToolTip,
-          l = Object(r.d)(function () {
+          o = Object(r.d)(function () {
             return Object(i.a)(t);
           });
         return c.createElement(
@@ -896,18 +894,17 @@
               },
             },
             n,
-            o && c.createElement(_.d, { tooltip: o }),
-            c.createElement(g, {
-              bIsMinimized: l,
+            c.createElement(_, {
+              bIsMinimized: o,
               fnToggleMinimize: function () {
                 return Object(i.d)(t);
               },
             })
           ),
-          !l && a
+          !o && a
         );
       }
-      var f = new ((function () {
+      var h = new ((function () {
         function e() {
           this.m_mapVisibleSections = new Map();
         }
@@ -921,10 +918,10 @@
                 {
                   key: "waypoint_sale_sect_" + e,
                   onEnter: function () {
-                    return f.m_mapVisibleSections.set(e, e);
+                    return h.m_mapVisibleSections.set(e, e);
                   },
                   onLeave: function () {
-                    return f.m_mapVisibleSections.delete(e);
+                    return h.m_mapVisibleSections.delete(e);
                   },
                   topOffset: "100px",
                   bottomOffset: "100px",
@@ -4096,7 +4093,7 @@
                 return n(t);
               },
             },
-            r.createElement(b.ob, null)
+            r.createElement(b.lb, null)
           ),
           r.createElement(
             "div",
@@ -7749,8 +7746,8 @@
                     onClick: e.fnToggleMinimize,
                   },
                   e.bIsMinimized
-                    ? s.createElement(N.G, null)
-                    : s.createElement(N.J, null)
+                    ? s.createElement(N.F, null)
+                    : s.createElement(N.I, null)
                 )
             ),
             !e.bIsMinimized &&
@@ -8532,7 +8529,7 @@
                               "#selectimage_viewimage_ttip"
                             ),
                           },
-                          N.P()
+                          N.O()
                         ),
                       this.props.fnOnArtworkLangChange &&
                         s.createElement("img", {
@@ -15343,7 +15340,7 @@
                           return e.RemoveSection(e.props.index);
                         },
                       },
-                      d.createElement(we.ob, null)
+                      d.createElement(we.lb, null)
                     )
                   )
                 )
@@ -18084,7 +18081,7 @@
                   Object(q.a)("TaggedItemList", !1));
               return m.createElement(
                 "div",
-                { className: Object(F.a)(W.ItemListCtn, W.TagItemEditorCtn) },
+                { className: W.ItemListCtn },
                 m.createElement(
                   "div",
                   { className: W.ItemListTitle },
