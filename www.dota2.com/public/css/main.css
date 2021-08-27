@@ -2502,8 +2502,6 @@ a {
   .microheader_LoginLanguage_204pi
   .microheader_Login_1RIIB {
   font-size: 18px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
   margin-left: 20px;
   font-weight: 600;
   text-transform: uppercase;
@@ -18538,6 +18536,7 @@ a {
   .patchnotespage_AbilityIcon_2dkGQ {
   width: 55px;
   height: 55px;
+  min-width: 55px;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -20336,9 +20335,10 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #161618;
+  background-color: #1b1b1b;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top, center;
 }
 .dpcroot_DPCHeaderSpring2021League_3Qm9p {
   width: 100%;
@@ -20347,32 +20347,234 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .dpcroot_DPCHeaderSpring2021League_3Qm9p .dpcroot_EventTitle_1ytb2 {
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 34px;
+  font-weight: 600;
+  font-family: "Reaver", serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-align: center;
+  position: absolute;
+  top: 150px;
+}
+.dpcroot_DPCHeaderSpring2021League_3Qm9p .dpcroot_EventSegment_VCSdA {
+  font-size: 20px;
+  font-weight: 550;
   font-family: "Reaver", serif;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 2px;
   text-align: center;
+  position: absolute;
+  top: 220px;
+}
+.dpcroot_DPCHeaderSpring2021League_3Qm9p .dpcroot_EventSubTitle_FYI2F {
+  font-size: 14px;
+  font-family: "Reaver", serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  text-align: center;
+  position: absolute;
+  top: 255px;
+}
+.dpcroot_DPCHeaderSpring2021League_3Qm9p .dpcroot_EventStartTitle_d5fJk,
+.dpcroot_DPCHeaderSpring2021League_3Qm9p .dpcroot_EventEndTitle_2vBj_ {
+  font-size: 14px;
+  font-family: "Reaver", serif;
+  color: #fff;
+  letter-spacing: 1px;
+  text-align: center;
+  width: 400px;
+  left: 20px;
+  position: absolute;
+}
+.dpcroot_DPCHeaderSpring2021League_3Qm9p .dpcroot_EventStartTime_2l_ty,
+.dpcroot_DPCHeaderSpring2021League_3Qm9p .dpcroot_EventEndTime_2OsJV {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Reaver", serif;
+  color: #fff;
+  letter-spacing: 1px;
+  text-align: center;
+  width: 400px;
+  left: 20px;
+  position: absolute;
+}
+.dpcroot_DPCHeaderSpring2021League_3Qm9p .dpcroot_EventStartTitle_d5fJk {
+  top: 150px;
+}
+.dpcroot_DPCHeaderSpring2021League_3Qm9p .dpcroot_EventStartTime_2l_ty {
+  top: 170px;
+}
+.dpcroot_DPCHeaderSpring2021League_3Qm9p .dpcroot_EventEndTitle_2vBj_ {
+  top: 230px;
+}
+.dpcroot_DPCHeaderSpring2021League_3Qm9p .dpcroot_EventEndTime_2OsJV {
+  top: 250px;
+}
+.dpcroot_DPCHeaderSpring2021League_3Qm9p .dpcroot_EventResultsTitle_3OWwt {
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Reaver", serif;
+  color: #fff;
+  letter-spacing: 1px;
+  text-align: left;
+  width: 400px;
+  top: 140px;
+  right: 20px;
+  position: absolute;
+}
+.dpcroot_DPCHeaderSpring2021League_3Qm9p .dpcroot_EventResultsButton_2w0Iu {
+  font-size: 15px;
+  font-weight: 700px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  padding: 10px 35px;
+  width: 170px;
+  height: 40px;
+  top: 220px;
+  right: 248px;
+  position: absolute;
+}
+.dpcroot_DPCHeaderSpring2021League_3Qm9p
+  .dpcroot_EventResultsButton_2w0Iu:hover {
+  background-color: #ffffff1a;
 }
 .dpcroot_DPCHeaderSpring2021Major_19w08 {
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+.dpcroot_DPCHeaderSpring2021Major_19w08 .dpcroot_EventPresented_1j_VO {
+  font-size: 16px;
+  font-family: "Reaver", serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  text-align: center;
+  position: absolute;
+  top: 100px;
 }
 .dpcroot_DPCHeaderSpring2021Major_19w08 .dpcroot_EventTitle_1ytb2 {
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 700;
   font-family: "Reaver", serif;
   color: #fff;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
   text-align: center;
+  position: absolute;
+  top: 140px;
+}
+.dpcroot_DPCHeaderSpring2021Major_19w08 .dpcroot_EventSegment_VCSdA {
+  font-size: 23px;
+  font-weight: 700;
+  font-family: "Reaver", serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  position: absolute;
+  top: 225px;
+}
+.dpcroot_DPCHeaderSpring2021Major_19w08 .dpcroot_EventSubTitle_FYI2F {
+  font-size: 16px;
+  font-family: "Reaver", serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  text-align: center;
+  position: absolute;
+  top: 257px;
+}
+.dpcroot_DPCHeaderSpring2021Major_19w08 .dpcroot_EventLoc_23DXR {
+  font-size: 16px;
+  font-family: "Reaver", serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  text-align: center;
+  position: absolute;
+  top: 300px;
+}
+.dpcroot_DPCHeaderSpring2021Major_19w08 .dpcroot_EventPhaseTitle_2a02x {
+  font-size: 16px;
+  font-family: "Reaver", serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-align: center;
+  width: 400px;
+  left: 20px;
+  position: absolute;
+}
+.dpcroot_DPCHeaderSpring2021Major_19w08 .dpcroot_EventPhaseTime_2OvfK {
+  font-size: 23px;
+  font-weight: 700;
+  font-family: "Reaver", serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  width: 400px;
+  left: 20px;
+  position: absolute;
+}
+.dpcroot_DPCHeaderSpring2021Major_19w08 .dpcroot_EventPhaseWildcard_1MLYD {
+  top: 100px;
+}
+.dpcroot_DPCHeaderSpring2021Major_19w08 .dpcroot_EventPhaseWildcardTime_hPzQV {
+  top: 120px;
+}
+.dpcroot_DPCHeaderSpring2021Major_19w08 .dpcroot_EventPhaseGroup_3a26k {
+  top: 180px;
+}
+.dpcroot_DPCHeaderSpring2021Major_19w08 .dpcroot_EventPhaseGroupTime_29wLp {
+  top: 200px;
+}
+.dpcroot_DPCHeaderSpring2021Major_19w08 .dpcroot_EventPhasePlayoffs_2x2mK {
+  top: 260px;
+}
+.dpcroot_DPCHeaderSpring2021Major_19w08 .dpcroot_EventPhasePlayoffsTime_2R3zu {
+  top: 280px;
+}
+.dpcroot_DPCHeaderSpring2021Major_19w08 .dpcroot_PrizePoolTitle_2w9Jm {
+  font-size: 16px;
+  font-family: "Reaver", serif;
+  color: #fff;
+  letter-spacing: 1px;
+  text-align: center;
+  width: 400px;
+  top: 200px;
+  right: 20px;
+  position: absolute;
+}
+.dpcroot_DPCHeaderSpring2021Major_19w08 .dpcroot_PrizePoolValue_mPO8s {
+  font-size: 23px;
+  font-weight: 700;
+  font-family: "Reaver", serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  width: 400px;
+  top: 224px;
+  right: 20px;
+  position: absolute;
 }
 .dpcroot_DPCHeaderTI2021Quals_2VuDI {
   width: 100%;
@@ -20381,6 +20583,7 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .dpcroot_DPCHeaderTI2021Quals_2VuDI .dpcroot_EventTitle_1ytb2 {
   font-size: 32px;
@@ -20390,6 +20593,18 @@ a {
   text-transform: uppercase;
   letter-spacing: 2px;
   text-align: center;
+  position: absolute;
+  top: 240px;
+}
+.dpcroot_DPCHeaderTI2021Quals_2VuDI .dpcroot_EventSubTitle_FYI2F {
+  font-size: 16px;
+  font-family: "Reaver", serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  text-align: center;
+  position: absolute;
+  top: 290px;
 }
 .dpcroot_DPCHeaderTI2021_34VR8 {
   width: 100%;
@@ -20399,6 +20614,17 @@ a {
   justify-content: center;
   align-items: center;
 }
+.dpcroot_DPCHeaderTI2021_34VR8 .dpcroot_EventPresented_1j_VO {
+  font-size: 16px;
+  font-family: "Reaver", serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  text-align: center;
+  position: absolute;
+  top: 24px;
+  padding-left: 4px;
+}
 .dpcroot_DPCHeaderTI2021_34VR8 .dpcroot_EventTitle_1ytb2 {
   font-size: 32px;
   font-weight: 700;
@@ -20407,6 +20633,77 @@ a {
   text-transform: uppercase;
   letter-spacing: 4px;
   text-align: center;
+  position: absolute;
+  top: 256px;
+}
+.dpcroot_DPCHeaderTI2021_34VR8 .dpcroot_EventSubTitle_FYI2F {
+  font-size: 16px;
+  font-family: "Reaver", serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  text-align: center;
+  position: absolute;
+  top: 300px;
+}
+.dpcroot_DPCHeaderTI2021_34VR8 .dpcroot_EventPhaseTitle_2a02x {
+  font-size: 16px;
+  font-family: "Reaver", serif;
+  color: #bb9a4a;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-align: center;
+  width: 400px;
+  left: 20px;
+  position: absolute;
+}
+.dpcroot_DPCHeaderTI2021_34VR8 .dpcroot_EventPhaseTime_2OvfK {
+  font-size: 23px;
+  font-weight: 700;
+  font-family: "Reaver", serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  width: 400px;
+  left: 20px;
+  position: absolute;
+}
+.dpcroot_DPCHeaderTI2021_34VR8 .dpcroot_EventPhaseGroup_3a26k {
+  top: 180px;
+}
+.dpcroot_DPCHeaderTI2021_34VR8 .dpcroot_EventPhaseGroupTime_29wLp {
+  top: 200px;
+}
+.dpcroot_DPCHeaderTI2021_34VR8 .dpcroot_EventPhasePlayoffs_2x2mK {
+  top: 260px;
+}
+.dpcroot_DPCHeaderTI2021_34VR8 .dpcroot_EventPhasePlayoffsTime_2R3zu {
+  top: 280px;
+}
+.dpcroot_DPCHeaderTI2021_34VR8 .dpcroot_PrizePoolTitle_2w9Jm {
+  font-size: 16px;
+  font-family: "Reaver", serif;
+  color: #bb9a4a;
+  letter-spacing: 1px;
+  text-align: center;
+  width: 400px;
+  top: 200px;
+  right: 20px;
+  position: absolute;
+}
+.dpcroot_DPCHeaderTI2021_34VR8 .dpcroot_PrizePoolValue_mPO8s {
+  font-size: 23px;
+  font-weight: 700;
+  font-family: "Reaver", serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  width: 400px;
+  top: 224px;
+  right: 20px;
+  position: absolute;
 }
 * {
   box-sizing: border-box;
@@ -20987,6 +21284,7 @@ a {
   background: linear-gradient(to left, #262931, #171819);
   display: flex;
   flex-direction: column;
+  gap: 18px;
   align-items: center;
   justify-content: center;
 }
@@ -21004,7 +21302,6 @@ a {
   justify-content: center;
   align-items: center;
   margin: 0px 20px;
-  margin-bottom: 18px;
 }
 .dpcmatchbanner_OptionSelector_2FabK
   .dpcmatchbanner_DPCBlock_a1Zii
@@ -21080,10 +21377,11 @@ a {
   .dpcmatchbanner_ScheduleBumper_3ul_W
   .dpcmatchbanner_ScheduleLink_nZIjX {
   border: 1px solid #a3a3a3;
-  padding: 4px 8px;
-  background-color: #000;
+  border-radius: 3px;
+  padding: 10px 15px;
+  background-color: transparent;
   color: #a3a3a3;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -21096,8 +21394,9 @@ a {
   .dpcmatchbanner_NodeList_2f4tt
   .dpcmatchbanner_ScheduleBumper_3ul_W
   .dpcmatchbanner_ScheduleLink_nZIjX:hover {
-  border-color: #ccc;
-  color: #ccc;
+  border-color: #fff;
+  color: #fff;
+  background-color: #ffffff1a;
 }
 .dpcmatchbanner_MatchesContainer_T5fzO
   .dpcmatchbanner_MatchesScroller_2vFED
@@ -21256,7 +21555,7 @@ a {
   .dpcmatchbanner_HoverOption_bNdVA {
   max-width: 150px;
   border: 1px solid #a3a3a3;
-  border-radius: 2px;
+  border-radius: 3px;
   padding: 6px 15px;
   background-color: transparent;
   color: #a3a3a3;
@@ -21273,6 +21572,7 @@ a {
   .dpcmatchbanner_HoverOption_bNdVA:hover {
   border-color: #fff;
   color: #fff;
+  background-color: #ffffff1a;
 }
 .dpcmatchbanner_DPCMatchBannerNode_1bw0U .dpcmatchbanner_UpperContainer_2ymob {
   width: 100%;
@@ -22324,15 +22624,15 @@ a {
   position: relative;
 }
 .dpcseriesdetails_DPCSeriesDetails_cpS5D .dpcseriesdetails_BGContainer_1INUQ {
-  background-position: center;
+  width: 100%;
+  background-size: 100% auto;
+  background-position: top, center;
   background-repeat: no-repeat;
-  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 1920px;
   height: 900px;
   min-height: 900px;
   transition-property: height;
@@ -22400,32 +22700,44 @@ a {
   clip-path: polygon(0px 0px, 300px 0px, 260px 110px, 40px 110px);
 }
 .dpcseriesdetails_DPCSeriesDetailsHeader_2HQCI
+  .dpcseriesdetails_CenterSection_UrSWZ:hover {
+  background-color: #131315;
+}
+.dpcseriesdetails_DPCSeriesDetailsHeader_2HQCI
+  .dpcseriesdetails_CenterSection_UrSWZ:hover
+  .dpcseriesdetails_Label_1V1Wh {
+  color: #fff;
+}
+.dpcseriesdetails_DPCSeriesDetailsHeader_2HQCI
   .dpcseriesdetails_CenterSection_UrSWZ
   .dpcseriesdetails_Header1_3Npmt {
   color: #fff;
   max-width: 230px;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 4px;
+  letter-spacing: 2px;
+  margin-bottom: 3px;
 }
 .dpcseriesdetails_DPCSeriesDetailsHeader_2HQCI
   .dpcseriesdetails_CenterSection_UrSWZ
   .dpcseriesdetails_Header2_2v96O {
   color: #a3a3a3;
   max-width: 230px;
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 12px;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
 }
 .dpcseriesdetails_DPCSeriesDetailsHeader_2HQCI
   .dpcseriesdetails_CenterSection_UrSWZ
   .dpcseriesdetails_Timestamp_2z6Yc {
-  color: #a3a3a3;
+  color: #6b7785;
   font-size: 12px;
-  letter-spacing: 2px;
+  font-family: "Radiance", serif;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 .dpcseriesdetails_DPCSeriesDetailsHeader_2HQCI
   .dpcseriesdetails_CenterSection_UrSWZ
@@ -22681,7 +22993,7 @@ a {
 .dpcseriesdetails_DPCSeriesGameSelector_1ydxZ {
   width: 100%;
   height: 30px;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -22698,7 +23010,7 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #131315;
+  background-color: #0b0b0c;
   transition-property: background-color, color;
   transition-timing-function: ease-in-out;
   transition-duration: 0.1s;
@@ -22713,7 +23025,7 @@ a {
 }
 .dpcseriesdetails_DPCSeriesGameSelector_1ydxZ
   .dpcseriesdetails_GameOption_29SJH:hover {
-  background-color: #1b1b1f;
+  background-color: #131315;
 }
 .dpcseriesdetails_DPCSeriesGameSelector_1ydxZ
   .dpcseriesdetails_GameOption_29SJH:hover
@@ -22722,7 +23034,8 @@ a {
 }
 .dpcseriesdetails_DPCSeriesGameSelector_1ydxZ
   .dpcseriesdetails_GameOption_29SJH.dpcseriesdetails_Selected_2biWX {
-  background: radial-gradient(#212126, #222739);
+  background: #161618;
+  background: linear-gradient(145deg, #161618 0%, #222739 0%, #2a314a 100%);
 }
 .dpcseriesdetails_DPCSeriesGameSelector_1ydxZ
   .dpcseriesdetails_GameOption_29SJH.dpcseriesdetails_Selected_2biWX
@@ -22744,7 +23057,8 @@ a {
   min-height: 0;
   display: flex;
   flex-direction: column;
-  background-color: #131923;
+  background-color: #0b0b0c;
+  border: 1px solid #0b0b0c;
   position: relative;
   transition-property: height;
   transition-timing-function: ease-in-out;
@@ -22995,7 +23309,7 @@ a {
   .dpcseriesdetails_WatchVod_2jhTZ:hover:not(.dpcseriesdetails_Disabled_1hb2S) {
   background-color: #767f8a;
   border-color: #767f8a;
-  color: #fff;
+  color: #0f1113;
 }
 .dpcseriesdetails_DPCSeriesDetailsGameOverview_KLWaH
   .dpcseriesdetails_CenterContainer_8B-ZB
@@ -23027,7 +23341,7 @@ a {
   .dpcseriesdetails_Details_-mnLW:hover:not(.dpcseriesdetails_Disabled_1hb2S) {
   background-color: #41474e;
   border-color: #41474e;
-  color: #fff;
+  color: #0f1113;
 }
 .dpcseriesdetails_DPCSeriesUpcoming_1yiu5 {
   width: 100%;
@@ -23547,8 +23861,10 @@ a {
 .dpcseriesdetails_DPCSeriesDetailsGameVOD_2-Wc8
   .dpcseriesdetails_VideoContainer_VjKmb
   .dpcseriesdetails_NoVOD_2RPG0 {
-  font-size: 24px;
-  color: #fff;
+  font-size: 20px;
+  font-weight: 500px;
+  color: #6b7785;
+  background-color: transparent;
 }
 .dpcseriesdetails_DPCSeriesDetailsGameVOD_2-Wc8
   .dpcseriesdetails_OptionContainer_3ik_p {
@@ -23580,11 +23896,12 @@ a {
 .dpcseriesdetails_DPCSeriesFooter_3m_vu {
   width: 100%;
   height: 70px;
-  background-color: #131315;
+  background-color: #0b0b0c;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin-top: 4px;
 }
 .dpcseriesdetails_DPCSeriesFooter_3m_vu .dpcseriesdetails_LeftTabs_1AAPM {
   width: 200px;
@@ -23614,7 +23931,8 @@ a {
 .dpcseriesdetails_DPCSeriesFooter_3m_vu
   .dpcseriesdetails_LeftTabs_1AAPM
   .dpcseriesdetails_SeriesViewTab_3aLEj.dpcseriesdetails_Selected_2biWX {
-  background: radial-gradient(#212126, #222739);
+  background: #161618;
+  background: linear-gradient(145deg, #161618 0%, #222739 0%, #2a314a 100%);
   border-right: 1px solid transparent;
 }
 .dpcseriesdetails_DPCSeriesFooter_3m_vu
@@ -23749,7 +24067,8 @@ a {
 .dpcseriesdetails_DPCSeriesFooter_3m_vu
   .dpcseriesdetails_RightTabs_xaEuz
   .dpcseriesdetails_SizeTab_15EXl.dpcseriesdetails_Selected_2biWX {
-  background: radial-gradient(#212126, #222739);
+  background: #161618;
+  background: linear-gradient(145deg, #161618 0%, #222739 0%, #2a314a 100%);
   border-left: 1px solid transparent;
 }
 .dpcseriesdetails_DPCSeriesFooter_3m_vu
@@ -23761,7 +24080,7 @@ a {
 .dpcseriesdetails_DPCSeriesFooter_3m_vu
   .dpcseriesdetails_RightTabs_xaEuz
   .dpcseriesdetails_SizeTab_15EXl:hover:not(.dpcseriesdetails_Selected_2biWX) {
-  background-color: #1b1b1f;
+  background-color: #131315;
 }
 .dpcseriesdetails_DPCSeriesFooter_3m_vu
   .dpcseriesdetails_RightTabs_xaEuz
@@ -25074,10 +25393,10 @@ a {
   gap: 40px;
 }
 .dpchomepage_DPCHomePageStandingsLeague_3C6rF {
-  width: 1920px;
+  width: 100%;
+  background-size: 100% auto;
   background-position: top, center;
-  background-repeat: repeat-y;
-  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25308,7 +25627,7 @@ a {
   .dpchomepage_Content_3C7_3
   .dpchomepage_Button_17QQl {
   border: 1px solid #a3a3a3;
-  border-radius: 2px;
+  border-radius: 3px;
   padding: 10px 35px;
   background-color: transparent;
   color: #a3a3a3;
@@ -25573,7 +25892,6 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.4);
 }
 .dpcstandings_DPCStandingsTeamList_jVT-8.dpcstandings_NoData_2oYg8 {
   opacity: 0;
@@ -25608,6 +25926,7 @@ a {
   flex-direction: column;
   align-items: center;
   position: relative;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.4);
 }
 .dpcstandings_DPCStandingsTeamList_jVT-8
   .dpcstandings_Teams_2W8jh
@@ -26382,8 +26701,49 @@ a {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+.dpcteamlist_TeamEntry_2GaFH .dpcteamlist_PlayerSection_G9nZ1 {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: -14px;
+}
+.dpcteamlist_TeamEntry_2GaFH
+  .dpcteamlist_PlayerSection_G9nZ1
+  .dpcteamlist_PlayerImageContainer_4daGu {
+  height: 100%;
+  width: 90px;
+  margin: 0px -14px;
+  background-image: linear-gradient(
+    280deg,
+    rgba(0, 0, 0, 0.3),
+    transparent,
+    rgba(0, 0, 0, 0.3)
+  );
+  clip-path: polygon(30px 0px, 100% 0px, calc(100% - 30px) 100%, 0px 100%);
+}
+.dpcteamlist_TeamEntry_2GaFH
+  .dpcteamlist_PlayerSection_G9nZ1
+  .dpcteamlist_PlayerImageContainer_4daGu
+  .dpcteamlist_PlayerGradient_3XaCX {
+  width: 100%;
+  height: 100%;
+  mask-image: linear-gradient(#fff, #fff 76%, transparent 80%);
+  -webkit-mask-image: linear-gradient(#fff, #fff 60%, transparent 80%);
+}
+.dpcteamlist_TeamEntry_2GaFH
+  .dpcteamlist_PlayerSection_G9nZ1
+  .dpcteamlist_PlayerImageContainer_4daGu
+  .dpcteamlist_PlayerGradient_3XaCX
+  .dpcteamlist_PlayerImage_gbX4o {
+  width: 100%;
+  margin-top: 15%;
+  height: 80%;
+  background-size: cover;
+  background-position-x: center;
+  background-repeat: no-repeat;
+}
 .dpcteamlist_TeamEntry_2GaFH .dpcteamlist_MatchSection_1JycZ {
-  width: 350px;
   height: 100%;
   background-color: #36363ebf;
   display: flex;
@@ -26391,7 +26751,7 @@ a {
   justify-content: center;
   align-items: center;
   gap: 4px;
-  padding: 10px 60px;
+  padding: 10px 40px;
   clip-path: polygon(30px 0px, 100% 0px, calc(100% - 30px) 100%, 0% 100%);
 }
 .dpcteamlist_TeamEntry_2GaFH
@@ -27831,8 +28191,7 @@ a {
 .dpcschedulepage_DPCSchedulePage_1OBQH {
   color: #fff;
   width: 100%;
-  max-width: 1920px;
-  background-color: #161618;
+  background-size: 100% auto;
   background-position: top, center;
   background-repeat: repeat-y;
   justify-content: center;
@@ -27852,7 +28211,7 @@ a {
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;
-  border-radius: 2px;
+  border-radius: 3px;
   margin: 30px 0px;
   cursor: pointer;
   user-select: none;
@@ -28179,7 +28538,7 @@ a {
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;
-  border-radius: 2px;
+  border-radius: 3px;
   cursor: pointer;
   user-select: none;
   transition-property: background-color, color;
@@ -28332,7 +28691,7 @@ a {
   letter-spacing: 1px;
   text-align: center;
   border-color: #2e3339;
-  border-radius: 2px;
+  border-radius: 3px;
   user-select: none;
   pointer-events: none;
   transition-property: background-color, color;
@@ -28878,9 +29237,9 @@ a {
 }
 .dpcaboutpage_DPCAboutPage_1bwEV {
   width: 100%;
-  min-height: 1000px;
-  color: #fff;
-  background-color: #222226;
+  background-size: 100% auto;
+  background-position: top, center;
+  background-repeat: repeat-y;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -28888,19 +29247,23 @@ a {
 }
 .dpcaboutpage_DPCAboutPage_1bwEV .dpcaboutpage_Header_2812Y {
   width: 100%;
-  padding: 100px 25%;
+  padding: 125px 31%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #37373d;
+  background: #161618;
+  background: linear-gradient(145deg, #161618 0%, #142031 0%, #1d2b41 100%);
+  background-size: 100% auto;
+  background-position: top, center;
+  background-repeat: no-repeat;
 }
 .dpcaboutpage_DPCAboutPage_1bwEV
   .dpcaboutpage_Header_2812Y
   .dpcaboutpage_ProCircuit_3A8s8 {
   color: #a3a3a3;
   font-size: 30px;
-  letter-spacing: 1px;
-  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-weight: 600;
   font-family: "Reaver", serif;
   margin-bottom: 10px;
 }
@@ -28909,26 +29272,29 @@ a {
   .dpcaboutpage_Global_1yssd {
   color: #fff;
   font-size: 40px;
-  letter-spacing: 2px;
-  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-weight: 600;
   font-family: "Reaver", serif;
   margin-bottom: 20px;
 }
 .dpcaboutpage_DPCAboutPage_1bwEV
   .dpcaboutpage_Header_2812Y
   .dpcaboutpage_GlobalDesc_2l0r2 {
-  font-size: 16px;
-  letter-spacing: 1px;
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 0.5px;
   font-weight: 400;
+  line-height: 23px;
 }
 .dpcaboutpage_DPCAboutPage_1bwEV .dpcaboutpage_Events_26D0_ {
   width: 100%;
+  background-size: 100% auto;
+  background-position: top, center;
   padding: 80px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  background-color: #0c0d0f;
 }
 .dpcaboutpage_DPCAboutPage_1bwEV
   .dpcaboutpage_Events_26D0_
@@ -28937,8 +29303,8 @@ a {
   text-align: center;
   color: #fff;
   font-size: 32px;
-  letter-spacing: 2px;
-  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-weight: 600;
   font-family: "Reaver", serif;
   margin-bottom: 40px;
 }
@@ -28956,7 +29322,7 @@ a {
   .dpcaboutpage_EventImage_b9E48 {
   width: 600px;
   height: 400px;
-  background-color: #37373d;
+  background-color: #1a1b1f;
 }
 .dpcaboutpage_DPCAboutPage_1bwEV
   .dpcaboutpage_Events_26D0_
@@ -28978,7 +29344,7 @@ a {
   padding: 0px 50px;
   color: #fff;
   font-size: 28px;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   font-weight: 400;
   font-family: "Reaver", serif;
   margin-bottom: 20px;
@@ -28990,27 +29356,31 @@ a {
   .dpcaboutpage_EventDesc_2DZ9P {
   width: 100%;
   padding: 0px 50px;
-  color: #aaa;
+  color: #a3a3a3;
   font-size: 18px;
-  line-height: 26px;
-  letter-spacing: 1px;
+  line-height: 23px;
+  letter-spacing: 0.5px;
   font-weight: 400;
 }
 .dpcaboutpage_DPCAboutPage_1bwEV .dpcaboutpage_TheInternational_3aVid {
   width: 100%;
-  padding: 100px 25%;
+  padding: 125px 31%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #37373d;
+  background: #161618;
+  background: linear-gradient(300deg, #161618 0%, #142031 0%, #1d2b41 100%);
+  background-size: 100% auto;
+  background-position: top, center;
+  background-repeat: no-repeat;
 }
 .dpcaboutpage_DPCAboutPage_1bwEV
   .dpcaboutpage_TheInternational_3aVid
   .dpcaboutpage_Title_uDKKo {
   color: #fff;
   font-size: 28px;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   font-weight: 400;
   font-family: "Reaver", serif;
   margin-bottom: 20px;
@@ -29020,8 +29390,8 @@ a {
   .dpcaboutpage_Desc_3AwI_ {
   color: #aaa;
   font-size: 18px;
-  line-height: 26px;
-  letter-spacing: 1px;
+  line-height: 23px;
+  letter-spacing: 0.5px;
   font-weight: 400;
 }
 .dpcaboutpage_DPCAboutPage_1bwEV .dpcaboutpage_FAQ_2_DGo {
@@ -29031,14 +29401,17 @@ a {
   flex-direction: column;
   align-items: center;
   background-color: #252626;
+  background-size: 100% auto;
+  background-position: top, center;
+  background-repeat: no-repeat;
 }
 .dpcaboutpage_DPCAboutPage_1bwEV
   .dpcaboutpage_FAQ_2_DGo
   .dpcaboutpage_Title_uDKKo {
   color: #fff;
   font-size: 32px;
-  letter-spacing: 2px;
-  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-weight: 600;
   font-family: "Reaver", serif;
   margin-bottom: 20px;
 }
@@ -29047,7 +29420,7 @@ a {
   .dpcaboutpage_LastUpdated_1sSuS {
   color: #a3a3a3;
   font-size: 16px;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   font-weight: 400;
   font-family: "Reaver", serif;
   margin-bottom: 40px;
@@ -29063,9 +29436,9 @@ a {
   .dpcaboutpage_FAQEntry_3tyXO
   .dpcaboutpage_Question_25bVM {
   color: #fff;
-  font-size: 15px;
+  font-size: 16px;
   font-family: "Reaver", serif;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   margin-bottom: 4px;
 }
 .dpcaboutpage_DPCAboutPage_1bwEV
@@ -29074,7 +29447,70 @@ a {
   .dpcaboutpage_Answer_3L-3t {
   color: #a3a3a3;
   font-size: 14px;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV .dpcaboutpage_Format_ATlbm {
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 200px;
+  padding-right: 25%;
+  padding-left: 25%;
+  display: flex;
+  flex-direction: column;
+  background-color: #1b1b1b;
+  background-size: 100% auto;
+  background-position: top, center;
+  background-repeat: no-repeat;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV
+  .dpcaboutpage_Format_ATlbm
+  .dpcaboutpage_Title_uDKKo {
+  color: #fff;
+  text-align: center;
+  font-size: 32px;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  font-family: "Reaver", serif;
+  margin-bottom: 20px;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV
+  .dpcaboutpage_Format_ATlbm
+  .dpcaboutpage_FormatEntry_35szi {
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV
+  .dpcaboutpage_Format_ATlbm
+  .dpcaboutpage_FormatEntry_35szi
+  .dpcaboutpage_Subtitle_2za1i {
+  color: #fff;
+  text-align: center;
+  font-size: 25px;
+  font-family: "Reaver", serif;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV
+  .dpcaboutpage_Format_ATlbm
+  .dpcaboutpage_FormatEntry_35szi
+  .dpcaboutpage_Subtitle02_2dDBO {
+  color: #fff;
+  text-align: left;
+  font-size: 16px;
+  font-family: "Reaver", serif;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV
+  .dpcaboutpage_Format_ATlbm
+  .dpcaboutpage_FormatEntry_35szi
+  .dpcaboutpage_Body_1k7wI {
+  color: #a3a3a3;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  line-height: 18px;
 }
 * {
   box-sizing: border-box;
@@ -29588,13 +30024,13 @@ a {
 }
 .dpctistandingspage_DPCTIStandingsPage_1kBk0 {
   width: 100%;
-  min-height: 1000px;
-  color: #fff;
-  background-color: #050606;
-  position: relative;
+  background-size: 100% auto;
+  background-position: top, center;
+  background-repeat: repeat-y;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
   gap: 6px;
   padding: 60px 60px;
 }
