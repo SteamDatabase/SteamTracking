@@ -15956,16 +15956,35 @@
               ui.c.WrapWithNavWaypoint(
                 "SalePageEdit_TaggedItems",
                 s.createElement(
-                  ui.b,
+                  "div",
                   {
-                    strToggleName: "SalePageEdit_TaggedItems",
-                    strToolTip: Object(f.f)("#Sale_TagFilter_SectionTooltip"),
-                    strTitle: Object(f.f)(
+                    id: "SalePageEdit_TaggedItems",
+                    className: Object(B.a)(di.SettingCtn),
+                  },
+                  s.createElement(
+                    "div",
+                    {
+                      className: di.Title,
+                      onDoubleClick: function () {
+                        return Object(ci.d)("SalePageEdit_TaggedItems");
+                      },
+                    },
+                    Object(f.f)(
                       "#Sale_TaggedItemsSection",
                       t.GetEventModel().GetTaggedItems().length
                     ),
-                  },
-                  s.createElement(Ui.e, { editModel: t })
+                    s.createElement(Ti.d, {
+                      tooltip: Object(f.f)("#Sale_TagFilter_SectionTooltip"),
+                    }),
+                    s.createElement(ui.a, {
+                      bIsMinimized: Object(ci.a)("SalePageEdit_TaggedItems"),
+                      fnToggleMinimize: function () {
+                        return Object(ci.d)("SalePageEdit_TaggedItems");
+                      },
+                    })
+                  ),
+                  !Object(ci.a)("SalePageEdit_TaggedItems") &&
+                    s.createElement(Ui.e, { editModel: t })
                 )
               ),
               s.createElement(Pi, { editModel: t }),
@@ -17958,7 +17977,7 @@
             d.a.createElement(
               "div",
               { className: Rr.LatestUpdateIcon },
-              d.a.createElement(Lr.gb, null)
+              d.a.createElement(Lr.db, null)
             ),
             d.a.createElement(
               "div",
@@ -18796,8 +18815,8 @@
                   },
                 },
                 r
-                  ? d.a.createElement(Lr.G, null)
-                  : d.a.createElement(Lr.J, null)
+                  ? d.a.createElement(Lr.F, null)
+                  : d.a.createElement(Lr.I, null)
               )
             ),
             d.a.createElement("hr", null),
@@ -19858,7 +19877,7 @@
                         },
                         onClick: this.OnSearchSubmit,
                       },
-                      r.a.createElement(_.F, null)
+                      r.a.createElement(_.E, null)
                     )
                   )
                 )
@@ -20389,7 +20408,7 @@
             t
           );
         })(i.Component),
-        E = Object(r.j)(p);
+        E = Object(r.i)(p);
     },
     pdAa: function (e, t, a) {
       e.exports = {

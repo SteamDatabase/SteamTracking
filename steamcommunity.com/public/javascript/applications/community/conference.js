@@ -14,6 +14,13 @@
         ChatColumn: "conferencepages_ChatColumn_2ldId",
         ChatTitle: "conferencepages_ChatTitle_3CjWm",
         QAColumn: "conferencepages_QAColumn_1RCLw",
+        TabControlsCtn: "conferencepages_TabControlsCtn_1HJDD",
+        Close: "conferencepages_Close_3cKbt",
+        ShowBothTabs: "conferencepages_ShowBothTabs_fZBE8",
+        InnerChatTabs: "conferencepages_InnerChatTabs_2hj0C",
+        InnerChatTab: "conferencepages_InnerChatTab_1g3oa",
+        Active: "conferencepages_Active_3PSCm",
+        ChatStack: "conferencepages_ChatStack_1ogmv",
       };
     },
     Cksw: function (e, t, n) {
@@ -76,11 +83,11 @@
         a = n("vDqi"),
         o = n.n(a),
         s = n("2lpH"),
-        u = n.n(s),
-        c = n("2vnA"),
+        c = n.n(s),
+        u = n("2vnA"),
         l = n("q1tI"),
-        d = n.n(l),
-        m = n("kyHq"),
+        m = n.n(l),
+        d = n("kyHq"),
         f = n("bxBv"),
         p = n("r64O"),
         b = n("XxJJ"),
@@ -111,9 +118,9 @@
                 var a,
                   o,
                   s,
-                  u,
+                  c,
                   l,
-                  d = this;
+                  m = this;
                 return Object(i.e)(this, function (i) {
                   switch (i.label) {
                     case 0:
@@ -130,23 +137,23 @@
                           o = new Array(),
                           s = function (e) {
                             if (
-                              (u.m_mapLocalUpdates.get(e).strTitle &&
-                                u.m_mapLocalUpdates.get(e).strTitle !==
-                                  (null === (t = u.m_mapStoredDrafts.get(e)) ||
+                              (c.m_mapLocalUpdates.get(e).strTitle &&
+                                c.m_mapLocalUpdates.get(e).strTitle !==
+                                  (null === (t = c.m_mapStoredDrafts.get(e)) ||
                                   void 0 === t
                                     ? void 0
                                     : t.title)) ||
-                              (u.m_mapLocalUpdates.get(e).strContent &&
-                                u.m_mapLocalUpdates.get(e).strContent !==
-                                  (null === (n = u.m_mapStoredDrafts.get(e)) ||
+                              (c.m_mapLocalUpdates.get(e).strContent &&
+                                c.m_mapLocalUpdates.get(e).strContent !==
+                                  (null === (n = c.m_mapStoredDrafts.get(e)) ||
                                   void 0 === n
                                     ? void 0
                                     : n.content))
                             ) {
-                              var i = u.GetDraftTitle(e),
-                                s = u.GetDraftContent(e),
+                              var i = c.GetDraftTitle(e),
+                                s = c.GetDraftContent(e),
                                 l = K.Get().UpdateDraft(
-                                  null === (r = u.m_summary) || void 0 === r
+                                  null === (r = c.m_summary) || void 0 === r
                                     ? void 0
                                     : r.faq_id,
                                   e,
@@ -156,29 +163,29 @@
                               l
                                 .then(function (t) {
                                   1 == t.eResult
-                                    ? Object(c.G)(function () {
-                                        d.m_mapStoredDrafts.has(e) ||
-                                          d.m_mapStoredDrafts.set(e, {}),
-                                          (d.m_mapStoredDrafts.get(
+                                    ? Object(u.G)(function () {
+                                        m.m_mapStoredDrafts.has(e) ||
+                                          m.m_mapStoredDrafts.set(e, {}),
+                                          (m.m_mapStoredDrafts.get(
                                             e
                                           ).title = i),
-                                          (d.m_mapStoredDrafts.get(
+                                          (m.m_mapStoredDrafts.get(
                                             e
                                           ).content = s),
-                                          (d.m_mapStoredDrafts.get(
+                                          (m.m_mapStoredDrafts.get(
                                             e
                                           ).timestamp = t.rtUpdateTime),
-                                          (d.m_mapStoredDrafts.get(
+                                          (m.m_mapStoredDrafts.get(
                                             e
                                           ).author_account_id = v.i.accountid.toString()),
-                                          (d.m_mapLocalUpdates.get(
+                                          (m.m_mapLocalUpdates.get(
                                             e
                                           ).strTitle = null),
-                                          (d.m_mapLocalUpdates.get(
+                                          (m.m_mapLocalUpdates.get(
                                             e
                                           ).strContent = null);
                                         var n = !1;
-                                        d.m_summary.per_language_info.forEach(
+                                        m.m_summary.per_language_info.forEach(
                                           function (r) {
                                             e == r.language &&
                                               ((n = !0),
@@ -189,7 +196,7 @@
                                           }
                                         ),
                                           n ||
-                                            d.m_summary.per_language_info.push({
+                                            m.m_summary.per_language_info.push({
                                               language: e,
                                               last_update_timestamp:
                                                 t.rtUpdateTime,
@@ -213,7 +220,7 @@
                                 o.push(l);
                             }
                           },
-                          u = this,
+                          c = this,
                           l = 0;
                         l < 30;
                         ++l
@@ -252,8 +259,8 @@
             }),
             (e.prototype.GetDraftTitleWithFallback = function (e, t) {
               var n, r, i, a, o, s;
-              void 0 === t && (t = m.f.k_ESteamRealmGlobal);
-              var u = t == m.f.k_ESteamRealmChina ? 6 : 0;
+              void 0 === t && (t = d.f.k_ESteamRealmGlobal);
+              var c = t == d.f.k_ESteamRealmChina ? 6 : 0;
               return null !==
                 (s =
                   null !==
@@ -264,7 +271,7 @@
                             (n = this.m_mapLocalUpdates.get(e).strTitle) &&
                           void 0 !== n
                             ? n
-                            : this.m_mapLocalUpdates.get(u).strTitle) &&
+                            : this.m_mapLocalUpdates.get(c).strTitle) &&
                       void 0 !== r
                         ? r
                         : null === (i = this.m_mapStoredDrafts.get(e)) ||
@@ -272,7 +279,7 @@
                         ? void 0
                         : i.title) && void 0 !== a
                     ? a
-                    : null === (o = this.m_mapStoredDrafts.get(u)) ||
+                    : null === (o = this.m_mapStoredDrafts.get(c)) ||
                       void 0 === o
                     ? void 0
                     : o.title) && void 0 !== s
@@ -281,8 +288,8 @@
             }),
             (e.prototype.GetDraftContentWithFallback = function (e, t) {
               var n, r, i, a, o, s;
-              void 0 === t && (t = m.f.k_ESteamRealmGlobal);
-              var u = t == m.f.k_ESteamRealmChina ? 6 : 0;
+              void 0 === t && (t = d.f.k_ESteamRealmGlobal);
+              var c = t == d.f.k_ESteamRealmChina ? 6 : 0;
               return null !==
                 (s =
                   null !==
@@ -293,7 +300,7 @@
                             (n = this.m_mapLocalUpdates.get(e).strContent) &&
                           void 0 !== n
                             ? n
-                            : this.m_mapLocalUpdates.get(u).strContent) &&
+                            : this.m_mapLocalUpdates.get(c).strContent) &&
                       void 0 !== r
                         ? r
                         : null === (i = this.m_mapStoredDrafts.get(e)) ||
@@ -301,7 +308,7 @@
                         ? void 0
                         : i.content) && void 0 !== a
                     ? a
-                    : null === (o = this.m_mapStoredDrafts.get(u)) ||
+                    : null === (o = this.m_mapStoredDrafts.get(c)) ||
                       void 0 === o
                     ? void 0
                     : o.content) && void 0 !== s
@@ -336,10 +343,10 @@
               var e = new Array();
               return (
                 this.m_summary.visible_in_global_realm &&
-                  e.push(m.f.k_ESteamRealmGlobal),
+                  e.push(d.f.k_ESteamRealmGlobal),
                 this.m_summary.visible_in_global_realm &&
-                  e.push(m.f.k_ESteamRealmChina),
-                0 == e.length && e.push(m.f.k_ESteamRealmGlobal),
+                  e.push(d.f.k_ESteamRealmChina),
+                0 == e.length && e.push(d.f.k_ESteamRealmGlobal),
                 Object(p.a)(
                   e.length > 0,
                   "FAQ " +
@@ -373,7 +380,7 @@
             (e.prototype.GetSummary = function () {
               return this.m_summary;
             }),
-            Object(i.c)([c.C], e.prototype, "m_mapLocalUpdates", void 0),
+            Object(i.c)([u.C], e.prototype, "m_mapLocalUpdates", void 0),
             Object(i.c)([b.a], e.prototype, "BHasSomeTextForLanguage", null),
             Object(i.c)([b.a], e.prototype, "GetLastTimeLanguageUpdated", null),
             e
@@ -628,7 +635,7 @@
             t
           );
         })(C),
-        O = (function (e) {
+        E = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var r = e.call(this) || this;
@@ -760,7 +767,7 @@
             t
           );
         })(C),
-        E = (function (e) {
+        O = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var r = e.call(this) || this;
@@ -1040,7 +1047,7 @@
             t
           );
         })(C),
-        R = (function (e) {
+        T = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -1076,7 +1083,7 @@
             t
           );
         })(C),
-        T = (function (e) {
+        R = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var r = e.call(this) || this;
@@ -1399,7 +1406,7 @@
             t
           );
         })(C),
-        L = (function (e) {
+        q = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var r = e.call(this) || this;
@@ -1460,7 +1467,7 @@
             t
           );
         })(C),
-        q = (function (e) {
+        G = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var r = e.call(this) || this;
@@ -1512,7 +1519,7 @@
             t
           );
         })(C),
-        G = (function (e) {
+        L = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var r = e.call(this) || this;
@@ -2043,7 +2050,7 @@
             });
           }),
           (e.UpdateJsonData = function (e, t) {
-            return e.SendMsg("ClanFAQS.UpdateJsonData#1", t, R, {
+            return e.SendMsg("ClanFAQS.UpdateJsonData#1", t, T, {
               ePrivilege: 1,
             });
           }),
@@ -2056,17 +2063,17 @@
             return e.SendMsg("ClanFAQS.UpdateDraft#1", t, U, { ePrivilege: 1 });
           }),
           (e.PublishDraft = function (e, t) {
-            return e.SendMsg("ClanFAQS.PublishDraft#1", t, L, {
+            return e.SendMsg("ClanFAQS.PublishDraft#1", t, q, {
               ePrivilege: 1,
             });
           }),
           (e.PreviewDraft = function (e, t) {
-            return e.SendMsg("ClanFAQS.PreviewDraft#1", t, q, {
+            return e.SendMsg("ClanFAQS.PreviewDraft#1", t, G, {
               ePrivilege: 1,
             });
           }),
           (e.GetFAQ = function (e, t) {
-            return e.SendMsg("ClanFAQS.GetFAQ#1", t, G, {
+            return e.SendMsg("ClanFAQS.GetFAQ#1", t, L, {
               bConstMethod: !0,
               ePrivilege: 0,
               eWebAPIKeyRequirement: 1,
@@ -2167,8 +2174,8 @@
                     }
                   }
                 if (e.allfaqs)
-                  for (var u = 0, c = e.allfaqs; u < c.length; u++) {
-                    var l = c[u];
+                  for (var c = 0, u = e.allfaqs; c < u.length; c++) {
+                    var l = u[c];
                     l.faq_id &&
                       (this.m_mapFAQSummaries.has(l.faq_id) ||
                         this.m_mapFAQSummaries.set(l.faq_id, l));
@@ -2187,11 +2194,11 @@
             }),
             (e.prototype.CreateFAQ = function (e) {
               return Object(i.b)(this, void 0, void 0, function () {
-                var t, n, a, o, s, u, c;
+                var t, n, a, o, s, c, u;
                 return Object(i.e)(this, function (i) {
                   switch (i.label) {
                     case 0:
-                      (t = f.b.Init(O)).Body().set_steamid(v.b.CLANSTEAMID),
+                      (t = f.b.Init(E)).Body().set_steamid(v.b.CLANSTEAMID),
                         t.Body().set_internal_name(e),
                         (n = 2),
                         (a = void 0),
@@ -2222,11 +2229,11 @@
                       );
                     case 3:
                       return (
-                        (u = i.sent()),
-                        (c = Object(_.c)(u)),
+                        (c = i.sent()),
+                        (u = Object(_.c)(c)),
                         console.error(
-                          "FAQStore.CreateFAQ: caught error " + c.strErrorMsg,
-                          c
+                          "FAQStore.CreateFAQ: caught error " + u.strErrorMsg,
+                          u
                         ),
                         [3, 4]
                       );
@@ -2238,7 +2245,7 @@
             }),
             (e.prototype.UpdateDraft = function (e, t, n, a) {
               return Object(i.b)(this, void 0, void 0, function () {
-                var o, s, u, c, l, d;
+                var o, s, c, u, l, m;
                 return Object(i.e)(this, function (i) {
                   switch (i.label) {
                     case 0:
@@ -2248,7 +2255,7 @@
                         o.Body().set_content(a),
                         o.Body().set_title(n),
                         (s = 2),
-                        (u = 0),
+                        (c = 0),
                         (i.label = 1);
                     case 1:
                       return (
@@ -2263,34 +2270,34 @@
                       );
                     case 2:
                       return (
-                        (c = i.sent()),
-                        1 != (s = c.GetEResult())
+                        (u = i.sent()),
+                        1 != (s = u.GetEResult())
                           ? console.error(
                               "FAQStore.UpdateDraft request failed:",
                               s
                             )
-                          : (u = c.Body().last_update_timestamp()),
+                          : (c = u.Body().last_update_timestamp()),
                         [3, 4]
                       );
                     case 3:
                       return (
                         (l = i.sent()),
-                        (d = Object(_.c)(l)),
+                        (m = Object(_.c)(l)),
                         console.error(
-                          "FAQStore.UpdateDraft: caught error " + d.strErrorMsg,
-                          d
+                          "FAQStore.UpdateDraft: caught error " + m.strErrorMsg,
+                          m
                         ),
                         [3, 4]
                       );
                     case 4:
-                      return [2, { eResult: s, rtUpdateTime: u }];
+                      return [2, { eResult: s, rtUpdateTime: c }];
                   }
                 });
               });
             }),
             (e.prototype.UpdateJsonData = function (e, t) {
               return Object(i.b)(this, void 0, void 0, function () {
-                var n, a, o, s, u, c;
+                var n, a, o, s, c, u;
                 return Object(i.e)(this, function (i) {
                   switch (i.label) {
                     case 0:
@@ -2324,12 +2331,12 @@
                       );
                     case 3:
                       return (
-                        (u = i.sent()),
-                        (c = Object(_.c)(u)),
+                        (c = i.sent()),
+                        (u = Object(_.c)(c)),
                         console.error(
                           "FAQStore.UpdateJsonData: caught error " +
-                            c.strErrorMsg,
-                          c
+                            u.strErrorMsg,
+                          u
                         ),
                         [3, 4]
                       );
@@ -2345,7 +2352,7 @@
                 return Object(i.e)(this, function (i) {
                   switch (i.label) {
                     case 0:
-                      (t = f.b.Init(E)).Body().set_steamid(v.b.CLANSTEAMID),
+                      (t = f.b.Init(O)).Body().set_steamid(v.b.CLANSTEAMID),
                         t.Body().set_faq_id(e),
                         (n = 2),
                         (i.label = 1);
@@ -2397,7 +2404,7 @@
                 !i &&
                   e.sm_mapFallbackLanguages.has(n) &&
                   (i = r.get(e.sm_mapFallbackLanguages.get(n))),
-                i || 0 == n || Object(m.a)(v.c.EREALM) || (i = r.get(0)),
+                i || 0 == n || Object(d.a)(v.c.EREALM) || (i = r.get(0)),
                 i
               );
             }),
@@ -2412,7 +2419,7 @@
             }),
             (e.prototype.LoadFAQDraftContent = function (e) {
               return Object(i.b)(this, void 0, void 0, function () {
-                var t, n, a, o, s, u, c, l;
+                var t, n, a, o, s, c, u, l;
                 return Object(i.e)(this, function (i) {
                   switch (i.label) {
                     case 0:
@@ -2451,14 +2458,14 @@
                               .forEach(function (e) {
                                 return s.set(e.language(), e.toObject());
                               }),
-                            (u = new h(this.m_mapFAQSummaries.get(e), s)),
-                            this.m_mapFAQDrafts.set(e, u),
-                            [2, u])
+                            (c = new h(this.m_mapFAQSummaries.get(e), s)),
+                            this.m_mapFAQDrafts.set(e, c),
+                            [2, c])
                       );
                     case 3:
                       return (
-                        (c = i.sent()),
-                        (l = Object(_.c)(c)),
+                        (u = i.sent()),
+                        (l = Object(_.c)(u)),
                         console.error(
                           "FaqStore.LoadFAQDraftContent: exception " +
                             l.strErrorMsg,
@@ -2474,11 +2481,11 @@
             }),
             (e.prototype.UpdateVisibility = function (e, t, n) {
               return Object(i.b)(this, void 0, void 0, function () {
-                var a, o, s, u, c, l;
+                var a, o, s, c, u, l;
                 return Object(i.e)(this, function (i) {
                   switch (i.label) {
                     case 0:
-                      (a = f.b.Init(T)).Body().set_steamid(v.b.CLANSTEAMID),
+                      (a = f.b.Init(R)).Body().set_steamid(v.b.CLANSTEAMID),
                         a.Body().set_faq_id(e),
                         a.Body().set_visible_in_global_realm(t),
                         a.Body().set_visible_in_china_realm(n),
@@ -2499,10 +2506,10 @@
                       return (
                         (s = i.sent()),
                         1 === (o = s.GetEResult())
-                          ? (u = this.m_mapFAQSummaries.get(e)) &&
-                            ((u.visible_in_global_realm = t),
-                            (u.visible_in_china_realm = n),
-                            this.m_mapFAQSummaries.set(e, u))
+                          ? (c = this.m_mapFAQSummaries.get(e)) &&
+                            ((c.visible_in_global_realm = t),
+                            (c.visible_in_china_realm = n),
+                            this.m_mapFAQSummaries.set(e, c))
                           : console.error(
                               "FaqStore.UpdateVisibility: Failed " + o
                             ),
@@ -2510,8 +2517,8 @@
                       );
                     case 3:
                       return (
-                        (c = i.sent()),
-                        (l = Object(_.c)(c)),
+                        (u = i.sent()),
+                        (l = Object(_.c)(u)),
                         console.error(
                           "FaqStore.UpdateVisibility: exception " +
                             l.strErrorMsg,
@@ -2531,9 +2538,9 @@
                   a,
                   o,
                   s,
-                  u,
+                  c,
                   l,
-                  d = this;
+                  m = this;
                 return Object(i.e)(this, function (i) {
                   switch (i.label) {
                     case 0:
@@ -2561,9 +2568,9 @@
                         (o = i.sent()),
                         1 === (a = o.GetEResult())
                           ? (s = this.m_mapFAQSummaries.get(e)) &&
-                            Object(c.G)(function () {
-                              d.m_mapFAQPublishedContent.has(e) ||
-                                d.m_mapFAQPublishedContent.set(e, new Map()),
+                            Object(u.G)(function () {
+                              m.m_mapFAQPublishedContent.has(e) ||
+                                m.m_mapFAQPublishedContent.set(e, new Map()),
                                 s.per_language_info.forEach(function (n) {
                                   var r = n.language;
                                   if (t.indexOf(r) >= 0) {
@@ -2571,10 +2578,10 @@
                                       n.last_publish_timestamp,
                                       o.Body().last_publish_timestamp()
                                     );
-                                    var i = d.m_mapFAQDrafts
+                                    var i = m.m_mapFAQDrafts
                                       .get(e)
                                       .GetLastSavedDraftVersion(r);
-                                    d.m_mapFAQPublishedContent.get(e).set(r, i);
+                                    m.m_mapFAQPublishedContent.get(e).set(r, i);
                                   }
                                 });
                             })
@@ -2585,8 +2592,8 @@
                       );
                     case 3:
                       return (
-                        (u = i.sent()),
-                        (l = Object(_.c)(u)),
+                        (c = i.sent()),
+                        (l = Object(_.c)(c)),
                         console.error(
                           "FaqStore.PublishDraftByLanguage: exception " +
                             l.strErrorMsg,
@@ -2606,7 +2613,7 @@
                   a,
                   o,
                   s,
-                  u,
+                  c,
                   l = this;
                 return Object(i.e)(this, function (i) {
                   switch (i.label) {
@@ -2631,7 +2638,7 @@
                       return (
                         (o = i.sent()),
                         1 === (a = o.GetEResult())
-                          ? Object(c.G)(function () {
+                          ? Object(u.G)(function () {
                               var n, r, i;
                               (null === (n = l.m_mapFAQSummaries.get(e)) ||
                               void 0 === n
@@ -2658,11 +2665,11 @@
                     case 3:
                       return (
                         (s = i.sent()),
-                        (u = Object(_.c)(s)),
+                        (c = Object(_.c)(s)),
                         console.error(
                           "FaqStore.UpdateInternalName: exception " +
-                            u.strErrorMsg,
-                          u
+                            c.strErrorMsg,
+                          c
                         ),
                         [3, 4]
                       );
@@ -2748,8 +2755,8 @@
               [27, 5],
               [29, 6],
             ])),
-            Object(i.c)([c.C], e.prototype, "m_mapFAQSummaries", void 0),
-            Object(i.c)([c.k], e.prototype, "RemoveAllDirtyDrafts", null),
+            Object(i.c)([u.C], e.prototype, "m_mapFAQSummaries", void 0),
+            Object(i.c)([u.k], e.prototype, "RemoveAllDirtyDrafts", null),
             e
           );
         })(),
@@ -2757,11 +2764,11 @@
       function X(e) {
         var t = null == e ? void 0 : e.replace(/-/g, "");
         return 16 == (null == t ? void 0 : t.length) && Z.test(t)
-          ? u.a.fromString(t, !0, 16).toString()
+          ? c.a.fromString(t, !0, 16).toString()
           : null;
       }
       function $(e) {
-        var t = ("0000000000000000" + u.a.fromString(e, !0, 10).toString(16))
+        var t = ("0000000000000000" + c.a.fromString(e, !0, 10).toString(16))
           .slice(-16)
           .toUpperCase();
         return (
@@ -2778,10 +2785,10 @@
         return [e && K.Get().GetFAQPublishedContent(e, t), !0];
       }
       function te(e) {
-        var t = d.a.useState(K.Get().GetFAQDraftContent(e)),
+        var t = m.a.useState(K.Get().GetFAQDraftContent(e)),
           n = t[0],
           r = t[1],
-          i = d.a.useState(!!n),
+          i = m.a.useState(!!n),
           a = i[0],
           o = i[1];
         return (
@@ -2806,7 +2813,7 @@
       }
       function re() {
         var e = K.Get().GetAllFAQSummaries();
-        return d.a.useRef([e, !0]).current;
+        return m.a.useRef([e, !0]).current;
       }
     },
     PpkI: function (e, t, n) {
@@ -2831,18 +2838,18 @@
       "use strict";
       n.r(t),
         n.d(t, "ConferenceRoutes", function () {
-          return we;
+          return je;
         });
       var r = n("q1tI"),
         i = n.n(r),
         a = n("Ty5D"),
         o = n("WplJ"),
         s = n("rcjX"),
-        u = n("mgoM"),
-        c = n("kLLr"),
+        c = n("mgoM"),
+        u = n("kLLr"),
         l = n("N2vu"),
-        d = n("lkRc"),
-        m = (function () {
+        m = n("lkRc"),
+        d = (function () {
           function e() {
             (this.m_mapConferences = new Map()),
               (this.m_mapConferenceCallback = new Map());
@@ -2856,15 +2863,15 @@
                 e.s_Singleton ||
                   ((e.s_Singleton = new e()),
                   e.s_Singleton.Init(),
-                  "dev" == d.c.WEB_UNIVERSE &&
+                  "dev" == m.c.WEB_UNIVERSE &&
                     (window.g_ConferenceStore = e.s_Singleton)),
                 e.s_Singleton
               );
             }),
             (e.prototype.Init = function () {
-              var e = Object(d.g)("conferenceinfo", "application_config");
+              var e = Object(m.g)("conferenceinfo", "application_config");
               if (this.ValidateStoreDefault(e)) {
-                var t = Object(u.d)(d.c.LANGUAGE),
+                var t = Object(c.d)(m.c.LANGUAGE),
                   n = Object(l.c)(e.clan_faq_about_page),
                   r = l.a.Get().GetFAQPublishedContent(n, t),
                   i = Object(s.d)(e.localized_logo, t, r.timestamp),
@@ -2872,8 +2879,8 @@
                     strConferenceID: e.vanity,
                     rtStartTime: e.start_rtime,
                     rtEndTime: e.end_rtime,
-                    clanSteamID: new c.a(e.event_group_steamid),
-                    broadcastSteamID: new c.a(e.broadcast_steamid),
+                    clanSteamID: new u.a(e.event_group_steamid),
+                    broadcastSteamID: new u.a(e.broadcast_steamid),
                     bPartnerOnly: e.partner_only,
                     faqAboutPage: r,
                     strLocalizedLogos: "string" == typeof i ? [i] : i,
@@ -2901,7 +2908,7 @@
         v = n("TLQK");
       function h(e) {
         e.conferenceInfo;
-        return "dev" != d.c.WEB_UNIVERSE ? null : r.createElement("div", null);
+        return "dev" != m.c.WEB_UNIVERSE ? null : r.createElement("div", null);
       }
       var g = n("mrSG"),
         y = n("WF3T"),
@@ -2939,11 +2946,11 @@
                           rtCalendarEnd: e,
                         }),
                         (n = Object(y.b)()),
-                        (r = Object(d.g)(
+                        (r = Object(m.g)(
                           "conference_calendar",
                           "application_config"
                         ))
-                          ? ("dev" == d.c.WEB_UNIVERSE &&
+                          ? ("dev" == m.c.WEB_UNIVERSE &&
                               console.log(
                                 "Conference LandingPage loading initial events: " +
                                   r.length,
@@ -2974,9 +2981,9 @@
         B = n("1BdX"),
         A = n("5izx"),
         w = n("6oCP"),
-        O = n("fA8f"),
+        E = n("fA8f"),
         j = n("cGQe"),
-        E = n("r3N9"),
+        O = n("r3N9"),
         F = n("GiuM"),
         M = n("opsS");
       function Q(e) {
@@ -2986,28 +2993,28 @@
           a = i[0],
           o = i[1],
           s = Object(F.d)("emgid", null),
-          u = s[0],
+          c = s[0],
           l = s[1],
-          d = Object(F.d)("emclan", null),
-          m = d[0],
-          f = d[1];
+          m = Object(F.d)("emclan", null),
+          d = m[0],
+          f = m[1];
         return (
           Object(M.d)(n, function (e, t) {
-            l(e), f(c.a.InitFromClanID(t).ConvertTo64BitString());
+            l(e), f(u.a.InitFromClanID(t).ConvertTo64BitString());
           }),
           r.useEffect(
             function () {
-              if (null != u && null != m) {
-                var e = new c.a(m);
+              if (null != c && null != d) {
+                var e = new u.a(d);
                 w.d
-                  .LoadPartnerEventFromClanEventGIDAndClanSteamID(e, u, 0)
+                  .LoadPartnerEventFromClanEventGIDAndClanSteamID(e, c, 0)
                   .then(o);
               }
             },
-            [u, m]
+            [c, d]
           ),
           a
-            ? r.createElement(E.a, {
+            ? r.createElement(O.a, {
                 appid: a.appid,
                 trackingLocation: t,
                 announcementGID: a.GetAnnouncementGID(),
@@ -3022,14 +3029,14 @@
         );
       }
       var I = n("gPCo"),
-        R = n("0OaU"),
-        T = n("r64O"),
+        T = n("0OaU"),
+        R = n("r64O"),
         D = n("qiKp"),
         z = n("exH9"),
         U = n("Z1oF"),
         N = n("CdLH"),
-        L = n("JsZI");
-      function q(e) {
+        q = n("JsZI");
+      function G(e) {
         var t = Object(y.b)(),
           n = Object(A.b)(),
           i = t.GetActiveEventsAt(n) || [],
@@ -3042,7 +3049,7 @@
             )
           : r.createElement(
               "div",
-              { className: L.UpcomingEventsCtn },
+              { className: q.UpcomingEventsCtn },
               r.createElement(Q, { displayLocation: 6, fnChangeModalEvent: a }),
               r.createElement(P, { rgActiveEvents: i }),
               r.createElement(k, {
@@ -3053,11 +3060,11 @@
               })
             );
       }
-      function G(e) {
+      function L(e) {
         return r.createElement(
           H,
           Object(g.a)({}, e),
-          r.createElement(q, Object(g.a)({}, e))
+          r.createElement(G, Object(g.a)({}, e))
         );
       }
       function k(e) {
@@ -3082,15 +3089,15 @@
             )
           : r.createElement(
               "div",
-              { className: L.UpcomingEventsCtn },
+              { className: q.UpcomingEventsCtn },
               r.createElement(
                 "div",
-                { className: L.SectionTitle },
+                { className: q.SectionTitle },
                 Object(v.f)("#Conference_ScheduleNext")
               ),
               r.createElement(
                 "div",
-                { className: L.EventSchedCtn },
+                { className: q.EventSchedCtn },
                 a.map(function (n, i) {
                   return r.createElement(W, {
                     key: n.unique_id,
@@ -3107,41 +3114,41 @@
           n = e.bDisplayAsUpNext,
           i = e.fnDisplayModalEvent,
           a = w.d.GetClanEventModel(t.unique_id),
-          o = Object(u.d)(d.c.LANGUAGE),
+          o = Object(c.d)(m.c.LANGUAGE),
           s = Object(A.b)(),
-          c = a.GetStartTimeAndDateUnixSeconds(),
-          l = Object(N.b)(new Date(1e3 * s), new Date(1e3 * c));
+          u = a.GetStartTimeAndDateUnixSeconds(),
+          l = Object(N.b)(new Date(1e3 * s), new Date(1e3 * u));
         return r.createElement(
           "div",
           {
-            className: L.EventItemCtn,
+            className: q.EventItemCtn,
             onClick: function () {
               return i(a.GID, a.clanSteamID.GetAccountID());
             },
           },
           r.createElement(
             "div",
-            { className: L.Title },
+            { className: q.Title },
             a.GetNameWithFallback(o)
           ),
           r.createElement(
             "div",
             null,
-            !l && r.createElement("div", null, Object(v.k)(c, !0)),
+            !l && r.createElement("div", null, Object(v.k)(u, !0)),
             r.createElement(
               "div",
               null,
               Boolean(n && l)
                 ? Object(v.f)(
                     "#Conference_StartInMin",
-                    Math.max(1, Math.floor((c - s) / 60))
+                    Math.max(1, Math.floor((u - s) / 60))
                   )
-                : Object(v.f)("#Conference_StartsAt", Object(U.g)(c))
+                : Object(v.f)("#Conference_StartsAt", Object(U.g)(u))
             )
           ),
           r.createElement(
             "div",
-            { className: Object(z.a)(L.ReminderContainer, L.OnlyIcon) },
+            { className: Object(z.a)(q.ReminderContainer, q.OnlyIcon) },
             r.createElement(j.a, {
               eventModel: a,
               eventGID: a.GID,
@@ -3156,19 +3163,19 @@
       function P(e) {
         var t = e.rgActiveEvents;
         if (!t || 0 == t.length) return null;
-        Object(T.a)(
+        Object(R.a)(
           1 == t.length,
           "Unexpected number of active events in the conference tool"
         );
         var n = t[0],
-          i = Object(u.d)(d.c.LANGUAGE),
+          i = Object(c.d)(m.c.LANGUAGE),
           a = B.a.ParseEventModelPresenters(n, i);
         return r.createElement(
           "div",
-          { className: L.ActiveEventCtn },
+          { className: q.ActiveEventCtn },
           r.createElement(
             "div",
-            { className: L.Title },
+            { className: q.Title },
             n.GetNameWithFallback(i)
           ),
           Boolean(a) &&
@@ -3188,7 +3195,7 @@
             }),
           r.createElement(
             "div",
-            { className: L.EventDescription },
+            { className: q.EventDescription },
             n.GetSummaryWithFallback(i)
           )
         );
@@ -3217,11 +3224,11 @@
             )
           : r.createElement(
               "div",
-              { className: L.PastEventsCtn },
+              { className: q.PastEventsCtn },
               r.createElement(Q, { displayLocation: 6, fnChangeModalEvent: o }),
               s.map(function (e) {
                 var t = w.d.GetClanEventModel(e.unique_id);
-                return r.createElement(O.a, {
+                return r.createElement(E.a, {
                   key: "row" + e.unique_id,
                   eventModel: t,
                   calendarEvent: e,
@@ -3258,7 +3265,7 @@
             [t.rtEndTime, t.strConferenceID]
           ),
           i
-            ? r.createElement(R.a, null)
+            ? r.createElement(T.a, null)
             : r.createElement(r.Fragment, null, e.children)
         );
       }
@@ -3303,11 +3310,12 @@
           )
         );
       }
-      var ne = n("5STL"),
-        re = n("vDqi"),
-        ie = n.n(re);
-      function ae(e) {
-        var t = i.a.useRef(ie.a.CancelToken.source());
+      var ne = n("6Y59"),
+        re = n("5STL"),
+        ie = n("vDqi"),
+        ae = n.n(ie);
+      function oe(e) {
+        var t = i.a.useRef(ae.a.CancelToken.source());
         return (
           i.a.useEffect(
             function () {
@@ -3321,14 +3329,14 @@
           t.current
         );
       }
-      var oe = n("bDQf"),
-        se = (function () {
+      var se = n("bDQf"),
+        ce = (function () {
           function e() {
             (this.m_mapQAndASessions = new Map()),
               (this.m_mapQAndAChangeCallbackList = new Map()),
               (this.m_mapQuestions = new Map()),
               (this.m_mapQuestionCallbackList = new Map()),
-              "dev" == d.c.WEB_UNIVERSE && (window.g_FAQStore = this);
+              "dev" == m.c.WEB_UNIVERSE && (window.g_FAQStore = this);
           }
           return (
             (e.Get = function () {
@@ -3355,22 +3363,22 @@
               return this.m_mapQuestions.get(e);
             }),
             (e.prototype.LoadSession = function (e, t, n) {
-              var r, i, a, o, s, u, c, l, m, f;
+              var r, i, a, o, s, c, u, l, d, f;
               return Object(g.b)(this, void 0, void 0, function () {
-                var p, b, _, v, h, y, S, C, B, A, w, O, j, E, F, M, Q;
+                var p, b, _, v, h, y, S, C, B, A, w, E, j, O, F, M, Q;
                 return Object(g.e)(this, function (I) {
                   switch (I.label) {
                     case 0:
                       (p =
-                        d.i.logged_in &&
+                        m.i.logged_in &&
                         (t || !this.m_mapQAndASessions.has(e))),
                         (b = p
                           ? "/ajaxgetqandasessionforuser/"
                           : "/ajaxgetqandasession/"),
                         (_ =
-                          d.c.COMMUNITY_BASE_URL +
+                          m.c.COMMUNITY_BASE_URL +
                           "questions/" +
-                          d.b.VANITY_ID +
+                          m.b.VANITY_ID +
                           b +
                           e),
                         (v = {}),
@@ -3381,7 +3389,7 @@
                         I.trys.push([1, 3, , 4]),
                         [
                           4,
-                          ie.a.get(_, {
+                          ae.a.get(_, {
                             params: v,
                             cancelToken: null == n ? void 0 : n.token,
                           }),
@@ -3409,11 +3417,11 @@
                                     : i.bUserUpVoted) && void 0 !== a
                                 ? a
                                 : B.bUserUpVoted),
-                            (O = Object(g.a)(Object(g.a)({}, B), {
+                            (E = Object(g.a)(Object(g.a)({}, B), {
                               bUserUpVoted: w,
                             })),
-                            this.m_mapQuestions.set(A, O),
-                            this.GetQuestionCallbackList(A).Dispatch(O);
+                            this.m_mapQuestions.set(A, E),
+                            this.GetQuestionCallbackList(A).Dispatch(E);
                         return (
                           (j =
                             null !==
@@ -3424,18 +3432,18 @@
                                   : o.bUserCanModerate) && void 0 !== s
                               ? s
                               : y.data.qanda.bUserCanModerate),
-                          (E =
+                          (O =
                             null !==
-                              (c =
-                                null === (u = this.m_mapQAndASessions.get(e)) ||
-                                void 0 === u
+                              (u =
+                                null === (c = this.m_mapQAndASessions.get(e)) ||
+                                void 0 === c
                                   ? void 0
-                                  : u.bUserCanAskQuestions) && void 0 !== c
-                              ? c
+                                  : c.bUserCanAskQuestions) && void 0 !== u
+                              ? u
                               : y.data.qanda.bUserCanAskQuestions),
                           (F = Object(g.a)(Object(g.a)({}, y.data.qanda), {
                             bUserCanModerate: j,
-                            bUserCanAskQuestions: E,
+                            bUserCanAskQuestions: O,
                           })),
                           this.m_mapQAndASessions.set(e, F),
                           this.GetQAndACallbackList(e).Dispatch(F),
@@ -3447,7 +3455,7 @@
                       return (M = I.sent()), (h = M), [3, 4];
                     case 4:
                       return (
-                        (Q = Object(oe.c)(h)),
+                        (Q = Object(se.c)(h)),
                         console.error(
                           "Could not load Q&A",
                           e,
@@ -3459,14 +3467,14 @@
                           null !==
                             (f =
                               null ===
-                                (m =
+                                (d =
                                   null ===
                                     (l = null == h ? void 0 : h.response) ||
                                   void 0 === l
                                     ? void 0
-                                    : l.data) || void 0 === m
+                                    : l.data) || void 0 === d
                                 ? void 0
-                                : m.success) && void 0 !== f
+                                : d.success) && void 0 !== f
                             ? f
                             : 2,
                         ]
@@ -3478,27 +3486,27 @@
             (e.prototype.AskNewQuestion = function (e, t, n) {
               var r, i, a, o, s;
               return Object(g.b)(this, void 0, void 0, function () {
-                var u, c, l, m, f, p;
+                var c, u, l, d, f, p;
                 return Object(g.e)(this, function (b) {
                   switch (b.label) {
                     case 0:
                       if (
-                        !d.i.logged_in ||
-                        !d.c.SESSIONID ||
+                        !m.i.logged_in ||
+                        !m.c.SESSIONID ||
                         !(null === (r = this.m_mapQAndASessions.get(e)) ||
                         void 0 === r
                           ? void 0
                           : r.bUserCanAskQuestions)
                       )
                         return [2, 15];
-                      (u =
-                        d.c.COMMUNITY_BASE_URL +
+                      (c =
+                        m.c.COMMUNITY_BASE_URL +
                         "questions/" +
-                        d.b.VANITY_ID +
+                        m.b.VANITY_ID +
                         "/ajaxaskquestion/" +
                         e),
-                        (c = new FormData()).append("sessionid", d.c.SESSIONID),
-                        c.append("question", t),
+                        (u = new FormData()).append("sessionid", m.c.SESSIONID),
+                        u.append("question", t),
                         (l = null),
                         (b.label = 1);
                     case 1:
@@ -3506,7 +3514,7 @@
                         b.trys.push([1, 3, , 4]),
                         [
                           4,
-                          ie.a.post(u, c, {
+                          ae.a.post(c, u, {
                             withCredentials: !0,
                             cancelToken: null == n ? void 0 : n.token,
                           }),
@@ -3514,18 +3522,18 @@
                       );
                     case 2:
                       return 200 ==
-                        (null == (m = b.sent()) ? void 0 : m.status) &&
+                        (null == (d = b.sent()) ? void 0 : d.status) &&
                         1 ==
-                          (null === (i = m.data) || void 0 === i
+                          (null === (i = d.data) || void 0 === i
                             ? void 0
                             : i.success)
                         ? (!0, this.LoadSession(e, true, n), [2, 1])
-                        : ((l = { response: m }), [3, 4]);
+                        : ((l = { response: d }), [3, 4]);
                     case 3:
                       return (f = b.sent()), (l = f), [3, 4];
                     case 4:
                       return (
-                        (p = Object(oe.c)(l)),
+                        (p = Object(se.c)(l)),
                         console.error(
                           "Could not upload question",
                           e,
@@ -3555,38 +3563,38 @@
               });
             }),
             (e.prototype.AnswerQuestion = function (e, t, n, r) {
-              var i, a, o, s, u;
+              var i, a, o, s, c;
               return Object(g.b)(this, void 0, void 0, function () {
-                var c, l, m, f, p, b;
+                var u, l, d, f, p, b;
                 return Object(g.e)(this, function (_) {
                   switch (_.label) {
                     case 0:
                       if (
-                        !d.i.logged_in ||
-                        !d.c.SESSIONID ||
+                        !m.i.logged_in ||
+                        !m.c.SESSIONID ||
                         !(null === (i = this.m_mapQAndASessions.get(e)) ||
                         void 0 === i
                           ? void 0
                           : i.bUserCanModerate)
                       )
                         return [2, 15];
-                      (c =
-                        d.c.COMMUNITY_BASE_URL +
+                      (u =
+                        m.c.COMMUNITY_BASE_URL +
                         "questions/" +
-                        d.b.VANITY_ID +
+                        m.b.VANITY_ID +
                         "/ajaxanswerquestion/" +
                         e),
-                        (l = new FormData()).append("sessionid", d.c.SESSIONID),
+                        (l = new FormData()).append("sessionid", m.c.SESSIONID),
                         l.append("gidquestion", t),
                         l.append("answer", n),
-                        (m = null),
+                        (d = null),
                         (_.label = 1);
                     case 1:
                       return (
                         _.trys.push([1, 3, , 4]),
                         [
                           4,
-                          ie.a.post(c, l, {
+                          ae.a.post(u, l, {
                             withCredentials: !0,
                             cancelToken: null == r ? void 0 : r.token,
                           }),
@@ -3600,12 +3608,12 @@
                             ? void 0
                             : a.success)
                         ? (!0, this.LoadSession(e, true, r), [2, 1])
-                        : ((m = { response: f }), [3, 4]);
+                        : ((d = { response: f }), [3, 4]);
                     case 3:
-                      return (p = _.sent()), (m = p), [3, 4];
+                      return (p = _.sent()), (d = p), [3, 4];
                     case 4:
                       return (
-                        (b = Object(oe.c)(m)),
+                        (b = Object(se.c)(d)),
                         console.error(
                           "Could not upload answer",
                           e,
@@ -3617,17 +3625,17 @@
                         [
                           2,
                           null !==
-                            (u =
+                            (c =
                               null ===
                                 (s =
                                   null ===
-                                    (o = null == m ? void 0 : m.response) ||
+                                    (o = null == d ? void 0 : d.response) ||
                                   void 0 === o
                                     ? void 0
                                     : o.data) || void 0 === s
                                 ? void 0
-                                : s.success) && void 0 !== u
-                            ? u
+                                : s.success) && void 0 !== c
+                            ? c
                             : 2,
                         ]
                       );
@@ -3636,15 +3644,15 @@
               });
             }),
             (e.prototype.VoteOnQuestion = function (e, t, n, r) {
-              var i, a, o, s, u;
+              var i, a, o, s, c;
               return Object(g.b)(this, void 0, void 0, function () {
-                var c, l, m, f, p, b, _, v;
+                var u, l, d, f, p, b, _, v;
                 return Object(g.e)(this, function (h) {
                   switch (h.label) {
                     case 0:
                       if (
-                        !d.i.logged_in ||
-                        !d.c.SESSIONID ||
+                        !m.i.logged_in ||
+                        !m.c.SESSIONID ||
                         !(null === (i = this.m_mapQAndASessions.get(e)) ||
                         void 0 === i
                           ? void 0
@@ -3653,21 +3661,21 @@
                         return [2, 15];
                       if (n === this.m_mapQuestions.get(t).bUserUpVoted)
                         return [2, 1];
-                      (c = this.m_mapQuestions.get(t)),
-                        (l = c.nVoteCount + (n ? 1 : -1)),
-                        (c = Object(g.a)(Object(g.a)({}, c), {
+                      (u = this.m_mapQuestions.get(t)),
+                        (l = u.nVoteCount + (n ? 1 : -1)),
+                        (u = Object(g.a)(Object(g.a)({}, u), {
                           nVoteCount: l,
                           bUserUpVoted: n,
                         })),
-                        this.m_mapQuestions.set(t, c),
-                        this.GetQuestionCallbackList(t).Dispatch(c),
-                        (m =
-                          d.c.COMMUNITY_BASE_URL +
+                        this.m_mapQuestions.set(t, u),
+                        this.GetQuestionCallbackList(t).Dispatch(u),
+                        (d =
+                          m.c.COMMUNITY_BASE_URL +
                           "questions/" +
-                          d.b.VANITY_ID +
+                          m.b.VANITY_ID +
                           "/ajaxvoteforquestion/" +
                           e),
-                        (f = new FormData()).append("sessionid", d.c.SESSIONID),
+                        (f = new FormData()).append("sessionid", m.c.SESSIONID),
                         f.append("gidquestion", t),
                         f.append("up", n ? "1" : "0"),
                         (p = null),
@@ -3677,7 +3685,7 @@
                         h.trys.push([1, 3, , 4]),
                         [
                           4,
-                          ie.a.post(m, f, {
+                          ae.a.post(d, f, {
                             withCredentials: !0,
                             cancelToken: null == r ? void 0 : r.token,
                           }),
@@ -3696,7 +3704,7 @@
                       return (_ = h.sent()), (p = _), [3, 4];
                     case 4:
                       return (
-                        (v = Object(oe.c)(p)),
+                        (v = Object(se.c)(p)),
                         console.error(
                           "Could not upload vote",
                           e,
@@ -3708,7 +3716,7 @@
                         [
                           2,
                           null !==
-                            (u =
+                            (c =
                               null ===
                                 (s =
                                   null ===
@@ -3717,8 +3725,8 @@
                                     ? void 0
                                     : o.data) || void 0 === s
                                 ? void 0
-                                : s.success) && void 0 !== u
-                            ? u
+                                : s.success) && void 0 !== c
+                            ? c
                             : 2,
                         ]
                       );
@@ -3730,83 +3738,102 @@
           );
         })();
       var ue = n("Mgs7"),
-        ce = n("BFsE"),
-        le = n("6Y59"),
+        le = n("BFsE"),
+        me = n("5E+2"),
         de = n("hII0"),
-        me = n.n(de);
-      function fe(e) {
+        fe = n.n(de);
+      function pe(e) {
         var t = e.gidSession,
           n = e.gidQuestion,
           r = e.bUserCanModerate,
           a = e.bUserCanVote,
           o = (function (e) {
-            var t = i.a.useState(se.Get().GetQuestion(e)),
+            var t = i.a.useState(ce.Get().GetQuestion(e)),
               n = t[0],
               r = t[1];
-            Object(M.d)(se.Get().GetQuestionCallbackList(e), r);
+            Object(M.d)(ce.Get().GetQuestionCallbackList(e), r);
             var a = i.a.useState(!!n),
               o = a[0];
             return a[1], [n, !!n || o];
           })(n),
           s = o[0],
-          u =
+          c =
             (o[1],
             (function (e, t) {
               var n,
                 r = i.a.useCallback(
                   function (n) {
-                    return se.Get().VoteOnQuestion(e, t, n);
+                    return ce.Get().VoteOnQuestion(e, t, n);
                   },
                   [e, t]
                 );
               return (
-                (null === (n = se.Get().GetSession(e)) || void 0 === n
+                (null === (n = ce.Get().GetSession(e)) || void 0 === n
                   ? void 0
                   : n.bUserCanAskQuestions) && r
               );
             })(t, n)),
-          c = a
+          u = a
             ? function () {
-                return u(!s.bUserUpVoted);
+                return c(!s.bUserUpVoted);
               }
             : null,
           l = a
             ? s.bUserUpVoted
-              ? me.a.Vote_Positive
-              : me.a.Vote_Ready
-            : me.a.Vote_CannotVote,
-          d = Date.now() / 1e3 - s.rtPostTime,
-          m = d < 86400 ? Object(v.q)(d, !1, !0) : Object(v.p)(s.rtPostTime);
+              ? fe.a.Vote_Positive
+              : fe.a.Vote_Ready
+            : fe.a.Vote_CannotVote,
+          m = Date.now() / 1e3 - s.rtPostTime,
+          d = m < 86400 ? Object(v.q)(m, !1, !0) : Object(v.p)(s.rtPostTime);
         return i.a.createElement(
           "div",
-          { className: me.a.Question },
+          { className: fe.a.Question },
           i.a.createElement(
             "div",
-            { className: me.a.QuestionText },
-            " ",
-            s.strQuestionText,
-            " "
-          ),
-          i.a.createElement(
-            "div",
-            { className: me.a.QuestionStats },
-            i.a.createElement(
-              p.g,
-              {
-                rtFullDate: s.rtPostTime,
-                className: me.a.PostTime,
-                stylesmodule: me.a,
-              },
-              m
-            ),
+            { className: fe.a.QuestionCtn },
+            i.a.createElement("div", { className: fe.a.UserAvatar }),
             i.a.createElement(
               "div",
-              { className: Object(z.a)(l, me.a.Votes), onClick: c },
-              i.a.createElement(le.ab, { className: me.a.RateIcon }),
+              { className: fe.a.QuestionText },
               i.a.createElement(
                 "div",
-                { className: me.a.VoteCount },
-                Number(s.nVoteCount).toLocaleString()
+                { className: fe.a.QuestionTitle },
+                s.strQuestionText
+              ),
+              i.a.createElement(
+                "div",
+                { className: fe.a.QuestionStats },
+                i.a.createElement(
+                  "div",
+                  { className: fe.a.PostTime },
+                  i.a.createElement(
+                    p.g,
+                    {
+                      rtFullDate: s.rtPostTime,
+                      className: fe.a.PostTime,
+                      stylesmodule: fe.a,
+                    },
+                    d
+                  )
+                ),
+                i.a.createElement(
+                  me.a,
+                  {
+                    toolTipContent: s.bUserUpVoted
+                      ? Object(v.f)("#QAndA_VoteRemoveTooltip")
+                      : Object(v.f)("#QAndA_VoteTooltip"),
+                  },
+                  i.a.createElement(
+                    "div",
+                    { className: Object(z.a)(l, fe.a.Votes), onClick: u },
+                    i.a.createElement(ne.db, { className: fe.a.RateIcon }),
+                    i.a.createElement(
+                      "div",
+                      { className: fe.a.VoteCount },
+                      Number(s.nVoteCount).toLocaleString()
+                    )
+                  )
+                )
               )
             )
           ),
@@ -3814,43 +3841,43 @@
             !!s.rtAnswerTime &&
             i.a.createElement(
               "div",
-              { className: me.a.Answer },
+              { className: fe.a.Answer },
               i.a.createElement(
                 "div",
-                { className: me.a.AnswerText },
+                { className: fe.a.AnswerText },
                 " ",
                 s.strAnswerText,
                 " "
               ),
               i.a.createElement(
                 "div",
-                { className: me.a.QuestionStats },
+                { className: fe.a.QuestionStats },
                 i.a.createElement(
                   p.g,
                   {
                     rtFullDate: s.rtAnswerTime,
-                    className: me.a.PostTime,
-                    stylesmodule: me.a,
+                    className: fe.a.PostTime,
+                    stylesmodule: fe.a,
                   },
-                  m
+                  d
                 )
               )
             ),
-          r && i.a.createElement(pe, { gidSession: t, gidQuestion: n })
+          r && i.a.createElement(be, { gidSession: t, gidQuestion: n })
         );
       }
-      function pe(e) {
+      function be(e) {
         var t = (function (e, t) {
             var n,
               r = this,
-              a = ae("useQAndASession"),
+              a = oe("useQAndASession"),
               o = i.a.useCallback(
                 function (n) {
                   return Object(g.b)(r, void 0, void 0, function () {
                     return Object(g.e)(this, function (r) {
                       switch (r.label) {
                         case 0:
-                          return [4, se.Get().AnswerQuestion(e, t, n, a)];
+                          return [4, ce.Get().AnswerQuestion(e, t, n, a)];
                         case 1:
                           return [2, r.sent()];
                       }
@@ -3860,7 +3887,7 @@
                 [e, t, a]
               );
             return (
-              null === (n = se.Get().GetSession(e)) || void 0 === n
+              null === (n = ce.Get().GetSession(e)) || void 0 === n
                 ? void 0
                 : n.bUserCanModerate
             )
@@ -3880,74 +3907,69 @@
         t[1];
         return i.a.createElement(
           "div",
-          { className: me.a.ModeratorSection },
+          { className: fe.a.ModeratorSection },
           i.a.createElement(
             "div",
-            { className: me.a.ToolRow },
-            i.a.createElement(
-              "div",
-              { className: me.a.ToolLabel },
-              Object(v.f)("#QAndA_AnswerLabel")
-            ),
-            i.a.createElement(ve, {
+            { className: fe.a.ToolRow },
+            i.a.createElement(he, {
               strPrompt: Object(v.f)("#QAndA_AnswerPrompt"),
               fnSubmit: n,
             })
           ),
           i.a.createElement(
             "div",
-            { className: me.a.ToolRow },
+            { className: fe.a.ToolRow },
             i.a.createElement(
               "div",
-              { className: me.a.ToolLabel },
+              { className: fe.a.ToolLabel },
               Object(v.f)("#QAndA_ModeratorLabel")
             ),
             i.a.createElement(
               ue.d,
-              { disabled: !0, className: me.a.InputButton },
+              { disabled: !0, className: fe.a.InputButton },
               "NOT YET IMPLEMENTED"
             )
           )
         );
       }
-      function be(e) {
+      function _e(e) {
         var t = e.gidSession,
           n = (function (e) {
             var t = this,
-              n = i.a.useState(se.Get().GetSession(e)),
+              n = i.a.useState(ce.Get().GetSession(e)),
               r = n[0],
               a = n[1];
-            Object(M.d)(se.Get().GetQAndACallbackList(e), a);
+            Object(M.d)(ce.Get().GetQAndACallbackList(e), a);
             var o = i.a.useState(!!r),
               s = o[0],
-              u = o[1],
-              c = ae("useQAndASession"),
+              c = o[1],
+              u = oe("useQAndASession"),
               l = i.a.useCallback(
                 function () {
-                  u(!1),
-                    se
+                  c(!1),
+                    ce
                       .Get()
-                      .LoadSession(e, !1, c)
+                      .LoadSession(e, !1, u)
                       .finally(function () {
-                        return u(!0);
+                        return c(!0);
                       });
                 },
-                [e, c]
+                [e, u]
               ),
-              d = i.a.useCallback(
+              m = i.a.useCallback(
                 function (n) {
                   return Object(g.b)(t, void 0, void 0, function () {
                     return Object(g.e)(this, function (t) {
                       switch (t.label) {
                         case 0:
-                          return [4, se.Get().AskNewQuestion(e, n, c)];
+                          return [4, ce.Get().AskNewQuestion(e, n, u)];
                         case 1:
                           return [2, t.sent()];
                       }
                     });
                   });
                 },
-                [e, c]
+                [e, u]
               );
             return (
               i.a.useEffect(
@@ -3956,7 +3978,7 @@
                 },
                 [l]
               ),
-              [r, l, d, s]
+              [r, l, m, s]
             );
           })(t),
           r = n[0],
@@ -3965,83 +3987,82 @@
           s = n[3];
         return i.a.createElement(
           "div",
-          { className: me.a.QuestionCtn },
+          { className: fe.a.QAMainCtn },
           i.a.createElement(
             "div",
-            { className: me.a.QAHeader },
+            { className: fe.a.QAHeader },
             i.a.createElement(
-              "div",
-              { className: me.a.QATitle },
-              Object(v.f)("#QAndA_Title")
+              ue.d,
+              {
+                onClick: a,
+                disabled: !s,
+                className: Object(z.a)(fe.a.InputButton, fe.a.Reload),
+              },
+              i.a.createElement(ne.R, null)
             ),
             (null == r ? void 0 : r.bUserCanAskQuestions)
-              ? i.a.createElement(_e, { fnAskQuestion: o })
-              : s && i.a.createElement(he, null)
+              ? i.a.createElement(ve, { fnAskQuestion: o })
+              : s && i.a.createElement(ge, null)
           ),
           i.a.createElement(
             "div",
-            { className: me.a.QuestionList },
+            { className: fe.a.QuestionsCtn },
             i.a.createElement(
               "div",
-              { className: me.a.QuestionListHeader },
-              i.a.createElement(
-                "div",
-                { className: me.a.QuestionListTitle },
-                Object(v.f)("#QAndA_QuestionListHeader")
-              ),
-              i.a.createElement(
-                ue.d,
-                { onClick: a, disabled: !s, className: me.a.InputButton },
-                Object(v.f)("#QAndA_ReloadButton")
-              )
+              { className: fe.a.InsetShadowTopCtn },
+              i.a.createElement("div", { className: fe.a.InsetShadowTop })
             ),
-            s
-              ? null == r
-                ? void 0
-                : r.rgQuestionGIDs.map(function (e) {
-                    return i.a.createElement(fe, {
-                      key: e,
-                      gidSession: t,
-                      gidQuestion: e,
-                      bUserCanModerate: r.bUserCanModerate,
-                      bUserCanVote: r.bUserCanAskQuestions,
-                    });
-                  })
-              : i.a.createElement(R.a, { position: "center" })
+            i.a.createElement(
+              "div",
+              { className: fe.a.QuestionList },
+              s
+                ? null == r
+                  ? void 0
+                  : r.rgQuestionGIDs.map(function (e) {
+                      return i.a.createElement(pe, {
+                        key: e,
+                        gidSession: t,
+                        gidQuestion: e,
+                        bUserCanModerate: r.bUserCanModerate,
+                        bUserCanVote: r.bUserCanAskQuestions,
+                      });
+                    })
+                : i.a.createElement(T.a, { position: "center" })
+            )
           )
         );
       }
-      function _e(e) {
+      function ve(e) {
         return i.a.createElement(
           i.a.Fragment,
           null,
           i.a.createElement(
             "div",
-            { className: me.a.Description },
+            { className: fe.a.Description },
             Object(v.f)("#QAndA_HeaderDescription")
           ),
-          i.a.createElement(ve, {
+          i.a.createElement(he, {
             strPrompt: Object(v.f)("#QAndA_QuestionPrompt"),
             fnSubmit: e.fnAskQuestion,
           })
         );
       }
-      function ve(e) {
+      function he(e) {
         var t = this,
           n = e.strPrompt,
           r = e.fnSubmit,
           a = i.a.useState(""),
           o = a[0],
           s = a[1],
-          u = i.a.useState(!1),
-          c = u[0],
-          l = u[1];
+          c = i.a.useState(!1),
+          u = c[0],
+          l = c[1];
         return i.a.createElement(
           i.a.Fragment,
           null,
           i.a.createElement(
             "div",
-            { className: me.a.InputCtn },
+            { className: fe.a.InputCtn },
             i.a.createElement(ue.m, {
               type: "text",
               placeholder: n,
@@ -4053,12 +4074,12 @@
             }),
             i.a.createElement(
               "div",
-              { className: me.a.ButtonCtn },
-              c &&
+              { className: fe.a.ButtonCtn },
+              u &&
                 i.a.createElement(
                   "div",
-                  { className: me.a.SaveSpinner },
-                  i.a.createElement(R.a, { size: "small", position: "center" })
+                  { className: fe.a.SaveSpinner },
+                  i.a.createElement(T.a, { size: "small", position: "center" })
                 ),
               i.a.createElement(
                 ue.d,
@@ -4075,8 +4096,8 @@
                       });
                     });
                   },
-                  disabled: c || !o,
-                  className: me.a.InputButton,
+                  disabled: u || !o,
+                  className: fe.a.InputButton,
                 },
                 Object(v.f)("#QAndA_SubmitCommentButton")
               )
@@ -4084,68 +4105,134 @@
           )
         );
       }
-      function he(e) {
+      function ge(e) {
         return i.a.createElement(
           "div",
-          { className: me.a.Description },
+          { className: fe.a.Description },
           i.a.createElement(
             "div",
-            { className: me.a.LogInPrompt },
+            { className: fe.a.LogInPrompt },
             Object(v.f)("#QAndA_LogInPrompt")
           ),
-          !d.i.logged_in &&
+          !m.i.logged_in &&
             i.a.createElement(
               ue.d,
-              { onClick: ce.a, className: me.a.InputButton },
+              { onClick: le.a, className: fe.a.InputButton },
               Object(v.f)("#Login_SignIn")
             )
         );
       }
-      function ge(e) {
+      function ye(e) {
         var t = e.conferenceInfo;
         return r.createElement(
           "div",
-          { className: ne.SessionCtn },
+          { className: re.SessionCtn },
           r.createElement(
             "div",
-            { className: ne.LeftCol },
-            r.createElement(G, { conferenceInfo: t })
+            { className: re.LeftCol },
+            r.createElement(L, { conferenceInfo: t })
           ),
           r.createElement(
             "div",
-            { className: ne.MainCol },
+            { className: re.MainCol },
             r.createElement(
               "div",
-              { className: ne.BroadcastCtn },
+              { className: re.BroadcastCtn },
               r.createElement(ee, { conferenceInfo: t }),
-              r.createElement("div", { className: ne.videoContainerSizer })
+              r.createElement("div", { className: re.videoContainerSizer })
             ),
-            r.createElement(
-              "div",
-              { className: ne.InteractionCtn },
-              r.createElement(
-                "div",
-                { className: ne.ChatColumn },
-                r.createElement(
-                  "div",
-                  { className: ne.ChatTitle },
-                  "Conference Chat"
-                ),
-                r.createElement(te, {
-                  conferenceInfo: t,
-                  className: ne.ChatCtn,
-                })
-              ),
-              r.createElement(
-                "div",
-                { className: ne.QAColumn },
-                r.createElement(be, { gidSession: t.globalQandASessionID })
-              )
-            )
+            r.createElement(Se, { conferenceInfo: t })
           )
         );
       }
-      function ye(e) {
+      function Se(e) {
+        var t = e.conferenceInfo,
+          n = r.useState(!0),
+          i = n[0],
+          a = n[1],
+          o = r.useState(!0),
+          s = o[0],
+          c = o[1];
+        return r.createElement(
+          "div",
+          { className: re.InteractionCtn },
+          r.createElement(
+            "div",
+            { className: re.TabControlsCtn },
+            r.createElement(
+              "div",
+              {
+                className: re.Close,
+                onClick: function () {
+                  return a(!i);
+                },
+              },
+              r.createElement(ne.A, { showChat: i })
+            ),
+            r.createElement(
+              "div",
+              { className: re.InnerChatTabs },
+              r.createElement(
+                "div",
+                {
+                  className: Object(z.a)(re.InnerChatTab),
+                  onClick: function () {
+                    a(!0), c(!1);
+                  },
+                },
+                Object(v.f)("#Conference_Tab_Chat")
+              ),
+              r.createElement(
+                "div",
+                {
+                  className: Object(z.a)(re.InnerChatTab),
+                  onClick: function () {
+                    a(!1), c(!0);
+                  },
+                },
+                Object(v.f)("#Conference_Tab_QandA")
+              )
+            ),
+            r.createElement(
+              "div",
+              {
+                className: re.ShowBothTabs,
+                onClick: function () {
+                  a(!0), c(!0);
+                },
+              },
+              r.createElement(ne.X, null)
+            )
+          ),
+          r.createElement(
+            "div",
+            { className: re.ChatStack },
+            Boolean((i && s) || (!s && !i)) &&
+              r.createElement(
+                r.Fragment,
+                null,
+                r.createElement(
+                  "div",
+                  { className: re.ChatColumn },
+                  r.createElement(te, {
+                    conferenceInfo: t,
+                    className: re.ChatCtn,
+                  })
+                ),
+                r.createElement(
+                  "div",
+                  { className: re.QAColumn },
+                  r.createElement(_e, { gidSession: t.globalQandASessionID })
+                )
+              ),
+            Boolean(i && !s) &&
+              r.createElement(te, { conferenceInfo: t, className: re.ChatCtn }),
+            Boolean(!i && s) &&
+              r.createElement(_e, { gidSession: t.globalQandASessionID })
+          )
+        );
+      }
+      function Ce(e) {
         var t = e.conferenceInfo;
         if (!t.faqAboutPage)
           return r.createElement(
@@ -4172,24 +4259,24 @@
           )
         );
       }
-      function Se(e) {
+      function Be(e) {
         var t = e.conferenceInfo;
         return r.createElement(x, { conferenceInfo: t });
       }
-      var Ce = n("PpkI");
-      function Be(e) {
+      var Ae = n("PpkI");
+      function we(e) {
         var t = e.strVanity,
-          n = m.Get().GetConferenceInfo(t);
+          n = d.Get().GetConferenceInfo(t);
         return n
           ? r.createElement(
               "div",
-              { className: Ce.ConferencePageCtn },
-              r.createElement(Ae, { conferenceInfo: n }),
+              { className: Ae.ConferencePageCtn },
+              r.createElement(Ee, { conferenceInfo: n }),
               r.createElement(h, { conferenceInfo: n })
             )
           : r.createElement("div", null, Object(v.f)("#Conference_Invalid"));
       }
-      function Ae(e) {
+      function Ee(e) {
         var t = e.conferenceInfo,
           n = function (e) {
             return window.sessionStorage.setItem(
@@ -4204,7 +4291,7 @@
               contents: r.createElement(
                 f.a,
                 null,
-                r.createElement(ge, { conferenceInfo: t })
+                r.createElement(ye, { conferenceInfo: t })
               ),
               onClick: n,
             },
@@ -4214,7 +4301,7 @@
               contents: r.createElement(
                 f.a,
                 null,
-                r.createElement(Se, { conferenceInfo: t })
+                r.createElement(Be, { conferenceInfo: t })
               ),
               onClick: n,
             },
@@ -4224,19 +4311,19 @@
               contents: r.createElement(
                 f.a,
                 null,
-                r.createElement(ye, { conferenceInfo: t })
+                r.createElement(Ce, { conferenceInfo: t })
               ),
               onClick: n,
             },
           ];
         return r.createElement(
           "div",
-          { className: Ce.ConferenceContentsCtn },
+          { className: Ae.ConferenceContentsCtn },
           r.createElement(
             "div",
-            { className: Ce.ConferenceHeaderCtn },
+            { className: Ae.ConferenceHeaderCtn },
             r.createElement(b.a, {
-              className: Ce.LogoImage,
+              className: Ae.LogoImage,
               rgSources: t.strLocalizedLogos,
             }),
             r.createElement(
@@ -4251,7 +4338,7 @@
           r.createElement(_.a, { tabs: i })
         );
       }
-      var we = {
+      var je = {
         LandingPage: function (e) {
           return "/conference/" + e;
         },
@@ -4261,13 +4348,13 @@
           a.e,
           null,
           r.createElement(a.c, {
-            path: we.LandingPage(":vanity_str"),
+            path: je.LandingPage(":vanity_str"),
             render: function (e) {
               return r.createElement(o.a, {
                 config: {
                   "conference-root": function () {
                     var t = e.match.params.vanity_str;
-                    return r.createElement(Be, {
+                    return r.createElement(we, {
                       strVanity: t.toLocaleLowerCase(),
                     });
                   },
@@ -4279,7 +4366,7 @@
         );
       };
       function Oe(e) {
-        return "dev" !== d.c.WEB_UNIVERSE
+        return "dev" !== m.c.WEB_UNIVERSE
           ? r.createElement(a.b, { to: "/" })
           : r.createElement(
               "div",
@@ -4298,11 +4385,11 @@
         a = n("Ty5D"),
         o = n("exH9"),
         s = n("TLQK"),
-        u = n("GiuM"),
-        c = n("Cksw"),
-        l = n.n(c),
-        d = n("5E+2"),
-        m = n("+d9t"),
+        c = n("GiuM"),
+        u = n("Cksw"),
+        l = n.n(u),
+        m = n("5E+2"),
+        d = n("+d9t"),
         f = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
@@ -4316,7 +4403,7 @@
                 : !this.props.bDisableRouting &&
                   this.props.location &&
                   this.setState({
-                    activeTab: Object(u.a)(this.props.location, "tab"),
+                    activeTab: Object(c.a)(this.props.location, "tab"),
                   });
             }),
             (t.prototype.componentDidUpdate = function (e) {
@@ -4324,14 +4411,14 @@
                 this.props.location &&
                 this.props.location.key !== e.location.key &&
                 this.setState({
-                  activeTab: Object(u.a)(this.props.location, "tab"),
+                  activeTab: Object(c.a)(this.props.location, "tab"),
                 });
             }),
             (t.prototype.OnTabClick = function (e) {
               this.setState({ activeTab: e.key }),
                 !this.props.bDisableRouting &&
                   this.props.history &&
-                  Object(u.b)(this.props.history, "tab", e.key),
+                  Object(c.b)(this.props.history, "tab", e.key),
                 e.onClick && e.onClick(e);
             }),
             (t.prototype.render = function () {
@@ -4357,13 +4444,13 @@
                           : "caution" === n.statusType &&
                             (r = l.a.StatusCaution),
                         i.createElement(
-                          m.a,
+                          d.a,
                           {
                             key: n.key,
                             condition: Boolean(n.statusToolTip),
                             wrap: function (e) {
                               return i.createElement(
-                                d.a,
+                                m.a,
                                 { toolTipContent: n.statusToolTip },
                                 e
                               );
@@ -4383,7 +4470,7 @@
                             },
                             Boolean(n.vo_warning) &&
                               i.createElement(
-                                d.a,
+                                m.a,
                                 { toolTipContent: n.vo_warning },
                                 i.createElement(
                                   "div",
@@ -4416,24 +4503,32 @@
             t
           );
         })(i.Component),
-        p = Object(a.i)(f);
+        p = Object(a.j)(f);
     },
     hII0: function (e, t, n) {
       e.exports = {
-        QuestionCtn: "questions_QuestionCtn_31sLy",
+        QAMainCtn: "questions_QAMainCtn_hHqRc",
         InputButton: "questions_InputButton_1z1rt",
+        Reload: "questions_Reload_3LIo4",
         QAHeader: "questions_QAHeader_3skHm",
+        QATitleRow: "questions_QATitleRow_2qdcm",
         QATitle: "questions_QATitle_1c7nC",
         Description: "questions_Description_3eGNN",
         InputCtn: "questions_InputCtn_oF1kT",
         LogInPrompt: "questions_LogInPrompt_3Gbue",
         ButtonCtn: "questions_ButtonCtn_3kFHr",
         SaveSpinner: "questions_SaveSpinner_20svv",
+        QuestionsCtn: "questions_QuestionsCtn_1W6uJ",
+        InsetShadowTopCtn: "questions_InsetShadowTopCtn_ak9JV",
+        InsetShadowTop: "questions_InsetShadowTop_1C2e4",
+        QuestionsHeader: "questions_QuestionsHeader_jUQG9",
+        QuestionsTitle: "questions_QuestionsTitle_2CYLB",
         QuestionList: "questions_QuestionList_28dwO",
-        QuestionListHeader: "questions_QuestionListHeader_3HHkO",
-        QuestionListTitle: "questions_QuestionListTitle_2beRW",
         Question: "questions_Question_3BIOo",
+        QuestionCtn: "questions_QuestionCtn_31sLy",
+        UserAvatar: "questions_UserAvatar_2ojKe",
         QuestionText: "questions_QuestionText_2NuCE",
+        QuestionTitle: "questions_QuestionTitle_2AXcH",
         QuestionStats: "questions_QuestionStats_1DzgV",
         PostTime: "questions_PostTime_2hfBu",
         Votes: "questions_Votes_2IyuQ",
@@ -4459,28 +4554,28 @@
         a = n("kyHq"),
         o = n("02Wr"),
         s = n("UxvL"),
-        u = n("exH9"),
-        c = n("lkRc"),
+        c = n("exH9"),
+        u = n("lkRc"),
         l = n("ZeAL"),
-        d = n("nrKv"),
-        m = n("rcjX"),
+        m = n("nrKv"),
+        d = n("rcjX"),
         f = n("zvcZ"),
         p = n("WcT4"),
         b = n.n(p),
         _ = new Map(
-          Object(r.g)(Array.from(m.c.entries()), Array.from(m.e.entries()), [
+          Object(r.g)(Array.from(d.c.entries()), Array.from(d.e.entries()), [
             [
               "section",
               {
                 Constructor: function (e) {
-                  var t = Object(m.f)(e.args, "id");
+                  var t = Object(d.f)(e.args, "id");
                   t &&
                     "string" == typeof t &&
                     t.length > 0 &&
                     "#" === t[0] &&
                     (t = t.substring(1));
-                  var n = Object(m.f)(e.args, "style"),
-                    r = Object(u.a)(
+                  var n = Object(d.f)(e.args, "style"),
+                    r = Object(c.a)(
                       b.a.Section,
                       "note" == n && b.a.Note,
                       "important" == n && b.a.Important,
@@ -4521,9 +4616,9 @@
                     )
                   )
                     return "";
-                  var u = Object(m.d)(a, e.language);
-                  return "string" == typeof u
-                    ? ((a = u),
+                  var c = Object(d.d)(a, e.language);
+                  return "string" == typeof c
+                    ? ((a = c),
                       r
                         ? i.createElement(o.a, {
                             className: b.a.FAQImage,
@@ -4536,7 +4631,7 @@
                           })))
                     : i.createElement(s.a, {
                         className: b.a.FAQImage,
-                        rgSources: u,
+                        rgSources: c,
                       });
                 },
                 autocloses: !1,
@@ -4546,10 +4641,10 @@
               "exclude_realm",
               {
                 Constructor: function (e) {
-                  var t = Object(m.f)(e.args);
+                  var t = Object(d.f)(e.args);
                   return ("global" == t &&
-                    c.c.EREALM == a.f.k_ESteamRealmGlobal) ||
-                    ("china" == t && c.c.EREALM == a.f.k_ESteamRealmChina)
+                    u.c.EREALM == a.f.k_ESteamRealmGlobal) ||
+                    ("china" == t && u.c.EREALM == a.f.k_ESteamRealmChina)
                     ? null
                     : i.createElement(i.Fragment, null, e.children);
                 },
@@ -4564,9 +4659,9 @@
             r = i.useCallback(function (e) {
               return new f.b(
                 new f.c(
-                  new d.c(new d.b(), 0),
+                  new m.c(new m.b(), 0),
                   e,
-                  [{ urlRegExp: /youtu.be|youtube.com/i, fnBBComponent: m.q }],
+                  [{ urlRegExp: /youtu.be|youtube.com/i, fnBBComponent: d.q }],
                   {}
                 ),
                 e
