@@ -22,7 +22,6 @@ https://steamcommunity.com/public/css/applications/community/broadcast~broadcast
 https://steamcommunity.com/public/css/applications/community/broadcasts.css?__TIME__
 https://steamcommunity.com/public/css/applications/community/broadcasts~communityfaqs~conference~events~profile.css?__TIME__
 https://steamcommunity.com/public/css/applications/community/broadcasts~communityfaqs~events~profile.css?__TIME__
-https://steamcommunity.com/public/css/applications/community/communityawardsapp.css?__TIME__
 https://steamcommunity.com/public/css/applications/community/communityawardsapp~profile.css?__TIME__
 https://steamcommunity.com/public/css/applications/community/communityfaqs.css?__TIME__
 https://steamcommunity.com/public/css/applications/community/communityfaqs~events.css?__TIME__
@@ -312,7 +311,6 @@ https://steamcommunity.com/public/javascript/applications/community/managefriend
 https://steamcommunity.com/public/javascript/applications/community/managefriends_english-json.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/applications/community/manifest.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/applications/community/profile.js?__TIME__&l=english
-https://steamcommunity.com/public/javascript/applications/community/vendors~broadcasts~communityfaqs~conference~events~profile.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/auction.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/badges.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/bigpicture/apphub_bigpicture.js?__TIME__&l=english
@@ -460,7 +458,6 @@ https://store.steampowered.com/public/javascript/applications/store/eventcompone
 https://store.steampowered.com/public/javascript/applications/store/interactiverecommender.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/applications/store/labssandbox.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/applications/store/localization/sales_english-json.js?__TIME__&l=english
-https://store.steampowered.com/public/javascript/applications/store/loyalty_english-json.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/applications/store/loyaltystore.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/applications/store/loyaltystore~reviewaward.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/applications/store/main.js?__TIME__&l=english

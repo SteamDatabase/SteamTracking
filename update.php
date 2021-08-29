@@ -11,7 +11,7 @@
 		private bool $SyncProtobufs = false;
 		private bool $DumpWebProtobufs = false;
 
-		/** @var array<string, string> */
+		/** @var array<string, string|array<int, string>> */
 		private array $ETags = [];
 
 		/** @var array<int, string> */
@@ -45,7 +45,7 @@
 			}
 
 			$ApiKeyPath = __DIR__ . '/.support/apikey.txt';
-			$ETagsPath  = __DIR__ . '/.support/etags.txt';
+			$ETagsPath  = __DIR__ . '/.support/etags.json';
 
 			if( !file_exists( $ApiKeyPath ) )
 			{
@@ -77,6 +77,19 @@
 				$this->Fetch( $URLs );
 			}
 			while( !empty( $this->URLsToFetch ) && $Tries-- > 0 );
+
+			foreach( $this->ETags as &$ETags )
+			{
+				if( is_array( $ETags ) )
+				{
+					while( count( $ETags ) > 3 )
+					{
+						array_shift( $ETags );
+					}
+				}
+			}
+
+			unset( $ETags );
 
 			file_put_contents( $ETagsPath, json_encode( $this->ETags, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT ) );
 
@@ -494,18 +507,33 @@
 						}
 						else
 						{
-							if( preg_match( '/^ETag: (.+)$/m', $Header, $Test ) === 1 )
+							$HandleResponse = true;
+
+							if( preg_match( '/^ETag: (.+)$/im', $Header, $Test ) === 1 )
 							{
-								$this->ETags[ $Request ] = trim( $Test[ 1 ] );
+								$ETag = trim( $Test[ 1 ] );
+
+								if( !isset( $this->ETags[ $Request ] ) || !in_array( $ETag, $this->ETags[ $Request ], true ) )
+								{
+									$this->ETags[ $Request ][ time() ] = $ETag;
+								}
+								else
+								{
+									$HandleResponse = false;
+									$this->Log( '{green}ETag Matched{normal} - ' . $URL );
+								}
 							}
 
-							if( $this->HandleResponse( $Request, $Data ) === true )
+							if( $HandleResponse )
 							{
-								$this->Log( '{lightblue}Fetched     {normal} - ' . $URL );
-							}
-							else
-							{
-								$this->Log( '{green}Not Modified{normal} - ' . $URL );
+								if( $this->HandleResponse( $Request, $Data ) === true )
+								{
+									$this->Log( '{lightblue}Fetched     {normal} - ' . $URL );
+								}
+								else
+								{
+									$this->Log( '{green}Not Modified{normal} - ' . $URL );
+								}
 							}
 						}
 					}
@@ -540,7 +568,6 @@
 			$File  = $URL[ 'File' ];
 
 			$Options = $this->Options;
-
 			$Options[ CURLOPT_URL ] = $this->GenerateURL( $URL[ 'URL' ] );
 
 			$this->Requests[ (int)$Handle ] = $File;
@@ -548,16 +575,14 @@
 			if( $this->UseCache )
 			{
 				// If we have an ETag saved, add If-None-Match header
-				if( array_key_exists( $File, $this->ETags ) )
+				if( isset( $this->ETags[ $File ] ) )
 				{
 					$Options[ CURLOPT_HTTPHEADER ] =
 					[
-						'If-None-Match: ' . $this->ETags[ $File ],
+						'If-None-Match: ' . implode( ', ', $this->ETags[ $File ] ),
 					];
 				}
-
-				// Valve appears to have broken ETags, so always supply the timestamp
-				if( file_exists( $File ) )
+				else if( file_exists( $File ) )
 				{
 					$Options[ CURLOPT_HTTPHEADER ] =
 					[
@@ -567,7 +592,6 @@
 			}
 
 			curl_setopt_array( $Handle, $Options );
-
 			curl_multi_add_handle( $Master, $Handle );
 
 			return $Handle;
@@ -659,3 +683,4 @@
 			echo $Log;
 		}
 	}
+
