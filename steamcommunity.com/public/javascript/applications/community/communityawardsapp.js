@@ -18,7 +18,7 @@
     "0OaU": function (e, r, t) {
       "use strict";
       t.d(r, "a", function () {
-        return c;
+        return l;
       });
       var a = t("mrSG"),
         s = t("q1tI"),
@@ -26,7 +26,7 @@
         i = t("6Y59"),
         o = t("2i24"),
         p = t.n(o),
-        c = (function (e) {
+        l = (function (e) {
           function r(r) {
             return e.call(this, r) || this;
           }
@@ -55,8 +55,8 @@
                 n.a.createElement(
                   "div",
                   { className: p.a.Throbber },
-                  n.a.createElement(i.cb, { className: p.a.base }),
-                  n.a.createElement(i.cb, { className: p.a.blur })
+                  n.a.createElement(i.Z, { className: p.a.base }),
+                  n.a.createElement(i.Z, { className: p.a.blur })
                 )
               );
               return n.a.createElement(
