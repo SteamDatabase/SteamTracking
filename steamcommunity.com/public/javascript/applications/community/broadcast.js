@@ -219,7 +219,7 @@
             )
           );
         }),
-        V = {
+        R = {
           list: [
             { appid: 444090, url: "https://steam.tv/paladins" },
             { appid: 386360, url: "https://steam.tv/smite" },
@@ -246,7 +246,7 @@
             },
           ],
         },
-        R = (function (e) {
+        V = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -621,7 +621,7 @@
           );
         })(i.Component),
         H =
-          ((t.default = R),
+          ((t.default = V),
           (function (e) {
             function t(t) {
               var a = e.call(this, t) || this;
@@ -718,7 +718,7 @@
               var e = this.props.stream,
                 t = I.a.GetOrCreateBroadcastInfo(this.props.stream.steamid)
                   .m_nAppID,
-                a = V.list.find(function (a) {
+                a = R.list.find(function (a) {
                   return (
                     a.appid == t &&
                     (!a.broadcasterAccountID ||
@@ -785,7 +785,7 @@
                 i.createElement(
                   "div",
                   { className: Object(S.a)(T.a.viewer_count, "viewer_count") },
-                  i.createElement(N.jb, null),
+                  i.createElement(N.gb, null),
                   a.toLocaleString(G.e.GetPreferredLocales())
                 ),
                 i.createElement(
@@ -823,7 +823,7 @@
                         "#StoreBroadcast_Change_store_Broadcast_settings"
                       ),
                     },
-                    i.createElement(N.V, null)
+                    i.createElement(N.T, null)
                   ),
                   e
                 )
@@ -890,7 +890,7 @@
                 ),
                 onClick: e.OnPreventPopup,
               },
-              i.createElement(N.nb, null)
+              i.createElement(N.kb, null)
             )
           );
         }),
@@ -1058,7 +1058,7 @@
                 i.createElement(
                   "div",
                   { className: T.a.viewer_count },
-                  i.createElement(N.jb, null),
+                  i.createElement(N.gb, null),
                   c.toLocaleString(G.e.GetPreferredLocales())
                 )
               );
