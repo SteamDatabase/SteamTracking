@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6741559";
+var CLSTAMP = "6746625";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [40],
   {
@@ -16651,7 +16651,8 @@ var CLSTAMP = "6741559";
                       case 9:
                         return (
                           (x = N.length),
-                          n.enable_faceted_browsing ||
+                          n.smart_section &&
+                            !n.enable_faceted_browsing &&
                             (this.props.appVisibilityTracker.MarkAllAppsNotVisible(
                               this.props.section.unique_id
                             ),
