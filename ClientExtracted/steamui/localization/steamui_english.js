@@ -1199,7 +1199,7 @@
 	"Downloads_RemoveFromList_Tooltip": "Remove from List",
 	"Downloads_LaunchWhenComplete": "Launch when Complete",
 	"Downloads_OverrideDownloadThrottle": "Suspend Download Limit",
-	"Downloads_ViewSubscriptions": "View Subscribed Items",
+	"Downloads_ViewSubscriptions": "View Updated Items",
 	"Downloads_ViewPatchNotes": "View Patch Notes",
 	"Downloads_ThrottleSuspended": "Suspended",
 	"Downloads_Pause_Tooltip": "Pause download",

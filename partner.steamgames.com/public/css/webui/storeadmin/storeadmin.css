@@ -8693,6 +8693,25 @@ Body.v6.tag_page.contenthub_page {
   font-weight: 300;
   margin-bottom: 8px;
 }
+.contenthubmaincarousel_ContentHubTitleCtn_16cIW {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 36px;
+}
+.contenthubmaincarousel_ContentHubTitle_3Xj5I {
+  font-size: 36px;
+  font-weight: 300;
+}
+.contenthubmaincarousel_ContentHubSubtitle_t1mzq {
+  font-size: 18px;
+  font-weight: 300;
+  opacity: 50%;
+}
+.contenthubmaincarousel_ContentHubPlaceholder_3hHXa {
+  font-size: 24px;
+  font-weight: bold;
+}
 .creatorhomeembed_DevSummaryCtn_U7GS1 {
   flex-grow: 1;
   flex-basis: 0;
@@ -10313,6 +10332,7 @@ a.eventreminder_ReminderOption_2RU5s
   z-index: 2000;
 }
 .eventreminder_ReminderCheckBox_1CkWt {
+  width: fit-content;
   display: flex;
   font-size: 14px;
   overflow: hidden;
@@ -14655,7 +14675,7 @@ html.responsive.touch .partnersaledisplay_SaleSectionTabs_QhcTn {
   font-size: 16px;
   min-width: max-content;
   width: auto;
-  padding: 0px 6px;
+  padding: 0px 18px;
   cursor: pointer;
   user-select: none;
 }
@@ -20368,6 +20388,10 @@ img.broadcastplayer_BroadcastPlaceholderImg_1LIEZ {
   background-color: pink;
   padding-bottom: 10px;
 }
+.dailydealeditor_AppTypeCtn_2-cMj {
+  display: flex;
+  flex-direction: row;
+}
 button.DialogButton {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -20584,6 +20608,8 @@ button.DialogButton::-moz-focus-inner {
 }
 .DialogToggle_Label {
   user-select: none;
+  display: flex;
+  flex-direction: row;
 }
 .DialogToggle_Label span {
   display: flex;

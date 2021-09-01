@@ -143,7 +143,7 @@
     "OptIn_GameListing_Title": "Your game listing within this event",
     "OptIn_GameListing_Detail": "Your game is currently slated to appear in the following sections. Note that this may change as the final organizational changes are made.",
     "OptIn_GameListing_Detail_Empty": "Your game is not currently slated to appear in an event section. Note that this may change as the final organizational changes are made.",
-    "OptIn_EmailSection_Asset_Title": "Asset Kit",
+    "OptIn_EmailSection_Asset_Title": "ASSET KIT",
     "OptIn_EmailSection_Asset_Body": "We've put together an asset kit to help you get the word out to your players and the broader gaming community, both during the event and ahead of time. Click %1$s to access these templates.",
     "OptIn_EmailSection_Asset_Token": "HERE",
     "OptIn_EmailSection_Press_Title": "PRESS PREVIEW",
@@ -207,5 +207,7 @@
     "BuildNotes_SampleTitle": "Sample Title",
     "BuildNotes_SampleDescription": "Sample Description",
     "DailyDeals_Dashboard": "Daily Deals Dashboard",
+    "DailyDeals_Invitation_Dashboard": "Invitation Dashboard",
+    "DailyDeals_NotExist": "Daily Deal does not exist",
     "dummy": "dummy"
 }

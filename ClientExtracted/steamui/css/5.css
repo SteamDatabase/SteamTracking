@@ -12760,6 +12760,17 @@ div.ShortWindow
   .downloads_ProgressDetails_sv3ZH:not(:last-child) {
   margin-right: 10px;
 }
+.downloads_SectionItem_1VNuY
+  .downloads_DetailsAndType_Bku7J
+  .downloads_ProgressDetails_sv3ZH,
+.downloads_SectionItem_1VNuY
+  .downloads_DetailsAndType_Bku7J
+  .downloads_AutoUpdateSettings_22mb5,
+.downloads_SectionItem_1VNuY
+  .downloads_DetailsAndType_Bku7J
+  .downloads_PatchNotes_3kXEp {
+  line-height: 14px;
+}
 .downloads_SectionItem_1VNuY.downloads_Active_IbePL
   .downloads_DetailsAndType_Bku7J {
   flex-grow: 1;

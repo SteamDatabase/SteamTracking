@@ -140,6 +140,7 @@ message CAppOverview {
 	optional string mastersub_includedwith_logo = 60;
 	optional uint32 compat_allowlist_setting = 61 [default = 0];
 	optional string site_license_site_name = 62;
+	optional uint32 shortcut_override_appid = 63;
 }
 
 message CAppOverview_Change {

@@ -50279,6 +50279,7 @@
                   "div",
                   { className: uc.a.Buttons },
                   s &&
+                    s.icon &&
                     !c &&
                     r.createElement(
                       M.d,
@@ -50353,40 +50354,43 @@
           );
         })(r.Component);
       function Cc(e) {
-        return r.createElement(
-          "div",
-          { className: Object(D.a)(uc.a.Stat, uc.a.ProgressDetails) },
-          e.label && r.createElement("div", { className: uc.a.Label }, e.label),
-          0 != e.currentBytes &&
-            Object(I.o)(
-              "#Downloads_DownloadedBytesInProgress",
-              r.createElement(
-                "span",
-                {
-                  className: Object(D.a)(
-                    uc.a.Value,
-                    uc.a.InProgress,
-                    e.active && uc.a.Active
+        return 0 == e.currentBytes && 0 == e.totalBytes
+          ? null
+          : r.createElement(
+              "div",
+              { className: Object(D.a)(uc.a.Stat, uc.a.ProgressDetails) },
+              e.label &&
+                r.createElement("div", { className: uc.a.Label }, e.label),
+              0 != e.currentBytes &&
+                Object(I.o)(
+                  "#Downloads_DownloadedBytesInProgress",
+                  r.createElement(
+                    "span",
+                    {
+                      className: Object(D.a)(
+                        uc.a.Value,
+                        uc.a.InProgress,
+                        e.active && uc.a.Active
+                      ),
+                    },
+                    Object(da.a)(e.currentBytes, 1)
                   ),
-                },
-                Object(da.a)(e.currentBytes, 1)
-              ),
-              r.createElement(
-                "span",
-                { className: Object(D.a)(uc.a.Value, uc.a.Denominator) },
-                Object(da.a)(e.totalBytes, 1)
-              )
-            ),
-          0 == e.currentBytes &&
-            Object(I.o)(
-              "#Downloads_TotalBytes",
-              r.createElement(
-                "span",
-                { className: uc.a.Value },
-                Object(da.a)(e.totalBytes, 1)
-              )
-            )
-        );
+                  r.createElement(
+                    "span",
+                    { className: Object(D.a)(uc.a.Value, uc.a.Denominator) },
+                    Object(da.a)(e.totalBytes, 1)
+                  )
+                ),
+              0 == e.currentBytes &&
+                Object(I.o)(
+                  "#Downloads_TotalBytes",
+                  r.createElement(
+                    "span",
+                    { className: uc.a.Value },
+                    Object(da.a)(e.totalBytes, 1)
+                  )
+                )
+            );
       }
       var Oc,
         wc = function (e) {
@@ -50632,7 +50636,7 @@
                         className: uc.a.ContextMenuItem,
                         onSelected: function () {
                           return It.a.NavigateToSteamURL(
-                            "SteamWorkshopSubscriptions",
+                            "SteamWorkshopUpdatedSubscriptions",
                             t.props.item.appid
                           );
                         },
@@ -50683,7 +50687,10 @@
                 a = t.app,
                 o = t.section,
                 i = mc(n),
-                s = fc(n, a, i);
+                s = fc(n, a, i),
+                l =
+                  o == Oc.k_EDownloadSection_Completed &&
+                  11 == a.display_status;
               return (
                 o != Oc.k_EDownloadSection_Active || i.paused
                   ? o == Oc.k_EDownloadSection_Active && i.paused
@@ -50694,10 +50701,10 @@
                         toolTip: "#Downloads_Resume_Tooltip",
                         icon: r.createElement(Hl.m, null),
                       })
-                    : (o != Oc.k_EDownloadSection_Queued &&
-                        o != Oc.k_EDownloadSection_Scheduled &&
-                        o != Oc.k_EDownloadSection_NotQueued) ||
-                      (e = {
+                    : o == Oc.k_EDownloadSection_Queued ||
+                      o == Oc.k_EDownloadSection_Scheduled ||
+                      o == Oc.k_EDownloadSection_NotQueued
+                    ? (e = {
                         onClick: this.MoveToTopOfQueue,
                         wrapperClass: uc.a.MoveToTopWrapper,
                         className: uc.a.MoveToTop,
@@ -50709,6 +50716,13 @@
                           s == _c.k_EError
                             ? r.createElement(Hl.n, null)
                             : r.createElement(Hl.h, null),
+                      })
+                    : o == Oc.k_EDownloadSection_Completed &&
+                      (e = {
+                        onClick: l ? this.PlayGame : this.NavigateToApp,
+                        toolTip: Object(I.f)(
+                          l ? "#GameAction_Play" : "#Downloads_GoToGame_Tooltip"
+                        ),
                       })
                   : (e = {
                       onClick: this.TogglePause,
@@ -50723,9 +50737,7 @@
                     o != Oc.k_EDownloadSection_NotQueued &&
                     s != _c.k_EActive &&
                     s != _c.k_EActiveDownloading,
-                  bShowPlayButton:
-                    o == Oc.k_EDownloadSection_Completed &&
-                    11 == a.display_status,
+                  bShowPlayButton: l,
                   onRemoveFromDownloadList: this.RemoveFromDownloadList,
                 }
               );
@@ -50768,6 +50780,10 @@
             }),
             (t.prototype.NavigateToApp = function (e) {
               S.a.NavigateToApp(this.props.item.appid),
+                e && e.stopPropagation();
+            }),
+            (t.prototype.PlayGame = function (e) {
+              yn("Play", this.props.app, "local", 1001)(),
                 e && e.stopPropagation();
             }),
             (t.AxisLock = function (e) {
@@ -50926,6 +50942,7 @@
             ),
             Object(a.c)([O.a], t.prototype, "TogglePause", null),
             Object(a.c)([O.a], t.prototype, "NavigateToApp", null),
+            Object(a.c)([O.a], t.prototype, "PlayGame", null),
             (t = n = Object(a.c)([l.a], t))
           );
         })(r.Component),
@@ -71618,6 +71635,8 @@
         Percentage: "downloads_Percentage_373Oc",
         Base: "downloads_Base_2Rw0h",
         DetailsAndType: "downloads_DetailsAndType_Bku7J",
+        AutoUpdateSettings: "downloads_AutoUpdateSettings_22mb5",
+        PatchNotes: "downloads_PatchNotes_3kXEp",
         ContentTypes: "downloads_ContentTypes_1IKba",
         ContentTypeTooltip: "downloads_ContentTypeTooltip_38Kbc",
         Text: "downloads_Text_1nCT-",
@@ -71645,8 +71664,6 @@
         DownloadsIcon: "downloads_DownloadsIcon_Mw50k",
         TopBar: "downloads_TopBar_SEmVp",
         OfflineWrapper: "downloads_OfflineWrapper_38yrS",
-        PatchNotes: "downloads_PatchNotes_3kXEp",
-        AutoUpdateSettings: "downloads_AutoUpdateSettings_22mb5",
         ContextMenuItem: "downloads_ContextMenuItem_1Lsip",
         LaunchOnCompletion: "downloads_LaunchOnCompletion_1i_SN",
         focusAnimation: "downloads_focusAnimation_17Rdj",

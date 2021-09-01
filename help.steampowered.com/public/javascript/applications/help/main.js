@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6741589";
+var CLSTAMP = "6747640";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [61],
   {
@@ -18633,7 +18633,7 @@ var CLSTAMP = "6741589";
         return !0;
       }
       var _r = (function () {
-          function e(e, t, n, r, a) {
+          function i(e, t, n, r, a) {
             var i = this;
             (this.m_nMinMatches = 1),
               (this.m_facetSortKey = N.f.k_ESortFacetsByMatchCount),
@@ -18695,40 +18695,40 @@ var CLSTAMP = "6741589";
               this.SortFacets();
           }
           return (
-            (e.prototype.GetReferencedCapsules = function () {
+            (i.prototype.GetReferencedCapsules = function () {
               return this.m_referencedCapsules;
             }),
-            (e.prototype.BSomeFacetValueEnabled = function () {
+            (i.prototype.BSomeFacetValueEnabled = function () {
               return this.m_bSomeFacetValueEnabled;
             }),
-            (e.prototype.BHasHideIgnoredItemsFacetValue = function () {
+            (i.prototype.BHasHideIgnoredItemsFacetValue = function () {
               return this.m_bHasHideIgnoredItemsFacetValue;
             }),
-            (e.prototype.GetMatchingReferencedCapsules = function () {
+            (i.prototype.GetMatchingReferencedCapsules = function () {
               return this.m_matchingReferencedCapsules;
             }),
-            (e.prototype.GetQuery = function () {
+            (i.prototype.GetQuery = function () {
               return this.m_strQuery;
             }),
-            (e.prototype.GetURLParam = function () {
+            (i.prototype.GetURLParam = function () {
               return this.m_strURLParam;
             }),
-            (e.prototype.GetSelectedOptionsCount = function () {
+            (i.prototype.GetSelectedOptionsCount = function () {
               return this.m_nSelectedOptions;
             }),
-            (e.prototype.BIsUserPreferenceEnabled = function (e) {
+            (i.prototype.BIsUserPreferenceEnabled = function (e) {
               return this.m_userPreferences.has(e);
             }),
-            (e.prototype.BIsAnyUserPreferenceEnabled = function () {
+            (i.prototype.BIsAnyUserPreferenceEnabled = function () {
               return 0 < this.m_userPreferences.size;
             }),
-            (e.prototype.GetPrunedFacets = function () {
+            (i.prototype.GetPrunedFacets = function () {
               return this.m_prunedFacets;
             }),
-            (e.prototype.GetSortedFacets = function () {
+            (i.prototype.GetSortedFacets = function () {
               return this.m_sortedFacets;
             }),
-            (e.prototype.Reset = function () {
+            (i.prototype.Reset = function () {
               this.m_facets.forEach(function (e) {
                 e.facetValues.forEach(function (e) {
                   e.bEnabled = Boolean(e.facetValue.bEnabledByDefault);
@@ -18736,7 +18736,7 @@ var CLSTAMP = "6741589";
               }),
                 this.UpdateFilter();
             }),
-            (e.prototype.SetFromURLParam = function (e) {
+            (i.prototype.SetFromURLParam = function (e) {
               var r = this;
               e !== this.m_strURLParam &&
                 (this.m_facets.forEach(function (e) {
@@ -18764,11 +18764,11 @@ var CLSTAMP = "6741589";
                 }),
                 this.UpdateFilter());
             }),
-            (e.prototype.SetPotentiallyVisibleCapsules = function (e) {
+            (i.prototype.SetPotentiallyVisibleCapsules = function (e) {
               (this.m_potentiallyVisibleCapsules = new Set(e.map(Cr))),
                 this.PruneFacets();
             }),
-            (e.prototype.SetFilteredCapsules = function (e, t, n) {
+            (i.prototype.SetFilteredCapsules = function (e, t, n) {
               void 0 === t && (t = void 0),
                 void 0 === n && (n = !1),
                 (this.m_filteredCapsules = new Set(e.map(Cr))),
@@ -18777,7 +18777,7 @@ var CLSTAMP = "6741589";
                 (this.m_bFilteredCapsuleCountIsPartial = n),
                 this.SortFacets();
             }),
-            (e.prototype.SetFacetCounts = function (e) {
+            (i.prototype.SetFacetCounts = function (e) {
               if (((this.m_facetCounts = new Map()), e))
                 for (var t = 0, n = Object.keys(e); t < n.length; t++) {
                   var r = n[t];
@@ -18785,7 +18785,7 @@ var CLSTAMP = "6741589";
                 }
               this.SortFacets();
             }),
-            (e.prototype.FilterCapsules = function (e) {
+            (i.prototype.FilterCapsules = function (e) {
               var t = this;
               return this.m_bSomeFacetValueEnabled
                 ? e.filter(function (e) {
@@ -18793,14 +18793,14 @@ var CLSTAMP = "6741589";
                   })
                 : e;
             }),
-            (e.prototype.UpdateFilter = function () {
+            (i.prototype.UpdateFilter = function () {
               this.UpdateMatchingReferencedCapsules(),
                 this.UpdateQuery(),
                 this.UpdateURLParam(),
                 this.UpdateSelectedOptionsCount(),
                 this.UpdateUserPreferenceFilters();
             }),
-            (e.prototype.UpdateReferencedCapsules = function () {
+            (i.prototype.UpdateReferencedCapsules = function () {
               var t = this;
               (this.m_referencedCapsules = new Set()),
                 this.m_facets.forEach(function (e) {
@@ -18813,7 +18813,7 @@ var CLSTAMP = "6741589";
                   });
                 });
             }),
-            (e.prototype.UpdateMatchingReferencedCapsules = function () {
+            (i.prototype.UpdateMatchingReferencedCapsules = function () {
               var a = this;
               this.m_facets.forEach(function (e) {
                 e.bSomeFacetValueEnabled = e.facetValues.some(function (e) {
@@ -18881,7 +18881,21 @@ var CLSTAMP = "6741589";
                     ));
                 });
             }),
-            Object.defineProperty(e.prototype, "strQuery", {
+            (i.BFacetHasEnabledOptTags = function (e) {
+              for (var t = 0, n = e.facetValues; t < n.length; t++) {
+                var r = n[t];
+                if (r.bEnabled && null != r.facetValue.filter)
+                  for (
+                    var a = 0, i = r.facetValue.filter.clauses;
+                    a < i.length;
+                    a++
+                  )
+                    for (var o = 0, s = i[a].or_tags; o < s.length; o++)
+                      if (s[o].startsWith("[Opt]")) return !0;
+              }
+              return !1;
+            }),
+            Object.defineProperty(i.prototype, "strQuery", {
               get: function () {
                 var r = this,
                   t = {
@@ -18890,26 +18904,28 @@ var CLSTAMP = "6741589";
                   };
                 return (
                   this.m_facets.forEach(function (e) {
-                    var n = {
-                      type: N.i.k_EStoreFilterClauseTypeOr,
-                      rgSubexpressions: new Array(),
-                    };
-                    e.facetValues.forEach(function (e) {
-                      var t;
-                      e.bEnabled &&
-                        Boolean(e.facetValue.rgStoreTagFilter) &&
-                        e.facetValue.type !== N.g.k_EUserPreference &&
-                        ((t = Object(j.a)({}, e.facetValue.rgStoreTagFilter)),
-                        e.facetValue.type === N.g.k_EPrice &&
-                          (t.value = Boolean(r.m_priceStopInfo)
-                            ? r.m_priceStopInfo[e.nPriceStopIndex].price
-                            : void 0),
-                        (e.facetValue.type === N.g.k_EPrice &&
-                          !Boolean(r.m_priceStopInfo)) ||
-                          n.rgSubexpressions.push(t));
-                    }),
+                    var n;
+                    i.BFacetHasEnabledOptTags(e) ||
+                      ((n = {
+                        type: N.i.k_EStoreFilterClauseTypeOr,
+                        rgSubexpressions: new Array(),
+                      }),
+                      e.facetValues.forEach(function (e) {
+                        var t;
+                        e.bEnabled &&
+                          Boolean(e.facetValue.rgStoreTagFilter) &&
+                          e.facetValue.type !== N.g.k_EUserPreference &&
+                          ((t = Object(j.a)({}, e.facetValue.rgStoreTagFilter)),
+                          e.facetValue.type === N.g.k_EPrice &&
+                            (t.value = Boolean(r.m_priceStopInfo)
+                              ? r.m_priceStopInfo[e.nPriceStopIndex].price
+                              : void 0),
+                          (e.facetValue.type === N.g.k_EPrice &&
+                            !Boolean(r.m_priceStopInfo)) ||
+                            n.rgSubexpressions.push(t));
+                      }),
                       0 !== n.rgSubexpressions.length &&
-                        t.rgSubexpressions.push(n);
+                        t.rgSubexpressions.push(n));
                   }),
                   Boolean(t) ? JSON.stringify(t) : ""
                 );
@@ -18917,10 +18933,10 @@ var CLSTAMP = "6741589";
               enumerable: !1,
               configurable: !0,
             }),
-            (e.prototype.UpdateQuery = function () {
+            (i.prototype.UpdateQuery = function () {
               this.m_strQuery = this.strQuery;
             }),
-            (e.prototype.UpdateURLParam = function () {
+            (i.prototype.UpdateURLParam = function () {
               var r = this,
                 a = [];
               this.m_facets.forEach(function (e, t) {
@@ -18937,7 +18953,7 @@ var CLSTAMP = "6741589";
               }),
                 (this.m_strURLParam = 0 < a.length ? a.join(",") : void 0);
             }),
-            (e.prototype.UpdateSelectedOptionsCount = function () {
+            (i.prototype.UpdateSelectedOptionsCount = function () {
               var t = this;
               (this.m_nSelectedOptions = 0),
                 this.m_facets.forEach(function (e) {
@@ -18947,7 +18963,7 @@ var CLSTAMP = "6741589";
                   });
                 });
             }),
-            (e.prototype.UpdateUserPreferenceFilters = function () {
+            (i.prototype.UpdateUserPreferenceFilters = function () {
               var t = this;
               (this.m_userPreferences = new Set()),
                 this.m_facets.forEach(function (e) {
@@ -18958,7 +18974,7 @@ var CLSTAMP = "6741589";
                   });
                 });
             }),
-            (e.prototype.PruneFacets = function () {
+            (i.prototype.PruneFacets = function () {
               var r = this;
               (this.m_prunedFacets = []),
                 this.m_bSaleScope && this.m_potentiallyVisibleCapsules
@@ -18994,7 +19010,7 @@ var CLSTAMP = "6741589";
                     }),
                 this.PruneFacetsForCurrentUser();
             }),
-            (e.prototype.PruneFacetsForCurrentUser = function () {
+            (i.prototype.PruneFacetsForCurrentUser = function () {
               this.m_prunedFacets.forEach(function (e) {
                 e.facetValues = e.facetValues.filter(function (e) {
                   return e.facetValue.type === N.g.k_EContentDescriptor
@@ -19020,7 +19036,7 @@ var CLSTAMP = "6741589";
                   return 0 < e.facetValues.length;
                 }));
             }),
-            (e.prototype.UpdateMatchingFilteredCapsuleCounts = function () {
+            (i.prototype.UpdateMatchingFilteredCapsuleCounts = function () {
               var n = this;
               this.m_bSaleScope
                 ? this.m_prunedFacets.forEach(function (e) {
@@ -19043,7 +19059,7 @@ var CLSTAMP = "6741589";
                     });
                   });
             }),
-            (e.prototype.DeactivateFacetValues = function () {
+            (i.prototype.DeactivateFacetValues = function () {
               var r = this;
               this.m_prunedFacets.forEach(function (e) {
                 e.facetValues.forEach(function (e) {
@@ -19110,7 +19126,7 @@ var CLSTAMP = "6741589";
                       });
                     });
             }),
-            (e.prototype.SortFacets = function () {
+            (i.prototype.SortFacets = function () {
               var n = this;
               this.DeactivateFacetValues(),
                 this.UpdateMatchingFilteredCapsuleCounts(),
@@ -19163,7 +19179,7 @@ var CLSTAMP = "6741589";
                     );
                 });
             }),
-            (e.prototype.LoadPriceStops = function () {
+            (i.prototype.LoadPriceStops = function () {
               var a, i;
               return Object(j.b)(this, void 0, void 0, function () {
                 var t, n, r;
@@ -19221,21 +19237,36 @@ var CLSTAMP = "6741589";
                 });
               });
             }),
-            Object(j.c)([f.C], e.prototype, "m_facets", void 0),
-            Object(j.c)([f.C], e.prototype, "m_priceStopInfo", void 0),
-            Object(j.c)([f.C], e.prototype, "m_sortedFacets", void 0),
-            Object(j.c)([f.k], e.prototype, "Reset", null),
-            Object(j.c)([f.k], e.prototype, "SetFromURLParam", null),
+            (i.prototype.ApplyOptInFilters = function (e) {
+              for (var t = 0, n = this.m_sortedFacets; t < n.length; t++) {
+                var r,
+                  a = n[t];
+                a.facet.bSomeFacetValueEnabled &&
+                  i.BFacetHasEnabledOptTags(a.facet) &&
+                  ((a = a.facet.matchingCapsules),
+                  (r = null == r ? a : fr(r, a)));
+              }
+              return null == r
+                ? e
+                : e.filter(function (e) {
+                    return r.has(Cr(e));
+                  });
+            }),
+            Object(j.c)([f.C], i.prototype, "m_facets", void 0),
+            Object(j.c)([f.C], i.prototype, "m_priceStopInfo", void 0),
+            Object(j.c)([f.C], i.prototype, "m_sortedFacets", void 0),
+            Object(j.c)([f.k], i.prototype, "Reset", null),
+            Object(j.c)([f.k], i.prototype, "SetFromURLParam", null),
             Object(j.c)(
               [f.k],
-              e.prototype,
+              i.prototype,
               "SetPotentiallyVisibleCapsules",
               null
             ),
-            Object(j.c)([f.k], e.prototype, "SetFilteredCapsules", null),
-            Object(j.c)([f.k], e.prototype, "SetFacetCounts", null),
-            Object(j.c)([f.n], e.prototype, "strQuery", null),
-            e
+            Object(j.c)([f.k], i.prototype, "SetFilteredCapsules", null),
+            Object(j.c)([f.k], i.prototype, "SetFacetCounts", null),
+            Object(j.c)([f.n], i.prototype, "strQuery", null),
+            i
           );
         })(),
         gr = Object(r.a)(function (n) {
@@ -23939,6 +23970,7 @@ var CLSTAMP = "6741589";
                               (i = i.filter(function (e) {
                                 return !r || r.ShouldShowCapsule(e);
                               })),
+                            y && (i = y.ApplyOptInFilters(i)),
                             [4, Object(L.h)(i)]);
                       case 7:
                         return (e.sent(), (f = new Array()), y)
@@ -27181,7 +27213,8 @@ var CLSTAMP = "6741589";
                       case 9:
                         return (
                           (v = y.length),
-                          A.enable_faceted_browsing ||
+                          A.smart_section &&
+                            !A.enable_faceted_browsing &&
                             (this.props.appVisibilityTracker.MarkAllAppsNotVisible(
                               this.props.section.unique_id
                             ),
@@ -40441,6 +40474,11 @@ var CLSTAMP = "6741589";
                         bw: o.h.writeBool,
                       },
                       reactions: { n: 12, c: b, r: !0, q: !0 },
+                      gidparentcomment: {
+                        n: 13,
+                        br: o.d.readFixed64String,
+                        bw: o.h.writeFixed64String,
+                      },
                     },
                   }),
                 r.sm_m
@@ -47569,6 +47607,13 @@ var CLSTAMP = "6741589";
         (n.ClientCloudAppSyncStats = function (e, t) {
           return e.SendNotification(
             "ClientMetrics.ClientCloudAppSyncStats#1",
+            t,
+            { ePrivilege: 1 }
+          );
+        }),
+        (n.ClientDownloadResponseCodeCounts = function (e, t) {
+          return e.SendNotification(
+            "ClientMetrics.ClientDownloadResponseCodeCounts#1",
             t,
             { ePrivilege: 1 }
           );
@@ -60207,9 +60252,7 @@ var CLSTAMP = "6741589";
             }),
             (e.prototype.StopInfo = function (e) {
               e.m_nRefCount--,
-                0 === e.m_nRefCount &&
-                  (e.m_schUpdateTimeout.Cancel(),
-                  delete this.m_broadcastInfos[e.m_steamIDBroadcast]);
+                0 === e.m_nRefCount && e.m_schUpdateTimeout.Cancel();
             }),
             (e.prototype.GetOrCreateBroadcastInfo = function (e) {
               var t;
@@ -70943,83 +70986,90 @@ var CLSTAMP = "6741589";
       n.d(t, "a", function () {
         return r;
       });
-      var l = n("q1tI"),
-        u = n("mgoM"),
-        p = n("kyHq"),
-        d = n("TLQK"),
-        m = n("IzPI"),
-        h = n("lkRc");
+      var u = n("q1tI"),
+        p = n("mgoM"),
+        d = n("kyHq"),
+        m = n("TLQK"),
+        h = n("IzPI"),
+        f = n("lkRc");
       var r = function (e) {
         var n = e.video,
           t = e.bAutoPlay,
           r = e.bControls,
           a = e.bLoop;
         if (!n.rgVideoSources || !n.rgVideoSources.length) return null;
-        var i = ((c = n),
-          !!Object(m.a)(c.sPoster) &&
-            (!c.rgVideoSources ||
-              !c.rgVideoSources.some(function (e) {
-                return !Object(m.a)(e.sURL);
+        function i(e) {
+          return (
+            ((e = new URL(e)).search =
+              (e.search ? e.search + "&" : "?") + "origin=" + Object(f.e)()),
+            e.toString()
+          );
+        }
+        var o = ((l = n),
+          !!Object(h.a)(l.sPoster) &&
+            (!l.rgVideoSources ||
+              !l.rgVideoSources.some(function (e) {
+                return !Object(h.a)(e.sURL);
               })) &&
-            (!c.rgVideoTracks ||
-              !c.rgVideoTracks.some(function (e) {
-                return !Object(m.a)(e.sURL);
+            (!l.rgVideoTracks ||
+              !l.rgVideoTracks.some(function (e) {
+                return !Object(h.a)(e.sURL);
               })))
             ? void 0
             : "anonymous",
-          o = "?origin=" + Object(h.e)(),
           s = n.rgVideoSources.map(function (e) {
-            return l.createElement("source", {
+            return u.createElement("source", {
               key: e.sURL,
-              src: e.sURL + o,
+              src: i(e.sURL),
               type: e.sFormat,
             });
           }),
-          e = n.rgVideoTracks
+          c = n.rgVideoTracks
             ? n.rgVideoTracks.map(function (e) {
                 var t = e.eLanguage;
-                if (h.c.EREALM === p.f.k_ESteamRealmChina)
-                  if (d.b.IsELanguageValidInRealm(t, p.f.k_ESteamRealmChina))
-                    t = d.b.GetELanguageFallback(t);
+                if (f.c.EREALM === d.f.k_ESteamRealmChina)
+                  if (m.b.IsELanguageValidInRealm(t, d.f.k_ESteamRealmChina))
+                    t = m.b.GetELanguageFallback(t);
                   else {
                     if (6 !== t) return null;
                     if (
                       n.rgVideoTracks.find(function (e) {
-                        return d.b.GetELanguageFallback(e.eLanguage) === t;
+                        return m.b.GetELanguageFallback(e.eLanguage) === t;
                       })
                     )
                       return null;
                   }
                 else if (
-                  d.b.IsELanguageValidInRealm(t, p.f.k_ESteamRealmGlobal)
+                  m.b.IsELanguageValidInRealm(t, d.f.k_ESteamRealmGlobal)
                 )
                   return null;
-                return l.createElement("track", {
+                return u.createElement("track", {
                   key: e.sURL + t,
-                  src: e.sURL + o,
+                  src: i(e.sURL),
                   kind: e.sKind,
                   default: e.bDefault,
-                  srcLang: Object(u.b)(t),
-                  label: Object(d.f)("#language_selection_" + Object(u.a)(t)),
+                  srcLang: Object(p.b)(t),
+                  label: Object(m.f)("#language_selection_" + Object(p.a)(t)),
                 });
               })
             : null,
-          c = n.sPoster ? n.sPoster + o : "";
-        return l.createElement(
+          e = t,
+          l = n.sPoster ? i(n.sPoster) : "";
+        return u.createElement(
           "video",
           {
             width: "100%",
             height: "auto",
             autoPlay: t,
-            muted: t,
+            muted: e,
             playsInline: !0,
             controls: r,
-            poster: c,
+            poster: l,
             loop: a,
-            crossOrigin: i,
+            crossOrigin: o,
           },
           s,
-          e
+          c
         );
       };
     },

@@ -106,6 +106,7 @@
  CValidator::ClaimMemory(void*)
  CValidator::ClaimMemory_Aligned(void*)
  CValidator::ClaimSocket(int)
+ CValidator::ClaimUntrackedMemory(unsigned long)
  CValidator::IsClaimed(void*)
  CValidator::Pop()
  CValidator::Push(char const*, void*, char const*)

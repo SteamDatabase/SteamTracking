@@ -1,5 +1,5 @@
 /* Third-party software licenses can be found at licenses.txt */
-var CLSTAMP = "6735131";
+var CLSTAMP = "6746216";
 !(function (e) {
   function t(t) {
     for (
@@ -18163,6 +18163,11 @@ var CLSTAMP = "6735131";
                       br: o.d.readString,
                       bw: o.h.writeString,
                     },
+                    shortcut_override_appid: {
+                      n: 63,
+                      br: o.d.readUint32,
+                      bw: o.h.writeUint32,
+                    },
                   },
                 }),
               t.sm_m
@@ -35328,6 +35333,7 @@ var CLSTAMP = "6735131";
           (this.m_currentVirtualKeyboardRef = null),
             (this.m_bIsVirtualKeyboardOpen = !1),
             (this.m_CallbackVirtualKeyboardToggled = new i.a()),
+            (this.m_bDismissOnEnter = !1),
             r.b.SetFactory(this);
         }
         return (
@@ -35338,6 +35344,9 @@ var CLSTAMP = "6735131";
               this.m_CallbackVirtualKeyboardToggled.Dispatch(
                 this.m_bIsVirtualKeyboardOpen
               ));
+          }),
+          (e.prototype.SetDismissOnEnterKey = function (e) {
+            this.m_bDismissOnEnter = e;
           }),
           (e.prototype.CreateVirtualKeyboardRef = function (e) {
             var t = this,
@@ -35410,22 +35419,30 @@ var CLSTAMP = "6735131";
               : e.strEnterKeyLabel;
           }),
           (e.prototype.HandleVirtualKeyDown = function (e, t) {
-            if (
-              (a("VK > input: " + e),
-              "Enter" != e ||
-                !this.m_ActiveElementProps.onEnterKeyPress ||
-                (e =
-                  "function" == typeof this.m_ActiveElementProps.onEnterKeyPress
-                    ? this.m_ActiveElementProps.onEnterKeyPress() || null
-                    : this.m_ActiveElementProps.onEnterKeyPress))
-            )
-              return "VKClose" == e
-                ? (a("VKM.HandleVirtualKeyDown VKClose"),
-                  void this.SetVirtualKeyboardShown(!1))
-                : void (
-                    this.m_ActiveElementProps.onTextEntered &&
-                    this.m_ActiveElementProps.onTextEntered(e, t)
-                  );
+            if ((a("VK > input: " + e), "Enter" == e))
+              if (this.m_ActiveElementProps.onEnterKeyPress) {
+                if (
+                  !(e =
+                    "function" ==
+                    typeof this.m_ActiveElementProps.onEnterKeyPress
+                      ? this.m_ActiveElementProps.onEnterKeyPress() || null
+                      : this.m_ActiveElementProps.onEnterKeyPress)
+                )
+                  return;
+              } else if (this.m_bDismissOnEnter)
+                return (
+                  a("VKM.HandleVirtualKeyDown DismissOnEnter"),
+                  (this.m_bDismissOnEnter = !1),
+                  this.m_ActiveElementProps.onTextEntered(e, t),
+                  void this.SetVirtualKeyboardShown(!1)
+                );
+            if ("VKClose" == e)
+              return (
+                a("VKM.HandleVirtualKeyDown VKClose"),
+                void this.SetVirtualKeyboardShown(!1)
+              );
+            this.m_ActiveElementProps.onTextEntered &&
+              this.m_ActiveElementProps.onTextEntered(e, t);
           }),
           e
         );
@@ -78092,6 +78109,9 @@ var CLSTAMP = "6735131";
             SteamClient.Input.RegisterForGameKeyboardMessages(
               this.OnGameKeyboardMessage
             ),
+            SteamClient.Input.RegisterForUserKeyboardMessages(
+              this.OnModalKeyboardMessage
+            ),
             SteamClient.UI.RegisterForErrorCondition(this.OnErrorCondition),
             (this.m_GamepadNavigationManager = new w.c()),
             this.m_GamepadNavigationManager.RegisterForUnhandledButtonDownEvents(
@@ -78113,6 +78133,11 @@ var CLSTAMP = "6735131";
             this.m_mainBrowser.Init(
               this.m_GamepadNavigationManager,
               this.m_VirtualKeyboardManager
+            ),
+            this.m_VirtualKeyboardManager.VirtualKeyboardToggledCallbackList.Register(
+              function (e) {
+                e || SteamClient.Input.ModalKeyboardDismissed();
+              }
             ),
             Object(a.l)(this.OnGameRunStateChanged),
             Object(a.l)(this.OnSideMenuChanged);
@@ -78688,6 +78713,20 @@ var CLSTAMP = "6735131";
               ? be.NavigateToOverlayGameAPIOSK()
               : be.NavigateToOverlay(pe.AppActionsOverlay);
         }),
+        (e.prototype.OnModalKeyboardMessage = function (e) {
+          var t;
+          this.m_VirtualKeyboardManager.SetDismissOnEnterKey(
+            e.bEnterDismissesKeyboard
+          ),
+            4 ==
+            (null === (t = be.MainRunningApp) || void 0 === t
+              ? void 0
+              : t.display_status)
+              ? (this.m_VirtualKeyboardManager.SetVirtualKeyboardShown(!1),
+                this.NavigateToOverlay(pe.AppActionsOverlay),
+                this.NavigateToOverlay(pe.OverlayKeyboard))
+              : this.m_VirtualKeyboardManager.SetVirtualKeyboardShown(!0);
+        }),
         Object.defineProperty(e.prototype, "OverlayPage", {
           get: function () {
             return this.m_eOverlayPage;
@@ -78960,6 +78999,7 @@ var CLSTAMP = "6735131";
         Object(r.c)([c.a], e.prototype, "OnBigPictureRunningChange", null),
         Object(r.c)([c.a], e.prototype, "SetGameOSKSettings", null),
         Object(r.c)([c.a], e.prototype, "OnGameKeyboardMessage", null),
+        Object(r.c)([c.a], e.prototype, "OnModalKeyboardMessage", null),
         Object(r.c)([c.a], e.prototype, "SetOverlayPage", null),
         Object(r.c)([c.a], e.prototype, "OnGameRunStateChanged", null),
         Object(r.c)([c.a], e.prototype, "OnSideMenuChanged", null),
@@ -86200,6 +86240,7 @@ var CLSTAMP = "6735131";
             var n = this;
             void 0 === t && (t = !0),
               (this.appid = e.appid()),
+              (this.shortcut_override_appid = e.shortcut_override_appid()),
               (this.display_name = e.display_name()),
               (this.app_type = e.app_type()),
               (this.mru_index = e.mru_index()),

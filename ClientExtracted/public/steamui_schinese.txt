@@ -2850,9 +2850,9 @@
 
 "SteamUI_DurationControl_PlaytimeExceeded_Title"		"游戏时间已超过"
 
-"SteamUI_DurationControl_PlaytimeExceeded_Body_ThreeHours"	"您本日累计游戏时间已达上限，请您休息调整，在次日8点后重新登录。"
-"SteamUI_DurationControl_PlaytimeExceeded_Body_FiveHours"	"您本日累计游戏时间已达上限，请您休息调整，在次日8点后重新登录。"
-"SteamUI_DurationControl_PlaytimeExceeded_Body_Night"		"未满18周岁的用户在22点到次日8点无法进入游戏，请您注意休息。"
+"SteamUI_DurationControl_PlaytimeExceeded_Body_ThreeHours"	"根据国家新闻出版署发布的《关于进一步严格管理切实防止未成年人沉迷网络游戏的通知》\n未成年用户仅可在周五、周六、周日和法定节假日的20时至21时进行游戏。感谢您的支持与理解。"
+"SteamUI_DurationControl_PlaytimeExceeded_Body_FiveHours"	"根据国家新闻出版署发布的《关于进一步严格管理切实防止未成年人沉迷网络游戏的通知》\n未成年用户仅可在周五、周六、周日和法定节假日的20时至21时进行游戏。感谢您的支持与理解。"
+"SteamUI_DurationControl_PlaytimeExceeded_Body_Night"		"根据国家新闻出版署发布的《关于进一步严格管理切实防止未成年人沉迷网络游戏的通知》\n未成年用户仅可在周五、周六、周日和法定节假日的20时至21时进行游戏。感谢您的支持与理解。"
 
 
 

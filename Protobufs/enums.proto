@@ -26,6 +26,7 @@ enum EPublishedFileQueryType {
 	k_PublishedFileQueryType_RankedByLifetimePlaytimeSessions = 18;
 	k_PublishedFileQueryType_RankedByInappropriateContentRating = 19;
 	k_PublishedFileQueryType_RankedByBanContentCheck = 20;
+	k_PublishedFileQueryType_RankedByLastUpdatedDate = 21;
 }
 
 enum EPublishedFileInappropriateProvider {

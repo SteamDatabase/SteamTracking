@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6746856";
+var CLSTAMP = "6747644";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [40],
   {
@@ -13967,6 +13967,7 @@ var CLSTAMP = "6746856";
                               (u = u.filter(function (e) {
                                 return !i || i.ShouldShowCapsule(e);
                               })),
+                            f && (u = f.ApplyOptInFilters(u)),
                             [4, Object(A.h)(u)]);
                       case 7:
                         return (
@@ -32420,6 +32421,11 @@ var CLSTAMP = "6746856";
                         bw: o.h.writeBool,
                       },
                       reactions: { n: 12, c: b, r: !0, q: !0 },
+                      gidparentcomment: {
+                        n: 13,
+                        br: o.d.readFixed64String,
+                        bw: o.h.writeFixed64String,
+                      },
                     },
                   }),
                 t.sm_m
@@ -40083,6 +40089,13 @@ var CLSTAMP = "6746856";
           (e.ClientCloudAppSyncStats = function (e, t) {
             return e.SendNotification(
               "ClientMetrics.ClientCloudAppSyncStats#1",
+              t,
+              { ePrivilege: 1 }
+            );
+          }),
+          (e.ClientDownloadResponseCodeCounts = function (e, t) {
+            return e.SendNotification(
+              "ClientMetrics.ClientDownloadResponseCodeCounts#1",
               t,
               { ePrivilege: 1 }
             );
@@ -60974,39 +60987,60 @@ var CLSTAMP = "6746856";
                     ));
                 });
             }),
+            (e.BFacetHasEnabledOptTags = function (e) {
+              for (var t = 0, n = e.facetValues; t < n.length; t++) {
+                var r = n[t];
+                if (r.bEnabled && null != r.facetValue.filter)
+                  for (
+                    var a = 0, o = r.facetValue.filter.clauses;
+                    a < o.length;
+                    a++
+                  )
+                    for (var i = 0, s = o[a].or_tags; i < s.length; i++) {
+                      if (s[i].startsWith("[Opt]")) return !0;
+                    }
+              }
+              return !1;
+            }),
             Object.defineProperty(e.prototype, "strQuery", {
               get: function () {
-                var e = this,
-                  t = {
+                var t = this,
+                  n = {
                     type: s.n.k_EStoreFilterClauseTypeAnd,
                     rgSubexpressions: new Array(),
                   };
                 return (
-                  this.m_facets.forEach(function (n) {
-                    var a = {
-                      type: s.n.k_EStoreFilterClauseTypeOr,
-                      rgSubexpressions: new Array(),
-                    };
-                    n.facetValues.forEach(function (t) {
-                      if (
-                        t.bEnabled &&
-                        Boolean(t.facetValue.rgStoreTagFilter)
-                      ) {
-                        if (t.facetValue.type === s.l.k_EUserPreference) return;
-                        var n = Object(r.a)({}, t.facetValue.rgStoreTagFilter);
-                        t.facetValue.type === s.l.k_EPrice &&
-                          (n.value = Boolean(e.m_priceStopInfo)
-                            ? e.m_priceStopInfo[t.nPriceStopIndex].price
-                            : void 0),
-                          (t.facetValue.type !== s.l.k_EPrice ||
-                            Boolean(e.m_priceStopInfo)) &&
-                            a.rgSubexpressions.push(n);
-                      }
-                    }),
-                      0 !== a.rgSubexpressions.length &&
-                        t.rgSubexpressions.push(a);
+                  this.m_facets.forEach(function (a) {
+                    if (!e.BFacetHasEnabledOptTags(a)) {
+                      var o = {
+                        type: s.n.k_EStoreFilterClauseTypeOr,
+                        rgSubexpressions: new Array(),
+                      };
+                      a.facetValues.forEach(function (e) {
+                        if (
+                          e.bEnabled &&
+                          Boolean(e.facetValue.rgStoreTagFilter)
+                        ) {
+                          if (e.facetValue.type === s.l.k_EUserPreference)
+                            return;
+                          var n = Object(r.a)(
+                            {},
+                            e.facetValue.rgStoreTagFilter
+                          );
+                          e.facetValue.type === s.l.k_EPrice &&
+                            (n.value = Boolean(t.m_priceStopInfo)
+                              ? t.m_priceStopInfo[e.nPriceStopIndex].price
+                              : void 0),
+                            (e.facetValue.type !== s.l.k_EPrice ||
+                              Boolean(t.m_priceStopInfo)) &&
+                              o.rgSubexpressions.push(n);
+                        }
+                      }),
+                        0 !== o.rgSubexpressions.length &&
+                          n.rgSubexpressions.push(o);
+                    }
                   }),
-                  Boolean(t) ? JSON.stringify(t) : ""
+                  Boolean(n) ? JSON.stringify(n) : ""
                 );
               },
               enumerable: !1,
@@ -61317,6 +61351,23 @@ var CLSTAMP = "6746856";
                   }
                 });
               });
+            }),
+            (e.prototype.ApplyOptInFilters = function (t) {
+              for (var n, r = 0, a = this.m_sortedFacets; r < a.length; r++) {
+                var o = a[r];
+                if (
+                  o.facet.bSomeFacetValueEnabled &&
+                  e.BFacetHasEnabledOptTags(o.facet)
+                ) {
+                  var i = o.facet.matchingCapsules;
+                  n = null == n ? i : _(n, i);
+                }
+              }
+              return null == n
+                ? t
+                : t.filter(function (e) {
+                    return n.has(B(e));
+                  });
             }),
             Object(r.c)([a.C], e.prototype, "m_facets", void 0),
             Object(r.c)([a.C], e.prototype, "m_priceStopInfo", void 0),
@@ -70596,11 +70647,18 @@ var CLSTAMP = "6746856";
           })(t)
             ? void 0
             : "anonymous",
-          p = "?origin=" + Object(c.f)(),
+          p = function (e) {
+            var t = new URL(e);
+            return (
+              (t.search =
+                (t.search ? t.search + "&" : "?") + "origin=" + Object(c.f)()),
+              t.toString()
+            );
+          },
           m = t.rgVideoSources.map(function (e) {
             return r.createElement("source", {
               key: e.sURL,
-              src: e.sURL + p,
+              src: p(e.sURL),
               type: e.sFormat,
             });
           }),
@@ -70625,7 +70683,7 @@ var CLSTAMP = "6746856";
                   return null;
                 return r.createElement("track", {
                   key: e.sURL + n,
-                  src: e.sURL + p,
+                  src: p(e.sURL),
                   kind: e.sKind,
                   default: e.bDefault,
                   srcLang: Object(a.e)(n),
@@ -70634,7 +70692,7 @@ var CLSTAMP = "6746856";
               })
             : null,
           f = n,
-          b = t.sPoster ? t.sPoster + p : "";
+          b = t.sPoster ? p(t.sPoster) : "";
         return r.createElement(
           "video",
           {

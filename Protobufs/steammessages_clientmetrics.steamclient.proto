@@ -129,6 +129,11 @@ message CClientMetrics_CloudAppSyncStats_Notification {
 	optional uint32 hardware_type = 20;
 }
 
+message CClientMetrics_ContentDownloadResponse_Counts_Notification {
+	optional uint32 cell_id = 1;
+	optional .CClientMetrics_ContentDownloadResponse_Hosts data = 2;
+}
+
 service ClientMetrics {
 	option (service_description) = "A service for client-reported metrics";
 
@@ -140,4 +145,5 @@ service ClientMetrics {
 	rpc ClientDownloadRatesReport (.CClientMetrics_DownloadRates_Notification) returns (.NoResponse);
 	rpc ClientContentValidationReport (.CClientMetrics_ContentValidation_Notification) returns (.NoResponse);
 	rpc ClientCloudAppSyncStats (.CClientMetrics_CloudAppSyncStats_Notification) returns (.NoResponse);
+	rpc ClientDownloadResponseCodeCounts (.CClientMetrics_ContentDownloadResponse_Counts_Notification) returns (.NoResponse);
 }
