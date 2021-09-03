@@ -1351,6 +1351,8 @@
 	"AppProperties_Shortcut_BrowseFiles": "Browse...",
 	"AppProperties_Shortcut_InVR": "Include in VR Library",
 
+	"Steam_Language_Selection_Label":	"Please select your language...",
+
 	"SteamNetSockets_Connecting": "Connecting",
 	"SteamNetSockets_FindingRoute": "Negotiating Route",
 	"SteamNetSockets_Connected": "Connected",
@@ -1378,6 +1380,19 @@
 	"SteamNetSockets_PeerClose_Ununusual": "The remote host encountered an unusual situation and closed the connection",
 	"SteamNetSockets_AppClose_Normal": "Closed",
 	"SteamNetSockets_AppClose_Unusual": "Closed by application due to unusual or exceptional condition",
+
+	"Settings_Title": "Settings",
+	"Settings_Page_General": "General",
+	"Settings_Page_Storage": "Storage",
+
+	"Settings_Language_Select": "Select preferred language",
+	"Settings_Language_NeedsRestart": "You will need to restart Steam in order to use your new language setting.",
+	"Settings_Language_Restart": "Restart Now",
+
+	"Settings_RestartRequired_Title": "Restart Required",
+	"Settings_RestartRequired_Description": "This change requires a restart to take effect.",
+	"Settings_RestartNow_ButtonText": "Restart Now",
+	"Settings_RestartLater_ButtonText": "Restart Later",
 
 	"ActionButtonLabelMenu": "Menu",
 	"ActionButtonLabelSelect": "Select",
