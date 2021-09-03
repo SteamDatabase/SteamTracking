@@ -21262,6 +21262,14 @@
                               this.m_editModel.GetEventModel().vecTags
                             )
                           ),
+                          _.append(
+                            "build_id",
+                            "" + this.m_editModel.GetEventModel().m_nBuildID
+                          ),
+                          _.append(
+                            "build_branch",
+                            this.m_editModel.GetEventModel().m_strBuildBranch
+                          ),
                           this.m_editModel.BHasBroadcaster() &&
                             _.append(
                               "broadcaster_accountid",
