@@ -36,7 +36,7 @@
       t.r(n);
       var r = t("q1tI"),
         a = t.n(r),
-        l = t("Ty5D"),
+        l = t("EC67"),
         i = t("1fPh"),
         d = t("TyAF"),
         c = t("prdU"),
@@ -50,7 +50,7 @@
         p = t("ehaW"),
         O = t("3xXb"),
         w = t("exH9"),
-        h = t("cOvF");
+        C = t("cOvF");
       n.default = Object(d.a)(function (e) {
         var n = e.match.params.bundleid,
           t = parseInt(n),
@@ -60,10 +60,10 @@
         return d
           ? 5 !== d.type && 6 !== d.type
             ? r
-            : a.a.createElement(C, { bundle: d })
+            : a.a.createElement(h, { bundle: d })
           : null;
       });
-      var C = Object(d.a)(function (e) {
+      var h = Object(d.a)(function (e) {
           var n = e.bundle,
             t = c.b.Get().GetBundleOfferForUser(n);
           return a.a.createElement(
@@ -79,7 +79,7 @@
               },
               a.a.createElement(I, { bundle: n, offer: t }),
               0 === t.point_cost
-                ? a.a.createElement(B, { className: O.PrimaryRedeemButton })
+                ? a.a.createElement(E, { className: O.PrimaryRedeemButton })
                 : a.a.createElement(u.a, {
                     cost: t.point_cost,
                     discount: t.discount,
@@ -89,7 +89,7 @@
                       return Object(u.e)(e, n);
                     },
                   }),
-              a.a.createElement(E, { offer: t })
+              a.a.createElement(B, { offer: t })
             )
           );
         }),
@@ -104,12 +104,12 @@
             a.a.createElement(o.f, { title: r, subtitle: l })
           );
         }),
-        B = function (e) {
+        E = function (e) {
           var n = e.className;
           return a.a.createElement(
             "div",
             { className: Object(w.a)(n, O.AlreadyOwned) },
-            a.a.createElement(h.i, { className: O.CheckmarkCircle }),
+            a.a.createElement(C.i, { className: O.CheckmarkCircle }),
             a.a.createElement(
               "span",
               { className: O.AlreadyOwnedText },
@@ -117,7 +117,7 @@
             )
           );
         },
-        E = Object(d.a)(function (e) {
+        B = Object(d.a)(function (e) {
           var n = e.offer;
           return a.a.createElement(
             m.b,

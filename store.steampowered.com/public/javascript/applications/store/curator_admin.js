@@ -9,7 +9,7 @@
       var a = n("mrSG"),
         r = n("q1tI"),
         o = n.n(r),
-        i = n("Ty5D"),
+        i = n("EC67"),
         c = n("wjMc"),
         u = n("2l+k"),
         s = n("IjL/"),
@@ -45,7 +45,7 @@
                       o.a.createElement(i.b, {
                         exact: !0,
                         path:
-                          "/(curator|pub|publisher|dev|developer|franchise)/:curator_vanity/admin/manage_rss",
+                          "/:prefix(curator|pub|publisher|dev|developer|franchise)/:curatorVanity/admin/manage_rss",
                         component: c.b,
                       }),
                       o.a.createElement(i.b, null, !1)

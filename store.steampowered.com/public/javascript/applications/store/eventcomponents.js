@@ -98,7 +98,7 @@
         p = n.n(m),
         v = n("y2g3"),
         h = n.n(v),
-        E = n("Ty5D"),
+        E = n("EC67"),
         b = n("Cs6D"),
         f = n("kyHq"),
         _ = n("3+zv"),
@@ -3902,7 +3902,7 @@
                   showAppHeader: !0,
                   closeModal: function () {
                     return e.history.push(
-                      Object(Ce.d)(d, Ce.a.k_eStoreNewsHub, "allowRelative")
+                      Object(Ce.e)(d, Ce.a.k_eStoreNewsHub, "allowRelative")
                     );
                   },
                 })

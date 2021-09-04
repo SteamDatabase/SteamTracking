@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6747644";
+var CLSTAMP = "6752881";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [40],
   {
@@ -77,7 +77,7 @@ var CLSTAMP = "6747644";
           return _;
         });
       var r = n("mrSG"),
-        a = (n("2vnA"), n("riab"), n("q1tI")),
+        a = (n("2vnA"), n("aoTL"), n("q1tI")),
         o = n("TtDX"),
         i = n("exH9"),
         s = n("X3Ds"),
@@ -1617,31 +1617,34 @@ var CLSTAMP = "6747644";
                                     return "/steamdeck/";
                                   },
                                   CreatorSaleLandingPage: function () {
-                                    return "/(curator|publisher|pub|dev|developer|franchise)/:creatorPageName/sale/:salePageName?";
+                                    return "/:prefix(curator|publisher|pub|dev|developer|franchise)/:creatorPageName/sale/:salePageName?";
                                   },
                                   SubscriptionPlanLandingPage: function () {
                                     return "/subscriptions/:salePageName";
                                   },
                                   CuratorHomePage: function () {
                                     return [
-                                      "/(publisher|pub|dev|developer|franchise|subscriptions|curator)/:curatorPageName",
-                                      "/(dlc)/:appid(\\d+)/:curatorPageName",
+                                      "/:prefix(publisher|pub|dev|developer|franchise|subscriptions|curator)/:curatorPageName",
+                                      "/:prefix(dlc)/:appid(\\d+)/:curatorPageName",
                                     ];
                                   },
                                   CuratorListPage: function () {
                                     return [
-                                      "/(publisher|pub|dev|developer|franchise|subscriptions|curator)/:curatorPageName/(list)?/:listid(\\d+)?",
-                                      "/(dlc)/:appid(\\d+)/:curatorPageName/(list)?/:listid(\\d+)?",
+                                      "/:prefix(publisher|pub|dev|developer|franchise|subscriptions|curator)/:curatorPageName/:infix(list)?/:listid(\\d+)?",
+                                      "/:prefix(dlc)/:appid(\\d+)/:curatorPageName/:infix(list)?/:listid(\\d+)?",
                                     ];
+                                  },
+                                  CuratorAdminPage: function () {
+                                    return "/:prefix(publisher|pub|dev|developer|franchise|subscriptions|curator)/:curatorVanity/admin";
                                   },
                                 },
                                 {
                                   NewsHub: function () {
-                                    return "/(news|newshub|events)";
+                                    return "/:prefix(news|newshub|events)";
                                   },
                                   NewsHubApp: function (e, t) {
                                     return (
-                                      "/(news|newshub|events)/app/" +
+                                      "/:prefix(news|newshub|events)/app/" +
                                       e +
                                       "/" +
                                       t
@@ -1649,7 +1652,7 @@ var CLSTAMP = "6747644";
                                   },
                                   NewsHubGroup: function (e, t) {
                                     return (
-                                      "/(news|newshub|events)/group/" +
+                                      "/:prefix(news|newshub|events)/group/" +
                                       e +
                                       "/" +
                                       t
@@ -1657,7 +1660,7 @@ var CLSTAMP = "6747644";
                                   },
                                   NewsHubCollection: function (e, t) {
                                     return (
-                                      "/(news|newshub|events)/collection/" +
+                                      "/:prefix(news|newshub|events)/collection/" +
                                       e +
                                       "/" +
                                       t
@@ -1665,7 +1668,7 @@ var CLSTAMP = "6747644";
                                   },
                                   NewsHubSale: function (e, t) {
                                     return (
-                                      "/(news|newshub|events)/sale/" +
+                                      "/:prefix(news|newshub|events)/sale/" +
                                       e +
                                       "/" +
                                       t
@@ -1673,7 +1676,7 @@ var CLSTAMP = "6747644";
                                   },
                                   EventViewByApp: function (e, t, n) {
                                     return (
-                                      "/(news|newshub|events)/app/" +
+                                      "/:prefix(news|newshub|events)/app/" +
                                       e +
                                       "/:viewtype(view|inline)/" +
                                       t +
@@ -1683,7 +1686,7 @@ var CLSTAMP = "6747644";
                                   },
                                   EventViewByGroup: function (e, t, n) {
                                     return (
-                                      "/(news|newshub|events)/group/" +
+                                      "/:prefix(news|newshub|events)/group/" +
                                       e +
                                       "/:viewtype(view|inline)/" +
                                       t +
@@ -1693,7 +1696,7 @@ var CLSTAMP = "6747644";
                                   },
                                   OldAnnouncementViewByApp: function (e, t, n) {
                                     return (
-                                      "/(news|newshub|events)/app/" +
+                                      "/:prefix(news|newshub|events)/app/" +
                                       e +
                                       "/:viewtype(old_view|old_inline)/" +
                                       t +
@@ -1707,7 +1710,7 @@ var CLSTAMP = "6747644";
                                     n
                                   ) {
                                     return (
-                                      "/(news|newshub|events)/group/" +
+                                      "/:prefix(news|newshub|events)/group/" +
                                       e +
                                       "/:viewtype(old_view|old_inline)/" +
                                       t +
@@ -1731,7 +1734,7 @@ var CLSTAMP = "6747644";
                             ),
                             {
                               EventModeration: function () {
-                                return "/events_admin/(moderate)?/:appid(\\d+)?/";
+                                return "/events_admin/:infix(moderate)?/:appid(\\d+)?/";
                               },
                               EventBackfill: function () {
                                 return "/events_admin/backfill/";
@@ -1808,7 +1811,7 @@ var CLSTAMP = "6747644";
               ),
               {
                 ContentHubHome: function () {
-                  return "/(tags|category|genre|videos|weekly|vr|software|macos|linux|freetoplay|earlyaccess|pccafe|demos|specials|remoteplay_phone|remoteplay_tablet|remoteplay_tv|remoteplay_together|games|adultonly|soundtracks|controller)";
+                  return "/:prefix(tags|category|genre|videos|weekly|vr|software|macos|linux|freetoplay|earlyaccess|pccafe|demos|specials|remoteplay_phone|remoteplay_tablet|remoteplay_tv|remoteplay_together|games|adultonly|soundtracks|controller)";
                 },
                 ContentHubSalePage: function () {
                   return "/contenthubsalepage/:category";
@@ -10327,7 +10330,7 @@ var CLSTAMP = "6747644";
       });
       var r = n("mrSG"),
         a = n("2vnA"),
-        o = (n("riab"), n("wd/R")),
+        o = (n("aoTL"), n("wd/R")),
         i = n.n(o),
         s = n("s4NR"),
         c = n.n(s),
@@ -10459,7 +10462,7 @@ var CLSTAMP = "6747644";
         o = n("Gp1o"),
         i = n("q1tI"),
         s = n.n(i),
-        c = n("Ty5D"),
+        c = n("EC67"),
         l = n("uuth"),
         u = n("u2yL"),
         d = n("3+zv"),
@@ -28762,7 +28765,7 @@ var CLSTAMP = "6747644";
         });
       var r = n("s4NR"),
         a = n.n(r);
-      n("q1tI"), n("Ty5D");
+      n("q1tI"), n("EC67");
       function o(e, t) {
         var n = "location" in e ? e.location : e,
           r = "search" in n ? n.search : n,
@@ -39027,6 +39030,8 @@ var CLSTAMP = "6747644";
         "./bm": "p/rL",
         "./bm.js": "p/rL",
         "./bn": "kEOa",
+        "./bn-bd": "loYQ",
+        "./bn-bd.js": "loYQ",
         "./bn.js": "kEOa",
         "./bo": "0mo+",
         "./bo.js": "0mo+",
@@ -39075,6 +39080,8 @@ var CLSTAMP = "6747644";
         "./es": "iYuL",
         "./es-do": "CjzT",
         "./es-do.js": "CjzT",
+        "./es-mx": "tbfe",
+        "./es-mx.js": "tbfe",
         "./es-us": "Vclq",
         "./es-us.js": "Vclq",
         "./es.js": "iYuL",
@@ -39230,6 +39237,8 @@ var CLSTAMP = "6747644";
         "./tg.js": "Oxv6",
         "./th": "EOgW",
         "./th.js": "EOgW",
+        "./tk": "Wv91",
+        "./tk.js": "Wv91",
         "./tl-ph": "Dzi0",
         "./tl-ph.js": "Dzi0",
         "./tlh": "z3Vd",
@@ -40215,7 +40224,7 @@ var CLSTAMP = "6747644";
         var t;
         return (
           0 == s.size &&
-            ((t = Object(a.f)()),
+            ((t = Object(a.g)()),
             s.set(r.Default, {
               id: r.Default,
               strUrl: t + "/",
@@ -48846,7 +48855,7 @@ var CLSTAMP = "6747644";
               (Object(b.f)(),
               b.d.STORE_BASE_URL,
               p.a.GetClanInfoByClanAccountID(t.clanSteamID.GetAccountID()),
-              Object(K.d)(t, K.a.k_eStoreNewsHub, "allowRelative"));
+              Object(K.e)(t, K.a.k_eStoreNewsHub, "allowRelative"));
           return s.createElement(ae, {
             event: t,
             lang: n,
@@ -48861,7 +48870,7 @@ var CLSTAMP = "6747644";
                   crumbs: [
                     {
                       name: Object(w.f)("#BreadCrumbs_AllEvents"),
-                      url: Object(K.d)(
+                      url: Object(K.e)(
                         t,
                         K.a.k_eStoreUsersNewsHub,
                         "allowRelative"
@@ -50125,7 +50134,7 @@ var CLSTAMP = "6747644";
                 a = t.bPreviewMode,
                 u = t.partnerEventStore;
               if (this.state.bRedirectToHome)
-                return Object(O.i)(r, O.a.k_eCommunityAdminPage);
+                return Object(O.j)(r, O.a.k_eCommunityAdminPage);
               var p = i.a.Get().GetPartnerEventPermissions(r.clanSteamID),
                 m = r.visibility_state == s.b.k_EEventStateVisible,
                 h = r.visibility_state == s.b.k_EEventStateStaged;
@@ -57411,7 +57420,7 @@ var CLSTAMP = "6747644";
               o = t.jsondata.bSaleEnabled
                 ? R.a.k_eStoreSalePage
                 : R.a.k_eStoreView;
-            return "" + r + a + "\n\n" + Object(R.d)(t, o, "forceAbsolute");
+            return "" + r + a + "\n\n" + Object(R.e)(t, o, "forceAbsolute");
           }),
           (t.prototype.GetGoogleCalendarLink = function () {
             var e = this.props.eventModel,
@@ -57444,7 +57453,7 @@ var CLSTAMP = "6747644";
             return (
               "" +
               f.d.STORE_BASE_URL +
-              Object(R.f)() +
+              Object(R.g)() +
               "/download/" +
               o +
               "/" +
@@ -57724,7 +57733,7 @@ var CLSTAMP = "6747644";
         c = n("Gp1o"),
         l = n("q1tI"),
         u = n.n(l),
-        d = n("Ty5D"),
+        d = n("EC67"),
         p = n("mgoM"),
         m = n("5bld"),
         h = n("kLLr"),
@@ -58115,7 +58124,7 @@ var CLSTAMP = "6747644";
             }),
             (t.prototype.GotoGameOrClanHub = function () {
               var e = this.props.eventModel,
-                t = Object(se.d)(e, se.a.k_eStoreNewsHub, "allowRelative");
+                t = Object(se.e)(e, se.a.k_eStoreNewsHub, "allowRelative");
               this.props.history.push(t);
             }),
             (t.prototype.ToggleFollowCurator = function () {
@@ -58639,7 +58648,7 @@ var CLSTAMP = "6747644";
             Object(r.d)(t, e),
             (t.prototype.OnTitleClick = function (e) {
               var t = this.props.eventModel,
-                n = Object(se.d)(t, se.a.k_eStoreNewsHub, "allowRelative");
+                n = Object(se.e)(t, se.a.k_eStoreNewsHub, "allowRelative");
               this.props.history.push(n),
                 e.stopPropagation(),
                 e.preventDefault();
@@ -59664,7 +59673,7 @@ var CLSTAMP = "6747644";
                 (n && (n.style.transform = "translateY(" + -1 * t + "px)"),
                 S.a.bOpenEventLandingPage)
               ) {
-                var r = Object(se.d)(e, se.a.k_eStoreView, "allowRelative");
+                var r = Object(se.e)(e, se.a.k_eStoreView, "allowRelative");
                 this.props.history.push(r);
               } else
                 Object(Ge.c)(this.props.history, {
@@ -63585,7 +63594,7 @@ var CLSTAMP = "6747644";
         },
         z = n("wd/R"),
         G = n("55Ip"),
-        P = n("Ty5D"),
+        P = n("EC67"),
         F = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
@@ -63794,8 +63803,9 @@ var CLSTAMP = "6747644";
               )
             : null;
         }),
-        Z = n("Jqb/"),
-        $ = function (e) {
+        Z = n("mB/g"),
+        $ = n("Jqb/"),
+        ee = function (e) {
           var t = e.config;
           return s.a.createElement(
             s.a.Fragment,
@@ -63828,8 +63838,8 @@ var CLSTAMP = "6747644";
             })
           );
         };
-      var ee = n("kLLr");
-      function te(e) {
+      var te = n("kLLr");
+      function ne(e) {
         return function (t) {
           var r = Object(i.useState)(null),
             a = r[0],
@@ -63845,15 +63855,15 @@ var CLSTAMP = "6747644";
           );
         };
       }
-      var ne = te("EventModerationLanding"),
-        re = te("EventBackfillLanding"),
-        ae = te("EventSaleDisplay"),
-        oe = te("EventCalendar"),
-        ie = te("EventDetailView"),
-        se = te("Events"),
-        ce = te("EventSteamGameFestivalDebug"),
-        le = te("RssEnabledAccountDashboard"),
-        ue = function () {
+      var re = ne("EventModerationLanding"),
+        ae = ne("EventBackfillLanding"),
+        oe = ne("EventSaleDisplay"),
+        ie = ne("EventCalendar"),
+        se = ne("EventDetailView"),
+        ce = ne("Events"),
+        le = ne("EventSteamGameFestivalDebug"),
+        ue = ne("RssEnabledAccountDashboard"),
+        de = function () {
           return s.a.createElement(
             P.d,
             null,
@@ -63866,7 +63876,7 @@ var CLSTAMP = "6747644";
               ),
               render: function (e) {
                 return s.a.createElement(
-                  ie,
+                  se,
                   Object(r.a)(
                     { key: "detailview_" + e.match.params.event_gid },
                     e,
@@ -63888,12 +63898,12 @@ var CLSTAMP = "6747644";
               ),
               render: function (e) {
                 return s.a.createElement(
-                  ie,
+                  se,
                   Object(r.a)(
                     { key: "detailview_" + e.match.params.event_gid },
                     e,
                     {
-                      clansteamid: new ee.a(e.match.params.groupid),
+                      clansteamid: new te.a(e.match.params.groupid),
                       event_gid: e.match.params.event_gid,
                       bInfiniteScroll: "inline" == e.match.params.viewtype,
                     }
@@ -63910,7 +63920,7 @@ var CLSTAMP = "6747644";
               ),
               render: function (e) {
                 return s.a.createElement(
-                  ie,
+                  se,
                   Object(r.a)(
                     { key: "detailoldview_" + e.match.params.announcement_gid },
                     e,
@@ -63932,12 +63942,12 @@ var CLSTAMP = "6747644";
               ),
               render: function (e) {
                 return s.a.createElement(
-                  ie,
+                  se,
                   Object(r.a)(
                     { key: "detailoldview_" + e.match.params.announcement_gid },
                     e,
                     {
-                      clansteamid: new ee.a(e.match.params.groupid),
+                      clansteamid: new te.a(e.match.params.groupid),
                       announcement_gid: e.match.params.announcement_gid,
                       bInfiniteScroll: "old_inline" == e.match.params.viewtype,
                     }
@@ -63950,7 +63960,7 @@ var CLSTAMP = "6747644";
               path: m.b.NewsHubApp(":appid(\\d+)", ":vanity?"),
               render: function (e) {
                 return s.a.createElement(
-                  oe,
+                  ie,
                   Object(r.a)({ key: e.match.params.appid }, e, {
                     filter_to_appids: [Number(e.match.params.appid)],
                   })
@@ -63962,7 +63972,7 @@ var CLSTAMP = "6747644";
               path: m.b.NewsHubGroup(":groupid(\\d+)", ":vanity?"),
               render: function (e) {
                 return s.a.createElement(
-                  oe,
+                  ie,
                   Object(r.a)({ key: e.match.params.groupid }, e, {
                     filter_to_clanids: [Number(e.match.params.groupid)],
                   })
@@ -63974,7 +63984,7 @@ var CLSTAMP = "6747644";
               path: m.b.NewsHubCollection(":collectionid", ":vanity?"),
               render: function (e) {
                 return s.a.createElement(
-                  oe,
+                  ie,
                   Object(r.a)({ key: e.match.params.collectionid }, e, {
                     filter_to_collection: e.match.params.collectionid,
                   })
@@ -63986,7 +63996,7 @@ var CLSTAMP = "6747644";
               path: m.b.NewsHubSale(":saleid", ":vanity?"),
               render: function (e) {
                 return s.a.createElement(
-                  oe,
+                  ie,
                   Object(r.a)({ key: e.match.params.saleid }, e, {
                     filter_to_saleid: e.match.params.saleid,
                   })
@@ -63997,12 +64007,12 @@ var CLSTAMP = "6747644";
               exact: !0,
               path: m.b.NewsHub(),
               render: function (e) {
-                return s.a.createElement(oe, Object(r.a)({ key: "global" }, e));
+                return s.a.createElement(ie, Object(r.a)({ key: "global" }, e));
               },
             })
           );
         },
-        de = function () {
+        pe = function () {
           return s.a.createElement(
             P.d,
             null,
@@ -64010,7 +64020,7 @@ var CLSTAMP = "6747644";
               path: m.b.EventGameFestivalDebug(),
               render: function (e) {
                 return s.a.createElement(
-                  ce,
+                  le,
                   Object(r.a)({}, e, {
                     clanAccountID: e.match.params.clanacountid,
                     clanEventGID: e.match.params.claneventgid,
@@ -64022,61 +64032,61 @@ var CLSTAMP = "6747644";
               exact: !0,
               path: m.b.EventBackfill(),
               render: function (e) {
-                return s.a.createElement(re, Object(r.a)({}, e));
+                return s.a.createElement(ae, Object(r.a)({}, e));
               },
             }),
             s.a.createElement(P.b, {
               path: m.b.EventRSSModeration(),
               render: function (e) {
-                return s.a.createElement(le, Object(r.a)({}, e));
+                return s.a.createElement(ue, Object(r.a)({}, e));
               },
             }),
             s.a.createElement(P.b, {
               path: m.b.EventModeration(),
               render: function (e) {
                 return s.a.createElement(
-                  ne,
+                  re,
                   Object(r.a)({}, e, { appid: e.match.params.appid })
                 );
               },
             })
           );
         },
-        pe = s.a.lazy(function () {
+        me = s.a.lazy(function () {
           return Promise.all([n.e(0), n.e(8)]).then(n.bind(null, "3WEt"));
         }),
-        me = s.a.lazy(function () {
+        he = s.a.lazy(function () {
           return Promise.all([n.e(0), n.e(2), n.e(39)]).then(
             n.bind(null, "CGeh")
           );
         }),
-        he = s.a.lazy(function () {
+        fe = s.a.lazy(function () {
           return Promise.all([n.e(0), n.e(2), n.e(73)]).then(
             n.bind(null, "tPo2")
           );
         }),
-        fe = s.a.lazy(function () {
+        be = s.a.lazy(function () {
           return n.e(4).then(n.bind(null, "NIbt"));
         }),
-        be = s.a.lazy(function () {
+        _e = s.a.lazy(function () {
           return Promise.all([n.e(1), n.e(6)]).then(n.bind(null, "3rT3"));
         }),
-        _e = s.a.lazy(function () {
+        ve = s.a.lazy(function () {
           return n.e(9).then(n.bind(null, "JO2d"));
         }),
-        ve = s.a.lazy(function () {
+        ge = s.a.lazy(function () {
           return Promise.resolve().then(n.bind(null, "4sqd"));
         }),
-        ge = s.a.lazy(function () {
+        ye = s.a.lazy(function () {
           return n.e(5).then(n.bind(null, "j6A3"));
         }),
-        ye = s.a.lazy(function () {
+        Se = s.a.lazy(function () {
           return n.e(3).then(n.bind(null, "byIC"));
         }),
-        Se = s.a.lazy(function () {
+        Me = s.a.lazy(function () {
           return n.e(104).then(n.bind(null, "AFtM"));
         }),
-        Me = (function (e) {
+        Oe = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -64097,352 +64107,357 @@ var CLSTAMP = "6747644";
                   "div",
                   { className: f.a.App },
                   s.a.createElement(
-                    s.a.Suspense,
-                    { fallback: s.a.createElement("div", null) },
+                    Z.d.Provider,
+                    { value: { bCanUseLink: !0 } },
                     s.a.createElement(
-                      P.d,
-                      null,
-                      s.a.createElement(P.b, {
-                        exact: !0,
-                        path: m.b.DiagData(),
-                        render: function (e) {
-                          return s.a.createElement(
-                            F,
-                            Object(r.a)({}, e, {
-                              key: "diab_data_" + e.match.params.gid,
-                              strConfigID: "application_config",
-                            })
-                          );
-                        },
-                      }),
-                      s.a.createElement(P.b, {
-                        exact: !0,
-                        path: m.b.AppStorePage(),
-                        render: function (e) {
-                          var t = e.match.params.appid;
-                          return s.a.createElement($, {
-                            config: {
-                              "events-row": function () {
-                                return s.a.createElement(se, {
-                                  key: "appeventrow" + t,
-                                  appid: t,
-                                });
+                      s.a.Suspense,
+                      { fallback: s.a.createElement("div", null) },
+                      s.a.createElement(
+                        P.d,
+                        null,
+                        s.a.createElement(P.b, {
+                          exact: !0,
+                          path: m.b.DiagData(),
+                          render: function (e) {
+                            return s.a.createElement(
+                              F,
+                              Object(r.a)({}, e, {
+                                key: "diab_data_" + e.match.params.gid,
+                                strConfigID: "application_config",
+                              })
+                            );
+                          },
+                        }),
+                        s.a.createElement(P.b, {
+                          exact: !0,
+                          path: m.b.AppStorePage(),
+                          render: function (e) {
+                            var t = e.match.params.appid;
+                            return s.a.createElement(ee, {
+                              config: {
+                                "events-row": function () {
+                                  return s.a.createElement(ce, {
+                                    key: "appeventrow" + t,
+                                    appid: t,
+                                  });
+                                },
+                                "review-award": function () {
+                                  return s.a.createElement(fe, {
+                                    key: "appawardmodal" + t,
+                                  });
+                                },
+                                "steamawardsvote-embed": function () {
+                                  return s.a.createElement(ge, {
+                                    key: "steamawardsvote_" + t,
+                                    appID: t,
+                                  });
+                                },
+                                "broadcast-embed": function () {
+                                  return s.a.createElement(
+                                    be,
+                                    Object(r.a)(
+                                      { key: "appbroadcastcast_" + t },
+                                      e,
+                                      { appid: t }
+                                    )
+                                  );
+                                },
+                                "demo-and-quick-pitch": function () {
+                                  return s.a.createElement(J, {
+                                    key: "appdemoquickpitch_" + t,
+                                    appID: t,
+                                  });
+                                },
                               },
-                              "review-award": function () {
-                                return s.a.createElement(he, {
-                                  key: "appawardmodal" + t,
-                                });
+                            });
+                          },
+                        }),
+                        s.a.createElement(P.b, {
+                          exact: !0,
+                          path: m.b.SaleLandingPage(),
+                          render: function (e) {
+                            var t = e.match.params.salePagename;
+                            return s.a.createElement(ee, {
+                              config: {
+                                "sale-display": function () {
+                                  return s.a.createElement(oe, {
+                                    key: "sale_" + t,
+                                    promotionName: "sale_" + t,
+                                    language: Object(v.i)(u.d.LANGUAGE),
+                                  });
+                                },
+                                "broadcast-embed": function () {
+                                  return s.a.createElement(
+                                    be,
+                                    Object(r.a)(
+                                      { key: "broadcastsale_" + t },
+                                      e,
+                                      { promotionName: t }
+                                    )
+                                  );
+                                },
                               },
-                              "steamawardsvote-embed": function () {
-                                return s.a.createElement(ve, {
-                                  key: "steamawardsvote_" + t,
-                                  appID: t,
-                                });
+                            });
+                          },
+                        }),
+                        s.a.createElement(P.b, {
+                          path: m.b.CuratorAdminPage(),
+                          component: _e,
+                        }),
+                        s.a.createElement(P.b, {
+                          exact: !0,
+                          path: m.b.CreatorSaleLandingPage(),
+                          render: function (e) {
+                            return s.a.createElement(ee, {
+                              config: {
+                                "sale-display": function () {
+                                  return s.a.createElement(oe, {
+                                    key:
+                                      "salecreator_" +
+                                      e.match.params.creatorPageName +
+                                      "_" +
+                                      e.match.params.salePageName,
+                                    promotionName:
+                                      "sale_" + e.match.params.salePageName,
+                                    language: Object(v.i)(u.d.LANGUAGE),
+                                  });
+                                },
                               },
-                              "broadcast-embed": function () {
-                                return s.a.createElement(
-                                  fe,
-                                  Object(r.a)(
-                                    { key: "appbroadcastcast_" + t },
-                                    e,
-                                    { appid: t }
-                                  )
-                                );
+                            });
+                          },
+                        }),
+                        s.a.createElement(P.b, {
+                          exact: !0,
+                          path: m.b.SubscriptionPlanLandingPage(),
+                          render: function (e) {
+                            return s.a.createElement(ee, {
+                              config: {
+                                "sale-display": function () {
+                                  return s.a.createElement(oe, {
+                                    key:
+                                      "subscription_plan_" +
+                                      e.match.params.salePageName,
+                                    promotionName:
+                                      "sale_" + e.match.params.salePageName,
+                                    language: Object(v.i)(u.d.LANGUAGE),
+                                  });
+                                },
                               },
-                              "demo-and-quick-pitch": function () {
-                                return s.a.createElement(J, {
-                                  key: "appdemoquickpitch_" + t,
-                                  appID: t,
-                                });
+                            });
+                          },
+                        }),
+                        s.a.createElement(P.b, {
+                          path: m.b.RemotePlay(),
+                          render: function (e) {
+                            return s.a.createElement(ee, {
+                              config: {
+                                "sale-display": function () {
+                                  return s.a.createElement(oe, {
+                                    key: "sale_remoteplaylanding",
+                                    promotionName: "remoteplaylanding",
+                                    language: Object(v.i)(u.d.LANGUAGE),
+                                  });
+                                },
                               },
-                            },
-                          });
-                        },
-                      }),
-                      s.a.createElement(P.b, {
-                        exact: !0,
-                        path: m.b.SaleLandingPage(),
-                        render: function (e) {
-                          var t = e.match.params.salePagename;
-                          return s.a.createElement($, {
-                            config: {
-                              "sale-display": function () {
-                                return s.a.createElement(ae, {
-                                  key: "sale_" + t,
-                                  promotionName: "sale_" + t,
-                                  language: Object(v.i)(u.d.LANGUAGE),
-                                });
+                            });
+                          },
+                        }),
+                        s.a.createElement(P.b, {
+                          path: m.b.RemotePlayTogether(),
+                          render: function (e) {
+                            return s.a.createElement(ee, {
+                              config: {
+                                "sale-display": function () {
+                                  return s.a.createElement(oe, {
+                                    key: "sale_together",
+                                    promotionName: "sale_together",
+                                    language: Object(v.i)(u.d.LANGUAGE),
+                                  });
+                                },
                               },
-                              "broadcast-embed": function () {
-                                return s.a.createElement(
-                                  fe,
-                                  Object(r.a)(
-                                    { key: "broadcastsale_" + t },
-                                    e,
-                                    { promotionName: t }
-                                  )
-                                );
+                            });
+                          },
+                        }),
+                        s.a.createElement(P.b, {
+                          path: m.b.VRHardware(),
+                          render: function (e) {
+                            return s.a.createElement(ee, {
+                              config: {
+                                "sale-display": function () {
+                                  return s.a.createElement(oe, {
+                                    key: "sale_vrhardware",
+                                    promotionName: "vrhardware",
+                                    language: Object(v.i)(u.d.LANGUAGE),
+                                  });
+                                },
                               },
-                            },
-                          });
-                        },
-                      }),
-                      s.a.createElement(P.b, {
-                        path:
-                          "/(curator|pub|publisher|dev|developer|franchise)/:curator_vanity/admin",
-                        component: be,
-                      }),
-                      s.a.createElement(P.b, {
-                        exact: !0,
-                        path: m.b.CreatorSaleLandingPage(),
-                        render: function (e) {
-                          return s.a.createElement($, {
-                            config: {
-                              "sale-display": function () {
-                                return s.a.createElement(ae, {
-                                  key:
-                                    "salecreator_" +
-                                    e.match.params.creatorPageName +
-                                    "_" +
-                                    e.match.params.salePageName,
-                                  promotionName:
-                                    "sale_" + e.match.params.salePageName,
-                                  language: Object(v.i)(u.d.LANGUAGE),
-                                });
+                            });
+                          },
+                        }),
+                        s.a.createElement(P.b, {
+                          path: m.b.SteamDeck(),
+                          render: function (e) {
+                            return s.a.createElement(ee, {
+                              config: {
+                                "sale-display": function () {
+                                  return s.a.createElement(oe, {
+                                    key: "sale_steamdeck",
+                                    promotionName: "steamdeck",
+                                    language: Object(v.i)(u.d.LANGUAGE),
+                                  });
+                                },
                               },
-                            },
-                          });
-                        },
-                      }),
-                      s.a.createElement(P.b, {
-                        exact: !0,
-                        path: m.b.SubscriptionPlanLandingPage(),
-                        render: function (e) {
-                          return s.a.createElement($, {
-                            config: {
-                              "sale-display": function () {
-                                return s.a.createElement(ae, {
-                                  key:
-                                    "subscription_plan_" +
-                                    e.match.params.salePageName,
-                                  promotionName:
-                                    "sale_" + e.match.params.salePageName,
-                                  language: Object(v.i)(u.d.LANGUAGE),
-                                });
+                            });
+                          },
+                        }),
+                        s.a.createElement(P.b, {
+                          exact: !0,
+                          path: m.b.CuratorHomePage(),
+                          render: function (e) {
+                            return s.a.createElement(ee, {
+                              config: {
+                                "broadcast-embed": function () {
+                                  return s.a.createElement(
+                                    be,
+                                    Object(r.a)(
+                                      {
+                                        key:
+                                          "curatorbroadcast_" +
+                                          u.b.clanid +
+                                          "_" +
+                                          u.b.listid,
+                                      },
+                                      e,
+                                      { clanid: u.b.clanid, listid: u.b.listid }
+                                    )
+                                  );
+                                },
                               },
-                            },
-                          });
-                        },
-                      }),
-                      s.a.createElement(P.b, {
-                        path: m.b.RemotePlay(),
-                        render: function (e) {
-                          return s.a.createElement($, {
-                            config: {
-                              "sale-display": function () {
-                                return s.a.createElement(ae, {
-                                  key: "sale_remoteplaylanding",
-                                  promotionName: "remoteplaylanding",
-                                  language: Object(v.i)(u.d.LANGUAGE),
-                                });
+                            });
+                          },
+                        }),
+                        s.a.createElement(P.b, {
+                          exact: !0,
+                          path: m.b.CuratorListPage(),
+                          render: function (e) {
+                            return s.a.createElement(ee, {
+                              config: {
+                                "list-display": function () {
+                                  return s.a.createElement(D, {
+                                    key: "curator_list",
+                                    listid: e.match.params.listid,
+                                  });
+                                },
                               },
-                            },
-                          });
-                        },
-                      }),
-                      s.a.createElement(P.b, {
-                        path: m.b.RemotePlayTogether(),
-                        render: function (e) {
-                          return s.a.createElement($, {
-                            config: {
-                              "sale-display": function () {
-                                return s.a.createElement(ae, {
-                                  key: "sale_together",
-                                  promotionName: "sale_together",
-                                  language: Object(v.i)(u.d.LANGUAGE),
-                                });
+                            });
+                          },
+                        }),
+                        s.a.createElement(P.b, {
+                          exact: !0,
+                          path: m.b.PackageStorePage(),
+                          render: function (e) {
+                            return s.a.createElement(be, {
+                              key: "packagebroadcast_" + e.match.params.subid,
+                              subid: e.match.params.subid,
+                            });
+                          },
+                        }),
+                        s.a.createElement(P.b, {
+                          exact: !0,
+                          path: m.b.BundleStorePage(),
+                          render: function (e) {
+                            return s.a.createElement(be, {
+                              key: "bundlebroadcast_" + e.match.params.bundleid,
+                              bundleid: e.match.params.bundleid,
+                            });
+                          },
+                        }),
+                        s.a.createElement(P.b, {
+                          path: m.b.NewsHub(),
+                          render: function (e) {
+                            return s.a.createElement(de, null);
+                          },
+                        }),
+                        s.a.createElement(P.b, {
+                          path: m.b.EventAdmin(),
+                          render: function (e) {
+                            return s.a.createElement(pe, null);
+                          },
+                        }),
+                        s.a.createElement(P.b, {
+                          exact: !0,
+                          path: m.b.InteractiveRecommender(),
+                          render: function (e) {
+                            return s.a.createElement(me, null);
+                          },
+                        }),
+                        s.a.createElement(P.b, {
+                          path: m.b.LabsSandbox(),
+                          render: function (e) {
+                            return s.a.createElement(ve, null);
+                          },
+                        }),
+                        !1,
+                        s.a.createElement(P.b, {
+                          path: m.b.Loyalty(),
+                          render: function () {
+                            return s.a.createElement(he, null);
+                          },
+                        }),
+                        s.a.createElement(P.b, {
+                          path: m.b.ContentHubHome(),
+                          render: function () {
+                            return s.a.createElement(ye, null);
+                          },
+                        }),
+                        s.a.createElement(P.b, {
+                          path: m.b.ContentHubSalePage(),
+                          render: function (e) {
+                            var t = e.match.params.category;
+                            return s.a.createElement(ee, {
+                              config: {
+                                "sale-display": function () {
+                                  return s.a.createElement(oe, {
+                                    key: "contenthub_" + t,
+                                    promotionName: "contenthub_" + t,
+                                    language: Object(v.i)(u.d.LANGUAGE),
+                                  });
+                                },
                               },
-                            },
-                          });
-                        },
-                      }),
-                      s.a.createElement(P.b, {
-                        path: m.b.VRHardware(),
-                        render: function (e) {
-                          return s.a.createElement($, {
-                            config: {
-                              "sale-display": function () {
-                                return s.a.createElement(ae, {
-                                  key: "sale_vrhardware",
-                                  promotionName: "vrhardware",
-                                  language: Object(v.i)(u.d.LANGUAGE),
-                                });
-                              },
-                            },
-                          });
-                        },
-                      }),
-                      s.a.createElement(P.b, {
-                        path: m.b.SteamDeck(),
-                        render: function (e) {
-                          return s.a.createElement($, {
-                            config: {
-                              "sale-display": function () {
-                                return s.a.createElement(ae, {
-                                  key: "sale_steamdeck",
-                                  promotionName: "steamdeck",
-                                  language: Object(v.i)(u.d.LANGUAGE),
-                                });
-                              },
-                            },
-                          });
-                        },
-                      }),
-                      s.a.createElement(P.b, {
-                        exact: !0,
-                        path: m.b.CuratorHomePage(),
-                        render: function (e) {
-                          return s.a.createElement($, {
-                            config: {
-                              "broadcast-embed": function () {
-                                return s.a.createElement(
-                                  fe,
-                                  Object(r.a)(
-                                    {
-                                      key:
-                                        "curatorbroadcast_" +
-                                        u.b.clanid +
-                                        "_" +
-                                        u.b.listid,
-                                    },
-                                    e,
-                                    { clanid: u.b.clanid, listid: u.b.listid }
-                                  )
-                                );
-                              },
-                            },
-                          });
-                        },
-                      }),
-                      s.a.createElement(P.b, {
-                        exact: !0,
-                        path: m.b.CuratorListPage(),
-                        render: function (e) {
-                          return s.a.createElement($, {
-                            config: {
-                              "list-display": function () {
-                                return s.a.createElement(D, {
-                                  key: "curator_list",
-                                  listid: e.match.params.listid,
-                                });
-                              },
-                            },
-                          });
-                        },
-                      }),
-                      s.a.createElement(P.b, {
-                        exact: !0,
-                        path: m.b.PackageStorePage(),
-                        render: function (e) {
-                          return s.a.createElement(fe, {
-                            key: "packagebroadcast_" + e.match.params.subid,
-                            subid: e.match.params.subid,
-                          });
-                        },
-                      }),
-                      s.a.createElement(P.b, {
-                        exact: !0,
-                        path: m.b.BundleStorePage(),
-                        render: function (e) {
-                          return s.a.createElement(fe, {
-                            key: "bundlebroadcast_" + e.match.params.bundleid,
-                            bundleid: e.match.params.bundleid,
-                          });
-                        },
-                      }),
-                      s.a.createElement(P.b, {
-                        path: m.b.NewsHub(),
-                        render: function (e) {
-                          return s.a.createElement(ue, null);
-                        },
-                      }),
-                      s.a.createElement(P.b, {
-                        path: m.b.EventAdmin(),
-                        render: function (e) {
-                          return s.a.createElement(de, null);
-                        },
-                      }),
-                      s.a.createElement(P.b, {
-                        exact: !0,
-                        path: m.b.InteractiveRecommender(),
-                        render: function (e) {
-                          return s.a.createElement(pe, null);
-                        },
-                      }),
-                      s.a.createElement(P.b, {
-                        path: m.b.LabsSandbox(),
-                        render: function (e) {
-                          return s.a.createElement(_e, null);
-                        },
-                      }),
-                      !1,
-                      s.a.createElement(P.b, {
-                        path: m.b.Loyalty(),
-                        render: function () {
-                          return s.a.createElement(me, null);
-                        },
-                      }),
-                      s.a.createElement(P.b, {
-                        path: m.b.ContentHubHome(),
-                        render: function () {
-                          return s.a.createElement(ge, null);
-                        },
-                      }),
-                      s.a.createElement(P.b, {
-                        path: m.b.ContentHubSalePage(),
-                        render: function (e) {
-                          var t = e.match.params.category;
-                          return s.a.createElement($, {
-                            config: {
-                              "sale-display": function () {
-                                return s.a.createElement(ae, {
-                                  key: "contenthub_" + t,
-                                  promotionName: "contenthub_" + t,
-                                  language: Object(v.i)(u.d.LANGUAGE),
-                                });
-                              },
-                            },
-                          });
-                        },
-                      }),
-                      s.a.createElement(P.b, {
-                        path: m.b.AccountPreferences(),
-                        render: function (e) {
-                          return s.a.createElement(ye, Object(r.a)({}, e));
-                        },
-                      }),
-                      s.a.createElement(P.b, {
-                        exact: !0,
-                        path: m.b.SummerSale2021Story(),
-                        render: function (e) {
-                          return s.a.createElement(Se, null);
-                        },
-                      }),
-                      s.a.createElement(P.b, null, !1)
-                    )
-                  ),
-                  s.a.createElement(Z.c, { ModalManager: Object(Z.g)(window) })
+                            });
+                          },
+                        }),
+                        s.a.createElement(P.b, {
+                          path: m.b.AccountPreferences(),
+                          render: function (e) {
+                            return s.a.createElement(Se, Object(r.a)({}, e));
+                          },
+                        }),
+                        s.a.createElement(P.b, {
+                          exact: !0,
+                          path: m.b.SummerSale2021Story(),
+                          render: function (e) {
+                            return s.a.createElement(Me, null);
+                          },
+                        }),
+                        s.a.createElement(P.b, null, !1)
+                      )
+                    ),
+                    s.a.createElement($.c, {
+                      ModalManager: Object($.g)(window),
+                    })
+                  )
                 )
               );
             }),
             t
           );
         })(s.a.Component),
-        Oe = n("WBba"),
-        Ee = n("uobO");
+        Ee = n("WBba"),
+        Ce = n("uobO");
       n("Mgs7"), n("6Y59"), n("bDQf"), n("gCFW");
       n("xnZ7"), n("idvb"), n("M1X1");
-      function Ce(e) {
+      function Ae(e) {
         return Object(r.b)(this, void 0, void 0, function () {
           var t, a, o, i, s, c, l, u, p;
           return Object(r.e)(this, function (m) {
@@ -64503,19 +64518,19 @@ var CLSTAMP = "6747644";
                 e.sent(), (e.label = 2);
               case 2:
                 return (
-                  Object(Ee.a)().Init(
+                  Object(Ce.a)().Init(
                     "Store",
                     CLSTAMP,
-                    new Oe.a(u.d.WEBAPI_BASE_URL).GetServiceTransport()
+                    new Ee.a(u.d.WEBAPI_BASE_URL).GetServiceTransport()
                   ),
-                  [4, Ce(u.d.LANGUAGE)]
+                  [4, Ae(u.d.LANGUAGE)]
                 );
               case 3:
                 return (
                   e.sent(),
                   document.getElementById("application_root")
                     ? o.a.render(
-                        s.a.createElement(Me),
+                        s.a.createElement(Oe),
                         document.getElementById("application_root")
                       )
                     : console.error(
@@ -67550,7 +67565,7 @@ var CLSTAMP = "6747644";
                     s.b,
                     {
                       key: "suggestion-" + e.id,
-                      to: "/" + Object(Q.f)() + "/" + n + "/",
+                      to: "/" + Object(Q.g)() + "/" + n + "/",
                     },
                     t
                   )
@@ -67651,7 +67666,7 @@ var CLSTAMP = "6747644";
         return n.push(pe(p.a.Featured, e)), n.push(pe(p.a.Steam, e)), n;
       }
       function fe(e, t) {
-        Object(u.b)().BIsCollectionCalendar(), Object(Q.f)();
+        Object(u.b)().BIsCollectionCalendar(), Object(Q.g)();
         var n = new Array();
         if ((m.a.bIsCuratorsEnabled && n.push(pe(p.a.Press, e)), t))
           for (var r = 0, a = X.GetVisibleSpecialEvents(); r < a.length; r++) {
@@ -69286,31 +69301,34 @@ var CLSTAMP = "6747644";
         n.d(t, "b", function () {
           return a;
         }),
-        n.d(t, "g", function () {
+        n.d(t, "h", function () {
           return p;
         }),
-        n.d(t, "h", function () {
+        n.d(t, "i", function () {
           return m;
         }),
-        n.d(t, "f", function () {
+        n.d(t, "g", function () {
           return f;
         }),
-        n.d(t, "d", function () {
+        n.d(t, "e", function () {
           return _;
         }),
-        n.d(t, "i", function () {
+        n.d(t, "j", function () {
           return v;
         }),
-        n.d(t, "e", function () {
+        n.d(t, "f", function () {
           return g;
         }),
-        n.d(t, "c", function () {
+        n.d(t, "d", function () {
           return y;
+        }),
+        n.d(t, "c", function () {
+          return S;
         });
       var r,
         a,
         o = n("q1tI"),
-        i = n("Ty5D"),
+        i = n("EC67"),
         s = n("55Ip"),
         c = n("r64O"),
         l = n("lkRc");
@@ -69519,23 +69537,24 @@ var CLSTAMP = "6747644";
             return "";
         }
       }
-      var y = function (e) {
-        var t = !!o.useContext(i.e);
-        if (!e.eventModel) return null;
-        var n = t && d(e.route, e.eventModel),
-          r = b(e.eventModel, e.route, n ? "relative" : "absolute");
-        return n
-          ? o.createElement(
-              s.b,
-              { to: r, className: e.className, onClick: e.onClick },
-              e.children
-            )
-          : o.createElement(
-              "a",
-              { href: r, className: e.className, onClick: e.onClick },
-              e.children
-            );
-      };
+      var y = o.createContext({ bCanUseLink: !1 }),
+        S = function (e) {
+          var t = o.useContext(y).bCanUseLink;
+          if (!e.eventModel) return null;
+          var n = t && d(e.route, e.eventModel),
+            r = b(e.eventModel, e.route, n ? "relative" : "absolute");
+          return n
+            ? o.createElement(
+                s.b,
+                { to: r, className: e.className, onClick: e.onClick },
+                e.children
+              )
+            : o.createElement(
+                "a",
+                { href: r, className: e.className, onClick: e.onClick },
+                e.children
+              );
+        };
     },
     mC9v: function (e, t, n) {
       "use strict";
@@ -76794,7 +76813,7 @@ var CLSTAMP = "6747644";
         c = n("Gp1o"),
         l = n("q1tI"),
         u = n.n(l),
-        d = n("Ty5D"),
+        d = n("EC67"),
         p = n("mgoM"),
         m = n("3+zv"),
         h = n("5eAM"),
@@ -77489,7 +77508,7 @@ var CLSTAMP = "6747644";
                 });
               var i =
                 z.d.STORE_BASE_URL +
-                Object(V.f)() +
+                Object(V.g)() +
                 "/sale/" +
                 t.GetSaleID() +
                 "?upcoming=true" +
@@ -90198,7 +90217,7 @@ var CLSTAMP = "6747644";
             T =
               F.d.STORE_BASE_URL +
               "feeds/" +
-              Object(q.f)() +
+              Object(q.g)() +
               (t ? "/app/" + t : "/group/" + n) +
               "/?cc=" +
               F.d.COUNTRY +
@@ -90311,7 +90330,7 @@ var CLSTAMP = "6747644";
                       {
                         className: W.a.AppBannerLink,
                         href: Object(P.g)(
-                          Object(q.e)(t, p.a.InitFromClanID(n), "admin")
+                          Object(q.f)(t, p.a.InitFromClanID(n), "admin")
                         ),
                         target: F.d.IN_CLIENT ? void 0 : "_blank",
                       },
@@ -90403,7 +90422,7 @@ var CLSTAMP = "6747644";
             };
           }, []);
           var z = i ? i.avatar_url : null,
-            G = Object(w.h)(t),
+            G = Object(w.i)(t),
             P = O.a.InitFromAccountID(s.k.accountid);
           return f
             ? a.createElement(
@@ -91593,7 +91612,7 @@ var CLSTAMP = "6747644";
                     a.createElement(
                       J.a,
                       {
-                        href: Object(w.g)(t, w.b.k_eFacebook),
+                        href: Object(w.h)(t, w.b.k_eFacebook),
                         className: b.a.ShareBtn,
                       },
                       a.createElement("img", {
@@ -91612,7 +91631,7 @@ var CLSTAMP = "6747644";
                     a.createElement(
                       J.a,
                       {
-                        href: Object(w.g)(t, w.b.k_eTwitter),
+                        href: Object(w.h)(t, w.b.k_eTwitter),
                         className: b.a.ShareBtn,
                       },
                       a.createElement("img", {
@@ -91631,7 +91650,7 @@ var CLSTAMP = "6747644";
                     a.createElement(
                       J.a,
                       {
-                        href: Object(w.g)(t, w.b.k_eReddit),
+                        href: Object(w.h)(t, w.b.k_eReddit),
                         className: b.a.ShareBtn,
                       },
                       a.createElement("img", {
@@ -91662,7 +91681,7 @@ var CLSTAMP = "6747644";
               className: b.a.LinkInput,
               ref: t,
               type: "text",
-              value: Object(w.h)(e.eventModel),
+              value: Object(w.i)(e.eventModel),
               readOnly: !0,
             }),
             document.queryCommandSupported("copy") &&
