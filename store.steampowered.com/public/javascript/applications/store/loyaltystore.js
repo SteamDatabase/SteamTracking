@@ -13420,7 +13420,7 @@
         c = n.n(l),
         m = n("lkRc"),
         d = n("kyHq"),
-        u = n("bDQf"),
+        u = n("OS6B"),
         p = n("opsS"),
         f = n("bxBv"),
         _ = n("OU48"),
@@ -16431,7 +16431,7 @@
                     case 3:
                       return (
                         (a = r.sent()),
-                        (i = Object(u.c)(a)),
+                        (i = Object(u.a)(a)),
                         console.error(
                           "Error when calling ajaxredeemtokensforcartdiscount: " +
                             i.strErrorMsg,

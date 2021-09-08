@@ -20392,6 +20392,18 @@ img.broadcastplayer_BroadcastPlaceholderImg_1LIEZ {
   display: flex;
   flex-direction: row;
 }
+.dailydealeditor_SectionCtn_247gA {
+  display: flex;
+  flex-flow: row wrap;
+}
+.dailydealeditor_SectionHdr_14AcV {
+  font-weight: bold;
+  color: #87cefa;
+  padding-top: 8px;
+}
+.dailydealeditor_CheckBoxSize_1wywL {
+  min-width: 200px;
+}
 button.DialogButton {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;

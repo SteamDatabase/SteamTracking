@@ -6,22 +6,22 @@
     "8H1D": function (e, t, n) {
       "use strict";
       n.d(t, "b", function () {
-        return i;
+        return r;
       }),
         n.d(t, "a", function () {
-          return r;
+          return s;
         });
       var a = n("lkRc"),
-        i = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
-      function r(e, t) {
+        r = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
+      function s(e, t) {
         var n = ".jpg";
-        (e && "0000000000000000000000000000000000000000" !== e) || (e = i),
+        (e && "0000000000000000000000000000000000000000" !== e) || (e = r),
           44 == e.length && ((n = e.substr(-4)), (e = e.substr(0, 40)));
-        var r = a.c.MEDIA_CDN_COMMUNITY_URL + "images/avatars/";
+        var s = a.c.MEDIA_CDN_COMMUNITY_URL + "images/avatars/";
         return (
-          (r += e.substr(0, 2) + "/" + e),
-          t && "small" != t && (r += "_" + t),
-          (r += n)
+          (s += e.substr(0, 2) + "/" + e),
+          t && "small" != t && (s += "_" + t),
+          (s += n)
         );
       }
     },
@@ -57,23 +57,23 @@
         "./managefriends_ukrainian.json": ["B7eG", 130],
         "./managefriends_vietnamese.json": ["EcJa", 131],
       };
-      function i(e) {
+      function r(e) {
         if (!n.o(a, e))
           return Promise.resolve().then(function () {
             var t = new Error("Cannot find module '" + e + "'");
             throw ((t.code = "MODULE_NOT_FOUND"), t);
           });
         var t = a[e],
-          i = t[0];
+          r = t[0];
         return n.e(t[1]).then(function () {
-          return n.t(i, 3);
+          return n.t(r, 3);
         });
       }
-      (i.keys = function () {
+      (r.keys = function () {
         return Object.keys(a);
       }),
-        (i.id = "Cmuy"),
-        (e.exports = i);
+        (r.id = "Cmuy"),
+        (e.exports = r);
     },
     IASz: function (e, t, n) {
       e.exports = {
@@ -105,18 +105,18 @@
           return b;
         });
       var a = n("mrSG"),
-        i = n("q1tI"),
-        r = n.n(i),
-        s = n("opsS"),
+        r = n("q1tI"),
+        s = n.n(r),
+        i = n("opsS"),
         o = n("vDqi"),
         c = n.n(o),
-        l = n("Mgs7"),
-        u = n("TLQK"),
-        d = n("IASz"),
-        f = n.n(d),
+        u = n("Mgs7"),
+        d = n("TLQK"),
+        l = n("IASz"),
+        f = n.n(l),
         m = n("lkRc"),
-        _ = n("kLLr"),
-        p = n("X3Ds"),
+        p = n("kLLr"),
+        _ = n("X3Ds"),
         h = n("Qcoi"),
         g = n("6Y59"),
         v = (function (e) {
@@ -206,7 +206,7 @@
                   setTimeout(function () {
                     return n.setState({ invite_copied: !1 });
                   }, 1e3)),
-                Object(p.i)(t);
+                Object(_.i)(t);
             }),
             (t.prototype.OnAddFriend = function (e) {
               return Object(a.b)(this, void 0, void 0, function () {
@@ -259,32 +259,32 @@
             (t.prototype.render = function () {
               var e = this,
                 t = m.i.short_url + "/" + this.state.invite_token;
-              return r.a.createElement(
+              return s.a.createElement(
                 "div",
                 null,
-                r.a.createElement(
+                s.a.createElement(
                   "div",
                   { className: f.a.HeaderBlock },
-                  Object(u.f)("#ManageFriends_AddAFriend")
+                  Object(d.f)("#ManageFriends_AddAFriend")
                 ),
-                r.a.createElement(
+                s.a.createElement(
                   "div",
                   { className: f.a.Background },
-                  r.a.createElement(
+                  s.a.createElement(
                     "h1",
                     { className: f.a.Heading },
-                    Object(u.f)("#ManageFriends_YourFriendCode")
+                    Object(d.f)("#ManageFriends_YourFriendCode")
                   ),
-                  r.a.createElement(
+                  s.a.createElement(
                     "div",
                     { className: f.a.CopyContainer },
-                    r.a.createElement(
+                    s.a.createElement(
                       "h1",
                       { className: f.a.Text },
                       m.i.accountid
                     ),
-                    r.a.createElement(
-                      l.d,
+                    s.a.createElement(
+                      u.d,
                       {
                         className: f.a.Button,
                         onClick: function () {
@@ -292,47 +292,47 @@
                         },
                       },
                       this.state.friend_code_copied
-                        ? Object(u.f)("#ManageFriends_Copied")
-                        : Object(u.f)("#ManageFriends_Copy")
+                        ? Object(d.f)("#ManageFriends_Copied")
+                        : Object(d.f)("#ManageFriends_Copy")
                     )
                   ),
-                  r.a.createElement(
+                  s.a.createElement(
                     "p",
                     { className: f.a.Body },
-                    Object(u.f)("#ManageFriends_EnterFriendCode")
+                    Object(d.f)("#ManageFriends_EnterFriendCode")
                   ),
-                  r.a.createElement(b, {
+                  s.a.createElement(b, {
                     onButtonClick: this.OnAddFriend,
-                    buttonText: Object(u.f)("#ManageFriends_SendInvite"),
+                    buttonText: Object(d.f)("#ManageFriends_SendInvite"),
                     bDisableForSelfAndFriends: !0,
                     bShowStatus: !0,
                   })
                 ),
-                r.a.createElement(
+                s.a.createElement(
                   "div",
                   { className: f.a.DimBackground },
-                  r.a.createElement(
+                  s.a.createElement(
                     "h1",
                     { className: f.a.Heading },
-                    Object(u.f)("#ManageFriends_OrSendQuickInvite")
+                    Object(d.f)("#ManageFriends_OrSendQuickInvite")
                   ),
-                  r.a.createElement(
+                  s.a.createElement(
                     "p",
                     { className: f.a.Body },
-                    Object(u.f)("#ManageFriends_QuickInviteDescription")
+                    Object(d.f)("#ManageFriends_QuickInviteDescription")
                   ),
-                  r.a.createElement(
+                  s.a.createElement(
                     "p",
                     { className: f.a.Body },
-                    Object(u.f)("#ManageFriends_QuickInviteNote")
+                    Object(d.f)("#ManageFriends_QuickInviteNote")
                   ),
-                  r.a.createElement(
+                  s.a.createElement(
                     "div",
                     { className: f.a.CopyContainer },
                     Boolean(this.state.invite_token) &&
-                      r.a.createElement("div", { className: f.a.Link }, t),
-                    r.a.createElement(
-                      l.d,
+                      s.a.createElement("div", { className: f.a.Link }, t),
+                    s.a.createElement(
+                      u.d,
                       {
                         className: f.a.Button,
                         onClick: function () {
@@ -340,12 +340,12 @@
                         },
                       },
                       this.state.invite_copied
-                        ? Object(u.f)("#ManageFriends_Copied")
-                        : Object(u.f)("#ManageFriends_Copy")
+                        ? Object(d.f)("#ManageFriends_Copied")
+                        : Object(d.f)("#ManageFriends_Copy")
                     )
                   ),
-                  r.a.createElement(
-                    l.r,
+                  s.a.createElement(
+                    u.r,
                     {
                       style: {
                         width: "fit-content",
@@ -353,19 +353,19 @@
                       },
                       onClick: this.OnCreateInviteLink,
                     },
-                    Object(u.f)("#ManageFriends_CreateInviteLink")
+                    Object(d.f)("#ManageFriends_CreateInviteLink")
                   )
                 ),
-                r.a.createElement(
+                s.a.createElement(
                   "div",
                   { className: f.a.Background },
-                  r.a.createElement(
+                  s.a.createElement(
                     "h1",
                     { className: f.a.Heading },
-                    Object(u.f)("#ManageFriends_OrSearch")
+                    Object(d.f)("#ManageFriends_OrSearch")
                   ),
-                  r.a.createElement("br", null),
-                  r.a.createElement(
+                  s.a.createElement("br", null),
+                  s.a.createElement(
                     "div",
                     {
                       style: {
@@ -375,20 +375,20 @@
                         position: "relative",
                       },
                     },
-                    r.a.createElement(
+                    s.a.createElement(
                       "div",
                       { style: { width: "100%" } },
-                      r.a.createElement(l.m, {
+                      s.a.createElement(u.m, {
                         className: f.a.Input,
                         onKeyDown: this.OnSearchKeyDown,
                         value: this.state.input_search,
                         onChange: this.OnSearchChange,
-                        placeholder: Object(u.f)(
+                        placeholder: Object(d.f)(
                           "#ManageFriends_EnterProfileName"
                         ),
                       })
                     ),
-                    r.a.createElement(
+                    s.a.createElement(
                       "div",
                       {
                         id: "searchIcon",
@@ -399,21 +399,21 @@
                         },
                         onClick: this.OnSearchSubmit,
                       },
-                      r.a.createElement(g.F, null)
+                      s.a.createElement(g.F, null)
                     )
                   )
                 )
               );
             }),
-            Object(a.c)([s.a], t.prototype, "OnCreateInviteLink", null),
-            Object(a.c)([s.a], t.prototype, "OnCopy", null),
-            Object(a.c)([s.a], t.prototype, "OnAddFriend", null),
-            Object(a.c)([s.a], t.prototype, "OnSearchChange", null),
-            Object(a.c)([s.a], t.prototype, "OnSearchKeyDown", null),
-            Object(a.c)([s.a], t.prototype, "OnSearchSubmit", null),
+            Object(a.c)([i.a], t.prototype, "OnCreateInviteLink", null),
+            Object(a.c)([i.a], t.prototype, "OnCopy", null),
+            Object(a.c)([i.a], t.prototype, "OnAddFriend", null),
+            Object(a.c)([i.a], t.prototype, "OnSearchChange", null),
+            Object(a.c)([i.a], t.prototype, "OnSearchKeyDown", null),
+            Object(a.c)([i.a], t.prototype, "OnSearchSubmit", null),
             t
           );
-        })(r.a.Component),
+        })(s.a.Component),
         b = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
@@ -457,7 +457,7 @@
                   switch (a.label) {
                     case 0:
                       return e
-                        ? ((t = _.a.InitFromAccountID(Number(e))),
+                        ? ((t = p.a.InitFromAccountID(Number(e))),
                           [4, h.a.LoadProfiles([t.ConvertTo64BitString()])])
                         : [3, 2];
                     case 1:
@@ -518,44 +518,44 @@
             }),
             (t.prototype.render = function () {
               var e = this;
-              return r.a.createElement(
+              return s.a.createElement(
                 "div",
                 null,
-                r.a.createElement(l.m, {
+                s.a.createElement(u.m, {
                   className: f.a.Input,
                   value: this.state.input_friend_code,
                   onChange: this.OnFriendCodeChange,
-                  placeholder: Object(u.f)(
+                  placeholder: Object(d.f)(
                     "#ManageFriends_EnterFriendCodePlaceholder"
                   ),
                 }),
                 Boolean(this.state.searchResult) &&
-                  r.a.createElement(
+                  s.a.createElement(
                     "div",
                     { className: f.a.ProfileCard },
-                    r.a.createElement(
+                    s.a.createElement(
                       "div",
                       { className: f.a.UserContainer },
-                      r.a.createElement(
+                      s.a.createElement(
                         "div",
                         { className: f.a.Image },
-                        r.a.createElement("img", {
+                        s.a.createElement("img", {
                           style: { width: "100%", height: "100%" },
                           src: this.state.searchResult.avatar_url_full,
                         })
                       ),
-                      r.a.createElement(
+                      s.a.createElement(
                         "div",
                         { className: f.a.ProfileContent },
-                        r.a.createElement(
+                        s.a.createElement(
                           "h1",
                           { className: f.a.Heading },
                           this.state.searchResult.persona_name
                         ),
-                        r.a.createElement(
+                        s.a.createElement(
                           "div",
                           { className: f.a.ProfileLink },
-                          r.a.createElement(
+                          s.a.createElement(
                             "a",
                             {
                               target: "_blank",
@@ -564,14 +564,14 @@
                                 "profiles/" +
                                 this.state.searchResult.steamid,
                             },
-                            Object(u.f)("#ManageFriends_ProfileLink")
+                            Object(d.f)("#ManageFriends_ProfileLink")
                           ),
-                          r.a.createElement("br", null),
-                          r.a.createElement(
+                          s.a.createElement("br", null),
+                          s.a.createElement(
                             "span",
                             { className: f.a.Body },
                             this.state.searchResult.real_name,
-                            r.a.createElement("br", null),
+                            s.a.createElement("br", null),
                             this.state.searchResult.city +
                               (this.state.searchResult.city ? "," : "") +
                               " " +
@@ -582,8 +582,8 @@
                           )
                         )
                       ),
-                      r.a.createElement(
-                        l.r,
+                      s.a.createElement(
+                        u.r,
                         {
                           onClick: function () {
                             return e.OnActionClick(
@@ -601,21 +601,21 @@
                         this.props.buttonText
                       )
                     ),
-                    r.a.createElement(
+                    s.a.createElement(
                       "div",
                       { className: f.a.ProfileLink },
                       this.state.searchResult.is_friend
-                        ? r.a.createElement(
+                        ? s.a.createElement(
                             "div",
                             null,
-                            Object(u.f)("#ManageFriends_IsFriend")
+                            Object(d.f)("#ManageFriends_IsFriend")
                           )
                         : null,
                       this.state.searchResult.friends_in_common
-                        ? r.a.createElement(
+                        ? s.a.createElement(
                             "div",
                             null,
-                            r.a.createElement(
+                            s.a.createElement(
                               "a",
                               {
                                 target: "_blank",
@@ -626,11 +626,11 @@
                                   "/friendscommon",
                               },
                               1 === this.state.searchResult.friends_in_common
-                                ? Object(u.f)(
+                                ? Object(d.f)(
                                     "#ManageFriends_FriendsInCommonSingular",
                                     this.state.searchResult.friends_in_common
                                   )
-                                : Object(u.f)(
+                                : Object(d.f)(
                                     "#ManageFriends_FriendsInCommon",
                                     this.state.searchResult.friends_in_common
                                   )
@@ -639,17 +639,17 @@
                         : null,
                       this.props.bShowStatus &&
                         "failure" === this.state.invite_status &&
-                        r.a.createElement(
+                        s.a.createElement(
                           "div",
                           { className: f.a.Failure },
-                          Object(u.f)("#ManageFriends_InviteFailure")
+                          Object(d.f)("#ManageFriends_InviteFailure")
                         ),
                       this.props.bShowStatus &&
                         "success" === this.state.invite_status &&
-                        r.a.createElement(
+                        s.a.createElement(
                           "div",
                           { className: f.a.Success },
-                          Object(u.f)(
+                          Object(d.f)(
                             "#ManageFriends_InviteSuccess",
                             this.state.searchResult.persona_name
                           )
@@ -658,12 +658,65 @@
                   )
               );
             }),
-            Object(a.c)([s.a], t.prototype, "OnFriendCodeChange", null),
-            Object(a.c)([s.a], t.prototype, "LoadProfile", null),
-            Object(a.c)([s.a], t.prototype, "OnActionClick", null),
+            Object(a.c)([i.a], t.prototype, "OnFriendCodeChange", null),
+            Object(a.c)([i.a], t.prototype, "LoadProfile", null),
+            Object(a.c)([i.a], t.prototype, "OnActionClick", null),
             t
           );
-        })(r.a.Component);
+        })(s.a.Component);
+    },
+    OS6B: function (e, t, n) {
+      "use strict";
+      n.d(t, "a", function () {
+        return s;
+      });
+      var a = n("vDqi"),
+        r = n.n(a);
+      function s(e) {
+        if (r.a.isCancel(e))
+          return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };
+        if (
+          void 0 !== e.response &&
+          e.response.data &&
+          "object" == typeof e.response.data
+        ) {
+          if ("msg" in e.response.data)
+            return {
+              strErrorMsg: e.response.data.msg,
+              errorCode: e.response.data.success,
+            };
+          if ("err_msg" in e.response.data)
+            return {
+              strErrorMsg: e.response.data.err_msg,
+              errorCode: e.response.data.success,
+            };
+          if ("message" in e.response.data)
+            return {
+              strErrorMsg: e.response.data.message,
+              errorCode: e.response.data.success,
+            };
+        } else {
+          if (void 0 !== e.success && void 0 !== e.msg)
+            return { strErrorMsg: e.msg, errorCode: e.success };
+          if (void 0 !== e.success && void 0 !== e.message)
+            return { strErrorMsg: e.message, errorCode: e.success };
+          if (void 0 !== e.success && void 0 !== e.err_msg)
+            return { strErrorMsg: e.err_msg, errorCode: e.success };
+          "string" == typeof e && e.length > 1024
+            ? (console.groupCollapsed(
+                "GetMsgAndErrorCodeFromResponse cannot parse: "
+              ),
+              console.error(e),
+              console.groupEnd())
+            : console.error("GetMsgAndErrorCodeFromResponse cannot parse: ", e);
+        }
+        return "object" == typeof e && "status" in e
+          ? {
+              strErrorMsg: "Unknown Error: " + e + "\nStatus Code:" + e.status,
+              errorCode: 2,
+            }
+          : { strErrorMsg: "Unknown Error: " + e, errorCode: 2 };
+      }
     },
     Qcoi: function (e, t, n) {
       "use strict";
@@ -671,17 +724,17 @@
         return m;
       }),
         n.d(t, "b", function () {
-          return _;
+          return p;
         });
       var a = n("mrSG"),
-        i = n("vDqi"),
-        r = n.n(i),
-        s = n("2vnA"),
+        r = n("vDqi"),
+        s = n.n(r),
+        i = n("2vnA"),
         o = n("q1tI"),
         c = n("8H1D"),
-        l = n("kLLr"),
-        u = n("r64O"),
-        d = n("bDQf"),
+        u = n("kLLr"),
+        d = n("r64O"),
+        l = n("OS6B"),
         f = n("lkRc"),
         m = new ((function () {
           function e() {
@@ -692,38 +745,38 @@
             (e.prototype.LoadProfiles = function (e, t) {
               return Object(a.b)(this, void 0, void 0, function () {
                 var n,
+                  r,
                   i,
-                  s,
                   o,
-                  l = this;
+                  u = this;
                 return Object(a.e)(this, function (a) {
                   switch (a.label) {
                     case 0:
                       return (
-                        Object(u.a)(
+                        Object(d.a)(
                           e.length <= 500,
                           "Check LoadProfiles, requesting too many steam IDs"
                         ),
                         0 ==
                         (n = e.filter(function (e) {
                           return (
-                            !l.m_mapProfiles.has(e) &&
-                            !l.m_mapProfilesLoading.has(e)
+                            !u.m_mapProfiles.has(e) &&
+                            !u.m_mapProfilesLoading.has(e)
                           );
                         })).length
                           ? [2, this.m_mapProfilesLoading.get(e[0])]
-                          : ((i =
+                          : ((r =
                               f.c.COMMUNITY_BASE_URL +
                               "actions/ajaxresolveusers"),
-                            (s = r.a.get(i, {
+                            (i = s.a.get(r, {
                               params: { steamids: n.join(",") },
                               withCredentials: !0,
                               cancelToken: null == t ? void 0 : t.token,
                             })),
                             n.forEach(function (e) {
-                              return l.m_mapProfilesLoading.set(e, s);
+                              return u.m_mapProfilesLoading.set(e, i);
                             }),
-                            [4, s])
+                            [4, i])
                       );
                     case 1:
                       return (
@@ -740,8 +793,8 @@
                                 "full"
                               )),
                               (e.avatar_url = Object(c.a)(e.avatar_url)),
-                              l.m_mapProfiles.set(e.steamid, e),
-                              l.m_mapProfilesLoading.delete(e.steamid);
+                              u.m_mapProfiles.set(e.steamid, e),
+                              u.m_mapProfilesLoading.delete(e.steamid);
                           }),
                         [2]
                       );
@@ -754,7 +807,7 @@
             }),
             (e.prototype.GetProfileByAccountID = function (e) {
               return this.m_mapProfiles.get(
-                l.a.InitFromAccountID(e).ConvertTo64BitString()
+                u.a.InitFromAccountID(e).ConvertTo64BitString()
               );
             }),
             (e.prototype.GetProfileBySteamID = function (e) {
@@ -765,7 +818,7 @@
             }),
             (e.prototype.BHasProfileByAccountID = function (e) {
               return this.m_mapProfiles.has(
-                l.a.InitFromAccountID(e).ConvertTo64BitString()
+                u.a.InitFromAccountID(e).ConvertTo64BitString()
               );
             }),
             (e.prototype.BHasProfileBySteamID = function (e) {
@@ -783,26 +836,26 @@
               var t = this.GetProfileBySteamID(e);
               return t && t.persona_name ? t.persona_name : "";
             }),
-            Object(a.c)([s.C], e.prototype, "m_mapProfiles", void 0),
+            Object(a.c)([i.C], e.prototype, "m_mapProfiles", void 0),
             e
           );
         })())();
-      function _(e) {
-        var t = e ? ("string" == typeof e ? new l.a(e) : e) : null,
+      function p(e) {
+        var t = e ? ("string" == typeof e ? new u.a(e) : e) : null,
           n = Object(o.useState)(!!t && !m.BHasProfileBySteamID(t)),
           a = n[0],
-          i = n[1];
+          r = n[1];
         return (
           Object(o.useEffect)(
             function () {
-              var e = r.a.CancelToken.source();
+              var e = s.a.CancelToken.source();
               return (
                 t &&
                   !m.BHasProfileBySteamID(t) &&
                   m
                     .LoadProfiles([t.ConvertTo64BitString()])
                     .catch(function (e) {
-                      var n = Object(d.c)(e);
+                      var n = Object(l.a)(e);
                       console.error(
                         "useUserProfile failed to load profile for " +
                           t.ConvertTo64BitString() +
@@ -812,7 +865,7 @@
                       );
                     })
                     .finally(function () {
-                      e.token.reason || i(!1);
+                      e.token.reason || r(!1);
                     }),
                 function () {
                   return e.cancel("unmounting useUserProfile");
@@ -833,18 +886,18 @@
           return c;
         });
       var a = n("q1tI"),
-        i = n.n(a),
-        r = n("McqU"),
-        s = n("lkRc"),
+        r = n.n(a),
+        s = n("McqU"),
+        i = n("lkRc"),
         o = n("TLQK");
       function c() {
         return (function () {
           var e = Object(a.useState)(!1),
             t = e[0],
-            i = e[1];
+            r = e[1];
           return (
             Object(a.useEffect)(function () {
-              var e = s.c.LANGUAGE,
+              var e = i.c.LANGUAGE,
                 t = o.b.GetLanguageFallback(e),
                 a = e === t;
               Promise.all([
@@ -853,13 +906,13 @@
               ]).then(function (e) {
                 var t = e[0],
                   n = e[1];
-                o.e.AddTokens(t.default, n ? n.default : void 0), i(!0);
+                o.e.AddTokens(t.default, n ? n.default : void 0), r(!0);
               });
             }, []),
             t
           );
         })()
-          ? i.a.createElement(r.b, null)
+          ? r.a.createElement(s.b, null)
           : null;
       }
     },

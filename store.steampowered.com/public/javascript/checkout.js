@@ -4591,11 +4591,11 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 			
 		if ( g_bHasBillingStates )
 		{
-			$J('#review_address_body').append( '<br>', document.createTextNode( $('billing_city').value+', '+$('billing_state_select').value ) );
+			$J('#review_address_body').append( '<br>', document.createTextNode( $('billing_city').value+', '+$('billing_state_select_trigger').text+', '+$('billing_postal_code').value ) );
 		}
 		else
 		{
-			$J('#review_address_body').append( '<br>', document.createTextNode( $('billing_city').value+', '+$('billing_state_text').value ) );
+			$J('#review_address_body').append( '<br>', document.createTextNode( $('billing_city').value+', '+$('billing_state_text').value+', '+$('billing_postal_code').value ) );
 		}
 		$J('#review_address_body').append( '<br>', document.createTextNode(  $('billing_country').value ) );
 

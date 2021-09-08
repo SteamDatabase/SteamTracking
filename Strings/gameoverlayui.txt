@@ -35,29 +35,27 @@ __const
 __DATA
 __cfstring
 __DATA
-P'B
-P'B
+@'B
+@'B
 __objc_classlist__DATA
 __objc_imageinfo__DATA
 __objc_const
 __DATA
 __objc_selrefs
 __DATA
-)B
-)B
 __objc_classrefs__DATA
+x+B
+x+B
 __objc_superrefs__DATA
-(,B
-(,B
 __objc_ivar
 __DATA
-0,B
-0,B
+,B
+,B
 __objc_data
 __DATA
-8,B
+(,B
 P
-8,B
+(,B
 __data
 __DATA
 G
@@ -9820,8 +9818,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-Sep  3 2021
-14:48:57
+Sep  7 2021
+16:12:27
 crashhandler003
 gameoverlayui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -13833,7 +13831,6 @@ j
 0
 p
 0
-@
 j
 j
 j
@@ -13936,6 +13933,7 @@ j
 "
 M
 d
+5>
 j
 j
 j
@@ -14034,6 +14032,7 @@ j
 Ic
 !
 0.
+y<
 Hi
 h
 !
@@ -14066,7 +14065,6 @@ j
 0
 p
 0
-G;
 E
 (
 j
@@ -14080,6 +14078,8 @@ j
 j
 j
 j
+;
+;
 j
 ;
 ;
@@ -14374,6 +14374,7 @@ j
 0
 &
 &
+&
 j
 j
 j
@@ -14428,6 +14429,7 @@ j
 j
 j
 j
+$
 j
 $
 $
@@ -14541,7 +14543,6 @@ j
 j
 j
 @
-t
 j
 j
 j

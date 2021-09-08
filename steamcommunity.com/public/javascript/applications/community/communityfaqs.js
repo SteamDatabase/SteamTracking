@@ -54,7 +54,7 @@
         d = a("knQc"),
         h = a("mgoM"),
         c = a("N2vu"),
-        u = a("Ty5D"),
+        u = a("EC67"),
         m = a("55Ip"),
         f = a("lkRc");
       !(function (e) {
@@ -98,7 +98,7 @@
         return a;
       }
       var b = a("exH9"),
-        w = a("bDQf"),
+        w = a("OS6B"),
         v = a("45aE"),
         S = a.n(v),
         k = [
@@ -8055,7 +8055,7 @@
                                   h(e);
                                 })
                                 .catch(function (e) {
-                                  var t = Object(w.c)(e);
+                                  var t = Object(w.a)(e);
                                   console.error(
                                     "FAQDeleteDialog: hit error: " +
                                       t.strErrorMsg,
@@ -8622,7 +8622,7 @@
                                 1 == e && h(!0), f(e);
                               })
                               .catch(function (e) {
-                                var t = Object(w.c)(e);
+                                var t = Object(w.a)(e);
                                 console.error(
                                   "FAQPublishDialog: hit error: " +
                                     t.strErrorMsg,
@@ -8768,7 +8768,7 @@
                                   1 == e && d(!0), m(e);
                                 })
                                 .catch(function (e) {
-                                  var t = Object(w.c)(e);
+                                  var t = Object(w.a)(e);
                                   console.error(
                                     "FAQChangeVisibilityDialog: hit error: " +
                                       t.strErrorMsg,
@@ -9073,7 +9073,7 @@
                           d(2),
                           console.log(
                             "FAQSaveProgressDialog hit exception " +
-                              Object(w.c)(a).strErrorMsg
+                              Object(w.a)(a).strErrorMsg
                           ),
                           [3, 5]
                         );
@@ -9543,37 +9543,64 @@
           var t = e.title,
             a = e.content,
             o = e.bIsPreview,
-            i = e.elSideBars;
-          return r.a.createElement(
-            "div",
-            { className: Object(b.a)(Ze.FAQViewPage, f.c.LANGUAGE) },
-            r.a.createElement(
-              "a",
-              { className: Ze.SupportTitle, href: "" + f.c.HELP_BASE_URL },
-              Object(z.f)("#FAQViewer_SteamSupport")
+            i = e.elSideBars,
+            s = Object(u.i)();
+          return (
+            r.a.useEffect(
+              function () {
+                var e,
+                  t,
+                  a,
+                  o =
+                    null === (e = null == s ? void 0 : s.hash) || void 0 === e
+                      ? void 0
+                      : e.substr(
+                          "#" ===
+                            (null === (t = null == s ? void 0 : s.hash) ||
+                            void 0 === t
+                              ? void 0
+                              : t.substr(0, 1))
+                            ? 1
+                            : 0
+                        );
+                o &&
+                  (null === (a = document.getElementById(o)) ||
+                    void 0 === a ||
+                    a.scrollIntoView({ block: "start", behavior: "smooth" }));
+              },
+              [s]
             ),
             r.a.createElement(
               "div",
-              { className: Ze.Columns },
+              { className: Object(b.a)(Ze.FAQViewPage, f.c.LANGUAGE) },
               r.a.createElement(
-                "div",
-                { className: Object(b.a)(Ze.LeftCol) },
-                r.a.createElement("div", { className: Ze.TopColorBar }),
-                r.a.createElement(
-                  "div",
-                  { className: Ze.FAQTopicCtn },
-                  r.a.createElement("div", { className: Ze.FAQTitle }, t),
-                  r.a.createElement(
-                    "div",
-                    { className: Ze.FAQContent },
-                    r.a.createElement(d.a, { text: a, bShowErrorInfo: o })
-                  )
-                )
+                "a",
+                { className: Ze.SupportTitle, href: "" + f.c.HELP_BASE_URL },
+                Object(z.f)("#FAQViewer_SteamSupport")
               ),
               r.a.createElement(
                 "div",
-                { className: Ze.RightCol },
-                r.a.createElement("div", { className: Ze.SectionCtn }, i)
+                { className: Ze.Columns },
+                r.a.createElement(
+                  "div",
+                  { className: Object(b.a)(Ze.LeftCol) },
+                  r.a.createElement("div", { className: Ze.TopColorBar }),
+                  r.a.createElement(
+                    "div",
+                    { className: Ze.FAQTopicCtn },
+                    r.a.createElement("div", { className: Ze.FAQTitle }, t),
+                    r.a.createElement(
+                      "div",
+                      { className: Ze.FAQContent },
+                      r.a.createElement(d.a, { text: a, bShowErrorInfo: o })
+                    )
+                  )
+                ),
+                r.a.createElement(
+                  "div",
+                  { className: Ze.RightCol },
+                  r.a.createElement("div", { className: Ze.SectionCtn }, i)
+                )
               )
             )
           );
@@ -9588,7 +9615,10 @@
         at = a("OJ5K"),
         ot = a("jIVP"),
         it = function (e) {
-          var t = e.faqContent;
+          var t = e.faqContent,
+            a = Object(c.g)(t.faq_id, t.version, t.language),
+            i = a[0];
+          a[1];
           return c.a.Get().BHasFAQEdit()
             ? r.a.createElement(
                 "div",
@@ -9603,9 +9633,9 @@
                   { className: at.InfoRow },
                   Object(z.n)(
                     "#FAQViewer_Admin_LastUpdate",
-                    t.author_account_id
+                    (null == i ? void 0 : i.author_account_id)
                       ? r.a.createElement(st, {
-                          authorAccountID: Number.parseInt(t.author_account_id),
+                          authorAccountID: Number.parseInt(i.author_account_id),
                         })
                       : Object(z.f)("#FAQViewer_UnknownUser"),
                     r.a.createElement(
@@ -9759,7 +9789,7 @@
         pt = a.n(lt),
         dt = function (e) {
           var t = e.faqid,
-            a = Object(c.g)(t, Object(h.d)(f.c.LANGUAGE)),
+            a = Object(c.h)(t, Object(h.d)(f.c.LANGUAGE)),
             o = a[0];
           return a[1]
             ? o
@@ -10004,25 +10034,28 @@
     N2vu: function (e, t, a) {
       "use strict";
       a.d(t, "a", function () {
-        return $;
+        return K;
       }),
         a.d(t, "c", function () {
-          return J;
-        }),
-        a.d(t, "b", function () {
           return Z;
         }),
-        a.d(t, "g", function () {
+        a.d(t, "b", function () {
           return ee;
         }),
-        a.d(t, "d", function () {
+        a.d(t, "h", function () {
           return te;
         }),
-        a.d(t, "f", function () {
+        a.d(t, "d", function () {
           return ae;
         }),
-        a.d(t, "e", function () {
+        a.d(t, "f", function () {
           return oe;
+        }),
+        a.d(t, "e", function () {
+          return ie;
+        }),
+        a.d(t, "g", function () {
+          return se;
         });
       var o,
         i = a("mrSG"),
@@ -10037,7 +10070,7 @@
         u = a("bxBv"),
         m = a("r64O"),
         f = a("XxJJ"),
-        g = a("bDQf"),
+        g = a("OS6B"),
         y = a("lkRc"),
         b = (function () {
           function e(e, t) {
@@ -10098,7 +10131,7 @@
                             ) {
                               var i = l.GetDraftTitle(e),
                                 r = l.GetDraftContent(e),
-                                d = $.Get().UpdateDraft(
+                                d = K.Get().UpdateDraft(
                                   null === (o = l.m_summary) || void 0 === o
                                     ? void 0
                                     : o.faq_id,
@@ -10159,7 +10192,7 @@
                                 .catch(function (e) {
                                   console.error(
                                     "FAQModel.SaveDrafts: Hit error " +
-                                      Object(g.c)(e).strErrorMsg
+                                      Object(g.a)(e).strErrorMsg
                                   ),
                                     1 == s && (s = 2);
                                 }),
@@ -11522,6 +11555,82 @@
             void 0 === a && (a = null);
             var o = e.call(this) || this;
             return (
+              t.prototype.steamid || S.a(t.M()),
+              k.initialize(o, a, 0, -1, void 0, null),
+              o
+            );
+          }
+          return (
+            Object(i.d)(t, e),
+            (t.M = function () {
+              return (
+                t.sm_m ||
+                  (t.sm_m = {
+                    proto: t,
+                    fields: {
+                      steamid: {
+                        n: 1,
+                        br: S.d.readUint64String,
+                        bw: S.h.writeUint64String,
+                      },
+                      faq_id: {
+                        n: 2,
+                        br: S.d.readUint64String,
+                        bw: S.h.writeUint64String,
+                      },
+                      language: {
+                        n: 3,
+                        br: S.d.readUint32,
+                        bw: S.h.writeUint32,
+                      },
+                      version: {
+                        n: 4,
+                        br: S.d.readUint64String,
+                        bw: S.h.writeUint64String,
+                      },
+                    },
+                  }),
+                t.sm_m
+              );
+            }),
+            (t.MBF = function () {
+              return t.sm_mbf || (t.sm_mbf = S.e(t.M())), t.sm_mbf;
+            }),
+            (t.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), t.toObject(e, this);
+            }),
+            (t.toObject = function (e, a) {
+              return S.g(t.M(), e, a);
+            }),
+            (t.fromObject = function (e) {
+              return S.c(t.M(), e);
+            }),
+            (t.deserializeBinary = function (e) {
+              var a = new v.BinaryReader(e),
+                o = new t();
+              return t.deserializeBinaryFromReader(o, a);
+            }),
+            (t.deserializeBinaryFromReader = function (e, a) {
+              return S.b(t.MBF(), e, a);
+            }),
+            (t.prototype.serializeBinary = function () {
+              var e = new v.BinaryWriter();
+              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (t.serializeBinaryToWriter = function (e, a) {
+              S.f(t.M(), e, a);
+            }),
+            (t.prototype.getClassName = function () {
+              return "CClanFAQS_GetFAQVersion_Request";
+            }),
+            t
+          );
+        })(k),
+        j = (function (e) {
+          function t(a) {
+            void 0 === a && (a = null);
+            var o = e.call(this) || this;
+            return (
               t.prototype.faq || S.a(t.M()),
               k.initialize(o, a, 0, -1, void 0, null),
               o
@@ -11569,7 +11678,7 @@
             t
           );
         })(k),
-        j = (function (e) {
+        B = (function (e) {
           function t(a) {
             void 0 === a && (a = null);
             var o = e.call(this) || this;
@@ -11635,7 +11744,7 @@
             t
           );
         })(k),
-        B = (function (e) {
+        G = (function (e) {
           function t(a) {
             void 0 === a && (a = null);
             var o = e.call(this) || this;
@@ -11693,7 +11802,7 @@
             t
           );
         })(k),
-        G = (function (e) {
+        U = (function (e) {
           function t(a) {
             void 0 === a && (a = null);
             var o = e.call(this) || this;
@@ -11748,7 +11857,7 @@
             t
           );
         })(k),
-        U = (function (e) {
+        Y = (function (e) {
           function t(a) {
             void 0 === a && (a = null);
             var o = e.call(this) || this;
@@ -11803,7 +11912,7 @@
             t
           );
         })(k),
-        Y = (function (e) {
+        Q = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var a = e.call(this) || this;
@@ -11839,7 +11948,7 @@
             t
           );
         })(k),
-        Q = (function (e) {
+        X = (function (e) {
           function t(a) {
             void 0 === a && (a = null);
             var o = e.call(this) || this;
@@ -11857,7 +11966,7 @@
                   (t.sm_m = {
                     proto: t,
                     fields: {
-                      faqs: { n: 1, c: X, r: !0, q: !0 },
+                      faqs: { n: 1, c: $, r: !0, q: !0 },
                       num_total_results: {
                         n: 2,
                         br: S.d.readInt32,
@@ -11906,7 +12015,7 @@
             t
           );
         })(k),
-        X = (function (e) {
+        $ = (function (e) {
           function t(a) {
             void 0 === a && (a = null);
             var o = e.call(this) || this;
@@ -12026,17 +12135,17 @@
             });
           }),
           (e.GetFAQVersion = function (e, t) {
-            return e.SendMsg("ClanFAQS.GetFAQVersion#1", t, V, {
+            return e.SendMsg("ClanFAQS.GetFAQVersion#1", t, j, {
               ePrivilege: 1,
             });
           }),
           (e.GetAllDrafts = function (e, t) {
-            return e.SendMsg("ClanFAQS.GetAllDrafts#1", t, B, {
+            return e.SendMsg("ClanFAQS.GetAllDrafts#1", t, G, {
               ePrivilege: 1,
             });
           }),
           (e.GetAllFAQsForClan = function (e, t) {
-            return e.SendMsg("ClanFAQS.GetAllFAQsForClan#1", t, G, {
+            return e.SendMsg("ClanFAQS.GetAllFAQsForClan#1", t, U, {
               ePrivilege: 1,
             });
           }),
@@ -12044,24 +12153,24 @@
             return e.SendMsg(
               "ClanFAQS.GetAllLatestVersionPublishedFAQS#1",
               t,
-              U,
+              Y,
               { ePrivilege: 1 }
             );
           }),
           (e.CheckFAQPermissions = function (e, t) {
-            return e.SendMsg("ClanFAQS.CheckFAQPermissions#1", t, Y, {
+            return e.SendMsg("ClanFAQS.CheckFAQPermissions#1", t, Q, {
               ePrivilege: 1,
             });
           }),
           (e.SearchFAQs = function (e, t) {
-            return e.SendMsg("ClanFAQS.SearchFAQs#1", t, Q, {
+            return e.SendMsg("ClanFAQS.SearchFAQs#1", t, X, {
               bConstMethod: !0,
               ePrivilege: 0,
               eWebAPIKeyRequirement: 1,
             });
           });
       })(o || (o = {}));
-      var $ = (function () {
+      var K = (function () {
           function e() {
             (this.m_mapFAQSummaries = new Map()),
               (this.m_mapFAQPublishedContent = new Map()),
@@ -12176,7 +12285,7 @@
                     case 3:
                       return (
                         (l = i.sent()),
-                        (p = Object(g.c)(l)),
+                        (p = Object(g.a)(l)),
                         console.error(
                           "FAQStore.CreateFAQ: caught error " + p.strErrorMsg,
                           p
@@ -12228,7 +12337,7 @@
                     case 3:
                       return (
                         (d = i.sent()),
-                        (h = Object(g.c)(d)),
+                        (h = Object(g.a)(d)),
                         console.error(
                           "FAQStore.UpdateDraft: caught error " + h.strErrorMsg,
                           h
@@ -12278,7 +12387,7 @@
                     case 3:
                       return (
                         (l = i.sent()),
-                        (p = Object(g.c)(l)),
+                        (p = Object(g.a)(l)),
                         console.error(
                           "FAQStore.UpdateJsonData: caught error " +
                             p.strErrorMsg,
@@ -12288,6 +12397,56 @@
                       );
                     case 4:
                       return [2, n];
+                  }
+                });
+              });
+            }),
+            (e.prototype.GetFAQVersion = function (e, t, a) {
+              return Object(i.b)(this, void 0, void 0, function () {
+                var s, n, r, l, p;
+                return Object(i.e)(this, function (i) {
+                  switch (i.label) {
+                    case 0:
+                      (s = u.b.Init(V)).Body().set_steamid(y.b.CLANSTEAMID),
+                        s.Body().set_faq_id(e),
+                        s.Body().set_version(t),
+                        s.Body().set_language(a),
+                        (i.label = 1);
+                    case 1:
+                      return (
+                        i.trys.push([1, 3, , 4]),
+                        [
+                          4,
+                          o.GetFAQVersion(
+                            this.m_steamInterface.GetServiceTransport(),
+                            s
+                          ),
+                        ]
+                      );
+                    case 2:
+                      return (
+                        (n = i.sent()),
+                        1 == (r = n.GetEResult())
+                          ? [2, n.Body().faq().toObject()]
+                          : (console.error(
+                              "FAQStore.GetFAQVersion request failed:",
+                              r
+                            ),
+                            [3, 4])
+                      );
+                    case 3:
+                      return (
+                        (l = i.sent()),
+                        (p = Object(g.a)(l)),
+                        console.error(
+                          "FAQStore.GetFAQVersion: caught error " +
+                            p.strErrorMsg,
+                          p
+                        ),
+                        [3, 4]
+                      );
+                    case 4:
+                      return [2, null];
                   }
                 });
               });
@@ -12329,7 +12488,7 @@
                     case 3:
                       return (
                         (n = i.sent()),
-                        (r = Object(g.c)(n)),
+                        (r = Object(g.a)(n)),
                         console.error(
                           "FAQStore.DeleteFAQ: caught error " + r.strErrorMsg,
                           r
@@ -12371,7 +12530,7 @@
                     case 0:
                       if (this.m_mapFAQDrafts.has(e))
                         return [2, this.m_mapFAQDrafts.get(e)];
-                      (t = u.b.Init(j)).Body().set_steamid(y.b.CLANSTEAMID),
+                      (t = u.b.Init(B)).Body().set_steamid(y.b.CLANSTEAMID),
                         t.Body().set_faq_id(e),
                         (a = 2),
                         (i.label = 1);
@@ -12411,7 +12570,7 @@
                     case 3:
                       return (
                         (p = i.sent()),
-                        (d = Object(g.c)(p)),
+                        (d = Object(g.a)(p)),
                         console.error(
                           "FaqStore.LoadFAQDraftContent: exception " +
                             d.strErrorMsg,
@@ -12464,7 +12623,7 @@
                     case 3:
                       return (
                         (p = i.sent()),
-                        (d = Object(g.c)(p)),
+                        (d = Object(g.a)(p)),
                         console.error(
                           "FaqStore.UpdateVisibility: exception " +
                             d.strErrorMsg,
@@ -12539,7 +12698,7 @@
                     case 3:
                       return (
                         (l = i.sent()),
-                        (d = Object(g.c)(l)),
+                        (d = Object(g.a)(l)),
                         console.error(
                           "FaqStore.PublishDraftByLanguage: exception " +
                             d.strErrorMsg,
@@ -12611,7 +12770,7 @@
                     case 3:
                       return (
                         (r = i.sent()),
-                        (l = Object(g.c)(r)),
+                        (l = Object(g.a)(r)),
                         console.error(
                           "FaqStore.UpdateInternalName: exception " +
                             l.strErrorMsg,
@@ -12664,7 +12823,7 @@
                           "faqs/" +
                           y.b.VANITY_ID +
                           "/ajaxpushtocrowdin/" +
-                          Z(e)),
+                          ee(e)),
                         [4, n.a.get(t)]
                       );
                     case 1:
@@ -12685,7 +12844,7 @@
                           "faqs/" +
                           y.b.VANITY_ID +
                           "/ajaxpullfromcrowdin/" +
-                          Z(e) +
+                          ee(e) +
                           "?languages=" +
                           t.join(",")),
                         [4, n.a.get(a)]
@@ -12706,14 +12865,14 @@
             e
           );
         })(),
-        K = /^[0-9a-fA-F]+$/;
-      function J(e) {
+        J = /^[0-9a-fA-F]+$/;
+      function Z(e) {
         var t = null == e ? void 0 : e.replace(/-/g, "");
-        return 16 == (null == t ? void 0 : t.length) && K.test(t)
+        return 16 == (null == t ? void 0 : t.length) && J.test(t)
           ? l.a.fromString(t, !0, 16).toString()
           : null;
       }
-      function Z(e) {
+      function ee(e) {
         var t = ("0000000000000000" + l.a.fromString(e, !0, 10).toString(16))
           .slice(-16)
           .toUpperCase();
@@ -12727,11 +12886,11 @@
           t.slice(12, 16)
         );
       }
-      function ee(e, t) {
-        return [e && $.Get().GetFAQPublishedContent(e, t), !0];
+      function te(e, t) {
+        return [e && K.Get().GetFAQPublishedContent(e, t), !0];
       }
-      function te(e) {
-        var t = h.a.useState($.Get().GetFAQDraftContent(e)),
+      function ae(e) {
+        var t = h.a.useState(K.Get().GetFAQDraftContent(e)),
           a = t[0],
           o = t[1],
           i = h.a.useState(!!a),
@@ -12740,7 +12899,7 @@
         return (
           Object(d.useEffect)(
             function () {
-              $.Get()
+              K.Get()
                 .LoadFAQDraftContent(e)
                 .then(function (e) {
                   return o(e);
@@ -12754,12 +12913,37 @@
           [a, s]
         );
       }
-      function ae(e) {
-        return [$.Get().GetFAQArticleSummary(e), !0];
+      function oe(e) {
+        return [K.Get().GetFAQArticleSummary(e), !0];
       }
-      function oe() {
-        var e = $.Get().GetAllFAQSummaries();
+      function ie() {
+        var e = K.Get().GetAllFAQSummaries();
         return h.a.useRef([e, !0]).current;
+      }
+      function se(e, t, a) {
+        var o = h.a.useState(null),
+          i = o[0],
+          s = o[1],
+          n = h.a.useState(!1),
+          r = n[0],
+          l = n[1];
+        return (
+          Object(d.useEffect)(
+            function () {
+              K.Get().BHasFAQEdit() &&
+                K.Get()
+                  .GetFAQVersion(e, t, a)
+                  .then(function (e) {
+                    return s(e);
+                  })
+                  .finally(function () {
+                    return l(!0);
+                  });
+            },
+            [e, t, a]
+          ),
+          [i, r]
+        );
       }
     },
     OJ5K: function (e, t, a) {

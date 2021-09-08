@@ -852,7 +852,7 @@
         });
       var a = n("mrSG"),
         i = n("mHFc"),
-        r = n("riab"),
+        r = n("aoTL"),
         o = n("Mgs7"),
         l = n("TLQK"),
         s = n("6Y59"),
@@ -1042,7 +1042,7 @@
       var a = n("mrSG"),
         i = n("vDqi"),
         r = n.n(i),
-        o = n("bDQf"),
+        o = n("OS6B"),
         l = n("lkRc"),
         s = (function () {
           function e() {
@@ -1082,7 +1082,7 @@
                         (c = a.sent()),
                         console.error(
                           "Failed getting opt in summary: " +
-                            Object(o.c)(c).strErrorMsg
+                            Object(o.a)(c).strErrorMsg
                         ),
                         [3, 4]
                       );
@@ -1151,7 +1151,7 @@
         E = n("5E+2"),
         y = n("exH9"),
         O = n("TLQK"),
-        T = n("bDQf"),
+        T = n("OS6B"),
         C = n("opsS"),
         j = n("lkRc"),
         I = n("NrWE"),
@@ -1662,7 +1662,7 @@
                       case 6:
                         return (
                           (_ = a.sent()),
-                          (g = Object(T.c)(_)),
+                          (g = Object(T.a)(_)),
                           console.error(
                             "TabSaleBackgroundImageEditor: failed add " +
                               g.strErrorMsg,
@@ -1726,7 +1726,7 @@
         return P;
       }),
         n.d(t, "b", function () {
-          return Q;
+          return Y;
         });
       var a = n("mrSG"),
         i = n("fcuX"),
@@ -1735,7 +1735,7 @@
         l = n.n(o),
         s = n("mgoM"),
         c = n("3+zv"),
-        u = n("bDQf"),
+        u = n("OS6B"),
         d = n("lkRc"),
         p = new ((function () {
           function e(e) {
@@ -1906,7 +1906,7 @@
                         (n = a.sent()),
                         console.error(
                           "Unable to load tag category data: " +
-                            Object(u.c)(n).strErrorMsg
+                            Object(u.a)(n).strErrorMsg
                         ),
                         [2, null]
                       );
@@ -3353,7 +3353,7 @@
           });
         });
       }
-      function Q(e) {
+      function Y(e) {
         return Object(a.b)(this, void 0, void 0, function () {
           var t, n, i, r, o, l, u, d, m;
           return Object(a.e)(this, function (a) {
@@ -3408,7 +3408,7 @@
                   ? "tabs" === (m = d[u]).section_type && m.tabs
                     ? (m.tabs.forEach(function (e) {
                         e.sale_tag_filter &&
-                          (e.store_filter = Y(e.sale_tag_filter, o, l));
+                          (e.store_filter = J(e.sale_tag_filter, o, l));
                       }),
                       [3, 7])
                     : [3, 5]
@@ -3442,8 +3442,8 @@
                                 })
                               : u.type === c.l.k_EAppType
                               ? a.set(u, X(u.appType))
-                              : (a.set(u, Y(u.filter, t, n)),
-                                i.set(u, J(u.filter, t)));
+                              : (a.set(u, J(u.filter, t, n)),
+                                i.set(u, Q(u.filter, t)));
                           }
                           if (
                             e.facetValues.every(function (e) {
@@ -3519,7 +3519,7 @@
           });
         });
       }
-      function Y(e, t, n) {
+      function J(e, t, n) {
         for (
           var a = {
               type: c.o.k_EStoreFilterClauseTypeAnd,
@@ -3568,7 +3568,7 @@
                 continue;
               }
               var h = n.get(_);
-              s.rgSubexpressions.push(Y(h, t, n));
+              s.rgSubexpressions.push(J(h, t, n));
             } else console.warn("Sale tag not implemented for faceting: " + p);
           }
           if (0 === s.rgSubexpressions.length) return null;
@@ -3576,7 +3576,7 @@
         }
         return 0 === a.rgSubexpressions.length ? null : Object(A.e)(a);
       }
-      function J(e, t) {
+      function Q(e, t) {
         for (var n = 0, a = e.clauses; n < a.length; n++)
           for (var i = 0, o = a[n].or_tags; i < o.length; i++) {
             var l = o[i],
@@ -3735,7 +3735,7 @@
         S = n("exH9"),
         E = n("NOFC"),
         y = n("TLQK"),
-        O = n("bDQf"),
+        O = n("OS6B"),
         T = n("opsS"),
         C = n("NrWE"),
         j = n("as1E"),
@@ -3911,7 +3911,7 @@
                                 case 2:
                                   return (
                                     (o = a.sent()),
-                                    (l = Object(O.c)(o)),
+                                    (l = Object(O.a)(o)),
                                     console.error(
                                       "AddExistingClanImage: " + l.strErrorMsg,
                                       l
@@ -4351,7 +4351,7 @@
         o = n("t0uJ"),
         l = n("TyAF"),
         s = n("q1tI"),
-        c = n("Ty5D"),
+        c = n("EC67"),
         u = n("3+zv"),
         d = n("gBDv"),
         p = n("9w6b"),
@@ -5437,7 +5437,7 @@
         f = n("exH9"),
         b = n("X3Ds"),
         v = n("TLQK"),
-        S = n("bDQf"),
+        S = n("OS6B"),
         E = n("opsS"),
         y = n("75vw"),
         O = n.n(y),
@@ -5498,7 +5498,7 @@
                     case 2:
                       return (
                         (i = a.sent()),
-                        (r = Object(S.c)(i)),
+                        (r = Object(S.a)(i)),
                         console.error(
                           "LocalizedImageDialog : " + r.strErrorMsg,
                           r
@@ -5536,7 +5536,7 @@
                     case 2:
                       return (
                         (e = n.sent()),
-                        (t = Object(S.c)(e)),
+                        (t = Object(S.a)(e)),
                         console.error(
                           "LocalizedImageDialog : " + t.strErrorMsg,
                           t
@@ -5694,7 +5694,7 @@
                   e.m_cancelSignal.token.reason || e.setState({ bLoading: !1 });
                 })
                 .catch(function (t) {
-                  var n = Object(S.c)(t);
+                  var n = Object(S.a)(t);
                   console.error(
                     "ClanImagePicker Failed: " +
                       n.strErrorMsg +
@@ -6324,11 +6324,11 @@
                 .DeleteClanImage(t, this.props.clanImage)
                 .then(function (t) {
                   1 != t.success &&
-                    e.ShowDeleteError(Object(S.c)(t).strErrorMsg),
+                    e.ShowDeleteError(Object(S.a)(t).strErrorMsg),
                     e.setState({ bDeleting: !1 });
                 })
                 .catch(function (t) {
-                  e.ShowDeleteError(Object(S.c)(t).strErrorMsg),
+                  e.ShowDeleteError(Object(S.a)(t).strErrorMsg),
                     e.setState({ bDeleting: !1 });
                 }),
                 this.m_linkPopupRef &&
@@ -7790,7 +7790,7 @@
                     {
                       onClick: function (t) {
                         Object(F.d)(
-                          s.createElement(Q, {
+                          s.createElement(Y, {
                             fnRemoveAllArtwork: e.fnRemoveAllArtwork,
                           }),
                           Object(R.m)(t)
@@ -7801,7 +7801,7 @@
                   )
               ),
             !e.bIsMinimized &&
-              s.createElement(Y, {
+              s.createElement(J, {
                 clanSteamID: e.clanSteamID,
                 title: e.title,
                 imageWidth: u,
@@ -7810,7 +7810,7 @@
               })
           );
         }),
-        Q = function (e) {
+        Y = function (e) {
           var t = e.fnRemoveAllArtwork,
             n = e.closeModal;
           return s.createElement(B.d, {
@@ -7822,7 +7822,7 @@
             onCancel: n,
           });
         },
-        Y = (function (e) {
+        J = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -7917,7 +7917,7 @@
                 : s.createElement(
                     "div",
                     null,
-                    s.createElement(J, {
+                    s.createElement(Q, {
                       list: this.state.lastSelection,
                       fnOnArtworkLanguageChange: this
                         .OnUpdateAndMoveClanImageLang,
@@ -8002,7 +8002,7 @@
             (t = Object(i.c)([l.a], t))
           );
         })(s.Component),
-        J = (function (e) {
+        Q = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -11493,7 +11493,7 @@
         s = n("kLLr"),
         c = n("XxJJ"),
         u = n("qiKp"),
-        d = n("bDQf"),
+        d = n("OS6B"),
         p = n("lkRc"),
         m = n("r64O"),
         _ = "new_event_gid",
@@ -11657,7 +11657,7 @@
                             this.m_mapPrivateData.set(r, m),
                             this.m_mapOriginalJSON.set(r, {}),
                             [2, m])
-                          : ((h = Object(d.c)(c)),
+                          : ((h = Object(d.a)(c)),
                             console.error(
                               "CPartnerEventPrivateDataStore.InternalLoadPrivateData: response with " +
                                 h.strErrorMsg,
@@ -11668,7 +11668,7 @@
                     case 3:
                       return (
                         (g = a.sent()),
-                        (h = Object(d.c)(g)),
+                        (h = Object(d.a)(g)),
                         console.error(
                           "CPartnerEventPrivateDataStore.InternalLoadPrivateData: failed with " +
                             h.strErrorMsg,
@@ -11768,7 +11768,7 @@
                             (this.m_gidDirty = null),
                             this.DispatchUpdate(e.GetAccountID(), t),
                             [2, s.data.success])
-                          : ((_ = Object(d.c)(s)),
+                          : ((_ = Object(d.a)(s)),
                             console.error(
                               "CPartnerEventPrivateDataStore.SavePrivateData: response with " +
                                 _.strErrorMsg,
@@ -11779,7 +11779,7 @@
                     case 3:
                       return (
                         (u = a.sent()),
-                        (_ = Object(d.c)(u)),
+                        (_ = Object(d.a)(u)),
                         console.error(
                           "CPartnerEventPrivateDataStore.SavePrivateData: failed with " +
                             _.strErrorMsg,
@@ -11935,7 +11935,7 @@
       });
       var a = n("mrSG"),
         i = n("q1tI"),
-        r = n("WFjJ"),
+        r = n("15kH"),
         o = n("opsS"),
         l = (function (e) {
           function t() {
@@ -11964,7 +11964,7 @@
               this.setState({ color: n }), this.props.onChange(n);
             }),
             (t.prototype.render = function () {
-              return i.createElement(r.ChromePicker, {
+              return i.createElement(r.a, {
                 onChange: this.OnColorChange,
                 color: this.state.color,
               });
@@ -11987,7 +11987,7 @@
         i = n("vDqi"),
         r = n.n(i),
         o = n("lkRc"),
-        l = n("bDQf"),
+        l = n("OS6B"),
         s = (function () {
           function e() {
             (this.m_events = null),
@@ -12049,7 +12049,7 @@
                     case 3:
                       return (
                         (s = a.sent()),
-                        (c = Object(l.c)(s)),
+                        (c = Object(l.a)(s)),
                         console.error(
                           "LoadDiscountEvents failed: " + c.strErrorMsg,
                           c
@@ -12094,7 +12094,7 @@
                     case 3:
                       return (
                         (c = a.sent()),
-                        (u = Object(l.c)(c)),
+                        (u = Object(l.a)(c)),
                         console.error(
                           "LoadDiscountEventDetails failed: " + u.strErrorMsg,
                           u
@@ -12207,7 +12207,7 @@
                       case 2:
                         return (
                           (t = a.sent()),
-                          (n = Object(l.c)(t)),
+                          (n = Object(l.a)(t)),
                           console.error(
                             "DiscountEventChooser failed to load: " +
                               n.strErrorMsg,
@@ -12333,7 +12333,7 @@
                           case 5:
                             return (
                               (c = a.sent()),
-                              (u = Object(l.c)(c)),
+                              (u = Object(l.a)(c)),
                               console.error(
                                 "SelectAppsAndPackagesFromDiscountEvent failed: " +
                                   u.strErrorMsg,
@@ -12604,7 +12604,7 @@
         return qe;
       }),
         n.d(t, "a", function () {
-          return Qe;
+          return Ye;
         }),
         n.d(t, "g", function () {
           return Ke;
@@ -12898,9 +12898,9 @@
         z = n("mB/g"),
         W = n("xnZ7"),
         q = n.n(W),
-        Q = n("bS9Q"),
-        Y = n("JiI5"),
-        J = n("riab"),
+        Y = n("bS9Q"),
+        J = n("JiI5"),
+        Q = n("aoTL"),
         K = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
@@ -12968,7 +12968,7 @@
               this.m_searchResultsMenu = Object(O.a)(
                 d.createElement(
                   V.c,
-                  { className: Y.SearchResults },
+                  { className: J.SearchResults },
                   e.map(function (e) {
                     return d.createElement(
                       V.d,
@@ -12981,13 +12981,13 @@
                       d.createElement(
                         "div",
                         { style: { display: "flex", alignItems: "center" } },
-                        Object(Q.b)(e.name),
+                        Object(Y.b)(e.name),
                         " ",
                         d.createElement("span", null, "(", e.id, ")"),
                         " ",
                         d.createElement(
                           "span",
-                          { className: Y.SmallText },
+                          { className: J.SmallText },
                           "(",
                           e.type,
                           ")"
@@ -13241,7 +13241,7 @@
         var t = e.editModel,
           n = e.saleSection,
           a = e.fnIsValidEvent,
-          i = Object(J.d)(function () {
+          i = Object(Q.d)(function () {
             var e;
             return null === (e = n.events) || void 0 === e
               ? void 0
@@ -13944,10 +13944,10 @@
             },
             d.createElement(
               "div",
-              { style: { display: "flex" }, className: Y.BackgroundSettings },
+              { style: { display: "flex" }, className: J.BackgroundSettings },
               d.createElement(
                 "div",
-                { className: Object(k.a)(C.HalfColumn, Y.HalfColumn) },
+                { className: Object(k.a)(C.HalfColumn, J.HalfColumn) },
                 d.createElement(
                   "div",
                   { className: C.EventEditorTextTitle },
@@ -14030,7 +14030,7 @@
               Boolean(f && !n.disable_background) &&
                 d.createElement(
                   "div",
-                  { className: Object(k.a)(C.HalfColumn, Y.HalfColumn) },
+                  { className: Object(k.a)(C.HalfColumn, J.HalfColumn) },
                   d.createElement(
                     "div",
                     { className: C.EventEditorTextTitle },
@@ -14295,7 +14295,7 @@
                     {
                       eventModel: t.GetEventModel(),
                       route: z.a.k_eCommunityEditBroadcast,
-                      className: Y.CrossTabLink,
+                      className: J.CrossTabLink,
                     },
                     Object(h.f)("#Sale_Broadcast_TabLink")
                   ));
@@ -14323,7 +14323,7 @@
                     )
                   : d.createElement(
                       "div",
-                      { className: Y.CrossTabWarning },
+                      { className: J.CrossTabWarning },
                       Object(h.f)("#Sale_ShowingBroadcastElsewhere")
                     )
                 : d.createElement(
@@ -14332,7 +14332,7 @@
                     n,
                     d.createElement(
                       "div",
-                      { className: Y.CrossTabWarning },
+                      { className: J.CrossTabWarning },
                       Object(h.f)("#Sale_Broadcast_Disabled"),
                       d.createElement(qe, {
                         tooltip: Object(h.f)("#Sale_Broadcast_Disabled_hint"),
@@ -14399,7 +14399,7 @@
                                   (this.m_searchResultsMenu = Object(O.a)(
                                     d.createElement(
                                       V.c,
-                                      { className: Y.SearchResults },
+                                      { className: J.SearchResults },
                                       e.map(function (e) {
                                         return d.createElement(
                                           V.d,
@@ -14430,7 +14430,7 @@
                                                 className: q.a.AvatarImage,
                                               })
                                             ),
-                                            Object(Q.b)(e.GetName())
+                                            Object(Y.b)(e.GetName())
                                           )
                                         );
                                       })
@@ -14462,7 +14462,7 @@
                 null,
                 d.createElement(
                   "div",
-                  { className: Y.SaleImportURL },
+                  { className: J.SaleImportURL },
                   d.createElement(m.m, {
                     type: "text",
                     label: Object(h.f)("#Sale_SearchCurator"),
@@ -14506,7 +14506,7 @@
             if ("event_description" == a.GetSaleSections()[i].section_type)
               return d.createElement(
                 "div",
-                { className: Y.CrossTabWarning },
+                { className: J.CrossTabWarning },
                 Object(h.f)("#Sale_UsingEventBodyElsewhere")
               );
           return d.createElement(
@@ -14514,7 +14514,7 @@
             {
               eventModel: a,
               route: z.a.k_eCommunityEdit,
-              className: Y.CrossTabLink,
+              className: J.CrossTabLink,
             },
             Object(h.f)("#Sale_EventDescriptionTabLink")
           );
@@ -14650,7 +14650,7 @@
             _ &&
               d.createElement(
                 "div",
-                { className: Y.CrossTabWarning },
+                { className: J.CrossTabWarning },
                 Object(h.f)("#Sale_UsingCuratorRecommendationElsewhere")
               )
           );
@@ -14839,12 +14839,12 @@
             d.createElement(we.z, null)
           );
         };
-      function Qe(e, t) {
+      function Ye(e, t) {
         return e.disable_background
           ? { background: "transparent" }
           : Object(Te.f)(e, t);
       }
-      function Ye(e, t) {
+      function Je(e, t) {
         for (var n = 0, a = e.GetSaleSections(); n < a.length; n++) {
           var i = a[n];
           if (i === t) break;
@@ -14852,8 +14852,8 @@
         }
         return null;
       }
-      function Je(e, t) {
-        var n = Ye(e, t);
+      function Qe(e, t) {
+        var n = Je(e, t);
         if (n) {
           var i = new Set(Object(a.g)(t.show_on_tabs || [])),
             r = n.tabs.map(function (n) {
@@ -14961,10 +14961,10 @@
             (t.prototype.OnEditTabSections = function () {
               var e = this.props,
                 t = e.saleSection;
-              Je(e.editModel, t);
+              Qe(e.editModel, t);
             }),
             (t.prototype.render = function () {
-              var e = Ye(this.props.editModel, this.props.saleSection);
+              var e = Je(this.props.editModel, this.props.saleSection);
               return e && e.tabs && 0 !== e.tabs.length
                 ? d.createElement(
                     Ke,
@@ -15275,8 +15275,8 @@
               "div",
               {
                 id: "SaleSection_" + i.unique_id,
-                className: Object(k.a)(Y.SaleSection, Y.InEditor),
-                style: Object(a.a)(Object(a.a)({}, Qe(i, n.GetEventModel())), {
+                className: Object(k.a)(J.SaleSection, J.InEditor),
+                style: Object(a.a)(Object(a.a)({}, Ye(i, n.GetEventModel())), {
                   opacity: this.state.bIsExiting ? 0 : 1,
                   transition: "opacity 500ms",
                 }),
@@ -15359,13 +15359,13 @@
                     null,
                     d.createElement(
                       De.a,
-                      { placeholderHeight: "300px", className: Y.EditorCtn },
+                      { placeholderHeight: "300px", className: J.EditorCtn },
                       d.createElement(
                         "div",
-                        { className: Y.SectionTypePicker },
+                        { className: J.SectionTypePicker },
                         d.createElement(
                           "div",
-                          { className: Y.SectionTypePrompt },
+                          { className: J.SectionTypePrompt },
                           " ",
                           Object(h.f)("#Sale_SectionContents"),
                           " "
@@ -15390,7 +15390,7 @@
                           De.a,
                           {
                             placeholderHeight: "300px",
-                            className: Y.EditorCtn,
+                            className: J.EditorCtn,
                           },
                           null === p &&
                             d.createElement(
@@ -15440,16 +15440,16 @@
                                       F.b,
                                       {
                                         clanSteamID: n.GetClanSteamID(),
-                                        className: Y.CustomImageTitle,
+                                        className: J.CustomImageTitle,
                                       },
                                       d.createElement(
                                         "span",
-                                        { className: Y.PromptText },
+                                        { className: J.PromptText },
                                         Object(h.f)("#Sale_option_title_image")
                                       ),
                                       d.createElement(
                                         "div",
-                                        { className: Y.UploadImageButton },
+                                        { className: J.UploadImageButton },
                                         d.createElement(
                                           m.r,
                                           {
@@ -15514,7 +15514,7 @@
                             De.a,
                             {
                               placeholderHeight: "300px",
-                              className: Y.EditorCtn,
+                              className: J.EditorCtn,
                               id: "salesection_item_" + this.props.index,
                             },
                             d.createElement(_t, Object(a.a)({}, this.props))
@@ -15547,7 +15547,7 @@
                   {
                     className: E.ShowInTabsList,
                     onClick: function () {
-                      return Je(t, n);
+                      return Qe(t, n);
                     },
                   },
                   Object(h.f)(
@@ -15750,13 +15750,13 @@
                     return d.createElement(
                       Te.i,
                       {
-                        className: Object(k.a)(q.a.FlexCenter, Y.UploadLinkRow),
+                        className: Object(k.a)(q.a.FlexCenter, J.UploadLinkRow),
                         url: t.url,
                       },
                       a,
                       d.createElement(
                         "div",
-                        { className: Y.UploadLinkImageButton },
+                        { className: J.UploadLinkImageButton },
                         d.createElement(
                           m.r,
                           {
@@ -16313,10 +16313,10 @@
                 a = t.saleSection;
               return d.createElement(
                 "div",
-                { className: Y.TextSectionGroup },
+                { className: J.TextSectionGroup },
                 d.createElement(
                   "div",
-                  { className: Y.TextSectionBBCode },
+                  { className: J.TextSectionBBCode },
                   d.createElement(ye.a, {
                     fnGetCurText: this.GetCurText,
                     fnOnTextChange: this.OnTextChange,
@@ -16362,7 +16362,7 @@
                       className: Object(k.a)(
                         C.RightCol,
                         We.DescEditorPadding,
-                        Y.TextSectionImages
+                        J.TextSectionImages
                       ),
                     },
                     d.createElement(s.a, {
@@ -16965,7 +16965,7 @@
                     n.m_searchResultsMenu = Object(O.a)(
                       d.createElement(
                         V.c,
-                        { className: Y.SearchResults },
+                        { className: J.SearchResults },
                         e.map(function (e) {
                           return d.createElement(
                             V.d,
@@ -16983,13 +16983,13 @@
                                   alignItems: "center",
                                 },
                               },
-                              Object(Q.b)(e.name),
+                              Object(Y.b)(e.name),
                               " ",
                               d.createElement("span", null, "(", e.id, ")"),
                               " ",
                               d.createElement(
                                 "span",
-                                { className: Y.SmallText },
+                                { className: J.SmallText },
                                 "(",
                                 e.type,
                                 ")"
@@ -17235,7 +17235,7 @@
                 "div",
                 { className: Object(k.a)(C.FlexRowContainer) },
                 d.createElement(m.i, {
-                  strClassName: Y.SmartSelType,
+                  strClassName: J.SmartSelType,
                   label: Object(h.f)("#Sale_SmartSectionType"),
                   rgOptions: i,
                   selectedOption:
@@ -17248,14 +17248,14 @@
                   null,
                   d.createElement(
                     "label",
-                    { className: Object(k.a)("DialogLabel", Y.SmartSelLabel) },
+                    { className: Object(k.a)("DialogLabel", J.SmartSelLabel) },
                     Object(h.f)("#Sale_SmartSection_MaxApps")
                   ),
                   d.createElement(
                     "div",
                     null,
                     d.createElement("input", {
-                      className: Object(k.a)(Y.SmartSelCount),
+                      className: Object(k.a)(J.SmartSelCount),
                       type: "number",
                       min: "0",
                       value: this.props.saleSection.smart_section_max_apps || 0,
@@ -17317,7 +17317,7 @@
                     d.createElement(le.a, { capsule: r.capsules[0] }),
                   d.createElement(
                     "div",
-                    { className: Y.SaleImportBarButtonGroup },
+                    { className: J.SaleImportBarButtonGroup },
                     d.createElement(
                       w.a,
                       {
@@ -17327,7 +17327,7 @@
                       d.createElement(
                         m.d,
                         {
-                          className: Y.SaleImportBarButton,
+                          className: J.SaleImportBarButton,
                           onClick: this.OnChooseMasterSubscriptionID,
                         },
                         "Set Master Subscription ID"
@@ -17456,7 +17456,7 @@
     oqmg: function (e, t, n) {
       "use strict";
       n.d(t, "b", function () {
-        return J;
+        return Q;
       }),
         n.d(t, "c", function () {
           return te;
@@ -17514,14 +17514,14 @@
         z = n("JiI5"),
         W = n("IMce"),
         q = n("mHFc"),
-        Q = n("165M");
-      function Y(e) {
+        Y = n("165M");
+      function J(e) {
         return (e = (e = (e = e.replace('"', " ")).replace("<", " ")).replace(
           ">",
           " "
         )).trim();
       }
-      function J(e) {
+      function Q(e) {
         var t = null,
           n = "",
           a = !1,
@@ -18101,7 +18101,7 @@
                         tooltip: Object(N.f)("#Sale_TaggedItemsCount_ttip"),
                       })
                     ),
-                    m.createElement(Q.a, {
+                    m.createElement(Y.a, {
                       bIsMinimized: p,
                       fnToggleMinimize: function () {
                         return Object(q.d)("TaggedItemList", !1);
@@ -18309,7 +18309,7 @@
                 r = t.tagHighlight,
                 o = t.filter,
                 l = n.capsule,
-                s = J(l),
+                s = Q(l),
                 c = s.appData,
                 u = s.linkURL,
                 d = s.bInvalidID,
@@ -18625,7 +18625,7 @@
             }),
             (t.prototype.AddTag = function (e) {
               var t = this.state.currentTags,
-                n = (e = Y(e)).toLocaleLowerCase();
+                n = (e = J(e)).toLocaleLowerCase();
               if (
                 ($.Get(this.props.editModel).AddRecentTag(e),
                 !t.find(function (e) {
@@ -18746,7 +18746,7 @@
                   }
                 });
               var f = this.RenderSectionList(),
-                b = J(n.capsule).appData,
+                b = Q(n.capsule).appData,
                 v = b ? b.appid || b.bundleid || b.packageid : n.capsule.id,
                 S = {
                   option: function (e) {
@@ -18999,7 +18999,7 @@
             }),
             (t.prototype.AddTag = function (e) {
               var t = this,
-                n = (e = Y(e)).toLocaleLowerCase(),
+                n = (e = J(e)).toLocaleLowerCase(),
                 i = this.state.otherTags.get(n);
               i && (e = i.properCaseString);
               var r = this.CloneModifiedTags();
@@ -19128,7 +19128,7 @@
                   );
                 });
               var d = i.map(function (e) {
-                  var t = J(e.capsule).appData;
+                  var t = Q(e.capsule).appData;
                   return m.createElement(
                     "div",
                     { key: e.capsule.id },
@@ -19831,7 +19831,7 @@
                 v = "active" === o ? p : "filtered" === o ? g : f,
                 S = ("active" === o ? d : "filtered" === o ? _ : h).map(
                   function (e) {
-                    var t = J(e.capsule).appData;
+                    var t = Q(e.capsule).appData;
                     return {
                       item: e,
                       name: t && t.name,
@@ -20027,7 +20027,7 @@
                 var r = i[a],
                   o = r.capsule,
                   s = r.tags,
-                  c = J(o).appData,
+                  c = Q(o).appData,
                   u = o.id + "\t" + o.type;
                 u +=
                   '\t"' +
@@ -20073,7 +20073,7 @@
                   d = new Array();
                 if (c)
                   for (var p = 0, m = c[1].split(";"); p < m.length; p++) {
-                    var _ = Y(m[p]);
+                    var _ = J(m[p]);
                     if (_) {
                       var g = _.toLocaleLowerCase();
                       u.has(g) || (u.add(g), d.push(_));
@@ -20778,7 +20778,7 @@
         v = n("6oCP"),
         S = n("r64O"),
         E = n("TLQK"),
-        y = n("bDQf"),
+        y = n("OS6B"),
         O = n("lkRc");
       function T(e) {
         return "U" + (O.i.accountid || "anon") + "-" + e;
@@ -21029,7 +21029,7 @@
                       (p = a.sent()),
                       console.error(
                         "We failed to create a video image, not a blocker: " +
-                          Object(y.c)(p).strErrorMsg
+                          Object(y.a)(p).strErrorMsg
                       ),
                       [3, 5]
                     );
@@ -21378,7 +21378,7 @@
                   case 6:
                     return (
                       (w = a.sent()),
-                      (M = Object(y.c)(w)),
+                      (M = Object(y.a)(w)),
                       console.error(
                         "InternalSaveAction failed: " + M.strErrorMsg,
                         M
@@ -21655,7 +21655,7 @@
                   case 3:
                     return (
                       (s = a.sent()),
-                      (c = Object(y.c)(s)),
+                      (c = Object(y.a)(s)),
                       console.error(
                         "GetLastUpdateTimeForEvent: Failed to get last update time: " +
                           c.strErrorMsg,
@@ -21782,7 +21782,7 @@
                       });
                   },
                   function (e) {
-                    var t = Object(y.c)(e);
+                    var t = Object(y.a)(e);
                     console.error(
                       "LoadSteamAwardVoteDefinitionsForPartner: Request failed: " +
                         t.strErrorMsg,
@@ -22192,7 +22192,7 @@
         h = n("exH9"),
         f = n("TLQK"),
         b = n("P2lf"),
-        v = n("bDQf"),
+        v = n("OS6B"),
         S = n("5E+2"),
         E = n("KmXr"),
         y = function (e) {
@@ -22408,7 +22408,7 @@
                     case 5:
                       return (
                         (_ = a.sent()),
-                        (g = Object(v.c)(_)),
+                        (g = Object(v.a)(_)),
                         d({
                           code: "",
                           message: Object(f.f)(

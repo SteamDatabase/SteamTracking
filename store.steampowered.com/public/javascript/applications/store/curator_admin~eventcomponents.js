@@ -894,7 +894,7 @@
         y = n("6oCP"),
         B = n("NtSG"),
         j = n("r64O"),
-        P = n("bDQf"),
+        P = n("OS6B"),
         M = (function () {
           function e(e) {
             var t = this;
@@ -1418,7 +1418,7 @@
                                             }
                                           );
                                       })
-                                    : ((m = Object(P.c)(d.data || {})),
+                                    : ((m = Object(P.a)(d.data || {})),
                                       console.error(
                                         "LoadBatchedClanRSSAdminInfo error:" +
                                           m.strErrorMsg,
@@ -1429,7 +1429,7 @@
                               case 3:
                                 return (
                                   (u = r.sent()),
-                                  (m = Object(P.c)(u)),
+                                  (m = Object(P.a)(u)),
                                   console.error(
                                     "LoadBatchedClanRSSAdminInfo catched error:" +
                                       m.strErrorMsg,
@@ -1621,7 +1621,7 @@
         E = n("exH9"),
         y = n("X3Ds"),
         B = n("TLQK"),
-        j = n("bDQf"),
+        j = n("OS6B"),
         P = n("opsS"),
         M = n("A2AY"),
         F = n("Kw0F"),
@@ -2170,7 +2170,7 @@
                             strTitle: Object(B.f)(
                               "#CuratorAdmin_RSSFeed_scannow"
                             ),
-                            strDescription: Object(j.c)(t),
+                            strDescription: Object(j.a)(t),
                           }),
                           Object(y.m)(e)
                         );

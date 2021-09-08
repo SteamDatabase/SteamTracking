@@ -158,7 +158,7 @@
         s = a("q1tI"),
         d = a.n(s),
         u = a("ir+G"),
-        m = a("bDQf"),
+        m = a("OS6B"),
         p = a("lkRc"),
         E = a("0OaU"),
         v = a("kLLr"),
@@ -221,7 +221,7 @@
                         return (
                           (i = r.sent()),
                           this.setState(
-                            Object(n.a)({ bLoading: !1 }, Object(m.c)(i))
+                            Object(n.a)({ bLoading: !1 }, Object(m.a)(i))
                           ),
                           [3, 4]
                         );
@@ -357,7 +357,7 @@
                     case 2:
                       return (
                         (l = n.sent()),
-                        (c = Object(m.c)(l)),
+                        (c = Object(m.a)(l)),
                         console.error(
                           "CPartnerEventPublishAuditStores.LoadAuditRecords: failed with " +
                             c.strErrorMsg,
@@ -1523,7 +1523,7 @@
             )
           );
         },
-        de = a("Ty5D"),
+        de = a("EC67"),
         ue = a("55Ip"),
         me = a("uIWk"),
         pe = a("IzPI"),
@@ -2269,7 +2269,7 @@
                             null,
                             "Encountered the following error attempting to send the event information to CrowdIn:"
                           ),
-                          s.createElement("p", null, Object(m.c)(t).strErrorMsg)
+                          s.createElement("p", null, Object(m.a)(t).strErrorMsg)
                         )
                       ),
                       window
@@ -2532,7 +2532,7 @@
             (t = Object(n.c)([T.a], t))
           );
         })(s.Component),
-        rt = a("riab");
+        rt = a("aoTL");
       function ot(e) {
         return Object(rt.d)(function () {
           return [e.m_nBuildID, e.m_strBuildBranch];
@@ -2669,7 +2669,7 @@
                         })
                         .catch(function (e) {
                           if (!t.token.reason) {
-                            var a = Object(m.c)(e);
+                            var a = Object(m.a)(e);
                             console.error("useBranchInfo: " + a.strErrorMsg, a);
                           }
                         }),
@@ -3227,7 +3227,7 @@
                         e.setState(
                           Object(n.a)(
                             { dialogState: "displayerror" },
-                            Object(m.c)(t)
+                            Object(m.a)(t)
                           )
                         );
                       })
@@ -3240,7 +3240,7 @@
                         e.setState(
                           Object(n.a)(
                             { dialogState: "displayerror" },
-                            Object(m.c)(t)
+                            Object(m.a)(t)
                           )
                         );
                       });
@@ -3459,7 +3459,7 @@
                 var e = a.GetClanSteamID();
                 a.OnPreSave();
                 var t = function (e) {
-                    var t = Object(m.c)(e),
+                    var t = Object(m.a)(e),
                       a = "error";
                     !t.strErrorMsg &&
                       Object(f.f)("#EventEditor_Error_" + t.errorCode) &&
@@ -3652,14 +3652,14 @@
                         to: o.a.Edit(r, ""),
                       });
                     case "edit":
-                      return Object(Ne.i)(
+                      return Object(Ne.j)(
                         this.props.eventModel,
                         Ne.a.k_eCommunityEdit
                       );
                     case "view":
                       return i.BIsVisibleEvent()
-                        ? Object(Ne.i)(this.props.eventModel, Ne.a.k_eView)
-                        : Object(Ne.i)(
+                        ? Object(Ne.j)(this.props.eventModel, Ne.a.k_eView)
+                        : Object(Ne.j)(
                             this.props.eventModel,
                             Ne.a.k_eCommunityPreview
                           );
@@ -3979,7 +3979,7 @@
                   } else t.DoCloneAction(a);
                 })
                 .catch(function (e) {
-                  var t = Object(m.c)(e);
+                  var t = Object(m.a)(e);
                   Object(Ce.d)(
                     s.createElement(ye.f, {
                       strTitle: Object(f.f)("#EventEditor_CloneError"),
@@ -4023,7 +4023,7 @@
                   );
                 })
                 .catch(function (e) {
-                  var t = Object(m.c)(e);
+                  var t = Object(m.a)(e);
                   Object(Ce.d)(
                     s.createElement(ye.f, {
                       strTitle: Object(f.f)("#EventEditor_PublishingError"),
@@ -4352,7 +4352,7 @@
                       case 3:
                         return (
                           (a = n.sent()),
-                          (i = Object(m.c)(a)),
+                          (i = Object(m.a)(a)),
                           console.error(
                             "EventModerationTile profile load : " +
                               i.strErrorMsg,
@@ -4694,7 +4694,7 @@
               });
             }),
             (t.prototype.HandleErrorWithDialog = function (e) {
-              var t = Object(m.c)(e);
+              var t = Object(m.a)(e);
               Object(Ce.d)(
                 s.createElement(
                   ye.f,
@@ -4860,7 +4860,7 @@
                       return (
                         (r = n.sent()),
                         console.log(
-                          "EventListView: " + Object(m.c)(r).strErrorMsg
+                          "EventListView: " + Object(m.a)(r).strErrorMsg
                         ),
                         (a = !0),
                         [3, 7]
@@ -5717,7 +5717,7 @@
                         case 3:
                           return (
                             (o = n.sent()),
-                            (c = Object(m.c)(o)),
+                            (c = Object(m.a)(o)),
                             console.error(
                               "SolrDebugPanel: error " + c.strErrorMsg,
                               c
@@ -8411,7 +8411,7 @@
                       return (
                         (i = n.sent()),
                         console.error(
-                          "DoUpload failed:" + Object(m.c)(i).strErrorMsg
+                          "DoUpload failed:" + Object(m.a)(i).strErrorMsg
                         ),
                         [3, 4]
                       );
@@ -8518,7 +8518,7 @@
                                 case 3:
                                   return (
                                     (i = n.sent()),
-                                    (r = Object(m.c)(i)),
+                                    (r = Object(m.a)(i)),
                                     console.error(
                                       "AddExistingClanImage: " + r.strErrorMsg,
                                       r
@@ -9414,7 +9414,7 @@
                 })
                 .catch(function (e) {
                   Object(Ce.d)(
-                    s.createElement(ye.f, null, Object(m.c)(e).strErrorMsg),
+                    s.createElement(ye.f, null, Object(m.a)(e).strErrorMsg),
                     window
                   );
                 });
@@ -9568,7 +9568,7 @@
                     case 6:
                       return (
                         (i = n.sent()),
-                        (r = Object(m.c)(i)),
+                        (r = Object(m.a)(i)),
                         console.error(
                           "OnSetupAndFireEmail failed: " + r.strErrorMsg
                         ),
@@ -10704,7 +10704,7 @@
                         (r = n.sent()),
                         this.setState({
                           bRefreshing: !1,
-                          err_msg: Object(m.c)(r).strErrorMsg,
+                          err_msg: Object(m.a)(r).strErrorMsg,
                         }),
                         [3, 4]
                       );
@@ -12181,7 +12181,7 @@
                         : (v(), h("Failed to update Private Data: " + e));
                   })
                   .catch(function (e) {
-                    o(!1), v(), h(Object(m.c)(e).strErrorMsg);
+                    o(!1), v(), h(Object(m.a)(e).strErrorMsg);
                   });
             },
             bDisableBackgroundDismiss: !0,
@@ -12223,7 +12223,7 @@
             },
             [a, n]
           );
-          if (r) return Object(Ne.i)(t.GetEventModel(), Ne.a.k_eView);
+          if (r) return Object(Ne.j)(t.GetEventModel(), Ne.a.k_eView);
           var v = t.BHidden(),
             b = t.BPublished();
           if (!v && b) return null;
@@ -13470,7 +13470,7 @@
                     b(n.GetGID())
                       .then(a)
                       .catch(function (e) {
-                        V(Object(m.c)(e).strErrorMsg);
+                        V(Object(m.a)(e).strErrorMsg);
                       }))
                   : a && a();
             },
@@ -13640,7 +13640,7 @@
                         })
                         .catch(function (t) {
                           if (!e.token.reason) {
-                            var a = Object(m.c)(t);
+                            var a = Object(m.a)(t);
                             console.error(
                               "useEventHistory: " + a.strErrorMsg,
                               a
@@ -16971,7 +16971,7 @@
                     case 2:
                       return (
                         (c = n.sent()),
-                        (s = Object(m.c)(c)),
+                        (s = Object(m.a)(c)),
                         console.error(
                           "CommunityAgeGate.LoadUserCommunityVisibilityPreferences: " +
                             s.strErrorMsg,
@@ -17027,7 +17027,7 @@
                     case 3:
                       return (
                         (o = n.sent()),
-                        (l = Object(m.c)(o)),
+                        (l = Object(m.a)(o)),
                         console.error("CommunityAgeGate: " + l.strErrorMsg, l),
                         [3, 5]
                       );
@@ -17306,7 +17306,7 @@
                     case 3:
                       return (
                         (l = s.sent()),
-                        (c = Object(m.c)(l)),
+                        (c = Object(m.a)(l)),
                         console.error(
                           "OldAnnouncementMigrationBaseClass: " + c.strErrorMsg,
                           c
@@ -18136,14 +18136,14 @@
                                       (e += t),
                                       (r -= t),
                                       [2, "continue"])
-                                    : ((s = Object(m.c)(
+                                    : ((s = Object(m.a)(
                                         null == d ? void 0 : d.data
                                       )),
                                       [3, 4])
                                 );
                               case 3:
                                 return (
-                                  (u = n.sent()), (s = Object(m.c)(u)), [3, 4]
+                                  (u = n.sent()), (s = Object(m.a)(u)), [3, 4]
                                 );
                               case 4:
                                 throw new Error(
@@ -18212,11 +18212,11 @@
                               c.data.accountids.map(Number)
                             )),
                             [2])
-                          : ((l = Object(m.c)(null == c ? void 0 : c.data)),
+                          : ((l = Object(m.a)(null == c ? void 0 : c.data)),
                             [3, 4])
                       );
                     case 3:
-                      return (s = n.sent()), (l = Object(m.c)(s)), [3, 4];
+                      return (s = n.sent()), (l = Object(m.a)(s)), [3, 4];
                     case 4:
                       return (
                         console.error(
@@ -18538,7 +18538,7 @@
               case 7:
                 return (
                   (p = n.sent()),
-                  (E = Object(m.c)(p)),
+                  (E = Object(m.a)(p)),
                   console.error(
                     "MigrateEvents: " + E.strErrorMsg.slice(0, 512),
                     E
@@ -18622,7 +18622,7 @@
                                   (c = n.sent()),
                                   e.token.reason
                                     ? [2]
-                                    : ((s = Object(m.c)(c)),
+                                    : ((s = Object(m.a)(c)),
                                       console.log(
                                         "SearchForCurator.SearchCreatorHomeStore error " +
                                           s.strErrorMsg,
@@ -19151,7 +19151,7 @@
                             2,
                             [s.data.msg || "Success", !0, s.data.gidClanEvent],
                           ])
-                        : ((u = Object(m.c)(s)),
+                        : ((u = Object(m.a)(s)),
                           console.error(
                             "CMigrateSaleStore.LoadSalePageMigrationInfo: failed with " +
                               u.strErrorMsg,
@@ -19161,7 +19161,7 @@
                     case 3:
                       return (
                         (d = n.sent()),
-                        (u = Object(m.c)(d)),
+                        (u = Object(m.a)(d)),
                         console.error(
                           "CMigrateSaleStore.MigrateOrUpdateSalePage: caught error with " +
                             u.strErrorMsg,
@@ -19233,7 +19233,7 @@
                                 this.m_listSaleState.length
                             ),
                             [2, this.m_listSaleState])
-                          : ((l = Object(m.c)(r)),
+                          : ((l = Object(m.a)(r)),
                             console.error(
                               "CMigrateSaleStore.LoadSalePageMigrationInfo: failed with " +
                                 l.strErrorMsg,
@@ -19244,7 +19244,7 @@
                     case 2:
                       return (
                         (o = n.sent()),
-                        (l = Object(m.c)(o)),
+                        (l = Object(m.a)(o)),
                         console.error(
                           "CMigrateSaleStore.LoadSalePageMigrationInfo: caught error with " +
                             l.strErrorMsg,
@@ -19300,8 +19300,8 @@
             return this.state.bIsLoading
               ? null
               : d.a.createElement(
-                  d.a.Fragment,
-                  null,
+                  Ne.d.Provider,
+                  { value: { bCanUseLink: !0 } },
                   d.a.createElement(b.a, null),
                   d.a.createElement(
                     de.e,
@@ -20268,7 +20268,7 @@
       });
       var n = a("mrSG"),
         i = a("q1tI"),
-        r = a("Ty5D"),
+        r = a("EC67"),
         o = a("exH9"),
         l = a("TLQK"),
         c = a("GiuM"),

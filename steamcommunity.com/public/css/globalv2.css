@@ -134,6 +134,77 @@ input[type=text], input[type=password], input[type=number], select {
 	background-color: rgba( 0, 0, 0, 0.4 );
 }
 
+div#footer.compact {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: fit-content;
+    padding: 0;
+    background: none;
+    z-index: 3;
+}
+div#footer.compact .footer_content {
+    width: calc((100vw - 948px)/2);
+}
+div#footer.compact .footer_content #footerText {
+    padding: 0 0 24px 12px;
+    line-height: 16px;
+    color: #537793;
+}
+
+div#footer.compact .footer_content #footerText a {
+    display: inline-block;
+    margin-right: 12px;
+    margin-bottom: 7px;
+    color: #799AB4;
+}
+div#footer.compact .footer_content #footerText a:hover {
+    color: white;
+}
+
+div#footer.compact .footer_content #footerText .link_ssa,
+div#footer.compact .footer_content #footerText .copyright {
+    display: block;
+}
+
+@media screen and ( max-width: 1150px ) {
+    html.responsive div#footer.compact {
+        height: 32px;
+    }
+
+    html.responsive div#footer.compact .footer_content {
+        width: 32px;
+        height: 32px;
+        padding-top: 4px;
+        background: black;
+        overflow: hidden;
+        white-space: nowrap;
+        display: inline-block;
+        transition: width 0.5s ease;
+    }
+    html.responsive div#footer.compact .footer_content:hover {
+        width: 100%;
+    }
+    html.responsive div#footer.compact .footer_content .copyIcon {
+        display: inline-block !important;
+        font-size: 20px;
+        margin-right: 8px;
+        margin-left: 4px;
+    }
+    html.responsive div#footer.compact .footer_content #footerText {
+        padding: 4px;
+        display: flex;
+        flex-direction: row;
+    }
+    html.responsive div#footer.compact .footer_content #footerText .link_ssa,
+    html.responsive div#footer.compact .footer_content #footerText .copyright,
+    html.responsive div#footer.compact .footer_content #footerText a {
+        display: inline-block;
+    }
+
+}
+
+
 body.flat_page #footer, body.headerless_page #footer {
 	position: absolute;
 	left: 0;

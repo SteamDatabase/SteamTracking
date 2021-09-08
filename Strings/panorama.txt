@@ -2,7 +2,6 @@
 __TEXT
 __text
 __TEXT
-Vq1
 __stubs
 __TEXT
 __stub_helper
@@ -11,11 +10,13 @@ __cstring
 __TEXT
 __const
 __TEXT
+0k5
+0k5
 __gcc_except_tab__TEXT
 __objc_methname
 __TEXT
-D~:
-D~:
+d~:
+d~:
 __objc_classname__TEXT
 __objc_methtype
 __TEXT
@@ -78,7 +79,7 @@ A
 @loader_path/panorama.dylib
 "
 ^
-0m?
+(m?
 P
 
 *
@@ -152,26 +153,20 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-0W
+(W
 )
-`e?
+Xe?
 HB
-{3
 ?
 ?
 =
 =
+N1
 =
 =
-=
-=
+J1
 0
-?=
 ==
-<=
-V1
-/=
-_0
 
 
 
@@ -3045,6 +3040,7 @@ SteelSeries Stratus Duo
 Amazon Luna Controller
 Xbox One Controller
 Xbox One S Controller
+Xbox Adaptive Controller
 Xbox Series X Controller
 PDP Xbox One Afterglow
 PDP Xbox One Face-Off Controller
@@ -5337,8 +5333,8 @@ linux
 Linux;tenfoot
 X-ValveUserAgent
 panorama %s %s
-Sep  3 2021
-14:49:50
+Sep  7 2021
+16:12:58
 X-SteamClientVersion
 Assertion Failed: hostName
 Assertion Failed: pchRemoteHost
@@ -8220,22 +8216,16 @@ Assertion Failed: angles.IsValid()
 SSE and SSE2 are required.
 Assertion Failed: src.IsValid()
 HB
-{3
 ?
 ?
 =
 =
+N1
 =
 =
-=
-=
+J1
 0
-?=
 ==
-<=
-V1
-/=
-_0
 
 
 
@@ -8254,6 +8244,8 @@ _0
 @
 @
 l
+K/
+0
 0
 /
 x$
@@ -8261,17 +8253,20 @@ x$
 9
 $
 9
-M8
 &
 %
 &
-8
 -
-7
+*9
 -
 -
 7
 +
+-
+-
+-
+-
+-
 -
 6
 @
@@ -8283,10 +8278,10 @@ j
 @
 @
 @
-n8
-n8
 2
 2
+1,
+E/
 ?
 >
 ;
@@ -8296,11 +8291,11 @@ F
 +
 !
 &
-45
-|+
+\+
 j
-:+
-;+
+(
+(
+m.
 @
 @
 @
@@ -8351,9 +8346,6 @@ j
 @
 @
 @
-+
-+
-+
 +
 +
 +
@@ -8400,19 +8392,21 @@ K
 .
 .
 .
+.
+.
 @
 @
 @
 @
-K*
+\*
 @
 @
 ,
 '
-*
-D3
 0
 3
+!)
+c&
 Ic
 @
 @
@@ -8427,27 +8421,27 @@ Ic
 @
 @
 @
-)
+f2
 0
+j)
 =
 @
 @
-)
-)
-)
+W(
+W(
 )
 )
 H=
 )
+b%
 (
 (
 (
 >
-a%
 $
-V'
-t$
-7'
+~'
+=$
+.&
 @
 =
 @
@@ -8459,83 +8453,83 @@ t$
 @
 @
 ?
-O0
-0
+^$
 0
 7.
 @
+q#
+b#
 P
-D#
+]
+]
+[
 0
-s!
 (
 (
 P
 j
-##
-"#
 A
 A
 A
 A
 (
 #
-#
-'
 @
-,
 E9u
 E9u
-e"
+d"
 @
 A
 A
 A
 A
-("
 A
 A
-0"
 A
 A
-B&
 "
 "
 "
 0
 "
-w!
+&"
 !
 !
 !
 !
-+*
-+!
+!
+x.
 .
 @
 !
-6-
 #
+A+
 -
 +
 +
 +
-("
 #
 (
+,,
+*
 )
+n'
 g
 #
 @
+7
+s$
 $
-<&
+$
 Hi
+#
 #
 G$
 @
 @
 0
 0
+5"
 
 
 
@@ -8544,6 +8538,7 @@ G$
 0
 
 0
+8%
 IcE
 @
 @
@@ -8677,7 +8672,6 @@ Z
 @
 @
 @
-F#
 @
 @
 @
@@ -8921,7 +8915,7 @@ F#
 @
 @
 @
-_"
+v"
 @
 j
 @
@@ -9025,11 +9019,13 @@ IcE
 V
 =
 =
-c
-F
+Y
 
 @
-$
+x
+J
+%
+
 
 
 
@@ -9091,6 +9087,7 @@ I;E
 I;E
 B
 ?
+
 `
 `
 !

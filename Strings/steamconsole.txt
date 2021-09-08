@@ -1,8 +1,8 @@
 __TEXT
 __text
 __TEXT
->
->
+@>
+@>
 __stubs
 __TEXT
 __stub_helper
@@ -1240,7 +1240,6 @@ E
 0
 0
 Ic
-W
 
 =
 @

@@ -136,7 +136,7 @@
         L = a("kyHq"),
         G = a("3+zv"),
         j = a("mgoM"),
-        D = a("bDQf"),
+        D = a("OS6B"),
         N = (function () {
           function e(e) {
             void 0 === e && (e = null),
@@ -306,7 +306,7 @@
                         (a = r.sent()),
                         console.error(
                           "Unable to load tag category data: " +
-                            Object(D.c)(a).strErrorMsg
+                            Object(D.a)(a).strErrorMsg
                         ),
                         [2, null]
                       );
@@ -765,7 +765,7 @@
                     case 4:
                       return (
                         (b = v.sent()),
-                        (y = Object(D.c)(b)),
+                        (y = Object(D.a)(b)),
                         console.error(
                           "CContentHubTabStore.InternalLoadTabPage: failed with " +
                             y.strErrorMsg,

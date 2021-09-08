@@ -259,8 +259,8 @@
 "SteamChina_Overlay_DurationControl_MessageB"		"您累计在线时间已满3小时，\n请您下线休息，\n做适当身体活动。"
 "SteamChina_Overlay_DurationControl_MessageC"		"您已经进入疲劳游戏时间，\n您的游戏收益将降为正常值的50％，\n为了您的健康，请尽快下线休息，\n做适当身体活动，合理安排学习生活。"
 "SteamChina_Overlay_DurationControl_MessageD"		"您已进入不健康游戏时间，\n为了您的健康，请您立即下线休息。\n如不下线，您的身体将受到损害，\n您的收益已降为零，直到您的累计下线时间满5小时后，\n才能恢复正常。"
-"SteamChina_Overlay_DurationControl_ExitSoon_3h"	"根据国家新闻出版署发布的《关于进一步严格管理切实防止未成年人沉迷网络游戏的通知》未成年用户仅可在周五、周六、周日和法定节假日的20时至21时进行游戏。感谢您的支持与理解。"
-"SteamChina_Overlay_DurationControl_ExitSoon_5h"	"根据国家新闻出版署发布的《关于进一步严格管理切实防止未成年人沉迷网络游戏的通知》未成年用户仅可在周五、周六、周日和法定节假日的20时至21时进行游戏。感谢您的支持与理解。"
-"SteamChina_Overlay_DurationControl_ExitSoon_Night"	"根据国家新闻出版署发布的《关于进一步严格管理切实防止未成年人沉迷网络游戏的通知》未成年用户仅可在周五、周六、周日和法定节假日的20时至21时进行游戏。感谢您的支持与理解。"
+"SteamChina_Overlay_DurationControl_ExitSoon_3h"	"根据国家新闻出版署发布的《关于进一步严格管理切实防止未成年人\n沉迷网络游戏的通知》未成年用户仅可在周五、周六、周日和\n法定节假日的20时至21时进行游戏。感谢您的支持与理解。"
+"SteamChina_Overlay_DurationControl_ExitSoon_5h"	"根据国家新闻出版署发布的《关于进一步严格管理切实防止未成年人\n沉迷网络游戏的通知》未成年用户仅可在周五、周六、周日和\n法定节假日的20时至21时进行游戏。感谢您的支持与理解。"
+"SteamChina_Overlay_DurationControl_ExitSoon_Night"	"根据国家新闻出版署发布的《关于进一步严格管理切实防止未成年人\n沉迷网络游戏的通知》未成年用户仅可在周五、周六、周日和\n法定节假日的20时至21时进行游戏。感谢您的支持与理解。"
 }
 }  
