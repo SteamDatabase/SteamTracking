@@ -67729,7 +67729,8 @@
                 if (!Number.isNaN(t.appid)) {
                   var n = e.m_mapRegistrations.get(t.appid);
                   n || ((n = new Map()), e.m_mapRegistrations.set(t.appid, n)),
-                    "string" == typeof t.jsondata &&
+                    t.jsondata &&
+                      "string" == typeof t.jsondata &&
                       (t.jsondata = JSON.parse(t.jsondata)),
                     n.set(t.opt_in_name, t),
                     "dev" == s.c.WEB_UNIVERSE &&
