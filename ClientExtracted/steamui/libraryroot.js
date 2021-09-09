@@ -1461,7 +1461,7 @@
                 : t.m_rgAppIDs;
             }),
             Object(a.c)(
-              [r.B],
+              [r.C],
               e.prototype,
               "m_mapBroadcasterSteamIDData",
               void 0
@@ -5431,7 +5431,7 @@
               );
             }),
             Object(a.c)(
-              [i.B],
+              [i.C],
               t.prototype,
               "m_strPreviousNomineeTitle",
               void 0
@@ -5762,7 +5762,7 @@
                 : null;
             }),
             Object(a.c)(
-              [i.B],
+              [i.C],
               t.prototype,
               "m_strPreviousVotedForAppTitle",
               void 0
@@ -8065,10 +8065,10 @@
                                   );
                                 })
                                 .then(function (e) {
-                                  return Object(i.F)(function () {
+                                  return Object(i.G)(function () {
                                     var t = e && e.data && e.data.apps;
                                     t &&
-                                      Object(i.F)(function () {
+                                      Object(i.G)(function () {
                                         for (
                                           var e = 0, n = t;
                                           e < n.length;
@@ -8127,7 +8127,7 @@
                   }
                 }
             }),
-            Object(a.c)([i.B], e.prototype, "m_mapAppLinkInfo", void 0),
+            Object(a.c)([i.C], e.prototype, "m_mapAppLinkInfo", void 0),
             Object(a.c)([i.k], e.prototype, "LazyInit", null),
             Object(a.c)([i.k], e.prototype, "LoadAppLinkInfo", null),
             Object(a.c)([i.k], e.prototype, "AddAppLinks", null),
@@ -8220,7 +8220,7 @@
         o = n("Gp1o"),
         i = n("q1tI"),
         s = n.n(i),
-        l = n("Ty5D"),
+        l = n("EC67"),
         c = n("uuth"),
         p = n("u2yL"),
         d = n("3+zv"),
@@ -9186,12 +9186,12 @@
               );
             }),
             Object(a.c)(
-              [w.B],
+              [w.C],
               e.prototype,
               "m_mapSectionToNewCapsules",
               void 0
             ),
-            Object(a.c)([w.B], e.prototype, "m_mapSectionToNewEvents", void 0),
+            Object(a.c)([w.C], e.prototype, "m_mapSectionToNewEvents", void 0),
             Object(a.c)([I.a], e.prototype, "FireRequestNow", null),
             Object(a.c)([I.a], e.prototype, "TimerAction", null),
             e
@@ -9213,7 +9213,7 @@
               if (!this.m_bLoaded) {
                 var t = Object(E.g)("points", "application_config");
                 this.ValidateStoreDefault(t) &&
-                  Object(w.F)(function () {
+                  Object(w.G)(function () {
                     (e.m_mySummary.points = t.points),
                       (e.m_mySummary.points_earned = t.points_earned),
                       (e.m_mySummary.points_spent = t.points_spent),
@@ -9249,7 +9249,7 @@
                       );
                     case 1:
                       (t = a.sent()),
-                        Object(w.F)(function () {
+                        Object(w.G)(function () {
                           (n.m_mySummary.points = t.data.summary.points),
                             (n.m_mySummary.points_earned =
                               t.data.summary.points_earned),
@@ -9278,7 +9278,7 @@
             (e.prototype.GetSaleTokenPoints = function () {
               return this.m_mySummary;
             }),
-            Object(a.c)([w.B], e.prototype, "m_mySummary", void 0),
+            Object(a.c)([w.C], e.prototype, "m_mySummary", void 0),
             e
           );
         })())();
@@ -9296,7 +9296,7 @@
           (e.prototype.LazyInit = function () {
             var e = this;
             this.m_bLoadedFromConfig ||
-              (Object(w.F)(function () {
+              (Object(w.G)(function () {
                 (e.m_userData = Object(E.g)("doorinfo", "application_config")),
                   (e.m_salePageBackgroundOverride = Object(E.g)(
                     "doorinfobackground",
@@ -9397,7 +9397,7 @@
                       );
                     case 2:
                       return 1 == (o = a.sent()).data.success
-                        ? (Object(w.F)(function () {
+                        ? (Object(w.G)(function () {
                             if (
                               ((l.m_userData[e].opened = t),
                               (l.m_salePageBackgroundOverride =
@@ -9456,17 +9456,17 @@
           (e.prototype.GetLastDoorOpen = function () {
             return this.LazyInit(), this.m_strLastDoorOpenKey;
           }),
-          Object(a.c)([w.B], e.prototype, "m_userData", void 0),
+          Object(a.c)([w.C], e.prototype, "m_userData", void 0),
           Object(a.c)(
-            [w.B],
+            [w.C],
             e.prototype,
             "m_salePageBackgroundOverride",
             void 0
           ),
-          Object(a.c)([w.B], e.prototype, "m_salePageBackgroundWEBM", void 0),
-          Object(a.c)([w.B], e.prototype, "m_salePageBackgroundMP4", void 0),
-          Object(a.c)([w.B], e.prototype, "m_storyImages", void 0),
-          Object(a.c)([w.B], e.prototype, "m_strLastDoorOpenKey", void 0),
+          Object(a.c)([w.C], e.prototype, "m_salePageBackgroundWEBM", void 0),
+          Object(a.c)([w.C], e.prototype, "m_salePageBackgroundMP4", void 0),
+          Object(a.c)([w.C], e.prototype, "m_storyImages", void 0),
+          Object(a.c)([w.C], e.prototype, "m_strLastDoorOpenKey", void 0),
           e
         );
       })())();
@@ -9590,7 +9590,7 @@
                     case 2:
                       return (
                         1 == (r = a.sent()).data.success &&
-                          Object(w.F)(function () {
+                          Object(w.G)(function () {
                             s.AddAllRecentEvents(e, r.data.recent_events),
                               r.data.partnerevents &&
                                 B.c.RegisterClanEvents(r.data.partnerevents),
@@ -9618,7 +9618,7 @@
                 });
               });
             }),
-            Object(a.c)([w.B], e.prototype, "m_rgRecentEvent", void 0),
+            Object(a.c)([w.C], e.prototype, "m_rgRecentEvent", void 0),
             Object(a.c)([w.k], e.prototype, "Init", null),
             Object(a.c)([w.k], e.prototype, "AddAllRecentEvents", null),
             e
@@ -9676,7 +9676,7 @@
               var e = this,
                 t = Object(E.g)("subscriptionsapps", "application_config");
               this.ValidateStoreDefault(t) &&
-                Object(w.F)(function () {
+                Object(w.G)(function () {
                   t.forEach(function (t) {
                     var n = new Set();
                     t.benefit_appid.forEach(function (e) {
@@ -9737,7 +9737,7 @@
                       return (
                         (t = a.sent()),
                         (n = t && t.data)
-                          ? (Object(w.F)(function () {
+                          ? (Object(w.G)(function () {
                               var e = new Set();
                               n.benefit_appid.forEach(function (t) {
                                 return e.add(t);
@@ -9755,7 +9755,7 @@
               });
             }),
             Object(a.c)(
-              [w.B],
+              [w.C],
               e.prototype,
               "m_mapMasterAppToBenefitApps",
               void 0
@@ -10332,7 +10332,7 @@
         Ee = function (e) {
           e.href;
           var t = Object(a.f)(e, ["href"]);
-          return E.c.EREALM === ye.q.k_ESteamRealmChina
+          return E.c.EREALM === ye.r.k_ESteamRealmChina
             ? s.a.createElement("div", Object(a.a)({}, t))
             : s.a.createElement("a", Object(a.a)({}, e), e.children);
         },
@@ -11027,7 +11027,7 @@
                     case 1:
                       return (
                         (n = a.sent()),
-                        Object(w.F)(function () {
+                        Object(w.G)(function () {
                           n.data &&
                             n.data.success &&
                             r.HandleCuratorResponse(n.data),
@@ -11060,9 +11060,9 @@
                   }
                 }
             }),
-            Object(a.c)([w.B], e.prototype, "m_mapNewsCurators", void 0),
-            Object(a.c)([w.B], e.prototype, "m_bIsLoadComplete", void 0),
-            Object(a.c)([w.B], e.prototype, "m_mapLangToNewsCurators", void 0),
+            Object(a.c)([w.C], e.prototype, "m_mapNewsCurators", void 0),
+            Object(a.c)([w.C], e.prototype, "m_bIsLoadComplete", void 0),
+            Object(a.c)([w.C], e.prototype, "m_mapLangToNewsCurators", void 0),
             Object(a.c)([w.n], e.prototype, "allNewsCurators", null),
             Object(a.c)([w.k], e.prototype, "HandleCuratorResponse", null),
             e
@@ -11193,7 +11193,7 @@
                         (o = {
                           cc: E.c.COUNTRY,
                           l: E.c.LANGUAGE,
-                          realm: ye.q.k_ESteamRealmGlobal,
+                          realm: ye.r.k_ESteamRealmGlobal,
                           origin: self.origin,
                           f: "jsonfull",
                           term: e.replace(" ", "+"),
@@ -11645,7 +11645,7 @@
           var o = new Array();
           n &&
             V.e
-              .GetELanguageFallbackOrder([ye.q.k_ESteamRealmGlobal])
+              .GetELanguageFallbackOrder([ye.r.k_ESteamRealmGlobal])
               .forEach(function (e) {
                 return o.push(
                   s.a.createElement(lt, { key: "curlang" + e, lang: e })
@@ -12274,7 +12274,7 @@
                 r = [],
                 o = a.GetSource(),
                 s = a.unique_id,
-                l = E.c.EREALM === ye.q.k_ESteamRealmChina,
+                l = E.c.EREALM === ye.r.k_ESteamRealmChina,
                 c = Object(Ue.b)();
               if (
                 (c.BIsGlobalCalendar() &&
@@ -12987,7 +12987,7 @@
                   : Pt.a.Vote_NotLoggedIn;
               })(e, r),
               s = t.GetForumTopicURL(),
-              l = E.c.EREALM !== ye.q.k_ESteamRealmChina && s,
+              l = E.c.EREALM !== ye.r.k_ESteamRealmChina && s,
               c =
                 t.live_stream_viewer_count > 0
                   ? t.live_stream_viewer_count
@@ -13590,7 +13590,7 @@
             r = a[0],
             o = a[1];
           if (r) return null;
-          if (E.c.EREALM === ye.q.k_ESteamRealmChina) return null;
+          if (E.c.EREALM === ye.r.k_ESteamRealmChina) return null;
           var i = E.c.STORE_BASE_URL + "account/languagepreferences/";
           return s.a.createElement(
             "div",
@@ -14756,7 +14756,7 @@
             (t.prototype.UpdatePositioning = function () {
               var e = this;
               this.m_ref.current &&
-                Object(w.F)(function () {
+                Object(w.G)(function () {
                   var t = e.props.section,
                     n = e.m_ref.current.getBoundingClientRect().height;
                   t.nRenderedHeight != n && (t.nRenderedHeight = n);
@@ -15428,7 +15428,7 @@
           );
         },
         $n = function (e) {
-          return E.c.EREALM === ye.q.k_ESteamRealmChina
+          return E.c.EREALM === ye.r.k_ESteamRealmChina
             ? i.createElement(Kn, null)
             : i.createElement(Xn, null);
         },
@@ -15477,7 +15477,7 @@
                 ? e.Get().SetDisplay("browse_curator")
                 : Object(ee.d)(i.createElement(ot, null), Object(ne.n)(t));
             }),
-            Object(a.c)([w.B], e.prototype, "m_curDisplay", void 0),
+            Object(a.c)([w.C], e.prototype, "m_curDisplay", void 0),
             e
           );
         })(),
@@ -16925,9 +16925,9 @@
                 });
               });
             }),
-            Object(a.c)([w.B], e.prototype, "m_facets", void 0),
-            Object(a.c)([w.B], e.prototype, "m_priceStopInfo", void 0),
-            Object(a.c)([w.B], e.prototype, "m_sortedFacets", void 0),
+            Object(a.c)([w.C], e.prototype, "m_facets", void 0),
+            Object(a.c)([w.C], e.prototype, "m_priceStopInfo", void 0),
+            Object(a.c)([w.C], e.prototype, "m_sortedFacets", void 0),
             Object(a.c)([w.k], e.prototype, "Reset", null),
             Object(a.c)([w.k], e.prototype, "SetFromURLParam", null),
             Object(a.c)(
@@ -17011,7 +17011,7 @@
                 {
                   onClick: function (e) {
                     e.preventDefault(),
-                      Object(w.F)(function () {
+                      Object(w.G)(function () {
                         p.Reset(), d();
                       });
                   },
@@ -17194,12 +17194,12 @@
               value: f,
               label: o.m_priceStopInfo[f].label,
               onChange: function (e) {
-                Object(w.F)(function () {
+                Object(w.G)(function () {
                   r.nPriceStopIndex = Math.floor(e);
                 });
               },
               onChangeComplete: function () {
-                Object(w.F)(function () {
+                Object(w.G)(function () {
                   (r.bEnabled = Boolean(
                     r.nPriceStopIndex !== o.m_priceStopInfo.length - 1
                   )),
@@ -17226,7 +17226,7 @@
                 style: p,
                 onClick: function (e) {
                   e.preventDefault(),
-                    Object(w.F)(function () {
+                    Object(w.G)(function () {
                       m || ((r.bEnabled = !r.bEnabled), l());
                     });
                 },
@@ -17459,8 +17459,8 @@
                   e.event_scroller_read),
                 (this.m_lastUpdateTime = Date.now() / 1e3);
             }),
-            Object(a.c)([w.B], e.prototype, "m_stats", void 0),
-            Object(a.c)([w.B], e.prototype, "m_lastUpdateTime", void 0),
+            Object(a.c)([w.C], e.prototype, "m_stats", void 0),
+            Object(a.c)([w.C], e.prototype, "m_lastUpdateTime", void 0),
             e
           );
         })(),
@@ -17581,7 +17581,7 @@
                     case 2:
                       return (
                         (l = a.sent()),
-                        Object(w.F)(function () {
+                        Object(w.G)(function () {
                           d.m_mapSummaryStats.set(
                             e.GetAccountID(),
                             new ka(l.data.summary)
@@ -17617,8 +17617,8 @@
                 r = this.m_mapPerEventStats.get(a);
               return Boolean(r && r.m_stats);
             }),
-            Object(a.c)([w.B], e.prototype, "m_mapPerEventStats", void 0),
-            Object(a.c)([w.B], e.prototype, "m_mapSummaryStats", void 0),
+            Object(a.c)([w.C], e.prototype, "m_mapPerEventStats", void 0),
+            Object(a.c)([w.C], e.prototype, "m_mapSummaryStats", void 0),
             Object(a.c)([w.k], e.prototype, "LazyInit", null),
             e
           );
@@ -19637,7 +19637,7 @@
                 e.s_globalSingletonStore
               );
             }),
-            Object(a.c)([w.B], e.prototype, "m_eCurLang", void 0),
+            Object(a.c)([w.C], e.prototype, "m_eCurLang", void 0),
             Object(a.c)([I.a], e.prototype, "GetCurEditLanguage", null),
             Object(a.c)([I.a], e.prototype, "SetCurEditLanguage", null),
             e
@@ -20688,7 +20688,7 @@
               t
             ),
             this.ValidateStoreDefault(t) &&
-              Object(w.F)(function () {
+              Object(w.G)(function () {
                 t.forEach(function (t) {
                   t.multi_detail_lists.forEach(function (n) {
                     zr(n),
@@ -20874,7 +20874,7 @@
                         ? void 0
                         : s.success)
                         ? ((l = new Array()),
-                          Object(w.F)(function () {
+                          Object(w.G)(function () {
                             r.data.matches &&
                               r.data.matches.forEach(function (e) {
                                 e.multi_detail_lists.forEach(function (t) {
@@ -20923,7 +20923,7 @@
                   "number" == typeof t[0].multi_detail_lists[0].list_state
               : t && Array.isArray(t) && 0 == t.length;
           }),
-          Object(a.c)([w.B], e.prototype, "m_mapList", void 0),
+          Object(a.c)([w.C], e.prototype, "m_mapList", void 0),
           e
         );
       })();
@@ -20934,7 +20934,7 @@
             n = e.saleSection,
             r = e.event,
             o = e.bPreviewMode;
-          if (E.c.EREALM === ye.q.k_ESteamRealmChina) return null;
+          if (E.c.EREALM === ye.r.k_ESteamRealmChina) return null;
           if (
             !o &&
             n.featured_curator_list_rtime_start &&
@@ -22528,12 +22528,12 @@
               });
             }),
             Object(a.c)(
-              [w.B],
+              [w.C],
               e.prototype,
               "m_mapGenreToStickerResponse",
               void 0
             ),
-            Object(a.c)([w.B], e.prototype, "m_eStoryBadgeGranted", void 0),
+            Object(a.c)([w.C], e.prototype, "m_eStoryBadgeGranted", void 0),
             e
           );
         })();
@@ -26322,7 +26322,7 @@
                     case 0:
                       return this.m_bRequestInFlight
                         ? [2]
-                        : (Object(m.F)(function () {
+                        : (Object(m.G)(function () {
                             (t.m_bRequestInFlight = !0),
                               (t.m_strErrorMessage = "");
                           }),
@@ -26337,7 +26337,7 @@
                     case 1:
                       return (
                         (e = n.sent()),
-                        Object(m.F)(function () {
+                        Object(m.G)(function () {
                           (t.m_bRequestInFlight = !1), t.UpdateLoginResult(e);
                         }),
                         [2]
@@ -26427,13 +26427,13 @@
                       })(this.m_strBaseURL, e)
                     : "");
             }),
-            Object(a.c)([m.B], e.prototype, "m_bRequestInFlight", void 0),
-            Object(a.c)([m.B], e.prototype, "m_userFields", void 0),
-            Object(a.c)([m.B], e.prototype, "m_eCurrentStep", void 0),
-            Object(a.c)([m.B], e.prototype, "m_strErrorMessage", void 0),
-            Object(a.c)([m.B], e.prototype, "m_strEmailDomain", void 0),
-            Object(a.c)([m.B], e.prototype, "m_strCaptchaURL", void 0),
-            Object(a.c)([m.B], e.prototype, "m_eSteamGuardCodeError", void 0),
+            Object(a.c)([m.C], e.prototype, "m_bRequestInFlight", void 0),
+            Object(a.c)([m.C], e.prototype, "m_userFields", void 0),
+            Object(a.c)([m.C], e.prototype, "m_eCurrentStep", void 0),
+            Object(a.c)([m.C], e.prototype, "m_strErrorMessage", void 0),
+            Object(a.c)([m.C], e.prototype, "m_strEmailDomain", void 0),
+            Object(a.c)([m.C], e.prototype, "m_strCaptchaURL", void 0),
+            Object(a.c)([m.C], e.prototype, "m_eSteamGuardCodeError", void 0),
             Object(a.c)([w.a], e.prototype, "DoLogin", null),
             Object(a.c)([m.k.bound], e.prototype, "UpdateCaptchaURL", null),
             e
@@ -26938,7 +26938,7 @@
               return t;
             }),
             (t.prototype.render = function () {
-              if (m.c.EREALM === i.q.k_ESteamRealmChina) return null;
+              if (m.c.EREALM === i.r.k_ESteamRealmChina) return null;
               var e = this.ConstructSocialLinks();
               return 0 != e.length && m.c.IMG_URL
                 ? o.createElement(
@@ -27244,8 +27244,8 @@
                 });
               });
             }),
-            Object(a.c)([i.B], e.prototype, "m_mapBlockedAppIds", void 0),
-            Object(a.c)([i.B], e.prototype, "m_mapBlockedClanIds", void 0),
+            Object(a.c)([i.C], e.prototype, "m_mapBlockedAppIds", void 0),
+            Object(a.c)([i.C], e.prototype, "m_mapBlockedClanIds", void 0),
             e
           );
         })();
@@ -28999,7 +28999,7 @@
           (e.prototype.InitDefaultCheckboxes = function (e, t) {
             (this.m_bInitializedForUpdatesOnly = t),
               (this.m_mapEventTypeGroupsAllowed = b(t ? [u.k_EUpdates] : v));
-            var n = c.c.EREALM === i.q.k_ESteamRealmChina ? h : m;
+            var n = c.c.EREALM === i.r.k_ESteamRealmChina ? h : m;
             this.m_mapGameSources = b(e ? n : _);
           }),
           (e.prototype.Init = function (e, t, n, a) {
@@ -29125,7 +29125,7 @@
           }),
           (e.prototype.BAreAnyEventsFiltered = function (e) {
             var t = this,
-              n = c.c.EREALM === i.q.k_ESteamRealmChina ? h : m;
+              n = c.c.EREALM === i.r.k_ESteamRealmChina ? h : m;
             return (
               (e ? n : _).some(function (e) {
                 return !t.BIsGameSourceAllowed(e);
@@ -29136,14 +29136,14 @@
             );
           }),
           Object(r.c)(
-            [o.B],
+            [o.C],
             e.prototype,
             "m_mapEventTypeGroupsAllowed",
             void 0
           ),
-          Object(r.c)([o.B], e.prototype, "m_mapGameSources", void 0),
+          Object(r.c)([o.C], e.prototype, "m_mapGameSources", void 0),
           Object(r.c)(
-            [o.B],
+            [o.C],
             e.prototype,
             "m_bCuratorUnhideOnFollowDialogDismissed",
             void 0
@@ -29233,8 +29233,8 @@
                 }),
                 (this.m_rgEndPromises = []);
             }),
-            Object(a.c)([u.B], e.prototype, "m_mapDropTargets", void 0),
-            Object(a.c)([u.B], e.prototype, "m_mapCurrentDragPayload", void 0),
+            Object(a.c)([u.C], e.prototype, "m_mapDropTargets", void 0),
+            Object(a.c)([u.C], e.prototype, "m_mapCurrentDragPayload", void 0),
             e
           );
         })())();
@@ -29276,8 +29276,8 @@
                 ? 3
                 : 2;
             }),
-            Object(a.c)([u.B], e.prototype, "m_nRightPanelWidth", void 0),
-            Object(a.c)([u.B], e.prototype, "m_nRightPanelHeight", void 0),
+            Object(a.c)([u.C], e.prototype, "m_nRightPanelWidth", void 0),
+            Object(a.c)([u.C], e.prototype, "m_nRightPanelHeight", void 0),
             Object(a.c)([u.k], e.prototype, "SetDimensions", null),
             e
           );
@@ -29294,7 +29294,7 @@
         T = n("iBzj"),
         B = n.n(T),
         k =
-          (n("M4wp"),
+          (n("aoTL"),
           new ((function () {
             function e() {
               this.m_data = new Map();
@@ -29518,7 +29518,7 @@
             }),
             (t.contextType = N),
             (t.defaultProps = { scrollToTopThreshold: 1e3 }),
-            Object(a.c)([u.B], t.prototype, "m_nScrollTop", void 0),
+            Object(a.c)([u.C], t.prototype, "m_nScrollTop", void 0),
             Object(a.c)([O.a], t.prototype, "OnScroll", null),
             Object(a.c)([O.a], t.prototype, "ScrollToTop", null),
             t
@@ -29830,7 +29830,7 @@
                 )
               );
             }),
-            Object(a.c)([u.B], t.prototype, "m_nItemsDisplayed", void 0),
+            Object(a.c)([u.C], t.prototype, "m_nItemsDisplayed", void 0),
             Object(a.c)(
               [O.a, Object(O.b)("on_scroll", "cssgrid")],
               t.prototype,
@@ -29889,7 +29889,7 @@
                       return (
                         1 == n.sent() ||
                           Object(y.d)(b.c.LAUNCHER_TYPE) ||
-                          Object(u.E)(
+                          Object(u.F)(
                             te,
                             function (n) {
                               return n && t.ShowPrompt(e);
@@ -30624,7 +30624,7 @@
                 )
               );
             }),
-            Object(a.c)([u.B], t.prototype, "m_strError", void 0),
+            Object(a.c)([u.C], t.prototype, "m_strError", void 0),
             Object(a.c)([O.a], t.prototype, "OnSubmit", null),
             (t = Object(a.c)([l.a], t))
           );
@@ -30705,7 +30705,7 @@
                 })
               );
             }),
-            Object(a.c)([u.B], t.prototype, "m_elScrollElement", void 0),
+            Object(a.c)([u.C], t.prototype, "m_elScrollElement", void 0),
             Object(a.c)([O.a], t.prototype, "BindScrollElement", null),
             (t = Object(a.c)([l.a], t))
           );
@@ -32390,7 +32390,7 @@
                     this.m_disposer && this.m_disposer(),
                     (this.m_disposer = Object(u.l)(function () {
                       var t = tt.a.GetCustomLogoPosition(e.props.overview);
-                      Object(u.F)(function () {
+                      Object(u.G)(function () {
                         t
                           ? e.setState({ customLogoPosition: t })
                           : e.setState({ customLogoPosition: void 0 });
@@ -38524,7 +38524,7 @@
                 )
               );
             }),
-            Object(a.c)([u.B], t.prototype, "m_bHasText", void 0),
+            Object(a.c)([u.C], t.prototype, "m_bHasText", void 0),
             Object(a.c)([O.a], t.prototype, "OnPostClicked", null),
             Object(a.c)([O.a], t.prototype, "OnChange", null),
             Object(a.c)([O.a], t.prototype, "SetInputValue", null),
@@ -39117,7 +39117,7 @@
                     C
                   );
             }),
-            Object(a.c)([u.B], t.prototype, "m_bMinimized", void 0),
+            Object(a.c)([u.C], t.prototype, "m_bMinimized", void 0),
             Object(a.c)(
               [O.a],
               t.prototype,
@@ -39219,9 +39219,9 @@
             (this.strCaption = ""), (this.ePrivacy = 8), (this.bSpoiler = !1);
           }
           return (
-            Object(a.c)([u.B], e.prototype, "strCaption", void 0),
-            Object(a.c)([u.B], e.prototype, "ePrivacy", void 0),
-            Object(a.c)([u.B], e.prototype, "bSpoiler", void 0),
+            Object(a.c)([u.C], e.prototype, "strCaption", void 0),
+            Object(a.c)([u.C], e.prototype, "ePrivacy", void 0),
+            Object(a.c)([u.C], e.prototype, "bSpoiler", void 0),
             e
           );
         })();
@@ -39500,7 +39500,7 @@
               )
             );
           }),
-          Object(a.c)([u.B], t.prototype, "m_preUploadDetails", void 0),
+          Object(a.c)([u.C], t.prototype, "m_preUploadDetails", void 0),
           Object(a.c)([O.a], t.prototype, "OnCaptionChange", null),
           Object(a.c)([O.a], t.prototype, "OnPrivacyChange", null),
           Object(a.c)([O.a], t.prototype, "OnSpoilerChange", null),
@@ -40545,9 +40545,9 @@
               var C = this.BuildRowsForCards(o);
               (t = this.m_rows).push.apply(t, C);
             }),
-            Object(a.c)([u.B.shallow], e.prototype, "m_rows", void 0),
-            Object(a.c)([u.B], e.prototype, "m_loadingState", void 0),
-            Object(a.c)([u.B], e.prototype, "m_bHasEmptyRows", void 0),
+            Object(a.c)([u.C.shallow], e.prototype, "m_rows", void 0),
+            Object(a.c)([u.C], e.prototype, "m_loadingState", void 0),
+            Object(a.c)([u.C], e.prototype, "m_bHasEmptyRows", void 0),
             Object(a.c)([O.a], e.prototype, "CheckAndRebuildTemplates", null),
             Object(a.c)(
               [u.k.bound],
@@ -42052,7 +42052,7 @@
                   })
               );
             }),
-            Object(a.c)([u.B], t.prototype, "m_bRatingBarVisible", void 0),
+            Object(a.c)([u.C], t.prototype, "m_bRatingBarVisible", void 0),
             Object(a.c)([O.a], t.prototype, "OnViewThread", null),
             Object(a.c)([O.a], t.prototype, "OnRateUpClicked", null),
             (t = Object(a.c)([l.a], t))
@@ -43085,7 +43085,7 @@
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
-              (t.m_CommentVisibility = Object(u.B)({ m_bCommentsVisible: !1 })),
+              (t.m_CommentVisibility = Object(u.C)({ m_bCommentsVisible: !1 })),
               (t.fnOnMouseEnter = function () {
                 t.m_CommentVisibility.m_bCommentsVisible = !0;
               }),
@@ -44629,7 +44629,7 @@
               )
             );
           }),
-          Object(a.c)([u.B], t.prototype, "m_bDelayedLoad", void 0),
+          Object(a.c)([u.C], t.prototype, "m_bDelayedLoad", void 0),
           Object(a.c)([O.a], t.prototype, "OnImageLoad", null),
           Object(a.c)([O.a], t.prototype, "OnCoverClicked", null),
           Object(a.c)([O.a], t.prototype, "OnCoverLeft", null),
@@ -45643,7 +45643,7 @@
               )
             );
           }),
-          Object(a.c)([u.B], t.prototype, "m_appinfo", void 0),
+          Object(a.c)([u.C], t.prototype, "m_appinfo", void 0),
           Object(a.c)([O.a], t.prototype, "PostReview", null),
           Object(a.c)([O.a], t.prototype, "CloseDialog", null),
           Object(a.c)([O.a], t.prototype, "OnVoteUp", null),
@@ -46320,7 +46320,7 @@
                 r.createElement(Wn.a.Body, null, t)
               );
             }),
-            Object(a.c)([u.B], t.prototype, "storedSettings", void 0),
+            Object(a.c)([u.C], t.prototype, "storedSettings", void 0),
             Object(a.c)([u.n], t.prototype, "ReviewDetails", null),
             Object(a.c)([O.a], t.prototype, "FetchRoamingStorageState", null),
             Object(a.c)([O.a], t.prototype, "NavigateToReviewPage", null),
@@ -48214,9 +48214,9 @@
                   )
                 : null;
             }),
-            Object(a.c)([u.B], t.prototype, "m_ReviewDetails", void 0),
-            Object(a.c)([u.B], t.prototype, "storedSettingsPerApp", void 0),
-            Object(a.c)([u.B], t.prototype, "m_bReviewLoaded", void 0),
+            Object(a.c)([u.C], t.prototype, "m_ReviewDetails", void 0),
+            Object(a.c)([u.C], t.prototype, "storedSettingsPerApp", void 0),
+            Object(a.c)([u.C], t.prototype, "m_bReviewLoaded", void 0),
             Object(a.c)([O.a], t.prototype, "FetchRoamingStorageState", null),
             Object(a.c)([O.a], t.prototype, "OnVoteUp", null),
             Object(a.c)([O.a], t.prototype, "OnVoteDown", null),
@@ -48935,9 +48935,6 @@
               SteamClient.Streaming.RegisterForStreamingShowEula(
                 this.StreamingShowEula
               ),
-              SteamClient.Streaming.RegisterForStreamingStillDownloading(
-                this.StreamingStillDownloading
-              ),
               SteamClient.Streaming.RegisterForStreamingLaunchComplete(
                 this.StreamingLaunchComplete
               ),
@@ -48981,11 +48978,31 @@
               );
             n.Start(), Object(Nl.b)({ appid: e, eulaWorkflow: n, onCancel: t });
           }),
-          (e.prototype.StreamingStillDownloading = function (e, t) {
-            console.log("Still downloading. client:", e, "app:", t);
-          }),
           (e.prototype.StreamingLaunchComplete = function (e, t) {
             console.log("launch result:", t, "code:", e),
+              (function (e, t) {
+                switch (e) {
+                  case y.q.k_ERemoteClientLaunchOK:
+                    break;
+                  case y.q.k_ERemoteClientLaunchDownloadStarted:
+                    var n = r.createElement(q.d, {
+                      strTitle: Object(I.f)("#StreamLaunch_Updating_Title"),
+                      strDescription: Object(I.f)(
+                        "#StreamLaunch_StillDownloading"
+                      ),
+                      bAlertDialog: !0,
+                    });
+                    Object(J.d)(n, window, {});
+                    break;
+                  default:
+                    (n = r.createElement(q.d, {
+                      strTitle: Object(I.f)("#StreamLaunch_Failed_Title"),
+                      strDescription: Object(I.f)(t.replace("#SteamUI_", "#")),
+                      bAlertDialog: !0,
+                    })),
+                      Object(J.d)(n, window, {});
+                }
+              })(e, t),
               this.OnStreamingUIDone();
           }),
           (e.prototype.StreamingClientFinished = function (e, t) {
@@ -49030,7 +49047,6 @@
           }),
           Object(a.c)([O.a], e.prototype, "StreamingShowLaunchOptions", null),
           Object(a.c)([O.a], e.prototype, "StreamingShowEula", null),
-          Object(a.c)([O.a], e.prototype, "StreamingStillDownloading", null),
           Object(a.c)([O.a], e.prototype, "StreamingLaunchComplete", null),
           Object(a.c)([O.a], e.prototype, "StreamingClientFinished", null),
           Object(a.c)([O.a], e.prototype, "StreamingClientStarted", null),
@@ -49181,20 +49197,20 @@
         var t = e.strength,
           n = Object(a.f)(e, ["strength"]),
           o = 0;
-        switch (null != t ? t : y.s.Excellent) {
-          case y.s.None:
+        switch (null != t ? t : y.t.Excellent) {
+          case y.t.None:
             o = 0;
             break;
-          case y.s.Weak:
+          case y.t.Weak:
             o = 1;
             break;
-          case y.s.Ok:
+          case y.t.Ok:
             o = 2;
             break;
-          case y.s.Good:
+          case y.t.Good:
             o = 3;
             break;
-          case y.s.Excellent:
+          case y.t.Excellent:
             o = 4;
         }
         return r.createElement(
@@ -49803,7 +49819,7 @@
                   )
               );
             }),
-            Object(a.c)([u.B], t.prototype, "m_strStoreTagQuery", void 0),
+            Object(a.c)([u.C], t.prototype, "m_strStoreTagQuery", void 0),
             Object(a.c)([O.a], t.prototype, "OnStoreTagInput", null),
             Object(a.c)(
               [O.a],
@@ -52530,7 +52546,7 @@
                 )
               );
             }),
-            Object(a.c)([u.B], t.prototype, "m_bManageMenuVisible", void 0),
+            Object(a.c)([u.C], t.prototype, "m_bManageMenuVisible", void 0),
             Object(a.c)([O.a], t.prototype, "OnDownloadPaused", null),
             Object(a.c)([O.a], t.prototype, "OnManageClick", null),
             Object(a.c)([O.a], t.prototype, "OnClick", null),
@@ -53110,7 +53126,7 @@
             (t.prototype.OnGamepadButtonUp = function (e) {
               0;
             }),
-            Object(a.c)([u.B], t.prototype, "m_bPressActive", void 0),
+            Object(a.c)([u.C], t.prototype, "m_bPressActive", void 0),
             Object(a.c)([O.a], t.prototype, "OnMouseDown", null),
             Object(a.c)([O.a], t.prototype, "OnGlobalMouseMove", null),
             Object(a.c)([O.a], t.prototype, "OnClick", null),
@@ -53180,7 +53196,7 @@
               );
             }),
             Object(a.c)([O.a], t.prototype, "OnLandscapeImageLoaded", null),
-            Object(a.c)([u.B], t.prototype, "m_strImageURL", void 0),
+            Object(a.c)([u.C], t.prototype, "m_strImageURL", void 0),
             (t = Object(a.c)([l.a], t))
           );
         })(r.Component),
@@ -54705,7 +54721,7 @@
                     )
                 );
               }),
-              Object(a.c)([u.B], t.prototype, "m_refDiv", void 0),
+              Object(a.c)([u.C], t.prototype, "m_refDiv", void 0),
               Object(a.c)([O.a], t.prototype, "OnContextMenu", null),
               Object(a.c)([O.a], t.prototype, "OnCollectionChanged", null),
               Object(a.c)([O.a], t.prototype, "OnSortChanged", null),
@@ -55009,9 +55025,9 @@
                 )
               );
             }),
-            Object(a.c)([u.B], t.prototype, "m_refGrid", void 0),
-            Object(a.c)([u.B], t.prototype, "m_bLeftArrowEnabled", void 0),
-            Object(a.c)([u.B], t.prototype, "m_bRightArrowEnabled", void 0),
+            Object(a.c)([u.C], t.prototype, "m_refGrid", void 0),
+            Object(a.c)([u.C], t.prototype, "m_bLeftArrowEnabled", void 0),
+            Object(a.c)([u.C], t.prototype, "m_bRightArrowEnabled", void 0),
             Object(a.c)([O.a], t.prototype, "OnToggleCollapsed", null),
             Object(a.c)([O.a], t.prototype, "OnResize", null),
             Object(a.c)([O.a], t.prototype, "OnUpdateArrows", null),
@@ -56625,7 +56641,7 @@
                 )
               );
             }),
-            Object(a.c)([u.B], t.prototype, "m_strCollectionName", void 0),
+            Object(a.c)([u.C], t.prototype, "m_strCollectionName", void 0),
             Object(a.c)([O.a], t.prototype, "SaveRenamedCollection", null),
             Object(a.c)([O.a], t.prototype, "OnTextChanged", null),
             Object(a.c)([O.a], t.prototype, "OnBlur", null),
@@ -56975,7 +56991,7 @@
             (t.prototype.componentDidMount = function () {
               var e = this;
               this.m_rgAutorunDisposers.push(
-                Object(u.E)(
+                Object(u.F)(
                   this.GetAllStateThatShouldTriggerGameListAutoScroll,
                   function (t) {
                     var n = -1;
@@ -57458,7 +57474,7 @@
                 })
               );
             }),
-            Object(a.c)([u.B], t.prototype, "m_nDelayedIndex", void 0),
+            Object(a.c)([u.C], t.prototype, "m_nDelayedIndex", void 0),
             Object(a.c)([O.a], t.prototype, "ScrollToTop", null),
             Object(a.c)([O.a], t.prototype, "OnScroll", null),
             Object(a.c)([O.a], t.prototype, "EnsureVisible", null),
@@ -57946,7 +57962,7 @@
             Object(a.d)(t, e),
             (t.prototype.componentDidMount = function () {
               var e = this;
-              Object(u.E)(
+              Object(u.F)(
                 function () {
                   return S.a.mainPanelMode;
                 },
@@ -58057,7 +58073,7 @@
                 )
               );
             }),
-            Object(a.c)([u.B], t.prototype, "m_bScrolledTop", void 0),
+            Object(a.c)([u.C], t.prototype, "m_bScrolledTop", void 0),
             Object(a.c)([O.a], t.prototype, "BIsSearchBarFocused", null),
             Object(a.c)([O.a], t.prototype, "OnKeyDown", null),
             Object(a.c)([O.a], t.prototype, "OnKeyUp", null),
@@ -58345,8 +58361,8 @@
                 )
               );
             }),
-            Object(a.c)([u.B], t.prototype, "m_nCurrentUpdate", void 0),
-            Object(a.c)([u.B], t.prototype, "m_bShowExplanationDialog", void 0),
+            Object(a.c)([u.C], t.prototype, "m_nCurrentUpdate", void 0),
+            Object(a.c)([u.C], t.prototype, "m_bShowExplanationDialog", void 0),
             Object(a.c)([O.a], t.prototype, "OnEventSelected", null),
             Object(a.c)([O.a], t.prototype, "OnNextEvent", null),
             Object(a.c)([O.a], t.prototype, "OpenPartnerEventFromHome", null),
@@ -58466,7 +58482,7 @@
                   eAssetType: 4,
                   className: Vd.a.GameIcon,
                 }),
-                i = Object(y.v)(b.c.LANGUAGE),
+                i = Object(y.w)(b.c.LANGUAGE),
                 s = Fo.a.FilterImageURLsForKnownFailures(
                   t.GetImageForSizeAsArrayWithFallback(
                     "capsule",
@@ -59875,7 +59891,7 @@
                 )
               );
             }),
-            Object(a.c)([u.B], t.prototype, "m_refDiv", void 0),
+            Object(a.c)([u.C], t.prototype, "m_refDiv", void 0),
             Object(a.c)([O.a], t.prototype, "OnContextMenu", null),
             Object(a.c)([O.a], t.prototype, "OnCollectionChanged", null),
             Object(a.c)([O.a], t.prototype, "OnSortChanged", null),
@@ -60182,9 +60198,9 @@
                 )
               );
             }),
-            Object(a.c)([u.B], t.prototype, "m_refGrid", void 0),
-            Object(a.c)([u.B], t.prototype, "m_bLeftArrowEnabled", void 0),
-            Object(a.c)([u.B], t.prototype, "m_bRightArrowEnabled", void 0),
+            Object(a.c)([u.C], t.prototype, "m_refGrid", void 0),
+            Object(a.c)([u.C], t.prototype, "m_bLeftArrowEnabled", void 0),
+            Object(a.c)([u.C], t.prototype, "m_bRightArrowEnabled", void 0),
             Object(a.c)([O.a], t.prototype, "OnToggleCollapsed", null),
             Object(a.c)([O.a], t.prototype, "OnUpdateArrows", null),
             Object(a.c)([O.a], t.prototype, "ScrollLeft", null),
@@ -60872,7 +60888,7 @@
                 )
               );
             }),
-            Object(a.c)([u.B], t.prototype, "m_strError", void 0),
+            Object(a.c)([u.C], t.prototype, "m_strError", void 0),
             Object(a.c)([O.a], t.prototype, "OnAddAchievement", null),
             Object(a.c)([O.a], t.prototype, "OnClearGameSummary", null),
             Object(a.c)([O.a], t.prototype, "OnForceNewDay", null),
@@ -62423,8 +62439,8 @@
           function e() {
             (this.m_mapConnectionState = new Map()),
               (this.m_mapConnectionSummaries = new Map()),
-              (this.m_rgActiveConnectionKeys = u.B.array()),
-              (this.m_rgClosedConnectionKeys = u.B.array());
+              (this.m_rgActiveConnectionKeys = u.C.array()),
+              (this.m_rgClosedConnectionKeys = u.C.array());
           }
           return (
             (e.prototype.Reset = function () {
@@ -62457,20 +62473,21 @@
                     this.m_mapConnectionSummaries.delete(i);
                   }
                   a ||
-                    ((a = { cxn: e, seqnum: Object(u.B)({ value: 0 }) }),
+                    ((a = { cxn: e, seqnum: Object(u.C)({ value: 0 }) }),
                     this.m_mapConnectionState.set(n, a));
                 }
                 if (((a.cxn = e), (a.seqnum.value += 1), !o)) {
                   console.log("New connection: " + n);
-                  var s = (t = e.identity_remote()).startsWith("steamid:")
-                      ? new Nn.a(t.slice(8))
-                      : null,
+                  var s =
+                      (t = e.identity_remote()) && t.startsWith("steamid:")
+                        ? new Nn.a(t.slice(8))
+                        : null,
                     l =
                       e.transport_kind() ==
                         qu.k_ESteamNetTransport_SDRHostedServer ||
-                      3 == s.GetAccountType() ||
-                      4 == s.GetAccountType();
-                  (o = Object(u.B)({
+                      (s && 3 == s.GetAccountType()) ||
+                      (s && 4 == s.GetAccountType());
+                  (o = Object(u.C)({
                     key: n,
                     appid: e.appid(),
                     state: e.connection_state(),
@@ -63255,12 +63272,13 @@
                   "td",
                   { className: nm.ColumnAvatar, rowSpan: 2 },
                   (function (e) {
+                    var t = e.remote_steamid;
                     if (e.is_gameserver);
-                    else {
-                      var t = jn.a.GetFriendState(e.remote_steamid);
-                      if (t && t.persona && t.persona.BHasAvatarSet())
+                    else if (t) {
+                      var n = jn.a.GetFriendState(t);
+                      if (n && n.persona && n.persona.BHasAvatarSet())
                         return r.createElement("img", {
-                          src: t.persona.avatar_url,
+                          src: n.persona.avatar_url,
                         });
                     }
                     return null;
@@ -63483,7 +63501,7 @@
                 )
               );
             }),
-            Object(a.c)([u.B], t.prototype, "m_strLabelName", void 0),
+            Object(a.c)([u.C], t.prototype, "m_strLabelName", void 0),
             Object(a.c)([O.a], t.prototype, "onTextChanged", null),
             Object(a.c)([O.a], t.prototype, "onSaveLabel", null),
             (t = Object(a.c)([l.a], t))
@@ -63569,7 +63587,7 @@
                 )
               );
             }),
-            Object(a.c)([u.B], t.prototype, "m_State", void 0),
+            Object(a.c)([u.C], t.prototype, "m_State", void 0),
             Object(a.c)(
               [u.k.bound],
               t.prototype,
@@ -66482,7 +66500,7 @@
               var t = this.GetProfileBySteamID(e);
               return t && t.persona_name ? t.persona_name : "";
             }),
-            Object(a.c)([i.B], e.prototype, "m_mapProfiles", void 0),
+            Object(a.c)([i.C], e.prototype, "m_mapProfiles", void 0),
             e
           );
         })())();
@@ -66642,7 +66660,7 @@
                       "DEV_DEBUG: CBundleInfoStore loading bundles payload: " +
                         t.length
                     ),
-                  Object(i.F)(function () {
+                  Object(i.G)(function () {
                     return t.forEach(function (t) {
                       var n = new d(t);
                       e.m_mapBundleInfo.set(t.bundleid, n),
@@ -66717,7 +66735,7 @@
                               }
                             )),
                             (d = c.then(function (e) {
-                              Object(i.F)(function () {
+                              Object(i.G)(function () {
                                 u.AddBundles(null == e ? void 0 : e.data),
                                   r.forEach(function (e) {
                                     u.m_mapBundleInfo.has(e) ||
@@ -66756,7 +66774,7 @@
                   }
                 }
             }),
-            Object(a.c)([i.B], e.prototype, "m_mapBundleInfo", void 0),
+            Object(a.c)([i.C], e.prototype, "m_mapBundleInfo", void 0),
             Object(a.c)([i.k], e.prototype, "AddBundles", null),
             e
           );
@@ -67515,7 +67533,7 @@
                 )
               );
             }),
-            Object(a.c)([T.B], t.prototype, "m_sharedFileInfo", void 0),
+            Object(a.c)([T.C], t.prototype, "m_sharedFileInfo", void 0),
             (t = Object(a.c)([O.a], t))
           );
         })(i.Component),
@@ -68030,12 +68048,12 @@
                 (this.seconds_until_drawing >= 0 || this.winner_count > 0)
               );
             }),
-            Object(a.c)([T.B], e.prototype, "giveaway_id", void 0),
-            Object(a.c)([T.B], e.prototype, "seconds_until_drawing", void 0),
-            Object(a.c)([T.B], e.prototype, "rtime_start", void 0),
-            Object(a.c)([T.B], e.prototype, "rtime_end", void 0),
-            Object(a.c)([T.B], e.prototype, "closed", void 0),
-            Object(a.c)([T.B], e.prototype, "winner_count", void 0),
+            Object(a.c)([T.C], e.prototype, "giveaway_id", void 0),
+            Object(a.c)([T.C], e.prototype, "seconds_until_drawing", void 0),
+            Object(a.c)([T.C], e.prototype, "rtime_start", void 0),
+            Object(a.c)([T.C], e.prototype, "rtime_end", void 0),
+            Object(a.c)([T.C], e.prototype, "closed", void 0),
+            Object(a.c)([T.C], e.prototype, "winner_count", void 0),
             e
           );
         })(),
@@ -68108,7 +68126,7 @@
               });
             }),
             Object(a.c)(
-              [T.B],
+              [T.C],
               e.prototype,
               "m_mapGiveawayIDToNextDrawInfo",
               void 0
@@ -68377,7 +68395,7 @@
           (t.GetBBCodeURLComponent = function () {
             return (
               null == t.sm_InternalBBCodeURLComponent &&
-                (I.c.EREALM == b.q.k_ESteamRealmChina
+                (I.c.EREALM == b.r.k_ESteamRealmChina
                   ? (t.sm_InternalBBCodeURLComponent = [
                       { urlRegExp: new RegExp(_e), fnBBComponent: He },
                       { urlRegExp: new RegExp(fe), fnBBComponent: ze },
@@ -68672,7 +68690,7 @@
         );
       }
       function Pe(e, t) {
-        if (I.c.EREALM === b.q.k_ESteamRealmChina) return null;
+        if (I.c.EREALM === b.r.k_ESteamRealmChina) return null;
         var n = e.split("?"),
           a = void 0;
         if (2 == n.length) {
@@ -68699,7 +68717,7 @@
           : Me(e, null == t ? void 0 : t.event);
       }
       function Ge(e, t) {
-        if (I.c.EREALM === b.q.k_ESteamRealmChina) return null;
+        if (I.c.EREALM === b.r.k_ESteamRealmChina) return null;
         var n = new RegExp(ge).exec(e);
         if (n && n.length > 1) {
           var a = n[1];
@@ -68864,17 +68882,17 @@
         );
       }
       function Ze(e, t) {
-        return I.c.EREALM === b.q.k_ESteamRealmChina
+        return I.c.EREALM === b.r.k_ESteamRealmChina
           ? null
           : Qe(e, i.createElement(Y.Ab, null), "@", t);
       }
       function qe(e, t) {
-        return I.c.EREALM === b.q.k_ESteamRealmChina
+        return I.c.EREALM === b.r.k_ESteamRealmChina
           ? null
           : Qe(e, i.createElement(Y.Ab, null), "#", t);
       }
       function Je(e, t) {
-        return I.c.EREALM === b.q.k_ESteamRealmChina
+        return I.c.EREALM === b.r.k_ESteamRealmChina
           ? null
           : Qe(e, i.createElement(Y.zb, null), void 0, t);
       }
@@ -68934,7 +68952,7 @@
                             200 == p.status &&
                             p.data &&
                             (1 == p.data.success || "ready" == p.data.success)
-                          ? ((d = Object(i.B)({
+                          ? ((d = Object(i.C)({
                               appid: e,
                               video_url: p.data.video_url,
                               bookmark: p.data.bookmark,
@@ -69159,7 +69177,7 @@
               (this.m_mapCalendarEventsByGid = new Map()),
               (this.m_rgSortedCalendarEvents = new Array()),
               (this.m_visibilityStore = new y.a()),
-              (this.m_currentView = i.B.box(null)),
+              (this.m_currentView = i.C.box(null)),
               (this.m_bFinishedSearchingForward = !1),
               (this.m_bFinishedSearchingBackward = !1),
               (this.m_rgCalendarSections = []),
@@ -69477,7 +69495,7 @@
                     case 1:
                       return (
                         n.sent(),
-                        Object(i.F)(function () {
+                        Object(i.G)(function () {
                           t.RegisterCalendarApps(e.apps),
                             t.RegisterCalendarClans(e.clans),
                             t.RegisterCalendarEvents(e.documents),
@@ -69797,23 +69815,23 @@
                 });
               });
             }),
-            Object(a.c)([i.B], e.prototype, "m_mapCalendarEventsByGid", void 0),
-            Object(a.c)([i.B], e.prototype, "m_rgSortedCalendarEvents", void 0),
+            Object(a.c)([i.C], e.prototype, "m_mapCalendarEventsByGid", void 0),
+            Object(a.c)([i.C], e.prototype, "m_rgSortedCalendarEvents", void 0),
             Object(a.c)(
-              [i.B],
+              [i.C],
               e.prototype,
               "m_bFinishedSearchingForward",
               void 0
             ),
             Object(a.c)(
-              [i.B],
+              [i.C],
               e.prototype,
               "m_bFinishedSearchingBackward",
               void 0
             ),
-            Object(a.c)([i.B], e.prototype, "m_rgCalendarSections", void 0),
-            Object(a.c)([i.B], e.prototype, "m_rgFutureSections", void 0),
-            Object(a.c)([i.B], e.prototype, "m_collectionMetaData", void 0),
+            Object(a.c)([i.C], e.prototype, "m_rgCalendarSections", void 0),
+            Object(a.c)([i.C], e.prototype, "m_rgFutureSections", void 0),
+            Object(a.c)([i.C], e.prototype, "m_collectionMetaData", void 0),
             Object(a.c)([i.k], e.prototype, "InitCalendarSections", null),
             Object(a.c)([i.k], e.prototype, "InitFutureCalendarSections", null),
             Object(a.c)(
@@ -69841,7 +69859,7 @@
         D = (function () {
           function e(e, t, n, r, o, s) {
             var l = this;
-            (this.m_rgLoadedEventsBox = i.B.box([])),
+            (this.m_rgLoadedEventsBox = i.C.box([])),
               (this.m_lastLoadLatch = null),
               (this.m_fnGetUnfilteredEvents = e),
               (this.m_fnLoadAdditionalEvents = t),
@@ -69991,7 +70009,7 @@
             e
           );
         })(),
-        I = i.B.box(null),
+        I = i.C.box(null),
         T = new Map();
       function B(e) {
         var t = "";
@@ -72410,29 +72428,29 @@
                 (e.sessionid = E.c.SESSIONID),
                 (e.broadcast_origin = this.m_strBroadcastOrigin);
             }),
-            Object(a.c)([i.B], e.prototype, "m_allTimeSnapshot", void 0),
+            Object(a.c)([i.C], e.prototype, "m_allTimeSnapshot", void 0),
             Object(a.c)(
-              [i.B],
+              [i.C],
               e.prototype,
               "m_strBufferingVideoResolution",
               void 0
             ),
             Object(a.c)(
-              [i.B],
+              [i.C],
               e.prototype,
               "m_strPlaybackVideoResolution",
               void 0
             ),
-            Object(a.c)([i.B], e.prototype, "m_strHtmlVideoDisplay", void 0),
-            Object(a.c)([i.B], e.prototype, "m_nBandwidthRequired", void 0),
-            Object(a.c)([i.B], e.prototype, "m_nCurBandwidthVideo", void 0),
-            Object(a.c)([i.B], e.prototype, "m_nAudioBufferedMS", void 0),
-            Object(a.c)([i.B], e.prototype, "m_nVideoBufferedMS", void 0),
-            Object(a.c)([i.B], e.prototype, "m_nActiveDownloads", void 0),
-            Object(a.c)([i.B], e.prototype, "m_nVideoDownloadProgress", void 0),
-            Object(a.c)([i.B], e.prototype, "m_videoBufferedRanges", void 0),
-            Object(a.c)([i.B], e.prototype, "m_audioBufferedRanges", void 0),
-            Object(a.c)([i.B], e.prototype, "m_nPlaybackRate", void 0),
+            Object(a.c)([i.C], e.prototype, "m_strHtmlVideoDisplay", void 0),
+            Object(a.c)([i.C], e.prototype, "m_nBandwidthRequired", void 0),
+            Object(a.c)([i.C], e.prototype, "m_nCurBandwidthVideo", void 0),
+            Object(a.c)([i.C], e.prototype, "m_nAudioBufferedMS", void 0),
+            Object(a.c)([i.C], e.prototype, "m_nVideoBufferedMS", void 0),
+            Object(a.c)([i.C], e.prototype, "m_nActiveDownloads", void 0),
+            Object(a.c)([i.C], e.prototype, "m_nVideoDownloadProgress", void 0),
+            Object(a.c)([i.C], e.prototype, "m_videoBufferedRanges", void 0),
+            Object(a.c)([i.C], e.prototype, "m_audioBufferedRanges", void 0),
+            Object(a.c)([i.C], e.prototype, "m_nPlaybackRate", void 0),
             Object(a.c)([i.k], e.prototype, "SetVideoPlaybackResolution", null),
             Object(a.c)([i.k], e.prototype, "SetRepresentation", null),
             Object(a.c)([i.k], e.prototype, "SetCurrentVideoBandwidth", null),
@@ -72512,25 +72530,25 @@
                   (this.m_nEntries += 1);
               }
             }),
-            Object(a.c)([i.B], e.prototype, "m_nBytesReceived", void 0),
-            Object(a.c)([i.B], e.prototype, "m_nFailedSegments", void 0),
-            Object(a.c)([i.B], e.prototype, "m_nStallEvents", void 0),
+            Object(a.c)([i.C], e.prototype, "m_nBytesReceived", void 0),
+            Object(a.c)([i.C], e.prototype, "m_nFailedSegments", void 0),
+            Object(a.c)([i.C], e.prototype, "m_nStallEvents", void 0),
             Object(a.c)(
-              [i.B],
+              [i.C],
               e.prototype,
               "m_nSegmentDownloadTimeMaxMS",
               void 0
             ),
             Object(a.c)(
-              [i.B],
+              [i.C],
               e.prototype,
               "m_nSegmentDownloadTimeMinMS",
               void 0
             ),
-            Object(a.c)([i.B], e.prototype, "m_nBandwidthMin", void 0),
-            Object(a.c)([i.B], e.prototype, "m_nBandwidthMax", void 0),
-            Object(a.c)([i.B], e.prototype, "m_nFramesDecoded", void 0),
-            Object(a.c)([i.B], e.prototype, "m_nFramesDropped", void 0),
+            Object(a.c)([i.C], e.prototype, "m_nBandwidthMin", void 0),
+            Object(a.c)([i.C], e.prototype, "m_nBandwidthMax", void 0),
+            Object(a.c)([i.C], e.prototype, "m_nFramesDecoded", void 0),
+            Object(a.c)([i.C], e.prototype, "m_nFramesDropped", void 0),
             Object(a.c)([i.k], e.prototype, "SegmentReceived", null),
             e
           );
@@ -72630,8 +72648,8 @@
                   : new k()).reset(e, t),
                 this.m_rgResultsWindow.push(n);
             }),
-            Object(a.c)([i.B], e.prototype, "m_bDroppingFrameDetected", void 0),
-            Object(a.c)([i.B], e.prototype, "m_nCurrentFPS", void 0),
+            Object(a.c)([i.C], e.prototype, "m_bDroppingFrameDetected", void 0),
+            Object(a.c)([i.C], e.prototype, "m_nCurrentFPS", void 0),
             Object(a.c)([i.k.bound], e.prototype, "TakeReading", null),
             e
           );
@@ -75418,9 +75436,9 @@
                 (this.m_strStateDescription = t),
                 e == K.Error && console.log(this.m_strStateDescription);
             }),
-            Object(a.c)([i.B], e.prototype, "m_ulBroadcastID", void 0),
-            Object(a.c)([i.B], e.prototype, "m_eWatchState", void 0),
-            Object(a.c)([i.B], e.prototype, "m_strStateDescription", void 0),
+            Object(a.c)([i.C], e.prototype, "m_ulBroadcastID", void 0),
+            Object(a.c)([i.C], e.prototype, "m_eWatchState", void 0),
+            Object(a.c)([i.C], e.prototype, "m_strStateDescription", void 0),
             Object(a.c)([i.k], e.prototype, "SetState", null),
             e
           );
@@ -75440,13 +75458,13 @@
               (this.m_steamIDBroadcast = e);
           }
           return (
-            Object(a.c)([i.B], e.prototype, "m_strTitle", void 0),
-            Object(a.c)([i.B], e.prototype, "m_strAppId", void 0),
-            Object(a.c)([i.B], e.prototype, "m_nAppID", void 0),
-            Object(a.c)([i.B], e.prototype, "m_strAppTitle", void 0),
-            Object(a.c)([i.B], e.prototype, "m_strThumbnailUrl", void 0),
-            Object(a.c)([i.B], e.prototype, "m_nViewerCount", void 0),
-            Object(a.c)([i.B], e.prototype, "m_bIsOnline", void 0),
+            Object(a.c)([i.C], e.prototype, "m_strTitle", void 0),
+            Object(a.c)([i.C], e.prototype, "m_strAppId", void 0),
+            Object(a.c)([i.C], e.prototype, "m_nAppID", void 0),
+            Object(a.c)([i.C], e.prototype, "m_strAppTitle", void 0),
+            Object(a.c)([i.C], e.prototype, "m_strThumbnailUrl", void 0),
+            Object(a.c)([i.C], e.prototype, "m_nViewerCount", void 0),
+            Object(a.c)([i.C], e.prototype, "m_bIsOnline", void 0),
             e
           );
         })(),
@@ -75463,8 +75481,8 @@
                 (this.m_strStateDescription = t),
                 e == K.Error && console.log(this.m_strStateDescription);
             }),
-            Object(a.c)([i.B], e.prototype, "m_eWatchState", void 0),
-            Object(a.c)([i.B], e.prototype, "m_strStateDescription", void 0),
+            Object(a.c)([i.C], e.prototype, "m_eWatchState", void 0),
+            Object(a.c)([i.C], e.prototype, "m_strStateDescription", void 0),
             Object(a.c)([i.k], e.prototype, "SetState", null),
             e
           );
@@ -75697,7 +75715,7 @@
             (e.prototype.GetOrCreateBroadcastInfo = function (e) {
               if (!e) return new ie("");
               if (!this.m_broadcastInfos[e]) {
-                var t = Object(i.B)(new ie(e));
+                var t = Object(i.C)(new ie(e));
                 this.m_broadcastInfos[e] = t;
               }
               return this.m_broadcastInfos[e];
@@ -75783,7 +75801,7 @@
                     case 2:
                       return (l = a.sent()) && l.data
                         ? ((c = l.data),
-                          Object(i.F)(function () {
+                          Object(i.G)(function () {
                             (e.m_strTitle = c.title),
                               (e.m_strAppId = c.appid),
                               (e.m_nAppID = Number.parseInt(c.appid)),
@@ -76172,7 +76190,7 @@
                 (this.m_broadcastSettings.bMuted = t),
                 this.SaveBroadcastSettings());
             }),
-            Object(a.c)([i.B], e.prototype, "m_mapBroadcasts", void 0),
+            Object(a.c)([i.C], e.prototype, "m_mapBroadcasts", void 0),
             e
           );
         })();
@@ -76204,9 +76222,9 @@
               (this.m_nVideoEndPos = 0),
               (this.m_editorStartTime = 0),
               (this.m_editorEndTime = 0),
-              (this.m_rgMarkers = i.B.array()),
-              (this.m_rgSegments = i.B.array()),
-              (this.m_rgRegions = i.B.array()),
+              (this.m_rgMarkers = i.C.array()),
+              (this.m_rgSegments = i.C.array()),
+              (this.m_rgRegions = i.C.array()),
               (this.m_elVideo = e),
               (this.m_nVolume = t),
               (this.m_bMuted = n),
@@ -76630,19 +76648,19 @@
               enumerable: !1,
               configurable: !0,
             }),
-            Object(a.c)([i.B], e.prototype, "m_bPaused", void 0),
-            Object(a.c)([i.B], e.prototype, "m_nPlaybackTime", void 0),
-            Object(a.c)([i.B], e.prototype, "m_bBuffering", void 0),
-            Object(a.c)([i.B], e.prototype, "m_bOnLiveEdge", void 0),
-            Object(a.c)([i.B], e.prototype, "m_nVolume", void 0),
-            Object(a.c)([i.B], e.prototype, "m_bMuted", void 0),
-            Object(a.c)([i.B], e.prototype, "m_bUserInputNeeded", void 0),
-            Object(a.c)([i.B], e.prototype, "m_bIsReplay", void 0),
-            Object(a.c)([i.B], e.prototype, "m_nTimelineDuration", void 0),
-            Object(a.c)([i.B], e.prototype, "m_nVideoStartPos", void 0),
-            Object(a.c)([i.B], e.prototype, "m_nVideoEndPos", void 0),
-            Object(a.c)([i.B], e.prototype, "m_editorStartTime", void 0),
-            Object(a.c)([i.B], e.prototype, "m_editorEndTime", void 0),
+            Object(a.c)([i.C], e.prototype, "m_bPaused", void 0),
+            Object(a.c)([i.C], e.prototype, "m_nPlaybackTime", void 0),
+            Object(a.c)([i.C], e.prototype, "m_bBuffering", void 0),
+            Object(a.c)([i.C], e.prototype, "m_bOnLiveEdge", void 0),
+            Object(a.c)([i.C], e.prototype, "m_nVolume", void 0),
+            Object(a.c)([i.C], e.prototype, "m_bMuted", void 0),
+            Object(a.c)([i.C], e.prototype, "m_bUserInputNeeded", void 0),
+            Object(a.c)([i.C], e.prototype, "m_bIsReplay", void 0),
+            Object(a.c)([i.C], e.prototype, "m_nTimelineDuration", void 0),
+            Object(a.c)([i.C], e.prototype, "m_nVideoStartPos", void 0),
+            Object(a.c)([i.C], e.prototype, "m_nVideoEndPos", void 0),
+            Object(a.c)([i.C], e.prototype, "m_editorStartTime", void 0),
+            Object(a.c)([i.C], e.prototype, "m_editorEndTime", void 0),
             Object(a.c)([i.k.bound], e.prototype, "StartBroadcast", null),
             Object(a.c)([i.k.bound], e.prototype, "StartClip", null),
             Object(a.c)([i.k.bound], e.prototype, "StartVOD", null),
@@ -76822,7 +76840,7 @@
               if (!this.m_bLoadedFromConfig) {
                 var t = Object(_.g)("notificationstore", "application_config");
                 this.ValidateStoreDefault(t) &&
-                  Object(h.F)(function () {
+                  Object(h.G)(function () {
                     (e.m_bIsLoaded = !0),
                       (e.m_bValidatedEmail = t.email_validated),
                       (e.m_nMobileDeviceCount = t.mobile_device_count);
@@ -76880,7 +76898,7 @@
                     case 1:
                       return (
                         1 == (n = a.sent()).data.success &&
-                          Object(h.F)(function () {
+                          Object(h.G)(function () {
                             (r.m_bIsLoaded = !0),
                               (r.m_bValidatedEmail = n.data.email_validated),
                               (r.m_nMobileDeviceCount =
@@ -76892,8 +76910,8 @@
                 });
               });
             }),
-            Object(a.c)([h.B], e.prototype, "m_bValidatedEmail", void 0),
-            Object(a.c)([h.B], e.prototype, "m_nMobileDeviceCount", void 0),
+            Object(a.c)([h.C], e.prototype, "m_bValidatedEmail", void 0),
+            Object(a.c)([h.C], e.prototype, "m_nMobileDeviceCount", void 0),
             e
           );
         })())(),
@@ -77688,7 +77706,7 @@
                     return (
                       (r = a.sent()) &&
                         200 == r.status &&
-                        Object(i.F)(function () {
+                        Object(i.G)(function () {
                           if (((u.m_bIsLoaded = !0), r.data.rgCurators))
                             for (var e in ((u.m_setCuratorsFollowed = new Set()),
                             r.data.rgCurators))
@@ -77871,7 +77889,7 @@
                       return (
                         (p = a.sent()) &&
                           200 == p.status &&
-                          Object(i.F)(function () {
+                          Object(i.G)(function () {
                             m.InvalidateCache(),
                               t
                                 ? m.m_mapIgnoredApps.set(e, n)
@@ -78094,30 +78112,30 @@
               e.s_globalSingletonStore
             );
           }),
-          Object(a.c)([i.B], e.prototype, "m_setWishList", void 0),
-          Object(a.c)([i.B], e.prototype, "m_setOwnedPackages", void 0),
-          Object(a.c)([i.B], e.prototype, "m_setOwnedApps", void 0),
-          Object(a.c)([i.B], e.prototype, "m_setFollowedApps", void 0),
-          Object(a.c)([i.B], e.prototype, "m_setExcludedTagsIds", void 0),
+          Object(a.c)([i.C], e.prototype, "m_setWishList", void 0),
+          Object(a.c)([i.C], e.prototype, "m_setOwnedPackages", void 0),
+          Object(a.c)([i.C], e.prototype, "m_setOwnedApps", void 0),
+          Object(a.c)([i.C], e.prototype, "m_setFollowedApps", void 0),
+          Object(a.c)([i.C], e.prototype, "m_setExcludedTagsIds", void 0),
           Object(a.c)(
-            [i.B],
+            [i.C],
             e.prototype,
             "m_setExcludedContentDescriptors",
             void 0
           ),
-          Object(a.c)([i.B], e.prototype, "m_setRecommendedApps", void 0),
-          Object(a.c)([i.B], e.prototype, "m_mapIgnoredApps", void 0),
-          Object(a.c)([i.B], e.prototype, "m_mapIgnoredPackages", void 0),
-          Object(a.c)([i.B], e.prototype, "m_setCuratorsFollowed", void 0),
-          Object(a.c)([i.B], e.prototype, "m_setCuratorsIgnored", void 0),
+          Object(a.c)([i.C], e.prototype, "m_setRecommendedApps", void 0),
+          Object(a.c)([i.C], e.prototype, "m_mapIgnoredApps", void 0),
+          Object(a.c)([i.C], e.prototype, "m_mapIgnoredPackages", void 0),
+          Object(a.c)([i.C], e.prototype, "m_setCuratorsFollowed", void 0),
+          Object(a.c)([i.C], e.prototype, "m_setCuratorsIgnored", void 0),
           Object(a.c)(
-            [i.B],
+            [i.C],
             e.prototype,
             "m_bShowFilteredUserReviewScores",
             void 0
           ),
-          Object(a.c)([i.B], e.prototype, "m_primaryLanguage", void 0),
-          Object(a.c)([i.B], e.prototype, "m_secondaryLanguages", void 0),
+          Object(a.c)([i.C], e.prototype, "m_primaryLanguage", void 0),
+          Object(a.c)([i.C], e.prototype, "m_secondaryLanguages", void 0),
           Object(a.c)([i.k], e.prototype, "UpdateAppIgnore", null),
           e
         );
@@ -78562,7 +78580,7 @@
                                     void 0 === n
                                       ? void 0
                                       : n.success)
-                                    ? Object(i.F)(function () {
+                                    ? Object(i.G)(function () {
                                         var e, t;
                                         (null ===
                                           (t =
@@ -78627,7 +78645,7 @@
               });
             }),
             Object(a.c)(
-              [i.B.shallow],
+              [i.C.shallow],
               e.prototype,
               "m_mapAppToDemoInfo",
               void 0
@@ -79404,7 +79422,7 @@
               this.m_mapAppBroadcasts.delete(e);
             }),
             Object(a.c)(
-              [r.B.shallow],
+              [r.C.shallow],
               e.prototype,
               "m_mapAppBroadcasts",
               void 0
@@ -79891,12 +79909,12 @@
           return g;
         }),
         n.d(t, "c", function () {
-          return S;
+          return y;
         });
       var a,
         r,
         o = n("q1tI"),
-        i = n("Ty5D"),
+        i = n("EC67"),
         s = n("55Ip"),
         l = n("r64O"),
         c = n("lkRc");
@@ -80105,23 +80123,24 @@
             return "";
         }
       }
-      var S = function (e) {
-        var t = !!o.useContext(i.c);
-        if (!e.eventModel) return null;
-        var n = t && d(e.route, e.eventModel),
-          a = v(e.eventModel, e.route, n ? "relative" : "absolute");
-        return n
-          ? o.createElement(
-              s.a,
-              { to: a, className: e.className, onClick: e.onClick },
-              e.children
-            )
-          : o.createElement(
-              "a",
-              { href: a, className: e.className, onClick: e.onClick },
-              e.children
-            );
-      };
+      var S = o.createContext({ bCanUseLink: !1 }),
+        y = function (e) {
+          var t = o.useContext(S).bCanUseLink;
+          if (!e.eventModel) return null;
+          var n = t && d(e.route, e.eventModel),
+            a = v(e.eventModel, e.route, n ? "relative" : "absolute");
+          return n
+            ? o.createElement(
+                s.a,
+                { to: a, className: e.className, onClick: e.onClick },
+                e.children
+              )
+            : o.createElement(
+                "a",
+                { href: a, className: e.className, onClick: e.onClick },
+                e.children
+              );
+        };
     },
     mMwe: function (e, t) {
       e.exports =
@@ -80360,7 +80379,7 @@
                         [3, 4]
                       );
                     case 4:
-                      Object(i.F)(function () {
+                      Object(i.G)(function () {
                         (l.m_bUserPreferenceHideBroadcastByDefault =
                           t.bHideStoreBroadcast),
                           (l.m_bCollapsed = t.bHideStoreBroadcast);
@@ -80533,7 +80552,7 @@
                         t.broadcast_chat_visibility &&
                           (this.m_pageChatStatus = t.broadcast_chat_visibility),
                         (n = new Array()),
-                        Object(i.F)(function () {
+                        Object(i.G)(function () {
                           t.filtered.forEach(function (e) {
                             if (!e.steamid) {
                               var t = s.a.InitFromAccountID(e.accountid);
@@ -80739,18 +80758,18 @@
               );
             }),
             (e.prototype.Init = function () {}),
-            Object(a.c)([i.B], e.prototype, "m_lookupStreams", void 0),
-            Object(a.c)([i.B], e.prototype, "m_playReadyStream", void 0),
-            Object(a.c)([i.B], e.prototype, "m_pageChatStatus", void 0),
-            Object(a.c)([i.B], e.prototype, "m_streamChatStatus", void 0),
-            Object(a.c)([i.B], e.prototype, "m_bUserChatExpanded", void 0),
+            Object(a.c)([i.C], e.prototype, "m_lookupStreams", void 0),
+            Object(a.c)([i.C], e.prototype, "m_playReadyStream", void 0),
+            Object(a.c)([i.C], e.prototype, "m_pageChatStatus", void 0),
+            Object(a.c)([i.C], e.prototype, "m_streamChatStatus", void 0),
+            Object(a.c)([i.C], e.prototype, "m_bUserChatExpanded", void 0),
             Object(a.c)(
-              [i.B],
+              [i.C],
               e.prototype,
               "m_bUserPreferenceHideBroadcastByDefault",
               void 0
             ),
-            Object(a.c)([i.B], e.prototype, "m_bCollapsed", void 0),
+            Object(a.c)([i.C], e.prototype, "m_bCollapsed", void 0),
             Object(a.c)(
               [i.k],
               e.prototype,
@@ -80773,10 +80792,10 @@
             (this.current_selection_priority = _.k_eGeneral);
         }
         return (
-          Object(a.c)([i.B], e.prototype, "title", void 0),
-          Object(a.c)([i.B], e.prototype, "viewer_count", void 0),
-          Object(a.c)([i.B], e.prototype, "gamedata_subtitle", void 0),
-          Object(a.c)([i.B], e.prototype, "current_selection_priority", void 0),
+          Object(a.c)([i.C], e.prototype, "title", void 0),
+          Object(a.c)([i.C], e.prototype, "viewer_count", void 0),
+          Object(a.c)([i.C], e.prototype, "gamedata_subtitle", void 0),
+          Object(a.c)([i.C], e.prototype, "current_selection_priority", void 0),
           e
         );
       })();
@@ -80927,7 +80946,7 @@
                       "DEV_DEBUG: CPackageInfoStore loading package payload: " +
                         t.length
                     ),
-                  Object(s.F)(function () {
+                  Object(s.G)(function () {
                     return t.forEach(function (t) {
                       var n = new u(t);
                       e.m_mapPackageInfo.set(Number(t.packageid), n),
@@ -81008,7 +81027,7 @@
                                 }
                               )
                               .then(function (e) {
-                                Object(s.F)(function () {
+                                Object(s.G)(function () {
                                   p.AddPackages(null == e ? void 0 : e.data),
                                     r.forEach(function (e) {
                                       p.m_mapPackageInfo.has(e) ||
@@ -81047,7 +81066,7 @@
                   }
                 }
             }),
-            Object(r.c)([s.B], e.prototype, "m_mapPackageInfo", void 0),
+            Object(r.c)([s.C], e.prototype, "m_mapPackageInfo", void 0),
             Object(r.c)([s.k], e.prototype, "AddPackages", null),
             e
           );
@@ -81079,7 +81098,7 @@
         l = n("Gp1o"),
         c = n("q1tI"),
         p = n.n(c),
-        d = n("Ty5D"),
+        d = n("EC67"),
         u = n("mgoM"),
         m = n("3+zv"),
         h = n("5eAM"),
@@ -81983,7 +82002,7 @@
               void 0 !== this.m_gidClanEventSelected &&
                 (this.m_gidClanEventSelected = void 0);
             }),
-            Object(a.c)([i.B], e.prototype, "m_gidClanEventSelected", void 0),
+            Object(a.c)([i.C], e.prototype, "m_gidClanEventSelected", void 0),
             e
           );
         })())(),
@@ -85451,7 +85470,7 @@
                 )
               );
             }),
-            Object(a.c)([i.B], t.prototype, "m_bShowSlider", void 0),
+            Object(a.c)([i.C], t.prototype, "m_bShowSlider", void 0),
             Object(a.c)([A.a], t.prototype, "ToggleMute", null),
             Object(a.c)([A.a], t.prototype, "OnMouseEnter", null),
             Object(a.c)([A.a], t.prototype, "OnMouseLeave", null),
@@ -87160,7 +87179,7 @@
                       return r.sent(), [3, 4];
                     case 4:
                       return (
-                        Object(o.F)(function () {
+                        Object(o.G)(function () {
                           if (!n || 0 == n.length)
                             return (
                               (i.m_eOlderDirection = a.Idle),
@@ -87221,7 +87240,7 @@
                       return r.sent(), [3, 4];
                     case 4:
                       return (
-                        Object(o.F)(function () {
+                        Object(o.G)(function () {
                           if (t) {
                             for (
                               var e = new Set(
@@ -87284,7 +87303,7 @@
                       return r.sent(), [3, 4];
                     case 4:
                       return (
-                        Object(o.F)(function () {
+                        Object(o.G)(function () {
                           if (t) {
                             for (
                               var e = new Set(
@@ -87313,9 +87332,9 @@
                 });
               });
             }),
-            Object(r.c)([o.B.shallow], e.prototype, "m_rgEvents", void 0),
-            Object(r.c)([o.B], e.prototype, "m_eOlderDirection", void 0),
-            Object(r.c)([o.B], e.prototype, "m_eNewerDirection", void 0),
+            Object(r.c)([o.C.shallow], e.prototype, "m_rgEvents", void 0),
+            Object(r.c)([o.C], e.prototype, "m_eOlderDirection", void 0),
+            Object(r.c)([o.C], e.prototype, "m_eNewerDirection", void 0),
             e
           );
         })(),
@@ -88047,7 +88066,7 @@
                 });
               });
             }),
-            Object(a.c)([ee.B], e.prototype, "m_mapClanReposted", void 0),
+            Object(a.c)([ee.C], e.prototype, "m_mapClanReposted", void 0),
             e
           );
         })(),
@@ -88509,7 +88528,7 @@
                 Number.MAX_SAFE_INTEGER
               ),
               n = e.GetForumTopicURL(),
-              a = s.c.EREALM === J.q.k_ESteamRealmChina,
+              a = s.c.EREALM === J.r.k_ESteamRealmChina,
               o = s.h.logged_in && te.Get().BCanRepostPartnerEvent();
             return r.createElement(
               "div",
@@ -88747,7 +88766,7 @@
         })(r.Component),
         ce = function (e) {
           var t = e.eventModel,
-            n = s.c.EREALM === J.q.k_ESteamRealmChina;
+            n = s.c.EREALM === J.r.k_ESteamRealmChina;
           return r.createElement(
             "div",
             {

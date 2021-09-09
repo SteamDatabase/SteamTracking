@@ -12808,11 +12808,12 @@ div.ShortWindow
   color: #67707b;
   display: flex;
   align-items: center;
-  padding-left: 5px;
+  padding-left: 6px;
+  padding-bottom: 1px;
 }
 .downloads_ContentTypes_1IKba .downloads_Icon_-OgRz {
-  height: 22px;
-  width: 22px;
+  height: 18px;
+  width: 18px;
 }
 .downloads_ContentTypeTooltip_38Kbc {
   padding: 15px;

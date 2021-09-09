@@ -1131,6 +1131,11 @@
 	"Steam_AppUpdateError_45": "parental control blocked",
 	"Steam_AppUpdateError_46": "create process failed",
 	"Steam_AppUpdateError_47": "Steam client outdated",
+	"Steam_AppUpdateError_48": "playtime exceeded",
+	"Steam_AppUpdateError_49": "corrupt file signature",
+	"Steam_AppUpdateError_50": "missing installed files",
+	"Steam_AppUpdateError_51": "compatibility tool failed",
+	"Steam_AppUpdateError_52": "unmounted uninstall path",
 
 	"ShareDialog_Title": "Share",
 	"ShareUploadScreenshot_Description": "Upload this screenshot to your Steam Profile and Activity Feed.",
