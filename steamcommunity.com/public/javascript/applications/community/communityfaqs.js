@@ -9336,22 +9336,22 @@
         Ye = Object(s.a)(function (e) {
           var t = e.draft,
             a = e.eLanguage,
-            i = t.GetFAQID(),
-            s = Object(c.f)(i),
-            n = s[0],
-            l = s[1],
-            p =
-              l &&
-              n.per_language_info.find(function (e) {
+            o = t.GetFAQID(),
+            i = Object(c.f)(o),
+            s = i[0],
+            n = i[1],
+            l =
+              n &&
+              s.per_language_info.find(function (e) {
                 return e.language == a;
               }),
-            d =
-              l &&
+            p =
+              n &&
               ((f.c.EREALM == ze.f.k_ESteamRealmGlobal &&
-                n.visible_in_global_realm) ||
+                s.visible_in_global_realm) ||
                 (f.c.EREALM == ze.f.k_ESteamRealmChina &&
-                  n.visible_in_china_realm)) &&
-              !!(null == p ? void 0 : p.last_publish_timestamp);
+                  s.visible_in_china_realm)) &&
+              !!(null == l ? void 0 : l.last_publish_timestamp);
           return r.a.createElement(
             ae.a,
             null,
@@ -9365,13 +9365,13 @@
                   style: { width: "unset", justifyContent: "center" },
                 },
                 r.a.createElement(He, { draft: t }),
-                Boolean(d) &&
+                Boolean(p) &&
                   r.a.createElement(
                     "div",
                     { className: ie.a.EditPreviewButton },
                     r.a.createElement(
-                      g,
-                      { faqid: i, route: o.k_eCommunityView },
+                      "a",
+                      { href: f.c.HELP_BASE_URL + "faqs/view/" + s.url_code },
                       Object(z.f)("#FAQEditir_ViewLiveFAQ")
                     )
                   )
