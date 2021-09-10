@@ -32757,7 +32757,7 @@
         })(r.Component),
         Ot = function (e) {
           return e.overview.optional_parent_app_id
-            ? 4 == e.overview.app_type || e.overview.BIsModOrShortcut()
+            ? 8 != e.overview.app_type
               ? null
               : r.createElement(
                   "div",
