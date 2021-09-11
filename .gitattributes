@@ -10,3 +10,4 @@
 *.ttf binary
 *.wav binary
 
+ClientManifest/* linguist-generated=true
