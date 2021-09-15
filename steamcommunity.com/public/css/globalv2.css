@@ -167,7 +167,7 @@ div#footer.compact .footer_content #footerText .copyright {
     display: block;
 }
 
-@media screen and ( max-width: 1150px ) {
+@media screen and ( max-width: 1400px ) {
     html.responsive div#footer.compact {
         height: 32px;
     }

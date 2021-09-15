@@ -10628,6 +10628,76 @@ html.responsive.touch .partnersaledisplay_SaleSectionTabs_1FPIV {
 .partnersaledisplay_SaleSectionTabListContainer_2VZtq {
   position: relative;
 }
+.partnersaledisplay_MobileTabSelector_2fm5T {
+  display: none;
+  align-items: center;
+  position: fixed;
+  z-index: 99;
+  top: 62px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s linear;
+}
+.partnersaledisplay_MobileTabSelector_2fm5T.partnersaledisplay_Visible_2Jmo5 {
+  opacity: 1;
+}
+.partnersaledisplay_MobileTabSelector_2fm5T
+  .partnersaledisplay_MobileTabSelectorButton_1t4-3 {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  backdrop-filter: blur(5px);
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+.partnersaledisplay_MobileTabSelector_2fm5T
+  .partnersaledisplay_MobileTabSelectorButton_1t4-3
+  .DialogDropDown {
+  width: 100%;
+  background-color: transparent;
+  font-weight: 700;
+}
+.partnersaledisplay_MobileTabSelector_2fm5T
+  .partnersaledisplay_MobileTabSelectorButton_1t4-3
+  .DialogDropDown_Arrow {
+  display: none;
+}
+.partnersaledisplay_MobileTabSelector_2fm5T
+  .partnersaledisplay_MobileTabSelectorShortcut_1P5tc {
+  position: absolute;
+  right: 16px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+@media screen and (max-width: 910px) {
+  .partnersaledisplay_DesktopTabs_2utXv {
+    display: none;
+  }
+  .partnersaledisplay_MobileTabSelector_2fm5T {
+    display: flex;
+  }
+}
+.partnersaledisplay_MobileTabSelectorDropDown_3KO7Y ._DialogInputContainer {
+  margin-top: 0;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+}
+.partnersaledisplay_MobileTabSelectorDropDown_3KO7Y
+  ._DialogInputContainer
+  .partnersaledisplay_MobileTabSelectorOption_GiTJl {
+  font-weight: 700;
+}
+.partnersaledisplay_MobileTabSelectorDropDown_3KO7Y
+  ._DialogInputContainer
+  .partnersaledisplay_MobileTabSelectorOption_GiTJl:hover {
+  background-color: #e8e8e8;
+  color: #000;
+}
 .partnersaledisplay_TabContentsContainer_2xJbu {
   display: flex;
   flex-flow: column;

@@ -1030,6 +1030,12 @@
             (t.serializeBinaryToWriter = function (e, r) {
               z.f(t.M(), e, r);
             }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new x.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
+            }),
             (t.prototype.getClassName = function () {
               return "CQuest_CommunityItem";
             }),
@@ -1096,6 +1102,12 @@
             (t.serializeBinaryToWriter = function (e, r) {
               z.f(t.M(), e, r);
             }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new x.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
+            }),
             (t.prototype.getClassName = function () {
               return "CQuest_CommunityItem_Attribute";
             }),
@@ -1151,6 +1163,12 @@
             (t.serializeBinaryToWriter = function (e, r) {
               z.f(t.M(), e, r);
             }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new x.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
+            }),
             (t.prototype.getClassName = function () {
               return "CQuest_GetCommunityInventory_Response";
             }),
@@ -1205,6 +1223,12 @@
             }),
             (t.serializeBinaryToWriter = function (e, r) {
               z.f(t.M(), e, r);
+            }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new x.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
             }),
             (t.prototype.getClassName = function () {
               return "CQuest_GetCommunityItemDefinitions_Response";
@@ -1355,6 +1379,12 @@
             (t.serializeBinaryToWriter = function (e, r) {
               z.f(t.M(), e, r);
             }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new x.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
+            }),
             (t.prototype.getClassName = function () {
               return "CQuest_GetCommunityItemDefinitions_Response_ItemDefinition";
             }),
@@ -1418,6 +1448,12 @@
             (t.serializeBinaryToWriter = function (e, r) {
               z.f(t.M(), e, r);
             }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new x.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
+            }),
             (t.prototype.getClassName = function () {
               return "CQuest_ActivateProfileModifierItem_Request";
             }),
@@ -1454,6 +1490,12 @@
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, t) {}),
+            (t.prototype.serializeBase64String = function () {
+              var e = new x.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
+            }),
             (t.prototype.getClassName = function () {
               return "CQuest_ActivateProfileModifierItem_Response";
             }),

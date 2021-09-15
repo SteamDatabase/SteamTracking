@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6761157";
+var CLSTAMP = "6765812";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [101],
   {
@@ -7824,6 +7824,7 @@ var CLSTAMP = "6761157";
               ((t = {}), (t[e.stylesheet.NoPadding] = "none" == r), t)
             ),
           },
+          e.activePage.header,
           !e.hideTitle && o.createElement(v, null, e.activePage.title),
           o.createElement(
             xe.a,
@@ -8605,6 +8606,12 @@ var CLSTAMP = "6761157";
             (t.serializeBinaryToWriter = function (e, n) {
               i.f(t.M(), e, n);
             }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new o.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
+            }),
             (t.prototype.getClassName = function () {
               return "CMsgIPAddress";
             }),
@@ -8784,6 +8791,12 @@ var CLSTAMP = "6761157";
             (t.serializeBinaryToWriter = function (e, n) {
               i.f(t.M(), e, n);
             }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new o.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
+            }),
             (t.prototype.getClassName = function () {
               return "CMsgProtoBufHeader";
             }),
@@ -8876,6 +8889,12 @@ var CLSTAMP = "6761157";
             }),
             (t.serializeBinaryToWriter = function (e, n) {
               i.f(t.M(), e, n);
+            }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new o.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
             }),
             (t.prototype.getClassName = function () {
               return "CCDDBAppDetailCommon";
@@ -8971,6 +8990,12 @@ var CLSTAMP = "6761157";
             (t.serializeBinaryToWriter = function (e, n) {
               i.f(t.M(), e, n);
             }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new o.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
+            }),
             (t.prototype.getClassName = function () {
               return "CClanEventUserNewsTuple";
             }),
@@ -9042,6 +9067,12 @@ var CLSTAMP = "6761157";
             }),
             (t.serializeBinaryToWriter = function (e, n) {
               i.f(t.M(), e, n);
+            }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new o.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
             }),
             (t.prototype.getClassName = function () {
               return "CClanMatchEventByRange";
@@ -9541,6 +9572,12 @@ var CLSTAMP = "6761157";
             (t.serializeBinaryToWriter = function (e, n) {
               i.f(t.M(), e, n);
             }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new o.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
+            }),
             (t.prototype.getClassName = function () {
               return "CClientMetrics_ReportClientError_Notification";
             }),
@@ -9607,6 +9644,12 @@ var CLSTAMP = "6761157";
             }),
             (t.serializeBinaryToWriter = function (e, n) {
               i.f(t.M(), e, n);
+            }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new o.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
             }),
             (t.prototype.getClassName = function () {
               return "CClientMetrics_ReportClientError_Notification_Error";
@@ -14207,6 +14250,19 @@ var CLSTAMP = "6761157";
             return t;
         }
       }
+      var u;
+      !(function (e) {
+        (e[(e.k_ECaptivePortalState_Unknown = 0)] =
+          "k_ECaptivePortalState_Unknown"),
+          (e[(e.k_ECaptivePortalState_Connected = 1)] =
+            "k_ECaptivePortalState_Connected"),
+          (e[(e.k_ECaptivePortalState_CaptivePortal = 2)] =
+            "k_ECaptivePortalState_CaptivePortal"),
+          (e[(e.k_ECaptivePortalState_TimedOut = 3)] =
+            "k_ECaptivePortalState_TimedOut"),
+          (e[(e.k_ECaptivePortalState_Failed = 4)] =
+            "k_ECaptivePortalState_Failed");
+      })(u || (u = {}));
     },
     nmPn: function (e, t, n) {
       "use strict";

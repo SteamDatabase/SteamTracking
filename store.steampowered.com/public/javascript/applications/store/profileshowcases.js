@@ -19,7 +19,7 @@
       "use strict";
       a.r(t),
         a.d(t, "ProfileShowcasesPage", function () {
-          return E;
+          return v;
         });
       var s = a("mrSG"),
         n = a("q1tI"),
@@ -35,7 +35,8 @@
         h = a("ehaW"),
         d = a("+j4l"),
         _ = a("7v2d"),
-        b = function (e) {
+        b = a.n(_),
+        g = function (e) {
           return r.a.createElement(
             h.d,
             Object(s.a)({}, e, {
@@ -50,7 +51,7 @@
             })
           );
         },
-        g = function (e) {
+        w = function (e) {
           return r.a.createElement(
             h.c,
             Object(s.a)({}, e, {
@@ -65,7 +66,7 @@
             })
           );
         },
-        w = function (e) {
+        P = function (e) {
           return r.a.createElement(
             l.a,
             {
@@ -77,12 +78,12 @@
               className: o.PageContainer,
             },
             r.a.createElement("img", {
-              src: _,
+              src: b.a,
               className: i.ProfileShowcaseHeaderImage,
             })
           );
         },
-        P = function (e) {
+        S = function (e) {
           var t = e.point_cost,
             a = e.upgradable_showcases,
             s = e.purchased_upgrades,
@@ -97,7 +98,7 @@
           var c = a.map(function (e) {
             var a = n.get(e),
               s = a + 1;
-            return r.a.createElement(b, {
+            return r.a.createElement(g, {
               key: e,
               point_cost: t,
               customization_type: e,
@@ -122,7 +123,7 @@
             )
           );
         },
-        S = function (e) {
+        E = function (e) {
           var t = e.point_cost,
             a = e.purchasable_showcases,
             s = e.purchased_showcases,
@@ -141,7 +142,7 @@
                 i.set(e.customization_type, e.level);
               });
           var u = a.map(function (e) {
-            return r.a.createElement(g, {
+            return r.a.createElement(w, {
               key: e,
               point_cost: t,
               current_level: i.get(e),
@@ -166,7 +167,7 @@
             )
           );
         },
-        E = (function (e) {
+        v = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -196,13 +197,13 @@
                       title: Object(p.f)("#ShopPageTitle_ProfileShowcases"),
                     })
                   ),
-                  r.a.createElement(w, null),
-                  r.a.createElement(P, {
+                  r.a.createElement(P, null),
+                  r.a.createElement(S, {
                     point_cost: e,
                     upgradable_showcases: t,
                     purchased_upgrades: a,
                   }),
-                  r.a.createElement(S, {
+                  r.a.createElement(E, {
                     point_cost: s,
                     purchasable_showcases: n,
                     purchased_showcases: c,
@@ -215,7 +216,7 @@
             (t = Object(s.c)([c.a], t))
           );
         })(r.a.Component);
-      t.default = E;
+      t.default = v;
     },
   },
 ]);

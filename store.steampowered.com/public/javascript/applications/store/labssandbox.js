@@ -391,7 +391,7 @@
         O = r("kyHq"),
         E = r("TyAF"),
         C = r("exH9"),
-        A = (function (e) {
+        B = (function (e) {
           function t(t) {
             var r = e.call(this, t) || this;
             return (
@@ -647,7 +647,7 @@
             t
           );
         })(b.a.Component),
-        I = (function (e) {
+        A = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -692,7 +692,7 @@
               return b.a.createElement(
                 "div",
                 { className: v.LabsSimilarity },
-                b.a.createElement(A, {
+                b.a.createElement(B, {
                   fnOnSelection: this.OnAppSelected,
                   ref: this.ref_app_a,
                   showAppIds: !0,
@@ -702,7 +702,7 @@
                 b.a.createElement("div", { className: v.HorizontalSpacer }),
                 b.a.createElement("div", { className: v.Score }, e),
                 b.a.createElement("div", { className: v.HorizontalSpacer }),
-                b.a.createElement(A, {
+                b.a.createElement(B, {
                   fnOnSelection: this.OnAppSelected,
                   ref: this.ref_app_b,
                   showAppIds: !0,
@@ -715,7 +715,7 @@
             t
           );
         })(b.a.Component),
-        j = (function (e) {
+        I = (function (e) {
           function t(t) {
             var r = e.call(this, t) || this;
             return (
@@ -805,7 +805,7 @@
                   selectedOption: "default",
                 }),
                 b.a.createElement("h1", null, "Games similar to:"),
-                b.a.createElement(A, {
+                b.a.createElement(B, {
                   fnOnSelection: this.OnSelectedApp,
                   ref: this.app_selector_ref,
                   appidInitial: 268500,
@@ -824,7 +824,7 @@
             (t = Object(a.c)([E.a], t))
           );
         })(b.a.Component),
-        M = (function (e) {
+        j = (function (e) {
           function t(t) {
             var r = e.call(this, t) || this;
             return (
@@ -866,7 +866,7 @@
                     selectedOption: "Plus",
                   })
                 ),
-                b.a.createElement(A, { fnOnSelection: this.OnSelectedApp })
+                b.a.createElement(B, { fnOnSelection: this.OnSelectedApp })
               );
             }),
             Object(a.c)([l.C], t.prototype, "selected_app", void 0),
@@ -876,7 +876,7 @@
             (t = Object(a.c)([E.a], t))
           );
         })(b.a.Component),
-        B = (function (e) {
+        M = (function (e) {
           function t(t) {
             var r = e.call(this, t) || this;
             (r.operands = []),
@@ -1004,7 +1004,7 @@
               ) {
                 var p = l[o];
                 i.push(
-                  b.a.createElement(M, {
+                  b.a.createElement(j, {
                     app: p.app,
                     operator: p.operator,
                     key: s,
@@ -1171,11 +1171,11 @@
                 b.a.createElement(
                   "div",
                   { className: v.SelectEndpoints },
-                  b.a.createElement(A, {
+                  b.a.createElement(B, {
                     fnOnSelection: this.OnSelectedStartApp,
                     strPrompt: "Select start game",
                   }),
-                  b.a.createElement(A, {
+                  b.a.createElement(B, {
                     fnOnSelection: this.OnSelectedEndApp,
                     strPrompt: "Select end game",
                   })
@@ -1206,13 +1206,13 @@
           b.a.Fragment,
           null,
           b.a.createElement("h1", null, "Similar Games"),
-          b.a.createElement(j, { max_similar: 10 }),
+          b.a.createElement(I, { max_similar: 10 }),
           b.a.createElement("div", { className: v.Spacer }),
           b.a.createElement("h1", null, "Similarity"),
-          b.a.createElement(I, null),
+          b.a.createElement(A, null),
           b.a.createElement("div", { className: v.Spacer }),
           b.a.createElement("h1", null, "Mixer"),
-          b.a.createElement(B, { max_similar: 10, max_operands: 6 }),
+          b.a.createElement(M, { max_similar: 10, max_operands: 6 }),
           b.a.createElement("div", { className: v.Spacer }),
           b.a.createElement("h1", null, "Pathfinder"),
           b.a.createElement(R, null)
@@ -1220,18 +1220,18 @@
       }
       var P = r("kLLr"),
         N = r("qiKp"),
-        k = r("bxBv"),
-        L = r("hRO2"),
-        F = r("OS8t"),
-        z = r("sRB7"),
-        T = L.Message;
+        z = r("bxBv"),
+        k = r("hRO2"),
+        L = r("OS8t"),
+        F = r("sRB7"),
+        T = k.Message;
       var D,
         U = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var a = e.call(this) || this;
             return (
-              t.prototype.items || F.a(t.M()),
+              t.prototype.items || L.a(t.M()),
               T.initialize(a, r, 0, -1, [1], null),
               a
             );
@@ -1243,37 +1243,43 @@
                 t.sm_m ||
                   (t.sm_m = {
                     proto: t,
-                    fields: { items: { n: 1, c: H, r: !0, q: !0 } },
+                    fields: { items: { n: 1, c: W, r: !0, q: !0 } },
                   }),
                 t.sm_m
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = F.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = L.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return F.g(t.M(), e, r);
+              return L.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return F.c(t.M(), e);
+              return L.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new L.BinaryReader(e),
+              var r = new k.BinaryReader(e),
                 a = new t();
               return t.deserializeBinaryFromReader(a, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return F.b(t.MBF(), e, r);
+              return L.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new L.BinaryWriter();
+              var e = new k.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              F.f(t.M(), e, r);
+              L.f(t.M(), e, r);
+            }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new k.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
             }),
             (t.prototype.getClassName = function () {
               return "CStoreAppSimilarity_PrioritizeAppsForUser_Response";
@@ -1281,12 +1287,12 @@
             t
           );
         })(T),
-        H = (function (e) {
+        W = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var a = e.call(this) || this;
             return (
-              t.prototype.id || F.a(t.M()),
+              t.prototype.id || L.a(t.M()),
               T.initialize(a, r, 0, -1, [50], null),
               a
             );
@@ -1299,51 +1305,57 @@
                   (t.sm_m = {
                     proto: t,
                     fields: {
-                      id: { n: 1, c: z.f },
+                      id: { n: 1, c: F.f },
                       already_owned: {
                         n: 2,
-                        br: F.d.readBool,
-                        bw: F.h.writeBool,
+                        br: L.d.readBool,
+                        bw: L.h.writeBool,
                       },
-                      weight: { n: 3, br: F.d.readDouble, bw: F.h.writeDouble },
+                      weight: { n: 3, br: L.d.readDouble, bw: L.h.writeDouble },
                       weight_before_dedupe: {
                         n: 4,
-                        br: F.d.readDouble,
-                        bw: F.h.writeDouble,
+                        br: L.d.readDouble,
+                        bw: L.h.writeDouble,
                       },
-                      debug_matches: { n: 50, c: G, r: !0, q: !0 },
-                      debug_popularity: { n: 51, c: W },
+                      debug_matches: { n: 50, c: H, r: !0, q: !0 },
+                      debug_popularity: { n: 51, c: G },
                     },
                   }),
                 t.sm_m
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = F.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = L.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return F.g(t.M(), e, r);
+              return L.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return F.c(t.M(), e);
+              return L.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new L.BinaryReader(e),
+              var r = new k.BinaryReader(e),
                 a = new t();
               return t.deserializeBinaryFromReader(a, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return F.b(t.MBF(), e, r);
+              return L.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new L.BinaryWriter();
+              var e = new k.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              F.f(t.M(), e, r);
+              L.f(t.M(), e, r);
+            }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new k.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
             }),
             (t.prototype.getClassName = function () {
               return "CStoreAppSimilarity_PrioritizeAppsForUser_Response_ResultItem";
@@ -1351,12 +1363,12 @@
             t
           );
         })(T),
-        G = (function (e) {
+        H = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var a = e.call(this) || this;
             return (
-              t.prototype.source_app || F.a(t.M()),
+              t.prototype.source_app || L.a(t.M()),
               T.initialize(a, r, 0, -1, void 0, null),
               a
             );
@@ -1371,14 +1383,14 @@
                     fields: {
                       source_app: {
                         n: 1,
-                        br: F.d.readInt32,
-                        bw: F.h.writeInt32,
+                        br: L.d.readInt32,
+                        bw: L.h.writeInt32,
                       },
-                      weight: { n: 2, br: F.d.readDouble, bw: F.h.writeDouble },
+                      weight: { n: 2, br: L.d.readDouble, bw: L.h.writeDouble },
                       similarity: {
                         n: 3,
-                        br: F.d.readDouble,
-                        bw: F.h.writeDouble,
+                        br: L.d.readDouble,
+                        bw: L.h.writeDouble,
                       },
                     },
                   }),
@@ -1386,31 +1398,37 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = F.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = L.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return F.g(t.M(), e, r);
+              return L.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return F.c(t.M(), e);
+              return L.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new L.BinaryReader(e),
+              var r = new k.BinaryReader(e),
                 a = new t();
               return t.deserializeBinaryFromReader(a, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return F.b(t.MBF(), e, r);
+              return L.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new L.BinaryWriter();
+              var e = new k.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              F.f(t.M(), e, r);
+              L.f(t.M(), e, r);
+            }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new k.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
             }),
             (t.prototype.getClassName = function () {
               return "CStoreAppSimilarity_PrioritizeAppsForUser_Response_ResultItem_MatchDebugInfo";
@@ -1418,12 +1436,12 @@
             t
           );
         })(T),
-        W = (function (e) {
+        G = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var a = e.call(this) || this;
             return (
-              t.prototype.rank || F.a(t.M()),
+              t.prototype.rank || L.a(t.M()),
               T.initialize(a, r, 0, -1, void 0, null),
               a
             );
@@ -1436,16 +1454,16 @@
                   (t.sm_m = {
                     proto: t,
                     fields: {
-                      rank: { n: 1, br: F.d.readUint32, bw: F.h.writeUint32 },
+                      rank: { n: 1, br: L.d.readUint32, bw: L.h.writeUint32 },
                       popularity_factor: {
                         n: 2,
-                        br: F.d.readDouble,
-                        bw: F.h.writeDouble,
+                        br: L.d.readDouble,
+                        bw: L.h.writeDouble,
                       },
                       weight_before_popularity: {
                         n: 3,
-                        br: F.d.readDouble,
-                        bw: F.h.writeDouble,
+                        br: L.d.readDouble,
+                        bw: L.h.writeDouble,
                       },
                     },
                   }),
@@ -1453,31 +1471,37 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = F.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = L.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return F.g(t.M(), e, r);
+              return L.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return F.c(t.M(), e);
+              return L.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new L.BinaryReader(e),
+              var r = new k.BinaryReader(e),
                 a = new t();
               return t.deserializeBinaryFromReader(a, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return F.b(t.MBF(), e, r);
+              return L.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new L.BinaryWriter();
+              var e = new k.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              F.f(t.M(), e, r);
+              L.f(t.M(), e, r);
+            }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new k.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
             }),
             (t.prototype.getClassName = function () {
               return "CStoreAppSimilarity_PrioritizeAppsForUser_Response_ResultItem_PopularityDebugInfo";
@@ -1490,7 +1514,7 @@
             void 0 === r && (r = null);
             var a = e.call(this) || this;
             return (
-              t.prototype.steamid || F.a(t.M()),
+              t.prototype.steamid || L.a(t.M()),
               T.initialize(a, r, 0, -1, void 0, null),
               a
             );
@@ -1505,52 +1529,58 @@
                     fields: {
                       steamid: {
                         n: 1,
-                        br: F.d.readFixed64String,
-                        bw: F.h.writeFixed64String,
+                        br: L.d.readFixed64String,
+                        bw: L.h.writeFixed64String,
                       },
                       clusters_to_return: {
                         n: 2,
-                        br: F.d.readInt32,
-                        bw: F.h.writeInt32,
+                        br: L.d.readInt32,
+                        bw: L.h.writeInt32,
                       },
                       cluster_index: {
                         n: 3,
-                        br: F.d.readInt32,
-                        bw: F.h.writeInt32,
+                        br: L.d.readInt32,
+                        bw: L.h.writeInt32,
                       },
-                      context: { n: 4, c: z.b },
-                      data_request: { n: 5, c: z.c },
+                      context: { n: 4, c: F.b },
+                      data_request: { n: 5, c: F.c },
                     },
                   }),
                 t.sm_m
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = F.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = L.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return F.g(t.M(), e, r);
+              return L.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return F.c(t.M(), e);
+              return L.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new L.BinaryReader(e),
+              var r = new k.BinaryReader(e),
                 a = new t();
               return t.deserializeBinaryFromReader(a, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return F.b(t.MBF(), e, r);
+              return L.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new L.BinaryWriter();
+              var e = new k.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              F.f(t.M(), e, r);
+              L.f(t.M(), e, r);
+            }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new k.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
             }),
             (t.prototype.getClassName = function () {
               return "CStoreAppSimilarity_IdentifyClustersFromPlaytime_Request";
@@ -1563,7 +1593,7 @@
             void 0 === r && (r = null);
             var a = e.call(this) || this;
             return (
-              t.prototype.clusters || F.a(t.M()),
+              t.prototype.clusters || L.a(t.M()),
               T.initialize(a, r, 0, -1, [1], null),
               a
             );
@@ -1581,31 +1611,37 @@
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = F.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = L.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return F.g(t.M(), e, r);
+              return L.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return F.c(t.M(), e);
+              return L.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new L.BinaryReader(e),
+              var r = new k.BinaryReader(e),
                 a = new t();
               return t.deserializeBinaryFromReader(a, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return F.b(t.MBF(), e, r);
+              return L.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new L.BinaryWriter();
+              var e = new k.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              F.f(t.M(), e, r);
+              L.f(t.M(), e, r);
+            }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new k.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
             }),
             (t.prototype.getClassName = function () {
               return "CStoreAppSimilarity_IdentifyClustersFromPlaytime_Response";
@@ -1618,7 +1654,7 @@
             void 0 === r && (r = null);
             var a = e.call(this) || this;
             return (
-              t.prototype.cluster_id || F.a(t.M()),
+              t.prototype.cluster_id || L.a(t.M()),
               T.initialize(a, r, 0, -1, [5, 6, 7], null),
               a
             );
@@ -1633,70 +1669,76 @@
                     fields: {
                       cluster_id: {
                         n: 1,
-                        br: F.d.readInt32,
-                        bw: F.h.writeInt32,
+                        br: L.d.readInt32,
+                        bw: L.h.writeInt32,
                       },
                       playtime_forever: {
                         n: 2,
-                        br: F.d.readInt32,
-                        bw: F.h.writeInt32,
+                        br: L.d.readInt32,
+                        bw: L.h.writeInt32,
                       },
                       playtime_2weeks: {
                         n: 3,
-                        br: F.d.readInt32,
-                        bw: F.h.writeInt32,
+                        br: L.d.readInt32,
+                        bw: L.h.writeInt32,
                       },
                       last_played: {
                         n: 4,
-                        br: F.d.readUint32,
-                        bw: F.h.writeUint32,
+                        br: L.d.readUint32,
+                        bw: L.h.writeUint32,
                       },
                       played_appids: {
                         n: 5,
                         r: !0,
                         q: !0,
-                        br: F.d.readInt32,
-                        bw: F.h.writeRepeatedInt32,
+                        br: L.d.readInt32,
+                        bw: L.h.writeRepeatedInt32,
                       },
                       similar_items_appids: {
                         n: 6,
                         r: !0,
                         q: !0,
-                        br: F.d.readInt32,
-                        bw: F.h.writeRepeatedInt32,
+                        br: L.d.readInt32,
+                        bw: L.h.writeRepeatedInt32,
                       },
-                      similar_items: { n: 7, c: z.e, r: !0, q: !0 },
+                      similar_items: { n: 7, c: F.e, r: !0, q: !0 },
                     },
                   }),
                 t.sm_m
               );
             }),
             (t.MBF = function () {
-              return t.sm_mbf || (t.sm_mbf = F.e(t.M())), t.sm_mbf;
+              return t.sm_mbf || (t.sm_mbf = L.e(t.M())), t.sm_mbf;
             }),
             (t.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function (e, r) {
-              return F.g(t.M(), e, r);
+              return L.g(t.M(), e, r);
             }),
             (t.fromObject = function (e) {
-              return F.c(t.M(), e);
+              return L.c(t.M(), e);
             }),
             (t.deserializeBinary = function (e) {
-              var r = new L.BinaryReader(e),
+              var r = new k.BinaryReader(e),
                 a = new t();
               return t.deserializeBinaryFromReader(a, r);
             }),
             (t.deserializeBinaryFromReader = function (e, r) {
-              return F.b(t.MBF(), e, r);
+              return L.b(t.MBF(), e, r);
             }),
             (t.prototype.serializeBinary = function () {
-              var e = new L.BinaryWriter();
+              var e = new k.BinaryWriter();
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, r) {
-              F.f(t.M(), e, r);
+              L.f(t.M(), e, r);
+            }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new k.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
             }),
             (t.prototype.getClassName = function () {
               return "CStoreAppSimilarity_IdentifyClustersFromPlaytime_Response_Cluster";
@@ -1738,7 +1780,7 @@
           function e(e, t, r, a) {
             var n = this;
             this.m_callbacksLoaded = new N.a();
-            var i = k.b.Init(q);
+            var i = z.b.Init(q);
             Object(V.a)(i),
               a && Object(V.b)(i, a),
               i.Body().set_steamid(t || o.k.steamid),

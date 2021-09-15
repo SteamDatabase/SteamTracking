@@ -7573,7 +7573,7 @@
             i
           );
         },
-        j = Object(s.a)(function (e) {
+        B = Object(s.a)(function (e) {
           var t = Object(c.e)(),
             a = t[0],
             o = t[1],
@@ -7633,7 +7633,7 @@
               r.a.createElement(
                 "div",
                 { className: F.a.FAQDashboard },
-                r.a.createElement(B, null),
+                r.a.createElement(j, null),
                 r.a.createElement(U, {
                   eCurrentSortColumn: s,
                   SetSortColumn: l,
@@ -7653,7 +7653,7 @@
             )
           );
         }),
-        B = function (e) {
+        j = function (e) {
           var t = r.a.useCallback(function () {
             return Object(P.b)(r.a.createElement(G, null), window, {
               strTitle: Object(z.f)("#FAQDashboard_CreateFAQButton"),
@@ -9151,8 +9151,8 @@
             )
           );
         },
-        je = a("eYkW"),
-        Be = a.n(je),
+        Be = a("eYkW"),
+        je = a.n(Be),
         Ge = Object(s.a)(function (e) {
           var t,
             a = e.draft,
@@ -9169,7 +9169,7 @@
                   (t[Re.EventEditorTopBarContainer] = !0),
                   (t[Re.EventUnPublished] = !i && !s),
                   (t[Re.EventPublished] = !i && s),
-                  (t[Be.a.FAQPreview] = i),
+                  (t[je.a.FAQPreview] = i),
                   t)
                 ),
               },
@@ -9189,7 +9189,7 @@
                 null,
                 r.a.createElement(
                   "div",
-                  { className: Be.a.EditorInternalNameLabel },
+                  { className: je.a.EditorInternalNameLabel },
                   Object(z.f)(
                     i
                       ? "#FAQEditor_InternalName_Preview"
@@ -9198,7 +9198,7 @@
                 ),
                 r.a.createElement(
                   "div",
-                  { className: Be.a.EditorInternalName },
+                  { className: je.a.EditorInternalName },
                   a.GetFAQInternalName(),
                   r.a.createElement("img", {
                     src: Fe.a,
@@ -9951,7 +9951,7 @@
                                       to: y(o.k_eCommunityDashboard),
                                     });
                               }
-                              return r.a.createElement(j, null);
+                              return r.a.createElement(B, null);
                             },
                           },
                         });
@@ -9963,7 +9963,7 @@
                         return r.a.createElement(mt.a, {
                           config: {
                             "faqs-root": function () {
-                              return r.a.createElement(j, null);
+                              return r.a.createElement(B, null);
                             },
                           },
                         });
@@ -10450,6 +10450,12 @@
             (t.serializeBinaryToWriter = function (e, a) {
               S.f(t.M(), e, a);
             }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new v.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
+            }),
             (t.prototype.getClassName = function () {
               return "CClanFAQSummary";
             }),
@@ -10520,6 +10526,12 @@
             }),
             (t.serializeBinaryToWriter = function (e, a) {
               S.f(t.M(), e, a);
+            }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new v.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
             }),
             (t.prototype.getClassName = function () {
               return "CClanFAQSummary_CLanguageInfo";
@@ -10608,6 +10620,12 @@
             (t.serializeBinaryToWriter = function (e, a) {
               S.f(t.M(), e, a);
             }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new v.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
+            }),
             (t.prototype.getClassName = function () {
               return "CClanFAQContent";
             }),
@@ -10679,6 +10697,12 @@
             (t.serializeBinaryToWriter = function (e, a) {
               S.f(t.M(), e, a);
             }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new v.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
+            }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_Create_Request";
             }),
@@ -10739,6 +10763,12 @@
             }),
             (t.serializeBinaryToWriter = function (e, a) {
               S.f(t.M(), e, a);
+            }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new v.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
             }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_Create_Response";
@@ -10806,6 +10836,12 @@
             (t.serializeBinaryToWriter = function (e, a) {
               S.f(t.M(), e, a);
             }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new v.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
+            }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_Delete_Request";
             }),
@@ -10842,6 +10878,12 @@
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, t) {}),
+            (t.prototype.serializeBase64String = function () {
+              var e = new v.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
+            }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_Delete_Response";
             }),
@@ -10913,6 +10955,12 @@
             (t.serializeBinaryToWriter = function (e, a) {
               S.f(t.M(), e, a);
             }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new v.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
+            }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_UpdateInternalName_Request";
             }),
@@ -10949,6 +10997,12 @@
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, t) {}),
+            (t.prototype.serializeBase64String = function () {
+              var e = new v.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
+            }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_UpdateInternalName_Response";
             }),
@@ -11020,6 +11074,12 @@
             (t.serializeBinaryToWriter = function (e, a) {
               S.f(t.M(), e, a);
             }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new v.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
+            }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_UpdateJsonData_Request";
             }),
@@ -11056,6 +11116,12 @@
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, t) {}),
+            (t.prototype.serializeBase64String = function () {
+              var e = new v.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
+            }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_UpdateJsonData_Response";
             }),
@@ -11132,6 +11198,12 @@
             (t.serializeBinaryToWriter = function (e, a) {
               S.f(t.M(), e, a);
             }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new v.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
+            }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_SetVisibility_Request";
             }),
@@ -11168,6 +11240,12 @@
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, t) {}),
+            (t.prototype.serializeBase64String = function () {
+              var e = new v.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
+            }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_SetVisibility_Response";
             }),
@@ -11245,6 +11323,12 @@
             (t.serializeBinaryToWriter = function (e, a) {
               S.f(t.M(), e, a);
             }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new v.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
+            }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_UpdateDraft_Request";
             }),
@@ -11305,6 +11389,12 @@
             }),
             (t.serializeBinaryToWriter = function (e, a) {
               S.f(t.M(), e, a);
+            }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new v.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
             }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_UpdateDraft_Response";
@@ -11379,6 +11469,12 @@
             (t.serializeBinaryToWriter = function (e, a) {
               S.f(t.M(), e, a);
             }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new v.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
+            }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_PublishDraft_Request";
             }),
@@ -11440,6 +11536,12 @@
             (t.serializeBinaryToWriter = function (e, a) {
               S.f(t.M(), e, a);
             }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new v.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
+            }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_PublishDraft_Response";
             }),
@@ -11492,6 +11594,12 @@
             (t.serializeBinaryToWriter = function (e, a) {
               S.f(t.M(), e, a);
             }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new v.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
+            }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_PreviewDraft_Response";
             }),
@@ -11543,6 +11651,12 @@
             }),
             (t.serializeBinaryToWriter = function (e, a) {
               S.f(t.M(), e, a);
+            }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new v.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
             }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_GetFAQ_Response";
@@ -11620,13 +11734,19 @@
             (t.serializeBinaryToWriter = function (e, a) {
               S.f(t.M(), e, a);
             }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new v.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
+            }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_GetFAQVersion_Request";
             }),
             t
           );
         })(k),
-        j = (function (e) {
+        B = (function (e) {
           function t(a) {
             void 0 === a && (a = null);
             var o = e.call(this) || this;
@@ -11672,13 +11792,19 @@
             (t.serializeBinaryToWriter = function (e, a) {
               S.f(t.M(), e, a);
             }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new v.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
+            }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_GetFAQVersion_Response";
             }),
             t
           );
         })(k),
-        B = (function (e) {
+        j = (function (e) {
           function t(a) {
             void 0 === a && (a = null);
             var o = e.call(this) || this;
@@ -11738,6 +11864,12 @@
             (t.serializeBinaryToWriter = function (e, a) {
               S.f(t.M(), e, a);
             }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new v.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
+            }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_GetAllDrafts_Request";
             }),
@@ -11796,6 +11928,12 @@
             (t.serializeBinaryToWriter = function (e, a) {
               S.f(t.M(), e, a);
             }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new v.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
+            }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_GetAllDrafts_Response";
             }),
@@ -11850,6 +11988,12 @@
             }),
             (t.serializeBinaryToWriter = function (e, a) {
               S.f(t.M(), e, a);
+            }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new v.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
             }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_GetAllFAQsForClan_Response";
@@ -11906,6 +12050,12 @@
             (t.serializeBinaryToWriter = function (e, a) {
               S.f(t.M(), e, a);
             }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new v.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
+            }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_GetAllLatestVersionPublishedFAQS_Response";
             }),
@@ -11942,6 +12092,12 @@
               return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (t.serializeBinaryToWriter = function (e, t) {}),
+            (t.prototype.serializeBase64String = function () {
+              var e = new v.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
+            }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_CheckFAQPermissions_Response";
             }),
@@ -12008,6 +12164,12 @@
             }),
             (t.serializeBinaryToWriter = function (e, a) {
               S.f(t.M(), e, a);
+            }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new v.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
             }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_SearchFAQs_Response";
@@ -12086,6 +12248,12 @@
             (t.serializeBinaryToWriter = function (e, a) {
               S.f(t.M(), e, a);
             }),
+            (t.prototype.serializeBase64String = function () {
+              var e = new v.BinaryWriter();
+              return (
+                t.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
+            }),
             (t.prototype.getClassName = function () {
               return "CClanFAQS_SearchFAQs_Response_CFAQSearchResult";
             }),
@@ -12135,7 +12303,7 @@
             });
           }),
           (e.GetFAQVersion = function (e, t) {
-            return e.SendMsg("ClanFAQS.GetFAQVersion#1", t, j, {
+            return e.SendMsg("ClanFAQS.GetFAQVersion#1", t, B, {
               ePrivilege: 1,
             });
           }),
@@ -12530,7 +12698,7 @@
                     case 0:
                       if (this.m_mapFAQDrafts.has(e))
                         return [2, this.m_mapFAQDrafts.get(e)];
-                      (t = u.b.Init(B)).Body().set_steamid(y.b.CLANSTEAMID),
+                      (t = u.b.Init(j)).Body().set_steamid(y.b.CLANSTEAMID),
                         t.Body().set_faq_id(e),
                         (a = 2),
                         (i.label = 1);

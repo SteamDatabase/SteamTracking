@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6755855";
+var CLSTAMP = "6765812";
 !(function (e) {
   function t(t) {
     for (
@@ -128,7 +128,7 @@ var CLSTAMP = "6755855";
                 16: "82d9a5caa3a245b03f94",
                 17: "9cd9a375317153845c15",
                 18: "c1980c85a29018eacd53",
-                19: "c133411e2acc620288ea",
+                19: "2d1819283a52a330d6ac",
                 20: "bfe385adc63900ce1a1a",
                 21: "75af601b87b9d76519eb",
                 22: "483c0e474412527b3222",
@@ -137,7 +137,7 @@ var CLSTAMP = "6755855";
                 25: "ca9811014260395a121c",
                 26: "dc922e8b2effaaa3c6ef",
                 27: "06bcd6c190e12ee13e19",
-                28: "f6c86d6bd0463e319ce3",
+                28: "08e8d0b33518fd2f6a2d",
                 29: "ba105c9bafc23bc9ed6f",
                 30: "6d7365c7989476aed423",
                 31: "09a47f7371cb212bef24",
@@ -149,35 +149,35 @@ var CLSTAMP = "6755855";
                 37: "b9ec7c20293707d14a45",
                 38: "fa9ced5ffba796a6cae5",
                 39: "01e61b4c2d0faedc8e45",
-                40: "36b31bc060e0fcbcbe7d",
-                41: "56d005e6ef7ccfac457f",
-                42: "08f7f2cdf9dd1ef663ff",
-                43: "be0b2636a16a67cefc3d",
-                44: "70b43f564c90ab5bb36b",
-                45: "57325e89f7d67447e5f6",
-                46: "4fb3734e4393f2a57ec3",
-                47: "e9088a61e713b33334bd",
-                48: "91f27fbda4077105f0a1",
-                49: "8c1f7e4ed9a8ae03dfde",
-                50: "5a95054575c4c5e651f5",
-                51: "f6eecb5bc6e36b150e29",
-                52: "4fa623373b42b7b83661",
-                53: "f3e1c17cfd74ad75472a",
-                54: "c8984803e2b911a2f6a1",
-                55: "a30f865ec8c4e0897fce",
-                56: "ecdd9886bc30e80d84a2",
-                57: "13188b587117b902a921",
-                58: "c53b46e6d98c857bc8e2",
-                59: "8d1d56e3e5a48dddfe5e",
+                40: "aa987cfb2c76f6793b86",
+                41: "709ebaaf169698f85119",
+                42: "9a33762e90af8bdad84c",
+                43: "492e38e9b31b968305aa",
+                44: "2e9f91d542f84e20d307",
+                45: "d7da0e8c1d33a95fda5e",
+                46: "7f9a421dab644cd40efc",
+                47: "69e410eb79ea39b67239",
+                48: "e2572812c0222d18cb13",
+                49: "e8b01f6325d8a7009a1c",
+                50: "d4421c991112bf894409",
+                51: "cf80d4f115502e2e7e5b",
+                52: "d7b3a792ac85001f71ef",
+                53: "f3a0f1e4d46fd71e433e",
+                54: "8ca1cab738eaae065279",
+                55: "450c90a6c0d98402e2f9",
+                56: "31f64ce1a217fbbd9bb8",
+                57: "8368a6e323bfacf4cab5",
+                58: "49f4e62375da28afdc9a",
+                59: "1b1e1756d486f6619ed8",
                 60: "f3be8b8311485ec7f380",
-                61: "37ca2c431678d13e5468",
-                62: "8676a78ca3aee7e04c22",
-                63: "ff1d7856b97f3557c764",
-                64: "c0019bfd0a34a8b0f3a6",
-                65: "c8f7bdb7a212ef5e9505",
-                66: "1c030165593eef03ded4",
-                67: "ae1deca1d9ddb3dee5b5",
-                68: "f2298d74e5bb13e3603d",
+                61: "504576893a34b3a57e66",
+                62: "9baf1b167841c31e9cf8",
+                63: "6189dfb09eb69d2beaf6",
+                64: "a9ac30063bf28e9a4e2b",
+                65: "ff0de26a19e1f9ad79b3",
+                66: "34c1633c66692e4671e7",
+                67: "469e07ffd2d3ed6aeb4d",
+                68: "a9315406d6c872777f18",
               }[e]
             );
           })(e));
@@ -562,6 +562,19 @@ var CLSTAMP = "6755855";
           return t;
       }
     }
+    var y;
+    !(function (e) {
+      (e[(e.k_ECaptivePortalState_Unknown = 0)] =
+        "k_ECaptivePortalState_Unknown"),
+        (e[(e.k_ECaptivePortalState_Connected = 1)] =
+          "k_ECaptivePortalState_Connected"),
+        (e[(e.k_ECaptivePortalState_CaptivePortal = 2)] =
+          "k_ECaptivePortalState_CaptivePortal"),
+        (e[(e.k_ECaptivePortalState_TimedOut = 3)] =
+          "k_ECaptivePortalState_TimedOut"),
+        (e[(e.k_ECaptivePortalState_Failed = 4)] =
+          "k_ECaptivePortalState_Failed");
+    })(y || (y = {}));
   },
   "1n9R": function (e, t, n) {
     "use strict";
