@@ -46402,6 +46402,11 @@
                   u++
                 ) {
                   var m = e.children[u].clientWidth;
+                  if (m > s) {
+                    for (var h = u; h < e.children.length; h++)
+                      d.push({ x: -1, y: -1 });
+                    break;
+                  }
                   if (
                     (l + m > s && ((l = 0), c++, a++, (p = 0)),
                     c < r
@@ -50134,7 +50139,7 @@
                     r.createElement(
                       "div",
                       { className: uc.a.SectionItemStatusLine },
-                      -1 != s.update_seconds_remaining &&
+                      s.update_seconds_remaining >= 0 &&
                         r.createElement(
                           "div",
                           { className: uc.a.StartTime },

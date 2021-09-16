@@ -1,5 +1,5 @@
 /* Third-party software licenses can be found at licenses.txt */
-var CLSTAMP = "6760946";
+var CLSTAMP = "6768350";
 !(function (e) {
   function t(t) {
     for (
@@ -33608,8 +33608,14 @@ var CLSTAMP = "6760946";
     n.d(t, "b", function () {
       return G;
     }),
+      n.d(t, "c", function () {
+        return N;
+      }),
+      n.d(t, "d", function () {
+        return U;
+      }),
       n.d(t, "a", function () {
-        return k;
+        return W;
       });
     var r = n("mrSG"),
       i = n("2vnA"),
@@ -33873,8 +33879,10 @@ var CLSTAMP = "6760946";
       L = n("AKiZ"),
       P = n("C4Nl"),
       G = 593110,
-      N = "UIStoreLocalState",
-      U = (function () {
+      N = 1675200,
+      U = 1675180,
+      k = "UIStoreLocalState",
+      x = (function () {
         return function () {
           (this.nVersion = 1),
             (this.eGameListView = 1),
@@ -33885,7 +33893,7 @@ var CLSTAMP = "6760946";
             (this.bGroupBySharedLibraries = !1);
         };
       })(),
-      k = new ((function () {
+      W = new ((function () {
         function e() {
           (this.m_localStorage = new l.a()),
             (this.m_nNavEpoch = 0),
@@ -33919,11 +33927,11 @@ var CLSTAMP = "6760946";
                       s.c.SetShowDurationControlDialogCallback(
                         this.ShowDurationControlDialog
                       ),
-                      [4, this.m_localStorage.GetObject(N)]
+                      [4, this.m_localStorage.GetObject(k)]
                     );
                   case 1:
                     return (
-                      ((t = r.sent()) && 1 == t.nVersion) || (t = new U()),
+                      ((t = r.sent()) && 1 == t.nVersion) || (t = new x()),
                       Object(i.G)(function () {
                         var e = t.eGameListView;
                         (o.m_eSelectedGameListView = e || 1),
@@ -34424,7 +34432,7 @@ var CLSTAMP = "6760946";
           (e.prototype.GetVisibleCollections = function () {
             return this.GetCollectionList().filter(function (e) {
               return (
-                e.visibleApps.filter(k.currentAppFilter.Matches).length > 0
+                e.visibleApps.filter(W.currentAppFilter.Matches).length > 0
               );
             });
           }),
@@ -34572,7 +34580,7 @@ var CLSTAMP = "6760946";
                             [2])
                           : (this.ExitSearch(),
                             (c = new p.a()).SelectOption(n, i, !0),
-                            k.StartSearchByType(c),
+                            W.StartSearchByType(c),
                             Object(I.c)(window, o),
                             [2]))
                       : (console.log("Ignoring unrecognized tag", e), [2]);
@@ -34775,7 +34783,7 @@ var CLSTAMP = "6760946";
               var e;
               return Object(r.e)(this, function (t) {
                 return (
-                  ((e = new U()).eGameListView = this.m_eSelectedGameListView),
+                  ((e = new x()).eGameListView = this.m_eSelectedGameListView),
                   (e.collectionFilter = this.m_collectionsAppFilter.ToStorageFormat()),
                   (e.bGroupedByCollection = this.m_bGameListGroupedByCollection),
                   (e.bSortedByRecent = this.m_bGameListSortedByRecent),
@@ -34784,7 +34792,7 @@ var CLSTAMP = "6760946";
                   )),
                   (e.currentSelection = this.m_gameListSelection),
                   (e.bGroupBySharedLibraries = this.m_bGameListGroupedBySharedLibraries),
-                  [2, this.m_localStorage.StoreObject(N, e)]
+                  [2, this.m_localStorage.StoreObject(k, e)]
                 );
               });
             });
@@ -34925,7 +34933,7 @@ var CLSTAMP = "6760946";
           e
         );
       })())();
-    window.uiStore = k;
+    window.uiStore = W;
   },
   Oxa8: function (e, t, n) {
     "use strict";
@@ -49913,12 +49921,22 @@ var CLSTAMP = "6760946";
         }),
         (e.prototype.GetTakeOverEvents = function () {
           return this.m_vecHomeTakeOverEventsForUser.filter(function (e) {
-            return e.appid == m.b || s.a.BIsVisible(e.appid);
+            return (
+              e.appid == m.b ||
+              e.appid == m.c ||
+              e.appid == m.d ||
+              s.a.BIsVisible(e.appid)
+            );
           });
         }),
         (e.prototype.GetLibraryHomeBestEventsForUser = function () {
           return this.m_vecHomeBestEventsForUser.filter(function (e) {
-            return e.appid == m.b || s.a.BIsVisible(e.appid);
+            return (
+              e.appid == m.b ||
+              e.appid == m.c ||
+              e.appid == m.d ||
+              s.a.BIsVisible(e.appid)
+            );
           });
         }),
         (e.prototype.TrackEventShownToUser = function (e, t) {
@@ -85206,15 +85224,17 @@ var CLSTAMP = "6760946";
               }, !1)
             );
           }));
-        var i = n.props.toFolder;
+        var i = n.props.toFolder,
+          o = r.ChooseFolder;
         return (
-          (i =
-            -1 != n.props.toFolder
-              ? n.props.toFolder
-              : n.m_folders[0].nFolderIndex),
+          -1 != n.props.toFolder
+            ? (i = n.props.toFolder)
+            : n.m_folders.length > 0
+            ? (i = n.m_folders[0].nFolderIndex)
+            : (o = r.MoveFailed),
           (n.state = {
             toFolder: i,
-            eStep: r.ChooseFolder,
+            eStep: o,
             progress: {
               appid: n.props.apps[0],
               eError: 0,

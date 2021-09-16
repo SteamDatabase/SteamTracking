@@ -26,7 +26,7 @@
 	{
 		text="#steam_menu_view"
 
-		Library							{	text="#steam_menu_library"				shellcmd="steam://nav/games" }
+		Library							{	text="#steam_menu_library"				shellcmd="steam://open/library/view/home" }
 		Hidden							{	text="#steam_menu_hidden_games"			shellcmd="steam://nav/library/collection/hidden" }
 		Downloads						{	text="#steam_menu_downloads"			shellcmd="steam://open/downloads" }
 		Divider							{}
@@ -80,7 +80,7 @@
 	{
 		text="#steam_menu_games"
 		
-		Games							{	text="#steam_menu_view_games"			shellcmd="steam://nav/games" }
+		Games							{	text="#steam_menu_view_games"			shellcmd="steam://open/library/view/home" }
 		Divider							{}
 		ActivateRetail					{	text="#Steam_RegisterProductCode"		command="ActivateRetail" }
 		RedeemWalletVoucher				{	text="#Steam_RedeemWalletVoucher"		shellcmd="steam://url/RedeemWalletVoucher" }
