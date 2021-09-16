@@ -1,140 +1,99 @@
 .navbar_colorBlack_3fFP4 {
   color: #0f1417;
 }
-
 .navbar_colorWhite_2uhvf {
-  color: white;
+  color: #fff;
 }
-
 .navbar_colorDarkGrey_1Fy7a {
   color: #1a272f;
 }
-
 .navbar_colorGrey_3lWL4 {
   color: #507082;
 }
-
 .navbar_colorLightGrey__AAgx {
   color: #1a272f;
 }
-
 .navbar_colorOrange_2pTtE {
   color: #ee481a;
 }
-
 .navbar_colorRed_vp9ou {
   color: #992410;
 }
-
 .navbar_colorAqua_OeRDJ {
   color: #37c2b1;
 }
-
 .navbar_colorBlue_1qqDg {
   color: #4661ec;
 }
-
 .navbar_colorBrightRed_22JbJ {
-  color: #ff0000;
+  color: red;
 }
-
 .navbar_colorBrightBlue_3aJ_6 {
   color: #00b3ff;
 }
-
 .navbar_colorBrightOrange_bnuNW {
   color: #eda10f;
 }
-
 .navbar_colorBrightPurple_153Gu {
   color: #9652ed;
 }
-
 .navbar_colorBrightYellow_3Nifb {
-  color: yellow;
+  color: #ff0;
 }
-
 .navbar_colorBrightGreen_3yX8- {
   color: #15c65c;
 }
-
 .navbar_colorBrightGrey_2OIDd {
   color: #e0e0e0;
 }
-
 .navbar_backgroundColorBlack_skcd1 {
   background-color: #0f1417;
 }
-
 .navbar_backgroundColorDarkGrey_3jiA9 {
   background-color: #1a272f;
 }
-
 .navbar_backgroundColorLightGrey_qgyyH {
   background-color: #b9babb;
 }
-
 .navbar_backgroundColorWhite_2yLqy {
-  background-color: white;
+  background-color: #fff;
 }
-
 .navbar_backgroundColorOrange_3Tv76 {
   background-color: #ee481a;
 }
-
 .navbar_backgroundColorRed_1CZ_K {
   background-color: #992410;
 }
-
 .navbar_backgroundColorAqua_2-gw_ {
   background-color: #37c2b1;
 }
-
 .navbar_backgroundColorBlue_ccQXV {
   background-color: #4661ec;
 }
-
 .navbar_backgroundColorGrey_1kaA7 {
   background-color: #507082;
 }
-
 .navbar_backgroundColorBrightRed_gzJHf {
-  background-color: #ff0000;
+  background-color: red;
 }
-
 .navbar_backgroundColorBrightBlue_18okF {
   background-color: #00b3ff;
 }
-
 .navbar_backgroundColorBrightOrange_2gYrh {
   background-color: #eda10f;
 }
-
 .navbar_backgroundColorBrightPurple_2ItJF {
   background-color: #9652ed;
 }
-
 .navbar_backgroundColorBrightYellow_6egVY {
-  background-color: yellow;
+  background-color: #ff0;
 }
-
 .navbar_backgroundColorBrightGreen_3QTj2 {
   background-color: #15c65c;
 }
-
 .navbar_backgroundColorBrightGrey_w-O2R {
   background-color: #e0e0e0;
 }
-
-/**
- * Font Mixins.
- *
- * Use like:
- *
- *	.myselector {
- * 		@include FontHeading;
- *	}
- */
 .navbar_NavBar_2bEnL {
   width: 100%;
   height: 60px;
@@ -171,144 +130,102 @@
 .navbar_NavBar_2bEnL .navbar_NavBarButton_YYx_2.navbar_Enabled_3yusW {
   color: #ee481a;
 }
-
 .helpoverlay_colorBlack_2La3h {
   color: #0f1417;
 }
-
 .helpoverlay_colorWhite_3sD9g {
-  color: white;
+  color: #fff;
 }
-
 .helpoverlay_colorDarkGrey__6kcq {
   color: #1a272f;
 }
-
 .helpoverlay_colorGrey_bRIhm {
   color: #507082;
 }
-
 .helpoverlay_colorLightGrey_2WHtZ {
   color: #1a272f;
 }
-
 .helpoverlay_colorOrange_FLjUJ {
   color: #ee481a;
 }
-
 .helpoverlay_colorRed_2BN3M {
   color: #992410;
 }
-
 .helpoverlay_colorAqua_2uYTY {
   color: #37c2b1;
 }
-
 .helpoverlay_colorBlue_2fbI7 {
   color: #4661ec;
 }
-
 .helpoverlay_colorBrightRed_3gJma {
-  color: #ff0000;
+  color: red;
 }
-
 .helpoverlay_colorBrightBlue_3Um0v {
   color: #00b3ff;
 }
-
 .helpoverlay_colorBrightOrange_1zj19 {
   color: #eda10f;
 }
-
 .helpoverlay_colorBrightPurple_3IqU9 {
   color: #9652ed;
 }
-
 .helpoverlay_colorBrightYellow_36nUN {
-  color: yellow;
+  color: #ff0;
 }
-
 .helpoverlay_colorBrightGreen_zwRQT {
   color: #15c65c;
 }
-
 .helpoverlay_colorBrightGrey_3ZbkP {
   color: #e0e0e0;
 }
-
 .helpoverlay_backgroundColorBlack_2DYwX {
   background-color: #0f1417;
 }
-
 .helpoverlay_backgroundColorDarkGrey_2E__3 {
   background-color: #1a272f;
 }
-
 .helpoverlay_backgroundColorLightGrey_OtxJQ {
   background-color: #b9babb;
 }
-
 .helpoverlay_backgroundColorWhite_1lBip {
-  background-color: white;
+  background-color: #fff;
 }
-
 .helpoverlay_backgroundColorOrange_JigMb {
   background-color: #ee481a;
 }
-
 .helpoverlay_backgroundColorRed_3sNLw {
   background-color: #992410;
 }
-
 .helpoverlay_backgroundColorAqua_3JA58 {
   background-color: #37c2b1;
 }
-
 .helpoverlay_backgroundColorBlue_1IYns {
   background-color: #4661ec;
 }
-
 .helpoverlay_backgroundColorGrey_1GLs4 {
   background-color: #507082;
 }
-
 .helpoverlay_backgroundColorBrightRed_1TQyd {
-  background-color: #ff0000;
+  background-color: red;
 }
-
 .helpoverlay_backgroundColorBrightBlue_2c23U {
   background-color: #00b3ff;
 }
-
 .helpoverlay_backgroundColorBrightOrange_249ci {
   background-color: #eda10f;
 }
-
 .helpoverlay_backgroundColorBrightPurple_GPzBX {
   background-color: #9652ed;
 }
-
 .helpoverlay_backgroundColorBrightYellow_ogNFc {
-  background-color: yellow;
+  background-color: #ff0;
 }
-
 .helpoverlay_backgroundColorBrightGreen_3cDSl {
   background-color: #15c65c;
 }
-
 .helpoverlay_backgroundColorBrightGrey_e-eO4 {
   background-color: #e0e0e0;
 }
-
-/**
- * Font Mixins.
- *
- * Use like:
- *
- *	.myselector {
- * 		@include FontHeading;
- *	}
- */
 .helpoverlay_HelpOverlay_1XKH7 {
   position: absolute;
   width: 0;
@@ -316,7 +233,7 @@
   display: flex;
   flex-direction: column;
   background-image: linear-gradient(#0c2f42f2, #05141df2);
-  color: white;
+  color: #fff;
   z-index: 100;
 }
 .helpoverlay_HelpOverlay_1XKH7.helpoverlay_ShowBackground_3l8LA {
@@ -451,12 +368,10 @@
   font-size: 16px;
   cursor: pointer;
 }
-
 .helpoverlay_FullHeightWidth_25Y4T {
   width: 100%;
   height: 100%;
 }
-
 .helpoverlay_HelpTop_1gcOc {
   width: 100%;
   height: 50%;
@@ -464,7 +379,6 @@
   justify-content: center;
   align-items: center;
 }
-
 .helpoverlay_HelpBottom_XqjhY {
   width: 100%;
   height: 50%;
@@ -472,7 +386,7 @@
 }
 .helpoverlay_HelpBottom_XqjhY .helpoverlay_BottomHeader_Ut-D7 {
   font-size: 24px;
-  color: white;
+  color: #fff;
   font-weight: bold;
   letter-spacing: 1px;
   margin-bottom: 12px;
@@ -510,7 +424,7 @@
 }
 .helpoverlay_HelpBottom_XqjhY
   .helpoverlay_BottomText_3aubZ.helpoverlay_SubHeader_1n6lk {
-  color: white;
+  color: #fff;
   font-size: 15px;
 }
 .helpoverlay_HelpBottom_XqjhY
@@ -530,144 +444,102 @@
 .helpoverlay_HelpBottom_XqjhY .helpoverlay_Spacer_OSAYp {
   height: 12px;
 }
-
 .gcdown_colorBlack_3TjPA {
   color: #0f1417;
 }
-
 .gcdown_colorWhite_3EbIE {
-  color: white;
+  color: #fff;
 }
-
 .gcdown_colorDarkGrey_uLxET {
   color: #1a272f;
 }
-
 .gcdown_colorGrey_21r20 {
   color: #507082;
 }
-
 .gcdown_colorLightGrey_1bno5 {
   color: #1a272f;
 }
-
 .gcdown_colorOrange_2_bEd {
   color: #ee481a;
 }
-
 .gcdown_colorRed_2DOdK {
   color: #992410;
 }
-
 .gcdown_colorAqua_3-xT6 {
   color: #37c2b1;
 }
-
 .gcdown_colorBlue_1X5CU {
   color: #4661ec;
 }
-
 .gcdown_colorBrightRed_2dcAf {
-  color: #ff0000;
+  color: red;
 }
-
 .gcdown_colorBrightBlue_3Crlr {
   color: #00b3ff;
 }
-
 .gcdown_colorBrightOrange_1q03H {
   color: #eda10f;
 }
-
 .gcdown_colorBrightPurple_24VEX {
   color: #9652ed;
 }
-
 .gcdown_colorBrightYellow_1JAGo {
-  color: yellow;
+  color: #ff0;
 }
-
 .gcdown_colorBrightGreen_3zJ0O {
   color: #15c65c;
 }
-
 .gcdown_colorBrightGrey_1zSH6 {
   color: #e0e0e0;
 }
-
 .gcdown_backgroundColorBlack_3gGAl {
   background-color: #0f1417;
 }
-
 .gcdown_backgroundColorDarkGrey_27BMj {
   background-color: #1a272f;
 }
-
 .gcdown_backgroundColorLightGrey_R_jlt {
   background-color: #b9babb;
 }
-
 .gcdown_backgroundColorWhite_38FV_ {
-  background-color: white;
+  background-color: #fff;
 }
-
 .gcdown_backgroundColorOrange_17L9r {
   background-color: #ee481a;
 }
-
 .gcdown_backgroundColorRed_n3BXx {
   background-color: #992410;
 }
-
 .gcdown_backgroundColorAqua_1lp1r {
   background-color: #37c2b1;
 }
-
 .gcdown_backgroundColorBlue_1u9iO {
   background-color: #4661ec;
 }
-
 .gcdown_backgroundColorGrey_2AcOF {
   background-color: #507082;
 }
-
 .gcdown_backgroundColorBrightRed_3f6i2 {
-  background-color: #ff0000;
+  background-color: red;
 }
-
 .gcdown_backgroundColorBrightBlue_2GIRd {
   background-color: #00b3ff;
 }
-
 .gcdown_backgroundColorBrightOrange_2zE3i {
   background-color: #eda10f;
 }
-
 .gcdown_backgroundColorBrightPurple_bLv1z {
   background-color: #9652ed;
 }
-
 .gcdown_backgroundColorBrightYellow_qq5TN {
-  background-color: yellow;
+  background-color: #ff0;
 }
-
 .gcdown_backgroundColorBrightGreen_1qWO8 {
   background-color: #15c65c;
 }
-
 .gcdown_backgroundColorBrightGrey_15Kl7 {
   background-color: #e0e0e0;
 }
-
-/**
- * Font Mixins.
- *
- * Use like:
- *
- *	.myselector {
- * 		@include FontHeading;
- *	}
- */
 .gcdown_GCDown_SZwXH {
   position: absolute;
   width: 0;
@@ -676,7 +548,7 @@
   display: flex;
   flex-direction: column;
   background-color: rgba(5, 21, 31, 0.9);
-  color: white;
+  color: #fff;
   z-index: 10000;
 }
 .gcdown_GCDown_SZwXH.gcdown_Display_1EQvX {
@@ -694,7 +566,7 @@
 .gcdown_GCDown_SZwXH .gcdown_ErrorHeading_YdggV {
   font-weight: bold;
   font-size: 24px;
-  color: white;
+  color: #fff;
   text-align: center;
   margin-top: 12px;
 }
@@ -719,144 +591,102 @@
   letter-spacing: 3px;
   padding-top: 20px;
 }
-
 .app_colorBlack_1Twg4 {
   color: #0f1417;
 }
-
 .app_colorWhite_3oE_S {
-  color: white;
+  color: #fff;
 }
-
 .app_colorDarkGrey_3tphA {
   color: #1a272f;
 }
-
 .app_colorGrey_3YqsH {
   color: #507082;
 }
-
 .app_colorLightGrey_3pfPS {
   color: #1a272f;
 }
-
 .app_colorOrange_1nodv {
   color: #ee481a;
 }
-
 .app_colorRed_29wGe {
   color: #992410;
 }
-
 .app_colorAqua_2RcNN {
   color: #37c2b1;
 }
-
 .app_colorBlue_sqTzm {
   color: #4661ec;
 }
-
 .app_colorBrightRed_1CXAL {
-  color: #ff0000;
+  color: red;
 }
-
 .app_colorBrightBlue_23fbL {
   color: #00b3ff;
 }
-
 .app_colorBrightOrange_UdbrM {
   color: #eda10f;
 }
-
 .app_colorBrightPurple_WGNlF {
   color: #9652ed;
 }
-
 .app_colorBrightYellow_3K2vU {
-  color: yellow;
+  color: #ff0;
 }
-
 .app_colorBrightGreen_3MZzT {
   color: #15c65c;
 }
-
 .app_colorBrightGrey_2T-cX {
   color: #e0e0e0;
 }
-
 .app_backgroundColorBlack_3yP6s {
   background-color: #0f1417;
 }
-
 .app_backgroundColorDarkGrey_1OTAH {
   background-color: #1a272f;
 }
-
 .app_backgroundColorLightGrey_1HbN4 {
   background-color: #b9babb;
 }
-
 .app_backgroundColorWhite_2uSHp {
-  background-color: white;
+  background-color: #fff;
 }
-
 .app_backgroundColorOrange_1NKxH {
   background-color: #ee481a;
 }
-
 .app_backgroundColorRed_3nJpq {
   background-color: #992410;
 }
-
 .app_backgroundColorAqua_2bjla {
   background-color: #37c2b1;
 }
-
 .app_backgroundColorBlue_1SlKy {
   background-color: #4661ec;
 }
-
 .app_backgroundColorGrey_29zST {
   background-color: #507082;
 }
-
 .app_backgroundColorBrightRed_2NRUx {
-  background-color: #ff0000;
+  background-color: red;
 }
-
 .app_backgroundColorBrightBlue_Y9AeT {
   background-color: #00b3ff;
 }
-
 .app_backgroundColorBrightOrange_3-mT9 {
   background-color: #eda10f;
 }
-
 .app_backgroundColorBrightPurple_3BbJw {
   background-color: #9652ed;
 }
-
 .app_backgroundColorBrightYellow_14P9t {
-  background-color: yellow;
+  background-color: #ff0;
 }
-
 .app_backgroundColorBrightGreen_25ip8 {
   background-color: #15c65c;
 }
-
 .app_backgroundColorBrightGrey_139am {
   background-color: #e0e0e0;
 }
-
-/**
- * Font Mixins.
- *
- * Use like:
- *
- *	.myselector {
- * 		@include FontHeading;
- *	}
- */
 .app_App_2uHYt {
   font-family: "Open Sans", Verdana, sans-serif;
   width: 100%;
@@ -868,7 +698,6 @@
   display: flex;
   flex-direction: column;
 }
-
 .app_NavContents_1Z5K0 {
   width: 100%;
   flex-grow: 1;
@@ -877,135 +706,102 @@
   flex-direction: column;
   overflow-y: hidden;
 }
-
 .feedpage_colorBlack_1cRJe {
   color: #0f1417;
 }
-
 .feedpage_colorWhite_23GcW {
-  color: white;
+  color: #fff;
 }
-
 .feedpage_colorDarkGrey_3clIB {
   color: #1a272f;
 }
-
 .feedpage_colorGrey_2PoSH {
   color: #507082;
 }
-
 .feedpage_colorLightGrey_3OgU3 {
   color: #1a272f;
 }
-
 .feedpage_colorOrange_RNwQz {
   color: #ee481a;
 }
-
 .feedpage_colorRed_3Z36a {
   color: #992410;
 }
-
 .feedpage_colorAqua_BFAAD {
   color: #37c2b1;
 }
-
 .feedpage_colorBlue_qBcdz {
   color: #4661ec;
 }
-
 .feedpage_colorBrightRed_2xDtd {
-  color: #ff0000;
+  color: red;
 }
-
 .feedpage_colorBrightBlue_2jvRI {
   color: #00b3ff;
 }
-
 .feedpage_colorBrightOrange_2Tp1T {
   color: #eda10f;
 }
-
 .feedpage_colorBrightPurple_jp6Wi {
   color: #9652ed;
 }
-
 .feedpage_colorBrightYellow_1dXhY {
-  color: yellow;
+  color: #ff0;
 }
-
 .feedpage_colorBrightGreen_3PMob {
   color: #15c65c;
 }
-
 .feedpage_colorBrightGrey_1livr {
   color: #e0e0e0;
 }
-
 .feedpage_backgroundColorBlack_30W3n {
   background-color: #0f1417;
 }
-
 .feedpage_backgroundColorDarkGrey_2pqKy {
   background-color: #1a272f;
 }
-
 .feedpage_backgroundColorLightGrey_1XhqN {
   background-color: #b9babb;
 }
-
 .feedpage_backgroundColorWhite_1ura4 {
-  background-color: white;
+  background-color: #fff;
 }
-
 .feedpage_backgroundColorOrange_GKMW2 {
   background-color: #ee481a;
 }
-
 .feedpage_backgroundColorRed_3Xu5q {
   background-color: #992410;
 }
-
 .feedpage_backgroundColorAqua_2COm_ {
   background-color: #37c2b1;
 }
-
 .feedpage_backgroundColorBlue_3v6-2 {
   background-color: #4661ec;
 }
-
 .feedpage_backgroundColorGrey_2XHPU {
   background-color: #507082;
 }
-
 .feedpage_backgroundColorBrightRed_15Mi5 {
-  background-color: #ff0000;
+  background-color: red;
 }
-
 .feedpage_backgroundColorBrightBlue_2ZPob {
   background-color: #00b3ff;
 }
-
 .feedpage_backgroundColorBrightOrange_3kuGS {
   background-color: #eda10f;
 }
-
 .feedpage_backgroundColorBrightPurple_1Ud3d {
   background-color: #9652ed;
 }
-
 .feedpage_backgroundColorBrightYellow_S1u77 {
-  background-color: yellow;
+  background-color: #ff0;
 }
-
 .feedpage_backgroundColorBrightGreen_P7SAe {
   background-color: #15c65c;
 }
-
 .feedpage_backgroundColorBrightGrey_vvTE7 {
   background-color: #e0e0e0;
 }
-
 .feedpage_FeedPage_2pDTB {
   width: 100%;
   min-height: 0;
@@ -1025,149 +821,106 @@
   flex-direction: column;
   justify-content: center;
 }
-
 .global_colorBlack_3gO_L {
   color: #0f1417;
 }
-
 .global_colorWhite_TVnk7 {
-  color: white;
+  color: #fff;
 }
-
 .global_colorDarkGrey_2aJgR {
   color: #1a272f;
 }
-
 .global_colorGrey_3hZTc {
   color: #507082;
 }
-
 .global_colorLightGrey_3ninA {
   color: #1a272f;
 }
-
 .global_colorOrange_qjLYw {
   color: #ee481a;
 }
-
 .global_colorRed_2E6Gs {
   color: #992410;
 }
-
 .global_colorAqua_27rxd {
   color: #37c2b1;
 }
-
 .global_colorBlue_26I3p {
   color: #4661ec;
 }
-
 .global_colorBrightRed_2C0Bq {
-  color: #ff0000;
+  color: red;
 }
-
 .global_colorBrightBlue_3jN23 {
   color: #00b3ff;
 }
-
 .global_colorBrightOrange_2TTYn {
   color: #eda10f;
 }
-
 .global_colorBrightPurple_i9qMg {
   color: #9652ed;
 }
-
 .global_colorBrightYellow_1hS8g {
-  color: yellow;
+  color: #ff0;
 }
-
 .global_colorBrightGreen_2d-Uu {
   color: #15c65c;
 }
-
 .global_colorBrightGrey_3mlx7 {
   color: #e0e0e0;
 }
-
 .global_backgroundColorBlack_4pAR0 {
   background-color: #0f1417;
 }
-
 .global_backgroundColorDarkGrey_228iH {
   background-color: #1a272f;
 }
-
 .global_backgroundColorLightGrey_2oKB0 {
   background-color: #b9babb;
 }
-
 .global_backgroundColorWhite_T0_lZ {
-  background-color: white;
+  background-color: #fff;
 }
-
 .global_backgroundColorOrange_37QwJ {
   background-color: #ee481a;
 }
-
 .global_backgroundColorRed_3ULld {
   background-color: #992410;
 }
-
 .global_backgroundColorAqua_3Xdfo {
   background-color: #37c2b1;
 }
-
 .global_backgroundColorBlue_1rQuK {
   background-color: #4661ec;
 }
-
 .global_backgroundColorGrey_3-TB9 {
   background-color: #507082;
 }
-
 .global_backgroundColorBrightRed_fc2Rq {
-  background-color: #ff0000;
+  background-color: red;
 }
-
 .global_backgroundColorBrightBlue_sQaAw {
   background-color: #00b3ff;
 }
-
 .global_backgroundColorBrightOrange_39SeR {
   background-color: #eda10f;
 }
-
 .global_backgroundColorBrightPurple_11sCG {
   background-color: #9652ed;
 }
-
 .global_backgroundColorBrightYellow_3-nFA {
-  background-color: yellow;
+  background-color: #ff0;
 }
-
 .global_backgroundColorBrightGreen_3y4Yn {
   background-color: #15c65c;
 }
-
 .global_backgroundColorBrightGrey_2SgDi {
   background-color: #e0e0e0;
 }
-
-/**
- * Font Mixins.
- *
- * Use like:
- *
- *	.myselector {
- * 		@include FontHeading;
- *	}
- */
 .global_FadeIn_3dNq3 {
   animation-name: global_fadein_3571p;
   animation-duration: 0.5s;
 }
-
 @keyframes global_fadein_3571p {
   0% {
     opacity: 0;
@@ -1176,12 +929,10 @@
     opacity: 1;
   }
 }
-
 .global_FadeInDelay_3AgLt {
   animation-name: global_fadeindelay_F6OnB;
   animation-duration: 2s;
 }
-
 @keyframes global_fadeindelay_F6OnB {
   0% {
     opacity: 0;
@@ -1193,13 +944,11 @@
     opacity: 1;
   }
 }
-
 .global_VerticalCollapseable_23_Go {
   transition: opacity 0.4s ease-in-out, height 0.4s ease-in-out,
     padding 0.4s ease-in-out, margin 0.4s ease-in-out,
     min-height 0.4s ease-in-out;
 }
-
 .global_VerticalCollapse_tJoWs {
   pointer-events: none;
   height: 0px !important;
@@ -1213,144 +962,102 @@
   border-top: 0px !important;
   border-bottom: 0px !important;
 }
-
 .feedelement_colorBlack_2c-Et {
   color: #0f1417;
 }
-
 .feedelement_colorWhite_MrGZY {
-  color: white;
+  color: #fff;
 }
-
 .feedelement_colorDarkGrey_2DGDr {
   color: #1a272f;
 }
-
 .feedelement_colorGrey_3fiVy {
   color: #507082;
 }
-
 .feedelement_colorLightGrey_Qwg2n {
   color: #1a272f;
 }
-
 .feedelement_colorOrange_29mwD {
   color: #ee481a;
 }
-
 .feedelement_colorRed_3PCH5 {
   color: #992410;
 }
-
 .feedelement_colorAqua_3nKUL {
   color: #37c2b1;
 }
-
 .feedelement_colorBlue_wc8lQ {
   color: #4661ec;
 }
-
 .feedelement_colorBrightRed_2pBrR {
-  color: #ff0000;
+  color: red;
 }
-
 .feedelement_colorBrightBlue_10O-h {
   color: #00b3ff;
 }
-
 .feedelement_colorBrightOrange_2IRtf {
   color: #eda10f;
 }
-
 .feedelement_colorBrightPurple_1t0OS {
   color: #9652ed;
 }
-
 .feedelement_colorBrightYellow_2JqFP {
-  color: yellow;
+  color: #ff0;
 }
-
 .feedelement_colorBrightGreen_33wqD {
   color: #15c65c;
 }
-
 .feedelement_colorBrightGrey_3WVr3 {
   color: #e0e0e0;
 }
-
 .feedelement_backgroundColorBlack_2qWfT {
   background-color: #0f1417;
 }
-
 .feedelement_backgroundColorDarkGrey_2BE-s {
   background-color: #1a272f;
 }
-
 .feedelement_backgroundColorLightGrey_3J4Zz {
   background-color: #b9babb;
 }
-
 .feedelement_backgroundColorWhite_2bDAO {
-  background-color: white;
+  background-color: #fff;
 }
-
 .feedelement_backgroundColorOrange_gsjIl {
   background-color: #ee481a;
 }
-
 .feedelement_backgroundColorRed_ttA8- {
   background-color: #992410;
 }
-
 .feedelement_backgroundColorAqua_2XFc6 {
   background-color: #37c2b1;
 }
-
 .feedelement_backgroundColorBlue_a4A8e {
   background-color: #4661ec;
 }
-
 .feedelement_backgroundColorGrey_inyyg {
   background-color: #507082;
 }
-
 .feedelement_backgroundColorBrightRed_25kgK {
-  background-color: #ff0000;
+  background-color: red;
 }
-
 .feedelement_backgroundColorBrightBlue_2lfgO {
   background-color: #00b3ff;
 }
-
 .feedelement_backgroundColorBrightOrange_1MHfx {
   background-color: #eda10f;
 }
-
 .feedelement_backgroundColorBrightPurple_23M4K {
   background-color: #9652ed;
 }
-
 .feedelement_backgroundColorBrightYellow_3V_eb {
-  background-color: yellow;
+  background-color: #ff0;
 }
-
 .feedelement_backgroundColorBrightGreen_1LyOv {
   background-color: #15c65c;
 }
-
 .feedelement_backgroundColorBrightGrey_2CJRr {
   background-color: #e0e0e0;
 }
-
-/**
- * Font Mixins.
- *
- * Use like:
- *
- *	.myselector {
- * 		@include FontHeading;
- *	}
- */
 .feedelement_FeedElement_3nW-W {
   width: 100%;
   box-sizing: border-box;
@@ -1376,7 +1083,7 @@
   .feedelement_Headline_1B4hC {
   margin-left: 6px;
   font-weight: 500;
-  color: white;
+  color: #fff;
   margin-top: 5px;
   font-size: 12px;
   text-transform: uppercase;
@@ -1401,152 +1108,108 @@
   margin-top: 4px;
   opacity: 0.5;
 }
-
 .card_colorBlack_1iVZK {
   color: #0f1417;
 }
-
 .card_colorWhite_51Gy2 {
-  color: white;
+  color: #fff;
 }
-
 .card_colorDarkGrey_YYpRP {
   color: #1a272f;
 }
-
 .card_colorGrey_1UbnS {
   color: #507082;
 }
-
 .card_colorLightGrey_2Ir_K {
   color: #1a272f;
 }
-
 .card_colorOrange_24gEH {
   color: #ee481a;
 }
-
 .card_colorRed_3f0ea {
   color: #992410;
 }
-
 .card_colorAqua_2Qt38 {
   color: #37c2b1;
 }
-
 .card_colorBlue_1Eo8n {
   color: #4661ec;
 }
-
 .card_colorBrightRed_T4E9g {
-  color: #ff0000;
+  color: red;
 }
-
 .card_colorBrightBlue_2aMx6 {
   color: #00b3ff;
 }
-
 .card_colorBrightOrange_3FMXe {
   color: #eda10f;
 }
-
 .card_colorBrightPurple_2wfL6 {
   color: #9652ed;
 }
-
 .card_colorBrightYellow_1Z7xj {
-  color: yellow;
+  color: #ff0;
 }
-
 .card_colorBrightGreen_2sHWj {
   color: #15c65c;
 }
-
 .card_colorBrightGrey_3VAlq {
   color: #e0e0e0;
 }
-
 .card_backgroundColorBlack_1oKzb {
   background-color: #0f1417;
 }
-
 .card_backgroundColorDarkGrey_2hWha {
   background-color: #1a272f;
 }
-
 .card_backgroundColorLightGrey_2UDLx {
   background-color: #b9babb;
 }
-
 .card_backgroundColorWhite_3APd9 {
-  background-color: white;
+  background-color: #fff;
 }
-
 .card_backgroundColorOrange_E0cf6 {
   background-color: #ee481a;
 }
-
 .card_backgroundColorRed_1dwx5 {
   background-color: #992410;
 }
-
 .card_backgroundColorAqua_pKeDt {
   background-color: #37c2b1;
 }
-
 .card_backgroundColorBlue_100WD {
   background-color: #4661ec;
 }
-
 .card_backgroundColorGrey_3AVDv {
   background-color: #507082;
 }
-
 .card_backgroundColorBrightRed_tcdo2 {
-  background-color: #ff0000;
+  background-color: red;
 }
-
 .card_backgroundColorBrightBlue_HSGGd {
   background-color: #00b3ff;
 }
-
 .card_backgroundColorBrightOrange_Nn2Hg {
   background-color: #eda10f;
 }
-
 .card_backgroundColorBrightPurple_yXHmt {
   background-color: #9652ed;
 }
-
 .card_backgroundColorBrightYellow_3_e91 {
-  background-color: yellow;
+  background-color: #ff0;
 }
-
 .card_backgroundColorBrightGreen_3QX81 {
   background-color: #15c65c;
 }
-
 .card_backgroundColorBrightGrey_lU52H {
   background-color: #e0e0e0;
 }
-
-/**
- * Font Mixins.
- *
- * Use like:
- *
- *	.myselector {
- * 		@include FontHeading;
- *	}
- */
 *:link {
   text-decoration: none;
 }
-
 *:focus {
   outline: 0;
 }
-
 .card_card_1tF7A {
   background-color: #1a272f;
   border-radius: 8px;
@@ -1559,7 +1222,7 @@
   font-family: "Open Sans", Verdana, sans-serif;
   font-size: 14px;
   line-height: 20px;
-  color: white;
+  color: #fff;
   display: flex;
 }
 .card_card_1tF7A .card_image_3WUY1 {
@@ -1574,18 +1237,15 @@
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }
-
 .card_icon_1FP65 {
   width: 30px;
   height: 30px;
   border-radius: 15px;
   margin-right: 8px;
 }
-
 .card_news_2BD9x.card_withIcon_3d2FN {
   margin-top: 3.75px;
 }
-
 .card_imageCard_MAp_Z {
   height: 250px;
   background-size: cover;
@@ -1593,7 +1253,6 @@
 .card_imageCard_MAp_Z.card_short_3cF-m {
   height: 156px;
 }
-
 .card_tournament_2Y2d2 {
   position: relative;
   display: flex;
@@ -1614,7 +1273,7 @@
 .card_tournament_2Y2d2 .card_title_3eOSG {
   font-size: 18px;
   line-height: 24px;
-  color: white;
+  color: #fff;
 }
 .card_tournament_2Y2d2 .card_details_28jwA {
   display: flex;
@@ -1647,7 +1306,6 @@
   text-align: right;
   color: #e0e0e0;
 }
-
 .card_SeriesCard_38VF6 {
   height: 132px;
   display: block;
@@ -1699,7 +1357,7 @@
   letter-spacing: 1px;
   font-size: 10px;
   font-weight: bold;
-  color: white;
+  color: #fff;
 }
 .card_SeriesCard_38VF6
   .card_Columns_1T5HX
@@ -1709,7 +1367,7 @@
   font-size: 32px;
   letter-spacing: 2px;
   font-weight: bold;
-  color: white;
+  color: #fff;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -1750,7 +1408,6 @@
 .card_SeriesCard_38VF6 .card_ThrobberSpacing_y-Feh {
   margin-top: 20px;
 }
-
 .card_UpcomingSeriesCard_3Wdq2,
 .card_LiveMatchCard_1exvk {
   min-height: 210px;
@@ -1760,7 +1417,7 @@
   background-color: #1a272f;
   border-radius: 4px;
   margin: 12px;
-  color: white;
+  color: #fff;
   font-size: 20px;
 }
 .card_UpcomingSeriesCard_3Wdq2 .card_LeagueLogo_1u8j2,
@@ -1834,7 +1491,6 @@
   font-weight: bold;
   color: #507082;
 }
-
 .card_MatchCard_GtB5l {
   height: 132px;
   display: block;
@@ -1880,7 +1536,7 @@
   letter-spacing: 1px;
   font-size: 10px;
   font-weight: bold;
-  color: white;
+  color: #fff;
 }
 .card_MatchCard_GtB5l
   .card_Columns_1T5HX
@@ -1890,7 +1546,7 @@
   font-size: 32px;
   letter-spacing: 2px;
   font-weight: bold;
-  color: white;
+  color: #fff;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -1922,7 +1578,6 @@
 .card_MatchCard_GtB5l .card_ThrobberSpacing_y-Feh {
   margin-top: 20px;
 }
-
 .card_TournamentResultsCard_wiBM7 .card_Content_1Z3Wm {
   display: flex;
   flex-direction: row;
@@ -1946,7 +1601,7 @@
   .card_TeamInfo_Q12nf {
   display: flex;
   flex-direction: row;
-  color: white;
+  color: #fff;
   font-size: 12px;
   margin-top: 8px;
 }
@@ -2005,14 +1660,13 @@
   font-size: 12px;
   color: #eda10f;
 }
-
 .card_TeamRosterCard_3wphi .card_card_1tF7A {
   min-height: 76px;
 }
 .card_TeamRosterCard_3wphi .card_card_1tF7A .card_Content_1Z3Wm {
   display: flex;
   flex-direction: row;
-  color: white;
+  color: #fff;
   font-size: 12px;
   padding-top: 21px;
   padding-bottom: 21px;
@@ -2034,7 +1688,6 @@
   margin: auto 0px;
   padding-right: 12px;
 }
-
 .throbber_LoadingWrapper_chtlD {
   display: flex;
   flex-direction: column;
@@ -2055,11 +1708,9 @@
   path {
   stroke-width: 0 !important;
 }
-
 .throbber_LoadingWrapper_chtlD.throbber_noString_1Ygce {
   flex-direction: row;
 }
-
 .throbber_LoadingWrapper_chtlD .throbber_Throbber_3upHh,
 .throbber_LoadingWrapper_chtlD .SVGIcon_Throbber,
 .throbber_LoadingWrapper_chtlD .SVGIcon_Throbber path {
@@ -2067,32 +1718,27 @@
   height: 100%;
   position: relative;
 }
-
 .throbber_LoadingWrapper_chtlD .throbber_Throbber_3upHh {
   align-self: center;
   margin: 0px;
   width: 100%;
   height: 100%;
 }
-
 .throbber_LoadingWrapper_chtlD.throbber_throbber_small_U-aow
   .throbber_Throbber_3upHh {
   width: 32px;
   height: 32px;
 }
-
 .throbber_LoadingWrapper_chtlD.throbber_throbber_medium_1Fobg
   .throbber_Throbber_3upHh {
   width: 64px;
   height: 64px;
 }
-
 .throbber_LoadingWrapper_chtlD.throbber_throbber_large_2IrNq
   .throbber_Throbber_3upHh {
   width: 92px;
   height: 92px;
 }
-
 .throbber_throbber_center_wrapper_1PqOU {
   width: 100%;
   height: 100%;
@@ -2101,7 +1747,6 @@
   align-items: center;
   justify-content: center;
 }
-
 .throbber_ThrobberText_4i9ro,
 .throbber_LoadingWrapper_chtlD .throbber_ThrobberText_4i9ro {
   color: #3d85c8;
@@ -2113,28 +1758,23 @@
   margin-top: 8px;
   font-weight: 500;
 }
-
 .throbber_LoadingWrapper_chtlD.throbber_throbber_medium_1Fobg
   .throbber_ThrobberText_4i9ro {
   margin-top: 4px;
 }
-
 .throbber_LoadingWrapper_chtlD.throbber_throbber_small_U-aow
   .throbber_ThrobberText_4i9ro {
   margin-top: 2px;
 }
-
 .throbber_LoadingWrapper_chtlD .SVGIcon_Throbber.throbber_blur_ksnq2 {
   filter: blur(3px);
   position: absolute;
   left: 0;
   top: 0px;
 }
-
 .throbber_LoadingWrapper_chtlD .SVGIcon_Throbber.throbber_blur_ksnq2 path {
   stroke: #4375fd;
 }
-
 .throbber_LoadingWrapper_chtlD .SVGIcon_Throbber path {
   stroke: #67c1f5;
   animation-name: throbber_ThrobberRoundLoop_2KsRJ;
@@ -2144,17 +1784,14 @@
   animation-timing-function: linear;
   opacity: 0;
 }
-
 .throbber_LoadingWrapper_chtlD
   .SVGIcon_Throbber
   .throbber_roundOuterOutline_1nczY,
 .throbber_LoadingWrapper_chtlD .SVGIcon_Throbber .throbber_roundOuter_1X5lV {
   stroke-dashoffset: 0;
   stroke-dasharray: 116;
-  /*stroke-dasharray: 40 10 30 20 20 30 10 40;*/
   stroke-width: 6px;
 }
-
 .throbber_LoadingWrapper_chtlD .SVGIcon_Throbber .throbber_roundOuter_1X5lV {
   opacity: 1;
   stroke: #3b8bb9;
@@ -2162,19 +1799,16 @@
   transform-origin: 50% 50%;
   stroke-linecap: round;
 }
-
 .throbber_LoadingWrapper_chtlD
   .SVGIcon_Throbber
   .throbber_roundOuterOutline_1nczY {
   display: none;
 }
-
 @keyframes throbber_ThrobberRoundLoop_2KsRJ {
   to {
     stroke-dashoffset: -232;
   }
 }
-
 .throbber_LoadingWrapper_chtlD .SVGIcon_Throbber .throbber_roundFill_1vctz {
   animation-name: throbber_ThrobberFillLoop_3Ffp2;
   animation-duration: 3s;
@@ -2184,7 +1818,6 @@
   opacity: 1;
   stroke-width: 0;
 }
-
 @keyframes throbber_ThrobberFillLoop_3Ffp2 {
   0% {
     fill: rgba(103, 193, 245, 0);
@@ -2196,7 +1829,6 @@
     fill: rgba(103, 193, 245, 0);
   }
 }
-
 .throbber_LoadingWrapper_chtlD
   .SVGIcon_Throbber
   .throbber_topCircle_1Axol
@@ -2213,14 +1845,12 @@
   animation-timing-function: linear;
   transform-origin: 67% 36%;
 }
-
 .throbber_LoadingWrapper_chtlD
   .SVGIcon_Throbber
   .throbber_topCircle_1Axol
   circle {
   animation-name: throbber_ThrobberBottomCircleLoop_1wHEq;
 }
-
 .throbber_LoadingWrapper_chtlD
   .SVGIcon_Throbber
   .throbber_bottomCircle_2U7m8
@@ -2233,7 +1863,6 @@
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
-
 @keyframes throbber_ThrobberTopCircleLoop_1hClF {
   0% {
     opacity: 0;
@@ -2257,7 +1886,6 @@
     stroke-width: 0px;
   }
 }
-
 @keyframes throbber_ThrobberBottomCircleLoop_1wHEq {
   0% {
     opacity: 0;
@@ -2272,7 +1900,6 @@
     opacity: 0;
   }
 }
-
 .throbber_LoadingWrapper_chtlD
   .SVGIcon_Throbber
   .throbber_roundThrobber15_1hbf_,
@@ -2322,15 +1949,13 @@
   animation-duration: 3s;
   stroke-dasharray: 150 950;
 }
-
 .throbber_LoadingWrapper_chtlD
   .SVGIcon_Throbber
   .throbber_roundThrobber01_6Xq-0 {
-  animation-delay: -0s;
+  animation-delay: 0s;
   opacity: 0.06;
   stroke-width: 0.5px;
 }
-
 .throbber_LoadingWrapper_chtlD
   .SVGIcon_Throbber
   .throbber_roundThrobber02_3dMhW {
@@ -2338,7 +1963,6 @@
   opacity: 0.13;
   stroke-width: 1px;
 }
-
 .throbber_LoadingWrapper_chtlD
   .SVGIcon_Throbber
   .throbber_roundThrobber03_1FqGc {
@@ -2346,7 +1970,6 @@
   opacity: 0.2;
   stroke-width: 1.5px;
 }
-
 .throbber_LoadingWrapper_chtlD
   .SVGIcon_Throbber
   .throbber_roundThrobber04_3JAdj {
@@ -2354,7 +1977,6 @@
   opacity: 0.26;
   stroke-width: 2px;
 }
-
 .throbber_LoadingWrapper_chtlD
   .SVGIcon_Throbber
   .throbber_roundThrobber05_1sOtP {
@@ -2362,7 +1984,6 @@
   opacity: 0.33;
   stroke-width: 2.5px;
 }
-
 .throbber_LoadingWrapper_chtlD
   .SVGIcon_Throbber
   .throbber_roundThrobber06_2iRLM {
@@ -2370,7 +1991,6 @@
   opacity: 0.4;
   stroke-width: 3px;
 }
-
 .throbber_LoadingWrapper_chtlD
   .SVGIcon_Throbber
   .throbber_roundThrobber07_2Shtf {
@@ -2378,7 +1998,6 @@
   opacity: 0.46;
   stroke-width: 3.5px;
 }
-
 .throbber_LoadingWrapper_chtlD
   .SVGIcon_Throbber
   .throbber_roundThrobber08_2c9JB {
@@ -2386,7 +2005,6 @@
   opacity: 0.53;
   stroke-width: 4px;
 }
-
 .throbber_LoadingWrapper_chtlD
   .SVGIcon_Throbber
   .throbber_roundThrobber09_3lj-a {
@@ -2394,7 +2012,6 @@
   opacity: 0.6;
   stroke-width: 4.5px;
 }
-
 .throbber_LoadingWrapper_chtlD
   .SVGIcon_Throbber
   .throbber_roundThrobber10_1kLAG {
@@ -2402,7 +2019,6 @@
   opacity: 0.66;
   stroke-width: 5px;
 }
-
 .throbber_LoadingWrapper_chtlD
   .SVGIcon_Throbber
   .throbber_roundThrobber11_2XCXD {
@@ -2410,7 +2026,6 @@
   opacity: 0.73;
   stroke-width: 5.5px;
 }
-
 .throbber_LoadingWrapper_chtlD
   .SVGIcon_Throbber
   .throbber_roundThrobber12_66Spb {
@@ -2418,7 +2033,6 @@
   opacity: 0.8;
   stroke-width: 6px;
 }
-
 .throbber_LoadingWrapper_chtlD
   .SVGIcon_Throbber
   .throbber_roundThrobber13_1vG0c {
@@ -2426,7 +2040,6 @@
   opacity: 0.86;
   stroke-width: 6.5px;
 }
-
 .throbber_LoadingWrapper_chtlD
   .SVGIcon_Throbber
   .throbber_roundThrobber14_3743K {
@@ -2434,7 +2047,6 @@
   opacity: 0.93;
   stroke-width: 7px;
 }
-
 .throbber_LoadingWrapper_chtlD
   .SVGIcon_Throbber
   .throbber_roundThrobber15_1hbf_ {
@@ -2442,86 +2054,39 @@
   opacity: 1;
   stroke-width: 7.5px;
 }
-
 @keyframes throbber_ThrobberRoundLoopThickness_3Ve7- {
-  0% {
-  }
-  /*
-	10%
-	{
-		stroke-width: 4.5px;
-	}
-	20%
-	{
-		stroke-width: 2px;
-	}
-	30%
-	{
-		stroke-width: 4.5px;
-	}
-	40%
-	{
-		stroke-width: 2px;
-	}
-	50%
-	{
-		stroke-width: 4.5px;
-	}
-	60%
-	{
-		stroke-width: 9px;
-	}
-	70%
-	{
-		stroke-width: 4.5px;
-	}
-	80%
-	{
-		stroke-width: 9px;
-	}
-	90%
-	{
-		stroke-width: 9px;
-	}*/
   100% {
     stroke-dashoffset: -1100;
   }
 }
-
 .throbber_throbber_small_U-aow {
   width: 36px;
   height: 36px;
 }
-
 .throbber_throbber_medium_1Fobg {
   width: 64px;
   height: 64px;
 }
-
 .throbber_throbber_large_2IrNq {
   width: 92px;
   height: 92px;
 }
-
 .throbber_throbber_xlarge_2XWPE {
   width: 120px;
   height: 120px;
 }
-
 .throbber_throbber_xxlarge_QooXb {
   width: 240px;
   height: 240px;
 }
-
 .SVGIcon_Button {
-  fill: #ffffff;
+  fill: #fff;
   overflow: visible;
   width: 100%;
   height: 100%;
   max-width: 320px;
   max-height: 320px;
 }
-
 .shared_svg_library_EmoticonBow_3vBI6 {
   position: absolute;
   top: -15px;
@@ -2529,305 +2094,217 @@
   bottom: 0;
   left: 0;
 }
-
 .shared_svg_library_EmoticonBow_st0_3EB-7 {
   opacity: 0.4;
   fill: #231f20;
 }
-
 .shared_svg_library_EmoticonBow_st1_2NIMu {
   fill: #e41e25;
 }
-
 .teamlogo_colorBlack_1gyoR {
   color: #0f1417;
 }
-
 .teamlogo_colorWhite_1ud5y {
-  color: white;
+  color: #fff;
 }
-
 .teamlogo_colorDarkGrey_2vxVp {
   color: #1a272f;
 }
-
 .teamlogo_colorGrey_31M7N {
   color: #507082;
 }
-
 .teamlogo_colorLightGrey_2I07z {
   color: #1a272f;
 }
-
 .teamlogo_colorOrange_2rejP {
   color: #ee481a;
 }
-
 .teamlogo_colorRed_2ECf8 {
   color: #992410;
 }
-
 .teamlogo_colorAqua_7f_Ug {
   color: #37c2b1;
 }
-
 .teamlogo_colorBlue_OReLJ {
   color: #4661ec;
 }
-
 .teamlogo_colorBrightRed_39U_i {
-  color: #ff0000;
+  color: red;
 }
-
 .teamlogo_colorBrightBlue_1ga7F {
   color: #00b3ff;
 }
-
 .teamlogo_colorBrightOrange_215bV {
   color: #eda10f;
 }
-
 .teamlogo_colorBrightPurple_2vJvv {
   color: #9652ed;
 }
-
 .teamlogo_colorBrightYellow_1TiHY {
-  color: yellow;
+  color: #ff0;
 }
-
 .teamlogo_colorBrightGreen_1tE3J {
   color: #15c65c;
 }
-
 .teamlogo_colorBrightGrey_37ajH {
   color: #e0e0e0;
 }
-
 .teamlogo_backgroundColorBlack_2QeB1 {
   background-color: #0f1417;
 }
-
 .teamlogo_backgroundColorDarkGrey_1Ptnz {
   background-color: #1a272f;
 }
-
 .teamlogo_backgroundColorLightGrey_1AqLX {
   background-color: #b9babb;
 }
-
 .teamlogo_backgroundColorWhite_1UgYf {
-  background-color: white;
+  background-color: #fff;
 }
-
 .teamlogo_backgroundColorOrange_Kq-I1 {
   background-color: #ee481a;
 }
-
 .teamlogo_backgroundColorRed_3LnEn {
   background-color: #992410;
 }
-
 .teamlogo_backgroundColorAqua_2W42V {
   background-color: #37c2b1;
 }
-
 .teamlogo_backgroundColorBlue_2iJbc {
   background-color: #4661ec;
 }
-
 .teamlogo_backgroundColorGrey_2iKh1 {
   background-color: #507082;
 }
-
 .teamlogo_backgroundColorBrightRed_svWj6 {
-  background-color: #ff0000;
+  background-color: red;
 }
-
 .teamlogo_backgroundColorBrightBlue_1teeH {
   background-color: #00b3ff;
 }
-
 .teamlogo_backgroundColorBrightOrange_3Y_qp {
   background-color: #eda10f;
 }
-
 .teamlogo_backgroundColorBrightPurple_4M-7y {
   background-color: #9652ed;
 }
-
 .teamlogo_backgroundColorBrightYellow_3-7f5 {
-  background-color: yellow;
+  background-color: #ff0;
 }
-
 .teamlogo_backgroundColorBrightGreen_2K9Tv {
   background-color: #15c65c;
 }
-
 .teamlogo_backgroundColorBrightGrey_1-N_g {
   background-color: #e0e0e0;
 }
-
-/**
- * Font Mixins.
- *
- * Use like:
- *
- *	.myselector {
- * 		@include FontHeading;
- *	}
- */
 .teamlogo_TeamLogoLarge_3msay {
   width: 192px;
   height: 192px;
 }
-
 .teamlogo_TeamLogoMedium_2uyQE {
   width: 64px;
   height: 64px;
 }
-
 .teamlogo_TeamLogoSmall_3SBl1 {
   width: 32px;
   height: 32px;
 }
-
 .titleheader_colorBlack_jFXit {
   color: #0f1417;
 }
-
 .titleheader_colorWhite_2RzDn {
-  color: white;
+  color: #fff;
 }
-
 .titleheader_colorDarkGrey_2xKoD {
   color: #1a272f;
 }
-
 .titleheader_colorGrey_24JxC {
   color: #507082;
 }
-
 .titleheader_colorLightGrey_2p1lu {
   color: #1a272f;
 }
-
 .titleheader_colorOrange_aabbq {
   color: #ee481a;
 }
-
 .titleheader_colorRed_1epkD {
   color: #992410;
 }
-
 .titleheader_colorAqua_XQ-i9 {
   color: #37c2b1;
 }
-
 .titleheader_colorBlue_3N6cg {
   color: #4661ec;
 }
-
 .titleheader_colorBrightRed_Q84QA {
-  color: #ff0000;
+  color: red;
 }
-
 .titleheader_colorBrightBlue_2Ethy {
   color: #00b3ff;
 }
-
 .titleheader_colorBrightOrange_gYQeu {
   color: #eda10f;
 }
-
 .titleheader_colorBrightPurple_3pXPx {
   color: #9652ed;
 }
-
 .titleheader_colorBrightYellow_1zzX1 {
-  color: yellow;
+  color: #ff0;
 }
-
 .titleheader_colorBrightGreen_RTWq7 {
   color: #15c65c;
 }
-
 .titleheader_colorBrightGrey_1Yznm {
   color: #e0e0e0;
 }
-
 .titleheader_backgroundColorBlack_HeNb9 {
   background-color: #0f1417;
 }
-
 .titleheader_backgroundColorDarkGrey_bIaT2 {
   background-color: #1a272f;
 }
-
 .titleheader_backgroundColorLightGrey_1pXCm {
   background-color: #b9babb;
 }
-
 .titleheader_backgroundColorWhite_38Wuj {
-  background-color: white;
+  background-color: #fff;
 }
-
 .titleheader_backgroundColorOrange_3bBJ5 {
   background-color: #ee481a;
 }
-
 .titleheader_backgroundColorRed_ifS2Z {
   background-color: #992410;
 }
-
 .titleheader_backgroundColorAqua_3tMqB {
   background-color: #37c2b1;
 }
-
 .titleheader_backgroundColorBlue_26WPC {
   background-color: #4661ec;
 }
-
 .titleheader_backgroundColorGrey_2pZPW {
   background-color: #507082;
 }
-
 .titleheader_backgroundColorBrightRed_HotIA {
-  background-color: #ff0000;
+  background-color: red;
 }
-
 .titleheader_backgroundColorBrightBlue_1uuxP {
   background-color: #00b3ff;
 }
-
 .titleheader_backgroundColorBrightOrange_1odVZ {
   background-color: #eda10f;
 }
-
 .titleheader_backgroundColorBrightPurple_-Lc1J {
   background-color: #9652ed;
 }
-
 .titleheader_backgroundColorBrightYellow_totJF {
-  background-color: yellow;
+  background-color: #ff0;
 }
-
 .titleheader_backgroundColorBrightGreen_3ngaC {
   background-color: #15c65c;
 }
-
 .titleheader_backgroundColorBrightGrey_1zIrZ {
   background-color: #e0e0e0;
 }
-
-/**
- * Font Mixins.
- *
- * Use like:
- *
- *	.myselector {
- * 		@include FontHeading;
- *	}
- */
 .titleheader_TitleHeader_sX4gR {
   width: 100%;
   padding-top: 20px;
@@ -2862,7 +2339,7 @@
   .titleheader_TitleElements_3Dg8L
   .titleheader_HeaderText_njRFA {
   flex-grow: 1;
-  color: white;
+  color: #fff;
   font-size: 28px;
   letter-spacing: 0.5px;
 }
@@ -2896,7 +2373,7 @@
   display: flex;
   flex-direction: row;
   margin-top: 7px;
-  color: white;
+  color: #fff;
   font-size: 13px;
   font-weight: bold;
   margin-right: 8px;
@@ -2929,144 +2406,102 @@
   height: 2px;
   border-radius: 1px;
 }
-
 .favoritetoggle_colorBlack_lBgyv {
   color: #0f1417;
 }
-
 .favoritetoggle_colorWhite_18wFf {
-  color: white;
+  color: #fff;
 }
-
 .favoritetoggle_colorDarkGrey_8refD {
   color: #1a272f;
 }
-
 .favoritetoggle_colorGrey_2krr_ {
   color: #507082;
 }
-
 .favoritetoggle_colorLightGrey_3aquY {
   color: #1a272f;
 }
-
 .favoritetoggle_colorOrange_2va68 {
   color: #ee481a;
 }
-
 .favoritetoggle_colorRed_3jSLD {
   color: #992410;
 }
-
 .favoritetoggle_colorAqua_Pv_Yn {
   color: #37c2b1;
 }
-
 .favoritetoggle_colorBlue_w3RwT {
   color: #4661ec;
 }
-
 .favoritetoggle_colorBrightRed_2pKNg {
-  color: #ff0000;
+  color: red;
 }
-
 .favoritetoggle_colorBrightBlue_p9OI- {
   color: #00b3ff;
 }
-
 .favoritetoggle_colorBrightOrange_1-5Ly {
   color: #eda10f;
 }
-
 .favoritetoggle_colorBrightPurple_wDyUE {
   color: #9652ed;
 }
-
 .favoritetoggle_colorBrightYellow_2z_X4 {
-  color: yellow;
+  color: #ff0;
 }
-
 .favoritetoggle_colorBrightGreen_MGemj {
   color: #15c65c;
 }
-
 .favoritetoggle_colorBrightGrey_2NFIu {
   color: #e0e0e0;
 }
-
 .favoritetoggle_backgroundColorBlack_20g9K {
   background-color: #0f1417;
 }
-
 .favoritetoggle_backgroundColorDarkGrey_1QOMx {
   background-color: #1a272f;
 }
-
 .favoritetoggle_backgroundColorLightGrey_2al5_ {
   background-color: #b9babb;
 }
-
 .favoritetoggle_backgroundColorWhite_1AWad {
-  background-color: white;
+  background-color: #fff;
 }
-
 .favoritetoggle_backgroundColorOrange_2sb1W {
   background-color: #ee481a;
 }
-
 .favoritetoggle_backgroundColorRed_2xiWc {
   background-color: #992410;
 }
-
 .favoritetoggle_backgroundColorAqua_3g9ar {
   background-color: #37c2b1;
 }
-
 .favoritetoggle_backgroundColorBlue_plSTT {
   background-color: #4661ec;
 }
-
 .favoritetoggle_backgroundColorGrey_3PxDD {
   background-color: #507082;
 }
-
 .favoritetoggle_backgroundColorBrightRed_24UFp {
-  background-color: #ff0000;
+  background-color: red;
 }
-
 .favoritetoggle_backgroundColorBrightBlue_3H0X_ {
   background-color: #00b3ff;
 }
-
 .favoritetoggle_backgroundColorBrightOrange_3HYD5 {
   background-color: #eda10f;
 }
-
 .favoritetoggle_backgroundColorBrightPurple_C6vPd {
   background-color: #9652ed;
 }
-
 .favoritetoggle_backgroundColorBrightYellow_Ochd7 {
-  background-color: yellow;
+  background-color: #ff0;
 }
-
 .favoritetoggle_backgroundColorBrightGreen_1slVM {
   background-color: #15c65c;
 }
-
 .favoritetoggle_backgroundColorBrightGrey_1Bs_C {
   background-color: #e0e0e0;
 }
-
-/**
- * Font Mixins.
- *
- * Use like:
- *
- *	.myselector {
- * 		@include FontHeading;
- *	}
- */
 .favoritetoggle_FavoriteToggle_2dA5L {
   margin-top: auto;
   margin-bottom: auto;
@@ -3076,135 +2511,102 @@
   width: 24px;
   height: 24px;
 }
-
 .tournamentlistpage_colorBlack_3OXb0 {
   color: #0f1417;
 }
-
 .tournamentlistpage_colorWhite_rCaB8 {
-  color: white;
+  color: #fff;
 }
-
 .tournamentlistpage_colorDarkGrey_1Ju-w {
   color: #1a272f;
 }
-
 .tournamentlistpage_colorGrey_1q5u6 {
   color: #507082;
 }
-
 .tournamentlistpage_colorLightGrey_391_T {
   color: #1a272f;
 }
-
 .tournamentlistpage_colorOrange_2N4xA {
   color: #ee481a;
 }
-
 .tournamentlistpage_colorRed_7RWui {
   color: #992410;
 }
-
 .tournamentlistpage_colorAqua_2Lkrq {
   color: #37c2b1;
 }
-
 .tournamentlistpage_colorBlue_1-51A {
   color: #4661ec;
 }
-
 .tournamentlistpage_colorBrightRed_1XQwI {
-  color: #ff0000;
+  color: red;
 }
-
 .tournamentlistpage_colorBrightBlue_1VFPU {
   color: #00b3ff;
 }
-
 .tournamentlistpage_colorBrightOrange_WZMxl {
   color: #eda10f;
 }
-
 .tournamentlistpage_colorBrightPurple_2AOqU {
   color: #9652ed;
 }
-
 .tournamentlistpage_colorBrightYellow_3FHL6 {
-  color: yellow;
+  color: #ff0;
 }
-
 .tournamentlistpage_colorBrightGreen_ySi4N {
   color: #15c65c;
 }
-
 .tournamentlistpage_colorBrightGrey_31MJJ {
   color: #e0e0e0;
 }
-
 .tournamentlistpage_backgroundColorBlack_1LmeR {
   background-color: #0f1417;
 }
-
 .tournamentlistpage_backgroundColorDarkGrey_2wReT {
   background-color: #1a272f;
 }
-
 .tournamentlistpage_backgroundColorLightGrey_39ein {
   background-color: #b9babb;
 }
-
 .tournamentlistpage_backgroundColorWhite_3m1yZ {
-  background-color: white;
+  background-color: #fff;
 }
-
 .tournamentlistpage_backgroundColorOrange_3oqCi {
   background-color: #ee481a;
 }
-
 .tournamentlistpage_backgroundColorRed_10bl5 {
   background-color: #992410;
 }
-
 .tournamentlistpage_backgroundColorAqua_2F_9U {
   background-color: #37c2b1;
 }
-
 .tournamentlistpage_backgroundColorBlue_2Yfyt {
   background-color: #4661ec;
 }
-
 .tournamentlistpage_backgroundColorGrey_3u-I4 {
   background-color: #507082;
 }
-
 .tournamentlistpage_backgroundColorBrightRed_2_0Ox {
-  background-color: #ff0000;
+  background-color: red;
 }
-
 .tournamentlistpage_backgroundColorBrightBlue_1enGt {
   background-color: #00b3ff;
 }
-
 .tournamentlistpage_backgroundColorBrightOrange_JjWgU {
   background-color: #eda10f;
 }
-
 .tournamentlistpage_backgroundColorBrightPurple_Q-VJp {
   background-color: #9652ed;
 }
-
 .tournamentlistpage_backgroundColorBrightYellow_PhQh6 {
-  background-color: yellow;
+  background-color: #ff0;
 }
-
 .tournamentlistpage_backgroundColorBrightGreen_2FYgQ {
   background-color: #15c65c;
 }
-
 .tournamentlistpage_backgroundColorBrightGrey_wVQZB {
   background-color: #e0e0e0;
 }
-
 .tournamentlistpage_TournamentListPage_8YOR6 {
   width: 100%;
   flex-grow: 1;
@@ -3232,7 +2634,7 @@
   margin-bottom: 4px;
   border-radius: 4px;
   background-color: #eda10f;
-  color: white;
+  color: #fff;
   z-index: 2;
   font-size: 14px;
 }
@@ -3253,151 +2655,106 @@
   flex-direction: column;
   overflow-y: scroll;
 }
-
 .predictionspage_colorBlack_2byEJ {
   color: #0f1417;
 }
-
 .predictionspage_colorWhite_3DNbf {
-  color: white;
+  color: #fff;
 }
-
 .predictionspage_colorDarkGrey_2wYbX {
   color: #1a272f;
 }
-
 .predictionspage_colorGrey_1V1wj {
   color: #507082;
 }
-
 .predictionspage_colorLightGrey_1gqjr {
   color: #1a272f;
 }
-
 .predictionspage_colorOrange_3IUiv {
   color: #ee481a;
 }
-
 .predictionspage_colorRed_1rDXc {
   color: #992410;
 }
-
 .predictionspage_colorAqua_299eD {
   color: #37c2b1;
 }
-
 .predictionspage_colorBlue_1eIS1 {
   color: #4661ec;
 }
-
 .predictionspage_colorBrightRed_21rdG {
-  color: #ff0000;
+  color: red;
 }
-
 .predictionspage_colorBrightBlue_1R7Qz {
   color: #00b3ff;
 }
-
 .predictionspage_colorBrightOrange_1xsdv {
   color: #eda10f;
 }
-
 .predictionspage_colorBrightPurple_3CyEu {
   color: #9652ed;
 }
-
 .predictionspage_colorBrightYellow_2D8mt {
-  color: yellow;
+  color: #ff0;
 }
-
 .predictionspage_colorBrightGreen_1Jw5X {
   color: #15c65c;
 }
-
 .predictionspage_colorBrightGrey_kucBH {
   color: #e0e0e0;
 }
-
 .predictionspage_backgroundColorBlack_2G4_w {
   background-color: #0f1417;
 }
-
 .predictionspage_backgroundColorDarkGrey_3zRSL {
   background-color: #1a272f;
 }
-
 .predictionspage_backgroundColorLightGrey_3kLIS {
   background-color: #b9babb;
 }
-
 .predictionspage_backgroundColorWhite_3hfEx {
-  background-color: white;
+  background-color: #fff;
 }
-
 .predictionspage_backgroundColorOrange_2REk9 {
   background-color: #ee481a;
 }
-
 .predictionspage_backgroundColorRed_IM3tr {
   background-color: #992410;
 }
-
 .predictionspage_backgroundColorAqua_2U19b {
   background-color: #37c2b1;
 }
-
 .predictionspage_backgroundColorBlue_1D5sv {
   background-color: #4661ec;
 }
-
 .predictionspage_backgroundColorGrey_3X8rV {
   background-color: #507082;
 }
-
 .predictionspage_backgroundColorBrightRed_29XDE {
-  background-color: #ff0000;
+  background-color: red;
 }
-
 .predictionspage_backgroundColorBrightBlue_21Tdo {
   background-color: #00b3ff;
 }
-
 .predictionspage_backgroundColorBrightOrange_3y-zm {
   background-color: #eda10f;
 }
-
 .predictionspage_backgroundColorBrightPurple_3zMlx {
   background-color: #9652ed;
 }
-
 .predictionspage_backgroundColorBrightYellow_3Fji1 {
-  background-color: yellow;
+  background-color: #ff0;
 }
-
 .predictionspage_backgroundColorBrightGreen_1OGrN {
   background-color: #15c65c;
 }
-
 .predictionspage_backgroundColorBrightGrey_2xLhh {
   background-color: #e0e0e0;
 }
-
-/**
- * Font Mixins.
- *
- * Use like:
- *
- *	.myselector {
- * 		@include FontHeading;
- *	}
- */
 ::-webkit-scrollbar {
   width: 0px;
-  /* remove scrollbar space */
   background: transparent;
-  /* optional: just make scrollbar invisible */
 }
-
 .predictionspage_PredictionsPage_1kPgW {
   width: 100%;
   flex-grow: 1;
@@ -3416,7 +2773,7 @@
   position: absolute;
   bottom: 18px;
   right: 8px;
-  color: white;
+  color: #fff;
   font-weight: bold;
   letter-spacing: 2px;
   font-size: 18px;
@@ -3435,7 +2792,7 @@
   margin-bottom: 8px;
   background-color: #37c2b1;
   border-radius: 0px;
-  color: white;
+  color: #fff;
   z-index: 99;
   transform: translateZ(0);
   -webkit-transform: translateZ(0);
@@ -3464,21 +2821,17 @@
   display: flex;
   flex-direction: column;
 }
-
 .predictionspage_Loading__b4Cq {
   margin: auto;
 }
-
 .predictionspage_NoPredictionsContainer_395EQ {
   margin: auto;
 }
-
 .predictionspage_NoPredictions_C31Md {
-  color: grey;
+  color: gray;
   display: flex;
   flex-direction: column;
 }
-
 .predictionspage_NoPredictionsAlertContainer_3-_yg {
   width: 96px;
   height: 96px;
@@ -3491,28 +2844,24 @@
   border: 4px solid #4e6f80;
   display: flex;
 }
-
 .predictionspage_NoPredictionsIcon_2A2iY {
   margin: auto;
   font-size: 64px;
   font-weight: bold;
 }
-
 .predictionspage_NoPredictionsTitle_3G52x {
-  color: white;
+  color: #fff;
   margin: auto;
   margin-top: 40px;
   margin-bottom: 8px;
   font-size: 28px;
   font-weight: bold;
 }
-
 .predictionspage_NoPredictionsDetail_2lA02 {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
 }
-
 .predictionspage_PredictionsHelp_RC5Lt
   .predictionspage_PredictionsHelpPage_86_pk {
   display: flex;
@@ -3520,7 +2869,6 @@
   align-items: center;
   height: 100%;
 }
-
 .predictionspage_PredictionsHelp_RC5Lt
   .predictionspage_PredictionsHelpPageContents_2vHiG {
   margin: 0 auto;
@@ -3533,20 +2881,17 @@
   align-items: center;
   margin-top: 36px;
 }
-
 .predictionspage_PredictionsHelp_RC5Lt .predictionspage_CardContainer_2x9jC {
   width: 100%;
   height: 300px;
   box-sizing: border-box;
   padding-top: 50px;
 }
-
 .predictionspage_PredictionsHelp_RC5Lt .predictionspage_SmallCards_2z602 {
   position: relative;
   width: 100%;
   height: 183px;
 }
-
 .predictionspage_PredictionsHelp_RC5Lt
   .predictionspage_SmallCardContainer_3rzpL {
   position: absolute;
@@ -3554,19 +2899,16 @@
   transform: scale(0.75, 0.75);
   box-sizing: border-box;
 }
-
 .predictionspage_PredictionsHelp_RC5Lt
   .predictionspage_SmallCardContainer_3rzpL.predictionspage_Left_1LU3k {
   top: -25px;
   left: -25px;
 }
-
 .predictionspage_PredictionsHelp_RC5Lt
   .predictionspage_SmallCardContainer_3rzpL.predictionspage_Right_27pEy {
   top: 25px;
   left: 25px;
 }
-
 .predictionspage_PredictionsHelp_RC5Lt
   .predictionspage_HelpTextContainer_2dUe5 {
   min-height: 180px;
@@ -3575,24 +2917,21 @@
   align-items: center;
   margin-top: 24px;
 }
-
 .predictionspage_PredictionsHelp_RC5Lt .predictionspage_HelpTitle_11xhb {
   font-size: 24px;
   font-weight: bold;
-  color: white;
+  color: #fff;
   margin-top: 24px;
   margin-bottom: 8px;
 }
-
 .predictionspage_PredictionsHelp_RC5Lt .predictionspage_HelpDetail_2faCr {
   font-size: 14px;
   text-align: center;
   margin-left: 24px;
   margin-right: 24px;
-  color: grey;
+  color: gray;
   margin-bottom: 8px;
 }
-
 .predictionspage_PredictionsHelp_RC5Lt .predictionspage_HelpSubDetail_3tkiW {
   font-size: 14px;
   text-align: center;
@@ -3601,152 +2940,108 @@
   color: #7f4cc2;
   margin-bottom: 8px;
 }
-
 .predictioncard_colorBlack_M1W3N {
   color: #0f1417;
 }
-
 .predictioncard_colorWhite_GUbge {
-  color: white;
+  color: #fff;
 }
-
 .predictioncard_colorDarkGrey_3H1ia {
   color: #1a272f;
 }
-
 .predictioncard_colorGrey_hTasv {
   color: #507082;
 }
-
 .predictioncard_colorLightGrey_32dZK {
   color: #1a272f;
 }
-
 .predictioncard_colorOrange_2fBL4 {
   color: #ee481a;
 }
-
 .predictioncard_colorRed_3YLa- {
   color: #992410;
 }
-
 .predictioncard_colorAqua_guJmD {
   color: #37c2b1;
 }
-
 .predictioncard_colorBlue_1mxby {
   color: #4661ec;
 }
-
 .predictioncard_colorBrightRed_1DxsA {
-  color: #ff0000;
+  color: red;
 }
-
 .predictioncard_colorBrightBlue_3qnN9 {
   color: #00b3ff;
 }
-
 .predictioncard_colorBrightOrange_3wTtK {
   color: #eda10f;
 }
-
 .predictioncard_colorBrightPurple_1tm_u {
   color: #9652ed;
 }
-
 .predictioncard_colorBrightYellow_3Rqel {
-  color: yellow;
+  color: #ff0;
 }
-
 .predictioncard_colorBrightGreen_3VPwB {
   color: #15c65c;
 }
-
 .predictioncard_colorBrightGrey_1K61m {
   color: #e0e0e0;
 }
-
 .predictioncard_backgroundColorBlack_21OIT {
   background-color: #0f1417;
 }
-
 .predictioncard_backgroundColorDarkGrey_3SD67 {
   background-color: #1a272f;
 }
-
 .predictioncard_backgroundColorLightGrey_1uzBi {
   background-color: #b9babb;
 }
-
 .predictioncard_backgroundColorWhite_3TF5N {
-  background-color: white;
+  background-color: #fff;
 }
-
 .predictioncard_backgroundColorOrange_1eiJ2 {
   background-color: #ee481a;
 }
-
 .predictioncard_backgroundColorRed_TQIh8 {
   background-color: #992410;
 }
-
 .predictioncard_backgroundColorAqua_KA0ck {
   background-color: #37c2b1;
 }
-
 .predictioncard_backgroundColorBlue_15LKT {
   background-color: #4661ec;
 }
-
 .predictioncard_backgroundColorGrey_2PgCN {
   background-color: #507082;
 }
-
 .predictioncard_backgroundColorBrightRed_3Itqc {
-  background-color: #ff0000;
+  background-color: red;
 }
-
 .predictioncard_backgroundColorBrightBlue_1zwdC {
   background-color: #00b3ff;
 }
-
 .predictioncard_backgroundColorBrightOrange_gJkxy {
   background-color: #eda10f;
 }
-
 .predictioncard_backgroundColorBrightPurple_p7XvR {
   background-color: #9652ed;
 }
-
 .predictioncard_backgroundColorBrightYellow_2QMhY {
-  background-color: yellow;
+  background-color: #ff0;
 }
-
 .predictioncard_backgroundColorBrightGreen_3xesO {
   background-color: #15c65c;
 }
-
 .predictioncard_backgroundColorBrightGrey_1-O4l {
   background-color: #e0e0e0;
 }
-
-/**
- * Font Mixins.
- *
- * Use like:
- *
- *	.myselector {
- * 		@include FontHeading;
- *	}
- */
 *:link {
   text-decoration: none;
 }
-
 *:focus {
   outline: 0;
 }
-
 .predictioncard_card_3V0Ve {
   background-color: #1a272f;
   border-radius: 8px;
@@ -3759,7 +3054,7 @@
   font-family: "Open Sans", Verdana, sans-serif;
   font-size: 14px;
   line-height: 20px;
-  color: white;
+  color: #fff;
   display: flex;
 }
 .predictioncard_card_3V0Ve .predictioncard_image_gxwbn {
@@ -3774,18 +3069,15 @@
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }
-
 .predictioncard_icon_3rc0h {
   width: 30px;
   height: 30px;
   border-radius: 15px;
   margin-right: 8px;
 }
-
 .predictioncard_news_2-MvK.predictioncard_withIcon_JWcnI {
   margin-top: 3.75px;
 }
-
 .predictioncard_imageCard_3VvOH {
   height: 250px;
   background-size: cover;
@@ -3793,7 +3085,6 @@
 .predictioncard_imageCard_3VvOH.predictioncard_short_pakbT {
   height: 156px;
 }
-
 .predictioncard_tournament_fyq6Z {
   position: relative;
   display: flex;
@@ -3814,7 +3105,7 @@
 .predictioncard_tournament_fyq6Z .predictioncard_title_39z0I {
   font-size: 18px;
   line-height: 24px;
-  color: white;
+  color: #fff;
 }
 .predictioncard_tournament_fyq6Z .predictioncard_details_2mBmV {
   display: flex;
@@ -3851,7 +3142,6 @@
   text-align: right;
   color: #e0e0e0;
 }
-
 .predictioncard_SeriesCard_3qBsu {
   height: 132px;
   display: block;
@@ -3910,7 +3200,7 @@
   letter-spacing: 1px;
   font-size: 10px;
   font-weight: bold;
-  color: white;
+  color: #fff;
 }
 .predictioncard_SeriesCard_3qBsu
   .predictioncard_Columns_3tulc
@@ -3920,7 +3210,7 @@
   font-size: 32px;
   letter-spacing: 2px;
   font-weight: bold;
-  color: white;
+  color: #fff;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -3961,7 +3251,6 @@
 .predictioncard_SeriesCard_3qBsu .predictioncard_ThrobberSpacing_3UvlR {
   margin-top: 20px;
 }
-
 .predictioncard_UpcomingSeriesCard_1xfnc,
 .predictioncard_LiveMatchCard_1Qtp0 {
   min-height: 210px;
@@ -3971,7 +3260,7 @@
   background-color: #1a272f;
   border-radius: 4px;
   margin: 12px;
-  color: white;
+  color: #fff;
   font-size: 20px;
 }
 .predictioncard_UpcomingSeriesCard_1xfnc .predictioncard_LeagueLogo_2xEK8,
@@ -4059,7 +3348,6 @@
   font-weight: bold;
   color: #507082;
 }
-
 .predictioncard_MatchCard_aQ6QT {
   height: 132px;
   display: block;
@@ -4115,7 +3403,7 @@
   letter-spacing: 1px;
   font-size: 10px;
   font-weight: bold;
-  color: white;
+  color: #fff;
 }
 .predictioncard_MatchCard_aQ6QT
   .predictioncard_Columns_3tulc
@@ -4125,7 +3413,7 @@
   font-size: 32px;
   letter-spacing: 2px;
   font-weight: bold;
-  color: white;
+  color: #fff;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -4160,7 +3448,6 @@
 .predictioncard_MatchCard_aQ6QT .predictioncard_ThrobberSpacing_3UvlR {
   margin-top: 20px;
 }
-
 .predictioncard_TournamentResultsCard_pHAM1 .predictioncard_Content_iokxV {
   display: flex;
   flex-direction: row;
@@ -4186,7 +3473,7 @@
   .predictioncard_TeamInfo_3rzKF {
   display: flex;
   flex-direction: row;
-  color: white;
+  color: #fff;
   font-size: 12px;
   margin-top: 8px;
 }
@@ -4245,7 +3532,6 @@
   font-size: 12px;
   color: #eda10f;
 }
-
 .predictioncard_TeamRosterCard_1fgzJ .predictioncard_card_3V0Ve {
   min-height: 76px;
 }
@@ -4254,7 +3540,7 @@
   .predictioncard_Content_iokxV {
   display: flex;
   flex-direction: row;
-  color: white;
+  color: #fff;
   font-size: 12px;
   padding-top: 21px;
   padding-bottom: 21px;
@@ -4276,7 +3562,6 @@
   margin: auto 0px;
   padding-right: 12px;
 }
-
 .predictioncard_PredictionCard_fW3n3 {
   display: flex;
   flex-direction: column;
@@ -4295,7 +3580,7 @@
   -webkit-touch-callout: none;
 }
 .predictioncard_PredictionCard_fW3n3 .predictioncard_StartTime_11cXO {
-  color: grey;
+  color: gray;
   font-size: 12px;
   margin-left: auto;
   margin-right: 12px;
@@ -4431,14 +3716,14 @@
   .predictioncard_Columns_3tulc
   .predictioncard_Results_tGmYG {
   margin: auto;
-  color: white;
+  color: #fff;
   text-transform: bold;
   font-size: 30px;
 }
 .predictioncard_PredictionCard_fW3n3
   .predictioncard_Columns_3tulc
   .predictioncard_Payouts_1kXpY {
-  color: white;
+  color: #fff;
   text-transform: bold;
   font-size: 30px;
 }
@@ -4457,13 +3742,12 @@
   animation-iteration-count: infinite;
   color: darkred;
 }
-
 @keyframes predictioncard_stalecolor_37nDA {
   0% {
     color: darkred;
   }
   50% {
-    color: white;
+    color: #fff;
   }
   100% {
     color: darkred;
@@ -4515,7 +3799,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  color: #cccccc;
+  color: #ccc;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 12px;
@@ -4599,7 +3883,7 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 14px;
-  color: lightgrey;
+  color: #d3d3d3;
   padding-bottom: 4px;
 }
 .predictioncard_PredictionCard_fW3n3
@@ -4608,14 +3892,14 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  color: white;
+  color: #fff;
   font-weight: bold;
   letter-spacing: 1px;
 }
 .predictioncard_PredictionCard_fW3n3
   .predictioncard_WagerSelectionContainer_3jFqu
   .predictioncard_WagerSelectionGroup_1Mauh.predictioncard_TeamSelected_3y_uw {
-  color: #cccccc;
+  color: #ccc;
 }
 .predictioncard_PredictionCard_fW3n3
   .predictioncard_WagerSelectionContainer_3jFqu
@@ -4642,13 +3926,12 @@
   animation-iteration-count: infinite;
   color: darkred;
 }
-
 @keyframes predictioncard_stalepayoutcolor_2DLhT {
   0% {
     color: darkred;
   }
   50% {
-    color: white;
+    color: #fff;
   }
   100% {
     color: darkred;
@@ -4661,19 +3944,15 @@
   height: 17px;
   margin-right: 4px;
 }
-
 .predictioncard_WonPrediction_2-Fga {
   box-shadow: 0px 0px 4px 4px green;
 }
-
 .predictioncard_LostPrediction_1TL9R {
   box-shadow: 0px 0px 4px 4px red;
 }
-
 .predictioncard_TiedPrediction_3dFdk {
-  box-shadow: 0px 0px 4px 4px cyan;
+  box-shadow: 0px 0px 4px 4px aqua;
 }
-
 .predictioncard_SubmittingContainer_2KuO4 {
   text-align: center;
   width: 100%;
@@ -4685,16 +3964,14 @@
 }
 .predictioncard_SubmittingContainer_2KuO4 .predictioncard_SubmittingText_3ls9U {
   font-size: 14px;
-  color: white;
+  color: #fff;
   text-transform: uppercase;
 }
-
 .predictioncard_PredictionBottomSection_2JsDc.predictioncard_ErrorSection_33ATp {
   align-items: center;
   height: 88px;
   padding: 0px;
 }
-
 .predictioncard_ErrorBody_2Zax0 {
   color: #ff6060;
   font-weight: bold;
@@ -4704,28 +3981,24 @@
   margin-right: 20px;
   font-size: 12px;
 }
-
 .predictioncard_ErrorButton_2G3cv {
   min-width: 100px;
   max-width: 200px;
   border-radius: 5px;
   padding: 4px 16px 4px 16px;
-  color: white;
+  color: #fff;
   text-transform: uppercase;
   background-color: #507082;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .predictioncard_ErrorButton_2G3cv:hover {
   background-color: #6f9ab3;
 }
-
 .predictioncard_ErrorButton_2G3cv:active {
   background-color: #8ec6e5;
 }
-
 .slider_SliderContainer_VXOHg {
   width: 100%;
   height: 100%;
@@ -4766,139 +4039,106 @@
   margin-top: -12px;
   margin-left: -12px;
 }
-
 .fantasypage_colorBlack_t6Qmp {
   color: #0f1417;
 }
-
 .fantasypage_colorWhite_1xyXE {
-  color: white;
+  color: #fff;
 }
-
 .fantasypage_colorDarkGrey_14BZW {
   color: #1a272f;
 }
-
 .fantasypage_colorGrey_ruxvL {
   color: #507082;
 }
-
 .fantasypage_colorLightGrey_2VAZz {
   color: #1a272f;
 }
-
 .fantasypage_colorOrange_3IpFh {
   color: #ee481a;
 }
-
 .fantasypage_colorRed_1IHSw {
   color: #992410;
 }
-
 .fantasypage_colorAqua_1tGOf {
   color: #37c2b1;
 }
-
 .fantasypage_colorBlue_UEyQm {
   color: #4661ec;
 }
-
 .fantasypage_colorBrightRed_3pDI0 {
-  color: #ff0000;
+  color: red;
 }
-
 .fantasypage_colorBrightBlue_3bCib {
   color: #00b3ff;
 }
-
 .fantasypage_colorBrightOrange_2wj_6 {
   color: #eda10f;
 }
-
 .fantasypage_colorBrightPurple_1RubF {
   color: #9652ed;
 }
-
 .fantasypage_colorBrightYellow_2lvnJ {
-  color: yellow;
+  color: #ff0;
 }
-
 .fantasypage_colorBrightGreen_26L2F {
   color: #15c65c;
 }
-
 .fantasypage_colorBrightGrey_Q-2s_ {
   color: #e0e0e0;
 }
-
 .fantasypage_backgroundColorBlack_2AxWN {
   background-color: #0f1417;
 }
-
 .fantasypage_backgroundColorDarkGrey_J0NPp {
   background-color: #1a272f;
 }
-
 .fantasypage_backgroundColorLightGrey_23dnE {
   background-color: #b9babb;
 }
-
 .fantasypage_backgroundColorWhite_2hzzp {
-  background-color: white;
+  background-color: #fff;
 }
-
 .fantasypage_backgroundColorOrange_3-3s9 {
   background-color: #ee481a;
 }
-
 .fantasypage_backgroundColorRed_23P5L {
   background-color: #992410;
 }
-
 .fantasypage_backgroundColorAqua_3n74D {
   background-color: #37c2b1;
 }
-
 .fantasypage_backgroundColorBlue_3u6Eh {
   background-color: #4661ec;
 }
-
 .fantasypage_backgroundColorGrey_10UaB {
   background-color: #507082;
 }
-
 .fantasypage_backgroundColorBrightRed_2jq92 {
-  background-color: #ff0000;
+  background-color: red;
 }
-
 .fantasypage_backgroundColorBrightBlue_3RrpB {
   background-color: #00b3ff;
 }
-
 .fantasypage_backgroundColorBrightOrange_3rDsE {
   background-color: #eda10f;
 }
-
 .fantasypage_backgroundColorBrightPurple_Z-yFt {
   background-color: #9652ed;
 }
-
 .fantasypage_backgroundColorBrightYellow_3HDRe {
-  background-color: yellow;
+  background-color: #ff0;
 }
-
 .fantasypage_backgroundColorBrightGreen_3C_AV {
   background-color: #15c65c;
 }
-
 .fantasypage_backgroundColorBrightGrey_SVViO {
   background-color: #e0e0e0;
 }
-
+.fantasypage_FantasyHelp_39-fj .fantasypage_League_eHH1E,
 .fantasypage_FantasyPage_3zKgk
   .fantasypage_Contents_QRAGK
-  .fantasypage_League_eHH1E,
-.fantasypage_FantasyHelp_39-fj .fantasypage_League_eHH1E {
+  .fantasypage_League_eHH1E {
   background-color: #1a272f;
   padding-top: 4px;
   padding-left: 16px;
@@ -4909,10 +4149,10 @@
   border-radius: 4px;
   min-height: 80px;
 }
+.fantasypage_FantasyHelp_39-fj
+  .fantasypage_Selected_26x-7.fantasypage_League_eHH1E,
 .fantasypage_FantasyPage_3zKgk
   .fantasypage_Contents_QRAGK
-  .fantasypage_Selected_26x-7.fantasypage_League_eHH1E,
-.fantasypage_FantasyHelp_39-fj
   .fantasypage_Selected_26x-7.fantasypage_League_eHH1E {
   opacity: 1;
   background-color: #4661ec;
@@ -4925,60 +4165,60 @@
   margin-right: 0;
   top: 0;
 }
-.fantasypage_FantasyPage_3zKgk
-  .fantasypage_Contents_QRAGK
+.fantasypage_FantasyHelp_39-fj
   .fantasypage_Selected_26x-7.fantasypage_League_eHH1E
   .fantasypage_Name_arVxY,
-.fantasypage_FantasyHelp_39-fj
+.fantasypage_FantasyPage_3zKgk
+  .fantasypage_Contents_QRAGK
   .fantasypage_Selected_26x-7.fantasypage_League_eHH1E
   .fantasypage_Name_arVxY {
   padding-bottom: 0px;
 }
-.fantasypage_FantasyPage_3zKgk
-  .fantasypage_Contents_QRAGK
+.fantasypage_FantasyHelp_39-fj
   .fantasypage_Selected_26x-7.fantasypage_League_eHH1E
   .fantasypage_Phase_3k-PM,
-.fantasypage_FantasyHelp_39-fj
+.fantasypage_FantasyPage_3zKgk
+  .fantasypage_Contents_QRAGK
   .fantasypage_Selected_26x-7.fantasypage_League_eHH1E
   .fantasypage_Phase_3k-PM {
   color: #b9babb;
   font-size: 10px;
 }
-.fantasypage_FantasyPage_3zKgk
-  .fantasypage_Contents_QRAGK
+.fantasypage_FantasyHelp_39-fj
   .fantasypage_Selected_26x-7.fantasypage_League_eHH1E
   .fantasypage_Dates_1mNor,
-.fantasypage_FantasyHelp_39-fj
+.fantasypage_FantasyPage_3zKgk
+  .fantasypage_Contents_QRAGK
   .fantasypage_Selected_26x-7.fantasypage_League_eHH1E
   .fantasypage_Dates_1mNor {
   padding-top: 4px;
 }
-.fantasypage_FantasyPage_3zKgk
-  .fantasypage_Contents_QRAGK
+.fantasypage_FantasyHelp_39-fj
   .fantasypage_Selected_26x-7.fantasypage_League_eHH1E
   .fantasypage_Status_vI0Dd,
-.fantasypage_FantasyHelp_39-fj
+.fantasypage_FantasyPage_3zKgk
+  .fantasypage_Contents_QRAGK
   .fantasypage_Selected_26x-7.fantasypage_League_eHH1E
   .fantasypage_Status_vI0Dd {
   opacity: 0;
 }
+.fantasypage_FantasyHelp_39-fj
+  .fantasypage_League_eHH1E
+  .fantasypage_Name_arVxY,
 .fantasypage_FantasyPage_3zKgk
   .fantasypage_Contents_QRAGK
   .fantasypage_League_eHH1E
-  .fantasypage_Name_arVxY,
-.fantasypage_FantasyHelp_39-fj
-  .fantasypage_League_eHH1E
   .fantasypage_Name_arVxY {
-  color: white;
+  color: #fff;
   font-size: 16px;
   font-weight: 600;
   padding-bottom: 2px;
 }
-.fantasypage_FantasyPage_3zKgk
-  .fantasypage_Contents_QRAGK
+.fantasypage_FantasyHelp_39-fj
   .fantasypage_League_eHH1E
   .fantasypage_Phase_3k-PM,
-.fantasypage_FantasyHelp_39-fj
+.fantasypage_FantasyPage_3zKgk
+  .fantasypage_Contents_QRAGK
   .fantasypage_League_eHH1E
   .fantasypage_Phase_3k-PM {
   color: #4661ec;
@@ -4988,11 +4228,11 @@
   font-weight: bold;
   text-align: left;
 }
-.fantasypage_FantasyPage_3zKgk
-  .fantasypage_Contents_QRAGK
+.fantasypage_FantasyHelp_39-fj
   .fantasypage_League_eHH1E
   .fantasypage_Dates_1mNor,
-.fantasypage_FantasyHelp_39-fj
+.fantasypage_FantasyPage_3zKgk
+  .fantasypage_Contents_QRAGK
   .fantasypage_League_eHH1E
   .fantasypage_Dates_1mNor {
   padding-top: 8px;
@@ -5003,11 +4243,11 @@
   letter-spacing: 1px;
   font-weight: 600;
 }
-.fantasypage_FantasyPage_3zKgk
-  .fantasypage_Contents_QRAGK
+.fantasypage_FantasyHelp_39-fj
   .fantasypage_League_eHH1E
   .fantasypage_Status_vI0Dd,
-.fantasypage_FantasyHelp_39-fj
+.fantasypage_FantasyPage_3zKgk
+  .fantasypage_Contents_QRAGK
   .fantasypage_League_eHH1E
   .fantasypage_Status_vI0Dd {
   margin-top: -4px;
@@ -5017,53 +4257,52 @@
   font-weight: bold;
   text-align: right;
 }
-.fantasypage_FantasyPage_3zKgk
-  .fantasypage_Contents_QRAGK
+.fantasypage_FantasyHelp_39-fj
   .fantasypage_League_eHH1E
   .fantasypage_Status_vI0Dd.fantasypage_StatusUnset_1dWdF,
-.fantasypage_FantasyHelp_39-fj
+.fantasypage_FantasyPage_3zKgk
+  .fantasypage_Contents_QRAGK
   .fantasypage_League_eHH1E
   .fantasypage_Status_vI0Dd.fantasypage_StatusUnset_1dWdF {
   color: #eda10f;
 }
-.fantasypage_FantasyPage_3zKgk
-  .fantasypage_Contents_QRAGK
+.fantasypage_FantasyHelp_39-fj
   .fantasypage_League_eHH1E
   .fantasypage_Status_vI0Dd.fantasypage_StatusPartial_1L2_i,
-.fantasypage_FantasyHelp_39-fj
-  .fantasypage_League_eHH1E
-  .fantasypage_Status_vI0Dd.fantasypage_StatusPartial_1L2_i {
-  color: yellow;
-}
 .fantasypage_FantasyPage_3zKgk
   .fantasypage_Contents_QRAGK
   .fantasypage_League_eHH1E
-  .fantasypage_Status_vI0Dd.fantasypage_StatusFull_1n4jn,
+  .fantasypage_Status_vI0Dd.fantasypage_StatusPartial_1L2_i {
+  color: #ff0;
+}
 .fantasypage_FantasyHelp_39-fj
+  .fantasypage_League_eHH1E
+  .fantasypage_Status_vI0Dd.fantasypage_StatusFull_1n4jn,
+.fantasypage_FantasyPage_3zKgk
+  .fantasypage_Contents_QRAGK
   .fantasypage_League_eHH1E
   .fantasypage_Status_vI0Dd.fantasypage_StatusFull_1n4jn {
   color: #15c65c;
 }
-.fantasypage_FantasyPage_3zKgk
-  .fantasypage_Contents_QRAGK
+.fantasypage_FantasyHelp_39-fj
   .fantasypage_League_eHH1E
   .fantasypage_Status_vI0Dd.fantasypage_StatusConcluded_2Q-aa,
-.fantasypage_FantasyHelp_39-fj
+.fantasypage_FantasyPage_3zKgk
+  .fantasypage_Contents_QRAGK
   .fantasypage_League_eHH1E
   .fantasypage_Status_vI0Dd.fantasypage_StatusConcluded_2Q-aa {
   color: #507082;
 }
-
-.fantasypage_FantasyPage_3zKgk
-  .fantasypage_Contents_QRAGK
-  .fantasypage_Roster_2YPlj
-  .fantasypage_RosterSlots_2Jdey
-  .fantasypage_RosterSlot_2OTsk,
+.fantasypage_FantasyHelp_39-fj .fantasypage_RosterSlot_2OTsk,
 .fantasypage_FantasyPage_3zKgk
   .fantasypage_Contents_QRAGK
   .fantasypage_PlayerSelect_1H3yW
   .fantasypage_RosterSlot_2OTsk,
-.fantasypage_FantasyHelp_39-fj .fantasypage_RosterSlot_2OTsk {
+.fantasypage_FantasyPage_3zKgk
+  .fantasypage_Contents_QRAGK
+  .fantasypage_Roster_2YPlj
+  .fantasypage_RosterSlots_2Jdey
+  .fantasypage_RosterSlot_2OTsk {
   margin-left: 12px;
   margin-right: 12px;
   margin-top: 8px;
@@ -5073,37 +4312,34 @@
   display: flex;
   flex-direction: row;
 }
-.fantasypage_FantasyPage_3zKgk
-  .fantasypage_Contents_QRAGK
-  .fantasypage_Roster_2YPlj
-  .fantasypage_RosterSlots_2Jdey
+.fantasypage_FantasyHelp_39-fj
   .fantasypage_Locked_nM0KT.fantasypage_RosterSlot_2OTsk,
 .fantasypage_FantasyPage_3zKgk
   .fantasypage_Contents_QRAGK
   .fantasypage_PlayerSelect_1H3yW
   .fantasypage_Locked_nM0KT.fantasypage_RosterSlot_2OTsk,
-.fantasypage_FantasyHelp_39-fj
+.fantasypage_FantasyPage_3zKgk
+  .fantasypage_Contents_QRAGK
+  .fantasypage_Roster_2YPlj
+  .fantasypage_RosterSlots_2Jdey
   .fantasypage_Locked_nM0KT.fantasypage_RosterSlot_2OTsk {
   cursor: auto;
 }
-.fantasypage_FantasyPage_3zKgk
-  .fantasypage_Contents_QRAGK
-  .fantasypage_Roster_2YPlj
-  .fantasypage_RosterSlots_2Jdey
+.fantasypage_FantasyHelp_39-fj
   .fantasypage_NeedsSubmit_G-z93.fantasypage_RosterSlot_2OTsk,
 .fantasypage_FantasyPage_3zKgk
   .fantasypage_Contents_QRAGK
   .fantasypage_PlayerSelect_1H3yW
   .fantasypage_NeedsSubmit_G-z93.fantasypage_RosterSlot_2OTsk,
-.fantasypage_FantasyHelp_39-fj
+.fantasypage_FantasyPage_3zKgk
+  .fantasypage_Contents_QRAGK
+  .fantasypage_Roster_2YPlj
+  .fantasypage_RosterSlots_2Jdey
   .fantasypage_NeedsSubmit_G-z93.fantasypage_RosterSlot_2OTsk {
   box-shadow: 0 0 8px #15c65c;
   background-color: #1a272f;
 }
-.fantasypage_FantasyPage_3zKgk
-  .fantasypage_Contents_QRAGK
-  .fantasypage_Roster_2YPlj
-  .fantasypage_RosterSlots_2Jdey
+.fantasypage_FantasyHelp_39-fj
   .fantasypage_RosterSlot_2OTsk
   .fantasypage_Player_3J7qq,
 .fantasypage_FantasyPage_3zKgk
@@ -5111,7 +4347,10 @@
   .fantasypage_PlayerSelect_1H3yW
   .fantasypage_RosterSlot_2OTsk
   .fantasypage_Player_3J7qq,
-.fantasypage_FantasyHelp_39-fj
+.fantasypage_FantasyPage_3zKgk
+  .fantasypage_Contents_QRAGK
+  .fantasypage_Roster_2YPlj
+  .fantasypage_RosterSlots_2Jdey
   .fantasypage_RosterSlot_2OTsk
   .fantasypage_Player_3J7qq {
   width: 48px;
@@ -5124,10 +4363,7 @@
   background-color: #000;
   transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
 }
-.fantasypage_FantasyPage_3zKgk
-  .fantasypage_Contents_QRAGK
-  .fantasypage_Roster_2YPlj
-  .fantasypage_RosterSlots_2Jdey
+.fantasypage_FantasyHelp_39-fj
   .fantasypage_RosterSlot_2OTsk
   .fantasypage_Team_3vJY3,
 .fantasypage_FantasyPage_3zKgk
@@ -5135,7 +4371,10 @@
   .fantasypage_PlayerSelect_1H3yW
   .fantasypage_RosterSlot_2OTsk
   .fantasypage_Team_3vJY3,
-.fantasypage_FantasyHelp_39-fj
+.fantasypage_FantasyPage_3zKgk
+  .fantasypage_Contents_QRAGK
+  .fantasypage_Roster_2YPlj
+  .fantasypage_RosterSlots_2Jdey
   .fantasypage_RosterSlot_2OTsk
   .fantasypage_Team_3vJY3 {
   width: 42px;
@@ -5147,10 +4386,7 @@
   border-radius: 6px;
   transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
 }
-.fantasypage_FantasyPage_3zKgk
-  .fantasypage_Contents_QRAGK
-  .fantasypage_Roster_2YPlj
-  .fantasypage_RosterSlots_2Jdey
+.fantasypage_FantasyHelp_39-fj
   .fantasypage_RosterSlot_2OTsk
   .fantasypage_Identity_J8UYV,
 .fantasypage_FantasyPage_3zKgk
@@ -5158,7 +4394,10 @@
   .fantasypage_PlayerSelect_1H3yW
   .fantasypage_RosterSlot_2OTsk
   .fantasypage_Identity_J8UYV,
-.fantasypage_FantasyHelp_39-fj
+.fantasypage_FantasyPage_3zKgk
+  .fantasypage_Contents_QRAGK
+  .fantasypage_Roster_2YPlj
+  .fantasypage_RosterSlots_2Jdey
   .fantasypage_RosterSlot_2OTsk
   .fantasypage_Identity_J8UYV {
   display: flex;
@@ -5166,10 +4405,7 @@
   flex-grow: 1;
   margin-top: 8px;
 }
-.fantasypage_FantasyPage_3zKgk
-  .fantasypage_Contents_QRAGK
-  .fantasypage_Roster_2YPlj
-  .fantasypage_RosterSlots_2Jdey
+.fantasypage_FantasyHelp_39-fj
   .fantasypage_RosterSlot_2OTsk
   .fantasypage_Identity_J8UYV
   .fantasypage_Name_arVxY,
@@ -5179,19 +4415,19 @@
   .fantasypage_RosterSlot_2OTsk
   .fantasypage_Identity_J8UYV
   .fantasypage_Name_arVxY,
-.fantasypage_FantasyHelp_39-fj
+.fantasypage_FantasyPage_3zKgk
+  .fantasypage_Contents_QRAGK
+  .fantasypage_Roster_2YPlj
+  .fantasypage_RosterSlots_2Jdey
   .fantasypage_RosterSlot_2OTsk
   .fantasypage_Identity_J8UYV
   .fantasypage_Name_arVxY {
   text-align: left;
-  color: white;
+  color: #fff;
   font-size: 16px;
   margin-top: 2px;
 }
-.fantasypage_FantasyPage_3zKgk
-  .fantasypage_Contents_QRAGK
-  .fantasypage_Roster_2YPlj
-  .fantasypage_RosterSlots_2Jdey
+.fantasypage_FantasyHelp_39-fj
   .fantasypage_RosterSlot_2OTsk
   .fantasypage_Identity_J8UYV
   .fantasypage_Name_arVxY.fantasypage_Empty_2rC5R,
@@ -5201,7 +4437,10 @@
   .fantasypage_RosterSlot_2OTsk
   .fantasypage_Identity_J8UYV
   .fantasypage_Name_arVxY.fantasypage_Empty_2rC5R,
-.fantasypage_FantasyHelp_39-fj
+.fantasypage_FantasyPage_3zKgk
+  .fantasypage_Contents_QRAGK
+  .fantasypage_Roster_2YPlj
+  .fantasypage_RosterSlots_2Jdey
   .fantasypage_RosterSlot_2OTsk
   .fantasypage_Identity_J8UYV
   .fantasypage_Name_arVxY.fantasypage_Empty_2rC5R {
@@ -5209,10 +4448,7 @@
   font-weight: 500;
   margin-top: 8px;
 }
-.fantasypage_FantasyPage_3zKgk
-  .fantasypage_Contents_QRAGK
-  .fantasypage_Roster_2YPlj
-  .fantasypage_RosterSlots_2Jdey
+.fantasypage_FantasyHelp_39-fj
   .fantasypage_RosterSlot_2OTsk
   .fantasypage_Identity_J8UYV
   .fantasypage_Role_2PrmP,
@@ -5222,7 +4458,10 @@
   .fantasypage_RosterSlot_2OTsk
   .fantasypage_Identity_J8UYV
   .fantasypage_Role_2PrmP,
-.fantasypage_FantasyHelp_39-fj
+.fantasypage_FantasyPage_3zKgk
+  .fantasypage_Contents_QRAGK
+  .fantasypage_Roster_2YPlj
+  .fantasypage_RosterSlots_2Jdey
   .fantasypage_RosterSlot_2OTsk
   .fantasypage_Identity_J8UYV
   .fantasypage_Role_2PrmP {
@@ -5233,10 +4472,7 @@
   letter-spacing: 1px;
   font-weight: bold;
 }
-.fantasypage_FantasyPage_3zKgk
-  .fantasypage_Contents_QRAGK
-  .fantasypage_Roster_2YPlj
-  .fantasypage_RosterSlots_2Jdey
+.fantasypage_FantasyHelp_39-fj
   .fantasypage_RosterSlot_2OTsk
   .fantasypage_SelectArrow_3Wp9S,
 .fantasypage_FantasyPage_3zKgk
@@ -5244,7 +4480,10 @@
   .fantasypage_PlayerSelect_1H3yW
   .fantasypage_RosterSlot_2OTsk
   .fantasypage_SelectArrow_3Wp9S,
-.fantasypage_FantasyHelp_39-fj
+.fantasypage_FantasyPage_3zKgk
+  .fantasypage_Contents_QRAGK
+  .fantasypage_Roster_2YPlj
+  .fantasypage_RosterSlots_2Jdey
   .fantasypage_RosterSlot_2OTsk
   .fantasypage_SelectArrow_3Wp9S {
   color: #507082;
@@ -5254,10 +4493,7 @@
   height: 16px;
   transition: width 0.4s ease-in-out;
 }
-.fantasypage_FantasyPage_3zKgk
-  .fantasypage_Contents_QRAGK
-  .fantasypage_Roster_2YPlj
-  .fantasypage_RosterSlots_2Jdey
+.fantasypage_FantasyHelp_39-fj
   .fantasypage_RosterSlot_2OTsk
   .fantasypage_ClearX_vRrRE,
 .fantasypage_FantasyPage_3zKgk
@@ -5265,7 +4501,10 @@
   .fantasypage_PlayerSelect_1H3yW
   .fantasypage_RosterSlot_2OTsk
   .fantasypage_ClearX_vRrRE,
-.fantasypage_FantasyHelp_39-fj
+.fantasypage_FantasyPage_3zKgk
+  .fantasypage_Contents_QRAGK
+  .fantasypage_Roster_2YPlj
+  .fantasypage_RosterSlots_2Jdey
   .fantasypage_RosterSlot_2OTsk
   .fantasypage_ClearX_vRrRE {
   margin-top: 16px;
@@ -5274,13 +4513,12 @@
   height: 24px;
   transition: width 0.4s ease-in-out;
 }
-
+.fantasypage_FantasyHelp_39-fj .fantasypage_Player_3J7qq,
 .fantasypage_FantasyPage_3zKgk
   .fantasypage_Contents_QRAGK
   .fantasypage_Leaderboards_3pgtT
   .fantasypage_PlayerList_3Zs2R
-  .fantasypage_Player_3J7qq,
-.fantasypage_FantasyHelp_39-fj .fantasypage_Player_3J7qq {
+  .fantasypage_Player_3J7qq {
   display: flex;
   flex-direction: row;
   background-color: #1a272f;
@@ -5289,13 +4527,13 @@
   min-height: 40px;
   margin-bottom: 4px;
 }
+.fantasypage_FantasyHelp_39-fj
+  .fantasypage_Player_3J7qq
+  .fantasypage_Avatar_3A7GQ,
 .fantasypage_FantasyPage_3zKgk
   .fantasypage_Contents_QRAGK
   .fantasypage_Leaderboards_3pgtT
   .fantasypage_PlayerList_3Zs2R
-  .fantasypage_Player_3J7qq
-  .fantasypage_Avatar_3A7GQ,
-.fantasypage_FantasyHelp_39-fj
   .fantasypage_Player_3J7qq
   .fantasypage_Avatar_3A7GQ {
   width: 32px;
@@ -5305,29 +4543,29 @@
   border-radius: 2px;
   background-color: #0f1417;
 }
+.fantasypage_FantasyHelp_39-fj
+  .fantasypage_Player_3J7qq
+  .fantasypage_Name_arVxY,
 .fantasypage_FantasyPage_3zKgk
   .fantasypage_Contents_QRAGK
   .fantasypage_Leaderboards_3pgtT
   .fantasypage_PlayerList_3Zs2R
   .fantasypage_Player_3J7qq
-  .fantasypage_Name_arVxY,
-.fantasypage_FantasyHelp_39-fj
-  .fantasypage_Player_3J7qq
   .fantasypage_Name_arVxY {
   flex-grow: 1;
-  color: white;
+  color: #fff;
   font-size: 18px;
   text-align: left;
   margin-left: 8px;
   margin-top: 8px;
 }
+.fantasypage_FantasyHelp_39-fj
+  .fantasypage_Player_3J7qq
+  .fantasypage_Score_3T9WA,
 .fantasypage_FantasyPage_3zKgk
   .fantasypage_Contents_QRAGK
   .fantasypage_Leaderboards_3pgtT
   .fantasypage_PlayerList_3Zs2R
-  .fantasypage_Player_3J7qq
-  .fantasypage_Score_3T9WA,
-.fantasypage_FantasyHelp_39-fj
   .fantasypage_Player_3J7qq
   .fantasypage_Score_3T9WA {
   color: #4661ec;
@@ -5336,14 +4574,13 @@
   margin-right: 16px;
   margin-top: 8px;
 }
-
 .fantasypage_FantasyPage_3zKgk {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   min-height: 0px;
-  color: white;
+  color: #fff;
   box-sizing: border-box;
 }
 .fantasypage_FantasyPage_3zKgk .fantasypage_Contents_QRAGK {
@@ -5485,7 +4722,7 @@
   padding-top: 18px;
   border-radius: 4px;
   height: 40px;
-  color: white;
+  color: #fff;
   font-size: 16px;
   font-weight: 600;
 }
@@ -5594,7 +4831,7 @@
   background-color: #1a272f;
   height: 0px;
   bottom: 0;
-  color: white;
+  color: #fff;
   text-align: center;
   font-size: 0px;
   letter-spacing: 1px;
@@ -5632,7 +4869,7 @@
   margin-top: 8px;
   margin-right: 8px;
   text-transform: uppercase;
-  color: black;
+  color: #000;
   font-weight: 500;
   padding: 4px;
   padding-top: 0;
@@ -5721,7 +4958,7 @@
   .fantasypage_ScoreSelector_M2Rma
   .fantasypage_VerticalList_1Gx2B
   .fantasypage_DayOption_3oW5h.fantasypage_Selected_26x-7 {
-  color: white;
+  color: #fff;
 }
 .fantasypage_FantasyPage_3zKgk
   .fantasypage_Contents_QRAGK
@@ -5779,7 +5016,7 @@
   margin-left: 8px;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
-  background-color: black;
+  background-color: #000;
   transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
 }
 .fantasypage_FantasyPage_3zKgk
@@ -5792,7 +5029,7 @@
   margin-top: 6px;
   margin-bottom: 8px;
   margin-right: 16px;
-  background-color: black;
+  background-color: #000;
   padding: 4px;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
@@ -5815,7 +5052,7 @@
   .fantasypage_Identity_J8UYV
   .fantasypage_Name_arVxY {
   text-align: left;
-  color: white;
+  color: #fff;
   font-size: 13px;
 }
 .fantasypage_FantasyPage_3zKgk
@@ -5959,7 +5196,6 @@
   color: #507082;
   font-size: 14px;
 }
-
 .fantasypage_FantasyHelp_39-fj {
   margin-top: 100px;
   text-align: center;
@@ -5967,21 +5203,21 @@
 }
 .fantasypage_FantasyHelp_39-fj .fantasypage_League_eHH1E {
   transform: scale(0.8);
-  box-shadow: 5px 5px 20px black;
+  box-shadow: 5px 5px 20px #000;
 }
 .fantasypage_FantasyHelp_39-fj .fantasypage_RosterSlot_2OTsk {
   transform: scale(0.8);
-  box-shadow: 5px 5px 20px black;
+  box-shadow: 5px 5px 20px #000;
 }
 .fantasypage_FantasyHelp_39-fj .fantasypage_Player_3J7qq {
   transform: scale(0.8);
-  box-shadow: 5px 5px 20px black;
+  box-shadow: 5px 5px 20px #000;
 }
 .fantasypage_FantasyHelp_39-fj .fantasypage_Header_elwWm {
   margin-top: 40px;
   font-size: 26px;
   font-weight: bold;
-  color: white;
+  color: #fff;
   text-align: center;
 }
 .fantasypage_FantasyHelp_39-fj .fantasypage_Body_3htW- {
@@ -5998,147 +5234,105 @@
   font-size: 12px;
   text-align: center;
   color: #999;
-  text-shadow: 5px 5px 5px black;
+  text-shadow: 5px 5px 5px #000;
   line-height: 16px;
 }
-
 .teampage_colorBlack_3wrBR {
   color: #0f1417;
 }
-
 .teampage_colorWhite_BUKt9 {
-  color: white;
+  color: #fff;
 }
-
 .teampage_colorDarkGrey_3DHDY {
   color: #1a272f;
 }
-
 .teampage_colorGrey_2jECn {
   color: #507082;
 }
-
 .teampage_colorLightGrey_2ZRec {
   color: #1a272f;
 }
-
 .teampage_colorOrange_2sLbU {
   color: #ee481a;
 }
-
 .teampage_colorRed_MMC19 {
   color: #992410;
 }
-
 .teampage_colorAqua_4AOPV {
   color: #37c2b1;
 }
-
 .teampage_colorBlue_18Be5 {
   color: #4661ec;
 }
-
 .teampage_colorBrightRed_1IqwX {
-  color: #ff0000;
+  color: red;
 }
-
 .teampage_colorBrightBlue_2gtl6 {
   color: #00b3ff;
 }
-
 .teampage_colorBrightOrange_1Y6uo {
   color: #eda10f;
 }
-
 .teampage_colorBrightPurple_2yS__ {
   color: #9652ed;
 }
-
 .teampage_colorBrightYellow_21xpK {
-  color: yellow;
+  color: #ff0;
 }
-
 .teampage_colorBrightGreen_mYiXJ {
   color: #15c65c;
 }
-
 .teampage_colorBrightGrey_2RiNg {
   color: #e0e0e0;
 }
-
 .teampage_backgroundColorBlack_1eHMh {
   background-color: #0f1417;
 }
-
 .teampage_backgroundColorDarkGrey_3jp4E {
   background-color: #1a272f;
 }
-
 .teampage_backgroundColorLightGrey_1HoHA {
   background-color: #b9babb;
 }
-
 .teampage_backgroundColorWhite_cF7ny {
-  background-color: white;
+  background-color: #fff;
 }
-
 .teampage_backgroundColorOrange_1qkhF {
   background-color: #ee481a;
 }
-
 .teampage_backgroundColorRed_W3W_b {
   background-color: #992410;
 }
-
 .teampage_backgroundColorAqua_3dyXP {
   background-color: #37c2b1;
 }
-
 .teampage_backgroundColorBlue_1rVxm {
   background-color: #4661ec;
 }
-
 .teampage_backgroundColorGrey_2iywe {
   background-color: #507082;
 }
-
 .teampage_backgroundColorBrightRed_3RULf {
-  background-color: #ff0000;
+  background-color: red;
 }
-
 .teampage_backgroundColorBrightBlue_1Fhw9 {
   background-color: #00b3ff;
 }
-
 .teampage_backgroundColorBrightOrange_BWmpm {
   background-color: #eda10f;
 }
-
 .teampage_backgroundColorBrightPurple_VhV1Z {
   background-color: #9652ed;
 }
-
 .teampage_backgroundColorBrightYellow_2p3Eg {
-  background-color: yellow;
+  background-color: #ff0;
 }
-
 .teampage_backgroundColorBrightGreen_1JvfM {
   background-color: #15c65c;
 }
-
 .teampage_backgroundColorBrightGrey_37MUs {
   background-color: #e0e0e0;
 }
-
-/**
- * Font Mixins.
- *
- * Use like:
- *
- *	.myselector {
- * 		@include FontHeading;
- *	}
- */
 .teampage_TeamPage_2dZHb {
   width: 100%;
   height: 100%;
@@ -6166,7 +5360,7 @@
 }
 .teampage_TeamPage_2dZHb .teampage_TeamName_1woJ9 {
   font-size: 28px;
-  color: white;
+  color: #fff;
 }
 .teampage_TeamPage_2dZHb .teampage_SubsectionHeader_3Q1Bz {
   text-transform: uppercase;
@@ -6178,14 +5372,14 @@
   font-weight: bold;
 }
 .teampage_TeamPage_2dZHb .teampage_InfoStat_rNeJS {
-  color: lightgray;
+  color: #d3d3d3;
   display: flex;
   flex-direction: row;
   align-items: center;
   font-size: 14px;
   padding-top: 12px;
   padding-bottom: 12px;
-  border-bottom: 1px solid darkslategray;
+  border-bottom: 1px solid #2f4f4f;
 }
 .teampage_TeamPage_2dZHb .teampage_Rank_VYOdq {
   margin-right: 4px;
@@ -6213,12 +5407,12 @@
   align-items: center;
   margin-bottom: 4px;
   margin-right: 8px;
-  color: grey;
+  color: gray;
   font-size: 10px;
   text-transform: uppercase;
 }
 .teampage_TeamPage_2dZHb .teampage_AchievementRank_vCQiz {
-  color: white;
+  color: #fff;
 }
 .teampage_TeamPage_2dZHb .teampage_LeagueImage_L3pkj {
   width: 42px;
@@ -6229,7 +5423,7 @@
   flex-direction: row;
   align-items: center;
   margin-bottom: 4px;
-  color: white;
+  color: #fff;
   font-size: 14px;
 }
 .teampage_TeamPage_2dZHb .teampage_PlayerImage_27BCh {
@@ -6254,156 +5448,112 @@
 }
 .teampage_TeamPage_2dZHb .teampage_TeamRole_wf19R {
   text-transform: uppercase;
-  color: darkslategray;
+  color: #2f4f4f;
   font-size: 10px;
 }
-
 .teampage_Loading_E7u4k {
   margin: auto;
 }
-
 .teampage_InvalidTeam_2jjkz {
   color: darkred;
   margin: auto;
 }
-
 .playerpage_colorBlack_1mZK8 {
   color: #0f1417;
 }
-
 .playerpage_colorWhite_1Joih {
-  color: white;
+  color: #fff;
 }
-
 .playerpage_colorDarkGrey_3_he1 {
   color: #1a272f;
 }
-
 .playerpage_colorGrey_Ivl_f {
   color: #507082;
 }
-
 .playerpage_colorLightGrey_b0Sr5 {
   color: #1a272f;
 }
-
 .playerpage_colorOrange_39067 {
   color: #ee481a;
 }
-
 .playerpage_colorRed_3pKkG {
   color: #992410;
 }
-
 .playerpage_colorAqua_pV-uM {
   color: #37c2b1;
 }
-
 .playerpage_colorBlue_7Lrkt {
   color: #4661ec;
 }
-
 .playerpage_colorBrightRed_3q-bT {
-  color: #ff0000;
+  color: red;
 }
-
 .playerpage_colorBrightBlue_hUpi0 {
   color: #00b3ff;
 }
-
 .playerpage_colorBrightOrange_1oD6v {
   color: #eda10f;
 }
-
 .playerpage_colorBrightPurple_12W0f {
   color: #9652ed;
 }
-
 .playerpage_colorBrightYellow_2lylI {
-  color: yellow;
+  color: #ff0;
 }
-
 .playerpage_colorBrightGreen_dCeEM {
   color: #15c65c;
 }
-
 .playerpage_colorBrightGrey_eLCff {
   color: #e0e0e0;
 }
-
 .playerpage_backgroundColorBlack_o_qlI {
   background-color: #0f1417;
 }
-
 .playerpage_backgroundColorDarkGrey_2pNC0 {
   background-color: #1a272f;
 }
-
 .playerpage_backgroundColorLightGrey_2xCkN {
   background-color: #b9babb;
 }
-
 .playerpage_backgroundColorWhite_A2a29 {
-  background-color: white;
+  background-color: #fff;
 }
-
 .playerpage_backgroundColorOrange_1U5yS {
   background-color: #ee481a;
 }
-
 .playerpage_backgroundColorRed_20pfz {
   background-color: #992410;
 }
-
 .playerpage_backgroundColorAqua_1P1n5 {
   background-color: #37c2b1;
 }
-
 .playerpage_backgroundColorBlue_4qlbH {
   background-color: #4661ec;
 }
-
 .playerpage_backgroundColorGrey_DHiSD {
   background-color: #507082;
 }
-
 .playerpage_backgroundColorBrightRed_2HLPA {
-  background-color: #ff0000;
+  background-color: red;
 }
-
 .playerpage_backgroundColorBrightBlue_37lI3 {
   background-color: #00b3ff;
 }
-
 .playerpage_backgroundColorBrightOrange_1z_9p {
   background-color: #eda10f;
 }
-
 .playerpage_backgroundColorBrightPurple_3irT6 {
   background-color: #9652ed;
 }
-
 .playerpage_backgroundColorBrightYellow_3KS0u {
-  background-color: yellow;
+  background-color: #ff0;
 }
-
 .playerpage_backgroundColorBrightGreen_uGuU5 {
   background-color: #15c65c;
 }
-
 .playerpage_backgroundColorBrightGrey_1hzeP {
   background-color: #e0e0e0;
 }
-
-/**
- * Font Mixins.
- *
- * Use like:
- *
- *	.myselector {
- * 		@include FontHeading;
- *	}
- */
 .playerpage_PlayerPage_3t5OX {
   width: 100%;
   height: 100%;
@@ -6449,7 +5599,7 @@
 .playerpage_PlayerPage_3t5OX .playerpage_PlayerName_3tuIt {
   font-weight: bold;
   font-size: 24px;
-  color: white;
+  color: #fff;
 }
 .playerpage_PlayerPage_3t5OX .playerpage_SubsectionHeader_3ahhE {
   text-transform: uppercase;
@@ -6461,14 +5611,14 @@
   font-weight: bold;
 }
 .playerpage_PlayerPage_3t5OX .playerpage_InfoStat_3DQtr {
-  color: lightgray;
+  color: #d3d3d3;
   display: flex;
   flex-direction: row;
   align-items: center;
   font-size: 14px;
   padding-top: 12px;
   padding-bottom: 12px;
-  border-bottom: 1px solid darkslategray;
+  border-bottom: 1px solid #2f4f4f;
 }
 .playerpage_PlayerPage_3t5OX .playerpage_Spacer_3fvE7 {
   flex-grow: 1;
@@ -6487,7 +5637,7 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 4px;
-  color: grey;
+  color: gray;
   font-size: 10px;
   text-transform: uppercase;
 }
@@ -6502,7 +5652,7 @@
   flex-direction: row;
   align-items: center;
   margin-bottom: 4px;
-  color: white;
+  color: #fff;
   font-size: 14px;
 }
 .playerpage_PlayerPage_3t5OX .playerpage_PrevTeamLogoContainer_f0qZG {
@@ -6519,156 +5669,112 @@
 }
 .playerpage_PlayerPage_3t5OX .playerpage_TeamDates_3mctF {
   position: relative;
-  color: grey;
+  color: gray;
   font-size: 12px;
 }
-
 .playerpage_Loading_1vbyx {
   margin: auto;
 }
-
 .playerpage_InvalidPlayer_2whY8 {
   color: darkred;
   margin: auto;
 }
-
 .profilepage_colorBlack_TOle5 {
   color: #0f1417;
 }
-
 .profilepage_colorWhite_2cIN1 {
-  color: white;
+  color: #fff;
 }
-
 .profilepage_colorDarkGrey_1nzuG {
   color: #1a272f;
 }
-
 .profilepage_colorGrey_1K4Qs {
   color: #507082;
 }
-
 .profilepage_colorLightGrey_fw6VL {
   color: #1a272f;
 }
-
 .profilepage_colorOrange_2mO1v {
   color: #ee481a;
 }
-
 .profilepage_colorRed_l8TJo {
   color: #992410;
 }
-
 .profilepage_colorAqua_2fBhI {
   color: #37c2b1;
 }
-
 .profilepage_colorBlue_1minK {
   color: #4661ec;
 }
-
 .profilepage_colorBrightRed_fak5h {
-  color: #ff0000;
+  color: red;
 }
-
 .profilepage_colorBrightBlue_2R8ce {
   color: #00b3ff;
 }
-
 .profilepage_colorBrightOrange_3f7OU {
   color: #eda10f;
 }
-
 .profilepage_colorBrightPurple_1TFCc {
   color: #9652ed;
 }
-
 .profilepage_colorBrightYellow_264MJ {
-  color: yellow;
+  color: #ff0;
 }
-
 .profilepage_colorBrightGreen_2xMWf {
   color: #15c65c;
 }
-
 .profilepage_colorBrightGrey_l0SHn {
   color: #e0e0e0;
 }
-
 .profilepage_backgroundColorBlack_1jZS_ {
   background-color: #0f1417;
 }
-
 .profilepage_backgroundColorDarkGrey_2rKKy {
   background-color: #1a272f;
 }
-
 .profilepage_backgroundColorLightGrey_2Cgv9 {
   background-color: #b9babb;
 }
-
 .profilepage_backgroundColorWhite_32z-b {
-  background-color: white;
+  background-color: #fff;
 }
-
 .profilepage_backgroundColorOrange_3LpJM {
   background-color: #ee481a;
 }
-
 .profilepage_backgroundColorRed_Izyrx {
   background-color: #992410;
 }
-
 .profilepage_backgroundColorAqua_1IiPT {
   background-color: #37c2b1;
 }
-
 .profilepage_backgroundColorBlue_d9yq1 {
   background-color: #4661ec;
 }
-
 .profilepage_backgroundColorGrey_2E1fc {
   background-color: #507082;
 }
-
 .profilepage_backgroundColorBrightRed_27k24 {
-  background-color: #ff0000;
+  background-color: red;
 }
-
 .profilepage_backgroundColorBrightBlue_gozdL {
   background-color: #00b3ff;
 }
-
 .profilepage_backgroundColorBrightOrange_29pCr {
   background-color: #eda10f;
 }
-
 .profilepage_backgroundColorBrightPurple_3XkdW {
   background-color: #9652ed;
 }
-
 .profilepage_backgroundColorBrightYellow_19_aF {
-  background-color: yellow;
+  background-color: #ff0;
 }
-
 .profilepage_backgroundColorBrightGreen_3m8Fb {
   background-color: #15c65c;
 }
-
 .profilepage_backgroundColorBrightGrey_1bk4X {
   background-color: #e0e0e0;
 }
-
-/**
- * Font Mixins.
- *
- * Use like:
- *
- *	.myselector {
- * 		@include FontHeading;
- *	}
- */
 .profilepage_ProfilePage_2o17X {
   width: 100%;
   height: 100%;
@@ -6710,7 +5816,7 @@
   .profilepage_NameInfo_2g_Fl
   .profilepage_Name_1xMj3 {
   font-size: 20px;
-  color: white;
+  color: #fff;
 }
 .profilepage_ProfilePage_2o17X
   .profilepage_Scrollable_JOOou
@@ -6898,7 +6004,7 @@
   .profilepage_PredictionsSection_187Qv
   .profilepage_Entry_2uB49
   .profilepage_Value_19iQ3 {
-  color: white;
+  color: #fff;
   font-size: 13px;
 }
 .profilepage_ProfilePage_2o17X
@@ -6961,7 +6067,7 @@
   .profilepage_FantasySection_28S44
   .profilepage_Entry_2uB49
   .profilepage_Value_19iQ3 {
-  color: white;
+  color: #fff;
   font-size: 13px;
 }
 .profilepage_ProfilePage_2o17X
@@ -7074,161 +6180,117 @@
   border-radius: 10px;
   transition: margin-left 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
-
 .profilepage_LogoutText_2o_BU {
   font-size: 12px;
   color: #900;
   margin-bottom: 6px;
 }
-
 .profilepage_Loading_1WiUS {
   margin: auto;
 }
-
 .seriespage_colorBlack_313Ox {
   color: #0f1417;
 }
-
 .seriespage_colorWhite_jwFEQ {
-  color: white;
+  color: #fff;
 }
-
 .seriespage_colorDarkGrey_16Bl5 {
   color: #1a272f;
 }
-
 .seriespage_colorGrey_1XBsu {
   color: #507082;
 }
-
 .seriespage_colorLightGrey_3Xn-6 {
   color: #1a272f;
 }
-
 .seriespage_colorOrange_2UTcO {
   color: #ee481a;
 }
-
 .seriespage_colorRed_3sDul {
   color: #992410;
 }
-
 .seriespage_colorAqua_2b2Z7 {
   color: #37c2b1;
 }
-
 .seriespage_colorBlue_C4Tp8 {
   color: #4661ec;
 }
-
 .seriespage_colorBrightRed_31jUt {
-  color: #ff0000;
+  color: red;
 }
-
 .seriespage_colorBrightBlue_1YLDQ {
   color: #00b3ff;
 }
-
 .seriespage_colorBrightOrange_1Boic {
   color: #eda10f;
 }
-
 .seriespage_colorBrightPurple_3LmNC {
   color: #9652ed;
 }
-
 .seriespage_colorBrightYellow_TnWOH {
-  color: yellow;
+  color: #ff0;
 }
-
 .seriespage_colorBrightGreen_1gToo {
   color: #15c65c;
 }
-
 .seriespage_colorBrightGrey_3DFVN {
   color: #e0e0e0;
 }
-
 .seriespage_backgroundColorBlack_3v4w1 {
   background-color: #0f1417;
 }
-
 .seriespage_backgroundColorDarkGrey_VBJSc {
   background-color: #1a272f;
 }
-
 .seriespage_backgroundColorLightGrey_26vCf {
   background-color: #b9babb;
 }
-
 .seriespage_backgroundColorWhite_m_X7J {
-  background-color: white;
+  background-color: #fff;
 }
-
 .seriespage_backgroundColorOrange_ySsy7 {
   background-color: #ee481a;
 }
-
 .seriespage_backgroundColorRed_31R57 {
   background-color: #992410;
 }
-
 .seriespage_backgroundColorAqua_2NoYl {
   background-color: #37c2b1;
 }
-
 .seriespage_backgroundColorBlue_2j9qv {
   background-color: #4661ec;
 }
-
 .seriespage_backgroundColorGrey_2tCuQ {
   background-color: #507082;
 }
-
 .seriespage_backgroundColorBrightRed_2g8zd {
-  background-color: #ff0000;
+  background-color: red;
 }
-
 .seriespage_backgroundColorBrightBlue_3Au_U {
   background-color: #00b3ff;
 }
-
 .seriespage_backgroundColorBrightOrange_22SK9 {
   background-color: #eda10f;
 }
-
 .seriespage_backgroundColorBrightPurple_2Qk81 {
   background-color: #9652ed;
 }
-
 .seriespage_backgroundColorBrightYellow_3e7Nu {
-  background-color: yellow;
+  background-color: #ff0;
 }
-
 .seriespage_backgroundColorBrightGreen_2cG0Q {
   background-color: #15c65c;
 }
-
 .seriespage_backgroundColorBrightGrey_2gtt_ {
   background-color: #e0e0e0;
 }
-
-/**
- * Font Mixins.
- *
- * Use like:
- *
- *	.myselector {
- * 		@include FontHeading;
- *	}
- */
 .seriespage_SeriesPage_2t0IG {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   overflow-y: hidden;
   min-height: 0;
-  color: white;
+  color: #fff;
 }
 .seriespage_SeriesPage_2t0IG .seriespage_Loading_1mDda {
   margin: auto;
@@ -7288,7 +6350,7 @@
   flex-direction: column;
   align-items: center;
   width: 128px;
-  color: white;
+  color: #fff;
 }
 .seriespage_SeriesPage_2t0IG
   .seriespage_Body_14uV9
@@ -7714,151 +6776,109 @@
   font-size: 9px;
   color: #507082;
 }
-
 .upcomingseriespage_colorBlack_rDMdC {
   color: #0f1417;
 }
-
 .upcomingseriespage_colorWhite_3fVGG {
-  color: white;
+  color: #fff;
 }
-
 .upcomingseriespage_colorDarkGrey_3Lzwk {
   color: #1a272f;
 }
-
 .upcomingseriespage_colorGrey_1jbUy {
   color: #507082;
 }
-
 .upcomingseriespage_colorLightGrey_74-R3 {
   color: #1a272f;
 }
-
 .upcomingseriespage_colorOrange_1D1-3 {
   color: #ee481a;
 }
-
 .upcomingseriespage_colorRed_2d5dB {
   color: #992410;
 }
-
 .upcomingseriespage_colorAqua_1gMCi {
   color: #37c2b1;
 }
-
 .upcomingseriespage_colorBlue_16irx {
   color: #4661ec;
 }
-
 .upcomingseriespage_colorBrightRed_3q_4Q {
-  color: #ff0000;
+  color: red;
 }
-
 .upcomingseriespage_colorBrightBlue_NKJZ0 {
   color: #00b3ff;
 }
-
 .upcomingseriespage_colorBrightOrange_2qusH {
   color: #eda10f;
 }
-
 .upcomingseriespage_colorBrightPurple_12ily {
   color: #9652ed;
 }
-
 .upcomingseriespage_colorBrightYellow_30mLU {
-  color: yellow;
+  color: #ff0;
 }
-
 .upcomingseriespage_colorBrightGreen_bBJKq {
   color: #15c65c;
 }
-
 .upcomingseriespage_colorBrightGrey_hk-kM {
   color: #e0e0e0;
 }
-
 .upcomingseriespage_backgroundColorBlack_1EFXw {
   background-color: #0f1417;
 }
-
 .upcomingseriespage_backgroundColorDarkGrey_3CkjH {
   background-color: #1a272f;
 }
-
 .upcomingseriespage_backgroundColorLightGrey_34ldc {
   background-color: #b9babb;
 }
-
 .upcomingseriespage_backgroundColorWhite_1EEf2 {
-  background-color: white;
+  background-color: #fff;
 }
-
 .upcomingseriespage_backgroundColorOrange_2gsLv {
   background-color: #ee481a;
 }
-
 .upcomingseriespage_backgroundColorRed_G7WdC {
   background-color: #992410;
 }
-
 .upcomingseriespage_backgroundColorAqua_xeyht {
   background-color: #37c2b1;
 }
-
 .upcomingseriespage_backgroundColorBlue_3mG-U {
   background-color: #4661ec;
 }
-
 .upcomingseriespage_backgroundColorGrey_2mq48 {
   background-color: #507082;
 }
-
 .upcomingseriespage_backgroundColorBrightRed_d22sw {
-  background-color: #ff0000;
+  background-color: red;
 }
-
 .upcomingseriespage_backgroundColorBrightBlue_2IZO_ {
   background-color: #00b3ff;
 }
-
 .upcomingseriespage_backgroundColorBrightOrange_3A4mx {
   background-color: #eda10f;
 }
-
 .upcomingseriespage_backgroundColorBrightPurple_1fD1y {
   background-color: #9652ed;
 }
-
 .upcomingseriespage_backgroundColorBrightYellow_gN31c {
-  background-color: yellow;
+  background-color: #ff0;
 }
-
 .upcomingseriespage_backgroundColorBrightGreen_LoftU {
   background-color: #15c65c;
 }
-
 .upcomingseriespage_backgroundColorBrightGrey_80Ma_ {
   background-color: #e0e0e0;
 }
-
-/**
- * Font Mixins.
- *
- * Use like:
- *
- *	.myselector {
- * 		@include FontHeading;
- *	}
- */
 .upcomingseriespage_UpcomingSeriesPage_2E9wf {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   overflow-y: hidden;
   min-height: 0;
-  color: white;
+  color: #fff;
 }
 .upcomingseriespage_UpcomingSeriesPage_2E9wf .upcomingseriespage_Loading_2TSoY {
   margin: auto;
@@ -7908,7 +6928,7 @@
   align-items: center;
   width: 128px;
   max-width: 128px;
-  color: white;
+  color: #fff;
 }
 .upcomingseriespage_UpcomingSeriesPage_2E9wf
   .upcomingseriespage_Header_3QPlL
@@ -7987,7 +7007,7 @@
   display: flex;
   flex-direction: row;
   margin-bottom: 8px;
-  color: white;
+  color: #fff;
 }
 .upcomingseriespage_UpcomingSeriesPage_2E9wf
   .upcomingseriespage_Scrollable_16GQu
@@ -8067,144 +7087,102 @@
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
-
 .matchpage_colorBlack_uYr54 {
   color: #0f1417;
 }
-
 .matchpage_colorWhite_3LE7k {
-  color: white;
+  color: #fff;
 }
-
 .matchpage_colorDarkGrey_1hgCz {
   color: #1a272f;
 }
-
 .matchpage_colorGrey_3t3GP {
   color: #507082;
 }
-
 .matchpage_colorLightGrey_1jecX {
   color: #1a272f;
 }
-
 .matchpage_colorOrange_1q0DT {
   color: #ee481a;
 }
-
 .matchpage_colorRed_1VGx- {
   color: #992410;
 }
-
 .matchpage_colorAqua_3rhn_ {
   color: #37c2b1;
 }
-
 .matchpage_colorBlue_3ljoI {
   color: #4661ec;
 }
-
 .matchpage_colorBrightRed_3_W-D {
-  color: #ff0000;
+  color: red;
 }
-
 .matchpage_colorBrightBlue_2V4Wj {
   color: #00b3ff;
 }
-
 .matchpage_colorBrightOrange_3Khp8 {
   color: #eda10f;
 }
-
 .matchpage_colorBrightPurple_210UK {
   color: #9652ed;
 }
-
 .matchpage_colorBrightYellow_3o4mT {
-  color: yellow;
+  color: #ff0;
 }
-
 .matchpage_colorBrightGreen_3JVJD {
   color: #15c65c;
 }
-
 .matchpage_colorBrightGrey_126w5 {
   color: #e0e0e0;
 }
-
 .matchpage_backgroundColorBlack_3Or7k {
   background-color: #0f1417;
 }
-
 .matchpage_backgroundColorDarkGrey_Z4DrT {
   background-color: #1a272f;
 }
-
 .matchpage_backgroundColorLightGrey_2tKky {
   background-color: #b9babb;
 }
-
 .matchpage_backgroundColorWhite_18Lcf {
-  background-color: white;
+  background-color: #fff;
 }
-
 .matchpage_backgroundColorOrange_1LCMQ {
   background-color: #ee481a;
 }
-
 .matchpage_backgroundColorRed_4QepL {
   background-color: #992410;
 }
-
 .matchpage_backgroundColorAqua_12IYE {
   background-color: #37c2b1;
 }
-
 .matchpage_backgroundColorBlue_1sTje {
   background-color: #4661ec;
 }
-
 .matchpage_backgroundColorGrey_6JW3_ {
   background-color: #507082;
 }
-
 .matchpage_backgroundColorBrightRed_91h8l {
-  background-color: #ff0000;
+  background-color: red;
 }
-
 .matchpage_backgroundColorBrightBlue_2p6aT {
   background-color: #00b3ff;
 }
-
 .matchpage_backgroundColorBrightOrange_29QSq {
   background-color: #eda10f;
 }
-
 .matchpage_backgroundColorBrightPurple_tFYBI {
   background-color: #9652ed;
 }
-
 .matchpage_backgroundColorBrightYellow_1esiP {
-  background-color: yellow;
+  background-color: #ff0;
 }
-
 .matchpage_backgroundColorBrightGreen_2a6hU {
   background-color: #15c65c;
 }
-
 .matchpage_backgroundColorBrightGrey_QGabd {
   background-color: #e0e0e0;
 }
-
-/**
- * Font Mixins.
- *
- * Use like:
- *
- *	.myselector {
- * 		@include FontHeading;
- *	}
- */
 .matchpage_MatchPage_1LIfg {
   display: flex;
   flex-direction: column;
@@ -8213,7 +7191,7 @@
   width: 100%;
   overflow-y: hidden;
   box-sizing: border-box;
-  color: white;
+  color: #fff;
 }
 .matchpage_MatchPage_1LIfg .matchpage_Body_68kN3 {
   display: flex;
@@ -8256,7 +7234,7 @@
   align-items: center;
   width: 118px;
   max-width: 118px;
-  color: white;
+  color: #fff;
   padding-left: 12px;
   padding-right: 12px;
   text-align: center;
@@ -8327,7 +7305,7 @@
   .matchpage_Body_68kN3
   .matchpage_RadiantDireBar_2xdDc
   .matchpage_Dire_3ZXx8 {
-  background-color: #ff0000;
+  background-color: red;
   height: 100%;
   width: 50%;
 }
@@ -8341,7 +7319,7 @@
 .matchpage_MatchPage_1LIfg .matchpage_Body_68kN3 .matchpage_Map_1gZsX {
   width: 90%;
   height: 0;
-  padding-bottom: 90.90909%;
+  padding-bottom: 90.9090909091%;
   background-repeat: no-repeat;
   background-size: 110%;
   background-position: 50% 50%;
@@ -8693,7 +7671,7 @@
   .matchpage_NameAndName_1Ptbk
   .matchpage_HeroName_3Qo5l {
   font-size: 14px;
-  color: white;
+  color: #fff;
   max-width: 100px;
 }
 .matchpage_MatchPage_1LIfg
@@ -8818,7 +7796,7 @@
   display: flex;
   flex-direction: row;
   margin-bottom: 8px;
-  color: white;
+  color: #fff;
 }
 .matchpage_MatchPage_1LIfg
   .matchpage_Body_68kN3
@@ -8977,7 +7955,7 @@
   .matchpage_TeamPicksAndBans_1Y3f7
   .matchpage_PickOrBan_2zAsb
   .matchpage_Number_1eIKY {
-  color: white;
+  color: #fff;
   border-radius: 4px;
   min-width: 24px;
   height: 20px;
@@ -9006,7 +7984,7 @@
   .matchpage_PickOrBan_2zAsb
   .matchpage_HeroName_3Qo5l {
   font-size: 10px;
-  color: white;
+  color: #fff;
   margin-left: 6px;
   margin-right: 6px;
   flex-grow: 1;
@@ -9072,148 +8050,105 @@
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
-
 .matchpage_Loading_29FeG {
   margin: auto;
 }
-
 .livematchpage_colorBlack_GuIVk {
   color: #0f1417;
 }
-
 .livematchpage_colorWhite_KpWeK {
-  color: white;
+  color: #fff;
 }
-
 .livematchpage_colorDarkGrey_3Ir6S {
   color: #1a272f;
 }
-
 .livematchpage_colorGrey_36cku {
   color: #507082;
 }
-
 .livematchpage_colorLightGrey_RQ37z {
   color: #1a272f;
 }
-
 .livematchpage_colorOrange_-VnS8 {
   color: #ee481a;
 }
-
 .livematchpage_colorRed_1vKsl {
   color: #992410;
 }
-
 .livematchpage_colorAqua_3-eyX {
   color: #37c2b1;
 }
-
 .livematchpage_colorBlue_3ptFN {
   color: #4661ec;
 }
-
 .livematchpage_colorBrightRed_2OvXg {
-  color: #ff0000;
+  color: red;
 }
-
 .livematchpage_colorBrightBlue_2E9IL {
   color: #00b3ff;
 }
-
 .livematchpage_colorBrightOrange_NBTTG {
   color: #eda10f;
 }
-
 .livematchpage_colorBrightPurple_irIgv {
   color: #9652ed;
 }
-
 .livematchpage_colorBrightYellow_3iuoE {
-  color: yellow;
+  color: #ff0;
 }
-
 .livematchpage_colorBrightGreen_1WL_z {
   color: #15c65c;
 }
-
 .livematchpage_colorBrightGrey_OG1uL {
   color: #e0e0e0;
 }
-
 .livematchpage_backgroundColorBlack_1oqWO {
   background-color: #0f1417;
 }
-
 .livematchpage_backgroundColorDarkGrey_2bwHK {
   background-color: #1a272f;
 }
-
 .livematchpage_backgroundColorLightGrey_2c-3c {
   background-color: #b9babb;
 }
-
 .livematchpage_backgroundColorWhite_31yCU {
-  background-color: white;
+  background-color: #fff;
 }
-
 .livematchpage_backgroundColorOrange_20R8m {
   background-color: #ee481a;
 }
-
 .livematchpage_backgroundColorRed_IZbXz {
   background-color: #992410;
 }
-
 .livematchpage_backgroundColorAqua_2hKW7 {
   background-color: #37c2b1;
 }
-
 .livematchpage_backgroundColorBlue_2X8zV {
   background-color: #4661ec;
 }
-
 .livematchpage_backgroundColorGrey_1SOEd {
   background-color: #507082;
 }
-
 .livematchpage_backgroundColorBrightRed_2JdV_ {
-  background-color: #ff0000;
+  background-color: red;
 }
-
 .livematchpage_backgroundColorBrightBlue_qhymb {
   background-color: #00b3ff;
 }
-
 .livematchpage_backgroundColorBrightOrange_2uCRM {
   background-color: #eda10f;
 }
-
 .livematchpage_backgroundColorBrightPurple_Uhluv {
   background-color: #9652ed;
 }
-
 .livematchpage_backgroundColorBrightYellow_2mbrl {
-  background-color: yellow;
+  background-color: #ff0;
 }
-
 .livematchpage_backgroundColorBrightGreen_3iw5w {
   background-color: #15c65c;
 }
-
 .livematchpage_backgroundColorBrightGrey_21D8P {
   background-color: #e0e0e0;
 }
-
-/**
- * Font Mixins.
- *
- * Use like:
- *
- *	.myselector {
- * 		@include FontHeading;
- *	}
- */
 .livematchpage_LiveMatchPage_1WhsF {
   height: 100%;
   display: flex;
@@ -9230,13 +8165,11 @@
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
-
 .livematchpage_TopBar_10lrJ .livematchpage_BackArrow_FTNp7 {
   width: 20px;
   height: 20px;
   margin-left: 16px;
 }
-
 .livematchpage_TopBar_10lrJ .livematchpage_MatchInfo_1Ter7 {
   display: flex;
   flex-direction: row;
@@ -9249,7 +8182,7 @@
   font-size: 24px;
   font-weight: bold;
   margin-top: 10px;
-  color: white;
+  color: #fff;
 }
 .livematchpage_TopBar_10lrJ
   .livematchpage_MatchInfo_1Ter7
@@ -9260,12 +8193,11 @@
   font-weight: 500;
   color: #507082;
 }
-
 .livematchpage_Team_3ChN8 {
   align-items: center;
   width: 118px;
   max-width: 118px;
-  color: white;
+  color: #fff;
   padding-left: 12px;
   padding-right: 12px;
   text-align: center;
@@ -9281,11 +8213,9 @@
   letter-spacing: 1px;
   margin-top: 10px;
 }
-
 .livematchpage_Loading_1Gf6_ {
   margin: auto;
 }
-
 .livematchpage_GameState_TReWU {
   text-align: center;
   color: #507082;
@@ -9293,11 +8223,10 @@
   letter-spacing: 1px;
   margin-top: 20px;
 }
-
 .livematchpage_Map_1YqX1 {
   width: 90%;
   height: 0;
-  padding-bottom: 90.90909%;
+  padding-bottom: 90.9090909091%;
   background-repeat: no-repeat;
   background-size: 110%;
   background-position: 50% 50%;
@@ -9346,7 +8275,6 @@
   margin-left: 1px;
   margin-top: 1.5px;
 }
-
 .livematchpage_HeroStatsSection_3ffsN {
   margin-top: 20px;
   display: flex;
@@ -9357,7 +8285,6 @@
   max-width: 50%;
   position: relative;
 }
-
 .livematchpage_SingleHeroStats_NReYI {
   display: flex;
   flex-direction: column;
@@ -9391,7 +8318,7 @@
   .livematchpage_NameAndName_1p0Pq
   .livematchpage_PlayerName__1kLk {
   font-size: 14px;
-  color: white;
+  color: #fff;
   max-width: 100px;
 }
 .livematchpage_SingleHeroStats_NReYI
@@ -9426,44 +8353,37 @@
   border-top: 2px solid #26353e;
   background-color: #161d22;
 }
-
 .livematchpage_SingleHeroStats_NReYI.livematchpage_Right_2lxOT
   .livematchpage_TopBar_10lrJ {
   flex-direction: row-reverse;
 }
-
 .livematchpage_SingleHeroStats_NReYI.livematchpage_Right_2lxOT
   .livematchpage_Stats_jG-rO {
   margin-left: 0px;
   margin-right: 60px;
 }
-
 .livematchpage_SingleHeroStats_NReYI.livematchpage_Right_2lxOT
   .livematchpage_Stats_jG-rO
   .livematchpage_KDA_3G1LS {
   text-align: right;
 }
-
 .livematchpage_SingleHeroStats_NReYI.livematchpage_Right_2lxOT
   .livematchpage_Stats_jG-rO
   .livematchpage_NetWorth_2AMVA {
   text-align: right;
 }
-
 .livematchpage_SingleHeroStats_NReYI.livematchpage_Right_2lxOT
   .livematchpage_TopBar_10lrJ
   .livematchpage_NameAndName_1p0Pq
   .livematchpage_HeroName_2NL3K {
   text-align: right;
 }
-
 .livematchpage_SingleHeroStats_NReYI.livematchpage_Right_2lxOT
   .livematchpage_TopBar_10lrJ
   .livematchpage_NameAndName_1p0Pq
   .livematchpage_PlayerName__1kLk {
   text-align: right;
 }
-
 .livematchpage_GraphSection_AsG7c {
   margin-top: 12px;
   margin-left: 12px;
@@ -9537,7 +8457,6 @@
   width: 100%;
   height: 200px;
 }
-
 .livematchpage_TeamRosters_em-Xx {
   display: flex;
   flex-direction: column;
@@ -9557,7 +8476,6 @@
   display: flex;
   flex-direction: row;
 }
-
 .livematchpage_TeamRoster_3F09m {
   display: flex;
   flex-direction: column;
@@ -9570,7 +8488,7 @@
   display: flex;
   flex-direction: row;
   margin-bottom: 6px;
-  color: white;
+  color: #fff;
 }
 .livematchpage_TeamRoster_3F09m
   .livematchpage_Player_2ODsl
@@ -9628,7 +8546,6 @@
   font-size: 9px;
   color: #507082;
 }
-
 .livematchpage_PicksAndBansSection_2UDDI {
   display: flex;
   flex-direction: column;
@@ -9688,7 +8605,7 @@
   .livematchpage_TeamPicksAndBans_2Ozcg
   .livematchpage_PickOrBan_2vwzU
   .livematchpage_Number_27avh {
-  color: white;
+  color: #fff;
   border-radius: 4px;
   min-width: 24px;
   height: 22px;
@@ -9713,7 +8630,7 @@
   .livematchpage_PickOrBan_2vwzU
   .livematchpage_HeroName_2NL3K {
   font-size: 10px;
-  color: white;
+  color: #fff;
   margin-left: 4px;
   margin-right: 4px;
   flex-grow: 1;
@@ -9763,7 +8680,6 @@
   .livematchpage_Ban_3PI-s {
   color: #ee481a;
 }
-
 .livematchpage_RadiantDireBar_1l_6R {
   width: 100%;
   min-height: 6px;
@@ -9777,148 +8693,106 @@
   width: 50%;
 }
 .livematchpage_RadiantDireBar_1l_6R .livematchpage_Dire_TZ04O {
-  background-color: #ff0000;
+  background-color: red;
   height: 100%;
   width: 50%;
 }
-
 .tournamentpage_colorBlack_3oFRX {
   color: #0f1417;
 }
-
 .tournamentpage_colorWhite_bcwAX {
-  color: white;
+  color: #fff;
 }
-
 .tournamentpage_colorDarkGrey_271Qu {
   color: #1a272f;
 }
-
 .tournamentpage_colorGrey_3jvX- {
   color: #507082;
 }
-
 .tournamentpage_colorLightGrey_3zuqz {
   color: #1a272f;
 }
-
 .tournamentpage_colorOrange_QLoBp {
   color: #ee481a;
 }
-
 .tournamentpage_colorRed_3G4c8 {
   color: #992410;
 }
-
 .tournamentpage_colorAqua_Xy06Y {
   color: #37c2b1;
 }
-
 .tournamentpage_colorBlue_12J3v {
   color: #4661ec;
 }
-
 .tournamentpage_colorBrightRed_2FlSK {
-  color: #ff0000;
+  color: red;
 }
-
 .tournamentpage_colorBrightBlue_30TpA {
   color: #00b3ff;
 }
-
 .tournamentpage_colorBrightOrange_30YEQ {
   color: #eda10f;
 }
-
 .tournamentpage_colorBrightPurple_1oJt7 {
   color: #9652ed;
 }
-
 .tournamentpage_colorBrightYellow_1wuNI {
-  color: yellow;
+  color: #ff0;
 }
-
 .tournamentpage_colorBrightGreen_qY7ar {
   color: #15c65c;
 }
-
 .tournamentpage_colorBrightGrey_Jd6ot {
   color: #e0e0e0;
 }
-
 .tournamentpage_backgroundColorBlack_3Rg-b {
   background-color: #0f1417;
 }
-
 .tournamentpage_backgroundColorDarkGrey_3KoCv {
   background-color: #1a272f;
 }
-
 .tournamentpage_backgroundColorLightGrey_3SnPM {
   background-color: #b9babb;
 }
-
 .tournamentpage_backgroundColorWhite_3YVVY {
-  background-color: white;
+  background-color: #fff;
 }
-
 .tournamentpage_backgroundColorOrange_Z1D4O {
   background-color: #ee481a;
 }
-
 .tournamentpage_backgroundColorRed__KIVN {
   background-color: #992410;
 }
-
 .tournamentpage_backgroundColorAqua_3Af02 {
   background-color: #37c2b1;
 }
-
 .tournamentpage_backgroundColorBlue_3PyZ4 {
   background-color: #4661ec;
 }
-
 .tournamentpage_backgroundColorGrey_1OAfd {
   background-color: #507082;
 }
-
 .tournamentpage_backgroundColorBrightRed_MG5FF {
-  background-color: #ff0000;
+  background-color: red;
 }
-
 .tournamentpage_backgroundColorBrightBlue_1FCDZ {
   background-color: #00b3ff;
 }
-
 .tournamentpage_backgroundColorBrightOrange_3DKtl {
   background-color: #eda10f;
 }
-
 .tournamentpage_backgroundColorBrightPurple_3b8gx {
   background-color: #9652ed;
 }
-
 .tournamentpage_backgroundColorBrightYellow_1HvLh {
-  background-color: yellow;
+  background-color: #ff0;
 }
-
 .tournamentpage_backgroundColorBrightGreen_10mNM {
   background-color: #15c65c;
 }
-
 .tournamentpage_backgroundColorBrightGrey_4ppxW {
   background-color: #e0e0e0;
 }
-
-/**
- * Font Mixins.
- *
- * Use like:
- *
- *	.myselector {
- * 		@include FontHeading;
- *	}
- */
 .tournamentpage_TournamentPage_1tKYp {
   display: flex;
   flex-direction: column;
@@ -10063,7 +8937,7 @@
 .tournamentpage_TournamentPage_1tKYp
   .tournamentpage_PhaseBlock_9AJ07
   .tournamentpage_Standing_2nBBY {
-  color: white;
+  color: #fff;
   margin-left: 8px;
   margin-right: 8px;
   margin-top: auto;
@@ -10118,7 +8992,7 @@
   padding-bottom: 16px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: white;
+  color: #fff;
   margin-left: 14px;
   flex-grow: 1;
   font-size: 15px;
@@ -10152,7 +9026,7 @@
   overflow: hidden;
   position: relative;
   flex-grow: 1;
-  color: white;
+  color: #fff;
 }
 .tournamentpage_TournamentPage_1tKYp
   .tournamentpage_Standings_3M5rq
@@ -10171,7 +9045,7 @@
   background-position-y: 12px;
   background-size: 20px;
   background-repeat: no-repeat;
-  color: white;
+  color: #fff;
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 1px;
@@ -10186,7 +9060,6 @@
   width: 100%;
   height: 500px;
 }
-
 .tournamentpage_TournamentBracketSingle_2o5F2,
 .tournamentpage_TournamentBracketDouble_okuKN,
 .tournamentpage_TournamentBracketDoublSeeded_1-WuQ,
@@ -10208,7 +9081,7 @@
 .tournamentpage_TournamentRoundRobin_HR05r .tournamentpage_Title_1CeBd {
   width: 800px;
   background-image: linear-gradient(to right, #4f1c14, #0f1417);
-  color: white;
+  color: #fff;
   font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -10243,21 +9116,15 @@
   margin: 0px 16px;
   position: relative;
 }
-
 .tournamentpage_BracketNode_3xYqp {
   width: 282px;
   height: 118px;
   position: absolute;
   -webkit-touch-callout: none;
-  /* iOS Safari */
   -webkit-user-select: none;
-  /* Safari */
   -khtml-user-select: none;
-  /* Konqueror HTML */
   -moz-user-select: none;
-  /* Firefox */
   -ms-user-select: none;
-  /* Internet Explorer/Edge */
   user-select: none;
 }
 .tournamentpage_BracketNode_3xYqp.tournamentpage_IsProgress_1dztX {
@@ -10280,7 +9147,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: black;
+  background-color: #000;
   opacity: 0.3;
 }
 .tournamentpage_BracketNode_3xYqp .tournamentpage_TeamRow_EmM1w {
@@ -10311,18 +9178,17 @@
   font-size: 12px;
   margin-top: auto;
   margin-bottom: auto;
-  color: white;
+  color: #fff;
 }
 .tournamentpage_BracketNode_3xYqp
   .tournamentpage_TeamRow_EmM1w
   .tournamentpage_TeamWins_29ati {
   font-size: 14px;
-  color: white;
+  color: #fff;
   margin-right: 16px;
   margin-top: auto;
   margin-bottom: auto;
 }
-
 .tournamentpage_Results_uNWys {
   min-height: 0;
   display: flex;
@@ -10332,14 +9198,12 @@
   margin-left: 20px;
   margin-right: 20px;
 }
-
 .tournamentpage_TournamentResult_2S5hI {
   width: 100%;
   height: 76px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  display: relative;
   margin-bottom: 8px;
 }
 .tournamentpage_TournamentResult_2S5hI .tournamentpage_Standing_2nBBY {
@@ -10438,150 +9302,108 @@
   .tournamentpage_Bottom_3alRq
   .tournamentpage_LabelAndValue_37-ec
   .tournamentpage_Value_17C5m {
-  color: white;
+  color: #fff;
   font-size: 12px;
   margin-left: 14px;
   letter-spacing: 1px;
   font-weight: bold;
 }
-
 .searchpage_colorBlack_2n-L5 {
   color: #0f1417;
 }
-
 .searchpage_colorWhite_RP_EI {
-  color: white;
+  color: #fff;
 }
-
 .searchpage_colorDarkGrey_A5RBM {
   color: #1a272f;
 }
-
 .searchpage_colorGrey_QgxrF {
   color: #507082;
 }
-
 .searchpage_colorLightGrey_2xi53 {
   color: #1a272f;
 }
-
 .searchpage_colorOrange_N6ifh {
   color: #ee481a;
 }
-
 .searchpage_colorRed_2kiUt {
   color: #992410;
 }
-
 .searchpage_colorAqua_2gXZv {
   color: #37c2b1;
 }
-
 .searchpage_colorBlue_3AQbd {
   color: #4661ec;
 }
-
 .searchpage_colorBrightRed_1im4_ {
-  color: #ff0000;
+  color: red;
 }
-
 .searchpage_colorBrightBlue_3MeoL {
   color: #00b3ff;
 }
-
 .searchpage_colorBrightOrange_lg328 {
   color: #eda10f;
 }
-
 .searchpage_colorBrightPurple_3GhPX {
   color: #9652ed;
 }
-
 .searchpage_colorBrightYellow_FD79E {
-  color: yellow;
+  color: #ff0;
 }
-
 .searchpage_colorBrightGreen_1rzlH {
   color: #15c65c;
 }
-
 .searchpage_colorBrightGrey_3fMf5 {
   color: #e0e0e0;
 }
-
 .searchpage_backgroundColorBlack_24uoF {
   background-color: #0f1417;
 }
-
 .searchpage_backgroundColorDarkGrey_2HqnN {
   background-color: #1a272f;
 }
-
 .searchpage_backgroundColorLightGrey_2IHUR {
   background-color: #b9babb;
 }
-
 .searchpage_backgroundColorWhite_1IMAf {
-  background-color: white;
+  background-color: #fff;
 }
-
 .searchpage_backgroundColorOrange_13jhz {
   background-color: #ee481a;
 }
-
 .searchpage_backgroundColorRed_2nYvo {
   background-color: #992410;
 }
-
 .searchpage_backgroundColorAqua_3URwq {
   background-color: #37c2b1;
 }
-
 .searchpage_backgroundColorBlue_1phI3 {
   background-color: #4661ec;
 }
-
 .searchpage_backgroundColorGrey_yFVMj {
   background-color: #507082;
 }
-
 .searchpage_backgroundColorBrightRed_2z0Ji {
-  background-color: #ff0000;
+  background-color: red;
 }
-
 .searchpage_backgroundColorBrightBlue_GrHkd {
   background-color: #00b3ff;
 }
-
 .searchpage_backgroundColorBrightOrange_2pml8 {
   background-color: #eda10f;
 }
-
 .searchpage_backgroundColorBrightPurple_poBeI {
   background-color: #9652ed;
 }
-
 .searchpage_backgroundColorBrightYellow_1IuPu {
-  background-color: yellow;
+  background-color: #ff0;
 }
-
 .searchpage_backgroundColorBrightGreen_1LMvw {
   background-color: #15c65c;
 }
-
 .searchpage_backgroundColorBrightGrey_3Hfvp {
   background-color: #e0e0e0;
 }
-
-/**
- * Font Mixins.
- *
- * Use like:
- *
- *	.myselector {
- * 		@include FontHeading;
- *	}
- */
 .searchpage_SearchPage_1XgAp {
   width: 100%;
   flex-grow: 1;
@@ -10612,8 +9434,6 @@
   .searchpage_Contents_2fxPU
   .searchpage_Category_tIlOY {
   font-size: 12px;
-  font-weight: 500;
-  color: #b9babb;
   text-transform: uppercase;
   letter-spacing: 1.4px;
   padding-bottom: 2px;
@@ -10672,7 +9492,7 @@
   padding-left: 12px;
   padding-top: 10px;
   font-size: 14px;
-  color: white;
+  color: #fff;
   flex-grow: 1;
 }
 .searchpage_SearchPage_1XgAp
@@ -10733,144 +9553,102 @@
   input:focus::placeholder {
   opacity: 0;
 }
-
 .standingspage_colorBlack_1Z2zR {
   color: #0f1417;
 }
-
 .standingspage_colorWhite_3L7Bx {
-  color: white;
+  color: #fff;
 }
-
 .standingspage_colorDarkGrey_BIWRw {
   color: #1a272f;
 }
-
 .standingspage_colorGrey_1z6on {
   color: #507082;
 }
-
 .standingspage_colorLightGrey_2u48w {
   color: #1a272f;
 }
-
 .standingspage_colorOrange_2tQAV {
   color: #ee481a;
 }
-
 .standingspage_colorRed_3hZB5 {
   color: #992410;
 }
-
 .standingspage_colorAqua_37zjZ {
   color: #37c2b1;
 }
-
 .standingspage_colorBlue_12orx {
   color: #4661ec;
 }
-
 .standingspage_colorBrightRed_xOVE6 {
-  color: #ff0000;
+  color: red;
 }
-
 .standingspage_colorBrightBlue_cnUaL {
   color: #00b3ff;
 }
-
 .standingspage_colorBrightOrange_3sWw9 {
   color: #eda10f;
 }
-
 .standingspage_colorBrightPurple_7kjz5 {
   color: #9652ed;
 }
-
 .standingspage_colorBrightYellow_2u7wp {
-  color: yellow;
+  color: #ff0;
 }
-
 .standingspage_colorBrightGreen_1IowE {
   color: #15c65c;
 }
-
 .standingspage_colorBrightGrey_16zwG {
   color: #e0e0e0;
 }
-
 .standingspage_backgroundColorBlack_1zkvF {
   background-color: #0f1417;
 }
-
 .standingspage_backgroundColorDarkGrey_xhacy {
   background-color: #1a272f;
 }
-
 .standingspage_backgroundColorLightGrey_2sV3r {
   background-color: #b9babb;
 }
-
 .standingspage_backgroundColorWhite_aJw1v {
-  background-color: white;
+  background-color: #fff;
 }
-
 .standingspage_backgroundColorOrange_1rl5g {
   background-color: #ee481a;
 }
-
 .standingspage_backgroundColorRed_1zOrh {
   background-color: #992410;
 }
-
 .standingspage_backgroundColorAqua_T9gXx {
   background-color: #37c2b1;
 }
-
 .standingspage_backgroundColorBlue_2RMKQ {
   background-color: #4661ec;
 }
-
 .standingspage_backgroundColorGrey_38DKP {
   background-color: #507082;
 }
-
 .standingspage_backgroundColorBrightRed_2wiqi {
-  background-color: #ff0000;
+  background-color: red;
 }
-
 .standingspage_backgroundColorBrightBlue_2aF50 {
   background-color: #00b3ff;
 }
-
 .standingspage_backgroundColorBrightOrange_2v2_c {
   background-color: #eda10f;
 }
-
 .standingspage_backgroundColorBrightPurple_2Wckd {
   background-color: #9652ed;
 }
-
 .standingspage_backgroundColorBrightYellow_jyGUW {
-  background-color: yellow;
+  background-color: #ff0;
 }
-
 .standingspage_backgroundColorBrightGreen_3nhPf {
   background-color: #15c65c;
 }
-
 .standingspage_backgroundColorBrightGrey_5ezxV {
   background-color: #e0e0e0;
 }
-
-/**
- * Font Mixins.
- *
- * Use like:
- *
- *	.myselector {
- * 		@include FontHeading;
- *	}
- */
 .standingspage_StandingsPage_OgLhv {
   width: 100%;
   flex-grow: 1;
@@ -10903,7 +9681,6 @@
   background-color: #1a272f;
   color: #ff4a18;
 }
-
 .standingspage_LeagueStandingsPage_3TpL0 {
   width: 100%;
   flex-grow: 1;
@@ -10944,7 +9721,7 @@
 .standingspage_LeagueStandingsPage_3TpL0
   .standingspage_RegionSelector_3A_Cz
   .standingspage_Region_1W7Uw.standingspage_SelectedRegion_3NO0W {
-  color: white;
+  color: #fff;
   background-color: #b23613;
   border: 2px solid #ff4a18;
   width: 32px;
@@ -10974,7 +9751,7 @@
 }
 .standingspage_LeagueStandingsPage_3TpL0 .standingspage_Entry_38yFX {
   margin: 10px 20px;
-  color: white;
+  color: #fff;
   font-size: 16px;
   display: flex;
   flex-direction: row;
@@ -10999,7 +9776,6 @@
   .standingspage_WinLoss_3-UZB {
   font-weight: bold;
 }
-
 .standingspage_InternationalStandingsPage_1bOUy {
   width: 100%;
   flex-grow: 1;
@@ -11029,7 +9805,7 @@
 }
 .standingspage_InternationalStandingsPage_1bOUy
   .standingspage_NoPointsDesc_OPzYz {
-  color: white;
+  color: #fff;
 }
 .standingspage_InternationalStandingsPage_1bOUy .standingspage_Team_21NNy {
   padding-left: 20px;
@@ -11087,7 +9863,7 @@
   width: 100%;
 }
 .standingspage_InternationalStandingsPage_1bOUy .standingspage_TeamName_3nT-j {
-  color: white;
+  color: #fff;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 210px;
@@ -11098,7 +9874,7 @@
   flex-grow: 1;
 }
 .standingspage_InternationalStandingsPage_1bOUy .standingspage_Points_2EkMC {
-  color: white;
+  color: #fff;
   font-size: 14px;
 }
 .standingspage_InternationalStandingsPage_1bOUy
@@ -11116,7 +9892,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: #444444;
+  background-color: #444;
 }
 .standingspage_InternationalStandingsPage_1bOUy .standingspage_Footer_2NBMr {
   display: flex;
