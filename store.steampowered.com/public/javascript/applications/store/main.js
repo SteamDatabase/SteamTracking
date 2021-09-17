@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6765811";
+var CLSTAMP = "6772837";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [40],
   {
@@ -67442,7 +67442,8 @@ var CLSTAMP = "6765811";
               o.createElement(
                 "a",
                 {
-                  href: "http://www.wanmei.com/jiazhang/index.htm",
+                  href:
+                    "https://about.steamchina.com/parentguardianship_agreement.html",
                   target: "_blank",
                   rel: "noreferrer",
                 },

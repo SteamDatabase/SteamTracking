@@ -48277,7 +48277,8 @@
               o.createElement(
                 "a",
                 {
-                  href: "http://www.wanmei.com/jiazhang/index.htm",
+                  href:
+                    "https://about.steamchina.com/parentguardianship_agreement.html",
                   target: "_blank",
                   rel: "noreferrer",
                 },
