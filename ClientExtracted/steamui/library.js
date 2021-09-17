@@ -1,5 +1,5 @@
 /* Third-party software licenses can be found at licenses.txt */
-var CLSTAMP = "6768350";
+var CLSTAMP = "6770922";
 !(function (e) {
   function t(t) {
     for (
@@ -48552,13 +48552,22 @@ var CLSTAMP = "6768350";
         }
         return (
           Object(r.d)(t, e),
+          (t.prototype.BNavigateToDetailsOnStart = function () {
+            return !1;
+          }),
           (t.prototype.OnGameActionStart = function (e, t, n) {
             var r = l.a.GetAppOverviewByGameID(t);
-            r && 4 != r.app_type && p.a.NavigateToApp(r.appid);
+            this.BNavigateToDetailsOnStart() &&
+              r &&
+              4 != r.app_type &&
+              p.a.NavigateToApp(r.appid);
           }),
           (t.prototype.StartFromInProgress = function (e) {
             var t = l.a.GetAppOverviewByGameID(e.gameid);
-            t && 4 != t.app_type && p.a.NavigateToApp(t.appid);
+            this.BNavigateToDetailsOnStart() &&
+              t &&
+              4 != t.app_type &&
+              p.a.NavigateToApp(t.appid);
           }),
           (t.prototype.OnGameActionEnd = function () {}),
           (t.prototype.OnGameActionTaskChange = function (e, t, n, r) {}),

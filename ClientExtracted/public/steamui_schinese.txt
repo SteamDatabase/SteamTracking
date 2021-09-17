@@ -2853,7 +2853,8 @@
 "SteamUI_DurationControl_PlaytimeExceeded_Body_ThreeHours"	"根据国家新闻出版署发布的《关于进一步严格管理切实防止未成年人沉迷网络游戏的通知》\n未成年用户仅可在周五、周六、周日和法定节假日的20时至21时进行游戏。感谢您的支持与理解。"
 "SteamUI_DurationControl_PlaytimeExceeded_Body_FiveHours"	"根据国家新闻出版署发布的《关于进一步严格管理切实防止未成年人沉迷网络游戏的通知》\n未成年用户仅可在周五、周六、周日和法定节假日的20时至21时进行游戏。感谢您的支持与理解。"
 "SteamUI_DurationControl_PlaytimeExceeded_Body_Night"		"根据国家新闻出版署发布的《关于进一步严格管理切实防止未成年人沉迷网络游戏的通知》\n未成年用户仅可在周五、周六、周日和法定节假日的20时至21时进行游戏。感谢您的支持与理解。"
-
+"SteamUI_DurationControl_PlaytimeExceeded_Body_WaitingVerification"		"您的账号正处于实名认证中，请您稍后再试"
+"SteamUI_DurationControl_PlaytimeExceeded_Body_Maintenance"		"本游戏正在进行技术更新，在更新完成前，未成年人将无法游玩。对此所给您带来不便表示歉意，并感谢您的理解。"
 
 
 "Steam_GuestPassesColumn" 		"礼物"

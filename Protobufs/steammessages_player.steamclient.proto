@@ -642,6 +642,8 @@ message CPlayer_GetDurationControl_Response {
 	optional bool is_steamchina_account = 4;
 	optional bool is_age_verified = 5;
 	optional uint32 seconds_allowed_today = 6;
+	optional bool age_verification_pending = 7;
+	optional bool block_minors = 8;
 }
 
 message CPlayer_LastPlayedTimes_Notification {

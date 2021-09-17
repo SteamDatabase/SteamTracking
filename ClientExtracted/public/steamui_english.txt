@@ -2861,7 +2861,8 @@ Make one now by emailing a gift to someone you know."
 "SteamUI_DurationControl_PlaytimeExceeded_Body_ThreeHours"	"You have reached your limit of online time for today. Please take a break and try tomorrow after 8AM."
 "SteamUI_DurationControl_PlaytimeExceeded_Body_FiveHours"	"You have reached your limit of online time for today. Please take a break and try tomorrow after 8AM."
 "SteamUI_DurationControl_PlaytimeExceeded_Body_Night"		"Players under 18 can't play this game between 10PM and 8AM the following day. Please take a break."
-
+"SteamUI_DurationControl_PlaytimeExceeded_Body_WaitingVerification"		"Your account is under real-name verification, please try again later."
+"SteamUI_DurationControl_PlaytimeExceeded_Body_Maintenance"		"This game is undergoing technical updates, and minors will not be able to play until they are complete. Sorry for the inconvenience, and thank you for your understanding."
 
 
 "Steam_GuestPassesColumn" 		"Gifts"
