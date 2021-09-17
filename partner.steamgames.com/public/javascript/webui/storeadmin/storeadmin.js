@@ -79102,7 +79102,13 @@
       }),
       yo = Object(u.a)(function (e) {
         var t = e.saleDesc,
-          n = "-500px";
+          n = "-500px",
+          r =
+            s.c.COMMUNITY_BASE_URL +
+            "gid/" +
+            ae.a.InitFromClanID(t.clanAccountID).ConvertTo64BitString() +
+            "/partnerevents/edit/" +
+            t.clanEventGID;
         return i.a.createElement(
           Ii.a,
           {
@@ -79135,7 +79141,9 @@
               i.a.createElement("br", null),
               "EventGID: ",
               t.clanEventGID,
-              i.a.createElement("br", null)
+              i.a.createElement("br", null),
+              "Links: ",
+              i.a.createElement("a", { href: r }, "Edit Event")
             ),
             i.a.createElement("div", { className: Dt.a.Footer })
           )
