@@ -131,7 +131,7 @@ function DisplayAssetOptions( link, assetType, asset, appid )
 	g_strAssetType = assetType;
 	g_rgCurrentAsset = asset;
 	g_rgCurrentAssetAppId = appid;
-	g_strAssetBaseURL = 'https://cdn.cloudflare.steamstatic.com/steam/apps/' + appid + '/';
+	g_strAssetBaseURL = 'https://cdn.akamai.steamstatic.com/steam/apps/' + appid + '/';
 
 	if ( assetType == 'screenshots' )
 	{

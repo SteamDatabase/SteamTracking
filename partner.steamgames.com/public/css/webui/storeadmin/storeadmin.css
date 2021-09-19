@@ -7312,7 +7312,7 @@ body.v6.partner_events {
   left: 8%;
   right: 8%;
   transition: transform 0.15s;
-  background-image: url(https://cdn.cloudflare.steamstatic.com/store/promo/lunar2020/redenvelope.png?v=2);
+  background-image: url(https://cdn.akamai.steamstatic.com/store/promo/lunar2020/redenvelope.png?v=2);
   background-size: 100%;
   background-position-y: 0px;
   background-repeat: no-repeat;
@@ -7355,7 +7355,7 @@ body.v6.partner_events {
   .partnereventdisplay_EnvelopeArea_3E7nZ
   .partnereventdisplay_EnvelopeContainer_zIYox.partnereventdisplay_Opened_3GSov
   .partnereventdisplay_Envelope_fFo-i {
-  background-image: url(https://cdn.cloudflare.steamstatic.com/store/promo/lunar2020/redenvelopeback.png);
+  background-image: url(https://cdn.akamai.steamstatic.com/store/promo/lunar2020/redenvelopeback.png);
 }
 .partnereventdisplay_LunarNewYearHeader_1S4WN
   .partnereventdisplay_EnvelopeArea_3E7nZ
@@ -18452,7 +18452,7 @@ img.broadcastplayer_BroadcastPlaceholderImg_1LIEZ {
   margin-top: -25px;
   width: 50px;
   height: 50px;
-  background-image: url(https://store.cloudflare.steamstatic.com//public/shared/images/sharedfiles/sketchfab_play.png);
+  background-image: url(https://store.akamai.steamstatic.com//public/shared/images/sharedfiles/sketchfab_play.png);
   background-size: 100%;
   background-position-y: 0px;
   background-repeat: no-repeat;
@@ -19886,7 +19886,7 @@ hr {
   padding-left: 450px;
 }
 .optin_admin_email_editor_DevEmail_TopHeader_I1TnL {
-  background-image: url(https://cdn.cloudflare.steamstatic.com/store/email/general/bg_blue.png);
+  background-image: url(https://cdn.akamai.steamstatic.com/store/email/general/bg_blue.png);
   background-size: 100% auto;
   background-repeat: no-repeat;
   height: 180px;
