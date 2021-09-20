@@ -75751,11 +75751,25 @@
           a = e.listIndex,
           o = e.item_unique_ids;
         return !o || 0 == o.length || (1 == o.length && null == o[0])
-          ? i.a.createElement("input", {
-              type: "hidden",
-              name: "dynamic_selection[" + r + "][section_id]",
-              value: t.unique_id,
-            })
+          ? i.a.createElement(
+              i.a.Fragment,
+              null,
+              i.a.createElement("input", {
+                type: "hidden",
+                name: "dynamic_selection[" + r + "][section_id]",
+                value: t.unique_id,
+              }),
+              i.a.createElement("input", {
+                type: "hidden",
+                name:
+                  "dynamic_selection[" +
+                  r +
+                  "][list_selection][" +
+                  a +
+                  "][list_id]",
+                value: n.unique_id,
+              })
+            )
           : i.a.createElement(
               i.a.Fragment,
               null,
