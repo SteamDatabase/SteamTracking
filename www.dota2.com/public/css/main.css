@@ -1338,6 +1338,7 @@ a {
   border-radius: 3px;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
   font-size: 14px;
+  line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
 }
@@ -1994,6 +1995,7 @@ a {
   border-radius: 3px;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
   font-size: 14px;
+  line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
 }
@@ -3097,6 +3099,7 @@ a {
   border-radius: 3px;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
   font-size: 14px;
+  line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
 }
@@ -3697,6 +3700,7 @@ a {
   border-radius: 3px;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
   font-size: 14px;
+  line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
 }
@@ -4268,6 +4272,7 @@ a {
   border-radius: 3px;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
   font-size: 14px;
+  line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
 }
@@ -4839,6 +4844,7 @@ a {
   border-radius: 3px;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
   font-size: 14px;
+  line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
 }
@@ -5775,6 +5781,7 @@ a {
   border-radius: 3px;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
   font-size: 14px;
+  line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
 }
@@ -6499,6 +6506,7 @@ a {
   border-radius: 3px;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
   font-size: 14px;
+  line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
 }
@@ -12158,6 +12166,7 @@ a {
   border-radius: 3px;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
   font-size: 14px;
+  line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
 }
@@ -13088,6 +13097,7 @@ a {
   border-radius: 3px;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
   font-size: 14px;
+  line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
 }
@@ -14450,6 +14460,7 @@ a {
   border-radius: 3px;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
   font-size: 14px;
+  line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
 }
@@ -16855,6 +16866,7 @@ a {
   border-radius: 3px;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
   font-size: 14px;
+  line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
 }
@@ -17804,6 +17816,7 @@ a {
   border-radius: 3px;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
   font-size: 14px;
+  line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
 }
@@ -18417,6 +18430,7 @@ a {
   border-radius: 3px;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
   font-size: 14px;
+  line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
 }
@@ -19078,6 +19092,7 @@ a {
   border-radius: 3px;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
   font-size: 14px;
+  line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
 }
@@ -19951,6 +19966,7 @@ a {
   border-radius: 3px;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
   font-size: 14px;
+  line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
 }
@@ -21092,6 +21108,7 @@ a {
   border-radius: 3px;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
   font-size: 14px;
+  line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
 }
@@ -21148,7 +21165,7 @@ a {
   letter-spacing: 5px;
   text-align: center;
   position: absolute;
-  top: 150px;
+  top: 120px;
 }
 .dpcroot_DPCHeaderSpring2021League_3Qm9p .dpcroot_EventPresented_1j_VO {
   font-size: 14px;
@@ -21159,7 +21176,7 @@ a {
   letter-spacing: 8px;
   text-align: center;
   position: absolute;
-  top: 80px;
+  top: 100px;
 }
 .dpcroot_DPCHeaderSpring2021League_3Qm9p .dpcroot_EventSegment_VCSdA {
   font-size: 20px;
@@ -21269,7 +21286,7 @@ a {
   letter-spacing: 8px;
   text-align: center;
   position: absolute;
-  top: 80px;
+  top: 150px;
 }
 .dpcroot_DPCHeaderSpring2021Major_19w08 .dpcroot_EventTitle_1ytb2 {
   font-size: 34px;
@@ -21280,7 +21297,7 @@ a {
   letter-spacing: 5px;
   text-align: center;
   position: absolute;
-  top: 150px;
+  top: 100px;
 }
 .dpcroot_DPCHeaderSpring2021Major_19w08 .dpcroot_EventSegment_VCSdA {
   font-size: 20px;
@@ -21563,7 +21580,7 @@ a {
   letter-spacing: 2px;
   text-align: center;
   position: absolute;
-  top: 245px;
+  top: 300px;
 }
 .dpcroot_DPCHeaderTI2021_34VR8 .dpcroot_EventSubTitle_FYI2F {
   font-size: 14px;
@@ -21573,7 +21590,7 @@ a {
   letter-spacing: 8px;
   text-align: center;
   position: absolute;
-  top: 285px;
+  top: 330px;
 }
 .dpcroot_DPCHeaderTI2021_34VR8 .dpcroot_EventPhaseTitle_2a02x {
   font-size: 14px;
@@ -22178,6 +22195,7 @@ a {
   border-radius: 3px;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
   font-size: 14px;
+  line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
 }
@@ -23604,6 +23622,7 @@ a {
   border-radius: 3px;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
   font-size: 14px;
+  line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
 }
@@ -25699,6 +25718,7 @@ a {
   border-radius: 3px;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
   font-size: 14px;
+  line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
 }
@@ -26352,6 +26372,7 @@ a {
   border-radius: 3px;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
   font-size: 14px;
+  line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
 }
@@ -27053,6 +27074,7 @@ a {
   border-radius: 3px;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
   font-size: 14px;
+  line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
 }
@@ -28780,6 +28802,7 @@ a {
   border-radius: 3px;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
   font-size: 14px;
+  line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
 }
@@ -29802,6 +29825,7 @@ a {
   border-radius: 3px;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
   font-size: 14px;
+  line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
 }
@@ -29846,7 +29870,8 @@ a {
   color: #fff;
 }
 .dpcinternational_InternationalPrizeSplits_3L60o {
-  width: 1280px;
+  width: 100%;
+  max-width: 1280px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30568,6 +30593,7 @@ a {
   border-radius: 3px;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
   font-size: 14px;
+  line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
 }
@@ -31145,6 +31171,7 @@ a {
   border-radius: 3px;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
   font-size: 14px;
+  line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
 }
@@ -32205,6 +32232,7 @@ a {
   border-radius: 3px;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
   font-size: 14px;
+  line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
 }
@@ -33003,6 +33031,7 @@ a {
   border-radius: 3px;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
   font-size: 14px;
+  line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
 }
