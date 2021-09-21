@@ -202,6 +202,18 @@
                     "description": "(Optional) At least one of the tags must be present on a published file to satisfy the query."
                 },
                 {
+                    "name": "date_range_created",
+                    "type": "{message}",
+                    "optional": false,
+                    "description": "(Optional) Filter to items created within this range."
+                },
+                {
+                    "name": "date_range_updated",
+                    "type": "{message}",
+                    "optional": false,
+                    "description": "(Optional) Filter to items updated within this range."
+                },
+                {
                     "name": "totalonly",
                     "type": "bool",
                     "optional": false,
