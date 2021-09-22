@@ -55,7 +55,7 @@ function ShowDateRangeSelectionDialog()
 		$J( '#created_date_range_filter_start' ).val( Date.parse( created_date_range_start.val() ) / 1000 );
 		$J( '#created_date_range_filter_end' ).val( Date.parse(  created_date_range_end.val() ) / 1000 );
 		$J( '#updated_date_range_filter_start' ).val( Date.parse(  updated_date_range_start.val() ) / 1000 );
-		$J( '#update_date_range_filter_end' ).val( Date.parse(  update_date_range_end.val() ) / 1000 );
+		$J( '#updated_date_range_filter_end' ).val( Date.parse(  update_date_range_end.val() ) / 1000 );
 		FilterByTags();
 	} );
 }
