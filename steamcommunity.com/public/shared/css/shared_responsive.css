@@ -746,12 +746,12 @@ html.force_desktop body #footer_responsive_optin_spacer {
 
 @media screen and (max-width: 910px)
 {
-	html.responsive .responsive_scroll_snap_ctn:not(.legacy_mobile .responsive_scroll_snap_ctn) {
+	html.responsive:not(.legacy_mobile) .responsive_scroll_snap_ctn {
 		scroll-snap-type: x mandatory;
 		-webkit-overflow-scrolling: touch;
 	}
 
-	html.responsive .responsive_scroll_snap_start:not(.legacy_mobile .responsive_scroll_snap_start) {
+	html.responsive:not(.legacy_mobile) .responsive_scroll_snap_start {
 		scroll-snap-align: start;
 		overflow: visible;
 	}

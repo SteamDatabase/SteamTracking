@@ -1,4 +1,65 @@
 
+function CreateDateRangeInput( container, id )
+{
+	var sourceInput = $J( id );
+	var dateObj = new Date( sourceInput.val() * 1000 );
+	var dateOptions = { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' };
+	var dateString = dateObj.toLocaleDateString( undefined, dateOptions );
+	var input = $J( '<input/>', { type: 'input', class: 'date_range_filter_input', value: sourceInput.val() == 0 ? '' : dateString } );
+	container.append( input );
+
+	input.datepicker( {
+		dateFormat: '@',
+		showOtherMonths: true,
+		changeMonth: true,
+		changeYear: true,
+		maxDate: "+1d",
+		defaultDate: sourceInput.val() != 0 ? dateObj : null,
+		onSelect: function( newDate, instance ) {
+			var dateObj = new Date( parseInt( newDate ) );
+			var dateOptions = { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' };
+			var dateString = dateObj.toLocaleDateString( undefined, dateOptions );
+			$J( this ).val( dateString );
+		}
+	} );
+
+	return input;
+}
+
+function ShowDateRangeSelectionDialog()
+{
+	var content = $J( '<div/>', { class: 'date_range_filter_dialog' } );
+
+	content.append( $J( '<div/>', { class: 'title', text: 'Posted date' } ) );
+	var createdContainer = $J( '<div/>', { class: 'date_range_filter_dates' } );
+	createdContainer.append( $J( '<div/>', { class: 'date_range_word', text: 'Between' } ) );
+	var created_date_range_start = CreateDateRangeInput( createdContainer, "#created_date_range_filter_start" );
+	createdContainer.append( created_date_range_start );
+	createdContainer.append( $J( '<div/>', { class: 'date_range_word', text: 'And' } ) );
+	var created_date_range_end = CreateDateRangeInput( createdContainer, "#created_date_range_filter_end" );
+	createdContainer.append( created_date_range_end );
+	content.append( createdContainer );
+
+	content.append( $J( '<div/>', { class: 'title', text: 'Date last updated'} ) );
+	var updatedContainer = $J( '<div/>', { class: 'date_range_filter_dates' } );
+	updatedContainer.append( $J( '<div/>', { class: 'date_range_word', text: 'Between' } ) );
+	var updated_date_range_start = CreateDateRangeInput( updatedContainer, "#updated_date_range_filter_start" );
+	updatedContainer.append( updated_date_range_start );
+	updatedContainer.append( $J( '<div/>', { class: 'date_range_word', text: 'And' } ) );
+	var update_date_range_end = CreateDateRangeInput( updatedContainer, "#updated_date_range_filter_end" );
+	updatedContainer.append( update_date_range_end );
+	content.append( updatedContainer );
+
+	var dialog = ShowConfirmDialog( 'Filter by Date', content );
+	dialog.done( function() {
+		$J( '#created_date_range_filter_start' ).val( Date.parse( created_date_range_start.val() ) / 1000 );
+		$J( '#created_date_range_filter_end' ).val( Date.parse(  created_date_range_end.val() ) / 1000 );
+		$J( '#updated_date_range_filter_start' ).val( Date.parse(  updated_date_range_start.val() ) / 1000 );
+		$J( '#update_date_range_filter_end' ).val( Date.parse(  update_date_range_end.val() ) / 1000 );
+		FilterByTags();
+	} );
+}
+
 function DownloadFile( publishFileID, revision )
 {
     $J.post( "https://steamcommunity.com/sharedfiles/downloadfile/?id=" + publishFileID + "&revision=" + revision )
@@ -1027,13 +1088,27 @@ function HighlightSearchText( text, elem )
 	}
 }
 
+var gExternalTagSelectorWaitDialog = null;
+
 function ShowExternalTagSelectorDialog_OnLoad()
 {
+	if ( gExternalTagSelectorWaitDialog )
+	{
+		gExternalTagSelectorWaitDialog.Dismiss();
+		gExternalTagSelectorWaitDialog = null;
+	}
 	$( 'ExternalTagSelectorDialogIFrame' ).show();
 }
 
 function ShowExternalTagSelectorDialog( url, formID, submitFuncCB )
 {
+	if ( gExternalTagSelectorWaitDialog )
+	{
+		gExternalTagSelectorWaitDialog.Dismiss();
+		gExternalTagSelectorWaitDialog = null;
+	}
+	gExternalTagSelectorWaitDialog = ShowBlockingWaitDialog( 'Please Wait', 'Loading options...' );
+
 	$( 'ExternalTagSelectorDialogIFrame' ).hide();
 	$( 'ExternalTagSelectorDialogIFrame' ).src = url;
 	showModal( 'ExternalTagSelectorDialog' );

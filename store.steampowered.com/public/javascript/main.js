@@ -1914,17 +1914,36 @@ function GamePurchaseDropdownSelectOption( dropdownName, subId, inCart )
 	$J('#add_to_cart_' + dropdownName + '_selected_text').html( $J('#add_to_cart_' + dropdownName + '_menu_option_' + subId).html() );
 
 	$J('#add_to_cart_' + dropdownName + '_select_option').hide();
+
+	var $inCart = $J('#add_to_cart_' + dropdownName + '_in_cart_button');
+	var $addCart = $J('#add_to_cart_' + dropdownName + '_add_button');
 	if ( inCart )
 	{
-		$J('#add_to_cart_' + dropdownName + '_add_button').hide();
-		$J('#add_to_cart_' + dropdownName + '_in_cart_button').show();
+		$addCart.hide();
+		$inCart.show();
+		if ( typeof GPNavFocusChild !== 'undefined' )
+		{
+			GPNavFocusChild( $inCart );
+		}
 	}
 	else
 	{
-		$J('#add_to_cart_' + dropdownName + '_add_button').show();
-		$J('#add_to_cart_' + dropdownName + '_in_cart_button').hide();
+		$inCart.hide();
+		$addCart.show();
+		if ( typeof GPNavFocusChild !== 'undefined' )
+		{
+			GPNavFocusChild( $addCart );
+		}
 	}
-	HideMenu('game_purchase_dropdown_' + dropdownName + '_region', 'add_to_cart_' + dropdownName + '_menu');
+
+	if ( window.SupportTabletScreenMode() )
+	{
+		CModal.DismissActiveModal();
+	}
+	else
+	{
+		HideMenu('game_purchase_dropdown_' + dropdownName + '_region', 'add_to_cart_' + dropdownName + '_menu');
+	}
 }
 
 function GamePurchaseDropdownAddToCart( dropdownName )
@@ -1947,7 +1966,18 @@ function ShowGamePurchaseDropdown( elemLink, elemPopup )
 	var nWidth = $Link.outerWidth();
 	$Popup.css( 'min-width', nWidth );
 
-	ShowMenu( elemLink, elemPopup, 'right', 'bottom' );
+	if ( window.SupportTabletScreenMode() )
+	{
+		var $Content = $Popup.clone();
+		$Content.attr('data-panel', '{"maintainY":true,"autoFocus":true}' );
+		$Content.css( 'position', 'relative' );
+		var $Dialog = ShowDialog( 'Select a purchase option', $Content.show() );
+		$Dialog.AdjustSizing();
+	}
+	else
+	{
+		ShowMenu( elemLink, elemPopup, 'right', 'bottom' );
+	}
 }
 
 function AgeGateClear()

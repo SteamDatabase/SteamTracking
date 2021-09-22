@@ -180,10 +180,16 @@
   text-transform: uppercase;
 }
 .faqdashboard_DashboardHeader_1fVLw
-  .faqdashboard_DashboardCreateFAQButtonCtn_2pjqN
-  button.DialogButton.Primary {
-  padding: 0 24px;
+  .faqdashboard_DashboardHeaderButtonCtn_MuQkN {
+  display: flex;
+}
+.faqdashboard_DashboardHeader_1fVLw
+  .faqdashboard_DashboardHeaderButtonCtn_MuQkN
+  button.DialogButton {
+  padding: 6px 30px;
   box-sizing: border-box;
+  margin-right: 24px;
+  white-space: nowrap;
 }
 button.faqdashboard_DashboardCreateFAQButton_3VW3j.faqdashboard_DashboardCreateFAQButton_3VW3j {
   background-color: green;
@@ -291,6 +297,71 @@ button.faqdashboard_DashboardCreateFAQButton_3VW3j.faqdashboard_DashboardCreateF
   font-size: 18px;
   padding-left: 6px;
 }
+.faqlocalization_LanguageListDialog_vp5PF .DialogBodyText {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.faqlocalization_ChecklistHeader_1Vzmz {
+  display: flex;
+  padding: 14px 30px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.faqlocalization_ChecklistRows_3qgdW {
+  overflow: auto;
+}
+.faqlocalization_CheckAll_1I_jA.DialogCheckbox_Container {
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid dimgray;
+}
+.faqlocalization_LanguageCheckbox_1llVI.DialogCheckbox_Container {
+  padding: 0;
+}
+.faqlocalization_LanguageCheckboxLabel_2S_PZ {
+  display: flex;
+  font-size: 15px;
+}
+.faqlocalization_Language_13DIW {
+  width: 200px;
+}
+.faqlocalization_Warning_hGncG {
+  font-style: italic;
+}
+.faqlocalization_ImportProgressBar_1s2UZ {
+  width: 600px;
+  height: 8px;
+  background: rgba(0, 0, 0, 0.5);
+  margin: 12px 0;
+}
+.faqlocalization_ImportProgressBar_1s2UZ .faqlocalization_ProgressMarker_2q-Td {
+  background-color: #20aaeb;
+  height: 100%;
+  transition: width 0.4s ease-out;
+}
+.faqlocalization_CurrentFAQ_1MsSL,
+.faqlocalization_LanguageList_28hYl {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.faqlocalization_LanguageList_28hYl {
+  width: 65%;
+}
+.faqlocalization_ImportResults_2FKxI {
+  padding: 12px 0;
+}
+.faqlocalization_ImportResults_2FKxI .faqlocalization_ImportResultLabel_1_icU {
+  font-weight: bold;
+  padding-bottom: 8px;
+}
+.faqlocalization_ImportResults_2FKxI .faqlocalization_ImportResult_3h1Lk {
+  display: flex;
+}
+.faqlocalization_ImportResults_2FKxI .faqlocalization_UrlCode_MxoxU {
+  width: 35%;
+}
 .faqtimestamp_Never_8rlUG {
   color: #b36f6f;
 }
@@ -379,35 +450,6 @@ button.faqeditor_EditorSaveButton_22iwd.faqeditor_EditorSaveButton_22iwd:disable
 .faqeditor_ErrorCtn_1l94e .faqeditor_EscapeLink_3tlrR {
   font-size: 16px;
   text-decoration: underline;
-}
-.faqlocalization_LanguageListDialog_vp5PF .DialogBodyText {
-  height: 100%;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-.faqlocalization_ChecklistHeader_1Vzmz {
-  display: flex;
-  padding: 14px 30px;
-  font-size: 18px;
-  font-weight: 700;
-}
-.faqlocalization_ChecklistRows_3qgdW {
-  overflow: auto;
-}
-.faqlocalization_CheckAll_1I_jA.DialogCheckbox_Container {
-  padding: 0 0 10px 0;
-  border-bottom: 1px solid dimgray;
-}
-.faqlocalization_LanguageCheckbox_1llVI.DialogCheckbox_Container {
-  padding: 0;
-}
-.faqlocalization_LanguageCheckboxLabel_2S_PZ {
-  display: flex;
-  font-size: 15px;
-}
-.faqlocalization_Language_13DIW {
-  width: 200px;
 }
 .faqstatus_LeftMenu_1txme .faqstatus_Section_2j-hh {
   margin-bottom: 24px;

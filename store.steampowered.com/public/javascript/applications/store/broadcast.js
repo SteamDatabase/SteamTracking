@@ -11078,23 +11078,26 @@
                               }
                             ),
                           }),
-                        this.props.nAppIDVOD
-                          ? (Cr.a.Get().SetupEmbeddableVOD(this.props), [3, 4])
-                          : [3, 2]
+                        [
+                          4,
+                          this.props.bIsPreview && this.props.accountIDs
+                            ? Cr.a
+                                .Get()
+                                .HintLoadEmbeddablePreviewStreams(this.props)
+                            : Cr.a.Get().HintLoadEmbeddableStreams(this.props),
+                        ]
                       );
                     case 2:
-                      return [
-                        4,
-                        this.props.bIsPreview && this.props.accountIDs
-                          ? Cr.a
-                              .Get()
-                              .HintLoadEmbeddablePreviewStreams(this.props)
-                          : Cr.a.Get().HintLoadEmbeddableStreams(this.props),
-                      ];
-                    case 3:
-                      t.sent(), (t.label = 4);
-                    case 4:
                       return (
+                        t.sent(),
+                        this.props.nAppIDVOD &&
+                          (Cr.a
+                            .Get()
+                            .SetupEmbeddableVOD(
+                              this.props,
+                              !this.props.bSkipPreRoll
+                            ),
+                          this.props.bSkipPreRoll && this.PlayTopNonVOD()),
                         window.setTimeout(function () {
                           e.m_cancelSignal.token.reason ||
                             e.setState({
@@ -11109,13 +11112,6 @@
                   }
                 });
               });
-            }),
-            (t.prototype.componentDidUpdate = function (e) {
-              e.nAppIDVOD &&
-                !this.props.nAppIDVOD &&
-                (this.props.bIsPreview && this.props.accountIDs
-                  ? Cr.a.Get().HintLoadEmbeddablePreviewStreams(this.props)
-                  : Cr.a.Get().HintLoadEmbeddableStreams(this.props));
             }),
             (t.prototype.componentWillUnmount = function () {
               this.m_cancelSignal.cancel(
@@ -11166,6 +11162,45 @@
                     case 1:
                       t.sent(), (t.label = 2);
                     case 2:
+                      return [2];
+                  }
+                });
+              });
+            }),
+            (t.prototype.PlayTopNonVOD = function () {
+              return Object(n.b)(this, void 0, void 0, function () {
+                var e,
+                  t,
+                  r,
+                  i,
+                  a = this;
+                return Object(n.e)(this, function (n) {
+                  switch (n.label) {
+                    case 0:
+                      (e = Cr.a
+                        .Get()
+                        .GetStreams(this.props)
+                        .filter(function (e) {
+                          return (
+                            !a.props.fnFilterStreams ||
+                            a.props.fnFilterStreams(e)
+                          );
+                        })),
+                        Object(Cr.f)(e),
+                        (t = 0),
+                        (r = e),
+                        (n.label = 1);
+                    case 1:
+                      return t < r.length
+                        ? (i = r[t]).nAppIDVOD
+                          ? [3, 3]
+                          : [4, Cr.a.Get().AttemptToPlayStream(this.props, i)]
+                        : [3, 4];
+                    case 2:
+                      return n.sent(), [2];
+                    case 3:
+                      return t++, [3, 1];
+                    case 4:
                       return [2];
                   }
                 });
@@ -11233,37 +11268,38 @@
               );
             }),
             (t.prototype.render = function () {
-              var e, t;
+              var e,
+                t,
+                i = this;
               if (!r.IsBroadcastAllowed() || this.state.bLoadingPreference)
                 return null;
-              var i = Cr.a.Get().GetPlayReadyStream(this.props);
-              if (i) {
-                var a = "show" === Cr.a.Get().GetChatVisibility(),
-                  o = this.props,
-                  u = o.event,
-                  c = o.language,
-                  d = o.fnRenderBroadcastContext,
-                  l = o.fnOnVideoEnd;
-                u &&
-                  (i = Object(n.a)(Object(n.a)({}, i), {
-                    left_panel: u.GetImageURL(
+              var a = Cr.a.Get().GetPlayReadyStream(this.props);
+              if (a) {
+                var o = "show" === Cr.a.Get().GetChatVisibility(),
+                  u = this.props,
+                  c = u.event,
+                  d = u.language,
+                  l = u.fnRenderBroadcastContext;
+                c &&
+                  (a = Object(n.a)(Object(n.a)({}, a), {
+                    left_panel: c.GetImageURL(
                       "broadcast_left",
-                      c || Object(Pt.i)(Mt.d.LANGUAGE)
+                      d || Object(Pt.i)(Mt.d.LANGUAGE)
                     ),
-                    right_panel: u.GetImageURL(
+                    right_panel: c.GetImageURL(
                       "broadcast_right",
-                      c || Object(Pt.i)(Mt.d.LANGUAGE)
+                      d || Object(Pt.i)(Mt.d.LANGUAGE)
                     ),
-                    store_title: u.GetBroadcastTitle(
-                      c || Object(Pt.i)(Mt.d.LANGUAGE)
+                    store_title: c.GetBroadcastTitle(
+                      d || Object(Pt.i)(Mt.d.LANGUAGE)
                     ),
-                    broadcast_chat_visibility: u.GetBroadcastChatVisibility(),
+                    broadcast_chat_visibility: c.GetBroadcastChatVisibility(),
                   }));
-                var m = this.ConstructSidePanels(i, a),
-                  f = i.store_title ? i.store_title : i.title,
+                var m = this.ConstructSidePanels(a, o),
+                  f = a.store_title ? a.store_title : a.title,
                   p = Cr.a.Get().GetConcurrentStreams(this.props) > 1;
-                u && u.jsondata && u.jsondata.broadcast_gradient_inner_color,
-                  u && u.jsondata && u.jsondata.broadcast_gradient_outer_color;
+                c && c.jsondata && c.jsondata.broadcast_gradient_inner_color,
+                  c && c.jsondata && c.jsondata.broadcast_gradient_outer_color;
                 return s.createElement(
                   s.Fragment,
                   null,
@@ -11279,7 +11315,7 @@
                         className: Object(nr.a)(
                           ((e = {}),
                           (e[Ir.a.bordered_container] = !0),
-                          (e[Ir.a.Event] = Boolean(u)),
+                          (e[Ir.a.Event] = Boolean(c)),
                           (e.broadcast_brd_ctn_trgt = !0),
                           e)
                         ),
@@ -11320,11 +11356,11 @@
                             onClick: this.ToggleBroadcastExpandShrink,
                           })
                         ),
-                        Boolean(i.gamedata_subtitle) &&
+                        Boolean(a.gamedata_subtitle) &&
                           s.createElement(
                             "div",
                             { className: Ir.a.bordered_subtitle },
-                            i.gamedata_subtitle
+                            a.gamedata_subtitle
                           )
                       ),
                       this.state.bExpanded &&
@@ -11338,7 +11374,7 @@
                               (t.multistream = p),
                               (t.broadcast_right_panel_simple =
                                 m.bRightPanelArtworkOrEmpty),
-                              (t.broadcast_chat_expanded = a),
+                              (t.broadcast_chat_expanded = o),
                               t)
                             ),
                             style: Object(n.a)({}, this.state.innerStyle),
@@ -11346,25 +11382,31 @@
                           },
                           m.leftPanel,
                           s.createElement(Er, {
-                            stream: i,
+                            stream: a,
                             bStartMuted: this.state.bStartMuted,
-                            fnRenderBroadcastContext: d,
-                            fnOnVideoEnd: l,
+                            fnRenderBroadcastContext: l,
+                            fnOnVideoEnd: function () {
+                              var e, t;
+                              a.nAppIDVOD && i.PlayTopNonVOD(),
+                                null === (t = (e = i.props).fnOnVideoEnd) ||
+                                  void 0 === t ||
+                                  t.call(e);
+                            },
                             bWidePlayer: this.props.bWidePlayer,
                           }),
                           m.rightPanel,
                           this.state.bExpanded &&
-                            s.createElement(Pr, { stream: i })
+                            s.createElement(Pr, { stream: a })
                         )
                     ),
                     Boolean(
-                      u && u.jsondata && u.jsondata.broadcast_item_drops_enabled
-                    ) && s.createElement(Ur, { event: u }),
+                      c && c.jsondata && c.jsondata.broadcast_item_drops_enabled
+                    ) && s.createElement(Ur, { event: c }),
                     this.state.bExpanded &&
                       s.createElement(
                         "div",
-                        { className: "" + (u ? Ir.a.Event : "") },
-                        s.createElement(Pr, { stream: i })
+                        { className: "" + (c ? Ir.a.Event : "") },
+                        s.createElement(Pr, { stream: a })
                       ),
                     s.createElement("div", { className: Ir.a.clear_div })
                   )
@@ -11382,6 +11424,7 @@
             ),
             Object(n.c)([ir.a], t.prototype, "OnShrinkTransitionEnd", null),
             Object(n.c)([ir.a], t.prototype, "onStreamSelect", null),
+            Object(n.c)([ir.a], t.prototype, "PlayTopNonVOD", null),
             (t = r = Object(n.c)([o.a], t))
           );
         })(s.Component),
@@ -11680,16 +11723,7 @@
                       !e.props.fnFilterStreams || e.props.fnFilterStreams(t)
                     );
                   });
-              return (
-                t.sort(function (e, t) {
-                  return Object(Cr.c)(e) != Object(Cr.c)(t)
-                    ? Object(Cr.c)(t) - Object(Cr.c)(e)
-                    : e.viewer_count != t.viewer_count
-                    ? t.viewer_count - e.viewer_count
-                    : t.accountid - e.accountid;
-                }),
-                t
-              );
+              return Object(Cr.f)(t), t;
             }),
             (t.prototype.CalculateStreamHeight = function (e) {
               var t = zr.a.GetOrCreateBroadcastInfo(e.steamid).m_nAppID,
@@ -11717,8 +11751,12 @@
               var e = this,
                 t = this.GetFilteredStreamList(),
                 r = t.map(function (t) {
+                  var r;
                   return s.createElement(Lr, {
-                    key: t.accountid,
+                    key:
+                      null !== (r = t.accountid) && void 0 !== r
+                        ? r
+                        : t.steamid,
                     stream: t,
                     bSelected: e.props.curStream.accountid == t.accountid,
                     onStreamSelect: e.props.onStreamSelect,
@@ -11755,34 +11793,37 @@
                 this.props.onStreamSelect(this.props.stream);
             }),
             (t.prototype.generateThumbnail = function (e) {
-              var t = this.props.stream,
-                r = this.props.bSelected
+              var t,
+                r = this.props.stream,
+                n = this.props.bSelected
                   ? Ir.a.stream_icon_selected
                   : Ir.a.stream_icon;
               if (e) {
-                var n = zr.a.GetOrCreateBroadcastInfo(t.steamid).m_nAppID,
-                  i = pr.a.GetAppLinkInfo(n),
-                  a = [t.thumbnail_http_address];
+                var i = zr.a.GetOrCreateBroadcastInfo(r.steamid).m_nAppID,
+                  a = pr.a.GetAppLinkInfo(
+                    null !== (t = r.nAppIDVOD) && void 0 !== t ? t : i
+                  ),
+                  o = [r.thumbnail_http_address];
                 return s.createElement(
                   s.Fragment,
                   null,
-                  i &&
+                  a &&
                     s.createElement("img", {
                       className: Object(nr.a)(
-                        r,
+                        n,
                         Ir.a.stream_icon_hide_on_hover
                       ),
-                      src: i.header_image_url,
+                      src: a.header_image_url,
                     }),
                   s.createElement(Rr.b, {
-                    className: Object(nr.a)(r, Ir.a.stream_icon_show_on_hover),
-                    srcs: a,
+                    className: Object(nr.a)(n, Ir.a.stream_icon_show_on_hover),
+                    srcs: o,
                   })
                 );
               }
               return s.createElement("img", {
-                className: r,
-                src: t.thumbnail_http_address,
+                className: n,
+                src: r.thumbnail_http_address,
               });
             }),
             (t.GetClassForStreamPriority = function (e) {
@@ -11793,26 +11834,31 @@
               return null;
             }),
             (t.prototype.render = function () {
-              var e = this.props,
-                t = e.stream,
-                n = e.bShowCapsuleArt;
-              if (!Object(Cr.d)(t)) return null;
-              var i = zr.a.GetOrCreateBroadcastInfo(t.steamid).m_nAppID,
-                a = pr.a.GetAppLinkInfo(i),
-                o = Boolean(n && (null == a ? void 0 : a.header_image_url)),
-                u = Number.parseInt("" + t.viewer_count);
+              var e,
+                t = this.props,
+                n = t.stream,
+                i = t.bShowCapsuleArt;
+              if (!Object(Cr.d)(n)) return null;
+              var a = zr.a.GetOrCreateBroadcastInfo(n.steamid).m_nAppID,
+                o = pr.a.GetAppLinkInfo(
+                  null !== (e = n.nAppIDVOD) && void 0 !== e ? e : a
+                ),
+                u = Boolean(i && (null == o ? void 0 : o.header_image_url)),
+                c = Number.parseInt("" + n.viewer_count),
+                d = !Number.isNaN(c),
+                l = !!n.nAppIDVOD && (null == o ? void 0 : o.title);
               return s.createElement(
                 "div",
                 {
                   className: Object(nr.a)(
                     Ir.a.stream_icon_and_viewer_container,
-                    r.GetClassForStreamPriority(t.current_selection_priority),
-                    o && Ir.a.display_capsule_art
+                    r.GetClassForStreamPriority(n.current_selection_priority),
+                    u && Ir.a.display_capsule_art
                   ),
                 },
                 s.createElement(
                   yr.b,
-                  { type: "app", id: i },
+                  { type: "app", id: a },
                   s.createElement(
                     Or.a,
                     {
@@ -11820,7 +11866,7 @@
                       onClick: this.onClick,
                       rootMargin: "100px 0px 100px 0px",
                     },
-                    this.generateThumbnail(o),
+                    this.generateThumbnail(u),
                     this.props.bSelected &&
                       s.createElement("div", {
                         className: Ir.a.stream_icon_arrow,
@@ -11829,9 +11875,21 @@
                 ),
                 s.createElement(
                   "div",
-                  { className: Ir.a.viewer_count },
-                  s.createElement(rr.lb, null),
-                  u.toLocaleString(vt.e.GetPreferredLocales())
+                  {
+                    className: Object(nr.a)(
+                      Ir.a.viewer_count,
+                      !d && Ir.a.vod_title
+                    ),
+                  },
+                  d
+                    ? s.createElement(
+                        s.Fragment,
+                        null,
+                        s.createElement(rr.lb, null),
+                        " ",
+                        c.toLocaleString(vt.e.GetPreferredLocales())
+                      )
+                    : l
                 )
               );
             }),
@@ -11863,7 +11921,7 @@
                       "div",
                       { className: Ir.a.ChatContainer },
                       s.createElement(lr, {
-                        emoticonStore: Cr.f,
+                        emoticonStore: Cr.g,
                         watchLocation: 6,
                         steamID: this.props.stream.steamid,
                         broadcastID: t.m_ulBroadcastID,
@@ -11923,6 +11981,7 @@
         settings_link: "broadcast_embeddable_settings_link_1Thke",
         external_link: "broadcast_embeddable_external_link_1n1BM",
         viewer_count: "broadcast_embeddable_viewer_count_1MrTW",
+        vod_title: "broadcast_embeddable_vod_title_2xKaM",
         stream_icon_and_viewer_container:
           "broadcast_embeddable_stream_icon_and_viewer_container_2sbrG",
         display_capsule_art: "broadcast_embeddable_display_capsule_art_SsORV",

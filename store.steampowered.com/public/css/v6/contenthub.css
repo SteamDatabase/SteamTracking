@@ -17,7 +17,7 @@ body.tag_page .content_hub h2.pageheader {
 
 .content_hub_breadcrumb_title {
 	font-size: 27px;
-	font-weight: 400;	
+	font-weight: 400;
 	text-transform: uppercase;
 	letter-spacing: 0.02em;
 	color: #2d739b;
@@ -209,6 +209,10 @@ body.tag_page .content_hub h2.pageheader {
 	box-shadow: none;
 }
 
+.contenthub_page .tabarea .tab_content_title {
+	display: none;
+}
+
 .contenthub_page .store_horizontal_minislider_ctn {
 	height: 30px !important;
 }
@@ -393,7 +397,7 @@ div#page_section_container,
 	html.responsive .contenthub_page_background {
 		min-width: unset;
 	}
-	
+
 	html.responsive .contenthub_page div.leftcol.sub {
 		margin-bottom: 20px;
 		width: auto;

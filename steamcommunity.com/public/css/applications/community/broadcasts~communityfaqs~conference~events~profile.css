@@ -1738,6 +1738,10 @@ span.partnereventshared_tooltip_Ctn_3nqxI {
   color: #fff;
   margin-left: 10px;
 }
+.partnereventshared_SaleEditorSpacing_2ZGwd {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
 .partnereventshared_SaleSectionHeader_2WMiQ {
   font-weight: 400;
   letter-spacing: 0.05em;
@@ -2742,6 +2746,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   display: flex;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
+  white-space: nowrap;
 }
 .salepreviewwidgets_StoreSalePrepurchaseLabel_1Fru- {
   color: #a3cf06;
@@ -2814,6 +2819,27 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
 }
 .salepreviewwidgets_Muted_1HVwz {
   opacity: 0.3;
+}
+.salepreviewwidgets_BottomCreatorRow_1JrUu {
+  background-color: #111;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  height: 56px;
+  box-sizing: border-box;
+  z-index: 2;
+  cursor: pointer;
+  font-size: 12px;
+}
+.salepreviewwidgets_BottomCreatorRow_1JrUu img {
+  height: 48px;
+  padding: 4px;
+}
+.salepreviewwidgets_BottomCreatorRow_1JrUu
+  .salepreviewwidgets_CreatorName_Fmi-a {
+  padding-left: 4px;
+  padding-top: 4px;
+  align-self: flex-start;
 }
 .salepreviewwidgets_CapsuleBottomBar_3lmdE {
   background-color: #000;
@@ -2961,7 +2987,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 6px 0 0 0;
+  margin: 0;
   width: auto;
   min-width: unset;
   padding: 9px 20px;
@@ -5418,16 +5444,16 @@ Body.v6.tag_page.contenthub_page {
   margin: 0 auto;
 }
 .contenthubshared_StoreSection_OyJ48 .contenthubshared_SectionTitle_2RnIw {
-  font-size: 18px;
+  font-size: 16px;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 1px;
+  margin-right: 8px;
 }
 .contenthubshared_StoreSection_OyJ48
   .contenthubshared_SectionDescription_nVpbh {
-  font-size: 18px;
-  color: #555454;
-  text-transform: uppercase;
+  font-size: 16px;
+  opacity: 50%;
   letter-spacing: 1px;
 }
 .contenthubshared_SectionTitleCtn_3Laga {

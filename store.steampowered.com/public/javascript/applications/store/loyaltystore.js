@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [39],
+  [68],
   {
     "++az": function (e, t, n) {
       e.exports =
@@ -76,10 +76,10 @@
     "+j4l": function (e, t, n) {
       "use strict";
       n.d(t, "e", function () {
-        return Ce;
+        return Ie;
       }),
         n.d(t, "c", function () {
-          return Ie;
+          return Ce;
         }),
         n.d(t, "d", function () {
           return we;
@@ -108,8 +108,8 @@
         b = n("pQ8y"),
         y = n("r64O"),
         v = n("StxQ"),
-        C = n("n4wG"),
-        I = n("1fPh"),
+        I = n("n4wG"),
+        C = n("1fPh"),
         w = n("6Y59"),
         M = n("exH9"),
         j = { success: !0, result: 1 },
@@ -1217,7 +1217,7 @@
         be = fe(pe.GreenButton),
         ye = n("mw7S"),
         ve = n("RV7a");
-      function Ce(e, t, n, r) {
+      function Ie(e, t, n, r) {
         var i = {
           type: 1,
           rewardDefinition: t,
@@ -1229,7 +1229,7 @@
           e ? Object(_.m)(e) : window
         );
       }
-      function Ie(e, t, n, r) {
+      function Ce(e, t, n, r) {
         var i = {
           type: 3,
           profileCustomizationType: t,
@@ -1801,7 +1801,7 @@
               i &&
                 a.createElement(
                   c.b,
-                  { to: I.b.LoyaltyStore() + "/app/" + i.appid, onClick: o },
+                  { to: C.b.LoyaltyStore() + "/app/" + i.appid, onClick: o },
                   a.createElement(
                     "div",
                     { className: m.SubHeaderAppContainer },
@@ -3534,7 +3534,7 @@
               { onClick: t },
               a.createElement(
                 c.b,
-                { to: I.b.LoyaltyHowItWorks() },
+                { to: C.b.LoyaltyHowItWorks() },
                 Object(d.f)("#Redeem_NeedToOwnApp")
               )
             ),
@@ -3551,7 +3551,7 @@
               { onClick: t },
               a.createElement(
                 c.b,
-                { to: I.b.LoyaltyHowItWorks() },
+                { to: C.b.LoyaltyHowItWorks() },
                 Object(d.f)("#Redeem_HowToGetPoints")
               )
             ),
@@ -3721,7 +3721,7 @@
                   a.createElement("div", {
                     className: m.BadgeImage,
                     style: {
-                      backgroundImage: "url( " + Object(C.a)(t.appid, i) + " )",
+                      backgroundImage: "url( " + Object(I.a)(t.appid, i) + " )",
                     },
                   })
                 ),
@@ -3900,57 +3900,6 @@
         n.p +
         "images/applications/store/icon_showcase_23.svg?v=valveisgoodatcaching";
     },
-    "1fwC": function (e, t, n) {
-      var r = {
-        "./brazilian.png": "soKn",
-        "./bulgarian.png": "9Jaz",
-        "./czech.png": "kE1x",
-        "./danish.png": "omdw",
-        "./dutch.png": "NkgL",
-        "./english.png": "KGU5",
-        "./finnish.png": "NFas",
-        "./french.png": "atX1",
-        "./german.png": "VVzz",
-        "./greek.png": "RONN",
-        "./hungarian.png": "Z+Nm",
-        "./italian.png": "qYHL",
-        "./japanese.png": "MAH9",
-        "./korean.png": "LUpu",
-        "./koreana.png": "ygOc",
-        "./latam.png": "Opir",
-        "./norwegian.png": "rAtD",
-        "./polish.png": "2iUv",
-        "./portuguese.png": "mzlH",
-        "./romanian.png": "GFF6",
-        "./russian.png": "hDJj",
-        "./sc_schinese.png": "sYE/",
-        "./schinese.png": "YpUl",
-        "./spanish.png": "vbhM",
-        "./swedish.png": "Q0JX",
-        "./tchinese.png": "JgNP",
-        "./thai.png": "iIFs",
-        "./turkish.png": "OI/I",
-        "./ukrainian.png": "4paJ",
-        "./vietnamese.png": "8/r/",
-      };
-      function a(e) {
-        var t = i(e);
-        return n(t);
-      }
-      function i(e) {
-        if (!n.o(r, e)) {
-          var t = new Error("Cannot find module '" + e + "'");
-          throw ((t.code = "MODULE_NOT_FOUND"), t);
-        }
-        return r[e];
-      }
-      (a.keys = function () {
-        return Object.keys(r);
-      }),
-        (a.resolve = i),
-        (e.exports = a),
-        (a.id = "1fwC");
-    },
     "1sV+": function (e, t, n) {
       e.exports =
         n.p +
@@ -4106,7 +4055,7 @@
                   alignSelf: "center",
                 },
               },
-              i.a.createElement(I, {
+              i.a.createElement(C, {
                 items: n.items,
                 visible: 5,
                 width: 464,
@@ -4114,7 +4063,7 @@
                 offer: n,
               })
             ),
-            i.a.createElement(C, {
+            i.a.createElement(I, {
               label: m,
               count: n.items.length,
               cost: o,
@@ -4122,7 +4071,7 @@
             })
           );
         }),
-        C = function (e) {
+        I = function (e) {
           var t = e.cost,
             n = e.discount,
             r = e.label + " (" + e.count + ")";
@@ -4159,7 +4108,7 @@
                 )
           );
         };
-      var I = Object(o.a)(function (e) {
+      var C = Object(o.a)(function (e) {
         var t = e.offer,
           n = e.items,
           r = e.visible,
@@ -4201,9 +4150,9 @@
                   (h = u * (Math.sin(g) + Math.cos(g))),
                   (y = h - u),
                   (v = _ - y),
-                  (C = Math.min(u, v / c)),
-                  (I = ((m - c) / 2) * u),
-                  (M = l * C + I),
+                  (I = Math.min(u, v / c)),
+                  (C = ((m - c) / 2) * u),
+                  (M = l * I + C),
                   (j = (c - 1) / 2),
                   (N = (30 * Math.pow(l - j, 2)) / (j * j)),
                   (S = (0.84 / (c - 1)) * l - g),
@@ -4231,7 +4180,7 @@
                 className: p.ItemCardImage,
               })
             );
-            var l, c, m, u, _, g, h, y, v, C, I, M, j, N, S;
+            var l, c, m, u, _, g, h, y, v, I, C, M, j, N, S;
           })
         );
       });
@@ -4280,18 +4229,10 @@
         }
       }
     },
-    "2iUv": function (e, t, n) {
-      e.exports =
-        n.p + "images/applications/store/polish.png?v=valveisgoodatcaching";
-    },
     "2y1i": function (e, t, n) {
       e.exports =
         n.p +
         "images/applications/store/dota_shocked_crystal_maiden.png?v=valveisgoodatcaching";
-    },
-    "4paJ": function (e, t, n) {
-      e.exports =
-        n.p + "images/applications/store/ukrainian.png?v=valveisgoodatcaching";
     },
     "5pqL": function (e, t, n) {
       e.exports = {
@@ -4349,10 +4290,6 @@
         ItemHover: "cluster_ItemHover_1hyVD",
         MobileHeroAction: "cluster_MobileHeroAction_nHPO7",
       };
-    },
-    "8/r/": function (e, t, n) {
-      e.exports =
-        n.p + "images/applications/store/vietnamese.png?v=valveisgoodatcaching";
     },
     "8Uds": function (e, t, n) {
       e.exports = {
@@ -4446,10 +4383,6 @@
         Amount: "loyaltypoints_Amount_BqFe2",
       };
     },
-    "9Jaz": function (e, t, n) {
-      e.exports =
-        n.p + "images/applications/store/bulgarian.png?v=valveisgoodatcaching";
-    },
     "9jkg": function (e, t, n) {
       e.exports =
         n.p +
@@ -4457,35 +4390,35 @@
     },
     Aqke: function (e, t, n) {
       var r = {
-        "./loyalty_brazilian.json": ["jJTi", 105],
-        "./loyalty_bulgarian.json": ["YXmX", 106],
-        "./loyalty_czech.json": ["Yw6T", 107],
-        "./loyalty_danish.json": ["LeJ7", 108],
-        "./loyalty_dutch.json": ["3s9e", 109],
-        "./loyalty_english.json": ["nz6u", 110],
-        "./loyalty_finnish.json": ["cCRj", 111],
-        "./loyalty_french.json": ["WjZg", 112],
-        "./loyalty_german.json": ["2HFY", 113],
-        "./loyalty_greek.json": ["puzw", 114],
-        "./loyalty_hungarian.json": ["h+vV", 115],
-        "./loyalty_italian.json": ["1xjJ", 116],
-        "./loyalty_japanese.json": ["KhFN", 117],
-        "./loyalty_koreana.json": ["0T2E", 118],
-        "./loyalty_latam.json": ["SFVQ", 119],
-        "./loyalty_norwegian.json": ["6qpk", 120],
-        "./loyalty_polish.json": ["c9AW", 121],
-        "./loyalty_portuguese.json": ["H3eu", 122],
-        "./loyalty_romanian.json": ["gt0D", 123],
-        "./loyalty_russian.json": ["4nQk", 124],
-        "./loyalty_sc_schinese.json": ["0Z0/", 125],
-        "./loyalty_schinese.json": ["svug", 126],
-        "./loyalty_spanish.json": ["x/nm", 127],
-        "./loyalty_swedish.json": ["d/hP", 128],
-        "./loyalty_tchinese.json": ["EWje", 129],
-        "./loyalty_thai.json": ["SnkP", 130],
-        "./loyalty_turkish.json": ["cD82", 131],
-        "./loyalty_ukrainian.json": ["jV8j", 132],
-        "./loyalty_vietnamese.json": ["TxFk", 133],
+        "./loyalty_brazilian.json": ["jJTi", 39],
+        "./loyalty_bulgarian.json": ["YXmX", 40],
+        "./loyalty_czech.json": ["Yw6T", 41],
+        "./loyalty_danish.json": ["LeJ7", 42],
+        "./loyalty_dutch.json": ["3s9e", 43],
+        "./loyalty_english.json": ["nz6u", 44],
+        "./loyalty_finnish.json": ["cCRj", 45],
+        "./loyalty_french.json": ["WjZg", 46],
+        "./loyalty_german.json": ["2HFY", 47],
+        "./loyalty_greek.json": ["puzw", 48],
+        "./loyalty_hungarian.json": ["h+vV", 49],
+        "./loyalty_italian.json": ["1xjJ", 50],
+        "./loyalty_japanese.json": ["KhFN", 51],
+        "./loyalty_koreana.json": ["0T2E", 52],
+        "./loyalty_latam.json": ["SFVQ", 53],
+        "./loyalty_norwegian.json": ["6qpk", 54],
+        "./loyalty_polish.json": ["c9AW", 55],
+        "./loyalty_portuguese.json": ["H3eu", 56],
+        "./loyalty_romanian.json": ["gt0D", 57],
+        "./loyalty_russian.json": ["4nQk", 58],
+        "./loyalty_sc_schinese.json": ["0Z0/", 59],
+        "./loyalty_schinese.json": ["svug", 60],
+        "./loyalty_spanish.json": ["x/nm", 61],
+        "./loyalty_swedish.json": ["d/hP", 62],
+        "./loyalty_tchinese.json": ["EWje", 63],
+        "./loyalty_thai.json": ["SnkP", 64],
+        "./loyalty_turkish.json": ["cD82", 65],
+        "./loyalty_ukrainian.json": ["jV8j", 66],
+        "./loyalty_vietnamese.json": ["TxFk", 67],
       };
       function a(e) {
         if (!n.o(r, e))
@@ -4555,8 +4488,8 @@
           ),
         });
       }
-      var C = n("lypr"),
-        I = "none";
+      var I = n("lypr"),
+        C = "none";
       function w(e, t, n) {
         void 0 === n && (n = {});
         var o = n.cInitialItems,
@@ -4590,14 +4523,14 @@
             d = N(),
             p = d[0],
             f = d[1],
-            g = Object(_.i)("padding-right", I),
+            g = Object(_.i)("padding-right", C),
             h = Object(_.g)().spacing.none,
             y = 1;
           u.width &&
             void 0 !== f.width &&
             (y = Math.floor((f.width + h) / u.width));
           var v = !n && s + y < r,
-            C = function () {
+            I = function () {
               return v && l(s + y);
             },
             w = s > 0,
@@ -4625,7 +4558,7 @@
             rgVisibleItems: E,
             bAllowNext: v,
             bAllowPrev: w,
-            fnNext: C,
+            fnNext: I,
             fnPrev: M,
             iPosition: s,
           };
@@ -4785,7 +4718,7 @@
           "div",
           { className: Object(b.a)(h.Container, h.Mobile) },
           t.map(n),
-          i.a.createElement(C.a, {
+          i.a.createElement(I.a, {
             trigger: "repeated",
             onVisibiltyChange: function (e) {
               return e && r();
@@ -5455,7 +5388,7 @@
           e.persona.GetCurrentGameName()
         );
       }
-      var Ce = (function (e) {
+      var Ie = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -5479,8 +5412,8 @@
                 h = e.bHidePersona,
                 y = e.bDNDSet,
                 v = e.bHasPartyBeacon,
-                C = e.bHasGamePrivacy,
-                I = e.bNoMask,
+                I = e.bHasGamePrivacy,
+                C = e.bNoMask,
                 w = Object(r.f)(e, [
                   "className",
                   "onContextMenu",
@@ -5509,7 +5442,7 @@
                   ye.a.personaNameAndStatusLabel,
                   Object(me.b)(i),
                   m && ye.a.compactView,
-                  I && ye.a.NoMask,
+                  C && ye.a.NoMask,
                 ];
               f
                 ? (j = f())
@@ -5623,7 +5556,7 @@
                             "no-drag"
                           ),
                         },
-                        C &&
+                        I &&
                           a.createElement(
                             "div",
                             {
@@ -5653,7 +5586,7 @@
             (t = Object(r.c)([m.a], t))
           );
         })(a.Component),
-        Ie =
+        Ce =
           (Object(m.a)(function (e) {
             var t = e.persona,
               n = e.bParenthesizeNicknames,
@@ -5733,14 +5666,14 @@
                           i.a.createElement(
                             "div",
                             { className: re.AvatarHolder },
-                            i.a.createElement(Ie.c, {
+                            i.a.createElement(Ce.c, {
                               size: "FillArea",
                               className: re.CurrentAvatar,
                               persona: r,
                               animatedAvatar: o.animated_avatar,
                             })
                           ),
-                          i.a.createElement(Ce, {
+                          i.a.createElement(Ie, {
                             persona: r,
                             bIsSelf: !0,
                             eFriendRelationship: 0,
@@ -6007,10 +5940,10 @@
           return e.toString().padStart(2, "0");
         },
         Xe = i.a.lazy(function () {
-          return n.e(72).then(n.bind(null, "yDev"));
+          return n.e(101).then(n.bind(null, "yDev"));
         }),
         Ke = i.a.lazy(function () {
-          return n.e(71).then(n.bind(null, "f4w8"));
+          return n.e(100).then(n.bind(null, "f4w8"));
         }),
         $e = (function (e) {
           function t() {
@@ -6529,7 +6462,7 @@
                   ie.e,
                   null,
                   i.a.createElement(st, { descriptor: a }),
-                  i.a.createElement(C.a, {
+                  i.a.createElement(I.a, {
                     trigger: "repeated",
                     onVisibiltyChange: function (n) {
                       return (
@@ -6654,8 +6587,8 @@
         bt = n.n(ht),
         yt = (n("8j8b"), n("Lvue"), n("6bk4")),
         vt = n.n(yt),
-        Ct = n("++az"),
-        It = n.n(Ct),
+        It = n("++az"),
+        Ct = n.n(It),
         wt = (n("kJAG"), n("sf1Z"), n("Cw7J")),
         Mt = n.n(wt),
         jt = (n("FYLW"), n("TL5o"), n("J8Mo"), n("2y1i"), n("bnhs")),
@@ -6812,7 +6745,7 @@
               i.a.createElement(fe.m, {
                 className: Object(b.a)(Xt.UsePointsSvg, Xt.UsePointsAnim7),
               }),
-              i.a.createElement(Ue.y, {
+              i.a.createElement(Ue.x, {
                 className: Object(b.a)(Xt.UsePointsSvg, Xt.UsePointsAnim8),
               }),
               i.a.createElement(Ue.f, {
@@ -6836,7 +6769,7 @@
               i.a.createElement(fe.m, {
                 className: Object(b.a)(Xt.UsePointsSvg, Xt.UsePointsAnim7),
               }),
-              i.a.createElement(Ue.y, {
+              i.a.createElement(Ue.x, {
                 className: Object(b.a)(Xt.UsePointsSvg, Xt.UsePointsAnim8),
               }),
               i.a.createElement(Ue.f, {
@@ -6860,7 +6793,7 @@
               i.a.createElement(fe.m, {
                 className: Object(b.a)(Xt.UsePointsSvg, Xt.UsePointsAnim7),
               }),
-              i.a.createElement(Ue.y, {
+              i.a.createElement(Ue.x, {
                 className: Object(b.a)(Xt.UsePointsSvg, Xt.UsePointsAnim8),
               }),
               i.a.createElement(Ue.f, {
@@ -6923,7 +6856,7 @@
                   }),
                   i.a.createElement("img", {
                     className: Xt.ItemAvatar,
-                    src: It.a,
+                    src: Ct.a,
                   })
                 ),
                 i.a.createElement("img", {
@@ -6954,7 +6887,7 @@
                 paddingLeft: "xlarge",
                 paddingBottom: "xxlarge",
               },
-              i.a.createElement(Ue.y, { className: Xt.SectionIcons }),
+              i.a.createElement(Ue.x, { className: Xt.SectionIcons }),
               i.a.createElement(
                 u.b,
                 { to: e },
@@ -7780,8 +7713,8 @@
       }
       yn(u.b);
       var vn = yn(u.c),
-        Cn = n("1xRl"),
-        In = n("rKGf"),
+        In = n("1xRl"),
+        Cn = n("rKGf"),
         wn = i.a.createContext({ updateActivePosition: function () {} }),
         Mn = function (e) {
           var t = e.children,
@@ -7875,11 +7808,11 @@
               i.a.createElement(
                 "div",
                 Object(r.a)({}, a, {
-                  className: Object(b.a)(In.ItemContainer, n),
+                  className: Object(b.a)(Cn.ItemContainer, n),
                   ref: p,
                 }),
                 t,
-                i.a.createElement("div", { className: In.Accent, style: _ })
+                i.a.createElement("div", { className: Cn.Accent, style: _ })
               )
             )
           );
@@ -7911,7 +7844,7 @@
             i.a.createElement(
               "div",
               Object(r.a)(
-                { className: Object(b.a)(In.Item, n && In.Active, a), ref: u },
+                { className: Object(b.a)(Cn.Item, n && Cn.Active, a), ref: u },
                 o
               ),
               t
@@ -7946,7 +7879,7 @@
                 },
                 {
                   props: {
-                    iconComponent: Ue.y,
+                    iconComponent: Ue.x,
                     children: Object(g.f)("#ShopNav_ByGame"),
                     to: s.b.LoyaltyByGame(),
                   },
@@ -8030,10 +7963,9 @@
               }),
               e[1].items.push({
                 props: {
-                  iconComponent: Ue.w,
+                  iconComponent: Ue.v,
                   children: Object(g.f)("#ShopNav_ProfileBundlesLink"),
                   to: s.b.LoyaltyProfileBundles(),
-                  iconCallout: Ue.u,
                 },
               })),
             t ||
@@ -8042,13 +7974,12 @@
                   iconComponent: Ue.l,
                   children: Object(g.f)("#ShopNav_ProfileLink_Autumn2020"),
                   to: s.b.LoyaltyProfile(),
-                  iconCallout: Ue.u,
                 },
               }),
             t ||
               e[1].items.push({
                 props: {
-                  iconComponent: Ue.x,
+                  iconComponent: Ue.w,
                   children: Object(g.f)("#ShopNav_ProfileShowcasesLink"),
                   to: { pathname: s.b.LoyaltyProfileCustomizations() },
                 },
@@ -8059,7 +7990,7 @@
                   {
                     external: !0,
                     props: {
-                      iconComponent: Ue.v,
+                      iconComponent: Ue.u,
                       children: Object(g.f)("#RewardsPointsHistoryLink"),
                       href: l.d.STORE_BASE_URL + "pointssummary/",
                     },
@@ -8073,7 +8004,7 @@
           var e = En();
           return i.a.createElement(
             _.a,
-            { padding: "none", className: Cn.PrimaryNav },
+            { padding: "none", className: In.PrimaryNav },
             i.a.createElement(
               _.e,
               { spacing: "none" },
@@ -8084,7 +8015,7 @@
                   t.label &&
                     i.a.createElement(
                       "div",
-                      { className: Cn.NavItem },
+                      { className: In.NavItem },
                       t.label
                     ),
                   t.items.map(function (e) {
@@ -8101,7 +8032,7 @@
                         );
                   }),
                   n < e.length - 1 &&
-                    i.a.createElement("div", { className: Cn.Line })
+                    i.a.createElement("div", { className: In.Line })
                 );
               })
             )
@@ -8127,14 +8058,14 @@
             d,
             Object(r.a)(
               {
-                className: Object(b.a)(Cn.SecondaryNavItem, n),
-                activeClassName: o ? void 0 : Cn.Selected,
+                className: Object(b.a)(In.SecondaryNavItem, n),
+                activeClassName: o ? void 0 : In.Selected,
               },
               l
             ),
-            i.a.createElement(c, { className: Cn.Icon }),
-            i.a.createElement("div", { className: Cn.Label }, a),
-            m && i.a.createElement(m, { className: Cn.Callout })
+            i.a.createElement(c, { className: In.Icon }),
+            i.a.createElement("div", { className: In.Label }, a),
+            m && i.a.createElement(m, { className: In.Callout })
           );
         },
         Bn = function (e) {
@@ -8145,9 +8076,9 @@
             s = t;
           return i.a.createElement(
             "a",
-            Object(r.a)({ className: Object(b.a)(Cn.SecondaryNavItem, n) }, o),
-            i.a.createElement(s, { className: Cn.Icon }),
-            i.a.createElement("div", { className: Cn.Label }, a)
+            Object(r.a)({ className: Object(b.a)(In.SecondaryNavItem, n) }, o),
+            i.a.createElement(s, { className: In.Icon }),
+            i.a.createElement("div", { className: In.Label }, a)
           );
         },
         Dn = function () {
@@ -8159,7 +8090,7 @@
                 jn,
                 {
                   active: !!t && (!e.exact || t.isExact),
-                  className: Cn.ScrollableTabItem,
+                  className: In.ScrollableTabItem,
                 },
                 e.children
               );
@@ -8176,7 +8107,7 @@
                       Object(r.a)({}, o, { key: e.props.href }),
                       i.a.createElement(
                         jn,
-                        { className: Cn.ScrollableTabItem },
+                        { className: In.ScrollableTabItem },
                         e.props.children
                       )
                     )
@@ -8201,7 +8132,7 @@
                 }
               });
             }),
-            i.a.createElement(Mn, { className: Cn.ScrollableTabs }, t)
+            i.a.createElement(Mn, { className: In.ScrollableTabs }, t)
           );
         },
         Pn = n("1Gs6"),
@@ -9383,10 +9314,6 @@
         n.p +
         "images/applications/store/icon_showcase_12.svg?v=valveisgoodatcaching";
     },
-    GFF6: function (e, t, n) {
-      e.exports =
-        n.p + "images/applications/store/romanian.png?v=valveisgoodatcaching";
-    },
     GFoz: function (e, t) {
       e.exports =
         "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAyIiBoZWlnaHQ9Ijc2IiB2aWV3Qm94PSIwIDAgMjAyIDc2IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik01IDBDMi4yMzgyOCAwIDAgMi4yMzg1MyAwIDVWNzFDMCA3My43NjE1IDIuMjM4MjggNzYgNSA3NkgxOTdDMTk5Ljc2MiA3NiAyMDIgNzMuNzYxNSAyMDIgNzFWNUMyMDIgMi4yMzg1MyAxOTkuNzYyIDAgMTk3IDBINVpNMjcgMTguMTQxNEgxOFYxM0g0MC40MzQ2VjE4LjE0MTRIMzJWNTUuODU4Nkg0MC40MzU1VjYxSDMySDI3SDE4VjU1Ljg1ODZIMjdWMTguMTQxNFoiIGZpbGw9InVybCgjcGFpbnQwX2xpbmVhcikiIGZpbGwtb3BhY2l0eT0iMC44NSIvPg0KPGRlZnM+DQo8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MF9saW5lYXIiIHgxPSIxMDEiIHkxPSIwIiB4Mj0iMTAxIiB5Mj0iNzYiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4NCjxzdG9wIHN0b3AtY29sb3I9IndoaXRlIi8+DQo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IndoaXRlIiBzdG9wLW9wYWNpdHk9IjAuNTgiLz4NCjwvbGluZWFyR3JhZGllbnQ+DQo8L2RlZnM+DQo8L3N2Zz4NCg==";
@@ -9689,18 +9616,6 @@
         (e.exports = a),
         (a.id = "JeMz");
     },
-    JgNP: function (e, t, n) {
-      e.exports =
-        n.p + "images/applications/store/tchinese.png?v=valveisgoodatcaching";
-    },
-    KGU5: function (e, t, n) {
-      e.exports =
-        n.p + "images/applications/store/english.png?v=valveisgoodatcaching";
-    },
-    LUpu: function (e, t, n) {
-      e.exports =
-        n.p + "images/applications/store/korean.png?v=valveisgoodatcaching";
-    },
     Lvue: function (e, t, n) {
       e.exports =
         n.p +
@@ -9710,10 +9625,6 @@
       e.exports =
         n.p +
         "images/applications/store/deep_thoughts_anim0000.png?v=valveisgoodatcaching";
-    },
-    MAH9: function (e, t, n) {
-      e.exports =
-        n.p + "images/applications/store/japanese.png?v=valveisgoodatcaching";
     },
     MLaC: function (e, t, n) {
       e.exports = { Pulse: "pulse_Pulse_V5Gbv", pulse: "pulse_pulse_1qxHE" };
@@ -9737,30 +9648,14 @@
         GoldenProfileCost: "goldenprofile_GoldenProfileCost_2td9S",
       };
     },
-    NFas: function (e, t, n) {
-      e.exports =
-        n.p + "images/applications/store/finnish.png?v=valveisgoodatcaching";
-    },
     NTEj: function (e, t) {
       e.exports =
         "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTEiIGhlaWdodD0iMTE4IiB2aWV3Qm94PSIwIDAgOTEgMTE4IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KPHBhdGggZD0iTTEwLjYzNiAwSDAuOTgxNDQ1VjExOEgxMC42MzZWMFoiIGZpbGw9InVybCgjcGFpbnQwX2xpbmVhcikiIGZpbGwtb3BhY2l0eT0iMC44NSIvPg0KPHBhdGggZD0iTTY0Ljk3NSAyOC40ODA0TDcxLjc4MTggMzMuMjU0NVYwSDU0LjYxODJWMzMuMjU0NUw2MS40MjUgMjguNDgwNEM2MS45NDQxIDI4LjExNjIgNjIuNTY0MyAyNy45MjA3IDYzLjIgMjcuOTIwN0M2My44MzU3IDI3LjkyMDcgNjQuNDU1OCAyOC4xMTYyIDY0Ljk3NSAyOC40ODA0WiIgZmlsbD0idXJsKCNwYWludDFfbGluZWFyKSIgZmlsbC1vcGFjaXR5PSIwLjg1Ii8+DQo8cGF0aCBkPSJNOTAuMDE4MiAwSDc3LjE5OTdWMzkuMjYyM0M3Ny4xOTkgMzkuODIzMSA3Ny4wNDQ0IDQwLjM3MjkgNzYuNzUyNSA0MC44NTE4Qzc2LjQ2MDcgNDEuMzMwNyA3Ni4wNDMgNDEuNzIwMSA3NS41NDQ5IDQxLjk3NzZDNzUuMDQ2OSA0Mi4yMzUyIDc0LjQ4NzcgNDIuMzUwOSA3My45Mjg0IDQyLjMxMjFDNzMuMzY5MSA0Mi4yNzMzIDcyLjgzMTEgNDIuMDgxNiA3Mi4zNzM0IDQxLjc1NzhMNjIuNTQxMiAzNC44MDc4TDUyLjcwOSA0MS43NTc4QzUyLjI1MTEgNDIuMDgxNCA1MS43MTMgNDIuMjczIDUxLjE1MzUgNDIuMzExNUM1MC41OTQxIDQyLjM1IDUwLjAzNDkgNDIuMjM0IDQ5LjUzNjkgNDEuOTc2MUM0OS4wMzg5IDQxLjcxODIgNDguNjIxNCA0MS4zMjg1IDQ4LjMyOTggNDAuODQ5M0M0OC4wMzgzIDQwLjM3MDIgNDcuODg0IDM5LjgyMDEgNDcuODgzNyAzOS4yNTkyVjBIMTguMTQ1NVYxMThIOTAuMDE4MlYwWiIgZmlsbD0idXJsKCNwYWludDJfbGluZWFyKSIgZmlsbC1vcGFjaXR5PSIwLjg1Ii8+DQo8ZGVmcz4NCjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQwX2xpbmVhciIgeDE9IjUuODA4NzIiIHkxPSIwIiB4Mj0iNS44MDg3MiIgeTI9IjExOCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPg0KPHN0b3Agc3RvcC1jb2xvcj0id2hpdGUiLz4NCjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0id2hpdGUiIHN0b3Atb3BhY2l0eT0iMC41OCIvPg0KPC9saW5lYXJHcmFkaWVudD4NCjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQxX2xpbmVhciIgeDE9IjYzLjIiIHkxPSIwIiB4Mj0iNjMuMiIgeTI9IjMzLjI1NDUiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4NCjxzdG9wIHN0b3AtY29sb3I9IndoaXRlIi8+DQo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IndoaXRlIiBzdG9wLW9wYWNpdHk9IjAuNTgiLz4NCjwvbGluZWFyR3JhZGllbnQ+DQo8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50Ml9saW5lYXIiIHgxPSI1NC4wODE5IiB5MT0iMCIgeDI9IjU0LjA4MTkiIHkyPSIxMTgiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4NCjxzdG9wIHN0b3AtY29sb3I9IndoaXRlIi8+DQo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IndoaXRlIiBzdG9wLW9wYWNpdHk9IjAuNTgiLz4NCjwvbGluZWFyR3JhZGllbnQ+DQo8L2RlZnM+DQo8L3N2Zz4NCg==";
-    },
-    NkgL: function (e, t, n) {
-      e.exports =
-        n.p + "images/applications/store/dutch.png?v=valveisgoodatcaching";
     },
     O9hZ: function (e, t, n) {
       e.exports =
         n.p +
         "images/applications/store/icon_showcase_9.svg?v=valveisgoodatcaching";
-    },
-    "OI/I": function (e, t, n) {
-      e.exports =
-        n.p + "images/applications/store/turkish.png?v=valveisgoodatcaching";
-    },
-    Opir: function (e, t, n) {
-      e.exports =
-        n.p + "images/applications/store/latam.png?v=valveisgoodatcaching";
     },
     POwH: function (e, t, n) {
       e.exports = {
@@ -10088,10 +9983,6 @@
         fireworkLongY: "chatroomeffects_fireworkLongY_3f3gs",
       };
     },
-    Q0JX: function (e, t, n) {
-      e.exports =
-        n.p + "images/applications/store/swedish.png?v=valveisgoodatcaching";
-    },
     Qiof: function (e, t, n) {
       e.exports =
         n.p +
@@ -10142,10 +10033,6 @@
         Timer: "salerewarditemhero_Timer_3aFQP",
       };
     },
-    RONN: function (e, t, n) {
-      e.exports =
-        n.p + "images/applications/store/greek.png?v=valveisgoodatcaching";
-    },
     RV7a: function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
@@ -10170,7 +10057,7 @@
           return v;
         }),
         n.d(t, "b", function () {
-          return C;
+          return I;
         }),
         n.d(t, "h", function () {
           return w;
@@ -10196,8 +10083,8 @@
             h = e.marginRight,
             y = e.marginBottom,
             v = e.display,
-            C = e.flexDirection,
-            I = e.flexWrap,
+            I = e.flexDirection,
+            C = e.flexWrap,
             w = e.justifyContent,
             M = e.alignItems,
             j = e.flexGrow,
@@ -10247,8 +10134,8 @@
             P = Object(r.a)(
               {
                 display: v,
-                flexDirection: C,
-                flexWrap: I,
+                flexDirection: I,
+                flexWrap: C,
                 justifyContent: w,
                 alignItems: M,
                 flexGrow: j,
@@ -10434,10 +10321,10 @@
           ? "tablet"
           : "mobile";
       }
-      function C(e) {
+      function I(e) {
         return e.children(v());
       }
-      var I = {};
+      var C = {};
       function w(e) {
         var t = i.a.useState(!1),
           n = t[0],
@@ -10446,10 +10333,10 @@
           i.a.useEffect(
             function () {
               var t = !0;
-              I[e]
-                ? I[e].refCount++
-                : (I[e] = { list: window.matchMedia(e), refCount: 1 });
-              var n = I[e].list,
+              C[e]
+                ? C[e].refCount++
+                : (C[e] = { list: window.matchMedia(e), refCount: 1 });
+              var n = C[e].list,
                 a = function () {
                   t && r(n.matches);
                 };
@@ -10459,8 +10346,8 @@
                 function () {
                   (t = !1),
                     n.removeListener(a),
-                    I[e].refCount--,
-                    0 === I[e].refCount && delete I[e];
+                    C[e].refCount--,
+                    0 === C[e].refCount && delete C[e];
                 }
               );
             },
@@ -10567,10 +10454,6 @@
         Footer: "itembox_Footer_beNH0",
         NoBackdropSupportBackdrop: "itembox_NoBackdropSupportBackdrop_2Tay_",
       };
-    },
-    VVzz: function (e, t, n) {
-      e.exports =
-        n.p + "images/applications/store/german.png?v=valveisgoodatcaching";
     },
     Vlb1: function (e, t, n) {
       e.exports = {
@@ -10692,25 +10575,13 @@
         MobilePhoneIcon: "personastatusicons_MobilePhoneIcon_1iRFj",
       };
     },
-    YpUl: function (e, t, n) {
-      e.exports =
-        n.p + "images/applications/store/schinese.png?v=valveisgoodatcaching";
-    },
     YpyZ: function (e, t, n) {
       e.exports = { Discount: "discount_Discount_2dE0f" };
-    },
-    "Z+Nm": function (e, t, n) {
-      e.exports =
-        n.p + "images/applications/store/hungarian.png?v=valveisgoodatcaching";
     },
     aLBk: function (e, t, n) {
       e.exports =
         n.p +
         "images/applications/store/icon_showcase_5.svg?v=valveisgoodatcaching";
-    },
-    atX1: function (e, t, n) {
-      e.exports =
-        n.p + "images/applications/store/french.png?v=valveisgoodatcaching";
     },
     bEwK: function (e, t, n) {
       e.exports =
@@ -10835,7 +10706,7 @@
         n.d(t, "l", function () {
           return d;
         }),
-        n.d(t, "w", function () {
+        n.d(t, "v", function () {
           return p;
         }),
         n.d(t, "c", function () {
@@ -10844,7 +10715,7 @@
         n.d(t, "t", function () {
           return _;
         }),
-        n.d(t, "y", function () {
+        n.d(t, "x", function () {
           return g;
         }),
         n.d(t, "q", function () {
@@ -10860,12 +10731,12 @@
           return v;
         }),
         n.d(t, "d", function () {
-          return C;
-        }),
-        n.d(t, "n", function () {
           return I;
         }),
-        n.d(t, "v", function () {
+        n.d(t, "n", function () {
+          return C;
+        }),
+        n.d(t, "u", function () {
           return w;
         }),
         n.d(t, "o", function () {
@@ -10880,17 +10751,14 @@
         n.d(t, "h", function () {
           return S;
         }),
-        n.d(t, "x", function () {
+        n.d(t, "w", function () {
           return E;
         }),
-        n.d(t, "u", function () {
+        n.d(t, "r", function () {
           return O;
         }),
-        n.d(t, "r", function () {
-          return A;
-        }),
         n.d(t, "a", function () {
-          return B;
+          return A;
         });
       var r = n("mrSG"),
         a = n("q1tI"),
@@ -11287,7 +11155,7 @@
           })
         );
       }
-      function C(e) {
+      function I(e) {
         var t = e.className,
           n = Object(r.f)(e, ["className"]);
         return i.a.createElement(
@@ -11310,7 +11178,7 @@
           })
         );
       }
-      function I(e) {
+      function C(e) {
         var t = e.className;
         Object(r.f)(e, ["className"]);
         return i.a.createElement(
@@ -11540,27 +11408,6 @@
         );
       }
       function O(e) {
-        var t = e.className;
-        Object(r.f)(e, ["className"]);
-        return i.a.createElement(
-          "svg",
-          {
-            className: t,
-            height: 100,
-            width: 100,
-            fill: "currentColor",
-            stroke: "currentColor",
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 69 69",
-          },
-          i.a.createElement("path", {
-            d:
-              "M47.9849 0.487061L62.9734 29.8571L95.5377 35.0362L72.2368 58.367L77.3741 90.9379L47.9849 75.9871L18.5956 90.9379L23.7329 58.367L0.432037 35.0362L32.9963 29.8571L47.9849 0.487061Z",
-          }),
-          "  "
-        );
-      }
-      function A(e) {
         return i.a.createElement(
           "svg",
           Object(r.a)(
@@ -11581,7 +11428,7 @@
           })
         );
       }
-      function B(e) {
+      function A(e) {
         return i.a.createElement(
           "svg",
           Object(r.a)(
@@ -11673,8 +11520,8 @@
           Object(r.a)({ className: Object(m.a)(t, y.Pulse) }, n)
         );
       }
-      var C,
-        I = n("2Ido"),
+      var I,
+        C = n("2Ido"),
         w = n("vN/p"),
         M = n("mw7S"),
         j = {
@@ -12022,8 +11869,8 @@
             b = e.styleOverride,
             y = e.strPriceOverride,
             v = (e.itemLevel, e.purchaseable),
-            C = void 0 === v || v,
-            I = Object(r.f)(e, [
+            I = void 0 === v || v,
+            C = Object(r.f)(e, [
               "appName",
               "appIcon",
               "attributes",
@@ -12048,7 +11895,7 @@
             { className: c.ItemContainer },
             i.a.createElement(
               f.a,
-              Object(r.a)({}, I, {
+              Object(r.a)({}, C, {
                 className: Object(m.a)(g, c.Item, b),
                 style: N,
               }),
@@ -12057,7 +11904,7 @@
                 { className: c.Body, style: M },
                 i.a.createElement("div", { className: c.Attributes }, a),
                 i.a.createElement(V, { src: n, title: t }),
-                !C &&
+                !I &&
                   i.a.createElement(
                     "div",
                     { className: c.BodyTopRight },
@@ -12095,7 +11942,7 @@
                     )
                   )
                 ),
-                C &&
+                I &&
                   i.a.createElement(
                     "div",
                     { className: c.CostRow },
@@ -12145,8 +11992,8 @@
                 "strPriceOverride",
                 "itemLevel",
               ])),
-            C = u,
-            I = { background: (h || j).colors.bodygradient },
+            I = u,
+            C = { background: (h || j).colors.bodygradient },
             w = { background: (h || j).colors.background };
           return i.a.createElement(
             "div",
@@ -12159,7 +12006,7 @@
               }),
               i.a.createElement(
                 f.b,
-                { className: c.Body, style: I },
+                { className: c.Body, style: C },
                 i.a.createElement("div", { className: c.Attributes }, a),
                 i.a.createElement(V, { src: n, title: t }),
                 o
@@ -12177,8 +12024,8 @@
                     i.a.createElement(
                       "div",
                       { className: c.ItemTypeContainer },
-                      C &&
-                        i.a.createElement(C, {
+                      I &&
+                        i.a.createElement(I, {
                           className: c.Icon,
                           style: { fill: "" },
                         }),
@@ -12208,15 +12055,15 @@
           );
         },
         H =
-          (((C = {})[11] = E),
-          (C[4] = O),
-          (C[12] = A),
-          (C[3] = B),
-          (C[13] = x),
-          (C[8] = T),
-          (C[14] = R),
-          (C[15] = L),
-          C),
+          (((I = {})[11] = E),
+          (I[4] = O),
+          (I[12] = A),
+          (I[3] = B),
+          (I[13] = x),
+          (I[8] = T),
+          (I[14] = R),
+          (I[15] = L),
+          I),
         U = Object(o.a)(function (e) {
           var t,
             n = e.className,
@@ -12228,7 +12075,7 @@
               g.a,
               { fallback: null },
               i.a.createElement(
-                I.a,
+                C.a,
                 Object(r.a)({}, a, { className: s, onClick: e.onClick })
               )
             );
@@ -12299,7 +12146,7 @@
                 desc: Object(d.f)("#ProfileShowcases_Upgrade"),
                 attributes: [],
                 className: h,
-                iconComponent: _.x,
+                iconComponent: _.w,
               },
               s
             ))
@@ -12337,7 +12184,7 @@
                   desc: Object(d.f)("#ProfileShowcases_AdditionalSlot"),
                   attributes: [],
                   className: g,
-                  iconComponent: _.x,
+                  iconComponent: _.w,
                 },
                 s
               ))
@@ -12413,17 +12260,9 @@
       e.exports =
         n.p + "images/applications/store/game_tiles.png?v=valveisgoodatcaching";
     },
-    hDJj: function (e, t, n) {
-      e.exports =
-        n.p + "images/applications/store/russian.png?v=valveisgoodatcaching";
-    },
     "hq+U": function (e, t) {
       e.exports =
         "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTE5IiBoZWlnaHQ9IjEzNiIgdmlld0JveD0iMCAwIDExOSAxMzYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQo8cGF0aCBkPSJNNjIuNDA4IDM0LjA4MTdDNjIuNDA4IDI5Ljc2ODUgNTguODkzNiAyNi4yNTQxIDU0LjU4MDQgMjYuMjU0MUgzMy4zMzQxQzMxLjczNjcgMjYuMjU0MSAzMC40NTg3IDI0LjY1NjYgMzAuNzc4MiAyMy4wNTkyQzMwLjc3ODIgMjMuMDU5MiAzNy4zMjc4IDcuMDg0NTIgMzcuMzI3OCA1LjAwNzgxQzM3LjMyNzggMi45MzExIDM2LjUyOTEgMS40OTMzOSAzNC45MzE2IDEuMTczODlDMzMuMzM0MSAwLjg1NDM5OSAyOS44MTk3IDAuMDU1NjY2OCAyOS44MTk3IDAuMDU1NjY2OEMyOC4yMjIzIC0wLjEwNDA4IDI3LjEwNCAwLjA1NTY2NjcgMjYuMzA1MyAwLjg1NDRMMi41MDMwNSAyNC42NTY2QzEuMDY1MzQgMjYuMDk0NCAwLjI2NjYwMiAyOC4wMTEzIDAuMjY2NjAyIDMwLjA4OFY3My44NTg2QzAuMjY2NjAyIDc1LjQ1NjEgMS43MDQzMiA3Ni44OTM4IDMuMzAxNzkgNzYuODkzOEg0My4wNzg3QzQ2LjI3MzYgNzYuODkzOCA0OC41MTAxIDc0LjY1NzMgNTAuMjY3MyA3Mi4xMDE0TDYwLjk3MDMgNTcuODgzOUM2MS42MDkzIDU3LjA4NTIgNjIuNTY3OCA1NS4xNjgyIDYyLjU2NzggNTMuNTcwOFYzNC40MDEyTDYyLjQwOCAzNC4wODE3WiIgZmlsbD0idXJsKCNwYWludDBfbGluZWFyKSIgZmlsbC1vcGFjaXR5PSIwLjg1Ii8+DQo8cGF0aCBkPSJNNTYuMTc3NyAxMDEuOTE4QzU2LjE3NzcgMTA2LjIzMSA1OS42OTIyIDEwOS43NDYgNjQuMDA1MyAxMDkuNzQ2SDg1LjI1MTZDODYuODQ5MSAxMDkuNzQ2IDg4LjEyNzEgMTExLjM0MyA4Ny44MDc2IDExMi45NDFDODcuODA3NiAxMTIuOTQxIDgxLjI1NzkgMTI4LjkxNSA4MS4yNTc5IDEzMC45OTJDODEuMjU3OSAxMzMuMDY5IDgyLjA1NjcgMTM0LjUwNyA4My42NTQxIDEzNC44MjZDODUuMjUxNiAxMzUuMTQ2IDg4Ljc2NiAxMzUuOTQ0IDg4Ljc2NiAxMzUuOTQ0QzkwLjM2MzUgMTM2LjEwNCA5MS40ODE3IDEzNS45NDQgOTIuMjgwNSAxMzUuMTQ2TDExNS45MjMgMTExLjM0M0MxMTcuMzYxIDEwOS45MDYgMTE4LjE1OSAxMDcuOTg5IDExOC4xNTkgMTA1LjkxMlY2Mi4xNDE0QzExOC4xNTkgNjAuNTQzOSAxMTYuNzIyIDU5LjEwNjIgMTE1LjEyNCA1OS4xMDYySDc1LjY2NjhDNzIuNDcxOSA1OS4xMDYyIDcwLjIzNTQgNjEuMzQyNyA2OC40NzgyIDYzLjg5ODZMNTcuNzc1MiA3OC4xMTZDNTcuMTM2MiA3OC45MTQ4IDU2LjE3NzcgODAuODMxNyA1Ni4xNzc3IDgyLjQyOTJWMTAxLjQzOVYxMDEuOTE4WiIgZmlsbD0idXJsKCNwYWludDFfbGluZWFyKSIgZmlsbC1vcGFjaXR5PSIwLjg1Ii8+DQo8ZGVmcz4NCjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQwX2xpbmVhciIgeDE9IjMxLjQxNzIiIHkxPSIwIiB4Mj0iMzEuNDE3MiIgeTI9Ijc2Ljg5MzgiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4NCjxzdG9wIHN0b3AtY29sb3I9IndoaXRlIi8+DQo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IndoaXRlIiBzdG9wLW9wYWNpdHk9IjAuNTgiLz4NCjwvbGluZWFyR3JhZGllbnQ+DQo8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MV9saW5lYXIiIHgxPSI4Ny4xNjg2IiB5MT0iNTkuMTA2MiIgeDI9Ijg3LjE2ODYiIHkyPSIxMzYiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4NCjxzdG9wIHN0b3AtY29sb3I9IndoaXRlIi8+DQo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IndoaXRlIiBzdG9wLW9wYWNpdHk9IjAuNTgiLz4NCjwvbGluZWFyR3JhZGllbnQ+DQo8L2RlZnM+DQo8L3N2Zz4NCg==";
-    },
-    iIFs: function (e, t, n) {
-      e.exports =
-        n.p + "images/applications/store/thai.png?v=valveisgoodatcaching";
     },
     jUCX: function (e, t, n) {
       "use strict";
@@ -12780,10 +12619,6 @@
         );
       })();
     },
-    kE1x: function (e, t, n) {
-      e.exports =
-        n.p + "images/applications/store/czech.png?v=valveisgoodatcaching";
-    },
     kJAG: function (e, t, n) {
       e.exports =
         n.p + "images/applications/store/Sunglasses.gif?v=valveisgoodatcaching";
@@ -12911,10 +12746,6 @@
         }
       }
     },
-    mzlH: function (e, t, n) {
-      e.exports =
-        n.p + "images/applications/store/portuguese.png?v=valveisgoodatcaching";
-    },
     n4wG: function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
@@ -12981,11 +12812,11 @@
                   ),
                 },
                 i.a.createElement(
-                  C,
+                  I,
                   null,
                   n.map(function (t) {
                     return i.a.createElement(
-                      I,
+                      C,
                       Object(r.a)({ key: t.level }, t, {
                         onClick: function (n) {
                           return Object(h.e)(n, e, t.level);
@@ -12998,7 +12829,7 @@
             )
           );
         }),
-        C = function (e) {
+        I = function (e) {
           var t = e.children;
           return i.a.createElement(
             b.c,
@@ -13006,7 +12837,7 @@
             t
           );
         },
-        I = function (e) {
+        C = function (e) {
           var t = e.level,
             n = e.owned,
             a = e.cost,
@@ -13068,7 +12899,7 @@
         return v;
       }),
         n.d(t, "d", function () {
-          return C;
+          return I;
         }),
         n.d(t, "e", function () {
           return j;
@@ -13147,7 +12978,7 @@
             i.a.createElement(u, { scrollElement: a.current })
           );
         },
-        C = function (e) {
+        I = function (e) {
           var t = e.className,
             n = Object(r.f)(e, ["className"]);
           return i.a.createElement(
@@ -13155,7 +12986,7 @@
             Object(r.a)({ className: Object(d.a)(s.StandardBackground, t) }, n)
           );
         },
-        I = function (e) {
+        C = function (e) {
           var t = e.children;
           return i.a.createElement(v, { className: s.ParallaxRoot }, t);
         },
@@ -13199,7 +13030,7 @@
           return (
             t && (r = t),
             i.a.createElement(
-              I,
+              C,
               null,
               i.a.createElement(w, { src: r }, i.a.createElement(M, null, n))
             )
@@ -13216,7 +13047,7 @@
         S = function (e) {
           var t = e.children;
           return i.a.createElement(
-            I,
+            C,
             null,
             i.a.createElement(N, null, i.a.createElement(M, null, t))
           );
@@ -13283,7 +13114,7 @@
         var t = e.children,
           n = e.appid;
         return i.a.createElement(
-          I,
+          C,
           null,
           i.a.createElement(E, { appid: n }, i.a.createElement(M, null, t))
         );
@@ -13340,10 +13171,6 @@
         BundleName: "bundle_BundleName_2PEeM",
         BundleDiscount: "bundle_BundleDiscount_wenYA",
       };
-    },
-    omdw: function (e, t, n) {
-      e.exports =
-        n.p + "images/applications/store/danish.png?v=valveisgoodatcaching";
     },
     oydz: function (e, t, n) {
       e.exports = {
@@ -13503,7 +13330,7 @@
           return _e;
         }),
         n.d(t, "c", function () {
-          return Ie;
+          return Ce;
         });
       var r = n("mrSG"),
         a = n("2lpH"),
@@ -13552,7 +13379,7 @@
                       },
                       appid: { n: 3, br: h.d.readUint32, bw: h.h.writeUint32 },
                       owner: { n: 4, br: h.d.readUint32, bw: h.h.writeUint32 },
-                      attributes: { n: 5, c: C, r: !0, q: !0 },
+                      attributes: { n: 5, c: I, r: !0, q: !0 },
                       used: { n: 6, br: h.d.readBool, bw: h.h.writeBool },
                       owner_origin: {
                         n: 7,
@@ -13608,7 +13435,7 @@
             t
           );
         })(b),
-        C = (function (e) {
+        I = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var r = e.call(this) || this;
@@ -13680,7 +13507,7 @@
             t
           );
         })(b),
-        I = (function (e) {
+        C = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var r = e.call(this) || this;
@@ -15303,7 +15130,7 @@
               (this.m_bLoadedAwardCost = !1),
               (this.m_unAwardPointsTransferred = 0),
               (this.m_bIsSaleActive = !1),
-              (this.m_HeroImageFallbackLoader = new Ce(
+              (this.m_HeroImageFallbackLoader = new Ie(
                 function (e) {
                   return fetch(
                     m.d.STORE_BASE_URL + "points/heroimage?appid=" + e
@@ -15347,7 +15174,7 @@
                   return y.GetCommunityInventory(e.m_transport, t);
                 },
                 function (e) {
-                  var t = f.b.Init(I);
+                  var t = f.b.Init(C);
                   return t.Body().set_filter_appids(e), t;
                 },
                 function (e, t) {
@@ -15423,7 +15250,7 @@
                 t.golden_profiles &&
                   (this.m_goldenProfileConfigs = t.golden_profiles || []),
                 t.can_claim_sale_reward &&
-                  Ie.Get().InitFreeItemReward(t.can_claim_sale_reward),
+                  Ce.Get().InitFreeItemReward(t.can_claim_sale_reward),
                 t.is_sale_active && (this.m_bIsSaleActive = t.is_sale_active),
                 t.free_item_header &&
                   (this.m_strFreeItemHeader = t.free_item_header),
@@ -17111,7 +16938,7 @@
             }),
             (e.prototype.HydrateCustomPages = function () {
               var t = this,
-                a = function (e, n, a) {
+                n = function (e, n, a) {
                   var i = new fe(
                     e,
                     n,
@@ -17122,7 +16949,7 @@
                     i.id
                   );
                 },
-                i = function (n, r, a, i) {
+                a = function (n, r, a, i) {
                   var o = (function (e, n, r) {
                     var a = new _e(e, n, ve({ grouping: 2 }, r));
                     return (
@@ -17152,32 +16979,32 @@
                     },
                   };
                 },
-                l = function (e) {
+                i = function (e) {
                   return t.m_mapPages.set(me(e.params), e);
                 },
-                c = a(
+                l = n(
                   Object(s.f)(
                     "#RewardCluster_Popular_Title",
                     Object(s.f)("#RewardCluster_Popular_RewardItems")
                   ),
                   Object(s.f)("#RewardCluster_Popular_Subtitle")
                 ),
-                d = a(
+                c = n(
                   ie(13, !0),
                   Object(s.f)("#RewardCluster_MiniProfileBackgrounds_Subtitle"),
                   { itemclass: [13] }
                 ),
-                p = a(
+                d = n(
                   Object(s.f)("#ShopPageTitle_Avatar"),
                   Object(s.f)("#RewardCluster_AvatarItems_Subtitle"),
                   { itemclass: [15, 14] }
                 ),
-                f = a(
+                p = n(
                   ie(3, !0),
                   Object(s.f)("#RewardCluster_Backgrounds_Subtitle"),
                   { itemclass: [3] }
                 ),
-                _ = a(
+                f = n(
                   Object(s.f)(
                     "#RewardCluster_Popular_Title",
                     Object(s.f)("#ShopNav_ChatEffectsLink")
@@ -17185,7 +17012,7 @@
                   Object(s.f)("#RewardCluster_ChatEffect_Subtitle"),
                   { itemclass: [12] }
                 ),
-                g = a(
+                _ = n(
                   Object(s.f)(
                     "#RewardCluster_Popular_Title",
                     Object(s.f)("#ShopNav_StickersLink")
@@ -17193,7 +17020,7 @@
                   Object(s.f)("#RewardCluster_Popular_Subtitle"),
                   { itemclass: [11] }
                 ),
-                h = a(
+                g = n(
                   Object(s.f)(
                     "#RewardCluster_Popular_Title",
                     Object(s.f)("#ShopNav_EmoticonsLink")
@@ -17201,17 +17028,17 @@
                   Object(s.f)("#RewardCluster_Popular_Subtitle"),
                   { itemclass: [4] }
                 ),
-                b = a(
+                h = n(
                   Object(s.f)("#RewardCluster_All_Title", ie(15, !0)),
                   Object(s.f)("#RewardCluster_AnimatedAvatar_Subtitle"),
                   { itemclass: [15] }
                 ),
-                y = a(
+                b = n(
                   Object(s.f)("#RewardCluster_All_Title", ie(14, !0)),
                   Object(s.f)("#RewardCluster_AvatarFrames_Subtitle"),
                   { itemclass: [14] }
                 ),
-                v = a(
+                y = n(
                   Object(s.f)(
                     "#RewardCluster_All_Title",
                     Object(s.f)("#RewardItemType_Bundle_plural")
@@ -17219,7 +17046,7 @@
                   Object(s.f)("#ShopPageTitle_ItemBundles_Subtitle2"),
                   { rewardtype: [5, 6] }
                 ),
-                C = a(
+                v = n(
                   Object(s.f)(
                     "#RewardCluster_All_Title",
                     Object(s.f)("#RewardItemType_ProfileBundle_plural")
@@ -17233,31 +17060,31 @@
                 ),
                 I = [
                   {
-                    cluster: c,
+                    cluster: l,
                     type: 1,
                     linkedPage: null,
                     bHideHiddenItemCount: !0,
                   },
                   {
-                    cluster: g,
+                    cluster: _,
                     type: 1,
                     linkedPage: { type: "custom", pageid: "stickers" },
                   },
+                  { cluster: c, type: 1 },
                   { cluster: d, type: 1 },
-                  { cluster: p, type: 1 },
                   {
-                    cluster: f,
+                    cluster: p,
                     type: 1,
                     linkedPage: { type: "custom", pageid: "backgrounds" },
                   },
-                  { cluster: _, type: 1 },
+                  { cluster: f, type: 1 },
                   {
-                    cluster: h,
+                    cluster: g,
                     type: 1,
                     linkedPage: { type: "custom", pageid: "emoticons" },
                   },
                 ],
-                w = a(
+                C = n(
                   Object(s.f)(
                     "#RewardCluster_NewFeatured_Title",
                     Object(s.f)("#RewardCluster_Popular_RewardItems")
@@ -17265,20 +17092,20 @@
                   void 0,
                   { categoryTag: ["summer_2021_sale"], grouping: 2 }
                 );
-              I.unshift({ cluster: w, type: 1 });
-              var M,
-                j = [];
+              I.unshift({ cluster: C, type: 1 });
+              var w,
+                M = [];
               Object(u.a)(m.d.EREALM)
-                ? j.push(i(1526200))
-                : j.push(
-                    i(1124300),
-                    i(680420),
-                    i(1196590),
-                    i(1658760),
-                    i(1091500),
-                    i(1314563)
+                ? M.push(a(1526200))
+                : M.push(
+                    a(1124300),
+                    a(680420),
+                    a(1196590),
+                    a(1658760),
+                    a(1091500),
+                    a(1314563)
                   ),
-                (M = {
+                (w = {
                   type: "banner",
                   title: Object(s.f)("#FeaturedBanner_SummerSale2021_Headline"),
                   description: Object(s.f)(
@@ -17288,97 +17115,96 @@
                     "#FeaturedBanner_SummerSale2021_CallToAction"
                   ),
                   linked_page: ee.b.LoyaltyProfileBundles(),
-                  iconComponent: $.w,
+                  iconComponent: $.v,
                 });
               for (
-                var N = [], S = [I, j], E = 0;
-                E < Math.max(S[0].length, S[1].length);
-                E++
+                var j = [], N = [I, M], S = 0;
+                S < Math.max(N[0].length, N[1].length);
+                S++
               )
-                0 == E && M && N.push(M),
-                  E < S[0].length &&
-                    N.push({ type: "clusterview", view: S[0][E] }),
-                  E < S[1].length &&
-                    N.push({ type: "clusterview", view: S[1][E] });
-              l(new he(oe, N)),
-                l(
+                0 == S && w && j.push(w),
+                  S < N[0].length &&
+                    j.push({ type: "clusterview", view: N[0][S] }),
+                  S < N[1].length &&
+                    j.push({ type: "clusterview", view: N[1][S] });
+              i(new he(oe, j)),
+                i(
                   new be(
                     "stickers",
-                    [{ cluster: g, type: 0 }],
+                    [{ cluster: _, type: 0 }],
                     Object(s.f)("#ShopPageTitle_Stickers")
                   )
                 ),
-                l(
+                i(
                   new be(
                     "emoticons",
-                    [{ cluster: h, type: 0 }],
+                    [{ cluster: g, type: 0 }],
                     Object(s.f)("#ShopPageTitle_Emoticons")
                   )
                 ),
-                l(new be("chateffects", [{ cluster: _, type: 0 }], ie(12, !0)));
-              var O = a(
+                i(new be("chateffects", [{ cluster: f, type: 0 }], ie(12, !0)));
+              var E = n(
                   Object(s.f)(
                     "#RewardCluster_AnimatedProfileBackgrounds_Title"
                   ),
                   Object(s.f)("#RewardCluster_Backgrounds_Subtitle"),
                   { itemclass: [3], queryFilter: [1] }
                 ),
-                A = a(
+                O = n(
                   Object(s.f)(
                     "#RewardCluster_AnimatedMiniProfileBackgrounds_Title"
                   ),
                   Object(s.f)("#RewardCluster_MiniProfileBackgrounds_Subtitle"),
                   { itemclass: [13], queryFilter: [1] }
                 ),
-                B = a(
+                A = n(
                   Object(s.f)("#RewardCluster_StillProfileBackgrounds_Title"),
                   Object(s.f)("#RewardCluster_Backgrounds_Subtitle"),
                   { itemclass: [3], queryFilter: [2] }
                 ),
-                D = a(
+                B = n(
                   Object(s.f)(
                     "#RewardCluster_StillMiniProfileBackgrounds_Title"
                   ),
                   Object(s.f)("#RewardCluster_MiniProfileBackgrounds_Subtitle"),
                   { itemclass: [13], queryFilter: [2] }
                 );
-              l(
+              i(
                 new be(
                   "backgrounds",
                   [
+                    { cluster: E, type: 1 },
                     { cluster: O, type: 1 },
                     { cluster: A, type: 1 },
                     { cluster: B, type: 1 },
-                    { cluster: D, type: 1 },
                   ],
                   Object(s.f)("#ShopPageTitle_Backgrounds")
                 )
               ),
-                l(
+                i(
                   new be(
                     "avatar",
                     [
+                      { cluster: h, type: 1 },
                       { cluster: b, type: 1 },
-                      { cluster: y, type: 1 },
                     ],
                     Object(s.f)("#ShopPageTitle_Avatar")
                   )
                 ),
-                l(
+                i(
                   new be(
                     "itembundles",
-                    [{ cluster: v, type: 0 }],
+                    [{ cluster: y, type: 0 }],
                     Object(s.f)("#ShopPageTitle_ItemBundles"),
                     Object(s.f)("#ShopPageTitle_ItemBundles_Subtitle")
                   )
                 ),
-                l(
+                i(
                   new be(
                     "profilebundles",
-                    [{ cluster: C, type: 0, bHomogeneous: !0 }],
-                    void 0,
-                    Object(s.f)("#ShopPageTitle_ProfileBundles_Subtitle"),
-                    n("1fwC")("./" + m.d.LANGUAGE + ".png")
+                    [{ cluster: v, type: 0, bHomogeneous: !0 }],
+                    Object(s.f)("#ShopPageTitle_ProfileBundles"),
+                    Object(s.f)("#ShopPageTitle_ProfileBundles_Subtitle")
                   )
                 ),
                 this.BIsLoggedIn() &&
@@ -17406,14 +17232,14 @@
                       strImage: K.a,
                       bFullBleedImage: !0,
                     };
-                    N.push({ type: "clusterview", view: r });
+                    j.push({ type: "clusterview", view: r });
                     for (
-                      var a = e.Get().GetSortedGamesWithRewards(),
+                      var i = e.Get().GetSortedGamesWithRewards(),
                         o = 0,
                         l = function (e) {
                           if (
                             -1 !=
-                            N.findIndex(function (n) {
+                            j.findIndex(function (n) {
                               return (
                                 "clusterview" === n.type &&
                                 ((r = n.view.cluster),
@@ -17425,9 +17251,9 @@
                             })
                           )
                             return "continue";
-                          var n = i(e);
+                          var n = a(e);
                           return (
-                            N.splice(1 + 3 * o, 0, {
+                            j.splice(1 + 3 * o, 0, {
                               type: "clusterview",
                               view: n,
                             }),
@@ -17435,7 +17261,7 @@
                           );
                         },
                         c = 0,
-                        m = a;
+                        m = i;
                       c < m.length;
                       c++
                     ) {
@@ -17443,7 +17269,7 @@
                     }
                     t.m_mapPages.set(
                       me({ type: "custom", pageid: oe }),
-                      new he(oe, N)
+                      new he(oe, j)
                     );
                   });
             }),
@@ -17912,7 +17738,7 @@
             })
           : e;
       }
-      var Ce = (function () {
+      var Ie = (function () {
         function e(e, t) {
           (this.m_fnRequest = e), (this.m_fnBuildRequestKey = t), this.Reset();
         }
@@ -17943,7 +17769,7 @@
           e
         );
       })();
-      var Ie = (function () {
+      var Ce = (function () {
         function e() {
           this.m_bCanClaimFreeItem = !1;
         }
@@ -18120,10 +17946,6 @@
         RemoveOnEmpty: "layout_RemoveOnEmpty_1Y8hK",
       };
     },
-    qYHL: function (e, t, n) {
-      e.exports =
-        n.p + "images/applications/store/italian.png?v=valveisgoodatcaching";
-    },
     qf3a: function (e, t, n) {
       e.exports = {
         Shell: "profilebundle_Shell_2hbLI",
@@ -18161,10 +17983,6 @@
         ProfileBundleFooter: "profilebundle_ProfileBundleFooter_2uRyM",
         ProfileBundleName: "profilebundle_ProfileBundleName_12Oue",
       };
-    },
-    rAtD: function (e, t, n) {
-      e.exports =
-        n.p + "images/applications/store/norwegian.png?v=valveisgoodatcaching";
     },
     rKGf: function (e, t, n) {
       e.exports = {
@@ -18217,19 +18035,10 @@
           );
         };
     },
-    "sYE/": function (e, t, n) {
-      e.exports =
-        n.p +
-        "images/applications/store/sc_schinese.png?v=valveisgoodatcaching";
-    },
     sf1Z: function (e, t, n) {
       e.exports =
         n.p +
         "images/applications/store/csgoChat_128_defuse.png?v=valveisgoodatcaching";
-    },
-    soKn: function (e, t, n) {
-      e.exports =
-        n.p + "images/applications/store/brazilian.png?v=valveisgoodatcaching";
     },
     t0PL: function (e, t, n) {
       "use strict";
@@ -18384,10 +18193,10 @@
     "vN/p": function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
-        return C;
+        return I;
       }),
         n.d(t, "b", function () {
-          return I;
+          return C;
         });
       var r = n("mrSG"),
         a = n("q1tI"),
@@ -18407,10 +18216,10 @@
         b = n("reUc"),
         y = n("8Uds");
       var v = i.a.createContext(!1);
-      function C(e) {
+      function I(e) {
         return i.a.createElement(v.Provider, { value: !0 }, e.children);
       }
-      var I = Object(o.a)(function (e) {
+      var C = Object(o.a)(function (e) {
           var t,
             n,
             o,
@@ -18481,7 +18290,7 @@
                 cost: a,
                 attributes: s,
                 appIcon: t,
-                iconComponent: h.w,
+                iconComponent: h.v,
                 desc: o,
                 className: l,
               },
@@ -18651,14 +18460,6 @@
             })
           );
         });
-    },
-    vbhM: function (e, t, n) {
-      e.exports =
-        n.p + "images/applications/store/spanish.png?v=valveisgoodatcaching";
-    },
-    ygOc: function (e, t, n) {
-      e.exports =
-        n.p + "images/applications/store/koreana.png?v=valveisgoodatcaching";
     },
     ywEf: function (e, t, n) {
       e.exports =

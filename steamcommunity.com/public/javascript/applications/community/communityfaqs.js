@@ -42,7 +42,7 @@
       "use strict";
       a.r(t),
         a.d(t, "FAQRoutes", function () {
-          return ft;
+          return St;
         });
       var o,
         i = a("mrSG"),
@@ -7551,29 +7551,667 @@
         O = a("bS9Q"),
         E = a("Lcls"),
         F = a.n(E),
-        R = a("YLyR"),
-        W = a("Ee63"),
+        R = a("2vnA"),
+        W = a("6+2x"),
         N = a.n(W),
-        L = a("WQlG"),
-        H = a.n(L),
-        V = function (e) {
+        L = a("kLLr"),
+        H = a("Qcoi"),
+        V = a("fpVW"),
+        B = a.n(V),
+        j = a("yKSN"),
+        G = a("X2UP"),
+        U = a("X3Ds"),
+        Y = a("P2lf"),
+        Q = a("ZYuD"),
+        X = "title",
+        $ = "content";
+      var K = function (e) {
+          var t = e.draft,
+            a = e.eLanguage;
+          return n.createElement(
+            "div",
+            { className: V.FlexRowContainer },
+            n.createElement(ee, { draft: t, eLanguage: a }),
+            n.createElement(j.b, {
+              strToolTip: Object(z.f)("#FAQEditor_Loc_Import_ttip"),
+              strLabel: Object(z.f)("#EventEditor_Loc_Import_Short"),
+              fnOnImportLocData: function (e, a) {
+                return (function (e, t, a) {
+                  var o = new Set(),
+                    i = t.GetSortedTokenList();
+                  return (
+                    Object(R.G)(function () {
+                      a.forEach(function (a) {
+                        i.forEach(function (o) {
+                          var i = t.GetLocalization(o, a) || "";
+                          if (o === X) {
+                            var s = e.GetDraftTitle(a);
+                            (i || (s && s.length > 0)) && e.SetDraftTitle(a, i);
+                          }
+                          if (o === $) {
+                            var n = e.GetDraftContent(a);
+                            (i || (n && n.length > 0)) &&
+                              e.SetDraftContent(a, i);
+                          }
+                        }),
+                          o.add(a);
+                      });
+                    }),
+                    Array.from(o)
+                  );
+                })(t, e, a);
+              },
+            })
+          );
+        },
+        J = function (e) {
+          var t = e.draft;
+          return n.createElement(
+            "div",
+            { className: V.FlexRowContainer },
+            n.createElement(
+              "div",
+              {
+                className: V.EditPreviewButton,
+                onClick: function (e) {
+                  Object(P.d)(
+                    n.createElement(Z, { direction: "export", draft: t }, " "),
+                    Object(U.m)(e)
+                  );
+                },
+              },
+              Object(z.f)("#EventEditor_Loc_Export_Short")
+            ),
+            n.createElement(
+              "div",
+              {
+                className: V.EditPreviewButton,
+                onClick: function (e) {
+                  Object(P.d)(
+                    n.createElement(Z, { direction: "import", draft: t }, " "),
+                    Object(U.m)(e)
+                  );
+                },
+              },
+              Object(z.f)("#EventEditor_Loc_Import_Short")
+            )
+          );
+        },
+        Z = function (e) {
+          var t = e.closeModal,
+            a = e.direction,
+            o = e.draft,
+            s = n.useState(!1),
+            r = s[0],
+            l = s[1],
+            p = n.useState(new Array()),
+            d = p[0],
+            h = p[1],
+            u =
+              (r || d.length,
+              Object(z.f)(
+                "import" == a
+                  ? "#EventEditor_Loc_CrowdinIntegration_ImportTitle"
+                  : "#EventEditor_Loc_CrowdinIntegration_ExportTitle"
+              )),
+            m = Object(z.f)(
+              "import" == a
+                ? "#EventEditor_Loc_Import_Crowdin_Confirm"
+                : "#EventEditor_Loc_Export_Crowdin_Confirm"
+            ),
+            f =
+              "import" == a
+                ? n.createElement(oe, {
+                    draft: o,
+                    rgAllLanguages: ae,
+                    rgLanguagesSelected: d,
+                    fnSelectLanguages: h,
+                  })
+                : null;
+          return n.createElement(
+            T.d,
+            {
+              className: Q.LanguageListDialog,
+              closeModal: t,
+              strTitle: u,
+              strDescription: m,
+              onOK: function () {
+                return Object(i.b)(void 0, void 0, void 0, function () {
+                  var e;
+                  return Object(i.e)(this, function (t) {
+                    switch (t.label) {
+                      case 0:
+                        l(!0), (t.label = 1);
+                      case 1:
+                        return (
+                          t.trys.push([1, 6, , 7]),
+                          "import" != a
+                            ? [3, 3]
+                            : [
+                                4,
+                                c.a
+                                  .Get()
+                                  .ImportNonEnglishDraftsFromCrowdin(
+                                    o.GetFAQID(),
+                                    d
+                                  ),
+                              ]
+                        );
+                      case 2:
+                        return t.sent(), [3, 5];
+                      case 3:
+                        return [
+                          4,
+                          c.a.Get().ExportEnglishDraftToCrowdin(o.GetFAQID()),
+                        ];
+                      case 4:
+                        t.sent(), (t.label = 5);
+                      case 5:
+                        return [3, 7];
+                      case 6:
+                        return (e = t.sent()), console.error(e), [3, 7];
+                      case 7:
+                        return l(!1), [2];
+                    }
+                  });
+                });
+              },
+              bOKDisabled: r,
+            },
+            r ? n.createElement(q.a, { position: "center" }) : f
+          );
+        },
+        ee = function (e) {
+          var t = e.draft,
+            a = e.eLanguage;
+          return n.createElement(
+            M.a,
+            { toolTipContent: Object(z.f)("#FAQEditor_Loc_Export_ttip") },
+            n.createElement(
+              "div",
+              {
+                className: V.EditPreviewButton,
+                onClick: function (e) {
+                  Object(P.d)(
+                    n.createElement(
+                      T.d,
+                      {
+                        strTitle: Object(z.f)("#EventEditor_Loc_Export"),
+                        bAlertDialog: !0,
+                      },
+                      n.createElement(j.a, {
+                        fnGetLocData: function () {
+                          return (function (e, t) {
+                            for (var a, o, i = new Y.b(), s = 0; s < 30; ++s)
+                              (e.BHasSomeTextForLanguage(s) || 0 == t) &&
+                                (i.SetLocalization(
+                                  X,
+                                  s,
+                                  null !== (a = e.GetDraftTitle(s)) &&
+                                    void 0 !== a
+                                    ? a
+                                    : ""
+                                ),
+                                i.SetLocalization(
+                                  $,
+                                  s,
+                                  null !== (o = e.GetDraftContent(s)) &&
+                                    void 0 !== o
+                                    ? o
+                                    : ""
+                                ));
+                            return i;
+                          })(t, a);
+                        },
+                        bShowXML: !0,
+                        bShowCSV: !0,
+                        strFileNamePrefix: "faq",
+                        lang: a,
+                      })
+                    ),
+                    Object(U.m)(e)
+                  );
+                },
+              },
+              Object(z.f)("#EventEditor_Loc_Export_Short")
+            )
+          );
+        },
+        te = [
+          0,
+          9,
+          8,
+          12,
+          14,
+          21,
+          2,
+          3,
+          20,
+          24,
+          13,
+          17,
+          16,
+          5,
+          6,
+          7,
+          15,
+          23,
+          11,
+          4,
+          19,
+          25,
+          18,
+          1,
+          10,
+          28,
+          26,
+          22,
+          27,
+          29,
+        ],
+        ae = [
+          23,
+          6,
+          7,
+          19,
+          13,
+          14,
+          15,
+          2,
+          1,
+          24,
+          18,
+          3,
+          10,
+          4,
+          16,
+          12,
+          11,
+          22,
+          20,
+          8,
+          5,
+          27,
+          17,
+          9,
+          21,
+          26,
+          28,
+        ],
+        oe = function (e) {
+          var t = e.draft,
+            a = e.rgAllLanguages,
+            o = e.rgLanguagesSelected,
+            i = e.fnSelectLanguages,
+            s = function (e, t) {
+              var a = o.includes(t);
+              if (e && !a) (s = o.slice()).push(t), i(s);
+              else if (!e && a) {
+                var s = o.filter(function (e) {
+                  return e !== t;
+                });
+                i(s);
+              }
+            },
+            r = a
+              .sort(function (e, t) {
+                return te[e] - te[t];
+              })
+              .map(function (e) {
+                return n.createElement(ie, {
+                  key: "langrow" + e + t.GetFAQID(),
+                  draft: t,
+                  eLang: e,
+                  bInitialState: o.includes(e),
+                  fnOnChecked: s,
+                });
+              });
+          return n.createElement(
+            n.Fragment,
+            null,
+            n.createElement(
+              "div",
+              { className: Q.ChecklistHeader },
+              n.createElement(
+                "div",
+                { className: Q.Language },
+                Object(z.f)("#FAQCrowdin_LanguageHeader")
+              ),
+              n.createElement(
+                "div",
+                { className: Q.Timestamp },
+                Object(z.f)("#FAQCrowdin_DraftTimestampHeader")
+              )
+            ),
+            n.createElement(C.e, {
+              classname: Q.CheckAll,
+              label: Object(z.f)("#FAQCrowdin_SelectAllCheckboxes"),
+              onChange: function (e) {
+                i(e ? a.slice() : []);
+              },
+            }),
+            n.createElement(
+              "div",
+              { className: Q.ChecklistRows },
+              null != r
+                ? r
+                : n.createElement(
+                    "div",
+                    null,
+                    Object(z.f)("#FAQCrowdin_NoDraftFound")
+                  )
+            )
+          );
+        },
+        ie = function (e) {
+          var t,
+            a = e.draft,
+            o = e.eLang,
+            i = e.bInitialState,
+            s = e.fnOnChecked,
+            r = a.GetLastSavedDraftVersion(o),
+            l = r
+              ? L.a.InitFromAccountID(Number.parseInt(r.author_account_id))
+              : null,
+            p = Object(H.b)(l),
+            d = (p[0], p[1]),
+            c = r
+              ? Object(z.f)(
+                  "#FAQCrowdin_SavedAtTimeByAuthor",
+                  Object(z.k)(r.timestamp) + " @ " + Object(z.m)(r.timestamp),
+                  null !== (t = null == d ? void 0 : d.persona_name) &&
+                    void 0 !== t
+                    ? t
+                    : r.author_account_id
+                )
+              : Object(z.f)("#FAQCrowdin_NoDraftFound"),
+            u = n.createElement(
+              "div",
+              { className: Q.LanguageCheckboxLabel },
+              n.createElement(
+                "div",
+                { className: Q.Language },
+                Object(z.f)("#Language_" + Object(h.a)(o))
+              ),
+              n.createElement("div", { className: Q.Timestamp }, c)
+            );
+          return n.createElement(C.e, {
+            classname: Q.LanguageCheckbox,
+            label: u,
+            checked: i,
+            onChange: function (e) {
+              return s(e, o);
+            },
+          });
+        };
+      function se(e) {
+        var t = this,
+          a = Object(c.e)(),
+          o = a[0],
+          s = (a[1], n.useState(0)),
+          r = s[0],
+          l = s[1],
+          p = n.useState(!1),
+          d = p[0],
+          u = p[1],
+          m = n.useState(null),
+          f = m[0],
+          g = m[1],
+          y = n.useState(!1),
+          b = y[0],
+          w = y[1],
+          v = n.useState(!1),
+          S = v[0],
+          k = v[1],
+          x = n.useState(null),
+          _ = x[0],
+          I = x[1],
+          A = Object(G.a)("useQAndASession"),
+          P = n.useRef([]);
+        if (_)
+          return n.createElement(T.d, {
+            strTitle: Object(z.f)("#FAQDashboard_CrowdinToolTitle"),
+            strDescription: _,
+            bAlertDialog: !0,
+            bDestructiveWarning: !0,
+            closeModal: e.closeModal,
+          });
+        if (S)
+          return n.createElement(T.d, {
+            strTitle: Object(z.f)("#FAQDashboard_CrowdinToolTitle"),
+            strDescription: Object(z.f)("#FAQDashboard_PublishComplete"),
+            bAlertDialog: !0,
+            closeModal: e.closeModal,
+          });
+        var D = P.current.length > 0,
+          q = Object(z.f)(
+            D
+              ? "#FAQDashboard_PublishUpdatedFAQsButton"
+              : "#FAQDashboard_ImportAllButton"
+          ),
+          M = D
+            ? function () {
+                return Object(i.b)(t, void 0, void 0, function () {
+                  var e, t, a, s, n;
+                  return Object(i.e)(this, function (i) {
+                    switch (i.label) {
+                      case 0:
+                        w(!0), (e = 0), (t = 0), (i.label = 1);
+                      case 1:
+                        return t < P.current.length
+                          ? ((a = o[t]),
+                            (s = P.current[t]).length > 0
+                              ? (l(e),
+                                [
+                                  4,
+                                  c.a.Get().PublishDraftByLanguage(a.faq_id, s),
+                                ])
+                              : [3, 3])
+                          : [3, 4];
+                      case 2:
+                        if (((n = i.sent()), A.token.reason)) return [2];
+                        if (1 != n)
+                          return (
+                            I(Object(z.f)("#FAQDashboard_PublishFailed")), [2]
+                          );
+                        i.label = 3;
+                      case 3:
+                        return t++, [3, 1];
+                      case 4:
+                        return w(!1), k(!0), [2];
+                    }
+                  });
+                });
+              }
+            : function () {
+                return Object(i.b)(t, void 0, void 0, function () {
+                  var e, t, a, s, n, r, p;
+                  return Object(i.e)(this, function (i) {
+                    switch (i.label) {
+                      case 0:
+                        u(!0), (e = 0), (i.label = 1);
+                      case 1:
+                        if (!(e < o.length)) return [3, 7];
+                        l(e),
+                          (t = o[e]),
+                          (a = []),
+                          (s = 0),
+                          (n = ae),
+                          (i.label = 2);
+                      case 2:
+                        return s < n.length
+                          ? ((r = n[s]),
+                            g(r),
+                            [
+                              4,
+                              c.a
+                                .Get()
+                                .ImportNonEnglishDraftsFromCrowdin(
+                                  t.faq_id,
+                                  [r],
+                                  A
+                                ),
+                            ])
+                          : [3, 5];
+                      case 3:
+                        if (((p = i.sent()), A.token.reason)) return [2];
+                        p.length && a.push(p[0]), (i.label = 4);
+                      case 4:
+                        return s++, [3, 2];
+                      case 5:
+                        (P.current[e] = a), (i.label = 6);
+                      case 6:
+                        return e++, [3, 1];
+                      case 7:
+                        return u(!1), [2];
+                    }
+                  });
+                });
+              },
+          O = P.current.filter(function (e) {
+            return e.length > 0;
+          }).length,
+          E = (100 * (r + 0.5)) / (d ? o.length : O),
+          F = (d ? Object(h.a)(f) + " for " : "") + o[r].internal_name;
+        return n.createElement(
+          T.e,
+          Object(i.a)({}, e, {
+            onCancel: function () {
+              return A.cancel("CrowdinImportDialog cancelled");
+            },
+          }),
+          n.createElement(
+            C.l,
+            null,
+            Object(z.f)("#FAQDashboard_CrowdinToolTitle")
+          ),
+          n.createElement(
+            C.b,
+            null,
+            n.createElement(
+              C.c,
+              null,
+              Object(z.f)(
+                "#FAQDashboard_CrowdinToolInstructionsWithCount",
+                o.length
+              ),
+              n.createElement(
+                "div",
+                { className: Q.Warning },
+                Object(z.f)("#FAQDashboard_CrowdinToolWarning")
+              )
+            ),
+            n.createElement(
+              C.c,
+              null,
+              n.createElement(C.d, { onClick: M, disabled: d || b }, q),
+              (d || b) &&
+                n.createElement(ne, { nProgressPct: E, strCurrentLabel: F }),
+              P.current.length > 0 &&
+                n.createElement(re, { rgUpdatedLanguagesForAllFAQs: P.current })
+            )
+          )
+        );
+      }
+      function ne(e) {
+        var t = e.nProgressPct,
+          a = e.strCurrentLabel;
+        return n.createElement(
+          "div",
+          null,
+          n.createElement(
+            "div",
+            { className: Q.ImportProgressBar },
+            n.createElement("div", {
+              className: Q.ProgressMarker,
+              style: { width: t + "%" },
+            })
+          ),
+          n.createElement(
+            "div",
+            { className: Q.CurrentFAQ },
+            Object(z.f)("#FAQDashboard_CrowdinToolProgress", a)
+          )
+        );
+      }
+      function re(e) {
+        var t = e.rgUpdatedLanguagesForAllFAQs,
+          a = Object(c.e)(),
+          o = a[0];
+        a[1];
+        return n.createElement(
+          "div",
+          { className: Q.ImportResults },
+          n.createElement(
+            "div",
+            { className: Q.ImportResultLabel },
+            Object(z.f)("#FAQDashboard_CrowdinToolResultsLabel")
+          ),
+          t.map(function (e, t) {
+            var a = o[t],
+              i =
+                0 == e.length
+                  ? Object(z.f)("#FAQDashboard_NoLanguagesUpdated")
+                  : e
+                      .map(function (e) {
+                        return Object(h.b)(e);
+                      })
+                      .join(",");
+            return n.createElement(
+              "div",
+              { key: a.faq_id },
+              n.createElement(
+                "div",
+                { className: Q.ImportResult },
+                n.createElement(
+                  M.a,
+                  {
+                    toolTipContent: a.internal_name,
+                    strTooltipClassname: N.a.HoverAboveModal,
+                    nAllowOffscreenPx: 4e4,
+                    className: Q.UrlCode,
+                  },
+                  a.url_code + ": "
+                ),
+                n.createElement(
+                  M.a,
+                  {
+                    toolTipContent: i,
+                    strTooltipClassname: N.a.HoverAboveModal,
+                    nAllowOffscreenPx: 4e4,
+                    direction: "left",
+                    className: Q.LanguageList,
+                  },
+                  i
+                )
+              )
+            );
+          })
+        );
+      }
+      var le = a("YLyR"),
+        pe = a("Ee63"),
+        de = a.n(pe),
+        he = a("WQlG"),
+        ce = a.n(he),
+        ue = function (e) {
           var t = e.rtTimestamp,
             a = e.bShowAsWarning;
           if (!t)
             return r.a.createElement(
               "div",
-              { className: H.a.Never },
+              { className: ce.a.Never },
               Object(z.f)("#FAQDashboard_TimeNever")
             );
           var o = Date.now() / 1e3 - t,
             i = o < 86400 ? Object(z.q)(o, !1, !0) : Object(z.o)(t);
           return r.a.createElement(
-            R.g,
-            { className: a && H.a.Warning, rtFullDate: t, stylesmodule: N.a },
+            le.g,
+            { className: a && ce.a.Warning, rtFullDate: t, stylesmodule: de.a },
             i
           );
         },
-        B = Object(s.a)(function (e) {
+        me = Object(s.a)(function (e) {
           var t = Object(c.e)(),
             a = t[0],
             o = t[1],
@@ -7633,8 +8271,8 @@
               r.a.createElement(
                 "div",
                 { className: F.a.FAQDashboard },
-                r.a.createElement(j, null),
-                r.a.createElement(U, {
+                r.a.createElement(fe, null),
+                r.a.createElement(ye, {
                   eCurrentSortColumn: s,
                   SetSortColumn: l,
                 }),
@@ -7645,7 +8283,7 @@
                     Object(z.f)("#FAQDashboard_Empty")
                   ),
                 p.map(function (e) {
-                  return r.a.createElement($, { key: e[0], rgColumns: e });
+                  return r.a.createElement(Se, { key: e[0], rgColumns: e });
                 }),
                 !o &&
                   r.a.createElement(q.a, { position: "center", size: "xlarge" })
@@ -7653,12 +8291,19 @@
             )
           );
         }),
-        j = function (e) {
+        fe = function (e) {
           var t = r.a.useCallback(function () {
-            return Object(P.b)(r.a.createElement(G, null), window, {
-              strTitle: Object(z.f)("#FAQDashboard_CreateFAQButton"),
-            });
-          }, []);
+              return Object(P.b)(r.a.createElement(ge, null), window, {
+                strTitle: Object(z.f)("#FAQDashboard_CreateFAQButton"),
+              });
+            }, []),
+            a = r.a.useCallback(function () {
+              return Object(P.b)(
+                r.a.createElement(se, { bDisableBackgroundDismiss: !0 }),
+                window,
+                { strTitle: Object(z.f)("#FAQDashboard_CrowdinToolTitle") }
+              );
+            }, []);
           return r.a.createElement(
             "div",
             { className: F.a.DashboardHeader },
@@ -7669,7 +8314,12 @@
             ),
             r.a.createElement(
               "div",
-              { className: F.a.DashboardCreateFAQButtonCtn },
+              { className: F.a.DashboardHeaderButtonCtn },
+              r.a.createElement(
+                C.d,
+                { onClick: a },
+                Object(z.f)("#FAQDashboard_CrowdinToolButton")
+              ),
               r.a.createElement(
                 C.r,
                 { onClick: t },
@@ -7678,7 +8328,7 @@
             )
           );
         },
-        G = function (e) {
+        ge = function (e) {
           var t = r.a.useState(""),
             a = t[0],
             o = t[1];
@@ -7721,12 +8371,12 @@
             )
           );
         },
-        U = function (e) {
+        ye = function (e) {
           return r.a.createElement(
             "div",
             { className: F.a.DashboardListHeaderRow },
             r.a.createElement(
-              Y,
+              be,
               Object(i.a)(
                 {
                   strLabelLocToken: "#FAQDashboard_NameColumn",
@@ -7737,7 +8387,7 @@
               )
             ),
             r.a.createElement(
-              Y,
+              be,
               Object(i.a)(
                 {
                   strLabelLocToken: "#FAQDashboard_DraftTimetampColumn",
@@ -7747,7 +8397,7 @@
               )
             ),
             r.a.createElement(
-              Y,
+              be,
               Object(i.a)(
                 {
                   strLabelLocToken: "#FAQDashboard_UpdatedLanguagesColumn",
@@ -7757,7 +8407,7 @@
               )
             ),
             r.a.createElement(
-              Y,
+              be,
               Object(i.a)(
                 {
                   strLabelLocToken: "#FAQDashboard_StaleLanguagesColumn",
@@ -7767,7 +8417,7 @@
               )
             ),
             r.a.createElement(
-              Y,
+              be,
               Object(i.a)(
                 {
                   strLabelLocToken: "#FAQDashboard_PublishedLanguagesColumn",
@@ -7777,7 +8427,7 @@
               )
             ),
             r.a.createElement(
-              Y,
+              be,
               Object(i.a)(
                 {
                   strLabelLocToken: "#FAQDashboard_NeedPublishColumn",
@@ -7787,7 +8437,7 @@
               )
             ),
             r.a.createElement(
-              Y,
+              be,
               Object(i.a)(
                 {
                   strLabelLocToken: "#FAQDashboard_VisibilityColumn",
@@ -7797,7 +8447,7 @@
               )
             ),
             r.a.createElement(
-              Y,
+              be,
               Object(i.a)(
                 {
                   strLabelLocToken: "#FAQDashboard_SteamChinaVisibilityColumn",
@@ -7808,7 +8458,7 @@
             )
           );
         },
-        Y = function (e) {
+        be = function (e) {
           var t = e.strLabelLocToken,
             a = e.bIsNameColumn,
             o = e.eThisColumn,
@@ -7838,7 +8488,7 @@
             )
           );
         },
-        Q = function (e) {
+        we = function (e) {
           var t = e.nCount,
             a = e.nTotal,
             o = e.nGoal;
@@ -7848,7 +8498,7 @@
             t + " / " + a
           );
         },
-        X = function (e) {
+        ve = function (e) {
           var t = e.bIsVisible;
           return r.a.createElement(
             "div",
@@ -7856,7 +8506,7 @@
             Object(z.f)(t ? "#FAQDashboard_Visible" : "#FAQDashboard_Invisible")
           );
         },
-        $ = function (e) {
+        Se = function (e) {
           var t = e.rgColumns,
             a = t[0],
             i = t[1],
@@ -7884,41 +8534,41 @@
             r.a.createElement(
               "div",
               { className: Object(b.a)(F.a.EntryColumn, F.a.DataCol) },
-              r.a.createElement(V, { rtTimestamp: s })
+              r.a.createElement(ue, { rtTimestamp: s })
             ),
             r.a.createElement(
               "div",
               { className: Object(b.a)(F.a.EntryColumn, F.a.DataCol) },
-              r.a.createElement(Q, { nCount: n, nTotal: m, nGoal: m })
+              r.a.createElement(we, { nCount: n, nTotal: m, nGoal: m })
             ),
             r.a.createElement(
               "div",
               { className: Object(b.a)(F.a.EntryColumn, F.a.DataCol) },
-              r.a.createElement(Q, { nCount: l, nTotal: m, nGoal: 0 })
+              r.a.createElement(we, { nCount: l, nTotal: m, nGoal: 0 })
             ),
             r.a.createElement(
               "div",
               { className: Object(b.a)(F.a.EntryColumn, F.a.DataCol) },
-              r.a.createElement(Q, { nCount: p, nTotal: u, nGoal: u })
+              r.a.createElement(we, { nCount: p, nTotal: u, nGoal: u })
             ),
             r.a.createElement(
               "div",
               { className: Object(b.a)(F.a.EntryColumn, F.a.DataCol) },
-              r.a.createElement(Q, { nCount: d, nTotal: u, nGoal: 0 })
+              r.a.createElement(we, { nCount: d, nTotal: u, nGoal: 0 })
             ),
             r.a.createElement(
               "div",
               { className: Object(b.a)(F.a.EntryColumn, F.a.DataCol) },
-              r.a.createElement(X, { bIsVisible: h })
+              r.a.createElement(ve, { bIsVisible: h })
             ),
             r.a.createElement(
               "div",
               { className: Object(b.a)(F.a.EntryColumn, F.a.DataCol) },
-              r.a.createElement(X, { bIsVisible: c })
+              r.a.createElement(ve, { bIsVisible: c })
             )
           );
         },
-        K = function (e) {
+        ke = function (e) {
           return n.createElement(u.a, {
             message: function (e) {
               var t,
@@ -7936,40 +8586,36 @@
                     ? void 0
                     : t.length) > 0
                 ) ||
-                (e.pathname != ft.DashboardFAQ(f.b.VANITY_ID) &&
+                (e.pathname != St.DashboardFAQ(f.b.VANITY_ID) &&
                   !(null === (a = e.pathname) || void 0 === a
                     ? void 0
                     : a.startsWith(
-                        ft.ViewFAQ(f.b.VANITY_ID, "").slice(0, -1)
+                        St.ViewFAQ(f.b.VANITY_ID, "").slice(0, -1)
                       ))) ||
                 Object(z.f)("#EventEditor_UnsavedChanges")
               );
             },
           });
         },
-        J = a("Yamg"),
-        Z = a("kLLr"),
-        ee = a("I/R6"),
-        te = a("4P4B"),
-        ae = a("IjL/"),
-        oe = a("fpVW"),
-        ie = a.n(oe),
-        se = a("NrWE"),
-        ne = a("BXmN"),
-        re = a.n(ne),
-        le = a("X3Ds"),
-        pe = function (e) {
+        xe = a("Yamg"),
+        _e = a("I/R6"),
+        Ie = a("4P4B"),
+        Ae = a("IjL/"),
+        Ce = a("NrWE"),
+        Te = a("BXmN"),
+        Pe = a.n(Te),
+        De = function (e) {
           return r.a.createElement(
             M.a,
             { toolTipContent: Object(z.f)("#FAQEditor_DeleteAction_ttip") },
             r.a.createElement(
               "div",
               {
-                className: Object(b.a)(oe.EditPreviewButton, oe.Delete),
+                className: Object(b.a)(V.EditPreviewButton, V.Delete),
                 onClick: function (t) {
                   Object(P.d)(
-                    r.a.createElement(de, { draft: e.draft }),
-                    Object(le.m)(t)
+                    r.a.createElement(qe, { draft: e.draft }),
+                    Object(U.m)(t)
                   );
                 },
               },
@@ -7977,7 +8623,7 @@
             )
           );
         },
-        de = function (e) {
+        qe = function (e) {
           var t = e.draft,
             a = function () {
               return e.closeModal && e.closeModal();
@@ -8011,7 +8657,7 @@
                   )
                 )),
             r.a.createElement(
-              ae.a,
+              Ae.a,
               null,
               r.a.createElement(
                 T.h,
@@ -8078,393 +8724,7 @@
             )
           );
         },
-        he = a("2vnA"),
-        ce = a("Qcoi"),
-        ue = a("yKSN"),
-        me = a("P2lf"),
-        fe = a("ZYuD"),
-        ge = "title",
-        ye = "content";
-      var be = function (e) {
-          var t = e.draft,
-            a = e.eLanguage;
-          return n.createElement(
-            "div",
-            { className: oe.FlexRowContainer },
-            n.createElement(Se, { draft: t, eLanguage: a }),
-            n.createElement(ue.b, {
-              strToolTip: Object(z.f)("#FAQEditor_Loc_Import_ttip"),
-              strLabel: Object(z.f)("#EventEditor_Loc_Import_Short"),
-              fnOnImportLocData: function (e, a) {
-                return (function (e, t, a) {
-                  var o = new Set(),
-                    i = t.GetSortedTokenList();
-                  return (
-                    Object(he.G)(function () {
-                      a.forEach(function (a) {
-                        i.forEach(function (o) {
-                          var i = t.GetLocalization(o, a) || "";
-                          if (o === ge) {
-                            var s = e.GetDraftTitle(a);
-                            (i || (s && s.length > 0)) && e.SetDraftTitle(a, i);
-                          }
-                          if (o === ye) {
-                            var n = e.GetDraftContent(a);
-                            (i || (n && n.length > 0)) &&
-                              e.SetDraftContent(a, i);
-                          }
-                        }),
-                          o.add(a);
-                      });
-                    }),
-                    Array.from(o)
-                  );
-                })(t, e, a);
-              },
-            })
-          );
-        },
-        we = function (e) {
-          var t = e.draft;
-          return n.createElement(
-            "div",
-            { className: oe.FlexRowContainer },
-            n.createElement(
-              "div",
-              {
-                className: oe.EditPreviewButton,
-                onClick: function (e) {
-                  Object(P.d)(
-                    n.createElement(ve, { direction: "export", draft: t }, " "),
-                    Object(le.m)(e)
-                  );
-                },
-              },
-              Object(z.f)("#EventEditor_Loc_Export_Short")
-            ),
-            n.createElement(
-              "div",
-              {
-                className: oe.EditPreviewButton,
-                onClick: function (e) {
-                  Object(P.d)(
-                    n.createElement(ve, { direction: "import", draft: t }, " "),
-                    Object(le.m)(e)
-                  );
-                },
-              },
-              Object(z.f)("#EventEditor_Loc_Import_Short")
-            )
-          );
-        },
-        ve = function (e) {
-          var t = e.closeModal,
-            a = e.direction,
-            o = e.draft,
-            s = n.useState(!1),
-            r = s[0],
-            l = s[1],
-            p = n.useState(new Array()),
-            d = p[0],
-            h = p[1],
-            u =
-              (r || d.length,
-              Object(z.f)(
-                "import" == a
-                  ? "#EventEditor_Loc_CrowdinIntegration_ImportTitle"
-                  : "#EventEditor_Loc_CrowdinIntegration_ExportTitle"
-              )),
-            m = Object(z.f)(
-              "import" == a
-                ? "#EventEditor_Loc_Import_Crowdin_Confirm"
-                : "#EventEditor_Loc_Export_Crowdin_Confirm"
-            ),
-            f =
-              "import" == a
-                ? n.createElement(_e, {
-                    draft: o,
-                    rgAllLanguages: xe,
-                    rgLanguagesSelected: d,
-                    fnSelectLanguages: h,
-                  })
-                : null;
-          return n.createElement(
-            T.d,
-            {
-              className: fe.LanguageListDialog,
-              closeModal: t,
-              strTitle: u,
-              strDescription: m,
-              onOK: function () {
-                return Object(i.b)(void 0, void 0, void 0, function () {
-                  var e;
-                  return Object(i.e)(this, function (t) {
-                    switch (t.label) {
-                      case 0:
-                        l(!0), (t.label = 1);
-                      case 1:
-                        return (
-                          t.trys.push([1, 6, , 7]),
-                          "import" != a
-                            ? [3, 3]
-                            : [
-                                4,
-                                c.a
-                                  .Get()
-                                  .ImportNonEnglishDraftsFromCrowdin(
-                                    o.GetFAQID(),
-                                    d
-                                  ),
-                              ]
-                        );
-                      case 2:
-                        return t.sent(), [3, 5];
-                      case 3:
-                        return [
-                          4,
-                          c.a.Get().ExportEnglishDraftToCrowdin(o.GetFAQID()),
-                        ];
-                      case 4:
-                        t.sent(), (t.label = 5);
-                      case 5:
-                        return [3, 7];
-                      case 6:
-                        return (e = t.sent()), console.error(e), [3, 7];
-                      case 7:
-                        return l(!1), [2];
-                    }
-                  });
-                });
-              },
-              bOKDisabled: r,
-            },
-            r ? n.createElement(q.a, { position: "center" }) : f
-          );
-        },
-        Se = function (e) {
-          var t = e.draft,
-            a = e.eLanguage;
-          return n.createElement(
-            M.a,
-            { toolTipContent: Object(z.f)("#FAQEditor_Loc_Export_ttip") },
-            n.createElement(
-              "div",
-              {
-                className: oe.EditPreviewButton,
-                onClick: function (e) {
-                  Object(P.d)(
-                    n.createElement(
-                      T.d,
-                      {
-                        strTitle: Object(z.f)("#EventEditor_Loc_Export"),
-                        bAlertDialog: !0,
-                      },
-                      n.createElement(ue.a, {
-                        fnGetLocData: function () {
-                          return (function (e, t) {
-                            for (var a, o, i = new me.b(), s = 0; s < 30; ++s)
-                              (e.BHasSomeTextForLanguage(s) || 0 == t) &&
-                                (i.SetLocalization(
-                                  ge,
-                                  s,
-                                  null !== (a = e.GetDraftTitle(s)) &&
-                                    void 0 !== a
-                                    ? a
-                                    : ""
-                                ),
-                                i.SetLocalization(
-                                  ye,
-                                  s,
-                                  null !== (o = e.GetDraftContent(s)) &&
-                                    void 0 !== o
-                                    ? o
-                                    : ""
-                                ));
-                            return i;
-                          })(t, a);
-                        },
-                        bShowXML: !0,
-                        bShowCSV: !0,
-                        strFileNamePrefix: "faq",
-                        lang: a,
-                      })
-                    ),
-                    Object(le.m)(e)
-                  );
-                },
-              },
-              Object(z.f)("#EventEditor_Loc_Export_Short")
-            )
-          );
-        },
-        ke = [
-          0,
-          9,
-          8,
-          12,
-          14,
-          21,
-          2,
-          3,
-          20,
-          24,
-          13,
-          17,
-          16,
-          5,
-          6,
-          7,
-          15,
-          23,
-          11,
-          4,
-          19,
-          25,
-          18,
-          1,
-          10,
-          28,
-          26,
-          22,
-          27,
-          29,
-        ],
-        xe = [
-          23,
-          6,
-          7,
-          19,
-          13,
-          14,
-          15,
-          2,
-          1,
-          24,
-          18,
-          3,
-          10,
-          4,
-          16,
-          12,
-          11,
-          22,
-          20,
-          8,
-          5,
-          27,
-          17,
-          9,
-          21,
-          26,
-          28,
-        ],
-        _e = function (e) {
-          var t = e.draft,
-            a = e.rgAllLanguages,
-            o = e.rgLanguagesSelected,
-            i = e.fnSelectLanguages,
-            s = function (e, t) {
-              var a = o.includes(t);
-              if (e && !a) (s = o.slice()).push(t), i(s);
-              else if (!e && a) {
-                var s = o.filter(function (e) {
-                  return e !== t;
-                });
-                i(s);
-              }
-            },
-            r = a
-              .sort(function (e, t) {
-                return ke[e] - ke[t];
-              })
-              .map(function (e) {
-                return n.createElement(Ie, {
-                  key: "langrow" + e + t.GetFAQID(),
-                  draft: t,
-                  eLang: e,
-                  bInitialState: o.includes(e),
-                  fnOnChecked: s,
-                });
-              });
-          return n.createElement(
-            n.Fragment,
-            null,
-            n.createElement(
-              "div",
-              { className: fe.ChecklistHeader },
-              n.createElement(
-                "div",
-                { className: fe.Language },
-                Object(z.f)("#FAQCrowdin_LanguageHeader")
-              ),
-              n.createElement(
-                "div",
-                { className: fe.Timestamp },
-                Object(z.f)("#FAQCrowdin_DraftTimestampHeader")
-              )
-            ),
-            n.createElement(C.e, {
-              classname: fe.CheckAll,
-              label: Object(z.f)("#FAQCrowdin_SelectAllCheckboxes"),
-              onChange: function (e) {
-                i(e ? a.slice() : []);
-              },
-            }),
-            n.createElement(
-              "div",
-              { className: fe.ChecklistRows },
-              null != r
-                ? r
-                : n.createElement(
-                    "div",
-                    null,
-                    Object(z.f)("#FAQCrowdin_NoDraftFound")
-                  )
-            )
-          );
-        },
-        Ie = function (e) {
-          var t,
-            a = e.draft,
-            o = e.eLang,
-            i = e.bInitialState,
-            s = e.fnOnChecked,
-            r = a.GetLastSavedDraftVersion(o),
-            l = r
-              ? Z.a.InitFromAccountID(Number.parseInt(r.author_account_id))
-              : null,
-            p = Object(ce.b)(l),
-            d = (p[0], p[1]),
-            c = r
-              ? Object(z.f)(
-                  "#FAQCrowdin_SavedAtTimeByAuthor",
-                  Object(z.k)(r.timestamp) + " @ " + Object(z.m)(r.timestamp),
-                  null !== (t = null == d ? void 0 : d.persona_name) &&
-                    void 0 !== t
-                    ? t
-                    : r.author_account_id
-                )
-              : Object(z.f)("#FAQCrowdin_NoDraftFound"),
-            u = n.createElement(
-              "div",
-              { className: fe.LanguageCheckboxLabel },
-              n.createElement(
-                "div",
-                { className: fe.Language },
-                Object(z.f)("#Language_" + Object(h.a)(o))
-              ),
-              n.createElement("div", { className: fe.Timestamp }, c)
-            );
-          return n.createElement(C.e, {
-            classname: fe.LanguageCheckbox,
-            label: u,
-            checked: i,
-            onChange: function (e) {
-              return s(e, o);
-            },
-          });
-        },
-        Ae = Object(s.a)(function (e) {
+        Me = Object(s.a)(function (e) {
           var t = e.draft,
             a = e.bDisabled,
             o = t.BNeedsSaving();
@@ -8478,7 +8738,7 @@
             r.a.createElement(
               "div",
               {
-                className: Object(b.a)(oe.EditPreviewButton, a && oe.Disabled),
+                className: Object(b.a)(V.EditPreviewButton, a && V.Disabled),
                 onClick: function (t) {
                   a ||
                     Object(P.d)(
@@ -8488,8 +8748,8 @@
                               "#FAQPublish_SaveRequire_ttip"
                             ),
                           })
-                        : r.a.createElement(Ce, { draft: e.draft }),
-                      Object(le.m)(t)
+                        : r.a.createElement(ze, { draft: e.draft }),
+                      Object(U.m)(t)
                     );
                 },
               },
@@ -8497,7 +8757,7 @@
             )
           );
         }),
-        Ce = function (e) {
+        ze = function (e) {
           var t,
             a = e.draft,
             o = function () {
@@ -8566,7 +8826,7 @@
                   Object(z.f)("#FAQPublish_Desc2")
                 ),
                 r.a.createElement("br", null),
-                r.a.createElement(_e, {
+                r.a.createElement(oe, {
                   draft: a,
                   rgAllLanguages: _,
                   rgLanguagesSelected: S,
@@ -8586,14 +8846,14 @@
               string: Object(z.f)("#FAQPublish_PublishWait"),
             });
           return r.a.createElement(
-            ae.a,
+            Ae.a,
             null,
             r.a.createElement(
               T.h,
               { onEscKeypress: o },
               r.a.createElement(
                 C.f,
-                { className: fe.LanguageListDialog },
+                { className: Q.LanguageListDialog },
                 r.a.createElement(
                   C.l,
                   null,
@@ -8644,18 +8904,18 @@
             )
           );
         },
-        Te = function (e) {
+        Oe = function (e) {
           return r.a.createElement(
             M.a,
             { toolTipContent: Object(z.f)("#FAQEditor_ChangeVisible_ttip") },
             r.a.createElement(
               "div",
               {
-                className: oe.EditPreviewButton,
+                className: V.EditPreviewButton,
                 onClick: function (t) {
                   Object(P.d)(
-                    r.a.createElement(Pe, { draft: e.draft }),
-                    Object(le.m)(t)
+                    r.a.createElement(Ee, { draft: e.draft }),
+                    Object(U.m)(t)
                   );
                 },
               },
@@ -8663,7 +8923,7 @@
             )
           );
         },
-        Pe = function (e) {
+        Ee = function (e) {
           var t = e.draft,
             a = function () {
               return e.closeModal && e.closeModal();
@@ -8732,7 +8992,7 @@
                   )
                 )),
             r.a.createElement(
-              ae.a,
+              Ae.a,
               null,
               r.a.createElement(
                 T.h,
@@ -8791,8 +9051,8 @@
             )
           );
         },
-        De = a("ggIn"),
-        qe = Object(s.a)(function (e) {
+        Fe = a("ggIn"),
+        Re = Object(s.a)(function (e) {
           var t,
             a,
             o,
@@ -8829,124 +9089,124 @@
                   void 0 === i
                     ? void 0
                     : i.slice().sort(function (e, t) {
-                        return ke[e.language] - ke[t.language];
+                        return te[e.language] - te[t.language];
                       })) || void 0 === s
                 ? void 0
                 : s.map(function (e) {
-                    return r.a.createElement(Me, {
+                    return r.a.createElement(We, {
                       key: e.language,
                       info: e,
                       rtEnglishUpdateTime: u,
                     });
                   });
           return r.a.createElement(
-            ae.a,
+            Ae.a,
             null,
             r.a.createElement(
               "div",
-              { className: De.LeftMenu },
+              { className: Fe.LeftMenu },
               r.a.createElement(
                 "div",
-                { className: De.Section },
+                { className: Fe.Section },
                 r.a.createElement(
                   "div",
-                  { className: De.SectionTitle },
+                  { className: Fe.SectionTitle },
                   Object(z.f)("#FAQDashboard_VisibilityColumn"),
                   " "
                 ),
                 r.a.createElement(
                   "div",
-                  { className: De.SectionContents },
+                  { className: Fe.SectionContents },
                   r.a.createElement(
                     "div",
-                    { className: De.VisibilityCtn },
+                    { className: Fe.VisibilityCtn },
                     r.a.createElement(
                       "div",
-                      { className: Object(b.a)(De.StatusRow, De.Global) },
+                      { className: Object(b.a)(Fe.StatusRow, Fe.Global) },
                       Object(z.f)("#FAQDashboard_VisibleInGlobalRealmLabel"),
                       " ",
-                      r.a.createElement(X, {
+                      r.a.createElement(ve, {
                         bIsVisible: h.visible_in_global_realm,
                       })
                     ),
                     r.a.createElement(
                       "div",
-                      { className: Object(b.a)(De.StatusRow, De.China) },
+                      { className: Object(b.a)(Fe.StatusRow, Fe.China) },
                       Object(z.f)("#FAQDashboard_VisibleInChinaRealmLabel"),
                       " ",
-                      r.a.createElement(X, {
+                      r.a.createElement(ve, {
                         bIsVisible: h.visible_in_china_realm,
                       })
                     ),
                     r.a.createElement(
                       "div",
-                      { className: De.StatusBtnCtn },
-                      r.a.createElement(Te, { draft: n })
+                      { className: Fe.StatusBtnCtn },
+                      r.a.createElement(Oe, { draft: n })
                     )
                   ),
                   r.a.createElement(
                     "div",
-                    { className: De.PublishCtn },
+                    { className: Fe.PublishCtn },
                     m
                       ? r.a.createElement(
                           "div",
-                          { className: De.PublishStatus },
+                          { className: Fe.PublishStatus },
                           Object(z.f)("#FAQStatus_DraftVersionsDesc")
                         )
                       : r.a.createElement(
                           "div",
-                          { className: De.PublishStatus },
+                          { className: Fe.PublishStatus },
                           Object(z.f)("#FAQStatus_NothingToPublish")
                         ),
                     r.a.createElement(
                       "div",
-                      { className: De.PublishBtn },
-                      r.a.createElement(Ae, { draft: n, bDisabled: !m })
+                      { className: Fe.PublishBtn },
+                      r.a.createElement(Me, { draft: n, bDisabled: !m })
                     )
                   )
                 )
               ),
               r.a.createElement(
                 "div",
-                { className: De.Section },
+                { className: Fe.Section },
                 r.a.createElement(
                   "div",
-                  { className: De.SectionTitle },
+                  { className: Fe.SectionTitle },
                   Object(z.f)("#FAQDashboard_LocalizationSection"),
                   " "
                 ),
                 r.a.createElement(
                   "div",
-                  { className: De.SectionContents },
+                  { className: Fe.SectionContents },
                   r.a.createElement(
                     "div",
-                    { className: De.SectionDescription },
+                    { className: Fe.SectionDescription },
                     Object(z.f)("#FAQDashboard_LocalizationSectionDesc")
                   ),
-                  r.a.createElement(be, { draft: n, eLanguage: l })
+                  r.a.createElement(K, { draft: n, eLanguage: l })
                 ),
                 r.a.createElement(
                   "div",
-                  { className: De.SectionContents },
+                  { className: Fe.SectionContents },
                   r.a.createElement(
                     "div",
-                    { className: De.SectionDescription },
+                    { className: Fe.SectionDescription },
                     Object(z.f)("#EventEditor_Loc_CrowdinIntegration_Desc")
                   ),
-                  r.a.createElement(we, { draft: n })
+                  r.a.createElement(J, { draft: n })
                 )
               ),
               r.a.createElement(
                 "div",
-                { className: De.Section },
+                { className: Fe.Section },
                 r.a.createElement(
                   "div",
-                  { className: De.SectionTitle },
+                  { className: Fe.SectionTitle },
                   Object(z.f)("#FAQStatus_LocalizedVersionStatusHeader")
                 ),
                 r.a.createElement(
                   "table",
-                  { className: De.FaqStatusTable },
+                  { className: Fe.FaqStatusTable },
                   r.a.createElement(
                     "thead",
                     null,
@@ -8975,13 +9235,13 @@
               ),
               r.a.createElement(
                 "div",
-                { className: De.Section },
-                r.a.createElement(pe, { draft: n })
+                { className: Fe.Section },
+                r.a.createElement(De, { draft: n })
               )
             )
           );
         }),
-        Me = Object(s.a)(function (e) {
+        We = Object(s.a)(function (e) {
           var t = e.info,
             a = e.rtEnglishUpdateTime,
             o = !!a && a > t.last_update_timestamp,
@@ -8997,7 +9257,7 @@
             r.a.createElement(
               "td",
               null,
-              r.a.createElement(V, {
+              r.a.createElement(ue, {
                 rtTimestamp: t.last_update_timestamp,
                 bShowAsWarning: o,
               })
@@ -9005,22 +9265,22 @@
             r.a.createElement(
               "td",
               null,
-              r.a.createElement(V, {
+              r.a.createElement(ue, {
                 rtTimestamp: t.last_publish_timestamp,
                 bShowAsWarning: i,
               })
             )
           );
         }),
-        ze = (a("jZUi"), a("kyHq")),
-        Oe = a("vBFs"),
-        Ee = a("6h0J"),
-        Fe = a.n(Ee),
-        Re = a("wst7"),
-        We = a("hvYe"),
-        Ne = a.n(We),
-        Le = a("aXcg"),
-        He = Object(s.a)(function (e) {
+        Ne = (a("jZUi"), a("kyHq")),
+        Le = a("vBFs"),
+        He = a("6h0J"),
+        Ve = a.n(He),
+        Be = a("wst7"),
+        je = a("hvYe"),
+        Ge = a.n(je),
+        Ue = a("aXcg"),
+        Ye = Object(s.a)(function (e) {
           var t = e.draft.BNeedsSaving();
           return r.a.createElement(
             "div",
@@ -9028,8 +9288,8 @@
               className: "btn_green_steamui btn_medium",
               onClick: function (t) {
                 return Object(P.d)(
-                  r.a.createElement(Ve, { draft: e.draft }),
-                  Object(le.m)(t)
+                  r.a.createElement(Qe, { draft: e.draft }),
+                  Object(U.m)(t)
                 );
               },
             },
@@ -9038,14 +9298,14 @@
               null,
               !t &&
                 r.a.createElement("img", {
-                  className: Le.SavedImage,
-                  src: Ne.a,
+                  className: Ue.SavedImage,
+                  src: Ge.a,
                 }),
               Object(z.f)(t ? "#Button_Save" : "#Button_Saved")
             )
           );
         }),
-        Ve = function (e) {
+        Qe = function (e) {
           var t = e.draft,
             a = e.closeModal,
             o = r.a.useState(!0),
@@ -9151,25 +9411,25 @@
             )
           );
         },
-        Be = a("eYkW"),
-        je = a.n(Be),
-        Ge = Object(s.a)(function (e) {
+        Xe = a("eYkW"),
+        $e = a.n(Xe),
+        Ke = Object(s.a)(function (e) {
           var t,
             a = e.draft,
             i = e.bPreview,
             s = a.BHasPublished();
           return r.a.createElement(
-            ae.a,
+            Ae.a,
             null,
             r.a.createElement(
               "div",
               {
                 className: Object(b.a)(
                   ((t = {}),
-                  (t[Re.EventEditorTopBarContainer] = !0),
-                  (t[Re.EventUnPublished] = !i && !s),
-                  (t[Re.EventPublished] = !i && s),
-                  (t[je.a.FAQPreview] = i),
+                  (t[Be.EventEditorTopBarContainer] = !0),
+                  (t[Be.EventUnPublished] = !i && !s),
+                  (t[Be.EventPublished] = !i && s),
+                  (t[$e.a.FAQPreview] = i),
                   t)
                 ),
               },
@@ -9178,7 +9438,7 @@
                 {
                   route: i ? o.k_eCommunityEdit : o.k_eCommunityDashboard,
                   faqid: a.GetFAQID(),
-                  className: ie.a.EditPreviewButton,
+                  className: B.a.EditPreviewButton,
                 },
                 Object(z.f)(
                   i ? "#FAQEditor_EditFAQ" : "#EventDisplay_EventsDashBtn"
@@ -9189,7 +9449,7 @@
                 null,
                 r.a.createElement(
                   "div",
-                  { className: je.a.EditorInternalNameLabel },
+                  { className: $e.a.EditorInternalNameLabel },
                   Object(z.f)(
                     i
                       ? "#FAQEditor_InternalName_Preview"
@@ -9198,14 +9458,14 @@
                 ),
                 r.a.createElement(
                   "div",
-                  { className: je.a.EditorInternalName },
+                  { className: $e.a.EditorInternalName },
                   a.GetFAQInternalName(),
                   r.a.createElement("img", {
-                    src: Fe.a,
+                    src: Ve.a,
                     onClick: function (e) {
                       return Object(P.d)(
-                        r.a.createElement(Ue, { draft: a }),
-                        Object(le.m)(e)
+                        r.a.createElement(Je, { draft: a }),
+                        Object(U.m)(e)
                       );
                     },
                   })
@@ -9213,16 +9473,16 @@
               ),
               r.a.createElement(
                 "div",
-                { className: ie.a.EventOptions },
-                r.a.createElement(Oe.a, {
-                  selectedLang: ee.a.Get().GetCurEditLanguage(),
-                  fnOnLanguageChanged: ee.a.Get().SetCurEditLanguage,
+                { className: B.a.EventOptions },
+                r.a.createElement(Le.a, {
+                  selectedLang: _e.a.Get().GetCurEditLanguage(),
+                  fnOnLanguageChanged: _e.a.Get().SetCurEditLanguage,
                   fnLangHasData: a.BHasSomeTextForLanguage,
                   fnIsLangSupported: function (e) {
                     return !0;
                   },
                   fnLastUpdateRTime: a.GetLastTimeLanguageUpdated,
-                  realms: [ze.f.k_ESteamRealmGlobal, ze.f.k_ESteamRealmChina],
+                  realms: [Ne.f.k_ESteamRealmGlobal, Ne.f.k_ESteamRealmChina],
                 }),
                 !i &&
                   r.a.createElement(
@@ -9230,7 +9490,7 @@
                     {
                       route: o.k_eCommunityPreview,
                       faqid: a.GetFAQID(),
-                      className: ie.a.EditPreviewButton,
+                      className: B.a.EditPreviewButton,
                     },
                     Object(z.f)("#Button_Preview")
                   )
@@ -9238,7 +9498,7 @@
             )
           );
         }),
-        Ue = function (e) {
+        Je = function (e) {
           var t = e.closeModal,
             a = e.draft,
             o = r.a.useState(a.GetFAQInternalName() || ""),
@@ -9333,7 +9593,7 @@
             )
           );
         },
-        Ye = Object(s.a)(function (e) {
+        Ze = Object(s.a)(function (e) {
           var t = e.draft,
             a = e.eLanguage,
             o = t.GetFAQID(),
@@ -9347,28 +9607,28 @@
               }),
             p =
               n &&
-              ((f.c.EREALM == ze.f.k_ESteamRealmGlobal &&
+              ((f.c.EREALM == Ne.f.k_ESteamRealmGlobal &&
                 s.visible_in_global_realm) ||
-                (f.c.EREALM == ze.f.k_ESteamRealmChina &&
+                (f.c.EREALM == Ne.f.k_ESteamRealmChina &&
                   s.visible_in_china_realm)) &&
               !!(null == l ? void 0 : l.last_publish_timestamp);
           return r.a.createElement(
-            ae.a,
+            Ae.a,
             null,
             r.a.createElement(
               "div",
-              { className: Object(b.a)(ie.a.SaveBackground) },
+              { className: Object(b.a)(B.a.SaveBackground) },
               r.a.createElement(
                 "div",
                 {
-                  className: ie.a.FlexRowWrapFlexStartContainer,
+                  className: B.a.FlexRowWrapFlexStartContainer,
                   style: { width: "unset", justifyContent: "center" },
                 },
-                r.a.createElement(He, { draft: t }),
+                r.a.createElement(Ye, { draft: t }),
                 Boolean(p) &&
                   r.a.createElement(
                     "div",
-                    { className: ie.a.EditPreviewButton },
+                    { className: B.a.EditPreviewButton },
                     r.a.createElement(
                       "a",
                       { href: f.c.HELP_BASE_URL + "faqs/view/" + s.url_code },
@@ -9379,7 +9639,7 @@
             )
           );
         }),
-        Qe = Object(s.a)(function (e) {
+        et = Object(s.a)(function (e) {
           var t = e.faqid,
             a = Object(c.d)(t),
             o = a[0],
@@ -9392,60 +9652,60 @@
               string: Object(z.f)("#Loading"),
             });
           if (!o)
-            return r.a.createElement(Je, {
+            return r.a.createElement(it, {
               strError: Object(z.f)("#FAQEditor_NoFAQFound"),
             });
-          var n = ee.a.Get().GetCurEditLanguage();
+          var n = _e.a.Get().GetCurEditLanguage();
           return r.a.createElement(
             "div",
             null,
-            r.a.createElement(Ge, { draft: o }),
+            r.a.createElement(Ke, { draft: o }),
             r.a.createElement(
               "div",
-              { className: re.a.FAQEditPage },
+              { className: Pe.a.FAQEditPage },
               r.a.createElement(
                 "div",
-                { className: re.a.FAQMenuCtn },
-                r.a.createElement(qe, { draft: o, eLanguage: n })
+                { className: Pe.a.FAQMenuCtn },
+                r.a.createElement(Re, { draft: o, eLanguage: n })
               ),
               r.a.createElement(
                 "div",
-                { className: re.a.FAQEditorCtn },
+                { className: Pe.a.FAQEditorCtn },
                 r.a.createElement(
                   "div",
-                  { className: re.a.FAQEditor },
+                  { className: Pe.a.FAQEditor },
                   r.a.createElement(
                     "div",
-                    { className: ie.a.Columns },
+                    { className: B.a.Columns },
                     r.a.createElement(
                       "div",
-                      { className: Object(b.a)(ie.a.LeftCol) },
-                      r.a.createElement($e, { draft: o, eLanguage: n }),
-                      r.a.createElement(Ke, {
+                      { className: Object(b.a)(B.a.LeftCol) },
+                      r.a.createElement(at, { draft: o, eLanguage: n }),
+                      r.a.createElement(ot, {
                         bbcodeEditorRef: s,
                         draft: o,
                         eLanguage: n,
                       })
                     ),
-                    r.a.createElement(Xe, {
+                    r.a.createElement(tt, {
                       draft: o,
                       bbcodeEditorRef: s,
-                      className: ie.a.RightCol,
+                      className: B.a.RightCol,
                     })
                   )
                 )
               )
             ),
-            r.a.createElement(Ye, { draft: o, eLanguage: n })
+            r.a.createElement(Ze, { draft: o, eLanguage: n })
           );
         }),
-        Xe = function (e) {
+        tt = function (e) {
           if (!Boolean(f.b.CAN_UPLOAD_IMAGES)) return null;
-          var t = new Z.a(f.b.CLANSTEAMID),
+          var t = new L.a(f.b.CLANSTEAMID),
             a = e.draft,
             o = e.bbcodeEditorRef;
           return r.a.createElement(
-            ae.a,
+            Ae.a,
             null,
             r.a.createElement(
               "div",
@@ -9455,13 +9715,13 @@
                 null,
                 Object(z.f)("#FAQEditor_ImageTitle")
               ),
-              r.a.createElement(se.a, {
+              r.a.createElement(Ce.a, {
                 bShowLightBox: !1,
                 clanSteamID: t,
                 imageInsertCallBack: function (e, t) {
                   return (
                     o.current &&
-                    Object(J.b)(null == o ? void 0 : o.current, e, t)
+                    Object(xe.b)(null == o ? void 0 : o.current, e, t)
                   );
                 },
                 fnSetImageURL: function () {},
@@ -9470,20 +9730,20 @@
             )
           );
         },
-        $e = Object(s.a)(function (e) {
+        at = Object(s.a)(function (e) {
           var t = e.draft,
             a = e.eLanguage;
           return r.a.createElement(
             "div",
-            { className: re.a.EditorTitleField },
+            { className: Pe.a.EditorTitleField },
             r.a.createElement(
               "div",
-              { className: re.a.EditorLabel },
+              { className: Pe.a.EditorLabel },
               Object(z.f)("#FAQEditor_TitleLabel")
             ),
             r.a.createElement("input", {
               type: "text",
-              className: re.a.EditorTitleFieldInput,
+              className: Pe.a.EditorTitleFieldInput,
               value: t.GetDraftTitle(a) || "",
               placeholder: Object(z.f)("#FAQEditor_TitlePlaceHolder"),
               onFocus: function (e) {
@@ -9496,19 +9756,19 @@
             })
           );
         }),
-        Ke = Object(s.a)(function (e) {
+        ot = Object(s.a)(function (e) {
           var t = e.draft,
             a = e.eLanguage,
             o = e.bbcodeEditorRef;
           return r.a.createElement(
             "div",
-            { className: re.a.EditorPane },
+            { className: Pe.a.EditorPane },
             r.a.createElement(
               "div",
-              { className: re.a.EditorLabel },
+              { className: Pe.a.EditorLabel },
               Object(z.f)("#FAQEditor_ContentLabel")
             ),
-            r.a.createElement(te.a, {
+            r.a.createElement(Ie.a, {
               ref: o,
               fnGetCurText: function () {
                 return t.GetDraftContent(a) || "";
@@ -9522,24 +9782,24 @@
               strPlaceholder: Object(z.f)("#FAQEditor_ContentPlaceHolder"),
               bSupportHTMLImport: !0,
               showFormatHelp: "PartnerEvents",
-              classNameForTextArea: re.a.EditorPaneTextArea,
+              classNameForTextArea: Pe.a.EditorPaneTextArea,
             })
           );
         }),
-        Je = function (e) {
+        it = function (e) {
           return r.a.createElement(
             "div",
-            { className: re.a.ErrorCtn },
-            r.a.createElement("div", { className: re.a.ErrorMsg }, e.strError),
+            { className: Pe.a.ErrorCtn },
+            r.a.createElement("div", { className: Pe.a.ErrorMsg }, e.strError),
             r.a.createElement(
               g,
-              { route: o.k_eCommunityDashboard, className: re.a.EscapeLink },
+              { route: o.k_eCommunityDashboard, className: Pe.a.EscapeLink },
               Object(z.f)("#FAQEditor_GoToDashboard")
             )
           );
         },
-        Ze = a("orBq"),
-        et = function (e) {
+        st = a("orBq"),
+        nt = function (e) {
           var t = e.title,
             a = e.content,
             o = e.bIsPreview,
@@ -9572,49 +9832,49 @@
             ),
             r.a.createElement(
               "div",
-              { className: Object(b.a)(Ze.FAQViewPage, f.c.LANGUAGE) },
+              { className: Object(b.a)(st.FAQViewPage, f.c.LANGUAGE) },
               r.a.createElement(
                 "a",
-                { className: Ze.SupportTitle, href: "" + f.c.HELP_BASE_URL },
+                { className: st.SupportTitle, href: "" + f.c.HELP_BASE_URL },
                 Object(z.f)("#FAQViewer_SteamSupport")
               ),
               r.a.createElement(
                 "div",
-                { className: Ze.Columns },
+                { className: st.Columns },
                 r.a.createElement(
                   "div",
-                  { className: Object(b.a)(Ze.LeftCol) },
-                  r.a.createElement("div", { className: Ze.TopColorBar }),
+                  { className: Object(b.a)(st.LeftCol) },
+                  r.a.createElement("div", { className: st.TopColorBar }),
                   r.a.createElement(
                     "div",
-                    { className: Ze.FAQTopicCtn },
-                    r.a.createElement("div", { className: Ze.FAQTitle }, t),
+                    { className: st.FAQTopicCtn },
+                    r.a.createElement("div", { className: st.FAQTitle }, t),
                     r.a.createElement(
                       "div",
-                      { className: Ze.FAQContent },
+                      { className: st.FAQContent },
                       r.a.createElement(d.a, { text: a, bShowErrorInfo: o })
                     )
                   )
                 ),
                 r.a.createElement(
                   "div",
-                  { className: Ze.RightCol },
-                  r.a.createElement("div", { className: Ze.SectionCtn }, i)
+                  { className: st.RightCol },
+                  r.a.createElement("div", { className: st.SectionCtn }, i)
                 )
               )
             )
           );
         },
-        tt = function (e) {
+        rt = function (e) {
           return r.a.createElement(
             "div",
-            { className: Ze.FAQViewPage },
+            { className: st.FAQViewPage },
             e.children
           );
         },
-        at = a("OJ5K"),
-        ot = a("jIVP"),
-        it = function (e) {
+        lt = a("OJ5K"),
+        pt = a("jIVP"),
+        dt = function (e) {
           var t = e.faqContent,
             a = Object(c.g)(t.faq_id, t.version, t.language),
             i = a[0];
@@ -9622,19 +9882,19 @@
           return c.a.Get().BHasFAQEdit()
             ? r.a.createElement(
                 "div",
-                { className: Object(b.a)(ot.Section, oe.ValveOnlyBackground) },
+                { className: Object(b.a)(pt.Section, V.ValveOnlyBackground) },
                 r.a.createElement(
                   "div",
-                  { className: ot.TopicHeader },
+                  { className: pt.TopicHeader },
                   Object(z.f)("#FAQViewer_AdminLinks")
                 ),
                 r.a.createElement(
                   "div",
-                  { className: at.InfoRow },
+                  { className: lt.InfoRow },
                   Object(z.n)(
                     "#FAQViewer_Admin_LastUpdate",
                     (null == i ? void 0 : i.author_account_id)
-                      ? r.a.createElement(st, {
+                      ? r.a.createElement(ht, {
                           authorAccountID: Number.parseInt(i.author_account_id),
                         })
                       : Object(z.f)("#FAQViewer_UnknownUser"),
@@ -9645,7 +9905,7 @@
                     )
                   )
                 ),
-                r.a.createElement(nt, { faqContent: t }),
+                r.a.createElement(ct, { faqContent: t }),
                 r.a.createElement(
                   g,
                   {
@@ -9658,9 +9918,9 @@
               )
             : null;
         },
-        st = function (e) {
-          var t = Z.a.InitFromAccountID(e.authorAccountID),
-            a = Object(ce.b)(t.ConvertTo64BitString()),
+        ht = function (e) {
+          var t = L.a.InitFromAccountID(e.authorAccountID),
+            a = Object(H.b)(t.ConvertTo64BitString()),
             o = a[0],
             i = a[1];
           return r.a.createElement(
@@ -9672,7 +9932,7 @@
                   r.a.Fragment,
                   null,
                   r.a.createElement("img", {
-                    className: at.SmallAvatar,
+                    className: lt.SmallAvatar,
                     src: i.avatar_url,
                     "data-miniprofile": "s" + t.ConvertTo64BitString(),
                   }),
@@ -9680,7 +9940,7 @@
                 )
           );
         },
-        nt = function (e) {
+        ct = function (e) {
           var t = e.faqContent,
             a = Object(c.d)(t.faq_id),
             o = a[0],
@@ -9694,10 +9954,10 @@
           var s = o.GetLastSavedDraftVersion(t.language);
           return r.a.createElement(
             "div",
-            { className: at.InfoRow },
+            { className: lt.InfoRow },
             Object(z.n)(
               "#FAQViewer_DraftNewer",
-              r.a.createElement(st, {
+              r.a.createElement(ht, {
                 authorAccountID: Number.parseInt(s.author_account_id),
               }),
               r.a.createElement(
@@ -9708,24 +9968,24 @@
             )
           );
         },
-        rt = function (e) {
+        ut = function (e) {
           return r.a.createElement(
             r.a.Fragment,
             null,
             r.a.createElement(
               "div",
-              { className: Object(b.a)(ot.Section, ot.NeedHelp) },
+              { className: Object(b.a)(pt.Section, pt.NeedHelp) },
               r.a.createElement(
                 "div",
-                { className: ot.LeftCol },
+                { className: pt.LeftCol },
                 r.a.createElement(D.z, null)
               ),
               r.a.createElement(
                 "div",
-                { className: ot.RightCol },
+                { className: pt.RightCol },
                 r.a.createElement(
                   "div",
-                  { className: ot.TopicHeader },
+                  { className: pt.TopicHeader },
                   Object(z.f)("#FAQViewer_SideBar_ProblemWithSteam_Title")
                 ),
                 r.a.createElement(
@@ -9735,33 +9995,30 @@
                 ),
                 r.a.createElement(
                   "div",
-                  { className: ot.CenterButtonCtn },
+                  { className: pt.CenterButtonCtn },
                   r.a.createElement(
                     "a",
-                    {
-                      href: f.c.HELP_BASE_URL,
-                      className: oe.EditPreviewButton,
-                    },
+                    { href: f.c.HELP_BASE_URL, className: V.EditPreviewButton },
                     Object(z.f)("#FAQViewer_SideBar_ProblemWithSteam_Link")
                   )
                 )
               )
             ),
-            !Object(ze.a)(f.c.EREALM) &&
+            !Object(Ne.a)(f.c.EREALM) &&
               r.a.createElement(
                 "div",
-                { className: Object(b.a)(ot.Section, ot.CommunityHelp) },
+                { className: Object(b.a)(pt.Section, pt.CommunityHelp) },
                 r.a.createElement(
                   "div",
-                  { className: ot.LeftCol },
+                  { className: pt.LeftCol },
                   r.a.createElement(D.j, null)
                 ),
                 r.a.createElement(
                   "div",
-                  { className: ot.RightCol },
+                  { className: pt.RightCol },
                   r.a.createElement(
                     "div",
-                    { className: ot.TopicHeader },
+                    { className: pt.TopicHeader },
                     Object(z.f)("#FAQViewer_SideBar_CommunityHelp_Title")
                   ),
                   r.a.createElement(
@@ -9771,12 +10028,12 @@
                   ),
                   r.a.createElement(
                     "div",
-                    { className: ot.CenterButtonCtn },
+                    { className: pt.CenterButtonCtn },
                     r.a.createElement(
                       "a",
                       {
                         href: f.c.COMMUNITY_BASE_URL + "discussions",
-                        className: oe.EditPreviewButton,
+                        className: V.EditPreviewButton,
                       },
                       Object(z.f)("#FAQViewer_SideBar_CommunityHelp_Link")
                     )
@@ -9785,31 +10042,31 @@
               )
           );
         },
-        lt = a("rTBr"),
-        pt = a.n(lt),
-        dt = function (e) {
+        mt = a("rTBr"),
+        ft = a.n(mt),
+        gt = function (e) {
           var t = e.faqid,
             a = Object(c.h)(t, Object(h.d)(f.c.LANGUAGE)),
             o = a[0];
           return a[1]
             ? o
-              ? r.a.createElement(et, {
+              ? r.a.createElement(nt, {
                   title: o.title,
                   content: o.content,
                   elSideBars: [
-                    r.a.createElement(rt, { key: "sidebar", faqContent: o }),
-                    r.a.createElement(it, { key: "adminbar", faqContent: o }),
+                    r.a.createElement(ut, { key: "sidebar", faqContent: o }),
+                    r.a.createElement(dt, { key: "adminbar", faqContent: o }),
                   ],
                 })
               : r.a.createElement(
-                  tt,
+                  rt,
                   null,
-                  r.a.createElement(ht, {
+                  r.a.createElement(yt, {
                     strError: Object(z.f)("#FAQViewer_NoFAQFound"),
                   })
                 )
             : r.a.createElement(
-                tt,
+                rt,
                 null,
                 r.a.createElement(q.a, {
                   position: "center",
@@ -9818,7 +10075,7 @@
                 })
               );
         },
-        ht = function (e) {
+        yt = function (e) {
           var t,
             a =
               f.c.COMMUNITY_BASE_URL +
@@ -9828,42 +10085,42 @@
                 : "gid/" + f.b.CLANSTEAMID);
           return r.a.createElement(
             "div",
-            { className: pt.a.ErrorCtn },
-            r.a.createElement("div", { className: pt.a.ErrorMsg }, e.strError),
+            { className: ft.a.ErrorCtn },
+            r.a.createElement("div", { className: ft.a.ErrorMsg }, e.strError),
             r.a.createElement(
               "a",
-              { className: pt.a.EscapeLink, href: a },
+              { className: ft.a.EscapeLink, href: a },
               Object(z.f)("#FAQViewer_GoToHomepage")
             )
           );
         },
-        ct = Object(s.a)(function (e) {
+        bt = Object(s.a)(function (e) {
           var t = e.faqid,
             a = Object(c.d)(t),
             o = a[0],
             i = a[1],
-            s = ee.a.Get().GetCurEditLanguage();
+            s = _e.a.Get().GetCurEditLanguage();
           return i
             ? o
               ? r.a.createElement(
                   r.a.Fragment,
                   null,
-                  r.a.createElement(Ge, { draft: o, bPreview: !0 }),
-                  r.a.createElement(et, {
+                  r.a.createElement(Ke, { draft: o, bPreview: !0 }),
+                  r.a.createElement(nt, {
                     title: o.GetDraftTitleWithFallback(s, f.c.EREALM),
                     content: o.GetDraftContentWithFallback(s, f.c.EREALM),
                   }),
-                  r.a.createElement(Ye, { draft: o, eLanguage: s })
+                  r.a.createElement(Ze, { draft: o, eLanguage: s })
                 )
               : r.a.createElement(
-                  tt,
+                  rt,
                   null,
-                  r.a.createElement(ht, {
+                  r.a.createElement(yt, {
                     strError: Object(z.f)("#FAQViewer_NoFAQFound"),
                   })
                 )
             : r.a.createElement(
-                tt,
+                rt,
                 null,
                 r.a.createElement(q.a, {
                   position: "center",
@@ -9872,9 +10129,9 @@
                 })
               );
         }),
-        ut = a("9w6b"),
-        mt = a("WplJ"),
-        ft = {
+        wt = a("9w6b"),
+        vt = a("WplJ"),
+        St = {
           ViewFAQ: function (e, t) {
             return "/faqs/" + e + "/view/" + t + "*";
           },
@@ -9891,7 +10148,7 @@
             return "/faqs/" + e + "/import";
           },
         },
-        gt = Object(s.a)(function (e) {
+        kt = Object(s.a)(function (e) {
           var t = r.a.useState(!0),
             a = t[0],
             s = t[1];
@@ -9901,7 +10158,7 @@
                 return Object(i.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
-                      return [4, ut.a.InitGlobal()];
+                      return [4, wt.a.InitGlobal()];
                     case 1:
                       return e.sent(), s(!1), [2];
                   }
@@ -9917,83 +10174,83 @@
               : r.a.createElement(
                   r.a.Fragment,
                   null,
-                  r.a.createElement(K, null),
+                  r.a.createElement(ke, null),
                   r.a.createElement(
                     u.e,
                     null,
                     r.a.createElement(u.c, {
-                      path: ft.ViewFAQ(":vanity_str", ":faqid"),
+                      path: St.ViewFAQ(":vanity_str", ":faqid"),
                       render: function (e) {
-                        return r.a.createElement(mt.a, {
+                        return r.a.createElement(vt.a, {
                           config: {
                             "faqs-root": function () {
                               var t = e.match.params.faqid,
                                 a = Object(c.c)(t);
-                              return r.a.createElement(dt, { faqid: a });
+                              return r.a.createElement(gt, { faqid: a });
                             },
                           },
                         });
                       },
                     }),
                     r.a.createElement(u.c, {
-                      path: ft.EditFAQ(":vanity_str", ":faqid"),
+                      path: St.EditFAQ(":vanity_str", ":faqid"),
                       render: function (e) {
-                        return r.a.createElement(mt.a, {
+                        return r.a.createElement(vt.a, {
                           config: {
                             "faqs-root": function () {
                               var t = e.match.params.faqid;
                               if (t) {
                                 var a = Object(c.c)(t);
                                 return a
-                                  ? r.a.createElement(Qe, { faqid: a })
+                                  ? r.a.createElement(et, { faqid: a })
                                   : r.a.createElement(u.b, {
                                       push: !0,
                                       to: y(o.k_eCommunityDashboard),
                                     });
                               }
-                              return r.a.createElement(B, null);
+                              return r.a.createElement(me, null);
                             },
                           },
                         });
                       },
                     }),
                     r.a.createElement(u.c, {
-                      path: ft.DashboardFAQ(":vanity_str"),
+                      path: St.DashboardFAQ(":vanity_str"),
                       render: function (e) {
-                        return r.a.createElement(mt.a, {
+                        return r.a.createElement(vt.a, {
                           config: {
                             "faqs-root": function () {
-                              return r.a.createElement(B, null);
+                              return r.a.createElement(me, null);
                             },
                           },
                         });
                       },
                     }),
                     r.a.createElement(u.c, {
-                      path: ft.PreviewFAQ(":vanity_str", ":faqid"),
+                      path: St.PreviewFAQ(":vanity_str", ":faqid"),
                       render: function (e) {
-                        return r.a.createElement(mt.a, {
+                        return r.a.createElement(vt.a, {
                           config: {
                             "faqs-root": function () {
                               var t = e.match.params.faqid,
                                 a = Object(c.c)(t);
-                              return r.a.createElement(ct, { faqid: a });
+                              return r.a.createElement(bt, { faqid: a });
                             },
                           },
                         });
                       },
                     }),
                     r.a.createElement(u.c, {
-                      path: ft.ImportTool(":vanity_str"),
+                      path: St.ImportTool(":vanity_str"),
                       component: x,
                     }),
-                    r.a.createElement(u.c, { component: yt })
+                    r.a.createElement(u.c, { component: xt })
                   )
                 )
           );
         });
-      t.default = gt;
-      function yt(e) {
+      t.default = kt;
+      function xt(e) {
         return "dev" !== f.c.WEB_UNIVERSE
           ? r.a.createElement(u.b, { to: "/" })
           : r.a.createElement(
@@ -10009,8 +10266,7 @@
         FAQDashboard: "faqdashboard_FAQDashboard_tIxuP",
         DashboardHeader: "faqdashboard_DashboardHeader_1fVLw",
         DashboardHeaderTitle: "faqdashboard_DashboardHeaderTitle_14k5N",
-        DashboardCreateFAQButtonCtn:
-          "faqdashboard_DashboardCreateFAQButtonCtn_2pjqN",
+        DashboardHeaderButtonCtn: "faqdashboard_DashboardHeaderButtonCtn_MuQkN",
         DashboardCreateFAQButton: "faqdashboard_DashboardCreateFAQButton_3VW3j",
         CreateFAQDialog: "faqdashboard_CreateFAQDialog_2053e",
         NameInput: "faqdashboard_NameInput_3qsK9",
@@ -12845,16 +13101,19 @@
                               h.m_mapFAQPublishedContent.has(e) ||
                                 h.m_mapFAQPublishedContent.set(e, new Map()),
                                 r.per_language_info.forEach(function (a) {
-                                  var o = a.language;
-                                  if (t.indexOf(o) >= 0) {
+                                  var o,
+                                    i = a.language;
+                                  if (t.indexOf(i) >= 0) {
                                     a.last_publish_timestamp = Math.max(
                                       a.last_publish_timestamp,
                                       n.Body().last_publish_timestamp()
                                     );
-                                    var i = h.m_mapFAQDrafts
-                                      .get(e)
-                                      .GetLastSavedDraftVersion(o);
-                                    h.m_mapFAQPublishedContent.get(e).set(o, i);
+                                    var s =
+                                      null === (o = h.m_mapFAQDrafts.get(e)) ||
+                                      void 0 === o
+                                        ? void 0
+                                        : o.GetLastSavedDraftVersion(i);
+                                    h.m_mapFAQPublishedContent.get(e).set(i, s);
                                   }
                                 });
                             })
@@ -13000,25 +13259,60 @@
                 });
               });
             }),
-            (e.prototype.ImportNonEnglishDraftsFromCrowdin = function (e, t) {
+            (e.prototype.ImportNonEnglishDraftsFromCrowdin = function (
+              e,
+              t,
+              a
+            ) {
+              var o;
               return Object(i.b)(this, void 0, void 0, function () {
-                var a;
-                return Object(i.e)(this, function (o) {
-                  switch (o.label) {
+                var s, r, l, p, d, h;
+                return Object(i.e)(this, function (i) {
+                  switch (i.label) {
                     case 0:
-                      return (
-                        (a =
-                          y.c.COMMUNITY_BASE_URL +
-                          "faqs/" +
-                          y.b.VANITY_ID +
-                          "/ajaxpullfromcrowdin/" +
-                          ee(e) +
-                          "?languages=" +
-                          t.join(",")),
-                        [4, n.a.get(a)]
-                      );
+                      (s =
+                        y.c.COMMUNITY_BASE_URL +
+                        "faqs/" +
+                        y.b.VANITY_ID +
+                        "/ajaxpullfromcrowdin/" +
+                        ee(e)),
+                        (r = new FormData()).append("sessionid", y.c.SESSIONID),
+                        r.append("languages", t.join(",")),
+                        (l = null),
+                        (i.label = 1);
                     case 1:
-                      return o.sent(), [2];
+                      return (
+                        i.trys.push([1, 3, , 4]),
+                        [
+                          4,
+                          n.a.post(s, r, {
+                            withCredentials: !0,
+                            cancelToken: null == a ? void 0 : a.token,
+                          }),
+                        ]
+                      );
+                    case 2:
+                      return 200 ==
+                        (null == (p = i.sent()) ? void 0 : p.status) &&
+                        1 ==
+                          (null === (o = p.data) || void 0 === o
+                            ? void 0
+                            : o.success)
+                        ? [2, p.data.updated[e]]
+                        : ((l = { response: p }), [3, 4]);
+                    case 3:
+                      return (d = i.sent()), (l = d), [3, 4];
+                    case 4:
+                      return (
+                        (h = Object(g.a)(l)),
+                        console.error(
+                          "Could not import from crowdin",
+                          e,
+                          h.strErrorMsg,
+                          h
+                        ),
+                        [2, []]
+                      );
                   }
                 });
               });
@@ -13136,6 +13430,31 @@
         FAQImage: "faqbbcode_FAQImage_3Eebt",
       };
     },
+    X2UP: function (e, t, a) {
+      "use strict";
+      a.d(t, "a", function () {
+        return r;
+      });
+      var o = a("vDqi"),
+        i = a.n(o),
+        s = a("q1tI"),
+        n = a.n(s);
+      function r(e) {
+        var t = n.a.useRef(i.a.CancelToken.source());
+        return (
+          n.a.useEffect(
+            function () {
+              var a = t.current;
+              return function () {
+                return a.cancel(e ? e + ": unmounting" : "unmounting");
+              };
+            },
+            [e]
+          ),
+          t.current
+        );
+      }
+    },
     ZYuD: function (e, t, a) {
       e.exports = {
         LanguageListDialog: "faqlocalization_LanguageListDialog_vp5PF",
@@ -13145,6 +13464,15 @@
         LanguageCheckbox: "faqlocalization_LanguageCheckbox_1llVI",
         LanguageCheckboxLabel: "faqlocalization_LanguageCheckboxLabel_2S_PZ",
         Language: "faqlocalization_Language_13DIW",
+        Warning: "faqlocalization_Warning_hGncG",
+        ImportProgressBar: "faqlocalization_ImportProgressBar_1s2UZ",
+        ProgressMarker: "faqlocalization_ProgressMarker_2q-Td",
+        CurrentFAQ: "faqlocalization_CurrentFAQ_1MsSL",
+        LanguageList: "faqlocalization_LanguageList_28hYl",
+        ImportResults: "faqlocalization_ImportResults_2FKxI",
+        ImportResultLabel: "faqlocalization_ImportResultLabel_1_icU",
+        ImportResult: "faqlocalization_ImportResult_3h1Lk",
+        UrlCode: "faqlocalization_UrlCode_MxoxU",
       };
     },
     eYkW: function (e, t, a) {

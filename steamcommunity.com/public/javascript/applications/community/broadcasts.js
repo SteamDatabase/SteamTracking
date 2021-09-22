@@ -663,11 +663,11 @@
         },
         z = a("m0l2"),
         V = a("jUCX"),
-        H = a("Gpul"),
-        x = a("Qcoi"),
+        x = a("Gpul"),
+        H = a("Qcoi"),
         Y = a("h5cq");
       function q(e) {
-        var t = x.a.GetProfileByAccountID(e.GetAccountID());
+        var t = H.a.GetProfileByAccountID(e.GetAccountID());
         if (t) {
           var a = new V.b(e);
           return (
@@ -684,10 +684,10 @@
           var t = Object(r.useState)(q(e.steamid)),
             a = t[0],
             o = t[1],
-            c = Object(r.useState)(x.a.GetProfileURLBySteamID(e.steamid)),
+            c = Object(r.useState)(H.a.GetProfileURLBySteamID(e.steamid)),
             s = c[0],
             l = c[1],
-            d = Object(r.useState)(x.a.GetPersonaNameBySteamID(e.steamid)),
+            d = Object(r.useState)(H.a.GetPersonaNameBySteamID(e.steamid)),
             m = d[0],
             u = d[1];
           return (
@@ -700,7 +700,7 @@
                         case 0:
                           return [
                             4,
-                            x.a.LoadProfiles([
+                            H.a.LoadProfiles([
                               e.steamid.ConvertTo64BitString(),
                             ]),
                           ];
@@ -708,8 +708,8 @@
                           return (
                             t.sent(),
                             o(q(e.steamid)),
-                            l(x.a.GetProfileURLBySteamID(e.steamid)),
-                            u(x.a.GetPersonaNameBySteamID(e.steamid)),
+                            l(H.a.GetProfileURLBySteamID(e.steamid)),
+                            u(H.a.GetPersonaNameBySteamID(e.steamid)),
                             [2]
                           );
                       }
@@ -728,7 +728,7 @@
                   href: s,
                   "data-miniprofile": "s" + e.steamid.ConvertTo64BitString(),
                 },
-                n.a.createElement(H.b, {
+                n.a.createElement(x.b, {
                   persona: a,
                   size: e.size,
                   statusPosition: "bottom",
@@ -1356,7 +1356,7 @@
                         I.a,
                         null,
                         n.a.createElement(v.a, {
-                          emoticonStore: g.f,
+                          emoticonStore: g.g,
                           watchLocation: 6,
                           steamID: r,
                           broadcastID: i ? i.m_ulBroadcastID : void 0,
@@ -2250,6 +2250,7 @@
         settings_link: "broadcast_embeddable_settings_link_1Thke",
         external_link: "broadcast_embeddable_external_link_1n1BM",
         viewer_count: "broadcast_embeddable_viewer_count_1MrTW",
+        vod_title: "broadcast_embeddable_vod_title_2xKaM",
         stream_icon_and_viewer_container:
           "broadcast_embeddable_stream_icon_and_viewer_container_2sbrG",
         display_capsule_art: "broadcast_embeddable_display_capsule_art_SsORV",

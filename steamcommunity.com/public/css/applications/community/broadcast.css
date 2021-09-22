@@ -345,6 +345,13 @@
 .broadcast_embeddable_viewer_count_1MrTW svg .backGuy {
   fill: #fff;
 }
+div.broadcast_embeddable_viewer_count_1MrTW.broadcast_embeddable_vod_title_2xKaM {
+  display: block;
+  padding-left: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .broadcast_embeddable_stream_icon_and_viewer_container_2sbrG {
   display: grid;
   grid-template-columns: 136px 8px;
