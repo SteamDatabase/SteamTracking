@@ -1,0 +1,3266 @@
+__TEXT
+__text
+__TEXT
+__symbol_stub
+__TEXT
+__stub_helper
+__TEXT
+__const
+__TEXT
+__cstring
+__TEXT
+__unwind_info
+__TEXT
+__DATA
+__nl_symbol_ptr
+__DATA
+__la_symbol_ptr
+__DATA
+__const
+__DATA
+__LINKEDIT
+@loader_path/libavresample.4.dylib
+@loader_path/libavutil.56.dylib
+/usr/lib/libSystem.B.dylib
+/System/Library/Frameworks/VideoToolbox.framework/Versions/A/VideoToolbox
+/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia
+/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo
+/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
+USWV
+L$49M
+t	9E
+t$49u
+t	9E
+;D$4
+^_[]
+fff.
+USWV
+,^_[]
+USWV
+ffff.
+^_[]
+USWV
+^_[]
+fffff.
+USWV
+fffff.
+^_[]
+USWVP
+fffff.
+^_[]
+USWV
+fff.
+^_[]
+fff.
+USWVP
+ffff.
+fffff.
+C;\$$u
+^_[]
+USWV
+^_[]
+USWVP
+fffff.
+C;\$$u
+^_[]
+fffff.
+USWV
+ffff.
+^_[]
+USWVP
+fffff.
+C;\$$u
+^_[]
+USWV
+ffff.
+^_[]
+USWVP
+fffff.
+C;\$$u
+^_[]
+ffff.
+USWV
+ffffff.
+^_[]
+USWVP
+fffff.
+^_[]
+fffff.
+USWV
+ffffff.
+C;\$ u
+^_[]
+USWVP
+ffff.
+fffff.
+C;\$$u
+^_[]
+fff.
+USWV
+ffffff.
+C;\$ u
+^_[]
+USWVP
+fffff.
+C;\$$u
+^_[]
+ffffff.
+USWV
+ffffff.
+C;\$ u
+^_[]
+USWVP
+fffff.
+C;\$$u
+^_[]
+USWV
+ffffff.
+C;\$ u
+^_[]
+USWVP
+fffff.
+C;\$$u
+^_[]
+ffff.
+USWV
+^_[]
+USWVP
+fffff.
+^_[]
+ffff.
+USWV
+ffffff.
+C;\$ u
+^_[]
+USWVP
+ffff.
+fffff.
+C;\$$u
+^_[]
+USWV
+ffffff.
+C;\$ u
+^_[]
+USWVP
+fffff.
+C;\$$u
+^_[]
+USWV
+ffffff.
+^_[]
+USWV
+ffffff.
+C;\$ u
+^_[]
+fffff.
+USWV
+ffffff.
+^_[]
+USWV
+ffffff.
+C;\$ u
+^_[]
+fffff.
+USWV
+A;L$,u
+^_[]
+USWV
+^_[]
+USWV
+A;L$<u
+^_[]
+USWV
+B;T$<u
+^_[]
+USWV
+^_[]
+USWV
+fffff.
+A;L$<
+^_[]
+USWV
+fffff.
+B;T$<
+^_[]
+ffff.
+USWV
+ffffff.
+^_[]
+USWV
+ffff.
+C;\$ u
+^_[]
+USWV
+ffffff.
+^_[]
+USWV
+ffff.
+C;\$ u
+^_[]
+fffff.
+USWV
+A;L$<u
+^_[]
+USWV
+YD$ 
+,^_[]
+USWV
+A;L$<u
+^_[]
+USWV
+D$ f
+YD$ 
+B;T$Lu
+,^_[]
+USWV
+^_[]
+USWV
+fffff.
+D$$f
+;l$$r
+A;L$L
+,^_[]
+USWV
+fffff.
+t$ ;t$$r
+B;T$L
+,^_[]
+USWV
+ffffff.
+^_[]
+USWV
+ffff.
+C;\$ u
+^_[]
+fffff.
+ffff.
+USWV
+ffffff.
+^_[]
+USWV
+ffff.
+C;\$ u
+^_[]
+fffff.
+USWVP
+^_[]
+USWV
+T$41
+~4ff.
+E;l$
+^_[]
+fff.
+USWV
+fff.
+^_[]
+ffffff.
+USWV
+)D$p
+)D$`
+)D$P
+)D$@
+)D$0
+C;\$(u
+^_[]
+USWV
+fff.
+Ffff.
+^_[]
+USWV
+,^_[]
+T$P9
+D$D)
+L$ 1
+USWV
+fff.
+T$$)
+^_[]
+USWV
+^_[]
+USWV
+D$89]
+D$X9E
+D$\9E@t
+L$`9MDt
+;D$8u
+<^_[]
+USWV
+L^_[]
+ffffff.
+USWV
+^_[]
+\$@~
+ffff.
+|$Dt/
+ffff.
+|$DA
+D$81
+t$4f
+fff.
+D$8;L$D
+vffffff.
+D$4f
+l$8;L$D|
+ffffff.
+D$DG
+L$D9
+D$81
+D$4~?ffff.
+l$8~
+fff.
+\$$1
+|$01
+l$,1
+YD$8
+;L$0
+L$@u
+|$@G
+L$,F
+D$@fff.
+;fffff.
+\$$1
+|$DG
+\$$@
+\$$1
+D$81
+\$01
+YD$8
+|$Df
+|$@G
+L$0F
+USWV
+)D$p
+)D$`
+)D$P
+)D$@
+)D$0
+C 9CD}S
+fffff.
+^_[]
+USWV
+^_[]
+ffff.
+USWV
+~\fff.
+^_[]
+ffffff.
+USWV
+ffff.
+C;\$|u
+<ffffff.
+F;t$x
+;D$Xu
+\^_[]
+USWV
+ffffff.
+fff.
+\$p1
+B;T$|u
+E;l$x
+;D$Xu
+\^_[]
+USWV
+ffffff.
+F;t$|u
+E;l$x
+;D$Xu
+\^_[]
+USWVP
+t1ff.
+^_[]
+USWV
+ffffff.
+^_[]
+USWV
+1ffff.
+^_[]
+USWVP
+fff.
+t4fffff.
+^_[]
+USWV
+^_[]
+USWV
+^_[]
+USWV
+l$,	
+\$Xf
+\$Xf
+;D$4}
+L$,!
+#T$ 	
+ffff.
+t$$f
+L$$t
+#t$,#|$ 	
+L$4t[
+^_[]
+\$Xf
+\$Xf
+USWV
+D$$1
+D$<f
+T$,y,
+T$t+
+T$,}
+Yd$<
+l$xf
+mff.
+l$xf
+\L$h
+D$`H
+cfffff.
+\$(C;\$
+|^_[]
+ffffff.
+USWV
+^_[]
+;~,|
+fff.
+USWV
+^_[]
+D$$1
+USWV
+D$(ffffff.
+,^_[]
+USWVP
+^_[]
+USWV
+t$ 1
+^_[]
+USWV
+^T$@
+YD$`
+YD$x
+XD$pf
+YT$h
+ffff.
+|$Xf
+ffff.
+D$L9
+D$L1
+Q<G;|$L|
+^_[]
+USWVP
+^_[]
+USWVP
+D$$9
+fff.
+fff.
+^_[]
+USWV
+fff.
+^_[]
+USWV
+^_[]
+USWV
+T$Df
+^_[]
+ffff.
+USWV
+^_[]
+USWV
+^_[]
+fff.
+USWV
+\$4)
+^_[]
+fff.
+USWVP
+|$$t 
+^_[]
+fff.
+fff.
+USWV
+|$4u
+^_[]
+USWV
+D$l;GX
+D$p1
++l$x
+fff.
+D$x@
+D$x9
+L$l9
+|$t)
+)9\$l~#
+D$d1
+T$`f.
+|$p)
+t$xA9L$du
+ffffff.
+;L$d
+D$X1
+T$$N+t$p
+9T$,
+|$d1
+C9\$du
+L$T9
+L$`t5
+G9|$X
+D$49D$@
+L$p#H,
+L$p1
+D$X)
+|^_[]
+USWV
+,^_[]
+;U u
+M$;M
+fffff.
+M 9M
+\$,1
+E 9E
+D$(4
+t$09
+^_[]
+USWV
+;GPt
+|$Hx~
+,^_[]
+USWV
+^_[]
+USWV
+;T$ u
+,^_[]
+USWV
+fffff.
+\$ 1
+,^_[]
+USWV
+D$$1
+)fffff.
+^_[]
+oTQ f
+o\Q0f
+oTQ f
+o\Q0
+LP f
+SVWU
+o$9f
+o,)f
+]_^[
+SVWU
+~,)f
+]_^[
+SVWU
+]_^[
+SVWU
+~,)f
+]_^[
+SVWU
+~,)f
+]_^[
+SVWU
+]_^[
+SVWU
+w]_^[
+SVWU
+]_^[
+SVWU
+]_^[
+)LP 
+)TP0
+SVWU
+w]_^[
+SVWU
+o$9f
+]_^[
+SVWU
+]_^[
+SVWU
+oQ f
+]_^[
+SVWU
+oQ f
+]_^[
+SVWU
+]_^[
+SVWU
+oQ f
+]_^[
+SVWU
+oQ f
+]_^[
+SVWU
+oQ f
+]_^[
+SVWU
+]_^[
+SVWU
+]_^[
+SVWU
+]_^[
+SVWU
+]_^[
+SVWU
+oQ f
+oY0f
+oa@f
+oiPf
+]_^[
+SVWU
+]_^[
+USWV
+,^_[]
+(T$ 
+(\$ 
+(t$0
+(t$0
+(t$@
+(t$@
+(T$ 
+(\$ 
+(t$0
+(t$0
+(t$@
+(t$@
+)D$ 
+Y\$ 
+d$@^[
+YT$ 
+Y\$ 
+Yt$0
+Yt$0
+Yt$@
+Yt$@
+)D$ 
+mhL$ 
+d$@^[
+YT$ 
+Y\$ 
+QhT$0 
+Yh\$00
+YhT$@ 
+Qh\$@0
+YhL$
+QhD$
+)D$ 
+)D$0
+(\$ 
+(\$0
+@_^[
+(T$0
+(\$0
+(t$@
+(t$@
+(t$P
+(t$P
+(t$`
+(t$`
+Yd$ 
+Yl$ 
+p_^[
+(T$0
+(\$0
+(t$@
+(t$@
+(t$P
+(t$P
+(t$`
+(t$`
+Yl$ 
+Yd$ 
+p_^[
+w_^[
+)D$ 
+)D$@
+)D$`
+Y\$ 
+Y\$@
+Y\$`
+YT$0
+Y\$0
+Yt$@
+Yt$@
+Yt$P
+Yt$P
+Yt$`
+Yt$`
+Yl$ 
+Yd$ 
+p_^[
+w_^[
+)D$ 
+)D$@
+)D$`
+mhL$ 
+mhL$@
+mhL$`
+YT$0
+Y\$0
+QhT$@ 
+Yh\$@0
+YhT$P 
+Qh\$P0
+YhL$
+QhD$
+QhT$` 
+Yh\$`0
+QhL$ 
+YhD$ 
+p_^[
+SVWU
+]_^[
+SVWU
+)D$ 
+)D$0
+)D$@
+)D$P
+(\$ 
+(\$0
+(\$@
+(\$P
+l]_^[
+SVWU
+,]_^[
+SVWU
+(T$@
+(\$@
+(t$P
+(t$P
+(t$`
+(t$`
+(t$p
+(t$p
+Yd$ 
+Yl$ 
+Yd$0
+Yl$0
+]_^[
+SVWU
+,]_^[
+SVWU
+(T$@
+(\$@
+(t$P
+(t$P
+(t$`
+(t$`
+(t$p
+(t$p
+Yl$ 
+Yd$ 
+Yd$0
+Yl$0
+]_^[
+SVWU
+w]_^[
+SVWU
+)D$ 
+)D$@
+)D$`
+YL$ 
+Y\$@
+Y\$`
+]_^[
+SVWU
+,]_^[
+SVWU
+YT$@
+Y\$@
+Yt$P
+Yt$P
+Yt$`
+Yt$`
+Yt$p
+Yt$p
+Yl$ 
+Yd$ 
+Yd$0
+Yl$0
+]_^[
+SVWU
+w]_^[
+SVWU
+)D$ 
+)D$@
+)D$`
+YL$ 
+mhL$@
+mhL$`
+]_^[
+SVWU
+ihL$
+ahD$
+,]_^[
+SVWU
+YT$@
+Y\$@
+QhT$P 
+Yh\$P0
+YhT$` 
+Qh\$`0
+YhL$
+QhD$
+QhT$p 
+Yh\$p0
+QhL$ 
+YhD$ 
+YhL$0
+QhD$0
+]_^[
+SVWU
+]_^[
+SVWU
+)D$ 
+)D$0
+)D$@
+)D$P
+)D$`
+)D$p
+(L$ 
+(\$0
+(\$@
+(\$P
+(\$`
+(\$p
+]_^[
+SVWU
+(d$ 
+(d$ 
+<]_^[
+SVWU
+(T$P
+(\$P
+(t$`
+(t$`
+(t$p
+(t$p
+Yd$ 
+Yl$ 
+Yd$0
+Yl$0
+Yd$@
+Yl$@
+]_^[
+SVWU
+(d$ 
+(d$ 
+<]_^[
+SVWU
+(T$P
+(\$P
+(t$`
+(t$`
+(t$p
+(t$p
+Yl$ 
+Yd$ 
+Yd$0
+Yl$0
+Yl$@
+Yd$@
+]_^[
+SVWU
+]_^[
+SVWU
+YL$ 
+Y\$0
+Y\$@
+Y\$P
+Y\$`
+Y\$p
+]_^[
+SVWU
+Yd$ 
+Yd$ 
+<]_^[
+SVWU
+YT$P
+Y\$P
+Yt$`
+Yt$`
+Yt$p
+Yt$p
+Yl$ 
+Yd$ 
+Yd$0
+Yl$0
+Yl$@
+Yd$@
+]_^[
+SVWU
+]_^[
+SVWU
+YL$ 
+ihL$0
+ihL$@
+ihL$P
+ihL$`
+ihL$p
+ihD$
+]_^[
+SVWU
+ihL$
+ahD$
+ahL$ 
+ihD$ 
+<]_^[
+SVWU
+YT$P
+Y\$P
+QhT$` 
+Yh\$`0
+YhT$p 
+Qh\$p0
+YhL$
+QhD$
+QhL$ 
+YhD$ 
+YhL$0
+QhD$0
+QhL$@
+YhD$@
+]_^[
+SVWU
+<]_^[
+SVWU
+)D$0
+)D$@
+)D$P
+)D$`
+)D$p
+)D$ 
+(L$0
+(\$@
+(\$P
+(\$`
+(\$p
+YT$ 
+]_^[
+SVWU
+l$@f
+(d$ 
+(d$ 
+l$Df
+(d$0
+(d$0
+\]_^[
+SVWU
+(T$`
+(\$`
+(t$p
+(t$p
+Yd$ 
+Yl$ 
+Yd$0
+Yl$0
+Yd$@
+Yl$@
+Yd$P
+Yl$P
+]_^[
+SVWU
+l$@f
+(d$ 
+(d$ 
+l$Df
+(d$0
+(d$0
+\]_^[
+SVWU
+(T$`
+(\$`
+(t$p
+(t$p
+Yl$ 
+Yd$ 
+Yd$0
+Yl$0
+Yl$@
+Yd$@
+Yd$P
+Yl$P
+]_^[
+SVWU
+<]_^[
+SVWU
+YL$0
+Y\$@
+Y\$P
+Y\$`
+Y\$p
+YT$ 
+]_^[
+SVWU
+Yd$ 
+Yd$ 
+Yd$0
+Yd$0
+\]_^[
+SVWU
+YT$`
+Y\$`
+Yt$p
+Yt$p
+Yl$ 
+Yd$ 
+Yd$0
+Yl$0
+Yl$@
+Yd$@
+Yd$P
+Yl$P
+]_^[
+SVWU
+ihD$
+<]_^[
+SVWU
+YL$0
+ihL$@
+ihL$P
+ihL$`
+ihL$p
+ihD$
+ihD$ 
+]_^[
+SVWU
+ihL$
+ahD$
+ahL$ 
+ihD$ 
+ihL$0
+ahD$0
+\]_^[
+SVWU
+YT$`
+Y\$`
+QhT$p 
+Yh\$p0
+YhL$
+QhD$
+QhL$ 
+YhD$ 
+YhL$0
+QhD$0
+QhL$@
+YhD$@
+YhL$P
+QhD$P
+]_^[
+SVWU
+)D$ 
+YT$ 
+L]_^[
+SVWU
+)D$@
+)D$P
+)D$`
+)D$p
+)D$ 
+)D$0
+(L$@
+(\$P
+(\$`
+(\$p
+YT$ 
+YT$0
+]_^[
+SVWU
+l$Pf
+(d$ 
+(d$ 
+l$Tf
+(d$0
+(d$0
+l$Xf
+(d$@
+(d$@
+l]_^[
+SVWU
+(T$p
+(\$p
+Yd$ 
+Yl$ 
+Yd$0
+Yl$0
+Yd$@
+Yl$@
+Yd$P
+Yl$P
+Yd$`
+Yl$`
+]_^[
+SVWU
+l$Pf
+(d$ 
+(d$ 
+l$Tf
+(d$0
+(d$0
+l$Xf
+(d$@
+(d$@
+l]_^[
+SVWU
+(T$p
+(\$p
+Yl$ 
+Yd$ 
+Yd$0
+Yl$0
+Yl$@
+Yd$@
+Yd$P
+Yl$P
+Yl$`
+Yd$`
+]_^[
+SVWU
+YT$ 
+L]_^[
+SVWU
+YL$@
+Y\$P
+Y\$`
+Y\$p
+YT$ 
+YT$0
+]_^[
+SVWU
+Yd$ 
+Yd$ 
+Yd$0
+Yd$0
+Yd$@
+Yd$@
+l]_^[
+SVWU
+YT$p
+Y\$p
+Yl$ 
+Yd$ 
+Yd$0
+Yl$0
+Yl$@
+Yd$@
+Yd$P
+Yl$P
+Yl$`
+Yd$`
+]_^[
+SVWU
+ihD$
+ihD$ 
+L]_^[
+SVWU
+YL$@
+ihL$P
+ihL$`
+ihL$p
+ihD$
+ihD$ 
+ihD$0
+]_^[
+SVWU
+ihL$
+ahD$
+ahL$ 
+ihD$ 
+ihL$0
+ahD$0
+ahL$@
+ihD$@
+l]_^[
+SVWU
+YT$p
+Y\$p
+YhL$
+QhD$
+QhL$ 
+YhD$ 
+YhL$0
+QhD$0
+QhL$@
+YhD$@
+YhL$P
+QhD$P
+QhL$`
+YhD$`
+]_^[
+USWV
+<^_[]
+?.!	
+audio_convert: found function: %-4s to %-4s (%s)
+libavresample/audio_convert.c
+%d samples - audio_convert: %s to %s (dithered)
+%d samples - audio_convert: %s to %s (%s)
+cannot remap packed format during conversion
+invalid channel count: %d
+invalid sample format
+invalid NULL pointer for src[%d]
+{no name}
+libavresample/audio_data.c
+cannot remap packed format during copy
+sample format mismatch
+offset out-of-bounds: src=%d dst=%d
+dst is read-only
+error reallocating dst
+AudioData
+[%d to %d] 
+[%d to any] 
+[any to %d] 
+[any to any] 
+audio_mix: found function: [fmt=%s] [c=%s] %s(%s)
+libavresample/audio_mix.c
+Unsupported internal format for mixing: %s
+error setting mix matrix
+audio_mix: %d samples - %d to %d channels (%s)
+Invalid channel counts
+matrix is not set
+Invalid mix coeff type
+audio_mix: %s to %s
+matrix size: %d x %d
+  (ZERO)
+  (SKIP)
+  %0.3f 
+audio_mix: NO FUNCTION FOUND: [fmt=%s] [c=%s] [%d to %d]
+dithering %s to %s is not supported
+libavresample/dither.c
+sample rate must be 48000 or 44100 Hz for triangular_ns dither. using triangular_hp instead.
+dither s16 buffer
+dither flt buffer
+libavresample/options.c
+AVAudioResampleContext
+in_channel_layout
+Input Channel Layout
+in_sample_fmt
+Input Sample Format
+in_sample_rate
+Input Sample Rate
+out_channel_layout
+Output Channel Layout
+out_sample_fmt
+Output Sample Format
+out_sample_rate
+Output Sample Rate
+internal_sample_fmt
+Internal Sample Format
+8-bit unsigned integer
+16-bit signed integer
+32-bit signed integer
+32-bit float
+64-bit double
+8-bit unsigned integer planar
+s16p
+16-bit signed integer planar
+s32p
+32-bit signed integer planar
+fltp
+32-bit float planar
+dblp
+64-bit double planar
+mix_coeff_type
+Mixing Coefficient Type
+16-bit 8.8 Fixed-Point
+32-bit 17.15 Fixed-Point
+Floating-Point
+center_mix_level
+Center Mix Level
+surround_mix_level
+Surround Mix Level
+lfe_mix_level
+LFE Mix Level
+normalize_mix_level
+Normalize Mix Level
+force_resampling
+Force Resampling
+filter_size
+Resampling Filter Size
+phase_shift
+Resampling Phase Shift
+linear_interp
+Use Linear Interpolation
+cutoff
+Cutoff Frequency Ratio
+resample_cutoff
+matrix_encoding
+Matrixed Stereo Encoding
+none
+None
+dolby
+Dolby
+dplii
+Dolby Pro Logic II
+filter_type
+Filter Type
+cubic
+Cubic
+blackman_nuttall
+Blackman Nuttall Windowed Sinc
+kaiser
+Kaiser Windowed Sinc
+kaiser_beta
+Kaiser Window Beta
+dither_method
+Dither Method
+No Dithering
+rectangular
+Rectangular Dither
+triangular
+Triangular Dither
+triangular_hp
+Triangular Dither With High Pass
+triangular_ns
+Triangular Dither With Noise Shaping
+Unsupported internal format for resampling: %s
+libavresample/resample.c
+resample buffer
+resample: %s from %d Hz to %d Hz
+Unable to set resampling compensation
+Error reallocating resampling buffer
+error reallocating output
+error during resampling
+resampled %d in + %d leftover to %d out + %d leftover
+The resampling context is already open.
+Invalid input channel layout: %llu
+Invalid output channel layout: %llu
+Using %s as internal sample format
+remap channels during in_copy
+remap channels during in_convert
+remap channels during out_convert
+remap channels during out_copy
+in_buffer
+resample_out_buffer
+out_buffer
+[start conversion]
+output
+input
+[copy] %s to output
+[copy] %s to out_buffer
+[convert] %s to in_buffer
+[copy] %s to in_buffer
+[downmix] in_buffer
+[resample] %s to %s
+null
+[end conversion]
+[upmix] %s
+[convert] %s to output
+[convert] %s to out_buffer
+Invalid channel layouts
+libavresample/utils.c
+Invalid input channel layout
+Invalid channel map
+libavresample license: LGPL version 2.1 or later
+--prefix=/Users/buildbot/buildslave/libav_osx/build/dev/build_osx32 --cc=clang --extra-cflags='-m32 -arch i386 -march=prescott -mtune=core2 -g -O2 -fno-strict-aliasing -ffast-math -gdwarf-2 -pipe -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.9 -fasm-blocks' --ld=clang --extra-ldflags='-m32 -arch i386 -march=prescott -mtune=core2 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.9' --arch=x86 --enable-shared --disable-static --enable-runtime-cpudetect --disable-all --enable-avcodec --enable-avutil --enable-avresample --enable-avformat --enable-swscale --enable-parser=h264 --enable-decoder='aac,h264,gif,vorbis,mp3,flac,alac,libvpx_vp8,libvpx_vp9,pcm*,valve*' --enable-demuxer='aac,matroska,gif,ogg,mov,mp3,flac,wav,flv' --enable-hwaccels --enable-videotoolbox --enable-muxer=flv --disable-decoder='h263,hevc,mpeg1video,mpeg2video,vc1,vp8,vp9' --enable-libvpx --enable-libvorbis --enable-protocol='file,rtmp'
+[FIFO] add %s to out_fifo
+[FIFO] read from out_fifo to output
+SSE2
+SSE2SLOW
+SSSE3
+SSE4
+FMA4
+Ep(TAp RJRJRJRJRJRJRISISISISISISISISISISISISISISISJRJRJRJRJRJRJRJRJRJRISISISISISISISISJRISISISISISIQ
+p\pYpop
+pWpLpPp\p
+@_av_default_item_name
+@___stack_chk_guard
+@dyld_stub_binder
+@_av_audio_fifo_alloc
+@_av_audio_fifo_drain
+@_av_audio_fifo_free
+@_av_audio_fifo_read
+@_av_audio_fifo_size
+@_av_audio_fifo_write
+@_av_frame_get_buffer
+@_av_free
+@_av_freep
+@_av_get_bytes_per_sample
+@_av_get_channel_layout_nb_channels
+@_av_get_channel_layout_string
+@_av_get_cpu_flags
+@_av_get_packed_sample_fmt
+@_av_get_planar_sample_fmt
+@_av_get_sample_fmt_name
+@_av_lfg_init
+@_av_log
+@_av_malloc_tracked
+@_av_mallocz_tracked
+@_av_opt_free
+@_av_opt_set_defaults
+@_av_reduce
+@_av_rescale_rnd
+@_av_sample_fmt_is_planar
+@_av_samples_alloc
+@_av_samples_fill_arrays
+@_av_samples_get_buffer_size
+@_av_samples_set_silence
+@___bzero
+@___divdi3
+@___moddi3
+@___snprintf_chk
+@___stack_chk_fail
+@_ceil
+@_cos
+@_llrint
+@_llrintf
+@_lrint
+@_lrintf
+@_memcpy
+@_memmove
+@_memset
+@_sin
+resample_
+	audio_fifo_
+idefault_item_name
+get_
+malloc
+opt_
+sample
+alloc
+drain
+free
+read
+size
+write
+ame_get_buffer
+bytes_per_sample
+sample_fmt_name
+hannel_layout_
+pu_flags
+nb_channels
+string
+acked_sample_fmt
+lanar_sample_fmt
+fg_init
+_tracked
+z_tracked
+free
+set_defaults
+duce
+scale_rnd
+_fmt_is_planar
+alloc
+fill_arrays
+get_buffer_size
+set_silence
+build_matrix
+get_
+set_
+open
+is_open
+free
+read
+version
+license
+lloc_context
+vailable
+class
+delay
+out_samples
+matrix
+matrix
+ompensation
+hannel_mapping
+lose
+vert
+_frame
+uration
+P`0`
+0``0`p0`
+0``0`p `p@p
+0``0`pp
+0`p0`` 
+@``P```p
+8`PP``
+_av_audio_fifo_alloc
+_av_audio_fifo_alloc
+_av_audio_fifo_drain
+_av_audio_fifo_drain
+_av_audio_fifo_free
+_av_audio_fifo_free
+_av_audio_fifo_read
+_av_audio_fifo_read
+_av_audio_fifo_size
+_av_audio_fifo_size
+_av_audio_fifo_write
+_av_audio_fifo_write
+_av_default_item_name
+_av_default_item_name
+_av_frame_get_buffer
+_av_frame_get_buffer
+_av_free
+_av_free
+_av_freep
+_av_freep
+_av_get_bytes_per_sample
+_av_get_bytes_per_sample
+_av_get_channel_layout_nb_channels
+_av_get_channel_layout_nb_channels
+_av_get_channel_layout_string
+_av_get_channel_layout_string
+_av_get_cpu_flags
+_av_get_cpu_flags
+_av_get_packed_sample_fmt
+_av_get_packed_sample_fmt
+_av_get_planar_sample_fmt
+_av_get_planar_sample_fmt
+_av_get_sample_fmt_name
+_av_get_sample_fmt_name
+_av_lfg_init
+_av_lfg_init
+_av_log
+_av_log
+_av_malloc_tracked
+_av_malloc_tracked
+_av_mallocz_tracked
+_av_mallocz_tracked
+_av_opt_free
+_av_opt_free
+_av_opt_set_defaults
+_av_opt_set_defaults
+_av_reduce
+_av_reduce
+_av_rescale_rnd
+_av_rescale_rnd
+_av_sample_fmt_is_planar
+_av_sample_fmt_is_planar
+_av_samples_alloc
+_av_samples_alloc
+_av_samples_fill_arrays
+_av_samples_fill_arrays
+_av_samples_get_buffer_size
+_av_samples_get_buffer_size
+_av_samples_set_silence
+_av_samples_set_silence
+_avresample_alloc_context
+_avresample_available
+_avresample_build_matrix
+_avresample_close
+_avresample_config
+_avresample_configuration
+_avresample_convert
+_avresample_convert_frame
+_avresample_free
+_avresample_get_class
+_avresample_get_delay
+_avresample_get_matrix
+_avresample_get_out_samples
+_avresample_is_open
+_avresample_license
+_avresample_open
+_avresample_read
+_avresample_set_channel_mapping
+_avresample_set_compensation
+_avresample_set_matrix
+_avresample_version
+___bzero
+___divdi3
+___moddi3
+___snprintf_chk
+___stack_chk_fail
+___stack_chk_guard
+_av_audio_fifo_alloc
+_av_audio_fifo_drain
+_av_audio_fifo_free
+_av_audio_fifo_read
+_av_audio_fifo_size
+_av_audio_fifo_write
+_av_default_item_name
+_av_frame_get_buffer
+_av_free
+_av_freep
+_av_get_bytes_per_sample
+_av_get_channel_layout_nb_channels
+_av_get_channel_layout_string
+_av_get_cpu_flags
+_av_get_packed_sample_fmt
+_av_get_planar_sample_fmt
+_av_get_sample_fmt_name
+_av_lfg_init
+_av_log
+_av_malloc_tracked
+_av_mallocz_tracked
+_av_opt_free
+_av_opt_set_defaults
+_av_reduce
+_av_rescale_rnd
+_av_sample_fmt_is_planar
+_av_samples_alloc
+_av_samples_fill_arrays
+_av_samples_get_buffer_size
+_av_samples_set_silence
+_ceil
+_cos
+_llrint
+_llrintf
+_lrint
+_lrintf
+_memcpy
+_memmove
+_memset
+_sin
+dyld_stub_binder
+radr://5614542
+__TEXT
+__text
+__TEXT
+__stubs
+__TEXT
+__stub_helper
+__TEXT
+__const
+__TEXT
+__cstring
+__TEXT
+__unwind_info
+__TEXT
+__eh_frame
+__TEXT
+__DATA
+__nl_symbol_ptr
+__DATA
+__got
+__DATA
+__la_symbol_ptr
+__DATA
+__const
+__DATA
+__LINKEDIT
+@loader_path/libavresample.4.dylib
+@loader_path/libavutil.56.dylib
+/usr/lib/libSystem.B.dylib
+/System/Library/Frameworks/VideoToolbox.framework/Versions/A/VideoToolbox
+/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia
+/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo
+/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
+UAWAVAUATSPE
+t	9K
+l$@L
+l$@L
+l$@L
+[A\A]A^A_]
+[A\A]A^A_]
+UAWAVAUATSH
+[A\A]A^A_]
+UAWAVAUATSH
+A;] |
+ffffff.
+|$ D
++ff.
+A;m |
+fffff.
+A;] |
+[A\A]A^A_]
+~4Lc
+ffffff.
+fff.
+fff.
+ffffff.
+ffff.
+ffffff.
+fffff.
+ffffff.
+fffff.
+ffffff.
+ffffff.
+ffffff.
+fff.
+ffff.
+ffffff.
+fff.
+fff.
+ffffff.
+ffffff.
+ffffff.
+ffffff.
+ffffff.
+ffffff.
+fff.
+fffff.
+ffffff.
+ffffff.
+ffffff.
+ffffff.
+ffffff.
+ffffff.
+AWAVSI
+ffffff.
+[A^A_
+UAWAVAUATSH
+fff.
+[A\A]A^A_]
+UAWAVAUATSH
+[A\A]A^A_]
+AWAVSI
+ffff.
+[A^A_
+UAWAVAUATSH
+[A\A]A^A_]
+ffff.
+UAWAVAUATSH
+[A\A]A^A_]
+fff.
+AWAVAUATSI
+[A\A]A^A_
+UAWAVAUATSH
+L$ H
+([A\A]A^A_]
+UAWAVAUATSH
+L$ H
+L$ H
+([A\A]A^A_]
+ffffff.
+ffffff.
+AWAVSI
+ffffff.
+[A^A_
+UAWAVAUATSH
+fff.
+[A\A]A^A_]
+UAWAVAUATSH
+[A\A]A^A_]
+AWAVSI
+ffff.
+[A^A_
+UAWAVAUATSH
+[A\A]A^A_]
+ffff.
+UAWAVAUATSH
+[A\A]A^A_]
+fff.
+AWAVAUATSI
+[A\A]A^A_
+UAWAVAUATSH
+L$ H
+([A\A]A^A_]
+UAWAVAUATSH
+L$ H
+L$ H
+([A\A]A^A_]
+ffffff.
+ffffff.
+~EE1
+ffffff.
+UAWAVAUATSPE
+ r#H
+t$@A
+[A\A]A^A_]
+UAWAVAUATSPI
+[A\A]A^A_]
+UAWAVAUATSH
+)D$p
+)D$`
+)D$P
+)D$@
+)D$0
+)D$ 
+[A\A]A^A_]
+ffff.
+UAWAVATSI
+ffff.
+[A\A^A_]
+UAWAVAUATSH
+[A\A]A^A_]
+ffff.
+UAWAVATSA
+[A\A^A_]
+AVSH
+UAVS
+[A^]
+UAWAVAUATSH
+D$ D9{
+9kXt
+D9S\t	E
+D$pL
+L$`H
+$H;D$ u
+([A\A]A^A_]
+AWAVSH
+[A^A_
+UAWAVAUATSH
+ rJI
+[A\A]A^A_]
+~,Hc
+fffff.
+F D9
+fff.
+Jff.
+}PHc
+N$D9
+~;Ic
+|$(H
+|$(A
+IcNXH
+T$(H
+L$ H
+H;L$
+E;n$
+IcvXH
+~dHc
+ffffff.
+V ffff.
+IcNXH
+T$(H
+L$ H
+AVSPI
+UAWAVAUATSH
+)D$p
+)D$`
+)D$P
+)D$@
+)D$0
+)D$ 
+u$A9u\}D
+ffff.
+[A\A]A^A_]
+AWAVS
+ r!H
+[A^A_
+~oIc
+)ffffff.
+~oIc
+)ffffff.
+~oIc
+&fff.
+ffffff.
+UAWAVAUATSH
+fffff.
+2ff.
+~$ff.
+[A\A]A^A_]
+UAWAVAUATSH
+D$ f
+Bfff.
+D| I
+D;|$
+D$ L
+D;t$
+H;D$`u
+h[A\A]A^A_]
+UAWAVAUATSH
+ffff.
+ffff.
+D;d$
+H;D$Pu
+X[A\A]A^A_]
+UAWAVAUATSH
+D;d$
+H;D$Pu
+X[A\A]A^A_]
+fffff.
+UAWAVAUATSH
+fffff.
+[A\A]A^A_]
+UAVSH
+4qI9
+~,Yf
+~4^f
+t6ffff.
+[A^]
+UAWAVAUATSH
+L$8E
+l$$H
+T$(f
+D$0H
+D$DA
+l$HHc
+?ffff.
+D$`H
+(L$pf
+)L$pf
+(L$pf
+)L$pf
+D$pf
+[A\A]A^A_]
+UAWAVAUATSH
+d$@A
+l$HA
+l$0L
+L$,A
+fff.
+D$0H
+t$XL
+T$`L
+\$PM
+A;G,~"H
+D$`H
+t$XH
+t$`H
+|$XH
+D$xH
+D$pL
+E;G(~6
+\D$l
+D$0H
+\$PIc
+T$XL
+t$`H
+L$,H
+D$`H
+\$PH
+;\$<L
+d$@L
+[A\A]A^A_]
+UAWAVSPA
+[A^A_]
+UAWAVSPI
+fff.
+A;o@|
+[A^A_]
+[A^A_]
+fffff.
+UAWAVAUATSH
+[A\A]A^A_]
+UAWAVAUATSPA
+ffff.
+[A\A]A^A_]
+s)ff.
+UAWAVS
+u4D 
+ffff.
+[A^A_]
+UAWAVAUATSH
+L$4Lcs$Lcc
+D$pH
+L$pI
+D$DD
+t$PA
+YD$p
+L$XH
+D$PE1
+^T$8
+T$xE1
+\\$xf
+^T$`
+XD$h
+XD$h
+ffff.
+^T$X
+D$PH
+t$Df
+H9L$Pt
+D$ Hc
+[A\A]A^A_]
+fff.
+UAWAVSI
+D#G8E
+[A^A_]
+ffff.
+UAWAVAUATSI
+D#G8E
+[A\A]A^A_]
+fff.
+UAWAVSI
+D#G8E
+[A^A_]
+UAWAVAUATSI
+D#G8E
+[A\A]A^A_]
+fff.
+UAWAVAUATSI
+D#G8E
+ffff.
+HcD$
+[A\A]A^A_]
+UAWAVAUATSI
+D#G8E
+[A\A]A^A_]
+UAWAVATSA
+[A\A^A_]
+UAWAVAUATSI
+D#G8E
+F[A\A]A^A_]
+UAWAVAUATSI
+D#G8E
+ fff.
+N[A\A]A^A_]
+UAVSA
+[A^]
+UAWAVAUATSH
+t$h1
+D$pH
+D$h;Gp
+\$XL
+L$pH
+fff.
+G`D;
+t$`H
+\$XH
+D$XH
+L$h9
+T$PHcl$X
+D$HH
+D$pH
+fff.
+L$P)
+D$h9
+D$pH
+D$pH
+t$`E1
+G LcW,
+d$HH
+L$pH
+D$`L
+D$XL
+k$Lc[ D
+L$HH
+D$`Hc
+D$ H
+Hc\$
+t$XH
+\$PH
+T$81
+D$89
+t$XH
+l$PD
+T$,H
+fff.
+L$8H
+T$0I
+t$XH
+L$89
+D$PM
+T$0M
+D$PD
+T$,H
+t$XA
+D$HD
+L$HA
+D#G81
+t$`E
+|$XH
+D$hE
+x[A\A]A^A_]
+UAWAVATSH
+ r$H
+;S$u
+K(;K 
+[A\A^A_]
+fff.
+AVSPI
+ffff.
+UAWAVAUATSH
+T$ H
+|$(H
+T$ D
+l$ H
+D9t$$
+l$(H
+D9t$$
+D$ 4
+|$(L9
+D$ t[A
+;t$$
+t$(H
+[A\A]A^A_]
+l$(H
+AWAVSI
+[A^A_
+UAWAVAUATSPI
+A;Gtt
+C$A;
+C A;Ft
+npE1
+McgpH
+Hcs$HcS
+[A\A]A^A_]
+ffffff.
+AVSP
+Icv$IcV
+ffffff.
+UAWAVATSA
+[A\A^A_]
+!}sH
+trE1
+ffffff.
+[A\A^A_]
+UAWAVAUATSPA
+[A\A]A^A_]
+~oE1
+ffffff.
+[A\A]A^A_]
+ffff.
+AWAVSI
+x/Hc
+*fffff.
+[A^A_
+oTV f
+o\V0f
+oTV f
+o\V0
+LW f
+TW0H
+TW0H
+)LW 
+)TW0H
+TW0H
+)gPH
+)gPH
+oV f
+oV f
+oV f
+oV f
+oV f
+oV f
+o^0f
+of@f
+onPf
+UAWAVSH
+[A^A_]
+)W H
+D$ Hc
+(t$ 
+(t$ 
+D$ Hc
+(t$ 
+(t$ 
+D$ Hc
+Yt$ 
+Yt$ 
+D$ Hc
+YhT$
+Qh\$
+QhT$  
+Yh\$ 0
+D$@Hc
+(t$ 
+(t$ 
+(t$0
+(t$0
+(t$@
+(t$@
+D$@Hc
+(t$ 
+(t$ 
+(t$0
+(t$0
+(t$@
+(t$@
+\$@H
+)D$ Hc
+Y\$ 
+D$@Hc
+Yt$ 
+Yt$ 
+Yt$0
+Yt$0
+Yt$@
+Yt$@
+\$@H
+)D$ Hc
+mhL$ 
+D$@Hc
+QhT$
+Yh\$
+YhT$  
+Qh\$ 0
+QhT$0 
+Yh\$00
+YhT$@ 
+Qh\$@0
+)D$ 
+)D$0Hc
+(\$ 
+(\$0
+D$`Hc
+(t$ 
+(t$ 
+(t$0
+(t$0
+(t$@
+(t$@
+(t$P
+(t$P
+(t$`
+(t$`
+D$`Hc
+(t$ 
+(t$ 
+(t$0
+(t$0
+(t$@
+(t$@
+(t$P
+(t$P
+(t$`
+(t$`
+)D$ 
+)D$@
+)D$`Hc
+Y\$ 
+Y\$@
+Y\$`
+D$`Hc
+Yt$ 
+Yt$ 
+Yt$0
+Yt$0
+Yt$@
+Yt$@
+Yt$P
+Yt$P
+Yt$`
+Yt$`
+)D$ 
+)D$@
+)D$`Hc
+mhL$ 
+mhL$@
+mhL$`
+D$`Hc
+YhT$
+Qh\$
+QhT$  
+Yh\$ 0
+YhT$0 
+Qh\$00
+QhT$@ 
+Yh\$@0
+YhT$P 
+Qh\$P0
+QhT$` 
+Yh\$`0
+UAWAVAUATSH
+l$ E
+([A\A]A^A_]
+?.!	
+audio_convert: found function: %-4s to %-4s (%s)
+libavresample/audio_convert.c
+%d samples - audio_convert: %s to %s (dithered)
+%d samples - audio_convert: %s to %s (%s)
+cannot remap packed format during conversion
+invalid channel count: %d
+invalid sample format
+invalid NULL pointer for src[%d]
+{no name}
+libavresample/audio_data.c
+cannot remap packed format during copy
+sample format mismatch
+offset out-of-bounds: src=%d dst=%d
+dst is read-only
+error reallocating dst
+AudioData
+[%d to %d] 
+[%d to any] 
+[any to %d] 
+[any to any] 
+audio_mix: found function: [fmt=%s] [c=%s] %s(%s)
+libavresample/audio_mix.c
+Unsupported internal format for mixing: %s
+error setting mix matrix
+audio_mix: %d samples - %d to %d channels (%s)
+Invalid channel counts
+matrix is not set
+Invalid mix coeff type
+audio_mix: %s to %s
+matrix size: %d x %d
+  (ZERO)
+  (SKIP)
+  %0.3f 
+audio_mix: NO FUNCTION FOUND: [fmt=%s] [c=%s] [%d to %d]
+dithering %s to %s is not supported
+libavresample/dither.c
+sample rate must be 48000 or 44100 Hz for triangular_ns dither. using triangular_hp instead.
+dither s16 buffer
+dither flt buffer
+libavresample/options.c
+AVAudioResampleContext
+in_channel_layout
+Input Channel Layout
+in_sample_fmt
+Input Sample Format
+in_sample_rate
+Input Sample Rate
+out_channel_layout
+Output Channel Layout
+out_sample_fmt
+Output Sample Format
+out_sample_rate
+Output Sample Rate
+internal_sample_fmt
+Internal Sample Format
+8-bit unsigned integer
+16-bit signed integer
+32-bit signed integer
+32-bit float
+64-bit double
+8-bit unsigned integer planar
+s16p
+16-bit signed integer planar
+s32p
+32-bit signed integer planar
+fltp
+32-bit float planar
+dblp
+64-bit double planar
+mix_coeff_type
+Mixing Coefficient Type
+16-bit 8.8 Fixed-Point
+32-bit 17.15 Fixed-Point
+Floating-Point
+center_mix_level
+Center Mix Level
+surround_mix_level
+Surround Mix Level
+lfe_mix_level
+LFE Mix Level
+normalize_mix_level
+Normalize Mix Level
+force_resampling
+Force Resampling
+filter_size
+Resampling Filter Size
+phase_shift
+Resampling Phase Shift
+linear_interp
+Use Linear Interpolation
+cutoff
+Cutoff Frequency Ratio
+resample_cutoff
+matrix_encoding
+Matrixed Stereo Encoding
+none
+None
+dolby
+Dolby
+dplii
+Dolby Pro Logic II
+filter_type
+Filter Type
+cubic
+Cubic
+blackman_nuttall
+Blackman Nuttall Windowed Sinc
+kaiser
+Kaiser Windowed Sinc
+kaiser_beta
+Kaiser Window Beta
+dither_method
+Dither Method
+No Dithering
+rectangular
+Rectangular Dither
+triangular
+Triangular Dither
+triangular_hp
+Triangular Dither With High Pass
+triangular_ns
+Triangular Dither With Noise Shaping
+Unsupported internal format for resampling: %s
+libavresample/resample.c
+resample buffer
+resample: %s from %d Hz to %d Hz
+Unable to set resampling compensation
+Error reallocating resampling buffer
+error reallocating output
+error during resampling
+resampled %d in + %d leftover to %d out + %d leftover
+The resampling context is already open.
+Invalid input channel layout: %llu
+Invalid output channel layout: %llu
+Using %s as internal sample format
+remap channels during in_copy
+remap channels during in_convert
+remap channels during out_convert
+remap channels during out_copy
+in_buffer
+resample_out_buffer
+out_buffer
+[start conversion]
+output
+input
+[copy] %s to output
+[copy] %s to out_buffer
+[convert] %s to in_buffer
+[copy] %s to in_buffer
+[downmix] in_buffer
+[resample] %s to %s
+null
+[end conversion]
+[upmix] %s
+[convert] %s to output
+[convert] %s to out_buffer
+Invalid channel layouts
+libavresample/utils.c
+Invalid input channel layout
+Invalid channel map
+libavresample license: LGPL version 2.1 or later
+--prefix=/Users/buildbot/buildslave/libav_osx/build/dev/build_osx64 --cc=clang --extra-cflags='-m64 -arch x86_64 -g -O2 -fno-strict-aliasing -ffast-math -gdwarf-2 -pipe -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.9 -fasm-blocks' --ld=clang --extra-ldflags='-m64 -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.9' --arch=x86 --enable-shared --disable-static --enable-runtime-cpudetect --disable-all --enable-avcodec --enable-avutil --enable-avresample --enable-avformat --enable-swscale --enable-parser=h264 --enable-decoder='aac,h264,gif,vorbis,mp3,flac,alac,libvpx_vp8,libvpx_vp9,pcm*,valve*' --enable-demuxer='aac,matroska,gif,ogg,mov,mp3,flac,wav,flv' --enable-hwaccels --enable-videotoolbox --enable-muxer=flv --disable-decoder='h263,hevc,mpeg1video,mpeg2video,vc1,vp8,vp9' --enable-libvpx --enable-libvorbis --enable-protocol='file,rtmp'
+[FIFO] add %s to out_fifo
+[FIFO] read from out_fifo to output
+SSE2
+SSE2SLOW
+SSSE3
+SSE4
+FMA4
+`*ISAp
+p8RFRFRFRFRFRFRESESESESESESESESESESESESESESESFRFRFRFRFRFRFRFRFRFRESESESESESESESESFRESESESESESEQ
+@_av_default_item_name
+@___stack_chk_guard
+@dyld_stub_binder
+@_av_audio_fifo_alloc
+@_av_audio_fifo_drain
+@_av_audio_fifo_free
+@_av_audio_fifo_read
+@_av_audio_fifo_size
+@_av_audio_fifo_write
+@_av_frame_get_buffer
+@_av_free
+@_av_freep
+@_av_get_bytes_per_sample
+@_av_get_channel_layout_nb_channels
+@_av_get_channel_layout_string
+@_av_get_cpu_flags
+@_av_get_packed_sample_fmt
+@_av_get_planar_sample_fmt
+@_av_get_sample_fmt_name
+@_av_lfg_init
+@_av_log
+@_av_malloc_tracked
+@_av_mallocz_tracked
+@_av_opt_free
+@_av_opt_set_defaults
+@_av_reduce
+@_av_rescale_rnd
+@_av_sample_fmt_is_planar
+@_av_samples_alloc
+@_av_samples_fill_arrays
+@_av_samples_get_buffer_size
+@_av_samples_set_silence
+@___bzero
+@___snprintf_chk
+@___stack_chk_fail
+@_ceil
+@_cos
+@_llrint
+@_llrintf
+@_lrint
+@_lrintf
+@_memcpy
+@_memmove
+@_sin
+resample_
+	audio_fifo_
+idefault_item_name
+get_
+malloc
+opt_
+sample
+alloc
+drain
+free
+read
+size
+write
+ame_get_buffer
+bytes_per_sample
+sample_fmt_name
+hannel_layout_
+pu_flags
+nb_channels
+string
+acked_sample_fmt
+lanar_sample_fmt
+fg_init
+_tracked
+z_tracked
+free
+set_defaults
+duce
+scale_rnd
+_fmt_is_planar
+alloc
+fill_arrays
+get_buffer_size
+set_silence
+build_matrix
+get_
+set_
+open
+is_open
+free
+read
+version
+license
+lloc_context
+vailable
+class
+delay
+out_samples
+matrix
+matrix
+ompensation
+hannel_mapping
+lose
+vert
+_frame
+uration
+@P0Pp0``P`pP`p0`P0``0``@pp@pp0`P0``0``@pp@pp`
+0``0pp`
+0pp0``
+1 @ @
+Q 0 0
+Y"^"^
+!o!o.
+$<,4-
+S)g)
+G!?!/&
+&z&j,4,4.
+!o!o.
+ @ @ p `@`0  00`0` `;5]S:
+2.GY1
+2.GI1
+K5zfL
+?AZv>
+?1Zf>
+L4msK
+_av_audio_fifo_alloc
+_av_audio_fifo_alloc
+_av_audio_fifo_drain
+_av_audio_fifo_drain
+_av_audio_fifo_free
+_av_audio_fifo_free
+_av_audio_fifo_read
+_av_audio_fifo_read
+_av_audio_fifo_size
+_av_audio_fifo_size
+_av_audio_fifo_write
+_av_audio_fifo_write
+_av_default_item_name
+_av_default_item_name
+_av_frame_get_buffer
+_av_frame_get_buffer
+_av_free
+_av_free
+_av_freep
+_av_freep
+_av_get_bytes_per_sample
+_av_get_bytes_per_sample
+_av_get_channel_layout_nb_channels
+_av_get_channel_layout_nb_channels
+_av_get_channel_layout_string
+_av_get_channel_layout_string
+_av_get_cpu_flags
+_av_get_cpu_flags
+_av_get_packed_sample_fmt
+_av_get_packed_sample_fmt
+_av_get_planar_sample_fmt
+_av_get_planar_sample_fmt
+_av_get_sample_fmt_name
+_av_get_sample_fmt_name
+_av_lfg_init
+_av_lfg_init
+_av_log
+_av_log
+_av_malloc_tracked
+_av_malloc_tracked
+_av_mallocz_tracked
+_av_mallocz_tracked
+_av_opt_free
+_av_opt_free
+_av_opt_set_defaults
+_av_opt_set_defaults
+_av_reduce
+_av_reduce
+_av_rescale_rnd
+_av_rescale_rnd
+_av_sample_fmt_is_planar
+_av_sample_fmt_is_planar
+_av_samples_alloc
+_av_samples_alloc
+_av_samples_fill_arrays
+_av_samples_fill_arrays
+_av_samples_get_buffer_size
+_av_samples_get_buffer_size
+_av_samples_set_silence
+_av_samples_set_silence
+_avresample_alloc_context
+_avresample_available
+_avresample_build_matrix
+_avresample_close
+_avresample_config
+_avresample_configuration
+_avresample_convert
+_avresample_convert_frame
+_avresample_free
+_avresample_get_class
+_avresample_get_delay
+_avresample_get_matrix
+_avresample_get_out_samples
+_avresample_is_open
+_avresample_license
+_avresample_open
+_avresample_read
+_avresample_set_channel_mapping
+_avresample_set_compensation
+_avresample_set_matrix
+_avresample_version
+___bzero
+___snprintf_chk
+___stack_chk_fail
+___stack_chk_guard
+_av_audio_fifo_alloc
+_av_audio_fifo_drain
+_av_audio_fifo_free
+_av_audio_fifo_read
+_av_audio_fifo_size
+_av_audio_fifo_write
+_av_default_item_name
+_av_frame_get_buffer
+_av_free
+_av_freep
+_av_get_bytes_per_sample
+_av_get_channel_layout_nb_channels
+_av_get_channel_layout_string
+_av_get_cpu_flags
+_av_get_packed_sample_fmt
+_av_get_planar_sample_fmt
+_av_get_sample_fmt_name
+_av_lfg_init
+_av_log
+_av_malloc_tracked
+_av_mallocz_tracked
+_av_opt_free
+_av_opt_set_defaults
+_av_reduce
+_av_rescale_rnd
+_av_sample_fmt_is_planar
+_av_samples_alloc
+_av_samples_fill_arrays
+_av_samples_get_buffer_size
+_av_samples_set_silence
+_ceil
+_cos
+_llrint
+_llrintf
+_lrint
+_lrintf
+_memcpy
+_memmove
+_sin
+dyld_stub_binder
+radr://5614542
+__TEXT
+__text
+__TEXT
+__stubs
+__TEXT
+__stub_helper
+__TEXT
+__cstring
+__TEXT
+__const
+__TEXT
+__unwind_info
+__TEXT
+__eh_frame
+__TEXT
+__DATA_CONST
+__got
+__DATA_CONST
+__const
+__DATA_CONST
+__DATA
+__la_symbol_ptr
+__DATA
+__data
+__DATA
+__LINKEDIT
+@loader_path/libavresample.4.dylib
+Iyh3
+@loader_path/libavutil.56.dylib
+/usr/lib/libSystem.B.dylib
+/System/Library/Frameworks/VideoToolbox.framework/Versions/A/VideoToolbox
+/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia
+/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo
+/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
+!O!x
+!O!x
+!O#x
+L#D0o
+!O)!
+MCD0o
+!O)A
+D0oCD0o@
+rnt,
+sN8-
+p~ x"
+p~ x"
+0~ x"
+TfD@
+0~ x"
+ x"|
+TbD@
+Tf$@|'%@|
+ x"|
+TfD@
+)(s@
+4hBA
+TI{w
+7`{w
+5h*A
+5h"A
+*+xh
+m!8!.B8!.!
+@8k]
+S)}@
+*,xh
+S)}@
+*,xh
+S)}@
+R-xh
+S)}@
+SI|@
+*+xh
+K%@x+%
+S)}@
+*,xh
+8a.!8a.
+K%@xk=
+S)}@
+*,xh
+S)}@
+R-xh
+S)}@
+(o!(a
+ .!(!
+SI|@
+*+xh
+@y+%
+S)}@
+*,xh
+S)}@
+*,xh
+R@E@
+S)}@
+R-xh
+S)}@
+R D@
+SI|@
+R,xh
+R D@
+S)}@
+R-xh
+R D@
+S)}@
+R-xh
+S)}@
+*,xh
+S)}@
+SI|@
+S)}@
+S)}@
+S)}@
+*,xh
+S)}@
+Th.A
+Th*A
+7h.A
+4h.A
+4h.A
+T(,A
+N)b"
+Ti&@
+h&D)h&
+TP}	
+TpZ@
+4xZ@
+4y"@
+T  `
+T( `
+T( `
+7b"@
+h&K)
+Th"@
+5)a@
+T( `
+51b@
+4iBA
+5Myh
+T	$@
+RL|}
+RL|}
+RL|}
+T ( 
+*Mm|
+y"xB
+T%xb
+jv|c
+TA(!
+bzi|B
+G$@x
+gz)x
+%@xL
+y7x)
+%@xL
+y7x)
+D	@Lp	
+#NT	
+	@}B
+#	@}c
+yk=	
+d	@L
+"np	
+#nP	
+T($@
+\ 	`
+\!(`
+\!(`
+\!(`
+\!(`
+oNyk
+annB
+^!(b
+LA-4
+y 8 
+r D@
+R`~(
+B@q	
+r"(!
+T	q}
+R`E@
+TH|@
+7*q}
+!^ ( 
+)hZ@
+Lii8k	
+)`~@
+ohw~
+o!hb
+oqL/
+opL/
+oqH/
+!N#@
+opH/
+oqH/
+opH/
+oqD/
+opD/
+HXcx
+4*}@
+T*!A
+4h:A
+bD)J}@
+RH}`
+T	!A
+)h:A
+5h>A
+Tiv@
+TiN@
+q@	A:
+4i*@
+4`"@
+5`"@
+4`z@
+4`z@
+4a*@
+4`R@
+7`R@
+7wR@
+7wZ@
+7vZ@
+Ti&@
+Ti"@
+T.yl
+(6h>@
++ih8J	
+Rh&@
+i*D)
+NEON
+audio_convert: found function: %-4s to %-4s (%s)
+libavresample/audio_convert.c
+%d samples - audio_convert: %s to %s (dithered)
+%d samples - audio_convert: %s to %s (%s)
+cannot remap packed format during conversion
+invalid channel count: %d
+invalid sample format
+invalid NULL pointer for src[%d]
+{no name}
+libavresample/audio_data.c
+cannot remap packed format during copy
+sample format mismatch
+offset out-of-bounds: src=%d dst=%d
+dst is read-only
+error reallocating dst
+AudioData
+[%d to %d] 
+[%d to any] 
+[any to %d] 
+[any to any] 
+audio_mix: found function: [fmt=%s] [c=%s] %s(%s)
+libavresample/audio_mix.c
+Unsupported internal format for mixing: %s
+error setting mix matrix
+audio_mix: %d samples - %d to %d channels (%s)
+Invalid channel counts
+matrix is not set
+Invalid mix coeff type
+audio_mix: %s to %s
+matrix size: %d x %d
+  (ZERO)
+  (SKIP)
+  %0.3f 
+audio_mix: NO FUNCTION FOUND: [fmt=%s] [c=%s] [%d to %d]
+dithering %s to %s is not supported
+libavresample/dither.c
+sample rate must be 48000 or 44100 Hz for triangular_ns dither. using triangular_hp instead.
+dither s16 buffer
+dither flt buffer
+libavresample/options.c
+AVAudioResampleContext
+in_channel_layout
+Input Channel Layout
+in_sample_fmt
+Input Sample Format
+in_sample_rate
+Input Sample Rate
+out_channel_layout
+Output Channel Layout
+out_sample_fmt
+Output Sample Format
+out_sample_rate
+Output Sample Rate
+internal_sample_fmt
+Internal Sample Format
+8-bit unsigned integer
+16-bit signed integer
+32-bit signed integer
+32-bit float
+64-bit double
+8-bit unsigned integer planar
+s16p
+16-bit signed integer planar
+s32p
+32-bit signed integer planar
+fltp
+32-bit float planar
+dblp
+64-bit double planar
+mix_coeff_type
+Mixing Coefficient Type
+16-bit 8.8 Fixed-Point
+32-bit 17.15 Fixed-Point
+Floating-Point
+center_mix_level
+Center Mix Level
+surround_mix_level
+Surround Mix Level
+lfe_mix_level
+LFE Mix Level
+normalize_mix_level
+Normalize Mix Level
+force_resampling
+Force Resampling
+filter_size
+Resampling Filter Size
+phase_shift
+Resampling Phase Shift
+linear_interp
+Use Linear Interpolation
+cutoff
+Cutoff Frequency Ratio
+resample_cutoff
+matrix_encoding
+Matrixed Stereo Encoding
+none
+None
+dolby
+Dolby
+dplii
+Dolby Pro Logic II
+filter_type
+Filter Type
+cubic
+Cubic
+blackman_nuttall
+Blackman Nuttall Windowed Sinc
+kaiser
+Kaiser Windowed Sinc
+kaiser_beta
+Kaiser Window Beta
+dither_method
+Dither Method
+No Dithering
+rectangular
+Rectangular Dither
+triangular
+Triangular Dither
+triangular_hp
+Triangular Dither With High Pass
+triangular_ns
+Triangular Dither With Noise Shaping
+Unsupported internal format for resampling: %s
+libavresample/resample.c
+resample buffer
+resample: %s from %d Hz to %d Hz
+Unable to set resampling compensation
+Error reallocating resampling buffer
+error reallocating output
+error during resampling
+resampled %d in + %d leftover to %d out + %d leftover
+The resampling context is already open.
+Invalid input channel layout: %llu
+Invalid output channel layout: %llu
+Using %s as internal sample format
+remap channels during in_copy
+remap channels during in_convert
+remap channels during out_convert
+remap channels during out_copy
+in_buffer
+resample_out_buffer
+out_buffer
+[start conversion]
+output
+input
+[copy] %s to output
+[copy] %s to out_buffer
+[convert] %s to in_buffer
+[copy] %s to in_buffer
+[downmix] in_buffer
+[resample] %s to %s
+null
+[end conversion]
+[upmix] %s
+[convert] %s to output
+[convert] %s to out_buffer
+Invalid channel layouts
+libavresample/utils.c
+Invalid input channel layout
+Invalid channel map
+libavresample license: LGPL version 2.1 or later
+--prefix=/Volumes/P4/steam/thirdpartycode/nonredist/ffmpeg/dev/build_osxarm64 --cc=clang --extra-cflags='-arch arm64 -g -O2 -fno-strict-aliasing -ffast-math -gdwarf-2 -pipe -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -fasm-blocks' --ld=clang --extra-ldflags='-arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.9' --enable-cross-compile --target-os=darwin --arch=arm64 --enable-shared --disable-static --enable-runtime-cpudetect --disable-all --enable-avcodec --enable-avutil --enable-avresample --enable-avformat --enable-swscale --enable-parser=h264 --enable-decoder='aac,h264,gif,vorbis,mp3,flac,alac,libvpx_vp8,libvpx_vp9,pcm*,valve*' --enable-demuxer='aac,matroska,gif,ogg,mov,mp3,flac,wav,flv' --enable-hwaccels --enable-videotoolbox --enable-muxer=flv --disable-decoder='h263,hevc,mpeg1video,mpeg2video,vc1,vp8,vp9' --enable-libvpx --enable-libvorbis --enable-protocol='file,rtmp'
+[FIFO] add %s to out_fifo
+[FIFO] read from out_fifo to output
+!	@;
+pHTAp8RFRFRFRFRFRFRESESESESESESESESESESESESESESESFRFRFRFRFRFRFRFRFRFRESESESESESESESESFRESESESESESEQ"
+@_av_default_item_name
+@___chkstk_darwin
+@___stack_chk_guard
+@dyld_stub_binder
+@___stack_chk_fail
+@_av_audio_fifo_alloc
+@_av_audio_fifo_drain
+@_av_audio_fifo_free
+@_av_audio_fifo_read
+@_av_audio_fifo_size
+@_av_audio_fifo_write
+@_av_frame_get_buffer
+@_av_free
+@_av_freep
+@_av_get_bytes_per_sample
+@_av_get_channel_layout_nb_channels
+@_av_get_channel_layout_string
+@_av_get_cpu_flags
+@_av_get_packed_sample_fmt
+@_av_get_planar_sample_fmt
+@_av_get_sample_fmt_name
+@_av_lfg_init
+@_av_log
+@_av_malloc_tracked
+@_av_mallocz_tracked
+@_av_opt_free
+@_av_opt_set_defaults
+@_av_reduce
+@_av_rescale_rnd
+@_av_sample_fmt_is_planar
+@_av_samples_alloc
+@_av_samples_fill_arrays
+@_av_samples_get_buffer_size
+@_av_samples_set_silence
+@_bzero
+@_cos
+@_memcpy
+@_memmove
+@_memset_pattern16
+@_sin
+@_snprintf
+resample_
+build_matrix
+vget_
+set_
+open
+is_open
+free
+read
+version
+license
+lloc_context
+vailable
+class
+delay
+out_samples
+matrix
+matrix
+ompensation
+hannel_mapping
+lose
+vert
+_frame
+uration
+	opt_
+audio_fifo_
+sample
+malloc
+get_
+default_item_name
+free
+set_defaults
+duce
+scale_rnd
+alloc
+write
+size
+read
+free
+drain
+_fmt_is_planar
+alloc
+fill_arrays
+get_buffer_size
+set_silence
+z_tracked
+_tracked
+fg_init
+sample_fmt_name
+bytes_per_sample
+lanar_sample_fmt
+acked_sample_fmt
+pu_flags
+hannel_layout_
+string
+nb_channels
+ame_get_buffer
+PP$PT0\`0\d
+h`<tl@xl@xp
+XT<xl@|l@|p
+_av_audio_fifo_alloc
+_av_audio_fifo_alloc
+_av_audio_fifo_drain
+_av_audio_fifo_drain
+_av_audio_fifo_free
+_av_audio_fifo_free
+_av_audio_fifo_read
+_av_audio_fifo_read
+_av_audio_fifo_size
+_av_audio_fifo_size
+_av_audio_fifo_write
+_av_audio_fifo_write
+_av_default_item_name
+_av_default_item_name
+_av_frame_get_buffer
+_av_frame_get_buffer
+_av_free
+_av_free
+_av_freep
+_av_freep
+_av_get_bytes_per_sample
+_av_get_bytes_per_sample
+_av_get_channel_layout_nb_channels
+_av_get_channel_layout_nb_channels
+_av_get_channel_layout_string
+_av_get_channel_layout_string
+_av_get_cpu_flags
+_av_get_cpu_flags
+_av_get_packed_sample_fmt
+_av_get_packed_sample_fmt
+_av_get_planar_sample_fmt
+_av_get_planar_sample_fmt
+_av_get_sample_fmt_name
+_av_get_sample_fmt_name
+_av_lfg_init
+_av_lfg_init
+_av_log
+_av_log
+_av_malloc_tracked
+_av_malloc_tracked
+_av_mallocz_tracked
+_av_mallocz_tracked
+_av_opt_free
+_av_opt_free
+_av_opt_set_defaults
+_av_opt_set_defaults
+_av_reduce
+_av_reduce
+_av_rescale_rnd
+_av_rescale_rnd
+_av_sample_fmt_is_planar
+_av_sample_fmt_is_planar
+_av_samples_alloc
+_av_samples_alloc
+_av_samples_fill_arrays
+_av_samples_fill_arrays
+_av_samples_get_buffer_size
+_av_samples_get_buffer_size
+_av_samples_set_silence
+_av_samples_set_silence
+_avresample_alloc_context
+_avresample_available
+_avresample_build_matrix
+_avresample_close
+_avresample_config
+_avresample_configuration
+_avresample_convert
+_avresample_convert_frame
+_avresample_free
+_avresample_get_class
+_avresample_get_delay
+_avresample_get_matrix
+_avresample_get_out_samples
+_avresample_is_open
+_avresample_license
+_avresample_open
+_avresample_read
+_avresample_set_channel_mapping
+_avresample_set_compensation
+_avresample_set_matrix
+_avresample_version
+___chkstk_darwin
+___stack_chk_fail
+___stack_chk_guard
+_av_audio_fifo_alloc
+_av_audio_fifo_drain
+_av_audio_fifo_free
+_av_audio_fifo_read
+_av_audio_fifo_size
+_av_audio_fifo_write
+_av_default_item_name
+_av_frame_get_buffer
+_av_free
+_av_freep
+_av_get_bytes_per_sample
+_av_get_channel_layout_nb_channels
+_av_get_channel_layout_string
+_av_get_cpu_flags
+_av_get_packed_sample_fmt
+_av_get_planar_sample_fmt
+_av_get_sample_fmt_name
+_av_lfg_init
+_av_log
+_av_malloc_tracked
+_av_mallocz_tracked
+_av_opt_free
+_av_opt_set_defaults
+_av_reduce
+_av_rescale_rnd
+_av_sample_fmt_is_planar
+_av_samples_alloc
+_av_samples_fill_arrays
+_av_samples_get_buffer_size
+_av_samples_set_silence
+_bzero
+_cos
+_memcpy
+_memmove
+_memset_pattern16
+_sin
+_snprintf
+dyld_stub_binder
+radr://5614542
+libavresample.4.dylib
+/<&]
+@<vh
+z [;
+yPl2~
+`E"%OW{c
+bRH`
+*Rg;
+k5E]
+W!G26
+RKR 
+PDk]
+Z`s{

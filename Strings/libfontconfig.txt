@@ -1,0 +1,4054 @@
+__TEXT
+__text
+__TEXT
+__symbol_stub
+__TEXT
+__stub_helper
+__TEXT
+__cstring
+__TEXT
+__const
+__TEXT
+__unwind_info
+__TEXT
+__DATA
+__dyld
+__DATA
+__nl_symbol_ptr
+__DATA
+__la_symbol_ptr
+__DATA
+__const
+__DATA
+__data
+__DATA
+__common
+__DATA
+__bss
+__DATA
+__LINKEDIT
+@loader_path/libfontconfig.dylib
+i7OE
+@loader_path/libfreetype.dylib
+/usr/lib/libexpat.1.dylib
+/usr/lib/libSystem.B.dylib
+/usr/lib/libgcc_s.1.dylib
+P^_]
+fffff.
+fff.
+fffff.
+ffffff.
+fff.
+fffff.
+ffffff.
+ffff.
+ffffff.
+ ^_]
+0^_]
+^_[]
+P^[]
+`^_]
+fff.
+ffffff.
+L^_[]
+fff.
+fff.
+P^_]
+QZ^&
+ffffff.
+ffffff.
+ffffff.
++A<=
++A<=
++A<=
+ffffff.
+ffffff.
+ffffff.
+ffff.
+ffffff.
+@ ;E
+^_[]
+ ^_]
+fff.
+`^_]
+l^_[]
+l^_[]
+fffff.
+0^_]
+ffffff.
+ffff.
+<^_[]
+ffffff.
+<^_[]
+ffffff.
+<^_[]
+ffffff.
+P^_]
+@^_]
+fff.
+^_[]
+fff.
+ffffff.
+ffffff.
+ffff.
+ffffff.
+L^_[]
+ffffff.
+fffff.
+p^_]
+ffff.
+ffffff.
+ffffff.
+0^_]
+UUUU)
+3333
+%3333
+ffffff.
+ffff.
+fffff.
+<^_[]
+ffff.
+0^_]
+ffff.
+@^_]
+<^_[]
+,^_[]
+ffff.
+fffff.
+ ^_]
+ffff.
+0^_]
+\^_[]
+fff.
+fff.
+^_[]
+@^_]
+ffffff.
+fff.
+ffffff.
+fff.
+fffff.
+^_[]
+0^_]
+IP;A
+`^_]
+<^_[]
+|^_[]
+ffffff.
+L^_[]
+^_[]
+^_[]
+fffff.
+ ^_]
+ffffff.
+P^_]
+fff.
+0^[]
+ffffff.
+L^_[]
+^_[]
+fff.
+L^_[]
+^_[]
+ ^[]
+fff.
+0^_]
+fffff.
+ffffff.
+`^[]
+fff.
+,^_[]
+ ^[]
+gfff
+^_[]
+p^_]
+fff.
+fliS1
+fliS
+SOPG
+SOPG
+BUSG
+BUSG
+l^_[]
+fff.
+fffff.
+<^_[]
+ffff.
+R\;J
+fff.
+CBDA
+^_[]
+`^_]
+fff.
+0^[]
+ffffff.
+ltuo
+-stib
+<^_[]
+ffff.
+ffff.
+fff.
+ffffff.
+ffff.
+@^_]
+fffff.
+L^_[]
+A@+E
+^_[]
+ffff.
+P^_]
+ffff.
+ffffff.
+@^_]
+0^_]
+@^_]
+ffffff.
+fff.
+ffff.
+ffffff.
+ffff.
+^_[]
+ffff.
+fffff.
+@^_]
+fff.
+ffff.
+^_[]
+fffff.
+^_[]
+<^_[]
+^_[]
+L^_[]
+fff.
+^_[]
+ffffff.
+l^_[]
+fff.
+ffff.
+L^_[]
+\^_[]
+fff.
+fff.
+fff.
+fffff.
+ffffff.
+P^_]
+ffffff.
+@^_]
+ffff.
+ffffff.
+fffff.
+l^_[]
+^_[]
+ffffff.
+^_[]
+ffff.
+fffff.
+0^_]
+fffff.
+ffffff.
+ffff.
+ ^_]
+ ^[]
+ffffff.
+ffffff.
+fffff.
+fff.
+fffff.
+P^_]
+fff.
+\^_[]
+0^_]
+ffffff.
+ffff.
+0^_]
+ffff.
+ffff.
+@^_]
+fff.
+fff.
+@^_]
+@^_]
+fff.
+@^_]
+@^_]
+@^_]
+ffff.
+@^_]
+ffffff.
+ffff.
+@^_]
+ffff.
+@^_]
+ffff.
+@^_]
+@^_]
+@^_]
+@^_]
+@^_]
+ffffff.
+fff.
+fffff.
+fff.
+ffff.
+ffff.
+fff.
+fff.
+ffff.
+ffffff.
+^_[]
+fffff.
+fff.
+@^_]
+ffff.
+^_[]
+fffff.
+ffff.
+ffff.
+ ^_[]
+ffff.
+@^_]
+fffff.
+ffff.
+ffff.
+ffff.
+fff.
+fffff.
+0^_]
+ffffff.
+^_[]
+ffffff.
+ffffff.
+ffffff.
+ffffff.
+l^_[]
+fff.
+<^_[]
+0^_]
+l^_[]
+ffff.
+0^_]
+fff.
+P^_]
+0^_]
+ffffff.
+P^_]
+fff.
+l^_[]
+`^_]
+^_[]
+ffffff.
+ffff.
+|^_[]
+P^_]
+@^_]
+P^_]
+fff.
+P^_]
+P^_]
+@^_]
+@^_]
+ffff.
+fff.
+@^_]
+fff.
+fff.
+0^_]
+ffff.
+fff.
+ffff.
+0^_]
+,^_[]
+p^_]
+0^_]
+<^_[]
+ffffff.
+fffff.
+ffff.
+0^_]
+fff.
+fctt
+.NEW
+.LCK
+.TMP-XXXXXX
+FcCacheFini
+fccache.c
+fcCacheChains[i] == NULL
+fcCacheMaxLevel == 0
+FcDirCacheWriteDir dir "%s" file "%s"
+write cache
+Fontconfig error: %s: out of memory
+%s: not cleaning %s cache directory
+unwritable
+non-existent
+%s: cleaning cache directory
+-le32d4.cache-4
+Fontconfig error: %s: allocation failure
+%s: invalid cache file: %s
+%s: %s: missing directory: %s 
+CACHEDIR.TAG
+Created CACHEDIR.TAG at %s
+Unable to create CACHEDIR.TAG at %s
+FONTCONFIG_USE_MMAP
+FcCacheTimeValid dir "%s" cache checksum %d dir checksum %d
+Fontconfig warning: Directory/file mtime in the future. New fonts may not be detected.
+Add Subst 
+FcConfigSubstitute 
+FcConfigSubstitute test 
+No match
+Substitute 
+FcConfigSubstitute edit
+FcConfigSubstitute done
+HOME
+XDG_CACHE_HOME
+/.cache
+XDG_CONFIG_HOME
+/.config
+XDG_DATA_HOME
+/.local/share
+FONTCONFIG_FILE
+fonts.conf
+FONTCONFIG_PATH
+/Users/buildbot/buildslave/pango_osx/build/fontconfig-2.11.1/lib32/etc/fonts
+Fontconfig warning: FcPattern object %s does not accept value
+Not adding
+position not on list
+%s list before 
+Append
+Prepend
+%s list after 
+Fontconfig warning: <name> tag has target="font" in a <match target="pattern">.
+adding fonts from%s
+charsets %d -> %d leaves %d -> %d
+ [marker] 
+ [marker]
+langset (alloc error)
+%04x:
+ %08x
+Null pattern
+Pattern has %d elts (size %d)
+	%s:
+Integer
+Double
+String
+Matrix
+Range
+Bool
+CharSet
+LangSet
+Field
+Const
+Assign
+AssignReplace
+PrependFirst
+AppendLast
+Delete
+DeleteAll
+Quest
+Equal
+(ignore blanks)
+NotEqual
+Less
+LessEqual
+More
+MoreEqual
+Contains
+NotContains
+Plus
+Minus
+Times
+Divide
+Comma
+Floor
+Ceil
+Round
+Trunc
+Listing
+Invalid
+none
+"%s"
+true
+false
+charset
+langset:
+(pattern) 
+(font) 
+ quest 
+ colon 
+Not 
+Floor 
+Ceil 
+Round 
+Trunc 
+pattern 
+font 
+scan 
+any 
+all 
+first 
+not_first 
+Edit %s 
+match
+[test]
+[edit]
+FontSet %d of %d
+Font %d 
+FC_DEBUG
+FC_DEBUG=%s
+<unknown>
+<void>
+%d(i)
+%g(f)
+True
+False
+[%g %g; %g %g]
+face
+FC_LANG
+LC_ALL
+LC_CTYPE
+LANG
+en-us
+	Scanning dir %s
+cache scan dir %s
+	Scanning file %s...
+done
+Final font pattern:
+downcase
+basename
+dirname
+cescape
+shescape
+xmlescape
+delete
+escape
+translate
+unknown converter "%s"
+Fontconfig: Pattern format error: 
+expected character data at %d
+&amp;
+&lt;
+&gt;
+'\''
+expected identifier at %d
+expected non-negative number at %d
+unparse
+fccat
+"%{file|basename|cescape}" %{index} "%{-file{%{=unparse|cescape}}}"
+fcmatch
+%{file:-<unknown filename>|basename}: "%{family[0]:-<unknown family>}" "%{style[0]:-<unknown style>}"
+fclist
+%{?file{%{file}: }}%{-file{%{=unparse}}}
+pkgkit
+%{[]family{font(%{family|downcase|delete( )})
+}}%{[]lang{font(:lang=%{lang|downcase|translate(_,-)})
+unknown builtin "%s"
+format ended while expecting '%c'
+expected '%c' at %d
+outline
+scalable
+found family (n %2d p %d e %d l 0x%04x) %s
+family
+familylang
+found full   (n %2d p %d e %d l 0x%04x) %s
+fullname
+fullnamelang
+found style  (n %2d p %d e %d l 0x%04x) %s
+style
+stylelang
+using FreeType family "%s"
+using FreeType style "%s"
+using filename for family %s
+postscriptname
+file
+index
+fontversion
+	os2 weight class %d maps to weight %d
+	os2 width class %d maps to width %d
+capability
+	Type1 weight %s maps to %d
+FOUNDRY
+RELATIVE_SETWIDTH
+SETWIDTH_NAME
+	setwidth %s maps to %d
+	Style %s maps to weight %d
+	Style %s maps to width %d
+	Style %s maps to slant %d
+	Style %s maps to decorative %d
+unknown
+slant
+weight
+width
+foundry
+decorative
+hash
+SPACING
+PIXEL_SIZE
+charset
+lang
+spacing
+pixelsize
+antialias
+fontformat
+ttable:Silf 
+complex_ features in this font: %s
+otlayout:
+shadow
+caps
+antiqua
+romansc
+embosed
+dunhill
+italic
+kursiv
+oblique
+ultracondensed
+extracondensed
+semicondensed
+condensed
+normal
+semiexpanded
+extraexpanded
+ultraexpanded
+expanded
+extended
+thin
+extralight
+ultralight
+light
+book
+regular
+medium
+demibold
+demi
+semibold
+extrabold
+superbold
+ultrabold
+bold
+ultrablack
+superblack
+extrablack
+<ultra
+black
+heavy
+Adobe
+adobe
+Bigelow
+Bitstream
+bitstream
+Gnat
+culmus
+Iorsh
+HanYang System
+hanyang
+Font21
+hwan
+International Typeface Corporation
+Linotype
+linotype
+LINOTYPE-HELL
+Microsoft
+microsoft
+Monotype
+monotype
+Omega
+omega
+Tiro Typeworks
+tiro
+XFree86
+xfree86
+Xorg
+xorg
+MACINTOSH
+SJIS
+UCS-2BE
+UTF-16BE
+ASCII
+ISO-8859-1
+sha256:
+Fontconfig warning: no <cachedir> elements found. Check configuration.
+Fontconfig warning: adding <cachedir>%s</cachedir>
+/Users/buildbot/buildslave/pango_osx/build/fontconfig-2.11.1/lib32/var/cache/fontconfig
+/fontconfig
+Fontconfig warning: adding <cachedir prefix="xdg">fontconfig</cachedir>
+Fontconfig error: out of memory
+/usr/share/fonts
+font charset
+%s charset
+%s(%u) 
+ %04x
+%s(%u) 
+POSIX
+Fontconfig warning: ignoring %s: not a valid language tag
+Fontconfig warning: ignoring %s: not a valid region tag
+Checking the existence of %s.orth
+normalized: %s -> %s
+Unable to normalize %s
+FcLangSet 
+ contains 
+	Missing bitmap %s
+	Missing string %s
+FcFontRenderPrepare
+fcmatch.c
+pat != NULL
+font != NULL
+FcFontSetMatch
+sets != NULL
+p != NULL
+result != NULL
+FcFontMatch
+FcFontSetSort
+Sort 
+Score
+Font %s:%s matches language %d
+First font 
+FcFontSort
+Add 
+Match 
+Best score
+ %s: %g 
+size
+%g %g %g %g
+\-:,
+\=_:,
+%lg %lg %lg %lg
+roman
+proportional
+dual
+mono
+charcell
+rgba
+vrgb
+vbgr
+hintnone
+hintstyle
+hintslight
+hintmedium
+hintfull
+hinting
+verticallayout
+autohint
+globaladvance
+minspace
+embolden
+embeddedbitmap
+lcdnone
+lcdfilter
+lcddefault
+lcdlight
+lcdlegacy
+aspect
+rasterizer
+scale
+charwidth
+charheight
+matrix
+namelang
+fontfeatures
+prgname
+Raw pattern:
+Serialized pattern:
+msdosfs
+pcfs
+Regexp compile error: %s
+Regexp exec error: %s
+	Loading config file %s
+UTF-8
+cannot get parse buffer
+failed reading config file
+Cannot load config file "%s"
+Cannot load default config file
+mismatching element
+invalid attribute '%s'
+info
+warning
+error
+Fontconfig %s: "%s", line %d: 
+Fontconfig %s: line %d: 
+Fontconfig %s: 
+out of memory
+target
+pattern
+font
+default
+invalid name target "%s"
+name
+missing pattern element name
+unknown pattern element %d
+unknown pattern element
+bad font selector
+invalid langset: %s
+invalid element in langset
+invalid character: 0x%04x
+invalid element in charset
+"%s" is not known boolean
+too many elements in range
+invalid element in range
+invalid range
+wrong number of matrix elements
+"%s": not a valid double
+"%s": not a valid integer
+missing edit name
+mode
+invalid edit mode "%s"
+binding
+Expression doesn't take any effects for delete and delete_all
+invalid constant used : %s
+saw %s, expected %s
+void
+number
+string
+bool
+FT_Face
+langset
+weak
+strong
+same
+invalid binding "%s"
+scan
+invalid test target "%s"
+qual
+first
+not_first
+invalid test qual "%s"
+missing test name
+compare
+invalid test compare "%s"
+ignore-blanks
+invalid test ignore-blanks "%s"
+missing test expression
+Having multiple values in <test> isn't supported and may not work as expected
+non-family
+non-integer rescan
+invalid element in blank
+Having multiple <family> in <alias> isn't supported and may not work as expected
+bad alias
+missing family in alias
+invalid match target "%s"
+<match target="scan"> cannot edit user-defined object "%s"
+invalid match element
+No <test> nor <edit> elements in <match>
+ignore_missing
+deprecated
+prefix
+conf.d
+reading configurations from %s is deprecated. please move it to %s manually
+empty cache directory name ignored
+out of memory; cannot add cache directory %s
+empty font pattern name ignored
+out of memory; cannot add pattern %s
+empty font directory name ignored
+out of memory; cannot add directory %s
+unknown element "%s"
+fontconfig
+invalid doctype "%s"
+Cannot open config dir "%s"
+	Scanning config dir %s
+.conf
+Signature: 8a477f597d28d172789f06886806bc55
+# This file is a cache directory tag created by fontconfig.
+# For information about cache directory tags, see:
+#       http://www.brynosaurus.com/cachedir/
+0123456789abcdef
+?!#$%&()*+./0123456789;<>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[]^abcdefghijklmnopqrstuvwxyz{|}~
+ !"#$%&'()*+,-./01234
+789:;<=>?@ABCDEFGHIJKLMNOPQRST
+zh-cn
+zh-tw
+()/<>[]{}	
+a100
+a101
+a102
+a103
+a104
+a105
+a106
+a107
+a108
+a109
+a110
+a111
+a112
+a117
+a118
+a119
+a120
+a121
+a122
+a123
+a124
+a125
+a126
+a127
+a128
+a129
+a130
+a131
+a132
+a133
+a134
+a135
+a136
+a137
+a138
+a139
+a140
+a141
+a142
+a143
+a144
+a145
+a146
+a147
+a148
+a149
+a150
+a151
+a152
+a153
+a154
+a155
+a156
+a157
+a158
+a159
+a160
+a161
+a162
+a163
+a164
+a165
+a166
+a167
+a168
+a169
+a170
+a171
+a172
+a173
+a174
+a175
+a176
+a177
+a178
+a179
+a180
+a181
+a182
+a183
+a184
+a185
+a186
+a187
+a188
+a189
+a190
+a191
+a192
+a193
+a194
+a195
+a196
+a197
+a198
+a199
+a200
+a201
+a202
+a203
+a204
+a205
+a206
+zh-tw
+zh-cn
+zh-tw
+zh-cn
+zh-hk
+zh-sg
+zh-mo
+	 en
+	$en
+	(en
+	,en
+	0en
+	4en
+	<en
+	@en
+	Den
+	Hen
+UTF-16BE
+MACINTOSH
+SJIS
+UTF-16BE
+UTF-16BE
+SJIS-WIN
+GB2312
+BIG-5
+Wansung
+Johab
+UTF-16BE
+ASCII
+UTF-16BE
+ISO-8859-1
+SJIS-WIN
+ASCII
+ADBE
+adobe
+AGFA
+agfa
+ALTS
+altsys
+APPL
+apple
+ARPH
+arphic
+ATEC
+alltype
+BITS
+bitstream
+CANO
+cannon
+culmus
+DYNA
+dynalab
+EPSN
+epson
+fujitsu
+IMPR
+impress
+LARA
+larabiefonts
+LEAF
+interleaf
+LETR
+letraset
+LINO
+linotype
+MACR
+macromedia
+MONO
+monotype
+microsoft
+monotype
+PARA
+paratype
+QMSI
+RICO
+ricoh
+0123456789abcdef
+vRQ>
+8STs
+LwH'
+az-az
+az-ir
+ber-dz
+ber-ma
+ku-am
+ku-iq
+ku-ir
+ku-tr
+mn-cn
+mn-mn
+pa-pk
+pap-an
+pap-aw
+ps-af
+ps-pk
+ti-er
+ti-et
+zh-cn
+zh-hk
+zh-mo
+zh-sg
+zh-tw
+B 	%B 	%
+B"	dB"	d
+CB$F
+@e_6
+t!! 
+ p:@(
+	>2R
+Az@{EG
+$H*(
+k(I	AB
+@1PD
+,D0j
+Y.`A
+&CR]
+@!0I
+b%DD
+TMu,
+AHNAn"
+nJ,pf
+XP@n2
+B@H;
+" "TH
+"1@B
+B0  
+7HMz
+2*E{1
+ 	TM
+DRW+
+j02^
+BcSX
+!Ft2
+	0PP
+nK*&
+2Jq]
+9@Qx,)
+	,a0
+$ P 
+_}{w
+S5|D~
+D]GW
+ !"#
+%&'()*+
+-./123456789:;<=
+BDEC
+FGHIJK
+OPQRST
+_`ab
+cdefgh
+uvwxy
+{|}~
+ !"#%'()*+.01234569;<=8>?@ABCDEFGHIJLMPQSVTUXYZ[\]_`bdefghiklnpqrtuwx{|}~
+$&-/7:KNORW^acjmosyz
+file
+size
+weight
+foundry
+fullname
+pixelsize
+decorative
+fullnamelang
+globaladvance
+hinting
+minspace
+hintstyle
+fontformat
+fontversion
+fontfeatures
+outline
+autohint
+slant
+scale
+postscriptname
+scalable
+embolden
+lang
+antialias
+family
+hash
+namelang
+embeddedbitmap
+familylang
+verticallayout
+matrix
+rasterizer
+aspect
+charset
+width
+charwidth
+charheight
+rgba
+style
+lcdfilter
+spacing
+index
+stylelang
+capability
+prgname
+8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
+8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
+Assi
+fffiflffifflstst
+assign
+assign_replace
+prepend
+prepend_first
+append
+append_last
+delete
+delete_all
+not_eq
+less
+less_eq
+more
+more_eq
+contains
+not_contains
+fontconfig
+fontpattern
+cachedir
+cache
+include
+config
+match
+alias
+blank
+rescan
+prefer
+accept
+default
+family
+selectfont
+acceptfont
+rejectfont
+glob
+pattern
+patelt
+test
+edit
+double
+string
+matrix
+range
+bool
+charset
+langset
+name
+const
+not_eq
+less
+less_eq
+more
+more_eq
+contains
+not_contains
+plus
+minus
+times
+divide
+floor
+ceil
+round
+trunc
+cinu
+bmysPS
+  P0@ p@
+@0@p
+`@@`
+0`0``0`p
+` `P
+P` 0
+`p  p
+p pP  
+pPpP
+PppPppp
+`Pp0
+0@P @
+`P`PPPPPPP`
+dyld_stub_binding_helper
+__dyld_func_lookup
+_FcDirCacheBasename
+_FcCacheFindByAddr
+_FcRefInc
+_lock_cache
+_FcCacheFindByAddrUnlocked
+_FcRefDec
+_FcDirCacheDisposeUnlocked
+_unlock_cache
+_free_lock
+_FcRefAdd
+_FcDirCacheProcess
+_FcDirCacheMapHelper
+_FcDirCacheOpenFile
+_FcDirCacheMapFd
+_FcDirCacheValidConfig
+_FcCacheInsert
+_random_level
+_FcRefInit
+_FcDirCacheValidateHelper
+_FcCacheFindByStat
+_FcCacheTimeValid
+_FcCacheIsMmapSafe
+_FcMutexFinish
+_FcMutexUnlock
+_FcCacheRemoveUnlocked
+_FcMutexInit
+_FcMutexLock
+_MD5Init
+_MD5Update
+_MD5Final
+_MD5Transform
+_FcConfigEnsure
+_FcRefInit
+_FcConfigNewestFile
+_FcRefInc
+_FcRefDec
+_FcSubstDestroy
+_FcConfigAddDirList
+_FcConfigPromote
+_FcConfigMatchValueList
+_FcConfigValues
+_FcConfigAdd
+_FcConfigDel
+_FcConfigPatternDel
+_FcConfigPatternAdd
+_FcConfigPatternCanon
+_FcConfigFileExists
+_FcConfigGetPath
+_FcConfigFreePath
+_FcConfigGlobsMatch
+_FcConfigPatternsMatch
+_FcConfigEvaluate
+_FcRefInit
+_FcRefIsConst
+_FcRefDec
+_FcCharSetFindLeafPos
+_FcCharSetPutLeaf
+_FcCharSetFindLeaf
+_FcRefInc
+_FcCharSetIterStart
+_FcCharSetIterNext
+_FcCharSetOperate
+_FcCharSetIntersectLeaf
+_FcCharSetUnionLeaf
+_FcCharSetFindLeafForward
+_FcCharSetAddLeaf
+_FcCharSetSubtractLeaf
+_FcCharSetPopCount
+_FcCharSetIterSet
+_FcCharSetParseValue
+_FcCharSetInsertLeaf
+_FcCharSetUnparseValue
+_FcCharSetFreezeLeaf
+_FcCharSetFreezeBase
+_FcCharSetFreezeOrig
+_FcCharSetFindFrozen
+_FcRefSetConst
+_FcCharSetHash
+_FcCharLeafHash
+_FcCharLeafEntCreate
+__FcValuePrintFile
+_FcValueBindingPrint
+_FcRefSetConst
+_FcRefInit
+_FcFileScanFontConfig
+_cmpstringp
+_FcPatternFormatToBuf
+_FcFormatContextInit
+_interpret_expr
+_FcFormatContextDone
+_escaped_char
+_interpret_percent
+_expect_char
+_consume_char
+_interpret_builtin
+_interpret_subexpr
+_interpret_filter_in
+_interpret_filter_out
+_interpret_cond
+_interpret_count
+_interpret_enumerate
+_interpret_simple
+_maybe_interpret_converts
+_align_to_width
+_interpret_convert
+_read_word
+_cescape
+_shescape
+_xmlescape
+_delete_chars
+_escape_chars
+_translate_chars
+_message
+_read_chars
+_FcCharIsPunct
+_skip_subexpr
+_skip_expr
+_skip_percent
+_maybe_skip_subexpr
+_maybe_interpret_subexpr
+_FcVendorFoundry
+_FcSfntNameTranscode
+_FcSfntNameLanguage
+_FcNoticeFoundry
+_FcStringInPatternElement
+_FcFontCapabilities
+_FcStringIsConst
+_FcStringContainsConst
+_FcGetPixelSize
+_FcFreeTypeUseNames
+_FcUcs4ToGlyphName
+_FcFreeTypeGlyphNameIndex
+_FcFreeTypeCharSetAndSpacingForSize
+_GetScriptTags
+_addtag
+_compareulong
+_FcFreeTypeCheckGlyph
+_FcGlyphNameToUcs4
+_FcHashGlyphName
+_FcLooksLikeSJIS
+_FcVendorMatch
+_FcHashInitSHA256Digest
+_FcHashComputeSHA256Digest
+_FcHashSHA256ToString
+_FcInitFallbackConfig
+_FcLangSetBitSet
+_FcLangSetIndex
+_FcLangSetBitReset
+_FcLangSetBitGet
+_FcLangSetCompareStrSet
+_FcRefInit
+_FcLangSetContainsLang
+_FcLangSetOperate
+_FcLangContains
+_FcListValueListMatchAny
+_FcListHashTableInit
+_FcListAppend
+_FcListHashTableCleanup
+_FcListPatternHash
+_FcListPatternEqual
+_FcGetDefaultObjectLangIndex
+_FcListValueListEqual
+_FcListValueListHash
+_FcListValueHash
+_FcListMatrixHash
+_FcObjectToMatcher
+_FcCompareValueList
+_FcFontSetMatchInternal
+_FcCompare
+_FcSortCompare
+_FcCompareLang
+_FcSortWalk
+_FcCompareFamily
+_FcCompareString
+_FcCompareNumber
+_FcCompareSize
+_FcCompareBool
+_FcCompareFilename
+_FcCompareCharSet
+_FcCompareHash
+_FcComparePostScript
+_FcObjectFindById
+_FcNameFindNext
+_FcNameConvert
+_FcNameUnparseString
+_FcObjectTypeLookup
+__FcObjectLookupOtherTypeByName
+_FcObjectTypeHash
+_FcRefInit
+_FcRefIsConst
+_FcRefDec
+_FcPatternObjectPosition
+_FcValueListEqual
+_FcValueListHash
+_FcRefInc
+_FcRefSetConst
+_FcValueHash
+_FcDoubleHash
+_FcDirChecksum
+_FcFStatFs
+_Adler32Init
+_FcDirChecksumScandirFilter
+_FcDirChecksumScandirSorter
+_Adler32Update
+_Adler32Finish
+_FcStrCaseWalkerInit
+_FcStrCaseWalkerNext
+__FcStrRegexCmp
+_FcStrIsAtIgnoreBlanksAndCase
+_FcStrIsAtIgnoreCase
+_FcCharIsPunct
+_FcStrCanonAbsoluteFilename
+_FcRefInit
+__FcStrSetAppend
+_FcRefIsConst
+_FcRefDec
+_FcStrSetReference
+_FcRefInc
+_FcStrCaseWalkerLong
+_FcExprDestroy
+_FcConfigParseAndLoadDir
+_FcConfigParseInit
+_FcStartDoctypeDecl
+_FcEndDoctypeDecl
+_FcStartElement
+_FcEndElement
+_FcCharacterData
+_FcConfigMessage
+_FcConfigCleanup
+_FcPStackPop
+_FcVStackClear
+_FcVStackPeek
+_FcVStackPopAndDestroy
+_FcExprMatrixFreeShallow
+_FcParseDir
+_FCParseFontPattern
+_FcParseCacheDir
+_FcParseInclude
+_FcParseMatch
+_FcParseAlias
+_FcParseBlank
+_FcParseRescan
+_FcParseFamilies
+_FcParseFamily
+_FcParseTest
+_FcParseEdit
+_FcParseInt
+_FcParseDouble
+_FcParseString
+_FcParseMatrix
+_FcParseRange
+_FcParseBool
+_FcParseCharSet
+_FcParseLangSet
+_FcParseAcceptRejectFont
+_FcParsePattern
+_FcParsePatelt
+_FcParseName
+_FcParseBinary
+_FcParseUnary
+_FcPopUnary
+_FcVStackPushExpr
+_FcVStackCreateAndPush
+_FcPopExpr
+_FcExprCreateOp
+_FcExprCreateString
+_FcExprCreateName
+_FcExprCreateConst
+_FcExprCreateInteger
+_FcExprCreateDouble
+_FcExprCreateMatrix
+_FcExprCreateBool
+_FcExprCreateCharSet
+_FcExprCreateLangSet
+_FcExprMatrixCopyShallow
+_FcPopBinary
+_FcConfigGetAttribute
+_FcVStackPushName
+_FcPopValue
+_FcVStackPushPattern
+_FcVStackPushLangSet
+_FcVStackPushCharSet
+_FcVStackPushBool
+_FcConfigLexBool
+_FcVStackPushRange
+_FcVStackPushMatrix
+_FcVStackPushString
+_FcStrtod
+_FcVStackPushDouble
+_FcVStackPushInteger
+_FcConfigLexMode
+_FcConfigLexBinding
+_FcEditCreate
+_FcVStackPushEdit
+_FcTypecheckExpr
+_FcTypecheckValue
+_FcTypeName
+_FcConfigLexOp
+_FcConfigLexCompare
+_FcTestCreate
+_FcVStackPushTest
+_FcVStackElements
+_FcVStackFetch
+_FcRuleCreate
+_FcElementMap
+_FcPStackPush
+_FcConfigSaveAttr
+_FcSortCmpStr
+_FcExprMatrixFree
+_ftglue_qalloc
+_ftglue_free
+_FcDirCacheCreateTagFile.cache_tag_contents
+_bin2hex
+_valueToChar
+_charToValue
+_FcBoolDefaults
+_FcCodePageRange
+_platform_order
+_nameid_order
+_FcFreeTypeQueryFace.exclusive_chars
+_prefer_unicode
+__fc_name_to_ucs
+__fc_glyph_names
+__fc_ucs_to_name
+_AdobeSymbolEnt
+_fcFtLanguage
+_fcFtEncoding
+_fcMacRomanFake
+_FcVendorFoundries
+_FcHashSHA256ToString.hex
+_FcHashComputeSHA256Digest.k
+_FcHashInitSHA256Digest.h
+_fcLangCountrySets
+_fcLangCharSetRanges
+_fcLangData
+_FcObjectTypeLookup.wordlist
+_FcObjectTypeNamePool_contents
+_FcObjectTypeHash.asso_values
+_fcCaseFoldChars
+_fcCaseFold
+_fcModeOps
+_fcCompareOps
+_fcElementMap
+_weightConsts
+_widthConsts
+_slantConsts
+_decorativeConsts
+_fcFontDecoders
+_AdobeSymbol
+__FcMatchers
+_FcObjects
+__FcBaseConstants
+dyld__mach_header
+_FcDirCacheCreateTagFile.cache_tag_contents_size
+__FcConfigHomeEnabled
+_s_FT_New_Face
+_FcNoticeFoundries
+_next_id
+_fcCacheChains
+_fcCacheMaxLevel
+_FcCacheIsMmapSafe.static_status
+_cache_lock
+__fcConfig
+_FcRandom.statebuf
+_FcRandom.initialized
+_default_lang
+_default_prgname
+_FcParseInclude.userdir
+_FcParseInclude.userconf
+_FcParseInclude.warn_conf
+_FcParseInclude.warn_confd
+_FcAlignSize
+_FcAtomicCreate
+_FcAtomicDeleteNew
+_FcAtomicDestroy
+_FcAtomicLock
+_FcAtomicNewFile
+_FcAtomicOrigFile
+_FcAtomicReplaceOrig
+_FcAtomicUnlock
+_FcBlanksAdd
+_FcBlanksCreate
+_FcBlanksDestroy
+_FcBlanksIsMember
+_FcCacheCopySet
+_FcCacheCreateTagFile
+_FcCacheDir
+_FcCacheFini
+_FcCacheNumFont
+_FcCacheNumSubdir
+_FcCacheObjectDereference
+_FcCacheObjectReference
+_FcCacheSubdir
+_FcCharSetAddChar
+_FcCharSetCopy
+_FcCharSetCount
+_FcCharSetCoverage
+_FcCharSetCreate
+_FcCharSetDelChar
+_FcCharSetDestroy
+_FcCharSetEqual
+_FcCharSetFindLeafCreate
+_FcCharSetFirstPage
+_FcCharSetFreeze
+_FcCharSetFreezerCreate
+_FcCharSetFreezerDestroy
+_FcCharSetHasChar
+_FcCharSetIntersect
+_FcCharSetIntersectCount
+_FcCharSetIsSubset
+_FcCharSetMerge
+_FcCharSetNew
+_FcCharSetNextPage
+_FcCharSetPrint
+_FcCharSetSerialize
+_FcCharSetSerializeAlloc
+_FcCharSetSubtract
+_FcCharSetSubtractCount
+_FcCharSetUnion
+_FcConfigAcceptFilename
+_FcConfigAcceptFont
+_FcConfigAddBlank
+_FcConfigAddCache
+_FcConfigAddCacheDir
+_FcConfigAddConfigDir
+_FcConfigAddConfigFile
+_FcConfigAddDir
+_FcConfigAddFontDir
+_FcConfigAddRule
+_FcConfigAllocExpr
+_FcConfigAppFontAddDir
+_FcConfigAppFontAddFile
+_FcConfigAppFontClear
+_FcConfigBuildFonts
+_FcConfigCompareValue
+_FcConfigCreate
+_FcConfigDestroy
+_FcConfigEnableHome
+_FcConfigFilename
+_FcConfigFini
+_FcConfigGetBlanks
+_FcConfigGetCache
+_FcConfigGetCacheDirs
+_FcConfigGetConfigDirs
+_FcConfigGetConfigFiles
+_FcConfigGetCurrent
+_FcConfigGetFontDirs
+_FcConfigGetFonts
+_FcConfigGetRescanInterval
+_FcConfigGetRescanInverval
+_FcConfigGetSysRoot
+_FcConfigGlobAdd
+_FcConfigHome
+_FcConfigInit
+_FcConfigParseAndLoad
+_FcConfigPatternsAdd
+_FcConfigReference
+_FcConfigSetCurrent
+_FcConfigSetFonts
+_FcConfigSetRescanInterval
+_FcConfigSetRescanInverval
+_FcConfigSetSysRoot
+_FcConfigSubstitute
+_FcConfigSubstituteWithPat
+_FcConfigUptoDate
+_FcConfigXdgCacheHome
+_FcConfigXdgConfigHome
+_FcConfigXdgDataHome
+_FcDebugVal
+_FcDefaultFini
+_FcDefaultSubstitute
+_FcDirCacheBuild
+_FcDirCacheClean
+_FcDirCacheCreateTagFile
+_FcDirCacheLoad
+_FcDirCacheLoadFile
+_FcDirCacheRead
+_FcDirCacheRebuild
+_FcDirCacheReference
+_FcDirCacheRescan
+_FcDirCacheScan
+_FcDirCacheUnlink
+_FcDirCacheUnload
+_FcDirCacheValid
+_FcDirCacheWrite
+_FcDirSave
+_FcDirScan
+_FcDirScanConfig
+_FcEditDestroy
+_FcEditPrint
+_FcExprPrint
+_FcFileIsDir
+_FcFileIsFile
+_FcFileIsLink
+_FcFileScan
+_FcFileScanConfig
+_FcFini
+_FcFontList
+_FcFontMatch
+_FcFontRenderPrepare
+_FcFontSetAdd
+_FcFontSetCreate
+_FcFontSetDeserialize
+_FcFontSetDestroy
+_FcFontSetList
+_FcFontSetMatch
+_FcFontSetPrint
+_FcFontSetSerialize
+_FcFontSetSerializeAlloc
+_FcFontSetSort
+_FcFontSetSortDestroy
+_FcFontSort
+_FcFreeTypeCharIndex
+_FcFreeTypeCharSet
+_FcFreeTypeCharSetAndSpacing
+_FcFreeTypeGetPrivateMap
+_FcFreeTypeIsExclusiveLang
+_FcFreeTypeLangSet
+_FcFreeTypePrivateToUcs4
+_FcFreeTypeQuery
+_FcFreeTypeQueryFace
+_FcFreeTypeUcs4ToPrivate
+_FcGetDefaultLang
+_FcGetDefaultLangs
+_FcGetLangs
+_FcGetPrgname
+_FcGetVersion
+_FcHashGetSHA256Digest
+_FcHashGetSHA256DigestFromFile
+_FcHashGetSHA256DigestFromMemory
+_FcIdentityMatrix
+_FcInit
+_FcInitBringUptoDate
+_FcInitDebug
+_FcInitLoadConfig
+_FcInitLoadConfigAndFonts
+_FcInitLoadOwnConfig
+_FcInitLoadOwnConfigAndFonts
+_FcInitReinitialize
+_FcIsFsMmapSafe
+_FcIsFsMtimeBroken
+_FcLangCompare
+_FcLangGetCharSet
+_FcLangNormalize
+_FcLangSetAdd
+_FcLangSetCompare
+_FcLangSetContains
+_FcLangSetCopy
+_FcLangSetCreate
+_FcLangSetDel
+_FcLangSetDestroy
+_FcLangSetEqual
+_FcLangSetGetLangs
+_FcLangSetHasLang
+_FcLangSetHash
+_FcLangSetPrint
+_FcLangSetPromote
+_FcLangSetSerialize
+_FcLangSetSerializeAlloc
+_FcLangSetSubtract
+_FcLangSetUnion
+_FcListPatternMatchAny
+_FcMakeDirectory
+_FcMakeTempfile
+_FcMatrixCopy
+_FcMatrixEqual
+_FcMatrixFree
+_FcMatrixMultiply
+_FcMatrixRotate
+_FcMatrixScale
+_FcMatrixShear
+_FcNameBool
+_FcNameConstant
+_FcNameGetConstant
+_FcNameGetObjectType
+_FcNameParse
+_FcNameParseCharSet
+_FcNameParseLangSet
+_FcNameRegisterConstants
+_FcNameRegisterObjectTypes
+_FcNameUnparse
+_FcNameUnparseCharSet
+_FcNameUnparseEscaped
+_FcNameUnparseLangSet
+_FcNameUnparseValue
+_FcNameUnparseValueList
+_FcNameUnregisterConstants
+_FcNameUnregisterObjectTypes
+_FcObjectFromName
+_FcObjectGetSet
+_FcObjectLookupBuiltinIdByName
+_FcObjectLookupIdByName
+_FcObjectLookupOtherNameById
+_FcObjectLookupOtherTypeById
+_FcObjectLookupOtherTypeByName
+_FcObjectName
+_FcObjectSetAdd
+_FcObjectSetBuild
+_FcObjectSetCreate
+_FcObjectSetDestroy
+_FcObjectSetVaBuild
+_FcObjectValidType
+_FcOpPrint
+_FcOpen
+_FcPatternAdd
+_FcPatternAddBool
+_FcPatternAddCharSet
+_FcPatternAddDouble
+_FcPatternAddFTFace
+_FcPatternAddInteger
+_FcPatternAddLangSet
+_FcPatternAddMatrix
+_FcPatternAddString
+_FcPatternAddWeak
+_FcPatternAppend
+_FcPatternBuild
+_FcPatternCreate
+_FcPatternDel
+_FcPatternDestroy
+_FcPatternDuplicate
+_FcPatternEqual
+_FcPatternEqualSubset
+_FcPatternFilter
+_FcPatternFormat
+_FcPatternGet
+_FcPatternGetBool
+_FcPatternGetCharSet
+_FcPatternGetDouble
+_FcPatternGetFTFace
+_FcPatternGetInteger
+_FcPatternGetLangSet
+_FcPatternGetMatrix
+_FcPatternGetString
+_FcPatternHash
+_FcPatternObjectAdd
+_FcPatternObjectAddBool
+_FcPatternObjectAddDouble
+_FcPatternObjectAddInteger
+_FcPatternObjectAddString
+_FcPatternObjectAddWithBinding
+_FcPatternObjectDel
+_FcPatternObjectFindElt
+_FcPatternObjectGet
+_FcPatternObjectGetDouble
+_FcPatternObjectGetInteger
+_FcPatternObjectGetString
+_FcPatternObjectInsertElt
+_FcPatternObjectListAdd
+_FcPatternPrint
+_FcPatternReference
+_FcPatternRemove
+_FcPatternSerialize
+_FcPatternSerializeAlloc
+_FcPatternVaBuild
+_FcRandom
+_FcRuleDestroy
+_FcSerializeAlloc
+_FcSerializeCreate
+_FcSerializeDestroy
+_FcSerializeOffset
+_FcSerializePtr
+_FcSerializeReserve
+_FcStat
+_FcStatChecksum
+_FcStrBasename
+_FcStrBufChar
+_FcStrBufData
+_FcStrBufDestroy
+_FcStrBufDone
+_FcStrBufDoneStatic
+_FcStrBufInit
+_FcStrBufString
+_FcStrBuildFilename
+_FcStrCanonFilename
+_FcStrCmp
+_FcStrCmpIgnoreBlanksAndCase
+_FcStrCmpIgnoreCase
+_FcStrCmpIgnoreCaseAndDelims
+_FcStrContainsIgnoreBlanksAndCase
+_FcStrContainsIgnoreCase
+_FcStrContainsWord
+_FcStrCopy
+_FcStrCopyFilename
+_FcStrDirname
+_FcStrDowncase
+_FcStrFree
+_FcStrGlobMatch
+_FcStrHashIgnoreCase
+_FcStrLastSlash
+_FcStrListCreate
+_FcStrListDone
+_FcStrListFirst
+_FcStrListNext
+_FcStrMatchIgnoreCaseAndDelims
+_FcStrPlus
+_FcStrRegexCmp
+_FcStrRegexCmpIgnoreCase
+_FcStrSerialize
+_FcStrSerializeAlloc
+_FcStrSetAdd
+_FcStrSetAddFilename
+_FcStrSetAddLangs
+_FcStrSetCreate
+_FcStrSetDel
+_FcStrSetDestroy
+_FcStrSetEqual
+_FcStrSetMember
+_FcStrStr
+_FcStrStrIgnoreCase
+_FcStrUsesHome
+_FcStringHash
+_FcSubstPrint
+_FcTestDestroy
+_FcTestPrint
+_FcUcs4ToUtf8
+_FcUtf16Len
+_FcUtf16ToUcs4
+_FcUtf8Len
+_FcUtf8ToUcs4
+_FcValueCanonicalize
+_FcValueDestroy
+_FcValueEqual
+_FcValueListAppend
+_FcValueListCreate
+_FcValueListDestroy
+_FcValueListDuplicate
+_FcValueListPrepend
+_FcValueListPrint
+_FcValueListPrintWithPosition
+_FcValueListSerialize
+_FcValueListSerializeAlloc
+_FcValuePrint
+_FcValuePrintFile
+_FcValuePrintWithPosition
+_FcValueSave
+_default_langs
+_fontconfig_ft2_new_face_substitute
+_ftglue_face_goto_table
+_ftglue_stream_frame_enter
+_ftglue_stream_frame_exit
+_ftglue_stream_pos
+_ftglue_stream_seek
+_other_types
+_FT_Done_Face
+_FT_Done_FreeType
+_FT_Get_BDF_Property
+_FT_Get_Char_Index
+_FT_Get_First_Char
+_FT_Get_Glyph_Name
+_FT_Get_Next_Char
+_FT_Get_PS_Font_Info
+_FT_Get_Postscript_Name
+_FT_Get_Sfnt_Name
+_FT_Get_Sfnt_Name_Count
+_FT_Get_Sfnt_Table
+_FT_Get_X11_Font_Format
+_FT_Has_PS_Glyph_Names
+_FT_Init_FreeType
+_FT_Load_Glyph
+_FT_Load_Sfnt_Table
+_FT_New_Face
+_FT_Select_Charmap
+_FT_Select_Size
+_OSAtomicAdd32Barrier
+_OSAtomicCompareAndSwap32Barrier
+_OSMemoryBarrier
+_XML_ErrorString
+_XML_GetBuffer
+_XML_GetCurrentLineNumber
+_XML_GetErrorCode
+_XML_ParseBuffer
+_XML_ParserCreate
+_XML_ParserFree
+_XML_SetCharacterDataHandler
+_XML_SetDoctypeDeclHandler
+_XML_SetElementHandler
+_XML_SetUserData
+___assert_rtn
+___error
+___memcpy_chk
+___memmove_chk
+___memset_chk
+___snprintf_chk
+___sprintf_chk
+___stack_chk_fail
+___stack_chk_guard
+___stderrp
+___stdoutp
+___strcat_chk
+___strcpy_chk
+___strncpy_chk
+_abs
+_access
+_atoi
+_calloc
+_chmod$UNIX2003
+_close$UNIX2003
+_closedir$UNIX2003
+_fclose
+_fcntl$UNIX2003
+_fdopen
+_feof
+_fflush
+_fopen
+_fprintf
+_fread
+_free
+_fstat$INODE64
+_fstatfs$INODE64
+_fwrite$UNIX2003
+_getcwd
+_getenv
+_getpid
+_getprogname
+_initstate
+_isspace
+_link
+_localeconv
+_lstat$INODE64
+_malloc
+_memcmp
+_memcpy
+_memset
+_mkdir
+_mkstemp
+_mmap$UNIX2003
+_munmap$UNIX2003
+_open$UNIX2003
+_opendir$INODE64$UNIX2003
+_perror
+_printf
+_pthread_mutex_destroy
+_pthread_mutex_init
+_pthread_mutex_lock
+_pthread_mutex_unlock
+_qsort
+_random
+_read$UNIX2003
+_readdir$INODE64
+_realloc
+_regcomp$UNIX2003
+_regerror
+_regexec
+_regfree
+_rename
+_rmdir
+_scandir$INODE64
+_setstate
+_sscanf
+_stat$INODE64
+_strchr
+_strcmp
+_strdup
+_strlen
+_strncmp
+_strpbrk
+_strrchr
+_strstr
+_strtod$UNIX2003
+_strtol
+_symlink
+_time
+_unlink
+_vfprintf
+_write$UNIX2003
+__TEXT
+__text
+__TEXT
+__stubs
+__TEXT
+__stub_helper
+__TEXT
+__cstring
+__TEXT
+__const
+__TEXT
+__unwind_info
+__TEXT
+__eh_frame
+__TEXT
+__DATA
+__dyld
+__DATA
+__got
+__DATA
+__la_symbol_ptr
+__DATA
+__const
+__DATA
+__data
+__DATA
+__common
+__DATA
+__bss
+__DATA
+__LINKEDIT
+@loader_path/libfontconfig.dylib
+@loader_path/libfreetype.dylib
+/usr/lib/libexpat.1.dylib
+/usr/lib/libSystem.B.dylib
+/usr/lib/libgcc_s.1.dylib
+	Hcu
+fffff.
+ffffff.
+fffff.
+	H;M
+fffff.
+ffffff.
+	HcU
+fff.
+fffff.
+fffff.
+fff.
+fffff.
+H;A`
+H;A`
+ffff.
+ffffff.
+ffff.
+@`H;E
+H;A0
+fffff.
+#EgH
+ffff.
+ffffff.
+QZ^&
+H+AxH=
+H+AxH=
+H+AxH=
+fffff.
+fff.
+ffff.
+fff.
+fffff.
+ffff.
+fffff.
+ffff.
+fffff.
+ffffff.
+A@;E
+fff.
+fff.
+ffffff.
+fffff.
+ffffff.
+fffff.
+fffff.
+ffff.
+fffff.
+ffffff.
+fff.
+fff.
+ffff.
+fffff.
+ffffff.
+%UUUU)
+%3333
+3333
+ffff.
+4AHcE
+fff.
+fff.
+fff.
+ffffff.
+fff.
+fffff.
+fffff.
+?H;}
+fff.
+fff.
+fffff.
+fff.
+ffff.
+ffffff.
+fff.
+ffffff.
+ffff.
+ffffff.
+ffffff.
+fff.
+ffff.
+	H;M
+ffffff.
+fff.
+fff.
+ffff.
+gfffH
+ffff.
+fliS
+SOPGD
+BUSGD
+ffffff.
+ffff.
+CBDA
+ffffff.
+fffff.
+6Hc}
+ltuo
+-stib
+Hc	H
+fffff.
+ffff.
+fff.
+ffffff.
+ffffff.
+fff.
+ffff.
+fff.
+ffff.
+ffffff.
+fff.
+ffffff.
+fffff.
+fffff.
+fff.
+fffff.
+ffffff.
+fffff.
+fff.
+fffff.
+ffffff.
+ffff.
+fff.
+fff.
+fffff.
+Hc6H
+ffffff.
+Hc6H
+fff.
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+fff.
+ffff.
+ffff.
+ffff.
+fff.
+Hc	H
+fff.
+ffffff.
+ffff.
+fff.
+fffff.
+fffff.
+fff.
+fff.
+fffff.
+8Hcu
+fff.
+fff.
+ffffff.
+ffffff.
+fff.
+fffff.
+fff.
+fff.
+ffffff.
+ffffff.
+fffff.
+fff.
+fffff.
+fff.
+ffff.
+ffffff.
+fff.
+ffff.
+ffffff.
+fffff.
+ffffff.
+fffff.
+ffffff.
+fff.
+ffff.
+fctt
+.NEW
+.LCK
+.TMP-XXXXXX
+FcCacheFini
+fccache.c
+fcCacheChains[i] == NULL
+fcCacheMaxLevel == 0
+FcDirCacheWriteDir dir "%s" file "%s"
+write cache
+Fontconfig error: %s: out of memory
+%s: not cleaning %s cache directory
+unwritable
+non-existent
+%s: cleaning cache directory
+-le64.cache-4
+Fontconfig error: %s: allocation failure
+%s: invalid cache file: %s
+%s: %s: missing directory: %s 
+CACHEDIR.TAG
+Created CACHEDIR.TAG at %s
+Unable to create CACHEDIR.TAG at %s
+FONTCONFIG_USE_MMAP
+FcCacheTimeValid dir "%s" cache checksum %d dir checksum %d
+Fontconfig warning: Directory/file mtime in the future. New fonts may not be detected.
+Add Subst 
+FcConfigSubstitute 
+FcConfigSubstitute test 
+No match
+Substitute 
+FcConfigSubstitute edit
+FcConfigSubstitute done
+HOME
+XDG_CACHE_HOME
+/.cache
+XDG_CONFIG_HOME
+/.config
+XDG_DATA_HOME
+/.local/share
+FONTCONFIG_FILE
+fonts.conf
+FONTCONFIG_PATH
+/Users/buildbot/buildslave/pango_osx/build/fontconfig-2.11.1/lib64/etc/fonts
+Fontconfig warning: FcPattern object %s does not accept value
+Not adding
+position not on list
+%s list before 
+Append
+Prepend
+%s list after 
+Fontconfig warning: <name> tag has target="font" in a <match target="pattern">.
+adding fonts from%s
+charsets %d -> %d leaves %d -> %d
+ [marker] 
+ [marker]
+langset (alloc error)
+%04x:
+ %08x
+Null pattern
+Pattern has %d elts (size %d)
+	%s:
+Integer
+Double
+String
+Matrix
+Range
+Bool
+CharSet
+LangSet
+Field
+Const
+Assign
+AssignReplace
+PrependFirst
+AppendLast
+Delete
+DeleteAll
+Quest
+Equal
+(ignore blanks)
+NotEqual
+Less
+LessEqual
+More
+MoreEqual
+Contains
+NotContains
+Plus
+Minus
+Times
+Divide
+Comma
+Floor
+Ceil
+Round
+Trunc
+Listing
+Invalid
+none
+"%s"
+true
+false
+charset
+langset:
+(pattern) 
+(font) 
+ quest 
+ colon 
+Not 
+Floor 
+Ceil 
+Round 
+Trunc 
+pattern 
+font 
+scan 
+any 
+all 
+first 
+not_first 
+Edit %s 
+match
+[test]
+[edit]
+FontSet %d of %d
+Font %d 
+FC_DEBUG
+FC_DEBUG=%s
+<unknown>
+<void>
+%d(i)
+%g(f)
+True
+False
+[%g %g; %g %g]
+face
+FC_LANG
+LC_ALL
+LC_CTYPE
+LANG
+en-us
+	Scanning dir %s
+cache scan dir %s
+	Scanning file %s...
+done
+Final font pattern:
+downcase
+basename
+dirname
+cescape
+shescape
+xmlescape
+delete
+escape
+translate
+unknown converter "%s"
+Fontconfig: Pattern format error: 
+expected character data at %d
+&amp;
+&lt;
+&gt;
+'\''
+expected identifier at %d
+expected non-negative number at %d
+unparse
+fccat
+"%{file|basename|cescape}" %{index} "%{-file{%{=unparse|cescape}}}"
+fcmatch
+%{file:-<unknown filename>|basename}: "%{family[0]:-<unknown family>}" "%{style[0]:-<unknown style>}"
+fclist
+%{?file{%{file}: }}%{-file{%{=unparse}}}
+pkgkit
+%{[]family{font(%{family|downcase|delete( )})
+}}%{[]lang{font(:lang=%{lang|downcase|translate(_,-)})
+unknown builtin "%s"
+format ended while expecting '%c'
+expected '%c' at %d
+outline
+scalable
+found family (n %2d p %d e %d l 0x%04x) %s
+family
+familylang
+found full   (n %2d p %d e %d l 0x%04x) %s
+fullname
+fullnamelang
+found style  (n %2d p %d e %d l 0x%04x) %s
+style
+stylelang
+using FreeType family "%s"
+using FreeType style "%s"
+using filename for family %s
+postscriptname
+file
+index
+fontversion
+	os2 weight class %d maps to weight %d
+	os2 width class %d maps to width %d
+capability
+	Type1 weight %s maps to %d
+FOUNDRY
+RELATIVE_SETWIDTH
+SETWIDTH_NAME
+	setwidth %s maps to %d
+	Style %s maps to weight %d
+	Style %s maps to width %d
+	Style %s maps to slant %d
+	Style %s maps to decorative %d
+unknown
+slant
+weight
+width
+foundry
+decorative
+hash
+SPACING
+PIXEL_SIZE
+charset
+lang
+spacing
+pixelsize
+antialias
+fontformat
+ttable:Silf 
+complex_ features in this font: %s
+otlayout:
+shadow
+caps
+antiqua
+romansc
+embosed
+dunhill
+italic
+kursiv
+oblique
+ultracondensed
+extracondensed
+semicondensed
+condensed
+normal
+semiexpanded
+extraexpanded
+ultraexpanded
+expanded
+extended
+thin
+extralight
+ultralight
+light
+book
+regular
+medium
+demibold
+demi
+semibold
+extrabold
+superbold
+ultrabold
+bold
+ultrablack
+superblack
+extrablack
+<ultra
+black
+heavy
+Adobe
+adobe
+Bigelow
+Bitstream
+bitstream
+Gnat
+culmus
+Iorsh
+HanYang System
+hanyang
+Font21
+hwan
+International Typeface Corporation
+Linotype
+linotype
+LINOTYPE-HELL
+Microsoft
+microsoft
+Monotype
+monotype
+Omega
+omega
+Tiro Typeworks
+tiro
+XFree86
+xfree86
+Xorg
+xorg
+MACINTOSH
+SJIS
+UCS-2BE
+UTF-16BE
+ASCII
+ISO-8859-1
+sha256:
+Fontconfig warning: no <cachedir> elements found. Check configuration.
+Fontconfig warning: adding <cachedir>%s</cachedir>
+/Users/buildbot/buildslave/pango_osx/build/fontconfig-2.11.1/lib64/var/cache/fontconfig
+/fontconfig
+Fontconfig warning: adding <cachedir prefix="xdg">fontconfig</cachedir>
+Fontconfig error: out of memory
+/usr/share/fonts
+font charset
+%s charset
+%s(%u) 
+ %04x
+%s(%u) 
+POSIX
+Fontconfig warning: ignoring %s: not a valid language tag
+Fontconfig warning: ignoring %s: not a valid region tag
+Checking the existence of %s.orth
+normalized: %s -> %s
+Unable to normalize %s
+FcLangSet 
+ contains 
+	Missing bitmap %s
+	Missing string %s
+FcFontRenderPrepare
+fcmatch.c
+pat != NULL
+font != NULL
+FcFontSetMatch
+sets != NULL
+p != NULL
+result != NULL
+FcFontMatch
+FcFontSetSort
+Sort 
+Score
+Font %s:%s matches language %d
+First font 
+FcFontSort
+Add 
+Match 
+Best score
+ %s: %g 
+size
+%g %g %g %g
+\-:,
+\=_:,
+%lg %lg %lg %lg
+roman
+proportional
+dual
+mono
+charcell
+rgba
+vrgb
+vbgr
+hintnone
+hintstyle
+hintslight
+hintmedium
+hintfull
+hinting
+verticallayout
+autohint
+globaladvance
+minspace
+embolden
+embeddedbitmap
+lcdnone
+lcdfilter
+lcddefault
+lcdlight
+lcdlegacy
+aspect
+rasterizer
+scale
+charwidth
+charheight
+matrix
+namelang
+fontfeatures
+prgname
+Raw pattern:
+Serialized pattern:
+msdosfs
+pcfs
+Regexp compile error: %s
+Regexp exec error: %s
+	Loading config file %s
+UTF-8
+cannot get parse buffer
+failed reading config file
+Cannot load config file "%s"
+Cannot load default config file
+mismatching element
+invalid attribute '%s'
+info
+warning
+error
+Fontconfig %s: "%s", line %d: 
+Fontconfig %s: line %d: 
+Fontconfig %s: 
+out of memory
+target
+pattern
+font
+default
+invalid name target "%s"
+name
+missing pattern element name
+unknown pattern element %d
+unknown pattern element
+bad font selector
+invalid langset: %s
+invalid element in langset
+invalid character: 0x%04x
+invalid element in charset
+"%s" is not known boolean
+too many elements in range
+invalid element in range
+invalid range
+wrong number of matrix elements
+"%s": not a valid double
+"%s": not a valid integer
+missing edit name
+mode
+invalid edit mode "%s"
+binding
+Expression doesn't take any effects for delete and delete_all
+invalid constant used : %s
+saw %s, expected %s
+void
+number
+string
+bool
+FT_Face
+langset
+weak
+strong
+same
+invalid binding "%s"
+scan
+invalid test target "%s"
+qual
+first
+not_first
+invalid test qual "%s"
+missing test name
+compare
+invalid test compare "%s"
+ignore-blanks
+invalid test ignore-blanks "%s"
+missing test expression
+Having multiple values in <test> isn't supported and may not work as expected
+non-family
+non-integer rescan
+invalid element in blank
+Having multiple <family> in <alias> isn't supported and may not work as expected
+bad alias
+missing family in alias
+invalid match target "%s"
+<match target="scan"> cannot edit user-defined object "%s"
+invalid match element
+No <test> nor <edit> elements in <match>
+ignore_missing
+deprecated
+prefix
+conf.d
+reading configurations from %s is deprecated. please move it to %s manually
+empty cache directory name ignored
+out of memory; cannot add cache directory %s
+empty font pattern name ignored
+out of memory; cannot add pattern %s
+empty font directory name ignored
+out of memory; cannot add directory %s
+unknown element "%s"
+fontconfig
+invalid doctype "%s"
+Cannot open config dir "%s"
+	Scanning config dir %s
+.conf
+Signature: 8a477f597d28d172789f06886806bc55
+# This file is a cache directory tag created by fontconfig.
+# For information about cache directory tags, see:
+#       http://www.brynosaurus.com/cachedir/
+0123456789abcdef
+!#$%&()*+./0123456789;<>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[]^abcdefghijklmnopqrstuvwxyz{|}~
+ !"#$%&'()*+,-./01234
+789:;<=>?@ABCDEFGHIJKLMNOPQRST
+zh-cn
+zh-tw
+()/<>[]{}	
+a100
+a101
+a102
+a103
+a104
+a105
+a106
+a107
+a108
+a109
+a110
+a111
+a112
+a117
+a118
+a119
+a120
+a121
+a122
+a123
+a124
+a125
+a126
+a127
+a128
+a129
+a130
+a131
+a132
+a133
+a134
+a135
+a136
+a137
+a138
+a139
+a140
+a141
+a142
+a143
+a144
+a145
+a146
+a147
+a148
+a149
+a150
+a151
+a152
+a153
+a154
+a155
+a156
+a157
+a158
+a159
+a160
+a161
+a162
+a163
+a164
+a165
+a166
+a167
+a168
+a169
+a170
+a171
+a172
+a173
+a174
+a175
+a176
+a177
+a178
+a179
+a180
+a181
+a182
+a183
+a184
+a185
+a186
+a187
+a188
+a189
+a190
+a191
+a192
+a193
+a194
+a195
+a196
+a197
+a198
+a199
+a200
+a201
+a202
+a203
+a204
+a205
+a206
+zh-tw
+zh-cn
+zh-tw
+zh-cn
+zh-hk
+zh-sg
+zh-mo
+	 en
+	$en
+	(en
+	,en
+	0en
+	4en
+	<en
+	@en
+	Den
+	Hen
+UTF-16BE
+MACINTOSH
+SJIS
+UTF-16BE
+UTF-16BE
+SJIS-WIN
+GB2312
+BIG-5
+Wansung
+Johab
+UTF-16BE
+ASCII
+UTF-16BE
+ISO-8859-1
+SJIS-WIN
+ASCII
+ADBE
+adobe
+AGFA
+agfa
+ALTS
+altsys
+APPL
+apple
+ARPH
+arphic
+ATEC
+alltype
+BITS
+bitstream
+CANO
+cannon
+culmus
+DYNA
+dynalab
+EPSN
+epson
+fujitsu
+IMPR
+impress
+LARA
+larabiefonts
+LEAF
+interleaf
+LETR
+letraset
+LINO
+linotype
+MACR
+macromedia
+MONO
+monotype
+microsoft
+monotype
+PARA
+paratype
+QMSI
+RICO
+ricoh
+0123456789abcdef
+vRQ>
+8STs
+LwH'
+az-az
+az-ir
+ber-dz
+ber-ma
+ku-am
+ku-iq
+ku-ir
+ku-tr
+mn-cn
+mn-mn
+pa-pk
+pap-an
+pap-aw
+ps-af
+ps-pk
+ti-er
+ti-et
+zh-cn
+zh-hk
+zh-mo
+zh-sg
+zh-tw
+B 	%B 	%
+B"	dB"	d
+CB$F
+@e_6
+t!! 
+ p:@(
+	>2R
+Az@{EG
+$H*(
+k(I	AB
+@1PD
+,D0j
+Y.`A
+&CR]
+@!0I
+b%DD
+TMu,
+AHNAn"
+nJ,pf
+XP@n2
+B@H;
+" "TH
+"1@B
+B0  
+7HMz
+2*E{1
+ 	TM
+DRW+
+j02^
+BcSX
+!Ft2
+	0PP
+nK*&
+2Jq]
+9@Qx,)
+	,a0
+$ P 
+_}{w
+S5|D~
+D]GW
+ !"#
+%&'()*+
+-./123456789:;<=
+BDEC
+FGHIJK
+OPQRST
+_`ab
+cdefgh
+uvwxy
+{|}~
+ !"#%'()*+.01234569;<=8>?@ABCDEFGHIJLMPQSVTUXYZ[\]_`bdefghiklnpqrtuwx{|}~
+$&-/7:KNORW^acjmosyz
+file
+size
+weight
+foundry
+fullname
+pixelsize
+decorative
+fullnamelang
+globaladvance
+hinting
+minspace
+hintstyle
+fontformat
+fontversion
+fontfeatures
+outline
+autohint
+slant
+scale
+postscriptname
+scalable
+embolden
+lang
+antialias
+family
+hash
+namelang
+embeddedbitmap
+familylang
+verticallayout
+matrix
+rasterizer
+aspect
+charset
+width
+charwidth
+charheight
+rgba
+style
+lcdfilter
+spacing
+index
+stylelang
+capability
+prgname
+8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
+8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
+fffiflffifflstst
+assign
+assign_replace
+prepend
+prepend_first
+append
+append_last
+delete
+delete_all
+not_eq
+less
+less_eq
+more
+more_eq
+contains
+not_contains
+fontconfig
+fontpattern
+cachedir
+cache
+include
+config
+match
+alias
+blank
+rescan
+prefer
+accept
+default
+family
+selectfont
+acceptfont
+rejectfont
+glob
+pattern
+patelt
+test
+edit
+double
+string
+matrix
+range
+bool
+charset
+langset
+name
+const
+not_eq
+less
+less_eq
+more
+more_eq
+contains
+not_contains
+plus
+minus
+times
+divide
+floor
+ceil
+round
+trunc
+cinu
+bmys
+  P0@ p@
+P00p
+pP0 p
+  p`
+p00p
+0`0``0`p
+`p 0
+` pP
+@@P@
+@P@@PPP
+`Pp0
+ 0P 0
+`PPPPPPPPP`
+``pp`
+dyld_stub_binding_helper
+__dyld_func_lookup
+_FcDirCacheBasename
+_FcCacheFindByAddr
+_FcRefInc
+_lock_cache
+_FcCacheFindByAddrUnlocked
+_FcRefDec
+_FcDirCacheDisposeUnlocked
+_unlock_cache
+_free_lock
+_FcRefAdd
+_FcDirCacheProcess
+_FcDirCacheMapHelper
+_FcDirCacheOpenFile
+_FcDirCacheMapFd
+_FcDirCacheValidConfig
+_FcCacheInsert
+_random_level
+_FcRefInit
+_FcDirCacheValidateHelper
+_FcCacheFindByStat
+_FcCacheTimeValid
+_FcCacheIsMmapSafe
+_FcMutexFinish
+_FcMutexUnlock
+_FcCacheRemoveUnlocked
+_FcMutexInit
+_FcMutexLock
+_MD5Init
+_MD5Update
+_MD5Final
+_MD5Transform
+_FcConfigEnsure
+_FcRefInit
+_FcConfigNewestFile
+_FcRefInc
+_FcRefDec
+_FcSubstDestroy
+_FcConfigAddDirList
+_FcConfigPromote
+_FcConfigMatchValueList
+_FcConfigValues
+_FcConfigAdd
+_FcConfigDel
+_FcConfigPatternDel
+_FcConfigPatternAdd
+_FcConfigPatternCanon
+_FcConfigFileExists
+_FcConfigGetPath
+_FcConfigFreePath
+_FcConfigGlobsMatch
+_FcConfigPatternsMatch
+_FcConfigEvaluate
+_FcRefInit
+_FcRefIsConst
+_FcRefDec
+_FcCharSetFindLeafPos
+_FcCharSetPutLeaf
+_FcCharSetFindLeaf
+_FcRefInc
+_FcCharSetIterStart
+_FcCharSetIterNext
+_FcCharSetOperate
+_FcCharSetIntersectLeaf
+_FcCharSetUnionLeaf
+_FcCharSetFindLeafForward
+_FcCharSetAddLeaf
+_FcCharSetSubtractLeaf
+_FcCharSetPopCount
+_FcCharSetIterSet
+_FcCharSetParseValue
+_FcCharSetInsertLeaf
+_FcCharSetUnparseValue
+_FcCharSetFreezeLeaf
+_FcCharSetFreezeBase
+_FcCharSetFreezeOrig
+_FcCharSetFindFrozen
+_FcRefSetConst
+_FcCharSetHash
+_FcCharLeafHash
+_FcCharLeafEntCreate
+__FcValuePrintFile
+_FcValueBindingPrint
+_FcRefSetConst
+_FcRefInit
+_FcFileScanFontConfig
+_cmpstringp
+_FcPatternFormatToBuf
+_FcFormatContextInit
+_interpret_expr
+_FcFormatContextDone
+_escaped_char
+_interpret_percent
+_expect_char
+_consume_char
+_interpret_builtin
+_interpret_subexpr
+_interpret_filter_in
+_interpret_filter_out
+_interpret_cond
+_interpret_count
+_interpret_enumerate
+_interpret_simple
+_maybe_interpret_converts
+_align_to_width
+_interpret_convert
+_read_word
+_cescape
+_shescape
+_xmlescape
+_delete_chars
+_escape_chars
+_translate_chars
+_message
+_read_chars
+_FcCharIsPunct
+_skip_subexpr
+_skip_expr
+_skip_percent
+_maybe_skip_subexpr
+_maybe_interpret_subexpr
+_FcVendorFoundry
+_FcSfntNameTranscode
+_FcSfntNameLanguage
+_FcNoticeFoundry
+_FcStringInPatternElement
+_FcFontCapabilities
+_FcStringIsConst
+_FcStringContainsConst
+_FcGetPixelSize
+_FcFreeTypeUseNames
+_FcUcs4ToGlyphName
+_FcFreeTypeGlyphNameIndex
+_FcFreeTypeCharSetAndSpacingForSize
+_GetScriptTags
+_addtag
+_compareulong
+_FcFreeTypeCheckGlyph
+_FcGlyphNameToUcs4
+_FcHashGlyphName
+_FcLooksLikeSJIS
+_FcVendorMatch
+_FcHashInitSHA256Digest
+_FcHashComputeSHA256Digest
+_FcHashSHA256ToString
+_FcInitFallbackConfig
+_FcLangSetBitSet
+_FcLangSetIndex
+_FcLangSetBitReset
+_FcLangSetBitGet
+_FcLangSetCompareStrSet
+_FcRefInit
+_FcLangSetContainsLang
+_FcLangSetOperate
+_FcLangContains
+_FcListValueListMatchAny
+_FcListHashTableInit
+_FcListAppend
+_FcListHashTableCleanup
+_FcListPatternHash
+_FcListPatternEqual
+_FcGetDefaultObjectLangIndex
+_FcListValueListEqual
+_FcListValueListHash
+_FcListValueHash
+_FcListMatrixHash
+_FcObjectToMatcher
+_FcCompareValueList
+_FcFontSetMatchInternal
+_FcCompare
+_FcSortCompare
+_FcCompareLang
+_FcSortWalk
+_FcCompareFamily
+_FcCompareString
+_FcCompareNumber
+_FcCompareSize
+_FcCompareBool
+_FcCompareFilename
+_FcCompareCharSet
+_FcCompareHash
+_FcComparePostScript
+_FcObjectFindById
+_FcNameFindNext
+_FcNameConvert
+_FcNameUnparseString
+_FcObjectTypeLookup
+__FcObjectLookupOtherTypeByName
+_FcObjectTypeHash
+_FcRefInit
+_FcRefIsConst
+_FcRefDec
+_FcPatternObjectPosition
+_FcValueListEqual
+_FcValueListHash
+_FcRefInc
+_FcRefSetConst
+_FcValueHash
+_FcDoubleHash
+_FcDirChecksum
+_FcFStatFs
+_Adler32Init
+_FcDirChecksumScandirFilter
+_FcDirChecksumScandirSorter
+_Adler32Update
+_Adler32Finish
+_FcStrCaseWalkerInit
+_FcStrCaseWalkerNext
+__FcStrRegexCmp
+_FcStrIsAtIgnoreBlanksAndCase
+_FcStrIsAtIgnoreCase
+_FcCharIsPunct
+_FcStrCanonAbsoluteFilename
+_FcRefInit
+__FcStrSetAppend
+_FcRefIsConst
+_FcRefDec
+_FcStrSetReference
+_FcRefInc
+_FcStrCaseWalkerLong
+_FcExprDestroy
+_FcConfigParseAndLoadDir
+_FcConfigParseInit
+_FcStartDoctypeDecl
+_FcEndDoctypeDecl
+_FcStartElement
+_FcEndElement
+_FcCharacterData
+_FcConfigMessage
+_FcConfigCleanup
+_FcPStackPop
+_FcVStackClear
+_FcVStackPeek
+_FcVStackPopAndDestroy
+_FcExprMatrixFreeShallow
+_FcParseDir
+_FCParseFontPattern
+_FcParseCacheDir
+_FcParseInclude
+_FcParseMatch
+_FcParseAlias
+_FcParseBlank
+_FcParseRescan
+_FcParseFamilies
+_FcParseFamily
+_FcParseTest
+_FcParseEdit
+_FcParseInt
+_FcParseDouble
+_FcParseString
+_FcParseMatrix
+_FcParseRange
+_FcParseBool
+_FcParseCharSet
+_FcParseLangSet
+_FcParseAcceptRejectFont
+_FcParsePattern
+_FcParsePatelt
+_FcParseName
+_FcParseBinary
+_FcParseUnary
+_FcPopUnary
+_FcVStackPushExpr
+_FcVStackCreateAndPush
+_FcPopExpr
+_FcExprCreateOp
+_FcExprCreateString
+_FcExprCreateName
+_FcExprCreateConst
+_FcExprCreateInteger
+_FcExprCreateDouble
+_FcExprCreateMatrix
+_FcExprCreateBool
+_FcExprCreateCharSet
+_FcExprCreateLangSet
+_FcExprMatrixCopyShallow
+_FcPopBinary
+_FcConfigGetAttribute
+_FcVStackPushName
+_FcPopValue
+_FcVStackPushPattern
+_FcVStackPushLangSet
+_FcVStackPushCharSet
+_FcVStackPushBool
+_FcConfigLexBool
+_FcVStackPushRange
+_FcVStackPushMatrix
+_FcVStackPushString
+_FcStrtod
+_FcVStackPushDouble
+_FcVStackPushInteger
+_FcConfigLexMode
+_FcConfigLexBinding
+_FcEditCreate
+_FcVStackPushEdit
+_FcTypecheckExpr
+_FcTypecheckValue
+_FcTypeName
+_FcConfigLexOp
+_FcConfigLexCompare
+_FcTestCreate
+_FcVStackPushTest
+_FcVStackElements
+_FcVStackFetch
+_FcRuleCreate
+_FcElementMap
+_FcPStackPush
+_FcConfigSaveAttr
+_FcSortCmpStr
+_FcExprMatrixFree
+_ftglue_qalloc
+_ftglue_free
+_FcDirCacheCreateTagFile.cache_tag_contents
+_bin2hex
+_valueToChar
+_charToValue
+_FcBoolDefaults
+_FcCodePageRange
+_platform_order
+_nameid_order
+_FcFreeTypeQueryFace.exclusive_chars
+_prefer_unicode
+__fc_name_to_ucs
+__fc_glyph_names
+__fc_ucs_to_name
+_AdobeSymbolEnt
+_fcFtLanguage
+_fcFtEncoding
+_fcMacRomanFake
+_FcVendorFoundries
+_FcHashSHA256ToString.hex
+_FcHashComputeSHA256Digest.k
+_FcHashInitSHA256Digest.h
+_fcLangCountrySets
+_fcLangCharSetRanges
+_fcLangData
+_FcObjectTypeLookup.wordlist
+_FcObjectTypeNamePool_contents
+_FcObjectTypeHash.asso_values
+_fcCaseFoldChars
+_fcCaseFold
+_fcModeOps
+_fcCompareOps
+_fcElementMap
+_fcFontDecoders
+_AdobeSymbol
+_decorativeConsts
+_slantConsts
+_widthConsts
+_weightConsts
+__FcMatchers
+__FcBaseConstants
+_FcObjects
+_FcDirCacheCreateTagFile.cache_tag_contents_size
+__FcConfigHomeEnabled
+_s_FT_New_Face
+_FcNoticeFoundries
+_next_id
+_fcCacheChains
+_fcCacheMaxLevel
+_FcCacheIsMmapSafe.static_status
+_cache_lock
+__fcConfig
+_FcRandom.statebuf
+_FcRandom.initialized
+_default_lang
+_default_prgname
+_FcParseInclude.userdir
+_FcParseInclude.userconf
+_FcParseInclude.warn_conf
+_FcParseInclude.warn_confd
+_FcAlignSize
+_FcAtomicCreate
+_FcAtomicDeleteNew
+_FcAtomicDestroy
+_FcAtomicLock
+_FcAtomicNewFile
+_FcAtomicOrigFile
+_FcAtomicReplaceOrig
+_FcAtomicUnlock
+_FcBlanksAdd
+_FcBlanksCreate
+_FcBlanksDestroy
+_FcBlanksIsMember
+_FcCacheCopySet
+_FcCacheCreateTagFile
+_FcCacheDir
+_FcCacheFini
+_FcCacheNumFont
+_FcCacheNumSubdir
+_FcCacheObjectDereference
+_FcCacheObjectReference
+_FcCacheSubdir
+_FcCharSetAddChar
+_FcCharSetCopy
+_FcCharSetCount
+_FcCharSetCoverage
+_FcCharSetCreate
+_FcCharSetDelChar
+_FcCharSetDestroy
+_FcCharSetEqual
+_FcCharSetFindLeafCreate
+_FcCharSetFirstPage
+_FcCharSetFreeze
+_FcCharSetFreezerCreate
+_FcCharSetFreezerDestroy
+_FcCharSetHasChar
+_FcCharSetIntersect
+_FcCharSetIntersectCount
+_FcCharSetIsSubset
+_FcCharSetMerge
+_FcCharSetNew
+_FcCharSetNextPage
+_FcCharSetPrint
+_FcCharSetSerialize
+_FcCharSetSerializeAlloc
+_FcCharSetSubtract
+_FcCharSetSubtractCount
+_FcCharSetUnion
+_FcConfigAcceptFilename
+_FcConfigAcceptFont
+_FcConfigAddBlank
+_FcConfigAddCache
+_FcConfigAddCacheDir
+_FcConfigAddConfigDir
+_FcConfigAddConfigFile
+_FcConfigAddDir
+_FcConfigAddFontDir
+_FcConfigAddRule
+_FcConfigAllocExpr
+_FcConfigAppFontAddDir
+_FcConfigAppFontAddFile
+_FcConfigAppFontClear
+_FcConfigBuildFonts
+_FcConfigCompareValue
+_FcConfigCreate
+_FcConfigDestroy
+_FcConfigEnableHome
+_FcConfigFilename
+_FcConfigFini
+_FcConfigGetBlanks
+_FcConfigGetCache
+_FcConfigGetCacheDirs
+_FcConfigGetConfigDirs
+_FcConfigGetConfigFiles
+_FcConfigGetCurrent
+_FcConfigGetFontDirs
+_FcConfigGetFonts
+_FcConfigGetRescanInterval
+_FcConfigGetRescanInverval
+_FcConfigGetSysRoot
+_FcConfigGlobAdd
+_FcConfigHome
+_FcConfigInit
+_FcConfigParseAndLoad
+_FcConfigPatternsAdd
+_FcConfigReference
+_FcConfigSetCurrent
+_FcConfigSetFonts
+_FcConfigSetRescanInterval
+_FcConfigSetRescanInverval
+_FcConfigSetSysRoot
+_FcConfigSubstitute
+_FcConfigSubstituteWithPat
+_FcConfigUptoDate
+_FcConfigXdgCacheHome
+_FcConfigXdgConfigHome
+_FcConfigXdgDataHome
+_FcDebugVal
+_FcDefaultFini
+_FcDefaultSubstitute
+_FcDirCacheBuild
+_FcDirCacheClean
+_FcDirCacheCreateTagFile
+_FcDirCacheLoad
+_FcDirCacheLoadFile
+_FcDirCacheRead
+_FcDirCacheRebuild
+_FcDirCacheReference
+_FcDirCacheRescan
+_FcDirCacheScan
+_FcDirCacheUnlink
+_FcDirCacheUnload
+_FcDirCacheValid
+_FcDirCacheWrite
+_FcDirSave
+_FcDirScan
+_FcDirScanConfig
+_FcEditDestroy
+_FcEditPrint
+_FcExprPrint
+_FcFileIsDir
+_FcFileIsFile
+_FcFileIsLink
+_FcFileScan
+_FcFileScanConfig
+_FcFini
+_FcFontList
+_FcFontMatch
+_FcFontRenderPrepare
+_FcFontSetAdd
+_FcFontSetCreate
+_FcFontSetDeserialize
+_FcFontSetDestroy
+_FcFontSetList
+_FcFontSetMatch
+_FcFontSetPrint
+_FcFontSetSerialize
+_FcFontSetSerializeAlloc
+_FcFontSetSort
+_FcFontSetSortDestroy
+_FcFontSort
+_FcFreeTypeCharIndex
+_FcFreeTypeCharSet
+_FcFreeTypeCharSetAndSpacing
+_FcFreeTypeGetPrivateMap
+_FcFreeTypeIsExclusiveLang
+_FcFreeTypeLangSet
+_FcFreeTypePrivateToUcs4
+_FcFreeTypeQuery
+_FcFreeTypeQueryFace
+_FcFreeTypeUcs4ToPrivate
+_FcGetDefaultLang
+_FcGetDefaultLangs
+_FcGetLangs
+_FcGetPrgname
+_FcGetVersion
+_FcHashGetSHA256Digest
+_FcHashGetSHA256DigestFromFile
+_FcHashGetSHA256DigestFromMemory
+_FcIdentityMatrix
+_FcInit
+_FcInitBringUptoDate
+_FcInitDebug
+_FcInitLoadConfig
+_FcInitLoadConfigAndFonts
+_FcInitLoadOwnConfig
+_FcInitLoadOwnConfigAndFonts
+_FcInitReinitialize
+_FcIsFsMmapSafe
+_FcIsFsMtimeBroken
+_FcLangCompare
+_FcLangGetCharSet
+_FcLangNormalize
+_FcLangSetAdd
+_FcLangSetCompare
+_FcLangSetContains
+_FcLangSetCopy
+_FcLangSetCreate
+_FcLangSetDel
+_FcLangSetDestroy
+_FcLangSetEqual
+_FcLangSetGetLangs
+_FcLangSetHasLang
+_FcLangSetHash
+_FcLangSetPrint
+_FcLangSetPromote
+_FcLangSetSerialize
+_FcLangSetSerializeAlloc
+_FcLangSetSubtract
+_FcLangSetUnion
+_FcListPatternMatchAny
+_FcMakeDirectory
+_FcMakeTempfile
+_FcMatrixCopy
+_FcMatrixEqual
+_FcMatrixFree
+_FcMatrixMultiply
+_FcMatrixRotate
+_FcMatrixScale
+_FcMatrixShear
+_FcNameBool
+_FcNameConstant
+_FcNameGetConstant
+_FcNameGetObjectType
+_FcNameParse
+_FcNameParseCharSet
+_FcNameParseLangSet
+_FcNameRegisterConstants
+_FcNameRegisterObjectTypes
+_FcNameUnparse
+_FcNameUnparseCharSet
+_FcNameUnparseEscaped
+_FcNameUnparseLangSet
+_FcNameUnparseValue
+_FcNameUnparseValueList
+_FcNameUnregisterConstants
+_FcNameUnregisterObjectTypes
+_FcObjectFromName
+_FcObjectGetSet
+_FcObjectLookupBuiltinIdByName
+_FcObjectLookupIdByName
+_FcObjectLookupOtherNameById
+_FcObjectLookupOtherTypeById
+_FcObjectLookupOtherTypeByName
+_FcObjectName
+_FcObjectSetAdd
+_FcObjectSetBuild
+_FcObjectSetCreate
+_FcObjectSetDestroy
+_FcObjectSetVaBuild
+_FcObjectValidType
+_FcOpPrint
+_FcOpen
+_FcPatternAdd
+_FcPatternAddBool
+_FcPatternAddCharSet
+_FcPatternAddDouble
+_FcPatternAddFTFace
+_FcPatternAddInteger
+_FcPatternAddLangSet
+_FcPatternAddMatrix
+_FcPatternAddString
+_FcPatternAddWeak
+_FcPatternAppend
+_FcPatternBuild
+_FcPatternCreate
+_FcPatternDel
+_FcPatternDestroy
+_FcPatternDuplicate
+_FcPatternEqual
+_FcPatternEqualSubset
+_FcPatternFilter
+_FcPatternFormat
+_FcPatternGet
+_FcPatternGetBool
+_FcPatternGetCharSet
+_FcPatternGetDouble
+_FcPatternGetFTFace
+_FcPatternGetInteger
+_FcPatternGetLangSet
+_FcPatternGetMatrix
+_FcPatternGetString
+_FcPatternHash
+_FcPatternObjectAdd
+_FcPatternObjectAddBool
+_FcPatternObjectAddDouble
+_FcPatternObjectAddInteger
+_FcPatternObjectAddString
+_FcPatternObjectAddWithBinding
+_FcPatternObjectDel
+_FcPatternObjectFindElt
+_FcPatternObjectGet
+_FcPatternObjectGetDouble
+_FcPatternObjectGetInteger
+_FcPatternObjectGetString
+_FcPatternObjectInsertElt
+_FcPatternObjectListAdd
+_FcPatternPrint
+_FcPatternReference
+_FcPatternRemove
+_FcPatternSerialize
+_FcPatternSerializeAlloc
+_FcPatternVaBuild
+_FcRandom
+_FcRuleDestroy
+_FcSerializeAlloc
+_FcSerializeCreate
+_FcSerializeDestroy
+_FcSerializeOffset
+_FcSerializePtr
+_FcSerializeReserve
+_FcStat
+_FcStatChecksum
+_FcStrBasename
+_FcStrBufChar
+_FcStrBufData
+_FcStrBufDestroy
+_FcStrBufDone
+_FcStrBufDoneStatic
+_FcStrBufInit
+_FcStrBufString
+_FcStrBuildFilename
+_FcStrCanonFilename
+_FcStrCmp
+_FcStrCmpIgnoreBlanksAndCase
+_FcStrCmpIgnoreCase
+_FcStrCmpIgnoreCaseAndDelims
+_FcStrContainsIgnoreBlanksAndCase
+_FcStrContainsIgnoreCase
+_FcStrContainsWord
+_FcStrCopy
+_FcStrCopyFilename
+_FcStrDirname
+_FcStrDowncase
+_FcStrFree
+_FcStrGlobMatch
+_FcStrHashIgnoreCase
+_FcStrLastSlash
+_FcStrListCreate
+_FcStrListDone
+_FcStrListFirst
+_FcStrListNext
+_FcStrMatchIgnoreCaseAndDelims
+_FcStrPlus
+_FcStrRegexCmp
+_FcStrRegexCmpIgnoreCase
+_FcStrSerialize
+_FcStrSerializeAlloc
+_FcStrSetAdd
+_FcStrSetAddFilename
+_FcStrSetAddLangs
+_FcStrSetCreate
+_FcStrSetDel
+_FcStrSetDestroy
+_FcStrSetEqual
+_FcStrSetMember
+_FcStrStr
+_FcStrStrIgnoreCase
+_FcStrUsesHome
+_FcStringHash
+_FcSubstPrint
+_FcTestDestroy
+_FcTestPrint
+_FcUcs4ToUtf8
+_FcUtf16Len
+_FcUtf16ToUcs4
+_FcUtf8Len
+_FcUtf8ToUcs4
+_FcValueCanonicalize
+_FcValueDestroy
+_FcValueEqual
+_FcValueListAppend
+_FcValueListCreate
+_FcValueListDestroy
+_FcValueListDuplicate
+_FcValueListPrepend
+_FcValueListPrint
+_FcValueListPrintWithPosition
+_FcValueListSerialize
+_FcValueListSerializeAlloc
+_FcValuePrint
+_FcValuePrintFile
+_FcValuePrintWithPosition
+_FcValueSave
+_default_langs
+_fontconfig_ft2_new_face_substitute
+_ftglue_face_goto_table
+_ftglue_stream_frame_enter
+_ftglue_stream_frame_exit
+_ftglue_stream_pos
+_ftglue_stream_seek
+_other_types
+_FT_Done_Face
+_FT_Done_FreeType
+_FT_Get_BDF_Property
+_FT_Get_Char_Index
+_FT_Get_First_Char
+_FT_Get_Glyph_Name
+_FT_Get_Next_Char
+_FT_Get_PS_Font_Info
+_FT_Get_Postscript_Name
+_FT_Get_Sfnt_Name
+_FT_Get_Sfnt_Name_Count
+_FT_Get_Sfnt_Table
+_FT_Get_X11_Font_Format
+_FT_Has_PS_Glyph_Names
+_FT_Init_FreeType
+_FT_Load_Glyph
+_FT_Load_Sfnt_Table
+_FT_New_Face
+_FT_Select_Charmap
+_FT_Select_Size
+_OSAtomicAdd32Barrier
+_OSAtomicCompareAndSwap64Barrier
+_OSMemoryBarrier
+_XML_ErrorString
+_XML_GetBuffer
+_XML_GetCurrentLineNumber
+_XML_GetErrorCode
+_XML_ParseBuffer
+_XML_ParserCreate
+_XML_ParserFree
+_XML_SetCharacterDataHandler
+_XML_SetDoctypeDeclHandler
+_XML_SetElementHandler
+_XML_SetUserData
+___assert_rtn
+___error
+___memcpy_chk
+___memmove_chk
+___memset_chk
+___snprintf_chk
+___sprintf_chk
+___stack_chk_fail
+___stack_chk_guard
+___stderrp
+___stdoutp
+___strcat_chk
+___strcpy_chk
+___strncpy_chk
+_abs
+_access
+_atoi
+_calloc
+_chmod
+_close
+_closedir
+_fclose
+_fcntl
+_fdopen
+_feof
+_fflush
+_fopen
+_fprintf
+_fread
+_free
+_fstat$INODE64
+_fstatfs$INODE64
+_fwrite
+_getcwd
+_getenv
+_getpid
+_getprogname
+_initstate
+_isspace
+_link
+_localeconv
+_lstat$INODE64
+_malloc
+_memcmp
+_memset
+_mkdir
+_mkstemp
+_mmap
+_munmap
+_open
+_opendir$INODE64
+_perror
+_printf
+_pthread_mutex_destroy
+_pthread_mutex_init
+_pthread_mutex_lock
+_pthread_mutex_unlock
+_qsort
+_random
+_read
+_readdir$INODE64
+_realloc
+_regcomp
+_regerror
+_regexec
+_regfree
+_rename
+_rmdir
+_scandir$INODE64
+_setstate
+_sscanf
+_stat$INODE64
+_strchr
+_strcmp
+_strdup
+_strlen
+_strncmp
+_strpbrk
+_strrchr
+_strstr
+_strtod
+_strtol
+_symlink
+_time
+_unlink
+_vfprintf
+_write

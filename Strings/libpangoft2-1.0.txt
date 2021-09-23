@@ -1,0 +1,1938 @@
+__TEXT
+__text
+__TEXT
+__symbol_stub
+__TEXT
+__stub_helper
+__TEXT
+__const
+__TEXT
+__cstring
+__TEXT
+__unwind_info
+__TEXT
+__DATA
+__dyld
+__DATA
+__nl_symbol_ptr
+__DATA
+__la_symbol_ptr
+__DATA
+__const
+__DATA
+__data
+__DATA
+__bss
+__DATA
+__LINKEDIT
+@loader_path/libpangoft2-1.0.dylib
+@loader_path/libpango-1.0.dylib
+@loader_path/libglib-2.0.dylib
+@loader_path/libgmodule-2.0.dylib
+@loader_path/libgobject-2.0.dylib
+@loader_path/libgthread-2.0.dylib
+@loader_path/libharfbuzz.dylib
+@loader_path/libfreetype.dylib
+@loader_path/libfontconfig.dylib
+/usr/lib/libSystem.B.dylib
+/usr/lib/libgcc_s.1.dylib
+L^_[]
+ffffff.
+ffffff.
+fff.
+p^_]
+fffff.
+ffff.
+ffff.
+ffffff.
+^_[]
+ffff.
+\^_[]
+fffff.
+ffff.
+l^_[]
+0^_]
+ffff.
+ffff.
+l^_[]
+`^_]
+0^_]
+fffff.
+|^_[]
+ffff.
+fffff.
+ffff.
+fff.
+@^_]
+ffffff.
+<^_[]
+ffffff.
+L^_[]
+@^_]
+ffffff.
+fff.
+fff.
+L^_[]
+0^_]
+|^_[]
+ffff.
+ffff.
+fff.
+ ^[]
+ffffff.
+,^_[]
+fffff.
+^_[]
+L^_[]
+fff.
+ffffff.
+ffffff.
+^_[]
+L^_[]
+fff.
+ffffff.
+^_[]
+fffff.
+|^_[]
+^_[]
+ffff.
+l^_[]
+ffffff.
+0^_]
+L^_[]
+fff.
+ffffff.
+ffffff.
+0^_]
+^_[]
+ffff.
+ffff.
+fffff.
+^_[]
+fffff.
+L^_[]
+ffffff.
+L^_[]
+ffffff.
+L^_[]
+fff.
+^_[]
+|^_[]
+@^_]
+ffffff.
+fff.
+@^_]
+L^_[]
+ffff.
+ffffff.
+@^_]
+fff.
+fff.
+L^_[]
+fff.
+ffffff.
+ffffff.
+ffff.
+ffff.
+@^_]
+^_[]
+ffff.
+fff.
+L^_[]
+fff.
+ffffff.
+@^_]
+0^_]
+L^_[]
+<^_[]
+P^_]
+p^_]
+ffffff.
+L^_[]
+ffffff.
+ ^_]
+BUSG
+SOPG
+<^_[]
+<^_[]
+fff.
+@^_]
+L^_[]
+fffff.
+\^_[]
+fffff.
+L^_[]
+ffffff.
+ffffff.
+ffff.
+ffff.
+fff.
+fff.
+,^_[]
+ffffff.
+ffffff.
+^_[]
+fffff.
+,^_[]
+L^_[]
+ffffff.
+RT+J,
++r0)
+<^_[]
+RT+J,
+RT+B0)
+<^_[]
+L^_[]
+ffff.
+L^_[]
+(^_[]
+no error
+cannot open resource
+unknown file format
+broken file
+invalid FreeType version
+module version is too low
+invalid argument
+unimplemented feature
+broken table
+broken offset within table
+array allocation size too large
+missing module
+missing property
+invalid glyph index
+invalid character code
+unsupported glyph image format
+cannot render this glyph format
+invalid outline
+invalid composite glyph
+too many hints
+invalid pixel size
+invalid object handle
+invalid library handle
+invalid module handle
+invalid face handle
+invalid size handle
+invalid glyph slot handle
+invalid charmap handle
+invalid cache manager handle
+invalid stream handle
+too many modules
+too many extensions
+out of memory
+unlisted object
+cannot open stream
+invalid stream seek
+invalid stream skip
+invalid stream read
+invalid stream operation
+invalid frame operation
+nested frame access
+invalid frame read
+raster uninitialized
+raster corrupted
+raster overflow
+negative height while rastering
+too many registered caches
+invalid opcode
+too few arguments
+stack overflow
+code overflow
+bad argument
+division by zero
+invalid reference
+found debug opcode
+found ENDF opcode in execution stream
+nested DEFS
+invalid code range
+execution context too long
+too many function definitions
+too many instruction definitions
+SFNT font table missing
+horizontal header (hhea) table missing
+locations (loca) table missing
+name table missing
+character map (cmap) table missing
+horizontal metrics (hmtx) table missing
+PostScript (post) table missing
+invalid horizontal metrics
+invalid character map (cmap) format
+invalid ppem value
+invalid vertical metrics
+could not find context
+invalid PostScript (post) table format
+invalid PostScript (post) table
+opcode syntax error
+argument stack underflow
+ignore
+no Unicode glyph name found
+glyph to big for hinting
+`STARTFONT' field missing
+`FONT' field missing
+`SIZE' field missing
+`FONTBOUNDINGBOX' field missing
+`CHARS' field missing
+`STARTCHAR' field missing
+`ENCODING' field missing
+`BBX' field missing
+`BBX' too big
+Font header corrupted or missing fields
+Font glyphs corrupted or missing fields
+p@PangoFcFont
+Pango
+pango_fc_font_lock_face
+PANGO_IS_FC_FONT (font)
+pango_fc_font_unlock_face
+pango_fc_font_has_char
+_pango_fc_font_shutdown
+pango_fc_font_kern_glyphs
+glyphs != NULL
+pango_fc_font_get_raw_extents
+PANGO_IS_FC_FONT (fcfont)
+matrix
+pattern
+Pattern
+The fontconfig pattern for this font
+fontmap
+Font Map
+The PangoFc font map this font is associated with (Since: 1.26)
+0123456789
+pango_utf8_strwidth
+p != NULL
+PangoEngineShape
+PangoRenderFc
+pixelsize
+%s: invalid %s id %u for "%s" of type '%s' in '%s'
+pangofc-font.c:284
+property
+pango_fc_font_set_property
+pattern != NULL
+fcfont->font_pattern == NULL
+fcfont->fontmap == NULL
+pangofc-font.c:250
+hinting
+charset
+PangoFcFontMap
+pango_fc_font_map_add_decoder_find_func
+PANGO_IS_FC_FONT_MAP (fcfontmap)
+pango_fc_font_map_find_decoder
+_pango_fc_cmap_cache_unref
+cmap_cache->ref_count > 0
+pango_fc_font_map_create_context
+family
+pangofc-fontmap.c
+pango_fc_font_description_from_pattern
+res == FcResultMatch
+slant
+weight
+width
+size
+pangogravity
+file
+index
+spacing
+pango_fc_font_map_list_families
+res == FcResultMatch || res == FcResultNoMatch
+Sans
+Serif
+Monospace
+PangoFcFamily
+Regular
+Bold
+Italic
+Bold Italic
+style
+PangoFcFace
+Error getting DPI from fontconfig, using 72.0
+pango_fc_face_describe
+match_pattern
+monospace
+sans
+serif
+pango_fc_patterns_unref
+pats->ref_count > 0
+pango_fc_patterns_ref
+PangoFcFontset
+pangoversion
+verticallayout
+lang
+prgname
+PangoFcDecoder
+pango_fc_decoder_get_charset
+PANGO_IS_FC_DECODER (decoder)
+pango_fc_decoder_get_glyph
+_pango_ft2_font_new
+fontmap != NULL
+antialias
+hintstyle
+autohint
+pangoft2.c
+pango_ft2_font_get_face
+ft2font->face
+Error in FT_Set_Char_Size: %d
+PangoFT2Font
+Unknown FreeType2 error %#x
+Unable to open font file %s for font %s, exiting
+Unable to open font file %s for font %s, falling back to %s
+PangoFT2FontMap
+pango_ft2_font_map_new: Could not initialize freetype
+pango_ft2_font_map_set_resolution
+PANGO_FT2_IS_FONT_MAP (fontmap)
+pango_ft2_font_map_create_context
+PangoFT2Renderer
+pango_ft2_render_layout_subpixel
+bitmap != NULL
+PANGO_IS_LAYOUT (layout)
+pango_ft2_render_layout_line_subpixel
+line != NULL
+pango_ft2_render_transformed
+PANGO_FT2_IS_FONT (font)
+pango_ft2_render: Unrecognized glyph bitmap pixel mode %d
+PangoOTInfo
+PangoOTRuleset
+pango_ot_ruleset_description_copy
+desc != NULL
+BasicScriptEngineFc
+BasicEngineFc
+basic_engine_shape
+font != NULL
+analysis != NULL
+fontfeatures
+@         
+pPp@
+ P00
+	`@ @@ p
+0@@0000    
+000@0@0 p
+dyld_stub_binding_helper
+__dyld_func_lookup
+_pango_fc_font_class_intern_init
+_pango_fc_font_init
+_get_face_metrics
+__pango_fc_font_shutdown
+__pango_fc_font_get_font_key
+_pango_matrix_get_font_scale_factors
+__pango_fc_font_get_decoder
+__pango_fc_font_set_decoder
+__pango_fc_font_set_font_key
+_get_per_char
+_FT_MulFix_i386
+_pango_fc_font_class_init
+_pango_fc_font_real_has_char
+_pango_fc_font_real_get_glyph
+_pango_fc_font_finalize
+_pango_fc_font_set_property
+_pango_fc_font_get_property
+_pango_fc_font_describe
+_pango_fc_font_describe_absolute
+_pango_fc_font_find_shaper
+_pango_fc_font_get_coverage
+_pango_fc_font_get_metrics
+_pango_fc_font_get_font_map
+_pango_utf8_strwidth
+_max_glyph_width
+_pango_unichar_width
+_pango_fc_get_shaper_map
+_g_warning
+_pattern_is_hinted
+_pattern_is_transformed
+_free_metrics_info
+_pango_fc_font_map_class_intern_init
+_pango_fc_font_map_init
+__pango_fc_font_map_remove
+_pango_fc_font_key_free
+_pango_fc_font_map_fini
+__pango_fc_cmap_cache_unref
+__pango_fc_font_map_get_cmap_cache
+_pango_fc_font_map_get_font_face_data
+__pango_fc_cmap_cache_ref
+__pango_fc_font_map_get_coverage
+__pango_fc_font_map_fc_to_coverage
+_shutdown_font
+_pango_fc_convert_slant_to_pango
+_pango_fc_convert_weight_to_pango
+_pango_fc_convert_width_to_pango
+_get_gravity_class
+_pango_fc_font_key_hash
+_pango_fc_font_key_equal
+_pango_fc_fontset_key_hash
+_pango_fc_fontset_key_equal
+_pango_fc_font_face_data_hash
+_pango_fc_font_face_data_equal
+_pango_fc_font_face_data_free
+_hash_bytes_fnv
+_pango_fc_font_map_class_init
+_pango_fc_font_map_finalize
+_pango_fc_font_map_load_font
+_pango_fc_font_map_load_fontset
+_pango_fc_font_map_list_families
+_is_alias_family
+_create_family
+_pango_fc_family_get_type
+_pango_fc_family_class_intern_init
+_pango_fc_family_init
+_pango_fc_family_class_init
+_pango_fc_family_finalize
+_pango_fc_family_list_faces
+_pango_fc_family_get_name
+_pango_fc_family_is_monospace
+_create_face
+_pango_fc_face_get_type
+_pango_fc_face_class_intern_init
+_pango_fc_face_init
+_pango_fc_face_class_init
+_pango_fc_face_finalize
+_pango_fc_face_describe
+_pango_fc_face_get_face_name
+_pango_fc_face_list_sizes
+_pango_fc_face_is_synthesized
+_pango_fc_font_map_get_resolution
+_compare_ints
+_pango_fc_default_substitute
+_g_warning
+_make_alias_description
+_pango_fc_fontset_key_init
+_pango_fc_font_map_get_patterns
+_pango_fc_fontset_new
+_pango_fc_fontset_get_key
+_pango_fc_patterns_unref
+_pango_fc_fontset_cache
+_pango_fc_fontset_get_type
+_pango_fc_fontset_key_copy
+_pango_fc_patterns_ref
+_pango_fc_fontset_class_intern_init
+_pango_fc_fontset_init
+_pango_fc_fontset_class_init
+_pango_fc_fontset_finalize
+_pango_fc_fontset_get_font
+_pango_fc_fontset_get_language
+_pango_fc_fontset_foreach
+_pango_fc_fontset_get_font_at
+_pango_fc_fontset_load_next_font
+_pango_fc_patterns_get_pattern
+_pango_fc_patterns_get_font_pattern
+_pango_fc_font_map_new_font
+_uniquify_pattern
+_pango_fc_font_key_init
+_pango_fc_font_map_add
+_pango_fc_font_key_copy
+_pango_fc_fontset_key_free
+_pango_fc_fontset_key_make_pattern
+_pango_fc_patterns_new
+_pango_fc_make_pattern
+_pango_fc_convert_slant_to_fc
+_pango_fc_convert_weight_to_fc
+_pango_fc_convert_width_to_fc
+_get_context_matrix
+_get_scaled_size
+_get_first_font
+_pango_fc_decoder_class_intern_init
+_pango_fc_decoder_init
+_pango_fc_decoder_class_init
+__pango_ft2_font_new
+_load_fallback_face
+_set_transform
+_g_warning
+_pango_ft2_font_class_intern_init
+_pango_ft2_font_init
+__pango_ft2_ft_strerror
+_ft_error_compare
+__pango_ft2_font_get_cache_glyph_data
+_pango_ft2_font_get_glyph_info
+__pango_ft2_font_set_cache_glyph_data
+__pango_ft2_font_set_glyph_cache_destroy
+_pango_ft2_font_class_init
+_pango_ft2_font_finalize
+_pango_ft2_font_get_glyph_extents
+_pango_ft2_font_real_lock_face
+_pango_ft2_font_real_unlock_face
+_pango_ft2_free_glyph_info_callback
+_g_error
+_pango_ft2_font_map_class_intern_init
+_pango_ft2_font_map_init
+_g_critical
+__pango_ft2_font_map_get_library
+__pango_ft2_font_map_get_renderer
+__pango_ft2_font_map_default_substitute
+_pango_ft2_font_map_class_init
+_pango_ft2_font_map_finalize
+_pango_ft2_font_map_get_serial
+_pango_ft2_font_map_changed
+_pango_ft2_font_map_new_font
+_pango_ft2_font_map_get_resolution
+_pango_ft2_renderer_class_intern_init
+_pango_ft2_renderer_init
+_pango_ft2_renderer_set_bitmap
+_pango_ft2_renderer_class_init
+_pango_ft2_renderer_draw_glyph
+_pango_ft2_renderer_draw_trapezoid
+_interpolate_position
+_draw_simple_trap
+_pango_ft2_font_render_glyph
+_g_warning
+_pango_ft2_free_rendered_glyph
+_pango_ft2_font_render_box_glyph
+_pango_ot_info_class_intern_init
+_pango_ot_info_init
+_pango_ot_info_finalizer
+_get_hb_table_type
+_pango_ot_info_class_init
+_pango_ot_info_finalize
+_pango_ot_ruleset_class_intern_init
+_pango_ot_ruleset_init
+_pango_ot_ruleset_class_init
+_pango_ot_ruleset_finalize
+__pango_basic_fc_script_engine_init
+_basic_engine_fc_register_type
+__pango_basic_fc_script_engine_exit
+__pango_basic_fc_script_engine_list
+__pango_basic_fc_script_engine_create
+_basic_engine_fc_class_init
+_basic_engine_shape
+_pango_fc_get_hb_font_funcs
+_acquire_buffer
+_release_buffer
+_create_buffer
+_pango_fc_hb_font_get_glyph
+_pango_fc_hb_font_get_glyph_advance
+_pango_fc_hb_font_get_glyph_h_origin
+_pango_fc_hb_font_get_glyph_v_origin
+_pango_fc_hb_font_get_h_kerning
+_pango_fc_hb_font_get_glyph_extents
+_pango_fc_hb_font_get_glyph_contour_point
+_get_context_matrix.identity
+__pango_ft2_ft_strerror.ft_errors
+_basic_engine_fc_register_type.object_info
+dyld__mach_header
+_s_FT_New_Face
+__pango_included_fc_modules
+_script_engines
+_basic_scripts
+_pango_fc_font_get_type.g_define_type_id__volatile
+_pango_fc_font_parent_class
+_PangoFcFont_private_offset
+_pango_fc_get_shaper_map.engine_type_id
+_pango_fc_get_shaper_map.render_type_id
+_pango_fc_font_map_get_type.g_define_type_id__volatile
+_get_gravity_class.class
+_pango_fc_font_map_init.registered_modules
+_pango_fc_font_map_parent_class
+_PangoFcFontMap_private_offset
+_pango_fc_family_get_type.g_define_type_id__volatile
+_pango_fc_family_parent_class
+_PangoFcFamily_private_offset
+_pango_fc_face_get_type.g_define_type_id__volatile
+_pango_fc_face_parent_class
+_PangoFcFace_private_offset
+_pango_fc_fontset_get_type.g_define_type_id__volatile
+_pango_fc_fontset_parent_class
+_PangoFcFontset_private_offset
+_pango_fc_decoder_get_type.g_define_type_id__volatile
+_pango_fc_decoder_parent_class
+_PangoFcDecoder_private_offset
+_pango_ft2_font_get_type.g_define_type_id__volatile
+__pango_ft2_ft_strerror.default_msg
+_pango_ft2_font_parent_class
+_PangoFT2Font_private_offset
+_pango_ft2_font_map_get_type.g_define_type_id__volatile
+_pango_ft2_global_fontmap
+_pango_ft2_font_map_parent_class
+_PangoFT2FontMap_private_offset
+_pango_ft2_renderer_get_type.g_define_type_id__volatile
+_pango_ft2_renderer_parent_class
+_PangoFT2Renderer_private_offset
+_pango_ot_info_get_type.g_define_type_id__volatile
+_pango_ot_info_parent_class
+_PangoOTInfo_private_offset
+_pango_ot_ruleset_get_type.g_define_type_id__volatile
+_pango_ot_ruleset_get_for_description.ruleset
+_pango_ot_ruleset_parent_class
+_PangoOTRuleset_private_offset
+_basic_engine_fc_type
+_g__cached_buffer_lock
+_cached_buffer
+_pango_fc_get_hb_font_funcs.funcs
+_pango_fc_decoder_get_charset
+_pango_fc_decoder_get_glyph
+_pango_fc_decoder_get_type
+_pango_fc_font_create_base_metrics_for_context
+_pango_fc_font_description_from_pattern
+_pango_fc_font_get_glyph
+_pango_fc_font_get_raw_extents
+_pango_fc_font_get_type
+_pango_fc_font_get_unknown_glyph
+_pango_fc_font_has_char
+_pango_fc_font_kern_glyphs
+_pango_fc_font_key_get_context_key
+_pango_fc_font_key_get_matrix
+_pango_fc_font_key_get_pattern
+_pango_fc_font_lock_face
+_pango_fc_font_map_add_decoder_find_func
+_pango_fc_font_map_cache_clear
+_pango_fc_font_map_create_context
+_pango_fc_font_map_find_decoder
+_pango_fc_font_map_get_type
+_pango_fc_font_map_shutdown
+_pango_fc_font_unlock_face
+_pango_fc_fontset_key_get_absolute_size
+_pango_fc_fontset_key_get_context_key
+_pango_fc_fontset_key_get_description
+_pango_fc_fontset_key_get_language
+_pango_fc_fontset_key_get_matrix
+_pango_fc_fontset_key_get_resolution
+_pango_ft2_font_get_coverage
+_pango_ft2_font_get_face
+_pango_ft2_font_get_kerning
+_pango_ft2_font_get_type
+_pango_ft2_font_map_create_context
+_pango_ft2_font_map_for_display
+_pango_ft2_font_map_get_type
+_pango_ft2_font_map_new
+_pango_ft2_font_map_set_default_substitute
+_pango_ft2_font_map_set_resolution
+_pango_ft2_font_map_substitute_changed
+_pango_ft2_get_context
+_pango_ft2_get_unknown_glyph
+_pango_ft2_new_face_substitute
+_pango_ft2_render
+_pango_ft2_render_layout
+_pango_ft2_render_layout_line
+_pango_ft2_render_layout_line_subpixel
+_pango_ft2_render_layout_subpixel
+_pango_ft2_render_transformed
+_pango_ft2_renderer_get_type
+_pango_ft2_shutdown_display
+_pango_ot_buffer_add_glyph
+_pango_ot_buffer_clear
+_pango_ot_buffer_destroy
+_pango_ot_buffer_get_glyphs
+_pango_ot_buffer_new
+_pango_ot_buffer_output
+_pango_ot_buffer_set_rtl
+_pango_ot_buffer_set_zero_width_marks
+_pango_ot_info_find_feature
+_pango_ot_info_find_language
+_pango_ot_info_find_script
+_pango_ot_info_get
+_pango_ot_info_get_type
+_pango_ot_info_list_features
+_pango_ot_info_list_languages
+_pango_ot_info_list_scripts
+_pango_ot_ruleset_add_feature
+_pango_ot_ruleset_description_copy
+_pango_ot_ruleset_description_equal
+_pango_ot_ruleset_description_free
+_pango_ot_ruleset_description_hash
+_pango_ot_ruleset_get_feature_count
+_pango_ot_ruleset_get_for_description
+_pango_ot_ruleset_get_type
+_pango_ot_ruleset_maybe_add_feature
+_pango_ot_ruleset_maybe_add_features
+_pango_ot_ruleset_new
+_pango_ot_ruleset_new_for
+_pango_ot_ruleset_new_from_description
+_pango_ot_ruleset_position
+_pango_ot_ruleset_substitute
+_pango_ot_tag_from_language
+_pango_ot_tag_from_script
+_pango_ot_tag_to_language
+_pango_ot_tag_to_script
+_FT_Done_Face
+_FT_Done_FreeType
+_FT_Get_Kerning
+_FT_Get_Sfnt_Table
+_FT_Init_FreeType
+_FT_Load_Glyph
+_FT_New_Face
+_FT_Render_Glyph
+_FT_Request_Size
+_FT_Set_Transform
+_FT_Vector_Transform
+_FcCharSetFirstPage
+_FcCharSetHasChar
+_FcCharSetNextPage
+_FcConfigSubstitute
+_FcDefaultSubstitute
+_FcFontList
+_FcFontMatch
+_FcFontRenderPrepare
+_FcFontSetDestroy
+_FcFontSort
+_FcFreeTypeCharIndex
+_FcMatrixMultiply
+_FcObjectSetAdd
+_FcObjectSetBuild
+_FcObjectSetCreate
+_FcObjectSetDestroy
+_FcPatternAddDouble
+_FcPatternAddMatrix
+_FcPatternAddString
+_FcPatternBuild
+_FcPatternCreate
+_FcPatternDel
+_FcPatternDestroy
+_FcPatternDuplicate
+_FcPatternEqual
+_FcPatternGet
+_FcPatternGetBool
+_FcPatternGetCharSet
+_FcPatternGetDouble
+_FcPatternGetInteger
+_FcPatternGetMatrix
+_FcPatternGetString
+_FcPatternHash
+_FcPatternReference
+___stack_chk_fail
+___stack_chk_guard
+_bsearch
+_ceil
+_floor
+_g_array_append_vals
+_g_array_free
+_g_array_new
+_g_array_sort
+_g_ascii_strcasecmp
+_g_assertion_message_expr
+_g_enum_get_value
+_g_enum_get_value_by_nick
+_g_free
+_g_get_prgname
+_g_hash_table_destroy
+_g_hash_table_foreach
+_g_hash_table_foreach_remove
+_g_hash_table_insert
+_g_hash_table_lookup
+_g_hash_table_new
+_g_hash_table_new_full
+_g_hash_table_remove
+_g_intern_static_string
+_g_list_prepend
+_g_list_remove_link
+_g_logv
+_g_malloc
+_g_malloc0_n
+_g_malloc_n
+_g_memdup
+_g_mutex_trylock
+_g_mutex_unlock
+_g_object_class_install_property
+_g_object_new
+_g_object_ref
+_g_object_set
+_g_object_unref
+_g_once_init_enter
+_g_once_init_leave
+_g_param_spec_object
+_g_param_spec_pointer
+_g_ptr_array_add
+_g_ptr_array_free
+_g_ptr_array_new
+_g_quark_from_static_string
+_g_queue_free
+_g_queue_new
+_g_queue_pop_tail
+_g_queue_push_head_link
+_g_realloc_n
+_g_return_if_fail_warning
+_g_slice_alloc
+_g_slice_alloc0
+_g_slice_free1
+_g_slist_append
+_g_slist_delete_link
+_g_slist_foreach
+_g_slist_free
+_g_slist_prepend
+_g_sprintf
+_g_str_equal
+_g_str_hash
+_g_strdup
+_g_strfreev
+_g_strsplit
+_g_type_check_instance_is_a
+_g_type_class_add_private
+_g_type_class_adjust_private_offset
+_g_type_class_peek_parent
+_g_type_class_ref
+_g_type_instance_get_private
+_g_type_module_register_type
+_g_type_name
+_g_type_register_static_simple
+_g_unichar_iswide
+_g_unichar_iszerowidth
+_g_utf8_get_char
+_g_utf8_skip
+_g_value_get_object
+_g_value_get_pointer
+_g_value_set_pointer
+_g_value_take_object
+_g_weak_ref_clear
+_g_weak_ref_get
+_g_weak_ref_set
+_hb_buffer_add
+_hb_buffer_add_utf8
+_hb_buffer_create
+_hb_buffer_destroy
+_hb_buffer_get_direction
+_hb_buffer_get_glyph_infos
+_hb_buffer_get_glyph_positions
+_hb_buffer_get_length
+_hb_buffer_reset
+_hb_buffer_reverse
+_hb_buffer_set_direction
+_hb_buffer_set_flags
+_hb_buffer_set_language
+_hb_buffer_set_script
+_hb_buffer_set_unicode_funcs
+_hb_face_destroy
+_hb_font_create
+_hb_font_destroy
+_hb_font_funcs_create
+_hb_font_funcs_set_glyph_contour_point_func
+_hb_font_funcs_set_glyph_extents_func
+_hb_font_funcs_set_glyph_func
+_hb_font_funcs_set_glyph_h_advance_func
+_hb_font_funcs_set_glyph_h_kerning_func
+_hb_font_funcs_set_glyph_h_origin_func
+_hb_font_funcs_set_glyph_v_advance_func
+_hb_font_funcs_set_glyph_v_origin_func
+_hb_font_set_funcs
+_hb_font_set_ppem
+_hb_font_set_scale
+_hb_ft_face_create
+_hb_ft_face_create_cached
+_hb_glib_get_unicode_funcs
+_hb_glib_script_from_script
+_hb_glib_script_to_script
+_hb_language_from_string
+_hb_language_to_string
+_hb_ot_layout_language_find_feature
+_hb_ot_layout_language_get_feature_tags
+_hb_ot_layout_language_get_required_feature_index
+_hb_ot_layout_script_find_language
+_hb_ot_layout_script_get_language_tags
+_hb_ot_layout_table_find_script
+_hb_ot_layout_table_get_script_tags
+_hb_ot_tag_from_language
+_hb_ot_tag_to_language
+_hb_ot_tag_to_script
+_hb_ot_tags_from_script
+_hb_shape
+_hb_tag_from_string
+_memcmp
+_memcpy
+_memset
+_pango_context_get_font_map
+_pango_context_get_language
+_pango_context_get_matrix
+_pango_context_set_language
+_pango_coverage_get
+_pango_coverage_new
+_pango_coverage_ref
+_pango_coverage_set
+_pango_coverage_unref
+_pango_engine_shape_get_type
+_pango_find_map
+_pango_font_describe_with_absolute_size
+_pango_font_description_copy
+_pango_font_description_copy_static
+_pango_font_description_equal
+_pango_font_description_free
+_pango_font_description_get_family
+_pango_font_description_get_gravity
+_pango_font_description_get_size
+_pango_font_description_get_size_is_absolute
+_pango_font_description_get_stretch
+_pango_font_description_get_style
+_pango_font_description_get_weight
+_pango_font_description_hash
+_pango_font_description_new
+_pango_font_description_set_absolute_size
+_pango_font_description_set_family
+_pango_font_description_set_gravity
+_pango_font_description_set_size
+_pango_font_description_set_stretch
+_pango_font_description_set_style
+_pango_font_description_set_variant
+_pango_font_description_set_weight
+_pango_font_description_to_string
+_pango_font_description_unset_fields
+_pango_font_face_get_type
+_pango_font_family_get_type
+_pango_font_get_coverage
+_pango_font_get_glyph_extents
+_pango_font_get_type
+_pango_font_map_changed
+_pango_font_map_create_context
+_pango_font_map_get_type
+_pango_font_map_load_fontset
+_pango_font_metrics_new
+_pango_font_metrics_ref
+_pango_font_metrics_unref
+_pango_fontset_foreach
+_pango_fontset_get_type
+_pango_glyph_string_set_size
+_pango_gravity_get_type
+_pango_language_from_string
+_pango_language_get_sample_string
+_pango_layout_get_context
+_pango_layout_get_extents
+_pango_layout_get_lines_readonly
+_pango_layout_get_type
+_pango_layout_new
+_pango_layout_set_font_description
+_pango_layout_set_text
+_pango_map_get_engine
+_pango_matrix_get_font_scale_factor
+_pango_module_register
+_pango_quantize_line_geometry
+_pango_renderer_draw_glyphs
+_pango_renderer_draw_layout
+_pango_renderer_draw_layout_line
+_pango_renderer_get_type
+_pango_renderer_set_matrix
+_pango_script_for_unichar
+_pango_version
+_strcmp
+__TEXT
+__text
+__TEXT
+__stubs
+__TEXT
+__stub_helper
+__TEXT
+__const
+__TEXT
+__cstring
+__TEXT
+__unwind_info
+__TEXT
+__eh_frame
+__TEXT
+__DATA
+__dyld
+__DATA
+__got
+__DATA
+__la_symbol_ptr
+__DATA
+__const
+__DATA
+__data
+__DATA
+__bss
+__DATA
+__LINKEDIT
+@loader_path/libpangoft2-1.0.dylib
+@loader_path/libpango-1.0.dylib
+@loader_path/libglib-2.0.dylib
+@loader_path/libgmodule-2.0.dylib
+@loader_path/libgobject-2.0.dylib
+@loader_path/libgthread-2.0.dylib
+@loader_path/libharfbuzz.dylib
+@loader_path/libfreetype.dylib
+@loader_path/libfontconfig.dylib
+/usr/lib/libSystem.B.dylib
+/usr/lib/libgcc_s.1.dylib
+ffff.
+ffff.
+ffff.
+6HcU
+ffffff.
+AWAVAUATSH
+8[A\A]A^A_]
+ffffff.
+ffff.
+ffffff.
+ffffff.
+ffff.
+fffff.
+fffff.
+*GH]
+ffff.
+ffff.
+fffff.
+fffff.
+fffff.
+ffff.
+fffff.
+ffffff.
+fff.
+ffff.
+ffffff.
+H;A@
+H;AX
+HcI8H
+Hcy0
+HcI0H
+ffff.
+fff.
+ffff.
+ffffff.
+ffff.
+fffff.
+ffffff.
+I0;A
+I8;A
+I0;A
+fffff.
+AWAVAUATSH
+D$0L
+D$HH
+[A\A]A^A_]
+ffffff.
+fff.
+fffff.
+ffff.
+ffffff.
+ffff.
+ffff.
+ffff.
+ffff.
+fffff.
+ffff.
+ffff.
+fffff.
+ffffff.
+ffffff.
+ffffff.
+fffff.
+fffff.
+ffff.
++J,)
++q,)
++P,)
+HcO(H
+ffff.
+ffff.
+fffff.
+ffff.
+fffff.
+Hc8H
+ffffff.
+ffffff.
+H9A`
+ffff.
+BUSG
+SOPG
+ffffff.
+fff.
+ffffff.
+ffffff.
+fff.
+fff.
+ffff.
+ffffff.
+ffff.
+fff.
+fff.
+fffff.
+H+wXH
+H+W`H)
+ffffff.
+H+VXH
+H+N`H)
+fff.
+no error
+cannot open resource
+unknown file format
+broken file
+invalid FreeType version
+module version is too low
+invalid argument
+unimplemented feature
+broken table
+broken offset within table
+array allocation size too large
+missing module
+missing property
+invalid glyph index
+invalid character code
+unsupported glyph image format
+cannot render this glyph format
+invalid outline
+invalid composite glyph
+too many hints
+invalid pixel size
+invalid object handle
+invalid library handle
+invalid module handle
+invalid face handle
+invalid size handle
+invalid glyph slot handle
+invalid charmap handle
+invalid cache manager handle
+invalid stream handle
+too many modules
+too many extensions
+out of memory
+unlisted object
+cannot open stream
+invalid stream seek
+invalid stream skip
+invalid stream read
+invalid stream operation
+invalid frame operation
+nested frame access
+invalid frame read
+raster uninitialized
+raster corrupted
+raster overflow
+negative height while rastering
+too many registered caches
+invalid opcode
+too few arguments
+stack overflow
+code overflow
+bad argument
+division by zero
+invalid reference
+found debug opcode
+found ENDF opcode in execution stream
+nested DEFS
+invalid code range
+execution context too long
+too many function definitions
+too many instruction definitions
+SFNT font table missing
+horizontal header (hhea) table missing
+locations (loca) table missing
+name table missing
+character map (cmap) table missing
+horizontal metrics (hmtx) table missing
+PostScript (post) table missing
+invalid horizontal metrics
+invalid character map (cmap) format
+invalid ppem value
+invalid vertical metrics
+could not find context
+invalid PostScript (post) table format
+invalid PostScript (post) table
+opcode syntax error
+argument stack underflow
+ignore
+no Unicode glyph name found
+glyph to big for hinting
+`STARTFONT' field missing
+`FONT' field missing
+`SIZE' field missing
+`FONTBOUNDINGBOX' field missing
+`CHARS' field missing
+`STARTCHAR' field missing
+`ENCODING' field missing
+`BBX' field missing
+`BBX' too big
+Font header corrupted or missing fields
+Font glyphs corrupted or missing fields
+p@PangoFcFont
+Pango
+pango_fc_font_lock_face
+PANGO_IS_FC_FONT (font)
+pango_fc_font_unlock_face
+pango_fc_font_has_char
+_pango_fc_font_shutdown
+pango_fc_font_kern_glyphs
+glyphs != NULL
+pango_fc_font_get_raw_extents
+PANGO_IS_FC_FONT (fcfont)
+matrix
+pattern
+Pattern
+The fontconfig pattern for this font
+fontmap
+Font Map
+The PangoFc font map this font is associated with (Since: 1.26)
+0123456789
+pango_utf8_strwidth
+p != NULL
+PangoEngineShape
+PangoRenderFc
+pixelsize
+%s: invalid %s id %u for "%s" of type '%s' in '%s'
+pangofc-font.c:284
+property
+pango_fc_font_set_property
+pattern != NULL
+fcfont->font_pattern == NULL
+fcfont->fontmap == NULL
+pangofc-font.c:250
+hinting
+charset
+PangoFcFontMap
+pango_fc_font_map_add_decoder_find_func
+PANGO_IS_FC_FONT_MAP (fcfontmap)
+pango_fc_font_map_find_decoder
+_pango_fc_cmap_cache_unref
+cmap_cache->ref_count > 0
+pango_fc_font_map_create_context
+family
+pangofc-fontmap.c
+pango_fc_font_description_from_pattern
+res == FcResultMatch
+slant
+weight
+width
+size
+pangogravity
+file
+index
+spacing
+pango_fc_font_map_list_families
+res == FcResultMatch || res == FcResultNoMatch
+Sans
+Serif
+Monospace
+PangoFcFamily
+Regular
+Bold
+Italic
+Bold Italic
+style
+PangoFcFace
+Error getting DPI from fontconfig, using 72.0
+pango_fc_face_describe
+match_pattern
+monospace
+sans
+serif
+pango_fc_patterns_unref
+pats->ref_count > 0
+pango_fc_patterns_ref
+PangoFcFontset
+pangoversion
+verticallayout
+lang
+prgname
+PangoFcDecoder
+pango_fc_decoder_get_charset
+PANGO_IS_FC_DECODER (decoder)
+pango_fc_decoder_get_glyph
+_pango_ft2_font_new
+fontmap != NULL
+antialias
+hintstyle
+autohint
+pangoft2.c
+pango_ft2_font_get_face
+ft2font->face
+Error in FT_Set_Char_Size: %d
+PangoFT2Font
+Unknown FreeType2 error %#x
+Unable to open font file %s for font %s, exiting
+Unable to open font file %s for font %s, falling back to %s
+PangoFT2FontMap
+pango_ft2_font_map_new: Could not initialize freetype
+pango_ft2_font_map_set_resolution
+PANGO_FT2_IS_FONT_MAP (fontmap)
+pango_ft2_font_map_create_context
+PangoFT2Renderer
+pango_ft2_render_layout_subpixel
+bitmap != NULL
+PANGO_IS_LAYOUT (layout)
+pango_ft2_render_layout_line_subpixel
+line != NULL
+pango_ft2_render_transformed
+PANGO_FT2_IS_FONT (font)
+pango_ft2_render: Unrecognized glyph bitmap pixel mode %d
+PangoOTInfo
+PangoOTRuleset
+pango_ot_ruleset_description_copy
+desc != NULL
+BasicScriptEngineFc
+BasicEngineFc
+basic_engine_shape
+font != NULL
+analysis != NULL
+fontfeatures
+@         
+pP0`
+ P0 
+	`@ 0@
+000    
+0000 00 P
+dyld_stub_binding_helper
+__dyld_func_lookup
+_pango_fc_font_class_intern_init
+_pango_fc_font_init
+_get_face_metrics
+__pango_fc_font_shutdown
+__pango_fc_font_get_font_key
+_pango_matrix_get_font_scale_factors
+__pango_fc_font_get_decoder
+__pango_fc_font_set_decoder
+__pango_fc_font_set_font_key
+_get_per_char
+_FT_MulFix_x86_64
+_pango_fc_font_class_init
+_pango_fc_font_real_has_char
+_pango_fc_font_real_get_glyph
+_pango_fc_font_finalize
+_pango_fc_font_set_property
+_pango_fc_font_get_property
+_pango_fc_font_describe
+_pango_fc_font_describe_absolute
+_pango_fc_font_find_shaper
+_pango_fc_font_get_coverage
+_pango_fc_font_get_metrics
+_pango_fc_font_get_font_map
+_pango_utf8_strwidth
+_max_glyph_width
+_pango_unichar_width
+_pango_fc_get_shaper_map
+_g_warning
+_pattern_is_hinted
+_pattern_is_transformed
+_free_metrics_info
+_pango_fc_font_map_class_intern_init
+_pango_fc_font_map_init
+__pango_fc_font_map_remove
+_pango_fc_font_key_free
+_pango_fc_font_map_fini
+__pango_fc_cmap_cache_unref
+__pango_fc_font_map_get_cmap_cache
+_pango_fc_font_map_get_font_face_data
+__pango_fc_cmap_cache_ref
+__pango_fc_font_map_get_coverage
+__pango_fc_font_map_fc_to_coverage
+_shutdown_font
+_pango_fc_convert_slant_to_pango
+_pango_fc_convert_weight_to_pango
+_pango_fc_convert_width_to_pango
+_get_gravity_class
+_pango_fc_font_key_hash
+_pango_fc_font_key_equal
+_pango_fc_fontset_key_hash
+_pango_fc_fontset_key_equal
+_pango_fc_font_face_data_hash
+_pango_fc_font_face_data_equal
+_pango_fc_font_face_data_free
+_hash_bytes_fnv
+_pango_fc_font_map_class_init
+_pango_fc_font_map_finalize
+_pango_fc_font_map_load_font
+_pango_fc_font_map_load_fontset
+_pango_fc_font_map_list_families
+_is_alias_family
+_create_family
+_pango_fc_family_get_type
+_pango_fc_family_class_intern_init
+_pango_fc_family_init
+_pango_fc_family_class_init
+_pango_fc_family_finalize
+_pango_fc_family_list_faces
+_pango_fc_family_get_name
+_pango_fc_family_is_monospace
+_create_face
+_pango_fc_face_get_type
+_pango_fc_face_class_intern_init
+_pango_fc_face_init
+_pango_fc_face_class_init
+_pango_fc_face_finalize
+_pango_fc_face_describe
+_pango_fc_face_get_face_name
+_pango_fc_face_list_sizes
+_pango_fc_face_is_synthesized
+_pango_fc_font_map_get_resolution
+_compare_ints
+_pango_fc_default_substitute
+_g_warning
+_make_alias_description
+_pango_fc_fontset_key_init
+_pango_fc_font_map_get_patterns
+_pango_fc_fontset_new
+_pango_fc_fontset_get_key
+_pango_fc_patterns_unref
+_pango_fc_fontset_cache
+_pango_fc_fontset_get_type
+_pango_fc_fontset_key_copy
+_pango_fc_patterns_ref
+_pango_fc_fontset_class_intern_init
+_pango_fc_fontset_init
+_pango_fc_fontset_class_init
+_pango_fc_fontset_finalize
+_pango_fc_fontset_get_font
+_pango_fc_fontset_get_language
+_pango_fc_fontset_foreach
+_pango_fc_fontset_get_font_at
+_pango_fc_fontset_load_next_font
+_pango_fc_patterns_get_pattern
+_pango_fc_patterns_get_font_pattern
+_pango_fc_font_map_new_font
+_uniquify_pattern
+_pango_fc_font_key_init
+_pango_fc_font_map_add
+_pango_fc_font_key_copy
+_pango_fc_fontset_key_free
+_pango_fc_fontset_key_make_pattern
+_pango_fc_patterns_new
+_pango_fc_make_pattern
+_pango_fc_convert_slant_to_fc
+_pango_fc_convert_weight_to_fc
+_pango_fc_convert_width_to_fc
+_get_context_matrix
+_get_scaled_size
+_get_first_font
+_pango_fc_decoder_class_intern_init
+_pango_fc_decoder_init
+_pango_fc_decoder_class_init
+__pango_ft2_font_new
+_load_fallback_face
+_set_transform
+_g_warning
+_pango_ft2_font_class_intern_init
+_pango_ft2_font_init
+__pango_ft2_ft_strerror
+_ft_error_compare
+__pango_ft2_font_get_cache_glyph_data
+_pango_ft2_font_get_glyph_info
+__pango_ft2_font_set_cache_glyph_data
+__pango_ft2_font_set_glyph_cache_destroy
+_pango_ft2_font_class_init
+_pango_ft2_font_finalize
+_pango_ft2_font_get_glyph_extents
+_pango_ft2_font_real_lock_face
+_pango_ft2_font_real_unlock_face
+_pango_ft2_free_glyph_info_callback
+_g_error
+_pango_ft2_font_map_class_intern_init
+_pango_ft2_font_map_init
+_g_critical
+__pango_ft2_font_map_get_library
+__pango_ft2_font_map_get_renderer
+__pango_ft2_font_map_default_substitute
+_pango_ft2_font_map_class_init
+_pango_ft2_font_map_finalize
+_pango_ft2_font_map_get_serial
+_pango_ft2_font_map_changed
+_pango_ft2_font_map_new_font
+_pango_ft2_font_map_get_resolution
+_pango_ft2_renderer_class_intern_init
+_pango_ft2_renderer_init
+_pango_ft2_renderer_set_bitmap
+_pango_ft2_renderer_class_init
+_pango_ft2_renderer_draw_glyph
+_pango_ft2_renderer_draw_trapezoid
+_interpolate_position
+_draw_simple_trap
+_pango_ft2_font_render_glyph
+_g_warning
+_pango_ft2_free_rendered_glyph
+_pango_ft2_font_render_box_glyph
+_pango_ot_info_class_intern_init
+_pango_ot_info_init
+_pango_ot_info_finalizer
+_get_hb_table_type
+_pango_ot_info_class_init
+_pango_ot_info_finalize
+_pango_ot_ruleset_class_intern_init
+_pango_ot_ruleset_init
+_pango_ot_ruleset_class_init
+_pango_ot_ruleset_finalize
+__pango_basic_fc_script_engine_init
+_basic_engine_fc_register_type
+__pango_basic_fc_script_engine_exit
+__pango_basic_fc_script_engine_list
+__pango_basic_fc_script_engine_create
+_basic_engine_fc_class_init
+_basic_engine_shape
+_pango_fc_get_hb_font_funcs
+_acquire_buffer
+_release_buffer
+_create_buffer
+_pango_fc_hb_font_get_glyph
+_pango_fc_hb_font_get_glyph_advance
+_pango_fc_hb_font_get_glyph_h_origin
+_pango_fc_hb_font_get_glyph_v_origin
+_pango_fc_hb_font_get_h_kerning
+_pango_fc_hb_font_get_glyph_extents
+_pango_fc_hb_font_get_glyph_contour_point
+_get_context_matrix.identity
+__pango_ft2_ft_strerror.ft_errors
+_basic_engine_fc_register_type.object_info
+_s_FT_New_Face
+__pango_included_fc_modules
+_basic_scripts
+_script_engines
+_pango_fc_font_get_type.g_define_type_id__volatile
+_pango_fc_font_parent_class
+_PangoFcFont_private_offset
+_pango_fc_get_shaper_map.engine_type_id
+_pango_fc_get_shaper_map.render_type_id
+_pango_fc_font_map_get_type.g_define_type_id__volatile
+_get_gravity_class.class
+_pango_fc_font_map_init.registered_modules
+_pango_fc_font_map_parent_class
+_PangoFcFontMap_private_offset
+_pango_fc_family_get_type.g_define_type_id__volatile
+_pango_fc_family_parent_class
+_PangoFcFamily_private_offset
+_pango_fc_face_get_type.g_define_type_id__volatile
+_pango_fc_face_parent_class
+_PangoFcFace_private_offset
+_pango_fc_fontset_get_type.g_define_type_id__volatile
+_pango_fc_fontset_parent_class
+_PangoFcFontset_private_offset
+_pango_fc_decoder_get_type.g_define_type_id__volatile
+_pango_fc_decoder_parent_class
+_PangoFcDecoder_private_offset
+_pango_ft2_font_get_type.g_define_type_id__volatile
+__pango_ft2_ft_strerror.default_msg
+_pango_ft2_font_parent_class
+_PangoFT2Font_private_offset
+_pango_ft2_font_map_get_type.g_define_type_id__volatile
+_pango_ft2_global_fontmap
+_pango_ft2_font_map_parent_class
+_PangoFT2FontMap_private_offset
+_pango_ft2_renderer_get_type.g_define_type_id__volatile
+_pango_ft2_renderer_parent_class
+_PangoFT2Renderer_private_offset
+_pango_ot_info_get_type.g_define_type_id__volatile
+_pango_ot_info_parent_class
+_PangoOTInfo_private_offset
+_pango_ot_ruleset_get_type.g_define_type_id__volatile
+_pango_ot_ruleset_get_for_description.ruleset
+_pango_ot_ruleset_parent_class
+_PangoOTRuleset_private_offset
+_basic_engine_fc_type
+_g__cached_buffer_lock
+_cached_buffer
+_pango_fc_get_hb_font_funcs.funcs
+_pango_fc_decoder_get_charset
+_pango_fc_decoder_get_glyph
+_pango_fc_decoder_get_type
+_pango_fc_font_create_base_metrics_for_context
+_pango_fc_font_description_from_pattern
+_pango_fc_font_get_glyph
+_pango_fc_font_get_raw_extents
+_pango_fc_font_get_type
+_pango_fc_font_get_unknown_glyph
+_pango_fc_font_has_char
+_pango_fc_font_kern_glyphs
+_pango_fc_font_key_get_context_key
+_pango_fc_font_key_get_matrix
+_pango_fc_font_key_get_pattern
+_pango_fc_font_lock_face
+_pango_fc_font_map_add_decoder_find_func
+_pango_fc_font_map_cache_clear
+_pango_fc_font_map_create_context
+_pango_fc_font_map_find_decoder
+_pango_fc_font_map_get_type
+_pango_fc_font_map_shutdown
+_pango_fc_font_unlock_face
+_pango_fc_fontset_key_get_absolute_size
+_pango_fc_fontset_key_get_context_key
+_pango_fc_fontset_key_get_description
+_pango_fc_fontset_key_get_language
+_pango_fc_fontset_key_get_matrix
+_pango_fc_fontset_key_get_resolution
+_pango_ft2_font_get_coverage
+_pango_ft2_font_get_face
+_pango_ft2_font_get_kerning
+_pango_ft2_font_get_type
+_pango_ft2_font_map_create_context
+_pango_ft2_font_map_for_display
+_pango_ft2_font_map_get_type
+_pango_ft2_font_map_new
+_pango_ft2_font_map_set_default_substitute
+_pango_ft2_font_map_set_resolution
+_pango_ft2_font_map_substitute_changed
+_pango_ft2_get_context
+_pango_ft2_get_unknown_glyph
+_pango_ft2_new_face_substitute
+_pango_ft2_render
+_pango_ft2_render_layout
+_pango_ft2_render_layout_line
+_pango_ft2_render_layout_line_subpixel
+_pango_ft2_render_layout_subpixel
+_pango_ft2_render_transformed
+_pango_ft2_renderer_get_type
+_pango_ft2_shutdown_display
+_pango_ot_buffer_add_glyph
+_pango_ot_buffer_clear
+_pango_ot_buffer_destroy
+_pango_ot_buffer_get_glyphs
+_pango_ot_buffer_new
+_pango_ot_buffer_output
+_pango_ot_buffer_set_rtl
+_pango_ot_buffer_set_zero_width_marks
+_pango_ot_info_find_feature
+_pango_ot_info_find_language
+_pango_ot_info_find_script
+_pango_ot_info_get
+_pango_ot_info_get_type
+_pango_ot_info_list_features
+_pango_ot_info_list_languages
+_pango_ot_info_list_scripts
+_pango_ot_ruleset_add_feature
+_pango_ot_ruleset_description_copy
+_pango_ot_ruleset_description_equal
+_pango_ot_ruleset_description_free
+_pango_ot_ruleset_description_hash
+_pango_ot_ruleset_get_feature_count
+_pango_ot_ruleset_get_for_description
+_pango_ot_ruleset_get_type
+_pango_ot_ruleset_maybe_add_feature
+_pango_ot_ruleset_maybe_add_features
+_pango_ot_ruleset_new
+_pango_ot_ruleset_new_for
+_pango_ot_ruleset_new_from_description
+_pango_ot_ruleset_position
+_pango_ot_ruleset_substitute
+_pango_ot_tag_from_language
+_pango_ot_tag_from_script
+_pango_ot_tag_to_language
+_pango_ot_tag_to_script
+_FT_Done_Face
+_FT_Done_FreeType
+_FT_Get_Kerning
+_FT_Get_Sfnt_Table
+_FT_Init_FreeType
+_FT_Load_Glyph
+_FT_New_Face
+_FT_Render_Glyph
+_FT_Request_Size
+_FT_Set_Transform
+_FT_Vector_Transform
+_FcCharSetFirstPage
+_FcCharSetHasChar
+_FcCharSetNextPage
+_FcConfigSubstitute
+_FcDefaultSubstitute
+_FcFontList
+_FcFontMatch
+_FcFontRenderPrepare
+_FcFontSetDestroy
+_FcFontSort
+_FcFreeTypeCharIndex
+_FcMatrixMultiply
+_FcObjectSetAdd
+_FcObjectSetBuild
+_FcObjectSetCreate
+_FcObjectSetDestroy
+_FcPatternAddDouble
+_FcPatternAddMatrix
+_FcPatternAddString
+_FcPatternBuild
+_FcPatternCreate
+_FcPatternDel
+_FcPatternDestroy
+_FcPatternDuplicate
+_FcPatternEqual
+_FcPatternGet
+_FcPatternGetBool
+_FcPatternGetCharSet
+_FcPatternGetDouble
+_FcPatternGetInteger
+_FcPatternGetMatrix
+_FcPatternGetString
+_FcPatternHash
+_FcPatternReference
+___stack_chk_fail
+___stack_chk_guard
+_bsearch
+_ceil
+_floor
+_g_array_append_vals
+_g_array_free
+_g_array_new
+_g_array_sort
+_g_ascii_strcasecmp
+_g_assertion_message_expr
+_g_enum_get_value
+_g_enum_get_value_by_nick
+_g_free
+_g_get_prgname
+_g_hash_table_destroy
+_g_hash_table_foreach
+_g_hash_table_foreach_remove
+_g_hash_table_insert
+_g_hash_table_lookup
+_g_hash_table_new
+_g_hash_table_new_full
+_g_hash_table_remove
+_g_intern_static_string
+_g_list_prepend
+_g_list_remove_link
+_g_logv
+_g_malloc
+_g_malloc0_n
+_g_malloc_n
+_g_memdup
+_g_mutex_trylock
+_g_mutex_unlock
+_g_object_class_install_property
+_g_object_new
+_g_object_ref
+_g_object_set
+_g_object_unref
+_g_once_init_enter
+_g_once_init_leave
+_g_param_spec_object
+_g_param_spec_pointer
+_g_ptr_array_add
+_g_ptr_array_free
+_g_ptr_array_new
+_g_quark_from_static_string
+_g_queue_free
+_g_queue_new
+_g_queue_pop_tail
+_g_queue_push_head_link
+_g_realloc_n
+_g_return_if_fail_warning
+_g_slice_alloc
+_g_slice_alloc0
+_g_slice_free1
+_g_slist_append
+_g_slist_delete_link
+_g_slist_foreach
+_g_slist_free
+_g_slist_prepend
+_g_sprintf
+_g_str_equal
+_g_str_hash
+_g_strdup
+_g_strfreev
+_g_strsplit
+_g_type_check_instance_is_a
+_g_type_class_add_private
+_g_type_class_adjust_private_offset
+_g_type_class_peek_parent
+_g_type_class_ref
+_g_type_instance_get_private
+_g_type_module_register_type
+_g_type_name
+_g_type_register_static_simple
+_g_unichar_iswide
+_g_unichar_iszerowidth
+_g_utf8_get_char
+_g_utf8_skip
+_g_value_get_object
+_g_value_get_pointer
+_g_value_set_pointer
+_g_value_take_object
+_g_weak_ref_clear
+_g_weak_ref_get
+_g_weak_ref_set
+_hb_buffer_add
+_hb_buffer_add_utf8
+_hb_buffer_create
+_hb_buffer_destroy
+_hb_buffer_get_direction
+_hb_buffer_get_glyph_infos
+_hb_buffer_get_glyph_positions
+_hb_buffer_get_length
+_hb_buffer_reset
+_hb_buffer_reverse
+_hb_buffer_set_direction
+_hb_buffer_set_flags
+_hb_buffer_set_language
+_hb_buffer_set_script
+_hb_buffer_set_unicode_funcs
+_hb_face_destroy
+_hb_font_create
+_hb_font_destroy
+_hb_font_funcs_create
+_hb_font_funcs_set_glyph_contour_point_func
+_hb_font_funcs_set_glyph_extents_func
+_hb_font_funcs_set_glyph_func
+_hb_font_funcs_set_glyph_h_advance_func
+_hb_font_funcs_set_glyph_h_kerning_func
+_hb_font_funcs_set_glyph_h_origin_func
+_hb_font_funcs_set_glyph_v_advance_func
+_hb_font_funcs_set_glyph_v_origin_func
+_hb_font_set_funcs
+_hb_font_set_ppem
+_hb_font_set_scale
+_hb_ft_face_create
+_hb_ft_face_create_cached
+_hb_glib_get_unicode_funcs
+_hb_glib_script_from_script
+_hb_glib_script_to_script
+_hb_language_from_string
+_hb_language_to_string
+_hb_ot_layout_language_find_feature
+_hb_ot_layout_language_get_feature_tags
+_hb_ot_layout_language_get_required_feature_index
+_hb_ot_layout_script_find_language
+_hb_ot_layout_script_get_language_tags
+_hb_ot_layout_table_find_script
+_hb_ot_layout_table_get_script_tags
+_hb_ot_tag_from_language
+_hb_ot_tag_to_language
+_hb_ot_tag_to_script
+_hb_ot_tags_from_script
+_hb_shape
+_hb_tag_from_string
+_memcmp
+_memcpy
+_memset
+_pango_context_get_font_map
+_pango_context_get_language
+_pango_context_get_matrix
+_pango_context_set_language
+_pango_coverage_get
+_pango_coverage_new
+_pango_coverage_ref
+_pango_coverage_set
+_pango_coverage_unref
+_pango_engine_shape_get_type
+_pango_find_map
+_pango_font_describe_with_absolute_size
+_pango_font_description_copy
+_pango_font_description_copy_static
+_pango_font_description_equal
+_pango_font_description_free
+_pango_font_description_get_family
+_pango_font_description_get_gravity
+_pango_font_description_get_size
+_pango_font_description_get_size_is_absolute
+_pango_font_description_get_stretch
+_pango_font_description_get_style
+_pango_font_description_get_weight
+_pango_font_description_hash
+_pango_font_description_new
+_pango_font_description_set_absolute_size
+_pango_font_description_set_family
+_pango_font_description_set_gravity
+_pango_font_description_set_size
+_pango_font_description_set_stretch
+_pango_font_description_set_style
+_pango_font_description_set_variant
+_pango_font_description_set_weight
+_pango_font_description_to_string
+_pango_font_description_unset_fields
+_pango_font_face_get_type
+_pango_font_family_get_type
+_pango_font_get_coverage
+_pango_font_get_glyph_extents
+_pango_font_get_type
+_pango_font_map_changed
+_pango_font_map_create_context
+_pango_font_map_get_type
+_pango_font_map_load_fontset
+_pango_font_metrics_new
+_pango_font_metrics_ref
+_pango_font_metrics_unref
+_pango_fontset_foreach
+_pango_fontset_get_type
+_pango_glyph_string_set_size
+_pango_gravity_get_type
+_pango_language_from_string
+_pango_language_get_sample_string
+_pango_layout_get_context
+_pango_layout_get_extents
+_pango_layout_get_lines_readonly
+_pango_layout_get_type
+_pango_layout_new
+_pango_layout_set_font_description
+_pango_layout_set_text
+_pango_map_get_engine
+_pango_matrix_get_font_scale_factor
+_pango_module_register
+_pango_quantize_line_geometry
+_pango_renderer_draw_glyphs
+_pango_renderer_draw_layout
+_pango_renderer_draw_layout_line
+_pango_renderer_get_type
+_pango_renderer_set_matrix
+_pango_script_for_unichar
+_pango_version
+_strcmp

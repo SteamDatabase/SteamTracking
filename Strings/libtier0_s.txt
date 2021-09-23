@@ -1,0 +1,5842 @@
+__TEXT
+__text
+__TEXT
+__symbol_stub
+__TEXT
+__stub_helper
+__TEXT
+__cstring
+__TEXT
+__const
+__TEXT
+__gcc_except_tab__TEXT
+__unwind_info
+__TEXT
+__DATA
+__nl_symbol_ptr
+__DATA
+__got
+__DATA
+__la_symbol_ptr
+__DATA
+__mod_init_func
+__DATA
+__const
+__DATA
+__cfstring
+__DATA
+__data
+__DATA
+__bss
+__DATA
+__common
+__DATA
+__LINKEDIT
+@loader_path/libtier0_s.dylib
+@loader_path/crashhandler.dylib
+/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+/usr/lib/libc++.1.dylib
+/usr/lib/libSystem.B.dylib
+/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+,^_[]
+,^_[]
+^_[]
+Unkn
+^_[]
+^_[]
+VVRQj
+ ^_]
+^_[]
+^_[]
+QQPVRS
+^_[]
+^_[]
+^_[]
+^_[]
+QPRRR
+WVRQP
+0^_]
+QPRRR
+^_[]
+QPRRj
+QPRRj
+QPRRj
+QPRRj
+QPRRj
+~@O1
+^_[]
+SRQP
+SShP
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+ ^_]
+<^_[]
+^_[]
+VRQP
+^_[]
+VRQP
+^_[]
+^_[]
+^_[]
+SWVP
+^_[]
+^_[]
+^_[]
+^_[]
+323B
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+%UUUU)
+3333
+,^_[]
+^_[]
+^_[]
+9{lw
+9{pr
+1RWV
+^_[]
+s	9_|
+9_|w
+^_[]
+^_[]
+^_[]
+^_[]
+9{lw
+9{pr
+^_[]
+s	9_|
+9_|w
+^_[]
+^_[]
+%UUUU
+3333!
+}';}
+^_[]
+%UUUU
+3333
+UUUU
+3333!
+3333
+\^_[]
+9_lw
+9_pr
+^_[]
+9_lw
+9_pr
+^_[]
+^_[]
+^_[]
+QjNP
+^_[]
+^_[]
+^_[]
+UUUU
+3333
+^_[]
+%UUUU
+3333
+^_[]
+%UUUU
+3333
+^_[]
+ ^_]
+%UUUU
+3333
+^_[]
+^_[]
+%UUUU
+3333
+u4;}
+<^_[]
+%UUUU
+3333
+^_[]
+L^_[]
+^_[]
+^_[]
+^_[]
+<^_[]
+^_[]
+%UUUU
+3333
+,^_[]
+%UUUU
+3333
+^_[]
+UUUU
+3333
+^_[]
+%UUUU
+3333
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+,^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+VRQP
+L^_[]
+ ^_]
+QPSV
+^_[]
+QPSV
+^_[]
+^_[]
+OVVWh
+^_[]
+^_[]
+^_[]
+<=t+
+^_[]
+WWQSj
+^_[]
+P^_]
+SSPW
+QSSR
+unkn
+^_[]
+unkn
+^_[]
+Pj{Q
+^_[]
+^_[]
+^_[]
+PQSW
+PjoQ
+^_[]
+^_[]
+PQRW
+^_[]
+Ph@B
+^_[]
+^_[]
+Wh@B
+ ^_]
+^_[]
+,^_[]
+xQuQ
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+9FXu>
+FX;E
+FX;E
+^_[]
+^_[]
+<^_[]
+^_[]
+l^_[]
+PQh)	
+^_[]
+8#t#
+^_[]
+t*;E
+^_[]
+SWVP
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+SWVP
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+,^_[]
+t%90
+^_[]
+PjgQ
+^_[]
+^_[]
+^_[]
+QRQRSV
+Pj@V
+PQRV
+^_[]
+QPRj W
+VUUU
+L^_[]
+^_[]
+K(+F$f
+<^_[]
+^_[]
+N$t)
+Qj1P
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+F4uS
+V`9F\
+^_[]
+\N f
+ ^_]
+^_[]
+^_[]
+^_[]
+|^_[]
+^_[]
+L^_[]
+^_[]
+l$@f
+T$8f
+|^_[]
+9Wtu>
+^_[]
+~K9wttF
+<^_[]
+u[zY
+|^_[]
+,^_[]
+PSj	V
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+F ^]
+^_[]
+F ^]
+^_[]
+^_[]
+^_[]
+VPQR
+VPRW
+L^_[]
+A WSPQ
+WSQPR
+WSRQPV
+,^_[]
+,^_[]
+,^_[]
+,^_[]
+WRQPV
+WQPV
+,^_[]
+^_[]
+%s %i %s
+-noassert
+-nocrashdialog
+-debugbreak
+AuthenticAMD
+hw.physicalcpu
+hw.logicalcpu
+Unable to determine CPU Frequency. Try defining CPU_MHZ.
+%s (%d) : 
+console
+Exiting on SPEW_ABORT
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/dbg.cpp
+pGroupName
+strlen( pGroupName ) < MAX_GROUP_NAME_LENGTH
+IsSpewActive
+Minidumps written:
+ - file:%s, line:%u ,time:%04u%02u%02u%02u%02u%02u
+Fatal Assertion Failed: 
+DONT_BREAK_ON_ASSERT
+Spew globals
+Spew Globals
+-stack=
+Fatal assert; application exiting
+Fatal assert
+_ExitOnFatalAssert
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/threadtools.h
+m_cReentrancyCount >= 0
+Failed to generate callstack
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memblockhdr.cpp
+Assertion Failed: stack%2d: %s
+Stack%2d: %s
+Assertion Failed: stack%2d: 0x%llX
+Stack%2d: 0x%llX
+ppFrames[iFrame] != NULL
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memstd.cpp
+((size_t)(m_nLogicalBytesAllocated) % 8) == 0
+No tracked allocs currently in use. Total %d
+Tracked allocs currently in use. %d Total %d
+item %p sentinel corrupted. skipping.
+Busy, please retry.
+DumpMemTrackingStats %d %d 
+	%d items : %s - %s:%d
+***** OUT OF MEMORY! attempted allocation size: %zu ****
+OUT OF MEMORY
+(iub & (m_nSizeWithStack-1)) == 0
+pAllocTracker->m_uSentinel == 0xaa110ced
+false
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/memblockhdr.h
+pLeft->m_iStackPC <= V_ARRAYSIZE(pLeft->m_StackPC)
+allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
+unknown
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/minidump.cpp
+Someone called SetWritingMinidump without holding the minidump lock.
+Someone called ClearWritingMinidump without holding the minidump lock.
+Assert( %s ):%s:%d
+MacOS
+Frameworks
+crashhandler003
+crashhandler002
+crashhandler.dylib
+CreateInterface
+Steam
+Sep 23 2021
+07:33:55
+%02d:%02d:%02d
+%04d%02d%02d%02d%02d%02d
+CatchAndWriteContext_t::Invoke with bogus argc/argv
+CatchAndWriteContext_t::Invoke with bogus void *ptr
+CatchAndWriteContext_t::Set w/o a function pointer!
+IVALIDATE001
+-steamconsole
+-steamos
+-hometest
+-steamos3
+-holo
+-chromeos
+-steampal
+-steamdeck
+/System/Library/CoreServices/SystemVersion.plist
+ProductBuildVersion
+com.valvesoftware.steam
+/dev/urandom
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/platform_posix.cpp
+s_dev_urandom_fd >= 0
+urandom_result > 0 || ( urandom_result < 0 && errno == EINTR )
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/testthread.cpp
+!m_bTestThreadRunning
+ret == 0
+pthread_self() == m_ulMainThreadID
+pthread_self() == m_ulTestThreadID
+Warning: thread priority outside allowed range %d
+Warning: failed to set thread priority: set failed for priority %d
+Warning: support for elevated priorities is most likely unavailable, suppressing future warnings
+MainThrd
+pthread_setname_np
+%s: no such process %d
+ThreadGetProcessExitCode
+/bin/ps -x -o pid=,ppid=
+%d	%d
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/threadtools.cpp
+Thread synchronization object is unuseable
+Attempting to create a named event with a null name
+Semaphore name (%s) is longer than POSIX can handle, truncating.
+/e%s%s
+semaphore creation failed %s
+the same event name (%s) was created as both manual and auto reset, something's fubar'd
+USER
+Invalid max value for semaphore
+Invalid initial value for semaphore
+m_bSemOwner
+pszName == NULL || *pszName == '/' || (isalpha((unsigned char) *pszName) && pszName[1] == ':' && pszName[2] == '/')
+POSIX does not support inheriting full mutexes
+Anonymous mutex cannot have bAllAccess == true
+Out of thread local storage!
+Bad thread local
+Illegal termination of worker thread '%s'
+Deleting thread object from the thread, this is bad
+Thread(0x%p/0x%p/0x%x)
+Tried to create a thread that has already been created!
+Failed to create thread (error 0x%x)
+Thread failed to initialize
+Thread cannot be joined with self
+Only thread can stop self: Use a higher-level protocol
+Probably deadlock or failure waiting for thread to initialize.
+Only NULL allowed on integer assign
+CTSListBase: Misaligned list
+CTSQueue bad tail pointer
+CTSQueue bad tail->Next value
+CTSQueue bad peek pointer when empty
+CTSQueue m_HeadTailPair mismatch when empty
+CTSQueue bad node count
+CTSQueue freelist depth mismatch
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/validator.cpp
+m_pValObjects != NULL
+m_iThreadMutexValidationLock == 0
+CValidator : too many memory nodes to store, try again with a higher threshold value
+NULL != m_pValObjectCur
+!pTracker->IsClaimed( pKey )
+pTracker->Find( pKey ) != NULL
+Total bytes allocated (os heap reported): %s
+Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s
+Total bytes allocated counted: %s
+%%%ds | %%9s | %%12s
+Object
+Blocks
+Size
+%%-%ds | %%9d | %%12s
+g_pMemAllocSteam
+%d validator nodes, %d nodes larger than %s
+C-runtime internal
+PS3 Unattributed
+server.dylib
+steamclient.dylib
+gsoapwrapper.dylib
+propack.dylib
+nattypeprobe.dylib
+p2pstunserver.dylib
+p2prelayserver.dylib
+p2pcore.dylib
+steamservice.dylib
+xmemory
+xlocale
+misc.h
+secblock.h
+vgui2_s.dylib
+steamui.dylib
+friendsui.dylib
+serverbrowser.dylib
+chromehtml.dylib
+tenfoot.dylib
+filesystem_steam.dylib
+filesystem_stdio.dylib
+externaltests.dylib
+audio.dylib
+video.dylib
+video64_server.dylib
+panorama.dylib
+%*s%s %s --> %d blocks = %s (new)
+%*s%s %s --> %d blocks = %s (%s larger)
+CValidator
+!m_bJustCount
+m_iThreadMutexValidationLock < (int) ( sizeof(m_threadMutexValidationLock)/sizeof(m_threadMutexValidationLock[0]) )
+ bytes
+ GiB
+ MiB
+ KiB
+%i%s
+%%.%if%s
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/valobject.cpp
+NULL == pValObjectPrev->m_pValObjectNext
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/vprof.cpp
+!g_VProfile
+pszName
+m_nRecursions > 0
+CVProfNode
+m_L2Cache
+m_pSibling
+m_pChild
+pChild
+ Avg Time/Frame (ms)
+[ func+child   func ]     Count
+  ---------- ------      ------
+       Sum (ms)         Avg Time/Frame (ms)     Avg Time/Call (ms)
+[ func+child   func ]  [ func+child   func ]  [ func+child   func ]  Count   Peak
+  ---------- ------      ---------- ------      ---------- ------   ------ ------
+  %10.3f %6.2f      %6d
+  %10.3f %6.2f      %10.3f %6.2f      %10.3f %6.2f   %6d %6.2f
+  Scope                                                      Calls  Time+Child    Pct        Time    Pct   Avg+Child         Avg        Peak
+  ---------------------------------------------------- ----------- ----------- ------ ----------- ------ ----------- ----------- -----------
+  %52s%12d%12.3f%6.2f%%%12.3f%6.2f%%%12.3f%12.3f%12.3f
+VPROF Report for Thread: %d - %s
+No samples during profile period.
+Thread did nothing but sleep during profile period.
+-- Summary --
+%d frames sampled for %.2f seconds
+Average %.2f fps, %.2f ms per frame
+Peak %.2f ms frame
+%.1f pct of time accounted for
+-- Hierarchical Call Graph --
+-- Profile scopes sorted by time (including children) --
+-- Profile scopes sorted by time (without children) --
+-- Profile scopes sorted by average time (including children) --
+-- Profile scopes sorted by average time (without children) --
+-- Profile scopes sorted by peak --
+-- Profile scopes sorted by peak over average (including children) --
+Root
+m_pBudgetGroups == NULL
+Unaccounted
+Sleeping
+VGUI
+FileSystem
+ClientDLL
+SteamUI
+Network
+Encryption
+OverlayRendering
+OverlayInput
+GameOverlayUI
+RunCallbacks
+Logger
+Jobs/Coroutines
+ServerMain
+Streaming
+ThreadWorkItem
+TenFoot
+tier1
+m_pBudgetGroups
+eGroup < VPROF_BUDGETGROUP_MAX
+No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
+WARNING: Disabling vprof spike dumping and stopping profile for thread %d - %s because of exceeded rate limit, try a higher threshold.
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/vprof.h
+m_pParent
+m_pszName
+0C12CStdMemAlloc
+9IMemAlloc
+4@N16SteamThreadTools7CThreadE
+QkkXa
+N(knN
+N10SteamVProf13CVProfManagerE
+Mb@?
+SCRERA`
+A`?Ap
+^ATASAp
+@__ZNSt12length_errorD1Ev
+@__ZTISt12length_error
+@__ZTIi
+@__ZTVN10__cxxabiv117__class_type_infoE
+@__ZTVN10__cxxabiv120__si_class_type_infoE
+@__ZTVSt12length_error
+@__ZdaPv
+@__ZdlPv
+@__Znam
+@__Znwm
+@___cxa_pure_virtual
+@___gxx_personality_v0
+@__DefaultRuneLocale
+@___stack_chk_guard
+@___stderrp
+@___stdoutp
+@_daylight
+@_timezone$UNIX2003
+@dyld_stub_binder
+@___CFConstantStringClassReference
+@_kCFAllocatorDefault
+@__ZTISt12length_error
+@__ZTSN10SteamVProf13CVProfManagerE
+@__ZdaPv
+@__ZdlPv
+@__Znam
+@__Znwm
+@_CFDictionaryGetTypeID
+@_CFDictionaryGetValueIfPresent
+@_CFGetTypeID
+@_CFPropertyListCreateFromXMLData
+@_CFRelease
+@_CFStringGetCString
+@_CFURLCreateDataAndPropertiesFromResource
+@_CFURLCreateWithFileSystemPath
+@__NSGetArgc
+@__NSGetArgv
+@__NSGetExecutablePath
+@__Unwind_Resume
+@__ZNKSt3__120__vector_base_commonILb1EE20__throw_length_errorEv
+@__ZNSt11logic_errorC2EPKc
+@__ZNSt3__112__next_primeEm
+@__ZSt9terminatev
+@___bzero
+@___cxa_allocate_exception
+@___cxa_atexit
+@___cxa_begin_catch
+@___cxa_end_catch
+@___cxa_free_exception
+@___cxa_guard_abort
+@___cxa_guard_acquire
+@___cxa_guard_release
+@___cxa_rethrow
+@___cxa_throw
+@___divdi3
+@___error
+@___maskrune
+@___stack_chk_fail
+@___tolower
+@___udivdi3
+@___umoddi3
+@__exit
+@_asctime_r
+@_atoi
+@_backtrace
+@_backtrace_symbols
+@_ceilf
+@_chdir
+@_ctime_r
+@_dladdr
+@_dlclose
+@_dlopen
+@_dlsym
+@_fflush
+@_fgets
+@_fork
+@_fprintf
+@_fputc
+@_fputs$UNIX2003
+@_free
+@_fwrite$UNIX2003
+@_getenv
+@_gethostbyname
+@_gethostname
+@_getpid
+@_gettimeofday
+@_gmtime_r
+@_host_page_size
+@_host_statistics
+@_kill$UNIX2003
+@_localtime_r
+@_mach_absolute_time
+@_mach_host_self
+@_mach_timebase_info
+@_malloc
+@_malloc_size
+@_memcmp
+@_memcpy
+@_memmove
+@_mmap$UNIX2003
+@_mprotect$UNIX2003
+@_munmap$UNIX2003
+@_nanosleep$UNIX2003
+@_open$UNIX2003
+@_pclose
+@_popen$UNIX2003
+@_posix_memalign
+@_printf
+@_pthread_attr_init
+@_pthread_attr_setstacksize
+@_pthread_cancel$UNIX2003
+@_pthread_cond_broadcast
+@_pthread_cond_destroy
+@_pthread_cond_init$UNIX2003
+@_pthread_cond_signal
+@_pthread_cond_timedwait_relative_np
+@_pthread_cond_wait$UNIX2003
+@_pthread_condattr_destroy
+@_pthread_condattr_init
+@_pthread_create
+@_pthread_exit
+@_pthread_getspecific
+@_pthread_join$UNIX2003
+@_pthread_key_create
+@_pthread_key_delete
+@_pthread_kill
+@_pthread_mach_thread_np
+@_pthread_mutex_destroy
+@_pthread_mutex_init
+@_pthread_mutex_lock
+@_pthread_mutex_trylock
+@_pthread_mutex_unlock
+@_pthread_mutexattr_destroy$UNIX2003
+@_pthread_mutexattr_init
+@_pthread_mutexattr_settype
+@_pthread_self
+@_pthread_setschedparam
+@_pthread_setspecific
+@_read$UNIX2003
+@_realloc
+@_sched_get_priority_max
+@_sched_get_priority_min
+@_sched_yield
+@_semctl$UNIX2003
+@_semget
+@_semop
+@_setsid
+@_sigaction
+@_signal
+@_sigprocmask
+@_snprintf
+@_sscanf
+@_stat$INODE64
+@_strcasecmp
+@_strchr
+@_strcmp
+@_strcpy
+@_strerror$UNIX2003
+@_strlen
+@_strncasecmp
+@_strncpy
+@_strrchr
+@_strstr
+@_sysctl
+@_sysctlnametomib
+@_system$UNIX2003
+@_time
+@_timegm
+@_usleep$UNIX2003
+@_vfprintf
+@_vsnprintf
+@_waitpid$UNIX2003
+Plat_
+HasStackTrackingFilters
+FreeCrashMemoryReserve
+vtune
+ouldUseNewAssertDialog
+utdownPME
+oNewAssertDialog
+Warning
+eclareCurrentThreadIsMainThread
+cureRandomBytes
+InAssert
+Assert
+StackTrackingFilter
+MiniDump
+InAssert
+	LogActive
+64BitOS
+SpewMessageType
+	DMsg
+17GetCPUInformationv
+PortableSystemInformation
+NumberOfS
+MiniDump
+InstalledRAM
+AvailableRAM
+LocalHostname
+Tick
+MSTime
+USTime
+asctime
+ctime
+time
+daylight
+gmtime
+localtime
+Virtual
+DefaultAllocErrorFn
+SetAllocErrorFn
+CommandLineParam
+OutputDebugString
+InDebugSession
+Steam
+ChromeOS
+OutputFunc
+ChangeIfStillDefault
+WrittenMiniDumps
+tackTrackingFilter
+OutputFunc
+AndLogLevel
+lushLogFunc
+ullMemoryDumpOnCrash
+lear
+VProfile_ExitScope
+tchAndWriteMiniDump
+FlushLogFunc
+AssertFailedNotifyFunc
+FailedNotifyFunc
+	DumpStack
+Source
+	Fmt
+	iniDumpUnlock
+pewActive
+tackTrackingFiltered
+arning
+riteMiniDump
+rror
+nableCrashingOnCrashes
+ctivate
+ndLog
+Activate
+ChangeIfStillDefault
+$V16SteamThreadTools15CThreadSpinLock4LockEj
+,6CTier015ValidateGlobalsER10CValidator
+5AssertMsgHelperILb
+6SteamThreadTools
+1EE12AssertFailedEPKcjS2_
+0EE12AssertFailedEPKcjS2_z
+ByGroupIndex
+pewAndLogGroups
+tackTrackingFilters
+ackSmokingCompiler
+eateSimpleProcess
+ssertMsgImplementation
+reStackTrackingFiltersEnabledAtStart
+llocateCrashMemoryReserve
+alidateSpew
+ProfInternal
+StackTrackingFilters
+WritingMiniDump
+ializeStackTrackingFilters
+leaseThreadHandle
+GetCallStack
+Print
+CallStack
+RawCallStack
+BlockingGetMiniDumpLock
+Writing
+MiniDumpLock
+LocalFQDN
+MiniDump
+FatalMiniDump
+NonFatalMiniDump
+AppID
+BuildID
+SteamID
+CustomInfo
+BuildID
+SteamID
+Directory
+ForVoidPtrFn
+ReturnsInt
+ForVoidPtrFn
+rashHandlerFactory
+RunTimeVersion
+lativeTick
+alloc
+Frequency
+DiffMi
+AddMicroSec
+lliSec
+croSec
+loatTime
+zone
+bsoluteTime
+lloc
+ttachDebuggerToProcess
+ToFloat
+Protect
+Free
+ccessFlags
+lloc
+ExecutablePath
+StackBackTrace
+rocessArgv
+ackageName
+Exists
+Value
+ConsoleMode
+UTF8
+hread
+Thread_Yield
+SetFailed
+HasF
+IsActive
+TerminateThread
+Test
+Frame
+ailed
+inished
+7CThread
+8CreateSimpleThreadEPFjPvES0_Pjj
+7CThreadSyncObject
+"2CThread
+&6CThread
+(3CThreadRWLock1
+MicroSleepPOSIX
+Terminate
+ OpenProcess
+!CloseProcess
+!ResumeProcess
+"WaitForProcessExit
+"FindProcessByName
+leep
+pinWaitForValue
+ uspendProcess
+!hellExecute
+mplOneTimeInit
+terlocked
+MainThread
+Assign
+Increment
++Decrement
++Exchange
++CompareExchange
+PointerIf
+Current
+Handle
+RunningRef
+Process
+ThreadRunning
+Process
+iority
+ ocess
+Priority
+ BackgroundPriority
+ Affinity
+ DebugName
+ProcessCode
+Handle
+!ExitCode
+"ListInfo
+IdActive
+!Active
+NoWindow
+%4WaitEj
+"1Ev
+#1Ev
+2CloseSemaphoreInternalEibPKc
+%3CreateSemaphoreInternalEPKclbPb
+'1OpenSemaphoreInternalEPKcb
+'9EnsureSemaphorePostedInternalEi
+(7IsSemaphoreOrphanedInternalEii
+6SteamThreadTools
+$0SteamVProf9CVProfile
+%7CThread
+7CThreadSyncObjectntEv
+%6CThread
+3AssertUseableEv
+%4SaveNameToFileEPKc
+AcquireSemaphoreInternalEj
+&ReleaseSemaphoreInternalEil
+Event
+&Mutex
+&3SetEv
+&PKcbb
+3CreateAnonymousSyncObjectInternalEbb
+'PKcbb
+SignalThreadSyncObjectInternalEv
+(EnsureSemaphoreClearedInternalEi
+ResetEv
+(CheckEv
+Semaphore
+)FullMutex
+)LocalBase
+)7ReleaseEl
+2Ell
+)1Ell
+)7ReleaseEv
+2EbPKcbb
+)1EbPKcbb
+FullMutex9IsCreatorEv
+*LocalBase3GetEv
+*3SetEPv
+*1Ev
+*1Ev
++Pointer
+Pointer
+,1Ev
+,1Ev
+,2LockForWriteEv
+WaitForReadEv
+-UnlockWriteEv
+	C2Ev
+19TerminateEi
+-1Ev
+/0Ev
+.9GetResultEv
+.7IsAliveEv
+7BHasValidThreadIDEv
+.5IsThreadRunningEv
+11GetPriorityEv
+GetNameEv
+7GetCurrentCThreadEv
+/1SetPriorityEi
+13GetThreadProcEv
+10ThreadProcEPv
+JoinEj
+/StopEi
+1InitEv
+etNameEPKc
+0uspendEv
+0YieldEv
+tartEm
+0leepEj
+1WaitForCreateCompleteEPNS_12CThreadEventE
+12ThreadExceptionWrapperEPv
+ResumeEv
+1OnExitEv
+ListBase_
+2Queue
+Init
+2SwapList
+2UnsafePeek
+Base_
+Init
+3Unsafe
+PopIntoFreeList
+3UnsafeDebugCheck
+Peek
+3Dummy
+CValidator
+4SteamVProf
+54PushEPKcPvS1_
+79IsClaimedEPv
+2EibP20IMemBlockClaimedList
+51EibP20IMemBlockClaimedList
+51Ev
+1UnlockValidationLocksEv
+50ClaimUntrackedMemoryEm
+8SetAllocSizeFilterEi
+79ClaimMemory_AlignedEPv
+86ClaimArrayMemoryEPv
+85Claim
+83RenderObjectsEm
+90FindObjectEPv
+97AddValidationLockEPN16SteamThreadTools12CThreadMutexE
+PopEv
+70BExcludeAllocationFromTrackingEPKci
+Claim
+8RenderLeaksEm
+9DiffAgainstEPS_
+MemoryEPv
+8SocketEi
+9OsFileEi
+TrackedKeyEP11CTrackItemsPvPm
+9ConnectionEj
+FinalizeEv
+9ValidateERS_PKc
+:9CVProfile
+;20CVProfileThreadEntry
+3CVProfManager
+:4CVProfileArrayD
+?0CVProfNode
+K8ValidateER10CValidatorPKc
+;2Ev
+;2Ev
+GetProfileForCurrentThread
+;EnterScopeCurrentThread
+D6ResumeEv
+<2Ev
+9AddProfileForThreadEPNS_9CVProfileEjP17_opaque_pthread_t
+=8BIsProfilePtrValidEPNS_9CVProfileE
+M6EnableDumpSpikesEi
+>2OutputReportEiPKci
+J9GetBudgetGroupColorE17EVProfBugdetGroupRiS2_S2_S2_
+EnterScopeEPKc17EVProfBugdetGroupPv
+>ResetPeaksEv
+FDumpSortedEPKcdPFbRKNS_10TimeSums_tES5_Ei
+ExitScopeEv
+?MarkFrameEPKc
+FDumpNodesEPNS_10CVProfNodeEib
+?1Ev
+B6ResumeEv
+B8ValidateER10CValidatorPKc
+2EPNS_9CVProfileEPKcPS0_17EVProfBugdetGroup
+A1EPNS_9CVProfileEPKcPS0_17EVProfBugdetGroup
+ResetEv
+APauseEv
+A1Ev
+A5SetCurFrameTimeEm
+GetSubNodeEPKc17EVProfBugdetGroup
+BEnterScopeEPv
+ExitScopeEv
+BMarkFrameEv
+BResetPeakEv
+4GetTotalTimeLessChildrenEv
+C2GetCurTimeLessChildrenEv
+C3GetPrevTimeLessChildrenEv
+StartEv
+DPauseEv
+FResetEv
+StopEv
+EDumpEPKcz
+I4BProfileHasNodesOutsideBudgetGroup_RecursiveEPNS_10CVProfNodeEi
+I0GetFrameTimeOutsideBudgetGroup_RecursiveEPNS_10CVProfNodeE17EVProfBugdetGroup
+ITermEv
+18GetBudgetGroupNameE17EVProfBugdetGroup
+F30BudgetGroupNameToBudgetGroupIDEPKc
+F22SetDumpSpikesThresholdEi
+6OnFrameCompletedEv
+G7OnNewFrameEnteredEv
+L4StartProfilingEv
+M1DumpProfileEi
+3RegisterCallbackHandlerEPNS_24IVProfileCallbackHandlerE
+H5UnregisterCallbackHandlerEPNS_24IVProfileCallbackHandlerE
+SumTimesEP
+IFindNodeEPNS_10CVProfNodeEPKc
+IValidateER10CValidatorPKc
+NS_10CVProfNodeEi
+IKci
+CreateBudgetGroupsEv
+JAddBudgetGroupNameE17EVProfBugdetGroupiPKc
+J1Ev
+FreeNodes_REPNS_10CVProfNodeE
+KGetThreadIDEv
+L4StartProfilingAllThreadsEv
+M3StopProfilingAllThreadsEv
+M0GetAllThreadProfilesEPNS_14CVProfileArrayE
+CleanupUnusedProfilesEv
+LDumpAllThreadProfilesEi
+DeleteProfileEv
+MStopProfilingEv
+1EPNS_9CVProfileEjP17_opaque_pthread_t
+N2EPNS_9CVProfileEjP17_opaque_pthread_t
+NVN16SteamThreadTools7CThreadE
+OIN16SteamThreadTools7CThreadE
+6SteamThreadTools7CThreadE
+O0SteamVProf13CVProfManagerE
+ClockSpeed
+PpMemAllocSteam
+PbInException
+PVProf
+PSecondsMultiplier
+crosecondsMultiplier
+PllisecondsMultiplier
+ProfilesRunningCount
+QManager
+Qile
+; .#
+$<$<$q
+yI#WnI
+#	>,
+Dzll
+){c$TII
+789>>8'
+RO""@bF
+			BA"
+Y@Y88
+]W m(
+iF=+
+E5'$u	
+	5/)*D
+Qg	z""
+bPh0
+2,& 
+F<T0
+_AllocateCrashMemoryReserve
+_AreStackTrackingFiltersEnabledAtStart
+_AssertMsgImplementation
+_AssertMsgImplementationF
+_AssertMsgImplementationV
+_BBlockingGetMiniDumpLock
+_BGetLocalFQDN
+_BGetMiniDumpLock
+_BWritingFatalMiniDump
+_BWritingMiniDump
+_BWritingNonFatalMiniDump
+_CVProfile_ExitScope
+_CallAssertFailedNotifyFunc
+_CallFlushLogFunc
+_CatchAndWriteMiniDump
+_CatchAndWriteMiniDumpEx
+_CatchAndWriteMiniDumpExForVoidPtrFn
+_CatchAndWriteMiniDumpExReturnsInt
+_CatchAndWriteMiniDumpForVoidPtrFn
+_ClearStackTrackingFilters
+_ClearWritingMiniDump
+_CrackSmokingCompiler
+_CreateSimpleProcess
+_DLog
+_DWarning
+_DeclareCurrentThreadIsMainThread
+_DoNewAssertDialog
+_EnableCrashingOnCrashes
+_Error
+_FreeCrashMemoryReserve
+_GetAvailableRAM
+_GetCRunTimeVersion
+_GetCrashHandlerFactory
+_GetInstalledRAM
+_GetLocalHostname
+_GetMiniDumpBuildID
+_GetMiniDumpDirectory
+_GetMiniDumpSteamID
+_GetNumberOfSpewAndLogGroups
+_GetNumberOfStackTrackingFilters
+_GetPortableSystemInformation
+_GetSpewAndLogLevel
+_GetSpewAndLogLevelByGroupIndex
+_GetSpewOutputFunc
+_GetStackTrackingFilter
+_HasStackTrackingFilters
+_InitPME
+_InitializeStackTrackingFilters
+_Is64BitOS
+_IsInAssert
+_IsLogActive
+_IsSpewActive
+_IsStackTrackingFiltered
+_Log
+_MiniDumpUnlock
+_Msg
+_Plat_AbsoluteTime
+_Plat_AbsoluteTimeToFloat
+_Plat_Alloc
+_Plat_AttachDebuggerToProcess
+_Plat_CommandLineParamExists
+_Plat_CommandLineParamValue
+_Plat_DefaultAllocErrorFn
+_Plat_FloatTime
+_Plat_Free
+_Plat_GetExecutablePath
+_Plat_GetExecutablePathUTF8
+_Plat_GetPackageName
+_Plat_GetProcessArgv
+_Plat_GetStackBackTrace
+_Plat_IsChromeOS
+_Plat_IsInDebugSession
+_Plat_IsSteamConsoleMode
+_Plat_IsSteamOS
+_Plat_IsSteamOS3
+_Plat_IsSteamPal
+_Plat_MSTime
+_Plat_MSTime64
+_Plat_OutputDebugString
+_Plat_OutputDebugStringRaw
+_Plat_Realloc
+_Plat_RelativeTickFrequency
+_Plat_RelativeTicks
+_Plat_SetAllocErrorFn
+_Plat_TickAddMicroSec
+_Plat_TickDiffMicroSec
+_Plat_TickDiffMilliSec
+_Plat_USTime
+_Plat_VirtualAccessFlags
+_Plat_VirtualAlloc
+_Plat_VirtualFree
+_Plat_VirtualProtect
+_Plat_asctime
+_Plat_ctime
+_Plat_daylight
+_Plat_gmtime
+_Plat_localtime
+_Plat_timegm
+_Plat_timezone
+_RealGetCallStack
+_RealPrintCallStack
+_RealPrintRawCallStack
+_ReleaseThreadHandle
+_SecureRandomBytes
+_SetAssertDumpStack
+_SetAssertFailedNotifyFunc
+_SetFlushLogFunc
+_SetFullMemoryDumpOnCrash
+_SetInAssert
+_SetMiniDumpAppID
+_SetMiniDumpBuildID
+_SetMiniDumpCustomInfo
+_SetMiniDumpSteamID
+_SetStackTrackingFilter
+_ShouldUseNewAssertDialog
+_ShutdownPME
+_SpewActivate
+_SpewAndLogActivate
+_SpewAndLogChangeIfStillDefault
+_SpewChangeIfStillDefault
+_SpewOutputFunc
+_SpewWrittenMiniDumps
+_TSListBase_Init
+_TSListBase_Pop
+_TSListBase_Push
+_TSListBase_SwapList
+_TSListBase_UnsafePeek
+_TSQueueBase_Init
+_TSQueueBase_Pop
+_TSQueueBase_Push
+_TSQueueBase_UnsafeDummy
+_TSQueueBase_UnsafePeek
+_TSQueue_PopIntoFreeList
+_TSQueue_UnsafeDebugCheck
+_TestThread_Yield
+_Test_HasFailed
+_Test_HasFinished
+_Test_IsActive
+_Test_RunFrame
+_Test_RunTest
+_Test_SetFailed
+_Test_TerminateThread
+_ThreadCloseProcess
+_ThreadFindProcessByName
+_ThreadGetCurrentHandle
+_ThreadGetCurrentId
+_ThreadGetCurrentProcessHandle
+_ThreadGetCurrentProcessId
+_ThreadGetCurrentRunningRef
+_ThreadGetPriority
+_ThreadGetProcessExitCode
+_ThreadGetProcessId
+_ThreadGetProcessListInfo
+_ThreadImplOneTimeInit
+_ThreadInMainThread
+_ThreadInterlockedAssignIf
+_ThreadInterlockedAssignIf64
+_ThreadInterlockedAssignPointerIf
+_ThreadInterlockedCompareExchange
+_ThreadInterlockedCompareExchange64
+_ThreadInterlockedCompareExchangePointer
+_ThreadInterlockedDecrement
+_ThreadInterlockedDecrement64
+_ThreadInterlockedExchange
+_ThreadInterlockedExchange64
+_ThreadInterlockedExchangeAdd
+_ThreadInterlockedExchangeAdd64
+_ThreadInterlockedExchangePointer
+_ThreadInterlockedIncrement
+_ThreadInterlockedIncrement64
+_ThreadIsProcessActive
+_ThreadIsProcessIdActive
+_ThreadIsThreadRunning
+_ThreadMicroSleepPOSIX
+_ThreadOpenProcess
+_ThreadResumeProcess
+_ThreadSetAffinity
+_ThreadSetBackgroundPriority
+_ThreadSetDebugName
+_ThreadSetPriority
+_ThreadShellExecute
+_ThreadShellExecuteNoWindow
+_ThreadSleep
+_ThreadSpinWaitForValue
+_ThreadSuspendProcess
+_ThreadTerminate
+_ThreadTerminateProcessCode
+_ThreadWaitForProcessExit
+_VProfInternalEnterScopeCurrentThread
+_VProfInternalGetProfileForCurrentThread
+_ValidateSpew
+_Warning
+_WriteMiniDump
+__DMsg
+__SpewMessageType
+__SpewMessageTypeSourceFmt
+__SpewMessageTypeSourceV
+__Z17GetCPUInformationv
+__ZN10CValidator10FindObjectEPv
+__ZN10CValidator11ClaimMemoryEPv
+__ZN10CValidator11ClaimOsFileEi
+__ZN10CValidator11ClaimSocketEi
+__ZN10CValidator11DiffAgainstEPS_
+__ZN10CValidator11RenderLeaksEm
+__ZN10CValidator13RenderObjectsEm
+__ZN10CValidator15ClaimConnectionEj
+__ZN10CValidator15ClaimTrackedKeyEP11CTrackItemsPvPm
+__ZN10CValidator16ClaimArrayMemoryEPv
+__ZN10CValidator17AddValidationLockEPN16SteamThreadTools12CThreadMutexE
+__ZN10CValidator18SetAllocSizeFilterEi
+__ZN10CValidator19ClaimMemory_AlignedEPv
+__ZN10CValidator20ClaimUntrackedMemoryEm
+__ZN10CValidator21UnlockValidationLocksEv
+__ZN10CValidator30BExcludeAllocationFromTrackingEPKci
+__ZN10CValidator3PopEv
+__ZN10CValidator4PushEPKcPvS1_
+__ZN10CValidator8FinalizeEv
+__ZN10CValidator8ValidateERS_PKc
+__ZN10CValidator9IsClaimedEPv
+__ZN10CValidatorC1EibP20IMemBlockClaimedList
+__ZN10CValidatorC2EibP20IMemBlockClaimedList
+__ZN10CValidatorD1Ev
+__ZN10CValidatorD2Ev
+__ZN10SteamVProf10CVProfNode10EnterScopeEPv
+__ZN10SteamVProf10CVProfNode10GetSubNodeEPKc17EVProfBugdetGroup
+__ZN10SteamVProf10CVProfNode15SetCurFrameTimeEm
+__ZN10SteamVProf10CVProfNode22GetCurTimeLessChildrenEv
+__ZN10SteamVProf10CVProfNode23GetPrevTimeLessChildrenEv
+__ZN10SteamVProf10CVProfNode24GetTotalTimeLessChildrenEv
+__ZN10SteamVProf10CVProfNode5PauseEv
+__ZN10SteamVProf10CVProfNode5ResetEv
+__ZN10SteamVProf10CVProfNode6ResumeEv
+__ZN10SteamVProf10CVProfNode8ValidateER10CValidatorPKc
+__ZN10SteamVProf10CVProfNode9ExitScopeEv
+__ZN10SteamVProf10CVProfNode9MarkFrameEv
+__ZN10SteamVProf10CVProfNode9ResetPeakEv
+__ZN10SteamVProf10CVProfNodeC1EPNS_9CVProfileEPKcPS0_17EVProfBugdetGroup
+__ZN10SteamVProf10CVProfNodeC2EPNS_9CVProfileEPKcPS0_17EVProfBugdetGroup
+__ZN10SteamVProf10CVProfNodeD1Ev
+__ZN10SteamVProf10CVProfNodeD2Ev
+__ZN10SteamVProf13CVProfManager16EnableDumpSpikesEi
+__ZN10SteamVProf13CVProfManager18BIsProfilePtrValidEPNS_9CVProfileE
+__ZN10SteamVProf13CVProfManager19AddProfileForThreadEPNS_9CVProfileEjP17_opaque_pthread_t
+__ZN10SteamVProf13CVProfManager20GetAllThreadProfilesEPNS_14CVProfileArrayE
+__ZN10SteamVProf13CVProfManager21CleanupUnusedProfilesEv
+__ZN10SteamVProf13CVProfManager21DumpAllThreadProfilesEi
+__ZN10SteamVProf13CVProfManager23StopProfilingAllThreadsEv
+__ZN10SteamVProf13CVProfManager24StartProfilingAllThreadsEv
+__ZN10SteamVProf13CVProfManager8ValidateER10CValidatorPKc
+__ZN10SteamVProf13CVProfManagerC1Ev
+__ZN10SteamVProf13CVProfManagerC2Ev
+__ZN10SteamVProf13CVProfManagerD1Ev
+__ZN10SteamVProf13CVProfManagerD2Ev
+__ZN10SteamVProf14CVProfileArrayD1Ev
+__ZN10SteamVProf14CVProfileArrayD2Ev
+__ZN10SteamVProf20CVProfileThreadEntry11DumpProfileEi
+__ZN10SteamVProf20CVProfileThreadEntry13DeleteProfileEv
+__ZN10SteamVProf20CVProfileThreadEntry13StopProfilingEv
+__ZN10SteamVProf20CVProfileThreadEntry14StartProfilingEv
+__ZN10SteamVProf20CVProfileThreadEntry16OnFrameCompletedEv
+__ZN10SteamVProf20CVProfileThreadEntry17OnNewFrameEnteredEv
+__ZN10SteamVProf20CVProfileThreadEntry22SetDumpSpikesThresholdEi
+__ZN10SteamVProf20CVProfileThreadEntryC1EPNS_9CVProfileEjP17_opaque_pthread_t
+__ZN10SteamVProf20CVProfileThreadEntryC2EPNS_9CVProfileEjP17_opaque_pthread_t
+__ZN10SteamVProf9CVProfile10DumpSortedEPKcdPFbRKNS_10TimeSums_tES5_Ei
+__ZN10SteamVProf9CVProfile10EnterScopeEPKc17EVProfBugdetGroupPv
+__ZN10SteamVProf9CVProfile10ResetPeaksEv
+__ZN10SteamVProf9CVProfile11FreeNodes_REPNS_10CVProfNodeE
+__ZN10SteamVProf9CVProfile11GetThreadIDEv
+__ZN10SteamVProf9CVProfile12OutputReportEiPKci
+__ZN10SteamVProf9CVProfile18AddBudgetGroupNameE17EVProfBugdetGroupiPKc
+__ZN10SteamVProf9CVProfile18CreateBudgetGroupsEv
+__ZN10SteamVProf9CVProfile19GetBudgetGroupColorE17EVProfBugdetGroupRiS2_S2_S2_
+__ZN10SteamVProf9CVProfile23RegisterCallbackHandlerEPNS_24IVProfileCallbackHandlerE
+__ZN10SteamVProf9CVProfile25UnregisterCallbackHandlerEPNS_24IVProfileCallbackHandlerE
+__ZN10SteamVProf9CVProfile40GetFrameTimeOutsideBudgetGroup_RecursiveEPNS_10CVProfNodeE17EVProfBugdetGroup
+__ZN10SteamVProf9CVProfile44BProfileHasNodesOutsideBudgetGroup_RecursiveEPNS_10CVProfNodeEi
+__ZN10SteamVProf9CVProfile4DumpEPKcz
+__ZN10SteamVProf9CVProfile4StopEv
+__ZN10SteamVProf9CVProfile4TermEv
+__ZN10SteamVProf9CVProfile5PauseEv
+__ZN10SteamVProf9CVProfile5ResetEv
+__ZN10SteamVProf9CVProfile5StartEv
+__ZN10SteamVProf9CVProfile6ResumeEv
+__ZN10SteamVProf9CVProfile8FindNodeEPNS_10CVProfNodeEPKc
+__ZN10SteamVProf9CVProfile8SumTimesEPKci
+__ZN10SteamVProf9CVProfile8SumTimesEPNS_10CVProfNodeEi
+__ZN10SteamVProf9CVProfile8ValidateER10CValidatorPKc
+__ZN10SteamVProf9CVProfile9DumpNodesEPNS_10CVProfNodeEib
+__ZN10SteamVProf9CVProfile9ExitScopeEv
+__ZN10SteamVProf9CVProfile9MarkFrameEPKc
+__ZN10SteamVProf9CVProfileC1Ev
+__ZN10SteamVProf9CVProfileC2Ev
+__ZN10SteamVProf9CVProfileD1Ev
+__ZN10SteamVProf9CVProfileD2Ev
+__ZN15AssertMsgHelperILb0EE12AssertFailedEPKcjS2_z
+__ZN15AssertMsgHelperILb1EE12AssertFailedEPKcjS2_
+__ZN16SteamThreadTools12CThreadEvent3SetEv
+__ZN16SteamThreadTools12CThreadEvent5CheckEv
+__ZN16SteamThreadTools12CThreadEvent5ResetEv
+__ZN16SteamThreadTools12CThreadEventC1EPKcbb
+__ZN16SteamThreadTools12CThreadEventC1Eb
+__ZN16SteamThreadTools12CThreadEventC2EPKcbb
+__ZN16SteamThreadTools12CThreadEventC2Eb
+__ZN16SteamThreadTools12CThreadMutexC1Ev
+__ZN16SteamThreadTools12CThreadMutexC2Ev
+__ZN16SteamThreadTools12CThreadMutexD1Ev
+__ZN16SteamThreadTools12CThreadMutexD2Ev
+__ZN16SteamThreadTools13CThreadRWLock11UnlockWriteEv
+__ZN16SteamThreadTools13CThreadRWLock11WaitForReadEv
+__ZN16SteamThreadTools13CThreadRWLock12LockForWriteEv
+__ZN16SteamThreadTools16CThreadFullMutex7ReleaseEv
+__ZN16SteamThreadTools16CThreadFullMutexC1EbPKcbb
+__ZN16SteamThreadTools16CThreadFullMutexC2EbPKcbb
+__ZN16SteamThreadTools16CThreadLocalBase3SetEPv
+__ZN16SteamThreadTools16CThreadLocalBaseC1Ev
+__ZN16SteamThreadTools16CThreadLocalBaseC2Ev
+__ZN16SteamThreadTools16CThreadLocalBaseD1Ev
+__ZN16SteamThreadTools16CThreadLocalBaseD2Ev
+__ZN16SteamThreadTools16CThreadSemaphore7ReleaseEl
+__ZN16SteamThreadTools16CThreadSemaphoreC1Ell
+__ZN16SteamThreadTools16CThreadSemaphoreC2Ell
+__ZN16SteamThreadTools17CThreadSyncObject13AssertUseableEv
+__ZN16SteamThreadTools17CThreadSyncObject14SaveNameToFileEPKc
+__ZN16SteamThreadTools17CThreadSyncObject21OpenSemaphoreInternalEPKcb
+__ZN16SteamThreadTools17CThreadSyncObject22CloseSemaphoreInternalEibPKc
+__ZN16SteamThreadTools17CThreadSyncObject23CreateSemaphoreInternalEPKclbPb
+__ZN16SteamThreadTools17CThreadSyncObject24AcquireSemaphoreInternalEj
+__ZN16SteamThreadTools17CThreadSyncObject24ReleaseSemaphoreInternalEil
+__ZN16SteamThreadTools17CThreadSyncObject27IsSemaphoreOrphanedInternalEii
+__ZN16SteamThreadTools17CThreadSyncObject29EnsureSemaphorePostedInternalEi
+__ZN16SteamThreadTools17CThreadSyncObject30EnsureSemaphoreClearedInternalEi
+__ZN16SteamThreadTools17CThreadSyncObject30SignalThreadSyncObjectInternalEv
+__ZN16SteamThreadTools17CThreadSyncObject33CreateAnonymousSyncObjectInternalEbb
+__ZN16SteamThreadTools17CThreadSyncObject4WaitEj
+__ZN16SteamThreadTools17CThreadSyncObjectC1Ev
+__ZN16SteamThreadTools17CThreadSyncObjectC2Ev
+__ZN16SteamThreadTools17CThreadSyncObjectD1Ev
+__ZN16SteamThreadTools17CThreadSyncObjectD2Ev
+__ZN16SteamThreadTools18CreateSimpleThreadEPFjPvES0_Pjj
+__ZN16SteamThreadTools7CThread10ThreadProcEPv
+__ZN16SteamThreadTools7CThread11SetPriorityEi
+__ZN16SteamThreadTools7CThread13GetThreadProcEv
+__ZN16SteamThreadTools7CThread17GetCurrentCThreadEv
+__ZN16SteamThreadTools7CThread21WaitForCreateCompleteEPNS_12CThreadEventE
+__ZN16SteamThreadTools7CThread22ThreadExceptionWrapperEPv
+__ZN16SteamThreadTools7CThread4InitEv
+__ZN16SteamThreadTools7CThread4JoinEj
+__ZN16SteamThreadTools7CThread4StopEi
+__ZN16SteamThreadTools7CThread5SleepEj
+__ZN16SteamThreadTools7CThread5StartEm
+__ZN16SteamThreadTools7CThread5YieldEv
+__ZN16SteamThreadTools7CThread6OnExitEv
+__ZN16SteamThreadTools7CThread6ResumeEv
+__ZN16SteamThreadTools7CThread7GetNameEv
+__ZN16SteamThreadTools7CThread7SetNameEPKc
+__ZN16SteamThreadTools7CThread7SuspendEv
+__ZN16SteamThreadTools7CThread9TerminateEi
+__ZN16SteamThreadTools7CThreadC2Ev
+__ZN16SteamThreadTools7CThreadD0Ev
+__ZN16SteamThreadTools7CThreadD1Ev
+__ZN16SteamThreadTools7CThreadD2Ev
+__ZN6CTier015ValidateGlobalsER10CValidator
+__ZNK10SteamVProf9CVProfile18GetBudgetGroupNameE17EVProfBugdetGroup
+__ZNK10SteamVProf9CVProfile30BudgetGroupNameToBudgetGroupIDEPKc
+__ZNK16SteamThreadTools16CThreadFullMutex9IsCreatorEv
+__ZNK16SteamThreadTools16CThreadLocalBase3GetEv
+__ZNK16SteamThreadTools17CThreadSyncObjectntEv
+__ZNK16SteamThreadTools7CThread11GetPriorityEv
+__ZNK16SteamThreadTools7CThread15IsThreadRunningEv
+__ZNK16SteamThreadTools7CThread17BHasValidThreadIDEv
+__ZNK16SteamThreadTools7CThread7IsAliveEv
+__ZNK16SteamThreadTools7CThread9GetResultEv
+__ZNV16SteamThreadTools15CThreadSpinLock4LockEj
+__ZTIN16SteamThreadTools7CThreadE
+__ZTSN10SteamVProf13CVProfManagerE
+__ZTSN16SteamThreadTools7CThreadE
+__ZTVN16SteamThreadTools7CThreadE
+_g_ClockSpeed
+_g_ClockSpeedMicrosecondsMultiplier
+_g_ClockSpeedMillisecondsMultiplier
+_g_ClockSpeedSecondsMultiplier
+_g_VProfManager
+_g_VProfProfilesRunningCount
+_g_VProfile
+_g_bInException
+_g_pMemAllocSteam
+_vtune
+_CFDictionaryGetTypeID
+_CFDictionaryGetValueIfPresent
+_CFGetTypeID
+_CFPropertyListCreateFromXMLData
+_CFRelease
+_CFStringGetCString
+_CFURLCreateDataAndPropertiesFromResource
+_CFURLCreateWithFileSystemPath
+__DefaultRuneLocale
+__NSGetArgc
+__NSGetArgv
+__NSGetExecutablePath
+__Unwind_Resume
+__ZNKSt3__120__vector_base_commonILb1EE20__throw_length_errorEv
+__ZNSt11logic_errorC2EPKc
+__ZNSt12length_errorD1Ev
+__ZNSt3__112__next_primeEm
+__ZSt9terminatev
+__ZTISt12length_error
+__ZTIi
+__ZTVN10__cxxabiv117__class_type_infoE
+__ZTVN10__cxxabiv120__si_class_type_infoE
+__ZTVSt12length_error
+__ZdaPv
+__ZdlPv
+__Znam
+__Znwm
+___CFConstantStringClassReference
+___bzero
+___cxa_allocate_exception
+___cxa_atexit
+___cxa_begin_catch
+___cxa_end_catch
+___cxa_free_exception
+___cxa_guard_abort
+___cxa_guard_acquire
+___cxa_guard_release
+___cxa_pure_virtual
+___cxa_rethrow
+___cxa_throw
+___divdi3
+___error
+___gxx_personality_v0
+___maskrune
+___stack_chk_fail
+___stack_chk_guard
+___stderrp
+___stdoutp
+___tolower
+___udivdi3
+___umoddi3
+__exit
+_asctime_r
+_atoi
+_backtrace
+_backtrace_symbols
+_ceilf
+_chdir
+_ctime_r
+_daylight
+_dladdr
+_dlclose
+_dlopen
+_dlsym
+_fflush
+_fgets
+_fork
+_fprintf
+_fputc
+_fputs$UNIX2003
+_free
+_fwrite$UNIX2003
+_getenv
+_gethostbyname
+_gethostname
+_getpid
+_gettimeofday
+_gmtime_r
+_host_page_size
+_host_statistics
+_kCFAllocatorDefault
+_kill$UNIX2003
+_localtime_r
+_mach_absolute_time
+_mach_host_self
+_mach_timebase_info
+_malloc
+_malloc_size
+_memcmp
+_memcpy
+_memmove
+_mmap$UNIX2003
+_mprotect$UNIX2003
+_munmap$UNIX2003
+_nanosleep$UNIX2003
+_open$UNIX2003
+_pclose
+_popen$UNIX2003
+_posix_memalign
+_printf
+_pthread_attr_init
+_pthread_attr_setstacksize
+_pthread_cancel$UNIX2003
+_pthread_cond_broadcast
+_pthread_cond_destroy
+_pthread_cond_init$UNIX2003
+_pthread_cond_signal
+_pthread_cond_timedwait_relative_np
+_pthread_cond_wait$UNIX2003
+_pthread_condattr_destroy
+_pthread_condattr_init
+_pthread_create
+_pthread_exit
+_pthread_getspecific
+_pthread_join$UNIX2003
+_pthread_key_create
+_pthread_key_delete
+_pthread_kill
+_pthread_mach_thread_np
+_pthread_mutex_destroy
+_pthread_mutex_init
+_pthread_mutex_lock
+_pthread_mutex_trylock
+_pthread_mutex_unlock
+_pthread_mutexattr_destroy$UNIX2003
+_pthread_mutexattr_init
+_pthread_mutexattr_settype
+_pthread_self
+_pthread_setschedparam
+_pthread_setspecific
+_read$UNIX2003
+_realloc
+_sched_get_priority_max
+_sched_get_priority_min
+_sched_yield
+_semctl$UNIX2003
+_semget
+_semop
+_setsid
+_sigaction
+_signal
+_sigprocmask
+_snprintf
+_sscanf
+_stat$INODE64
+_strcasecmp
+_strchr
+_strcmp
+_strcpy
+_strerror$UNIX2003
+_strlen
+_strncasecmp
+_strncpy
+_strrchr
+_strstr
+_sysctl
+_sysctlnametomib
+_system$UNIX2003
+_time
+_timegm
+_timezone$UNIX2003
+_usleep$UNIX2003
+_vfprintf
+_vsnprintf
+_waitpid$UNIX2003
+dyld_stub_binder
+radr://5614542
+com.valvesoftware.steam
+MXGJJ98X76
+>3?|Ud
+}(>/7
+(~0._
+g7[=V
+<x0[+
+.9e-
+&%.G
+wPk%
++!=+
+	Ji6
+subject.OU
+MXGJJ98X76
+com.valvesoftware.steam
+MXGJJ98X76
+!I	3
+7Y@[W
+f&rw
+#s	\
+S_D`
++>3Y
+KaqZ
+TP/7n
+,q<L
+KLSFFc
+Jpx?
+h9a^
+55%j#
+_S=.i
+3R`as,V
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+120201221215Z
+270201221215Z0y1-0+
+$Developer ID Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+)xEii`k_
+1? v(m
+'0%0#
+http://crl.apple.com/root.crl0
+B9tk
+P9jDt
+#q-_
+ "ror
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+060425214036Z
+350209214036Z0b1
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+, op
+https://www.apple.com/appleca/0
+Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
+=&g 
+Sj[d
+uu!0
+0y1-0+
+$Developer ID Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+210205030950Z
+260206030950Z0
+MXGJJ98X761A0?
+8Developer ID Application: Valve Corporation (MXGJJ98X76)1
+MXGJJ98X761
+Valve Corporation1
+~kk!
+3oC&
+uN`AJ
+40200
+$http://ocsp.apple.com/ocsp03-devid080
+)http://www.apple.com/certificateauthority0
+Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
+20120706000000Z0
+o(D-U
+6fQS
+:iPq
+0y1-0+
+$Developer ID Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+210923143358Z0/
+H<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>cdhashes</key>
+	<array>
+		<data>
+		aCuZblqsxA8by2bAgag7MykMweY=
+		</data>
+		<data>
+		cZBVccaq80sZW1rauCyplCfMFNQ=
+		</data>
+	</array>
+</dict>
+</plist>
+i?/=
+`||p
+f%GF
+x1[]yt
+20210923143518Z0
+0|100.
+'Apple Timestamp Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+210831175002Z
+211012175001Z0B1
+Timestamp Signer NWK11
+Apple Inc.1
+Y=|Ug
+http://www.apple.com/appleca0
+Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
+,0*0(
+"http://crl.apple.com/timestamp.crl0
+d|8]
+}LWc
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+120405120244Z
+270405120244Z0|100.
+'Apple Timestamp Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+Im] 
+(ny_~
+&By^
+t-D>
+E~4u&
+'0%0#
+http://crl.apple.com/root.crl0
+mzT_
+Bsu|QC
+:m7(
+FeoU
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+060425214036Z
+350209214036Z0b1
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+, op
+https://www.apple.com/appleca/0
+Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
+=&g 
+Sj[d
+uu!1
+0|100.
+'Apple Timestamp Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+210923143518Z0#
+_KC`
+#V%~
+__TEXT
+__text
+__TEXT
+__stubs
+__TEXT
+__stub_helper
+__TEXT
+__cstring
+__TEXT
+__const
+__TEXT
+__gcc_except_tab__TEXT
+__unwind_info
+__TEXT
+__DATA
+__nl_symbol_ptr
+__DATA
+__got
+__DATA
+__la_symbol_ptr
+__DATA
+__mod_init_func
+__DATA
+__const
+__DATA
+__cfstring
+__DATA
+__data
+__DATA
+__bss
+__DATA
+__common
+__DATA
+__LINKEDIT
+@loader_path/libtier0_s.dylib
+@loader_path/crashhandler.dylib
+/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+/usr/lib/libc++.1.dylib
+/usr/lib/libSystem.B.dylib
+/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+AWAVAUATSH
+[A\A]A^A_]
+[A\A]A^A_]
+Unknown
+AWAVAUATSH
+[A\A]A^A_]
+AWAVAUATSH
+([A\A]A^A_]
+([A\A]A^A_]
+AWAVSH
+	H;M
+[A^A_]
+AWAVSPI
+[A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+	H;M
+AWAVSH
+[A^A_]
+AWAVAUATSP
+[A\A]A^A_]
+AWAVATSH
+<$*u
+t	Hc]
+tZHk
+[A\A^A_]
+AWAVSPA
+8D9|
+[A^A_]
+AWAVAUATSPE
+8D9l
+[A\A]A^A_]
+AVSH
+[A^]
+AVSH
+[A^]
+AVSH
+ [A^]
+AWAVAUATSH
+SASAR
+L90t
+X[A\A]A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+	H;M
+AWAVAUATSH
+	H;M
+[A\A]A^A_]
+	H;M
+AVS1
+[A^]
+AWAVSP1
+[A^A_]
+AVS1
+[A^]
+t-UH
+AVSH
+[A^]
+L9J 
+D9B(@
+L;H 
+D;@(
+AWAVATSH
+[A\A^A_]
+H91tHH
+wH91
+AWAVSH
+[A^A_]
+AWAVAUATSP
+[A\A]A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+[A\A]A^A_]
+AVSH
+[A^]
+AWAVSPA
+[A^A_]
+[A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVAUATSPL
+UUUUUUUUH!
+33333333H
+L$ t
+[A\A]A^A_]
+AWAVSPH
+[A^A_]
+AWAVSPI
+t%L9
+[A^A_]
+AWAVAUATSPH
+t6E1
+[A\A]A^A_]
+s	I9
+[A\A]A^A_]
+AWAVSPH
+[A^A_]
+[A^A_]
+AWAVATSH
+[A\A^A_]
+s	I9
+AWAVAUATSPA
+[A\A]A^A_]
+[A\A]A^A_]
+AWAVAUATSPA
+t%L9
+[A\A]A^A_]
+AWAVAUATSH
+s	L9
+[A\A]A^A_]
+[A\A]A^A_]
+AWAVSPH
+[A^A_]
+[A^A_]
+AWAVAUATSH
+McF K
+UUUUUUUUH!
+33333333H!
+u*D9G
+u$L9
+{0I9
+fffffff
+3333333
+fffffff
+}!D;
+(H;]
+[A\A]A^A_]
+AWAVAUATSPI
+Ict$
+<6I1
+UUUUUUUUH!
+33333333H
+L9K(
+UUUUUUUUH!
+33333333H
+[A\A]A^A_]
+AVSI
+t	[A^]
+[A^]
+AWAVSPI
+t%M9
+[A^A_]
+AWAVSPI
+t%M9
+[A^A_]
+AWAVSH
+[A^A_]
+t-UH
+AVSH
+[A^]
+AWAVAUATSPL
+[A\A]A^A_]
+AVSH
+[A^]
+AWAVATSH
+[A\A^A_]
+AWAVAUATSPI
+[A\A]A^A_]
+AVSI
+t	[A^]
+[A^]
+AVSH
+[A^]
+AWAVSPI
+UUUUUUUUH!
+33333333H
+[A^A_]
+[A^A_]
+AVSH
+UUUUUUUUH!
+33333333H
+v1M9
+[A^]
+UUUUUUUUH!
+33333333H
+AVSH
+ [A^]
+AWAVSH
+UUUUUUUUH!
+33333333H
+[A^A_]
+AWAVAUATSH
+tbL9
+L$ H
+D$(H
+D$0M
+[A\A]A^A_]
+AWAVAUATSPI
+O t	
+UUUUUUUUH!
+33333333H
+u0L9
+u	L9[
+vFL9
+[A\A]A^A_]
+AWAVSPH
+[A^A_]
+AVSH
+UUUUUUUUH!
+33333333H
+v1M9
+N(H;J(t
+[A^]
+AWAVSPI
+gffffff
+[A^A_]
+AWAVAUATSH
+E(I;V
+EPH;P
+H;r8H
+B(H;q
+](H9
+H9r8H
+Z(H9q
+L$ H
+L$ H
+UxL9
+|5 I
+I;T5
+H[A\A]A^A_]
+H[A\A]A^A_]
+H[A\A]A^A_]
+H[A\A]A^A_]
+AWAVATSH
+L$ H
+L$ H
+0[A\A^A_]
+AWAVAUATSH
+I;L$
+L$ H
+L$ H
+L$ I
+L$ H
+([A\A]A^A_]
+AWAVATSH
+sxL9
+|$ H
+T; H
+H;t;
+@[A\A^A_]
+AWAVATSE1
+[A\A^A_]
+AWAVAUATSPI
+M9n(
+UUUUUUUUH!
+33333333H
+[A\A]A^A_]
+AVSI
+t	[A^]
+[A^]
+UUUUUUUUH!
+33333333H
+AWAVSPI
+UUUUUUUUH!
+33333333H
+[A^A_]
+[A^A_]
+AVSH
+UUUUUUUUH!
+33333333H
+v1M9
+[A^]
+[A^]
+AVSA
+[A^]
+[A^]
+AWAVAUATSH
+([A\A]A^A_]
+([A\A]A^A_]
+AWAVATSH
+[A\A^A_]
+AWAVSH
+[A^A_]
+AWAVAUATSH
+([A\A]A^A_]
+AWAVSH
+[A^A_]
+AWAVATSH
+[A\A^A_]
+AWAVAUATSH
+SASAR
+H[A\A]A^A_]
+AVSH
+[A^]
+AVSI
+[A^]
+AVSI
+[A^]
+AWAVAUATSPH
+[A\A]A^A_]
+AWAVAUATSPH
+<=t.I
+[A\A]A^A_]
+AVSH
+[A^]
+AVSH
+[A^]
+AVSH
+ [A^]
+AVSH
+P[A^]
+AWAVAUATSH
+unknown
+([A\A]A^A_]
+AVSI
+[A^]
+unknown
+AWAVAUATSPI
+[A\A]A^A_]
+AWAVSPI
+[A^A_]
+[A^A_]
+[A^]
+[A^]
+AVSH
+[A^]
+AWAVSH
+[A^A_]
+AVSH
+[A^]
+AWAVSPH
+[A^A_]
+AVSL
+[A^]
+AWAVSP
+[A^A_]
+AWAVAUATSPA
+[A\A]A^A_]
+AVSH
+x>u>
+[A^]
+AVSI
+[A^]
+AWAVSP
+[A^A_]
+AWAVAUATSH
+<'t	
+[A\A]A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+uHD9
+[A\A]A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+[A^]
+AWAVAUATSH
+	H;M
+8[A\A]A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVAUATSH
+h[A\A]A^A_]
+AWAVSPA
+[A^A_]
+AVSH
+[A^]
+AWAVSPA
+[A^A_]
+AVSH
+[A^]
+[A^]
+AWAVSPA
+8#t5
+[A^A_]
+AWAVAUATSPA
+xDE1
+[A\A]A^A_]
+tMUH
+t<E1
+AWAVSPf
+[A^A_]
+AWAVAUATSPE
+/tR@
+[A\A]A^A_]
+AVSI
+[A^]
+AWAVSPA
+[A^A_]
+[A^A_]
+AVSH
+[A^]
+AVSH
+[A^]
+[A^]
+AWAVSH
+[A^A_]
+AVSL
+[A^]
+AWAVATS
+[A\A^A_]
+AWAVSH
+[A^A_]
+[A^]
+AWAVSPI
+[A^A_]
+[A^]
+AVSI
+[A^]
+AVSH
+0wPH
+	H;M
+@[A^]
+@[A^]
+AWAVSI
+[A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVATSH
+0w>H
+	H;M
+@[A\A^A_]
+AWAVATSA
+t'H9
+t"H9
+L$ 1
+L$(9
+[A\A^A_]
+$I;D$
+AVSI
+[A^]
+?u'H
+IcF$A
+H;7u
+[A^]
+AVSH
+IcV,H
+F0[A^]
+[A^]
+HcS,L
+[A^]
+[A^]
+AWAVAUATSH
+L9c@r
+I9D$@
+D$Lf
+\$8I
+D$@H
+d$ M
+X[A\A]A^A_]
+AWAVSH
+x(Hc
+VUUUH
+X[A^A_]
+AWAVSH
+	H;M
+[A^A_]
+x H9p
+AWAVAUATSH
+C@H=
+T$ I9L$
+I;L$@
+C@I+D$@L
+8[A\A]A^A_]
+AVSH
+[A^]
+AVSI
+[A^]
+AVSM
+[A^]
+AWAVSPH
+[A^A_]
+AWAVAUATSPH
+[A\A]A^A_]
+AWAVATSI
+[A\A^A_]
+AVSI
+[A^]
+AVSH
+[A^]
+AWAVAUATSH
+[A\A]A^A_]
+AVSH
+[A^]
+AWAVATSA
+[A\A^A_]
+[A^]
+CHuO
+AVSH
+CpH9Cx}
+[A^]
+*GpH
+*GPH
+*G`H
+AWAVSPH
+[A^A_]
+AWAVSPI
+tPH9
+[A^A_]
+[A^A_]
+\K0f
+AVSH
+[A^]
+[A^]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVATSH
+L9;t
+[A\A^A_]
+AWAVAUATSH
+*T$pH
+L98t
+*L$pH
+*D$xH
+T$hH
+*D$pH
+*D$x
+fffffff
+3333333
+h[A\A]A^A_]
+AWAVAUATSPI
+[A\A]A^A_]
+AVSH
+[A^]
+AWAVAUATSH
+H9Y 
+H9X v
+*CpH
+*T$ 
+*d$ f
+8[A\A]A^A_]
+AVSH
+[A^]
+AWAVAUATSH
+([A\A]A^A_]
+AWAVSPA
+[A^A_]
+AWAVSPH
+~RD9
+*CPH
+[A^A_]
+AWAVAUATSPA
+*@pH
+uVzTH
+[A\A]A^A_]
+ t;I
+@t;I
+AWAVAUATSPH
+[A\A]A^A_]
+AWAVAUATSPI
+[A\A]A^A_]
+AVSH
+[A^]
+AVSI
+[A^]
+[A^]
+AWAVSPI
+[A^A_]
+[A^A_]
+AWAVSPI
+_(E1
+[A^A_]
+AWAVSPI
+[A^A_]
+AVSI
+[A^]
+AVSI
+[A^]
+AWAVATSA
+t'fA
+t$$E
+D$0H
+[A\A^A_]
+AVSA
+[A^]
+AVSH
+[A^]
+AWAVAUATSPI
+K H9
+[A\A]A^A_]
+AWAVAUATSPI
+K H9
+[A\A]A^A_]
+AWAVSPI
+gffffff
+[A^A_]
+AWAVAUATSH
+fffffff
+3333333
+[A\A]A^A_]
+AVSH
+gffffff
+[A^]
+AWAVAUATSH
+W(L9
+X[A\A]A^A_]
+X[A\A]A^A_]
+X[A\A]A^A_]
+X[A\A]A^A_]
+X[A\A]A^A_]
+AWAVAUATSH
+([A\A]A^A_]
+AWAVAUATSH
+D$ H
+D$ I
+8[A\A]A^A_]
+AWAVAUATSH
+H[A\A]A^A_]
+AWAVAUATSH
+D$xL9
+D$ I
+D$ H
+8[A\A]A^A_]
+AWAVAUATSH
+D$ H
+D$ H
+CxL9
+H[A\A]A^A_]
+t-UH
+AVSH
+[A^]
+t-UH
+AVSH
+[A^]
+AWAVATSE1
+[A\A^A_]
+%s %i %s
+-noassert
+-nocrashdialog
+-debugbreak
+AuthenticAMD
+hw.physicalcpu
+hw.logicalcpu
+Unable to determine CPU Frequency. Try defining CPU_MHZ.
+%s (%d) : 
+Exiting on SPEW_ABORT
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/dbg.cpp
+pGroupName
+strlen( pGroupName ) < MAX_GROUP_NAME_LENGTH
+IsSpewActive
+Minidumps written:
+ - file:%s, line:%u ,time:%04u%02u%02u%02u%02u%02u
+Fatal Assertion Failed: 
+DONT_BREAK_ON_ASSERT
+Spew globals
+Spew Globals
+-stack=
+Fatal assert; application exiting
+Fatal assert
+_ExitOnFatalAssert
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/threadtools.h
+m_cReentrancyCount >= 0
+Failed to generate callstack
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memblockhdr.cpp
+Assertion Failed: stack%2d: %s
+Stack%2d: %s
+Assertion Failed: stack%2d: 0x%llX
+Stack%2d: 0x%llX
+ppFrames[iFrame] != NULL
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memstd.cpp
+((size_t)(m_nLogicalBytesAllocated) % 8) == 0
+No tracked allocs currently in use. Total %d
+Tracked allocs currently in use. %d Total %d
+item %p sentinel corrupted. skipping.
+Busy, please retry.
+DumpMemTrackingStats %d %d 
+	%d items : %s - %s:%d
+***** OUT OF MEMORY! attempted allocation size: %zu ****
+OUT OF MEMORY
+(iub & (m_nSizeWithStack-1)) == 0
+pAllocTracker->m_uSentinel == 0xaa110ced
+false
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/memblockhdr.h
+pLeft->m_iStackPC <= V_ARRAYSIZE(pLeft->m_StackPC)
+allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
+unknown
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/minidump.cpp
+Someone called SetWritingMinidump without holding the minidump lock.
+Someone called ClearWritingMinidump without holding the minidump lock.
+Assert( %s ):%s:%d
+MacOS
+Frameworks
+crashhandler003
+crashhandler002
+crashhandler.dylib
+CreateInterface
+Steam
+Sep 23 2021
+07:33:55
+%02d:%02d:%02d
+%04d%02d%02d%02d%02d%02d
+CatchAndWriteContext_t::Invoke with bogus argc/argv
+CatchAndWriteContext_t::Invoke with bogus void *ptr
+CatchAndWriteContext_t::Set w/o a function pointer!
+IVALIDATE001
+-steamconsole
+-steamos
+-hometest
+-steamos3
+-holo
+-chromeos
+-steampal
+-steamdeck
+/System/Library/CoreServices/SystemVersion.plist
+ProductBuildVersion
+com.valvesoftware.steam
+/dev/urandom
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/platform_posix.cpp
+s_dev_urandom_fd >= 0
+urandom_result > 0 || ( urandom_result < 0 && errno == EINTR )
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/testthread.cpp
+!m_bTestThreadRunning
+ret == 0
+pthread_self() == m_ulMainThreadID
+pthread_self() == m_ulTestThreadID
+Warning: thread priority outside allowed range %d
+Warning: failed to set thread priority: set failed for priority %d
+Warning: support for elevated priorities is most likely unavailable, suppressing future warnings
+MainThrd
+pthread_setname_np
+%s: no such process %d
+ThreadGetProcessExitCode
+/bin/ps -x -o pid=,ppid=
+%d	%d
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/threadtools.cpp
+Thread synchronization object is unuseable
+Attempting to create a named event with a null name
+Semaphore name (%s) is longer than POSIX can handle, truncating.
+/e%s%s
+semaphore creation failed %s
+the same event name (%s) was created as both manual and auto reset, something's fubar'd
+USER
+Invalid max value for semaphore
+Invalid initial value for semaphore
+m_bSemOwner
+pszName == NULL || *pszName == '/' || (isalpha((unsigned char) *pszName) && pszName[1] == ':' && pszName[2] == '/')
+POSIX does not support inheriting full mutexes
+Anonymous mutex cannot have bAllAccess == true
+Out of thread local storage!
+Bad thread local
+Illegal termination of worker thread '%s'
+Deleting thread object from the thread, this is bad
+Thread(0x%p/0x%p/0x%x)
+Tried to create a thread that has already been created!
+Failed to create thread (error 0x%x)
+Thread failed to initialize
+Thread cannot be joined with self
+Only thread can stop self: Use a higher-level protocol
+Probably deadlock or failure waiting for thread to initialize.
+CTSListBase: Misaligned list
+CTSQueue bad tail pointer
+CTSQueue bad tail->Next value
+CTSQueue bad peek pointer when empty
+CTSQueue m_HeadTailPair mismatch when empty
+CTSQueue bad node count
+CTSQueue freelist depth mismatch
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/validator.cpp
+m_pValObjects != NULL
+m_iThreadMutexValidationLock == 0
+CValidator : too many memory nodes to store, try again with a higher threshold value
+NULL != m_pValObjectCur
+!pTracker->IsClaimed( pKey )
+pTracker->Find( pKey ) != NULL
+Total bytes allocated (os heap reported): %s
+Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s
+Total bytes allocated counted: %s
+%%%ds | %%9s | %%12s
+Object
+Blocks
+Size
+%%-%ds | %%9d | %%12s
+g_pMemAllocSteam
+%d validator nodes, %d nodes larger than %s
+console
+C-runtime internal
+PS3 Unattributed
+server.dylib
+steamclient.dylib
+gsoapwrapper.dylib
+propack.dylib
+nattypeprobe.dylib
+p2pstunserver.dylib
+p2prelayserver.dylib
+p2pcore.dylib
+steamservice.dylib
+xmemory
+xlocale
+misc.h
+secblock.h
+vgui2_s.dylib
+steamui.dylib
+friendsui.dylib
+serverbrowser.dylib
+chromehtml.dylib
+tenfoot.dylib
+filesystem_steam.dylib
+filesystem_stdio.dylib
+externaltests.dylib
+audio.dylib
+video.dylib
+video64_server.dylib
+panorama.dylib
+%*s%s %s --> %d blocks = %s (new)
+%*s%s %s --> %d blocks = %s (%s larger)
+CValidator
+!m_bJustCount
+m_iThreadMutexValidationLock < (int) ( sizeof(m_threadMutexValidationLock)/sizeof(m_threadMutexValidationLock[0]) )
+ bytes
+ GiB
+ MiB
+ KiB
+%i%s
+%%.%if%s
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/valobject.cpp
+NULL == pValObjectPrev->m_pValObjectNext
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/vprof.cpp
+!g_VProfile
+pszName
+m_nRecursions > 0
+CVProfNode
+m_L2Cache
+m_pSibling
+m_pChild
+pChild
+ Avg Time/Frame (ms)
+[ func+child   func ]     Count
+  ---------- ------      ------
+       Sum (ms)         Avg Time/Frame (ms)     Avg Time/Call (ms)
+[ func+child   func ]  [ func+child   func ]  [ func+child   func ]  Count   Peak
+  ---------- ------      ---------- ------      ---------- ------   ------ ------
+  %10.3f %6.2f      %6d
+  %10.3f %6.2f      %10.3f %6.2f      %10.3f %6.2f   %6d %6.2f
+  Scope                                                      Calls  Time+Child    Pct        Time    Pct   Avg+Child         Avg        Peak
+  ---------------------------------------------------- ----------- ----------- ------ ----------- ------ ----------- ----------- -----------
+  %52s%12d%12.3f%6.2f%%%12.3f%6.2f%%%12.3f%12.3f%12.3f
+VPROF Report for Thread: %d - %s
+No samples during profile period.
+Thread did nothing but sleep during profile period.
+-- Summary --
+%d frames sampled for %.2f seconds
+Average %.2f fps, %.2f ms per frame
+Peak %.2f ms frame
+%.1f pct of time accounted for
+-- Hierarchical Call Graph --
+-- Profile scopes sorted by time (including children) --
+-- Profile scopes sorted by time (without children) --
+-- Profile scopes sorted by average time (including children) --
+-- Profile scopes sorted by average time (without children) --
+-- Profile scopes sorted by peak --
+-- Profile scopes sorted by peak over average (including children) --
+Root
+m_pBudgetGroups == NULL
+Unaccounted
+Sleeping
+VGUI
+FileSystem
+ClientDLL
+SteamUI
+Network
+Encryption
+OverlayRendering
+OverlayInput
+GameOverlayUI
+RunCallbacks
+Logger
+Jobs/Coroutines
+ServerMain
+Streaming
+ThreadWorkItem
+TenFoot
+tier1
+m_pBudgetGroups
+eGroup < VPROF_BUDGETGROUP_MAX
+No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
+WARNING: Disabling vprof spike dumping and stopping profile for thread %d - %s because of exceeded rate limit, try a higher threshold.
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/vprof.h
+m_pParent
+m_pszName
+_12CStdMemAlloc
+9IMemAlloc
+N16SteamThreadTools7CThreadE
+QkkXa
+N(knN
+N10SteamVProf13CVProfManagerE
+Mb@?
+!(pH`
+A`?Ap
+RA\ATASAp
+@__ZNSt12length_errorD1Ev
+@__ZTISt12length_error
+@__ZTIi
+@__ZTVN10__cxxabiv117__class_type_infoE
+@__ZTVN10__cxxabiv120__si_class_type_infoE
+@__ZTVSt12length_error
+@__ZdaPv
+@__ZdlPv
+@__Znam
+@__Znwm
+@___cxa_pure_virtual
+@___gxx_personality_v0
+@__DefaultRuneLocale
+@___stack_chk_guard
+@___stderrp
+@___stdoutp
+@_daylight
+@_timezone
+@dyld_stub_binder
+@___CFConstantStringClassReference
+@_kCFAllocatorDefault
+@__ZTISt12length_error
+@__ZTSN10SteamVProf13CVProfManagerE
+@__ZdaPv
+@__ZdlPv
+@__Znam
+@__Znwm
+@_CFDictionaryGetTypeID
+@_CFDictionaryGetValueIfPresent
+@_CFGetTypeID
+@_CFPropertyListCreateFromXMLData
+@_CFRelease
+@_CFStringGetCString
+@_CFURLCreateDataAndPropertiesFromResource
+@_CFURLCreateWithFileSystemPath
+@__NSGetArgc
+@__NSGetArgv
+@__NSGetExecutablePath
+@__Unwind_Resume
+@__ZNKSt3__120__vector_base_commonILb1EE20__throw_length_errorEv
+@__ZNSt11logic_errorC2EPKc
+@__ZNSt3__112__next_primeEm
+@__ZSt9terminatev
+@___bzero
+@___cxa_allocate_exception
+@___cxa_atexit
+@___cxa_begin_catch
+@___cxa_end_catch
+@___cxa_free_exception
+@___cxa_guard_abort
+@___cxa_guard_acquire
+@___cxa_guard_release
+@___cxa_rethrow
+@___cxa_throw
+@___error
+@___maskrune
+@___stack_chk_fail
+@___tolower
+@__exit
+@_asctime_r
+@_atoi
+@_backtrace
+@_backtrace_symbols
+@_ceilf
+@_chdir
+@_ctime_r
+@_dladdr
+@_dlclose
+@_dlopen
+@_dlsym
+@_fflush
+@_fgets
+@_fork
+@_fprintf
+@_fputc
+@_fputs
+@_free
+@_fwrite
+@_getenv
+@_gethostbyname
+@_gethostname
+@_getpid
+@_gettimeofday
+@_gmtime_r
+@_host_page_size
+@_host_statistics
+@_kill
+@_localtime_r
+@_mach_absolute_time
+@_mach_host_self
+@_mach_timebase_info
+@_malloc
+@_malloc_size
+@_memcmp
+@_memcpy
+@_memmove
+@_mmap
+@_mprotect
+@_munmap
+@_nanosleep
+@_open
+@_pclose
+@_popen
+@_posix_memalign
+@_printf
+@_pthread_attr_init
+@_pthread_attr_setstacksize
+@_pthread_cancel
+@_pthread_cond_broadcast
+@_pthread_cond_destroy
+@_pthread_cond_init
+@_pthread_cond_signal
+@_pthread_cond_timedwait_relative_np
+@_pthread_cond_wait
+@_pthread_condattr_destroy
+@_pthread_condattr_init
+@_pthread_create
+@_pthread_exit
+@_pthread_getspecific
+@_pthread_join
+@_pthread_key_create
+@_pthread_key_delete
+@_pthread_kill
+@_pthread_mach_thread_np
+@_pthread_mutex_destroy
+@_pthread_mutex_init
+@_pthread_mutex_lock
+@_pthread_mutex_trylock
+@_pthread_mutex_unlock
+@_pthread_mutexattr_destroy
+@_pthread_mutexattr_init
+@_pthread_mutexattr_settype
+@_pthread_self
+@_pthread_setschedparam
+@_pthread_setspecific
+@_read
+@_realloc
+@_sched_get_priority_max
+@_sched_get_priority_min
+@_sched_yield
+@_semctl
+@_semget
+@_semop
+@_setsid
+@_sigaction
+@_signal
+@_sigprocmask
+@_snprintf
+@_sscanf
+@_stat$INODE64
+@_strcasecmp
+@_strchr
+@_strcmp
+@_strcpy
+@_strerror
+@_strlen
+@_strncasecmp
+@_strncpy
+@_strrchr
+@_strstr
+@_sysctl
+@_sysctlnametomib
+@_system
+@_time
+@_timegm
+@_usleep
+@_vfprintf
+@_vsnprintf
+@_waitpid
+Plat_
+HasStackTrackingFilters
+FreeCrashMemoryReserve
+vtune
+ouldUseNewAssertDialog
+utdownPME
+oNewAssertDialog
+Warning
+eclareCurrentThreadIsMainThread
+cureRandomBytes
+InAssert
+Assert
+StackTrackingFilter
+MiniDump
+InAssert
+	LogActive
+64BitOS
+SpewMessageType
+	DMsg
+17GetCPUInformationv
+PortableSystemInformation
+NumberOfS
+MiniDump
+InstalledRAM
+AvailableRAM
+LocalHostname
+Tick
+MSTime
+USTime
+asctime
+ctime
+time
+daylight
+gmtime
+localtime
+Virtual
+DefaultAllocErrorFn
+SetAllocErrorFn
+CommandLineParam
+OutputDebugString
+InDebugSession
+Steam
+ChromeOS
+OutputFunc
+ChangeIfStillDefault
+WrittenMiniDumps
+tackTrackingFilter
+OutputFunc
+AndLogLevel
+lushLogFunc
+ullMemoryDumpOnCrash
+lear
+VProfile_ExitScope
+tchAndWriteMiniDump
+FlushLogFunc
+AssertFailedNotifyFunc
+FailedNotifyFunc
+	DumpStack
+Source
+	Fmt
+	iniDumpUnlock
+pewActive
+tackTrackingFiltered
+arning
+riteMiniDump
+rror
+nableCrashingOnCrashes
+ctivate
+ndLog
+Activate
+ChangeIfStillDefault
+$V16SteamThreadTools15CThreadSpinLock4LockEj
+,6CTier015ValidateGlobalsER10CValidator
+5AssertMsgHelperILb
+6SteamThreadTools
+1EE12AssertFailedEPKcjS2_
+0EE12AssertFailedEPKcjS2_z
+ByGroupIndex
+pewAndLogGroups
+tackTrackingFilters
+ackSmokingCompiler
+eateSimpleProcess
+ssertMsgImplementation
+reStackTrackingFiltersEnabledAtStart
+llocateCrashMemoryReserve
+alidateSpew
+ProfInternal
+StackTrackingFilters
+WritingMiniDump
+ializeStackTrackingFilters
+leaseThreadHandle
+GetCallStack
+Print
+CallStack
+RawCallStack
+BlockingGetMiniDumpLock
+Writing
+MiniDumpLock
+LocalFQDN
+MiniDump
+FatalMiniDump
+NonFatalMiniDump
+AppID
+BuildID
+SteamID
+CustomInfo
+BuildID
+SteamID
+Directory
+ForVoidPtrFn
+ReturnsInt
+ForVoidPtrFn
+rashHandlerFactory
+RunTimeVersion
+lativeTick
+alloc
+Frequency
+DiffMi
+AddMicroSec
+lliSec
+croSec
+loatTime
+zone
+bsoluteTime
+lloc
+ttachDebuggerToProcess
+ToFloat
+Protect
+Free
+ccessFlags
+lloc
+ExecutablePath
+StackBackTrace
+rocessArgv
+ackageName
+Exists
+Value
+ConsoleMode
+UTF8
+hread
+Thread_Yield
+SetFailed
+HasF
+IsActive
+TerminateThread
+Test
+Frame
+ailed
+inished
+7CThread
+8CreateSimpleThreadEPFjPvES0_Pjj
+7CThreadSyncObject
+"2CThread
+&6CThread
+(3CThreadRWLock1
+MicroSleepPOSIX
+Terminate
+ OpenProcess
+!CloseProcess
+!ResumeProcess
+"WaitForProcessExit
+"FindProcessByName
+leep
+pinWaitForValue
+ uspendProcess
+!hellExecute
+mplOneTimeInit
+terlocked
+MainThread
+Assign
+Increment
+*Decrement
++Exchange
++CompareExchange
+PointerIf
+,128
+Current
+Handle
+RunningRef
+Process
+ThreadRunning
+Process
+iority
+ ocess
+Priority
+ BackgroundPriority
+ Affinity
+ DebugName
+ProcessCode
+Handle
+!ExitCode
+"ListInfo
+IdActive
+!Active
+NoWindow
+%4WaitEj
+"1Ev
+#1Ev
+2CloseSemaphoreInternalEibPKc
+%3CreateSemaphoreInternalEPKclbPb
+'1OpenSemaphoreInternalEPKcb
+'9EnsureSemaphorePostedInternalEi
+(7IsSemaphoreOrphanedInternalEii
+6SteamThreadTools
+$0SteamVProf9CVProfile
+%7CThread
+7CThreadSyncObjectntEv
+%6CThread
+3AssertUseableEv
+%4SaveNameToFileEPKc
+AcquireSemaphoreInternalEj
+&ReleaseSemaphoreInternalEil
+Event
+&Mutex
+&3SetEv
+&PKcbb
+3CreateAnonymousSyncObjectInternalEbb
+'PKcbb
+SignalThreadSyncObjectInternalEv
+(EnsureSemaphoreClearedInternalEi
+ResetEv
+(CheckEv
+Semaphore
+)FullMutex
+)LocalBase
+)7ReleaseEl
+2Ell
+)1Ell
+)7ReleaseEv
+2EbPKcbb
+)1EbPKcbb
+FullMutex9IsCreatorEv
+*LocalBase3GetEv
+*3SetEPv
+*1Ev
+*1Ev
++Pointer
+Pointer
+,1Ev
+,1Ev
+,2LockForWriteEv
+WaitForReadEv
+-UnlockWriteEv
+	C2Ev
+19TerminateEi
+-1Ev
+/0Ev
+.9GetResultEv
+.7IsAliveEv
+7BHasValidThreadIDEv
+.5IsThreadRunningEv
+11GetPriorityEv
+GetNameEv
+7GetCurrentCThreadEv
+/1SetPriorityEi
+13GetThreadProcEv
+10ThreadProcEPv
+JoinEj
+/StopEi
+1InitEv
+etNameEPKc
+0uspendEv
+0YieldEv
+tartEm
+0leepEj
+1WaitForCreateCompleteEPNS_12CThreadEventE
+12ThreadExceptionWrapperEPv
+ResumeEv
+1OnExitEv
+ListBase_
+2Queue
+Init
+2SwapList
+2UnsafePeek
+Base_
+Init
+3Unsafe
+PopIntoFreeList
+3UnsafeDebugCheck
+Peek
+3Dummy
+CValidator
+4SteamVProf
+54PushEPKcPvS1_
+79IsClaimedEPv
+2EibP20IMemBlockClaimedList
+51EibP20IMemBlockClaimedList
+51Ev
+1UnlockValidationLocksEv
+50ClaimUntrackedMemoryEm
+8SetAllocSizeFilterEi
+89ClaimMemory_AlignedEPv
+86ClaimArrayMemoryEPv
+85Claim
+83RenderObjectsEm
+90FindObjectEPv
+97AddValidationLockEPN16SteamThreadTools12CThreadMutexE
+PopEv
+70BExcludeAllocationFromTrackingEPKci
+Claim
+8RenderLeaksEm
+9DiffAgainstEPS_
+MemoryEPv
+8SocketEi
+9OsFileEi
+TrackedKeyEP11CTrackItemsPvPm
+9ConnectionEj
+FinalizeEv
+9ValidateERS_PKc
+:9CVProfile
+;20CVProfileThreadEntry
+3CVProfManager
+:4CVProfileArrayD
+?0CVProfNode
+K8ValidateER10CValidatorPKc
+;2Ev
+;2Ev
+GetProfileForCurrentThread
+;EnterScopeCurrentThread
+D6ResumeEv
+<2Ev
+9AddProfileForThreadEPNS_9CVProfileEjP17_opaque_pthread_t
+=8BIsProfilePtrValidEPNS_9CVProfileE
+M6EnableDumpSpikesEi
+>2OutputReportEiPKci
+J9GetBudgetGroupColorE17EVProfBugdetGroupRiS2_S2_S2_
+EnterScopeEPKc17EVProfBugdetGroupPv
+>ResetPeaksEv
+FDumpSortedEPKcdPFbRKNS_10TimeSums_tES5_Ei
+ExitScopeEv
+?MarkFrameEPKc
+FDumpNodesEPNS_10CVProfNodeEib
+?1Ev
+B6ResumeEv
+B8ValidateER10CValidatorPKc
+2EPNS_9CVProfileEPKcPS0_17EVProfBugdetGroup
+A1EPNS_9CVProfileEPKcPS0_17EVProfBugdetGroup
+ResetEv
+APauseEv
+A1Ev
+A5SetCurFrameTimeEm
+GetSubNodeEPKc17EVProfBugdetGroup
+BEnterScopeEPv
+ExitScopeEv
+BMarkFrameEv
+BResetPeakEv
+4GetTotalTimeLessChildrenEv
+C2GetCurTimeLessChildrenEv
+C3GetPrevTimeLessChildrenEv
+StartEv
+DPauseEv
+FResetEv
+StopEv
+EDumpEPKcz
+I4BProfileHasNodesOutsideBudgetGroup_RecursiveEPNS_10CVProfNodeEi
+I0GetFrameTimeOutsideBudgetGroup_RecursiveEPNS_10CVProfNodeE17EVProfBugdetGroup
+ITermEv
+18GetBudgetGroupNameE17EVProfBugdetGroup
+F30BudgetGroupNameToBudgetGroupIDEPKc
+F22SetDumpSpikesThresholdEi
+6OnFrameCompletedEv
+G7OnNewFrameEnteredEv
+L4StartProfilingEv
+M1DumpProfileEi
+3RegisterCallbackHandlerEPNS_24IVProfileCallbackHandlerE
+H5UnregisterCallbackHandlerEPNS_24IVProfileCallbackHandlerE
+SumTimesEP
+IFindNodeEPNS_10CVProfNodeEPKc
+IValidateER10CValidatorPKc
+NS_10CVProfNodeEi
+IKci
+CreateBudgetGroupsEv
+JAddBudgetGroupNameE17EVProfBugdetGroupiPKc
+J1Ev
+FreeNodes_REPNS_10CVProfNodeE
+KGetThreadIDEv
+L4StartProfilingAllThreadsEv
+M3StopProfilingAllThreadsEv
+M0GetAllThreadProfilesEPNS_14CVProfileArrayE
+CleanupUnusedProfilesEv
+LDumpAllThreadProfilesEi
+DeleteProfileEv
+MStopProfilingEv
+1EPNS_9CVProfileEjP17_opaque_pthread_t
+N2EPNS_9CVProfileEjP17_opaque_pthread_t
+OVN16SteamThreadTools7CThreadE
+OIN16SteamThreadTools7CThreadE
+6SteamThreadTools7CThreadE
+O0SteamVProf13CVProfManagerE
+ClockSpeed
+PpMemAllocSteam
+PbInException
+PVProf
+PSecondsMultiplier
+crosecondsMultiplier
+PllisecondsMultiplier
+ProfilesRunningCount
+QManager
+Qile
+@jtt
+Bvvh
+LAA~{
+23.5/+
+GG>.1i1
+qJ3J8:
+UHD!
+**x8
+,*,3D	EP
+fXd6zBBB
+6-G*
+_AllocateCrashMemoryReserve
+_AreStackTrackingFiltersEnabledAtStart
+_AssertMsgImplementation
+_AssertMsgImplementationF
+_AssertMsgImplementationV
+_BBlockingGetMiniDumpLock
+_BGetLocalFQDN
+_BGetMiniDumpLock
+_BWritingFatalMiniDump
+_BWritingMiniDump
+_BWritingNonFatalMiniDump
+_CVProfile_ExitScope
+_CallAssertFailedNotifyFunc
+_CallFlushLogFunc
+_CatchAndWriteMiniDump
+_CatchAndWriteMiniDumpEx
+_CatchAndWriteMiniDumpExForVoidPtrFn
+_CatchAndWriteMiniDumpExReturnsInt
+_CatchAndWriteMiniDumpForVoidPtrFn
+_ClearStackTrackingFilters
+_ClearWritingMiniDump
+_CrackSmokingCompiler
+_CreateSimpleProcess
+_DLog
+_DWarning
+_DeclareCurrentThreadIsMainThread
+_DoNewAssertDialog
+_EnableCrashingOnCrashes
+_Error
+_FreeCrashMemoryReserve
+_GetAvailableRAM
+_GetCRunTimeVersion
+_GetCrashHandlerFactory
+_GetInstalledRAM
+_GetLocalHostname
+_GetMiniDumpBuildID
+_GetMiniDumpDirectory
+_GetMiniDumpSteamID
+_GetNumberOfSpewAndLogGroups
+_GetNumberOfStackTrackingFilters
+_GetPortableSystemInformation
+_GetSpewAndLogLevel
+_GetSpewAndLogLevelByGroupIndex
+_GetSpewOutputFunc
+_GetStackTrackingFilter
+_HasStackTrackingFilters
+_InitPME
+_InitializeStackTrackingFilters
+_Is64BitOS
+_IsInAssert
+_IsLogActive
+_IsSpewActive
+_IsStackTrackingFiltered
+_Log
+_MiniDumpUnlock
+_Msg
+_Plat_AbsoluteTime
+_Plat_AbsoluteTimeToFloat
+_Plat_Alloc
+_Plat_AttachDebuggerToProcess
+_Plat_CommandLineParamExists
+_Plat_CommandLineParamValue
+_Plat_DefaultAllocErrorFn
+_Plat_FloatTime
+_Plat_Free
+_Plat_GetExecutablePath
+_Plat_GetExecutablePathUTF8
+_Plat_GetPackageName
+_Plat_GetProcessArgv
+_Plat_GetStackBackTrace
+_Plat_IsChromeOS
+_Plat_IsInDebugSession
+_Plat_IsSteamConsoleMode
+_Plat_IsSteamOS
+_Plat_IsSteamOS3
+_Plat_IsSteamPal
+_Plat_MSTime
+_Plat_MSTime64
+_Plat_OutputDebugString
+_Plat_OutputDebugStringRaw
+_Plat_Realloc
+_Plat_RelativeTickFrequency
+_Plat_RelativeTicks
+_Plat_SetAllocErrorFn
+_Plat_TickAddMicroSec
+_Plat_TickDiffMicroSec
+_Plat_TickDiffMilliSec
+_Plat_USTime
+_Plat_VirtualAccessFlags
+_Plat_VirtualAlloc
+_Plat_VirtualFree
+_Plat_VirtualProtect
+_Plat_asctime
+_Plat_ctime
+_Plat_daylight
+_Plat_gmtime
+_Plat_localtime
+_Plat_timegm
+_Plat_timezone
+_RealGetCallStack
+_RealPrintCallStack
+_RealPrintRawCallStack
+_ReleaseThreadHandle
+_SecureRandomBytes
+_SetAssertDumpStack
+_SetAssertFailedNotifyFunc
+_SetFlushLogFunc
+_SetFullMemoryDumpOnCrash
+_SetInAssert
+_SetMiniDumpAppID
+_SetMiniDumpBuildID
+_SetMiniDumpCustomInfo
+_SetMiniDumpSteamID
+_SetStackTrackingFilter
+_ShouldUseNewAssertDialog
+_ShutdownPME
+_SpewActivate
+_SpewAndLogActivate
+_SpewAndLogChangeIfStillDefault
+_SpewChangeIfStillDefault
+_SpewOutputFunc
+_SpewWrittenMiniDumps
+_TSListBase_Init
+_TSListBase_Pop
+_TSListBase_Push
+_TSListBase_SwapList
+_TSListBase_UnsafePeek
+_TSQueueBase_Init
+_TSQueueBase_Pop
+_TSQueueBase_Push
+_TSQueueBase_UnsafeDummy
+_TSQueueBase_UnsafePeek
+_TSQueue_PopIntoFreeList
+_TSQueue_UnsafeDebugCheck
+_TestThread_Yield
+_Test_HasFailed
+_Test_HasFinished
+_Test_IsActive
+_Test_RunFrame
+_Test_RunTest
+_Test_SetFailed
+_Test_TerminateThread
+_ThreadCloseProcess
+_ThreadFindProcessByName
+_ThreadGetCurrentHandle
+_ThreadGetCurrentId
+_ThreadGetCurrentProcessHandle
+_ThreadGetCurrentProcessId
+_ThreadGetCurrentRunningRef
+_ThreadGetPriority
+_ThreadGetProcessExitCode
+_ThreadGetProcessId
+_ThreadGetProcessListInfo
+_ThreadImplOneTimeInit
+_ThreadInMainThread
+_ThreadInterlockedAssignIf
+_ThreadInterlockedAssignIf128
+_ThreadInterlockedAssignIf64
+_ThreadInterlockedAssignPointerIf
+_ThreadInterlockedCompareExchange
+_ThreadInterlockedCompareExchange64
+_ThreadInterlockedCompareExchangePointer
+_ThreadInterlockedDecrement
+_ThreadInterlockedDecrement64
+_ThreadInterlockedExchange
+_ThreadInterlockedExchange64
+_ThreadInterlockedExchangeAdd
+_ThreadInterlockedExchangeAdd64
+_ThreadInterlockedExchangePointer
+_ThreadInterlockedIncrement
+_ThreadInterlockedIncrement64
+_ThreadIsProcessActive
+_ThreadIsProcessIdActive
+_ThreadIsThreadRunning
+_ThreadMicroSleepPOSIX
+_ThreadOpenProcess
+_ThreadResumeProcess
+_ThreadSetAffinity
+_ThreadSetBackgroundPriority
+_ThreadSetDebugName
+_ThreadSetPriority
+_ThreadShellExecute
+_ThreadShellExecuteNoWindow
+_ThreadSleep
+_ThreadSpinWaitForValue
+_ThreadSuspendProcess
+_ThreadTerminate
+_ThreadTerminateProcessCode
+_ThreadWaitForProcessExit
+_VProfInternalEnterScopeCurrentThread
+_VProfInternalGetProfileForCurrentThread
+_ValidateSpew
+_Warning
+_WriteMiniDump
+__DMsg
+__SpewMessageType
+__SpewMessageTypeSourceFmt
+__SpewMessageTypeSourceV
+__Z17GetCPUInformationv
+__ZN10CValidator10FindObjectEPv
+__ZN10CValidator11ClaimMemoryEPv
+__ZN10CValidator11ClaimOsFileEi
+__ZN10CValidator11ClaimSocketEi
+__ZN10CValidator11DiffAgainstEPS_
+__ZN10CValidator11RenderLeaksEm
+__ZN10CValidator13RenderObjectsEm
+__ZN10CValidator15ClaimConnectionEj
+__ZN10CValidator15ClaimTrackedKeyEP11CTrackItemsPvPm
+__ZN10CValidator16ClaimArrayMemoryEPv
+__ZN10CValidator17AddValidationLockEPN16SteamThreadTools12CThreadMutexE
+__ZN10CValidator18SetAllocSizeFilterEi
+__ZN10CValidator19ClaimMemory_AlignedEPv
+__ZN10CValidator20ClaimUntrackedMemoryEm
+__ZN10CValidator21UnlockValidationLocksEv
+__ZN10CValidator30BExcludeAllocationFromTrackingEPKci
+__ZN10CValidator3PopEv
+__ZN10CValidator4PushEPKcPvS1_
+__ZN10CValidator8FinalizeEv
+__ZN10CValidator8ValidateERS_PKc
+__ZN10CValidator9IsClaimedEPv
+__ZN10CValidatorC1EibP20IMemBlockClaimedList
+__ZN10CValidatorC2EibP20IMemBlockClaimedList
+__ZN10CValidatorD1Ev
+__ZN10CValidatorD2Ev
+__ZN10SteamVProf10CVProfNode10EnterScopeEPv
+__ZN10SteamVProf10CVProfNode10GetSubNodeEPKc17EVProfBugdetGroup
+__ZN10SteamVProf10CVProfNode15SetCurFrameTimeEm
+__ZN10SteamVProf10CVProfNode22GetCurTimeLessChildrenEv
+__ZN10SteamVProf10CVProfNode23GetPrevTimeLessChildrenEv
+__ZN10SteamVProf10CVProfNode24GetTotalTimeLessChildrenEv
+__ZN10SteamVProf10CVProfNode5PauseEv
+__ZN10SteamVProf10CVProfNode5ResetEv
+__ZN10SteamVProf10CVProfNode6ResumeEv
+__ZN10SteamVProf10CVProfNode8ValidateER10CValidatorPKc
+__ZN10SteamVProf10CVProfNode9ExitScopeEv
+__ZN10SteamVProf10CVProfNode9MarkFrameEv
+__ZN10SteamVProf10CVProfNode9ResetPeakEv
+__ZN10SteamVProf10CVProfNodeC1EPNS_9CVProfileEPKcPS0_17EVProfBugdetGroup
+__ZN10SteamVProf10CVProfNodeC2EPNS_9CVProfileEPKcPS0_17EVProfBugdetGroup
+__ZN10SteamVProf10CVProfNodeD1Ev
+__ZN10SteamVProf10CVProfNodeD2Ev
+__ZN10SteamVProf13CVProfManager16EnableDumpSpikesEi
+__ZN10SteamVProf13CVProfManager18BIsProfilePtrValidEPNS_9CVProfileE
+__ZN10SteamVProf13CVProfManager19AddProfileForThreadEPNS_9CVProfileEjP17_opaque_pthread_t
+__ZN10SteamVProf13CVProfManager20GetAllThreadProfilesEPNS_14CVProfileArrayE
+__ZN10SteamVProf13CVProfManager21CleanupUnusedProfilesEv
+__ZN10SteamVProf13CVProfManager21DumpAllThreadProfilesEi
+__ZN10SteamVProf13CVProfManager23StopProfilingAllThreadsEv
+__ZN10SteamVProf13CVProfManager24StartProfilingAllThreadsEv
+__ZN10SteamVProf13CVProfManager8ValidateER10CValidatorPKc
+__ZN10SteamVProf13CVProfManagerC1Ev
+__ZN10SteamVProf13CVProfManagerC2Ev
+__ZN10SteamVProf13CVProfManagerD1Ev
+__ZN10SteamVProf13CVProfManagerD2Ev
+__ZN10SteamVProf14CVProfileArrayD1Ev
+__ZN10SteamVProf14CVProfileArrayD2Ev
+__ZN10SteamVProf20CVProfileThreadEntry11DumpProfileEi
+__ZN10SteamVProf20CVProfileThreadEntry13DeleteProfileEv
+__ZN10SteamVProf20CVProfileThreadEntry13StopProfilingEv
+__ZN10SteamVProf20CVProfileThreadEntry14StartProfilingEv
+__ZN10SteamVProf20CVProfileThreadEntry16OnFrameCompletedEv
+__ZN10SteamVProf20CVProfileThreadEntry17OnNewFrameEnteredEv
+__ZN10SteamVProf20CVProfileThreadEntry22SetDumpSpikesThresholdEi
+__ZN10SteamVProf20CVProfileThreadEntryC1EPNS_9CVProfileEjP17_opaque_pthread_t
+__ZN10SteamVProf20CVProfileThreadEntryC2EPNS_9CVProfileEjP17_opaque_pthread_t
+__ZN10SteamVProf9CVProfile10DumpSortedEPKcdPFbRKNS_10TimeSums_tES5_Ei
+__ZN10SteamVProf9CVProfile10EnterScopeEPKc17EVProfBugdetGroupPv
+__ZN10SteamVProf9CVProfile10ResetPeaksEv
+__ZN10SteamVProf9CVProfile11FreeNodes_REPNS_10CVProfNodeE
+__ZN10SteamVProf9CVProfile11GetThreadIDEv
+__ZN10SteamVProf9CVProfile12OutputReportEiPKci
+__ZN10SteamVProf9CVProfile18AddBudgetGroupNameE17EVProfBugdetGroupiPKc
+__ZN10SteamVProf9CVProfile18CreateBudgetGroupsEv
+__ZN10SteamVProf9CVProfile19GetBudgetGroupColorE17EVProfBugdetGroupRiS2_S2_S2_
+__ZN10SteamVProf9CVProfile23RegisterCallbackHandlerEPNS_24IVProfileCallbackHandlerE
+__ZN10SteamVProf9CVProfile25UnregisterCallbackHandlerEPNS_24IVProfileCallbackHandlerE
+__ZN10SteamVProf9CVProfile40GetFrameTimeOutsideBudgetGroup_RecursiveEPNS_10CVProfNodeE17EVProfBugdetGroup
+__ZN10SteamVProf9CVProfile44BProfileHasNodesOutsideBudgetGroup_RecursiveEPNS_10CVProfNodeEi
+__ZN10SteamVProf9CVProfile4DumpEPKcz
+__ZN10SteamVProf9CVProfile4StopEv
+__ZN10SteamVProf9CVProfile4TermEv
+__ZN10SteamVProf9CVProfile5PauseEv
+__ZN10SteamVProf9CVProfile5ResetEv
+__ZN10SteamVProf9CVProfile5StartEv
+__ZN10SteamVProf9CVProfile6ResumeEv
+__ZN10SteamVProf9CVProfile8FindNodeEPNS_10CVProfNodeEPKc
+__ZN10SteamVProf9CVProfile8SumTimesEPKci
+__ZN10SteamVProf9CVProfile8SumTimesEPNS_10CVProfNodeEi
+__ZN10SteamVProf9CVProfile8ValidateER10CValidatorPKc
+__ZN10SteamVProf9CVProfile9DumpNodesEPNS_10CVProfNodeEib
+__ZN10SteamVProf9CVProfile9ExitScopeEv
+__ZN10SteamVProf9CVProfile9MarkFrameEPKc
+__ZN10SteamVProf9CVProfileC1Ev
+__ZN10SteamVProf9CVProfileC2Ev
+__ZN10SteamVProf9CVProfileD1Ev
+__ZN10SteamVProf9CVProfileD2Ev
+__ZN15AssertMsgHelperILb0EE12AssertFailedEPKcjS2_z
+__ZN15AssertMsgHelperILb1EE12AssertFailedEPKcjS2_
+__ZN16SteamThreadTools12CThreadEvent3SetEv
+__ZN16SteamThreadTools12CThreadEvent5CheckEv
+__ZN16SteamThreadTools12CThreadEvent5ResetEv
+__ZN16SteamThreadTools12CThreadEventC1EPKcbb
+__ZN16SteamThreadTools12CThreadEventC1Eb
+__ZN16SteamThreadTools12CThreadEventC2EPKcbb
+__ZN16SteamThreadTools12CThreadEventC2Eb
+__ZN16SteamThreadTools12CThreadMutexC1Ev
+__ZN16SteamThreadTools12CThreadMutexC2Ev
+__ZN16SteamThreadTools12CThreadMutexD1Ev
+__ZN16SteamThreadTools12CThreadMutexD2Ev
+__ZN16SteamThreadTools13CThreadRWLock11UnlockWriteEv
+__ZN16SteamThreadTools13CThreadRWLock11WaitForReadEv
+__ZN16SteamThreadTools13CThreadRWLock12LockForWriteEv
+__ZN16SteamThreadTools16CThreadFullMutex7ReleaseEv
+__ZN16SteamThreadTools16CThreadFullMutexC1EbPKcbb
+__ZN16SteamThreadTools16CThreadFullMutexC2EbPKcbb
+__ZN16SteamThreadTools16CThreadLocalBase3SetEPv
+__ZN16SteamThreadTools16CThreadLocalBaseC1Ev
+__ZN16SteamThreadTools16CThreadLocalBaseC2Ev
+__ZN16SteamThreadTools16CThreadLocalBaseD1Ev
+__ZN16SteamThreadTools16CThreadLocalBaseD2Ev
+__ZN16SteamThreadTools16CThreadSemaphore7ReleaseEl
+__ZN16SteamThreadTools16CThreadSemaphoreC1Ell
+__ZN16SteamThreadTools16CThreadSemaphoreC2Ell
+__ZN16SteamThreadTools17CThreadSyncObject13AssertUseableEv
+__ZN16SteamThreadTools17CThreadSyncObject14SaveNameToFileEPKc
+__ZN16SteamThreadTools17CThreadSyncObject21OpenSemaphoreInternalEPKcb
+__ZN16SteamThreadTools17CThreadSyncObject22CloseSemaphoreInternalEibPKc
+__ZN16SteamThreadTools17CThreadSyncObject23CreateSemaphoreInternalEPKclbPb
+__ZN16SteamThreadTools17CThreadSyncObject24AcquireSemaphoreInternalEj
+__ZN16SteamThreadTools17CThreadSyncObject24ReleaseSemaphoreInternalEil
+__ZN16SteamThreadTools17CThreadSyncObject27IsSemaphoreOrphanedInternalEii
+__ZN16SteamThreadTools17CThreadSyncObject29EnsureSemaphorePostedInternalEi
+__ZN16SteamThreadTools17CThreadSyncObject30EnsureSemaphoreClearedInternalEi
+__ZN16SteamThreadTools17CThreadSyncObject30SignalThreadSyncObjectInternalEv
+__ZN16SteamThreadTools17CThreadSyncObject33CreateAnonymousSyncObjectInternalEbb
+__ZN16SteamThreadTools17CThreadSyncObject4WaitEj
+__ZN16SteamThreadTools17CThreadSyncObjectC1Ev
+__ZN16SteamThreadTools17CThreadSyncObjectC2Ev
+__ZN16SteamThreadTools17CThreadSyncObjectD1Ev
+__ZN16SteamThreadTools17CThreadSyncObjectD2Ev
+__ZN16SteamThreadTools18CreateSimpleThreadEPFjPvES0_Pjj
+__ZN16SteamThreadTools7CThread10ThreadProcEPv
+__ZN16SteamThreadTools7CThread11SetPriorityEi
+__ZN16SteamThreadTools7CThread13GetThreadProcEv
+__ZN16SteamThreadTools7CThread17GetCurrentCThreadEv
+__ZN16SteamThreadTools7CThread21WaitForCreateCompleteEPNS_12CThreadEventE
+__ZN16SteamThreadTools7CThread22ThreadExceptionWrapperEPv
+__ZN16SteamThreadTools7CThread4InitEv
+__ZN16SteamThreadTools7CThread4JoinEj
+__ZN16SteamThreadTools7CThread4StopEi
+__ZN16SteamThreadTools7CThread5SleepEj
+__ZN16SteamThreadTools7CThread5StartEm
+__ZN16SteamThreadTools7CThread5YieldEv
+__ZN16SteamThreadTools7CThread6OnExitEv
+__ZN16SteamThreadTools7CThread6ResumeEv
+__ZN16SteamThreadTools7CThread7GetNameEv
+__ZN16SteamThreadTools7CThread7SetNameEPKc
+__ZN16SteamThreadTools7CThread7SuspendEv
+__ZN16SteamThreadTools7CThread9TerminateEi
+__ZN16SteamThreadTools7CThreadC2Ev
+__ZN16SteamThreadTools7CThreadD0Ev
+__ZN16SteamThreadTools7CThreadD1Ev
+__ZN16SteamThreadTools7CThreadD2Ev
+__ZN6CTier015ValidateGlobalsER10CValidator
+__ZNK10SteamVProf9CVProfile18GetBudgetGroupNameE17EVProfBugdetGroup
+__ZNK10SteamVProf9CVProfile30BudgetGroupNameToBudgetGroupIDEPKc
+__ZNK16SteamThreadTools16CThreadFullMutex9IsCreatorEv
+__ZNK16SteamThreadTools16CThreadLocalBase3GetEv
+__ZNK16SteamThreadTools17CThreadSyncObjectntEv
+__ZNK16SteamThreadTools7CThread11GetPriorityEv
+__ZNK16SteamThreadTools7CThread15IsThreadRunningEv
+__ZNK16SteamThreadTools7CThread17BHasValidThreadIDEv
+__ZNK16SteamThreadTools7CThread7IsAliveEv
+__ZNK16SteamThreadTools7CThread9GetResultEv
+__ZNV16SteamThreadTools15CThreadSpinLock4LockEj
+__ZTIN16SteamThreadTools7CThreadE
+__ZTSN10SteamVProf13CVProfManagerE
+__ZTSN16SteamThreadTools7CThreadE
+__ZTVN16SteamThreadTools7CThreadE
+_g_ClockSpeed
+_g_ClockSpeedMicrosecondsMultiplier
+_g_ClockSpeedMillisecondsMultiplier
+_g_ClockSpeedSecondsMultiplier
+_g_VProfManager
+_g_VProfProfilesRunningCount
+_g_VProfile
+_g_bInException
+_g_pMemAllocSteam
+_vtune
+_CFDictionaryGetTypeID
+_CFDictionaryGetValueIfPresent
+_CFGetTypeID
+_CFPropertyListCreateFromXMLData
+_CFRelease
+_CFStringGetCString
+_CFURLCreateDataAndPropertiesFromResource
+_CFURLCreateWithFileSystemPath
+__DefaultRuneLocale
+__NSGetArgc
+__NSGetArgv
+__NSGetExecutablePath
+__Unwind_Resume
+__ZNKSt3__120__vector_base_commonILb1EE20__throw_length_errorEv
+__ZNSt11logic_errorC2EPKc
+__ZNSt12length_errorD1Ev
+__ZNSt3__112__next_primeEm
+__ZSt9terminatev
+__ZTISt12length_error
+__ZTIi
+__ZTVN10__cxxabiv117__class_type_infoE
+__ZTVN10__cxxabiv120__si_class_type_infoE
+__ZTVSt12length_error
+__ZdaPv
+__ZdlPv
+__Znam
+__Znwm
+___CFConstantStringClassReference
+___bzero
+___cxa_allocate_exception
+___cxa_atexit
+___cxa_begin_catch
+___cxa_end_catch
+___cxa_free_exception
+___cxa_guard_abort
+___cxa_guard_acquire
+___cxa_guard_release
+___cxa_pure_virtual
+___cxa_rethrow
+___cxa_throw
+___error
+___gxx_personality_v0
+___maskrune
+___stack_chk_fail
+___stack_chk_guard
+___stderrp
+___stdoutp
+___tolower
+__exit
+_asctime_r
+_atoi
+_backtrace
+_backtrace_symbols
+_ceilf
+_chdir
+_ctime_r
+_daylight
+_dladdr
+_dlclose
+_dlopen
+_dlsym
+_fflush
+_fgets
+_fork
+_fprintf
+_fputc
+_fputs
+_free
+_fwrite
+_getenv
+_gethostbyname
+_gethostname
+_getpid
+_gettimeofday
+_gmtime_r
+_host_page_size
+_host_statistics
+_kCFAllocatorDefault
+_kill
+_localtime_r
+_mach_absolute_time
+_mach_host_self
+_mach_timebase_info
+_malloc
+_malloc_size
+_memcmp
+_memcpy
+_memmove
+_mmap
+_mprotect
+_munmap
+_nanosleep
+_open
+_pclose
+_popen
+_posix_memalign
+_printf
+_pthread_attr_init
+_pthread_attr_setstacksize
+_pthread_cancel
+_pthread_cond_broadcast
+_pthread_cond_destroy
+_pthread_cond_init
+_pthread_cond_signal
+_pthread_cond_timedwait_relative_np
+_pthread_cond_wait
+_pthread_condattr_destroy
+_pthread_condattr_init
+_pthread_create
+_pthread_exit
+_pthread_getspecific
+_pthread_join
+_pthread_key_create
+_pthread_key_delete
+_pthread_kill
+_pthread_mach_thread_np
+_pthread_mutex_destroy
+_pthread_mutex_init
+_pthread_mutex_lock
+_pthread_mutex_trylock
+_pthread_mutex_unlock
+_pthread_mutexattr_destroy
+_pthread_mutexattr_init
+_pthread_mutexattr_settype
+_pthread_self
+_pthread_setschedparam
+_pthread_setspecific
+_read
+_realloc
+_sched_get_priority_max
+_sched_get_priority_min
+_sched_yield
+_semctl
+_semget
+_semop
+_setsid
+_sigaction
+_signal
+_sigprocmask
+_snprintf
+_sscanf
+_stat$INODE64
+_strcasecmp
+_strchr
+_strcmp
+_strcpy
+_strerror
+_strlen
+_strncasecmp
+_strncpy
+_strrchr
+_strstr
+_sysctl
+_sysctlnametomib
+_system
+_time
+_timegm
+_timezone
+_usleep
+_vfprintf
+_vsnprintf
+_waitpid
+dyld_stub_binder
+radr://5614542
+com.valvesoftware.steam
+MXGJJ98X76
+`ArTSg
+q[_Y'
+e!^&
+^3+39
+subject.OU
+MXGJJ98X76
+com.valvesoftware.steam
+MXGJJ98X76
+:D4%
+k[Yau
+0%4!
+*}OE:
+,1*'
+B{dKl
+\p])
+1Ls5
+F8o?
+e DR<
+$]5b
+aUPQ
++Hh!2
+CH4&
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+120201221215Z
+270201221215Z0y1-0+
+$Developer ID Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+)xEii`k_
+1? v(m
+'0%0#
+http://crl.apple.com/root.crl0
+B9tk
+P9jDt
+#q-_
+ "ror
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+060425214036Z
+350209214036Z0b1
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+, op
+https://www.apple.com/appleca/0
+Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
+=&g 
+Sj[d
+uu!0
+0y1-0+
+$Developer ID Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+210205030950Z
+260206030950Z0
+MXGJJ98X761A0?
+8Developer ID Application: Valve Corporation (MXGJJ98X76)1
+MXGJJ98X761
+Valve Corporation1
+~kk!
+3oC&
+uN`AJ
+40200
+$http://ocsp.apple.com/ocsp03-devid080
+)http://www.apple.com/certificateauthority0
+Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
+20120706000000Z0
+o(D-U
+6fQS
+:iPq
+0y1-0+
+$Developer ID Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+210923143358Z0/
+H<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>cdhashes</key>
+	<array>
+		<data>
+		d5CmgBA07NgHu76wIwK3D2LiHYc=
+		</data>
+		<data>
+		mC5JZcGXsNdN+csDf48CkG2F1ic=
+		</data>
+	</array>
+</dict>
+</plist>
+NlisC
+=V'2
+ORP$
+.xOm
+^.he
+Swn&
+20210923143518Z0
+UE<!
+0|100.
+'Apple Timestamp Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+210831174002Z
+211012174001Z0B1
+Timestamp Signer NWK21
+Apple Inc.1
+2YL>
+C|Iz
+;a#%
+9fPC
+npmo
+http://www.apple.com/appleca0
+Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
+,0*0(
+"http://crl.apple.com/timestamp.crl0
+Qw)*j
+@3dn
+=`mg
+}LWc
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+120405120244Z
+270405120244Z0|100.
+'Apple Timestamp Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+Im] 
+(ny_~
+&By^
+t-D>
+E~4u&
+'0%0#
+http://crl.apple.com/root.crl0
+mzT_
+Bsu|QC
+:m7(
+FeoU
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+060425214036Z
+350209214036Z0b1
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+, op
+https://www.apple.com/appleca/0
+Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
+=&g 
+Sj[d
+uu!1
+0|100.
+'Apple Timestamp Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+UE<!
+210923143518Z0#
+u\fY
+GmA$H
++YFkt
+ Yg1
+%GY7
+__TEXT
+__text
+__TEXT
+__stubs
+__TEXT
+__stub_helper
+__TEXT
+__cstring
+__TEXT
+__const
+__TEXT
+__gcc_except_tab__TEXT
+__unwind_info
+__TEXT
+__eh_frame
+__TEXT
+__DATA_CONST
+__got
+__DATA_CONST
+__mod_init_func
+__DATA_CONST
+__const
+__DATA_CONST
+__cfstring
+__DATA_CONST
+__DATA
+__la_symbol_ptr
+__DATA
+__data
+__DATA
+__bss
+__DATA
+__common
+__DATA
+__LINKEDIT
+@loader_path/libtier0_s.dylib
+@loader_path/crashhandler.dylib
+/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+/usr/lib/libc++.1.dylib
+/usr/lib/libSystem.B.dylib
+/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+T		@9?
+R	i4x
+	(B)J
+(!W9 !
+#W9H
+#W9h
+?i(8
+kjh8k
+?i(8
+i+8,
+(a@9
+5(	@
+Iu	X)
+q	X)
+h	X)
+^	X)
+Th^@
+Th^@
+Ti^@
+	K5}@
+Th^@
+Th^@
+Th^@
+4hN@
+ThR@
+4hN@
+ThR@
+80.	
+TK	@
+<I%@
+ii8J	
+<l9@
++ih8J	
+T+	@
+ap9h
+	ip9
+R	i09
+e09h
+(a09
+	mp9
+R	m09 
+5`w	
+w	Xh
+d	Xh
+@9?q
+h1	X
+@9_q
+F	XH
+E	XH
+HD	XH
+D	Xi
+A	XH
+A	Xi
+H?	XH
+!?	\ 
+a<	\
+A8	\ 
+i5	X
+jt8 
+C9uR
+RHk88Z
+b2@9
+h6@9
+h6@9
+b2@9
+JJ*Yj
+y	4@9)M
+y	4@9)M
+9h2@9
+	4@9)M
+5hzA
+RhR@y?
+4hJP
+hh8(
+(hh8!
+i"D)
+5`JH
+4h2@
+5`JH
+4h2@
+hh8h
+7.},
+hh8h
+hh8h
+@ywk@
+hh8(
+hbA9h
+h2@9
+0@9h
+4h2@9
+TsJ@
+ThN@
+h&H)(
+)`F@
+0@9H
+0@9H
+4h"@
+T		@
+9h*@
+`@9(
+hf@9
+hj@9
+4aJ@
+o( `
+3IYi
+SHYh
+T`2 
+R+ih
+R+ih
+N!X n!(
+<('@
+ii8J	
+<	9@
++ih8J	
+<	9@
+%s %i %s
+-noassert
+-nocrashdialog
+-debugbreak
+ARM-64
+Unknown
+hw.physicalcpu
+hw.logicalcpu
+Unable to determine CPU Frequency. Try defining CPU_MHZ.
+%s (%d) : 
+console
+Exiting on SPEW_ABORT
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/dbg.cpp
+pGroupName
+strlen( pGroupName ) < MAX_GROUP_NAME_LENGTH
+IsSpewActive
+Minidumps written:
+ - file:%s, line:%u ,time:%04u%02u%02u%02u%02u%02u
+Fatal Assertion Failed: 
+DONT_BREAK_ON_ASSERT
+Spew globals
+Spew Globals
+-stack=
+Fatal assert; application exiting
+Fatal assert
+_ExitOnFatalAssert
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/threadtools.h
+m_cReentrancyCount >= 0
+Failed to generate callstack
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memblockhdr.cpp
+Assertion Failed: stack%2d: %s
+Stack%2d: %s
+Assertion Failed: stack%2d: 0x%llX
+Stack%2d: 0x%llX
+ppFrames[iFrame] != NULL
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memstd.cpp
+((size_t)(m_nLogicalBytesAllocated) % 8) == 0
+No tracked allocs currently in use. Total %d
+Tracked allocs currently in use. %d Total %d
+item %p sentinel corrupted. skipping.
+Busy, please retry.
+DumpMemTrackingStats %d %d 
+	%d items : %s - %s:%d
+***** OUT OF MEMORY! attempted allocation size: %zu ****
+OUT OF MEMORY
+(iub & (m_nSizeWithStack-1)) == 0
+pAllocTracker->m_uSentinel == 0xaa110ced
+false
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/memblockhdr.h
+pLeft->m_iStackPC <= V_ARRAYSIZE(pLeft->m_StackPC)
+allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
+unknown
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/minidump.cpp
+Someone called SetWritingMinidump without holding the minidump lock.
+Someone called ClearWritingMinidump without holding the minidump lock.
+Assert( %s ):%s:%d
+MacOS
+Frameworks
+crashhandler003
+crashhandler002
+crashhandler.dylib
+CreateInterface
+Steam
+Sep 23 2021
+07:33:56
+%02d:%02d:%02d
+%04d%02d%02d%02d%02d%02d
+CatchAndWriteContext_t::Invoke with bogus argc/argv
+CatchAndWriteContext_t::Invoke with bogus void *ptr
+CatchAndWriteContext_t::Set w/o a function pointer!
+IVALIDATE001
+-steamconsole
+-steamos
+-hometest
+-steamos3
+-holo
+-chromeos
+-steampal
+-steamdeck
+/System/Library/CoreServices/SystemVersion.plist
+ProductBuildVersion
+com.valvesoftware.steam
+/dev/urandom
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/platform_posix.cpp
+s_dev_urandom_fd >= 0
+urandom_result > 0 || ( urandom_result < 0 && errno == EINTR )
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/testthread.cpp
+!m_bTestThreadRunning
+ret == 0
+pthread_self() == m_ulMainThreadID
+pthread_self() == m_ulTestThreadID
+Warning: thread priority outside allowed range %d
+Warning: failed to set thread priority: set failed for priority %d
+Warning: support for elevated priorities is most likely unavailable, suppressing future warnings
+MainThrd
+pthread_setname_np
+%s: no such process %d
+ThreadGetProcessExitCode
+/bin/ps -x -o pid=,ppid=
+%d	%d
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/threadtools.cpp
+Thread synchronization object is unuseable
+Attempting to create a named event with a null name
+Semaphore name (%s) is longer than POSIX can handle, truncating.
+/e%s%s
+semaphore creation failed %s
+the same event name (%s) was created as both manual and auto reset, something's fubar'd
+USER
+Invalid max value for semaphore
+Invalid initial value for semaphore
+m_bSemOwner
+pszName == NULL || *pszName == '/' || (isalpha((unsigned char) *pszName) && pszName[1] == ':' && pszName[2] == '/')
+POSIX does not support inheriting full mutexes
+Anonymous mutex cannot have bAllAccess == true
+Out of thread local storage!
+Bad thread local
+Illegal termination of worker thread '%s'
+Deleting thread object from the thread, this is bad
+Thread(0x%p/0x%p/0x%x)
+Tried to create a thread that has already been created!
+Failed to create thread (error 0x%x)
+Thread failed to initialize
+Thread cannot be joined with self
+Only thread can stop self: Use a higher-level protocol
+Probably deadlock or failure waiting for thread to initialize.
+CTSListBase: Misaligned list
+CTSQueue bad tail pointer
+CTSQueue bad tail->Next value
+CTSQueue bad peek pointer when empty
+CTSQueue m_HeadTailPair mismatch when empty
+CTSQueue bad node count
+CTSQueue freelist depth mismatch
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/validator.cpp
+m_pValObjects != NULL
+m_iThreadMutexValidationLock == 0
+CValidator : too many memory nodes to store, try again with a higher threshold value
+NULL != m_pValObjectCur
+!pTracker->IsClaimed( pKey )
+pTracker->Find( pKey ) != NULL
+Total bytes allocated (os heap reported): %s
+Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s
+Total bytes allocated counted: %s
+%%%ds | %%9s | %%12s
+Object
+Blocks
+Size
+%%-%ds | %%9d | %%12s
+g_pMemAllocSteam
+%d validator nodes, %d nodes larger than %s
+C-runtime internal
+PS3 Unattributed
+server.dylib
+steamclient.dylib
+gsoapwrapper.dylib
+propack.dylib
+nattypeprobe.dylib
+p2pstunserver.dylib
+p2prelayserver.dylib
+p2pcore.dylib
+steamservice.dylib
+xmemory
+xlocale
+misc.h
+secblock.h
+vgui2_s.dylib
+steamui.dylib
+friendsui.dylib
+serverbrowser.dylib
+chromehtml.dylib
+tenfoot.dylib
+filesystem_steam.dylib
+filesystem_stdio.dylib
+externaltests.dylib
+audio.dylib
+video.dylib
+video64_server.dylib
+panorama.dylib
+%*s%s %s --> %d blocks = %s (new)
+%*s%s %s --> %d blocks = %s (%s larger)
+CValidator
+!m_bJustCount
+m_iThreadMutexValidationLock < (int) ( sizeof(m_threadMutexValidationLock)/sizeof(m_threadMutexValidationLock[0]) )
+ bytes
+ GiB
+ MiB
+ KiB
+%i%s
+%%.%if%s
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/valobject.cpp
+NULL == pValObjectPrev->m_pValObjectNext
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/vprof.cpp
+!g_VProfile
+pszName
+m_nRecursions > 0
+CVProfNode
+m_L2Cache
+m_pSibling
+m_pChild
+pChild
+ Avg Time/Frame (ms)
+[ func+child   func ]     Count
+  ---------- ------      ------
+       Sum (ms)         Avg Time/Frame (ms)     Avg Time/Call (ms)
+[ func+child   func ]  [ func+child   func ]  [ func+child   func ]  Count   Peak
+  ---------- ------      ---------- ------      ---------- ------   ------ ------
+  %10.3f %6.2f      %6d
+  %10.3f %6.2f      %10.3f %6.2f      %10.3f %6.2f   %6d %6.2f
+  Scope                                                      Calls  Time+Child    Pct        Time    Pct   Avg+Child         Avg        Peak
+  ---------------------------------------------------- ----------- ----------- ------ ----------- ------ ----------- ----------- -----------
+  %52s%12d%12.3f%6.2f%%%12.3f%6.2f%%%12.3f%12.3f%12.3f
+VPROF Report for Thread: %d - %s
+No samples during profile period.
+Thread did nothing but sleep during profile period.
+-- Summary --
+%d frames sampled for %.2f seconds
+Average %.2f fps, %.2f ms per frame
+Peak %.2f ms frame
+%.1f pct of time accounted for
+-- Hierarchical Call Graph --
+-- Profile scopes sorted by time (including children) --
+-- Profile scopes sorted by time (without children) --
+-- Profile scopes sorted by average time (including children) --
+-- Profile scopes sorted by average time (without children) --
+-- Profile scopes sorted by peak --
+-- Profile scopes sorted by peak over average (including children) --
+Root
+m_pBudgetGroups == NULL
+Unaccounted
+Sleeping
+VGUI
+FileSystem
+ClientDLL
+SteamUI
+Network
+Encryption
+OverlayRendering
+OverlayInput
+GameOverlayUI
+RunCallbacks
+Logger
+Jobs/Coroutines
+ServerMain
+Streaming
+ThreadWorkItem
+TenFoot
+tier1
+m_pBudgetGroups
+eGroup < VPROF_BUDGETGROUP_MAX
+No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
+WARNING: Disabling vprof spike dumping and stopping profile for thread %d - %s because of exceeded rate limit, try a higher threshold.
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/vprof.h
+m_pParent
+m_pszName
+EP\VV
+DPI12CStdMemAlloc
+9IMemAlloc
+N16SteamThreadTools7CThreadE
+QkkXa
+$tI(knN
+$0=\\
+N10SteamVProf13CVProfManagerE
+Mb@?
+!pYA`?Ap
+^ATASAp
+D`}Ap S
+@__ZNSt12length_errorD1Ev
+@__ZTISt12length_error
+@__ZTIi
+@__ZTVN10__cxxabiv117__class_type_infoE
+@__ZTVN10__cxxabiv120__si_class_type_infoE
+@__ZTVSt12length_error
+@__ZdaPv
+@__ZdlPv
+@__Znam
+@__Znwm
+@___cxa_pure_virtual
+@___gxx_personality_v0
+@__DefaultRuneLocale
+@___chkstk_darwin
+@___stack_chk_guard
+@___stderrp
+@___stdoutp
+@_daylight
+@_timezone
+@dyld_stub_binder
+@___CFConstantStringClassReference
+@_kCFAllocatorDefault
+@__ZTISt12length_error
+@__ZdaPv
+@__ZdlPv
+@__Znam
+@__Znwm
+@_CFDictionaryGetTypeID
+@_CFDictionaryGetValueIfPresent
+@_CFGetTypeID
+@_CFPropertyListCreateFromXMLData
+@_CFRelease
+@_CFStringGetCString
+@_CFURLCreateDataAndPropertiesFromResource
+@_CFURLCreateWithFileSystemPath
+@__NSGetArgc
+@__NSGetArgv
+@__NSGetExecutablePath
+@__Unwind_Resume
+@__ZNKSt3__120__vector_base_commonILb1EE20__throw_length_errorEv
+@__ZNSt11logic_errorC2EPKc
+@__ZNSt3__112__next_primeEm
+@__ZSt9terminatev
+@___cxa_allocate_exception
+@___cxa_atexit
+@___cxa_begin_catch
+@___cxa_end_catch
+@___cxa_free_exception
+@___cxa_guard_abort
+@___cxa_guard_acquire
+@___cxa_guard_release
+@___cxa_rethrow
+@___cxa_throw
+@___error
+@___maskrune
+@___stack_chk_fail
+@___tolower
+@__exit
+@_asctime_r
+@_atoi
+@_backtrace
+@_backtrace_symbols
+@_bzero
+@_chdir
+@_ctime_r
+@_dladdr
+@_dlclose
+@_dlopen
+@_dlsym
+@_fflush
+@_fgets
+@_fork
+@_fprintf
+@_fputc
+@_fputs
+@_free
+@_fwrite
+@_getenv
+@_gethostbyname
+@_gethostname
+@_getpid
+@_gettimeofday
+@_gmtime_r
+@_host_page_size
+@_host_statistics
+@_kill
+@_localtime_r
+@_mach_absolute_time
+@_mach_host_self
+@_mach_timebase_info
+@_malloc
+@_malloc_size
+@_memcmp
+@_memcpy
+@_memmove
+@_mmap
+@_mprotect
+@_munmap
+@_nanosleep
+@_open
+@_pclose
+@_popen
+@_posix_memalign
+@_printf
+@_pthread_attr_init
+@_pthread_attr_setstacksize
+@_pthread_cancel
+@_pthread_cond_broadcast
+@_pthread_cond_destroy
+@_pthread_cond_init
+@_pthread_cond_signal
+@_pthread_cond_timedwait_relative_np
+@_pthread_cond_wait
+@_pthread_condattr_destroy
+@_pthread_condattr_init
+@_pthread_create
+@_pthread_exit
+@_pthread_getspecific
+@_pthread_join
+@_pthread_key_create
+@_pthread_key_delete
+@_pthread_kill
+@_pthread_mach_thread_np
+@_pthread_mutex_destroy
+@_pthread_mutex_init
+@_pthread_mutex_lock
+@_pthread_mutex_trylock
+@_pthread_mutex_unlock
+@_pthread_mutexattr_destroy
+@_pthread_mutexattr_init
+@_pthread_mutexattr_settype
+@_pthread_self
+@_pthread_setschedparam
+@_pthread_setspecific
+@_read
+@_realloc
+@_sched_get_priority_max
+@_sched_get_priority_min
+@_sched_yield
+@_semctl
+@_semget
+@_semop
+@_setsid
+@_sigaction
+@_signal
+@_sigprocmask
+@_snprintf
+@_sscanf
+@_stat
+@_strcasecmp
+@_strchr
+@_strcmp
+@_strcpy
+@_strerror
+@_strlen
+@_strncasecmp
+@_strncpy
+@_strrchr
+@_strstr
+@_sysctl
+@_sysctlnametomib
+@_system
+@_time
+@_timegm
+@_usleep
+@_vfprintf
+@_vsnprintf
+@_waitpid
+Plat_
+HasStackTrackingFilters
+FreeCrashMemoryReserve
+vtune
+ouldUseNewAssertDialog
+utdownPME
+oNewAssertDialog
+Warning
+eclareCurrentThreadIsMainThread
+cureRandomBytes
+InAssert
+Assert
+StackTrackingFilter
+MiniDump
+InAssert
+	LogActive
+64BitOS
+SpewMessageType
+	DMsg
+17GetCPUInformationv
+PortableSystemInformation
+NumberOfS
+MiniDump
+InstalledRAM
+AvailableRAM
+LocalHostname
+Tick
+MSTime
+USTime
+asctime
+ctime
+time
+daylight
+gmtime
+localtime
+Virtual
+DefaultAllocErrorFn
+SetAllocErrorFn
+CommandLineParam
+OutputDebugString
+InDebugSession
+Steam
+ChromeOS
+OutputFunc
+ChangeIfStillDefault
+WrittenMiniDumps
+tackTrackingFilter
+OutputFunc
+AndLogLevel
+lushLogFunc
+ullMemoryDumpOnCrash
+lear
+VProfile_ExitScope
+tchAndWriteMiniDump
+FlushLogFunc
+AssertFailedNotifyFunc
+FailedNotifyFunc
+	DumpStack
+Source
+	Fmt
+	iniDumpUnlock
+pewActive
+tackTrackingFiltered
+arning
+riteMiniDump
+rror
+nableCrashingOnCrashes
+ctivate
+ndLog
+Activate
+ChangeIfStillDefault
+$V16SteamThreadTools15CThreadSpinLock4LockEj
+,6CTier015ValidateGlobalsER10CValidator
+5AssertMsgHelperILb
+6SteamThreadTools
+1EE12AssertFailedEPKcjS2_
+0EE12AssertFailedEPKcjS2_z
+ByGroupIndex
+pewAndLogGroups
+tackTrackingFilters
+ackSmokingCompiler
+eateSimpleProcess
+ssertMsgImplementation
+reStackTrackingFiltersEnabledAtStart
+llocateCrashMemoryReserve
+alidateSpew
+ProfInternal
+StackTrackingFilters
+WritingMiniDump
+ializeStackTrackingFilters
+leaseThreadHandle
+GetCallStack
+Print
+CallStack
+RawCallStack
+BlockingGetMiniDumpLock
+Writing
+MiniDumpLock
+LocalFQDN
+MiniDump
+FatalMiniDump
+NonFatalMiniDump
+AppID
+BuildID
+SteamID
+CustomInfo
+BuildID
+SteamID
+Directory
+ForVoidPtrFn
+ReturnsInt
+ForVoidPtrFn
+rashHandlerFactory
+RunTimeVersion
+lativeTick
+alloc
+Frequency
+DiffMi
+AddMicroSec
+lliSec
+croSec
+loatTime
+zone
+bsoluteTime
+lloc
+ttachDebuggerToProcess
+ToFloat
+Protect
+Free
+ccessFlags
+lloc
+ExecutablePath
+StackBackTrace
+rocessArgv
+ackageName
+Exists
+Value
+ConsoleMode
+UTF8
+hread
+Thread_Yield
+SetFailed
+HasF
+IsActive
+TerminateThread
+Test
+Frame
+ailed
+inished
+7CThread
+8CreateSimpleThreadEPFjPvES0_Pjj
+7CThreadSyncObject
+"2CThread
+&6CThread
+(3CThreadRWLock1
+MicroSleepPOSIX
+Terminate
+ OpenProcess
+!CloseProcess
+!ResumeProcess
+!WaitForProcessExit
+"FindProcessByName
+leep
+pinWaitForValue
+ uspendProcess
+!hellExecute
+mplOneTimeInit
+terlocked
+MainThread
+Assign
+Increment
+*Decrement
++Exchange
++CompareExchange
+PointerIf
++128
+Current
+Handle
+RunningRef
+Process
+ThreadRunning
+Process
+iority
+ ocess
+Priority
+ BackgroundPriority
+ Affinity
+ DebugName
+ProcessCode
+Handle
+!ExitCode
+"ListInfo
+IdActive
+!Active
+NoWindow
+%4WaitEj
+"1Ev
+#1Ev
+2CloseSemaphoreInternalEibPKc
+%3CreateSemaphoreInternalEPKclbPb
+'1OpenSemaphoreInternalEPKcb
+'9EnsureSemaphorePostedInternalEi
+(7IsSemaphoreOrphanedInternalEii
+6SteamThreadTools
+$0SteamVProf9CVProfile
+$7CThread
+7CThreadSyncObjectntEv
+%6CThread
+3AssertUseableEv
+%4SaveNameToFileEPKc
+AcquireSemaphoreInternalEj
+&ReleaseSemaphoreInternalEil
+Event
+&Mutex
+&3SetEv
+&PKcbb
+3CreateAnonymousSyncObjectInternalEbb
+'PKcbb
+SignalThreadSyncObjectInternalEv
+(EnsureSemaphoreClearedInternalEi
+ResetEv
+(CheckEv
+Semaphore
+)FullMutex
+)LocalBase
+)7ReleaseEl
+2Ell
+)1Ell
+)7ReleaseEv
+2EbPKcbb
+)1EbPKcbb
+FullMutex9IsCreatorEv
+*LocalBase3GetEv
+*3SetEPv
+*1Ev
+*1Ev
++Pointer
+Pointer
+,1Ev
+,1Ev
+,2LockForWriteEv
+WaitForReadEv
+-UnlockWriteEv
+	C2Ev
+19TerminateEi
+-1Ev
+/0Ev
+.9GetResultEv
+.7IsAliveEv
+7BHasValidThreadIDEv
+.5IsThreadRunningEv
+11GetPriorityEv
+GetNameEv
+7GetCurrentCThreadEv
+/1SetPriorityEi
+13GetThreadProcEv
+10ThreadProcEPv
+JoinEj
+/StopEi
+1InitEv
+etNameEPKc
+0uspendEv
+0YieldEv
+tartEm
+0leepEj
+1WaitForCreateCompleteEPNS_12CThreadEventE
+12ThreadExceptionWrapperEPv
+ResumeEv
+1OnExitEv
+ListBase_
+2Queue
+Init
+2SwapList
+2UnsafePeek
+Base_
+Init
+3Unsafe
+PopIntoFreeList
+3UnsafeDebugCheck
+Peek
+3Dummy
+CValidator
+4SteamVProf
+54PushEPKcPvS1_
+79IsClaimedEPv
+2EibP20IMemBlockClaimedList
+51EibP20IMemBlockClaimedList
+51Ev
+1UnlockValidationLocksEv
+50ClaimUntrackedMemoryEm
+8SetAllocSizeFilterEi
+79ClaimMemory_AlignedEPv
+86ClaimArrayMemoryEPv
+85Claim
+83RenderObjectsEm
+90FindObjectEPv
+97AddValidationLockEPN16SteamThreadTools12CThreadMutexE
+PopEv
+70BExcludeAllocationFromTrackingEPKci
+Claim
+8RenderLeaksEm
+9DiffAgainstEPS_
+MemoryEPv
+8SocketEi
+9OsFileEi
+TrackedKeyEP11CTrackItemsPvPm
+9ConnectionEj
+FinalizeEv
+9ValidateERS_PKc
+:9CVProfile
+;20CVProfileThreadEntry
+3CVProfManager
+:4CVProfileArrayD
+?0CVProfNode
+K8ValidateER10CValidatorPKc
+;2Ev
+;2Ev
+GetProfileForCurrentThread
+;EnterScopeCurrentThread
+D6ResumeEv
+<2Ev
+9AddProfileForThreadEPNS_9CVProfileEjP17_opaque_pthread_t
+=8BIsProfilePtrValidEPNS_9CVProfileE
+M6EnableDumpSpikesEi
+>2OutputReportEiPKci
+J9GetBudgetGroupColorE17EVProfBugdetGroupRiS2_S2_S2_
+EnterScopeEPKc17EVProfBugdetGroupPv
+>ResetPeaksEv
+FDumpSortedEPKcdPFbRKNS_10TimeSums_tES5_Ei
+ExitScopeEv
+?MarkFrameEPKc
+FDumpNodesEPNS_10CVProfNodeEib
+?1Ev
+B6ResumeEv
+B8ValidateER10CValidatorPKc
+2EPNS_9CVProfileEPKcPS0_17EVProfBugdetGroup
+A1EPNS_9CVProfileEPKcPS0_17EVProfBugdetGroup
+ResetEv
+APauseEv
+A1Ev
+A5SetCurFrameTimeEm
+GetSubNodeEPKc17EVProfBugdetGroup
+BEnterScopeEPv
+ExitScopeEv
+BMarkFrameEv
+BResetPeakEv
+4GetTotalTimeLessChildrenEv
+C2GetCurTimeLessChildrenEv
+C3GetPrevTimeLessChildrenEv
+StartEv
+DPauseEv
+FResetEv
+StopEv
+EDumpEPKcz
+I4BProfileHasNodesOutsideBudgetGroup_RecursiveEPNS_10CVProfNodeEi
+I0GetFrameTimeOutsideBudgetGroup_RecursiveEPNS_10CVProfNodeE17EVProfBugdetGroup
+ITermEv
+18GetBudgetGroupNameE17EVProfBugdetGroup
+F30BudgetGroupNameToBudgetGroupIDEPKc
+F22SetDumpSpikesThresholdEi
+6OnFrameCompletedEv
+G7OnNewFrameEnteredEv
+L4StartProfilingEv
+M1DumpProfileEi
+3RegisterCallbackHandlerEPNS_24IVProfileCallbackHandlerE
+H5UnregisterCallbackHandlerEPNS_24IVProfileCallbackHandlerE
+SumTimesEP
+IFindNodeEPNS_10CVProfNodeEPKc
+IValidateER10CValidatorPKc
+NS_10CVProfNodeEi
+IKci
+CreateBudgetGroupsEv
+JAddBudgetGroupNameE17EVProfBugdetGroupiPKc
+J1Ev
+FreeNodes_REPNS_10CVProfNodeE
+KGetThreadIDEv
+L4StartProfilingAllThreadsEv
+M3StopProfilingAllThreadsEv
+M0GetAllThreadProfilesEPNS_14CVProfileArrayE
+CleanupUnusedProfilesEv
+LDumpAllThreadProfilesEi
+DeleteProfileEv
+MStopProfilingEv
+1EPNS_9CVProfileEjP17_opaque_pthread_t
+N2EPNS_9CVProfileEjP17_opaque_pthread_t
+SN16SteamThreadTools7CThreadE
+OVN16SteamThreadTools7CThreadE
+OIN16SteamThreadTools7CThreadE
+ClockSpeed
+OpMemAllocSteam
+PbInException
+PVProf
+OSecondsMultiplier
+crosecondsMultiplier
+PllisecondsMultiplier
+ProfilesRunningCount
+PManager
+Pile
+8L8L8
+(DD@D@4
+,TTX
+ (LPTDHHH
+dLdLL
+PH(x0
+`T\8
+8H( 
+48H<T
+`x44<<<
+L(L,
+_AllocateCrashMemoryReserve
+_AreStackTrackingFiltersEnabledAtStart
+_AssertMsgImplementation
+_AssertMsgImplementationF
+_AssertMsgImplementationV
+_BBlockingGetMiniDumpLock
+_BGetLocalFQDN
+_BGetMiniDumpLock
+_BWritingFatalMiniDump
+_BWritingMiniDump
+_BWritingNonFatalMiniDump
+_CVProfile_ExitScope
+_CallAssertFailedNotifyFunc
+_CallFlushLogFunc
+_CatchAndWriteMiniDump
+_CatchAndWriteMiniDumpEx
+_CatchAndWriteMiniDumpExForVoidPtrFn
+_CatchAndWriteMiniDumpExReturnsInt
+_CatchAndWriteMiniDumpForVoidPtrFn
+_ClearStackTrackingFilters
+_ClearWritingMiniDump
+_CrackSmokingCompiler
+_CreateSimpleProcess
+_DLog
+_DWarning
+_DeclareCurrentThreadIsMainThread
+_DoNewAssertDialog
+_EnableCrashingOnCrashes
+_Error
+_FreeCrashMemoryReserve
+_GetAvailableRAM
+_GetCRunTimeVersion
+_GetCrashHandlerFactory
+_GetInstalledRAM
+_GetLocalHostname
+_GetMiniDumpBuildID
+_GetMiniDumpDirectory
+_GetMiniDumpSteamID
+_GetNumberOfSpewAndLogGroups
+_GetNumberOfStackTrackingFilters
+_GetPortableSystemInformation
+_GetSpewAndLogLevel
+_GetSpewAndLogLevelByGroupIndex
+_GetSpewOutputFunc
+_GetStackTrackingFilter
+_HasStackTrackingFilters
+_InitPME
+_InitializeStackTrackingFilters
+_Is64BitOS
+_IsInAssert
+_IsLogActive
+_IsSpewActive
+_IsStackTrackingFiltered
+_Log
+_MiniDumpUnlock
+_Msg
+_Plat_AbsoluteTime
+_Plat_AbsoluteTimeToFloat
+_Plat_Alloc
+_Plat_AttachDebuggerToProcess
+_Plat_CommandLineParamExists
+_Plat_CommandLineParamValue
+_Plat_DefaultAllocErrorFn
+_Plat_FloatTime
+_Plat_Free
+_Plat_GetExecutablePath
+_Plat_GetExecutablePathUTF8
+_Plat_GetPackageName
+_Plat_GetProcessArgv
+_Plat_GetStackBackTrace
+_Plat_IsChromeOS
+_Plat_IsInDebugSession
+_Plat_IsSteamConsoleMode
+_Plat_IsSteamOS
+_Plat_IsSteamOS3
+_Plat_IsSteamPal
+_Plat_MSTime
+_Plat_MSTime64
+_Plat_OutputDebugString
+_Plat_OutputDebugStringRaw
+_Plat_Realloc
+_Plat_RelativeTickFrequency
+_Plat_RelativeTicks
+_Plat_SetAllocErrorFn
+_Plat_TickAddMicroSec
+_Plat_TickDiffMicroSec
+_Plat_TickDiffMilliSec
+_Plat_USTime
+_Plat_VirtualAccessFlags
+_Plat_VirtualAlloc
+_Plat_VirtualFree
+_Plat_VirtualProtect
+_Plat_asctime
+_Plat_ctime
+_Plat_daylight
+_Plat_gmtime
+_Plat_localtime
+_Plat_timegm
+_Plat_timezone
+_RealGetCallStack
+_RealPrintCallStack
+_RealPrintRawCallStack
+_ReleaseThreadHandle
+_SecureRandomBytes
+_SetAssertDumpStack
+_SetAssertFailedNotifyFunc
+_SetFlushLogFunc
+_SetFullMemoryDumpOnCrash
+_SetInAssert
+_SetMiniDumpAppID
+_SetMiniDumpBuildID
+_SetMiniDumpCustomInfo
+_SetMiniDumpSteamID
+_SetStackTrackingFilter
+_ShouldUseNewAssertDialog
+_ShutdownPME
+_SpewActivate
+_SpewAndLogActivate
+_SpewAndLogChangeIfStillDefault
+_SpewChangeIfStillDefault
+_SpewOutputFunc
+_SpewWrittenMiniDumps
+_TSListBase_Init
+_TSListBase_Pop
+_TSListBase_Push
+_TSListBase_SwapList
+_TSListBase_UnsafePeek
+_TSQueueBase_Init
+_TSQueueBase_Pop
+_TSQueueBase_Push
+_TSQueueBase_UnsafeDummy
+_TSQueueBase_UnsafePeek
+_TSQueue_PopIntoFreeList
+_TSQueue_UnsafeDebugCheck
+_TestThread_Yield
+_Test_HasFailed
+_Test_HasFinished
+_Test_IsActive
+_Test_RunFrame
+_Test_RunTest
+_Test_SetFailed
+_Test_TerminateThread
+_ThreadCloseProcess
+_ThreadFindProcessByName
+_ThreadGetCurrentHandle
+_ThreadGetCurrentId
+_ThreadGetCurrentProcessHandle
+_ThreadGetCurrentProcessId
+_ThreadGetCurrentRunningRef
+_ThreadGetPriority
+_ThreadGetProcessExitCode
+_ThreadGetProcessId
+_ThreadGetProcessListInfo
+_ThreadImplOneTimeInit
+_ThreadInMainThread
+_ThreadInterlockedAssignIf
+_ThreadInterlockedAssignIf128
+_ThreadInterlockedAssignIf64
+_ThreadInterlockedAssignPointerIf
+_ThreadInterlockedCompareExchange
+_ThreadInterlockedCompareExchange64
+_ThreadInterlockedCompareExchangePointer
+_ThreadInterlockedDecrement
+_ThreadInterlockedDecrement64
+_ThreadInterlockedExchange
+_ThreadInterlockedExchange64
+_ThreadInterlockedExchangeAdd
+_ThreadInterlockedExchangeAdd64
+_ThreadInterlockedExchangePointer
+_ThreadInterlockedIncrement
+_ThreadInterlockedIncrement64
+_ThreadIsProcessActive
+_ThreadIsProcessIdActive
+_ThreadIsThreadRunning
+_ThreadMicroSleepPOSIX
+_ThreadOpenProcess
+_ThreadResumeProcess
+_ThreadSetAffinity
+_ThreadSetBackgroundPriority
+_ThreadSetDebugName
+_ThreadSetPriority
+_ThreadShellExecute
+_ThreadShellExecuteNoWindow
+_ThreadSleep
+_ThreadSpinWaitForValue
+_ThreadSuspendProcess
+_ThreadTerminate
+_ThreadTerminateProcessCode
+_ThreadWaitForProcessExit
+_VProfInternalEnterScopeCurrentThread
+_VProfInternalGetProfileForCurrentThread
+_ValidateSpew
+_Warning
+_WriteMiniDump
+__DMsg
+__SpewMessageType
+__SpewMessageTypeSourceFmt
+__SpewMessageTypeSourceV
+__Z17GetCPUInformationv
+__ZN10CValidator10FindObjectEPv
+__ZN10CValidator11ClaimMemoryEPv
+__ZN10CValidator11ClaimOsFileEi
+__ZN10CValidator11ClaimSocketEi
+__ZN10CValidator11DiffAgainstEPS_
+__ZN10CValidator11RenderLeaksEm
+__ZN10CValidator13RenderObjectsEm
+__ZN10CValidator15ClaimConnectionEj
+__ZN10CValidator15ClaimTrackedKeyEP11CTrackItemsPvPm
+__ZN10CValidator16ClaimArrayMemoryEPv
+__ZN10CValidator17AddValidationLockEPN16SteamThreadTools12CThreadMutexE
+__ZN10CValidator18SetAllocSizeFilterEi
+__ZN10CValidator19ClaimMemory_AlignedEPv
+__ZN10CValidator20ClaimUntrackedMemoryEm
+__ZN10CValidator21UnlockValidationLocksEv
+__ZN10CValidator30BExcludeAllocationFromTrackingEPKci
+__ZN10CValidator3PopEv
+__ZN10CValidator4PushEPKcPvS1_
+__ZN10CValidator8FinalizeEv
+__ZN10CValidator8ValidateERS_PKc
+__ZN10CValidator9IsClaimedEPv
+__ZN10CValidatorC1EibP20IMemBlockClaimedList
+__ZN10CValidatorC2EibP20IMemBlockClaimedList
+__ZN10CValidatorD1Ev
+__ZN10CValidatorD2Ev
+__ZN10SteamVProf10CVProfNode10EnterScopeEPv
+__ZN10SteamVProf10CVProfNode10GetSubNodeEPKc17EVProfBugdetGroup
+__ZN10SteamVProf10CVProfNode15SetCurFrameTimeEm
+__ZN10SteamVProf10CVProfNode22GetCurTimeLessChildrenEv
+__ZN10SteamVProf10CVProfNode23GetPrevTimeLessChildrenEv
+__ZN10SteamVProf10CVProfNode24GetTotalTimeLessChildrenEv
+__ZN10SteamVProf10CVProfNode5PauseEv
+__ZN10SteamVProf10CVProfNode5ResetEv
+__ZN10SteamVProf10CVProfNode6ResumeEv
+__ZN10SteamVProf10CVProfNode8ValidateER10CValidatorPKc
+__ZN10SteamVProf10CVProfNode9ExitScopeEv
+__ZN10SteamVProf10CVProfNode9MarkFrameEv
+__ZN10SteamVProf10CVProfNode9ResetPeakEv
+__ZN10SteamVProf10CVProfNodeC1EPNS_9CVProfileEPKcPS0_17EVProfBugdetGroup
+__ZN10SteamVProf10CVProfNodeC2EPNS_9CVProfileEPKcPS0_17EVProfBugdetGroup
+__ZN10SteamVProf10CVProfNodeD1Ev
+__ZN10SteamVProf10CVProfNodeD2Ev
+__ZN10SteamVProf13CVProfManager16EnableDumpSpikesEi
+__ZN10SteamVProf13CVProfManager18BIsProfilePtrValidEPNS_9CVProfileE
+__ZN10SteamVProf13CVProfManager19AddProfileForThreadEPNS_9CVProfileEjP17_opaque_pthread_t
+__ZN10SteamVProf13CVProfManager20GetAllThreadProfilesEPNS_14CVProfileArrayE
+__ZN10SteamVProf13CVProfManager21CleanupUnusedProfilesEv
+__ZN10SteamVProf13CVProfManager21DumpAllThreadProfilesEi
+__ZN10SteamVProf13CVProfManager23StopProfilingAllThreadsEv
+__ZN10SteamVProf13CVProfManager24StartProfilingAllThreadsEv
+__ZN10SteamVProf13CVProfManager8ValidateER10CValidatorPKc
+__ZN10SteamVProf13CVProfManagerC1Ev
+__ZN10SteamVProf13CVProfManagerC2Ev
+__ZN10SteamVProf13CVProfManagerD1Ev
+__ZN10SteamVProf13CVProfManagerD2Ev
+__ZN10SteamVProf14CVProfileArrayD1Ev
+__ZN10SteamVProf14CVProfileArrayD2Ev
+__ZN10SteamVProf20CVProfileThreadEntry11DumpProfileEi
+__ZN10SteamVProf20CVProfileThreadEntry13DeleteProfileEv
+__ZN10SteamVProf20CVProfileThreadEntry13StopProfilingEv
+__ZN10SteamVProf20CVProfileThreadEntry14StartProfilingEv
+__ZN10SteamVProf20CVProfileThreadEntry16OnFrameCompletedEv
+__ZN10SteamVProf20CVProfileThreadEntry17OnNewFrameEnteredEv
+__ZN10SteamVProf20CVProfileThreadEntry22SetDumpSpikesThresholdEi
+__ZN10SteamVProf20CVProfileThreadEntryC1EPNS_9CVProfileEjP17_opaque_pthread_t
+__ZN10SteamVProf20CVProfileThreadEntryC2EPNS_9CVProfileEjP17_opaque_pthread_t
+__ZN10SteamVProf9CVProfile10DumpSortedEPKcdPFbRKNS_10TimeSums_tES5_Ei
+__ZN10SteamVProf9CVProfile10EnterScopeEPKc17EVProfBugdetGroupPv
+__ZN10SteamVProf9CVProfile10ResetPeaksEv
+__ZN10SteamVProf9CVProfile11FreeNodes_REPNS_10CVProfNodeE
+__ZN10SteamVProf9CVProfile11GetThreadIDEv
+__ZN10SteamVProf9CVProfile12OutputReportEiPKci
+__ZN10SteamVProf9CVProfile18AddBudgetGroupNameE17EVProfBugdetGroupiPKc
+__ZN10SteamVProf9CVProfile18CreateBudgetGroupsEv
+__ZN10SteamVProf9CVProfile19GetBudgetGroupColorE17EVProfBugdetGroupRiS2_S2_S2_
+__ZN10SteamVProf9CVProfile23RegisterCallbackHandlerEPNS_24IVProfileCallbackHandlerE
+__ZN10SteamVProf9CVProfile25UnregisterCallbackHandlerEPNS_24IVProfileCallbackHandlerE
+__ZN10SteamVProf9CVProfile40GetFrameTimeOutsideBudgetGroup_RecursiveEPNS_10CVProfNodeE17EVProfBugdetGroup
+__ZN10SteamVProf9CVProfile44BProfileHasNodesOutsideBudgetGroup_RecursiveEPNS_10CVProfNodeEi
+__ZN10SteamVProf9CVProfile4DumpEPKcz
+__ZN10SteamVProf9CVProfile4StopEv
+__ZN10SteamVProf9CVProfile4TermEv
+__ZN10SteamVProf9CVProfile5PauseEv
+__ZN10SteamVProf9CVProfile5ResetEv
+__ZN10SteamVProf9CVProfile5StartEv
+__ZN10SteamVProf9CVProfile6ResumeEv
+__ZN10SteamVProf9CVProfile8FindNodeEPNS_10CVProfNodeEPKc
+__ZN10SteamVProf9CVProfile8SumTimesEPKci
+__ZN10SteamVProf9CVProfile8SumTimesEPNS_10CVProfNodeEi
+__ZN10SteamVProf9CVProfile8ValidateER10CValidatorPKc
+__ZN10SteamVProf9CVProfile9DumpNodesEPNS_10CVProfNodeEib
+__ZN10SteamVProf9CVProfile9ExitScopeEv
+__ZN10SteamVProf9CVProfile9MarkFrameEPKc
+__ZN10SteamVProf9CVProfileC1Ev
+__ZN10SteamVProf9CVProfileC2Ev
+__ZN10SteamVProf9CVProfileD1Ev
+__ZN10SteamVProf9CVProfileD2Ev
+__ZN15AssertMsgHelperILb0EE12AssertFailedEPKcjS2_z
+__ZN15AssertMsgHelperILb1EE12AssertFailedEPKcjS2_
+__ZN16SteamThreadTools12CThreadEvent3SetEv
+__ZN16SteamThreadTools12CThreadEvent5CheckEv
+__ZN16SteamThreadTools12CThreadEvent5ResetEv
+__ZN16SteamThreadTools12CThreadEventC1EPKcbb
+__ZN16SteamThreadTools12CThreadEventC1Eb
+__ZN16SteamThreadTools12CThreadEventC2EPKcbb
+__ZN16SteamThreadTools12CThreadEventC2Eb
+__ZN16SteamThreadTools12CThreadMutexC1Ev
+__ZN16SteamThreadTools12CThreadMutexC2Ev
+__ZN16SteamThreadTools12CThreadMutexD1Ev
+__ZN16SteamThreadTools12CThreadMutexD2Ev
+__ZN16SteamThreadTools13CThreadRWLock11UnlockWriteEv
+__ZN16SteamThreadTools13CThreadRWLock11WaitForReadEv
+__ZN16SteamThreadTools13CThreadRWLock12LockForWriteEv
+__ZN16SteamThreadTools16CThreadFullMutex7ReleaseEv
+__ZN16SteamThreadTools16CThreadFullMutexC1EbPKcbb
+__ZN16SteamThreadTools16CThreadFullMutexC2EbPKcbb
+__ZN16SteamThreadTools16CThreadLocalBase3SetEPv
+__ZN16SteamThreadTools16CThreadLocalBaseC1Ev
+__ZN16SteamThreadTools16CThreadLocalBaseC2Ev
+__ZN16SteamThreadTools16CThreadLocalBaseD1Ev
+__ZN16SteamThreadTools16CThreadLocalBaseD2Ev
+__ZN16SteamThreadTools16CThreadSemaphore7ReleaseEl
+__ZN16SteamThreadTools16CThreadSemaphoreC1Ell
+__ZN16SteamThreadTools16CThreadSemaphoreC2Ell
+__ZN16SteamThreadTools17CThreadSyncObject13AssertUseableEv
+__ZN16SteamThreadTools17CThreadSyncObject14SaveNameToFileEPKc
+__ZN16SteamThreadTools17CThreadSyncObject21OpenSemaphoreInternalEPKcb
+__ZN16SteamThreadTools17CThreadSyncObject22CloseSemaphoreInternalEibPKc
+__ZN16SteamThreadTools17CThreadSyncObject23CreateSemaphoreInternalEPKclbPb
+__ZN16SteamThreadTools17CThreadSyncObject24AcquireSemaphoreInternalEj
+__ZN16SteamThreadTools17CThreadSyncObject24ReleaseSemaphoreInternalEil
+__ZN16SteamThreadTools17CThreadSyncObject27IsSemaphoreOrphanedInternalEii
+__ZN16SteamThreadTools17CThreadSyncObject29EnsureSemaphorePostedInternalEi
+__ZN16SteamThreadTools17CThreadSyncObject30EnsureSemaphoreClearedInternalEi
+__ZN16SteamThreadTools17CThreadSyncObject30SignalThreadSyncObjectInternalEv
+__ZN16SteamThreadTools17CThreadSyncObject33CreateAnonymousSyncObjectInternalEbb
+__ZN16SteamThreadTools17CThreadSyncObject4WaitEj
+__ZN16SteamThreadTools17CThreadSyncObjectC1Ev
+__ZN16SteamThreadTools17CThreadSyncObjectC2Ev
+__ZN16SteamThreadTools17CThreadSyncObjectD1Ev
+__ZN16SteamThreadTools17CThreadSyncObjectD2Ev
+__ZN16SteamThreadTools18CreateSimpleThreadEPFjPvES0_Pjj
+__ZN16SteamThreadTools7CThread10ThreadProcEPv
+__ZN16SteamThreadTools7CThread11SetPriorityEi
+__ZN16SteamThreadTools7CThread13GetThreadProcEv
+__ZN16SteamThreadTools7CThread17GetCurrentCThreadEv
+__ZN16SteamThreadTools7CThread21WaitForCreateCompleteEPNS_12CThreadEventE
+__ZN16SteamThreadTools7CThread22ThreadExceptionWrapperEPv
+__ZN16SteamThreadTools7CThread4InitEv
+__ZN16SteamThreadTools7CThread4JoinEj
+__ZN16SteamThreadTools7CThread4StopEi
+__ZN16SteamThreadTools7CThread5SleepEj
+__ZN16SteamThreadTools7CThread5StartEm
+__ZN16SteamThreadTools7CThread5YieldEv
+__ZN16SteamThreadTools7CThread6OnExitEv
+__ZN16SteamThreadTools7CThread6ResumeEv
+__ZN16SteamThreadTools7CThread7GetNameEv
+__ZN16SteamThreadTools7CThread7SetNameEPKc
+__ZN16SteamThreadTools7CThread7SuspendEv
+__ZN16SteamThreadTools7CThread9TerminateEi
+__ZN16SteamThreadTools7CThreadC2Ev
+__ZN16SteamThreadTools7CThreadD0Ev
+__ZN16SteamThreadTools7CThreadD1Ev
+__ZN16SteamThreadTools7CThreadD2Ev
+__ZN6CTier015ValidateGlobalsER10CValidator
+__ZNK10SteamVProf9CVProfile18GetBudgetGroupNameE17EVProfBugdetGroup
+__ZNK10SteamVProf9CVProfile30BudgetGroupNameToBudgetGroupIDEPKc
+__ZNK16SteamThreadTools16CThreadFullMutex9IsCreatorEv
+__ZNK16SteamThreadTools16CThreadLocalBase3GetEv
+__ZNK16SteamThreadTools17CThreadSyncObjectntEv
+__ZNK16SteamThreadTools7CThread11GetPriorityEv
+__ZNK16SteamThreadTools7CThread15IsThreadRunningEv
+__ZNK16SteamThreadTools7CThread17BHasValidThreadIDEv
+__ZNK16SteamThreadTools7CThread7IsAliveEv
+__ZNK16SteamThreadTools7CThread9GetResultEv
+__ZNV16SteamThreadTools15CThreadSpinLock4LockEj
+__ZTIN16SteamThreadTools7CThreadE
+__ZTSN16SteamThreadTools7CThreadE
+__ZTVN16SteamThreadTools7CThreadE
+_g_ClockSpeed
+_g_ClockSpeedMicrosecondsMultiplier
+_g_ClockSpeedMillisecondsMultiplier
+_g_ClockSpeedSecondsMultiplier
+_g_VProfManager
+_g_VProfProfilesRunningCount
+_g_VProfile
+_g_bInException
+_g_pMemAllocSteam
+_vtune
+_CFDictionaryGetTypeID
+_CFDictionaryGetValueIfPresent
+_CFGetTypeID
+_CFPropertyListCreateFromXMLData
+_CFRelease
+_CFStringGetCString
+_CFURLCreateDataAndPropertiesFromResource
+_CFURLCreateWithFileSystemPath
+__DefaultRuneLocale
+__NSGetArgc
+__NSGetArgv
+__NSGetExecutablePath
+__Unwind_Resume
+__ZNKSt3__120__vector_base_commonILb1EE20__throw_length_errorEv
+__ZNSt11logic_errorC2EPKc
+__ZNSt12length_errorD1Ev
+__ZNSt3__112__next_primeEm
+__ZSt9terminatev
+__ZTISt12length_error
+__ZTIi
+__ZTVN10__cxxabiv117__class_type_infoE
+__ZTVN10__cxxabiv120__si_class_type_infoE
+__ZTVSt12length_error
+__ZdaPv
+__ZdlPv
+__Znam
+__Znwm
+___CFConstantStringClassReference
+___chkstk_darwin
+___cxa_allocate_exception
+___cxa_atexit
+___cxa_begin_catch
+___cxa_end_catch
+___cxa_free_exception
+___cxa_guard_abort
+___cxa_guard_acquire
+___cxa_guard_release
+___cxa_pure_virtual
+___cxa_rethrow
+___cxa_throw
+___error
+___gxx_personality_v0
+___maskrune
+___stack_chk_fail
+___stack_chk_guard
+___stderrp
+___stdoutp
+___tolower
+__exit
+_asctime_r
+_atoi
+_backtrace
+_backtrace_symbols
+_bzero
+_chdir
+_ctime_r
+_daylight
+_dladdr
+_dlclose
+_dlopen
+_dlsym
+_fflush
+_fgets
+_fork
+_fprintf
+_fputc
+_fputs
+_free
+_fwrite
+_getenv
+_gethostbyname
+_gethostname
+_getpid
+_gettimeofday
+_gmtime_r
+_host_page_size
+_host_statistics
+_kCFAllocatorDefault
+_kill
+_localtime_r
+_mach_absolute_time
+_mach_host_self
+_mach_timebase_info
+_malloc
+_malloc_size
+_memcmp
+_memcpy
+_memmove
+_mmap
+_mprotect
+_munmap
+_nanosleep
+_open
+_pclose
+_popen
+_posix_memalign
+_printf
+_pthread_attr_init
+_pthread_attr_setstacksize
+_pthread_cancel
+_pthread_cond_broadcast
+_pthread_cond_destroy
+_pthread_cond_init
+_pthread_cond_signal
+_pthread_cond_timedwait_relative_np
+_pthread_cond_wait
+_pthread_condattr_destroy
+_pthread_condattr_init
+_pthread_create
+_pthread_exit
+_pthread_getspecific
+_pthread_join
+_pthread_key_create
+_pthread_key_delete
+_pthread_kill
+_pthread_mach_thread_np
+_pthread_mutex_destroy
+_pthread_mutex_init
+_pthread_mutex_lock
+_pthread_mutex_trylock
+_pthread_mutex_unlock
+_pthread_mutexattr_destroy
+_pthread_mutexattr_init
+_pthread_mutexattr_settype
+_pthread_self
+_pthread_setschedparam
+_pthread_setspecific
+_read
+_realloc
+_sched_get_priority_max
+_sched_get_priority_min
+_sched_yield
+_semctl
+_semget
+_semop
+_setsid
+_sigaction
+_signal
+_sigprocmask
+_snprintf
+_sscanf
+_stat
+_strcasecmp
+_strchr
+_strcmp
+_strcpy
+_strerror
+_strlen
+_strncasecmp
+_strncpy
+_strrchr
+_strstr
+_sysctl
+_sysctlnametomib
+_system
+_time
+_timegm
+_timezone
+_usleep
+_vfprintf
+_vsnprintf
+_waitpid
+dyld_stub_binder
+radr://5614542
+com.valvesoftware.steam
+MXGJJ98X76
+	t5$	
+Os#U
+9Ikg
+Rgh4O
+\ v|
+subject.OU
+MXGJJ98X76
+com.valvesoftware.steam
+MXGJJ98X76
+{M?b
+FX{Y
+5,-@R
+s6Rp
+]TQH
+>TEl
+N{.ky
+j"{)
+<T6\
+^')N
+ [YY
+jsy,
+:7]jc
+O[xp
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+120201221215Z
+270201221215Z0y1-0+
+$Developer ID Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+)xEii`k_
+1? v(m
+'0%0#
+http://crl.apple.com/root.crl0
+B9tk
+P9jDt
+#q-_
+ "ror
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+060425214036Z
+350209214036Z0b1
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+, op
+https://www.apple.com/appleca/0
+Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
+=&g 
+Sj[d
+uu!0
+0y1-0+
+$Developer ID Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+210205030950Z
+260206030950Z0
+MXGJJ98X761A0?
+8Developer ID Application: Valve Corporation (MXGJJ98X76)1
+MXGJJ98X761
+Valve Corporation1
+~kk!
+3oC&
+uN`AJ
+40200
+$http://ocsp.apple.com/ocsp03-devid080
+)http://www.apple.com/certificateauthority0
+Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
+20120706000000Z0
+o(D-U
+6fQS
+:iPq
+0y1-0+
+$Developer ID Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+210923143358Z0/
+o8F0
+H<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>cdhashes</key>
+	<array>
+		<data>
+		OPrEa9P85LkzkcV34E5APuaZBK0=
+		</data>
+		<data>
+		dZlzqsVRhLIm9cfMnLl1ZUICCHs=
+		</data>
+	</array>
+</dict>
+</plist>
+0)J:s6YfW
+I Vu6%K
+!xRt
+20210923143518Z0
+0|100.
+'Apple Timestamp Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+210831175002Z
+211012175001Z0B1
+Timestamp Signer NWK11
+Apple Inc.1
+Y=|Ug
+http://www.apple.com/appleca0
+Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
+,0*0(
+"http://crl.apple.com/timestamp.crl0
+d|8]
+}LWc
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+120405120244Z
+270405120244Z0|100.
+'Apple Timestamp Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+Im] 
+(ny_~
+&By^
+t-D>
+E~4u&
+'0%0#
+http://crl.apple.com/root.crl0
+mzT_
+Bsu|QC
+:m7(
+FeoU
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+060425214036Z
+350209214036Z0b1
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+, op
+https://www.apple.com/appleca/0
+Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
+=&g 
+Sj[d
+uu!1
+0|100.
+'Apple Timestamp Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+210923143518Z0#
+)9*n

@@ -1,0 +1,3276 @@
+__TEXT
+__text
+__TEXT
+__symbol_stub
+__TEXT
+__stub_helper
+__TEXT
+__gcc_except_tab__TEXT
+__cstring
+__TEXT
+__const
+__TEXT
+__unwind_info
+__TEXT
+__DATA
+__nl_symbol_ptr
+__DATA
+__got
+__DATA
+__la_symbol_ptr
+__DATA
+__mod_init_func
+__DATA
+__const
+__DATA
+__cfstring
+__DATA
+__data
+__DATA
+__thread_vars
+__DATA
+__thread_bss
+__DATA
+__bss
+__DATA
+__common
+__DATA
+__OBJC
+__cls_refs
+__OBJC
+__message_refs
+__OBJC
+__module_info
+__OBJC
+__image_info
+__OBJC
+__LINKEDIT
+@loader_path/crashhandler.dylib
+/usr/lib/libiconv.2.dylib
+/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
+/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
+/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration
+/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+@loader_path/Frameworks/Breakpad.framework/Versions/A/Breakpad
+/usr/lib/libc++.1.dylib
+/usr/lib/libSystem.B.dylib
+/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+/usr/lib/libobjc.A.dylib
+,^_[]
+<^_[]
+|^_[]
+l^_[]
+l^_[]
+^_[]
+^_[]
+7Insp
+ectof
+Insp
+ectof
+7cras
+h_re
+port
+_sen
+der.
+.app
+cras
+h_re
+port
+_sen
+der.
+.app
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+jhPS
+^_[]
+^_[]
+^_[]
+P^_]
+<^_[]
+^_[]
+SQSS
+^_[]
+,^_[]
+SSPW
+^_[]
+^_[]
+L^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+j~j P
+^_[]
+^_[]
+^_[]
+^_[]
+VRQP
+^_[]
+t3B@9
+^_[]
+^_[]
+.u(8l;
+?.u$8o
+^_[]
+<^_[]
+t.A9
+^_[]
+^_[]
+<\t	
+^_[]
+,^_[]
+</t2
+\^_[]
+L^_[]
+^_[]
+^_[]
+^_[]
+<^_[]
+,^_[]
+<^_[]
+,^_[]
+QRPV
+^_[]
+Wj/PQRS
+^_[]
+8*.*
+^_[]
+VWQPS
+^_[]
+^_[]
+^_[]
+Pj\R
+x,tQ
+^_[]
+^_[]
+6SPQ
+SSh)
+^_[]
+^_[]
+ ^_]
+rp;]
+,^_[]
+^_[]
+WQPR
+t?9B
+^_[]
+^_[]
+^_[]
+,^_[]
+,^_[]
+QQPVRS
+^_[]
+^_[]
+^_[]
+QPRRR
+WVRQP
+0^_]
+QPRRR
+^_[]
+QPRRj
+~@O1
+^_[]
+^_[]
+ ^_]
+^_[]
+VRQP
+^_[]
+SWVP
+^_[]
+^_[]
+^_[]
+^_[]
+323B
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+%UUUU)
+3333
+,^_[]
+^_[]
+^_[]
+9{lw
+9{pr
+1RWV
+^_[]
+s	9_|
+9_|w
+^_[]
+^_[]
+^_[]
+^_[]
+9{lw
+9{pr
+^_[]
+s	9_|
+9_|w
+^_[]
+^_[]
+%UUUU
+3333!
+}';}
+^_[]
+%UUUU
+3333
+UUUU
+3333!
+3333
+\^_[]
+9_lw
+9_pr
+^_[]
+9_lw
+9_pr
+^_[]
+^_[]
+^_[]
+QjNP
+^_[]
+^_[]
+^_[]
+UUUU
+3333
+^_[]
+%UUUU
+3333
+^_[]
+%UUUU
+3333
+^_[]
+ ^_]
+%UUUU
+3333
+^_[]
+^_[]
+%UUUU
+3333
+u4;}
+<^_[]
+%UUUU
+3333
+^_[]
+L^_[]
+^_[]
+^_[]
+^_[]
+<^_[]
+^_[]
+%UUUU
+3333
+,^_[]
+%UUUU
+3333
+^_[]
+UUUU
+3333
+^_[]
+%UUUU
+3333
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+,^_[]
+^_[]
+^_[]
+^_[]
+VRQP
+L^_[]
+ ^_]
+^_[]
+^_[]
+^_[]
+PQRW
+^_[]
+Ph@B
+^_[]
+^_[]
+xQuQ
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+QPRj W
+VUUU
+L^_[]
+N$t)
+Qj1P
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+F4uS
+,^_[]
+PSj	V
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+Installing breakpad crash handler
+BreakpadProductDisplay
+BreakpadProduct
+BreakpadVendor
+BreakpadVersion
+BreakpadURL
+BuildID
+BreakpadReportInterval
+BreakpadSkipConfirm
+BreakpadSendAndExit
+BreakpadInspectorLocation
+BreakpadReporterExeLocation
+BreakpadMinidumpLocation
+BreakpadEmail
+BreakpadRequestComments
+BreakpadComments
+BreakpadServerType
+BreakpadInProcess
+http://crash.steampowered.com/submit
+True
+False
+Valve
+socorro
+ProductName
+Version
+Notes
+Vendor
+www.steampowered.com
+UserID
+Steam
+Add-ons
+Theme
+Platform
+Mac OS X
+SteamUniverse
+Config-*
+Uploading pending dumps
+%s/%s
+Uploaded %d pending dumps
+%lld
+SteamID:  %s, universe %s
+breakpadUtilities.dylib
+/../Frameworks/Breakpad.framework/Resources
+found breakpad via in process memory: '%s'
+found steam via cross-process IPC: '%s'
+unable to determine steam exe path, falling back to %s, crash reporting probably will not be functional!!!
+NSAutoreleasePool
+alloc
+init
+NSBundle
+NSString
+stringWithCString:encoding:
+bundleWithPath:
+executablePath
+UTF8String
+release
+/tmp/dumps
+%s%d
+Could not select valid crash dump directory based on %s.
+Unable to locate one or both of:
+'%s'
+'%s'
+Crash Uploading will not function.
+Beta
+Internal
+Public
+com.valvesoftware.steam.ipctool
+ipcserver restart: expected: %d, got: %d
+pid %d != %d, clearing client_port = %d, server_port = %d
+pid %d != %d, re-initing before send; client_port = %d, server_port = %d
+StopJob
+pid %d != %d, skipping dealloc of client_port = %d, server_port = %d
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
+(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
+crashhandler001
+crashhandler002
+crashhandler003
+unknown
+/System/Library/Frameworks/OpenGL.framework/OpenGL
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
+Failed to load opengl framework!!!
+CGLSetCurrentContext
+CGLGetCurrentContext
+CGLChoosePixelFormat
+CGLDestroyPixelFormat
+CGLCreateContext
+CGLDestroyContext
+CGLGetParameter
+NSProcessInfo
+processInfo
+operatingSystemVersion
+respondsToSelector:
+defaults read /System/Library/CoreServices/SystemVersion.plist ProductVersion
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/strtools.cpp
+pStr != NULL
+pSearch != NULL
+maxLen == 0 || pDest != NULL
+pSrc != NULL
+bufferLen > 0 && bufferLen <= INT_MAX
+pDest != NULL
+pFormat != NULL
+destCapacity != 0
+ bytes
+%i%s
+%%.%if%s
+ppath
+path
+V_RemoveDotSlashes failed for "%s".
+false
+maxLen <= INT_MAX
+checkLen >= 0
+argLen < 0x10000000u
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
+!pszString || pszString[nChars] == '\0'
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
+%s%c.temp_write_%x
+%s%c%s
+CPathString
+NSFileManager
+defaultManager
+attributesOfFileSystemForPath:error:
+valueForKey:
+unsignedLongLongValue
+NSURL
+stringWithUTF8String:
+fileURLWithPath:
+getResourceValue:forKey:error:
+boolValue
+NSArray
+arrayWithObjects:count:
+resourceValuesForKeys:error:
+objectForKeyedSubscript:
+fileSystemRepresentation
+stringWithFileSystemRepresentation:length:
+stringByExpandingTildeInPath
+stringByResolvingSymlinksInPath
+mountedVolumeURLsIncludingResourceValuesForKeys:options:
+countByEnumeratingWithState:objects:count:
+getRelationship:ofDirectoryAtURL:toItemAtURL:error:
+hasPrefix:
+length
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
+info.m_pReplacementString == 0
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
+nSizeOfType > 0
+nGrowSize >= 0
+m_nAllocationCount >= 0
+nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
+num > 0
+CUtlString::SetValue
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
+CUtlString::VFormat
+Assertion failed: length > k_cchMaxString
+CUtlStringBuilder::InternalPrepareBuffer
+nMinCapacity > Capacity()
+nMinCapacity >= nChars
+nMinCapacity <= k_nMaxStringSize
+len > 0 || HasError()
+Error State on string being set.
+CUtlStringBuilder::Data::MoveToHeap
+%s %i %s
+-nocrashdialog
+-debugbreak
+%s (%d) : 
+console
+Exiting on SPEW_ABORT
+IsSpewActive
+Fatal Assertion Failed: 
+-noassert
+DONT_BREAK_ON_ASSERT
+Fatal assert; application exiting
+Fatal assert
+_ExitOnFatalAssert
+m_cReentrancyCount >= 0
+Failed to generate callstack
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memblockhdr.cpp
+Assertion Failed: stack%2d: %s
+Stack%2d: %s
+Assertion Failed: stack%2d: 0x%llX
+Stack%2d: 0x%llX
+ppFrames[iFrame] != NULL
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memstd.cpp
+((size_t)(m_nLogicalBytesAllocated) % 8) == 0
+No tracked allocs currently in use. Total %d
+Tracked allocs currently in use. %d Total %d
+item %p sentinel corrupted. skipping.
+Busy, please retry.
+DumpMemTrackingStats %d %d 
+	%d items : %s - %s:%d
+***** OUT OF MEMORY! attempted allocation size: %zu ****
+OUT OF MEMORY
+(iub & (m_nSizeWithStack-1)) == 0
+pAllocTracker->m_uSentinel == 0xaa110ced
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/memblockhdr.h
+pLeft->m_iStackPC <= V_ARRAYSIZE(pLeft->m_StackPC)
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/minidump.cpp
+Someone called SetWritingMinidump without holding the minidump lock.
+Someone called ClearWritingMinidump without holding the minidump lock.
+Assert( %s ):%s:%d
+MacOS
+Frameworks
+crashhandler.dylib
+CreateInterface
+Sep 23 2021
+07:33:31
+%02d:%02d:%02d
+%04d%02d%02d%02d%02d%02d
+MainThrd
+pthread_setname_np
+Out of thread local storage!
+Bad thread local
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/threadtools.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/validator.cpp
+CValidator : too many memory nodes to store, try again with a higher threshold value
+NULL != m_pValObjectCur
+ GiB
+ MiB
+ KiB
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/valobject.cpp
+NULL == pValObjectPrev->m_pValObjectNext
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/vprof.cpp
+!g_VProfile
+pszName
+m_nRecursions > 0
+Root
+m_pBudgetGroups == NULL
+Unaccounted
+Sleeping
+VGUI
+FileSystem
+ClientDLL
+SteamUI
+Network
+Encryption
+OverlayRendering
+OverlayInput
+GameOverlayUI
+RunCallbacks
+Logger
+Jobs/Coroutines
+ServerMain
+Streaming
+ThreadWorkItem
+TenFoot
+tier1
+m_pBudgetGroups
+eGroup < VPROF_BUDGETGROUP_MAX
+No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/vprof.h
+m_pParent
+allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
+16CBreakpadFactory
+16IBreakpadFactory
+13CCrashHandler
+13ICrashHandler
+?20CUniformRandomStream
+20IUniformRandomStream
+N(knN
+11CPathString
+?21CUtlCStringConversion
+18CUtlCharConversion
+19CUtlNoEscConversion
+G12CStdMemAlloc
+9IMemAlloc
+Mb@?
+A[Ap
+UA[Ap
+RAVAp
+RARAp
+RARAp
+RARARA`?Ap
+RIQ"
+`&Bp
+@__ZNSt12length_errorD1Ev
+@__ZTISt12length_error
+@__ZTVN10__cxxabiv117__class_type_infoE
+@__ZTVN10__cxxabiv120__si_class_type_infoE
+@__ZTVSt12length_error
+@__ZdaPv
+@__ZdlPv
+@__Znam
+@__Znwm
+@___gxx_personality_v0
+@___stack_chk_guard
+@___stderrp
+@___stdoutp
+@__tlv_bootstrap
+@_alphasort$INODE64
+@_bootstrap_port
+@_mach_task_self_
+@dyld_stub_binder
+@___CFConstantStringClassReference
+@_kCFAllocatorDefault
+@_kCFTypeDictionaryKeyCallBacks
+@_kCFTypeDictionaryValueCallBacks
+@__ZTISt12length_error
+@__ZdaPv
+@__ZdlPv
+@__Znam
+@__Znwm
+@_BreakpadAddUploadParameter
+@_BreakpadCreate
+@_BreakpadGenerateAndSendReport
+@_BreakpadRelease
+@_BreakpadSetComment
+@_BreakpadSetFilterCallback
+@_CFDictionaryCreate
+@_CFRelease
+@_CFStringCreateWithCString
+@__NSGetArgc
+@__NSGetArgv
+@__NSGetExecutablePath
+@__Unwind_Resume
+@__ZNKSt3__120__vector_base_commonILb1EE20__throw_length_errorEv
+@__ZNSt11logic_errorC2EPKc
+@__ZNSt3__112__next_primeEm
+@__ZSt9terminatev
+@___bzero
+@___cxa_allocate_exception
+@___cxa_atexit
+@___cxa_begin_catch
+@___cxa_end_catch
+@___cxa_free_exception
+@___cxa_guard_abort
+@___cxa_guard_acquire
+@___cxa_guard_release
+@___cxa_rethrow
+@___cxa_throw
+@___error
+@___stack_chk_fail
+@___tolower
+@___umoddi3
+@__dyld_get_image_name
+@__exit
+@_atoi
+@_backtrace
+@_backtrace_symbols
+@_bootstrap_look_up
+@_ceilf
+@_dladdr
+@_dlclose
+@_dlopen
+@_dlsym
+@_fclose
+@_fflush
+@_fgets
+@_fnmatch$UNIX2003
+@_fopen$UNIX2003
+@_fork
+@_fprintf
+@_fputc
+@_free
+@_fwrite$UNIX2003
+@_getcwd
+@_getenv
+@_getpid
+@_kill$UNIX2003
+@_launch_data_alloc
+@_launch_data_dict_insert
+@_launch_data_free
+@_launch_data_new_string
+@_launch_msg
+@_lchmod
+@_lstat$INODE64
+@_mach_absolute_time
+@_mach_msg
+@_mach_port_allocate
+@_mach_port_deallocate
+@_mach_port_mod_refs
+@_mach_port_type
+@_mach_timebase_info
+@_malloc
+@_malloc_size
+@_memcmp
+@_memcpy
+@_memmove
+@_mkdir
+@_nanosleep$UNIX2003
+@_objc_msgSend
+@_objc_msgSend_stret
+@_pclose
+@_popen$UNIX2003
+@_posix_memalign
+@_printf
+@_pthread_cond_destroy
+@_pthread_cond_wait$UNIX2003
+@_pthread_create
+@_pthread_getspecific
+@_pthread_join$UNIX2003
+@_pthread_key_create
+@_pthread_key_delete
+@_pthread_kill
+@_pthread_mach_thread_np
+@_pthread_mutex_destroy
+@_pthread_mutex_init
+@_pthread_mutex_lock
+@_pthread_mutex_trylock
+@_pthread_mutex_unlock
+@_pthread_mutexattr_init
+@_pthread_mutexattr_settype
+@_pthread_self
+@_pthread_setspecific
+@_realloc
+@_scandir$INODE64
+@_sched_yield
+@_setsid
+@_signal
+@_sigprocmask
+@_snprintf
+@_sscanf
+@_stat$INODE64
+@_strcasecmp
+@_strchr
+@_strcmp
+@_strcpy
+@_strlen
+@_strncasecmp
+@_strncpy
+@_strrchr
+@_sysctl
+@_system$UNIX2003
+@_time
+@_unlink
+@_usleep$UNIX2003
+@_utime
+@_vasprintf
+@_vsnprintf
+@_waitpid$UNIX2003
+CreateInterface
+-Breakpad_SetSteamID
+08:<&
+2$$$&$
+TJ",\
+c5u8
+$z$WnJ
+">pl
+Dzll
+){c$V
+`m(w
+!	'J+
+Qg	~
+|`n>>
+_Breakpad_SetSteamID
+_CreateInterface
+.objc_class_name_NSArray
+.objc_class_name_NSAutoreleasePool
+.objc_class_name_NSBundle
+.objc_class_name_NSFileManager
+.objc_class_name_NSProcessInfo
+.objc_class_name_NSString
+.objc_class_name_NSURL
+_BreakpadAddUploadParameter
+_BreakpadCreate
+_BreakpadGenerateAndSendReport
+_BreakpadRelease
+_BreakpadSetComment
+_BreakpadSetFilterCallback
+_CFDictionaryCreate
+_CFRelease
+_CFStringCreateWithCString
+__NSGetArgc
+__NSGetArgv
+__NSGetExecutablePath
+__Unwind_Resume
+__ZNKSt3__120__vector_base_commonILb1EE20__throw_length_errorEv
+__ZNSt11logic_errorC2EPKc
+__ZNSt12length_errorD1Ev
+__ZNSt3__112__next_primeEm
+__ZSt9terminatev
+__ZTISt12length_error
+__ZTVN10__cxxabiv117__class_type_infoE
+__ZTVN10__cxxabiv120__si_class_type_infoE
+__ZTVSt12length_error
+__ZdaPv
+__ZdlPv
+__Znam
+__Znwm
+___CFConstantStringClassReference
+___bzero
+___cxa_allocate_exception
+___cxa_atexit
+___cxa_begin_catch
+___cxa_end_catch
+___cxa_free_exception
+___cxa_guard_abort
+___cxa_guard_acquire
+___cxa_guard_release
+___cxa_rethrow
+___cxa_throw
+___error
+___gxx_personality_v0
+___stack_chk_fail
+___stack_chk_guard
+___stderrp
+___stdoutp
+___tolower
+___umoddi3
+__dyld_get_image_name
+__exit
+__tlv_bootstrap
+_alphasort$INODE64
+_atoi
+_backtrace
+_backtrace_symbols
+_bootstrap_look_up
+_bootstrap_port
+_ceilf
+_dladdr
+_dlclose
+_dlopen
+_dlsym
+_fclose
+_fflush
+_fgets
+_fnmatch$UNIX2003
+_fopen$UNIX2003
+_fork
+_fprintf
+_fputc
+_free
+_fwrite$UNIX2003
+_getcwd
+_getenv
+_getpid
+_kCFAllocatorDefault
+_kCFTypeDictionaryKeyCallBacks
+_kCFTypeDictionaryValueCallBacks
+_kill$UNIX2003
+_launch_data_alloc
+_launch_data_dict_insert
+_launch_data_free
+_launch_data_new_string
+_launch_msg
+_lchmod
+_lstat$INODE64
+_mach_absolute_time
+_mach_msg
+_mach_port_allocate
+_mach_port_deallocate
+_mach_port_mod_refs
+_mach_port_type
+_mach_task_self_
+_mach_timebase_info
+_malloc
+_malloc_size
+_memcmp
+_memcpy
+_memmove
+_mkdir
+_nanosleep$UNIX2003
+_objc_msgSend
+_objc_msgSend_stret
+_pclose
+_popen$UNIX2003
+_posix_memalign
+_printf
+_pthread_cond_destroy
+_pthread_cond_wait$UNIX2003
+_pthread_create
+_pthread_getspecific
+_pthread_join$UNIX2003
+_pthread_key_create
+_pthread_key_delete
+_pthread_kill
+_pthread_mach_thread_np
+_pthread_mutex_destroy
+_pthread_mutex_init
+_pthread_mutex_lock
+_pthread_mutex_trylock
+_pthread_mutex_unlock
+_pthread_mutexattr_init
+_pthread_mutexattr_settype
+_pthread_self
+_pthread_setspecific
+_realloc
+_scandir$INODE64
+_sched_yield
+_setsid
+_signal
+_sigprocmask
+_snprintf
+_sscanf
+_stat$INODE64
+_strcasecmp
+_strchr
+_strcmp
+_strcpy
+_strlen
+_strncasecmp
+_strncpy
+_strrchr
+_sysctl
+_system$UNIX2003
+_time
+_unlink
+_usleep$UNIX2003
+_utime
+_vasprintf
+_vsnprintf
+_waitpid$UNIX2003
+dyld_stub_binder
+radr://5614542
+com.valvesoftware.steam
+MXGJJ98X76
+W0xD
+u&_X,
+2L)@
+u`EN
+subject.OU
+MXGJJ98X76
+com.valvesoftware.steam
+MXGJJ98X76
+K)w8
+<t;=
+![ga
+oszl
+<^2N
+f Pcu
+?Py>K
+;D<W
+5FhI
+?|F@@X
+eUP*
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+120201221215Z
+270201221215Z0y1-0+
+$Developer ID Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+)xEii`k_
+1? v(m
+'0%0#
+http://crl.apple.com/root.crl0
+B9tk
+P9jDt
+#q-_
+ "ror
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+060425214036Z
+350209214036Z0b1
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+, op
+https://www.apple.com/appleca/0
+Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
+=&g 
+Sj[d
+uu!0
+0y1-0+
+$Developer ID Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+210205030950Z
+260206030950Z0
+MXGJJ98X761A0?
+8Developer ID Application: Valve Corporation (MXGJJ98X76)1
+MXGJJ98X761
+Valve Corporation1
+~kk!
+3oC&
+uN`AJ
+40200
+$http://ocsp.apple.com/ocsp03-devid080
+)http://www.apple.com/certificateauthority0
+Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
+20120706000000Z0
+o(D-U
+6fQS
+:iPq
+0y1-0+
+$Developer ID Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+210923143354Z0/
+{ui$9H
+i	0[
+1_0-
+H<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>cdhashes</key>
+	<array>
+		<data>
+		DF/NJ7uQp9tihkcBqAIcdWb0MV8=
+		</data>
+		<data>
+		YnDLMu1x3RScwv4E9P0c4uMvdSM=
+		</data>
+	</array>
+</dict>
+</plist>
++.EX
+20210923143513Z0
+0|100.
+'Apple Timestamp Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+210831175002Z
+211012175001Z0B1
+Timestamp Signer NWK11
+Apple Inc.1
+Y=|Ug
+http://www.apple.com/appleca0
+Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
+,0*0(
+"http://crl.apple.com/timestamp.crl0
+d|8]
+}LWc
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+120405120244Z
+270405120244Z0|100.
+'Apple Timestamp Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+Im] 
+(ny_~
+&By^
+t-D>
+E~4u&
+'0%0#
+http://crl.apple.com/root.crl0
+mzT_
+Bsu|QC
+:m7(
+FeoU
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+060425214036Z
+350209214036Z0b1
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+, op
+https://www.apple.com/appleca/0
+Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
+=&g 
+Sj[d
+uu!1
+0|100.
+'Apple Timestamp Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+210923143513Z0#
+#{mT
+<god
+yO6s
+ibQc
+pj\a
+__TEXT
+__text
+__TEXT
+__stubs
+__TEXT
+__stub_helper
+__TEXT
+__gcc_except_tab__TEXT
+__cstring
+__TEXT
+__objc_methname
+__TEXT
+__const
+__TEXT
+__unwind_info
+__TEXT
+__DATA
+__nl_symbol_ptr
+__DATA
+__got
+__DATA
+__la_symbol_ptr
+__DATA
+__mod_init_func
+__DATA
+__const
+__DATA
+__cfstring
+__DATA
+__objc_imageinfo__DATA
+__objc_selrefs
+__DATA
+__objc_classrefs__DATA
+__data
+__DATA
+__thread_vars
+__DATA
+__thread_bss
+__DATA
+__bss
+__DATA
+__common
+__DATA
+__LINKEDIT
+@loader_path/crashhandler.dylib
+/usr/lib/libiconv.2.dylib
+/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
+/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
+/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration
+/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+@loader_path/Frameworks/Breakpad.framework/Versions/A/Breakpad
+/usr/lib/libc++.1.dylib
+/usr/lib/libSystem.B.dylib
+/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+/usr/lib/libobjc.A.dylib
+AWAVAUATSH
+8[A\A]A^A_]
+8[A\A]A^A_]
+AWAVAUATSH
+X[A\A]A^A_]
+[A^]
+AWAVAUATSH
+M9} 
+H[A\A]A^A_]
+AWAVATSH
+D$89
+P[A\A^A_]
+AWAVATSI
+C8D9
+[A\A^A_]
+AVSH
+[A^]
+AWAVATSH
+w*IcV(H
+Mcf(M
+[A\A^A_]
+AWAVAUATSH
+/../FramJ
+eworks/BJ
+reakpad.J
+frameworJ
+k/ResourJ
+D; B
+D;'rcesB
+InspectoJ
+InspectoH
+crash_reJ
+port_senJ
+nder.appJ
+crash_reH
+port_senH
+nder.appH
+@u$H
+[A\A]A^A_]
+/../FramH
+eworks/BH
+reakpad.H
+frameworH
+k/ResourH
+C'rces
+AVSD
+[A^]
+[A^]
+AWAVSPI
+[A^A_]
+AWAVSP
+IcG(H9
+[A^A_]
+AWAVSP
+IcG(H9
+[A^A_]
+AWAVSP
+IcG(H9
+[A^A_]
+AWAVSPI
+gwMA
+[A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVAUATSPH
+[A\A]A^A_]
+AWAVSH
+([A^A_]
+AWAVAUATSPM
+tWE1
+A;D$
+[A\A]A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVATSH
+[A\A^A_]
+AVSH
+[A^]
+AWAVSPH
+[A^A_]
+AVSI
+[A^]
+`@UH
+AWAVAUATSH
+H[A\A]A^A_]
+AWAVAUATSH
+([A\A]A^A_]
+AWAVATSH
+	H;M
+[A\A^A_]
+AWAVATSA
+[A\A^A_]
+AWAVATSH
+[A\A^A_]
+AVSH
+[A^]
+AWAVSPH
+[A^A_]
+AWAVAUATSPI
+[A\A]A^A_]
+	H;M
+AWAVAUATSPI
+[A\A]A^A_]
+AWAVSPI
+\u(L
+[A^A_]
+AWAVATSH
+.u"F8t 
+.u F8t 
+<$.u'E8t$
+[A\A^A_]
+D83t
+D83L
+AWAVAUATSH
+8[A\A]A^A_]
+8[A\A]A^A_]
+AVSA
+0[A^]
+x%Lc
+ u&E1
+AWAVAUATSPH
+[A\A]A^A_]
+AVSH
+r:H9
+[A^]
+[A^]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVSH
+</t0
+[A^A_]
+AVSH
+ [A^]
+AVSH
+0[A^]
+AWAVATSH
+[A\A^A_]
+AVSH
+ [A^]
+AWAVAUATSH
+([A\A]A^A_]
+AVSH
+ [A^]
+AWAVAUATSH
+[A\A]A^A_]
+AVSH
+t	[A^]
+[A^]
+AWAVSH
+	H;M
+[A^A_]
+AVSH
+=*.*
+*t"H
+[A^]
+AVSH
+[A^]
+AWAVSPL
+[A^A_]
+AWAVAUATSPL
+d>$I
+A9F }
+[A\A]A^A_]
+AWAVAUATSPH
+[A\A]A^A_]
+AVSA
+x1tS
+[A^]
+'Icv
+[A^]
+AWAVSPH97
+[A^A_]
+AWAVSH
+[A^A_]
+	H;M
+AWAVAUATSH
+rlL9
+[A\A]A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVSPH
+[A^A_]
+AWAVSP
+[A^A_]
+AVSH
+[A^]
+AWAVAUATSH
+[A\A]A^A_]
+[A\A]A^A_]
+AWAVSH
+	H;M
+[A^A_]
+AWAVSPI
+[A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+	H;M
+AWAVSH
+[A^A_]
+AWAVAUATSP
+[A\A]A^A_]
+AVSH
+ [A^]
+AWAVAUATSH
+[A\A]A^A_]
+	H;M
+AWAVAUATSH
+	H;M
+[A\A]A^A_]
+t-UH
+AVSH
+[A^]
+L9J 
+D9B(@
+L;H 
+D;@(
+AWAVATSH
+[A\A^A_]
+H91tHH
+wH91
+AWAVSH
+[A^A_]
+AWAVAUATSP
+[A\A]A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+[A\A]A^A_]
+AWAVSPA
+[A^A_]
+[A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVAUATSPL
+UUUUUUUUH!
+33333333H
+L$ t
+[A\A]A^A_]
+AWAVSPH
+[A^A_]
+AWAVSPI
+t%L9
+[A^A_]
+AWAVAUATSPH
+t6E1
+[A\A]A^A_]
+s	I9
+[A\A]A^A_]
+AWAVSPH
+[A^A_]
+[A^A_]
+AWAVATSH
+[A\A^A_]
+s	I9
+AWAVAUATSPA
+[A\A]A^A_]
+[A\A]A^A_]
+AWAVAUATSPA
+t%L9
+[A\A]A^A_]
+AWAVAUATSH
+s	L9
+[A\A]A^A_]
+[A\A]A^A_]
+AWAVSPH
+[A^A_]
+[A^A_]
+AWAVAUATSH
+McF K
+UUUUUUUUH!
+33333333H!
+u*D9G
+u$L9
+{0I9
+fffffff
+3333333
+fffffff
+}!D;
+(H;]
+[A\A]A^A_]
+AWAVAUATSPI
+Ict$
+<6I1
+UUUUUUUUH!
+33333333H
+L9K(
+UUUUUUUUH!
+33333333H
+[A\A]A^A_]
+AVSI
+t	[A^]
+[A^]
+AWAVSPI
+t%M9
+[A^A_]
+AWAVSPI
+t%M9
+[A^A_]
+AWAVSH
+[A^A_]
+t-UH
+AVSH
+[A^]
+AWAVAUATSPL
+[A\A]A^A_]
+AVSH
+[A^]
+AWAVATSH
+[A\A^A_]
+AWAVAUATSPI
+[A\A]A^A_]
+AVSI
+t	[A^]
+[A^]
+AVSH
+[A^]
+AWAVSPI
+UUUUUUUUH!
+33333333H
+[A^A_]
+[A^A_]
+AVSH
+UUUUUUUUH!
+33333333H
+v1M9
+[A^]
+UUUUUUUUH!
+33333333H
+AVSH
+ [A^]
+AWAVSH
+UUUUUUUUH!
+33333333H
+[A^A_]
+AWAVAUATSH
+tbL9
+L$ H
+D$(H
+D$0M
+[A\A]A^A_]
+AWAVAUATSPI
+O t	
+UUUUUUUUH!
+33333333H
+u0L9
+u	L9[
+vFL9
+[A\A]A^A_]
+AWAVSPH
+[A^A_]
+AVSH
+UUUUUUUUH!
+33333333H
+v1M9
+N(H;J(t
+[A^]
+AWAVSPI
+gffffff
+[A^A_]
+AWAVAUATSH
+E(I;V
+EPH;P
+H;r8H
+B(H;q
+](H9
+H9r8H
+Z(H9q
+L$ H
+L$ H
+UxL9
+|5 I
+I;T5
+H[A\A]A^A_]
+H[A\A]A^A_]
+H[A\A]A^A_]
+H[A\A]A^A_]
+AWAVATSH
+L$ H
+L$ H
+0[A\A^A_]
+AWAVAUATSH
+I;L$
+L$ H
+L$ H
+L$ I
+L$ H
+([A\A]A^A_]
+AWAVATSH
+sxL9
+|$ H
+T; H
+H;t;
+@[A\A^A_]
+AWAVATSE1
+[A\A^A_]
+AWAVAUATSPI
+M9n(
+UUUUUUUUH!
+33333333H
+[A\A]A^A_]
+AVSI
+t	[A^]
+[A^]
+UUUUUUUUH!
+33333333H
+AWAVSPI
+UUUUUUUUH!
+33333333H
+[A^A_]
+[A^A_]
+AVSH
+UUUUUUUUH!
+33333333H
+v1M9
+[A^]
+[A^]
+AVSA
+[A^]
+[A^]
+AWAVAUATSH
+([A\A]A^A_]
+([A\A]A^A_]
+AWAVATSH
+[A\A^A_]
+AWAVAUATSH
+([A\A]A^A_]
+AWAVATSH
+[A\A^A_]
+AWAVAUATSH
+SASAR
+H[A\A]A^A_]
+AWAVAUATSPH
+[A\A]A^A_]
+AVSH
+[A^]
+AWAVSH
+[A^A_]
+AWAVSPH
+[A^A_]
+AVSL
+[A^]
+AVSH
+x>u>
+[A^]
+AWAVSP
+[A^A_]
+AVSI
+[A^]
+AWAVSPA
+[A^A_]
+[A^A_]
+[A^]
+?u'H
+IcF$A
+H;7u
+[A^]
+[A^]
+HcS,L
+AWAVSH
+x(Hc
+VUUUH
+X[A^A_]
+AVSM
+[A^]
+AWAVSPH
+[A^A_]
+AWAVAUATSPH
+[A\A]A^A_]
+AWAVATSI
+[A\A^A_]
+AVSI
+[A^]
+AVSH
+[A^]
+AWAVAUATSH
+[A\A]A^A_]
+AVSH
+[A^]
+AWAVATSA
+[A\A^A_]
+[A^]
+CHuO
+AWAVAUATSPH
+[A\A]A^A_]
+AWAVAUATSPI
+[A\A]A^A_]
+AVSH
+[A^]
+AVSI
+[A^]
+[A^]
+AWAVSPI
+[A^A_]
+[A^A_]
+AVSI
+[A^]
+t-UH
+AVSH
+[A^]
+t-UH
+AVSH
+[A^]
+AWAVATSE1
+[A\A^A_]
+Installing breakpad crash handler
+BreakpadProductDisplay
+BreakpadProduct
+BreakpadVendor
+BreakpadVersion
+BreakpadURL
+BuildID
+BreakpadReportInterval
+BreakpadSkipConfirm
+BreakpadSendAndExit
+BreakpadInspectorLocation
+BreakpadReporterExeLocation
+BreakpadMinidumpLocation
+BreakpadEmail
+BreakpadRequestComments
+BreakpadComments
+BreakpadServerType
+BreakpadInProcess
+http://crash.steampowered.com/submit
+True
+False
+Valve
+socorro
+ProductName
+Version
+Notes
+Vendor
+www.steampowered.com
+UserID
+Steam
+Add-ons
+Theme
+Platform
+Mac OS X
+SteamUniverse
+Config-*
+Uploading pending dumps
+%s/%s
+Uploaded %d pending dumps
+SteamID:  %s, universe %s
+breakpadUtilities.dylib
+/../Frameworks/Breakpad.framework/Resources
+found breakpad via in process memory: '%s'
+found steam via cross-process IPC: '%s'
+unable to determine steam exe path, falling back to %s, crash reporting probably will not be functional!!!
+/tmp/dumps
+%s%d
+Could not select valid crash dump directory based on %s.
+Unable to locate one or both of:
+'%s'
+'%s'
+Crash Uploading will not function.
+Beta
+Internal
+Public
+com.valvesoftware.steam.ipctool
+ipcserver restart: expected: %d, got: %d
+pid %d != %d, clearing client_port = %d, server_port = %d
+pid %d != %d, re-initing before send; client_port = %d, server_port = %d
+StopJob
+pid %d != %d, skipping dealloc of client_port = %d, server_port = %d
+crashhandler001
+crashhandler002
+crashhandler003
+unknown
+/System/Library/Frameworks/OpenGL.framework/OpenGL
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
+Failed to load opengl framework!!!
+CGLSetCurrentContext
+CGLGetCurrentContext
+CGLChoosePixelFormat
+CGLDestroyPixelFormat
+CGLCreateContext
+CGLDestroyContext
+CGLGetParameter
+defaults read /System/Library/CoreServices/SystemVersion.plist ProductVersion
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/strtools.cpp
+pStr != NULL
+pSearch != NULL
+maxLen == 0 || pDest != NULL
+pSrc != NULL
+bufferLen > 0 && bufferLen <= INT_MAX
+pDest != NULL
+pFormat != NULL
+destCapacity != 0
+ bytes
+%i%s
+%lld
+ppath
+V_RemoveDotSlashes failed for "%s".
+false
+maxLen <= INT_MAX
+checkLen >= 0
+argLen < 0x10000000u
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
+!pszString || pszString[nChars] == '\0'
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
+(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
+%s%c.temp_write_%x
+%s%c%s
+CPathString
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
+info.m_pReplacementString == 0
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
+nSizeOfType > 0
+nGrowSize >= 0
+m_nAllocationCount >= 0
+nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
+num > 0
+CUtlString::SetValue
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
+CUtlString::VFormat
+Assertion failed: length > k_cchMaxString
+CUtlStringBuilder::InternalPrepareBuffer
+nMinCapacity > Capacity()
+nMinCapacity >= nChars
+nMinCapacity <= k_nMaxStringSize
+len > 0 || HasError()
+Error State on string being set.
+CUtlStringBuilder::Data::MoveToHeap
+%s %i %s
+-nocrashdialog
+-debugbreak
+%s (%d) : 
+Exiting on SPEW_ABORT
+IsSpewActive
+Fatal Assertion Failed: 
+-noassert
+DONT_BREAK_ON_ASSERT
+Fatal assert; application exiting
+Fatal assert
+_ExitOnFatalAssert
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/threadtools.h
+m_cReentrancyCount >= 0
+Failed to generate callstack
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memblockhdr.cpp
+Assertion Failed: stack%2d: %s
+Stack%2d: %s
+Assertion Failed: stack%2d: 0x%llX
+Stack%2d: 0x%llX
+ppFrames[iFrame] != NULL
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memstd.cpp
+((size_t)(m_nLogicalBytesAllocated) % 8) == 0
+No tracked allocs currently in use. Total %d
+Tracked allocs currently in use. %d Total %d
+item %p sentinel corrupted. skipping.
+Busy, please retry.
+DumpMemTrackingStats %d %d 
+	%d items : %s - %s:%d
+***** OUT OF MEMORY! attempted allocation size: %zu ****
+OUT OF MEMORY
+(iub & (m_nSizeWithStack-1)) == 0
+pAllocTracker->m_uSentinel == 0xaa110ced
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/memblockhdr.h
+pLeft->m_iStackPC <= V_ARRAYSIZE(pLeft->m_StackPC)
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/minidump.cpp
+Someone called SetWritingMinidump without holding the minidump lock.
+Someone called ClearWritingMinidump without holding the minidump lock.
+Assert( %s ):%s:%d
+MacOS
+Frameworks
+crashhandler.dylib
+CreateInterface
+Sep 23 2021
+07:33:33
+%02d:%02d:%02d
+%04d%02d%02d%02d%02d%02d
+MainThrd
+pthread_setname_np
+Out of thread local storage!
+Bad thread local
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/validator.cpp
+CValidator : too many memory nodes to store, try again with a higher threshold value
+NULL != m_pValObjectCur
+console
+ GiB
+ MiB
+ KiB
+%%.%if%s
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/valobject.cpp
+NULL == pValObjectPrev->m_pValObjectNext
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/vprof.cpp
+!g_VProfile
+pszName
+m_nRecursions > 0
+Root
+m_pBudgetGroups == NULL
+Unaccounted
+Sleeping
+VGUI
+FileSystem
+ClientDLL
+SteamUI
+Network
+Encryption
+OverlayRendering
+OverlayInput
+GameOverlayUI
+RunCallbacks
+Logger
+Jobs/Coroutines
+ServerMain
+Streaming
+ThreadWorkItem
+TenFoot
+tier1
+m_pBudgetGroups
+eGroup < VPROF_BUDGETGROUP_MAX
+No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/vprof.h
+m_pParent
+allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
+init
+stringWithCString:encoding:
+bundleWithPath:
+executablePath
+UTF8String
+processInfo
+operatingSystemVersion
+respondsToSelector:
+defaultManager
+attributesOfFileSystemForPath:error:
+valueForKey:
+unsignedLongLongValue
+stringWithUTF8String:
+fileURLWithPath:
+getResourceValue:forKey:error:
+boolValue
+arrayWithObjects:count:
+resourceValuesForKeys:error:
+objectForKeyedSubscript:
+fileSystemRepresentation
+stringWithFileSystemRepresentation:length:
+stringByExpandingTildeInPath
+stringByResolvingSymlinksInPath
+mountedVolumeURLsIncludingResourceValuesForKeys:options:
+countByEnumeratingWithState:objects:count:
+getRelationship:ofDirectoryAtURL:toItemAtURL:error:
+path
+hasPrefix:
+length
+16CBreakpadFactory
+16IBreakpadFactory
+13CCrashHandler
+13ICrashHandler
+?20CUniformRandomStream
+20IUniformRandomStream
+N(knN
+?11CPathString
+21CUtlCStringConversion
+18CUtlCharConversion
+19CUtlNoEscConversion
+_12CStdMemAlloc
+9IMemAlloc
+Mb@?
+A[Ap
+UA[Ap
+RAVAp
+RARAp
+RARAp
+RARARA`?Ap
+RA\B
+HpHp
+@_OBJC_CLASS_$_NSAutoreleasePool
+@_OBJC_CLASS_$_NSBundle
+@_OBJC_CLASS_$_NSFileManager
+@_OBJC_CLASS_$_NSProcessInfo
+@_OBJC_CLASS_$_NSString
+@__ZNSt12length_errorD1Ev
+@__ZTISt12length_error
+@__ZTVN10__cxxabiv117__class_type_infoE
+@__ZTVN10__cxxabiv120__si_class_type_infoE
+@__ZTVSt12length_error
+@__ZdaPv
+@__ZdlPv
+@__Znam
+@__Znwm
+@___gxx_personality_v0
+@___stack_chk_guard
+@___stderrp
+@___stdoutp
+@__tlv_bootstrap
+@_alphasort$INODE64
+@_bootstrap_port
+@_mach_task_self_
+@dyld_stub_binder
+@_OBJC_CLASS_$_NSArray
+@_OBJC_CLASS_$_NSURL
+@___CFConstantStringClassReference
+@_kCFAllocatorDefault
+@_kCFTypeDictionaryKeyCallBacks
+@_kCFTypeDictionaryValueCallBacks
+@_objc_msgSend
+@_objc_release
+@__ZTISt12length_error
+@__ZdaPv
+@__ZdlPv
+@__Znam
+@__Znwm
+@_BreakpadAddUploadParameter
+@_BreakpadCreate
+@_BreakpadGenerateAndSendReport
+@_BreakpadRelease
+@_BreakpadSetComment
+@_BreakpadSetFilterCallback
+@_CFDictionaryCreate
+@_CFRelease
+@_CFStringCreateWithCString
+@__NSGetArgc
+@__NSGetArgv
+@__NSGetExecutablePath
+@__Unwind_Resume
+@__ZNKSt3__120__vector_base_commonILb1EE20__throw_length_errorEv
+@__ZNSt11logic_errorC2EPKc
+@__ZNSt3__112__next_primeEm
+@__ZSt9terminatev
+@___bzero
+@___cxa_allocate_exception
+@___cxa_atexit
+@___cxa_begin_catch
+@___cxa_end_catch
+@___cxa_free_exception
+@___cxa_guard_abort
+@___cxa_guard_acquire
+@___cxa_guard_release
+@___cxa_rethrow
+@___cxa_throw
+@___error
+@___stack_chk_fail
+@___tolower
+@__dyld_get_image_name
+@__exit
+@_atoi
+@_backtrace
+@_backtrace_symbols
+@_bootstrap_look_up
+@_ceilf
+@_dladdr
+@_dlclose
+@_dlopen
+@_dlsym
+@_fclose
+@_fflush
+@_fgets
+@_fnmatch
+@_fopen
+@_fork
+@_fprintf
+@_fputc
+@_free
+@_fwrite
+@_getcwd
+@_getenv
+@_getpid
+@_kill
+@_launch_data_alloc
+@_launch_data_dict_insert
+@_launch_data_free
+@_launch_data_new_string
+@_launch_msg
+@_lchmod
+@_lstat$INODE64
+@_mach_absolute_time
+@_mach_msg
+@_mach_port_allocate
+@_mach_port_deallocate
+@_mach_port_mod_refs
+@_mach_port_type
+@_mach_timebase_info
+@_malloc
+@_malloc_size
+@_memcmp
+@_memcpy
+@_memmove
+@_mkdir
+@_nanosleep
+@_objc_alloc
+@_objc_msgSend_stret
+@_pclose
+@_popen
+@_posix_memalign
+@_printf
+@_pthread_cond_destroy
+@_pthread_cond_wait
+@_pthread_create
+@_pthread_getspecific
+@_pthread_join
+@_pthread_key_create
+@_pthread_key_delete
+@_pthread_kill
+@_pthread_mach_thread_np
+@_pthread_mutex_destroy
+@_pthread_mutex_init
+@_pthread_mutex_lock
+@_pthread_mutex_trylock
+@_pthread_mutex_unlock
+@_pthread_mutexattr_init
+@_pthread_mutexattr_settype
+@_pthread_self
+@_pthread_setspecific
+@_realloc
+@_scandir$INODE64
+@_sched_yield
+@_setsid
+@_signal
+@_sigprocmask
+@_snprintf
+@_sscanf
+@_stat$INODE64
+@_strcasecmp
+@_strchr
+@_strcmp
+@_strcpy
+@_strlen
+@_strncasecmp
+@_strncpy
+@_strrchr
+@_sysctl
+@_system
+@_time
+@_unlink
+@_usleep
+@_utime
+@_vasprintf
+@_vsnprintf
+@_waitpid
+CreateInterface
+-Breakpad_SetSteamID
+6@@D
+}Z>x;
+@jtt
+Fvvh
+N~{ 
+[g'b
+vzh43
+_Breakpad_SetSteamID
+_CreateInterface
+_BreakpadAddUploadParameter
+_BreakpadCreate
+_BreakpadGenerateAndSendReport
+_BreakpadRelease
+_BreakpadSetComment
+_BreakpadSetFilterCallback
+_CFDictionaryCreate
+_CFRelease
+_CFStringCreateWithCString
+_OBJC_CLASS_$_NSArray
+_OBJC_CLASS_$_NSAutoreleasePool
+_OBJC_CLASS_$_NSBundle
+_OBJC_CLASS_$_NSFileManager
+_OBJC_CLASS_$_NSProcessInfo
+_OBJC_CLASS_$_NSString
+_OBJC_CLASS_$_NSURL
+__NSGetArgc
+__NSGetArgv
+__NSGetExecutablePath
+__Unwind_Resume
+__ZNKSt3__120__vector_base_commonILb1EE20__throw_length_errorEv
+__ZNSt11logic_errorC2EPKc
+__ZNSt12length_errorD1Ev
+__ZNSt3__112__next_primeEm
+__ZSt9terminatev
+__ZTISt12length_error
+__ZTVN10__cxxabiv117__class_type_infoE
+__ZTVN10__cxxabiv120__si_class_type_infoE
+__ZTVSt12length_error
+__ZdaPv
+__ZdlPv
+__Znam
+__Znwm
+___CFConstantStringClassReference
+___bzero
+___cxa_allocate_exception
+___cxa_atexit
+___cxa_begin_catch
+___cxa_end_catch
+___cxa_free_exception
+___cxa_guard_abort
+___cxa_guard_acquire
+___cxa_guard_release
+___cxa_rethrow
+___cxa_throw
+___error
+___gxx_personality_v0
+___stack_chk_fail
+___stack_chk_guard
+___stderrp
+___stdoutp
+___tolower
+__dyld_get_image_name
+__exit
+__tlv_bootstrap
+_alphasort$INODE64
+_atoi
+_backtrace
+_backtrace_symbols
+_bootstrap_look_up
+_bootstrap_port
+_ceilf
+_dladdr
+_dlclose
+_dlopen
+_dlsym
+_fclose
+_fflush
+_fgets
+_fnmatch
+_fopen
+_fork
+_fprintf
+_fputc
+_free
+_fwrite
+_getcwd
+_getenv
+_getpid
+_kCFAllocatorDefault
+_kCFTypeDictionaryKeyCallBacks
+_kCFTypeDictionaryValueCallBacks
+_kill
+_launch_data_alloc
+_launch_data_dict_insert
+_launch_data_free
+_launch_data_new_string
+_launch_msg
+_lchmod
+_lstat$INODE64
+_mach_absolute_time
+_mach_msg
+_mach_port_allocate
+_mach_port_deallocate
+_mach_port_mod_refs
+_mach_port_type
+_mach_task_self_
+_mach_timebase_info
+_malloc
+_malloc_size
+_memcmp
+_memcpy
+_memmove
+_mkdir
+_nanosleep
+_objc_alloc
+_objc_msgSend
+_objc_msgSend_stret
+_objc_release
+_pclose
+_popen
+_posix_memalign
+_printf
+_pthread_cond_destroy
+_pthread_cond_wait
+_pthread_create
+_pthread_getspecific
+_pthread_join
+_pthread_key_create
+_pthread_key_delete
+_pthread_kill
+_pthread_mach_thread_np
+_pthread_mutex_destroy
+_pthread_mutex_init
+_pthread_mutex_lock
+_pthread_mutex_trylock
+_pthread_mutex_unlock
+_pthread_mutexattr_init
+_pthread_mutexattr_settype
+_pthread_self
+_pthread_setspecific
+_realloc
+_scandir$INODE64
+_sched_yield
+_setsid
+_signal
+_sigprocmask
+_snprintf
+_sscanf
+_stat$INODE64
+_strcasecmp
+_strchr
+_strcmp
+_strcpy
+_strlen
+_strncasecmp
+_strncpy
+_strrchr
+_sysctl
+_system
+_time
+_unlink
+_usleep
+_utime
+_vasprintf
+_vsnprintf
+_waitpid
+dyld_stub_binder
+radr://5614542
+com.valvesoftware.steam
+MXGJJ98X76
+4vCyH
+subject.OU
+MXGJJ98X76
+com.valvesoftware.steam
+MXGJJ98X76
+'z.f
+|gX7
+$&d+
+|SmK
+owj2 
+o&3^
+9t/I
+Jl5@{>7
+yrq 
+3/tl
+(u[g
++$bu&
+KwaY
+hsNl
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+120201221215Z
+270201221215Z0y1-0+
+$Developer ID Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+)xEii`k_
+1? v(m
+'0%0#
+http://crl.apple.com/root.crl0
+B9tk
+P9jDt
+#q-_
+ "ror
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+060425214036Z
+350209214036Z0b1
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+, op
+https://www.apple.com/appleca/0
+Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
+=&g 
+Sj[d
+uu!0
+0y1-0+
+$Developer ID Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+210205030950Z
+260206030950Z0
+MXGJJ98X761A0?
+8Developer ID Application: Valve Corporation (MXGJJ98X76)1
+MXGJJ98X761
+Valve Corporation1
+~kk!
+3oC&
+uN`AJ
+40200
+$http://ocsp.apple.com/ocsp03-devid080
+)http://www.apple.com/certificateauthority0
+Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
+20120706000000Z0
+o(D-U
+6fQS
+:iPq
+0y1-0+
+$Developer ID Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+210923143354Z0/
+ &q/.
+x3RP2
+H<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>cdhashes</key>
+	<array>
+		<data>
+		z0virroVz+AuxZk23K1WVYPWYtU=
+		</data>
+		<data>
+		JnEvLvogrcbkkvqUs0fTX6CYXxI=
+		</data>
+	</array>
+</dict>
+</plist>
+1	)&
+fdXE
+-Km3!!
+e:l6f"3
+7TR-
+]51$
+20210923143514Z0
+UE<!
+0|100.
+'Apple Timestamp Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+210831174002Z
+211012174001Z0B1
+Timestamp Signer NWK21
+Apple Inc.1
+2YL>
+C|Iz
+;a#%
+9fPC
+npmo
+http://www.apple.com/appleca0
+Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
+,0*0(
+"http://crl.apple.com/timestamp.crl0
+Qw)*j
+@3dn
+=`mg
+}LWc
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+120405120244Z
+270405120244Z0|100.
+'Apple Timestamp Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+Im] 
+(ny_~
+&By^
+t-D>
+E~4u&
+'0%0#
+http://crl.apple.com/root.crl0
+mzT_
+Bsu|QC
+:m7(
+FeoU
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+060425214036Z
+350209214036Z0b1
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+, op
+https://www.apple.com/appleca/0
+Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
+=&g 
+Sj[d
+uu!1
+0|100.
+'Apple Timestamp Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+UE<!
+210923143514Z0#
+u\fY
+SMYV
+A$Yv
+es}ge
+g;E~
+__TEXT
+__text
+__TEXT
+__stubs
+__TEXT
+__stub_helper
+__TEXT
+__gcc_except_tab__TEXT
+__cstring
+__TEXT
+__objc_methname
+__TEXT
+__const
+__TEXT
+__unwind_info
+__TEXT
+__eh_frame
+__TEXT
+__DATA_CONST
+__got
+__DATA_CONST
+__mod_init_func
+__DATA_CONST
+__const
+__DATA_CONST
+__cfstring
+__DATA_CONST
+__objc_imageinfo__DATA_CONST
+__DATA
+__la_symbol_ptr
+__DATA
+__objc_selrefs
+__DATA
+__objc_classrefs__DATA
+__data
+__DATA
+__thread_vars
+__DATA
+__thread_bss
+__DATA
+__bss
+__DATA
+__common
+__DATA
+__LINKEDIT
+@loader_path/crashhandler.dylib
+/usr/lib/libiconv.2.dylib
+/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
+/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
+/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration
+/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+@loader_path/Frameworks/Breakpad.framework/Versions/A/Breakpad
+/usr/lib/libc++.1.dylib
+/usr/lib/libSystem.B.dylib
+/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+/usr/lib/libobjc.A.dylib
+Tv*@
+ @9H5
+cS9 
+Q)Ij8?
+	X)2
+ @9H
+5h"@9
+h&B)
++ih8J	
+Lii8k	
+wS	X
+6S	X
+jv8(
+h(8*
+ij`8
+@9_q
+	K"}@
+jh8_
+)	@9?
+jh8_
+*-@8
+h48	
+7I}@
+i+8B
+h^@9
+h^@9
+j98w
+Rh^@9
+j48u
+T		@9?
+R	i4x
+At9(
+(a@9
+5(	@
+Th^@
+Th^@
+Ti^@
+	K5}@
+Th^@
+Th^@
+Th^@
+4hN@
+ThR@
+4hN@
+ThR@
+80.	
+TK	@
+<I%@
+ii8J	
+<l9@
++ih8J	
+R	a'9
+T+	@
+A}9h
+	I}9
+R	I=9@Q
+E=9h
+(A=9
+	M}9
+R	M=9
+@9_q
+jt8 
+(hh8!
+i"D)
+5`JH
+4h2@
+7.},
+hbA9h
+h2@9
+0@9h
+4h2@9
+TsJ@
+ThN@
+Installing breakpad crash handler
+BreakpadProductDisplay
+BreakpadProduct
+BreakpadVendor
+BreakpadVersion
+BreakpadURL
+BuildID
+BreakpadReportInterval
+BreakpadSkipConfirm
+BreakpadSendAndExit
+BreakpadInspectorLocation
+BreakpadReporterExeLocation
+BreakpadMinidumpLocation
+BreakpadEmail
+BreakpadRequestComments
+BreakpadComments
+BreakpadServerType
+BreakpadInProcess
+http://crash.steampowered.com/submit
+True
+False
+Valve
+socorro
+ProductName
+Version
+Notes
+Vendor
+www.steampowered.com
+UserID
+Steam
+Add-ons
+Theme
+Platform
+Mac OS X
+SteamUniverse
+Config-*
+Uploading pending dumps
+%s/%s
+Uploaded %d pending dumps
+%lld
+SteamID:  %s, universe %s
+breakpadUtilities.dylib
+/../Frameworks/Breakpad.framework/Resources
+found breakpad via in process memory: '%s'
+found steam via cross-process IPC: '%s'
+unable to determine steam exe path, falling back to %s, crash reporting probably will not be functional!!!
+Inspector
+crash_report_sender.app
+/tmp/dumps
+%s%d
+Could not select valid crash dump directory based on %s.
+Unable to locate one or both of:
+'%s'
+'%s'
+Crash Uploading will not function.
+Beta
+Internal
+Public
+com.valvesoftware.steam.ipctool
+ipcserver restart: expected: %d, got: %d
+pid %d != %d, clearing client_port = %d, server_port = %d
+pid %d != %d, re-initing before send; client_port = %d, server_port = %d
+StopJob
+pid %d != %d, skipping dealloc of client_port = %d, server_port = %d
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
+(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
+crashhandler001
+crashhandler002
+crashhandler003
+unknown
+/System/Library/Frameworks/OpenGL.framework/OpenGL
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
+Failed to load opengl framework!!!
+CGLSetCurrentContext
+CGLGetCurrentContext
+CGLChoosePixelFormat
+CGLDestroyPixelFormat
+CGLCreateContext
+CGLDestroyContext
+CGLGetParameter
+defaults read /System/Library/CoreServices/SystemVersion.plist ProductVersion
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/strtools.cpp
+pStr != NULL
+pSearch != NULL
+maxLen == 0 || pDest != NULL
+pSrc != NULL
+bufferLen > 0 && bufferLen <= INT_MAX
+pDest != NULL
+pFormat != NULL
+destCapacity != 0
+ bytes
+%i%s
+%%.%if%s
+ppath
+V_RemoveDotSlashes failed for "%s".
+false
+maxLen <= INT_MAX
+checkLen >= 0
+argLen < 0x10000000u
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
+!pszString || pszString[nChars] == '\0'
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
+%s%c.temp_write_%x
+%s%c%s
+CPathString
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
+info.m_pReplacementString == 0
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
+nSizeOfType > 0
+nGrowSize >= 0
+m_nAllocationCount >= 0
+nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
+num > 0
+CUtlString::SetValue
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
+CUtlString::VFormat
+Assertion failed: length > k_cchMaxString
+CUtlStringBuilder::InternalPrepareBuffer
+nMinCapacity > Capacity()
+nMinCapacity >= nChars
+nMinCapacity <= k_nMaxStringSize
+len > 0 || HasError()
+Error State on string being set.
+CUtlStringBuilder::Data::MoveToHeap
+%s %i %s
+-nocrashdialog
+-debugbreak
+%s (%d) : 
+console
+Exiting on SPEW_ABORT
+IsSpewActive
+Fatal Assertion Failed: 
+-noassert
+DONT_BREAK_ON_ASSERT
+Fatal assert; application exiting
+Fatal assert
+_ExitOnFatalAssert
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/threadtools.h
+m_cReentrancyCount >= 0
+Failed to generate callstack
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memblockhdr.cpp
+Assertion Failed: stack%2d: %s
+Stack%2d: %s
+Assertion Failed: stack%2d: 0x%llX
+Stack%2d: 0x%llX
+ppFrames[iFrame] != NULL
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memstd.cpp
+((size_t)(m_nLogicalBytesAllocated) % 8) == 0
+No tracked allocs currently in use. Total %d
+Tracked allocs currently in use. %d Total %d
+item %p sentinel corrupted. skipping.
+Busy, please retry.
+DumpMemTrackingStats %d %d 
+	%d items : %s - %s:%d
+***** OUT OF MEMORY! attempted allocation size: %zu ****
+OUT OF MEMORY
+(iub & (m_nSizeWithStack-1)) == 0
+pAllocTracker->m_uSentinel == 0xaa110ced
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/memblockhdr.h
+pLeft->m_iStackPC <= V_ARRAYSIZE(pLeft->m_StackPC)
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/minidump.cpp
+Someone called SetWritingMinidump without holding the minidump lock.
+Someone called ClearWritingMinidump without holding the minidump lock.
+Assert( %s ):%s:%d
+MacOS
+Frameworks
+crashhandler.dylib
+CreateInterface
+Sep 23 2021
+07:33:36
+%02d:%02d:%02d
+%04d%02d%02d%02d%02d%02d
+MainThrd
+pthread_setname_np
+Out of thread local storage!
+Bad thread local
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/validator.cpp
+CValidator : too many memory nodes to store, try again with a higher threshold value
+NULL != m_pValObjectCur
+ GiB
+ MiB
+ KiB
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/valobject.cpp
+NULL == pValObjectPrev->m_pValObjectNext
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/vprof.cpp
+!g_VProfile
+pszName
+m_nRecursions > 0
+Root
+m_pBudgetGroups == NULL
+Unaccounted
+Sleeping
+VGUI
+FileSystem
+ClientDLL
+SteamUI
+Network
+Encryption
+OverlayRendering
+OverlayInput
+GameOverlayUI
+RunCallbacks
+Logger
+Jobs/Coroutines
+ServerMain
+Streaming
+ThreadWorkItem
+TenFoot
+tier1
+m_pBudgetGroups
+eGroup < VPROF_BUDGETGROUP_MAX
+No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/vprof.h
+m_pParent
+allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
+stringWithCString:encoding:
+bundleWithPath:
+executablePath
+UTF8String
+processInfo
+operatingSystemVersion
+defaultManager
+attributesOfFileSystemForPath:error:
+valueForKey:
+unsignedLongLongValue
+stringWithUTF8String:
+fileURLWithPath:
+getResourceValue:forKey:error:
+boolValue
+arrayWithObjects:count:
+resourceValuesForKeys:error:
+objectForKeyedSubscript:
+fileSystemRepresentation
+stringWithFileSystemRepresentation:length:
+stringByExpandingTildeInPath
+stringByResolvingSymlinksInPath
+mountedVolumeURLsIncludingResourceValuesForKeys:options:
+countByEnumeratingWithState:objects:count:
+getRelationship:ofDirectoryAtURL:toItemAtURL:error:
+path
+hasPrefix:
+length
+16CBreakpadFactory
+16IBreakpadFactory
+13CCrashHandler
+13ICrashHandler
+^adgjmpsvy|
+?20CUniformRandomStream
+20IUniformRandomStream
+$tI(knN
+>11CPathString
+21CUtlCStringConversion
+18CUtlCharConversion
+19CUtlNoEscConversion
+EP\VV
+DPI12CStdMemAlloc
+9IMemAlloc
+Mb@?
+A[Ap
+UA[Ap
+RAVAp
+RARAp
+RARAp
+RARARA`?Ap
+@_OBJC_CLASS_$_NSAutoreleasePool
+@_OBJC_CLASS_$_NSBundle
+@_OBJC_CLASS_$_NSFileManager
+@_OBJC_CLASS_$_NSProcessInfo
+@_OBJC_CLASS_$_NSString
+@__ZNSt12length_errorD1Ev
+@__ZTISt12length_error
+@__ZTVN10__cxxabiv117__class_type_infoE
+@__ZTVN10__cxxabiv120__si_class_type_infoE
+@__ZTVSt12length_error
+@__ZdaPv
+@__ZdlPv
+@__Znam
+@__Znwm
+@___gxx_personality_v0
+@___chkstk_darwin
+@___stack_chk_guard
+@___stderrp
+@___stdoutp
+@__tlv_bootstrap
+@_alphasort
+@_bootstrap_port
+@_mach_task_self_
+@dyld_stub_binder
+@_OBJC_CLASS_$_NSArray
+@_OBJC_CLASS_$_NSURL
+@___CFConstantStringClassReference
+@_kCFAllocatorDefault
+@_kCFTypeDictionaryKeyCallBacks
+@_kCFTypeDictionaryValueCallBacks
+@__ZTISt12length_error
+@__ZdaPv
+@__ZdlPv
+@__Znam
+@__Znwm
+@_BreakpadAddUploadParameter
+@_BreakpadCreate
+@_BreakpadGenerateAndSendReport
+@_BreakpadRelease
+@_BreakpadSetComment
+@_BreakpadSetFilterCallback
+@_CFDictionaryCreate
+@_CFRelease
+@_CFStringCreateWithCString
+@__NSGetArgc
+@__NSGetArgv
+@__NSGetExecutablePath
+@__Unwind_Resume
+@__ZNKSt3__120__vector_base_commonILb1EE20__throw_length_errorEv
+@__ZNSt11logic_errorC2EPKc
+@__ZNSt3__112__next_primeEm
+@__ZSt9terminatev
+@___cxa_allocate_exception
+@___cxa_atexit
+@___cxa_begin_catch
+@___cxa_end_catch
+@___cxa_free_exception
+@___cxa_guard_abort
+@___cxa_guard_acquire
+@___cxa_guard_release
+@___cxa_rethrow
+@___cxa_throw
+@___error
+@___stack_chk_fail
+@___tolower
+@__dyld_get_image_name
+@__exit
+@_atoi
+@_backtrace
+@_backtrace_symbols
+@_bootstrap_look_up
+@_bzero
+@_dladdr
+@_dlclose
+@_dlopen
+@_dlsym
+@_fclose
+@_fflush
+@_fgets
+@_fnmatch
+@_fopen
+@_fork
+@_fprintf
+@_fputc
+@_free
+@_fwrite
+@_getcwd
+@_getenv
+@_getpid
+@_kill
+@_launch_data_alloc
+@_launch_data_dict_insert
+@_launch_data_free
+@_launch_data_new_string
+@_launch_msg
+@_lchmod
+@_lstat
+@_mach_absolute_time
+@_mach_msg
+@_mach_port_allocate
+@_mach_port_deallocate
+@_mach_port_mod_refs
+@_mach_port_type
+@_mach_timebase_info
+@_malloc
+@_malloc_size
+@_memcmp
+@_memcpy
+@_memmove
+@_mkdir
+@_nanosleep
+@_objc_alloc_init
+@_objc_msgSend
+@_objc_opt_respondsToSelector
+@_objc_release
+@_pclose
+@_popen
+@_posix_memalign
+@_printf
+@_pthread_cond_destroy
+@_pthread_cond_wait
+@_pthread_create
+@_pthread_getspecific
+@_pthread_join
+@_pthread_key_create
+@_pthread_key_delete
+@_pthread_kill
+@_pthread_mach_thread_np
+@_pthread_mutex_destroy
+@_pthread_mutex_init
+@_pthread_mutex_lock
+@_pthread_mutex_trylock
+@_pthread_mutex_unlock
+@_pthread_mutexattr_init
+@_pthread_mutexattr_settype
+@_pthread_self
+@_pthread_setspecific
+@_realloc
+@_scandir
+@_sched_yield
+@_setsid
+@_signal
+@_sigprocmask
+@_snprintf
+@_sscanf
+@_stat
+@_strcasecmp
+@_strchr
+@_strcmp
+@_strcpy
+@_strlen
+@_strncasecmp
+@_strncpy
+@_strrchr
+@_sysctl
+@_system
+@_time
+@_unlink
+@_usleep
+@_utime
+@_vasprintf
+@_vsnprintf
+@_waitpid
+CreateInterface
+-Breakpad_SetSteamID
+HXX\
+Ll(D\
+Hx0`
+xlp`@@
+_Breakpad_SetSteamID
+_CreateInterface
+_BreakpadAddUploadParameter
+_BreakpadCreate
+_BreakpadGenerateAndSendReport
+_BreakpadRelease
+_BreakpadSetComment
+_BreakpadSetFilterCallback
+_CFDictionaryCreate
+_CFRelease
+_CFStringCreateWithCString
+_OBJC_CLASS_$_NSArray
+_OBJC_CLASS_$_NSAutoreleasePool
+_OBJC_CLASS_$_NSBundle
+_OBJC_CLASS_$_NSFileManager
+_OBJC_CLASS_$_NSProcessInfo
+_OBJC_CLASS_$_NSString
+_OBJC_CLASS_$_NSURL
+__NSGetArgc
+__NSGetArgv
+__NSGetExecutablePath
+__Unwind_Resume
+__ZNKSt3__120__vector_base_commonILb1EE20__throw_length_errorEv
+__ZNSt11logic_errorC2EPKc
+__ZNSt12length_errorD1Ev
+__ZNSt3__112__next_primeEm
+__ZSt9terminatev
+__ZTISt12length_error
+__ZTVN10__cxxabiv117__class_type_infoE
+__ZTVN10__cxxabiv120__si_class_type_infoE
+__ZTVSt12length_error
+__ZdaPv
+__ZdlPv
+__Znam
+__Znwm
+___CFConstantStringClassReference
+___chkstk_darwin
+___cxa_allocate_exception
+___cxa_atexit
+___cxa_begin_catch
+___cxa_end_catch
+___cxa_free_exception
+___cxa_guard_abort
+___cxa_guard_acquire
+___cxa_guard_release
+___cxa_rethrow
+___cxa_throw
+___error
+___gxx_personality_v0
+___stack_chk_fail
+___stack_chk_guard
+___stderrp
+___stdoutp
+___tolower
+__dyld_get_image_name
+__exit
+__tlv_bootstrap
+_alphasort
+_atoi
+_backtrace
+_backtrace_symbols
+_bootstrap_look_up
+_bootstrap_port
+_bzero
+_dladdr
+_dlclose
+_dlopen
+_dlsym
+_fclose
+_fflush
+_fgets
+_fnmatch
+_fopen
+_fork
+_fprintf
+_fputc
+_free
+_fwrite
+_getcwd
+_getenv
+_getpid
+_kCFAllocatorDefault
+_kCFTypeDictionaryKeyCallBacks
+_kCFTypeDictionaryValueCallBacks
+_kill
+_launch_data_alloc
+_launch_data_dict_insert
+_launch_data_free
+_launch_data_new_string
+_launch_msg
+_lchmod
+_lstat
+_mach_absolute_time
+_mach_msg
+_mach_port_allocate
+_mach_port_deallocate
+_mach_port_mod_refs
+_mach_port_type
+_mach_task_self_
+_mach_timebase_info
+_malloc
+_malloc_size
+_memcmp
+_memcpy
+_memmove
+_mkdir
+_nanosleep
+_objc_alloc_init
+_objc_msgSend
+_objc_opt_respondsToSelector
+_objc_release
+_pclose
+_popen
+_posix_memalign
+_printf
+_pthread_cond_destroy
+_pthread_cond_wait
+_pthread_create
+_pthread_getspecific
+_pthread_join
+_pthread_key_create
+_pthread_key_delete
+_pthread_kill
+_pthread_mach_thread_np
+_pthread_mutex_destroy
+_pthread_mutex_init
+_pthread_mutex_lock
+_pthread_mutex_trylock
+_pthread_mutex_unlock
+_pthread_mutexattr_init
+_pthread_mutexattr_settype
+_pthread_self
+_pthread_setspecific
+_realloc
+_scandir
+_sched_yield
+_setsid
+_signal
+_sigprocmask
+_snprintf
+_sscanf
+_stat
+_strcasecmp
+_strchr
+_strcmp
+_strcpy
+_strlen
+_strncasecmp
+_strncpy
+_strrchr
+_sysctl
+_system
+_time
+_unlink
+_usleep
+_utime
+_vasprintf
+_vsnprintf
+_waitpid
+dyld_stub_binder
+radr://5614542
+com.valvesoftware.steam
+MXGJJ98X76
+\T%9
+,o0r
+u9aP
+wq4\
+GK-qN
+subject.OU
+MXGJJ98X76
+com.valvesoftware.steam
+MXGJJ98X76
+M:^l
+el]'
+e%W+g
+jDxt`PY
+<P<Gr
+fx+>
+H+HYfB	J
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+120201221215Z
+270201221215Z0y1-0+
+$Developer ID Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+)xEii`k_
+1? v(m
+'0%0#
+http://crl.apple.com/root.crl0
+B9tk
+P9jDt
+#q-_
+ "ror
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+060425214036Z
+350209214036Z0b1
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+, op
+https://www.apple.com/appleca/0
+Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
+=&g 
+Sj[d
+uu!0
+0y1-0+
+$Developer ID Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+210205030950Z
+260206030950Z0
+MXGJJ98X761A0?
+8Developer ID Application: Valve Corporation (MXGJJ98X76)1
+MXGJJ98X761
+Valve Corporation1
+~kk!
+3oC&
+uN`AJ
+40200
+$http://ocsp.apple.com/ocsp03-devid080
+)http://www.apple.com/certificateauthority0
+Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
+20120706000000Z0
+o(D-U
+6fQS
+:iPq
+0y1-0+
+$Developer ID Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+210923143354Z0/
+H<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>cdhashes</key>
+	<array>
+		<data>
+		yncO7u8LXqD73JNmihszsNO4aAU=
+		</data>
+		<data>
+		1ea1CQTyWla3nU7dTd7bZi6TtcY=
+		</data>
+	</array>
+</dict>
+</plist>
+SPIv
+:2bS
+=[ 	i
++vZK
+5SOr
+2WTf
+20210923143514Z0
+0|100.
+'Apple Timestamp Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+210831175002Z
+211012175001Z0B1
+Timestamp Signer NWK11
+Apple Inc.1
+Y=|Ug
+http://www.apple.com/appleca0
+Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
+,0*0(
+"http://crl.apple.com/timestamp.crl0
+d|8]
+}LWc
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+120405120244Z
+270405120244Z0|100.
+'Apple Timestamp Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+Im] 
+(ny_~
+&By^
+t-D>
+E~4u&
+'0%0#
+http://crl.apple.com/root.crl0
+mzT_
+Bsu|QC
+:m7(
+FeoU
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+060425214036Z
+350209214036Z0b1
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+, op
+https://www.apple.com/appleca/0
+Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
+=&g 
+Sj[d
+uu!1
+0|100.
+'Apple Timestamp Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+210923143514Z0#
+SWL~*
+nDtX

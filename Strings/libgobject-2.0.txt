@@ -1,0 +1,5886 @@
+__TEXT
+__text
+__TEXT
+__symbol_stub
+__TEXT
+__stub_helper
+__TEXT
+__cstring
+__TEXT
+__const
+__TEXT
+__unwind_info
+__TEXT
+__eh_frame
+__TEXT
+__DATA
+__dyld
+__DATA
+__nl_symbol_ptr
+__DATA
+__la_symbol_ptr
+__DATA
+__mod_init_func
+__DATA
+__const
+__DATA
+__data
+__DATA
+__bss
+__DATA
+__common
+__DATA
+__LINKEDIT
+@loader_path/libgobject-2.0.dylib
+@loader_path/libglib-2.0.dylib
+/usr/lib/libiconv.2.dylib
+/System/Library/Frameworks/Carbon.framework/Versions/A/Carbon
+/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+/usr/lib/libSystem.B.dylib
+/usr/lib/libgcc_s.1.dylib
+@^_]
+,^_[]
+fffff.
+fffff.
+<^_[]
+ffffff.
+fffff.
+fffff.
+fffff.
+fffff.
+fffff.
+^_[]
+ffff.
+|^_[]
+<^_[]
+l^_[]
+^_[]
+^_[]
+ffffff.
+^_[]
+L^_[]
+`^_]
+`^_]
+0^_]
+ffff.
+|^_[]
+L^_[]
+fffff.
+,^_[]
+<^_[]
+ffffff.
+\^_[]
+<^_[]
+ffffff.
+ffff.
+<^_[]
+ffffff.
+<^_[]
+ffffff.
+fff.
+<^_[]
+ffffff.
+<^_[]
+ffffff.
+<^_[]
+ffffff.
+<^_[]
+ffffff.
+<^_[]
+ffffff.
+<^_[]
+ffffff.
+<^_[]
+ffffff.
+<^_[]
+ffffff.
+<^_[]
+ffffff.
+<^_[]
+ffffff.
+<^_[]
+ffffff.
+<^_[]
+ffffff.
+<^_[]
+ffffff.
+<^_[]
+ffffff.
+<^_[]
+ffffff.
+<^_[]
+ffffff.
+<^_[]
+ffffff.
+<^_[]
+ffffff.
+<^_[]
+ffffff.
+<^_[]
+ffffff.
+<^_[]
+ffffff.
+<^_[]
+ffffff.
+<^_[]
+ffffff.
+ffff.
+0^_]
+0^_]
+ffffff.
+^_[]
+l^_[]
+\^_[]
+\^_[]
+P^[]
+P^[]
+ffff.
+^_[]
+fff.
+P^[]
+P^[]
+ffffff.
+T^_[]
+ffffff.
+T^_[]
+^_[]
+^_[]
+ffff.
+\^_[]
+L^_[]
+ffff.
+L^_[]
+\^_[]
+\^_[]
+^_[]
+^_[]
+fffff.
+ffff.
+^_[]
+^_[]
+\^_[]
+ffff.
+0^_]
+fff.
+l^_[]
+ffff.
+l^_[]
+ffff.
+<^_[]
+<^_[]
+<^_[]
+ffff.
+\^_[]
+<^_[]
+\^_[]
+<^_[]
+\^_[]
+<^_[]
+ffff.
+\^_[]
+<^_[]
+ffff.
+\^_[]
+<^_[]
+ffff.
+\^_[]
+<^_[]
+ffff.
+\^_[]
+<^_[]
+ffff.
+\^_[]
+<^_[]
+ffff.
+\^_[]
+<^_[]
+\^_[]
+ffffff.
+L^_[]
+l^_[]
+ffffff.
+<^_[]
+ffff.
+\^_[]
+<^_[]
+ffff.
+\^_[]
+<^_[]
+ffff.
+\^_[]
+fff.
+<^_[]
+ffff.
+\^_[]
+<^_[]
+ffff.
+\^_[]
+<^_[]
+ffff.
+\^_[]
+L^_[]
+l^_[]
+ffff.
+L^_[]
+\^_[]
+L^_[]
+\^_[]
+ffff.
+L^_[]
+\^_[]
+l^_[]
+fff.
+D$$L
+l^_[]
+0^_]
+fffff.
+L^_[]
+0^_]
+fffff.
+ffff.
+fffff.
+0^_]
+P^_]
+ffffff.
+@^_]
+0^_]
+\^_[]
+p^[]
+fff.
+0^_]
+<^_[]
+fff.
+^_[]
+^_[]
+L^_[]
+^_[]
+fff.
+|^_[]
+^_[]
+@^_]
+@^_]
+l^_[]
+fff.
+^_[]
+fffff.
+L^_[]
+fffff.
+\^_[]
+@^_]
+0^_]
+ffffff.
+ffffff.
+0^_]
+fff.
+@^_]
+@^_]
+<^_[]
+fffff.
+fff.
+0^_]
+<^_[]
+@^_]
+ffffff.
+0^_]
+L^_[]
+ffff.
+@^_]
+ffffff.
+<^_[]
+<^_[]
+ffffff.
+fff.
+L^_[]
+ffffff.
+fffff.
+<^_[]
+ffff.
+fffff.
+ffff.
+ ^_]
+fff.
+P^_]
+P^_]
+0^_]
+^_[]
+<^_[]
+L^_[]
+0^_]
+fffff.
+ffff.
+0^[]
+@^[]
+ffff.
+ffff.
+ffff.
+<^_[]
+fff.
+fff.
+fffff.
+fff.
+@^_]
+\^_[]
+ffff.
+l^_[]
+,^_[]
+ffff.
+|^_[]
+`^_]
+fffff.
+ffff.
+l^_[]
+ffff.
+ffffff.
+L^_[]
+^_[]
+fff.
+fff.
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+fff.
+fff.
+P^[]
+ffff.
+,^[]
+fff.
+fff.
+P^[]
+ffff.
+,^[]
+ffffff.
+ffff.
+ffffff.
+ffff.
+ffff.
+fffff.
+fff.
+fffff.
+ffffff.
+ffffff.
+ffffff.
+ffffff.
+ffffff.
+ffff.
+ffffff.
+ffffff.
+fffff.
+fffff.
+ffff.
+fffff.
+<^_[]
+<^_[]
+<^_[]
+L^_[]
+L^_[]
+L^_[]
+L^_[]
+|^_[]
+ffffff.
+|^_[]
+ffffff.
+<^_[]
+<^_[]
+<^_[]
+<^_[]
+L^_[]
+<^_[]
+<^_[]
+<^_[]
+0^_]
+<^_[]
+<^_[]
+<^_[]
+@^_]
+ffff.
+<^_[]
+fff.
+`^_]
+ffffff.
+0^_]
+L^_[]
+fffff.
+ ^_]
+L^_[]
+|^_[]
+L^_[]
+ffff.
+^_[]
+ffff.
+^_[]
+^_[]
+ffffff.
+^_[]
+ffffff.
+0^_]
+@^_]
+ffffff.
+0^_]
+L^_[]
+^_[]
+fff.
+<^_[]
+ ^[]
+ffffff.
+,^_[]
+`^_]
+ffffff.
+l^_[]
+0^_]
+fffff.
+@^_]
+fffff.
+0^_]
+0^_]
+ffff.
+<^_[]
+0^[]
+\^_[]
+l^_[]
+\^_[]
+fff.
+l^_[]
+\^_[]
+fff.
+\^_[]
+fff.
+P^_]
+ffffff.
+@^_]
+@^_]
+@ ;E
+^_[]
+^_[]
+0^_]
+<^_[]
+ ^_]
+fffff.
+ ^[]
+<^_[]
+P^_]
+P^_]
+ffff.
+<^_[]
+ffffff.
+ffffff.
+fffff.
+<^_[]
+<^_[]
+^_[]
+ffffff.
+^_[]
+^_[]
+ffffff.
+ffff.
+ffff.
+L^_[]
+fff.
+ffff.
+fffff.
+0^[]
+ffffff.
+ ^_]
+0^_]
+ ^_]
+0^_]
+L^_[]
+ffff.
+<^_[]
+ffff.
+L^_[]
+\^_[]
+fffff.
+ffffff.
+\^_[]
+L^_[]
+^_[]
+<^_[]
+ffffff.
+L^_[]
+@^_]
+\^_[]
+fff.
+^_[]
+ffff.
+fff.
+fff.
+,^_[]
+,^_[]
+ffffff.
+ffffff.
+ffffff.
+0^_]
+fff.
+ffff.
+ffffff.
+@^[]
+P^[]
+fff.
+fff.
+ffff.
+ffff.
+,^_[]
+^_[]
+^_[]
+@ ;E
+<^_[]
+<^_[]
+fff.
+<^_[]
+ffff.
+<^_[]
+<^_[]
+ffff.
+L^_[]
+L^_[]
+,^_[]
+l^_[]
+\^_[]
+fff.
+ffffff.
+l^_[]
+ ^_]
+fff.
+ffffff.
+\^_[]
+L^_[]
+|^_[]
+|^_[]
+ffffff.
+ffff.
+ ^_]
+@^_]
+ffffff.
+@^_]
+,^_[]
+0^_]
+ffff.
+@^_]
+P^_]
+@^_]
+P^_]
+ffff.
+ffff.
+@^_]
+fff.
+0^_]
+0^_]
+fffff.
+ffffff.
+ffffff.
+fff.
+fff.
+fffff.
+ffffff.
+ffffff.
+fff.
+fff.
+ffff.
+ffff.
+ffff.
+fffff.
+ffff.
+ffffff.
+fffff.
+ffff.
+ffffff.
+^_[]
+ffff.
+0^_]
+0^_]
+fff.
+0^_]
+fff.
+0^_]
+fff.
+fff.
+0^_]
+0^_]
+0^_]
+0^_]
+fffff.
+ffff.
+0^_]
+fff.
+0^_]
+fffff.
+fff.
+fff.
+0^_]
+ffffff.
+ffffff.
+ffffff.
+ffffff.
+^_[]
+<^_[]
+<^_[]
+<^_[]
+0^_]
+^_[]
+fff.
+^_[]
+\^_[]
+0^_[]
+^_[]
+ffff.
+fff.
+GLib-GObject
+gatomicarray.c
+_g_atomic_array_update
+old == NULL || G_ATOMIC_ARRAY_DATA_SIZE (old) <= G_ATOMIC_ARRAY_DATA_SIZE (new_data)
+G_BINDING_DEFAULT
+default
+G_BINDING_BIDIRECTIONAL
+bidirectional
+G_BINDING_SYNC_CREATE
+sync-create
+G_BINDING_INVERT_BOOLEAN
+invert-boolean
+GBindingFlags
+GBinding
+g_binding_get_flags
+G_IS_BINDING (binding)
+g_binding_get_source
+g_binding_get_target
+g_binding_get_source_property
+g_binding_get_target_property
+g_binding_unbind
+g_object_bind_property_full
+G_IS_OBJECT (source)
+source_property != NULL
+G_IS_OBJECT (target)
+target_property != NULL
+Unable to bind the same property on the same instance
+%s: The source object of type %s has no property called '%s'
+gbinding.c:901
+%s: The source object of type %s has no readable property called '%s'
+gbinding.c:910
+%s: The source object of type %s has no writable property called '%s'
+gbinding.c:920
+%s: The G_BINDING_INVERT_BOOLEAN flag can only be used when binding boolean properties; the source property '%s' is of type '%s'
+gbinding.c:932
+%s: The target object of type %s has no property called '%s'
+gbinding.c:942
+%s: The target object of type %s has no writable property called '%s'
+gbinding.c:951
+%s: The target object of type %s has no readable property called '%s'
+gbinding.c:961
+%s: The G_BINDING_INVERT_BOOLEAN flag can only be used when binding boolean properties; the target property '%s' is of type '%s'
+gbinding.c:973
+source
+source-property
+target
+target-property
+flags
+gbinding.c
+bind_with_closures_transform_from
+out_value != NULL
+bind_with_closures_transform_to
+g-binding
+Source
+The source of the binding
+Target
+The target of the binding
+Source Property
+The property on the source to bind
+Target Property
+The property on the target to bind
+Flags
+The binding flags
+%s: invalid %s id %u for "%s" of type '%s' in '%s'
+gbinding.c:555
+property
+gbinding.c:519
+g_binding_constructed
+binding->source != NULL
+binding->target != NULL
+binding->source_property != NULL
+binding->target_property != NULL
+binding->source_pspec != NULL
+binding->target_pspec != NULL
+notify
+%s: Unable to convert a value of type %s to a value of type %s
+gbinding.c:301
+default_invert_boolean_transform
+G_VALUE_HOLDS_BOOLEAN (value_a)
+G_VALUE_HOLDS_BOOLEAN (value_b)
+GBoxed
+gboxed.c
+_g_boxed_type_init
+type == G_TYPE_BOXED
+GClosure
+GValue
+GValueArray
+GDate
+GString
+GHashTable
+GArray
+GPtrArray
+GByteArray
+GBytes
+GRegex
+GMatchInfo
+GVariantType
+GVariantBuilder
+GVariantDict
+GError
+GDateTime
+GTimeZone
+GKeyFile
+GMappedFile
+GMainLoop
+GMainContext
+GSource
+GPollFD
+GMarkupParseContext
+GThread
+GChecksum
+GStrv
+g_boxed_type_register_static
+name != NULL
+boxed_copy != NULL
+boxed_free != NULL
+g_type_from_name (name) == 0
+g_boxed_copy
+G_TYPE_IS_BOXED (boxed_type)
+G_TYPE_IS_ABSTRACT (boxed_type) == FALSE
+src_boxed != NULL
+G_TYPE_IS_VALUE_TYPE (boxed_type)
+the copy_value() implementation of type '%s' seems to make use of reserved GValue fields
+g_boxed_free
+boxed != NULL
+g_value_get_boxed
+G_VALUE_HOLDS_BOXED (value)
+G_TYPE_IS_VALUE (G_VALUE_TYPE (value))
+g_value_dup_boxed
+g_value_set_boxed
+g_value_set_static_boxed
+g_value_take_boxed
+value location for '%s' passed as NULL
+g_closure_new_simple
+sizeof_closure >= sizeof (GClosure)
+g_closure_set_meta_marshal
+closure != NULL
+meta_marshal != NULL
+closure->is_invalid == FALSE
+closure->in_marshal == FALSE
+real_closure->meta_marshal == NULL
+g_closure_add_marshal_guards
+pre_marshal_notify != NULL
+post_marshal_notify != NULL
+closure->n_guards < CLOSURE_MAX_N_GUARDS
+g_closure_add_finalize_notifier
+notify_func != NULL
+closure->n_fnotifiers < CLOSURE_MAX_N_FNOTIFIERS
+g_closure_add_invalidate_notifier
+closure->n_inotifiers < CLOSURE_MAX_N_INOTIFIERS
+g_closure_ref
+closure->ref_count > 0
+closure->ref_count < CLOSURE_MAX_REF_COUNT
+new_ref_count > 1
+g_closure_invalidate
+g_closure_unref
+g_closure_sink
+g_closure_remove_invalidate_notifier
+gclosure.c:687: unable to remove uninstalled invalidation notifier: %p (%p)
+g_closure_remove_finalize_notifier
+gclosure.c:715: unable to remove uninstalled finalization notifier: %p (%p)
+g_closure_invoke
+closure->marshal || real_closure->meta_marshal
+_g_closure_supports_invoke_va
+_g_closure_invoke_va
+g_closure_set_marshal
+marshal != NULL
+attempt to override closure->marshal (%p) with new marshal (%p)
+_g_closure_set_va_marshal
+attempt to override closure->va_marshal (%p) with new marshal (%p)
+g_cclosure_new
+callback_func != NULL
+g_cclosure_new_swap
+g_signal_type_cclosure_new
+G_TYPE_IS_CLASSED (itype) || G_TYPE_IS_INTERFACE (itype)
+struct_offset >= sizeof (GTypeClass)
+gclosure.c
+va_to_ffi_type
+type != G_TYPE_INVALID
+va_to_ffi_type: Unsupported fundamental type: %s
+value_from_ffi_type: Unsupported fundamental type: %s
+value_to_ffi_type
+tmpval_used != NULL
+enum_tmpval != NULL
+value_to_ffi_type: Unsupported fundamental type: %s
+g_closure_set_meta_va_marshal
+va_meta_marshal != NULL
+real_closure->meta_marshal != NULL
+_g_enum_types_init
+initialized == FALSE
+GEnum
+genums.c
+type == G_TYPE_ENUM
+GFlags
+type == G_TYPE_FLAGS
+g_enum_register_static
+const_static_values != NULL
+g_flags_register_static
+g_enum_complete_type_info
+G_TYPE_IS_ENUM (g_enum_type)
+info != NULL
+const_values != NULL
+g_flags_complete_type_info
+G_TYPE_IS_FLAGS (g_flags_type)
+g_enum_get_value_by_name
+G_IS_ENUM_CLASS (enum_class)
+g_flags_get_value_by_name
+G_IS_FLAGS_CLASS (flags_class)
+g_enum_get_value_by_nick
+nick != NULL
+g_flags_get_value_by_nick
+g_enum_get_value
+g_flags_get_first_value
+g_value_set_enum
+G_VALUE_HOLDS_ENUM (value)
+g_value_get_enum
+g_value_set_flags
+G_VALUE_HOLDS_FLAGS (value)
+g_value_get_flags
+g_flags_class_init
+G_IS_FLAGS_CLASS (class)
+g_enum_class_init
+G_IS_ENUM_CLASS (class)
+g_cclosure_marshal_VOID__VOID
+n_param_values == 1
+g_cclosure_marshal_VOID__BOOLEAN
+n_param_values == 2
+g_cclosure_marshal_VOID__CHAR
+g_cclosure_marshal_VOID__UCHAR
+g_cclosure_marshal_VOID__INT
+g_cclosure_marshal_VOID__UINT
+g_cclosure_marshal_VOID__LONG
+g_cclosure_marshal_VOID__ULONG
+g_cclosure_marshal_VOID__ENUM
+g_cclosure_marshal_VOID__FLAGS
+g_cclosure_marshal_VOID__FLOAT
+g_cclosure_marshal_VOID__DOUBLE
+g_cclosure_marshal_VOID__STRING
+g_cclosure_marshal_VOID__PARAM
+g_cclosure_marshal_VOID__BOXED
+g_cclosure_marshal_VOID__POINTER
+g_cclosure_marshal_VOID__OBJECT
+g_cclosure_marshal_VOID__VARIANT
+g_cclosure_marshal_VOID__UINT_POINTER
+n_param_values == 3
+g_cclosure_marshal_BOOLEAN__FLAGS
+return_value != NULL
+g_cclosure_marshal_BOOLEAN__FLAGSv
+g_cclosure_marshal_STRING__OBJECT_POINTER
+g_cclosure_marshal_STRING__OBJECT_POINTERv
+g_cclosure_marshal_BOOLEAN__BOXED_BOXED
+g_cclosure_marshal_BOOLEAN__BOXED_BOXEDv
+_g_object_type_init
+GObject
+gobject.c
+type == G_TYPE_OBJECT
+g_object_class_install_property
+G_IS_OBJECT_CLASS (class)
+G_IS_PARAM_SPEC (pspec)
+Attempt to add property %s::%s to class after it was derived
+pspec->flags & (G_PARAM_READABLE | G_PARAM_WRITABLE)
+class->set_property != NULL
+class->get_property != NULL
+property_id > 0
+PARAM_SPEC_PARAM_ID (pspec) == 0
+(pspec->flags & G_PARAM_CONSTRUCT_ONLY) == 0
+pspec->flags & G_PARAM_WRITABLE
+g_object_class_install_properties
+G_IS_OBJECT_CLASS (oclass)
+n_pspecs > 1
+pspecs[0] == NULL
+Attempt to add properties to %s after it was derived
+pspec != NULL
+oclass->set_property != NULL
+oclass->get_property != NULL
+g_object_interface_install_property
+G_TYPE_IS_INTERFACE (iface_class->g_type)
+!G_IS_PARAM_SPEC_OVERRIDE (pspec)
+g_object_class_find_property
+property_name != NULL
+g_object_interface_find_property
+g_object_class_override_property
+%s: Can't find property to override for '%s::%s'
+g_object_class_list_properties
+g_object_interface_list_properties
+g_object_run_dispose
+G_IS_OBJECT (object)
+object->ref_count > 0
+g_object_freeze_notify
+g_object_notify
+%s: object class '%s' has no property named '%s'
+g_object_notify_by_pspec
+g_object_thaw_notify
+g_object_new
+G_TYPE_IS_OBJECT (object_type)
+g_object_newv
+n_parameters == 0 || parameters != NULL
+%s: property '%s' of object class '%s' is not writable
+%s: construct property '%s' for type '%s' cannot be set twice
+g_object_new_valist
+%s: property '%s' for type '%s' cannot be set twice
+%s: %s
+g_object_set_valist
+%s: construct property "%s" for object '%s' can't be set after construction
+g_object_get_valist
+%s: property '%s' of object class '%s' is not readable
+g_object_set
+g_object_get
+g_object_set_property
+G_IS_VALUE (value)
+g_object_get_property
+%s: can't retrieve property '%s' of type '%s' as value of type '%s'
+g_object_connect
+signal::
+object_signal::
+object-signal::
+swapped_signal::
+swapped-signal::
+swapped_object_signal::
+swapped-object-signal::
+signal_after::
+signal-after::
+object_signal_after::
+object-signal-after::
+swapped_signal_after::
+swapped-signal-after::
+swapped_object_signal_after::
+swapped-object-signal-after::
+%s: invalid signal spec "%s"
+g_object_disconnect
+any_signal::
+any-signal::
+any_signal
+any-signal
+%s: invalid signal name "%s"
+%s: signal handler %p(%p) is not connected
+g_object_weak_ref
+notify != NULL
+object->ref_count >= 1
+g_object_weak_unref
+%s: couldn't find weak ref %p(%p)
+g_object_add_weak_pointer
+weak_pointer_location != NULL
+g_object_remove_weak_pointer
+g_object_is_floating
+g_object_ref_sink
+g_object_force_floating
+g_object_add_toggle_ref
+g_object_remove_toggle_ref
+%s: couldn't find toggle ref %p(%p)
+g_object_ref
+g_object_unref
+g_object_get_qdata
+g_object_set_qdata
+quark > 0
+g_object_dup_qdata
+g_object_replace_qdata
+g_object_set_qdata_full
+g_object_steal_qdata
+g_object_get_data
+key != NULL
+g_object_set_data
+g_object_dup_data
+g_object_replace_data
+g_object_set_data_full
+g_object_steal_data
+g_value_set_object
+G_VALUE_HOLDS_OBJECT (value)
+G_IS_OBJECT (v_object)
+g_value_type_compatible (G_OBJECT_TYPE (v_object), G_VALUE_TYPE (value))
+g_value_take_object
+g_value_get_object
+g_value_dup_object
+g_signal_connect_object
+G_TYPE_CHECK_INSTANCE (instance)
+detailed_signal != NULL
+c_handler != NULL
+G_IS_OBJECT (gobject)
+g_object_watch_closure
+g_closure_new_object
+g_cclosure_new_object
+g_cclosure_new_object_swap
+GInitiallyUnowned
+g_weak_ref_get
+weak_ref!= NULL
+g_weak_ref_set
+weak_ref != NULL
+object == NULL || G_IS_OBJECT (object)
+weak_locations != NULL
+object_remove_closure
+invalid unclassed object pointer for value type '
+invalid object type '
+' for value type '
+toggle_refs_notify
+tstack.n_toggle_refs == 1
+'%s::%s' is not a valid property name; '%s' is not a GObject subtype
+unable to set property '%s' of type '%s' from value of type '%s'
+value "%s" of type '%s' is invalid or out of range for property '%s' of type '%s'
+g_object_notify_queue_add
+nqueue->n_pspecs < 65535
+G_ENABLE_DIAGNOSTIC
+The property %s:%s is deprecated and shouldn't be used anymore. It will be removed in a future version.
+g_object_new_internal
+nqueue != NULL
+Custom constructor for class %s returned NULL (which is invalid). Please use GInitable instead.
+g_object_notify_queue_thaw
+nqueue->freeze_count > 0
+g_atomic_int_get(&object->ref_count) > 0
+%s: property-changed notification for %s(%p) is not frozen
+Free queue for %s (%p) is larger than 65535, called g_object_freeze_notify() too often. Forgot to call g_object_thaw_notify() or infinite loop
+When installing property: type '%s' already has a property named '%s'
+GObject-closure-array
+GObject-weak-references
+GObject-weak-locations
+GObject-toggle-references
+GObject-notify-queue
+GObject-in-construction
+Object class %s doesn't implement property '%s' from interface '%s'
+Flags for property '%s' on class '%s' remove functionality compared with the property on interface '%s'
+Flags for property '%s' on class '%s' introduce additional restrictions on writability compared with the property on interface '%s'
+Read/writable property '%s' on class '%s' has type '%s' which is not exactly equal to the type '%s' of the property on the interface '%s'
+Read-only property '%s' on class '%s' has type '%s' which is not equal to or more restrictive than the type '%s' of the property on the interface '%s'
+Write-only property '%s' on class '%s' has type '%s' which is not equal to or less restrictive than the type '%s' of the property on the interface '%s' 
+object_interface_check_properties
+object %s %p finalized while still in-construction
+gobject.c:1011
+gobject.c:997
+GParam
+gparam.c
+_g_param_type_init
+type == G_TYPE_PARAM
+g_param_spec_ref
+g_param_spec_unref
+g_param_spec_sink
+g_param_spec_ref_sink
+g_param_spec_get_name
+g_param_spec_get_nick
+g_param_spec_get_blurb
+g_param_spec_internal
+G_TYPE_IS_PARAM (param_type) && param_type != G_TYPE_PARAM
+(name[0] >= 'A' && name[0] <= 'Z') || (name[0] >= 'a' && name[0] <= 'z')
+!(flags & G_PARAM_STATIC_NAME) || is_canonical (name)
+G_PARAM_STATIC_NAME used with non-canonical pspec name: %s
+g_param_spec_get_qdata
+g_param_spec_set_qdata
+g_param_spec_set_qdata_full
+g_param_spec_steal_qdata
+g_param_spec_get_redirect_target
+g_param_value_set_default
+PSPEC_APPLIES_TO_VALUE (pspec, value)
+g_param_value_defaults
+g_param_value_validate
+g_param_value_convert
+G_IS_VALUE (src_value)
+G_IS_VALUE (dest_value)
+PSPEC_APPLIES_TO_VALUE (pspec, dest_value)
+g_param_values_cmp
+G_IS_VALUE (value1)
+G_IS_VALUE (value2)
+PSPEC_APPLIES_TO_VALUE (pspec, value1)
+PSPEC_APPLIES_TO_VALUE (pspec, value2)
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_
+gparam.c:943: pspec name "%s" contains invalid characters
+g_param_spec_pool_insert
+pool != NULL
+pspec
+owner_type > 0
+pspec->owner_type == 0
+gparam.c:979: attempt to remove unknown pspec '%s' from pool
+g_param_spec_pool_remove
+g_param_spec_pool_lookup
+param_name != NULL
+g_param_spec_pool_list_owned
+g_param_spec_pool_list
+n_pspecs_p != NULL
+g_param_type_register_static
+pspec_info != NULL
+pspec_info->instance_size >= sizeof (GParamSpec)
+g_type_name (pspec_info->value_type) != NULL
+g_value_set_param
+G_VALUE_HOLDS_PARAM (value)
+G_IS_PARAM_SPEC (param)
+g_value_take_param
+g_value_get_param
+g_value_dup_param
+invalid unclassed param spec pointer for value type '
+invalid param spec type '
+GParamChar
+gparamspecs.c
+_g_param_spec_types_init
+type == G_TYPE_PARAM_CHAR
+GParamUChar
+type == G_TYPE_PARAM_UCHAR
+GParamBoolean
+type == G_TYPE_PARAM_BOOLEAN
+GParamInt
+type == G_TYPE_PARAM_INT
+GParamUInt
+type == G_TYPE_PARAM_UINT
+GParamLong
+type == G_TYPE_PARAM_LONG
+GParamULong
+type == G_TYPE_PARAM_ULONG
+GParamInt64
+type == G_TYPE_PARAM_INT64
+GParamUInt64
+type == G_TYPE_PARAM_UINT64
+GParamUnichar
+type == G_TYPE_PARAM_UNICHAR
+GParamEnum
+type == G_TYPE_PARAM_ENUM
+GParamFlags
+type == G_TYPE_PARAM_FLAGS
+GParamFloat
+type == G_TYPE_PARAM_FLOAT
+GParamDouble
+type == G_TYPE_PARAM_DOUBLE
+GParamString
+type == G_TYPE_PARAM_STRING
+GParamParam
+type == G_TYPE_PARAM_PARAM
+GParamBoxed
+type == G_TYPE_PARAM_BOXED
+GParamPointer
+type == G_TYPE_PARAM_POINTER
+GParamValueArray
+type == G_TYPE_PARAM_VALUE_ARRAY
+GParamObject
+type == G_TYPE_PARAM_OBJECT
+GParamOverride
+type == G_TYPE_PARAM_OVERRIDE
+GParamGType
+type == G_TYPE_PARAM_GTYPE
+GParamVariant
+type == G_TYPE_PARAM_VARIANT
+spec_types == spec_types_bound
+g_param_spec_char
+default_value >= minimum && default_value <= maximum
+g_param_spec_uchar
+g_param_spec_boolean
+default_value == TRUE || default_value == FALSE
+g_param_spec_int
+g_param_spec_uint
+g_param_spec_long
+g_param_spec_ulong
+g_param_spec_int64
+g_param_spec_uint64
+g_param_spec_enum
+G_TYPE_IS_ENUM (enum_type)
+g_enum_get_value (enum_class, default_value) != NULL
+g_param_spec_flags
+G_TYPE_IS_FLAGS (flags_type)
+(default_value & flags_class->mask) == default_value
+g_param_spec_float
+g_param_spec_double
+g_param_spec_param
+G_TYPE_IS_PARAM (param_type)
+g_param_spec_boxed
+g_param_spec_value_array
+G_IS_PARAM_SPEC (element_spec)
+g_param_spec_object
+g_type_is_a (object_type, G_TYPE_OBJECT)
+g_param_spec_override
+G_IS_PARAM_SPEC (overridden)
+g_param_spec_variant
+type != NULL
+default_value == NULL || g_variant_is_of_type (default_value, type)
+gsignal.c:843: signal "%s" of type '%s' already destroyed
+g_signal_stop_emission
+signal_id > 0
+%s: signal id '%u' does not support detail (%u)
+gsignal.c:881
+gsignal.c:893: emission of signal "%s" for instance '%p' cannot be stopped from emission hook
+gsignal.c:899: no emission of signal "%s" to stop for instance '%p'
+%s: signal id '%u' is invalid for instance '%p'
+gsignal.c:903
+g_signal_add_emission_hook
+hook_func != NULL
+%s: invalid signal id '%u'
+gsignal.c:955
+%s: signal id '%u' does not support emission hooks (G_SIGNAL_NO_HOOKS flag set)
+gsignal.c:961
+gsignal.c:967
+g_signal_remove_emission_hook
+hook_id > 0
+gsignal.c:1017
+%s: signal "%s" had no hook (%lu) to remove
+gsignal.c:1021
+g_signal_parse_name
+G_TYPE_IS_INSTANTIATABLE (itype) || G_TYPE_IS_INTERFACE (itype)
+g_signal_stop_emission_by_name
+%s: signal '%s' does not support details
+gsignal.c:1146
+%s: signal '%s' is invalid for instance '%p' of type '%s'
+gsignal.c:1149
+gsignal.c:1158: emission of signal "%s" for instance '%p' cannot be stopped from emission hook
+gsignal.c:1164: no emission of signal "%s" to stop for instance '%p'
+gsignal.c:1170
+g_signal_lookup
+gsignal.c:1204: unable to lookup signal "%s" for invalid type id '%lu'
+gsignal.c:1207: unable to lookup signal "%s" for non instantiatable type '%s'
+gsignal.c:1210: unable to lookup signal "%s" of unloaded type '%s'
+g_signal_list_ids
+n_ids != NULL
+gsignal.c:1262: unable to list signals for invalid type id '%lu'
+gsignal.c:1265: unable to list signals of non instantiatable type '%s'
+gsignal.c:1268: unable to list signals of unloaded type '%s'
+g_signal_query
+query != NULL
+g_signal_new
+signal_name != NULL
+g_signal_new_class_handler
+g_signal_newv
+param_types != NULL
+(return_type & G_SIGNAL_TYPE_STATIC_SCOPE) == 0
+accumulator == NULL
+accu_data == NULL
+_-|> <.:^
+gsignal.c:1609: signal "%s" already exists in the '%s' %s
+interface
+class ancestry
+gsignal.c:1619: signal "%s" for type '%s' was previously created for type '%s'
+gsignal.c:1630: parameter %d of type '%s' for signal "%s::%s" is not a value type
+gsignal.c:1638: return value of type '%s' for signal "%s::%s" is not a value type
+gsignal.c:1647: signal "%s::%s" has return type '%s' and is only G_SIGNAL_RUN_FIRST
+g_signal_set_va_marshaller
+va_marshaller != NULL
+g_signal_override_class_closure
+class_closure != NULL
+%s: type '%s' cannot be overridden for signal id '%u'
+gsignal.c:1933
+%s: type '%s' is already overridden for signal id '%u'
+gsignal.c:1939
+g_signal_override_class_handler
+instance_type != G_TYPE_NONE
+class_handler != NULL
+%s: signal name '%s' is invalid for type id '%lu'
+gsignal.c:1982
+g_signal_chain_from_overridden
+instance_and_params != NULL
+gsignal.c
+node != NULL
+cc != NULL
+%s: signal id '%u' cannot be chained from current emission stage for instance '%p'
+gsignal.c:2038
+%s: no signal is currently being emitted for instance '%p'
+gsignal.c:2041
+g_signal_chain_from_overridden_handler
+gsignal.c:2110
+gsignal.c:2113
+gsignal.c:2143
+gsignal.c:2199
+g_signal_get_invocation_hint
+g_signal_connect_closure_by_id
+gsignal.c:2274
+gsignal.c:2276
+gsignal.c:2296
+g_signal_connect_closure
+gsignal.c:2337
+gsignal.c:2340
+gsignal.c:2361
+g_signal_connect_data
+gsignal.c:2438
+gsignal.c:2441
+gsignal.c:2461
+g_signal_handler_block
+handler_id > 0
+gsignal.c:2496: handler block_count overflow, %s
+please report occurrence circumstances to gtk-devel-list@gnome.org
+%s: instance '%p' has no handler with id '%lu'
+gsignal.c:2501
+g_signal_handler_unblock
+gsignal.c:2540: handler '%lu' of instance '%p' is not blocked
+gsignal.c:2543
+g_signal_handler_disconnect
+gsignal.c:2579
+g_signal_handler_is_connected
+g_signal_handlers_destroy
+g_signal_handler_find
+(mask & ~G_SIGNAL_MATCH_MASK) == 0
+g_signal_handlers_block_matched
+g_signal_handlers_unblock_matched
+g_signal_handlers_disconnect_matched
+g_signal_has_handler_pending
+gsignal.c:2920
+g_signal_emitv
+gsignal.c:2980
+g_signal_emit_valist
+gsignal.c:3101
+gsignal.c:3108
+gsignal.c:3257
+gsignal.c:3293
+gsignal.c:3329
+g_signal_emit_by_name
+%s: signal name '%s' is invalid for instance '%p' of type '%s'
+gsignal.c:3410
+<unknown>
+<invalid>
+invalid_closure_notify
+handler->closure == closure
+emission_pop
+handler_ref
+handler->ref_count > 0
+g_bsearch_array_free
+barray != NULL
+handler_unref_R
+hlist->tail_before == handler
+hlist->tail_after == handler
+The signal %s::%s is deprecated and shouldn't be used anymore. It will be removed in a future version.
+handler_insert
+handler->prev == NULL && handler->next == NULL
+gsignal.c:566: handler id overflow, %s
+g_bsearch_array_get_index
+node_in_array != NULL
+g_bsearch_array_grow
+index_ <= barray->n_nodes
+g_bsearch_array_create
+bconfig != NULL
+GIOChannel
+G_IO_IN
+G_IO_OUT
+G_IO_PRI
+G_IO_ERR
+G_IO_HUP
+G_IO_NVAL
+nval
+GIOCondition
+g_source_set_closure
+source != NULL
+gsourceclosure.c:259: closure can not be set on closure without GSourceFuncs::closure_callback
+source_closure_marshal_BOOLEAN__VOID
+n_param_values == 0
+g_type_interface_add_prerequisite
+G_TYPE_IS_INTERFACE (interface_type)
+!g_type_is_a (interface_type, prerequisite_type)
+!g_type_is_a (prerequisite_type, interface_type)
+interface type '%s' or prerequisite type '%s' invalid
+unable to add prerequisite '%s' to interface '%s' which is already in use for '%s'
+adding prerequisite '%s' to interface '%s' conflicts with existing prerequisite '%s'
+prerequisite '%s' for interface '%s' is neither instantiatable nor interface
+g_type_interface_prerequisites
+cannot create new instance of invalid (non-instantiatable) type '%s'
+cannot create instance of abstract (non-instantiatable) type '%s'
+g_type_free_instance
+instance != NULL && instance->g_class != NULL
+cannot free instance of invalid (non-instantiatable) type '%s'
+cannot free instance of abstract (non-instantiatable) type '%s'
+g_type_add_class_cache_func
+cache_func != NULL
+g_type_remove_class_cache_func
+gtype.c:2505: cannot remove unregistered class cache func %p with data %p
+g_type_add_interface_check
+check_func != NULL
+g_type_remove_interface_check
+gtype.c:2579: cannot remove unregistered class check func %p with data %p
+gtype.c
+g_type_register_fundamental
+static_quark_type_flags
+type_id > 0
+type_name != NULL
+finfo != NULL
+attempt to register fundamental type '%s' with invalid type id (%lu)
+cannot register instantiatable fundamental type '%s' as non-classed
+cannot register existing fundamental type '%s' (as '%s')
+g_type_register_static_simple
+class_size <= G_MAXUINT16
+instance_size <= G_MAXUINT16
+g_type_register_static
+parent_type > 0
+class finalizer specified for static type '%s'
+g_type_register_dynamic
+plugin != NULL
+g_type_add_interface_static
+G_TYPE_IS_INSTANTIATABLE (instance_type)
+g_type_parent (interface_type) == G_TYPE_INTERFACE
+g_type_add_interface_dynamic
+cannot retrieve class for invalid (unclassed) type '%s'
+g_type_class_unref
+g_class != NULL
+cannot unreference class of invalid (unclassed) type '%s'
+g_type_class_unref_uncached
+g_type_class_peek_parent
+gtype.c:3092: invalid class pointer '%p'
+g_type_interface_peek
+instance_class != NULL
+gtype.c:3125: invalid class pointer '%p'
+g_type_interface_peek_parent
+g_iface != NULL
+gtype.c:3161: invalid interface pointer '%p'
+cannot retrieve default vtable for invalid or non-interface type '%s'
+g_type_default_interface_unref
+cannot unreference invalid interface default vtable for '%s'
+g_type_name
+g_type_from_name
+g_type_get_qdata
+g_type_set_qdata
+quark != 0
+g_type_query
+g_type_interface_get_plugin
+node == NULL
+iface == NULL
+gtype.c:3912: attempt to look up plugin for invalid instance/interface type pair.
+invalid cast from '%s' to '%s'
+invalid uninstantiatable type '%s' in cast to '%s'
+invalid unclassed pointer in cast to '%s'
+invalid class cast from '%s' to '%s'
+invalid unclassed type '%s' in class cast to '%s'
+invalid class cast from (NULL) pointer to '%s'
+instance of invalid non-instantiatable type '%s'
+instance with invalid (NULL) class pointer
+invalid (NULL) pointer instance
+gtype.c:4221: type id '%lu' is invalid
+can't peek value table for type '%s' which is not currently referenced
+<NULL-instance>
+<NULL-class>
+g_type_init_with_debug_flags
+g_type_init_with_debug_flags() is no longer supported.  Use the GOBJECT_DEBUG environment variable.
+g_type_init
+GOBJECT_DEBUG
+objects
+signals
+-g-type-private--GTypeFlags
+-g-type-private--IFaceHolder
+-g-type-private--dependants-array
+void
+gobject_init_ctor
+type == G_TYPE_NONE
+GInterface
+type == G_TYPE_INTERFACE
+g_type_class_add_private
+private_size > 0
+private_size <= 0xffff
+cannot add private field to invalid (non-instantiatable) type '%s'
+g_type_class_add_private() called multiple times for the same type
+g_type_add_instance_private
+cannot use g_type_add_instance_private() with dynamic type '%s'
+g_type_class_adjust_private_offset
+private_size_or_offset != NULL
+*private_size_or_offset <= 0xffff
+g_type_add_instance_private() called multiple times for the same type
+g_type_instance_get_private
+g_type_class_get_instance_private_offset
+node->is_instantiatable
+g_type_class_get_instance_private_offset() called on class %s but it has no private data
+g_type_add_class_private
+cannot add class private field to invalid type '%s'
+g_type_add_class_private() called multiple times for the same type
+g_type_class_get_private
+klass != NULL
+class of invalid type '%s'
+attempt to retrieve private data for invalid type '%s'
+parent_node->data && NODE_REFCOUNT (parent_node) > 0
+g_type_instance_get_class_private() requires a prior call to g_type_add_class_private()
+can't happen
+type_add_flags_W
+(flags & ~TYPE_FLAG_MASK) == 0
+tagging type '%s' as abstract after class initialization
+type_iface_ensure_dflt_vtable_Wm
+iface->data
+static type '%s' unreferenced too often
+type_class_init_Wm
+node->is_classed && node->data && node->data->class.class_size && !node->data->class.class && node->data->class.init_state == UNINITIALIZED
+pnode != NULL
+entry->vtable != NULL
+type_iface_vtable_iface_init_Wm
+iface->data && entry && iholder && iholder->info
+entry->init_state == IFACE_INIT
+type_iface_peek_holder_L
+NODE_IS_IFACE (iface)
+type_iface_vtable_base_init_Wm
+iface->data && entry && entry->vtable == NULL && iholder && iholder->info
+type_iface_retrieve_holder_info_Wm
+iholder->plugin != NULL
+g_type_plugin_*
+%s(%p)%s'%s'
+%s()%s'%s'
+type_add_interface_Wm
+node->is_instantiatable && NODE_IS_IFACE (iface) && ((info && !plugin) || (!info && plugin))
+type_node_add_iface_entry_W
+num_entries < MAX_N_INTERFACES
+entry->vtable == NULL && entry->init_state == UNINITIALIZED
+interface type '%s' for type '%s' comes without initializer
+cannot add interfaces to invalid (non-instantiatable) type '%s'
+cannot add invalid (non-interface) type '%s' to type '%s'
+attempting to add an interface (%s) to class (%s) after class_init
+cannot add sub-interface '%s' to type '%s' which does not conform to super-interface '%s'
+cannot add interface type '%s' to type '%s', since type '%s' already conforms to interface
+cannot add interface type '%s' to type '%s' which does not conform to prerequisite '%s'
+plugin handle for type '%s' is NULL
+plugin pointer (%p) for type '%s' is invalid
+plugin for type '%s' has no complete_type_info() implementation
+plugin for type '%s' has no complete_interface_info() implementation
+type_node_new_W
+pnode
+pnode->n_supers < MAX_N_SUPERS
+pnode->n_children < MAX_N_CHILDREN
+type_node_any_new_W
+(type & TYPE_ID_MASK) == 0
+type_data_ref_Wm
+node->plugin != NULL
+NODE_REFCOUNT (node) > 0
+cannot derive type '%s' from invalid parent type '%s'
+cannot derive '%s' from non-derivable parent type '%s'
+cannot derive '%s' from non-fundamental parent type '%s'
+cannot handle uninitializable values of type '%s'
+missing 'value_copy()' for type '%s'
+one of 'collect_format' and 'collect_value()' is unspecified for type '%s'
+the '%s' specification for type '%s' is too long or invalid
+collect_format
+one of 'lcopy_format' and 'lcopy_value()' is unspecified for type '%s'
+lcopy_format
+ilqdp
+type_data_make_W
+node->data == NULL && info != NULL
+node->data->common.value_table != NULL
+check_type_info_I
+ftype <= G_TYPE_FUNDAMENTAL_MAX && !(ftype & TYPE_ID_MASK)
+cannot instantiate '%s', derived from non-instantiatable parent type '%s'
+cannot instantiate '%s' as non-instantiatable fundamental
+cannot create class for '%s', derived from non-classed parent type '%s'
+cannot create class for '%s' as non-classed fundamental
+specified interface size for type '%s' is smaller than 'GTypeInterface' size
+specified class size for type '%s' is smaller than 'GTypeClass' size
+specified class size for type '%s' is smaller than the parent type's '%s' class size
+specified instance size for type '%s' is smaller than 'GTypeInstance' size
+specified instance size for type '%s' is smaller than the parent type's '%s' instance size
+type_node_fundamental_new_W
+(ftype & TYPE_ID_MASK) == 0
+ftype <= G_TYPE_FUNDAMENTAL_MAX
+type name '%s' is too short
+type name '%s' contains invalid characters
+cannot register existing type '%s'
+type_iface_add_prerequisite_W
+NODE_IS_IFACE (iface) && IFACE_NODE_N_PREREQUISITES (iface) < MAX_N_PREREQUISITES && (prerequisite_node->is_instantiatable || NODE_IS_IFACE (prerequisite_node))
+GTypeModule
+g_type_module_set_name
+G_IS_TYPE_MODULE (module)
+g_type_module_use
+plugin '%s' failed to register type '%s'
+(unknown)
+g_type_module_unuse
+module->use_count > 0
+g_type_module_register_type
+module != NULL
+type_info != NULL
+Two different plugins tried to register '%s'.
+Type '%s' recreated with different parent type.
+(was '%s', now '%s')
+g_type_module_add_interface
+interface_info != NULL
+Interface '%s' for '%s' was previously registered statically or for a parent type.
+Two different plugins tried to register interface '%s' for '%s'.
+gtypemodule.c
+module_interface_info
+g_type_module_register_enum
+g_type_module_register_flags
+Fatal error - Could not reload previously loaded plugin '%s'
+gtypemodule.c:99: unsolicitated invocation of g_object_run_dispose() on GTypeModule
+GTypePlugin
+g_type_plugin_use
+G_IS_TYPE_PLUGIN (plugin)
+g_type_plugin_unuse
+g_type_plugin_complete_type_info
+value_table != NULL
+g_type_plugin_complete_interface_info
+g_value_init
+value != NULL
+%s: cannot initialize GValue with type '%s', the value has already been initialized as '%s'
+gvalue.c:179
+%s: cannot initialize GValue with type '%s', %s
+gvalue.c:184
+this type is abstract with regards to GValue use, use a more specific (derived) type
+this type has no GTypeValueTable implementation
+g_value_copy
+g_value_type_compatible (G_VALUE_TYPE (src_value), G_VALUE_TYPE (dest_value))
+g_value_reset
+g_value_unset
+g_value_fits_pointer
+g_value_peek_pointer
+g_value_fits_pointer (value) == TRUE
+g_value_set_instance
+g_value_type_compatible (G_TYPE_FROM_INSTANCE (instance), G_VALUE_TYPE (value))
+strcmp (value_table->collect_format, "p") == 0
+gvalue.c:365
+g_value_init_from_instance
+value != NULL && G_VALUE_TYPE(value) == 0
+gvalue.c:429
+g_value_register_transform_func
+transform_func != NULL
+g_value_type_transformable
+G_TYPE_IS_VALUE (src_type)
+G_TYPE_IS_VALUE (dest_type)
+g_value_type_compatible
+g_value_transform
+g_value_array_get_nth
+value_array != NULL
+index < value_array->n_values
+g_value_array_free
+g_value_array_copy
+g_value_array_prepend
+g_value_array_append
+g_value_array_insert
+index <= value_array->n_values
+g_value_array_remove
+g_value_array_sort
+compare_func != NULL
+g_value_array_sort_with_data
+value_array_grow
+n_values >= value_array->n_values
+%s | %u
+%llu
+%lli
+TRUE
+FALSE
+gchar
+gvaluetypes.c
+_g_value_types_init
+type == G_TYPE_CHAR
+guchar
+type == G_TYPE_UCHAR
+gboolean
+type == G_TYPE_BOOLEAN
+gint
+type == G_TYPE_INT
+guint
+type == G_TYPE_UINT
+glong
+type == G_TYPE_LONG
+gulong
+type == G_TYPE_ULONG
+gint64
+type == G_TYPE_INT64
+guint64
+type == G_TYPE_UINT64
+gfloat
+type == G_TYPE_FLOAT
+gdouble
+type == G_TYPE_DOUBLE
+gchararray
+type == G_TYPE_STRING
+gpointer
+type == G_TYPE_POINTER
+GVariant
+type == G_TYPE_VARIANT
+g_value_set_char
+G_VALUE_HOLDS_CHAR (value)
+g_value_get_char
+g_value_set_schar
+g_value_get_schar
+g_value_set_uchar
+G_VALUE_HOLDS_UCHAR (value)
+g_value_get_uchar
+g_value_set_boolean
+G_VALUE_HOLDS_BOOLEAN (value)
+g_value_get_boolean
+g_value_set_int
+G_VALUE_HOLDS_INT (value)
+g_value_get_int
+g_value_set_uint
+G_VALUE_HOLDS_UINT (value)
+g_value_get_uint
+g_value_set_long
+G_VALUE_HOLDS_LONG (value)
+g_value_get_long
+g_value_set_ulong
+G_VALUE_HOLDS_ULONG (value)
+g_value_get_ulong
+g_value_set_int64
+G_VALUE_HOLDS_INT64 (value)
+g_value_get_int64
+g_value_set_uint64
+G_VALUE_HOLDS_UINT64 (value)
+g_value_get_uint64
+g_value_set_float
+G_VALUE_HOLDS_FLOAT (value)
+g_value_get_float
+g_value_set_double
+G_VALUE_HOLDS_DOUBLE (value)
+g_value_get_double
+g_value_set_string
+G_VALUE_HOLDS_STRING (value)
+g_value_set_static_string
+g_value_take_string
+g_value_get_string
+g_value_dup_string
+g_value_set_pointer
+G_VALUE_HOLDS_POINTER (value)
+g_value_get_pointer
+GType
+g_value_set_gtype
+G_VALUE_HOLDS_GTYPE (value)
+g_value_get_gtype
+g_value_set_variant
+G_VALUE_HOLDS_VARIANT (value)
+g_value_take_variant
+g_value_get_variant
+g_value_dup_variant
+g_strdup_value_contents
+NULL
+"%s"
+((%s) %s)
+((%s*) %p)
+((gpointer) %p)
+g_pointer_type_register_static
+ invalidly modified type 
+ invalidly modified type 
+ invalidly modified type 
+ invalidly modified type 
+ P` 
+ 0P 
+ 0P 
+`0P@0
+00``0p0
+0p0p`0
+000p
+p@@@
+PP@@P
+F`00000@@@@@00000@@PP@0`0000000@@@@@000000@@PP@00@00000@@P00@00000``P
+@00@0@P@@@@00@0@P@@@0
+ @0 
+dyld_stub_binding_helper
+__dyld_func_lookup
+__g_atomic_array_init
+__g_atomic_array_copy
+_freelist_alloc
+__g_atomic_array_update
+_freelist_free
+_g_binding_class_intern_init
+_g_binding_init
+_g_binding_unbind_internal
+_g_warning
+_on_source_notify
+_bind_with_closures_transform_to
+_bind_with_closures_transform_from
+_bind_with_closures_free_func
+_weak_unbind
+_remove_binding_qdata
+_g_binding_class_init
+_g_binding_constructed
+_g_binding_set_property
+_g_binding_get_property
+_g_binding_finalize
+_default_transform_to
+_default_transform_from
+_add_binding_qdata
+_on_target_notify
+_default_invert_boolean_transform
+_default_transform
+__g_boxed_type_init
+_value_copy
+_value_free
+_gdate_copy
+_gstring_copy
+_gstring_free
+_pollfd_copy
+_boxed_proxy_value_init
+_boxed_proxy_value_free
+_boxed_proxy_value_copy
+_boxed_proxy_value_peek_pointer
+_boxed_proxy_collect_value
+_boxed_proxy_lcopy_value
+_value_meminit
+_g_warning
+_value_set_boxed_internal
+_closure_invoke_notifiers
+_closure_try_remove_inotify
+_g_warning
+_closure_try_remove_fnotify
+__g_closure_supports_invoke_va
+__g_closure_invoke_va
+__g_closure_set_va_marshal
+__g_closure_is_void
+_g_type_iface_meta_marshal
+_g_type_class_meta_marshal
+_g_closure_set_meta_va_marshal
+_g_type_iface_meta_marshalv
+_g_type_class_meta_marshalv
+_value_to_ffi_type
+_value_from_ffi_type
+_va_to_ffi_type
+__g_enum_types_init
+_value_flags_enum_init
+_value_flags_enum_copy_value
+_value_flags_enum_collect_value
+_value_flags_enum_lcopy_value
+_g_enum_class_init
+_g_flags_class_init
+__g_object_type_init
+_g_object_base_class_init
+_g_object_base_class_finalize
+_g_object_do_class_init
+_g_object_init
+_g_value_object_init
+_g_value_object_free_value
+_g_value_object_copy_value
+_g_value_object_peek_pointer
+_g_value_object_collect_value
+_g_value_object_lcopy_value
+_g_value_object_transform_value
+_g_error
+_install_property_internal
+_g_warning
+_g_object_notify_queue_freeze
+_g_object_notify_by_spec_internal
+_g_object_notify_queue_thaw
+_g_critical
+_g_object_new_internal
+_object_in_construction
+_consider_issuing_property_deprecation_warning
+_object_set_property
+_object_get_property
+_weak_refs_notify
+_toggle_refs_notify
+_object_remove_closure
+_destroy_closure_array
+_g_initially_unowned_class_intern_init
+_g_initially_unowned_init
+_g_initially_unowned_class_init
+_object_floating_flag_handler
+_get_notify_pspec
+_g_object_notify_queue_add
+_g_object_constructor
+_g_object_new_with_custom_constructor
+_g_object_constructed
+_g_object_notify_queue_free
+_g_object_do_set_property
+_g_object_do_get_property
+_g_object_real_dispose
+_g_object_finalize
+_g_object_dispatch_properties_changed
+_object_interface_check_properties
+__g_param_type_init
+_value_param_init
+_value_param_free_value
+_value_param_copy_value
+_value_param_peek_pointer
+_value_param_collect_value
+_value_param_lcopy_value
+_g_param_spec_class_base_init
+_g_param_spec_class_base_finalize
+_g_param_spec_class_init
+_g_param_spec_init
+_value_param_transform_value
+_is_canonical
+_g_warning
+_canonicalize_key
+_param_spec_pool_hash
+_param_spec_pool_equals
+_param_spec_ht_lookup
+_pool_list
+_pool_depth_list_for_interface
+_pool_depth_list
+_pspec_list_remove_overridden_and_redirected
+_pspec_compare_id
+_param_spec_generic_class_init
+_default_value_set_default
+_default_values_cmp
+_g_param_spec_get_private
+_g_param_spec_finalize
+__g_param_spec_types_init
+_param_char_init
+_param_char_set_default
+_param_char_validate
+_param_int_values_cmp
+_param_uchar_init
+_param_uchar_set_default
+_param_uchar_validate
+_param_uint_values_cmp
+_param_boolean_set_default
+_param_boolean_validate
+_param_int_init
+_param_int_set_default
+_param_int_validate
+_param_uint_init
+_param_uint_set_default
+_param_uint_validate
+_param_long_init
+_param_long_set_default
+_param_long_validate
+_param_long_values_cmp
+_param_ulong_init
+_param_ulong_set_default
+_param_ulong_validate
+_param_ulong_values_cmp
+_param_int64_init
+_param_int64_set_default
+_param_int64_validate
+_param_int64_values_cmp
+_param_uint64_init
+_param_uint64_set_default
+_param_uint64_validate
+_param_uint64_values_cmp
+_param_unichar_init
+_param_unichar_set_default
+_param_unichar_validate
+_param_unichar_values_cmp
+_param_enum_init
+_param_enum_finalize
+_param_enum_set_default
+_param_enum_validate
+_param_flags_init
+_param_flags_finalize
+_param_flags_set_default
+_param_flags_validate
+_param_float_init
+_param_float_set_default
+_param_float_validate
+_param_float_values_cmp
+_param_double_init
+_param_double_set_default
+_param_double_validate
+_param_double_values_cmp
+_param_string_init
+_param_string_finalize
+_param_string_set_default
+_param_string_validate
+_param_string_values_cmp
+_param_param_init
+_param_param_set_default
+_param_param_validate
+_param_pointer_values_cmp
+_param_boxed_init
+_param_boxed_set_default
+_param_boxed_validate
+_param_boxed_values_cmp
+_param_pointer_init
+_param_pointer_set_default
+_param_pointer_validate
+_param_value_array_init
+_param_value_array_finalize
+_param_value_array_set_default
+_param_value_array_validate
+_param_value_array_values_cmp
+_param_object_init
+_param_object_set_default
+_param_object_validate
+_param_object_values_cmp
+_param_override_init
+_param_override_finalize
+_param_override_set_default
+_param_override_validate
+_param_override_values_cmp
+_param_gtype_init
+_param_gtype_set_default
+_param_gtype_validate
+_param_gtype_values_cmp
+_param_variant_init
+_param_variant_finalize
+_param_variant_set_default
+_param_variant_validate
+_param_variant_values_cmp
+_value_array_ensure_size
+__g_signal_init
+_g_bsearch_array_create
+__g_signals_destroy
+_g_warning
+_type_debug_name
+_signal_destroy_R
+_LOOKUP_SIGNAL_NODE
+_emission_find
+_signal_finalize_hook
+_node_check_deprecated
+_signal_parse_name
+_signal_id_lookup
+_g_bsearch_array_get_nth
+_g_bsearch_array_insert
+_signal_add_class_closure
+_signal_find_class_closure
+_emission_find_innermost
+_handler_new
+_add_invalid_closure_notify
+_handler_insert
+_handler_lookup
+_g_error
+_remove_invalid_closure_notify
+_handler_unref_R
+_g_bsearch_array_free
+_handlers_find
+_handler_match_free1_R
+_signal_handlers_foreach_matched_R
+_node_update_single_va_closure
+_handler_list_lookup
+_signal_emit_unlocked_R
+_emission_push
+_handler_ref
+_accumulate
+_emission_pop
+_invalid_closure_notify
+_signal_lookup_closure
+_g_bsearch_array_lookup_fuzzy
+_handler_match_prepend
+_handler_lists_cmp
+_handler_list_ensure
+_class_closures_cmp
+_g_bsearch_array_grow
+_g_bsearch_array_get_index
+_g_bit_storage
+_signal_key_cmp
+_g_critical
+_closure_invalidated
+_source_closure_marshal_BOOLEAN__VOID
+_dummy_closure_marshal
+_closure_callback_get
+_io_watch_closure_callback
+_g_child_watch_closure_callback
+_g_unix_fd_source_closure_callback
+_source_closure_callback
+_lookup_type_node_I
+_g_warning
+_type_descriptive_name_I
+_type_get_qdata_L
+_type_iface_add_prerequisite_W
+_type_node_is_a_L
+_g_error
+_check_type_name_I
+_type_node_fundamental_new_W
+_type_add_flags_W
+_check_type_info_I
+_type_data_make_W
+_check_value_table_I
+_check_derivation_I
+_type_data_ref_Wm
+_type_node_new_W
+_check_plugin_U
+_check_add_interface_L
+_check_interface_info_I
+_type_add_interface_Wm
+_type_data_ref_U
+_type_class_init_Wm
+_type_data_unref_U
+_type_lookup_iface_vtable_I
+_type_iface_ensure_dflt_vtable_Wm
+_type_node_conforms_to_U
+_type_set_qdata_W
+_type_node_fundamental_info_I
+_type_check_is_value_type_U
+__g_type_boxed_copy
+__g_type_boxed_free
+__g_type_boxed_init
+_g_message
+_gobject_init_ctor
+_type_node_check_conformities_UorL
+_type_lookup_iface_entry_L
+_type_lookup_prerequisite_L
+_lookup_iface_entry_I
+_type_iface_vtable_base_init_Wm
+_type_iface_vtable_iface_init_Wm
+_type_iface_peek_holder_L
+_type_iface_retrieve_holder_info_Wm
+_type_node_add_iface_entry_W
+_iface_node_has_available_offset_L
+_iface_node_set_offset_L
+_find_free_iface_offset_L
+_find_conforming_child_type_L
+_type_node_any_new_W
+_check_collect_format_I
+_g_type_module_class_init
+_g_type_module_iface_init
+_g_warning
+_g_type_module_find_type_info
+_g_type_module_find_interface_info
+_g_type_module_use_plugin
+_g_type_module_complete_type_info
+_g_type_module_complete_interface_info
+_g_type_module_dispose
+_g_type_module_finalize
+__g_value_c_init
+_g_bsearch_array_create
+_value_meminit
+_g_warning
+_g_bsearch_array_replace
+_transform_func_lookup
+_g_bsearch_array_lookup_fuzzy
+_g_bsearch_array_insert
+_g_bsearch_array_grow
+_g_bsearch_array_get_index
+_g_bit_storage
+_transform_entries_cmp
+_value_array_grow
+_value_array_shrink
+__g_value_transforms_init
+_value_transform_memcpy_data0
+_value_transform_int_u8
+_value_transform_int_bool
+_value_transform_int_uint
+_value_transform_int_long
+_value_transform_int_ulong
+_value_transform_int_int64
+_value_transform_int_uint64
+_value_transform_int_float
+_value_transform_int_double
+_value_transform_int_string
+_value_transform_uint_s8
+_value_transform_uint_bool
+_value_transform_uint_int
+_value_transform_uint_long
+_value_transform_uint_ulong
+_value_transform_uint_int64
+_value_transform_uint_uint64
+_value_transform_uint_float
+_value_transform_uint_double
+_value_transform_uint_string
+_value_transform_int_s8
+_value_transform_bool_string
+_value_transform_uint_u8
+_value_transform_long_s8
+_value_transform_long_u8
+_value_transform_long_bool
+_value_transform_long_int
+_value_transform_long_uint
+_value_transform_long_ulong
+_value_transform_long_int64
+_value_transform_long_uint64
+_value_transform_long_float
+_value_transform_long_double
+_value_transform_long_string
+_value_transform_ulong_s8
+_value_transform_ulong_u8
+_value_transform_ulong_bool
+_value_transform_ulong_int
+_value_transform_ulong_uint
+_value_transform_ulong_long
+_value_transform_ulong_int64
+_value_transform_ulong_uint64
+_value_transform_ulong_float
+_value_transform_ulong_double
+_value_transform_ulong_string
+_value_transform_int64_s8
+_value_transform_int64_u8
+_value_transform_int64_bool
+_value_transform_int64_int
+_value_transform_int64_uint
+_value_transform_int64_long
+_value_transform_int64_ulong
+_value_transform_int64_uint64
+_value_transform_int64_float
+_value_transform_int64_double
+_value_transform_int64_string
+_value_transform_uint64_s8
+_value_transform_uint64_u8
+_value_transform_uint64_bool
+_value_transform_uint64_int
+_value_transform_uint64_uint
+_value_transform_uint64_long
+_value_transform_uint64_ulong
+_value_transform_uint64_int64
+_value_transform_uint64_float
+_value_transform_uint64_double
+_value_transform_uint64_string
+_value_transform_enum_string
+_value_transform_flags_string
+_value_transform_float_s8
+_value_transform_float_u8
+_value_transform_float_int
+_value_transform_float_uint
+_value_transform_float_long
+_value_transform_float_ulong
+_value_transform_float_int64
+_value_transform_float_uint64
+_value_transform_float_double
+_value_transform_float_string
+_value_transform_double_s8
+_value_transform_double_u8
+_value_transform_double_int
+_value_transform_double_uint
+_value_transform_double_long
+_value_transform_double_ulong
+_value_transform_double_int64
+_value_transform_double_uint64
+_value_transform_double_float
+_value_transform_double_string
+_value_transform_string_string
+__g_value_types_init
+_value_init_long0
+_value_copy_long0
+_value_collect_int
+_value_lcopy_char
+_value_lcopy_boolean
+_value_lcopy_int
+_value_collect_long
+_value_lcopy_long
+_value_init_int64
+_value_copy_int64
+_value_collect_int64
+_value_lcopy_int64
+_value_init_float
+_value_copy_float
+_value_collect_float
+_value_lcopy_float
+_value_init_double
+_value_copy_double
+_value_collect_double
+_value_lcopy_double
+_value_init_string
+_value_free_string
+_value_copy_string
+_value_peek_pointer0
+_value_collect_string
+_value_lcopy_string
+_value_init_pointer
+_value_copy_pointer
+_value_collect_pointer
+_value_lcopy_pointer
+_value_free_variant
+_value_copy_variant
+_value_collect_variant
+_value_lcopy_variant
+_initialize_aggregate
+_ffi_prep_incoming_args_SYSV
+_ffi_prep_args_raw
+.LFB1
+.LCFI0
+.LCFI1
+.Lstore_table
+retsint8
+retsint16
+retuint8
+retuint16
+retfloat
+retdouble
+retlongdouble
+retint64
+retstruct1b
+retstruct2b
+retint
+retstruct
+noretval
+epilogue
+.ffi_call_SYSV_end
+.LFE1
+.LFB2
+.LCFI2
+.LCFI3
+.LCFI7
+.Lcls_epilogue
+.Lcls_retint
+.Lcls_retfloat
+.Lcls_retdouble
+.Lcls_retldouble
+.Lcls_retllong
+.Lcls_retstruct1b
+.Lcls_retstruct2b
+.Lcls_retstruct
+.LFE2
+.LFB3
+.LCFI4
+.LCFI5
+.LCFI6
+.Lrcls_epilogue
+.Lrcls_retint
+.Lrcls_retfloat
+.Lrcls_retdouble
+.Lrcls_retldouble
+.Lrcls_retllong
+.LFE3
+.LFB1
+.LCFI0
+.LCFI1
+.do_thiscall
+.do_fncall
+.Lstore_table
+.Lretsint8
+.Lretsint16
+.Lretuint8
+.Lretuint16
+.Lretint
+.Lretfloat
+.Lretdouble
+.Lretlongdouble
+.Lretint64
+.Lretstruct1b
+.Lretstruct2b
+.Lretstruct4b
+.Lretstruct
+.Lnoretval
+.Lepilogue
+.ffi_call_win32_end
+.LFE1
+.LFB3
+.LCFI4
+.LCFI5
+.Lcls_store_table
+.Lcls_retsint8
+.Lcls_retsint16
+.Lcls_retuint8
+.Lcls_retuint16
+.Lcls_retint
+.Lcls_retfloat
+.Lcls_retdouble
+.Lcls_retldouble
+.Lcls_retllong
+.Lcls_retstruct1
+.Lcls_retstruct2
+.Lcls_retstruct4
+.Lcls_retstruct
+.Lcls_retmsstruct
+.Lcls_noretval
+.Lcls_epilogue
+.ffi_closure_SYSV_end
+.LFE3
+.LFB4
+.LCFI6
+.LCFI7
+.LCFI8
+.stubraw
+.Lrcls_store_table
+.Lrcls_retsint8
+.Lrcls_retsint16
+.Lrcls_retuint8
+.Lrcls_retuint16
+.Lrcls_retint
+.Lrcls_retfloat
+.Lrcls_retdouble
+.Lrcls_retldouble
+.Lrcls_retllong
+.Lrcls_retstruct1
+.Lrcls_retstruct2
+.Lrcls_retstruct4
+.Lrcls_retstruct
+.Lrcls_noretval
+.Lrcls_epilogue
+.ffi_closure_raw_SYSV_end
+.LFE4
+.ffi_closure_STDCALL_internal
+.LFB5
+.LCFI9
+.LCFI10
+.Lscls_store_table
+.Lscls_retsint8
+.Lscls_retsint16
+.Lscls_retuint8
+.Lscls_retuint16
+.Lscls_retint
+.Lscls_retfloat
+.Lscls_retdouble
+.Lscls_retldouble
+.Lscls_retllong
+.Lscls_retstruct1
+.Lscls_retstruct2
+.Lscls_retstruct4
+.Lscls_noretval
+.Lscls_retstruct
+.Lscls_epilogue
+.LFE5
+.ffi_closure_STDCALL_end
+__g_boxed_type_init.info
+__g_boxed_type_init.finfo
+__g_enum_types_init.finfo
+__g_object_type_init.finfo
+__g_param_type_init.finfo
+_type_iface_retrieve_holder_info_Wm._action
+_type_iface_retrieve_holder_info_Wm._action107
+_type_data_ref_Wm._action
+_type_data_ref_Wm._action127
+_type_data_make_W.zero_vtable
+_check_type_name_I.extra_chars
+_g_type_plugin_get_type.type_plugin_info
+__g_value_types_init.finfo
+_g_pointer_type_register_static.type_info
+_g_binding_flags_get_type.values
+_g_boxed_type_register_static.vtable
+__g_enum_types_init.flags_enum_value_table
+__g_object_type_init.value_table
+__g_param_type_init.param_value_table
+__g_param_type_init.param_spec_info
+__g_param_spec_types_init.pspec_info
+__g_param_spec_types_init.pspec_info4
+__g_param_spec_types_init.pspec_info7
+__g_param_spec_types_init.pspec_info10
+__g_param_spec_types_init.pspec_info13
+__g_param_spec_types_init.pspec_info16
+__g_param_spec_types_init.pspec_info19
+__g_param_spec_types_init.pspec_info22
+__g_param_spec_types_init.pspec_info25
+__g_param_spec_types_init.pspec_info28
+__g_param_spec_types_init.pspec_info31
+__g_param_spec_types_init.pspec_info34
+__g_param_spec_types_init.pspec_info37
+__g_param_spec_types_init.pspec_info40
+__g_param_spec_types_init.pspec_info43
+__g_param_spec_types_init.pspec_info46
+__g_param_spec_types_init.pspec_info49
+__g_param_spec_types_init.pspec_info52
+__g_param_spec_types_init.pspec_info58
+__g_param_spec_types_init.pspec_info61
+__g_param_spec_types_init.pspec_info67
+_g_signal_key_bconfig
+_g_io_condition_get_type.values
+_g_type_module_get_type.type_module_info
+_g_type_module_get_type.iface_info
+__g_value_types_init.value_table
+__g_value_types_init.value_table8
+__g_value_types_init.value_table11
+__g_value_types_init.value_table16
+__g_value_types_init.value_table22
+__g_value_types_init.value_table28
+__g_value_types_init.value_table32
+__g_value_types_init.value_table35
+__g_value_types_init.value_table38
+__g_value_types_init.value_table41
+dyld__mach_header
+_floating_flag_handler
+__g_param_spec_types_init.pspec_info55
+_g_signal_add_emission_hook.seq_hook_id
+_g_class_closure_bconfig
+_g_signal_hlbsa_bconfig
+_g_handler_sequential_number
+_closure_callback_funcs
+_static_fundamental_next
+_transform_bconfig
+_g__array_lock
+_freelist
+_g_binding_flags_get_type.g_define_type_id__volatile
+_g_binding_get_type.g_define_type_id__volatile
+_quark_gbinding
+_g_binding_parent_class
+_GBinding_private_offset
+_g_closure_get_type.g_define_type_id__volatile
+_g_value_get_type.g_define_type_id__volatile
+_g_value_array_get_type.g_define_type_id__volatile
+_g_date_get_type.g_define_type_id__volatile
+_g_gstring_get_type.g_define_type_id__volatile
+_g_hash_table_get_type.g_define_type_id__volatile
+_g_array_get_type.g_define_type_id__volatile
+_g_ptr_array_get_type.g_define_type_id__volatile
+_g_byte_array_get_type.g_define_type_id__volatile
+_g_bytes_get_type.g_define_type_id__volatile
+_g_regex_get_type.g_define_type_id__volatile
+_g_match_info_get_type.g_define_type_id__volatile
+_g_variant_type_get_gtype.g_define_type_id__volatile
+_g_variant_builder_get_type.g_define_type_id__volatile
+_g_variant_dict_get_type.g_define_type_id__volatile
+_g_error_get_type.g_define_type_id__volatile
+_g_date_time_get_type.g_define_type_id__volatile
+_g_time_zone_get_type.g_define_type_id__volatile
+_g_key_file_get_type.g_define_type_id__volatile
+_g_mapped_file_get_type.g_define_type_id__volatile
+_g_main_loop_get_type.g_define_type_id__volatile
+_g_main_context_get_type.g_define_type_id__volatile
+_g_source_get_type.g_define_type_id__volatile
+_g_pollfd_get_type.g_define_type_id__volatile
+_g_markup_parse_context_get_type.g_define_type_id__volatile
+_g_thread_get_type.g_define_type_id__volatile
+_g_checksum_get_type.g_define_type_id__volatile
+_g_strv_get_type.g_define_type_id__volatile
+__g_enum_types_init.initialized
+__g_object_type_init.initialized
+_pspec_pool
+_g__weak_refs_mutex_lock
+_quark_weak_refs
+_g__toggle_refs_mutex_lock
+_quark_toggle_refs
+_quark_weak_locations
+_weak_locations_lock
+_quark_closure_array
+_g__closure_array_mutex_lock
+_g_initially_unowned_get_type.g_define_type_id__volatile
+_g_initially_unowned_parent_class
+_GInitiallyUnowned_private_offset
+_g__notify_lock_lock
+_consider_issuing_property_deprecation_warning.already_warned_table
+_consider_issuing_property_deprecation_warning.enable_diagnostic
+_consider_issuing_property_deprecation_warning.already_warned_lock
+_quark_in_construction
+_quark_notify_queue
+_gobject_signals
+_g_param_private_offset
+_g_param_spec_pool_new.init_mutex
+_g__g_signal_mutex_lock
+_g_n_signal_nodes
+_g_handler_list_bsa_ht
+_g_signal_key_bsa
+_g_signal_nodes
+_g_restart_emissions
+_g_recursive_emissions
+_node_check_deprecated.g_enable_diagnostic
+_g_io_channel_get_type.g_define_type_id__volatile
+_g_io_condition_get_type.etype
+_type_registration_serial
+_type_rw_lock
+_static_quark_iface_holder
+_static_n_class_cache_funcs
+_static_class_cache_funcs
+_static_n_iface_check_funcs
+_static_iface_check_funcs
+_static_quark_type_flags
+_class_init_rec_mutex
+_static_type_nodes_ht
+_static_quark_dependants_array
+_static_fundamental_type_nodes
+_g_type_module_get_type.type_module_type
+_parent_class
+_g_type_plugin_get_type.type_plugin_type
+_transform_array
+_g_gtype_get_type.g_define_type_id__volatile
+__g_type_debug_flags
+_ffi_call
+_ffi_call_SYSV
+_ffi_call_win32
+_ffi_closure_FASTCALL
+_ffi_closure_STDCALL
+_ffi_closure_SYSV
+_ffi_closure_SYSV_inner
+_ffi_closure_THISCALL
+_ffi_closure_raw_SYSV
+_ffi_prep_args
+_ffi_prep_cif
+_ffi_prep_cif_core
+_ffi_prep_cif_machdep
+_ffi_prep_cif_var
+_ffi_prep_closure
+_ffi_prep_closure_loc
+_ffi_prep_raw_closure_loc
+_ffi_raw_call
+_ffi_type_double
+_ffi_type_float
+_ffi_type_longdouble
+_ffi_type_pointer
+_ffi_type_sint16
+_ffi_type_sint32
+_ffi_type_sint64
+_ffi_type_sint8
+_ffi_type_uint16
+_ffi_type_uint32
+_ffi_type_uint64
+_ffi_type_uint8
+_ffi_type_void
+_g_array_get_type
+_g_binding_flags_get_type
+_g_binding_get_flags
+_g_binding_get_source
+_g_binding_get_source_property
+_g_binding_get_target
+_g_binding_get_target_property
+_g_binding_get_type
+_g_binding_unbind
+_g_boxed_copy
+_g_boxed_free
+_g_boxed_type_register_static
+_g_byte_array_get_type
+_g_bytes_get_type
+_g_cclosure_marshal_BOOLEAN__BOXED_BOXED
+_g_cclosure_marshal_BOOLEAN__BOXED_BOXEDv
+_g_cclosure_marshal_BOOLEAN__FLAGS
+_g_cclosure_marshal_BOOLEAN__FLAGSv
+_g_cclosure_marshal_STRING__OBJECT_POINTER
+_g_cclosure_marshal_STRING__OBJECT_POINTERv
+_g_cclosure_marshal_VOID__BOOLEAN
+_g_cclosure_marshal_VOID__BOOLEANv
+_g_cclosure_marshal_VOID__BOXED
+_g_cclosure_marshal_VOID__BOXEDv
+_g_cclosure_marshal_VOID__CHAR
+_g_cclosure_marshal_VOID__CHARv
+_g_cclosure_marshal_VOID__DOUBLE
+_g_cclosure_marshal_VOID__DOUBLEv
+_g_cclosure_marshal_VOID__ENUM
+_g_cclosure_marshal_VOID__ENUMv
+_g_cclosure_marshal_VOID__FLAGS
+_g_cclosure_marshal_VOID__FLAGSv
+_g_cclosure_marshal_VOID__FLOAT
+_g_cclosure_marshal_VOID__FLOATv
+_g_cclosure_marshal_VOID__INT
+_g_cclosure_marshal_VOID__INTv
+_g_cclosure_marshal_VOID__LONG
+_g_cclosure_marshal_VOID__LONGv
+_g_cclosure_marshal_VOID__OBJECT
+_g_cclosure_marshal_VOID__OBJECTv
+_g_cclosure_marshal_VOID__PARAM
+_g_cclosure_marshal_VOID__PARAMv
+_g_cclosure_marshal_VOID__POINTER
+_g_cclosure_marshal_VOID__POINTERv
+_g_cclosure_marshal_VOID__STRING
+_g_cclosure_marshal_VOID__STRINGv
+_g_cclosure_marshal_VOID__UCHAR
+_g_cclosure_marshal_VOID__UCHARv
+_g_cclosure_marshal_VOID__UINT
+_g_cclosure_marshal_VOID__UINT_POINTER
+_g_cclosure_marshal_VOID__UINT_POINTERv
+_g_cclosure_marshal_VOID__UINTv
+_g_cclosure_marshal_VOID__ULONG
+_g_cclosure_marshal_VOID__ULONGv
+_g_cclosure_marshal_VOID__VARIANT
+_g_cclosure_marshal_VOID__VARIANTv
+_g_cclosure_marshal_VOID__VOID
+_g_cclosure_marshal_VOID__VOIDv
+_g_cclosure_marshal_generic
+_g_cclosure_marshal_generic_va
+_g_cclosure_new
+_g_cclosure_new_object
+_g_cclosure_new_object_swap
+_g_cclosure_new_swap
+_g_checksum_get_type
+_g_clear_object
+_g_closure_add_finalize_notifier
+_g_closure_add_invalidate_notifier
+_g_closure_add_marshal_guards
+_g_closure_get_type
+_g_closure_invalidate
+_g_closure_invoke
+_g_closure_new_object
+_g_closure_new_simple
+_g_closure_ref
+_g_closure_remove_finalize_notifier
+_g_closure_remove_invalidate_notifier
+_g_closure_set_marshal
+_g_closure_set_meta_marshal
+_g_closure_sink
+_g_closure_unref
+_g_date_get_type
+_g_date_time_get_type
+_g_enum_complete_type_info
+_g_enum_get_value
+_g_enum_get_value_by_name
+_g_enum_get_value_by_nick
+_g_enum_register_static
+_g_error_get_type
+_g_flags_complete_type_info
+_g_flags_get_first_value
+_g_flags_get_value_by_name
+_g_flags_get_value_by_nick
+_g_flags_register_static
+_g_gstring_get_type
+_g_gtype_get_type
+_g_hash_table_get_type
+_g_initially_unowned_get_type
+_g_io_channel_get_type
+_g_io_condition_get_type
+_g_key_file_get_type
+_g_main_context_get_type
+_g_main_loop_get_type
+_g_mapped_file_get_type
+_g_markup_parse_context_get_type
+_g_match_info_get_type
+_g_object_add_toggle_ref
+_g_object_add_weak_pointer
+_g_object_bind_property
+_g_object_bind_property_full
+_g_object_bind_property_with_closures
+_g_object_class_find_property
+_g_object_class_install_properties
+_g_object_class_install_property
+_g_object_class_list_properties
+_g_object_class_override_property
+_g_object_compat_control
+_g_object_connect
+_g_object_disconnect
+_g_object_dup_data
+_g_object_dup_qdata
+_g_object_force_floating
+_g_object_freeze_notify
+_g_object_get
+_g_object_get_data
+_g_object_get_property
+_g_object_get_qdata
+_g_object_get_type
+_g_object_get_valist
+_g_object_interface_find_property
+_g_object_interface_install_property
+_g_object_interface_list_properties
+_g_object_is_floating
+_g_object_new
+_g_object_new_valist
+_g_object_newv
+_g_object_notify
+_g_object_notify_by_pspec
+_g_object_ref
+_g_object_ref_sink
+_g_object_remove_toggle_ref
+_g_object_remove_weak_pointer
+_g_object_replace_data
+_g_object_replace_qdata
+_g_object_run_dispose
+_g_object_set
+_g_object_set_data
+_g_object_set_data_full
+_g_object_set_property
+_g_object_set_qdata
+_g_object_set_qdata_full
+_g_object_set_valist
+_g_object_steal_data
+_g_object_steal_qdata
+_g_object_thaw_notify
+_g_object_unref
+_g_object_watch_closure
+_g_object_weak_ref
+_g_object_weak_unref
+_g_param_spec_boolean
+_g_param_spec_boxed
+_g_param_spec_char
+_g_param_spec_double
+_g_param_spec_enum
+_g_param_spec_flags
+_g_param_spec_float
+_g_param_spec_get_blurb
+_g_param_spec_get_default_value
+_g_param_spec_get_name
+_g_param_spec_get_nick
+_g_param_spec_get_qdata
+_g_param_spec_get_redirect_target
+_g_param_spec_gtype
+_g_param_spec_int
+_g_param_spec_int64
+_g_param_spec_internal
+_g_param_spec_long
+_g_param_spec_object
+_g_param_spec_override
+_g_param_spec_param
+_g_param_spec_pointer
+_g_param_spec_pool_insert
+_g_param_spec_pool_list
+_g_param_spec_pool_list_owned
+_g_param_spec_pool_lookup
+_g_param_spec_pool_new
+_g_param_spec_pool_remove
+_g_param_spec_ref
+_g_param_spec_ref_sink
+_g_param_spec_set_qdata
+_g_param_spec_set_qdata_full
+_g_param_spec_sink
+_g_param_spec_steal_qdata
+_g_param_spec_string
+_g_param_spec_types
+_g_param_spec_uchar
+_g_param_spec_uint
+_g_param_spec_uint64
+_g_param_spec_ulong
+_g_param_spec_unichar
+_g_param_spec_unref
+_g_param_spec_value_array
+_g_param_spec_variant
+_g_param_type_register_static
+_g_param_value_convert
+_g_param_value_defaults
+_g_param_value_set_default
+_g_param_value_validate
+_g_param_values_cmp
+_g_pointer_type_register_static
+_g_pollfd_get_type
+_g_ptr_array_get_type
+_g_regex_get_type
+_g_signal_accumulator_first_wins
+_g_signal_accumulator_true_handled
+_g_signal_add_emission_hook
+_g_signal_chain_from_overridden
+_g_signal_chain_from_overridden_handler
+_g_signal_connect_closure
+_g_signal_connect_closure_by_id
+_g_signal_connect_data
+_g_signal_connect_object
+_g_signal_emit
+_g_signal_emit_by_name
+_g_signal_emit_valist
+_g_signal_emitv
+_g_signal_get_invocation_hint
+_g_signal_handler_block
+_g_signal_handler_disconnect
+_g_signal_handler_find
+_g_signal_handler_is_connected
+_g_signal_handler_unblock
+_g_signal_handlers_block_matched
+_g_signal_handlers_destroy
+_g_signal_handlers_disconnect_matched
+_g_signal_handlers_unblock_matched
+_g_signal_has_handler_pending
+_g_signal_list_ids
+_g_signal_lookup
+_g_signal_name
+_g_signal_new
+_g_signal_new_class_handler
+_g_signal_new_valist
+_g_signal_newv
+_g_signal_override_class_closure
+_g_signal_override_class_handler
+_g_signal_parse_name
+_g_signal_query
+_g_signal_remove_emission_hook
+_g_signal_set_va_marshaller
+_g_signal_stop_emission
+_g_signal_stop_emission_by_name
+_g_signal_type_cclosure_new
+_g_source_get_type
+_g_source_set_closure
+_g_source_set_dummy_callback
+_g_strdup_value_contents
+_g_strv_get_type
+_g_thread_get_type
+_g_time_zone_get_type
+_g_type_add_class_cache_func
+_g_type_add_class_private
+_g_type_add_instance_private
+_g_type_add_interface_check
+_g_type_add_interface_dynamic
+_g_type_add_interface_static
+_g_type_check_class_cast
+_g_type_check_class_is_a
+_g_type_check_instance
+_g_type_check_instance_cast
+_g_type_check_instance_is_a
+_g_type_check_instance_is_fundamentally_a
+_g_type_check_is_value_type
+_g_type_check_value
+_g_type_check_value_holds
+_g_type_children
+_g_type_class_add_private
+_g_type_class_adjust_private_offset
+_g_type_class_get_instance_private_offset
+_g_type_class_get_private
+_g_type_class_peek
+_g_type_class_peek_parent
+_g_type_class_peek_static
+_g_type_class_ref
+_g_type_class_unref
+_g_type_class_unref_uncached
+_g_type_create_instance
+_g_type_default_interface_peek
+_g_type_default_interface_ref
+_g_type_default_interface_unref
+_g_type_depth
+_g_type_ensure
+_g_type_free_instance
+_g_type_from_name
+_g_type_fundamental
+_g_type_fundamental_next
+_g_type_get_plugin
+_g_type_get_qdata
+_g_type_get_type_registration_serial
+_g_type_init
+_g_type_init_with_debug_flags
+_g_type_instance_get_private
+_g_type_interface_add_prerequisite
+_g_type_interface_get_plugin
+_g_type_interface_peek
+_g_type_interface_peek_parent
+_g_type_interface_prerequisites
+_g_type_interfaces
+_g_type_is_a
+_g_type_module_add_interface
+_g_type_module_get_type
+_g_type_module_register_enum
+_g_type_module_register_flags
+_g_type_module_register_type
+_g_type_module_set_name
+_g_type_module_unuse
+_g_type_module_use
+_g_type_name
+_g_type_name_from_class
+_g_type_name_from_instance
+_g_type_next_base
+_g_type_parent
+_g_type_plugin_complete_interface_info
+_g_type_plugin_complete_type_info
+_g_type_plugin_get_type
+_g_type_plugin_unuse
+_g_type_plugin_use
+_g_type_qname
+_g_type_query
+_g_type_register_dynamic
+_g_type_register_fundamental
+_g_type_register_static
+_g_type_register_static_simple
+_g_type_remove_class_cache_func
+_g_type_remove_interface_check
+_g_type_set_qdata
+_g_type_test_flags
+_g_type_value_table_peek
+_g_value_array_append
+_g_value_array_copy
+_g_value_array_free
+_g_value_array_get_nth
+_g_value_array_get_type
+_g_value_array_insert
+_g_value_array_new
+_g_value_array_prepend
+_g_value_array_remove
+_g_value_array_sort
+_g_value_array_sort_with_data
+_g_value_copy
+_g_value_dup_boxed
+_g_value_dup_object
+_g_value_dup_param
+_g_value_dup_string
+_g_value_dup_variant
+_g_value_fits_pointer
+_g_value_get_boolean
+_g_value_get_boxed
+_g_value_get_char
+_g_value_get_double
+_g_value_get_enum
+_g_value_get_flags
+_g_value_get_float
+_g_value_get_gtype
+_g_value_get_int
+_g_value_get_int64
+_g_value_get_long
+_g_value_get_object
+_g_value_get_param
+_g_value_get_pointer
+_g_value_get_schar
+_g_value_get_string
+_g_value_get_type
+_g_value_get_uchar
+_g_value_get_uint
+_g_value_get_uint64
+_g_value_get_ulong
+_g_value_get_variant
+_g_value_init
+_g_value_init_from_instance
+_g_value_peek_pointer
+_g_value_register_transform_func
+_g_value_reset
+_g_value_set_boolean
+_g_value_set_boxed
+_g_value_set_boxed_take_ownership
+_g_value_set_char
+_g_value_set_double
+_g_value_set_enum
+_g_value_set_flags
+_g_value_set_float
+_g_value_set_gtype
+_g_value_set_instance
+_g_value_set_int
+_g_value_set_int64
+_g_value_set_long
+_g_value_set_object
+_g_value_set_object_take_ownership
+_g_value_set_param
+_g_value_set_param_take_ownership
+_g_value_set_pointer
+_g_value_set_schar
+_g_value_set_static_boxed
+_g_value_set_static_string
+_g_value_set_string
+_g_value_set_string_take_ownership
+_g_value_set_uchar
+_g_value_set_uint
+_g_value_set_uint64
+_g_value_set_ulong
+_g_value_set_variant
+_g_value_take_boxed
+_g_value_take_object
+_g_value_take_param
+_g_value_take_string
+_g_value_take_variant
+_g_value_transform
+_g_value_type_compatible
+_g_value_type_transformable
+_g_value_unset
+_g_variant_builder_get_type
+_g_variant_dict_get_type
+_g_variant_get_gtype
+_g_variant_type_get_gtype
+_g_weak_ref_clear
+_g_weak_ref_get
+_g_weak_ref_init
+_g_weak_ref_set
+___fixunsdfdi
+___fixunssfdi
+___memcpy_chk
+___memmove_chk
+___memset_chk
+___stack_chk_fail
+___stack_chk_guard
+___strcat_chk
+___strncpy_chk
+_exit
+_g_array_append_vals
+_g_array_free
+_g_array_new
+_g_array_ref
+_g_array_unref
+_g_assertion_message_expr
+_g_byte_array_ref
+_g_byte_array_unref
+_g_bytes_ref
+_g_bytes_unref
+_g_checksum_copy
+_g_checksum_free
+_g_child_watch_funcs
+_g_datalist_clear
+_g_datalist_get_data
+_g_datalist_get_flags
+_g_datalist_id_dup_data
+_g_datalist_id_get_data
+_g_datalist_id_remove_no_notify
+_g_datalist_id_replace_data
+_g_datalist_id_set_data_full
+_g_datalist_set_flags
+_g_datalist_unset_flags
+_g_date_free
+_g_date_get_julian
+_g_date_new_julian
+_g_date_time_ref
+_g_date_time_unref
+_g_direct_hash
+_g_error_copy
+_g_error_free
+_g_free
+_g_getenv
+_g_hash_table_add
+_g_hash_table_contains
+_g_hash_table_foreach
+_g_hash_table_insert
+_g_hash_table_lookup
+_g_hash_table_new
+_g_hash_table_ref
+_g_hash_table_remove
+_g_hash_table_unref
+_g_hook_alloc
+_g_hook_destroy
+_g_hook_destroy_link
+_g_hook_first_valid
+_g_hook_insert_before
+_g_hook_list_clear
+_g_hook_list_init
+_g_hook_next_valid
+_g_idle_funcs
+_g_intern_static_string
+_g_intern_string
+_g_io_channel_ref
+_g_io_channel_unref
+_g_io_watch_funcs
+_g_key_file_ref
+_g_key_file_unref
+_g_list_free
+_g_list_prepend
+_g_logv
+_g_main_context_ref
+_g_main_context_unref
+_g_main_loop_ref
+_g_main_loop_unref
+_g_malloc
+_g_malloc0
+_g_malloc0_n
+_g_malloc_n
+_g_mapped_file_ref
+_g_mapped_file_unref
+_g_markup_parse_context_ref
+_g_markup_parse_context_unref
+_g_match_info_ref
+_g_match_info_unref
+_g_memdup
+_g_mutex_lock
+_g_mutex_unlock
+_g_nullify_pointer
+_g_once_init_enter
+_g_once_init_leave
+_g_parse_debug_string
+_g_ptr_array_ref
+_g_ptr_array_unref
+_g_qsort_with_data
+_g_quark_from_static_string
+_g_quark_from_string
+_g_quark_to_string
+_g_quark_try_string
+_g_realloc
+_g_realloc_n
+_g_rec_mutex_lock
+_g_rec_mutex_unlock
+_g_regex_ref
+_g_regex_unref
+_g_return_if_fail_warning
+_g_rw_lock_reader_lock
+_g_rw_lock_reader_unlock
+_g_rw_lock_writer_lock
+_g_rw_lock_writer_unlock
+_g_slice_alloc
+_g_slice_alloc0
+_g_slice_free1
+_g_slist_append
+_g_slist_copy
+_g_slist_delete_link
+_g_slist_find
+_g_slist_free
+_g_slist_free_1
+_g_slist_length
+_g_slist_prepend
+_g_slist_remove
+_g_slist_sort
+_g_source_destroy
+_g_source_ref
+_g_source_set_callback_indirect
+_g_source_unref
+_g_str_equal
+_g_str_hash
+_g_strcmp0
+_g_strconcat
+_g_strdelimit
+_g_strdup
+_g_strdup_printf
+_g_strdupv
+_g_strescape
+_g_strfreev
+_g_string_append
+_g_string_append_printf
+_g_string_free
+_g_string_new
+_g_string_new_len
+_g_thread_ref
+_g_thread_unref
+_g_time_zone_ref
+_g_time_zone_unref
+_g_timeout_funcs
+_g_unichar_validate
+_g_unix_fd_source_funcs
+_g_unix_signal_funcs
+_g_variant_builder_ref
+_g_variant_builder_unref
+_g_variant_dict_ref
+_g_variant_dict_unref
+_g_variant_is_of_type
+_g_variant_ref_sink
+_g_variant_take_ref
+_g_variant_type_copy
+_g_variant_type_free
+_g_variant_unref
+_memcmp
+_memcpy
+_memset
+_qsort
+_strchr
+_strcmp
+_strlen
+_strncmp
+__TEXT
+__text
+__TEXT
+__stubs
+__TEXT
+__stub_helper
+__TEXT
+__cstring
+__TEXT
+__const
+__TEXT
+__unwind_info
+__TEXT
+__eh_frame
+__TEXT
+__DATA
+__dyld
+__DATA
+__got
+__DATA
+__la_symbol_ptr
+__DATA
+__mod_init_func
+__DATA
+__const
+__DATA
+__data
+__DATA
+__bss
+__DATA
+__common
+__DATA
+__LINKEDIT
+@loader_path/libgobject-2.0.dylib
+/Gg$
+@loader_path/libglib-2.0.dylib
+/usr/lib/libiconv.2.dylib
+/System/Library/Frameworks/Carbon.framework/Versions/A/Carbon
+/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+/usr/lib/libSystem.B.dylib
+/usr/lib/libgcc_s.1.dylib
+ffffff.
+ffff.
+AWAVSH
+|$ H
+[A^A_]
+ffff.
+ffff.
+H;G(
+?H;}
+?H;}
+@ H;E
+fff.
+AVSH
+@[A^]
+ffff.
+ffffff.
+H;G0
+fffff.
+fffff.
+fffff.
+fff.
+ffff.
+ffffff.
+fffff.
+fffff.
+ffff.
+ffff.
+ffffff.
+ffff.
+ffffff.
+fff.
+fffff.
+ffff.
+ffffff.
+fffff.
+ffffff.
+ffffff.
+ffff.
+ffff.
+ffff.
+ffff.
+ffffff.
+fffff.
+AVSH
+P[A^]
+ffff.
+ffffff.
+fffff.
+ffff.
+@PH%
+ffffff.
+@PH%
+ffff.
+fff.
+fffff.
+fffff.
+ffff.
+ffffff.
+fffff.
+ffff.
+ffff.
+@PH%
+H9AH
+1HcE
+fff.
+ffffff.
+fff.
+ffff.
+ffff.
+fffff.
+ffffff.
+fff.
+fff.
+ffff.
+fffff.
+ffff.
+fffff.
+ffff.
+ffff.
+ffff.
+fffff.
+@PH%
+H9AH
+1HcE
+ffffff.
+ffffff.
+fff.
+ffff.
+fff.
+ffffff.
+fffff.
+ffffff.
+ffff.
+ffff.
+ffffff.
+fff.
+ffff.
+ffff.
+H;w 
+fff.
+ffff.
+H;V 
+ffff.
+R H;U
+ffffff.
+fffff.
+ffffff.
+ffff.
+fffff.
+ffffff.
+H;A 
+H;A(
+H;A0
+H;A8
+H;A@
+H;AH
+H;AP
+H;AX
+H;A`
+H;Ah
+H;Ap
+H;Ax
+ffff.
+ffff.
+ffff.
+ffff.
+fffff.
+H;wP
+H;AH
+ffff.
+H;wP
+H;AH
+ffff.
+fffff.
+H;wP
+H;AH
+ffff.
+H;wP
+H;AH
+ffff.
+fffff.
+HcvPH
+Hc@PH
+fffff.
+ffffff.
+ffffff.
+G`_H
+fff.
+fffff.
+ffffff.
+fffff.
+ffff.
+ffffff.
+fff.
+fffff.
+ffff.
+;=PL
+ffffff.
+ffff.
+fffff.
+AVSH
+[A^]
+AVSH
+[A^]
+H;A@
+ffffff.
+fffff.
+ffff.
+ffff.
+@(H;E
+ffff.
+ffffff.
+@(H;E
+H;A@
+@ H;E
+@(H;E
+H;A@
+@ H;E
+ffffff.
+ffffff.
+ffffff.
+H9JX
+@(H%
+H@;M
+@(H%
+H9pX
+@(H%
+@(H%
+ffffff.
+fff.
+ffff.
+@(H;E
+ffffff.
+fff.
+ffff.
+fffff.
+fffff.
+	H;M
+fff.
+	H;M
+	H;M
+fffff.
+ffffff.
+ffff.
+fffff.
+@ H=
+ffffff.
+ffff.
+ffff.
+@ H=
+@ H=
+fffff.
+fffff.
+fffff.
+@ H=
+fffff.
+ffff.
+@ H=
+ffff.
+@ H=
+fff.
+ffffff.
+ffff.
+@ H=
+fff.
+ffffff.
+ffff.
+@ H=
+@ H=
+@ H=
+ffff.
+ffffff.
+HH;E
+fff.
+fffff.
+H;OH
+ffffff.
+HH;E
+fff.
+fff.
+@ H=
+ffffff.
+fff.
+fff.
+ffff.
+@ H=
+@8H;E
+@ H=
+@ H=
+FBHc
+@ H=
+H;FH
+@ H=
+ffffff.
+H;FH
+fffff.
+H;AH
+@ H=
+@ H=
+	H;M
+@ H=
+ffffff.
+fffff.
+fff.
+fff.
+ffffff.
+ffffff.
+ffff.
+ffff.
+ffff.
+ffffff.
+ffff.
+ffffff.
+fffff.
+ffffff.
+fff.
+ffffff.
+fff.
+fffff.
+fffff.
+fffff.
+ffffff.
+fff.
+fff.
+fff.
+fff.
+ffff.
+fff.
+fff.
+fffff.
+ffffff.
+ffff.
+fffff.
+fffff.
+fffff.
+fffff.
+ffff.
+fffff.
+fffff.
+fffff.
+ffff.
+ffffff.
+ffffff.
+fffff.
+ffff.
+fff.
+fff.
+oB0fA
+oJ@fA
+oRPfA
+oZ`fA
+obpfA
+D$ L
+D$0f
+L$@f
+T$Pf
+\$`f
+d$pf
+GLib-GObject
+gatomicarray.c
+_g_atomic_array_update
+old == NULL || G_ATOMIC_ARRAY_DATA_SIZE (old) <= G_ATOMIC_ARRAY_DATA_SIZE (new_data)
+G_BINDING_DEFAULT
+default
+G_BINDING_BIDIRECTIONAL
+bidirectional
+G_BINDING_SYNC_CREATE
+sync-create
+G_BINDING_INVERT_BOOLEAN
+invert-boolean
+GBindingFlags
+GBinding
+g_binding_get_flags
+G_IS_BINDING (binding)
+g_binding_get_source
+g_binding_get_target
+g_binding_get_source_property
+g_binding_get_target_property
+g_binding_unbind
+g_object_bind_property_full
+G_IS_OBJECT (source)
+source_property != NULL
+G_IS_OBJECT (target)
+target_property != NULL
+Unable to bind the same property on the same instance
+%s: The source object of type %s has no property called '%s'
+gbinding.c:901
+%s: The source object of type %s has no readable property called '%s'
+gbinding.c:910
+%s: The source object of type %s has no writable property called '%s'
+gbinding.c:920
+%s: The G_BINDING_INVERT_BOOLEAN flag can only be used when binding boolean properties; the source property '%s' is of type '%s'
+gbinding.c:932
+%s: The target object of type %s has no property called '%s'
+gbinding.c:942
+%s: The target object of type %s has no writable property called '%s'
+gbinding.c:951
+%s: The target object of type %s has no readable property called '%s'
+gbinding.c:961
+%s: The G_BINDING_INVERT_BOOLEAN flag can only be used when binding boolean properties; the target property '%s' is of type '%s'
+gbinding.c:973
+source
+source-property
+target
+target-property
+flags
+gbinding.c
+bind_with_closures_transform_from
+out_value != NULL
+bind_with_closures_transform_to
+g-binding
+Source
+The source of the binding
+Target
+The target of the binding
+Source Property
+The property on the source to bind
+Target Property
+The property on the target to bind
+Flags
+The binding flags
+%s: invalid %s id %u for "%s" of type '%s' in '%s'
+gbinding.c:555
+property
+gbinding.c:519
+g_binding_constructed
+binding->source != NULL
+binding->target != NULL
+binding->source_property != NULL
+binding->target_property != NULL
+binding->source_pspec != NULL
+binding->target_pspec != NULL
+notify
+%s: Unable to convert a value of type %s to a value of type %s
+gbinding.c:301
+default_invert_boolean_transform
+G_VALUE_HOLDS_BOOLEAN (value_a)
+G_VALUE_HOLDS_BOOLEAN (value_b)
+GBoxed
+gboxed.c
+_g_boxed_type_init
+type == G_TYPE_BOXED
+GClosure
+GValue
+GValueArray
+GDate
+GString
+GHashTable
+GArray
+GPtrArray
+GByteArray
+GBytes
+GRegex
+GMatchInfo
+GVariantType
+GVariantBuilder
+GVariantDict
+GError
+GDateTime
+GTimeZone
+GKeyFile
+GMappedFile
+GMainLoop
+GMainContext
+GSource
+GPollFD
+GMarkupParseContext
+GThread
+GChecksum
+GStrv
+g_boxed_type_register_static
+name != NULL
+boxed_copy != NULL
+boxed_free != NULL
+g_type_from_name (name) == 0
+g_boxed_copy
+G_TYPE_IS_BOXED (boxed_type)
+G_TYPE_IS_ABSTRACT (boxed_type) == FALSE
+src_boxed != NULL
+G_TYPE_IS_VALUE_TYPE (boxed_type)
+the copy_value() implementation of type '%s' seems to make use of reserved GValue fields
+g_boxed_free
+boxed != NULL
+g_value_get_boxed
+G_VALUE_HOLDS_BOXED (value)
+G_TYPE_IS_VALUE (G_VALUE_TYPE (value))
+g_value_dup_boxed
+g_value_set_boxed
+g_value_set_static_boxed
+g_value_take_boxed
+value location for '%s' passed as NULL
+g_closure_new_simple
+sizeof_closure >= sizeof (GClosure)
+g_closure_set_meta_marshal
+closure != NULL
+meta_marshal != NULL
+closure->is_invalid == FALSE
+closure->in_marshal == FALSE
+real_closure->meta_marshal == NULL
+g_closure_add_marshal_guards
+pre_marshal_notify != NULL
+post_marshal_notify != NULL
+closure->n_guards < CLOSURE_MAX_N_GUARDS
+g_closure_add_finalize_notifier
+notify_func != NULL
+closure->n_fnotifiers < CLOSURE_MAX_N_FNOTIFIERS
+g_closure_add_invalidate_notifier
+closure->n_inotifiers < CLOSURE_MAX_N_INOTIFIERS
+g_closure_ref
+closure->ref_count > 0
+closure->ref_count < CLOSURE_MAX_REF_COUNT
+new_ref_count > 1
+g_closure_invalidate
+g_closure_unref
+g_closure_sink
+g_closure_remove_invalidate_notifier
+gclosure.c:687: unable to remove uninstalled invalidation notifier: %p (%p)
+g_closure_remove_finalize_notifier
+gclosure.c:715: unable to remove uninstalled finalization notifier: %p (%p)
+g_closure_invoke
+closure->marshal || real_closure->meta_marshal
+_g_closure_supports_invoke_va
+_g_closure_invoke_va
+g_closure_set_marshal
+marshal != NULL
+attempt to override closure->marshal (%p) with new marshal (%p)
+_g_closure_set_va_marshal
+attempt to override closure->va_marshal (%p) with new marshal (%p)
+g_cclosure_new
+callback_func != NULL
+g_cclosure_new_swap
+g_signal_type_cclosure_new
+G_TYPE_IS_CLASSED (itype) || G_TYPE_IS_INTERFACE (itype)
+struct_offset >= sizeof (GTypeClass)
+gclosure.c
+va_to_ffi_type
+type != G_TYPE_INVALID
+va_to_ffi_type: Unsupported fundamental type: %s
+value_from_ffi_type: Unsupported fundamental type: %s
+value_to_ffi_type
+tmpval_used != NULL
+enum_tmpval != NULL
+value_to_ffi_type: Unsupported fundamental type: %s
+g_closure_set_meta_va_marshal
+va_meta_marshal != NULL
+real_closure->meta_marshal != NULL
+_g_enum_types_init
+initialized == FALSE
+GEnum
+genums.c
+type == G_TYPE_ENUM
+GFlags
+type == G_TYPE_FLAGS
+g_enum_register_static
+const_static_values != NULL
+g_flags_register_static
+g_enum_complete_type_info
+G_TYPE_IS_ENUM (g_enum_type)
+info != NULL
+const_values != NULL
+g_flags_complete_type_info
+G_TYPE_IS_FLAGS (g_flags_type)
+g_enum_get_value_by_name
+G_IS_ENUM_CLASS (enum_class)
+g_flags_get_value_by_name
+G_IS_FLAGS_CLASS (flags_class)
+g_enum_get_value_by_nick
+nick != NULL
+g_flags_get_value_by_nick
+g_enum_get_value
+g_flags_get_first_value
+g_value_set_enum
+G_VALUE_HOLDS_ENUM (value)
+g_value_get_enum
+g_value_set_flags
+G_VALUE_HOLDS_FLAGS (value)
+g_value_get_flags
+g_flags_class_init
+G_IS_FLAGS_CLASS (class)
+g_enum_class_init
+G_IS_ENUM_CLASS (class)
+g_cclosure_marshal_VOID__VOID
+n_param_values == 1
+g_cclosure_marshal_VOID__BOOLEAN
+n_param_values == 2
+g_cclosure_marshal_VOID__CHAR
+g_cclosure_marshal_VOID__UCHAR
+g_cclosure_marshal_VOID__INT
+g_cclosure_marshal_VOID__UINT
+g_cclosure_marshal_VOID__LONG
+g_cclosure_marshal_VOID__ULONG
+g_cclosure_marshal_VOID__ENUM
+g_cclosure_marshal_VOID__FLAGS
+g_cclosure_marshal_VOID__FLOAT
+g_cclosure_marshal_VOID__DOUBLE
+g_cclosure_marshal_VOID__STRING
+g_cclosure_marshal_VOID__PARAM
+g_cclosure_marshal_VOID__BOXED
+g_cclosure_marshal_VOID__POINTER
+g_cclosure_marshal_VOID__OBJECT
+g_cclosure_marshal_VOID__VARIANT
+g_cclosure_marshal_VOID__UINT_POINTER
+n_param_values == 3
+g_cclosure_marshal_BOOLEAN__FLAGS
+return_value != NULL
+g_cclosure_marshal_BOOLEAN__FLAGSv
+g_cclosure_marshal_STRING__OBJECT_POINTER
+g_cclosure_marshal_STRING__OBJECT_POINTERv
+g_cclosure_marshal_BOOLEAN__BOXED_BOXED
+g_cclosure_marshal_BOOLEAN__BOXED_BOXEDv
+_g_object_type_init
+GObject
+gobject.c
+type == G_TYPE_OBJECT
+g_object_class_install_property
+G_IS_OBJECT_CLASS (class)
+G_IS_PARAM_SPEC (pspec)
+Attempt to add property %s::%s to class after it was derived
+pspec->flags & (G_PARAM_READABLE | G_PARAM_WRITABLE)
+class->set_property != NULL
+class->get_property != NULL
+property_id > 0
+PARAM_SPEC_PARAM_ID (pspec) == 0
+(pspec->flags & G_PARAM_CONSTRUCT_ONLY) == 0
+pspec->flags & G_PARAM_WRITABLE
+g_object_class_install_properties
+G_IS_OBJECT_CLASS (oclass)
+n_pspecs > 1
+pspecs[0] == NULL
+Attempt to add properties to %s after it was derived
+pspec != NULL
+oclass->set_property != NULL
+oclass->get_property != NULL
+g_object_interface_install_property
+G_TYPE_IS_INTERFACE (iface_class->g_type)
+!G_IS_PARAM_SPEC_OVERRIDE (pspec)
+g_object_class_find_property
+property_name != NULL
+g_object_interface_find_property
+g_object_class_override_property
+%s: Can't find property to override for '%s::%s'
+g_object_class_list_properties
+g_object_interface_list_properties
+g_object_run_dispose
+G_IS_OBJECT (object)
+object->ref_count > 0
+g_object_freeze_notify
+g_object_notify
+%s: object class '%s' has no property named '%s'
+g_object_notify_by_pspec
+g_object_thaw_notify
+g_object_new
+G_TYPE_IS_OBJECT (object_type)
+g_object_newv
+n_parameters == 0 || parameters != NULL
+%s: property '%s' of object class '%s' is not writable
+%s: construct property '%s' for type '%s' cannot be set twice
+g_object_new_valist
+%s: property '%s' for type '%s' cannot be set twice
+%s: %s
+g_object_set_valist
+%s: construct property "%s" for object '%s' can't be set after construction
+g_object_get_valist
+%s: property '%s' of object class '%s' is not readable
+g_object_set
+g_object_get
+g_object_set_property
+G_IS_VALUE (value)
+g_object_get_property
+%s: can't retrieve property '%s' of type '%s' as value of type '%s'
+g_object_connect
+signal::
+object_signal::
+object-signal::
+swapped_signal::
+swapped-signal::
+swapped_object_signal::
+swapped-object-signal::
+signal_after::
+signal-after::
+object_signal_after::
+object-signal-after::
+swapped_signal_after::
+swapped-signal-after::
+swapped_object_signal_after::
+swapped-object-signal-after::
+%s: invalid signal spec "%s"
+g_object_disconnect
+any_signal::
+any-signal::
+any_signal
+any-signal
+%s: invalid signal name "%s"
+%s: signal handler %p(%p) is not connected
+g_object_weak_ref
+notify != NULL
+object->ref_count >= 1
+g_object_weak_unref
+%s: couldn't find weak ref %p(%p)
+g_object_add_weak_pointer
+weak_pointer_location != NULL
+g_object_remove_weak_pointer
+g_object_is_floating
+g_object_ref_sink
+g_object_force_floating
+g_object_add_toggle_ref
+g_object_remove_toggle_ref
+%s: couldn't find toggle ref %p(%p)
+g_object_ref
+g_object_unref
+g_object_get_qdata
+g_object_set_qdata
+quark > 0
+g_object_dup_qdata
+g_object_replace_qdata
+g_object_set_qdata_full
+g_object_steal_qdata
+g_object_get_data
+key != NULL
+g_object_set_data
+g_object_dup_data
+g_object_replace_data
+g_object_set_data_full
+g_object_steal_data
+g_value_set_object
+G_VALUE_HOLDS_OBJECT (value)
+G_IS_OBJECT (v_object)
+g_value_type_compatible (G_OBJECT_TYPE (v_object), G_VALUE_TYPE (value))
+g_value_take_object
+g_value_get_object
+g_value_dup_object
+g_signal_connect_object
+G_TYPE_CHECK_INSTANCE (instance)
+detailed_signal != NULL
+c_handler != NULL
+G_IS_OBJECT (gobject)
+g_object_watch_closure
+g_closure_new_object
+g_cclosure_new_object
+g_cclosure_new_object_swap
+GInitiallyUnowned
+g_weak_ref_get
+weak_ref!= NULL
+g_weak_ref_set
+weak_ref != NULL
+object == NULL || G_IS_OBJECT (object)
+weak_locations != NULL
+object_remove_closure
+invalid unclassed object pointer for value type '
+invalid object type '
+' for value type '
+toggle_refs_notify
+tstack.n_toggle_refs == 1
+'%s::%s' is not a valid property name; '%s' is not a GObject subtype
+unable to set property '%s' of type '%s' from value of type '%s'
+value "%s" of type '%s' is invalid or out of range for property '%s' of type '%s'
+g_object_notify_queue_add
+nqueue->n_pspecs < 65535
+G_ENABLE_DIAGNOSTIC
+The property %s:%s is deprecated and shouldn't be used anymore. It will be removed in a future version.
+g_object_new_internal
+nqueue != NULL
+Custom constructor for class %s returned NULL (which is invalid). Please use GInitable instead.
+g_object_notify_queue_thaw
+nqueue->freeze_count > 0
+g_atomic_int_get(&object->ref_count) > 0
+%s: property-changed notification for %s(%p) is not frozen
+Free queue for %s (%p) is larger than 65535, called g_object_freeze_notify() too often. Forgot to call g_object_thaw_notify() or infinite loop
+When installing property: type '%s' already has a property named '%s'
+GObject-closure-array
+GObject-weak-references
+GObject-weak-locations
+GObject-toggle-references
+GObject-notify-queue
+GObject-in-construction
+Object class %s doesn't implement property '%s' from interface '%s'
+Flags for property '%s' on class '%s' remove functionality compared with the property on interface '%s'
+Flags for property '%s' on class '%s' introduce additional restrictions on writability compared with the property on interface '%s'
+Read/writable property '%s' on class '%s' has type '%s' which is not exactly equal to the type '%s' of the property on the interface '%s'
+Read-only property '%s' on class '%s' has type '%s' which is not equal to or more restrictive than the type '%s' of the property on the interface '%s'
+Write-only property '%s' on class '%s' has type '%s' which is not equal to or less restrictive than the type '%s' of the property on the interface '%s' 
+object_interface_check_properties
+object %s %p finalized while still in-construction
+gobject.c:1011
+gobject.c:997
+GParam
+gparam.c
+_g_param_type_init
+type == G_TYPE_PARAM
+g_param_spec_ref
+g_param_spec_unref
+g_param_spec_sink
+g_param_spec_ref_sink
+g_param_spec_get_name
+g_param_spec_get_nick
+g_param_spec_get_blurb
+g_param_spec_internal
+G_TYPE_IS_PARAM (param_type) && param_type != G_TYPE_PARAM
+(name[0] >= 'A' && name[0] <= 'Z') || (name[0] >= 'a' && name[0] <= 'z')
+!(flags & G_PARAM_STATIC_NAME) || is_canonical (name)
+G_PARAM_STATIC_NAME used with non-canonical pspec name: %s
+g_param_spec_get_qdata
+g_param_spec_set_qdata
+g_param_spec_set_qdata_full
+g_param_spec_steal_qdata
+g_param_spec_get_redirect_target
+g_param_value_set_default
+PSPEC_APPLIES_TO_VALUE (pspec, value)
+g_param_value_defaults
+g_param_value_validate
+g_param_value_convert
+G_IS_VALUE (src_value)
+G_IS_VALUE (dest_value)
+PSPEC_APPLIES_TO_VALUE (pspec, dest_value)
+g_param_values_cmp
+G_IS_VALUE (value1)
+G_IS_VALUE (value2)
+PSPEC_APPLIES_TO_VALUE (pspec, value1)
+PSPEC_APPLIES_TO_VALUE (pspec, value2)
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_
+gparam.c:943: pspec name "%s" contains invalid characters
+g_param_spec_pool_insert
+pool != NULL
+pspec
+owner_type > 0
+pspec->owner_type == 0
+gparam.c:979: attempt to remove unknown pspec '%s' from pool
+g_param_spec_pool_remove
+g_param_spec_pool_lookup
+param_name != NULL
+g_param_spec_pool_list_owned
+g_param_spec_pool_list
+n_pspecs_p != NULL
+g_param_type_register_static
+pspec_info != NULL
+pspec_info->instance_size >= sizeof (GParamSpec)
+g_type_name (pspec_info->value_type) != NULL
+g_value_set_param
+G_VALUE_HOLDS_PARAM (value)
+G_IS_PARAM_SPEC (param)
+g_value_take_param
+g_value_get_param
+g_value_dup_param
+invalid unclassed param spec pointer for value type '
+invalid param spec type '
+GParamChar
+gparamspecs.c
+_g_param_spec_types_init
+type == G_TYPE_PARAM_CHAR
+GParamUChar
+type == G_TYPE_PARAM_UCHAR
+GParamBoolean
+type == G_TYPE_PARAM_BOOLEAN
+GParamInt
+type == G_TYPE_PARAM_INT
+GParamUInt
+type == G_TYPE_PARAM_UINT
+GParamLong
+type == G_TYPE_PARAM_LONG
+GParamULong
+type == G_TYPE_PARAM_ULONG
+GParamInt64
+type == G_TYPE_PARAM_INT64
+GParamUInt64
+type == G_TYPE_PARAM_UINT64
+GParamUnichar
+type == G_TYPE_PARAM_UNICHAR
+GParamEnum
+type == G_TYPE_PARAM_ENUM
+GParamFlags
+type == G_TYPE_PARAM_FLAGS
+GParamFloat
+type == G_TYPE_PARAM_FLOAT
+GParamDouble
+type == G_TYPE_PARAM_DOUBLE
+GParamString
+type == G_TYPE_PARAM_STRING
+GParamParam
+type == G_TYPE_PARAM_PARAM
+GParamBoxed
+type == G_TYPE_PARAM_BOXED
+GParamPointer
+type == G_TYPE_PARAM_POINTER
+GParamValueArray
+type == G_TYPE_PARAM_VALUE_ARRAY
+GParamObject
+type == G_TYPE_PARAM_OBJECT
+GParamOverride
+type == G_TYPE_PARAM_OVERRIDE
+GParamGType
+type == G_TYPE_PARAM_GTYPE
+GParamVariant
+type == G_TYPE_PARAM_VARIANT
+spec_types == spec_types_bound
+g_param_spec_char
+default_value >= minimum && default_value <= maximum
+g_param_spec_uchar
+g_param_spec_boolean
+default_value == TRUE || default_value == FALSE
+g_param_spec_int
+g_param_spec_uint
+g_param_spec_long
+g_param_spec_ulong
+g_param_spec_int64
+g_param_spec_uint64
+g_param_spec_enum
+G_TYPE_IS_ENUM (enum_type)
+g_enum_get_value (enum_class, default_value) != NULL
+g_param_spec_flags
+G_TYPE_IS_FLAGS (flags_type)
+(default_value & flags_class->mask) == default_value
+g_param_spec_float
+g_param_spec_double
+g_param_spec_param
+G_TYPE_IS_PARAM (param_type)
+g_param_spec_boxed
+g_param_spec_value_array
+G_IS_PARAM_SPEC (element_spec)
+g_param_spec_object
+g_type_is_a (object_type, G_TYPE_OBJECT)
+g_param_spec_override
+G_IS_PARAM_SPEC (overridden)
+g_param_spec_variant
+type != NULL
+default_value == NULL || g_variant_is_of_type (default_value, type)
+gsignal.c:843: signal "%s" of type '%s' already destroyed
+g_signal_stop_emission
+signal_id > 0
+%s: signal id '%u' does not support detail (%u)
+gsignal.c:881
+gsignal.c:893: emission of signal "%s" for instance '%p' cannot be stopped from emission hook
+gsignal.c:899: no emission of signal "%s" to stop for instance '%p'
+%s: signal id '%u' is invalid for instance '%p'
+gsignal.c:903
+g_signal_add_emission_hook
+hook_func != NULL
+%s: invalid signal id '%u'
+gsignal.c:955
+%s: signal id '%u' does not support emission hooks (G_SIGNAL_NO_HOOKS flag set)
+gsignal.c:961
+gsignal.c:967
+g_signal_remove_emission_hook
+hook_id > 0
+gsignal.c:1017
+%s: signal "%s" had no hook (%lu) to remove
+gsignal.c:1021
+g_signal_parse_name
+G_TYPE_IS_INSTANTIATABLE (itype) || G_TYPE_IS_INTERFACE (itype)
+g_signal_stop_emission_by_name
+%s: signal '%s' does not support details
+gsignal.c:1146
+%s: signal '%s' is invalid for instance '%p' of type '%s'
+gsignal.c:1149
+gsignal.c:1158: emission of signal "%s" for instance '%p' cannot be stopped from emission hook
+gsignal.c:1164: no emission of signal "%s" to stop for instance '%p'
+gsignal.c:1170
+g_signal_lookup
+gsignal.c:1204: unable to lookup signal "%s" for invalid type id '%lu'
+gsignal.c:1207: unable to lookup signal "%s" for non instantiatable type '%s'
+gsignal.c:1210: unable to lookup signal "%s" of unloaded type '%s'
+g_signal_list_ids
+n_ids != NULL
+gsignal.c:1262: unable to list signals for invalid type id '%lu'
+gsignal.c:1265: unable to list signals of non instantiatable type '%s'
+gsignal.c:1268: unable to list signals of unloaded type '%s'
+g_signal_query
+query != NULL
+g_signal_new
+signal_name != NULL
+g_signal_new_class_handler
+g_signal_newv
+param_types != NULL
+(return_type & G_SIGNAL_TYPE_STATIC_SCOPE) == 0
+accumulator == NULL
+accu_data == NULL
+_-|> <.:^
+gsignal.c:1609: signal "%s" already exists in the '%s' %s
+interface
+class ancestry
+gsignal.c:1619: signal "%s" for type '%s' was previously created for type '%s'
+gsignal.c:1630: parameter %d of type '%s' for signal "%s::%s" is not a value type
+gsignal.c:1638: return value of type '%s' for signal "%s::%s" is not a value type
+gsignal.c:1647: signal "%s::%s" has return type '%s' and is only G_SIGNAL_RUN_FIRST
+g_signal_set_va_marshaller
+va_marshaller != NULL
+g_signal_override_class_closure
+class_closure != NULL
+%s: type '%s' cannot be overridden for signal id '%u'
+gsignal.c:1933
+%s: type '%s' is already overridden for signal id '%u'
+gsignal.c:1939
+g_signal_override_class_handler
+instance_type != G_TYPE_NONE
+class_handler != NULL
+%s: signal name '%s' is invalid for type id '%lu'
+gsignal.c:1982
+g_signal_chain_from_overridden
+instance_and_params != NULL
+gsignal.c
+node != NULL
+cc != NULL
+%s: signal id '%u' cannot be chained from current emission stage for instance '%p'
+gsignal.c:2038
+%s: no signal is currently being emitted for instance '%p'
+gsignal.c:2041
+g_signal_chain_from_overridden_handler
+gsignal.c:2110
+gsignal.c:2113
+gsignal.c:2143
+gsignal.c:2199
+g_signal_get_invocation_hint
+g_signal_connect_closure_by_id
+gsignal.c:2274
+gsignal.c:2276
+gsignal.c:2296
+g_signal_connect_closure
+gsignal.c:2337
+gsignal.c:2340
+gsignal.c:2361
+g_signal_connect_data
+gsignal.c:2438
+gsignal.c:2441
+gsignal.c:2461
+g_signal_handler_block
+handler_id > 0
+gsignal.c:2496: handler block_count overflow, %s
+please report occurrence circumstances to gtk-devel-list@gnome.org
+%s: instance '%p' has no handler with id '%lu'
+gsignal.c:2501
+g_signal_handler_unblock
+gsignal.c:2540: handler '%lu' of instance '%p' is not blocked
+gsignal.c:2543
+g_signal_handler_disconnect
+gsignal.c:2579
+g_signal_handler_is_connected
+g_signal_handlers_destroy
+g_signal_handler_find
+(mask & ~G_SIGNAL_MATCH_MASK) == 0
+g_signal_handlers_block_matched
+g_signal_handlers_unblock_matched
+g_signal_handlers_disconnect_matched
+g_signal_has_handler_pending
+gsignal.c:2920
+g_signal_emitv
+gsignal.c:2980
+g_signal_emit_valist
+gsignal.c:3101
+gsignal.c:3108
+gsignal.c:3257
+gsignal.c:3293
+gsignal.c:3329
+g_signal_emit_by_name
+%s: signal name '%s' is invalid for instance '%p' of type '%s'
+gsignal.c:3410
+<unknown>
+<invalid>
+invalid_closure_notify
+handler->closure == closure
+emission_pop
+handler_ref
+handler->ref_count > 0
+g_bsearch_array_free
+barray != NULL
+handler_unref_R
+hlist->tail_before == handler
+hlist->tail_after == handler
+The signal %s::%s is deprecated and shouldn't be used anymore. It will be removed in a future version.
+handler_insert
+handler->prev == NULL && handler->next == NULL
+gsignal.c:566: handler id overflow, %s
+g_bsearch_array_get_index
+node_in_array != NULL
+g_bsearch_array_grow
+index_ <= barray->n_nodes
+g_bsearch_array_create
+bconfig != NULL
+GIOChannel
+G_IO_IN
+G_IO_OUT
+G_IO_PRI
+G_IO_ERR
+G_IO_HUP
+G_IO_NVAL
+nval
+GIOCondition
+g_source_set_closure
+source != NULL
+gsourceclosure.c:259: closure can not be set on closure without GSourceFuncs::closure_callback
+source_closure_marshal_BOOLEAN__VOID
+n_param_values == 0
+g_type_interface_add_prerequisite
+G_TYPE_IS_INTERFACE (interface_type)
+!g_type_is_a (interface_type, prerequisite_type)
+!g_type_is_a (prerequisite_type, interface_type)
+interface type '%s' or prerequisite type '%s' invalid
+unable to add prerequisite '%s' to interface '%s' which is already in use for '%s'
+adding prerequisite '%s' to interface '%s' conflicts with existing prerequisite '%s'
+prerequisite '%s' for interface '%s' is neither instantiatable nor interface
+g_type_interface_prerequisites
+cannot create new instance of invalid (non-instantiatable) type '%s'
+cannot create instance of abstract (non-instantiatable) type '%s'
+g_type_free_instance
+instance != NULL && instance->g_class != NULL
+cannot free instance of invalid (non-instantiatable) type '%s'
+cannot free instance of abstract (non-instantiatable) type '%s'
+g_type_add_class_cache_func
+cache_func != NULL
+g_type_remove_class_cache_func
+gtype.c:2505: cannot remove unregistered class cache func %p with data %p
+g_type_add_interface_check
+check_func != NULL
+g_type_remove_interface_check
+gtype.c:2579: cannot remove unregistered class check func %p with data %p
+gtype.c
+g_type_register_fundamental
+static_quark_type_flags
+type_id > 0
+type_name != NULL
+finfo != NULL
+attempt to register fundamental type '%s' with invalid type id (%lu)
+cannot register instantiatable fundamental type '%s' as non-classed
+cannot register existing fundamental type '%s' (as '%s')
+g_type_register_static_simple
+class_size <= G_MAXUINT16
+instance_size <= G_MAXUINT16
+g_type_register_static
+parent_type > 0
+class finalizer specified for static type '%s'
+g_type_register_dynamic
+plugin != NULL
+g_type_add_interface_static
+G_TYPE_IS_INSTANTIATABLE (instance_type)
+g_type_parent (interface_type) == G_TYPE_INTERFACE
+g_type_add_interface_dynamic
+cannot retrieve class for invalid (unclassed) type '%s'
+g_type_class_unref
+g_class != NULL
+cannot unreference class of invalid (unclassed) type '%s'
+g_type_class_unref_uncached
+g_type_class_peek_parent
+gtype.c:3092: invalid class pointer '%p'
+g_type_interface_peek
+instance_class != NULL
+gtype.c:3125: invalid class pointer '%p'
+g_type_interface_peek_parent
+g_iface != NULL
+gtype.c:3161: invalid interface pointer '%p'
+cannot retrieve default vtable for invalid or non-interface type '%s'
+g_type_default_interface_unref
+cannot unreference invalid interface default vtable for '%s'
+g_type_name
+g_type_from_name
+g_type_get_qdata
+g_type_set_qdata
+quark != 0
+g_type_query
+g_type_interface_get_plugin
+node == NULL
+iface == NULL
+gtype.c:3912: attempt to look up plugin for invalid instance/interface type pair.
+invalid cast from '%s' to '%s'
+invalid uninstantiatable type '%s' in cast to '%s'
+invalid unclassed pointer in cast to '%s'
+invalid class cast from '%s' to '%s'
+invalid unclassed type '%s' in class cast to '%s'
+invalid class cast from (NULL) pointer to '%s'
+instance of invalid non-instantiatable type '%s'
+instance with invalid (NULL) class pointer
+invalid (NULL) pointer instance
+gtype.c:4221: type id '%lu' is invalid
+can't peek value table for type '%s' which is not currently referenced
+<NULL-instance>
+<NULL-class>
+g_type_init_with_debug_flags
+g_type_init_with_debug_flags() is no longer supported.  Use the GOBJECT_DEBUG environment variable.
+g_type_init
+GOBJECT_DEBUG
+objects
+signals
+-g-type-private--GTypeFlags
+-g-type-private--IFaceHolder
+-g-type-private--dependants-array
+void
+gobject_init_ctor
+type == G_TYPE_NONE
+GInterface
+type == G_TYPE_INTERFACE
+g_type_class_add_private
+private_size > 0
+private_size <= 0xffff
+cannot add private field to invalid (non-instantiatable) type '%s'
+g_type_class_add_private() called multiple times for the same type
+g_type_add_instance_private
+cannot use g_type_add_instance_private() with dynamic type '%s'
+g_type_class_adjust_private_offset
+private_size_or_offset != NULL
+*private_size_or_offset <= 0xffff
+g_type_add_instance_private() called multiple times for the same type
+g_type_instance_get_private
+g_type_class_get_instance_private_offset
+node->is_instantiatable
+g_type_class_get_instance_private_offset() called on class %s but it has no private data
+g_type_add_class_private
+cannot add class private field to invalid type '%s'
+g_type_add_class_private() called multiple times for the same type
+g_type_class_get_private
+klass != NULL
+class of invalid type '%s'
+attempt to retrieve private data for invalid type '%s'
+parent_node->data && NODE_REFCOUNT (parent_node) > 0
+g_type_instance_get_class_private() requires a prior call to g_type_add_class_private()
+can't happen
+type_add_flags_W
+(flags & ~TYPE_FLAG_MASK) == 0
+tagging type '%s' as abstract after class initialization
+type_iface_ensure_dflt_vtable_Wm
+iface->data
+static type '%s' unreferenced too often
+type_class_init_Wm
+node->is_classed && node->data && node->data->class.class_size && !node->data->class.class && node->data->class.init_state == UNINITIALIZED
+pnode != NULL
+entry->vtable != NULL
+type_iface_vtable_iface_init_Wm
+iface->data && entry && iholder && iholder->info
+entry->init_state == IFACE_INIT
+type_iface_peek_holder_L
+NODE_IS_IFACE (iface)
+type_iface_vtable_base_init_Wm
+iface->data && entry && entry->vtable == NULL && iholder && iholder->info
+type_iface_retrieve_holder_info_Wm
+iholder->plugin != NULL
+g_type_plugin_*
+%s(%p)%s'%s'
+%s()%s'%s'
+type_add_interface_Wm
+node->is_instantiatable && NODE_IS_IFACE (iface) && ((info && !plugin) || (!info && plugin))
+type_node_add_iface_entry_W
+num_entries < MAX_N_INTERFACES
+entry->vtable == NULL && entry->init_state == UNINITIALIZED
+interface type '%s' for type '%s' comes without initializer
+cannot add interfaces to invalid (non-instantiatable) type '%s'
+cannot add invalid (non-interface) type '%s' to type '%s'
+attempting to add an interface (%s) to class (%s) after class_init
+cannot add sub-interface '%s' to type '%s' which does not conform to super-interface '%s'
+cannot add interface type '%s' to type '%s', since type '%s' already conforms to interface
+cannot add interface type '%s' to type '%s' which does not conform to prerequisite '%s'
+plugin handle for type '%s' is NULL
+plugin pointer (%p) for type '%s' is invalid
+plugin for type '%s' has no complete_type_info() implementation
+plugin for type '%s' has no complete_interface_info() implementation
+type_node_new_W
+pnode
+pnode->n_supers < MAX_N_SUPERS
+pnode->n_children < MAX_N_CHILDREN
+type_node_any_new_W
+(type & TYPE_ID_MASK) == 0
+type_data_ref_Wm
+node->plugin != NULL
+NODE_REFCOUNT (node) > 0
+cannot derive type '%s' from invalid parent type '%s'
+cannot derive '%s' from non-derivable parent type '%s'
+cannot derive '%s' from non-fundamental parent type '%s'
+cannot handle uninitializable values of type '%s'
+missing 'value_copy()' for type '%s'
+one of 'collect_format' and 'collect_value()' is unspecified for type '%s'
+the '%s' specification for type '%s' is too long or invalid
+collect_format
+one of 'lcopy_format' and 'lcopy_value()' is unspecified for type '%s'
+lcopy_format
+ilqdp
+type_data_make_W
+node->data == NULL && info != NULL
+node->data->common.value_table != NULL
+check_type_info_I
+ftype <= G_TYPE_FUNDAMENTAL_MAX && !(ftype & TYPE_ID_MASK)
+cannot instantiate '%s', derived from non-instantiatable parent type '%s'
+cannot instantiate '%s' as non-instantiatable fundamental
+cannot create class for '%s', derived from non-classed parent type '%s'
+cannot create class for '%s' as non-classed fundamental
+specified interface size for type '%s' is smaller than 'GTypeInterface' size
+specified class size for type '%s' is smaller than 'GTypeClass' size
+specified class size for type '%s' is smaller than the parent type's '%s' class size
+specified instance size for type '%s' is smaller than 'GTypeInstance' size
+specified instance size for type '%s' is smaller than the parent type's '%s' instance size
+type_node_fundamental_new_W
+(ftype & TYPE_ID_MASK) == 0
+ftype <= G_TYPE_FUNDAMENTAL_MAX
+type name '%s' is too short
+type name '%s' contains invalid characters
+cannot register existing type '%s'
+type_iface_add_prerequisite_W
+NODE_IS_IFACE (iface) && IFACE_NODE_N_PREREQUISITES (iface) < MAX_N_PREREQUISITES && (prerequisite_node->is_instantiatable || NODE_IS_IFACE (prerequisite_node))
+GTypeModule
+g_type_module_set_name
+G_IS_TYPE_MODULE (module)
+g_type_module_use
+plugin '%s' failed to register type '%s'
+(unknown)
+g_type_module_unuse
+module->use_count > 0
+g_type_module_register_type
+module != NULL
+type_info != NULL
+Two different plugins tried to register '%s'.
+Type '%s' recreated with different parent type.
+(was '%s', now '%s')
+g_type_module_add_interface
+interface_info != NULL
+Interface '%s' for '%s' was previously registered statically or for a parent type.
+Two different plugins tried to register interface '%s' for '%s'.
+gtypemodule.c
+module_interface_info
+g_type_module_register_enum
+g_type_module_register_flags
+Fatal error - Could not reload previously loaded plugin '%s'
+gtypemodule.c:99: unsolicitated invocation of g_object_run_dispose() on GTypeModule
+GTypePlugin
+g_type_plugin_use
+G_IS_TYPE_PLUGIN (plugin)
+g_type_plugin_unuse
+g_type_plugin_complete_type_info
+value_table != NULL
+g_type_plugin_complete_interface_info
+g_value_init
+value != NULL
+%s: cannot initialize GValue with type '%s', the value has already been initialized as '%s'
+gvalue.c:179
+%s: cannot initialize GValue with type '%s', %s
+gvalue.c:184
+this type is abstract with regards to GValue use, use a more specific (derived) type
+this type has no GTypeValueTable implementation
+g_value_copy
+g_value_type_compatible (G_VALUE_TYPE (src_value), G_VALUE_TYPE (dest_value))
+g_value_reset
+g_value_unset
+g_value_fits_pointer
+g_value_peek_pointer
+g_value_fits_pointer (value) == TRUE
+g_value_set_instance
+g_value_type_compatible (G_TYPE_FROM_INSTANCE (instance), G_VALUE_TYPE (value))
+strcmp (value_table->collect_format, "p") == 0
+gvalue.c:365
+g_value_init_from_instance
+value != NULL && G_VALUE_TYPE(value) == 0
+gvalue.c:429
+g_value_register_transform_func
+transform_func != NULL
+g_value_type_transformable
+G_TYPE_IS_VALUE (src_type)
+G_TYPE_IS_VALUE (dest_type)
+g_value_type_compatible
+g_value_transform
+g_value_array_get_nth
+value_array != NULL
+index < value_array->n_values
+g_value_array_free
+g_value_array_copy
+g_value_array_prepend
+g_value_array_append
+g_value_array_insert
+index <= value_array->n_values
+g_value_array_remove
+g_value_array_sort
+compare_func != NULL
+g_value_array_sort_with_data
+value_array_grow
+n_values >= value_array->n_values
+%s | %u
+TRUE
+FALSE
+gchar
+gvaluetypes.c
+_g_value_types_init
+type == G_TYPE_CHAR
+guchar
+type == G_TYPE_UCHAR
+gboolean
+type == G_TYPE_BOOLEAN
+gint
+type == G_TYPE_INT
+guint
+type == G_TYPE_UINT
+glong
+type == G_TYPE_LONG
+gulong
+type == G_TYPE_ULONG
+gint64
+type == G_TYPE_INT64
+guint64
+type == G_TYPE_UINT64
+gfloat
+type == G_TYPE_FLOAT
+gdouble
+type == G_TYPE_DOUBLE
+gchararray
+type == G_TYPE_STRING
+gpointer
+type == G_TYPE_POINTER
+GVariant
+type == G_TYPE_VARIANT
+g_value_set_char
+G_VALUE_HOLDS_CHAR (value)
+g_value_get_char
+g_value_set_schar
+g_value_get_schar
+g_value_set_uchar
+G_VALUE_HOLDS_UCHAR (value)
+g_value_get_uchar
+g_value_set_boolean
+G_VALUE_HOLDS_BOOLEAN (value)
+g_value_get_boolean
+g_value_set_int
+G_VALUE_HOLDS_INT (value)
+g_value_get_int
+g_value_set_uint
+G_VALUE_HOLDS_UINT (value)
+g_value_get_uint
+g_value_set_long
+G_VALUE_HOLDS_LONG (value)
+g_value_get_long
+g_value_set_ulong
+G_VALUE_HOLDS_ULONG (value)
+g_value_get_ulong
+g_value_set_int64
+G_VALUE_HOLDS_INT64 (value)
+g_value_get_int64
+g_value_set_uint64
+G_VALUE_HOLDS_UINT64 (value)
+g_value_get_uint64
+g_value_set_float
+G_VALUE_HOLDS_FLOAT (value)
+g_value_get_float
+g_value_set_double
+G_VALUE_HOLDS_DOUBLE (value)
+g_value_get_double
+g_value_set_string
+G_VALUE_HOLDS_STRING (value)
+g_value_set_static_string
+g_value_take_string
+g_value_get_string
+g_value_dup_string
+g_value_set_pointer
+G_VALUE_HOLDS_POINTER (value)
+g_value_get_pointer
+GType
+g_value_set_gtype
+G_VALUE_HOLDS_GTYPE (value)
+g_value_get_gtype
+g_value_set_variant
+G_VALUE_HOLDS_VARIANT (value)
+g_value_take_variant
+g_value_get_variant
+g_value_dup_variant
+g_strdup_value_contents
+NULL
+"%s"
+((%s) %s)
+((%s*) %p)
+((gpointer) %p)
+g_pointer_type_register_static
+ invalidly modified type 
+ invalidly modified type 
+ invalidly modified type 
+ invalidly modified type 
+ `` 
+ @P 
+ @` 
+P P@ 
+`  PP0
+;0`p
+PP@@Pp
+`pPP
+"P000000000@000000000@0P00000000000@00000000pP@0000000000@00000000pP@
+00000`0`0@00000`0`0@0
+ @0 
+dyld_stub_binding_helper
+__dyld_func_lookup
+__g_atomic_array_init
+__g_atomic_array_copy
+_freelist_alloc
+__g_atomic_array_update
+_freelist_free
+_g_binding_class_intern_init
+_g_binding_init
+_g_binding_unbind_internal
+_g_warning
+_on_source_notify
+_bind_with_closures_transform_to
+_bind_with_closures_transform_from
+_bind_with_closures_free_func
+_weak_unbind
+_remove_binding_qdata
+_g_binding_class_init
+_g_binding_constructed
+_g_binding_set_property
+_g_binding_get_property
+_g_binding_finalize
+_default_transform_to
+_default_transform_from
+_add_binding_qdata
+_on_target_notify
+_default_invert_boolean_transform
+_default_transform
+__g_boxed_type_init
+_value_copy
+_value_free
+_gdate_copy
+_gstring_copy
+_gstring_free
+_pollfd_copy
+_boxed_proxy_value_init
+_boxed_proxy_value_free
+_boxed_proxy_value_copy
+_boxed_proxy_value_peek_pointer
+_boxed_proxy_collect_value
+_boxed_proxy_lcopy_value
+_value_meminit
+_g_warning
+_value_set_boxed_internal
+_closure_invoke_notifiers
+_closure_try_remove_inotify
+_g_warning
+_closure_try_remove_fnotify
+__g_closure_supports_invoke_va
+__g_closure_invoke_va
+__g_closure_set_va_marshal
+__g_closure_is_void
+_g_type_iface_meta_marshal
+_g_type_class_meta_marshal
+_g_closure_set_meta_va_marshal
+_g_type_iface_meta_marshalv
+_g_type_class_meta_marshalv
+_value_to_ffi_type
+_value_from_ffi_type
+_va_to_ffi_type
+__g_enum_types_init
+_value_flags_enum_init
+_value_flags_enum_copy_value
+_value_flags_enum_collect_value
+_value_flags_enum_lcopy_value
+_g_enum_class_init
+_g_flags_class_init
+__g_object_type_init
+_g_object_base_class_init
+_g_object_base_class_finalize
+_g_object_do_class_init
+_g_object_init
+_g_value_object_init
+_g_value_object_free_value
+_g_value_object_copy_value
+_g_value_object_peek_pointer
+_g_value_object_collect_value
+_g_value_object_lcopy_value
+_g_value_object_transform_value
+_g_error
+_install_property_internal
+_g_warning
+_g_object_notify_queue_freeze
+_g_object_notify_by_spec_internal
+_g_object_notify_queue_thaw
+_g_critical
+_g_object_new_internal
+_object_in_construction
+_consider_issuing_property_deprecation_warning
+_object_set_property
+_object_get_property
+_weak_refs_notify
+_toggle_refs_notify
+_object_remove_closure
+_destroy_closure_array
+_g_initially_unowned_class_intern_init
+_g_initially_unowned_init
+_g_initially_unowned_class_init
+_object_floating_flag_handler
+_get_notify_pspec
+_g_object_notify_queue_add
+_g_object_constructor
+_g_object_new_with_custom_constructor
+_g_object_constructed
+_g_object_notify_queue_free
+_g_object_do_set_property
+_g_object_do_get_property
+_g_object_real_dispose
+_g_object_finalize
+_g_object_dispatch_properties_changed
+_object_interface_check_properties
+__g_param_type_init
+_value_param_init
+_value_param_free_value
+_value_param_copy_value
+_value_param_peek_pointer
+_value_param_collect_value
+_value_param_lcopy_value
+_g_param_spec_class_base_init
+_g_param_spec_class_base_finalize
+_g_param_spec_class_init
+_g_param_spec_init
+_value_param_transform_value
+_is_canonical
+_g_warning
+_canonicalize_key
+_param_spec_pool_hash
+_param_spec_pool_equals
+_param_spec_ht_lookup
+_pool_list
+_pool_depth_list_for_interface
+_pool_depth_list
+_pspec_list_remove_overridden_and_redirected
+_pspec_compare_id
+_param_spec_generic_class_init
+_default_value_set_default
+_default_values_cmp
+_g_param_spec_get_private
+_g_param_spec_finalize
+__g_param_spec_types_init
+_param_char_init
+_param_char_set_default
+_param_char_validate
+_param_int_values_cmp
+_param_uchar_init
+_param_uchar_set_default
+_param_uchar_validate
+_param_uint_values_cmp
+_param_boolean_set_default
+_param_boolean_validate
+_param_int_init
+_param_int_set_default
+_param_int_validate
+_param_uint_init
+_param_uint_set_default
+_param_uint_validate
+_param_long_init
+_param_long_set_default
+_param_long_validate
+_param_long_values_cmp
+_param_ulong_init
+_param_ulong_set_default
+_param_ulong_validate
+_param_ulong_values_cmp
+_param_int64_init
+_param_int64_set_default
+_param_int64_validate
+_param_int64_values_cmp
+_param_uint64_init
+_param_uint64_set_default
+_param_uint64_validate
+_param_uint64_values_cmp
+_param_unichar_init
+_param_unichar_set_default
+_param_unichar_validate
+_param_unichar_values_cmp
+_param_enum_init
+_param_enum_finalize
+_param_enum_set_default
+_param_enum_validate
+_param_flags_init
+_param_flags_finalize
+_param_flags_set_default
+_param_flags_validate
+_param_float_init
+_param_float_set_default
+_param_float_validate
+_param_float_values_cmp
+_param_double_init
+_param_double_set_default
+_param_double_validate
+_param_double_values_cmp
+_param_string_init
+_param_string_finalize
+_param_string_set_default
+_param_string_validate
+_param_string_values_cmp
+_param_param_init
+_param_param_set_default
+_param_param_validate
+_param_pointer_values_cmp
+_param_boxed_init
+_param_boxed_set_default
+_param_boxed_validate
+_param_boxed_values_cmp
+_param_pointer_init
+_param_pointer_set_default
+_param_pointer_validate
+_param_value_array_init
+_param_value_array_finalize
+_param_value_array_set_default
+_param_value_array_validate
+_param_value_array_values_cmp
+_param_object_init
+_param_object_set_default
+_param_object_validate
+_param_object_values_cmp
+_param_override_init
+_param_override_finalize
+_param_override_set_default
+_param_override_validate
+_param_override_values_cmp
+_param_gtype_init
+_param_gtype_set_default
+_param_gtype_validate
+_param_gtype_values_cmp
+_param_variant_init
+_param_variant_finalize
+_param_variant_set_default
+_param_variant_validate
+_param_variant_values_cmp
+_value_array_ensure_size
+__g_signal_init
+_g_bsearch_array_create
+__g_signals_destroy
+_g_warning
+_type_debug_name
+_signal_destroy_R
+_LOOKUP_SIGNAL_NODE
+_emission_find
+_signal_finalize_hook
+_node_check_deprecated
+_signal_parse_name
+_signal_id_lookup
+_g_bsearch_array_get_nth
+_g_bsearch_array_insert
+_signal_add_class_closure
+_signal_find_class_closure
+_emission_find_innermost
+_handler_new
+_add_invalid_closure_notify
+_handler_insert
+_handler_lookup
+_g_error
+_remove_invalid_closure_notify
+_handler_unref_R
+_g_bsearch_array_free
+_handlers_find
+_handler_match_free1_R
+_signal_handlers_foreach_matched_R
+_node_update_single_va_closure
+_handler_list_lookup
+_signal_emit_unlocked_R
+_emission_push
+_handler_ref
+_accumulate
+_emission_pop
+_invalid_closure_notify
+_signal_lookup_closure
+_g_bsearch_array_lookup_fuzzy
+_handler_match_prepend
+_handler_lists_cmp
+_handler_list_ensure
+_class_closures_cmp
+_g_bsearch_array_grow
+_g_bsearch_array_get_index
+_g_bit_storage
+_signal_key_cmp
+_g_critical
+_closure_invalidated
+_source_closure_marshal_BOOLEAN__VOID
+_dummy_closure_marshal
+_closure_callback_get
+_io_watch_closure_callback
+_g_child_watch_closure_callback
+_g_unix_fd_source_closure_callback
+_source_closure_callback
+_lookup_type_node_I
+_g_warning
+_type_descriptive_name_I
+_type_get_qdata_L
+_type_iface_add_prerequisite_W
+_type_node_is_a_L
+_g_error
+_check_type_name_I
+_type_node_fundamental_new_W
+_type_add_flags_W
+_check_type_info_I
+_type_data_make_W
+_check_value_table_I
+_check_derivation_I
+_type_data_ref_Wm
+_type_node_new_W
+_check_plugin_U
+_check_add_interface_L
+_check_interface_info_I
+_type_add_interface_Wm
+_type_data_ref_U
+_type_class_init_Wm
+_type_data_unref_U
+_type_lookup_iface_vtable_I
+_type_iface_ensure_dflt_vtable_Wm
+_type_node_conforms_to_U
+_type_set_qdata_W
+_type_node_fundamental_info_I
+_type_check_is_value_type_U
+__g_type_boxed_copy
+__g_type_boxed_free
+__g_type_boxed_init
+_g_message
+_gobject_init_ctor
+_type_node_check_conformities_UorL
+_type_lookup_iface_entry_L
+_type_lookup_prerequisite_L
+_lookup_iface_entry_I
+_type_iface_vtable_base_init_Wm
+_type_iface_vtable_iface_init_Wm
+_type_iface_peek_holder_L
+_type_iface_retrieve_holder_info_Wm
+_type_node_add_iface_entry_W
+_iface_node_has_available_offset_L
+_iface_node_set_offset_L
+_find_free_iface_offset_L
+_find_conforming_child_type_L
+_type_node_any_new_W
+_check_collect_format_I
+_g_type_module_class_init
+_g_type_module_iface_init
+_g_warning
+_g_type_module_find_type_info
+_g_type_module_find_interface_info
+_g_type_module_use_plugin
+_g_type_module_complete_type_info
+_g_type_module_complete_interface_info
+_g_type_module_dispose
+_g_type_module_finalize
+__g_value_c_init
+_g_bsearch_array_create
+_value_meminit
+_g_warning
+_g_bsearch_array_replace
+_transform_func_lookup
+_g_bsearch_array_lookup_fuzzy
+_g_bsearch_array_insert
+_g_bsearch_array_grow
+_g_bsearch_array_get_index
+_g_bit_storage
+_transform_entries_cmp
+_value_array_grow
+_value_array_shrink
+__g_value_transforms_init
+_value_transform_memcpy_data0
+_value_transform_int_u8
+_value_transform_int_bool
+_value_transform_int_uint
+_value_transform_int_long
+_value_transform_int_ulong
+_value_transform_int_int64
+_value_transform_int_uint64
+_value_transform_int_float
+_value_transform_int_double
+_value_transform_int_string
+_value_transform_uint_s8
+_value_transform_uint_bool
+_value_transform_uint_int
+_value_transform_uint_long
+_value_transform_uint_ulong
+_value_transform_uint_int64
+_value_transform_uint_uint64
+_value_transform_uint_float
+_value_transform_uint_double
+_value_transform_uint_string
+_value_transform_int_s8
+_value_transform_bool_string
+_value_transform_uint_u8
+_value_transform_long_s8
+_value_transform_long_u8
+_value_transform_long_bool
+_value_transform_long_int
+_value_transform_long_uint
+_value_transform_long_ulong
+_value_transform_long_int64
+_value_transform_long_uint64
+_value_transform_long_float
+_value_transform_long_double
+_value_transform_long_string
+_value_transform_ulong_s8
+_value_transform_ulong_u8
+_value_transform_ulong_bool
+_value_transform_ulong_int
+_value_transform_ulong_uint
+_value_transform_ulong_long
+_value_transform_ulong_int64
+_value_transform_ulong_uint64
+_value_transform_ulong_float
+_value_transform_ulong_double
+_value_transform_ulong_string
+_value_transform_int64_s8
+_value_transform_int64_u8
+_value_transform_int64_bool
+_value_transform_int64_int
+_value_transform_int64_uint
+_value_transform_int64_long
+_value_transform_int64_ulong
+_value_transform_int64_uint64
+_value_transform_int64_float
+_value_transform_int64_double
+_value_transform_int64_string
+_value_transform_uint64_s8
+_value_transform_uint64_u8
+_value_transform_uint64_bool
+_value_transform_uint64_int
+_value_transform_uint64_uint
+_value_transform_uint64_long
+_value_transform_uint64_ulong
+_value_transform_uint64_int64
+_value_transform_uint64_float
+_value_transform_uint64_double
+_value_transform_uint64_string
+_value_transform_enum_string
+_value_transform_flags_string
+_value_transform_float_s8
+_value_transform_float_u8
+_value_transform_float_int
+_value_transform_float_uint
+_value_transform_float_long
+_value_transform_float_ulong
+_value_transform_float_int64
+_value_transform_float_uint64
+_value_transform_float_double
+_value_transform_float_string
+_value_transform_double_s8
+_value_transform_double_u8
+_value_transform_double_int
+_value_transform_double_uint
+_value_transform_double_long
+_value_transform_double_ulong
+_value_transform_double_int64
+_value_transform_double_uint64
+_value_transform_double_float
+_value_transform_double_string
+_value_transform_string_string
+__g_value_types_init
+_value_init_long0
+_value_copy_long0
+_value_collect_int
+_value_lcopy_char
+_value_lcopy_boolean
+_value_lcopy_int
+_value_collect_long
+_value_lcopy_long
+_value_init_int64
+_value_copy_int64
+_value_collect_int64
+_value_lcopy_int64
+_value_init_float
+_value_copy_float
+_value_collect_float
+_value_lcopy_float
+_value_init_double
+_value_copy_double
+_value_collect_double
+_value_lcopy_double
+_value_init_string
+_value_free_string
+_value_copy_string
+_value_peek_pointer0
+_value_collect_string
+_value_lcopy_string
+_value_init_pointer
+_value_copy_pointer
+_value_collect_pointer
+_value_lcopy_pointer
+_value_free_variant
+_value_copy_variant
+_value_collect_variant
+_value_lcopy_variant
+_initialize_aggregate
+_examine_argument
+_classify_argument
+_merge_classes
+__g_boxed_type_init.info
+__g_boxed_type_init.finfo
+__g_enum_types_init.finfo
+__g_object_type_init.finfo
+__g_param_type_init.finfo
+_type_iface_retrieve_holder_info_Wm._action
+_type_iface_retrieve_holder_info_Wm._action107
+_type_data_ref_Wm._action
+_type_data_ref_Wm._action127
+_type_data_make_W.zero_vtable
+_check_type_name_I.extra_chars
+_g_type_plugin_get_type.type_plugin_info
+__g_value_types_init.finfo
+_g_pointer_type_register_static.type_info
+_g_binding_flags_get_type.values
+_g_boxed_type_register_static.vtable
+__g_enum_types_init.flags_enum_value_table
+__g_object_type_init.value_table
+__g_param_type_init.param_value_table
+__g_param_type_init.param_spec_info
+__g_param_spec_types_init.pspec_info
+__g_param_spec_types_init.pspec_info4
+__g_param_spec_types_init.pspec_info7
+__g_param_spec_types_init.pspec_info10
+__g_param_spec_types_init.pspec_info13
+__g_param_spec_types_init.pspec_info16
+__g_param_spec_types_init.pspec_info19
+__g_param_spec_types_init.pspec_info22
+__g_param_spec_types_init.pspec_info25
+__g_param_spec_types_init.pspec_info28
+__g_param_spec_types_init.pspec_info31
+__g_param_spec_types_init.pspec_info34
+__g_param_spec_types_init.pspec_info37
+__g_param_spec_types_init.pspec_info40
+__g_param_spec_types_init.pspec_info43
+__g_param_spec_types_init.pspec_info46
+__g_param_spec_types_init.pspec_info49
+__g_param_spec_types_init.pspec_info52
+__g_param_spec_types_init.pspec_info58
+__g_param_spec_types_init.pspec_info61
+__g_param_spec_types_init.pspec_info67
+_g_signal_key_bconfig
+_g_io_condition_get_type.values
+_g_type_module_get_type.type_module_info
+_g_type_module_get_type.iface_info
+__g_value_types_init.value_table
+__g_value_types_init.value_table8
+__g_value_types_init.value_table11
+__g_value_types_init.value_table16
+__g_value_types_init.value_table22
+__g_value_types_init.value_table28
+__g_value_types_init.value_table32
+__g_value_types_init.value_table35
+__g_value_types_init.value_table38
+__g_value_types_init.value_table41
+_floating_flag_handler
+__g_param_spec_types_init.pspec_info55
+_g_signal_add_emission_hook.seq_hook_id
+_g_handler_sequential_number
+_g_signal_hlbsa_bconfig
+_g_class_closure_bconfig
+_closure_callback_funcs
+_static_fundamental_next
+_transform_bconfig
+_g__array_lock
+_freelist
+_g_binding_flags_get_type.g_define_type_id__volatile
+_g_binding_get_type.g_define_type_id__volatile
+_quark_gbinding
+_g_binding_parent_class
+_GBinding_private_offset
+_g_closure_get_type.g_define_type_id__volatile
+_g_value_get_type.g_define_type_id__volatile
+_g_value_array_get_type.g_define_type_id__volatile
+_g_date_get_type.g_define_type_id__volatile
+_g_gstring_get_type.g_define_type_id__volatile
+_g_hash_table_get_type.g_define_type_id__volatile
+_g_array_get_type.g_define_type_id__volatile
+_g_ptr_array_get_type.g_define_type_id__volatile
+_g_byte_array_get_type.g_define_type_id__volatile
+_g_bytes_get_type.g_define_type_id__volatile
+_g_regex_get_type.g_define_type_id__volatile
+_g_match_info_get_type.g_define_type_id__volatile
+_g_variant_type_get_gtype.g_define_type_id__volatile
+_g_variant_builder_get_type.g_define_type_id__volatile
+_g_variant_dict_get_type.g_define_type_id__volatile
+_g_error_get_type.g_define_type_id__volatile
+_g_date_time_get_type.g_define_type_id__volatile
+_g_time_zone_get_type.g_define_type_id__volatile
+_g_key_file_get_type.g_define_type_id__volatile
+_g_mapped_file_get_type.g_define_type_id__volatile
+_g_main_loop_get_type.g_define_type_id__volatile
+_g_main_context_get_type.g_define_type_id__volatile
+_g_source_get_type.g_define_type_id__volatile
+_g_pollfd_get_type.g_define_type_id__volatile
+_g_markup_parse_context_get_type.g_define_type_id__volatile
+_g_thread_get_type.g_define_type_id__volatile
+_g_checksum_get_type.g_define_type_id__volatile
+_g_strv_get_type.g_define_type_id__volatile
+__g_enum_types_init.initialized
+__g_object_type_init.initialized
+_pspec_pool
+_g__weak_refs_mutex_lock
+_quark_weak_refs
+_g__toggle_refs_mutex_lock
+_quark_toggle_refs
+_quark_weak_locations
+_weak_locations_lock
+_quark_closure_array
+_g__closure_array_mutex_lock
+_g_initially_unowned_get_type.g_define_type_id__volatile
+_g_initially_unowned_parent_class
+_GInitiallyUnowned_private_offset
+_g__notify_lock_lock
+_consider_issuing_property_deprecation_warning.already_warned_table
+_consider_issuing_property_deprecation_warning.enable_diagnostic
+_consider_issuing_property_deprecation_warning.already_warned_lock
+_quark_in_construction
+_quark_notify_queue
+_gobject_signals
+_g_param_private_offset
+_g_param_spec_pool_new.init_mutex
+_g__g_signal_mutex_lock
+_g_n_signal_nodes
+_g_handler_list_bsa_ht
+_g_signal_key_bsa
+_g_signal_nodes
+_g_restart_emissions
+_g_recursive_emissions
+_node_check_deprecated.g_enable_diagnostic
+_g_io_channel_get_type.g_define_type_id__volatile
+_g_io_condition_get_type.etype
+_type_registration_serial
+_type_rw_lock
+_static_quark_iface_holder
+_static_n_class_cache_funcs
+_static_class_cache_funcs
+_static_n_iface_check_funcs
+_static_iface_check_funcs
+_static_quark_type_flags
+_class_init_rec_mutex
+_static_type_nodes_ht
+_static_quark_dependants_array
+_static_fundamental_type_nodes
+_g_type_module_get_type.type_module_type
+_parent_class
+_g_type_plugin_get_type.type_plugin_type
+_transform_array
+_g_gtype_get_type.g_define_type_id__volatile
+__g_type_debug_flags
+_ffi_call
+_ffi_call_unix64
+_ffi_closure_unix64
+_ffi_closure_unix64_inner
+_ffi_prep_cif
+_ffi_prep_cif_core
+_ffi_prep_cif_machdep
+_ffi_prep_cif_var
+_ffi_prep_closure
+_ffi_prep_closure_loc
+_ffi_type_double
+_ffi_type_float
+_ffi_type_longdouble
+_ffi_type_pointer
+_ffi_type_sint16
+_ffi_type_sint32
+_ffi_type_sint64
+_ffi_type_sint8
+_ffi_type_uint16
+_ffi_type_uint32
+_ffi_type_uint64
+_ffi_type_uint8
+_ffi_type_void
+_g_array_get_type
+_g_binding_flags_get_type
+_g_binding_get_flags
+_g_binding_get_source
+_g_binding_get_source_property
+_g_binding_get_target
+_g_binding_get_target_property
+_g_binding_get_type
+_g_binding_unbind
+_g_boxed_copy
+_g_boxed_free
+_g_boxed_type_register_static
+_g_byte_array_get_type
+_g_bytes_get_type
+_g_cclosure_marshal_BOOLEAN__BOXED_BOXED
+_g_cclosure_marshal_BOOLEAN__BOXED_BOXEDv
+_g_cclosure_marshal_BOOLEAN__FLAGS
+_g_cclosure_marshal_BOOLEAN__FLAGSv
+_g_cclosure_marshal_STRING__OBJECT_POINTER
+_g_cclosure_marshal_STRING__OBJECT_POINTERv
+_g_cclosure_marshal_VOID__BOOLEAN
+_g_cclosure_marshal_VOID__BOOLEANv
+_g_cclosure_marshal_VOID__BOXED
+_g_cclosure_marshal_VOID__BOXEDv
+_g_cclosure_marshal_VOID__CHAR
+_g_cclosure_marshal_VOID__CHARv
+_g_cclosure_marshal_VOID__DOUBLE
+_g_cclosure_marshal_VOID__DOUBLEv
+_g_cclosure_marshal_VOID__ENUM
+_g_cclosure_marshal_VOID__ENUMv
+_g_cclosure_marshal_VOID__FLAGS
+_g_cclosure_marshal_VOID__FLAGSv
+_g_cclosure_marshal_VOID__FLOAT
+_g_cclosure_marshal_VOID__FLOATv
+_g_cclosure_marshal_VOID__INT
+_g_cclosure_marshal_VOID__INTv
+_g_cclosure_marshal_VOID__LONG
+_g_cclosure_marshal_VOID__LONGv
+_g_cclosure_marshal_VOID__OBJECT
+_g_cclosure_marshal_VOID__OBJECTv
+_g_cclosure_marshal_VOID__PARAM
+_g_cclosure_marshal_VOID__PARAMv
+_g_cclosure_marshal_VOID__POINTER
+_g_cclosure_marshal_VOID__POINTERv
+_g_cclosure_marshal_VOID__STRING
+_g_cclosure_marshal_VOID__STRINGv
+_g_cclosure_marshal_VOID__UCHAR
+_g_cclosure_marshal_VOID__UCHARv
+_g_cclosure_marshal_VOID__UINT
+_g_cclosure_marshal_VOID__UINT_POINTER
+_g_cclosure_marshal_VOID__UINT_POINTERv
+_g_cclosure_marshal_VOID__UINTv
+_g_cclosure_marshal_VOID__ULONG
+_g_cclosure_marshal_VOID__ULONGv
+_g_cclosure_marshal_VOID__VARIANT
+_g_cclosure_marshal_VOID__VARIANTv
+_g_cclosure_marshal_VOID__VOID
+_g_cclosure_marshal_VOID__VOIDv
+_g_cclosure_marshal_generic
+_g_cclosure_marshal_generic_va
+_g_cclosure_new
+_g_cclosure_new_object
+_g_cclosure_new_object_swap
+_g_cclosure_new_swap
+_g_checksum_get_type
+_g_clear_object
+_g_closure_add_finalize_notifier
+_g_closure_add_invalidate_notifier
+_g_closure_add_marshal_guards
+_g_closure_get_type
+_g_closure_invalidate
+_g_closure_invoke
+_g_closure_new_object
+_g_closure_new_simple
+_g_closure_ref
+_g_closure_remove_finalize_notifier
+_g_closure_remove_invalidate_notifier
+_g_closure_set_marshal
+_g_closure_set_meta_marshal
+_g_closure_sink
+_g_closure_unref
+_g_date_get_type
+_g_date_time_get_type
+_g_enum_complete_type_info
+_g_enum_get_value
+_g_enum_get_value_by_name
+_g_enum_get_value_by_nick
+_g_enum_register_static
+_g_error_get_type
+_g_flags_complete_type_info
+_g_flags_get_first_value
+_g_flags_get_value_by_name
+_g_flags_get_value_by_nick
+_g_flags_register_static
+_g_gstring_get_type
+_g_gtype_get_type
+_g_hash_table_get_type
+_g_initially_unowned_get_type
+_g_io_channel_get_type
+_g_io_condition_get_type
+_g_key_file_get_type
+_g_main_context_get_type
+_g_main_loop_get_type
+_g_mapped_file_get_type
+_g_markup_parse_context_get_type
+_g_match_info_get_type
+_g_object_add_toggle_ref
+_g_object_add_weak_pointer
+_g_object_bind_property
+_g_object_bind_property_full
+_g_object_bind_property_with_closures
+_g_object_class_find_property
+_g_object_class_install_properties
+_g_object_class_install_property
+_g_object_class_list_properties
+_g_object_class_override_property
+_g_object_compat_control
+_g_object_connect
+_g_object_disconnect
+_g_object_dup_data
+_g_object_dup_qdata
+_g_object_force_floating
+_g_object_freeze_notify
+_g_object_get
+_g_object_get_data
+_g_object_get_property
+_g_object_get_qdata
+_g_object_get_type
+_g_object_get_valist
+_g_object_interface_find_property
+_g_object_interface_install_property
+_g_object_interface_list_properties
+_g_object_is_floating
+_g_object_new
+_g_object_new_valist
+_g_object_newv
+_g_object_notify
+_g_object_notify_by_pspec
+_g_object_ref
+_g_object_ref_sink
+_g_object_remove_toggle_ref
+_g_object_remove_weak_pointer
+_g_object_replace_data
+_g_object_replace_qdata
+_g_object_run_dispose
+_g_object_set
+_g_object_set_data
+_g_object_set_data_full
+_g_object_set_property
+_g_object_set_qdata
+_g_object_set_qdata_full
+_g_object_set_valist
+_g_object_steal_data
+_g_object_steal_qdata
+_g_object_thaw_notify
+_g_object_unref
+_g_object_watch_closure
+_g_object_weak_ref
+_g_object_weak_unref
+_g_param_spec_boolean
+_g_param_spec_boxed
+_g_param_spec_char
+_g_param_spec_double
+_g_param_spec_enum
+_g_param_spec_flags
+_g_param_spec_float
+_g_param_spec_get_blurb
+_g_param_spec_get_default_value
+_g_param_spec_get_name
+_g_param_spec_get_nick
+_g_param_spec_get_qdata
+_g_param_spec_get_redirect_target
+_g_param_spec_gtype
+_g_param_spec_int
+_g_param_spec_int64
+_g_param_spec_internal
+_g_param_spec_long
+_g_param_spec_object
+_g_param_spec_override
+_g_param_spec_param
+_g_param_spec_pointer
+_g_param_spec_pool_insert
+_g_param_spec_pool_list
+_g_param_spec_pool_list_owned
+_g_param_spec_pool_lookup
+_g_param_spec_pool_new
+_g_param_spec_pool_remove
+_g_param_spec_ref
+_g_param_spec_ref_sink
+_g_param_spec_set_qdata
+_g_param_spec_set_qdata_full
+_g_param_spec_sink
+_g_param_spec_steal_qdata
+_g_param_spec_string
+_g_param_spec_types
+_g_param_spec_uchar
+_g_param_spec_uint
+_g_param_spec_uint64
+_g_param_spec_ulong
+_g_param_spec_unichar
+_g_param_spec_unref
+_g_param_spec_value_array
+_g_param_spec_variant
+_g_param_type_register_static
+_g_param_value_convert
+_g_param_value_defaults
+_g_param_value_set_default
+_g_param_value_validate
+_g_param_values_cmp
+_g_pointer_type_register_static
+_g_pollfd_get_type
+_g_ptr_array_get_type
+_g_regex_get_type
+_g_signal_accumulator_first_wins
+_g_signal_accumulator_true_handled
+_g_signal_add_emission_hook
+_g_signal_chain_from_overridden
+_g_signal_chain_from_overridden_handler
+_g_signal_connect_closure
+_g_signal_connect_closure_by_id
+_g_signal_connect_data
+_g_signal_connect_object
+_g_signal_emit
+_g_signal_emit_by_name
+_g_signal_emit_valist
+_g_signal_emitv
+_g_signal_get_invocation_hint
+_g_signal_handler_block
+_g_signal_handler_disconnect
+_g_signal_handler_find
+_g_signal_handler_is_connected
+_g_signal_handler_unblock
+_g_signal_handlers_block_matched
+_g_signal_handlers_destroy
+_g_signal_handlers_disconnect_matched
+_g_signal_handlers_unblock_matched
+_g_signal_has_handler_pending
+_g_signal_list_ids
+_g_signal_lookup
+_g_signal_name
+_g_signal_new
+_g_signal_new_class_handler
+_g_signal_new_valist
+_g_signal_newv
+_g_signal_override_class_closure
+_g_signal_override_class_handler
+_g_signal_parse_name
+_g_signal_query
+_g_signal_remove_emission_hook
+_g_signal_set_va_marshaller
+_g_signal_stop_emission
+_g_signal_stop_emission_by_name
+_g_signal_type_cclosure_new
+_g_source_get_type
+_g_source_set_closure
+_g_source_set_dummy_callback
+_g_strdup_value_contents
+_g_strv_get_type
+_g_thread_get_type
+_g_time_zone_get_type
+_g_type_add_class_cache_func
+_g_type_add_class_private
+_g_type_add_instance_private
+_g_type_add_interface_check
+_g_type_add_interface_dynamic
+_g_type_add_interface_static
+_g_type_check_class_cast
+_g_type_check_class_is_a
+_g_type_check_instance
+_g_type_check_instance_cast
+_g_type_check_instance_is_a
+_g_type_check_instance_is_fundamentally_a
+_g_type_check_is_value_type
+_g_type_check_value
+_g_type_check_value_holds
+_g_type_children
+_g_type_class_add_private
+_g_type_class_adjust_private_offset
+_g_type_class_get_instance_private_offset
+_g_type_class_get_private
+_g_type_class_peek
+_g_type_class_peek_parent
+_g_type_class_peek_static
+_g_type_class_ref
+_g_type_class_unref
+_g_type_class_unref_uncached
+_g_type_create_instance
+_g_type_default_interface_peek
+_g_type_default_interface_ref
+_g_type_default_interface_unref
+_g_type_depth
+_g_type_ensure
+_g_type_free_instance
+_g_type_from_name
+_g_type_fundamental
+_g_type_fundamental_next
+_g_type_get_plugin
+_g_type_get_qdata
+_g_type_get_type_registration_serial
+_g_type_init
+_g_type_init_with_debug_flags
+_g_type_instance_get_private
+_g_type_interface_add_prerequisite
+_g_type_interface_get_plugin
+_g_type_interface_peek
+_g_type_interface_peek_parent
+_g_type_interface_prerequisites
+_g_type_interfaces
+_g_type_is_a
+_g_type_module_add_interface
+_g_type_module_get_type
+_g_type_module_register_enum
+_g_type_module_register_flags
+_g_type_module_register_type
+_g_type_module_set_name
+_g_type_module_unuse
+_g_type_module_use
+_g_type_name
+_g_type_name_from_class
+_g_type_name_from_instance
+_g_type_next_base
+_g_type_parent
+_g_type_plugin_complete_interface_info
+_g_type_plugin_complete_type_info
+_g_type_plugin_get_type
+_g_type_plugin_unuse
+_g_type_plugin_use
+_g_type_qname
+_g_type_query
+_g_type_register_dynamic
+_g_type_register_fundamental
+_g_type_register_static
+_g_type_register_static_simple
+_g_type_remove_class_cache_func
+_g_type_remove_interface_check
+_g_type_set_qdata
+_g_type_test_flags
+_g_type_value_table_peek
+_g_value_array_append
+_g_value_array_copy
+_g_value_array_free
+_g_value_array_get_nth
+_g_value_array_get_type
+_g_value_array_insert
+_g_value_array_new
+_g_value_array_prepend
+_g_value_array_remove
+_g_value_array_sort
+_g_value_array_sort_with_data
+_g_value_copy
+_g_value_dup_boxed
+_g_value_dup_object
+_g_value_dup_param
+_g_value_dup_string
+_g_value_dup_variant
+_g_value_fits_pointer
+_g_value_get_boolean
+_g_value_get_boxed
+_g_value_get_char
+_g_value_get_double
+_g_value_get_enum
+_g_value_get_flags
+_g_value_get_float
+_g_value_get_gtype
+_g_value_get_int
+_g_value_get_int64
+_g_value_get_long
+_g_value_get_object
+_g_value_get_param
+_g_value_get_pointer
+_g_value_get_schar
+_g_value_get_string
+_g_value_get_type
+_g_value_get_uchar
+_g_value_get_uint
+_g_value_get_uint64
+_g_value_get_ulong
+_g_value_get_variant
+_g_value_init
+_g_value_init_from_instance
+_g_value_peek_pointer
+_g_value_register_transform_func
+_g_value_reset
+_g_value_set_boolean
+_g_value_set_boxed
+_g_value_set_boxed_take_ownership
+_g_value_set_char
+_g_value_set_double
+_g_value_set_enum
+_g_value_set_flags
+_g_value_set_float
+_g_value_set_gtype
+_g_value_set_instance
+_g_value_set_int
+_g_value_set_int64
+_g_value_set_long
+_g_value_set_object
+_g_value_set_object_take_ownership
+_g_value_set_param
+_g_value_set_param_take_ownership
+_g_value_set_pointer
+_g_value_set_schar
+_g_value_set_static_boxed
+_g_value_set_static_string
+_g_value_set_string
+_g_value_set_string_take_ownership
+_g_value_set_uchar
+_g_value_set_uint
+_g_value_set_uint64
+_g_value_set_ulong
+_g_value_set_variant
+_g_value_take_boxed
+_g_value_take_object
+_g_value_take_param
+_g_value_take_string
+_g_value_take_variant
+_g_value_transform
+_g_value_type_compatible
+_g_value_type_transformable
+_g_value_unset
+_g_variant_builder_get_type
+_g_variant_dict_get_type
+_g_variant_get_gtype
+_g_variant_type_get_gtype
+_g_weak_ref_clear
+_g_weak_ref_get
+_g_weak_ref_init
+_g_weak_ref_set
+___memcpy_chk
+___memmove_chk
+___memset_chk
+___stack_chk_fail
+___stack_chk_guard
+___strcat_chk
+___strncpy_chk
+_abort
+_exit
+_g_array_append_vals
+_g_array_free
+_g_array_new
+_g_array_ref
+_g_array_unref
+_g_assertion_message_expr
+_g_byte_array_ref
+_g_byte_array_unref
+_g_bytes_ref
+_g_bytes_unref
+_g_checksum_copy
+_g_checksum_free
+_g_child_watch_funcs
+_g_datalist_clear
+_g_datalist_get_data
+_g_datalist_get_flags
+_g_datalist_id_dup_data
+_g_datalist_id_get_data
+_g_datalist_id_remove_no_notify
+_g_datalist_id_replace_data
+_g_datalist_id_set_data_full
+_g_datalist_set_flags
+_g_datalist_unset_flags
+_g_date_free
+_g_date_get_julian
+_g_date_new_julian
+_g_date_time_ref
+_g_date_time_unref
+_g_direct_hash
+_g_error_copy
+_g_error_free
+_g_free
+_g_getenv
+_g_hash_table_add
+_g_hash_table_contains
+_g_hash_table_foreach
+_g_hash_table_insert
+_g_hash_table_lookup
+_g_hash_table_new
+_g_hash_table_ref
+_g_hash_table_remove
+_g_hash_table_unref
+_g_hook_alloc
+_g_hook_destroy
+_g_hook_destroy_link
+_g_hook_first_valid
+_g_hook_insert_before
+_g_hook_list_clear
+_g_hook_list_init
+_g_hook_next_valid
+_g_idle_funcs
+_g_intern_static_string
+_g_intern_string
+_g_io_channel_ref
+_g_io_channel_unref
+_g_io_watch_funcs
+_g_key_file_ref
+_g_key_file_unref
+_g_list_free
+_g_list_prepend
+_g_logv
+_g_main_context_ref
+_g_main_context_unref
+_g_main_loop_ref
+_g_main_loop_unref
+_g_malloc
+_g_malloc0
+_g_malloc0_n
+_g_malloc_n
+_g_mapped_file_ref
+_g_mapped_file_unref
+_g_markup_parse_context_ref
+_g_markup_parse_context_unref
+_g_match_info_ref
+_g_match_info_unref
+_g_memdup
+_g_mutex_lock
+_g_mutex_unlock
+_g_nullify_pointer
+_g_once_init_enter
+_g_once_init_leave
+_g_parse_debug_string
+_g_ptr_array_ref
+_g_ptr_array_unref
+_g_qsort_with_data
+_g_quark_from_static_string
+_g_quark_from_string
+_g_quark_to_string
+_g_quark_try_string
+_g_realloc
+_g_realloc_n
+_g_rec_mutex_lock
+_g_rec_mutex_unlock
+_g_regex_ref
+_g_regex_unref
+_g_return_if_fail_warning
+_g_rw_lock_reader_lock
+_g_rw_lock_reader_unlock
+_g_rw_lock_writer_lock
+_g_rw_lock_writer_unlock
+_g_slice_alloc
+_g_slice_alloc0
+_g_slice_free1
+_g_slist_append
+_g_slist_copy
+_g_slist_delete_link
+_g_slist_find
+_g_slist_free
+_g_slist_free_1
+_g_slist_length
+_g_slist_prepend
+_g_slist_remove
+_g_slist_sort
+_g_source_destroy
+_g_source_ref
+_g_source_set_callback_indirect
+_g_source_unref
+_g_str_equal
+_g_str_hash
+_g_strcmp0
+_g_strconcat
+_g_strdelimit
+_g_strdup
+_g_strdup_printf
+_g_strdupv
+_g_strescape
+_g_strfreev
+_g_string_append
+_g_string_append_printf
+_g_string_free
+_g_string_new
+_g_string_new_len
+_g_thread_ref
+_g_thread_unref
+_g_time_zone_ref
+_g_time_zone_unref
+_g_timeout_funcs
+_g_unichar_validate
+_g_unix_fd_source_funcs
+_g_unix_signal_funcs
+_g_variant_builder_ref
+_g_variant_builder_unref
+_g_variant_dict_ref
+_g_variant_dict_unref
+_g_variant_is_of_type
+_g_variant_ref_sink
+_g_variant_take_ref
+_g_variant_type_copy
+_g_variant_type_free
+_g_variant_unref
+_memcmp
+_memcpy
+_memset
+_qsort
+_strchr
+_strcmp
+_strlen
+_strncmp

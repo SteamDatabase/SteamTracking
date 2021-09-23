@@ -1,0 +1,6891 @@
+__TEXT
+__text
+__TEXT
+__symbol_stub
+__TEXT
+__stub_helper
+__TEXT
+__cstring
+__TEXT
+__const
+__TEXT
+__unwind_info
+__TEXT
+__DATA
+__dyld
+__DATA
+__nl_symbol_ptr
+__DATA
+__la_symbol_ptr
+__DATA
+__const
+__DATA
+__data
+__DATA
+__bss
+__DATA
+__LINKEDIT
+@loader_path/libpango-1.0.dylib
+@loader_path/libglib-2.0.dylib
+@loader_path/libgmodule-2.0.dylib
+@loader_path/libgobject-2.0.dylib
+@loader_path/libgthread-2.0.dylib
+/usr/lib/libSystem.B.dylib
+/usr/lib/libgcc_s.1.dylib
+^_[]
+<^_[]
+<^_[]
+ffffff.
+L^_[]
+^_[]
+fffff.
+<^_[]
+ffffff.
+\^_[]
++JL)
+@x;E
+@L;E
+@x;E
+@L;E
+ffffff.
+fff.
+@4;E
+fff.
+L^_[]
+<^_[]
+ffffff.
+ ^[]
+fffff.
+ ^[]
+L^_[]
+ ^[]
+L^_[]
+L^_[]
+ffffff.
+^_[]
+L^_[]
+ffffff.
+ffff.
+,^_[]
+|^_[]
+,^_[]
+,^_[]
+,^_[]
+L^_[]
+ffffff.
+ ^_]
+fff.
+<^_[]
+ffffff.
+L^_[]
+ffffff.
+L^_[]
+ffffff.
+fff.
+<^_[]
+0^_]
+fffff.
+<^_[]
+ffffff.
+^_[]
+,^_[]
+\^_[]
+l^_[]
+|^_[]
+0^_]
+@^_]
+ffff.
+ffff.
+fffff.
+L^_[]
+fff.
+ffffff.
+fffff.
+ffff.
+@^_]
+^_[]
+fff.
+ffffff.
+ffffff.
+fff.
+fffff.
+fff.
+fffff.
+ ^_]
+fffff.
+fffff.
+ ^_]
+ffff.
+ ^_]
+fffff.
+ ^[]
+fffff.
+ ^_]
+fffff.
+ ^_]
+fffff.
+fff.
+fffff.
+fffff.
+ffffff.
+fff.
+<^_[]
+ ^_]
+fffff.
+<^_[]
+ffffff.
+fffff.
+L^_[]
+\^_[]
+ffff.
+P^_]
+fff.
+fff.
+ffffff.
+fffff.
+fffff.
+-?(@
+-?( 
+-@( 
+-@(@
+^_[]
+<^_[]
+ffffff.
+ffff.
+ ^_]
+<^_[]
+L^_[]
+ffffff.
+ffff.
+ffff.
+fffff.
+fffff.
+ffffff.
+^_[]
+fffff.
+\^_[]
+l^_[]
+0^_]
+L^_[]
+fff.
+`^_]
+ffff.
+^_[]
+\^_[]
+fffff.
+fffff.
+fff.
+fff.
+@P;E
+fff.
+ffffff.
+@\%*
+`^_]
+<^_[]
+fffff.
+fff.
+fff.
+<^_[]
+0^_]
+ffffff.
+<^_[]
+fff.
+0^_]
+@^_]
+ffff.
+\^_[]
+ffff.
+P^_]
+P^_]
+L^_[]
+ffffff.
+L^_[]
+ffffff.
+L^_[]
+ffffff.
+\^_[]
+P^_]
+fff.
+L^_[]
+fff.
+ffffff.
+|^_[]
+ffffff.
+L^_[]
+ffffff.
+fff.
+0^_]
+ffff.
+fff.
+ffffff.
+ffffff.
+|^_[]
+0^_]
+L^_[]
+ffffff.
+L^_[]
+fff.
+ffffff.
+ffffff.
+^_[]
+ffffff.
+ffffff.
+`^_]
+`^_]
+<^_[]
+ffffff.
+ffff.
+<^_[]
+ffffff.
+^_[]
+P^_]
+\^_[]
+fff.
+fffff.
+fffff.
+<^_[]
+ffffff.
+<^_[]
+ffffff.
+fffff.
+<^_[]
+fffff.
+<^_[]
+0^_]
+fff.
+L^_[]
+0^_]
+ffffff.
+L^_[]
+L^_[]
+ffffff.
+fffff.
+ffff.
+^_[]
+ffff.
+fffff.
+fffff.
+fffff.
+ffffff.
+ffff.
+fffff.
+\^_[]
+ffffff.
+fff.
+fffff.
+fffff.
+l^_[]
+<^_[]
+0^_]
+|^_[]
+l^_[]
+^_[]
+<^_[]
+I@+M
+,^_[]
+^_[]
+fff.
+\^_[]
+<^_[]
+^_[]
+fff.
+0^_]
+0^_]
+<^_[]
+ffffff.
+	;A4
+^_[]
+ffff.
+0^_]
+ffffff.
+^_[]
+ffffff.
+<^_[]
+ffffff.
+ ^[]
+fffff.
+fffff.
+0^_]
+fff.
+fff.
+fffff.
+,^_[]
+l^_[]
+`^_]
+l^_[]
+fff.
+fff.
++B89
+ffffff.
+^_[]
+,^_[]
+ffffff.
+ ^_]
+(^_[]
+fffff.
+ffff.
+ ^_]
+<^_[]
+0^_]
+ffff.
+\^_[]
+fffff.
+\^_[]
+<^_[]
+fffff.
+L^_[]
+ ^[]
+ffff.
+|^_[]
+l^_[]
+ffffff.
+<^_[]
+<^_[]
+<^_[]
+^_[]
+^_[]
+fff.
+<^_[]
+<^_[]
+fff.
+<^_[]
+fff.
+<^_[]
+<^_[]
+<^_[]
+L^_[]
+ffff.
+ffff.
+L^_[]
+l^_[]
+L^_[]
+L^_[]
+fff.
+<^_[]
+ffffff.
+ffff.
+fffff.
+ffffff.
+L^_[]
+ffffff.
+p^_]
+fffff.
+ffff.
+^_[]
+fff.
+<^_[]
+0^_]
+fff.
+,^_[]
+ffffff.
+l^_[]
+L^_[]
+<^_[]
+,^_[]
+,^_[]
+,^_[]
+ffffff.
+fffff.
+ffffff.
+,^_[]
+P^_]
+0^_]
+<^_[]
+^_[]
+fffff.
+fffff.
+l^_[]
+fff.
+^_[]
+fffff.
+ffffff.
+@^_]
+ffff.
+<^_[]
+ffffff.
+ffff.
+ ^_]
+ ^_]
+ffffff.
+ ^[]
+fffff.
+ffff.
+ffff.
+@^_]
+L^_[]
+ffff.
+ffff.
+fffff.
+,^_[]
+ffff.
+$^_]
+p^_]
+ffffff.
+,^_[]
+^_[]
+ffffff.
+fffff.
+fffff.
+fffff.
+fffff.
+fffff.
+fffff.
+fffff.
+fffff.
+fffff.
+fffff.
+fffff.
+fffff.
+fffff.
+fffff.
+fffff.
+fffff.
+fffff.
+,^_[]
+ffffff.
+ffffff.
+<^_[]
+,^_[]
+ffffff.
+ffff.
+ffffff.
+L^_[]
+\^_[]
+^_[]
+ffffff.
+<^_[]
+ffff.
+fffff.
+Pango
+pango_default_break
+length == 0 || text != NULL
+attrs != NULL
+Y %d %d
+break.c
+prev_break_type != G_UNICODE_BREAK_SPACE
+IN_BREAK_TABLE (prev_break_type)
+IN_BREAK_TABLE (break_type)
+possible_sentence_end >= 0
+possible_sentence_boundary >= 0
+pango_break
+analysis != NULL
+pango_find_paragraph_boundary
+delimiter
+pango_get_log_attrs
+log_attrs != NULL
+PangoEngineLang
+PangoRenderNone
+range_start == text
+range_end == run_start
+length < 0 || range_end == text + length
+pango_get_log_attrs: attrs_len should have been at least %d, but was %d.  Expect corrupted memory.
+pango_utf8_strlen
+p != NULL || max == 0
+_pango_layout_line_ellipsize
+line->layout->ellipsize != PANGO_ELLIPSIZE_NONE && goal_width >= 0
+ellipsize.c
+itemize_text
+g_list_length (items) == 1
+find_initial_span
+PangoFontDescription
+pango_font_description_set_family
+desc != NULL
+pango_font_description_set_family_static
+pango_font_description_get_family
+pango_font_description_set_style
+pango_font_description_get_style
+pango_font_description_set_variant
+pango_font_description_get_variant
+pango_font_description_set_weight
+pango_font_description_get_weight
+pango_font_description_set_stretch
+pango_font_description_get_stretch
+pango_font_description_set_size
+size >= 0
+pango_font_description_get_size
+pango_font_description_set_absolute_size
+pango_font_description_get_size_is_absolute
+pango_font_description_set_gravity
+pango_font_description_get_gravity
+pango_font_description_get_set_fields
+pango_font_description_unset_fields
+pango_font_description_merge
+pango_font_description_merge_static
+desc_to_merge != NULL
+pango_font_description_better_match
+new_match != NULL
+pango_font_description_equal
+desc1 != NULL
+desc2 != NULL
+pango_font_description_hash
+pango_font_description_from_string
+str != NULL
+pango_font_description_to_string
+weight
+style
+stretch
+variant
+gravity
+Normal
+pango_font_description_to_filename
+-+_.
+PangoFont
+pango_font_describe
+font != NULL
+pango_font_describe_with_absolute_size
+describe_absolute not implemented for this font class, report this as a bug
+pango_font_get_coverage
+pango_font_find_shaper
+PangoFontMetrics
+pango_font_metrics_unref
+metrics->ref_count > 0
+pango_font_metrics_get_ascent
+metrics != NULL
+pango_font_metrics_get_descent
+pango_font_metrics_get_approximate_char_width
+pango_font_metrics_get_approximate_digit_width
+pango_font_metrics_get_underline_position
+pango_font_metrics_get_underline_thickness
+pango_font_metrics_get_strikethrough_position
+pango_font_metrics_get_strikethrough_thickness
+PangoFontFamily
+pango_font_family_get_name
+PANGO_IS_FONT_FAMILY (family)
+pango_font_family_list_faces
+pango_font_family_is_monospace
+PangoFontFace
+pango_font_face_describe
+PANGO_IS_FONT_FACE (face)
+pango_font_face_is_synthesized
+pango_font_face_get_face_name
+pango_font_face_list_sizes
+sizes == NULL || n_sizes != NULL
+%s must be one of %s or a number
+field_matches
+s1 != NULL
+s2 != NULL
+%s=%d
+pango_glyph_string_set_size
+new_len >= 0
+%s: failed to allocate glyph string of length %i
+glyphstring.c:81
+PangoGlyphString
+pango_glyph_string_extents_range
+start <= end
+pango_glyph_string_index_to_x
+glyphs != NULL
+length >= 0
+PangoModule
+script_engine_init
+script_engine_exit
+script_engine_list
+script_engine_create
+pango-module-warned
+Failed to load Pango module '%s' for id '%s'
+pango.modules
+No modules found:
+No builtin or dynamically loaded modules were found.
+PangoFc will not work correctly.
+This probably means there was an error in the creation of:
+  '%s'
+You should create this file by running:
+  pango-querymodules > '%s'
+Pango/ModuleFiles
+1.8.0
+modules.cache
+@executable_path/
+@loader_path/
+@rpath/
+modules
+Error reading Pango modules file
+pango_attribute_init
+attr != NULL
+klass != NULL
+pango_attribute_copy
+pango_attribute_destroy
+pango_attribute_equal
+attr1 != NULL
+attr2 != NULL
+pango_attr_family_new
+family != NULL
+pango_attr_shape_new_with_data
+ink_rect != NULL
+logical_rect != NULL
+pango_attr_shape_new
+pango_attr_gravity_new
+gravity != PANGO_GRAVITY_AUTO
+PangoAttrList
+pango_attr_list_unref
+list->ref_count > 0
+pango_attr_list_insert
+list != NULL
+pango_attr_list_insert_before
+pango_attr_list_change
+pango-attributes.c
+prev->data == attr
+prev->next == tmp_list
+pango_attr_list_splice
+other != NULL
+pos >= 0
+len >= 0
+pango_attr_list_get_iterator
+pango_attr_iterator_range
+iterator != NULL
+pango_attr_iterator_next
+pango_attr_iterator_copy
+pango_attr_iterator_destroy
+pango_attr_iterator_get
+pango_attr_iterator_get_font
+pango_attr_list_filter
+pango_attr_list_insert_internal
+list->attributes_tail
+pango-bidi-type.c
+pango_bidi_type_for_unichar
+PangoColor
+pango_color_to_string
+color != NULL
+#%04x%04x%04x
+pango_color_parse
+spec != NULL
+PangoContext
+pango_context_set_matrix
+PANGO_IS_CONTEXT (context)
+pango_context_get_matrix
+pango_context_set_font_map
+!font_map || PANGO_IS_FONT_MAP (font_map)
+pango_context_get_font_map
+pango_context_list_families
+context != NULL
+families == NULL || n_families != NULL
+pango_context_load_font
+context->font_map != NULL
+pango_context_load_fontset
+pango_context_set_font_description
+pango_context_get_font_description
+pango_context_set_language
+pango_context_get_language
+pango_context_set_base_dir
+pango_context_get_base_dir
+pango_context_set_base_gravity
+pango_context_get_base_gravity
+pango_context_get_gravity
+pango_context_set_gravity_hint
+pango_context_get_gravity_hint
+pango_itemize_with_base_dir
+start_index >= 0
+pango_itemize
+pango_context_get_metrics
+pango_utf8_strwidth
+p != NULL
+pango-context.c
+itemize_state_process_run
+state->run_end != state->run_start
+failed to choose a font, expect ugly output. engine-type='%s', script='%s'
+PangoEngineShape
+pango-shaper-font-cache
+In pango_itemize(), the cached iterator passed in had already moved beyond the start_index
+serif
+pango_coverage_copy
+coverage != NULL
+pango_coverage_ref
+pango_coverage_unref
+coverage->ref_count > 0
+pango_coverage_get
+pango_coverage_set
+index >= 0
+(guint) level <= 3
+pango_coverage_max
+PangoEngine
+_pango_engine_shape_covers
+PANGO_IS_ENGINE_SHAPE (engine)
+PANGO_IS_FONT (font)
+PangoFallbackEngine
+PangoFontMap
+pango_font_map_create_context
+fontmap != NULL
+pango_font_map_load_font
+pango_font_map_list_families
+pango_font_map_load_fontset
+pango_font_map_get_shape_engine_type
+PANGO_IS_FONT_MAP (fontmap)
+pango_font_map_get_serial
+pango_font_map_changed
+Sans
+couldn't load font "%s", falling back to "%s", expect ugly output.
+All font fallbacks failed!!!!
+PangoFontset
+pango_fontset_get_font
+PANGO_IS_FONTSET (fontset)
+pango_fontset_get_metrics
+pango_fontset_foreach
+func != NULL
+PangoFontsetSimple
+pango_glyph_item_split
+orig != NULL
+orig->item->length > 0
+split_index > 0
+split_index < orig->item->length
+PangoGlyphItem
+PangoGlyphItemIter
+pango-glyph-item.c
+pango_glyph_item_apply_attrs
+range_start == state.iter.end_index && start_new_segment
+pango_gravity_to_rotation
+get_script_properties
+script >= 0
+PangoItem
+pango_item_split
+split_index < orig->length
+split_offset > 0
+split_offset < orig->num_chars
+PangoLanguage
+pango-language.c
+pango_language_from_string
+result
+;:, 	
+The quick brown fox jumps over the lazy dog.
+pango_language_get_scripts
+j > 0
+pango_script_get_sample_language
+PANGO_LANGUAGE
+LANGUAGE
+Invalid PangoLanguage.  Did you pass in a straight string instead of calling pango_language_from_string()?
+PangoLayout
+pango_layout_new
+pango_layout_copy
+PANGO_IS_LAYOUT (src)
+pango_layout_get_context
+layout != NULL
+pango_layout_set_width
+pango_layout_get_width
+pango_layout_set_height
+pango_layout_get_height
+pango_layout_set_wrap
+PANGO_IS_LAYOUT (layout)
+pango_layout_get_wrap
+pango_layout_is_wrapped
+pango_layout_set_indent
+pango_layout_get_indent
+pango_layout_set_spacing
+pango_layout_get_spacing
+pango_layout_set_attributes
+pango_layout_get_attributes
+pango_layout_set_font_description
+pango_layout_get_font_description
+pango_layout_set_justify
+pango_layout_get_justify
+pango_layout_set_auto_dir
+pango_layout_get_auto_dir
+pango_layout_set_alignment
+pango_layout_get_alignment
+pango_layout_set_tabs
+pango_layout_get_tabs
+pango_layout_set_single_paragraph_mode
+pango_layout_get_single_paragraph_mode
+pango_layout_set_ellipsize
+pango_layout_get_ellipsize
+pango_layout_is_ellipsized
+pango_layout_set_text
+Invalid UTF-8 string passed to pango_layout_set_text()
+pango_layout_get_text
+pango_layout_get_character_count
+pango_layout_set_markup_with_accel
+markup != NULL
+pango_layout_set_markup_with_accel: %s
+pango_layout_get_unknown_glyphs_count
+pango_layout_context_changed
+pango_layout_get_log_attrs
+pango_layout_get_log_attrs_readonly
+pango_layout_get_line_count
+pango_layout_get_line
+pango_layout_get_line_readonly
+pango_layout_index_to_line_x
+index <= layout->length
+pango_layout_move_cursor_visually
+old_index >= 0 && old_index <= layout->length
+old_index < layout->length || old_trailing == 0
+new_index != NULL
+new_trailing != NULL
+pango_layout_xy_to_index
+pango_layout_index_to_pos
+pos != NULL
+pango-layout.c:2134
+pango_layout_get_cursor_pos
+index >= 0 && index <= layout->length
+pango-layout.c
+index >= layout_line->start_index
+pango_layout_get_extents
+pango_layout_get_pixel_extents
+pango_layout_line_unref
+private->ref_count > 0
+PangoLayoutLine
+pango_layout_line_x_to_index
+LINE_IS_VALID (line)
+line->length > 0
+pango_layout_line_get_x_ranges
+line != NULL
+line->layout != NULL
+start_index <= end_index
+run_end_index > 0
+pango_layout_line_get_extents
+pango_layout_line_get_pixel_extents
+LINE_IS_VALID (layout_line)
+PangoLayoutIter
+pango_layout_get_iter
+pango-layout.c:5745
+pango-layout.c:5768
+pango-layout.c:5796
+pango-layout.c:5825
+pango-layout.c:5851
+pango-layout.c:5868
+pango-layout.c:5888
+pango-layout.c:6011
+pango-layout.c:6071
+pango-layout.c:6114
+pango_layout_iter_next_line
+iter->line_extents_link != NULL
+pango-layout.c:6164
+pango-layout.c:6212
+pango_layout_iter_get_cluster_extents
+logical_rect->width == iter->cluster_width
+pango-layout.c:6263
+pango-layout.c:6323
+pango-layout.c:6365
+pango-layout.c:6410
+pango-layout.c:6436
+pango-layout.c:5974
+unknown underline mode
+pango_layout_check_lines
+!layout->log_attrs
+next_para_index >= delimiter_index
+end <= (layout->text + layout->length)
+start <= (layout->text + layout->length)
+delim_len < 4
+delim_len >= 0
+process_line
+result == BREAK_SOME_FIT || result == BREAK_EMPTY_FIT
+pango-layout.c:3202: broken PangoLayout
+process_item
+!shape_set
+        
+pango_layout_get_extents_internal
+pango_layout_line_get_char_direction
+pango-layout.c:1735
+%s: PangoLayout changed since PangoLayoutIter was created, iterator invalid
+pango_parse_markup
+markup_text != NULL
+Had error when making markup parser: %s
+</markup>
+pango-markup.c
+pango_markup_parser_finish
+md->tag_stack == NULL
+<markup>
+markup
+span
+small
+Unknown tag '%s' on line %d char %d
+Tag '%s' does not support attribute '%s' on line %d char %d
+Monospace
+fallback
+Attribute '%s' occurs twice on <span> tag on line %d char %d, may only occur once
+font
+font_desc
+face
+font_family
+font_size
+font_stretch
+font_style
+font_variant
+font_weight
+foreground
+fgcolor
+size
+strikethrough
+strikethrough_color
+gravity_hint
+lang
+letter_spacing
+underline
+underline_color
+background
+bgcolor
+color
+rise
+Attribute '%s' is not allowed on the <span> tag on line %d char %d
+Value of 'size' attribute on <span> tag on line %d could not be parsed; should be an integer no more than %d, or a string such as 'small', not '%s'
+smaller
+larger
+Value of 'size' attribute on <span> tag on line %d could not be parsed; should be an integer, or a string such as 'small', not '%s'
+'%s' is not a valid value for the 'style' attribute on <span> tag, line %d; valid values are 'normal', 'oblique', 'italic'
+'%s' is not a valid value for the 'weight' attribute on <span> tag, line %d; valid values are for example 'light', 'ultrabold' or a number
+'%s' is not a valid value for the 'variant' attribute on <span> tag, line %d; valid values are 'normal', 'smallcaps'
+'%s' is not a valid value for the 'stretch' attribute on <span> tag, line %d; valid values are for example 'condensed', 'ultraexpanded', 'normal'
+Value of '%s' attribute on <span> tag on line %d could not be parsed; should be an integer, not '%s'
+true
+false
+Value of '%s' attribute on <span> tag line %d should have one of 'true/yes/t/y' or 'false/no/f/n': '%s' is not valid
+'%s' is not a valid value for the '%s' attribute on <span> tag, line %d; valid values are %s
+Value of '%s' attribute on <span> tag on line %d could not be parsed; should be a color specification, not '%s'
+xx-small
+x-small
+medium
+large
+x-large
+xx-large
+PangoMatrix
+pango_matrix_translate
+matrix != NULL
+pango_matrix_scale
+pango_matrix_rotate
+pango_matrix_concat
+PangoRenderer
+pango_renderer_draw_layout
+PANGO_IS_RENDERER (renderer)
+pango_renderer_draw_layout_line
+PANGO_IS_RENDERER_FAST (renderer)
+pango_renderer_draw_glyphs
+pango_renderer_draw_glyph_item
+pango_renderer_draw_rectangle
+IS_VALID_PART (part)
+renderer->active_count > 0
+pango_renderer_draw_error_underline
+pango_renderer_draw_trapezoid
+pango_renderer_draw_glyph
+pango_renderer_activate
+pango_renderer_deactivate
+pango_renderer_set_color
+pango_renderer_get_color
+pango_renderer_part_changed
+pango_renderer_set_matrix
+pango_renderer_get_matrix
+pango_renderer_prepare_run
+pango-renderer.c
+add_underline
+pango_tab_array_new
+initial_size >= 0
+pango_tab_array_new_with_positions
+PangoTabArray
+pango_tab_array_copy
+src != NULL
+pango_tab_array_free
+tab_array != NULL
+pango_tab_array_get_size
+pango_tab_array_set_tab
+tab_index >= 0
+alignment == PANGO_TAB_LEFT
+location >= 0
+pango_tab_array_get_tab
+tab_index < tab_array->size
+pango_tab_array_get_tabs
+pango_tab_array_get_positions_in_pixels
+1.36.8
+Pango version too new (major mismatch)
+Pango version too new (micro mismatch)
+Pango version too old (micro mismatch)
+pango_trim_string
+pango_config_key_get_system
+key != NULL
+pango_config_key_get
+PANGO_SYSCONFDIR
+pango
+/Users/buildbot/buildslave/pango_osx/build/pango-1.36.8/lib32/etc/pango
+PANGO_LIBDIR
+/Users/buildbot/buildslave/pango_osx/build/pango-1.36.8/lib32/lib/pango
+%s must be one of %s
+pango_find_base_dir
+text != NULL || length == 0
+pangorc
+PANGO_RC_FILE
+error opening config file '%s': %s
+%s/%s
+error getting key '%s/%s' in config file '%s'
+error getting keys in group '%s' of config file '%s'
+pango_shape_full
+paragraph_text <= item_text
+paragraph_text + paragraph_length >= item_text + item_length
+(unknown)
+shaping failure, expect ugly output. shape-engine='%s', font='%s', text='%.*s'
+pango-shape-warned
+Expected RTL run but shape-engine='%s' returned LTR. Fixing.
+PANGO_ATTR_INVALID
+invalid
+PANGO_ATTR_LANGUAGE
+language
+PANGO_ATTR_FAMILY
+family
+PANGO_ATTR_STYLE
+PANGO_ATTR_WEIGHT
+PANGO_ATTR_VARIANT
+PANGO_ATTR_STRETCH
+PANGO_ATTR_SIZE
+PANGO_ATTR_FONT_DESC
+font-desc
+PANGO_ATTR_FOREGROUND
+PANGO_ATTR_BACKGROUND
+PANGO_ATTR_UNDERLINE
+PANGO_ATTR_STRIKETHROUGH
+PANGO_ATTR_RISE
+PANGO_ATTR_SHAPE
+shape
+PANGO_ATTR_SCALE
+scale
+PANGO_ATTR_FALLBACK
+PANGO_ATTR_LETTER_SPACING
+letter-spacing
+PANGO_ATTR_UNDERLINE_COLOR
+underline-color
+PANGO_ATTR_STRIKETHROUGH_COLOR
+strikethrough-color
+PANGO_ATTR_ABSOLUTE_SIZE
+absolute-size
+PANGO_ATTR_GRAVITY
+PANGO_ATTR_GRAVITY_HINT
+gravity-hint
+PangoAttrType
+PANGO_UNDERLINE_NONE
+none
+PANGO_UNDERLINE_SINGLE
+single
+PANGO_UNDERLINE_DOUBLE
+double
+PANGO_UNDERLINE_LOW
+PANGO_UNDERLINE_ERROR
+error
+PangoUnderline
+PANGO_BIDI_TYPE_L
+PANGO_BIDI_TYPE_LRE
+PANGO_BIDI_TYPE_LRO
+PANGO_BIDI_TYPE_R
+PANGO_BIDI_TYPE_AL
+PANGO_BIDI_TYPE_RLE
+PANGO_BIDI_TYPE_RLO
+PANGO_BIDI_TYPE_PDF
+PANGO_BIDI_TYPE_EN
+PANGO_BIDI_TYPE_ES
+PANGO_BIDI_TYPE_ET
+PANGO_BIDI_TYPE_AN
+PANGO_BIDI_TYPE_CS
+PANGO_BIDI_TYPE_NSM
+PANGO_BIDI_TYPE_BN
+PANGO_BIDI_TYPE_B
+PANGO_BIDI_TYPE_S
+PANGO_BIDI_TYPE_WS
+PANGO_BIDI_TYPE_ON
+PangoBidiType
+PANGO_DIRECTION_LTR
+PANGO_DIRECTION_RTL
+PANGO_DIRECTION_TTB_LTR
+ttb-ltr
+PANGO_DIRECTION_TTB_RTL
+ttb-rtl
+PANGO_DIRECTION_WEAK_LTR
+weak-ltr
+PANGO_DIRECTION_WEAK_RTL
+weak-rtl
+PANGO_DIRECTION_NEUTRAL
+neutral
+PangoDirection
+PANGO_COVERAGE_NONE
+PANGO_COVERAGE_FALLBACK
+PANGO_COVERAGE_APPROXIMATE
+approximate
+PANGO_COVERAGE_EXACT
+exact
+PangoCoverageLevel
+PANGO_STYLE_NORMAL
+normal
+PANGO_STYLE_OBLIQUE
+oblique
+PANGO_STYLE_ITALIC
+italic
+PangoStyle
+PANGO_VARIANT_NORMAL
+PANGO_VARIANT_SMALL_CAPS
+small-caps
+PangoVariant
+PANGO_WEIGHT_THIN
+thin
+PANGO_WEIGHT_ULTRALIGHT
+ultralight
+PANGO_WEIGHT_LIGHT
+light
+PANGO_WEIGHT_SEMILIGHT
+semilight
+PANGO_WEIGHT_BOOK
+book
+PANGO_WEIGHT_NORMAL
+PANGO_WEIGHT_MEDIUM
+PANGO_WEIGHT_SEMIBOLD
+semibold
+PANGO_WEIGHT_BOLD
+bold
+PANGO_WEIGHT_ULTRABOLD
+ultrabold
+PANGO_WEIGHT_HEAVY
+heavy
+PANGO_WEIGHT_ULTRAHEAVY
+ultraheavy
+PangoWeight
+PANGO_STRETCH_ULTRA_CONDENSED
+ultra-condensed
+PANGO_STRETCH_EXTRA_CONDENSED
+extra-condensed
+PANGO_STRETCH_CONDENSED
+condensed
+PANGO_STRETCH_SEMI_CONDENSED
+semi-condensed
+PANGO_STRETCH_NORMAL
+PANGO_STRETCH_SEMI_EXPANDED
+semi-expanded
+PANGO_STRETCH_EXPANDED
+expanded
+PANGO_STRETCH_EXTRA_EXPANDED
+extra-expanded
+PANGO_STRETCH_ULTRA_EXPANDED
+ultra-expanded
+PangoStretch
+PANGO_FONT_MASK_FAMILY
+PANGO_FONT_MASK_STYLE
+PANGO_FONT_MASK_VARIANT
+PANGO_FONT_MASK_WEIGHT
+PANGO_FONT_MASK_STRETCH
+PANGO_FONT_MASK_SIZE
+PANGO_FONT_MASK_GRAVITY
+PangoFontMask
+PANGO_GRAVITY_SOUTH
+south
+PANGO_GRAVITY_EAST
+east
+PANGO_GRAVITY_NORTH
+north
+PANGO_GRAVITY_WEST
+west
+PANGO_GRAVITY_AUTO
+auto
+PangoGravity
+PANGO_GRAVITY_HINT_NATURAL
+natural
+PANGO_GRAVITY_HINT_STRONG
+strong
+PANGO_GRAVITY_HINT_LINE
+line
+PangoGravityHint
+PANGO_ALIGN_LEFT
+left
+PANGO_ALIGN_CENTER
+center
+PANGO_ALIGN_RIGHT
+right
+PangoAlignment
+PANGO_WRAP_WORD
+word
+PANGO_WRAP_CHAR
+char
+PANGO_WRAP_WORD_CHAR
+word-char
+PangoWrapMode
+PANGO_ELLIPSIZE_NONE
+PANGO_ELLIPSIZE_START
+start
+PANGO_ELLIPSIZE_MIDDLE
+middle
+PANGO_ELLIPSIZE_END
+PangoEllipsizeMode
+PANGO_RENDER_PART_FOREGROUND
+PANGO_RENDER_PART_BACKGROUND
+PANGO_RENDER_PART_UNDERLINE
+PANGO_RENDER_PART_STRIKETHROUGH
+PangoRenderPart
+PANGO_SCRIPT_INVALID_CODE
+invalid-code
+PANGO_SCRIPT_COMMON
+common
+PANGO_SCRIPT_INHERITED
+inherited
+PANGO_SCRIPT_ARABIC
+arabic
+PANGO_SCRIPT_ARMENIAN
+armenian
+PANGO_SCRIPT_BENGALI
+bengali
+PANGO_SCRIPT_BOPOMOFO
+bopomofo
+PANGO_SCRIPT_CHEROKEE
+cherokee
+PANGO_SCRIPT_COPTIC
+coptic
+PANGO_SCRIPT_CYRILLIC
+cyrillic
+PANGO_SCRIPT_DESERET
+deseret
+PANGO_SCRIPT_DEVANAGARI
+devanagari
+PANGO_SCRIPT_ETHIOPIC
+ethiopic
+PANGO_SCRIPT_GEORGIAN
+georgian
+PANGO_SCRIPT_GOTHIC
+gothic
+PANGO_SCRIPT_GREEK
+greek
+PANGO_SCRIPT_GUJARATI
+gujarati
+PANGO_SCRIPT_GURMUKHI
+gurmukhi
+PANGO_SCRIPT_HAN
+PANGO_SCRIPT_HANGUL
+hangul
+PANGO_SCRIPT_HEBREW
+hebrew
+PANGO_SCRIPT_HIRAGANA
+hiragana
+PANGO_SCRIPT_KANNADA
+kannada
+PANGO_SCRIPT_KATAKANA
+katakana
+PANGO_SCRIPT_KHMER
+khmer
+PANGO_SCRIPT_LAO
+PANGO_SCRIPT_LATIN
+latin
+PANGO_SCRIPT_MALAYALAM
+malayalam
+PANGO_SCRIPT_MONGOLIAN
+mongolian
+PANGO_SCRIPT_MYANMAR
+myanmar
+PANGO_SCRIPT_OGHAM
+ogham
+PANGO_SCRIPT_OLD_ITALIC
+old-italic
+PANGO_SCRIPT_ORIYA
+oriya
+PANGO_SCRIPT_RUNIC
+runic
+PANGO_SCRIPT_SINHALA
+sinhala
+PANGO_SCRIPT_SYRIAC
+syriac
+PANGO_SCRIPT_TAMIL
+tamil
+PANGO_SCRIPT_TELUGU
+telugu
+PANGO_SCRIPT_THAANA
+thaana
+PANGO_SCRIPT_THAI
+thai
+PANGO_SCRIPT_TIBETAN
+tibetan
+PANGO_SCRIPT_CANADIAN_ABORIGINAL
+canadian-aboriginal
+PANGO_SCRIPT_YI
+PANGO_SCRIPT_TAGALOG
+tagalog
+PANGO_SCRIPT_HANUNOO
+hanunoo
+PANGO_SCRIPT_BUHID
+buhid
+PANGO_SCRIPT_TAGBANWA
+tagbanwa
+PANGO_SCRIPT_BRAILLE
+braille
+PANGO_SCRIPT_CYPRIOT
+cypriot
+PANGO_SCRIPT_LIMBU
+limbu
+PANGO_SCRIPT_OSMANYA
+osmanya
+PANGO_SCRIPT_SHAVIAN
+shavian
+PANGO_SCRIPT_LINEAR_B
+linear-b
+PANGO_SCRIPT_TAI_LE
+tai-le
+PANGO_SCRIPT_UGARITIC
+ugaritic
+PANGO_SCRIPT_NEW_TAI_LUE
+new-tai-lue
+PANGO_SCRIPT_BUGINESE
+buginese
+PANGO_SCRIPT_GLAGOLITIC
+glagolitic
+PANGO_SCRIPT_TIFINAGH
+tifinagh
+PANGO_SCRIPT_SYLOTI_NAGRI
+syloti-nagri
+PANGO_SCRIPT_OLD_PERSIAN
+old-persian
+PANGO_SCRIPT_KHAROSHTHI
+kharoshthi
+PANGO_SCRIPT_UNKNOWN
+unknown
+PANGO_SCRIPT_BALINESE
+balinese
+PANGO_SCRIPT_CUNEIFORM
+cuneiform
+PANGO_SCRIPT_PHOENICIAN
+phoenician
+PANGO_SCRIPT_PHAGS_PA
+phags-pa
+PANGO_SCRIPT_NKO
+PANGO_SCRIPT_KAYAH_LI
+kayah-li
+PANGO_SCRIPT_LEPCHA
+lepcha
+PANGO_SCRIPT_REJANG
+rejang
+PANGO_SCRIPT_SUNDANESE
+sundanese
+PANGO_SCRIPT_SAURASHTRA
+saurashtra
+PANGO_SCRIPT_CHAM
+cham
+PANGO_SCRIPT_OL_CHIKI
+ol-chiki
+PANGO_SCRIPT_VAI
+PANGO_SCRIPT_CARIAN
+carian
+PANGO_SCRIPT_LYCIAN
+lycian
+PANGO_SCRIPT_LYDIAN
+lydian
+PANGO_SCRIPT_BATAK
+batak
+PANGO_SCRIPT_BRAHMI
+brahmi
+PANGO_SCRIPT_MANDAIC
+mandaic
+PANGO_SCRIPT_CHAKMA
+chakma
+PANGO_SCRIPT_MEROITIC_CURSIVE
+meroitic-cursive
+PANGO_SCRIPT_MEROITIC_HIEROGLYPHS
+meroitic-hieroglyphs
+PANGO_SCRIPT_MIAO
+miao
+PANGO_SCRIPT_SHARADA
+sharada
+PANGO_SCRIPT_SORA_SOMPENG
+sora-sompeng
+PANGO_SCRIPT_TAKRI
+takri
+PangoScript
+PANGO_TAB_LEFT
+PangoTabAlign
+ArabicScriptEngineLang
+ArabicEngineLang
+devaIndicScriptEngineLang
+bengIndicScriptEngineLang
+guruIndicScriptEngineLang
+gujrIndicScriptEngineLang
+oryaIndicScriptEngineLang
+tamlIndicScriptEngineLang
+teluIndicScriptEngineLang
+kndaIndicScriptEngineLang
+mlymIndicScriptEngineLang
+sinhIndicScriptEngineLang
+IndicEngineLang
+Thin
+Ultra-Light
+Extra-Light
+Light
+Semi-Light
+Demi-Light
+Book
+Regular
+Medium
+Semi-Bold
+Demi-Bold
+Bold
+Ultra-Bold
+Extra-Bold
+Heavy
+Black
+Ultra-Heavy
+Extra-Heavy
+Ultra-Black
+Extra-Black
+Roman
+Oblique
+Italic
+Ultra-Condensed
+Extra-Condensed
+Condensed
+Semi-Condensed
+Semi-Expanded
+Expanded
+Extra-Expanded
+Ultra-Expanded
+Small-Caps
+Not-Rotated
+South
+Upside-Down
+North
+Rotated-Left
+East
+Rotated-Right
+West
+AliceBlue
+AntiqueWhite
+AntiqueWhite1
+AntiqueWhite2
+AntiqueWhite3
+AntiqueWhite4
+aqua
+aquamarine
+aquamarine1
+aquamarine2
+aquamarine3
+aquamarine4
+azure
+azure1
+azure2
+azure3
+azure4
+beige
+bisque
+bisque1
+bisque2
+bisque3
+bisque4
+black
+BlanchedAlmond
+blue
+blue1
+blue2
+blue3
+blue4
+BlueViolet
+brown
+brown1
+brown2
+brown3
+brown4
+burlywood
+burlywood1
+burlywood2
+burlywood3
+burlywood4
+CadetBlue
+CadetBlue1
+CadetBlue2
+CadetBlue3
+CadetBlue4
+chartreuse
+chartreuse1
+chartreuse2
+chartreuse3
+chartreuse4
+chocolate
+chocolate1
+chocolate2
+chocolate3
+chocolate4
+coral
+coral1
+coral2
+coral3
+coral4
+CornflowerBlue
+cornsilk
+cornsilk1
+cornsilk2
+cornsilk3
+cornsilk4
+crimson
+cyan
+cyan1
+cyan2
+cyan3
+cyan4
+DarkBlue
+DarkCyan
+DarkGoldenrod
+DarkGoldenrod1
+DarkGoldenrod2
+DarkGoldenrod3
+DarkGoldenrod4
+DarkGray
+DarkGreen
+DarkGrey
+DarkKhaki
+DarkMagenta
+DarkOliveGreen
+DarkOliveGreen1
+DarkOliveGreen2
+DarkOliveGreen3
+DarkOliveGreen4
+DarkOrange
+DarkOrange1
+DarkOrange2
+DarkOrange3
+DarkOrange4
+DarkOrchid
+DarkOrchid1
+DarkOrchid2
+DarkOrchid3
+DarkOrchid4
+DarkRed
+DarkSalmon
+DarkSeaGreen
+DarkSeaGreen1
+DarkSeaGreen2
+DarkSeaGreen3
+DarkSeaGreen4
+DarkSlateBlue
+DarkSlateGray
+DarkSlateGray1
+DarkSlateGray2
+DarkSlateGray3
+DarkSlateGray4
+DarkSlateGrey
+DarkTurquoise
+DarkViolet
+DeepPink
+DeepPink1
+DeepPink2
+DeepPink3
+DeepPink4
+DeepSkyBlue
+DeepSkyBlue1
+DeepSkyBlue2
+DeepSkyBlue3
+DeepSkyBlue4
+DimGray
+DimGrey
+DodgerBlue
+DodgerBlue1
+DodgerBlue2
+DodgerBlue3
+DodgerBlue4
+firebrick
+firebrick1
+firebrick2
+firebrick3
+firebrick4
+FloralWhite
+ForestGreen
+fuchsia
+gainsboro
+GhostWhite
+gold
+gold1
+gold2
+gold3
+gold4
+goldenrod
+goldenrod1
+goldenrod2
+goldenrod3
+goldenrod4
+gray
+gray0
+gray1
+gray10
+gray100
+gray11
+gray12
+gray13
+gray14
+gray15
+gray16
+gray17
+gray18
+gray19
+gray2
+gray20
+gray21
+gray22
+gray23
+gray24
+gray25
+gray26
+gray27
+gray28
+gray29
+gray3
+gray30
+gray31
+gray32
+gray33
+gray34
+gray35
+gray36
+gray37
+gray38
+gray39
+gray4
+gray40
+gray41
+gray42
+gray43
+gray44
+gray45
+gray46
+gray47
+gray48
+gray49
+gray5
+gray50
+gray51
+gray52
+gray53
+gray54
+gray55
+gray56
+gray57
+gray58
+gray59
+gray6
+gray60
+gray61
+gray62
+gray63
+gray64
+gray65
+gray66
+gray67
+gray68
+gray69
+gray7
+gray70
+gray71
+gray72
+gray73
+gray74
+gray75
+gray76
+gray77
+gray78
+gray79
+gray8
+gray80
+gray81
+gray82
+gray83
+gray84
+gray85
+gray86
+gray87
+gray88
+gray89
+gray9
+gray90
+gray91
+gray92
+gray93
+gray94
+gray95
+gray96
+gray97
+gray98
+gray99
+green
+green1
+green2
+green3
+green4
+GreenYellow
+grey
+grey0
+grey1
+grey10
+grey100
+grey11
+grey12
+grey13
+grey14
+grey15
+grey16
+grey17
+grey18
+grey19
+grey2
+grey20
+grey21
+grey22
+grey23
+grey24
+grey25
+grey26
+grey27
+grey28
+grey29
+grey3
+grey30
+grey31
+grey32
+grey33
+grey34
+grey35
+grey36
+grey37
+grey38
+grey39
+grey4
+grey40
+grey41
+grey42
+grey43
+grey44
+grey45
+grey46
+grey47
+grey48
+grey49
+grey5
+grey50
+grey51
+grey52
+grey53
+grey54
+grey55
+grey56
+grey57
+grey58
+grey59
+grey6
+grey60
+grey61
+grey62
+grey63
+grey64
+grey65
+grey66
+grey67
+grey68
+grey69
+grey7
+grey70
+grey71
+grey72
+grey73
+grey74
+grey75
+grey76
+grey77
+grey78
+grey79
+grey8
+grey80
+grey81
+grey82
+grey83
+grey84
+grey85
+grey86
+grey87
+grey88
+grey89
+grey9
+grey90
+grey91
+grey92
+grey93
+grey94
+grey95
+grey96
+grey97
+grey98
+grey99
+honeydew
+honeydew1
+honeydew2
+honeydew3
+honeydew4
+HotPink
+HotPink1
+HotPink2
+HotPink3
+HotPink4
+IndianRed
+IndianRed1
+IndianRed2
+IndianRed3
+IndianRed4
+indigo
+ivory
+ivory1
+ivory2
+ivory3
+ivory4
+khaki
+khaki1
+khaki2
+khaki3
+khaki4
+lavender
+LavenderBlush
+LavenderBlush1
+LavenderBlush2
+LavenderBlush3
+LavenderBlush4
+LawnGreen
+LemonChiffon
+LemonChiffon1
+LemonChiffon2
+LemonChiffon3
+LemonChiffon4
+LightBlue
+LightBlue1
+LightBlue2
+LightBlue3
+LightBlue4
+LightCoral
+LightCyan
+LightCyan1
+LightCyan2
+LightCyan3
+LightCyan4
+LightGoldenrod
+LightGoldenrod1
+LightGoldenrod2
+LightGoldenrod3
+LightGoldenrod4
+LightGoldenrodYellow
+LightGray
+LightGreen
+LightGrey
+LightPink
+LightPink1
+LightPink2
+LightPink3
+LightPink4
+LightSalmon
+LightSalmon1
+LightSalmon2
+LightSalmon3
+LightSalmon4
+LightSeaGreen
+LightSkyBlue
+LightSkyBlue1
+LightSkyBlue2
+LightSkyBlue3
+LightSkyBlue4
+LightSlateBlue
+LightSlateGray
+LightSlateGrey
+LightSteelBlue
+LightSteelBlue1
+LightSteelBlue2
+LightSteelBlue3
+LightSteelBlue4
+LightYellow
+LightYellow1
+LightYellow2
+LightYellow3
+LightYellow4
+lime
+LimeGreen
+linen
+magenta
+magenta1
+magenta2
+magenta3
+magenta4
+maroon
+maroon1
+maroon2
+maroon3
+maroon4
+MediumAquamarine
+MediumBlue
+MediumOrchid
+MediumOrchid1
+MediumOrchid2
+MediumOrchid3
+MediumOrchid4
+MediumPurple
+MediumPurple1
+MediumPurple2
+MediumPurple3
+MediumPurple4
+MediumSeaGreen
+MediumSlateBlue
+MediumSpringGreen
+MediumTurquoise
+MediumVioletRed
+MidnightBlue
+MintCream
+MistyRose
+MistyRose1
+MistyRose2
+MistyRose3
+MistyRose4
+moccasin
+NavajoWhite
+NavajoWhite1
+NavajoWhite2
+NavajoWhite3
+NavajoWhite4
+navy
+NavyBlue
+OldLace
+olive
+OliveDrab
+OliveDrab1
+OliveDrab2
+OliveDrab3
+OliveDrab4
+orange
+orange1
+orange2
+orange3
+orange4
+OrangeRed
+OrangeRed1
+OrangeRed2
+OrangeRed3
+OrangeRed4
+orchid
+orchid1
+orchid2
+orchid3
+orchid4
+PaleGoldenrod
+PaleGreen
+PaleGreen1
+PaleGreen2
+PaleGreen3
+PaleGreen4
+PaleTurquoise
+PaleTurquoise1
+PaleTurquoise2
+PaleTurquoise3
+PaleTurquoise4
+PaleVioletRed
+PaleVioletRed1
+PaleVioletRed2
+PaleVioletRed3
+PaleVioletRed4
+PapayaWhip
+PeachPuff
+PeachPuff1
+PeachPuff2
+PeachPuff3
+PeachPuff4
+peru
+pink
+pink1
+pink2
+pink3
+pink4
+plum
+plum1
+plum2
+plum3
+plum4
+PowderBlue
+purple
+purple1
+purple2
+purple3
+purple4
+red1
+red2
+red3
+red4
+RosyBrown
+RosyBrown1
+RosyBrown2
+RosyBrown3
+RosyBrown4
+RoyalBlue
+RoyalBlue1
+RoyalBlue2
+RoyalBlue3
+RoyalBlue4
+SaddleBrown
+salmon
+salmon1
+salmon2
+salmon3
+salmon4
+SandyBrown
+SeaGreen
+SeaGreen1
+SeaGreen2
+SeaGreen3
+SeaGreen4
+seashell
+seashell1
+seashell2
+seashell3
+seashell4
+sienna
+sienna1
+sienna2
+sienna3
+sienna4
+silver
+SkyBlue
+SkyBlue1
+SkyBlue2
+SkyBlue3
+SkyBlue4
+SlateBlue
+SlateBlue1
+SlateBlue2
+SlateBlue3
+SlateBlue4
+SlateGray
+SlateGray1
+SlateGray2
+SlateGray3
+SlateGray4
+SlateGrey
+snow
+snow1
+snow2
+snow3
+snow4
+SpringGreen
+SpringGreen1
+SpringGreen2
+SpringGreen3
+SpringGreen4
+SteelBlue
+SteelBlue1
+SteelBlue2
+SteelBlue3
+SteelBlue4
+tan1
+tan2
+tan3
+tan4
+teal
+thistle
+thistle1
+thistle2
+thistle3
+thistle4
+tomato
+tomato1
+tomato2
+tomato3
+tomato4
+turquoise
+turquoise1
+turquoise2
+turquoise3
+turquoise4
+violet
+VioletRed
+VioletRed1
+VioletRed2
+VioletRed3
+VioletRed4
+wheat
+wheat1
+wheat2
+wheat3
+wheat4
+white
+WhiteSmoke
+yellow
+yellow1
+yellow2
+yellow3
+yellow4
+YellowGreen
+`	!!!
+g	$$$
+n	&&&
+u	)))
+|	+++
+	...
+	000
+	333
+	666
+	888
+	;;;
+	===
+	@@@
+	BBB
+	EEE
+	GGG
+	JJJ
+	MMM
+	OOO
+	RRR
+	TTT
+	WWW
+0123456789
+-abcdefghijklmnopqrstuvwxyz
+abcdefghijklmnopqrstuvwxyz
+Z	hr
+pt-br
+zh-cn
+zh-mo
+zh-sg
+zh-tw
+Ek kan glas eet, maar dit doen my nie skade nie.
+Gvxam mincetu apocikvyeh: 
+izol ce mamvj ka raq kuse bafkeh mew.
+I koh Glos esa, und es duard ma ned wei.
+Mi save kakae glas, hemi no save katem mi.
+Fin d
+ip, gluh je
+vrst konji
+e bez moljca.
+Jove xef, porti whisky amb quinze gla
+ons d'hidrogen, coi!
+a yo' chumocho krestat, ti ha na'lalamen yo'.
+belsk
+Dw i'n gallu bwyta gwydr, 'dyw e ddim yn gwneud dolur i mi.
+Quizdeltagerne spiste jordb
+r med fl
+de, mens cirkusklovnen Walther spillede p
+ xylofon.
+lf Boxk
+mpfer jagen Viktor quer 
+ber den gro
+en Sylter Deich.
+The quick brown fox jumps over the lazy dog.
+Ich canne glas eten and hit hirti
+ me nou
+Jovencillo emponzo
+ado de whisky: 
+ figurota exhibe!
+See v
+ike m
+lder j
+uab rongile h
+pata.
+Kristala jan dezaket, ez dit minik ematen.
+Viekas kettu punaturkki laiskan koiran takaa kurkki.
+Voix ambigu
+ d'un c
+ur qui, au z
+phyr, pr
+re les jattes de kiwis.
+Je puis mangier del voirre. Ne me nuit.
+uascail 
+osa 
+ac na h
+e Beannai
+a agus 
+S urrainn dhomh gloinne ithe; cha ghoirtich i mi.
+Eu podo xantar cristais e non cortarme.
+Foddym gee glonney agh cha jean eh gortaghey mee.
+Hiki ia
+u ke 
+ai i ke aniani; 
+ole n
+ au e 
+eha.
+Ja mogu jesti staklo i ne boli me.
+Egy h
+tlen vej
+s mexik
+r Wessel
+nyin
+zol Quit
+ban.
+mi n
+xi h
+r ykist 
+fum n
+l og 
+drepa
+Ma la volpe, col suo balzo, ha raggiunto il quieto Fido.
+Chruu, a kwik di kwik brong fox a jomp huova di liezi daag de, yu no siit?
+.o'i mu xagji sofybakni cu zvati le purdi
+Aku isa mangan beling tanpa lara.
+ a yl dybry gw
+der hag 
+f ny wra ow ankenya.
+Sic surgens, dux, zelotypos quam karus haberis
+linkdama fechtuotojo 
+paga sublyk
+iojusi pragr
+ apval
+ arb
+Sarkan
+rasc
+as peld pa j
+E ko
+ana e kai i te karahi, mea 
+e hauhau.
+Saya boleh makan kaca dan ia tidak mencederakan saya.
+M' pozz magna' o'vetr, e nun m' fa mal.
+re Zulu fra bade
+ya spilte jo whist og quickstep i min taxi.
+Pa's wijze lynx bezag vroom het fikse aquaduct.
+Eg kan eta glas utan 
+ skada meg.
+re Zulu fra bade
+ya spilte jo whist og quickstep i min taxi.
+ yish
+go b
+shghah d
+ doo shi
+ neezgai da.
+di manjar de veire, me nafrari
+ pas.
+Ch'peux mingi du verre, cha m'fo
+ mie n'ma.
+Pchn
+ w t
+a lub o
+m skrzy
+ fig.
+Vejam a bruxa da raposa Salta-Pocinhas e o c
+o feliz que dorme regalado.
+ noite, vov
+ Kowalsky v
+ cair no p
+ do ping
+im queixoso e vov
+car no ch
+ de t
+maras do jabuti feliz.
+Fumeg
+nd hipnotic sa
+iul azv
+rle mreje 
+Puotsu mangiari u vitru, nun mi fa mali.
+Star
+ na h
+be kn
+uje t
+ko pov
+dnut
+e, na st
+pe sa 
+ nov
+du o 
+ivote.
+erif bo za vajo spet kuhal doma
+gance.
+ mund t
+ ha qelq dhe nuk m
+ gjen gj
+Flygande b
+ckasiner s
+ka strax hwila p
+ mjuka tuvor.
+ Glas fr
+ssa, ond des macht mr nix!
+Kaya kong kumain nang bubog at hindi ako masaktan.
+Pijamal
+ hasta ya
+abucak g
+vendi.
+Metumi awe tumpan, 
+ me hwee.
+Mi posso magnare el vetro, no'l me fa mae.
+Con s
+u nh
+y qua con ch
+Dji pou magn
+ do v
+re, 
+oula m' freut n
+Mo l
+ pa m
+Saya boleh makan kaca dan ia tidak mencederakan saya.
+az-az
+az-ir
+ber-dz
+ber-ma
+ku-am
+ku-iq
+ku-ir
+ku-tr
+mn-cn
+mn-mn
+pa-pk
+pap-an
+pap-aw
+ps-af
+ps-pk
+ti-er
+ti-et
+zh-cn
+zh-hk
+zh-mo
+zh-sg
+zh-tw
+?333333
+					
+										
+																															
+pppppppp
+pPP@
+0@@`` @0pP@
+000@@P000`0@
+0p0p0@@@P`00
+p@P p
+pp@`@
+@P```P`P
+dyld_stub_binding_helper
+__dyld_func_lookup
+_g_debug
+_tailor_break
+_tailor_segment
+_g_warning
+_pango_utf8_strlen
+__pango_layout_line_ellipsize
+_init_state
+_find_initial_span
+_current_width
+_remove_one_span
+_fixup_ellipsis_run
+_get_run_list
+_free_state
+_pango_utf8_strlen
+_line_iter_prev_cluster
+_get_cluster_width
+_starts_at_ellipsization_boundary
+_line_iter_next_cluster
+_ends_at_ellipsization_boundary
+_update_ellipsis_shape
+_advance_iterator_to
+_shape_ellipsis
+_itemize_text
+_compute_distance
+_case_insensitive_hash
+_getword
+_parse_size
+_find_field_any
+_g_string_append_c_inline
+_append_field
+_parse_field
+_pango_font_class_intern_init
+_pango_font_init
+_g_warning
+_pango_font_family_class_intern_init
+_pango_font_family_init
+_pango_font_face_class_intern_init
+_pango_font_face_init
+_pango_font_face_class_init
+_pango_font_family_class_init
+_pango_font_class_init
+_field_matches
+_find_field
+_parse_int
+_g_error
+_pango_utf8_strlen
+_build_map
+_pango_engine_pair_get_engine
+_append_engines
+_handle_included_module
+_pango_module_get_type
+_pango_module_class_intern_init
+_pango_module_init
+_pango_module_class_init
+_pango_module_load
+_pango_module_unload
+_pango_module_finalize
+_get_warned_quark
+_g_warning
+_init_modules
+_g_critical
+_map_add_engine_list
+_map_add_engine
+_read_modules
+_process_module_file
+_find_or_create_module
+_script_from_string
+_script_info_free
+_pango_attr_string_copy
+_pango_attr_string_destroy
+_pango_attr_string_equal
+_pango_attr_string_new
+_pango_attr_language_copy
+_pango_attr_language_destroy
+_pango_attr_language_equal
+_pango_attr_color_copy
+_pango_attr_color_destroy
+_pango_attr_color_equal
+_pango_attr_color_new
+_pango_attr_size_new_internal
+_pango_attr_int_copy
+_pango_attr_int_destroy
+_pango_attr_int_equal
+_pango_attr_int_new
+_pango_attr_font_desc_copy
+_pango_attr_font_desc_destroy
+_pango_attr_font_desc_equal
+_pango_attr_float_copy
+_pango_attr_float_destroy
+_pango_attr_float_equal
+_pango_attr_float_new
+_pango_attr_shape_copy
+_pango_attr_shape_destroy
+_pango_attr_shape_equal
+_pango_attr_list_insert_internal
+_pango_attr_size_copy
+_pango_attr_size_destroy
+_pango_attr_size_equal
+_hex
+_find_color
+_compare_xcolor_entries
+_pango_context_class_intern_init
+_pango_context_init
+_context_changed
+_update_resolved_gravity
+_width_iter_iswide
+_itemize_state_init
+_itemize_state_process_run
+_itemize_state_next
+_itemize_state_finish
+_get_base_metrics
+_itemize_with_font
+_update_metrics_from_items
+_check_fontmap_changed
+_pango_utf8_strwidth
+_pango_unichar_width
+_get_first_metrics_foreach
+_itemize_state_reset_shape_engines
+_update_embedding_end
+_update_attr_iterator
+_width_iter_next
+_update_end
+_find_attribute
+_itemize_state_update_for_new_run
+_get_shaper_and_font
+_itemize_state_add_character
+_string_from_script
+_get_script
+_g_warning
+_itemize_state_fill_shaper
+_copy_attr_slist
+_shaper_font_cache_get
+_get_engines
+_get_shaper_and_font_foreach
+_get_base_font
+_shaper_font_cache_insert
+_compute_derived_language
+_get_lang_map
+_get_shaper_font_cache
+_shaper_font_element_destroy
+_shaper_font_cache_destroy
+_advance_attr_iterator_to
+_width_iter_init
+_pango_context_class_init
+_pango_context_finalize
+_pango_coverage_get_uint32
+_pango_engine_class_intern_init
+_pango_engine_init
+_pango_engine_lang_class_intern_init
+_pango_engine_lang_init
+_pango_engine_shape_class_intern_init
+_pango_engine_shape_init
+__pango_engine_shape_shape
+__pango_engine_shape_covers
+__pango_get_fallback_shaper
+_pango_fallback_engine_get_type
+_pango_fallback_engine_class_intern_init
+_pango_fallback_engine_init
+_pango_fallback_engine_class_init
+_fallback_engine_covers
+_fallback_engine_shape
+_pango_utf8_strlen
+_pango_glyph_string_reverse_range
+_pango_engine_shape_class_init
+_pango_engine_shape_real_covers
+_pango_engine_lang_class_init
+_pango_engine_class_init
+_pango_font_map_class_intern_init
+_pango_font_map_init
+_pango_font_map_class_init
+_pango_font_map_real_load_fontset
+_pango_font_map_fontset_add_fonts
+_g_warning
+_pango_fontset_class_intern_init
+_pango_fontset_init
+_pango_fontset_simple_class_intern_init
+_pango_fontset_simple_init
+_pango_fontset_simple_class_init
+_pango_fontset_simple_finalize
+_pango_fontset_simple_get_font
+_pango_fontset_simple_get_metrics
+_pango_fontset_simple_get_language
+_pango_fontset_simple_foreach
+_pango_fontset_class_init
+_pango_fontset_real_get_metrics
+_get_first_metrics_foreach
+_pango_utf8_strlen
+_split_before_cluster_start
+_attr_slist_copy
+_append_attrs
+_get_script_properties
+_pango_language_copy
+_pango_language_free
+__pango_get_lc_ctype
+_lang_hash
+_lang_equal
+_pango_language_private_init
+_find_best_lang_match_cached
+_pango_language_get_private
+__pango_script_get_default_language
+_parse_default_languages
+_g_critical
+_find_best_lang_match
+_lang_compare_first_component
+_pango_layout_class_intern_init
+_pango_layout_init
+_layout_changed
+_pango_layout_check_lines
+_g_warning
+_pango_utf8_strlen
+_check_context_changed
+_pango_layout_line_leaked
+_pango_layout_get_item_properties
+_pango_layout_index_to_line
+_pango_layout_line_get_log2vis_map
+_pango_layout_line_get_vis2log_map
+__pango_layout_iter_get_line
+_check_invalid
+_pango_layout_index_to_line_and_extents
+_pango_layout_line_get_char_direction
+_pango_layout_get_extents_internal
+_free_run
+_get_alignment
+_get_x_offset
+_pango_layout_run_get_extents
+_pango_layout_line_get_empty_extents
+_update_run
+_extents_free
+_line_is_terminated
+_next_nonempty_line
+_next_cluster_internal
+_offset_y
+_get_line_extents_layout_coords
+_next_nonempty_run
+_update_cluster
+_cluster_width
+_next_cluster_start
+_pango_layout_get_empty_extents_at_index
+_g_critical
+_direction_simple
+_pango_layout_get_effective_attributes
+_filter_no_shape_attributes
+_get_items_log_attrs
+_process_line
+_pango_layout_line_new
+_line_set_resolved_dir
+_add_line
+_apply_no_shape_attributes
+_should_ellipsize_current_line
+_process_item
+_can_break_in
+_uninsert_run
+_pango_layout_line_postprocess
+_zero_line_final_space
+_pango_layout_line_reorder
+_adjust_line_letter_spacing
+_pango_layout_line_get_width
+_justify_words
+_justify_clusters
+_distribute_letter_spacing
+_is_tab_run
+_pad_glyphstring_right
+_get_item_letter_spacing
+_pad_glyphstring_left
+_reorder_runs_recurse
+_can_break_at
+_shape_run
+_insert_run
+_shape_tab
+_line_width
+_ensure_tab_width
+_get_tab_pos
+_no_shape_filter_func
+_pango_layout_line_get_range
+_pango_layout_clear_lines
+_pango_layout_class_init
+_pango_layout_finalize
+_xml_isspace
+_pango_markup_parser_new_internal
+_g_critical
+_destroy_markup_data
+_open_tag_free
+_start_element_handler
+_end_element_handler
+_text_handler
+_markup_data_close_tag
+_scale_factor
+_b_parse_func
+_big_parse_func
+_i_parse_func
+_markup_parse_func
+_span_parse_func
+_s_parse_func
+_sub_parse_func
+_sup_parse_func
+_small_parse_func
+_tt_parse_func
+_u_parse_func
+_markup_data_open_tag
+_set_bad_attribute
+_add_attribute
+_attr_strcmp
+_open_tag_set_absolute_font_size
+_parse_absolute_size
+_span_parse_color
+_span_parse_enum
+_span_parse_boolean
+_span_parse_int
+_open_tag_set_absolute_font_scale
+_pango_renderer_class_intern_init
+_pango_renderer_init
+_pango_renderer_prepare_run
+_get_item_properties
+_draw_shaped_glyphs
+_add_underline
+_add_strikethrough
+_draw_underline
+_draw_strikethrough
+_handle_line_state_change
+_pango_renderer_class_init
+_pango_renderer_default_draw_glyphs
+_pango_renderer_default_draw_glyph_item
+_pango_renderer_default_draw_rectangle
+_pango_renderer_default_draw_error_underline
+_pango_renderer_default_prepare_run
+_pango_renderer_finalize
+_get_total_matrix
+_draw_rectangle
+_to_device
+_compare_points
+__pango_script_iter_init
+__pango_script_iter_fini
+_get_pair_index
+_init_tabs
+_g_string_append_c_inline
+_read_config_system
+_read_config
+_parse_int
+_g_warning
+__pango_shape_shape
+__pango_shape_get_extents
+_read_config_file
+_reorder_items_recurse
+_g_warning
+_pango_glyph_string_reverse_range
+__pango_arabic_lang_script_engine_init
+_arabic_engine_lang_register_type
+__pango_arabic_lang_script_engine_exit
+__pango_arabic_lang_script_engine_list
+__pango_arabic_lang_script_engine_create
+_arabic_engine_lang_class_init
+_arabic_engine_break
+__pango_indic_lang_script_engine_init
+_indic_engine_lang_register_type
+__pango_indic_lang_script_engine_exit
+__pango_indic_lang_script_engine_list
+__pango_indic_lang_script_engine_create
+_indic_engine_lang_class_init
+_indic_engine_break
+_not_cursor_position
+__pango_fribidi_log2vis_get_embedding_levels_new_utf8
+_fribidi_analyse_string_utf8
+_free_rl_list
+_run_length_encode_types_utf8
+_init_list
+_move_element_before
+_compact_list
+_merge_with_prev
+_compact_neutrals
+_override_list
+_new_type_link
+_free_type_link
+__pango_fribidi_get_type
+_HangulJamoProps
+_line_break_indexes
+_row_OPEN_PUNCTUATION
+_row_CLOSE_PUNCTUATION
+_row_QUOTATION
+_row_NON_BREAKING_GLUE
+_row_NON_STARTER
+_row_EXCLAMATION
+_row_SYMBOL
+_row_INFIX_SEPARATOR
+_row_PREFIX
+_row_POSTFIX
+_row_NUMERIC
+_row_ALPHABETIC
+_row_IDEOGRAPHIC
+_row_INSEPARABLE
+_row_HYPHEN
+_row_AFTER
+_row_BEFORE
+_row_BEFORE_AND_AFTER
+_row_ZERO_WIDTH_SPACE
+_row_COMBINING_MARK
+_row_WORD_JOINER
+_pfd_defaults
+_weight_map
+_style_map
+_stretch_map
+_variant_map
+_gravity_map
+_color_names
+_color_entries
+_script_properties
+_canon_map
+_lang_texts
+_lang_pool
+_pango_script_for_lang
+_pango_script_get_sample_language.sample_languages
+_no_shape_filter_func.no_shape_types
+_pango_renderer_default_draw_error_underline.identity
+_paired_chars
+_BidLev0
+_BidLev1
+__pango_fribidi_prop_to_type
+_line_break_rows
+_pango_attr_family_new.klass
+_pango_attr_language_new.klass
+_pango_attr_foreground_new.klass
+_pango_attr_background_new.klass
+_pango_attr_style_new.klass
+_pango_attr_weight_new.klass
+_pango_attr_variant_new.klass
+_pango_attr_stretch_new.klass
+_pango_attr_font_desc_new.klass
+_pango_attr_underline_new.klass
+_pango_attr_underline_color_new.klass
+_pango_attr_strikethrough_new.klass
+_pango_attr_strikethrough_color_new.klass
+_pango_attr_rise_new.klass
+_pango_attr_scale_new.klass
+_pango_attr_fallback_new.klass
+_pango_attr_letter_spacing_new.klass
+_pango_attr_shape_new_with_data.klass
+_pango_attr_gravity_new.klass
+_pango_attr_gravity_hint_new.klass
+_pango_attr_size_new_internal.klass
+_pango_attr_size_new_internal.absolute_klass
+_pango_markup_parser
+_pango_attr_type_get_type.values
+_pango_underline_get_type.values
+_pango_bidi_type_get_type.values
+_pango_direction_get_type.values
+_pango_coverage_level_get_type.values
+_pango_style_get_type.values
+_pango_variant_get_type.values
+_pango_weight_get_type.values
+_pango_stretch_get_type.values
+_pango_font_mask_get_type.values
+_pango_gravity_get_type.values
+_pango_gravity_hint_get_type.values
+_pango_alignment_get_type.values
+_pango_wrap_mode_get_type.values
+_pango_ellipsize_mode_get_type.values
+_pango_render_part_get_type.values
+_pango_script_get_type.values
+_pango_tab_align_get_type.values
+_arabic_engine_lang_register_type.object_info
+_indic_engine_lang_register_type.object_info
+dyld__mach_header
+_pango_attr_type_register.current_type
+__pango_included_lang_modules
+_script_engines
+_arabic_scripts
+_script_engines
+_deva_scripts
+_beng_scripts
+_guru_scripts
+_gujr_scripts
+_orya_scripts
+_taml_scripts
+_telu_scripts
+_knda_scripts
+_mlym_scripts
+_sinh_scripts
+_pango_get_log_attrs.engine_type_id
+_pango_get_log_attrs.render_type_id
+_pango_font_description_get_type.g_define_type_id__volatile
+_pango_font_get_type.g_define_type_id__volatile
+_pango_font_metrics_get_type.g_define_type_id__volatile
+_pango_font_family_get_type.g_define_type_id__volatile
+_pango_font_face_get_type.g_define_type_id__volatile
+_pango_font_face_parent_class
+_PangoFontFace_private_offset
+_pango_font_family_parent_class
+_PangoFontFamily_private_offset
+_pango_font_parent_class
+_PangoFont_private_offset
+_pango_glyph_string_get_type.g_define_type_id__volatile
+_g__maps_lock
+_maps
+_registered_engines
+_pango_module_get_type.g_define_type_id__volatile
+_pango_module_parent_class
+_PangoModule_private_offset
+_get_warned_quark.warned_quark
+_g__engine_lock
+_dlloaded_engines
+_build_map.no_module_warning
+_init_modules.init
+_dlloaded_modules
+_script_from_string.class
+_g__attr_type_lock
+_name_map
+_pango_attr_list_get_type.g_define_type_id__volatile
+_pango_color_get_type.g_define_type_id__volatile
+_pango_context_get_type.g_define_type_id__volatile
+_string_from_script.class
+_get_shaper_font_cache.cache_quark
+_get_lang_map.engine_type_id
+_get_lang_map.render_type_id
+_pango_context_parent_class
+_PangoContext_private_offset
+_pango_engine_get_type.g_define_type_id__volatile
+_pango_engine_lang_get_type.g_define_type_id__volatile
+_pango_engine_shape_get_type.g_define_type_id__volatile
+__pango_get_fallback_shaper.fallback_shaper
+_pango_fallback_engine_get_type.g_define_type_id__volatile
+_pango_fallback_engine_parent_class
+_PangoFallbackEngine_private_offset
+_pango_engine_shape_parent_class
+_PangoEngineShape_private_offset
+_pango_engine_lang_parent_class
+_PangoEngineLang_private_offset
+_pango_engine_parent_class
+_PangoEngine_private_offset
+_pango_font_map_get_type.g_define_type_id__volatile
+_pango_font_map_parent_class
+_PangoFontMap_private_offset
+_pango_font_map_real_load_fontset.warned_fonts
+_pango_font_map_real_load_fontset.g__warned_fonts_lock
+_pango_fontset_get_type.g_define_type_id__volatile
+_pango_fontset_simple_get_type.g_define_type_id__volatile
+_pango_fontset_simple_parent_class
+_PangoFontsetSimple_private_offset
+_pango_fontset_parent_class
+_PangoFontset_private_offset
+_pango_glyph_item_get_type.g_define_type_id__volatile
+_pango_glyph_item_iter_get_type.g_define_type_id__volatile
+_pango_item_get_type.g_define_type_id__volatile
+_pango_language_get_type.g_define_type_id__volatile
+_pango_language_get_default.result
+_pango_language_from_string.g__lang_from_string_lock
+_pango_language_from_string.hash
+__pango_script_get_default_language.g__languages_lock
+__pango_script_get_default_language.initialized
+__pango_script_get_default_language.languages
+__pango_script_get_default_language.hash
+_pango_layout_get_type.g_define_type_id__volatile
+_pango_layout_line_get_type.g_define_type_id__volatile
+_pango_layout_iter_get_type.g_define_type_id__volatile
+_pango_layout_parent_class
+_PangoLayout_private_offset
+_pango_matrix_get_type.g_define_type_id__volatile
+_pango_renderer_get_type.g_define_type_id__volatile
+_pango_renderer_parent_class
+_PangoRenderer_private_offset
+_pango_tab_array_get_type.g_define_type_id__volatile
+_pango_get_sysconf_subdirectory.result
+_pango_get_lib_subdirectory.result
+_read_config.config_hash
+_pango_shape_full.warned_quark
+_pango_attr_type_get_type.g_define_type_id__volatile
+_pango_underline_get_type.g_define_type_id__volatile
+_pango_bidi_type_get_type.g_define_type_id__volatile
+_pango_direction_get_type.g_define_type_id__volatile
+_pango_coverage_level_get_type.g_define_type_id__volatile
+_pango_style_get_type.g_define_type_id__volatile
+_pango_variant_get_type.g_define_type_id__volatile
+_pango_weight_get_type.g_define_type_id__volatile
+_pango_stretch_get_type.g_define_type_id__volatile
+_pango_font_mask_get_type.g_define_type_id__volatile
+_pango_gravity_get_type.g_define_type_id__volatile
+_pango_gravity_hint_get_type.g_define_type_id__volatile
+_pango_alignment_get_type.g_define_type_id__volatile
+_pango_wrap_mode_get_type.g_define_type_id__volatile
+_pango_ellipsize_mode_get_type.g_define_type_id__volatile
+_pango_render_part_get_type.g_define_type_id__volatile
+_pango_script_get_type.g_define_type_id__volatile
+_pango_tab_align_get_type.g_define_type_id__volatile
+_arabic_engine_lang_type
+_indic_engine_lang_type
+_pango_alignment_get_type
+_pango_attr_background_new
+_pango_attr_fallback_new
+_pango_attr_family_new
+_pango_attr_font_desc_new
+_pango_attr_foreground_new
+_pango_attr_gravity_hint_new
+_pango_attr_gravity_new
+_pango_attr_iterator_copy
+_pango_attr_iterator_destroy
+_pango_attr_iterator_get
+_pango_attr_iterator_get_attrs
+_pango_attr_iterator_get_font
+_pango_attr_iterator_next
+_pango_attr_iterator_range
+_pango_attr_language_new
+_pango_attr_letter_spacing_new
+_pango_attr_list_change
+_pango_attr_list_copy
+_pango_attr_list_filter
+_pango_attr_list_get_iterator
+_pango_attr_list_get_type
+_pango_attr_list_insert
+_pango_attr_list_insert_before
+_pango_attr_list_new
+_pango_attr_list_ref
+_pango_attr_list_splice
+_pango_attr_list_unref
+_pango_attr_rise_new
+_pango_attr_scale_new
+_pango_attr_shape_new
+_pango_attr_shape_new_with_data
+_pango_attr_size_new
+_pango_attr_size_new_absolute
+_pango_attr_stretch_new
+_pango_attr_strikethrough_color_new
+_pango_attr_strikethrough_new
+_pango_attr_style_new
+_pango_attr_type_get_name
+_pango_attr_type_get_type
+_pango_attr_type_register
+_pango_attr_underline_color_new
+_pango_attr_underline_new
+_pango_attr_variant_new
+_pango_attr_weight_new
+_pango_attribute_copy
+_pango_attribute_destroy
+_pango_attribute_equal
+_pango_attribute_init
+_pango_bidi_type_for_unichar
+_pango_bidi_type_get_type
+_pango_break
+_pango_color_copy
+_pango_color_free
+_pango_color_get_type
+_pango_color_parse
+_pango_color_to_string
+_pango_config_key_get
+_pango_config_key_get_system
+_pango_context_changed
+_pango_context_get_base_dir
+_pango_context_get_base_gravity
+_pango_context_get_font_description
+_pango_context_get_font_map
+_pango_context_get_gravity
+_pango_context_get_gravity_hint
+_pango_context_get_language
+_pango_context_get_matrix
+_pango_context_get_metrics
+_pango_context_get_serial
+_pango_context_get_type
+_pango_context_list_families
+_pango_context_load_font
+_pango_context_load_fontset
+_pango_context_new
+_pango_context_set_base_dir
+_pango_context_set_base_gravity
+_pango_context_set_font_description
+_pango_context_set_font_map
+_pango_context_set_gravity_hint
+_pango_context_set_language
+_pango_context_set_matrix
+_pango_coverage_copy
+_pango_coverage_from_bytes
+_pango_coverage_get
+_pango_coverage_level_get_type
+_pango_coverage_max
+_pango_coverage_new
+_pango_coverage_ref
+_pango_coverage_set
+_pango_coverage_to_bytes
+_pango_coverage_unref
+_pango_default_break
+_pango_direction_get_type
+_pango_ellipsize_mode_get_type
+_pango_engine_get_type
+_pango_engine_lang_get_type
+_pango_engine_shape_get_type
+_pango_extents_to_pixels
+_pango_find_base_dir
+_pango_find_map
+_pango_find_paragraph_boundary
+_pango_font_describe
+_pango_font_describe_with_absolute_size
+_pango_font_description_better_match
+_pango_font_description_copy
+_pango_font_description_copy_static
+_pango_font_description_equal
+_pango_font_description_free
+_pango_font_description_from_string
+_pango_font_description_get_family
+_pango_font_description_get_gravity
+_pango_font_description_get_set_fields
+_pango_font_description_get_size
+_pango_font_description_get_size_is_absolute
+_pango_font_description_get_stretch
+_pango_font_description_get_style
+_pango_font_description_get_type
+_pango_font_description_get_variant
+_pango_font_description_get_weight
+_pango_font_description_hash
+_pango_font_description_merge
+_pango_font_description_merge_static
+_pango_font_description_new
+_pango_font_description_set_absolute_size
+_pango_font_description_set_family
+_pango_font_description_set_family_static
+_pango_font_description_set_gravity
+_pango_font_description_set_size
+_pango_font_description_set_stretch
+_pango_font_description_set_style
+_pango_font_description_set_variant
+_pango_font_description_set_weight
+_pango_font_description_to_filename
+_pango_font_description_to_string
+_pango_font_description_unset_fields
+_pango_font_descriptions_free
+_pango_font_face_describe
+_pango_font_face_get_face_name
+_pango_font_face_get_type
+_pango_font_face_is_synthesized
+_pango_font_face_list_sizes
+_pango_font_family_get_name
+_pango_font_family_get_type
+_pango_font_family_is_monospace
+_pango_font_family_list_faces
+_pango_font_find_shaper
+_pango_font_get_coverage
+_pango_font_get_font_map
+_pango_font_get_glyph_extents
+_pango_font_get_metrics
+_pango_font_get_type
+_pango_font_map_changed
+_pango_font_map_create_context
+_pango_font_map_get_serial
+_pango_font_map_get_shape_engine_type
+_pango_font_map_get_type
+_pango_font_map_list_families
+_pango_font_map_load_font
+_pango_font_map_load_fontset
+_pango_font_mask_get_type
+_pango_font_metrics_get_approximate_char_width
+_pango_font_metrics_get_approximate_digit_width
+_pango_font_metrics_get_ascent
+_pango_font_metrics_get_descent
+_pango_font_metrics_get_strikethrough_position
+_pango_font_metrics_get_strikethrough_thickness
+_pango_font_metrics_get_type
+_pango_font_metrics_get_underline_position
+_pango_font_metrics_get_underline_thickness
+_pango_font_metrics_new
+_pango_font_metrics_ref
+_pango_font_metrics_unref
+_pango_fontset_foreach
+_pango_fontset_get_font
+_pango_fontset_get_metrics
+_pango_fontset_get_type
+_pango_fontset_simple_append
+_pango_fontset_simple_get_type
+_pango_fontset_simple_new
+_pango_fontset_simple_size
+_pango_get_lib_subdirectory
+_pango_get_log_attrs
+_pango_get_mirror_char
+_pango_get_sysconf_subdirectory
+_pango_glyph_item_apply_attrs
+_pango_glyph_item_copy
+_pango_glyph_item_free
+_pango_glyph_item_get_logical_widths
+_pango_glyph_item_get_type
+_pango_glyph_item_iter_copy
+_pango_glyph_item_iter_free
+_pango_glyph_item_iter_get_type
+_pango_glyph_item_iter_init_end
+_pango_glyph_item_iter_init_start
+_pango_glyph_item_iter_next_cluster
+_pango_glyph_item_iter_prev_cluster
+_pango_glyph_item_letter_space
+_pango_glyph_item_split
+_pango_glyph_string_copy
+_pango_glyph_string_extents
+_pango_glyph_string_extents_range
+_pango_glyph_string_free
+_pango_glyph_string_get_logical_widths
+_pango_glyph_string_get_type
+_pango_glyph_string_get_width
+_pango_glyph_string_index_to_x
+_pango_glyph_string_new
+_pango_glyph_string_set_size
+_pango_glyph_string_x_to_index
+_pango_gravity_get_for_matrix
+_pango_gravity_get_for_script
+_pango_gravity_get_for_script_and_width
+_pango_gravity_get_type
+_pango_gravity_hint_get_type
+_pango_gravity_to_rotation
+_pango_is_zero_width
+_pango_item_copy
+_pango_item_free
+_pango_item_get_type
+_pango_item_new
+_pango_item_split
+_pango_itemize
+_pango_itemize_with_base_dir
+_pango_language_from_string
+_pango_language_get_default
+_pango_language_get_sample_string
+_pango_language_get_scripts
+_pango_language_get_type
+_pango_language_includes_script
+_pango_language_matches
+_pango_language_to_string
+_pango_layout_context_changed
+_pango_layout_copy
+_pango_layout_get_alignment
+_pango_layout_get_attributes
+_pango_layout_get_auto_dir
+_pango_layout_get_baseline
+_pango_layout_get_character_count
+_pango_layout_get_context
+_pango_layout_get_cursor_pos
+_pango_layout_get_ellipsize
+_pango_layout_get_extents
+_pango_layout_get_font_description
+_pango_layout_get_height
+_pango_layout_get_indent
+_pango_layout_get_iter
+_pango_layout_get_justify
+_pango_layout_get_line
+_pango_layout_get_line_count
+_pango_layout_get_line_readonly
+_pango_layout_get_lines
+_pango_layout_get_lines_readonly
+_pango_layout_get_log_attrs
+_pango_layout_get_log_attrs_readonly
+_pango_layout_get_pixel_extents
+_pango_layout_get_pixel_size
+_pango_layout_get_serial
+_pango_layout_get_single_paragraph_mode
+_pango_layout_get_size
+_pango_layout_get_spacing
+_pango_layout_get_tabs
+_pango_layout_get_text
+_pango_layout_get_type
+_pango_layout_get_unknown_glyphs_count
+_pango_layout_get_width
+_pango_layout_get_wrap
+_pango_layout_index_to_line_x
+_pango_layout_index_to_pos
+_pango_layout_is_ellipsized
+_pango_layout_is_wrapped
+_pango_layout_iter_at_last_line
+_pango_layout_iter_copy
+_pango_layout_iter_free
+_pango_layout_iter_get_baseline
+_pango_layout_iter_get_char_extents
+_pango_layout_iter_get_cluster_extents
+_pango_layout_iter_get_index
+_pango_layout_iter_get_layout
+_pango_layout_iter_get_layout_extents
+_pango_layout_iter_get_line
+_pango_layout_iter_get_line_extents
+_pango_layout_iter_get_line_readonly
+_pango_layout_iter_get_line_yrange
+_pango_layout_iter_get_run
+_pango_layout_iter_get_run_extents
+_pango_layout_iter_get_run_readonly
+_pango_layout_iter_get_type
+_pango_layout_iter_next_char
+_pango_layout_iter_next_cluster
+_pango_layout_iter_next_line
+_pango_layout_iter_next_run
+_pango_layout_line_get_extents
+_pango_layout_line_get_pixel_extents
+_pango_layout_line_get_type
+_pango_layout_line_get_x_ranges
+_pango_layout_line_index_to_x
+_pango_layout_line_ref
+_pango_layout_line_unref
+_pango_layout_line_x_to_index
+_pango_layout_move_cursor_visually
+_pango_layout_new
+_pango_layout_set_alignment
+_pango_layout_set_attributes
+_pango_layout_set_auto_dir
+_pango_layout_set_ellipsize
+_pango_layout_set_font_description
+_pango_layout_set_height
+_pango_layout_set_indent
+_pango_layout_set_justify
+_pango_layout_set_markup
+_pango_layout_set_markup_with_accel
+_pango_layout_set_single_paragraph_mode
+_pango_layout_set_spacing
+_pango_layout_set_tabs
+_pango_layout_set_text
+_pango_layout_set_width
+_pango_layout_set_wrap
+_pango_layout_xy_to_index
+_pango_log2vis_get_embedding_levels
+_pango_lookup_aliases
+_pango_map_get_engine
+_pango_map_get_engines
+_pango_markup_parser_finish
+_pango_markup_parser_new
+_pango_matrix_concat
+_pango_matrix_copy
+_pango_matrix_free
+_pango_matrix_get_font_scale_factor
+_pango_matrix_get_type
+_pango_matrix_rotate
+_pango_matrix_scale
+_pango_matrix_transform_distance
+_pango_matrix_transform_pixel_rectangle
+_pango_matrix_transform_point
+_pango_matrix_transform_rectangle
+_pango_matrix_translate
+_pango_module_register
+_pango_parse_enum
+_pango_parse_markup
+_pango_parse_stretch
+_pango_parse_style
+_pango_parse_variant
+_pango_parse_weight
+_pango_quantize_line_geometry
+_pango_read_line
+_pango_render_part_get_type
+_pango_renderer_activate
+_pango_renderer_deactivate
+_pango_renderer_draw_error_underline
+_pango_renderer_draw_glyph
+_pango_renderer_draw_glyph_item
+_pango_renderer_draw_glyphs
+_pango_renderer_draw_layout
+_pango_renderer_draw_layout_line
+_pango_renderer_draw_rectangle
+_pango_renderer_draw_trapezoid
+_pango_renderer_get_color
+_pango_renderer_get_layout
+_pango_renderer_get_layout_line
+_pango_renderer_get_matrix
+_pango_renderer_get_type
+_pango_renderer_part_changed
+_pango_renderer_set_color
+_pango_renderer_set_matrix
+_pango_reorder_items
+_pango_scan_int
+_pango_scan_string
+_pango_scan_word
+_pango_script_for_unichar
+_pango_script_get_sample_language
+_pango_script_get_type
+_pango_script_iter_free
+_pango_script_iter_get_range
+_pango_script_iter_new
+_pango_script_iter_next
+_pango_shape
+_pango_shape_full
+_pango_skip_space
+_pango_split_file_list
+_pango_stretch_get_type
+_pango_style_get_type
+_pango_tab_align_get_type
+_pango_tab_array_copy
+_pango_tab_array_free
+_pango_tab_array_get_positions_in_pixels
+_pango_tab_array_get_size
+_pango_tab_array_get_tab
+_pango_tab_array_get_tabs
+_pango_tab_array_get_type
+_pango_tab_array_new
+_pango_tab_array_new_with_positions
+_pango_tab_array_resize
+_pango_tab_array_set_tab
+_pango_trim_string
+_pango_underline_get_type
+_pango_unichar_direction
+_pango_units_from_double
+_pango_units_to_double
+_pango_variant_get_type
+_pango_version
+_pango_version_check
+_pango_version_string
+_pango_weight_get_type
+_pango_wrap_mode_get_type
+_CFArrayGetValueAtIndex
+_CFLocaleCopyPreferredLanguages
+_CFRelease
+_CFStringGetCString
+___error
+___memcpy_chk
+___memmove_chk
+___memset_chk
+___srget
+___stack_chk_fail
+___stack_chk_guard
+_abs
+_bsearch
+_ceil
+_cos
+_fclose
+_flockfile
+_floor
+_fopen
+_funlockfile
+_g_array_append_vals
+_g_array_free
+_g_array_new
+_g_array_set_size
+_g_ascii_dtostr
+_g_ascii_strcasecmp
+_g_ascii_strtod
+_g_ascii_table
+_g_ascii_tolower
+_g_ascii_xdigit_value
+_g_assertion_message_expr
+_g_boxed_type_register_static
+_g_build_filename
+_g_direct_hash
+_g_enum_get_value
+_g_enum_get_value_by_nick
+_g_enum_register_static
+_g_error_free
+_g_file_error_quark
+_g_flags_register_static
+_g_free
+_g_get_home_dir
+_g_get_user_config_dir
+_g_getenv
+_g_hash_table_destroy
+_g_hash_table_insert
+_g_hash_table_lookup
+_g_hash_table_lookup_extended
+_g_hash_table_new
+_g_hash_table_new_full
+_g_hash_table_unref
+_g_intern_static_string
+_g_intern_string
+_g_key_file_free
+_g_key_file_get_groups
+_g_key_file_get_keys
+_g_key_file_get_value
+_g_key_file_load_from_file
+_g_key_file_new
+_g_list_append
+_g_list_concat
+_g_list_copy
+_g_list_delete_link
+_g_list_foreach
+_g_list_free
+_g_list_free_1
+_g_list_length
+_g_list_prepend
+_g_list_remove_link
+_g_list_reverse
+_g_logv
+_g_malloc
+_g_malloc0
+_g_malloc0_n
+_g_malloc_n
+_g_markup_error_quark
+_g_markup_parse_context_end_parse
+_g_markup_parse_context_free
+_g_markup_parse_context_get_position
+_g_markup_parse_context_get_user_data
+_g_markup_parse_context_new
+_g_markup_parse_context_parse
+_g_memdup
+_g_module_close
+_g_module_error
+_g_module_open
+_g_module_symbol
+_g_mutex_lock
+_g_mutex_unlock
+_g_object_get_data
+_g_object_get_qdata
+_g_object_new
+_g_object_ref
+_g_object_replace_qdata
+_g_object_set_data_full
+_g_object_set_qdata_full
+_g_object_unref
+_g_once_init_enter
+_g_once_init_leave
+_g_path_get_dirname
+_g_path_is_absolute
+_g_printerr
+_g_ptr_array_add
+_g_ptr_array_free
+_g_ptr_array_new
+_g_quark_from_static_string
+_g_quark_from_string
+_g_quark_to_string
+_g_realloc
+_g_realloc_n
+_g_return_if_fail_warning
+_g_set_error
+_g_slice_alloc
+_g_slice_alloc0
+_g_slice_copy
+_g_slice_free1
+_g_slice_free_chain_with_offset
+_g_slist_alloc
+_g_slist_append
+_g_slist_concat
+_g_slist_copy
+_g_slist_delete_link
+_g_slist_foreach
+_g_slist_free
+_g_slist_free_1
+_g_slist_free_full
+_g_slist_length
+_g_slist_nth
+_g_slist_prepend
+_g_slist_reverse
+_g_str_equal
+_g_str_hash
+_g_strchomp
+_g_strchug
+_g_strconcat
+_g_strdup
+_g_strdup_printf
+_g_strfreev
+_g_string_append
+_g_string_append_len
+_g_string_append_printf
+_g_string_assign
+_g_string_free
+_g_string_insert_c
+_g_string_new
+_g_string_truncate
+_g_strjoinv
+_g_strndup
+_g_strsplit
+_g_type_check_instance_is_a
+_g_type_class_add_private
+_g_type_class_adjust_private_offset
+_g_type_class_peek_parent
+_g_type_class_ref
+_g_type_class_unref
+_g_type_instance_get_private
+_g_type_module_get_type
+_g_type_module_register_type
+_g_type_module_unuse
+_g_type_module_use
+_g_type_name
+_g_type_qname
+_g_type_register_static_simple
+_g_unichar_break_type
+_g_unichar_get_mirror_char
+_g_unichar_get_script
+_g_unichar_isgraph
+_g_unichar_isspace
+_g_unichar_iswide
+_g_unichar_iszerowidth
+_g_unichar_type
+_g_utf8_get_char
+_g_utf8_offset_to_pointer
+_g_utf8_pointer_to_offset
+_g_utf8_prev_char
+_g_utf8_skip
+_g_utf8_strlen
+_g_utf8_validate
+_getenv
+_memcpy
+_memset
+_qsort
+_setlocale
+_sin
+_strchr
+_strcmp
+_strlen
+_strncmp
+_strpbrk
+_strstr
+_strtol
+_ungetc
+__TEXT
+__text
+__TEXT
+__stubs
+__TEXT
+__stub_helper
+__TEXT
+__cstring
+__TEXT
+__const
+__TEXT
+__unwind_info
+__TEXT
+__eh_frame
+__TEXT
+__DATA
+__dyld
+__DATA
+__got
+__DATA
+__la_symbol_ptr
+__DATA
+__const
+__DATA
+__data
+__DATA
+__bss
+__DATA
+__LINKEDIT
+@loader_path/libpango-1.0.dylib
+@loader_path/libglib-2.0.dylib
+@loader_path/libgmodule-2.0.dylib
+@loader_path/libgobject-2.0.dylib
+@loader_path/libgthread-2.0.dylib
+/usr/lib/libSystem.B.dylib
+/usr/lib/libgcc_s.1.dylib
+1HcM
+1HcM
+ffff.
+fffff.
+fffff.
+fff.
+ffff.
+fff.
+ffffff.
++Op)
+Hp;M
+Hp;M
+H +M
++P 9
+Hc6H
+Hc@hH
+Hc@(H
+Hcv(H
+Hc@(H
+fffff.
+Hcv(H
+HT;M
+Hc@hH
+HcITH
+ffff.
+fff.
+fffff.
+ffffff.
+fff.
+ffffff.
+ffff.
+fff.
+ffff.
+ffff.
+fffff.
+ffff.
+ffff.
+fff.
+ffff.
+fff.
+ffff.
+fffff.
+ffffff.
+ffffff.
+fffff.
+ffff.
+ffffff.
+ffff.
+ffff.
+ffff.
+8HcE
+ffff.
+fff.
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+fff.
+ffff.
+ffff.
+ffff.
+H;A0
+fff.
+ffff.
+ffffff.
+fff.
+fffff.
+-?(@
+-?( 
+-@( 
+-@(@
+fffff.
+fffff.
+ffff.
+fff.
+H;AP
+H;A@
+ffffff.
+H;A(
+ffffff.
+H;A 
+I0Hc	H)
+H;AH
+H;Ax
+fff.
+Hc	H
+fffff.
+fffff.
+Hc@@H
+ffff.
+fffff.
+H;G 
+H;A 
+H;A 
+@ H;E
+I0Hc	H)
+ffff.
+ffffff.
+ffffff.
+ffffff.
+ffff.
+ffffff.
+fff.
+ffffff.
+ffff.
+>HcE
+fff.
+fff.
+>HcE
+ffffff.
+ffff.
+fff.
+ffff.
+ffffff.
+I ;A
+fffff.
+	Hc	H
+?Hc?H
+ffffff.
+Hcr$H
+Hcr$H
+fff.
+fff.
+fffff.
+ffffff.
+ffff.
+ffff.
+Gdf%
+Gdf%
+Gdf%
+Gdf%
+Gdf%
+Gdf%
+Gdf%
+ffffff.
+ffff.
+ffffff.
+fffff.
+HcvLH
+HcvLH
+HcRLH
+HcRLH
+I8H)
+R8H)
+H;A(
+ffff.
+H;A0
+ffffff.
+fffff.
+H;A8
+ffffff.
+ffff.
+ffff.
+fff.
+fffff.
+fffff.
+@8HcM
+R8Hcu
+v8Hc}
+@8H)
+I8HcU
+I8H)
+	Hc	H
+A+0D
+fff.
+I8HcU
+R8Hcu
+@8H)
+I8H)
+ffffff.
+fffff.
+fffff.
+ffffff.
+fffff.
+H;A0
+P`+U
+fffff.
+I8Hcu
+v8Hc}
+@8HcM
+I8H)
+@8Hc
+@8HcM
+I8H)
+fffff.
+fff.
+ffff.
+@8HcM
+I8H)
+fff.
+fffff.
+fff.
+ffffff.
+fffff.
+@8HcM
+6Hc6H
+6Hc6H
+	;AT
+ffffff.
+ffff.
+H;A8
+HcR(H
+Hcv(
+HcI(H
+ffffff.
+HcITH
+ffff.
+ffff.
+ffffff.
+Hc@XH
+	Hc	H
+I8H)
+I8H)
+ffff.
+ffff.
+fff.
+ffffff.
+fff.
++AX9
+Hc	H
+Hc	H
+Hc6H
+ffff.
+ffffff.
+ffff.
+ppHcE
+fff.
+6Hc6H
+fffff.
+ppHcE
+fffff.
+H(;M
+Hc	H
+Hc	H
+HcI(H
+H;F 
+ffffff.
+fffff.
+ffff.
+fffff.
+ffff.
+ffff.
+ffffff.
+fff.
+ffffff.
+fffff.
+ffff.
+X@ H
+X@(H
+ffffff.
+ffff.
+fffff.
+R0Hi
+R0Hi
+R0Hi
+R0Hi
+ffffff.
+ffffff.
+R0Hi
+fff.
+fff.
+XH H
+XH(H
+XH H
+XH(H
+H ;M
+ffff.
+fff.
+ffff.
+ffff.
+ffffff.
+ffff.
+ffff.
+ffffff.
+H(;M
+ffff.
+ffff.
+fff.
+ffff.
+fff.
+fff.
+Hc6H
+Hc@ H%
+A$HcM
+Hc@ H
+Hc@ H
+Hc@ H
+Hc@ H
+Hc@ H
+Hc@ H%
+Hc@ H
+Hc@ H
+Hc@ H
+Hc@ H
+Hc@ H
+Hc@ H%@
+Hc@ H%@
+fffff.
+fffff.
+Pango
+pango_default_break
+length == 0 || text != NULL
+attrs != NULL
+Y %d %d
+break.c
+prev_break_type != G_UNICODE_BREAK_SPACE
+IN_BREAK_TABLE (prev_break_type)
+IN_BREAK_TABLE (break_type)
+possible_sentence_end >= 0
+possible_sentence_boundary >= 0
+pango_break
+analysis != NULL
+pango_find_paragraph_boundary
+delimiter
+pango_get_log_attrs
+log_attrs != NULL
+PangoEngineLang
+PangoRenderNone
+range_start == text
+range_end == run_start
+length < 0 || range_end == text + length
+pango_get_log_attrs: attrs_len should have been at least %d, but was %d.  Expect corrupted memory.
+pango_utf8_strlen
+p != NULL || max == 0
+_pango_layout_line_ellipsize
+line->layout->ellipsize != PANGO_ELLIPSIZE_NONE && goal_width >= 0
+ellipsize.c
+itemize_text
+g_list_length (items) == 1
+find_initial_span
+PangoFontDescription
+pango_font_description_set_family
+desc != NULL
+pango_font_description_set_family_static
+pango_font_description_get_family
+pango_font_description_set_style
+pango_font_description_get_style
+pango_font_description_set_variant
+pango_font_description_get_variant
+pango_font_description_set_weight
+pango_font_description_get_weight
+pango_font_description_set_stretch
+pango_font_description_get_stretch
+pango_font_description_set_size
+size >= 0
+pango_font_description_get_size
+pango_font_description_set_absolute_size
+pango_font_description_get_size_is_absolute
+pango_font_description_set_gravity
+pango_font_description_get_gravity
+pango_font_description_get_set_fields
+pango_font_description_unset_fields
+pango_font_description_merge
+pango_font_description_merge_static
+desc_to_merge != NULL
+pango_font_description_better_match
+new_match != NULL
+pango_font_description_equal
+desc1 != NULL
+desc2 != NULL
+pango_font_description_hash
+pango_font_description_from_string
+str != NULL
+pango_font_description_to_string
+weight
+style
+stretch
+variant
+gravity
+Normal
+pango_font_description_to_filename
+-+_.
+PangoFont
+pango_font_describe
+font != NULL
+pango_font_describe_with_absolute_size
+describe_absolute not implemented for this font class, report this as a bug
+pango_font_get_coverage
+pango_font_find_shaper
+PangoFontMetrics
+pango_font_metrics_unref
+metrics->ref_count > 0
+pango_font_metrics_get_ascent
+metrics != NULL
+pango_font_metrics_get_descent
+pango_font_metrics_get_approximate_char_width
+pango_font_metrics_get_approximate_digit_width
+pango_font_metrics_get_underline_position
+pango_font_metrics_get_underline_thickness
+pango_font_metrics_get_strikethrough_position
+pango_font_metrics_get_strikethrough_thickness
+PangoFontFamily
+pango_font_family_get_name
+PANGO_IS_FONT_FAMILY (family)
+pango_font_family_list_faces
+pango_font_family_is_monospace
+PangoFontFace
+pango_font_face_describe
+PANGO_IS_FONT_FACE (face)
+pango_font_face_is_synthesized
+pango_font_face_get_face_name
+pango_font_face_list_sizes
+sizes == NULL || n_sizes != NULL
+%s must be one of %s or a number
+field_matches
+s1 != NULL
+s2 != NULL
+%s=%d
+pango_glyph_string_set_size
+new_len >= 0
+%s: failed to allocate glyph string of length %i
+glyphstring.c:81
+PangoGlyphString
+pango_glyph_string_extents_range
+start <= end
+pango_glyph_string_index_to_x
+glyphs != NULL
+length >= 0
+PangoModule
+script_engine_init
+script_engine_exit
+script_engine_list
+script_engine_create
+pango-module-warned
+Failed to load Pango module '%s' for id '%s'
+pango.modules
+No modules found:
+No builtin or dynamically loaded modules were found.
+PangoFc will not work correctly.
+This probably means there was an error in the creation of:
+  '%s'
+You should create this file by running:
+  pango-querymodules > '%s'
+Pango/ModuleFiles
+1.8.0
+modules.cache
+@executable_path/
+@loader_path/
+@rpath/
+modules
+Error reading Pango modules file
+pango_attribute_init
+attr != NULL
+klass != NULL
+pango_attribute_copy
+pango_attribute_destroy
+pango_attribute_equal
+attr1 != NULL
+attr2 != NULL
+pango_attr_family_new
+family != NULL
+pango_attr_shape_new_with_data
+ink_rect != NULL
+logical_rect != NULL
+pango_attr_shape_new
+pango_attr_gravity_new
+gravity != PANGO_GRAVITY_AUTO
+PangoAttrList
+pango_attr_list_unref
+list->ref_count > 0
+pango_attr_list_insert
+list != NULL
+pango_attr_list_insert_before
+pango_attr_list_change
+pango-attributes.c
+prev->data == attr
+prev->next == tmp_list
+pango_attr_list_splice
+other != NULL
+pos >= 0
+len >= 0
+pango_attr_list_get_iterator
+pango_attr_iterator_range
+iterator != NULL
+pango_attr_iterator_next
+pango_attr_iterator_copy
+pango_attr_iterator_destroy
+pango_attr_iterator_get
+pango_attr_iterator_get_font
+pango_attr_list_filter
+pango_attr_list_insert_internal
+list->attributes_tail
+pango-bidi-type.c
+pango_bidi_type_for_unichar
+PangoColor
+pango_color_to_string
+color != NULL
+#%04x%04x%04x
+pango_color_parse
+spec != NULL
+PangoContext
+pango_context_set_matrix
+PANGO_IS_CONTEXT (context)
+pango_context_get_matrix
+pango_context_set_font_map
+!font_map || PANGO_IS_FONT_MAP (font_map)
+pango_context_get_font_map
+pango_context_list_families
+context != NULL
+families == NULL || n_families != NULL
+pango_context_load_font
+context->font_map != NULL
+pango_context_load_fontset
+pango_context_set_font_description
+pango_context_get_font_description
+pango_context_set_language
+pango_context_get_language
+pango_context_set_base_dir
+pango_context_get_base_dir
+pango_context_set_base_gravity
+pango_context_get_base_gravity
+pango_context_get_gravity
+pango_context_set_gravity_hint
+pango_context_get_gravity_hint
+pango_itemize_with_base_dir
+start_index >= 0
+pango_itemize
+pango_context_get_metrics
+pango_utf8_strwidth
+p != NULL
+pango-context.c
+itemize_state_process_run
+state->run_end != state->run_start
+failed to choose a font, expect ugly output. engine-type='%s', script='%s'
+PangoEngineShape
+pango-shaper-font-cache
+In pango_itemize(), the cached iterator passed in had already moved beyond the start_index
+serif
+pango_coverage_copy
+coverage != NULL
+pango_coverage_ref
+pango_coverage_unref
+coverage->ref_count > 0
+pango_coverage_get
+pango_coverage_set
+index >= 0
+(guint) level <= 3
+pango_coverage_max
+PangoEngine
+_pango_engine_shape_covers
+PANGO_IS_ENGINE_SHAPE (engine)
+PANGO_IS_FONT (font)
+PangoFallbackEngine
+PangoFontMap
+pango_font_map_create_context
+fontmap != NULL
+pango_font_map_load_font
+pango_font_map_list_families
+pango_font_map_load_fontset
+pango_font_map_get_shape_engine_type
+PANGO_IS_FONT_MAP (fontmap)
+pango_font_map_get_serial
+pango_font_map_changed
+Sans
+couldn't load font "%s", falling back to "%s", expect ugly output.
+All font fallbacks failed!!!!
+PangoFontset
+pango_fontset_get_font
+PANGO_IS_FONTSET (fontset)
+pango_fontset_get_metrics
+pango_fontset_foreach
+func != NULL
+PangoFontsetSimple
+pango_glyph_item_split
+orig != NULL
+orig->item->length > 0
+split_index > 0
+split_index < orig->item->length
+PangoGlyphItem
+PangoGlyphItemIter
+pango-glyph-item.c
+pango_glyph_item_apply_attrs
+range_start == state.iter.end_index && start_new_segment
+pango_gravity_to_rotation
+get_script_properties
+script >= 0
+PangoItem
+pango_item_split
+split_index < orig->length
+split_offset > 0
+split_offset < orig->num_chars
+PangoLanguage
+pango-language.c
+pango_language_from_string
+result
+;:, 	
+The quick brown fox jumps over the lazy dog.
+pango_language_get_scripts
+j > 0
+pango_script_get_sample_language
+PANGO_LANGUAGE
+LANGUAGE
+Invalid PangoLanguage.  Did you pass in a straight string instead of calling pango_language_from_string()?
+PangoLayout
+pango_layout_new
+pango_layout_copy
+PANGO_IS_LAYOUT (src)
+pango_layout_get_context
+layout != NULL
+pango_layout_set_width
+pango_layout_get_width
+pango_layout_set_height
+pango_layout_get_height
+pango_layout_set_wrap
+PANGO_IS_LAYOUT (layout)
+pango_layout_get_wrap
+pango_layout_is_wrapped
+pango_layout_set_indent
+pango_layout_get_indent
+pango_layout_set_spacing
+pango_layout_get_spacing
+pango_layout_set_attributes
+pango_layout_get_attributes
+pango_layout_set_font_description
+pango_layout_get_font_description
+pango_layout_set_justify
+pango_layout_get_justify
+pango_layout_set_auto_dir
+pango_layout_get_auto_dir
+pango_layout_set_alignment
+pango_layout_get_alignment
+pango_layout_set_tabs
+pango_layout_get_tabs
+pango_layout_set_single_paragraph_mode
+pango_layout_get_single_paragraph_mode
+pango_layout_set_ellipsize
+pango_layout_get_ellipsize
+pango_layout_is_ellipsized
+pango_layout_set_text
+Invalid UTF-8 string passed to pango_layout_set_text()
+pango_layout_get_text
+pango_layout_get_character_count
+pango_layout_set_markup_with_accel
+markup != NULL
+pango_layout_set_markup_with_accel: %s
+pango_layout_get_unknown_glyphs_count
+pango_layout_context_changed
+pango_layout_get_log_attrs
+pango_layout_get_log_attrs_readonly
+pango_layout_get_line_count
+pango_layout_get_line
+pango_layout_get_line_readonly
+pango_layout_index_to_line_x
+index <= layout->length
+pango_layout_move_cursor_visually
+old_index >= 0 && old_index <= layout->length
+old_index < layout->length || old_trailing == 0
+new_index != NULL
+new_trailing != NULL
+pango_layout_xy_to_index
+pango_layout_index_to_pos
+pos != NULL
+pango-layout.c:2134
+pango_layout_get_cursor_pos
+index >= 0 && index <= layout->length
+pango-layout.c
+index >= layout_line->start_index
+pango_layout_get_extents
+pango_layout_get_pixel_extents
+pango_layout_line_unref
+private->ref_count > 0
+PangoLayoutLine
+pango_layout_line_x_to_index
+LINE_IS_VALID (line)
+line->length > 0
+pango_layout_line_get_x_ranges
+line != NULL
+line->layout != NULL
+start_index <= end_index
+run_end_index > 0
+pango_layout_line_get_extents
+pango_layout_line_get_pixel_extents
+LINE_IS_VALID (layout_line)
+PangoLayoutIter
+pango_layout_get_iter
+pango-layout.c:5745
+pango-layout.c:5768
+pango-layout.c:5796
+pango-layout.c:5825
+pango-layout.c:5851
+pango-layout.c:5868
+pango-layout.c:5888
+pango-layout.c:6011
+pango-layout.c:6071
+pango-layout.c:6114
+pango_layout_iter_next_line
+iter->line_extents_link != NULL
+pango-layout.c:6164
+pango-layout.c:6212
+pango_layout_iter_get_cluster_extents
+logical_rect->width == iter->cluster_width
+pango-layout.c:6263
+pango-layout.c:6323
+pango-layout.c:6365
+pango-layout.c:6410
+pango-layout.c:6436
+pango-layout.c:5974
+unknown underline mode
+pango_layout_check_lines
+!layout->log_attrs
+next_para_index >= delimiter_index
+end <= (layout->text + layout->length)
+start <= (layout->text + layout->length)
+delim_len < 4
+delim_len >= 0
+process_line
+result == BREAK_SOME_FIT || result == BREAK_EMPTY_FIT
+pango-layout.c:3202: broken PangoLayout
+process_item
+!shape_set
+        
+pango_layout_get_extents_internal
+pango_layout_line_get_char_direction
+pango-layout.c:1735
+%s: PangoLayout changed since PangoLayoutIter was created, iterator invalid
+pango_parse_markup
+markup_text != NULL
+Had error when making markup parser: %s
+</markup>
+pango-markup.c
+pango_markup_parser_finish
+md->tag_stack == NULL
+<markup>
+markup
+span
+small
+Unknown tag '%s' on line %d char %d
+Tag '%s' does not support attribute '%s' on line %d char %d
+Monospace
+fallback
+Attribute '%s' occurs twice on <span> tag on line %d char %d, may only occur once
+font
+font_desc
+face
+font_family
+font_size
+font_stretch
+font_style
+font_variant
+font_weight
+foreground
+fgcolor
+size
+strikethrough
+strikethrough_color
+gravity_hint
+lang
+letter_spacing
+underline
+underline_color
+background
+bgcolor
+color
+rise
+Attribute '%s' is not allowed on the <span> tag on line %d char %d
+Value of 'size' attribute on <span> tag on line %d could not be parsed; should be an integer no more than %d, or a string such as 'small', not '%s'
+smaller
+larger
+Value of 'size' attribute on <span> tag on line %d could not be parsed; should be an integer, or a string such as 'small', not '%s'
+'%s' is not a valid value for the 'style' attribute on <span> tag, line %d; valid values are 'normal', 'oblique', 'italic'
+'%s' is not a valid value for the 'weight' attribute on <span> tag, line %d; valid values are for example 'light', 'ultrabold' or a number
+'%s' is not a valid value for the 'variant' attribute on <span> tag, line %d; valid values are 'normal', 'smallcaps'
+'%s' is not a valid value for the 'stretch' attribute on <span> tag, line %d; valid values are for example 'condensed', 'ultraexpanded', 'normal'
+Value of '%s' attribute on <span> tag on line %d could not be parsed; should be an integer, not '%s'
+true
+false
+Value of '%s' attribute on <span> tag line %d should have one of 'true/yes/t/y' or 'false/no/f/n': '%s' is not valid
+'%s' is not a valid value for the '%s' attribute on <span> tag, line %d; valid values are %s
+Value of '%s' attribute on <span> tag on line %d could not be parsed; should be a color specification, not '%s'
+xx-small
+x-small
+medium
+large
+x-large
+xx-large
+PangoMatrix
+pango_matrix_translate
+matrix != NULL
+pango_matrix_scale
+pango_matrix_rotate
+pango_matrix_concat
+PangoRenderer
+pango_renderer_draw_layout
+PANGO_IS_RENDERER (renderer)
+pango_renderer_draw_layout_line
+PANGO_IS_RENDERER_FAST (renderer)
+pango_renderer_draw_glyphs
+pango_renderer_draw_glyph_item
+pango_renderer_draw_rectangle
+IS_VALID_PART (part)
+renderer->active_count > 0
+pango_renderer_draw_error_underline
+pango_renderer_draw_trapezoid
+pango_renderer_draw_glyph
+pango_renderer_activate
+pango_renderer_deactivate
+pango_renderer_set_color
+pango_renderer_get_color
+pango_renderer_part_changed
+pango_renderer_set_matrix
+pango_renderer_get_matrix
+pango_renderer_prepare_run
+pango-renderer.c
+add_underline
+pango_tab_array_new
+initial_size >= 0
+pango_tab_array_new_with_positions
+PangoTabArray
+pango_tab_array_copy
+src != NULL
+pango_tab_array_free
+tab_array != NULL
+pango_tab_array_get_size
+pango_tab_array_set_tab
+tab_index >= 0
+alignment == PANGO_TAB_LEFT
+location >= 0
+pango_tab_array_get_tab
+tab_index < tab_array->size
+pango_tab_array_get_tabs
+pango_tab_array_get_positions_in_pixels
+1.36.8
+Pango version too new (major mismatch)
+Pango version too new (micro mismatch)
+Pango version too old (micro mismatch)
+pango_trim_string
+pango_config_key_get_system
+key != NULL
+pango_config_key_get
+PANGO_SYSCONFDIR
+pango
+/Users/buildbot/buildslave/pango_osx/build/pango-1.36.8/lib64/etc/pango
+PANGO_LIBDIR
+/Users/buildbot/buildslave/pango_osx/build/pango-1.36.8/lib64/lib/pango
+%s must be one of %s
+pango_find_base_dir
+text != NULL || length == 0
+pangorc
+PANGO_RC_FILE
+error opening config file '%s': %s
+%s/%s
+error getting key '%s/%s' in config file '%s'
+error getting keys in group '%s' of config file '%s'
+pango_shape_full
+paragraph_text <= item_text
+paragraph_text + paragraph_length >= item_text + item_length
+(unknown)
+shaping failure, expect ugly output. shape-engine='%s', font='%s', text='%.*s'
+pango-shape-warned
+Expected RTL run but shape-engine='%s' returned LTR. Fixing.
+PANGO_ATTR_INVALID
+invalid
+PANGO_ATTR_LANGUAGE
+language
+PANGO_ATTR_FAMILY
+family
+PANGO_ATTR_STYLE
+PANGO_ATTR_WEIGHT
+PANGO_ATTR_VARIANT
+PANGO_ATTR_STRETCH
+PANGO_ATTR_SIZE
+PANGO_ATTR_FONT_DESC
+font-desc
+PANGO_ATTR_FOREGROUND
+PANGO_ATTR_BACKGROUND
+PANGO_ATTR_UNDERLINE
+PANGO_ATTR_STRIKETHROUGH
+PANGO_ATTR_RISE
+PANGO_ATTR_SHAPE
+shape
+PANGO_ATTR_SCALE
+scale
+PANGO_ATTR_FALLBACK
+PANGO_ATTR_LETTER_SPACING
+letter-spacing
+PANGO_ATTR_UNDERLINE_COLOR
+underline-color
+PANGO_ATTR_STRIKETHROUGH_COLOR
+strikethrough-color
+PANGO_ATTR_ABSOLUTE_SIZE
+absolute-size
+PANGO_ATTR_GRAVITY
+PANGO_ATTR_GRAVITY_HINT
+gravity-hint
+PangoAttrType
+PANGO_UNDERLINE_NONE
+none
+PANGO_UNDERLINE_SINGLE
+single
+PANGO_UNDERLINE_DOUBLE
+double
+PANGO_UNDERLINE_LOW
+PANGO_UNDERLINE_ERROR
+error
+PangoUnderline
+PANGO_BIDI_TYPE_L
+PANGO_BIDI_TYPE_LRE
+PANGO_BIDI_TYPE_LRO
+PANGO_BIDI_TYPE_R
+PANGO_BIDI_TYPE_AL
+PANGO_BIDI_TYPE_RLE
+PANGO_BIDI_TYPE_RLO
+PANGO_BIDI_TYPE_PDF
+PANGO_BIDI_TYPE_EN
+PANGO_BIDI_TYPE_ES
+PANGO_BIDI_TYPE_ET
+PANGO_BIDI_TYPE_AN
+PANGO_BIDI_TYPE_CS
+PANGO_BIDI_TYPE_NSM
+PANGO_BIDI_TYPE_BN
+PANGO_BIDI_TYPE_B
+PANGO_BIDI_TYPE_S
+PANGO_BIDI_TYPE_WS
+PANGO_BIDI_TYPE_ON
+PangoBidiType
+PANGO_DIRECTION_LTR
+PANGO_DIRECTION_RTL
+PANGO_DIRECTION_TTB_LTR
+ttb-ltr
+PANGO_DIRECTION_TTB_RTL
+ttb-rtl
+PANGO_DIRECTION_WEAK_LTR
+weak-ltr
+PANGO_DIRECTION_WEAK_RTL
+weak-rtl
+PANGO_DIRECTION_NEUTRAL
+neutral
+PangoDirection
+PANGO_COVERAGE_NONE
+PANGO_COVERAGE_FALLBACK
+PANGO_COVERAGE_APPROXIMATE
+approximate
+PANGO_COVERAGE_EXACT
+exact
+PangoCoverageLevel
+PANGO_STYLE_NORMAL
+normal
+PANGO_STYLE_OBLIQUE
+oblique
+PANGO_STYLE_ITALIC
+italic
+PangoStyle
+PANGO_VARIANT_NORMAL
+PANGO_VARIANT_SMALL_CAPS
+small-caps
+PangoVariant
+PANGO_WEIGHT_THIN
+thin
+PANGO_WEIGHT_ULTRALIGHT
+ultralight
+PANGO_WEIGHT_LIGHT
+light
+PANGO_WEIGHT_SEMILIGHT
+semilight
+PANGO_WEIGHT_BOOK
+book
+PANGO_WEIGHT_NORMAL
+PANGO_WEIGHT_MEDIUM
+PANGO_WEIGHT_SEMIBOLD
+semibold
+PANGO_WEIGHT_BOLD
+bold
+PANGO_WEIGHT_ULTRABOLD
+ultrabold
+PANGO_WEIGHT_HEAVY
+heavy
+PANGO_WEIGHT_ULTRAHEAVY
+ultraheavy
+PangoWeight
+PANGO_STRETCH_ULTRA_CONDENSED
+ultra-condensed
+PANGO_STRETCH_EXTRA_CONDENSED
+extra-condensed
+PANGO_STRETCH_CONDENSED
+condensed
+PANGO_STRETCH_SEMI_CONDENSED
+semi-condensed
+PANGO_STRETCH_NORMAL
+PANGO_STRETCH_SEMI_EXPANDED
+semi-expanded
+PANGO_STRETCH_EXPANDED
+expanded
+PANGO_STRETCH_EXTRA_EXPANDED
+extra-expanded
+PANGO_STRETCH_ULTRA_EXPANDED
+ultra-expanded
+PangoStretch
+PANGO_FONT_MASK_FAMILY
+PANGO_FONT_MASK_STYLE
+PANGO_FONT_MASK_VARIANT
+PANGO_FONT_MASK_WEIGHT
+PANGO_FONT_MASK_STRETCH
+PANGO_FONT_MASK_SIZE
+PANGO_FONT_MASK_GRAVITY
+PangoFontMask
+PANGO_GRAVITY_SOUTH
+south
+PANGO_GRAVITY_EAST
+east
+PANGO_GRAVITY_NORTH
+north
+PANGO_GRAVITY_WEST
+west
+PANGO_GRAVITY_AUTO
+auto
+PangoGravity
+PANGO_GRAVITY_HINT_NATURAL
+natural
+PANGO_GRAVITY_HINT_STRONG
+strong
+PANGO_GRAVITY_HINT_LINE
+line
+PangoGravityHint
+PANGO_ALIGN_LEFT
+left
+PANGO_ALIGN_CENTER
+center
+PANGO_ALIGN_RIGHT
+right
+PangoAlignment
+PANGO_WRAP_WORD
+word
+PANGO_WRAP_CHAR
+char
+PANGO_WRAP_WORD_CHAR
+word-char
+PangoWrapMode
+PANGO_ELLIPSIZE_NONE
+PANGO_ELLIPSIZE_START
+start
+PANGO_ELLIPSIZE_MIDDLE
+middle
+PANGO_ELLIPSIZE_END
+PangoEllipsizeMode
+PANGO_RENDER_PART_FOREGROUND
+PANGO_RENDER_PART_BACKGROUND
+PANGO_RENDER_PART_UNDERLINE
+PANGO_RENDER_PART_STRIKETHROUGH
+PangoRenderPart
+PANGO_SCRIPT_INVALID_CODE
+invalid-code
+PANGO_SCRIPT_COMMON
+common
+PANGO_SCRIPT_INHERITED
+inherited
+PANGO_SCRIPT_ARABIC
+arabic
+PANGO_SCRIPT_ARMENIAN
+armenian
+PANGO_SCRIPT_BENGALI
+bengali
+PANGO_SCRIPT_BOPOMOFO
+bopomofo
+PANGO_SCRIPT_CHEROKEE
+cherokee
+PANGO_SCRIPT_COPTIC
+coptic
+PANGO_SCRIPT_CYRILLIC
+cyrillic
+PANGO_SCRIPT_DESERET
+deseret
+PANGO_SCRIPT_DEVANAGARI
+devanagari
+PANGO_SCRIPT_ETHIOPIC
+ethiopic
+PANGO_SCRIPT_GEORGIAN
+georgian
+PANGO_SCRIPT_GOTHIC
+gothic
+PANGO_SCRIPT_GREEK
+greek
+PANGO_SCRIPT_GUJARATI
+gujarati
+PANGO_SCRIPT_GURMUKHI
+gurmukhi
+PANGO_SCRIPT_HAN
+PANGO_SCRIPT_HANGUL
+hangul
+PANGO_SCRIPT_HEBREW
+hebrew
+PANGO_SCRIPT_HIRAGANA
+hiragana
+PANGO_SCRIPT_KANNADA
+kannada
+PANGO_SCRIPT_KATAKANA
+katakana
+PANGO_SCRIPT_KHMER
+khmer
+PANGO_SCRIPT_LAO
+PANGO_SCRIPT_LATIN
+latin
+PANGO_SCRIPT_MALAYALAM
+malayalam
+PANGO_SCRIPT_MONGOLIAN
+mongolian
+PANGO_SCRIPT_MYANMAR
+myanmar
+PANGO_SCRIPT_OGHAM
+ogham
+PANGO_SCRIPT_OLD_ITALIC
+old-italic
+PANGO_SCRIPT_ORIYA
+oriya
+PANGO_SCRIPT_RUNIC
+runic
+PANGO_SCRIPT_SINHALA
+sinhala
+PANGO_SCRIPT_SYRIAC
+syriac
+PANGO_SCRIPT_TAMIL
+tamil
+PANGO_SCRIPT_TELUGU
+telugu
+PANGO_SCRIPT_THAANA
+thaana
+PANGO_SCRIPT_THAI
+thai
+PANGO_SCRIPT_TIBETAN
+tibetan
+PANGO_SCRIPT_CANADIAN_ABORIGINAL
+canadian-aboriginal
+PANGO_SCRIPT_YI
+PANGO_SCRIPT_TAGALOG
+tagalog
+PANGO_SCRIPT_HANUNOO
+hanunoo
+PANGO_SCRIPT_BUHID
+buhid
+PANGO_SCRIPT_TAGBANWA
+tagbanwa
+PANGO_SCRIPT_BRAILLE
+braille
+PANGO_SCRIPT_CYPRIOT
+cypriot
+PANGO_SCRIPT_LIMBU
+limbu
+PANGO_SCRIPT_OSMANYA
+osmanya
+PANGO_SCRIPT_SHAVIAN
+shavian
+PANGO_SCRIPT_LINEAR_B
+linear-b
+PANGO_SCRIPT_TAI_LE
+tai-le
+PANGO_SCRIPT_UGARITIC
+ugaritic
+PANGO_SCRIPT_NEW_TAI_LUE
+new-tai-lue
+PANGO_SCRIPT_BUGINESE
+buginese
+PANGO_SCRIPT_GLAGOLITIC
+glagolitic
+PANGO_SCRIPT_TIFINAGH
+tifinagh
+PANGO_SCRIPT_SYLOTI_NAGRI
+syloti-nagri
+PANGO_SCRIPT_OLD_PERSIAN
+old-persian
+PANGO_SCRIPT_KHAROSHTHI
+kharoshthi
+PANGO_SCRIPT_UNKNOWN
+unknown
+PANGO_SCRIPT_BALINESE
+balinese
+PANGO_SCRIPT_CUNEIFORM
+cuneiform
+PANGO_SCRIPT_PHOENICIAN
+phoenician
+PANGO_SCRIPT_PHAGS_PA
+phags-pa
+PANGO_SCRIPT_NKO
+PANGO_SCRIPT_KAYAH_LI
+kayah-li
+PANGO_SCRIPT_LEPCHA
+lepcha
+PANGO_SCRIPT_REJANG
+rejang
+PANGO_SCRIPT_SUNDANESE
+sundanese
+PANGO_SCRIPT_SAURASHTRA
+saurashtra
+PANGO_SCRIPT_CHAM
+cham
+PANGO_SCRIPT_OL_CHIKI
+ol-chiki
+PANGO_SCRIPT_VAI
+PANGO_SCRIPT_CARIAN
+carian
+PANGO_SCRIPT_LYCIAN
+lycian
+PANGO_SCRIPT_LYDIAN
+lydian
+PANGO_SCRIPT_BATAK
+batak
+PANGO_SCRIPT_BRAHMI
+brahmi
+PANGO_SCRIPT_MANDAIC
+mandaic
+PANGO_SCRIPT_CHAKMA
+chakma
+PANGO_SCRIPT_MEROITIC_CURSIVE
+meroitic-cursive
+PANGO_SCRIPT_MEROITIC_HIEROGLYPHS
+meroitic-hieroglyphs
+PANGO_SCRIPT_MIAO
+miao
+PANGO_SCRIPT_SHARADA
+sharada
+PANGO_SCRIPT_SORA_SOMPENG
+sora-sompeng
+PANGO_SCRIPT_TAKRI
+takri
+PangoScript
+PANGO_TAB_LEFT
+PangoTabAlign
+ArabicScriptEngineLang
+ArabicEngineLang
+devaIndicScriptEngineLang
+bengIndicScriptEngineLang
+guruIndicScriptEngineLang
+gujrIndicScriptEngineLang
+oryaIndicScriptEngineLang
+tamlIndicScriptEngineLang
+teluIndicScriptEngineLang
+kndaIndicScriptEngineLang
+mlymIndicScriptEngineLang
+sinhIndicScriptEngineLang
+IndicEngineLang
+Thin
+Ultra-Light
+Extra-Light
+Light
+Semi-Light
+Demi-Light
+Book
+Regular
+Medium
+Semi-Bold
+Demi-Bold
+Bold
+Ultra-Bold
+Extra-Bold
+Heavy
+Black
+Ultra-Heavy
+Extra-Heavy
+Ultra-Black
+Extra-Black
+Roman
+Oblique
+Italic
+Ultra-Condensed
+Extra-Condensed
+Condensed
+Semi-Condensed
+Semi-Expanded
+Expanded
+Extra-Expanded
+Ultra-Expanded
+Small-Caps
+Not-Rotated
+South
+Upside-Down
+North
+Rotated-Left
+East
+Rotated-Right
+West
+AliceBlue
+AntiqueWhite
+AntiqueWhite1
+AntiqueWhite2
+AntiqueWhite3
+AntiqueWhite4
+aqua
+aquamarine
+aquamarine1
+aquamarine2
+aquamarine3
+aquamarine4
+azure
+azure1
+azure2
+azure3
+azure4
+beige
+bisque
+bisque1
+bisque2
+bisque3
+bisque4
+black
+BlanchedAlmond
+blue
+blue1
+blue2
+blue3
+blue4
+BlueViolet
+brown
+brown1
+brown2
+brown3
+brown4
+burlywood
+burlywood1
+burlywood2
+burlywood3
+burlywood4
+CadetBlue
+CadetBlue1
+CadetBlue2
+CadetBlue3
+CadetBlue4
+chartreuse
+chartreuse1
+chartreuse2
+chartreuse3
+chartreuse4
+chocolate
+chocolate1
+chocolate2
+chocolate3
+chocolate4
+coral
+coral1
+coral2
+coral3
+coral4
+CornflowerBlue
+cornsilk
+cornsilk1
+cornsilk2
+cornsilk3
+cornsilk4
+crimson
+cyan
+cyan1
+cyan2
+cyan3
+cyan4
+DarkBlue
+DarkCyan
+DarkGoldenrod
+DarkGoldenrod1
+DarkGoldenrod2
+DarkGoldenrod3
+DarkGoldenrod4
+DarkGray
+DarkGreen
+DarkGrey
+DarkKhaki
+DarkMagenta
+DarkOliveGreen
+DarkOliveGreen1
+DarkOliveGreen2
+DarkOliveGreen3
+DarkOliveGreen4
+DarkOrange
+DarkOrange1
+DarkOrange2
+DarkOrange3
+DarkOrange4
+DarkOrchid
+DarkOrchid1
+DarkOrchid2
+DarkOrchid3
+DarkOrchid4
+DarkRed
+DarkSalmon
+DarkSeaGreen
+DarkSeaGreen1
+DarkSeaGreen2
+DarkSeaGreen3
+DarkSeaGreen4
+DarkSlateBlue
+DarkSlateGray
+DarkSlateGray1
+DarkSlateGray2
+DarkSlateGray3
+DarkSlateGray4
+DarkSlateGrey
+DarkTurquoise
+DarkViolet
+DeepPink
+DeepPink1
+DeepPink2
+DeepPink3
+DeepPink4
+DeepSkyBlue
+DeepSkyBlue1
+DeepSkyBlue2
+DeepSkyBlue3
+DeepSkyBlue4
+DimGray
+DimGrey
+DodgerBlue
+DodgerBlue1
+DodgerBlue2
+DodgerBlue3
+DodgerBlue4
+firebrick
+firebrick1
+firebrick2
+firebrick3
+firebrick4
+FloralWhite
+ForestGreen
+fuchsia
+gainsboro
+GhostWhite
+gold
+gold1
+gold2
+gold3
+gold4
+goldenrod
+goldenrod1
+goldenrod2
+goldenrod3
+goldenrod4
+gray
+gray0
+gray1
+gray10
+gray100
+gray11
+gray12
+gray13
+gray14
+gray15
+gray16
+gray17
+gray18
+gray19
+gray2
+gray20
+gray21
+gray22
+gray23
+gray24
+gray25
+gray26
+gray27
+gray28
+gray29
+gray3
+gray30
+gray31
+gray32
+gray33
+gray34
+gray35
+gray36
+gray37
+gray38
+gray39
+gray4
+gray40
+gray41
+gray42
+gray43
+gray44
+gray45
+gray46
+gray47
+gray48
+gray49
+gray5
+gray50
+gray51
+gray52
+gray53
+gray54
+gray55
+gray56
+gray57
+gray58
+gray59
+gray6
+gray60
+gray61
+gray62
+gray63
+gray64
+gray65
+gray66
+gray67
+gray68
+gray69
+gray7
+gray70
+gray71
+gray72
+gray73
+gray74
+gray75
+gray76
+gray77
+gray78
+gray79
+gray8
+gray80
+gray81
+gray82
+gray83
+gray84
+gray85
+gray86
+gray87
+gray88
+gray89
+gray9
+gray90
+gray91
+gray92
+gray93
+gray94
+gray95
+gray96
+gray97
+gray98
+gray99
+green
+green1
+green2
+green3
+green4
+GreenYellow
+grey
+grey0
+grey1
+grey10
+grey100
+grey11
+grey12
+grey13
+grey14
+grey15
+grey16
+grey17
+grey18
+grey19
+grey2
+grey20
+grey21
+grey22
+grey23
+grey24
+grey25
+grey26
+grey27
+grey28
+grey29
+grey3
+grey30
+grey31
+grey32
+grey33
+grey34
+grey35
+grey36
+grey37
+grey38
+grey39
+grey4
+grey40
+grey41
+grey42
+grey43
+grey44
+grey45
+grey46
+grey47
+grey48
+grey49
+grey5
+grey50
+grey51
+grey52
+grey53
+grey54
+grey55
+grey56
+grey57
+grey58
+grey59
+grey6
+grey60
+grey61
+grey62
+grey63
+grey64
+grey65
+grey66
+grey67
+grey68
+grey69
+grey7
+grey70
+grey71
+grey72
+grey73
+grey74
+grey75
+grey76
+grey77
+grey78
+grey79
+grey8
+grey80
+grey81
+grey82
+grey83
+grey84
+grey85
+grey86
+grey87
+grey88
+grey89
+grey9
+grey90
+grey91
+grey92
+grey93
+grey94
+grey95
+grey96
+grey97
+grey98
+grey99
+honeydew
+honeydew1
+honeydew2
+honeydew3
+honeydew4
+HotPink
+HotPink1
+HotPink2
+HotPink3
+HotPink4
+IndianRed
+IndianRed1
+IndianRed2
+IndianRed3
+IndianRed4
+indigo
+ivory
+ivory1
+ivory2
+ivory3
+ivory4
+khaki
+khaki1
+khaki2
+khaki3
+khaki4
+lavender
+LavenderBlush
+LavenderBlush1
+LavenderBlush2
+LavenderBlush3
+LavenderBlush4
+LawnGreen
+LemonChiffon
+LemonChiffon1
+LemonChiffon2
+LemonChiffon3
+LemonChiffon4
+LightBlue
+LightBlue1
+LightBlue2
+LightBlue3
+LightBlue4
+LightCoral
+LightCyan
+LightCyan1
+LightCyan2
+LightCyan3
+LightCyan4
+LightGoldenrod
+LightGoldenrod1
+LightGoldenrod2
+LightGoldenrod3
+LightGoldenrod4
+LightGoldenrodYellow
+LightGray
+LightGreen
+LightGrey
+LightPink
+LightPink1
+LightPink2
+LightPink3
+LightPink4
+LightSalmon
+LightSalmon1
+LightSalmon2
+LightSalmon3
+LightSalmon4
+LightSeaGreen
+LightSkyBlue
+LightSkyBlue1
+LightSkyBlue2
+LightSkyBlue3
+LightSkyBlue4
+LightSlateBlue
+LightSlateGray
+LightSlateGrey
+LightSteelBlue
+LightSteelBlue1
+LightSteelBlue2
+LightSteelBlue3
+LightSteelBlue4
+LightYellow
+LightYellow1
+LightYellow2
+LightYellow3
+LightYellow4
+lime
+LimeGreen
+linen
+magenta
+magenta1
+magenta2
+magenta3
+magenta4
+maroon
+maroon1
+maroon2
+maroon3
+maroon4
+MediumAquamarine
+MediumBlue
+MediumOrchid
+MediumOrchid1
+MediumOrchid2
+MediumOrchid3
+MediumOrchid4
+MediumPurple
+MediumPurple1
+MediumPurple2
+MediumPurple3
+MediumPurple4
+MediumSeaGreen
+MediumSlateBlue
+MediumSpringGreen
+MediumTurquoise
+MediumVioletRed
+MidnightBlue
+MintCream
+MistyRose
+MistyRose1
+MistyRose2
+MistyRose3
+MistyRose4
+moccasin
+NavajoWhite
+NavajoWhite1
+NavajoWhite2
+NavajoWhite3
+NavajoWhite4
+navy
+NavyBlue
+OldLace
+olive
+OliveDrab
+OliveDrab1
+OliveDrab2
+OliveDrab3
+OliveDrab4
+orange
+orange1
+orange2
+orange3
+orange4
+OrangeRed
+OrangeRed1
+OrangeRed2
+OrangeRed3
+OrangeRed4
+orchid
+orchid1
+orchid2
+orchid3
+orchid4
+PaleGoldenrod
+PaleGreen
+PaleGreen1
+PaleGreen2
+PaleGreen3
+PaleGreen4
+PaleTurquoise
+PaleTurquoise1
+PaleTurquoise2
+PaleTurquoise3
+PaleTurquoise4
+PaleVioletRed
+PaleVioletRed1
+PaleVioletRed2
+PaleVioletRed3
+PaleVioletRed4
+PapayaWhip
+PeachPuff
+PeachPuff1
+PeachPuff2
+PeachPuff3
+PeachPuff4
+peru
+pink
+pink1
+pink2
+pink3
+pink4
+plum
+plum1
+plum2
+plum3
+plum4
+PowderBlue
+purple
+purple1
+purple2
+purple3
+purple4
+red1
+red2
+red3
+red4
+RosyBrown
+RosyBrown1
+RosyBrown2
+RosyBrown3
+RosyBrown4
+RoyalBlue
+RoyalBlue1
+RoyalBlue2
+RoyalBlue3
+RoyalBlue4
+SaddleBrown
+salmon
+salmon1
+salmon2
+salmon3
+salmon4
+SandyBrown
+SeaGreen
+SeaGreen1
+SeaGreen2
+SeaGreen3
+SeaGreen4
+seashell
+seashell1
+seashell2
+seashell3
+seashell4
+sienna
+sienna1
+sienna2
+sienna3
+sienna4
+silver
+SkyBlue
+SkyBlue1
+SkyBlue2
+SkyBlue3
+SkyBlue4
+SlateBlue
+SlateBlue1
+SlateBlue2
+SlateBlue3
+SlateBlue4
+SlateGray
+SlateGray1
+SlateGray2
+SlateGray3
+SlateGray4
+SlateGrey
+snow
+snow1
+snow2
+snow3
+snow4
+SpringGreen
+SpringGreen1
+SpringGreen2
+SpringGreen3
+SpringGreen4
+SteelBlue
+SteelBlue1
+SteelBlue2
+SteelBlue3
+SteelBlue4
+tan1
+tan2
+tan3
+tan4
+teal
+thistle
+thistle1
+thistle2
+thistle3
+thistle4
+tomato
+tomato1
+tomato2
+tomato3
+tomato4
+turquoise
+turquoise1
+turquoise2
+turquoise3
+turquoise4
+violet
+VioletRed
+VioletRed1
+VioletRed2
+VioletRed3
+VioletRed4
+wheat
+wheat1
+wheat2
+wheat3
+wheat4
+white
+WhiteSmoke
+yellow
+yellow1
+yellow2
+yellow3
+yellow4
+YellowGreen
+`	!!!
+g	$$$
+n	&&&
+u	)))
+|	+++
+	...
+	000
+	333
+	666
+	888
+	;;;
+	===
+	@@@
+	BBB
+	EEE
+	GGG
+	JJJ
+	MMM
+	OOO
+	RRR
+	TTT
+	WWW
+0123456789
+-abcdefghijklmnopqrstuvwxyz
+abcdefghijklmnopqrstuvwxyz
+Z	hr
+pt-br
+zh-cn
+zh-mo
+zh-sg
+zh-tw
+Ek kan glas eet, maar dit doen my nie skade nie.
+Gvxam mincetu apocikvyeh: 
+izol ce mamvj ka raq kuse bafkeh mew.
+I koh Glos esa, und es duard ma ned wei.
+Mi save kakae glas, hemi no save katem mi.
+Fin d
+ip, gluh je
+vrst konji
+e bez moljca.
+Jove xef, porti whisky amb quinze gla
+ons d'hidrogen, coi!
+a yo' chumocho krestat, ti ha na'lalamen yo'.
+belsk
+Dw i'n gallu bwyta gwydr, 'dyw e ddim yn gwneud dolur i mi.
+Quizdeltagerne spiste jordb
+r med fl
+de, mens cirkusklovnen Walther spillede p
+ xylofon.
+lf Boxk
+mpfer jagen Viktor quer 
+ber den gro
+en Sylter Deich.
+The quick brown fox jumps over the lazy dog.
+Ich canne glas eten and hit hirti
+ me nou
+Jovencillo emponzo
+ado de whisky: 
+ figurota exhibe!
+See v
+ike m
+lder j
+uab rongile h
+pata.
+Kristala jan dezaket, ez dit minik ematen.
+Viekas kettu punaturkki laiskan koiran takaa kurkki.
+Voix ambigu
+ d'un c
+ur qui, au z
+phyr, pr
+re les jattes de kiwis.
+Je puis mangier del voirre. Ne me nuit.
+uascail 
+osa 
+ac na h
+e Beannai
+a agus 
+S urrainn dhomh gloinne ithe; cha ghoirtich i mi.
+Eu podo xantar cristais e non cortarme.
+Foddym gee glonney agh cha jean eh gortaghey mee.
+Hiki ia
+u ke 
+ai i ke aniani; 
+ole n
+ au e 
+eha.
+Ja mogu jesti staklo i ne boli me.
+Egy h
+tlen vej
+s mexik
+r Wessel
+nyin
+zol Quit
+ban.
+mi n
+xi h
+r ykist 
+fum n
+l og 
+drepa
+Ma la volpe, col suo balzo, ha raggiunto il quieto Fido.
+Chruu, a kwik di kwik brong fox a jomp huova di liezi daag de, yu no siit?
+.o'i mu xagji sofybakni cu zvati le purdi
+Aku isa mangan beling tanpa lara.
+ a yl dybry gw
+der hag 
+f ny wra ow ankenya.
+Sic surgens, dux, zelotypos quam karus haberis
+linkdama fechtuotojo 
+paga sublyk
+iojusi pragr
+ apval
+ arb
+Sarkan
+rasc
+as peld pa j
+E ko
+ana e kai i te karahi, mea 
+e hauhau.
+Saya boleh makan kaca dan ia tidak mencederakan saya.
+M' pozz magna' o'vetr, e nun m' fa mal.
+re Zulu fra bade
+ya spilte jo whist og quickstep i min taxi.
+Pa's wijze lynx bezag vroom het fikse aquaduct.
+Eg kan eta glas utan 
+ skada meg.
+re Zulu fra bade
+ya spilte jo whist og quickstep i min taxi.
+ yish
+go b
+shghah d
+ doo shi
+ neezgai da.
+di manjar de veire, me nafrari
+ pas.
+Ch'peux mingi du verre, cha m'fo
+ mie n'ma.
+Pchn
+ w t
+a lub o
+m skrzy
+ fig.
+Vejam a bruxa da raposa Salta-Pocinhas e o c
+o feliz que dorme regalado.
+ noite, vov
+ Kowalsky v
+ cair no p
+ do ping
+im queixoso e vov
+car no ch
+ de t
+maras do jabuti feliz.
+Fumeg
+nd hipnotic sa
+iul azv
+rle mreje 
+Puotsu mangiari u vitru, nun mi fa mali.
+Star
+ na h
+be kn
+uje t
+ko pov
+dnut
+e, na st
+pe sa 
+ nov
+du o 
+ivote.
+erif bo za vajo spet kuhal doma
+gance.
+ mund t
+ ha qelq dhe nuk m
+ gjen gj
+Flygande b
+ckasiner s
+ka strax hwila p
+ mjuka tuvor.
+ Glas fr
+ssa, ond des macht mr nix!
+Kaya kong kumain nang bubog at hindi ako masaktan.
+Pijamal
+ hasta ya
+abucak g
+vendi.
+Metumi awe tumpan, 
+ me hwee.
+Mi posso magnare el vetro, no'l me fa mae.
+Con s
+u nh
+y qua con ch
+Dji pou magn
+ do v
+re, 
+oula m' freut n
+Mo l
+ pa m
+Saya boleh makan kaca dan ia tidak mencederakan saya.
+az-az
+az-ir
+ber-dz
+ber-ma
+ku-am
+ku-iq
+ku-ir
+ku-tr
+mn-cn
+mn-mn
+pa-pk
+pap-an
+pap-aw
+ps-af
+ps-pk
+ti-er
+ti-et
+zh-cn
+zh-hk
+zh-mo
+zh-sg
+zh-tw
+?333333
+					
+										
+																															
+`p`p`p`p`
+````````
+p0@@PP 00PP0
+ 000@P000P0@
+0P0P0000@P00
+``p`
+P@@ 
+p`p`
+``@`P
+0P```P`P
+dyld_stub_binding_helper
+__dyld_func_lookup
+_g_debug
+_tailor_break
+_tailor_segment
+_g_warning
+_pango_utf8_strlen
+__pango_layout_line_ellipsize
+_init_state
+_find_initial_span
+_current_width
+_remove_one_span
+_fixup_ellipsis_run
+_get_run_list
+_free_state
+_pango_utf8_strlen
+_line_iter_prev_cluster
+_get_cluster_width
+_starts_at_ellipsization_boundary
+_line_iter_next_cluster
+_ends_at_ellipsization_boundary
+_update_ellipsis_shape
+_advance_iterator_to
+_shape_ellipsis
+_itemize_text
+_compute_distance
+_case_insensitive_hash
+_getword
+_parse_size
+_find_field_any
+_g_string_append_c_inline
+_append_field
+_parse_field
+_pango_font_class_intern_init
+_pango_font_init
+_g_warning
+_pango_font_family_class_intern_init
+_pango_font_family_init
+_pango_font_face_class_intern_init
+_pango_font_face_init
+_pango_font_face_class_init
+_pango_font_family_class_init
+_pango_font_class_init
+_field_matches
+_find_field
+_parse_int
+_g_error
+_pango_utf8_strlen
+_build_map
+_pango_engine_pair_get_engine
+_append_engines
+_handle_included_module
+_pango_module_get_type
+_pango_module_class_intern_init
+_pango_module_init
+_pango_module_class_init
+_pango_module_load
+_pango_module_unload
+_pango_module_finalize
+_get_warned_quark
+_g_warning
+_init_modules
+_g_critical
+_map_add_engine_list
+_map_add_engine
+_read_modules
+_process_module_file
+_find_or_create_module
+_script_from_string
+_script_info_free
+_pango_attr_string_copy
+_pango_attr_string_destroy
+_pango_attr_string_equal
+_pango_attr_string_new
+_pango_attr_language_copy
+_pango_attr_language_destroy
+_pango_attr_language_equal
+_pango_attr_color_copy
+_pango_attr_color_destroy
+_pango_attr_color_equal
+_pango_attr_color_new
+_pango_attr_size_new_internal
+_pango_attr_int_copy
+_pango_attr_int_destroy
+_pango_attr_int_equal
+_pango_attr_int_new
+_pango_attr_font_desc_copy
+_pango_attr_font_desc_destroy
+_pango_attr_font_desc_equal
+_pango_attr_float_copy
+_pango_attr_float_destroy
+_pango_attr_float_equal
+_pango_attr_float_new
+_pango_attr_shape_copy
+_pango_attr_shape_destroy
+_pango_attr_shape_equal
+_pango_attr_list_insert_internal
+_pango_attr_size_copy
+_pango_attr_size_destroy
+_pango_attr_size_equal
+_hex
+_find_color
+_compare_xcolor_entries
+_pango_context_class_intern_init
+_pango_context_init
+_context_changed
+_update_resolved_gravity
+_width_iter_iswide
+_itemize_state_init
+_itemize_state_process_run
+_itemize_state_next
+_itemize_state_finish
+_get_base_metrics
+_itemize_with_font
+_update_metrics_from_items
+_check_fontmap_changed
+_pango_utf8_strwidth
+_pango_unichar_width
+_get_first_metrics_foreach
+_itemize_state_reset_shape_engines
+_update_embedding_end
+_update_attr_iterator
+_width_iter_next
+_update_end
+_find_attribute
+_itemize_state_update_for_new_run
+_get_shaper_and_font
+_itemize_state_add_character
+_string_from_script
+_get_script
+_g_warning
+_itemize_state_fill_shaper
+_copy_attr_slist
+_shaper_font_cache_get
+_get_engines
+_get_shaper_and_font_foreach
+_get_base_font
+_shaper_font_cache_insert
+_compute_derived_language
+_get_lang_map
+_get_shaper_font_cache
+_shaper_font_element_destroy
+_shaper_font_cache_destroy
+_advance_attr_iterator_to
+_width_iter_init
+_pango_context_class_init
+_pango_context_finalize
+_pango_coverage_get_uint32
+_pango_engine_class_intern_init
+_pango_engine_init
+_pango_engine_lang_class_intern_init
+_pango_engine_lang_init
+_pango_engine_shape_class_intern_init
+_pango_engine_shape_init
+__pango_engine_shape_shape
+__pango_engine_shape_covers
+__pango_get_fallback_shaper
+_pango_fallback_engine_get_type
+_pango_fallback_engine_class_intern_init
+_pango_fallback_engine_init
+_pango_fallback_engine_class_init
+_fallback_engine_covers
+_fallback_engine_shape
+_pango_utf8_strlen
+_pango_glyph_string_reverse_range
+_pango_engine_shape_class_init
+_pango_engine_shape_real_covers
+_pango_engine_lang_class_init
+_pango_engine_class_init
+_pango_font_map_class_intern_init
+_pango_font_map_init
+_pango_font_map_class_init
+_pango_font_map_real_load_fontset
+_pango_font_map_fontset_add_fonts
+_g_warning
+_pango_fontset_class_intern_init
+_pango_fontset_init
+_pango_fontset_simple_class_intern_init
+_pango_fontset_simple_init
+_pango_fontset_simple_class_init
+_pango_fontset_simple_finalize
+_pango_fontset_simple_get_font
+_pango_fontset_simple_get_metrics
+_pango_fontset_simple_get_language
+_pango_fontset_simple_foreach
+_pango_fontset_class_init
+_pango_fontset_real_get_metrics
+_get_first_metrics_foreach
+_pango_utf8_strlen
+_split_before_cluster_start
+_attr_slist_copy
+_append_attrs
+_get_script_properties
+_pango_language_copy
+_pango_language_free
+__pango_get_lc_ctype
+_lang_hash
+_lang_equal
+_pango_language_private_init
+_find_best_lang_match_cached
+_pango_language_get_private
+__pango_script_get_default_language
+_parse_default_languages
+_g_critical
+_find_best_lang_match
+_lang_compare_first_component
+_pango_layout_class_intern_init
+_pango_layout_init
+_layout_changed
+_pango_layout_check_lines
+_g_warning
+_pango_utf8_strlen
+_check_context_changed
+_pango_layout_line_leaked
+_pango_layout_get_item_properties
+_pango_layout_index_to_line
+_pango_layout_line_get_log2vis_map
+_pango_layout_line_get_vis2log_map
+__pango_layout_iter_get_line
+_check_invalid
+_pango_layout_index_to_line_and_extents
+_pango_layout_line_get_char_direction
+_pango_layout_get_extents_internal
+_free_run
+_get_alignment
+_get_x_offset
+_pango_layout_run_get_extents
+_pango_layout_line_get_empty_extents
+_update_run
+_extents_free
+_line_is_terminated
+_next_nonempty_line
+_next_cluster_internal
+_offset_y
+_get_line_extents_layout_coords
+_next_nonempty_run
+_update_cluster
+_cluster_width
+_next_cluster_start
+_pango_layout_get_empty_extents_at_index
+_g_critical
+_direction_simple
+_pango_layout_get_effective_attributes
+_filter_no_shape_attributes
+_get_items_log_attrs
+_process_line
+_pango_layout_line_new
+_line_set_resolved_dir
+_add_line
+_apply_no_shape_attributes
+_should_ellipsize_current_line
+_process_item
+_can_break_in
+_uninsert_run
+_pango_layout_line_postprocess
+_zero_line_final_space
+_pango_layout_line_reorder
+_adjust_line_letter_spacing
+_pango_layout_line_get_width
+_justify_words
+_justify_clusters
+_distribute_letter_spacing
+_is_tab_run
+_pad_glyphstring_right
+_get_item_letter_spacing
+_pad_glyphstring_left
+_reorder_runs_recurse
+_can_break_at
+_shape_run
+_insert_run
+_shape_tab
+_line_width
+_ensure_tab_width
+_get_tab_pos
+_no_shape_filter_func
+_pango_layout_line_get_range
+_pango_layout_clear_lines
+_pango_layout_class_init
+_pango_layout_finalize
+_xml_isspace
+_pango_markup_parser_new_internal
+_g_critical
+_destroy_markup_data
+_open_tag_free
+_start_element_handler
+_end_element_handler
+_text_handler
+_markup_data_close_tag
+_scale_factor
+_b_parse_func
+_big_parse_func
+_i_parse_func
+_markup_parse_func
+_span_parse_func
+_s_parse_func
+_sub_parse_func
+_sup_parse_func
+_small_parse_func
+_tt_parse_func
+_u_parse_func
+_markup_data_open_tag
+_set_bad_attribute
+_add_attribute
+_attr_strcmp
+_open_tag_set_absolute_font_size
+_parse_absolute_size
+_span_parse_color
+_span_parse_enum
+_span_parse_boolean
+_span_parse_int
+_open_tag_set_absolute_font_scale
+_pango_renderer_class_intern_init
+_pango_renderer_init
+_pango_renderer_prepare_run
+_get_item_properties
+_draw_shaped_glyphs
+_add_underline
+_add_strikethrough
+_draw_underline
+_draw_strikethrough
+_handle_line_state_change
+_pango_renderer_class_init
+_pango_renderer_default_draw_glyphs
+_pango_renderer_default_draw_glyph_item
+_pango_renderer_default_draw_rectangle
+_pango_renderer_default_draw_error_underline
+_pango_renderer_default_prepare_run
+_pango_renderer_finalize
+_get_total_matrix
+_draw_rectangle
+_to_device
+_compare_points
+__pango_script_iter_init
+__pango_script_iter_fini
+_get_pair_index
+_init_tabs
+_g_string_append_c_inline
+_read_config_system
+_read_config
+_parse_int
+_g_warning
+__pango_shape_shape
+__pango_shape_get_extents
+_read_config_file
+_reorder_items_recurse
+_g_warning
+_pango_glyph_string_reverse_range
+__pango_arabic_lang_script_engine_init
+_arabic_engine_lang_register_type
+__pango_arabic_lang_script_engine_exit
+__pango_arabic_lang_script_engine_list
+__pango_arabic_lang_script_engine_create
+_arabic_engine_lang_class_init
+_arabic_engine_break
+__pango_indic_lang_script_engine_init
+_indic_engine_lang_register_type
+__pango_indic_lang_script_engine_exit
+__pango_indic_lang_script_engine_list
+__pango_indic_lang_script_engine_create
+_indic_engine_lang_class_init
+_indic_engine_break
+_not_cursor_position
+__pango_fribidi_log2vis_get_embedding_levels_new_utf8
+_fribidi_analyse_string_utf8
+_free_rl_list
+_run_length_encode_types_utf8
+_init_list
+_move_element_before
+_compact_list
+_merge_with_prev
+_compact_neutrals
+_override_list
+_new_type_link
+_free_type_link
+__pango_fribidi_get_type
+_HangulJamoProps
+_line_break_indexes
+_row_OPEN_PUNCTUATION
+_row_CLOSE_PUNCTUATION
+_row_QUOTATION
+_row_NON_BREAKING_GLUE
+_row_NON_STARTER
+_row_EXCLAMATION
+_row_SYMBOL
+_row_INFIX_SEPARATOR
+_row_PREFIX
+_row_POSTFIX
+_row_NUMERIC
+_row_ALPHABETIC
+_row_IDEOGRAPHIC
+_row_INSEPARABLE
+_row_HYPHEN
+_row_AFTER
+_row_BEFORE
+_row_BEFORE_AND_AFTER
+_row_ZERO_WIDTH_SPACE
+_row_COMBINING_MARK
+_row_WORD_JOINER
+_weight_map
+_style_map
+_stretch_map
+_variant_map
+_gravity_map
+_pfd_defaults
+_color_names
+_color_entries
+_script_properties
+_canon_map
+_lang_texts
+_lang_pool
+_pango_script_for_lang
+_pango_script_get_sample_language.sample_languages
+_no_shape_filter_func.no_shape_types
+_pango_renderer_default_draw_error_underline.identity
+_paired_chars
+_BidLev0
+_BidLev1
+__pango_fribidi_prop_to_type
+_line_break_rows
+_pango_attr_family_new.klass
+_pango_attr_language_new.klass
+_pango_attr_foreground_new.klass
+_pango_attr_background_new.klass
+_pango_attr_style_new.klass
+_pango_attr_weight_new.klass
+_pango_attr_variant_new.klass
+_pango_attr_stretch_new.klass
+_pango_attr_font_desc_new.klass
+_pango_attr_underline_new.klass
+_pango_attr_underline_color_new.klass
+_pango_attr_strikethrough_new.klass
+_pango_attr_strikethrough_color_new.klass
+_pango_attr_rise_new.klass
+_pango_attr_scale_new.klass
+_pango_attr_fallback_new.klass
+_pango_attr_letter_spacing_new.klass
+_pango_attr_shape_new_with_data.klass
+_pango_attr_gravity_new.klass
+_pango_attr_gravity_hint_new.klass
+_pango_attr_size_new_internal.klass
+_pango_attr_size_new_internal.absolute_klass
+_pango_markup_parser
+_pango_attr_type_get_type.values
+_pango_underline_get_type.values
+_pango_bidi_type_get_type.values
+_pango_direction_get_type.values
+_pango_coverage_level_get_type.values
+_pango_style_get_type.values
+_pango_variant_get_type.values
+_pango_weight_get_type.values
+_pango_stretch_get_type.values
+_pango_font_mask_get_type.values
+_pango_gravity_get_type.values
+_pango_gravity_hint_get_type.values
+_pango_alignment_get_type.values
+_pango_wrap_mode_get_type.values
+_pango_ellipsize_mode_get_type.values
+_pango_render_part_get_type.values
+_pango_script_get_type.values
+_pango_tab_align_get_type.values
+_arabic_engine_lang_register_type.object_info
+_indic_engine_lang_register_type.object_info
+_pango_attr_type_register.current_type
+__pango_included_lang_modules
+_arabic_scripts
+_script_engines
+_deva_scripts
+_beng_scripts
+_guru_scripts
+_gujr_scripts
+_orya_scripts
+_taml_scripts
+_telu_scripts
+_knda_scripts
+_mlym_scripts
+_sinh_scripts
+_script_engines
+_pango_get_log_attrs.engine_type_id
+_pango_get_log_attrs.render_type_id
+_pango_font_description_get_type.g_define_type_id__volatile
+_pango_font_get_type.g_define_type_id__volatile
+_pango_font_metrics_get_type.g_define_type_id__volatile
+_pango_font_family_get_type.g_define_type_id__volatile
+_pango_font_face_get_type.g_define_type_id__volatile
+_pango_font_face_parent_class
+_PangoFontFace_private_offset
+_pango_font_family_parent_class
+_PangoFontFamily_private_offset
+_pango_font_parent_class
+_PangoFont_private_offset
+_pango_glyph_string_get_type.g_define_type_id__volatile
+_g__maps_lock
+_maps
+_registered_engines
+_pango_module_get_type.g_define_type_id__volatile
+_pango_module_parent_class
+_PangoModule_private_offset
+_get_warned_quark.warned_quark
+_g__engine_lock
+_dlloaded_engines
+_build_map.no_module_warning
+_init_modules.init
+_dlloaded_modules
+_script_from_string.class
+_g__attr_type_lock
+_name_map
+_pango_attr_list_get_type.g_define_type_id__volatile
+_pango_color_get_type.g_define_type_id__volatile
+_pango_context_get_type.g_define_type_id__volatile
+_string_from_script.class
+_get_shaper_font_cache.cache_quark
+_get_lang_map.engine_type_id
+_get_lang_map.render_type_id
+_pango_context_parent_class
+_PangoContext_private_offset
+_pango_engine_get_type.g_define_type_id__volatile
+_pango_engine_lang_get_type.g_define_type_id__volatile
+_pango_engine_shape_get_type.g_define_type_id__volatile
+__pango_get_fallback_shaper.fallback_shaper
+_pango_fallback_engine_get_type.g_define_type_id__volatile
+_pango_fallback_engine_parent_class
+_PangoFallbackEngine_private_offset
+_pango_engine_shape_parent_class
+_PangoEngineShape_private_offset
+_pango_engine_lang_parent_class
+_PangoEngineLang_private_offset
+_pango_engine_parent_class
+_PangoEngine_private_offset
+_pango_font_map_get_type.g_define_type_id__volatile
+_pango_font_map_parent_class
+_PangoFontMap_private_offset
+_pango_font_map_real_load_fontset.warned_fonts
+_pango_font_map_real_load_fontset.g__warned_fonts_lock
+_pango_fontset_get_type.g_define_type_id__volatile
+_pango_fontset_simple_get_type.g_define_type_id__volatile
+_pango_fontset_simple_parent_class
+_PangoFontsetSimple_private_offset
+_pango_fontset_parent_class
+_PangoFontset_private_offset
+_pango_glyph_item_get_type.g_define_type_id__volatile
+_pango_glyph_item_iter_get_type.g_define_type_id__volatile
+_pango_item_get_type.g_define_type_id__volatile
+_pango_language_get_type.g_define_type_id__volatile
+_pango_language_get_default.result
+_pango_language_from_string.g__lang_from_string_lock
+_pango_language_from_string.hash
+__pango_script_get_default_language.g__languages_lock
+__pango_script_get_default_language.initialized
+__pango_script_get_default_language.languages
+__pango_script_get_default_language.hash
+_pango_layout_get_type.g_define_type_id__volatile
+_pango_layout_line_get_type.g_define_type_id__volatile
+_pango_layout_iter_get_type.g_define_type_id__volatile
+_pango_layout_parent_class
+_PangoLayout_private_offset
+_pango_matrix_get_type.g_define_type_id__volatile
+_pango_renderer_get_type.g_define_type_id__volatile
+_pango_renderer_parent_class
+_PangoRenderer_private_offset
+_pango_tab_array_get_type.g_define_type_id__volatile
+_pango_get_sysconf_subdirectory.result
+_pango_get_lib_subdirectory.result
+_read_config.config_hash
+_pango_shape_full.warned_quark
+_pango_attr_type_get_type.g_define_type_id__volatile
+_pango_underline_get_type.g_define_type_id__volatile
+_pango_bidi_type_get_type.g_define_type_id__volatile
+_pango_direction_get_type.g_define_type_id__volatile
+_pango_coverage_level_get_type.g_define_type_id__volatile
+_pango_style_get_type.g_define_type_id__volatile
+_pango_variant_get_type.g_define_type_id__volatile
+_pango_weight_get_type.g_define_type_id__volatile
+_pango_stretch_get_type.g_define_type_id__volatile
+_pango_font_mask_get_type.g_define_type_id__volatile
+_pango_gravity_get_type.g_define_type_id__volatile
+_pango_gravity_hint_get_type.g_define_type_id__volatile
+_pango_alignment_get_type.g_define_type_id__volatile
+_pango_wrap_mode_get_type.g_define_type_id__volatile
+_pango_ellipsize_mode_get_type.g_define_type_id__volatile
+_pango_render_part_get_type.g_define_type_id__volatile
+_pango_script_get_type.g_define_type_id__volatile
+_pango_tab_align_get_type.g_define_type_id__volatile
+_arabic_engine_lang_type
+_indic_engine_lang_type
+_pango_alignment_get_type
+_pango_attr_background_new
+_pango_attr_fallback_new
+_pango_attr_family_new
+_pango_attr_font_desc_new
+_pango_attr_foreground_new
+_pango_attr_gravity_hint_new
+_pango_attr_gravity_new
+_pango_attr_iterator_copy
+_pango_attr_iterator_destroy
+_pango_attr_iterator_get
+_pango_attr_iterator_get_attrs
+_pango_attr_iterator_get_font
+_pango_attr_iterator_next
+_pango_attr_iterator_range
+_pango_attr_language_new
+_pango_attr_letter_spacing_new
+_pango_attr_list_change
+_pango_attr_list_copy
+_pango_attr_list_filter
+_pango_attr_list_get_iterator
+_pango_attr_list_get_type
+_pango_attr_list_insert
+_pango_attr_list_insert_before
+_pango_attr_list_new
+_pango_attr_list_ref
+_pango_attr_list_splice
+_pango_attr_list_unref
+_pango_attr_rise_new
+_pango_attr_scale_new
+_pango_attr_shape_new
+_pango_attr_shape_new_with_data
+_pango_attr_size_new
+_pango_attr_size_new_absolute
+_pango_attr_stretch_new
+_pango_attr_strikethrough_color_new
+_pango_attr_strikethrough_new
+_pango_attr_style_new
+_pango_attr_type_get_name
+_pango_attr_type_get_type
+_pango_attr_type_register
+_pango_attr_underline_color_new
+_pango_attr_underline_new
+_pango_attr_variant_new
+_pango_attr_weight_new
+_pango_attribute_copy
+_pango_attribute_destroy
+_pango_attribute_equal
+_pango_attribute_init
+_pango_bidi_type_for_unichar
+_pango_bidi_type_get_type
+_pango_break
+_pango_color_copy
+_pango_color_free
+_pango_color_get_type
+_pango_color_parse
+_pango_color_to_string
+_pango_config_key_get
+_pango_config_key_get_system
+_pango_context_changed
+_pango_context_get_base_dir
+_pango_context_get_base_gravity
+_pango_context_get_font_description
+_pango_context_get_font_map
+_pango_context_get_gravity
+_pango_context_get_gravity_hint
+_pango_context_get_language
+_pango_context_get_matrix
+_pango_context_get_metrics
+_pango_context_get_serial
+_pango_context_get_type
+_pango_context_list_families
+_pango_context_load_font
+_pango_context_load_fontset
+_pango_context_new
+_pango_context_set_base_dir
+_pango_context_set_base_gravity
+_pango_context_set_font_description
+_pango_context_set_font_map
+_pango_context_set_gravity_hint
+_pango_context_set_language
+_pango_context_set_matrix
+_pango_coverage_copy
+_pango_coverage_from_bytes
+_pango_coverage_get
+_pango_coverage_level_get_type
+_pango_coverage_max
+_pango_coverage_new
+_pango_coverage_ref
+_pango_coverage_set
+_pango_coverage_to_bytes
+_pango_coverage_unref
+_pango_default_break
+_pango_direction_get_type
+_pango_ellipsize_mode_get_type
+_pango_engine_get_type
+_pango_engine_lang_get_type
+_pango_engine_shape_get_type
+_pango_extents_to_pixels
+_pango_find_base_dir
+_pango_find_map
+_pango_find_paragraph_boundary
+_pango_font_describe
+_pango_font_describe_with_absolute_size
+_pango_font_description_better_match
+_pango_font_description_copy
+_pango_font_description_copy_static
+_pango_font_description_equal
+_pango_font_description_free
+_pango_font_description_from_string
+_pango_font_description_get_family
+_pango_font_description_get_gravity
+_pango_font_description_get_set_fields
+_pango_font_description_get_size
+_pango_font_description_get_size_is_absolute
+_pango_font_description_get_stretch
+_pango_font_description_get_style
+_pango_font_description_get_type
+_pango_font_description_get_variant
+_pango_font_description_get_weight
+_pango_font_description_hash
+_pango_font_description_merge
+_pango_font_description_merge_static
+_pango_font_description_new
+_pango_font_description_set_absolute_size
+_pango_font_description_set_family
+_pango_font_description_set_family_static
+_pango_font_description_set_gravity
+_pango_font_description_set_size
+_pango_font_description_set_stretch
+_pango_font_description_set_style
+_pango_font_description_set_variant
+_pango_font_description_set_weight
+_pango_font_description_to_filename
+_pango_font_description_to_string
+_pango_font_description_unset_fields
+_pango_font_descriptions_free
+_pango_font_face_describe
+_pango_font_face_get_face_name
+_pango_font_face_get_type
+_pango_font_face_is_synthesized
+_pango_font_face_list_sizes
+_pango_font_family_get_name
+_pango_font_family_get_type
+_pango_font_family_is_monospace
+_pango_font_family_list_faces
+_pango_font_find_shaper
+_pango_font_get_coverage
+_pango_font_get_font_map
+_pango_font_get_glyph_extents
+_pango_font_get_metrics
+_pango_font_get_type
+_pango_font_map_changed
+_pango_font_map_create_context
+_pango_font_map_get_serial
+_pango_font_map_get_shape_engine_type
+_pango_font_map_get_type
+_pango_font_map_list_families
+_pango_font_map_load_font
+_pango_font_map_load_fontset
+_pango_font_mask_get_type
+_pango_font_metrics_get_approximate_char_width
+_pango_font_metrics_get_approximate_digit_width
+_pango_font_metrics_get_ascent
+_pango_font_metrics_get_descent
+_pango_font_metrics_get_strikethrough_position
+_pango_font_metrics_get_strikethrough_thickness
+_pango_font_metrics_get_type
+_pango_font_metrics_get_underline_position
+_pango_font_metrics_get_underline_thickness
+_pango_font_metrics_new
+_pango_font_metrics_ref
+_pango_font_metrics_unref
+_pango_fontset_foreach
+_pango_fontset_get_font
+_pango_fontset_get_metrics
+_pango_fontset_get_type
+_pango_fontset_simple_append
+_pango_fontset_simple_get_type
+_pango_fontset_simple_new
+_pango_fontset_simple_size
+_pango_get_lib_subdirectory
+_pango_get_log_attrs
+_pango_get_mirror_char
+_pango_get_sysconf_subdirectory
+_pango_glyph_item_apply_attrs
+_pango_glyph_item_copy
+_pango_glyph_item_free
+_pango_glyph_item_get_logical_widths
+_pango_glyph_item_get_type
+_pango_glyph_item_iter_copy
+_pango_glyph_item_iter_free
+_pango_glyph_item_iter_get_type
+_pango_glyph_item_iter_init_end
+_pango_glyph_item_iter_init_start
+_pango_glyph_item_iter_next_cluster
+_pango_glyph_item_iter_prev_cluster
+_pango_glyph_item_letter_space
+_pango_glyph_item_split
+_pango_glyph_string_copy
+_pango_glyph_string_extents
+_pango_glyph_string_extents_range
+_pango_glyph_string_free
+_pango_glyph_string_get_logical_widths
+_pango_glyph_string_get_type
+_pango_glyph_string_get_width
+_pango_glyph_string_index_to_x
+_pango_glyph_string_new
+_pango_glyph_string_set_size
+_pango_glyph_string_x_to_index
+_pango_gravity_get_for_matrix
+_pango_gravity_get_for_script
+_pango_gravity_get_for_script_and_width
+_pango_gravity_get_type
+_pango_gravity_hint_get_type
+_pango_gravity_to_rotation
+_pango_is_zero_width
+_pango_item_copy
+_pango_item_free
+_pango_item_get_type
+_pango_item_new
+_pango_item_split
+_pango_itemize
+_pango_itemize_with_base_dir
+_pango_language_from_string
+_pango_language_get_default
+_pango_language_get_sample_string
+_pango_language_get_scripts
+_pango_language_get_type
+_pango_language_includes_script
+_pango_language_matches
+_pango_language_to_string
+_pango_layout_context_changed
+_pango_layout_copy
+_pango_layout_get_alignment
+_pango_layout_get_attributes
+_pango_layout_get_auto_dir
+_pango_layout_get_baseline
+_pango_layout_get_character_count
+_pango_layout_get_context
+_pango_layout_get_cursor_pos
+_pango_layout_get_ellipsize
+_pango_layout_get_extents
+_pango_layout_get_font_description
+_pango_layout_get_height
+_pango_layout_get_indent
+_pango_layout_get_iter
+_pango_layout_get_justify
+_pango_layout_get_line
+_pango_layout_get_line_count
+_pango_layout_get_line_readonly
+_pango_layout_get_lines
+_pango_layout_get_lines_readonly
+_pango_layout_get_log_attrs
+_pango_layout_get_log_attrs_readonly
+_pango_layout_get_pixel_extents
+_pango_layout_get_pixel_size
+_pango_layout_get_serial
+_pango_layout_get_single_paragraph_mode
+_pango_layout_get_size
+_pango_layout_get_spacing
+_pango_layout_get_tabs
+_pango_layout_get_text
+_pango_layout_get_type
+_pango_layout_get_unknown_glyphs_count
+_pango_layout_get_width
+_pango_layout_get_wrap
+_pango_layout_index_to_line_x
+_pango_layout_index_to_pos
+_pango_layout_is_ellipsized
+_pango_layout_is_wrapped
+_pango_layout_iter_at_last_line
+_pango_layout_iter_copy
+_pango_layout_iter_free
+_pango_layout_iter_get_baseline
+_pango_layout_iter_get_char_extents
+_pango_layout_iter_get_cluster_extents
+_pango_layout_iter_get_index
+_pango_layout_iter_get_layout
+_pango_layout_iter_get_layout_extents
+_pango_layout_iter_get_line
+_pango_layout_iter_get_line_extents
+_pango_layout_iter_get_line_readonly
+_pango_layout_iter_get_line_yrange
+_pango_layout_iter_get_run
+_pango_layout_iter_get_run_extents
+_pango_layout_iter_get_run_readonly
+_pango_layout_iter_get_type
+_pango_layout_iter_next_char
+_pango_layout_iter_next_cluster
+_pango_layout_iter_next_line
+_pango_layout_iter_next_run
+_pango_layout_line_get_extents
+_pango_layout_line_get_pixel_extents
+_pango_layout_line_get_type
+_pango_layout_line_get_x_ranges
+_pango_layout_line_index_to_x
+_pango_layout_line_ref
+_pango_layout_line_unref
+_pango_layout_line_x_to_index
+_pango_layout_move_cursor_visually
+_pango_layout_new
+_pango_layout_set_alignment
+_pango_layout_set_attributes
+_pango_layout_set_auto_dir
+_pango_layout_set_ellipsize
+_pango_layout_set_font_description
+_pango_layout_set_height
+_pango_layout_set_indent
+_pango_layout_set_justify
+_pango_layout_set_markup
+_pango_layout_set_markup_with_accel
+_pango_layout_set_single_paragraph_mode
+_pango_layout_set_spacing
+_pango_layout_set_tabs
+_pango_layout_set_text
+_pango_layout_set_width
+_pango_layout_set_wrap
+_pango_layout_xy_to_index
+_pango_log2vis_get_embedding_levels
+_pango_lookup_aliases
+_pango_map_get_engine
+_pango_map_get_engines
+_pango_markup_parser_finish
+_pango_markup_parser_new
+_pango_matrix_concat
+_pango_matrix_copy
+_pango_matrix_free
+_pango_matrix_get_font_scale_factor
+_pango_matrix_get_type
+_pango_matrix_rotate
+_pango_matrix_scale
+_pango_matrix_transform_distance
+_pango_matrix_transform_pixel_rectangle
+_pango_matrix_transform_point
+_pango_matrix_transform_rectangle
+_pango_matrix_translate
+_pango_module_register
+_pango_parse_enum
+_pango_parse_markup
+_pango_parse_stretch
+_pango_parse_style
+_pango_parse_variant
+_pango_parse_weight
+_pango_quantize_line_geometry
+_pango_read_line
+_pango_render_part_get_type
+_pango_renderer_activate
+_pango_renderer_deactivate
+_pango_renderer_draw_error_underline
+_pango_renderer_draw_glyph
+_pango_renderer_draw_glyph_item
+_pango_renderer_draw_glyphs
+_pango_renderer_draw_layout
+_pango_renderer_draw_layout_line
+_pango_renderer_draw_rectangle
+_pango_renderer_draw_trapezoid
+_pango_renderer_get_color
+_pango_renderer_get_layout
+_pango_renderer_get_layout_line
+_pango_renderer_get_matrix
+_pango_renderer_get_type
+_pango_renderer_part_changed
+_pango_renderer_set_color
+_pango_renderer_set_matrix
+_pango_reorder_items
+_pango_scan_int
+_pango_scan_string
+_pango_scan_word
+_pango_script_for_unichar
+_pango_script_get_sample_language
+_pango_script_get_type
+_pango_script_iter_free
+_pango_script_iter_get_range
+_pango_script_iter_new
+_pango_script_iter_next
+_pango_shape
+_pango_shape_full
+_pango_skip_space
+_pango_split_file_list
+_pango_stretch_get_type
+_pango_style_get_type
+_pango_tab_align_get_type
+_pango_tab_array_copy
+_pango_tab_array_free
+_pango_tab_array_get_positions_in_pixels
+_pango_tab_array_get_size
+_pango_tab_array_get_tab
+_pango_tab_array_get_tabs
+_pango_tab_array_get_type
+_pango_tab_array_new
+_pango_tab_array_new_with_positions
+_pango_tab_array_resize
+_pango_tab_array_set_tab
+_pango_trim_string
+_pango_underline_get_type
+_pango_unichar_direction
+_pango_units_from_double
+_pango_units_to_double
+_pango_variant_get_type
+_pango_version
+_pango_version_check
+_pango_version_string
+_pango_weight_get_type
+_pango_wrap_mode_get_type
+_CFArrayGetValueAtIndex
+_CFLocaleCopyPreferredLanguages
+_CFRelease
+_CFStringGetCString
+___error
+___memcpy_chk
+___memmove_chk
+___memset_chk
+___srget
+___stack_chk_fail
+___stack_chk_guard
+_abs
+_bsearch
+_ceil
+_cos
+_fclose
+_flockfile
+_floor
+_fopen
+_funlockfile
+_g_array_append_vals
+_g_array_free
+_g_array_new
+_g_array_set_size
+_g_ascii_dtostr
+_g_ascii_strcasecmp
+_g_ascii_strtod
+_g_ascii_table
+_g_ascii_tolower
+_g_ascii_xdigit_value
+_g_assertion_message_expr
+_g_boxed_type_register_static
+_g_build_filename
+_g_direct_hash
+_g_enum_get_value
+_g_enum_get_value_by_nick
+_g_enum_register_static
+_g_error_free
+_g_file_error_quark
+_g_flags_register_static
+_g_free
+_g_get_home_dir
+_g_get_user_config_dir
+_g_getenv
+_g_hash_table_destroy
+_g_hash_table_insert
+_g_hash_table_lookup
+_g_hash_table_lookup_extended
+_g_hash_table_new
+_g_hash_table_new_full
+_g_hash_table_unref
+_g_intern_static_string
+_g_intern_string
+_g_key_file_free
+_g_key_file_get_groups
+_g_key_file_get_keys
+_g_key_file_get_value
+_g_key_file_load_from_file
+_g_key_file_new
+_g_list_append
+_g_list_concat
+_g_list_copy
+_g_list_delete_link
+_g_list_foreach
+_g_list_free
+_g_list_free_1
+_g_list_length
+_g_list_prepend
+_g_list_remove_link
+_g_list_reverse
+_g_logv
+_g_malloc
+_g_malloc0
+_g_malloc0_n
+_g_malloc_n
+_g_markup_error_quark
+_g_markup_parse_context_end_parse
+_g_markup_parse_context_free
+_g_markup_parse_context_get_position
+_g_markup_parse_context_get_user_data
+_g_markup_parse_context_new
+_g_markup_parse_context_parse
+_g_memdup
+_g_module_close
+_g_module_error
+_g_module_open
+_g_module_symbol
+_g_mutex_lock
+_g_mutex_unlock
+_g_object_get_data
+_g_object_get_qdata
+_g_object_new
+_g_object_ref
+_g_object_replace_qdata
+_g_object_set_data_full
+_g_object_set_qdata_full
+_g_object_unref
+_g_once_init_enter
+_g_once_init_leave
+_g_path_get_dirname
+_g_path_is_absolute
+_g_printerr
+_g_ptr_array_add
+_g_ptr_array_free
+_g_ptr_array_new
+_g_quark_from_static_string
+_g_quark_from_string
+_g_quark_to_string
+_g_realloc
+_g_realloc_n
+_g_return_if_fail_warning
+_g_set_error
+_g_slice_alloc
+_g_slice_alloc0
+_g_slice_copy
+_g_slice_free1
+_g_slice_free_chain_with_offset
+_g_slist_alloc
+_g_slist_append
+_g_slist_concat
+_g_slist_copy
+_g_slist_delete_link
+_g_slist_foreach
+_g_slist_free
+_g_slist_free_1
+_g_slist_free_full
+_g_slist_length
+_g_slist_nth
+_g_slist_prepend
+_g_slist_reverse
+_g_str_equal
+_g_str_hash
+_g_strchomp
+_g_strchug
+_g_strconcat
+_g_strdup
+_g_strdup_printf
+_g_strfreev
+_g_string_append
+_g_string_append_len
+_g_string_append_printf
+_g_string_assign
+_g_string_free
+_g_string_insert_c
+_g_string_new
+_g_string_truncate
+_g_strjoinv
+_g_strndup
+_g_strsplit
+_g_type_check_instance_is_a
+_g_type_class_add_private
+_g_type_class_adjust_private_offset
+_g_type_class_peek_parent
+_g_type_class_ref
+_g_type_class_unref
+_g_type_instance_get_private
+_g_type_module_get_type
+_g_type_module_register_type
+_g_type_module_unuse
+_g_type_module_use
+_g_type_name
+_g_type_qname
+_g_type_register_static_simple
+_g_unichar_break_type
+_g_unichar_get_mirror_char
+_g_unichar_get_script
+_g_unichar_isgraph
+_g_unichar_isspace
+_g_unichar_iswide
+_g_unichar_iszerowidth
+_g_unichar_type
+_g_utf8_get_char
+_g_utf8_offset_to_pointer
+_g_utf8_pointer_to_offset
+_g_utf8_prev_char
+_g_utf8_skip
+_g_utf8_strlen
+_g_utf8_validate
+_getenv
+_memcpy
+_memset
+_qsort
+_setlocale
+_sin
+_strchr
+_strcmp
+_strlen
+_strncmp
+_strpbrk
+_strstr
+_strtol
+_ungetc

@@ -1,0 +1,15663 @@
+__TEXT
+__text
+__TEXT
+__symbol_stub
+__TEXT
+__stub_helper
+__TEXT
+__cstring
+__TEXT
+__const
+__TEXT
+__unwind_info
+__TEXT
+__DATA
+__nl_symbol_ptr
+__DATA
+__la_symbol_ptr
+__DATA
+__const
+__DATA
+__bss
+__DATA
+__common
+__DATA
+__LINKEDIT
+@loader_path/libswscale.5.dylib
+@loader_path/libavutil.56.dylib
+/usr/lib/libSystem.B.dylib
+/System/Library/Frameworks/VideoToolbox.framework/Versions/A/VideoToolbox
+/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia
+/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo
+/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
+USWV
+L$D1
+\$41
+ED$0
+T$H9
+D$X	D$L
+|$p	
+D$P1
+D$Pf
+D$Tf
+D$`f
+T$x1
+D$\f
+,XC9
+|$p	
+L$\1
+fffff.
+L$`f
+\$x1
+t$\f
+3t$x
+|$hi
+3l$x
+D$P1
+fffff.
+D$\f
+,XC9
+l$\1
+fff.
+3t$x
+L$\1
+\$x1
+t$\f
+D$T1
+D$Tf
+D$`f
+D$x1
+D$\f
+D$x@;D$H
+D$t@9
+D$Hffff.
+|$p	
+\$t3D$D
+|$df
+t$tf
+t$|9
+D$P@
+T$L;D$`
+l$x3D$D
+t$|i
+G@A9
+D$T@
+;D$`
+\$t3D$D
+ffff.
+fff.
+t$|9
+D$P@
+T$L;D$`
+D$D@
+D$D;
+^_[]
+USWVP
+C;\$$u
+^_[]
+USWV
+^_[]
+USWV
+D$,1
+C$+k
+G9|$l
+;D$Hu
+L^_[]
+USWV
+^_[]
+USWV
+t$HF
++QX+]X
+L^_[]
+ffff.
+ffffff.
+USWV
+l$@1
+t$<ffffff.
+E9l$|
+;D$Xu
+\^_[]
+USWV
+^_[]
+USWV
+|$0+2
+\$`+HD
+D$@H
+L^_[]
+ffff.
+USWVP
+L$$|(
+^_[]
+USWV
+|$$f.
+T$<f
+ffffff.
+^_[]
+USWV
+\^_[]
+fff.
+fff.
+fff.
+fff.
+fff.
+USWV
+^_[]
+USWV
+ffff.
+l$0f
+T$4f
+^_[]
+ffff.
+USWV
+ffff.
+l$0f
+T$4f
+^_[]
+ffff.
+USWV
+ffff.
+l$0f
+T$4f
+^_[]
+ffff.
+USWV
+ffff.
+l$0f
+T$4f
+^_[]
+ffff.
+USWV
+ffff.
+l$0f
+T$4f
+^_[]
+ffff.
+USWV
+YD$(
+YD$(
+YD$(
+T$@f
+L$Df
+yG9|$L
+,^_[]
+USWV
+ffff.
+l$0f
+T$4f
+^_[]
+USWV
+ffff.
+l$0f
+T$4f
+^_[]
+USWV
+ffff.
+l$0f
+T$4f
+^_[]
+USWV
+ffff.
+l$0f
+T$4f
+^_[]
+USWV
+ffff.
+l$0f
+T$4f
+^_[]
+USWV
+YD$(
+YD$(
+YD$(
+T$@f
+L$Df
+yG9|$L
+,^_[]
+fffff.
+USWV
+ffff.
+l$0f
+T$4f
+^_[]
+ffff.
+fff.
+fff.
+fff.
+USWV
+L$(1
+ffff.
+\$Hf
+|$`f
+L$df
+;|$t
+L^_[]
+USWV
+L$(1
+ffff.
+\$Hf
+|$`f
+L$df
+;|$t
+L^_[]
+USWV
+L$(1
+ffff.
+\$Hf
+|$`f
+L$df
+;|$t
+L^_[]
+USWV
+L$(1
+ffff.
+\$Hf
+|$`f
+L$df
+;|$t
+L^_[]
+USWV
+L$(1
+ffff.
+\$Hf
+|$`f
+L$df
+;|$t
+L^_[]
+USWV
+L$(1
+ffff.
+\$Hf
+|$`f
+L$df
+;|$t
+L^_[]
+USWV
+L$(1
+ffff.
+\$Hf
+|$`f
+L$df
+;|$t
+L^_[]
+USWV
+L$(1
+ffff.
+\$Hf
+|$`f
+L$df
+;|$t
+L^_[]
+USWV
+ ^_[]
+ffffff.
+USWV
+ ^_[]
+ffffff.
+USWV
+ ^_[]
+fffff.
+USWV
+\$Pf
+L$Tf
+iE;l$d
+<^_[]
+fffff.
+USWV
+\$Pf
+L$Tf
+iE;l$d
+<^_[]
+fffff.
+USWV
+\$Pf
+L$Tf
+iE;l$d
+<^_[]
+USWV
+\$Pf
+L$Tf
+iE;l$d
+<^_[]
+USWV
+$FBG
+l$$f
+(^_[]
+USWV
+\$Pf
+L$Tf
+iE;l$d
+<^_[]
+USWV
+\$Pf
+L$Tf
+iE;l$d
+<^_[]
+USWV
+ ^_[]
+ffffff.
+USWV
+ ^_[]
+ffffff.
+USWV
+ ^_[]
+fffff.
+USWV
+l$Pf
+L$Tf
+YC;\$d
+<^_[]
+ffff.
+USWV
+l$Pf
+L$Tf
+YC;\$d
+<^_[]
+ffff.
+USWV
+l$Pf
+L$Tf
+YC;\$d
+<^_[]
+USWV
+l$Pf
+L$Tf
+YC;\$d
+<^_[]
+USWV
+l$Pf
+L$Tf
+YC;\$d
+<^_[]
+USWV
+l$Pf
+L$Tf
+YC;\$d
+<^_[]
+USWV
+L$(1
+l$Pf
+L$Tf
+yG;|$d
+<^_[]
+USWV
+L$(1
+l$Pf
+L$Tf
+yG;|$d
+<^_[]
+USWV
+L$(1
+l$Pf
+L$Tf
+yG;|$d
+<^_[]
+USWV
+L$(1
+l$Pf
+L$Tf
+yG;|$d
+<^_[]
+USWV
+L$(1
+ffff.
+l$Pf
+L$Tf
+;|$d
+<^_[]
+USWV
+L$(1
+ffff.
+l$Pf
+L$Tf
+;|$d
+<^_[]
+USWV
+L$(1
+ffff.
+l$Pf
+L$Tf
+;|$d
+<^_[]
+USWV
+L$(1
+ffff.
+l$Pf
+L$Tf
+;|$d
+<^_[]
+USWV
+ ^_[]
+USWV
+ ^_[]
+USWV
+ ^_[]
+USWV
+D$(fff.
+|$Pf
+L$Tf
+YC;\$d
+<^_[]
+USWV
+D$(fff.
+|$Pf
+L$Tf
+YC;\$d
+<^_[]
+USWV
+D$(fff.
+|$Pf
+L$Tf
+YC;\$d
+<^_[]
+USWV
+D$(fff.
+|$Pf
+L$Tf
+YC;\$d
+<^_[]
+USWV
+D$(fff.
+|$Pf
+L$Tf
+YC;\$d
+<^_[]
+USWV
+D$(fff.
+|$Pf
+L$Tf
+YC;\$d
+<^_[]
+USWV
+ ^_[]
+USWV
+ ^_[]
+fff.
+USWV
+ ^_[]
+USWV
+fff.
+\$Pf
+L$Tf
+yG;|$d
+<^_[]
+USWV
+fff.
+\$Pf
+L$Tf
+yG;|$d
+<^_[]
+USWV
+fff.
+\$Pf
+L$Tf
+yG;|$d
+<^_[]
+USWV
+fff.
+\$Pf
+L$Tf
+yG;|$d
+<^_[]
+USWV
+fff.
+\$Pf
+L$Tf
+yG;|$d
+<^_[]
+USWV
+fff.
+\$Pf
+L$Tf
+yG;|$d
+<^_[]
+USWVP
+fffff.
+^_[]
+fff.
+<rF9
+USWVP
+fffff.
+^_[]
+fff.
+<rF9
+USWVP
+fffff.
+^_[]
+USWVP
+fffff.
+^_[]
+fff.
+<rF9
+ffff.
+USWVP
+fffff.
+^_[]
+USWV
+\$ 1
+^_[]
+USWV
+fff.
+L$0f
+yG9|$8
+^_[]
+USWVP
+fffff.
+^_[]
+fff.
+fff.
+<rF9
+USWVP
+fffff.
+^_[]
+fff.
+fff.
+<rF9
+USWVP
+fffff.
+^_[]
+fff.
+USWVP
+fffff.
+^_[]
+fff.
+fff.
+<rF9
+USWVP
+fffff.
+^_[]
+fff.
+USWV
+\$ 1
+^_[]
+USWV
+fff.
+L$0f
+yG9|$8
+^_[]
+fff.
+<rF9
+USWVP
+fffff.
+^_[]
+ffffff.
+ffffff.
+ffffff.
+ffffff.
+fff.
+ffffff.
+ffffff.
+Afffff.
+USWVP
+^_[]
+USWV
+L$0f
+yG;|$@|
+^_[]
+USWV
+L$0f
+yG;|$@|
+^_[]
+USWV
+L$0f
+yG;|$@|
+^_[]
+USWV
+L$0f
+yG;|$@|
+^_[]
+USWV
+L$0f
+yG;|$@|
+^_[]
+USWV
+L$0f
+yG;|$@|
+^_[]
+USWVP
+^_[]
+USWV
+L$0f
+yG;|$@|
+^_[]
+USWV
+L$0f
+yG;|$@|
+^_[]
+USWV
+L$0f
+yG;|$@|
+^_[]
+USWV
+L$0f
+yG;|$@|
+^_[]
+USWV
+L$0f
+yG;|$@|
+^_[]
+USWV
+L$0f
+yG;|$@|
+^_[]
+USWV
+xGI9
+^_[]
+USWV
+fff.
+xGI9
+^_[]
+USWV
+^_[]
+fffff.
+USWV
+^_[]
+fffff.
+USWV
+^_[]
+ffffff.
+USWV
+^_[]
+ffffff.
+USWV
+L$@f
+;t$P
+,^_[]
+fffff.
+USWV
+L$@f
+;t$P
+,^_[]
+fffff.
+USWV
+L$@f
+;t$P
+,^_[]
+fffff.
+USWV
+L$@f
+;t$P
+,^_[]
+fffff.
+USWV
+D$ 1
+L$@f
+qF;t$P
+,^_[]
+fffff.
+USWV
+D$ 1
+L$@f
+qF;t$P
+,^_[]
+fffff.
+USWV
+D$ 1
+L$@f
+qF;t$P
+,^_[]
+fffff.
+USWV
+D$ 1
+L$@f
+qF;t$P
+,^_[]
+fffff.
+ffffff.
+ffffff.
+ffff.
+ffffff.
+fff.
+ffffff.
+fff.
+fffff.
+fff.
+ffffff.
+fff.
+ffffff.
+ffffff.
+USWV
+t$Hu
+^_[]
+ffffff.
+ffffff.
+USWVP
+^_[]
+ffff.
+USWV
+T$$ffffff.
+,XC;\$0u
+^_[]
+fffff.
+USWV
+T$$ffffff.
+,XC;\$0u
+^_[]
+USWV
+~jffff.
+D$<u
+A;L$@
+^_[]
+USWVP
+T$ ~7
+D$$f
+XC;\$(u
+^_[]
+fff.
+USWVP
+T$ ~7
+D$$f
+XC;\$(u
+^_[]
+ffffff.
+USWV
+ffffff.
+^_[]
+USWV
+G;|$<
+^_[]
+ffffff.
+USWVP
+L$$f
+YC;\$(u
+^_[]
+USWVP
+L$$f
+YC;\$(u
+^_[]
+ffffff.
+USWVP
+^_[]
+USWVP
+L$$f
+YC;\$(u
+^_[]
+USWVP
+L$$f
+YC;\$(u
+^_[]
+ffffff.
+USWVP
+^_[]
+USWVP
+L$$f
+YC;\$(u
+^_[]
+USWVP
+L$$f
+YC;\$(u
+^_[]
+ffffff.
+USWVP
+^_[]
+USWVP
+L$$f
+YC;\$(u
+^_[]
+USWVP
+L$$f
+YC;\$(u
+^_[]
+ffffff.
+USWVP
+^_[]
+USWVP
+T$ ~7
+C;\$(u
+^_[]
+ffff.
+USWVP
+T$ ~7
+C;\$(u
+^_[]
+USWV
+^_[]
+fffff.
+USWV
+AFHu
+^_[]
+USWVP
+|$ ~!f
+A;L$(u
+^_[]
+USWV
+fff.
+l$,~8
+F;t$8
+fff.
+l$,~8
+F;t$8
+^_[]
+USWV
+t$<1
+~Uf.
+fff.
+F;t$X
+^_[]
+USWV
++\$t
++|$x
+|$ fff.
+@r7=
+E9l$p
+D^_[]
+USWV
+@rI=
+t$Lr
+fff.
+@r?=
+L$Lr
+ ^_[]
+fff.
+USWV
+D$T1
+~Uf.
+@r==
+C;\$X
+^_[]
+fff.
+USWV
++|$\
++t$`
+ffff.
+T$@+
+C9\$X
+,^_[]
+USWV
+@r?=
+@rK=
+fffff.
+^_[]
+ffffff.
+USWV
+t$<1
+~Uf.
+fff.
+F;t$X
+^_[]
+USWV
++\$p
+\$<+|$t
+fff.
+@r7=
+E9l$l
+@^_[]
+USWV
+t$Dr
+fffff.
+l$,+
+t$Dr
+^_[]
+fff.
+USWV
+t$T1
+~Uf.
+@rM=
+fffff.
+C;\$X
+^_[]
+fffff.
+USWV
++|$\
++t$`
+ffff.
+T$@+
+C9\$X
+,^_[]
+USWV
+@r?=
+@rK=
+fffff.
+^_[]
+ffffff.
+USWV
+t$<1
+~Uf.
+fff.
+@r7=
+F;t$X
+^_[]
+fffff.
+USWV
++\$p
+\$<+|$t
+fff.
+\$<=
+E9l$l
+@^_[]
+USWV
+t$Dr
+fffff.
+l$,+
+^_[]
+USWV
+T$T1
+~Uf.
+C;\$X
+^_[]
+fff.
+USWV
++\$\
++|$`
+ffff.
+E9l$X
+,^_[]
+ffff.
+USWV
+fffff.
+^_[]
+ffffff.
+USWV
+t$<1
+~Uf.
+fff.
+@rB=
+F;t$X
+^_[]
+USWV
++\$t
+\$@+|$x
+fff.
+ffffff.
+E9l$p
+D^_[]
+USWV
+t$Dr
+fffff.
+l$,+
+t$Dr
+^_[]
+fff.
+USWV
+t$T1
+~Uf.
+fffff.
+C;\$X
+^_[]
+fffff.
+USWV
++\$\
++|$`
+ffff.
+E9l$X
+,^_[]
+ffff.
+USWV
+fffff.
+^_[]
+ffffff.
+USWV
+|$t1
+fffff.
+~1fff.
+l$8~*f
+|$,+
+|$,f
+D$$f
+C;\$x
+<^_[]
+USWV
+L$(1
+D$$+
+\$d+
++t$X
+ffff.
+L$Hr
+|^_[]
+USWV
++t$D
+L$Xf
+ffffff.
+D$(1
+L$D+\$H
+\^_[]
+USWV
+t$t1
+fffff.
+~Lf.
+|$,+
+D$(f
+E;l$x
+<^_[]
+USWV
+D$(+
+|$4+
++l$\
+L$`f
+|$Tr
+l^_[]
+USWV
+ffffff.
++l$8
+D$tf
+D$Hf
+D$<f
+D$x9
++\$8
+T$<f
+D$tf
+l$0r
+D$tf
+D$8f
+D$x9
+L^_[]
+USWV
+|$t1
+fffff.
+~1fff.
+l$8~*f
+|$,+
+|$,f
+D$$f
+C;\$x
+<^_[]
+USWV
+L$(1
+D$$+
+\$d+
++t$X
+ffff.
+L$Hr
+|^_[]
+USWV
++t$D
+L$Xf
+ffffff.
+D$(1
+L$D+\$H
+\^_[]
+USWV
+t$t1
+fffff.
+~Lf.
+|$,+
+D$(f
+E;l$x
+<^_[]
+USWV
+D$(+
+|$4+
++l$\
+L$`f
+|$Tr
+l^_[]
+USWV
+ffffff.
++l$8
+D$tf
+D$Hf
+D$<f
+D$x9
++\$8
+T$<f
+D$tf
+l$0r
+D$tf
+D$8f
+D$x9
+L^_[]
+USWV
+|$t1
+fffff.
+~1fff.
+L$0u
+l$8~-fff.
+|$,+
+|$,f
+D$(f
+\$8r
+C;\$x
+<^_[]
+USWV
+L$(1
+D$$+
+\$d+
+|$4ffff.
++l$\
+T$xf
+L$Hr
+|^_[]
+USWV
++t$D
+L$Xf
+ffffff.
+D$(1
+L$H)
+\^_[]
+USWV
+t$t1
+fffff.
+~Mff.
+\$,+
+D$(f
+E;l$x
+<^_[]
+USWV
+D$(+
+|$4+
++|$\
+l^_[]
+fff.
+USWV
+ffffff.
++l$8
+D$tf
+D$Hf
+D$<f
+D$x9
+L$8)
+D$tf
+l$0r
+D$tf
+D$<f
+D$x9
+L^_[]
+ffff.
+USWV
+|$t1
+fffff.
+~1fff.
+L$0u
+l$8~-fff.
+|$,+
+|$,f
+D$(f
+\$8r
+C;\$x
+<^_[]
+USWV
+L$(1
+D$$+
+\$d+
+|$4ffff.
++l$\
+T$xf
+L$Hr
+|^_[]
+USWV
++t$D
+L$Xf
+ffffff.
+D$(1
+L$H)
+\^_[]
+USWV
+t$t1
+fffff.
+~Mff.
+\$,+
+D$(f
+E;l$x
+<^_[]
+USWV
+D$(+
+|$4+
++|$\
+l^_[]
+fff.
+USWV
+ffffff.
++l$8
+D$tf
+D$Hf
+D$<f
+D$x9
+L$8)
+D$tf
+l$0r
+D$tf
+D$<f
+D$x9
+L^_[]
+ffff.
+USWV
+D$T1
+~Uf.
+@r==
+C;\$X
+^_[]
+USWV
++l$\
++|$`
+@r==
+t$(r
+9\$X
+,^_[]
+USWV
+fffff.
+^_[]
+USWV
+T$T1
+~Uf.
+C;\$X
+^_[]
+USWV
++l$\
++|$`
+t$(r
+9\$X
+,^_[]
+USWV
+fffff.
+t$D=
+^_[]
+USWV
+t$t1
+fffff.
+~Lf.
+|$,+
+D$(f
+E;l$x
+<^_[]
+ffff.
+USWV
+D$$+
+\$0+
++\$\
+D$Tf
+|$Pr
+l^_[]
+fffff.
+USWV
+ffffff.
++l$H
+D$Xf
+T$8r
++t$H
+t$@r
+T$0r
+\^_[]
+USWV
+t$t1
+fffff.
+~Mff.
+\$,+
+D$(f
+E;l$x
+<^_[]
+ffff.
+USWV
+D$$+
+\$0+
+t$41
++\$\
+L$DA
+l^_[]
+fff.
+USWV
+ffffff.
++l$H
+D$Xf
+T$8r
++|$D
+|$@r
+T$0r
+\^_[]
+USWV
+t$t1
+fffff.
+~Lf.
+|$,+
+D$(f
+E;l$x
+<^_[]
+ffff.
+USWV
+D$$+
+\$0+
++\$\
+D$Tf
+|$Pr
+l^_[]
+fffff.
+USWV
+ffffff.
++l$H
+D$Xf
+T$8r
++t$H
+t$@r
+T$0r
+\^_[]
+USWV
+t$t1
+fffff.
+~Mff.
+\$,+
+D$(f
+E;l$x
+<^_[]
+ffff.
+USWV
+D$$+
+\$0+
+t$41
++\$\
+L$DA
+l^_[]
+fff.
+USWV
+ffffff.
++l$H
+D$Xf
+T$8r
++|$D
+|$@r
+T$0r
+\^_[]
+USWV
+\$(+
+kT$$
+\$<kD
+T$<k\
+kL$ 
+L$8kD$0
+|$$k
+|$ i
+D^_[]
+USWV
+D$T"
+D$(+
+L$8+
+T$4i
+kt$$
+D$Tk
+kT$ 
+D$$k
+D$ i
+X^_[]
+USWV
+t$01
+|$8rz
+kt$ 
+kL$$
+kD$(
+T$ k
+T$$i
+D$8"
+kt$ 
+\$8k
+kL$$
+kD$(
+T$ k
+T$$i
+<^_[]
+USWV
+\$(+
+kT$$
+\$<kD
+T$<k\
+kL$ 
+L$8kD$0
+|$$k
+|$ i
+D^_[]
+USWV
+D$T"
+D$(+
+L$8+
+T$4i
+kt$$
+D$Tk
+kT$ 
+D$$k
+D$ i
+X^_[]
+USWV
+t$01
+|$8rz
+kt$ 
+kL$$
+kD$(
+T$ k
+T$$i
+D$8"
+kt$ 
+\$8k
+kL$$
+kD$(
+T$ k
+T$$i
+<^_[]
+USWV
+~Wffff.
+\$(+
+@r7=
+}ffff.
+t$,r
+\$@k\$$
+t$(kT
+l$<kD$ 
+t$8kD$0
+t$,x
+|$$k
+|$ k
+D^_[]
+USWV
+D$P"
+|$$+
+L$4+
+t$0i
+effffff.
+kT$ 
+t$Pk
+t$ k
+D$Hw
+T^_[]
+USWV
+t$$1
+D$0"
+@rG=
+t$4r
+ffffff.
+\$0k
+kD$8
+kD$ 
+t$4k
+D$0"
+@r7=
+kL$4
+\$0k
+kD$8
+kD$ 
+|$4k
+D$,w
+<^_[]
+ffffff.
+USWV
+~(f.
+~Wffff.
+\$,+
+@r7=
+efffff.
+kT$(
+l$8kt
+\$,k\
+\$@kD$$
+l$<kD$ 
+|$(k
+|$$k
+D^_[]
+USWV
+D$P"
+|$$+
+L$4+
+t$0i
+effffff.
+kT$ 
+t$Pk
+t$ k
+D$Hw
+T^_[]
+USWV
+t$$1
+D$4"
+\$0r
+t$,r
+ffffff.
+\$0k
+k\$ 
+t$8k
+D$4"
+|$,i
+D$0fffff.
+kL$8
+kD$ 
+D$8k
+D$0w
+<^_[]
+USWV
+~Vf.
+fffff.
+t$4+
+L$,r
+@ffff.
+fffff.
+L^_[]
+USWV
+ffff.
+\$8+
+D$<=
+L^_[]
+USWV
+ffff.
+\$8+
+D$<=
+L^_[]
+USWV
+|$DB
++|$L
+L$tf
++L$L
+T$df
+L$tf
+D$tf
+D$tf
+D$tf
+T$4r
+D$41
+D$ 1
++|$h
+pD$P
+T$df
+T$pf
+T$xf
+L$xf
+T$<r
+|^_[]
+USWV
+L$,1
+D$(+
+|$8+
++l$l
+T$|f
+L$hf
++T$l
+ffff.
+l$pt
+L$tf
+ffffff.
+L$tf
+L$Tr
+;L$P
+^_[]
+USWV
+fffff.
+\$,~Vfffff.
+T$<)
+\$(r
+l$@f
+ffffff.
+l$@f
+L$8)
+t$Hf
+t$Hf
+@;D$ 
+L^_[]
+USWV
+t$HB
+L$Xf
++L$0
+L$(A
+D$D9
+|$(f
+L$Xf
++T$<
+L$$A
+D$D9
+\^_[]
+USWV
+L$(1
+D$$+
+\$0+
+L$L+l$`
+T$hf
+T$hf
++\$`
+L$HA
+;L$D
+|^_[]
+fffff.
+USWV
+fffff.
+\$4~Vfffff.
+|$(=
+t$@t
+T$<f
+T$<f
+L$8)
+|$4G;|$$
+L^_[]
+ffffff.
+USWV
+|$DB
++|$L
+L$tf
++L$L
+T$df
+L$tf
+D$tf
+D$tf
+D$tf
+T$4r
+D$41
+D$ 1
++|$h
+pD$P
+T$df
+T$pf
+T$xf
+L$xf
+T$<r
+|^_[]
+USWV
+L$,1
+D$(+
+|$8+
++l$l
+T$|f
+L$hf
++T$l
+ffff.
+l$pt
+L$tf
+ffffff.
+L$tf
+L$Tr
+;L$P
+^_[]
+USWV
+fffff.
+\$,~Vfffff.
+T$<)
+\$(r
+l$@f
+ffffff.
+l$@f
+L$8)
+t$Hf
+t$Hf
+@;D$ 
+L^_[]
+USWV
+t$HB
+L$Xf
++L$0
+L$(A
+D$D9
+|$(f
+L$Xf
++T$<
+L$$A
+D$D9
+\^_[]
+USWV
+L$(1
+D$$+
+\$0+
+L$L+l$`
+T$hf
+T$hf
++\$`
+L$HA
+;L$D
+|^_[]
+fffff.
+USWV
+fffff.
+\$4~Vfffff.
+|$(=
+t$@t
+T$<f
+T$<f
+L$8)
+|$4G;|$$
+L^_[]
+ffffff.
+USWV
+t$DB
++|$d
+t$ f
+L$Lf
+T$hf
+l$Lf
+D$81
+D$ 1
++\$h
+pD$P
++\$hf
+\$lf
+~L$lf
+T$xf
+L$xf
+L$xf
+T$Lr
+|^_[]
+USWV
+L$,1
+D$(+
+\$8+
++l$p
++|$p
+;L$P
+^_[]
+USWV
+fffff.
+\$,~Vfffff.
+T$<)
+t$0=
+t$(r
+l$Dt
+L$8)
+\$Hf
+ffff.
+@;D$ 
+L^_[]
+USWV
+t$HB
+L$Xf
++L$0
+|$Xf
+L$(A
+D$D9
+L$<)
+L$Xf
+|$Xt
+L$(A
+D$D9
+\^_[]
+USWV
+L$(1
+D$$+
+\$0+
+L$L+\$\
+T$hf
+T$hf
++l$\
+T$df
+T$df
+L$HA
+;L$D
+|^_[]
+USWV
+fffff.
+\$4~Vfffff.
+T$<)
+T$Hf
+T$Hf
+L$8+L$(
+t$Df
+t$Df
+t$4F;t$$
+L^_[]
+USWV
+t$DB
++|$d
+t$ f
+L$Lf
+T$hf
+l$Lf
+D$81
+D$ 1
++\$h
+pD$P
++\$hf
+\$lf
+~L$lf
+T$xf
+L$xf
+L$xf
+T$Lr
+|^_[]
+USWV
+L$,1
+D$(+
+\$8+
++l$p
++|$p
+;L$P
+^_[]
+USWV
+fffff.
+\$,~Vfffff.
+T$<)
+t$0=
+t$(r
+l$Dt
+L$8)
+\$Hf
+ffff.
+@;D$ 
+L^_[]
+USWV
+t$HB
+L$Xf
++L$0
+|$Xf
+L$(A
+D$D9
+L$<)
+L$Xf
+|$Xt
+L$(A
+D$D9
+\^_[]
+USWV
+L$(1
+D$$+
+\$0+
+L$L+\$\
+T$hf
+T$hf
++l$\
+T$df
+T$df
+L$HA
+;L$D
+|^_[]
+USWV
+fffff.
+\$4~Vfffff.
+T$<)
+T$Hf
+T$Hf
+L$8+L$(
+t$Df
+t$Df
+t$4F;t$$
+L^_[]
+USWV
+t$DB
++t$L
+L$Xf
++L$L
+T$(r
+|$(f
+L$Xf
++T$<
+T$$r
+\^_[]
+USWV
+L$(1
+D$$+
+\$0+
+L$L+l$`
+T$hf
+T$hf
++\$`
+L$Hr
+;L$D
+|^_[]
+fffff.
+USWV
+fffff.
+\$4~Vfffff.
+|$(=
+t$@t
+T$<f
+T$<f
+L$8)
+@;D$$
+L^_[]
+ffffff.
+USWV
+t$DB
++t$L
+L$Xf
++L$L
+T$(r
+|$(f
+L$Xf
++T$<
+T$$r
+\^_[]
+USWV
+L$(1
+D$$+
+\$0+
+L$L+l$`
+T$hf
+T$hf
++\$`
+L$Hr
+;L$D
+|^_[]
+fffff.
+USWV
+fffff.
+\$4~Vfffff.
+|$(=
+t$@t
+T$<f
+T$<f
+L$8)
+@;D$$
+L^_[]
+ffffff.
+USWV
+t$HB
+L$Xf
++L$0
+T$Pf
+|$Xf
+T$(r
+L$<)
+L$Xf
+|$Xt
+T$(r
+\^_[]
+USWV
+L$(1
+D$$+
+\$0+
+L$L+\$\
+T$hf
+T$hf
++l$\
+T$df
+T$df
+L$Hr
+;L$D
+|^_[]
+USWV
+fffff.
+\$4~Vfffff.
+T$<)
+T$Hf
+T$Hf
+L$8+L$(
+t$Df
+t$Df
+@;D$$
+L^_[]
+USWV
+t$HB
+L$Xf
++L$0
+T$Pf
+|$Xf
+T$(r
+L$<)
+L$Xf
+|$Xt
+T$(r
+\^_[]
+USWV
+L$(1
+D$$+
+\$0+
+L$L+\$\
+T$hf
+T$hf
++l$\
+T$df
+T$df
+L$Hr
+;L$D
+|^_[]
+USWV
+fffff.
+\$4~Vfffff.
+T$<)
+T$Hf
+T$Hf
+L$8+L$(
+t$Df
+t$Df
+@;D$$
+L^_[]
+USWV
+\$ B
+t$@r
+(^_[]
+fffff.
+USWV
+D$p@
++l$t
+l$@+\$x
+@9D$(
+D^_[]
+USWV
+D$h@
+~af.
+C;\$
+,^_[]
+fffff.
+USWV
+^_[]
+USWV
+D$`@
++t$d
++T$h
+4^_[]
+USWV
+D$`@
+E;l$
+$^_[]
+USWV
+\$ B
+t$@r
+(^_[]
+fffff.
+USWV
+D$l@
++l$p
+l$<+\$t
+@9D$(
+@^_[]
+USWV
+D$h@
+~af.
+C;\$
+,^_[]
+USWV
+^_[]
+USWV
+D$`@
++t$d
++T$h
+4^_[]
+USWV
+D$`@
+E;l$
+$^_[]
+USWV
+fffff.
+fffff.
+ ^_[]
+USWV
+|$`G
+L$ +D$d
++D$h
+4^_[]
+USWV
+D$`@
+@;D$
+$^_[]
+USWV
+fffff.
+ ^_[]
+USWV
+|$`G
++D$d
++t$h
+4^_[]
+fffff.
+USWV
+D$`@
+@;D$
+$^_[]
+USWV
+D$0G
+fff.
+l$4f
+|$4f
+L$,f
+8^_[]
+USWV
+D$|@
+T$Df
+t$(f
+D$Hf
+|$Lf
+T$$f
+A9L$<
+P^_[]
+USWV
+D$x@
+L$$u
+D$4f
+l$(f
+T$4f
+E;l$ 
+<^_[]
+fff.
+USWV
+l$$f
+T$0f
+D$(f
+4^_[]
+USWV
+D$t@
++L$x
++D$|
+l$@f
+|$4f
+T$(f
+T$pf
+L$@f
+l$Df
+|$$f
+C9\$,
+H^_[]
+fffff.
+USWV
+D$p@
+T$(f
+D$ f
+T$,f
+@;D$
+4^_[]
+ffff.
+USWV
+l$$f
+T$0f
+D$(f
+4^_[]
+USWV
+D$t@
++L$x
++D$|
+l$@f
+|$4f
+T$(f
+T$pf
+L$@f
+l$Df
+|$$f
+C9\$,
+H^_[]
+fffff.
+USWV
+D$p@
+T$(f
+D$ f
+T$,f
+@;D$
+4^_[]
+ffff.
+USWV
+4^_[]
+ffff.
+USWV
+D$|@
+|$8f
+P^_[]
+USWV
+D$h@
+D$l1
+ffffff.
+~mffffff.
+@;D$
+,^_[]
+USWV
+t$41
+ffffff.
+T$,@
+<^_[]
+USWV
+D$t@
++\$x
++L$|
+D$$f
+D$,B
+H^_[]
+USWV
+D$d@
+D$h1
+ffffff.
+~ffffff.
+A;L$
+(^_[]
+ffff.
+USWV
+8^_[]
+USWV
+D$t@
++T$x
++l$|
+|$$ffffff.
+H^_[]
+USWV
+D$l@
+D$p1
+ffffff.
+~mffffff.
+A;L$
+0^_[]
+USWV
+fffff.
+^_[]
+USWV
+T$,1
+|$`)
+fff.
+4^_[]
+USWV
+fff.
+;\$X
+^_[]
+USWV
+ffffff.
+fffff.
+^_[]
+USWV
+T$$1
+|$\)
+ffff.
+0^_[]
+ffff.
+USWV
+fff.
+;\$X
+^_[]
+fff.
+USWV
+fff.
+ ^_[]
+USWV
+D$d@
++D$h
+D$0+t$l
+|$4	
+\$4r
+G9|$$
+8^_[]
+USWV
+D$\@
+A;L$
+ ^_[]
+USWV
+fff.
+ffffff.
+ffffff.
+ ^_[]
+USWV
+D$d@
++D$h
+D$0+t$l
+G9|$$
+8^_[]
+USWV
+D$`@
+~Yffffff.
+t$ 	
+fff.
+A;L$
+$^_[]
+USWV
+fffff.
+fff.
+ ^_[]
+USWV
+D$d@
++D$h
+D$0+t$l
+|$4	
+\$4r
+G9|$$
+8^_[]
+USWV
+D$\@
+A;L$
+ ^_[]
+fff.
+USWV
+^_[]
+USWV
+D$81
++D$D
+^_[]
+USWV
+fff.
+ffff.
+E;l$L
+^_[]
+USWV
+T$P1
+|$(	
+F;t$X
+,^_[]
+USWV
+D$`1
++D$l
+D$4fff.
+t$4f
+G;|$h
+<^_[]
+ffff.
+USWV
+\$H~5
+|$(1
+t$`~8
+t$dt
+E;l$h
+,^_[]
+USWV
+T$P1
+|$(	
+F;t$X
+,^_[]
+USWV
+D$`1
++D$l
+D$4fff.
+t$4f
+G;|$h
+<^_[]
+ffff.
+USWV
+\$H~5
+|$(1
+t$`~8
+t$dt
+E;l$h
+,^_[]
+USWV
+fff.
+\$D~
+C;\$\
+ ^_[]
+USWV
+9|$8
+\$|9
+;D$|
+ffffff.
+T^_[]
+fff.
+fff.
+USWV
+;D$ r
+t]fff.
+^_[]
+USWVP
+sDffffff.
+^_[]
+USWVP
+sQffffff.
+^_[]
+USWVP
+sPffffff.
+^_[]
+USWV
+^_[]
+ffffff.
+USWVP
+sLffffff.
+^_[]
+fffff.
+ffffff.
+ffffff.
+USWVP
+^_[]
+ffff.
+USWVP
+^_[]
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+fff.
+fff.
+fff.
+fff.
+ffff.
+ffff.
+USWV
+T$@G
+;|$4u
+^_[]
+USWV
+T$@G
+;|$4u
+^_[]
+USWV
+t$01
+B;T$4
+^_[]
+USWV
+t$01
+B;T$4
+^_[]
+USWV
+@9D$
+;l$H
+ ^_[]
+fffff.
+USWV
+fffff.
+T$ B
+L$P9
+0^_[]
+USWV
+l$,F;t$$u
+^_[]
+USWV
+\$0F;t$$u
+^_[]
+USWV
+l$<;|$
+l$@|D
+L$ 1
+,$;D$
+^_[]
+fffff.
+USWV
+L$(1
+;L$4
+^_[]
+USWV
++T$T
+ffffff.
+A;L$H
+ ^_[]
+fff.
+USWV
+fff.
+@;D$@u
+^_[]
+USWV
++T$T
+A;L$H
+ ^_[]
+USWV
+fff.
+@;D$@u
+^_[]
+pX)P\
+p0)P4
+pD)PH1
+USWV
+D$01
+ffff.
+L> 9
+|>$H+D$
+;D$Hu
+L^_[]
+USWV
+t$<1
+T$Dfffff.
+T$d9
++t$\9
+\$tk
+D$\@
+;D$xu
+|^_[]
+\$tk
+|$D uA
+G;|$du
+~fffff.
+G;|$du
+G;|$du
+|$TG
+T$`k
+kD$Ph
+USWV
+T$(1
+|$$k
+L$ i
+F;t$4|
+|$$G1
+<^_[]
+fff.
+USWV
+^_[]
+USWV
+^_[]
+ ^_[
+ffffff.
+USWV
+fff.
+^_[]
+USWVP
+^_[]
+ffff.
+USWVP
+s|fff.
+^_[]
+ffff.
+ffff.
+USWVP
+^_[]
+ffffff.
+USWV
+\$(tV
+,^_[]
+USWV
+L$Dk
+\$@)D$D
+t$l9
+L$h9
+D$d9
+\$Hff.
+;t$X
+L$L)
+t$<1
+~4fff.
+t$<f
+fffff.
+ffffff.
++D$L
+^_[]
+^_[]
+t	;K
+L$di
+T$\iD$d
+iD$d88
+|$Xi
+D$`	
+D$`	
+L$dA
+L$d;M
+D$(y
+t$df
+D$df
+D$df
+;L$@
+|$8G
+L$L9
+D$pf
++t$<
+L$\f
+D$Pf
+D$\f
+D$\f
+D$\f
+D$\f
+D$Tf
+D$\f
+D$Lf
+D$\f
+D$\;D$D
+D$`@
+ ^_[
+USWV
+fff.
+fff.
+L$(f
+^_[]
+fffff.
+USWV
+fff.
+fff.
+^_[]
+ffffff.
+USWV
+D$$	
+ffffff.
+|$ ;T$H
+,^_[]
+fffff.
+USWV
+t$(t#
+T$(f
+\$ ;T$H
+,^_[]
+USWV
+;F@|3
+D$Hu
+D$D%
+ D$#
+D$! D$%
+D$ "D$"
+D$$ D$-
+D$& D$2
+D$' D$4
+D$( D$7
+D$) D$<
+D$* D$6
+D$, D$8
+"t$.
+"l$/
+"d$0
+"T$1
+"L$3
+D$+"D$5
+L$H 
+FT;FL
+FX;FP
+A0;AP
+G0;GPtU
+L^_[]
+ffffff.
+USWV
+L$4~'
+<^_[]
+fffff.
+USWV
+L$4~0
+l$`f
+<^_[]
+USWV
+D$49
+\$`ffff.
+<^_[]
+USWV
+L$89
+D$4~3
+l$`fff.
+<^_[]
+fff.
+USWV
+X`+M +M
+L$8+u@+u<
+t$D+]`+]\
+\$,f
+ffff.
+l$()
+L$Hf
+;l$<t
+ffffff.
+l$,|M
+|$0ffffff.
+C;\$p
+L^_[]
+USWV
+T$,f
+\$89
+L$8f
+L$09
+\$,f.
+B;T$`
+<^_[]
+USWV
+T$$~,
+l$Pff.
+,^_[]
+USWV
+<^_[]
+USWV
+u`"t$
+^_[]
+USWV
+l$X~"
+T$Pf
+fff.
+0E;l$Pu
+0E;l$Pu
+,^_[]
+USWV
+\$@ffffff.
+^_[]
+USWV
+D$$1
+|$(1
+|$,G;|$`
+fff.
+~[ffff.
+\$(C;\$`
+D$$1
+D$(1
+\$,C;\$`
+<^_[]
+~[ffff.
+\$(C;\$`
+USWV
+t$$1
+t$(1
+t$8F;t$`
+t$81
+ffff.
+\$(~jf
+9l$8u
+>ffff.
+\$(~%
+9l$8u
+C;\$`
+D$$1
+t$(1
+t$8F;t$`u
+<^_[]
+t$81
+ffff.
+t$(~i
+9l$8u
+>ffff.
+t$(~%
+9l$8u
+E;l$`
+USWV
++L$$
++L$$
+^_[]
+USWV
+;D$hu
+l^_[]
+USWV
+|$ )
+T$$1
+~?ffffff.
+fff.
+T$(B;T$`u
+D|$,
+T$$)
+L$(1
+\$4A;L$`u
+|$ )
+T$$1
+~?ffffff.
+fff.
+T$(B;T$`u
+D|$,
+T$$)
+L$(1
+D$0A;L$`u
+<^_[]
+USWV
+;t$$|
+,^_[]
+fff.
+USWV
+ffff.
+;T$4|
+t$<u>
+\$D9
+L^_[]
+fffff.
+USWV
+^_[]
+ffff.
+USWV
+^_[]
+USWV
+^_[]
+fff.
+USWV
+,^_[]
+USWV
+,^_[]
+USWV
+ffff.
+;l$$u
+D$$^_[]
+fffff.
+USWV
+;|$@u
+^_[]
+USWV
+,^_[]
+USWV
+,^_[]
+USWV
+,^_[]
+USWV
+,^_[]
+USWV
+,^_[]
+fffff.
+USWV
+,^_[]
+fffff.
+USWV
+ffff.
+D$8~2)
+^_[]
+ffff.
+USWV
+|$D1
+)D$Pf
+T$tB
+D$lt
+D$lt
+D$`1
+ffffff.
+|$|1
+}^ffffff.
+D$h@;D$l
+|$tt)
+o\$Ptc
+ffffff.
+~lfff.
+E;l$l
+D$81
+ffffff.
+t$p1
+fffff.
+D$`@;D$l
+D$`1
+|$|1
+D$h@;D$l
+fff.
+@;D$lu
+4qfff.
+ffff.
+4qfffff.
+4qfff.
+o\$ 
+4qffffff.
+@;D$l
+@;D$lu
+fff.
+@;D$l
+D$`1
+|$|1
+D$h@;D$l
+fff.
+@;D$l
+D$`1
+|$|1
+}[fffff.
+D$h@;D$l
+D$81
+t$p1
+fff.
+}cffffff.
+D$<@;D$l
+L$lu
+D$81
+t$p1
+fff.
+D$<@;D$l
+ffffff.
+ffff.
+A;L$l
+D$81
+fff.
+t$p1
+fff.
+}_ffffff.
+D$<@;D$l
+D$81
+t$p1
+fff.
+}lfffff.
+4A@9
+D$<@;D$l
+A;L$l
+ffff.
+ffff.
+A;L$l
+D$81
+t$p1
+fff.
+4A@9
+D$<@;D$l
+D$81
+t$p1
+fff.
+4A@9
+D$<@;D$l
+ffffff.
+A;L$l
+D$81
+ffff.
+t$p1
+fff.
+4A@9
+D$<@;D$l
+T$tB
+^_[]
+ffffff.
+fffff.
+USWV
+l$`1
+D$xGF
+;D$Hu
+L^_[]
+ffffff.
+USWV
+D$0)
+L$Lf
+D$XB;l$P
+;D$hu
+l^_[]
+fffff.
+USWV
+l$`1
+D$xGF
+;D$Hu
+L^_[]
+ffff.
+USWV
+D$,+
+D$XB;l$P
+;D$hu
+l^_[]
+USWV
+l$`1
+D$@f
+D$xGF
+;D$Hu
+L^_[]
+USWV
+L$\f
+L$`f
+D$,)
+l$Lf
+t$Hf
+L$\f
+D$^f
+D$`f
+L$af
+D$cf
+l$Df
+D$ef
+L$ff
+L$XB9
+D$\f
+D$`f
+;D$hu
+l^_[]
+USWV
+l$`1
+D$xGF
+;D$Hu
+L^_[]
+ffffff.
+USWV
+D$0)
+L$Lf
+D$XB;l$P
+;D$hu
+l^_[]
+fffff.
+USWV
+l$`1
+D$xGF
+;D$Hu
+L^_[]
+ffff.
+USWV
+D$,+
+D$XB;l$P
+;D$hu
+l^_[]
+USWV
+l$`1
+D$@f
+D$xGF
+;D$Hu
+L^_[]
+USWV
+L$^f
+L$`f
+D$,)
+l$Lf
+t$Hf
+L$^f
+D$\f
+D$`f
+L$_f
+D$cf
+l$Df
+D$gf
+L$ff
+L$XB9
+D$^f
+D$`f
+;D$hu
+l^_[]
+USWV
+l$`1
+;D$Hu
+L^_[]
+USWV
+D$0+
+L$Lf
+L$XB9
+;D$hu
+l^_[]
+USWV
+l$`1
+;D$Hu
+L^_[]
+fffff.
+USWV
+D$,+
+L$Lff.
+L$XB9
+;D$hu
+l^_[]
+ffffff.
+USWV
+l$`1
+D$Ff
+;D$Hu
+L^_[]
+USWV
+L$\f
+L$]f
+T$ff
+D$,)
+l$Lfff.
+l$Lf
+t$Hf
+D$]f
+L$^f
+L$_f
+D$bf
+l$Df
+L$cf
+L$df
+D$ff
+L$XB9
+D$\f
+D$]f
+L$ff
+;D$hu
+l^_[]
+USWV
+l$`1
+;D$Hu
+L^_[]
+USWV
+D$0+
+L$Lf
+L$XB9
+;D$hu
+l^_[]
+USWV
+l$`1
+;D$Hu
+L^_[]
+fffff.
+USWV
+D$,+
+L$Lff.
+L$XB9
+;D$hu
+l^_[]
+ffffff.
+USWV
+l$`1
+D$Ff
+;D$Hu
+L^_[]
+USWV
+L$^f
+L$]f
+T$ff
+D$,)
+l$Lfff.
+l$Lf
+t$Hf
+D$]f
+L$\f
+L$af
+D$df
+l$Df
+L$cf
+L$bf
+D$ff
+L$XB9
+D$^f
+D$]f
+L$ff
+;D$hu
+l^_[]
+USWV
+^_[]
+USWV
+ ^_[]
+USWV
+^_[]
+USWV
+ffffff.
+ ^_[]
+ffff.
+USWVP
+^_[]
+USWV
+ ^_[]
+USWV
+^_[]
+USWV
+ ^_[]
+USWV
+^_[]
+USWV
+ ^_[]
+USWVP
+^_[]
+USWV
+ ^_[]
+USWVP
+^_[]
+USWV
+ ^_[]
+USWVP
+^_[]
+USWV
+ ^_[]
+USWVP
+^_[]
+USWV
+|$ f
+T$ f
+D$8f
+$^_[]
+USWVP
+^_[]
+USWV
+ ^_[]
+USWVP
+^_[]
+USWV
+ ^_[]
+USWVP
+^_[]
+USWV
+|$ f
+T$ f
+D$8f
+$^_[]
+USWV
+fffff.
+L$`f
+L$`f
+ffff.
+L$`f
+L$`f
+ffffff.
+L$`f
+L$`f
+L$`f
+L$`f
+L$`f
+fffff.
+L$`f
+L$`f
+ffff.
+L$`f
+L$,f
+nT$,f
+B;T$P
+4^_[]
+fffff.
+USWV
+ffffff.
+fffff.
+ffffff.
+fff.
+fffff.
+@;D$8
+^_[]
+ffff.
+fff.
+USWV
+D$0)
+D$Xi
+^_[]
+USWV
+YL$@
+YD$`
+YD$`
+YD$`
+YD$`
+D$Pf
+^_[]
+USWV
+^_[]
+USWV
+^_[]
+|$|k
+9D$|t
+|$|k
+9T$|
+l$Ht
+?uVG
+|$|8
+;D$|uX
+USWV
+^_[]
+fff.
+YD$ 
+D$0f
+@^_[
+USWV
++D$l
+YD$0
+\$(f
+Yl$X
+YD$P
+\$(f
+^_[]
+USWV
+D$ 1
+|$$1
+|$,1
+ffffff.
+ffff.
+ffffff.
+t#ffff.
+ffffff.
+t#ffff.
+ffffff.
+t$fffff.
+ffffff.
+t#ffff.
+ffffff.
+ffffff.
+u}G;~
+uSG;~
+<^_[]
+USWV
+T$P1
+D$Xf
+\D$ 
+ffffff.
+<^_[]
+fffff.
+fffff.
+USWV
+^_[]
+USWV
+fff.
++D$41
+^_[]
+ffffff.
+USWV
+t$fffff.
+)L$p
+t$fffff.
+)L$`
+)\$@
+)T$01
+YL$(
+XL$ 
+fff.
+L$\A
+(T$0f
+(\$@
+^_[]
+USWV
+\$01
+^_[]
+ffff.
+USWV
+\$81
+D$01
+^_[]
+USWV
+^_[]
+USWV
+l$0~<ffffff.
+^_[]
+USWV
+^_[]
+USWV
+D$T9F
+D$X9F
+D$\9F8u:
+D$`9
+u.9~
+u)9V4u$9
+<^_[]
+USWV
+,^_[]
+fffff.
+USWV
+D$$1
+,^_[]
+USWV
+|$$1
+L$8)
++M0+UD
+|$,+S0
+T$4+kD
+<^_[]
+USWV
++u0+]D+B
+iL$4
+l^_[]
+USWV
+\$@+]0+}D
+T$`+P
+T$d+P0
+T$\+PD
+T$X+PX
+;D$xu
+|^_[]
+fff.
+USWV
+^_[]
+USWV
+t$01
+Ll$8
+l$\)
+LL$ 
+;D$L
+L$P),
+D$XC9
+l^_[]
+USWV
+^_[]
+USWV
+ffffff.
+^_[]
+SVWU
+]_^[
+SVWU
+]_^[
+SVWU
+]_^[
+SVWU
+]_^[
+|$$f
+|$$f
+SVWU
+l$,f
+]_^[
+SVWU
+l$,f
+]_^[
+SVWU
+]_^[
+SVWU
+]_^[
+SVWU
+]_^[
+SVWU
+]_^[
+SVWU
+]_^[
+SVWU
+]_^[
+|$$f
+|$$f
+|$$f
+|$$f
+SVWU
+]_^[
+SVWU
+]_^[
+SVWU
+]_^[
+SVWU
+]_^[
+SVWU
+]_^[
+SVWU
+]_^[
+SVWU
+]_^[
+SVWU
+]_^[
+SVWU
+,]_^[
+SVWU
+]_^[
+SVWU
+]_^[
+SVWU
+l$,f
+,]_^[
+SVWU
+t$$f
+]_^[
+]_^[
+SVWU
+t$$f
+]_^[
+]_^[
+SVWU
+l$,f
+,]_^[
+SVWU
+t$$f
+]_^[
+]_^[
+SVWU
+t$$f
+]_^[
+]_^[
+SVWU
+t$$1
+]_^[
+]_^[
+SVWU
+,]_^[
+SVWU
+]_^[
+]_^[
+SVWU
+]_^[
+]_^[
+USWV
+\$LNu
+^_[]
+USWV
+}"ffffff.
+T$4G;|$,
+T$4G;|$,u
+^_[]
+ffff.
+USWV
+\$LNu
+^_[]
+USWV
+^_[]
+USWV
+Off.
+^_[]
+USWV
+^_[]
+ffff.
+USWV
+^_[]
+USWV
+^_[]
+fffff.
+USWV
+^_[]
+USWV
+^_[]
+USWV
+^_[]
+USWV
+^_[]
+ffff.
+Rffff.
+ffff.
+Rffff.
+ffff.
+USWV
+ffff.
+!ff.
+^_[]
+USWV
+^_[]
+USWV
+^_[]
+USWV
+ffffff.
+^_[]
+fffff.
+USWV
+ffff.
+^_[]
+fff.
+USWV
+ffff.
+^_[]
+fff.
+USWV
+D$,1
+$ffffff.
+\$<B9T$0u
+^_[]
+USWV
+D$,1
+$ffffff.
+\$<B9T$0u
+^_[]
+USWV
+D$,1
+l$8I
+^_[]
+USWV
+D$,1
+l$8I
+^_[]
+USWV
+;D$0
+;D$,r
+|$d9
+4^_[]
+USWV
+|$,1
+$;\$
+t$$1
+|$01
+$;\$
+t$(1
+^_[]
+ffff.
+USWV
+t$41
+GCHu
+;T$<
+^_[]
+USWV
++T$X
+\$()
+fff.
+D$0@
+D$0;D$\
+4^_[]
+fffff.
+USWV
++T$X
+\$()
+D$0@
+D$0;D$\
+4^_[]
+ffff.
+USWV
+fff.
+fffff.
+|$L1
+;t$P
+L$P)
+ffff.
+jE9l$Tu
+T$HB
+D$|9
+T$Pf
+\^_[]
+USWV
+T$@A
+T$Dk
+fff.
+;T$p
++T$@
+^_[]
+USWV
+|$41
++D$l
+D$|)D$
+G9|$Du
+L$@A
+D$4;L$p
+H^_[]
+USWV
++D$|
+D$41
++D$l
+|$<)
+ffffff.
+G9|$Du
+L$@A
+D$4;L$p
+H^_[]
+USWV
+ffff.
+T$4F;t$,
+^_[]
+USWV
+fff.
+fffff.
+|$L1
+;t$P
+L$P)
+ffff.
+jE9l$Tu
+T$HB
+D$|9
+T$Pf
+\^_[]
+USWV
+T$@A
+T$Dk
+fff.
+;T$p
++T$@
+^_[]
+USWV
+|$41
++D$l
+D$|)D$
+G9|$Du
+L$@A
+D$4;L$p
+H^_[]
+USWV
++D$|
+D$41
++D$l
+|$<)
+ffffff.
+G9|$Du
+L$@A
+D$4;L$p
+H^_[]
+USWV
+^_[]
+USWV
+fffff.
+^_[]
+USWV
+Vffffff.
+^_[]
+ffff.
+USWV
+fffff.
+^_[]
+USWV
+Qff.
+^_[]
+fffff.
+USWV
+^_[]
+USWV
+^_[]
+USWV
+^_[]
+USWV
+^_[]
+ffff.
+Nffff.
+ffff.
+Nffff.
+ffff.
+USWV
+^_[]
+USWV
+^_[]
+USWV
+^_[]
+USWV
+ffffff.
+^_[]
+fffff.
+USWV
+^_[]
+fff.
+USWV
+^_[]
+fff.
+USWV
+D$,1
+$ffffff.
+\$<B9T$0u
+^_[]
+USWV
+D$,1
+$ffffff.
+\$<B9T$0u
+^_[]
+USWV
+D$,1
+l$8Iu
+^_[]
+ffffff.
+USWV
+D$,1
+l$8Iu
+^_[]
+ffffff.
+USWV
+;D$0r
+;D$,r
+|$d9
+4^_[]
+ffff.
+USWV
+|$,1
+$;\$
+t$$1
+ffff.
+|$01
+$;\$
+t$(1
+ffff.
+^_[]
+USWV
+t$41
+GCHu
+;T$<
+^_[]
+USWV
++T$X
+\$()
+fff.
+D$0@
+D$0;D$\
+4^_[]
+USWV
++T$X
+\$()
+D$0@
+D$0;D$\
+4^_[]
+USWV
+T$@A
+T$Dk
+fff.
+fffff.
+;T$p
+w+T$@
+^_[]
+USWV
+t$ +T$H
++L$X
+;L$L
+$^_[]
+USWV
+t$ +T$H
++L$X
+;L$L
+$^_[]
+USWV
+ffff.
+}"ffffff.
+T$4F;t$,
+^_[]
+fff.
+USWV
+\$LNu
+^_[]
+SVWU
+]_^[
+SVWU
+]_^[
+SVWU
+;\$,|
+]_^[
+SVWU
+]_^[
+SVWU
+]_^[
+SVWU
+;\$,|
+]_^[
+SVWU
+]_^[
+SVWU
+]_^[
+SVWU
+;\$,|
+]_^[
+SVWU
+]_^[
+SVWU
+]_^[
+SVWU
+;\$,|
+]_^[
+SVWU
+]_^[
+SVWU
+]_^[
+SVWU
+;\$,|
+]_^[
+SVWU
+]_^[
+SVWU
+]_^[
+SVWU
+;\$,|
+]_^[
+SVWU
+]_^[
+SVWU
+]_^[
+SVWU
+;\$,|
+]_^[
+SVWU
+]_^[
+SVWU
+]_^[
+SVWU
+;\$,|
+]_^[
+SVWU
+]_^[
+SVWU
+]_^[
+SVWU
+;\$,|
+]_^[
+SVWU
+]_^[
+SVWU
+]_^[
+SVWU
+;\$,|
+]_^[
+SVWU
+]_^[
+SVWU
+]_^[
+SVWU
+;\$,|
+]_^[
+SVWU
+]_^[
+SVWU
+]_^[
+SVWU
+;\$,|
+]_^[
+SVWU
+|$(f
+n,+f
+]_^[
+SVWU
+|$(f
+~,+f
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+]_^[
+SVWU
+o,kf
+]_^[
+SVWU
+;\$,|
+]_^[
+SVWU
+;\$,|
+]_^[
+SVWU
+]_^[
+SVWU
+o,kf
+]_^[
+SVWU
+;\$,|
+]_^[
+SVWU
+;\$,|
+]_^[
+SVWU
+]_^[
+SVWU
+o,kf
+]_^[
+SVWU
+;\$,|
+]_^[
+SVWU
+;\$,|
+]_^[
+SVWU
+]_^[
+SVWU
+o,kf
+]_^[
+SVWU
+;\$,|
+]_^[
+SVWU
+;\$,|
+]_^[
+SVWU
+|$(f
+]_^[
+SVWU
+|$(f
+o,kf
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+|$(f
+n,+f
+]_^[
+SVWU
+|$(f
+~,+f
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+|$(f
+]_^[
+SVWU
+|$(f
+o,kf
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+|$(f
+]_^[
+SVWU
+|$(f
+o,kf
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+|$(f
+]_^[
+SVWU
+|$(f
+o,kf
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+|$(f
+]_^[
+SVWU
+|$(f
+o,kf
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+|$(f
+]_^[
+SVWU
+|$(f
+o,kf
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+|$(f
+n,+f
+]_^[
+SVWU
+|$(f
+~,+f
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+]_^[
+SVWU
+o,kf
+]_^[
+SVWU
+;\$,|
+]_^[
+SVWU
+;\$,|
+]_^[
+SVWU
+]_^[
+SVWU
+o,kf
+]_^[
+SVWU
+;\$,|
+]_^[
+SVWU
+;\$,|
+]_^[
+SVWU
+]_^[
+SVWU
+o,kf
+]_^[
+SVWU
+;\$,|
+]_^[
+SVWU
+;\$,|
+]_^[
+SVWU
+]_^[
+SVWU
+o,kf
+]_^[
+SVWU
+;\$,|
+]_^[
+SVWU
+;\$,|
+]_^[
+SVWU
+|$(f
+]_^[
+SVWU
+|$(f
+o,kf
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+|$(f
+n,+f
+]_^[
+SVWU
+|$(f
+~,+f
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+|$(f
+]_^[
+SVWU
+|$(f
+o,kf
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+|$(f
+]_^[
+SVWU
+|$(f
+o,kf
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+|$(f
+]_^[
+SVWU
+|$(f
+o,kf
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+|$(f
+]_^[
+SVWU
+|$(f
+o,kf
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+|$(f
+]_^[
+SVWU
+|$(f
+o,kf
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+|$(f
+n,+f
+]_^[
+SVWU
+|$(f
+~,+f
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+|$(f
+]_^[
+SVWU
+|$(f
+o,kf
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+|$(f
+]_^[
+SVWU
+|$(f
+o,kf
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+|$(f
+]_^[
+SVWU
+|$(f
+o,kf
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+|$(f
+]_^[
+SVWU
+|$(f
+o,kf
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+|$(f
+]_^[
+SVWU
+|$(f
+o,kf
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+SVWU
+l$,f
+;\$,|
+]_^[
+USWV
+kt$Lh
+L$H)
+l$`t
++|3X
+L$P9
+|$0f.
+T$(9
+L$`+t$
+l$`+l$,
+L$`;|$P}
+L$P)
+L$01
+T$Ly,
+\$01
+\$T;t$(
+I+L$
+;L$(
+T$(9
+`+|$,
+L$P9
+fffff.
+|$`)
+L$T9
++L$`
+l$09
+T$Tw
+T$T9
+ffff.
+T$09
++T$ 
+l$\9
+L$T1
+L$T1
+l^_[]
+USWV
+F0;FP
+A0;AP
+\$ tr
+,^_[]
+2ff.
+nL$$
+t$ )
+(^_[
+ffff.
+ffff.
+fffff.
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+fffff.
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+SWVP
+o$.+
+o$/+
+o$.+
+o$/+
+USWVP
+o$/+
+o$/+
+^_[]
+o$.+
+o$/+
+ffffff.
+o$/+
+o$.+
+o$/+
+fffff.
+ffffff.
+o$/+
+fffff.
+o$.+
+o$/+
+ffffff.
+o$/+
+o$.+
+o$/+
+ffffff.
+o$/+
+ffff.
+ffff.
+fffff.
+ffff.
+fffff.
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+SWVP
+o$.+
+o$/+
+o$.+
+o$/+
+USWVP
+o$/+
+o$/+
+^_[]
+o$.+
+o$/+
+fffff.
+ffffff.
+o$/+
+fffff.
+o$.+
+o$/+
+fffff.
+ffffff.
+o$/+
+fffff.
+o$.+
+o$/+
+ffffff.
+o$/+
+o$.+
+o$/+
+ffffff.
+o$/+
+USWV
+D$01
+\$H)
+T$H9T$0
+L^_[]
+USWV
+L$(1
++D$,
+L$89L$(u
+<^_[]
+USWV
+D$01
+\$H)
+T$H9T$0
+L^_[]
+USWV
+L$(1
++D$,
+L$89L$(u
+<^_[]
+USWV
+L$(1
++D$,
+L$89L$(u
+<^_[]
+USWV
+L$(1
++D$,
+L$89L$(u
+<^_[]
+USWV
+T$01
++D$4
+D$@)
+|$H)
+D$T9D$0
+\^_[]
+USWV
+T$$1
+T$@f
+l$4)
++|$(
+D$D9D$$
+L^_[]
+USWV
+L$(1
++D$,
+L$89L$(u
+<^_[]
+USWV
+L$(1
++D$,
+L$89L$(u
+<^_[]
+USWV
+D$01
+\$H)
+T$H9T$0
+L^_[]
+USWV
+L$(1
++D$,
+L$89L$(u
+<^_[]
+USWV
+D$01
+\$H)
+T$H9T$0
+L^_[]
+USWV
+L$(1
++D$,
+L$89L$(u
+<^_[]
+USWV
+L$(1
++D$,
+L$89L$(u
+<^_[]
+USWV
+L$(1
++D$,
+L$89L$(u
+<^_[]
+USWV
+T$01
++D$4
+D$@)
+|$H)
+D$T9D$0
+\^_[]
+USWV
+T$$1
+T$@f
+l$4)
++|$(
+D$D9D$$
+L^_[]
+SVWU
+]_^[
+SVWU
+]_^[
+SVWU
+]_^[
+SVWU
+]_^[
+ ^_[
+USWV
+fff.
+L$<k
+T$Hfffff.
+0A9L$<
+d^_[]
+USWV
+L$<k
+l$Lffff.
+0A9L$<
+fff.
+l^_[]
+USWV
+ffffff.
+D$@1
+p^_[]
+USWV
+ffffff.
+D$81
+p^_[]
+USWV
+fffff.
+\^_[]
+ffff.
+USWV
+ffffff.
+\$<k
+|$Hf
+@9D$<
+`^_[]
+USWV
+fff.
+l$<k
+\$Tf
+@9D$<
+d^_[]
+ffffff.
+USWV
+D$xf
+D$pf
+D$8f
+D$(f
+D$ f
+^_[]
+USWV
+t$Tf
+ffffff.
+l$Pf
+T$Pf
+t$xf
+t$Pf
+L$xf
+L$|f
+t$Pf
+L$|f
+L$Pf
+D$4f
+t$|f
+t$Pf
+T$|f
+T$xf
+L$|f
+l$Pf
+L$xf
+L$|f
+t$xf
+L$Pf
+D$$f
+T$|f
+L$xf
+l$|f
+t$|f
+^_[]
+USWV
+ffffff.
+t$Pf
+t$tf
+t$Lf
+D$`f
+t$Hf
+D$hf
+t$Df
+L$@f
+T$hf
+L$<f
+L$8f
+D$tf
+L$4f
+T$`f
+L$0f
+D$tf
+L$,f
+l$Xf
+L$(f
+T$hf
+L$$f
+D$`f
+L$ f
+D$`f
+T$hf
+D$tf
+T$`f
+L$tf
+x^_[]
+ffff.
+USWV
+fff.
+^_[]
+USWV
+ffffff.
+^_[]
+USWV
+ffffff.
+^_[]
+USWV
+;D$|
+X^_[]
+USWV
+iL$d
+iL$p
+iL$l
+T$l1
+)T$h
+t$x|+
+l$||
+\$T|
++L$h
+T$x)
+|$p	
+	+\$h
+l$x)
++D$h
+L$x)
++|$h
+T$t)
++T$h
+|$x)
+T$|f
+\$|t
+l$D1
++T$h
+l$x)
++|$h
+D$x)
+^_[]
+USWV
+^_[]
+fff.
+USWVP
+^_[]
+Assertion %s failed at %s:%d
+plane_count == nb_components - 1
+libswscale/alphablend.c
+desc
+libswscale/swscale_internal.h
+libswscale/gamma.c
+libswscale/hscale.c
+SWScaler
+sws_flags
+scaler flags
+fast_bilinear
+fast bilinear
+bilinear
+bicubic
+experimental
+neighbor
+nearest neighbor
+area
+averaging area
+bicublin
+luma bicubic, chroma bilinear
+gauss
+Gaussian
+sinc
+lanczos
+Lanczos
+spline
+natural bicubic spline
+print_info
+print info
+accurate_rnd
+accurate rounding
+full_chroma_int
+full chroma interpolation
+full_chroma_inp
+full chroma input
+bitexact
+error_diffusion
+error diffusion dither
+srcw
+source width
+srch
+source height
+dstw
+destination width
+dsth
+destination height
+src_format
+source format
+dst_format
+destination format
+src_range
+source is full range
+dst_range
+destination is full range
+param0
+scaler param 0
+param1
+scaler param 1
+src_v_chr_pos
+source vertical chroma position in luma grid/256
+src_h_chr_pos
+source horizontal chroma position in luma grid/256
+dst_v_chr_pos
+destination vertical chroma position in luma grid/256
+dst_h_chr_pos
+destination horizontal chroma position in luma grid/256
+sws_dither
+set dithering algorithm
+auto
+leave choice to sws
+bayer
+bayer dither
+error diffusion
+a_dither
+arithmetic addition dither
+x_dither
+arithmetic xor dither
+gamma
+gamma correct scaling
+alphablend
+mode for alpha -> non alpha
+none
+ignore alpha
+uniform_color
+blend onto a uniform color
+checkerboard
+blend onto a checkerboard
+swscaler
+libswscale/output.c
+n == s->plane[ii].available_lines
+libswscale/slice.c
+One of the input parameters to sws_scale() is NULL, please check the calling code
+Slice parameters %d, %d are invalid
+bad src image pointers
+bad dst image pointers
+Slices start in the middle!
+libswscale/swscale.c
+dstY >= ret
+ret >= 0
+c->dstH >= dstY
+Warning: dstStride is not aligned!
+         ->cannot do aligned memory accesses anymore
+Warning: data is not aligned! This can lead to a speed loss
+(lastLumSrcY - firstLumSrcY + 1) <= hout_slice->plane[0].available_lines
+(lastChrSrcY - firstChrSrcY + 1) <= hout_slice->plane[1].available_lines
+unsupported bayer conversion
+libswscale/swscale_unscaled.c
+internal error %s -> %s converter
+srcSliceH > 1
+unsupported planar RGB conversion %s -> %s
+unsupported conversion to planar RGB %s -> %s
+!(dstStride[0] % 2 || dstStride[1] % 2)
+!(srcStride[0] % 2 || srcStride[1] % 2 || srcStride[2] % 2 || dstStride[0] % 2 || dstStride[1] % 2)
+--prefix=/Users/buildbot/buildslave/libav_osx/build/dev/build_osx32 --cc=clang --extra-cflags='-m32 -arch i386 -march=prescott -mtune=core2 -g -O2 -fno-strict-aliasing -ffast-math -gdwarf-2 -pipe -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.9 -fasm-blocks' --ld=clang --extra-ldflags='-m32 -arch i386 -march=prescott -mtune=core2 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.9' --arch=x86 --enable-shared --disable-static --enable-runtime-cpudetect --disable-all --enable-avcodec --enable-avutil --enable-avresample --enable-avformat --enable-swscale --enable-parser=h264 --enable-decoder='aac,h264,gif,vorbis,mp3,flac,alac,libvpx_vp8,libvpx_vp9,pcm*,valve*' --enable-demuxer='aac,matroska,gif,ogg,mov,mp3,flac,wav,flv' --enable-hwaccels --enable-videotoolbox --enable-muxer=flv --disable-decoder='h263,hevc,mpeg1video,mpeg2video,vc1,vp8,vp9' --enable-libvpx --enable-libvorbis --enable-protocol='file,rtmp'
+libswscale license: LGPL version 2.1 or later
+YUV color matrix differs for YUV->YUV, using intermediate RGB to convert
+libswscale/utils.c
+deprecated pixel format used, make sure you did set range correctly
+%s is not supported as input pixel format
+%s is not supported as output pixel format
+Exactly one scaler algorithm must be chosen, got %X
+%dx%d -> %dx%d is invalid scaling dimension
+Forcing full internal H chroma due to odd output size
+Forcing full internal H chroma due to input having non subsampled chroma
+Desired dithering only supported in full chroma interpolation for destination format '%s'
+Ordered dither is not supported in full chroma interpolation for destination format '%s'
+%s output is not supported with half chroma resolution, switching to full
+full chroma interpolation for destination format '%s' not yet implemented
+Cannot allocate memory.
+output width is not a multiple of 32 -> no MMXEXT scaler
+Failed to allocate MMX2FilterCode
+mprotect failed, cannot use fast bilinear scaler
+c->chrDstH <= dstH
+ehh flags invalid?!
+%s scaler, from %s to %s%s 
+dithered 
+MMXEXT
+3DNOW
+using %s
+%dx%d -> %dx%d
+lum srcW=%d srcH=%d dstW=%d dstH=%d xInc=%d yInc=%d
+chr srcW=%d srcH=%d dstW=%d dstH=%d xInc=%d yInc=%d
+using alpha blendaway %s -> %s special converter
+using unscaled %s -> %s special converter
+%1.3f 
+area averaging
+luma bicubic / chroma bilinear
+nearest neighbor / point
+bicubic spline
+sizeFactor > 0
+filterSize > 0
+filter2Size > 0
+minFilterSize > 0
+SwScaler: reducing / aligning filtersize %d -> %d
+(*filterPos)[i] >= 0
+(*filterPos)[i] < srcW
+(*filterPos)[i] + j < srcW || !filter[i * filterSize + j]
+SwScaler: zero vector in scaling
+sws: initFilter failed
+libswscale/vscale.c
+Optimized 2 tap filter code cannot be used
+c->srcBpc == 16
+libswscale/x86/swscale.c
+c->dstBpc>8
+./libswscale/swscale_internal.h
+No accelerated colorspace conversion found from %s to %s.
+libswscale/yuv2rgb.c
+%ibpp not supported by yuv2rgb
+6#	@
+$D<\"B:Zd
+4T,L2R*Jt
+ @8X&F>^`
+0P(H6V.Np
+$D<\"B:Z@@@@@@@@
+$D<\"B:Zd
+4T,L2R*Jt
+ @8X&F>^`
+0P(H6V.Np
+Mb`?
+CSHRISISISISISISISISISISISISISISISISISISJRJRJRJRJRJRJRJRJRJRJRJRJRJRISISISISISISJRISISISIp4`0A
+pLp<pLp
+p^p>p^p
+p[pDp[p
+p[pDp}p
+pWp<pWp
+p5p%p
+p5p%p
+p5p%p
+p5p%p
+p5p%p
+@___stack_chk_guard
+@dyld_stub_binder
+@_av_free
+@_av_freep
+@_av_get_bits_per_pixel
+@_av_get_cpu_flags
+@_av_get_pix_fmt_name
+@_av_image_alloc
+@_av_log
+@_av_malloc_array
+@_av_malloc_tracked
+@_av_mallocz_array
+@_av_mallocz_tracked
+@_av_opt_get_int
+@_av_opt_set_defaults
+@_av_opt_set_int
+@_av_pix_fmt_desc_get
+@_av_pix_fmt_get_chroma_sub_sample
+@_av_pix_fmt_swap_endianness
+@___bzero
+@___divdi3
+@___isnand
+@___stack_chk_fail
+@_abort
+@_ceil
+@_cos
+@_exp
+@_exp2
+@_lrint
+@_lrintf
+@_memcmp
+@_memcpy
+@_memset
+@_mmap$UNIX2003
+@_mprotect$UNIX2003
+@_munmap$UNIX2003
+@_pow
+@_sin
+_sws
+cale_
+free
+normalizeVec
+printVec2
+_class
+DefaultFilter
+GaussianVec
+IdentityVec
+cale
+etColorspaceDetails
+hiftVec
+ubVec
+loneVec
+ertPalette8ToPacked
+version
+configuration
+license
+sSupported
+nit_context
+Input
+Output
+EndiannessConversion
+lloc
+ddVec
+set_opts
+context
+achedContext
+lorspaceDetails
+efficients
+text
+stVec
+Context
+Filter
+(@@@@@P
+P@P`@PP
+p@p@pp@pp
+@p@@@@00p
+@@pp@@@@@@@@P
+P`PPPP`p`p
+pppp
+``@``@``@PPPPP``
+|@P@@P
+P@````
+pppppp
+_sws_addVec
+_sws_allocVec
+_sws_alloc_context
+_sws_alloc_set_opts
+_sws_cloneVec
+_sws_convVec
+_sws_convertPalette8ToPacked24
+_sws_convertPalette8ToPacked32
+_sws_freeContext
+_sws_freeFilter
+_sws_freeVec
+_sws_getCachedContext
+_sws_getCoefficients
+_sws_getColorspaceDetails
+_sws_getConstVec
+_sws_getContext
+_sws_getDefaultFilter
+_sws_getGaussianVec
+_sws_getIdentityVec
+_sws_get_class
+_sws_init_context
+_sws_isSupportedEndiannessConversion
+_sws_isSupportedInput
+_sws_isSupportedOutput
+_sws_normalizeVec
+_sws_printVec2
+_sws_scale
+_sws_scaleVec
+_sws_setColorspaceDetails
+_sws_shiftVec
+_sws_subVec
+_swscale_configuration
+_swscale_license
+_swscale_version
+___bzero
+___divdi3
+___isnand
+___stack_chk_fail
+___stack_chk_guard
+_abort
+_av_free
+_av_freep
+_av_get_bits_per_pixel
+_av_get_cpu_flags
+_av_get_pix_fmt_name
+_av_image_alloc
+_av_log
+_av_malloc_array
+_av_malloc_tracked
+_av_mallocz_array
+_av_mallocz_tracked
+_av_opt_get_int
+_av_opt_set_defaults
+_av_opt_set_int
+_av_pix_fmt_desc_get
+_av_pix_fmt_get_chroma_sub_sample
+_av_pix_fmt_swap_endianness
+_ceil
+_cos
+_exp
+_exp2
+_lrint
+_lrintf
+_memcmp
+_memcpy
+_memset
+_mmap$UNIX2003
+_mprotect$UNIX2003
+_munmap$UNIX2003
+_pow
+_sin
+dyld_stub_binder
+radr://5614542
+__TEXT
+__text
+__TEXT
+__stubs
+__TEXT
+__stub_helper
+__TEXT
+__cstring
+__TEXT
+__const
+__TEXT
+__unwind_info
+__TEXT
+__eh_frame
+__TEXT
+__DATA
+__got
+__DATA
+__nl_symbol_ptr
+__DATA
+__la_symbol_ptr
+__DATA
+__const
+__DATA
+__common
+__DATA
+__bss
+__DATA
+__LINKEDIT
+@loader_path/libswscale.5.dylib
+@loader_path/libavutil.56.dylib
+/usr/lib/libSystem.B.dylib
+/System/Library/Frameworks/VideoToolbox.framework/Versions/A/VideoToolbox
+/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia
+/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo
+/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
+UAWAVAUATSH
+L$PD
+L$LH
+T$xI
+l$8H
+l$pA
+D$8H
+\$$1
+|$LA
+D$dA9
+D$hH
+D$hfff.
+D$xLc,
+T$XH
+D$(D
+D$PH
+D$0H
+L$@I
+D$(A
+D$0A
+ffffff.
+L$XH
+D$(H
+D$PH
+D$0H
+D$(A
+D$0A
+ffff.
+L$XH
+D$pH
+D$PL
+fffff.
+D$xH
+L$XH
+T$PH
+ffff.
+L$@I
+D$(A
+D$0A
+D$(A
+D$0A
+D$(A
+D$0A
+ffffff.
+x	D9
+D;|$dH
+D$L;D$$
+L$@H
+D$0H
+D$(ffff.
+D$XL
+D$LLc
+D$PH
+L$@M
+l$(M
+t$LIc
+3L$L
+L$dA
+ffffff.
+D$0I
+D$hL
+|$@L
+D$LLc
+D$PL
+l$hIc
+3L$L
+l$(M
+t$LIc
+3L$L
+L$dA
+D$L;D$$
+[A\A]A^A_]
+AWAVSI
+[A^A_
+UAWAVATS
+,{fA
+$CfA
+,{fC
+,zfA
+,[fC
+[A\A^A_]
+UAWAVATSI
+[A\A^A_]
+UAWAVAUATSH
+D$@H
++x<+P
+t$ Hc
+T$(H
+L$0H
+D$8H
+t$ D
+t$8H
+T$(H
+L$0E
+t$ D
+H;D$@u
+H[A\A]A^A_]
+UAWAVAUATSPE
+L$@H
+[A\A]A^A_]
+UAWAVAUATSH
+fffff.
+t#Hc
+T$$D
+D$ D
+T$$A
++N|D
+T$$D
+D$ D
+T$$A
+([A\A]A^A_]
+AWAVATSPI
+[A\A^A_
+UAWAVAUATSH
+D$PI
+t$$I
+D$(E1
+T$0H
+L$8H
+D$@H
+D$HI
+L$$L
+D$(D9
+H;D$Pu
+X[A\A]A^A_]
+UAWAVAUATSPE
+L$@H
+[A\A]A^A_]
+UAWAVAUATSH
+t$8I
+l$0+7
+L$8H
+L$,L
++O<Hc
++O\Hc
++H<Hc
++P\Hc
+fff.
+L$DL
+l$4H
+l$ L
+T$DL
+T$DL
+L$8H
+H[A\A]A^A_]
+fff.
+fff.
+|1Ic
+UAWAVAUATSH
+~rE1
+HcD$8H
+|EHc
+[A\A]A^A_]
+UAWAVAUATSH
+D$@H
+D$8H
+D$0H
+D$(H
+D$ H
+D$@H
+D$8H
+D$0H
+D$(H
+D$ H
+D$ H
+D$0H
+D$(H
+D$8H
+D$@H
+:uQH
+H[A\A]A^A_]
+ffffff.
+ffffff.
+ffffff.
+ffffff.
+ffffff.
+ffffff.
+UAWAVAUATS
+ffff.
+[A\A]A^A_]
+UAWAVAUATS
+ffff.
+[A\A]A^A_]
+UAWAVAUATS
+ffff.
+[A\A]A^A_]
+UAWAVAUATS
+ffff.
+[A\A]A^A_]
+UAWAVAUATS
+ffff.
+[A\A]A^A_]
+UAWAVAUATSH
+t$ H
+L$ fB
+([A\A]A^A_]
+UAWAVAUATS
+ffff.
+[A\A]A^A_]
+fff.
+UAWAVAUATS
+ffff.
+[A\A]A^A_]
+fff.
+UAWAVAUATS
+ffff.
+[A\A]A^A_]
+fff.
+UAWAVAUATS
+ffff.
+[A\A]A^A_]
+fff.
+UAWAVAUATS
+ffff.
+[A\A]A^A_]
+fff.
+UAWAVAUATSH
+t$ H
+L$ fB
+([A\A]A^A_]
+ffffff.
+UAWAVAUATS
+ffff.
+[A\A]A^A_]
+~5ff.
+~;E1
+ffffff.
+~?E1
+~ME1
+ffff.
+~6E1
+~?E1
+~CE1
+UAWAVAUATSH
+L$4I
+t$(H
+|$ 1
+ffff.
+L$8A
+L$@B
+L$8B
+|$ f
+L$(f
+;l$4
+H[A\A]A^A_]
+UAWAVAUATSH
+L$4I
+t$(H
+|$ 1
+ffff.
+L$8A
+L$@B
+L$8B
+|$ f
+L$(f
+;l$4
+H[A\A]A^A_]
+UAWAVAUATSH
+L$4I
+t$(H
+|$ 1
+ffff.
+L$8A
+L$@B
+T$8B
+|$ f
+L$(f
+;l$4
+H[A\A]A^A_]
+UAWAVAUATSH
+L$4I
+t$(H
+|$ 1
+ffff.
+L$8A
+L$@B
+T$8B
+|$ f
+L$(f
+;l$4
+H[A\A]A^A_]
+UAWAVAUATSH
+L$4I
+t$(H
+|$ 1
+ffff.
+L$8A
+L$@B
+L$8B
+|$ f
+L$(f
+;l$4
+H[A\A]A^A_]
+UAWAVAUATSH
+L$4I
+t$(H
+|$ 1
+ffff.
+L$8A
+L$@B
+L$8B
+|$ f
+L$(f
+;l$4
+H[A\A]A^A_]
+UAWAVAUATSH
+L$4I
+t$(H
+|$ 1
+ffff.
+L$8A
+L$@B
+T$8B
+|$ f
+L$(f
+;l$4
+H[A\A]A^A_]
+UAWAVAUATSH
+L$4I
+t$(H
+|$ 1
+ffff.
+L$8A
+L$@B
+T$8B
+|$ f
+L$(f
+;l$4
+H[A\A]A^A_]
+UAWAVAUATSE
+[A\A]A^A_]
+UAWAVAUATSE
+[A\A]A^A_]
+UAWAVAUATSE
+[A\A]A^A_]
+UAWAVAUATSH
+L$$H
+;l$$
+([A\A]A^A_]
+UAWAVAUATSH
+L$$H
+;l$$
+([A\A]A^A_]
+UAWAVAUATSH
+L$$H
+;l$$
+([A\A]A^A_]
+UAWAVAUATSH
+L$$H
+;l$$
+([A\A]A^A_]
+UAWAVAUATSE1
+[A\A]A^A_]
+fff.
+UAWAVAUATSH
+L$$H
+;l$$
+([A\A]A^A_]
+UAWAVAUATSH
+L$$H
+;l$$
+([A\A]A^A_]
+UAWAVAUATSE
+[A\A]A^A_]
+UAWAVAUATSE
+[A\A]A^A_]
+UAWAVAUATSE
+[A\A]A^A_]
+UAWAVAUATSH
+L$$H
+;l$$
+([A\A]A^A_]
+fff.
+UAWAVAUATSH
+L$$H
+;l$$
+([A\A]A^A_]
+fff.
+UAWAVAUATSH
+L$$H
+;l$$
+([A\A]A^A_]
+UAWAVAUATSH
+L$$H
+;l$$
+([A\A]A^A_]
+UAWAVAUATSH
+L$$H
+;l$$
+([A\A]A^A_]
+UAWAVAUATSH
+L$$H
+;l$$
+([A\A]A^A_]
+UAWAVAUATSH
+L$4H
+t$(H
+|$ 1
+|$ f
+L$(f
+;l$4
+8[A\A]A^A_]
+UAWAVAUATSH
+L$4H
+t$(H
+|$ 1
+|$ f
+L$(f
+;l$4
+8[A\A]A^A_]
+UAWAVAUATSH
+L$4H
+t$(H
+|$ 1
+|$ f
+L$(f
+;l$4
+8[A\A]A^A_]
+UAWAVAUATSH
+L$4H
+t$(H
+|$ 1
+|$ f
+L$(f
+;l$4
+8[A\A]A^A_]
+UAWAVAUATSH
+L$4H
+t$(H
+|$ 1
+|$ f
+L$(f
+;l$4
+8[A\A]A^A_]
+UAWAVAUATSH
+L$4H
+t$(H
+|$ 1
+|$ f
+L$(f
+;l$4
+8[A\A]A^A_]
+UAWAVAUATSH
+L$4H
+t$(H
+|$ 1
+|$ f
+L$(f
+;l$4
+8[A\A]A^A_]
+UAWAVAUATSH
+L$4H
+t$(H
+|$ 1
+|$ f
+L$(f
+;l$4
+8[A\A]A^A_]
+UAWAVAUATSE
+[A\A]A^A_]
+UAWAVAUATSE
+[A\A]A^A_]
+ffff.
+UAWAVAUATSE
+[A\A]A^A_]
+UAWAVAUATSH
+L$ H
+x E1
+D;t$
+([A\A]A^A_]
+UAWAVAUATSH
+L$ H
+x E1
+D;t$
+([A\A]A^A_]
+UAWAVAUATSH
+L$ H
+x E1
+D;t$
+([A\A]A^A_]
+UAWAVAUATSH
+L$ H
+x E1
+D;t$
+([A\A]A^A_]
+UAWAVAUATSH
+L$ H
+x E1
+D;t$
+([A\A]A^A_]
+UAWAVAUATSH
+L$ H
+x E1
+D;t$
+([A\A]A^A_]
+UAWAVAUATSE
+[A\A]A^A_]
+UAWAVAUATSE
+[A\A]A^A_]
+UAWAVAUATSE
+[A\A]A^A_]
+UAWAVAUATSH
+L$ H
+D;d$
+([A\A]A^A_]
+UAWAVAUATSH
+L$ H
+D;d$
+([A\A]A^A_]
+UAWAVAUATSH
+L$ H
+D;d$
+([A\A]A^A_]
+UAWAVAUATSH
+L$ H
+D;d$
+([A\A]A^A_]
+UAWAVAUATSH
+L$ H
+D;d$
+([A\A]A^A_]
+UAWAVAUATSH
+L$ H
+D;d$
+([A\A]A^A_]
+fff.
+AWAVATSPI
+[A\A^A_
+UAWAVAUATSH
+fff.
+[A\A]A^A_]
+fffff.
+fffff.
+fffff.
+fffff.
+fffff.
+AWAVATSPI
+[A\A^A_
+UAWAVAUATSH
+fff.
+[A\A]A^A_]
+fffff.
+~"ff.
+ffff.
+ffff.
+ffff.
+UAWAVAUATSH
+[A\A]A^A_]
+UAWAVAUATSH
+[A\A]A^A_]
+UAWAVAUATSH
+[A\A]A^A_]
+UAWAVAUATSH
+[A\A]A^A_]
+UAWAVAUATSH
+[A\A]A^A_]
+UAWAVAUATSH
+[A\A]A^A_]
+ffff.
+UAWAVAUATSH
+[A\A]A^A_]
+UAWAVAUATSH
+[A\A]A^A_]
+UAWAVAUATSH
+[A\A]A^A_]
+UAWAVAUATSH
+[A\A]A^A_]
+UAWAVAUATSH
+[A\A]A^A_]
+UAWAVAUATSH
+[A\A]A^A_]
+~)ff.
+t9Hc
+tDHc
+ffff.
+ffff.
+fffff.
+ffff.
+fffff.
+ffff.
+fff.
+ffff.
+fff.
+UAWAVAUATSH
+ffffff.
+[A\A]A^A_]
+UAWAVAUATSH
+ffffff.
+[A\A]A^A_]
+UAWAVAUATSH
+ffffff.
+[A\A]A^A_]
+UAWAVAUATSH
+ffffff.
+[A\A]A^A_]
+UAWAVAUATSH
+ffffff.
+[A\A]A^A_]
+UAWAVAUATSH
+ffffff.
+[A\A]A^A_]
+UAWAVAUATSH
+ffffff.
+[A\A]A^A_]
+UAWAVAUATSH
+ffffff.
+[A\A]A^A_]
+UAVSE
+~<fffff.
+[A^]
+ffff.
+UAVSE
+~@fffff.
+[A^]
+ffffff.
+fff.
+~1ff.
+UAWAVAUATSH
+T$ H
+l$`D
+D$ H
+D$ H
+D$ H
+L$ H
+L$ H
+L$ H
+L$hH
+D$hH
+D$ H
+D$ H
+D$ H
+ntZA
+ouyH
+	t(A
+([A\A]A^A_]
+~<fff.
+ffffff.
+UAWAVAUATSPE
+[A\A]A^A_]
+ffffff.
+UAWAVAUATSPE
+[A\A]A^A_]
+UAWAVAUATSL
+H9|$
+]fff.
+D;l$8
+[A\A]A^A_]
+UAWAVAUATSPE
+[A\A]A^A_]
+UAWAVAUATSE
+tGffffff.
+[A\A]A^A_]
+~3fff.
+fff.
+t7D)
+UAWAVAUATSL
+fffff.
+lffffff.
+D;l$8
+[A\A]A^A_]
+UAWAVAUATSE
+tOffffff.
+[A\A]A^A_]
+fff.
+UAWAVAUATSE
+tOffffff.
+[A\A]A^A_]
+~9fff.
+UAWAVAUATSE
+tOffffff.
+[A\A]A^A_]
+fff.
+UAWAVAUATSE
+tOffffff.
+[A\A]A^A_]
+~9fff.
+UAWAVAUATSE
+tOffffff.
+[A\A]A^A_]
+fff.
+UAWAVAUATSE
+tOffffff.
+[A\A]A^A_]
+~9fff.
+UAWAVAUATSE
+tOffffff.
+[A\A]A^A_]
+fff.
+UAWAVAUATSE
+tOffffff.
+[A\A]A^A_]
+~7fff.
+UAWAVAUATSE
+tGffffff.
+[A\A]A^A_]
+fff.
+UAWAVAUATSE
+tGffffff.
+[A\A]A^A_]
+fff.
+ffffff.
+fffff.
+UAWAVAUATSL
+fffff.
+D$8A
+[A\A]A^A_]
+UAWAVAUATS
+fffff.
+~Dffffff.
+D;t$8
+ffffff.
+~Dffffff.
+D;t$8
+[A\A]A^A_]
+UAWAVAUATSH
+tLfff.
+H9D$
+t$8H
+H9D$
+H9D$
+L$@A
+L$Ht?A
+H9t$
+fffff.
+@rJA
+D;\$X
+HcD$XH
+[A\A]A^A_]
+fff.
+UAWAVAUATSH
+|$81
++T$@
++L$H
+\$@A
+@rJA
+[A\A]A^A_]
+UAWAVAUATSD
+T$8L
+fffff.
+[A\A]A^A_]
+ffffff.
+UAWAVAUATSA
+D$@A
+ffffff.
+H9|$
+T$8I
+L9\$
+L9\$
+lffff.
+D$@A
+D$8J
+D;d$X
+HcD$XH
+[A\A]A^A_]
+UAWAVAUATSH
+|$81
++T$@
++D$H
+ffff.
+@rRA
+[A\A]A^A_]
+UAWAVATSD
+D$0L
+fffff.
+[A\A^A_]
+UAWAVAUATSH
+H9D$
+t$8L
+fffff.
+H9D$
+H9D$
+L$@A
+L$HtNffffff.
+H9t$
+fffff.
+@rJA
+D;\$X
+HcD$XH
+[A\A]A^A_]
+UAWAVAUATSH
+|$81
++T$@
++L$H
+\$@A
+@rJA
+[A\A]A^A_]
+UAWAVAUATSD
+T$8L
+fffff.
+@r=A
+ffff.
+[A\A]A^A_]
+ffffff.
+UAWAVAUATSH
+t$PD
+H9|$
+Nffffff.
+fffff.
+l$@A
+l$8I
+H9\$
+H9\$
+l$@E
+D$8H
+@r=A
+;D$X
+HcD$XH
+[A\A]A^A_]
+fff.
+UAWAVAUATSH
+|$81
++T$@
++D$H
+ffff.
+@rRA
+[A\A]A^A_]
+UAWAVATSD
+D$0L
+fffff.
+[A\A^A_]
+UAWAVAUATSH
+tLfff.
+H9D$
+t$8H
+H9D$
+H9D$
+L$@A
+L$Ht?A
+H9t$
+fffff.
+@rJA
+D;\$X
+HcD$XH
+[A\A]A^A_]
+fff.
+UAWAVAUATSH
+|$81
++T$@
++L$H
+\$@A
+@rJA
+[A\A]A^A_]
+UAWAVAUATSD
+T$8L
+fffff.
+@r=A
+ffff.
+[A\A]A^A_]
+ffffff.
+UAWAVAUATSH
+t$PD
+H9|$
+Nffffff.
+fffff.
+l$@A
+l$8I
+H9\$
+H9\$
+l$@E
+D$8H
+@r=A
+;D$X
+HcD$XH
+[A\A]A^A_]
+fff.
+UAWAVAUATSH
+|$81
++T$@
++D$H
+ffff.
+@rRA
+[A\A]A^A_]
+UAWAVATSD
+D$0L
+fffff.
+[A\A^A_]
+UAWAVAUATSH
+H9D$
+t$8L
+fffff.
+H9D$
+H9D$
+L$@A
+L$HtNffffff.
+H9t$
+fffff.
+@rJA
+D;\$X
+HcD$XH
+[A\A]A^A_]
+UAWAVAUATSH
+|$81
++T$@
++L$H
+\$@A
+@rJA
+[A\A]A^A_]
+UAWAVAUATSD
+T$8L
+fffff.
+@r=A
+ffff.
+[A\A]A^A_]
+ffffff.
+UAWAVAUATSH
+t$PD
+H9|$
+Nffffff.
+fffff.
+l$@A
+l$8I
+H9\$
+H9\$
+l$@E
+D$8H
+@r=A
+;D$X
+HcD$XH
+[A\A]A^A_]
+fff.
+UAWAVAUATSH
+|$81
++T$@
++D$H
+ffff.
+@rRA
+[A\A]A^A_]
+UAWAVATSD
+D$0L
+fffff.
+[A\A^A_]
+UAWAVAUATSH
+L$XH
+t$0H
+D$(E1
+\$HH
+T$PH
+H9D$PM
+T$X)
+fffff.
+T$(H
+T$`A
+H9D$`u
+H9D$(H
+t$0u
+D$PH
+H9D$Pt*I
+T$X)
+\$8H
+D$ D+
+L$DD
+|$`A
+D$Hf
+t$0L
+\$8r
+h[A\A]A^A_]
+UAWAVAUATSH
+L$PH
+D$HH
+D$@H
+D$8H
+D$0H
+D$(H
+D$ I
+fffff.
+L$`H
+D$HD
+D$@D
+T$pH
+T$(D
+T$ D
+D$lH
+D$Pf
+L$`r
+[A\A]A^A_]
+ffff.
+UAWAVAUATSH
+L$pL
+D$hH
+t$`H
+t$PH
+d$@H
+D$`B
+D$PF
+D$HF
+L$XL
+D$8H
+D$0D
+d$@J
+D$pfD
+l$0A
+L$(A
+L$,A
+|$pfC
+l$@H
+D$`F
+D$PB
+D$ H
+D$HL
+D$,H
+|$,A
+l$@L
+\$0J
+T$8f
+ffff.
+T$8H
+D$pf
+L$ H
+t$8E
+D$pfF
+x[A\A]A^A_]
+fffff.
+UAWAVAUATSH
+L$ M
+l$(H
+L$HH
+D$8E1
+\$XH
+D$@H
+H9D$@t*H
+T$H)
+T$8H
+T$`A
+tnffff.
+H9D$`u
+H9D$8tMH
+D$0+
+L$TD
+D$Xf
+l$TA
+l$(t}H
+L$ H
+h[A\A]A^A_]
+UAWAVAUATSH
+L$@H
+D$8H
+D$0H
+D$(H
+D$ H
+\$pH
+D$8D
+D$0D
+D$`H
+L$XH
+D+l$|D
+\$pD
+|$lH
+D$@f
+L$`H
+[A\A]A^A_]
+UAWAVAUATSH
+L$@H
+t$`H
+t$PH
+d$8H
+D$`B
+D$PF
+D$HF
+D$XD
+L$0D
+L$@L
+d$8J
+T$0I
+L$(A
+\$,A
+D$0fA
+fff.
+\$8H
+D$`D
+D$ H
+D$HD
+L$0D
+l$0A
+d$@H
+\$8H
+L$ H
+l$,r
+t)fC
+h[A\A]A^A_]
+UAWAVAUATSH
+L$XH
+t$0H
+D$(E1
+\$HH
+T$PH
+H9D$PM
+T$X)
+fffff.
+T$(H
+T$`A
+H9D$`u
+H9D$(H
+t$0u
+D$PH
+H9D$Pt*I
+T$X)
+\$8H
+D$ D+
+L$DD
+|$`A
+D$Hf
+t$0L
+\$8r
+h[A\A]A^A_]
+UAWAVAUATSH
+L$PH
+D$HH
+D$@H
+D$8H
+D$0H
+D$(H
+D$ I
+fffff.
+L$`H
+D$HD
+D$@D
+T$pH
+T$(D
+T$ D
+D$lH
+D$Pf
+L$`r
+[A\A]A^A_]
+ffff.
+UAWAVAUATSH
+L$pL
+D$hH
+t$`H
+t$PH
+d$@H
+D$`B
+D$PF
+D$HF
+L$XL
+D$8H
+D$0D
+d$@J
+D$pfD
+l$0A
+L$(A
+L$,A
+|$pfC
+l$@H
+D$`F
+D$PB
+D$ H
+D$HL
+D$,H
+|$,A
+l$@L
+\$0J
+T$8f
+ffff.
+T$8H
+D$pf
+L$ H
+t$8E
+D$pfF
+x[A\A]A^A_]
+fffff.
+UAWAVAUATSH
+L$ M
+l$(H
+L$HH
+D$8E1
+\$XH
+D$@H
+H9D$@t*H
+T$H)
+T$8H
+T$`A
+tnffff.
+H9D$`u
+H9D$8tMH
+D$0+
+L$TD
+D$Xf
+l$TA
+l$(t}H
+L$ H
+h[A\A]A^A_]
+UAWAVAUATSH
+L$@H
+D$8H
+D$0H
+D$(H
+D$ H
+\$pH
+D$8D
+D$0D
+D$`H
+L$XH
+D+l$|D
+\$pD
+|$lH
+D$@f
+L$`H
+[A\A]A^A_]
+UAWAVAUATSH
+L$@H
+t$`H
+t$PH
+d$8H
+D$`B
+D$PF
+D$HF
+D$XD
+L$0D
+L$@L
+d$8J
+T$0I
+L$(A
+\$,A
+D$0fA
+fff.
+\$8H
+D$`D
+D$ H
+D$HD
+L$0D
+l$0A
+d$@H
+\$8H
+L$ H
+l$,r
+t)fC
+h[A\A]A^A_]
+UAWAVAUATSH
+L$XH
+t$0H
+D$(E1
+\$HH
+T$PH
+H9D$PM
+T$X)
+fffff.
+T$(H
+T$`A
+H9D$`u
+H9D$(H
+t$0u
+D$PH
+H9D$Pt*I
+T$X)
+\$8H
+D$ D+
+L$DD
+|$`A
+D$Hf
+l$DD
+t$0L
+\$8r
+h[A\A]A^A_]
+UAWAVAUATSH
+L$HH
+D$@H
+D$8H
+D$0H
+D$(H
+D$ H
+L$XH
+D$@D
+D$8D
+D$(D
+T$pH
+T$hH
+T$|D
+D$dH
+d$HH
+fffff.
+L$pH
+T$hD
+L$dA
+L$Xr
+[A\A]A^A_]
+ffff.
+UAWAVAUATSH
+L$pL
+D$hH
+t$`H
+t$PH
+d$@H
+D$`F
+D$PB
+D$HF
+L$XL
+D$8H
+D$(D
+t$8A
+d$@J
+D$pfD
+l$0A
+L$,A
+D$pfB
+D$`D
+D$8H
+D$0H
+D$ H
+L$XD
+D$,D
+L$8H
+T$pL
+|$@H
+L$ H
+T$(A
+D$pfD
+x[A\A]A^A_]
+UAWAVAUATSH
+D$(H
+L$HH
+t$ H
+D$8E1
+\$XH
+T$@H
+H9D$@t*H
+T$H)
+T$8H
+T$`A
+H9D$`u
+H9D$8tMH
+D$0+
+D$Xf
+t$TA
+D$(H
+t$ t4f
+h[A\A]A^A_]
+UAWAVAUATSH
+L$8H
+D$0H
+D$(H
+D$ H
+l$`H
+D$0H
+D$(D
+D$ D
+L$PH
+L$HH
+L$\D
+D+d$lD
+d$pA
+l$`H
+D$8f
+T$pH
+L$PH
+T$HD
+L$XA
+l$\A
+D$pf
+x[A\A]A^A_]
+ffffff.
+UAWAVAUATSH
+L$@H
+t$`H
+t$PH
+d$8H
+D$`B
+D$PF
+D$HF
+D$XD
+L$$D
+L$@L
+d$8J
+T$0I
+L$$A
+\$(A
+D$0fA
+ffff.
+D$`D
+D$0H
+D$(H
+D$XD
+L$8D
+L$0H
+t$8H
+D$@f
+T$8H
+T$$A
+D$8f
+h[A\A]A^A_]
+UAWAVAUATSH
+L$XH
+t$0H
+D$(E1
+\$HH
+T$PH
+H9D$PM
+T$X)
+fffff.
+T$(H
+T$`A
+H9D$`u
+H9D$(H
+t$0u
+D$PH
+H9D$Pt*I
+T$X)
+\$8H
+D$ D+
+L$DD
+|$`A
+D$Hf
+l$DD
+t$0L
+\$8r
+h[A\A]A^A_]
+UAWAVAUATSH
+L$HH
+D$@H
+D$8H
+D$0H
+D$(H
+D$ H
+L$XH
+D$@D
+D$8D
+D$(D
+T$pH
+T$hH
+T$|D
+D$dH
+d$HH
+fffff.
+L$pH
+T$hD
+L$dA
+L$Xr
+[A\A]A^A_]
+ffff.
+UAWAVAUATSH
+L$pL
+D$hH
+t$`H
+t$PH
+d$@H
+D$`F
+D$PB
+D$HF
+L$XL
+D$8H
+D$(D
+t$8A
+d$@J
+D$pfD
+l$0A
+L$,A
+D$pfB
+D$`D
+D$8H
+D$0H
+D$ H
+L$XD
+D$,D
+L$8H
+T$pL
+|$@H
+L$ H
+T$(A
+D$pfD
+x[A\A]A^A_]
+UAWAVAUATSH
+D$(H
+L$HH
+t$ H
+D$8E1
+\$XH
+T$@H
+H9D$@t*H
+T$H)
+T$8H
+T$`A
+H9D$`u
+H9D$8tMH
+D$0+
+D$Xf
+t$TA
+D$(H
+t$ t4f
+h[A\A]A^A_]
+UAWAVAUATSH
+L$8H
+D$0H
+D$(H
+D$ H
+l$`H
+D$0H
+D$(D
+D$ D
+L$PH
+L$HH
+L$\D
+D+d$lD
+d$pA
+l$`H
+D$8f
+T$pH
+L$PH
+T$HD
+L$XA
+l$\A
+D$pf
+x[A\A]A^A_]
+ffffff.
+UAWAVAUATSH
+L$@H
+t$`H
+t$PH
+d$8H
+D$`B
+D$PF
+D$HF
+D$XD
+L$$D
+L$@L
+d$8J
+T$0I
+L$$A
+\$(A
+D$0fA
+ffff.
+D$`D
+D$0H
+D$(H
+D$XD
+L$8D
+L$0H
+t$8H
+D$@f
+T$8H
+T$$A
+D$8f
+h[A\A]A^A_]
+UAWAVAUATSA
+D$@A
+ffffff.
+H9|$
+T$8I
+L9\$
+L9\$
+lffff.
+D$@A
+D$8J
+D;d$X
+HcD$XH
+[A\A]A^A_]
+UAWAVAUATSH
+|$81
++T$@
++D$H
+ffff.
+@rRA
+[A\A]A^A_]
+UAWAVATSD
+D$0L
+[A\A^A_]
+fff.
+UAWAVAUATSH
+t$PD
+H9|$
+Nffffff.
+fffff.
+l$@A
+l$8I
+H9\$
+H9\$
+l$@E
+D$8H
+@r=A
+;D$X
+HcD$XH
+[A\A]A^A_]
+UAWAVAUATSH
+|$81
++T$@
++D$H
+ffff.
+@rRA
+[A\A]A^A_]
+UAWAVATSD
+D$0L
+[A\A^A_]
+fff.
+UAWAVAUATSH
+L$ L
+D$(H
+L$HH
+D$8E1
+T$@H
+H9D$@t*H
+T$H)
+d$XA
+T$8H
+T$`A
+tlff.
+H9D$`u
+H9D$8tMH
+D$0+
+L$TD
+l$TA
+D$(tiH
+L$ r
+h[A\A]A^A_]
+ffff.
+UAWAVAUATSH
+D$0H
+D$(H
+D$ H
+t$@H
+\$hH
+D$0D
+D$(D
+D$XH
+L$PH
+D+l$pD
+l$tA
+D$hf
+L$XH
+l$dr
+t$@r
+x[A\A]A^A_]
+fffff.
+UAWAVAUATSH
+t$XH
+t$HH
+ffffff.
+L$(L
+t$`H
+D$XD
+D$HD
+D$@D
+L$<D
+d$<A
+D$`fD
+L$4A
+L$8A
+L$(r
+ffffff.
+t$`H
+D$XD
+D$(H
+D$ H
+D$PD
+L$<D
+d$<A
+D$`fD
+L$(H
+h[A\A]A^A_]
+UAWAVAUATSH
+L$(L
+D$ H
+L$HH
+D$8E1
+T$@H
+H9D$@t*H
+T$H)
+d$XA
+T$8H
+T$`A
+tlff.
+H9D$`u
+H9D$8tMH
+D$0+
+t$TA
+L$(L
+D$ H
+h[A\A]A^A_]
+ffff.
+UAWAVAUATSH
+D$8H
+D$0H
+D$(H
+D$ H
+t$HH
+\$hH
+D$0D
+D$(D
+D$ D
+L$XH
+L$PH
+L$dD
+D+d$pD
+d$tA
+D$hf
+L$XH
+T$PD
+t$dA
+t$Hr
+x[A\A]A^A_]
+UAWAVAUATSH
+t$XH
+t$HH
+ffffff.
+L$ L
+d$`H
+D$HD
+D$@D
+D$PD
+L$,D
+d$`A
+L$,A
+\$0A
+L$ r
+d$`H
+D$XD
+D$8H
+D$0H
+D$ H
+D$PD
+L$,D
+L$8H
+d$`A
+L$ H
+T$,A
+h[A\A]A^A_]
+fff.
+UAWAVAUATSH
+L$ L
+D$(H
+L$HH
+D$8E1
+T$@H
+H9D$@t*H
+T$H)
+d$XA
+T$8H
+T$`A
+tlff.
+H9D$`u
+H9D$8tMH
+D$0+
+L$TD
+l$TA
+D$(tiH
+L$ r
+h[A\A]A^A_]
+ffff.
+UAWAVAUATSH
+D$0H
+D$(H
+D$ H
+t$@H
+\$hH
+D$0D
+D$(D
+D$XH
+L$PH
+D+l$pD
+l$tA
+D$hf
+L$XH
+l$dr
+t$@r
+x[A\A]A^A_]
+fffff.
+UAWAVAUATSH
+t$XH
+t$HH
+ffffff.
+L$(L
+t$`H
+D$XD
+D$HD
+D$@D
+L$<D
+d$<A
+D$`fD
+L$4A
+L$8A
+L$(r
+ffffff.
+t$`H
+D$XD
+D$(H
+D$ H
+D$PD
+L$<D
+d$<A
+D$`fD
+L$(H
+h[A\A]A^A_]
+UAWAVAUATSH
+L$(L
+D$ H
+L$HH
+D$8E1
+T$@H
+H9D$@t*H
+T$H)
+d$XA
+T$8H
+T$`A
+tlff.
+H9D$`u
+H9D$8tMH
+D$0+
+t$TA
+L$(L
+D$ H
+h[A\A]A^A_]
+ffff.
+UAWAVAUATSH
+D$8H
+D$0H
+D$(H
+D$ H
+t$HH
+\$hH
+D$0D
+D$(D
+D$ D
+L$XH
+L$PH
+L$dD
+D+d$pD
+d$tA
+D$hf
+L$XH
+T$PD
+t$dA
+t$Hr
+x[A\A]A^A_]
+UAWAVAUATSH
+t$XH
+t$HH
+ffffff.
+L$ L
+d$`H
+D$HD
+D$@D
+D$PD
+L$,D
+d$`A
+L$,A
+\$0A
+L$ r
+d$`H
+D$XD
+D$8H
+D$0H
+D$ H
+D$PD
+L$,D
+L$8H
+d$`A
+L$ H
+T$,A
+h[A\A]A^A_]
+fff.
+UAWAVAUATSH
+l$hH
+$t9H
+d$`M
+L$ A
+L$ H
+H9\$
+H9\$
+L$hA
+L$`L
+ffff.
+fffff.
+([A\A]A^A_]
+UAWAVAUATSPL
+l$XD
+d$PD
+D$HH
+ffffff.
+[A\A]A^A_]
+ffff.
+UAWAVAUATSM
+\$8H
+fffff.
+@r;=
+kff.
+[A\A]A^A_]
+ffff.
+UAWAVAUATSH
+l$hI
+$t9H
+d$`M
+L$ A
+L$ H
+H9\$
+H9\$
+L$hA
+L$`L
+ffff.
+([A\A]A^A_]
+UAWAVAUATSPL
+l$XD
+d$PD
+D$HH
+ffffff.
+[A\A]A^A_]
+UAWAVAUATSL
+l$8H
+@r?=
+@r;=
+ffff.
+[A\A]A^A_]
+UAWAVAUATSH
+\$hH
+T$ A
+\$ H
+H9D$
+H9D$
+qffffff.
+T$hA
+T$`H
+([A\A]A^A_]
+fff.
+UAWAVAUATSH
+T$`D
+d$XD
+D$PH
+[A\A]A^A_]
+UAWAVAUATSL
+l$8H
+ffffff.
+@r;=
+[A\A]A^A_]
+UAWAVAUATSH
+l$`H
+ffffff.
+tKfff.
+$t6D
+fffff.
+H9D$
+H9D$
+qffffff.
+T$`A
+T$XH
+D;l$x
+HcD$xH
+ [A\A]A^A_]
+UAWAVAUATSH
+T$`D
+d$XD
+D$PH
+[A\A]A^A_]
+UAWAVAUATSL
+l$8H
+ffffff.
+@r;=
+[A\A]A^A_]
+UAWAVAUATSH
+L$`H
+|$8L
+T$0M
++P(H
+D$H1
+T$XH
+H9D$Xu
+|$`)
+fffff.
+L$@1
+t$HH
+t$hA
+ffffff.
+T$pD
+T$pH
+H9D$hu
+D$hA
+H9D$Hu
+L$@H
+D$XH
+H9D$Xu
+|$`)
+T$8+
+T$(r
+Mfffff.
+fff.
+x[A\A]A^A_]
+UAWAVAUATSH
+L$HL
+L$XH
+|$(L
+L$ H
+D$@1
+D$PH
+H9|$Pu
+Efff.
+fff.
+d$<E1
+L$@H
+L$`A
+L$HL
+L9\$`u
+L9\$@u
+T$HA
+t$0H
+t$PH
+H9|$PL
+t$0u
+L$(D+
+h[A\A]A^A_]
+fffff.
+UAWAVAUATSH
+L$HL
+L$XH
+|$(L
+L$ H
+D$@1
+D$PH
+H9|$Pu
+Efff.
+fff.
+d$<E1
+L$@H
+L$`A
+L$HL
+L9\$`u
+L9\$@u
+T$HA
+t$0H
+t$PH
+H9|$PL
+t$0u
+L$(D+
+h[A\A]A^A_]
+UAWAVAUATSH
+t$pH
+T$0L
+D$pD
+D$@D
+l$8f
+l$8H
+pD$@
+\$XA
+T$0r
+D$dH
+D$pB
+D$@H
+D$8H
+D$hF
+L$xD
+D$ D
+pD$ 
+L$@H
+T$0A
+d$XD
+~L$Xf
+D$dH
+[A\A]A^A_]
+UAWAVAUATSH
+D$@H
+D$8H
+D$0H
+D$(H
+D$ H
+D$XL
+D$@L
+L$8D
+D$0D
+D$(D
+t$`f
+t$`H
+|$tL
+t$pA
+T$lH
+;D$L
+[A\A]A^A_]
+UAWAVAUATSH
+D$0H
+L$`H
+t$8H
+D$(1
+|$hH
+L$pL
+t$81
+D$XH
+H9\$XL
+D$0t7H
+L$pD
+l$|H
+L$pA
+T$(H
+l$pM
+H9D$(u
+\$pA
+d$HD
+t$TH
+D$pL
+t$XH
+d$8tkffffff.
+H9T$Xu
+t$TL
+t$TL
+d$Hfff.
+L$HD
+\$TD
+L$hf
+L$|+L$D
+L$|H
+\$HD
+t$|A
+L$pH
+D$0H
+[A\A]A^A_]
+UAWAVAUATSH
+t$hH
+t$XH
+fff.
+L$8L
+D$|H
+D$XD
+D$PD
+L$HA
+l$@A
+L$8H
+D$L9
+l$@H
+D$hD
+D$|H
+D$0H
+D$(H
+D$`D
+l$@H
+l$Ht
+ffffff.
+L$0H
+|$ D
+D$pfA
+D$pfA
+D$L9
+[A\A]A^A_]
+fff.
+UAWAVAUATSH
+D$8H
+D$0H
+D$(H
+D$ H
+D$PL
+L$8F
+T$0B
+D$(B
+D$xH
+D$ B
+L$hH
+D$HD
+t$dA
+l$Xf
+fffff.
+t$dA
+l$XH
+L$xH
+T$dH
+L$XD
+;D$D
+[A\A]A^A_]
+UAWAVAUATSH
+L$HL
+D$8H
+L$@H
+D$(1
+\$`H
+D$h1
+T$0H
+H9T$0tBH
+L$HH
+D$hH
+|$X1
+T$(H
+l$8L
+L$htt
+H9D$pu
+D$pA
+H9D$(u
+L$hL
+D$8A
+L$pD
+L$XD
+T$pD
+L$`f
+D+|$TE
+l$XA
+\$`A
+D$hH
+x[A\A]A^A_]
+UAWAVAUATSH
+t$pH
+T$0L
+D$pD
+D$@D
+l$8f
+l$8H
+pD$@
+\$XA
+T$0r
+D$dH
+D$pB
+D$@H
+D$8H
+D$hF
+L$xD
+D$ D
+pD$ 
+L$@H
+T$0A
+d$XD
+~L$Xf
+D$dH
+[A\A]A^A_]
+UAWAVAUATSH
+D$@H
+D$8H
+D$0H
+D$(H
+D$ H
+D$XL
+D$@L
+L$8D
+D$0D
+D$(D
+t$`f
+t$`H
+|$tL
+t$pA
+T$lH
+;D$L
+[A\A]A^A_]
+UAWAVAUATSH
+D$0H
+L$`H
+t$8H
+D$(1
+|$hH
+L$pL
+t$81
+D$XH
+H9\$XL
+D$0t7H
+L$pD
+l$|H
+L$pA
+T$(H
+l$pM
+H9D$(u
+\$pA
+d$HD
+t$TH
+D$pL
+t$XH
+d$8tkffffff.
+H9T$Xu
+t$TL
+t$TL
+d$Hfff.
+L$HD
+\$TD
+L$hf
+L$|+L$D
+L$|H
+\$HD
+t$|A
+L$pH
+D$0H
+[A\A]A^A_]
+UAWAVAUATSH
+t$hH
+t$XH
+fff.
+L$8L
+D$|H
+D$XD
+D$PD
+L$HA
+l$@A
+L$8H
+D$L9
+l$@H
+D$hD
+D$|H
+D$0H
+D$(H
+D$`D
+l$@H
+l$Ht
+ffffff.
+L$0H
+|$ D
+D$pfA
+D$pfA
+D$L9
+[A\A]A^A_]
+fff.
+UAWAVAUATSH
+D$8H
+D$0H
+D$(H
+D$ H
+D$PL
+L$8F
+T$0B
+D$(B
+D$xH
+D$ B
+L$hH
+D$HD
+t$dA
+l$Xf
+fffff.
+t$dA
+l$XH
+L$xH
+T$dH
+L$XD
+;D$D
+[A\A]A^A_]
+UAWAVAUATSH
+L$HL
+D$8H
+L$@H
+D$(1
+\$`H
+D$h1
+T$0H
+H9T$0tBH
+L$HH
+D$hH
+|$X1
+T$(H
+l$8L
+L$htt
+H9D$pu
+D$pA
+H9D$(u
+L$hL
+D$8A
+L$pD
+L$XD
+T$pD
+L$`f
+D+|$TE
+l$XA
+\$`A
+D$hH
+x[A\A]A^A_]
+UAWAVAUATSH
+t$pH
+T$0L
+D$hD
+D$XD
+l$8f
+l$8H
+pD$@
+T$0r
+D$dH
+D$pF
+D$hB
+D$8H
+D$0H
+L$xD
+D$XD
+pD$ 
+L$8H
+d$XE
+~L$Xf
+D$dH
+[A\A]A^A_]
+UAWAVAUATSH
+D$HH
+D$@H
+D$8H
+D$0H
+D$(H
+D$ I
+D$`L
+D$HF
+L$@B
+D$8B
+D$0F
+D$(F
+D$ F
+T$xD
+t$tA
+|$hf
+t$tA
+|$hH
+T$xD
+;D$T
+[A\A]A^A_]
+UAWAVAUATSH
+D$0H
+L$XH
+t$8H
+D$(1
+|$`H
+L$hL
+|$81
+D$PH
+H9\$PL
+D$0t7H
+L$hD
+l$tH
+L$hA
+T$(H
+l$hM
+H9D$(u
+\$hA
+t$HH
+D$hL
+t$PH
+T$8tg
+H9T$xu
+T$xA
+H9T$Pu
+L$HD
+\$xD
+L$`f
+L$t+L$D
+L$tH
+d$tA
+L$hH
+D$0H
+[A\A]A^A_]
+UAWAVAUATSH
+t$hH
+t$XH
+fff.
+L$8L
+D$|H
+D$XD
+D$PD
+L$@D
+L$HA
+l$@A
+L$8H
+D$L9
+l$@H
+D$hF
+D$|H
+D$XB
+D$0H
+D$ H
+D$`D
+L$(D
+l$@K
+L$0H
+D$pfA
+D$pfA
+D$L9
+[A\A]A^A_]
+UAWAVAUATSH
+D$0H
+D$(H
+D$ H
+D$HL
+L$0F
+T$(B
+L$pB
+D$ L
+L$`H
+t$\A
+l$Pf
+t$\A
+l$PH
+T$`F
+L$lA
+L$PD
+;D$<
+[A\A]A^A_]
+UAWAVAUATSH
+L$HL
+D$PH
+L$@H
+D$01
+l$XL
+\$`1
+T$8H
+H9T$8L
+L$Hu	H
+\$`H
+D$PL
+l$XL
+l$XH
+\$`A
+T$0H
+T$hA
+L$`tqfff.
+L$tD
+T$tH
+H9D$hu
+H9D$0u
+\$`A
+L$tD
+L$hD
+L$Xf
+l$hD
+\$tL
+l$XA
+t6fA
+\$`H
+;\$$L
+L$HL
+x[A\A]A^A_]
+UAWAVAUATSH
+t$pH
+T$0L
+D$hD
+D$XD
+l$8f
+l$8H
+pD$@
+T$0r
+D$dH
+D$pF
+D$hB
+D$8H
+D$0H
+L$xD
+D$XD
+pD$ 
+L$8H
+d$XE
+~L$Xf
+D$dH
+[A\A]A^A_]
+UAWAVAUATSH
+D$HH
+D$@H
+D$8H
+D$0H
+D$(H
+D$ I
+D$`L
+D$HF
+L$@B
+D$8B
+D$0F
+D$(F
+D$ F
+T$xD
+t$tA
+|$hf
+t$tA
+|$hH
+T$xD
+;D$T
+[A\A]A^A_]
+UAWAVAUATSH
+D$0H
+L$XH
+t$8H
+D$(1
+|$`H
+L$hL
+|$81
+D$PH
+H9\$PL
+D$0t7H
+L$hD
+l$tH
+L$hA
+T$(H
+l$hM
+H9D$(u
+\$hA
+t$HH
+D$hL
+t$PH
+T$8tg
+H9T$xu
+T$xA
+H9T$Pu
+L$HD
+\$xD
+L$`f
+L$t+L$D
+L$tH
+d$tA
+L$hH
+D$0H
+[A\A]A^A_]
+UAWAVAUATSH
+t$hH
+t$XH
+fff.
+L$8L
+D$|H
+D$XD
+D$PD
+L$@D
+L$HA
+l$@A
+L$8H
+D$L9
+l$@H
+D$hF
+D$|H
+D$XB
+D$0H
+D$ H
+D$`D
+L$(D
+l$@K
+L$0H
+D$pfA
+D$pfA
+D$L9
+[A\A]A^A_]
+UAWAVAUATSH
+D$0H
+D$(H
+D$ H
+D$HL
+L$0F
+T$(B
+L$pB
+D$ L
+L$`H
+t$\A
+l$Pf
+t$\A
+l$PH
+T$`F
+L$lA
+L$PD
+;D$<
+[A\A]A^A_]
+UAWAVAUATSH
+L$HL
+D$PH
+L$@H
+D$01
+l$XL
+\$`1
+T$8H
+H9T$8L
+L$Hu	H
+\$`H
+D$PL
+l$XL
+l$XH
+\$`A
+T$0H
+T$hA
+L$`tqfff.
+L$tD
+T$tH
+H9D$hu
+H9D$0u
+\$`A
+L$tD
+L$hD
+L$Xf
+l$hD
+\$tL
+l$XA
+t6fA
+\$`H
+;\$$L
+L$HL
+x[A\A]A^A_]
+UAWAVAUATSH
+t$`H
+t$PH
+L$ L
+d$pH
+D$lH
+D$HD
+D$XD
+l$(f
+l$(H
+L$pf
+L$8A
+|$0D
+d$pD
+L$ r
+D$DH
+d$pH
+D$`D
+D$lH
+D$8H
+D$0H
+D$XD
+L$pf
+L$8H
+\$@A
+D$DH
+x[A\A]A^A_]
+fffff.
+UAWAVAUATSH
+D$8H
+D$0H
+D$(H
+D$ H
+|$PL
+L$8D
+D$xH
+L$hH
+D$HD
+|$Xf
+|$XfA
+L$xH
+T$dH
+L$XD
+|$Pr
+;|$D
+[A\A]A^A_]
+UAWAVAUATSH
+L$HL
+L$@H
+D$01
+|$`H
+\$h1
+T$8H
+H9T$8u
+L$HH
+l$X1
+T$0H
+L$httffff.
+H9D$pu
+D$pA
+H9D$0u
+iffffff.
+l$Xf
+D$hA
+D$(D
+L$XD
+|$pE
+L$`f
+D+l$TE
+|$XA
+|$`A
+L$HH
+\$hr
+;\$$
+x[A\A]A^A_]
+UAWAVAUATSH
+t$`H
+t$PH
+L$ L
+d$pH
+D$lH
+D$HD
+D$XD
+l$(f
+l$(H
+L$pf
+L$8A
+|$0D
+d$pD
+L$ r
+D$DH
+d$pH
+D$`D
+D$lH
+D$8H
+D$0H
+D$XD
+L$pf
+L$8H
+\$@A
+D$DH
+x[A\A]A^A_]
+fffff.
+UAWAVAUATSH
+D$8H
+D$0H
+D$(H
+D$ H
+|$PL
+L$8D
+D$xH
+L$hH
+D$HD
+|$Xf
+|$XfA
+L$xH
+T$dH
+L$XD
+|$Pr
+;|$D
+[A\A]A^A_]
+UAWAVAUATSH
+L$HL
+L$@H
+D$01
+|$`H
+\$h1
+T$8H
+H9T$8u
+L$HH
+l$X1
+T$0H
+L$httffff.
+H9D$pu
+D$pA
+H9D$0u
+iffffff.
+l$Xf
+D$hA
+D$(D
+L$XD
+|$pE
+L$`f
+D+l$TE
+|$XA
+|$`A
+L$HH
+\$hr
+;\$$
+x[A\A]A^A_]
+UAWAVAUATSH
+t$`H
+t$PH
+L$ L
+d$pH
+D$lH
+D$PD
+D$XD
+L$0D
+l$(f
+l$(H
+L$pf
+|$0E
+d$pD
+L$ r
+D$DH
+d$pH
+D$`D
+D$lH
+D$0H
+D$ H
+D$XD
+L$(D
+L$pf
+L$0H
+\$@A
+D$DH
+x[A\A]A^A_]
+fffff.
+UAWAVAUATSH
+D$0H
+D$(H
+D$ H
+|$HL
+L$0D
+D$ D
+L$`H
+|$\H
+l$Pf
+fffff.
+|$\H
+l$PfA
+|$pA
+L$`F
+L$lA
+L$PD
+|$Hr
+;|$<
+[A\A]A^A_]
+UAWAVAUATSH
+L$@L
+D$HH
+L$8H
+D$(1
+t$XH
+\$`1
+T$0H
+H9T$0L
+L$@u	H
+\$`H
+D$HH
+\$`A
+T$(H
+T$hA
+L$`tkf
+L$pD
+T$pH
+H9D$hu
+H9D$(u
+\$`A
+L$hD
+L$pD
+t$Tf
+t$TH
+L$Xf
+|$TD
+\$XD
+l$hA
+L$@L
+D$HH
+\$`r
+x[A\A]A^A_]
+UAWAVAUATSH
+t$`H
+t$PH
+L$ L
+d$pH
+D$lH
+D$PD
+D$XD
+L$0D
+l$(f
+l$(H
+L$pf
+|$0E
+d$pD
+L$ r
+D$DH
+d$pH
+D$`D
+D$lH
+D$0H
+D$ H
+D$XD
+L$(D
+L$pf
+L$0H
+\$@A
+D$DH
+x[A\A]A^A_]
+fffff.
+UAWAVAUATSH
+D$0H
+D$(H
+D$ H
+|$HL
+L$0D
+D$ D
+L$`H
+|$\H
+l$Pf
+fffff.
+|$\H
+l$PfA
+|$pA
+L$`F
+L$lA
+L$PD
+|$Hr
+;|$<
+[A\A]A^A_]
+UAWAVAUATSH
+L$@L
+D$HH
+L$8H
+D$(1
+t$XH
+\$`1
+T$0H
+H9T$0L
+L$@u	H
+\$`H
+D$HH
+\$`A
+T$(H
+T$hA
+L$`tkf
+L$pD
+T$pH
+H9D$hu
+H9D$(u
+\$`A
+L$hD
+L$pD
+t$Tf
+t$TH
+L$Xf
+|$TD
+\$XD
+l$hA
+L$@L
+D$HH
+\$`r
+x[A\A]A^A_]
+UAWAVAUATSD
+d$8L
+[A\A]A^A_]
+ffffff.
+UAWAVAUATSL
+L$@H
++D$H
+[A\A]A^A_]
+UAWAVAUATSL
+D$@L
+tsff.
+H9l$
+H9l$
+\$Hu
+T$8L
+H9|$
+H9|$
+T$@A
+fff.
+\$HE1
+tif.
+H9l$
+fffff.
+ffff.
+T$8H
+|$PF
+D;D$
+[A\A]A^A_]
+UAWAVATSD
+D$0L
+[A\A^A_]
+fffff.
+UAWAVAUATSI
+T$HD
+|$@L
+[A\A]A^A_]
+UAWAVAUATSM
+L$@L
+t$8H
+tof.
+L9d$
+L9d$
+t$8L
+ffffff.
+H9D$
+H9D$
+L$@A
+ffffff.
+\$PB
+D;T$
+[A\A]A^A_]
+UAWAVAUATSD
+d$8H
+ffff.
+[A\A]A^A_]
+fff.
+UAWAVAUATSL
+L$@H
++D$H
+[A\A]A^A_]
+UAWAVAUATSL
+D$@L
+tsff.
+H9l$
+H9l$
+\$Hu
+T$8L
+H9|$
+H9|$
+T$@A
+fff.
+\$HE1
+tif.
+H9l$
+fffff.
+ffff.
+T$8H
+|$PF
+D;D$
+[A\A]A^A_]
+ffffff.
+UAWAVATSD
+D$0L
+[A\A^A_]
+fffff.
+UAWAVAUATSI
+T$HD
+|$@L
+[A\A]A^A_]
+UAWAVAUATSM
+L$@L
+t$8H
+tof.
+L9d$
+L9d$
+t$8L
+ffffff.
+H9D$
+H9D$
+L$@A
+ffffff.
+\$PB
+D;T$
+[A\A]A^A_]
+UAWAVAUATSH
+D$8L
+[A\A]A^A_]
+fff.
+UAWAVAUATSL
+|$@H
++D$H
+T$HD
+[A\A]A^A_]
+UAWAVAUATSL
+L$@H
+H9\$
+H9\$
+t$8t|fff.
+H9D$
+H9D$
+L$@A
+fff.
+l$PH
+D;|$
+[A\A]A^A_]
+UAWAVAUATSH
+D$8L
+[A\A]A^A_]
+fff.
+UAWAVAUATSI
+l$@H
++D$H
+[A\A]A^A_]
+ffff.
+UAWAVAUATSL
+L$@H
+H9\$
+H9\$
+t$8t|fff.
+H9D$
+H9D$
+L$@A
+fff.
+l$PH
+D;|$
+[A\A]A^A_]
+UAWAVAUATS
+\$HD
+D$8L
+,)Ic
+[A\A]A^A_]
+fffff.
+UAWAVAUATSI
+L$PD
+\$HD
+T$@L
+[A\A]A^A_]
+ffffff.
+UAWAVAUATSH
+D$xD
+fff.
+tifff.
+H9\$
+H9\$
+ffff.
+t$PM
+H9D$
+Zff.
+L$X)
+</Hc
+</Hc
+L$hH
+<!Hc
+,!Hc
+<HfB
+D;|$
+[A\A]A^A_]
+UAWAVAUATS
+\$HD
+D$8L
+[A\A]A^A_]
+UAWAVAUATSI
+L$PD
+|$HH
++D$@
+D$@D
+47Hc
+[A\A]A^A_]
+UAWAVAUATSPL
+l$HL
+H9,$u
+H9l$
+Uff.
+l$@H
+H9L$
+H9L$
+<&Hc
+<!Hc
+<xfA
+\$XH
+<9Hc
+<>Hc
+[A\A]A^A_]
+fffff.
+UAWAVAUATS
+\$HD
+D$8L
+[A\A]A^A_]
+UAWAVAUATSI
+L$PD
+|$HH
++D$@
+D$@D
+47Hc
+[A\A]A^A_]
+UAWAVAUATSPL
+l$HL
+H9,$u
+H9l$
+Uff.
+l$@H
+H9L$
+H9L$
+<&Hc
+<!Hc
+<xfA
+\$XH
+<9Hc
+<>Hc
+[A\A]A^A_]
+fffff.
+UAWAVAUATSH
+\$HD
+d$8L
+[A\A]A^A_]
+UAWAVAUATSH
+D$PD
+D$HH
++T$@
+|$@D
+[A\A]A^A_]
+UAWAVAUATSL
+H9\$
+H9\$
+Vffff.
+fffff.
+|$8M
+H9L$
+H9L$
+D$@A
+L$PB
+D;|$
+[A\A]A^A_]
+UAWAVAUATSH
+l$HD
+d$8L
+[A\A]A^A_]
+UAWAVAUATSI
+D$PH
++L$@
++D$H
+D$@D
+[A\A]A^A_]
+fffff.
+UAWAVAUATSL
+H9\$
+H9\$
+Vffff.
+fffff.
+T$8M
+H9L$
+H9L$
+D$@A
+[A\A]A^A_]
+ffff.
+UAWAVAUATSL
+\$HD
+d$8L
+ffffff.
+[A\A]A^A_]
+UAWAVAUATSI
+T$8A
+D$PD
+D$HH
++T$@
+|$@D
+[A\A]A^A_]
+ffffff.
+UAWAVAUATSL
+H9\$
+H9\$
+|$8M
+t{f.
+H9L$
+H9L$
+D$@A
+[A\A]A^A_]
+fffff.
+UAWAVAUATS
+l$HD
+[A\A]A^A_]
+UAWAVAUATSH
+l$PD
+\$8L
+ffffff.
+L$8)
+fff.
+[A\A]A^A_]
+UAWAVAUATSA
+L$PH
+tjfff.
+Nff.
+D;T$X
+[A\A]A^A_]
+ffffff.
+UAWAVAUATS
+l$HD
+[A\A]A^A_]
+UAWAVAUATSH
+l$PD
+\$8L
+ffffff.
+L$8)
+[A\A]A^A_]
+UAWAVAUATSA
+L$PH
+tjfff.
+Nff.
+D;T$X
+[A\A]A^A_]
+UAWAVAUATSD
+t$8L
+fff.
+fff.
+[A\A]A^A_]
+UAWAVAUATS
+|$HD
+d$@L
+[A\A]A^A_]
+UAWAVAUATSL
+L$@L
+t$8H
+ttffff.
+H9D$
+H9D$
+Vffff.
+H9D$
+H9D$
+[ff.
+L$PH
+D;L$
+[A\A]A^A_]
+UAWAVAUATSD
+t$8L
+fff.
+fff.
+[A\A]A^A_]
+UAWAVAUATS
+|$HD
+d$@L
+[A\A]A^A_]
+UAWAVAUATSL
+L$@L
+t$8H
+ttffff.
+H9D$
+H9D$
+Vffff.
+H9D$
+H9D$
+[ff.
+L$PH
+D;L$
+[A\A]A^A_]
+UAWAVAUATSD
+t$8L
+fff.
+[A\A]A^A_]
+fff.
+UAWAVAUATS
+|$HD
+d$@L
+[A\A]A^A_]
+fffff.
+UAWAVAUATSL
+L$@L
+t$8H
+ttffff.
+H9D$
+H9D$
+Vffff.
+H9D$
+H9D$
+[ff.
+L$PH
+D;L$
+[A\A]A^A_]
+UAWAVSE1
+|$(1
+D$0L
+fffff.
+[A^A_]
+UAWAVAUATSI
+l$PL
+t$HD
+tGffff.
+l$Xr
+l$XM
+ffff.
+l$Pf
+[A\A]A^A_]
+UAWAVAUATSPM
+fff.
+;l$@
+[A\A]A^A_]
+ffffff.
+UAWAVAUATSH
++D$h
+D$$1
+ffff.
+D$$H
+|$hA
+L$$H
+;\$`
+([A\A]A^A_]
+UAWAVAUATSH
+t$hL
+tAff.
+H9|$
+H9|$
+D;l$p
+[A\A]A^A_]
+ffff.
+UAWAVAUATSPM
+fff.
+;l$@
+[A\A]A^A_]
+ffffff.
+UAWAVAUATSH
++D$h
+D$$1
+ffff.
+D$$H
+|$hA
+L$$H
+;\$`
+([A\A]A^A_]
+UAWAVAUATSH
+t$hL
+tAff.
+H9|$
+H9|$
+D;l$p
+[A\A]A^A_]
+ffff.
+UAWAVAUATSL
+L$@H
+H9\$
+|$@)
+t$8t@
+H9\$
+L$8H
+|$@)
+L$Ht=
+L$HH
+|$Hr
+|$Pf
+D;|$X
+[A\A]A^A_]
+UAWAVAUATSL
+D$PD
+Hcl$8HcL$HH
+HcL$@H
+fffff.
+</Hc
+[A\A]A^A_]
+ffffff.
+ffffff.
+Xffffff.
+Tffffff.
+fff.
+Xffffff.
+Tffffff.
+ffff.
+ffffff.
+ffff.
+ffff.
+||Hc
+fffff.
+ffffff.
+Tffffff.
+Xffffff.
+Sffffff.
+Wffffff.
+fffff.
+~?Lc
+fff.
+~?Lc
+fff.
+~-Hc
+fffff.
+~>Lc
+ffff.
+~>Lc
+ffff.
+~)Hc
+~@Lc
+~@Lc
+ffffff.
+ffffff.
+~=Lc
+fffff.
+~=Lc
+fffff.
+UAWAVAUATSE
+Lct$@LcT$8Lc\$HE1
+[A\A]A^A_]
+UAWAVAUATSE
+Lct$@LcT$8Lc\$HE1
+[A\A]A^A_]
+UAWAVAUATSE
+Lct$@LcT$8Lc\$HE1
+[A\A]A^A_]
+UAWAVAUATSE
+Lct$@LcT$8Lc\$HE1
+[A\A]A^A_]
+UAWAVAUATSD
+Hc\$8Lc\$HLcT$@O
+ffffff.
+D;d$
+[A\A]A^A_]
+UAWAVAUATSE
+4[A\A]A^A_]
+UAWAVATSE
+~XLcT$8Mc
+Lc\$0A
+[A\A^A_]
+UAWAVATSE
+~VMc
+LcT$0Lc\$8A
+[A\A^A_]
+UAWAVAUATSE
+D$8E
+\$HHc
+\$PD
+t$@|fE1
+[A\A]A^A_]
+UAWAVAUATSD
+fffff.
+D$8H
+l$PHc
+l$@A
+T$HMc
+ffff.
+D;L$
+[A\A]A^A_]
+UAWAVAUATSD
+Lct$H
+HcD$@H
+HcD$8H
+D;T$
+[A\A]A^A_]
+UAWAVAUATSD
+HcD$HH
+Lcl$@D
+HcD$8H
+D;T$
+[A\A]A^A_]
+fffff.
+UAWAVAUATSD
+Lc|$H
+HcD$@H
+HcD$8H
+D;T$
+[A\A]A^A_]
+UAWAVAUATSD
+HcD$HH
+Lcd$@D
+HcD$8H
+fff.
+D;T$
+[A\A]A^A_]
+D)G D
+O|D)
+O<D)G@
+O\)G`1
+UAWAVSH
+D$pL
+l$@D
+D$8D
+D$<E
+l$(D
+L$,E1
+fff.
+fff.
+gfff.
+H;D$@u
+H[A^A_]
+UAWAVAUATSH
+D$/H
+D$HH
+L$0H
+D$8H
+T$@D
+\$0D
+Lch(1
+D$HA
+L$@L
+d$0A
+|$8A
+L$XD
+fff.
+L$@Hc
+t$PD
+d$TD
+t$\Li
+D5(H
+\$ K
+D$@A
+|$ H
+|$PD
+d$TD
+|$\Li
+D5(H
+\$ K
+D$@H
+D$HA
+L$@J
+l;(A
+|$8I
+L$XD
+t$\Hil$ 
+D+(H
+d$.t\H
+t=Ic
+H;D$`u
+h[A\A]A^A_]
+ffff.
+UAWAVAUATSH
+D6 H
+[A\A]A^A_]
+UAWAVAUATSPI
+fff.
+[A\A]A^A_]
+UAWAVSPI
+Mcw8M
+(Icw
+HIcw8H
+hIcwXH
+IcwxH
+[A^A_]
+USPH
+~$Gf
+ffff.
+fff.
+o%W#
+o-_#
+ffffff.
+~4Gf
+o%R"
+o5I"
+~,Ff
+ffffff.
+fff.
+fffff.
+fff.
+fffff.
+UAVSH
+[A^]
+fffff.
+UAWAVAUATSH
+L$`E
+L$,I
+HcL$lH
+L$|A
+t$`H
+L&<C
+L&\C
+D&|C
+D$lH
+D&|H
+D$XK
+D$PK
+D& H
+D&<H
+D&8H
+D&\H
+D$HK
+D&`H
+D$@K
+D&@H
+D$pH
+Z D9
+D$XD
+D$HD
+u4A9
+ffff.
+}@D9
+l$pf
+}*fffff.
+L$|)
+L$|Hc
+fff.
+t$lf.
+D$|H
+fff.
+t$lf.
+D$|Hc
+D$`H
++L$|
+[A\A]A^A_]
+fffff.
+UAWAVAUATSH
+L$hH
+D$`H
+L$XH
+[A\A]A^A_]
+D$@H
+D$@H
+T$HA
+l$HL
+\$8I
+L$xH
+D$pE1
+l$ A
+t$8L
+t$8A
+D$@H
+D$@L
+D$(9
+l$(L
+t$8L
+d$HH
+L$`f
+L$`f
+D$Pf
+l$pHc
+L$pA
++\$ L
+3A;G
+D$PH
+T$`L
+l$PA
+D$@E
+D$@L
+4xfA
+D$HfA
+D$HfA
+AVSP
+UAWAVAUATSL
+T$8E
+~<Jf
+[A\A]A^A_]
+UAWAVAUATSL
+T$8E
+~<Jf
+[A\A]A^A_]
+UAWAVAUATSH
+L$ L
+ffffff.
+D$ Jc,
+~$Ff
+~4Bf
+fff.
+([A\A]A^A_]
+UAWAVAUATSH
+L$ L
+D$ Jc
+~$Hf
+fff.
+([A\A]A^A_]
+UAWAVAUATSH
+A;FH|.D
+!uAA
+Qu!A
+D$$u
+!whH
+.~ZA
+}t,A
+!ulA
+4w6H
+D$	A
+"D$	
+D"\$
+D"L$
+@"l$
+D"T$
+D"D$
+@"|$
+@"t$
+D d$
+!u A
+!u/H
+t$$@ 
+:t:D
+F\A;FT
+F`A;FX
+D$8A;D$X
+C8;CXt[A
+	u	H
+([A\A]A^A_]
+UAWAVAUATSH
+T$ H
+D$(H
+Lc#A
+D$0Hc
+D$0~*Lc
+T$ D
+8[A\A]A^A_]
+fff.
+UAWAVAUATSH
+T$ H
+D$(H
+D$4Hc
+D$4~"Lc
+T$ D
+\$4A
+8[A\A]A^A_]
+UAWAVAUATSH
+T$0H
+|$(H
+D$ L
+Lc#A
+D$@Hc
+D$@~-Lc
+T$0D
+t$8H
+t$ H
+H[A\A]A^A_]
+UAWAVAUATSH
+T$(H
+|$ H
+D$0L
+D$DHc
+D$D~.Hc
+\$Dffffff.
+T$(D
+t$8H
+t$0H
+\$DA
+H[A\A]A^A_]
+UAWAVAUATSH
+x(+}(+}$D
+XHD+]HD+]DD
+phD+uhD+udE1
+4rH9
+t(ffffff.
+D$PD
+[A\A]A^A_]
+UAWAVAUATSPL
+l$@A
+fff.
+t(fff.
+[A\A]A^A_]
+UAWAVAUATSH
+L$$H
+t$(H
+l$pL
+D$4Hc
+D$4~*Lc
+l$4ff.
+D$(H
+D$pI
+D$(H
+~<Mcv
+D$$A
+ffff.
+8[A\A]A^A_]
+UAWAVAUATSH
+d$`L
+~7Mcd$
+([A\A]A^A_]
+UAWAVATSD
+ucD 
+u^D 
+uYD 
+<w2H
+7w^H
+[A\A^A_]
+UAWAVAUATSH
+L$$H
+T$8I
+D$0H
+D$DA
+l$(D
+T$$H
+ffff.
+T$DH
+T$DH
+ffffff.
+D$8Hc
+ffff.
+T$DL
+D$8Hc
+T$0D
+H[A\A]A^A_]
+ffff.
+UAWAVAUATSH
+L$(D
+|$ H
+l$pL
+D$4Hc
+~+Lc
+d$4f.
+L$ Lcq
+L$pLci
+L$(H
+D$4Hc
+~#Lc
+L$ Lcq
+L$pLcy
+L$(H
+D$4Hc
+~$Lc
+D$(H
+D$pLcp
+D$ Lcx
+D$4H
+8[A\A]A^A_]
+UAWAVAUATSPE
+|$@H
+Lc"Lcj
+ffffff.
+fffff.
+<ff.
+fffff.
+[A\A]A^A_]
+>ffff.
+UAWAVAUATSH
+|$`L
+D$ Lc
+ffffff.
+|$ H
+fffff.
+|$ H
+fffff.
+|$ M
+([A\A]A^A_]
+~nf.
+|$ M
+UAWAVAUATSH
+L$PH
+T$(H
+t$ H
+\$XH
+|$0H
+T$@H
+t$8H
+L$HH
+|$pD
+l$tD
+t$xD
+d$|D
+t$`D
+l$dD
+|$hD
+T$PD
+|$0H
+l$8H
+\$@H
+T$HH
+D$ H
+D$ H
+L$`D
+D$TH
+[A\A]A^A_]
+UAWAVAUATSH
+D$`H
+L$hH
+|$pH
+t$xH
+|$@H
+L$HH
+D$PH
+|$@H
+|$@H
+t$ A
+|$`H
+t$0E1
+|$`H
+t$0A
+[A\A]A^A_]
+UAWAVAUATSPE
+D$@Lc@
+fff.
+[A\A]A^A_]
+UAWAVAUATSH
+T$`M
+|$ L
+D$ D
+D$ D
+([A\A]A^A_]
+UAWAVAUATSH
+T$XA
+T$`L
+D$0E
+D$@H
+D$ H
+D$(A
+D$HH
+|$PL
+L$ A
+T$@H
+T$`LcC
+l$0M
+D$(H
+D$8D
+D$@f.
+T$`H
+L$HH
+T$@M
+T$`HcC
+l$8D
+L$PH
+\$HD
+h[A\A]A^A_]
+UAWAVAUATS
+L$8B
+,^Mc
+[A\A]A^A_]
+UAWAVAUATS
+L$8B
+[A\A]A^A_]
+fffff.
+UAWAVAUATSH
+T$PE
+[A\A]A^A_]
+fff.
+UAVSH
+ [A^]
+UAVSH
+ [A^]
+fffff.
+UAWAVAUATSPD
+ffff.
+D;t$
+[A\A]A^A_]
+UAVSH
+ [A^]
+UAVSH
+ [A^]
+UAWAVAUATSH
+l$PE
+~-Mcm
+[A\A]A^A_]
+UAWAVAUATSH
+l$PE
+~-Mcm
+[A\A]A^A_]
+UAWAVSH
+l$@D
+[A^A_]
+UAWAVSH
+l$@D
+[A^A_]
+UAWAVAUATSPI
+l$@A
+ffff.
+~(H)
+[A\A]A^A_]
+ffff.
+UAWAVAUATSH
+t$xH
+l$TA
+t$P1
+t$TA
+D$xL
+D$xH
+L$HD
+L$`D
+D$XE1
+fff.
+L$pL
+\$hD
+D$XH
+L$pH
+\$hD9
+fffff.
+L$`D
+L$pA
+D$XH
+D$h1
+D$hH
+L$XI
+L$XI
+vQfA
+fff.
+H9L$h
+~-ffff.
+D$pA
+D$hD
+L$ E1
+fffff.
+L$XH
+L$pH
+\$0E
+|$hf
+D$ L
+L$XH
+\$0D9
+l$p}TH
+fff.
+D$hE1
+\$pD
+D$hL
+\$pD9
+D$hE
+D$XA
+D$01
+\$ht
+u$E1
+u3E1
+~,fff.
+l$Xf
+ffff.
+}nIc
+t-ffff.
+,?fA
+} Hc
+D$hE1
+\$pD
+D$hL
+\$pD9
+L$xJ
+}%Hc
+ffffff.
+D$hE1
+ffffff.
+\$pD
+D$hL
+\$pD9
+D$XA
+D$ E1
+L$0H
+L$XH
+t$pD
+L$ L
+L$0D9
+l$XL
+t$h}HHc
+D$pA
+D$hD
+L$ E1
+L$XH
+L$pH
+\$0E
+|$hf
+D$ L
+L$XH
+\$0D9
+l$p}PH
+fff.
+ffff.
+})Hc
+D$hA
+D$XD
+t$0H
+L$hH
+l$ D
+|$Xf
+\$pD
+t$0H
+l$ D9
+\$h}DH
+D$pA
+D$hD
+L$ E1
+L$XH
+L$pH
+\$0E
+|$hf
+D$ L
+L$XH
+\$0D9
+l$p}TH
+fff.
+}*Hc
+fff.
+}%Hc
+D$hA
+D$XD
+t$0H
+L$hH
+|$XC
+t$pD
+t$0H
+\$ D9
+l$h}PHc
+fffff.
+D$pA
+D$hD
+L$ E1
+L$XH
+L$pH
+\$0E
+|$hf
+D$ L
+L$XH
+\$0D9
+l$p}PH
+fff.
+ffff.
+}&Hc
+fff.
+D$hA
+D$XD
+fff.
+t$0H
+L$hH
+l$ D
+|$Xf
+\$pD
+t$0H
+l$ D9
+\$h}DH
+[A\A]A^A_]
+fff.
+fff.
+fff.
+~3fff.
+~/E1
+fff.
+~,E1
+ffffff.
+~=E1
+fffff.
+UAWAVAUATSH
+D$(Hc
+D$ I
+D$(B
+D$4C
+D$8C
+t$ B
+L$5B
+D$;C
+D$?J
+|$4I
+H;D$@u
+H[A\A]A^A_]
+UAWAVAUATSH
+d$@I
+t$PH
+T$(I
+t$8H
+|$HA
+\$PG
+D$ H
+D$0A
+HcD$xH
+HcD$pH
+D$hIc
+D$`Ic
+D$XC
+D$PI
+|$xB
+D$pB
+t$hB
+D$`B
+L$XB
+L$PB
+t$8H
+L$(I
+D$@H
+D$0I
+\$ L
+[A\A]A^A_]
+UAWAVAUATSH
+D$(Hc
+D$ I
+D$(B
+D$4C
+D$8C
+t$ B
+L$5B
+D$;C
+D$?J
+|$4I
+H;D$@u
+H[A\A]A^A_]
+UAWAVAUATSH
+l$PH
+t$`I
+L$XA
+T$8H
+T$@I
+t$`D
+D$0H
+D$()
+D$xIc
+D$pIc
+D$`I
+l$xB
+D$pB
+L$hB
+L$`B
+t$HL
+t$8H
+D$PH
+D$(L
+l$@L
+\$0H
+[A\A]A^A_]
+ffff.
+UAWAVAUATSH
+D$(Hc
+D$ I
+D$(B
+D$4C
+D$8fC
+t$ fB
+L$5B
+D$;C
+D$?J
+|$4I
+H;D$@u
+H[A\A]A^A_]
+UAWAVAUATSH
+l$PH
+t$`I
+L$XA
+T$8H
+T$@I
+L$XD
+l$`D
+D$0H
+D$(A)
+D$xIc
+D$pIc
+D$`I
+l$xfB
+D$pfB
+L$hfB
+L$`fB
+t$HL
+t$8H
+D$PH
+D$(L
+|$@L
+\$0H
+[A\A]A^A_]
+UAWAVAUATSH
+D$(Hc
+D$ I
+D$(B
+D$6C
+D$8C
+t$ B
+L$5B
+D$;C
+D$=J
+|$4I
+H;D$@u
+H[A\A]A^A_]
+UAWAVAUATSH
+d$@I
+t$PH
+T$(I
+t$8H
+|$HA
+\$PG
+D$ H
+D$0A
+HcD$xH
+HcD$pH
+D$hIc
+D$`Ic
+D$XC
+D$PI
+|$xB
+D$pB
+t$hB
+D$`B
+L$XB
+L$PB
+t$8H
+L$(I
+D$@H
+D$0I
+\$ L
+[A\A]A^A_]
+UAWAVAUATSH
+D$(Hc
+D$ I
+D$(B
+D$6C
+D$8C
+t$ B
+L$5B
+D$;C
+D$=J
+|$4I
+H;D$@u
+H[A\A]A^A_]
+UAWAVAUATSH
+l$PH
+t$`I
+L$XA
+T$8H
+T$@I
+t$`D
+D$0H
+D$()
+D$xIc
+D$pIc
+D$`I
+l$xB
+D$pB
+L$hB
+L$`B
+t$HL
+t$8H
+D$PH
+D$(L
+l$@L
+\$0H
+[A\A]A^A_]
+ffff.
+UAWAVAUATSH
+D$(Hc
+D$ I
+D$(B
+D$6C
+D$8fC
+t$ fB
+L$5B
+D$;C
+D$=J
+|$4I
+H;D$@u
+H[A\A]A^A_]
+UAWAVAUATSH
+l$PH
+t$`I
+L$XA
+T$8H
+T$@I
+L$XD
+l$`D
+D$0H
+D$(A)
+D$xIc
+D$pIc
+D$`I
+l$xfB
+D$pfB
+L$hfB
+L$`fB
+t$HL
+t$8H
+D$PH
+D$(L
+|$@L
+\$0H
+[A\A]A^A_]
+UAWAVAUATSH
+D$ I
+D$(B
+D$4C
+D$5H
+L$ B
+D$>C
+L$8C
+D$?J
+|$4I
+H;D$@u
+H[A\A]A^A_]
+UAWAVAUATSH
+|$@I
+t$PH
+D$(I
+t$8L
+L$pD
+T$PG
+D$ H
+D$xHcD$pH
+D$pIc
+t$HHc
+D$`Ic
+D$XC
+D$xB
+|$pB
+L$hB
+L$`B
+D$XB
+t$PB
+t$8H
+L$(I
+D$@H
+D$0H
+T$ L
+l$HH
+[A\A]A^A_]
+UAWAVAUATSH
+D$ I
+ffffff.
+D$(B
+D$4C
+D$5H
+L$ B
+D$>C
+L$8C
+D$?J
+|$4I
+H;D$@u
+H[A\A]A^A_]
+UAWAVAUATSH
+l$PH
+t$`I
+t$XA
+T$8H
+T$@I
+t$`D
+D$0H
+D$pIc
+D$`I
+L$xB
+L$pB
+D$hB
+l$`B
+t$HL
+t$8H
+D$PH
+D$(L
+L$@L
+\$0H
+[A\A]A^A_]
+UAWAVAUATSH
+D$ I
+ffffff.
+D$(B
+D$4C
+D$5H
+L$ B
+D$>fC
+L$8C
+D$?J
+|$4I
+H;D$@u
+H[A\A]A^A_]
+UAWAVAUATSH
+l$PH
+t$`I
+L$XA
+T$8H
+T$@I
+L$XA
+t$`D
+D$0H
+D$(A
+D$pIc
+L$xfB
+L$pfB
+D$hfB
+|$`fB
+t$HL
+t$8H
+D$PH
+D$(L
+l$@H
+l$0H
+[A\A]A^A_]
+UAWAVAUATSH
+D$ I
+D$(B
+D$6C
+D$5H
+L$ B
+D$>C
+L$8C
+D$=J
+|$4I
+H;D$@u
+H[A\A]A^A_]
+UAWAVAUATSH
+|$@I
+t$PH
+D$(I
+t$8L
+L$pD
+T$PG
+D$ H
+D$xHcD$pH
+D$pIc
+t$HHc
+D$`Ic
+D$XC
+D$xB
+|$pB
+L$hB
+L$`B
+D$XB
+t$PB
+t$8H
+L$(I
+D$@H
+D$0H
+T$ L
+l$HH
+[A\A]A^A_]
+UAWAVAUATSH
+D$ I
+ffffff.
+D$(B
+D$6C
+D$5H
+L$ B
+D$>C
+L$8C
+D$=J
+|$4I
+H;D$@u
+H[A\A]A^A_]
+UAWAVAUATSH
+l$PH
+t$`I
+t$XA
+T$8H
+T$@I
+t$`D
+D$0H
+D$pIc
+D$`I
+L$xB
+L$pB
+D$hB
+l$`B
+t$HL
+t$8H
+D$PH
+D$(L
+L$@L
+\$0H
+[A\A]A^A_]
+UAWAVAUATSH
+D$ I
+ffffff.
+D$(B
+D$6C
+D$5H
+L$ B
+D$>fC
+L$8C
+D$=J
+|$4I
+H;D$@u
+H[A\A]A^A_]
+UAWAVAUATSH
+l$PH
+t$`I
+L$XA
+T$8H
+T$@I
+L$XA
+t$`D
+D$0H
+D$(A
+D$pIc
+L$xfB
+L$pfB
+D$hfB
+|$`fB
+t$HL
+t$8H
+D$PH
+D$(L
+l$@H
+l$0H
+[A\A]A^A_]
+UAWAVATSE
+[A\A^A_]
+UAWAVAUATSH
+Hct$
+Hct$
+Hct$
+Hct$
+Hct$
+[A\A]A^A_]
+ffffff.
+UAWAVATSE
+[A\A^A_]
+UAWAVAUATSPHc
+Hct$
+Hct$
+Hct$
+Hct$
+Hct$
+Hcl$
+Hct$
+[A\A]A^A_]
+UAWAVATSE
+[A\A^A_]
+UAWAVAUATSPHc
+Hct$
+Hct$
+Hct$
+Hct$
+Hct$
+Hcl$
+Hct$
+[A\A]A^A_]
+UAWAVATSE
+fff.
+[A\A^A_]
+UAWAVAUATSH
+Hct$
+Hct$
+Hct$
+Hct$
+Hct$
+Hct$
+\*	A
+D*	H
+[A\A]A^A_]
+fffff.
+UAWAVATSE
+fff.
+[A\A^A_]
+UAWAVAUATSPHc
+Hct$
+Hct$
+Hct$
+Hct$
+Hct$
+HcD$
+Hct$
+t*	A
+[A\A]A^A_]
+ffff.
+UAWAVATSE
+fff.
+[A\A^A_]
+UAWAVAUATSPHc
+Hct$
+Hct$
+Hct$
+Hct$
+Hct$
+Hcl$
+Hct$
+[A\A]A^A_]
+UAWAVATSE
+[A\A^A_]
+UAWAVAUATSA
+Hct$
+Hct$
+Hct$
+Hct$
+Hcl$
+Hcl$
+fff.
+[A\A]A^A_]
+UAWAVATSE
+[A\A^A_]
+UAWAVAUATSA
+Hct$
+Hct$
+Hct$
+Hct$
+Hct$
+Hcl$
+[A\A]A^A_]
+UAWAVATSE
+[A\A^A_]
+UAWAVAUATSA
+Hct$
+Hct$
+Hct$
+Hct$
+Hct$
+Hcl$
+[A\A]A^A_]
+UAWAVATSE
+fff.
+[A\A^A_]
+UAWAVAUATSH
+Hct$
+Hct$
+Hct$
+Hct$
+Hc\$
+Hct$
+fffff.
+D*	H
+[A\A]A^A_]
+fff.
+UAWAVATSE
+[A\A^A_]
+UAWAVAUATSPHc
+Hct$
+Hct$
+Hct$
+Hct$
+Hct$
+HcD$
+HcD$
+[A\A]A^A_]
+fff.
+UAWAVATSE
+[A\A^A_]
+UAWAVAUATSA
+Hct$
+Hct$
+Hct$
+Hct$
+Hct$
+Hcl$
+D*	[A\A]A^A_]
+UAWAVAUATSD
+D$@E
+\$8H
+d$HE1
+fff.
+ffffff.
+ffffff.
+D;t$
+[A\A]A^A_]
+UAWAVAUATSD
+L$@D
+|$8H
+\$HE1
+ffff.
+fff.
+,CfA
+,CfA
+fffff.
+,CfA
+,CfA
+fffff.
+D;L$
+[A\A]A^A_]
+UAWAVAUATSH
+L$HD
+D$PH
+L$8H
+\$PA
+\$PA
+D$PA9
+D$HA9
+t$0H
+L$@H
+L$8H
+D$HA
+D$PA
+GHIc
+D$0H
+t$@D
+L$HD
+\$8Hc;Hck
+T$HI
+T$PIi
+t$@H
+D$HH
+D$PH
+L$@H
+ffff.
+D$(D
+t$,A
+T$$D
+D$ A
+X[A\A]A^A_]
+D$$A
+D$ A
+D$(A
+L$8D
+D$PD
+t$@D
+L$8D
+UAWAVAUATSH
+[A\A]A^A_]
+UAWAVAUATSPD
+[A\A]A^A_]
+UAWAVAUATSH
+l-QA
+_@Lc
+[A\A]A^A_]
+t$\M
+t$TH
+t$hI
+t$\H
+t$pI
+T$`H
+|$XI
+|$XI
+ t@A
+ tpI
+D$dA
+D$ H
+D$$H
+D$(H
+D$PH
+D$LH
+D$$A;D$
+A9D$$|(D
+Ic|$
+Ict$$
+L$0IcT$ H
+Icl$(
+D$8D
+D$0H
+L$x9
+D$x=
+T$xD
+t$,1
+L$,L
+\$0H
+l$(D
+D$ D
+l$hH
+\$pD
+D$PI
+|$`D
+l$8H
+L$pH
+L$0H
+l$(H
+|$PH
+D$hL
+\$0H
+|$(H
+t$ D
+\$pD
+\$8H
+L$pH
+L$0H
+|$(H
+9w!H
+D$x=
+9w,H
+ uPH
+fff.
+UAWAVAUATSPD
+[A\A]A^A_]
+D$XH
+t$HH
+AVSP
+ffffff.
+AVSPH
+UAWAVAUATSH
+\$pH
+L$Pt2I
+L$xHc
+L$`Hc
+L$XA
+|$$H
+D$(H
+H+L$`H
+4vH)
+^D$H
+YD$8f
+\$XH
+wxD9
+Hc0H
+<1Hc
+[A\A]A^A_]
+UAVSH
+L$(1
+L$(H
+\$01
+\$01
+L$(H
+\$81
+\$81
+L$(H
+L$(H
+\$@1
+\$@1
+L$(H
+\$H1
+\$H1
+L$(H
+D$(H
+\$PH
+\$PH
+L$(H
+ffffff.
+L$(H
+L$(H
+D$(H
+\$XH
+\$XH
+L$(H
+L$(H
+L$(H
+D$(H
+D$(H
+D$(H
+T$(H
+T$(H
+fffff.
+T$(H
+ffffff.
+T$(H
+T$(H
+T$(H
+T$(H
+T$(H
+D$(H
+D$(H
+D$(H
+D$(H
+D$(H
+D$(H
+`[A^]
+AWAVSH
+$ffff.
+ffffff.
+ [A^A_
+UAWAVAUATSPI
+~%A9
+[A\A]A^A_]
+ffff.
+UAWAVAUATSPA
+ffff.
+[A\A]A^A_]
+fff.
+UAWAVAUATSH
+fff.
+)L$0
+fffff.
+ffff.
+)L$ 
+fffff.
+H[A\A]A^A_]
+AVSP
+t4Hc
+tgHc
+fffff.
+UAWAVAUATSPI
+~%A9
+[A\A]A^A_]
+UAWAVAUATSPH
+ffff.
+ffffff.
+[A\A]A^A_]
+AWAVSH
+6IcV
+[A^A_
+AVSPI
+UAWAVAUATSH
+L$hH
+uH9]
+uCD9e@u=D9
+u4D9u
+D$`9E<u%9
+EpfA
+ExfA
+L$ 1
+([A\A]A^A_]
+l$pH
+D$`A
+D$hA
+T$ H
+UAWAVAUATSH
+[A\A]A^A_]
+UAWAVAUATSPA
++h|D
++N|Hc
+[A\A]A^A_]
+UAWAVAUATSH
++H<+h\
++{\Hc
+HHLc
+[A\A]A^A_]
+UAWAVAUATSH
+D$tA
+D$PI
+D$XA
+L$xE+r
+A+B<A+Z\E+H
+D$hHc
+A+j|Hc
+D$xM
+P(Ic
+u/E1
+L$xL
+d$XtnC
+wBE1
+L$xL
+T$hH
+|$8L
+T$@H
+T$HA
+D$@H
+L$8L
+T$hH
+L$`L
+D$xA
+L$4L
+D$@H
+|$8H
+T$ H
+D$xH
+D$`H
+L$hA
+[A\A]A^A_]
+UAWAVAUATSH
+|$XH
+l$8H
+|$TD
+D$PH
+D$LH
+D$0H
+D$@D
++y<D+y\D+C\+k|Lc
+Y(Lc
+IHIc
+D+q|Mc
+L$`Ic
+L$hIc
+L$pt
+D$0H
+D$@L
+T$ H
+T$`H
+|$XL
+[A\A]A^A_]
+UAWAVAUATSH
+L$ H
+l$pE)
+D$`Ic
+D$hH
+T$ H
+Q Ic
+([A\A]A^A_]
+UAWAVAUATSH
+L$HI
+l$pH
+T$(H
+L$0H
+l$hH
+D$PE1
+T$pH
+LT$hM
+D$HfB
+D$xL
+\$(H
+t$0L
+t$8H
+Lt$ 
+T$xI
+;D$D}>H
+t$XH
+D$PI
+t$XH
+t-A9
+|(Dk
+[A\A]A^A_]
+|4Hc
+HcD$
+|PHc
+oA`fE
+oIpMc
+oA@fE
+oA`fE
+oIpf
+oA@fE
+AyoA`
+AyoIp
+AyoA@
+AyoIP
+zoTF
+zodI
+Au,I
+yoLA
+zoLA
+yoLA
+zoLA
+o$HfB
+o$HfB
+o$HfB
+o$HfB
+o$HfB
+o$HfB
+o$HfB
+o$HfB
+o$HfB
+o$HfB
+Az~	
+yo$H
+ynDW
+yo$H
+ynDW
+yo$H
+ynDW
+yo$H
+ynDW
+yo$H
+ynDW
+UAWAVAUATSH
+~UIc
+HcL$PH
+Lcl$X
+[A\A]A^A_]
+UAWAVAUATSE
+HcD$@H
+HcD$8H
+ffffff.
+tSH1
+}0ffff.
+}TMc
+[A\A]A^A_]
+UAWAVAUATSH
+~UIc
+HcL$PH
+Lcl$X
+[A\A]A^A_]
+fff.
+i%*,
+i-#,
+fff.
+i%%)
+fffff.
+=fff.
+fffff.
+=fff.
+Tffff.
+9ffff.
+fffff.
+o-5!
+o=7!
+Tffff.
+9ffff.
+fffff.
+G I9
+fffff.
+>fff.
+fffff.
+>fff.
+ffff.
+tKLc
+fff.
+ffffff.
+9fff.
+ffff.
+ffffff.
+9fff.
+ffff.
+LcT$ Lc\$
+Hc\$(1
+fffff.
+H;D$
+LcT$ Lc\$
+Hc\$(1
+fffff.
+H;D$
+AWAVATSE
+LcT$(Lc\$8Lct$01
+DG A
+H;D$
+[A\A^A_
+AWAVATSE
+LcT$(Lc\$8Lct$01
+DG A
+H;D$
+[A\A^A_
+UAWAVAUATSE
+HcD$8H
+Lcd$HH
+Lc|$@1
+fff.
+H;D$
+H;D$
+[A\A]A^A_]
+UAWAVAUATSH
+Lc|$8HcD$@H
+Lct$HD
+|k8H
+ffff.
+LcL$PH
+ffff.
+|s8H
+ffff.
+[A\A]A^A_]
+ffffff.
+UAWAVAUATSD
+L$8Lc
+T$@Lc
+L$HLc
+\$PHc
+D9 B
+D: B
+D> B
+L;|$
+t$PD;T$
+[A\A]A^A_]
+UAWAVAUATSD
+LcL$HLcT$8LcD$@E1
+D;t$
+[A\A]A^A_]
+ffff.
+UAWAVAUATSD
+LcL$HLcT$8LcD$@E1
+D;t$
+[A\A]A^A_]
+fff.
+UAWAVAUATSPH
+fffff.
+<	Hc
+ffff.
+[A\A]A^A_]
+UAWAVAUATSH
+T$pH
+T$pI
+D$hI
+\$`Hc
+|$pH
+D$hH
+l$@H
+l$HL
+L$PA
+D$,H
+T$0M
+D$8Lc
+D$xH
+l$`L
+D$pH
+D$xI
+@ffff.
+D$@L
+D$pH
+t$`H
+t$0L
+L$PL
+L$8H
+l$XL
+D$hH
+t$`L
+T$pA
+[A\A]A^A_]
+UAWAVAUATSD
+Lc|$HHcl$8H
+Hcl$@H
+fffff.
+D;\$
+[A\A]A^A_]
+UAWAVAUATSD
+Lc|$HHcl$8H
+Hc\$@H
+ffffff.
+(fff.
+D;\$
+[A\A]A^A_]
+fffff.
+UAWAVAUATSD
+HcD$@H
+Lc|$8Mc
+}/fffff.
+D;D$
+[A\A]A^A_]
+UAWAVAUATSPH
+=ffffff.
+fffff.
+<	Hc
+ffff.
+[A\A]A^A_]
+fffff.
+UAWAVAUATSH
+T$pH
+T$pI
+D$hI
+\$`Hc
+|$pH
+D$hH
+l$@H
+l$HL
+L$PA
+D$,H
+T$0M
+D$8Lc
+D$xH
+l$`L
+D$pH
+D$xI
+@ffff.
+D$@L
+D$pH
+t$`H
+t$0L
+L$PL
+L$8H
+l$XL
+D$hH
+t$`L
+T$pA
+[A\A]A^A_]
+fff.
+UAWAVAUATSD
+Lc|$HHcl$8H
+Hcl$@H
+fffff.
+ffff.
+D;\$
+[A\A]A^A_]
+UAWAVAUATSD
+Lc|$HHcl$8H
+Hc\$@H
+ffffff.
+(fff.
+D;\$
+[A\A]A^A_]
+ffffff.
+Wffff.
+ffffff.
+fff.
+Pffff.
+fffff.
+Pffff.
+fffff.
+G I9
+ffff.
+tDLc
+fff.
+ffff.
+ffff.
+LcT$ Lc\$
+Hc\$(1
+fffff.
+H;D$
+LcT$ Lc\$
+Hc\$(1
+fffff.
+H;D$
+AWAVATSE
+LcT$(Lc\$8Lct$01
+H;D$
+w[A\A^A_
+fff.
+AWAVATSE
+LcT$(Lc\$8Lct$01
+H;D$
+w[A\A^A_
+fff.
+UAWAVAUATSE
+HcD$8H
+Lcd$HH
+Lc|$@1
+fff.
+H;D$
+H;D$
+w[A\A]A^A_]
+UAWAVAUATSH
+Lc|$8HcD$@H
+Lct$HD
+|k8H
+LcL$PH
+ffff.
+|s8H
+w[A\A]A^A_]
+UAWAVAUATSD
+L$8Lc
+T$@Lc
+L$HLc
+\$PHc
+L;|$
+t$PD;T$
+w[A\A]A^A_]
+UAWAVAUATSD
+LcL$HLcT$8LcD$@E1
+D;t$
+w[A\A]A^A_]
+UAWAVAUATSD
+LcL$HLcT$8LcD$@E1
+D;t$
+w[A\A]A^A_]
+ffffff.
+UAWAVAUATSH
+T$pH
+T$pI
+D$hI
+\$`Hc
+|$pH
+D$hH
+l$@H
+l$HL
+L$PA
+D$,H
+T$0M
+D$8Lc
+D$xH
+l$`L
+D$pH
+D$xI
+ffffff.
+D$@L
+D$pH
+t$`H
+t$0L
+L$PL
+L$8H
+l$XL
+D$hH
+t$`L
+T$pA
+[A\A]A^A_]
+UAWAVAUATSE
+Lcd$HLc|$8Lcl$@Lc
+ffff.
+w[A\A]A^A_]
+UAWAVAUATSE
+Lcd$HLc|$8Lcl$@Lc
+ffff.
+w[A\A]A^A_]
+UAWAVAUATSD
+HcD$@H
+Lc|$8Mc
+D;D$
+w[A\A]A^A_]
+SUAVAWATH
+D$0L
+T$8L
+\$@f
+A\A_A^][
+SUAVAWATH
+D$0L
+T$8L
+A\A_A^][
+Ic<QIcDQ
+Ic|Q
+IcDQ
+AIc|
+Ic<QIcDQ
+AIc|Q
+IcDQ
+o,AfA
+AIc|
+Ic<QIcDQ
+AIc|Q
+IcDQ
+o,AfA
+AIc|
+Ic<QIcDQ
+AIc|Q
+IcDQ
+o,AfA
+AIc|
+Ic<QIcDQ
+AIc|Q
+IcDQ
+o,AfA
+AIc|
+o5u	
+o=}	
+Ic<QIcDQ
+AIc|Q
+IcDQ
+o,Af
+Ic<QIcDQ
+Ic|Q
+IcDQ
+AIc|
+Ic<QIcDQ
+AIc|Q
+IcDQ
+o,AfA
+AIc|
+Ic<QIcDQ
+AIc|Q
+IcDQ
+o,AfA
+AIc|
+Ic<QIcDQ
+AIc|Q
+IcDQ
+o,AfA
+AIc|
+Ic<QIcDQ
+AIc|Q
+IcDQ
+o,AfA
+AIc|
+Ic<QIcDQ
+AIc|Q
+IcDQ
+o,Af
+Ic<QIcDQ
+Ic|Q
+IcDQ
+~$VH
+~$VH
+AIc|
+Ic<QIcDQ
+AIc|Q
+IcDQ
+o,AfA
+~$VH
+~$VH
+AIc|
+Ic<QIcDQ
+AIc|Q
+IcDQ
+o,AfA
+~$VH
+~$VH
+AIc|
+Ic<QIcDQ
+AIc|Q
+IcDQ
+o,AfA
+~$VH
+~$VH
+AIc|
+Ic<QIcDQ
+AIc|Q
+IcDQ
+o,AfA
+~$VH
+~$VH
+AIc|
+Ic<QIcDQ
+AIc|Q
+IcDQ
+o,Af
+~$VH
+~$VH
+Ic<QIcDQ
+Ic|Q
+IcDQ
+AIc|
+Ic<QIcDQ
+AIc|Q
+IcDQ
+o,AfA
+AIc|
+Ic<QIcDQ
+AIc|Q
+IcDQ
+o,AfA
+AIc|
+Ic<QIcDQ
+AIc|Q
+IcDQ
+o,AfA
+AIc|
+Ic<QIcDQ
+AIc|Q
+IcDQ
+o,AfA
+AIc|
+Ic<QIcDQ
+AIc|Q
+IcDQ
+o,Af
+Ic<QIcDQ
+Ic|Q
+IcDQ
+AIc|
+Ic<QIcDQ
+AIc|Q
+IcDQ
+o,AfA
+AIc|
+Ic<QIcDQ
+AIc|Q
+IcDQ
+o,AfA
+AIc|
+Ic<QIcDQ
+AIc|Q
+IcDQ
+o,AfA
+AIc|
+Ic<QIcDQ
+AIc|Q
+IcDQ
+o,AfA
+AIc|
+Ic<QIcDQ
+AIc|Q
+IcDQ
+o,Af
+UAWAVAUATSH
+D$$H
+HIcl
+H+\$
+H+t$
+:H+D$
+:H+\$
+ffff.
+D+|$
+fff.
+!H+T$
+H+L$
+H+L$
+fff.
+H+L$
+D+D$
+}!Hc
+fffff.
+,pHc
+([A\A]A^A_]
+UAWAVSPH
+F8A;FX
+%u3H
+%uJH
+F8A;FX
+%u3H
+%uJH
+[A^A_]
+fff.
+H;L$
+HcL$
+H;L$
+H;L$
+HcL$
+H;L$
+L$ H
+HcD$(H
+fff.
+H;D$
+H;D$
+ffff.
+D$ H
+HcD$(H
+H;D$
+ffffff.
+L$ H
+HcD$(H
+H;D$
+L$ H
+HcD$(H
+H;D$
+L$ H
+HcD$(H
+H;D$
+L$ H
+HcD$(H
+H;D$
+H;D$
+L$ H
+HcD$(H
+H;D$
+H;D$
+D$ H
+HcD$(H
+H;D$
+fff.
+L$ H
+HcD$(H
+H;D$
+L$ H
+HcD$(H
+H;D$
+L$ H
+HcD$(H
+H;D$
+ffff.
+o$.H+
+o$/H+
+fffff.
+o$.H+
+o$/H+
+o$/H+
+o$.H+
+o$/H+
+o$/H+
+o$.H+
+ffffff.
+o$/H+
+fffff.
+o$/H+
+fffff.
+o$.H+
+o$/H+
+o$/H+
+o$.H+
+o$/H+
+ffffff.
+H`H1
+o$/H+
+L$ H
+HcD$(H
+fff.
+H;D$
+H;D$
+ffff.
+D$ H
+HcD$(H
+H;D$
+L$ H
+HcD$(H
+H;D$
+L$ H
+HcD$(H
+H;D$
+L$ H
+HcD$(H
+H;D$
+HcL$
+H;L$
+L$ H
+HcD$(H
+H;D$
+H;D$
+L$ H
+HcD$(H
+H;D$
+H;D$
+D$ H
+HcD$(H
+H;D$
+L$ H
+HcD$(H
+H;D$
+L$ H
+HcD$(H
+H;D$
+L$ H
+HcD$(H
+H;D$
+ffff.
+o$.H+
+o$/H+
+fffff.
+o$.H+
+o$/H+
+o$/H+
+o$.H+
+fffff.
+o$/H+
+ffff.
+o$/H+
+ffff.
+o$.H+
+ffffff.
+o$/H+
+fffff.
+o$/H+
+fffff.
+o$.H+
+o$/H+
+o$/H+
+o$.H+
+o$/H+
+ffffff.
+H`H1
+o$/H+
+{@!H
+%u,H
+{@!H
+{@!H
+%u&H
+{@!H
+'u	H
+fffff.
+UAWAVAUATSH
+L$0L
+L$(I
+D$'E
+D$pH
+D$0H
+8[A\A]A^A_]
+ffffff.
+UAWAVAUATSH
+L$ L
+D$`H
+D$ H
+L+L$
+([A\A]A^A_]
+UAWAVAUATSH
+L$0L
+L$(I
+D$'E
+D$pH
+D$0H
+8[A\A]A^A_]
+ffffff.
+UAWAVAUATSH
+L$ L
+D$`H
+D$ H
+L+L$
+([A\A]A^A_]
+UAWAVAUATSH
+L$ L
+D$`H
+D$ H
+L+L$
+([A\A]A^A_]
+UAWAVAUATSH
+L$ L
+D$`H
+D$ H
+L+L$
+([A\A]A^A_]
+UAWAVAUATSH
+L$@L
+L$8I
+D$7E
+L$(H
+T$ H
+ffff.
+L$8B
+D$@H
+L+L$
+|$(H)
+D9t$
+H[A\A]A^A_]
+ffff.
+UAWAVAUATSH
+L$@L
+L$8I
+D$7E
+T$(I
+T$ H
+ffff.
+L$8B
+D$@H
+L+L$ L
+D9t$
+H[A\A]A^A_]
+fffff.
+UAWAVAUATSH
+L$ L
+D$`H
+D$ H
+L+L$
+([A\A]A^A_]
+UAWAVAUATSH
+L$ L
+D$`H
+D$ H
+L+L$
+([A\A]A^A_]
+UAWAVAUATSH
+L$0L
+L$(I
+D$'E
+D$pH
+D$0H
+8[A\A]A^A_]
+ffffff.
+UAWAVAUATSH
+L$ L
+D$`H
+D$ H
+L+L$
+([A\A]A^A_]
+UAWAVAUATSH
+L$0L
+L$(I
+D$'E
+D$pH
+D$0H
+8[A\A]A^A_]
+ffffff.
+UAWAVAUATSH
+L$ L
+D$`H
+D$ H
+L+L$
+([A\A]A^A_]
+UAWAVAUATSH
+L$ L
+D$`H
+D$ H
+L+L$
+([A\A]A^A_]
+UAWAVAUATSH
+L$ L
+D$`H
+D$ H
+L+L$
+([A\A]A^A_]
+UAWAVAUATSH
+L$@L
+L$8I
+D$7E
+L$(H
+T$ H
+ffff.
+L$8B
+D$@H
+L+L$
+|$(H)
+D9t$
+H[A\A]A^A_]
+ffff.
+UAWAVAUATSH
+L$@L
+L$8I
+D$7E
+T$(I
+T$ H
+ffff.
+L$8B
+D$@H
+L+L$ L
+D9t$
+H[A\A]A^A_]
+UAVSH
+2w.H
+[A^]
+UAWAVAUATSH
+D$`D
+Lc0D
+D20H
+L$ I
+L$ M
+fff.
+\6	A
+d$ C
+T6!A
+T6 A
+D6#A
+D6"C
+T6%A
+T6$H
+T6'A
+T6&A
+D6)A
+D6(C
+T6+A
+T6*H
+T6-A
+T6,A
+D6/A
+D6.I
+_ffffff.
+L$ M
+([A\A]A^A_]
+fffff.
+UAWAVAUATSH
+D$`D
+Lc0D
+D20H
+L$ I
+L$ M
+fff.
+D6	A
+d$ C
+T6!A
+D6#A
+D6"C
+T6%A
+T6$H
+T6'A
+T6&A
+D6)A
+D6(C
+T6+A
+T6*H
+T6-A
+T6,A
+D6/A
+D6.I
+^fffff.
+L$ M
+([A\A]A^A_]
+fffff.
+UAWAVAUATSH
+ffffff.
+T$XL
+t$(D
+D$0M
+t$`H
+T$@I
+\$ D
+L$PE1
+t  H
+L$HH
+T$8H
+t$XJ
+\$HH
+t$XH
+L$@H
+L$8L
+|$(f
+D$XB
+D$`B
+\$8C
+l$0A
+D$`B
+|$HB
+D$XB
+D$`B
+D$XB
+D$`B
+D$HB
+T$(B
+D$PH
+D$PH
+L$@9
+\$ A
+L$HH
+T$@H
+T$XM
+D$8H
+h[A\A]A^A_]
+UAWAVAUATSH
+D$@A
+D$8D
+L$PH
+L$(L
+l$ D
+T$0J
+D$XH
+l$@D
+D$XL
+T$HL
+T$0I
+T$0K
+l$8L
+T$ I
+\$PJ
+\$@H
+\$PI
+L$(I
+D$XB
+\$0B
+\$(C
+D$@B
+|$ B
+D$PB
+D$XB
+D$PB
+D$XB
+\$@C
+D$HH
+D$HH
+L$89
+L$@H
+D$8H
+|$PH
+D$XL
+D;t$
+`[A\A]A^A_]
+ffffff.
+UAWAVAUATSH
+fffff.
+L0 H
+ffff.
+D;|$
+ [A\A]A^A_]
+UAWAVAUATSH
+L$`D
+Lc)D
+4$Hc
+T$ H
+t$ C
+Dffff.
+([A\A]A^A_]
+UAWAVAUATSH
+L$`D
+Lc)D
+4$Hc
+T$ H
+t$ C
+\$	H
+\$	H
+([A\A]A^A_]
+UAWAVAUATSH
+T$xA
+T$lA
+T$PA
+T$8A
+T$ A
+ffff.
+,nfA
+,QfC
+,nfA
+4XHc
+4QfC
+,ifA
+,vfC
+,XHc
+,vfC
+,XfA
+,2Hc
+d$xH
+,nfA
+,VfC
+,nfA
+T$lHc
+,VfC
+D$\H
+4XHc
+l$DHc
+T$8A
+T$,f
+,YHc
+,PfC
+[A\A]A^A_]
+UAWAVAUATSH
+D$DE
+Mc:H
+D$pI
+\$hI
+D$8A
+L$0M
+<2Ic
+|$ D
+t$8C
+T$pf
+T$(Hc
+D$hA
+|$`f
+4^fA
+D$0B
+T$pf
+4GHc
+\$hA
+|$`f
+D$HL
+T$XI
+L$DH
+[A\A]A^A_]
+UAWAVAUATSH
+D$0A
+D$(A
+D$ A
+t$0f
+T$(f
+4PfC
+T$ f
+4PfC
+4PfC
+4PfC
+4PfC
+4PfC
+4PfC
+4PfC
+4PfC
+4PfC
+4PfC
+4PfC
+4PfC
+4PfC
+4PfC
+L$<M
+@[A\A]A^A_]
+UAWAVAUATSH
+ffff.
+D$$H
+Lc:D
+L$xA
+L$hA
+L$XA
+L$HA
+L$8A
+D$$H
+L$tHc
+L$dHc
+T$THc
+L$DHc
+L$4Hc
+L$$Hc
+qff.
+[A\A]A^A_]
+fff.
+UAWAVAUATSH
+fffff.
+D$ D
+D$0D
+D$ I
+T$,K
+D$ f
+D$|H
+L$lHc
+T$\Hc
+l$LHc
+D$<H
+T$,Hc
+D$ 9
+D$ I
+D;l$
+[A\A]A^A_]
+ffffff.
+UAWAVAUATSH
+Lc>D
+t$pA
+t$`A
+t$PA
+t$@A
+t$0A
+T$|Hc
+T$lHc
+T$\Hc
+T$LHc
+T$<Hc
+T$,Hc
+wffffff.
+[A\A]A^A_]
+UAWAVAUATSH
+[A\A]A^A_]
+UAWAVAUATSH
+D$hI
+T$$Lc
+D$0H
+t$PL
+D$8H
+|$XH
+D$@H
+D$`H
+T$pMc
+|$HM
+t$PA
+|$X|
+T$`|
+D$pH
+D$PH
+D$XI
+L$`H
+L+d$
+|$pH
+D$XL
+L$$L
+t$@L
+l$(@
+|$hA
+L$`H
+T$hA
+L+d$
+|$pH
+L$$H
+\$PH
+T$HL
+D$@L
+T$XH
+L$`H
+L+d$
+t$pH
+\$PL
+D$$H
+T$XH
+t$@L
+|$HH
+D$(D
+L$`H
+L+d$
+t$pH
+L$$H
+\$PH
+T$HL
+D$@L
+T$XH
+t$@L
+|$HI
+T$`H
+L+d$
+T$pH
+L$XH
+\$Pt
+D$$H
+T$HH
+\$@H
+t$@L
+|$HH
+L$`H
+L+d$
+t$pH
+L$$H
+\$PH
+T$HL
+D$@L
+T$XH
+t$@L
+|$HI
+l$(@
+L$`H
+L+d$
+T$pH
+T$XH
+\$Pt
+L$$H
+T$HL
+D$@H
+x[A\A]A^A_]
+Assertion %s failed at %s:%d
+plane_count == nb_components - 1
+libswscale/alphablend.c
+desc
+libswscale/swscale_internal.h
+libswscale/gamma.c
+libswscale/hscale.c
+SWScaler
+sws_flags
+scaler flags
+fast_bilinear
+fast bilinear
+bilinear
+bicubic
+experimental
+neighbor
+nearest neighbor
+area
+averaging area
+bicublin
+luma bicubic, chroma bilinear
+gauss
+Gaussian
+sinc
+lanczos
+Lanczos
+spline
+natural bicubic spline
+print_info
+print info
+accurate_rnd
+accurate rounding
+full_chroma_int
+full chroma interpolation
+full_chroma_inp
+full chroma input
+bitexact
+error_diffusion
+error diffusion dither
+srcw
+source width
+srch
+source height
+dstw
+destination width
+dsth
+destination height
+src_format
+source format
+dst_format
+destination format
+src_range
+source is full range
+dst_range
+destination is full range
+param0
+scaler param 0
+param1
+scaler param 1
+src_v_chr_pos
+source vertical chroma position in luma grid/256
+src_h_chr_pos
+source horizontal chroma position in luma grid/256
+dst_v_chr_pos
+destination vertical chroma position in luma grid/256
+dst_h_chr_pos
+destination horizontal chroma position in luma grid/256
+sws_dither
+set dithering algorithm
+auto
+leave choice to sws
+bayer
+bayer dither
+error diffusion
+a_dither
+arithmetic addition dither
+x_dither
+arithmetic xor dither
+gamma
+gamma correct scaling
+alphablend
+mode for alpha -> non alpha
+none
+ignore alpha
+uniform_color
+blend onto a uniform color
+checkerboard
+blend onto a checkerboard
+swscaler
+libswscale/output.c
+n == s->plane[ii].available_lines
+libswscale/slice.c
+One of the input parameters to sws_scale() is NULL, please check the calling code
+Slice parameters %d, %d are invalid
+bad src image pointers
+bad dst image pointers
+Slices start in the middle!
+libswscale/swscale.c
+dstY >= ret
+ret >= 0
+c->dstH >= dstY
+Warning: dstStride is not aligned!
+         ->cannot do aligned memory accesses anymore
+Warning: data is not aligned! This can lead to a speed loss
+(lastLumSrcY - firstLumSrcY + 1) <= hout_slice->plane[0].available_lines
+(lastChrSrcY - firstChrSrcY + 1) <= hout_slice->plane[1].available_lines
+unsupported bayer conversion
+libswscale/swscale_unscaled.c
+internal error %s -> %s converter
+srcSliceH > 1
+unsupported planar RGB conversion %s -> %s
+unsupported conversion to planar RGB %s -> %s
+!(dstStride[0] % 2 || dstStride[1] % 2)
+!(srcStride[0] % 2 || srcStride[1] % 2 || srcStride[2] % 2 || dstStride[0] % 2 || dstStride[1] % 2)
+--prefix=/Users/buildbot/buildslave/libav_osx/build/dev/build_osx64 --cc=clang --extra-cflags='-m64 -arch x86_64 -g -O2 -fno-strict-aliasing -ffast-math -gdwarf-2 -pipe -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.9 -fasm-blocks' --ld=clang --extra-ldflags='-m64 -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.9' --arch=x86 --enable-shared --disable-static --enable-runtime-cpudetect --disable-all --enable-avcodec --enable-avutil --enable-avresample --enable-avformat --enable-swscale --enable-parser=h264 --enable-decoder='aac,h264,gif,vorbis,mp3,flac,alac,libvpx_vp8,libvpx_vp9,pcm*,valve*' --enable-demuxer='aac,matroska,gif,ogg,mov,mp3,flac,wav,flv' --enable-hwaccels --enable-videotoolbox --enable-muxer=flv --disable-decoder='h263,hevc,mpeg1video,mpeg2video,vc1,vp8,vp9' --enable-libvpx --enable-libvorbis --enable-protocol='file,rtmp'
+libswscale license: LGPL version 2.1 or later
+YUV color matrix differs for YUV->YUV, using intermediate RGB to convert
+libswscale/utils.c
+deprecated pixel format used, make sure you did set range correctly
+%s is not supported as input pixel format
+%s is not supported as output pixel format
+Exactly one scaler algorithm must be chosen, got %X
+%dx%d -> %dx%d is invalid scaling dimension
+Forcing full internal H chroma due to odd output size
+Forcing full internal H chroma due to input having non subsampled chroma
+Desired dithering only supported in full chroma interpolation for destination format '%s'
+Ordered dither is not supported in full chroma interpolation for destination format '%s'
+%s output is not supported with half chroma resolution, switching to full
+full chroma interpolation for destination format '%s' not yet implemented
+Cannot allocate memory.
+output width is not a multiple of 32 -> no MMXEXT scaler
+Failed to allocate MMX2FilterCode
+mprotect failed, cannot use fast bilinear scaler
+c->chrDstH <= dstH
+ehh flags invalid?!
+%s scaler, from %s to %s%s 
+dithered 
+MMXEXT
+3DNOW
+using %s
+%dx%d -> %dx%d
+lum srcW=%d srcH=%d dstW=%d dstH=%d xInc=%d yInc=%d
+chr srcW=%d srcH=%d dstW=%d dstH=%d xInc=%d yInc=%d
+using alpha blendaway %s -> %s special converter
+using unscaled %s -> %s special converter
+%1.3f 
+area averaging
+luma bicubic / chroma bilinear
+nearest neighbor / point
+bicubic spline
+sizeFactor > 0
+filterSize > 0
+filter2Size > 0
+minFilterSize > 0
+SwScaler: reducing / aligning filtersize %d -> %d
+(*filterPos)[i] >= 0
+(*filterPos)[i] < srcW
+(*filterPos)[i] + j < srcW || !filter[i * filterSize + j]
+SwScaler: zero vector in scaling
+sws: initFilter failed
+libswscale/vscale.c
+Optimized 2 tap filter code cannot be used
+c->srcBpc == 16
+libswscale/x86/swscale.c
+c->dstBpc>8
+./libswscale/swscale_internal.h
+No accelerated colorspace conversion found from %s to %s.
+libswscale/yuv2rgb.c
+%ibpp not supported by yuv2rgb
+6#	@
+$D<\"B:Zd
+4T,L2R*Jt
+ @8X&F>^`
+0P(H6V.Np
+$D<\"B:Z@@@@@@@@
+$D<\"B:Zd
+4T,L2R*Jt
+ @8X&F>^`
+0P(H6V.Np
+Mb`?
+`4B`&GRESESESESESESESESESESESESESESESESESESFRFRFRFRFRFRFRFRFRFRFRFRFRFRESESESESESESFRESESESEp@`0A
+@___stack_chk_guard
+@dyld_stub_binder
+@_av_free
+@_av_freep
+@_av_get_bits_per_pixel
+@_av_get_cpu_flags
+@_av_get_pix_fmt_name
+@_av_image_alloc
+@_av_log
+@_av_malloc_array
+@_av_malloc_tracked
+@_av_mallocz_array
+@_av_mallocz_tracked
+@_av_opt_get_int
+@_av_opt_set_defaults
+@_av_opt_set_int
+@_av_pix_fmt_desc_get
+@_av_pix_fmt_get_chroma_sub_sample
+@_av_pix_fmt_swap_endianness
+@___bzero
+@___isnand
+@___stack_chk_fail
+@_abort
+@_ceil
+@_cos
+@_exp
+@_exp2
+@_lrint
+@_lrintf
+@_memcmp
+@_memcpy
+@_memset
+@_mmap
+@_mprotect
+@_munmap
+@_pow
+@_sin
+_sws
+cale_
+free
+normalizeVec
+printVec2
+_class
+DefaultFilter
+GaussianVec
+IdentityVec
+cale
+etColorspaceDetails
+hiftVec
+ubVec
+loneVec
+ertPalette8ToPacked
+version
+configuration
+license
+sSupported
+nit_context
+Input
+Output
+EndiannessConversion
+lloc
+ddVec
+set_opts
+context
+achedContext
+lorspaceDetails
+efficients
+text
+stVec
+Context
+Filter
++@@@@@P
+@PP`@PP
+`0`0``0``
+0`000000p
+pppp
+00``00@000@0@
+@P@@@@
+pppp
+PP@PP0PP@PP@@@PP
+l0@@@P
+%o )(
+$` %'
+   )(
+   %(
+.93@M3@M/^c'Wb,
+%.37F37F'GR
+q"n%
+i*v-
+Q"^%{,
+Y*f-
+Y*f-
+_sws_addVec
+_sws_allocVec
+_sws_alloc_context
+_sws_alloc_set_opts
+_sws_cloneVec
+_sws_convVec
+_sws_convertPalette8ToPacked24
+_sws_convertPalette8ToPacked32
+_sws_freeContext
+_sws_freeFilter
+_sws_freeVec
+_sws_getCachedContext
+_sws_getCoefficients
+_sws_getColorspaceDetails
+_sws_getConstVec
+_sws_getContext
+_sws_getDefaultFilter
+_sws_getGaussianVec
+_sws_getIdentityVec
+_sws_get_class
+_sws_init_context
+_sws_isSupportedEndiannessConversion
+_sws_isSupportedInput
+_sws_isSupportedOutput
+_sws_normalizeVec
+_sws_printVec2
+_sws_scale
+_sws_scaleVec
+_sws_setColorspaceDetails
+_sws_shiftVec
+_sws_subVec
+_swscale_configuration
+_swscale_license
+_swscale_version
+___bzero
+___isnand
+___stack_chk_fail
+___stack_chk_guard
+_abort
+_av_free
+_av_freep
+_av_get_bits_per_pixel
+_av_get_cpu_flags
+_av_get_pix_fmt_name
+_av_image_alloc
+_av_log
+_av_malloc_array
+_av_malloc_tracked
+_av_mallocz_array
+_av_mallocz_tracked
+_av_opt_get_int
+_av_opt_set_defaults
+_av_opt_set_int
+_av_pix_fmt_desc_get
+_av_pix_fmt_get_chroma_sub_sample
+_av_pix_fmt_swap_endianness
+_ceil
+_cos
+_exp
+_exp2
+_lrint
+_lrintf
+_memcmp
+_memcpy
+_memset
+_mmap
+_mprotect
+_munmap
+_pow
+_sin
+dyld_stub_binder
+radr://5614542
+__TEXT
+__text
+__TEXT
+__stubs
+__TEXT
+__stub_helper
+__TEXT
+__const
+__TEXT
+__cstring
+__TEXT
+__unwind_info
+__TEXT
+__eh_frame
+__TEXT
+__DATA_CONST
+__got
+__DATA_CONST
+__const
+__DATA_CONST
+__DATA
+__la_symbol_ptr
+__DATA
+__data
+__DATA
+__common
+__DATA
+__bss
+__DATA
+__LINKEDIT
+@loader_path/libswscale.5.dylib
+@loader_path/libavutil.56.dylib
+/usr/lib/libSystem.B.dylib
+/System/Library/Frameworks/VideoToolbox.framework/Versions/A/VideoToolbox
+/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia
+/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo
+/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
+oq@(
+qNrq
+eu@L
+u@LG
+Lii8k	
+Lii8k	
+iR@9
+Lii8k	
+iR@9
+Lii8k	
+iR@9)
+Lii8k	
+iR@9
+iR@9
+iR@9
+iR@9i
+iR@9I
+iR@9)
+iR@9	
+iR@9
+iR@9
+iR@9
+iR@9
+iR@9i
+iR@9I
+@)l-@)
+@)l-@)
+@)l-@)
+@)l-@)
+@)l-@)
+@)l-@)
+@)l-@)
+@)l-@)
+n-@)
+n-@)
+n-@)
+n-@)
+n-@)
+n-@)
+n-@)
+n-@)
+TB@#
+TB@#
+TB@#
+TB@#
+TB@#
+TB@#
+TB@#
+TB@#
+TB@#
+TB@#
+TB@#
+TB@#
+TB@#
+TB@#
+TB@#
+TB@#
+@@9I
+ @9i'
+)CzCX
+	@@9
+ypx#F@
+@8bip8A|
+ypx!
+%@xB
+Z#F@
+(%@9")@9
+/inxp
+Mi.x
+milxNilxo
+-i,x
+-ih8
+SLi(8
+lih8Mih8
+S,i(8
+/inx
+Mi.x
+milx
+ZNilx
+-i,x
+_8-%@8nih8
+SLi(8
+_x-E@x
+nimxo
+Li-x
+Z-E@x
+nimx
+Li-x
+	@y.ynx
+y.yox
+y.ypx
+!a70
+@@9h
+*[|}
+@@9h
+,-@)(
+*:}}
+A(70
+@@9h
+*-@)
+*)]@
+	*-=	Sl@L
+khi8ka
+.=	S
+jHj8
+jHj8*
+jHj8*
+jHj8
+jHh8
+jHj8*
+7	i{
+8,%@8L
+7	i{
+8,%@8L
+1jhxchhxD
+hhxE=
+S1h(x
+1jhxchhxD
+hhxe}
+S1h(x
+1jhxchhxD
+hhxe}
+S1h(x
+1jhxchhxD
+hhxe}
+S1h(x
+1jhxchhxD
+hhxe}
+S1h(x
+h'xc
+S#h'x
+1jhx1
+Zchhxc
+h(x1>
+S1h(x
+1jhx1
+ZchhxD
+hhxc
+h(xc|
+S1h(x
+1jhx1
+ZchhxD
+hhxc
+h(xc|
+S1h(x
+1jhx1
+ZchhxD
+hhxc
+h(xc|
+S1h(x
+1jhx1
+ZchhxD
+hhxc
+h(xc|
+S1h(x
+h'xc
+S#h'x
+1jh8chh8D
+hh8E5
+1~	S1h&x
+*i$@x)
+$@x)
+-	@y
+@yi%
+@y)}
+@yi%
+@y)}
+yZvx
+@@9H
+wZhx
+@@9H
+hZhx	@@9
+hZhx	@@9
+hZhx	@@9
+jZjx
+yZvx
+@@9H
+wZhx
+@@9H
+hZhx	@@9
+hZhx	@@9
+hZhx	@@9
+jZjx
+yZvx
+@@9H
+wZhx
+@@9H
+hZhx	@@9
+hZhx	@@9
+hZhx	@@9
+jZjx
+yZvx
+@@9H
+wZhx
+@@9H
+hZhx	@@9
+hZhx	@@9
+hZhx	@@9
+jZjx
+yZvx
+@@9H
+{Zhx
+@@9H
+hZhx	@@9
+hZhx	@@9
+hZhx	@@9
+jZjx
+yZvx
+@@9H
+{Zhx
+@@9H
+hZhx	@@9
+hZhx	@@9
+hZhx	@@9
+jZjx
+yZvx
+@@9H
+{Zhx
+@@9H
+hZhx	@@9
+hZhx	@@9
+hZhx	@@9
+jZjx
+yZvx
+@@9H
+{Zhx
+@@9H
+hZhx	@@9
+hZhx	@@9
+hZhx	@@9
+jZjx
+SbHo
+V(O4
+NrV(O2
+.o1*a
+SaHo
+V(O4
+NrV(O2
+.o1*a
+oHq8"
+bHb8O
+bHb8$
+dHd8
+dHd8%
+eHe8
+hJvx	@@9
+hx	@@9
+3A)k]	
+hJvx	@@9
+hx	@@9
+3A)k]	
+hJvx	@@9
+hx	@@9
+/A)k}
+hJvx	@@9
+hx	@@9
+/A)k}
+_8D$@8
+_8%$@8
+hJvx	@@9
+hx	@@9
+3A)k]	
+hJvx	@@9
+hx	@@9
+3A)k]	
+SbHo
+V(O4
+NRV(O2
+.o1*a
+SaHo
+V(O4
+NRV(O2
+.o1*a
+oHq8"
+bHb8O
+bHb8$
+dHd8
+dHd8%
+eHe8
+hJvx	@@9
+hx	@@9
+3A)k]	
+xi_	
+hJvx	@@9
+hx	@@9
+3A)k]	
+xi_	
+hJvx	@@9
+hx	@@9
+hJvx	@@9
+hx	@@9
+hJvx	@@9
+hx	@@9
+3A)k]	
+xi_	
+hJvx	@@9
+hx	@@9
+3A)k]	
+xi_	
+hZvx	@@9
+hZhx	@@9
+hZhx	@@9
+'A))_	
+hZvx	@@9
+hZhx	@@9
+hZhx	@@9
+'A))_	
+hZvx	@@9
+hZhx	@@9
+hZhx	@@9
+@))_	
+hZvx	@@9
+hZhx	@@9
+hZhx	@@9
+@))_	
+hZvx	@@9
+hZhx	@@9
+hZhx	@@9
+'A))_	
+hZvx	@@9
+hZhx	@@9
+hZhx	@@9
+'A))_	
+hZvx	@@9
+hZhx	@@9
+hZhx	@@9
+@))_	
+hZvx	@@9
+hZhx	@@9
+hZhx	@@9
+@))_	
+V(Ot
+NQV(Oq
+/o1*a
+V(OT
+N1V(OQ
+/o1*a
+oHq8"
+bHb8$
+dHd8EA
+}	S/$
+h&@x	@@9
+h&@x	@@9
+h&@x	@@9
+h&@x	@@9
+h&@x	@@9
+h&@x	@@9
+V(Ot
+N1V(Oq
+/o1*a
+V(Ot
+N1V(Oq
+/o1*a
+SE|	
+oHq8"
+bHb8$
+dHd8
+}	S/$
+h&@x	@@9
+h&@x	@@9
+h&@x	@@9
+h&@x	@@9
+h&@x	@@9
+h&@x	@@9
+i(@)k
+ihx/
+ihxn}
+JihxJm
+i(@)k
+ihx/
+ihxn}
+JihxJu
+i(@)k
+ihx/
+ihxn}
+i(@)k
+R.<@
+ihx0
+jhxo}
+Jihx
+i(@)k
+R.<@
+ihx0
+jhxo}
+i(@)
+i(@)k
+JihxJ
+i(@)k
+JihxJ
+i(@)k
+i(@)k
+R.<@
+JihxJ
+i(@)k
+R.<@
+i(@)
+Jih8Je
+i(@)
+ih80
+*)$@x)
++hkx+%
+*hjxJ
+ilxL%
+I%@8i
+I%@8i
+/Hm8
+0Hp8
+1Hq80}
+Nlq}
+h&@x	@@9
+h&@x	@@9
+h&@x	@@9
+h&@x	@@9
+h&@x	@@9
+h&@x	@@9
+/Hm8
+0Hp8
+1Hq80}
+Nlq}
+h&@x	@@9
+h&@x	@@9
+h&@x	@@9
+h&@x	@@9
+h&@x	@@9
+h&@x	@@9
+NR9KN
+NTiKN
+NZyKN
+yMN\!
+N^!	N
+/,hj8
+cD`.c
+)Hj8Jq
+/,hh8
+nc(a
+*Hh8
+Nlu~
+S1~	
+Nlu~
+Nlu~
+Nlu~
+hZux	@@9
+hZhx	@@9
+hZhx	@@9
+hZux	@@9
+hZhx	@@9
+hZhx	@@9
+hZux	@@9
+hZhx	@@9
+hZhx	@@9
+hZux	@@9
+hZhx	@@9
+hZhx	@@9
+hZux	@@9
+hZhx	@@9
+hZhx	@@9
+hZux	@@9
+hZhx	@@9
+hZhx	@@9
+hZux	@@9
+hZhx	@@9
+hZhx	@@9
+hZux	@@9
+hZhx	@@9
+hZhx	@@9
+T	m|
+i%@x)}
+*)$@x)
+r D@
+r*D@
++hkxk}
+ylxL%
++ykxk
+N!(a
++hk8l}
+N!(a
++hk8l}
+ilxL%
++ikxk
++hkx+%
+T	q}
+;O'4
+*aNcT
+Zox)x)
+Snx)x)
+h xJ
+Znx)x)
+Rnx)x)
+*	D@
+T	u~
+=Od4
+h0x0~
+h1xJ
+Zox)x)
+ox)x)
+T	q}
+:O'4
+*aNc
+Zox)x)
+ox)x)
+T	q}
+;O'4
+*aNc
+Zox)x)
+ox)x)
+@qj1
+T	q}
+=O'4
+*aNc
+Zox)x)
+ox)x)
+@qj1
+T	q}
+?O'4
+*aNc
+Zox)
+T	u~
+rLE@
+$*k	
+k")G
+xm	@
+mhm8
+7	q}
+*aNc(!
+Znh)8)
+hi8)}
+T	i{
+	oj@
+h 80~
+h18J
+TP	@
+iq81N
+h18J
+TP	@
+iq8 N
+T*m|
+il8M
+T*m|
+il8M
+P)pB
+P)6[
+@@QA
+S!@@Q
+O)cD
+T!OP
+V!O1
+Sc@@QEi
+xs~	
+O)vR
+"n14
+"n34
+*oc(a
+@@QA
+S!@@Q
+O)BD
+"n14
+"n34
+*oc(a
+SB@@QC
+Sc@@Q
+P)pB
+P)6[
+rnf*a
+@@QA
+S!@@Q
+O)cD
+T!OP
+V!O1
+rnf*a
+Sc@@QEi
+xs~	
+O)vR
+"n14
+"n34
+*oc(a
+@@QA
+S!@@Q
+O)BD
+"n14
+"n34
+*oc(a
+SB@@QC
+Sc@@Q
+P)pB
+P)6[
+@@QA
+S!@@Q
+O)cD
+T!OP
+V!O1
+Sc@@QEi
+*o1*a
+	N7>
+xs~	
+O)vR
+!O#4
+"n14
+"n34
+@@QA
+S!@@Q
+O)BD
+!O#4
+"n14
+"n34
+SB@@QC
+Sc@@Q
+P)pB
+P)6[
+rnf*a
+@@QA
+S!@@Q
+O)cD
+T!OP
+V!O1
+rnf*a
+Sc@@QEi
+*o1*a
+xs~	
+O)vR
+!O#4
+"n14
+"n34
+@@QA
+S!@@Q
+O)BD
+!O#4
+"n14
+"n34
+SB@@QC
+Sc@@Q
+S	@@9
+S	@@9
+S	@@9
+S	@@9
+	!B)
+'O)(
+S	@@9
+S	@@9
+S	@@9
+'M)(}
+S	@@9
+iB)`
+AQ5}
+S	@@9
+S	@@9
+S	@@9
+S	@@9I
+BQ5}
+S	@@9
+S	@@9
+S	@@9
+S	@@9
+qB)`
+S	@@9
+S	@@9
+S	@@9
+Ro@@
+C)h"	
+S	@@9
+S	@@9
+S	@@9
+@@9h
+qB)`
+AQ4}
+S	@@9
+S	@@9
+S	@@9
+BQ4}
+S	@@9
+S	@@9
+S	@@9
+S	@@9
+S	@@9
+S	@@9
+S	@@9
+	!B)
+'O)(
+S	@@9
+S	@@9
+S	@@9
+'M)(}
+S	@@9
+iB)@
+AQ5}
+S	@@9
+S	@@9
+S	@@9
+S	@@9I
+BQ5}
+S	@@9
+S	@@9
+S	@@9
+S	@@9
+qB)@
+S	@@9
+S	@@9
+S	@@9
+Ro@@
+C)h"	
+S	@@9
+S	@@9
+S	@@9
+@@9h
+qB)@
+AQ4}
+S	@@9
+S	@@9
+S	@@9
+BQ4}
+S	@@9
+S	@@9
+S	@@9
+m@)	aA)
+S	@@9
+S	@@9
+S	@@9
+S	@@9
+M@)		@
+	aB)
+'O)(
+S	@@9
+S	@@9
+S	@@9
+'M)(}
+S	@@9
+AQ5}
+S	@@9
+S	@@9
+S	@@9
+S	@@9	
+	iA)
+BQ5}
+S	@@9
+S	@@9
+S	@@9
+S	@@9
+S	@@9
+S	@@9
+S	@@9
+Rn<@
+q@)		@
+S	@@9
+S	@@9
+S	@@9
+AQ4}
+S	@@9
+S	@@9
+S	@@9
+m@)	aA)
+BQ4}
+S	@@9
+S	@@9
+S	@@9
+m@)	aA)
+S	@@9
+S	@@9
+S	@@9
+S	@@9
+M@)		@
+	aB)
+'O)(
+S	@@9
+S	@@9
+S	@@9
+'M)(}
+S	@@9
+AQ5}
+S	@@9
+S	@@9
+S	@@9
+S	@@9	
+	iA)
+BQ5}
+S	@@9
+S	@@9
+S	@@9
+S	@@9
+S	@@9
+S	@@9
+S	@@9
+Rn<@
+q@)		@
+S	@@9
+S	@@9
+S	@@9
+AQ4}
+S	@@9
+S	@@9
+S	@@9
+m@)	aA)
+BQ4}
+S	@@9
+S	@@9
+S	@@9
+*o1*a
+"n14
+"n34
+	N`<
+S1B@Q@
+O)!@
+"n14
+"n34
+	Ng<
+S!@@QB
+SB@@Q
+*o1*a
+"n14
+"n34
+*oc(a
+*o`<
+S1B@Q@
+O)!@
+"n14
+"n34
+*oc(a
+*og<
+S!@@QB
+SB@@Q
+qB)`
+S	@@9
+S	@@9
+S	@@9
+C)h"	
+S	@@9
+S	@@9
+S	@@9
+mB)`
+AQ8}
+S	@@9
+S	@@9
+S	@@9
+BQ;}
+S	@@9
+S	@@9
+S	@@9
+S	@@9
+S	@@9
+S	@@9
+q@)		@
+S	@@9
+S	@@9
+S	@@9
+q@)	eA)
+AQ8}
+S	@@9
+S	@@9
+S	@@9
+]@)	mA)
+BQ9}
+S	@@9
+S	@@9
+S	@@9
+qB)@
+S	@@9
+S	@@9
+S	@@9
+C)h"	
+S	@@9
+S	@@9
+S	@@9
+mB)@
+AQ8}
+S	@@9
+S	@@9
+S	@@9
+BQ;}
+S	@@9
+S	@@9
+S	@@9
+UB)`
+S	@@9
+S	@@9
+S	@@9
+q@)		@
+S	@@9
+S	@@9
+S	@@9
+q@)	eA)
+mB)`
+AQ8}
+S	@@9
+S	@@9
+S	@@9
+]@)	mA)
+iB)`
+BQ9}
+S	@@9
+S	@@9
+S	@@9
+ON)+8@
++*k}
+9*k}
+h)8)
+O)X[
+P)zk
+5*s~
+B@Qsv
+SsB@Q
+B@Qxi
+P)5W
+ON)+8@
++*k}
+9*k}
+h)8)
+O)X[
+P)zk
+5*s~
+B@Qsv
+SsB@Q
+B@Qxi
+P)5W
+O)B@
+Rv\@
+i)8)
+P)5W
+S9C@Qzi
+P)w_
+O)B@
+Rv\@
+i)8)
+P)5W
+S9C@Qzi
+P)w_
+NA@)n
+.h)8
+j)8:
+.h'x
+z)x+
+@@9h
+Kihxk
+ZKi(xj
+Kihxk
+ZKi(xj
+Kihxk
+ZKi(xj
+Kihxk
+ZKi(x
+Kihxk
+ZKi(xj
+Kihxk
+ZKi(xj
+Kihxk
+ZKi(x
+m=@)-
+oAA)q
+0j x
+i xY
+y(xJ
+Kihxk
+ZKi(xj
+Kihxk
+ZKi(xj
+Kihxk
+ZKi(xj
+Kihxk
+ZKi(x
+Kihxk
+ZKi(xj
+Kihxk
+ZKi(xj
+Kihxk
+ZKi(x
+m9@)
+nAA)q
+ZKi(
+ZKi(
+ZKi(
+ZKi(
+ZKi(
+ZKi(
+ZKi(
+Y@)I
+UB)`
+AQ:}
+S	@@9
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9	
+M@)I
+BQ9}
+S	@@9
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9
+G)(}
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9
+aB)`
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9
+mB)`
+AQ7}
+S	@@9
+S	@@9I
+S	@@9I
+@@9h
+S	@@9I
+S	@@9I
+S	@@9I
+@@9h
+BQ;}
+S	@@9
+S	@@9I
+S	@@9I
+@@9h
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9
+S	@@9
+S	@@9I
+@@9h
+'M)(}
+S	@@9
+S	@@9
+S	@@9I
+]B)`
+S	@@9
+S	@@9I
+S	@@9I
+@@9h
+S	@@9I
+S	@@9I
+S	@@9I
+Y@)I
+UB)@
+AQ:}
+S	@@9
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9	
+M@)I
+BQ9}
+S	@@9
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9
+G)(}
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9
+aB)@
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9
+mB)@
+AQ7}
+S	@@9
+S	@@9I
+S	@@9I
+@@9h
+S	@@9I
+S	@@9I
+S	@@9I
+@@9h
+BQ;}
+S	@@9
+S	@@9I
+S	@@9I
+@@9h
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9
+S	@@9
+S	@@9I
+@@9h
+'M)(}
+S	@@9
+S	@@9
+S	@@9I
+]B)@
+S	@@9
+S	@@9I
+S	@@9I
+@@9h
+S	@@9I
+S	@@9I
+S	@@9I
+Y@)I
+AQ:}
+S	@@9
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9	
+U@)I
+	mA)
+BQ9}
+S	@@9
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9i
+a@)	UA)
+iB)H
+S	@@9
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9
+AQ7}
+S	@@9
+S	@@9I
+S	@@9I
+@@9h
+S	@@9I
+S	@@9I
+S	@@9I
+@@9h
+M@)	eA)
+BQ;}
+S	@@9
+S	@@9I
+S	@@9I
+@@9h
+S	@@9I
+S	@@9I
+S	@@9I
+U@)	qA)
+S	@@9
+S	@@9
+S	@@9I
+@@9h
+'K)(}
+S	@@9
+S	@@9
+S	@@9I
+S	@@9
+S	@@9I
+S	@@9I
+@@9h
+S	@@9I
+S	@@9I
+S	@@9I
+Y@)I
+AQ:}
+S	@@9
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9	
+U@)I
+	mA)
+BQ9}
+S	@@9
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9i
+a@)	UA)
+iB)H
+S	@@9
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9I
+S	@@9
+AQ7}
+S	@@9
+S	@@9I
+S	@@9I
+@@9h
+S	@@9I
+S	@@9I
+S	@@9I
+@@9h
+M@)	eA)
+BQ;}
+S	@@9
+S	@@9I
+S	@@9I
+@@9h
+S	@@9I
+S	@@9I
+S	@@9I
+U@)	qA)
+S	@@9
+S	@@9
+S	@@9I
+@@9h
+'K)(}
+S	@@9
+S	@@9
+S	@@9I
+S	@@9
+S	@@9I
+S	@@9I
+@@9h
+S	@@9I
+S	@@9I
+S	@@9I
+mB)`
+AQ7}
+S	@@9
+S	@@9
+S	@@9I
+S	@@9I
+S	@@9
+S	@@9	
+BQ;}
+S	@@9
+S	@@9
+S	@@9I
+S	@@9I
+S	@@9
+S	@@9i
+S	@@9
+S	@@9
+S	@@9
+'L)(}
+S	@@9
+S	@@9
+S	@@9
+MB)`
+S	@@9
+S	@@9
+S	@@9I
+S	@@9I
+S	@@9
+S	@@9	
+mB)@
+AQ7}
+S	@@9
+S	@@9
+S	@@9I
+S	@@9I
+S	@@9
+S	@@9	
+BQ;}
+S	@@9
+S	@@9
+S	@@9I
+S	@@9I
+S	@@9
+S	@@9i
+S	@@9
+S	@@9
+S	@@9
+'L)(}
+S	@@9
+S	@@9
+S	@@9
+MB)@
+S	@@9
+S	@@9
+S	@@9I
+S	@@9I
+S	@@9
+S	@@9	
+AQ7}
+S	@@9
+S	@@9
+S	@@9I
+S	@@9I
+S	@@9
+S	@@9	
+M@)	eA)
+BQ;}
+S	@@9
+S	@@9
+S	@@9I
+S	@@9I
+S	@@9
+S	@@9i
+U@)	aA)
+S	@@9
+S	@@9
+S	@@9
+'K)(}
+S	@@9
+S	@@9
+S	@@9
+S	@@9
+S	@@9
+S	@@9I
+S	@@9I
+S	@@9
+S	@@9	
+eB)`
+AQ7}
+S	@@9
+S	@@9
+S	@@9I
+S	@@9I
+S	@@9
+S	@@9	
+M@)	eA)
+qB)`
+BQ;}
+S	@@9
+S	@@9
+S	@@9I
+S	@@9I
+S	@@9
+S	@@9i
+U@)	aA)
+MB)`
+S	@@9
+S	@@9
+S	@@9
+'K)(}
+S	@@9
+S	@@9
+S	@@9
+YB)`
+S	@@9
+S	@@9
+S	@@9I
+S	@@9I
+S	@@9
+S	@@9	
+Z&js
+Zsju
+G6#4
+Z&js
+Zsju
+G6#4
+jc8.
+H,8J
+Ghf8p
+H'8#jf8
+H&8Bhd8
+H"80jd8
+H.8J
+H'8ght85
+ht84
+hs8'
+H'8chs8&
+jy8{
+jy8{
+i;89jy8
+91jx8
+9fha8s
+i38&
+9aha8
+ic8.
+H,8J
+'jf8p
+H'8Chf8
+H&81jd8
+H18Phd8
+H.8J
+H'8ght85
+ht84
+hs8'
+H'8chs8$
+:jy8{
+jy8{
+91jx8
+9fha8s
+i38F
+9qha8
+CJ)3P@
+R&L0
+xXc	
+y>x1
+Uxox
+Bxpx
+i$x1
+CH)$L@
+R#L0
+RoM*
+y:xe
+hmxe
+hnxs
+xkxs
+CH)$L@
+R#L0
+RoM*
+y:xe
+hmxe
+hnxs
+xkxs
+if81~G
+hs8Shs8
+qhq8q
+hq8Qhq8
+php81
+5jt86ht8e
+24js83hs8c|G
+R$L@
+hy89
+hy8s~S
+k{8$
+ojo8
+ojo8
+js8T
+js87
+ht8c
+ig81~G
+hs81
+Qhq81
+fhs81
+Php8
+bhf8
+h+8k
+jt8d
+3jt8
+jt84jt8c|G
+hu8c
+hc8c
+hu8c
+hs8B
+hb8B
+hs8B
+h+8k
+GJ)$
+yhx8
+2{hx8
+hx8s~S
+jy8s
+js8s
+jy8s
+h)8)
+k{8%
+ke8s~S
+<kf8V
+jf8s
+9ks8
+jf8S
+fjf86
+jv8sjv8
+uhu8
+cht8
+ig8B
+hf81
+Qhq81
+fhf81
+Php8qhq8
+5jt86ht8
+27jt84ht8e
+hs8c
+hc8c
+hs8c
+hd8c
+hc8c
+hd8c
+R$L@
+hz8Z
+hz8s~S
+jy8Y
+js8s
+ju8s
+k{8$
+eje8
+jo8dje8
+js8T
+js87
+hv8s
+hu8c
+_9KN
+.LiKN
+iIN]!
+N@yKN
+yINO!
+9O@5
+N))a
+N!(a
+N!(a
+R	hi
+]8CN
+NKhCN
+.DxCN
+yINF 
+8GNi 
+xEN1"
+-Oc4
+Nc(a
+-OD!
+-O$!	.
+-OB4
+NB(a
+Nc(a
+#.B(!
+@7%]r
+Kvjv
+He8'
+Hf8'<
+9O@5
+N!(a
+N!(a
+R	hi
+hENJ 
+N_hCNM!	.
+xENH 
+NIxCN
+-OB4
+NB(a
+Nc(a
+-Oc!
+Nc(a
+-O#!	.e"
+Nc(a
+@7%]r
+Kvjv
+He8'
+Hf8'<
+vn47
+~nc+a
++aNr(!
+(aNs(!
+*aNt(!
+(aNu(!
+gnx6
+$*aN
+r+aNT*!
+f*aN
+h887
+h78V
+h181
+h18P
+h18?
+h/8.
+h.8N<
+h/8n
+h.8k
+G6C4
+vn47
+~nc+a
++aNr(!
+(aNs(!
+*aNt(!
+(aNu(!
+gn76
+qny6
+e+aN
+r+aNT*!
+r*aN
+h886
+h68V
+h181
+h18P
+h18?
+h/8.
+h.8N<
+h/8n
+h.8k
+G6C4
+wnU7
+~n#*a
+(aNs(!
+*aNt(!
+(aNu(!
++aNv(!
+gnX6
+{nP*a
+%*aN
+~n1*a
+*aN4*!
+p+aN1+a
+q*aN6*!
+h887
+h78V
+h180
+h08P
+h18?
+h.8N
+h/8N
+h.8N<
+h/8k
+G6C4
+T	q}
+$*aN
+7	q}
+dNf(!
+tnC*a
+#*aNg(!
+T)(@
+7nq}
+*aNc(!
+pn%*a
+E*aN
+7lq}
+pn%*a
+E*aN
+R i18_
+1i 8k
+	@@9
+	@@9
+T4T@
+	@@9
+	@@9
+	@@9
+	@@9
+	@@9
+j)x{
+@@9	
+	@@9
+	@@9
+	@@9
+T4T@
+	@@9
+	@@9
+	@@9
+	@@9
+	@@9
+j)x{
+@@9	
+	@@9
+*-@),5A).=B)0EC)3!@
+RHk88
+k88h@
+z#	N	
+=i#	N
+N^k)
+Oz+!
+I#	N
+OZ+!
+Hc8i
+Hi8b
+Hh8i
+Hi8b
+_8L5
+Q+H,8
+Hi8,
+Q+H-8
+Q+H,8*H(8
+T*}A
+RL%@x
+5L*-
+)	3-
+Ns*a
+S*aNc*!
+Ns*a
+S*aNd*!
+T)}A
+K%@xl}
+T)}A
+K%@xl}
+5K*,
+Sl)	3,
+d(aN
+TIi|
+hjxl
+-K*l=
+3,h*x)
+TIi|
+hjxl}
+-K*l
+3,h*x)
+T*}A
+RL%@x
+Ns*a
+S*aNc*!
+Ns*a
+S*aNd*!
+T)}A
+K%@xl
+d(aN
+TIi|
+ NFT
+!NBT
+hjxly
+3,h*x)
+TIm}
+T*Oc
+NB(a
+b(aN
+*,h+x)
+TIi|
+hjxl
+!K*l
+3,h*x)
+E@LP
+_xle
+T*	@
+_xLe
+T*	@
+@xLe
+T	i}
+T	i}
+@y	9
+T)}A
+K%@xlq
+f(aN
+f(aN
+d(aN
+T*}A
+RL%@x
+NR*a
+(aNC*!
+NR*a
+(aND*!
+T)}A
+K%@xlq
+Sl)	3,
+5K*+	
+f(aN
+f(aN
+d(aN
+T*}A
+RL%@x
+)	3-
+5L*,	
+NR*a
+(aNC*!
+NR*a
+(aND*!
+@y	}
+B8!.c8!.
+@9M	@9k}
+@9M	@9k}
+A@Lg
+9L	@9,	
+Nc(a
+Nc(a
+3k}	Sk
+@9M	@9
+B8!.c8!.B
+@9M	@9
+hk8,h+8
+hk8,h)8*h+8
+T0O!T0O@
+T0O!T0O@
+9K	@9
+9J	@9
+9K	@9
+eT(O
+Nc(a
+eT'O
+Nc(a
+	@91
+	@91
+j>8K	@9
+T*m|
+T	}@
+hi8Jx
+SJ}@
++h*8
+Sgi-8
+ui68
+Sgi*8
+ho8s
+Sgi18k
+hn8!
+S$h-8d
+S$h08dhi8
+eho8
+S$h,8dhi8cho8c
+S#h18
+ii8hi*8
+93jf8
+@93j&8
+jj8O
+J/8n
+J/8N
+jn8O
+J/8J
+jj8N
+J.8j
+khg8
+h*8J
+Sk}@
+SKi38
+D@8.
+SKk38J
+shm8
+@L h
+@9-h*8
+@9Mh*8J
+mhg8
+h+8k
+R<~@
+thn8
+@L h
+@9tj(8
+h(8s
+$C)*
+$O)*
+$G)J
+$K)J
+KD@is)	
+O,Ai
+*c|}
+Ti)	
+*k}}
+@@9(
+@@9I
+R`#	
+1h x
+1h x
+1h x
+i+xk	
+R #	
+4a"S
+7hRM
+7hRM
+4a"S
+*JsQ
+7h.A
+Qh*S
+R"!*
+Rj.S
+4h&@
+Th&@
+4h&@
+T	q}
+=cl`Nd@
+T	u~
+T	u~
+N	u~
+T	u~
+T`B@
+K	 @9?	
+T	@@9
+Qhf@
+BH9h
+Thb@
+TlZ@
+F@9?
+*Ls}
+RKo|
+T	y-x
+ZKo|
+T	y-x
+*Ls}
+7hZ@
+4`B@
+4`>@
+4hj@
+	kA(
+rb>@
+7`J@
+fij8
+kb8k	
+4H[@
+4Hc@
+qx1n
+5h:w9(
+TaB@
+TiZ@
+4H_@
+q	}	
+QM}@
+S)}@
+i)8)
+@@9H
+@@9H
+1x)x)
+@8T$
+@8T$
+5HC@
+T(+@
+Q)G@9?
+*mq}
+$@xE$
+T[C@
+5HC@
+Q)G@9?
+*mq}
+`z*xJ
+$@xE$
+4hF@
+TiJ@
+	kj 
+Rhjh
+4h2w9
+iy8)	
++ih8J	
++ih8J	
+h2w9
+iy8)	
+@@9h
+@@9I
+@@9h
+@@9I
+@@9I
+@@9hG(7
+@@9hF 6
+Th^@
+Thb@
+	kaD
+@@9I
+TtB@
+,@)k}
+,@)k}@
+,@)k}
+,@)k}@
+e(aN
+(aNE
+%@x1"
+y/&@x
+KAI 
+d(aN
+e(aN
+NB(a
+(aN`(a
+ (aN"
+KPI/
+N!(a
+Nb(a
+H)ie
+oih8
+nil8
+nil8
+)A@9)
+)[zx
+khxJ
+ji(x)
+*kixJ
+Z*k)x
+*khxJ
+Z*k(x)
+R($@
+K0@iM
+R($@
+K0@iQ
+M<Ai
+!zpx
+,ik8J	
+I @)
+)J,A)
+ii8J	
+LcA@L
+h88+
+j88+
+i889
+LcA@L
+i88+
+j88+
+h889
+"@i;
+"@i{
+Ro}@
+ZPi/x
+Ro}@
+ZPi/x
+Ro}@
+ZPi/x
+Ro}@
+ZPi/x
+RO}@
+ZPi/
+RO}@
+ZPi/
+RO}@
+ZPi/
+RO}@
+ZPi/
+Tj|@
+mij8
+X($@
+X($@
+Lim8
+Z-i.8
+X($@
+X($@
+@i	%
+@i	%
+	Azj
+Qk}@
+hq80
+"PKPk/8
+nB(a
+"(aNA(!
+*lm|
+T(y.x
+R8o|
+@8k!
+@8k!
+nB(a
+(aN`(a
+ (aN"
+*lm|
+T(y.x
+Qk}@
+Qk}@
+0jp8
+!OKOk.8
+ h`8
+KQk0x
+nc(a
+C(aNC
+K	}@
+@@9h
++%@xk!
++%@xk
+nB(a
+(aN`(a
+ (aN
+K%@xk!
++%@xk
++%@xl!
++%@xk
+@(aN!(a
+a(aN
+K%@xl!
++%@xk
+TGO!TGO 
+TFO!TFO 
+TJ}@
+Ok08
+{ox1&
+Qk/8
+{ox1&
+Qk/8
+{ox1&
+Qk/8
+{ox1&
+Qk/8
+{ox1&
+Qk/8
+{ox1&
+Qk/8
+{ox1&
+Qk/8
+nc(a
+#(aNa(!
+C(aNb(!
+TJ}@
+	@y1
+K;s}
+@8l!
+@8l!
+ (aN 
+Qk}@
+Pk/8
+n!(a
+A(aN!(!
+Qk}@
+0jp8
+Ok.8
+Qk}@
+KPk/x
+Qk}@
+hq80
+ZPk/x
+Qk}@
+ZPk/x
+*Km|
+nc(a
+#(aNa(!
+C(aNb(!
+TJ}@
+kox1&
+Qk/x
+@k1x
+@k1x
+@k1x
+@k1x
+@k1x
+@k1x
+kox1&
+Qk/x
+nc(a
+#(aN
+A(aN
+TJ}@
+	@y1
+TJ}@
+_x1&
+_x1&
+_x1&
+_x1&
+@y1&
+@y1&
+	@y1&
+@y &
+TJ}@
+	@y1
+Qk}@
+kpx &
+ h`81
+Qk0x
+nB(a
+b(aNB
+Qk}@
+Pk/x
+Qk}@
+ZPk/x
+Qk}@
+ZPk/x
+*Km|
+nc(a
+#(aN
+A(aN
+@8ixi
+ihi8)
+ihj8)
+ihj8)
+h1x1
+h1x1
+@y!$
+@y!$
+@y!$
+@y!$
+h1x1
+@y!$
+@y!$
+@y!$
+@y!$
+h1x1
+h1xA
+/h1x1
+h1xA
+/h1x1
+@y!$
+@y!$
+@y!$
+h1xA
+/h1x1
+@y!$
+@y!$
+@y!$
+h1xA
+/h1x1
+h1x1
+h1x1
+@y!$
+@y!$
+@y!$
+h1x1
+@y!$
+@y!$
+@y!$
+h1x1
+h1x1
+h1x1
+@y!$
+@y!$
+@y!$
+h1x1
+@y!$
+@y!$
+@y!$
+h1x1
+ih8a
+hi8j|@
+Lh*8K
+Lh+8L
+Mh,8M
+hh8M
+Nh-8
+@9N	
+Ph.8P
+Ph/8
+kp8i
++kp8)
+Kkp8)
+kkp8,
+kp8k
+9+	@9
+kp8Lkp8
+9+	@9,
+9+kp8Lkp8
+k58+	@9l
+k48Kkp8
+kp8-
+hp8k
+k'8+	@9)
++hp8)
+T	ji8)j*8)j+8I$
+@9I(
+jh8I
+S)j,8I
+jh8(j-8
+@9(j.8H,
+9(j/8
+R)|@
+1~	S
+@9j|@
+Lh*8K
+Lh+8L
+}	SL
+Nh,8N
+Nh-8
+@9N	
+Ph.8P
+Ph/8
+Kc|@
+K!|@
+jaxk
+jfxk
+@9k#
+k}	Sk'
+@9k+
+k}	Sk/
+k}	Skk:8
+@9kk98
+k}	Skk88
+@9kk78
+kgxk
+ksxk
+Skk68
+kmxk
+ktxk
+Skk58
+@9)j*8)j+8I$
+@9I(
+)}	S)j,8I
+@9(j-8
+@9(j.8H,
+9(j/8
+R)|@
+hjx1
+hixB
+1~	S
+hix1
+D@x1
+hixJ
+Sj|@
+Lh*8K
+Lh+8L
+}	SL
+Mh,8M
+Nh-8
+Ph.8P
+Ph/8
+Kc|@
+K!|@
+jaxk
+jixk
+j`xk
+jixk
+k}	Sk'
+N@xk
+k}	Sk/
+kfxk
+k}	Skk:8
+khxk
+Skk98
+}	Slk88
+Slk78
+Slk68
+Skk58
+T	jix)
+S)j*8)j+8I$
+jhxJ
+)}	S)j,8I
+S(j-8
+S(j.8H,
+9(j/8
+ih8a
+hj8i|@
+Mh+8,
+Mh,8M
+Mh.8M
+hh8/
+Mh/8
+@9Ph)8-
+9Ph-8
+,kp8J
+Lkp8J
+9jkp8l
+kp8J
+9j	@9Jl
+kp8Lkp8
+9j	@9l
+9*kp8Lkp8
+k58j	@9l
+k48Jkp8
+kp8m
+hp8J
+k'8j	@9k
++hp8J
+jj8*j+8*j,8J,
+@9J(
+jh8j
+S*j.8J
+jh8(j/8
+@9(j)8H$
+9(j-8
+R)|@
+1~	S
+@9h|@
+Nh-8
+Nh78N
+Ph.8P
+Ph/8
+@9Ph(8P
+9Ph,8
+Kc|@
+K!|@
+jcx	jax
+jfx)
+9	j`x
+@9Il
+8	jax
+)}	S
+)}	S
+9ikfx
+)}	S
+k98i
+nkmx
+)}	S
+k78i
+lkgx)
+lksx)
+k68i
+lkmx)
+lktx)
+@9)j-8)j78I,
+@9I(
+)}	S)j.8I
+@9)j/8	
+@9)j(8I$
+9)j,8
+R)|@
+hjx1
+hixB
+1~	S
+hix1
+D@x1
+Sh|@
+Mh+8
+Mh,8M
+Nh-8N
+Nh/8
+SPh(8P
+9Ph.8
+Kc|@
+K!|@
+jaxk
+jjxk
+j`xk
+jjxk
+k}	Sk/
+N@xk
+k}	Sk'
+kfxk
+k}	Skk:8
+kixk
+Skk98+
+}	Slk88
+Slk78
+Slk68
+Skk58
+jjxJ
+S*j+8*j,8J,
+jixk
+J}	S*j-8J
+9	jix)
+S)j/8	
+S)j(8I$
+9)j.8
+ih8q
+	hh8j|@
+Ih*8K
+Ih+8I
+hi8L
+Mh,8
+Nh-8N
+@9N	
+Ph.8P
+Ph/8
+kp8,kp8
+l	@9
+kp8mkp8
+-kp8
+9Lkp8m	@9
+9,kp8
+k78l	@9
+k68l
+nhp8
+k58,kp8
+k38k
+jh8(j*8(j+8H$
+ji8(j,8
+@9	ji8(
+S(j-8H(
+@9(j.8H,
+9(j/8
+R)|@
+1~	S
+@9i|@
+Kh)8*
+Kh*8K
+Nh,8
+}	S-
+Nh-8N
+@9.	
+Ph.8P
+Ph/8
+Kc|@
+K!|@
+St~@
+}	SLl
+}	Sl#
+jcxM
+@9l/
+@9lk:8
+Slk98
+Slk88J
+J}	Sjk78
+@9jk68
+J}	Sjk58
+@9(j)8(j*8H$
+@9)j,8	
+}	S(j-8H(
+@9(j.8H,
+9(j/8
+R)|@
+hix1
+hlx1
+hlxB
+1~	S
+Sj|@
+Hh*8K
+Hh+8H
+Mh,8
+}	SM
+Nh-8N
+Ph.8P
+Ph/8
+Kc|@
+K!|@
+St~@
+jixk
+k}	SKl
+k}	Sk#
+j`xk
+kixk
+Skk:8
+Skk98
+Skk88
+kexk
+k}	Skk78
+khxk
+Skk68
+k}	Skk58
+T	jix)
+S)j*8)j+8I$
+9	jhx)
+S)j,8	
+}	S(j-8H(
+S(j.8H,
+9(j/8
+ih8q
+hi8h|@
+Kh*8
+Kh,8K
+Mh.8
+Mh/8M
+@9Ph(8
+9Ph-8
+-kp8
+	@9J
+kp8mkp8
+-kp8J
+kp8J
+9Jkp8
+hp8J
+9*kp8
+hp8J
+nhp8J
+k58*kp8
+T	ji8)j*8)j,8I,
+9	jk8)j.8	
+jk8I
+S)j/8I(
+@9)j(8I$
+9)j-8
+R)|@
+1~	S
+@9h|@
+Ih,8
+Ih.8I
+Ih68
+Ph/8P
+@9Ph(8P
+9Ph+8
+Kc|@
+K!|@
+St~@
+j`x	
+k}	SK 
+k}	SKl
+jcx,
+jexk
+@9k'
+@9kk:8
+Skk98
+Skk88)
+kexi
+)}	Sik78
+@9ik68
+)}	Sik58
+@9)j,8)j.8I,
+@9*j68
+)}	S)j/8I(
+@9)j(8I$
+9)j+8
+R)|@
+hix1
+hmx1
+hmxB
+1~	S
+Sh|@
+Ih+8
+Ih,8I
+Nh-8
+Nh/8N
+SPh(8P
+9Ph.8
+Kc|@
+K!|@
+St~@
+jjxk
+k}	SK 
+k}	SKl
+j`xk
+kjxk
+Skk:8
+Skk98
+Skk88
+kexk
+k}	Skk78
+kixk
+Skk68
+k}	Skk58
+jjxJ
+S*j+8*j,8J,
+jixJ
+S*j-8
+Z	jix)
+)}	S)j/8I(
+S)j(8I$
+9)j.8
+@9jkz8I
+9ikz8
+9	h|8(
+)i{8
+j{8I
+jj{8)
+j{8)
+)i{8
+k{8)
+9		@9
+j{8I
+9		@9
+9ij{8
+j{8I
+9	k{8
+9		@9
+k{8i
+k{8)
+9		@9
+)i{8
+T	ii8
+i|8I
+9	i|8
+)}	S
+@y	}
+9	h{x(
+IkixJk|xI
+Jkxx)
+Ikix
+9Ik|xL
+)}	S
+@yLO@x
+)}	S
+9	ixxL
+)}	S
+)}	S
+ijx)
+isx)
+ilx)
+itx(
+ikhx)
+ZJkhxJ
+)}	S
+9Hkhx
+9	h{x)
+IkixJkxx)
+Jk|xJ
+JkuxJ
+Ikix)
+ZKk{xk
+9IkxxJkux)
+)}	S
+@yJO@x)
+)}	S
+9	i|x)
+iuxJ
+)}	S
+9	i{x)
+ijx)
+)}	S
+9	iux
+i{xk
+ilxi
+ikxk
+ikxJ
+THkux
+ZIk{x)
+9Hk{x
+@9jkz8I
+9ikz8
+9	h|8(
+)i{8
+j{8I
+jj{8)
+j{8)
+)i{8
+k{8)
+9		@9
+j{8I
+9		@9
+9ij{8
+j{8I
+9	k{8
+9		@9
+k{8i
+k{8)
+9		@9
+)i{8
+T	ii8
+i|8I
+9	i|8
+)}	S
+@y	}
+9	h{x(
+IkixJk|xI
+Jkxx)
+Ikix
+9Ik|xL
+)}	S
+@yLO@x
+)}	S
+9	ixxL
+)}	S
+)}	S
+ijx)
+isx)
+ilx)
+itx(
+ikhx)
+ZJkhxJ
+)}	S
+9Hkhx
+9	h{x)
+IkixJkxx)
+Jk|xJ
+JkuxJ
+Ikix)
+ZKk{xk
+9IkxxJkux)
+)}	S
+@yJO@x)
+)}	S
+9	i|x)
+iuxJ
+)}	S
+9	i{x)
+ijx)
+)}	S
+9	iux
+i{xk
+ilxi
+ikxk
+ikxJ
+THkux
+ZIk{x)
+9Hk{x
+ikz8
+kz8I
+	h|8
+Ik|8
+j|8I
+9		@9
+9Ik|8
+Ji|8I
+j|8)
+jk|8)
+)i|8
+	@9I
+j|8)
+9	k|8
+	@9)
+j|8)
+ki|8)
+j|8kk|8i
+T	is8
+9	i|8
+i|8I
+@y	}
+	hyx*}
+Iksx
+)}	S
+@y+}
+k}	S
+9Kksx
+Lklx
+Lkuxk
+KkkxLO@xi
+ilxm
+ixx)
+9	iuxJ
+)}	S
+ikhx)
+khx)
+	h{x)
+Iksx)
+ZJkuxJ
+)}	S
+J}	S
+9Jksx
+KkkxJ
+ZLkux
+Kkxxk
+JkjxKO@xJ
+i{xJ
+9	iux)
+ijxJ
+i{xJ
+yux)
+ijxJ
+itxJ
+9	iux
+ixx)
+)}	S
+9	i{x)
+9	itx
+THkux
+9Hk{x
+ZIk{x)
+ikz8
+kz8I
+	h|8
+Ik|8
+j|8I
+9		@9
+9Ik|8
+Ji|8I
+j|8)
+jk|8)
+)i|8
+	@9I
+j|8)
+9	k|8
+	@9)
+j|8)
+ki|8)
+j|8kk|8i
+T	is8
+9	i|8
+i|8I
+@y	}
+	hyx*}
+Iksx
+)}	S
+)}	S
+9Iksx
+Kkkxi
+Kkux)
+IkixK
+@yLO@xi
+ilxm
+ixx)
+9	iuxJ
+)}	S
+ikhx)
+khx)
+	h{x)
+IksxJkux)
+)}	S
+)}	S
+9Iksx)
+JkjxJ
+JkuxJ
+ZKkxx)
+Ikix
+ZKO@x)
+i{xJ
+9	iux)
+ijxJ
+i{xJ
+yux)
+ijxJ
+itxJ
+9	iux
+ixx)
+)}	S
+9	i{x)
+9	itx
+THkux
+9Hk{x
+ZIk{x)
+hl8lxl
+hl8lxl
+hj8k
+khk8+
+hj8,
+khl8+
+hj8K
+jhk8*
+Tt>@
+R`B@
+TtB@
+4hR@
+T`B@
+4`>@
+T{>@
+@@9I
+T`B@
+T{B@
+@@9I
+T`>@
+Tw>@
+@@9I
+R,y(x
+,y(x
+ThB@
+T`>@
+T{B@
+@@9(
+86{>@
+@@9h
+@@9(
+86{>@
+@@9h
+)h:@
+7`B@
+)h:@
+=)	@
+R	h*
+=J	@
+hj9x
+R7k(
+Lii8k	
++ih8J	
+T( `
+KJ}}
+KJ}}
+T!yj
+KJ}}
+KJ}}
+ThB@
+Rhjh
+Th>@
+T`:@
+T`>@
+Rwj(
+@@9(
+Tw>@
+@@9I
+Tw>@
+@@9H
+@@9I
+Rcjh
+Rejh
+Rcjh
+Rejh
+6C))
+KO]@
+ghjx
+jix?
+Tk}@
+zkxJ=
+K1	@
+K0!@
+@@9(
+T{>@
+@@9I
+T{>@
+@@9(
+?7v>@
+@@9I
++ih8J	
+87sB@
+A@9i
+_8"hw8
+9"iw8
+@9$hb8
+9$ib8
+_8$hb8
+9$ib8
+@9!hb8
+9)ib8
+9	jb8
+@97hd8
+9"id8
+@9$hb8
+9"ib8
+@9$hb8
+9"ib8
+	@9!hb8
+9)ib8
+9,ib8
+9,hb8
+9.il8
+9,hl8
+9.il8
+9,hl8
+9)il8
+)hl8
+9"ip8
+9"ip8
+9"ip8
+9)ip8
+ja8)
+9,ia8
+9!il8
+9!il8
+9)il8
+@9!ip8
+@9!ip8
+@9!ip8
+@9)ip8
+9	ji8
+9	ji8
+9	ji8
+9	ji8
+_8"hw8
+90iw8
+@9"hp8
+9"ip8
+_8"hp8
+9"ip8
+@9!hp8
+9)ip8
+@97id8
+9"hd8
+@9$ib8
+9"hb8
+@9$ib8
+9"hb8
+	@9)ib8
+9	jb8
+9)hb8
+,hb8
+9,ib8
+@9.hl8
+9.il8
+@9.hl8
+9.il8
+@9.hl8
+9)il8
+	jl8
+9"ip8
+9"ip8
+9"ip8
+9)ip8
+ia8)
+9,ia8
+9!il8
+9!il8
+9)il8
+9	jl8
+90ip8
+90ip8
+90ip8
+9)ip8
+3-@i
+1QAi
+L	@9
+3-@i
+1QAi
+@9)a
+L	@9
+@9)a
+@9)a
+@9ka
+@9)a
+@9)a
+@9)a
+@9ka
+@9ka
+@9ka
+=@i1	@
+	kJ*
+.hw8
+9.iw8
+97hd8.
+9$id8
+97hd8
+9$id8
+90hd8
+9)id8
+_8"hw8)
+90iw8
+@9"hp8
+9"ip8
+_8"hp8
+9"ip8
+@9!hp8
+9)ip8
+0hd8
+90id8
+9Phd8
+@9$hp8
+9$ip8
+9Php8
+@9$hp8
+9$ip8
+9Php8
+	@9!hp8
+9)ip8
+9Ihp8
+@9#ib8
+90hb8
+@90in8
+9.hn8
+@90in8
+9.hn8
+@9)in8
+9)hn8
+9"ip8
+9"ip8
+9"ip8
+9)ip8
+9!ip8
+9!ip8
+9!ip8
+9)ip8
+90ip8
+90ip8
+90ip8
+9)ip8
+	kJ*
+_8!iw8
+.hw8
+_8.id8
+97hd8.
+_87id8
+97hd8
+_8)id8
+9)hd8
+9	jd8
+hw8)
+90iw8
+90hw8
+9"ip8
+90hp8
+9"ip8
+90hp8
+9)ip8
+9)hp8
+Phd8
+90id8
+90hd8
+@9Dhp8
+9$ip8
+90hp8
+@9Dhp8
+9$ip8
+90hp8
+	@9Bhp8
+9)ip8
+9)hp8
+@9#hb8
+90ib8
+@90hn8
+9.in8
+@90hn8
+9.in8
+@90hn8
+9)in8
+9"ip8
+9"ip8
+9"ip8
+9)ip8
+9!ip8
+9!ip8
+9!ip8
+9)ip8
+@9!ip8
+@9!ip8
+@9!ip8
+@9)ip8
+,!@9
+,%@9
+,)@9
+,-@9
+,	@9
+,1@9
+,5@9
+,9@9
+,=@9
+@i	8	
+F{fx
+v{vx
+^{vx
+`{vx
+F{fx~{~x
+F{fx
+z{zx
+{`xF
+[{{x
+F{fx
+F{fxf
+F{fx
+y 	@9F	@9
+{zxz
+{zxz
+x{xu
+F{fx
+F{fx
+F{fxf
+F{fx
+H!@9
+H%@9
+HA@9
+HE@9
+H)@9
+H-@9
+HI@9
+HM@9
+H	@9
+L1@9H5@9
+[Q@9BU@9Y9@9\=@9HY@9
+H]@9
+'J)J	
+	kj#
+Sg	@
+5yux
+zyzxU
+t{tx
+5yux
+vyzx
+t{tx
+5yuxvyvx
+t{tx
+)yux
+kyux
+t{txi
+;y{xk
+zvxk
+zvx;y{x
+zkxv
+;y{xk
+zvxv
+)yvx)
+zkx)
+6yvx{y{x
+zuxv
+6yvx
+{y{x
+6yvx
+{y{xv
+)yvx
+kyvxi
+zkx)
+zsx6yvx
+zkxk
+zsxv
+6yvx
+zkxk
+3ysxe
+)ygxk
+zkx)
+#G))	
+@iG,	
+i @9
+i$@9
+i(@9
+i,@9
+~0@9k4@9	
+f8@9
+d<@9(|
+jzx6
+jzx9
+kzx9
+jyxz
+kyxY
+jyxz
+kyxY
+jzx:kzxw
+jwx7kwxz
+jwx7kwxz
+jwx7kwx
+jwxz
+7kwxW
+jwxz
+7kwxW
+jwxz
+7kwxW
+7kwx
+jwxY
+kwx7
+jtx7
+l!@9
+,!@9
+l%@9
+,%@9
+l)@9
+,)@9
+l-@9
+,-@9
+l	@9
+,	@9
+l1@9
+l5@9
+l9@9
+l=@9
+@9&1@9%5@909@9'=@9$
+iq81
+i{81
+i{8{
+iq8q
+i{8{
+iq8q
+RQym
+<j{8
+io8{
+<j{8
+io8{
+<j{8
+io8{
+1j{8
+i{8o
+i{8{
+-jm8m
+i{8{
+-jm8m
+i{8{
+-jm8m
+-jm8
+RJym
+Siq8
+iq81
+io8/
+Biq8
+iq81
+io8/
+Aiq8
+iq81
+io8/
+Jiq8
+iq8/
+ib8B
+!ja8A
+ib8!ja8B
+!@9B
+ib8B
+!@9a
+!ja8A
+%@9B
+0jp8
+P	@9
+)@9!
+"ja8
+ia8!
+)@9P
+ip80
+-@9!
+"ja8
+ia8!
+-@9P
+ip80
+	@9!
+"ja8
+	@9p
+ip8!
+1jm8
+ia8!
+iq81
+iq81
+ih8(
+!@9)
+ii8)
+!@9(
+ih8(
+%@9)
+ii8)
+%@9H
+ih8(
+@i)	@
+Q!@9
+Q%@9
+Q)@9
+Q-@9
+H	@9
+@9L1@9M5@9O9@9F=@9E
+it8)
+it8'ic8
+9iy89
+iz86
+iv8T
+4it8
+)iy8(
+4it8
+6iy8
+4it8
+iv8z
+)iz8(
+9H	@9
+	ii8v	@9)
+jy8)
+	ii8)
+ij80ip8J
+!ia8
+ij8b
+.ip8)ia8J
+$jc8e
+jb8B
+#hc8B
+%jd8f
+jc8c
+$hd8c
+!@9c
+$jc8e!@9
+jb8B
+#hc8
+1je8f%@9
+jd8B
+1he8
+)@9B
+#hb8d)@9
+iq81
+%hd8f-@9
+ic81
+jd8B
+	@9B
+#hb8d	@9
+jb81
+!hn81
+ik8k
+jn8k
+iq8b
+0ip8
+ia8(ih8
+!@9J
+ij8q!@9(
+(ih8
+il8k%@9j
+)ij8)
+il8)
+l!@9
+,!@9
+l%@9
+,%@9
+l)@9
+,)@9
+l-@9
+,-@9
+l	@9
+,	@9
+l1@9
+l5@9
+l9@9
+l=@9
+@9&1@9%5@909@9'=@9$
+ROyx
+iq81
+i{81
+iq81
+i{81
+iq81
+i{81
+RQym
+<j{8
+<j{8
+<j{8
+1j{8o
+i{8{
+-jm8m
+;j{8
+;j{8
+-jm8
+RJym
+Siq8
+Biq8
+Biq8
+Jio8
+ia8!
+"jb8!
+ia8"jb8!
+!@9B
+ia8!
+"jb8!
+%@9B
+%@9a
+0jb8
+P	@9
+)@9!
+"ja8
+)@9p
+-@9!
+"ja8
+-@9p
+	@9!
+"ja8
+	@9p
+1jm8
+iq81
+ia81
+!@9)
+!@9(
+%@9)
+@91!@9'%@93)@94-@95	@96
+@991@9:5@9;9@9<=@9>
+hc8!
+hb8!
+hc8b
+hc8b
+hc8b
+hc8$
+hd8a
+hc8a
+#	@9
+hc8a
+hc8b
+hc8b
+hd8b
+hc8a
+hc8a
+	hhx)
+Z	h(x
+*aN	
+I)_!
+Tjbv9_	
+Tjrv9_	
++yhxJ	
++ih8J	
+\ky8{
+\ky8{
++yhxJ	
++ih8J	
++ih8J	
++yhxJ	
+6w9(
++yhxJ	
++yhxJ	
++yhxJ	
++ih8J	
+5iN@
+I)?!
+2w9(
+@@9I
+ @9i&
+@@9I
+5(G@
+jz8U
+Rh?2
+Rh?2
+.!CE
+DiL}
+4(S@
+!n#i
+@@9h
+ThCr
+R(i*
+T(3w9
+@@9h
+Iz(%
+@@9H
+KiC@q(
+	jMZ
+Tnym
+T!jh
+lx*!
+C@ql
+QJ}p
+SJ}@
+od(c
+/4@i.@Ai
+? @q
+ @qG
+_#@q
+_#@1
+"@qX
+"@qI
+"@qJ
+"@qB
+h)8)
+%!9)
+0Or6
+ns*a
+S*aNrV
+ns*a
+S*aN3
+tns*a
+4+aN
+t*!N
+U 9)
+tnt*a
+ns*a
+*aN3
+0OQ6
+0N2F
+TBOM
+NM	@
+TBO4
+FFF+F
+bgBBBBBlq
+NBBBBBBBBBB{S
+]BBBBBBBBBBBB
+bgBBBBBlq
+NBBBBBBBBBB{S
+6#	@
+ttttttttttttttttttttttj
+$D<\"B:Zd
+4T,L2R*Jt
+ @8X&F>^`
+0P(H6V.Np
+$D<\"B:Z@@@@@@@@K
+8888888888888888888888888888888888
+88888888888888888888
+88888888888888888888888
+2LLLLLLLLLLLLL?LLLLLLLLLLLLLLLLL
+vvvvv
+vvvvvv
+vvvvv
+vvvvvvvvvv
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+xxxxxxx
+xxxxxxxxx
+xxxx
+xxxxx
+xxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+777***
+77**
+******7777
+**77
+jjjjjjj
+jjjjjjjjj
+jjjj
+jjjjj
+jjjjjjjjjjjjjj
+jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
+******
+XXX=XXXXXXX@XXXXXXXC
+																							
+																																													
+"""""""""""""""""""""5
+$D<\"B:Zd
+4T,L2R*Jt
+ @8X&F>^`
+0P(H6V.Np
+@333333cA
+Mb`?
+    "                        $                     &(
+      
+                                               
+P\KKKKKKVKKKKKK
+60KK	
+KKKKK**K
+KKKKKKKKKK$K$KK
+Assertion %s failed at %s:%d
+plane_count == nb_components - 1
+libswscale/alphablend.c
+desc
+libswscale/swscale_internal.h
+libswscale/gamma.c
+libswscale/hscale.c
+SWScaler
+swscaler
+sws_flags
+scaler flags
+fast_bilinear
+fast bilinear
+bilinear
+bicubic
+experimental
+neighbor
+nearest neighbor
+area
+averaging area
+bicublin
+luma bicubic, chroma bilinear
+gauss
+Gaussian
+sinc
+lanczos
+Lanczos
+spline
+natural bicubic spline
+print_info
+print info
+accurate_rnd
+accurate rounding
+full_chroma_int
+full chroma interpolation
+full_chroma_inp
+full chroma input
+bitexact
+error_diffusion
+error diffusion dither
+srcw
+source width
+srch
+source height
+dstw
+destination width
+dsth
+destination height
+src_format
+source format
+dst_format
+destination format
+src_range
+source is full range
+dst_range
+destination is full range
+param0
+scaler param 0
+param1
+scaler param 1
+src_v_chr_pos
+source vertical chroma position in luma grid/256
+src_h_chr_pos
+source horizontal chroma position in luma grid/256
+dst_v_chr_pos
+destination vertical chroma position in luma grid/256
+dst_h_chr_pos
+destination horizontal chroma position in luma grid/256
+sws_dither
+set dithering algorithm
+auto
+leave choice to sws
+bayer
+bayer dither
+error diffusion
+a_dither
+arithmetic addition dither
+x_dither
+arithmetic xor dither
+gamma
+gamma correct scaling
+alphablend
+mode for alpha -> non alpha
+none
+ignore alpha
+uniform_color
+blend onto a uniform color
+checkerboard
+blend onto a checkerboard
+libswscale/output.c
+n == s->plane[ii].available_lines
+libswscale/slice.c
+One of the input parameters to sws_scale() is NULL, please check the calling code
+Slice parameters %d, %d are invalid
+bad src image pointers
+bad dst image pointers
+Slices start in the middle!
+libswscale/swscale.c
+dstY >= ret
+ret >= 0
+c->dstH >= dstY
+Warning: dstStride is not aligned!
+         ->cannot do aligned memory accesses anymore
+(lastLumSrcY - firstLumSrcY + 1) <= hout_slice->plane[0].available_lines
+(lastChrSrcY - firstChrSrcY + 1) <= hout_slice->plane[1].available_lines
+unsupported bayer conversion
+libswscale/swscale_unscaled.c
+!(srcStride[0] % 2 || srcStride[1] % 2 || srcStride[2] % 2 || dstStride[0] % 2 || dstStride[1] % 2)
+!(dstStride[0] % 2 || dstStride[1] % 2)
+internal error %s -> %s converter
+unsupported planar RGB conversion %s -> %s
+unsupported conversion to planar RGB %s -> %s
+srcSliceH > 1
+--prefix=/Volumes/P4/steam/thirdpartycode/nonredist/ffmpeg/dev/build_osxarm64 --cc=clang --extra-cflags='-arch arm64 -g -O2 -fno-strict-aliasing -ffast-math -gdwarf-2 -pipe -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -fasm-blocks' --ld=clang --extra-ldflags='-arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.9' --enable-cross-compile --target-os=darwin --arch=arm64 --enable-shared --disable-static --enable-runtime-cpudetect --disable-all --enable-avcodec --enable-avutil --enable-avresample --enable-avformat --enable-swscale --enable-parser=h264 --enable-decoder='aac,h264,gif,vorbis,mp3,flac,alac,libvpx_vp8,libvpx_vp9,pcm*,valve*' --enable-demuxer='aac,matroska,gif,ogg,mov,mp3,flac,wav,flv' --enable-hwaccels --enable-videotoolbox --enable-muxer=flv --disable-decoder='h263,hevc,mpeg1video,mpeg2video,vc1,vp8,vp9' --enable-libvpx --enable-libvorbis --enable-protocol='file,rtmp'
+libswscale license: LGPL version 2.1 or later
+YUV color matrix differs for YUV->YUV, using intermediate RGB to convert
+libswscale/utils.c
+deprecated pixel format used, make sure you did set range correctly
+%s is not supported as input pixel format
+%s is not supported as output pixel format
+Exactly one scaler algorithm must be chosen, got %X
+%dx%d -> %dx%d is invalid scaling dimension
+Forcing full internal H chroma due to odd output size
+Forcing full internal H chroma due to input having non subsampled chroma
+Desired dithering only supported in full chroma interpolation for destination format '%s'
+Ordered dither is not supported in full chroma interpolation for destination format '%s'
+%s output is not supported with half chroma resolution, switching to full
+full chroma interpolation for destination format '%s' not yet implemented
+Cannot allocate memory.
+c->chrDstH <= dstH
+ehh flags invalid?!
+%s scaler, from %s to %s%s 
+dithered 
+using %s
+%dx%d -> %dx%d
+lum srcW=%d srcH=%d dstW=%d dstH=%d xInc=%d yInc=%d
+chr srcW=%d srcH=%d dstW=%d dstH=%d xInc=%d yInc=%d
+using alpha blendaway %s -> %s special converter
+using unscaled %s -> %s special converter
+%1.3f 
+sizeFactor > 0
+filterSize > 0
+filter2Size > 0
+minFilterSize > 0
+SwScaler: reducing / aligning filtersize %d -> %d
+(*filterPos)[i] >= 0
+(*filterPos)[i] < srcW
+(*filterPos)[i] + j < srcW || !filter[i * filterSize + j]
+SwScaler: zero vector in scaling
+sws: initFilter failed
+area averaging
+luma bicubic / chroma bilinear
+nearest neighbor / point
+bicubic spline
+libswscale/vscale.c
+Optimized 2 tap filter code cannot be used
+No accelerated colorspace conversion found from %s to %s.
+libswscale/yuv2rgb.c
+%ibpp not supported by yuv2rgb
+SGRESESESESESESESESESESESESESESESESESESFRFRFRFRFRFRFRFRFRFRFRFRFRFRESESESESESESFRESESESEp@`0A
+@___stack_chk_guard
+@dyld_stub_binder
+@___isnand
+@___stack_chk_fail
+@_abort
+@_av_free
+@_av_freep
+@_av_get_bits_per_pixel
+@_av_get_cpu_flags
+@_av_get_pix_fmt_name
+@_av_image_alloc
+@_av_log
+@_av_malloc_array
+@_av_malloc_tracked
+@_av_mallocz_array
+@_av_mallocz_tracked
+@_av_opt_get_int
+@_av_opt_set_defaults
+@_av_opt_set_int
+@_av_pix_fmt_desc_get
+@_av_pix_fmt_get_chroma_sub_sample
+@_av_pix_fmt_swap_endianness
+@_bzero
+@_cos
+@_exp
+@_exp2
+@_memcpy
+@_memset
+@_pow
+@_sin
+_sws
+cale_
+free
+normalizeVec
+printVec2
+_class
+DefaultFilter
+GaussianVec
+IdentityVec
+cale
+etColorspaceDetails
+hiftVec
+ubVec
+loneVec
+ertPalette8ToPacked
+version
+configuration
+license
+sSupported
+nit_context
+Input
+Output
+EndiannessConversion
+lloc
+ddVec
+set_opts
+context
+achedContext
+lorspaceDetails
+efficients
+text
+stVec
+Context
+Filter
+xxxxxxxx
+8txxxx
+X4X4X\0\T
+d4d4dh4h\
+(t44444444444
+444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444
+444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444
+4444
+444444444444444444444444444444444444444444444444D44444444444444444444444444444444
+ 444444444444444444444444444
+_sws_addVec
+_sws_allocVec
+_sws_alloc_context
+_sws_alloc_set_opts
+_sws_cloneVec
+_sws_convVec
+_sws_convertPalette8ToPacked24
+_sws_convertPalette8ToPacked32
+_sws_freeContext
+_sws_freeFilter
+_sws_freeVec
+_sws_getCachedContext
+_sws_getCoefficients
+_sws_getColorspaceDetails
+_sws_getConstVec
+_sws_getContext
+_sws_getDefaultFilter
+_sws_getGaussianVec
+_sws_getIdentityVec
+_sws_get_class
+_sws_init_context
+_sws_isSupportedEndiannessConversion
+_sws_isSupportedInput
+_sws_isSupportedOutput
+_sws_normalizeVec
+_sws_printVec2
+_sws_scale
+_sws_scaleVec
+_sws_setColorspaceDetails
+_sws_shiftVec
+_sws_subVec
+_swscale_configuration
+_swscale_license
+_swscale_version
+___isnand
+___stack_chk_fail
+___stack_chk_guard
+_abort
+_av_free
+_av_freep
+_av_get_bits_per_pixel
+_av_get_cpu_flags
+_av_get_pix_fmt_name
+_av_image_alloc
+_av_log
+_av_malloc_array
+_av_malloc_tracked
+_av_mallocz_array
+_av_mallocz_tracked
+_av_opt_get_int
+_av_opt_set_defaults
+_av_opt_set_int
+_av_pix_fmt_desc_get
+_av_pix_fmt_get_chroma_sub_sample
+_av_pix_fmt_swap_endianness
+_bzero
+_cos
+_exp
+_exp2
+_memcpy
+_memset
+_pow
+_sin
+dyld_stub_binder
+radr://5614542
+libswscale.5.dylib
+Y_3N'
+)EInm
+	w1B
+[@T?
+x*N*
+dNG*
+`etA
+!D;.?
+EE1w
+y?g{
+gy0A
+'pH 
+?bV1\
+(.>5
+Z"`N
+bzr;c
+~%d+4
+Z:3S
+|(.t1
+]}!VQ
+6v>0{G
+7_W)
+D@x'$
+j([g
+]0G`/
+Zxwz
+^a#C
+U(s#>
+Dt{k
+8AxP
+%:fe
+<8rP
+e)c[
+2U`~
+4Io=
+on2h?D#J
+gZ'?
+<N[^
+p"<)
+!6wA
+uJ+6
+z*D[
+90aN
+`A9-
+e.K_Q
+Y(#PKk
+3P9u

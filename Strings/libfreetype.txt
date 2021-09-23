@@ -1,0 +1,9485 @@
+__TEXT
+__text
+__TEXT
+__symbol_stub
+__TEXT
+__stub_helper
+__TEXT
+__cstring
+__TEXT
+__const
+__TEXT
+__unwind_info
+__TEXT
+__DATA
+__dyld
+__DATA
+__nl_symbol_ptr
+__DATA
+__la_symbol_ptr
+__DATA
+__const
+__DATA
+__data
+__DATA
+__common
+__DATA
+__bss
+__DATA
+__LINKEDIT
+@loader_path/libfreetype.dylib
+/usr/lib/libSystem.B.dylib
+/usr/lib/libz.1.dylib
+/usr/lib/libbz2.1.0.dylib
+/usr/lib/libgcc_s.1.dylib
+fffff.
+ffff.
+fffff.
+fff.
+<^_[]
+L^_[]
+ffffff.
+xHstib
+yHltuo
+xHltuo
+xHltuo
+xHstib
+xHpmoc
+|^_[]
+ffff.
+ffff.
+ffffff.
+fffff.
+fff.
+0^_]
+L^_[]
+fffff.
+\^_[]
+<^_[]
+@^_]
+fffff.
+ffffff.
+fffff.
+ffff.
+0^_]
+^_[]
+fff.
+P^_]
+rcni
+l^_[]
+l^_[]
+0^_]
+fffff.
+0^_]
+fffff.
+@X;E
+ffffff.
+0^_]
+ffffff.
+@^_]
+ffff.
+@^_]
+cinu
+cinu
+cinu
+ffffff.
+	;A$
+@\;E
+<^_[]
+L^_[]
+cinu
+0^_]
+fffff.
+@^_]
+fffff.
+<^_[]
+<^_[]
+ffffff.
+fffff.
+ltuo
+@H-stib
+xHltuo
+@^_]
+x$ltuo
+x$ltuo
+0^_]
+L^_[]
+0^_]
+fff.
+ffffff.
+fff.
+ffff.
+xHpmoc
+(^_[]
+`^_]
+ffffff.
+0^_]
+ffff.
+ltuo
+ltuo
+ffff.
+|^_[]
+fffff.
+0^_]
+^_[]
+0^_]
+ffffff.
+<^_[]
+ffff.
+<^_[]
+ffff.
+<^_[]
+L^_[]
+L^_[]
+,^_[]
+,^_[]
+<^_[]
+<^_[]
+<^_[]
+ffff.
+@^_]
+fffff.
+0^_]
+0^_]
+ffffff.
+0^_]
+ffffff.
+ffffff.
+fffff.
+fffff.
+0^_]
+ffff.
+0^_]
+0^_]
+0^_]
+ffffff.
+ffff.
+fffff.
+ffff.
+ffffff.
+<^_[]
+0^_]
+fffff.
+P^_]
+`^_]
+fff.
+L^_[]
+fff.
+x$ltuo
+ltuo1
+ltuo
+^_[]
+TSOP
+TSOP
+tnfs1
+tnfs
+|^_[]
+^_[]
+fffff.
+l^_[]
+-OTTO
+l^_[]
+l^_[]
+@^_]
+ffffff.
+fff.
+1pyt
+ DIC
+1PYT
+<^_[]
+ ^_]
+,^_[]
+ffffff.
+L^_[]
+(^_]
+ffffff.
+ ^_]
+ffff.
+\^_[]
+^_[]
+^_[]
+fff.
+xHstib
+@^_]
+xHstib
+fff.
+xHltuo
+fff.
+fff.
+@Hltuo
+fffff.
+xHstib
+xHltuo
+^_[]
+@^_]
+|^_[]
+^_[]
+P^[]
+\^_[]
+mgpf
+mgpf
+perp
+perp
+L^_[]
+<^_[]
+@^_]
+fffff.
+fffff.
+fffff.
+ffffff.
+ ^_]
+ffff.
+ffffff.
+ffffff.
+ffffff.
+^_[]
+ffff.
+ffff.
+fff.
+ffff.
+^_[]
+ffff.
+P^[]
+ffff.
+fff.
+fffff.
+ffff.
+4^_[]
+@^_]
+ffffff.
+P^_]
+P^_]
+0^_]
+l^_[]
+<^_[]
+xHltuo
+xHltuo
+xHstib
+xHltuo
+xHstib
+fffff.
+<^_[]
+fffff.
+eurt
+L^_[]
+ffff.
+fff.
+@^_]
+@^_]
+^_[]
+fff.
+ffff.
+ffff.
+@^_]
+^_[]
+,^_[]
+fff.
+fff.
+ffffff.
+^_[]
+fff.
+fff.
+0^_]
+L^_[]
+`^_]
+p^_]
+`^_]
+P^_]
+`^_]
+,^_[]
+fff.
+,^_[]
+0^_]
+fffff.
+ ^_]
+ffffff.
+,^_[]
+<^_[]
+P^_]
+fff.
+L^_[]
+T^_]
+fff.
+fffff.
+fffff.
+fff.
+ffffff.
+fff.
+ffff.
+[0+t
+[4+t
+\^_[]
+L^_[]
+fff.
+fff.
+ ^_]
+^_[]
+\^_[]
+`^_]
+fffff.
+fffff.
+ ^[]
+fffff.
+^_[]
+ffffff.
+xmdh
+xmdh
+`^_]
+fylg
+fylg
+acol
+acol
+P^_]
+ tvc
+ tvc
+@^_]
+mgpf
+mgpf
+0^_]
+perp
+perp
+0^_]
+SWVP
+^_[]
+^_[]
+@^[]
+<^_[]
+ravc
+ravc
+0^_]
+ffffff.
+P^_]
+ffffff.
+P^_]
+fffff.
+perp
+-mgpf
+- tvc
+^_[]
+ ^_]
+ffff.
+fffff.
+<^_[]
+,^_[]
+ffffff.
+BHltuo
+xHpmoc
+@Hstib
+\^_[]
+fylg1
+fylg
+^_[]
+ffffff.
+@Hpmoc
+^_[]
+xHpmoc
+@^_]
+ffffff.
+@^_]
+R$;D
+`^[]
+ffffff.
+L^_[]
+fff.
+^_[]
+0^[]
+fff.
+ffffff.
+ffff.
+<^_[]
+A ;E
+<^_[]
+fff.
+fff.
+^_[]
+fff.
+A ;E
+<^_[]
+p^_]
+ffffff.
+L^_[]
+l^_[]
+ffff.
+l^_[]
+\^_[]
+fffff.
+`^_]
+ravg
+ravg
+ravf
+ravf
+thgw
+htdw
+zspo
+tnls
+ffff.
+`^_]
+fff.
+rava
+rava
+\^_[]
+ravg
+ravg
+|^_[]
+cinu
+BODAf
+EBDAf
+CBDAf
+1talf
+^_[]
+ffffff.
+fff.
+GHltuo
+@Hltuo
+^_[]
+P^_]
+^_[]
+0^_]
+\^_[]
+fffff.
+ffff.
+P^_]
+^_[]
+0^_]
+ffffff.
+L^_[]
+@	= 
+@	=	
+@	=/
+@	=(
+@	=)
+@	=<
+@	=>
+@	=[
+@	=]
+@	={
+@	=}
+@	=%
+#A =
+l^_[]
+|^_[]
+fff.
+ffffff.
+0^[]
+L^_[]
+l^_[]
+fffff.
+^_[]
+fff.
+\^_[]
+^_[]
+fffff.
+^_[]
+^_[]
+|^_[]
+ffffff.
+^_[]
+p^_]
+ffffff.
+thgw
+htdw
+zspo
+^_[]
+@^_]
+fffff.
+,^_[]
+ffff.
+|^_[]
+fff.
+ffffff.
+OTTO
+daeh1
+daeh
+ FFC1
+ FFC
+cinu
+BODA
+EBDA
+CBDA
+^_[]
+ffffff.
+ffffff.
+@^_]
+p^_]
+`^_]
+fffff.
+L^_[]
+ffff.
+fff.
+^_[]
+ffffff.
+<^_[]
+\^_[]
+fff.
+^_[]
+fff.
+^_[]
+|^_[]
+@^_]
+<^_[]
+fffff.
+\^_[]
+fffff.
+<^_[]
+ffffff.
+@Hstib
+AHltuo
+@Hltuo
+^_[]
+L^_[]
+fffff.
+fffff.
+^_[]
+fffff.
+fffff.
+,^_[]
+L^_[]
+ffffff.
+@T;E
+|^_[]
+^_[]
+0^_]
+|^_[]
+L^_[]
+fffff.
+,^_[]
+\^_[]
+^_[]
+^_[]
+,^_[]
+fff.
+<^_[]
+^_[]
+ffffff.
+fff.
+ ^[]
+fff.
+L^_[]
+L^_[]
+fffff.
+ffffff.
+^_[]
+^_[]
+ffffff.
+@^_]
+\^_[]
+P^_]
+fff.
+^_[]
+fff.
+ffff.
+@^_]
+fffff.
+ ^_]
+L^_[]
+fffff.
+fff.
+CHltuo
+@Hltuo
+^_[]
+ffffff.
+0^_]
+0^_]
+^_[]
+P^_]
+^_[]
+|^_[]
+fffff.
+fffff.
+P^_]
+@^_]
+fff.
+p^_]
+fffff.
+ffff.
+0^_]
+fff.
+cinu
+^_[]
+fffff.
+@Hltuo
+fffff.
+AHstib
+^_[]
+0^_]
+`^_]
+|^_[]
+^_[]
+fff.
+0^_]
+ffffff.
+<^_[]
+l^_[]
+P^_]
+@^_]
+ffff.
+0^_]
+ffffff.
+80RFP
+P^_]
+^_[]
+iI\$
+\^_[]
+P^_]
+<^_[]
+cinu
+BODAf
+EBDAf
+CBDAf
+1talf
+^_[]
+ffffff.
+ffffff.
+@^_]
+ffffff.
+@^_]
+ffffff.
+0^_]
+<^_[]
+fff.
+p^_]
+ffff.
+L^_[]
+l^_[]
+fffff.
+^_[]
+|^_[]
+ffffff.
+^_[]
+ffffff.
+@Z= 
+@\=M
+nmraf
+^_[]
+@Hstib
+l^_[]
+ffffff.
+ffffff.
+ffffff.
+0^[]
+ffff.
+cinuf
+l^_[]
+fffff.
+@Hstib
+`^_]
+fff.
+|^_[]
+`^_]
+|^_[]
+fff.
+<^_[]
+\^_[]
+|^_[]
+|^_[]
+|^_[]
+ffff.
+,^_[]
+,^_[]
+ffff.
+cinuf
+BODAf
+^_[]
+fffff.
+@Hstib
+p^_]
+fff.
+L^_[]
+fffff.
+^_[]
+fff.
+ffffff.
+0^_]
+|^_[]
+^_[]
+ffffff.
+<^_[]
+<^_[]
+^_[]
+ffff.
+^_[]
+ffff.
+^_[]
+^_[]
+iI@$
+^_[]
+\^_[]
+@^_]
+fffff.
+<^_[]
+L^_[]
+fff.
+ffffff.
+@^[]
+fffff.
+P^[]
+p^[]
+fffff.
+ ^[]
+ ^[]
+fff.
+ffffff.
+fff.
+fff.
+fff.
+fff.
+<^_[]
+ FDB
+ FDB
+\^_[]
+0^_]
+ffffff.
+tsop
+tsop
+0^_]
+fffff.
+P^_]
+@^_]
+<^_[]
+fff.
+fpgi
+spgi
+fylg
+fylg
+ FFC
+ FFC
+xibs1
+xibs
+eurt
+fylg
+fylg
+ravf
+ravf
+ravg
+ravg
+^_[]
+daeh
+daeh
+aehv1
+aehv
+aehh1
+aehh
+@^_]
+ffffff.
+pamc
+pamc
+ ^_]
+pxam1
+pxam
+,^_[]
+2/SO1
+2/SO
+,^_[]
+ffff.
+tsop1
+tsop
+<^_[]
+eman
+eman
+\^_[]
+nrek
+nrek
+`^_]
+fffff.
+psag1
+psag
+P^_]
+TLCP1
+TLCP
+,^_[]
+dehb
+dehb
+^_[]
+ffff.
+OTTO
+\^_[]
+xtmv
+xtmh
+0^_]
+CLBC
+CLBC
+CLBE
+CLBE
+colb
+colb
+xibs
+xibs
+p^_]
+xibs
+xibs
+l^_[]
+@^[]
+fff.
+daeh
+dehb
+GNIS
+ATEM
+fffff.
+TDBC
+TDBC
+TDBE
+TDBE
+tadb
+tadb
+A(iE
+<^_[]
+^_[]
+xibs
+xibs
+-epud
+- gpj
+- gnp
+-ffit
+^_[]
+|^_[]
+d^_[]
+\^_[]
+L^_[]
+ffff.
+,^_[]
+ffffff.
+fff.
+^_[]
+ffffff.
+P^_]
+P^_]
+FFOw
+fctt
+OTTO
+eurt
+1pyt
+fctt
+fctt
+P^_]
+ffffff.
+FFOw
+fctt
+^_[]
+ffff.
+fff.
+<^_[]
+ffffff.
+fffff.
+D^[]
+ffff.
+p^[]
+(^[]
+ffff.
+ ^_[]
+cinu
+cinu
+fffff.
+cinu
+cinu
+fffff.
+ffffff.
+fffff.
+cinu
+cinu
+ffff.
+0^_]
+fffff.
+fffff.
+cinu
+cinu
+|^_[]
+ffff.
+0^_]
+@^_]
+pmoc
+-ltuo
+@Hltuo
+^_[]
+iI(2
+^_[]
+^_[]
+IliI(p
+<^_[]
+ffff.
+fff.
+^_[]
+fff.
+ffff.
+@(#E
+0^_]
+p^_]
+ffffff.
+L^_[]
+fff.
+fff.
+iI 	
+@$;E
+iI 	
+@$;E
+@ ;E
+@ ;E
+fff.
+^_[]
+\^_[]
+fff.
+ffff.
+^_[]
+0^_]
+l^_[]
+ffff.
+^_[]
+ffffff.
+iI(2
+^_[]
+^_[]
+0^_]
+ffff.
+p^_]
+fff.
+fffff.
+fff.
+@$+E
+@$+E
+ffff.
+0^_]
+,^_[]
+,^_[]
+fffff.
+^_[]
+L^_[]
+fffff.
+L^_[]
+ffff.
+<^_[]
+<^_[]
+fffff.
+<^_[]
+<^_[]
+@^_]
+fff.
+@^_]
+<^_[]
+fffff.
+fffff.
+ffff.
+ffff.
+0^_]
+P^_]
+0^_]
+ffffff.
+@l;E
+l^_[]
+|^_[]
+\^_[]
+\^_]
+ffff.
+ffff.
+`^[]
+l^_[]
+ffff.
+ffff.
+@Hstib
+fffff.
+,^_[]
+fff.
+,^_[]
+<^_[]
+ffff.
+P^_[]
+ffff.
+,^_[]
+T^_[]
+,^_[]
+|^_[]
+^_[]
+fff.
+ffff.
+l^_[]
+@d;E
+\^_[]
+@d;E
+|^_[]
+ffff.
+P^_]
+IX+A
+<^_[]
+ffff.
+\^_[]
+IX+A
+L^_[]
+fff.
+fff.
+@^_]
+ffff.
+0^_]
+,^_[]
+fff.
+0^_]
+ffffff.
+0^_]
+ffffff.
+@Hstib
+^_[]
+^_[]
+fffff.
+^_[]
+@^[]
+\^_[]
+^_[]
+fff.
+^_[]
+ffffff.
+l^_[]
+l^_[]
+fffff.
+4^_[]
+,^_[]
+L^_[]
+fffff.
+ffffff.
+@^_]
+fff.
+0^_]
+ffffff.
+|^_[]
+fff.
+\^_[]
+ffff.
+ffff.
+ffff.
+0^_]
+ffff.
+ffff.
+L^_[]
+,^_[]
+fff.
+fffff.
+@^_]
+@^_]
+ffffff.
+0^_]
+ffffff.
+fff.
+xHstib
+xHltuo
+@^_]
+fffff.
+ltuo
+-stib
+ffffff.
+fff.
+0^_]
+fffff.
+^_[]
+^_[]
+0^_]
+fffff.
+^_[]
+^_[]
+ffff.
+ffff.
+xHstib
+`^_]
+ffff.
+@^_]
+ffffff.
+ffff.
+ffffff.
+ffff.
+\^_[]
+fffff.
+ffff.
+@^_]
+P^_]
+<^_[]
+^_[]
+fff.
+ffff.
+0^_]
+@^_]
+ffff.
+0^_]
+P^[]
+fffff.
+fffff.
+<^_[]
+<^_[]
+fff.
+@^_]
+ffff.
+fff.
+0^_]
+fff.
+0^_]
+<^_[]
+,^_[]
+ffffff.
+0^_]
+0^_]
+ffff.
+P^_]
+^_[]
+fff.
+^_[]
+,^_[]
+fffff.
+fffff.
+ ^[]
+l^_[]
+^_[]
+,^_[]
+ffffff.
+fff.
+<^_[]
+ffff.
+fffff.
+`^[]
+fff.
+fffff.
+@Hpmoc
+\^_[]
+,^_[]
+,^_]
+@^_]
+fffff.
+,^_]
+fffff.
+ffff.
+^_[]
+ ^_]
+ffffff.
+truetype
+kerning
+glyph-dict
+postscript-font-name
+sfnt-table
+tt-cmaps
+type42
+truetype-engine
+.AppleDouble/
+.resource/
+resource.frk/
+/..namedfork/rsrc
+/rsrc
+properties
+OTTO
+type1
+postscript-info
+truetypegx-validate
+classickern-validate
+default
+%f %f %f %f %f
+multi-masters
+opentype-validate
+tt-glyf
+pfr-metrics
+winfonts
+xf86-driver-name
+sfnt
+.notdef
+TrueType
+interpreter-version
+Weight
+Width
+OpticalSize
+Slant
+pshinter
+postscript-cmaps
+psaux
+Regular
+Bold
+Black
+eexec
+closefile
+FontDirectory
+CharStrings
+version
+Notice
+FullName
+FamilyName
+ItalicAngle
+isFixedPitch
+UnderlinePosition
+UnderlineThickness
+FSType
+UniqueID
+lenIV
+LanguageGroup
+password
+BlueScale
+BlueShift
+BlueFuzz
+BlueValues
+OtherBlues
+FamilyBlues
+FamilyOtherBlues
+StdHW
+StdVW
+MinFeature
+StemSnapH
+StemSnapV
+ExpansionFactor
+ForceBold
+FontName
+PaintType
+FontType
+StrokeWidth
+FontBBox
+DesignVector
+FontMatrix
+Encoding
+Subrs
+Private
+BlendDesignPositions
+BlendDesignMap
+BlendAxisTypes
+WeightVector
+BuildCharArray
+StandardEncoding
+ExpertEncoding
+ISOLatin1Encoding
+%!PS-AdobeFont
+%!FontType
+Type 1
+darkening-parameters
+hinting-engine
+no-stem-darkening
+t1cid
+%ADOBeginFontDict
+CIDFontName
+CIDFontVersion
+CIDFontType
+Registry
+Ordering
+Supplement
+UIDBase
+CIDMapOffset
+FDBytes
+GDBytes
+CIDCount
+SubrMapOffset
+SDBytes
+SubrCount
+lenBuildCharArray
+ForceBoldThreshold
+FDArray
+%!PS-Adobe-3.0 Resource-CIDFont
+StartData
+/sfnts
+(Hex)
+CID Type 1
+known
+sfnts
+%!PS-TrueTypeFont
+Type 42
+Bold Italic
+Italic
+Windows FNT
+10646
+8859
+FAMILY_NAME
+AVERAGE_WIDTH
+POINT_SIZE
+PIXEL_SIZE
+RESOLUTION_X
+RESOLUTION_Y
+CHARSET_REGISTRY
+CHARSET_ENCODING
+SLANT
+Oblique
+WEIGHT_NAME
+SETWIDTH_NAME
+ADD_STYLE_NAME
+SPACING
+COMMENT
+STARTFONT
+STARTPROPERTIES
+FONTBOUNDINGBOX
+FONT
+SIZE
+CHARS
+FONT_ASCENT
+FONT_DESCENT
+ENDFONT
+ENDCHAR
+STARTCHAR
+ENCODING
+SWIDTH
+DWIDTH
+BITMAP
+DEFAULT_CHAR
+ENDPROPERTIES
+_XFREE86_GLYPH_RANGES
+AVG_CAPITAL_WIDTH
+AVG_LOWERCASE_WIDTH
+CAP_HEIGHT
+CHARSET_COLLECTIONS
+COPYRIGHT
+DESTINATION
+DEVICE_FONT_NAME
+END_SPACE
+FACE_NAME
+FIGURE_WIDTH
+FONTNAME_REGISTRY
+FOUNDRY
+FULL_NAME
+ITALIC_ANGLE
+MAX_SPACE
+MIN_SPACE
+NORM_SPACE
+NOTICE
+QUAD_WIDTH
+RAW_ASCENT
+RAW_AVERAGE_WIDTH
+RAW_AVG_CAPITAL_WIDTH
+RAW_AVG_LOWERCASE_WIDTH
+RAW_CAP_HEIGHT
+RAW_DESCENT
+RAW_END_SPACE
+RAW_FIGURE_WIDTH
+RAW_MAX_SPACE
+RAW_MIN_SPACE
+RAW_NORM_SPACE
+RAW_PIXEL_SIZE
+RAW_POINT_SIZE
+RAW_PIXELSIZE
+RAW_POINTSIZE
+RAW_QUAD_WIDTH
+RAW_SMALL_CAP_SIZE
+RAW_STRIKEOUT_ASCENT
+RAW_STRIKEOUT_DESCENT
+RAW_SUBSCRIPT_SIZE
+RAW_SUBSCRIPT_X
+RAW_SUBSCRIPT_Y
+RAW_SUPERSCRIPT_SIZE
+RAW_SUPERSCRIPT_X
+RAW_SUPERSCRIPT_Y
+RAW_UNDERLINE_POSITION
+RAW_UNDERLINE_THICKNESS
+RAW_X_HEIGHT
+RELATIVE_SETWIDTH
+RELATIVE_WEIGHT
+RESOLUTION
+SMALL_CAP_SIZE
+STRIKEOUT_ASCENT
+STRIKEOUT_DESCENT
+SUBSCRIPT_SIZE
+SUBSCRIPT_X
+SUBSCRIPT_Y
+SUPERSCRIPT_SIZE
+SUPERSCRIPT_X
+SUPERSCRIPT_Y
+UNDERLINE_POSITION
+UNDERLINE_THICKNESS
+WEIGHT
+X_HEIGHT
+_MULE_BASELINE_OFFSET
+_MULE_RELATIVE_COMPOSE
+autofitter
+glyph-to-script-map
+fallback-script
+default-script
+increase-x-height
+Book
+Medium
+INFINALITY_FT_AUTOHINT_INCREASE_GLYPH_HEIGHTS
+true
+raster1
+raster5
+20 25 38 25 05
+1000 160
+smooth
+smooth-lcd
+smooth-lcdv
+%f %f
+INFINALITY_FT_GLOBAL_EMBOLDEN_X_VALUE
+INFINALITY_FT_GLOBAL_EMBOLDEN_Y_VALUE
+INFINALITY_FT_BOLD_EMBOLDEN_X_VALUE
+INFINALITY_FT_BOLD_EMBOLDEN_Y_VALUE
+Times New Roman
+FreeSerif
+Mono
+Script
+Handwriting
+Extra Thin
+Extra Light
+Thin
+Light
+Narrow
+Condensed
+Courier
+Serif
+Times
+1 stem:    bitmapwidth:%d glyphwidth:%f glyph_width:%f center:%f bearing:%f advance:%f lhadvance:%f stemwidth:%f %d %d
+%lu stems: bitmapwidth:%d center1:%f center2:%f difference:%f bearing:%f advance:%f advstemloc:%f 
+1.2.5
+StartFontMetrics
+Ascender
+AxisLabel
+AxisType
+CapHeight
+CharWidth
+CharacterSet
+Characters
+Descender
+EncodingScheme
+EndAxis
+EndCharMetrics
+EndComposites
+EndDirection
+EndFontMetrics
+EndKernData
+EndKernPairs
+EndTrackKern
+EscChar
+IsBaseFont
+IsCIDFont
+IsFixedPitch
+IsFixedV
+MappingScheme
+MetricsSets
+StartAxis
+StartCharMetrics
+StartComposites
+StartDirection
+StartKernData
+StartKernPairs
+StartKernPairs0
+StartKernPairs1
+StartTrackKern
+TrackKern
+VVector
+Version
+XHeight
+psnames
+?33#@
+      
+!!!!!!
+!!!!
+                                Regular Class
+Regular
+Book
+Medium
+Roman
+Normal
+Regular/Italic Class
+Regular
+Book
+Medium
+Italic
+Oblique
+Roman
+Normal
+Bold/BoldItalic Class
+Bold
+Bold Italic
+Black
+Bold/Italic/BoldItalic Class
+Bold
+Bold Italic
+Black
+Italic
+Oblique
+Regular/Bold Class
+Regular
+Book
+Medium
+Normal
+Roman
+Bold
+Black
+Courier New
+Italic
+Courier New
+Italic
+Consolas
+Core MS Legacy Fonts
+Regular
+Legacy Sans Fonts
+Verdana Clones
+Courier New
+Regular
+Times New Roman
+Regular/Bold Class
+Georgia
+Regular/Bold Class
+Droid Sans
+Regular/Italic Class
+Droid Sans Mono
+Verdana
+Regular
+Times New Roman
+Regular
+Times New Roman
+Regular
+Times New Roman
+Regular
+Times New Roman
+Regular
+Times New Roman
+Regular
+Times New Roman
+Regular
+Times New Roman
+Regular
+Times
+Courier New
+Arial
+Regular
+Geneva
+Georgia
+Regular
+Trebuchet MS
+Regular
+Trebuchet MS
+Regular
+Trebuchet MS
+Regular
+Trebuchet MS
+Italic
+Trebuchet MS
+Italic
+Trebuchet MS
+Regular
+Arial
+Regular
+Verdana
+Regular
+Verdana
+Regular
+Legacy Sans Fonts
+Legacy Sans Fonts
+Arial
+Regular
+Arial
+Bold/BoldItalic Class
+Arial
+Bold
+Arial
+Bold
+Arial
+Bold
+Arial
+Bold
+Arial
+Bold
+Arial
+Bold
+Arial
+Bold
+Arial
+Regular
+Arial
+Regular
+KS#KQZX8
+!!YKTX8
+E#F` 
+_Zt@
+DFKaiSho-SB
+DFKaiShu
+DFKai-SB
+HuaTianKaiTi?
+HuaTianSongTi?
+Ming(for ISO10646)
+MingLiU
+PMingLiU
+MingLi43
+DejaVu Sans
+Regular Class
+Verdana and Clones
+Regular Class
+Verdana and Clones
+Regular Class
+Arial
+Regular Class
+Arial
+Regular Class
+Arial
+Regular Class
+Arial
+Regular Class
+Arial
+Regular Class
+Arial
+Regular Class
+Arial
+Regular Class
+Bitstream Vera Sans
+Regular/Italic Class
+Bitstream Vera Sans
+Regular/Italic Class
+Bitstream Vera Sans
+Regular Class
+Bitstream Vera Sans
+Regular/Italic Class
+DejaVu Sans
+Regular Class
+DejaVu Sans
+Regular Class
+DejaVu Sans
+Regular Class
+DejaVu Sans
+Regular Class
+DejaVu Sans
+Regular Class
+DejaVu Sans
+Regular Class
+DejaVu Sans
+Regular/Italic Class
+DejaVu Sans
+Regular/Italic Class
+Georgia
+Georgia
+Georgia
+Georgia
+Georgia
+Georgia
+Liberation Sans
+Regular Class
+Lucida Grande
+Regular Class
+Microsoft Sans Serif
+Regular Class
+Microsoft Sans Serif
+Regular Class
+Segoe UI
+Regular Class
+Segoe UI
+Regular Class
+Segoe UI
+Regular Class
+Tahoma
+Regular Class
+Tahoma
+Regular Class
+Tahoma
+Regular Class
+Tahoma
+Regular Class
+Verdana
+Regular/Italic Class
+Verdana
+Regular Class
+Verdana
+Regular/Italic Class
+Verdana
+Regular/Italic Class
+Verdana
+Regular/Italic Class
+Verdana
+Regular/Italic Class
+Verdana
+Regular Class
+Verdana
+Regular/Italic Class
+Times New Roman
+Regular Class
+Trebuchet MS
+Regular Class
+Trebuchet MS
+Regular Class
+MS Legacy Fonts
+Aharoni
+Andale Mono
+Andalus
+Angsana New
+AngsanaUPC
+Arabic Transparent
+Arial Black
+Arial Narrow
+Arial Unicode MS
+Arial
+Batang
+Browallia New
+BrowalliaUPC
+Comic Sans MS
+Cordia New
+CordiaUPC
+Courier New
+DFKai-SB
+David Transparent
+David
+DilleniaUPC
+Estrangelo Edessa
+EucrosiaUPC
+FangSong_GB2312
+Fixed Miriam Transparent
+FrankRuehl
+Franklin Gothic Medium
+FreesiaUPC
+Garamond
+Gautami
+Georgia
+Gulim
+Impact
+IrisUPC
+JasmineUPC
+KaiTi_GB2312
+KodchiangUPC
+Latha
+Levenim MT
+LilyUPC
+Lucida Console
+Lucida Sans Unicode
+MS Gothic
+MS Mincho
+MV Boli
+Mangal
+Marlett
+Microsoft Sans Serif
+Mingliu
+Miriam Fixed
+Miriam Transparent
+Miriam
+Narkisim
+Palatino Linotype
+Raavi
+Rod Transparent
+Shruti
+SimHei
+Simplified Arabic Fixed
+Simplified Arabic
+Simsun
+Sylfaen
+Symbol
+Tahoma
+Times New Roman
+Traditional Arabic
+Trebuchet MS
+Tunga
+Verdana
+Webdings
+Wingdings
+Core MS Legacy Fonts
+Arial Black
+Arial Narrow
+Arial Unicode MS
+Arial
+Comic Sans MS
+Courier New
+Garamond
+Georgia
+Impact
+Lucida Console
+Lucida Sans Unicode
+Microsoft Sans Serif
+Palatino Linotype
+Tahoma
+Times New Roman
+Trebuchet MS
+Verdana
+Apple Legacy Fonts
+Geneva
+Times
+Monaco
+Century
+Chalkboard
+Lobster
+Century Gothic
+Optima
+Lucida Grande
+Gill Sans
+Baskerville
+Helvetica
+Helvetica Neue
+Legacy Sans Fonts
+Andale Mono
+Arial Unicode MS
+Arial
+Century Gothic
+Comic Sans MS
+Franklin Gothic Medium
+Geneva
+Lucida Console
+Lucida Grande
+Lucida Sans Unicode
+Lucida Sans Typewriter
+Microsoft Sans Serif
+Monaco
+Tahoma
+Trebuchet MS
+Verdana
+Misc Legacy Fonts
+Dark Courier
+Verdana Clones
+DejaVu Sans
+Bitstream Vera Sans
+Verdana and Clones
+DejaVu Sans
+Bitstream Vera Sans
+Verdana
+Courier New
+Bold
+Courier New
+Bold
+Courier New
+Bold
+Courier New
+Bold
+Courier New
+Bold
+Courier New
+Bold
+Courier New
+Bold
+Courier New
+Bold
+Courier New
+Bold
+Courier New
+Regular
+Courier New
+Italic
+Times New Roman
+Italic
+Times New Roman
+Italic
+Times New Roman
+Italic
+Times New Roman
+Regular
+Times New Roman
+Regular
+Times New Roman
+Regular
+Times New Roman
+Italic
+Times New Roman
+Italic
+Times New Roman
+Italic
+Times New Roman
+Regular
+Times New Roman
+Regular
+Times New Roman
+Regular
+Courier New
+Regular
+Courier New
+Regular
+Courier New
+Regular
+Courier New
+Regular
+Courier New
+Regular
+Courier New
+Regular
+Courier New
+Regular
+Courier New
+Regular
+Courier New
+Regular
+Courier New
+Regular
+Courier New
+Regular
+Courier New
+Regular
+Courier New
+Regular
+Courier New
+Regular
+Courier New
+Regular
+Arial Unicode MS
+Regular Class
+Arial Unicode MS
+Regular Class
+Arial
+Regular Class
+Arial
+Regular Class
+Arial
+Regular Class
+Arial
+Regular Class
+Arial
+Regular Class
+Arial
+Regular Class
+Arial
+Regular Class
+Arial
+Regular Class
+Arial
+Regular Class
+DejaVu Sans
+Regular Class
+Microsoft Sans Serif
+Regular Class
+Microsoft Sans Serif
+Regular Class
+Segoe UI
+Regular Class
+Monaco
+Regular Class
+Segoe UI
+Regular Class
+Segoe UI
+Regular Class
+Tahoma
+Regular Class
+Times New Roman
+Regular Class
+Times New Roman
+Regular Class
+Times New Roman
+Regular Class
+Times New Roman
+Regular Class
+Trebuchet MS
+Regular Class
+Trebuchet MS
+Regular Class
+Trebuchet MS
+Regular Class
+Trebuchet MS
+Regular Class
+Ubuntu
+Regular Class
+Verdana
+Regular Class
+Verdana
+Regular Class
+Verdana and Clones
+Regular Class
+Verdana and Clones
+Regular Class
+Verdana and Clones
+Regular Class
+Verdana and Clones
+Regular Class
+Verdana and Clones
+Regular Class
+Verdana and Clones
+Regular Class
+Verdana and Clones
+Regular Class
+Verdana and Clones
+Regular Class
+cinu
+cinu
+nmra
+bmys
+cinu
+cinu
+sijs
+  bg
+5gib
+snaw
+ahoj
+THEZOCQS
+HEZLOCUS
+fijkdbh
+xzroesc
+pqgjy
+r@333333
+ !"#
+ !"#
+.null
+nonmarkingreturn
+notequal
+infinity
+lessequal
+greaterequal
+partialdiff
+summation
+product
+integral
+Omega
+radical
+approxequal
+Delta
+nonbreakingspace
+lozenge
+apple
+franc
+Gbreve
+gbreve
+Idotaccent
+Scedilla
+scedilla
+Cacute
+cacute
+Ccaron
+ccaron
+dcroat
+.notdef
+space
+exclam
+quotedbl
+numbersign
+dollar
+percent
+ampersand
+quoteright
+parenleft
+parenright
+asterisk
+plus
+comma
+hyphen
+period
+slash
+zero
+three
+four
+five
+seven
+eight
+nine
+colon
+semicolon
+less
+equal
+greater
+question
+bracketleft
+backslash
+bracketright
+asciicircum
+underscore
+quoteleft
+braceleft
+braceright
+asciitilde
+exclamdown
+cent
+sterling
+fraction
+florin
+section
+currency
+quotesingle
+quotedblleft
+guillemotleft
+guilsinglleft
+guilsinglright
+endash
+dagger
+daggerdbl
+periodcentered
+paragraph
+bullet
+quotesinglbase
+quotedblbase
+quotedblright
+guillemotright
+ellipsis
+perthousand
+questiondown
+grave
+acute
+circumflex
+tilde
+macron
+breve
+dotaccent
+dieresis
+ring
+cedilla
+hungarumlaut
+ogonek
+caron
+emdash
+ordfeminine
+Lslash
+Oslash
+ordmasculine
+dotlessi
+lslash
+oslash
+germandbls
+onesuperior
+logicalnot
+trademark
+onehalf
+plusminus
+Thorn
+onequarter
+divide
+brokenbar
+degree
+thorn
+threequarters
+twosuperior
+registered
+minus
+multiply
+threesuperior
+copyright
+Aacute
+Acircumflex
+Adieresis
+Agrave
+Aring
+Atilde
+Ccedilla
+Eacute
+Ecircumflex
+Edieresis
+Egrave
+Iacute
+Icircumflex
+Idieresis
+Igrave
+Ntilde
+Oacute
+Ocircumflex
+Odieresis
+Ograve
+Otilde
+Scaron
+Uacute
+Ucircumflex
+Udieresis
+Ugrave
+Yacute
+Ydieresis
+Zcaron
+aacute
+acircumflex
+adieresis
+agrave
+aring
+atilde
+ccedilla
+eacute
+ecircumflex
+edieresis
+egrave
+iacute
+icircumflex
+idieresis
+igrave
+ntilde
+oacute
+ocircumflex
+odieresis
+ograve
+otilde
+scaron
+uacute
+ucircumflex
+udieresis
+ugrave
+yacute
+ydieresis
+zcaron
+exclamsmall
+Hungarumlautsmall
+dollaroldstyle
+dollarsuperior
+ampersandsmall
+Acutesmall
+parenleftsuperior
+parenrightsuperior
+twodotenleader
+onedotenleader
+zerooldstyle
+oneoldstyle
+twooldstyle
+threeoldstyle
+fouroldstyle
+fiveoldstyle
+sixoldstyle
+sevenoldstyle
+eightoldstyle
+nineoldstyle
+commasuperior
+threequartersemdash
+periodsuperior
+questionsmall
+asuperior
+bsuperior
+centsuperior
+dsuperior
+esuperior
+isuperior
+lsuperior
+msuperior
+nsuperior
+osuperior
+rsuperior
+ssuperior
+tsuperior
+parenleftinferior
+parenrightinferior
+Circumflexsmall
+hyphensuperior
+Gravesmall
+Asmall
+Bsmall
+Csmall
+Dsmall
+Esmall
+Fsmall
+Gsmall
+Hsmall
+Ismall
+Jsmall
+Ksmall
+Lsmall
+Msmall
+Nsmall
+Osmall
+Psmall
+Qsmall
+Rsmall
+Ssmall
+Tsmall
+Usmall
+Vsmall
+Wsmall
+Xsmall
+Ysmall
+Zsmall
+colonmonetary
+onefitted
+rupiah
+Tildesmall
+exclamdownsmall
+centoldstyle
+Lslashsmall
+Scaronsmall
+Zcaronsmall
+Dieresissmall
+Brevesmall
+Caronsmall
+Dotaccentsmall
+Macronsmall
+figuredash
+hypheninferior
+Ogoneksmall
+Ringsmall
+Cedillasmall
+questiondownsmall
+oneeighth
+threeeighths
+fiveeighths
+seveneighths
+onethird
+twothirds
+zerosuperior
+foursuperior
+fivesuperior
+sixsuperior
+sevensuperior
+eightsuperior
+ninesuperior
+zeroinferior
+oneinferior
+twoinferior
+threeinferior
+fourinferior
+fiveinferior
+sixinferior
+seveninferior
+eightinferior
+nineinferior
+centinferior
+dollarinferior
+periodinferior
+commainferior
+Agravesmall
+Aacutesmall
+Acircumflexsmall
+Atildesmall
+Adieresissmall
+Aringsmall
+AEsmall
+Ccedillasmall
+Egravesmall
+Eacutesmall
+Ecircumflexsmall
+Edieresissmall
+Igravesmall
+Iacutesmall
+Icircumflexsmall
+Idieresissmall
+Ethsmall
+Ntildesmall
+Ogravesmall
+Oacutesmall
+Ocircumflexsmall
+Otildesmall
+Odieresissmall
+OEsmall
+Oslashsmall
+Ugravesmall
+Uacutesmall
+Ucircumflexsmall
+Udieresissmall
+Yacutesmall
+Thornsmall
+Ydieresissmall
+001.000
+001.001
+001.002
+001.003
+Black
+Bold
+Book
+Light
+Medium
+Regular
+Roman
+Semibold
+	 	$	6	I	Y	h	s	z	
+Delta
+Omega
+fraction
+hyphen
+macron
+periodcentered
+space
+Tcommaaccent
+tcommaaccent
+PmXh]=b
+j[ros
+	,	m	s
+	!	%
+	4	N	\a
+	<	F
+%a2	
+ < C O [ c
+ % 0
+W { 
+!#!/
+Y!Q!t!
+"("4"<"Da
+!W!h
+"K"q
+"S"^
+#!#L
+#'#:
+#\#g#w#
+(D(~(
+$2$r$
+'!$J$N$R$V$Z$^$b$f$j$n0
+%2%6%:%>%B%F%J%N%R%V0
+%r%v%z%~%
+&2&6&:&>&B&F&J&N&R&V0
+&r&v&z&~&
+' '$'(','0'4'8'<'@0
+'\'`'d'h'l'p't'x'|'
+( ($(((,(0(4(8(<(@0
+(Z(^(b(f(j(n(r(v(z1
+)*)4);
+)P)y)
+)_)n
+*%*1
+*I*T*e*l*u
+*Z*_
++!+5-
++'+.
++>-V-
+0	+R+f+
+, ,^,
++Z+^+b7
+,6,:,>,B,F,J,N,R,V,Z0
+,t,x,|,
+-.-2-6-:->-B-F-J-N-R0
+-v-z-~-
+1"1i3
+.".08
+.(.,1
+.B.F.J.N.R.V.Z.^2
+/./f/
+/"/&/*0
+:4	/B/F/J/N/R/V/Z/^/b0
+I5	/z/~/
+050s0
+0!0%0)0-014
+0K0O0S0W0[0_0c0g0k0o0
+1*1V1[0
+1:1>1B1F1J1N1R0
+1a1e1
+2)202<2U2e2
+2C2L
+2q2z2
+4G4Pe
+3)323A3O3
+4%43
+3h3q
+4j4r4}4
+575A
+5 5'
+5G5S
+5_5i5p
+6*6.6[
+646B
+6K6S
+6o6v6
+797k7
+7F7W7c
+8&8=
+8n8y
+9"9*
+9@9Y9`9y9
+9F9O
+9g9p
+b:.:
+>H>T>
+@'@0a
+:>:H:`:g:
+:n:w
+;(;1;?;];
+;E;T
+;d;q
+<#<*
+<1<:
+<U<`<k<y<
+>7>Ba
+=!=5
+=S=b
+>\>i>t
+? ?(?-
+?@?j
+[?O?T?Y?e
+]?z?
+@8@C@N
+@U@s
+ "@^@h
+AiAtA
+E+E\HTH\HfHrH
+A*A3
+A;AAA[
+AJAU
+B<B{B
+BFBQB[Bb
+BiBr
+CQCtC
+CWCf
+D&D4a
+DWDbDgD
+DmDs
+E3EAEL
+EnEyE
+H=HF
+F'F2F>F\Fsa
+FKFV
+FbFi
+G+GXGfGkGpGuG{G
+G!G&C
+G7G;G@GEGJM
+GPGTB
+G^GbF
+LrMDM
+N;NHNQNkN
+J1J7JU
+I&I,I:IJ
+IaIrI
+  Iz
+J?JH
+JvKsK}l	J
+K&K8KFKQ
+K^Kd
+L'LZa
+L0L:LA
+LHLQ
+LaLj
+MJM|a
+MRM\Mc
+MjMs
+N$N/
+NWNb
+NqNy
+O5OFO\OgO
+OQOV
+OpOti
+P(P;P`
+P.P5
+PAPU
+R%R<RqS
+V$VYW
+Q)Q7QWQ
+Q=QH
+Q_Qd
+R+R2
+RFRQR\Rf
+SLSnSzS
+S%S?a
+S+S6
+SRSd
+T#T.Tk
+T4T;
+TETNTc
+TTT[
+ &Tv
+UEUeUt
+KUMUX
+V,V7VB
+VgVrV
+W$W>WBWSW
+W,W6
+WiWr
+XCXVXac
+XIXP
+Y]Ym[u[
+]!])a
+YLYVh
+Y-Y=
+YeYii
+ZDZUZ]Zj
+Z!Z1
+[#[/[:[[[c[n
+[@[G
+[N[T
+\!\(\A\\\~\
+\/\8
+\H\S
+\b\t
+]0]8
+g]a^+^B^
+_A`:`
+a'aCaYb"b8b
+a	]u]
+^1^;
+^L^S^\^r
+^d^i
+_ _/
+`*`0a
+_W_a_x_
+_g_r
+`B`M`X
+`^`i
+a-a8
+aJaP
+aeam
+`a~a
+b(b0
+bBbMb
+bTbm
+b^be
+bwb~
+eZe}e
+gZgnhKhWhci
+c7cPc
+d6d?a
+c c2
+c>cG
+cZcccqc
+d]dbdpdyd
+dhdl3
+e e%e.e=eM
+ebegeq
+g5g>gK
+f!f=fEfwf
+f'f5
+fPfo
+fWfc
+h.h>
+Ho	hwh
+i(i4i:iP
+-j'j2j>jU
+jDjK
+qYqaqnq
+nPnq
+k k.k;m
+n n,
+kZkjk
+lElblrl
+l*l3
+lKlV
+m	m9e
+mRmom}m
+mXme
+n2n?
+n^nf
+oEoOoZoaozo
+ohoq
+p#p7pP
+q!q)
+q4qIqQ
+r*r4r;
+rQr\
+s&sg
+s1s:sHsX
+smsv
+vnvyv
+yZygy
+z<zRz_zvz
+t/tOtet
+u,uEu
+v8vUb
+t5tF
+tUt[
+tlt~
+uKu`
+uluzu
+wDwNwYw`wy
+wgwp
+x>xoxyx~
+xIxRx[xe
+y'y6y?yMa
+ymyx
+zCzI
+zezn
+}V}|~
+~-~E~W~
+|=|K|^|n|
+{U{c{
+| |4
+}%}.}I
+}6};
+@}`}i
+~3~8
+~c~{~
+~i~p
+stib
+ltuo B
+ltuo
+ltuo
+ltuo
+ltuo
+ltuo 
+ltuo
+ltuo
+Andale Mono
+Arial Narrow
+Calibri
+Cantarell
+Century Gothic
+Comfortaa
+Consolas
+Corbel
+Futura
+Gill Sans
+Helvetica CY
+Inconsolata
+Liberation Sans Narrow
+Liberation Sans
+Lucida Grande
+Lucida Sans Unicode
+Luxi Sans
+Open Sans
+Rokkitt
+Segoe UI
+Trebuchet MS
+Andale Mono
+Bitstream Vera Sans
+Calibri
+Calibri
+Calibri
+Candara
+Candara
+Canwell
+Comfortaa
+Consolas
+DejaVu Sans
+Freesans
+Freeserif
+Freeserif
+Inconsolata
+Inconsolata
+Lucida Grande
+Myriad Pro
+Myriad Pro
+Nina
+Nina
+Nina
+Optima
+Raleway
+Samba
+Times New Roman
+Trebuchet MS
+Trebuchet MS
+Trebuchet MS
+Verdana
+Verdana
+Courier New
+Courier New
+Courier
+Courier
+Droid Sans Mono
+Bitstream Vera Sans
+DejaVu Sans
+Essential PragmataPro
+Essential PragmataPro
+Times New Roman
+Tahoma
+Courier New
+Arial
+Arial
+Liberation Sans
+FreeSans
+FreeSans
+Palatino Linotype
+Arial
+Arial Unicode MS
+FreeSans
+Arimo
+Liberation Sans
+Tahoma
+Arial Unicode MS
+Arial Unicode MS
+Arial Unicode MS
+Arial
+Arial
+Arial
+Arial
+Arimo
+Arimo
+Arimo
+Bitstream Vera Sans
+Calibri
+Calibri
+Candara
+Cantarell
+Cantarell
+Consolas
+Consolas
+Corbel
+Courier
+Courier
+Dejavu Sans Mono
+Dejavu Sans Mono
+Dejavu Sans Mono
+Dejavu Sans
+Dejavu Sans
+Droid Sans
+Droid Sans
+Freesans
+Freesans
+Georgia
+Georgia
+Georgia
+Inconsolata
+Inconsolata
+Liberation Sans
+Liberation Sans
+Liberation Sans
+Lucida Grande
+Lucida Grande
+Lucida Grande
+Lucida Grande
+Lucida Sans Unicode
+Lucida Sans Unicode
+Lucida Sans Unicode
+Lucida Sans Unicode
+Microsoft Sans Serif
+Microsoft Sans Serif
+Microsoft Sans Serif
+Myriad Pro
+Myriad Pro
+Myriad Pro
+Open Sans
+Open Sans
+Optima
+Optima
+Optima
+Segoe UI
+Segoe UI
+Segoe UI
+Segoe UI
+Tahoma
+Tahoma
+Tahoma
+Times New Roman
+Trebuchet MS
+Trebuchet MS
+Trebuchet MS
+Trebuchet MS
+Verdana
+Verdana
+Verdana
+Verdana
+Verdana
+Andale Mono
+Arial Unicode MS
+Arial
+Arimo
+Bitstream Vera Sans Mono
+Bitstream Vera Sans
+Bitstream Vera Sans
+Calibri
+Consolas
+Courier New
+Courier
+Cousine
+DejaVu Sans Mono
+DejaVu Sans
+DejaVu Sans
+Droid Sans
+Droid Sans
+FreeMono
+FreeSans
+Liberation Mono
+Lucida Console
+Luxi Sans
+Microsoft Sans Serif
+Monaco
+Segoe UI
+Segoe UI
+Tahoma
+Tahoma
+Times New Roman
+Times New Roman
+Trebuchet MS
+Ubuntu
+Ubuntu
+Verdana
+Verdana
+Pragmata
+Essential PragmataPro
+Baskerville
+Garamond
+Optima
+Baskerville
+Garamond
+Optima
+P0P0pP0
+;PP`00@
+00PP
+P0 P
+PPPP
+`0p`@
+` 0p 
+0`P 
+00  0
+00 0
+  00
+PPPP0P
+0  @
+@PP0P
+P0 P `
+00@@
+`@0@
+P``@
+0p0`
+dyld_stub_binding_helper
+__dyld_func_lookup
+_ft_close_stream_by_munmap
+_ft_alloc
+_ft_close_stream_by_free
+_ft_free
+_ft_realloc
+__ft_face_scale_advances
+_ft_multo64
+_FT_Add64
+_ft_div64by32
+_FT_MulFix_i386
+_FT_GlyphLoader_Adjust_Points
+_FT_GlyphLoader_Adjust_Subglyphs
+_ft_glyphslot_init
+_ft_glyphslot_done
+_ft_glyphslot_clear
+_ft_glyphslot_enlarge_metrics
+_ft_glyphslot_grid_fit_metrics
+_ft_lookup_glyph_renderer
+_open_face
+_open_face_PS_from_sfnt_stream
+_load_mac_face
+_destroy_face
+_destroy_size
+_ft_recompute_scaled_metrics
+_find_unicode_charmap
+_ft_cmap_done_internal
+_find_variant_selector_charmap
+_ft_add_renderer
+_Destroy_Module
+_ft_property_do
+_ft_raccess_sort_ref_by_id
+_raccess_guess_apple_double
+_raccess_guess_apple_single
+_raccess_guess_darwin_ufs_export
+_raccess_guess_darwin_newvfs
+_raccess_guess_darwin_hfsplus
+_raccess_guess_vfat
+_raccess_guess_linux_cap
+_raccess_guess_linux_double
+_raccess_guess_linux_netatalk
+_ft_trig_pseudo_rotate
+_ft_trig_prenorm
+_ft_trig_pseudo_polarize
+_ft_trig_downscale
+_raccess_make_file_name
+_raccess_guess_linux_double_from_file_name
+_raccess_guess_apple_generic
+_ft_remove_renderer
+_Destroy_Driver
+_ft_set_current_renderer
+_destroy_charmaps
+_IsMacBinary
+_IsMacResource
+_load_face_in_embedded_rfork
+_ft_raccess_rule_by_darwin_vfs
+_raccess_get_rule_type_from_rule_index
+_Mac_Read_POST_Resource
+_Mac_Read_sfnt_Resource
+_open_face_from_buffer
+_new_memory_stream
+_memory_stream_close
+_ft_lookup_PS_in_sfnt_stream
+_BBox_Move_To
+_BBox_Conic_To
+_BBox_Cubic_To
+_BBox_Cubic_Check
+_update_cubic_max
+_BBox_Conic_Check
+_ft_bitmap_assure_buffer
+_ft_gray_for_premultiplied_srgb_bgra
+_FT_MulFix_i386
+_ft_bitmap_glyph_init
+_ft_bitmap_glyph_done
+_ft_bitmap_glyph_copy
+_ft_bitmap_glyph_bbox
+_ft_outline_glyph_init
+_ft_outline_glyph_done
+_ft_outline_glyph_copy
+_ft_outline_glyph_transform
+_ft_outline_glyph_bbox
+_ft_outline_glyph_prepare
+_ft_new_glyph
+__ft_lcd_filter_fir
+__ft_lcd_filter_legacy
+_ft_face_get_mm_service
+__tt_face_check_patents
+__tt_check_patents_in_table
+__tt_check_patents_in_range
+_ft_pfr_check
+_ft_stroke_border_init
+_ft_stroke_border_reset
+_ft_stroke_border_done
+_ft_stroker_subpath_start
+_ft_stroker_process_corner
+_ft_stroke_border_lineto
+_ft_conic_is_small_enough
+_ft_conic_split
+_ft_pos_abs
+_ft_stroke_border_conicto
+_ft_cubic_is_small_enough
+_ft_cubic_split
+_ft_angle_mean
+_ft_stroke_border_cubicto
+_ft_stroker_cap
+_ft_stroker_add_reverse_left
+_ft_stroke_border_close
+_ft_stroker_inside
+_ft_stroker_outside
+_ft_stroke_border_get_counts
+_ft_stroke_border_export
+_ft_stroker_arcto
+_FT_MulFix_i386
+_ft_stroke_border_arcto
+_ft_stroke_border_grow
+_ft_stroke_border_moveto
+_FT_MulFix_i386
+_tt_driver_init
+_tt_driver_done
+_tt_get_interface
+_tt_face_init
+_tt_face_done
+_tt_size_init
+_tt_size_done
+_tt_slot_init
+_tt_glyph_load
+_tt_get_kerning
+_tt_get_advances
+_tt_size_request
+_tt_size_select
+_Init_Context
+_Read_CVT_Stretched
+_Write_CVT_Stretched
+_Move_CVT_Stretched
+_Read_CVT
+_Write_CVT
+_Move_CVT
+_Compute_Funcs
+_Compute_Round
+_Ins_SxVTL
+_Normalize
+_Ins_ISECT
+_Ins_SZP0
+_Ins_SZP1
+_Ins_SZP2
+_Ins_SZPS
+_Round_To_Grid
+_Round_To_Half_Grid
+_Ins_ELSE
+_FT_MulFix_i386
+_Ins_MINDEX
+_Ins_ALIGNPTS
+_Ins_UNKNOWN
+_Ins_UTP
+_Ins_LOOPCALL
+_Ins_CALL
+_Ins_FDEF
+_Ins_ENDF
+_Ins_MDAP
+_Ins_IUP
+_Ins_SHP
+_Ins_SHC
+_Ins_SHZ
+_Ins_SHPIX
+_Ins_IP
+_Ins_MSIRP
+_Ins_ALIGNRP
+_Round_To_Double_Grid
+_Ins_MIAP
+_Ins_NPUSHB
+_Ins_NPUSHW
+_Ins_GC
+_Ins_SCFS
+_Ins_MD
+_Current_Ppem
+_Ins_IF
+_Ins_DELTAP
+_Round_None
+_Ins_DELTAC
+_SetSuperRound
+_Round_Super
+_Round_Super_45
+_Round_Up_To_Grid
+_Round_Down_To_Grid
+_Ins_FLIPPT
+_Ins_FLIPRGON
+_Ins_FLIPRGOFF
+_Ins_SCANCTRL
+_Ins_SDPVTL
+_Ins_GETINFO
+_Ins_IDEF
+_Ins_ROLL
+_Ins_SCANTYPE
+_Ins_INSTCTRL
+_Ins_MIRP
+_Ins_MDRP
+_Ins_PUSHW
+_Ins_PUSHB
+_Ins_Goto_CodeRange
+_GetShortIns
+_TT_MulFix14_long_long
+_SkipCode
+_Current_Ratio
+_Move_Zp2_Point
+_Compute_Point_Displacement
+__iup_worker_interpolate
+__iup_worker_shift
+_Project_x
+_Project_y
+_Project
+_Dual_Project
+_Direct_Move
+_Direct_Move_Orig
+_Direct_Move_X
+_Direct_Move_Orig_X
+_Direct_Move_Y
+_Direct_Move_Orig_Y
+_TT_DotFix14_long_long
+_TT_Done_Context
+_tt_size_done_bytecode
+_tt_glyphzone_done
+_tt_face_done_loca
+_tt_face_free_hdmx
+_tt_done_blend
+_tt_check_trickyness
+_tt_face_load_hdmx
+_tt_face_load_loca
+_tt_face_load_cvt
+_tt_face_load_fpgm
+_tt_face_load_prep
+_tt_check_single_notdef
+_TT_Init_Glyph_Loading
+_TT_Access_Glyph_Frame
+_TT_Load_Glyph_Header
+_TT_Load_Simple_Glyph
+_TT_Load_Composite_Glyph
+_TT_Forget_Glyph_Frame
+_Update_Max
+_tt_face_get_location
+_tt_face_vary_cvt
+_ft_var_apply_tuple
+_ft_var_readpackedpoints
+_ft_var_readpackeddeltas
+_tt_check_trickyness_family
+_tt_check_trickyness_sfnt_ids
+_tt_get_sfnt_checksum
+_tt_synth_sfnt_checksum
+_tt_size_reset
+_TT_Get_VMetrics
+_TT_Get_HMetrics
+_TT_Load_Glyph
+_load_sbit_image
+_tt_loader_init
+_load_truetype_glyph
+_compute_glyph_metrics
+_tt_face_get_device_metrics
+_tt_get_metrics
+_tt_get_metrics_incr_overrides
+_TT_Vary_Get_Glyph_Deltas
+_TT_Process_Simple_Glyph
+_TT_Process_Composite_Component
+_TT_Process_Composite_Glyph
+_tt_prepare_zone
+_TT_Hint_Glyph
+_TT_Set_CodeRange
+_TT_Run_Context
+_TT_Goto_CodeRange
+_translate_array
+_sph_test_tweak_x_scaling
+_scale_test_tweak
+_is_member_of_family_class
+_is_member_of_style_class
+_sph_set_tweaks
+_sph_test_tweak
+_tt_size_ready_bytecode
+_tt_size_init_bytecode
+_tt_size_run_prep
+_TT_Load_Context
+_TT_Clear_CodeRange
+_TT_Save_Context
+_tt_glyphzone_new
+_tt_size_run_fpgm
+_tt_property_set
+_tt_property_get
+_TT_Set_MM_Blend
+_TT_Get_MM_Var
+_TT_Set_Var_Design
+_ft_var_load_avar
+_ft_var_load_gvar
+_T1_Driver_Init
+_T1_Driver_Done
+_Get_Interface
+_T1_Face_Init
+_T1_Face_Done
+_T1_Size_Init
+_T1_Size_Done
+_T1_GlyphSlot_Init
+_T1_GlyphSlot_Done
+_T1_Load_Glyph
+_Get_Kerning
+_T1_Read_Metrics
+_T1_Get_Advances
+_T1_Size_Request
+_t1_get_index
+_T1_Read_PFM
+_T1_Done_Metrics
+_compare_kern_pairs
+_T1_Parse_Glyph
+_T1_Parse_Glyph_And_Get_Char_String
+_FT_MulFix_i386
+_T1_Size_Get_Globals_Funcs
+_T1_Get_Kerning
+_T1_Done_Blend
+_T1_Open_Face
+_T1_Compute_Max_Advance
+_t1_init_loader
+_T1_New_Parser
+_parse_dict
+_T1_Get_Private_Dict
+_t1_done_loader
+_T1_Finalize_Parser
+_read_pfb_tag
+_read_binary_data
+_t1_load_keyword
+_t1_parse_font_matrix
+_parse_encoding
+_parse_subrs
+_parse_charstrings
+_parse_private
+_parse_blend_design_positions
+_parse_blend_design_map
+_parse_blend_axis_types
+_parse_weight_vector
+_parse_buildchar
+_t1_allocate_blend
+_check_type1_format
+_T1_Get_Multi_Master
+_T1_Set_MM_Design
+_T1_Set_MM_Blend
+_T1_Get_MM_Var
+_T1_Set_Var_Design
+_mm_weights_unmap
+_mm_axis_unmap
+_T1_Get_Track_Kerning
+_t1_ps_get_font_info
+_t1_ps_get_font_extra
+_t1_ps_has_glyph_names
+_t1_ps_get_font_private
+_t1_ps_get_font_value
+_t1_get_glyph_name
+_t1_get_name_index
+_t1_get_ps_name
+_cff_driver_init
+_cff_driver_done
+_cff_get_interface
+_cff_face_init
+_cff_face_done
+_cff_size_init
+_cff_size_done
+_cff_slot_init
+_cff_slot_done
+_cff_glyph_load
+_cff_get_kerning
+_cff_get_advances
+_cff_size_request
+_cff_size_select
+_cff_cmap_encoding_init
+_cff_cmap_encoding_done
+_cff_cmap_encoding_char_index
+_cff_cmap_encoding_char_next
+_cff_cmap_unicode_init
+_cff_cmap_unicode_done
+_cff_cmap_unicode_char_index
+_cff_cmap_unicode_char_next
+_cff_sid_to_glyph_name
+_cff_index_get_sid_string
+_cff_index_get_string
+_cff_font_done
+_cff_index_done
+_cff_subfont_done
+_cff_encoding_done
+_cff_charset_done
+_CFF_Done_FD_Select
+_cff_charset_free_cids
+_cff_font_load
+_cff_index_get_name
+_remove_subset_prefix
+_cff_strcpy
+_remove_style
+_cff_index_access_element
+_cff_index_forget_element
+_cff_index_read_offset
+_cff_index_init
+_cff_index_get_pointers
+_cff_subfont_load
+_CFF_Load_FD_Select
+_cff_charset_load
+_cff_encoding_load
+_cff_charset_compute_cids
+_cff_charset_cid_to_gindex
+_cff_parser_init
+_cff_parser_run
+_cff_parse_num
+_cff_parse_fixed
+_cff_parse_fixed_scaled
+_do_fixed
+_cff_parse_real
+_cff_parse_integer
+_cff_parse_font_matrix
+_cff_parse_font_bbox
+_cff_parse_private_dict
+_cff_parse_cid_ros
+_cff_parse_fixed_dynamic
+_cff_index_load_offsets
+_cff_size_get_globals_funcs
+_cff_make_private_dict
+_cff_slot_load
+_cff_fd_select_get
+_cff_decoder_init
+_cff_get_glyph_data
+_cff_decoder_prepare
+_cf2_decoder_parse_charstrings
+_cff_free_glyph_data
+_cff_builder_done
+_FT_MulFix_i386
+_cf2_free_instance
+_cf2_outline_init
+_cf2_getScaleAndHintFlag
+_cf2_getUnitsPerEm
+_cf2_checkTransform
+_cf2_getGlyphOutline
+_cf2_setGlyphWidth
+_cf2_font_setup
+_cf2_outline_reset
+_cf2_interpT2CharString
+_cf2_outline_close
+_cf2_setError
+_cff_builder_close_contour
+_cf2_getNominalWidthX
+_cf2_arrstack_init
+_cf2_hintmask_init
+_cf2_glyphpath_init
+_cf2_getDefaultWidthX
+_cf2_stack_init
+_cf2_arrstack_setCount
+_cf2_arrstack_getBuffer
+_cf2_buf_isEnd
+_cf2_buf_readByte
+_cf2_hintmask_isValid
+_cf2_doStems
+_cf2_stack_count
+_cf2_stack_getReal
+_cf2_stack_popFixed
+_cf2_glyphpath_moveTo
+_cf2_glyphpath_lineTo
+_cf2_stack_clear
+_cf2_glyphpath_curveTo
+_cf2_arrstack_getPointer
+_cf2_stack_popInt
+_cf2_initGlobalRegionBuffer
+_cf2_initLocalRegionBuffer
+_cf2_doFlex
+_cf2_glyphpath_closeOpenPath
+_cf2_getSeacComponent
+_cf2_freeSeacComponent
+_cf2_hintmask_read
+_cf2_arrstack_size
+_cf2_hintmap_init
+_cf2_hintmap_build
+_cf2_stack_pushInt
+_cf2_stack_pushFixed
+_cf2_glyphpath_finalize
+_cf2_arrstack_finalize
+_cf2_stack_free
+_cf2_hintmap_isValid
+_cf2_hintmask_setAll
+_cf2_hintmask_getMaskPtr
+_cf2_hint_initZero
+_cf2_hintmap_insertHint
+_cf2_hint_init
+_cf2_hint_isLocked
+_cf2_blues_capture
+_cf2_hintmap_adjustHints
+_cf2_hint_isSynthetic
+_cf2_hint_isTop
+_cf2_hintmask_setNew
+_cf2_arrstack_clear
+_cf2_hint_isPair
+_cf2_arrstack_push
+_cf2_arrstack_setNumElements
+_cf2_hint_isBottom
+_cf2_hint_isValid
+_cf2_hint_lock
+_cf2_hint_isPairTop
+_cf2_hintmap_map
+_cf2_hintmask_setCounts
+_cff_lookup_glyph_by_stdcharcode
+_cff_get_standard_encoding
+_cf2_glyphpath_pushPrevElem
+_cf2_glyphpath_computeIntersection
+_cf2_glyphpath_hintPoint
+_cf2_glyphpath_computeOffset
+_cf2_getWindingMomentum
+_cf2_glyphpath_pushMove
+_cf2_hintmask_isNew
+_cf2_getSubfont
+_cf2_getPpemY
+_cf2_getStdVW
+_cf2_computeDarkening
+_cf2_getStdHW
+_cf2_blues_init
+_cf2_getBlueMetrics
+_cf2_getBlueValues
+_cf2_getOtherBlues
+_cf2_getFamilyBlues
+_cf2_getFamilyOtherBlues
+_cf2_getLanguageGroup
+_cf2_builder_moveTo
+_cf2_builder_lineTo
+_cf2_builder_cubeTo
+_cff_builder_start_point
+_cff_check_points
+_cff_builder_add_point
+_cff_builder_add_contour
+_cff_builder_add_point1
+_cff_compute_bias
+_cff_builder_init
+_cff_property_set
+_cff_property_get
+_cff_get_ros
+_cff_get_is_cid
+_cff_get_cid_from_glyph_index
+_cff_get_cmap_info
+_cff_get_glyph_name
+_cff_get_name_index
+_cff_get_ps_name
+_cff_ps_get_font_info
+_cff_ps_has_glyph_names
+_cid_driver_init
+_cid_driver_done
+_cid_get_interface
+_cid_face_init
+_cid_face_done
+_cid_size_init
+_cid_size_done
+_cid_slot_init
+_cid_slot_done
+_cid_slot_load_glyph
+_cid_size_request
+_cid_load_glyph
+_FT_MulFix_i386
+_cid_get_offset
+_cid_size_get_globals_funcs
+_cid_face_open
+_cid_init_loader
+_cid_parser_new
+_cid_parse_dict
+_cid_hex_to_binary
+_cid_read_subrs
+_cid_done_loader
+_cid_parser_done
+_cid_load_keyword
+_parse_fd_array
+_cid_parse_font_matrix
+_parse_expansion_factor
+_cid_get_ros
+_cid_get_is_cid
+_cid_get_cid_from_glyph_index
+_cid_ps_get_font_info
+_cid_ps_get_font_extra
+_cid_get_postscript_name
+_pfr_cmap_init
+_pfr_cmap_done
+_pfr_cmap_char_index
+_pfr_cmap_char_next
+_pfr_get_metrics
+_pfr_face_get_kerning
+_pfr_get_advance
+_pfr_get_service
+_pfr_face_init
+_pfr_face_done
+_pfr_slot_init
+_pfr_slot_done
+_pfr_slot_load
+_pfr_get_kerning
+_pfr_slot_load_bitmap
+_pfr_glyph_load
+_FT_MulFix_i386
+_pfr_glyph_load_rec
+_pfr_glyph_load_compound
+_pfr_glyph_load_simple
+_pfr_extra_items_skip
+_pfr_glyph_start
+_pfr_glyph_end
+_pfr_glyph_line_to
+_pfr_glyph_move_to
+_pfr_glyph_curve_to
+_pfr_glyph_close_contour
+_pfr_extra_items_parse
+_pfr_lookup_bitmap_data
+_pfr_load_bitmap_metrics
+_pfr_load_bitmap_bits
+_pfr_bitwriter_init
+_pfr_bitwriter_decode_bytes
+_pfr_bitwriter_decode_rle1
+_pfr_bitwriter_decode_rle2
+_pfr_glyph_done
+_pfr_glyph_init
+_pfr_phy_font_done
+_pfr_header_load
+_pfr_header_check
+_pfr_log_font_count
+_pfr_log_font_load
+_pfr_phy_font_load
+_pfr_aux_name_load
+_pfr_extra_item_load_bitmap_info
+_pfr_extra_item_load_font_id
+_pfr_extra_item_load_stem_snaps
+_pfr_extra_item_load_kerning_pairs
+_T42_Driver_Init
+_T42_Driver_Done
+_T42_Get_Interface
+_T42_Face_Init
+_T42_Face_Done
+_T42_Size_Init
+_T42_Size_Done
+_T42_GlyphSlot_Init
+_T42_GlyphSlot_Done
+_T42_GlyphSlot_Load
+_T42_Size_Request
+_T42_Size_Select
+_t42_glyphslot_clear
+_T42_Open_Face
+_t42_loader_init
+_t42_parser_init
+_t42_parse_dict
+_t42_loader_done
+_t42_parser_done
+_t42_load_keyword
+_t42_parse_font_matrix
+_t42_parse_encoding
+_t42_parse_charstrings
+_t42_parse_sfnts
+_t42_is_space
+_t42_ps_get_font_info
+_t42_ps_get_font_extra
+_t42_ps_has_glyph_names
+_t42_ps_get_font_private
+_t42_get_ps_font_name
+_t42_get_glyph_name
+_t42_get_name_index
+_winfnt_get_service
+_FNT_Face_Init
+_FNT_Face_Done
+_FNT_Load_Glyph
+_FNT_Size_Request
+_FNT_Size_Select
+_fnt_font_done
+_fnt_face_get_dll_font
+_fnt_font_load
+_fnt_cmap_init
+_fnt_cmap_char_index
+_fnt_cmap_char_next
+_winfnt_get_header
+_pcf_cmap_init
+_pcf_cmap_done
+_pcf_cmap_char_index
+_pcf_cmap_char_next
+_pcf_driver_requester
+_PCF_Face_Init
+_PCF_Face_Done
+_PCF_Glyph_Load
+_PCF_Size_Request
+_PCF_Size_Select
+_BitOrderInvert
+_TwoByteSwap
+_FourByteSwap
+_pcf_load_font
+_pcf_read_TOC
+_pcf_get_properties
+_pcf_has_table_type
+_pcf_get_accel
+_pcf_get_metrics
+_pcf_get_bitmaps
+_pcf_get_encodings
+_pcf_interpret_style
+_pcf_find_property
+_pcf_seek_to_table_type
+_pcf_get_metric
+_pcf_get_charset_id
+_pcf_get_bdf_property
+_bdf_cmap_init
+_bdf_cmap_done
+_bdf_cmap_char_index
+_bdf_cmap_char_next
+_bdf_driver_requester
+_BDF_Face_Init
+_BDF_Face_Done
+_BDF_Glyph_Load
+_BDF_Size_Request
+_BDF_Size_Select
+_bdf_free_font
+_hash_free
+_bdf_load_font
+_bdf_get_font_property
+_bdf_interpret_style
+_hash_lookup
+_hash_bucket
+__bdf_list_init
+__bdf_readstream
+__bdf_parse_start
+__bdf_list_done
+__bdf_add_comment
+_hash_init
+_hash_insert
+__bdf_list_split
+__bdf_atoul
+__bdf_parse_properties
+__bdf_atos
+__bdf_list_shift
+__bdf_list_join
+__bdf_set_default_spacing
+__bdf_add_property
+__bdf_parse_glyphs
+_by_encoding
+__bdf_atol
+_bdf_create_property
+__bdf_is_atom
+_bdf_get_property
+__bdf_list_ensure
+_hash_rehash
+_bdf_get_charset_id
+_bdf_get_bdf_property
+_tt_cmap_init
+_tt_cmap0_char_index
+_tt_cmap0_char_next
+_tt_cmap0_validate
+_tt_cmap0_get_info
+_tt_cmap2_char_index
+_tt_cmap2_char_next
+_tt_cmap2_validate
+_tt_cmap2_get_info
+_tt_cmap4_init
+_tt_cmap4_char_index
+_tt_cmap4_char_next
+_tt_cmap4_validate
+_tt_cmap4_get_info
+_tt_cmap6_char_index
+_tt_cmap6_char_next
+_tt_cmap6_validate
+_tt_cmap6_get_info
+_tt_cmap8_char_index
+_tt_cmap8_char_next
+_tt_cmap8_validate
+_tt_cmap8_get_info
+_tt_cmap10_char_index
+_tt_cmap10_char_next
+_tt_cmap10_validate
+_tt_cmap10_get_info
+_tt_cmap12_init
+_tt_cmap12_char_index
+_tt_cmap12_char_next
+_tt_cmap12_validate
+_tt_cmap12_get_info
+_tt_cmap13_init
+_tt_cmap13_char_index
+_tt_cmap13_char_next
+_tt_cmap13_validate
+_tt_cmap13_get_info
+_tt_cmap14_init
+_tt_cmap14_done
+_tt_cmap14_char_index
+_tt_cmap14_char_next
+_tt_cmap14_char_var_index
+_tt_cmap14_char_var_isdefault
+_tt_cmap14_variants
+_tt_cmap14_char_variants
+_tt_cmap14_variant_chars
+_tt_cmap14_validate
+_tt_cmap14_get_info
+_sfnt_get_interface
+_tt_get_cmap_info
+_sfnt_get_charset_id
+_tt_face_find_bdf_prop
+_tt_face_load_bdf_props
+_tt_face_goto_table
+_tt_face_lookup_table
+_sfnt_get_glyph_name
+_sfnt_get_name_index
+_tt_face_get_ps_name
+_load_post_names
+_load_format_20
+_load_format_25
+_sfnt_get_ps_name
+_tt_face_load_any
+_get_sfnt_table
+_sfnt_table_info
+_sfnt_init_face
+_sfnt_load_face
+_sfnt_done_face
+_tt_face_load_head
+_tt_face_load_hhea
+_tt_face_load_cmap
+_tt_face_load_maxp
+_tt_face_load_os2
+_tt_face_load_post
+_tt_face_load_name
+_tt_face_free_name
+_tt_face_load_kern
+_tt_face_load_gasp
+_tt_face_load_pclt
+_tt_face_load_bhed
+_tt_face_load_sbit_image
+_tt_face_free_ps_names
+_tt_face_get_kerning
+_tt_face_load_font_dir
+_tt_face_load_hmtx
+_tt_face_load_sbit
+_tt_face_free_sbit
+_tt_face_set_sbit_strike
+_tt_face_load_strike_metrics
+_tt_face_get_metrics
+_check_table_dir
+_tt_sbit_decoder_init
+_tt_sbit_decoder_load_image
+_tt_sbit_decoder_done
+_tt_face_load_sbix_image
+_tt_sbit_decoder_load_metrics
+_tt_sbit_decoder_load_bitmap
+_tt_sbit_decoder_load_byte_aligned
+_tt_sbit_decoder_load_bit_aligned
+_tt_sbit_decoder_load_compound
+_tt_sbit_decoder_alloc_bitmap
+_tt_face_load_generic_header
+_tt_face_free_bdf_props
+_tt_face_done_kern
+_tt_face_get_name
+_tt_face_build_cmaps
+_sfnt_find_encoding
+_tt_name_entry_ascii_from_utf16
+_tt_name_entry_ascii_from_other
+_sfnt_open_font
+_woff_open_font
+_compare_offsets
+_sfnt_stream_close
+_tt_cmap14_find_variant
+_tt_cmap14_get_nondef_chars
+_tt_cmap14_get_def_chars
+_tt_cmap14_def_char_count
+_tt_cmap14_ensure
+_tt_cmap14_char_map_def_binary
+_tt_cmap14_char_map_nondef_binary
+_tt_cmap13_next
+_tt_cmap13_char_map_binary
+_tt_cmap12_next
+_tt_cmap12_char_map_binary
+_tt_cmap4_char_map_linear
+_tt_cmap4_next
+_tt_cmap4_char_map_binary
+_tt_cmap4_set_range
+_tt_cmap2_get_subheader
+_af_dummy_hints_init
+_af_dummy_hints_apply
+_af_latin_metrics_init
+_af_latin_metrics_scale
+_af_latin_hints_init
+_af_latin_hints_apply
+_af_cjk_metrics_init
+_af_cjk_metrics_scale
+_af_cjk_hints_init
+_af_cjk_hints_apply
+_af_indic_metrics_init
+_af_indic_metrics_scale
+_af_indic_hints_init
+_af_indic_hints_apply
+_af_autofitter_load_glyph
+_af_autofitter_init
+_af_autofitter_done
+_af_get_interface
+_af_property_set
+_af_property_get
+_af_property_get_face_globals
+_af_face_globals_new
+_af_face_globals_free
+_af_face_globals_compute_style_coverage
+_af_loader_done
+_af_glyph_hints_done
+_af_loader_init
+_af_glyph_hints_init
+_af_loader_load_glyph
+_af_loader_reset
+_af_face_globals_get_metrics
+_af_loader_load_g
+_FT_MulFix_i386
+_af_face_globals_is_digit
+_af_cjk_metrics_init_widths
+_af_cjk_metrics_check_digits
+_af_glyph_hints_rescale
+_af_glyph_hints_reload
+_af_latin_hints_compute_segments
+_af_latin_hints_link_segments
+_af_sort_and_quantize_widths
+_af_axis_hints_new_segment
+_af_direction_compute
+_af_cjk_hints_detect_features
+_af_cjk_hints_compute_blue_edges
+_af_cjk_hint_edges
+_af_cjk_align_edge_points
+_af_glyph_hints_align_strong_points
+_af_glyph_hints_align_weak_points
+_af_glyph_hints_save
+_af_iup_interp
+_af_iup_shift
+_af_cjk_align_linked_edge
+_af_hint_normal_stem
+_af_cjk_align_serif_edge
+_af_cjk_compute_stem_width
+_af_cjk_snap_width
+_af_cjk_hints_compute_segments
+_af_cjk_hints_link_segments
+_af_cjk_hints_compute_edges
+_af_axis_hints_new_edge
+_af_cjk_metrics_scale_dim
+_af_cjk_metrics_init_blues
+_af_sort_pos
+_af_latin_hints_detect_features
+_af_latin_hints_compute_blue_edges
+_af_latin_hint_edges
+_af_glyph_hints_align_edge_points
+_af_latin_align_linked_edge
+_af_latin_compute_stem_width
+_af_latin_align_serif_edge
+_af_latin_snap_width
+_af_latin_hints_compute_edges
+_af_latin_metrics_scale_dim
+_af_latin_metrics_init_widths
+_af_latin_metrics_init_blues
+_af_latin_metrics_check_digits
+_psh_glyph_init
+_FT_MulFix_i386
+_psh_globals_set_scale
+_psh_glyph_load_points
+_psh_glyph_compute_extrema
+_psh_hint_table_align_hints
+_psh_glyph_find_strong_points
+_psh_glyph_find_blue_points
+_psh_glyph_interpolate_strong_points
+_psh_glyph_interpolate_normal_points
+_psh_glyph_interpolate_other_points
+_psh_glyph_save_points
+_psh_glyph_done
+_ps_hinter_init
+_ps_hinter_done
+_ps_hints_done
+_ps_dimension_done
+_ps_mask_table_done
+_ps_hint_table_done
+_ps_mask_done
+_ps_hints_init
+_psh_globals_funcs_init
+_t1_hints_funcs_init
+_t2_hints_funcs_init
+_t2_hints_open
+_ps_hints_close
+_t2_hints_stems
+_ps_hints_t2mask
+_ps_hints_t2counter
+_ps_dimension_set_mask_bits
+_ps_dimension_reset_mask
+_ps_mask_table_set_bits
+_ps_mask_table_last
+_ps_mask_ensure
+_ps_mask_table_alloc
+_ps_mask_table_ensure
+_ps_dimension_end_mask
+_ps_hints_stem
+_ps_dimension_add_t1stem
+_ps_hint_table_alloc
+_ps_mask_set_bit
+_ps_hint_table_ensure
+_ps_dimension_end
+_ps_mask_table_merge_all
+_ps_mask_table_test_intersect
+_ps_mask_table_merge
+_ps_mask_clear_bit
+_ps_hints_open
+_ps_dimension_init
+_t1_hints_open
+_t1_hints_stem
+_ps_hints_t1stem3
+_ps_hints_t1reset
+_ps_dimension_add_counter
+_ps_mask_test_bit
+_psh_globals_new
+_psh_globals_destroy
+_psh_blues_set_zones
+_psh_calc_max_height
+_psh_blues_set_zones_0
+_pshinter_get_globals_funcs
+_pshinter_get_t1_funcs
+_pshinter_get_t2_funcs
+_psh_hint_table_done
+_psh_hint_table_activate_mask
+_psh_hint_table_find_strong_points
+_psh_hint_table_deactivate
+_psh_hint_align
+_psh_blues_snap_stem
+_psh_dimension_quantize_len
+_psh_hint_snap_stem_side_delta
+_psh_globals_scale_widths
+_psh_blues_scale_zones
+_psh_compute_dir
+_psh_glyph_compute_inflections
+_psh_hint_table_init
+_psh_hint_table_record_mask
+_psh_hint_table_record
+_psh_hint_overlap
+_ft_black_new
+_ft_black_reset
+_ft_black_set_mode
+_ft_black_render
+_ft_black_done
+_ft_raster1_init
+_ft_raster1_render
+_ft_raster1_transform
+_ft_raster1_get_cbox
+_ft_raster1_set_mode
+_Render_Gray_Glyph
+_Render_Glyph
+_Set_High_Precision
+_Vertical_Sweep_Init
+_Vertical_Sweep_Span
+_Vertical_Sweep_Drop
+_Vertical_Sweep_Step
+_Render_Single_Pass
+_Horizontal_Sweep_Init
+_Horizontal_Sweep_Span
+_Horizontal_Sweep_Drop
+_Horizontal_Sweep_Step
+_Convert_Glyph
+_Draw_Sweep
+_Init_Linked
+_InsNew
+_DelOld
+_Sort
+_Decompose_Curve
+_End_Profile
+_Finalize_Profile_Table
+_Insert_Y_Turn
+_Line_To
+_Conic_To
+_Cubic_To
+_Split_Cubic
+_New_Profile
+_Bezier_Up
+_Bezier_Down
+_Split_Conic
+_Line_Up
+_Line_Down
+_ft_black_init
+_gray_raster_new
+_gray_raster_reset
+_gray_raster_render
+_gray_raster_done
+_ft_smooth_init
+_ft_smooth_render
+_ft_smooth_transform
+_ft_smooth_get_cbox
+_ft_smooth_set_mode
+_ft_smooth_render_lcd
+_ft_smooth_render_lcd_v
+_ft_smooth_render_generic
+_FT_FixedFromFloat
+__lcd_stem_align
+__ft_lcd_fringe_filter
+__ft_lcd_gamma_correction_correction
+__ft_lcd_chromeos_sharpen
+__ft_lcd_windows_sharpen
+__ft_lcd_darken_x
+__ft_bitmap_bc
+_get_brightness
+_get_contrast
+__ft_lcd_darken_y
+__ft_bitmap_cap
+__ft_lcd_grayscale_filter
+_sa_fill_known_stem_values
+_swap_stem
+_gray_init_cells
+_gray_render_span
+_gray_convert_glyph
+_gray_compute_cbox
+_gray_convert_glyph_inner
+_gray_sweep
+_gray_hline
+_gray_record_cell
+_gray_find_cell
+_gray_move_to
+_gray_line_to
+_gray_conic_to
+_gray_cubic_to
+_gray_render_cubic
+_gray_split_cubic
+_gray_render_line
+_gray_render_scanline
+_gray_set_cell
+_gray_render_conic
+_gray_split_conic
+_gray_start_cell
+_ftc_size_node_compare
+_ftc_size_node_init
+_ftc_size_node_reset
+_ftc_size_node_done
+_FTC_MruNode_Up
+_FTC_MruList_New
+_ftc_face_node_compare
+_ftc_face_node_init
+_ftc_face_node_done
+_FTC_MruList_Init
+_FTC_MruList_Done
+_FTC_MruList_Reset
+_FTC_Manager_FlushN
+_FTC_MruList_RemoveSelection
+_FTC_Cache_RemoveFaceID
+_ftc_cmap_node_new
+_ftc_cmap_node_weight
+_ftc_cmap_node_compare
+_ftc_cmap_node_remove_faceid
+_ftc_cmap_node_free
+_ftc_cache_init
+_ftc_cache_done
+_FTC_Manager_RegisterCache
+_FTC_Cache_NewNode
+_ftc_basic_family_compare
+_ftc_basic_family_init
+_ftc_basic_family_load_glyph
+_ftc_inode_new
+_ftc_inode_weight
+_ftc_gnode_compare
+_ftc_basic_gnode_compare_faceid
+_ftc_inode_free
+_ftc_gcache_init
+_ftc_gcache_done
+_FTC_GCache_New
+_FTC_GNode_Compare
+_FTC_MruList_Remove
+_ftc_basic_family_get_count
+_ftc_basic_family_load_bitmap
+_ftc_snode_new
+_ftc_snode_weight
+_ftc_snode_compare
+_ftc_snode_free
+_FTC_SNode_Compare
+_FTC_GNode_Done
+_FTC_GNode_UnselectFamily
+_ftc_snode_load
+_ftc_sbit_copy_bitmap
+_FTC_SNode_New
+_FTC_GNode_Init
+_FTC_SNode_Free
+_FTC_MruNode_Remove
+_FTC_Cache_Done
+_FTC_Cache_Init
+_FTC_INode_New
+_FTC_INode_Free
+_FTC_Family_Init
+_ftc_cache_add
+_ftc_node_hash_link
+_ftc_node_mru_link
+_FTC_Manager_Compress
+_ftc_node_destroy
+_ftc_node_mru_unlink
+_ftc_node_hash_unlink
+_ftc_cache_resize
+_FTC_MruNode_Prepend
+_FTC_Cache_Clear
+_ftc_size_node_compare_faceid
+_ftc_scaler_lookup_size
+_ft_gzip_check_header
+_ft_gzip_file_init
+_ft_gzip_get_uncompressed_size
+_ft_gzip_file_io
+_ft_gzip_file_done
+_ft_gzip_stream_close
+_ft_gzip_stream_io
+_ft_gzip_alloc
+_ft_gzip_free
+_ft_gzip_file_reset
+_ft_gzip_file_skip_output
+_ft_gzip_file_fill_output
+_ft_gzip_file_fill_input
+_ft_lzw_check_header
+_ft_lzw_file_init
+_ft_lzw_stream_io
+_ft_lzw_stream_close
+_ft_lzwstate_get_code
+_ft_lzwstate_stack_grow
+_ft_lzwstate_prefix_grow
+_ft_lzwstate_refill
+_ft_lzw_file_done
+_ft_lzw_file_io
+_ft_lzw_file_reset
+_ft_lzw_file_skip_output
+_ft_lzw_file_fill_output
+_ft_bzip2_check_header
+_ft_bzip2_file_init
+_ft_bzip2_stream_io
+_ft_bzip2_stream_close
+_ft_bzip2_file_done
+_ft_bzip2_file_io
+_ft_bzip2_file_reset
+_ft_bzip2_file_skip_output
+_ft_bzip2_file_fill_output
+_ft_bzip2_file_fill_input
+_ft_bzip2_alloc
+_ft_bzip2_free
+_ps_table_new
+_ps_table_done
+_ps_table_add
+_ps_table_release
+_ps_parser_init
+_ps_parser_done
+_ps_parser_skip_spaces
+_ps_parser_skip_PS_token
+_ps_parser_to_int
+_ps_parser_to_fixed
+_ps_parser_to_bytes
+_ps_parser_to_coord_array
+_ps_parser_to_fixed_array
+_ps_parser_to_token
+_ps_parser_to_token_array
+_ps_parser_load_field
+_ps_parser_load_field_table
+_t1_builder_init
+_t1_builder_done
+_t1_builder_check_points
+_t1_builder_add_point
+_t1_builder_add_point1
+_t1_builder_add_contour
+_t1_builder_start_point
+_t1_builder_close_contour
+_t1_decoder_init
+_t1_decoder_done
+_t1_decoder_parse_charstrings
+_afm_parser_init
+_afm_parser_done
+_afm_parser_parse
+_t1_cmap_standard_init
+_t1_cmap_std_done
+_t1_cmap_std_char_index
+_t1_cmap_std_char_next
+_t1_cmap_expert_init
+_t1_cmap_custom_init
+_t1_cmap_custom_done
+_t1_cmap_custom_char_index
+_t1_cmap_custom_char_next
+_t1_cmap_unicode_init
+_t1_cmap_unicode_done
+_t1_cmap_unicode_char_index
+_t1_cmap_unicode_char_next
+_afm_parser_next_key
+_afm_tokenize
+_afm_parser_read_int
+_afm_parser_read_vals
+_afm_parser_skip_section
+_afm_parse_kern_data
+_afm_parse_track_kern
+_afm_parse_kern_pairs
+_afm_compare_kern_pairs
+_afm_stream_read_string
+_afm_stream_read_one
+_PS_Conv_ToFixed
+_PS_Conv_ToInt
+_PS_Conv_Strtol
+_afm_stream_skip_spaces
+_psaux_get_glyph_name
+_t1_cmap_std_init
+_FT_MulFix_i386
+_t1operator_seac
+_t1_lookup_glyph_by_stdcharcode
+_t1_decoder_parse_glyph
+_t1_decrypt
+_PS_Conv_EexecDecode
+_skip_spaces
+_ps_tobool
+_ps_tofixedarray
+_skip_comment
+_skip_literal_string
+_skip_procedure
+_skip_string
+_ps_tocoordarray
+_PS_Conv_ASCIIHexDecode
+_reallocate_t1_table
+_shift_elements
+_psnames_get_service
+_ps_unicode_value
+_ps_unicodes_init
+_ps_unicodes_char_index
+_ps_unicodes_char_next
+_ps_get_macintosh_name
+_ps_get_standard_strings
+_ps_check_extra_glyph_name
+_ps_check_extra_glyph_unicode
+_compare_uni_maps
+_ft_get_adobe_glyph_index
+_null_outline
+_ft_trig_arctan_table
+_null_bitmap
+_FT_Library_SetLcdFilter.light_filter
+__ft_lcd_filter_legacy.filters
+_opcode_length
+_Pop_Push_Count
+_tt_check_trickyness_sfnt_ids.sfnt_id
+_tt_check_trickyness_family.trick_names
+_X_SCALING_Rules
+_FAMILY_CLASS_Rules
+_DEEMBOLDEN_Rules
+_EMBOLDEN_Rules
+_NO_ALIGNRP_AFTER_IUP_Rules
+_NO_CALL_AFTER_IUP_Rules
+_NO_DELTAP_AFTER_IUP_Rules
+_TIMES_NEW_ROMAN_HACK_Rules
+_COURIER_NEW_2_HACK_Rules
+_COMPATIBLE_WIDTHS_Rules
+_tt_service_truetype_engine
+_TT_Get_MM_Var.fvar_fields
+_TT_Get_MM_Var.fvaraxis_fields
+_ft_var_load_gvar.gvar_fields
+_cff_font_load.cff_header_fields
+_cff_standard_encoding
+_cff_expert_encoding
+_cff_isoadobe_charset
+_cff_expert_charset
+_cff_expertsubset_charset
+_power_tens
+_cf2_interpT2CharString.readFromStack
+_cf2_interpT2CharString.readFromStack7
+_cf2_interpT2CharString.readFromStack8
+_cf2_interpT2CharString.readFromStack9
+_pfr_header_fields
+_winfnt_header_fields
+_winmz_header_fields
+_winne_header_fields
+_winpe32_header_fields
+_winpe32_section_fields
+_winpe_rsrc_dir_fields
+_winpe_rsrc_dir_entry_fields
+_winpe_rsrc_data_entry_fields
+_pcf_metric_msb_header
+_pcf_metric_header
+_pcf_compressed_metric_header
+_pcf_accel_msb_header
+_pcf_accel_header
+_pcf_property_msb_header
+_pcf_property_header
+_pcf_toc_header
+_pcf_table_header
+__bdf_opts
+_hdigits
+_a2i
+_nibble_mask
+_odigits
+_ddigits
+_empty
+_tt_face_load_font_dir.offset_table_fields
+_check_table_dir.table_dir_entry_fields
+_tt_face_load_generic_header.header_fields
+_tt_face_load_pclt.pclt_fields
+_tt_face_load_name.name_table_fields
+_tt_face_load_name.name_record_fields
+_tt_face_load_post.post_fields
+_tt_face_load_os2.os2_fields
+_tt_face_load_os2.os2_fields_extra1
+_tt_face_load_os2.os2_fields_extra2
+_tt_face_load_os2.os2_fields_extra5
+_tt_face_load_maxp.maxp_fields
+_tt_face_load_maxp.maxp_fields_extra
+_tt_face_load_hhea.metrics_header_fields
+_sfnt_find_encoding.tt_encodings
+_sfnt_open_font.ttc_header_fields
+_woff_open_font.woff_header_fields
+_ft_char_table
+_t1_args_count
+_t1_standard_encoding
+_t1_expert_encoding
+_ft_standard_glyph_names
+_ft_sid_names
+_ft_mac_names
+_ft_extra_glyph_unicodes
+_ft_extra_glyph_names
+_ft_extra_glyph_name_offsets
+_ft_adobe_glyph_list
+_ft_default_modules
+_bbox_interface
+_tt_services
+_tt_service_gx_multi_masters
+_tt_service_truetype_glyf
+_tt_service_properties
+_t1_keywords
+_t1_services
+_t1_service_ps_name
+_t1_service_glyph_dict
+_t1_service_ps_info
+_t1_service_kerning
+_t1_service_multi_masters
+_cff_field_handlers
+_cff_services
+_cff_service_ps_info
+_cff_service_ps_name
+_cff_service_glyph_dict
+_cff_service_get_cmap_info
+_cff_service_cid_info
+_cff_service_properties
+_cid_field_records
+_cid_services
+_cid_service_ps_name
+_cid_service_ps_info
+_cid_service_cid_info
+_pfr_phy_font_extra_items
+_pfr_services
+_t42_keywords
+_t42_services
+_t42_service_glyph_dict
+_t42_service_ps_font_name
+_t42_service_ps_info
+_fnt_cmap_class
+_fnt_cmap_class_rec
+_winfnt_services
+_winfnt_service_rec
+_pcf_services
+_pcf_service_bdf
+__bdf_properties
+_bdf_services
+_bdf_service_bdf
+_sfnt_interface
+_sfnt_services
+_sfnt_service_sfnt_table
+_sfnt_service_ps_name
+_sfnt_service_glyph_dict
+_sfnt_service_bdf
+_tt_service_get_cmap_info
+_tt_cmap_classes
+_af_services
+_af_service_properties
+_pshinter_interface
+_func_interface
+_psaux_interface
+_afm_key_table
+_pscmaps_interface
+_pscmaps_services
+dyld__mach_header
+_FT_Library_SetLcdFilter.default_filter
+_SETUP_INFINALITY_FT_Settings.initialize
+__ft_lcd_chromeos_sharpen.initialized_gamma
+__ft_lcd_chromeos_sharpen.gamma_ramp
+_ALLOW_X_DMOVE_Rules
+_ALWAYS_DO_DELTAP_Rules
+_ALWAYS_SKIP_DELTAP_Rules
+_ALWAYS_USE_100_Rules
+_BRIGHTNESS_Rules
+_COMPATIBILITY_MODE_Rules
+_CONTRAST_Rules
+_DO_SHPIX_Rules
+_FTC_CMapCache_Lookup
+_FTC_CMapCache_New
+_FTC_ImageCache_Lookup
+_FTC_ImageCache_LookupScaler
+_FTC_ImageCache_New
+_FTC_Manager_Done
+_FTC_Manager_LookupFace
+_FTC_Manager_LookupSize
+_FTC_Manager_New
+_FTC_Manager_RemoveFaceID
+_FTC_Manager_Reset
+_FTC_Node_Unref
+_FTC_SBitCache_Lookup
+_FTC_SBitCache_LookupScaler
+_FTC_SBitCache_New
+_FT_Activate_Size
+_FT_Add_Default_Modules
+_FT_Add_Module
+_FT_Angle_Diff
+_FT_Atan2
+_FT_Attach_File
+_FT_Attach_Stream
+_FT_Bitmap_Convert
+_FT_Bitmap_Copy
+_FT_Bitmap_Done
+_FT_Bitmap_Embolden
+_FT_Bitmap_New
+_FT_CMap_Done
+_FT_CMap_New
+_FT_CeilFix
+_FT_ClassicKern_Free
+_FT_ClassicKern_Validate
+_FT_Cos
+_FT_DivFix
+_FT_Done_Face
+_FT_Done_FreeType
+_FT_Done_Glyph
+_FT_Done_GlyphSlot
+_FT_Done_Library
+_FT_Done_Memory
+_FT_Done_Size
+_FT_Face_CheckTrueTypePatents
+_FT_Face_GetCharVariantIndex
+_FT_Face_GetCharVariantIsDefault
+_FT_Face_GetCharsOfVariant
+_FT_Face_GetVariantSelectors
+_FT_Face_GetVariantsOfChar
+_FT_Face_SetUnpatentedHinting
+_FT_FloorFix
+_FT_Get_Advance
+_FT_Get_Advances
+_FT_Get_BDF_Charset_ID
+_FT_Get_BDF_Property
+_FT_Get_CID_From_Glyph_Index
+_FT_Get_CID_Is_Internally_CID_Keyed
+_FT_Get_CID_Registry_Ordering_Supplement
+_FT_Get_CMap_Format
+_FT_Get_CMap_Language_ID
+_FT_Get_Char_Index
+_FT_Get_Charmap_Index
+_FT_Get_FSType_Flags
+_FT_Get_First_Char
+_FT_Get_Gasp
+_FT_Get_Glyph
+_FT_Get_Glyph_Name
+_FT_Get_Kerning
+_FT_Get_MM_Var
+_FT_Get_Module
+_FT_Get_Module_Interface
+_FT_Get_Multi_Master
+_FT_Get_Name_Index
+_FT_Get_Next_Char
+_FT_Get_PFR_Advance
+_FT_Get_PFR_Kerning
+_FT_Get_PFR_Metrics
+_FT_Get_PS_Font_Info
+_FT_Get_PS_Font_Private
+_FT_Get_PS_Font_Value
+_FT_Get_Postscript_Name
+_FT_Get_Renderer
+_FT_Get_Sfnt_Name
+_FT_Get_Sfnt_Name_Count
+_FT_Get_Sfnt_Table
+_FT_Get_SubGlyph_Info
+_FT_Get_Track_Kerning
+_FT_Get_TrueType_Engine_Type
+_FT_Get_WinFNT_Header
+_FT_Get_X11_Font_Format
+_FT_GlyphLoader_Add
+_FT_GlyphLoader_CheckPoints
+_FT_GlyphLoader_CheckSubGlyphs
+_FT_GlyphLoader_CopyPoints
+_FT_GlyphLoader_CreateExtra
+_FT_GlyphLoader_Done
+_FT_GlyphLoader_New
+_FT_GlyphLoader_Prepare
+_FT_GlyphLoader_Reset
+_FT_GlyphLoader_Rewind
+_FT_GlyphSlot_Embolden
+_FT_GlyphSlot_Oblique
+_FT_GlyphSlot_Own_Bitmap
+_FT_Glyph_Copy
+_FT_Glyph_Get_CBox
+_FT_Glyph_Stroke
+_FT_Glyph_StrokeBorder
+_FT_Glyph_To_Bitmap
+_FT_Glyph_Transform
+_FT_Gzip_Uncompress
+_FT_Has_PS_Glyph_Names
+_FT_Hypot
+_FT_Init_FreeType
+_FT_Library_SetLcdFilter
+_FT_Library_SetLcdFilterWeights
+_FT_Library_Version
+_FT_List_Add
+_FT_List_Finalize
+_FT_List_Find
+_FT_List_Insert
+_FT_List_Iterate
+_FT_List_Remove
+_FT_List_Up
+_FT_Load_Char
+_FT_Load_Glyph
+_FT_Load_Sfnt_Table
+_FT_Lookup_Renderer
+_FT_MSB
+_FT_Match_Size
+_FT_Matrix_Invert
+_FT_Matrix_Multiply
+_FT_Matrix_Multiply_Scaled
+_FT_MulDiv
+_FT_MulDiv_No_Round
+_FT_MulFix
+_FT_New_Face
+_FT_New_GlyphSlot
+_FT_New_Library
+_FT_New_Memory
+_FT_New_Memory_Face
+_FT_New_Size
+_FT_OpenType_Free
+_FT_OpenType_Validate
+_FT_Open_Face
+_FT_Outline_Check
+_FT_Outline_Copy
+_FT_Outline_Decompose
+_FT_Outline_Done
+_FT_Outline_Done_Internal
+_FT_Outline_Embolden
+_FT_Outline_EmboldenXY
+_FT_Outline_GetInsideBorder
+_FT_Outline_GetOutsideBorder
+_FT_Outline_Get_BBox
+_FT_Outline_Get_Bitmap
+_FT_Outline_Get_CBox
+_FT_Outline_Get_Orientation
+_FT_Outline_New
+_FT_Outline_New_Internal
+_FT_Outline_Render
+_FT_Outline_Reverse
+_FT_Outline_Transform
+_FT_Outline_Translate
+_FT_Property_Get
+_FT_Property_Set
+_FT_Raccess_Get_DataOffsets
+_FT_Raccess_Get_HeaderInfo
+_FT_Raccess_Guess
+_FT_Reference_Face
+_FT_Reference_Library
+_FT_Remove_Module
+_FT_Render_Glyph
+_FT_Render_Glyph_Internal
+_FT_Request_Metrics
+_FT_Request_Size
+_FT_RoundFix
+_FT_Select_Charmap
+_FT_Select_Metrics
+_FT_Select_Size
+_FT_Set_Char_Size
+_FT_Set_Charmap
+_FT_Set_Debug_Hook
+_FT_Set_MM_Blend_Coordinates
+_FT_Set_MM_Design_Coordinates
+_FT_Set_Pixel_Sizes
+_FT_Set_Renderer
+_FT_Set_Transform
+_FT_Set_Var_Blend_Coordinates
+_FT_Set_Var_Design_Coordinates
+_FT_Sfnt_Table_Info
+_FT_Sin
+_FT_Stream_Close
+_FT_Stream_EnterFrame
+_FT_Stream_ExitFrame
+_FT_Stream_ExtractFrame
+_FT_Stream_Free
+_FT_Stream_GetChar
+_FT_Stream_GetULong
+_FT_Stream_GetULongLE
+_FT_Stream_GetUOffset
+_FT_Stream_GetUShort
+_FT_Stream_GetUShortLE
+_FT_Stream_New
+_FT_Stream_Open
+_FT_Stream_OpenBzip2
+_FT_Stream_OpenGzip
+_FT_Stream_OpenLZW
+_FT_Stream_OpenMemory
+_FT_Stream_Pos
+_FT_Stream_Read
+_FT_Stream_ReadAt
+_FT_Stream_ReadChar
+_FT_Stream_ReadFields
+_FT_Stream_ReadULong
+_FT_Stream_ReadULongLE
+_FT_Stream_ReadUOffset
+_FT_Stream_ReadUShort
+_FT_Stream_ReadUShortLE
+_FT_Stream_ReleaseFrame
+_FT_Stream_Seek
+_FT_Stream_Skip
+_FT_Stream_TryRead
+_FT_Stroker_BeginSubPath
+_FT_Stroker_ConicTo
+_FT_Stroker_CubicTo
+_FT_Stroker_Done
+_FT_Stroker_EndSubPath
+_FT_Stroker_Export
+_FT_Stroker_ExportBorder
+_FT_Stroker_GetBorderCounts
+_FT_Stroker_GetCounts
+_FT_Stroker_LineTo
+_FT_Stroker_New
+_FT_Stroker_ParseOutline
+_FT_Stroker_Rewind
+_FT_Stroker_Set
+_FT_Tan
+_FT_Trace_Get_Count
+_FT_Trace_Get_Name
+_FT_TrueTypeGX_Free
+_FT_TrueTypeGX_Validate
+_FT_Vector_From_Polar
+_FT_Vector_Length
+_FT_Vector_Polarize
+_FT_Vector_Rotate
+_FT_Vector_Transform
+_FT_Vector_Transform_Scaled
+_FT_Vector_Unit
+_INF_FT_Settings
+_MIAP_HACK_Rules
+_NORMAL_ROUND_Rules
+_PIXEL_HINTING_Rules
+_RASTERIZER_35_Rules
+_ROUND_NONPIXEL_Y_MOVES_Rules
+_ROUND_NONPIXEL_Y_MOVES_Rules_Exceptions
+_SETUP_INFINALITY_FT_Settings
+_SKIP_IUP_Rules
+_SKIP_NONPIXEL_Y_MOVES_DELTAP_Rules
+_SKIP_NONPIXEL_Y_MOVES_Rules
+_SKIP_NONPIXEL_Y_MOVES_Rules_Exceptions
+_SKIP_OFFPIXEL_Y_MOVES_Rules
+_SKIP_OFFPIXEL_Y_MOVES_Rules_Exceptions
+_SNAPPING_EDGE_DETECTION_Rules
+_SNAPPING_M_Rules
+_SNAPPING_NO_BEARING_CORRECTION_Rules
+_SNAPPING_STEM_SCALING_Rules
+_SNAPPING_STEM_TRANSLATING_ONLY_Rules
+_SNAPPING_STEM_TRANSLATING_Rules
+_SNAPPING_STEM_WIDTHS_Rules
+_SNAPPING_SYNTHESIZE_STEMS_Rules
+_STYLE_CLASS_Rules
+_TT_New_Context
+_TT_RunIns
+_af_autofitter_interface
+_af_beng_dflt_style_class
+_af_beng_script_class
+_af_beng_uniranges
+_af_blue_strings
+_af_blue_stringsets
+_af_cjk_writing_system_class
+_af_cyrl_c2cp_style_class
+_af_cyrl_c2sc_style_class
+_af_cyrl_dflt_style_class
+_af_cyrl_ordn_style_class
+_af_cyrl_pcap_style_class
+_af_cyrl_script_class
+_af_cyrl_sinf_style_class
+_af_cyrl_smcp_style_class
+_af_cyrl_subs_style_class
+_af_cyrl_sups_style_class
+_af_cyrl_titl_style_class
+_af_cyrl_uniranges
+_af_deva_dflt_style_class
+_af_deva_script_class
+_af_deva_uniranges
+_af_dummy_writing_system_class
+_af_get_char_index
+_af_get_coverage
+_af_grek_c2cp_style_class
+_af_grek_c2sc_style_class
+_af_grek_dflt_style_class
+_af_grek_ordn_style_class
+_af_grek_pcap_style_class
+_af_grek_script_class
+_af_grek_sinf_style_class
+_af_grek_smcp_style_class
+_af_grek_subs_style_class
+_af_grek_sups_style_class
+_af_grek_titl_style_class
+_af_grek_uniranges
+_af_gujr_dflt_style_class
+_af_gujr_script_class
+_af_gujr_uniranges
+_af_guru_dflt_style_class
+_af_guru_script_class
+_af_guru_uniranges
+_af_hani_dflt_style_class
+_af_hani_script_class
+_af_hani_uniranges
+_af_hebr_dflt_style_class
+_af_hebr_script_class
+_af_hebr_uniranges
+_af_indic_writing_system_class
+_af_knda_dflt_style_class
+_af_knda_script_class
+_af_knda_uniranges
+_af_latin_writing_system_class
+_af_latn_c2cp_style_class
+_af_latn_c2sc_style_class
+_af_latn_dflt_style_class
+_af_latn_ordn_style_class
+_af_latn_pcap_style_class
+_af_latn_script_class
+_af_latn_sinf_style_class
+_af_latn_smcp_style_class
+_af_latn_subs_style_class
+_af_latn_sups_style_class
+_af_latn_titl_style_class
+_af_latn_uniranges
+_af_limb_dflt_style_class
+_af_limb_script_class
+_af_limb_uniranges
+_af_mlym_dflt_style_class
+_af_mlym_script_class
+_af_mlym_uniranges
+_af_none_dflt_style_class
+_af_none_script_class
+_af_none_uniranges
+_af_orya_dflt_style_class
+_af_orya_script_class
+_af_orya_uniranges
+_af_script_classes
+_af_sinh_dflt_style_class
+_af_sinh_script_class
+_af_sinh_uniranges
+_af_style_classes
+_af_sund_dflt_style_class
+_af_sund_script_class
+_af_sund_uniranges
+_af_sylo_dflt_style_class
+_af_sylo_script_class
+_af_sylo_uniranges
+_af_taml_dflt_style_class
+_af_taml_script_class
+_af_taml_uniranges
+_af_telu_dflt_style_class
+_af_telu_script_class
+_af_telu_uniranges
+_af_tibt_dflt_style_class
+_af_tibt_script_class
+_af_tibt_uniranges
+_af_writing_system_classes
+_afm_parser_funcs
+_autofit_module_class
+_bdf_cmap_class
+_bdf_driver_class
+_cff_cmap_encoding_class_rec
+_cff_cmap_unicode_class_rec
+_cff_driver_class
+_ft_bitmap_glyph_class
+_ft_corner_is_flat
+_ft_corner_orientation
+_ft_debug_init
+_ft_glyphslot_alloc_bitmap
+_ft_glyphslot_free_bitmap
+_ft_glyphslot_set_bitmap
+_ft_grays_raster
+_ft_highpow2
+_ft_lzwstate_done
+_ft_lzwstate_init
+_ft_lzwstate_io
+_ft_lzwstate_reset
+_ft_mem_alloc
+_ft_mem_dup
+_ft_mem_free
+_ft_mem_qalloc
+_ft_mem_qrealloc
+_ft_mem_realloc
+_ft_mem_strcpyn
+_ft_mem_strdup
+_ft_module_get_service
+_ft_outline_glyph_class
+_ft_raccess_guess_table
+_ft_raster1_renderer_class
+_ft_raster5_renderer_class
+_ft_service_list_lookup
+_ft_smooth_lcd_renderer_class
+_ft_smooth_lcdv_renderer_class
+_ft_smooth_renderer_class
+_ft_standard_raster
+_ft_synthesize_vertical_metrics
+_ft_validator_error
+_ft_validator_init
+_ft_validator_run
+_ftc_basic_image_cache_class
+_ftc_basic_image_family_class
+_ftc_basic_sbit_cache_class
+_ftc_basic_sbit_family_class
+_ftc_cmap_cache_class
+_ftc_face_list_class
+_ftc_size_list_class
+_g_nCUR_WIDTH
+_pcf_cmap_class
+_pcf_driver_class
+_pfr_cmap_class_rec
+_pfr_driver_class
+_pfr_metrics_service_rec
+_ps_hints_apply
+_ps_parser_funcs
+_ps_table_funcs
+_psaux_module_class
+_pseudo_gamma
+_pshinter_module_class
+_psnames_module_class
+_s_pchFilterString
+_sfnt_module_class
+_sliding_scale
+_t1_builder_funcs
+_t1_cmap_classes
+_t1_cmap_custom_class_rec
+_t1_cmap_expert_class_rec
+_t1_cmap_standard_class_rec
+_t1_cmap_unicode_class_rec
+_t1_decoder_funcs
+_t1_driver_class
+_t1cid_driver_class
+_t42_driver_class
+_tt_cmap0_class_rec
+_tt_cmap10_class_rec
+_tt_cmap12_class_rec
+_tt_cmap13_class_rec
+_tt_cmap14_class_rec
+_tt_cmap2_class_rec
+_tt_cmap4_class_rec
+_tt_cmap6_class_rec
+_tt_cmap8_class_rec
+_tt_default_graphics_state
+_tt_driver_class
+_winfnt_driver_class
+_BZ2_bzDecompress
+_BZ2_bzDecompressEnd
+_BZ2_bzDecompressInit
+___error
+___memcpy_chk
+___memmove_chk
+___memset_chk
+___sprintf_chk
+___stack_chk_fail
+___stack_chk_guard
+___strcat_chk
+___strncpy_chk
+_abs
+_atol
+_close$UNIX2003
+_fcntl$UNIX2003
+_free
+_fstat
+_getenv
+_inflate
+_inflateEnd
+_inflateInit2_
+_inflateReset
+_labs
+_longjmp
+_malloc
+_memchr
+_memcmp
+_memcpy
+_memset
+_mmap$UNIX2003
+_munmap$UNIX2003
+_open$UNIX2003
+_pow
+_printf
+_qsort
+_read$UNIX2003
+_realloc
+_setjmp
+_sscanf
+_strcasecmp
+_strcasestr
+_strcmp
+_strlen
+_strncmp
+_strrchr
+_strstr
+_tan
+__TEXT
+__text
+__TEXT
+__stubs
+__TEXT
+__stub_helper
+__TEXT
+__cstring
+__TEXT
+__const
+__TEXT
+__unwind_info
+__TEXT
+__eh_frame
+__TEXT
+__DATA
+__dyld
+__DATA
+__got
+__DATA
+__la_symbol_ptr
+__DATA
+__const
+__DATA
+__data
+__DATA
+__common
+__DATA
+__bss
+__DATA
+__LINKEDIT
+@loader_path/libfreetype.dylib
+/usr/lib/libSystem.B.dylib
+/usr/lib/libz.1.dylib
+/usr/lib/libbz2.1.0.dylib
+/usr/lib/libgcc_s.1.dylib
+fffff.
+ffffff.
+stib
+ltuo
+ltuo
+AxHcE
+ltuo
+stib
+pmoc
+fffff.
+fffff.
+ffffff.
+fffff.
+fff.
+fff.
+ffffff.
+fffff.
+ffffff.
+ffffff.
+fff.
+ffff.
+ffffff.
+ffffff.
+ffff.
+fffff.
+fff.
+ffffff.
+@(H%
+@0H%
+H+A(H
+H+A0H
+@(H%
+@0H%
+fff.
+@@Hc
+9rcni
+ffff.
+fffff.
+ffff.
+ffff.
+fff.
+@@HcM
+ffff.
+fff.
+H+AhH
+H+ApH
+fffff.
+fff.
+cinu
+HcIHH
+fff.
+HcIHH
+cinu
+HcIHH
+cinu
+HcIHH
+	;AH
+HcQHH
+fff.
+HcQHH
+qHHc
+ffffff.
+cinu
+ffff.
+HcIHH
+ffffff.
+ffffff.
+H;J 
+ffff.
+H ;M
+ffff.
+x ltuo
+ffffff.
+stib
+ltuo
+	H;A
+xHltuo
+xHltuo
+ffffff.
+ffffff.
+ffff.
+fffff.
+fff.
+ffffff.
+pmoc
+fffff.
+fff.
+fffff.
+I E	
+ltuoH
+ffff.
+ffff.
+ffff.
+ffff.
+ffff.
+fffff.
+fffff.
+ffffff.
+ffffff.
+H;AH
+H;AH
+H;AH
+H;AH
+H;AH
+ffff.
+H;AH
+ffff.
+ffff.
+H;BH
+fff.
+ffffff.
+fffff.
+fffff.
+xHltuo
+ffffff.
+ltuo1
+ffffff.
+TSOPA
+tnfsA
+ffffff.
+fff.
+ffff.
+OTTO
+1pyt
+ DIC
+1PYT
+H;A 
+H;A(
+ffff.
+H;A 
+H;A 
+H;A(
+H;A(
+fffff.
+Hc	H
+fff.
+stib
+stib
+ffff.
+ltuo
+ltuoH
+ffff.
+stib
+ltuo
+H+>H
+fffff.
+fffff.
+fffff.
+mgpf
+perp
+ffffff.
+ffffff.
+ffffff.
+H+A H
+H+J(H
+@ H+
+I(H+
+H+V H
+H+V(H
+ffff.
+fff.
+H+A0H
+H+J8H
+@0H+
+I8H+
+H+J0H
+H+J8H
+H+J H
+H+J(H
+fff.
+fff.
+H;A8
+H;A@
+@ H;E
+fff.
+ffffff.
+ffffff.
+ffffff.
+ffffff.
+ltuo
+ltuo
+stib
+ltuo
+stib
+ffff.
+eurt
+H;A8
+@8H+E
+H=@B
+fff.
+ffffff.
+fff.
+I+0H
+I+0H
+I+0H
+H;A8
+@8H+E
+@8H+E
+@8H+E
+@ H%
+@ H%
+AVSH
+[A^]
+ffffff.
+fffff.
+ffffff.
+fff.
+H+w A
+H+w A
+ffffff.
+fff.
+fff.
+fffff.
+H+w 
+H+w 
+fffff.
+fff.
+ffffff.
+fff.
+fffff.
+ffff.
+fff.
+fff.
+xmdh
+fff.
+fylg
+acol
+H;A 
+fff.
+ tvc
+mgpf
+perp
+fff.
+@ H%
+	H;M
+fffff.
+ravc
+ffff.
+fffff.
+perpH
+H-mgpfH
+H- tvcH
+fffff.
+ffffff.
+ypHc}
+ltuoH
+pmoc
+stibHcE
+fylg
+Hcv`H)
+HcvdH
+@ H%
+Hcv`H)
+HcvdH
+@ H%
+@ H%
+pmoc
+@ H%
+ffff.
+pmoc
+Hc@hH
+H+ApH
+@ H%
+@ H%
+Hc@`H
+Hc@dH
+vHH;
+vHH+
+@ H%
+@ H%
+@ H%
+y`Hcu
+@ H%
+@ H%
+@ H%
+B ;E
+@ H%
+@ H%
+@ H%
+@ H%
+B ;E
+fffff.
+ffff.
+ffffff.
+ravg
+ravf
+@ H%
+x thgw
+x htdw
+x zspo
+x tnls
+I+0H
+fff.
+rava
+ravg
+fff.
+fffff.
+ffffff.
+cinuH
+BODAf
+EBDAf
+CBDAf
+1talf
+AVSH
+ltuoH
+ltuoH
+A8HcE
+[A^]
+ffff.
+ffff.
+HcRPH
+fff.
+Hc6H
+Hc6H
+ffffff.
+fffff.
+fff.
+#B(=
+ffff.
+ffff.
+fff.
+fffff.
+ffffff.
+ffff.
+B thgw
+B htdw
+B zspo
+ffff.
+@8HcM
+ffffff.
+fff.
+fffff.
+tJLH
+tJhH
+tJ|H
+fff.
+fffff.
+ffff.
+OTTO
+daeh
+ FFC
+H;Ah
+cinuH
+BODAH
+EBDAH
+CBDAH
+fff.
+fff.
+ffff.
+ffffff.
+fff.
+ffffff.
+ffffff.
+fffff.
+fff.
+H;A 
+fff.
+ffffff.
+fff.
+fff.
+ffff.
+ffff.
+fff.
+ffff.
+ffffff.
+H9JX
+stibHcE
+ltuoH
+ltuoH
+A8HcE
+fff.
+ffff.
+GX;E
+AVSH
+[A^]
+fff.
+ffff.
+AWAVAUATSH
+[A\A]A^A_]
+ffffff.
+fff.
+fffff.
+fffff.
+H;A(
+fff.
+fff.
+fffff.
+ffff.
+fffff.
+A +E
+AVSH
+@[A^]
+ffff.
+ffffff.
+@(H;E
+ffffff.
++A8H
+fff.
+ffffff.
+fffff.
+Hc1H
+ffff.
+ffffff.
+fffff.
+ffff.
+fffff.
+ffff.
+fff.
+fff.
+fffff.
+ffffff.
+AVSH
+ltuoL
+ltuoH
+B8HcE
+[A^]
+fffff.
+fffff.
+ffffff.
+ffff.
+ffff.
+fffff.
+ffffff.
+ffffff.
+ffffff.
+I0fA
+I fA
+cinuH
+fffff.
+ltuoH
+fff.
+fffff.
+stib
+H+J0H
+ffff.
+@ HcM
+@ HcM
+@ HcM
+fffff.
+ffff.
+ffff.
+ffff.
+ffffff.
+ffffff.
+fffff.
+fffff.
+fffff.
+0RFP
+ffffff.
+ffffff.
+[@H)
+fff.
+ffff.
+fffff.
+ffffff.
+cinuH
+BODAf
+EBDAf
+CBDAf
+1talf
+ffffff.
+ffff.
+ffff.
+6H;u
+?H;}
+6H;u
+fff.
+fffff.
+ffffff.
+nmraf
+Hc2HcU
+Hc	H
+stibH
+ATD)
+ffffff.
+IHH)
+Q@Hc
+ffffff.
+ffffff.
+fffff.
+ffffff.
+cinuf
+ffffff.
+ffffff.
+stibH
+fffff.
+H;A0
+fffff.
+ffff.
+ffffff.
+JHfA
+H;AP
+H;B8
+cinuf
+BODAf
+stib
+JHH9
+H+rHH
+H;AX
+H;Ap
+fffff.
+JpH9
+H;A0
+ffffff.
+fff.
+ffffff.
+fff.
+H;AP
+qXHi
+H;Ah
+HiIp8
+ffff.
+fff.
+ffff.
+fff.
+fff.
+fff.
+fff.
+ffff.
+H9N0
+fffff.
+H9N0
+ffff.
+fffff.
+fffff.
+ffffff.
+ffffff.
+fffff.
+ FDBH
+fffff.
+H9J 
+tsop
+fff.
+9fpgi
+9spgi
+fylg
+ FFC
+xibs
+eurt
+fylg
+ravf
+ravg
+daeh
+aehv
+aehh
+fff.
+pamc
+pxam
+2/SO
+ffffff.
+tsop
+eman
+fffff.
+nrek
+psag
+TLCP
+ffff.
+dehb
+OTTO
+xtmvH
+xtmhH
+fffff.
+CLBC
+CLBE
+colb
+xibs
+fffff.
+fffff.
+H+A H
+xibs
+daeh
+dehb
+GNIS
+ATEM
+TDBCA
+TDBE
+tadb
+APHiE
+ffffff.
+fffff.
+xibsA
+-epud
+- gpj
+- gnp
+-ffit
+fff.
+H;J0
+ffffff.
+fff.
+fffff.
+fffff.
+FFOw
+fctt
+OTTO
+eurt
+1pyt
+fcttH
+fctt
+ffff.
+FFOw
+fctt
+ffff.
+fffff.
+fffff.
+H9O0
+H;AH
+H9O0
+H;AH
+ffff.
+cinuH
+fffff.
+ffffff.
+cinuH
+cinuH
+fff.
+ffff.
+ffff.
+fff.
+ffff.
+ffffff.
+cinuH
+ffffff.
+ffffff.
+ffff.
+pmoc
+-ltuo
+H+A@H
+H+AHH
+ltuo
+fffff.
+@ H;
+?H;}
+ffff.
+HcI,Hi
+4JHc
+HcI<H
+McI<I
+HcI,Hi
+HcI,Hi
+Hc	Hi
+@8H;
+H+J8H
+@8H;
+I8H+
+@8H;
+I8H+
+@8H;
+H+J8H
+ffffff.
+Hc?Hi
+H;AP
+H;A8
+H;A8
+@ H;E
+fffff.
+H;AP
+H;AH
+H;AP
+H;AH
+fffff.
+Hc@,Hi
+Hc@,Hi
+HP#M
+ffffff.
+ffff.
+I0H+M
+I0H+M
+H+V0H
+H+V0H
+H+V8H
+H+A H=
+H+V H)
+H+A H
+Hc?Hi
+Hc?Hi
+H;AP
+HiI8	
+HiI8
+@@H;E
+HiI8	
+HiI8
+@@H;E
+@ H;E
+@8H;E
+@ H;E
+H;A8
+H;A8
+HiI@
+@ H;E
+@8H;E
+Hc?Hi
+H;AH
+H;AH
+H;AH
+fff.
+ffffff.
+H;Ah
+ffff.
+Hc?Hi
+@ HcM
+H+A H
+Hc?Hi
+H;AH
+H;AH
+@ H;
+?H;}
+ffff.
+ffffff.
+A Hc
+fff.
+H;A0
+H;A0
+H;A0
+H;A0
+H;A0
+H;A8
+H;A8
+H;A8
+H;A8
+H;A8
+H;A8
+fffff.
+Hc	H)
+H;A0
+H;J0
+H+J0
+H;J0
+H+V0
+H;J0
+H;A0
+H+J0H
+H+V@H
+H+w0H
+H;A0
+@0H+E
+@@H+E
+@0H+E
+@@H+E
+ffffff.
+ffff.
+fffff.
+ffff.
+fff.
+fffff.
+ffffff.
+ffffff.
+@pH;E
+ffffff.
+fffff.
+ffff.
+fffff.
+H ;M
+Q +E
+H!;M
+Q!+E
+fff.
+fff.
+fff.
+H+A0H
+H+A8H
+H+A0H
+H+A8H
+H+A0H
+H+A8H
+fff.
+stibH
+ffff.
+;q H
+@8H;E
+@8H;E
+fff.
+ffffff.
+@8H;E
+@8H;E
+fff.
+fffff.
+H;Ax
+H+JpH
+H;V0
+B H-
++ADHc
+ffffff.
+H;A0
+B H-
+H+A H
+@ H-
+HcRDH)
+H;A8
+QDHcM
++FDHc
+H;Ap
+H+JpH
+H;Ap
+H;Ap
+H;Ap
+H+JpH
+H+JpH
+ffffff.
+H;A0
+H;B0
+6Hc}
+I+0H
+rHHc
+fff.
+L+I(H
+H+J8H
+H+J(H
+I8HcU
+H;J0
+H+J(H
+ffff.
+ffffff.
+ffffff.
+ffff.
+;q H
+stibH
+H+2H
+ffff.
+I+H 
+H;A 
+H+A0
+H+A`
+H;AP
+H+A0
+A8Hc
+H+A0
+AhHc
+H;A0
+H;A`
+H;A`
+H;A0
+H;A0
+I0Hc
+R0Hc
+R0Hc
+4GHcE
+fffff.
+fffff.
+7D+E
+7D+E
+fff.
+H+A H
+H+A H
+@XH;
+IXH)
+fffff.
+H;A 
+H;A(
+	H+M
+1HcU
+I0H+M
+H;x0
+H;A`
+H;A(
+H;A 
+ffffff.
+H;A(
+H;A 
+P@HcE
+~HHcE
+Q@HcM
+~HHcM
+P@HcE
+ffff.
+~HHcE
+H;A0
+H;A(
+H;A 
+H+A H
+ffffff.
+ffffff.
+ffff.
+fff.
+~ H)
+ffffff.
+ffff.
+@(H;E
+fffff.
++A4=
+fff.
+stib
+ltuo
+fffff.
+ltuo
+-stib
+Hc@0H
+Hcy8H
+@*Hi
+@(H;E
+fff.
+ffff.
+ffff.
+H9J 
+H;J 
++A0H
+fffff.
+ffff.
+ffffff.
++Q0H
+stib
+ffffff.
+ffffff.
+fff.
+q H)
+fffff.
+ffff.
+~ H)
+fffff.
+fff.
+ffffff.
+AWAVSH
+[A^A_]
+ffffff.
+fff.
+ffffff.
+ffffff.
+fff.
+ffffff.
+fff.
+fff.
+fffff.
+ffffff.
+fffff.
+ffff.
+ffff.
+ffffff.
+fff.
+ffffff.
+ffff.
+ffff.
+fff.
+AWAVATSH
+p[A\A^A_]
+ffff.
+fff.
+fffff.
+fff.
+HcR@H
+@8Hc
+HcRPH
+@HHc
+ffff.
+Hc6H
+Hc6H
+fff.
+ffff.
+fffff.
+ffffff.
+pmocH
+@(HcM
+fff.
+ffffff.
+fff.
+ffffff.
+AWAVAUATSH
+I H)
+[A\A]A^A_]
+fff.
+ffffff.
+ffff.
+truetype
+kerning
+glyph-dict
+postscript-font-name
+sfnt-table
+tt-cmaps
+type42
+truetype-engine
+.AppleDouble/
+.resource/
+resource.frk/
+/..namedfork/rsrc
+/rsrc
+properties
+OTTO
+type1
+postscript-info
+truetypegx-validate
+classickern-validate
+default
+%f %f %f %f %f
+multi-masters
+opentype-validate
+tt-glyf
+pfr-metrics
+winfonts
+xf86-driver-name
+sfnt
+.notdef
+TrueType
+interpreter-version
+Weight
+Width
+OpticalSize
+Slant
+pshinter
+postscript-cmaps
+psaux
+Regular
+Bold
+Black
+eexec
+closefile
+FontDirectory
+CharStrings
+version
+Notice
+FullName
+FamilyName
+ItalicAngle
+isFixedPitch
+UnderlinePosition
+UnderlineThickness
+FSType
+UniqueID
+lenIV
+LanguageGroup
+password
+BlueScale
+BlueShift
+BlueFuzz
+BlueValues
+OtherBlues
+FamilyBlues
+FamilyOtherBlues
+StdHW
+StdVW
+MinFeature
+StemSnapH
+StemSnapV
+ExpansionFactor
+ForceBold
+FontName
+PaintType
+FontType
+StrokeWidth
+FontBBox
+DesignVector
+FontMatrix
+Encoding
+Subrs
+Private
+BlendDesignPositions
+BlendDesignMap
+BlendAxisTypes
+WeightVector
+BuildCharArray
+StandardEncoding
+ExpertEncoding
+ISOLatin1Encoding
+%!PS-AdobeFont
+%!FontType
+Type 1
+darkening-parameters
+hinting-engine
+no-stem-darkening
+t1cid
+%ADOBeginFontDict
+CIDFontName
+CIDFontVersion
+CIDFontType
+Registry
+Ordering
+Supplement
+UIDBase
+CIDMapOffset
+FDBytes
+GDBytes
+CIDCount
+SubrMapOffset
+SDBytes
+SubrCount
+lenBuildCharArray
+ForceBoldThreshold
+FDArray
+%!PS-Adobe-3.0 Resource-CIDFont
+StartData
+/sfnts
+(Hex)
+CID Type 1
+known
+sfnts
+%!PS-TrueTypeFont
+Type 42
+Bold Italic
+Italic
+Windows FNT
+10646
+8859
+FAMILY_NAME
+AVERAGE_WIDTH
+POINT_SIZE
+PIXEL_SIZE
+RESOLUTION_X
+RESOLUTION_Y
+CHARSET_REGISTRY
+CHARSET_ENCODING
+SLANT
+Oblique
+WEIGHT_NAME
+SETWIDTH_NAME
+ADD_STYLE_NAME
+SPACING
+COMMENT
+STARTFONT
+STARTPROPERTIES
+FONTBOUNDINGBOX
+FONT
+SIZE
+CHARS
+FONT_ASCENT
+FONT_DESCENT
+ENDFONT
+ENDCHAR
+STARTCHAR
+ENCODING
+SWIDTH
+DWIDTH
+BITMAP
+DEFAULT_CHAR
+ENDPROPERTIES
+_XFREE86_GLYPH_RANGES
+AVG_CAPITAL_WIDTH
+AVG_LOWERCASE_WIDTH
+CAP_HEIGHT
+CHARSET_COLLECTIONS
+COPYRIGHT
+DESTINATION
+DEVICE_FONT_NAME
+END_SPACE
+FACE_NAME
+FIGURE_WIDTH
+FONTNAME_REGISTRY
+FOUNDRY
+FULL_NAME
+ITALIC_ANGLE
+MAX_SPACE
+MIN_SPACE
+NORM_SPACE
+NOTICE
+QUAD_WIDTH
+RAW_ASCENT
+RAW_AVERAGE_WIDTH
+RAW_AVG_CAPITAL_WIDTH
+RAW_AVG_LOWERCASE_WIDTH
+RAW_CAP_HEIGHT
+RAW_DESCENT
+RAW_END_SPACE
+RAW_FIGURE_WIDTH
+RAW_MAX_SPACE
+RAW_MIN_SPACE
+RAW_NORM_SPACE
+RAW_PIXEL_SIZE
+RAW_POINT_SIZE
+RAW_PIXELSIZE
+RAW_POINTSIZE
+RAW_QUAD_WIDTH
+RAW_SMALL_CAP_SIZE
+RAW_STRIKEOUT_ASCENT
+RAW_STRIKEOUT_DESCENT
+RAW_SUBSCRIPT_SIZE
+RAW_SUBSCRIPT_X
+RAW_SUBSCRIPT_Y
+RAW_SUPERSCRIPT_SIZE
+RAW_SUPERSCRIPT_X
+RAW_SUPERSCRIPT_Y
+RAW_UNDERLINE_POSITION
+RAW_UNDERLINE_THICKNESS
+RAW_X_HEIGHT
+RELATIVE_SETWIDTH
+RELATIVE_WEIGHT
+RESOLUTION
+SMALL_CAP_SIZE
+STRIKEOUT_ASCENT
+STRIKEOUT_DESCENT
+SUBSCRIPT_SIZE
+SUBSCRIPT_X
+SUBSCRIPT_Y
+SUPERSCRIPT_SIZE
+SUPERSCRIPT_X
+SUPERSCRIPT_Y
+UNDERLINE_POSITION
+UNDERLINE_THICKNESS
+WEIGHT
+X_HEIGHT
+_MULE_BASELINE_OFFSET
+_MULE_RELATIVE_COMPOSE
+autofitter
+glyph-to-script-map
+fallback-script
+default-script
+increase-x-height
+Book
+Medium
+INFINALITY_FT_AUTOHINT_INCREASE_GLYPH_HEIGHTS
+true
+raster1
+raster5
+20 25 38 25 05
+1000 160
+smooth
+smooth-lcd
+smooth-lcdv
+%f %f
+INFINALITY_FT_GLOBAL_EMBOLDEN_X_VALUE
+INFINALITY_FT_GLOBAL_EMBOLDEN_Y_VALUE
+INFINALITY_FT_BOLD_EMBOLDEN_X_VALUE
+INFINALITY_FT_BOLD_EMBOLDEN_Y_VALUE
+Times New Roman
+FreeSerif
+Mono
+Script
+Handwriting
+Extra Thin
+Extra Light
+Thin
+Light
+Narrow
+Condensed
+Courier
+Serif
+Times
+1 stem:    bitmapwidth:%d glyphwidth:%f glyph_width:%f center:%f bearing:%f advance:%f lhadvance:%f stemwidth:%f %d %d
+%lu stems: bitmapwidth:%d center1:%f center2:%f difference:%f bearing:%f advance:%f advstemloc:%f 
+1.2.5
+StartFontMetrics
+Ascender
+AxisLabel
+AxisType
+CapHeight
+CharWidth
+CharacterSet
+Characters
+Descender
+EncodingScheme
+EndAxis
+EndCharMetrics
+EndComposites
+EndDirection
+EndFontMetrics
+EndKernData
+EndKernPairs
+EndTrackKern
+EscChar
+IsBaseFont
+IsCIDFont
+IsFixedPitch
+IsFixedV
+MappingScheme
+MetricsSets
+StartAxis
+StartCharMetrics
+StartComposites
+StartDirection
+StartKernData
+StartKernPairs
+StartKernPairs0
+StartKernPairs1
+StartTrackKern
+TrackKern
+VVector
+Version
+XHeight
+psnames
+?33#@
+      
+!!!!!!
+!!!!
+                                Regular Class
+Regular
+Book
+Medium
+Roman
+Normal
+Regular/Italic Class
+Regular
+Book
+Medium
+Italic
+Oblique
+Roman
+Normal
+Bold/BoldItalic Class
+Bold
+Bold Italic
+Black
+Bold/Italic/BoldItalic Class
+Bold
+Bold Italic
+Black
+Italic
+Oblique
+Regular/Bold Class
+Regular
+Book
+Medium
+Normal
+Roman
+Bold
+Black
+Courier New
+Italic
+Courier New
+Italic
+Consolas
+Core MS Legacy Fonts
+Regular
+Legacy Sans Fonts
+Verdana Clones
+Courier New
+Regular
+Times New Roman
+Regular/Bold Class
+Georgia
+Regular/Bold Class
+Droid Sans
+Regular/Italic Class
+Droid Sans Mono
+Verdana
+Regular
+Times New Roman
+Regular
+Times New Roman
+Regular
+Times New Roman
+Regular
+Times New Roman
+Regular
+Times New Roman
+Regular
+Times New Roman
+Regular
+Times New Roman
+Regular
+Times
+Courier New
+Arial
+Regular
+Geneva
+Georgia
+Regular
+Trebuchet MS
+Regular
+Trebuchet MS
+Regular
+Trebuchet MS
+Regular
+Trebuchet MS
+Italic
+Trebuchet MS
+Italic
+Trebuchet MS
+Regular
+Arial
+Regular
+Verdana
+Regular
+Verdana
+Regular
+Legacy Sans Fonts
+Legacy Sans Fonts
+Arial
+Regular
+Arial
+Bold/BoldItalic Class
+Arial
+Bold
+Arial
+Bold
+Arial
+Bold
+Arial
+Bold
+Arial
+Bold
+Arial
+Bold
+Arial
+Bold
+Arial
+Regular
+Arial
+Regular
+KS#KQZX8
+!!YKTX8
+E#F` 
+_Zt@
+DFKaiSho-SB
+DFKaiShu
+DFKai-SB
+HuaTianKaiTi?
+HuaTianSongTi?
+Ming(for ISO10646)
+MingLiU
+PMingLiU
+MingLi43
+DejaVu Sans
+Regular Class
+Verdana and Clones
+Regular Class
+Verdana and Clones
+Regular Class
+Arial
+Regular Class
+Arial
+Regular Class
+Arial
+Regular Class
+Arial
+Regular Class
+Arial
+Regular Class
+Arial
+Regular Class
+Arial
+Regular Class
+Bitstream Vera Sans
+Regular/Italic Class
+Bitstream Vera Sans
+Regular/Italic Class
+Bitstream Vera Sans
+Regular Class
+Bitstream Vera Sans
+Regular/Italic Class
+DejaVu Sans
+Regular Class
+DejaVu Sans
+Regular Class
+DejaVu Sans
+Regular Class
+DejaVu Sans
+Regular Class
+DejaVu Sans
+Regular Class
+DejaVu Sans
+Regular Class
+DejaVu Sans
+Regular/Italic Class
+DejaVu Sans
+Regular/Italic Class
+Georgia
+Georgia
+Georgia
+Georgia
+Georgia
+Georgia
+Liberation Sans
+Regular Class
+Lucida Grande
+Regular Class
+Microsoft Sans Serif
+Regular Class
+Microsoft Sans Serif
+Regular Class
+Segoe UI
+Regular Class
+Segoe UI
+Regular Class
+Segoe UI
+Regular Class
+Tahoma
+Regular Class
+Tahoma
+Regular Class
+Tahoma
+Regular Class
+Tahoma
+Regular Class
+Verdana
+Regular/Italic Class
+Verdana
+Regular Class
+Verdana
+Regular/Italic Class
+Verdana
+Regular/Italic Class
+Verdana
+Regular/Italic Class
+Verdana
+Regular/Italic Class
+Verdana
+Regular Class
+Verdana
+Regular/Italic Class
+Times New Roman
+Regular Class
+Trebuchet MS
+Regular Class
+Trebuchet MS
+Regular Class
+MS Legacy Fonts
+Aharoni
+Andale Mono
+Andalus
+Angsana New
+AngsanaUPC
+Arabic Transparent
+Arial Black
+Arial Narrow
+Arial Unicode MS
+Arial
+Batang
+Browallia New
+BrowalliaUPC
+Comic Sans MS
+Cordia New
+CordiaUPC
+Courier New
+DFKai-SB
+David Transparent
+David
+DilleniaUPC
+Estrangelo Edessa
+EucrosiaUPC
+FangSong_GB2312
+Fixed Miriam Transparent
+FrankRuehl
+Franklin Gothic Medium
+FreesiaUPC
+Garamond
+Gautami
+Georgia
+Gulim
+Impact
+IrisUPC
+JasmineUPC
+KaiTi_GB2312
+KodchiangUPC
+Latha
+Levenim MT
+LilyUPC
+Lucida Console
+Lucida Sans Unicode
+MS Gothic
+MS Mincho
+MV Boli
+Mangal
+Marlett
+Microsoft Sans Serif
+Mingliu
+Miriam Fixed
+Miriam Transparent
+Miriam
+Narkisim
+Palatino Linotype
+Raavi
+Rod Transparent
+Shruti
+SimHei
+Simplified Arabic Fixed
+Simplified Arabic
+Simsun
+Sylfaen
+Symbol
+Tahoma
+Times New Roman
+Traditional Arabic
+Trebuchet MS
+Tunga
+Verdana
+Webdings
+Wingdings
+Core MS Legacy Fonts
+Arial Black
+Arial Narrow
+Arial Unicode MS
+Arial
+Comic Sans MS
+Courier New
+Garamond
+Georgia
+Impact
+Lucida Console
+Lucida Sans Unicode
+Microsoft Sans Serif
+Palatino Linotype
+Tahoma
+Times New Roman
+Trebuchet MS
+Verdana
+Apple Legacy Fonts
+Geneva
+Times
+Monaco
+Century
+Chalkboard
+Lobster
+Century Gothic
+Optima
+Lucida Grande
+Gill Sans
+Baskerville
+Helvetica
+Helvetica Neue
+Legacy Sans Fonts
+Andale Mono
+Arial Unicode MS
+Arial
+Century Gothic
+Comic Sans MS
+Franklin Gothic Medium
+Geneva
+Lucida Console
+Lucida Grande
+Lucida Sans Unicode
+Lucida Sans Typewriter
+Microsoft Sans Serif
+Monaco
+Tahoma
+Trebuchet MS
+Verdana
+Misc Legacy Fonts
+Dark Courier
+Verdana Clones
+DejaVu Sans
+Bitstream Vera Sans
+Verdana and Clones
+DejaVu Sans
+Bitstream Vera Sans
+Verdana
+Courier New
+Bold
+Courier New
+Bold
+Courier New
+Bold
+Courier New
+Bold
+Courier New
+Bold
+Courier New
+Bold
+Courier New
+Bold
+Courier New
+Bold
+Courier New
+Bold
+Courier New
+Regular
+Courier New
+Italic
+Times New Roman
+Italic
+Times New Roman
+Italic
+Times New Roman
+Italic
+Times New Roman
+Regular
+Times New Roman
+Regular
+Times New Roman
+Regular
+Times New Roman
+Italic
+Times New Roman
+Italic
+Times New Roman
+Italic
+Times New Roman
+Regular
+Times New Roman
+Regular
+Times New Roman
+Regular
+Courier New
+Regular
+Courier New
+Regular
+Courier New
+Regular
+Courier New
+Regular
+Courier New
+Regular
+Courier New
+Regular
+Courier New
+Regular
+Courier New
+Regular
+Courier New
+Regular
+Courier New
+Regular
+Courier New
+Regular
+Courier New
+Regular
+Courier New
+Regular
+Courier New
+Regular
+Courier New
+Regular
+Arial Unicode MS
+Regular Class
+Arial Unicode MS
+Regular Class
+Arial
+Regular Class
+Arial
+Regular Class
+Arial
+Regular Class
+Arial
+Regular Class
+Arial
+Regular Class
+Arial
+Regular Class
+Arial
+Regular Class
+Arial
+Regular Class
+Arial
+Regular Class
+DejaVu Sans
+Regular Class
+Microsoft Sans Serif
+Regular Class
+Microsoft Sans Serif
+Regular Class
+Segoe UI
+Regular Class
+Monaco
+Regular Class
+Segoe UI
+Regular Class
+Segoe UI
+Regular Class
+Tahoma
+Regular Class
+Times New Roman
+Regular Class
+Times New Roman
+Regular Class
+Times New Roman
+Regular Class
+Times New Roman
+Regular Class
+Trebuchet MS
+Regular Class
+Trebuchet MS
+Regular Class
+Trebuchet MS
+Regular Class
+Trebuchet MS
+Regular Class
+Ubuntu
+Regular Class
+Verdana
+Regular Class
+Verdana
+Regular Class
+Verdana and Clones
+Regular Class
+Verdana and Clones
+Regular Class
+Verdana and Clones
+Regular Class
+Verdana and Clones
+Regular Class
+Verdana and Clones
+Regular Class
+Verdana and Clones
+Regular Class
+Verdana and Clones
+Regular Class
+Verdana and Clones
+Regular Class
+cinu
+cinu
+nmra
+bmys
+cinu
+cinu
+sijs
+  bg
+5gib
+snaw
+ahoj
+THEZOCQS
+HEZLOCUS
+fijkdbh
+xzroesc
+pqgjy
+r@333333
+ !"#
+ !"#
+.null
+nonmarkingreturn
+notequal
+infinity
+lessequal
+greaterequal
+partialdiff
+summation
+product
+integral
+Omega
+radical
+approxequal
+Delta
+nonbreakingspace
+lozenge
+apple
+franc
+Gbreve
+gbreve
+Idotaccent
+Scedilla
+scedilla
+Cacute
+cacute
+Ccaron
+ccaron
+dcroat
+.notdef
+space
+exclam
+quotedbl
+numbersign
+dollar
+percent
+ampersand
+quoteright
+parenleft
+parenright
+asterisk
+plus
+comma
+hyphen
+period
+slash
+zero
+three
+four
+five
+seven
+eight
+nine
+colon
+semicolon
+less
+equal
+greater
+question
+bracketleft
+backslash
+bracketright
+asciicircum
+underscore
+quoteleft
+braceleft
+braceright
+asciitilde
+exclamdown
+cent
+sterling
+fraction
+florin
+section
+currency
+quotesingle
+quotedblleft
+guillemotleft
+guilsinglleft
+guilsinglright
+endash
+dagger
+daggerdbl
+periodcentered
+paragraph
+bullet
+quotesinglbase
+quotedblbase
+quotedblright
+guillemotright
+ellipsis
+perthousand
+questiondown
+grave
+acute
+circumflex
+tilde
+macron
+breve
+dotaccent
+dieresis
+ring
+cedilla
+hungarumlaut
+ogonek
+caron
+emdash
+ordfeminine
+Lslash
+Oslash
+ordmasculine
+dotlessi
+lslash
+oslash
+germandbls
+onesuperior
+logicalnot
+trademark
+onehalf
+plusminus
+Thorn
+onequarter
+divide
+brokenbar
+degree
+thorn
+threequarters
+twosuperior
+registered
+minus
+multiply
+threesuperior
+copyright
+Aacute
+Acircumflex
+Adieresis
+Agrave
+Aring
+Atilde
+Ccedilla
+Eacute
+Ecircumflex
+Edieresis
+Egrave
+Iacute
+Icircumflex
+Idieresis
+Igrave
+Ntilde
+Oacute
+Ocircumflex
+Odieresis
+Ograve
+Otilde
+Scaron
+Uacute
+Ucircumflex
+Udieresis
+Ugrave
+Yacute
+Ydieresis
+Zcaron
+aacute
+acircumflex
+adieresis
+agrave
+aring
+atilde
+ccedilla
+eacute
+ecircumflex
+edieresis
+egrave
+iacute
+icircumflex
+idieresis
+igrave
+ntilde
+oacute
+ocircumflex
+odieresis
+ograve
+otilde
+scaron
+uacute
+ucircumflex
+udieresis
+ugrave
+yacute
+ydieresis
+zcaron
+exclamsmall
+Hungarumlautsmall
+dollaroldstyle
+dollarsuperior
+ampersandsmall
+Acutesmall
+parenleftsuperior
+parenrightsuperior
+twodotenleader
+onedotenleader
+zerooldstyle
+oneoldstyle
+twooldstyle
+threeoldstyle
+fouroldstyle
+fiveoldstyle
+sixoldstyle
+sevenoldstyle
+eightoldstyle
+nineoldstyle
+commasuperior
+threequartersemdash
+periodsuperior
+questionsmall
+asuperior
+bsuperior
+centsuperior
+dsuperior
+esuperior
+isuperior
+lsuperior
+msuperior
+nsuperior
+osuperior
+rsuperior
+ssuperior
+tsuperior
+parenleftinferior
+parenrightinferior
+Circumflexsmall
+hyphensuperior
+Gravesmall
+Asmall
+Bsmall
+Csmall
+Dsmall
+Esmall
+Fsmall
+Gsmall
+Hsmall
+Ismall
+Jsmall
+Ksmall
+Lsmall
+Msmall
+Nsmall
+Osmall
+Psmall
+Qsmall
+Rsmall
+Ssmall
+Tsmall
+Usmall
+Vsmall
+Wsmall
+Xsmall
+Ysmall
+Zsmall
+colonmonetary
+onefitted
+rupiah
+Tildesmall
+exclamdownsmall
+centoldstyle
+Lslashsmall
+Scaronsmall
+Zcaronsmall
+Dieresissmall
+Brevesmall
+Caronsmall
+Dotaccentsmall
+Macronsmall
+figuredash
+hypheninferior
+Ogoneksmall
+Ringsmall
+Cedillasmall
+questiondownsmall
+oneeighth
+threeeighths
+fiveeighths
+seveneighths
+onethird
+twothirds
+zerosuperior
+foursuperior
+fivesuperior
+sixsuperior
+sevensuperior
+eightsuperior
+ninesuperior
+zeroinferior
+oneinferior
+twoinferior
+threeinferior
+fourinferior
+fiveinferior
+sixinferior
+seveninferior
+eightinferior
+nineinferior
+centinferior
+dollarinferior
+periodinferior
+commainferior
+Agravesmall
+Aacutesmall
+Acircumflexsmall
+Atildesmall
+Adieresissmall
+Aringsmall
+AEsmall
+Ccedillasmall
+Egravesmall
+Eacutesmall
+Ecircumflexsmall
+Edieresissmall
+Igravesmall
+Iacutesmall
+Icircumflexsmall
+Idieresissmall
+Ethsmall
+Ntildesmall
+Ogravesmall
+Oacutesmall
+Ocircumflexsmall
+Otildesmall
+Odieresissmall
+OEsmall
+Oslashsmall
+Ugravesmall
+Uacutesmall
+Ucircumflexsmall
+Udieresissmall
+Yacutesmall
+Thornsmall
+Ydieresissmall
+001.000
+001.001
+001.002
+001.003
+Black
+Bold
+Book
+Light
+Medium
+Regular
+Roman
+Semibold
+	 	$	6	I	Y	h	s	z	
+Delta
+Omega
+fraction
+hyphen
+macron
+periodcentered
+space
+Tcommaaccent
+tcommaaccent
+PmXh]=b
+j[ros
+	,	m	s
+	!	%
+	4	N	\a
+	<	F
+%a2	
+ < C O [ c
+ % 0
+W { 
+!#!/
+Y!Q!t!
+"("4"<"Da
+!W!h
+"K"q
+"S"^
+#!#L
+#'#:
+#\#g#w#
+(D(~(
+$2$r$
+'!$J$N$R$V$Z$^$b$f$j$n0
+%2%6%:%>%B%F%J%N%R%V0
+%r%v%z%~%
+&2&6&:&>&B&F&J&N&R&V0
+&r&v&z&~&
+' '$'(','0'4'8'<'@0
+'\'`'d'h'l'p't'x'|'
+( ($(((,(0(4(8(<(@0
+(Z(^(b(f(j(n(r(v(z1
+)*)4);
+)P)y)
+)_)n
+*%*1
+*I*T*e*l*u
+*Z*_
++!+5-
++'+.
++>-V-
+0	+R+f+
+, ,^,
++Z+^+b7
+,6,:,>,B,F,J,N,R,V,Z0
+,t,x,|,
+-.-2-6-:->-B-F-J-N-R0
+-v-z-~-
+1"1i3
+.".08
+.(.,1
+.B.F.J.N.R.V.Z.^2
+/./f/
+/"/&/*0
+:4	/B/F/J/N/R/V/Z/^/b0
+I5	/z/~/
+050s0
+0!0%0)0-014
+0K0O0S0W0[0_0c0g0k0o0
+1*1V1[0
+1:1>1B1F1J1N1R0
+1a1e1
+2)202<2U2e2
+2C2L
+2q2z2
+4G4Pe
+3)323A3O3
+4%43
+3h3q
+4j4r4}4
+575A
+5 5'
+5G5S
+5_5i5p
+6*6.6[
+646B
+6K6S
+6o6v6
+797k7
+7F7W7c
+8&8=
+8n8y
+9"9*
+9@9Y9`9y9
+9F9O
+9g9p
+b:.:
+>H>T>
+@'@0a
+:>:H:`:g:
+:n:w
+;(;1;?;];
+;E;T
+;d;q
+<#<*
+<1<:
+<U<`<k<y<
+>7>Ba
+=!=5
+=S=b
+>\>i>t
+? ?(?-
+?@?j
+[?O?T?Y?e
+]?z?
+@8@C@N
+@U@s
+ "@^@h
+AiAtA
+E+E\HTH\HfHrH
+A*A3
+A;AAA[
+AJAU
+B<B{B
+BFBQB[Bb
+BiBr
+CQCtC
+CWCf
+D&D4a
+DWDbDgD
+DmDs
+E3EAEL
+EnEyE
+H=HF
+F'F2F>F\Fsa
+FKFV
+FbFi
+G+GXGfGkGpGuG{G
+G!G&C
+G7G;G@GEGJM
+GPGTB
+G^GbF
+LrMDM
+N;NHNQNkN
+J1J7JU
+I&I,I:IJ
+IaIrI
+  Iz
+J?JH
+JvKsK}l	J
+K&K8KFKQ
+K^Kd
+L'LZa
+L0L:LA
+LHLQ
+LaLj
+MJM|a
+MRM\Mc
+MjMs
+N$N/
+NWNb
+NqNy
+O5OFO\OgO
+OQOV
+OpOti
+P(P;P`
+P.P5
+PAPU
+R%R<RqS
+V$VYW
+Q)Q7QWQ
+Q=QH
+Q_Qd
+R+R2
+RFRQR\Rf
+SLSnSzS
+S%S?a
+S+S6
+SRSd
+T#T.Tk
+T4T;
+TETNTc
+TTT[
+ &Tv
+UEUeUt
+KUMUX
+V,V7VB
+VgVrV
+W$W>WBWSW
+W,W6
+WiWr
+XCXVXac
+XIXP
+Y]Ym[u[
+]!])a
+YLYVh
+Y-Y=
+YeYii
+ZDZUZ]Zj
+Z!Z1
+[#[/[:[[[c[n
+[@[G
+[N[T
+\!\(\A\\\~\
+\/\8
+\H\S
+\b\t
+]0]8
+g]a^+^B^
+_A`:`
+a'aCaYb"b8b
+a	]u]
+^1^;
+^L^S^\^r
+^d^i
+_ _/
+`*`0a
+_W_a_x_
+_g_r
+`B`M`X
+`^`i
+a-a8
+aJaP
+aeam
+`a~a
+b(b0
+bBbMb
+bTbm
+b^be
+bwb~
+eZe}e
+gZgnhKhWhci
+c7cPc
+d6d?a
+c c2
+c>cG
+cZcccqc
+d]dbdpdyd
+dhdl3
+e e%e.e=eM
+ebegeq
+g5g>gK
+f!f=fEfwf
+f'f5
+fPfo
+fWfc
+h.h>
+Ho	hwh
+i(i4i:iP
+-j'j2j>jU
+jDjK
+qYqaqnq
+nPnq
+k k.k;m
+n n,
+kZkjk
+lElblrl
+l*l3
+lKlV
+m	m9e
+mRmom}m
+mXme
+n2n?
+n^nf
+oEoOoZoaozo
+ohoq
+p#p7pP
+q!q)
+q4qIqQ
+r*r4r;
+rQr\
+s&sg
+s1s:sHsX
+smsv
+vnvyv
+yZygy
+z<zRz_zvz
+t/tOtet
+u,uEu
+v8vUb
+t5tF
+tUt[
+tlt~
+uKu`
+uluzu
+wDwNwYw`wy
+wgwp
+x>xoxyx~
+xIxRx[xe
+y'y6y?yMa
+ymyx
+zCzI
+zezn
+}V}|~
+~-~E~W~
+|=|K|^|n|
+{U{c{
+| |4
+}%}.}I
+}6};
+@}`}i
+~3~8
+~c~{~
+~i~p
+stib
+ltuo
+ltuo
+ltuo
+ltuo
+ltuo
+ltuo
+ltuo
+ltuo
+Andale Mono
+Arial Narrow
+Calibri
+Cantarell
+Century Gothic
+Comfortaa
+Consolas
+Corbel
+Futura
+Gill Sans
+Helvetica CY
+Inconsolata
+Liberation Sans Narrow
+Liberation Sans
+Lucida Grande
+Lucida Sans Unicode
+Luxi Sans
+Open Sans
+Rokkitt
+Segoe UI
+Trebuchet MS
+Andale Mono
+Bitstream Vera Sans
+Calibri
+Calibri
+Calibri
+Candara
+Candara
+Canwell
+Comfortaa
+Consolas
+DejaVu Sans
+Freesans
+Freeserif
+Freeserif
+Inconsolata
+Inconsolata
+Lucida Grande
+Myriad Pro
+Myriad Pro
+Nina
+Nina
+Nina
+Optima
+Raleway
+Samba
+Times New Roman
+Trebuchet MS
+Trebuchet MS
+Trebuchet MS
+Verdana
+Verdana
+Courier New
+Courier New
+Courier
+Courier
+Droid Sans Mono
+Bitstream Vera Sans
+DejaVu Sans
+Essential PragmataPro
+Essential PragmataPro
+Times New Roman
+Tahoma
+Courier New
+Arial
+Arial
+Liberation Sans
+FreeSans
+FreeSans
+Palatino Linotype
+Arial
+Arial Unicode MS
+FreeSans
+Arimo
+Liberation Sans
+Tahoma
+Arial Unicode MS
+Arial Unicode MS
+Arial Unicode MS
+Arial
+Arial
+Arial
+Arial
+Arimo
+Arimo
+Arimo
+Bitstream Vera Sans
+Calibri
+Calibri
+Candara
+Cantarell
+Cantarell
+Consolas
+Consolas
+Corbel
+Courier
+Courier
+Dejavu Sans Mono
+Dejavu Sans Mono
+Dejavu Sans Mono
+Dejavu Sans
+Dejavu Sans
+Droid Sans
+Droid Sans
+Freesans
+Freesans
+Georgia
+Georgia
+Georgia
+Inconsolata
+Inconsolata
+Liberation Sans
+Liberation Sans
+Liberation Sans
+Lucida Grande
+Lucida Grande
+Lucida Grande
+Lucida Grande
+Lucida Sans Unicode
+Lucida Sans Unicode
+Lucida Sans Unicode
+Lucida Sans Unicode
+Microsoft Sans Serif
+Microsoft Sans Serif
+Microsoft Sans Serif
+Myriad Pro
+Myriad Pro
+Myriad Pro
+Open Sans
+Open Sans
+Optima
+Optima
+Optima
+Segoe UI
+Segoe UI
+Segoe UI
+Segoe UI
+Tahoma
+Tahoma
+Tahoma
+Times New Roman
+Trebuchet MS
+Trebuchet MS
+Trebuchet MS
+Trebuchet MS
+Verdana
+Verdana
+Verdana
+Verdana
+Verdana
+Andale Mono
+Arial Unicode MS
+Arial
+Arimo
+Bitstream Vera Sans Mono
+Bitstream Vera Sans
+Bitstream Vera Sans
+Calibri
+Consolas
+Courier New
+Courier
+Cousine
+DejaVu Sans Mono
+DejaVu Sans
+DejaVu Sans
+Droid Sans
+Droid Sans
+FreeMono
+FreeSans
+Liberation Mono
+Lucida Console
+Luxi Sans
+Microsoft Sans Serif
+Monaco
+Segoe UI
+Segoe UI
+Tahoma
+Tahoma
+Times New Roman
+Times New Roman
+Trebuchet MS
+Ubuntu
+Ubuntu
+Verdana
+Verdana
+Pragmata
+Essential PragmataPro
+Baskerville
+Garamond
+Optima
+Baskerville
+Garamond
+Optima
+P0P0p@@
+?PP`000
+00PP
+PpPp
+P0 P
+````
+p0p`P
+` 0p 
+0pP 
+00  0
+00 0
+  00
+PPPP P
+0  @
+@@P0P
+P0 P P
+0000
+@@0@
+P`P@
+pP``
+p@@@
+0p0`
+dyld_stub_binding_helper
+__dyld_func_lookup
+_ft_close_stream_by_munmap
+_ft_alloc
+_ft_close_stream_by_free
+_ft_free
+_ft_realloc
+__ft_face_scale_advances
+_ft_multo64
+_FT_Add64
+_ft_div64by32
+_FT_MulFix_x86_64
+_FT_GlyphLoader_Adjust_Points
+_FT_GlyphLoader_Adjust_Subglyphs
+_ft_glyphslot_init
+_ft_glyphslot_done
+_ft_glyphslot_clear
+_ft_glyphslot_enlarge_metrics
+_ft_glyphslot_grid_fit_metrics
+_ft_lookup_glyph_renderer
+_open_face
+_open_face_PS_from_sfnt_stream
+_load_mac_face
+_destroy_face
+_destroy_size
+_ft_recompute_scaled_metrics
+_find_unicode_charmap
+_ft_cmap_done_internal
+_find_variant_selector_charmap
+_ft_add_renderer
+_Destroy_Module
+_ft_property_do
+_ft_raccess_sort_ref_by_id
+_raccess_guess_apple_double
+_raccess_guess_apple_single
+_raccess_guess_darwin_ufs_export
+_raccess_guess_darwin_newvfs
+_raccess_guess_darwin_hfsplus
+_raccess_guess_vfat
+_raccess_guess_linux_cap
+_raccess_guess_linux_double
+_raccess_guess_linux_netatalk
+_ft_trig_pseudo_rotate
+_ft_trig_prenorm
+_ft_trig_pseudo_polarize
+_ft_trig_downscale
+_raccess_make_file_name
+_raccess_guess_linux_double_from_file_name
+_raccess_guess_apple_generic
+_ft_remove_renderer
+_Destroy_Driver
+_ft_set_current_renderer
+_destroy_charmaps
+_IsMacBinary
+_IsMacResource
+_load_face_in_embedded_rfork
+_ft_raccess_rule_by_darwin_vfs
+_raccess_get_rule_type_from_rule_index
+_Mac_Read_POST_Resource
+_Mac_Read_sfnt_Resource
+_open_face_from_buffer
+_new_memory_stream
+_memory_stream_close
+_ft_lookup_PS_in_sfnt_stream
+_BBox_Move_To
+_BBox_Conic_To
+_BBox_Cubic_To
+_BBox_Cubic_Check
+_update_cubic_max
+_BBox_Conic_Check
+_ft_bitmap_assure_buffer
+_ft_gray_for_premultiplied_srgb_bgra
+_FT_MulFix_x86_64
+_ft_bitmap_glyph_init
+_ft_bitmap_glyph_done
+_ft_bitmap_glyph_copy
+_ft_bitmap_glyph_bbox
+_ft_outline_glyph_init
+_ft_outline_glyph_done
+_ft_outline_glyph_copy
+_ft_outline_glyph_transform
+_ft_outline_glyph_bbox
+_ft_outline_glyph_prepare
+_ft_new_glyph
+__ft_lcd_filter_fir
+__ft_lcd_filter_legacy
+_ft_face_get_mm_service
+__tt_face_check_patents
+__tt_check_patents_in_table
+__tt_check_patents_in_range
+_ft_pfr_check
+_ft_stroke_border_init
+_ft_stroke_border_reset
+_ft_stroke_border_done
+_ft_stroker_subpath_start
+_ft_stroker_process_corner
+_ft_stroke_border_lineto
+_ft_conic_is_small_enough
+_ft_conic_split
+_ft_pos_abs
+_ft_stroke_border_conicto
+_ft_cubic_is_small_enough
+_ft_cubic_split
+_ft_angle_mean
+_ft_stroke_border_cubicto
+_ft_stroker_cap
+_ft_stroker_add_reverse_left
+_ft_stroke_border_close
+_ft_stroker_inside
+_ft_stroker_outside
+_ft_stroke_border_get_counts
+_ft_stroke_border_export
+_ft_stroker_arcto
+_FT_MulFix_x86_64
+_ft_stroke_border_arcto
+_ft_stroke_border_grow
+_ft_stroke_border_moveto
+_FT_MulFix_x86_64
+_tt_driver_init
+_tt_driver_done
+_tt_get_interface
+_tt_face_init
+_tt_face_done
+_tt_size_init
+_tt_size_done
+_tt_slot_init
+_tt_glyph_load
+_tt_get_kerning
+_tt_get_advances
+_tt_size_request
+_tt_size_select
+_Init_Context
+_Read_CVT_Stretched
+_Write_CVT_Stretched
+_Move_CVT_Stretched
+_Read_CVT
+_Write_CVT
+_Move_CVT
+_Compute_Funcs
+_Compute_Round
+_Ins_SxVTL
+_Normalize
+_Ins_ISECT
+_Ins_SZP0
+_Ins_SZP1
+_Ins_SZP2
+_Ins_SZPS
+_Round_To_Grid
+_Round_To_Half_Grid
+_Ins_ELSE
+_FT_MulFix_x86_64
+_Ins_MINDEX
+_Ins_ALIGNPTS
+_Ins_UNKNOWN
+_Ins_UTP
+_Ins_LOOPCALL
+_Ins_CALL
+_Ins_FDEF
+_Ins_ENDF
+_Ins_MDAP
+_Ins_IUP
+_Ins_SHP
+_Ins_SHC
+_Ins_SHZ
+_Ins_SHPIX
+_Ins_IP
+_Ins_MSIRP
+_Ins_ALIGNRP
+_Round_To_Double_Grid
+_Ins_MIAP
+_Ins_NPUSHB
+_Ins_NPUSHW
+_Ins_GC
+_Ins_SCFS
+_Ins_MD
+_Current_Ppem
+_Ins_IF
+_Ins_DELTAP
+_Round_None
+_Ins_DELTAC
+_SetSuperRound
+_Round_Super
+_Round_Super_45
+_Round_Up_To_Grid
+_Round_Down_To_Grid
+_Ins_FLIPPT
+_Ins_FLIPRGON
+_Ins_FLIPRGOFF
+_Ins_SCANCTRL
+_Ins_SDPVTL
+_Ins_GETINFO
+_Ins_IDEF
+_Ins_ROLL
+_Ins_SCANTYPE
+_Ins_INSTCTRL
+_Ins_MIRP
+_Ins_MDRP
+_Ins_PUSHW
+_Ins_PUSHB
+_Ins_Goto_CodeRange
+_GetShortIns
+_TT_MulFix14_long_long
+_SkipCode
+_Current_Ratio
+_Move_Zp2_Point
+_Compute_Point_Displacement
+__iup_worker_interpolate
+__iup_worker_shift
+_Project_x
+_Project_y
+_Project
+_Dual_Project
+_Direct_Move
+_Direct_Move_Orig
+_Direct_Move_X
+_Direct_Move_Orig_X
+_Direct_Move_Y
+_Direct_Move_Orig_Y
+_TT_DotFix14_long_long
+_TT_Done_Context
+_tt_size_done_bytecode
+_tt_glyphzone_done
+_tt_face_done_loca
+_tt_face_free_hdmx
+_tt_done_blend
+_tt_check_trickyness
+_tt_face_load_hdmx
+_tt_face_load_loca
+_tt_face_load_cvt
+_tt_face_load_fpgm
+_tt_face_load_prep
+_tt_check_single_notdef
+_TT_Init_Glyph_Loading
+_TT_Access_Glyph_Frame
+_TT_Load_Glyph_Header
+_TT_Load_Simple_Glyph
+_TT_Load_Composite_Glyph
+_TT_Forget_Glyph_Frame
+_Update_Max
+_tt_face_get_location
+_tt_face_vary_cvt
+_ft_var_apply_tuple
+_ft_var_readpackedpoints
+_ft_var_readpackeddeltas
+_tt_check_trickyness_family
+_tt_check_trickyness_sfnt_ids
+_tt_get_sfnt_checksum
+_tt_synth_sfnt_checksum
+_tt_size_reset
+_TT_Get_VMetrics
+_TT_Get_HMetrics
+_TT_Load_Glyph
+_load_sbit_image
+_tt_loader_init
+_load_truetype_glyph
+_compute_glyph_metrics
+_tt_face_get_device_metrics
+_tt_get_metrics
+_tt_get_metrics_incr_overrides
+_TT_Vary_Get_Glyph_Deltas
+_TT_Process_Simple_Glyph
+_TT_Process_Composite_Component
+_TT_Process_Composite_Glyph
+_tt_prepare_zone
+_TT_Hint_Glyph
+_TT_Set_CodeRange
+_TT_Run_Context
+_TT_Goto_CodeRange
+_translate_array
+_sph_test_tweak_x_scaling
+_scale_test_tweak
+_is_member_of_family_class
+_is_member_of_style_class
+_sph_set_tweaks
+_sph_test_tweak
+_tt_size_ready_bytecode
+_tt_size_init_bytecode
+_tt_size_run_prep
+_TT_Load_Context
+_TT_Clear_CodeRange
+_TT_Save_Context
+_tt_glyphzone_new
+_tt_size_run_fpgm
+_tt_property_set
+_tt_property_get
+_TT_Set_MM_Blend
+_TT_Get_MM_Var
+_TT_Set_Var_Design
+_ft_var_load_avar
+_ft_var_load_gvar
+_T1_Driver_Init
+_T1_Driver_Done
+_Get_Interface
+_T1_Face_Init
+_T1_Face_Done
+_T1_Size_Init
+_T1_Size_Done
+_T1_GlyphSlot_Init
+_T1_GlyphSlot_Done
+_T1_Load_Glyph
+_Get_Kerning
+_T1_Read_Metrics
+_T1_Get_Advances
+_T1_Size_Request
+_t1_get_index
+_T1_Read_PFM
+_T1_Done_Metrics
+_compare_kern_pairs
+_T1_Parse_Glyph
+_T1_Parse_Glyph_And_Get_Char_String
+_FT_MulFix_x86_64
+_T1_Size_Get_Globals_Funcs
+_T1_Get_Kerning
+_T1_Done_Blend
+_T1_Open_Face
+_T1_Compute_Max_Advance
+_t1_init_loader
+_T1_New_Parser
+_parse_dict
+_T1_Get_Private_Dict
+_t1_done_loader
+_T1_Finalize_Parser
+_read_pfb_tag
+_read_binary_data
+_t1_load_keyword
+_t1_parse_font_matrix
+_parse_encoding
+_parse_subrs
+_parse_charstrings
+_parse_private
+_parse_blend_design_positions
+_parse_blend_design_map
+_parse_blend_axis_types
+_parse_weight_vector
+_parse_buildchar
+_t1_allocate_blend
+_check_type1_format
+_T1_Get_Multi_Master
+_T1_Set_MM_Design
+_T1_Set_MM_Blend
+_T1_Get_MM_Var
+_T1_Set_Var_Design
+_mm_weights_unmap
+_mm_axis_unmap
+_T1_Get_Track_Kerning
+_t1_ps_get_font_info
+_t1_ps_get_font_extra
+_t1_ps_has_glyph_names
+_t1_ps_get_font_private
+_t1_ps_get_font_value
+_t1_get_glyph_name
+_t1_get_name_index
+_t1_get_ps_name
+_cff_driver_init
+_cff_driver_done
+_cff_get_interface
+_cff_face_init
+_cff_face_done
+_cff_size_init
+_cff_size_done
+_cff_slot_init
+_cff_slot_done
+_cff_glyph_load
+_cff_get_kerning
+_cff_get_advances
+_cff_size_request
+_cff_size_select
+_cff_cmap_encoding_init
+_cff_cmap_encoding_done
+_cff_cmap_encoding_char_index
+_cff_cmap_encoding_char_next
+_cff_cmap_unicode_init
+_cff_cmap_unicode_done
+_cff_cmap_unicode_char_index
+_cff_cmap_unicode_char_next
+_cff_sid_to_glyph_name
+_cff_index_get_sid_string
+_cff_index_get_string
+_cff_font_done
+_cff_index_done
+_cff_subfont_done
+_cff_encoding_done
+_cff_charset_done
+_CFF_Done_FD_Select
+_cff_charset_free_cids
+_cff_font_load
+_cff_index_get_name
+_remove_subset_prefix
+_cff_strcpy
+_remove_style
+_cff_index_access_element
+_cff_index_forget_element
+_cff_index_read_offset
+_cff_index_init
+_cff_index_get_pointers
+_cff_subfont_load
+_CFF_Load_FD_Select
+_cff_charset_load
+_cff_encoding_load
+_cff_charset_compute_cids
+_cff_charset_cid_to_gindex
+_cff_parser_init
+_cff_parser_run
+_cff_parse_num
+_cff_parse_fixed
+_cff_parse_fixed_scaled
+_do_fixed
+_cff_parse_real
+_cff_parse_integer
+_cff_parse_font_matrix
+_cff_parse_font_bbox
+_cff_parse_private_dict
+_cff_parse_cid_ros
+_cff_parse_fixed_dynamic
+_cff_index_load_offsets
+_cff_size_get_globals_funcs
+_cff_make_private_dict
+_cff_slot_load
+_cff_fd_select_get
+_cff_decoder_init
+_cff_get_glyph_data
+_cff_decoder_prepare
+_cf2_decoder_parse_charstrings
+_cff_free_glyph_data
+_cff_builder_done
+_FT_MulFix_x86_64
+_cf2_free_instance
+_cf2_outline_init
+_cf2_getScaleAndHintFlag
+_cf2_getUnitsPerEm
+_cf2_checkTransform
+_cf2_getGlyphOutline
+_cf2_setGlyphWidth
+_cf2_font_setup
+_cf2_outline_reset
+_cf2_interpT2CharString
+_cf2_outline_close
+_cf2_setError
+_cff_builder_close_contour
+_cf2_getNominalWidthX
+_cf2_arrstack_init
+_cf2_hintmask_init
+_cf2_glyphpath_init
+_cf2_getDefaultWidthX
+_cf2_stack_init
+_cf2_arrstack_setCount
+_cf2_arrstack_getBuffer
+_cf2_buf_isEnd
+_cf2_buf_readByte
+_cf2_hintmask_isValid
+_cf2_doStems
+_cf2_stack_count
+_cf2_stack_getReal
+_cf2_stack_popFixed
+_cf2_glyphpath_moveTo
+_cf2_glyphpath_lineTo
+_cf2_stack_clear
+_cf2_glyphpath_curveTo
+_cf2_arrstack_getPointer
+_cf2_stack_popInt
+_cf2_initGlobalRegionBuffer
+_cf2_initLocalRegionBuffer
+_cf2_doFlex
+_cf2_glyphpath_closeOpenPath
+_cf2_getSeacComponent
+_cf2_freeSeacComponent
+_cf2_hintmask_read
+_cf2_arrstack_size
+_cf2_hintmap_init
+_cf2_hintmap_build
+_cf2_stack_pushInt
+_cf2_stack_pushFixed
+_cf2_glyphpath_finalize
+_cf2_arrstack_finalize
+_cf2_stack_free
+_cf2_hintmap_isValid
+_cf2_hintmask_setAll
+_cf2_hintmask_getMaskPtr
+_cf2_hint_initZero
+_cf2_hintmap_insertHint
+_cf2_hint_init
+_cf2_hint_isLocked
+_cf2_blues_capture
+_cf2_hintmap_adjustHints
+_cf2_hint_isSynthetic
+_cf2_hint_isTop
+_cf2_hintmask_setNew
+_cf2_arrstack_clear
+_cf2_hint_isPair
+_cf2_arrstack_push
+_cf2_arrstack_setNumElements
+_cf2_hint_isBottom
+_cf2_hint_isValid
+_cf2_hint_lock
+_cf2_hint_isPairTop
+_cf2_hintmap_map
+_cf2_hintmask_setCounts
+_cff_lookup_glyph_by_stdcharcode
+_cff_get_standard_encoding
+_cf2_glyphpath_pushPrevElem
+_cf2_glyphpath_computeIntersection
+_cf2_glyphpath_hintPoint
+_cf2_glyphpath_computeOffset
+_cf2_getWindingMomentum
+_cf2_glyphpath_pushMove
+_cf2_hintmask_isNew
+_cf2_getSubfont
+_cf2_getPpemY
+_cf2_getStdVW
+_cf2_computeDarkening
+_cf2_getStdHW
+_cf2_blues_init
+_cf2_getBlueMetrics
+_cf2_getBlueValues
+_cf2_getOtherBlues
+_cf2_getFamilyBlues
+_cf2_getFamilyOtherBlues
+_cf2_getLanguageGroup
+_cf2_builder_moveTo
+_cf2_builder_lineTo
+_cf2_builder_cubeTo
+_cff_builder_start_point
+_cff_check_points
+_cff_builder_add_point
+_cff_builder_add_contour
+_cff_builder_add_point1
+_cff_compute_bias
+_cff_builder_init
+_cff_property_set
+_cff_property_get
+_cff_get_ros
+_cff_get_is_cid
+_cff_get_cid_from_glyph_index
+_cff_get_cmap_info
+_cff_get_glyph_name
+_cff_get_name_index
+_cff_get_ps_name
+_cff_ps_get_font_info
+_cff_ps_has_glyph_names
+_cid_driver_init
+_cid_driver_done
+_cid_get_interface
+_cid_face_init
+_cid_face_done
+_cid_size_init
+_cid_size_done
+_cid_slot_init
+_cid_slot_done
+_cid_slot_load_glyph
+_cid_size_request
+_cid_load_glyph
+_FT_MulFix_x86_64
+_cid_get_offset
+_cid_size_get_globals_funcs
+_cid_face_open
+_cid_init_loader
+_cid_parser_new
+_cid_parse_dict
+_cid_hex_to_binary
+_cid_read_subrs
+_cid_done_loader
+_cid_parser_done
+_cid_load_keyword
+_parse_fd_array
+_cid_parse_font_matrix
+_parse_expansion_factor
+_cid_get_ros
+_cid_get_is_cid
+_cid_get_cid_from_glyph_index
+_cid_ps_get_font_info
+_cid_ps_get_font_extra
+_cid_get_postscript_name
+_pfr_cmap_init
+_pfr_cmap_done
+_pfr_cmap_char_index
+_pfr_cmap_char_next
+_pfr_get_metrics
+_pfr_face_get_kerning
+_pfr_get_advance
+_pfr_get_service
+_pfr_face_init
+_pfr_face_done
+_pfr_slot_init
+_pfr_slot_done
+_pfr_slot_load
+_pfr_get_kerning
+_pfr_slot_load_bitmap
+_pfr_glyph_load
+_FT_MulFix_x86_64
+_pfr_glyph_load_rec
+_pfr_glyph_load_compound
+_pfr_glyph_load_simple
+_pfr_extra_items_skip
+_pfr_glyph_start
+_pfr_glyph_end
+_pfr_glyph_line_to
+_pfr_glyph_move_to
+_pfr_glyph_curve_to
+_pfr_glyph_close_contour
+_pfr_extra_items_parse
+_pfr_lookup_bitmap_data
+_pfr_load_bitmap_metrics
+_pfr_load_bitmap_bits
+_pfr_bitwriter_init
+_pfr_bitwriter_decode_bytes
+_pfr_bitwriter_decode_rle1
+_pfr_bitwriter_decode_rle2
+_pfr_glyph_done
+_pfr_glyph_init
+_pfr_phy_font_done
+_pfr_header_load
+_pfr_header_check
+_pfr_log_font_count
+_pfr_log_font_load
+_pfr_phy_font_load
+_pfr_aux_name_load
+_pfr_extra_item_load_bitmap_info
+_pfr_extra_item_load_font_id
+_pfr_extra_item_load_stem_snaps
+_pfr_extra_item_load_kerning_pairs
+_T42_Driver_Init
+_T42_Driver_Done
+_T42_Get_Interface
+_T42_Face_Init
+_T42_Face_Done
+_T42_Size_Init
+_T42_Size_Done
+_T42_GlyphSlot_Init
+_T42_GlyphSlot_Done
+_T42_GlyphSlot_Load
+_T42_Size_Request
+_T42_Size_Select
+_t42_glyphslot_clear
+_T42_Open_Face
+_t42_loader_init
+_t42_parser_init
+_t42_parse_dict
+_t42_loader_done
+_t42_parser_done
+_t42_load_keyword
+_t42_parse_font_matrix
+_t42_parse_encoding
+_t42_parse_charstrings
+_t42_parse_sfnts
+_t42_is_space
+_t42_ps_get_font_info
+_t42_ps_get_font_extra
+_t42_ps_has_glyph_names
+_t42_ps_get_font_private
+_t42_get_ps_font_name
+_t42_get_glyph_name
+_t42_get_name_index
+_winfnt_get_service
+_FNT_Face_Init
+_FNT_Face_Done
+_FNT_Load_Glyph
+_FNT_Size_Request
+_FNT_Size_Select
+_fnt_font_done
+_fnt_face_get_dll_font
+_fnt_font_load
+_fnt_cmap_init
+_fnt_cmap_char_index
+_fnt_cmap_char_next
+_winfnt_get_header
+_pcf_cmap_init
+_pcf_cmap_done
+_pcf_cmap_char_index
+_pcf_cmap_char_next
+_pcf_driver_requester
+_PCF_Face_Init
+_PCF_Face_Done
+_PCF_Glyph_Load
+_PCF_Size_Request
+_PCF_Size_Select
+_BitOrderInvert
+_TwoByteSwap
+_FourByteSwap
+_pcf_load_font
+_pcf_read_TOC
+_pcf_get_properties
+_pcf_has_table_type
+_pcf_get_accel
+_pcf_get_metrics
+_pcf_get_bitmaps
+_pcf_get_encodings
+_pcf_interpret_style
+_pcf_find_property
+_pcf_seek_to_table_type
+_pcf_get_metric
+_pcf_get_charset_id
+_pcf_get_bdf_property
+_bdf_cmap_init
+_bdf_cmap_done
+_bdf_cmap_char_index
+_bdf_cmap_char_next
+_bdf_driver_requester
+_BDF_Face_Init
+_BDF_Face_Done
+_BDF_Glyph_Load
+_BDF_Size_Request
+_BDF_Size_Select
+_bdf_free_font
+_hash_free
+_bdf_load_font
+_bdf_get_font_property
+_bdf_interpret_style
+_hash_lookup
+_hash_bucket
+__bdf_list_init
+__bdf_readstream
+__bdf_parse_start
+__bdf_list_done
+__bdf_add_comment
+_hash_init
+_hash_insert
+__bdf_list_split
+__bdf_atoul
+__bdf_parse_properties
+__bdf_atos
+__bdf_list_shift
+__bdf_list_join
+__bdf_set_default_spacing
+__bdf_add_property
+__bdf_parse_glyphs
+_by_encoding
+__bdf_atol
+_bdf_create_property
+__bdf_is_atom
+_bdf_get_property
+__bdf_list_ensure
+_hash_rehash
+_bdf_get_charset_id
+_bdf_get_bdf_property
+_tt_cmap_init
+_tt_cmap0_char_index
+_tt_cmap0_char_next
+_tt_cmap0_validate
+_tt_cmap0_get_info
+_tt_cmap2_char_index
+_tt_cmap2_char_next
+_tt_cmap2_validate
+_tt_cmap2_get_info
+_tt_cmap4_init
+_tt_cmap4_char_index
+_tt_cmap4_char_next
+_tt_cmap4_validate
+_tt_cmap4_get_info
+_tt_cmap6_char_index
+_tt_cmap6_char_next
+_tt_cmap6_validate
+_tt_cmap6_get_info
+_tt_cmap8_char_index
+_tt_cmap8_char_next
+_tt_cmap8_validate
+_tt_cmap8_get_info
+_tt_cmap10_char_index
+_tt_cmap10_char_next
+_tt_cmap10_validate
+_tt_cmap10_get_info
+_tt_cmap12_init
+_tt_cmap12_char_index
+_tt_cmap12_char_next
+_tt_cmap12_validate
+_tt_cmap12_get_info
+_tt_cmap13_init
+_tt_cmap13_char_index
+_tt_cmap13_char_next
+_tt_cmap13_validate
+_tt_cmap13_get_info
+_tt_cmap14_init
+_tt_cmap14_done
+_tt_cmap14_char_index
+_tt_cmap14_char_next
+_tt_cmap14_char_var_index
+_tt_cmap14_char_var_isdefault
+_tt_cmap14_variants
+_tt_cmap14_char_variants
+_tt_cmap14_variant_chars
+_tt_cmap14_validate
+_tt_cmap14_get_info
+_sfnt_get_interface
+_tt_get_cmap_info
+_sfnt_get_charset_id
+_tt_face_find_bdf_prop
+_tt_face_load_bdf_props
+_tt_face_goto_table
+_tt_face_lookup_table
+_sfnt_get_glyph_name
+_sfnt_get_name_index
+_tt_face_get_ps_name
+_load_post_names
+_load_format_20
+_load_format_25
+_sfnt_get_ps_name
+_tt_face_load_any
+_get_sfnt_table
+_sfnt_table_info
+_sfnt_init_face
+_sfnt_load_face
+_sfnt_done_face
+_tt_face_load_head
+_tt_face_load_hhea
+_tt_face_load_cmap
+_tt_face_load_maxp
+_tt_face_load_os2
+_tt_face_load_post
+_tt_face_load_name
+_tt_face_free_name
+_tt_face_load_kern
+_tt_face_load_gasp
+_tt_face_load_pclt
+_tt_face_load_bhed
+_tt_face_load_sbit_image
+_tt_face_free_ps_names
+_tt_face_get_kerning
+_tt_face_load_font_dir
+_tt_face_load_hmtx
+_tt_face_load_sbit
+_tt_face_free_sbit
+_tt_face_set_sbit_strike
+_tt_face_load_strike_metrics
+_tt_face_get_metrics
+_check_table_dir
+_tt_sbit_decoder_init
+_tt_sbit_decoder_load_image
+_tt_sbit_decoder_done
+_tt_face_load_sbix_image
+_tt_sbit_decoder_load_metrics
+_tt_sbit_decoder_load_bitmap
+_tt_sbit_decoder_load_byte_aligned
+_tt_sbit_decoder_load_bit_aligned
+_tt_sbit_decoder_load_compound
+_tt_sbit_decoder_alloc_bitmap
+_tt_face_load_generic_header
+_tt_face_free_bdf_props
+_tt_face_done_kern
+_tt_face_get_name
+_tt_face_build_cmaps
+_sfnt_find_encoding
+_tt_name_entry_ascii_from_utf16
+_tt_name_entry_ascii_from_other
+_sfnt_open_font
+_woff_open_font
+_compare_offsets
+_sfnt_stream_close
+_tt_cmap14_find_variant
+_tt_cmap14_get_nondef_chars
+_tt_cmap14_get_def_chars
+_tt_cmap14_def_char_count
+_tt_cmap14_ensure
+_tt_cmap14_char_map_def_binary
+_tt_cmap14_char_map_nondef_binary
+_tt_cmap13_next
+_tt_cmap13_char_map_binary
+_tt_cmap12_next
+_tt_cmap12_char_map_binary
+_tt_cmap4_char_map_linear
+_tt_cmap4_next
+_tt_cmap4_char_map_binary
+_tt_cmap4_set_range
+_tt_cmap2_get_subheader
+_af_dummy_hints_init
+_af_dummy_hints_apply
+_af_latin_metrics_init
+_af_latin_metrics_scale
+_af_latin_hints_init
+_af_latin_hints_apply
+_af_cjk_metrics_init
+_af_cjk_metrics_scale
+_af_cjk_hints_init
+_af_cjk_hints_apply
+_af_indic_metrics_init
+_af_indic_metrics_scale
+_af_indic_hints_init
+_af_indic_hints_apply
+_af_autofitter_load_glyph
+_af_autofitter_init
+_af_autofitter_done
+_af_get_interface
+_af_property_set
+_af_property_get
+_af_property_get_face_globals
+_af_face_globals_new
+_af_face_globals_free
+_af_face_globals_compute_style_coverage
+_af_loader_done
+_af_glyph_hints_done
+_af_loader_init
+_af_glyph_hints_init
+_af_loader_load_glyph
+_af_loader_reset
+_af_face_globals_get_metrics
+_af_loader_load_g
+_FT_MulFix_x86_64
+_af_face_globals_is_digit
+_af_cjk_metrics_init_widths
+_af_cjk_metrics_check_digits
+_af_glyph_hints_rescale
+_af_glyph_hints_reload
+_af_latin_hints_compute_segments
+_af_latin_hints_link_segments
+_af_sort_and_quantize_widths
+_af_axis_hints_new_segment
+_af_direction_compute
+_af_cjk_hints_detect_features
+_af_cjk_hints_compute_blue_edges
+_af_cjk_hint_edges
+_af_cjk_align_edge_points
+_af_glyph_hints_align_strong_points
+_af_glyph_hints_align_weak_points
+_af_glyph_hints_save
+_af_iup_interp
+_af_iup_shift
+_af_cjk_align_linked_edge
+_af_hint_normal_stem
+_af_cjk_align_serif_edge
+_af_cjk_compute_stem_width
+_af_cjk_snap_width
+_af_cjk_hints_compute_segments
+_af_cjk_hints_link_segments
+_af_cjk_hints_compute_edges
+_af_axis_hints_new_edge
+_af_cjk_metrics_scale_dim
+_af_cjk_metrics_init_blues
+_af_sort_pos
+_af_latin_hints_detect_features
+_af_latin_hints_compute_blue_edges
+_af_latin_hint_edges
+_af_glyph_hints_align_edge_points
+_af_latin_align_linked_edge
+_af_latin_compute_stem_width
+_af_latin_align_serif_edge
+_af_latin_snap_width
+_af_latin_hints_compute_edges
+_af_latin_metrics_scale_dim
+_af_latin_metrics_init_widths
+_af_latin_metrics_init_blues
+_af_latin_metrics_check_digits
+_psh_glyph_init
+_FT_MulFix_x86_64
+_psh_globals_set_scale
+_psh_glyph_load_points
+_psh_glyph_compute_extrema
+_psh_hint_table_align_hints
+_psh_glyph_find_strong_points
+_psh_glyph_find_blue_points
+_psh_glyph_interpolate_strong_points
+_psh_glyph_interpolate_normal_points
+_psh_glyph_interpolate_other_points
+_psh_glyph_save_points
+_psh_glyph_done
+_ps_hinter_init
+_ps_hinter_done
+_ps_hints_done
+_ps_dimension_done
+_ps_mask_table_done
+_ps_hint_table_done
+_ps_mask_done
+_ps_hints_init
+_psh_globals_funcs_init
+_t1_hints_funcs_init
+_t2_hints_funcs_init
+_t2_hints_open
+_ps_hints_close
+_t2_hints_stems
+_ps_hints_t2mask
+_ps_hints_t2counter
+_ps_dimension_set_mask_bits
+_ps_dimension_reset_mask
+_ps_mask_table_set_bits
+_ps_mask_table_last
+_ps_mask_ensure
+_ps_mask_table_alloc
+_ps_mask_table_ensure
+_ps_dimension_end_mask
+_ps_hints_stem
+_ps_dimension_add_t1stem
+_ps_hint_table_alloc
+_ps_mask_set_bit
+_ps_hint_table_ensure
+_ps_dimension_end
+_ps_mask_table_merge_all
+_ps_mask_table_test_intersect
+_ps_mask_table_merge
+_ps_mask_clear_bit
+_ps_hints_open
+_ps_dimension_init
+_t1_hints_open
+_t1_hints_stem
+_ps_hints_t1stem3
+_ps_hints_t1reset
+_ps_dimension_add_counter
+_ps_mask_test_bit
+_psh_globals_new
+_psh_globals_destroy
+_psh_blues_set_zones
+_psh_calc_max_height
+_psh_blues_set_zones_0
+_pshinter_get_globals_funcs
+_pshinter_get_t1_funcs
+_pshinter_get_t2_funcs
+_psh_hint_table_done
+_psh_hint_table_activate_mask
+_psh_hint_table_find_strong_points
+_psh_hint_table_deactivate
+_psh_hint_align
+_psh_blues_snap_stem
+_psh_dimension_quantize_len
+_psh_hint_snap_stem_side_delta
+_psh_globals_scale_widths
+_psh_blues_scale_zones
+_psh_compute_dir
+_psh_glyph_compute_inflections
+_psh_hint_table_init
+_psh_hint_table_record_mask
+_psh_hint_table_record
+_psh_hint_overlap
+_ft_black_new
+_ft_black_reset
+_ft_black_set_mode
+_ft_black_render
+_ft_black_done
+_ft_raster1_init
+_ft_raster1_render
+_ft_raster1_transform
+_ft_raster1_get_cbox
+_ft_raster1_set_mode
+_Render_Gray_Glyph
+_Render_Glyph
+_Set_High_Precision
+_Vertical_Sweep_Init
+_Vertical_Sweep_Span
+_Vertical_Sweep_Drop
+_Vertical_Sweep_Step
+_Render_Single_Pass
+_Horizontal_Sweep_Init
+_Horizontal_Sweep_Span
+_Horizontal_Sweep_Drop
+_Horizontal_Sweep_Step
+_Convert_Glyph
+_Draw_Sweep
+_Init_Linked
+_InsNew
+_DelOld
+_Sort
+_Decompose_Curve
+_End_Profile
+_Finalize_Profile_Table
+_Insert_Y_Turn
+_Line_To
+_Conic_To
+_Cubic_To
+_Split_Cubic
+_New_Profile
+_Bezier_Up
+_Bezier_Down
+_Split_Conic
+_Line_Up
+_Line_Down
+_ft_black_init
+_gray_raster_new
+_gray_raster_reset
+_gray_raster_render
+_gray_raster_done
+_ft_smooth_init
+_ft_smooth_render
+_ft_smooth_transform
+_ft_smooth_get_cbox
+_ft_smooth_set_mode
+_ft_smooth_render_lcd
+_ft_smooth_render_lcd_v
+_ft_smooth_render_generic
+_FT_FixedFromFloat
+__lcd_stem_align
+__ft_lcd_fringe_filter
+__ft_lcd_gamma_correction_correction
+__ft_lcd_chromeos_sharpen
+__ft_lcd_windows_sharpen
+__ft_lcd_darken_x
+__ft_bitmap_bc
+_get_brightness
+_get_contrast
+__ft_lcd_darken_y
+__ft_bitmap_cap
+__ft_lcd_grayscale_filter
+_sa_fill_known_stem_values
+_swap_stem
+_gray_init_cells
+_gray_render_span
+_gray_convert_glyph
+_gray_compute_cbox
+_gray_convert_glyph_inner
+_gray_sweep
+_gray_hline
+_gray_record_cell
+_gray_find_cell
+_gray_move_to
+_gray_line_to
+_gray_conic_to
+_gray_cubic_to
+_gray_render_cubic
+_gray_split_cubic
+_gray_render_line
+_gray_render_scanline
+_gray_set_cell
+_gray_render_conic
+_gray_split_conic
+_gray_start_cell
+_ftc_size_node_compare
+_ftc_size_node_init
+_ftc_size_node_reset
+_ftc_size_node_done
+_FTC_MruNode_Up
+_FTC_MruList_New
+_ftc_face_node_compare
+_ftc_face_node_init
+_ftc_face_node_done
+_FTC_MruList_Init
+_FTC_MruList_Done
+_FTC_MruList_Reset
+_FTC_Manager_FlushN
+_FTC_MruList_RemoveSelection
+_FTC_Cache_RemoveFaceID
+_ftc_cmap_node_new
+_ftc_cmap_node_weight
+_ftc_cmap_node_compare
+_ftc_cmap_node_remove_faceid
+_ftc_cmap_node_free
+_ftc_cache_init
+_ftc_cache_done
+_FTC_Manager_RegisterCache
+_FTC_Cache_NewNode
+_ftc_basic_family_compare
+_ftc_basic_family_init
+_ftc_basic_family_load_glyph
+_ftc_inode_new
+_ftc_inode_weight
+_ftc_gnode_compare
+_ftc_basic_gnode_compare_faceid
+_ftc_inode_free
+_ftc_gcache_init
+_ftc_gcache_done
+_FTC_GCache_New
+_FTC_GNode_Compare
+_FTC_MruList_Remove
+_ftc_basic_family_get_count
+_ftc_basic_family_load_bitmap
+_ftc_snode_new
+_ftc_snode_weight
+_ftc_snode_compare
+_ftc_snode_free
+_FTC_SNode_Compare
+_FTC_GNode_Done
+_FTC_GNode_UnselectFamily
+_ftc_snode_load
+_ftc_sbit_copy_bitmap
+_FTC_SNode_New
+_FTC_GNode_Init
+_FTC_SNode_Free
+_FTC_MruNode_Remove
+_FTC_Cache_Done
+_FTC_Cache_Init
+_FTC_INode_New
+_FTC_INode_Free
+_FTC_Family_Init
+_ftc_cache_add
+_ftc_node_hash_link
+_ftc_node_mru_link
+_FTC_Manager_Compress
+_ftc_node_destroy
+_ftc_node_mru_unlink
+_ftc_node_hash_unlink
+_ftc_cache_resize
+_FTC_MruNode_Prepend
+_FTC_Cache_Clear
+_ftc_size_node_compare_faceid
+_ftc_scaler_lookup_size
+_ft_gzip_check_header
+_ft_gzip_file_init
+_ft_gzip_get_uncompressed_size
+_ft_gzip_file_io
+_ft_gzip_file_done
+_ft_gzip_stream_close
+_ft_gzip_stream_io
+_ft_gzip_alloc
+_ft_gzip_free
+_ft_gzip_file_reset
+_ft_gzip_file_skip_output
+_ft_gzip_file_fill_output
+_ft_gzip_file_fill_input
+_ft_lzw_check_header
+_ft_lzw_file_init
+_ft_lzw_stream_io
+_ft_lzw_stream_close
+_ft_lzwstate_get_code
+_ft_lzwstate_stack_grow
+_ft_lzwstate_prefix_grow
+_ft_lzwstate_refill
+_ft_lzw_file_done
+_ft_lzw_file_io
+_ft_lzw_file_reset
+_ft_lzw_file_skip_output
+_ft_lzw_file_fill_output
+_ft_bzip2_check_header
+_ft_bzip2_file_init
+_ft_bzip2_stream_io
+_ft_bzip2_stream_close
+_ft_bzip2_file_done
+_ft_bzip2_file_io
+_ft_bzip2_file_reset
+_ft_bzip2_file_skip_output
+_ft_bzip2_file_fill_output
+_ft_bzip2_file_fill_input
+_ft_bzip2_alloc
+_ft_bzip2_free
+_ps_table_new
+_ps_table_done
+_ps_table_add
+_ps_table_release
+_ps_parser_init
+_ps_parser_done
+_ps_parser_skip_spaces
+_ps_parser_skip_PS_token
+_ps_parser_to_int
+_ps_parser_to_fixed
+_ps_parser_to_bytes
+_ps_parser_to_coord_array
+_ps_parser_to_fixed_array
+_ps_parser_to_token
+_ps_parser_to_token_array
+_ps_parser_load_field
+_ps_parser_load_field_table
+_t1_builder_init
+_t1_builder_done
+_t1_builder_check_points
+_t1_builder_add_point
+_t1_builder_add_point1
+_t1_builder_add_contour
+_t1_builder_start_point
+_t1_builder_close_contour
+_t1_decoder_init
+_t1_decoder_done
+_t1_decoder_parse_charstrings
+_afm_parser_init
+_afm_parser_done
+_afm_parser_parse
+_t1_cmap_standard_init
+_t1_cmap_std_done
+_t1_cmap_std_char_index
+_t1_cmap_std_char_next
+_t1_cmap_expert_init
+_t1_cmap_custom_init
+_t1_cmap_custom_done
+_t1_cmap_custom_char_index
+_t1_cmap_custom_char_next
+_t1_cmap_unicode_init
+_t1_cmap_unicode_done
+_t1_cmap_unicode_char_index
+_t1_cmap_unicode_char_next
+_afm_parser_next_key
+_afm_tokenize
+_afm_parser_read_int
+_afm_parser_read_vals
+_afm_parser_skip_section
+_afm_parse_kern_data
+_afm_parse_track_kern
+_afm_parse_kern_pairs
+_afm_compare_kern_pairs
+_afm_stream_read_string
+_afm_stream_read_one
+_PS_Conv_ToFixed
+_PS_Conv_ToInt
+_PS_Conv_Strtol
+_afm_stream_skip_spaces
+_psaux_get_glyph_name
+_t1_cmap_std_init
+_FT_MulFix_x86_64
+_t1operator_seac
+_t1_lookup_glyph_by_stdcharcode
+_t1_decoder_parse_glyph
+_t1_decrypt
+_PS_Conv_EexecDecode
+_skip_spaces
+_ps_tobool
+_ps_tofixedarray
+_skip_comment
+_skip_literal_string
+_skip_procedure
+_skip_string
+_ps_tocoordarray
+_PS_Conv_ASCIIHexDecode
+_reallocate_t1_table
+_shift_elements
+_psnames_get_service
+_ps_unicode_value
+_ps_unicodes_init
+_ps_unicodes_char_index
+_ps_unicodes_char_next
+_ps_get_macintosh_name
+_ps_get_standard_strings
+_ps_check_extra_glyph_name
+_ps_check_extra_glyph_unicode
+_compare_uni_maps
+_ft_get_adobe_glyph_index
+_ft_trig_arctan_table
+_null_outline
+_null_bitmap
+_FT_Library_SetLcdFilter.light_filter
+__ft_lcd_filter_legacy.filters
+_opcode_length
+_Pop_Push_Count
+_tt_check_trickyness_sfnt_ids.sfnt_id
+_tt_check_trickyness_family.trick_names
+_X_SCALING_Rules
+_FAMILY_CLASS_Rules
+_DEEMBOLDEN_Rules
+_EMBOLDEN_Rules
+_NO_ALIGNRP_AFTER_IUP_Rules
+_NO_CALL_AFTER_IUP_Rules
+_NO_DELTAP_AFTER_IUP_Rules
+_TIMES_NEW_ROMAN_HACK_Rules
+_COURIER_NEW_2_HACK_Rules
+_COMPATIBLE_WIDTHS_Rules
+_tt_service_truetype_engine
+_TT_Get_MM_Var.fvar_fields
+_TT_Get_MM_Var.fvaraxis_fields
+_ft_var_load_gvar.gvar_fields
+_cff_font_load.cff_header_fields
+_cff_standard_encoding
+_cff_expert_encoding
+_cff_isoadobe_charset
+_cff_expert_charset
+_cff_expertsubset_charset
+_power_tens
+_cf2_interpT2CharString.readFromStack
+_cf2_interpT2CharString.readFromStack7
+_cf2_interpT2CharString.readFromStack8
+_cf2_interpT2CharString.readFromStack9
+_pfr_header_fields
+_winfnt_header_fields
+_winmz_header_fields
+_winne_header_fields
+_winpe32_header_fields
+_winpe32_section_fields
+_winpe_rsrc_dir_fields
+_winpe_rsrc_dir_entry_fields
+_winpe_rsrc_data_entry_fields
+_pcf_metric_msb_header
+_pcf_metric_header
+_pcf_compressed_metric_header
+_pcf_accel_msb_header
+_pcf_accel_header
+_pcf_property_msb_header
+_pcf_property_header
+_pcf_toc_header
+_pcf_table_header
+__bdf_opts
+_hdigits
+_a2i
+_nibble_mask
+_odigits
+_ddigits
+_empty
+_tt_face_load_font_dir.offset_table_fields
+_check_table_dir.table_dir_entry_fields
+_tt_face_load_generic_header.header_fields
+_tt_face_load_pclt.pclt_fields
+_tt_face_load_name.name_table_fields
+_tt_face_load_name.name_record_fields
+_tt_face_load_post.post_fields
+_tt_face_load_os2.os2_fields
+_tt_face_load_os2.os2_fields_extra1
+_tt_face_load_os2.os2_fields_extra2
+_tt_face_load_os2.os2_fields_extra5
+_tt_face_load_maxp.maxp_fields
+_tt_face_load_maxp.maxp_fields_extra
+_tt_face_load_hhea.metrics_header_fields
+_sfnt_find_encoding.tt_encodings
+_sfnt_open_font.ttc_header_fields
+_woff_open_font.woff_header_fields
+_ft_char_table
+_t1_args_count
+_t1_standard_encoding
+_t1_expert_encoding
+_ft_standard_glyph_names
+_ft_sid_names
+_ft_mac_names
+_ft_extra_glyph_unicodes
+_ft_extra_glyph_names
+_ft_extra_glyph_name_offsets
+_ft_adobe_glyph_list
+_ft_default_modules
+_bbox_interface
+_tt_services
+_tt_service_gx_multi_masters
+_tt_service_truetype_glyf
+_tt_service_properties
+_t1_keywords
+_t1_services
+_t1_service_ps_name
+_t1_service_glyph_dict
+_t1_service_ps_info
+_t1_service_kerning
+_t1_service_multi_masters
+_cff_field_handlers
+_cff_services
+_cff_service_ps_info
+_cff_service_ps_name
+_cff_service_glyph_dict
+_cff_service_get_cmap_info
+_cff_service_cid_info
+_cff_service_properties
+_cid_field_records
+_cid_services
+_cid_service_ps_name
+_cid_service_ps_info
+_cid_service_cid_info
+_pfr_phy_font_extra_items
+_pfr_services
+_t42_keywords
+_t42_services
+_t42_service_glyph_dict
+_t42_service_ps_font_name
+_t42_service_ps_info
+_fnt_cmap_class
+_fnt_cmap_class_rec
+_winfnt_services
+_winfnt_service_rec
+_pcf_services
+_pcf_service_bdf
+__bdf_properties
+_bdf_services
+_bdf_service_bdf
+_sfnt_interface
+_sfnt_services
+_sfnt_service_sfnt_table
+_sfnt_service_ps_name
+_sfnt_service_glyph_dict
+_sfnt_service_bdf
+_tt_service_get_cmap_info
+_tt_cmap_classes
+_af_services
+_af_service_properties
+_pshinter_interface
+_func_interface
+_psaux_interface
+_afm_key_table
+_pscmaps_interface
+_pscmaps_services
+_FT_Library_SetLcdFilter.default_filter
+_SETUP_INFINALITY_FT_Settings.initialize
+__ft_lcd_chromeos_sharpen.initialized_gamma
+__ft_lcd_chromeos_sharpen.gamma_ramp
+_ALLOW_X_DMOVE_Rules
+_ALWAYS_DO_DELTAP_Rules
+_ALWAYS_SKIP_DELTAP_Rules
+_ALWAYS_USE_100_Rules
+_BRIGHTNESS_Rules
+_COMPATIBILITY_MODE_Rules
+_CONTRAST_Rules
+_DO_SHPIX_Rules
+_FTC_CMapCache_Lookup
+_FTC_CMapCache_New
+_FTC_ImageCache_Lookup
+_FTC_ImageCache_LookupScaler
+_FTC_ImageCache_New
+_FTC_Manager_Done
+_FTC_Manager_LookupFace
+_FTC_Manager_LookupSize
+_FTC_Manager_New
+_FTC_Manager_RemoveFaceID
+_FTC_Manager_Reset
+_FTC_Node_Unref
+_FTC_SBitCache_Lookup
+_FTC_SBitCache_LookupScaler
+_FTC_SBitCache_New
+_FT_Activate_Size
+_FT_Add_Default_Modules
+_FT_Add_Module
+_FT_Angle_Diff
+_FT_Atan2
+_FT_Attach_File
+_FT_Attach_Stream
+_FT_Bitmap_Convert
+_FT_Bitmap_Copy
+_FT_Bitmap_Done
+_FT_Bitmap_Embolden
+_FT_Bitmap_New
+_FT_CMap_Done
+_FT_CMap_New
+_FT_CeilFix
+_FT_ClassicKern_Free
+_FT_ClassicKern_Validate
+_FT_Cos
+_FT_DivFix
+_FT_Done_Face
+_FT_Done_FreeType
+_FT_Done_Glyph
+_FT_Done_GlyphSlot
+_FT_Done_Library
+_FT_Done_Memory
+_FT_Done_Size
+_FT_Face_CheckTrueTypePatents
+_FT_Face_GetCharVariantIndex
+_FT_Face_GetCharVariantIsDefault
+_FT_Face_GetCharsOfVariant
+_FT_Face_GetVariantSelectors
+_FT_Face_GetVariantsOfChar
+_FT_Face_SetUnpatentedHinting
+_FT_FloorFix
+_FT_Get_Advance
+_FT_Get_Advances
+_FT_Get_BDF_Charset_ID
+_FT_Get_BDF_Property
+_FT_Get_CID_From_Glyph_Index
+_FT_Get_CID_Is_Internally_CID_Keyed
+_FT_Get_CID_Registry_Ordering_Supplement
+_FT_Get_CMap_Format
+_FT_Get_CMap_Language_ID
+_FT_Get_Char_Index
+_FT_Get_Charmap_Index
+_FT_Get_FSType_Flags
+_FT_Get_First_Char
+_FT_Get_Gasp
+_FT_Get_Glyph
+_FT_Get_Glyph_Name
+_FT_Get_Kerning
+_FT_Get_MM_Var
+_FT_Get_Module
+_FT_Get_Module_Interface
+_FT_Get_Multi_Master
+_FT_Get_Name_Index
+_FT_Get_Next_Char
+_FT_Get_PFR_Advance
+_FT_Get_PFR_Kerning
+_FT_Get_PFR_Metrics
+_FT_Get_PS_Font_Info
+_FT_Get_PS_Font_Private
+_FT_Get_PS_Font_Value
+_FT_Get_Postscript_Name
+_FT_Get_Renderer
+_FT_Get_Sfnt_Name
+_FT_Get_Sfnt_Name_Count
+_FT_Get_Sfnt_Table
+_FT_Get_SubGlyph_Info
+_FT_Get_Track_Kerning
+_FT_Get_TrueType_Engine_Type
+_FT_Get_WinFNT_Header
+_FT_Get_X11_Font_Format
+_FT_GlyphLoader_Add
+_FT_GlyphLoader_CheckPoints
+_FT_GlyphLoader_CheckSubGlyphs
+_FT_GlyphLoader_CopyPoints
+_FT_GlyphLoader_CreateExtra
+_FT_GlyphLoader_Done
+_FT_GlyphLoader_New
+_FT_GlyphLoader_Prepare
+_FT_GlyphLoader_Reset
+_FT_GlyphLoader_Rewind
+_FT_GlyphSlot_Embolden
+_FT_GlyphSlot_Oblique
+_FT_GlyphSlot_Own_Bitmap
+_FT_Glyph_Copy
+_FT_Glyph_Get_CBox
+_FT_Glyph_Stroke
+_FT_Glyph_StrokeBorder
+_FT_Glyph_To_Bitmap
+_FT_Glyph_Transform
+_FT_Gzip_Uncompress
+_FT_Has_PS_Glyph_Names
+_FT_Hypot
+_FT_Init_FreeType
+_FT_Library_SetLcdFilter
+_FT_Library_SetLcdFilterWeights
+_FT_Library_Version
+_FT_List_Add
+_FT_List_Finalize
+_FT_List_Find
+_FT_List_Insert
+_FT_List_Iterate
+_FT_List_Remove
+_FT_List_Up
+_FT_Load_Char
+_FT_Load_Glyph
+_FT_Load_Sfnt_Table
+_FT_Lookup_Renderer
+_FT_MSB
+_FT_Match_Size
+_FT_Matrix_Invert
+_FT_Matrix_Multiply
+_FT_Matrix_Multiply_Scaled
+_FT_MulDiv
+_FT_MulDiv_No_Round
+_FT_MulFix
+_FT_New_Face
+_FT_New_GlyphSlot
+_FT_New_Library
+_FT_New_Memory
+_FT_New_Memory_Face
+_FT_New_Size
+_FT_OpenType_Free
+_FT_OpenType_Validate
+_FT_Open_Face
+_FT_Outline_Check
+_FT_Outline_Copy
+_FT_Outline_Decompose
+_FT_Outline_Done
+_FT_Outline_Done_Internal
+_FT_Outline_Embolden
+_FT_Outline_EmboldenXY
+_FT_Outline_GetInsideBorder
+_FT_Outline_GetOutsideBorder
+_FT_Outline_Get_BBox
+_FT_Outline_Get_Bitmap
+_FT_Outline_Get_CBox
+_FT_Outline_Get_Orientation
+_FT_Outline_New
+_FT_Outline_New_Internal
+_FT_Outline_Render
+_FT_Outline_Reverse
+_FT_Outline_Transform
+_FT_Outline_Translate
+_FT_Property_Get
+_FT_Property_Set
+_FT_Raccess_Get_DataOffsets
+_FT_Raccess_Get_HeaderInfo
+_FT_Raccess_Guess
+_FT_Reference_Face
+_FT_Reference_Library
+_FT_Remove_Module
+_FT_Render_Glyph
+_FT_Render_Glyph_Internal
+_FT_Request_Metrics
+_FT_Request_Size
+_FT_RoundFix
+_FT_Select_Charmap
+_FT_Select_Metrics
+_FT_Select_Size
+_FT_Set_Char_Size
+_FT_Set_Charmap
+_FT_Set_Debug_Hook
+_FT_Set_MM_Blend_Coordinates
+_FT_Set_MM_Design_Coordinates
+_FT_Set_Pixel_Sizes
+_FT_Set_Renderer
+_FT_Set_Transform
+_FT_Set_Var_Blend_Coordinates
+_FT_Set_Var_Design_Coordinates
+_FT_Sfnt_Table_Info
+_FT_Sin
+_FT_Stream_Close
+_FT_Stream_EnterFrame
+_FT_Stream_ExitFrame
+_FT_Stream_ExtractFrame
+_FT_Stream_Free
+_FT_Stream_GetChar
+_FT_Stream_GetULong
+_FT_Stream_GetULongLE
+_FT_Stream_GetUOffset
+_FT_Stream_GetUShort
+_FT_Stream_GetUShortLE
+_FT_Stream_New
+_FT_Stream_Open
+_FT_Stream_OpenBzip2
+_FT_Stream_OpenGzip
+_FT_Stream_OpenLZW
+_FT_Stream_OpenMemory
+_FT_Stream_Pos
+_FT_Stream_Read
+_FT_Stream_ReadAt
+_FT_Stream_ReadChar
+_FT_Stream_ReadFields
+_FT_Stream_ReadULong
+_FT_Stream_ReadULongLE
+_FT_Stream_ReadUOffset
+_FT_Stream_ReadUShort
+_FT_Stream_ReadUShortLE
+_FT_Stream_ReleaseFrame
+_FT_Stream_Seek
+_FT_Stream_Skip
+_FT_Stream_TryRead
+_FT_Stroker_BeginSubPath
+_FT_Stroker_ConicTo
+_FT_Stroker_CubicTo
+_FT_Stroker_Done
+_FT_Stroker_EndSubPath
+_FT_Stroker_Export
+_FT_Stroker_ExportBorder
+_FT_Stroker_GetBorderCounts
+_FT_Stroker_GetCounts
+_FT_Stroker_LineTo
+_FT_Stroker_New
+_FT_Stroker_ParseOutline
+_FT_Stroker_Rewind
+_FT_Stroker_Set
+_FT_Tan
+_FT_Trace_Get_Count
+_FT_Trace_Get_Name
+_FT_TrueTypeGX_Free
+_FT_TrueTypeGX_Validate
+_FT_Vector_From_Polar
+_FT_Vector_Length
+_FT_Vector_Polarize
+_FT_Vector_Rotate
+_FT_Vector_Transform
+_FT_Vector_Transform_Scaled
+_FT_Vector_Unit
+_INF_FT_Settings
+_MIAP_HACK_Rules
+_NORMAL_ROUND_Rules
+_PIXEL_HINTING_Rules
+_RASTERIZER_35_Rules
+_ROUND_NONPIXEL_Y_MOVES_Rules
+_ROUND_NONPIXEL_Y_MOVES_Rules_Exceptions
+_SETUP_INFINALITY_FT_Settings
+_SKIP_IUP_Rules
+_SKIP_NONPIXEL_Y_MOVES_DELTAP_Rules
+_SKIP_NONPIXEL_Y_MOVES_Rules
+_SKIP_NONPIXEL_Y_MOVES_Rules_Exceptions
+_SKIP_OFFPIXEL_Y_MOVES_Rules
+_SKIP_OFFPIXEL_Y_MOVES_Rules_Exceptions
+_SNAPPING_EDGE_DETECTION_Rules
+_SNAPPING_M_Rules
+_SNAPPING_NO_BEARING_CORRECTION_Rules
+_SNAPPING_STEM_SCALING_Rules
+_SNAPPING_STEM_TRANSLATING_ONLY_Rules
+_SNAPPING_STEM_TRANSLATING_Rules
+_SNAPPING_STEM_WIDTHS_Rules
+_SNAPPING_SYNTHESIZE_STEMS_Rules
+_STYLE_CLASS_Rules
+_TT_New_Context
+_TT_RunIns
+_af_autofitter_interface
+_af_beng_dflt_style_class
+_af_beng_script_class
+_af_beng_uniranges
+_af_blue_strings
+_af_blue_stringsets
+_af_cjk_writing_system_class
+_af_cyrl_c2cp_style_class
+_af_cyrl_c2sc_style_class
+_af_cyrl_dflt_style_class
+_af_cyrl_ordn_style_class
+_af_cyrl_pcap_style_class
+_af_cyrl_script_class
+_af_cyrl_sinf_style_class
+_af_cyrl_smcp_style_class
+_af_cyrl_subs_style_class
+_af_cyrl_sups_style_class
+_af_cyrl_titl_style_class
+_af_cyrl_uniranges
+_af_deva_dflt_style_class
+_af_deva_script_class
+_af_deva_uniranges
+_af_dummy_writing_system_class
+_af_get_char_index
+_af_get_coverage
+_af_grek_c2cp_style_class
+_af_grek_c2sc_style_class
+_af_grek_dflt_style_class
+_af_grek_ordn_style_class
+_af_grek_pcap_style_class
+_af_grek_script_class
+_af_grek_sinf_style_class
+_af_grek_smcp_style_class
+_af_grek_subs_style_class
+_af_grek_sups_style_class
+_af_grek_titl_style_class
+_af_grek_uniranges
+_af_gujr_dflt_style_class
+_af_gujr_script_class
+_af_gujr_uniranges
+_af_guru_dflt_style_class
+_af_guru_script_class
+_af_guru_uniranges
+_af_hani_dflt_style_class
+_af_hani_script_class
+_af_hani_uniranges
+_af_hebr_dflt_style_class
+_af_hebr_script_class
+_af_hebr_uniranges
+_af_indic_writing_system_class
+_af_knda_dflt_style_class
+_af_knda_script_class
+_af_knda_uniranges
+_af_latin_writing_system_class
+_af_latn_c2cp_style_class
+_af_latn_c2sc_style_class
+_af_latn_dflt_style_class
+_af_latn_ordn_style_class
+_af_latn_pcap_style_class
+_af_latn_script_class
+_af_latn_sinf_style_class
+_af_latn_smcp_style_class
+_af_latn_subs_style_class
+_af_latn_sups_style_class
+_af_latn_titl_style_class
+_af_latn_uniranges
+_af_limb_dflt_style_class
+_af_limb_script_class
+_af_limb_uniranges
+_af_mlym_dflt_style_class
+_af_mlym_script_class
+_af_mlym_uniranges
+_af_none_dflt_style_class
+_af_none_script_class
+_af_none_uniranges
+_af_orya_dflt_style_class
+_af_orya_script_class
+_af_orya_uniranges
+_af_script_classes
+_af_sinh_dflt_style_class
+_af_sinh_script_class
+_af_sinh_uniranges
+_af_style_classes
+_af_sund_dflt_style_class
+_af_sund_script_class
+_af_sund_uniranges
+_af_sylo_dflt_style_class
+_af_sylo_script_class
+_af_sylo_uniranges
+_af_taml_dflt_style_class
+_af_taml_script_class
+_af_taml_uniranges
+_af_telu_dflt_style_class
+_af_telu_script_class
+_af_telu_uniranges
+_af_tibt_dflt_style_class
+_af_tibt_script_class
+_af_tibt_uniranges
+_af_writing_system_classes
+_afm_parser_funcs
+_autofit_module_class
+_bdf_cmap_class
+_bdf_driver_class
+_cff_cmap_encoding_class_rec
+_cff_cmap_unicode_class_rec
+_cff_driver_class
+_ft_bitmap_glyph_class
+_ft_corner_is_flat
+_ft_corner_orientation
+_ft_debug_init
+_ft_glyphslot_alloc_bitmap
+_ft_glyphslot_free_bitmap
+_ft_glyphslot_set_bitmap
+_ft_grays_raster
+_ft_highpow2
+_ft_lzwstate_done
+_ft_lzwstate_init
+_ft_lzwstate_io
+_ft_lzwstate_reset
+_ft_mem_alloc
+_ft_mem_dup
+_ft_mem_free
+_ft_mem_qalloc
+_ft_mem_qrealloc
+_ft_mem_realloc
+_ft_mem_strcpyn
+_ft_mem_strdup
+_ft_module_get_service
+_ft_outline_glyph_class
+_ft_raccess_guess_table
+_ft_raster1_renderer_class
+_ft_raster5_renderer_class
+_ft_service_list_lookup
+_ft_smooth_lcd_renderer_class
+_ft_smooth_lcdv_renderer_class
+_ft_smooth_renderer_class
+_ft_standard_raster
+_ft_synthesize_vertical_metrics
+_ft_validator_error
+_ft_validator_init
+_ft_validator_run
+_ftc_basic_image_cache_class
+_ftc_basic_image_family_class
+_ftc_basic_sbit_cache_class
+_ftc_basic_sbit_family_class
+_ftc_cmap_cache_class
+_ftc_face_list_class
+_ftc_size_list_class
+_g_nCUR_WIDTH
+_pcf_cmap_class
+_pcf_driver_class
+_pfr_cmap_class_rec
+_pfr_driver_class
+_pfr_metrics_service_rec
+_ps_hints_apply
+_ps_parser_funcs
+_ps_table_funcs
+_psaux_module_class
+_pseudo_gamma
+_pshinter_module_class
+_psnames_module_class
+_s_pchFilterString
+_sfnt_module_class
+_sliding_scale
+_t1_builder_funcs
+_t1_cmap_classes
+_t1_cmap_custom_class_rec
+_t1_cmap_expert_class_rec
+_t1_cmap_standard_class_rec
+_t1_cmap_unicode_class_rec
+_t1_decoder_funcs
+_t1_driver_class
+_t1cid_driver_class
+_t42_driver_class
+_tt_cmap0_class_rec
+_tt_cmap10_class_rec
+_tt_cmap12_class_rec
+_tt_cmap13_class_rec
+_tt_cmap14_class_rec
+_tt_cmap2_class_rec
+_tt_cmap4_class_rec
+_tt_cmap6_class_rec
+_tt_cmap8_class_rec
+_tt_default_graphics_state
+_tt_driver_class
+_winfnt_driver_class
+_BZ2_bzDecompress
+_BZ2_bzDecompressEnd
+_BZ2_bzDecompressInit
+___error
+___memcpy_chk
+___memmove_chk
+___memset_chk
+___sprintf_chk
+___stack_chk_fail
+___stack_chk_guard
+___strcat_chk
+___strncpy_chk
+_abs
+_atol
+_close
+_fcntl
+_free
+_fstat
+_getenv
+_inflate
+_inflateEnd
+_inflateInit2_
+_inflateReset
+_labs
+_longjmp
+_malloc
+_memchr
+_memcmp
+_memcpy
+_memset
+_mmap
+_munmap
+_open
+_pow
+_printf
+_qsort
+_read
+_realloc
+_setjmp
+_sscanf
+_strcasecmp
+_strcasestr
+_strcmp
+_strlen
+_strncmp
+_strrchr
+_strstr
+_tan
