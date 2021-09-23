@@ -229,6 +229,7 @@ This should take less than a minute."
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "Failed to verify signed files for %game%, content validation is required."
 "SteamUI_JoinDialog_CreateProcess_Error" "Failed to start process for %game% :\n\n%detail%"
+"SteamUI_JoinDialog_CreateProcess_Error_Detail_macOS" "32-bit applications are no longer supported in macOS 10.15 or above."
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "Failed to start %game% in VR. (Error: %error%)"
 "SteamUI_JoinDialog_OpenVRWaitingForQuit" "Waiting for %quitting_game% to exit %dots%"

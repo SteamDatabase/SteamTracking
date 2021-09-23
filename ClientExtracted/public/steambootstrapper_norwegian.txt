@@ -31,6 +31,7 @@
 "SteamBootstrapper_PercentComplete"			"%percent%%% utført"
 "SteamBootstrapper_NoNetwork"					"%appname% må være tilkoblet for å kunne oppdatere. Bekreft nettverkstilkoblingen, og prøv på nytt."
 "SteamBootstrapper_FailedMkdir"				"Kunne ikke opprette mappen %dirname%. Fikk feilen %errno%"
+"SteamBootstrapper_NotWriteable"				"Mappen «%dirname%» kan ikke skrives til."
 "SteamBootstrapper_FailedDownloadHTTPError"	"Nedlastingen mislyktes: http-feil %errno%"
 "SteamBootstrapper_AlreadyRunningError"		"Det kjører allerede en forekomst av %appname% på denne datamaskinen med en annen brukerkonto."
 "SteamBootstrapper_MoveContentDir_DestExists" "%appname% har endret lagringssted for spillinnhold fra ~/Documents/Steam Content til ~/Library/Application Support/Steam/SteamApps. Du har spillfiler på det opprinnelige lagringsstedet, og %appname% kunne ikke flytte filene fordi det allerede finnes filer på det nye lagringsstedet. Det kan hende at du må flytte filene manuelt eller slette de gamle filene og laste ned spillene på nytt. Vil du fortsette likevel?"

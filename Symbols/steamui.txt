@@ -1,6 +1,7 @@
  AEBuildAppleEvent
  AESendMessage
- AssertMsgImplementation
+ AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
+ AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
  AudioConvertHostTimeToNanos
  AudioConvertNanosToHostTime
  AudioConverterDispose
@@ -25,10 +26,6 @@
  B pcre_stack_guard
  B pcrecpp::RE::no_arg
  BGetLocalFQDN
- CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(DbgFmtFatalMsgTag_t*, char const*, ...)
- CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(char const*, ...)
- CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(DbgFmtFatalMsgTag_t*, StringView)
- CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(StringView)
  CFAbsoluteTimeGetCurrent
  CFArrayAppendValue
  CFArrayApplyFunction
@@ -315,6 +312,7 @@
  Plat_IsInDebugSession
  Plat_IsSteamConsoleMode
  Plat_IsSteamOS
+ Plat_IsSteamOS3
  Plat_IsSteamPal
  Plat_MSTime
  Plat_MSTime64
@@ -1251,7 +1249,6 @@
  exit
  exp
  exp2
- expf
  fclose
  fcntl
  feof
@@ -1373,7 +1370,6 @@
  localtime_r
  log
  log10
- logf
  longjmp
  lrintf
  lroundf

@@ -545,7 +545,7 @@
 "controller_apple"									"Apple 컨트롤러"
 "controller_android"								"Android 컨트롤러"
 "controller_switch_pro"								"Nintendo Switch Pro 컨트롤러"
-"controller_switch_joycon_pair"						"Nintendo Switch Joy-Con 페어링"
+"controller_switch_joycon_pair"						"Nintendo Switch Joy-Con 연결"
 "controller_mobile_touch"							"Steam Link Touch 컨트롤러"
 
 "Friends_ScreenshotNotification_Info" "스크린샷 저장됨"

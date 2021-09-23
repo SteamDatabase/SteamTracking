@@ -31,6 +31,7 @@
 "SteamBootstrapper_PercentComplete"			"已完成 %percent%%%"
 "SteamBootstrapper_NoNetwork"					"%appname% 需要在线进行更新。请确认您的网络连接正常，然后重试。"
 "SteamBootstrapper_FailedMkdir"				"无法创建目录 %dirname%，发生错误 %errno%"
+"SteamBootstrapper_NotWriteable"				"目录 %dirname% 不可写入"
 "SteamBootstrapper_FailedDownloadHTTPError"	"下载失败：http 错误 %errno%"
 "SteamBootstrapper_AlreadyRunningError"		"一个 %appname% 的实例已在此计算机上以其他用户帐户运行。"
 "SteamBootstrapper_MoveContentDir_DestExists" "%appname% 已经将游戏内容保存位置由“~/Documents/Steam Content”更改为“~/Library/Application Support/Steam/SteamApps”。在原始位置保存的游戏文件，Steam 无法移动，因为新的保存位置上已经有文件存在。您可能需要手动移动这些文件，或者删除旧文件然后重新下载游戏。是否继续？"

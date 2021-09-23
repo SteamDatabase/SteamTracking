@@ -129,3 +129,18 @@ enum EBluetoothDeviceType {
 	k_BluetoothDeviceType_Gamepad = 10;
 	k_BluetoothDeviceType_Keyboard = 11;
 }
+
+enum EStorageBlockContentType {
+	k_EStorageBlockContentType_Invalid = 0;
+	k_EStorageBlockContentType_Unknown = 1;
+	k_EStorageBlockContentType_FileSystem = 2;
+	k_EStorageBlockContentType_Crypto = 3;
+	k_EStorageBlockContentType_Raid = 4;
+}
+
+enum EStorageBlockFileSystemType {
+	k_EStorageBlockFileSystemType_Invalid = 0;
+	k_EStorageBlockFileSystemType_Unknown = 1;
+	k_EStorageBlockFileSystemType_VFat = 2;
+	k_EStorageBlockFileSystemType_Ext4 = 3;
+}

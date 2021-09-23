@@ -31,6 +31,7 @@
 "SteamBootstrapper_PercentComplete"			"%percent%%% gennemført"
 "SteamBootstrapper_NoNetwork"					"%appname% skal være online for at opdatere. Bekræft din netværksforbindelse, og prøv igen."
 "SteamBootstrapper_FailedMkdir"				"Kunne ikke oprette mappen %dirname%, fejl %errno%"
+"SteamBootstrapper_NotWriteable"				"Mappen %dirname% er skrivebeskyttet."
 "SteamBootstrapper_FailedDownloadHTTPError"	"Download mislykkedes: http-fejl %errno%"
 "SteamBootstrapper_AlreadyRunningError"		"Der kører allerede en forekomst af %appname% på denne maskine med en anden brugerkonto."
 "SteamBootstrapper_MoveContentDir_DestExists" "%appname% har ændret den placering, hvor der gemmes spilindhold, fra \"~/Documents/Steam Content\" til \"~/Library/Application Support/Steam/SteamApps\".  Du har spilfiler liggende på den oprindelige placering, og %appname% kunne ikke flytte filerne, da der allerede findes filer på den nye placering.  Du kan blive nødt til at flytte filerne manuelt eller slette de gamle filer og downloade dine spil igen. Fortsæt alligevel?"

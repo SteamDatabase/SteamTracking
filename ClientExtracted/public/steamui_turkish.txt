@@ -708,7 +708,7 @@ Oyunu açmak %borrower% adlı kullanıcıya oyunu bırakma zamanının geldiğin
 "SteamUI_OfflineMode_AppearOffline" "Görünen o ki internet bağlantınız yok ya da bağlantınız Steam için ayarlanmamış."
 "SteamUI_OfflineMode_SteamOffline" "Steam şu anda kullanılamıyor.\n\n\nLütfen daha sonra 'Tekrar Dene' düğmesine basarak yeniden deneyiniz ya da Steam'i 'Çevrimdışı Mod'da başlatınız.\n"
 "SteamUI_OfflineMode_ChosenOffline" "Steam, Çevrimdışı modda çalışmaya ayarlanmış. Arkadaşlar, Sunucu Tarayıcısı gibi birçok özellik çevrimdışıyken kullanılamaz."
-"SteamUI_OfflineMode_Choose" "Bağlantınızı kontrol edin ve 'Yeniden Bağlan'a tıklayın ya da Steam'i 'Çevrimdışı Mod'da başlatın."
+"SteamUI_OfflineMode_Choose" "Bağlantınızı kontrol edin ve \"Yeniden Bağlan\"a tıklayın ya da Steam'i \"Çevrimdışı Mod\"da başlatına basın."
 "SteamUI_OfflineMode_ChooseConnectionOnly" "Lütfen ağ bağlantınızı kontrol edin ve \"Yeniden Bağlan\" tuşuna tıklayın."
 "SteamUI_OfflineMode_GoOnlineButton" "ÇEVRİMİÇİ OL"
 "SteamUI_OfflineMode_Retry" "YENİDEN BAĞLAN"
@@ -728,7 +728,7 @@ Oyunu açmak %borrower% adlı kullanıcıya oyunu bırakma zamanının geldiğin
 "SteamUI_OfflineMode_GoOfflineDesc" "Çevrimdışı modunu bağlantısız dizüstü bilgisayarınızda\nya da internet bağlantınızın olmadığı durumlarda kullanabilirsiniz.\n\nÇevrimdışıyken Arkadaşlar, Sunucu Tarayıcısı gibi birçok özelliği kullanamazsınız.\nSadece daha önceden tamamen güncellenen oyunlarınız\nkullanım için hazır olur."
 "SteamUI_OfflineMode_GoOnlineDesc" "Çevrimiçi olmak istiyor musunuz?\n\nBunun için Steam'i yeniden başlatmanız gerekir.\n"
 "SteamUI_GameProperties_Status"	"Durum"
-"SteamUI_GameProperties_UpdateNews"	"Güncel haberler"
+"SteamUI_GameProperties_UpdateNews"	"Haberler"
 "SteamUI_GamePropertiesContent_OfflineMode" "Çevrimdışı Mod:"
 "SteamUI_Steam_Menu"		"Steam menüsü"
 
@@ -1181,7 +1181,7 @@ Oyunu açmak %borrower% adlı kullanıcıya oyunu bırakma zamanının geldiğin
 "Steam_SubscriptionSuccess_ComingSoonOnly" "Ürün etkinleştirme anahtarınız başarıyla etkinleştirildi. Bu içerik, oyun Steam'de yayınlandıktan sonra kullanılabilir hale gelecektir. Bu içerik Steam hesabınıza kalıcı olarak eklendi. Steam üzerinden etkinleştirdiğiniz ürünlere bu hesapla giriş yaparak ulaşabilirsiniz."
 
 "Steam_Subscription_Rejected_Cdkey_Headline" "Tekrarlanan Ürün Kodu"
-"Steam_Subscription_Rejected_Cdkey" "Girdiğiniz ürün kodu farklı bir Steam hesabında etkinleştirilmiş. Bu kod tekrar kullanılamaz. Lütfen yardım için kodu satın aldığınız perakendeci veya çevrimiçi satıcı ile irtibata geçiniz."
+"Steam_Subscription_Rejected_Cdkey" "Girdiğiniz ürün kodu farklı bir Steam hesabında etkinleştirilmiş. Bu kod tekrar kullanılamaz. Lütfen yardım için kodu satın aldığınız perakendeci veya çevrimiçi satıcı ile irtibata geçin."
 
 "Steam_Subscription_RateLimitedCDKey_Headline" "Çok Fazla Aktivasyon Girişimi"
 "Steam_Subscription_RateLimitedCDKey" "Bu hesap ya da Internet adresi için son zamanlarda çok sayıda aktivasyon denemesinde bulunuldu. Lütfen bekleyin ve ürün kodunuzu daha sonra tekrar girmeyi deneyin."
@@ -1246,10 +1246,10 @@ Oyunu açmak %borrower% adlı kullanıcıya oyunu bırakma zamanının geldiğin
 "Steam_HardwarePromo_SupportURL" "https://support.steampowered.com/kb/2734-UDFX-1098/"
 
 "Steam_Subscription_HardwarePromo_AlreadyPurchased_Headline" "Ürün Zaten Alınmış"
-"Steam_Subscription_HardwarePromo_AlreadyPurchased" "Bu Steam hesabı zaten bu ürün(ler)e sahip.\n Onlara ulaşmak için, Oyun Kütüphanenizi ziyaret edin."
+"Steam_Subscription_HardwarePromo_AlreadyPurchased" "Bu Steam hesabı zaten bu ürün(ler)e sahip.\n Onlara ulaşmak için, oyun kütüphanenizi ziyaret edin."
 
 
-"Steam_PurchaseError_HardwarePromoNeedDirectX" "Üzgünüz! %subscription% teklifinden yararlanmak için DirectX 9 ve ya üzeri sürüm yüklemelisiniz."
+"Steam_PurchaseError_HardwarePromoNeedDirectX" "Üzgünüz! %subscription% teklifinden yararlanmak için DirectX 9 veya üzeri sürüm yüklemelisiniz."
 "Steam_HardwarePromoInstallDirextX_Link" "Microsoft DirectX® indirme adresi"
 "Steam_HardwarePromoInstallDirextX_URL" "http://www.microsoft.com/windows/directx/"
 
@@ -1330,7 +1330,7 @@ Oyunu açmak %borrower% adlı kullanıcıya oyunu bırakma zamanının geldiğin
 "Steam_App_LegacyKey_OutOfKeys_Text" "Steam an itibarıyla geçici olarak %game% oyunu için gerekli olan kullanılmamış anahtarlara sahip değildir.\n\nYayıncıdan daha fazla ürün anahtarı edindikten sonra size bir ürün anahtarı temin edebileceğiz.\nLütfen daha sonra tekrar deneyin veya bir iade talebi oluşturun."
 
 "Steam_App_Update_Failed_Title"	"Steam - Hata"
-"Steam_App_Update_Failed_Text" "%game% oyunu güncellenirken bir hata oluştu (%reason%)"
+"Steam_App_Update_Failed_Text" "%game% güncellenirken bir hata oluştu (%reason%)"
 "Steam_App_Update_Failed_Text_Long" "%game% güncellenirken bir hata oluştu (%reason%) :\n\n%detail%"
 "Steam_App_Update_NotEnoughDiskSpace" "%game% oyununun güncelleyebilmek için yeterli disk alanı yok (%detail% gerekli)"
 "Steam_App_Update_NotEnoughDiskQuota" "%game% oyununu güncelleyebilmek için yeterli kullanıcı disk kotası yok (%detail% gerekli)"
@@ -2726,11 +2726,12 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "Steam_LaunchOption_Application"			"%game% Başlat"
 
 "Steam_LaunchOption_SafeMode"					"%game% oyununu Güvenli Mod'da başlat"
-"Steam_LaunchOption_Multiplayer"			"%game% oyununu Çok Oyunculu Modda başlat"
-"Steam_LaunchOption_VR"								"%game% oyununu Steam VR Mod'unda başlat"
-"Steam_LaunchOption_othervr"						"%game% oyununu Oculus VR Modunda Başlat"
+"Steam_LaunchOption_Multiplayer"				"%game% oyununu Çok Oyunculu Modda başlat"
+"Steam_LaunchOption_VR"							"%game% oyununu Steam VR Mod'unda başlat"
+"Steam_LaunchOption_openxr"						"%game% Oyununu OpenXR Modunda Başlat"
+"Steam_LaunchOption_othervr"					"%game% oyununu Oculus VR Modunda Başlat"
 "Steam_LaunchOption_osvr"						"%game% oyununu OSVR Modunda çalıştır"
-"Steam_LaunchOption_openvroverlay"					"%game% oyununu Steam VR Arayüz'ünde Başlat"
+"Steam_LaunchOption_openvroverlay"				"%game% oyununu Steam VR Arayüz'ünde Başlat"
 "Steam_LaunchOption_Server"						"Özelleştirilmiş Sunucuyu Başlat"
 "Steam_LaunchOption_Editor"						"Oyun Editörünü Başlat"
 "Steam_LaunchOption_Config"						"Yapılandırma Aracını Başlat"
@@ -2855,7 +2856,8 @@ Tanıdığınız birine e-posta aracılığıyla bir hediye göndererek arkadaş
 "SteamUI_DurationControl_PlaytimeExceeded_Body_ThreeHours"	"Günlük çevrimiçi süre sınırınıza ulaştınız. Lütfen biraz ara verin ve yarın saat 08:00'den sonra tekrar deneyin."
 "SteamUI_DurationControl_PlaytimeExceeded_Body_FiveHours"	"Günlük çevrimiçi süre sınırınıza ulaştınız. Lütfen biraz ara verin ve yarın saat 08:00'den sonra tekrar deneyin."
 "SteamUI_DurationControl_PlaytimeExceeded_Body_Night"		"18 yaşının altındaki oyuncular bu oyunu 22:00 ile 08:00 (sonraki gün) arasında oynayamaz. Lütfen biraz ara verin."
-
+"SteamUI_DurationControl_PlaytimeExceeded_Body_WaitingVerification"		"Hesabınız gerçek ad doğrulaması sürecinden geçiyor. Lütfen daha sonra tekrar deneyin."
+"SteamUI_DurationControl_PlaytimeExceeded_Body_Maintenance"		"Bu oyun teknik güncellemelerden geçiyor ve bunlar sona erene kadar reşit olmayan kişiler tarafından oynanamayacak. Verdiğimiz rahatsızlıktan ötürü özür diler, anlayışınız için teşekkür ederiz."
 
 
 "Steam_GuestPassesColumn" 		"Hediyeler"

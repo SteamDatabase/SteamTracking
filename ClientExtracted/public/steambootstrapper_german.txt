@@ -31,6 +31,7 @@
 "SteamBootstrapper_PercentComplete"			"%percent% %% abgeschlossen"
 "SteamBootstrapper_NoNetwork"					"%appname% muss für die Durchführung von Updates mit dem Internet verbunden sein. Stellen Sie eine Verbindung zum Internet her, und versuchen Sie es erneut."
 "SteamBootstrapper_FailedMkdir"				"Verzeichnis %dirname% konnte nicht erstellt werden, Fehler %errno%."
+"SteamBootstrapper_NotWriteable"				"Verzeichnis %dirname% ist nicht beschreibbar."
 "SteamBootstrapper_FailedDownloadHTTPError"	"Download ist fehlgeschlagen: HTTP-Fehler %errno%"
 "SteamBootstrapper_AlreadyRunningError"		"%appname% wird auf diesem Gerät bereits unter einem anderen Benutzerkonto ausgeführt."
 "SteamBootstrapper_MoveContentDir_DestExists" "%appname% speichert Spielinhalte nicht mehr unter '~/Documents/Steam Content' sondern unter '~/Library/Application Support/Steam/SteamApps'. Es befinden sich noch Spieledateien im alten Speicherort, die von %appname% nicht verschoben werden konnten, da bereits Dateien im neuen Speicherort vorhanden sind. Sie müssen die Dateien daher ggf. manuell verschieben oder die alten Dateien löschen und die Spiele erneut herunterladen. Trotzdem fortfahren?"

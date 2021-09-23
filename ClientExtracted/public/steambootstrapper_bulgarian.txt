@@ -31,6 +31,7 @@
 "SteamBootstrapper_PercentComplete"			"%percent%%% завършено"
 "SteamBootstrapper_NoNetwork"					"Нужно е %appname% да бъде на линия, за да се обнови. Моля, проверете своята интернет връзка и опитайте отново."
 "SteamBootstrapper_FailedMkdir"				"Неуспешно създаване на директория %dirname%, получена грешка %errno%"
+"SteamBootstrapper_NotWriteable"				"Директорията %dirname% не позволява записване."
 "SteamBootstrapper_FailedDownloadHTTPError"	"Свалянето е неуспешно: http грешка %errno%"
 "SteamBootstrapper_AlreadyRunningError"		"Инстанция на %appname% вече е пусната от този компютър, но под различен потребителски акаунт."
 "SteamBootstrapper_MoveContentDir_DestExists" "%appname% промени къде съхранява игралното съдържание от „~/Documents/Steam Content“ на „~/Library/Application Support/Steam/SteamApps“. Разполагате с игрални файлове в първоначалното местонахождение, а Steam не успя да ги премести, тъй като вече съществуват други такива в новото място. Възможно е да се наложи ръчното им преместване или изтриването на старите файлове, а игрите да бъдат свалени отново. Продължаване въпреки това?"

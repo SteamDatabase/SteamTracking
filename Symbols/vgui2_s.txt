@@ -17,7 +17,8 @@
  ATSUSetAttributes
  ATSUSetLayoutControls
  ATSUSetTransientFontMatching
- AssertMsgImplementation
+ AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
+ AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
  AudioHardwareAddPropertyListener
  AudioHardwareRemovePropertyListener
  AudioObjectGetPropertyData
@@ -27,9 +28,6 @@
  AudioServicesCreateSystemSoundID
  AudioServicesDisposeSystemSoundID
  AudioServicesPlaySystemSound
- CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(char const*, ...)
- CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(DbgFmtFatalMsgTag_t*, StringView)
- CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(StringView)
  CFArrayCreate
  CFDataCreate
  CFDataGetBytePtr

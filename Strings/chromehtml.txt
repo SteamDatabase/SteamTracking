@@ -825,9 +825,12 @@ en_US
 r
 com.valvesoftware.steam.ipctool
 ipcserver restart: expected: %d, got: %d
+pid %d != %d, clearing client_port = %d, server_port = %d
+pid %d != %d, re-initing before send; client_port = %d, server_port = %d
 StopJob
-Assertion Failed: (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
+pid %d != %d, skipping dealloc of client_port = %d, server_port = %d
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
+(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 Fatal on Lock(): Locked the floor, couldn't release the ceiling: %s
 Fatal on Release(): Locked the ceiling, couldn't release the floor: %s
 /BSem/%x
@@ -858,8 +861,8 @@ Failed creating read event %s
 %s_mem
 Failed creating file mapping %s
 Failed creating view of file for %s
-Size on connection to existing CSharedMemStream doesn't match actual: %s, %u, %u
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/common/shmemstream.cpp
+Size on connection to existing CSharedMemStream doesn't match actual: %s, %u, %u
 Warning: Memory was locked for put while destructing!
 CSharedMemStream::Clear()
 Warning: Blocking wait on mutex failed in Clear: %d
@@ -868,7 +871,7 @@ CSharedMemStream has memory already locked for put. Don't write with memory lock
 Timed out waiting for mutex in GetInternal()
 Failed to take mutex in GetInternal()
 SHMemStream header is corrupt in GetInternal()
-Assertion Failed: m_dwReadAheadBufferBegin <= m_dwReadAheadBufferEnd
+m_dwReadAheadBufferBegin <= m_dwReadAheadBufferEnd
 CSharedMemStream::Put()
 CSharedMemStream has memory already locked for put. Need to write through acquired CSharedMemStreamLockedMemory
 Timed out waiting for mutex in PutInternal()
@@ -882,26 +885,26 @@ m_pDataWritten
 m_pMapFile
 htmlmessages.proto
 CUIProtoBufMsg::SerializeCrossProc
-Assertion Failed: unSize < 128 * 1024 * 1024
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/html/htmlprotobuf.cpp
-Assertion Failed: eCmd > 0 && eCmd < eHTMLCommands_None
-Assertion Failed: pBuffer->TellPut() == 0
+unSize < 128 * 1024 * 1024
+eCmd > 0 && eCmd < eHTMLCommands_None
+pBuffer->TellPut() == 0
 CUIProtoBufMsg::BDeserialize
-Assertion Failed: 0
+0
 -toggle-overlay-html-mode
 Disables new faster overlay HTML path (or enables if on a branch it's not on by default for)
 ChromeHTML_Controller_003
-Assertion Failed: BOffScreenRendererBrowser( eBrowserType )
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/html/chromewrapper.cpp
-Assertion Failed: BDirectRendererBrowser( eBrowserType )
-Assertion Failed: pchVROverlayKey && pchVROverlayKey[0]
+BOffScreenRendererBrowser( eBrowserType )
+BDirectRendererBrowser( eBrowserType )
+pchVROverlayKey && pchVROverlayKey[0]
 widevine
-Assertion Failed: !m_ChromeIPCClient.BInitialized()
+!m_ChromeIPCClient.BInitialized()
 CHTMLController::CIPCTaskPost Thread
 CHTMLController::CIPCTaskPost::Run
 CHTMLController::CIPCTaskPost::Run - Sleep
 CHTMLController::HandleDeferredPaints - paint buffers handoff
-Assertion Failed: pCmd->m_eCmd == eHTMLCommands_NeedsPaint || pCmd->m_eCmd == eHTMLCommands_NeedsSharedTexturePaint
+pCmd->m_eCmd == eHTMLCommands_NeedsPaint || pCmd->m_eCmd == eHTMLCommands_NeedsSharedTexturePaint
 CHTMLController::RunFrame
 CHTMLController::RunFrame - IPC Client
 CHTMLController::RunFrame - Dispatch commands
@@ -974,19 +977,19 @@ m_mapBrowsers[i].m_sUserAgent
 m_tsQueuedCommands
 HTMLController Commands
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/tslist.h
-Assertion Failed: m_Count == 0
-Assertion Failed: pNode && pNode->Next == QueueEnd()
+m_Count == 0
+pNode && pNode->Next == QueueEnd()
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
-Assertion Failed: pCmd->m_eCmd == eHTMLCommands_SetSharedPaintBuffers
+pCmd->m_eCmd == eHTMLCommands_SetSharedPaintBuffers
 -pid
 Pid that we should be watching for
-Assertion Failed: pCmd->m_eCmd > 0 && pCmd->m_eCmd < eHTMLCommands_None
-Assertion Failed: m_bExit
-Assertion Failed: IsValidIndex( elem )
+pCmd->m_eCmd > 0 && pCmd->m_eCmd < eHTMLCommands_None
+m_bExit
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
-Assertion Failed: _IsValidIndex( elem, unNodeSize, pMemBase )
-Assertion Failed: _IsValidIndex( y, unNodeSize, pMemBase )
-Assertion Failed: IsValidIndex(elem)
+IsValidIndex( elem )
+_IsValidIndex( elem, unNodeSize, pMemBase )
+_IsValidIndex( y, unNodeSize, pMemBase )
+IsValidIndex(elem)
 m_Tree
 m_Elements
 static_cast<Node_t*>(pNode)->elem
@@ -1030,10 +1033,10 @@ disables Chromium window occlusion testing on Windows
 -clientui
 -no-browser
 unconditionally disables CEF
-Assertion Failed: GetCPUInformation().m_bSSE2 || IsARM()
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/html/chrome_ipc_client.cpp
-Assertion Failed: !"Failed to kill existing helper process"
-Assertion Failed: m_hCEFHandle == INVALID_PROCESS_HANDLE
+GetCPUInformation().m_bSSE2 || IsARM()
+!"Failed to kill existing helper process"
+m_hCEFHandle == INVALID_PROCESS_HANDLE
 wt
 [Config]# Product information.ProductName=cefwebhelperProductVersion=%u
 -lang=%s
@@ -1041,8 +1044,10 @@ wt
 -steampid=%u
 -buildid=%u
 -steamid=%llu
+-steampal
 -steamdeck
-Disables new faster overlay HTML path (or enables if on a bracnh it's not on by default for)
+"
+--proxy-server="%s"
 -html-perf-monitor
 Draws html perf data
 -steamuniverse=Dev
@@ -1072,6 +1077,8 @@ clientui
 --disable-gpu-compositing --disable-gpu
 --disable-accelerated-video-decode
 --disablehighdpi --force-device-scale-factor=1 --device-scale-factor=1
+-gamepadui
+--force-device-scale-factor=1.5 --device-scale-factor=1.5
 --no-sandbox
 -force-sandbox
 --disable-winh264
@@ -1088,14 +1095,14 @@ BREAKPAD_DUMP_LOCATION
 --disable-breakpad
 --disable-hang-monitor --disable-gpu-watchdog
 --disable-quick-menu
-Assertion Failed: bValidHandle == true
+bValidHandle == true
 Failed to connect to master html process, created shared memory (spawn time %0.2f)
 %s_%u_%u
 SteamChrome_MasterStream
-Assertion Failed: !"Collided with existing master response stream"
-Assertion Failed: !"Failed to connect to master html process"
-Assertion Failed: cbData == sizeof(newConnection)
-Assertion Failed: newConnection.m_eCmd != 0
+!"Collided with existing master response stream"
+!"Failed to connect to master html process"
+cbData == sizeof(newConnection)
+newConnection.m_eCmd != 0
 CChromeIPCClient::RunFrame
 Webhelper crashing too often, stopping restart
 CChromeIPCClient::PushCommand
@@ -1104,23 +1111,24 @@ Failure pushing command to steamwebhelper.exe
 Trying to push too small command size to steamwebhelper.exe (< sizeof(uint32))
 Command stream from chrome is corrupt
 Command stream from chrome is corrupt, got larger than 128M individaul cmd!
-Assertion Failed: pBuf == NULL
-Assertion Failed: m_fdShMem > 0
-Assertion Failed: iRet == 0
-Assertion Failed: res > 0
+pBuf == NULL
+m_fdShMem > 0
+iRet == 0
+res > 0
 m_tsQueueResponses
 m_sHTMLCacheDir
+m_strProxy
 m_ChromeConnection
 SteamBootstrapper_GetLoggingDir
 cef_log.txt
 GenerateCEFLogFileName in unknown process
 logs/cef_log.txt
-Assertion Failed: !pszString || pszString[nChars] == '\0'
+!pszString || pszString[nChars] == '\0'
 %s.previous.txt
 %s_server
 %s_client
-Assertion Failed: unHostPid != 0
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/html/chrome_ipc_shared.cpp
+unHostPid != 0
 SteamChrome_MasterStream_uid%d_spid%u
 SteamChrome_MasterStream_Event_uid%d_spid%u
 /tmp/steam_chrome_shmem_uid%d_spid%u
@@ -2012,27 +2020,26 @@ Tokenizer::ParseFloat() passed text that could not have been tokenized as a floa
 Tokenizer::ParseStringAppend() passed text that could not have been tokenized as a string:
 \U%08x
 .
-V_RemoveDotSlashes failed for "%s".
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
+V_RemoveDotSlashes failed for "%s".
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s
 flock LOCK_EX request but file is not opened for writing, ignoring: %s
 flock %s %s failed. errno = %d
 LOCK_EX
 LOCK_SH
 fcntl failed to set F_NOCACHE
-Assertion Failed: ret != 0
+ret != 0
 /
 CPathString
-"
-Assertion Failed: info.m_pReplacementString == 0
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
+info.m_pReplacementString == 0
 Expected %lld but got %lld!
-Assertion Failed: pFmt
-Assertion Failed: nSize >= 0
-Assertion Failed: m_Put >= 0
-Assertion Failed: offset >= 0
-Assertion Failed: offset >= -m_Put && offset <= INT_MAX-m_Put
-Assertion Failed: offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
+pFmt
+nSize >= 0
+m_Put >= 0
+offset >= 0
+offset >= -m_Put && offset <= INT_MAX-m_Put
+offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
 %u
 %d
 n
@@ -2042,26 +2049,26 @@ a
 \
 ?
 '
-Assertion Failed: nSizeOfType > 0
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
-Assertion Failed: nGrowSize >= 0
-Assertion Failed: m_nAllocationCount >= 0
+nSizeOfType > 0
+nGrowSize >= 0
+m_nAllocationCount >= 0
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
-Assertion Failed: num > 0
-Assertion Failed: num >= 0
+num > 0
+num >= 0
 CUtlString::SetValue
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
 CUtlString::VFormat
 Assertion failed: length > k_cchMaxString
 CUtlStringBuilder::InternalPrepareBuffer
-Assertion Failed: nMinCapacity > Capacity()
-Assertion Failed: nMinCapacity >= nChars
-Assertion Failed: nMinCapacity <= k_nMaxStringSize
-Assertion Failed: len > 0 || HasError()
+nMinCapacity > Capacity()
+nMinCapacity >= nChars
+nMinCapacity <= k_nMaxStringSize
+len > 0 || HasError()
 Error State on string being set.
 CUtlStringBuilder::Data::MoveToHeap
-Assertion Failed: !"enum ELanguage order mismatched from Language_t s_LanguageNames, fix it!"
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/language.cpp
+!"enum ELanguage order mismatched from Language_t s_LanguageNames, fix it!"
 zh_CN
 None
 none
@@ -2276,15 +2283,14 @@ sc_schinese
 
 @
 @
-v
-
-
 
 @
+T
+9
 
-O
-D
-j
+
+
+
 0
 0
 Hi
@@ -2295,6 +2301,7 @@ AT=
 AT5
 AT5
 AT=
+
 ?
 D
 @
@@ -2331,7 +2338,8 @@ IcE
 @
 @
 V
-H;52q
+H;5Rn
+T
 =
 =
 @
@@ -2365,5 +2373,4 @@ Ic
 0
 0
 0
-
 0

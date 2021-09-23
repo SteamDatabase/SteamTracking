@@ -78,14 +78,14 @@
 "Overlay_ForceQuit_Title"		"Sulje sovellus"
 "Overlay_ForceQuit_Description"		"Tallentamattomat tiedot menetetään."
 
-"Overlay_Taskbar_EditControllerConfig"	"Ohjaimen asetukset"
+"Overlay_Taskbar_EditControllerConfig"	"Ohjainmääritykset"
 
 "Overlay_Playtime_Stats"		"Peliaikatilastot"
 "Overlay_Playtime_Intro"		"Olet pelannut tätä peliä"
 "Overlay_Playtime_IntroApp"		"Olet käyttänyt tätä sovellusta"
 "Overlay_Playtime_TwoWeeksHours"		"%hours_twoweeks% tuntia viimeisen 2 viikon aikana"
 "Overlay_Playtime_TwoWeeksMinutes"		"%minutes_twoweeks% minuuttia viimeisen 2 viikon aikana"
-"Overlay_Playtime_ForeverHours"		"%hours_forever% tuntia yhteensä"
+"Overlay_Playtime_ForeverHours"		"yhteensä %hours_forever% tuntia"
 "Overlay_Playtime_ForeverMinutes"		"%minutes_forever% minuuttia yhteensä"
 "Overlay_Playtime_Session"			"%minutes_session% minuuttia tällä pelikerralla"
 "Overlay_Playtime_TimedTrial"		"Kokeiluaikaa jäljellä %hours_trial% tuntia ja %minutes_trial% minuuttia"

@@ -31,6 +31,7 @@
 "SteamBootstrapper_PercentComplete"			"%percent%%% completado"
 "SteamBootstrapper_NoNetwork"					"%appname% debe estar conectado para actualizarse. Confirma tu conexión de red e inténtalo de nuevo."
 "SteamBootstrapper_FailedMkdir"				"No se ha podido crear el directorio %dirname%, se obtuvo el error %errno%"
+"SteamBootstrapper_NotWriteable"				"No se puede escribir en el directorio %dirname%."
 "SteamBootstrapper_FailedDownloadHTTPError"	"Error de descarga: error http %errno%"
 "SteamBootstrapper_AlreadyRunningError"		"Ya se está ejecutando %appname% en este equipo con otra cuenta de usuario."
 "SteamBootstrapper_MoveContentDir_DestExists" "%appname% ha cambiado el lugar en el que almacena el contenido de los juegos de '~/Documents/Steam Content' a '~/Library/Application Support/Steam/SteamApps'. Tienes archivos de juegos en la ubicación original y %appname% no ha podido moverlos porque ya existen en la nueva ubicación. Puede que tengas que moverlos manualmente o eliminar los antiguos y volver a descargar los juegos. ¿Quieres continuar de todos modos?"

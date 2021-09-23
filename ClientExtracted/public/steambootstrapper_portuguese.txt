@@ -31,6 +31,7 @@
 "SteamBootstrapper_PercentComplete"			"Progresso: %percent%%%"
 "SteamBootstrapper_NoNetwork"					"O %appname% necessita de estar online para ser atualizado. Verifica a tua ligação de rede e tenta de novo."
 "SteamBootstrapper_FailedMkdir"				"Não foi possível criar o diretório %dirname%. Ocorreu o erro %errno%"
+"SteamBootstrapper_NotWriteable"				"Não é possível gravar no diretório %dirname%."
 "SteamBootstrapper_FailedDownloadHTTPError"	"Falha na transferência: erro http %errno%"
 "SteamBootstrapper_AlreadyRunningError"		"Uma instância de %appname% já está a ser executada neste computador, numa conta de utilizador diferente."
 "SteamBootstrapper_MoveContentDir_DestExists" "O %appname% mudou o local onde guarda os ficheiros de '~/Documents/%appname% Content' para '~/Library/Application Support/%appname%/%appname%Apps'. Existem ficheiros na localização original e o %appname% não conseguiu mover os ficheiros porque estes já existem na nova localização. Talvez seja necessário mover os ficheiros manualmente ou eliminar os ficheiros e transferir os jogos novamente. Continuar?"

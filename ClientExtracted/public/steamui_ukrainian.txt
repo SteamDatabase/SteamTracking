@@ -264,9 +264,9 @@
 "SteamUI_JoinDialog_CloudSyncFailed_Text" "Steam не вдалося синхронізувати ваші файли для %game% зі Steam Cloud"
 "SteamUI_JoinDialog_CloudSyncFailed_Detail" "Якщо ви запускали цей продукт на іншому комп’ютері, ваші налаштування та/або перебіг виконання можуть не збігатися з тими, що зберігаються в хмарі. Якщо ви зараз запустите продукт, ви можете втратити зроблені зміни або виконані дії."
 
-"Steam_CloudConflict_Title" "Steam — Конфлікт з даними у Cloud"
+"Steam_CloudConflict_Title" "Steam — конфлікт синхронізації зі Steam Cloud"
 "Steam_CloudConflict_Text" "Ваші локальні файли для %game% не збігаються зі збереженими в Steam Cloud."
-"Steam_CloudConflict_CloudFiles" "Файли у Cloud"
+"Steam_CloudConflict_CloudFiles" "Файли у Steam Cloud"
 "Steam_CloudConflict_CloudFiles_Time" "Востаннє змінено: %remotetime%"
 "Steam_CloudConflict_LocalFiles" "Локальні файли"
 "Steam_CloudConflict_LocalFiles_Time" "Востаннє змінено: %localtime%"
@@ -286,7 +286,7 @@
 "Steam_CloudPendingSessions_RemoteState" "Стан: %remotestate%"
 "Steam_CloudPendingSessions_IgnoreAndContinue" "Ігнорувати й продовжити"
 "Steam_CloudPendingSessions_Cancel" "Скасувати запуск"
-"Steam_CloudPendingSessions_Note" "Примітка: ігнорування може спричинити конфлікт файлів Steam Cloud, коли відновляться інші сеанси."
+"Steam_CloudPendingSessions_Note" "Примітка: ігнорування може спричинити конфлікт файлів у Steam Cloud, коли відновляться інші сеанси."
 "Steam_CloudPendingSessions_Unknown" "Невідомо"
 "Steam_CloudPendingSessions_UploadNotStarted"	"Вивантаження не розпочалося"
 "Steam_CloudPendingSessions_GameActive"	"Запущено"
@@ -2723,11 +2723,12 @@
 "Steam_LaunchOption_Application"			"Запустити %game%"
 
 "Steam_LaunchOption_SafeMode"					"Запустити %game% у безпечному режимі"
-"Steam_LaunchOption_Multiplayer"			"Запустити мережевий режим гри %game%"
-"Steam_LaunchOption_VR"								"Запустити %game% у режимі ВР"
-"Steam_LaunchOption_othervr"						"Запустити %game% у режимі Oculus ВР"
+"Steam_LaunchOption_Multiplayer"				"Запустити мережевий режим гри %game%"
+"Steam_LaunchOption_VR"							"Запустити %game% у режимі ВР"
+"Steam_LaunchOption_openxr"						"Запустити %game% у режимі OpenXR"
+"Steam_LaunchOption_othervr"					"Запустити %game% у режимі Oculus ВР"
 "Steam_LaunchOption_osvr"						"Запустити %game% у режимі OSVR"
-"Steam_LaunchOption_openvroverlay"					"Запустити %game% в оверлеї ВР Steam"
+"Steam_LaunchOption_openvroverlay"				"Запустити %game% в оверлеї ВР Steam"
 "Steam_LaunchOption_Server"						"Запустити виділений сервер"
 "Steam_LaunchOption_Editor"						"Запустити ігровий редактор"
 "Steam_LaunchOption_Config"						"Запустити конфігуратор"
@@ -2854,7 +2855,8 @@
 "SteamUI_DurationControl_PlaytimeExceeded_Body_ThreeHours"	"Ви досягли максимального часу в мережі на сьогодні. Будь ласка, зробіть перерву й повертайтеся завтра після восьмої ранку."
 "SteamUI_DurationControl_PlaytimeExceeded_Body_FiveHours"	"Ви досягли максимального часу в мережі на сьогодні. Будь ласка, зробіть перерву й повертайтеся завтра після восьмої ранку."
 "SteamUI_DurationControl_PlaytimeExceeded_Body_Night"		"Гравці, які не досягли 18-ти років, не можуть грати в цю гру між 10:00 і 8:00 наступного дня. Будь ласка, зробіть перерву."
-
+"SteamUI_DurationControl_PlaytimeExceeded_Body_WaitingVerification"		"Наразі ми підтверджуємо ваше справжнє ім’я для цього акаунта. Спробуйте пізніше."
+"SteamUI_DurationControl_PlaytimeExceeded_Body_Maintenance"		"Зараз ми проводимо технічне оновлення цієї гри, і неповнолітні особи не зможуть грати в неї, поки воно не завершиться. Просимо вибачення за усі незручності та дякуємо за ваше терпіння."
 
 
 "Steam_GuestPassesColumn" 		"Дарунки"
@@ -4660,7 +4662,7 @@
 "SteamUI_StreamLaunch_RemoteStart"				"Йде підготовка до транслювання %game%…"
 
 "SteamUI_RemoteDeviceAuthorization_Title"		"Авторизація пристрою"
-"SteamUI_RemoteDeviceAuthorization_Text"		"Уведіть код авторизації, аби дозволити %devicename% приєднатися і грати в ігри."
+"SteamUI_RemoteDeviceAuthorization_Text"		"Введіть код авторизації з екрана %devicename%, щоб дозволити цьому пристрою підключатися та запускати ігри."
 
 "SteamUI_UpdateControllerFirmware_Cancel"	"Не зараз"
 "SteamUI_UpdateControllerFirmware_Continue"	"Далі"

@@ -30,8 +30,6 @@
 "app_task_steamvr"	"SteamVR"
 "app_task_stop_streaming"	"Oprește Remote Play"
 
-"Steam_AccountAlreadyLoggedInNeedShutdown"		"Contul '%account%' este utilizat pe alt dispozitiv.\nVa trebui să închizi Steamul pe dispozitivul respectiv pentru a te autentifica aici."
-"Steam_AccountAlreadyLoggedInNeedPassword"		"Acest cont este conectat în altă parte.\nIntrodu din nou parola pentru a te conecta de pe acest computer."
 "Steam_AccountOfflineMissingConfig"				"Nu au putut fi descărcate datele pentru configurarea platformei."
 "Steam_NeverConnectedNoConnection"				"Contul '%account%' nu a fost accesat niciodată pe acest dispozitiv până acum şi conexiunea la serverele Steam nu a putut fi realizată.\nUnele servicii nu vor fi disponibile. Steam va continua să încerce conectarea, iar serviciile respective vor fi disponibile în cazul unei conexiuni reuşite."
 "Steam_RefreshEnterTwoFactorCode"				"Te rugăm să introduci codul actual Steam Guard de autentificare"
@@ -47,7 +45,7 @@
 "Steam_ErrorLoginFailed" "Autentificarea la Steam a eşuat.\nFie contul specificat nu există, fie parola a fost incorectă.\nTe rugăm să verifici numele contului şi parola şi să încerci din nou."
 "Steam_Login_IncorrectPassword" "Ai introdus parola sau numele contului incorect. Te rugăm să verifici parola şi numele contului şi să încerci din nou."
 "Steam_Login_RateLimited"	"Au fost prea multe eșuări de autentificare din rețeaua ta într-o perioadă scurtă de timp. Te rugăm să aștepți și să încerci din nou mai târziu."
-"Steam_Login_RememberPassword"  "Ținte minte parola mea"
+"Steam_Login_RememberPassword"  "Memorează-mi parola"
 "Steam_Login_Btn"		"Conectare"
 "Steam_Login_Password"		"Parolă"
 "Steam_Login_Cancel"		"Anulare"

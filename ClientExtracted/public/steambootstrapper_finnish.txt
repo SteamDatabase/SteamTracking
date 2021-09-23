@@ -31,6 +31,7 @@
 "SteamBootstrapper_PercentComplete"			"%percent% %% valmis"
 "SteamBootstrapper_NoNetwork"					"%appname%in täytyy olla online-tilassa päivitystä varten. Varmista verkkoyhteys ja yritä uudelleen."
 "SteamBootstrapper_FailedMkdir"				"Hakemistoa %dirname% ei voitu luoda, virhe %errno%"
+"SteamBootstrapper_NotWriteable"				"Hakemistoon %dirname% ei voi kirjoittaa."
 "SteamBootstrapper_FailedDownloadHTTPError"	"Lataaminen epäonnistui: http-virhe %errno%"
 "SteamBootstrapper_AlreadyRunningError"		"%appname% on jo käynnissä tällä koneella eri käyttäjätilillä."
 "SteamBootstrapper_MoveContentDir_DestExists" "%appname% on aiemmin tallentanut pelisisältöä hakemistoon '~/Documents/Steam Content', mutta nykyinen tallennushakemisto on '~/Library/Application Support/Steam/SteamApps'.  Alkuperäisessä hakemistossa on pelitiedostoja, joita %appname% ei pystynyt siirtämään, koska uudessa hakemistossa on jo tiedostoja.  Voit joutua siirtämään tiedostot manuaalisesti tai poistamaan vanhat tiedostot ja lataamaan pelisi uudelleen.  Jatketaanko silti?"

@@ -53,7 +53,7 @@
 "ServerBrowser_AddServerError"			"Adresa IP introdusă este nevalidă."
 "ServerBrowser_ServerRequiresPasswordTitle"	"Serverul necesită parolă"
 "ServerBrowser_ServerRequiresPassword"		"Ai nevoie de parolă pentru a te putea conecta la acest server."
-"ServerBrowser_RemoveServerFromFavorites"	"Şterge serverul din favorite"
+"ServerBrowser_RemoveServerFromFavorites"	"Șterge serverul din favorite"
 "ServerBrowser_AddServerByIP"			"Adaugă serverul folosind adresa IP"
 "ServerBrowser_UpdatingFavsTitle"		"Actualizare Preferate"
 "ServerBrowser_UpdatingFavs"			"Transferare Preferate. Va dura câteva minute..."
@@ -115,7 +115,7 @@
 "ServerBrowser_FilterDescSecureOnly"		"securizat"
 "ServerBrowser_FilterDescInsecureOnly"		"nesecurizat"
 "ServerBrowser_NoServersPlayed"			"Niciun server nu a fost accesat recent."
-"ServerBrowser_RemoveServerFromHistory"		"Şterge serverul din istoric"
+"ServerBrowser_RemoveServerFromHistory"		"Șterge serverul din istoric"
 "ServerBrowser_LastPlayed"			"Ultima vizită"
 
 "ServerBrowser_OfflineMode" 			"Steam rulează în modul Offline. Jocurile pe Internet nu vor fi disponibile până când nu reporneşti\nSteam în timp ce eşti conectat la Internet."
@@ -158,7 +158,7 @@
 
 // need to remove the VAC line from this when we have our authentication system going via the Steam servers (when it should change to a login failure)
 "Steam_ValidLoginRequired"	"Nu s-a putut realiza o conexiune cu serverele VAC Steam. Pentru depanarea problemelor de rețea, te rugăm să apeși pe linkul de mai jos."
-"VAC_ConnectionIssuesSupport_Title"	"Conexiunea securizată a eşuat"
+"VAC_ConnectionIssuesSupport_Title"	"Conexiunea securizată a eșuat"
 "VAC_ConnectionIssuesSupportSite"	"Clic aici pentru a vizita pagina de Asistenţă Steam"
 "VAC_ConnectionIssuesSupportURL"	"https://support.steampowered.com/kb/7579-RPSX-6098/"
 "VAC_LoggedInElsewhere_Title"		"Contul este folosit altundeva"

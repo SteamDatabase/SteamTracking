@@ -1,12 +1,9 @@
- AssertMsgImplementation
+ AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
+ AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
  B pcre_callout
  B pcre_stack_guard
  B pcrecpp::RE::no_arg
  BGetLocalFQDN
- CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(DbgFmtFatalMsgTag_t*, char const*, ...)
- CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(char const*, ...)
- CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(DbgFmtFatalMsgTag_t*, StringView)
- CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(StringView)
  CFArrayCreate
  CFBooleanGetTypeID
  CFBooleanGetValue

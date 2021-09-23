@@ -2817,6 +2817,7 @@ La modalità \"Joystick simile a mouse\" ti permetterà di giocare con un gamepa
 	"Steam_LaunchOption_Application"			"Avvia {s:gamename}"
 	"Steam_LaunchOption_SafeMode"					"Avvia {s:gamename} in modalità sicura"
 	"Steam_LaunchOption_VR"								"Avvia {s:gamename} in modalità Steam VR"
+	"Steam_LaunchOption_openxr"							"Avvia {s:gamename} in modalità OpenXR"
 	"Steam_LaunchOption_othervr"						"Avvia {s:gamename} in modalità Altra VR"
 	"Steam_LaunchOption_openvroverlay"					"Avvia {s:gamename} come overlay Steam VR"
 	"Steam_LaunchOption_Server"						"Avvia il server dedicato"

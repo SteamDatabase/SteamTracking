@@ -275,7 +275,7 @@
 "Steam_CloudConflict_Unknown" "Неизвестно"
 
 "Steam_CloudPendingSessions_Title" "Steam Cloud: загрузки в режиме ожидания"
-"Steam_CloudPendingSessions_Text" "У вас есть %pendingops% сессии %game%, которые не были загружены в Steam Cloud."
+"Steam_CloudPendingSessions_Text" "Сессий %game%, не загруженных в Steam Cloud: %pendingops%."
 "Steam_CloudPendingSessions_Sessions" "Последняя сессия:"
 "Steam_CloudPendingSessions_RemoteTime" "Последнее изменение: %remotetime%"
 "Steam_CloudPendingSessions_RemoteMachine" "Устройство: %remotemachine%"
@@ -446,7 +446,7 @@
 "Steam_DPIScaling_Option_Windows"		"Менять размер текста и значков под настройки монитора (требуется перезапуск)"
 "Steam_DPIScaling_Option"				"Увеличить текст и значки в соответствии с размером монитора (требуется перезапуск)"
 "Steam_LaunchSteamOnStartup_Option"		"Автоматически запускать при включении компьютера"
-"Steam_BPMOnStartup_Option"				"Запускать Steam в режиме «Big Picture»"
+"Steam_BPMOnStartup_Option"				"Запускать Steam в режиме Big Picture"
 "Steam_ShowUrlBar_Option"				"По возможности отображать адресные строки"
 "Steam_UseDirectWrite_Option"			"Включить DirectWrite для улучшенного отображения шрифта"
 "Steam_UseH264HWAccel_Option"			"Аппаратное декодирование видео, если возможно (необходим перезапуск)"
@@ -497,7 +497,7 @@
 "Steam_CreateShortcut_Info"			"Ярлык создан и помещён на рабочий стол."
 "Steam_CreateShortcut_FailedInfo"		"Не удалось создать ярлык.\nВозможно, на рабочем столе уже имеется ярлык для данной игры."
 "Steam_CDKeyLabel"				"Ключ продукта"
-"Steam_GetCDKeyError_Title"			"Steam — Неверный цифровой ключ продукта"
+"Steam_GetCDKeyError_Title"			"Steam — Неверный код продукта"
 "Steam_GetCDKeyError_Info"			"Вы ввели неверный цифровой ключ продукта. \n\nПроверьте, не опечатались ли вы. Легко спутать символы I, L и 1; V и Y; 0 и O. \nЗа помощью обратитесь на сайт http://www.steampowered.com."
 "Steam_PasswordRequiredToContinue_Title"	"Steam — Введите пароль"
 "Steam_PasswordRequiredToContinue"		"Для продолжения необходимо ввести пароль от Steam."
@@ -1174,13 +1174,13 @@
 
 "Steam_SubscriptionSuccess_ComingSoonOnly" "Цифровой ключ продукта был успешно активирован. Этот контент станет доступен вам, как только игра будет выпущена в Steam. Данный контент теперь навсегда связан с вашим аккаунтом Steam. Вам потребуется заходить в систему с этого аккаунта, чтобы получать доступ к продуктам, которые вы только что активировали."
 
-"Steam_Subscription_Rejected_Cdkey_Headline" "Цифровой ключ уже активирован"
+"Steam_Subscription_Rejected_Cdkey_Headline" "Код продукта уже активирован"
 "Steam_Subscription_Rejected_Cdkey" "Введенный цифровой ключ уже активирован на другом аккаунте Steam. Его невозможно использовать повторно. Пожалуйста, обратитесь за помощью к продавцу."
 
 "Steam_Subscription_RateLimitedCDKey_Headline" "Слишком много попыток активации"
 "Steam_Subscription_RateLimitedCDKey" "С этого аккаунта или интернет-адреса произведено слишком много попыток активации. Пожалуйста, попробуйте активировать ключ позже."
 
-"Steam_SubscriptionCancelled_InvalidCDKey_Headline" "Неверный цифровой ключ продукта"
+"Steam_SubscriptionCancelled_InvalidCDKey_Headline" "Неверный код продукта"
 "Steam_SubscriptionCancelled_InvalidCDKey" "Вы ввели неверный цифровой ключ продукта. \n\nПроверьте, не опечатались ли вы. Легко спутать символы I, L и 1; V и Y; 0 и O."
 "Steam_SubscriptionCancelled_InvalidCDKey2" "Нажмите здесь, если вы пытаетесь активировать код кошелька Steam или подарочную карту, чтобы закончить процедуру в магазине Steam."
 
@@ -1196,7 +1196,7 @@
 "Steam_SubscriptionSuccess$purchasetype=unknown" "Ваша покупка %subscription% была успешно завершена. Спасибо за покупку!"
 
 "Steam_SubscriptionCancelled_PaymentCardDeclined_Headline" "Банковская карта отклонена"
-"Steam_SubscriptionCancelled_PaymentCardDeclined" "Покупка %subscription% не завершена. Компания, выдавшая вашу кредитную карту, отклонила запрос.\n\nОбратите внимание, что в некоторых случаях обслуживающая компания может зарезервировать средства на вашем счёте, но они не будут сняты. Если вы считаете, что операцию отклонили по ошибке, проверьте указанную ниже информацию и попробуйте совершить покупку ещё раз."
+"Steam_SubscriptionCancelled_PaymentCardDeclined" "Покупка %subscription% не завершена. Компания, выдавшая вашу банковскую карту, отклонила запрос.\n\nОбратите внимание, что в некоторых случаях обслуживающая компания может зарезервировать средства на вашем счёте, но они не будут сняты. Если вы считаете, что операцию отклонили по ошибке, проверьте указанную ниже информацию и попробуйте совершить покупку ещё раз."
 
 "Steam_SubscriptionSuccess_Preorder_Headline" "Заказ осуществлён — платёж с карты ещё не перечислен"
 "Steam_SubscriptionSuccess_Preorder" "Предзаказ %subscription% оформлен.\nДеньги будут перечислены с вашего счёта только после официального выхода игры. После обработки карты вам отправят квитанцию. Спасибо за покупку!"
@@ -1391,7 +1391,7 @@
 "SteamUI_Upgrade_Nvidia_Driver_URL" "https://support.steampowered.com/kb_article.php?ref=8509-RFXM-1964"
 
 "SteamUI_AMD_BigPicture_Problem_Title" "Проблема с видеодрайвером"
-"SteamUI_AMD_BigPicture_Problem_Info" "На вашем компьютере установлен пакет видеодрайверов от AMD версии 13.1. Пожалуйста, обновите его до версии 13.2 или более новой, чтобы запустить Steam в режиме «Big Picture»."
+"SteamUI_AMD_BigPicture_Problem_Info" "На вашем компьютере установлен пакет видеодрайверов от AMD версии 13.1. Пожалуйста, обновите его до версии 13.2 или более новой, чтобы запустить Steam в режиме Big Picture."
 "SteamUI_AMD_BigPicture_Problem_Url_Label" "Загрузить видеодрайверы от AMD"
 "SteamUI_AMD_BigPicture_Problem_Url" "http://support.amd.com/us/gpudownload/linux/Pages/radeon_linux.aspx"
 
@@ -1474,7 +1474,7 @@
 "Steam_AutoUpdateTimeRestrictionLabel"	"Автоматически обновлять игры:"
 "Steam_AutoUpdateTimeRestrictionEnd"		"до"
 "Steam_AllowDownloadsDuringGameplay"	"Разрешать загрузки во время игры"
-"Steam_AllowDownloadsDuringGameplayDetails"	"Если эта опция включена, Steam сможет начинать или продолжать загружать обновления, даже если \nзапущена игра или другое приложение Steam. Эту настройку можно изменить в окне «Свойства» у каждой игры."
+"Steam_AllowDownloadsDuringGameplayDetails"	"Если эта настройка включена, Steam сможет начинать или продолжать загрузку обновлений, когда\nзапущена другая игра или приложение из Steam. Эту настройку можно изменить в окне «Свойства» у каждой игры."
 "Steam_ThrottleDownloadsWhileStreaming"	"Замедлять загрузку во время трансляции"
 "Steam_ThrottleDownloadsWhileStreamingDetails"	"Если эта настройка включена, Steam ограничит скорость загрузки, чтобы поддерживать высокое качество трансляции Steam Remote Play."
 "Steam_DownloadRatesInBits"			"Отображать скорость в битах в секунду"
@@ -1924,8 +1924,8 @@
 "steam_monitor_peakusage"		"Максимальная скорость загрузки"
 "steam_monitor_totaldownloaded"		"Загружено байт"
 
-"Steam_SubscriptionCancelled_PaymentCardDeclined_InsufficientFunds"		"Покупка %subscription% не завершена. Компания, выдавшая вашу кредитную карту, отклонила запрос из-за недостатка средств на счёте.\n\nОбратите внимание, что в некоторых случаях обслуживающая компания может зарезервировать средства на вашем счёте, но они не будут сняты."
-"Steam_SubscriptionCancelled_PaymentCardDeclined_AVSFailure"				"Покупка %subscription% не завершена. Компания, выдавшая вашу кредитную карту, отклонила запрос из-за неверно указанного адреса.\n\nОбратите внимание, что в некоторых случаях обслуживающая компания может зарезервировать средства на вашем счёте, но они не будут сняты. Если вы считаете, что операцию отклонили по ошибке, проверьте указанную ниже информацию и попробуйте совершить покупку ещё раз."
+"Steam_SubscriptionCancelled_PaymentCardDeclined_InsufficientFunds"		"Покупка %subscription% не завершена. Компания, выдавшая вашу банковскую карту, отклонила запрос из-за недостатка средств на счёте.\n\nОбратите внимание, что в некоторых случаях обслуживающая компания может зарезервировать средства на вашем счёте, но они не будут сняты."
+"Steam_SubscriptionCancelled_PaymentCardDeclined_AVSFailure"				"Покупка %subscription% не завершена. Компания, выдавшая вашу банковскую карту, отклонила запрос из-за неверно указанного адреса.\n\nОбратите внимание, что в некоторых случаях обслуживающая компания может зарезервировать средства на вашем счёте, но они не будут сняты. Если вы считаете, что операцию отклонили по ошибке, проверьте указанную ниже информацию и попробуйте совершить покупку ещё раз."
 
 "ServerBrowser_ModNotInstalled" "Это дополнение не установлено"
 "ServerBrowser_AppNotFound" "Не удаётся соединиться с сервером:\n неверный номер приложения"
@@ -2283,7 +2283,7 @@
 "Steam_Install_CreateApplicationIcon"			"Создать иконку"
 "Steam_Install_CreateMultipleApplicationIcon"	"Создать иконку для каждой игры"
 
-"Steam_Install_ShowLauncherShortcut"			"Создать ярлык для запуска приложения"
+"Steam_Install_ShowLauncherShortcut"			"Создать ярлык в панели запуска"
 
 "Steam_Install_InstallRetailFiles"			"Щелкните «Далее» и Steam начнет установку игры."
 "Steam_Install_WillVerifyExistingFiles"		"Steam проверит правильность установки."
@@ -2719,11 +2719,12 @@
 "Steam_LaunchOption_Application"			"Запустить %game%"
 
 "Steam_LaunchOption_SafeMode"					"Запустить %game% в безопасном режиме"
-"Steam_LaunchOption_Multiplayer"			"Многопользовательский режим %game%"
-"Steam_LaunchOption_VR"								"Запустить в режиме виртуальной реальности Steam"
-"Steam_LaunchOption_othervr"						"Запустить в режиме виртуальной реальности Oculus"
+"Steam_LaunchOption_Multiplayer"				"Запустить %game% в многопользовательском режиме"
+"Steam_LaunchOption_VR"							"Запустить %game% в режиме Steam VR"
+"Steam_LaunchOption_openxr"						"Запустить %game% в режиме OpenXR"
+"Steam_LaunchOption_othervr"					"Запустить %game% в режиме Oculus VR"
 "Steam_LaunchOption_osvr"						"Запустить %game% в режиме OSVR"
-"Steam_LaunchOption_openvroverlay"					"Запустить %game% с виртуальным оверлеем Steam"
+"Steam_LaunchOption_openvroverlay"				"Запустить %game% с оверлеем Steam VR"
 "Steam_LaunchOption_Server"						"Запустить выделенный сервер"
 "Steam_LaunchOption_Editor"						"Запустить редактор игры"
 "Steam_LaunchOption_Config"						"Запустить настройку"
@@ -2848,7 +2849,8 @@
 "SteamUI_DurationControl_PlaytimeExceeded_Body_ThreeHours"	"Вы достигли сегодняшнего лимита на время в сети. Пожалуйста, сделайте перерыв и повторите попытку завтра после 8:00."
 "SteamUI_DurationControl_PlaytimeExceeded_Body_FiveHours"	"Вы достигли сегодняшнего лимита на время в сети. Пожалуйста, сделайте перерыв и повторите попытку завтра после 8:00."
 "SteamUI_DurationControl_PlaytimeExceeded_Body_Night"		"Игроки младше 18 лет не могут играть в эту игру с 22:00 до 8:00. Сделайте перерыв."
-
+"SteamUI_DurationControl_PlaytimeExceeded_Body_WaitingVerification"		"Для вашего аккаунта проводится проверка настоящего имени. Повторите попытку позже."
+"SteamUI_DurationControl_PlaytimeExceeded_Body_Maintenance"		"В игре проводятся технические обновления, и несовершеннолетние пользователи не смогут играть до их окончания. Приносим извинения за возможные неудобства и благодарим за понимание."
 
 
 "Steam_GuestPassesColumn" 		"Подарки"
@@ -3891,21 +3893,21 @@
 "tooltip_view_details"		"Подробно"
 "tooltip_view_list"			"Список"
 "tooltip_view_grid"			"Сетка"
-"tooltip_view_fullscreen"	"Режим «Big Picture»"
+"tooltip_view_fullscreen"	"Режим Big Picture "
 "tooltip_view_vr_start"	"Запустить SteamVR "
 "tooltip_view_vr_exit"	"Выйти из SteamVR "
 "tooltip_sharedlibrary" 	"Если вы начнете играть сейчас, то %borrower% получит уведомление, что пора выходить."
 "tooltip_sharedlibrary2"	"Если хотите играть прямо сейчас, попробуйте запустить игру позже либо купите эту игру себе."
 
-"NoBigPicture_Title"		"Режим «Big Picture»"
-"NoBigPicture_Explanation"	"Режим «Big Picture» не поддерживается на вашей системе или устройстве."
+"NoBigPicture_Title"		"Режим Big Picture"
+"NoBigPicture_Explanation"	"Режим Big Picture не поддерживается на вашей системе или устройстве."
 "NoBigPicture_Anchor"		"Узнайте больше на сайте службы поддержки Steam."
 
-"NoBigPictureVista_Title"		"Режим «Big Picture»"
-"NoBigPictureVista_Explanation"	"Для режима «Big Picture» требуется поддержка DirectWrite. Похоже, что у вас установлена ОС Windows Vista, которая поддерживает DirectWrite, но вам нужно установить пакет обновления 2 и обновления платформы Windows Vista (доступны через Центр обновления Windows)."
+"NoBigPictureVista_Title"		"Режим Big Picture"
+"NoBigPictureVista_Explanation"	"Для режима Big Picture требуется поддержка DirectWrite. Похоже, что у вас установлена ОС Windows Vista, которая поддерживает DirectWrite, но вам нужно установить пакет обновления 2 и обновления платформы Windows Vista (доступны через Центр обновления Windows)."
 
-"NoBigPictureWin8AMD_Title"		"Режим «Big Picture»"
-"NoBigPictureWin8AMD_Explanation"	"Похоже, что у вас установлена несовместимая версия драйвера видеокарты AMD для Windows 8. В данной версии есть известная ошибка, из-за которой режим «Big Picture» перестает работать через 30-60 секунд использования. Попробуйте установить более старую версию драйверов Catalyst для Windows 8 (8.97.10) или обновиться до новой версии, если она доступна."
+"NoBigPictureWin8AMD_Title"		"Режим Big Picture"
+"NoBigPictureWin8AMD_Explanation"	"Похоже, что у вас установлена несовместимая версия драйвера видеокарты AMD для Windows 8. В данной версии есть известная ошибка, из-за которой режим Big Picture перестаёт работать через 30-60 секунд использования. Попробуйте установить более старую версию драйверов Catalyst для Windows 8 (8.97.10) или обновиться до новой версии, если она доступна."
 
 
 "steam_menu_setcategory"		"Назначить категорию"
@@ -3925,7 +3927,7 @@
 
 "steam_menu_minimode"		"Компактный режим"
 "steam_menu_largemode"	"Обычный режим"
-"steam_menu_bigpicturemode"	"Режим «Big Picture»"
+"steam_menu_bigpicturemode"	"Режим Big Picture"
 "steam_menu_startvr"		"Запустить SteamVR (БЕТА)"
 "steam_menu_exitvr"		"Выйти из SteamVR (БЕТА)"
 
@@ -4314,14 +4316,14 @@
 "SteamUI_StreamClient_Failed_Auth"	"Аутентификация не удалась."
 "SteamUI_StreamClient_Failed_DirectX"	"Пожалуйста, установите DirectX с сайта Microsoft."
 "SteamUI_StreamLaunch_Failed_Title" "Ошибка запуска трансляции"
-"SteamUI_StreamLaunch_RequiresUI"	"Запуск этой игры требует участия пользователя.\n\nЗапустите игру на удаленном компьютере вручную и присоединитесь к трансляции отсюда."
+"SteamUI_StreamLaunch_RequiresUI"	"Запуск этой игры требует участия пользователя.\n\nЗапустите игру на удалённом компьютере вручную и присоединитесь к трансляции отсюда."
 "SteamUI_StreamLaunch_AccessDenied"	"Проблема аутентификации."
-"SteamUI_StreamLaunch_Unsupported"	"В настоящее время эта игра не поддерживает трансляцию."
-"SteamUI_StreamLaunch_ScreenLocked"	"На удаленном компьютере заблокирован экран."
-"SteamUI_StreamLaunch_Broadcasting"	"На удалённом компьютере ведётся трансляция, поэтому к нему нельзя подключиться с помощью Remote Play."
+"SteamUI_StreamLaunch_Unsupported"	"В настоящее время эта игра не поддерживает транслирование."
+"SteamUI_StreamLaunch_ScreenLocked"	"На удалённом компьютере заблокирован экран."
+"SteamUI_StreamLaunch_Broadcasting"	"На удалённом компьютере ведётся трансляция Steam, поэтому к нему нельзя подключиться с помощью Remote Play."
 "SteamUI_StreamLaunch_OtherGameRunning"	"На удаленном компьютере уже запущена другая игра."
 "SteamUI_StreamLaunch_Timeout"		"Время ожидания запуска трансляции истекло."
-"SteamUI_StreamLaunch_InstallRequiresUI" "Установка этой игры требует участия пользователя.\n\nУстановите эту игру на удаленном компьютере вручную."
+"SteamUI_StreamLaunch_InstallRequiresUI" "Установка этой игры требует участия пользователя.\n\nУстановите эту игру на удалённом компьютере вручную."
 "SteamUI_StreamLaunch_Failed"		"Не удалось запустить трансляцию."
 "SteamUI_StreamLaunch_InstallDrivers"	"Для трансляций требуются дополнительные драйверы.\nПожалуйста, следуйте указаниям Steam на удаленном компьютере."
 "SteamUI_StreamLaunch_StillDownloading" "В данный момент на компьютере %ClientName% идет обновление. %game% можно будет запустить сразу, как только закончится загрузка."
@@ -4737,7 +4739,7 @@
 "Steam_WindowsCompat_RestartSteam" "Перезапустить Steam"
 "Steam_WindowsCompat_Continue" "Продолжить"
 
-"Steam_WindowsCompat_BigPicture" "Steam запущен в режиме совместимости с более ранней версией Windows. Если ваша система ошибочно определится как Windows XP или более ранняя, это может помешать запуску режима «Big Picture»."
+"Steam_WindowsCompat_BigPicture" "Steam запущен в режиме совместимости с более ранней версией Windows. Если ваша система ошибочно определится как Windows XP или более ранняя, это может помешать запуску режима Big Picture."
 "Steam_WindowsCompat_Webhelper" "Браузер Steam запущен в режиме совместимости с другой версией Windows, из-за чего веб-страницы могут отображаться некорректно. \n\nSteam устранит проблему и перезапустится. \n\nЕсли это сообщение будет появляться в дальнейшем, пожалуйста, следуйте инструкциям ниже, чтобы выйти из режима совместимости."
 
 "Steam_InstallIssue_FolderReadOnly"	"Папка установки Steam настроена только для чтения. Это может вызывать проблемы с запуском игр и с некоторыми функциями клиента.\n\nДля запуска Steam необходимо исправить данную проблему и перезапустить клиент."

@@ -254,7 +254,7 @@
 "Overlay_Broadcast_Chat_Title" "直播 - 聊天（%numviewers%）"
 "Overlay_Broadcast_Live_Debug" "%videosendkbps% kbit/s, %videosendfps% FPS"
 
-"SteamChina_Overlay_DurationControl_Init"	    	"【健康提示】为呵护未成年人健康成长，本平台已特别接入青少年防沉迷系统。\n该账号已被纳入防沉迷系统，根据青少年防沉迷规则，您仅能在周五、周六、\n周日以及国家法定节假日晚间20:00-21:00之间进行游戏。"
+"SteamChina_Overlay_DurationControl_Init"		"【健康提示】为呵护未成年人健康成长，本平台已特别接入青少年防沉迷系统。\n该账号已被纳入防沉迷系统，根据青少年防沉迷规则，您仅能在周五、周六、\n周日以及国家法定节假日晚间20:00-21:00之间进行游戏。"
 "SteamChina_Overlay_DurationControl_MessageA"		"您累计在线时间已满1小时。"
 "SteamChina_Overlay_DurationControl_MessageB"		"您累计在线时间已满3小时，\n请您下线休息，\n做适当身体活动。"
 "SteamChina_Overlay_DurationControl_MessageC"		"您已经进入疲劳游戏时间，\n您的游戏收益将降为正常值的50％，\n为了您的健康，请尽快下线休息，\n做适当身体活动，合理安排学习生活。"

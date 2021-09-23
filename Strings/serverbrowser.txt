@@ -36,7 +36,9 @@ __data
 __DATA
 __thread_vars
 __DATA
+'
 0
+'
 __thread_data
 __DATA
 @
@@ -57,7 +59,8 @@ __LINKEDIT
 @'
 p\'
 `_'
-p!
+8
+(!
 P
 
 
@@ -90,7 +93,6 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-3
 )
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
@@ -1159,8 +1161,8 @@ steamclient.dylib
 wb
 SaveBufferToFile: couldn't open file "%s" in path "%s".
 NULL
-LoadFileIntoBuffer: NULL parameters
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/filesystem_helpers.cpp
+LoadFileIntoBuffer: NULL parameters
 rb
 [S_API FAIL] SteamAPI_Init() failed; steam path (%s) missing directory separator
 [S_API FAIL] SteamAPI_Init() failed; steam found, but process is dead.
@@ -1176,7 +1178,10 @@ g_pClientController
 CUtlSymbol
 com.valvesoftware.steam.ipctool
 ipcserver restart: expected: %d, got: %d
+pid %d != %d, clearing client_port = %d, server_port = %d
+pid %d != %d, re-initing before send; client_port = %d, server_port = %d
 StopJob
+pid %d != %d, skipping dealloc of client_port = %d, server_port = %d
 CreateInterface
 ClientAPI_Init(GlobalInstance): GetIClientUser returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientFriends returned NULL.
@@ -1184,6 +1189,7 @@ ClientAPI_Init(GlobalInstance): GetIClientBilling returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientUtils returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientNetworkDeviceManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientStorageDeviceManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientSystemPerfManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSystemManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientMatchmaking returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientApps returned NULL.
@@ -1216,7 +1222,7 @@ ClientAPI_Init(GlobalInstance): GetIClientShader returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientCompat returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSTARInternal returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientNetworkingUtils returned NULL.
-Assertion Failed: 0
+0
 Steam_BGetCallback
 Steam_FreeLastCallback
 Steam_GetAPICallResult
@@ -1285,8 +1291,8 @@ SecureFilter
 ServerEmptyFilterCheck
 ServerFullFilterCheck
 NoPasswordFilterCheck
-Assertion Failed: iModIndex != -1
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/serverbrowser/BaseGamesPage.cpp
+iModIndex != -1
 game
 map
 ping
@@ -1295,8 +1301,8 @@ NoEmpty
 NoPassword
 < %d
 appID
-Assertion Failed: !"Missing server response"
-Assertion Failed: pServerItem->m_NetAdr.GetIP() != 0
+!"Missing server response"
+pServerItem->m_NetAdr.GetIP() != 0
 Server
 name
 GameDir
@@ -1332,16 +1338,16 @@ stoprefresh
 GetNewList
 Connect
 refresh
-Assertion Failed: m_eMatchMakingType != eInternetServer || ServerBrowserDialog().IsVisible()
-Assertion Failed: !"Unknown server type"
-Assertion Failed: !"unknown matchmaking type"
+m_eMatchMakingType != eInternetServer || ServerBrowserDialog().IsVisible()
+!"Unknown server type"
+!"unknown matchmaking type"
 CGameListPanel
 vgui::ListPanel
 CBaseGamesPage
 vgui::PropertyPage
 AddToFavorites
-Assertion Failed: (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
+(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 LoadModList
 nAppID
 CBaseGamesPage::OnFavoritesMsg
@@ -1369,10 +1375,10 @@ m_Tree
 m_Elements
 m_Memory
 ListPanel
-Assertion Failed: IsValidIndex( elem )
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
-Assertion Failed: _IsValidIndex( elem, unNodeSize, pMemBase )
-Assertion Failed: _IsValidIndex( y, unNodeSize, pMemBase )
+IsValidIndex( elem )
+_IsValidIndex( elem, unNodeSize, pMemBase )
+_IsValidIndex( y, unNodeSize, pMemBase )
 DialogAddServer
 #ServerBrowser_AddServersTitle
 GameTabs
@@ -1393,8 +1399,8 @@ Close
 #ServerBrowser_ServerNotResponding
 CDialogAddServer
 vgui::Frame
-CIPAndPort::GetIPv4 called on IPv6 address
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/netadr.h
+CIPAndPort::GetIPv4 called on IPv6 address
 Frame
 DialogGameInfo
 #ServerBrowser_GameInfoTitle
@@ -1497,8 +1503,8 @@ HistoryGames
 RemoveFromHistory
 CHistoryGames
 GetNewServerList
-Assertion Failed: pServer
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/serverbrowser/InternetGames.cpp
+pServer
 #ServerBrowser_NoInternetGames
 #ServerBrowser_MasterServerHasNoServersListed
 #ServerBrowser_MasterServerNotResponsive
@@ -1508,8 +1514,8 @@ m_Regions
 LanGames
 #ServerBrowser_NoLanServers
 CLanGames
-Assertion Failed: nNumApps <= V_ARRAYSIZE(vecApps)
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/serverbrowser/ModList.cpp
+nNumApps <= V_ARRAYSIZE(vecApps)
 serverbrowsername
 gameid
 CModList::OnAppDataChanged
@@ -1562,8 +1568,8 @@ ServerContextMenu
 #ServerBrowser_RefreshServer
 #ServerBrowser_AddServerToFavorites
 Menu
-Assertion Failed: p1.m_unUserData != p2.m_unUserData
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/serverbrowser/ServerListCompare.cpp
+p1.m_unUserData != p2.m_unUserData
 SpectateGames
 proxy
 servers/VACBannedConnRefusedDialog.res
@@ -2442,10 +2448,10 @@ steamchinabeta://
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 htmlmessages.proto
 CUIProtoBufMsg::SerializeCrossProc
-Assertion Failed: unSize < 128 * 1024 * 1024
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/html/htmlprotobuf.cpp
-Assertion Failed: eCmd > 0 && eCmd < eHTMLCommands_None
-Assertion Failed: pBuffer->TellPut() == 0
+unSize < 128 * 1024 * 1024
+eCmd > 0 && eCmd < eHTMLCommands_None
+pBuffer->TellPut() == 0
 AnimatingImagePanel
 %s%d
 frames
@@ -2500,7 +2506,7 @@ SetTexture
 SetString
 Couldn't parse script sequence '%s': expected <anim command>, found '%s'
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/AnimationController.cpp
-Assertion Failed: panel != NULL
+panel != NULL
 AnimationController
 m_Sequences
 m_Sequences[ iSequence ].cmdList
@@ -2516,7 +2522,7 @@ m_AnimationMaps[ iAnimationMap ].map->entries
 m_PanelAnimationMapPool
 CUtlDict
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlsymbol.h
-Assertion Failed: pPool->m_SpaceUsed < 0xFFFF
+pPool->m_SpaceUsed < 0xFFFF
 Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utldict.h
 CUtlSymbolTable
@@ -2530,13 +2536,13 @@ filtered
 , string image, string imagecolor, alignment imageAlignment, int preserveAspectRatio, int filtered
 BitmapImagePanel
 CBuildFactoryHelper:  Factory for '%s' already exists!!!!
-Assertion Failed: func
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/BuildFactoryHelper.cpp
-Assertion Failed: className
+func
+className
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/BuildGroup.cpp
-Assertion Failed: m_pkvSettings
+m_pkvSettings
 [%s] applying key '%s', has changed from '%s' to '%s'
-Assertion Failed: controlKeys
+controlKeys
 vgui::BuildGroup
 _panelDar
 m_strResourceName
@@ -2576,8 +2582,8 @@ ComboBoxButton
 TextEntry
 ActivateItem
 CIMEPanel
-Assertion Failed: s_pFileSystemInterface
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/controls.cpp
+s_pFileSystemInterface
 en_US.UTF-8
 VGUI_ivgui007
 VGUI_Panel010
@@ -2597,8 +2603,8 @@ SetText
 SetState
 GetState
 GetText
-Assertion Failed: m_nSuppressDialogVariablesMessages >= 1
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/EditablePanel.cpp
+m_nSuppressDialogVariablesMessages >= 1
 DialogVariables
 EditablePanel::PerformLayout()
 %s:hscroll
@@ -2607,7 +2613,7 @@ EditablePanel::LayoutCmd_CreateRegion()
 Invalid parent region %s specified for region %s in panel %s
 EditablePanel::LayoutCmd_Place()
 Empty
-Assertion Failed: cChildren <= SHRT_MAX
+cChildren <= SHRT_MAX
 unable to find control '%s'
 resource/layout/%s_%s.layout
 resource/layout/%s.layout
@@ -2664,10 +2670,10 @@ item
 filter
 filterinfo
 %s %s
-Couldn't format time value %llu
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/FileOpenDialog.cpp
+Couldn't format time value %llu
 *.*
-Assertion Failed: curFilter[0] == '*' && curFilter[1] == '.'
+curFilter[0] == '*' && curFilter[1] == '.'
 .app
 FileCompletionEdit
 PopulateFileNameCompletion
@@ -2713,8 +2719,8 @@ frame_close
 CloseFrameButtonPressed
 frame_menu
 BgColor
-Assertion Failed: title
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/Frame.cpp
+title
 Frame::SetTitle - vgui::localize not initialized
 BaseControls
 FrameTitleBar.SmallFont
@@ -2729,7 +2735,6 @@ Frame.UsesAlphaBlending
 LayoutTemplates
 Frame::ApplyLayoutTemplate() : couldn't find subpanel '%s' as specified in template '%s'
 settitlebarvisible
-title
 frametitle
 framesettitlebarvisible
 closeonescape
@@ -2761,10 +2766,10 @@ SnapRange
 CaptionGripPanel::OnThink()
 AppleActionOnDoubleClick
 AppleMiniaturizeOnDoubleClick
-Assertion Failed: wide > 0
-Assertion Failed: tall > 0
-Assertion Failed: boundWide >= 0
-Assertion Failed: boundTall >= 0
+wide > 0
+tall > 0
+boundWide >= 0
+boundTall >= 0
 FrameTitle
 FrameButton
 FrameMinimizeButton
@@ -2835,8 +2840,8 @@ HTML.SearchAnimationTime
 DeletePanel
 custom_
 FindBar
-Assertion Failed: ulPlatformParentWindow == 0
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/HTML.cpp
+ulPlatformParentWindow == 0
 FindEntry
 FindCount
 resource/layout/htmlfindbar.layout
@@ -2850,8 +2855,8 @@ next
 #vgui_Webkit_connectionproblem
 #vgui_Webkit_proxyconnectionproblem
 #vgui_Webkit_unknown
-Assertion Failed: m_iHTMLTextureID
-Assertion Failed: !m_pSharedPaintBuffers->BLockedForRead()
+m_iHTMLTextureID
+!m_pSharedPaintBuffers->BLockedForRead()
 glTextureRangeAPPLE
 about:blank
 CustomURL
@@ -2938,10 +2943,10 @@ steam:
 data:image/
 HTMLComboBoxHost
 CHTMLFindBar
-Assertion Failed: m_nLockedIdx >= 0
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/html/htmlpaintbuffer.h
-Assertion Failed: m_nLockedIdx == -1
-Assertion Failed: iNewReadIndex != 3
+m_nLockedIdx >= 0
+m_nLockedIdx == -1
+iNewReadIndex != 3
 m_CustomURLHandlers
 m_sCurrentURL
 m_sLastSearchString
@@ -2951,8 +2956,8 @@ m_sPendingPostData
 m_vecHCursor
 m_vecStyleChangedCallbacks
 m_DirWatcherClient
-Assertion Failed: m_iRefs > 0 && m_iRefs < 0x1000000
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/refcount.h
+m_iRefs > 0 && m_iRefs < 0x1000000
 HtmlPopup
 steam://close
 PageLoadThrobber
@@ -3023,8 +3028,8 @@ InputDialog
 LabelDull
 LabelBright
 Label::Paint()
-Assertion Failed: _imageDar.IsValidIndex( index )
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/Label.cpp
+_imageDar.IsValidIndex( index )
 labelText
 north-west
 north-east
@@ -3059,13 +3064,13 @@ VertScrollBar
 ListImage
 ListPanelInterior
 ColumnSelectButton
-Assertion Failed: minWidth <= width
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/ListPanel.cpp
-Assertion Failed: maxWidth >= width
+minWidth <= width
+maxWidth >= width
 Check
 ListPanel::AddColumnHeader() can only have one checkable column, which must be called 'check'
 ListPanel column does not support both CUSTOMPANEL and CHECKABLE at the same time
-Assertion Failed: m_pImageList
+m_pImageList
 ListPanel::AddItem
 image
 imageSelected
@@ -3073,22 +3078,22 @@ check
 ItemsChecked
 count
 itemid
-Assertion Failed: m_vecSections.IsValidIndex(iSection)
+m_vecSections.IsValidIndex(iSection)
 ListPanel::ApplyItemChanges
 ListPanel::RemoveItem
 ItemDeselected
-Assertion Failed: !m_SelectedItems.HasElement( itemID )
+!m_SelectedItems.HasElement( itemID )
 %s_url
-Assertion Failed: m_pTextImage
-Assertion Failed: m_pImagePanel
+m_pTextImage
+m_pImagePanel
 ListPanel::PerformLayout()
-Assertion Failed: m_VisibleItems.Count() == m_vecVisibleItemsYPos.Count()
+m_VisibleItems.Count() == m_vecVisibleItemsYPos.Count()
 ListPanel::UpdateColumnWidths()
 ListPanel::CalculateVisibleRowPositions()
 ListPanel::PaintInterior()
 CustomStyle
 cellcolor
-Assertion Failed: m_VisibleItems.IsValidIndex( iItem )
+m_VisibleItems.IsValidIndex( iItem )
 rowheight
 ListPanel.TextColor
 ListPanel.DisabledTextColor
@@ -3097,7 +3102,7 @@ ListPanel.DisabledSelectedTextColor
 ListPanel.SelectedBgColor
 ListPanel.SelectedOutOfFocusBgColor
 ListPanel.PostSectionLeading
-Assertion Failed: col < m_CurrentColumns.Count()
+col < m_CurrentColumns.Count()
 ListPanel::SortList()
 url
 ContextMenu
@@ -3110,7 +3115,7 @@ sort_column_secondary
 sort_column_asc
 sort_column_secondary_asc
 ListPanel::OnCheckButtonChecked sanity
-Assertion Failed: bPanelFound
+bPanelFound
 m_ColumnsData
 m_ColumnsData[ iColumn ].m_strCustomStyle
 m_vecSections
@@ -3122,12 +3127,9 @@ queueAsList
 queueAsList[ iData ]
 m_VisibleItems
 m_vecVisibleItemsYPos
-m_pTextImage
 m_SelectedItems
-m_pImagePanel
 m_VecURLLabels
 m_jumpHandler
-m_pImageList
 ListPanelColumnHeader
 ListPanelDragger
 ListPanelColumnSelectButton
@@ -3140,29 +3142,29 @@ ListPanelCheckBox::OnThink()
 different KV data types in a single list column
 ListPanelCollapserBase::OnAppearanceChanged()
 ListViewPanel
-Assertion Failed: font
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/ListViewPanel.cpp
+font
 ListViewItemSelected
 ListPanel.BgColor
 ListViewItem
 ListPanel.TextBgColor
-Assertion Failed: m_SeparatorPanels.Count() == 0
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/Menu.cpp
-Assertion Failed: m_MenuItems.IsValidIndex(itemID)
-Assertion Failed: child
-Assertion Failed: startItem >= 0
+m_SeparatorPanels.Count() == 0
+m_MenuItems.IsValidIndex(itemID)
+child
+startItem >= 0
 MenuClose
 MenuItemSelected
 MenuScrollBar
 KeyModeSet
-Assertion Failed: itemNum >= 0
+itemNum >= 0
 MenuItemHighlight
-Assertion Failed: row != -1
+row != -1
 MenuSeparator
-Assertion Failed: m_MenuItems.IsValidIndex( itemID )
-Assertion Failed: parent
-Assertion Failed: menu
-Assertion Failed: relative
+m_MenuItems.IsValidIndex( itemID )
+parent
+menu
+relative
 vgui::Menu
 m_MenuItems
 m_SortedItems
@@ -3173,16 +3175,15 @@ CloseMenu
 CursorEnteredMenuItem
 VPanel
 CursorExitedMenuItem
-Assertion Failed: m_bCheckable
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/vgui_controls/MenuItem.h
-Assertion Failed: m_TotalElements != InvalidIndex()
+m_bCheckable
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utllinkedlist.h
+m_TotalElements != InvalidIndex()
 %s overflow!
-Assertion Failed: IsValidIndex(elem)
-Assertion Failed: IsInList(before)
+IsValidIndex(elem)
+IsInList(before)
 Invalid index %u
 MenuBar
-menu
 menubar
 Failed to load menu file %s
 divider
@@ -3200,8 +3201,8 @@ ShellCmd
 showDownArrow
 , int showDownArrow
 MenuItem
-Assertion Failed: !(cascadeMenu && checkable)
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/MenuItem.cpp
+!(cascadeMenu && checkable)
 rightarrow
 Menu.TextInset
 vgui::MenuItem
@@ -3225,14 +3226,14 @@ oldtall
 LayoutFileChanged
 file
 LocalizationFileChanged
-Assertion Failed: IsVisible()
+IsVisible()
 SetAlpha
-Assertion Failed: IsTriplePressAllowed()
+IsTriplePressAllowed()
 KeyCodePressed
 code
-Assertion Failed: binding
-Assertion Failed: IsValidKeyBindingsContext()
-Assertion Failed: !IsValidKeyBindingsContext() || handle == GetKeyBindingsContext()
+binding
+IsValidKeyBindingsContext()
+!IsValidKeyBindingsContext() || handle == GetKeyBindingsContext()
 KeyCodeTyped
 KeyTyped
 unichar
@@ -3249,7 +3250,7 @@ Panel::ScreenToLocal
 Panel::ParentLocalToScreen
 OnRequestFocus
 subFocus
-Assertion Failed: buildGroup != NULL
+buildGroup != NULL
 Panel::InternalPerformLayout()
 DragDrop.DragFrame
 DragDrop.DropFrame
@@ -3257,9 +3258,9 @@ Tooltip.Delay
 Tooltip.Anchor
 Cursor
 Parent
-Assertion Failed: pScheme
+pScheme
 ApplySchemeSettings did not chain back to base class: %s
-Assertion Failed: GetVParent()
+GetVParent()
 max
 visible
 AutoResize
@@ -3288,14 +3289,14 @@ string fieldName, int xpos, int ypos, int wide, int tall, bool visible, bool ena
 ClearSchemeSettings
 RequestFocus
 direction
-Assertion Failed: !("No handler for vgui message function")
+!("No handler for vgui message function")
 Message '%s', sent to '%s', has invalid parameter types
-Assertion Failed: !("Invalid number of parameters")
+!("Invalid number of parameters")
 -vguimessages
 set to see debug vgiui2 messages
 Message '%s', sent to '%s', has an invalid parameter type
 Message '%s' not handled by panel '%s'
-Assertion Failed: target
+target
 Already have converter for type %s, ignoring...
 float
 int
@@ -3308,27 +3309,26 @@ vgui::HFont
 proportional_float
 proportional_int
 textureid
-Assertion Failed: outputData
-Assertion Failed: inputData
-Assertion Failed: scriptname
-Assertion Failed: m_pDragDrop->m_bDragging
+outputData
+inputData
+scriptname
+m_pDragDrop->m_bDragging
 x
-Assertion Failed: m_pDragDrop->m_DragData.Count()
-Assertion Failed: m_pDragDrop
+m_pDragDrop->m_DragData.Count()
+m_pDragDrop
 DragDrop
 vgui::Panel
 m_pTooltips
 _actionSignalTargetDar
-Assertion Failed: pChild
-m_pDragDrop
+pChild
 $
 %s%s=%s
-Assertion Failed: format
+format
 GetPanelMessageMapDictionary()
 g_AnimationPropertyConverters
 GetPanelKeyBindingMapDictionary()
-Assertion Failed: !pArray || (Base() >= (pArray + size)) || (pArray >= (Base() + Count()) )
-Assertion Failed: count >= 0
+!pArray || (Base() >= (pArray + size)) || (pArray >= (Base() + Count()) )
+count >= 0
 Repaint
 MouseCaptureLost
 SetFocus
@@ -3348,7 +3348,6 @@ MouseReleased
 MouseFocusTicked
 Invalidate
 Move
-0
 A
 D
 H
@@ -3368,8 +3367,8 @@ S
 <
 >
 Can't add Keybindings Context for unnamed panels
-Assertion Failed: entry
-Assertion Failed: scheme
+entry
+scheme
 true
 vgui::DragDrop_t
 m_DragData
@@ -3382,8 +3381,8 @@ CPanelKeyBindingMapDictionary
 m_MessageMaps[ iMessageMap ].map->defaultkeys
 m_MessageMaps[ iMessageMap ].map->boundkeys
 m_PanelKeyBindingMapPool
-Assertion Failed: nIndex < ( unsigned int )m_list.Count()
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlhandletable.h
+nIndex < ( unsigned int )m_list.Count()
 ProgressBar
 progress
 continuous
@@ -3402,7 +3401,6 @@ AddNewTab
 TabMenuButton
 DefaultVerySmall
 Default
-Assertion Failed: tab
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/PropertySheet.cpp
 tab
 PageCountChanged
@@ -3415,7 +3413,6 @@ tabMenuMenu
 OpenTabPage
 index
 TabMenuItemFlash
-Assertion Failed: panel
 Alpha
 page
 ApplyButtonEnable
@@ -3438,12 +3435,12 @@ TabCloseButton
 screenx
 screeny
 propertysheet
-Assertion Failed: m_pParent->IsDraggableTab()
+m_pParent->IsDraggableTab()
 PageDragFrame
 DragPropertySheet
 resource/layout/pagedragframe.layout
 PageDragPanel
-Assertion Failed: (unsigned)elem <= (unsigned)m_Size
+(unsigned)elem <= (unsigned)m_Size
 #QueryBox_Cancel
 QueryBox
 RadioButton
@@ -3457,8 +3454,8 @@ RichText
 RichText.InsetX
 RichText.InsetY
 RichText::DrawString
-Assertion Failed: startIndex < m_TextStream.Count()
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/RichText.cpp
+startIndex < m_TextStream.Count()
 RichText::OnThink()
 RichText::RecalculateLineBreaks
 #TextEntry_SelectAll
@@ -3466,7 +3463,7 @@ DoSelectAll
 #TextEntry_CopyAllToClipboard
 DoCopyAllText
 RichTextReceivedUnneededFocus
-Assertion Failed: m_FormatStream[i].textStreamIndex > cullPos
+m_FormatStream[i].textStreamIndex > cullPos
 TextClicked
 scrollbar
 textfile
@@ -3490,8 +3487,8 @@ m_dictStyles
 m_pFontWidthCache
 ClickPanel
 RichTextInterior
-Assertion Failed: bitNum >= 0 && bitNum < this->Size()
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/bitstring.h
+bitNum >= 0 && bitNum < this->Size()
 ftp://
 mailto:
 m_mapCharToWidth
@@ -3516,8 +3513,8 @@ SliderHoriz
 TextEntry.IMEBGColor
 TextEntry.IMEFGColor
 TextKillFocus
-TextEntry field is much too large: %d characters, %f pixels wanted, %d pixels available
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/TextEntry.cpp
+TextEntry field is much too large: %d characters, %f pixels wanted, %d pixels available
 ScrollBar
 EditMenu
 #TextEntry_Cut
@@ -3526,7 +3523,7 @@ DoCutSelected
 DoCopySelected
 #TextEntry_Paste
 DoDeleteThenPaste
-Assertion Failed: m_pEditMenu
+m_pEditMenu
 TextNewLine
 TextEscape
 Resource\warning.wav
@@ -3577,19 +3574,19 @@ IMESentenceModes
 resource/icon_clear_field
 TextEntryClearButton
 ImagePanel
-Assertion Failed: !pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
-Assertion Failed: (elem == Count()) || IsValidIndex(elem)
-Assertion Failed: elem >= 0 && num >= 0 && INT_MAX - elem >= num
-Assertion Failed: elem + num <= Count()
+!pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
+(elem == Count()) || IsValidIndex(elem)
+elem >= 0 && num >= 0 && INT_MAX - elem >= num
+elem + num <= Count()
 TextImage::Paint()
-Assertion Failed: echar >= schar
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/TextImage.cpp
-Assertion Failed: wordStartIndex > m_LineBreaks[ m_LineBreaks.Count() - 1 ]
-Assertion Failed: wordStartIndex >= _utext
-Assertion Failed: lineStartIndex > m_LineBreaks[ m_LineBreaks.Count() - 1 ]
-Assertion Failed: lineStartIndex >= _utext
-Assertion Failed: nNumChars >= 0
-Assertion Failed: pLineEnd >= pLineStart
+echar >= schar
+wordStartIndex > m_LineBreaks[ m_LineBreaks.Count() - 1 ]
+wordStartIndex >= _utext
+lineStartIndex > m_LineBreaks[ m_LineBreaks.Count() - 1 ]
+lineStartIndex >= _utext
+nNumChars >= 0
+pLineEnd >= pLineStart
 vgui::TextImage
 m_PerLineEllipses
 m_sText
@@ -3600,13 +3597,13 @@ TooltipWindow
 OnFinishRequest
 tooltip_headline
 TooltipHTML
-Assertion Failed: page->m_pToolWindow == this
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/ToolWindow.cpp
+page->m_pToolWindow == this
 TreeNode
 TreeImage
 TreeNodeText
-Assertion Failed: m_pTreeView->IsLabelEditingAllowed()
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/TreeView.cpp
+m_pTreeView->IsLabelEditingAllowed()
 original
 changed
 Text
@@ -3614,19 +3611,19 @@ color
 Expand
 SelectedImage
 Image
-Assertion Failed: m_pTreeView->m_pFilter
+m_pTreeView->m_pFilter
 TreeView
-Assertion Failed: parentItemIndex == -1 || m_NodeList.IsValidIndex(parentItemIndex)
+parentItemIndex == -1 || m_NodeList.IsValidIndex(parentItemIndex)
 droppable
 drophoverdelay
-Assertion Failed: m_pRootNode == NULL
-Assertion Failed: m_NodeList.IsValidIndex(itemIndex)
-Assertion Failed: m_NodeList.IsValidIndex( endItem )
-Assertion Failed: sel
+m_pRootNode == NULL
+m_NodeList.IsValidIndex(itemIndex)
+m_NodeList.IsValidIndex( endItem )
+sel
 TreeViewItemSelected
 itemIndex
-Assertion Failed: IsLabelEditingAllowed()
-Assertion Failed: sel->IsLabelEditingAllowed()
+IsLabelEditingAllowed()
+sel->IsLabelEditingAllowed()
 vgui::TreeView
 m_NodeList
 m_ExpandStateQueue
@@ -3655,19 +3652,19 @@ ToolWindow::s_ToolWindows
 g_ButtonSoundNames
 BuildGroup::ValidateGlobals
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/bitstring.cpp
-Assertion Failed: resizeNumBits >= 0
-Assertion Failed: !m_pInt
-Assertion Failed: GetInts()
+resizeNumBits >= 0
+!m_pInt
+GetInts()
 CVariableBitStringBase
 {}()':
 Bad expression token: %c at %d in %s
 Bad expression token: %c %c
-V_RemoveDotSlashes failed for "%s".
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
+V_RemoveDotSlashes failed for "%s".
 %s%c%s
 ..
 %s/%s
-Assertion Failed: !"Failed to CFStringCreateWithCString watcher path"
+!"Failed to CFStringCreateWithCString watcher path"
 m_listChangedFiles
 File change notification for %s but no file contents changed based on hash
 m_strWatchPath
@@ -3677,18 +3674,18 @@ Element( i )
 CPathString
 .dylib
 %s/%s%s
-Assertion Failed: strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/interface.cpp
+strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
 .cpl
 %s%s
 g_VecLoadedModules
-Assertion Failed: g_VecLoadedModules[ iLoadedModules ].m_cRef > 0
+g_VecLoadedModules[ iLoadedModules ].m_cRef > 0
 0123456789abcdef
 %%%d
 ]:%u
 ReadToken overflow
-Assertion Failed: filesystem
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/KeyValues.cpp
+filesystem
 You should clear the KeyValues instance before calling this function or call MergeFromFile instead.
 "
 KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.
@@ -3719,35 +3716,34 @@ ANDROID32
 ANDROID64
 X360
 PS3
-Assertion Failed: buf.GetFlags() & CUtlBuffer::TEXT_BUFFER
+buf.GetFlags() & CUtlBuffer::TEXT_BUFFER
 #include
 #include is NULL
 KeyValues don't support #include anymore, file "%s"
 LoadFromBuffer: missing {   (current key: '%s')
 Error while parsing text KeyValues for resource %s
-Assertion Failed: pKeyValuesTextParser
+pKeyValuesTextParser
 RecursiveLoadFromBuffer:  got EOF instead of keyname
 RecursiveLoadFromBuffer:  got empty keyname
 RecursiveLoadFromBuffer:  got NULL key
 RecursiveLoadFromBuffer:  got } in key
 RecursiveLoadFromBuffer:  got conditional between key and value
 KeyValues
-Assertion Failed: m_errorIndex>=0
-Assertion Failed: stackLevel >= 0 && stackLevel < m_errorIndex
+m_errorIndex>=0
+stackLevel >= 0 && stackLevel < m_errorIndex
 KeyValues Error: %s in file %s [offset: %d]
 ,
 (*
 *),
 \\
 Memory leak: mempool blocks left in memory: %d
-CMemoryPool::AddNewBlob: mode == GROW_NONE
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/mempool.cpp
-Assertion Failed: blobSize <= nMaxBlobSize
-Fatal Assertion Failed: pBlob
+CMemoryPool::AddNewBlob: mode == GROW_NONE
+blobSize <= nMaxBlobSize
+pBlob
 CMemoryPool::Alloc: ran out of memory
-Assertion Failed: k_nMemPoolMagic_Free == *(( (int *) returnBlock) - 1)
+k_nMemPoolMagic_Free == *(( (int *) returnBlock) - 1)
 CMemoryPool
-Assertion Failed: false
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/netadr.cpp
 loopback
 broadcast
@@ -3755,20 +3751,20 @@ broadcast
 %i.%i.%i.%i:%i
 unknown
 %d.%d.%d.%d:%d
-Assertion Failed: m_usType == k_EIPTypeV6 && netadr.m_usType == k_EIPTypeV6
-Assertion Failed: m_usType == k_EIPTypeV6
-Assertion Failed: pvecAddressesOut != nullptr || pSingleOutput != nullptr
+m_usType == k_EIPTypeV6 && netadr.m_usType == k_EIPTypeV6
+m_usType == k_EIPTypeV6
+pvecAddressesOut != nullptr || pSingleOutput != nullptr
 about to perform blocking dns call from the main thread.  consider refactoring.
 BResolveHostString - unexpected DNS lookup flag '%d'
-Assertion Failed: info.m_pReplacementString == 0
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
+info.m_pReplacementString == 0
 Expected %lld but got %lld!
-Assertion Failed: pConv && pConv->GetDelimiterLength() > 0
-Assertion Failed: nSize >= 0
-Assertion Failed: m_Put >= 0
-Assertion Failed: offset >= 0
-Assertion Failed: offset >= -m_Put && offset <= INT_MAX-m_Put
-Assertion Failed: offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
+pConv && pConv->GetDelimiterLength() > 0
+nSize >= 0
+m_Put >= 0
+offset >= 0
+offset >= -m_Put && offset <= INT_MAX-m_Put
+offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
 %u
 %llu
 %lld
@@ -3781,35 +3777,32 @@ a
 ?
 '
 %.18g
-Assertion Failed: nSizeOfType > 0
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
-Assertion Failed: nGrowSize >= 0
-Assertion Failed: m_nAllocationCount >= 0
+nSizeOfType > 0
+nGrowSize >= 0
+m_nAllocationCount >= 0
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
-Assertion Failed: num > 0
-Assertion Failed: num >= 0
+num > 0
+num >= 0
 CUtlString::SetValue
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
 CUtlString::ReplaceInternal
-Assertion Failed: pstrNew + nNewLength == pstrDestination + 1
-Assertion Failed: cActualReplacements == cReplacements
+pstrNew + nNewLength == pstrDestination + 1
+cActualReplacements == cReplacements
 Assertion failed: length > k_cchMaxString
 0123456789ABCDEF
 CUtlStringBuilder::InternalPrepareBuffer
-Assertion Failed: nMinCapacity > Capacity()
-Assertion Failed: nMinCapacity >= nChars
-Assertion Failed: nMinCapacity <= k_nMaxStringSize
+nMinCapacity > Capacity()
+nMinCapacity >= nChars
+nMinCapacity <= k_nMaxStringSize
 Error State on string being set.
 CUtlStringBuilder::Data::MoveToHeap
-Assertion Failed: !pszString || pszString[nChars] == '\0'
-Assertion Failed: s_bAllowStaticSymbolTable
+!pszString || pszString[nChars] == '\0'
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
+s_bAllowStaticSymbolTable
 s_pSymbolTable
 0
-}&
-&
-&
-&
+&
 j
 j
 j
@@ -3832,7 +3825,6 @@ p
 0
 p
 0
-o
 p
 0
 j
@@ -3843,7 +3835,7 @@ j
 j
 j
 j
-}%
+_%
 0
 p
 0
@@ -3851,9 +3843,6 @@ j
 j
 j
 j
-%
-%
-<%
 0
 0
 AT=
@@ -3895,9 +3884,6 @@ IcE
 IcE
 @
 @
-$
-$
-$
 V
 =
 =
@@ -3921,14 +3907,17 @@ M9e
 ?
 ?
 ?
+0
 @
 @
-H
+
 
 
 
 d
 A+M
+
+
 j
 j
 j
@@ -3937,7 +3926,6 @@ j
 j
 0
 =
-0
 0
 j
 j
@@ -4027,8 +4015,9 @@ j
 j
 j
 j
+Ic
 E
-\
+H
 j
 j
 j
@@ -4103,7 +4092,6 @@ j
 j
 j
 j
-w
 @
 @
 &
@@ -4126,7 +4114,6 @@ j
 j
 j
 j
-Ic
 0
 @
 @
@@ -4175,11 +4162,12 @@ d
 =*.*
 =
 @
+M
 @
 @
+O
 @
 @
-
 @
 @
 @

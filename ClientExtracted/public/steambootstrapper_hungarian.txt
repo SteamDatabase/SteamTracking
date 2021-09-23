@@ -31,6 +31,7 @@
 "SteamBootstrapper_PercentComplete"			"%percent%%% kész"
 "SteamBootstrapper_NoNetwork"					"A(z) %appname% frissítése csak online lehetséges. Ellenőrizd a hálózati kapcsolatot, és próbáld újra."
 "SteamBootstrapper_FailedMkdir"				"A(z) %dirname% könyvtár létrehozása sikertelen, %errno% hiba lépett fel"
+"SteamBootstrapper_NotWriteable"				"A(z) %dirname% könyvtár nem írható."
 "SteamBootstrapper_FailedDownloadHTTPError"	"A letöltés sikertelen: %errno% http hiba"
 "SteamBootstrapper_AlreadyRunningError"		"A(z) %appname% egy példánya már fut ezen a számítógépen, egy másik felhasználói fiók alatt."
 "SteamBootstrapper_MoveContentDir_DestExists" "A(z) %appname% módosította a játéktartalmak mentési útvonalát a „~/Documents/Steam Content” helyről a „~/Library/Application Support/Steam/SteamApps” helyre. Játékfájlok vannak az eredeti helyen, és a(z) %appname% nem tudta áthelyezni a fájlokat, mert már léteznek fájlok az új helyen. Előfordulhat, hogy manuálisan kell áthelyezned a fájlokat, vagy törölnöd kell a régi fájlokat, és újra le kell töltened a játékaidat. Ennek ellenére folytatod?"

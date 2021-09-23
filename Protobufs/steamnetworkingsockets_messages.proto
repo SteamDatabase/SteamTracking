@@ -161,6 +161,12 @@ message CMsgSteamNetworkingP2PRendezvous {
 		optional .CMsgICERendezvous ice = 1;
 	}
 
+	message ApplicationMessage {
+		optional bytes data = 1;
+		optional uint64 msg_num = 2;
+		optional uint32 flags = 3;
+	}
+
 	optional string from_identity = 8;
 	optional fixed32 from_connection_id = 9;
 	optional string to_identity = 10;
@@ -175,6 +181,7 @@ message CMsgSteamNetworkingP2PRendezvous {
 	optional uint32 ack_reliable_msg = 11;
 	optional uint32 first_reliable_msg = 12;
 	repeated .CMsgSteamNetworkingP2PRendezvous.ReliableMessage reliable_messages = 13;
+	repeated .CMsgSteamNetworkingP2PRendezvous.ApplicationMessage application_messages = 15;
 }
 
 message CMsgSteamNetworkingICESessionSummary {

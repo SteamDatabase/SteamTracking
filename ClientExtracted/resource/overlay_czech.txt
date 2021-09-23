@@ -4,7 +4,7 @@
 "Tokens"
 {
 "Overlay_Splash_Hotkey"		"Překrytí otevřete stiskem „%hotkey%“"
-"Overlay_Splash_Message"		"Zůstaňte i při hraní ve spojení s komunitou a přáteli."
+"Overlay_Splash_Message"		"Zůstaňte i při hraní ve spojení s komunitou a přáteli."
 
 "Overlay_SettingsTabTitle"	"Ve hře"
 "Overlay_SettingsTabTitleApp"	"V aplikaci"
@@ -207,7 +207,7 @@
 "Overlay_Publish_Error" "Při zveřejňování snímku obrazovky došlo k chybě. Zkuste to později znovu."
 "Overlay_Publish_Error_Quota" "Pro nahrání tohoto snímku nemáte ve funkci Steam Cloud dostatek místa"
 "Overlay_Publish_Error_Quota_Plural" "Pro nahrání těchto snímků nemáte ve funkci Steam Cloud dostatek místa"
-"Overlay_Delete_Screenshot_Error" "Při odstraňování snímku došlo k chybě. Zkuste to později znovu."
+"Overlay_Delete_Screenshot_Error" "Při mazání snímku obrazovky došlo k chybě. Zkuste to později znovu."
 "Overlay_Tag_As_Potential_Spoiler" "Označit jako potenciální spoiler"
 "Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_Title" "Právní ujednání workshopu služby Steam"
 "Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_Desc" "Pro možnost plného zveřejnění položky musíte vyjádřit souhlas s nejnovější verzí Právního ujednání workshopu služby Steam."

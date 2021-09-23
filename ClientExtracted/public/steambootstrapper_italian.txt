@@ -31,6 +31,7 @@
 "SteamBootstrapper_PercentComplete"			"%percent%%% completato"
 "SteamBootstrapper_NoNetwork"					"È necessario che %appname% sia online per l'aggiornamento. Verifica la connessione alla rete e riprova."
 "SteamBootstrapper_FailedMkdir"				"Impossibile creare la cartella %dirname%: errore %errno%"
+"SteamBootstrapper_NotWriteable"				"Non è possibile scrivere nella directory %dirname%."
 "SteamBootstrapper_FailedDownloadHTTPError"	"Download non riuscito: errore http %errno%"
 "SteamBootstrapper_AlreadyRunningError"		"Una richiesta di %appname% è già in esecuzione su questo computer con un account utente diverso."
 "SteamBootstrapper_MoveContentDir_DestExists" "È stato modificato il percorso in cui %appname% memorizza i contenuti di gioco da '~/Documents/Steam Content' in '~/Library/Application Support/Steam/SteamApps'. Sono presenti file di gioco nel percorso originario e %appname% non è stato in grado di spostarli poiché ne esistono già nel nuovo percorso. Potrebbe essere necessario spostare i file manualmente o cancellare i vecchi file e scaricare nuovamente i giochi. Continuare?"

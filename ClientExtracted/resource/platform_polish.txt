@@ -30,8 +30,8 @@
 "app_task_steamvr"	"SteamVR"
 "app_task_stop_streaming"	"Zatrzymaj Remote Play"
 
-"Steam_AccountAlreadyLoggedInNeedShutdown"		"Twoje konto - %account% - jest obecnie używane na innym komputerze.\nNależy najpierw zamknąć Steam na innym komputerze, aby móc się zalogować z tego stanowiska."
-"Steam_AccountAlreadyLoggedInNeedPassword"		"To konto jest aktualnie używane w innym miejscu.\nWprowadź ponownie hasło, aby zalogować się na tym komputerze."
+"Steam_AccountAlreadyLoggedInNeedShutdown"		"Twoje konto (%account%) jest obecnie używane na innym urządzeniu.\nMusisz wyłączyć Steam na twoim innym komputerze, by móc się zalogować tutaj."
+"Steam_AccountAlreadyLoggedInNeedPassword"		"To konto jest obecnie zalogowane w innym miejscu.\nWprowadź ponownie hasło, aby zalogować się na tym komputerze."
 "Steam_AccountOfflineMissingConfig"				"Nie udało się pobrać danych konfiguracji platformy."
 "Steam_NeverConnectedNoConnection"				"Dostęp do konta „%account%” nigdy nie był uzyskany z tego komputera i połączenie z serwerami Steam nie mogło zostać nawiązane.\nNiektóre usługi nie będą dostępne. Steam będzie kontynuował próby połączenia się z serwerami, a usługi będą dostępne po nawiązaniu połączenia."
 "Steam_RefreshEnterTwoFactorCode"				"Wpisz kod z tokena uwierzytelniającego Steam Guard"

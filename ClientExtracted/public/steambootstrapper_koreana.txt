@@ -31,6 +31,7 @@
 "SteamBootstrapper_PercentComplete"			"%percent%%% 완료"
 "SteamBootstrapper_NoNetwork"					"%appname% 업데이트 과정은 인터넷을 통해 진행됩니다. 네트워크 연결을 확인하고 다시 시도하십시오."
 "SteamBootstrapper_FailedMkdir"				"디렉토리 %dirname% 생성 실패, %errno% 오류"
+"SteamBootstrapper_NotWriteable"				"%dirname% 디렉터리에 쓰기 작업을 할 수 없습니다."
 "SteamBootstrapper_FailedDownloadHTTPError"	"다운로드 실패: http 오류(%errno%)"
 "SteamBootstrapper_AlreadyRunningError"		"이 컴퓨터에서 %appname%이(가) 이미 다른 사용자 계정으로 실행 중입니다."
 "SteamBootstrapper_MoveContentDir_DestExists" "%appname%의 게임 콘텐츠 저장 위치가 '~/Documents/Steam Content'에서 '~/Library/Application Support/Steam/SteamApps'로 변경되었습니다. 새로운 위치에 이미 파일이 존재하기 때문에 원래 위치의 게임 파일을 이동하지 못했습니다. 원래 위치의 파일을 직접 옮기거나 오래된 파일을 지우고 게임을 다시 다운로드할 수 있습니다. 계속 실행하시겠습니까?"

@@ -2816,6 +2816,7 @@
 	"Steam_LaunchOption_Application"			"Пускане на {s:gamename}"
 	"Steam_LaunchOption_SafeMode"					"Пускане на {s:gamename} в безопасен режим"
 	"Steam_LaunchOption_VR"								"Пускане на {s:gamename} в Steam VR режим"
+	"Steam_LaunchOption_openxr"							"Пускане на {s:gamename} в режим OpenXR"
 	"Steam_LaunchOption_othervr"						"Пускане на {s:gamename} в друг режим за виртуална реалност"
 	"Steam_LaunchOption_openvroverlay"					"Пускане на {s:gamename} като Steam VR слой"
 	"Steam_LaunchOption_Server"						"Пускане на специализиран сървър"

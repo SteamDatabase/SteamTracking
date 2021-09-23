@@ -118,7 +118,7 @@
 
 
 "Friends_UserRequestingFriendship_Title"		"Venner – %friend%"
-"Friends_UserRequestingFriendship_Info"		"%friend% har lagt deg til i sin Venner-liste."
+"Friends_UserRequestingFriendship_Info"		"%friend% har lagt deg til på vennelisten sin."
 "Friends_AllowUserToSeeMeOnline"				"Tillat at %friend% kan se når du er tilkoblet og kan kontakte deg."
 "Friends_BlockUserFromSeeingMeOnline"			"Hindre at denne personen ser når du er tilkoblet og kan kontakte deg."
 
@@ -437,8 +437,8 @@
 "Friends_WhenThisFriendJoinsGame"				"Når %FriendName% blir med i et spill"
 "Friends_WhenThisFriendComesOnline"			"Når %FriendName% kommer online"
 "Friends_WhenReceiveMessageFromThisFriend"	"Når jeg mottar en melding fra %FriendName%"
-"Friends_InviteInfo_HasAdded"					"har lagt til deg i sin"
-"Friends_InviteInfo_FriendsList"				"venneliste"
+"Friends_InviteInfo_HasAdded"					"har lagt deg til i"
+"Friends_InviteInfo_FriendsList"				"vennelisten"
 "Friends_InviteInfo_BeenInvited"				"Du har fått en invitasjon"
 "Friends_InviteInfo_JoinGroup"				"til å bli med i Steam-gruppen"
 "Friends_GroupEvent_NewEventScheduled"		"har planlagt et nytt arrangement"

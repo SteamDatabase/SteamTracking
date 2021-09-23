@@ -31,6 +31,7 @@
 "SteamBootstrapper_PercentComplete"			"%percent%%% complet"
 "SteamBootstrapper_NoNetwork"					"%appname% trebuie să fie online pentru a se actualiza. Verificaţi conexiunea la reţea şi încercaţi din nou."
 "SteamBootstrapper_FailedMkdir"				"Nu s-a putut crea directorul %dirname%, s-a primit eroarea %errno%"
+"SteamBootstrapper_NotWriteable"				"Nu se poate scrie în directorul %dirname%."
 "SteamBootstrapper_FailedDownloadHTTPError"	"Descărcare eşuată: eroare http %errno%"
 "SteamBootstrapper_AlreadyRunningError"		"O instanță de %appname% rulează deja pe acest calculator, sub un alt cont de utilizator."
 "SteamBootstrapper_MoveContentDir_DestExists" "%appname% a schimbat locul de stocare a conţinutului aferent jocurilor de la '~/Documents/Steam Content' la '~/Library/Application Support/Steam/SteamApps'. Aveţi fişiere de jocuri în locul original şi %appname% nu a putut să le mute deoarece fişierele există deja în locul nou. Poate fi necesar să mutaţi fişierele manual sau să ştergeţi fişierele vechi şi să descărcaţi din nou jocurile. Continuaţi oricum?"

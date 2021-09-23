@@ -9,6 +9,15 @@ enum EClientNotificationType {
 	k_EClientNotificationType_FriendOnline = 4;
 	k_EClientNotificationType_Achievement = 5;
 	k_EClientNotificationType_LowBattery = 6;
+	k_EClientNotificationType_SystemUpdate = 7;
+	k_EClientNotificationType_FriendMessage = 8;
+	k_EClientNotificationType_GroupChatMessage = 9;
+}
+
+enum ESystemUpdateNotificationType {
+	k_ESystemUpdateNotificationType_Invalid = 0;
+	k_ESystemUpdateNotificationType_Available = 1;
+	k_ESystemUpdateNotificationType_NeedsRestart = 2;
 }
 
 message CClientNotificationDownloadCompleted {
@@ -44,4 +53,29 @@ message CClientNotificationAchievement {
 
 message CClientNotificationLowBattery {
 	optional float pct_remaining = 1;
+}
+
+message CClientNotificationSystemUpdate {
+	optional .ESystemUpdateNotificationType type = 1 [default = k_ESystemUpdateNotificationType_Invalid];
+}
+
+message CClientNotificationFriendMessage {
+	optional string tag = 1;
+	optional string steamid = 2;
+	optional string title = 3;
+	optional string body = 4;
+	optional string icon = 5;
+	optional uint32 notificationid = 6;
+}
+
+message CClientNotificationGroupChatMessage {
+	optional string tag = 1;
+	optional string steamid_sender = 2;
+	optional string chat_group_id = 3;
+	optional string chat_id = 4;
+	optional string title = 5;
+	optional string body = 6;
+	optional string rawbody = 7;
+	optional string icon = 8;
+	optional uint32 notificationid = 9;
 }

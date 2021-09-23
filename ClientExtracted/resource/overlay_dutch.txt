@@ -67,7 +67,7 @@
 "Overlay_Taskbar_Screenshots"	"Screenshots"
 "Overlay_Taskbar_DLC"		"DLC"
 "Overlay_Taskbar_Guide"		"Instructies"
-"Overlay_Taskbar_legacycdkey"	"Cd-code"
+"Overlay_Taskbar_legacycdkey"	"Cd-sleutel"
 "Overlay_Taskbar_Recommend"	"Aanbevelen"
 "Overlay_Taskbar_Workshop"	"Workshop"
 "Overlay_Taskbar_SteamGuides"		"Communitygidsen"
@@ -122,13 +122,13 @@
 
 "Overlay_LowBattery_Message"	"Je batterij gaat nog %batteryTime% ,minuten mee"
 
-"Overlay_CDKeyNotification_Message" "Voor dit Steam-spel heb je een speciale productcode nodig. Als je hierom wordt gevraagd, vul je de code hieronder in."
-"Overlay_CDKeyNotification_Message_MultipleKey" "Voor dit Steam-spel heb je meerdere productcodes nodig. Als je hierom wordt gevraagd, druk dan op %hotkey% om de codes te zien."
-"Overlay_CDKeyNotification_MessageApp" "Voor dit Steam-programma heb je een speciale productcode nodig. Als je hierom wordt gevraagd, vul je de code hieronder in."
-"Overlay_CDKeyNotification_Message_MultipleKeyApp" "Voor dit Steam-programma heb je meerdere productcodes nodig. Als je hierom wordt gevraagd, druk dan op %hotkey% om de codes te zien."
+"Overlay_CDKeyNotification_Message" "Voor dit Steam-spel heb je een speciale productsleutel nodig. Als je hierom wordt gevraagd, vul je de code hieronder in."
+"Overlay_CDKeyNotification_Message_MultipleKey" "Voor dit Steam-spel heb je meerdere productsleutels nodig. Als je hierom wordt gevraagd, druk dan op %hotkey% om de codes te zien."
+"Overlay_CDKeyNotification_MessageApp" "Voor dit Steam-programma heb je een speciale productsleutel nodig. Als je hierom wordt gevraagd, vul je de code hieronder in."
+"Overlay_CDKeyNotification_Message_MultipleKeyApp" "Voor dit Steam-programma heb je meerdere productsleutels nodig. Als je hierom wordt gevraagd, druk dan op %hotkey% om de codes te zien."
 "Overlay_CDKeyNotification_CDKey"   "%cdkey%"
 "Overlay_CDKeyNotification_Hotkey"  "Druk op %hotkey% om dit bericht te sluiten"
-"Overlay_CDKeyNotification_Title"	"Cd-code van %gamename%"
+"Overlay_CDKeyNotification_Title"	"Cd-sleutel van %gamename%"
 
 "Overlay_DontNotifyAgain"		"Deze waarschuwing niet meer weergeven"
 

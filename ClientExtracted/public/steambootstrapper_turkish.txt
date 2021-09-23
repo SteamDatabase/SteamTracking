@@ -31,6 +31,7 @@
 "SteamBootstrapper_PercentComplete"			"%percent%%% tamamlandı"
 "SteamBootstrapper_NoNetwork"					"%appname%, güncelleme için çevrimiçi olmalıdır.  Lütfen ağ bağlantınızı doğrulayın ve yeniden deneyin."
 "SteamBootstrapper_FailedMkdir"				"%dirname% dizini oluşturulamıyor, %errno% hatası"
+"SteamBootstrapper_NotWriteable"				"%dirname% dizinine yazılamaz."
 "SteamBootstrapper_FailedDownloadHTTPError"	"İndirme başarısız: %errno% http hatası"
 "SteamBootstrapper_AlreadyRunningError"		"%appname% uygulamasının bir örneği bu bilgisayarda zaten çalışmaktadır, başka bir hesap kullanarak deneyin."
 "SteamBootstrapper_MoveContentDir_DestExists" "%appname%, oyun içeriklerini depolama yerini '~/Documents/Steam Content' den '~/Library/Application Support/Steam/SteamApps' olarak değiştirdi.  Orijinal depolama yerinde dosyalarınız var ve %appname% bu dosyaları taşıyamıyor çünkü dosyalar zaten yeni depolama yerinde oluşturulmuş.  Bu dosyaları taşıma işlemini elle yapabilir ya da eski dosyaları silerek oyunlarınızı tekrar indirebilirsiniz.  Devam edilsin mi?"

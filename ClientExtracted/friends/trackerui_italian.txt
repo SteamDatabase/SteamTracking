@@ -54,7 +54,7 @@
 "Friends_InGame"		"In gioco"
 "Friends_InApp"			"In un'applicazione"
 "Friends_InMod"			"In una mod"
-"Friends_InShortcut"		"In gioco non di Steam"
+"Friends_InShortcut"		"In un gioco non di Steam"
 "Friends_Blocked"		"Bloccato"
 
 "Friends_AddFriend"		"Cerca nella Comunità..."

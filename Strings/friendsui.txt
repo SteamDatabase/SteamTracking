@@ -50,14 +50,16 @@ __DATA
 0
 __thread_data
 __DATA
-@BZ
+HZ
 @
-@BZ
+HZ
 __thread_bss
 __DATA
+@HZ
 __bss
 __DATA
-~
+@LZ
+P~
 __common
 __DATA
 `.
@@ -68,10 +70,6 @@ __LINKEDIT
 8
 @loader_path/friendsui.dylib
 "
-@;
-@(
-0i[
-P0
 P
 
 
@@ -107,6 +105,7 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
+(a[
 22CJSCallbackFunc_HTMLJS
 15CJSCallbackFunc
 11CRefCountedI20CRefCountServiceBaseILb1E6CRefMTEE
@@ -130,147 +129,40 @@ H
 L
 P
 
+(
+0
+8
+@
+(
+0
+8
+@
+H
+P
+X
 
 (
 .
 X
 9
 ?
+@
+F
+G
+R
+H
+X
+f
+`
 36CClientNotificationDownloadCompleted
 31CClientNotificationFriendInvite
 31CClientNotificationFriendInGame
 31CClientNotificationFriendOnline
 30CClientNotificationAchievement
 29CClientNotificationLowBattery
-N6google8protobuf8internal16InternalMetadata9ContainerINS0_15UnknownFieldSetEEE
-N6google8protobuf8internal16InternalMetadata13ContainerBaseE
-20CFriendsImageManager
-7CUtlMapIiPN4vgui6IImageEi8CDefLessE
-10CUtlRBTreeIN7CUtlMapIiPN4vgui6IImageEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEiE
-15CEmoticonButton
-17CItemImageManager
-8GridMenu
-10CHTTPImage
-11CCallResultI10CHTTPImage22HTTPRequestCompleted_tE
-11CCallResultI17CItemImageManager22HTTPRequestCompleted_tE
-7CUtlMapIPKcii22CDefCaselessStringLessE
-10CUtlRBTreeIN7CUtlMapIPKcii22CDefCaselessStringLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
-10CUtlVectorI10CUtlString10CUtlMemoryIS0_EE
-10CUtlVectorIN17CItemImageManager18ImagesToDownload_tE10CUtlMemoryIS1_EE
-11CHTMLWindow
-11IHTMLWindow
-14IHTMLResponses
-20CJSMethodCallHandlerI11CHTMLWindowJ9CSmartPtrI15CJSCallbackFuncEEE
-16CHTMLProtoBufMsgI11CMsgPostURLE
-20CHTMLBaseProtoBufMsg
-16CHTMLProtoBufMsgI31CMsgDisableBackgroundThrottlingE
-16CHTMLProtoBufMsgI28CMsgSetTouchGesturesToCancelE
-NSt3__117bad_function_callE
-16CHTMLProtoBufMsgI17CMsgBrowserRemoveE
-16CHTMLProtoBufMsgI24CMsgStartRequestResponseE
-16CHTMLProtoBufMsgI21CMsgJSExecuteCallbackE
-16CHTMLProtoBufMsgI21CMsgJSReleaseCallbackE
-16CHTMLProtoBufMsgI20CMsgJSRaiseExceptionE
-16CHTMLProtoBufMsgI21CMsgBrowserSetMinSizeE
-16CHTMLProtoBufMsgI28CMsgSetGameOverlayTargetPIDsE
-16CHTMLProtoBufMsgI13CMsgMouseMoveE
-16CHTMLProtoBufMsgI11CMsgKeyDownE
-16CHTMLProtoBufMsgI9CMsgKeyUpE
-21CHTMLWindowController
-21IHTMLWindowController
-14CUtlLinkedListIP11CHTMLWindowiE
-20CBroadcastController
-13IUIController
-N20CBroadcastController35CCallbackInternal_OnBroadcastStatusE
-N20CBroadcastController39CCallbackInternal_OnViewerNeedsApprovalE
-13CCallbackImplILi8EE
-N20CBroadcastController40CCallbackInternal_OnViewerApprovalResultE
-20CJSMethodCallHandlerI20CBroadcastControllerJ9CSmartPtrI15CJSCallbackFuncEEE
-20CJSMethodCallHandlerI20CBroadcastControllerJPKcjEE
-20CJSMethodCallHandlerI20CBroadcastControllerJPKc9CSmartPtrI18CJSCallbackPromiseEEE
-25CFriendSettingsController
-N25CFriendSettingsController41CCallbackInternal_OnClientSettingsChangedE
-20CJSMethodCallHandlerI25CFriendSettingsControllerJ9CSmartPtrI15CJSCallbackFuncEEE
-20CJSMethodCallHandlerI25CFriendSettingsControllerJPKcEE
-20CJSMethodCallHandlerI25CFriendSettingsControllerJ9CSmartPtrI18CJSCallbackPromiseEEE
-N21CRemotePlayController42CCallbackInternal_OnRemotePlayInviteResultE
-13CCallbackImplILi1072EE
-N21CRemotePlayController44CCallbackInternal_OnRemotePlaySessionStoppedE
-13CCallbackImplILi40EE
-N21CRemotePlayController44CCallbackInternal_OnStreamingClientConnectedE
-13CCallbackImplILi164EE
-N21CRemotePlayController44CCallbackInternal_OnStreamingClientUsedInputE
-N21CRemotePlayController51CCallbackInternal_OnRemoteClientInputSettingsChangeE
-N21CRemotePlayController46CCallbackInternal_OnRemoteClientStreamLifetimeE
-N21CRemotePlayController44CCallbackInternal_OnRemoteClientLaunchFailedE
-N21CRemotePlayController42CCallbackInternal_OnPlaceholderStateChangeE
-N21CRemotePlayController50CCallbackInternal_OnRemotePlayTogetherGroupCreatedE
-N21CRemotePlayController52CCallbackInternal_OnRemotePlayTogetherGroupDisbandedE
-N21CRemotePlayController50CCallbackInternal_OnRemotePlayTogetherPlayerJoinedE
-13CCallbackImplILi52EE
-N21CRemotePlayController48CCallbackInternal_OnRemotePlayTogetherPlayerLeftE
-N21CRemotePlayController69CCallbackInternal_OnRemoteClientStreamSessionUpdateNetworkUtilizationE
-N21CRemotePlayController58CCallbackInternal_OnRemoteClientRemotePlayClearControllersE
-N21CRemotePlayController60CCallbackInternal_OnRemoteClientRemotePlayControllerIndexSetE
-N21CRemotePlayController57CCallbackInternal_OnRemoteClientRemotePlayQualityOverrideE
-N21CRemotePlayController57CCallbackInternal_OnRemoteClientRemotePlayBitrateOverrideE
-20CJSMethodCallHandlerI21CRemotePlayControllerJ9CSmartPtrI18CJSCallbackPromiseEEE
-20CJSMethodCallHandlerI21CRemotePlayControllerJPKc9CSmartPtrI18CJSCallbackPromiseEEE
-20CJSMethodCallHandlerI21CRemotePlayControllerJPKcS2_9CSmartPtrI18CJSCallbackPromiseEEE
-20CJSMethodCallHandlerI21CRemotePlayControllerJ9CSmartPtrI15CJSCallbackFuncEEE
-20CJSMethodCallHandlerI21CRemotePlayControllerJPKcjS2_9CSmartPtrI18CJSCallbackPromiseEEE
-20CJSMethodCallHandlerI21CRemotePlayControllerJPKcj9CSmartPtrI18CJSCallbackPromiseEEE
-20CJSMethodCallHandlerI21CRemotePlayControllerJb9CSmartPtrI18CJSCallbackPromiseEEE
-20CJSMethodCallHandlerI21CRemotePlayControllerJPKcb9CSmartPtrI18CJSCallbackPromiseEEE
-20CJSMethodCallHandlerI21CRemotePlayControllerJPKcjb9CSmartPtrI18CJSCallbackPromiseEEE
-20CJSMethodCallHandlerI21CRemotePlayControllerJiEE
-20CJSMethodCallHandlerI21CRemotePlayControllerJiiEE
-10CUtlVectorI18RemotePlayPlayer_t10CUtlMemoryIS0_EE
-12CAutoReleaseI15CJSCallbackFuncE
-21CScreenshotController
-20CJSMethodCallHandlerI21CScreenshotControllerJ9CSmartPtrI18CJSCallbackPromiseEEE
-27CSharedConnectionController
-N27CSharedConnectionController24CCallback_OnMessageReadyE
-9CCallbackI27CSharedConnectionController30SharedConnectionMessageReady_tLb0EE
-N27CSharedConnectionController28CCallback_OnServersConnectedE
-9CCallbackI27CSharedConnectionController23SteamServersConnected_tLb0EE
-N27CSharedConnectionController31CCallback_OnServersDisconnectedE
-9CCallbackI27CSharedConnectionController26SteamServersDisconnected_tLb0EE
-20CJSMethodCallHandlerI27CSharedConnectionControllerJ9CSmartPtrI18CJSCallbackPromiseEEE
-20CJSMethodCallHandlerI27CSharedConnectionControllerJj9CSmartPtrI15CJSCallbackFuncEEE
-20CJSMethodCallHandlerI27CSharedConnectionControllerJjiEE
-20CJSMethodCallHandlerI27CSharedConnectionControllerJjPKcEE
-20CJSMethodCallHandlerI27CSharedConnectionControllerJjPKc9CSmartPtrI18CJSCallbackPromiseEEE
-20CJSMethodCallHandlerI27CSharedConnectionControllerJjEE
-7CUtlMapIj7CUtlPtrIN27CSharedConnectionController22SharedConnectionInfo_tEEi8CDefLessE
-10CUtlRBTreeIN7CUtlMapIj7CUtlPtrIN27CSharedConnectionController22SharedConnectionInfo_tEEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
-7CUtlPtrIN27CSharedConnectionController22SharedConnectionInfo_tEE
-7CUtlMapIj9CSmartPtrI18CJSCallbackPromiseEi8CDefLessE
-10CUtlRBTreeIN7CUtlMapIj9CSmartPtrI18CJSCallbackPromiseEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
-24CSteamParentalController
-N24CSteamParentalController35CCallback_OnParentalLockChangeBeginE
-9CCallbackI24CSteamParentalController25ParentalLockChangeBegin_tLb0EE
-N24CSteamParentalController38CCallback_OnParentalLockChangeCompleteE
-9CCallbackI24CSteamParentalController35ParentalLockChangeAttemptComplete_tLb0EE
-N24CSteamParentalController35CCallback_OnParentalWebTokenChangedE
-9CCallbackI24CSteamParentalController25ParentalWebTokenChanged_tLb0EE
-20CJSMethodCallHandlerI24CSteamParentalControllerJ9CSmartPtrI15CJSCallbackFuncEEE
-20CJSMethodCallHandlerI24CSteamParentalControllerJPKcb9CSmartPtrI18CJSCallbackPromiseEEE
-20CJSMethodCallHandlerI24CSteamParentalControllerJEE
-10CUtlVectorIN24CSteamParentalController15UnlockPromise_tE10CUtlMemoryIS1_EE
-27CSteamUIMessagingController
-N27CSteamUIMessagingController37CCallbackInternal_OnClientPostMessageE
-13CCallbackImplILi4288EE
-20CJSMethodCallHandlerI27CSteamUIMessagingControllerJPKc9CSmartPtrI15CJSCallbackFuncEEE
-20CJSMethodCallHandlerI27CSteamUIMessagingControllerJPKcS2_S2_9CSmartPtrI18CJSCallbackPromiseEEE
-25CSteamUIStorageController
-20CJSMethodCallHandlerI25CSteamUIStorageControllerJPKc9CSmartPtrI18CJSCallbackPromiseEEE
-20CJSMethodCallHandlerI25CSteamUIStorageControllerJPKcS2_9CSmartPtrI18CJSCallbackPromiseEEE
-20CJSMethodCallHandlerI25CSteamUIStorageControllerJPKcPK11CMsgJSValue9CSmartPtrI18CJSCallbackPromiseEEE
-15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
-9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
-15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb1EE
-9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb1EE
+31CClientNotificationSystemUpdate
+32CClientNotificationFriendMessage
+35CClientNotificationGroupChatMessage
 (
 $
 (
@@ -533,6 +425,135 @@ P
 43CTransportSignalMsg_WebRTCMessage_Candidate
 33CTransportSignalMsg_WebRTCMessage
 19CTransportSignalMsg
+20CFriendsImageManager
+7CUtlMapIiPN4vgui6IImageEi8CDefLessE
+10CUtlRBTreeIN7CUtlMapIiPN4vgui6IImageEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEiE
+15CEmoticonButton
+17CItemImageManager
+8GridMenu
+10CHTTPImage
+11CCallResultI10CHTTPImage22HTTPRequestCompleted_tE
+11CCallResultI17CItemImageManager22HTTPRequestCompleted_tE
+7CUtlMapIPKcii22CDefCaselessStringLessE
+10CUtlRBTreeIN7CUtlMapIPKcii22CDefCaselessStringLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
+10CUtlVectorI10CUtlString10CUtlMemoryIS0_EE
+10CUtlVectorIN17CItemImageManager18ImagesToDownload_tE10CUtlMemoryIS1_EE
+11CHTMLWindow
+11IHTMLWindow
+14IHTMLResponses
+20CJSMethodCallHandlerI11CHTMLWindowJ9CSmartPtrI15CJSCallbackFuncEEE
+20IJSMethodCallHandler
+16CHTMLProtoBufMsgI11CMsgPostURLE
+20CHTMLBaseProtoBufMsg
+16CHTMLProtoBufMsgI31CMsgDisableBackgroundThrottlingE
+16CHTMLProtoBufMsgI28CMsgSetTouchGesturesToCancelE
+NSt3__117bad_function_callE
+16CHTMLProtoBufMsgI17CMsgBrowserRemoveE
+16CHTMLProtoBufMsgI24CMsgStartRequestResponseE
+16CHTMLProtoBufMsgI21CMsgJSExecuteCallbackE
+16CHTMLProtoBufMsgI21CMsgJSReleaseCallbackE
+16CHTMLProtoBufMsgI20CMsgJSRaiseExceptionE
+16CHTMLProtoBufMsgI21CMsgBrowserSetMinSizeE
+16CHTMLProtoBufMsgI28CMsgSetGameOverlayTargetPIDsE
+16CHTMLProtoBufMsgI13CMsgMouseMoveE
+16CHTMLProtoBufMsgI11CMsgKeyDownE
+16CHTMLProtoBufMsgI9CMsgKeyUpE
+21CHTMLWindowController
+21IHTMLWindowController
+14CUtlLinkedListIP11CHTMLWindowiE
+20CBroadcastController
+13IUIController
+N20CBroadcastController35CCallbackInternal_OnBroadcastStatusE
+N20CBroadcastController39CCallbackInternal_OnViewerNeedsApprovalE
+13CCallbackImplILi8EE
+N20CBroadcastController40CCallbackInternal_OnViewerApprovalResultE
+20CJSMethodCallHandlerI20CBroadcastControllerJ9CSmartPtrI15CJSCallbackFuncEEE
+20CJSMethodCallHandlerI20CBroadcastControllerJPKcjEE
+20CJSMethodCallHandlerI20CBroadcastControllerJPKc9CSmartPtrI18CJSCallbackPromiseEEE
+25CFriendSettingsController
+N25CFriendSettingsController41CCallbackInternal_OnClientSettingsChangedE
+20CJSMethodCallHandlerI25CFriendSettingsControllerJ9CSmartPtrI15CJSCallbackFuncEEE
+20CJSMethodCallHandlerI25CFriendSettingsControllerJPKcEE
+20CJSMethodCallHandlerI25CFriendSettingsControllerJ9CSmartPtrI18CJSCallbackPromiseEEE
+N21CRemotePlayController42CCallbackInternal_OnRemotePlayInviteResultE
+N21CRemotePlayController44CCallbackInternal_OnRemotePlaySessionStoppedE
+N21CRemotePlayController44CCallbackInternal_OnStreamingClientConnectedE
+N21CRemotePlayController44CCallbackInternal_OnStreamingClientUsedInputE
+N21CRemotePlayController51CCallbackInternal_OnRemoteClientInputSettingsChangeE
+N21CRemotePlayController46CCallbackInternal_OnRemoteClientStreamLifetimeE
+13CCallbackImplILi25EE
+N21CRemotePlayController44CCallbackInternal_OnRemoteClientLaunchFailedE
+N21CRemotePlayController42CCallbackInternal_OnPlaceholderStateChangeE
+N21CRemotePlayController50CCallbackInternal_OnRemotePlayTogetherGroupCreatedE
+N21CRemotePlayController52CCallbackInternal_OnRemotePlayTogetherGroupDisbandedE
+N21CRemotePlayController50CCallbackInternal_OnRemotePlayTogetherPlayerJoinedE
+N21CRemotePlayController48CCallbackInternal_OnRemotePlayTogetherPlayerLeftE
+N21CRemotePlayController69CCallbackInternal_OnRemoteClientStreamSessionUpdateNetworkUtilizationE
+13CCallbackImplILi44EE
+N21CRemotePlayController58CCallbackInternal_OnRemoteClientRemotePlayClearControllersE
+N21CRemotePlayController60CCallbackInternal_OnRemoteClientRemotePlayControllerIndexSetE
+N21CRemotePlayController57CCallbackInternal_OnRemoteClientRemotePlayQualityOverrideE
+N21CRemotePlayController57CCallbackInternal_OnRemoteClientRemotePlayBitrateOverrideE
+N21CRemotePlayController54CCallbackInternal_OnRemoteDeviceAuthorizationRequestedE
+N21CRemotePlayController54CCallbackInternal_OnRemoteDeviceAuthorizationCancelledE
+20CJSMethodCallHandlerI21CRemotePlayControllerJ9CSmartPtrI18CJSCallbackPromiseEEE
+20CJSMethodCallHandlerI21CRemotePlayControllerJPKc9CSmartPtrI18CJSCallbackPromiseEEE
+20CJSMethodCallHandlerI21CRemotePlayControllerJPKcS2_9CSmartPtrI18CJSCallbackPromiseEEE
+20CJSMethodCallHandlerI21CRemotePlayControllerJ9CSmartPtrI15CJSCallbackFuncEEE
+20CJSMethodCallHandlerI21CRemotePlayControllerJPKcjS2_9CSmartPtrI18CJSCallbackPromiseEEE
+20CJSMethodCallHandlerI21CRemotePlayControllerJPKcj9CSmartPtrI18CJSCallbackPromiseEEE
+20CJSMethodCallHandlerI21CRemotePlayControllerJb9CSmartPtrI18CJSCallbackPromiseEEE
+20CJSMethodCallHandlerI21CRemotePlayControllerJPKcb9CSmartPtrI18CJSCallbackPromiseEEE
+20CJSMethodCallHandlerI21CRemotePlayControllerJPKcjb9CSmartPtrI18CJSCallbackPromiseEEE
+20CJSMethodCallHandlerI21CRemotePlayControllerJiEE
+20CJSMethodCallHandlerI21CRemotePlayControllerJiiEE
+20CJSMethodCallHandlerI21CRemotePlayControllerJbPKcEE
+10CUtlVectorI18RemotePlayPlayer_t10CUtlMemoryIS0_EE
+12CAutoReleaseI15CJSCallbackFuncE
+21CScreenshotController
+20CJSMethodCallHandlerI21CScreenshotControllerJ9CSmartPtrI18CJSCallbackPromiseEEE
+27CSharedConnectionController
+N27CSharedConnectionController24CCallback_OnMessageReadyE
+9CCallbackI27CSharedConnectionController30SharedConnectionMessageReady_tLb0EE
+N27CSharedConnectionController28CCallback_OnServersConnectedE
+9CCallbackI27CSharedConnectionController23SteamServersConnected_tLb0EE
+N27CSharedConnectionController31CCallback_OnServersDisconnectedE
+9CCallbackI27CSharedConnectionController26SteamServersDisconnected_tLb0EE
+20CJSMethodCallHandlerI27CSharedConnectionControllerJ9CSmartPtrI18CJSCallbackPromiseEEE
+20CJSMethodCallHandlerI27CSharedConnectionControllerJj9CSmartPtrI15CJSCallbackFuncEEE
+20CJSMethodCallHandlerI27CSharedConnectionControllerJjiEE
+20CJSMethodCallHandlerI27CSharedConnectionControllerJjPKcEE
+20CJSMethodCallHandlerI27CSharedConnectionControllerJjPKc9CSmartPtrI18CJSCallbackPromiseEEE
+20CJSMethodCallHandlerI27CSharedConnectionControllerJjEE
+7CUtlMapIj7CUtlPtrIN27CSharedConnectionController22SharedConnectionInfo_tEEi8CDefLessE
+10CUtlRBTreeIN7CUtlMapIj7CUtlPtrIN27CSharedConnectionController22SharedConnectionInfo_tEEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
+7CUtlPtrIN27CSharedConnectionController22SharedConnectionInfo_tEE
+7CUtlMapIj9CSmartPtrI18CJSCallbackPromiseEi8CDefLessE
+10CUtlRBTreeIN7CUtlMapIj9CSmartPtrI18CJSCallbackPromiseEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
+24CSteamParentalController
+N24CSteamParentalController35CCallback_OnParentalLockChangeBeginE
+9CCallbackI24CSteamParentalController25ParentalLockChangeBegin_tLb0EE
+N24CSteamParentalController38CCallback_OnParentalLockChangeCompleteE
+9CCallbackI24CSteamParentalController35ParentalLockChangeAttemptComplete_tLb0EE
+N24CSteamParentalController35CCallback_OnParentalWebTokenChangedE
+9CCallbackI24CSteamParentalController25ParentalWebTokenChanged_tLb0EE
+20CJSMethodCallHandlerI24CSteamParentalControllerJ9CSmartPtrI15CJSCallbackFuncEEE
+20CJSMethodCallHandlerI24CSteamParentalControllerJPKcb9CSmartPtrI18CJSCallbackPromiseEEE
+20CJSMethodCallHandlerI24CSteamParentalControllerJEE
+10CUtlVectorIN24CSteamParentalController15UnlockPromise_tE10CUtlMemoryIS1_EE
+27CSteamUIMessagingController
+N27CSteamUIMessagingController37CCallbackInternal_OnClientPostMessageE
+13CCallbackImplILi4288EE
+20CJSMethodCallHandlerI27CSteamUIMessagingControllerJPKc9CSmartPtrI15CJSCallbackFuncEEE
+20CJSMethodCallHandlerI27CSteamUIMessagingControllerJPKcS2_S2_9CSmartPtrI18CJSCallbackPromiseEEE
+25CSteamUIStorageController
+20CJSMethodCallHandlerI25CSteamUIStorageControllerJPKc9CSmartPtrI18CJSCallbackPromiseEEE
+20CJSMethodCallHandlerI25CSteamUIStorageControllerJPKcS2_9CSmartPtrI18CJSCallbackPromiseEEE
+20CJSMethodCallHandlerI25CSteamUIStorageControllerJPKcPK11CMsgJSValue9CSmartPtrI18CJSCallbackPromiseEEE
+15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
+9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
+15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb1EE
+9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb1EE
 26CAppDownloadedNotification
 31CAppDownloadNotificationManager
 N31CAppDownloadNotificationManager31CCallback_OnAppEventStateChangeE
@@ -562,6 +583,7 @@ N14CFriendsDialog31CCallback_OnParentalLockChangedE
 13CCallbackImplILi2EE
 N14CFriendsDialog25CCallback_OnFriendChatMsgE
 9CCallbackI14CFriendsDialog15FriendChatMsg_tLb0EE
+13CCallbackImplILi32EE
 N14CFriendsDialog36CCallback_OnUserRequestingFriendshipE
 9CCallbackI14CFriendsDialog26UserRequestingFriendship_tLb0EE
 N14CFriendsDialog30CCallback_OnPersonaStateChangeE
@@ -681,6 +703,7 @@ N12CChatRoomDlg33CCallback_OnChatMemberStateChangeE
 9CCallbackI12CChatRoomDlg23ChatMemberStateChange_tLb0EE
 N12CChatRoomDlg33CCallback_OnChatMemberInfoChangedE
 9CCallbackI12CChatRoomDlg23ChatMemberInfoChanged_tLb0EE
+13CCallbackImplILi24EE
 N12CChatRoomDlg27CCallback_OnChatRoomClosingE
 9CCallbackI12CChatRoomDlg17ChatRoomClosing_tLb0EE
 N12CChatRoomDlg27CCallback_OnChatRoomKickingE
@@ -827,21 +850,25 @@ N15CFriendsWebChat43CCallbackInternal_OnSetPersonaStateInternalE
 N15CFriendsWebChat35CCallbackInternal_OnOpenURLInClientE
 13CCallbackImplILi1032EE
 N15CFriendsWebChat43CCallbackInternal_OnVoiceHotKeyStateChangedE
+N15CFriendsWebChat33CCallbackInternal_OnUIModeChangedE
 N15CFriendsWebChat43CCallbackInternal_OnShowChatRoomGroupInviteE
-13CCallbackImplILi32EE
 N15CFriendsWebChat36CCallbackInternal_OnChatRoomDlgCloseE
-13CCallbackImplILi44EE
-13CCallbackImplILi25EE
-13CCallbackImplILi24EE
+13CCallbackImplILi128EE
+13CCallbackImplILi40EE
+13CCallbackImplILi52EE
+13CCallbackImplILi164EE
+13CCallbackImplILi1072EE
 39CFriendsWebChatMsgGroupChatNotification
 40CFriendsWebChatMsgFriendChatNotification
 39CFriendsWebChatFriendInGameNotification
 39CFriendsWebChatFriendOnlineNotification
 11CCallResultI15CFriendsWebChat24SetPersonaNameResponse_tE
 20CJSMethodCallHandlerI15CFriendsWebChatJ9CSmartPtrI15CJSCallbackFuncEEE
-20IJSMethodCallHandler
 20CJSMethodCallHandlerI15CFriendsWebChatJ9CSmartPtrI18CJSCallbackPromiseEEE
+20CJSMethodCallHandlerI15CFriendsWebChatJyEE
+20CJSMethodCallHandlerI15CFriendsWebChatJyyEE
 20CJSMethodCallHandlerI15CFriendsWebChatJiPKc9CSmartPtrI15CJSCallbackFuncEEE
+20CJSMethodCallHandlerI15CFriendsWebChatJjbEE
 20CJSMethodCallHandlerI15CFriendsWebChatJPKcibEE
 20CJSMethodCallHandlerI15CFriendsWebChatJbEE
 20CJSMethodCallHandlerI15CFriendsWebChatJiEE
@@ -1035,6 +1062,8 @@ N6google8protobuf23SourceCodeInfo_LocationE
 N6google8protobuf14SourceCodeInfoE
 N6google8protobuf28GeneratedCodeInfo_AnnotationE
 N6google8protobuf17GeneratedCodeInfoE
+N6google8protobuf8internal16InternalMetadata9ContainerINS0_15UnknownFieldSetEEE
+N6google8protobuf8internal16InternalMetadata13ContainerBaseE
 N6google8protobuf14DynamicMessageE
 N6google8protobuf21DynamicMessageFactoryE
 N6google8protobuf8internal29DescriptorPoolExtensionFinderE
@@ -3312,18 +3341,18 @@ none
 -nofriendsui
 -no-browser
 unconditionally disables CEF
-Assertion Failed: IsARM() || GetCPUInformation().m_bSSE2
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/friendsuihelpers.cpp
+IsARM() || GetCPUInformation().m_bSSE2
 GetBootstrapperVersion
 resolve
 reject
-Assertion Failed: m_iRefs >= 0 && m_iRefs < 0x0ffffff
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/refcount.h
-Assertion Failed: m_iRefs > 0 && m_iRefs < 0x1000000
-Assertion Failed: m_pObj == NULL
+m_iRefs >= 0 && m_iRefs < 0x0ffffff
+m_iRefs > 0 && m_iRefs < 0x1000000
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/smartptr.h
-Assertion Failed: (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
+m_pObj == NULL
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
+(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 bool
 int
 double
@@ -3341,14 +3370,14 @@ result
 message
 %lld
 %llu
-Assertion Failed: !pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
-Assertion Failed: row_stride_out >= row_stride
+!pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/jpegloader.cpp
-Assertion Failed: row_stride == (int)( nImageWidth * jpegInfo.output_components )
-Assertion Failed: nImageHeight == nOutputHeight
+row_stride_out >= row_stride
+row_stride == (int)( nImageWidth * jpegInfo.output_components )
+nImageHeight == nOutputHeight
 BResizeImageRGBA
-Assertion Failed: pSrc == pDest || pSrc > pDest + (srcWidth * srcHeight * 4) || pDest > pSrc + (srcWidth * srcHeight * 3)
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/jpegloader_common.cpp
+pSrc == pDest || pSrc > pDest + (srcWidth * srcHeight * 4) || pDest > pSrc + (srcWidth * srcHeight * 3)
 1.5.26
 PNG load error %s
 PNG load warning %s
@@ -3366,7 +3395,10 @@ g_pClientController
 CUtlSymbol
 com.valvesoftware.steam.ipctool
 ipcserver restart: expected: %d, got: %d
+pid %d != %d, clearing client_port = %d, server_port = %d
+pid %d != %d, re-initing before send; client_port = %d, server_port = %d
 StopJob
+pid %d != %d, skipping dealloc of client_port = %d, server_port = %d
 CreateInterface
 ClientAPI_Init(GlobalInstance): GetIClientUser returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientFriends returned NULL.
@@ -3374,6 +3406,7 @@ ClientAPI_Init(GlobalInstance): GetIClientBilling returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientUtils returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientNetworkDeviceManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientStorageDeviceManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientSystemPerfManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSystemManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientMatchmaking returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientApps returned NULL.
@@ -3408,6 +3441,7 @@ ClientAPI_Init(GlobalInstance): GetIClientSTARInternal returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientNetworkingUtils returned NULL.
 CParentalCache::OnParentalLockChangeBegin
 steammessages_clientnotificationtypes.proto
+steammessages_remoteplay.proto
 graphics/avatarBorderOffline
 graphics/avatarBorderOnline
 graphics/avatarBorderInGame
@@ -3423,8 +3457,8 @@ common/name
 #Friends_lookingtotrade
 #Friends_lookingtoplay
 #Friends_invisible
-Invalid image panel position %d %d
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/vgui_controls/Image.h
+Invalid image panel position %d %d
 Invalid image panel size %d %d
 m_mapSteamImageToRGBAImage
 m_Tree
@@ -3458,7 +3492,7 @@ InsertString
 EmoticonMenuItemStyle
 economy/emoticonhover/%s?client=1&l=%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
-Assertion Failed: !pszString || pszString[nChars] == '\0'
+!pszString || pszString[nChars] == '\0'
 Menu
 MenuButton
 ToggleButton
@@ -3478,8 +3512,8 @@ Set the store URL
 /
 http://
 https://
-Assertion Failed: eRet != k_ESteamRealmUnknown
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/urlhelper.cpp
+eRet != k_ESteamRealmUnknown
 /usr/bin/open
 HOME
 https://%s.valve.org/community/
@@ -3564,18 +3598,18 @@ steamchinabeta://
 Open Chrome devtools on launch
 -openoverlaydevtools
 Open Chrome devtools on creation of any overlay browsers
-Assertion Failed: m_pHTMLController
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/htmlwindow/htmlwindow.cpp
+m_pHTMLController
 Browser.BIsVROverlayBrowser
 Browser.BIsDirectHWNDBrowser
 Browser.BIsPopupWindow
 Browser.RegisterForOpenNewTab
-Assertion Failed: m_iBrowser == -1 && idx != -1
+m_iBrowser == -1 && idx != -1
 Blocking global navigation to: %s
 Skipping js method registration, already exists: %s
 Unknown method: %s
 Method call failed: %s
-Assertion Failed: (uint32)m_iBrowser == pCmd->browser_handle()
+(uint32)m_iBrowser == pCmd->browser_handle()
 CHTMLWindow::ExecuteJSCallback
 _internal.RegisterForStyleChanges
 \
@@ -3586,24 +3620,23 @@ css
 class %s
 render()
 function %s
-Assertion Failed: BGameOverlayBrowser( m_eBrowserType )
-Assertion Failed: false
-Assertion Failed: BGameOverlayBrowser( m_eBrowserType)
+BGameOverlayBrowser( m_eBrowserType )
+BGameOverlayBrowser( m_eBrowserType)
 %s requires %d arguments; only %d given
 %s call had invalid argument (arg %d)
-Assertion Failed: bitNum >= 0 && bitNum < this->Size()
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/bitstring.h
+bitNum >= 0 && bitNum < this->Size()
 clientui_overlay_fps
 60
-Assertion Failed: nPosX == INT_MIN && nPosY == INT_MIN
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/htmlwindow/htmlwindowcontroller.cpp
-Assertion Failed: m_TotalElements != InvalidIndex()
+nPosX == INT_MIN && nPosY == INT_MIN
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utllinkedlist.h
+m_TotalElements != InvalidIndex()
 %s overflow!
-Assertion Failed: IsValidIndex(elem)
-Assertion Failed: IsInList(before)
+IsValidIndex(elem)
+IsInList(before)
 Invalid index %u
-Assertion Failed: 0
+0
 broadcastid
 nViewers
 nRequests
@@ -3625,8 +3658,8 @@ featuresEnabled
 feature
 bEnabled
 m_vecSettingsChangedCallbacks
-Assertion Failed: IsText()
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
+IsText()
 bNotifications_ShowIngame
 Notifications_ShowIngame
 bSounds_PlayIngame
@@ -3663,8 +3696,8 @@ bKeyboardEnabled
 bMouseEnabled
 bControllerEnabled
 RemotePlayTogetherVolume
-Assertion Failed: pCallback->m_gameID == m_ActiveGameID
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/remoteplaycontroller.cpp
+pCallback->m_gameID == m_ActiveGameID
 m_vecActiveSessions
 m_vecCallbacks[ i ]
 CRemotePlayController::OnRemotePlayInviteResult
@@ -3684,6 +3717,8 @@ CRemotePlayController::OnRemoteClientRemotePlayClearControllers
 CRemotePlayController::OnRemoteClientRemotePlayControllerIndexSet
 CRemotePlayController::OnRemoteClientRemotePlayQualityOverride
 CRemotePlayController::OnRemoteClientRemotePlayBitrateOverride
+CRemotePlayController::OnRemoteDeviceAuthorizationRequested
+CRemotePlayController::OnRemoteDeviceAuthorizationCancelled
 RemotePlay.BEnabled
 RemotePlay.BCanCreateInviteForGame
 RemotePlay.BCanAcceptInviteForGame
@@ -3705,6 +3740,8 @@ RemotePlay.RegisterForClearControllers
 RemotePlay.RegisterForControllerIndexSet
 RemotePlay.RegisterForQualityOverride
 RemotePlay.RegisterForBitrateOverride
+RemotePlay.RegisterForRemoteDeviceAuthorizationRequested
+RemotePlay.RegisterForRemoteDeviceAuthorizationCancelled
 RemotePlay.CreateInviteAndSession
 RemotePlay.CreateInviteAndSessionWithGuestID
 RemotePlay.CancelInviteAndSession
@@ -3730,6 +3767,7 @@ RemotePlay.SetClientStreamingQuality
 RemotePlay.GetClientStreamingBitrate
 RemotePlay.SetClientStreamingBitrate
 RemotePlay.BRemotePlayTogetherGuestSupported
+RemotePlay.SetRemoteDeviceAuthorized
 Element( i )
 m_pObj
 screenshots/%s
@@ -3745,10 +3783,10 @@ strUrl
 bUploaded
 m_strScreenshotFolder
 Screenshots.GetLastScreenshotTaken
-Assertion Failed: pConnection->m_mapWaitingCalls.IsValidIndex( iMap )
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/sharedconnectioncontroller.cpp
+pConnection->m_mapWaitingCalls.IsValidIndex( iMap )
 Remote call failed
-Assertion Failed: pConnection && pConnection->m_pfnOnLogonInfoChanged
+pConnection && pConnection->m_pfnOnLogonInfoChanged
 eUniverse
 strCommunityImagesURL
 bLoggedOn
@@ -3763,8 +3801,8 @@ m_mapConnections.Element( i )->m_mapWaitingCalls
 CSharedConnectionController::OnMessageReady
 CSharedConnectionController::OnServersConnected
 CSharedConnectionController::OnServersDisconnected
-Assertion Failed: m_eConnectedUniverse > k_EUniverseInvalid && m_eConnectedUniverse < k_EUniverseMax
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/sharedconnectioncontroller.h
+m_eConnectedUniverse > k_EUniverseInvalid && m_eConnectedUniverse < k_EUniverseMax
 SharedConnection.AllocateSharedConnection
 SharedConnection.RegisterOnLogonInfoChanged
 SharedConnection.RegisterOnMessageReceived
@@ -3775,10 +3813,10 @@ SharedConnection.SendMsg
 SharedConnection.SendMsgAndAwaitResponse
 SharedConnection.SendMsgAndAwaitBinaryResponse
 SharedConnection.Close
-Assertion Failed: IsValidIndex( elem )
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
-Assertion Failed: _IsValidIndex( elem, unNodeSize, pMemBase )
-Assertion Failed: _IsValidIndex( y, unNodeSize, pMemBase )
+IsValidIndex( elem )
+_IsValidIndex( elem, unNodeSize, pMemBase )
+_IsValidIndex( y, unNodeSize, pMemBase )
 enabled
 locked
 features
@@ -3822,15 +3860,14 @@ RoamingStorage.DeleteKey
 Steam_BGetCallback
 Steam_FreeLastCallback
 Steam_GetAPICallResult
-stream.proto
 common/icon
 %simages/apps/%d/%s.jpg
-Assertion Failed: bufRGBA.TellPut() == width*height*4
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/friendsUI/AppDownloadNotification.cpp
-Assertion Failed: CGameID( appID ).IsValid()
+bufRGBA.TellPut() == width*height*4
+CGameID( appID ).IsValid()
 common/parent
 AppDownloadNotification
-Assertion Failed: ( width == 0 && height == 0 ) || ( bufRGBA.TellPut() == width*height*4 )
+( width == 0 && height == 0 ) || ( bufRGBA.TellPut() == width*height*4 )
 name
 GameImage
 NotificationClickPanel
@@ -3846,7 +3883,6 @@ vgui::NotificationFrame
 CNotificationClickPanel
 m_mapAPICalls
 newcoplayui
-0
 CFriendNotificationOptionsDialog
 OKButton
 #vgui_ok
@@ -3908,8 +3944,8 @@ friends/message.wav
 steam://viewfriendsgame/%llu
 GameInviteNotification
 ChatMsgNotification
-Assertion Failed: steamIDUserVerify == steamIDUser
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/friendsUI/friendsdialog.cpp
+steamIDUserVerify == steamIDUser
 steamIDChat
 steamIDPatron
 #Friends_Chat_InviteToPrivateChatRoom_Info
@@ -3925,13 +3961,13 @@ chatroom
 date
 time
 ChatInvitationNotification
-Assertion Failed: steamIDChat.GetEAccountType() == k_EAccountTypeChat
+steamIDChat.GetEAccountType() == k_EAccountTypeChat
 #Friends_Chat_CreateFailed_Title
 #Friends_Chat_CreateFailed_TooMany
 #Friends_Chat_CreateFailed_Generic
 #Friends_Chat_FailedRejoin_Entry
 Friends_Chat_FailedRejoin_Rejoin_Entry
-Assertion Failed: NULL == m_ChatRoomDialogs.FindDialog( steamIDChat.ConvertToUint64() )
+NULL == m_ChatRoomDialogs.FindDialog( steamIDChat.ConvertToUint64() )
 multichat
 #Friends_Chat_DeniedChat_Title
 #Friends_Chat_DeniedChat_DoesntExist
@@ -4081,7 +4117,7 @@ VGUIInviteToChatRoom
 user_name
 action_result
 #Friends_Chat_ActionResultNotOnline
-Assertion Failed: nIndex != m_mapNameUseCount[ iName ]->InvalidIndex()
+nIndex != m_mapNameUseCount[ iName ]->InvalidIndex()
 FriendsNameCollisionUpdate
 steam://settings/voice
 InGameOverlayShortcutKey
@@ -4205,7 +4241,7 @@ BroadcastApproveNotification
 BroadcastRecorderNotification
 BroadcastCantStartFriend
 GetClientLauncherType
-Assertion Failed: eLauncherType != k_ELauncherTypeCmdLine
+eLauncherType != k_ELauncherTypeCmdLine
 vgui::Frame
 JoinGameNotifyCheck
 JoinGamePlaySoundCheck
@@ -4309,8 +4345,8 @@ FireButton
 iButton
 friends/ClanEventNotification.res
 CClanEventNotification
-Assertion Failed: !pArray || (Base() >= (pArray + size)) || (pArray >= (Base() + Count()) )
-Assertion Failed: count >= 0
+!pArray || (Base() >= (pArray + size)) || (pArray >= (Base() + Count()) )
+count >= 0
 CAchievementNotification
 CFriendsClansPage
 vgui::PropertyPage
@@ -4337,8 +4373,8 @@ PropertyPage
 Page
 PropertyPageControls
 CFriendsGroupsPage
-Assertion Failed: m_pVGUIParentPanel
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/vgui_controls/DialogManager.h
+m_pVGUIParentPanel
 ChatIntroductionDialog
 AcceptButton
 AcceptChat
@@ -4417,9 +4453,9 @@ PersonaNameChat
 ChatRoomDlgState
 ChatRoomDlg
 set
-Assertion Failed: m_EChatRoomType == k_EChatRoomTypeMUC
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/friendsUI/ChatRoomDlg.cpp
-Assertion Failed: m_EChatRoomType == k_EChatRoomTypeFriend
+m_EChatRoomType == k_EChatRoomTypeMUC
+m_EChatRoomType == k_EChatRoomTypeFriend
 Invalid steamID type for chat room creation!
 support.kv
 PLATFORM
@@ -4444,14 +4480,14 @@ UserList
 Splitter
 friends/ChatRoomDlg.res
 friends/ChatRoomDlg.res_%llu
-Assertion Failed: pChatRoomEnter && pChatRoomEnter->m_ulSteamIDChat == m_SteamIDChat.ConvertToUint64()
-Assertion Failed: pChatRoomEnter->m_EChatRoomEnterResponse == k_EChatRoomEnterResponseSuccess
-Assertion Failed: m_SteamIDClan.ConvertToUint64() == pChatRoomEnter->m_ulSteamIDClan
-Assertion Failed: m_SteamIDChat.GetAccountID() == m_SteamIDClan.GetAccountID()
-Assertion Failed: !m_bInChat
+pChatRoomEnter && pChatRoomEnter->m_ulSteamIDChat == m_SteamIDChat.ConvertToUint64()
+pChatRoomEnter->m_EChatRoomEnterResponse == k_EChatRoomEnterResponseSuccess
+m_SteamIDClan.ConvertToUint64() == pChatRoomEnter->m_ulSteamIDClan
+m_SteamIDChat.GetAccountID() == m_SteamIDClan.GetAccountID()
+!m_bInChat
 #Friends_Chat_ConvertedToMultiUser
 Failed to serialize chat room dlg settings
-Assertion Failed: m_sPersonaNameChat.IsValid()
+m_sPersonaNameChat.IsValid()
 ...
 #Friends_Chat_AnonymousChatName
 #Friends_Chat_Settings
@@ -4470,7 +4506,7 @@ member_name
 #Friends_Chat_RackBouncing_Entry
 #Friends_Chat_ModerateRoom_Status
 #Friends_LastMessageReceived
-Assertion Failed: m_pChatHistory
+m_pChatHistory
 friends_chat_bright_event
 friends_chat_event
 #Friends_Chat_SendOfflineMessage
@@ -4541,7 +4577,7 @@ steam://url/ChatBanListAdmin/%llu
 #Friends_Chat_ActionResultVoiceSlotsFull
 Unknown ChatActionResult %d received
 OpenURL
-Assertion Failed: steamID == m_SteamIDFriend
+steamID == m_SteamIDFriend
 KickFromChatRoom
 #Friends_Chat_KickFromChatRoom
 BanFromChatRoom
@@ -4566,7 +4602,7 @@ graphics/icon_officerStar
 graphics/icon_moderatorstar
 #Friends_Tooltip_GroupModerator
 ChatBanListAdmin/%llu
-Assertion Failed: BFriendChat()
+BFriendChat()
 #steam_voice_remote_no_answer
 #steam_voice_version_mismatch
 #steam_voice_unknowncodec
@@ -4656,10 +4692,10 @@ CChatActionsButton
 CChatSplitter
 vgui::Panel
 resizepanel
-Assertion Failed: pchLaunchString != NULL && nAppID != k_uAppIdInvalid
+pchLaunchString != NULL && nAppID != k_uAppIdInvalid
 recv
 send
-Assertion Failed: steamIDFriend.IsValid()
+steamIDFriend.IsValid()
 #friends_trade_accepted
 #friends_trade_declined
 #friends_trade_you_are_cafe
@@ -4714,8 +4750,8 @@ ToolPanel
 TabbedUserChat
 #Friends_Chat_Title
 #Friends_Chat_Group_Title
-CUtlHashMap::RemoveAt - Invalid index
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlhashmap.h
+CUtlHashMap::RemoveAt - Invalid index
 CUtlHashMap::RemoveAt - couldn't find bucket for item
 AvatarImage
 NameLabel
@@ -4789,8 +4825,8 @@ UpdateTimestamps
 CFriendPanel
 steam://url/GroupMembersPage/%llu
 #Friends_ViewGroupMembersLink
-Assertion Failed: m_SteamID.BClanAccount()
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/friendsUI/friendpanel.cpp
+m_SteamID.BClanAccount()
 CFriendPanel::OnPersonaStateChange
 CFriendPanel::OnChatRoomVoiceStateChanged
 CAvatarOverlayImage
@@ -4810,8 +4846,8 @@ guests
 #Friends_FriendList_Guests
 #Friends_FriendList_Chat
 CFriendsListSubPanel::OnThink()
-Assertion Failed: m_treeCachedFriendPanels.Count() == 0
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/friendsUI/FriendsListSubPanel.cpp
+m_treeCachedFriendPanels.Count() == 0
 CFriendsListSubPanel::RebuildFriendsList corruption
 clan_collapsed/%d
 friendtag_collapsed/%s
@@ -4853,8 +4889,8 @@ SectionedListPanel
 -newvrchat
 VGuiModuleTracker001
 FriendsUIInterfaceV001
-CFriendsUIModule::Initialize: ClientAPI_Init() returned false.
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/friendsUI/friendsUI.cpp
+CFriendsUIModule::Initialize: ClientAPI_Init() returned false.
 FriendsUI
 CFriendsUIModule::Initialize: VGuiControls_Init() returned false.
 friends/trackerui_%language%.txt
@@ -4867,7 +4903,7 @@ ChromeHTML_Controller_003
 FriendsUI.dll could not get RunGameEngine interface
 FriendsUI.dll could not get ServerBrowser interface
 Could not get SERVERBROWSER and RUNGAMEENGINE interfaces.
-Assertion Failed: m_eUIMode == k_EFriendsUIMode_WebChat_MainWindow || m_hFriendsDialog.Get()
+m_eUIMode == k_EFriendsUIMode_WebChat_MainWindow || m_hFriendsDialog.Get()
 CFriendsUIModule::RunFrame
 FriendGameInviteDialog
 dashboard
@@ -4908,8 +4944,8 @@ developer
 -dev
 -forcevgui
 -silent
-Unsupported friends ui mode
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/friendsUI/friendswebchat.cpp
+Unsupported friends ui mode
 %s/index_friends.html
 clientui
 Valve Steam ClientUI/%s
@@ -4918,12 +4954,15 @@ rawbody
 body
 title
 Unhandled notification type coming from Friends UI?
+chatroomgroupid
+chatroomid
+icon
 m_unPID
 m_nBrowserID
 pid
 browserid
 CheckForUpdates
-Assertion Failed: !m_strChatURL.IsEmpty()
+!m_strChatURL.IsEmpty()
 ShowPopupFriendsList
 force_to_foreground
 ShowFriendChatDialog
@@ -4964,6 +5003,7 @@ CFriendsWebChat::OnComputerActiveStateChange
 CFriendsWebChat::OnSetPersonaStateInternal
 CFriendsWebChat::OnOpenURLInClient
 CFriendsWebChat::OnVoiceHotKeyStateChanged
+CFriendsWebChat::OnUIModeChanged
 CFriendsWebChat::OnShowChatRoomGroupInvite
 CFriendsWebChat::OnChatRoomDlgClose
 LabelMessage
@@ -4980,10 +5020,14 @@ WebChat.RegisterForFriendPostMessage
 WebChat.GetWebChatURL
 WebChat.GetWebChatLanguage
 WebChat.GetUIMode
+WebChat.ShowFriendChatDialog
+WebChat.ShowChatRoomGroupDialog
+WebChat.RegisterForUIModeChange
 WebChat.RegisterOverlayChatBrowserInfoChanged
 WebChat.GetOverlayChatBrowserInfo
 WebChat.RegisterForComputerActiveStateChange
 ClientNotifications.DisplayClientNotification
+ClientNotifications.OnRespondToClientNotification
 WebChat.OpenURLInClient
 WebChat.GetPushToTalkEnabled
 WebChat.SetPushToTalkEnabled
@@ -11805,10 +11849,10 @@ ssl3-md5
 ssl3-sha1
 htmlmessages.proto
 CUIProtoBufMsg::SerializeCrossProc
-Assertion Failed: unSize < 128 * 1024 * 1024
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/html/htmlprotobuf.cpp
-Assertion Failed: eCmd > 0 && eCmd < eHTMLCommands_None
-Assertion Failed: pBuffer->TellPut() == 0
+unSize < 128 * 1024 * 1024
+eCmd > 0 && eCmd < eHTMLCommands_None
+pBuffer->TellPut() == 0
 AnimatingImagePanel
 frames
 , string image
@@ -11860,7 +11904,7 @@ SetTexture
 SetString
 Couldn't parse script sequence '%s': expected <anim command>, found '%s'
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/AnimationController.cpp
-Assertion Failed: panel != NULL
+panel != NULL
 AnimationController
 m_Sequences
 m_Sequences[ iSequence ].cmdList
@@ -11875,7 +11919,7 @@ m_AnimationMaps
 m_AnimationMaps[ iAnimationMap ].map->entries
 m_PanelAnimationMapPool
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlsymbol.h
-Assertion Failed: pPool->m_SpaceUsed < 0xFFFF
+pPool->m_SpaceUsed < 0xFFFF
 Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
 CUtlSymbolTable
 m_StringPools
@@ -11888,13 +11932,13 @@ filtered
 , string image, string imagecolor, alignment imageAlignment, int preserveAspectRatio, int filtered
 BitmapImagePanel
 CBuildFactoryHelper:  Factory for '%s' already exists!!!!
-Assertion Failed: func
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/BuildFactoryHelper.cpp
-Assertion Failed: className
+func
+className
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/BuildGroup.cpp
-Assertion Failed: m_pkvSettings
+m_pkvSettings
 [%s] applying key '%s', has changed from '%s' to '%s'
-Assertion Failed: controlKeys
+controlKeys
 vgui::BuildGroup
 _panelDar
 m_strResourceName
@@ -11929,8 +11973,8 @@ ComboBtn
 ButtonClicked
 ComboBoxButton
 ActivateItem
-Assertion Failed: s_pFileSystemInterface
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/controls.cpp
+s_pFileSystemInterface
 en_US.UTF-8
 VGUI_ivgui007
 VGUI_Panel010
@@ -11950,8 +11994,8 @@ SetText
 SetState
 GetState
 GetText
-Assertion Failed: m_nSuppressDialogVariablesMessages >= 1
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/EditablePanel.cpp
+m_nSuppressDialogVariablesMessages >= 1
 DialogVariables
 ListPanel
 EditablePanel::PerformLayout()
@@ -11961,7 +12005,7 @@ EditablePanel::LayoutCmd_CreateRegion()
 Invalid parent region %s specified for region %s in panel %s
 EditablePanel::LayoutCmd_Place()
 Empty
-Assertion Failed: cChildren <= SHRT_MAX
+cChildren <= SHRT_MAX
 unable to find control '%s'
 resource/layout/%s_%s.layout
 resource/layout/%s.layout
@@ -12014,10 +12058,10 @@ NewFolder
 filter
 filterinfo
 %s %s
-Couldn't format time value %llu
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/FileOpenDialog.cpp
+Couldn't format time value %llu
 *.*
-Assertion Failed: curFilter[0] == '*' && curFilter[1] == '.'
+curFilter[0] == '*' && curFilter[1] == '.'
 .app
 FileCompletionEdit
 PopulateFileNameCompletion
@@ -12063,7 +12107,6 @@ frame_close
 CloseFrameButtonPressed
 frame_menu
 BgColor
-Assertion Failed: title
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/Frame.cpp
 Frame::SetTitle - vgui::localize not initialized
 BaseControls
@@ -12109,10 +12152,10 @@ SnapRange
 CaptionGripPanel::OnThink()
 AppleActionOnDoubleClick
 AppleMiniaturizeOnDoubleClick
-Assertion Failed: wide > 0
-Assertion Failed: tall > 0
-Assertion Failed: boundWide >= 0
-Assertion Failed: boundTall >= 0
+wide > 0
+tall > 0
+boundWide >= 0
+boundTall >= 0
 FrameTitle
 FrameButton
 FrameMinimizeButton
@@ -12180,8 +12223,8 @@ HTML.SearchAnimationTime
 DeletePanel
 custom_
 FindBar
-Assertion Failed: ulPlatformParentWindow == 0
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/HTML.cpp
+ulPlatformParentWindow == 0
 FindEntry
 FindCount
 resource/layout/htmlfindbar.layout
@@ -12195,8 +12238,8 @@ next
 #vgui_Webkit_connectionproblem
 #vgui_Webkit_proxyconnectionproblem
 #vgui_Webkit_unknown
-Assertion Failed: m_iHTMLTextureID
-Assertion Failed: !m_pSharedPaintBuffers->BLockedForRead()
+m_iHTMLTextureID
+!m_pSharedPaintBuffers->BLockedForRead()
 glTextureRangeAPPLE
 _blank
 _new
@@ -12265,10 +12308,10 @@ data:image/
 HTMLComboBoxHost
 CHTMLFindBar
 TextNewLine
-Assertion Failed: m_nLockedIdx >= 0
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/html/htmlpaintbuffer.h
-Assertion Failed: m_nLockedIdx == -1
-Assertion Failed: iNewReadIndex != 3
+m_nLockedIdx >= 0
+m_nLockedIdx == -1
+iNewReadIndex != 3
 HtmlFramelessPopup
 htmlframelesspopupchild
 steam://close
@@ -12387,8 +12430,8 @@ InputDialog
 LabelDull
 LabelBright
 Label::Paint()
-Assertion Failed: _imageDar.IsValidIndex( index )
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/Label.cpp
+_imageDar.IsValidIndex( index )
 labelText
 north-west
 north-east
@@ -12422,36 +12465,36 @@ VertScrollBar
 ListImage
 ListPanelInterior
 ColumnSelectButton
-Assertion Failed: minWidth <= width
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/ListPanel.cpp
-Assertion Failed: maxWidth >= width
+minWidth <= width
+maxWidth >= width
 Check
 ListPanel::AddColumnHeader() can only have one checkable column, which must be called 'check'
 ListPanel column does not support both CUSTOMPANEL and CHECKABLE at the same time
 SetSortColumn
-Assertion Failed: m_pImageList
+m_pImageList
 ListPanel::AddItem
 imageSelected
 check
 ItemsChecked
 count
 itemid
-Assertion Failed: m_vecSections.IsValidIndex(iSection)
+m_vecSections.IsValidIndex(iSection)
 ListPanel::ApplyItemChanges
 ListPanel::RemoveItem
 ItemDeselected
-Assertion Failed: !m_SelectedItems.HasElement( itemID )
+!m_SelectedItems.HasElement( itemID )
 %s_url
-Assertion Failed: m_pTextImage
-Assertion Failed: m_pImagePanel
+m_pTextImage
+m_pImagePanel
 ListPanel::PerformLayout()
-Assertion Failed: m_VisibleItems.Count() == m_vecVisibleItemsYPos.Count()
+m_VisibleItems.Count() == m_vecVisibleItemsYPos.Count()
 ListPanel::UpdateColumnWidths()
 ListPanel::CalculateVisibleRowPositions()
 ListPanel::PaintInterior()
 CustomStyle
 cellcolor
-Assertion Failed: m_VisibleItems.IsValidIndex( iItem )
+m_VisibleItems.IsValidIndex( iItem )
 rowheight
 ListPanel.TextColor
 ListPanel.DisabledTextColor
@@ -12460,7 +12503,7 @@ ListPanel.DisabledSelectedTextColor
 ListPanel.SelectedBgColor
 ListPanel.SelectedOutOfFocusBgColor
 ListPanel.PostSectionLeading
-Assertion Failed: col < m_CurrentColumns.Count()
+col < m_CurrentColumns.Count()
 ListPanel::SortList()
 ToggleColumnVisible
 col
@@ -12471,7 +12514,7 @@ sort_column_secondary
 sort_column_asc
 sort_column_secondary_asc
 ListPanel::OnCheckButtonChecked sanity
-Assertion Failed: bPanelFound
+bPanelFound
 vgui::ListPanel
 m_ColumnsData
 m_ColumnsData[ iColumn ].m_strCustomStyle
@@ -12484,12 +12527,9 @@ queueAsList
 queueAsList[ iData ]
 m_VisibleItems
 m_vecVisibleItemsYPos
-m_pTextImage
 m_SelectedItems
-m_pImagePanel
 m_VecURLLabels
 m_jumpHandler
-m_pImageList
 ListPanelColumnHeader
 ListPanelDragger
 ListPanelColumnSelectButton
@@ -12501,28 +12541,28 @@ ListPanelCheckBox::OnThink()
 different KV data types in a single list column
 ListPanelCollapserBase::OnAppearanceChanged()
 ListViewPanel
-Assertion Failed: font
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/ListViewPanel.cpp
+font
 ListViewItemSelected
 ListPanel.BgColor
 ListViewItem
 ListPanel.TextBgColor
-Assertion Failed: m_SeparatorPanels.Count() == 0
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/Menu.cpp
-Assertion Failed: m_MenuItems.IsValidIndex(itemID)
-Assertion Failed: child
-Assertion Failed: startItem >= 0
+m_SeparatorPanels.Count() == 0
+m_MenuItems.IsValidIndex(itemID)
+child
+startItem >= 0
 MenuItemSelected
 MenuScrollBar
 KeyModeSet
-Assertion Failed: itemNum >= 0
+itemNum >= 0
 MenuItemHighlight
-Assertion Failed: row != -1
+row != -1
 MenuSeparator
-Assertion Failed: m_MenuItems.IsValidIndex( itemID )
-Assertion Failed: parent
-Assertion Failed: menu
-Assertion Failed: relative
+m_MenuItems.IsValidIndex( itemID )
+parent
+menu
+relative
 vgui::Menu
 m_MenuItems
 m_SeparatorPanels
@@ -12531,9 +12571,8 @@ m_VisibleSortedItems
 CloseMenu
 CursorEnteredMenuItem
 CursorExitedMenuItem
-Assertion Failed: m_bCheckable
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/vgui_controls/MenuItem.h
-menu
+m_bCheckable
 menubar
 Failed to load menu file %s
 divider
@@ -12551,8 +12590,8 @@ VPanel
 showDownArrow
 , int showDownArrow
 MenuItem
-Assertion Failed: !(cascadeMenu && checkable)
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/MenuItem.cpp
+!(cascadeMenu && checkable)
 rightarrow
 Menu.TextInset
 vgui::MenuItem
@@ -12572,13 +12611,13 @@ oldtall
 LayoutFileChanged
 file
 LocalizationFileChanged
-Assertion Failed: IsVisible()
+IsVisible()
 SetAlpha
-Assertion Failed: IsTriplePressAllowed()
+IsTriplePressAllowed()
 KeyCodePressed
-Assertion Failed: binding
-Assertion Failed: IsValidKeyBindingsContext()
-Assertion Failed: !IsValidKeyBindingsContext() || handle == GetKeyBindingsContext()
+binding
+IsValidKeyBindingsContext()
+!IsValidKeyBindingsContext() || handle == GetKeyBindingsContext()
 KeyTyped
 unichar
 KeyCodeReleased
@@ -12592,7 +12631,7 @@ Panel::ScreenToLocal
 Panel::ParentLocalToScreen
 OnRequestFocus
 subFocus
-Assertion Failed: buildGroup != NULL
+buildGroup != NULL
 Panel::InternalPerformLayout()
 DragDrop.DragFrame
 DragDrop.DropFrame
@@ -12600,9 +12639,9 @@ Tooltip.Delay
 Tooltip.Anchor
 Cursor
 Parent
-Assertion Failed: pScheme
+pScheme
 ApplySchemeSettings did not chain back to base class: %s
-Assertion Failed: GetVParent()
+GetVParent()
 visible
 AutoResize
 PinCorner
@@ -12628,14 +12667,14 @@ string fieldName, int xpos, int ypos, int wide, int tall, bool visible, bool ena
 ClearSchemeSettings
 RequestFocus
 direction
-Assertion Failed: !("No handler for vgui message function")
+!("No handler for vgui message function")
 Message '%s', sent to '%s', has invalid parameter types
-Assertion Failed: !("Invalid number of parameters")
+!("Invalid number of parameters")
 -vguimessages
 set to see debug vgiui2 messages
 Message '%s', sent to '%s', has an invalid parameter type
 Message '%s' not handled by panel '%s'
-Assertion Failed: target
+target
 Already have converter for type %s, ignoring...
 float
 Color
@@ -12645,19 +12684,18 @@ vgui::HFont
 proportional_float
 proportional_int
 textureid
-Assertion Failed: outputData
-Assertion Failed: inputData
-Assertion Failed: scriptname
-Assertion Failed: m_pDragDrop->m_bDragging
-Assertion Failed: m_pDragDrop->m_DragData.Count()
-Assertion Failed: m_pDragDrop
+outputData
+inputData
+scriptname
+m_pDragDrop->m_bDragging
+m_pDragDrop->m_DragData.Count()
+m_pDragDrop
 m_pTooltips
 _actionSignalTargetDar
-Assertion Failed: pChild
-m_pDragDrop
+pChild
 $
 %s%s=%s
-Assertion Failed: format
+format
 GetPanelMessageMapDictionary()
 g_AnimationPropertyConverters
 GetPanelKeyBindingMapDictionary()
@@ -12724,8 +12762,8 @@ Mouse 5
 MOUSE_LAST
 +%s
 Can't add Keybindings Context for unnamed panels
-Assertion Failed: entry
-Assertion Failed: scheme
+entry
+scheme
 vgui::DragDrop_t
 m_DragData
 m_DragPanels
@@ -12737,8 +12775,8 @@ CPanelKeyBindingMapDictionary
 m_MessageMaps[ iMessageMap ].map->defaultkeys
 m_MessageMaps[ iMessageMap ].map->boundkeys
 m_PanelKeyBindingMapPool
-Assertion Failed: nIndex < ( unsigned int )m_list.Count()
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlhandletable.h
+nIndex < ( unsigned int )m_list.Count()
 ProgressBar
 progress
 continuous
@@ -12762,7 +12800,6 @@ PageHide
 PageTabActivated
 AddTabButton
 TabMenuButton
-Assertion Failed: tab
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/PropertySheet.cpp
 tab
 TabMenuButtonFlash
@@ -12774,7 +12811,6 @@ tabMenuMenu
 OpenTabPage
 index
 TabMenuItemFlash
-Assertion Failed: panel
 Alpha
 OpenContextMenu
 page
@@ -12796,12 +12832,12 @@ TabCloseButton
 screenx
 screeny
 propertysheet
-Assertion Failed: m_pParent->IsDraggableTab()
+m_pParent->IsDraggableTab()
 PageDragFrame
 DragPropertySheet
 resource/layout/pagedragframe.layout
 PageDragPanel
-Assertion Failed: (unsigned)elem <= (unsigned)m_Size
+(unsigned)elem <= (unsigned)m_Size
 #QueryBox_Cancel
 TimerDone
 QueryBoxTimed
@@ -12818,8 +12854,8 @@ ScrollBar
 RichText.InsetX
 RichText.InsetY
 RichText::DrawString
-Assertion Failed: startIndex < m_TextStream.Count()
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/RichText.cpp
+startIndex < m_TextStream.Count()
 RichText::OnThink()
 RichText::RecalculateLineBreaks
 EditMenu
@@ -12828,8 +12864,8 @@ DoCopySelected
 DoSelectAll
 #TextEntry_CopyAllToClipboard
 DoCopyAllText
-Assertion Failed: m_pEditMenu
-Assertion Failed: m_FormatStream[i].textStreamIndex > cullPos
+m_pEditMenu
+m_FormatStream[i].textStreamIndex > cullPos
 Cut
 TextClicked
 maxchars
@@ -12853,9 +12889,9 @@ textstreamindex
 clickabletextaction
 sections
 lineheight
-Assertion Failed: cchCharBlock <= m_TextStream.Count()
-Assertion Failed: iSection < 32
-Assertion Failed: iSection >= 0
+cchCharBlock <= m_TextStream.Count()
+iSection < 32
+iSection >= 0
 vgui::RichText
 m_TextStream
 m_FormatStream
@@ -12867,8 +12903,8 @@ DoCutSelected
 ClickPanel
 RichTextInterior
 m_mapCharToWidth
-Assertion Failed: elem >= 0 && num >= 0 && INT_MAX - elem >= num
-Assertion Failed: elem + num <= Count()
+elem >= 0 && num >= 0 && INT_MAX - elem >= num
+elem + num <= Count()
 ScrollBar_Vertical
 ScrollBar_Horizontal
 ScrollBarSlider
@@ -12886,21 +12922,21 @@ SliderHoriz
 SectionedScrollBar
 SectionedListPanelInterior
 SectionedListPanel::ReSortList()
-Assertion Failed: pItem
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/SectionedListPanel.cpp
+pItem
 SectionedListPanel::PerformLayout()
 SectionedListPanel::LayoutPanels()
 linespacing
 SectionedListPanel.CollapserWidth
 SectionedListPanel::AddColumnToSection() invalid column flags, make sure you're not confusing 'flags' param with 'width'
-Assertion Failed: m_Sections.IsValidIndex( FindSectionIndexByID( sectionID ) )
-Assertion Failed: m_Items.IsValidIndex(itemID)
+m_Sections.IsValidIndex( FindSectionIndexByID( sectionID ) )
+m_Items.IsValidIndex(itemID)
 SubpanelContextMenu
 MouseScrolled
 delta
 KeyCodeTyped
 code
-Assertion Failed: i != m_SortedItems.Count()
+i != m_SortedItems.Count()
 SectionedListPanel::GetContentSize()
 %d_collapsed
 m_Sections
@@ -12910,7 +12946,7 @@ m_FreeItems
 m_SortedItems
 ContextMenu
 SectionedListPanelHeader
-Assertion Failed: dynamic_cast<TextImage *>(image) != NULL
+dynamic_cast<TextImage *>(image) != NULL
 vgui::SectionedListPanelHeader
 m_TextImages
 m_TextImages[ iText ]
@@ -12923,14 +12959,14 @@ ItemContextMenu
 SubPanel
 ItemDoubleLeftClick
 < unset >
-Assertion Failed: !("Images columns used in SectionedListPanel with no ImageList set")
+!("Images columns used in SectionedListPanel with no ImageList set")
 m_pData
 vgui::SectionedListPanelItem
 TextEntry.IMEBGColor
 TextEntry.IMEFGColor
 TextKillFocus
-TextEntry field is much too large: %d characters, %f pixels wanted, %d pixels available
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/TextEntry.cpp
+TextEntry field is much too large: %d characters, %f pixels wanted, %d pixels available
 #TextEntry_Cut
 DoDeleteThenPaste
 Resource\warning.wav
@@ -12971,16 +13007,16 @@ IMELanguageList
 IMEConversionModes
 IMESentenceModes
 TextEntryClearButton
-Assertion Failed: (elem == Count()) || IsValidIndex(elem)
+(elem == Count()) || IsValidIndex(elem)
 TextImage::Paint()
-Assertion Failed: echar >= schar
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/TextImage.cpp
-Assertion Failed: wordStartIndex > m_LineBreaks[ m_LineBreaks.Count() - 1 ]
-Assertion Failed: wordStartIndex >= _utext
-Assertion Failed: lineStartIndex > m_LineBreaks[ m_LineBreaks.Count() - 1 ]
-Assertion Failed: lineStartIndex >= _utext
-Assertion Failed: nNumChars >= 0
-Assertion Failed: pLineEnd >= pLineStart
+echar >= schar
+wordStartIndex > m_LineBreaks[ m_LineBreaks.Count() - 1 ]
+wordStartIndex >= _utext
+lineStartIndex > m_LineBreaks[ m_LineBreaks.Count() - 1 ]
+lineStartIndex >= _utext
+nNumChars >= 0
+pLineEnd >= pLineStart
 vgui::TextImage
 m_PerLineEllipses
 ButtonToggled
@@ -12997,37 +13033,37 @@ ToolWindowSheet
 InsertTabImage
 steam/cached/icon_tab_placement_arrow
 resource/layout/toolwindow.layout
-Assertion Failed: page->m_pToolWindow == this
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/ToolWindow.cpp
+page->m_pToolWindow == this
 tabtitle
-Assertion Failed: pToolWindow
+pToolWindow
 PageChanged
 AddNewTab
 PageCountChanged
 TreeNode
 TreeImage
 TreeNodeText
-Assertion Failed: m_pTreeView->IsLabelEditingAllowed()
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/TreeView.cpp
+m_pTreeView->IsLabelEditingAllowed()
 original
 changed
 color
 Expand
 SelectedImage
 Image
-Assertion Failed: m_pTreeView->m_pFilter
+m_pTreeView->m_pFilter
 TreeView
-Assertion Failed: parentItemIndex == -1 || m_NodeList.IsValidIndex(parentItemIndex)
+parentItemIndex == -1 || m_NodeList.IsValidIndex(parentItemIndex)
 droppable
 drophoverdelay
-Assertion Failed: m_pRootNode == NULL
-Assertion Failed: m_NodeList.IsValidIndex(itemIndex)
-Assertion Failed: m_NodeList.IsValidIndex( endItem )
-Assertion Failed: sel
+m_pRootNode == NULL
+m_NodeList.IsValidIndex(itemIndex)
+m_NodeList.IsValidIndex( endItem )
+sel
 TreeViewItemSelected
 itemIndex
-Assertion Failed: IsLabelEditingAllowed()
-Assertion Failed: sel->IsLabelEditingAllowed()
+IsLabelEditingAllowed()
+sel->IsLabelEditingAllowed()
 vgui::TreeView
 m_NodeList
 m_ExpandStateQueue
@@ -13055,22 +13091,22 @@ ToolWindow::s_ToolWindows
 g_ButtonSoundNames
 BuildGroup::ValidateGlobals
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/bitstring.cpp
-Assertion Failed: resizeNumBits >= 0
-Assertion Failed: !m_pInt
-Assertion Failed: GetInts()
+resizeNumBits >= 0
+!m_pInt
+GetInts()
 CVariableBitStringBase
 {}()':
-Assertion Failed: pName
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/convar.cpp
+pName
 Convars
-Assertion Failed: m_vecCallbacks.Count() == 0 || !callback
-Assertion Failed: m_pParent == this
+m_vecCallbacks.Count() == 0 || !callback
+m_pParent == this
 ConVar::InternalSetValue: called with NULL
 Hey, you just set %s's number values to be 0.  Is that what you wanted?If you do `%s = 123`, you will set the convar to `= 123` which becomes `0` for numeric uses.Did you mean to do `%s %s` instead?
-Assertion Failed: !( m_nFlags & FCVAR_NEVER_AS_STRING )
-Assertion Failed: m_vecCallbacks.Count() == 0
+!( m_nFlags & FCVAR_NEVER_AS_STRING )
+m_vecCallbacks.Count() == 0
 %lf
-Assertion Failed: pDefaultValue
+pDefaultValue
 console
 Attempted to change replicated CVar when you are not the GM
 ConVar
@@ -13084,8 +13120,8 @@ Key( i )
 Bad expression token: %c at %d in %s
 Bad expression token: %c %c
 .
-V_RemoveDotSlashes failed for "%s".
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
+V_RemoveDotSlashes failed for "%s".
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s
 flock LOCK_EX request but file is not opened for writing, ignoring: %s
 flock %s %s failed. errno = %d
@@ -13096,33 +13132,33 @@ fcntl failed to set F_NOCACHE
 rb
 %s%c%s
 unsupported flags 0x%x passed to CFileReader::BOpenFile
-Assertion Failed: BIsOpen()
-Assertion Failed: cubBytesToRead < INT32_MAX
+BIsOpen()
+cubBytesToRead < INT32_MAX
 Unbuffered read should be called with pvData buffer that is aligned to system page size (4kb)
 Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
 Seeking to a position which is not sector aligned will break unbuffered io
 ..
 %s/%s
-Assertion Failed: !"Failed to CFStringCreateWithCString watcher path"
+!"Failed to CFStringCreateWithCString watcher path"
 m_listChangedFiles
 File change notification for %s but no file contents changed based on hash
 m_strWatchPath
 m_mapFileWatchData
 m_mapFileWatchData.Key( i )
-Assertion Failed: cbActual < (uint32)nBufSizeWithTerminator
+cbActual < (uint32)nBufSizeWithTerminator
 CPathString
 .dylib
 %s/%s%s
-Assertion Failed: strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/interface.cpp
+strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
 .cpl
 %s%s
 g_VecLoadedModules
-Assertion Failed: g_VecLoadedModules[ iLoadedModules ].m_cRef > 0
+g_VecLoadedModules[ iLoadedModules ].m_cRef > 0
 port
 ReadToken overflow
-Assertion Failed: filesystem
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/KeyValues.cpp
+filesystem
 You should clear the KeyValues instance before calling this function or call MergeFromFile instead.
 "
 "
@@ -13159,13 +13195,13 @@ ANDROID32
 ANDROID64
 X360
 PS3
-Assertion Failed: buf.GetFlags() & CUtlBuffer::TEXT_BUFFER
+buf.GetFlags() & CUtlBuffer::TEXT_BUFFER
 #include
 #include is NULL
 KeyValues don't support #include anymore, file "%s"
 LoadFromBuffer: missing {   (current key: '%s')
 Error while parsing text KeyValues for resource %s
-Assertion Failed: pKeyValuesTextParser
+pKeyValuesTextParser
 RecursiveLoadFromBuffer:  got EOF instead of keyname
 RecursiveLoadFromBuffer:  got empty keyname
 RecursiveLoadFromBuffer:  got NULL key
@@ -13177,8 +13213,8 @@ KeyValues::WriteAsBinary() overflowed buffer (%d bytes)
 KeyValues::ReadAsBinary() stack depth > 100
 KeyValues
 NULL
-Assertion Failed: m_errorIndex>=0
-Assertion Failed: stackLevel >= 0 && stackLevel < m_errorIndex
+m_errorIndex>=0
+stackLevel >= 0 && stackLevel < m_errorIndex
 KeyValues Error: %s in file %s [offset: %d]
 (*
 *),
@@ -13190,82 +13226,82 @@ KeyValues Error: %s in file %s [offset: %d]
 \u001
 \u000
 0123456789ABCDEF
-Assertion Failed: context.m_vecStack.Count() <= 1
+context.m_vecStack.Count() <= 1
 %.18g
 Memory leak: mempool blocks left in memory: %d
-CMemoryPool::AddNewBlob: mode == GROW_NONE
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/mempool.cpp
-Assertion Failed: blobSize <= nMaxBlobSize
-Fatal Assertion Failed: pBlob
+CMemoryPool::AddNewBlob: mode == GROW_NONE
+blobSize <= nMaxBlobSize
+pBlob
 CMemoryPool::Alloc: ran out of memory
-Assertion Failed: k_nMemPoolMagic_Free == *(( (int *) returnBlock) - 1)
+k_nMemPoolMagic_Free == *(( (int *) returnBlock) - 1)
 CMemoryPool
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/netadr.cpp
 %d.%d.%d.%d:%d
-Assertion Failed: info.m_pReplacementString == 0
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
+info.m_pReplacementString == 0
 CUtlBuffer::GetStringFast: binary buffers only
 Expected %lld but got %lld!
-Assertion Failed: pConv && pConv->GetDelimiterLength() > 0
-Assertion Failed: pFmt
-Assertion Failed: nSize >= 0
-Assertion Failed: m_Put >= 0
-Assertion Failed: offset >= 0
-Assertion Failed: offset >= -m_Put && offset <= INT_MAX-m_Put
-Assertion Failed: offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
+pConv && pConv->GetDelimiterLength() > 0
+pFmt
+nSize >= 0
+m_Put >= 0
+offset >= 0
+offset >= -m_Put && offset <= INT_MAX-m_Put
+offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
 v
 b
 r
 a
 ?
 '
-Assertion Failed: nSizeOfType > 0
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
-Assertion Failed: nGrowSize >= 0
-Assertion Failed: m_nAllocationCount >= 0
-Assertion Failed: m_unSizeOfElements == mem.m_unSizeOfElements
+nSizeOfType > 0
+nGrowSize >= 0
+m_nAllocationCount >= 0
+m_unSizeOfElements == mem.m_unSizeOfElements
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
-Assertion Failed: num > 0
-Assertion Failed: num >= 0
+num > 0
+num >= 0
 CUtlString::SetValue
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
 CUtlString::VFormat
 CUtlString::VAppendFormat
 CUtlString::ReplaceInternal
-Assertion Failed: pstrNew + nNewLength == pstrDestination + 1
-Assertion Failed: cActualReplacements == cReplacements
+pstrNew + nNewLength == pstrDestination + 1
+cActualReplacements == cReplacements
 Assertion failed: length > k_cchMaxString
 0123456789abcdef
 CUtlStringBuilder::InternalPrepareBuffer
-Assertion Failed: nMinCapacity > Capacity()
-Assertion Failed: nMinCapacity >= nChars
-Assertion Failed: nMinCapacity <= k_nMaxStringSize
-Assertion Failed: len > 0 || HasError()
+nMinCapacity > Capacity()
+nMinCapacity >= nChars
+nMinCapacity <= k_nMaxStringSize
+len > 0 || HasError()
 CUtlStringBuilder::ReplaceInternal
-Assertion Failed: pstrNew == pszString
-Assertion Failed: pstrNew == pstrDestination
-Assertion Failed: PrepareBuffer( nNewLength ) == pstrNew
+pstrNew == pszString
+pstrNew == pstrDestination
+PrepareBuffer( nNewLength ) == pstrNew
 Error State on string being set.
 CUtlStringBuilder::Data::MoveToHeap
-Assertion Failed: !m_data.HasError()
-Assertion Failed: s_bAllowStaticSymbolTable
+!m_data.HasError()
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
+s_bAllowStaticSymbolTable
 s_pSymbolTable
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_digest_openssl.cpp
 CCrypto::GenerateSHA1Digest
-Assertion Failed: pOutDigest
-Fatal Assertion Failed: SHA1_Init( &c )
+pOutDigest
+SHA1_Init( &c )
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_rsa_openssl.cpp
-Assertion Failed: pubData
-Assertion Failed: rsaKey.IsValid()
-Assertion Failed: pubSignature
+pubData
+rsaKey.IsValid()
+pubSignature
 CCrypto::RSAVerifySignature
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_textencode.cpp
 CCrypto::HexDecode
-Assertion Failed: pchData
-Assertion Failed: pDecodedData
-Assertion Failed: pcubDecodedData
-Assertion Failed: *pcubDecodedData
+pchData
+pDecodedData
+pcubDecodedData
+*pcubDecodedData
 CCrypto::HexDecode: insufficient output buffer (input length %u, output size %u)
 CCrypto::Base64Encode: insufficient output buffer for encoding, needed %d got %d
 CCrypto::Base64Encode
@@ -13280,7 +13316,7 @@ END
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/keypair.cpp
 Key type %d doesn't know how to load from buffer
 PRIVATE KEY
-Assertion Failed: eKeyType == k_ECryptoKeyTypeRSAPublic
+eKeyType == k_ECryptoKeyTypeRSAPublic
 PUBLIC KEY
 m_vecHashBuckets
 m_memNodes
@@ -13302,8 +13338,8 @@ IVRApplications_007
 IVRNotifications_002
 IVRSettings_003
 IVRExternalEventSource_001
-Assertion Failed: m_pModule
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/interface.h
+m_pModule
 libopenvr_api.dylib
 steamclient.dylib
 Ctrl
@@ -13534,10 +13570,10 @@ KEY_NUMLOCKTOGGLE
 Num Lock Toggle
 KEY_SCROLLLOCKTOGGLE
 Scroll Lock Toggle
-Assertion Failed: ( pDesc->macKeyCode & 0xff ) == 0xff || s_pVirtualKeyToKeyCode[pDesc->macKeyCode] == 0 || pDesc->keyCode == KEY_LSHIFT || pDesc->macKeyCode == 1 || pDesc->keyCode == KEY_LALT || pDesc->keyCode == KEY_LCONTROL || pDesc->keyCode == KEY_PAD_ENTER
-Assertion Failed: s_pKeyCodeToVirtualKey[keyMap[i].keyCode] == 0
-Missing String for %s (%d)
+( pDesc->macKeyCode & 0xff ) == 0xff || s_pVirtualKeyToKeyCode[pDesc->macKeyCode] == 0 || pDesc->keyCode == KEY_LSHIFT || pDesc->macKeyCode == 1 || pDesc->keyCode == KEY_LALT || pDesc->keyCode == KEY_LCONTROL || pDesc->keyCode == KEY_PAD_ENTER
+s_pKeyCodeToVirtualKey[keyMap[i].keyCode] == 0
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/enum_names.cpp
+Missing String for %s (%d)
 unknown
 ELauncherType
 EControllerType
@@ -13588,23 +13624,23 @@ controller_ps5
 controller_xboxelite
 optional
 Windows
-LoadFileIntoBuffer: NULL parameters
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/filesystem_helpers.cpp
+LoadFileIntoBuffer: NULL parameters
 VALVE_CRYPTO_dbg_malloc
 VALVE_CRYPTO_dbg_realloc
 VALVE_CRYPTO_dbg_free
 COpenSSLContext
 COpenSSLConnection
-OpenSSL random number system reports not enough entropy
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/opensslwrapper.cpp
+OpenSSL random number system reports not enough entropy
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/steamid.cpp
-Assertion Failed: steamIDClan.GetEAccountType() == k_EAccountTypeClan
-Assertion Failed: k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
+steamIDClan.GetEAccountType() == k_EAccountTypeClan
+k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
 30819D300D06092A864886F70D010101050003818B0030818702818100B1260881BDFE84463D88C6AB8DB914A2E593893C10508B8A5ABDF692E9A5419A3EDBAE86A052849983B75E3B425C18178B260003D857DF0B6505C6CF9C84F5859FCE3B63F1FB2D4818501F6C5FA4AD1430EEB081A74ABD74CD1F4AA1FCCA3B88DD0548AED34443CEB52444EAE9099AA4FE66B2E6224D02381C248025C7044079020111
 30819D300D06092A864886F70D010101050003818B003081870281810093AFCC20E2393BFD1234FC5552E9A9D5610ECC4AC6891EBCC77C28018FCB31404C09A5DC11636CD97C1A022188AB680CFF063C830BA693A0F1A90E9A3E21E33EE731BD5B6AAB09B40A1A951C21ECD6B11CAB63B4840894F4F2F0CC9D24924DF7DB216FE7D9C0C5914A88DF501EF27ACB00D08101CC2AEC32DFAD498289DCF4BD020111
 30819d300d06092a864886f70d010101050003818b0030818702818100baeee6ba4093c07f86fb34fa2ed0c9660484dd02e2d7b4e2dbc0a7b80f088f42c34dffd633b4f79fd4956aa6b901d480da5d5f783fefd681b9fc517804b00451dfc3ecc7e16b11dcb0379dc1f9d00d0a7ab8f5d6aba57115f12256ed0c9e9bd4bf994dbbdd42cd019c5b023b3fd0005430c5305bdd46cce39a492753b0b5b355020111
 0
-'9
+*9
 9
 9
 9
@@ -13614,287 +13650,246 @@ Assertion Failed: k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
 9
 9
 9
-9
-9
-TC
+@
+}L
+x
+
+{(
+'K
+@
+x
 p
+Ic
 p
 0
-0
-p
-0
-8
-8
-8
-C
-R
-R
-8
-p
 0
 p
 0
+66
+%6
+2@
+
+i5
+S5
 p
 0
-8
-P
 p
 0
-)7
 p
 0
-B
+H5
+o4
+g@
+75
+*5
 p
 0
+p
+0
+5
+5
+5
+p
+0
+U?
 p
 0
 p
 0
 
-i7
-h7
-g7
-U
-I7
-7
+E8u
+4
+4
 0
-)7
+c4
 H=
-@
-:6
-6
-x
-@
-@
-@
-x
-U
-/
-/
-/
-/
+0
+"4
 j
+|3
 
 
-
+#4
++3
 p
 0
-^4
-4
+~.
 p
 0
+64
 j
 j
-AVj
-@
-@
-@
-@
-@
-@
-@
-@
-
-#@
-O3
-
-
-9
-9
-4
-4
-4
-4
-4
-4
-4
-4
-4
-4
-0
-0
-0
-p
-0
-4
-4
-4
-p
-0
-p
-0
-p
-0
-p
-0
-p
-0
-p
-0
-p
-p
-0
-p
-0
-p
-p
-0
-.
-p
-0
-p
-0
-3
-3
-3
-3
-3
-3
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-E3
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-p
-2
-2
-2
-2
-2
-A
-A
 AWj
+@
+@
+@
+@
+@
+@
+@
+@
+.
 
-YR
+
+@
+@
+
+@
+>
+4
+0
+0
+0
+p
+0
+@
 p
 0
 p
 0
 p
 0
-;
-/
+p
+0
+p
+0
+#/
+p
+0
+p
 p
 0
 p
 0
 p
-0
-p
-0
-0
-p
-0
-1
-0
 p
 0
 p
 0
-0
-0
+3
 p
 0
+3
+3
+3
+Y3
+2
+2
+2
+t(
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+=3
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+3
+3
+3
+3
 p
-0
+AWj
+M2
+[R
+<2
+k2
 p
 0
 2
@@ -13902,61 +13897,89 @@ p
 0
 p
 0
-<
-0
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-p
-0
-p
-0
-,
-G1
-^Q
-.1
+I
 p
 0
 p
 0
 p
 0
+p
+0
+0
+p
+0
+0
+p
+0
+p
+0
+0
+0
+
+p
+0
+p
+0
+p
+0
+p
+0
+p
+0
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+2
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+Z&
+p
+0
+D1
 p
 0
 1
 1
 1
 1
-J1
 p
-,2
+0
 p
+0
+p
+0
+p
+0
+p
+p
+0
+0
+[+
 p
 
 p
@@ -13972,6 +13995,7 @@ p
 0
 p
 0
+/-
 p
 0
 p
@@ -13983,27 +14007,17 @@ p
 p
 0
 E
+0
 1
 1
+1
+1
+1
+G0
+nP
 p
 0
-p
-%
-Q
-/
-/
-p
-:
-/
-p
-0
-p
-0
-p
-0
-p
-0
-p
+k*
 p
 0
 0
@@ -14011,24 +14025,47 @@ p
 0
 0
 0
+B
+
+
 0
 0
-Ic
+0
+0
+
+1
+u0
+
+
+p
+B
+(0
+E8}
+.
+0
+0
+0
+0
+0
+0
+0
+0
+0
 p
 0
-%/
-#/
-FO
-/
-/
-/
-/
-/
-/
-/
-/
-/
-/
+p
+0
+p
+0
+)/
+p
+0
+p
+p
+p
+0
+$
+$
 0
 0
 AT=
@@ -14039,7 +14076,7 @@ AT=
 D
 @
 @
-W/
+P/
 @
 Hc
 Hc
@@ -14074,41 +14111,48 @@ IcE
 .
 .
 .
+M.
 V
-X-
-I-
+46
+-
 =
-t,
-;-
-=
+7
+g,
+U,
+-
 ,
-)+
-$+
+=
+u,
+,
++
 +
 *
-*
+J
 @
 )
-)
-)
-)
-})
-j)
-'(
-8)
 (
-R'
-J'
-'
-'
-'
--
+)
+)
+H
+<
+P'
+H
+H
+H
+H
+H
 (
-0*
+(
+(
+(
+(
+'
+'
 @
 M9e
 @
 @
+r&
 ?
 ?
 ?
@@ -14120,7 +14164,6 @@ M9e
 ?
 ?
 ?
-%
 :
 ?
 ?
@@ -14131,29 +14174,23 @@ AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 @
 AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
-+
-
-
-
-
-
+z%
+~%
 Pj
 ARj
 j
-M%
 0
 0
+#
 =
 =
 @
 =
 9
-)
 =
 %
 =
 Montgomery Multiplication with scatter/gather for x86_64, CRYPTOGAMS by <appro@openssl.org>
-#
 pppp
 pp
 ,,
@@ -14445,34 +14482,41 @@ ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 =
 @
+t"
+r"
 
 @
 @
 @
 0
-)
 H=
 Ic]
 j
 j
 j
 j
-"
 j
 j
 
-|)
+y&
+_)
+
 t$I;M
-%
 e
 W
 ,7~5d
-#-.;
-#!;
+#=$;
 H
 0
+.
+.
+.
+.
 
 
+:
+:
+#
 
 
 
@@ -14482,16 +14526,16 @@ H
 
 *
 Hc
-88
-L)5k/8
-L95`+8
-+8
-*8
+f8
+L)5{%8
+L95p!8
 AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 %
 @
 @8
 `$
+`7
+]7
 @
 ,
 *
@@ -14624,12 +14668,13 @@ P
 |
 @
 @
-$
 #
-_"
-o"
+%
+%
 d
-fD9-',
+,,
+,
+,
 A+M
 
 j
@@ -14638,47 +14683,57 @@ j
 j
 j
 j
+
+
+
 =
 0
-$
 
 
++
++
++
++
++
++
++
++
++
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
 
 
-
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-\"
-c"
-
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
 
 #
+
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+
+Y*
 d
 &
 &
@@ -14744,6 +14799,7 @@ j
 "
 
 
+Y"
 
 j
 j
@@ -14756,6 +14812,11 @@ j
 j
 j
 E
+K
+j
+j
+j
+j
 j
 j
 j
@@ -14766,7 +14827,9 @@ j
 j
 j
 "
-"
+&&
+&
+&
 j
 j
 j
@@ -14811,11 +14874,6 @@ j
 j
 j
 j
-j
-j
-j
-j
--%
 j
 j
 j
@@ -14832,9 +14890,11 @@ j
 j
 j
 j
+!
 @
 @
 &
+"
 @
 @
 @
@@ -14861,6 +14921,7 @@ j
 @
 @
 @
+
 @
 @
 @
@@ -14897,8 +14958,9 @@ j
 j
 .
 d
-c"
 =
+Hc?G"
+Hc"G"
 
 =
 @
@@ -14920,6 +14982,8 @@ c"
 0
 0
 0
+b
+a
 0
 &
 @
@@ -14930,4 +14994,3 @@ Hc
 p
 p
 p
-!

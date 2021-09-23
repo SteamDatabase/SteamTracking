@@ -2720,11 +2720,12 @@
 "Steam_LaunchOption_Application"			"Εκκίνηση %game%"
 
 "Steam_LaunchOption_SafeMode"					"Εκκίνηση του %game% σε ασφαλή λειτουργία"
-"Steam_LaunchOption_Multiplayer"			"Εκκίνηση %game% σε λειτουργία multiplayer"
-"Steam_LaunchOption_VR"								"Εκκίνηση του %game% σε λειτουργία Steam VR"
-"Steam_LaunchOption_othervr"						"Εκτέλεση του %game% σε λειτουργία Oculus VR"
+"Steam_LaunchOption_Multiplayer"				"Εκκίνηση %game% σε λειτουργία multiplayer"
+"Steam_LaunchOption_VR"							"Εκκίνηση του %game% σε λειτουργία Steam VR"
+"Steam_LaunchOption_openxr"						"Εκκίνηση %game% σε λειτουργία OpenXR"
+"Steam_LaunchOption_othervr"					"Εκτέλεση του %game% σε λειτουργία Oculus VR"
 "Steam_LaunchOption_osvr"						"Εκκίνηση του %game% σε λειτουργία OSVR"
-"Steam_LaunchOption_openvroverlay"					"Εκκίνηση του %game% ως επικάλυψη Steam VR"
+"Steam_LaunchOption_openvroverlay"				"Εκκίνηση του %game% ως επικάλυψη Steam VR"
 "Steam_LaunchOption_Server"						"Εκκίνηση διακομιστή"
 "Steam_LaunchOption_Editor"						"Εκκίνηση επεξεργαστή παιχνιδιού"
 "Steam_LaunchOption_Config"						"Εκκίνηση εργαλείου διαμόρφωσης"
@@ -2849,7 +2850,8 @@
 "SteamUI_DurationControl_PlaytimeExceeded_Body_ThreeHours"	"Έχετε φτάσει το όριο χρόνου στο διαδίκτυο για σήμερα. Κάντε ένα διάλειμμα και επιστρέψτε αύριο μετά τις 8πμ."
 "SteamUI_DurationControl_PlaytimeExceeded_Body_FiveHours"	"Έχετε φτάσει το όριο χρόνου στο διαδίκτυο για σήμερα. Κάντε ένα διάλειμμα και επιστρέψτε αύριο μετά τις 8πμ."
 "SteamUI_DurationControl_PlaytimeExceeded_Body_Night"		"Παίκτες κάτω των 18 δεν μπορούν να παίξουν αυτό το παιχνίδι μεταξύ 10μμ και 8πμ της επόμενης μέρας. Κάντε ένα διάλειμμα."
-
+"SteamUI_DurationControl_PlaytimeExceeded_Body_WaitingVerification"		"Ο λογαριασμός σας βρίσκεται σε διαδικασία επαλήθευσης πραγματικού ονόματος, δοκιμάστε ξανά αργότερα."
+"SteamUI_DurationControl_PlaytimeExceeded_Body_Maintenance"		"Αυτό το παιχνίδι βρίσκεται σε διαδικασία τεχνικών ενημερώσεων και οι ανήλικοι δεν θα έχουν τη δυνατότητα να παίξουν έως ότου αυτές ολοκληρωθούν. Ζητούμε συγγνώμη για την αναστάτωση και σας ευχαριστούμε για την κατανόησή σας."
 
 
 "Steam_GuestPassesColumn" 		"Δώρα"
@@ -4633,7 +4635,7 @@
 
 "Steam_Settings_Streaming_Connected" "Συνδεδεμένος υπολογιστής"
 "Steam_Settings_Streaming_Paired" "Συζεύκτηκε συσκευή"
-"Steam_Settings_Streaming_NotConnected" "Μη συνδεδεμένο"
+"Steam_Settings_Streaming_NotConnected" "Χωρίς σύνδεση"
 "Steam_Settings_Streaming_DifferentVersion" "Διαφορετική έκδοση εξυπηρετητή"
 "Steam_Settings_Streaming_Disabled" "Η μετάδοση απενεργοποιήθηκε"
 "Steam_Settings_Streaming_Unsupported" "Συνδεδεμένος υπολογιστής"

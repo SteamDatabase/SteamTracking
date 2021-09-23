@@ -58,7 +58,6 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/tslist.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/vprof.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/bitstring.h
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/mempoolref.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/netadr.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/refcount.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/smartptr.h
@@ -87,7 +86,6 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/mempool.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/netadr.cpp
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/tsmempool.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlqueue.cpp

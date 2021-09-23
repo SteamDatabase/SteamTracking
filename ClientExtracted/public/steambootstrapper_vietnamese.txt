@@ -31,6 +31,7 @@
 "SteamBootstrapper_PercentComplete"			"Hoàn thành %percent%%%"
 "SteamBootstrapper_NoNetwork"					"%appname% cần kết nối mạng để cập nhật. Xin vui lòng xác nhận kết nối mạng của bạn và thử lại."
 "SteamBootstrapper_FailedMkdir"				"Không thể tạo thư mục %dirname%, lỗi %errno%"
+"SteamBootstrapper_NotWriteable"				"Không thể ghi vào thư mục %dirname%."
 "SteamBootstrapper_FailedDownloadHTTPError"	"Tải xuống thất bại: http error %errno%"
 "SteamBootstrapper_AlreadyRunningError"		"Một bản %appname% hiện đã chạy trên máy tính này, dưới tên người dùng khác."
 "SteamBootstrapper_MoveContentDir_DestExists" "%appname% đã thay đổi nơi nó chứa nội dung trò chơi từ '~/Documents/Steam Content' sang '~/Library/Application Support/Steam/SteamApps'. Bạn có tệp trò chơi ở vị trí đầu tiên, và %appname% đã không thể dời các tệp đi vì các tệp đã xuất hiện tại địa chỉ mới. Bạn có thể cần phải dời các tệp đó bằng tay, hoặc xóa các tệp cũ và tải lại trò chơi của mình một lần nữa. Cứ tiếp tục?"

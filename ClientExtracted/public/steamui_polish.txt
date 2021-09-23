@@ -735,7 +735,7 @@ Potrwa to niecałą minutę."
 "SteamUI_GamePropertiesContent_ReadyForOffline" "Gotowy"
 "SteamUI_GamePropertiesContent_NotReadyForOffline" "Niegotowy"
 
-"Steam_ErrorOffline"	"Nie można zakończyć operacji, gdy Steam działa w trybie offline."
+"Steam_ErrorOffline"	"Ta czynność nie może zostać ukończona, gdy Steam jest w trybie offline."
 
 "Steam_MonitorTitle_Offline"	"Monitor - offline"
 "SteamRootGames_Offline"		"Gry - offline"
@@ -1399,7 +1399,7 @@ Potrwa to niecałą minutę."
 "SteamUI_AMD_BigPicture_Problem_Url" "http://support.amd.com/us/gpudownload/linux/Pages/radeon_linux.aspx"
 
 "SteamUI_VidDriverDetailsLabel"		"Szczegóły sterownika"
-"SteamUI_VidDriverOS"			"Wersja systemu:"
+"SteamUI_VidDriverOS"			"Wersja SO:"
 "SteamUI_VidDriverDescription"		"Opis:"
 "SteamUI_VidDriverVersion"		"Wersja:"
 
@@ -1641,13 +1641,13 @@ Aby dokonane zmiany zostały uwzględnione, konieczne będzie wylogowanie się z
 "SteamUI_NetworkTroubleshootingTips_URL"	"https://support.steampowered.com/kb_article.php?ref=1456-EUDN-2493&l=polish"
 
 
-"SteamUI_SSA_Agree"				"Zapoznaj się z treścią niniejszej umowy. Musisz zaakceptować warunki Umowy użytkownika Steam, by kontynuować."
+"SteamUI_SSA_Agree"				"Prosimy zapoznać się z treścią niniejszej umowy. Musisz zaakceptować warunki Umowy użytkownika Steam, by kontynuować."
 "SteamUI_SSA_CybercafeAgree"		"Jestem licencjonowanym właścicielem kafejki internetowej i zgadzam się na te warunki."
 "SteamUI_SSA_ActivateProduct"		"Aby zarejestrować produkt na Steam i dodać go do swojej biblioteki, wpisz klucz produktu (znajdujący się na opakowaniu, płycie lub inny). Kliknij „Dalej”, by kontynuować."
 "SteamUI_ActivateProductLockedDown"		"Twoje konto zostało zablokowane przez ciebie lub przez Pomoc techniczną Steam. Nie możesz niczego aktywować, dopóki nie rozwiążesz tego problemu."
 "SteamUI_ActivateProduct_ViewSupportMessage" "Zobacz aktywne powiadomienia od Pomocy technicznej Steam"
 
-"SteamUI_PPA_Agree"				"Zapoznaj się dokładnie z tą umową. Musisz wyrazić zgodę na warunki Polityki Prywatności Valve, aby kontynuować."
+"SteamUI_PPA_Agree"				"Prosimy zapoznać się z treścią niniejszej umowy. Musisz zaakceptować warunki Polityki Prywatności Valve, by kontynuować."
 "Steam_ClickToPrint"			"Kliknij tutaj, aby wydrukować"
 
 
@@ -2352,9 +2352,9 @@ Aby dokonane zmiany zostały uwzględnione, konieczne będzie wylogowanie się z
 "Steam_Uninstall_Games_Dialog_Text" "Odinstalowywanie %game%..."
 
 "Steam_Shutdown_Dialog_Title"	"Steam - zamykanie"
-"Steam_Shutdown_Dialog_Text" "Zamykanie Steam..."
-"Steam_Shutdown_Waiting_For_Game" "Oczekiwanie na zamknięcie %game%..."
-"Steam_Shutdown_Finishing_Download" "Oczekiwanie na zakończenie pobierania produktów z kolejki..."
+"Steam_Shutdown_Dialog_Text" "Wyłączanie Steam..."
+"Steam_Shutdown_Waiting_For_Game" "Oczekiwanie na wyłączenie %game%..."
+"Steam_Shutdown_Finishing_Download" "Oczekiwanie na zakończenie pobierań z kolejki..."
 "Steam_Shutdown_Waiting_For_Download" "Zatrzymywanie pobierania %game%..."
 "Steam_Shutdown_Waiting_For_Cloud" "Kończenie synchronizacji ze Steam Cloud..."
 "Steam_Shutdown_Waiting_For_Logoff" "Wylogowywanie..."
@@ -2722,11 +2722,12 @@ Aby dokonane zmiany zostały uwzględnione, konieczne będzie wylogowanie się z
 "Steam_LaunchOption_Application"			"Uruchom %game%"
 
 "Steam_LaunchOption_SafeMode"					"Uruchom %game% w trybie awaryjnym"
-"Steam_LaunchOption_Multiplayer"			"Uruchom %game% w trybie wieloosobowym"
-"Steam_LaunchOption_VR"								"Uruchom %game% w trybie Steam VR"
-"Steam_LaunchOption_othervr"						"Uruchom %game% w trybie Oculus VR"
+"Steam_LaunchOption_Multiplayer"				"Uruchom %game% w trybie wieloosobowym"
+"Steam_LaunchOption_VR"							"Uruchom %game% w trybie Steam VR"
+"Steam_LaunchOption_openxr"						"Uruchom %game% w trybie OpenXR"
+"Steam_LaunchOption_othervr"					"Uruchom %game% w trybie Oculus VR"
 "Steam_LaunchOption_osvr"						"Uruchom %game% w trybie OSVR"
-"Steam_LaunchOption_openvroverlay"					"Uruchom %game% jako nakładka VR Steam"
+"Steam_LaunchOption_openvroverlay"				"Uruchom %game% jako nakładka VR Steam"
 "Steam_LaunchOption_Server"						"Uruchom serwer dedykowany"
 "Steam_LaunchOption_Editor"						"Uruchom edytor gry"
 "Steam_LaunchOption_Config"						"Uruchom narzędzie konfiguracyjne"
@@ -2850,7 +2851,8 @@ Aby dokonane zmiany zostały uwzględnione, konieczne będzie wylogowanie się z
 "SteamUI_DurationControl_PlaytimeExceeded_Body_ThreeHours"	"Osiągnięto limit czasu gry sieciowej na dziś. Zrób sobie przerwę i spróbuj jutro po godzinie 8:00."
 "SteamUI_DurationControl_PlaytimeExceeded_Body_FiveHours"	"Osiągnięto limit czasu gry sieciowej na dziś. Zrób sobie przerwę i spróbuj jutro po godzinie 8:00."
 "SteamUI_DurationControl_PlaytimeExceeded_Body_Night"		"Gracze poniżej 18 roku życia nie mogą grać w tę grę od 22:00 do 8:00 dnia następnego. Zrób sobie przerwę."
-
+"SteamUI_DurationControl_PlaytimeExceeded_Body_WaitingVerification"		"Your account is under real-name verification, please try again later."
+"SteamUI_DurationControl_PlaytimeExceeded_Body_Maintenance"		"This game is undergoing technical updates, and minors will not be able to play until they are complete. Sorry for the inconvenience, and thank you for your understanding."
 
 
 "Steam_GuestPassesColumn" 		"Prezenty"
@@ -2900,7 +2902,7 @@ Aby dokonane zmiany zostały uwzględnione, konieczne będzie wylogowanie się z
 "Steam_LaunchEULA_Info"			"%game% — Umowa licencyjna użytkownika końcowego (EULA)"
 "Steam_LaunchEULA_Agree"			"Zgadzam się"
 "Steam_LaunchEULA_Decline"		"Anuluj"
-"Steam_LaunchEULA_Text"			"Prosimy zapoznać się z treścią niniejszej umowy. Musisz zaakceptować warunki umowy licencyjnej, aby grać w %game%."
+"Steam_LaunchEULA_Text"			"Prosimy zapoznać się z treścią niniejszej umowy. Musisz zaakceptować warunki umowy licencyjnej, by grać w %game%."
 
 "Steam_GuestPasses_LinkText"		"Więcej informacji o prezentach i kluczach tymczasowych"
 "Steam_GuestPasses_LinkURL"		"https://support.steampowered.com/kb/6262-QXCN-0755&l=polish/"
@@ -3091,8 +3093,7 @@ zaktualizować system do wersji Mac OS X 10.7 lub wyższej."
 "Steam_CPUSSEWarning_Info"	"W ciągu najbliższych kilku miesięcy %game% przestanie działać na tym komputerze. Stanie się tak, ponieważ %game% nie będzie już współpracować z procesorami, które nie obsługują zestawu instrukcji SSE. Aby dalej grać w %game%, należy unowocześnić ten komputer lub użyć innego."
 
 "SteamUI_InstallScript_Failed_Title" "Steam – błąd konfiguracji"
-"SteamUI_InstallScript_Failed_Text" "Nie powiodła się instalacja komponentów systemowych gry. Podczas pierwszego uruchomienia tej gry musisz się zalogować do systemu Windows jako administrator.
-Jeśli będziesz kontynuować, możesz mieć problemy z uruchomieniem gry."
+"SteamUI_InstallScript_Failed_Text" "Proces konfiguracji gry nie mógł zainstalować komponentów systemowych. Przed pierwszym uruchomieniem tej gry musisz zalogować się do systemu Windows jako administrator. Jeśli przejdziesz dalej, możesz mieć problemy z uruchomieniem gry."
 "SteamUI_InstallScript_Continue" "Kontynuuj mimo to"
 
 "SteamUI_3rdPartyRemapper_Title"		"Wykryto program przypisań kontrolera"
@@ -3983,7 +3984,7 @@ Jeśli będziesz kontynuować, możesz mieć problemy z uruchomieniem gry."
 
 "Steam_Login_ErrorTitle"			"Steam - błąd"
 "Steam_Login_DisabledTitle"			"Steam - skontaktuj się z nami"
-"Steam_ErrorAccountDisabled"		"To konto zostało zawieszone.\n\nTypowe powody zawieszenia to uzyskanie dostępu do konta\nprzez inną osobę lub spór płatniczy."
+"Steam_ErrorAccountDisabled"		"Pomoc techniczna Steam zawiesiła to konto.\n\nKonta zazwyczaj zostają zawieszone, gdy dostęp do nich został uzyskany\nprzez inną osobę lub istnieje spór płatniczy w toku."
 "Steam_Login_ContactSupport"		"Skontaktuj się z Pomocą techniczną Steam, by rozwiązać ten problem."
 "Steam_ErrorAccountIPLoginRestricted"		"Nie można uzyskać dostępu do konta z tego miejsca.\n"
 
@@ -4318,7 +4319,7 @@ Jeśli będziesz kontynuować, możesz mieć problemy z uruchomieniem gry."
 "SteamUI_StreamLaunch_InstallRequiresUI" "Instalacja tej gry wymaga ingerencji użytkownika.\n\nZainstaluj ręcznie na zdalnym komputerze."
 "SteamUI_StreamLaunch_Failed"		"Nie można uruchomić strumienia."
 "SteamUI_StreamLaunch_InstallDrivers"	"Strumieniowanie wymaga zainstalowania dodatkowych sterowników.\n\nPostępuj zgodnie ze wskazówkami na zdalnym komputerze."
-"SteamUI_StreamLaunch_StillDownloading" "Aktualizacja na %ClientName% w toku. %game% będzie gotowa do streamingu, kiedy zakończy się pobieranie."
+"SteamUI_StreamLaunch_StillDownloading" "Aktualizacja na %ClientName% w toku. %game% będzie gotowa do strumieniowania, kiedy zakończy się pobieranie."
 "SteamUI_StreamLaunch_TransportUnavailable"	"Strumieniowanie poza domem nie jest obecnie dostępne, spróbuj ponownie później."
 
 "Steam_InstallAudioCaptureDriver_Title"	"Aktualizacja sterownika audio"
@@ -4327,7 +4328,7 @@ Jeśli będziesz kontynuować, możesz mieć problemy z uruchomieniem gry."
 "Steam_InstallGamepadInputDriver_Text"	"Steam musi zaktualizować sterownik kontrolera, co może wymagać ponownego uruchomienia systemu.\n\nKliknij na „Zainstaluj”, aby kontynuować."
 
 "Steam_OtherSessionPlaying_Title" "Błąd - Steam"
-"Steam_OtherSessionPlaying_Text" "Twoje konto jest już zalogowane na innym komputerze z uruchomioną grą „%existing_app%”.\nUruchomienie „%launching_app%” rozłączy inne sesje."
+"Steam_OtherSessionPlaying_Text" "Twoje konto jest już zalogowane na innym komputerze z uruchomioną grą „%existing_app%”.\nUruchomienie „%launching_app%” w tym miejscu rozłączy inne sesje od Steam."
 
 "Steam_SystemRequirementWarning_Title" "Ostrzeżenie dot. wydajności"
 "Steam_SystemRequirementWarning_Text" "Twój komputer nie spełnia minimalnych wymagań systemowych %game%."
@@ -4515,7 +4516,7 @@ Jeśli będziesz kontynuować, możesz mieć problemy z uruchomieniem gry."
 "Steam_Settings_Compat_Forced_Info"		    "Możesz użyć Steam Play, by przetestować gry w twojej bibliotece, które nie zostały zweryfikowane obsługiwanym narzędziem kompatybilności."
 "Steam_Settings_Compat_Forced_Enable"		"Włącz Steam Play dla wszystkich pozostałych produktów"
 "Steam_Settings_Compat_Advanced_Info"		"Możesz wybrać narzędzie kompatybilności do użycia w grach, które nie zostały przetestowane ani zweryfikowane pod kątem działania na tej platformie.\n\nTa opcja może nie działać w spodziewany sposób oraz powodować problemy z twoimi grami, włączając w to nieoczekiwane zamknięcia oraz popsucie zapisanych stanów gry."
-"Steam_Settings_Compat_Default_Tool"		"Uruchamiaj inne produkty za pomocą:"
+"Steam_Settings_Compat_Default_Tool"		"Uruchamiaj inne tytuły za pomocą:"
 "Steam_Settings_Compat_Info_Link"		    "Najczęściej zadawane pytania dotyczące Steam Play"
 "Steam_Settings_Compat_No_Default"		    "Nie wybrano"
 

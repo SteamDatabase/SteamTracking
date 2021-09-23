@@ -31,6 +31,7 @@
 "SteamBootstrapper_PercentComplete"			"Готово %percent%%%"
 "SteamBootstrapper_NoNetwork"					"Для обновления %appname% должен быть онлайн. Проверьте ваше подключение к сети и повторите попытку."
 "SteamBootstrapper_FailedMkdir"				"Невозможно создать папку %dirname%, выводится код ошибки %errno%"
+"SteamBootstrapper_NotWriteable"				"Папка %dirname% настроена только для чтения."
 "SteamBootstrapper_FailedDownloadHTTPError"	"Сбой при загрузке: ошибка http %errno%"
 "SteamBootstrapper_AlreadyRunningError"		"Приложение %appname% уже запущено на этом компьютере с другой учётной записи."
 "SteamBootstrapper_MoveContentDir_DestExists" "Папка для хранения контента игры %appname% была изменена с '~/Documents/Steam Content' на '~/Library/Application Support/Steam/SteamApps'. Файлы игры находятся в первоначальной папке и %appname% не смог перенести их, так как такие же файлы уже существуют в новой папке.  Возможно, вам придется перенести эти файлы вручную или удалить старые файлы и загрузить ваши игры еще раз. Продолжить?"

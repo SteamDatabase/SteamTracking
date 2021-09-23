@@ -30,7 +30,7 @@
 "app_task_steamvr"	"SteamVR"
 "app_task_stop_streaming"	"Arrêter Remote Play"
 
-"Steam_AccountAlreadyLoggedInNeedShutdown"		"Le compte « %account% » est déjà en cours d'utilisation sur un autre ordinateur.\nVous devez fermer l'occurrence ouverte de Steam sur l'ordinateur en question avant de pouvoir vous connecter sur celui-ci."
+"Steam_AccountAlreadyLoggedInNeedShutdown"		"Le compte « %account% » est déjà en cours d'utilisation sur un autre ordinateur.\nVous devez fermer l'occurrence ouverte de Steam sur l'ordinateur en question avant de pouvoir vous connecter sur celui-ci."
 "Steam_AccountAlreadyLoggedInNeedPassword"		"Ce compte est déjà en cours d'utilisation sur un autre ordinateur.\nSaisissez à nouveau votre mot de passe pour vous connecter sur cet ordinateur."
 "Steam_AccountOfflineMissingConfig"				"Échec du téléchargement des données de configuration de la plateforme."
 "Steam_NeverConnectedNoConnection"				"Il s'agit de la première connexion au compte '%account%' sur cet ordinateur, et aucune connexion aux serveurs Steam n'a pu être établie.\nEn conséquence, certains services ne seront pas disponibles. Steam continuera à essayer de se connecter et les services deviendront accessibles dès la connexion établie."

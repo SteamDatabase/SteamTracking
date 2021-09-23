@@ -714,7 +714,7 @@
 "Steam_Settings_BroadcastTitle" "Uitzenden"
 "Steam_Settings_Broadcast_Disabled" "Uitzenden uitgeschakeld"
 "Steam_Settings_Broadcast_InviteOnly" "Enkel de vrienden die ik uitnodig"
-"Steam_Settings_Broadcast_FriendsApprove" "Vrienden kunnen verzoeken om mijn spel te bekijken"
+"Steam_Settings_Broadcast_FriendsApprove" "Vrienden kunnen vragen om mijn spellen te bekijken"
 "Steam_Settings_Broadcast_FriendsAllowed" "Vrienden kunnen mijn spellen bekijken"
 "Steam_Settings_Broadcast_FriendsPublic" "Iedereen kan mijn spellen bekijken"
 "Steam_Settings_Broadcast_Bitrate3500" "3500 kbit/s"

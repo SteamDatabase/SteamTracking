@@ -57,7 +57,6 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/interface.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/mempool.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/netadr.cpp
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/tsmempool.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlqueue.cpp

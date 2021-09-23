@@ -4,8 +4,8 @@
 "Tokens" 
 { 
 "TrackerUI_ConnectionSpeed"				"Скорост на интернет връзката"
-"TrackerUI_FavoriteWindowLabel_Windows"	"Избиране на това кой Steam прозорец да се появява, когато програмата стартира, както и при двойно кликване върху иконата в системната лента."
-"TrackerUI_FavoriteWindowLabel"			"Избиране на това кой Steam прозорец да се появява, когато програмата стартира."
+"TrackerUI_FavoriteWindowLabel_Windows"	"Изберете кой Steam прозорец да се появява при стартиране и при двойно кликване върху иконата в системната лента."
+"TrackerUI_FavoriteWindowLabel"			"Изберете кой Steam прозорец да се появява при стартиране."
 "TrackerUI_FavoriteWindow"			"Прозорец с любими"
 
 

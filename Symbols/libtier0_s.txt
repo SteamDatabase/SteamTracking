@@ -22,17 +22,17 @@
  R typeinfo name for SteamVProf::CVProfManager
  T AllocateCrashMemoryReserve
  T AreStackTrackingFiltersEnabledAtStart
+ T AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
+ T AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
  T AssertMsgImplementation
+ T AssertMsgImplementationF
+ T AssertMsgImplementationV
  T BBlockingGetMiniDumpLock
  T BGetLocalFQDN
  T BGetMiniDumpLock
  T BWritingFatalMiniDump
  T BWritingMiniDump
  T BWritingNonFatalMiniDump
- T CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(DbgFmtFatalMsgTag_t*, char const*, ...)
- T CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(char const*, ...)
- T CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(DbgFmtFatalMsgTag_t*, StringView)
- T CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(StringView)
  T CTier0::ValidateGlobals(CValidator&)
  T CVProfile_ExitScope
  T CValidator::AddValidationLock(SteamThreadTools::CThreadMutex*)

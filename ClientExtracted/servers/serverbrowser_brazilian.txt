@@ -116,7 +116,7 @@
 "ServerBrowser_FilterDescInsecureOnly"		"não protegido"
 "ServerBrowser_NoServersPlayed"			"Você não jogou em nenhum servidor recentemente"
 "ServerBrowser_RemoveServerFromHistory"		"Remover servidores do histórico"
-"ServerBrowser_LastPlayed"			"Jogado pela última vez"
+"ServerBrowser_LastPlayed"			"Última sessão"
 
 "ServerBrowser_OfflineMode" 			"O Steam está no modo offline. Partidas pela internet não estarão disponíveis até que você saia do\nmodo offline do Steam."
 

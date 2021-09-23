@@ -31,6 +31,7 @@
 "SteamBootstrapper_PercentComplete"			"%percent%%%"
 "SteamBootstrapper_NoNetwork"					"Το %appname% απαιτεί σύνδεση στο διαδίκτυο για να ενημερωθεί. Ελέγξτε τη σύνδεσή σας στο διαδίκτυο και προσπαθήστε ξανά."
 "SteamBootstrapper_FailedMkdir"				"Αδυναμία δημιουργίας φακέλου %dirname%, σφάλμα %errno%"
+"SteamBootstrapper_NotWriteable"				"Κατάλογος %dirname% μη εγγράψιμος."
 "SteamBootstrapper_FailedDownloadHTTPError"	"Αποτυχία λήψης: σφάλμα http %errno%"
 "SteamBootstrapper_AlreadyRunningError"		"Η εφαρμογή %appname% ήδη εκτελείται σε αυτό τον υπολογιστή, υπό διαφορετικό όνομα χρήστη."
 "SteamBootstrapper_MoveContentDir_DestExists" "Το %appname% άλλαξε φάκελο αποθήκευσης παιχνιδιών από '~/Documents/Steam Content' σε '~/Library/Application Support/Steam/SteamApps'.  Έχετε αρχεία παιχνιδιών στον αρχικό φάκελο και το %appname% δεν μπόρεσε να μετακινήσει τα αρχεία επειδή τα αρχεία υπάρχουν ήδη στη νέα τοποθεσία.  Μπορεί να χρειαστεί να μετακινήσετε τα αρχεία εσείς, ή να διαγράψετε τα παλιά αρχεία και να κατεβάσετε τα αρχεία ξανά.  Συνέχεια;"

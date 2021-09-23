@@ -1,8 +1,8 @@
 __TEXT
 __text
 __TEXT
-@>
-@>
+PJ
+PJ
 __stubs
 __TEXT
 __stub_helper
@@ -43,6 +43,7 @@ __bss
 __DATA
 __common
 __DATA
+@C
 H
 __LINKEDIT
 
@@ -110,6 +111,9 @@ N10CSteamUser24CCallback_OnLogonFailureE
 13CCallbackImplILi8EE
 N10CSteamUser26CCallback_OnPostLogonStateE
 9CCallbackI10CSteamUser16PostLogonState_tLb0EE
+13CCallbackImplILi9EE
+N10CSteamUser33CCallback_OnSteamGuardFileCreatedE
+9CCallbackI10CSteamUser23SteamGuardFileCreated_tLb0EE
 10CUtlString
 N25CControllerConfigUploader40CCallback_OnRemoteStorageAppSyncedClientE
 9CCallbackI25CControllerConfigUploader30RemoteStorageAppSyncedClient_tLb0EE
@@ -201,8 +205,8 @@ Invalid spew group
 [S_API FAIL] SteamAPI_Init() failed; ipcserver init failed .
 [S_API FAIL] SteamAPI_Init() failed; ipcserver GetSteamPath failed.
 CLIENTENGINE_INTERFACE_VERSION005
-ClientAPI_InitGlobalInstance: InternalAPI_Init_Internal failed, most likely because you are missing a 32-bit dependency of steamclient.dylib (the Steam client is a 32-bit app).
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/steam/client_api.cpp
+ClientAPI_InitGlobalInstance: InternalAPI_Init_Internal failed, most likely because you are missing a 32-bit dependency of steamclient.dylib (the Steam client is a 32-bit app).
 ClientAPI_Init(GlobalInstance): GetIClientProductBuilder returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientDepotBuilder returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientInventory returned NULL.
@@ -211,7 +215,10 @@ ClientAPI_Init(GlobalInstance): GetIClientParties returned NULL.
 ClientAPI_RunCallbacks
 com.valvesoftware.steam.ipctool
 ipcserver restart: expected: %d, got: %d
+pid %d != %d, clearing client_port = %d, server_port = %d
+pid %d != %d, re-initing before send; client_port = %d, server_port = %d
 StopJob
+pid %d != %d, skipping dealloc of client_port = %d, server_port = %d
 CreateInterface
 ClientAPI_Init(GlobalInstance): GetIClientUser returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientFriends returned NULL.
@@ -219,6 +226,7 @@ ClientAPI_Init(GlobalInstance): GetIClientBilling returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientUtils returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientNetworkDeviceManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientStorageDeviceManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientSystemPerfManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSystemManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientMatchmaking returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientApps returned NULL.
@@ -263,7 +271,7 @@ Set the store URL
 Missing String for %s (%d)
 Unknown
 OK
-Assertion Failed: 0
+0
 Steam_BGetCallback
 Steam_FreeLastCallback
 Steam_GetAPICallResult
@@ -272,18 +280,18 @@ Unknown version %d for vpk %s
 .vpk
 %s_%03d.vpk
 /../
-fread() failed
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vpklib/packedstore.cpp
-Assertion Failed: nRead == nNumBytes
+fread() failed
+nRead == nNumBytes
 rb
 Exceeded limit of number of vpk files supported (%d)!
 .%s
 %s%s%s crc=0x%x metadatasz=%d
 fnumber=%d ofs=0x%x sz=%d
-Assertion Failed: (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
-Assertion Failed: count >= 0
-Assertion Failed: !pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
+(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
+count >= 0
+!pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
 appid
 1
 stopping
@@ -319,6 +327,7 @@ app_uninstall
 <appId>
 app_run
 <appId> [LaunchOptionIndex] [Arguments]
+app_launch
 app_info_request
 <AppID> - Issue an appinfo request for the given appid. Does not wait for results from the server.
 force_install_dir
@@ -329,8 +338,8 @@ app_license_request
 <AppID> - Requests a free licenses for this app if not already owned.
 app_install_script
 <AppID> [uninstall:0|1]- Runs app install script.
-Assertion Failed: m_eAppInfoResult != k_EResultPending
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamconsole/appupdater.cpp
+m_eAppInfoResult != k_EResultPending
 CAppInfoUpdater::OnAppInfoUpdate
 ERROR! AppInfo request for AppId %d returned error %s.
 CAppUpdater::OnCheckAppBetaPasswordResponse
@@ -350,7 +359,6 @@ ERROR! Failed to request AppInfo update, not online or not logged in to Steam.
 ERROR! Timed out waiting for AppInfo update.
 ERROR! Timed out waiting for password check.
 @NoPromptForPassword
-0
 anonymous
 see 'login'
 login
@@ -367,6 +375,7 @@ CSteamUser::OnSteamLogon
 CSteamUser::OnLoggedOff
 CSteamUser::OnLogonFailure
 CSteamUser::OnPostLogonState
+CSteamUser::OnSteamGuardFileCreated
 m_strAccountName
 Logging in user '%s' to Steam %s...
 This computer has not been authenticated for your account using Steam Guard.Please check your email for the message from Steam, and enter the Steam Guard code from that message.You can also enter this code at any time using 'set_steam_guard_code' at the console.Steam Guard code:
@@ -411,10 +420,10 @@ Failed to publish file (1a)
 version_%d
 Failed to publish file (1b)
 Failed to publish file (1c)
-Assertion Failed: IsValidIndex( elem )
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
-Assertion Failed: _IsValidIndex( elem, unNodeSize, pMemBase )
-Assertion Failed: _IsValidIndex( y, unNodeSize, pMemBase )
+IsValidIndex( elem )
+_IsValidIndex( elem, unNodeSize, pMemBase )
+_IsValidIndex( y, unNodeSize, pMemBase )
 m_mapAPICalls
 m_Elements
 Failed to publish file (3a)
@@ -432,8 +441,8 @@ Not valid controller config file or localization file: %s.
 %s.vdf
 ~
 %s%s
-Assertion Failed: IsText()
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
+IsText()
 @DepotBuilderConfigRoot
 ./depotscripts
 @DepotBuilderContentRoot
@@ -479,6 +488,8 @@ verify_vpk
 verify_vpk <datafile> : verifies content of given VPK
 download_depot
 download_depot <appid> <depotid> [<target manifestid>] [<delta manifestid>] [<depot flags filter>]: download a single depot
+download_item
+download_item <appid> <PublishedFileId> : download a workshop item directly
 download_chunk
 download_chunk <appid> <depotid> <sha>: download a single chunk from a depot
 desc
@@ -520,8 +531,8 @@ localcspath
 deltabranch
 ERROR! No valid depot specified for AppID %u
 Starting AppID %u build (flags 0x%x).
-Assertion Failed: m_vecDepotConfigKVs.Count() == m_vecDepotIDs.Count()
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamconsole/depotbuilder.cpp
+m_vecDepotConfigKVs.Count() == m_vecDepotIDs.Count()
 Building depot %u...
 Successfully finished AppID %u build preview.
 ERROR! Failed to commit build for AppID %u : %s
@@ -537,6 +548,7 @@ Invalid number of parameters
 Empty VPK
 Failed reading %s
 Failed CRC for %s
+Item download to "%s" finish (%s)
 Invalid parameters
 Chunk download to "%s"
 Chunk download failed : %s
@@ -706,7 +718,7 @@ workshop_build_item <build config filename> : build a workshop item
 workshop_create_legacy_item
 workshop_create_legacy_item <appid> <workshop file> : build a legacy workshop item
 workshop_download_item
-workshop_download_item <appid> <PublishedFileId> : download a workshop item
+workshop_download_item <appid> <PublishedFileId> : download an item using the workshop system
 ERROR! Failed to load build config file "%s".
 workshopitem
 ERROR! Failed to parse build config file "%s".
@@ -748,61 +760,60 @@ ERROR! Failed to create new workshop item.
 ERROR! ClientRemoteStorage()->FileShare() failed.
 ERROR! ClientRemoteStorage()->PublishWorkshopFile() failed.
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/bitstring.cpp
-Assertion Failed: resizeNumBits >= 0
-Assertion Failed: !m_pInt
-Assertion Failed: GetInts()
+resizeNumBits >= 0
+!m_pInt
+GetInts()
 {}()':
-Assertion Failed: pName
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/convar.cpp
-Assertion Failed: m_fnCompletionCallback
-Assertion Failed: m_vecCallbacks.Count() == 0 || !callback
-Assertion Failed: m_pParent == this
+pName
+m_fnCompletionCallback
+m_vecCallbacks.Count() == 0 || !callback
+m_pParent == this
 ConVar::InternalSetValue: called with NULL
 Hey, you just set %s's number values to be 0.  Is that what you wanted?If you do `%s = 123`, you will set the convar to `= 123` which becomes `0` for numeric uses.Did you mean to do `%s %s` instead?
 %f
-Assertion Failed: !( m_nFlags & FCVAR_NEVER_AS_STRING )
-Assertion Failed: m_vecCallbacks.Count() == 0
+!( m_nFlags & FCVAR_NEVER_AS_STRING )
+m_vecCallbacks.Count() == 0
 %d
 %lld
 %llu
 %lf
-Assertion Failed: pDefaultValue
+pDefaultValue
 Attempted to change replicated CVar when you are not the GM
 ConCommand '%s' not currently supported in config file
-Assertion Failed: false
-Assertion Failed: !pszString || pszString[nChars] == '\0'
+!pszString || pszString[nChars] == '\0'
 Bad expression token: %c at %d in %s
 Bad expression token: %c %c
-V_RemoveDotSlashes failed for "%s".
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
+V_RemoveDotSlashes failed for "%s".
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s
 flock LOCK_EX request but file is not opened for writing, ignoring: %s
 flock %s %s failed. errno = %d
 LOCK_EX
 LOCK_SH
 fcntl failed to set F_NOCACHE
-Assertion Failed: ret != 0
+ret != 0
 flock LOCK_EX %s failed, errno = %d
 write %s failed, errno = %d
-Assertion Failed: written == count
+written == count
 fsync %s failed, errno = %d
 %s%c%s
 unReadAheadChunkSize should be zero when using bUnbuffered = true
-Assertion Failed: unReadAheadChunkSize < INT32_MAX/2
+unReadAheadChunkSize < INT32_MAX/2
 unsupported flags 0x%x passed to CFileReader::BOpenFile
-Assertion Failed: BIsOpen()
-Assertion Failed: cubBytesToRead < INT32_MAX
+BIsOpen()
+cubBytesToRead < INT32_MAX
 Unbuffered read should be called with pvData buffer that is aligned to system page size (4kb)
 Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
 Seeking to a position which is not sector aligned will break unbuffered io
-Assertion Failed: cubData < INT32_MAX
+cubData < INT32_MAX
 Waited %u iterations in CFileWriter::Flush - m_cubOutstanding = %d
 ..
-Assertion Failed: cbActual < (uint32)nBufSizeWithTerminator
+cbActual < (uint32)nBufSizeWithTerminator
 CFileWriterThread
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/tslist.h
-Assertion Failed: m_Count == 0
-Assertion Failed: pNode && pNode->Next == QueueEnd()
+m_Count == 0
+pNode && pNode->Next == QueueEnd()
 %s.async%u.tmp
 Invalid FileWriterItem_t
 m_buffer
@@ -811,18 +822,18 @@ m_Memory
 m_queueItemsPending
 m_vecRegisteredWriters
 static_cast<Node_t*>(pNode)->elem
-Assertion Failed: m_queueItemsPending.Count() == 0
-Assertion Failed: m_vecRegisteredWriters.Count() == 0
+m_queueItemsPending.Count() == 0
+m_vecRegisteredWriters.Count() == 0
 CFileWriterThread already exited
-Assertion Failed: pFile
-Assertion Failed: cubData < FIO_MAX_IO_BYTES
-Assertion Failed: pFile->m_hFileDest != INVALID_OSFILEHANDLE
-Assertion Failed: m_vecRegisteredWriters.HasElement( pFile )
+pFile
+cubData < FIO_MAX_IO_BYTES
+pFile->m_hFileDest != INVALID_OSFILEHANDLE
+m_vecRegisteredWriters.HasElement( pFile )
 CPathString
 .dylib
 %s/%s%s
-Assertion Failed: strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/interface.cpp
+strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
 .cpl
 0123456789abcdef
 %%%d
@@ -855,13 +866,13 @@ ANDROID
 ANDROID32
 ANDROID64
 X360
-Assertion Failed: buf.GetFlags() & CUtlBuffer::TEXT_BUFFER
+buf.GetFlags() & CUtlBuffer::TEXT_BUFFER
 #include
 #include is NULL
 KeyValues don't support #include anymore, file "%s"
 LoadFromBuffer: missing {   (current key: '%s')
 Error while parsing text KeyValues for resource %s
-Assertion Failed: pKeyValuesTextParser
+pKeyValuesTextParser
 RecursiveLoadFromBuffer:  got EOF instead of keyname
 RecursiveLoadFromBuffer:  got empty keyname
 RecursiveLoadFromBuffer:  got NULL key
@@ -869,8 +880,8 @@ RecursiveLoadFromBuffer:  got } in key
 RecursiveLoadFromBuffer:  got conditional between key and value
 KeyValues::ReadAsBinary() stack depth > 100
 NULL
-Assertion Failed: m_errorIndex>=0
-Assertion Failed: stackLevel >= 0 && stackLevel < m_errorIndex
+m_errorIndex>=0
+stackLevel >= 0 && stackLevel < m_errorIndex
 KeyValues Error: %s in file %s [offset: %d]
 ,
 (*
@@ -880,17 +891,17 @@ loopback
 %i.%i.%i.%i
 %i.%i.%i.%i:%i
 "
-Assertion Failed: info.m_pReplacementString == 0
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
+info.m_pReplacementString == 0
 CUtlBuffer::GetStringFast: binary buffers only
 Expected %lld but got %lld!
-Assertion Failed: pConv && pConv->GetDelimiterLength() > 0
-Assertion Failed: pFmt
-Assertion Failed: nSize >= 0
-Assertion Failed: m_Put >= 0
-Assertion Failed: offset >= 0
-Assertion Failed: offset >= -m_Put && offset <= INT_MAX-m_Put
-Assertion Failed: offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
+pConv && pConv->GetDelimiterLength() > 0
+pFmt
+nSize >= 0
+m_Put >= 0
+offset >= 0
+offset >= -m_Put && offset <= INT_MAX-m_Put
+offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
 %u
 n
 t
@@ -903,29 +914,29 @@ a
 ?
 '
 %.18g
-Assertion Failed: nSizeOfType > 0
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
-Assertion Failed: nGrowSize >= 0
-Assertion Failed: m_nAllocationCount >= 0
+nSizeOfType > 0
+nGrowSize >= 0
+m_nAllocationCount >= 0
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
-Assertion Failed: num > 0
-Assertion Failed: num >= 0
-Assertion Failed: IsPowerOfTwo( nNewCapacity )
+num > 0
+num >= 0
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlqueue.cpp
-Assertion Failed: nPreSplit > 0 && nPreSplit + nPostSplit == nCount
-Assertion Failed: ( m_iHead & nNewCapacityMask ) == nNewCapacity - nPreSplit
+IsPowerOfTwo( nNewCapacity )
+nPreSplit > 0 && nPreSplit + nPostSplit == nCount
+( m_iHead & nNewCapacityMask ) == nNewCapacity - nPreSplit
 CUtlString::SetValue
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
 CUtlString::VFormat
 CUtlString::ReplaceInternal
-Assertion Failed: pstrNew + nNewLength == pstrDestination + 1
-Assertion Failed: cActualReplacements == cReplacements
+pstrNew + nNewLength == pstrDestination + 1
+cActualReplacements == cReplacements
 Assertion failed: length > k_cchMaxString
 CUtlStringBuilder::InternalPrepareBuffer
-Assertion Failed: nMinCapacity > Capacity()
-Assertion Failed: nMinCapacity >= nChars
-Assertion Failed: nMinCapacity <= k_nMaxStringSize
-Assertion Failed: len > 0 || HasError()
+nMinCapacity > Capacity()
+nMinCapacity >= nChars
+nMinCapacity <= k_nMaxStringSize
+len > 0 || HasError()
 Error State on string being set.
 CUtlStringBuilder::Data::MoveToHeap
 %02d:%02d:%02d
@@ -933,7 +944,7 @@ CUtlStringBuilder::Data::MoveToHeap
 00:00:00
 01/01/00
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/rtime.cpp
-Assertion Failed: V_strlen( pchTime ) == 25
+V_strlen( pchTime ) == 25
 Infinite time value
 Nil time value
 Invalid time value
@@ -943,8 +954,8 @@ NIL
 %04u%02u%02u%02u%02u%02u
 %04u-%02u-%02u %02u:%02u:%02u
 steamclient.dylib
-EResult
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/enum_names.cpp
+EResult
 EUniverse
 false
 true
@@ -1132,7 +1143,7 @@ Parental control blocked
 Create process failed
 Steam client out of date
 Allowed playtime exceeded
-Steam client files corrupt
+Corrupt file signature
 Missing game files
 Compat tool failed
 Install path removed
@@ -1145,26 +1156,26 @@ PS3
 @bEnableSpewThrottle
 @bEnableLogTearOff
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/logger.cpp
-Assertion Failed: pLogInstance == sm_pLogInstance
-Assertion Failed: sm_cRef > 0
-Assertion Failed: sm_bShuttingDown
-Assertion Failed: ThreadInMainThread()
+pLogInstance == sm_pLogInstance
+sm_cRef > 0
+sm_bShuttingDown
+ThreadInMainThread()
 CLogger::PublishLogEvent
 %s\%s
 CLogger::EmitEventInternal
 Hit absolute maximum emit event queue size -- NOT adding this event
 CLogger::FlushEventQueue
 Log event queue grew unreasonably large in a short time!
-Assertion Failed: sm_bShuttingDown && sm_pLogInstance
+sm_bShuttingDown && sm_pLogInstance
 Failed to remove log event from threadsafe queue!
 CLogger::GeneratePrefixFromLogWatchParam
-Assertion Failed: pchMsg
+pchMsg
 %s [%s]%-*s
 [%s]%-*s
 [IP:%s]
 [ID:%s]
 [TXN:%llu]
-Assertion Failed: *pchMsg && *pchMsg == '%'
+*pchMsg && *pchMsg == '%'
 Logger does not handle * char as used for a width specifier (where width is a param)
 Stop using I64/I32 - use lld or d, respectively
 Unsupported format qualifier %c%c
@@ -1175,12 +1186,12 @@ stop using I64/I32, use lld or d respectively
 Unsupported format qualifier z%c
 Unsupported format qualifier l%c
 Unrecognized character code '%c' in format string, ignoring
-Assertion Failed: pch[cub - 1] != '\0' && pch[cub] == '\0'
-Assertion Failed: 1 == ret
+pch[cub - 1] != '\0' && pch[cub] == '\0'
+1 == ret
 CLogInstance::WriteToLog
 Failed to close logfile with prefix %s during BTearOffLogFile call!
-Assertion Failed: NULL == m_pFile
-Assertion Failed: 0 != m_rgchPrefixFileName[0]
+NULL == m_pFile
+0 != m_rgchPrefixFileName[0]
 %s.current.txt
 w
 Log started.
@@ -1196,14 +1207,14 @@ Persistent Logfiles created which have no cleanup limit specified!
 CLogInstance::EmitEventNow
 ...
 Last Message Repeated %d times.%s
-Assertion Failed: eGroup >= static_cast< ESpewGroup >( 0 ) && eGroup < k_ESpew_ArraySize
-CIPAndPort::GetIPv4 called on IPv6 address
+eGroup >= static_cast< ESpewGroup >( 0 ) && eGroup < k_ESpew_ArraySize
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/netadr.h
-Assertion Failed: nBytes
-Assertion Failed: bitNum >= 0 && bitNum < this->Size()
+CIPAndPort::GetIPv4 called on IPv6 address
+nBytes
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/bitstring.h
+bitNum >= 0 && bitNum < this->Size()
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/threadtools.h
-Assertion Failed: m_cReentrancyCount >= 0
+m_cReentrancyCount >= 0
 @nSpewThrottlePeriodMs
 @nSpewThrottleTriggerThreshold
 10
@@ -1232,18 +1243,22 @@ E
 0
 @
 =
-0
-0
-0
-@
-@
-0
-0
 Ic
+?
+0
+0
+0
+j
+@
+@
+0
+0
 
 =
 @
 =*.*
+m
+B
 @
 @
 0

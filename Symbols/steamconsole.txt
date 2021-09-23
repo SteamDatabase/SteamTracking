@@ -1,6 +1,5 @@
- AssertMsgImplementation
- CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(char const*, ...)
- CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(StringView)
+ AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
+ AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
  CVProfile_ExitScope
  CValidator::ClaimArrayMemory(void*)
  CValidator::ClaimMemory(void*)

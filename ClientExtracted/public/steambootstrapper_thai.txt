@@ -31,6 +31,7 @@
 "SteamBootstrapper_PercentComplete"			"เสร็จสมบูรณ์ %percent%%%"
 "SteamBootstrapper_NoNetwork"					"%appname% ต้องออนไลน์เพื่ออัปเดต  โปรดตรวจสอบการเชื่อมต่อเครือข่ายและลองอีกครั้ง"
 "SteamBootstrapper_FailedMkdir"				"ไม่สามารถสร้างไดเรกทอรี %dirname% ได้ ตรวจพบข้อผิดพลาด %errno%"
+"SteamBootstrapper_NotWriteable"				"ไดเรกทอรี %dirname% ไม่สามารถเขียนได้"
 "SteamBootstrapper_FailedDownloadHTTPError"	"การดาวน์โหลดล้มเหลว: ข้อผิดพลาด http %errno%"
 "SteamBootstrapper_AlreadyRunningError"		"โปรแกรม %appname% กำลังเปิดบนคอมพิวเตอร์นี้อยู่แล้วโดยใช้บัญชีผู้ใช้อื่น"
 "SteamBootstrapper_MoveContentDir_DestExists" "%appname% เปลี่ยนที่เก็บข้อมูลเกมจาก '~/Documents/Steam Content' เป็น '~/Library/Application Support/Steam/SteamApps' คุณมีไฟล์เกมอยู่ในตำแหน่งเดิม และ %appname% ไม่สามารถย้ายไฟล์ได้เนื่องจากไฟล์มีอยู่แล้วในตำแหน่งใหม่ คุณอาจต้องการย้ายไฟล์ด้วยตนเอง หรือลบไฟล์เก่า และดาวน์โหลดเกมของคุณอีกครั้ง  ดำเนินการต่อไปหรือไม่"

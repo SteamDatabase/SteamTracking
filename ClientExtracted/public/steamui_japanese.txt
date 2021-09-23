@@ -541,7 +541,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_MustRestart_Language"		"言語設定の変更を反映するには Steam を再起動する必要があります。"
 
 "Steam_ChangeBeta_Title"		"Steam - ベータへの参加"
-"Steam_ChangeBeta_Text"			"Steam ベータプログラムへの参加を希望しますか?\nベータクライアントの受け取りには Steam の再起動が必要です。"
+"Steam_ChangeBeta_Text"			"Steamベータプログラムへの参加を希望しますか？\nベータクライアントの受け取りにはSteamの再起動が必要です。"
 "Steam_RemoveBeta_Text"			"全てのベータプログラムを辞めますか?\n通常のクライアントに戻すには Steam の再起動が必要です。"
 "Steam_ChangeBeta_Button"		"ベータを変更"
 
@@ -2458,7 +2458,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_RightClick_DeleteShortcut"		"ショートカットの削除"
 "Steam_minigamescolumn_shortcuts"		"ショートカット"
 
-"Steam_menu_AddShortcut"			"非 Steam ゲームをマイライブラリに追加..."
+"Steam_menu_AddShortcut"			"非Steamゲームをマイライブラリに追加..."
 
 "steam_desktop"			"デスクトップ"
 "steam_startmenu"			"スタートメニュー"
@@ -2484,7 +2484,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_Country_AO"		"アンゴラ"
 "Steam_Country_AI"		"アングィラ"
 "Steam_Country_AQ"		"南極"
-"Steam_Country_AG"		"アンチグアバーブーダ"
+"Steam_Country_AG"		"アンティグア・バーブーダ"
 "Steam_Country_AR"		"アルゼンチン"
 "Steam_Country_AM"		"アルメニア"
 "Steam_Country_AW"		"アルーバ"
@@ -2722,11 +2722,12 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_LaunchOption_Application"			"%game% を起動"
 
 "Steam_LaunchOption_SafeMode"					"セーフモードで %game% を起動"
-"Steam_LaunchOption_Multiplayer"			"マルチプレイヤーモードで %game% を起動"
-"Steam_LaunchOption_VR"								"Steam VR モードで %game% を起動"
-"Steam_LaunchOption_othervr"						"Oculus VR モードで %game% を起動"
+"Steam_LaunchOption_Multiplayer"				"マルチプレイヤーモードで %game% を起動"
+"Steam_LaunchOption_VR"							"Steam VR モードで %game% を起動"
+"Steam_LaunchOption_openxr"						"OpenXRモードで%game%を起動"
+"Steam_LaunchOption_othervr"					"Oculus VR モードで %game% を起動"
 "Steam_LaunchOption_osvr"						"OSVR モードで %game% を起動"
-"Steam_LaunchOption_openvroverlay"					"Steam VR オーバーレイで %game% を起動"
+"Steam_LaunchOption_openvroverlay"				"Steam VR オーバーレイで %game% を起動"
 "Steam_LaunchOption_Server"						"専用サーバーを起動"
 "Steam_LaunchOption_Editor"						"ゲームエディターを起動"
 "Steam_LaunchOption_Config"						"設定ツールを起動"
@@ -2851,7 +2852,8 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "SteamUI_DurationControl_PlaytimeExceeded_Body_ThreeHours"	"本日のオンライン時間が上限に達しました。休憩をとって、明日の午前8時以降に再開してください。"
 "SteamUI_DurationControl_PlaytimeExceeded_Body_FiveHours"	"本日のオンライン時間が上限に達しましたので、休憩を取ってください。プレイの再開は明日の午前8時以降にしてください"
 "SteamUI_DurationControl_PlaytimeExceeded_Body_Night"		"18歳未満のプレイヤーは午後10時から翌日午前8時までこのゲームをプレイできません。休憩してください。"
-
+"SteamUI_DurationControl_PlaytimeExceeded_Body_WaitingVerification"		"アカウントは実名を確認中です。後でもう一度お試しください。"
+"SteamUI_DurationControl_PlaytimeExceeded_Body_Maintenance"		"このゲームは技術的なアップデート中です。アップデートが完了するまで未成年者はプレイできません。ご迷惑をおかけして申し訳ありませんが、ご理解のほどよろしくお願いいたします。"
 
 
 "Steam_GuestPassesColumn" 		"ギフト"

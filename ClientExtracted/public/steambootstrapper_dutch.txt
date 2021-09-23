@@ -31,6 +31,7 @@
 "SteamBootstrapper_PercentComplete"			"%percent%%% voltooid"
 "SteamBootstrapper_NoNetwork"					"%appname% moet online zijn om te kunnen updaten. Bevestig je netwerkverbinding en probeer het opnieuw."
 "SteamBootstrapper_FailedMkdir"				"Kan map %dirname% niet maken, foutmelding %errno%"
+"SteamBootstrapper_NotWriteable"				"Kan niet naar map %dirname% schrijven."
 "SteamBootstrapper_FailedDownloadHTTPError"	"Download mislukt: HTTP-foutbericht %errno%"
 "SteamBootstrapper_AlreadyRunningError"		"%appname% is al actief op deze computer onder een ander gebruikersaccount."
 "SteamBootstrapper_MoveContentDir_DestExists" "%appname% heeft de locatie waar spelcontent wordt opgeslagen gewijzigd van '~/Documents/Steam Content' in '~/Library/Application Support/Steam/SteamApps'. Er zitten spelbestanden op de oude locatie die %appname% niet kan verplaatsen omdat er zich al bestanden op de nieuwe locatie bevinden. Mogelijk moet je de bestanden handmatig verplaatsen of de oude bestanden verwijderen en je spellen opnieuw downloaden. Toch doorgaan?"

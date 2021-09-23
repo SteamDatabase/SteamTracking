@@ -31,6 +31,7 @@
 "SteamBootstrapper_PercentComplete"			"%percent%%% dokončeno"
 "SteamBootstrapper_NoNetwork"					"Chcete-li klienta služby %appname% aktualizovat, musíte být online. Zkontrolujte své připojení k internetu a zkuste to znovu."
 "SteamBootstrapper_FailedMkdir"				"Adresář %dirname% nelze vytvořit, chyba %errno%"
+"SteamBootstrapper_NotWriteable"				"Do adresáře %dirname% nelze zapisovat."
 "SteamBootstrapper_FailedDownloadHTTPError"	"Stažení se nezdařilo: http chyba %errno%"
 "SteamBootstrapper_AlreadyRunningError"		"Klient služby %appname% je na tomto počítači již spuštěn pod jiným uživatelským účtem."
 "SteamBootstrapper_MoveContentDir_DestExists" "Klient služby %appname% změnil místo pro ukládání obsahu her z „~/Documents/Steam Content“ na „~/Library/Application Support/Steam/SteamApps“. Vaše herní soubory jsou uloženy na původním místě a klient služby %appname% nemohl soubory přesunout, protože již existují na novém místě. Možná bude nutné, abyste soubory přesunuli ručně nebo abyste staré soubory vymazali a hry si znovu stáhli. Chcete i přesto pokračovat?"

@@ -78,7 +78,7 @@
 "Overlay_ForceQuit_Title"		"애플리케이션 종료"
 "Overlay_ForceQuit_Description"		"저장하지 않은 데이터는 손실됩니다."
 
-"Overlay_Taskbar_EditControllerConfig"	"컨트롤러 설정"
+"Overlay_Taskbar_EditControllerConfig"	"컨트롤러 구성"
 
 "Overlay_Playtime_Stats"		"플레이 통계"
 "Overlay_Playtime_Intro"		"게임 플레이 시간"
@@ -209,7 +209,7 @@
 "Overlay_Publish_Error_Quota_Plural" "클라우드 공간이 부족해 스크린샷을 업로드할 수 없습니다."
 "Overlay_Delete_Screenshot_Error" "스크린샷 삭제 중 오류가 발생하였습니다. 잠시 후 다시 시도하세요."
 "Overlay_Tag_As_Potential_Spoiler" "스포일러 가능성 표시"
-"Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_Title" "Steam 창작마당 사용권 계약"
+"Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_Title" "Steam 창작마당 이용 약관"
 "Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_Desc" "작업한 아이템을 제출하기 전에 최신 Steam 창작마당 이용 약관에 동의하셔야 합니다."
 "Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_ViewItem" "아이템 보기"
 

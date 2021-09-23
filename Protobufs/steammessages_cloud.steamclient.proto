@@ -1,6 +1,6 @@
 import "steammessages_unified_base.steamclient.proto";
 import "enums.proto";
-import "iclient_objects.proto";
+import "steammessages_client_objects.proto";
 
 option cc_generic_services = true;
 
@@ -175,6 +175,15 @@ message CCloud_CompleteAppUploadBatch_Notification {
 	optional uint32 appid = 1 [(description) = "App ID for this batch is for."];
 	optional uint64 batch_id = 2 [(description) = "ID of this batch."];
 	optional uint32 batch_eresult = 3 [(description) = "result of this batch."];
+}
+
+message CCloud_CompleteAppUploadBatch_Request {
+	optional uint32 appid = 1 [(description) = "App ID for this batch is for."];
+	optional uint64 batch_id = 2 [(description) = "ID of this batch."];
+	optional uint32 batch_eresult = 3 [(description) = "result of this batch."];
+}
+
+message CCloud_CompleteAppUploadBatch_Response {
 }
 
 message CCloud_ClientBeginFileUpload_Request {
@@ -394,6 +403,10 @@ service Cloud {
 	}
 
 	rpc CompleteAppUploadBatch (.CCloud_CompleteAppUploadBatch_Notification) returns (.NoResponse) {
+		option (method_description) = "Indicate that the batch is complete or being stopped for some other reason.";
+	}
+
+	rpc CompleteAppUploadBatchBlocking (.CCloud_CompleteAppUploadBatch_Request) returns (.CCloud_CompleteAppUploadBatch_Response) {
 		option (method_description) = "Indicate that the batch is complete or being stopped for some other reason.";
 	}
 

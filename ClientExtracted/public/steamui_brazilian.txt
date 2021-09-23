@@ -1307,7 +1307,7 @@ A sua assinatura está registrada na seguinte conta Steam: %accountname%. No fut
 "SteamUI_GamesDialog_JustReleased"	"RECÉM-LANÇADO"
 
 "Steam_PurchaseInfo"			"Esta oferta contém os itens listados abaixo."
-"Steam_PurchaseInfo_Preorder"		"Você está comprando este pacote na pré-venda; o seu pagamento não será processado até que o pacote esteja disponível para jogar na sua data de lançamento oficial."
+"Steam_PurchaseInfo_Preorder"		"Você está comprando este pacote na pré-venda. O seu pagamento não será processado até que o pacote esteja disponível para jogar na sua data de lançamento oficial."
 
 "Steam_InstallGameInfo"			"Você está prestes a instalar %game%.\n"
 "Steam_InstallGameInfo_Preload"		"Você está prestes a pré-carregar %game%.\n"
@@ -1438,7 +1438,7 @@ A sua assinatura está registrada na seguinte conta Steam: %accountname%. No fut
 "SteamUI_MBPGPUWarning_Title"	"Steam — Múltiplas GPUs detectadas"
 "Steam_MBPGPUWarning_Info"	"O seu MacBook Pro tem duas placas de vídeo e está configurado para eficiência de energia, não velocidade.
 
-Para uma melhor experiência, sugerimos que você mude para a placa com melhor desempenho; abra o
+Para uma melhor experiência, sugerimos que você mude para a placa com melhor desempenho. Abra o
 painel de preferências do sistema \"Economizador de Energia\" e escolha gráficos para \"Melhor Desempenho\".
 
 Você precisará finalizar a sessão no macOS para que a alteração surta efeito."
@@ -2355,8 +2355,8 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "Steam_Shutdown_Dialog_Text" "Encerrando o Steam..."
 "Steam_Shutdown_Waiting_For_Game" "Aguardando o encerramento de %game%..."
 "Steam_Shutdown_Finishing_Download" "Aguardando a conclusão dos downloads na fila..."
-"Steam_Shutdown_Waiting_For_Download" "Parando o download de %game% ..."
-"Steam_Shutdown_Waiting_For_Cloud" "Finalizando sincronização com a Nuvem Steam..."
+"Steam_Shutdown_Waiting_For_Download" "Interrompendo o download de %game% ..."
+"Steam_Shutdown_Waiting_For_Cloud" "Finalizando a sincronização com a Nuvem Steam..."
 "Steam_Shutdown_Waiting_For_Logoff" "Saindo ...."
 "Steam_Shutdown_ForceQuit" "Sair Agora"
 
@@ -2582,7 +2582,7 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "Steam_Country_IT"		"Itália"
 "Steam_Country_JM"		"Jamaica"
 "Steam_Country_JP"		"Japão"
-"Steam_Country_JE"		"Jérsei"
+"Steam_Country_JE"		"Jersey"
 "Steam_Country_JO"		"Jordânia"
 "Steam_Country_KZ"		"Cazaquistão"
 "Steam_Country_KE"		"Quênia"
@@ -2599,7 +2599,7 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "Steam_Country_LT"		"Lituânia"
 "Steam_Country_LU"		"Luxemburgo"
 "Steam_Country_MO"		"Macau"
-"Steam_Country_MK"		"Macedônia"
+"Steam_Country_MK"		"Macedônia do Norte"
 "Steam_Country_MG"		"Madagascar"
 "Steam_Country_MW"		"Malawi"
 "Steam_Country_MY"		"Malásia"
@@ -2675,7 +2675,7 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "Steam_Country_LK"		"Sri Lanka"
 "Steam_Country_SR"		"Suriname"
 "Steam_Country_SJ"		"Svalbard e Jan Mayen"
-"Steam_Country_SZ"		"Suazilândia"
+"Steam_Country_SZ"		"Essuatíni"
 "Steam_Country_SE"		"Suécia"
 "Steam_Country_CH"		"Suíça"
 "Steam_Country_TW"		"Taiwan"
@@ -2722,11 +2722,12 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "Steam_LaunchOption_Application"			"Iniciar %game%"
 
 "Steam_LaunchOption_SafeMode"					"Iniciar %game% no modo de segurança"
-"Steam_LaunchOption_Multiplayer"			"Iniciar %game% no modo multijogador"
-"Steam_LaunchOption_VR"								"Iniciar %game% no modo SteamVR"
-"Steam_LaunchOption_othervr"						"Iniciar %game% em modo Oculus VR"
+"Steam_LaunchOption_Multiplayer"				"Iniciar %game% no modo multijogador"
+"Steam_LaunchOption_VR"							"Iniciar %game% no modo SteamVR"
+"Steam_LaunchOption_openxr"						"Iniciar %game% no modo OpenXR"
+"Steam_LaunchOption_othervr"					"Iniciar %game% em modo Oculus VR"
 "Steam_LaunchOption_osvr"						"Iniciar %game% no modo OSVR"
-"Steam_LaunchOption_openvroverlay"					"Iniciar %game% como painel do SteamVR"
+"Steam_LaunchOption_openvroverlay"				"Iniciar %game% como painel do SteamVR"
 "Steam_LaunchOption_Server"						"Iniciar servidor dedicado"
 "Steam_LaunchOption_Editor"						"Iniciar editor do jogo"
 "Steam_LaunchOption_Config"						"Iniciar ferramenta de configuração"
@@ -2851,7 +2852,8 @@ Faça um agora enviando um presente por e-mail para alguém que você conheça."
 "SteamUI_DurationControl_PlaytimeExceeded_Body_ThreeHours"	"Você alcançou o seu limite de tempo online por hoje. Descanse e volte amanhã depois das 8h."
 "SteamUI_DurationControl_PlaytimeExceeded_Body_FiveHours"	"Você alcançou o seu limite de tempo online por hoje. Descanse e volte amanhã depois das 8h00."
 "SteamUI_DurationControl_PlaytimeExceeded_Body_Night"		"Jogadores com menos de 18 anos não podem jogar este jogo das 22h às 8h do dia seguinte. Descanse."
-
+"SteamUI_DurationControl_PlaytimeExceeded_Body_WaitingVerification"		"A sua conta está sob verificação de nome verdadeiro. Tente novamente mais tarde."
+"SteamUI_DurationControl_PlaytimeExceeded_Body_Maintenance"		"O jogo está passando por atualizações técnicas, e menores de idade não poderão jogar até que elas sejam concluídas. Lamentamos o transtorno e agradecemos a compreensão."
 
 
 "Steam_GuestPassesColumn" 		"Presentes"
@@ -3656,7 +3658,7 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "steam_downloads_preallocating" "Pré-alocando"
 "steam_downloads_uninstalling"	"Desinstalando"
 "steam_downloads_running"	"Rodando"
-"steam_downloads_stopping"	"Parando"
+"steam_downloads_stopping"	"Interrompendo"
 "steam_downloads_view_on_workshop" "Ver"
 "steam_downloads_throttling"	"Velocidade máxima"
 "steam_downloads_autoupdate_window_label"	"Downloads automáticos somente das"
@@ -3693,11 +3695,11 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "steam_addgame_activate"	"Ativar um código de produto..."
 "steam_addgame_browse"		"Descobrir jogos na loja..."
 
-"steam_lastplayedcolumn"	"Jogado pela última vez"
+"steam_lastplayedcolumn"	"Última sessão"
 "steam_purchased_space"		"Novo "
 "Steam_SizeOnDiskColumn"	"Espaço em disco"
 
-"steam_details_lastplayedheader" "Última vez"
+"steam_details_lastplayedheader" "Última sessão"
 "steam_details_lastlaunchedheader" "Usado pela última vez"
 "steam_details_lastpurchased$apptype=game"	"Data da compra"
 "steam_details_lastpurchased$apptype=application"	"Data da compra"
@@ -4322,8 +4324,8 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "SteamUI_StreamLaunch_ScreenLocked"	"A tela do computador remoto está bloqueada."
 "SteamUI_StreamLaunch_Broadcasting"	"O computador remoto está atualmente usando a Transmissão Steam, não sendo assim possível iniciar uma sessão Remote Play."
 "SteamUI_StreamLaunch_OtherGameRunning"	"Há outro jogo em execução no computador remoto."
-"SteamUI_StreamLaunch_Timeout"		"O tempo de espera para o início da transmissão expirou."
-"SteamUI_StreamLaunch_InstallRequiresUI" "A instalação deste jogo requer a intervenção do usuário.\n\nInstale-o manualmente no computador remoto."
+"SteamUI_StreamLaunch_Timeout"		"O tempo de espera para o início da transmissão se esgotou."
+"SteamUI_StreamLaunch_InstallRequiresUI" "A instalação do jogo requer a intervenção do usuário.\n\nInstale-o manualmente no computador remoto."
 "SteamUI_StreamLaunch_Failed"		"Não foi possível iniciar a transmissão."
 "SteamUI_StreamLaunch_InstallDrivers"	"A transmissão exige a instalação de drivers adicionais.\nSiga as instruções do Steam no computador remoto."
 "SteamUI_StreamLaunch_StillDownloading" "Há uma atualização em andamento em %ClientName%. %game% estará disponível para ser transmitido assim que o download for concluído."

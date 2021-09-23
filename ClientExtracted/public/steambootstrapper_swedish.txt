@@ -31,6 +31,7 @@
 "SteamBootstrapper_PercentComplete"			"%percent%%% färdigt"
 "SteamBootstrapper_NoNetwork"					"%appname% måste vara online när en uppdatering ska göras. Kontrollera nätverksuppkopplingen och försök igen."
 "SteamBootstrapper_FailedMkdir"				"Det gick inte att skapa katalogen %dirname%. Felet %errno% uppstod."
+"SteamBootstrapper_NotWriteable"				"Katalogen %dirname% är inte skrivbar."
 "SteamBootstrapper_FailedDownloadHTTPError"	"Nedladdning misslyckades: http-fel %errno%"
 "SteamBootstrapper_AlreadyRunningError"		"Det körs redan en förekomst av %appname% på den här datorn under ett annat användarkonto."
 "SteamBootstrapper_MoveContentDir_DestExists" "%appname% har ändrat platsen där spelinnehåll lagras, från \"~/Documents/Steam Content\" till \"~/Library/Application Support/Steam/SteamApps\". Du har spelfiler på den ursprungliga platsen, men %appname% kunde inte flytta filerna eftersom filerna redan finns på den nya platsen. Du kan behöva flytta filerna manuellt eller radera de gamla filerna och hämta spelen igen. Fortsätt ändå?"

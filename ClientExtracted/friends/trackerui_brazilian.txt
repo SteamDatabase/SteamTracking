@@ -27,7 +27,7 @@
 "Friends_Chat_CannotSendFriendOffline" "Não é possível enviar a mensagem porque %friend% está offline no momento.\n"
 "Friends_Chat_SendOfflineMessage" "%friend% está atualmente offline e receberá a sua mensagem na próxima vez que iniciar a sessão.\n"
 "Friends_Chat_InvitedToGame"			"%friend% convidou você para jogar %game%."
-"Friends_Chat_FriendHasChangedGame"	"%friend% está jogando %game%. "
+"Friends_Chat_FriendHasChangedGame"	"%friend% iniciou %game%. "
 "Friends_Chat_FriendHasChangedApp"	"%friend% está agora em %game%. "
 "Friends_Chat_UnknownGame"			"um jogo"
 "Friends_Chat_ClickHereToJoin"		"Clique aqui para juntar-se."

@@ -23,15 +23,12 @@
  .objc_class_name_NSWindow
  AEBuildAppleEvent
  AESendMessage
- AssertMsgImplementation
+ AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
+ AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
  AudioObjectGetPropertyData
  AudioObjectGetPropertyDataSize
  AudioObjectSetPropertyData
  BGetLocalFQDN
- CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(DbgFmtFatalMsgTag_t*, char const*, ...)
- CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(char const*, ...)
- CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(DbgFmtFatalMsgTag_t*, StringView)
- CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(StringView)
  CFArrayAppendValue
  CFArrayCreate
  CFArrayCreateMutable
@@ -345,8 +342,6 @@
  T Steam_TerminateGameConnection
  TSListBase_Init
  TSListBase_Pop
- TSListBase_Push
- TSListBase_SwapList
  TSListBase_UnsafePeek
  TSQueueBase_Init
  TSQueueBase_Pop

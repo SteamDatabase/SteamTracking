@@ -674,7 +674,7 @@
 	"Settings_GameController"		"Налаштування контролера"
 	"Settings_ControllerManagement"	"Налаштування контролера"
 	"Settings_Personal"				"Особисті"
-	"Settings_Features"				"Особливості"
+	"Settings_Features"				"Функції"
 	"Settings_Configs"				"Базові конфігурації"
 	"Settings_ControllerConfigs"	"Конфігурації ґеймпада"
 	"Settings_AudioInterface"		"Інтерфейс"
@@ -2816,6 +2816,7 @@
 	"Steam_LaunchOption_Application"			"Запустити {s:gamename}"
 	"Steam_LaunchOption_SafeMode"					"Запустити {s:gamename} у безпечному режимі"
 	"Steam_LaunchOption_VR"								"Запустити {s:gamename} у режимі ВР"
+	"Steam_LaunchOption_openxr"							"Запустити {s:gamename} у режимі OpenXR"
 	"Steam_LaunchOption_othervr"						"Запустити {s:gamename} в іншому режимі ВР"
 	"Steam_LaunchOption_openvroverlay"					"Запустити {s:gamename} в оверлеї ВР Steam"
 	"Steam_LaunchOption_Server"						"Запустити виділений сервер"
@@ -4166,7 +4167,7 @@
 	"Steam_InstallGamepadInputDriver_RestartText"	"Після інсталяції драйвера ґеймпада вам буде потрібно перезапустити Steam."
 
 	"SteamUI_RemoteDeviceAuthorization_Title"		"Авторизація пристрою"
-	"SteamUI_RemoteDeviceAuthorization_Text"		"Будь ласка, введіть код авторизації, аби дозволити {s:devicename} підключатися і грати в ігри."
+	"SteamUI_RemoteDeviceAuthorization_Text"		"Введіть код авторизації з екрана {s:devicename}, щоб дозволити цьому пристрою підключатися та запускати ігри."
 
 	"Steam_OtherSessionPlaying_Title" "Помилка — Steam"
 	"Steam_OtherSessionPlaying_Text" "З вашого акаунта на іншому комп’ютері вже запущено «{s:existing_app}».\nЗапуск «%{s:launching_app}» тут призведе до відключення іншого сеансу від Steam."

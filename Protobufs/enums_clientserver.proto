@@ -553,6 +553,9 @@ enum EMsg {
 	k_EMsgGCHUpdateMultipleSessions = 2239;
 	k_EMsgGCHMarkAppSessionsAuthoritative = 2240;
 	k_EMsgGCHRecurringSubscriptionStatusChange = 2241;
+	k_EMsgGCHAppCheersReceived = 2242;
+	k_EMsgGCHAppCheersGetAllowedTypes = 2243;
+	k_EMsgGCHAppCheersGetAllowedTypesResponse = 2244;
 	k_EMsgBaseP2P = 2500;
 	k_EMsgP2PIntroducerMessage = 2502;
 	k_EMsgBaseSM = 2900;

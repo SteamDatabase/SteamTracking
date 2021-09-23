@@ -107,5 +107,8 @@
 	"GrantAwardDescription_Comment": "使用您的蒸汽平台点数来给予此留言一个特别奖励，并授予创作者额外点数！",
 	"GrantAward_PointsLink": "什么是蒸汽平台点数？",
 	"GrantAward_SubmitTooltip": "使用蒸汽平台点数并送出奖励",
-	"GrantAwardError_InsufficientFunds": "您没有足够的蒸汽平台点数来给予选中的奖励。"
+	"GrantAwardError_InsufficientFunds": "您没有足够的蒸汽平台点数来给予选中的奖励。",
+	"FAQViewer_SteamSupport": "蒸汽平台客服",
+	"FAQViewer_SideBar_ProblemWithSteam_Title": "需要蒸汽平台方面的帮助吗？",
+	"FAQViewer_SideBar_ProblemWithSteam_Desc": "使用蒸汽平台帮助向导缩小提问范围并获取所需帮助。"
 }

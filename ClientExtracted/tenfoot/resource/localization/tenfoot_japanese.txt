@@ -2818,6 +2818,7 @@
 	"Steam_LaunchOption_Application"			"{s:gamename} を起動"
 	"Steam_LaunchOption_SafeMode"					"セーフモードで {s:gamename} を起動"
 	"Steam_LaunchOption_VR"								"Steam VR モードで {s:gamename} を起動"
+	"Steam_LaunchOption_openxr"							"OpenXRモードで{s:gamename}を起動"
 	"Steam_LaunchOption_othervr"						"他の VR モードで {s:gamename} を起動"
 	"Steam_LaunchOption_openvroverlay"					"Steam VR オーバーレイで {s:gamename} を起動"
 	"Steam_LaunchOption_Server"						"専用サーバーを起動"

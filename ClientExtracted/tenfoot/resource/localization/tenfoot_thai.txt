@@ -2816,6 +2816,7 @@
 	"Steam_LaunchOption_Application"			"เริ่มเปิด {s:gamename}"
 	"Steam_LaunchOption_SafeMode"					"เริ่มเปิด {s:gamename} ในเซฟโหมด"
 	"Steam_LaunchOption_VR"								"เริ่มเปิด {s:gamename} ในโหมด Steam VR"
+	"Steam_LaunchOption_openxr"							"เริ่มเปิด {s:gamename} ในโหมด OpenXR"
 	"Steam_LaunchOption_othervr"						"เริ่มเปิด {s:gamename} ในโหมด VR อื่น"
 	"Steam_LaunchOption_openvroverlay"					"เริ่มเปิด {s:gamename} เป็นโอเวอร์เลย์ Steam VR"
 	"Steam_LaunchOption_Server"						"เริ่มเปิดเซิร์ฟเวอร์เฉพาะ"

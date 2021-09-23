@@ -191,7 +191,7 @@
 "Overlay_Screenshots_Size_Original" " (%selected_ss_size_original% på disk)"
 "Overlay_View_All_Screenshots" "Vis online-bibliotek"
 "Overlay_View_Screenshots" "Vis skærmbilleder"
-"Overlay_View_Local" "Vis på drev"
+"Overlay_View_Local" "Vis på disk"
 "Overlay_Set_Shortcut" "Angiv genvej"
 "Overlay_Publish" "Upload"
 "Overlay_Delete" "Slet"

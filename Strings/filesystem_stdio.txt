@@ -20,14 +20,14 @@ __DATA
 
 __nl_symbol_ptr
 __DATA
-[
+Z
 __got
 __DATA
 @
-\
+[
 __la_symbol_ptr
 __DATA
-d
+c
 __
 15CBaseFileSystem
 11IFileSystem
@@ -56,7 +56,7 @@ __
 18CUtlCharConversion
 19CUtlNoEscConversion
 14CUtlMemoryBase
-Assertion Failed: 0
+0
 -fs_log
 Log file system accesses
 -fs_target
@@ -111,12 +111,12 @@ Tried to write %llu bytes from unknown file pointer %p
 File %s was never closed
 %s%s
 rb
-Assertion Failed: packfile.m_bIsPackFile
-Assertion Failed: packfile.m_hPackFile
-Assertion Failed: foundEndOfCentralDirRecord
-Assertion Failed: fileHeader.signature == 0x02014b50
-Assertion Failed: fileHeader.compressionMethod == 0
-Assertion Failed: localFileHeader.signature == 0x04034b50
+packfile.m_bIsPackFile
+packfile.m_hPackFile
+foundEndOfCentralDirRecord
+fileHeader.signature == 0x02014b50
+fileHeader.compressionMethod == 0
+localFileHeader.signature == 0x04034b50
 %s is not a packfile
 %s has %i files
 zip%i.zip
@@ -133,7 +133,7 @@ copy "%s" "%s"
 mkdir "%s"
 fs_debug: %s
 FS_stat on file %s which appeared to exist failed!!!
-Assertion Failed: false
+false
 FS:  Specified two path IDs (%s, %s).
 CBaseFileSystem::Open
 CBaseFileSystem::Close
@@ -155,36 +155,36 @@ FS:  Tried to EndOfFile NULL file pointer inside valid file handle!
 CBaseFileSystem::Read
 FS:  Tried to Read NULL file handle!
 FS:  Tried to Read NULL file pointer inside valid file handle!
-Assertion Failed: nBytesRead <= INT_MAX
+nBytesRead <= INT_MAX
 CBaseFileSystem::Write
 FS:  Tried to Write NULL file handle!
 FS:  Tried to Write NULL file pointer inside valid file handle!
-Assertion Failed: nBytesWritten <= INT_MAX
+nBytesWritten <= INT_MAX
 CBaseFileSystem::FPrintf
 FS:  Tried to FPrintf NULL file handle!
 FS:  Tried to FPrintf NULL file pointer inside valid file handle!
-Assertion Failed: len <= INT_MAX
+len <= INT_MAX
 FS:  Tried to IsOk NULL file handle!
 FS:  Tried to IsOk NULL file pointer inside valid file handle!
 CBaseFileSystem::Flush
 FS:  Tried to Flush NULL file handle!
 FS:  Tried to Flush NULL file pointer inside valid file handle!
-Assertion Failed: pPathID
+pPathID
 CBaseFileSystem::GetFileTime
 filetime
 CBaseFileSystem::FileExists
-Assertion Failed: pathID
+pathID
 CBaseFileSystem::FindFirst
-Assertion Failed: pWildCard
-Assertion Failed: pHandle
+pWildCard
+pHandle
 CBaseFileSystem::FindNext
 Unable to remove %s!
-Assertion Failed: pOldPath && pNewPath
-Assertion Failed: pOldPathId
+pOldPath && pNewPath
+pOldPathId
 Unable to rename %s to %s!
 ???
 EXECUTABLE_PATH
-Assertion Failed: !m_LogFuncs.IsValidIndex(m_LogFuncs.Find(logFunc))
+!m_LogFuncs.IsValidIndex(m_LogFuncs.Find(logFunc))
 CBaseFileSystem
 m_LogFuncs
 m_PackFileHandles
@@ -198,16 +198,16 @@ m_PathIDInfos
 m_OpenedFiles
 m_OpenedFileHandles
 m_FileNames
-Assertion Failed: (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
-Assertion Failed: static_cast<_in>( ret ) == i
+(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/dbg.h
-Assertion Failed: ( i < 0 ) == ( ret < 0 )
+static_cast<_in>( ret ) == i
+( i < 0 ) == ( ret < 0 )
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlsymbol.h
-Assertion Failed: pPool->m_SpaceUsed < 0xFFFF
+pPool->m_SpaceUsed < 0xFFFF
 Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
-Assertion Failed: (unsigned)elem <= (unsigned)m_Size
-Assertion Failed: IsValidIndex(elem)
+(unsigned)elem <= (unsigned)m_Size
+IsValidIndex(elem)
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utldict.h
 m_Memory
 CUtlDict
@@ -216,9 +216,9 @@ m_Tree
 CUtlSymbolTable
 m_StringPools
 m_Lookup
-Assertion Failed: !m_bMounted
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/filesystem/filesystem_stdio/filesystem_stdio.cpp
-Assertion Failed: !strchr(filename, '\n') && !strchr(filename, '\r')
+!m_bMounted
+!strchr(filename, '\n') && !strchr(filename, '\r')
 VFileSystem014
 VBaseFileSystem008
 CFileSystem_Stdio
@@ -228,24 +228,24 @@ g_FileSystem_Stdio
 g_PathIDTable
 CUtlSymbol::ValidateGlobals
 .
-V_RemoveDotSlashes failed for "%s".
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
+V_RemoveDotSlashes failed for "%s".
 %s%c%s
 /
 ..
 CPathString
 .dylib
 %s/%s%s
-Assertion Failed: strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/interface.cpp
+strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
 .cpl
 %s
 g_VecLoadedModules
-Assertion Failed: g_VecLoadedModules[ iLoadedModules ].m_cRef > 0
+g_VecLoadedModules[ iLoadedModules ].m_cRef > 0
 CreateInterface
 "
-Assertion Failed: info.m_pReplacementString == 0
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
+info.m_pReplacementString == 0
 n
 t
 v
@@ -255,25 +255,30 @@ f
 a
 ?
 '
-Assertion Failed: nSizeOfType > 0
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
-Assertion Failed: nGrowSize >= 0
-Assertion Failed: m_nAllocationCount >= 0
+nSizeOfType > 0
+nGrowSize >= 0
+m_nAllocationCount >= 0
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
-Assertion Failed: num > 0
-Assertion Failed: s_bAllowStaticSymbolTable
+num > 0
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
+s_bAllowStaticSymbolTable
 s_pSymbolTable
 0
-
+i
+f
 0
 @
 @
-%
+l
+s
+H
+O
+Ic
+"
 =
 @
 =
 @
 =*.*
-Ic
-%
+M

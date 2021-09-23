@@ -742,7 +742,7 @@
 "Steam_Settings_Broadcast_HelpURL_URL" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497"
 "Steam_Settings_Broadcast_PermissionsHeader" "Indstilling for synlighed:"
 "Steam_Settings_Broadcast_BitrateHeader" "Maksimal bitrate:"
-"Steam_Settings_Broadcast_DimensionsHeader" "Video-dimensioner:"
+"Steam_Settings_Broadcast_DimensionsHeader" "Videodimensioner:"
 "Steam_Settings_Broadcast_EncoderHeader" "Optimer indkodning til:"
 "Steam_Settings_Broadcast_EncoderQuality" "Bedste kvalitet"
 "Steam_Settings_Broadcast_EncoderPerformance" "Bedste ydelse"

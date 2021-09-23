@@ -162,7 +162,7 @@
 "VAC_ConnectionIssuesSupportSite"	"Steam 고객지원으로 이동하려면 여기를 클릭"
 "VAC_ConnectionIssuesSupportURL"	"https://support.steampowered.com/kb/7579-RPSX-6098/"
 "VAC_LoggedInElsewhere_Title"		"계정이 이미 사용 중"
-"VAC_LoggedInElsewhereReason"		"다른 컴퓨터에서 이 Steam 계정으로 로그인했습니다. Steam을 계속 이용하려면 다시 로그인하십시오."
+"VAC_LoggedInElsewhereReason"		"다른 컴퓨터에서 이 Steam 계정으로 로그인했습니다. Steam을 계속 이용하려면 다시 로그인하세요."
 
 "ServerBrowser_FriendNotInGameServer"	"현재 %friend%님이 게임을 플레이하고 있는 서버가 없습니다."
 "ServerBrowser_NotInGame"				"[ 없음 ]"
