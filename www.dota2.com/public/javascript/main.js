@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6788712";
+var CLSTAMP = "6791379";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [1],
   {
@@ -5981,11 +5981,11 @@ var CLSTAMP = "6788712";
         Segment3: "dpcstandings_Segment3_cMM1h",
         ConnectorLineCombined: "dpcstandings_ConnectorLineCombined_Bm2SH",
         DPCLeagueResults: "dpcstandings_DPCLeagueResults_IAy8B",
-        LeagueResult: "dpcstandings_LeagueResult_3wkjK",
         Placement: "dpcstandings_Placement_1acRh",
         First: "dpcstandings_First_2EW0H",
         Second: "dpcstandings_Second_3c4-c",
         Third: "dpcstandings_Third_3uWC9",
+        LeagueResult: "dpcstandings_LeagueResult_3wkjK",
         EarningsContainer: "dpcstandings_EarningsContainer_KM0P8",
         PointsContainer: "dpcstandings_PointsContainer_2U_Ui",
         Value: "dpcstandings_Value_1wtsk",
@@ -32722,16 +32722,9 @@ var CLSTAMP = "6788712";
                         i.a.createElement(
                           "div",
                           { className: Yn.a.PlayerGradient },
-                          i.a.createElement("div", {
+                          i.a.createElement(za, {
                             className: Yn.a.PlayerImage,
-                            style: {
-                              backgroundImage:
-                                "url( " +
-                                p.a.CDN_URL +
-                                "apps/dota2/players/" +
-                                e +
-                                ".png )",
-                            },
+                            nAccountID: e,
                           })
                         )
                       );
@@ -33700,7 +33693,7 @@ var CLSTAMP = "6788712";
                     d.b.dpc_standings(Object(_a.j)(e), a.strPhase, n + "_" + u)
                   );
                 },
-                eStyle: zt.DIM,
+                eStyle: zt.NORMAL,
               }),
               i.a.createElement(Oa, {
                 options: o,
@@ -33710,7 +33703,7 @@ var CLSTAMP = "6788712";
                     d.b.dpc_standings(Object(_a.j)(e), a.strPhase, m + "_" + n)
                   );
                 },
-                eStyle: zt.DIM,
+                eStyle: zt.NORMAL,
               }),
               i.a.createElement(Oa, {
                 options: s,
@@ -33724,7 +33717,7 @@ var CLSTAMP = "6788712";
                     )
                   );
                 },
-                eStyle: zt.DIM,
+                eStyle: zt.NORMAL,
               })
             ),
             n == ha.f.OVERALL &&
@@ -33884,7 +33877,7 @@ var CLSTAMP = "6788712";
                     "div",
                     { className: dr.a.Header },
                     i.a.createElement(Oa, {
-                      eStyle: zt.DIM,
+                      eStyle: zt.NORMAL,
                       options: n,
                       selectedOption: r,
                       setOption: function (n) {
@@ -35505,11 +35498,6 @@ var CLSTAMP = "6788712";
                   { className: pa.a.TextContainer },
                   i.a.createElement(
                     "div",
-                    { className: pa.a.EventPresented },
-                    Object(_.a)("#dpc_event_spring21_presented")
-                  ),
-                  i.a.createElement(
-                    "div",
                     { className: pa.a.EventTitle },
                     Object(_.a)("#dpc_event_league")
                   ),
@@ -35857,7 +35845,22 @@ var CLSTAMP = "6788712";
               );
         }),
         Mr = Object(s.a)(function () {
-          var e = jr();
+          var e = jr(),
+            t = "#212026",
+            a = "#212026";
+          switch (e) {
+            case ha.e.SPRING_2021_LEAGUE:
+              (t = "#0E4830"), (a = "#142030");
+              break;
+            case ha.e.SPRING_2021_MAJOR:
+              (t = "#081121"), (a = "#081121");
+              break;
+            case ha.e.INTERNATIONAL_2021_QUALIFIERS:
+              (t = "#141416"), (a = "141416");
+              break;
+            case ha.e.INTERNATIONAL_2021:
+              (t = "141416"), (a = "#141416");
+          }
           return i.a.createElement(
             "div",
             {
@@ -35868,7 +35871,11 @@ var CLSTAMP = "6788712";
                   p.a.IMG_URL +
                   "backgrounds/dpc_header_event_" +
                   Object(_a.j)(e) +
-                  ".jpg )",
+                  ".jpg ), linear-gradient( to right, " +
+                  t +
+                  " 49%, " +
+                  a +
+                  " 51% )",
               },
             },
             i.a.createElement(Rr, null),
@@ -38502,7 +38509,6 @@ var CLSTAMP = "6788712";
         DPCHeaderSpring2021League: "dpcroot_DPCHeaderSpring2021League_3Qm9p",
         TextContainer: "dpcroot_TextContainer_1KhMv",
         EventTitle: "dpcroot_EventTitle_1ytb2",
-        EventPresented: "dpcroot_EventPresented_1j_VO",
         EventSegment: "dpcroot_EventSegment_VCSdA",
         EventSubTitle: "dpcroot_EventSubTitle_FYI2F",
         EventStartTitle: "dpcroot_EventStartTitle_d5fJk",
@@ -38512,6 +38518,7 @@ var CLSTAMP = "6788712";
         EventResultsTitle: "dpcroot_EventResultsTitle_3OWwt",
         EventResultsButton: "dpcroot_EventResultsButton_2w0Iu",
         DPCHeaderSpring2021Major: "dpcroot_DPCHeaderSpring2021Major_19w08",
+        EventPresented: "dpcroot_EventPresented_1j_VO",
         EventLoc: "dpcroot_EventLoc_23DXR",
         EventPhaseTitle: "dpcroot_EventPhaseTitle_2a02x",
         EventPhaseTime: "dpcroot_EventPhaseTime_2OvfK",
