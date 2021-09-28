@@ -26760,9 +26760,10 @@ a {
 }
 .dpcheader_DPCHeader_1l1bz .dpcheader_DPCHeaderContents_i0tSQ {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1200px;
   height: 100%;
-  padding: 0px 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -27770,6 +27771,7 @@ a {
   letter-spacing: 1px;
 }
 .dpcstandings_DPCStandingsRoundRobin_3gskr {
+  max-width: 1200px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -27782,7 +27784,7 @@ a {
   row-gap: 70px;
   column-gap: 20px;
   justify-content: center;
-  padding: 0px 40px;
+  padding: 0px 20px;
 }
 .dpcstandings_DPCStandingsRoundRobin_3gskr .dpcstandings_Title_1j7g0 {
   color: #fff;
@@ -27831,7 +27833,7 @@ a {
   .dpcstandings_GridContainer_1bSmg {
   width: 100%;
   flex-grow: 1;
-  background-color: #1d1d1d;
+  background-color: #1f1f24e6;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27954,7 +27956,7 @@ a {
   height: 100%;
 }
 .dpcstandings_DPCStandingsTeamList_jVT-8 {
-  width: 500px;
+  width: 580px;
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -28067,11 +28069,13 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0px 20px;
 }
 .dpcstandings_DPCStandingsBracket_9iCXI.dpcstandings_NoData_2oYg8 {
   opacity: 0;
 }
 .dpcstandings_DPCStandingsBracket_9iCXI .dpcstandings_BracketHeader_2iUiS {
+  width: 100%;
   height: 30px;
   display: flex;
   flex-direction: row;
@@ -28085,6 +28089,7 @@ a {
   background-color: #36363e;
 }
 .dpcstandings_DPCStandingsBracket_9iCXI .dpcstandings_BracketBody_3h5k- {
+  width: 100%;
   position: relative;
   transition-property: background-color;
   transition-timing-function: ease-in-out;
@@ -28104,8 +28109,8 @@ a {
   justify-content: flex-end;
   align-items: center;
   position: absolute;
-  top: 36px;
-  right: 24px;
+  top: 40px;
+  right: 30px;
   cursor: pointer;
   user-select: none;
 }
@@ -28125,7 +28130,7 @@ a {
   .dpcstandings_DayDisplayContainer_24Hld
   .dpcstandings_DayDisplayValue_3oXwq {
   min-width: 30px;
-  color: #838383;
+  color: #5e6976;
   font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
@@ -28178,8 +28183,9 @@ a {
   height: 40px;
 }
 .dpcstandings_DPCStandingsBracket_9iCXI .dpcstandings_BracketScroller_1eoNP {
-  padding: 60px;
-  padding-bottom: 80px;
+  padding-top: 60px;
+  padding-left: 30px;
+  padding-bottom: 60px;
   padding-right: 0px;
   max-width: 90vw;
 }
@@ -28195,7 +28201,7 @@ a {
 .dpcstandings_DPCStandingsBracket_9iCXI
   .dpcstandings_BracketScroller_1eoNP::-webkit-scrollbar-thumb {
   width: 3px;
-  background-color: #5e6976;
+  background-color: #3c434a;
 }
 .dpcstandings_DPCStandingsBracketDoubleSeeded16_1A6yp {
   width: 1350px;
@@ -29271,9 +29277,10 @@ a {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
-  padding-right: 10px;
-  padding-left: 10px;
-  padding-bottom: 14px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  margin-top: 80px;
 }
 .dpcteamlist_DPCTeamList_wkwPY
   .dpcteamlist_Header_6xmj_
@@ -29288,7 +29295,7 @@ a {
 .dpcteamlist_DPCTeamList_wkwPY .dpcteamlist_TeamList_q1HCH {
   width: 100%;
   max-width: 1240px;
-  padding: 0px 10px;
+  padding: 0px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31040,10 +31047,8 @@ a {
 }
 .dpcstandingspage_DPCStandingsPage_guidq {
   width: 100%;
-  min-height: 85vh;
   color: #fff;
   background-color: #050606;
-  padding-bottom: 30px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -31052,11 +31057,10 @@ a {
 .dpcstandingspage_DPCStandingsPageLeague_34H1h {
   width: 100%;
   max-width: 1200px;
-  min-height: 85vh;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin-bottom: 50px;
+  margin-bottom: 200px;
 }
 .dpcstandingspage_DPCStandingsPageLeague_34H1h .dpcstandingspage_Header_1EgAU {
   width: 100%;
@@ -31065,26 +31069,29 @@ a {
   justify-content: right;
   align-items: center;
   gap: 30px;
-  margin-top: 45px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 80px;
   margin-bottom: 20px;
 }
 .dpcstandingspage_DPCStandingsPageMajor_3rfFl {
   width: 100%;
-  min-height: 85vh;
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 200px;
 }
 .dpcstandingspage_DPCStandingsPageMajor_3rfFl .dpcstandingspage_Header_1EgAU {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
-  margin-top: 45px;
+  margin-top: 80px;
   margin-bottom: 20px;
+  padding: 0px 20px;
 }
 .dpcstandingspage_DPCStandingsPageTIQualifiers_1z6AW {
   width: 100%;
