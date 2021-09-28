@@ -27451,7 +27451,6 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
 }
 .dpchomepage_DPCHomePageStandingsLeague_3C6rF {
   width: 100%;
@@ -27490,23 +27489,23 @@ a {
   width: 100%;
   background-color: #2f2f36;
   background-position: top, center;
-  background-repeat: repeat-x;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
-  padding-bottom: 30px;
-  padding-top: 40px;
+  padding-top: 65px;
+  padding-bottom: 90px;
 }
 .dpchomepage_DPCFollowedTeamMatches_-BVSo .dpchomepage_MatchesContainer_3vVvL {
   width: 100%;
-  max-width: 1280px;
-  padding: 0px 30px;
+  max-width: 1200px;
+  padding: 0px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 14px;
 }
 .dpchomepage_DPCFollowedTeamMatches_-BVSo
   .dpchomepage_MatchesContainer_3vVvL
@@ -27516,6 +27515,7 @@ a {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
+  padding-bottom: 20px;
 }
 .dpchomepage_DPCFollowedTeamMatches_-BVSo
   .dpchomepage_MatchesContainer_3vVvL
@@ -27529,8 +27529,8 @@ a {
   gap: 30px;
 }
 .dpchomepage_DPCFollowedTeamSeries_20KHP {
-  width: 340px;
-  height: 350px;
+  width: 365px;
+  height: 380px;
   background-color: #25252a;
   box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2);
 }
@@ -27545,7 +27545,7 @@ a {
   .dpchomepage_Gradient_2Du5Z
   .dpchomepage_Header_ks44o {
   width: 100%;
-  height: 80px;
+  height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27731,7 +27731,7 @@ a {
   opacity: 0;
 }
 .dpcstandings_LegendContainer_rde9K {
-  margin-top: 40px;
+  margin-top: 80px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -27805,11 +27805,11 @@ a {
   opacity: 0;
 }
 .dpcstandings_DPCStandingsGrid_3w9B9 .dpcstandings_GridMain_1PVyp {
-  width: 100%;
+  width: 560px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #1d1d1d;
+  background-color: #27272dbf;
   box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.4);
 }
 .dpcstandings_DPCStandingsGrid_3w9B9
@@ -27831,9 +27831,7 @@ a {
 .dpcstandings_DPCStandingsGrid_3w9B9
   .dpcstandings_GridMain_1PVyp
   .dpcstandings_GridContainer_1bSmg {
-  width: 100%;
   flex-grow: 1;
-  background-color: #1f1f24e6;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28010,7 +28008,7 @@ a {
 .dpcstandings_DPCStandingsTeam_25wGh {
   width: 100%;
   height: 70px;
-  background-color: #1f1f24e6;
+  background-color: #27272dbf;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -28094,7 +28092,7 @@ a {
   transition-property: background-color;
   transition-timing-function: ease-in-out;
   transition-duration: 0.2s;
-  background-color: #202025;
+  background-color: #27272dbf;
 }
 .dpcstandings_DPCStandingsBracket_9iCXI
   .dpcstandings_BracketBody_3h5k-.dpcstandings_NodeExpanded_209b3 {
@@ -28633,10 +28631,10 @@ a {
   align-items: center;
   background: linear-gradient(
     108deg,
-    #2a2a32 0%,
-    #2a2a32 calc(100% - 400px),
-    #36363e calc(100% - 400px),
-    #36363e 100%
+    #2a2a32bf 0%,
+    #2a2a32bf calc(100% - 400px),
+    #36363ebf calc(100% - 400px),
+    #36363ebf 100%
   );
 }
 .dpcstandings_LeagueResult_3wkjK .dpcstandings_Placement_1acRh {
@@ -29258,20 +29256,19 @@ a {
 }
 .dpcteamlist_DPCTeamList_wkwPY {
   width: 100%;
-  max-width: 1920px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 70px;
   background-color: #161618;
   background-position: top, center;
   background-repeat: no-repeat;
+  background-size: 100% auto;
   justify-content: center;
   position: relative;
 }
 .dpcteamlist_DPCTeamList_wkwPY .dpcteamlist_Header_6xmj_ {
   width: 100%;
-  max-width: 1240px;
+  max-width: 1200px;
   height: 80px;
   display: flex;
   flex-direction: row;
@@ -29294,18 +29291,20 @@ a {
 }
 .dpcteamlist_DPCTeamList_wkwPY .dpcteamlist_TeamList_q1HCH {
   width: 100%;
-  max-width: 1240px;
+  max-width: 1200px;
   padding: 0px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
+  padding-bottom: 200px;
 }
 .dpcteamlist_DPCTeamList_wkwPY .dpcteamlist_ShowMoreButton_338Nb {
   padding: 8px 50px;
   background-color: #2e3339;
   border-radius: 3px;
-  margin-top: 20px;
+  margin-top: -120px;
+  margin-bottom: 200px;
   color: #9099a3;
   font-size: 12px;
   font-weight: 700;
@@ -29328,7 +29327,7 @@ a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: #37373d;
+  background-color: #36363ebf;
   color: #a3a3a3;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
 }
@@ -29343,7 +29342,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #48484e;
+  background-color: #6e6e7766;
 }
 .dpcteamlist_TeamEntry_2GaFH
   .dpcteamlist_FavoriteSection_2-En1
@@ -29495,7 +29494,7 @@ a {
   .dpcteamlist_TopBar_l47W5 {
   width: 100%;
   height: 30px;
-  background-color: #222226;
+  background-color: #202023bf;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -29512,7 +29511,7 @@ a {
   .dpcteamlist_BottomSectionWrapper_2JRMt {
   width: 100%;
   flex-grow: 1;
-  background-color: #29292e;
+  background-color: #252528bf;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -31066,7 +31065,7 @@ a {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: right;
+  justify-content: center;
   align-items: center;
   gap: 30px;
   padding-left: 20px;
@@ -31087,7 +31086,7 @@ a {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: right;
+  justify-content: center;
   align-items: center;
   margin-top: 80px;
   margin-bottom: 20px;
@@ -31645,7 +31644,6 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 80px;
 }
 .dpcschedulepage_DPCSchedulePage_1OBQH
   .dpcschedulepage_ScrollToTopButton_2wCmF {
@@ -31658,7 +31656,8 @@ a {
   letter-spacing: 1px;
   text-align: center;
   border-radius: 3px;
-  margin: 30px 0px;
+  margin-top: 60px;
+  margin-bottom: 200px;
   cursor: pointer;
   user-select: none;
   transition-property: background-color, color;
@@ -31672,10 +31671,10 @@ a {
 }
 .dpcschedulepage_DPCScheduleHeader_2DFwc {
   width: 100%;
-  height: 90px;
+  max-width: 1200px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: right;
   gap: 40px;
   align-items: center;
   background: linear-gradient(
@@ -31686,10 +31685,14 @@ a {
     rgba(22, 22, 24, 0) 100%
   );
   z-index: 998;
+  padding: 0px 20px;
+  padding-top: 80px;
+  padding-bottom: 20px;
 }
 .dpcschedulepage_DPCScheduleList_3QIzq {
   width: 100%;
   min-height: 1000px;
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
   align-items: center;
