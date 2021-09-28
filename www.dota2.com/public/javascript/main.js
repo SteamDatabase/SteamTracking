@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6793428";
+var CLSTAMP = "6793756";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [1],
   {
@@ -29983,7 +29983,6 @@ var CLSTAMP = "6793428";
                         i.a.createElement(Ha, {
                           classnames: wa.a.YouTubePlayer,
                           video: m,
-                          autoplay: !0,
                           playsInline: !0,
                           controls: !0,
                           showFullscreenBtn: !0,
