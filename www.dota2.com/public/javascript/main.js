@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6793756";
+var CLSTAMP = "6795027";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [1],
   {
@@ -5905,6 +5905,7 @@ var CLSTAMP = "6793756";
         Description: "dpcstandings_Description_1I5ee",
         DPCStandingsRoundRobin: "dpcstandings_DPCStandingsRoundRobin_3gskr",
         Standings: "dpcstandings_Standings_2xuCM",
+        NoTeams: "dpcstandings_NoTeams_AqsTm",
         Title: "dpcstandings_Title_1j7g0",
         DPCStandingsGrid: "dpcstandings_DPCStandingsGrid_3w9B9",
         GridMain: "dpcstandings_GridMain_1PVyp",
@@ -9878,7 +9879,7 @@ var CLSTAMP = "6793756";
                 if (!a || 0 == a) return !1;
                 for (var o = 0, i = r; o < i.length; o++) {
                   var s = a - i[o];
-                  if (s > 0 && s < 86400) return !0;
+                  if (s >= 0 && s < 86400) return !0;
                 }
                 return !1;
               });
@@ -29983,6 +29984,7 @@ var CLSTAMP = "6793756";
                         i.a.createElement(Ha, {
                           classnames: wa.a.YouTubePlayer,
                           video: m,
+                          autoplay: !1,
                           playsInline: !0,
                           controls: !0,
                           showFullscreenBtn: !0,
@@ -30229,7 +30231,7 @@ var CLSTAMP = "6793756";
               .GetEventDates(n, 3)
               .sort()
               .findIndex(function (e) {
-                return N > e && N < e + 86400;
+                return N >= e && N < e + 86400;
               }),
             S = Ca.a.Get().GetSpoilerBlockState(n) == ha.k.BLOCKED,
             T =
@@ -30589,7 +30591,7 @@ var CLSTAMP = "6793756";
                                 : null == a
                                 ? void 0
                                 : a.scheduled_time;
-                            return n > e && n < e + 86400;
+                            return n >= e && n < e + 86400;
                           }).length;
                         return i.a.createElement(
                           "div",
@@ -30708,15 +30710,11 @@ var CLSTAMP = "6793756";
           var e = jr(),
             t = Ca.a.Get().GetHomePageContext(),
             a = Ca.a.Get().GetEventInfo(e),
-            n = Object(c.h)(),
-            r = Object(_a.j)(e),
-            s = Object(o.useState)(
-              e == ha.e.INVALID ? Object(_a.g)(Object(_a.b)()) : e
-            ),
-            m = s[0],
-            u = s[1],
-            p = Object(d.a)(e, n),
-            h = [
+            n = Object(c.g)(),
+            r = Object(c.h)(),
+            o = Object(_a.j)(e),
+            s = Object(d.a)(e, r),
+            m = [
               { value: ha.e.INVALID, strLabel: "2020 - 2021", bSeparator: !0 },
               {
                 value: ha.e.SPRING_2021_LEAGUE,
@@ -30739,37 +30737,6 @@ var CLSTAMP = "6793756";
                 strLabelSub: "#dpc_event_ti10_dates",
               },
             ];
-          if (m != e)
-            switch (p) {
-              case ha.a.WATCH:
-                return i.a.createElement(c.a, {
-                  to: {
-                    state: { bAutoScroll: !0 },
-                    pathname: d.b.dpc_watch(Object(_a.j)(m)),
-                  },
-                });
-              case ha.a.SCHEDULE:
-                return i.a.createElement(c.a, {
-                  to: {
-                    state: { bAutoScroll: !0 },
-                    pathname: d.b.dpc_schedule(Object(_a.j)(m)),
-                  },
-                });
-              case ha.a.STANDINGS:
-                return i.a.createElement(c.a, {
-                  to: {
-                    state: { bAutoScroll: !0 },
-                    pathname: d.b.dpc_standings(Object(_a.j)(m)),
-                  },
-                });
-              case ha.a.ABOUT:
-                return i.a.createElement(c.a, {
-                  to: {
-                    state: { bAutoScroll: !0 },
-                    pathname: d.b.dpc_about(Object(_a.j)(m)),
-                  },
-                });
-            }
           return i.a.createElement(
             "div",
             {
@@ -30786,9 +30753,23 @@ var CLSTAMP = "6793756";
                 { className: yn.a.DPCEventSelector },
                 i.a.createElement(Oa, {
                   eStyle: zt.HIGHLIGHTED,
-                  options: h,
-                  selectedOption: m,
-                  setOption: u,
+                  options: m,
+                  selectedOption: e,
+                  setOption: function (t) {
+                    switch (Object(d.a)(e, r)) {
+                      case ha.a.WATCH:
+                        n.push(d.b.dpc_watch(Object(_a.j)(t)));
+                        break;
+                      case ha.a.SCHEDULE:
+                        n.push(d.b.dpc_schedule(Object(_a.j)(t)));
+                        break;
+                      case ha.a.STANDINGS:
+                        n.push(d.b.dpc_standings(Object(_a.j)(t)));
+                        break;
+                      case ha.a.ABOUT:
+                        n.push(d.b.dpc_about(Object(_a.j)(t)));
+                    }
+                  },
                   nWidth: 250,
                 })
               ),
@@ -30801,7 +30782,7 @@ var CLSTAMP = "6793756";
                     to: {
                       state: { bAutoScroll: !0 },
                       pathname: d.b.dpc_watch(
-                        r,
+                        o,
                         "" + (t ? t.nLeagueID : 0),
                         "" + (t ? t.nNodeID : 0),
                         Object(_a.l)(
@@ -30812,7 +30793,7 @@ var CLSTAMP = "6793756";
                     },
                     className: Object(le.a)(
                       yn.a.DPCLink,
-                      p == ha.a.WATCH && yn.a.Active
+                      s == ha.a.WATCH && yn.a.Active
                     ),
                   },
                   i.a.createElement(
@@ -30826,11 +30807,11 @@ var CLSTAMP = "6793756";
                   {
                     to: {
                       state: { bAutoScroll: !0 },
-                      pathname: d.b.dpc_schedule(r, "0", "0"),
+                      pathname: d.b.dpc_schedule(o, "0", "0"),
                     },
                     className: Object(le.a)(
                       yn.a.DPCLink,
-                      p == ha.a.SCHEDULE && yn.a.Active
+                      s == ha.a.SCHEDULE && yn.a.Active
                     ),
                   },
                   i.a.createElement(
@@ -30844,11 +30825,11 @@ var CLSTAMP = "6793756";
                   {
                     to: {
                       state: { bAutoScroll: !0 },
-                      pathname: d.b.dpc_standings(r),
+                      pathname: d.b.dpc_standings(o),
                     },
                     className: Object(le.a)(
                       yn.a.DPCLink,
-                      p == ha.a.STANDINGS && yn.a.Active
+                      s == ha.a.STANDINGS && yn.a.Active
                     ),
                   },
                   i.a.createElement(
@@ -30862,11 +30843,11 @@ var CLSTAMP = "6793756";
                   {
                     to: {
                       state: { bAutoScroll: !0 },
-                      pathname: d.b.dpc_about(r),
+                      pathname: d.b.dpc_about(o),
                     },
                     className: Object(le.a)(
                       yn.a.DPCLink,
-                      p == ha.a.ABOUT && yn.a.Active
+                      s == ha.a.ABOUT && yn.a.Active
                     ),
                   },
                   i.a.createElement(
@@ -31030,17 +31011,30 @@ var CLSTAMP = "6793756";
           );
         }),
         Rn = Object(s.a)(function (e) {
-          var t = jr(),
-            a = "";
-          switch (Ca.a.Get().GetEventType(t)) {
+          var t,
+            a = jr(),
+            n = "";
+          switch (Ca.a.Get().GetEventType(a)) {
             case ha.g.LEAGUE:
-              a = Ca.a.Get().GetRegionString(e.eRegion, !1);
+              n = Ca.a.Get().GetRegionString(e.eRegion, !1);
               break;
             case ha.g.MAJOR:
             case ha.g.INTERNATIONAL:
             case ha.g.INTERNATIONAL_QUALIFIERS:
-              a = Ca.a.Get().GetEventPhaseString(e.ePhase);
+              n = Ca.a.Get().GetEventPhaseString(e.ePhase);
           }
+          var r =
+            (null === (t = Ca.a.Get().GetEventPhaseTeams(a, e.ePhase)) ||
+            void 0 === t
+              ? void 0
+              : t.filter(function (t) {
+                  return (
+                    null !=
+                    Ca.a
+                      .Get()
+                      .GetTeamStanding(a, e.ePhase, e.eRegion, e.eDivision, t)
+                  );
+                }).length) > 0;
           return i.a.createElement(
             "div",
             { className: Tn.a.DPCStandingsRoundRobin },
@@ -31048,12 +31042,19 @@ var CLSTAMP = "6793756";
               i.a.createElement(
                 "div",
                 { className: Tn.a.Title },
-                Object(_.a)(a)
+                Object(_.a)(n)
               ),
             i.a.createElement(
               "div",
               { className: Tn.a.Standings },
-              e.bShowList &&
+              !r &&
+                i.a.createElement(
+                  "div",
+                  { className: Tn.a.NoTeams },
+                  Object(_.a)("#dpc_no_teams_yet")
+                ),
+              r &&
+                e.bShowList &&
                 i.a.createElement(Bn, {
                   ePhase: e.ePhase,
                   eRegion: e.eRegion,
@@ -31062,7 +31063,8 @@ var CLSTAMP = "6793756";
                   bShowLegend: e.bShowLegend,
                   bNarrow: e.bNarrowList,
                 }),
-              e.bShowGrid &&
+              r &&
+                e.bShowGrid &&
                 i.a.createElement(Pn, {
                   ePhase: e.ePhase,
                   eRegion: e.eRegion,
@@ -34017,7 +34019,7 @@ var CLSTAMP = "6793756";
               r = !0;
           }
           var o = [
-              { value: ha.d.UNSET, strLabel: "#dpc_division_all" },
+              { value: ha.d.UNSET, strLabel: "#dpc_division_filter_all" },
               { value: ha.d.DIVISION_I, strLabel: "#dpc_division_i" },
               { value: ha.d.DIVISION_II, strLabel: "#dpc_division_ii" },
             ],
@@ -34120,7 +34122,7 @@ var CLSTAMP = "6793756";
                         : null == a
                         ? void 0
                         : a.scheduled_time;
-                    return n > t && n < t + 86400;
+                    return n >= t && n < t + 86400;
                   });
                   if (0 == a.length) return "continue";
                   (p += 62), (p += 104 * a.length), (p += 3 * (a.length - 1));
@@ -35855,10 +35857,8 @@ var CLSTAMP = "6793756";
               (t = "#081121"), (a = "#081121");
               break;
             case ha.e.INTERNATIONAL_2021_QUALIFIERS:
-              (t = "#141416"), (a = "141416");
-              break;
             case ha.e.INTERNATIONAL_2021:
-              (t = "141416"), (a = "#141416");
+              (t = "#141416"), (a = "#141416");
           }
           return i.a.createElement(
             "div",
@@ -38917,9 +38917,9 @@ var CLSTAMP = "6793756";
         StyleHighlighted: "dpcselectors_StyleHighlighted_qjss3",
         DropdownBody: "dpcselectors_DropdownBody_1u6rb",
         StyleNormal: "dpcselectors_StyleNormal_2AM-s",
-        StyleDim: "dpcselectors_StyleDim_15AJD",
         LeftSegment: "dpcselectors_LeftSegment_2BgYM",
         RightArrow: "dpcselectors_RightArrow_3XoYb",
+        StyleDim: "dpcselectors_StyleDim_15AJD",
         IsOpen: "dpcselectors_IsOpen_1LwZv",
         AbsolutePos: "dpcselectors_AbsolutePos_32jIV",
         DropdownOptions: "dpcselectors_DropdownOptions_3heSt",
@@ -38929,7 +38929,6 @@ var CLSTAMP = "6793756";
         OptionLabel: "dpcselectors_OptionLabel_SGKBi",
         OptionSubLabel: "dpcselectors_OptionSubLabel_2UU2O",
         TextInput: "dpcselectors_TextInput_33HiC",
-        AngleFill: "dpcselectors_AngleFill_2297x",
         MagnifyingGlass: "dpcselectors_MagnifyingGlass_3N27p",
         Switch: "dpcselectors_Switch_26we-",
         On: "dpcselectors_On_IFTP8",
