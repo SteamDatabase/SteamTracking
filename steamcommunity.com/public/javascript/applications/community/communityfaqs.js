@@ -13430,31 +13430,6 @@
         FAQImage: "faqbbcode_FAQImage_3Eebt",
       };
     },
-    X2UP: function (e, t, a) {
-      "use strict";
-      a.d(t, "a", function () {
-        return r;
-      });
-      var o = a("vDqi"),
-        i = a.n(o),
-        s = a("q1tI"),
-        n = a.n(s);
-      function r(e) {
-        var t = n.a.useRef(i.a.CancelToken.source());
-        return (
-          n.a.useEffect(
-            function () {
-              var a = t.current;
-              return function () {
-                return a.cancel(e ? e + ": unmounting" : "unmounting");
-              };
-            },
-            [e]
-          ),
-          t.current
-        );
-      }
-    },
     ZYuD: function (e, t, a) {
       e.exports = {
         LanguageListDialog: "faqlocalization_LanguageListDialog_vp5PF",

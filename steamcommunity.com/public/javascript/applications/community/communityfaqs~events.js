@@ -8876,6 +8876,31 @@
           },
         };
     },
+    X2UP: function (e, t, n) {
+      "use strict";
+      n.d(t, "a", function () {
+        return l;
+      });
+      var a = n("vDqi"),
+        i = n.n(a),
+        r = n("q1tI"),
+        o = n.n(r);
+      function l(e) {
+        var t = o.a.useRef(i.a.CancelToken.source());
+        return (
+          o.a.useEffect(
+            function () {
+              var n = t.current;
+              return function () {
+                return n.cancel(e ? e + ": unmounting" : "unmounting");
+              };
+            },
+            [e]
+          ),
+          t.current
+        );
+      }
+    },
     Yamg: function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
@@ -18204,6 +18229,14 @@
                         m.createElement(V.d, {
                           tooltip: Object(N.f)("#Sale_EditRawTaggedItems_ttip"),
                         })
+                      ),
+                      m.createElement(
+                        T.d,
+                        { onClick: this.OnSync },
+                        Object(N.f)("#Sale_SyncTaggedItems"),
+                        m.createElement(V.d, {
+                          tooltip: Object(N.f)("#Sale_SyncTaggedItems_ttip"),
+                        })
                       )
                     ),
                     m.createElement(
@@ -18220,14 +18253,6 @@
                             tooltip: Object(N.f)(
                               "#Sale_EditTaggedItemFilter_ttip"
                             ),
-                          })
-                        ),
-                        m.createElement(
-                          T.d,
-                          { onClick: this.OnSync },
-                          Object(N.f)("#Sale_SyncTaggedItems"),
-                          m.createElement(V.d, {
-                            tooltip: Object(N.f)("#Sale_SyncTaggedItems_ttip"),
                           })
                         ),
                         m.createElement(

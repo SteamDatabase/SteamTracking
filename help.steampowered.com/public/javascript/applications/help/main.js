@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6781682";
+var CLSTAMP = "6794759";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [61],
   {
@@ -19903,24 +19903,27 @@ var CLSTAMP = "6781682";
       }
       var Dr = (function () {
           function e(e) {
-            (this.m_stats = e || {
-              event_gid: "0",
-              library_overview_shown: 0,
-              library_overview_read: 0,
-              app_details_spotlight_shown: 0,
-              app_details_spotlight_read: 0,
-              app_details_activity_shown: 0,
-              app_details_activity_read: 0,
-              store_app_page_shown: 0,
-              store_app_page_read: 0,
-              store_front_page_shown: 0,
-              store_front_page_read: 0,
-              community_hub_shown: 0,
-              community_hub_read: 0,
-              news_hub_shown: 0,
-              news_hub_read: 0,
-              event_scroller_read: 0,
-            }),
+            (this.m_stats = Object(N.a)(
+              {
+                event_gid: "0",
+                library_overview_shown: 0,
+                library_overview_read: 0,
+                app_details_spotlight_shown: 0,
+                app_details_spotlight_read: 0,
+                app_details_activity_shown: 0,
+                app_details_activity_read: 0,
+                store_app_page_shown: 0,
+                store_app_page_read: 0,
+                store_front_page_shown: 0,
+                store_front_page_read: 0,
+                community_hub_shown: 0,
+                community_hub_read: 0,
+                news_hub_shown: 0,
+                news_hub_read: 0,
+                event_scroller_read: 0,
+              },
+              e
+            )),
               (this.m_stats.total_showm =
                 this.m_stats.library_overview_shown +
                 this.m_stats.app_details_activity_shown +
@@ -19938,7 +19941,7 @@ var CLSTAMP = "6781682";
                 this.m_stats.community_hub_read +
                 this.m_stats.news_hub_read +
                 this.m_stats.event_scroller_read),
-              (this.m_lastUpdateTime = e ? Date.now() / 1e3 : 0);
+              (this.m_lastUpdateTime = e ? Math.floor(Date.now() / 1e3) : 0);
           }
           return (
             (e.prototype.reset = function (e) {
@@ -20089,7 +20092,7 @@ var CLSTAMP = "6781682";
                           C.a.get(n, {
                             params: r,
                             withCredentials: !0,
-                            cancelToken: l.token,
+                            cancelToken: null == l ? void 0 : l.token,
                           }),
                         ]
                       );
@@ -31134,7 +31137,7 @@ var CLSTAMP = "6781682";
                           4,
                           v.a.get(t, {
                             params: n,
-                            cancelToken: _ ? _.token : void 0,
+                            cancelToken: null == _ ? void 0 : _.token,
                           }),
                         ]
                       );
@@ -33160,7 +33163,7 @@ var CLSTAMP = "6781682";
                       (a = (function (e) {
                         return "backward" === e ? -1 : "forward" === e ? 1 : 0;
                       })(l.selectionDirection)),
-                      (i = m.q(l)),
+                      (i = m.s(l)),
                       1 === u.length || ("Enter" === u && i)
                         ? ((i = "Enter" === u ? "\n" : u),
                           (s = l.value),
@@ -34629,6 +34632,27 @@ var CLSTAMP = "6781682";
             }),
             (e.prototype.GetBestPurchaseOption = function () {
               return this.m_BestPurchaseOption;
+            }),
+            (e.prototype.GetBestPurchasePriceInCents = function () {
+              var e;
+              if (
+                null !== (e = this.m_BestPurchaseOption) &&
+                void 0 !== e &&
+                e.final_price_in_cents
+              )
+                return Number.parseInt(
+                  this.m_BestPurchaseOption.final_price_in_cents
+                );
+            }),
+            (e.prototype.GetBestPurchaseOriginalPriceInCents = function () {
+              var e;
+              return null !== (e = this.m_BestPurchaseOption) &&
+                void 0 !== e &&
+                e.original_price_in_cents
+                ? Number.parseInt(
+                    this.m_BestPurchaseOption.final_price_in_cents
+                  )
+                : this.GetBestPurchasePriceInCents();
             }),
             (e.prototype.GetAllPurchaseOptions = function () {
               return this.m_rgPurchaseOptions;
@@ -45125,6 +45149,7 @@ var CLSTAMP = "6781682";
           "salepreviewwidgets_StoreSaleBroadcastWidgetRight_9VjYX",
         StoreSalePriceActionWidgetContainer:
           "salepreviewwidgets_StoreSalePriceActionWidgetContainer_1JuIp",
+        Discounted: "salepreviewwidgets_Discounted_1g0B-",
         WishList: "salepreviewwidgets_WishList_1djkd",
         Action: "salepreviewwidgets_Action_2zssE",
         StoreSalePriceWidgetContainer:
@@ -45136,7 +45161,6 @@ var CLSTAMP = "6781682";
         StoreSaleDiscountedPriceCtn:
           "salepreviewwidgets_StoreSaleDiscountedPriceCtn_3NhLu",
         StoreOriginalPrice: "salepreviewwidgets_StoreOriginalPrice_3fFFs",
-        Discounted: "salepreviewwidgets_Discounted_1g0B-",
         BaseDiscount: "salepreviewwidgets_BaseDiscount_3mInD",
         StoreSalePriceButton: "salepreviewwidgets_StoreSalePriceButton_1BejQ",
         OuterCapsuleContainer: "salepreviewwidgets_OuterCapsuleContainer_1dKR2",
@@ -48370,28 +48394,28 @@ var CLSTAMP = "6781682";
     TLQK: function (e, t, n) {
       "use strict";
       n.d(t, "b", function () {
-        return u;
+        return p;
       }),
         n.d(t, "f", function () {
-          return p;
-        }),
-        n.d(t, "n", function () {
           return d;
         }),
-        n.d(t, "l", function () {
+        n.d(t, "n", function () {
           return m;
         }),
-        n.d(t, "a", function () {
+        n.d(t, "l", function () {
           return h;
         }),
-        n.d(t, "d", function () {
-          return _;
+        n.d(t, "a", function () {
+          return f;
         }),
-        n.d(t, "c", function () {
+        n.d(t, "d", function () {
           return b;
         }),
-        n.d(t, "e", function () {
+        n.d(t, "c", function () {
           return g;
+        }),
+        n.d(t, "e", function () {
+          return v;
         });
       var c = n("mrSG"),
         l = n("q1tI"),
@@ -48399,38 +48423,40 @@ var CLSTAMP = "6781682";
         a = n("kyHq"),
         i = n("lkRc"),
         o = n("Kw0F"),
-        s = (n("r64O"), n("Z1oF"));
+        s = (n("r64O"), n("qiKp")),
+        u = n("Z1oF");
       n.d(t, "g", function () {
-        return s.a;
+        return u.a;
       }),
         n.d(t, "h", function () {
-          return s.b;
+          return u.b;
         }),
         n.d(t, "j", function () {
-          return s.d;
+          return u.d;
         }),
         n.d(t, "k", function () {
-          return s.e;
+          return u.e;
         }),
         n.d(t, "m", function () {
-          return s.f;
+          return u.f;
         }),
         n.d(t, "o", function () {
-          return s.h;
+          return u.h;
         }),
         n.d(t, "p", function () {
-          return s.i;
+          return u.i;
         }),
         n.d(t, "q", function () {
-          return s.j;
+          return u.j;
         }),
         n.d(t, "i", function () {
-          return s.c;
+          return u.c;
         });
-      var u = (function () {
+      var p = (function () {
         function n() {
           (this.m_mapTokens = new Map()),
-            (this.m_mapFallbackTokens = new Map());
+            (this.m_mapFallbackTokens = new Map()),
+            (this.m_cbkTokensChanged = new s.a());
         }
         return (
           (n.InstallErrorReportingStore = function (e) {
@@ -48463,12 +48489,13 @@ var CLSTAMP = "6781682";
             a || this.m_mapTokens.clear();
             (e = Object(c.a)(Object(c.a)({}, n || {}), e)),
               (t = Object(c.a)(Object(c.a)({}, r || {}), t || {}));
-            this.AddTokens(e, t);
+            this.AddTokens(e, t), this.m_cbkTokensChanged.Dispatch();
           }),
           (n.prototype.InitDirect = function (e, t) {
             this.m_mapTokens.clear(),
               this.m_mapFallbackTokens.clear(),
-              this.AddTokens(e, t);
+              this.AddTokens(e, t),
+              this.m_cbkTokensChanged.Dispatch();
           }),
           (n.prototype.AddTokens = function (t, n) {
             var r = this;
@@ -48480,6 +48507,9 @@ var CLSTAMP = "6781682";
                   r.m_mapTokens.has(e) || r.m_mapTokens.set(e, n[e]),
                     r.m_mapFallbackTokens.set(e, n[e]);
                 });
+          }),
+          (n.prototype.GetTokensChangedCallbackList = function () {
+            return this.m_cbkTokensChanged;
           }),
           (n.prototype.GetPreferredLocales = function () {
             return (
@@ -48535,10 +48565,10 @@ var CLSTAMP = "6781682";
           n
         );
       })();
-      function p(e) {
+      function d(e) {
         for (var n = [], t = 1; t < arguments.length; t++)
           n[t - 1] = arguments[t];
-        var r = g.LocalizeString(e);
+        var r = v.LocalizeString(e);
         return void 0 === r
           ? e
           : 0 < n.length
@@ -48551,10 +48581,10 @@ var CLSTAMP = "6781682";
             })
           : r;
       }
-      function d(e) {
+      function m(e) {
         for (var t = [], n = 1; n < arguments.length; n++)
           t[n - 1] = arguments[n];
-        var r = g.LocalizeString(e);
+        var r = v.LocalizeString(e);
         if (void 0 === r) return e;
         for (var a = [], i = /(.*?)%(\d+)\$s/g, o = 0; (s = i.exec(r)); ) {
           (o += s[0].length), a.push(s[1]);
@@ -48566,17 +48596,17 @@ var CLSTAMP = "6781682";
           l.createElement.apply(l, Object(c.g)([l.Fragment, null], a))
         );
       }
-      function m(e, t) {
+      function h(e, t) {
         for (var n = [], r = 2; r < arguments.length; r++)
           n[r - 2] = arguments[r];
-        return p.apply(
+        return d.apply(
           void 0,
           1 === t || "1" === t
             ? Object(c.g)([e, t], n)
             : Object(c.g)([e + "_Plural", t], n)
         );
       }
-      var h = (function () {
+      var f = (function () {
           function n() {}
           return (
             (n.Set = function (e, t, n) {
@@ -48590,12 +48620,12 @@ var CLSTAMP = "6781682";
               return (e && e.length > t && e[t]) || "";
             }),
             (n.GetWithFallback = function (e, t) {
-              return n.Get(e, t) || n.Get(e, u.GetELanguageFallback(t));
+              return n.Get(e, t) || n.Get(e, p.GetELanguageFallback(t));
             }),
             n
           );
         })(),
-        f = {
+        _ = {
           english: "en",
           german: "de",
           french: "fr",
@@ -48628,7 +48658,7 @@ var CLSTAMP = "6781682";
           sc_schinese: "zh-cn",
           koreana: "ko",
         },
-        _ = {
+        b = {
           "en-US": 0,
           "de-DE": 1,
           "fr-FR": 2,
@@ -48659,11 +48689,11 @@ var CLSTAMP = "6781682";
           "es-419": 27,
           "vi-VN": 28,
         };
-      function b() {
-        return f[i.c.LANGUAGE] || null;
+      function g() {
+        return _[i.c.LANGUAGE] || null;
       }
-      var g = new u();
-      window.LocalizationManager = g;
+      var v = new p();
+      window.LocalizationManager = v;
     },
     TLUu: function (e, t, n) {
       e.exports = {
@@ -52245,7 +52275,10 @@ var CLSTAMP = "6781682";
           e = Object(a.f)(e, ["navKey", "className", "children"]);
         return i.createElement(
           o.a,
-          Object(a.a)({ className: n }, e, { ref: t }),
+          Object(a.a)({ className: n }, e, {
+            ref: t,
+            focusableIfNoChildren: !0,
+          }),
           r
         );
       });
@@ -53788,35 +53821,41 @@ var CLSTAMP = "6781682";
         n.d(t, "b", function () {
           return p;
         }),
-        n.d(t, "r", function () {
+        n.d(t, "t", function () {
           return d;
         }),
         n.d(t, "g", function () {
           return m;
         }),
-        n.d(t, "q", function () {
+        n.d(t, "r", function () {
           return h;
         }),
         n.d(t, "s", function () {
           return f;
         }),
-        n.d(t, "f", function () {
+        n.d(t, "q", function () {
           return _;
         }),
-        n.d(t, "k", function () {
+        n.d(t, "u", function () {
           return b;
         }),
-        n.d(t, "o", function () {
+        n.d(t, "f", function () {
           return g;
         }),
-        n.d(t, "c", function () {
+        n.d(t, "k", function () {
           return v;
         }),
-        n.d(t, "n", function () {
+        n.d(t, "o", function () {
           return y;
         }),
-        n.d(t, "a", function () {
+        n.d(t, "c", function () {
           return S;
+        }),
+        n.d(t, "n", function () {
+          return M;
+        }),
+        n.d(t, "a", function () {
+          return O;
         });
       n("mrSG"), n("Kw0F"), n("r64O");
       function r(e) {
@@ -53909,14 +53948,44 @@ var CLSTAMP = "6781682";
           : e.msExitFullscreen && e.msExitFullscreen();
       }
       function h(e) {
-        return "TEXTAREA" === e.nodeName;
+        return "INPUT" === e.nodeName;
       }
       function f(e) {
+        return "TEXTAREA" === e.nodeName;
+      }
+      function _(e, t) {
+        switch (e) {
+          case "TEXTAREA":
+            return !0;
+          case "INPUT":
+            switch (t) {
+              case "date":
+              case "datetime-local":
+              case "datetime":
+              case "email":
+              case "month":
+              case "number":
+              case "password":
+              case "search":
+              case "tel":
+              case "text":
+              case "time":
+              case "url":
+              case "week":
+                return !0;
+              default:
+                return !1;
+            }
+          default:
+            return !1;
+        }
+      }
+      function b(e) {
         "loading" == document.readyState
           ? document.addEventListener("DOMContentLoaded", e)
           : e();
       }
-      function _(e, t) {
+      function g(e, t) {
         var n = e;
         return (
           (n.lastModifiedDate = new Date()),
@@ -53924,13 +53993,13 @@ var CLSTAMP = "6781682";
           e
         );
       }
-      function b(e, t) {
+      function v(e, t) {
         for (; e; ) {
           if (t(e)) return e;
           e = e.parentElement;
         }
       }
-      function g(e) {
+      function y(e) {
         for (
           var t = 1, n = e.ownerDocument.defaultView, r = e;
           null != r;
@@ -53941,7 +54010,7 @@ var CLSTAMP = "6781682";
         }
         return t;
       }
-      function v(e, t) {
+      function S(e, t) {
         if ("x" === t) {
           if (e.scrollWidth <= e.clientWidth) return !1;
         } else if (e.scrollHeight <= e.clientHeight) return !1;
@@ -53949,7 +54018,7 @@ var CLSTAMP = "6781682";
           (e = "x" === t ? e.overflowX : e.overflowY);
         return "auto" === e || "scroll" === e;
       }
-      function y() {
+      function M() {
         return (
           (e = document),
           (t = {}),
@@ -53960,7 +54029,7 @@ var CLSTAMP = "6781682";
         );
         var e, t;
       }
-      function S(e, t) {
+      function O(e, t) {
         !(function (e, t, n) {
           for (
             var r = Object.assign({}, t),
@@ -55473,10 +55542,10 @@ var CLSTAMP = "6781682";
           return l;
         }),
         n.d(t, "h", function () {
-          return a;
+          return u;
         }),
         n.d(t, "f", function () {
-          return u;
+          return p;
         }),
         n.d(t, "g", function () {
           return d;
@@ -55572,7 +55641,7 @@ var CLSTAMP = "6781682";
           t
         );
       }
-      function a(e) {
+      function u(e) {
         var t = new Date(1e3 * e),
           n = t.setHours(0, 0, 0, 0);
         if ((e = m.get(n))) return e;
@@ -55583,24 +55652,24 @@ var CLSTAMP = "6781682";
         });
         return m.set(n, e), e;
       }
-      function u(e) {
+      function p(e) {
         return new Date(1e3 * e).toLocaleTimeString(o.e.GetPreferredLocales(), {
           hour: "numeric",
           minute: "numeric",
         });
       }
-      var p = new Map();
+      var a = new Map();
       function d(e) {
         var t = new Date(1e3 * e),
           n = o.e.GetPreferredLocales(),
           e = (function (e) {
-            if (!0 === (n = p.get(e)) || !1 === n) return n;
+            if (!0 === (n = a.get(e)) || !1 === n) return n;
             var t = new Date();
             t.setHours(15);
             var n =
               t.toLocaleTimeString(e, { hour: "numeric" }) ==
               t.toLocaleTimeString(e, { hour: "numeric", hour12: !1 });
-            return p.set(e, n), n;
+            return a.set(e, n), n;
           })(n[0]);
         return t.toLocaleTimeString(
           n,
@@ -55611,26 +55680,28 @@ var CLSTAMP = "6781682";
       }
       var m = new Map(),
         h = new Map();
-      function f(e, t) {
-        var n = new Date(),
-          r = new Date(1e3 * e);
-        if (r.getFullYear() != n.getFullYear()) return a(e);
-        c.b(new Date().setHours(24, 0, 0, 0) - n.getTime());
-        e = new Date();
-        if ((e.setHours(0, 0, 0, 0), e <= r)) {
-          if ((e.setDate(e.getDate() + 1), r < e))
-            return Object(o.f)("#Time_Today");
-          if ((e.setDate(e.getDate() + 1), r < e))
-            return Object(o.f)("#Time_Tomorrow");
-        } else if ((e.setDate(e.getDate() - 1), e <= r))
-          return Object(o.f)("#Time_Yesterday");
+      function f(e, t, n) {
+        void 0 === n && (n = !0);
+        var r = new Date(),
+          a = new Date(1e3 * e);
+        if (a.getFullYear() != r.getFullYear()) return u(e);
+        c.b(new Date().setHours(24, 0, 0, 0) - r.getTime());
+        r = new Date();
+        if ((r.setHours(0, 0, 0, 0), n))
+          if (r <= a) {
+            if ((r.setDate(r.getDate() + 1), a < r))
+              return Object(o.f)("#Time_Today");
+            if ((r.setDate(r.getDate() + 1), a < r))
+              return Object(o.f)("#Time_Tomorrow");
+          } else if ((r.setDate(r.getDate() - 1), r <= a))
+            return Object(o.f)("#Time_Yesterday");
         (n = { month: t ? "long" : "short", day: "numeric" }),
-          (e = r.setHours(0, 0, 0, 0) + n.month),
-          (t = h.get(e));
+          (r = a.setHours(0, 0, 0, 0) + n.month),
+          (t = h.get(r));
         return (
           t ||
-          ((t = r.toLocaleDateString(o.e.GetPreferredLocales(), n)),
-          h.set(e, t),
+          ((t = a.toLocaleDateString(o.e.GetPreferredLocales(), n)),
+          h.set(r, t),
           t)
         );
       }
@@ -55665,17 +55736,17 @@ var CLSTAMP = "6781682";
         a = new Date();
         if ((a.setHours(0, 0, 0, 0), a <= n))
           return t.bGranularToday
-            ? Object(o.f)("#Time_Today_At", u(e))
+            ? Object(o.f)("#Time_Today_At", p(e))
             : Object(o.f)("#Time_Today");
         if ((a.setDate(a.getDate() - 1), a <= n))
           return t.bGranularYesterday
-            ? Object(o.f)("#Time_Yesterday_At", u(e))
+            ? Object(o.f)("#Time_Yesterday_At", p(e))
             : Object(o.f)("#Time_Yesterday");
         if (t.bGranularPast)
           return Object(o.f)(
             "#Time_Past_At",
             l(e, n.getFullYear() == r.getFullYear()),
-            u(e)
+            p(e)
           );
         if ((a.setDate(a.getDate() - 5), a <= n))
           return Object(o.f)("#TimeSince_ThisWeek");
@@ -67722,7 +67793,7 @@ var CLSTAMP = "6781682";
       var Ue = l("uobO"),
         t = l("X3Ds");
       l("xnZ7"), l("idvb");
-      Object(t.s)(function () {
+      Object(t.u)(function () {
         return Object(u.b)(void 0, void 0, void 0, function () {
           return Object(u.e)(this, function (e) {
             switch (e.label) {
@@ -70366,6 +70437,7 @@ var CLSTAMP = "6781682";
           DEV_MODE: !1,
           IN_LIBRARY: !1,
           IN_GAMEPADUI: !1,
+          IN_LOGIN: !1,
         },
         s = {
           logged_in: !1,
@@ -71186,7 +71258,7 @@ var CLSTAMP = "6781682";
             return t;
         }
       }
-      var u;
+      var u, p;
       ((u = u = u || {})[(u.k_EConnectivityTestResult_Unknown = 0)] =
         "k_EConnectivityTestResult_Unknown"),
         (u[(u.k_EConnectivityTestResult_Connected = 1)] =
@@ -71196,7 +71268,17 @@ var CLSTAMP = "6781682";
         (u[(u.k_EConnectivityTestResult_TimedOut = 3)] =
           "k_EConnectivityTestResult_TimedOut"),
         (u[(u.k_EConnectivityTestResult_Failed = 4)] =
-          "k_EConnectivityTestResult_Failed");
+          "k_EConnectivityTestResult_Failed"),
+        ((p = p = p || {})[(p.k_EConnectivityTestSimulation_None = 0)] =
+          "k_EConnectivityTestSimulation_None"),
+        (p[(p.k_EConnectivityTestSimulation_CaptivePortal_Redirected = 1)] =
+          "k_EConnectivityTestSimulation_CaptivePortal_Redirected"),
+        (p[(p.k_EConnectivityTestSimulation_CaptivePortal_InPlace = 2)] =
+          "k_EConnectivityTestSimulation_CaptivePortal_InPlace"),
+        (p[(p.k_EConnectivityTestSimulation_TimeOut = 3)] =
+          "k_EConnectivityTestSimulation_TimeOut"),
+        (p[(p.k_EConnectivityTestSimulation_Fail = 4)] =
+          "k_EConnectivityTestSimulation_Fail");
     },
     nWbB: function (e, t, n) {
       "use strict";
@@ -76753,6 +76835,16 @@ var CLSTAMP = "6781682";
                         n: 6,
                         br: o.d.readUint32,
                         bw: o.h.writeUint32,
+                      },
+                      age_verification_pending: {
+                        n: 7,
+                        br: o.d.readBool,
+                        bw: o.h.writeBool,
+                      },
+                      block_minors: {
+                        n: 8,
+                        br: o.d.readBool,
+                        bw: o.h.writeBool,
                       },
                     },
                   }
@@ -85308,7 +85400,7 @@ var CLSTAMP = "6781682";
               this.m_elBroadcastPlayer &&
                 (Object(A.b)(this.m_elBroadcastPlayer)
                   ? Object(A.g)(this.m_elBroadcastPlayer)
-                  : Object(A.r)(this.m_elBroadcastPlayer, this.m_elVideo));
+                  : Object(A.t)(this.m_elBroadcastPlayer, this.m_elVideo));
             }),
             (e.prototype.OnFullscreenChange = function (e) {
               var t;
@@ -87391,17 +87483,17 @@ var CLSTAMP = "6781682";
         Label: "toggle_Label_xK7Vv",
       };
     },
-    uobO: function (e, v, y) {
+    uobO: function (e, S, M) {
       "use strict";
       !function (e) {
-        y.d(v, "a", function () {
-          return b;
+        M.d(S, "a", function () {
+          return g;
         });
-        var c = y("mrSG"),
-          n = y("bxBv"),
-          a = y("SxtR"),
-          t = y("IjL/"),
-          r = y("TLQK"),
+        var s = M("mrSG"),
+          n = M("bxBv"),
+          a = M("SxtR"),
+          t = M("IjL/"),
+          r = M("TLQK"),
           e =
             window.addEventListener ||
             (e && e.addEventListener) ||
@@ -87410,19 +87502,19 @@ var CLSTAMP = "6781682";
           o = function (e, t) {
             return i.push({ error: e, cCallsitesToIgnore: t });
           },
-          s = console.assert;
+          c = console.assert;
         console.assert = function (e, t) {
           for (var n = [], r = 2; r < arguments.length; r++)
             n[r - 2] = arguments[r];
-          e || o(new Error(m.apply(void 0, Object(c.g)([t], n))), 2),
-            s.apply(console, Object(c.g)([e, t], n));
+          e || o(new Error(m.apply(void 0, Object(s.g)([t], n))), 2),
+            c.apply(console, Object(s.g)([e, t], n));
         };
         var l = console.error;
         (console.error = function (e) {
           for (var t = [], n = 1; n < arguments.length; n++)
             t[n - 1] = arguments[n];
-          o(new Error(m.apply(void 0, Object(c.g)([e], t))), 1),
-            l.apply(console, Object(c.g)([e], t));
+          o(new Error(m.apply(void 0, Object(s.g)([e], t))), 1),
+            l.apply(console, Object(s.g)([e], t));
         }),
           e("error", function (e) {
             o(e.error, 0);
@@ -87472,77 +87564,47 @@ var CLSTAMP = "6781682";
                     (this.m_rgErrorQueue = []));
               }),
               (e.prototype.ReportError = function (r, a) {
-                return Object(c.b)(this, void 0, void 0, function () {
+                return Object(s.b)(this, void 0, void 0, function () {
                   var t, n;
-                  return Object(c.e)(this, function (e) {
+                  return Object(s.e)(this, function (e) {
                     switch (e.label) {
                       case 0:
                         return (e.trys.push([0, 2, , 3]),
-                        (t = Object(c.a)(Object(c.a)({}, p), a)),
+                        (t = Object(s.a)(Object(s.a)({}, p), a)),
                         this.m_bEnabled)
                           ? [
                               4,
                               (function (e, t) {
                                 try {
                                   return e.stack && e.stack.match(f)
-                                    ? (function (o, s) {
-                                        return Object(c.b)(
+                                    ? (function (i, o) {
+                                        return Object(s.b)(
                                           this,
                                           void 0,
                                           void 0,
                                           function () {
-                                            var n, r, a, i;
-                                            return Object(c.e)(
+                                            var t, n, r, a;
+                                            return Object(s.e)(
                                               this,
                                               function (e) {
                                                 switch (e.label) {
                                                   case 0:
                                                     return (
+                                                      (n =
+                                                        o.cCallsitesToIgnore),
                                                       (r =
-                                                        s.cCallsitesToIgnore),
-                                                      (a =
-                                                        s.bIncludeMessageInIdentifier),
-                                                      (i = o.stack.split("\n")),
-                                                      (n = i.filter(function (
+                                                        o.bIncludeMessageInIdentifier),
+                                                      (a = i.stack.split("\n")),
+                                                      (t = a.filter(function (
                                                         e
                                                       ) {
                                                         return !!e.match(f);
                                                       })),
-                                                      (t = n[r]),
-                                                      (r = (function (e) {
-                                                        var t = e.indexOf(
-                                                          "https://"
-                                                        );
-                                                        if (-1 === t) return e;
-                                                        var n = e.indexOf(
-                                                          "/",
-                                                          t + "https://".length
-                                                        );
-                                                        return -1 === n
-                                                          ? e
-                                                          : e.slice(0, t) +
-                                                              e.slice(n);
-                                                      })(
-                                                        (function (e) {
-                                                          var t = e.lastIndexOf(
-                                                            "?"
-                                                          );
-                                                          if (-1 === t)
-                                                            return e;
-                                                          var n = e.indexOf(
-                                                            ":",
-                                                            t
-                                                          );
-                                                          return -1 === n
-                                                            ? e
-                                                            : e.slice(0, t) +
-                                                                e.slice(n);
-                                                        })(t)
-                                                      )),
-                                                      a &&
-                                                        (r =
-                                                          r + " " + o.message),
-                                                      (a = i
+                                                      (n = b(t[n])),
+                                                      r &&
+                                                        (n =
+                                                          n + " " + i.message),
+                                                      (r = a
                                                         .map(function (e) {
                                                           var t = e.match(
                                                             /(.*)\((.*):(\d+):(\d+)\)/
@@ -87572,147 +87634,98 @@ var CLSTAMP = "6781682";
                                                         .filter(function (e) {
                                                           return !!e;
                                                         })),
-                                                      (i = { identifier: r }),
-                                                      [
-                                                        4,
-                                                        (function (n) {
-                                                          return Object(c.b)(
-                                                            this,
-                                                            void 0,
-                                                            void 0,
-                                                            function () {
-                                                              var t;
-                                                              return Object(
-                                                                c.e
-                                                              )(
-                                                                this,
-                                                                function (e) {
-                                                                  switch (
-                                                                    e.label
-                                                                  ) {
-                                                                    case 0:
-                                                                      return (
-                                                                        e.trys.push(
-                                                                          [
-                                                                            0,
-                                                                            2,
-                                                                            ,
-                                                                            3,
-                                                                          ]
-                                                                        ),
-                                                                        [
-                                                                          4,
-                                                                          window.crypto.subtle.digest(
-                                                                            "SHA-256",
-                                                                            (function (
-                                                                              e
-                                                                            ) {
-                                                                              for (
-                                                                                var t = new ArrayBuffer(
-                                                                                    2 *
-                                                                                      e.length
-                                                                                  ),
-                                                                                  n = new Uint16Array(
-                                                                                    t
-                                                                                  ),
-                                                                                  r = 0,
-                                                                                  a =
-                                                                                    e.length;
-                                                                                r <
-                                                                                a;
-                                                                                r++
-                                                                              )
-                                                                                n[
-                                                                                  r
-                                                                                ] = e.charCodeAt(
-                                                                                  r
-                                                                                );
-                                                                              return t;
-                                                                            })(
-                                                                              n
-                                                                            )
-                                                                          ),
-                                                                        ]
-                                                                      );
-                                                                    case 1:
-                                                                      return (
-                                                                        (t = e.sent()),
-                                                                        [
-                                                                          2,
-                                                                          Array.prototype.map
-                                                                            .call(
-                                                                              new Uint8Array(
-                                                                                t
-                                                                              ),
-                                                                              function (
-                                                                                e
-                                                                              ) {
-                                                                                return (
-                                                                                  "00" +
-                                                                                  e.toString(
-                                                                                    16
-                                                                                  )
-                                                                                ).slice(
-                                                                                  -2
-                                                                                );
-                                                                              }
-                                                                            )
-                                                                            .join(
-                                                                              ""
-                                                                            )
-                                                                            .slice(
-                                                                              0,
-                                                                              16
-                                                                            ),
-                                                                        ]
-                                                                      );
-                                                                    case 2:
-                                                                      return (
-                                                                        e.sent(),
-                                                                        [2, ""]
-                                                                      );
-                                                                    case 3:
-                                                                      return [
-                                                                        2,
-                                                                      ];
-                                                                  }
-                                                                }
-                                                              );
-                                                            }
-                                                          );
-                                                        })(r),
-                                                      ]
+                                                      (a = { identifier: n }),
+                                                      [4, y(n)]
                                                     );
                                                   case 1:
                                                     return [
                                                       2,
-                                                      ((i.identifierHash = e.sent()),
-                                                      (i.message = a),
-                                                      i),
+                                                      ((a.identifierHash = e.sent()),
+                                                      (a.message = r),
+                                                      a),
                                                     ];
                                                 }
-                                                var t;
                                               }
                                             );
                                           }
                                         );
                                       })(e, t)
                                     : e.stack && e.stack.match(_)
-                                    ? (function () {
-                                        return Object(c.b)(
+                                    ? (function (i, o) {
+                                        return Object(s.b)(
                                           this,
                                           void 0,
                                           void 0,
                                           function () {
-                                            return Object(c.e)(
+                                            var t, n, r, a;
+                                            return Object(s.e)(
                                               this,
                                               function (e) {
-                                                return [2, null];
+                                                switch (e.label) {
+                                                  case 0:
+                                                    return (
+                                                      (n =
+                                                        o.cCallsitesToIgnore),
+                                                      (r =
+                                                        o.bIncludeMessageInIdentifier),
+                                                      (a = i.stack.split("\n")),
+                                                      (t = a.filter(function (
+                                                        e
+                                                      ) {
+                                                        return !!e.match(_);
+                                                      })),
+                                                      (n = b(t[n])),
+                                                      r &&
+                                                        (n =
+                                                          n + " " + i.message),
+                                                      (r = a
+                                                        .map(function (e) {
+                                                          var t = e.match(
+                                                            /(.*@)?(.*):(\d+):(\d+)/
+                                                          );
+                                                          if (!t) return e;
+                                                          if (4 === t.length) {
+                                                            var n = t[0],
+                                                              r = t[1],
+                                                              a = t[2],
+                                                              t = t[3],
+                                                              a = parseInt(a),
+                                                              t = parseInt(t);
+                                                            if (
+                                                              !isNaN(a) &&
+                                                              !isNaN(t)
+                                                            )
+                                                              return [
+                                                                n,
+                                                                r,
+                                                                a,
+                                                                t,
+                                                              ];
+                                                          }
+                                                          return e;
+                                                        })
+                                                        .filter(function (e) {
+                                                          return !!e;
+                                                        })),
+                                                      (a = { identifier: n }),
+                                                      [4, y(n)]
+                                                    );
+                                                  case 1:
+                                                    return [
+                                                      2,
+                                                      ((a.identifierHash = e.sent()),
+                                                      (a.message = Object(s.g)(
+                                                        [i.message],
+                                                        r
+                                                      )),
+                                                      a),
+                                                    ];
+                                                }
                                               }
                                             );
                                           }
                                         );
-                                      })()
+                                      })(e, t)
                                     : null;
                                 } catch (e) {
                                   return (
@@ -87805,7 +87818,7 @@ var CLSTAMP = "6781682";
             t[n - 1] = arguments[n];
           return "string" == typeof e && 0 === t.length
             ? e
-            : Object(c.g)([e], t)
+            : Object(s.g)([e], t)
                 .map(function (e) {
                   try {
                     return String(e);
@@ -87818,16 +87831,79 @@ var CLSTAMP = "6781682";
         var h,
           f = /^\s*at .*(\S+:\d+|\(native\))/m,
           _ = /(^|@)\S+:\d+/;
-        var b = function () {
-            return h || g(new d()), h;
+        function b(e) {
+          return (function (e) {
+            var t = e.indexOf("https://");
+            if (-1 === t) return e;
+            var n = e.indexOf("/", t + "https://".length);
+            return -1 === n ? e : e.slice(0, t) + e.slice(n);
+          })(
+            (function (e) {
+              var t = e.lastIndexOf("?");
+              if (-1 === t) return e;
+              var n = e.indexOf(":", t);
+              return -1 === n ? e : e.slice(0, t) + e.slice(n);
+            })(e)
+          );
+        }
+        var g = function () {
+            return h || v(new d()), h;
           },
-          g = function (e) {
+          v = function (e) {
             (h = e),
               t.a.InstallErrorReportingStore(h),
               n.a.InstallErrorReportingStore(h),
               r.b.InstallErrorReportingStore(h);
           };
-      }.call(this, y("yLpj"));
+        function y(n) {
+          return Object(s.b)(this, void 0, void 0, function () {
+            var t;
+            return Object(s.e)(this, function (e) {
+              switch (e.label) {
+                case 0:
+                  return (
+                    e.trys.push([0, 2, , 3]),
+                    [
+                      4,
+                      window.crypto.subtle.digest(
+                        "SHA-256",
+                        (function (e) {
+                          for (
+                            var t = new ArrayBuffer(2 * e.length),
+                              n = new Uint16Array(t),
+                              r = 0,
+                              a = e.length;
+                            r < a;
+                            r++
+                          )
+                            n[r] = e.charCodeAt(r);
+                          return t;
+                        })(n)
+                      ),
+                    ]
+                  );
+                case 1:
+                  return (
+                    (t = e.sent()),
+                    [
+                      2,
+                      Array.prototype.map
+                        .call(new Uint8Array(t), function (e) {
+                          return ("00" + e.toString(16)).slice(-2);
+                        })
+                        .join("")
+                        .slice(0, 16),
+                    ]
+                  );
+                case 2:
+                  return e.sent(), [2, ""];
+                case 3:
+                  return [2];
+              }
+            });
+          });
+        }
+      }.call(this, M("yLpj"));
     },
     vEGm: function (e, t) {
       e.exports =

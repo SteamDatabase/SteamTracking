@@ -1,8 +1,8 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6781683";
+var CLSTAMP = "6794801";
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [69],
+  [40],
   {
     "+VX6": function (e, t, n) {
       "use strict";
@@ -21679,7 +21679,7 @@ var CLSTAMP = "6781683";
                           4,
                           i.a.get(b, {
                             params: g,
-                            cancelToken: d ? d.token : void 0,
+                            cancelToken: null == d ? void 0 : d.token,
                           }),
                         ]
                       );
@@ -24716,35 +24716,35 @@ var CLSTAMP = "6781683";
     },
     AvbV: function (e, t, n) {
       var r = {
-        "./main_brazilian.json": ["TFAN", 70],
-        "./main_bulgarian.json": ["c2SO", 71],
-        "./main_czech.json": ["peP3", 72],
-        "./main_danish.json": ["0bnV", 73],
-        "./main_dutch.json": ["wcLc", 74],
-        "./main_english.json": ["/rNK", 75],
-        "./main_finnish.json": ["iywU", 76],
-        "./main_french.json": ["Xnpc", 77],
-        "./main_german.json": ["pmKi", 78],
-        "./main_greek.json": ["mTRv", 79],
-        "./main_hungarian.json": ["WkHb", 80],
-        "./main_italian.json": ["Jz5U", 81],
-        "./main_japanese.json": ["3Dk9", 82],
-        "./main_koreana.json": ["neQD", 83],
-        "./main_latam.json": ["6oHD", 84],
-        "./main_norwegian.json": ["2OvS", 85],
-        "./main_polish.json": ["3pwE", 86],
-        "./main_portuguese.json": ["hY40", 87],
-        "./main_romanian.json": ["Q95+", 88],
-        "./main_russian.json": ["bsPT", 89],
-        "./main_sc_schinese.json": ["GOaQ", 90],
-        "./main_schinese.json": ["B/Zz", 91],
-        "./main_spanish.json": ["U6iL", 92],
-        "./main_swedish.json": ["4uPU", 93],
-        "./main_tchinese.json": ["rgC9", 94],
-        "./main_thai.json": ["87dp", 95],
-        "./main_turkish.json": ["yMpO", 96],
-        "./main_ukrainian.json": ["zTWm", 97],
-        "./main_vietnamese.json": ["wqiy", 98],
+        "./main_brazilian.json": ["TFAN", 41],
+        "./main_bulgarian.json": ["c2SO", 42],
+        "./main_czech.json": ["peP3", 43],
+        "./main_danish.json": ["0bnV", 44],
+        "./main_dutch.json": ["wcLc", 45],
+        "./main_english.json": ["/rNK", 46],
+        "./main_finnish.json": ["iywU", 47],
+        "./main_french.json": ["Xnpc", 48],
+        "./main_german.json": ["pmKi", 49],
+        "./main_greek.json": ["mTRv", 50],
+        "./main_hungarian.json": ["WkHb", 51],
+        "./main_italian.json": ["Jz5U", 52],
+        "./main_japanese.json": ["3Dk9", 53],
+        "./main_koreana.json": ["neQD", 54],
+        "./main_latam.json": ["6oHD", 55],
+        "./main_norwegian.json": ["2OvS", 56],
+        "./main_polish.json": ["3pwE", 57],
+        "./main_portuguese.json": ["hY40", 58],
+        "./main_romanian.json": ["Q95+", 59],
+        "./main_russian.json": ["bsPT", 60],
+        "./main_sc_schinese.json": ["GOaQ", 61],
+        "./main_schinese.json": ["B/Zz", 62],
+        "./main_spanish.json": ["U6iL", 63],
+        "./main_swedish.json": ["4uPU", 64],
+        "./main_tchinese.json": ["rgC9", 65],
+        "./main_thai.json": ["87dp", 66],
+        "./main_turkish.json": ["yMpO", 67],
+        "./main_ukrainian.json": ["zTWm", 68],
+        "./main_vietnamese.json": ["wqiy", 69],
       };
       function a(e) {
         if (!n.o(r, e))
@@ -25213,7 +25213,7 @@ var CLSTAMP = "6781683";
                       s =
                         ((l = r.selectionDirection),
                         "backward" === l ? -1 : "forward" === l ? 1 : 0),
-                      c = f.q(r);
+                      c = f.s(r);
                     var l;
                     if (1 === a.length || ("Enter" === a && c)) {
                       var u = "Enter" === a ? "\n" : a,
@@ -26545,6 +26545,29 @@ var CLSTAMP = "6781683";
             }),
             (e.prototype.GetBestPurchaseOption = function () {
               return this.m_BestPurchaseOption;
+            }),
+            (e.prototype.GetBestPurchasePriceInCents = function () {
+              var e;
+              if (
+                null === (e = this.m_BestPurchaseOption) || void 0 === e
+                  ? void 0
+                  : e.final_price_in_cents
+              )
+                return Number.parseInt(
+                  this.m_BestPurchaseOption.final_price_in_cents
+                );
+            }),
+            (e.prototype.GetBestPurchaseOriginalPriceInCents = function () {
+              var e;
+              return (
+                null === (e = this.m_BestPurchaseOption) || void 0 === e
+                  ? void 0
+                  : e.original_price_in_cents
+              )
+                ? Number.parseInt(
+                    this.m_BestPurchaseOption.final_price_in_cents
+                  )
+                : this.GetBestPurchasePriceInCents();
             }),
             (e.prototype.GetAllPurchaseOptions = function () {
               return this.m_rgPurchaseOptions;
@@ -37036,6 +37059,7 @@ var CLSTAMP = "6781683";
           "salepreviewwidgets_StoreSaleBroadcastWidgetRight_9VjYX",
         StoreSalePriceActionWidgetContainer:
           "salepreviewwidgets_StoreSalePriceActionWidgetContainer_1JuIp",
+        Discounted: "salepreviewwidgets_Discounted_1g0B-",
         WishList: "salepreviewwidgets_WishList_1djkd",
         Action: "salepreviewwidgets_Action_2zssE",
         StoreSalePriceWidgetContainer:
@@ -37047,7 +37071,6 @@ var CLSTAMP = "6781683";
         StoreSaleDiscountedPriceCtn:
           "salepreviewwidgets_StoreSaleDiscountedPriceCtn_3NhLu",
         StoreOriginalPrice: "salepreviewwidgets_StoreOriginalPrice_3fFFs",
-        Discounted: "salepreviewwidgets_Discounted_1g0B-",
         BaseDiscount: "salepreviewwidgets_BaseDiscount_3mInD",
         StoreSalePriceButton: "salepreviewwidgets_StoreSalePriceButton_1BejQ",
         OuterCapsuleContainer: "salepreviewwidgets_OuterCapsuleContainer_1dKR2",
@@ -40888,28 +40911,28 @@ var CLSTAMP = "6781683";
     TLQK: function (e, t, n) {
       "use strict";
       n.d(t, "b", function () {
-        return u;
+        return p;
       }),
         n.d(t, "f", function () {
-          return p;
-        }),
-        n.d(t, "n", function () {
           return d;
         }),
-        n.d(t, "l", function () {
+        n.d(t, "n", function () {
           return m;
         }),
-        n.d(t, "a", function () {
+        n.d(t, "l", function () {
           return h;
         }),
-        n.d(t, "d", function () {
-          return b;
+        n.d(t, "a", function () {
+          return f;
         }),
-        n.d(t, "c", function () {
+        n.d(t, "d", function () {
           return _;
         }),
-        n.d(t, "e", function () {
+        n.d(t, "c", function () {
           return v;
+        }),
+        n.d(t, "e", function () {
+          return g;
         });
       var r = n("mrSG"),
         a = n("q1tI"),
@@ -40917,38 +40940,40 @@ var CLSTAMP = "6781683";
         o = n("kyHq"),
         s = n("lkRc"),
         c = n("Kw0F"),
-        l = (n("r64O"), n("Z1oF"));
+        l = (n("r64O"), n("qiKp")),
+        u = n("Z1oF");
       n.d(t, "g", function () {
-        return l.a;
+        return u.a;
       }),
         n.d(t, "h", function () {
-          return l.b;
+          return u.b;
         }),
         n.d(t, "j", function () {
-          return l.d;
+          return u.d;
         }),
         n.d(t, "k", function () {
-          return l.e;
+          return u.e;
         }),
         n.d(t, "m", function () {
-          return l.f;
+          return u.f;
         }),
         n.d(t, "o", function () {
-          return l.h;
+          return u.h;
         }),
         n.d(t, "p", function () {
-          return l.i;
+          return u.i;
         }),
         n.d(t, "q", function () {
-          return l.j;
+          return u.j;
         }),
         n.d(t, "i", function () {
-          return l.c;
+          return u.c;
         });
-      var u = (function () {
+      var p = (function () {
         function e() {
           (this.m_mapTokens = new Map()),
-            (this.m_mapFallbackTokens = new Map());
+            (this.m_mapFallbackTokens = new Map()),
+            (this.m_cbkTokensChanged = new l.a());
         }
         return (
           (e.InstallErrorReportingStore = function (e) {
@@ -40981,12 +41006,13 @@ var CLSTAMP = "6781683";
             i || this.m_mapTokens.clear();
             var o = Object(r.a)(Object(r.a)({}, n || {}), e),
               s = Object(r.a)(Object(r.a)({}, a || {}), t || {});
-            this.AddTokens(o, s);
+            this.AddTokens(o, s), this.m_cbkTokensChanged.Dispatch();
           }),
           (e.prototype.InitDirect = function (e, t) {
             this.m_mapTokens.clear(),
               this.m_mapFallbackTokens.clear(),
-              this.AddTokens(e, t);
+              this.AddTokens(e, t),
+              this.m_cbkTokensChanged.Dispatch();
           }),
           (e.prototype.AddTokens = function (e, t) {
             var n = this;
@@ -40998,6 +41024,9 @@ var CLSTAMP = "6781683";
                   n.m_mapTokens.has(e) || n.m_mapTokens.set(e, t[e]),
                     n.m_mapFallbackTokens.set(e, t[e]);
                 });
+          }),
+          (e.prototype.GetTokensChangedCallbackList = function () {
+            return this.m_cbkTokensChanged;
           }),
           (e.prototype.GetPreferredLocales = function () {
             return this.m_rgLocalesToUse
@@ -41050,10 +41079,10 @@ var CLSTAMP = "6781683";
           e
         );
       })();
-      function p(e) {
+      function d(e) {
         for (var t = [], n = 1; n < arguments.length; n++)
           t[n - 1] = arguments[n];
-        var r = v.LocalizeString(e);
+        var r = g.LocalizeString(e);
         return void 0 === r
           ? e
           : (t.length > 0 &&
@@ -41066,10 +41095,10 @@ var CLSTAMP = "6781683";
               })),
             r);
       }
-      function d(e) {
+      function m(e) {
         for (var t = [], n = 1; n < arguments.length; n++)
           t[n - 1] = arguments[n];
-        var i = v.LocalizeString(e);
+        var i = g.LocalizeString(e);
         if (void 0 === i) return e;
         for (var o, s = [], c = /(.*?)%(\d+)\$s/g, l = 0; (o = c.exec(i)); ) {
           (l += o[0].length), s.push(o[1]);
@@ -41081,14 +41110,14 @@ var CLSTAMP = "6781683";
           a.createElement.apply(a, Object(r.g)([a.Fragment, null], s))
         );
       }
-      function m(e, t) {
+      function h(e, t) {
         for (var n = [], a = 2; a < arguments.length; a++)
           n[a - 2] = arguments[a];
         return 1 === t || "1" === t
-          ? p.apply(void 0, Object(r.g)([e, t], n))
-          : p.apply(void 0, Object(r.g)([e + "_Plural", t], n));
+          ? d.apply(void 0, Object(r.g)([e, t], n))
+          : d.apply(void 0, Object(r.g)([e + "_Plural", t], n));
       }
-      var h = (function () {
+      var f = (function () {
           function e() {}
           return (
             (e.Set = function (e, t, n) {
@@ -41102,12 +41131,12 @@ var CLSTAMP = "6781683";
               return (e && e.length > t && e[t]) || "";
             }),
             (e.GetWithFallback = function (t, n) {
-              return e.Get(t, n) || e.Get(t, u.GetELanguageFallback(n));
+              return e.Get(t, n) || e.Get(t, p.GetELanguageFallback(n));
             }),
             e
           );
         })(),
-        f = {
+        b = {
           english: "en",
           german: "de",
           french: "fr",
@@ -41140,7 +41169,7 @@ var CLSTAMP = "6781683";
           sc_schinese: "zh-cn",
           koreana: "ko",
         },
-        b = {
+        _ = {
           "en-US": 0,
           "de-DE": 1,
           "fr-FR": 2,
@@ -41171,11 +41200,11 @@ var CLSTAMP = "6781683";
           "es-419": 27,
           "vi-VN": 28,
         };
-      function _() {
-        return f[s.d.LANGUAGE] || null;
+      function v() {
+        return b[s.d.LANGUAGE] || null;
       }
-      var v = new u();
-      window.LocalizationManager = v;
+      var g = new p();
+      window.LocalizationManager = g;
     },
     TLUu: function (e, t, n) {
       e.exports = {
@@ -45396,7 +45425,10 @@ var CLSTAMP = "6781683";
           o = Object(a.f)(e, ["navKey", "className", "children"]);
         return i.createElement(
           s.a,
-          Object(a.a)({ className: n }, o, { ref: t }),
+          Object(a.a)({ className: n }, o, {
+            ref: t,
+            focusableIfNoChildren: !0,
+          }),
           r
         );
       });
@@ -47003,35 +47035,41 @@ var CLSTAMP = "6781683";
         n.d(t, "b", function () {
           return p;
         }),
-        n.d(t, "r", function () {
+        n.d(t, "t", function () {
           return d;
         }),
         n.d(t, "g", function () {
           return m;
         }),
-        n.d(t, "q", function () {
+        n.d(t, "r", function () {
           return h;
         }),
         n.d(t, "s", function () {
           return f;
         }),
-        n.d(t, "f", function () {
+        n.d(t, "q", function () {
           return b;
         }),
-        n.d(t, "k", function () {
+        n.d(t, "u", function () {
           return _;
         }),
-        n.d(t, "o", function () {
+        n.d(t, "f", function () {
           return v;
         }),
-        n.d(t, "c", function () {
+        n.d(t, "k", function () {
           return g;
         }),
-        n.d(t, "n", function () {
+        n.d(t, "o", function () {
           return y;
         }),
-        n.d(t, "a", function () {
+        n.d(t, "c", function () {
           return S;
+        }),
+        n.d(t, "n", function () {
+          return M;
+        }),
+        n.d(t, "a", function () {
+          return O;
         });
       n("mrSG"), n("Kw0F"), n("r64O");
       function r(e) {
@@ -47126,14 +47164,44 @@ var CLSTAMP = "6781683";
           : t.msExitFullscreen && t.msExitFullscreen();
       }
       function h(e) {
-        return "TEXTAREA" === e.nodeName;
+        return "INPUT" === e.nodeName;
       }
       function f(e) {
+        return "TEXTAREA" === e.nodeName;
+      }
+      function b(e, t) {
+        switch (e) {
+          case "TEXTAREA":
+            return !0;
+          case "INPUT":
+            switch (t) {
+              case "date":
+              case "datetime-local":
+              case "datetime":
+              case "email":
+              case "month":
+              case "number":
+              case "password":
+              case "search":
+              case "tel":
+              case "text":
+              case "time":
+              case "url":
+              case "week":
+                return !0;
+              default:
+                return !1;
+            }
+          default:
+            return !1;
+        }
+      }
+      function _(e) {
         "loading" == document.readyState
           ? document.addEventListener("DOMContentLoaded", e)
           : e();
       }
-      function b(e, t) {
+      function v(e, t) {
         var n = e;
         return (
           (n.lastModifiedDate = new Date()),
@@ -47141,13 +47209,13 @@ var CLSTAMP = "6781683";
           e
         );
       }
-      function _(e, t) {
+      function g(e, t) {
         for (; e; ) {
           if (t(e)) return e;
           e = e.parentElement;
         }
       }
-      function v(e) {
+      function y(e) {
         for (
           var t = 1, n = e.ownerDocument.defaultView, r = e;
           null != r;
@@ -47158,7 +47226,7 @@ var CLSTAMP = "6781683";
         }
         return t;
       }
-      function g(e, t) {
+      function S(e, t) {
         if ("x" === t) {
           if (e.scrollWidth <= e.clientWidth) return !1;
         } else if (e.scrollHeight <= e.clientHeight) return !1;
@@ -47166,7 +47234,7 @@ var CLSTAMP = "6781683";
           r = "x" === t ? n.overflowX : n.overflowY;
         return "auto" === r || "scroll" === r;
       }
-      function y() {
+      function M() {
         return (
           (e = document),
           (t = {}),
@@ -47177,7 +47245,7 @@ var CLSTAMP = "6781683";
         );
         var e, t;
       }
-      function S(e, t) {
+      function O(e, t) {
         !(function (e, t, n) {
           for (
             var r = Object.assign({}, t),
@@ -48647,24 +48715,27 @@ var CLSTAMP = "6781683";
         v = n("OS6B"),
         g = (function () {
           function e(e) {
-            (this.m_stats = e || {
-              event_gid: "0",
-              library_overview_shown: 0,
-              library_overview_read: 0,
-              app_details_spotlight_shown: 0,
-              app_details_spotlight_read: 0,
-              app_details_activity_shown: 0,
-              app_details_activity_read: 0,
-              store_app_page_shown: 0,
-              store_app_page_read: 0,
-              store_front_page_shown: 0,
-              store_front_page_read: 0,
-              community_hub_shown: 0,
-              community_hub_read: 0,
-              news_hub_shown: 0,
-              news_hub_read: 0,
-              event_scroller_read: 0,
-            }),
+            (this.m_stats = Object(r.a)(
+              {
+                event_gid: "0",
+                library_overview_shown: 0,
+                library_overview_read: 0,
+                app_details_spotlight_shown: 0,
+                app_details_spotlight_read: 0,
+                app_details_activity_shown: 0,
+                app_details_activity_read: 0,
+                store_app_page_shown: 0,
+                store_app_page_read: 0,
+                store_front_page_shown: 0,
+                store_front_page_read: 0,
+                community_hub_shown: 0,
+                community_hub_read: 0,
+                news_hub_shown: 0,
+                news_hub_read: 0,
+                event_scroller_read: 0,
+              },
+              e
+            )),
               (this.m_stats.total_showm =
                 this.m_stats.library_overview_shown +
                 this.m_stats.app_details_activity_shown +
@@ -48682,7 +48753,7 @@ var CLSTAMP = "6781683";
                 this.m_stats.community_hub_read +
                 this.m_stats.news_hub_read +
                 this.m_stats.event_scroller_read),
-              (this.m_lastUpdateTime = e ? Date.now() / 1e3 : 0);
+              (this.m_lastUpdateTime = e ? Math.floor(Date.now() / 1e3) : 0);
           }
           return (
             (e.prototype.reset = function (e) {
@@ -48840,7 +48911,7 @@ var CLSTAMP = "6781683";
                           i.a.get(s, {
                             params: c,
                             withCredentials: !0,
-                            cancelToken: n.token,
+                            cancelToken: null == n ? void 0 : n.token,
                           }),
                         ]
                       );
@@ -51090,27 +51161,29 @@ var CLSTAMP = "6781683";
       }
       var m = new Map(),
         h = new Map();
-      function f(e, t) {
-        var n = new Date(),
-          r = new Date(1e3 * e);
-        if (r.getFullYear() != n.getFullYear()) return l(e);
-        o.b(new Date().setHours(24, 0, 0, 0) - n.getTime());
-        var i = new Date();
-        if ((i.setHours(0, 0, 0, 0), r >= i)) {
-          if ((i.setDate(i.getDate() + 1), r < i))
-            return Object(a.f)("#Time_Today");
-          if ((i.setDate(i.getDate() + 1), r < i))
-            return Object(a.f)("#Time_Tomorrow");
-        } else if ((i.setDate(i.getDate() - 1), r >= i))
-          return Object(a.f)("#Time_Yesterday");
-        var s = { month: t ? "long" : "short", day: "numeric" },
-          c = r.setHours(0, 0, 0, 0) + s.month,
-          u = h.get(c);
+      function f(e, t, n) {
+        void 0 === n && (n = !0);
+        var r = new Date(),
+          i = new Date(1e3 * e);
+        if (i.getFullYear() != r.getFullYear()) return l(e);
+        o.b(new Date().setHours(24, 0, 0, 0) - r.getTime());
+        var s = new Date();
+        if ((s.setHours(0, 0, 0, 0), n))
+          if (i >= s) {
+            if ((s.setDate(s.getDate() + 1), i < s))
+              return Object(a.f)("#Time_Today");
+            if ((s.setDate(s.getDate() + 1), i < s))
+              return Object(a.f)("#Time_Tomorrow");
+          } else if ((s.setDate(s.getDate() - 1), i >= s))
+            return Object(a.f)("#Time_Yesterday");
+        var c = { month: t ? "long" : "short", day: "numeric" },
+          u = i.setHours(0, 0, 0, 0) + c.month,
+          p = h.get(u);
         return (
-          u ||
-          ((u = r.toLocaleDateString(a.e.GetPreferredLocales(), s)),
-          h.set(c, u),
-          u)
+          p ||
+          ((p = i.toLocaleDateString(a.e.GetPreferredLocales(), c)),
+          h.set(u, p),
+          p)
         );
       }
       function b(e, t) {
@@ -64754,12 +64827,12 @@ var CLSTAMP = "6781683";
           return Promise.all([n.e(0), n.e(8)]).then(n.bind(null, "3WEt"));
         }),
         fe = s.a.lazy(function () {
-          return Promise.all([n.e(0), n.e(2), n.e(68)]).then(
+          return Promise.all([n.e(0), n.e(2), n.e(39)]).then(
             n.bind(null, "CGeh")
           );
         }),
         be = s.a.lazy(function () {
-          return Promise.all([n.e(0), n.e(2), n.e(102)]).then(
+          return Promise.all([n.e(0), n.e(2), n.e(73)]).then(
             n.bind(null, "tPo2")
           );
         }),
@@ -64782,7 +64855,7 @@ var CLSTAMP = "6781683";
           return n.e(3).then(n.bind(null, "byIC"));
         }),
         Oe = s.a.lazy(function () {
-          return n.e(133).then(n.bind(null, "AFtM"));
+          return n.e(104).then(n.bind(null, "AFtM"));
         }),
         Ee = (function (e) {
           function t() {
@@ -65199,7 +65272,7 @@ var CLSTAMP = "6781683";
           });
         });
       }
-      V.s(function () {
+      V.u(function () {
         return Object(r.b)(this, void 0, void 0, function () {
           return Object(r.e)(this, function (e) {
             switch (e.label) {
@@ -69723,6 +69796,7 @@ var CLSTAMP = "6781683";
           DEV_MODE: !1,
           IN_LIBRARY: !1,
           IN_GAMEPADUI: !1,
+          IN_LOGIN: !1,
         },
         c = {
           logged_in: !1,
@@ -70387,7 +70461,7 @@ var CLSTAMP = "6781683";
           return p;
         }),
         n.d(t, "c", function () {
-          return m;
+          return h;
         });
       var i = 1,
         o = 4,
@@ -70595,7 +70669,8 @@ var CLSTAMP = "6781683";
         }
       }
       var d,
-        m = [
+        m,
+        h = [
           1,
           2,
           3,
@@ -70641,7 +70716,19 @@ var CLSTAMP = "6781683";
             "k_EConnectivityTestResult_TimedOut"),
           (e[(e.k_EConnectivityTestResult_Failed = 4)] =
             "k_EConnectivityTestResult_Failed");
-      })(d || (d = {}));
+      })(d || (d = {})),
+        (function (e) {
+          (e[(e.k_EConnectivityTestSimulation_None = 0)] =
+            "k_EConnectivityTestSimulation_None"),
+            (e[(e.k_EConnectivityTestSimulation_CaptivePortal_Redirected = 1)] =
+              "k_EConnectivityTestSimulation_CaptivePortal_Redirected"),
+            (e[(e.k_EConnectivityTestSimulation_CaptivePortal_InPlace = 2)] =
+              "k_EConnectivityTestSimulation_CaptivePortal_InPlace"),
+            (e[(e.k_EConnectivityTestSimulation_TimeOut = 3)] =
+              "k_EConnectivityTestSimulation_TimeOut"),
+            (e[(e.k_EConnectivityTestSimulation_Fail = 4)] =
+              "k_EConnectivityTestSimulation_Fail");
+        })(m || (m = {}));
     },
     nWbB: function (e, t, n) {
       "use strict";
@@ -76836,6 +76923,16 @@ var CLSTAMP = "6781683";
                         br: i.d.readUint32,
                         bw: i.h.writeUint32,
                       },
+                      age_verification_pending: {
+                        n: 7,
+                        br: i.d.readBool,
+                        bw: i.h.writeBool,
+                      },
+                      block_minors: {
+                        n: 8,
+                        br: i.d.readBool,
+                        bw: i.h.writeBool,
+                      },
                     },
                   }),
                 t.sm_m
@@ -82058,36 +82155,36 @@ var CLSTAMP = "6781683";
     },
     rCDf: function (e, t, n) {
       var r = {
-        "./shared_arabic.json": ["d1TB", 103],
-        "./shared_brazilian.json": ["Pg9r", 104],
-        "./shared_bulgarian.json": ["ENge", 105],
-        "./shared_czech.json": ["Ts6V", 106],
-        "./shared_danish.json": ["9oiU", 107],
-        "./shared_dutch.json": ["nxN4", 108],
-        "./shared_english.json": ["TYjx", 109],
-        "./shared_finnish.json": ["NuB8", 110],
-        "./shared_french.json": ["bOPj", 111],
-        "./shared_german.json": ["svuF", 112],
-        "./shared_greek.json": ["eJKB", 113],
-        "./shared_hungarian.json": ["T7i2", 114],
-        "./shared_italian.json": ["w96W", 115],
-        "./shared_japanese.json": ["XQ4S", 116],
-        "./shared_koreana.json": ["4hyI", 117],
-        "./shared_latam.json": ["3qrw", 118],
-        "./shared_norwegian.json": ["XA4Q", 119],
-        "./shared_polish.json": ["TpXn", 120],
-        "./shared_portuguese.json": ["Q8UV", 121],
-        "./shared_romanian.json": ["Eme1", 122],
-        "./shared_russian.json": ["BUiO", 123],
-        "./shared_sc_schinese.json": ["O0N/", 124],
-        "./shared_schinese.json": ["3UpY", 125],
-        "./shared_spanish.json": ["4Fxc", 126],
-        "./shared_swedish.json": ["0JhB", 127],
-        "./shared_tchinese.json": ["OYRc", 128],
-        "./shared_thai.json": ["lhAZ", 129],
-        "./shared_turkish.json": ["RSoU", 130],
-        "./shared_ukrainian.json": ["lNXI", 131],
-        "./shared_vietnamese.json": ["RSmC", 132],
+        "./shared_arabic.json": ["d1TB", 74],
+        "./shared_brazilian.json": ["Pg9r", 75],
+        "./shared_bulgarian.json": ["ENge", 76],
+        "./shared_czech.json": ["Ts6V", 77],
+        "./shared_danish.json": ["9oiU", 78],
+        "./shared_dutch.json": ["nxN4", 79],
+        "./shared_english.json": ["TYjx", 80],
+        "./shared_finnish.json": ["NuB8", 81],
+        "./shared_french.json": ["bOPj", 82],
+        "./shared_german.json": ["svuF", 83],
+        "./shared_greek.json": ["eJKB", 84],
+        "./shared_hungarian.json": ["T7i2", 85],
+        "./shared_italian.json": ["w96W", 86],
+        "./shared_japanese.json": ["XQ4S", 87],
+        "./shared_koreana.json": ["4hyI", 88],
+        "./shared_latam.json": ["3qrw", 89],
+        "./shared_norwegian.json": ["XA4Q", 90],
+        "./shared_polish.json": ["TpXn", 91],
+        "./shared_portuguese.json": ["Q8UV", 92],
+        "./shared_romanian.json": ["Eme1", 93],
+        "./shared_russian.json": ["BUiO", 94],
+        "./shared_sc_schinese.json": ["O0N/", 95],
+        "./shared_schinese.json": ["3UpY", 96],
+        "./shared_spanish.json": ["4Fxc", 97],
+        "./shared_swedish.json": ["0JhB", 98],
+        "./shared_tchinese.json": ["OYRc", 99],
+        "./shared_thai.json": ["lhAZ", 100],
+        "./shared_turkish.json": ["RSoU", 101],
+        "./shared_ukrainian.json": ["lNXI", 102],
+        "./shared_vietnamese.json": ["RSmC", 103],
       };
       function a(e) {
         if (!n.o(r, e))
@@ -86024,7 +86121,7 @@ var CLSTAMP = "6781683";
               this.m_elBroadcastPlayer &&
                 (Object(B.b)(this.m_elBroadcastPlayer)
                   ? Object(B.g)(this.m_elBroadcastPlayer)
-                  : Object(B.r)(this.m_elBroadcastPlayer, this.m_elVideo));
+                  : Object(B.t)(this.m_elBroadcastPlayer, this.m_elVideo));
             }),
             (t.prototype.OnFullscreenChange = function (e) {
               if (this.m_elBroadcastPlayer) {
@@ -88144,7 +88241,7 @@ var CLSTAMP = "6781683";
       "use strict";
       (function (e) {
         n.d(t, "a", function () {
-          return M;
+          return O;
         });
         var r,
           a = n("mrSG"),
@@ -88341,23 +88438,7 @@ var CLSTAMP = "6781683";
                             (o = i.filter(function (e) {
                               return !!e.match(g);
                             })),
-                            (u = o[n]),
-                            (s = (function (e) {
-                              var t = "https://",
-                                n = e.indexOf(t);
-                              if (-1 === n) return e;
-                              var r = e.indexOf("/", n + t.length);
-                              return -1 === r ? e : e.slice(0, n) + e.slice(r);
-                            })(
-                              (function (e) {
-                                var t = e.lastIndexOf("?");
-                                if (-1 === t) return e;
-                                var n = e.indexOf(":", t);
-                                return -1 === n
-                                  ? e
-                                  : e.slice(0, t) + e.slice(n);
-                              })(u)
-                            )),
+                            (s = M(o[n])),
                             r && (s = s + " " + e.message),
                             (c = i
                               .map(function (e) {
@@ -88380,7 +88461,7 @@ var CLSTAMP = "6781683";
                                 return !!e;
                               })),
                             (l = { identifier: s }),
-                            [4, E(s)]
+                            [4, C(s)]
                           );
                         case 1:
                           return [
@@ -88388,33 +88469,89 @@ var CLSTAMP = "6781683";
                             ((l.identifierHash = a.sent()), (l.message = c), l),
                           ];
                       }
-                      var u;
                     });
                   });
                 })(e, t)
               : e.stack && e.stack.match(y)
               ? (function (e, t) {
                   return Object(a.b)(this, void 0, void 0, function () {
-                    return Object(a.e)(this, function (e) {
-                      return [2, null];
+                    var n, r, i, o, s, c, l;
+                    return Object(a.e)(this, function (u) {
+                      switch (u.label) {
+                        case 0:
+                          return (
+                            (n = t.cCallsitesToIgnore),
+                            (r = t.bIncludeMessageInIdentifier),
+                            (i = e.stack.split("\n")),
+                            (o = i.filter(function (e) {
+                              return !!e.match(y);
+                            })),
+                            (s = M(o[n])),
+                            r && (s = s + " " + e.message),
+                            (c = i
+                              .map(function (e) {
+                                var t = e.match(/(.*@)?(.*):(\d+):(\d+)/);
+                                if (!t) return e;
+                                if (4 === t.length) {
+                                  var n = t[0],
+                                    r = t[1],
+                                    a = t[2],
+                                    i = t[3],
+                                    o = parseInt(a),
+                                    s = parseInt(i);
+                                  if (!isNaN(o) && !isNaN(s))
+                                    return [n, r, o, s];
+                                }
+                                return e;
+                              })
+                              .filter(function (e) {
+                                return !!e;
+                              })),
+                            (l = { identifier: s }),
+                            [4, C(s)]
+                          );
+                        case 1:
+                          return [
+                            2,
+                            ((l.identifierHash = u.sent()),
+                            (l.message = Object(a.g)([e.message], c)),
+                            l),
+                          ];
+                      }
                     });
                   });
-                })()
+                })(e, t)
               : null;
           } catch (e) {
             return console.warn("Failed to normalize error stack: " + e), null;
           }
         }
-        var M = function () {
-            return v || O(new b()), v;
+        function M(e) {
+          return (function (e) {
+            var t = "https://",
+              n = e.indexOf(t);
+            if (-1 === n) return e;
+            var r = e.indexOf("/", n + t.length);
+            return -1 === r ? e : e.slice(0, n) + e.slice(r);
+          })(
+            (function (e) {
+              var t = e.lastIndexOf("?");
+              if (-1 === t) return e;
+              var n = e.indexOf(":", t);
+              return -1 === n ? e : e.slice(0, t) + e.slice(n);
+            })(e)
+          );
+        }
+        var O = function () {
+            return v || E(new b()), v;
           },
-          O = function (e) {
+          E = function (e) {
             (v = e),
               s.a.InstallErrorReportingStore(v),
               i.a.InstallErrorReportingStore(v),
               c.b.InstallErrorReportingStore(v);
           };
-        function E(e) {
+        function C(e) {
           return Object(a.b)(this, void 0, void 0, function () {
             var t;
             return Object(a.e)(this, function (n) {
@@ -88422,7 +88559,7 @@ var CLSTAMP = "6781683";
                 case 0:
                   return (
                     n.trys.push([0, 2, , 3]),
-                    [4, window.crypto.subtle.digest("SHA-256", C(e))]
+                    [4, window.crypto.subtle.digest("SHA-256", w(e))]
                   );
                 case 1:
                   return (
@@ -88447,7 +88584,7 @@ var CLSTAMP = "6781683";
             });
           });
         }
-        function C(e) {
+        function w(e) {
           for (
             var t = new ArrayBuffer(2 * e.length),
               n = new Uint16Array(t),
@@ -93154,5 +93291,5 @@ var CLSTAMP = "6781683";
       );
     },
   },
-  [["gfbn", 99, 0]],
+  [["gfbn", 70, 0]],
 ]);

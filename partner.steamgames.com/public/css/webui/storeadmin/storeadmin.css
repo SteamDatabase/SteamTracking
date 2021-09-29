@@ -5168,8 +5168,20 @@ html.touch .gamehover_WishlistButton_1lp6v .gamehover_WishlistButtonText_3SsXJ,
 }
 .salepreviewwidgets_StoreSaleBroadcastWidgetRight_1gF_L
   .salepreviewwidgets_StoreActionWidgetContainer_2Z4Yn
+  > div {
+  margin-bottom: 1px;
+}
+.salepreviewwidgets_StoreSaleBroadcastWidgetRight_1gF_L
+  .salepreviewwidgets_StoreActionWidgetContainer_2Z4Yn
   .salepreviewwidgets_StoreSalePriceActionWidgetContainer_3mdQ8 {
   width: 100%;
+}
+.salepreviewwidgets_StoreSaleBroadcastWidgetRight_1gF_L
+  .salepreviewwidgets_StoreActionWidgetContainer_2Z4Yn
+  .salepreviewwidgets_StoreSalePriceActionWidgetContainer_3mdQ8
+  .salepreviewwidgets_Discounted_2eiid {
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 .salepreviewwidgets_StoreSaleBroadcastWidgetRight_1gF_L
   .salepreviewwidgets_StoreActionWidgetContainer_2Z4Yn
@@ -19121,133 +19133,6 @@ img.broadcastplayer_BroadcastPlaceholderImg_1LIEZ {
 .buildpatchnotes_FailedPanel_1H8CO .buildpatchnotes_FailedButton_soZLp {
   width: 200px;
 }
-.managefriends_Heading_N0Bd3 {
-  font-size: 17px;
-  font-weight: normal;
-  line-height: 20px;
-  color: #f5f5f5;
-  margin-bottom: -7px;
-  max-width: 620px;
-}
-.managefriends_Body_38FZa {
-  margin-top: 10px;
-  margin-bottom: 15px;
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: normal;
-  color: #8f98a0;
-  letter-spacing: 0.02em;
-  max-width: 620px;
-}
-.managefriends_HeaderBlock_2vDHa {
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #fff;
-  background-color: #015e80;
-  padding: 10px 20px 10px 20px;
-}
-.managefriends_Background_opxDL {
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 20px 20px 20px 20px;
-}
-.managefriends_DimBackground_3gBQF {
-  background-color: rgba(0, 0, 0, 0.2);
-  padding: 20px;
-}
-.managefriends_Input_2NRAE {
-  max-width: 598px;
-}
-.managefriends_CopyContainer_133bn {
-  background-color: rgba(144, 144, 144, 0.1);
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  min-width: 320px;
-  max-width: 620px;
-}
-.managefriends_CopyContainer_133bn .managefriends_Text_3r5lq {
-  font-size: 32px;
-  line-height: 30px;
-  font-weight: normal;
-  color: #f5f5f5;
-  letter-spacing: 0.02em;
-  padding: 14px;
-}
-.managefriends_CopyContainer_133bn .managefriends_Link_2kERL {
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: normal;
-  color: #f5f5f5;
-  letter-spacing: 0.02em;
-  padding: 14px;
-  overflow-wrap: break-word;
-  overflow: hidden;
-}
-.managefriends_CopyContainer_133bn .managefriends_Button_385V6 {
-  background-color: rgba(144, 144, 144, 0.2);
-  border-radius: 3px;
-  font-size: 14px;
-  font-weight: normal;
-  color: #f5f5f5;
-  letter-spacing: 0.02em;
-  padding-left: 40px;
-  padding-right: 40px;
-  margin: 7px 7px 7px auto;
-  text-transform: uppercase;
-  width: fit-content;
-}
-.managefriends_ProfileCard_3Zjo5 {
-  background: #2c3842;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
-  padding: 15px;
-  border-radius: 4px;
-  max-width: 590px;
-}
-.managefriends_ProfileCard_3Zjo5 .managefriends_UserContainer_5pHs2 {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  position: relative;
-}
-.managefriends_ProfileCard_3Zjo5 .managefriends_Image_3mCm2 {
-  width: 80px;
-  height: 80px;
-  border-radius: 2px;
-  min-width: 80px;
-}
-.managefriends_ProfileCard_3Zjo5 .managefriends_ProfileContent_11cx5 {
-  margin-left: 20px;
-}
-.managefriends_ProfileLink_3TFMe {
-  margin-top: 10px;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: normal;
-  letter-spacing: 0.02em;
-  color: #fff;
-}
-.managefriends_ProfileLink_3TFMe a {
-  color: #09b9ff;
-}
-.managefriends_ProfileLink_3TFMe .managefriends_Failure_1zeiS {
-  color: #c44848;
-}
-.managefriends_ProfileLink_3TFMe .managefriends_Success_FkNjo {
-  color: #95d83b;
-}
-.friends_nav .SVGIcon_Button {
-  width: 24px;
-  height: 24px;
-}
-#searchIcon svg {
-  width: 24px;
-  height: 24px;
-}
 hr {
   height: 0px;
   border-bottom: 2px solid #67c1f5;
@@ -20207,6 +20092,27 @@ hr {
   .optin_admin_email_dashboard_Selected_UaNa5 {
   background: hotpink;
 }
+.adminshared_AdminPageCtn_2mzFW {
+  width: 100%;
+  max-width: 1400px;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+.adminshared_PageTitle_1hHXX {
+  font-size: 32px;
+  color: #fff;
+  font-weight: 200;
+  margin-bottom: 8px;
+}
+.adminshared_ValveOnlyTitle_1oPDR {
+  color: #e1745b;
+}
+.adminshared_ValveOnlyBackground_1T1Ml {
+  background-color: #461f28;
+  border: 1px solid #761f28;
+  padding: 4px;
+}
 .radio_Group_2Rrc0 {
   display: flex;
   flex-direction: row;
@@ -20501,13 +20407,34 @@ hr {
 }
 .discountdashboard_DiscountGridCtn_12vp3
   .discountdashboard_DiscountGrid_1wfZe
-  th {
-  background: #3e424c;
+  .tabulator-tableHolder
+  .tabulator-table {
+  background-color: #303238;
 }
 .discountdashboard_DiscountGridCtn_12vp3
   .discountdashboard_DiscountGrid_1wfZe
-  td {
-  background: #23262b;
+  .tabulator-tableHolder
+  .tabulator-header {
+  background-color: #3e424c;
+}
+.discountdashboard_DiscountGridCtn_12vp3
+  .discountdashboard_DiscountGrid_1wfZe
+  .tabulator-tableHolder
+  .tabulator-row {
+  background-color: #23262b;
+  margin-bottom: 2px;
+}
+.discountdashboard_DiscountGridCtn_12vp3
+  .discountdashboard_DiscountGrid_1wfZe
+  .tabulator-tableHolder
+  .tabulator-cell {
+  border: none;
+}
+.discountdashboard_DiscountGridCtn_12vp3
+  .discountdashboard_DiscountGrid_1wfZe
+  .tabulator-tableHolder
+  .tabulator-cell.tabulator-frozen-left {
+  border-right: 3px solid #303238;
 }
 .discountdashboard_DiscountGridCtn_12vp3
   .discountdashboard_DiscountGrid_1wfZe
@@ -20544,6 +20471,11 @@ hr {
   .discountdashboard_DiscountOptionsCtn_1ZxxH {
   display: flex;
 }
+.dailydealeditor_PageTitle_2bGMg {
+  font-size: 24px;
+  color: #fff;
+  margin-top: 20px;
+}
 .dailydealeditor_AppTypeCtn_2-cMj {
   display: flex;
   flex-direction: row;
@@ -20560,19 +20492,23 @@ hr {
 .dailydealeditor_CheckBoxSize_1wywL {
   min-width: 200px;
 }
-.dailydealsdashboard_DailyDealDashCtn_F_iV5 {
-  width: 1427px;
-  margin: 0 auto;
+.invitesdashboard_SelectedAppCtn_1kLuQ {
+  margin: 20px 0px;
 }
-.dailydealsdashboard_DailyDealDashCtn_F_iV5
-  .dailydealsdashboard_PageTitle_2Tj1C {
-  font-size: 24px;
+.invitesdashboard_SelectedAppCtn_1kLuQ .invitesdashboard_SelectedApp_3FFre {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.invitesdashboard_SelectedAppCtn_1kLuQ
+  .invitesdashboard_SelectedApp_3FFre
+  .invitesdashboard_AppName_1FeTr {
   color: #fff;
-  margin-top: 20px;
+  font-size: 21px;
+  margin-left: 12px;
 }
-.dailydealsdashboard_Row_2fsEu {
-  background-color: pink;
-  padding-bottom: 10px;
+.invitesdashboard_DialogCtn_21-QG {
+  margin-top: 20px;
 }
 @keyframes shared_icons_SpinnerSpokeFade_33nZz {
   0% {
@@ -20622,7 +20558,7 @@ hr {
   width: 100%;
   padding: 4px 8px;
   box-sizing: border-box;
-  margin-bottom: 12px;
+  margin-bottom: 24px;
 }
 .dailydealcalendar_CalendarGridCtn_2smJ3
   .dailydealcalendar_NavBar_3h36H
@@ -20640,7 +20576,9 @@ hr {
 .dailydealcalendar_CalendarCol_RdS93 {
   display: flex;
   flex-direction: column;
-  width: 200px;
+  width: 100%;
+  min-width: 150px;
+  max-width: 200px;
   margin-right: 4px;
 }
 .dailydealcalendar_CalendarCol_RdS93 .dailydealcalendar_DayOfTheWeek_1gW_B {
@@ -20659,16 +20597,25 @@ hr {
   margin-bottom: 4px;
 }
 .dailydealcalendar_DailyDealCtn_2XgAJ.dailydealcalendar_Available_qoXiK {
-  background: #49536a;
+  background: #303645;
+  border: 1px solid #49536a;
+  justify-content: center;
+}
+.dailydealcalendar_DailyDealCtn_2XgAJ.dailydealcalendar_Available_qoXiK button {
+  width: fit-content;
+  padding: 0 13px;
 }
 .dailydealcalendar_DailyDealCtn_2XgAJ.dailydealcalendar_Taken_uhJP7 {
   background: #4c6b22;
   color: #a4d007;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 17px;
+  transition: all 0.3s ease;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0);
 }
 .dailydealcalendar_DailyDealCtn_2XgAJ.dailydealcalendar_Taken_uhJP7:hover {
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  background: #58792b;
   cursor: pointer;
 }
 .dailydealcalendar_DailyDealCtn_2XgAJ .dailydealcalendar_DailyDealImage_1Hprj {
@@ -20678,20 +20625,48 @@ hr {
   margin-right: 4px;
 }
 .dailydealcalendar_DealSection_jxKWo {
-  height: 200px;
+  height: 205px;
   background: #3a4254;
   margin-bottom: 30px;
   padding: 6px;
   box-sizing: border-box;
 }
+.dailydealcalendar_DealSection_jxKWo .dailydealcalendar_DayName_3-2Cu {
+  color: #fff;
+  margin-bottom: 4px;
+}
 .dailydealcalendar_DealSection_jxKWo.dailydealcalendar_PastEntry_3E1Fg {
-  background-color: blue;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+}
+.dailydealcalendar_DealSection_jxKWo.dailydealcalendar_PastEntry_3E1Fg:hover {
+  opacity: 1;
 }
 .dailydealcalendar_DealSection_jxKWo.dailydealcalendar_TodayEntry_lafVM {
-  background-color: green;
+  border: 1px solid #bcf1f1;
 }
-.dailydealcalendar_DealSection_jxKWo.dailydealcalendar_FutureEntry_15wQf {
-  background-color: hotpink;
+.partnersiteappsearch_Result_aiJ3T {
+  border: blue;
+}
+.dailydealadmincreatenew_DealCapImg_29Nw3 {
+  display: block;
+  max-width: 230px;
+  max-height: 95px;
+  width: auto;
+  height: auto;
+}
+.dailydealadmincreatenew_DealCapCtn_3n8tu {
+  display: flex;
+  flex-direction: row;
+  background-color: #2f4f4f;
+}
+.dailydealadmincreatenew_DiscountInputCtn_2DTJt {
+  display: flex;
+  flex-direction: row;
+}
+.dailydealadmincreatenew_DiscountCtn_LUWYn {
+  display: flex;
+  flex-direction: row;
 }
 .featuring_Featuring_3T5cu {
   width: 160px;

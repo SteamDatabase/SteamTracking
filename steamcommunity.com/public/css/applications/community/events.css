@@ -591,6 +591,13 @@ td.rdtYear:hover {
 .partnereventdashboard_EventDashboardCtn_2WqPr {
   overflow: unset;
 }
+.partnereventdashboard_EventDashAdminToolsCtn_1OMO4 {
+  align-items: flex-end;
+}
+.partnereventdashboard_EventDashAdminToolsCtn_1OMO4 button.DialogButton {
+  width: fit-content;
+  padding: 4px 12px;
+}
 .partnereventdashboard_EventDashboardDataCtn_1uPNG {
   margin-top: 20px;
   height: 100px;
@@ -855,6 +862,13 @@ td.rdtYear:hover {
 }
 .eventmoderationaudit_ExpandModActions_3nNMe {
   cursor: pointer;
+}
+.partnereventstatsexport_DialogCtn_2LwQU {
+  min-height: 450px;
+  margin-top: 20px;
+}
+.rdtPicker {
+  color: #000;
 }
 .partnereventpreview_PreviewBarContainer_2OUix {
   display: flex;

@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6781677";
+var CLSTAMP = "6794783";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [2],
   {
@@ -8469,6 +8469,16 @@ var CLSTAMP = "6781677";
                         br: o.d.readUint32,
                         bw: o.h.writeUint32,
                       },
+                      age_verification_pending: {
+                        n: 7,
+                        br: o.d.readBool,
+                        bw: o.h.writeBool,
+                      },
+                      block_minors: {
+                        n: 8,
+                        br: o.d.readBool,
+                        bw: o.h.writeBool,
+                      },
                     },
                   }),
                 r.sm_m
@@ -16340,6 +16350,48 @@ var CLSTAMP = "6781677";
             }),
             r
           );
+        })(a),
+        ue = (function (e) {
+          function r(r) {
+            void 0 === r && (r = null);
+            var t = e.call(this) || this;
+            return a.initialize(t, r, 0, -1, void 0, null), t;
+          }
+          return (
+            Object(i.d)(r, e),
+            (r.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function (e, r) {
+              return e ? { $jspbMessageInstance: r } : {};
+            }),
+            (r.fromObject = function (e) {
+              return new r();
+            }),
+            (r.deserializeBinary = function (e) {
+              var t = new n.BinaryReader(e),
+                i = new r();
+              return r.deserializeBinaryFromReader(i, t);
+            }),
+            (r.deserializeBinaryFromReader = function (e, r) {
+              return e;
+            }),
+            (r.prototype.serializeBinary = function () {
+              var e = new n.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function (e, r) {}),
+            (r.prototype.serializeBase64String = function () {
+              var e = new n.BinaryWriter();
+              return (
+                r.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              );
+            }),
+            (r.prototype.getClassName = function () {
+              return "CSteamTV_AppCheer_Response";
+            }),
+            r
+          );
         })(a);
       !(function (e) {
         (e.CreateBroadcastChannel = function (e, r) {
@@ -16537,6 +16589,12 @@ var CLSTAMP = "6781677";
             return e.SendMsg("SteamTV.GetHomePageContents#1", r, ne, {
               bConstMethod: !0,
               ePrivilege: 2,
+              eWebAPIKeyRequirement: 1,
+            });
+          }),
+          (e.AppCheer = function (e, r) {
+            return e.SendMsg("SteamTV.AppCheer#1", r, ue, {
+              ePrivilege: 0,
               eWebAPIKeyRequirement: 1,
             });
           });

@@ -1090,6 +1090,52 @@ GraphicalCountdown.prototype.setImage = function( idSuffix, val )
 
 var g_oSuggestParams;
 
+var g_nMobileSearchTermTimer = 0;
+
+// how long we wait after the first keypress after a search or page load
+var k_nStartSearchTimeoutMS = 350;
+
+// how long we extend the wait after each keypress.  We always time out at 3x the base search timeout ms
+var k_nSearchKeypressTimeoutExtensionMS = 125;
+
+// TODO: only reason for having this here is to support the SNR.  If the mobile app can identify it, or it's not important to include the SNR then 
+// we'll have the mobile app navigate to the search page without having to post a message to the webview
+function MobileApp_ShowSearchResults( $SNR, $Term )
+{
+	window.location = 'https://store.steampowered.com/search/?term=' + $Term;
+}
+
+function MobileApp_UpdateSearchSuggestions( $Term )
+{
+	var $SuggestionsCtn = $J('#searchterm_options');
+	var $Suggestions = $J('#search_suggestion_contents');
+
+	var msDelayBeforeTimeout = k_nStartSearchTimeoutMS;
+	if ( g_nMobileSearchTermTimer !== 0 )
+	{
+		window.clearTimeout( g_nMobileSearchTermTimer );
+		g_nMobileSearchTermTimer = 0;
+		msDelayBeforeTimeout = k_nSearchKeypressTimeoutExtensionMS;
+	}
+
+	g_nMobileSearchTermTimer = window.setTimeout( function() {
+			g_nMobileSearchTermTimer = 0;
+			sLastVal = $Term;
+			SearchTimeout( $Term, v_trim( sLastVal ), $SuggestionsCtn, $Suggestions );
+		}, msDelayBeforeTimeout );
+}
+
+function InitializeSearchSuggestionParams( cc, realm, l, rgUserPreferences, strPackageXMLVersion )
+{
+	g_oSuggestParams = $J.extend( {
+		cc: cc,
+		realm: realm,
+		l:l,
+		v: strPackageXMLVersion
+	}, rgUserPreferences );
+}
+
+// Enable search where the search text input is part of the web page
 function EnableSearchSuggestions( elemTerm, navcontext, cc, realm, l, rgUserPreferences, strPackageXMLVersion, elemSuggestionCtn, elemSuggestions )
 {
 	var $Term = $JFromIDOrElement(elemTerm);
@@ -1100,12 +1146,6 @@ function EnableSearchSuggestions( elemTerm, navcontext, cc, realm, l, rgUserPref
 		if ( event.target && event.target.tagName != 'INPUT' )
 			$J(elemTerm).focus();
 	});
-
-	// how long we wait after the first keypress after a search or page load
-	var k_nStartSearchTimeoutMS = 350;
-
-	// how long we extend the wait after each keypress.  We always time out at 3x the base search timeout ms
-	var k_nSearchKeypressTimeoutExtensionMS = 125;
 
 	var sLastVal = $Term.val();
 	var nTermTimer = 0;
@@ -1150,12 +1190,8 @@ function EnableSearchSuggestions( elemTerm, navcontext, cc, realm, l, rgUserPref
 		}
 		SearchSuggestSetDefaultSearchText( $Term, $SuggestionsCtn, $Suggestions );
 	} );
-	g_oSuggestParams = $J.extend( {
-		cc: cc,
-		realm: realm,
-		l:l,
-		v: strPackageXMLVersion
-	}, rgUserPreferences );
+
+	InitializeSearchSuggestionParams( cc, realm, l, rgUserPreferences, strPackageXMLVersion );
 }
 function SearchTimeout( $Term, value, $SuggestionsCtn, $Suggestions )
 {

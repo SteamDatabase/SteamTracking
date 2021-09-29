@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6781677";
+var CLSTAMP = "6794783";
 !(function (t) {
   var e = {};
   function n(r) {
@@ -100,10 +100,10 @@ var CLSTAMP = "6781677";
         return l;
       }),
       n.d(e, "h", function () {
-        return f;
+        return _;
       }),
       n.d(e, "a", function () {
-        return _;
+        return f;
       }),
       n.d(e, "j", function () {
         return p;
@@ -161,9 +161,9 @@ var CLSTAMP = "6781677";
         PAGE_TIMESTAMP: 0,
         get SESSIONID() {
           return (function () {
-            if (!Object(i.a)()) return r || (r = f()), r;
+            if (!Object(i.a)()) return r || (r = _()), r;
             var t = Object(i.b)("sessionid");
-            t || (t = f());
+            t || (t = _());
             return t;
           })();
         },
@@ -172,6 +172,7 @@ var CLSTAMP = "6781677";
         DEV_MODE: !1,
         IN_LIBRARY: !1,
         IN_GAMEPADUI: !1,
+        IN_LOGIN: !1,
       },
       u = {
         logged_in: !1,
@@ -206,7 +207,7 @@ var CLSTAMP = "6781677";
         IS_ALLOWED_SC: !1,
       },
       l = { ANNOUNCEMENT_GID: "" };
-    function f() {
+    function _() {
       var t = (function () {
         for (var t = "", e = 0; e < 24; e++)
           t += Object(o.b)(0, 35).toString(36);
@@ -214,7 +215,7 @@ var CLSTAMP = "6781677";
       })();
       return Object(i.c)("sessionid", t, 0), t;
     }
-    function _() {
+    function f() {
       var t = null;
       return (
         Object(i.a)() && (t = Object(i.b)("presentation_mode")),
@@ -230,13 +231,13 @@ var CLSTAMP = "6781677";
       r &&
         (Object.assign(u, r),
         (e.userConfig = !0),
-        u.is_support && _() && (u.is_support = !1));
+        u.is_support && f() && (u.is_support = !1));
       var o = d("broadcast", t);
       o && (Object.assign(s, o), (e.broadcastConfig = !0));
       var i = d("community", t);
       i && (Object.assign(a, i), (e.communityConfig = !0));
-      var f = d("event", t);
-      return f && (Object.assign(l, f), (e.eventConfig = !0)), e;
+      var _ = d("event", t);
+      return _ && (Object.assign(l, _), (e.eventConfig = !0)), e;
     }
     function d(t, e) {
       var n;

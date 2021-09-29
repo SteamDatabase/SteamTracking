@@ -1720,6 +1720,14 @@ a.btn_download:hover {
 	padding: 10px;
 }
 
+.section.yellowbox {
+	border: 2px solid #e2b100;
+	border-radius: 3px;
+	background-color: #e1e0a5;
+	padding: 10px;
+	color: black;
+}
+
 	.section.redbox h1 {
 		color: #e24044;
 		font-weight: normal;

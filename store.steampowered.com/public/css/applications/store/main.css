@@ -1859,8 +1859,20 @@ body.modals_BodyNoScrollDialog_105OB {
 }
 .salepreviewwidgets_StoreSaleBroadcastWidgetRight_9VjYX
   .salepreviewwidgets_StoreActionWidgetContainer_kW6m4
+  > div {
+  margin-bottom: 1px;
+}
+.salepreviewwidgets_StoreSaleBroadcastWidgetRight_9VjYX
+  .salepreviewwidgets_StoreActionWidgetContainer_kW6m4
   .salepreviewwidgets_StoreSalePriceActionWidgetContainer_1JuIp {
   width: 100%;
+}
+.salepreviewwidgets_StoreSaleBroadcastWidgetRight_9VjYX
+  .salepreviewwidgets_StoreActionWidgetContainer_kW6m4
+  .salepreviewwidgets_StoreSalePriceActionWidgetContainer_1JuIp
+  .salepreviewwidgets_Discounted_1g0B- {
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 .salepreviewwidgets_StoreSaleBroadcastWidgetRight_9VjYX
   .salepreviewwidgets_StoreActionWidgetContainer_kW6m4

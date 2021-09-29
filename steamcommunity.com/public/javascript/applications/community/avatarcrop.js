@@ -30,7 +30,7 @@
               case 0:
                 return (
                   (r = new Image()),
-                  (n = Object(o.t)(r, "load")),
+                  (n = Object(o.v)(r, "load")),
                   (r.src = URL.createObjectURL(t)),
                   [4, n]
                 );
@@ -44,7 +44,7 @@
                   i.fill(),
                   i.drawImage(r, 0, 0),
                   URL.revokeObjectURL(r.src),
-                  (u = Object(o.t)(e, "load")),
+                  (u = Object(o.v)(e, "load")),
                   (s = e),
                   (d = (l = URL).createObjectURL),
                   [4, g(c)]
@@ -57,7 +57,7 @@
           });
         });
       }
-      function f(e, t) {
+      function v(e, t) {
         return Object(a.b)(this, void 0, void 0, function () {
           var r, n, c;
           return Object(a.e)(this, function (a) {
@@ -68,7 +68,7 @@
                 return [
                   4,
                   g(
-                    v(t, {
+                    f(t, {
                       left: r.x,
                       top: r.y,
                       size: r.width,
@@ -87,7 +87,7 @@
           });
         });
       }
-      function v(e, t) {
+      function f(e, t) {
         var r = Math.min(Math.max(184, t.size), t.maxSize),
           a = document.createElement("canvas");
         (a.width = r), (a.height = r);
@@ -170,7 +170,7 @@
                 imageRef: c,
                 loaderRef: o,
                 getBlob: function () {
-                  return f(u.current, c.current);
+                  return v(u.current, c.current);
                 },
               }
             );
@@ -178,10 +178,10 @@
           a = r.isLoading,
           c = r.imageRef,
           o = r.loaderRef,
-          v = r.getBlob;
+          f = r.getBlob;
         return (
           n.useImperativeHandle(t, function () {
-            return { getBlob: v };
+            return { getBlob: f };
           }),
           n.createElement(
             "div",
