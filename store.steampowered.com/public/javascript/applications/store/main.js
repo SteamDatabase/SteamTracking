@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6796608";
+var CLSTAMP = "6797261";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [40],
   {
@@ -12285,57 +12285,61 @@ var CLSTAMP = "6796608";
               })
             : []
           : Boolean("items" === e.section_type) && t
-          ? t.map(function (e) {
-              return {
-                Render: function (t) {
-                  return (function (e, t) {
-                    var n = t.capsuleStyle,
-                      r = t.index,
-                      a = t.section,
-                      i = t.saleEvent,
-                      s = t.rowElements;
-                    if (Object(C.c)(e)) return null;
-                    var c = De(a),
-                      l = i.BUseSubscriptionLayout(),
-                      p = a.unique_id + "_" + r + "_" + e.type + "_" + e.id;
-                    if ("fullrow" !== n) {
-                      var d = "tall" === n ? "library" : "header";
-                      return o.createElement(Le.m, {
-                        imageType: d,
-                        key: p,
-                        capsule: e,
-                        bShowParentApp: c,
-                        bUseSubscriptionLayout: l,
-                        bShowDemoButton: a.show_as_demos,
-                        bHidePrice: a.hide_prices,
-                        bHidePlatforms: s >= 5,
-                        index: r,
-                      });
-                    }
-                    var m = a.single_item_style ? a.single_item_style : u.v;
-                    return o.createElement(
-                      "div",
-                      {
-                        key: p,
-                        className: Object(te.a)(
-                          "bordered" == m && Oe.a.AppSummaryWidgetCtn,
-                          0 === r && Le.s + r
-                        ),
-                      },
-                      o.createElement(Le.q, {
-                        id: e.id,
-                        type: e.type,
-                        displayStyle: m,
-                        bShowPurchaseOptionsButton: a.show_purchase_options,
-                        bUseSubscriptionLayout: l,
-                        bShowDemoButton: a.show_as_demos,
-                        bHidePrice: a.hide_prices,
-                      })
-                    );
-                  })(e, t);
-                },
-              };
-            })
+          ? t
+              .filter(function (e) {
+                return !Object(C.c)(e);
+              })
+              .map(function (e) {
+                return {
+                  Render: function (t) {
+                    return (function (e, t) {
+                      var n = t.capsuleStyle,
+                        r = t.index,
+                        a = t.section,
+                        i = t.saleEvent,
+                        s = t.rowElements;
+                      if (Object(C.c)(e)) return null;
+                      var c = De(a),
+                        l = i.BUseSubscriptionLayout(),
+                        p = a.unique_id + "_" + r + "_" + e.type + "_" + e.id;
+                      if ("fullrow" !== n) {
+                        var d = "tall" === n ? "library" : "header";
+                        return o.createElement(Le.m, {
+                          imageType: d,
+                          key: p,
+                          capsule: e,
+                          bShowParentApp: c,
+                          bUseSubscriptionLayout: l,
+                          bShowDemoButton: a.show_as_demos,
+                          bHidePrice: a.hide_prices,
+                          bHidePlatforms: s >= 5,
+                          index: r,
+                        });
+                      }
+                      var m = a.single_item_style ? a.single_item_style : u.v;
+                      return o.createElement(
+                        "div",
+                        {
+                          key: p,
+                          className: Object(te.a)(
+                            "bordered" == m && Oe.a.AppSummaryWidgetCtn,
+                            0 === r && Le.s + r
+                          ),
+                        },
+                        o.createElement(Le.q, {
+                          id: e.id,
+                          type: e.type,
+                          displayStyle: m,
+                          bShowPurchaseOptionsButton: a.show_purchase_options,
+                          bUseSubscriptionLayout: l,
+                          bShowDemoButton: a.show_as_demos,
+                          bHidePrice: a.hide_prices,
+                        })
+                      );
+                    })(e, t);
+                  },
+                };
+              })
           : [];
       }
       function ke(e, t) {
