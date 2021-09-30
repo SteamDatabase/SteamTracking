@@ -2296,6 +2296,7 @@ a {
   .microheader_Account_lcq6h {
   font-size: 18px;
   margin-bottom: 4px;
+  color: #fff;
   display: flex;
   flex-direction: row;
 }
@@ -18201,6 +18202,762 @@ a {
 .__react_component_tooltip.show {
   opacity: 1 !important;
 }
+.internationalbadgebindingpage_Tooltip_2iwF4 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.internationalbadgebindingpage_CarouselFade_iQG0p {
+  mask-image: linear-gradient(
+    to left,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to left,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.ttf")
+      format("truetype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.svg#ywftsvg")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.ttf")
+      format("truetype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.svg#ywftsvg")
+      format("svg");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.ttf")
+      format("truetype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.svg#ywftsvg")
+      format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.ttf")
+      format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-regular.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-regular.ttf")
+      format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-semibold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-semibold.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-bold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-bold.ttf")
+      format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Averia Serif Libre";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/averiaseriflibre-regular.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/averiaseriflibre-regular.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Averia Serif Libre";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/averiaseriflibre-italic.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/averiaseriflibre-italic.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular.ttf")
+      format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Light.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Light.ttf")
+      format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-SemiBold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular-SemiBold.ttf")
+      format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Bold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Bold.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Black.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Black.ttf")
+      format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+.internationalbadgebindingpage_StandardButton_3tMv3 {
+  border: 3px solid #ffffff50;
+  padding: 15px 25px;
+  margin: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.2s;
+}
+.internationalbadgebindingpage_StandardButton_3tMv3:hover {
+  border: 3px solid #ff6046;
+  transform: translateY(-2px);
+  color: #ff6046;
+}
+.internationalbadgebindingpage_StandardButton_3tMv3
+  .internationalbadgebindingpage_ButtonText_1oK3q {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.internationalbadgebindingpage_StandardButton_3tMv3
+  .internationalbadgebindingpage_SteamLogo_32EWj {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//icons/steam_icon.svg");
+}
+.internationalbadgebindingpage_ToolTip_28QoU {
+  background-color: #36363e;
+  color: #ddd;
+  max-width: 250px;
+  border: 1px solid #2d2d33;
+  border-radius: 3px;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
+  font-size: 14px;
+  line-height: 20px;
+  padding: 6px 10px;
+  z-index: 99999;
+}
+.internationalbadgebindingpage_InternationalBadgeBindingPage_qwIAt {
+  width: 100%;
+  background-color: #151618;
+  background-size: 170%;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.internationalbadgebindingpage_InternationalBadgeBindingPage_qwIAt
+  .internationalbadgebindingpage_HeaderImage_1KWru {
+  width: 1280px;
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  box-shadow: 0px 0px 30px 20px rgba(0, 0, 0, 0.5);
+  margin-top: 50px;
+}
+@media (max-width: 1300px) {
+  .internationalbadgebindingpage_InternationalBadgeBindingPage_qwIAt
+    .internationalbadgebindingpage_HeaderImage_1KWru {
+    width: 800px;
+  }
+}
+.internationalbadgebindingpage_InternationalBadgeBindingPage_qwIAt
+  .internationalbadgebindingpage_Body_nksVE {
+  width: 1280px;
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  box-shadow: 0px 0px 30px 20px rgba(0, 0, 0, 0.5);
+  padding-bottom: 20px;
+  margin-bottom: 50px;
+}
+@media (max-width: 1300px) {
+  .internationalbadgebindingpage_InternationalBadgeBindingPage_qwIAt
+    .internationalbadgebindingpage_Body_nksVE {
+    width: 800px;
+  }
+}
+.internationalbadgebindingpage_InternationalBadgeBindingPage_qwIAt
+  .internationalbadgebindingpage_Body_nksVE
+  .internationalbadgebindingpage_NeedToLogin_5lbju {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.internationalbadgebindingpage_InternationalBadgeBindingPage_qwIAt
+  .internationalbadgebindingpage_Body_nksVE
+  .internationalbadgebindingpage_NeedToLogin_5lbju
+  .internationalbadgebindingpage_Message_1_-dW {
+  color: #fff;
+  padding: 0px 300px;
+  font-size: 24px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.internationalbadgebindingpage_InternationalBadgeBindingPage_qwIAt
+  .internationalbadgebindingpage_Body_nksVE
+  .internationalbadgebindingpage_NeedToLogin_5lbju
+  .internationalbadgebindingpage_SignInButton_1QErm {
+  height: 30px;
+  padding: 0px 10px;
+  font-size: 16px;
+  border-radius: 2px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+  font-weight: 700;
+  background: linear-gradient(to bottom, #a4d007 5%, #536904 95%);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.internationalbadgebindingpage_InternationalBadgeBindingPage_qwIAt
+  .internationalbadgebindingpage_Body_nksVE
+  .internationalbadgebindingpage_NeedToLogin_5lbju
+  .internationalbadgebindingpage_SignInButton_1QErm:hover {
+  filter: brightness(1.3);
+}
+.internationalbadgebindingpage_InternationalBadgeBindingPage_qwIAt
+  .internationalbadgebindingpage_Body_nksVE
+  .internationalbadgebindingpage_SignedIn_3ugfW {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.internationalbadgebindingpage_InternationalBadgeBindingPage_qwIAt
+  .internationalbadgebindingpage_Body_nksVE
+  .internationalbadgebindingpage_SignedIn_3ugfW
+  .internationalbadgebindingpage_BoundBadges_WAmWN {
+  color: #aaa;
+  width: 600px;
+  padding: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  border: 2px solid #a08456;
+  background-color: #281f11;
+}
+.internationalbadgebindingpage_InternationalBadgeBindingPage_qwIAt
+  .internationalbadgebindingpage_Body_nksVE
+  .internationalbadgebindingpage_SignedIn_3ugfW
+  .internationalbadgebindingpage_BoundBadges_WAmWN
+  .internationalbadgebindingpage_BadgeID_1IJ7_ {
+  color: #fff;
+}
+.internationalbadgebindingpage_InternationalBadgeBindingPage_qwIAt
+  .internationalbadgebindingpage_Body_nksVE
+  .internationalbadgebindingpage_SignedIn_3ugfW
+  .internationalbadgebindingpage_BadgeDescription_3jbkl {
+  color: #fff;
+  width: 650px;
+  font-size: 24px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.internationalbadgebindingpage_InternationalBadgeBindingPage_qwIAt
+  .internationalbadgebindingpage_Body_nksVE
+  .internationalbadgebindingpage_SignedIn_3ugfW
+  .internationalbadgebindingpage_BadgeImage_OhNDI {
+  width: 328px;
+  height: 460px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.internationalbadgebindingpage_InternationalBadgeBindingPage_qwIAt
+  .internationalbadgebindingpage_Body_nksVE
+  .internationalbadgebindingpage_SignedIn_3ugfW
+  .internationalbadgebindingpage_BadgeWarning_Ctt1r {
+  color: #aaa;
+  width: 800px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.internationalbadgebindingpage_InternationalBadgeBindingPage_qwIAt
+  .internationalbadgebindingpage_Body_nksVE
+  .internationalbadgebindingpage_SignedIn_3ugfW
+  .internationalbadgebindingpage_BadgeIDInput_3tN3Z {
+  width: 300px;
+  height: 40px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  padding: 0px 14px;
+  border-radius: 2px;
+  background-color: #252525;
+  color: #fff;
+}
+.internationalbadgebindingpage_InternationalBadgeBindingPage_qwIAt
+  .internationalbadgebindingpage_Body_nksVE
+  .internationalbadgebindingpage_SignedIn_3ugfW
+  .internationalbadgebindingpage_SubmitButton_36emg {
+  height: 30px;
+  padding: 0px 10px;
+  font-size: 16px;
+  border-radius: 2px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  user-select: none;
+  color: #000;
+  font-weight: 700;
+  background: linear-gradient(to bottom, #a4d007 5%, #536904 95%);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  filter: saturate(0) brightness(0.6);
+}
+.internationalbadgebindingpage_InternationalBadgeBindingPage_qwIAt
+  .internationalbadgebindingpage_Body_nksVE
+  .internationalbadgebindingpage_SignedIn_3ugfW
+  .internationalbadgebindingpage_SubmitButton_36emg.internationalbadgebindingpage_ValidBadgeIDLength_3OIss {
+  filter: saturate(1) brightness(1);
+  cursor: pointer;
+}
+.internationalbadgebindingpage_InternationalBadgeBindingPage_qwIAt
+  .internationalbadgebindingpage_Body_nksVE
+  .internationalbadgebindingpage_SignedIn_3ugfW
+  .internationalbadgebindingpage_SubmitButton_36emg.internationalbadgebindingpage_ValidBadgeIDLength_3OIss:hover {
+  filter: saturate(1) brightness(1.3);
+}
+.internationalbadgebindingpage_InternationalBadgeBindingPage_qwIAt
+  .internationalbadgebindingpage_Body_nksVE
+  .internationalbadgebindingpage_SignedIn_3ugfW
+  .internationalbadgebindingpage_BindState_2PBXD {
+  padding: 0px 50px;
+  height: 30px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.internationalbadgebindingpage_InternationalBadgeBindingPage_qwIAt
+  .internationalbadgebindingpage_Body_nksVE
+  .internationalbadgebindingpage_SignedIn_3ugfW
+  .internationalbadgebindingpage_BindState_2PBXD.internationalbadgebindingpage_Pending_3nhSJ {
+  color: #aaa;
+}
+.internationalbadgebindingpage_InternationalBadgeBindingPage_qwIAt
+  .internationalbadgebindingpage_Body_nksVE
+  .internationalbadgebindingpage_SignedIn_3ugfW
+  .internationalbadgebindingpage_BindState_2PBXD.internationalbadgebindingpage_Success_1i7dl {
+  color: #2a2;
+}
+.internationalbadgebindingpage_InternationalBadgeBindingPage_qwIAt
+  .internationalbadgebindingpage_Body_nksVE
+  .internationalbadgebindingpage_SignedIn_3ugfW
+  .internationalbadgebindingpage_BindState_2PBXD.internationalbadgebindingpage_Failure_1HBIs {
+  color: #a22;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Radiance", "Noto Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.Bold {
+  font-weight: bold;
+}
+.Spoiler {
+  background-color: #000 !important;
+  color: #000 !important;
+}
+.Spoiler:hover {
+  color: #fff !important;
+}
+[data-aos="fade-zoom-in"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: scale(0);
+}
+[data-aos="fade-zoom-in"] &.aos-animate {
+  opacity: 1;
+  transform: scale(1);
+}
+[data-aos="fade-slide-right"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateX(-40%);
+}
+[data-aos="fade-slide-right"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-left"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateX(40%);
+}
+[data-aos="fade-slide-left"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-up"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateY(40%);
+}
+[data-aos="fade-slide-up"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-down"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateY(-40%);
+}
+[data-aos="fade-slide-down"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="rotate"] {
+  transition-property: transform;
+  transform: rotateZ(0deg);
+}
+[data-aos="rotate"] &[data-aos-rotate-bottom] {
+  transform-origin: bottom center;
+}
+[data-aos="rotate"] &[data-aos-rotate="10"].aos-animate {
+  transform: rotateZ(10deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="20"].aos-animate {
+  transform: rotateZ(20deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="30"].aos-animate {
+  transform: rotateZ(30deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="40"].aos-animate {
+  transform: rotateZ(40deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="50"].aos-animate {
+  transform: rotateZ(50deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="60"].aos-animate {
+  transform: rotateZ(60deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="70"].aos-animate {
+  transform: rotateZ(70deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="80"].aos-animate {
+  transform: rotateZ(80deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="90"].aos-animate {
+  transform: rotateZ(90deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="100"].aos-animate {
+  transform: rotateZ(100deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="110"].aos-animate {
+  transform: rotateZ(110deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="120"].aos-animate {
+  transform: rotateZ(120deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="130"].aos-animate {
+  transform: rotateZ(130deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="140"].aos-animate {
+  transform: rotateZ(140deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="150"].aos-animate {
+  transform: rotateZ(150deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="160"].aos-animate {
+  transform: rotateZ(160deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="170"].aos-animate {
+  transform: rotateZ(170deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="180"].aos-animate {
+  transform: rotateZ(180deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="190"].aos-animate {
+  transform: rotateZ(190deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="200"].aos-animate {
+  transform: rotateZ(200deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="210"].aos-animate {
+  transform: rotateZ(210deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="220"].aos-animate {
+  transform: rotateZ(220deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="230"].aos-animate {
+  transform: rotateZ(230deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="240"].aos-animate {
+  transform: rotateZ(240deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="250"].aos-animate {
+  transform: rotateZ(250deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="260"].aos-animate {
+  transform: rotateZ(260deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="270"].aos-animate {
+  transform: rotateZ(270deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="280"].aos-animate {
+  transform: rotateZ(280deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="290"].aos-animate {
+  transform: rotateZ(290deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="300"].aos-animate {
+  transform: rotateZ(300deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="310"].aos-animate {
+  transform: rotateZ(310deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="320"].aos-animate {
+  transform: rotateZ(320deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="330"].aos-animate {
+  transform: rotateZ(330deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="340"].aos-animate {
+  transform: rotateZ(340deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="350"].aos-animate {
+  transform: rotateZ(350deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-10"].aos-animate {
+  transform: rotateZ(-10deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-20"].aos-animate {
+  transform: rotateZ(-20deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-30"].aos-animate {
+  transform: rotateZ(-30deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-40"].aos-animate {
+  transform: rotateZ(-40deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-50"].aos-animate {
+  transform: rotateZ(-50deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-60"].aos-animate {
+  transform: rotateZ(-60deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-70"].aos-animate {
+  transform: rotateZ(-70deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-80"].aos-animate {
+  transform: rotateZ(-80deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-90"].aos-animate {
+  transform: rotateZ(-90deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-100"].aos-animate {
+  transform: rotateZ(-100deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-110"].aos-animate {
+  transform: rotateZ(-110deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-120"].aos-animate {
+  transform: rotateZ(-120deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-130"].aos-animate {
+  transform: rotateZ(-130deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-140"].aos-animate {
+  transform: rotateZ(-140deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-150"].aos-animate {
+  transform: rotateZ(-150deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-160"].aos-animate {
+  transform: rotateZ(-160deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-170"].aos-animate {
+  transform: rotateZ(-170deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-180"].aos-animate {
+  transform: rotateZ(-180deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-190"].aos-animate {
+  transform: rotateZ(-190deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-200"].aos-animate {
+  transform: rotateZ(-200deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-210"].aos-animate {
+  transform: rotateZ(-210deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-220"].aos-animate {
+  transform: rotateZ(-220deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-230"].aos-animate {
+  transform: rotateZ(-230deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-240"].aos-animate {
+  transform: rotateZ(-240deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-250"].aos-animate {
+  transform: rotateZ(-250deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-260"].aos-animate {
+  transform: rotateZ(-260deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-270"].aos-animate {
+  transform: rotateZ(-270deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-280"].aos-animate {
+  transform: rotateZ(-280deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-290"].aos-animate {
+  transform: rotateZ(-290deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-300"].aos-animate {
+  transform: rotateZ(-300deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-310"].aos-animate {
+  transform: rotateZ(-310deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-320"].aos-animate {
+  transform: rotateZ(-320deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-330"].aos-animate {
+  transform: rotateZ(-330deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-340"].aos-animate {
+  transform: rotateZ(-340deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-350"].aos-animate {
+  transform: rotateZ(-350deg);
+}
+.carousel__slide-focus-ring {
+  outline: none !important;
+}
+.carousel__dot:focus {
+  outline: none !important;
+}
+.__react_component_tooltip.show {
+  opacity: 1 !important;
+}
 .pastupdates_Tooltip_1sIHR {
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -21148,8 +21905,10 @@ a {
 .dpcroot_SpoilerBlockPopup_1o_EG {
   width: 100%;
   height: 100%;
+  overflow: hidden;
   position: fixed;
-  background-color: #111;
+  background-color: #000000aa;
+  backdrop-filter: blur(10px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21157,63 +21916,147 @@ a {
   z-index: 99999;
 }
 .dpcroot_SpoilerBlockPopup_1o_EG .dpcroot_Box_2Aivx {
-  max-width: 600px;
+  max-width: 650px;
   border: 1px solid #333;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 30px;
+}
+.dpcroot_SpoilerBlockPopup_1o_EG .dpcroot_Box_2Aivx .dpcroot_ModalImg_2ydHP {
+  background-color: #00000090;
+  width: 100%;
+  padding: 20px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.dpcroot_SpoilerBlockPopup_1o_EG
+  .dpcroot_Box_2Aivx
+  .dpcroot_ModalImg_2ydHP
+  .dpcroot_DPCLogo_2Ppq_ {
+  max-width: 200px;
 }
 .dpcroot_SpoilerBlockPopup_1o_EG .dpcroot_Box_2Aivx .dpcroot_Header_2I324 {
   font-size: 20px;
   color: #fff;
+  font-family: "Reaver", serif;
+  font-weight: 600;
   width: 100%;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: 20px;
+  padding: 25px 0px;
 }
-.dpcroot_SpoilerBlockPopup_1o_EG .dpcroot_Box_2Aivx .dpcroot_Prompt_1NW6W {
-  font-size: 18px;
-  color: #ddd;
-  line-height: 26px;
-  margin-bottom: 4px;
-}
-.dpcroot_SpoilerBlockPopup_1o_EG .dpcroot_Box_2Aivx .dpcroot_Detail_3NnPJ {
+.dpcroot_SpoilerBlockPopup_1o_EG .dpcroot_Box_2Aivx .dpcroot_Note_3Q_Lt {
   font-size: 16px;
   color: #999;
-  margin-bottom: 8px;
-  text-shadow: 1px 1px 2px #000;
+  padding: 15px 0px 25px 0px;
 }
-.dpcroot_SpoilerBlockPopup_1o_EG .dpcroot_Box_2Aivx .dpcroot_Buttons_EcFDM {
+.dpcroot_SpoilerBlockPopup_1o_EG .dpcroot_Box_2Aivx .dpcroot_Skip_2Npeo {
+  width: 100%;
+  padding: 10px 0px;
+  background-color: #00000090;
+  text-decoration: underline;
+  text-align: center;
+  color: #6d6d6d;
+  cursor: pointer;
+  user-select: none;
+}
+.dpcroot_SpoilerBlockPopup_1o_EG .dpcroot_Box_2Aivx .dpcroot_Skip_2Npeo:hover {
+  filter: brightness(1.6);
+}
+.dpcroot_SpoilerBlockPopup_1o_EG .dpcroot_Box_2Aivx .dpcroot_Options_3IQ7w {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  padding: 0px 25px 10px 25px;
+}
+.dpcroot_SpoilerBlockPopup_1o_EG .dpcroot_Box_2Aivx .dpcroot_Divider_1gptC {
+  height: 100%;
+  width: 3px;
+  margin: 10px;
+  background-color: #92929290;
+}
+.dpcroot_SpoilerBlockPopup_1o_EG .dpcroot_Box_2Aivx .dpcroot_Option_3VyKv {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0px 10px;
+  flex-grow: 1;
 }
 .dpcroot_SpoilerBlockPopup_1o_EG
   .dpcroot_Box_2Aivx
-  .dpcroot_Buttons_EcFDM
+  .dpcroot_Option_3VyKv
+  .dpcroot_Label_1lNEB {
+  height: 20px;
+  width: 100%;
+  font-size: 14px;
+  color: #61b064;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.dpcroot_SpoilerBlockPopup_1o_EG
+  .dpcroot_Box_2Aivx
+  .dpcroot_Option_3VyKv
+  .dpcroot_Title_1cxlU {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: left;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  font-weight: 600;
+}
+.dpcroot_SpoilerBlockPopup_1o_EG
+  .dpcroot_Box_2Aivx
+  .dpcroot_Option_3VyKv
+  .dpcroot_Title_1cxlU
+  svg {
+  width: 25px;
+  margin-right: 10px;
+}
+.dpcroot_SpoilerBlockPopup_1o_EG
+  .dpcroot_Box_2Aivx
+  .dpcroot_Option_3VyKv
+  .dpcroot_Desc_k_TOy {
+  font-size: 17px;
+  color: #adadad;
+  margin-top: 5px;
+  text-align: justify;
+}
+.dpcroot_SpoilerBlockPopup_1o_EG
+  .dpcroot_Box_2Aivx
+  .dpcroot_Option_3VyKv
   .dpcroot_Button_22JQV {
-  height: 30px;
-  padding: 0px 10px;
-  background-color: #111;
-  color: #999;
-  font-size: 18px;
+  width: 100%;
+  height: 100%;
+  min-height: 50px;
+  padding: 5px 15px;
+  margin-top: 20px;
+  border: 2px solid #61b064;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  font-size: 16px;
   cursor: pointer;
   user-select: none;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 10px;
 }
 .dpcroot_SpoilerBlockPopup_1o_EG
   .dpcroot_Box_2Aivx
-  .dpcroot_Buttons_EcFDM
+  .dpcroot_Option_3VyKv
   .dpcroot_Button_22JQV
   svg {
   width: 30px;
@@ -21221,9 +22064,22 @@ a {
 }
 .dpcroot_SpoilerBlockPopup_1o_EG
   .dpcroot_Box_2Aivx
-  .dpcroot_Buttons_EcFDM
+  .dpcroot_Option_3VyKv
   .dpcroot_Button_22JQV:hover {
   filter: brightness(1.3);
+  background-color: #ffffff10;
+}
+.dpcroot_SpoilerBlockPopup_1o_EG
+  .dpcroot_Box_2Aivx
+  .dpcroot_OptionSpoilerFree_3q1Zm
+  .dpcroot_Button_22JQV {
+  border: 2px solid #6b7785;
+}
+.dpcroot_SpoilerBlockPopup_1o_EG
+  .dpcroot_Box_2Aivx
+  .dpcroot_OptionSpoilerFree_3q1Zm
+  svg {
+  opacity: 0.8;
 }
 .dpcroot_DPCHeaderSpring2021League_3Qm9p {
   width: 100%;
@@ -21686,29 +22542,38 @@ a {
 }
 .dpcroot_DPCHeaderTI2021Quals_2VuDI
   .dpcroot_TextContainer_1KhMv
-  .dpcroot_EventPresented_1j_VO {
-  font-size: 14px;
-  font-weight: 550px;
-  font-family: "Reaver", serif;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 8px;
-  text-align: center;
-  position: absolute;
-  top: 45px;
+  .dpcroot_CenterContent_zZHLs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 450px;
+  height: 100%;
+}
+.dpcroot_DPCHeaderTI2021Quals_2VuDI
+  .dpcroot_TextContainer_1KhMv
+  .dpcroot_TILogo_1oUKR {
+  width: 400px;
+  margin-bottom: 20px;
+}
+.dpcroot_DPCHeaderTI2021Quals_2VuDI
+  .dpcroot_TextContainer_1KhMv
+  .dpcroot_Underline_33Vg6 {
+  width: 300px;
+  height: 1px;
+  background: linear-gradient(to right, #ab8c3b 30%, #efe5bb 50%, #ab8c3b 70%);
+  margin-bottom: 20px;
 }
 .dpcroot_DPCHeaderTI2021Quals_2VuDI
   .dpcroot_TextContainer_1KhMv
   .dpcroot_EventTitle_1ytb2 {
   font-size: 20px;
-  font-weight: 550;
+  font-weight: 600;
   font-family: "Reaver", serif;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 2px;
   text-align: center;
-  position: absolute;
-  top: 245px;
 }
 .dpcroot_DPCHeaderTI2021Quals_2VuDI
   .dpcroot_TextContainer_1KhMv
@@ -21719,8 +22584,19 @@ a {
   text-transform: uppercase;
   letter-spacing: 8px;
   text-align: center;
+}
+.dpcroot_DPCHeaderTI2021Quals_2VuDI
+  .dpcroot_TextContainer_1KhMv
+  .dpcroot_EventPresented_1j_VO {
+  font-size: 14px;
+  font-weight: 550px;
+  font-family: "Reaver", serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  text-align: center;
   position: absolute;
-  top: 285px;
+  top: 45px;
 }
 .dpcroot_DPCHeaderTI2021Quals_2VuDI
   .dpcroot_TextContainer_1KhMv
@@ -21885,16 +22761,38 @@ a {
 }
 .dpcroot_DPCHeaderTI2021_34VR8
   .dpcroot_TextContainer_1KhMv
+  .dpcroot_CenterContent_zZHLs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 450px;
+  height: 100%;
+}
+.dpcroot_DPCHeaderTI2021_34VR8
+  .dpcroot_TextContainer_1KhMv
+  .dpcroot_TILogo_1oUKR {
+  width: 400px;
+  margin-bottom: 20px;
+}
+.dpcroot_DPCHeaderTI2021_34VR8
+  .dpcroot_TextContainer_1KhMv
+  .dpcroot_Underline_33Vg6 {
+  width: 300px;
+  height: 1px;
+  background: linear-gradient(to right, #ab8c3b 30%, #efe5bb 50%, #ab8c3b 70%);
+  margin-bottom: 20px;
+}
+.dpcroot_DPCHeaderTI2021_34VR8
+  .dpcroot_TextContainer_1KhMv
   .dpcroot_EventTitle_1ytb2 {
   font-size: 20px;
-  font-weight: 550px;
+  font-weight: 600;
   font-family: "Reaver", serif;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 2px;
   text-align: center;
-  position: absolute;
-  top: 250px;
 }
 .dpcroot_DPCHeaderTI2021_34VR8
   .dpcroot_TextContainer_1KhMv
@@ -21905,8 +22803,6 @@ a {
   text-transform: uppercase;
   letter-spacing: 8px;
   text-align: center;
-  position: absolute;
-  top: 280px;
 }
 .dpcroot_DPCHeaderTI2021_34VR8
   .dpcroot_TextContainer_1KhMv
@@ -22669,6 +23565,17 @@ a {
   justify-content: center;
   align-items: center;
   margin: 0px 20px;
+}
+.dpcmatchbanner_OptionSelector_2FabK
+  .dpcmatchbanner_DPCBlock_a1Zii
+  .dpcmatchbanner_DPCLogo_1B8Wa {
+  max-width: 75%;
+  transition-duration: 0.3s;
+}
+.dpcmatchbanner_OptionSelector_2FabK
+  .dpcmatchbanner_DPCBlock_a1Zii
+  .dpcmatchbanner_DPCLogo_1B8Wa:hover {
+  filter: brightness(1.4);
 }
 .dpcmatchbanner_OptionSelector_2FabK
   .dpcmatchbanner_DPCBlock_a1Zii
@@ -24021,7 +24928,7 @@ a {
   .dpcseriesdetails_Container_2jjhf {
   width: 100%;
   max-width: 960px;
-  z-index: 2;
+  z-index: 100;
   transition-property: max-width;
   transition-timing-function: ease-in-out;
   transition-duration: 0.2s;
@@ -24668,7 +25575,10 @@ a {
 .dpcseriesdetails_DPCSeriesDetailsGameOverview_KLWaH
   .dpcseriesdetails_CenterContainer_8B-ZB
   .dpcseriesdetails_WatchVod_2jhTZ.dpcseriesdetails_Disabled_1hb2S {
-  filter: brightness(0.6);
+  color: #2e3339;
+  font-weight: 700;
+  background-color: #5e6976;
+  border: 2px solid #5e6976;
   cursor: inherit;
   user-select: none;
 }
@@ -24677,7 +25587,7 @@ a {
   .dpcseriesdetails_WatchVod_2jhTZ:hover:not(.dpcseriesdetails_Disabled_1hb2S) {
   background-color: #767f8a;
   border-color: #767f8a;
-  color: #0f1113;
+  color: #fff;
 }
 .dpcseriesdetails_DPCSeriesDetailsGameOverview_KLWaH
   .dpcseriesdetails_CenterContainer_8B-ZB
@@ -24709,7 +25619,7 @@ a {
   .dpcseriesdetails_Details_-mnLW:hover:not(.dpcseriesdetails_Disabled_1hb2S) {
   background-color: #41474e;
   border-color: #41474e;
-  color: #0f1113;
+  color: #fff;
 }
 .dpcseriesdetails_DPCSeriesUpcoming_1yiu5 {
   width: 100%;
@@ -24842,7 +25752,7 @@ a {
   background-color: #20212b;
   border-top: 1px solid #314068;
   border-bottom: 1px solid #314068;
-  z-index: 2;
+  z-index: 100;
   width: calc(100% + 10px);
 }
 .dpcseriesdetails_MatchSectionPlayer_Ej-PQ.dpcseriesdetails_Left_2at7C {
@@ -25029,7 +25939,7 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 2;
+  z-index: 100;
 }
 .dpcseriesdetails_MatchSectionDetailsOverlay_3e5Em
   .dpcseriesdetails_TopSection_3-mWp
@@ -25113,7 +26023,7 @@ a {
   top: 0;
   right: -10%;
   opacity: 0.7;
-  z-index: 1;
+  z-index: 100;
 }
 .dpcseriesdetails_MatchSectionDetailsOverlay_3e5Em
   .dpcseriesdetails_ItemSection_3K3XM {
@@ -26738,8 +27648,8 @@ a {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background: -webkit-linear-gradient(left, #222222, #131315, #131315, #222226);
-  filter: drop-shadow(0px 16px 10px #00000060);
+  background: -webkit-linear-gradient(left, #131315, #131315, #131315, #131315);
+  filter: drop-shadow(0px 16px 10px #00000099);
   position: sticky;
   top: 140px;
   z-index: 999;
@@ -27456,12 +28366,14 @@ a {
 }
 .dpchomepage_DPCHomePageStandingsLeague_3C6rF .dpchomepage_Header_ks44o {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1295px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  padding: 0px 20px;
+  margin-bottom: -34px;
+  z-index: 100;
 }
 .dpchomepage_DPCHomePageStandingsLeague_3C6rF
   .dpchomepage_Header_ks44o
@@ -27470,9 +28382,8 @@ a {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #fff;
+  color: transparent;
   margin-bottom: -20px;
-  padding-left: 25px;
 }
 .dpchomepage_DPCFollowedTeamMatches_-BVSo {
   width: 100%;
@@ -27700,10 +28611,11 @@ a {
 }
 .dpcstandings_DPCStandingsDivision_KkUW3 {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1300px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 90;
 }
 .dpcstandings_DPCStandingsDivision_KkUW3 .dpcstandings_TeamLists_22PiN {
   width: 100%;
@@ -27712,7 +28624,6 @@ a {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  column-gap: 10px;
   row-gap: 30px;
 }
 .dpcstandings_DPCStandingsDivision_KkUW3
@@ -27762,7 +28673,7 @@ a {
 .dpcstandings_DPCStandingsRoundRobin_3gskr {
   max-width: 1200px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -27786,12 +28697,13 @@ a {
 }
 .dpcstandings_DPCStandingsRoundRobin_3gskr .dpcstandings_Title_1j7g0 {
   color: #fff;
-  font-size: 17px;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: 600;
   text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
+  text-align: left;
+  letter-spacing: 2px;
+  padding-left: 20px;
+  margin-bottom: 15px;
   margin-top: 20px;
 }
 .dpcstandings_DPCStandingsGrid_3w9B9 {
@@ -27959,7 +28871,8 @@ a {
   align-items: center;
 }
 .dpcstandings_DPCStandingsTeamList_jVT-8.dpcstandings_Narrow_20_Cv {
-  width: 390px;
+  width: 100%;
+  max-width: 390px;
 }
 .dpcstandings_DPCStandingsTeamList_jVT-8.dpcstandings_NoData_2oYg8 {
   opacity: 0;
@@ -28184,6 +29097,7 @@ a {
   padding-bottom: 60px;
   padding-right: 0px;
   max-width: 90vw;
+  overflow: visible;
 }
 .dpcstandings_DPCStandingsBracket_9iCXI
   .dpcstandings_BracketScroller_1eoNP::-webkit-scrollbar-track {
@@ -30276,7 +31190,7 @@ a {
 }
 .dpcinternational_InternationalPrizePoolBanner_2-bou {
   width: 100%;
-  height: 400px;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30290,8 +31204,8 @@ a {
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  padding: 100px 50px;
+  align-items: center;
+  padding: 100px 0px 50px 0px;
 }
 .dpcinternational_InternationalPrizePoolBanner_2-bou
   .dpcinternational_Background_3WNU2
@@ -30302,27 +31216,94 @@ a {
   letter-spacing: 2px;
   font-family: "Reaver", serif;
   color: #bb9a4a;
-  margin-bottom: 20px;
+  color: #fff;
+  margin-bottom: 0px;
 }
 .dpcinternational_InternationalPrizePoolBanner_2-bou
   .dpcinternational_Background_3WNU2
   .dpcinternational_PrizePoolValue_1MQ0J {
-  font-size: 50px;
+  font-size: 80px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-family: "Reaver", serif;
   color: #fff;
+  background: linear-gradient(
+    #ab8c3b 30%,
+    #efe5bb 50%,
+    #d2bd6f 60%,
+    #785f2f 80%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .dpcinternational_InternationalPrizeSplits_3L60o {
   width: 100%;
-  max-width: 1280px;
+  padding: 0px 0px 0px 0px;
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//dpc/ti10/prize_bg.jpg");
+  background-size: cover;
+  background-position: center bottom;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.dpcinternational_InternationalPrizeSplits_3L60o .dpcinternational_Title_SojdP {
-  font-size: 18px;
+.dpcinternational_InternationalPrizeSplits_3L60o
+  .dpcinternational_DividerTop_37w9F {
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//dpc/ti10/divider.png");
+  background-size: cover;
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  box-shadow: 0px 0px 20px #000;
+}
+.dpcinternational_InternationalPrizeSplits_3L60o
+  .dpcinternational_PrizeGridContain_1JvOd {
+  width: 100%;
+  height: auto;
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+.dpcinternational_InternationalPrizeSplits_3L60o
+  .dpcinternational_PrizeGridContain_1JvOd
+  .dpcinternational_PrizePoolLabel_3zfsB {
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 150px;
+  font-family: "Reaver", serif;
+  color: #bb9a4a;
+  color: #fff;
+  margin-bottom: 0px;
+}
+.dpcinternational_InternationalPrizeSplits_3L60o
+  .dpcinternational_PrizeGridContain_1JvOd
+  .dpcinternational_PrizePoolValue_1MQ0J {
+  font-size: 80px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  font-family: "Reaver", serif;
+  color: #fff;
+  background: linear-gradient(
+    #ab8c3b 30%,
+    #efe5bb 50%,
+    #d2bd6f 60%,
+    #785f2f 80%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.dpcinternational_InternationalPrizeSplits_3L60o
+  .dpcinternational_PrizeGridContain_1JvOd
+  .dpcinternational_Title_SojdP {
+  font-size: 26px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -30336,23 +31317,28 @@ a {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-top: 20px;
-  margin-bottom: 4px;
+  margin-bottom: 26px;
 }
 .dpcinternational_InternationalPrizeSplits_3L60o
+  .dpcinternational_PrizeGridContain_1JvOd
   .dpcinternational_Underline_sdZnr {
   width: 300px;
   height: 1px;
   background: linear-gradient(to right, #ab8c3b 30%, #efe5bb 50%, #ab8c3b 70%);
   margin-bottom: 40px;
 }
-.dpcinternational_InternationalPrizeSplits_3L60o .dpcinternational_Grid_xhXlW {
+.dpcinternational_InternationalPrizeSplits_3L60o
+  .dpcinternational_PrizeGridContain_1JvOd
+  .dpcinternational_Grid_xhXlW {
   width: 100%;
+  max-width: 1280px;
+  margin-bottom: 200px;
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 10px;
 }
 .dpcinternational_InternationalPrizeSplits_3L60o
+  .dpcinternational_PrizeGridContain_1JvOd
   .dpcinternational_Grid_xhXlW
   .dpcinternational_GridRow_1AKJi {
   width: 100%;
@@ -30360,9 +31346,10 @@ a {
   height: 100px;
   display: flex;
   flex-direction: row;
-  gap: 3px;
+  gap: 10px;
 }
 .dpcinternational_InternationalPrizeSplits_3L60o
+  .dpcinternational_PrizeGridContain_1JvOd
   .dpcinternational_Grid_xhXlW
   .dpcinternational_GridRow_1AKJi
   .dpcinternational_GridEntry_2njPa {
@@ -30373,14 +31360,15 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #222;
+  background-color: #00000090;
 }
 .dpcinternational_InternationalPrizeSplits_3L60o
+  .dpcinternational_PrizeGridContain_1JvOd
   .dpcinternational_Grid_xhXlW
   .dpcinternational_GridRow_1AKJi
   .dpcinternational_GridEntry_2njPa
   .dpcinternational_PrizeValue_2bebm {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -30396,6 +31384,7 @@ a {
   -webkit-text-fill-color: transparent;
 }
 .dpcinternational_InternationalPrizeSplits_3L60o
+  .dpcinternational_PrizeGridContain_1JvOd
   .dpcinternational_Grid_xhXlW
   .dpcinternational_GridRow_1AKJi
   .dpcinternational_GridEntry_2njPa
@@ -30406,47 +31395,298 @@ a {
 }
 .dpcinternational_InternationalCompendiumBanner_2regC {
   width: 100%;
-  height: 400px;
+  height: auto;
+  position: relative;
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//dpc/ti10/grout_bg.jpg");
+  background-size: cover;
+  background-position: center top;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  display: block;
+}
+.dpcinternational_InternationalCompendiumBanner_2regC
+  .dpcinternational_Sparkles_117Yy {
+  position: absolute;
+  width: 100%;
+  animation-duration: 10s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-name: dpcinternational_PortraitIn_q56ug;
+}
+@keyframes dpcinternational_PortraitIn_q56ug {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(30px);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-10px);
+    opacity: 0.5;
+  }
+}
+.dpcinternational_InternationalCompendiumBanner_2regC
+  .dpcinternational_Intro_2C-22 {
+  width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 50px 10vw 100px 10vw;
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//dpc/ti10/heroes_bottom.png");
+  background-size: 100% auto;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+.dpcinternational_InternationalCompendiumBanner_2regC
+  .dpcinternational_Intro_2C-22
+  .dpcinternational_IntroHeader_wTSxJ {
+  font-size: 36px;
+  font-family: "Reaver", serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-top: 50px;
+  color: #bb9a4a;
+}
+.dpcinternational_InternationalCompendiumBanner_2regC
+  .dpcinternational_Intro_2C-22
+  .dpcinternational_IntroTI_3DNva {
+  font-size: 60px;
+  font-family: "Reaver", serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-align: center;
+}
+.dpcinternational_InternationalCompendiumBanner_2regC
+  .dpcinternational_Intro_2C-22
+  .dpcinternational_IntroKickoff_21QaX {
+  font-size: 24px;
+  font-family: "Radiance", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #ffffff90;
+}
+.dpcinternational_InternationalCompendiumBanner_2regC
+  .dpcinternational_Intro_2C-22
+  .dpcinternational_IntroDesc_2aQZJ {
+  font-family: "Reaver", serif;
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+  letter-spacing: 1px;
+  max-width: 600px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.dpcinternational_InternationalCompendiumBanner_2regC
+  .dpcinternational_Intro_2C-22
+  .dpcinternational_FollowTitle_2T2jb {
+  margin-top: 80px;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+.dpcinternational_InternationalCompendiumBanner_2regC
+  .dpcinternational_Intro_2C-22
+  .dpcinternational_FollowSection_3Hv65 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+}
+.dpcinternational_InternationalCompendiumBanner_2regC
+  .dpcinternational_Intro_2C-22
+  .dpcinternational_FollowSection_3Hv65
+  .dpcinternational_Follow_14vtC {
+  width: 30%;
+  width: 70px;
+  height: 70px;
+  margin: 0px 10px;
+  transition-duration: 0.3s;
+}
+.dpcinternational_InternationalCompendiumBanner_2regC
+  .dpcinternational_Intro_2C-22
+  .dpcinternational_FollowSection_3Hv65
+  .dpcinternational_Follow_14vtC:hover {
+  transform: translateY(-4px);
+  filter: brightness(1.4);
+}
+.dpcinternational_InternationalCompendiumBanner_2regC
+  .dpcinternational_Intro_2C-22
+  .dpcinternational_FollowSection_3Hv65
+  .dpcinternational_FollowText_1o7L8 {
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+.dpcinternational_InternationalCompendiumBanner_2regC
+  .dpcinternational_Intro_2C-22
+  .dpcinternational_LearnMoreButton_w7D7U {
+  border: 1px solid #bb9a4a;
+  border-radius: 3px;
+  padding: 10px 35px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition-property: color, border-color, background-color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
+  cursor: pointer;
+  user-select: none;
+}
+.dpcinternational_InternationalCompendiumBanner_2regC
+  .dpcinternational_Intro_2C-22
+  .dpcinternational_LearnMoreButton_w7D7U:hover {
+  border-color: #e6c373;
+  color: #fff;
+  background-color: #ffffff1a;
 }
 .dpcinternational_InternationalCompendiumBanner_2regC
   .dpcinternational_Background_3WNU2 {
   width: 100%;
-  height: 100%;
-  max-width: 1280px;
-  background-size: cover;
+  height: auto;
+  background-color: #00000060;
+  overflow: visible;
+  background-position: center bottom;
+  background-size: 100% auto;
   background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 100px 50px;
 }
 .dpcinternational_InternationalCompendiumBanner_2regC
   .dpcinternational_Background_3WNU2
+  .dpcinternational_DividerTop_37w9F {
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//dpc/ti10/divider.png");
+  background-size: cover;
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  box-shadow: 0px 0px 20px #000;
+}
+.dpcinternational_InternationalCompendiumBanner_2regC
+  .dpcinternational_Background_3WNU2
+  .dpcinternational_CompendiumContent_D55D6 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1280px;
+  height: auto;
+  margin: 0 auto;
+  overflow: visible;
+}
+.dpcinternational_InternationalCompendiumBanner_2regC
+  .dpcinternational_Background_3WNU2
+  .dpcinternational_CompendiumContent_D55D6
+  .dpcinternational_ImageContainer_2PchX {
+  width: 50%;
+  overflow: visible;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+@media (max-width: 900px) {
+  .dpcinternational_InternationalCompendiumBanner_2regC
+    .dpcinternational_Background_3WNU2
+    .dpcinternational_CompendiumContent_D55D6
+    .dpcinternational_ImageContainer_2PchX {
+    display: none;
+  }
+}
+.dpcinternational_InternationalCompendiumBanner_2regC
+  .dpcinternational_Background_3WNU2
+  .dpcinternational_CompendiumContent_D55D6
+  .dpcinternational_ImageContainer_2PchX
+  .dpcinternational_StatueImage_G3fVP {
+  width: 200%;
+  margin-top: 30px;
+  z-index: 10;
+}
+.dpcinternational_InternationalCompendiumBanner_2regC
+  .dpcinternational_Background_3WNU2
+  .dpcinternational_CompendiumContent_D55D6
+  .dpcinternational_CompendiumText_2A0xZ {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 10;
+  width: 70%;
+  padding: 0px 0px 0px 100px;
+}
+@media (max-width: 900px) {
+  .dpcinternational_InternationalCompendiumBanner_2regC
+    .dpcinternational_Background_3WNU2
+    .dpcinternational_CompendiumContent_D55D6
+    .dpcinternational_CompendiumText_2A0xZ {
+    padding: 70px 20px;
+    width: 100%;
+  }
+}
+.dpcinternational_InternationalCompendiumBanner_2regC
+  .dpcinternational_Background_3WNU2
+  .dpcinternational_CompendiumContent_D55D6
+  .dpcinternational_CompendiumText_2A0xZ
   .dpcinternational_CompendiumHeader_3eL2k {
   font-size: 20px;
   font-weight: 700;
   font-family: "Reaver", serif;
-  text-align: center;
+  text-align: left;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #bb9a4a;
 }
+@media (max-width: 900px) {
+  .dpcinternational_InternationalCompendiumBanner_2regC
+    .dpcinternational_Background_3WNU2
+    .dpcinternational_CompendiumContent_D55D6
+    .dpcinternational_CompendiumText_2A0xZ
+    .dpcinternational_CompendiumHeader_3eL2k {
+    font-size: 18px;
+  }
+}
 .dpcinternational_InternationalCompendiumBanner_2regC
   .dpcinternational_Background_3WNU2
+  .dpcinternational_CompendiumContent_D55D6
+  .dpcinternational_CompendiumText_2A0xZ
   .dpcinternational_CompendiumHeader_3eL2k
   .CompendiumTitle {
   font-size: 50px;
   font-weight: 700;
+  line-height: 60px;
   font-family: "Reaver", serif;
-  text-align: center;
+  text-align: left;
   color: #fff;
   letter-spacing: 2px;
 }
+@media (max-width: 900px) {
+  .dpcinternational_InternationalCompendiumBanner_2regC
+    .dpcinternational_Background_3WNU2
+    .dpcinternational_CompendiumContent_D55D6
+    .dpcinternational_CompendiumText_2A0xZ
+    .dpcinternational_CompendiumHeader_3eL2k
+    .CompendiumTitle {
+    font-size: 40px;
+    line-height: 45px;
+  }
+}
 .dpcinternational_InternationalCompendiumBanner_2regC
   .dpcinternational_Background_3WNU2
+  .dpcinternational_CompendiumContent_D55D6
+  .dpcinternational_CompendiumText_2A0xZ
   .dpcinternational_Underline_sdZnr {
   width: 300px;
   height: 1px;
@@ -30455,17 +31695,22 @@ a {
 }
 .dpcinternational_InternationalCompendiumBanner_2regC
   .dpcinternational_Background_3WNU2
+  .dpcinternational_CompendiumContent_D55D6
+  .dpcinternational_CompendiumText_2A0xZ
   .dpcinternational_CompendiumDetails_1qWYQ {
   font-family: "Reaver", serif;
-  font-size: 13px;
-  text-align: center;
+  font-size: 18px;
+  text-align: left;
   color: #fff;
   letter-spacing: 1px;
-  max-width: 400px;
+  max-width: 600px;
+  margin-top: 10px;
   margin-bottom: 30px;
 }
 .dpcinternational_InternationalCompendiumBanner_2regC
   .dpcinternational_Background_3WNU2
+  .dpcinternational_CompendiumContent_D55D6
+  .dpcinternational_CompendiumText_2A0xZ
   .dpcinternational_LearnMoreButton_w7D7U {
   border: 1px solid #bb9a4a;
   border-radius: 3px;
@@ -30484,42 +31729,99 @@ a {
 }
 .dpcinternational_InternationalCompendiumBanner_2regC
   .dpcinternational_Background_3WNU2
+  .dpcinternational_CompendiumContent_D55D6
+  .dpcinternational_CompendiumText_2A0xZ
   .dpcinternational_LearnMoreButton_w7D7U:hover {
   border-color: #e6c373;
   color: #fff;
   background-color: #ffffff1a;
 }
+.dpcinternational_InternationalCompendiumBanner_2regC
+  .dpcinternational_Background_3WNU2
+  .dpcinternational_Rewardline_1OUDY {
+  width: 100%;
+  margin-top: 0px;
+}
 .dpcinternational_InternationalTeamList_1bgLd {
   width: 100%;
-  max-width: 1280px;
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//dpc/ti10/grout_bg.jpg");
+  padding-bottom: 100px;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+.dpcinternational_InternationalTeamList_1bgLd
+  .dpcinternational_DividerTop_37w9F {
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//dpc/ti10/divider.png");
+  background-size: cover;
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  box-shadow: 0px 0px 20px #000;
+}
 .dpcinternational_InternationalTeamList_1bgLd .dpcinternational_Title_SojdP {
-  font-size: 18px;
+  font-size: 36px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 3px;
+  padding-top: 100px;
   font-family: "Reaver", serif;
-  background: linear-gradient(
-    #ab8c3b 30%,
-    #efe5bb 50%,
-    #d2bd6f 60%,
-    #785f2f 80%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-top: 20px;
-  margin-bottom: 4px;
+  text-shadow: 0px 0px 10px #000;
+  color: #fff;
+  margin-bottom: 20px;
 }
 .dpcinternational_InternationalTeamList_1bgLd
   .dpcinternational_Underline_sdZnr {
   width: 300px;
-  height: 1px;
+  height: 2px;
   background: linear-gradient(to right, #ab8c3b 30%, #efe5bb 50%, #ab8c3b 70%);
   margin-bottom: 40px;
+}
+.dpcinternational_InternationalTeamList_1bgLd .dpcinternational_TeamGrid_2ARgj {
+  width: 100%;
+  max-width: 1280px;
+  padding: 0px 5vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.dpcinternational_IternationalTeamListTeam_25Rkh {
+  width: 180px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0px 0px 30px #000000aa;
+  border: 2px solid #000;
+  background-color: #00000090;
+}
+.dpcinternational_IternationalTeamListTeam_25Rkh
+  .dpcinternational_GoldTeamLogo_34nla {
+  width: 90px;
+  height: 90px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.dpcinternational_IternationalTeamListTeam_25Rkh
+  .dpcinternational_TeamName_3K_Fv {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #fff;
+}
+.dpcinternational_IternationalTeamListTeam_25Rkh
+  .dpcinternational_TeamRegion_-XF6D {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #a3a3a3;
 }
 * {
   box-sizing: border-box;
@@ -31074,7 +32376,6 @@ a {
 }
 .dpcstandingspage_DPCStandingsPageMajor_3rfFl {
   width: 100%;
-  max-width: 1200px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -31083,6 +32384,7 @@ a {
 }
 .dpcstandingspage_DPCStandingsPageMajor_3rfFl .dpcstandingspage_Header_1EgAU {
   width: 100%;
+  max-width: 1200px;
   display: flex;
   flex-direction: row;
   justify-content: right;
@@ -31093,8 +32395,7 @@ a {
 }
 .dpcstandingspage_DPCStandingsPageTIQualifiers_1z6AW {
   width: 100%;
-  max-width: 1200px;
-  min-height: 1500px;
+  min-height: 1200px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31103,11 +32404,12 @@ a {
 .dpcstandingspage_DPCStandingsPageTIQualifiers_1z6AW
   .dpcstandingspage_Header_1EgAU {
   width: 100%;
+  max-width: 1420px;
   display: flex;
   flex-direction: row;
   justify-content: right;
   align-items: center;
-  margin-top: 45px;
+  margin-top: 80px;
   margin-bottom: 20px;
   padding: 0px 20px;
 }
@@ -32878,6 +34180,7 @@ a {
   align-items: center;
   background: #161618;
   background: linear-gradient(300deg, #161618 0%, #142031 0%, #1d2b41 100%);
+  background-size: cover;
   background-position: top, center;
   background-repeat: no-repeat;
 }
@@ -32989,6 +34292,10 @@ a {
   max-width: 750px;
   padding-top: 40px;
   padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 }
 .dpcaboutpage_DPCAboutPage_1bwEV
   .dpcaboutpage_Format_ATlbm
@@ -33021,6 +34328,199 @@ a {
   letter-spacing: 0.5px;
   margin-bottom: 10px;
   line-height: 18px;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV
+  .dpcaboutpage_Format_ATlbm
+  .dpcaboutpage_FormatEntry_35szi
+  .dpcaboutpage_EventImage_b9E48 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV
+  .dpcaboutpage_Format_ATlbm
+  .dpcaboutpage_FormatEntry_35szi
+  .dpcaboutpage_EventImage_b9E48
+  .dpcaboutpage_TitleMain_3Olht {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30px;
+  margin-top: 20px;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV
+  .dpcaboutpage_Format_ATlbm
+  .dpcaboutpage_FormatEntry_35szi
+  .dpcaboutpage_EventImage_b9E48
+  .dpcaboutpage_TitleDesc_1lbTN {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  letter-spacing: 1px;
+  line-height: 16px;
+  font-size: 16px;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV
+  .dpcaboutpage_Format_ATlbm
+  .dpcaboutpage_FormatEntry_35szi
+  .dpcaboutpage_EventImage_b9E48
+  .dpcaboutpage_ToursTitle_3TMIW {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 42px;
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV
+  .dpcaboutpage_Format_ATlbm
+  .dpcaboutpage_FormatEntry_35szi
+  .dpcaboutpage_EventImage_b9E48
+  .dpcaboutpage_ToursDesc_1JpyM {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 350px;
+  margin-bottom: 4px;
+  font-size: 13px;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV
+  .dpcaboutpage_Format_ATlbm
+  .dpcaboutpage_FormatEntry_35szi
+  .dpcaboutpage_EventImage_b9E48
+  .dpcaboutpage_Columns_16Qnp {
+  width: 643px;
+  display: flex;
+  flex-direction: row;
+  gap: 23px;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV
+  .dpcaboutpage_Format_ATlbm
+  .dpcaboutpage_FormatEntry_35szi
+  .dpcaboutpage_EventImage_b9E48
+  .dpcaboutpage_Columns_16Qnp
+  .dpcaboutpage_Column_1tS9R {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV
+  .dpcaboutpage_Format_ATlbm
+  .dpcaboutpage_FormatEntry_35szi
+  .dpcaboutpage_EventImage_b9E48
+  .dpcaboutpage_Columns_16Qnp
+  .dpcaboutpage_Column_1tS9R
+  .dpcaboutpage_ToursYear_3Ubc- {
+  font-size: 18px;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV
+  .dpcaboutpage_Format_ATlbm
+  .dpcaboutpage_FormatEntry_35szi
+  .dpcaboutpage_EventImage_b9E48
+  .dpcaboutpage_Columns_16Qnp
+  .dpcaboutpage_Column_1tS9R
+  .dpcaboutpage_ToursYearRegional_1nHXU {
+  font-size: 14px;
+  margin-top: 28px;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV
+  .dpcaboutpage_Format_ATlbm
+  .dpcaboutpage_FormatEntry_35szi
+  .dpcaboutpage_EventImage_b9E48
+  .dpcaboutpage_Columns_16Qnp
+  .dpcaboutpage_Column_1tS9R
+  .dpcaboutpage_ToursYearRegionalDesc_-kcDH {
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  padding: 0px 24px;
+  margin-top: 8px;
+  color: #ddd;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV
+  .dpcaboutpage_Format_ATlbm
+  .dpcaboutpage_FormatEntry_35szi
+  .dpcaboutpage_EventImage_b9E48
+  .dpcaboutpage_Columns_16Qnp
+  .dpcaboutpage_Column_1tS9R
+  .dpcaboutpage_ToursYearMajor_1Pbp7 {
+  font-size: 14px;
+  margin-top: 36px;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV
+  .dpcaboutpage_Format_ATlbm
+  .dpcaboutpage_FormatEntry_35szi
+  .dpcaboutpage_EventImage_b9E48
+  .dpcaboutpage_Columns_16Qnp
+  .dpcaboutpage_Column_1tS9R
+  .dpcaboutpage_ToursYearMajorDesc_ef63N {
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  padding: 0px 24px;
+  margin-top: 8px;
+  color: #ddd;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV
+  .dpcaboutpage_Format_ATlbm
+  .dpcaboutpage_FormatEntry_35szi
+  .dpcaboutpage_EventImage_b9E48
+  .dpcaboutpage_RegionalsTitle_32uOa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 120px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV
+  .dpcaboutpage_Format_ATlbm
+  .dpcaboutpage_FormatEntry_35szi
+  .dpcaboutpage_EventImage_b9E48
+  .dpcaboutpage_RegionalsDesc_3s1VU {
+  margin-top: 10px;
+  font-size: 17px;
+  color: #ddd;
+  max-width: 400px;
+  text-align: center;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV
+  .dpcaboutpage_Format_ATlbm
+  .dpcaboutpage_FormatEntry_35szi
+  .dpcaboutpage_EventImage_b9E48
+  .dpcaboutpage_InternationalTitle_1tBdf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 90px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV
+  .dpcaboutpage_Format_ATlbm
+  .dpcaboutpage_FormatEntry_35szi
+  .dpcaboutpage_EventImage_b9E48
+  .dpcaboutpage_InternationalDesc_3JtIm {
+  margin-top: 10px;
+  font-size: 17px;
+  color: #ddd;
+  max-width: 600px;
+  text-align: center;
+}
+.dpcaboutpage_DPCAboutPage_1bwEV
+  .dpcaboutpage_Format_ATlbm
+  .dpcaboutpage_EventImage_b9E48 {
+  width: 750px;
+  height: 901px;
+  background-color: #1a1b1f;
+  margin-top: 40px;
 }
 * {
   box-sizing: border-box;

@@ -5,22 +5,22 @@
 !(function (e) {
   function a(a) {
     for (
-      var r, c, l = a[0], i = a[1], s = a[2], m = 0, _ = [];
-      m < l.length;
+      var r, c, i = a[0], l = a[1], s = a[2], m = 0, _ = [];
+      m < i.length;
       m++
     )
-      (c = l[m]),
+      (c = i[m]),
         Object.prototype.hasOwnProperty.call(o, c) && o[c] && _.push(o[c][0]),
         (o[c] = 0);
-    for (r in i) Object.prototype.hasOwnProperty.call(i, r) && (e[r] = i[r]);
+    for (r in l) Object.prototype.hasOwnProperty.call(l, r) && (e[r] = l[r]);
     for (g && g(a); _.length; ) _.shift()();
     return n.push.apply(n, s || []), t();
   }
   function t() {
     for (var e, a = 0; a < n.length; a++) {
-      for (var t = n[a], r = !0, l = 1; l < t.length; l++) {
-        var i = t[l];
-        0 !== o[i] && (r = !1);
+      for (var t = n[a], r = !0, i = 1; i < t.length; i++) {
+        var l = t[i];
+        0 !== o[l] && (r = !1);
       }
       r && (n.splice(a--, 1), (e = c((c.s = t[0]))));
     }
@@ -79,11 +79,11 @@
       return Object.prototype.hasOwnProperty.call(e, a);
     }),
     (c.p = "");
-  var l = (window.webpackJsonp = window.webpackJsonp || []),
-    i = l.push.bind(l);
-  (l.push = a), (l = l.slice());
-  for (var s = 0; s < l.length; s++) a(l[s]);
-  var g = i;
+  var i = (window.webpackJsonp = window.webpackJsonp || []),
+    l = i.push.bind(i);
+  (i.push = a), (i = i.slice());
+  for (var s = 0; s < i.length; s++) a(i[s]);
+  var g = l;
   n.push(["gfbn", 0]), t();
 })({
   "++Fi": function (e, a, t) {
@@ -763,10 +763,10 @@
   CqJL: function (e, a, t) {
     "use strict";
     t.d(a, "b", function () {
-      return R;
+      return G;
     }),
       t.d(a, "a", function () {
-        return I;
+        return A;
       });
     var r = t("mrSG");
     t("q1tI");
@@ -837,20 +837,51 @@
           return a;
       }
     }
-    var n;
+    var n, c;
     !(function (e) {
-      (e[(e.k_ECaptivePortalState_Unknown = 0)] =
-        "k_ECaptivePortalState_Unknown"),
-        (e[(e.k_ECaptivePortalState_Connected = 1)] =
-          "k_ECaptivePortalState_Connected"),
-        (e[(e.k_ECaptivePortalState_CaptivePortal = 2)] =
-          "k_ECaptivePortalState_CaptivePortal"),
-        (e[(e.k_ECaptivePortalState_TimedOut = 3)] =
-          "k_ECaptivePortalState_TimedOut"),
-        (e[(e.k_ECaptivePortalState_Failed = 4)] =
-          "k_ECaptivePortalState_Failed");
-    })(n || (n = {}));
-    var c;
+      (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
+        "k_EConnectivityTestResult_Unknown"),
+        (e[(e.k_EConnectivityTestResult_Connected = 1)] =
+          "k_EConnectivityTestResult_Connected"),
+        (e[(e.k_EConnectivityTestResult_CaptivePortal = 2)] =
+          "k_EConnectivityTestResult_CaptivePortal"),
+        (e[(e.k_EConnectivityTestResult_TimedOut = 3)] =
+          "k_EConnectivityTestResult_TimedOut"),
+        (e[(e.k_EConnectivityTestResult_Failed = 4)] =
+          "k_EConnectivityTestResult_Failed");
+    })(n || (n = {})),
+      (function (e) {
+        (e[(e.k_EConnectivityTestSimulation_None = 0)] =
+          "k_EConnectivityTestSimulation_None"),
+          (e[(e.k_EConnectivityTestSimulation_CaptivePortal_Redirected = 1)] =
+            "k_EConnectivityTestSimulation_CaptivePortal_Redirected"),
+          (e[(e.k_EConnectivityTestSimulation_CaptivePortal_InPlace = 2)] =
+            "k_EConnectivityTestSimulation_CaptivePortal_InPlace"),
+          (e[(e.k_EConnectivityTestSimulation_TimeOut = 3)] =
+            "k_EConnectivityTestSimulation_TimeOut"),
+          (e[(e.k_EConnectivityTestSimulation_Fail = 4)] =
+            "k_EConnectivityTestSimulation_Fail");
+      })(c || (c = {}));
+    var i;
+    !(function (e) {
+      (e[(e.k_EControllerBindingType_None = 0)] =
+        "k_EControllerBindingType_None"),
+        (e[(e.k_EControllerBindingType_Key = 1)] =
+          "k_EControllerBindingType_Key"),
+        (e[(e.k_EControllerBindingType_MouseButton = 2)] =
+          "k_EControllerBindingType_MouseButton"),
+        (e[(e.k_EControllerBindingType_Gamepad = 3)] =
+          "k_EControllerBindingType_Gamepad"),
+        (e[(e.k_EControllerBindingType_Mousewheel = 4)] =
+          "k_EControllerBindingType_Mousewheel"),
+        (e[(e.k_EControllerBindingType_Modeshift = 5)] =
+          "k_EControllerBindingType_Modeshift"),
+        (e[(e.k_EControllerBindingType_GameAction = 6)] =
+          "k_EControllerBindingType_GameAction"),
+        (e[(e.k_EControllerBindingType_ControllerAction = 7)] =
+          "k_EControllerBindingType_ControllerAction");
+    })(i || (i = {}));
+    var l;
     !(function (e) {
       (e[(e.Input = 0)] = "Input"),
         (e[(e.AllOutput = 1)] = "AllOutput"),
@@ -859,8 +890,8 @@
         (e[(e.Sub = 4)] = "Sub"),
         (e[(e.BackLeft = 5)] = "BackLeft"),
         (e[(e.BackRight = 6)] = "BackRight");
-    })(c || (c = {}));
-    var l;
+    })(l || (l = {}));
+    var s;
     !(function (e) {
       (e[(e.Error = -2)] = "Error"),
         (e[(e.Invalid = -1)] = "Invalid"),
@@ -873,8 +904,8 @@
         (e[(e.Applied = 6)] = "Applied"),
         (e[(e.ClientRestartPending = 7)] = "ClientRestartPending"),
         (e[(e.SystemRestartPending = 8)] = "SystemRestartPending");
-    })(l || (l = {}));
-    var i;
+    })(s || (s = {}));
+    var g;
     !(function (e) {
       (e[(e.EBrowserType_OffScreen = 0)] = "EBrowserType_OffScreen"),
         (e[(e.EBrowserType_OpenVROverlay = 1)] = "EBrowserType_OpenVROverlay"),
@@ -898,8 +929,8 @@
         (e[(e.EBrowserType_Offscreen_FriendsUI = 11)] =
           "EBrowserType_Offscreen_FriendsUI"),
         (e[(e.EBrowserType_MAX = 12)] = "EBrowserType_MAX");
-    })(i || (i = {}));
-    var s, g;
+    })(g || (g = {}));
+    var m, _;
     !(function (e) {
       (e[(e.k_EClientUINotificationGroupChatMessage = 1)] =
         "k_EClientUINotificationGroupChatMessage"),
@@ -907,7 +938,7 @@
           "k_EClientUINotificationFriendChatMessage"),
         (e[(e.k_EClientUINotificationFriendPersonaState = 3)] =
           "k_EClientUINotificationFriendPersonaState");
-    })(s || (s = {})),
+    })(m || (m = {})),
       (function (e) {
         (e[(e.k_EComputerActiveStateInvalid = 0)] =
           "k_EComputerActiveStateInvalid"),
@@ -915,14 +946,14 @@
             "k_EComputerActiveStateActive"),
           (e[(e.k_EComputerActiveStateIdle = 2)] =
             "k_EComputerActiveStateIdle");
-      })(g || (g = {}));
-    var m;
+      })(_ || (_ = {}));
+    var d;
     !(function (e) {
       (e[(e.k_EPending = 0)] = "k_EPending"),
         (e[(e.k_EAccepted = 1)] = "k_EAccepted"),
         (e[(e.k_ERejected = 2)] = "k_ERejected");
-    })(m || (m = {}));
-    var _, d;
+    })(d || (d = {}));
+    var p, u;
     !(function (e) {
       (e[(e.k_EClientUsedInputTypeKeyboard = 0)] =
         "k_EClientUsedInputTypeKeyboard"),
@@ -931,7 +962,7 @@
         (e[(e.k_EClientUsedInputTypeController = 2)] =
           "k_EClientUsedInputTypeController"),
         (e[(e.k_EClientUsedInputTypeMax = 3)] = "k_EClientUsedInputTypeMax");
-    })(_ || (_ = {})),
+    })(p || (p = {})),
       (function (e) {
         (e[(e.k_ERemoteClientLaunchOK = 1)] = "k_ERemoteClientLaunchOK"),
           (e[(e.k_ERemoteClientLaunchFail = 2)] = "k_ERemoteClientLaunchFail"),
@@ -986,14 +1017,14 @@
             "k_ERemoteClientLaunchInvisible"),
           (e[(e.k_ERemoteClientLaunchRestrictedCountry = 28)] =
             "k_ERemoteClientLaunchRestrictedCountry");
-      })(d || (d = {}));
-    var p;
+      })(u || (u = {}));
+    var h;
     !(function (e) {
       (e[(e.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
         (e[(e.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
         (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
-    })(p || (p = {}));
-    var u;
+    })(h || (h = {}));
+    var b;
     !(function (e) {
       (e[(e.k_BluetoothDeviceType_Invalid = 0)] =
         "k_BluetoothDeviceType_Invalid"),
@@ -1019,14 +1050,14 @@
           "k_BluetoothDeviceType_Gamepad"),
         (e[(e.k_BluetoothDeviceType_Keyboard = 11)] =
           "k_BluetoothDeviceType_Keyboard");
-    })(u || (u = {}));
-    var h, b, y, k, v;
+    })(b || (b = {}));
+    var y, k, v, f, E;
     !(function (e) {
       (e[(e.Unknown = 0)] = "Unknown"),
         (e[(e.Wired = 1)] = "Wired"),
         (e[(e.Wireless = 2)] = "Wireless"),
         (e[(e.Virtual = 3)] = "Virtual");
-    })(h || (h = {})),
+    })(y || (y = {})),
       (function (e) {
         (e[(e.NotPresent = 0)] = "NotPresent"),
           (e[(e.Failed = 1)] = "Failed"),
@@ -1035,14 +1066,14 @@
           (e[(e.Connecting = 4)] = "Connecting"),
           (e[(e.Connected = 5)] = "Connected"),
           (e[(e.Retrying = 6)] = "Retrying");
-      })(b || (b = {})),
+      })(k || (k = {})),
       (function (e) {
         (e[(e.None = 0)] = "None"),
           (e[(e.Weak = 1)] = "Weak"),
           (e[(e.Ok = 2)] = "Ok"),
           (e[(e.Good = 3)] = "Good"),
           (e[(e.Excellent = 4)] = "Excellent");
-      })(y || (y = {})),
+      })(v || (v = {})),
       (function (e) {
         (e[(e.None = 0)] = "None"),
           (e[(e.StaticWep = 1)] = "StaticWep"),
@@ -1052,37 +1083,37 @@
           (e[(e.Wpa2 = 16)] = "Wpa2"),
           (e[(e.Wpa2Enterprise = 32)] = "Wpa2Enterprise"),
           (e[(e.Unsupported = 32768)] = "Unsupported");
-      })(k || (k = {})),
+      })(f || (f = {})),
       (function (e) {
         (e[(e.k_EHTTPProxyMode_Invalid = 0)] = "k_EHTTPProxyMode_Invalid"),
           (e[(e.k_EHTTPProxyMode_None = 1)] = "k_EHTTPProxyMode_None"),
           (e[(e.k_EHTTPProxyMode_Manual = 2)] = "k_EHTTPProxyMode_Manual"),
           (e[(e.k_EHTTPProxyMode_Automatic = 3)] =
             "k_EHTTPProxyMode_Automatic");
-      })(v || (v = {}));
-    var f, E;
+      })(E || (E = {}));
+    var C, B;
     !(function (e) {
       (e[(e.SystemKey0 = 0)] = "SystemKey0"),
         (e[(e.SystemKey1 = 1)] = "SystemKey1");
-    })(f || (f = {})),
+    })(C || (C = {})),
       (function (e) {
         (e[(e.Hidden = 0)] = "Hidden"),
           (e[(e.Notification = 1)] = "Notification"),
           (e[(e.Overlay = 2)] = "Overlay"),
           (e[(e.Opaque = 3)] = "Opaque"),
           (e[(e.OverlayKeyboard = 4)] = "OverlayKeyboard");
-      })(E || (E = {}));
-    var C = t("gM6l");
-    function B(e) {
-      if (!N() || !window.document.cookie) return null;
+      })(B || (B = {}));
+    var N = t("gM6l");
+    function S(e) {
+      if (!T() || !window.document.cookie) return null;
       var a = document.cookie.match("(^|; )" + e + "=([^;]*)");
       return a && a[2] ? decodeURIComponent(a[2]) : null;
     }
-    function N() {
+    function T() {
       return !!window.document;
     }
-    var S,
-      T = {
+    var L,
+      P = {
         EUNIVERSE: 0,
         WEB_UNIVERSE: "",
         LANGUAGE: "english",
@@ -1122,9 +1153,9 @@
         PAGE_TIMESTAMP: 0,
         get SESSIONID() {
           return (function () {
-            if (!N()) return S || (S = L()), S;
-            var e = B("sessionid");
-            e || (e = L());
+            if (!T()) return L || (L = R()), L;
+            var e = S("sessionid");
+            e || (e = R());
             return e;
           })();
         },
@@ -1133,16 +1164,17 @@
         DEV_MODE: !1,
         IN_LIBRARY: !1,
         IN_GAMEPADUI: !1,
+        IN_LOGIN: !1,
       };
-    function L() {
+    function R() {
       var e = (function () {
         for (var e = "", a = 0; a < 24; a++)
-          e += Object(C.a)(0, 35).toString(36);
+          e += Object(N.a)(0, 35).toString(36);
         return e;
       })();
       return (
         (function (e, a, t, r) {
-          if (N()) {
+          if (T()) {
             r || (r = "/");
             var o = "";
             if (void 0 !== t && t) {
@@ -1162,13 +1194,61 @@
         e
       );
     }
+    t("VQwQ");
+    var I = (function () {
+      function e() {
+        this.m_vecCallbacks = [];
+      }
+      return (
+        (e.prototype.Register = function (e) {
+          var a = this;
+          this.m_vecCallbacks.push(e);
+          return {
+            Unregister: function () {
+              var t, r;
+              (t = a.m_vecCallbacks),
+                (r = e),
+                (function (e, a) {
+                  var t = e.findIndex(a);
+                  t >= 0 && e.splice(t, 1);
+                })(t, function (e) {
+                  return r == e;
+                });
+            },
+          };
+        }),
+        (e.prototype.Dispatch = function () {
+          for (var e = [], a = 0; a < arguments.length; a++)
+            e[a] = arguments[a];
+          for (var t = 0, r = this.m_vecCallbacks; t < r.length; t++) {
+            var o = r[t];
+            o.apply(void 0, e);
+          }
+        }),
+        (e.prototype.ClearAllCallbacks = function () {
+          this.m_vecCallbacks = [];
+        }),
+        (e.prototype.CountRegistered = function () {
+          return this.m_vecCallbacks.length;
+        }),
+        e
+      );
+    })();
+    var O;
     t("Gp1o");
+    !(function (e) {
+      (e[(e.None = 0)] = "None"),
+        (e[(e.Ago = 1)] = "Ago"),
+        (e[(e.Remaining = 2)] = "Remaining");
+    })(O || (O = {}));
     new Map();
     new Map(), new Map();
     new Map(), new Map(), new Map(), new Map(), new Map();
-    var P = (function () {
+    var D = (function () {
       function e() {
-        (this.m_mapTokens = new Map()), (this.m_mapFallbackTokens = new Map());
+        (this.m_mapTokens = new Map()),
+          (this.m_mapFallbackTokens = new Map()),
+          (this.m_cbkTokensChanged = new I());
       }
       return (
         (e.InstallErrorReportingStore = function (e) {
@@ -1182,7 +1262,7 @@
         }),
         (e.IsELanguageValidInRealm = function (e, a) {
           return (
-            a === (29 === e ? p.k_ESteamRealmChina : p.k_ESteamRealmGlobal)
+            a === (29 === e ? h.k_ESteamRealmChina : h.k_ESteamRealmGlobal)
           );
         }),
         (e.GetLanguageListForRealms = function (e) {
@@ -1199,13 +1279,14 @@
         (e.prototype.InitFromObjects = function (e, a, t, o, n) {
           n || this.m_mapTokens.clear();
           var c = Object(r.a)(Object(r.a)({}, t || {}), e),
-            l = Object(r.a)(Object(r.a)({}, o || {}), a || {});
-          this.AddTokens(c, l);
+            i = Object(r.a)(Object(r.a)({}, o || {}), a || {});
+          this.AddTokens(c, i), this.m_cbkTokensChanged.Dispatch();
         }),
         (e.prototype.InitDirect = function (e, a) {
           this.m_mapTokens.clear(),
             this.m_mapFallbackTokens.clear(),
-            this.AddTokens(e, a);
+            this.AddTokens(e, a),
+            this.m_cbkTokensChanged.Dispatch();
         }),
         (e.prototype.AddTokens = function (e, a) {
           var t = this;
@@ -1218,6 +1299,9 @@
                   t.m_mapFallbackTokens.set(e, a[e]);
               });
         }),
+        (e.prototype.GetTokensChangedCallbackList = function () {
+          return this.m_cbkTokensChanged;
+        }),
         (e.prototype.GetPreferredLocales = function () {
           return this.m_rgLocalesToUse
             ? this.m_rgLocalesToUse
@@ -1228,9 +1312,9 @@
         (e.prototype.GetELanguageFallbackOrder = function (a) {
           void 0 === a && (a = null);
           var t = new Array();
-          (t.push(o(T.LANGUAGE)),
-          (T.SUPPORTED_LANGUAGES || []).forEach(function (e) {
-            e.value != T.LANGUAGE && t.push(o(e.value));
+          (t.push(o(P.LANGUAGE)),
+          (P.SUPPORTED_LANGUAGES || []).forEach(function (e) {
+            e.value != P.LANGUAGE && t.push(o(e.value));
           }),
           a) &&
             e.GetLanguageListForRealms(a).forEach(function (e) {
@@ -1251,7 +1335,7 @@
                   "Unable to find localization token '" +
                     a +
                     "' for language '" +
-                    T.LANGUAGE +
+                    P.LANGUAGE +
                     "', " +
                     this.m_mapTokens.size +
                     " tokens in map"
@@ -1269,10 +1353,10 @@
         e
       );
     })();
-    function R(e) {
+    function G(e) {
       for (var a = [], t = 1; t < arguments.length; t++)
         a[t - 1] = arguments[t];
-      var r = I.LocalizeString(e);
+      var r = A.LocalizeString(e);
       return void 0 === r
         ? e
         : (a.length > 0 &&
@@ -1285,8 +1369,8 @@
             })),
           r);
     }
-    var I = new P();
-    window.LocalizationManager = I;
+    var A = new D();
+    window.LocalizationManager = A;
   },
   Gb4a: function (e, a, t) {
     e.exports = {
@@ -1394,8 +1478,8 @@
       o,
       n = t("mrSG"),
       c = t("vDqi"),
-      l = t.n(c),
-      i = t("gfbn"),
+      i = t.n(c),
+      l = t("gfbn"),
       s = t("tkkQ"),
       g = t("q1tI"),
       m = t.n(g),
@@ -1621,19 +1705,8 @@
       U = t("W8ih"),
       W = t.n(U),
       x = t("TyAF");
-    function q(e, a, t) {
-      return {
-        get: function () {
-          var e = t.value.bind(this);
-          return (
-            this.hasOwnProperty(a) ||
-              Object.defineProperty(this, a, { value: e }),
-            e
-          );
-        },
-      };
-    }
-    var Y = t("8oBW"),
+    var q = t("VQwQ"),
+      Y = t("8oBW"),
       V = function (e) {
         return m.a.createElement(
           X,
@@ -2184,7 +2257,7 @@
             }),
               Y.isIOS &&
                 (this.intervalHandle = setInterval(function () {
-                  if (i.g_App.shouldShowHelp(e.props.helpPage)) {
+                  if (l.g_App.shouldShowHelp(e.props.helpPage)) {
                     var a = Date.now(),
                       t = (a - e.lastScrollUpdate) / 1e3;
                     if (((e.lastScrollUpdate = a), !e.state.touching)) {
@@ -2201,7 +2274,7 @@
             clearInterval(this.intervalHandle);
           }),
           (a.prototype.onDismiss = function () {
-            i.g_App.setHelpShown(this.props.helpPage);
+            l.g_App.setHelpShown(this.props.helpPage);
           }),
           (a.prototype.scrollHelp = function (e) {
             this.refHelpPages.current.scrollTo({
@@ -2245,7 +2318,7 @@
                 })
               );
             var c = m.a.createElement("div", null),
-              l = m.a.createElement("div", null);
+              i = m.a.createElement("div", null);
             return (
               Y.isMobile ||
                 ((c = m.a.createElement("img", {
@@ -2255,7 +2328,7 @@
                   src: s.a.IMG_URL + "back_arrow.png",
                   className: W.a.PageLeft,
                 })),
-                (l = m.a.createElement(
+                (i = m.a.createElement(
                   "div",
                   {
                     onClick: function () {
@@ -2272,7 +2345,7 @@
                 {
                   className: A(
                     W.a.HelpContainer,
-                    i.g_App.shouldShowHelp(this.props.helpPage) && W.a.Show
+                    l.g_App.shouldShowHelp(this.props.helpPage) && W.a.Show
                   ),
                   onTouchStart: this.onTouchStart,
                   onTouchEnd: this.onTouchEnd,
@@ -2286,7 +2359,7 @@
                   r
                 ),
                 c,
-                l,
+                i,
                 m.a.createElement(
                   "div",
                   { className: W.a.PageSelector },
@@ -2307,10 +2380,10 @@
               )
             );
           }),
-          Object(n.c)([q], a.prototype, "onTouchStart", null),
-          Object(n.c)([q], a.prototype, "onTouchEnd", null),
-          Object(n.c)([q], a.prototype, "onDismiss", null),
-          Object(n.c)([q], a.prototype, "scrollHelp", null),
+          Object(n.c)([q.a], a.prototype, "onTouchStart", null),
+          Object(n.c)([q.a], a.prototype, "onTouchEnd", null),
+          Object(n.c)([q.a], a.prototype, "onDismiss", null),
+          Object(n.c)([q.a], a.prototype, "scrollHelp", null),
           (a = Object(n.c)([x.a], a))
         );
       })(m.a.Component),
@@ -2322,16 +2395,16 @@
           Object(n.d)(a, e),
           (a.prototype.render = function () {
             var e =
-                i.g_App.shouldShowHelp(Dt.Main) ||
-                i.g_App.shouldShowHelp(Dt.Predictions) ||
-                i.g_App.shouldShowHelp(Dt.Fantasy),
-              a = i.g_App.shouldShowHelp(Dt.Main)
+                l.g_App.shouldShowHelp(Dt.Main) ||
+                l.g_App.shouldShowHelp(Dt.Predictions) ||
+                l.g_App.shouldShowHelp(Dt.Fantasy),
+              a = l.g_App.shouldShowHelp(Dt.Main)
                 ? m.a.createElement(V, { helpPage: Dt.Main })
                 : m.a.createElement("div", null),
-              t = i.g_App.shouldShowHelp(Dt.Predictions)
+              t = l.g_App.shouldShowHelp(Dt.Predictions)
                 ? m.a.createElement(K, { helpPage: Dt.Predictions })
                 : m.a.createElement("div", null),
-              r = i.g_App.shouldShowHelp(Dt.Fantasy)
+              r = l.g_App.shouldShowHelp(Dt.Fantasy)
                 ? m.a.createElement(z, { helpPage: Dt.Fantasy })
                 : m.a.createElement("div", null),
               o = {};
@@ -2352,9 +2425,9 @@
           (a = Object(n.c)([x.a], a))
         );
       })(m.a.Component),
-      Z = J,
-      Q = t("+66j"),
-      $ = t.n(Q),
+      Q = J,
+      Z = t("+66j"),
+      $ = t.n(Z),
       ee = (function (e) {
         function a() {
           return (null !== e && e.apply(this, arguments)) || this;
@@ -2398,9 +2471,9 @@
       oe = t("novD"),
       ne = t.n(oe),
       ce = t("gPb/"),
-      le = t.n(ce),
-      ie = t("xNsg"),
-      se = t.n(ie),
+      ie = t.n(ce),
+      le = t("xNsg"),
+      se = t.n(le),
       ge = t("Gb4a"),
       me = t.n(ge),
       _e = t("2iEm"),
@@ -2790,8 +2863,8 @@
               onError: this.HandleError,
             });
           }),
-          Object(n.c)([q], a.prototype, "getImageURL", null),
-          Object(n.c)([q], a.prototype, "HandleError", null),
+          Object(n.c)([q.a], a.prototype, "getImageURL", null),
+          Object(n.c)([q.a], a.prototype, "HandleError", null),
           (a = Object(n.c)([x.a], a))
         );
       })(m.a.Component),
@@ -2808,7 +2881,7 @@
           (a.prototype.getContents = function () {
             if (!this.state.bVisible)
               return m.a.createElement("div", { key: this.props.nSeriesID });
-            var e = i.g_App.getSeriesData(
+            var e = l.g_App.getSeriesData(
               this.props.nLeagueID,
               this.props.nSeriesID
             );
@@ -2816,7 +2889,7 @@
               return m.a.createElement(
                 "div",
                 {
-                  className: A(me.a.ThrobberSpacing, le.a.FadeInDelay),
+                  className: A(me.a.ThrobberSpacing, ie.a.FadeInDelay),
                   key: this.props.nSeriesID,
                 },
                 m.a.createElement(be, {
@@ -2828,11 +2901,11 @@
             if (!e.series_id)
               return m.a.createElement("div", { key: this.props.nSeriesID });
             for (
-              var a, t, r = "", o = [], n = 0, c = 0, l = e.match_minimal;
-              c < l.length;
+              var a, t, r = "", o = [], n = 0, c = 0, i = e.match_minimal;
+              c < i.length;
               c++
             ) {
-              var s = l[c],
+              var s = i[c],
                 g = s.tourney.radiant_team_id,
                 _ = s.tourney.dire_team_id;
               switch (((n = Math.max(n, s.start_time)), s.match_outcome)) {
@@ -2864,7 +2937,7 @@
               (t = "" + (o[e.team_2.team_id] || 0)),
               m.a.createElement(
                 "div",
-                { className: le.a.FadeIn, key: this.props.nSeriesID },
+                { className: ie.a.FadeIn, key: this.props.nSeriesID },
                 m.a.createElement(
                   "div",
                   { className: me.a.Columns },
@@ -2942,7 +3015,7 @@
               )
             );
           }),
-          Object(n.c)([q], a.prototype, "onChange", null),
+          Object(n.c)([q.a], a.prototype, "onChange", null),
           (a = Object(n.c)([x.a], a))
         );
       })(m.a.Component),
@@ -2959,7 +3032,7 @@
           (a.prototype.getContents = function () {
             if (!this.state.bVisible)
               return m.a.createElement("div", { key: this.props.matchID });
-            var e = i.g_App.getMatchMinimal(
+            var e = l.g_App.getMatchMinimal(
               this.props.leagueID,
               this.props.matchID
             );
@@ -2967,7 +3040,7 @@
               return m.a.createElement(
                 "div",
                 {
-                  className: A(me.a.ThrobberSpacing, le.a.FadeInDelay),
+                  className: A(me.a.ThrobberSpacing, ie.a.FadeInDelay),
                   key: this.props.matchID,
                 },
                 m.a.createElement(be, {
@@ -2991,7 +3064,7 @@
                   : (t < 10 ? "0" : "") + t + ":" + (r < 10 ? "0" : "") + r;
             return m.a.createElement(
               "div",
-              { className: le.a.FadeIn, key: this.props.matchID },
+              { className: ie.a.FadeIn, key: this.props.matchID },
               m.a.createElement(
                 "div",
                 { className: me.a.Columns },
@@ -3064,7 +3137,7 @@
               )
             );
           }),
-          Object(n.c)([q], a.prototype, "onChange", null),
+          Object(n.c)([q.a], a.prototype, "onChange", null),
           (a = Object(n.c)([x.a], a))
         );
       })(m.a.Component),
@@ -3143,8 +3216,8 @@
           }),
           (a.prototype.getcontents = function () {
             if (!this.state.bVisible) return m.a.createElement("div", null);
-            var e = i.g_App.getTeamData(this.props.teamID),
-              a = i.g_App.getLeagueInfo(this.props.leagueID);
+            var e = l.g_App.getTeamData(this.props.teamID),
+              a = l.g_App.getLeagueInfo(this.props.leagueID);
             if (!e || !a)
               return m.a.createElement("div", {
                 className: A(me.a.TopDown, me.a.Generic),
@@ -3249,7 +3322,7 @@
               )
             );
           }),
-          Object(n.c)([q], a.prototype, "onChange", null),
+          Object(n.c)([q.a], a.prototype, "onChange", null),
           (a = Object(n.c)([x.a], a))
         );
       })(m.a.Component),
@@ -3266,17 +3339,17 @@
           (a.prototype.getContents = function () {
             if (!this.state.bVisible)
               return m.a.createElement("div", { key: this.props.nodeID });
-            var e = i.g_App.getLeagueNodeData(
+            var e = l.g_App.getLeagueNodeData(
                 this.props.leagueID,
                 this.props.nodeID
               ),
-              a = e ? i.g_App.getTeamData(e.team_id_1) : void 0,
-              t = e ? i.g_App.getTeamData(e.team_id_2) : void 0;
+              a = e ? l.g_App.getTeamData(e.team_id_1) : void 0,
+              t = e ? l.g_App.getTeamData(e.team_id_2) : void 0;
             if (!e)
               return m.a.createElement(
                 "div",
                 {
-                  className: A(me.a.ThrobberSpacing, le.a.FadeInDelay),
+                  className: A(me.a.ThrobberSpacing, ie.a.FadeInDelay),
                   key: this.props.nodeID,
                 },
                 m.a.createElement(be, {
@@ -3285,7 +3358,7 @@
                   position: "center",
                 })
               );
-            var r = i.g_App.getLeagueNodeGroupData(
+            var r = l.g_App.getLeagueNodeGroupData(
                 this.props.leagueID,
                 e.node_group_id
               ),
@@ -3319,10 +3392,10 @@
                 "/images/image_8.png"
             );
             var c = r && 7 == r.node_group_type,
-              l = m.a.createElement("div", { className: me.a.Details });
+              i = m.a.createElement("div", { className: me.a.Details });
             return (
               c
-                ? (l = m.a.createElement(
+                ? (i = m.a.createElement(
                     "div",
                     { className: me.a.Details },
                     Object(y.b)("#MatchDetails_ShowMatch")
@@ -3332,7 +3405,7 @@
                   n &&
                   r.is_final_group &&
                   n
-                ? (l = m.a.createElement(
+                ? (i = m.a.createElement(
                     "div",
                     { className: me.a.Details },
                     Object(y.b)("#MatchDetails_Elimination")
@@ -3342,7 +3415,7 @@
                   r &&
                   r.is_final_group &&
                   n &&
-                  (l = m.a.createElement(
+                  (i = m.a.createElement(
                     "div",
                     { className: me.a.Details },
                     Object(y.b)("#MatchDetails_Championship")
@@ -3350,10 +3423,10 @@
               m.a.createElement(
                 "div",
                 {
-                  className: le.a.FadeIn,
+                  className: ie.a.FadeIn,
                   key: this.props.leagueID + "_ " + this.props.nodeID,
                 },
-                l,
+                i,
                 m.a.createElement(
                   "div",
                   { className: me.a.Columns },
@@ -3419,7 +3492,7 @@
               )
             );
           }),
-          Object(n.c)([q], a.prototype, "onChange", null),
+          Object(n.c)([q.a], a.prototype, "onChange", null),
           (a = Object(n.c)([x.a], a))
         );
       })(m.a.Component),
@@ -3438,14 +3511,14 @@
               return m.a.createElement("div", {
                 key: this.props.serverSteamID,
               });
-            var e = i.g_App.getLeagueNodeData(
+            var e = l.g_App.getLeagueNodeData(
                 this.props.leagueID,
                 this.props.nodeID
               ),
-              a = i.g_App.getTeamData(this.props.radiantTeamID),
-              t = i.g_App.getTeamData(this.props.direTeamID),
+              a = l.g_App.getTeamData(this.props.radiantTeamID),
+              t = l.g_App.getTeamData(this.props.direTeamID),
               r = e
-                ? i.g_App.getLeagueNodeGroupData(
+                ? l.g_App.getLeagueNodeGroupData(
                     this.props.leagueID,
                     e.node_group_id
                   )
@@ -3475,17 +3548,17 @@
                   n = !0;
               }
             var c = r && 7 == r.node_group_type,
-              l = m.a.createElement("div", { className: me.a.Details });
+              i = m.a.createElement("div", { className: me.a.Details });
             return (
               e &&
                 (c
-                  ? (l = m.a.createElement(
+                  ? (i = m.a.createElement(
                       "div",
                       { className: me.a.Details },
                       Object(y.b)("#MatchDetails_ShowMatch")
                     ))
                   : 0 == e.losing_node_id && 0 != e.winning_node_id && n
-                  ? (l = m.a.createElement(
+                  ? (i = m.a.createElement(
                       "div",
                       { className: me.a.Details },
                       Object(y.b)("#MatchDetails_Elimination")
@@ -3495,15 +3568,15 @@
                     r &&
                     r.is_final_group &&
                     n &&
-                    (l = m.a.createElement(
+                    (i = m.a.createElement(
                       "div",
                       { className: me.a.Details },
                       Object(y.b)("#MatchDetails_Championship")
                     ))),
               m.a.createElement(
                 "div",
-                { className: le.a.FadeIn, key: this.props.serverSteamID },
-                l,
+                { className: ie.a.FadeIn, key: this.props.serverSteamID },
+                i,
                 m.a.createElement(
                   "div",
                   { className: me.a.Columns },
@@ -3569,7 +3642,7 @@
               )
             );
           }),
-          Object(n.c)([q], a.prototype, "onChange", null),
+          Object(n.c)([q.a], a.prototype, "onChange", null),
           (a = Object(n.c)([x.a], a))
         );
       })(m.a.Component);
@@ -3592,10 +3665,10 @@
           (a.prototype.getContents = function () {
             if (!this.state.bVisible)
               return m.a.createElement("div", null, " ");
-            var e = i.g_App.getTeamData(this.props.teamID),
+            var e = l.g_App.getTeamData(this.props.teamID),
               a =
                 this.props.accountID &&
-                i.g_App.getPlayerData(this.props.accountID),
+                l.g_App.getPlayerData(this.props.accountID),
               t = this.props.action == Pe.Add || this.props.action == Pe.Remove,
               r = [];
             if (!e || (t && !a))
@@ -3654,7 +3727,7 @@
               )
             );
           }),
-          Object(n.c)([q], a.prototype, "onChange", null),
+          Object(n.c)([q.a], a.prototype, "onChange", null),
           (a = Object(n.c)([x.a], a))
         );
       })(m.a.Component),
@@ -3845,13 +3918,13 @@
                   (n = !0);
             }
             var c = "",
-              l = Date.now() / 1e3;
+              i = Date.now() / 1e3;
             if (!n)
               if (o) {
-                var i = this.props.data_1 - l,
-                  g = (Math.floor(i / 60), Math.floor(i / 3600)),
-                  _ = Math.floor(i / 86400),
-                  d = Math.floor(i / 604800);
+                var l = this.props.data_1 - i,
+                  g = (Math.floor(l / 60), Math.floor(l / 3600)),
+                  _ = Math.floor(l / 86400),
+                  d = Math.floor(l / 604800);
                 c =
                   g < 1
                     ? Object(y.b)("#Feed_Timestamp_Future_Shortly")
@@ -3876,7 +3949,7 @@
                         d
                       );
               } else {
-                var p = l - this.props.timestamp,
+                var p = i - this.props.timestamp,
                   u = Math.floor(p / 60),
                   h = Math.floor(p / 3600),
                   b = Math.floor(p / 86400),
@@ -3942,7 +4015,7 @@
         return (
           Object(n.d)(a, e),
           (a.prototype.toggle = function () {
-            i.g_App.toggleFavorite(
+            l.g_App.toggleFavorite(
               this.props.type,
               this.props.id,
               this.props.name,
@@ -3950,7 +4023,7 @@
             );
           }),
           (a.prototype.render = function () {
-            var e = i.g_App.isFavorite(this.props.type, this.props.id);
+            var e = l.g_App.isFavorite(this.props.type, this.props.id);
             return m.a.createElement(
               "div",
               { className: A(He.a.FavoriteToggle, this.props.className) },
@@ -3963,7 +4036,7 @@
               })
             );
           }),
-          Object(n.c)([q], a.prototype, "toggle", null),
+          Object(n.c)([q.a], a.prototype, "toggle", null),
           (a = Object(n.c)([x.a], a))
         );
       })(m.a.Component),
@@ -4007,8 +4080,8 @@
             this.setState({ bFallbackError: !0 }),
               this.props.onError && this.props.onError(e);
           }),
-          Object(n.c)([q], a.prototype, "HandleError", null),
-          Object(n.c)([q], a.prototype, "HandleFallbackError", null),
+          Object(n.c)([q.a], a.prototype, "HandleError", null),
+          Object(n.c)([q.a], a.prototype, "HandleFallbackError", null),
           a
         );
       })(m.a.Component),
@@ -4025,9 +4098,9 @@
               o = this.props.location.pathname == f(),
               n = this.props.location.pathname == E(),
               c = this.props.location.pathname == B(),
-              l = this.props.location.pathname == G(r.LeagueSelect),
+              i = this.props.location.pathname == G(r.LeagueSelect),
               g = -1 != this.props.location.pathname.indexOf(C()),
-              _ = o || n || c || l || g,
+              _ = o || n || c || i || g,
               d = m.a.createElement("img", {
                 src: s.a.IMG_URL + "back_arrow.png",
                 className: A(Fe.a.BackArrow, _ && Fe.a.Hidden),
@@ -4099,7 +4172,7 @@
                       )),
               this.props.profileAccountID)
             ) {
-              var k = i.g_App.getSteamPlayerInfo(),
+              var k = l.g_App.getSteamPlayerInfo(),
                 v = k && k.response ? k.response.players[0] : null,
                 N = v ? v.avatarfull : "";
               p = m.a.createElement(
@@ -4140,7 +4213,7 @@
                   src: s.a.IMG_URL + "help.png",
                   className: Fe.a.HelpPage,
                   onClick: function () {
-                    return i.g_App.resetHelpShown(t.props.helpPageButton);
+                    return l.g_App.resetHelpShown(t.props.helpPageButton);
                   },
                 })),
               m.a.createElement(
@@ -4185,10 +4258,10 @@
         return (
           Object(n.d)(a, e),
           (a.prototype.componentDidMount = function () {
-            i.g_App.triggerShowHelpPage(Dt.Main);
+            l.g_App.triggerShowHelpPage(Dt.Main);
           }),
           (a.prototype.render = function () {
-            var e = i.g_App.getFeed();
+            var e = l.g_App.getFeed();
             if (!e)
               return m.a.createElement(
                 "div",
@@ -4203,7 +4276,7 @@
                   { className: A(ne.a.Contents, ne.a.Loading) },
                   m.a.createElement(
                     "div",
-                    { className: le.a.FadeInDelay },
+                    { className: ie.a.FadeInDelay },
                     m.a.createElement(be, {
                       size: "medium",
                       string: Object(y.b)("#Loading"),
@@ -4270,8 +4343,8 @@
           t = e.tier,
           r = e.leagueID,
           c = e.prizepool,
-          l = e.startdate,
-          i = e.enddate,
+          i = e.startdate,
+          l = e.enddate,
           g = Object(n.f)(e, [
             "title",
             "tier",
@@ -4288,12 +4361,12 @@
           case 4:
             _ = Object(y.b)("#LeagueTier_4");
         }
-        var d = new Date(1e3 * l),
-          p = new Date(1e3 * i),
+        var d = new Date(1e3 * i),
+          p = new Date(1e3 * l),
           u = Object(y.b)("#DayMonth_" + d.getMonth(), d.getDate()),
           h = Object(y.b)("#DayMonth_" + p.getMonth(), p.getDate()),
           b =
-            0 == l || 0 == i ? Object(y.b)("#Fantasy_Upcoming") : u + " - " + h;
+            0 == i || 0 == l ? Object(y.b)("#Fantasy_Upcoming") : u + " - " + h;
         return m.a.createElement(
           _e.a,
           { to: D(r, o.Standings) },
@@ -4336,7 +4409,7 @@
         return (
           Object(n.d)(a, e),
           (a.prototype.render = function () {
-            var e = i.g_App.getLeagueInfoList();
+            var e = l.g_App.getLeagueInfoList();
             return e
               ? m.a.createElement(
                   "div",
@@ -4373,7 +4446,7 @@
                   { className: Xe.a.TournamentListPage },
                   m.a.createElement(
                     "div",
-                    { className: le.a.FadeInDelay },
+                    { className: ie.a.FadeInDelay },
                     m.a.createElement(be, {
                       size: "medium",
                       string: "Loading...",
@@ -4385,9 +4458,9 @@
           (a = Object(n.c)([x.a], a))
         );
       })(m.a.Component),
-      Ze = Je,
-      Qe = t("w3zt"),
-      $e = t.n(Qe),
+      Qe = Je,
+      Ze = t("w3zt"),
+      $e = t.n(Ze),
       ea = t("fdZV"),
       aa = t.n(ea),
       ta = t("IV5K"),
@@ -4468,10 +4541,10 @@
               )
             );
           }),
-          Object(n.c)([q], a.prototype, "onTouchStart", null),
-          Object(n.c)([q], a.prototype, "onTouchEnd", null),
-          Object(n.c)([q], a.prototype, "onTouchMove", null),
-          Object(n.c)([q], a.prototype, "OnChange", null),
+          Object(n.c)([q.a], a.prototype, "onTouchStart", null),
+          Object(n.c)([q.a], a.prototype, "onTouchEnd", null),
+          Object(n.c)([q.a], a.prototype, "onTouchMove", null),
+          Object(n.c)([q.a], a.prototype, "OnChange", null),
           (a = Object(n.c)([x.a], a))
         );
       })(m.a.Component),
@@ -4484,7 +4557,7 @@
           Object(n.d)(a, e),
           (a.prototype.selectTeam1 = function () {
             null == this.props.demoMode &&
-              i.g_App.selectProPredictionToMake(
+              l.g_App.selectProPredictionToMake(
                 this.props.leagueId,
                 this.props.match.nodeId,
                 this.props.match.teams[0].teamId,
@@ -4494,7 +4567,7 @@
           }),
           (a.prototype.selectTeam2 = function () {
             null == this.props.demoMode &&
-              i.g_App.selectProPredictionToMake(
+              l.g_App.selectProPredictionToMake(
                 this.props.leagueId,
                 this.props.match.nodeId,
                 this.props.match.teams[1].teamId,
@@ -4504,17 +4577,17 @@
           }),
           (a.prototype.handleOnChange = function (e) {
             null == this.props.demoMode &&
-              i.g_App.setSelectedPredictionWagerAmount(e);
+              l.g_App.setSelectedPredictionWagerAmount(e);
           }),
           (a.prototype.OnCancelWager = function () {
-            null == this.props.demoMode && i.g_App.clearProPredictionToMake();
+            null == this.props.demoMode && l.g_App.clearProPredictionToMake();
           }),
           (a.prototype.OnMakeWager = function () {
-            null == this.props.demoMode && i.g_App.makeSelectedProPrediction();
+            null == this.props.demoMode && l.g_App.makeSelectedProPrediction();
           }),
           (a.prototype.clearError = function () {
             null == this.props.demoMode &&
-              i.g_App.clearProPredictionError(
+              l.g_App.clearProPredictionError(
                 this.props.leagueId,
                 this.props.match.nodeId
               );
@@ -4605,12 +4678,12 @@
                   state: At.STATE_INCOMPLETE,
                 });
             } else
-              (e = i.g_App.getProPrediction(
+              (e = l.g_App.getProPrediction(
                 this.props.leagueId,
                 this.props.match.nodeId
               )),
-                (a = i.g_App.getSelectedProPrediction()),
-                (t = i.g_App.getProPredictionError(
+                (a = l.g_App.getSelectedProPrediction()),
+                (t = l.g_App.getProPredictionError(
                   this.props.leagueId,
                   this.props.match.nodeId
                 ));
@@ -4655,11 +4728,11 @@
                       )
                     ));
               else if (r.teams[c].games_won > r.teams[1 - c].games_won) {
-                var l = null;
-                e.state == At.STATE_WON && (l = aa.a.TeamWinner),
+                var i = null;
+                e.state == At.STATE_WON && (i = aa.a.TeamWinner),
                   (n[c] = m.a.createElement(
                     "div",
-                    { className: A(aa.a.TeamStatus, l) },
+                    { className: A(aa.a.TeamStatus, i) },
                     m.a.createElement(
                       "div",
                       null,
@@ -4814,7 +4887,7 @@
                 ? 50
                 : Math.min(
                     this.props.maxWager,
-                    i.g_App.getProPredictionWagerTokens()
+                    l.g_App.getProPredictionWagerTokens()
                   );
             if (null != t) {
               var v = "#Predictions_UnknownError";
@@ -4869,7 +4942,7 @@
                 )
               );
             } else if (
-              i.g_App.isProPredictionInProgress(
+              l.g_App.isProPredictionInProgress(
                 this.props.leagueId,
                 this.props.match.nodeId
               )
@@ -5120,7 +5193,7 @@
                   _e.a,
                   {
                     to: P(r.leagueID, r.seriesID),
-                    className: A(le.a.FadeIn, aa.a.PredictionCard, o),
+                    className: A(ie.a.FadeIn, aa.a.PredictionCard, o),
                   },
                   g,
                   _,
@@ -5128,18 +5201,18 @@
                 )
               : m.a.createElement(
                   "div",
-                  { className: A(le.a.FadeIn, aa.a.PredictionCard, o) },
+                  { className: A(ie.a.FadeIn, aa.a.PredictionCard, o) },
                   g,
                   _,
                   b
                 );
           }),
-          Object(n.c)([q], a.prototype, "selectTeam1", null),
-          Object(n.c)([q], a.prototype, "selectTeam2", null),
-          Object(n.c)([q], a.prototype, "handleOnChange", null),
-          Object(n.c)([q], a.prototype, "OnCancelWager", null),
-          Object(n.c)([q], a.prototype, "OnMakeWager", null),
-          Object(n.c)([q], a.prototype, "clearError", null),
+          Object(n.c)([q.a], a.prototype, "selectTeam1", null),
+          Object(n.c)([q.a], a.prototype, "selectTeam2", null),
+          Object(n.c)([q.a], a.prototype, "handleOnChange", null),
+          Object(n.c)([q.a], a.prototype, "OnCancelWager", null),
+          Object(n.c)([q.a], a.prototype, "OnMakeWager", null),
+          Object(n.c)([q.a], a.prototype, "clearError", null),
           (a = Object(n.c)([x.a], a))
         );
       })(m.a.Component),
@@ -5152,24 +5225,24 @@
           Object(n.d)(a, e),
           (a.prototype.componentDidMount = function () {
             var e = this,
-              a = 1e3 * i.g_App.getRecentAndUpcomingMatchesRefreshInterval();
+              a = 1e3 * l.g_App.getRecentAndUpcomingMatchesRefreshInterval();
             (this.intervalHandle = setInterval(function () {
               e.setState({ isStaleOdds: !0 });
               var a = e;
               setTimeout(function () {
                 a.setState({
-                  upcomingMatchData: i.g_App.getRecentAndUpcomingMatches(),
+                  upcomingMatchData: l.g_App.getRecentAndUpcomingMatches(),
                 }),
                   a.setState({ isStaleOdds: !1 });
               }, 3e3);
             }, a)),
-              i.g_App.triggerShowHelpPage(Dt.Predictions);
+              l.g_App.triggerShowHelpPage(Dt.Predictions);
           }),
           (a.prototype.componentWillUnmount = function () {
             clearInterval(this.intervalHandle);
           }),
           (a.prototype.render = function () {
-            var e = i.g_App.getRecentAndUpcomingMatches();
+            var e = l.g_App.getRecentAndUpcomingMatches();
             if (!e)
               return m.a.createElement(
                 "div",
@@ -5180,8 +5253,8 @@
                   position: "center",
                 })
               );
-            var a = i.g_App.getProPredictionWagerTokens(),
-              t = i.g_App.getProPredictionMaxWager();
+            var a = l.g_App.getProPredictionWagerTokens(),
+              t = l.g_App.getProPredictionMaxWager();
             if (!e.tournaments || 0 == e.tournaments.length)
               return m.a.createElement(
                 "div",
@@ -5223,9 +5296,9 @@
             for (var r = [], o = 0; o < e.tournaments.length; ++o) {
               var n = e.tournaments[o];
               if (n.matches && n.id && 0 != n.matches.length) {
-                for (var c = !1, l = 0; l < n.matches.length; ++l) {
-                  if ((d = n.matches[l]).nodeId) {
-                    var g = i.g_App.getProPrediction(n.id, d.nodeId);
+                for (var c = !1, i = 0; i < n.matches.length; ++i) {
+                  if ((d = n.matches[i]).nodeId) {
+                    var g = l.g_App.getProPrediction(n.id, d.nodeId);
                     if (
                       g &&
                       (0 != g.wagerAmount ||
@@ -5259,9 +5332,9 @@
                       : (0 != e.matchTime ? e.matchTime : Number.MAX_VALUE) -
                           (0 != a.matchTime ? a.matchTime : Number.MAX_VALUE);
                   });
-                  for (l = 0; l < _.length; ++l) {
+                  for (i = 0; i < _.length; ++i) {
                     var d;
-                    if ((d = _[l]).nodeId) {
+                    if ((d = _[i]).nodeId) {
                       var p = n.id + "." + d.nodeId;
                       r.push(
                         m.a.createElement(na, {
@@ -5297,8 +5370,8 @@
           (a = Object(n.c)([x.a], a))
         );
       })(m.a.Component),
-      la = t("8kC8"),
-      ia = t.n(la),
+      ia = t("8kC8"),
+      la = t.n(ia),
       sa = t("2vnA"),
       ga = t("1w3K"),
       ma = (function (e) {
@@ -5318,10 +5391,10 @@
           (a.prototype.GetLoadingThrobber = function () {
             return m.a.createElement(
               "div",
-              { className: ia.a.Loading, key: "loading_throbber" },
+              { className: la.a.Loading, key: "loading_throbber" },
               m.a.createElement(
                 "div",
-                { className: le.a.FadeInDelay },
+                { className: ie.a.FadeInDelay },
                 m.a.createElement(be, {
                   size: "medium",
                   string: Object(y.b)("#Loading"),
@@ -5332,7 +5405,7 @@
           }),
           (a.prototype.GetLeagueList = function () {
             var e = [],
-              a = i.g_App.getFantasyLeagueStatus();
+              a = l.g_App.getFantasyLeagueStatus();
             if (!a) return e.push(this.GetLoadingThrobber()), e;
             var t = this.props.section != r.LeagueSelect;
             for (var o in (e.push(
@@ -5341,9 +5414,9 @@
                 {
                   key: "leaguelist_header",
                   className: A(
-                    ia.a.LeagueHeader,
-                    le.a.VerticalCollapseable,
-                    t && le.a.VerticalCollapse
+                    la.a.LeagueHeader,
+                    ie.a.VerticalCollapseable,
+                    t && ie.a.VerticalCollapse
                   ),
                 },
                 Object(y.b)("#Fantasy_SelectLeague")
@@ -5352,9 +5425,9 @@
             a.league_infos)) {
               var n = a.league_infos[o],
                 c = new Date(1e3 * n.start_timestamp),
-                l = new Date(1e3 * n.end_timestamp),
+                i = new Date(1e3 * n.end_timestamp),
                 s = Object(y.b)("#DayMonth_" + c.getMonth(), c.getDate()),
-                g = Object(y.b)("#DayMonth_" + l.getMonth(), l.getDate()),
+                g = Object(y.b)("#DayMonth_" + i.getMonth(), i.getDate()),
                 _ =
                   0 == n.start_timestamp || 0 == n.end_timestamp
                     ? Object(y.b)("#Fantasy_Upcoming")
@@ -5364,16 +5437,16 @@
                 u = void 0;
               switch (n.status) {
                 case 0:
-                  u = ia.a.StatusUnset;
+                  u = la.a.StatusUnset;
                   break;
                 case 1:
-                  u = ia.a.StatusPartial;
+                  u = la.a.StatusPartial;
                   break;
                 case 2:
-                  u = ia.a.StatusFull;
+                  u = la.a.StatusFull;
                   break;
                 case 3:
-                  u = ia.a.StatusConcluded;
+                  u = la.a.StatusConcluded;
               }
               var h = void 0;
               0 == n.status || 1 == n.status
@@ -5386,21 +5459,21 @@
                         {
                           key: "leaguelist_" + n.league_id,
                           className: A(
-                            ia.a.League,
-                            le.a.VerticalCollapseable,
-                            p && le.a.VerticalCollapse,
-                            ia.a.Selected
+                            la.a.League,
+                            ie.a.VerticalCollapseable,
+                            p && ie.a.VerticalCollapse,
+                            la.a.Selected
                           ),
                         },
-                        m.a.createElement("div", { className: ia.a.Dates }, _),
+                        m.a.createElement("div", { className: la.a.Dates }, _),
                         m.a.createElement(
                           "div",
-                          { className: ia.a.Name },
+                          { className: la.a.Name },
                           Object(y.b)("#LeagueName_" + n.league_id)
                         ),
                         m.a.createElement(
                           "div",
-                          { className: A(ia.a.Status, u) },
+                          { className: A(la.a.Status, u) },
                           Object(y.b)("#Fantasy_LeagueStatus_" + n.status)
                         )
                       )
@@ -5412,21 +5485,21 @@
                           to: G(h, n.league_id, 0, 0),
                           key: "leaguelist_" + n.league_id,
                           className: A(
-                            ia.a.League,
-                            le.a.VerticalCollapseable,
-                            p && le.a.VerticalCollapse,
-                            d && ia.a.Selected
+                            la.a.League,
+                            ie.a.VerticalCollapseable,
+                            p && ie.a.VerticalCollapse,
+                            d && la.a.Selected
                           ),
                         },
-                        m.a.createElement("div", { className: ia.a.Dates }, _),
+                        m.a.createElement("div", { className: la.a.Dates }, _),
                         m.a.createElement(
                           "div",
-                          { className: ia.a.Name },
+                          { className: la.a.Name },
                           Object(y.b)("#LeagueName_" + n.league_id)
                         ),
                         m.a.createElement(
                           "div",
-                          { className: A(ia.a.Status, u) },
+                          { className: A(la.a.Status, u) },
                           Object(y.b)("#Fantasy_LeagueStatus_" + n.status)
                         )
                       )
@@ -5440,19 +5513,19 @@
                   {
                     key: "tabselector_" + n.league_id,
                     className: A(
-                      ia.a.TabSelector,
-                      le.a.VerticalCollapseable,
-                      !d && le.a.VerticalCollapse
+                      la.a.TabSelector,
+                      ie.a.VerticalCollapseable,
+                      !d && ie.a.VerticalCollapse
                     ),
                   },
                   m.a.createElement(
                     "div",
-                    { className: ia.a.TextSelector },
+                    { className: la.a.TextSelector },
                     m.a.createElement(
                       v.a,
                       {
                         to: G(r.Roster, n.league_id, 0),
-                        className: A(ia.a.Entry, b && ia.a.Selected),
+                        className: A(la.a.Entry, b && la.a.Selected),
                       },
                       Object(y.b)("#Fantasy_Roster")
                     ),
@@ -5460,7 +5533,7 @@
                       v.a,
                       {
                         to: G(r.Scores, n.league_id, 0, 0),
-                        className: A(ia.a.Entry, k && ia.a.Selected),
+                        className: A(la.a.Entry, k && la.a.Selected),
                       },
                       Object(y.b)("#Fantasy_Scores")
                     ),
@@ -5468,24 +5541,24 @@
                       v.a,
                       {
                         to: G(r.Leaderboard, n.league_id, 0),
-                        className: A(ia.a.Entry, f && ia.a.Selected),
+                        className: A(la.a.Entry, f && la.a.Selected),
                       },
                       Object(y.b)("#Fantasy_Ranking")
                     )
                   ),
                   m.a.createElement(
                     "div",
-                    { className: ia.a.UnderlineSelector },
+                    { className: la.a.UnderlineSelector },
                     m.a.createElement("div", {
                       className: A(
-                        ia.a.Underline,
-                        b && ia.a.Roster,
-                        k && ia.a.Scores,
-                        f && ia.a.Leaderboard
+                        la.a.Underline,
+                        b && la.a.Roster,
+                        k && la.a.Scores,
+                        f && la.a.Leaderboard
                       ),
                     }),
                     m.a.createElement("div", {
-                      className: ia.a.UnderlineSpacer,
+                      className: la.a.UnderlineSpacer,
                     })
                   )
                 )
@@ -5500,7 +5573,7 @@
                   case 0:
                     return [
                       4,
-                      i.g_App.submitFantasyLineup(
+                      l.g_App.submitFantasyLineup(
                         parseInt(this.props.match.params.leagueID)
                       ),
                     ];
@@ -5534,24 +5607,24 @@
                 case 9:
                   n = 2;
               }
-              var c = i.g_App.getPlayersInRole(t, n),
-                l = i.g_App.getFantasyLineup(t);
-              if (void 0 === c || void 0 === l)
+              var c = l.g_App.getPlayersInRole(t, n),
+                i = l.g_App.getFantasyLineup(t);
+              if (void 0 === c || void 0 === i)
                 return e.push(this.GetLoadingThrobber()), e;
               if (!c)
                 return (
                   e.push(
                     m.a.createElement(
                       "div",
-                      { key: "players_none", className: ia.a.NoRosterPlayers },
+                      { key: "players_none", className: la.a.NoRosterPlayers },
                       m.a.createElement(
                         "div",
-                        { className: ia.a.Header },
+                        { className: la.a.Header },
                         Object(y.b)("#Fantasy_NoPlayers")
                       ),
                       m.a.createElement(
                         "div",
-                        { className: ia.a.Sub },
+                        { className: la.a.Sub },
                         Object(y.b)("#Fantasy_NoPlayersSub")
                       )
                     )
@@ -5561,8 +5634,8 @@
               var g = function (e) {
                   var n = c.player_infos[e],
                     g = !1;
-                  for (var d in l.rgRosterSlots)
-                    if (l.rgRosterSlots[d].nAccountID == n.account_id) {
+                  for (var d in i.rgRosterSlots)
+                    if (i.rgRosterSlots[d].nAccountID == n.account_id) {
                       g = !0;
                       break;
                     }
@@ -5572,24 +5645,24 @@
                       "div",
                       {
                         key: "player" + n.account_id,
-                        className: ia.a.RosterSlot,
+                        className: la.a.RosterSlot,
                       },
                       m.a.createElement(We, {
-                        className: A(ia.a.Icon, ia.a.Player),
-                        src: i.g_App.getPlayerImageURL(n.account_id),
+                        className: A(la.a.Icon, la.a.Player),
+                        src: l.g_App.getPlayerImageURL(n.account_id),
                         fallbackSrc: s.a.IMG_URL + "portrait_unknown.png",
                       }),
                       m.a.createElement(We, {
-                        className: A(ia.a.Icon, ia.a.Team),
+                        className: A(la.a.Icon, la.a.Team),
                         src: n.team_url_logo,
                         fallbackSrc: s.a.IMG_URL + "team_unknown.png",
                       }),
                       m.a.createElement(
                         "div",
-                        { className: ia.a.Identity },
+                        { className: la.a.Identity },
                         m.a.createElement(
                           "div",
-                          { className: ia.a.Name },
+                          { className: la.a.Name },
                           n.name
                         )
                       ),
@@ -5597,9 +5670,9 @@
                         v.a,
                         {
                           to: G(r.Roster, _.props.match.params.leagueID, 0),
-                          className: ia.a.SelectButton,
+                          className: la.a.SelectButton,
                           onClick: function () {
-                            return i.g_App.setFantasyRosterSlot(
+                            return l.g_App.setFantasyRosterSlot(
                               t,
                               n.account_id,
                               o,
@@ -5621,10 +5694,10 @@
                   {
                     key: "player_select_elements",
                     className: A(
-                      ia.a.PlayerSelect,
-                      le.a.VerticalCollapseable,
+                      la.a.PlayerSelect,
+                      ie.a.VerticalCollapseable,
                       this.props.section != r.PlayerSelect &&
-                        le.a.VerticalCollapse
+                        ie.a.VerticalCollapse
                     ),
                   },
                   a
@@ -5640,10 +5713,10 @@
               o = parseInt(this.props.match.params.leagueID),
               n = this.props.section == r.Roster;
             if (n) {
-              var c = i.g_App.getFantasyLeagueStatus();
+              var c = l.g_App.getFantasyLeagueStatus();
               if (c)
-                for (var l in c.league_infos) {
-                  var g = c.league_infos[l];
+                for (var i in c.league_infos) {
+                  var g = c.league_infos[i];
                   if (g.league_id == o)
                     if (g.end_timestamp > 0)
                       if (Date.now() / 1e3 > g.end_timestamp + 86400)
@@ -5651,7 +5724,7 @@
                           a.push(
                             m.a.createElement(
                               "div",
-                              { key: "Concluded", className: ia.a.Concluded },
+                              { key: "Concluded", className: la.a.Concluded },
                               Object(y.b)("#Fantasy_Concluded")
                             )
                           ),
@@ -5659,13 +5732,13 @@
                         );
                 }
             }
-            if ((n && (e = i.g_App.getFantasyLineup(o)), !e))
+            if ((n && (e = l.g_App.getFantasyLineup(o)), !e))
               return n && a.push(this.GetLoadingThrobber()), a;
             for (
               var _ = function (a) {
                   var n = 0 == e.rgRosterSlots[a].nAccountID,
                     c = e.rgRosterSlots[a].bLocked,
-                    l = e.rgRosterSlots[a].bNeedsSubmission,
+                    i = e.rgRosterSlots[a].bNeedsSubmission,
                     g = n
                       ? Object(y.b)("#Fantasy_SelectPlayer")
                       : e.rgRosterSlots[a].strName;
@@ -5674,7 +5747,7 @@
                       t.push(
                         m.a.createElement(
                           "div",
-                          { key: "role_" + a, className: ia.a.RoleHeader },
+                          { key: "role_" + a, className: la.a.RoleHeader },
                           Object(y.b)("#Team_RoleCore")
                         )
                       );
@@ -5683,7 +5756,7 @@
                       t.push(
                         m.a.createElement(
                           "div",
-                          { key: "role_" + a, className: ia.a.RoleHeader },
+                          { key: "role_" + a, className: la.a.RoleHeader },
                           Object(y.b)("#Team_RoleMid")
                         )
                       );
@@ -5692,7 +5765,7 @@
                       t.push(
                         m.a.createElement(
                           "div",
-                          { key: "role_" + a, className: ia.a.RoleHeader },
+                          { key: "role_" + a, className: la.a.RoleHeader },
                           Object(y.b)("#Team_RoleSupport")
                         )
                       );
@@ -5703,22 +5776,22 @@
                   p = c
                     ? m.a.createElement("img", {
                         src: s.a.IMG_URL + "locked.png",
-                        className: ia.a.SelectArrow,
+                        className: la.a.SelectArrow,
                       })
-                    : l
+                    : i
                     ? m.a.createElement("img", {
                         src: s.a.IMG_URL + "x_red.png",
-                        className: ia.a.ClearX,
+                        className: la.a.ClearX,
                         onClick: function () {
-                          return i.g_App.clearFantasyRosterSlot(o, a);
+                          return l.g_App.clearFantasyRosterSlot(o, a);
                         },
                       })
                     : m.a.createElement("img", {
                         src: s.a.IMG_URL + "right_arrow.png",
-                        className: ia.a.SelectArrow,
+                        className: la.a.SelectArrow,
                       });
                   var u =
-                    c || l
+                    c || i
                       ? G(r.Roster, d.props.match.params.leagueID)
                       : G(r.PlayerSelect, d.props.match.params.leagueID, a);
                   t.push(
@@ -5728,29 +5801,29 @@
                         to: u,
                         key: _,
                         className: A(
-                          ia.a.RosterSlot,
-                          l && ia.a.NeedsSubmit,
-                          c && ia.a.Locked
+                          la.a.RosterSlot,
+                          i && la.a.NeedsSubmit,
+                          c && la.a.Locked
                         ),
                       },
                       m.a.createElement(We, {
-                        className: A(ia.a.Icon, ia.a.Player),
-                        src: i.g_App.getPlayerImageURL(
+                        className: A(la.a.Icon, la.a.Player),
+                        src: l.g_App.getPlayerImageURL(
                           e.rgRosterSlots[a].nAccountID
                         ),
                         fallbackSrc: s.a.IMG_URL + "portrait_unknown.png",
                       }),
                       m.a.createElement(We, {
-                        className: A(ia.a.Icon, ia.a.Team),
+                        className: A(la.a.Icon, la.a.Team),
                         src: e.rgRosterSlots[a].strTeamLogoURL,
                         fallbackSrc: s.a.IMG_URL + "team_unknown.png",
                       }),
                       m.a.createElement(
                         "div",
-                        { className: ia.a.Identity },
+                        { className: la.a.Identity },
                         m.a.createElement(
                           "div",
-                          { className: A(ia.a.Name, n && ia.a.Empty) },
+                          { className: A(la.a.Name, n && la.a.Empty) },
                           g
                         )
                       ),
@@ -5771,17 +5844,17 @@
                   {
                     key: "roster_elements",
                     className: A(
-                      ia.a.Roster,
-                      le.a.VerticalCollapseable,
-                      this.props.section != r.Roster && le.a.VerticalCollapse
+                      la.a.Roster,
+                      ie.a.VerticalCollapseable,
+                      this.props.section != r.Roster && ie.a.VerticalCollapse
                     ),
                   },
                   m.a.createElement(
                     "div",
                     {
                       className: A(
-                        ia.a.SubmitButton,
-                        e.bRosterNeedsSubmission && ia.a.Enabled
+                        la.a.SubmitButton,
+                        e.bRosterNeedsSubmission && la.a.Enabled
                       ),
                       onClick: this.SubmitRosterSlots,
                     },
@@ -5791,9 +5864,9 @@
                     "div",
                     {
                       className: A(
-                        ia.a.RosterSlots,
-                        le.a.VerticalCollapseable,
-                        this.props.section != r.Roster && le.a.VerticalCollapse
+                        la.a.RosterSlots,
+                        ie.a.VerticalCollapseable,
+                        this.props.section != r.Roster && ie.a.VerticalCollapse
                       ),
                     },
                     t
@@ -5813,11 +5886,11 @@
               o = [],
               n = this.props.section == r.Scores,
               c = parseInt(this.props.match.params.leagueID),
-              l = parseInt(this.props.match.params.timestamp);
+              i = parseInt(this.props.match.params.timestamp);
             if (!n) return a;
             var g = this.state.bSelectingDay,
-              _ = i.g_App.getFantasyDayScore(c, n ? l : 0, !n),
-              d = i.g_App.getFantasyLeagueStatus();
+              _ = l.g_App.getFantasyDayScore(c, n ? i : 0, !n),
+              d = l.g_App.getFantasyLeagueStatus();
             if (!d) return n && a.push(this.GetLoadingThrobber()), a;
             for (var p in d.league_infos) {
               var u = d.league_infos[p];
@@ -5829,8 +5902,8 @@
                       to: G(r.Scores, this.props.match.params.leagueID, 0, 0),
                       key: "league_" + c + "_day_0",
                       className: A(
-                        ia.a.DayOption,
-                        !this.state.bSelectingDay && 0 != l && ia.a.Collapse
+                        la.a.DayOption,
+                        !this.state.bSelectingDay && 0 != i && la.a.Collapse
                       ),
                       onClick: function () {
                         return e.ToggleDaySelect(0);
@@ -5852,8 +5925,8 @@
                           to: G(r.Scores, b.props.match.params.leagueID, 0, o),
                           key: "league_" + c + "_day_" + o,
                           className: A(
-                            ia.a.DayOption,
-                            !b.state.bSelectingDay && l != o && ia.a.Collapse
+                            la.a.DayOption,
+                            !b.state.bSelectingDay && i != o && la.a.Collapse
                           ),
                           onClick: function () {
                             return e.ToggleDaySelect(o);
@@ -5876,31 +5949,31 @@
                     {
                       key: "score_elements",
                       className: A(
-                        ia.a.Scores,
-                        le.a.VerticalCollapseable,
-                        !n && le.a.VerticalCollapse
+                        la.a.Scores,
+                        ie.a.VerticalCollapseable,
+                        !n && ie.a.VerticalCollapse
                       ),
                     },
                     m.a.createElement(
                       "div",
-                      { className: ia.a.ScoreSelector },
+                      { className: la.a.ScoreSelector },
                       m.a.createElement("div", {
-                        className: A(ia.a.VerticalLine, !g && ia.a.Collapse),
+                        className: A(la.a.VerticalLine, !g && la.a.Collapse),
                       }),
                       m.a.createElement(
                         "div",
-                        { className: ia.a.VerticalList },
+                        { className: la.a.VerticalList },
                         t,
                         m.a.createElement("div", {
-                          className: A(ia.a.HorizonalLine, g && ia.a.Collapse),
+                          className: A(la.a.HorizonalLine, g && la.a.Collapse),
                         })
                       ),
                       m.a.createElement("div", {
-                        className: A(ia.a.VerticalLine, !g && ia.a.Collapse),
+                        className: A(la.a.VerticalLine, !g && la.a.Collapse),
                       })
                     ),
                     m.a.createElement("div", {
-                      className: A(ia.a.TotalScore, ia.a.Collapsed),
+                      className: A(la.a.TotalScore, la.a.Collapsed),
                     })
                   )
                 ),
@@ -5910,51 +5983,51 @@
             for (var f in _.players) {
               var E = _.players[f],
                 C = {
-                  appear: le.a.VerticalCollapse,
-                  appearActive: n ? "" : le.a.VerticalCollapse,
+                  appear: ie.a.VerticalCollapse,
+                  appearActive: n ? "" : ie.a.VerticalCollapse,
                 };
               o.push(
                 m.a.createElement(
                   ga.TransitionGroup,
-                  { key: "player_" + E.account_id + "_timestamp_" + l },
+                  { key: "player_" + E.account_id + "_timestamp_" + i },
                   m.a.createElement(
                     ga.CSSTransition,
                     {
                       appear: !0,
                       timeout: 0,
                       classNames: C,
-                      className: A(ia.a.Element, le.a.VerticalCollapseable),
+                      className: A(la.a.Element, ie.a.VerticalCollapseable),
                     },
                     m.a.createElement(
                       _e.a,
                       { to: L(E.account_id) },
                       m.a.createElement(We, {
-                        className: A(ia.a.Icon, ia.a.Player),
-                        src: i.g_App.getPlayerImageURL(E.account_id),
+                        className: A(la.a.Icon, la.a.Player),
+                        src: l.g_App.getPlayerImageURL(E.account_id),
                         fallbackSrc: s.a.IMG_URL + "portrait_unknown.png",
                       }),
                       m.a.createElement(We, {
-                        className: A(ia.a.Icon, ia.a.Team),
+                        className: A(la.a.Icon, la.a.Team),
                         src: E.team_logo_url,
                         fallbackSrc: s.a.IMG_URL + "team_unknown.png",
                       }),
                       m.a.createElement(
                         "div",
-                        { className: ia.a.Identity },
+                        { className: la.a.Identity },
                         m.a.createElement(
                           "div",
-                          { className: ia.a.Name },
+                          { className: la.a.Name },
                           E.name
                         ),
                         m.a.createElement(
                           "div",
-                          { className: ia.a.Role },
+                          { className: la.a.Role },
                           Object(y.b)("#Fantasy_Role_" + E.role)
                         )
                       ),
                       m.a.createElement(
                         "div",
-                        { className: ia.a.Score },
+                        { className: la.a.Score },
                         E.score.toFixed(2)
                       )
                     )
@@ -5969,32 +6042,32 @@
                   {
                     key: "score_elements",
                     className: A(
-                      ia.a.Scores,
-                      le.a.VerticalCollapseable,
-                      this.props.section != r.Scores && le.a.VerticalCollapse
+                      la.a.Scores,
+                      ie.a.VerticalCollapseable,
+                      this.props.section != r.Scores && ie.a.VerticalCollapse
                     ),
                   },
                   m.a.createElement(
                     "div",
-                    { className: ia.a.ScoreSelector },
+                    { className: la.a.ScoreSelector },
                     m.a.createElement("div", {
-                      className: A(ia.a.VerticalLine, !g && ia.a.Collapse),
+                      className: A(la.a.VerticalLine, !g && la.a.Collapse),
                     }),
                     m.a.createElement(
                       "div",
-                      { className: ia.a.VerticalList },
+                      { className: la.a.VerticalList },
                       t,
                       m.a.createElement("div", {
-                        className: A(ia.a.HorizonalLine, g && ia.a.Collapse),
+                        className: A(la.a.HorizonalLine, g && la.a.Collapse),
                       })
                     ),
                     m.a.createElement("div", {
-                      className: A(ia.a.VerticalLine, !g && ia.a.Collapse),
+                      className: A(la.a.VerticalLine, !g && la.a.Collapse),
                     })
                   ),
                   m.a.createElement(
                     "div",
-                    { className: ia.a.TotalScore },
+                    { className: la.a.TotalScore },
                     _.total_score.toFixed(2)
                   ),
                   o
@@ -6015,8 +6088,8 @@
               o = parseInt(this.props.match.params.leagueID);
             if (!t) return e;
             var n = this.state.bFriendLeaderboard
-              ? i.g_App.getFantasyFriendLeaderboard(o, !t)
-              : i.g_App.getFantasyGlobalLeaderboard(o, !t);
+              ? l.g_App.getFantasyFriendLeaderboard(o, !t)
+              : l.g_App.getFantasyGlobalLeaderboard(o, !t);
             if (n)
               if (0 == n.entries.length)
                 a.push(
@@ -6024,39 +6097,39 @@
                     "div",
                     {
                       key: "leaderboard_empty",
-                      className: ia.a.EmptyLeaderboard,
+                      className: la.a.EmptyLeaderboard,
                     },
                     m.a.createElement(
                       "div",
-                      { className: ia.a.Heading },
+                      { className: la.a.Heading },
                       Object(y.b)("#Fantasy_EmptyLeaderboard")
                     ),
                     m.a.createElement(
                       "div",
-                      { className: ia.a.SubHeading },
+                      { className: la.a.SubHeading },
                       Object(y.b)("#Fantasy_EmptyLeaderboard2")
                     )
                   )
                 );
               else
                 for (var c in n.entries) {
-                  var l = n.entries[c];
+                  var i = n.entries[c];
                   a.push(
                     m.a.createElement(
                       "div",
                       {
                         key: "leaderboard_player_" + c,
-                        className: ia.a.Player,
+                        className: la.a.Player,
                       },
                       m.a.createElement(
                         "div",
-                        { className: ia.a.Name },
-                        l.name
+                        { className: la.a.Name },
+                        i.name
                       ),
                       m.a.createElement(
                         "div",
-                        { className: ia.a.Score },
-                        l.score.toFixed(2)
+                        { className: la.a.Score },
+                        i.score.toFixed(2)
                       )
                     )
                   );
@@ -6069,33 +6142,33 @@
                   {
                     key: "ranking_elements",
                     className: A(
-                      ia.a.Leaderboards,
-                      le.a.VerticalCollapseable,
-                      !t && le.a.VerticalCollapse
+                      la.a.Leaderboards,
+                      ie.a.VerticalCollapseable,
+                      !t && ie.a.VerticalCollapse
                     ),
                   },
                   m.a.createElement(
                     "div",
-                    { className: ia.a.FriendSection },
+                    { className: la.a.FriendSection },
                     m.a.createElement(
                       "div",
-                      { className: ia.a.Title },
+                      { className: la.a.Title },
                       Object(y.b)("#Fantasy_SteamFriends")
                     ),
                     m.a.createElement(
                       "div",
                       {
                         className: A(
-                          ia.a.FriendSwitch,
-                          this.state.bFriendLeaderboard && ia.a.Friend
+                          la.a.FriendSwitch,
+                          this.state.bFriendLeaderboard && la.a.Friend
                         ),
                         onClick: this.ToggleLeaderboard,
                       },
-                      m.a.createElement("div", { className: ia.a.Background }),
-                      m.a.createElement("div", { className: ia.a.Selector })
+                      m.a.createElement("div", { className: la.a.Background }),
+                      m.a.createElement("div", { className: la.a.Selector })
                     )
                   ),
-                  m.a.createElement("div", { className: ia.a.PlayerList }, a)
+                  m.a.createElement("div", { className: la.a.PlayerList }, a)
                 )
               ),
               e
@@ -6109,20 +6182,20 @@
               n = this.GetLeaderboards();
             if (this.props.section == r.PlayerSelect) {
               var c = parseInt(this.props.match.params.leagueID),
-                l = parseInt(this.props.match.params.slot),
-                s = i.g_App.getFantasyLineup(c);
+                i = parseInt(this.props.match.params.slot),
+                s = l.g_App.getFantasyLineup(c);
               console.log(Object(sa.H)(s)),
                 s &&
-                  i.g_App.isFantasyRosterSlotLocked(c, l) &&
+                  l.g_App.isFantasyRosterSlotLocked(c, i) &&
                   this.props.history.goBack();
             }
             return m.a.createElement(
               "div",
-              { className: ia.a.Contents },
+              { className: la.a.Contents },
               e,
               m.a.createElement(
                 "div",
-                { className: ia.a.SubContent },
+                { className: la.a.SubContent },
                 a,
                 t,
                 o,
@@ -6130,9 +6203,9 @@
               )
             );
           }),
-          Object(n.c)([q], a.prototype, "SubmitRosterSlots", null),
-          Object(n.c)([q], a.prototype, "ToggleDaySelect", null),
-          Object(n.c)([q], a.prototype, "ToggleLeaderboard", null),
+          Object(n.c)([q.a], a.prototype, "SubmitRosterSlots", null),
+          Object(n.c)([q.a], a.prototype, "ToggleDaySelect", null),
+          Object(n.c)([q.a], a.prototype, "ToggleLeaderboard", null),
           (a = Object(n.c)([x.a], a))
         );
       })(m.a.Component),
@@ -6143,20 +6216,20 @@
         return (
           Object(n.d)(a, e),
           (a.prototype.componentDidMount = function () {
-            i.g_App.triggerShowHelpPage(Dt.Fantasy);
+            l.g_App.triggerShowHelpPage(Dt.Fantasy);
           }),
           (a.prototype.render = function () {
             return m.a.createElement(
               "div",
-              { className: ia.a.FantasyPage },
+              { className: la.a.FantasyPage },
               m.a.createElement(qe, {
                 text: Object(y.b)("#Header_Fantasy"),
-                underlineColorStyle: ia.a.backgroundColorBlue,
+                underlineColorStyle: la.a.backgroundColorBlue,
                 helpPageButton: Dt.Fantasy,
               }),
               m.a.createElement(
                 "div",
-                { className: ia.a.Contents },
+                { className: la.a.Contents },
                 m.a.createElement(
                   d.a,
                   null,
@@ -6233,7 +6306,7 @@
           Object(n.d)(a, e),
           (a.prototype.render = function () {
             var e = parseInt(this.props.match.params.teamID),
-              a = i.g_App.getTeamData(e);
+              a = l.g_App.getTeamData(e);
             if (!a)
               return m.a.createElement(
                 "div",
@@ -6244,13 +6317,13 @@
                   position: "center",
                 })
               );
-            var t = i.g_App.getDPCStandings(),
+            var t = l.g_App.getDPCStandings(),
               r = "0";
             if (t && t.results)
               for (var n = 0, c = t.results; n < c.length; n++) {
-                var l = c[n];
-                if (l.team_id == e) {
-                  r = l.total_points;
+                var i = c[n];
+                if (i.team_id == e) {
+                  r = i.total_points;
                   break;
                 }
               }
@@ -6318,7 +6391,7 @@
                       var S = parseInt(N);
                       if (
                         (k.push(S),
-                        (G = i.g_App.getPlayerData(S)) &&
+                        (G = l.g_App.getPlayerData(S)) &&
                           G.fantasy_role == E &&
                           (G.fantasy_role || 0 != E))
                       ) {
@@ -6335,7 +6408,7 @@
                               "div",
                               { className: ua.a.PlayerImageContainer },
                               m.a.createElement(We, {
-                                src: i.g_App.getPlayerImageURL(G.account_id),
+                                src: l.g_App.getPlayerImageURL(G.account_id),
                                 fallbackSrc:
                                   s.a.IMG_URL_BASE +
                                   "players/portrait_unknown.png",
@@ -6391,7 +6464,7 @@
                   var O = parseInt(I.account_id);
                   if (-1 == k.indexOf(O)) {
                     var G;
-                    if (!(G = i.g_App.getPlayerData(O))) continue;
+                    if (!(G = l.g_App.getPlayerData(O))) continue;
                     T.push(
                       m.a.createElement(
                         _e.a,
@@ -6404,7 +6477,7 @@
                           "div",
                           { className: ua.a.PlayerImageContainer },
                           m.a.createElement(We, {
-                            src: i.g_App.getPlayerImageURL(G.account_id),
+                            src: l.g_App.getPlayerImageURL(G.account_id),
                             fallbackSrc:
                               s.a.IMG_URL_BASE + "players/portrait_unknown.png",
                             className: ua.a.PlayerImage,
@@ -6451,7 +6524,7 @@
               "div",
               { className: ua.a.TeamPage },
               m.a.createElement(qe, {
-                favoriteType: i.EFavoriteType.Team,
+                favoriteType: l.EFavoriteType.Team,
                 favoriteId: e,
                 favoriteName: a.name,
                 favoriteURL: a.url_logo,
@@ -6607,7 +6680,7 @@
           Object(n.d)(a, e),
           (a.prototype.render = function () {
             var e = parseInt(this.props.match.params.playerID),
-              a = i.g_App.getPlayerData(e);
+              a = l.g_App.getPlayerData(e);
             if (!a)
               return m.a.createElement(
                 "div",
@@ -6625,7 +6698,7 @@
                 Object(y.b)("#Player_InvalidPlayer")
               );
             var t = null;
-            a.team_id && (t = i.g_App.getTeamData(a.team_id));
+            a.team_id && (t = l.g_App.getTeamData(a.team_id));
             var r = [];
             if (a.results)
               for (var n = 0; n < a.results.length; ++n)
@@ -6661,20 +6734,20 @@
             var c = [];
             if (a.audit_entries)
               for (n = 0; n < a.audit_entries.length; ++n) {
-                var l = a.audit_entries[n];
-                if (l.team_id) {
-                  var g = new Date(1e3 * l.start_timestamp),
+                var i = a.audit_entries[n];
+                if (i.team_id) {
+                  var g = new Date(1e3 * i.start_timestamp),
                     _ = null;
-                  l.end_timestamp && (_ = new Date(1e3 * l.end_timestamp)),
+                  i.end_timestamp && (_ = new Date(1e3 * i.end_timestamp)),
                     c.unshift(
                       m.a.createElement(
                         "div",
-                        { key: l.team_id, className: ka.a.PrevTeamContainer },
+                        { key: i.team_id, className: ka.a.PrevTeamContainer },
                         m.a.createElement(
                           "div",
                           { className: ka.a.PrevTeamLogoContainer },
                           m.a.createElement(We, {
-                            src: l.team_url_logo,
+                            src: i.team_url_logo,
                             fallbackSrc: s.a.IMG_URL + "team_unknown.png",
                             className: ka.a.PrevTeamLogo,
                           })
@@ -6682,7 +6755,7 @@
                         m.a.createElement(
                           "div",
                           { className: ka.a.TeamName },
-                          l.team_name
+                          i.team_name
                         ),
                         m.a.createElement("span", { className: ka.a.Spacer }),
                         m.a.createElement(
@@ -6719,7 +6792,7 @@
               "div",
               { className: ka.a.PlayerPage },
               m.a.createElement(qe, {
-                favoriteType: i.EFavoriteType.Player,
+                favoriteType: l.EFavoriteType.Player,
                 favoriteId: e,
                 favoriteName: a.name,
               }),
@@ -6733,7 +6806,7 @@
                     "div",
                     { className: ka.a.PlayerImageContainer },
                     m.a.createElement(We, {
-                      src: i.g_App.getPlayerImageURL(a.account_id),
+                      src: l.g_App.getPlayerImageURL(a.account_id),
                       fallbackSrc:
                         s.a.IMG_URL_BASE + "players/portrait_unknown.png",
                       className: ka.a.PlayerImage,
@@ -6893,19 +6966,19 @@
         return (
           Object(n.d)(a, e),
           (a.prototype.toggleNotificationDisabled = function (e) {
-            var a = i.g_App.getProfileInfo().disabled_notifications.includes(e);
-            i.g_App.setNotification(e, !a);
+            var a = l.g_App.getProfileInfo().disabled_notifications.includes(e);
+            l.g_App.setNotification(e, !a);
           }),
           (a.prototype.render = function () {
             var e = this,
-              a = i.g_App.getSteamPlayerInfo(),
+              a = l.g_App.getSteamPlayerInfo(),
               t = a ? a.response.players[0] : null,
-              r = i.g_App.getProfileInfo(),
-              o = i.g_App.getFavorites();
+              r = l.g_App.getProfileInfo(),
+              o = l.g_App.getFavorites();
             if (!r || !o)
               return m.a.createElement(
                 "div",
-                { className: A(Ca.a.Loading, le.a.FadeInDelay) },
+                { className: A(Ca.a.Loading, ie.a.FadeInDelay) },
                 m.a.createElement(be, {
                   size: "medium",
                   string: Object(y.b)("#Loading"),
@@ -6920,7 +6993,7 @@
                     : t
                     ? t.personaname
                     : "",
-                l = r.player_info ? r.player_info.real_name : "",
+                i = r.player_info ? r.player_info.real_name : "",
                 g = [],
                 _ = function (e) {
                   o.types[e].favorites.forEach(function (a, t) {
@@ -6936,7 +7009,7 @@
                             },
                             m.a.createElement(We, {
                               className: Ca.a.PlayerIcon,
-                              src: i.g_App.getPlayerImageURL(a.id),
+                              src: l.g_App.getPlayerImageURL(a.id),
                               fallbackSrc: s.a.IMG_URL + "portrait_unknown.png",
                             }),
                             m.a.createElement(
@@ -7096,7 +7169,7 @@
                       "div",
                       { className: Ca.a.NameInfo },
                       m.a.createElement("div", { className: Ca.a.Name }, c),
-                      m.a.createElement("div", { className: Ca.a.RealName }, l)
+                      m.a.createElement("div", { className: Ca.a.RealName }, i)
                     )
                   ),
                   m.a.createElement(
@@ -7171,11 +7244,11 @@
             var e = this,
               a = parseInt(this.props.match.params.leagueID),
               t = parseInt(this.props.match.params.seriesID),
-              r = i.g_App.getSeriesData(a, t);
+              r = l.g_App.getSeriesData(a, t);
             if (!r)
               return m.a.createElement(
                 "div",
-                { className: A(Ta.a.Loading, le.a.FadeInDelay) },
+                { className: A(Ta.a.Loading, ie.a.FadeInDelay) },
                 m.a.createElement(be, {
                   size: "medium",
                   string: Object(y.b)("#Loading"),
@@ -7186,9 +7259,9 @@
               n = r.team_1.wager_count + r.team_2.wager_count;
             if (n > 0) {
               var c = (100 * r.team_1.wager_count) / n,
-                l = (100 * r.team_2.wager_count) / n,
+                i = (100 * r.team_2.wager_count) / n,
                 g = c.toFixed(0) + "%",
-                _ = l.toFixed(0) + "%";
+                _ = i.toFixed(0) + "%";
               o = m.a.createElement(
                 "div",
                 { className: Ta.a.Predictions },
@@ -7235,7 +7308,7 @@
                   m.a.createElement("div", {
                     className: Ta.a.Bar,
                     style: {
-                      flexGrow: l,
+                      flexGrow: i,
                       backgroundColor: this.state.strTeamColor2,
                     },
                   })
@@ -7345,7 +7418,7 @@
             U.push([]), U.push([]);
             for (var W = 0; W < 2; W++)
               for (var w in M[W]) {
-                var x = i.g_App.getPlayerData(M[W][w]);
+                var x = l.g_App.getPlayerData(M[W][w]);
                 x &&
                   U[W].push(
                     m.a.createElement(
@@ -7361,7 +7434,7 @@
                       },
                       m.a.createElement(We, {
                         className: A(Ta.a.Image, 1 == W && Ta.a.Hide),
-                        src: i.g_App.getPlayerImageURL(x.account_id),
+                        src: l.g_App.getPlayerImageURL(x.account_id),
                         fallbackSrc: s.a.IMG_URL + "portrait_unknown.png",
                       }),
                       m.a.createElement(
@@ -7386,7 +7459,7 @@
                       ),
                       m.a.createElement(We, {
                         className: A(Ta.a.Image, 0 == W && Ta.a.Hide),
-                        src: i.g_App.getPlayerImageURL(x.account_id),
+                        src: l.g_App.getPlayerImageURL(x.account_id),
                         fallbackSrc: s.a.IMG_URL + "portrait_unknown.png",
                       })
                     )
@@ -7490,7 +7563,7 @@
                       ),
                       m.a.createElement(We, {
                         className: A(Ta.a.Icon, Ta.a.Player),
-                        src: i.g_App.getPlayerImageURL(N),
+                        src: l.g_App.getPlayerImageURL(N),
                         fallbackSrc: s.a.IMG_URL + "portrait_unknown.png",
                       })
                     ),
@@ -7519,7 +7592,7 @@
                       ),
                       m.a.createElement(We, {
                         className: A(Ta.a.Icon, Ta.a.Player),
-                        src: i.g_App.getPlayerImageURL(I),
+                        src: l.g_App.getPlayerImageURL(I),
                         fallbackSrc: s.a.IMG_URL + "portrait_unknown.png",
                       })
                     ),
@@ -7596,24 +7669,24 @@
             var e = this,
               a = parseInt(this.props.match.params.leagueID),
               t = parseInt(this.props.match.params.nodeID),
-              r = i.g_App.getLeagueNodeData(a, t),
-              o = i.g_App.getRecentAndUpcomingMatches(),
-              n = r ? i.g_App.getTeamData(r.team_id_1) : void 0,
-              c = r ? i.g_App.getTeamData(r.team_id_2) : void 0;
+              r = l.g_App.getLeagueNodeData(a, t),
+              o = l.g_App.getRecentAndUpcomingMatches(),
+              n = r ? l.g_App.getTeamData(r.team_id_1) : void 0,
+              c = r ? l.g_App.getTeamData(r.team_id_2) : void 0;
             if (!n || !c)
               return m.a.createElement(
                 "div",
-                { className: A(Ia.a.Loading, le.a.FadeInDelay) },
+                { className: A(Ia.a.Loading, ie.a.FadeInDelay) },
                 m.a.createElement(be, {
                   size: "medium",
                   string: Object(y.b)("#Loading"),
                   position: "center",
                 })
               );
-            i.g_App.getProPredictionMaxWager();
+            l.g_App.getProPredictionMaxWager();
             if (o)
-              for (var l = 0, g = o.tournaments; l < g.length; l++)
-                for (var _ = 0, d = g[l].matches; _ < d.length; _++) {
+              for (var i = 0, g = o.tournaments; i < g.length; i++)
+                for (var _ = 0, d = g[i].matches; _ < d.length; _++) {
                   if (d[_].nodeId == t) break;
                 }
             var p = [];
@@ -7624,7 +7697,7 @@
                 u++
               ) {
                 var b = h[u],
-                  k = i.g_App.getPlayerData(b);
+                  k = l.g_App.getPlayerData(b);
                 p[0].push(
                   m.a.createElement(
                     _e.a,
@@ -7635,7 +7708,7 @@
                     },
                     m.a.createElement(We, {
                       className: Ia.a.Image,
-                      src: i.g_App.getPlayerImageURL(b),
+                      src: l.g_App.getPlayerImageURL(b),
                       fallbackSrc: s.a.IMG_URL + "portrait_unknown.png",
                     }),
                     m.a.createElement(
@@ -7661,7 +7734,7 @@
                 v < f.length;
                 v++
               ) {
-                (b = f[v]), (k = i.g_App.getPlayerData(b));
+                (b = f[v]), (k = l.g_App.getPlayerData(b));
                 p[1].push(
                   m.a.createElement(
                     _e.a,
@@ -7686,7 +7759,7 @@
                     ),
                     m.a.createElement(We, {
                       className: Ia.a.Image,
-                      src: i.g_App.getPlayerImageURL(b),
+                      src: l.g_App.getPlayerImageURL(b),
                       fallbackSrc: s.a.IMG_URL + "portrait_unknown.png",
                     })
                   )
@@ -7799,11 +7872,11 @@
           (a.prototype.getContents = function () {
             var e,
               a = parseInt(this.props.match.params.matchID),
-              t = i.g_App.getMatch(a);
+              t = l.g_App.getMatch(a);
             if (!t)
               return m.a.createElement(
                 "div",
-                { className: A(Ga.a.Loading, le.a.FadeInDelay) },
+                { className: A(Ga.a.Loading, ie.a.FadeInDelay) },
                 m.a.createElement(be, {
                   size: "medium",
                   string: Object(y.b)("#Loading"),
@@ -7815,10 +7888,10 @@
                 o = !1,
                 n = 0;
               for (var c in t.metadata.teams[0].graph_net_worth) {
-                var l = parseInt(t.metadata.teams[0].graph_net_worth[c]),
+                var i = parseInt(t.metadata.teams[0].graph_net_worth[c]),
                   g = parseInt(t.metadata.teams[1].graph_net_worth[c]);
-                !o && Math.abs(l - g) > 30 && ((o = !0), (n = parseInt(c))),
-                  o && r.push({ value: l - g });
+                !o && Math.abs(i - g) > 30 && ((o = !0), (n = parseInt(c))),
+                  o && r.push({ value: i - g });
               }
               for (
                 var _ = [],
@@ -8071,7 +8144,7 @@
                     },
                     m.a.createElement(We, {
                       className: A(Ga.a.Image, 1 == D && Ga.a.Hide),
-                      src: i.g_App.getPlayerImageURL(I.account_id),
+                      src: l.g_App.getPlayerImageURL(I.account_id),
                       fallbackSrc: s.a.IMG_URL + "portrait_unknown.png",
                     }),
                     m.a.createElement(
@@ -8096,7 +8169,7 @@
                     ),
                     m.a.createElement(We, {
                       className: A(Ga.a.Image, 0 == D && Ga.a.Hide),
-                      src: i.g_App.getPlayerImageURL(I.account_id),
+                      src: l.g_App.getPlayerImageURL(I.account_id),
                       fallbackSrc: s.a.IMG_URL + "portrait_unknown.png",
                     })
                   )
@@ -8414,8 +8487,8 @@
             return m.a.createElement("div", null);
         }
         for (var n = [], c = 0; c < 2; c++)
-          for (var l = 0, i = 0 == c ? t : r; l < i.length; l++) {
-            var g = i[l],
+          for (var i = 0, l = 0 == c ? t : r; i < l.length; i++) {
+            var g = l[i],
               _ = 100 * (g.x + 0.5),
               d = 100 * (g.y + 0.5);
             n.push(
@@ -8489,10 +8562,10 @@
         var o = [],
           n = !1,
           c = 0;
-        for (var l in r) {
-          var i = parseInt(r[l]);
-          !n && Math.abs(i) > 30 && ((n = !0), (c = parseInt(l))),
-            n && o.push({ value: i });
+        for (var i in r) {
+          var l = parseInt(r[i]);
+          !n && Math.abs(l) > 30 && ((n = !0), (c = parseInt(i))),
+            n && o.push({ value: l });
         }
         for (
           var s = [], g = c / r.length, _ = 1 - g, d = g * t, p = 1;
@@ -8610,15 +8683,15 @@
           o = e.deaths,
           n = e.assists,
           c = e.netWorth,
-          l = e.isLeft,
-          i = e.isRecessed;
+          i = e.isLeft,
+          l = e.isRecessed;
         return m.a.createElement(
           "div",
           {
             className: A(
               Wa.a.SingleHeroStats,
-              !l && Wa.a.Right,
-              i && Wa.a.Recessed
+              !i && Wa.a.Right,
+              l && Wa.a.Recessed
             ),
           },
           m.a.createElement(
@@ -8673,13 +8746,13 @@
         var o = [];
         o.push([]), o.push([]);
         for (var n = 0; n < 2; n++)
-          for (var c = 0 == n ? t.players : r.players, l = 0; l < 5; l++)
-            if (!(l >= c.length)) {
-              var s = c[l],
-                g = i.g_App.getPlayerData(s.accountid);
+          for (var c = 0 == n ? t.players : r.players, i = 0; i < 5; i++)
+            if (!(i >= c.length)) {
+              var s = c[i],
+                g = l.g_App.getPlayerData(s.accountid);
               o[n].push(
                 m.a.createElement(Xa, {
-                  key: "heroblock_" + n + "_" + l,
+                  key: "heroblock_" + n + "_" + i,
                   playerName: g && g.name.length > 0 ? g.name : s.name,
                   heroID: s.heroid,
                   kills: s.kill_count,
@@ -8687,7 +8760,7 @@
                   assists: s.assists_count,
                   netWorth: s.net_worth,
                   isLeft: 0 == n,
-                  isRecessed: (n + l) % 2 == 0,
+                  isRecessed: (n + i) % 2 == 0,
                 })
               );
             }
@@ -8698,7 +8771,7 @@
           m.a.createElement("div", { className: Wa.a.TeamHeroStats }, o[1])
         );
       },
-      Za = function (e) {
+      Qa = function (e) {
         var a = e.playerName,
           t = e.realName,
           r = e.accountID,
@@ -8708,7 +8781,7 @@
           { to: L(r), className: A(Wa.a.Player, !o && Wa.a.Right) },
           m.a.createElement(We, {
             className: Wa.a.Image,
-            src: i.g_App.getPlayerImageURL(r),
+            src: l.g_App.getPlayerImageURL(r),
             fallbackSrc: s.a.IMG_URL + "portrait_unknown.png",
           }),
           m.a.createElement(
@@ -8719,7 +8792,7 @@
           )
         );
       },
-      Qa = function (e) {
+      Za = function (e) {
         var a = e.gameState,
           t = e.playersRadiant,
           r = e.playersDire;
@@ -8732,12 +8805,12 @@
         var o = [];
         o.push([]), o.push([]);
         for (var n = 0; n < 2; n++)
-          for (var c = 0 == n ? t.players : r.players, l = 0; l < 5; l++)
-            if (!(l >= c.length)) {
-              var s = c[l],
-                g = i.g_App.getPlayerData(s.accountid);
+          for (var c = 0 == n ? t.players : r.players, i = 0; i < 5; i++)
+            if (!(i >= c.length)) {
+              var s = c[i],
+                g = l.g_App.getPlayerData(s.accountid);
               o[n].push(
-                m.a.createElement(Za, {
+                m.a.createElement(Qa, {
                   key: "rosterplayer_" + s.accountid,
                   playerName: g && g.name.length > 0 ? g.name : s.name,
                   realName: g ? g.real_name : "",
@@ -8773,8 +8846,8 @@
         for (
           var n = [],
             c = 1,
-            l = 0,
             i = 0,
+            l = 0,
             g = 0,
             _ = 0,
             d = [!0, !0, !0, !1, !1, !0, !0, !1, !1, !0, !1];
@@ -8794,8 +8867,8 @@
             ),
               (g += 1);
             for (var p = 0; p < 2; p += 1) {
-              if (l < r.length) {
-                var u = r[l];
+              if (i < r.length) {
+                var u = r[i];
                 o[2 == u.team ? 0 : 1].push(
                   m.a.createElement(
                     "div",
@@ -8817,7 +8890,7 @@
                   )
                 );
               }
-              (l += 1), (c += 1);
+              (i += 1), (c += 1);
             }
           } else {
             n.push(
@@ -8832,8 +8905,8 @@
             ),
               (g += 1);
             for (p = 0; p < 2; p += 1)
-              if (i < t.length) {
-                var h = t[i];
+              if (l < t.length) {
+                var h = t[l];
                 o[2 == h.team ? 0 : 1].push(
                   m.a.createElement(
                     "div",
@@ -8854,7 +8927,7 @@
                     )
                   )
                 ),
-                  (i += 1),
+                  (l += 1),
                   (c += 1);
               }
           }
@@ -8892,11 +8965,11 @@
           Object(n.d)(a, e),
           (a.prototype.componentDidMount = function () {
             var e = this;
-            i.g_App.getRealtimeMatchStats(
+            l.g_App.getRealtimeMatchStats(
               this.props.match.params.serverSteamID
             ),
               (this.intervalHandle = setInterval(function () {
-                i.g_App.getRealtimeMatchStats(
+                l.g_App.getRealtimeMatchStats(
                   e.props.match.params.serverSteamID
                 );
               }, 2e3));
@@ -8905,7 +8978,7 @@
             clearInterval(this.intervalHandle);
           }),
           (a.prototype.render = function () {
-            var e = i.g_App.getRealtimeMatchStats(
+            var e = l.g_App.getRealtimeMatchStats(
               this.props.match.params.serverSteamID
             );
             return e && 0 != e.match.game_state
@@ -8950,7 +9023,7 @@
                         playersRadiant: e.teams[0],
                         playersDire: e.teams[1],
                       }),
-                      m.a.createElement(Qa, {
+                      m.a.createElement(Za, {
                         gameState: e.match.game_state,
                         playersRadiant: e.teams[0],
                         playersDire: e.teams[1],
@@ -8967,7 +9040,7 @@
                   { className: Wa.a.Loading, key: "loading_throbber" },
                   m.a.createElement(
                     "div",
-                    { className: le.a.FadeInDelay },
+                    { className: ie.a.FadeInDelay },
                     m.a.createElement(be, {
                       size: "medium",
                       string: Object(y.b)("#MatchStatus_NoData"),
@@ -9026,15 +9099,15 @@
                   var n = t.activeTouches[o];
                   if (r.identifier == n.id) {
                     var c = r.clientX - n.x,
-                      l = r.clientY - n.y;
+                      i = r.clientY - n.y;
                     if (1 == t.activeTouches.length)
                       t.setState({
                         offsetX: t.state.offsetX + c,
-                        offsetY: t.state.offsetY + l,
+                        offsetY: t.state.offsetY + i,
                       });
                     else if (2 == t.activeTouches.length)
-                      for (var i = 0; i < t.activeTouches.length; i++) {
-                        var s = t.activeTouches[i];
+                      for (var l = 0; l < t.activeTouches.length; l++) {
+                        var s = t.activeTouches[l];
                         if (r.identifier != s.id) {
                           var g = Math.hypot(n.x - s.x, n.y - s.y),
                             m =
@@ -9131,7 +9204,7 @@
           Object(n.d)(a, e),
           (a.prototype.render = function () {
             var e = parseInt(this.props.match.params.leagueID),
-              a = i.g_App.getLeagueData(e);
+              a = l.g_App.getLeagueData(e);
             if (!a)
               return m.a.createElement(
                 "div",
@@ -9147,11 +9220,11 @@
               var o = a.node_groups[r];
               if (0 != o.phase && 0 != o.team_standings.length) {
                 for (
-                  var n = [], c = [], l = 0, g = o.team_standings;
-                  l < g.length;
-                  l++
+                  var n = [], c = [], i = 0, g = o.team_standings;
+                  i < g.length;
+                  i++
                 ) {
-                  var _ = g[l];
+                  var _ = g[i];
                   -1 == n.indexOf(_.team_id) && (c.push(_), n.push(_.team_id));
                 }
                 for (var d = 0, p = o.node_groups; d < p.length; d++)
@@ -9264,22 +9337,22 @@
           (a = Object(n.c)([x.a], a))
         );
       })(m.a.Component),
-      lt = function (e) {
+      it = function (e) {
         var a = e.teamName1,
           t = e.teamLogo1,
           r = e.teamWins1,
           o = e.teamName2,
           n = e.teamLogo2,
           c = e.teamWins2,
-          l = e.type,
-          i = e.isInProgress,
+          i = e.type,
+          l = e.isInProgress,
           g = e.isCompleted,
           _ = e.positionX,
           d = e.positionY,
           p = e.leagueID,
           u = e.seriesID,
           h = !1;
-        switch (l) {
+        switch (i) {
           case 1:
             h = 1 == r;
             break;
@@ -9296,7 +9369,7 @@
             to: P(p, u),
             className: A(
               rt.a.BracketNode,
-              i && rt.a.InProgress,
+              l && rt.a.InProgress,
               g && rt.a.IsCompleted
             ),
             style: { left: _, top: d },
@@ -9325,7 +9398,7 @@
           )
         );
       },
-      it = (function (e) {
+      lt = (function (e) {
         function a() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -9419,7 +9492,7 @@
               (r = 472),
               this.props.nodeGroup.nodes)) {
                 var c = parseInt(n),
-                  l = this.props.nodeGroup.nodes[n],
+                  i = this.props.nodeGroup.nodes[n],
                   g = 0,
                   _ = 0;
                 switch (c) {
@@ -9441,26 +9514,26 @@
                   case 5:
                     (g = 316), (_ = 352);
                 }
-                var d = i.g_App.getTeamData(l.team_id_1),
-                  p = i.g_App.getTeamData(l.team_id_2);
+                var d = l.g_App.getTeamData(i.team_id_1),
+                  p = l.g_App.getTeamData(i.team_id_2);
                 d &&
                   p &&
                   o.push(
-                    m.a.createElement(lt, {
+                    m.a.createElement(it, {
                       key: "node_" + n,
                       teamName1: d.name,
                       teamLogo1: d.url_logo,
-                      teamWins1: l.team_1_wins,
+                      teamWins1: i.team_1_wins,
                       teamName2: p.name,
                       teamLogo2: p.url_logo,
-                      teamWins2: l.team_2_wins,
-                      isCompleted: l.is_completed,
-                      isInProgress: l.has_started,
-                      type: l.node_type,
+                      teamWins2: i.team_2_wins,
+                      isCompleted: i.is_completed,
+                      isInProgress: i.has_started,
+                      type: i.node_type,
                       positionX: g,
                       positionY: _,
                       leagueID: this.props.leagueID,
-                      seriesID: l.series_id,
+                      seriesID: i.series_id,
                     })
                   );
               }
@@ -9509,7 +9582,7 @@
                 (r = 582),
                 this.props.nodeGroup.nodes)) {
                   var c = parseInt(n),
-                    l = this.props.nodeGroup.nodes[n],
+                    i = this.props.nodeGroup.nodes[n],
                     g = 0,
                     _ = 0;
                   switch (c) {
@@ -9543,16 +9616,16 @@
                     case 9:
                       (g = 948), (_ = 389);
                   }
-                  var d = i.g_App.getTeamData(l.team_id_1),
-                    p = i.g_App.getTeamData(l.team_id_2),
+                  var d = l.g_App.getTeamData(i.team_id_1),
+                    p = l.g_App.getTeamData(i.team_id_2),
                     u =
-                      0 == l.team_id_1
+                      0 == i.team_id_1
                         ? Object(y.b)("#Feed_TBD")
                         : d
                         ? d.name
                         : "",
                     h =
-                      0 == l.team_id_2
+                      0 == i.team_id_2
                         ? Object(y.b)("#Feed_TBD")
                         : p
                         ? p.name
@@ -9560,21 +9633,21 @@
                     b = d ? d.url_logo : s.a.IMG_URL + "team_unkown.png",
                     k = p ? p.url_logo : s.a.IMG_URL + "team_unkown.png";
                   o.push(
-                    m.a.createElement(lt, {
+                    m.a.createElement(it, {
                       key: "node_" + n,
                       teamName1: u,
                       teamLogo1: b,
-                      teamWins1: l.team_1_wins,
+                      teamWins1: i.team_1_wins,
                       teamName2: h,
                       teamLogo2: k,
-                      teamWins2: l.team_2_wins,
-                      isCompleted: l.is_completed,
-                      isInProgress: l.has_started,
-                      type: l.node_type,
+                      teamWins2: i.team_2_wins,
+                      isCompleted: i.is_completed,
+                      isInProgress: i.has_started,
+                      type: i.node_type,
                       positionX: g,
                       positionY: _,
                       leagueID: this.props.leagueID,
-                      seriesID: l.series_id,
+                      seriesID: i.series_id,
                     })
                   );
                 }
@@ -9586,7 +9659,7 @@
                 (r = 1198),
                 this.props.nodeGroup.nodes)) {
                   (c = parseInt(n)),
-                    (l = this.props.nodeGroup.nodes[n]),
+                    (i = this.props.nodeGroup.nodes[n]),
                     (g = 0),
                     (_ = 0);
                   switch (c) {
@@ -9656,16 +9729,16 @@
                     case 21:
                       (g = 1582), (_ = 852);
                   }
-                  (d = i.g_App.getTeamData(l.team_id_1)),
-                    (p = i.g_App.getTeamData(l.team_id_2)),
+                  (d = l.g_App.getTeamData(i.team_id_1)),
+                    (p = l.g_App.getTeamData(i.team_id_2)),
                     (u =
-                      0 == l.team_id_1
+                      0 == i.team_id_1
                         ? Object(y.b)("#Feed_TBD")
                         : d
                         ? d.name
                         : ""),
                     (h =
-                      0 == l.team_id_2
+                      0 == i.team_id_2
                         ? Object(y.b)("#Feed_TBD")
                         : p
                         ? p.name
@@ -9673,21 +9746,21 @@
                     (b = d ? d.url_logo : s.a.IMG_URL + "team_unkown.png"),
                     (k = p ? p.url_logo : s.a.IMG_URL + "team_unkown.png");
                   o.push(
-                    m.a.createElement(lt, {
+                    m.a.createElement(it, {
                       key: "node_" + n,
                       teamName1: u,
                       teamLogo1: b,
-                      teamWins1: l.team_1_wins,
+                      teamWins1: i.team_1_wins,
                       teamName2: h,
                       teamLogo2: k,
-                      teamWins2: l.team_2_wins,
-                      isCompleted: l.is_completed,
-                      isInProgress: l.has_started,
-                      type: l.node_type,
+                      teamWins2: i.team_2_wins,
+                      isCompleted: i.is_completed,
+                      isInProgress: i.has_started,
+                      type: i.node_type,
                       positionX: g,
                       positionY: _,
                       leagueID: this.props.leagueID,
-                      seriesID: l.series_id,
+                      seriesID: i.series_id,
                     })
                   );
                 }
@@ -9736,7 +9809,7 @@
               (r = 267),
               this.props.nodeGroup.nodes)) {
                 var c = parseInt(n),
-                  l = this.props.nodeGroup.nodes[n],
+                  i = this.props.nodeGroup.nodes[n],
                   g = 0,
                   _ = 0;
                 switch (c) {
@@ -9749,16 +9822,16 @@
                   case 2:
                     (g = 316), (_ = 74);
                 }
-                var d = i.g_App.getTeamData(l.team_id_1),
-                  p = i.g_App.getTeamData(l.team_id_2),
+                var d = l.g_App.getTeamData(i.team_id_1),
+                  p = l.g_App.getTeamData(i.team_id_2),
                   u =
-                    0 == l.team_id_1
+                    0 == i.team_id_1
                       ? Object(y.b)("#Feed_TBD")
                       : d
                       ? d.name
                       : "",
                   h =
-                    0 == l.team_id_2
+                    0 == i.team_id_2
                       ? Object(y.b)("#Feed_TBD")
                       : p
                       ? p.name
@@ -9766,21 +9839,21 @@
                   b = d ? d.url_logo : s.a.IMG_URL + "team_unkown.png",
                   k = p ? p.url_logo : s.a.IMG_URL + "team_unkown.png";
                 o.push(
-                  m.a.createElement(lt, {
+                  m.a.createElement(it, {
                     key: "node_" + n,
                     teamName1: u,
                     teamLogo1: b,
-                    teamWins1: l.team_1_wins,
+                    teamWins1: i.team_1_wins,
                     teamName2: h,
                     teamLogo2: k,
-                    teamWins2: l.team_2_wins,
-                    isCompleted: l.is_completed,
-                    isInProgress: l.has_started,
-                    type: l.node_type,
+                    teamWins2: i.team_2_wins,
+                    isCompleted: i.is_completed,
+                    isInProgress: i.has_started,
+                    type: i.node_type,
                     positionX: g,
                     positionY: _,
                     leagueID: this.props.leagueID,
-                    seriesID: l.series_id,
+                    seriesID: i.series_id,
                   })
                 );
               }
@@ -9839,16 +9912,16 @@
                 case 4:
                   (n = 316), (c = 323);
               }
-              var l = i.g_App.getTeamData(o.team_id_1),
-                g = i.g_App.getTeamData(o.team_id_2),
+              var i = l.g_App.getTeamData(o.team_id_1),
+                g = l.g_App.getTeamData(o.team_id_2),
                 _ =
-                  0 == o.team_id_1 ? Object(y.b)("#Feed_TBD") : l ? l.name : "",
+                  0 == o.team_id_1 ? Object(y.b)("#Feed_TBD") : i ? i.name : "",
                 d =
                   0 == o.team_id_2 ? Object(y.b)("#Feed_TBD") : g ? g.name : "",
-                p = l ? l.url_logo : s.a.IMG_URL + "team_unkown.png",
+                p = i ? i.url_logo : s.a.IMG_URL + "team_unkown.png",
                 u = g ? g.url_logo : s.a.IMG_URL + "team_unkown.png";
               a.push(
-                m.a.createElement(lt, {
+                m.a.createElement(it, {
                   key: "node_" + t,
                   teamName1: _,
                   teamLogo1: p,
@@ -9898,8 +9971,8 @@
           o = e.points,
           n = e.earnings,
           c = e.teamID,
-          l = n.toFixed(0).replace(/\d(?=(\d{3})+$)/g, "$&,"),
-          i = o.toFixed(0).replace(/\d(?=(\d{3})+$)/g, "$&,");
+          i = n.toFixed(0).replace(/\d(?=(\d{3})+$)/g, "$&,"),
+          l = o.toFixed(0).replace(/\d(?=(\d{3})+$)/g, "$&,");
         return m.a.createElement(
           nt,
           { to: T(c), className: rt.a.TournamentResult, condition: 0 != c },
@@ -9939,7 +10012,7 @@
                   { className: rt.a.Label },
                   Object(y.b)("#Earnings")
                 ),
-                m.a.createElement("div", { className: rt.a.Value }, "$", l)
+                m.a.createElement("div", { className: rt.a.Value }, "$", i)
               ),
               o > 0 &&
                 m.a.createElement(
@@ -9950,7 +10023,7 @@
                     { className: rt.a.Label },
                     Object(y.b)("#Points")
                   ),
-                  m.a.createElement("div", { className: rt.a.Value }, i)
+                  m.a.createElement("div", { className: rt.a.Value }, l)
                 )
             )
           )
@@ -9964,8 +10037,8 @@
           Object(n.d)(a, e),
           (a.prototype.getResults = function () {
             var e = parseInt(this.props.match.params.leagueID),
-              a = i.g_App.getLeagueResults(e),
-              t = i.g_App.getLeagueData(e);
+              a = l.g_App.getLeagueResults(e),
+              t = l.g_App.getLeagueData(e);
             if (
               (console.log("leagueResults", Object(sa.H)(a)),
               console.log("leagueData", Object(sa.H)(t)),
@@ -9973,7 +10046,7 @@
             )
               return m.a.createElement(
                 "div",
-                { className: le.a.FadeInDelay },
+                { className: ie.a.FadeInDelay },
                 m.a.createElement(
                   "div",
                   { key: "throbber", className: rt.a.Loading },
@@ -9994,7 +10067,7 @@
               ? (o = 18)
               : 8 == t.info.tier && (o = 8);
             for (var n = 0, c = 1; c < o + 1 && c < a.dollars.length; c++) {
-              for (var l = !1, s = n; s < a.results.length; s++) {
+              for (var i = !1, s = n; s < a.results.length; s++) {
                 var g = a.results[s];
                 if (g.standing <= c) {
                   var _ = 5 == t.info.tier ? 0 : g.points;
@@ -10010,11 +10083,11 @@
                     })
                   ),
                     (n = s + 1),
-                    (l = !0);
+                    (i = !0);
                   break;
                 }
               }
-              if (!l) {
+              if (!i) {
                 _ = 5 == t.info.tier ? 0 : a.points[c - 1];
                 r.push(
                   m.a.createElement(dt, {
@@ -10037,7 +10110,7 @@
               switch (n.node_group_type) {
                 case 2:
                   t.push(
-                    m.a.createElement(it, {
+                    m.a.createElement(lt, {
                       key: "bracket_" + n.node_group_id,
                       leagueID: e,
                       nodeGroup: n,
@@ -10092,7 +10165,7 @@
           }),
           (a.prototype.render = function () {
             var e = parseInt(this.props.match.params.leagueID),
-              a = i.g_App.getLeagueData(e);
+              a = l.g_App.getLeagueData(e);
             if (!a)
               return m.a.createElement(
                 "div",
@@ -10115,43 +10188,43 @@
             );
             for (var o = 0, n = a.node_groups; o < n.length; o++) {
               var c = (p = n[o]).phase + "_" + p.region,
-                l = "";
+                i = "";
               switch (p.phase) {
                 case 1:
-                  l = "Regional_";
+                  i = "Regional_";
                   break;
                 case 2:
-                  l = "Group_";
+                  i = "Group_";
                   break;
                 case 3:
-                  l = "MainEvent_";
+                  i = "MainEvent_";
               }
               if (1 == p.phase)
                 switch (p.region) {
                   case 1:
-                    l += "NA_";
+                    i += "NA_";
                     break;
                   case 2:
-                    l += "SA_";
+                    i += "SA_";
                     break;
                   case 3:
-                    l += "WEU_";
+                    i += "WEU_";
                     break;
                   case 4:
-                    l += "EEU_";
+                    i += "EEU_";
                     break;
                   case 5:
-                    l += "CN_";
+                    i += "CN_";
                     break;
                   case 6:
-                    l += "SEA_";
+                    i += "SEA_";
                 }
               r.push(
                 m.a.createElement(
                   "option",
                   { key: c, value: c },
                   " ",
-                  Object(y.b)("#LeaguePhase_" + l + "Teams")
+                  Object(y.b)("#LeaguePhase_" + i + "Teams")
                 )
               );
             }
@@ -10193,7 +10266,7 @@
               t
             );
           }),
-          Object(n.c)([q], a.prototype, "onSelectPhaseOption", null),
+          Object(n.c)([q.a], a.prototype, "onSelectPhaseOption", null),
           (a = Object(n.c)([x.a], a))
         );
       })(m.a.Component),
@@ -10206,9 +10279,9 @@
           Object(n.d)(a, e),
           (a.prototype.componentDidMount = function () {
             var e = this;
-            i.g_App.getLiveMatches(parseInt(this.props.match.params.leagueID)),
+            l.g_App.getLiveMatches(parseInt(this.props.match.params.leagueID)),
               (this.intervalHandle = setInterval(function () {
-                i.g_App.getLiveMatches(parseInt(e.props.match.params.leagueID));
+                l.g_App.getLiveMatches(parseInt(e.props.match.params.leagueID));
               }, 3e4));
           }),
           (a.prototype.componentWillUnmount = function () {
@@ -10216,34 +10289,34 @@
           }),
           (a.prototype.getUpcomingMatches = function (e, a, t) {
             for (var r = 0, o = a.node_groups; r < o.length; r++) {
-              for (var n = o[r], c = 0, l = n.nodes; c < l.length; c++) {
-                var i = l[c];
-                i.has_started ||
-                  i.is_completed ||
-                  0 == i.scheduled_time ||
-                  (0 != i.team_id_1 &&
-                    0 != i.team_id_2 &&
-                    t.push([i.node_id, i.scheduled_time]));
+              for (var n = o[r], c = 0, i = n.nodes; c < i.length; c++) {
+                var l = i[c];
+                l.has_started ||
+                  l.is_completed ||
+                  0 == l.scheduled_time ||
+                  (0 != l.team_id_1 &&
+                    0 != l.team_id_2 &&
+                    t.push([l.node_id, l.scheduled_time]));
               }
               this.getUpcomingMatches(e, n, t);
             }
           }),
           (a.prototype.getActiveSeries = function (e, a, t) {
             for (var r = 0, o = a.node_groups; r < o.length; r++) {
-              for (var n = o[r], c = 0, l = n.nodes; c < l.length; c++) {
-                var i = l[c];
-                i.has_started &&
-                  !i.is_completed &&
-                  0 != i.scheduled_time &&
-                  t.push(i.node_id);
+              for (var n = o[r], c = 0, i = n.nodes; c < i.length; c++) {
+                var l = i[c];
+                l.has_started &&
+                  !l.is_completed &&
+                  0 != l.scheduled_time &&
+                  t.push(l.node_id);
               }
               this.getActiveSeries(e, n, t);
             }
           }),
           (a.prototype.render = function () {
             var e = parseInt(this.props.match.params.leagueID),
-              a = i.g_App.getLeagueData(e),
-              t = i.g_App.getLiveMatches(e);
+              a = l.g_App.getLeagueData(e),
+              t = l.g_App.getLiveMatches(e);
             if (!a)
               return m.a.createElement(
                 "div",
@@ -10271,9 +10344,9 @@
                   })
                 );
               }
-            var l = [];
-            this.getActiveSeries(e, a, l);
-            for (var s = 0, g = l; s < g.length; s++) {
+            var i = [];
+            this.getActiveSeries(e, a, i);
+            for (var s = 0, g = i; s < g.length; s++) {
               var _ = g[s];
               r.push(
                 m.a.createElement(Me, {
@@ -10440,7 +10513,7 @@
         return (
           Object(n.d)(a, e),
           (a.prototype.toggle = function () {
-            i.g_App.toggleFavorite(
+            l.g_App.toggleFavorite(
               this.props.type,
               this.props.id,
               this.props.name,
@@ -10450,24 +10523,24 @@
           (a.prototype.render = function () {
             var e, a;
             switch (this.props.type) {
-              case i.EFavoriteType.Player:
+              case l.EFavoriteType.Player:
                 (e = m.a.createElement(We, {
                   className: A(kt.a.Icon, kt.a.Player),
-                  src: i.g_App.getPlayerImageURL(this.props.id),
+                  src: l.g_App.getPlayerImageURL(this.props.id),
                   fallbackSrc: s.a.IMG_URL + "portrait_unknown.png",
                 })),
                   (a = L(this.props.id));
                 break;
-              case i.EFavoriteType.Team:
+              case l.EFavoriteType.Team:
                 (e = m.a.createElement(We, {
                   className: A(kt.a.Icon, kt.a.Team),
                   src: this.props.url,
                   fallbackSrc: s.a.IMG_URL + "team_unknown.png",
                 })),
                   (a = T(this.props.id));
-              case i.EFavoriteType.League:
+              case l.EFavoriteType.League:
             }
-            var t = i.g_App.isFavorite(this.props.type, this.props.id);
+            var t = l.g_App.isFavorite(this.props.type, this.props.id);
             return m.a.createElement(
               "div",
               { className: kt.a.SearchElement },
@@ -10490,7 +10563,7 @@
               })
             );
           }),
-          Object(n.c)([q], a.prototype, "toggle", null),
+          Object(n.c)([q.a], a.prototype, "toggle", null),
           (a = Object(n.c)([x.a], a))
         );
       })(m.a.Component),
@@ -10512,7 +10585,7 @@
             this.setState({ sSearchString: e.target.value });
           }),
           (a.prototype.handleSubmit = function (e) {
-            i.g_App.requestSearchResults(this.state.sSearchString),
+            l.g_App.requestSearchResults(this.state.sSearchString),
               e.preventDefault(),
               this.setState({
                 bWasEmptySearch: 0 == this.state.sSearchString.length,
@@ -10521,21 +10594,21 @@
           }),
           (a.prototype.handleClear = function () {
             this.setState({ sSearchString: "", bWasEmptySearch: !0 }),
-              i.g_App.requestSearchResults("");
+              l.g_App.requestSearchResults("");
           }),
           (a.prototype.componentDidMount = function () {
             return Object(n.b)(this, void 0, void 0, function () {
               return Object(n.e)(this, function (e) {
                 return (
-                  i.g_App.requestSearchResults(this.state.sSearchString), [2]
+                  l.g_App.requestSearchResults(this.state.sSearchString), [2]
                 );
               });
             });
           }),
           (a.prototype.render = function () {
             var e = [],
-              a = i.g_App.getSearchResults(this.state.sSearchString),
-              t = i.g_App.getFavorites();
+              a = l.g_App.getSearchResults(this.state.sSearchString),
+              t = l.g_App.getFavorites();
             if (a && 0 != a.length && t) {
               var r = void 0,
                 o = [
@@ -10544,28 +10617,28 @@
                 ];
               if (this.state.bWasEmptySearch) {
                 for (var n = 0, c = o; n < c.length; n++) {
-                  var l = c[n];
-                  if (t.types[l.type].favorites.length > 0) {
+                  var i = c[n];
+                  if (t.types[i.type].favorites.length > 0) {
                     e.push(
                       m.a.createElement(
                         "div",
                         {
-                          key: "YourHeader_" + l.type,
+                          key: "YourHeader_" + i.type,
                           className: kt.a.Category,
                         },
-                        Object(y.b)("#Search_CategoryYour_" + l.name)
+                        Object(y.b)("#Search_CategoryYour_" + i.name)
                       )
                     );
                     for (
-                      var g = 0, _ = t.types[l.type].favorites;
+                      var g = 0, _ = t.types[i.type].favorites;
                       g < _.length;
                       g++
                     ) {
                       var d = _[g];
                       e.push(
                         m.a.createElement(vt, {
-                          key: l.type + "_" + d.id,
-                          type: l.type,
+                          key: i.type + "_" + d.id,
+                          type: i.type,
                           id: d.id,
                           name: d.name,
                           url: d.url,
@@ -10584,26 +10657,26 @@
                   );
               }
               for (var p in o) {
-                var u = a[(l = o[p]).name];
+                var u = a[(i = o[p]).name];
                 if (u.length > 0)
                   for (var h in (e.push(
                     m.a.createElement(
                       "div",
-                      { key: "Header_" + l.type, className: kt.a.Category },
+                      { key: "Header_" + i.type, className: kt.a.Category },
                       Object(y.b)(
                         (this.state.bWasEmptySearch
                           ? "#Search_CategoryTop_"
-                          : "#Search_Category_") + l.name
+                          : "#Search_Category_") + i.name
                       )
                     )
                   ),
                   u)) {
                     var b = u[h];
-                    i.g_App.isFavorite(l.type, b.id) ||
+                    l.g_App.isFavorite(i.type, b.id) ||
                       e.push(
                         m.a.createElement(vt, {
-                          key: l.type + "_" + b.id,
-                          type: l.type,
+                          key: i.type + "_" + b.id,
+                          type: i.type,
                           id: b.id,
                           name: b.name,
                           url: b.url,
@@ -10615,7 +10688,7 @@
               e.push(
                 m.a.createElement(
                   "div",
-                  { key: "Throbber", className: le.a.FadeInDelay },
+                  { key: "Throbber", className: ie.a.FadeInDelay },
                   m.a.createElement(be, {
                     size: "medium",
                     string: "Loading...",
@@ -10656,9 +10729,9 @@
               m.a.createElement("div", { className: kt.a.Contents }, e)
             );
           }),
-          Object(n.c)([q], a.prototype, "handleChange", null),
-          Object(n.c)([q], a.prototype, "handleSubmit", null),
-          Object(n.c)([q], a.prototype, "handleClear", null),
+          Object(n.c)([q.a], a.prototype, "handleChange", null),
+          Object(n.c)([q.a], a.prototype, "handleSubmit", null),
+          Object(n.c)([q.a], a.prototype, "handleClear", null),
           (a = Object(n.c)([x.a], a))
         );
       })(m.a.Component),
@@ -10718,7 +10791,7 @@
         return (
           Object(n.d)(a, e),
           (a.prototype.render = function () {
-            var e = i.g_App.getDPCStandings();
+            var e = l.g_App.getDPCStandings();
             if (!e) return m.a.createElement("div", null);
             for (
               var a = [],
@@ -10739,7 +10812,7 @@
             ) {
               var c = n[o];
               if (t[parseInt(c.region)] == this.props.region) {
-                var l = Object(y.b)(r[parseInt(c.region)]),
+                var i = Object(y.b)(r[parseInt(c.region)]),
                   s =
                     0 == c.division
                       ? Object(y.b)("#Standings_Division1")
@@ -10751,7 +10824,7 @@
                       className: Ct.a.Division,
                       key: "" + c.region + c.division,
                     },
-                    l,
+                    i,
                     " - ",
                     s
                   )
@@ -10899,7 +10972,7 @@
         return (
           Object(n.d)(a, e),
           (a.prototype.render = function () {
-            var e = i.g_App.getDPCStandings(),
+            var e = l.g_App.getDPCStandings(),
               a = [],
               t = !1;
             if (e && e.results)
@@ -10919,14 +10992,14 @@
                 for (var r = 1, o = 0, n = e.results; o < n.length; o++) {
                   var c = n[o];
                   if (0 != c.total_points) {
-                    var l = Ct.a.DefaultStatus;
+                    var i = Ct.a.DefaultStatus;
                     if (c.status)
                       switch (c.status) {
                         case 1:
-                          (l = Ct.a.ClinchedInvite), (t = !0);
+                          (i = Ct.a.ClinchedInvite), (t = !0);
                           break;
                         case 2:
-                          (l = Ct.a.Eliminated), (t = !0);
+                          (i = Ct.a.Eliminated), (t = !0);
                       }
                     a.push(
                       m.a.createElement(
@@ -10938,7 +11011,7 @@
                         },
                         m.a.createElement(
                           "span",
-                          { className: A(Ct.a.RankContainer, l) },
+                          { className: A(Ct.a.RankContainer, i) },
                           m.a.createElement("span", { className: Ct.a.Rank }, r)
                         ),
                         m.a.createElement(
@@ -11034,7 +11107,7 @@
                   m.a.createElement(
                     "div",
                     { className: re.a.NavContents },
-                    m.a.createElement(Z, null),
+                    m.a.createElement(Q, null),
                     m.a.createElement(ae, null),
                     m.a.createElement(
                       d.a,
@@ -11051,7 +11124,7 @@
                         path: C(":category", ":region"),
                         component: Nt,
                       }),
-                      m.a.createElement(p.a, { path: E(), component: Ze }),
+                      m.a.createElement(p.a, { path: E(), component: Qe }),
                       m.a.createElement(p.a, { path: B(), component: ca }),
                       m.a.createElement(p.a, {
                         path: G(r.LeagueSelect),
@@ -11296,7 +11369,7 @@
                     console.log("doUserGet: " + e, a),
                     [
                       4,
-                      l.a.get(s.a.BASE_URL + "applications/dpc_get", {
+                      i.a.get(s.a.BASE_URL + "applications/dpc_get", {
                         params: a,
                       }),
                     ]
@@ -11316,7 +11389,7 @@
                     console.log("doAnonymousGet: " + e, a),
                     [
                       4,
-                      l.a.get(
+                      i.a.get(
                         s.a.BASE_URL + "webapi/IDOTA2DPC/" + e + "/v001",
                         { params: a }
                       ),
@@ -11338,7 +11411,7 @@
                     (a.requesting_session_id = s.a.SESSION_ID),
                     (a.requesting_method = e),
                     console.log("doPost: " + e, a),
-                    [4, l.a.post(s.a.BASE_URL + "applications/dpc_post", a)]
+                    [4, i.a.post(s.a.BASE_URL + "applications/dpc_post", a)]
                   );
                 case 1:
                   return [2, t.sent()];
@@ -11584,7 +11657,7 @@
         (e.prototype.toggleFavorite = function (e, a, t, r) {
           var o = this;
           this.m_rgFavoritesAsync.delayNewData(2),
-            i.g_App.doPost("ToggleDPCFavorite", {
+            l.g_App.doPost("ToggleDPCFavorite", {
               favorite_type: e,
               favorite_id: a,
             }),
@@ -12107,6 +12180,24 @@
       );
     })();
   },
+  VQwQ: function (e, a, t) {
+    "use strict";
+    function r(e, a, t) {
+      return {
+        get: function () {
+          var e = t.value.bind(this);
+          return (
+            this.hasOwnProperty(a) ||
+              Object.defineProperty(this, a, { value: e }),
+            e
+          );
+        },
+      };
+    }
+    t.d(a, "a", function () {
+      return r;
+    });
+  },
   W8ih: function (e, a, t) {
     e.exports = {
       colorBlack: "helpoverlay_colorBlack_2La3h",
@@ -12586,8 +12677,8 @@
           (e.ClearBackgroundTimeout = e.clearTimeout),
           (e.SetBackgroundInterval = e.setInterval),
           (e.SetBackgroundTimeout = e.setTimeout);
-        var l,
-          i,
+        var i,
+          l,
           s,
           g = new o.a();
         document.addEventListener("DOMContentLoaded", function () {
@@ -12595,18 +12686,18 @@
         }),
           (window.LocalizationReady = function (e, a, t) {
             if ("english" !== a)
-              "main" == e ? (l = t) : "shared" == e && (i = t);
+              "main" == e ? (i = t) : "shared" == e && (l = t);
             else if ("shared" == e) s = t;
             else {
               var r = void 0,
                 o = null,
                 n = void 0,
                 g = null;
-              void 0 !== l ? ((r = l), (o = t)) : (r = t),
-                void 0 !== i ? ((n = i), (g = s)) : (n = s),
+              void 0 !== i ? ((r = i), (o = t)) : (r = t),
+                void 0 !== l ? ((n = l), (g = s)) : (n = s),
                 c.a.InitFromObjects(r, o, n, g),
-                (l = void 0),
                 (i = void 0),
+                (l = void 0),
                 (s = void 0);
             }
           });
