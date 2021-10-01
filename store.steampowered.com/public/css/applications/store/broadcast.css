@@ -55,13 +55,13 @@
   display: flex;
   flex: 1;
   flex-direction: column;
+  justify-content: flex-end;
   background-color: #1b1c20;
   position: relative;
 }
 .broadcastchat_ChatMessages_3M5L0 {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   flex-grow: 1;
   overflow-y: scroll;
   flex-basis: 1px;
