@@ -22768,6 +22768,7 @@ a {
   justify-content: center;
   max-width: 450px;
   height: 100%;
+  pointer-events: auto;
 }
 .dpcroot_DPCHeaderTI2021_34VR8
   .dpcroot_TextContainer_1KhMv
@@ -23717,7 +23718,14 @@ a {
   .dpcmatchbanner_MatchesScroller_2vFED
   .dpcmatchbanner_DayContainer_bUhhJ
   .dpcmatchbanner_DayBar_Z5U-i.dpcmatchbanner_Third_1Iumi {
-  background-color: #262931;
+  background-color: #2e2e2f;
+}
+.dpcmatchbanner_MatchesContainer_T5fzO
+  .dpcmatchbanner_MatchesScroller_2vFED
+  .dpcmatchbanner_DayContainer_bUhhJ
+  .dpcmatchbanner_DayBar_Z5U-i.dpcmatchbanner_Today_Aff8N {
+  background-color: #252c3e;
+  border: 1px solid #252c3e;
 }
 .dpcmatchbanner_MatchesContainer_T5fzO
   .dpcmatchbanner_MatchesScroller_2vFED
@@ -23775,8 +23783,12 @@ a {
   border: 1px solid #222223;
 }
 .dpcmatchbanner_DPCMatchBannerNode_1bw0U.dpcmatchbanner_Third_1Iumi {
-  background-color: #262931;
-  border: 1px solid #262931;
+  background-color: #2e2e2f;
+  border: 1px solid #2e2e2f;
+}
+.dpcmatchbanner_DPCMatchBannerNode_1bw0U.dpcmatchbanner_Today_Aff8N {
+  background-color: #252c3e;
+  border: 1px solid #252c3e;
 }
 .dpcmatchbanner_DPCMatchBannerNode_1bw0U.dpcmatchbanner_IsSelected_3zmDQ {
   border: 1px solid #4a587c;
@@ -23966,6 +23978,26 @@ a {
   color: #a3a3a3;
   text-transform: uppercase;
   font-weight: 800;
+}
+.dpcmatchbanner_DPCMatchBannerNode_1bw0U .dpcmatchbanner_Multicast_2Ek2W {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: flex-start;
+  align-items: center;
+  color: #a3a3a3;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 14px;
+}
+.dpcmatchbanner_DPCMatchBannerNode_1bw0U
+  .dpcmatchbanner_Multicast_2Ek2W
+  .dpcmatchbanner_Icon_21ge4 {
+  width: 20px;
+  height: 20px;
 }
 .dpcmatchbanner_TeamLogo_3o2Hj.dpcmatchbanner_Invalid_2_MXR {
   opacity: 0;
@@ -25766,6 +25798,10 @@ a {
   .dpcseriesdetails_NameAndStats_1alLL {
   text-align: left;
 }
+.dpcseriesdetails_MatchSectionPlayer_Ej-PQ.dpcseriesdetails_Left_2at7C:hover {
+  color: #fff;
+  background-color: #20212b;
+}
 .dpcseriesdetails_MatchSectionPlayer_Ej-PQ.dpcseriesdetails_Left_2at7C.dpcseriesdetails_Selected_2biWX {
   border-left: 1px solid #314068;
   transform: translateX(5px);
@@ -25780,6 +25816,10 @@ a {
 .dpcseriesdetails_MatchSectionPlayer_Ej-PQ.dpcseriesdetails_Right__VHXn
   .dpcseriesdetails_NameAndStats_1alLL {
   text-align: right;
+}
+.dpcseriesdetails_MatchSectionPlayer_Ej-PQ.dpcseriesdetails_Right__VHXn:hover {
+  color: #fff;
+  background-color: #20212b;
 }
 .dpcseriesdetails_MatchSectionPlayer_Ej-PQ.dpcseriesdetails_Right__VHXn.dpcseriesdetails_Selected_2biWX {
   border-right: 1px solid #314068;
@@ -29097,7 +29137,6 @@ a {
   padding-bottom: 60px;
   padding-right: 0px;
   max-width: 90vw;
-  overflow: visible;
 }
 .dpcstandings_DPCStandingsBracket_9iCXI
   .dpcstandings_BracketScroller_1eoNP::-webkit-scrollbar-track {
@@ -32973,6 +33012,7 @@ a {
 }
 .dpcschedulepage_DPCScheduleHeader_2DFwc {
   width: 100%;
+  height: 100px;
   max-width: 1200px;
   display: flex;
   flex-direction: row;
@@ -32988,8 +33028,132 @@ a {
   );
   z-index: 998;
   padding: 0px 20px;
-  margin-top: 80px;
-  margin-bottom: 20px;
+}
+.dpcschedulepage_DPCScheduleHeader_2DFwc .dpcschedulepage_Filters_20Aof {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.dpcschedulepage_DPCScheduleHeader_2DFwc
+  .dpcschedulepage_InternationalDaySelector_1dnun {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+}
+.dpcschedulepage_DPCScheduleHeader_2DFwc
+  .dpcschedulepage_InternationalDaySelector_1dnun
+  .dpcschedulepage_AllDays_dlIq7 {
+  height: 50px;
+  font-size: 15px;
+  color: #fff;
+  font-family: "Reaver", serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  padding: 0px 25px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #28282e;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom: none;
+  cursor: pointer;
+  user-select: none;
+}
+.dpcschedulepage_DPCScheduleHeader_2DFwc
+  .dpcschedulepage_InternationalDaySelector_1dnun
+  .dpcschedulepage_AllDays_dlIq7.dpcschedulepage_Selected_wjYeu {
+  background-color: #222;
+}
+.dpcschedulepage_DPCScheduleHeader_2DFwc
+  .dpcschedulepage_InternationalDaySelector_1dnun
+  .dpcschedulepage_EventStageContainer_1ntex {
+  height: 100px;
+  font-size: 12px;
+  color: #fff;
+  font-family: "Reaver", serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 4px;
+}
+.dpcschedulepage_DPCScheduleHeader_2DFwc
+  .dpcschedulepage_InternationalDaySelector_1dnun
+  .dpcschedulepage_EventStageContainer_1ntex
+  .dpcschedulepage_Title_1iWS_ {
+  font-family: "Reaver", serif;
+  color: #a7a7a7;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.dpcschedulepage_DPCScheduleHeader_2DFwc
+  .dpcschedulepage_InternationalDaySelector_1dnun
+  .dpcschedulepage_EventStageContainer_1ntex
+  .dpcschedulepage_DayList_3YZdA {
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+}
+.dpcschedulepage_DPCScheduleHeader_2DFwc
+  .dpcschedulepage_InternationalDaySelector_1dnun
+  .dpcschedulepage_EventStageContainer_1ntex
+  .dpcschedulepage_DayList_3YZdA
+  .dpcschedulepage_DayContainer_1nCKL {
+  height: 100%;
+  min-width: 50px;
+  padding: 0px 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #28282e;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom: none;
+  cursor: pointer;
+  user-select: none;
+}
+.dpcschedulepage_DPCScheduleHeader_2DFwc
+  .dpcschedulepage_InternationalDaySelector_1dnun
+  .dpcschedulepage_EventStageContainer_1ntex
+  .dpcschedulepage_DayList_3YZdA
+  .dpcschedulepage_DayContainer_1nCKL.dpcschedulepage_Selected_wjYeu {
+  background-color: #28282e;
+}
+.dpcschedulepage_DPCScheduleHeader_2DFwc
+  .dpcschedulepage_InternationalDaySelector_1dnun
+  .dpcschedulepage_EventStageContainer_1ntex
+  .dpcschedulepage_DayList_3YZdA
+  .dpcschedulepage_DayContainer_1nCKL
+  .dpcschedulepage_DayNumber_2lxG4 {
+  font-size: 15px;
+  color: #fff;
+  font-family: "Reaver", serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+.dpcschedulepage_DPCScheduleHeader_2DFwc
+  .dpcschedulepage_InternationalDaySelector_1dnun
+  .dpcschedulepage_EventStageContainer_1ntex
+  .dpcschedulepage_DayList_3YZdA
+  .dpcschedulepage_DayContainer_1nCKL
+  .dpcschedulepage_DayOfWeek_3gu3r {
+  font-size: 12px;
+  color: #a7a7a7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
 }
 .dpcschedulepage_DPCScheduleList_3QIzq {
   width: 100%;
@@ -33124,6 +33288,9 @@ a {
   font-weight: 700;
   letter-spacing: 2px;
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
 }
 @media (max-width: 1000px) {
   .dpcschedulepage_DPCScheduleEntry_b1AHp
