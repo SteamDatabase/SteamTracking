@@ -11225,15 +11225,16 @@
                 return Object(n.e)(this, function (n) {
                   switch (n.label) {
                     case 0:
-                      (e = Rr.a
-                        .Get()
-                        .GetStreams(this.props)
-                        .filter(function (e) {
-                          return (
-                            !a.props.fnFilterStreams ||
-                            a.props.fnFilterStreams(e)
-                          );
-                        })),
+                      this.setState({ bStartMuted: !1 }),
+                        (e = Rr.a
+                          .Get()
+                          .GetStreams(this.props)
+                          .filter(function (e) {
+                            return (
+                              !a.props.fnFilterStreams ||
+                              a.props.fnFilterStreams(e)
+                            );
+                          })),
                         Object(Rr.f)(e),
                         (t = 0),
                         (r = e),
