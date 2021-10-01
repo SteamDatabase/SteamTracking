@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6802059";
+var CLSTAMP = "6803161";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [1],
   {
@@ -10314,9 +10314,10 @@ var CLSTAMP = "6802059";
             (this.m_eSpoilerBlock = e ? c.l.BLOCKED : c.l.UNBLOCKED),
               console.log("SETTING BLOCK", e),
               localStorage.setItem("bSpoilerBlockEnabled", e ? "1" : "0"),
-              s.a.post(l.a.BASE_URL + "react/setspoilerblock", {
-                params: { block: e, sessionid: l.a.SESSION_ID },
-              });
+              0 != l.a.ACCOUNT_ID &&
+                s.a.post(l.a.BASE_URL + "react/setspoilerblock", {
+                  params: { block: e, sessionid: l.a.SESSION_ID },
+                });
           }),
           (e.prototype.GetDefaultRegion = function () {
             var e = c.k.WEU;
@@ -39304,119 +39305,112 @@ var CLSTAMP = "6802059";
               );
         },
         g = a("55Ip"),
-        h = a("Viej");
-      var b = function (e) {
-        var t = e.bOverlapping,
-          a = Object(d.h)(),
-          i = Object(r.useState)(!1),
-          m = i[0],
-          u = i[1],
-          b = Object(r.useState)(!1),
-          v = b[0],
-          f = b[1];
-        return o.a.createElement(
-          "div",
-          { className: Object(c.a)(s.a.MicroHeader, t && s.a.Overlapping) },
-          o.a.createElement(
+        h = a("Viej"),
+        b = function (e) {
+          var t = e.bOverlapping,
+            a = Object(d.h)(),
+            i = Object(r.useState)(!1),
+            m = i[0],
+            u = i[1],
+            b = Object(r.useState)(!1),
+            v = b[0],
+            f = b[1];
+          return o.a.createElement(
             "div",
-            { className: s.a.HeaderContents },
-            o.a.createElement(g.b, { to: p.b.home(), className: s.a.DotaLogo }),
+            { className: Object(c.a)(s.a.MicroHeader, t && s.a.Overlapping) },
             o.a.createElement(
               "div",
-              { className: Object(c.a)(s.a.NavItems) },
+              { className: s.a.HeaderContents },
+              o.a.createElement(g.b, {
+                to: p.b.home(),
+                className: s.a.DotaLogo,
+              }),
               o.a.createElement(
                 "div",
-                {
-                  className: Object(c.a)(
-                    s.a.NavLink,
-                    s.a.GameDropdown,
-                    m && s.a.Active
-                  ),
-                  onClick: function () {
-                    return u(!m);
-                  },
-                  onMouseEnter: function () {
-                    return u(!0);
-                  },
-                  onMouseLeave: function () {
-                    return u(!1);
-                  },
-                },
-                Object(l.a)("#header_game"),
-                o.a.createElement("img", {
-                  src: n.a.IMG_URL + "arrow_over.png",
-                  className: s.a.DownArrow,
-                })
-              ),
-              o.a.createElement(
-                "div",
-                {
-                  className: Object(c.a)(
-                    s.a.GameDropdownContents,
-                    !m && s.a.Hidden
-                  ),
-                  onMouseEnter: function () {
-                    return u(!0);
-                  },
-                  onMouseLeave: function () {
-                    return u(!1);
-                  },
-                },
+                { className: Object(c.a)(s.a.NavItems) },
                 o.a.createElement(
-                  "a",
-                  { href: n.a.BASE_URL + "store" },
-                  Object(l.a)("#header_store")
+                  "div",
+                  {
+                    className: Object(c.a)(
+                      s.a.NavLink,
+                      s.a.GameDropdown,
+                      m && s.a.Active
+                    ),
+                    onClick: function () {
+                      return u(!m);
+                    },
+                    onMouseEnter: function () {
+                      return u(!0);
+                    },
+                    onMouseLeave: function () {
+                      return u(!1);
+                    },
+                  },
+                  Object(l.a)("#header_game"),
+                  o.a.createElement("img", {
+                    src: n.a.IMG_URL + "arrow_over.png",
+                    className: s.a.DownArrow,
+                  })
+                ),
+                o.a.createElement(
+                  "div",
+                  {
+                    className: Object(c.a)(
+                      s.a.GameDropdownContents,
+                      !m && s.a.Hidden
+                    ),
+                    onMouseEnter: function () {
+                      return u(!0);
+                    },
+                    onMouseLeave: function () {
+                      return u(!1);
+                    },
+                  },
+                  o.a.createElement(
+                    "a",
+                    { href: n.a.BASE_URL + "store" },
+                    Object(l.a)("#header_store")
+                  ),
+                  o.a.createElement(
+                    g.b,
+                    { to: p.b.patchnotes() },
+                    Object(l.a)("#header_patches")
+                  ),
+                  o.a.createElement(
+                    g.b,
+                    { to: p.b.news("updates") },
+                    Object(l.a)("#header_gameplay_updates")
+                  ),
+                  o.a.createElement(
+                    g.b,
+                    { to: p.b.pastupdates() },
+                    Object(l.a)("#header_previous_updates")
+                  )
                 ),
                 o.a.createElement(
                   g.b,
-                  { to: p.b.patchnotes() },
-                  Object(l.a)("#header_patches")
+                  {
+                    to: p.b.herogrid(),
+                    className: Object(c.a)(
+                      s.a.NavLink,
+                      (a.pathname == p.b.herogrid() ||
+                        0 == a.pathname.indexOf(p.b.hero())) &&
+                        s.a.Active
+                    ),
+                  },
+                  Object(l.a)("#header_heropedia")
                 ),
                 o.a.createElement(
                   g.b,
-                  { to: p.b.news("updates") },
-                  Object(l.a)("#header_gameplay_updates")
+                  {
+                    to: p.b.news(),
+                    className: Object(c.a)(
+                      s.a.NavLink,
+                      a.pathname == p.b.news() && s.a.Active
+                    ),
+                  },
+                  Object(l.a)("#header_news")
                 ),
-                o.a.createElement(
-                  g.b,
-                  { to: p.b.pastupdates() },
-                  Object(l.a)("#header_previous_updates")
-                )
-              ),
-              o.a.createElement(
-                g.b,
-                {
-                  to: p.b.herogrid(),
-                  className: Object(c.a)(
-                    s.a.NavLink,
-                    (a.pathname == p.b.herogrid() ||
-                      0 == a.pathname.indexOf(p.b.hero())) &&
-                      s.a.Active
-                  ),
-                },
-                Object(l.a)("#header_heropedia")
-              ),
-              o.a.createElement(
-                g.b,
-                {
-                  to: p.b.news(),
-                  className: Object(c.a)(
-                    s.a.NavLink,
-                    a.pathname == p.b.news() && s.a.Active
-                  ),
-                },
-                Object(l.a)("#header_news")
-              ),
-              (function () {
-                switch (n.a.ACCOUNT_ID) {
-                  case 9001210:
-                  case 3248856:
-                  case 332913205:
-                  case 27776926:
-                    return !0;
-                }
-                return !1;
-              })() &&
                 o.a.createElement(
                   g.b,
                   {
@@ -39428,267 +39422,279 @@ var CLSTAMP = "6802059";
                   },
                   Object(l.a)("#header_esports")
                 )
-            ),
-            o.a.createElement(
-              "div",
-              { className: Object(c.a)(s.a.OptionsSide) },
+              ),
               o.a.createElement(
                 "div",
-                { className: s.a.AccountLanguage },
-                o.a.createElement(
-                  "a",
-                  {
-                    href:
-                      n.a.COMMUNITY_URL +
-                      "oauth/login?client_id=" +
-                      n.a.CLIENT_ID +
-                      "&response_type=token&state=" +
-                      a.pathname.substr(1),
-                    className: Object(c.a)(
-                      s.a.Login,
-                      0 != n.a.ACCOUNT_ID && s.a.Hidden
-                    ),
-                  },
-                  Object(l.a)("#header_login")
-                ),
+                { className: Object(c.a)(s.a.OptionsSide) },
                 o.a.createElement(
                   "div",
-                  {
-                    className: Object(c.a)(
-                      s.a.Account,
-                      0 == n.a.ACCOUNT_ID && s.a.Hidden
-                    ),
-                  },
-                  n.a.PLAYER,
+                  { className: s.a.AccountLanguage },
                   o.a.createElement(
                     "a",
                     {
                       href:
-                        n.a.BASE_URL +
-                        "oauth/logout?goto=" +
+                        n.a.COMMUNITY_URL +
+                        "oauth/login?client_id=" +
+                        n.a.CLIENT_ID +
+                        "&response_type=token&state=" +
                         a.pathname.substr(1),
-                      className: s.a.Logout,
+                      className: Object(c.a)(
+                        s.a.Login,
+                        0 != n.a.ACCOUNT_ID && s.a.Hidden
+                      ),
                     },
-                    "(",
-                    Object(l.a)("#header_logout"),
-                    ")"
-                  )
-                ),
-                o.a.createElement(_, { bMobile: !1 })
-              ),
-              o.a.createElement(
-                "a",
-                {
-                  className: s.a.PlayForFree,
-                  href: n.a.STORE_URL + "app/570/Dota_2/",
-                },
-                o.a.createElement(
-                  "div",
-                  { className: s.a.StandardButton },
-                  o.a.createElement("div", { className: s.a.SteamLogo }),
+                    Object(l.a)("#header_login")
+                  ),
                   o.a.createElement(
                     "div",
-                    { className: s.a.ButtonText },
-                    Object(l.a)("#play_for_free")
+                    {
+                      className: Object(c.a)(
+                        s.a.Account,
+                        0 == n.a.ACCOUNT_ID && s.a.Hidden
+                      ),
+                    },
+                    n.a.PLAYER,
+                    o.a.createElement(
+                      "a",
+                      {
+                        href:
+                          n.a.BASE_URL +
+                          "oauth/logout?goto=" +
+                          a.pathname.substr(1),
+                        className: s.a.Logout,
+                      },
+                      "(",
+                      Object(l.a)("#header_logout"),
+                      ")"
+                    )
+                  ),
+                  o.a.createElement(_, { bMobile: !1 })
+                ),
+                o.a.createElement(
+                  "a",
+                  {
+                    className: s.a.PlayForFree,
+                    href: n.a.STORE_URL + "app/570/Dota_2/",
+                  },
+                  o.a.createElement(
+                    "div",
+                    { className: s.a.StandardButton },
+                    o.a.createElement("div", { className: s.a.SteamLogo }),
+                    o.a.createElement(
+                      "div",
+                      { className: s.a.ButtonText },
+                      Object(l.a)("#play_for_free")
+                    )
                   )
                 )
+              ),
+              o.a.createElement(
+                "div",
+                {
+                  className: s.a.MobileHamburger,
+                  onClick: function () {
+                    return f(!0);
+                  },
+                },
+                o.a.createElement("div", { className: s.a.HamburgerSlice }),
+                o.a.createElement("div", { className: s.a.HamburgerSlice }),
+                o.a.createElement("div", { className: s.a.HamburgerSlice })
               )
             ),
             o.a.createElement(
               "div",
-              {
-                className: s.a.MobileHamburger,
-                onClick: function () {
-                  return f(!0);
-                },
-              },
-              o.a.createElement("div", { className: s.a.HamburgerSlice }),
-              o.a.createElement("div", { className: s.a.HamburgerSlice }),
-              o.a.createElement("div", { className: s.a.HamburgerSlice })
-            )
-          ),
-          o.a.createElement(
-            "div",
-            { className: Object(c.a)(s.a.MobilePopup, v && s.a.Show) },
-            o.a.createElement(
-              "div",
-              { className: s.a.Header },
-              o.a.createElement("div", { className: s.a.DotaLogo }),
-              o.a.createElement("div", {
-                className: s.a.CloseButton,
-                style: {
-                  backgroundImage: "url( " + n.a.IMG_URL + "close.png )",
-                },
-                onClick: function () {
-                  return f(!1);
-                },
-              })
-            ),
-            o.a.createElement(
-              "div",
-              { className: s.a.MobileOption },
-              Object(l.a)("#header_game")
-            ),
-            o.a.createElement(
-              "div",
-              { className: s.a.MobileSubOptionList },
+              { className: Object(c.a)(s.a.MobilePopup, v && s.a.Show) },
               o.a.createElement(
                 "div",
-                { className: s.a.MobileSubOption },
-                o.a.createElement(
-                  "a",
-                  { href: n.a.BASE_URL + "workshop/builds" },
-                  Object(l.a)("#header_builds")
-                ),
-                o.a.createElement(h.d, { className: s.a.Arrow })
-              ),
-              o.a.createElement(
-                "div",
-                { className: s.a.MobileSubOption },
-                o.a.createElement(
-                  "a",
-                  { href: n.a.COMMUNITY_URL + "app/570/guides" },
-                  Object(l.a)("#header_steam_guides")
-                ),
-                o.a.createElement(h.d, { className: s.a.Arrow })
-              ),
-              o.a.createElement(
-                "div",
-                { className: s.a.MobileSubOption },
-                o.a.createElement(
-                  g.b,
-                  {
-                    to: p.b.patchnotes(),
-                    onClick: function () {
-                      return f(!1);
-                    },
+                { className: s.a.Header },
+                o.a.createElement("div", { className: s.a.DotaLogo }),
+                o.a.createElement("div", {
+                  className: s.a.CloseButton,
+                  style: {
+                    backgroundImage: "url( " + n.a.IMG_URL + "close.png )",
                   },
-                  Object(l.a)("#header_patches")
-                ),
-                o.a.createElement(h.d, { className: s.a.Arrow })
+                  onClick: function () {
+                    return f(!1);
+                  },
+                })
               ),
               o.a.createElement(
                 "div",
-                { className: s.a.MobileSubOption },
-                o.a.createElement(
-                  g.b,
-                  {
-                    to: p.b.news("updates"),
-                    onClick: function () {
-                      return f(!1);
-                    },
-                  },
-                  Object(l.a)("#header_gameplay_updates")
-                ),
-                o.a.createElement(h.d, { className: s.a.Arrow })
+                { className: s.a.MobileOption },
+                Object(l.a)("#header_game")
               ),
               o.a.createElement(
                 "div",
-                { className: s.a.MobileSubOption },
+                { className: s.a.MobileSubOptionList },
                 o.a.createElement(
-                  "a",
-                  { href: n.a.BASE_URL + "store" },
-                  Object(l.a)("#header_store")
-                ),
-                o.a.createElement(h.d, { className: s.a.Arrow })
-              )
-            ),
-            o.a.createElement("div", { className: s.a.LineSeparator }),
-            o.a.createElement(
-              g.b,
-              {
-                to: p.b.herogrid(),
-                className: s.a.MobileOption,
-                onClick: function () {
-                  return f(!1);
-                },
-              },
-              Object(l.a)("#header_heroes"),
-              o.a.createElement(h.e, { className: s.a.Arrow })
-            ),
-            o.a.createElement("div", { className: s.a.LineSeparator }),
-            o.a.createElement(
-              g.b,
-              {
-                to: p.b.news(),
-                className: s.a.MobileOption,
-                onClick: function () {
-                  return f(!1);
-                },
-              },
-              Object(l.a)("#header_news"),
-              o.a.createElement(h.e, { className: s.a.Arrow })
-            ),
-            o.a.createElement("div", { className: s.a.LineSeparator }),
-            o.a.createElement("div", { className: s.a.LineSeparator }),
-            o.a.createElement(
-              "div",
-              { className: s.a.BottomSection },
-              o.a.createElement(
-                "div",
-                { className: s.a.LoginLanguage },
-                o.a.createElement(
-                  "a",
-                  {
-                    href:
-                      n.a.COMMUNITY_URL +
-                      "oauth/login?client_id=" +
-                      n.a.CLIENT_ID +
-                      "&response_type=token&state=" +
-                      a.pathname.substr(1),
-                    className: Object(c.a)(
-                      s.a.Login,
-                      0 != n.a.ACCOUNT_ID && s.a.Hidden
-                    ),
-                  },
-                  Object(l.a)("#header_login")
+                  "div",
+                  { className: s.a.MobileSubOption },
+                  o.a.createElement(
+                    "a",
+                    { href: n.a.BASE_URL + "workshop/builds" },
+                    Object(l.a)("#header_builds")
+                  ),
+                  o.a.createElement(h.d, { className: s.a.Arrow })
                 ),
                 o.a.createElement(
                   "div",
-                  {
-                    className: Object(c.a)(
-                      s.a.Account,
-                      0 == n.a.ACCOUNT_ID && s.a.Hidden
-                    ),
+                  { className: s.a.MobileSubOption },
+                  o.a.createElement(
+                    "a",
+                    { href: n.a.COMMUNITY_URL + "app/570/guides" },
+                    Object(l.a)("#header_steam_guides")
+                  ),
+                  o.a.createElement(h.d, { className: s.a.Arrow })
+                ),
+                o.a.createElement(
+                  "div",
+                  { className: s.a.MobileSubOption },
+                  o.a.createElement(
+                    g.b,
+                    {
+                      to: p.b.patchnotes(),
+                      onClick: function () {
+                        return f(!1);
+                      },
+                    },
+                    Object(l.a)("#header_patches")
+                  ),
+                  o.a.createElement(h.d, { className: s.a.Arrow })
+                ),
+                o.a.createElement(
+                  "div",
+                  { className: s.a.MobileSubOption },
+                  o.a.createElement(
+                    g.b,
+                    {
+                      to: p.b.news("updates"),
+                      onClick: function () {
+                        return f(!1);
+                      },
+                    },
+                    Object(l.a)("#header_gameplay_updates")
+                  ),
+                  o.a.createElement(h.d, { className: s.a.Arrow })
+                ),
+                o.a.createElement(
+                  "div",
+                  { className: s.a.MobileSubOption },
+                  o.a.createElement(
+                    "a",
+                    { href: n.a.BASE_URL + "store" },
+                    Object(l.a)("#header_store")
+                  ),
+                  o.a.createElement(h.d, { className: s.a.Arrow })
+                )
+              ),
+              o.a.createElement("div", { className: s.a.LineSeparator }),
+              o.a.createElement(
+                g.b,
+                {
+                  to: p.b.herogrid(),
+                  className: s.a.MobileOption,
+                  onClick: function () {
+                    return f(!1);
                   },
-                  n.a.PLAYER,
+                },
+                Object(l.a)("#header_heroes"),
+                o.a.createElement(h.e, { className: s.a.Arrow })
+              ),
+              o.a.createElement("div", { className: s.a.LineSeparator }),
+              o.a.createElement(
+                g.b,
+                {
+                  to: p.b.news(),
+                  className: s.a.MobileOption,
+                  onClick: function () {
+                    return f(!1);
+                  },
+                },
+                Object(l.a)("#header_news"),
+                o.a.createElement(h.e, { className: s.a.Arrow })
+              ),
+              o.a.createElement("div", { className: s.a.LineSeparator }),
+              o.a.createElement(
+                g.b,
+                {
+                  to: p.b.dpc_event_root(),
+                  className: s.a.MobileOption,
+                  onClick: function () {
+                    return f(!1);
+                  },
+                },
+                Object(l.a)("#header_esports"),
+                o.a.createElement(h.e, { className: s.a.Arrow })
+              ),
+              o.a.createElement("div", { className: s.a.LineSeparator }),
+              o.a.createElement(
+                "div",
+                { className: s.a.BottomSection },
+                o.a.createElement(
+                  "div",
+                  { className: s.a.LoginLanguage },
                   o.a.createElement(
                     "a",
                     {
                       href:
-                        n.a.BASE_URL +
-                        "oauth/logout?goto=" +
+                        n.a.COMMUNITY_URL +
+                        "oauth/login?client_id=" +
+                        n.a.CLIENT_ID +
+                        "&response_type=token&state=" +
                         a.pathname.substr(1),
-                      className: s.a.Logout,
+                      className: Object(c.a)(
+                        s.a.Login,
+                        0 != n.a.ACCOUNT_ID && s.a.Hidden
+                      ),
                     },
-                    "(",
-                    Object(l.a)("#header_logout"),
-                    ")"
-                  )
-                ),
-                o.a.createElement(_, { bMobile: !0 })
-              ),
-              o.a.createElement(
-                "a",
-                {
-                  className: s.a.PlayForFree,
-                  href: n.a.STORE_URL + "app/570/Dota_2/",
-                },
-                o.a.createElement(
-                  "div",
-                  { className: s.a.StandardButton },
-                  o.a.createElement("div", { className: s.a.SteamLogo }),
+                    Object(l.a)("#header_login")
+                  ),
                   o.a.createElement(
                     "div",
-                    { className: s.a.ButtonText },
-                    Object(l.a)("#play_for_free")
+                    {
+                      className: Object(c.a)(
+                        s.a.Account,
+                        0 == n.a.ACCOUNT_ID && s.a.Hidden
+                      ),
+                    },
+                    n.a.PLAYER,
+                    o.a.createElement(
+                      "a",
+                      {
+                        href:
+                          n.a.BASE_URL +
+                          "oauth/logout?goto=" +
+                          a.pathname.substr(1),
+                        className: s.a.Logout,
+                      },
+                      "(",
+                      Object(l.a)("#header_logout"),
+                      ")"
+                    )
+                  ),
+                  o.a.createElement(_, { bMobile: !0 })
+                ),
+                o.a.createElement(
+                  "a",
+                  {
+                    className: s.a.PlayForFree,
+                    href: n.a.STORE_URL + "app/570/Dota_2/",
+                  },
+                  o.a.createElement(
+                    "div",
+                    { className: s.a.StandardButton },
+                    o.a.createElement("div", { className: s.a.SteamLogo }),
+                    o.a.createElement(
+                      "div",
+                      { className: s.a.ButtonText },
+                      Object(l.a)("#play_for_free")
+                    )
                   )
                 )
               )
             )
-          )
-        );
-      };
+          );
+        };
     },
     pitT: function (e, t, a) {
       e.exports = {
