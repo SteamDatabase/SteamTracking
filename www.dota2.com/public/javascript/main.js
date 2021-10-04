@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6805480";
+var CLSTAMP = "6806345";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [1],
   {
@@ -10722,7 +10722,11 @@ var CLSTAMP = "6805480";
               r = this.GetLeagueNode(t, a);
             if ((r && n.push.apply(n, r.stream_ids), 1 == t && 1 == a))
               return this.IsStreamLive(e, 1);
-            for (var o = 0, i = r.stream_ids; o < i.length; o++) {
+            for (
+              var o = 0, i = (null == r ? void 0 : r.stream_ids) || [];
+              o < i.length;
+              o++
+            ) {
               var s = i[o],
                 l = this.GetStreamLeagueNode(s);
               if (l && l.nLeagueID == t && l.nNodeID == a) return !0;
