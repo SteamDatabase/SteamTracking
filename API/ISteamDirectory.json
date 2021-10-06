@@ -21,15 +21,27 @@
             ]
         },
         {
-            "name": "GetCSList",
+            "name": "GetCMListForConnect",
             "version": 1,
             "httpmethod": "GET",
             "parameters": [
                 {
                     "name": "cellid",
                     "type": "uint32",
-                    "optional": false,
-                    "description": "Client's Steam cell ID"
+                    "optional": true,
+                    "description": "Client's Steam cell ID, uses IP location if blank"
+                },
+                {
+                    "name": "cmtype",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Optional CM type filter"
+                },
+                {
+                    "name": "realm",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Optional Steam Realm filter"
                 },
                 {
                     "name": "maxcount",

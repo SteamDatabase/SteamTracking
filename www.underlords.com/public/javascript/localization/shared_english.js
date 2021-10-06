@@ -20,6 +20,7 @@ LocalizationReady("shared", "english", {
   Button_Publish: "Publish",
   Button_Post: "Post",
   Button_OK: "OK",
+  Button_Done: "Done",
   Button_Overwrite: "Overwrite",
   Button_Retry: "Retry",
   Button_Remove: "Remove",
@@ -40,8 +41,17 @@ LocalizationReady("shared", "english", {
   Button_ViewPage: "View Page",
   Button_Accept: "Accept",
   Button_Reject: "Reject",
+  Button_Go: "Go",
 
+  StoreLink_Label: "Store",
+  CommunityLink_Label: "Community",
+  SupportLink_Label: "Support",
+
+  Error_Generic: "Error",
   Error_Generic_Label: "Error:",
+
+  Dialog_DontShowMeAgain: "Don't show this message again",
+  Dialog_AreYouSure: "Are you sure?",
 
   ToolTip_CopyLinkToClipboard: "Copy link to clipboard",
 
@@ -54,8 +64,12 @@ LocalizationReady("shared", "english", {
   Loading: "Loading...",
   Updating: "Updating...",
   Uploading: "Uploading...",
+  Saving: "Saving...",
+  Sending: "Sending...",
+  Deleting: "Deleting...",
 
   Settings: "Settings",
+  ViewDocumentation: "View Documentation",
   FriendSettings_AlwaysNewChatWindow:
     "Always open a new chat window rather than a tab",
 
@@ -124,8 +138,11 @@ LocalizationReady("shared", "english", {
 
   EventBrowse_MoreEventsTitle: "More events from %1$s",
   EventBrowse_MoreEventsBtn: "View All",
+  EventBrowse_ViewLatestUpdate: "View",
+  EventBrowse_LatestUpdateTime_Button: "See all updates (Latest: %1$s)",
   EventBrowse_RecentUpdates: "Recent Updates",
   EventBrowse_RecentEvents: "Recent Events & Announcements",
+  EventBrowse_LastUpdateDate: "Last Update: %1$s",
 
   EventCurator_BrowseDialog_Title: "News from Steam curators",
   EventCurator_BrowseDialog_Desc:
@@ -157,6 +174,11 @@ LocalizationReady("shared", "english", {
   EventCalendar_NoPastEvents: "No older posts found",
   EventCalendar_NoMoreFutureEvents: "No more upcoming events found",
   EventCalendar_NoMorePastEvents: "No more older posts found",
+  EventCalendar_UpdatesViewHeader: "Recent Updates",
+  EventCalendar_NoPastUpdates: "No updates found",
+  EventCalendar_NoMorePastUpdates: "No more updates found",
+  EventCalendar_ResetFiltersButton: "See all posts",
+  EventCalendar_ResetFilters_ttip: "Resets your filters to the default values",
   EventCalendar_GameSearch: "Games Search",
   EventCalendar_UniversalSearch: "Search",
   EventCalendar_GameSearch_NoneFound: "No Matches Found",
@@ -164,6 +186,15 @@ LocalizationReady("shared", "english", {
   EventCalendar_SearchResultsHeader_GameAndDLCSection: "Games and DLC",
   EventCalendar_SearchResultsHeader_CuratorSection: "Curators",
   EventCalendar_FollowingCurator: "following",
+  EventCalendar_GroupTitle_Curators: "From Curators You Follow",
+  EventCalendar_GroupTitle_FeaturedCurators: "Stories From Featured Curators",
+  EventCalendar_NewsLanguage_Title:
+    "Showing available news sources in your languages",
+  EventCalendar_NewsLanguage_Text:
+    "Update your language preferences to allow content and sources in more languages by visiting your %1$s",
+  EventCalendar_NewsLanguage_TextInHyperlink: "store language preferences",
+  EventCalendar_TimeEventLastPlayed: "Last Played %1$s",
+  EventCalendar_TimeEventWishlisted: "Wishlisted %1$s",
 
   EventCalendar_GlobalCalendar_Action: "Return to News Hub",
   EventCalendar_SpecificCalendar: "%1$s %2$s News Hub",
@@ -171,17 +202,35 @@ LocalizationReady("shared", "english", {
   EventCalendar_Goto_RSSFeed: "Open %1$s RSS Feed",
   EventCalendar_SingleAppIsMuted:
     "Note: This game is muted and will not show up in your personalized news hub.",
+  EventCalendar_SingleGroupIsMuted:
+    "Note: This group is muted and will not show up in your personalized news hub.",
   EventCalendar_WatchYouTubeVideo: "Watch YouTube Video",
   EventCalendar_WatchLiveBroadcast: "Watch Live Broadcast",
 
-  EventCalendar_Collection_News_Title: "Discover News Sources",
-  EventCalendar_Collection_News_Subtitle:
-    "Browse the recent posts from Steam Curators below. Follow a curator to add their news and game recommendations to your Steam",
+  EventModTile_Moderator: "Moderator: %1$s",
+  EventModTile_EventCreator: "Original Poster: %1$s",
+  EventModTile_EventLastUpdator: "Last Updater: %1$s",
+  EventModTile_Signer: "Authority: %1$s",
+  EventModTile_Action_Reviewed: "%1$s %2$s marked reviewed",
+  EventModTile_Action_ReReviewed: "%1$s %2$s marked Re-Reviewed",
+  EventModTile_Action_UnReviewed: "%1$s %2$s cleared reviewed flag",
+  EventModTile_Action_NewEventType: "%1$s %2$s changed to category %3$s",
+  EventModTile_Action_SeasonTagUpdate: "%1$s %2$s updated seasonal tag %3$s",
+  EventModTile_Action_RemoveFromSC: "%1$s %2$s removed event from Steam China",
+  EventModTile_Action_FlagAdultContent: "%1$s %2$s flagged as adult content",
+  EventModTile_Action_RemoveAdultContent:
+    "%1$s %2$s removed adult content flag",
+  EventModTile_Action_Title: "Moderation History",
+  EventModTile_Action_More: "Show %1$s older action(s)",
+  EventModTile_Action_Hide: "Hide actions",
 
   SteamLabs: "Steam Labs",
   SteamLabs_ExperimentNumber: "Experiment %1$s",
   SteamLabs_DiscussionLink: "Discuss this experiment",
 
+  EventCalendar_SignIn_Title: "Sign In To Get Personalized News",
+  EventCalendar_SignIn_Text:
+    "Sign in with your Steam account to access your personalized news hub or explore featured news and updates below.",
   EventCalendar_FutureEventsHint: "Scroll up to see what's coming next",
   EventCalendar_FutureEventsLink: "See all upcoming",
   EventCalendar_LoadEventsProgress: "Loaded %1$s events through %2$s",
@@ -190,6 +239,7 @@ LocalizationReady("shared", "english", {
   EventCalendar_FutureEventsHeader: "Coming soon",
   EventCalendar_PastEventsLink: "See earlier posts",
   EventCalendar_LiveAndRecentEventsHeader: "Live and recent",
+  EventCalendar_TuneIn: "Tune In",
   EventCalendar_LiveNow: "Live now",
   EventCalendar_TimeLeft: "Ends in %1$s",
   EventCalendar_PostedAtTime: "Posted %1$s",
@@ -197,6 +247,7 @@ LocalizationReady("shared", "english", {
   EventCalendar_Upcoming: "upcoming",
   EventCalendar_WillStartAtTime: "Starting %1$s",
   EventCalendar_WillStartAfterDuration: "Starting in %1$s",
+  EventCalendar_WillStartAtDateTime: "%1$s at %2$s",
   EventCalendar_LaterToday: "later today",
   EventCalendar_Tomorrow: "tomorrow",
   EventCalendar_NextWeek: "next week",
@@ -213,7 +264,7 @@ LocalizationReady("shared", "english", {
   EventCalendar_FollowCurator: "Follow Steam Curator: %1$s",
   EventCalendar_FollowCurator_ttip:
     "By following this curator, their articles will appear in your personalized News hub and their game recommendations will appear on your Steam store.",
-  EventCalendar_UnFollowCurator: "Follow Steam Curator: %1$s",
+  EventCalendar_UnFollowCurator: "Unfollow Steam Curator: %1$s",
   EventCalendar_UnFollowCurator_ttip:
     "You currently follow this curator. By unfollowing, their articles will no longer appear on your personalized News hub and their recommendations will not appear on your Steam store.",
   EventCalendar_UnignoreApp: "Unignore %1$s",
@@ -279,16 +330,19 @@ LocalizationReady("shared", "english", {
   EventCalendar_GameSource_EventExplanation_ttip_recent:
     "You have played this game in the past six months",
   EventCalendar_GameSource_library: "Library",
+  EventCalendar_GameSource_inLibrary: "In Library",
   EventCalendar_GameSource_ttip_library:
     "Include posts about games in your library",
   EventCalendar_GameSource_EventExplanation_ttip_library:
     "This game is in your library",
   EventCalendar_GameSource_wishlist: "wishlist",
+  EventCalendar_GameSource_onWishlist: "On Wishlist",
   EventCalendar_GameSource_ttip_wishlist:
     "Include posts about games on your wishlist",
   EventCalendar_GameSource_EventExplanation_ttip_wishlist:
     "This game is on your wishlist",
   EventCalendar_GameSource_following: "following",
+  EventCalendar_GameSource_followed: "Followed",
   EventCalendar_GameSource_ttip_following:
     "Include posts about games that you follow",
   EventCalendar_GameSource_EventExplanation_ttip_following:
@@ -312,6 +366,11 @@ LocalizationReady("shared", "english", {
   EventCalendar_GameSource_curator: "Curators You Follow",
   EventCalendar_GameSource_ttip_curator:
     "Includes posts from curators you follow on Steam",
+  EventCalendar_GameSource_UnhideCuratorsDialog_Title: "Show Curators?",
+  EventCalendar_GameSource_UnhideCuratorsDialog_Description:
+    "You just followed a Steam Curator. Would you like to include news from Curators in your personalized News Hub?",
+  EventCalendar_GameSource_UnhideCuratorsDialog_OKButton: "Yes",
+  EventCalendar_GameSource_UnhideCuratorsDialog_CancelButton: "No",
 
   EventCalendar_EditFilters: "Options and Filters",
   EventCalendar_CloseFilters: "News Hub",
@@ -324,18 +383,30 @@ LocalizationReady("shared", "english", {
   EventCalendar_NewsChannels_Global: "Global News & Events",
   EventCalendar_NewsChannels_Discover: "Discover",
   EventCalendar_NewsChannel_YourNews: "Your News",
+  EventCalendar_NewsChannel_YourNews_HeaderTitle: "Your Personalized Game News",
   EventCalendar_NewsChannel_Upcoming: "Your Upcoming Events",
   EventCalendar_NewsChannel_UpcomingShort: "Upcoming",
   EventCalendar_NewsChannel_Featured: "Featured",
+  EventCalendar_NewsChannel_Featured_HeaderTitle: "Featured News",
   EventCalendar_NewsChannel_Personalized: "Personalized",
   EventCalendar_NewsChannel_Filtered: "Filtered",
   EventCalendar_NewsChannel_AllGames: "From all games",
   EventCalendar_NewsChannel_TopSellers: "From Top sources",
   EventCalendar_NewsChannel_Press: "News Curators",
+  EventCalendar_Collection_News_Title: "Discover News Curators",
+  EventCalendar_Collection_News_Subtitle:
+    "Catch the latest in gaming news from top gaming news sources. Follow a Steam News Curator to add their news and game recommendations to your Steam News Hub.",
   EventCalendar_NewsChannel_Steam: "Steam Official",
   EventCalendar_NewsChannel_SteamSubtitle: "Steam Blog and News",
+  EventCalendar_NewsChannel_Steam_HeaderTitle: "Official Steam News",
   EventCalendar_NewsChannel_All: "All News",
   EventCalendar_NewsChannel_AllSales: "All Sales Events",
+  EventCalendar_NewsChannel_AssociatedPress: "Press Events Linked to Apps",
+  EventCalendar_NewsChannel_Halloween: "Halloween Events",
+  EventCalendar_NewsChannel_HalloweenSubtitle: "Beware: Spooky",
+  EventCalendar_Collection_Halloween_Title: "Halloween Events",
+  EventCalendar_Collection_Halloween_Subtitle:
+    "Browse spooky Halloween related news and events from games on Steam",
 
   EventDisplay_Admin_Title: "Admin tools:",
   EventDisplay_ViewInLibrary: "View in Library",
@@ -343,10 +414,12 @@ LocalizationReady("shared", "english", {
   EventDisplay_RSSFeed: "RSS Feed",
   EventDisplay_RSSFeed_ExtraShort: "RSS",
   EventDisplay_ViewCommunityPage: "View Community Page",
+  EventDisplay_ViewForum: "View Discussion Forum",
   EventDisplay_ViewRssFeed: "View RSS Feed",
   EventDisplay_ViewInLibrary_ExtraShort: "Library",
   EventDisplay_ViewStorePage_ExtraShort: "Store",
   EventDisplay_ViewCommunityPage_ExtraShort: "Community",
+  EventDisplay_ViewForum_ExtraShort: "Forum",
   EventDisplay_ViewRssFeed_ExtraShort: "RSS",
   EventDisplay_Admin: "Admin Dashboard",
   EventDisplay_Admin_ExtraShort: "Admin",
@@ -357,13 +430,20 @@ LocalizationReady("shared", "english", {
   EventDisplay_CallToAction_InLibrary: "In Library",
   EventDisplay_CallToAction_PlayNow: "Play Now",
   EventDisplay_CallToAction_ComingSoon: "Coming Soon",
+  EventDisplay_CallToAction_Prepurchase_Short: "Prepurchase",
+  EventDisplay_CallToAction_ShowPurchaseOptions_Button: "Purchase Options",
   EventDisplay_CallToAction_FreeToPlay: "Free To Play",
   EventDisplay_CallToAction_PlayNowForFree: "Play for Free!",
+  EventDisplay_CallToAction_VisitStore: "View Store Page",
 
   EventDisplay_Events: "Admin Dashboard",
   EventDisplay_SeeOldVersion: "View Current Customer Version",
   EventDisplay_SalesPage: "View Store Sales Page",
   EventDisplay_StatsPage: "(VO) Stats Page",
+  EventDisplay_ViewOnStore: "View on Store",
+  EventDisplay_ViewOnCommunity: "View on Community",
+
+  EventDisplay_NoEventsToSee: "No events found",
 
   EventDisplay_RightColumnTitle_Game: "Game",
   EventDisplay_RightColumnTitle_Blog: "Blog",
@@ -506,10 +586,16 @@ LocalizationReady("shared", "english", {
   EventEmail_Destination_SalesPage: "Steam Store Sales Page",
 
   EventDashBoard_SummaryStats_Admin_Title: "(Visible only to admins)",
-  EventDashBoard_SummaryStats_Title: "Total Unique Impressions and Views",
+  EventDashBoard_SummaryStats_Title: "Unique Impressions and Views",
   EventDashBoard_SummaryStats_Desc:
     "(Beta) These are impressions and views of your events and announcements by unique logged-in users. This is only for new events and announcements crafted with this editor.",
   EventDashBoard_SummaryStats_Link: "Click here for more details.",
+  EventDashBoard_SummaryStats_TotalImpressions: "Total Unique Impressions:",
+  EventDashBoard_SummaryStats_TotalViews: "Total Unique Views:",
+  EventDashBoard_SummaryStats_Dec2020Note:
+    "Note: Due to heavy load, visibility was greatly undercounted from Dec 23 - Jan 5, 2021",
+  EventDashBoard_ModerationQueueWarning:
+    "This event has not yet gone through routine moderation and is therefore not currently visible in the Library.",
   EventDashBoard_Summary_LibraryHome_Shown:
     "Impressions of events (cover image):",
   EventDashBoard_Summary_LibraryHome_Read:
@@ -538,12 +624,35 @@ LocalizationReady("shared", "english", {
   EventDashBoard_Location_PopUpViews: "Views of event pop-up",
   EventDashBoard_Location_NewsHubDetail: "News Hub",
 
+  EventRepost_Dialog_Title: "Repost Event",
+  EventRepost_Dialog_OK: "Repost",
+  EventRepost_Dialog_Desc:
+    "Reposting is referencing the event in the news hub in the timeline of the chosen groups below. The following are other community groups or apps which this event can be reposted to. Choose one or more groups to be posted.",
+  EventRepost_Dialog_Existing: "%1$s - Group already reposting",
+  EventRepost_Dialog_Action_Desc: "On clicking OK, we will do the following:",
+  EventRepost_Dialog_Action_Add: "Repost on %1$s group(s)",
+  EventRepost_Dialog_Action_Remove: "Remove the repost on %1$s group(s)",
+  EventRepost_Dialog_Progress: "Reposting %1$s of %2$s items",
+  EventRepost_Dialog_ResultFail: "Reposting fail. Please try again later.",
+  EventRepost_Dialog_ResultSuccess: "Reposting successfully completed.",
+
+  EventDashBoard_Location_ModerationTitle: "About Event Moderation",
+  EventDashBoard_Location_WaitingModeraion: "Visibility pending moderation",
+
   EventDisplay_ReferencedApps_Joiner: ", ",
   EventDisplay_ReferencedApps: "Referenced content: %2$s.",
   EventDisplay_ReferencedApps_Plural: "Referenced content: %2$s.",
 
-  AddToWishlist: "Add to your Wishlist",
+  EventEditor_SaleValveApproval_Title:
+    "This sale page requires approval by Valve before you can publish and set it live",
+  EventEditor_SaleValveApproval_Desc:
+    "Please communicate with your Valve contact at least 7 days ahead of your desired publish date to make sure there is time for review/approval and any necessary changes.",
+  EventEditor_SaleValveApproval_Admin_Tooltip:
+    "Marking the page as approved will allow the partner to publish the sale and make it live",
+
+  AddToWishlist_short: "+ Wishlist",
   Wishlisted: "On your Wishlist",
+  Wishlisted_short: "Wishlist",
   AddToWishlist_ttip:
     "Get notified by email when your wishlisted items get released or are on sale",
   Wishlist_Error: "Update Wishlist Error",
@@ -572,6 +681,7 @@ LocalizationReady("shared", "english", {
 
   Dialog_On: "ON",
   Dialog_Off: "OFF",
+  Dialog_DefaultWindowTitle: "Steam Dialog",
 
   TimeInterval_XYears: "%1$s years",
   TimeInterval_1YearXMonths: "1 year and %1$s months",
@@ -624,12 +734,41 @@ LocalizationReady("shared", "english", {
   TimeSince_1Second: "1 second ago",
   TimeSince_ThisWeek: "This week",
 
+  TimeRemaining_XYears: "%1$s years remaining",
+  TimeRemaining_1YearXMonths: "1 year and %1$s months remaining",
+  TimeRemaining_1Year: "1 year remaining",
+  TimeRemaining_XMonths: "%1$s months remaining",
+  TimeRemaining_1Month: "1 month remaining",
+  TimeRemaining_1MonthXDays: "1 month and %1$s days remaining",
+  TimeRemaining_XWeeks: "%1$s weeks remaining",
+  TimeRemaining_1Week: "1 week remaining",
+  TimeRemaining_XDays: "%1$s days remaining",
+  TimeRemaining_1Day: "1 day remaining",
+  TimeRemaining_1DayXHours: "1 day and %1$s hours remaining",
+  TimeRemaining_XHours: "%1$s hours remaining",
+  TimeRemaining_1Hour: "1 hour remaining",
+  TimeRemaining_1HourXMinutes: "1 hour and %1$s minutes remaining",
+  TimeRemaining_LessThanAnHour: "less than an hour remaining",
+  TimeRemaining_XMinutes: "%1$s minutes remaining",
+  TimeRemaining_XMinutesXSeconds: "%1$s minutes, %2$s seconds remaining",
+  TimeRemaining_XMinutes1Second: "%1$s minutes, 1 second remaining",
+  TimeRemaining_1Minute: "1 minute remaining",
+  TimeRemaining_1MinuteXSeconds: "1 minute, %1$s seconds remaining",
+  TimeRemaining_1Minute1Second: "1 minute, 1 second remaining",
+  TimeRemaining_LessThanAMinute: "less than a minute remaining",
+  TimeRemaining_XSeconds: "%1$s seconds remaining",
+  TimeRemaining_1Second: "1 second remaining",
+  TimeRemaining_ThisWeek: "This week",
+
   Time_Now: "Live Now",
   Time_UpNext: "Up Next",
   Time_Today: "Today",
   Time_Tomorrow: "Tomorrow",
   Time_Yesterday: "Yesterday",
   Time_Recent: "Recent",
+  Time_Today_At: "Today at %1$s",
+  Time_Yesterday_At: "Yesterday at %1$s",
+  Time_Past_At: "%1$s at %2$s",
 
   ContextMenu_Copy: "Copy",
   ContextMenu_Cut: "Cut",
@@ -638,9 +777,12 @@ LocalizationReady("shared", "english", {
   ContextMenu_OpenLinkInNewWindow: "Open Link in New Window",
   ContextMenu_CopyImageURL: "Copy Image URL",
   ContextMenu_OpenImageInNewWindow: "Open Image in New Window",
+  ContextMenu_AddToDictionary: 'Add "%1$s" To Dictionary',
 
   Tooltip_Settings: "Manage friends list settings",
   Tooltip_VoiceSettings: "Manage voice settings",
+  Tooltip_CopyRemotePlayTogetherInviteURL:
+    "Copy Remote Play Together invite URL",
   Tooltip_SearchFriends: "Search my friends list",
   Tooltip_AddFriend: "Add a friend",
   Tooltip_FriendRequest: "%1$s incoming request",
@@ -711,6 +853,7 @@ LocalizationReady("shared", "english", {
   Language_ukrainian: "Ukrainian",
   Language_latam: "Spanish - Latin America",
   Language_vietnamese: "Vietnamese",
+  Language_sc_schinese: "SteamChina - Simplified Chinese",
 
   Language_koreana: "Korean",
 
@@ -723,6 +866,7 @@ LocalizationReady("shared", "english", {
   language_selection_koreana: "한국어 (Korean)",
   language_selection_korean: "한국어 (Korean)",
   language_selection_schinese: "简体中文 (Simplified Chinese)",
+  language_selection_sc_schinese: "简体中文 (Simplified Chinese)",
   language_selection_tchinese: "繁體中文 (Traditional Chinese)",
   language_selection_russian: "Русский (Russian)",
   language_selection_thai: "ไทย (Thai)",
@@ -749,6 +893,12 @@ LocalizationReady("shared", "english", {
 
   Bbcode_Originally_Posted_By: "Originally posted by",
   Bbcode_No_Match: "No matches to supported BBCode",
+  Bbcode_Expand_ShowMore_Collapsed: "Show More",
+  Bbcode_Expand_ShowMore_Expanded: "Show Less",
+  Bbcode_Expand_Spoiler_Collapsed: "Show Spoilers",
+  Bbcode_Expand_Spoiler_Expanded: "Hide Spoilers",
+  Bbcode_Expand_Details_Collapsed: "Show Details",
+  Bbcode_Expand_Details_Expanded: "Hide Details",
 
   Editor_Bold: "Bold",
   Editor_Underline: "Underline",
@@ -767,6 +917,10 @@ LocalizationReady("shared", "english", {
     "Failed Converting HTML to BBcode with the following error: '%1$s'",
   EventEditor_InsertLinkURL: "Insert URL",
   EventEditor_FormattingHelp_GetHelpLink: "Formatting help",
+  EventEditor_InsertTrailer: "Insert Game Trailer",
+  EventEditor_InsertTrailer_SearchApp: "Search by app name or ID",
+  EventEditor_FailedToLoadApp:
+    "Failed to load app details, try again later: %1$s",
   EventEditor_ImportHTML: "Import HTML",
   EventEditor_ImportFromHTML: "Import from HTML",
   EventEditor_ImportFromHTML_ttip:
@@ -796,6 +950,26 @@ LocalizationReady("shared", "english", {
   EventEditor_InsertImage_URL: "Image URL",
   EventEditor_InsertImage_Placeholder: "Enter a valid URL",
   EventEditor_InsertImage_Anchor: "Optional: URL to open when image clicked",
+  EventEditor_AddSpeaker: "Insert Speaker",
+  EventEditor_AddSpeaker_Desc:
+    "Add a speaker's or streamer's details to the events. They will appear on the event and will also appear in event summary such that they are inspectable by Steam users.",
+  EventEditor_AddSpeaker_Name: "Name:",
+  EventEditor_AddSpeaker_Title: "Title (optional):",
+  EventEditor_AddSpeaker_Company: "Company (optional):",
+  EventEditor_AddSpeaker_About: "About the Speakers:",
+  EventEditor_AddSpeaker_About_Placeholder:
+    "Tell us aout the Presenters/Streamers... Can include social media links",
+  EventEditor_ChoosePhoto: "Choose Speaker Photo",
+  EventEditor_AssociateSteamAccount: "Associate Steam Account",
+  EventEditor_AssociateSteamAccount_ttip:
+    "By associating the appropriate Steam account with the speaker, they will get a presenter badge on the Steam broadcast that appears on A Steam sale page.",
+  EventEditor_SteamAccount_addme: "Add me",
+  EventEditor_SteamAccount_addfriend: "Add a friend",
+  EventEditor_SteamAccount_clear: "Clear association",
+
+  BBCode_ChooseImage: "Choose Image (%1$s x %2$s)",
+  BBCode_ResizeImage: "Resize Image",
+
   EventEditor_LinkDescription: "Text To Display",
   EventEditor_LinkURL: "URL",
   EventEditor_YouTubeVideoTitle: "YouTube™ Video: %1$s",
@@ -935,7 +1109,7 @@ LocalizationReady("shared", "english", {
   Played_Hours: "%1$s hours",
 
   WriteReview_Dialog_PostReview: "Post review",
-  WriteReview_Dialog_ReviseReview: "Revise review",
+  WriteReview_Dialog_ReviseReview: "Edit review",
   WriteReview_Dialog_Title: "Review",
   WriteReview_Dialog_Playtime: "You've played for %1$s",
   WriteReview_Dialog_Playtime_Software: "You've used this title for %1$s",
@@ -996,8 +1170,8 @@ LocalizationReady("shared", "english", {
   PartnerEvent_10: "Game Release",
   PartnerEvent_10_editor: "Game is Releasing Now!",
   PartnerEvent_11: "Live-Stream / Broadcast",
-  PartnerEvent_12: "Small Update",
-  PartnerEvent_12_editor: "Small Update (Patch Notes)",
+  PartnerEvent_12: "Small Update / Patch Notes",
+  PartnerEvent_12_editor: "Small Update / Patch Notes",
   PartnerEvent_13: "Regular Update",
   PartnerEvent_14: "Major Update",
   PartnerEvent_15: "DLC Release",
@@ -1034,9 +1208,9 @@ LocalizationReady("shared", "english", {
   PartnerEvent_SteamAwardNominations: "Steam Award Nomination Request",
   PartnerEvent_SteamAwardVoteRequest: "Steam Award Vote Request",
   PartnerEvent_SteamGameFestival_ArtistState:
-    "Steam Game Festival Artists Statement",
-  PartnerEvent_SteamGameFestival_Broadcast: "Steam Game Festival Live Stream",
-  PartnerEvent_SteamGameFestival_OfficeHour: "Steam Game Festival Office Hours",
+    "Steam Next Fest Artists Statement",
+  PartnerEvent_SteamGameFestival_Broadcast: "Steam Next Fest Live Stream",
+  PartnerEvent_SteamGameFestival_OfficeHour: "Steam Next Fest Office Hours",
   PartnerEvent_Curator_Group_Members: "Curator Group Announcement",
   PartnerEvent_Curator_Public: "Curator Public News Post",
 
@@ -1076,6 +1250,7 @@ LocalizationReady("shared", "english", {
   Login_AccountName: "Steam Account Name",
   Login_Password: "Password",
   Login_RememberMe: "Remember me on this computer",
+  Login_RememberMe_Short: "Remember me",
   Login_ForgotPassword: "Forgot your account name or password?",
   Login_NoSteamAccount: "Don't have a Steam account?",
   Login_CreateAccount: "Create a Free Account",
@@ -1090,6 +1265,28 @@ LocalizationReady("shared", "english", {
   Login_SentSteamguard:
     "We sent a message to your %1$s e-mail. Enter the Steam Guard code provided.",
   Login_SignOut: "Sign out",
+
+  Login_SignIn_WithAccountName: "Sign in with account name",
+  Login_SignIn_OrWithQRCode: "Or sign in with QR",
+  Login_UseAppForQR: "Use the %1$s to sign in via QR code",
+  Login_UseAppForQR_Inner: "Steam Mobile App",
+  Login_CheckCredentials:
+    "Please check your password and account name and try again.",
+  Login_IncorrectSteamGuard: "The Steam Guard code you entered was incorrect.",
+  Login_Help_SignIn: "Help, I can't sign in",
+  Login_Help_AccessMobileApp:
+    "Help, I no longer have access to my Steam Mobile App",
+  Login_EnterMobileCode: "Enter the code from your Steam Mobile App",
+  Login_EnterEmailCode: "Enter the code from your email address at: %1$s",
+  Login_MobileProtectingAccount:
+    "You have a mobile authenticator protecting this account.",
+  Login_EmailProtectingAccount:
+    "You have an email authenticator protecting this account.",
+  Login_ActiveAccountName: "Account: %1$s",
+  Login_AwaitingMobileConfirmation:
+    "Awaiting your confirmation via the Steam Mobile App...",
+  Login_EnterCodeInstead: "Enter a code instead",
+  Login_Title_SteamGuard: "Steam Guard",
 
   Emoticon_Search: "Search Emoticons",
   AddonPicker_RecentlyUsed: "Recently Used",
@@ -1113,10 +1310,12 @@ LocalizationReady("shared", "english", {
   ConnectionTrouble_FailedToConnect: "Failed to connect to Steam",
   Chat_Upload_ErrorCloud: "Failed to upload image data to cloud server.",
   Chat_Settings_Error_ServerError: "A server error occurred",
-  Broadcast_ViewerCount: "%1$s viewers",
+  Broadcast_ViewerCount: "%1$s viewer",
+  Broadcast_ViewerCount_Plural: "%1$s viewers",
   Broadcast_VideoContext_ToggleStats: "Toggle technical stats",
   Broadcast_VideoContext_OpenStore: "Visit Store",
   Broadcast_None: "None",
+  Broadcast_Playing: "Playing: ",
 
   BroadcastWatch_MinBrowser:
     "Your web browser does not support the minimum set of features required to watch this broadcast",
@@ -1146,6 +1345,10 @@ LocalizationReady("shared", "english", {
   BroadcastChat_UserMutedLocal: "%1$s has been muted",
   BroadcastChat_UserUnmutedLocal: "%1$s has been unmuted",
   BroadcastChat_UserMuteFailed: "Failed to mute %1$s. Please try again.",
+  BroadcastChat_AddedModerator: "Moderator %1$s added.",
+  BroadcastChat_RemovedModerator: "Moderator %1$s removed.",
+  BroadcastChat_AddModeratorFailed: "Failed to add %1$s as moderator!",
+  BroadcastChat_RemoveModeratorFailed: "Failed to remove %1$s as moderator!",
   BroadcastChat_RemoveMessagesFailed:
     "Failed to remove messages for %1$s. Please try again.",
   BroadcastChat_UserUnmuteFailed: "Failed to unmute %1$s. Please try again.",
@@ -1154,6 +1357,7 @@ LocalizationReady("shared", "english", {
   BroadcastChat_FailedToSendMsg: "Failed to send chat message: %1$s",
   BroadcastChat_Cooldown:
     "You are sending messages too fast, try again in %1$s seconds.",
+  BroadcastChat_User: "User:",
   BroadcastChat_Mute: "Mute",
   BroadcastChat_Unmute: "Unmute",
   BroadcastChat_MuteLocal: "Mute Locally",
@@ -1161,6 +1365,9 @@ LocalizationReady("shared", "english", {
   BroadcastChat_Login: "Login to join chat",
   BroadcastChat_LimitedUser: "Limited chat access",
   BroadcastChat_RemoveMessages: "Remove this user's messages",
+  BroadcastChat_Role_Presenter_ttip: "Presenter",
+  BroadcastChat_Role_Broadcaster_ttip: "Broadcaster",
+  BroadcastChat_Role_Moderatorr_ttip: "Moderator",
   BroadcastChat_Blocked:
     "Only game owners are allowed to send chat messages during this broadcast.",
   BroadcastChat_half_Mute: "Mute user for 12 hours",
@@ -1196,6 +1403,8 @@ LocalizationReady("shared", "english", {
   Store_AddToCart: "Add to Cart",
 
   YouTubePlayer_Loading: "Loading YouTube...",
+  VODPlayer_Loading: "Loading VOD Content for AppID %1$s...",
+  VODPlayer_ErrorLoading: "Error: Failed to load VOD Content for AppID %1$s",
 
   home_page_live_broadcast: "Live",
   StoreBroadcast_Hide_Tooltip: "Show/hide the live broadcast",
@@ -1213,7 +1422,11 @@ LocalizationReady("shared", "english", {
   sale_three_section_show_chat: "Show Chat",
   btn_live_streams_all: "View all",
 
+  Broadcast_default_title_simple: "Now broadcasting",
   Broadcast_default_title_dev: "Now broadcasting: Watch the developer play",
+  Broadcast_default_title_dev_chat:
+    "Now broadcasting: Chat with the Developers",
+  Broadcast_default_title_ama: "Now broadcasting: Join the AMA",
   Broadcast_default_title_community:
     "Now broadcasting: Watch the community play",
   Broadcast_default_title_comp:
@@ -1237,6 +1450,7 @@ LocalizationReady("shared", "english", {
   Sale_OnWishlist: "On Wishlist",
   Sale_InLibrary: "In Library",
   Sale_PlayDemo: "Play Demo",
+  Sale_DownloadDemo: "Download %1$s Demo",
   Sale_InstallDemo: "Install Demo",
   Sale_InstallDemo_ttip: "Install and run the demo for %1$s",
   Sale_CannotInstallDemo_ttip: "No demo found for %1$s",
@@ -1249,27 +1463,53 @@ LocalizationReady("shared", "english", {
     "Items have been hidden due to your store preferences. Click to visit and edit your store preferences.",
   Sale_StorePreferences: "your store preferences",
   Sale_SeeAllSpecials: "See All Specials",
-  Sale_ReadDemoBlurb: "Read quick pitch",
   Sale_SeeUpcomingEvents: "See upcoming events",
   Sale_AddToWishlist: "Add to wishlist",
   Sale_FollowGame: "Follow game",
   Sale_StopFollowingGame: "Stop following",
   Sale_VisitStorePage: "Visit Store page",
   Sale_Wishlisted: "Wishlisted",
-  Sale_RemoveFromWishlist: "Remove From Wishlist",
+  Sale_RemoveFromWishlist: "Remove from wishlist",
   Sale_AddToLibrary: "+ Add to Library",
   Sale_SeeEventDetails: "See Event Details",
+  Sale_WatchNow: "Watch Now",
   Sale_PlayNow: "Play Now",
   Sale_EventSchedule: "Event Schedule",
+  Sale_BroadcastSchedule: "Broadcast Schedule",
   Sale_EventSchedule_NoUpcomingEvents: "No upcoming events",
   Sale_EventSchedule_NoEventsScheduled:
     "No events scheduled yet in this section",
+  Sale_CuratorRecommendation_title: "Curator Recommendations",
+  Sale_CuratorDisplay_Explore: "Explore",
+  Sale_CuratorDisplay_ListDefaultTitle: "Curator Recommendation List",
+  Sale_CuratorDisplay_ListDefaultDesc:
+    "See the %1$s's recommendation of games listed on this event.",
+  Sale_SectionLink_BrowseAll: "Browse All",
   Sale_MeetDev: "Meet the Developers",
   Sale_Preferences: "Preferences",
   Sale_PlaceHolder:
     "Preview Mode: This section has no capsules. Will not appear on user page if it is empty.",
+  Sale_EventSchedulePlaceHolder:
+    "Preview Mode: There are currently no events associated with this schedule, this will not appear in the current state on the sale",
+  Sale_EventSchedulePlaceHolder_Tab:
+    "Preview Mode: For the currently select TAB there are no events associated with this schedule. Other tabs may show events in the schedule. This will not appear in the current state on the sale",
   Sale_SmartPlaceHolder:
     "Preview Mode: This smart section has no apps for you. This would not appear on user page if it is empty.",
+  Sale_ReserveNow: "Reserve Now %1$s",
+  Sale_ReserveExhausted: "Out of stock",
+  Sale_ReserveEditor: "Reservation Widget Editor",
+  Sale_ReserveEditor_Add: "Add Reservation Option",
+  Sale_ReserveEditor_EditTitle: "Edit Description",
+  Sale_ReserveEditor_EditDesc:
+    "Edit the short description that will appear around the reservation",
+  Sale_ReserveEditor_ReservePack: "Reservation Package",
+  Sale_ReserveEditor_ReservePack_ttip:
+    "The actual hardware item the user actually wants to purchase when their reservation comes up",
+  Sale_ReserveEditor_Deposit: "Optional: Deposit Package",
+  Sale_ReserveEditor_Deposit_ttip:
+    "If the user needs to put a deposit, then enter its package id here, they will be required to purchase this package prior to be included in the reservation queue",
+  Sale_AlreadyReserved: "Reserved on %1$s",
+  Sale_CancelReservation: "Cancel Reservation",
   Sale_default_label: "(no title)",
   Sale_default_label_custom: "(custom title)",
   Sale_default_label_OnSale: "On Sale",
@@ -1400,44 +1640,95 @@ LocalizationReady("shared", "english", {
   Sale_default_label_95: "Romance Visual Novels",
   Sale_default_label_96: "Mystery Visual Novels",
   Sale_default_label_97: "Text-Based Adventures",
-  Sale_default_label_98: "2D Platfomers",
+  Sale_default_label_98: "2D Platformers",
   Sale_default_label_99: "Precision Platformers",
-  Sale_default_label_100: "Puzzle Platfomers",
+  Sale_default_label_100: "Puzzle Platformers",
   Sale_default_label_101: "Third Person",
   Sale_default_label_102: "Rhythm",
+  Sale_default_label_103: "Featured Titles",
+  Sale_default_label_104: "Action Highlights",
+  Sale_default_label_105: "Adventure Highlights",
+  Sale_default_label_106: "RPG Highlights",
+  Sale_default_label_107: "Strategy Highlights",
+  Sale_default_label_108: "Puzzle Highlights",
+  Sale_default_label_109: "Platformer Highlights",
+  Sale_default_label_110: "Horror Highlights",
+  Sale_default_label_111: "Racing Highlights",
+  Sale_default_label_112: "VR Highlights",
+  Sale_default_label_113: "Simulation Highlights",
 
   SalePage_LoginPrompt:
     "Sign in to view additional items selected just for you.",
+  SalePage_LoginReservationPrompt: "Login for reservations",
   SalePage_ParentApp_DLC: "DLC For",
   SalePage_ParentApp_SoundTrack: "Soundtrack For",
   SalePage_Tabs_AllContents: "This tab will show all products",
+  SalePage_Tabs_MobileSelectorLabel: "VIEWING:",
+  SalePage_Tabs_MobileSelectorShortcut: "MORE CATEGORIES",
 
-  Sale_BrowserSortOption_TopWishlisted: "Most Wishlisted",
+  Sale_Reservation_NotAllowedAccount:
+    "Your account is either too new or not in good standing. Your account is not permitted to make reservation.",
+  Sale_Reservation_NotAvailableCountry:
+    "This item is not available for reservation in your country",
+  Sale_Reservation_CanceledPendingRefund:
+    "Reservation cancellation is in progress. Please be patient.",
+  Sale_Reservation_CancelAreYouSure:
+    "Are you sure? Cancelling your reservation will refund your deposit and remove you from the queue",
+  Sale_Reservation_CompletePurchase: "Complete purchase",
+  Sale_Reservation_CompleteBy: "Complete purchase by:",
+  Sale_Reservation_CancelAuto:
+    "If you do not complete the purchase before the expiration time noted above, then we will cancel your reservation and refund your deposit.",
+  Sale_Reservation_Expired: "Reservation expired.",
+
+  Sale_BrowserSortOption_TopWishlisted: "Most Wishlisted Upcoming Games",
   Sale_BrowserSortOption_TopWishlisted_ttip:
-    "Games sorted by total wishlist counts",
-  Sale_BrowserSortOption_TrendingWishlisted: "Trending Now",
+    "Upcoming games sorted by total (all-time) wishlist counts. Only includes games not yet released on Steam.",
+  Sale_BrowserSortOption_TrendingWishlisted: "Trending Upcoming Games",
   Sale_BrowserSortOption_TrendingWishlisted_ttip:
-    "Games sorted by recent wishlist counts",
+    "Upcoming Games sorted by trending or recent wishlist counts. Only includes games not yet released on Steam.",
   Sale_BrowserSortOption_PopularComingSoon: "Launching Soon",
   Sale_BrowserSortOption_PopularComingSoon_ttip:
-    "Highly-wishlisted games, sorted by release date",
+    "Highly-wishlisted games, sorted by release date. Only includes games not yet released on Steam.",
   Sale_BrowserSortOption_PopularUpcoming: "Popular Upcoming",
   Sale_BrowserSortOption_PopularUpcoming_ttip:
-    "Highly-wishlisted games, sorted by release date",
-  Sale_BrowserSortOption_MostPlayedDemo: "Most Downloaded",
+    "Highly-wishlisted games, sorted by release date. Only includes games not yet released on Steam.",
+  Sale_BrowserSortOption_MostPlayedDemo: "Most Downloaded Demos",
   Sale_BrowserSortOption_MostPlayedDemo_ttip:
-    "Games sorted by all-time peak user count",
-  Sale_BrowserSortOption_DailyActiveUserDemo: "Active Users",
+    "Games sorted by their demo's all-time peak user count",
+  Sale_BrowserSortOption_DailyActiveUserDemo: "Daily Active Demo Players",
   Sale_BrowserSortOption_DailyActiveUserDemo_ttip:
-    "Games sorted by daily user count",
-  Sale_BrowserSortOption_PlayedNowDemo: "Playing Now",
+    "Games sorted by their demo's daily user count - using recent daily active data.",
+  Sale_BrowserSortOption_PlayedNowDemo: "Top Demos",
   Sale_BrowserSortOption_PlayedNowDemo_ttip:
-    "Games sorted by current online user count",
+    "Games sorted by their demo's current online user count",
   Sale_BrowserSortOption_RecentlyReleased: "Recently Released",
-  Sale_BrowserSortOption_RecentlyReleased_ttip: "Recently released games",
+  Sale_BrowserSortOption_RecentlyReleased_ttip:
+    "Recently released games; ordered by descending Steam release date.",
   Sale_BrowserSortOption_PopularPurchased: "Popular",
   Sale_BrowserSortOption_PopularPurchased_ttip:
-    "The most popular games right now",
+    "The most popular games right now based on purchase data",
+  Sale_BrowserSortOption_PopularPurchasedDiscounted: "Discounted",
+  Sale_BrowserSortOption_PopularPurchasedDiscounted_ttip:
+    "The most popular games based on purchase; that also have a discount right now",
+  Sale_BrowserSortOption_Discounted: "Discount Amount",
+  Sale_BrowserSortOption_Discounted_ttip:
+    "The most deeply discounted items right now",
+  Sale_BrowserSortOption_Price: "Price",
+  Sale_BrowserSortOption_Price_ttip: "The lowest price games right now",
+  Sale_BrowserSortOption_NewAndTrending: "New and Trending",
+  Sale_BrowserSortOption_NewAndTrending_ttip:
+    "New and Trending that have released recently and have positive indicators on the store; similar to the front page new and trending tab.",
+  Sale_BrowserSortOption_ContentHub_NewAndTrending: "New and Trending",
+  Sale_BrowserSortOption_ContentHub_NewAndTrending_ttip: "",
+  Sale_BrowserSortOption_ContentHub_TopSellers: "Top Sellers",
+  Sale_BrowserSortOption_ContentHub_TopSellers_ttip: "",
+  Sale_BrowserSortOption_ContentHub_Popular: "Popular",
+  Sale_BrowserSortOption_ContentHub_Popular_ttip: "",
+  Sale_BrowserSortOption_ContentHub_TopRated: "Top Rated",
+  Sale_BrowserSortOption_ContentHub_TopRated_ttip: "",
+  Sale_BrowserSortOption_ContentHub_Upcoming: "Upcoming",
+  Sale_BrowserSortOption_ContentHub_Upcoming_ttip: "",
+  Sale_BrowserSortOption_ContentHub_Suffix: "Content Hub",
   SalePage_WatchForDrop_Minutes_Developer:
     "Watch the stream for %1$s minutes and get item drops from the developer when the event is over!",
   SalePage_WatchForDrop_Minutes_CreatorNamed:
@@ -1447,6 +1738,30 @@ LocalizationReady("shared", "english", {
   SalePage_WatchForDrop_Hours_CreatorNamed:
     "Watch the stream for %1$s hours and get item drops from %2$s when the event is over!",
   SalePage_WatchForDrop_LearnMore: "Learn more about the drops here.",
+
+  ContentHub_Recommendation_Curator: "Recommended by: %1$s",
+  ContentHub_Recommendation_FollowedDeveloper: "Developed by: %1$s",
+  ContentHub_Recommendation_FollowedPublisher: "Published by: %1$s",
+  ContentHub_Recommendation_FollowedFranchise: "Part of franchise: %1$s",
+  ContentHub_Recommendation_Tags:
+    "Recommended because you play games tagged with: %1$s",
+  ContentHub_Recommendation_Tags_Software:
+    "Recommended because you use software tagged with: %1$s",
+  ContentHub_Recommendation_Tags_Video:
+    "Recommended because you watch videos tagged with: %1$s",
+  ContentHub_Recommendation_TopSeller: "Top seller",
+  ContentHub_Recommendation_PopularNew: "New and trending",
+  ContentHub_Recommendation_Specials: "Discounted",
+  ContentHub_Recommendation_Concurrent: "Popular",
+  ContentHub_Recommendation_Featured: "Featured",
+
+  Sale_DynamicReview_Preview: "Preview Dynamic Reveal",
+  Sale_DynamicReview_Preview_desc:
+    "Below section has the Dynamic Reveal feature enabled. You can preview the feature by starting the test. This will reset when you leave the preview tab.",
+  Sale_DynamicReview_Preview_start: "Start Test Mode",
+  Sale_DynamicReview_Preview_active_desc:
+    "We cleared original data and will reveal all items randomly. This will automatically refresh %1$s seconds.",
+  Sale_DynamicReview_Preview_action: "Force Service Call",
 
   SalePage_Admin_SaleEventDay: "View Sales Day %1$s",
 
@@ -1458,55 +1773,68 @@ LocalizationReady("shared", "english", {
 
   SteamAwards_EventMainTitle: "The Steam Awards",
   SteamAwards_EventMainTitleSecondLine: "Nominee",
+  SteamAwards_EventMainTitleCombined: "The Steam Awards Nominee",
   SteamAwards_EventCallToAction: "Coming this December",
-  SteamAwards_EventVotingDateTeaser: "December 2019",
-  SteamAwards_EventVoteForGamePrompt:
-    "Click below to vote for %1$s for the category:",
+  SteamAwards_ExpiredEvent:
+    "This event's Steam Awards has ended. Check back in during this year's Autumn and Winter sale for the annual Steam Awards!",
+  SteamAwards_EventVotingDateTeaser: "December %1$s",
+  SteamAwards_EventVoteForGamePrompt: "Click below to vote for %1$s:",
   SteamAwards_EventNominateGamePrompt_Long:
     "Nominate %1$s for the category below as suggested by the developers of this game, or select a different category",
   SteamAwards_EventNominateGamePrompt_NoCategory:
     "Click here to nominate %1$s for a category on the Steam Awards page.",
   SteamAwards_Event_NominationsClosed:
-    "Nominations have closed. Vote during the Winter Sale. Winners announced December 31st.",
+    "Nominations have closed. Vote during the Winter Sale. Winners announced January 3rd.",
   SteamAwards_Event_VotesClosed:
     "Voting has ended. Click here to see the results.",
   SteamAwards_EventNominateGamePrompt_CategoryPrefix: "Nominate for:",
   SteamAwards_EventNominationAlternativeLinkText: "Or pick another category",
-  SteamAward_CategoryTitle_none: "No category",
-  SteamAward_CategoryDesc_none:
+  promo_steamawards2020_cat50: "Game of the Year",
+  promo_steamawards2020_cat51: "VR Game of the Year",
+  promo_steamawards2020_cat52: "Labor of Love",
+  promo_steamawards2020_cat53: "Better With Friends",
+  promo_steamawards2020_cat54: "Outstanding Visual Style",
+  promo_steamawards2020_cat55: "Most Innovative Gameplay",
+  promo_steamawards2020_cat56: "Best Game You Suck At",
+  promo_steamawards2020_cat57: "Best Soundtrack",
+  promo_steamawards2020_cat58: "Outstanding Story-Rich Game",
+  promo_steamawards2020_cat59: "Sit Back and Relax",
+  promo_steamawards2020_cat0:
     "Do not suggest a specific category, and instead let your fans pick the category they think best fits your game. The event will still include a link to the nominations page.",
-  SteamAward_CategoryTitle_goty: "Game of the Year 2019",
-  SteamAward_CategoryDesc_goty:
-    "Maybe it was its immersive gameplay, or its gripping story... its well-crafted characters, immaculate design, or addictive multiplayer. Whatever the reason, the winner of the Game of the Year Award is an instant classic.",
-  SteamAward_CategoryTitle_vrgoty: "VR Game of the Year 2019",
-  SteamAward_CategoryDesc_vrgoty:
-    "When it comes to breaking new ground in games, there is no greater pace of advancement than in VR. If we had our way, all VR devs would get an award for building the future of immersive games and experiences unparalleled by any other medium. But since there’s only one trophy, it’s up to you, Steam Awards Selection Committee member, to crown just one as the best of the year.",
-  SteamAward_CategoryTitle_love: "Labor of Love 2019",
-  SteamAward_CategoryDesc_love:
-    "This game has been out for a while. The team is well past the first unveiling of their creative baby, but being the good parents they are, these devs continue to nurture and support their creation. This game, to this day, is still getting new content after all these years.",
-  SteamAward_CategoryTitle_friends: "Better with Friends 2019",
-  SteamAward_CategoryDesc_friends:
-    "There are some games out there that just aren't the same when you play by yourself. Maybe you need to have a friend to watch your back. Maybe you need to have a friend that you can stab in their back. Either way, mirth is awaiting those who gather friends to play these games.",
-  SteamAward_CategoryTitle_gameplay: "Most Innovative Gameplay",
-  SteamAward_CategoryDesc_gameplay:
-    "This game is at the front lines of experimentation, pushing the boundaries of the medium with exciting, novel interactions and brain-breaking surprises. This game thinks outside the box, and pulls you out with it!",
-  SteamAward_CategoryTitle_storyrich: "Outstanding Story-Rich Game",
-  SteamAward_CategoryDesc_storyrich:
-    "Some days, only a narrative-heavy game will hit the spot, and this one packs a wallop. It's as gripping as any soap opera and as well-tuned as a prestige-TV screenplay. Bravissimo -- for making us feel things!",
-  SteamAward_CategoryTitle_yousuck: "Best Game You Suck At",
-  SteamAward_CategoryDesc_yousuck:
-    "Games have a way of pushing us past any limits we thought we had. Like a montage sequence, we put in work, training our fingers to be quick and nimble, mastering timing and placement over weeks and weeks. At the end of the gauntlet, we're rewarded with profound beauty and a deep sense of personal growth. Unless you hurled your monitor through a plate-glass window on the first day.",
-  SteamAward_CategoryTitle_visual: "Outstanding Visual Style",
-  SteamAward_CategoryDesc_visual:
-    "These devs are the Willy Wonka of eye candy. Visual style doesn't aspire to real-world graphical fidelity (though a noble goal in itself)… it describes a distinctive look and feel that suffuses an entire game. This game displays visual cohesion and expression that not only fit the game's world, but make our world look paltry by comparison.",
+  promo_steamawards2020_cat0_desc: "No Category",
+  promo_steamawards2020_cat50_desc:
+    "Maybe it was its immersive gameplay, or its gripping story... its well-crafted characters, immaculate design, or addictive multiplayer. Whatever the reason, the winner of 2020's Game of the Year Award is an instant classic.",
+  promo_steamawards2020_cat51_desc:
+    "The VR Game of the Year isn't merely masquerading as regular reality. This game improves on reality, taking advantage of the medium of VR and pushing the boundaries of the virtual realm.",
+  promo_steamawards2020_cat52_desc:
+    "This game has been out for a while. The team is well past the debut of their creative baby, but being the good parents they are, these devs continue to nurture and support their creation. This game, to this day, is still getting new content after all these years.",
+  promo_steamawards2020_cat53_desc:
+    "There are some games out there that just aren't the same when you play by yourself. Maybe you need to have a friend to watch your back. Maybe you need to have a friend that you can stab in their back. Either way, fun is awaiting those who gather friends together play this game.",
+  promo_steamawards2020_cat54_desc:
+    "Visual style doesn't aspire to real-world graphical fidelity (though a noble goal in itself)… it describes a distinctive look and feel that suffuses an entire game.",
+  promo_steamawards2020_cat55_desc:
+    "The designers of this game are at the front lines of creative experimentation, bringing a fresh perspective and brain-breaking surprises. This game delighted, inspired and entertained with newness never played before.",
+  promo_steamawards2020_cat56_desc:
+    "This is the game that rewards persistence, and is not for the faint of heart. It's the toughest game we've ever loved.",
+  promo_steamawards2020_cat57_desc:
+    "This unsung hero deserves to be recognized for its outstanding musical score. It's the OST with the MOST! ",
+  promo_steamawards2020_cat58_desc:
+    "Some days, only a narrative-heavy game will hit the spot, and this one packs a wallop. It's as gripping as any soap opera, and as well-tuned as a prestige-TV screenplay. Bravissimo -- for making us feel things!",
+  promo_steamawards2020_cat59_desc:
+    "This game is the antidote to a busy day. It's smooth, it's relaxing, it lets your worries melt away. This game is your moment of zen.",
   SteamAward_NominationConflictWarning_Title: "Change your nomination?",
   SteamAward_NominationConflictWarning_Explanation:
     "You can only nominate one game for each category, and you have already nominated %1$s for this one. Would you like to nominate %2$s instead?",
   SteamAward_VoteButton_PromptText: "Vote",
+  SteamAward_VoteButton_VotedText: "Voted",
   SteamAward_VoteButton_AlreadyVotedText: "Vote submitted",
   SteamAward_VoteConflictWarning_Title: "Change your vote?",
   SteamAward_VoteConflictWarning_Explanation:
     "You can only vote for one game for each category, and you have already voted for %1$s for this one. Would you like to change your vote to %2$s?",
+  SteamAward_Nominate_LimitedAccount:
+    "It appears that your account is limited. To prevent nomination abuse, you must spend $5 USD on Steam in order to participate in the Steam Awards. Visit <a %1$s>Steam Support</a> for more info.",
+  SteamAward_Vote_LimitedAccount:
+    "It appears that your account is limited. To prevent vote abuse, you must spend $5 USD on Steam in order to participate in the Steam Awards. Visit <a %1$s>Steam Support</a> for more info.",
 
   Store_VR_Support_OnlyVR: "VR Only",
   Store_VR_Support_SupportsVR: "VR Supported",
@@ -1572,16 +1900,23 @@ LocalizationReady("shared", "english", {
   Sale_Subscription_AlreadyOwnedApp: "Already a member",
   Sale_Subscription_Save: "Save %2$s",
   Sale_Subscription_Annual_Price: "%1$s/year",
+  Sale_Subscription_Annual_Price_Discount: "%1$s for the first year",
   Sale_Subscription_Annual_Body:
     "Pay for one year of access and save %2$s off your subscription",
+  Sale_Subscription_Annual_Body_Discount:
+    "%1$s billed annually thereafter, cancel anytime",
   Sale_Subscription_Annual_Button: "Subscribe Annually",
   Sale_Subscription_Monthly_Price: "%1$s/month",
+  Sale_Subscription_Monthly_Price_Discount: "%1$s for the first month",
   Sale_Subscription_Monthly_Body: "Pay month-to-month and cancel any time",
+  Sale_Subscription_Monthly_Body_Discount:
+    "%1$s billed monthly thereafter, cancel anytime",
   Sale_Subscription_Monthly_Button: "Subscribe Monthly",
-  Sale_Subscription_Quarterly_Price: "%1$s/quarter",
-  Sale_Subscription_Quarterly_Body:
-    "Pay every three months and cancel any time",
-  Sale_Subscription_Quarterly_Button: "Subscribe Quarterly",
+  Sale_Subscription_DiscountEnd: "Save %2$s when you sign up by %1$s",
+  Sale_Subscription_OfferEnds: "Offer ends %1$s",
+  Sale_Subscription_NewSubsOfferEnds:
+    "Offer only for new subscribers. Ends %1$s",
+  Sale_Subscription_Asterisk: "*",
 
   GotSteam_Title: "Got Steam?",
   GotSteam_PromptWithDownloadLink:
@@ -1596,9 +1931,15 @@ LocalizationReady("shared", "english", {
 
   GrantAwardTitle: "Give an Award",
   GrantAwardDescription_Review:
-    "Use your Steam Points to emphasize this review and grant the reviewer %1$s bonus points!",
+    "Use your Steam Points to emphasize this review and grant the reviewer bonus points!",
   GrantAwardDescription_UGC:
-    "Use your Steam Points to grant this item a special award and grant the author %1$s bonus points!",
+    "Use your Steam Points to grant this item a special award and grant the author bonus points!",
+  GrantAwardDescription_Profile:
+    "Use your Steam Points to grant this profile a special award and grant the user bonus points!",
+  GrantAwardDescription_ForumTopic:
+    "Use your Steam Points to grant this discussion post a special award and grant the author bonus points!",
+  GrantAwardDescription_Comment:
+    "Use your Steam Points to grant this comment a special award and grant the author bonus points!",
   GrantAwardNowButton: "Give Award",
   GrantAward_PointsLink: "What are Steam Points?",
   GrantAward_PromptTooltip: "Please select an award",
@@ -1624,9 +1965,11 @@ LocalizationReady("shared", "english", {
   GrantAwardError_InsufficientFunds:
     "You do not have enough Steam Points to grant the selected award.",
   GrantAwardError_Fail:
-    "There was a problem granting this reward.  Please try again later.",
+    "There was a problem granting this award.  Please try again later.",
   GrantAwardError_AccessDenied:
     "You cannot redeem points for an award due to the restrictions placed on your account.",
+  GrantAwardError_NotLoggedOn:
+    "You will need to log in before you can grant any awards.",
   YourBalance: "Your Balance",
   RewardsReaction_1: "Deep Thoughts",
   RewardsReaction_2: "Heartwarming",
@@ -1636,8 +1979,30 @@ LocalizationReady("shared", "english", {
   RewardsReaction_6: "Extra Helpful",
   RewardsReaction_7: "Gotta Have It",
   RewardsReaction_8: "Michelangelo",
+  RewardsReaction_9: "Treasure",
+  RewardsReaction_10: "Mind Blown",
+  RewardsReaction_11: "Golden Unicorn",
+  RewardsReaction_12: "Mad Scientist",
+  RewardsReaction_13: "Clever",
+  RewardsReaction_14: "Warm Blanket",
+  RewardsReaction_15: "Saucy",
+  RewardsReaction_16: "Slow Clap",
+  RewardsReaction_17: "Take My Points",
+  RewardsReaction_18: "Wholesome",
+  RewardsReaction_19: "Jester",
+  RewardsReaction_20: "Fancy Pants",
+  RewardsReaction_21: "Whoa",
+  RewardsReaction_22: "Super Star",
+  RewardsReaction_23: "Wild",
   RewardsReaction_Tooltip: "%1$s person marked this item as '%2$s'",
   RewardsReaction_Tooltip_Plural: "%1$s people marked this item as '%2$s'",
+
+  ClanImageChooser_Title: "Select Image",
+  ClanImageChooser_Desc: "Double click to choose image",
+  ClanImageChooser_Search: "Search Images...",
+  ClanImageChooser_None: "No images",
+  ClanImagePickAndResize_UploadImage: "Upload Resized Image",
+  ClanImagePickAndResize_UploadStatus: "Image Upload Status: %1$s",
 
   AppType_game: "game",
   AppType_software: "software",
@@ -1648,30 +2013,185 @@ LocalizationReady("shared", "english", {
   AppType_event: "event",
   AppType_tag: "tag",
   AppType_music: "music",
+  AppType_hardware: "hardware",
+  AppType_series: "series",
+
+  AppTypeLabelTitle: "Type",
+  AppTypeLabel_game: "Games",
+  AppTypeLabel_software: "Software",
+  AppTypeLabel_dlc: "Downloadable Content",
+  AppTypeLabel_demo: "Demos",
+  AppTypeLabel_music: "Soundtracks",
+  AppTypeLabel_video: "Videos",
+  AppTypeLabel_hardware: "Hardware",
 
   GameHover_Tags: "Tags",
-  GameHover_UserReviewsHeader: "User Reviews",
+  GameHover_UserReviewsHeader: "",
+  GameHover_UserReviewCount: "| %1$s User Reviews",
+
+  Localization_Export_Btn_RowLanguages: "Language per row",
+  Localization_Export_Btn_ColumnLanguages: "Language per Column",
+  Localization_Export_Btn_TokenLanguages: "Token, Language list",
+  Localization_Export_Btn_XML: "Export XML",
+  Localization_Import_Btn: "Import Localization File(s)...",
+  Localization_Error_Input:
+    "We were not able to parse or recognize the input file",
+  Localization_Error_FileExtention:
+    "File does not have the '.xml' or '.csv' extension, failed to parse filename: %1$s",
+  Localization_Error_FileLangauage:
+    "File name does not specify the API Language Code. Expect file in the format <user name>_<language>.xml: %1$s",
+  Localization_Error_XMLParseError:
+    "Error occurred when parsing and applying the XML data: %1$s",
+  Localization_Success_ImportComplete:
+    "Localization Import Completed. The following languages updated: %1$s",
+  Localization_Success_ImportComplete_NoChange:
+    "Localization Import Completed. No changes were made.",
+
+  TrailerPlayer_ID_NotProvided:
+    "Cannot display trailer: The App ID and/or Trailer ID is not provided. The offical group event can automatically deetermine appid, however, both are required.",
+  TrailerPlayer_CouldNotLoad:
+    "Could not load appid %1$s and trailer %2$s. Double check they are published and visible on the store.",
+  TrailerPlayer_LoadingError:
+    "Please use a browser that supports HTML videos to watch this trailer.",
+
+  FacetedBrowse_Heading: "Narrow By",
+  FacetedBrowse_NoMatches: "No matches found.",
+  FacetedBrowse_MatchCount: "%1$s match",
+  FacetedBrowse_MatchCount_Plural: "%1$s matches",
+  FacetedBrowse_MatchCountPartial: "%1$s+ match",
+  FacetedBrowse_MatchCountPartial_Plural: "%1$s+ matches",
+  FacetedBrowse_Reset: "Reset",
+  FacetedBrowse_ReturnToTop: "Return to Top",
+
+  Platform: "Platform",
+  Platform_Windows: "Windows",
+  Platform_Linux: "Linux / SteamOS",
+  Platform_Mac: "macOS",
+
+  ContentDescriptor: "Content Descriptor",
+  ContentDescriptor_GeneralMatureContent: "General Mature Content",
+  ContentDescriptor_FrequentViolenceOrGore: "Frequent Violence or Gore",
+  ContentDescriptor_NudityOrSexualContent: "Nudity or Sexual Content",
+  ContentDescriptor_AdultOnlySexualContent: "Adult Only Sexual Content",
+
+  UserPreference_HideOwnedItems: "Hide items in my library",
+  UserPreference_HideWishlistedItems: "Hide items on my wishlist",
+  UserPreference_HideIgnoredItems: "Hide ignored items",
+
+  App_Taxonomy_Survey_QSuperGenreTitle: "Top-Level Genres",
+  App_Taxonomy_Survey_QGenreTitle: "Genres",
+  App_Taxonomy_Survey_QSubGenreTitle: "Sub-Genres",
+  App_Taxonomy_Survey_QVisualsTitle: "Visuals & Viewpoint",
+  App_Taxonomy_Survey_QThemeMoodTitle: "Themes & Moods",
+  App_Taxonomy_Survey_QFeaturesTitle: "Features",
+  App_Taxonomy_Survey_QPlayersTitle: "Players",
+
+  Browse_Sale_Hide_Games_I_Own: "Hide items in my Library",
+  Browse_Sale_Mature_Themes: "Mature Themes",
+  Browse_Sale_Mature_Feature: "Mature",
+  Browse_sale_Violence_Feature: "Violence",
+  Browse_Sale_Sexual_Feature: "Nudity or Sexual Content",
+  Browse_Sale_Adult_Feature: "Adult Only",
 
   bytes: "%1$s B",
   bytes_PerSecond: "%1$s B/s",
   bits: "%1$s b",
-  bits_PerSecond: "%1$s b/s",
+  bits_PerSecond: "%1$s bps",
   Kilobytes: "%1$s KB",
   Kilobytes_PerSecond: "%1$s KB/s",
   Kilobits: "%1$s Kb",
-  Kilobits_PerSecond: "%1$s Kb/s",
+  Kilobits_PerSecond: "%1$s Kbps",
   Megabytes: "%1$s MB",
   Megabytes_PerSecond: "%1$s MB/s",
   Megabits: "%1$s Mb",
-  Megabits_PerSecond: "%1$s Mb/s",
+  Megabits_PerSecond: "%1$s Mbps",
   Gigabytes: "%1$s GB",
-  Gigabytes_PerSecond: "%1$s Gb/s",
+  Gigabytes_PerSecond: "%1$s GB/s",
   Gigabits: "%1$s Gb",
-  Gigabits_PerSecond: "%1$s Gb/s",
+  Gigabits_PerSecond: "%1$s Gbps",
   Terabytes: "%1$s TB",
   Terabytes_PerSecond: "%1$s TB/s",
   Terabits: "%1$s Tb",
-  Terabits_PerSecond: "%1$s Tb/s",
+  Terabits_PerSecond: "%1$s Tbps",
+
+  ImportLoc_Title: "Import Localization",
+  ImportLoc_Description:
+    "Import text for a variety of languages by importing a file from your machine. A variety of formats are supported, and for an example of each you can select a sample below.",
+  ImportLoc_SampleTitle: "Download Samples",
+  ImportLoc_CSVLangPerRow: "CSV Language Per Row",
+  ImportLoc_CSVLangPerCol: "CSV Language Per Column",
+  ImportLoc_CSVTokenLang: "CSV Token List",
+  ImportLoc_XML: "XML Single Language",
+
+  FAQViewer_SteamSupport: "Steam Support",
+  FAQViewer_NoFAQFound: "Sorry, we could not find that page.",
+  FAQViewer_GoToHomepage: "Return to community homepage",
+  FAQViewer_AdminLinks: "Admin Links",
+  FAQViewer_Admin_LastUpdate: "Last published by: %1$s on %2$s",
+  FAQViewer_GotoEditor: "Edit FAQ",
+  FAQViewer_DraftNewer:
+    "Draft edited by: %1$s has newer changes, last save %2$s",
+  FAQViewer_UnknownUser: "unknown user",
+  FAQViewer_SideBar_ProblemWithSteam_Title: "Need help with Steam?",
+  FAQViewer_SideBar_ProblemWithSteam_Desc:
+    "Use the Steam help wizard to narrow down your topic and get the help you need.",
+  FAQViewer_SideBar_ProblemWithSteam_Link: "Help Me With My Issue",
+  FAQViewer_SideBar_CommunityHelp_Title: "Community Help",
+  FAQViewer_SideBar_CommunityHelp_Desc:
+    "Post or search in Steam Discussions for an answer to your question.",
+  FAQViewer_SideBar_CommunityHelp_Link: "Visit Steam Discussions",
+
+  StreamLaunch_Updating_Title: "Updating Game",
+  StreamLaunch_Failed_Title: "Stream Launch Failed",
+  StreamLaunch_RequiresUI:
+    "This game launch requires user intervention.\n\nLaunch manually on the remote computer and then join the stream from here.",
+  StreamLaunch_AccessDenied: "Authentication problem.",
+  StreamLaunch_Unsupported: "This game currently doesn't support streaming.",
+  StreamLaunch_ScreenLocked: "The screen is locked on the remote computer.",
+  StreamLaunch_Broadcasting:
+    "The remote computer is currently using Steam Broadcasting so it cannot start a Remote Play session.",
+  StreamLaunch_OtherGameRunning:
+    "There is another game already running on the remote computer.",
+  StreamLaunch_Timeout: "Timed out waiting for stream to launch.",
+  StreamLaunch_InstallRequiresUI:
+    "Installation of this game requires user intervention.\n\nInstall manually on the remote computer.",
+  StreamLaunch_Failed: "Unable to launch stream.",
+  StreamLaunch_InstallDrivers:
+    "Streaming requires additional driver installation.\n\nPlease follow the Steam prompts on the remote computer.",
+  StreamLaunch_StillDownloading:
+    "Update is in progress on the remote computer.  The game will be ready to stream when the download completes.",
+  StreamLaunch_TransportUnavailable:
+    "Streaming outside the home isn't currently available, try again later.",
+
+  LOC_Ordinal_Prefix_Default: "<none>",
+  LOC_Ordinal_Suffix_Default: "th",
+  LOC_Ordinal_Suffix_1: "st",
+  LOC_Ordinal_Suffix_2: "nd",
+  LOC_Ordinal_Suffix_3: "rd",
+  LOC_Ordinal_Suffix_21: "st",
+  LOC_Ordinal_Suffix_22: "nd",
+  LOC_Ordinal_Suffix_23: "rd",
+  LOC_Ordinal_Suffix_31: "st",
+  LOC_Ordinal_Suffix_32: "nd",
+  LOC_Ordinal_Suffix_33: "rd",
+  LOC_Ordinal_Suffix_41: "st",
+  LOC_Ordinal_Suffix_42: "nd",
+  LOC_Ordinal_Suffix_43: "rd",
+  LOC_Ordinal_Suffix_51: "st",
+  LOC_Ordinal_Suffix_52: "nd",
+  LOC_Ordinal_Suffix_53: "rd",
+  LOC_Ordinal_Suffix_61: "st",
+  LOC_Ordinal_Suffix_62: "nd",
+  LOC_Ordinal_Suffix_63: "rd",
+  LOC_Ordinal_Suffix_71: "st",
+  LOC_Ordinal_Suffix_72: "nd",
+  LOC_Ordinal_Suffix_73: "rd",
+  LOC_Ordinal_Suffix_81: "st",
+  LOC_Ordinal_Suffix_82: "nd",
+  LOC_Ordinal_Suffix_83: "rd",
+  LOC_Ordinal_Suffix_91: "st",
+  LOC_Ordinal_Suffix_92: "nd",
+  LOC_Ordinal_Suffix_93: "rd",
 
   shared_dummy: "dont translate",
 });

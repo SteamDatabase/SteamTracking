@@ -90,6 +90,12 @@
                     "type": "uint64",
                     "optional": false,
                     "description": "(Optional) app specific data about the type of cheating"
+                },
+                {
+                    "name": "appdata2",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "(Optional) App specific data about the cheating."
                 }
             ]
         },

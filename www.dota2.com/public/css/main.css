@@ -24096,6 +24096,7 @@ a {
   .dpcselectors_DropdownBody_1u6rb
   .dpcselectors_LeftSegment_2BgYM {
   color: #fff;
+  max-width: 90%;
 }
 .dpcselectors_DropdownSelector_3jmb0.dpcselectors_StyleNormal_2AM-s
   .dpcselectors_DropdownBody_1u6rb
@@ -24927,7 +24928,6 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
   position: relative;
 }
 .dpcseriesdetails_DPCSeriesDetails_cpS5D .dpcseriesdetails_BGContainer_1INUQ {
