@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6810563";
+var CLSTAMP = "6810732";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [1],
   {
@@ -37234,31 +37234,31 @@ var CLSTAMP = "6810563";
             m = Object(o.useState)(va.e.INVALID),
             u = m[0],
             p = m[1],
-            g = Object(c.g)(),
-            h = Object(c.h)(),
-            b = Object(c.i)(),
-            v = Object(ba.g)(b.strEvent),
-            f = Ra.a.Get().GetEventInfo(v);
+            h = Object(c.g)(),
+            b = Object(c.h)(),
+            v = Object(c.i)(),
+            f = Object(ba.g)(v.strEvent),
+            E = Ra.a.Get().GetEventInfo(f);
           Object(o.useEffect)(function () {
             setInterval(function () {
               return l(Date.now() / 1e3);
             }, 5e3);
           }, []);
-          var E = d.b.dpc_watch(
-            v == va.e.INVALID ? Object(ba.b)() : Object(ba.j)(v)
+          var y = d.b.dpc_watch(
+            f == va.e.INVALID ? Object(ba.b)() : Object(ba.j)(f)
           );
           if (
-            (Ra.a.Get().GetSpoilerBlockState(v) == va.l.BLOCKED
-              ? (E = d.b.dpc_schedule(Object(ba.j)(v)))
-              : (null == f ? void 0 : f.bEventCompleted) &&
-                (E = d.b.dpc_standings(
-                  Object(ba.j)(v),
+            (Ra.a.Get().GetSpoilerBlockState(f) == va.l.BLOCKED
+              ? (y = d.b.dpc_schedule(Object(ba.j)(f)))
+              : (null == E ? void 0 : E.bEventCompleted) &&
+                (y = d.b.dpc_standings(
+                  Object(ba.j)(f),
                   Object(ba.i)(va.f.RESULTS)
                 )),
             Object(o.useEffect)(
               function () {
-                ((e && (0 == a || s - a > 30)) || v != u) &&
-                  (v != u && (u != va.e.INVALID && g.push(E), p(v)),
+                ((e && (0 == a || s - a > 30)) || f != u) &&
+                  (f != u && (u != va.e.INVALID && h.push(y), p(f)),
                   n(s),
                   Ra.a
                     .Get()
@@ -37268,43 +37268,48 @@ var CLSTAMP = "6810563";
                       nSeriesGame: 0,
                       eSeriesDisplay: ba.f.DETAILS,
                     }),
-                  Ra.a.Get().CacheDPCLeagueData(v));
+                  Ra.a.Get().CacheDPCLeagueData(f));
               },
-              [g, E, v, u, s, a, p, n, e]
+              [h, y, f, u, s, a, p, n, e]
             ),
             Object(o.useEffect)(
               function () {
                 var e;
-                (null === (e = h.state) || void 0 === e
+                (null === (e = b.state) || void 0 === e
                   ? void 0
                   : e.bAutoScroll) &&
                   (window.scrollTo({ top: 490, left: 0, behavior: "smooth" }),
                   window.history.replaceState({}, document.title));
               },
-              [h]
+              [b]
             ),
-            v == va.e.INVALID)
+            f == va.e.INVALID)
           )
-            return i.a.createElement(c.a, { to: E });
-          var y = Ra.a.Get().IsGCDown();
+            return i.a.createElement(c.a, { to: y });
+          var I = Ra.a.Get().IsGCDown();
           return i.a.createElement(
             "div",
             { className: ha.a.DPCRoot },
             i.a.createElement(
+              g.a,
+              null,
+              i.a.createElement("title", null, Object(_.a)("#dpc_page_title"))
+            ),
+            i.a.createElement(
               Br,
-              { eventContext: v },
+              { eventContext: f },
               i.a.createElement(ge.a, { bOverlapping: !1 }),
               i.a.createElement(Wr, null),
               i.a.createElement(On, null),
               i.a.createElement(Vr, null),
               i.a.createElement(Ln, null),
-              y &&
+              I &&
                 i.a.createElement(
                   "div",
                   { className: ha.a.GCDown },
                   Object(_.a)("#dpc_gc_down")
                 ),
-              !y &&
+              !I &&
                 i.a.createElement(
                   c.d,
                   null,
@@ -37341,7 +37346,7 @@ var CLSTAMP = "6810563";
                     path: d.b.dpc_ti_standings(":strEvent?"),
                     component: Ar,
                   }),
-                  i.a.createElement(c.a, { from: d.b.dpc_root(), to: E })
+                  i.a.createElement(c.a, { from: d.b.dpc_root(), to: y })
                 ),
               i.a.createElement(he.a, null)
             )
