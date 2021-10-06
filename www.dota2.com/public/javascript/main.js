@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6810732";
+var CLSTAMP = "6811657";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [1],
   {
@@ -6018,8 +6018,9 @@ var CLSTAMP = "6810732";
         GridBody: "dpcstandings_GridBody_pcU8h",
         GridRow: "dpcstandings_GridRow_2f1YL",
         GridCell: "dpcstandings_GridCell_4wUCQ",
-        GridMatch: "dpcstandings_GridMatch_2IjIp",
         Date: "dpcstandings_Date_3wTMY",
+        Record: "dpcstandings_Record_3WL3i",
+        GridMatch: "dpcstandings_GridMatch_2IjIp",
         Live: "dpcstandings_Live_1IiHp",
         RowHighlightContainer: "dpcstandings_RowHighlightContainer_2UdT2",
         RowHighlight: "dpcstandings_RowHighlight_DyFRj",
@@ -31835,7 +31836,7 @@ var CLSTAMP = "6810732";
                               ? void 0
                               : U()(
                                   1e3 * (null == f ? void 0 : f.scheduled_time)
-                                ).format("MMM DD"),
+                                ).format("MMM DD LT"),
                           O = Ra.a
                             .Get()
                             .IsLeagueNodeLive(
