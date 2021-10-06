@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6810761";
+var CLSTAMP = "6813220";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [40],
   {
@@ -70859,13 +70859,13 @@ var CLSTAMP = "6810761";
         a = n("vDqi"),
         i = n.n(a),
         o = n("2vnA"),
-        s = n("kLLr"),
-        c = n("boaH"),
-        l = n("UWWC"),
-        u = n("OS6B"),
-        p = n("lkRc"),
-        d = n("5izx"),
-        m = n("5eAM");
+        s = n("5eAM"),
+        c = n("kLLr"),
+        l = n("boaH"),
+        u = n("5izx"),
+        p = n("UWWC"),
+        d = n("OS6B"),
+        m = n("lkRc");
       function h(e) {
         return Boolean(e && e.thumbnail_http_address);
       }
@@ -70906,7 +70906,11 @@ var CLSTAMP = "6810761";
             }),
             (e.prototype.GetConcurrentStreams = function (e) {
               var t = this.GetStreams(e);
-              return t ? t.length : 0;
+              return t
+                ? t.filter(function (e) {
+                    return h(e);
+                  }).length
+                : 0;
             }),
             (e.prototype.GetChatVisibility = function () {
               return "remove" === this.m_pageChatStatus ||
@@ -70933,9 +70937,9 @@ var CLSTAMP = "6810761";
               var t = null;
               return (
                 (t = e.steamid
-                  ? new s.a(e.steamid)
-                  : s.a.InitFromAccountID(e.accountid)),
-                p.d.COMMUNITY_BASE_URL +
+                  ? new c.a(e.steamid)
+                  : c.a.InitFromAccountID(e.accountid)),
+                m.d.COMMUNITY_BASE_URL +
                   "broadcast/watch/" +
                   t.ConvertTo64BitString()
               );
@@ -70949,7 +70953,7 @@ var CLSTAMP = "6810761";
                       Boolean(n) &&
                       n.some(function (t) {
                         return (
-                          c.a.GetOrCreateBroadcastInfo(t.steamid).m_nAppID === e
+                          l.a.GetOrCreateBroadcastInfo(t.steamid).m_nAppID === e
                         );
                       }));
                 }),
@@ -70962,7 +70966,7 @@ var CLSTAMP = "6810761";
                 this.m_lookupStreams.forEach(function (n) {
                   null == n ||
                     n.forEach(function (n) {
-                      c.a.GetOrCreateBroadcastInfo(n.steamid).m_nAppID === e &&
+                      l.a.GetOrCreateBroadcastInfo(n.steamid).m_nAppID === e &&
                         t.push(n);
                     });
                 }),
@@ -70990,7 +70994,7 @@ var CLSTAMP = "6810761";
                       )
                         return [3, 5];
                       if (
-                        (t = Object(p.h)("broadcastuser", "application_config"))
+                        (t = Object(m.h)("broadcastuser", "application_config"))
                       )
                         return [3, 4];
                       r.label = 1;
@@ -70998,7 +71002,7 @@ var CLSTAMP = "6810761";
                       return (
                         r.trys.push([1, 3, , 4]),
                         (n =
-                          p.d.STORE_BASE_URL +
+                          m.d.STORE_BASE_URL +
                           "broadcast/ajaxgetuserbroadcastpreferences"),
                         [4, i.a.get(n, { params: {}, cancelToken: e.token })]
                       );
@@ -71009,7 +71013,7 @@ var CLSTAMP = "6810761";
                         (s = r.sent()),
                         console.log(
                           "LoadBIsEmbeddedBroadcastHidden: " +
-                            Object(u.a)(s).strErrorMsg
+                            Object(d.a)(s).strErrorMsg
                         ),
                         (t = { bHideStoreBroadcast: !1 }),
                         [3, 4]
@@ -71036,12 +71040,12 @@ var CLSTAMP = "6810761";
                       return (
                         (this.m_bUseFakeData = !1),
                         (this.m_pageChatStatus = "remove"),
-                        [4, m.a.LoadAppLinkInfo([e.nAppIDVOD])]
+                        [4, s.a.LoadAppLinkInfo([e.nAppIDVOD])]
                       );
                     case 1:
                       return (
                         r.sent(),
-                        (n = m.a.GetAppLinkInfo(e.nAppIDVOD)),
+                        (n = s.a.GetAppLinkInfo(e.nAppIDVOD)),
                         ((a = new _()).accountid = 0),
                         (a.nAppIDVOD = e.nAppIDVOD),
                         (a.default_selection_priority = f.k_ePrimary),
@@ -71078,7 +71082,7 @@ var CLSTAMP = "6810761";
                         [
                           4,
                           i.a.get(
-                            p.d.STORE_BASE_URL +
+                            m.d.STORE_BASE_URL +
                               "broadcast/ajaxgetstreamersforpreview",
                             { params: n }
                           ),
@@ -71092,7 +71096,7 @@ var CLSTAMP = "6810761";
                     case 3:
                       return (
                         (a = r.sent()),
-                        (o = Object(u.a)(a)),
+                        (o = Object(d.a)(a)),
                         console.error(
                           "HintLoadEmbeddablePreviewStreams hit error loading: " +
                             o.strErrorMsg,
@@ -71143,7 +71147,7 @@ var CLSTAMP = "6810761";
                   switch (r.label) {
                     case 0:
                       if (
-                        ((n = Object(p.h)(
+                        ((n = Object(m.h)(
                           "broadcast_available_for_page",
                           "application_config"
                         )),
@@ -71158,7 +71162,7 @@ var CLSTAMP = "6810761";
                         [
                           4,
                           i.a.get(
-                            p.d.STORE_BASE_URL +
+                            m.d.STORE_BASE_URL +
                               "broadcast/ajaxgetstreamersforpage",
                             { params: t }
                           ),
@@ -71172,7 +71176,7 @@ var CLSTAMP = "6810761";
                     case 3:
                       return (
                         (o = r.sent()),
-                        (s = Object(u.a)(o)),
+                        (s = Object(d.a)(o)),
                         console.error(
                           "HintLoadEmbeddableStreams hit error loading: " +
                             s.strErrorMsg,
@@ -71210,20 +71214,20 @@ var CLSTAMP = "6810761";
                         Object(o.G)(function () {
                           t.filtered.forEach(function (e) {
                             if (!e.steamid) {
-                              var t = s.a.InitFromAccountID(e.accountid);
+                              var t = c.a.InitFromAccountID(e.accountid);
                               e.steamid = t.ConvertTo64BitString();
                             }
-                            var r = c.a.GetOrCreateBroadcastInfo(e.steamid),
-                              a = e.appid ? Number(e.appid) : c.d;
+                            var r = l.a.GetOrCreateBroadcastInfo(e.steamid),
+                              a = e.appid ? Number(e.appid) : l.d;
                             (r.m_nAppID = a),
                               (r.m_strAppId = "" + a),
                               void 0 === e.current_selection_priority &&
                                 (e.current_selection_priority =
                                   e.default_selection_priority),
-                              a != c.d && n.push(a);
+                              a != l.d && n.push(a);
                           });
                         }),
-                        n.length > 0 && m.a.LoadAppLinkInfo(n),
+                        n.length > 0 && s.a.LoadAppLinkInfo(n),
                         this.m_lookupStreams.set(
                           this.GetStreamsLookupKeyFromDef(e),
                           t.filtered
@@ -71311,7 +71315,7 @@ var CLSTAMP = "6810761";
                           return e(t);
                         }),
                         y(
-                          c.a.GetOrCreateBroadcastInfo(t.steamid).m_nAppID,
+                          l.a.GetOrCreateBroadcastInfo(t.steamid).m_nAppID,
                           1,
                           t.snr
                         ),
@@ -71333,10 +71337,10 @@ var CLSTAMP = "6810761";
                       return (
                         r.trys.push([1, 3, , 4]),
                         (n =
-                          p.d.STORE_BASE_URL + "broadcast/ajaxcheckbroadcast"),
+                          m.d.STORE_BASE_URL + "broadcast/ajaxcheckbroadcast"),
                         (a = {
                           broadcastaccountid: t.accountid,
-                          viewer_token: c.a.GetViewerToken(),
+                          viewer_token: l.a.GetViewerToken(),
                           origin: self.origin,
                         }),
                         [4, i.a.get(n, { params: a })]
@@ -71346,7 +71350,7 @@ var CLSTAMP = "6810761";
                     case 3:
                       return (
                         (o = r.sent()),
-                        (s = Object(u.a)(o)),
+                        (s = Object(d.a)(o)),
                         console.error(
                           "Broadcast.AttemptToPlayStream: " + s.strErrorMsg,
                           s
@@ -71391,10 +71395,10 @@ var CLSTAMP = "6810761";
                   ? e.accountIDs.slice().sort().join(",")
                   : void 0,
                 test: false,
-                cc: p.d.COUNTRY,
-                l: p.d.LANGUAGE,
-                rt_now_override_test: d.a.BHasTimeOverride()
-                  ? d.a.GetTimeNowWithOverride()
+                cc: m.d.COUNTRY,
+                l: m.d.LANGUAGE,
+                rt_now_override_test: u.a.BHasTimeOverride()
+                  ? u.a.GetTimeNowWithOverride()
                   : void 0,
               };
             }),
@@ -71410,7 +71414,7 @@ var CLSTAMP = "6810761";
               return (
                 e.s_GlobalStore ||
                   ((e.s_GlobalStore = new e()),
-                  "dev" == p.d.WEB_UNIVERSE &&
+                  "dev" == m.d.WEB_UNIVERSE &&
                     (window.g_BroadcastEmbeddableStore = e.s_GlobalStore),
                   e.s_GlobalStore.Init()),
                 e.s_GlobalStore
@@ -71481,7 +71485,7 @@ var CLSTAMP = "6810761";
                 ((a = new URLSearchParams()).append("page_action", "" + t),
                 a.append("snr", n),
                 i.a.post(
-                  p.d.STORE_BASE_URL + "ajaxreportproductaction/" + e + "/",
+                  m.d.STORE_BASE_URL + "ajaxreportproductaction/" + e + "/",
                   a
                 )),
               [2]
@@ -71489,7 +71493,7 @@ var CLSTAMP = "6810761";
           });
         });
       }
-      var S = new l.a();
+      var S = new p.a();
     },
     nrKv: function (e, t, n) {
       "use strict";
