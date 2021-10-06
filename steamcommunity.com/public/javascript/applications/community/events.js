@@ -1335,22 +1335,26 @@
             })(
               t.GetClanSteamID().GetAccountID(),
               "steam_game_festival_broadcast"
-            );
+            ),
+            u = Object(l.d)(t.GetClanAccountID());
           if ((null == r ? void 0 : r.opt_in) || 0 == a) {
-            if (null == o)
+            if (null == o || null == u)
               return s.createElement(E.a, {
                 string: Object(f.f)("Loading"),
                 size: "medium",
                 position: "center",
               });
-            var u = l.c.GetEditModel(),
-              m = u.BHasTag("steam_game_festival_broadcast"),
-              b = o.find(function (e) {
-                return e.clan_event_gid == u.GetGID();
+            var m = u.filter(function (e) {
+                return e.BHasTag("steam_game_festival_broadcast");
+              }).length,
+              b = l.c.GetEditModel(),
+              _ = b.BHasTag("steam_game_festival_broadcast"),
+              g = o.find(function (e) {
+                return e.clan_event_gid == b.GetGID();
               }),
-              _ = !b && o.length >= 2 && !m,
-              g = !b && u.GetGID() && u.BPublished() && !m;
-            return g && !p.i.is_support
+              h = !g && o.length + m >= 2 && !_,
+              S = !g && b.GetGID() && b.BPublished() && !_;
+            return S && !p.i.is_support
               ? s.createElement(
                   "div",
                   { className: V.a.EventCategory_SpecialCategory },
@@ -1369,7 +1373,7 @@
                     )
                   )
                 )
-              : _ && !p.i.is_support
+              : h && !p.i.is_support
               ? s.createElement(
                   "div",
                   { className: V.a.EventCategory_SpecialCategory },
@@ -1404,7 +1408,7 @@
                       { className: V.a.Summary },
                       Object(f.f)("#EventCategory_SteamGameFestival_Summary")
                     ),
-                    Boolean(_ && p.i.is_support) &&
+                    Boolean(h && p.i.is_support) &&
                       s.createElement(
                         "div",
                         {
@@ -1422,7 +1426,7 @@
                           )
                         )
                       ),
-                    Boolean(g && p.i.is_support) &&
+                    Boolean(S && p.i.is_support) &&
                       s.createElement(
                         "div",
                         {
@@ -4889,8 +4893,6 @@
               l.c
                 .LoadClanEventsForPartnerDashboard(
                   this.m_clanSteamID,
-                  0,
-                  20,
                   this.m_cancelSignal
                 )
                 .then(function (t) {

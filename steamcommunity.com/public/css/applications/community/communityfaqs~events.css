@@ -1098,6 +1098,7 @@ input.clanimagepicker_SearchInput_lwt4u {
 }
 .clanlocalizedimage_previewimg_45E3Z {
   max-height: 400px;
+  max-width: calc(100% - 400px);
 }
 .clanlocalizedimage_artworkbar_q0Eu4 {
   width: 1050px;

@@ -1453,7 +1453,7 @@
     "Sale_Section_DisableBackground": "Disable Background",
     "Sale_Section_DisableBackground_ttip": "Clears all current background settings and removes any padding around the sale section. This is often used for text or image sections where the padding is not wanted.",
     "Sale_Section_UseDemoLayout": "Show demo information",
-    "Sale_Section_UseDemoLayout_ttip": "Replace normal price info with an artist statement and the option to install a demo.",
+    "Sale_Section_UseDemoLayout_tooltip": "Display the option to install a demo if one is linked to the app(s) listed in this section. The button may not properly show on all display formats.",
     "Sale_Section_EnableSearch": "Enable Search",
     "Sale_Section_EnableSearch_ttip": "When checked, a search control will be added to the tabs allowing users to search for items by name",
     "Sale_Section_HidePrices": "Hide Prices",

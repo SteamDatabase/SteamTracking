@@ -615,7 +615,7 @@
                 n.a.createElement(
                   "div",
                   { className: M.AppSummaryWidgetCtn },
-                  n.a.createElement(G.o, { id: t.app_id, type: "game" })
+                  n.a.createElement(G.n, { id: t.app_id, type: "game" })
                 )
             ),
             n.a.createElement(
@@ -1445,7 +1445,7 @@
                   n.a.createElement(
                     "div",
                     { className: z.GameInfo },
-                    n.a.createElement(G.o, {
+                    n.a.createElement(G.n, {
                       id: Number.parseInt(a.m_strAppId),
                       type: "game",
                     })

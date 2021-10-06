@@ -10915,7 +10915,7 @@
                     l.release
                   ),
                   m &&
-                    u.a.createElement(Br.p, {
+                    u.a.createElement(Br.o, {
                       info: l,
                       bShowDemoButton: !0,
                       bStackedButtons: !0,

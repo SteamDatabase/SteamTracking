@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6804015";
+var CLSTAMP = "6810750";
 !(function (e) {
   function t(t) {
     for (
@@ -120,7 +120,7 @@ var CLSTAMP = "6804015";
               {
                 9: "51d9833326b9684fcced",
                 10: "49d82f5ba0b55ab52221",
-                11: "a32be0dfaff790c5d6a1",
+                11: "eb901c49367632fe888a",
                 12: "c158b58109dba3c2499b",
                 13: "7241b754a4298c6e7fbb",
                 14: "d03dd598d1845b2dab3d",
@@ -128,56 +128,56 @@ var CLSTAMP = "6804015";
                 16: "01837aa6d1ee53ba10c7",
                 17: "9cd9a375317153845c15",
                 18: "c1980c85a29018eacd53",
-                19: "2d1819283a52a330d6ac",
+                19: "68e81046548b51506ae5",
                 20: "bfe385adc63900ce1a1a",
                 21: "75af601b87b9d76519eb",
                 22: "483c0e474412527b3222",
-                23: "e70c9c3d5880ea059b60",
+                23: "146187e16c42172ca1c3",
                 24: "880d70e1eb850cc5deea",
                 25: "ca9811014260395a121c",
                 26: "dc922e8b2effaaa3c6ef",
                 27: "06bcd6c190e12ee13e19",
-                28: "5ace4df9df8f950282e9",
+                28: "e0d7a837f737cade2354",
                 29: "ba105c9bafc23bc9ed6f",
                 30: "6d7365c7989476aed423",
                 31: "09a47f7371cb212bef24",
                 32: "509ef477e56e5b419897",
                 33: "756b139648b2b43edcb2",
-                34: "0b84f5657ebe01a7eacb",
+                34: "21e9c60cc8edc07edd19",
                 35: "39774ad939ec9789c1c9",
                 36: "fd76b3d3686062d06894",
                 37: "b9ec7c20293707d14a45",
                 38: "fa9ced5ffba796a6cae5",
                 39: "01e61b4c2d0faedc8e45",
-                40: "aa987cfb2c76f6793b86",
-                41: "709ebaaf169698f85119",
-                42: "85aafc181f417c2e3bdd",
-                43: "492e38e9b31b968305aa",
-                44: "2e9f91d542f84e20d307",
-                45: "d7da0e8c1d33a95fda5e",
-                46: "f61cdb62a9a517898a1b",
-                47: "69e410eb79ea39b67239",
-                48: "e2572812c0222d18cb13",
-                49: "e8b01f6325d8a7009a1c",
-                50: "7cd60ef59756440da637",
-                51: "cf80d4f115502e2e7e5b",
-                52: "d7b3a792ac85001f71ef",
-                53: "f3a0f1e4d46fd71e433e",
-                54: "886918af391da1fdb5a0",
-                55: "450c90a6c0d98402e2f9",
-                56: "31f64ce1a217fbbd9bb8",
-                57: "8368a6e323bfacf4cab5",
-                58: "49f4e62375da28afdc9a",
-                59: "1b1e1756d486f6619ed8",
+                40: "22cd07b13850454aba19",
+                41: "65ed47b9f60687aa7a22",
+                42: "e8ef01b1a04491ce9d71",
+                43: "4a0fadf7a28b51055ce0",
+                44: "6dc5a720e4b78af5b90d",
+                45: "f08043ff45d22191eae4",
+                46: "4f762e6715d23fc416af",
+                47: "869e62f14ecc6a00dee5",
+                48: "710b52f77555b6168488",
+                49: "280171f7a4cd514e7a36",
+                50: "b105fe7ccc801a295755",
+                51: "be6b674af3c0e007fca2",
+                52: "55232cb6ac559634ec43",
+                53: "fc59e8f95456eb8ca544",
+                54: "7c70a5613ac3289ec8a5",
+                55: "d87f7e50a010c430d21b",
+                56: "d5780f3bd88cd5812c81",
+                57: "d77c8aa9e0343fb9daee",
+                58: "867dbcc249d5a672cebd",
+                59: "f4c68ea8c95c6d2f2465",
                 60: "f3be8b8311485ec7f380",
-                61: "504576893a34b3a57e66",
-                62: "9baf1b167841c31e9cf8",
-                63: "6189dfb09eb69d2beaf6",
-                64: "a9ac30063bf28e9a4e2b",
-                65: "ff0de26a19e1f9ad79b3",
-                66: "34c1633c66692e4671e7",
-                67: "469e07ffd2d3ed6aeb4d",
-                68: "a9315406d6c872777f18",
+                61: "632c9814cafedea604bd",
+                62: "94446d209721c82113b6",
+                63: "7c3bf5fb0d1a8a0aadbe",
+                64: "75295e31086cb57a5aee",
+                65: "a4b057bc3a64f7e545ac",
+                66: "c79e85a77107c1e32b00",
+                67: "46df538af3869ba4103d",
+                68: "0d4cf1613c572c8b6787",
               }[e]
             );
           })(e));
@@ -1473,137 +1473,146 @@ var CLSTAMP = "6804015";
   Kcgk: function (e, t, n) {
     "use strict";
     n.d(t, "j", function () {
-      return c;
+      return s;
     }),
       n.d(t, "e", function () {
-        return s;
-      }),
-      n.d(t, "h", function () {
         return u;
       }),
-      n.d(t, "f", function () {
+      n.d(t, "h", function () {
         return l;
       }),
+      n.d(t, "f", function () {
+        return d;
+      }),
       n.d(t, "g", function () {
-        return f;
+        return h;
       }),
       n.d(t, "i", function () {
-        return p;
-      }),
-      n.d(t, "a", function () {
         return m;
       }),
-      n.d(t, "c", function () {
-        return C;
+      n.d(t, "a", function () {
+        return b;
       }),
-      n.d(t, "b", function () {
+      n.d(t, "c", function () {
         return k;
       }),
+      n.d(t, "b", function () {
+        return S;
+      }),
       n.d(t, "d", function () {
-        return T;
+        return I;
       });
-    var r = n("mrSG"),
-      i = n("oh5H"),
-      o = n("ujHl"),
-      a = n("Gp1o");
-    function c(e, t, n) {
-      var a,
-        c = (a =
-          "boolean" == typeof t
-            ? { bExcludeAgo: t, bForceSingleUnits: n, bHighGranularity: !1 }
-            : Object(r.a)(
-                {
-                  bExcludeAgo: !1,
-                  bForceSingleUnits: !1,
-                  bHighGranularity: !1,
-                },
-                t
-              )).bExcludeAgo
-          ? "#TimeInterval_"
-          : "#TimeSince_";
-      if (e >= 2 * o.e.PerYear)
-        return Object(i.f)(c + "XYears", Math.floor(e / o.e.PerYear));
-      if (e >= o.e.PerYear)
-        return (e -= o.e.PerYear) >= 2 * o.e.PerMonth && !a.bForceSingleUnits
-          ? Object(i.f)(c + "1YearXMonths", Math.floor(e / o.e.PerMonth))
-          : Object(i.f)(c + "1Year");
-      if (e >= 2 * o.e.PerMonth)
-        return Object(i.f)(c + "XMonths", Math.floor(e / o.e.PerMonth));
-      if (e >= 2 * o.e.PerWeek)
-        return Object(i.f)(c + "XWeeks", Math.floor(e / o.e.PerWeek));
-      if (e >= o.e.PerWeek)
-        return Object(i.f)(c + "1Week", Math.floor(e / o.e.PerWeek));
-      if (e >= 2 * o.e.PerDay)
-        return Object(i.f)(c + "XDays", Math.floor(e / o.e.PerDay));
-      if (e >= o.e.PerDay)
-        return (e -= o.e.PerDay) >= 2 * o.e.PerHour && !a.bForceSingleUnits
-          ? Object(i.f)(c + "1DayXHours", Math.floor(e / o.e.PerHour))
-          : Object(i.f)(c + "1Day");
-      if (e >= 2 * o.e.PerHour)
-        return Object(i.f)(c + "XHours", Math.floor(e / o.e.PerHour));
-      if (e >= o.e.PerHour)
-        return (e -= o.e.PerHour) >= 2 * o.e.PerMinute && !a.bForceSingleUnits
-          ? Object(i.f)(c + "1HourXMinutes", Math.floor(e / o.e.PerMinute))
-          : Object(i.f)(c + "1Hour");
-      if (e >= 2 * o.e.PerMinute) {
-        var s = Math.floor(e / o.e.PerMinute),
-          u = e % o.e.PerMinute;
-        return a.bHighGranularity && 0 != u
-          ? 1 == u
-            ? Object(i.f)(c + "XMinutes1Second", s)
-            : Object(i.f)(c + "XMinutesXSeconds", s, u)
-          : Object(i.f)(c + "XMinutes", s);
+    var r,
+      i = n("mrSG"),
+      o = n("oh5H"),
+      a = n("ujHl"),
+      c = n("Gp1o");
+    function s(e, t, n) {
+      var c;
+      "boolean" == typeof t
+        ? (c = {
+            eSuffix: t ? r.None : r.Ago,
+            bForceSingleUnits: n,
+            bHighGranularity: !1,
+          })
+        : (c = Object(i.a)(
+            { eSuffix: r.Ago, bForceSingleUnits: !1, bHighGranularity: !1 },
+            t
+          ));
+      var s = "#TimeInterval_";
+      if (
+        (c.eSuffix == r.Ago
+          ? (s = "#TimeSince_")
+          : c.eSuffix == r.Remaining && (s = "#TimeRemaining_"),
+        e >= 2 * a.e.PerYear)
+      )
+        return Object(o.f)(s + "XYears", Math.floor(e / a.e.PerYear));
+      if (e >= a.e.PerYear)
+        return (e -= a.e.PerYear) >= 2 * a.e.PerMonth && !c.bForceSingleUnits
+          ? Object(o.f)(s + "1YearXMonths", Math.floor(e / a.e.PerMonth))
+          : Object(o.f)(s + "1Year");
+      if (e >= 2 * a.e.PerMonth)
+        return Object(o.f)(s + "XMonths", Math.floor(e / a.e.PerMonth));
+      if (e >= 2 * a.e.PerWeek)
+        return Object(o.f)(s + "XWeeks", Math.floor(e / a.e.PerWeek));
+      if (e >= a.e.PerWeek)
+        return Object(o.f)(s + "1Week", Math.floor(e / a.e.PerWeek));
+      if (e >= 2 * a.e.PerDay)
+        return Object(o.f)(s + "XDays", Math.floor(e / a.e.PerDay));
+      if (e >= a.e.PerDay)
+        return (e -= a.e.PerDay) >= 2 * a.e.PerHour && !c.bForceSingleUnits
+          ? Object(o.f)(s + "1DayXHours", Math.floor(e / a.e.PerHour))
+          : Object(o.f)(s + "1Day");
+      if (e >= 2 * a.e.PerHour)
+        return Object(o.f)(s + "XHours", Math.floor(e / a.e.PerHour));
+      if (e >= a.e.PerHour)
+        return (e -= a.e.PerHour) >= 2 * a.e.PerMinute && !c.bForceSingleUnits
+          ? Object(o.f)(s + "1HourXMinutes", Math.floor(e / a.e.PerMinute))
+          : Object(o.f)(s + "1Hour");
+      if (e >= 2 * a.e.PerMinute) {
+        var u = Math.floor(e / a.e.PerMinute),
+          l = e % a.e.PerMinute;
+        return c.bHighGranularity && 0 != l
+          ? 1 == l
+            ? Object(o.f)(s + "XMinutes1Second", u)
+            : Object(o.f)(s + "XMinutesXSeconds", u, l)
+          : Object(o.f)(s + "XMinutes", u);
       }
-      if (e >= o.e.PerMinute) {
-        u = e % o.e.PerMinute;
-        return a.bHighGranularity && 0 != u
-          ? 1 == u
-            ? Object(i.f)(c + "1Minute1Second")
-            : Object(i.f)(c + "1MinuteXSeconds", u)
-          : Object(i.f)(c + "1Minute");
+      if (e >= a.e.PerMinute) {
+        l = e % a.e.PerMinute;
+        return c.bHighGranularity && 0 != l
+          ? 1 == l
+            ? Object(o.f)(s + "1Minute1Second")
+            : Object(o.f)(s + "1MinuteXSeconds", l)
+          : Object(o.f)(s + "1Minute");
       }
-      return a.bHighGranularity
+      return c.bHighGranularity
         ? 1 == e
-          ? Object(i.f)(c + "1Second")
-          : Object(i.f)(c + "XSeconds", e)
-        : Object(i.f)(c + "LessThanAMinute");
+          ? Object(o.f)(s + "1Second")
+          : Object(o.f)(s + "XSeconds", e)
+        : Object(o.f)(s + "LessThanAMinute");
     }
-    function s(e, t) {
+    function u(e, t) {
       var n = {
         weekday: "short",
         month: "long",
         day: "numeric",
         year: t ? void 0 : "numeric",
       };
-      return new Date(1e3 * e).toLocaleDateString(i.e.GetPreferredLocales(), n);
+      return new Date(1e3 * e).toLocaleDateString(o.e.GetPreferredLocales(), n);
     }
-    function u(e) {
+    function l(e) {
       var t = new Date(1e3 * e),
         n = t.setHours(0, 0, 0, 0),
-        r = h.get(n);
+        r = _.get(n);
       if (r) return r;
       return (
-        (r = t.toLocaleDateString(i.e.GetPreferredLocales(), {
+        (r = t.toLocaleDateString(o.e.GetPreferredLocales(), {
           year: "numeric",
           month: "short",
           day: "numeric",
         })),
-        h.set(n, r),
+        _.set(n, r),
         r
       );
     }
-    function l(e) {
-      return new Date(1e3 * e).toLocaleTimeString(i.e.GetPreferredLocales(), {
+    function d(e) {
+      return new Date(1e3 * e).toLocaleTimeString(o.e.GetPreferredLocales(), {
         hour: "numeric",
         minute: "numeric",
       });
     }
-    var d = new Map();
-    function f(e) {
+    !(function (e) {
+      (e[(e.None = 0)] = "None"),
+        (e[(e.Ago = 1)] = "Ago"),
+        (e[(e.Remaining = 2)] = "Remaining");
+    })(r || (r = {}));
+    var f = new Map();
+    function h(e) {
       var t = new Date(1e3 * e),
-        n = i.e.GetPreferredLocales(),
+        n = o.e.GetPreferredLocales(),
         r = (function (e) {
-          var t = d.get(e);
+          var t = f.get(e);
           if (!0 === t || !1 === t) return t;
           var n = new Date();
           return (
@@ -1611,7 +1620,7 @@ var CLSTAMP = "6804015";
             (t =
               n.toLocaleTimeString(e, { hour: "numeric" }) ==
               n.toLocaleTimeString(e, { hour: "numeric", hour12: !1 })),
-            d.set(e, t),
+            f.set(e, t),
             t
           );
         })(n[0]);
@@ -1622,37 +1631,37 @@ var CLSTAMP = "6804015";
           : { hour: "numeric", hour12: !0 }
       );
     }
-    var h = new Map(),
-      _ = new Map();
-    function p(e, t, n) {
+    var _ = new Map(),
+      p = new Map();
+    function m(e, t, n) {
       void 0 === n && (n = !0);
       var r = new Date(),
-        o = new Date(1e3 * e);
-      if (o.getFullYear() != r.getFullYear()) return u(e);
-      a.b(new Date().setHours(24, 0, 0, 0) - r.getTime());
-      var c = new Date();
-      if ((c.setHours(0, 0, 0, 0), n))
-        if (o >= c) {
-          if ((c.setDate(c.getDate() + 1), o < c))
-            return Object(i.f)("#Time_Today");
-          if ((c.setDate(c.getDate() + 1), o < c))
-            return Object(i.f)("#Time_Tomorrow");
-        } else if ((c.setDate(c.getDate() - 1), o >= c))
-          return Object(i.f)("#Time_Yesterday");
+        i = new Date(1e3 * e);
+      if (i.getFullYear() != r.getFullYear()) return l(e);
+      c.b(new Date().setHours(24, 0, 0, 0) - r.getTime());
+      var a = new Date();
+      if ((a.setHours(0, 0, 0, 0), n))
+        if (i >= a) {
+          if ((a.setDate(a.getDate() + 1), i < a))
+            return Object(o.f)("#Time_Today");
+          if ((a.setDate(a.getDate() + 1), i < a))
+            return Object(o.f)("#Time_Tomorrow");
+        } else if ((a.setDate(a.getDate() - 1), i >= a))
+          return Object(o.f)("#Time_Yesterday");
       var s = { month: t ? "long" : "short", day: "numeric" },
-        l = o.setHours(0, 0, 0, 0) + s.month,
-        d = _.get(l);
+        u = i.setHours(0, 0, 0, 0) + s.month,
+        d = p.get(u);
       return (
         d ||
-        ((d = o.toLocaleDateString(i.e.GetPreferredLocales(), s)),
-        _.set(l, d),
+        ((d = i.toLocaleDateString(o.e.GetPreferredLocales(), s)),
+        p.set(u, d),
         d)
       );
     }
-    function m(e, t) {
+    function b(e, t) {
       var n = new Date(1e3 * e),
-        c = new Date(),
-        u = Object(r.a)(
+        r = new Date(),
+        s = Object(i.a)(
           {
             bGranularFutureTime: !1,
             bGranularToday: !1,
@@ -1661,120 +1670,120 @@ var CLSTAMP = "6804015";
           },
           t
         );
-      if (n > c) {
-        if (!u.bGranularFutureTime)
+      if (n > r) {
+        if (!s.bGranularFutureTime)
           return (
-            a.b(n.getTime() - c.getTime()),
-            n.getFullYear() == c.getFullYear() ? S(n) : I(n)
+            c.b(n.getTime() - r.getTime()),
+            n.getFullYear() == r.getFullYear() ? T(n) : R(n)
           );
-        a.b(new Date().setHours(24, 0, 0, 0) - c.getTime());
-        var d = new Date();
+        c.b(new Date().setHours(24, 0, 0, 0) - r.getTime());
+        var l = new Date();
         return (
-          d.setHours(0, 0, 0, 0),
-          d.setDate(d.getDate() + 1),
-          n < d
-            ? Object(i.f)("#Time_Today")
-            : (d.setDate(d.getDate() + 1),
-              n < d
-                ? Object(i.f)("#Time_Tomorrow")
-                : (d.setDate(d.getDate() + 5), n < d ? k(n) : C(n, !0)))
+          l.setHours(0, 0, 0, 0),
+          l.setDate(l.getDate() + 1),
+          n < l
+            ? Object(o.f)("#Time_Today")
+            : (l.setDate(l.getDate() + 1),
+              n < l
+                ? Object(o.f)("#Time_Tomorrow")
+                : (l.setDate(l.getDate() + 5), n < l ? S(n) : k(n, !0)))
         );
       }
-      a.b(new Date().setHours(24, 0, 0, 0) - c.getTime());
+      c.b(new Date().setHours(24, 0, 0, 0) - r.getTime());
       var f = new Date();
       if ((f.setHours(0, 0, 0, 0), n >= f))
-        return u.bGranularToday
-          ? Object(i.f)("#Time_Today_At", l(e))
-          : Object(i.f)("#Time_Today");
+        return s.bGranularToday
+          ? Object(o.f)("#Time_Today_At", d(e))
+          : Object(o.f)("#Time_Today");
       if ((f.setDate(f.getDate() - 1), n >= f))
-        return u.bGranularYesterday
-          ? Object(i.f)("#Time_Yesterday_At", l(e))
-          : Object(i.f)("#Time_Yesterday");
-      if (u.bGranularPast)
-        return Object(i.f)(
+        return s.bGranularYesterday
+          ? Object(o.f)("#Time_Yesterday_At", d(e))
+          : Object(o.f)("#Time_Yesterday");
+      if (s.bGranularPast)
+        return Object(o.f)(
           "#Time_Past_At",
-          s(e, n.getFullYear() == c.getFullYear()),
-          l(e)
+          u(e, n.getFullYear() == r.getFullYear()),
+          d(e)
         );
       if ((f.setDate(f.getDate() - 5), n >= f))
-        return Object(i.f)("#TimeSince_ThisWeek");
+        return Object(o.f)("#TimeSince_ThisWeek");
       var h = new Date(f);
       if (
         (f.setDate(f.getDate() - 21),
         n >= f ||
-          (n.getMonth() == c.getMonth() && n.getFullYear() == c.getFullYear()))
+          (n.getMonth() == r.getMonth() && n.getFullYear() == r.getFullYear()))
       ) {
         var _ =
-          Math.floor((h.valueOf() - n.valueOf()) / (1e3 * o.e.PerWeek)) + 1;
+          Math.floor((h.valueOf() - n.valueOf()) / (1e3 * a.e.PerWeek)) + 1;
         return 1 == _
-          ? Object(i.f)("#TimeSince_1Week")
-          : Object(i.f)("#TimeSince_XWeeks", _);
+          ? Object(o.f)("#TimeSince_1Week")
+          : Object(o.f)("#TimeSince_XWeeks", _);
       }
-      return n.getFullYear() == c.getFullYear() ? S(n) : I(n);
+      return n.getFullYear() == r.getFullYear() ? T(n) : R(n);
     }
-    var b = new Map(),
-      v = new Map(),
+    var v = new Map(),
       g = new Map(),
       y = new Map(),
-      E = new Map();
-    function C(e, t) {
+      E = new Map(),
+      C = new Map();
+    function k(e, t) {
       void 0 === t && (t = !1);
       var n = e.getDate() + 31 * (e.getMonth() + 12 * e.getFullYear()),
-        r = E.get(n);
+        r = C.get(n);
       return (
         r ||
-        ((r = e.toLocaleDateString(i.e.GetPreferredLocales(), {
+        ((r = e.toLocaleDateString(o.e.GetPreferredLocales(), {
           weekday: "long",
           day: "numeric",
           month: t ? "long" : "short",
         })),
-        E.set(n, r),
+        C.set(n, r),
         r)
       );
     }
-    function k(e) {
-      var t = b.get(e.getDay());
+    function S(e) {
+      var t = v.get(e.getDay());
       return (
         t ||
-        ((t = e.toLocaleDateString(i.e.GetPreferredLocales(), {
+        ((t = e.toLocaleDateString(o.e.GetPreferredLocales(), {
           weekday: "long",
         })),
-        b.set(e.getDay(), t),
-        t)
-      );
-    }
-    function S(e) {
-      var t = v.get(e.getMonth());
-      return (
-        t ||
-        ((t = e.toLocaleDateString(i.e.GetPreferredLocales(), {
-          month: "long",
-        })),
-        v.set(e.getMonth(), t),
+        v.set(e.getDay(), t),
         t)
       );
     }
     function T(e) {
-      var t = g.get(e.getFullYear());
+      var t = g.get(e.getMonth());
       return (
         t ||
-        ((t = e.toLocaleDateString(i.e.GetPreferredLocales(), {
-          year: "numeric",
+        ((t = e.toLocaleDateString(o.e.GetPreferredLocales(), {
+          month: "long",
         })),
-        g.set(e.getFullYear(), t),
+        g.set(e.getMonth(), t),
         t)
       );
     }
     function I(e) {
+      var t = y.get(e.getFullYear());
+      return (
+        t ||
+        ((t = e.toLocaleDateString(o.e.GetPreferredLocales(), {
+          year: "numeric",
+        })),
+        y.set(e.getFullYear(), t),
+        t)
+      );
+    }
+    function R(e) {
       var t = e.getMonth() + 12 * e.getFullYear(),
-        n = y.get(t);
+        n = E.get(t);
       return (
         n ||
-        ((n = e.toLocaleDateString(i.e.GetPreferredLocales(), {
+        ((n = e.toLocaleDateString(o.e.GetPreferredLocales(), {
           month: "long",
           year: "numeric",
         })),
-        y.set(t, n),
+        E.set(t, n),
         n)
       );
     }

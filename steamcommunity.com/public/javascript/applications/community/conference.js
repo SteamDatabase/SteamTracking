@@ -3528,7 +3528,7 @@
                     "#Conference_StartInMin",
                     Math.max(1, Math.floor((c - s) / 60))
                   )
-                : Object(v.f)("#Conference_StartsAt", Object(U.g)(c))
+                : Object(v.f)("#Conference_StartsAt", Object(U.h)(c))
             )
           ),
           r.createElement(

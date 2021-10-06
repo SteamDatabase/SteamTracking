@@ -116,7 +116,7 @@
                     E.release
                   ),
                   y &&
-                    c.a.createElement(b.p, {
+                    c.a.createElement(b.o, {
                       info: E,
                       bShowDemoButton: !0,
                       bStackedButtons: !0,
@@ -412,15 +412,16 @@
                 return Object(r.e)(this, function (r) {
                   switch (r.label) {
                     case 0:
-                      (e = P.a
-                        .Get()
-                        .GetStreams(this.props)
-                        .filter(function (e) {
-                          return (
-                            !o.props.fnFilterStreams ||
-                            o.props.fnFilterStreams(e)
-                          );
-                        })),
+                      this.setState({ bStartMuted: !1 }),
+                        (e = P.a
+                          .Get()
+                          .GetStreams(this.props)
+                          .filter(function (e) {
+                            return (
+                              !o.props.fnFilterStreams ||
+                              o.props.fnFilterStreams(e)
+                            );
+                          })),
                         Object(P.f)(e),
                         (t = 0),
                         (a = e),

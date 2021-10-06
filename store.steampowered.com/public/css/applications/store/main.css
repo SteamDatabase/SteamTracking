@@ -5936,7 +5936,11 @@ img {
   position: absolute;
   width: 100%;
   height: 100%;
+  background-image: url(data:image/gif;base64,R0lGODlhBAAEAIAAAAAAAP///yH/C05FVFNDQVBFMi4wAwEAAAAh+QQFAAABACwAAAAABAAEAAACBgQShqgJBQA7);
   z-index: 3;
+}
+.SaleSectionCarousel .animated_featured_capsule_BGGradientTwo_21GjW {
+  background-image: none;
 }
 .animated_featured_capsule_CapsuleDecorators_jaTSi {
   position: absolute;
@@ -12745,14 +12749,6 @@ Body.v6.tag_page.contenthub_page {
 .contenthubshared_MainCarousel_3SWsM .carousel .SliderBody button:hover {
   background: #fff;
 }
-.contenthubshared_MainCarousel_3SWsM .carousel .SliderBody button:hover svg {
-  animation-name: contenthubshared_arrowSlide_2Zwd-;
-  animation-duration: 0.2s;
-  animation-timing-function: ease-out;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-fill-mode: none;
-}
 .contenthubshared_MainCarousel_3SWsM
   .carousel
   .SliderBody
@@ -12760,24 +12756,6 @@ Body.v6.tag_page.contenthub_page {
   svg
   polygon {
   fill: #000;
-}
-@keyframes contenthubshared_arrowSlide_2Zwd- {
-  0% {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-  40% {
-    transform: translateX(20px);
-    opacity: 0;
-  }
-  41% {
-    transform: translateX(-50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0px);
-    opacity: 1;
-  }
 }
 .contenthubshared_MainCarousel_3SWsM .contenthubshared_FeatureCtn_10K5p {
   width: 940px;
@@ -12805,25 +12783,6 @@ Body.v6.tag_page.contenthub_page {
   margin-top: 30px;
   font-weight: 300;
   margin-bottom: 8px;
-}
-.contenthubmaincarousel_ContentHubTitleCtn_2cFtC {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 36px;
-}
-.contenthubmaincarousel_ContentHubTitle_saHqN {
-  font-size: 36px;
-  font-weight: 300;
-}
-.contenthubmaincarousel_ContentHubSubtitle_11kuP {
-  font-size: 18px;
-  font-weight: 300;
-  opacity: 50%;
-}
-.contenthubmaincarousel_ContentHubPlaceholder_ZZAuj {
-  font-size: 24px;
-  font-weight: bold;
 }
 .debugmatchesdialog_DiscrepancyDialogRow_202Wr {
   width: 100%;
@@ -17994,6 +17953,25 @@ a.storywidget_BadgeFooter_3Yte6:hover {
     transform: rotateY(0);
     opacity: 1;
   }
+}
+.contenthubmaincarousel_ContentHubTitleCtn_2cFtC {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 36px;
+}
+.contenthubmaincarousel_ContentHubTitle_saHqN {
+  font-size: 48px;
+  font-weight: 300;
+}
+.contenthubmaincarousel_ContentHubSubtitle_11kuP {
+  font-size: 18px;
+  font-weight: 300;
+  opacity: 50%;
+}
+.contenthubmaincarousel_ContentHubPlaceholder_ZZAuj {
+  font-size: 24px;
+  font-weight: bold;
 }
 .curatorlist_CuratorListCtn_2gWFd {
   display: flex;
