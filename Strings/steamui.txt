@@ -11,6 +11,7 @@ __const
 __TEXT
 __cstring
 __TEXT
+V
 __gcc_except_tab__TEXT
 __objc_methname
 __TEXT
@@ -21122,9 +21123,9 @@ ShowLegalInformation
 SettingsPanel_About
 file://{resources}/layout/settings/settings_about.xml
 build_date
-Oct  5 2021
+Oct  6 2021
 build_time
-15:55:32
+08:38:04
 package_version
 local
 SteamClient020
@@ -28582,7 +28583,7 @@ https://steamchina.com
 https://www.steampowered.com
 WebsiteURL
 steam/cached/aboutdialog.res
-15:56:10
+08:38:42
 CAboutDialog
 ValveSurveySummarizeData
 #steam_systeminfo_title
@@ -30267,7 +30268,7 @@ sOSVersionId
 sOSBuildId
 nSteamVersion
 sSteamBuildDate
-Oct  5 2021 : 15:56:15
+Oct  6 2021 : 08:38:48
 sSteamAPI
 sCPUVendor
 sCPUName
@@ -34894,6 +34895,7 @@ linux419
 linux54
 linux6x
 linux7x
+linux510
 win311
 win95
 win98
@@ -34912,6 +34914,8 @@ win2012R2
 win10
 win2016
 win2019
+win2022
+win11
 pw_dota2
 nexon_dota2
 steamcmd
@@ -40819,7 +40823,6 @@ d
 >
 c
 ^W
-fi
 KW
 j
 j
@@ -40827,7 +40830,6 @@ j
 j
 j
 j
-Ui
 j
 j
 j
@@ -41433,7 +41435,6 @@ Hi
 Hi
 H=
 '-
-SX
 ,
 @
 @
@@ -41458,7 +41459,6 @@ E
 -R
 @
 @
-[V
 E8u
 :w
 :w
@@ -41515,7 +41515,6 @@ R
 R
 R
 R
->U
 0
 @
 @
@@ -42047,7 +42046,6 @@ G
 @
 >
 0
-z
 p
 =
 0
@@ -42160,6 +42158,7 @@ P
 @
 @
 &
+0t
 @
 @
 {=
@@ -42182,7 +42181,7 @@ b
 &b
 ,b
 d
-7
+fD9%9%q
 
 
 
@@ -42240,10 +42239,8 @@ h2
 &
 d
 0
-04
 A+4$A+u
 2
-4
 {!
 ~m=
 =
@@ -42322,7 +42319,6 @@ j
 j
 j
 E
-3j
 j
 j
 j
@@ -42402,7 +42398,6 @@ j
 j
 b
 b
-:h
 --
 @
 @
@@ -42426,8 +42421,6 @@ j
 j
 j
 j
-#g
-g
 H,
 
 
@@ -42475,7 +42468,6 @@ j
 j
 .
 d
-6f
 +
 +
 j
@@ -42484,6 +42476,7 @@ j
 j
 j
 j
+ke
 =
 e*
 
@@ -42524,7 +42517,7 @@ m
 Hc
 Hc
 Hc
-8e
+4e
 0
 )
 )
@@ -42535,11 +42528,11 @@ Hc
 )
 0
 (
-~(
+S_
 E
-'(
 0
-'f
+%f
+f
 f
 f
 f
@@ -42567,22 +42560,20 @@ p
 $
 %
 %
-Lc53x`
+Lc5sx`
 @
 @
 j
 @
 @
-eb
 j
++`
 #
 `
 `
 `
 `
-`
-`
-`
+b
 b
 @
 @
@@ -42592,6 +42583,7 @@ b
 @
 @
 @
+*^
 @
 @
 @
@@ -42602,7 +42594,6 @@ b
 @
 @
 @
-[_
 @
 @
 @
@@ -42616,12 +42607,14 @@ b
 @
 @
 =
-##
+[]
+a
 a
 @
 @
 @
 @
+&]
 Z
 0
 @
@@ -42630,16 +42623,12 @@ Z
 @
 @
 @
-i`
 0
-q"
-i"
+<`
 @
 @
 @
 @
-`\
-/"
 @
 @
 @
@@ -42653,7 +42642,6 @@ j
 @
 @
 @
-O]
 @
 @
 @
@@ -42662,7 +42650,7 @@ O]
 @
 @
 @
-Z
+d_
 @
 @
 @
@@ -42684,8 +42672,8 @@ _
 @
 @
 @
-#[
 "
+l\
 !
 !
 @
@@ -42737,7 +42725,8 @@ _
 @
 0
 0/
-T]
+S]
+O]
 @
 @
 @
@@ -42751,13 +42740,11 @@ T]
 @
 @
 @
-Y
 @
 @
 @
 @
-8Z
-8Z
+b\
 
 @
 @
@@ -42800,27 +42787,19 @@ X
 X
 X
 X
-X
-X
-X
-X
-X
-X
-X
 @
 @
 @
 @
 @
 @
-m[
+x[
 
 j
 +
+/[
 C(
-oV
 \V
-Z
 @
 @
 Z
@@ -42834,6 +42813,9 @@ Z
 Z
 Z
 Z
+Z
+Z
+FV
 j
 Z
 Z
@@ -42890,6 +42872,7 @@ V
 @
 @
 @
+?Y
 T
 @
 @
@@ -42913,7 +42896,6 @@ T
 @
 Y
 
-/U
 @
 @
 @
@@ -42921,6 +42903,7 @@ Y
 @
 @
 j
+)V
 @
 @
 @
@@ -43005,7 +42988,8 @@ K
 @
 @
 H=
-xW
+mU
+zW
 @
 =
 @
@@ -43015,14 +42999,10 @@ P
 @
 ?
 B
-&N
-OR
-S
-fR
+_R
 @
 @
 >
-9R
 
 
 
@@ -43034,6 +43014,7 @@ R
 @
 @
 @
+eP
 @
 @
 @
@@ -43050,12 +43031,16 @@ R
 @
 @
 @
+P
 RM
 Q
 @
 @
 @
 @
+Q
+Q
+Q
 4M
 @
 @
@@ -43111,11 +43096,11 @@ Q
 @
 @
 @
+~P
 @
 @
 @
 @
-{P
 @
 @
 @
@@ -43352,7 +43337,7 @@ L
 L
 L
 L
-L
+[O
 @
 @
 p
@@ -43376,6 +43361,7 @@ p
 @
 @
 @
+J
 @
 @
 @
@@ -43394,5 +43380,5 @@ p
 @
 @
 @
-=O
+rK
 4

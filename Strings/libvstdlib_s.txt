@@ -689,6 +689,9 @@ Windows 8
 Windows 8.1
 Windows 10
 Windows 2016
+Windows 2019
+Windows 2022
+Windows 11
 Mac OS
 MacOS 10.4
 MacOS 10.5
@@ -727,6 +730,7 @@ Linux 5.x
 Linux 5.4
 Linux 6.x
 Linux 7.x
+Linux 5.10
 Web Client
 Android
 Android 6.x
@@ -2188,38 +2192,47 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-]^Zj1
-{:="
-Z%H9_
-r9g#
-)tM4
-sthU
-z)0^
-:V<g
-*Umb
-r:wW;
+4%p8{
+<Jn<l
+3 GG
+4Pf.
+-n}0
+>PpKmW
+XK7*
+rT:YAv
 5PyK
 G}5uu
+ Hr^
+N0t\
 9Y|[_yB
 :YI<T
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-Q= gP
-bL=?=
-hWy%
-R0ld
-)e-6
-dhmS
-VLg>ru
-80H>
-4`Zg
-BHI6
-RF\N
+N2h6
+C'Xj
+bIzLVG1
+uOzv
+CvUi
+$D)u
+u@{d	
+m:lM
+~s:+#
+j`UU
+SXsI
+-:<Z2
+{*^i
+`3&T
+<|;O3A
+Z.Mc
+PRRP
+NDw~j\
 / aR
 hj>n
 =`-Z
+]Js8
+mOk)zum
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -2275,8 +2288,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211005225222Z0/
-{pJ]
+211006153459Z0/
+*Zi$)eu
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -2284,19 +2297,17 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		Wh/KOs2js0usSHiGM6+Ny/drhF8=
+		8B+ZP6Zkg94rxECHYBJ/UJbW7w4=
 		</data>
 		<data>
-		EIQ8K8QQGegRzb+Cir3iZHn4Iis=
+		wLl8JHG9oZUorhWmPZ8OsA0X4G8=
 		</data>
 	</array>
 </dict>
 </plist>
-N/R.
-R5{I
-WL;0
-LA5!+
-20211005225258Z0
+0S<?
+k*Y,
+20211006153502Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -2356,12 +2367,11 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211005225258Z0#
+211006153502Z0#
+%b%0+
 d3ZM`
-?M{*
-.0#b
-ze( 
-,&&D<=F
+f$|]
+_J{$P
 __TEXT
 __text
 __TEXT
@@ -2667,6 +2677,7 @@ AVSH
 [A^]
 AVSH
 w-Hc
+Lc5&j
 [A^]
 AWAVAUATSH
 ~vLi
@@ -2855,6 +2866,7 @@ AWAVATSH
 AVSH
 [A^]
 AWAVAUATSH
+Lc5&
 [A\A]A^A_]
 AWAVAUATSH
 [A\A]A^A_]
@@ -2921,7 +2933,7 @@ AWAVAUATSPI
 AVSI
 [A^]
 AWAVSH
-Lc52
+Lc5b
 x(Hc
 VUUUH
 X[A^A_]
@@ -3501,6 +3513,9 @@ Windows 8
 Windows 8.1
 Windows 10
 Windows 2016
+Windows 2019
+Windows 2022
+Windows 11
 Mac OS
 MacOS 10.4
 MacOS 10.5
@@ -3539,6 +3554,7 @@ Linux 5.x
 Linux 5.4
 Linux 6.x
 Linux 7.x
+Linux 5.10
 Web Client
 Android
 Android 6.x
@@ -5022,38 +5038,43 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-OT{`
-r):9
-|)&)
-@`	e!
-Q?:?
-z9Af(
-\7f4f
-^1?t
+Ng}f"
+("}L
+Fu31
+qdZW
+.Hb/
+t+sVA
+Nqfi
 52B)3
 oDg(
 c$$6
-6sOz"
+]++7E
+MkEb
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-fISq
-u[1=Ck6
-a)s:
- }by
-	bFk
-Da|c
-1%?(
-wl.E
-cS^2
-cei,[/_;y j
-0X*R
+!hd}
+e\=U
+hv{U#vH)B,
+Ta|\
+E7*$?
+\4Os	
+B[!=
+QrI=
+o#!U
+P\4Kq
+*}XU
+'5+)i
+KMa>
+4$3B
+X"b/
+j]dh	
+{?.  Z
 C24zZ
 3:gz,	
 mH3Y
-T,>g
-'dq;K
+}fMVG
 wP,)
 HGFv{J
 Apple Inc.1&0$
@@ -5111,10 +5132,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211005225222Z0/
- &|?@lc
- e6 F
-WBYySC
+211006153459Z0/
+~pUN
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -5122,39 +5141,32 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		pFjSd03a1aLwBsTmbxZncLaQ+eA=
+		XLcy2UzofnBVTsRtV8qqOY41GDo=
 		</data>
 		<data>
-		ZTYgRuONU2vY6MpuvhM1vBaKBFc=
+		nF4dQbFsIJIui6yS9nOBqz7t3Ks=
 		</data>
 	</array>
 </dict>
 </plist>
-:&k=}
-sxzv`
-L"9&
-20211005225258Z0
+tkd@
+h@}=f
+K]^A
+20211006153502Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-210928174502Z
-211109174501Z0B1
-Timestamp Signer NWK11
+210928173501Z
+211109173500Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-H^ ;
-4b6;
-Q}0,
--3/Uh
-d`zE
-mOY`
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-q3wp
-mhbr
-F;3N^
+U>cG
+PTQPF"
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -5193,12 +5205,12 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211005225258Z0#
-d3ZM`
-[ n<]
-@5N&
-,H$>G
-O:l@
+211006153502Z0#
+jy/0+
+tA8K
++#VeW
+O5*;
+w/yJ
 __TEXT
 __text
 __TEXT
@@ -5331,26 +5343,21 @@ T9|@
 R(#	
 Rh!	
 Rl}@
-#U	P
-cO	P
+"V	0
+bP	0
 +ih8J	
 Lii8k	
-+yhxJ	
 T	]	
 ii8J	
++ih8J	
 ii8J	
 +yhxJ	
-yixJ	
-T D	0
-`]	p
+ii8J	
+`r	p
 M!	0
-4B~	0
-4bz	0
-4bu	0
-Aq	0
+"~	p
 @9,!
 @9,!
- [	p
 Th! 
 T6|@
 K"}@
@@ -5413,11 +5420,12 @@ jzx_
 R	kzx*
 ji8?
 7HK6
-H_	X
-i;	X)
+h=	X
+;	X)
+H9	X
 hj8*i(8
 ?i(8
-,	X)
+I-	X)
 .@8h
 @9 z
 4kj 8
@@ -5442,6 +5450,7 @@ RD!Kz
 )Zz@)Gzh
 (ihx
 +ih8J	
+ 6`	
 +ih8J	
 +ih8J	
 ?A@q
@@ -5688,6 +5697,9 @@ Windows 8
 Windows 8.1
 Windows 10
 Windows 2016
+Windows 2019
+Windows 2022
+Windows 11
 Mac OS
 MacOS 10.4
 MacOS 10.5
@@ -5726,6 +5738,7 @@ Linux 5.x
 Linux 5.4
 Linux 6.x
 Linux 7.x
+Linux 5.10
 Web Client
 Android
 Android 6.x
@@ -6381,7 +6394,8 @@ N11SteamStdLib12ICommandLineE
 10CUtlRBTreeIN7CUtlMapIPvii8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
 7CUtlMapIjbi8CDefLessE
 10CUtlRBTreeIN7CUtlMapIjbi8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
-^adgjmpsvy|
+?BEHKNQTWZ]`cfilorux{~
+adgj
 ?20CUniformRandomStream
 20IUniformRandomStream
 7CUtlMapIwPKwi8CDefLessE
@@ -7199,47 +7213,34 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-g~&\
-&>vAF:
-@Y*+
-Ax34
-&|68A
-+O,#?p
-hR' rA
-J//Q
-!KW	N
-&>@r
-vb<]ug7X
-s_nn
-}o](
-O|+ 
-wQ:q
-CyeG
-n'S=
-SI3(
-V\f>
-,wxD
+O)|;
+dF4z
+Z0pD
+T7FR
+<M=,
+-T;O
+kM*0
+c$R>
+Znjn
+a?:$
+5i}P
+q"0t
+k]Ya 
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-6+zZ8
-"'9/
-G-AuG
-jaqp
-z?~$$
-cnMr
-?cG{
-pLj@k
-aO\u
-GLoS
-O520
-Km6fV
-WptB
-~z\N
+lsoaV%)
+]s]Q
+&teT
+`iPo
+:g7WK
+z:Qm
+^r7]
 1Q4(f
-kFeX
-nXx:&c
+1f;c
+`wAe:
+sy^)
 g(_u
 _"R0
 Apple Inc.1&0$
@@ -7297,7 +7298,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211005225222Z0/
+211006153459Z0/
+Al[|
+3 )P
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -7305,35 +7308,42 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		WJh8HSvXm7CQRwUXDuDDIJMYipQ=
+		k6s9EQy18msu79qBlN6tPMEc1hg=
 		</data>
 		<data>
-		EYnfvmVdF86K+RwEluvWqhohJt8=
+		jDFA+DmH5rl97sIHJhLzSyrbEq4=
 		</data>
 	</array>
 </dict>
 </plist>
-\-U$fV
-Q[f{+
-^mlP|
- )S]
-4ZqC
-20211005225258Z0
-b0Y`}
+q/4_@
+aDw+
+u!RAZ
+L-Rs
+'4A.
+x@a5
+20211006153502Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-210928173501Z
-211109173500Z0B1
-Timestamp Signer NWK21
+210928174502Z
+211109174501Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
+H^ ;
+4b6;
+Q}0,
+-3/Uh
+d`zE
+mOY`
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-U>cG
-PTQPF"
+q3wp
+mhbr
+F;3N^
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -7372,9 +7382,10 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211005225258Z0#
-:`0+
-8:#9
-"	v+H~d
-G<fyjc
-e%9N9
+211006153502Z0#
+YrTJ(<=
+F<O0+
+d3ZM`
+#IcO_
+gaCL
+nAJjE_
