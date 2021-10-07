@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6813949";
+var CLSTAMP = "6814660";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [1],
   {
@@ -10693,7 +10693,6 @@ var CLSTAMP = "6813949";
               }),
                 Array.from(n.values()).forEach(function (n) {
                   if (t.IsStreamLive(e, n)) {
-                    console.log("Scanning for best node for live stream", n);
                     var o = void 0;
                     r.forEach(function (e) {
                       var r = t.GetLeagueNode(e.nLeagueID, e.nNodeID);
@@ -10701,54 +10700,24 @@ var CLSTAMP = "6813949";
                         var i = r.actual_time
                           ? r.actual_time
                           : r.scheduled_time;
-                        if (!(i < a - 32400 || i > a + 7200)) {
-                          if (
-                            (console.log(
-                              " node",
-                              r.node_id,
-                              "has this stream and is in time range"
-                            ),
-                            null == o)
-                          )
-                            return (
-                              console.log("  is first and currently best"),
-                              void (o = e)
-                            );
-                          var s = t.GetLeagueNode(o.nLeagueID, o.nNodeID),
-                            l = s.has_started && !s.is_completed,
-                            c = r.has_started && !r.is_completed;
-                          if (!l || c) {
-                            if (c && !l)
-                              return (
-                                console.log(
-                                  "  best isn't in progress and we are, we're new best"
-                                ),
-                                void (o = e)
-                              );
-                            var d = s.actual_time
-                                ? s.actual_time
-                                : s.scheduled_time,
-                              m = Math.abs(a - d),
-                              u = Math.abs(a - i);
-                            return u < m
-                              ? (console.log(
-                                  "  our timestamp is better, we're new best: ",
-                                  u,
-                                  "<",
-                                  m
-                                ),
-                                void (o = e))
-                              : void 0;
-                          }
-                          console.log(
-                            "  best is in progress and we aren't, bailing"
-                          );
-                        }
+                        if (!(i < a - 32400 || i > a + 7200))
+                          if (null != o) {
+                            var s = t.GetLeagueNode(o.nLeagueID, o.nNodeID),
+                              l = s.has_started && !s.is_completed,
+                              c = r.has_started && !r.is_completed;
+                            if (!l || c)
+                              if (!c || l) {
+                                var d = s.actual_time
+                                    ? s.actual_time
+                                    : s.scheduled_time,
+                                  m = Math.abs(a - d);
+                                Math.abs(a - i) < m && (o = e);
+                              } else o = e;
+                          } else o = e;
                       }
                     }),
                       o
-                        ? (console.log("Stream", n, "has best node", o.nNodeID),
-                          t.m_mapStreamBestNodes.set(n, o))
+                        ? t.m_mapStreamBestNodes.set(n, o)
                         : t.m_mapStreamBestNodes.delete(n);
                   }
                 });
@@ -10846,10 +10815,10 @@ var CLSTAMP = "6813949";
                     ? a
                     : e.broadcast_provider == c.c.LEAGUE_BROADCAST_STEAM &&
                       t.broadcast_provider != c.c.LEAGUE_BROADCAST_STEAM
-                    ? -1
+                    ? 1
                     : t.broadcast_provider == c.c.LEAGUE_BROADCAST_STEAM &&
                       e.broadcast_provider != c.c.LEAGUE_BROADCAST_STEAM
-                    ? 1
+                    ? -1
                     : 0;
                 });
           }),
@@ -30572,7 +30541,7 @@ var CLSTAMP = "6813949";
               (null == s ? void 0 : s.length) > n.nSelectedVideo
                 ? s[n.nSelectedVideo]
                 : void 0,
-            c = "ccarollo2.valve.org";
+            c = "www.dota2.com";
           if (l)
             switch (null == l ? void 0 : l.broadcast_provider) {
               case va.c.LEAGUE_BROADCAST_TWITCH:
@@ -30606,8 +30575,7 @@ var CLSTAMP = "6813949";
                         ""
                       )) +
                   "?origin=https://" +
-                  c +
-                  "&enablechat=0&enablevideo=1&showasiframe=1";
+                  "www.dota2.com&enablechat=0&enablevideo=1&showasiframe=1";
             }
           return (
             e &&
@@ -34569,7 +34537,7 @@ var CLSTAMP = "6813949";
                 e.strSeriesDisplay || Object(ba.e)()
               ),
             });
-          if ("0" == e.strLeagueID || "0" == e.strNodeID) {
+          if ("0" == e.strLeagueID) {
             var a = Ra.a.Get().GetBestCurrentLeagueNode(t),
               n = a.nLeagueID,
               r = a.nNodeID;
