@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6814711";
+var CLSTAMP = "6814883";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [1],
   {
@@ -11118,7 +11118,7 @@ var CLSTAMP = "6814711";
         Right: "dpcschedulepage_Right_2FiuT",
         Record: "dpcschedulepage_Record_3w6xs",
         TeamLogo: "dpcschedulepage_TeamLogo_2Thg1",
-        LiveBannerContainer: "dpcschedulepage_LiveBannerContainer_fxbyy",
+        CenterContainer: "dpcschedulepage_CenterContainer_3LS3W",
         LiveBanner: "dpcschedulepage_LiveBanner_3gH8Q",
         Dot: "dpcschedulepage_Dot_39ck7",
         Versus: "dpcschedulepage_Versus_39sGW",
@@ -35342,9 +35342,9 @@ var CLSTAMP = "6814711";
             s = Ra.a
               .Get()
               .GetNodeLabelStrings(t, e.nLeagueID, e.nNodeID, va.n.VERYLONG),
-            l = Ra.a.Get().GetTeamNames(null == a ? void 0 : a.team_id_1),
-            c = Ra.a.Get().GetTeamNames(null == a ? void 0 : a.team_id_2),
-            d = Ra.a
+            c = Ra.a.Get().GetTeamNames(null == a ? void 0 : a.team_id_1),
+            m = Ra.a.Get().GetTeamNames(null == a ? void 0 : a.team_id_2),
+            u = Ra.a
               .Get()
               .GetTeamStanding(
                 t,
@@ -35353,8 +35353,8 @@ var CLSTAMP = "6814711";
                 n.eDivision,
                 null == a ? void 0 : a.team_id_1
               ),
-            m = d ? d.wins + " - " + d.losses : "",
-            u = Ra.a
+            p = u ? u.wins + " - " + u.losses : "",
+            g = Ra.a
               .Get()
               .GetTeamStanding(
                 t,
@@ -35363,44 +35363,44 @@ var CLSTAMP = "6814711";
                 n.eDivision,
                 null == a ? void 0 : a.team_id_2
               ),
-            p = u ? u.wins + " - " + u.losses : "",
-            g = Ra.a.Get().IsLeagueNodeLive(t, e.nLeagueID, e.nNodeID),
-            h =
-              (!g && (null == a || a.has_started),
-              !g && (null == a ? void 0 : a.is_completed)),
-            b =
-              h &&
+            h = g ? g.wins + " - " + g.losses : "",
+            b = Ra.a.Get().IsLeagueNodeLive(t, e.nLeagueID, e.nNodeID),
+            v =
+              (!b && (null == a || a.has_started),
+              !b && (null == a ? void 0 : a.is_completed)),
+            f =
+              v &&
               (null == a ? void 0 : a.team_1_wins) >
                 (null == a ? void 0 : a.team_2_wins),
-            v =
-              h &&
+            E =
+              v &&
               (null == a ? void 0 : a.team_2_wins) >
                 (null == a ? void 0 : a.team_1_wins),
-            f = Ra.a.Get().GetSpoilerBlockState(t) == va.l.BLOCKED,
-            E =
-              !f ||
+            y = Ra.a.Get().GetSpoilerBlockState(t) == va.l.BLOCKED,
+            I =
+              !y ||
               !Ra.a.Get().IsLeagueNodeBracket(e.nLeagueID, e.nNodeID) ||
               Ra.a.Get().IsAnyGameWatched(e.nLeagueID, e.nNodeID),
-            y = !f || Ra.a.Get().AreAllGamesWatched(e.nLeagueID, e.nNodeID),
-            I = a ? a.team_1_wins + " - " + a.team_2_wins : "",
-            N =
+            N = !y || Ra.a.Get().AreAllGamesWatched(e.nLeagueID, e.nNodeID),
+            O = a ? a.team_1_wins + " - " + a.team_2_wins : "",
+            D =
               0 == (null == a ? void 0 : a.team_id_1)
                 ? "#dpc_tbd"
-                : E
-                ? null == l
-                  ? void 0
-                  : l.name
-                : "#dpc_hidden",
-            O =
-              0 == (null == a ? void 0 : a.team_id_2)
-                ? "#dpc_tbd"
-                : E
+                : I
                 ? null == c
                   ? void 0
                   : c.name
+                : "#dpc_hidden",
+            S =
+              0 == (null == a ? void 0 : a.team_id_2)
+                ? "#dpc_tbd"
+                : I
+                ? null == m
+                  ? void 0
+                  : m.name
                 : "#dpc_hidden";
-          (y && h) || (I = "#dpc_vs");
-          var D = y
+          (N && v) || (O = "#dpc_vs");
+          var T = N
             ? null == a
               ? void 0
               : a.matches.length
@@ -35410,7 +35410,7 @@ var CLSTAMP = "6814711";
             {
               className: Object(le.a)(
                 Ir.a.DPCScheduleEntry,
-                g && Ir.a.Live,
+                b && Ir.a.Live,
                 e.bExpanded && Ir.a.Expanded
               ),
             },
@@ -35457,43 +35457,51 @@ var CLSTAMP = "6814711";
                     className: Object(le.a)(
                       Ir.a.TeamSection,
                       Ir.a.Left,
-                      b && !f && Ir.a.Winner
+                      f && !y && Ir.a.Winner
                     ),
                   },
                   i.a.createElement(
                     "div",
                     { className: Ir.a.TeamName },
-                    Object(_.a)(N)
+                    Object(_.a)(D)
                   ),
                   o &&
-                    !f &&
-                    i.a.createElement("div", { className: Ir.a.Record }, m)
+                    !y &&
+                    i.a.createElement("div", { className: Ir.a.Record }, p)
                 ),
                 i.a.createElement($a, {
                   className: Ir.a.TeamLogo,
-                  nTeamID: E ? (null == a ? void 0 : a.team_id_1) : 0,
+                  nTeamID: I ? (null == a ? void 0 : a.team_id_1) : 0,
                   nSize: 52,
                   bTooltip: !0,
                 }),
-                g &&
-                  i.a.createElement(
-                    "div",
-                    { className: Ir.a.LiveBannerContainer },
-                    i.a.createElement(
-                      "div",
-                      { className: Ir.a.LiveBanner },
-                      Object(_.a)("#dpc_live"),
-                      i.a.createElement("div", { className: Ir.a.Dot })
-                    )
-                  ),
                 i.a.createElement(
                   "div",
-                  { className: Ir.a.Score },
-                  Object(_.a)(I)
+                  { className: Ir.a.CenterContainer },
+                  b &&
+                    i.a.createElement(
+                      l.b,
+                      {
+                        to: d.b.dpc_watch(
+                          Object(ba.j)(t),
+                          "" + e.nLeagueID,
+                          "" + e.nNodeID,
+                          Object(ba.l)(0, ba.f.SERIES)
+                        ),
+                        className: Ir.a.LiveBanner,
+                      },
+                      Object(_.a)("#dpc_live"),
+                      i.a.createElement("div", { className: Ir.a.Dot })
+                    ),
+                  i.a.createElement(
+                    "div",
+                    { className: Ir.a.Score },
+                    Object(_.a)(O)
+                  )
                 ),
                 i.a.createElement($a, {
                   className: Ir.a.TeamLogo,
-                  nTeamID: E ? (null == a ? void 0 : a.team_id_2) : 0,
+                  nTeamID: I ? (null == a ? void 0 : a.team_id_2) : 0,
                   nSize: 52,
                   bTooltip: !0,
                 }),
@@ -35503,23 +35511,23 @@ var CLSTAMP = "6814711";
                     className: Object(le.a)(
                       Ir.a.TeamSection,
                       Ir.a.Right,
-                      v && !f && Ir.a.Winner
+                      E && !y && Ir.a.Winner
                     ),
                   },
                   i.a.createElement(
                     "div",
                     { className: Ir.a.TeamName },
-                    Object(_.a)(O)
+                    Object(_.a)(S)
                   ),
                   o &&
-                    !f &&
-                    i.a.createElement("div", { className: Ir.a.Record }, p)
+                    !y &&
+                    i.a.createElement("div", { className: Ir.a.Record }, h)
                 )
               ),
               i.a.createElement(
                 "div",
                 { className: Ir.a.RightSection },
-                h &&
+                v &&
                   i.a.createElement(
                     "div",
                     {
@@ -35546,11 +35554,11 @@ var CLSTAMP = "6814711";
                   e.bExpanded && Ir.a.Expanded
                 ),
                 style: {
-                  height: e.bExpanded ? 120 * D : 0,
-                  minHeight: e.bExpanded ? 120 * D : 0,
+                  height: e.bExpanded ? 120 * T : 0,
+                  minHeight: e.bExpanded ? 120 * T : 0,
                 },
               },
-              Object(Rn.c)(1, D).map(function (t) {
+              Object(Rn.c)(1, T).map(function (t) {
                 if (t <= (null == a ? void 0 : a.matches.length)) {
                   var n = a.matches[t - 1];
                   return i.a.createElement(Sr, {

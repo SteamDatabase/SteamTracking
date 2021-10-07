@@ -33426,13 +33426,18 @@ a {
 .dpcschedulepage_DPCScheduleEntry_b1AHp
   .dpcschedulepage_Body_2Lj7M
   .dpcschedulepage_CenterSection__4qR4
-  .dpcschedulepage_LiveBannerContainer_fxbyy {
+  .dpcschedulepage_CenterContainer_3LS3W {
   width: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
 }
 .dpcschedulepage_DPCScheduleEntry_b1AHp
   .dpcschedulepage_Body_2Lj7M
   .dpcschedulepage_CenterSection__4qR4
-  .dpcschedulepage_LiveBannerContainer_fxbyy
+  .dpcschedulepage_CenterContainer_3LS3W
   .dpcschedulepage_LiveBanner_3gH8Q {
   background-color: #00ab30;
   color: #fff;
@@ -33448,7 +33453,7 @@ a {
 .dpcschedulepage_DPCScheduleEntry_b1AHp
   .dpcschedulepage_Body_2Lj7M
   .dpcschedulepage_CenterSection__4qR4
-  .dpcschedulepage_LiveBannerContainer_fxbyy
+  .dpcschedulepage_CenterContainer_3LS3W
   .dpcschedulepage_LiveBanner_3gH8Q
   .dpcschedulepage_Dot_39ck7 {
   width: 8px;
@@ -33460,6 +33465,7 @@ a {
 .dpcschedulepage_DPCScheduleEntry_b1AHp
   .dpcschedulepage_Body_2Lj7M
   .dpcschedulepage_CenterSection__4qR4
+  .dpcschedulepage_CenterContainer_3LS3W
   .dpcschedulepage_Versus_39sGW {
   width: 100px;
   text-align: center;
@@ -33467,6 +33473,7 @@ a {
 .dpcschedulepage_DPCScheduleEntry_b1AHp
   .dpcschedulepage_Body_2Lj7M
   .dpcschedulepage_CenterSection__4qR4
+  .dpcschedulepage_CenterContainer_3LS3W
   .dpcschedulepage_Score_29AMa {
   width: 100px;
   text-align: center;
