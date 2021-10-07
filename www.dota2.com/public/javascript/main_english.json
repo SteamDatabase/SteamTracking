@@ -802,6 +802,7 @@
     "dpc_relegated_to_div_ii": "Demoted to Division II",
     "dpc_promoted_to_div_i": "Promoted to Division I",
     "dpc_eliminated": "Eliminated",
+    "dpc_elimination_risk": "Risk of Elimination",
     "dpc_advance_to_group": "Advances to Group Stage",
     "dpc_advance_to_upper_bracket": "Advances to Upper Bracket",
     "dpc_advance_to_lower_bracket": "Advances to Lower Bracket",

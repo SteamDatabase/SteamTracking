@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6814883";
+var CLSTAMP = "6815482";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [1],
   {
@@ -29472,6 +29472,7 @@ var CLSTAMP = "6814883";
             N =
               u &&
               n.eSeriesDisplay == ba.f.SERIES &&
+              (null == s ? void 0 : s.length) > 0 &&
               (null === (t = s[e.nSelectedVideo]) || void 0 === t
                 ? void 0
                 : t.broadcast_provider) == va.c.LEAGUE_BROADCAST_TWITCH;
@@ -29834,16 +29835,18 @@ var CLSTAMP = "6814883";
           );
         }),
         dn = Object(s.a)(function () {
-          var e = an(),
-            t = Ra.a.Get().GetHomePageContext();
+          var e = kr(),
+            t = an(),
+            a = Ra.a.Get().GetHomePageContext();
           return (
-            Ra.a.Get().SetGameWatched(t.nLeagueID, t.nNodeID, t.nSeriesGame),
+            Ra.a.Get().GetSpoilerBlockState(e) == va.l.UNBLOCKED &&
+              Ra.a.Get().SetGameWatched(a.nLeagueID, a.nNodeID, a.nSeriesGame),
             i.a.createElement(
               "div",
               {
                 className: Object(le.a)(
                   Ba.a.DPCSeriesDetailsBody,
-                  e.bLarge && Ba.a.Large
+                  t.bLarge && Ba.a.Large
                 ),
               },
               i.a.createElement(mn, null),
@@ -30018,13 +30021,13 @@ var CLSTAMP = "6814883";
                 { className: Ba.a.Game },
                 Object(_.a)("#dpc_game_number", t.nSeriesGame)
               ),
-              !g &&
+              g &&
                 i.a.createElement(
                   "div",
                   { className: Ba.a.TeamWinner },
                   i.a.createElement($a, { nTeamID: c, nSize: 64 })
                 ),
-              !g &&
+              g &&
                 i.a.createElement(
                   "div",
                   { className: Ba.a.WinningTeamName },
@@ -30272,44 +30275,48 @@ var CLSTAMP = "6814883";
             n = e.bLeft,
             r = e.nSelectedAccountID,
             o = e.setSelectedAccountID,
-            s = Ra.a.Get().GetHomePageContext(),
-            l = Ra.a.Get().GetLeagueNode(s.nLeagueID, s.nNodeID),
-            c =
-              l && (null == l ? void 0 : l.matches.length) > 0
+            s = kr(),
+            l = Ra.a.Get().GetHomePageContext(),
+            c = Ra.a.Get().GetLeagueNode(l.nLeagueID, l.nNodeID),
+            d =
+              c && (null == c ? void 0 : c.matches.length) > 0
                 ? Ra.a
                     .Get()
                     .GetMatchData(
-                      s.nLeagueID,
+                      l.nLeagueID,
                       null ===
                         (t =
-                          null == l ? void 0 : l.matches[s.nSeriesGame - 1]) ||
+                          null == c ? void 0 : c.matches[l.nSeriesGame - 1]) ||
                         void 0 === t
                         ? void 0
                         : t.match_id
                     )
                 : void 0,
-            d = Ra.a.Get().GetTeamInfo(a),
-            m = (null == c ? void 0 : c.tourney.radiant_team_id) == a,
-            u =
-              (m &&
-                (null == c ? void 0 : c.match_outcome) ==
+            m = Ra.a.Get().GetTeamInfo(a),
+            u = (null == d ? void 0 : d.tourney.radiant_team_id) == a,
+            p =
+              (u &&
+                (null == d ? void 0 : d.match_outcome) ==
                   va.m.RADIANT_VICTORY) ||
-              (!m &&
-                (null == c ? void 0 : c.match_outcome) == va.m.DIRE_VICTORY),
-            p = c ? (m ? "#radiant" : "#dire") : "";
-          if (s.nSeriesGame > (null == l ? void 0 : l.matches.length))
+              (!u &&
+                (null == d ? void 0 : d.match_outcome) == va.m.DIRE_VICTORY),
+            g = d ? (u ? "#radiant" : "#dire") : "",
+            h =
+              Ra.a.Get().GetSpoilerBlockState(s) == va.l.BLOCKED &&
+              !Ra.a.Get().IsGameWatched(l.nLeagueID, l.nNodeID, l.nSeriesGame);
+          if (l.nSeriesGame > (null == c ? void 0 : c.matches.length))
             return null;
-          var g = [];
+          var b = [];
           return (
-            c
-              ? c.players
+            d
+              ? d.players
                   .filter(function (e) {
                     return (
-                      (e.player_slot < 128 && m) || (e.player_slot >= 128 && !m)
+                      (e.player_slot < 128 && u) || (e.player_slot >= 128 && !u)
                     );
                   })
                   .map(function (e) {
-                    g.push({
+                    b.push({
                       nAccountID: e.account_id,
                       strProName: e.pro_name,
                       nHeroID: e.hero_id,
@@ -30319,13 +30326,13 @@ var CLSTAMP = "6814883";
                       nAssists: e.assists,
                     });
                   })
-              : d &&
-                (d.registered_member_account_ids || []).forEach(function (e) {
-                  var t = d.members.find(function (t) {
+              : m &&
+                (m.registered_member_account_ids || []).forEach(function (e) {
+                  var t = m.members.find(function (t) {
                     return t.account_id == e;
                   });
                   t &&
-                    g.push({
+                    b.push({
                       nAccountID: t.account_id,
                       strProName: t.pro_name,
                       nHeroID: void 0,
@@ -30346,29 +30353,30 @@ var CLSTAMP = "6814883";
               },
               i.a.createElement(
                 "div",
-                { className: Object(le.a)(Ba.a.TeamHeading, u && Ba.a.Winner) },
+                { className: Object(le.a)(Ba.a.TeamHeading, p && Ba.a.Winner) },
                 i.a.createElement(
                   "div",
                   { className: Ba.a.Team },
-                  Object(_.a)(p)
+                  Object(_.a)(g)
                 ),
-                i.a.createElement(
-                  "div",
-                  { className: Ba.a.Score },
-                  m
-                    ? null == c
+                !h &&
+                  i.a.createElement(
+                    "div",
+                    { className: Ba.a.Score },
+                    u
+                      ? null == d
+                        ? void 0
+                        : d.radiant_score
+                      : null == d
                       ? void 0
-                      : c.radiant_score
-                    : null == c
-                    ? void 0
-                    : c.dire_score
-                )
+                      : d.dire_score
+                  )
               ),
-              5 == (null == g ? void 0 : g.length) &&
+              5 == (null == b ? void 0 : b.length) &&
                 i.a.createElement(
                   "div",
                   { className: Ba.a.PlayerList },
-                  g.map(function (e) {
+                  b.map(function (e) {
                     return i.a.createElement(hn, {
                       key: "" + e.nAccountID,
                       nSelectedAccountID: r,
@@ -30401,21 +30409,26 @@ var CLSTAMP = "6814883";
             u = e.nKills,
             g = e.nDeaths,
             h = e.nAssists,
-            b = gt.a.Get().getHeroList(),
-            v =
-              null == b
+            b = kr(),
+            v = Ra.a.Get().GetHomePageContext(),
+            f = gt.a.Get().getHeroList(),
+            E =
+              null == f
                 ? void 0
-                : b.heroes.find(function (e) {
+                : f.heroes.find(function (e) {
                     return e.id == d;
                   }),
-            f =
-              (null === (t = null == v ? void 0 : v.name) ||
+            y =
+              (null === (t = null == E ? void 0 : E.name) ||
                 void 0 === t ||
                 t.replace("npc_dota_hero_", ""),
-              null == v ? void 0 : v.name_loc),
-            E = d ? u + " / " + g + " / " + h : "",
-            y = d ? Object(_.a)("#dpc_hero_level", m) : void 0,
-            I = o == c || (0 == o && n == c);
+              null == E ? void 0 : E.name_loc),
+            I = d ? u + " / " + g + " / " + h : "",
+            N = d ? Object(_.a)("#dpc_hero_level", m) : void 0,
+            O = o == c || (0 == o && n == c),
+            D =
+              Ra.a.Get().GetSpoilerBlockState(b) == va.l.BLOCKED &&
+              !Ra.a.Get().IsGameWatched(v.nLeagueID, v.nNodeID, v.nSeriesGame);
           return i.a.createElement(
             "div",
             {
@@ -30423,7 +30436,7 @@ var CLSTAMP = "6814883";
                 Ba.a.MatchSectionPlayer,
                 a && Ba.a.Left,
                 !a && Ba.a.Right,
-                I && Ba.a.Selected
+                O && Ba.a.Selected
               ),
               onClick: function () {
                 return s(o == c ? 0 : c);
@@ -30435,12 +30448,13 @@ var CLSTAMP = "6814883";
                 r && r(0);
               },
             },
-            i.a.createElement(
-              "div",
-              { className: Object(le.a)(Ba.a.HeroAndLevel) },
-              i.a.createElement("div", { className: Ba.a.HeroName }, f),
-              i.a.createElement("div", { className: Ba.a.Level }, y)
-            ),
+            !D &&
+              i.a.createElement(
+                "div",
+                { className: Object(le.a)(Ba.a.HeroAndLevel) },
+                i.a.createElement("div", { className: Ba.a.HeroName }, y),
+                i.a.createElement("div", { className: Ba.a.Level }, N)
+              ),
             i.a.createElement("div", {
               className: Ba.a.HeroIcon,
               style: {
@@ -30452,73 +30466,87 @@ var CLSTAMP = "6814883";
               "div",
               { className: Ba.a.NameAndStats },
               i.a.createElement("div", { className: Ba.a.PlayerName }, l),
-              d && i.a.createElement("div", { className: Ba.a.Stats }, E)
+              !D && d && i.a.createElement("div", { className: Ba.a.Stats }, I)
             )
           );
         }),
         bn = Object(s.a)(function () {
-          var e = kr(),
-            t = Object(c.g)(),
-            a = an(),
-            n = Ra.a.Get().GetHomePageContext(),
-            r = Ra.a.Get().GetLeagueNode(n.nLeagueID, n.nNodeID),
-            s = Ra.a
+          var e,
+            t = kr(),
+            a = Object(c.g)(),
+            n = an(),
+            r = Ra.a.Get().GetHomePageContext(),
+            s = Ra.a.Get().GetLeagueNode(r.nLeagueID, r.nNodeID),
+            l = Ra.a
               .Get()
-              .GetLeagueNodeVODs(n.nLeagueID, n.nNodeID, n.nSeriesGame),
-            l =
-              (null == s ? void 0 : s.length) > a.nSelectedVideo
-                ? s[a.nSelectedVideo]
-                : void 0,
+              .GetLeagueNodeVODs(r.nLeagueID, r.nNodeID, r.nSeriesGame),
             m =
-              null == l
-                ? void 0
-                : l.url.replace("https://www.youtube.com/watch?v=", ""),
-            u = n.eSeriesDisplay == ba.f.VOD;
+              (null == l ? void 0 : l.length) > n.nSelectedVideo
+                ? l[n.nSelectedVideo]
+                : void 0,
+            u = 0;
+          if (
+            ((null == m ? void 0 : m.url.includes("https://youtu.be/")) &&
+              (e = null == m ? void 0 : m.url.replace("https://youtu.be/", "")),
+            (null == m
+              ? void 0
+              : m.url.includes("https://www.youtube.com/watch?v=")) &&
+              (e =
+                null == m
+                  ? void 0
+                  : m.url.replace("https://www.youtube.com/watch?v=", "")),
+            null == e ? void 0 : e.includes("?t="))
+          ) {
+            var p = e.split("?t=");
+            (e = p[0]), (u = parseInt(p[1]));
+          }
+          var g = r.eSeriesDisplay == ba.f.VOD;
           return (
-            m &&
-              Ra.a.Get().SetGameWatched(n.nLeagueID, n.nNodeID, n.nSeriesGame),
+            e &&
+              Ra.a.Get().SetGameWatched(r.nLeagueID, r.nNodeID, r.nSeriesGame),
             Object(o.useEffect)(
               function () {
-                u &&
-                  r &&
-                  !m &&
-                  t.replace(
+                g &&
+                  s &&
+                  !e &&
+                  a.replace(
                     d.b.dpc_watch(
-                      Object(ba.j)(e),
-                      "" + n.nLeagueID,
-                      "" + n.nNodeID,
-                      Object(ba.l)(n.nSeriesGame, ba.f.DETAILS)
+                      Object(ba.j)(t),
+                      "" + r.nLeagueID,
+                      "" + r.nNodeID,
+                      Object(ba.l)(r.nSeriesGame, ba.f.DETAILS)
                     )
                   );
               },
-              [u, t, n, e, m, r]
+              [g, a, r, t, e, s]
             ),
-            u
-              ? Ra.a.Get().GetSpoilerBlockState(e) == va.l.UNKNOWN ||
-                Ra.a.Get().GetSpoilerBlockState(e) == va.l.PENDING
+            g
+              ? Ra.a.Get().GetSpoilerBlockState(t) == va.l.UNKNOWN ||
+                Ra.a.Get().GetSpoilerBlockState(t) == va.l.PENDING
                 ? null
                 : i.a.createElement(
                     "div",
                     {
                       className: Object(le.a)(
                         Ba.a.DPCSeriesDetailsGameVOD,
-                        a.bLarge && Ba.a.Large
+                        n.bLarge && Ba.a.Large
                       ),
                     },
                     i.a.createElement(
                       "div",
-                      { key: m, className: Ba.a.VideoContainer },
-                      m &&
+                      { key: e + "_" + u, className: Ba.a.VideoContainer },
+                      e &&
                         i.a.createElement(Ya, {
                           classnames: Ba.a.YouTubePlayer,
-                          video: m,
+                          video: e,
                           autoplay: !1,
                           playsInline: !0,
                           controls: !0,
                           showFullscreenBtn: !0,
+                          startSeconds: u,
                         }),
-                      r &&
-                        !m &&
+                      s &&
+                        !e &&
                         i.a.createElement(
                           "div",
                           { className: Ba.a.NoVOD },
@@ -32127,7 +32155,14 @@ var CLSTAMP = "6814883";
             a,
             n = kr(),
             r = Ra.a.Get().GetSpoilerBlockState(n) == va.l.BLOCKED,
-            o =
+            o = Ra.a
+              .Get()
+              .GetEventPhaseNodeGroupID(n, e.ePhase, e.eDivision, e.eRegion),
+            s = o.nLeagueID,
+            l = o.nNodeGroupID,
+            c = Ra.a.Get().GetLeagueNodeGroup(s, l),
+            d = null == c ? void 0 : c.is_completed,
+            m =
               null === (t = Ra.a.Get().GetEventPhaseTeams(n, e.ePhase)) ||
               void 0 === t
                 ? void 0
@@ -32139,7 +32174,7 @@ var CLSTAMP = "6814883";
                         .GetTeamStanding(n, e.ePhase, e.eRegion, e.eDivision, t)
                     );
                   }),
-            s = o.sort(function (t, a) {
+            u = m.sort(function (t, a) {
               var r = Ra.a
                   .Get()
                   .GetTeamStanding(n, e.ePhase, e.eRegion, e.eDivision, t),
@@ -32152,18 +32187,18 @@ var CLSTAMP = "6814883";
               );
             });
           r &&
-            (s = o.sort(function (e, t) {
+            (u = m.sort(function (e, t) {
               var a = Ra.a.Get().GetTeamNames(e),
                 n = Ra.a.Get().GetTeamNames(t);
               return a.name.localeCompare(n.name);
             }));
-          var l = o.length > 0;
+          var p = m.length > 0;
           return i.a.createElement(
             "div",
             {
               className: Object(le.a)(
                 Gn.a.DPCStandingsTeamList,
-                !l && Gn.a.NoData,
+                !p && Gn.a.NoData,
                 e.bNarrow && Gn.a.Narrow
               ),
             },
@@ -32179,7 +32214,7 @@ var CLSTAMP = "6814883";
                 nTeamID: 0,
                 bNarrow: e.bNarrow,
               }),
-              s.map(function (t) {
+              u.map(function (t) {
                 return i.a.createElement(Fn, {
                   key: e.eDivision + "_" + e.eRegion + "_" + t,
                   ePhase: e.ePhase,
@@ -32194,22 +32229,22 @@ var CLSTAMP = "6814883";
                   ? void 0
                   : a.map(function (t) {
                       for (
-                        var a = 40, r = 40, o = 0, l = s;
-                        o < l.length;
+                        var a = 40, r = 40, o = 0, s = u;
+                        o < s.length;
                         o++
                       ) {
-                        var c = l[o],
-                          d = Ra.a
+                        var l = s[o],
+                          c = Ra.a
                             .Get()
                             .GetTeamStanding(
                               n,
                               e.ePhase,
                               e.eRegion,
                               e.eDivision,
-                              c
+                              l
                             );
-                        (null == d ? void 0 : d.standing) < t.nMin && (a += 70),
-                          (null == d ? void 0 : d.standing) <= t.nMax &&
+                        (null == c ? void 0 : c.standing) < t.nMin && (a += 70),
+                          (null == c ? void 0 : c.standing) <= t.nMax &&
                             (r += 70);
                       }
                       return a == r
@@ -32232,7 +32267,7 @@ var CLSTAMP = "6814883";
                     }))
             ),
             !r &&
-              o.length > 0 &&
+              m.length > 0 &&
               e.bShowLegend &&
               i.a.createElement(
                 "div",
@@ -32259,7 +32294,11 @@ var CLSTAMP = "6814883";
                       i.a.createElement(
                         "div",
                         { className: Gn.a.Description },
-                        Object(_.a)(e.strDescription)
+                        Object(_.a)(
+                          d || !e.strDescriptionInProgress
+                            ? e.strDescription
+                            : e.strDescriptionInProgress
+                        )
                       )
                     );
                   })
@@ -34853,6 +34892,7 @@ var CLSTAMP = "6814883";
                 nMax: 9,
                 strColor: "#922820",
                 strDescription: "#dpc_eliminated",
+                strDescriptionInProgress: "#dpc_elimination_risk",
               },
             ],
             r = [
@@ -35603,22 +35643,23 @@ var CLSTAMP = "6814883";
           m && !g && h(!0);
           var E = Ra.a.Get().IsGameWatched(a, n, s),
             y = Ra.a.Get().GetSpoilerBlockState(t) == va.l.BLOCKED && !E,
-            I =
-              !!y ||
+            I = v.vods.length > 0,
+            N =
               -1 !=
-                v.vods.findIndex(function (e) {
-                  return e.series_game == s;
-                }),
-            N = 0;
+              v.vods.findIndex(function (e) {
+                return e.series_game == s;
+              }),
+            O = y ? I : N,
+            D = 0;
           switch (null == b ? void 0 : b.match_outcome) {
             case va.m.RADIANT_VICTORY:
-              N = null == b ? void 0 : b.tourney.radiant_team_id;
+              D = null == b ? void 0 : b.tourney.radiant_team_id;
               break;
             case va.m.DIRE_VICTORY:
-              N = null == b ? void 0 : b.tourney.dire_team_id;
+              D = null == b ? void 0 : b.tourney.dire_team_id;
           }
-          var O = Ra.a.Get().GetTeamNames(N),
-            D = b ? U()(1e3 * b.start_time).format("LT") : "";
+          var S = Ra.a.Get().GetTeamNames(D),
+            T = b ? U()(1e3 * b.start_time).format("LT") : "";
           return i.a.createElement(
             "div",
             {
@@ -35630,7 +35671,7 @@ var CLSTAMP = "6814883";
             i.a.createElement(
               "div",
               { className: Ir.a.LeftSection },
-              !y && i.a.createElement("div", { className: Ir.a.Time }, D),
+              !y && i.a.createElement("div", { className: Ir.a.Time }, T),
               E &&
                 i.a.createElement(
                   "div",
@@ -35714,7 +35755,7 @@ var CLSTAMP = "6814883";
                   },
                   className: Ir.a.FirstLine,
                 },
-                !y && i.a.createElement($a, { nTeamID: N, nSize: 32 }),
+                !y && i.a.createElement($a, { nTeamID: D, nSize: 32 }),
                 i.a.createElement(
                   "div",
                   { className: Ir.a.GameNumber },
@@ -35725,7 +35766,7 @@ var CLSTAMP = "6814883";
                 i.a.createElement(
                   "div",
                   { className: Ir.a.WinningTeam },
-                  O && Object(_.a)("#dpc_team_win", O.name)
+                  S && Object(_.a)("#dpc_team_win", S.name)
                 ),
               !y &&
                 i.a.createElement(
@@ -35809,15 +35850,15 @@ var CLSTAMP = "6814883";
                       Object(ba.j)(t),
                       "" + a,
                       "" + n,
-                      Object(ba.l)(s, ba.f.VOD)
+                      Object(ba.l)(s, N ? ba.f.VOD : ba.f.GAME)
                     ),
                   },
                   className: Object(le.a)(
                     Ir.a.WatchVODButton,
-                    I && Ir.a.Enabled
+                    O && Ir.a.Enabled
                   ),
                 },
-                Object(_.a)(I ? "#dpc_watch_vod" : "#dpc_no_vod")
+                Object(_.a)(O ? "#dpc_watch_vod" : "#dpc_no_vod")
               )
             )
           );
