@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6814660";
+var CLSTAMP = "6814711";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [1],
   {
@@ -30575,7 +30575,7 @@ var CLSTAMP = "6814660";
                         ""
                       )) +
                   "?origin=https://" +
-                  "www.dota2.com&enablechat=0&enablevideo=1&showasiframe=1";
+                  "www.dota2.com&enablechat=0&enablevideo=1&iframe=1";
             }
           return (
             e &&
