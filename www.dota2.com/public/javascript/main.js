@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6812683";
+var CLSTAMP = "6813949";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [1],
   {
@@ -9133,35 +9133,38 @@ var CLSTAMP = "6812683";
     },
     Viej: function (e, t, a) {
       "use strict";
-      a.d(t, "a", function () {
+      a.d(t, "b", function () {
         return i;
       }),
-        a.d(t, "i", function () {
+        a.d(t, "j", function () {
           return s;
         }),
-        a.d(t, "h", function () {
+        a.d(t, "i", function () {
           return l;
         }),
-        a.d(t, "d", function () {
+        a.d(t, "e", function () {
           return c;
         }),
-        a.d(t, "e", function () {
+        a.d(t, "f", function () {
           return d;
         }),
-        a.d(t, "f", function () {
+        a.d(t, "g", function () {
           return m;
         }),
-        a.d(t, "c", function () {
+        a.d(t, "d", function () {
           return u;
         }),
-        a.d(t, "g", function () {
+        a.d(t, "h", function () {
           return p;
         }),
-        a.d(t, "b", function () {
+        a.d(t, "c", function () {
           return _;
         }),
-        a.d(t, "j", function () {
+        a.d(t, "k", function () {
           return g;
+        }),
+        a.d(t, "a", function () {
+          return h;
         });
       var n = a("mrSG"),
         r = a("q1tI"),
@@ -9421,6 +9424,31 @@ var CLSTAMP = "6812683";
           o.a.createElement("path", {
             fill: "currentColor",
             d: "M23.75 12.5L15.75 17.5L15.75 7.5L23.75 12.5Z",
+          })
+        );
+      }
+      function h(e) {
+        return o.a.createElement(
+          "svg",
+          Object(n.a)(
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 34 29",
+              fill: "none",
+            },
+            e
+          ),
+          o.a.createElement("path", {
+            fill: "currentColor",
+            d:
+              "M25.8051 26.8108C25.9997 27.7537 24.8802 28.4 24.161 27.7601L16.5223 20.9632C16.013 20.5099 16.0966 19.691 16.6871 19.3501L22.2588 16.1332C22.8493 15.7923 23.6003 16.1294 23.7382 16.7971L25.8051 26.8108Z",
+          }),
+          o.a.createElement("path", {
+            fill: "currentColor",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d:
+              "M11.5501 0.98291C5.55788 0.98291 0.700195 5.84059 0.700195 11.8328C0.700195 17.8251 5.55788 22.6828 11.5501 22.6828H22.4001C28.3923 22.6828 33.25 17.8251 33.25 11.8328C33.25 5.84059 28.3923 0.98291 22.4001 0.98291H11.5501ZM10.6671 14.1361C11.9391 14.1361 12.9702 13.105 12.9702 11.8331C12.9702 10.5611 11.9391 9.53004 10.6671 9.53004C9.39519 9.53004 8.36408 10.5611 8.36408 11.8331C8.36408 13.105 9.39519 14.1361 10.6671 14.1361ZM19.2778 11.8329C19.2778 13.1048 18.2466 14.136 16.9747 14.136C15.7028 14.136 14.6717 13.1048 14.6717 11.8329C14.6717 10.561 15.7028 9.52986 16.9747 9.52986C18.2466 9.52986 19.2778 10.561 19.2778 11.8329ZM23.2829 14.136C24.5548 14.136 25.5859 13.1048 25.5859 11.8329C25.5859 10.561 24.5548 9.52986 23.2829 9.52986C22.0109 9.52986 20.9798 10.561 20.9798 11.8329C20.9798 13.1048 22.0109 14.136 23.2829 14.136Z",
           })
         );
       }
@@ -28761,7 +28789,7 @@ var CLSTAMP = "6812683";
               })
             ),
             i.a.createElement("div", { className: Oa.a.AngleFill }),
-            i.a.createElement(Sa.f, { className: Oa.a.MagnifyingGlass })
+            i.a.createElement(Sa.g, { className: Oa.a.MagnifyingGlass })
           );
         },
         ja = function (e) {
@@ -29238,18 +29266,21 @@ var CLSTAMP = "6812683";
             r = Object(o.useState)(!1),
             s = r[0],
             l = r[1],
-            m = Object(o.useState)(0),
+            m = Object(o.useState)(!1),
             u = m[0],
             _ = m[1],
-            g = Vt(),
-            h = g.width,
-            b = (g.height, h > 1500),
-            v = Ra.a.Get().GetEventNodes(e, 0);
+            g = Object(o.useState)(0),
+            h = g[0],
+            b = g[1],
+            v = Vt(),
+            f = v.width,
+            E = (v.height, f > 1500),
+            y = Ra.a.Get().GetEventNodes(e, 0);
           return (
             Object(o.useEffect)(
               function () {
                 if (0 == a.nLeagueID && 0 == a.nNodeID) {
-                  var r = v.sort(function (e, t) {
+                  var r = y.sort(function (e, t) {
                     var a = Ra.a.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
                       n = Ra.a.Get().GetLeagueNode(t.nLeagueID, t.nNodeID);
                     return (
@@ -29306,11 +29337,11 @@ var CLSTAMP = "6812683";
                       );
                   }
                 }
-                _(0);
+                b(0);
               },
               [e, t.bEventCompleted, n, a.nLeagueID, a.nNodeID]
             ),
-            v && 0 != v.length
+            y && 0 != y.length
               ? 0 == a.nLeagueID && 0 == a.nNodeID
                 ? null
                 : i.a.createElement(
@@ -29321,7 +29352,8 @@ var CLSTAMP = "6812683";
                       {
                         className: Object(le.a)(
                           Ba.a.BGContainer,
-                          s && b && Ba.a.Large
+                          s && E && Ba.a.Large,
+                          u && Ba.a.ShowChat
                         ),
                         style: {
                           backgroundImage:
@@ -29337,8 +29369,9 @@ var CLSTAMP = "6812683";
                           nn,
                           {
                             seriesDetailsContext: {
-                              bLarge: s && b,
-                              nSelectedVideo: u,
+                              bLarge: s && E,
+                              nSelectedVideo: h,
+                              bShowChat: u,
                             },
                           },
                           i.a.createElement(sn, null),
@@ -29348,9 +29381,11 @@ var CLSTAMP = "6812683";
                         i.a.createElement(on, {
                           bLarge: s,
                           setLarge: l,
-                          nSelectedVideo: u,
-                          setSelectedVideo: _,
-                          bLargeAllowed: b,
+                          bShowChat: u,
+                          setShowChat: _,
+                          nSelectedVideo: h,
+                          setSelectedVideo: b,
+                          bLargeAllowed: E,
                         })
                       )
                     ),
@@ -29366,21 +29401,22 @@ var CLSTAMP = "6812683";
           );
         }),
         on = Object(s.a)(function (e) {
-          var t = kr(),
-            a = Ra.a.Get().GetHomePageContext(),
-            n = Ra.a.Get().GetLeagueData(t, a.nLeagueID),
-            r = 0 == a.nSeriesGame ? 1 : a.nSeriesGame,
-            o = Ra.a.Get().GetLeagueNodeLiveStreams(t, a.nLeagueID, a.nNodeID),
-            s = Ra.a.Get().GetLeagueNodeVODs(a.nLeagueID, a.nNodeID, r),
-            c = [],
-            m = Ra.a.Get().IsLeagueNodeLive(t, a.nLeagueID, a.nNodeID),
-            u = "",
-            g = "";
-          switch (a.eSeriesDisplay) {
+          var t,
+            a = kr(),
+            n = Ra.a.Get().GetHomePageContext(),
+            r = Ra.a.Get().GetLeagueData(a, n.nLeagueID),
+            o = 0 == n.nSeriesGame ? 1 : n.nSeriesGame,
+            s = Ra.a.Get().GetLeagueNodeLiveStreams(a, n.nLeagueID, n.nNodeID),
+            c = Ra.a.Get().GetLeagueNodeVODs(n.nLeagueID, n.nNodeID, o),
+            m = [],
+            u = Ra.a.Get().IsLeagueNodeLive(a, n.nLeagueID, n.nNodeID),
+            g = "",
+            b = "";
+          switch (n.eSeriesDisplay) {
             case ba.f.SERIES:
               if (
-                (null == o ||
-                  o.forEach(function (e, t) {
+                (null == s ||
+                  s.forEach(function (e, t) {
                     var a = void 0;
                     switch (e.broadcast_provider) {
                       case va.c.LEAGUE_BROADCAST_STEAM:
@@ -29389,7 +29425,7 @@ var CLSTAMP = "6812683";
                       case va.c.LEAGUE_BROADCAST_TWITCH:
                         a = "#dpc_twitch";
                     }
-                    c.push({
+                    m.push({
                       value: t,
                       strLabel:
                         "" +
@@ -29398,102 +29434,108 @@ var CLSTAMP = "6812683";
                         Object(_.a)("#Language_" + Object(h.a)(e.language)),
                     });
                   }),
-                (null == o ? void 0 : o.length) > e.nSelectedVideo)
+                (null == s ? void 0 : s.length) > e.nSelectedVideo)
               )
-                switch (o[e.nSelectedVideo].broadcast_provider) {
+                switch (s[e.nSelectedVideo].broadcast_provider) {
                   case va.c.LEAGUE_BROADCAST_STEAM:
-                    u = "#dpc_steam";
+                    g = "#dpc_steam";
                     break;
                   case va.c.LEAGUE_BROADCAST_TWITCH:
-                    u = "#dpc_twitch";
+                    g = "#dpc_twitch";
                     break;
                   case va.c.LEAGUE_BROADCAST_YOUTUBE:
-                    u = "#dpc_youtube";
+                    g = "#dpc_youtube";
                 }
-              g =
-                (null == o ? void 0 : o.length) > e.nSelectedVideo
-                  ? o[e.nSelectedVideo].stream_url
+              b =
+                (null == s ? void 0 : s.length) > e.nSelectedVideo
+                  ? s[e.nSelectedVideo].stream_url
                   : "";
               break;
             case ba.f.VOD:
-              null == s ||
-                s.forEach(function (e, t) {
+              null == c ||
+                c.forEach(function (e, t) {
                   var a =
-                    null == n
+                    null == r
                       ? void 0
-                      : n.streams.find(function (t) {
+                      : r.streams.find(function (t) {
                           return t.stream_id == e.stream_id;
                         });
                   if (a) {
-                    var r = void 0;
+                    var n = void 0;
                     switch (a.broadcast_provider) {
                       case va.c.LEAGUE_BROADCAST_STEAM:
-                        r = "#dpc_steam";
+                        n = "#dpc_steam";
                         break;
                       case va.c.LEAGUE_BROADCAST_TWITCH:
-                        r = "#dpc_twitch";
+                        n = "#dpc_twitch";
                     }
-                    c.push({
+                    m.push({
                       value: t,
                       strLabel:
                         "" +
-                        Object(_.a)(r) +
-                        (r && " - ") +
+                        Object(_.a)(n) +
+                        (n && " - ") +
                         Object(_.a)("#Language_" + Object(h.a)(a.language)),
                     });
                   }
                 }),
-                (u = "#dpc_youtube"),
-                (g =
-                  (null == s ? void 0 : s.length) > e.nSelectedVideo
-                    ? s[e.nSelectedVideo].url
+                (g = "#dpc_youtube"),
+                (b =
+                  (null == c ? void 0 : c.length) > e.nSelectedVideo
+                    ? c[e.nSelectedVideo].url
                     : "");
           }
-          var b = (null == s ? void 0 : s.length) > 0,
-            v = a.eSeriesDisplay == ba.f.VOD,
-            f = d.b.dpc_watch(
-              Object(ba.j)(t),
-              "" + a.nLeagueID,
-              "" + a.nNodeID,
-              Object(ba.l)(r, ba.f.VOD)
+          var v = (null == c ? void 0 : c.length) > 0,
+            f = n.eSeriesDisplay == ba.f.VOD,
+            E = d.b.dpc_watch(
+              Object(ba.j)(a),
+              "" + n.nLeagueID,
+              "" + n.nNodeID,
+              Object(ba.l)(o, ba.f.VOD)
             ),
-            E = a.eSeriesDisplay == ba.f.DETAILS,
-            y = d.b.dpc_watch(
-              Object(ba.j)(t),
-              "" + a.nLeagueID,
-              "" + a.nNodeID,
-              Object(ba.l)(r, ba.f.DETAILS)
-            );
+            y = n.eSeriesDisplay == ba.f.DETAILS,
+            I = d.b.dpc_watch(
+              Object(ba.j)(a),
+              "" + n.nLeagueID,
+              "" + n.nNodeID,
+              Object(ba.l)(o, ba.f.DETAILS)
+            ),
+            N =
+              u &&
+              n.eSeriesDisplay == ba.f.SERIES &&
+              (null === (t = s[e.nSelectedVideo]) || void 0 === t
+                ? void 0
+                : t.broadcast_provider) == va.c.LEAGUE_BROADCAST_TWITCH;
           return i.a.createElement(
             "div",
             { className: Ba.a.DPCSeriesFooter },
             i.a.createElement(
               "div",
-              { className: Object(le.a)(Ba.a.LeftTabs, m && Ba.a.Hidden) },
+              { className: Object(le.a)(Ba.a.LeftTabs, u && Ba.a.Hidden) },
               i.a.createElement(
                 ba.a,
                 {
-                  to: f,
-                  condition: b,
+                  to: E,
+                  condition: v,
                   className: Object(le.a)(
                     Ba.a.SeriesViewTab,
-                    v && Ba.a.Selected,
-                    b && Ba.a.Valid
+                    f && Ba.a.Selected,
+                    v && Ba.a.Valid
                   ),
                 },
-                i.a.createElement(Sa.j, { className: Ba.a.SeriesViewTabImage })
+                i.a.createElement(Sa.k, { className: Ba.a.SeriesViewTabImage })
               ),
               i.a.createElement(
                 l.b,
                 {
-                  to: y,
+                  to: I,
                   className: Object(le.a)(
                     Ba.a.SeriesViewTab,
-                    E && Ba.a.Selected,
+                    y && Ba.a.Selected,
                     Ba.a.Valid
                   ),
                 },
-                i.a.createElement(Sa.b, { className: Ba.a.SeriesViewTabImage })
+                i.a.createElement(Sa.c, { className: Ba.a.SeriesViewTabImage })
               )
             ),
             i.a.createElement(
@@ -29501,23 +29543,23 @@ var CLSTAMP = "6812683";
               {
                 className: Object(le.a)(
                   Ba.a.CenterOptions,
-                  0 == c.length && Ba.a.Hidden
+                  0 == m.length && Ba.a.Hidden
                 ),
               },
               i.a.createElement(La, {
                 eStyle: Ia.DIM,
-                options: c,
+                options: m,
                 selectedOption: e.nSelectedVideo,
                 setOption: e.setSelectedVideo,
                 nWidth: 250,
               }),
               i.a.createElement(
                 "a",
-                { href: g, className: Ba.a.OutlineButton },
+                { href: b, className: Ba.a.OutlineButton },
                 i.a.createElement(
                   "div",
                   { className: Ba.a.Contents },
-                  Object(_.a)(u),
+                  Object(_.a)(g),
                   i.a.createElement("div", {
                     className: Ba.a.ExternalLinkIcon,
                     style: {
@@ -29533,9 +29575,25 @@ var CLSTAMP = "6812683";
               {
                 className: Object(le.a)(
                   Ba.a.RightTabs,
-                  !e.bLargeAllowed && Ba.a.Hidden
+                  !e.bLargeAllowed && Ba.a.Hidden,
+                  N && Ba.a.HasChatOption
                 ),
               },
+              N &&
+                i.a.createElement(
+                  "div",
+                  {
+                    className: Object(le.a)(
+                      Ba.a.SizeTab,
+                      e.bShowChat && Ba.a.Selected,
+                      Ba.a.RightGap
+                    ),
+                    onClick: function () {
+                      return e.setShowChat(!e.bShowChat);
+                    },
+                  },
+                  i.a.createElement(Sa.a, { className: Ba.a.SizeTabImage })
+                ),
               i.a.createElement(
                 "div",
                 {
@@ -29547,7 +29605,7 @@ var CLSTAMP = "6812683";
                     return e.setLarge(!1);
                   },
                 },
-                i.a.createElement(Sa.g, { className: Ba.a.SizeTabImage })
+                i.a.createElement(Sa.h, { className: Ba.a.SizeTabImage })
               ),
               i.a.createElement(
                 "div",
@@ -29561,7 +29619,7 @@ var CLSTAMP = "6812683";
                     return e.setLarge(!0);
                   },
                 },
-                i.a.createElement(Sa.c, { className: Ba.a.SizeTabImage })
+                i.a.createElement(Sa.d, { className: Ba.a.SizeTabImage })
               )
             )
           );
@@ -29758,7 +29816,8 @@ var CLSTAMP = "6812683";
                 a && Ba.a.Left,
                 !a && Ba.a.Right,
                 n && !h && Ba.a.Winner,
-                d.bLarge && Ba.a.Large
+                d.bLarge && Ba.a.Large,
+                d.bShowChat && Ba.a.ShowChat
               ),
             },
             i.a.createElement(
@@ -30503,55 +30562,66 @@ var CLSTAMP = "6812683";
         }),
         vn = Object(s.a)(function () {
           var e,
-            t = kr(),
-            a = an(),
-            n = Ra.a.Get().GetHomePageContext(),
-            r = Ra.a.Get().IsLeagueNodeLive(t, n.nLeagueID, n.nNodeID),
-            o = Ra.a.Get().GetLeagueNodeLiveStreams(t, n.nLeagueID, n.nNodeID),
-            s =
-              (null == o ? void 0 : o.length) > a.nSelectedVideo
-                ? o[a.nSelectedVideo]
+            t,
+            a = kr(),
+            n = an(),
+            r = Ra.a.Get().GetHomePageContext(),
+            o = Ra.a.Get().IsLeagueNodeLive(a, r.nLeagueID, r.nNodeID),
+            s = Ra.a.Get().GetLeagueNodeLiveStreams(a, r.nLeagueID, r.nNodeID),
+            l =
+              (null == s ? void 0 : s.length) > n.nSelectedVideo
+                ? s[n.nSelectedVideo]
                 : void 0,
-            l = "www.dota2.com";
-          if (s)
-            switch (null == s ? void 0 : s.broadcast_provider) {
+            c = "ccarollo2.valve.org";
+          if (l)
+            switch (null == l ? void 0 : l.broadcast_provider) {
               case va.c.LEAGUE_BROADCAST_TWITCH:
-                e =
-                  "https://player.twitch.tv/?channel=" +
-                  (null == s
+                (e =
+                  "https://player.twitch.tv/?video-with-chat=true&channel=" +
+                  (null == l
                     ? void 0
-                    : s.stream_url
+                    : l.stream_url
                         .replace("https://www.twitch.tv/", "")
                         .replace("twitch.tv/", "")) +
                   "&parent=" +
-                  l;
+                  c),
+                  (t =
+                    "https://www.twitch.tv/embed/" +
+                    (null == l
+                      ? void 0
+                      : l.stream_url
+                          .replace("https://www.twitch.tv/", "")
+                          .replace("twitch.tv/", "")) +
+                    "/chat?darkpopout&parent=" +
+                    c);
                 break;
               case va.c.LEAGUE_BROADCAST_STEAM:
                 e =
                   p.a.COMMUNITY_URL +
                   "broadcast/watchnew/" +
-                  (null == s
+                  (null == l
                     ? void 0
-                    : s.stream_url.replace(
+                    : l.stream_url.replace(
                         "https://steamcommunity.com/broadcast/watch/",
                         ""
                       )) +
                   "?origin=https://" +
-                  "www.dota2.com&enablechat=0&enablevideo=1&showasiframe=1";
+                  c +
+                  "&enablechat=0&enablevideo=1&showasiframe=1";
             }
           return (
             e &&
-              Ra.a.Get().SetGameWatched(n.nLeagueID, n.nNodeID, n.nSeriesGame),
-            r
-              ? Ra.a.Get().GetSpoilerBlockState(t) == va.l.UNKNOWN ||
-                Ra.a.Get().GetSpoilerBlockState(t) == va.l.PENDING
+              Ra.a.Get().SetGameWatched(r.nLeagueID, r.nNodeID, r.nSeriesGame),
+            o
+              ? Ra.a.Get().GetSpoilerBlockState(a) == va.l.UNKNOWN ||
+                Ra.a.Get().GetSpoilerBlockState(a) == va.l.PENDING
                 ? null
                 : i.a.createElement(
                     "div",
                     {
                       className: Object(le.a)(
                         Ba.a.DPCSeriesDetailsGameLive,
-                        a.bLarge && Ba.a.Large
+                        n.bLarge && Ba.a.Large
                       ),
                     },
                     i.a.createElement(
@@ -30563,6 +30633,22 @@ var CLSTAMP = "6812683";
                         width: "100%",
                         allowFullScreen: !0,
                         frameBorder: "0",
+                      })
+                    ),
+                    i.a.createElement(
+                      "div",
+                      {
+                        key: e + "_chat",
+                        className: Object(le.a)(
+                          Ba.a.Chat,
+                          t && n.bShowChat && Ba.a.Shown
+                        ),
+                      },
+                      i.a.createElement("iframe", {
+                        src: t,
+                        width: "100%",
+                        height: "100%",
+                        style: { border: "none" },
                       })
                     )
                   )
@@ -30875,7 +30961,7 @@ var CLSTAMP = "6812683";
               i.a.createElement(
                 "div",
                 { className: Ea.a.Multicast },
-                i.a.createElement(Sa.a, {
+                i.a.createElement(Sa.b, {
                   className: Ea.a.Icon,
                   color: "#A3A3A3",
                 }),
@@ -31293,12 +31379,12 @@ var CLSTAMP = "6812683";
                 i.a.createElement(
                   "div",
                   { className: Sn.a.ShowContainer },
-                  i.a.createElement(Sa.i, null)
+                  i.a.createElement(Sa.j, null)
                 ),
                 i.a.createElement(
                   "div",
                   { className: Sn.a.HideContainer },
-                  i.a.createElement(Sa.h, null)
+                  i.a.createElement(Sa.i, null)
                 )
               )
             )
@@ -35311,41 +35397,42 @@ var CLSTAMP = "6812683";
               ),
             p = u ? u.wins + " - " + u.losses : "",
             g = Ra.a.Get().IsLeagueNodeLive(t, e.nLeagueID, e.nNodeID),
-            h = !g && !(null == a ? void 0 : a.has_started),
-            b = !g && (null == a ? void 0 : a.is_completed),
-            v =
-              b &&
+            h =
+              (!g && (null == a || a.has_started),
+              !g && (null == a ? void 0 : a.is_completed)),
+            b =
+              h &&
               (null == a ? void 0 : a.team_1_wins) >
                 (null == a ? void 0 : a.team_2_wins),
-            f =
-              b &&
+            v =
+              h &&
               (null == a ? void 0 : a.team_2_wins) >
                 (null == a ? void 0 : a.team_1_wins),
-            E = Ra.a.Get().GetSpoilerBlockState(t) == va.l.BLOCKED,
-            y =
-              !E ||
+            f = Ra.a.Get().GetSpoilerBlockState(t) == va.l.BLOCKED,
+            E =
+              !f ||
               !Ra.a.Get().IsLeagueNodeBracket(e.nLeagueID, e.nNodeID) ||
               Ra.a.Get().IsAnyGameWatched(e.nLeagueID, e.nNodeID),
-            I = !E || Ra.a.Get().AreAllGamesWatched(e.nLeagueID, e.nNodeID),
-            N = a ? a.team_1_wins + " - " + a.team_2_wins : "",
-            O =
+            y = !f || Ra.a.Get().AreAllGamesWatched(e.nLeagueID, e.nNodeID),
+            I = a ? a.team_1_wins + " - " + a.team_2_wins : "",
+            N =
               0 == (null == a ? void 0 : a.team_id_1)
                 ? "#dpc_tbd"
-                : y
+                : E
                 ? null == l
                   ? void 0
                   : l.name
                 : "#dpc_hidden",
-            D =
+            O =
               0 == (null == a ? void 0 : a.team_id_2)
                 ? "#dpc_tbd"
-                : y
+                : E
                 ? null == c
                   ? void 0
                   : c.name
                 : "#dpc_hidden";
-          (I && b) || (N = "#dpc_vs");
-          var S = I
+          (y && h) || (I = "#dpc_vs");
+          var D = y
             ? null == a
               ? void 0
               : a.matches.length
@@ -35402,21 +35489,21 @@ var CLSTAMP = "6812683";
                     className: Object(le.a)(
                       Ir.a.TeamSection,
                       Ir.a.Left,
-                      v && !E && Ir.a.Winner
+                      b && !f && Ir.a.Winner
                     ),
                   },
                   i.a.createElement(
                     "div",
                     { className: Ir.a.TeamName },
-                    Object(_.a)(O)
+                    Object(_.a)(N)
                   ),
                   o &&
-                    !E &&
+                    !f &&
                     i.a.createElement("div", { className: Ir.a.Record }, m)
                 ),
                 i.a.createElement($a, {
                   className: Ir.a.TeamLogo,
-                  nTeamID: y ? (null == a ? void 0 : a.team_id_1) : 0,
+                  nTeamID: E ? (null == a ? void 0 : a.team_id_1) : 0,
                   nSize: 52,
                   bTooltip: !0,
                 }),
@@ -35431,20 +35518,14 @@ var CLSTAMP = "6812683";
                       i.a.createElement("div", { className: Ir.a.Dot })
                     )
                   ),
-                h &&
-                  i.a.createElement(
-                    "div",
-                    { className: Ir.a.Versus },
-                    Object(_.a)("#dpc_vs")
-                  ),
                 i.a.createElement(
                   "div",
                   { className: Ir.a.Score },
-                  Object(_.a)(N)
+                  Object(_.a)(I)
                 ),
                 i.a.createElement($a, {
                   className: Ir.a.TeamLogo,
-                  nTeamID: y ? (null == a ? void 0 : a.team_id_2) : 0,
+                  nTeamID: E ? (null == a ? void 0 : a.team_id_2) : 0,
                   nSize: 52,
                   bTooltip: !0,
                 }),
@@ -35454,23 +35535,23 @@ var CLSTAMP = "6812683";
                     className: Object(le.a)(
                       Ir.a.TeamSection,
                       Ir.a.Right,
-                      f && !E && Ir.a.Winner
+                      v && !f && Ir.a.Winner
                     ),
                   },
                   i.a.createElement(
                     "div",
                     { className: Ir.a.TeamName },
-                    Object(_.a)(D)
+                    Object(_.a)(O)
                   ),
                   o &&
-                    !E &&
+                    !f &&
                     i.a.createElement("div", { className: Ir.a.Record }, p)
                 )
               ),
               i.a.createElement(
                 "div",
                 { className: Ir.a.RightSection },
-                b &&
+                h &&
                   i.a.createElement(
                     "div",
                     {
@@ -35497,11 +35578,11 @@ var CLSTAMP = "6812683";
                   e.bExpanded && Ir.a.Expanded
                 ),
                 style: {
-                  height: e.bExpanded ? 120 * S : 0,
-                  minHeight: e.bExpanded ? 120 * S : 0,
+                  height: e.bExpanded ? 120 * D : 0,
+                  minHeight: e.bExpanded ? 120 * D : 0,
                 },
               },
-              Object(Rn.c)(1, S).map(function (t) {
+              Object(Rn.c)(1, D).map(function (t) {
                 if (t <= (null == a ? void 0 : a.matches.length)) {
                   var n = a.matches[t - 1];
                   return i.a.createElement(Sr, {
@@ -37149,7 +37230,7 @@ var CLSTAMP = "6812683";
                       i.a.createElement(
                         "div",
                         { className: ha.a.Title },
-                        i.a.createElement(Sa.i, null),
+                        i.a.createElement(Sa.j, null),
                         Object(_.a)("#dpc_spoiler_popup_standard_title")
                       ),
                       i.a.createElement(
@@ -37181,7 +37262,7 @@ var CLSTAMP = "6812683";
                       i.a.createElement(
                         "div",
                         { className: ha.a.Title },
-                        i.a.createElement(Sa.h, null),
+                        i.a.createElement(Sa.i, null),
                         Object(_.a)("#dpc_spoiler_popup_spoiler_title")
                       ),
                       i.a.createElement(
@@ -39620,7 +39701,7 @@ var CLSTAMP = "6812683";
                     { href: n.a.BASE_URL + "workshop/builds" },
                     Object(l.a)("#header_builds")
                   ),
-                  o.a.createElement(h.d, { className: s.a.Arrow })
+                  o.a.createElement(h.e, { className: s.a.Arrow })
                 ),
                 o.a.createElement(
                   "div",
@@ -39630,7 +39711,7 @@ var CLSTAMP = "6812683";
                     { href: n.a.COMMUNITY_URL + "app/570/guides" },
                     Object(l.a)("#header_steam_guides")
                   ),
-                  o.a.createElement(h.d, { className: s.a.Arrow })
+                  o.a.createElement(h.e, { className: s.a.Arrow })
                 ),
                 o.a.createElement(
                   "div",
@@ -39645,7 +39726,7 @@ var CLSTAMP = "6812683";
                     },
                     Object(l.a)("#header_patches")
                   ),
-                  o.a.createElement(h.d, { className: s.a.Arrow })
+                  o.a.createElement(h.e, { className: s.a.Arrow })
                 ),
                 o.a.createElement(
                   "div",
@@ -39660,7 +39741,7 @@ var CLSTAMP = "6812683";
                     },
                     Object(l.a)("#header_gameplay_updates")
                   ),
-                  o.a.createElement(h.d, { className: s.a.Arrow })
+                  o.a.createElement(h.e, { className: s.a.Arrow })
                 ),
                 o.a.createElement(
                   "div",
@@ -39670,7 +39751,7 @@ var CLSTAMP = "6812683";
                     { href: n.a.BASE_URL + "store" },
                     Object(l.a)("#header_store")
                   ),
-                  o.a.createElement(h.d, { className: s.a.Arrow })
+                  o.a.createElement(h.e, { className: s.a.Arrow })
                 )
               ),
               o.a.createElement("div", { className: s.a.LineSeparator }),
@@ -39684,7 +39765,7 @@ var CLSTAMP = "6812683";
                   },
                 },
                 Object(l.a)("#header_heroes"),
-                o.a.createElement(h.e, { className: s.a.Arrow })
+                o.a.createElement(h.f, { className: s.a.Arrow })
               ),
               o.a.createElement("div", { className: s.a.LineSeparator }),
               o.a.createElement(
@@ -39697,7 +39778,7 @@ var CLSTAMP = "6812683";
                   },
                 },
                 Object(l.a)("#header_news"),
-                o.a.createElement(h.e, { className: s.a.Arrow })
+                o.a.createElement(h.f, { className: s.a.Arrow })
               ),
               o.a.createElement("div", { className: s.a.LineSeparator }),
               o.a.createElement(
@@ -39710,7 +39791,7 @@ var CLSTAMP = "6812683";
                   },
                 },
                 Object(l.a)("#header_esports"),
-                o.a.createElement(h.e, { className: s.a.Arrow })
+                o.a.createElement(h.f, { className: s.a.Arrow })
               ),
               o.a.createElement("div", { className: s.a.LineSeparator }),
               o.a.createElement(
@@ -40375,8 +40456,9 @@ var CLSTAMP = "6812683";
         ToolTip: "dpcseriesdetails_ToolTip_141SF",
         DPCSeriesDetails: "dpcseriesdetails_DPCSeriesDetails_cpS5D",
         BGContainer: "dpcseriesdetails_BGContainer_1INUQ",
-        Large: "dpcseriesdetails_Large_3nOXZ",
+        ShowChat: "dpcseriesdetails_ShowChat_2HPXB",
         Container: "dpcseriesdetails_Container_2jjhf",
+        Large: "dpcseriesdetails_Large_3nOXZ",
         DPCSeriesDetailsHeader: "dpcseriesdetails_DPCSeriesDetailsHeader_2HQCI",
         CenterSection: "dpcseriesdetails_CenterSection_UrSWZ",
         Label: "dpcseriesdetails_Label_1V1Wh",
@@ -40455,6 +40537,8 @@ var CLSTAMP = "6812683";
         DPCSeriesDetailsGameLive:
           "dpcseriesdetails_DPCSeriesDetailsGameLive_nCZFk",
         VideoContainer: "dpcseriesdetails_VideoContainer_VjKmb",
+        Chat: "dpcseriesdetails_Chat_2v3Ng",
+        Shown: "dpcseriesdetails_Shown_1WcYV",
         OptionContainer: "dpcseriesdetails_OptionContainer_3ik_p",
         StreamingOption: "dpcseriesdetails_StreamingOption_Yn4qv",
         Enabled: "dpcseriesdetails_Enabled_1QP1p",
@@ -40475,7 +40559,9 @@ var CLSTAMP = "6812683";
         Contents: "dpcseriesdetails_Contents_aiYFX",
         ExternalLinkIcon: "dpcseriesdetails_ExternalLinkIcon_jUjvT",
         RightTabs: "dpcseriesdetails_RightTabs_xaEuz",
+        HasChatOption: "dpcseriesdetails_HasChatOption_FO7s3",
         SizeTab: "dpcseriesdetails_SizeTab_15EXl",
+        RightGap: "dpcseriesdetails_RightGap_1yg5E",
         SizeTabImage: "dpcseriesdetails_SizeTabImage_3QGgN",
       };
     },

@@ -24947,6 +24947,11 @@ a {
   transition-duration: 0.2s;
 }
 .dpcseriesdetails_DPCSeriesDetails_cpS5D
+  .dpcseriesdetails_BGContainer_1INUQ.dpcseriesdetails_ShowChat_2HPXB
+  .dpcseriesdetails_Container_2jjhf {
+  max-width: 1260px;
+}
+.dpcseriesdetails_DPCSeriesDetails_cpS5D
   .dpcseriesdetails_BGContainer_1INUQ.dpcseriesdetails_Large_3nOXZ {
   height: 1200px;
 }
@@ -24954,6 +24959,11 @@ a {
   .dpcseriesdetails_BGContainer_1INUQ.dpcseriesdetails_Large_3nOXZ
   .dpcseriesdetails_Container_2jjhf {
   max-width: 1440px;
+}
+.dpcseriesdetails_DPCSeriesDetails_cpS5D
+  .dpcseriesdetails_BGContainer_1INUQ.dpcseriesdetails_ShowChat_2HPXB.dpcseriesdetails_Large_3nOXZ
+  .dpcseriesdetails_Container_2jjhf {
+  max-width: 1740px;
 }
 .dpcseriesdetails_DPCSeriesDetails_cpS5D
   .dpcseriesdetails_BGContainer_1INUQ
@@ -25084,6 +25094,12 @@ a {
 }
 .dpcseriesdetails_DPCSeriesDetailsHeaderTeam_1Ffo-.dpcseriesdetails_Large_3nOXZ {
   width: 600px;
+}
+.dpcseriesdetails_DPCSeriesDetailsHeaderTeam_1Ffo-.dpcseriesdetails_ShowChat_2HPXB {
+  width: 515px;
+}
+.dpcseriesdetails_DPCSeriesDetailsHeaderTeam_1Ffo-.dpcseriesdetails_Large_3nOXZ.dpcseriesdetails_ShowChat_2HPXB {
+  width: 750px;
 }
 .dpcseriesdetails_DPCSeriesDetailsHeaderTeam_1Ffo-.dpcseriesdetails_Left_2at7C {
   clip-path: polygon(0px 0px, calc(100% - 40px) 0px, 100% 110px, 0px 110px);
@@ -26102,8 +26118,9 @@ a {
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
 .dpcseriesdetails_DPCSeriesDetailsGameLive_nCZFk.dpcseriesdetails_Large_3nOXZ
   .dpcseriesdetails_VideoContainer_VjKmb {
@@ -26116,6 +26133,16 @@ a {
   transition-property: height;
   transition-timing-function: ease-in-out;
   transition-duration: 0.2s;
+}
+.dpcseriesdetails_DPCSeriesDetailsGameLive_nCZFk .dpcseriesdetails_Chat_2v3Ng {
+  width: 300px;
+  min-width: 300px;
+  height: 100%;
+  display: none;
+}
+.dpcseriesdetails_DPCSeriesDetailsGameLive_nCZFk
+  .dpcseriesdetails_Chat_2v3Ng.dpcseriesdetails_Shown_1WcYV {
+  display: block;
 }
 .dpcseriesdetails_DPCSeriesDetailsGameLive_nCZFk
   .dpcseriesdetails_OptionContainer_3ik_p {
@@ -26371,6 +26398,10 @@ a {
   flex-direction: row;
 }
 .dpcseriesdetails_DPCSeriesFooter_3m_vu
+  .dpcseriesdetails_RightTabs_xaEuz.dpcseriesdetails_HasChatOption_FO7s3 {
+  width: 175px;
+}
+.dpcseriesdetails_DPCSeriesFooter_3m_vu
   .dpcseriesdetails_RightTabs_xaEuz
   .dpcseriesdetails_SizeTab_15EXl {
   flex-grow: 1;
@@ -26381,6 +26412,12 @@ a {
   align-items: center;
   border-left: 1px solid #1b1b1f;
   cursor: pointer;
+}
+.dpcseriesdetails_DPCSeriesFooter_3m_vu
+  .dpcseriesdetails_RightTabs_xaEuz
+  .dpcseriesdetails_SizeTab_15EXl.dpcseriesdetails_RightGap_1yg5E {
+  margin-right: 10px;
+  border-right: 1px solid #1b1b1b;
 }
 .dpcseriesdetails_DPCSeriesFooter_3m_vu
   .dpcseriesdetails_RightTabs_xaEuz
