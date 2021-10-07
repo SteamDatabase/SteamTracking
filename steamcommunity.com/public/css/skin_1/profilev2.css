@@ -611,6 +611,31 @@ body.profile_page.flat_page #footer_spacer {
 	white-space: nowrap;
 }
 
+.profile_header_valve_employee {
+	background-color: rgba(0, 0, 0, 0.3);
+	padding: 5px 10px 5px 10px;
+}
+
+.profile_header_valve_employee_icon {
+	position: absolute;
+	vertical-align: middle;
+	background-image: url( 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6N0IyODU2QjE4MThEMTFFNEIxNUZBOUMwRkZDMkI3Q0IiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6N0IyODU2QjI4MThEMTFFNEIxNUZBOUMwRkZDMkI3Q0IiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3QjI4NTZBRjgxOEQxMUU0QjE1RkE5QzBGRkMyQjdDQiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3QjI4NTZCMDgxOEQxMUU0QjE1RkE5QzBGRkMyQjdDQiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pqu1o0MAAAERSURBVHjapFOBDYIwECyEAWQAEkYoG+gE6ATIZjCBOoFsABtowgB2A7w3VywVDMZPPi3P3X3/+w2GYVCu9X1/xFLAt2pqDbxOkqRyg4EVADHFcoJruIAucEPcBp7DRbyDHyB0HwVIbuESLPGzUzPmJJE1ExEr0BKzQ9AQvCdYMeOZcTnNVfaIZSFr1gQZJ2Hu7LXdEFNKTLghG1bZmhy7OPtJSSxR+lRE7PbBr5dHDtSySYJTxA/jNUvqvLH7BmLxjMCLE84JeLb58m8USL3jL2X9EA45Ybn63YTTiEAtE4a69VomsXL99eIgEfhgSbHX4Pcg2UljH64cV9uL2CNrklN79WsekyFh+TH985yfAgwA6tSJc+P+wyYAAAAASUVORK5CYII=' );
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 5px 10px 10px 0px;
+	width: 32px;
+	height: 32px;
+}
+.profile_header_valve_employee_desc {
+	display: inline-block;
+	padding: 5px 10px 10px 48px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			color: #ffffff;
+	font-size: 14px;
+}
+
 .profile_header .persona_name .nickname {
 	color: #9b9b9b;
 }
