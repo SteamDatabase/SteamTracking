@@ -21126,7 +21126,7 @@ file://{resources}/layout/settings/settings_about.xml
 build_date
 Oct  7 2021
 build_time
-15:27:55
+17:02:00
 package_version
 local
 SteamClient020
@@ -28586,7 +28586,7 @@ https://steamchina.com
 https://www.steampowered.com
 WebsiteURL
 steam/cached/aboutdialog.res
-15:28:37
+17:02:38
 CAboutDialog
 ValveSurveySummarizeData
 #steam_systeminfo_title
@@ -30271,7 +30271,7 @@ sOSVersionId
 sOSBuildId
 nSteamVersion
 sSteamBuildDate
-Oct  7 2021 : 15:28:42
+Oct  7 2021 : 17:02:43
 sSteamAPI
 sCPUVendor
 sCPUName
