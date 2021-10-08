@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6816444";
+var CLSTAMP = "6817655";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [1],
   {
@@ -10793,19 +10793,19 @@ var CLSTAMP = "6816444";
             switch (s) {
               case c.k.NA:
               case c.k.WEU:
-                l.push.apply(l, [0, 8, 6, 5, 11]);
+                l.push.apply(l, [0, 8, 6, 5, 11, 22]);
                 break;
               case c.k.SA:
-                l.push.apply(l, [11, 5, 0, 8, 6]);
+                l.push.apply(l, [11, 22, 5, 0, 8, 6]);
                 break;
               case c.k.EEU:
-                l.push.apply(l, [8, 0, 6, 5, 11]);
+                l.push.apply(l, [8, 0, 6, 5, 11, 22]);
                 break;
               case c.k.CN:
-                l.push.apply(l, [6, 0, 8, 5, 11]);
+                l.push.apply(l, [6, 0, 8, 5, 11, 22]);
                 break;
               case c.k.SEA:
-                l.push.apply(l, [0, 6, 8, 5, 11]);
+                l.push.apply(l, [0, 6, 8, 5, 11, 22]);
             }
             return null == i
               ? void 0
@@ -29386,8 +29386,12 @@ var CLSTAMP = "6816444";
               if (
                 (null == s ||
                   s.forEach(function (e, t) {
-                    var a = void 0;
-                    switch (e.broadcast_provider) {
+                    var a = void 0,
+                      n = e.language;
+                    switch (
+                      (11 == e.language && (e.language = 22),
+                      e.broadcast_provider)
+                    ) {
                       case va.c.LEAGUE_BROADCAST_STEAM:
                         a = "#dpc_steam";
                         break;
@@ -29400,7 +29404,7 @@ var CLSTAMP = "6816444";
                         "" +
                         Object(_.a)(a) +
                         (a && " - ") +
-                        Object(_.a)("#Language_" + Object(h.a)(e.language)),
+                        Object(_.a)("#Language_" + Object(h.a)(n)),
                     });
                   }),
                 (null == s ? void 0 : s.length) > e.nSelectedVideo)
@@ -29430,8 +29434,12 @@ var CLSTAMP = "6816444";
                           return t.stream_id == e.stream_id;
                         });
                   if (a) {
-                    var n = void 0;
-                    switch (a.broadcast_provider) {
+                    var n = void 0,
+                      o = a.language;
+                    switch (
+                      (11 == a.language && (a.language = 22),
+                      a.broadcast_provider)
+                    ) {
                       case va.c.LEAGUE_BROADCAST_STEAM:
                         n = "#dpc_steam";
                         break;
@@ -29444,7 +29452,7 @@ var CLSTAMP = "6816444";
                         "" +
                         Object(_.a)(n) +
                         (n && " - ") +
-                        Object(_.a)("#Language_" + Object(h.a)(a.language)),
+                        Object(_.a)("#Language_" + Object(h.a)(o)),
                     });
                   }
                 }),
