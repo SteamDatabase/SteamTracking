@@ -20420,6 +20420,15 @@ hr {
   td {
   background: #53275f;
 }
+.discountdashboard_DiscountGridCtn_12vp3 .discountdashboard_PackageID_3Iu6M,
+.discountdashboard_DiscountGridCtn_12vp3 .discountdashboard_BasePrice_3KOPg,
+.discountdashboard_DiscountGridCtn_12vp3
+  .discountdashboard_DeepestDiscount_1ovOp {
+  color: #bbb;
+}
+.discountdashboard_DiscountGridCtn_12vp3 .discountdashboard_PackageName_3PXbm {
+  color: #fff;
+}
 .discountdashboard_CreateCustomDiscountCtn_1cmL4 {
   position: relative;
 }
@@ -20449,65 +20458,6 @@ hr {
   .discountdashboard_DiscountOptionsCtn_1ZxxH {
   display: flex;
 }
-.dailydealeditor_PageTitle_2bGMg {
-  font-size: 24px;
-  color: #fff;
-  margin-top: 20px;
-}
-.dailydealeditor_AppCtn_2dVit {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.dailydealeditor_AppCtn_2dVit .dailydealeditor_AppInfoCtn_qvpYb {
-  margin-left: 12px;
-  flex-grow: 1;
-}
-.dailydealeditor_AppCtn_2dVit
-  .dailydealeditor_AppInfoCtn_qvpYb
-  .dailydealeditor_AppName_8WOz4 {
-  font-size: 20px;
-  color: #fff;
-  font-weight: 500;
-}
-.dailydealeditor_AppCtn_2dVit .dailydealeditor_AppCapsule_3Dt-8 {
-  max-height: 100px;
-  width: auto;
-}
-.dailydealeditor_AppCtn_2dVit .dailydealeditor_UpdateBtnCtn_aMJT0 {
-  width: 200px;
-  height: 40px;
-  flex-shrink: 0;
-}
-.dailydealeditor_SectionCtn_247gA {
-  display: flex;
-  flex-flow: row wrap;
-}
-.dailydealeditor_SectionHdr_14AcV {
-  font-weight: bold;
-  color: #87cefa;
-  padding-top: 8px;
-}
-.dailydealeditor_CheckBoxSize_1wywL {
-  min-width: 200px;
-}
-.dailydealeditor_EditCtn_1arRU {
-  margin-top: 24px;
-}
-.dailydealeditor_LocationCtn_1TvAw {
-  margin-top: 30px;
-}
-.dailydealeditor_ButtonRow_2fO-C {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  width: 100%;
-}
-.dailydealeditor_ButtonRow_2fO-C button {
-  width: 25%;
-  margin-left: 8px;
-}
 .partnersiteappsearch_Results_3mK1P {
   max-height: 35vh;
   overflow-y: auto;
@@ -20531,7 +20481,15 @@ hr {
 .partnersiteappsearch_ResultRow_1QyQu:last-child {
   border-bottom: none;
 }
-.partnersiteappsearch_ResultRow_1QyQu .partnersiteappsearch_AvatarImage_PBBKP {
+.partnersiteappsearch_ResultRow_1QyQu
+  .partnersiteappsearch_AvatarImageCtn_3h9l9 {
+  width: 64px;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.partnersiteappsearch_ResultRow_1QyQu
+  .partnersiteappsearch_AvatarImageCtn_3h9l9
+  .partnersiteappsearch_AvatarImage_PBBKP {
   width: auto;
   height: 30px;
   flex-shrink: 0;
@@ -20595,9 +20553,70 @@ hr {
   flex-direction: row;
   align-content: center;
 }
+.dailydealadmincreatenew_DealCapCtn_3n8tu,
 .dailydealadmincreatenew_PackageSelectCtn_2ytWm,
-.dailydealadmincreatenew_FeatureSelectCtn_RhuUZ {
+.dailydealadmincreatenew_FeatureSelectCtn_RhuUZ,
+.dailydealadmincreatenew_AssociatedPartnerCtn_1wLwc {
   margin-bottom: 24px;
+}
+.dailydealeditor_PageTitle_2bGMg {
+  font-size: 24px;
+  color: #fff;
+  margin-top: 20px;
+}
+.dailydealeditor_AppCtn_2dVit {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.dailydealeditor_AppCtn_2dVit .dailydealeditor_AppInfoCtn_qvpYb {
+  margin-left: 12px;
+  flex-grow: 1;
+}
+.dailydealeditor_AppCtn_2dVit
+  .dailydealeditor_AppInfoCtn_qvpYb
+  .dailydealeditor_AppName_8WOz4 {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 500;
+}
+.dailydealeditor_AppCtn_2dVit .dailydealeditor_AppCapsule_3Dt-8 {
+  max-height: 100px;
+  width: auto;
+}
+.dailydealeditor_AppCtn_2dVit .dailydealeditor_UpdateBtnCtn_aMJT0 {
+  width: 200px;
+  height: 40px;
+  flex-shrink: 0;
+}
+.dailydealeditor_SectionCtn_247gA {
+  display: flex;
+  flex-flow: row wrap;
+}
+.dailydealeditor_SectionHdr_14AcV {
+  font-weight: bold;
+  color: #87cefa;
+  padding-top: 8px;
+}
+.dailydealeditor_CheckBoxSize_1wywL {
+  min-width: 200px;
+}
+.dailydealeditor_EditCtn_1arRU {
+  margin-top: 24px;
+}
+.dailydealeditor_LocationCtn_1TvAw {
+  margin-top: 30px;
+}
+.dailydealeditor_ButtonRow_2fO-C {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+}
+.dailydealeditor_ButtonRow_2fO-C button {
+  width: 25%;
+  margin-left: 8px;
 }
 @keyframes shared_icons_SpinnerSpokeFade_33nZz {
   0% {
@@ -20744,13 +20763,12 @@ hr {
 }
 .dailydealcalendar_DealSection_jxKWo.dailydealcalendar_PastEntry_3E1Fg {
   opacity: 0.3;
-  transition: opacity 0.3s ease;
-}
-.dailydealcalendar_DealSection_jxKWo.dailydealcalendar_PastEntry_3E1Fg:hover {
-  opacity: 1;
 }
 .dailydealcalendar_DealSection_jxKWo.dailydealcalendar_TodayEntry_lafVM {
   border: 1px solid #bcf1f1;
+}
+.dailydealcalendar_DealSection_jxKWo.dailydealcalendar_FutureEntry_15wQf {
+  border: none;
 }
 .invitesdashboard_SelectedAppCtn_1kLuQ {
   margin: 20px 0px;
@@ -20769,6 +20787,20 @@ hr {
 }
 .invitesdashboard_DialogCtn_21-QG {
   margin-top: 20px;
+}
+.invitesdashboard_InviteBtnCtn_2iMIj button.DialogButton {
+  padding: 2px 12px;
+}
+.dailydealarchives_SearchCtn_1xsEI {
+  margin-top: 30px;
+}
+.dailydealarchives_ResultRow_ddpG1 {
+  display: flex;
+  font-size: 16px;
+  color: #97a0af;
+  background: #3d4450;
+  padding: 4px 8px;
+  margin-bottom: 1px;
 }
 .featuring_Featuring_3T5cu {
   width: 160px;

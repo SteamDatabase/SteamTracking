@@ -28708,7 +28708,7 @@ a {
   opacity: 0;
 }
 .dpcstandings_LegendContainer_rde9K {
-  margin-top: 80px;
+  margin-top: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -28753,6 +28753,23 @@ a {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 80px;
+}
+.dpcstandings_DPCStandingsRoundRobin_3gskr .dpcstandings_Tiebreakers_12Wpk {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.dpcstandings_DPCStandingsRoundRobin_3gskr
+  .dpcstandings_Tiebreakers_12Wpk
+  .dpcstandings_Title_1j7g0 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 .dpcstandings_DPCStandingsRoundRobin_3gskr .dpcstandings_Standings_2xuCM {
   display: flex;
@@ -28804,6 +28821,7 @@ a {
   .dpcstandings_Header_3Kf0X {
   width: 100%;
   height: 40px;
+  min-height: 40px;
   background-color: #36363e;
   display: flex;
   flex-direction: column;

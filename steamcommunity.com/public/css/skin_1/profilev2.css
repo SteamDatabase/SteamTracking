@@ -636,6 +636,9 @@ body.profile_page.flat_page #footer_spacer {
 	font-size: 14px;
 }
 
+.profile_header_valve_employee_desc a {
+    text-decoration: underline;
+}
 .profile_header .persona_name .nickname {
 	color: #9b9b9b;
 }

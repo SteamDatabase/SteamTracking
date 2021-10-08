@@ -698,6 +698,7 @@
     "dpc_division_lower": "Lower",
     "dpc_division_upper": "Upper",
     "dpc_division_major": "Major",
+    "dpc_tiebreakers": "Tiebreakers",
     "dpc_next_match": "Next Match %1$s",
     "dpc_last_match": "Last Match",
     "dpc_last_match_loss": "Last Match [color=#FF5E5E]Loss %1$s-%2$s[\/color] vs",
