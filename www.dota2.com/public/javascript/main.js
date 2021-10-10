@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6818776";
+var CLSTAMP = "6820293";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [1],
   {
@@ -10369,7 +10369,6 @@ var CLSTAMP = "6818776";
           }),
           (e.prototype.SetSpoilerBlockEnabled = function (e) {
             (this.m_eSpoilerBlock = e ? c.l.BLOCKED : c.l.UNBLOCKED),
-              console.log("SETTING BLOCK", e),
               localStorage.setItem("bSpoilerBlockEnabled", e ? "1" : "0"),
               0 != l.a.ACCOUNT_ID &&
                 s.a.post(l.a.BASE_URL + "react/setspoilerblock", {
@@ -34739,13 +34738,13 @@ var CLSTAMP = "6818776";
               "div",
               { className: jn.a.DPCHomePage },
               i.a.createElement(rn, null),
-              i.a.createElement(ir, null),
               i.a.createElement(ar, null),
               i.a.createElement(cr, null),
-              i.a.createElement(or, null),
-              i.a.createElement(lr, null),
               i.a.createElement(ur, null),
               i.a.createElement(Zn, null),
+              i.a.createElement(or, null),
+              i.a.createElement(ir, null),
+              i.a.createElement(lr, null),
               i.a.createElement(mr, null)
             )
           );
