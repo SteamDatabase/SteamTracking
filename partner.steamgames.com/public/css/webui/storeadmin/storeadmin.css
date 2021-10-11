@@ -20802,6 +20802,16 @@ hr {
   padding: 4px 8px;
   margin-bottom: 1px;
 }
+.dailydealpartnerinfo_InfoCtn_1__uv {
+  display: flex;
+  flex-direction: row;
+}
+.dailydealpartnerinfo_Title_2Ttas {
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: large;
+}
 .featuring_Featuring_3T5cu {
   width: 160px;
   flex: none;
