@@ -42,9 +42,9 @@ GameHubGuides
 }
 GameHubNews
 {
-	url			"%community%/app/%p1%/allnews/"
+	url			"%store%/news/app/%p1%/"
 	method		"internal"
-	filter		"community"
+	filter		"news"
 }
 GameHubDiscussions
 {
@@ -228,25 +228,19 @@ SteamIDProfileBG
 }
 AllPartnerEvents
 {
-	url			"%store%/events/app/%p1%"
+	url			"%store%/news/app/%p1%"
 	method		"internal"
 	filter		"news"
 }
 PartnerEvent
 {
-	url			"%community%/ogg/%p1%/partnerevents/view/%p2%"
+	url			"%store%/news/app/%p1%/view/%p2%"
 	method		"internal"
 	filter		"news"
 }
 EventAnnouncementPage
 {
-	url			"%community%/games/%p1%/announcements/detail/%p2%"
-	method		"internal"
-	filter		"community"
-}
-PartnerEventOld
-{
-	url			"%community%/ogg/%p1%/partnerevents/view_old_announcement/%p2%"
+	url			"%store%/news/app/%p1%/view/%p2%"
 	method		"internal"
 	filter		"news"
 }
@@ -609,14 +603,14 @@ GiftActivationPage
 
 AppNewsPage
 {
-	url			"%news%/?appids=%p1%"
+	url			"%store%/news/apps/%p1%?updates=true"
 	method		"internal"
 	filter		"news"
 }
 
 SteamClientNewsPage
 {
-	url			"http://storefront.steampowered.com/platform/update_history/index.php"
+	url			"%community%/news/client"
 	method		"internal"
 }
 
@@ -640,7 +634,7 @@ SteamClientBetaBugReports
 
 NewsHomePage
 {
-	url			"%news%"
+	url			"%store%/news"
 	method		"internal"
 	filter		"news"
 }
@@ -731,7 +725,7 @@ StoreWallet
 
 SteamAnnouncements
 {
-	url		"%community%/games/593110/announcements/"
+	url		"%store%/news/app/593110/?megaphone=1"
 	method	"internal"
 }
 
