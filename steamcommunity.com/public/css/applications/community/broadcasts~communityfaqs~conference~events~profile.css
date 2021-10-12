@@ -4712,6 +4712,8 @@ body.v6.partner_events {
   }
 }
 .partnereventdisplay_DisplayAdminPanel_XshNh {
+  position: relative;
+  z-index: 2;
   padding-top: 50px;
 }
 .partnereventdisplay_DisplayAdminPanel_ctn_1SQm1 {
@@ -10530,9 +10532,20 @@ span.partnersaledisplay_vr_required_1P__h {
   width: 100%;
   overflow: hidden;
 }
-.partnersaledisplay_fullscreen_bg__video_FXgrB {
+.partnersaledisplay_fullscreen_bg_video_3BU-y {
+  position: fixed;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
   margin-left: 50%;
   transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 910px) {
+  .partnersaledisplay_fullscreen_bg_video_3BU-y {
+    display: none;
+  }
 }
 .partnersaledisplay_SalePageBroadcastContextHover_hbVdl {
   display: flex;

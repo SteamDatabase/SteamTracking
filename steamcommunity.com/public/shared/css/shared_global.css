@@ -1141,6 +1141,12 @@ div#global_header {
 			font-size: 14px;
 }
 
+.partner_events div#global_header
+{
+	position: relative;
+	z-index: 2;
+}
+
 div#global_header .content {
 	background: #171a21;
 	position: relative;

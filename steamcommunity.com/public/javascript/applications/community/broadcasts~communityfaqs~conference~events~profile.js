@@ -14394,8 +14394,8 @@
                       },
                       Boolean(d || l) &&
                         o.createElement(
-                          "div",
-                          { className: Ve.a.fullscreen_bg },
+                          F.a,
+                          null,
                           o.createElement(
                             "video",
                             {
@@ -14408,12 +14408,9 @@
                                   "CustomStyle_" + a.jsondata.sale_vanity_id
                                 ],
                                 "SaleBackground",
-                                Ve.a.fullscreen_bg__video
+                                Ve.a.fullscreen_bg_video
                               ),
                               style: {
-                                display: "flex",
-                                position: "relative",
-                                flexDirection: "column",
                                 backgroundColor: i
                                   ? a.jsondata.sale_background_color
                                   : void 0,
@@ -39877,7 +39874,7 @@
           "partnersaledisplay_preview_placeholder_section_3QLsj",
         LinkCapsule: "partnersaledisplay_LinkCapsule_2zVSa",
         fullscreen_bg: "partnersaledisplay_fullscreen_bg_j2ykT",
-        fullscreen_bg__video: "partnersaledisplay_fullscreen_bg__video_FXgrB",
+        fullscreen_bg_video: "partnersaledisplay_fullscreen_bg_video_3BU-y",
         SalePageBroadcastContextHover:
           "partnersaledisplay_SalePageBroadcastContextHover_hbVdl",
         AlbumCoverImage: "partnersaledisplay_AlbumCoverImage_2JfUA",
