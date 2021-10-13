@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6825630";
+var CLSTAMP = "6826029";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [1],
   {
@@ -10716,11 +10716,15 @@ var CLSTAMP = "6825630";
                               c = r.has_started && !r.is_completed;
                             if (!l || c)
                               if (!c || l) {
-                                var d = s.actual_time
-                                    ? s.actual_time
-                                    : s.scheduled_time,
-                                  u = Math.abs(a - d);
-                                Math.abs(a - i) < u && (o = e);
+                                var d = s.is_completed,
+                                  u = r.is_completed;
+                                if (d || !u)
+                                  if (u || !d) {
+                                    var m = s.actual_time
+                                      ? s.actual_time
+                                      : s.scheduled_time;
+                                    a - i < a - m && (o = e);
+                                  } else o = e;
                               } else o = e;
                           } else o = e;
                       }
@@ -11138,6 +11142,7 @@ var CLSTAMP = "6825630";
         DPCScheduleGameDetails: "dpcschedulepage_DPCScheduleGameDetails_vZFal",
         Time: "dpcschedulepage_Time_3jI-0",
         WatchedBox: "dpcschedulepage_WatchedBox_2UkRa",
+        MarkWatchedButton: "dpcschedulepage_MarkWatchedButton_3c4N6",
         HeroList: "dpcschedulepage_HeroList_19hC7",
         HeroIcon: "dpcschedulepage_HeroIcon_3Fgzz",
         Center: "dpcschedulepage_Center_31Hvu",
@@ -35797,6 +35802,17 @@ var CLSTAMP = "6825630";
                   "div",
                   { className: Ir.a.WatchedBox },
                   Object(_.a)("#dpc_watched")
+                ),
+              !E &&
+                i.a.createElement(
+                  "div",
+                  {
+                    className: Ir.a.MarkWatchedButton,
+                    onClick: function () {
+                      return Ra.a.Get().SetGameWatched(a, n, s);
+                    },
+                  },
+                  Object(_.a)("#dpc_mark_watched")
                 )
             ),
             i.a.createElement(

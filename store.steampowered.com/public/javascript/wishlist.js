@@ -343,6 +343,9 @@ CWishlistController.prototype.BuildElements = function()
 			if ( g_bIsMobileAgent ) // remove parens around remove text
 				strAdded = strAdded.replace('(', '').replace(')', '');
 
+			if ( g_bIsTabletAgent )
+                strPurchaseArea = "";
+
 			var $el = $J(
 				g_strRowTemplate.replace(/%1\$s/g, wishlist.appid)
 					.replace(/%2\$s/g, rgAppInfo['capsule'])

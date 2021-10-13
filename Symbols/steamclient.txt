@@ -714,7 +714,6 @@
  listen$UNIX2003
  localeconv
  localtime
- localtime_r
  log
  log10
  log2f

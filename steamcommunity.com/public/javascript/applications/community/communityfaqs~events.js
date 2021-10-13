@@ -2615,10 +2615,10 @@
                 return Object(a.e)(this, function (a) {
                   switch (a.label) {
                     case 0:
-                      return (
-                        (e = o.GetEventModel().GetTaggedItems()),
-                        [4, U(n.facets, e)]
-                      );
+                      return 0 ===
+                        (e = o.GetEventModel().GetTaggedItems()).length
+                        ? [2]
+                        : [4, U(n.facets, e)];
                     case 1:
                       for (a.sent(), t = 0, l = n.facets; t < l.length; t++)
                         (s = l[t]).facetValues = s.facetValues.filter(function (
@@ -5311,8 +5311,10 @@
           ) {
             var l = o[r];
             if (
-              (l.sale_tag_filter &&
-                (l.capsules = L(t, l.sale_tag_filter, l.capsules)),
+              ("sale_item_browser" === l.section_type
+                ? (l.capsules = void 0)
+                : l.sale_tag_filter &&
+                  (l.capsules = L(t, l.sale_tag_filter, l.capsules)),
               l.tabs)
             )
               for (var s = 0, c = l.tabs; s < c.length; s++) {
@@ -15215,6 +15217,10 @@
           (t.prototype.ToggleMinimized = function (e, t) {
             Object(l.d)(this.GetMinimizedTag(e), t);
           }),
+          (t.prototype.OnChangeContentHubOverrideKey = function (e) {
+            (this.props.saleSection.contenthub_override_section = e.target.value.trim()),
+              this.props.editModel.SetDirty(o.c.jsondata_sales);
+          }),
           (t.prototype.render = function () {
             var e = this,
               t = this.props,
@@ -15563,7 +15569,24 @@
                             toggleMinimized: function () {
                               return e.ToggleMinimized("tabsettings", !0);
                             },
-                          })
+                          }),
+                          d.createElement(
+                            F.b,
+                            {
+                              clanSteamID: n.GetClanSteamID(),
+                              requireAdmin: !0,
+                            },
+                            d.createElement(m.m, {
+                              value: i.contenthub_override_section,
+                              onChange: this.OnChangeContentHubOverrideKey,
+                              label: Object(h.f)(
+                                "#SaleSection_ContentHub_Override"
+                              ),
+                              tooltip: Object(h.f)(
+                                "#SaleSection_ContentHub_Override_Tooltip"
+                              ),
+                            })
+                          )
                         ),
                         "unselected_empty" !=
                           (v = this.props.saleSection.section_type) &&
@@ -15592,6 +15615,12 @@
           Object(a.c)([f.a], t.prototype, "MoveSection", null),
           Object(a.c)([f.a], t.prototype, "GetMinimized", null),
           Object(a.c)([f.a], t.prototype, "ToggleMinimized", null),
+          Object(a.c)(
+            [f.a],
+            t.prototype,
+            "OnChangeContentHubOverrideKey",
+            null
+          ),
           (t = Object(a.c)([u.a], t))
         );
       })(d.Component);
@@ -16704,8 +16733,20 @@
                     rgOptions: p,
                     selectedOption: f.item_source_type || fe.n.k_ETaggedItems,
                     onChange: function (e) {
-                      (l.GetEventModel().jsondata.item_source_type = e.data),
-                        l.SetDirty(o.c.jsondata_sales);
+                      if (
+                        ((l.GetEventModel().jsondata.item_source_type = e.data),
+                        e.data === fe.n.k_EContentHub)
+                      ) {
+                        var t = {
+                          type: l.GetEventModel().GetContentHubType(),
+                          category: l.GetEventModel().GetContentHubCategory(),
+                          tagid: l.GetEventModel().GetContentHubTag(),
+                        };
+                        (l.GetEventModel().jsondata.source_content_hub = t),
+                          l.GetEventModel().jsondata
+                            .bAutoUpdateVanityURLForContentHub && _t(t, l);
+                      }
+                      l.SetDirty(o.c.jsondata_sales);
                     },
                   }),
                   f.item_source_type === fe.n.k_EContentHub &&

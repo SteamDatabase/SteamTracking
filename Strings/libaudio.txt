@@ -40,7 +40,6 @@ __image_info
 __OBJC
 __LINKEDIT
 @loader_path/libaudio.dylib
-S.nO
 @loader_path/libtier0_s.dylib
 @loader_path/libvstdlib_s.dylib
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
@@ -67,6 +66,7 @@ QVWR
  ^_]
 QPRW
 ^_[]
+(^_[]
 ^_[]
 ,^_[]
 ^_[]
@@ -126,7 +126,6 @@ VRQP
 ^_[]
 <^_[]
 ^_[]
-(^_[]
 ^_[]
 ^_[]
 ^_[]
@@ -481,6 +480,7 @@ H2":Ht
 J 4&>
 (B0J
 	Z:NF
+JDNB*b
 _AudioSinkList
 _CreateInterface
 _CreateMilesMusicAudioDevice
@@ -565,20 +565,20 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-WHj5
+l!7W
+Y27b|t
+!By`
 -eZ8:
 ur-)
-)=3K
 DXLX
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-NueD
-QE#h
-	Th!
+ZQ?f
+,})M
+:^px
 "4N_
-pR{*
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -634,8 +634,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211012183007Z0/
-']O0-
+211012222053Z0/
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -643,16 +642,16 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		LvIydz4F9ekBdWXRDs/o3MknXU8=
+		BLQbWQ+z0AwMtuVXxIBL9yA5kak=
 		</data>
 		<data>
-		0VVkbugkEKGuIX8z410qOYCt9bs=
+		77g5wFhq/qhlPCMVF5sPPYvvzeg=
 		</data>
 	</array>
 </dict>
 </plist>
--)?dI9
-20211012183046Z0
+w?xe
+20211012222133Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -705,12 +704,7 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211012183046Z0#
-ar)'P
-b![s
-z/ .
-+zs,80
-CtON;
+211012222133Z0#
 __TEXT
 __text
 __TEXT
@@ -1460,7 +1454,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211012183008Z0/
+211012222053Z0/
 ,)haT
 dAj1
 H<?xml version="1.0" encoding="UTF-8"?>
@@ -1478,9 +1472,8 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	</array>
 </dict>
 </plist>
-#,@Zj
-(is$
-20211012183046Z0
+wM-N[
+20211012222133Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -1540,12 +1533,12 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211012183046Z0#
+211012222133Z0#
 d3ZM`
-vLo}*
-=rqx
-Ue*}	
-Waq-[
+Sj@K
+c]Xu
+Fd E
+N}Ma
 __TEXT
 __text
 __TEXT
@@ -2100,7 +2093,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211012183008Z0/
+211012222053Z0/
 }':H
 =R#P
 H<?xml version="1.0" encoding="UTF-8"?>
@@ -2118,10 +2111,12 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	</array>
 </dict>
 </plist>
-IaT4
-{e`G
-iv!I
-20211012183046Z0
+;XkdW
+;$C"
+~-LD
+jgei
+h$$q5
+20211012222133Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -2174,9 +2169,7 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211012183046Z0#
-lcJ~CR
-$[&r-|
-Sm	D	
-bB9q
-zt=#P
+211012222133Z0#
+b\%p
+|QUR
+~A#U

@@ -3219,6 +3219,7 @@ $3T$
 3\$$1
 3|$ 1
 3l$4
+>!w"
 3L$<
 T$(1
 l$,1
@@ -3397,7 +3398,6 @@ L$dA9L$P
 ^_[]
 fff.
 USWV
-0P("
 \$$t
 L$,t'
 |$4f
@@ -3405,7 +3405,7 @@ t9GKu
 l$$E
 D$$x	E
 L^_[]
-26$"
+2v$"
 fff.
 USWV
 D$P$
@@ -3432,7 +3432,6 @@ USWV
 ;L$(uS
 ,^_[]
 ;L$(t
-hB "
 T$D1
 ;L$(
 L$Dt
@@ -27365,7 +27364,7 @@ crashhandler002
 crashhandler.dylib
 Steam
 Oct 12 2021
-11:28:49
+15:19:33
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
 CatchAndWriteContext_t::Invoke with bogus void *ptr
@@ -30681,7 +30680,7 @@ X+	>
 lv@L
 @rJP
 ZRZjj
-	PP``pp
+PP``pp
 P`@@
 0pp 
   00
@@ -31364,80 +31363,82 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-bW^2
-v\ot
-%?+B[C
-`/(&O
-84Q:
-V<Dt
-U8i\B
-?eH4S
-Mg  @y
-+I^x
-Bj5h
-6kGb"
-NbZ-"l
-$_T 5
-^ZSZ
-{f_{uu
-`	xEl
-D|.U}
-'EAq
-hi)H
-Y}t%
-@;S{
-uke_f0
-T;027Ot
-qG(,
-4hl%
-bKsG$
-=Q60
-q0^T
-B]p}GrF
-3y-5YM
-OHEG
-/1HL=
-'$aO
-/b)_
-N3qH
-8}uDy
-sl._
-YK#t5x;
-|Z\~
-\w5P
-P>=I
-V5o@
-0}'$=
-/iW;
-|OhN9
-3oz?
-@$8v
-xl5a:
-wQp#
-L4g#
-.(@$GVRE?
-B"qQH
-1;Nf~
-EZ<1
-'yQe
-LdP7J8
-uZ{t
-xI8y
-2[g `
-8BB{
-F!|k
-0E-@
-Dd0uR
-r~q*8~
-izUL
-3!z)
-.Qac
-`y'ff
-W>E@
-_bb/
-GfUd
-\re&
-67pZs[
+ZXW&.
+P|X+
+HhJB
+1`lq
+FseG
+Of~k
+P0{G
+,2$cu
+oo: V
+H.q2
+,!RO
+!=jljk
+]R!M
+gR2.j
+ESdN
+"C/'<{
+KlA;
+D\4%
+#~a[
+z8f.(
+<X#	v
+Bobv
+occr
+FboPl
+k[n>
+AY+l
+f}DF
+fOX|
+m8=3*Ik
+!;.P
+j;`W
+uPbVK
+G`iO
+}9Qj"Q.7
+|IKP
+BN/QB9z
+fVt7EB
+\)gO
+JV;@
+.r[.v
+CIf	?+
+1d1b
+whgl
+ztaI
+U/YV
+HRW^
+3vu".!
+5kLQp(']
+	LIG
+.]k))
+a?xw]
+8O*hZ
+a.gSt
+d.9H
+O(ilw
+;<}&O
+0CV8
+&oxg
+Eh5 
+Z68a
+7	[B:
+0%^5
+:#<!
+y,<l
+aZ#>z`
+/i7;hJ
+J+0d
+}([z
+nVIy&*e
+9xlR
+XomWrW
+YnA$
+gDU*$
+/-0	
+`q*Lp
+kZ_$
 p1vp
 d}{<
 2\'u$
@@ -31446,121 +31447,100 @@ KI60
 }r3 9
 6Kut
 'vk[
-z0u`{
-&dA/
-x[]I
-^-lx
-1,&Z
-J8vt
-c[za
-x!?m
+0gLj
++tRT
+1uf6
+$e\49
+I7nY]
+`Zt~
+.WkP
+!zyD
+1{48
+^`n"r
+)@[P
+9~A-
 q^w 
 O@r0D
-+9lW
-_	;	
+MN{l
 ;dyK
 4)q2
-.F;U
-TUVg)t
+Fc4NU
++HF(
+vvOZo
+Gz 7:Q
+sa4Tq
 Fa9d
 A7Dm
 =,HL
 Pn s
 @z:&~
+'GsK
 -dGC
 /ThJZ
-4PTY
-z0cV
-H0#7
+JH\)
+Wu;H0#7
 0KSn
-A]$*nR
-nbbK
-02Y8o/a
-H(29fu
-H}2L
-7S"`
-F2ZA
-Yk:t>
-1i}+
-*-(q
+T;>{#
+'(# 
+\ t:@~Z
+bl+MT
+4j+~eI
 @;	Lg;
 Ec6B
 =f5~
-t1pe
-:pvg.Z
+X52NQ
 n@n`
-D7O{
-DB{	
 H\[M
-C-44EY
 ,SUx
-W4&K
-V{*oI^
-9}6X
-R<C`
-$=="'
-YH(iv7
-&/+~
+O'QS#
+qE&?
+6 ~w7
+EJKr
+Dh/+~
 AWu~]
-Qk-F
+H^w$
+f"4M
 B-VD
 x3)Y
 U]b/<
-|u;J
-DV2z
-%fxz
-uC(IVH
-y.i&
+*hvQ
+bfN(JwW
 gzZF"k
-w",=;
-1L~Z
-^;8lB{~
-6C&r>	t7
-:v+ESY
-c7]=
+og x
+\0As
+TD!g
+C9F,
 /3 X
-s 7YuUG
-tUWp
-.	{f
-' =9
-}DPZH
-qh;A
-_C|+o
->0}&g
-z^Jq=
-msG4
-R,$1
-y8d:
-)/25
-'Z#s
-5@'m
-'ZIp
-:VJM
-zZ@#
-2&IU|
-v#3h
-sV r
-C?&A
-R76R:lJ
-{JFIC//
-;dv~>
-7=X9
-!GQb
-*f+?+
-*V"P
-$>*vUFc;J
-|b3M
-sRaq
-}RGG
-U.HBw
-Ln<g
-QutK
-=ZYx
-9XW!
-L1cQ
-49 t_
-wkHQ
++84eu
+M:iQ
+q1#wt	
+e'Nr
+cf<r
+C>D,@i
+w}<W
+c,o\`
+~)cH
+3VmZ
+j ZuB
+ww|Q
+T+7Y
+{`(h[(,M
+mr{X
+1V"#
+yI<9Vm~i
+X!7l
+O'B%
+>QD4
+@B42$M
+tkXt
+.OJJ
+y4u;_
+PP)j
+XT`8q
+dMcn"
 %>E	
++j('
+Vvpd H
 wiYP\{
 8#8 
 UXH1
@@ -31591,158 +31571,166 @@ tCTf]
 m%g2
 ZsQ;
 dI%]
-y8Ufu8
+yv,k\w
+"=~ec
 A[|l
 :"?d
 diwUT
-kpfO3
-EhP-
+kpfO&
+E+\ 
+Q&T,
 [NuRS
-si8R
+,c<v
+Xh2mNj
 qzQP
 3~>T
-5.v'
-q"wMI
-P}i@	
 UmT@<
 y%F2'o
 sn@pV|
 c,[>
-a4A* 
+_uyY
+4A* 
 }/a="$S
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-wAm{
-/ Z	
-Nk* 8q
-k;qaN`
-E\~I'
-M({l
-4Bm1>
-bU@x
-.{(G
-F>Um
-_/\F 
-Rvzr
-M&{M
-U#w7
-"Fqz0
-)2]SyT
-D&RR
-v_ (F
-m$cDX
-3=0e"
-q Kg
-nj6p5
-SgP6(
-xkQ}
-$v4"
-D'LN
-l$pB
-#/Pc
-%*;z
-F7J=.
-{B>l
-reZ!
-(=>m
-f$Q%
-;uIA
-FY5}
-uV_	^
-qY6;
-lecO
-5&xi
-[(^M0M?
-Hsuoj
-=_h-
-5'H7
-wu@7F
-`#P+
-V1v6
-l%*[
-J?m#
-aX5L
-oF%l(
-oX`_
-z"!.	
-b@p$,)
-ad"1
-djm_
-3*epW
-*u+JrDo
-h.,k
-kq4+
-eCNR
-zHva
-%-\n
--	Hq
-fWg`C%|
-9!p2
-m|_O
-*{q,
-1/eF
-/Z1?
-rtEX
-&MJj7x
-!fg/
-`L(j
-O+ef
-:v7|
-h#Tg
-L}K>
-_i'/@
-w_>~
-\m.v9
-v2Sn
-2x22	P
-b3mK
-WaCr
-d/p+
-q<Ndk
-CTkqqvH
-YCqW5
-P{!#
-1-ka
-'b5>
-RM4x
-%V@$
-(i3H
-3%?`
-k;a7
->na+
-8T	{
-Gxr0
-toKRhO%
-?~RT
- Dcx
-xcKj>
-3WlN
-R2(>3
-WyQ?
-t:k~
-?]3}
-@[	wovG
-muG:
-nh`J
-	9V\
-ck=M
-iNh1
-Qjku
-Id	>c
-ru`-
-GeV#
- h#3
-~9<aP
-d,.[@
-*0xe
-h@A>5
-yw@G
-M\1Vp;
-1QG'
-dRvS.
-m.ve
+K<Rh
+U0M+
+	_G4
+tSYF
+QIi37=
+=d(<
+0/!t(?Y9|
+M	Og
+tU{pB
+M}@C
+>X/?
+	9j:y
+h&ZD
+A"u<s
+C8&]
+xj;i
+=H+DY`
+ GB3
+C88:
+W"l2`
+w[^5m
+N9xc7y
+0#'Z*y
+{lU~sN
+DD?xl
+\dwgQ
+Jyh[w
+I.;7K
+Y3$v
+@A|?
+BAb/
+=($;b
+Q6Pn>
+4JH*["
+ZNK\1
+U+2!
+r7_,
+b<d7
+-uai
+RI`Qs
+NIlv
+C{l1
+]f3@
+NjfA
+boLq
+ tl5sB
+hovw
+'hc88
+(6oyt 
+.ym~
+`~Pu
+5Q-$Ukc
+a#G?P
+;%8 
+$[5S
+B^r7
+H%3(m
+ .PO
+(WM$:zB
+	O}p
+Zgc*(;z
+8oe1
+D8A(
+`3PUT
+nA+K
+qQ\/K
+V)RD
+nmM0
+(SvF/2
+JWez
+FR!%
+r%dj
+@"	I
+m"(N
+Hss#F
+OZBc
+:ToW
+G`7z3
+>BdI
+M{p@
+mLLw
+505a
+kqFa(
+Let(?
+yRGMo
+dQKV
+`xL)
+ZEPk
+6C)R
+5,$6
+u18z
+*xB\
+ln+W^
+i34F
+%#o9?
+_2G!A
+?%ijra-Iv
+CuzW
+[2<#
+S%oQ
+zXxd>+
+L`/J
+*A`a
+;gpV
+m#qwW
+}ZKb
+n+3 
+?#8Ee
+HW<{}\7
+,u`m
+K6-*
+KUYRRe
+b?.L7M
+7{7}
+	VCao
+~]v\As
+%Rx/
+ l)	X
+&=]M
+(8Ft
+Cedo
+\rf	+
+Tyt%FC^
+D[ePl
+aTU>
+{HqJ
+f\Hj
+}u3"
+g!}%H
+~|$S.f
+2Eab
+Rw"(s
+;>s2
+*Qr19
+29@M
+06pu[
 RXvZ
 ] lGIHIP
 1q{N#
@@ -31758,147 +31746,148 @@ N=Yz
 SN!O
 U5T8BLc
 +vPK
-".EI
-xoG3
-x:IT3
-L+Xw
-P[`d
+ptXz
+!!&9
+Qx?-m!
+	O.P
+n=|3
+v7~Rg
+*?(!
+p*($9
+:"69q}
+-5#=I`
+,2@g
+oAkm
+[i8M
+/r0)
+4e#1
 Wu]GL
-i1hE
-9aAx
+i1hH[
+xK!;z-
 mIf?
-'>	on
-|orB
-E=?n
+f5zG
 	#a7-5
 J#78
-yH?]$hpt
 `]43g
 -17G
 xqt	e
-nDXt
->}`G
-1Y~"
-8,?5
-3LyZE
+'FlG:9
+2X3'
+s}vQ
+g`@k
+|Zs9|
 fzv(
 |^ES
 "|Ws
 $7fD
 [~^)
-.v9'
-P1||
-Ut56
+#1B]
 t$6cdm:N
-\)FV
-uJq#
-h@~j
+@-u(
+b#S:
 /$;:
-9O1}
-cO%S
-FV`O
-r,8K
-b&	Uv
-ONf"X
-EjA/
-&5YS
-"O7+8
-K9x`
+$3;M
+vR.X
+X5Y@s^
+?2p1
+mZ:K
+AN[-
+=R+)
+UJ06
+#NNCW
+1u>5=
+<r'_
+_Ky-
+M8zx
+bVLD34
+5*&@
+K\V$5=
+3WW(
+"}"%
 o,3/
 Il]-A
 pSxK
 fy{d
 pory
 MEjq
-7)q|k=
-Q?|2
-(5KR
+DCLx
+(;3R
+M3aL
+B.Zy
+-s/5
+uU&x
 ?ci$T
 	@<X~/
-an|x
-P%O*;'
-]X`%0=%
-ofr)n
->vZQR*
+f	Gh
+q`wr
+yBE:
+KK!KX
 aOQ`^
 %ou%
 >	rx}
 GNv<
-+9s-8
+J>1O7~R
++9s-
 #?h<T
-&[2I
-TS)8
-R,Pb
-JLYJCN
+,ol	
+yvdE3
+ST{~
+$	ggS#8
 IY%y
 9kLV
-z# p
+:{6M
 	D-]
-_b4t
-0{	a
-)I+I
-wtSW
-YxQzFR
+~#y@b
+7tIH
+N3A  e
 )'/~/l
-w8d<
-,l$ 
+1aV(qY
+4AYy
+}g$/
+YJF\!#
+31K=S
 Y>ej
  D'I
-Lj;W
-@::ye.
-ReU|:
-DAfW
-q9N-Wt
->/um
-.7	#
-'OF]G.
-=QPN9
-<]9$;
-Z:B.5
- L<#
-2K`>
-}*?}
-+>_eZT 
-E[PU
-K@2h9d5
-N:~\Ll
-5H/x-sG
-uqC>
-'	gj
-K%ncx
-7;uq
-Lw` 
-;7:uCd
-otIw
-QNcZ
--,\W
-I,>u'
-dXo-
-}o0B
-"6l:
-0!xL#
-WV[Lo
-polM(O
-(OA5
-Jn	$xi
-Iu;uM|
-2`/o
-T{OfV
-Y.Q1+>2Gx
-w5CW
-|X`2
-tM+o
-2QzV
-2*IQf4
-7GypA,yk
-+?Pra
-Waj&
-L-Nu
-RkK-iwD
-8?BX
-8D3[
-g]n+c
-ADW4
+mbfs
+4}v0
+X`X4j
+H|Id
+23BO
+~3Ne
+,?-k
+\7+\
+#K7=4
+=[p=
+ai~Q
+2VL|"
+JzfN
+=It-
+h5NW	E
+YVMI
+n.9x
+Gmzb*
+MNR3>
++MMpT
+	yGD
+p%}{
+A^?b
+"2x`
+4vA6O
+\rD7
+KAjv}
+]cdT
+B} F
+:;aF
+GfX9W
+Mn>=
+kE7x
+vrvj
+Gh9V
+,$pb
+MQ$=
+lBHoC
+8?BXn
+S^p2
 MsB4
 k<O_
 d])!
@@ -31959,21 +31948,16 @@ gk1x2K
 KU]fhp9}%/
 p>fS
 XRm8{a
-(5|,*
 o~;k
-+iki?
-#	nf
-:ASD
-Ad`ye
+8p5(WcO
 2Gh<
 Cfh%
 +bg=
-c*{O
-H7A-
-UFJb
-oXXI:(
-O%1p/
-@1p;
+A#xf
+h6e[
+1f*?
+w] qA
+ h,(Y
 B{s4
 c` me
 8'6ci,
@@ -31981,9 +31965,11 @@ c` me
 vl_+Y
 =tHQ5
 o&J"
-ERs]
-ak*g
+]P"?
+ab!+
 wJ`y b
+LS;E
+j2$a
 9~7X
 t<P"
 LAd?
@@ -31991,16 +31977,12 @@ LAd?
 "^kn
 1mW_b
 	#yu=nX
-0R2wPr
-{?R (#
-KGT:
-o\W=a
 8JzH
 PqPSH(v
 24$M
-;sd:-
-u82D
-QU0D
+@N*f
+cOG3
+wt%&
 iZ<-S7q
 &;jZ
 ~Cd9
@@ -32061,8 +32043,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211012183118Z0/
-*D0-
+211012222203Z0/
+F3Zz
+(TX0
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -32070,39 +32053,35 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		TcIz8JbZskpQtAf2CI194JuoKkQ=
+		kKf63yYRRjNaeqqC8wCv7qGZuJQ=
 		</data>
 		<data>
-		PcU2JjH5dopsFw6SpoUhqtEZsew=
+		wxFcB0iLzfC55i0ez750nyHIX9k=
 		</data>
 	</array>
 </dict>
 </plist>
-tIci
-USpL0
-	Ql^@
-20211012183157Z0
+uj7f
+fohx
+m7p%
+Lt"@
+<D	$p,U
+3Er#8
+20211012222242Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-210928174502Z
-211109174501Z0B1
-Timestamp Signer NWK11
+210928173501Z
+211109173500Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-H^ ;
-4b6;
-Q}0,
--3/Uh
-d`zE
-mOY`
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-q3wp
-mhbr
-F;3N^
+U>cG
+PTQPF"
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -32141,10 +32120,9 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211012183157Z0#
-d3ZM`
-AC@#9G|:
-v[}=
+211012222242Z0#
+r<6?
+`i/d
 __TEXT
 __text
 __TEXT
@@ -33165,6 +33143,7 @@ AWAVATSA
 AVSH
 [A^]
 AWAVAUATSH
+={F5
 t<E1
 ([A\A]A^A_]
 AWAVAUATSPH
@@ -33183,7 +33162,7 @@ AWAVSH
 	H;M
 [A^A_]
 AVSH
-5N85
+5J85
 =*.*
 *t"H
 [A^]
@@ -67718,7 +67697,7 @@ crashhandler002
 crashhandler.dylib
 Steam
 Oct 12 2021
-11:28:50
+15:19:34
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
 CatchAndWriteContext_t::Invoke with bogus void *ptr
@@ -71518,11 +71497,11 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-;Pgd0
+Pgd0
 b\3`m~(0x
-BoO6
 AqKK|C:C
 ^FzQr
+'7K^FN
 Z?h#
 B-'P&I
 <p7y_
@@ -71665,7 +71644,7 @@ QWw(
 `DyeKJO7
 hYk>
 /CE)
-hY-IL
+>IbH
 Tp`_
 mPZTv{
 hfol!}x
@@ -71714,15 +71693,16 @@ Nwsp
 Peg$~}
 `A3X
 uZY5
-AdPv
 !TZ6
 +@M3
 rOQEP
 i3{S
 twi Q
+z^36/
 3[fGM
 yEm0
 ]Bz1
+-{jF
 ,Q/2
 tLbh
 sj?j
@@ -71749,16 +71729,15 @@ MXGJJ98X76
 >D` 
 com.valvesoftware.steam
 MXGJJ98X76
-a+4a
-=QZN
-(7\u
-&|#a`
+&|#G
+ay	i
 ?qpa
 +*S*
 _U'[
 <N3Y?x
 7dAQZ
-AKuC
+tjH*)
+l3rt
 Zr	y
 oWXi
  Eim
@@ -72007,13 +71986,13 @@ j9)%
 K}w;:
 vpK(
 T1U3ok
+-Xb'C
 DM*[
 '`_3
 5[Ub
 XsE7l
 whs,h\
 A6fg>F
-zT?}
 CT&!
 I	 s$
 R?5bB
@@ -72092,15 +72071,14 @@ Aof+
 WfvK
 'K.I
 ;rGz@
-"vn2S
-UEM%
-\tVv
+=?S1k
+:F5t
+5Fm0{
 :a<r
 Q(TF
 ,b}Cs
-JlA1
+CA#	
 [am	
-6=l5
 *u,[
 4GG?:
 K?\1
@@ -72109,6 +72087,7 @@ CyaNf
 $JGR
 !]Xd
 [ZKt=0C
+T[gl
 qil~m1
 8SUL
 Wj6.
@@ -72187,9 +72166,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211012183118Z0/
-\	^U0[
-^zTw7
+211012222203Z0/
+lOfV
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -72197,34 +72175,42 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		bInrMzzBcjggrmB/XnpUdzf3ap0=
+		hr5uAOpsT2ZW8elVsQ80Npei6Fc=
 		</data>
 		<data>
-		O6c2hYZ/5zzJG75/EZGp9/4DiSM=
+		wx/eEVbHiCWXef5yZscrvIrRo/0=
 		</data>
 	</array>
 </dict>
 </plist>
-,S0#{
-:9J,Sm
-LDD*
-kp<*
-20211012183157Z0
-tv*O
+@\Nu
+d)mp
+b*CU
+d,!~O
+7C<R
+P0+9
+20211012222242Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-210928173501Z
-211109173500Z0B1
-Timestamp Signer NWK21
+210928174502Z
+211109174501Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
+H^ ;
+4b6;
+Q}0,
+-3/Uh
+d`zE
+mOY`
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-U>cG
-PTQPF"
+q3wp
+mhbr
+F;3N^
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -72263,10 +72249,16 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211012183157Z0#
-}o2]
-O^8B
-t^^cr$^#;
+211012222242Z0#
+d3ZM`
+~cu@t
+F<WX
+mM9Y
+gt40
+M+{E
+t#k`F^
+w|G_
+_d/&
 __TEXT
 __text
 __TEXT
@@ -72536,31 +72528,36 @@ RIz
  F9H
  F9h
  F9H
-4zy	
 h"F9
 h"F9H
 IEI*(}
 AHJiM
 /hn8
 .hn8
+R5v	
+R,v	
 S+h(8
 *h+8,
 ij8J
-R?q	
+R3u	
+R1t	
 ?k88
+R@q	
 N@9?
 N@9?
-RIp	
 N@9?
+RVp	
 mij8
 )L@9(
 Lii8k	
 J(8v
 Lii8k	
+R8r	
 Lii8k	
 Lii8k	
 Lii8k	
 (L@9
+RIm	
 jr@yI
 j.@iU
 hr@y
@@ -92189,7 +92186,7 @@ crashhandler002
 crashhandler.dylib
 Steam
 Oct 12 2021
-11:28:50
+15:19:37
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
 CatchAndWriteContext_t::Invoke with bogus void *ptr
@@ -95758,7 +95755,6 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-Bj`y
 5dS[
 I:9J
 &){x(_
@@ -95889,28 +95885,23 @@ qDjyX
 @OIy
 f:tl
 	aox
-ZZ!(
+ZZ!(M
 :U`5
 <Nm~F
 1m6?:
 fI}Z
 1JD	
-%1>L
-y7gq
+PD\d
 Ay(C
-^%.V
-I|!]
-$23a
+d[\[
 4?~n
 !}*!
+TLEei
 `"5e
 ggA4
-5]OV/z
-6Kp7
+5]OV^r
 V]C)$
 S3.<mj
-2#b`
-;L70
 2`fx
 .(Z3
 j/^p}
@@ -95952,14 +95943,12 @@ fv=T
 O$1j
 kS<o
 lz\_I
-4L*l.FH7k
+4L*n
 U^F	
 Y&A"
-nlY@c
-IMk?X
-;Ff$k+hf4
->}=%
-9-7U
+.6vF
+yy.x
+NdS+
 *tD1
 %e\VSC
 tr]L
@@ -95978,8 +95967,7 @@ MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
 hO<n
-43;Nn 
-e=l 
+RR!	
 Tx34z
 zHW?
 kd&aJ
@@ -95988,7 +95976,8 @@ kd&aJ
 {;%lHY
 7.~K
 vT8^
-Me1]A
+G%Y>
+{GTDMF
 V?No
 S4:V
 3E8\H
@@ -96190,38 +96179,40 @@ B5T'OPno
 iY{!
 `1&Oq#
 jlU+$
-M'bP
+FFs:j,
+{h6c
+60=<
 +lbK
 C.PZ)
 Jo`s
-MBuXDn
-NFq"
-C_8U_#"
-2JzF
-y8UU
+2tv7)
+x;[O
+Z%^H
 nO@:
-hx!.
-\*`;
+TBkUK
 L`J/
-@$E:
-Hb#JZ
-s}gM
 A6"\
 LHV?
 o|/@Ui
-Fj:&
+mh	X
+sIcXYW
+~WY6
 b8	L-2R
+`oj1
 "2"OJ.
->.J'
+F3	6x
 $0]'
-sqX4w
+|^1q
+)o]hbY )
 \!iPV
 W5dC
 n03S
 <Y).Q
 ;|U5
 r(-$E:k/W
+8R-mS#
 ''1S
+0+qE
 0(5/
 IJX~q
 rmUu
@@ -96230,9 +96221,9 @@ PnASie|
 ~;+Q
 D#i#
 [	+#
+ _-s
 8WJuj
-=rX(
-!Vqi
+mpYr
 jg V
  }J	[$
 ZBp`F
@@ -96295,11 +96286,14 @@ uG"a
 bZhO
 F4:P0
 t238_
-[<S-
-(YO,
-|uHG
-7_TL
-uHiy
+9qf.{
+;vPF
+]" )
+JC-5
+ZE|n
+hnP@1
+ITj&,m
+9$If
 J1f$3
 <f;3t 
 #yXMO
@@ -96332,7 +96326,6 @@ D9S_
 G4O<
 "|&p
 ,bQ%8
-$^,2
 ~Jj8
 8W(Q
 (_o^
@@ -96392,7 +96385,10 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211012183118Z0/
+211012222203Z0/
+.4g X
+)^Mx
+FUL?
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -96400,20 +96396,16 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		MnnIKoGXiGFR7EXlFHiWavzVi1U=
+		/SleTXgCpmXGI6f7nHrvAIXfro0=
 		</data>
 		<data>
-		Maqrns6oED4VtQfz0rSu+uT9mKM=
+		T9uWu4xGVUw/ve2dfIAXLjAHBEc=
 		</data>
 	</array>
 </dict>
 </plist>
-o-vh
-ey(m
-SPlt
-Km1WOR
-GKZ-
-20211012183157Z0
+. T/
+20211012222242Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -96473,7 +96465,7 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211012183157Z0#
+211012222242Z0#
+1!0+
 d3ZM`
-:["E
-*wU&
+PT+5*

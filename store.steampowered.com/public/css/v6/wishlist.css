@@ -262,7 +262,7 @@ body.v6 .wishlist_header h2 {
 
 
 .hover_handle > div {
-	
+
 	width: 100%;
 	height: 100%;
 	position: relative;
@@ -402,6 +402,7 @@ body.v6 .wishlist_header h2 {
 	margin-top: -16px;
 	z-index: 2;
 	pointer-events: none;
+    display: none;
 }
 
 .checkbox_wrapper {
@@ -854,7 +855,7 @@ body.v6 .game_page_background {
     background: #202326 !important;
 }
 body.v6.game_bg {
-    background: #202326 !important;
+    background: #202326;
 }
 .grandprix_ctn {
     		font-family: "Motiva Sans", Sans-serif;

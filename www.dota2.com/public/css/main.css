@@ -33600,6 +33600,26 @@ a {
   font-weight: 700;
   font-size: 10px;
 }
+.dpcschedulepage_DPCScheduleGameDetails_vZFal
+  .dpcschedulepage_LeftSection_1Tx1F
+  .dpcschedulepage_MarkWatchedButton_3c4N6 {
+  padding: 4px 8px;
+  border: 1px solid #005288;
+  background-color: #001524;
+  border-radius: 3px;
+  color: #7d94a3;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+.dpcschedulepage_DPCScheduleGameDetails_vZFal
+  .dpcschedulepage_LeftSection_1Tx1F
+  .dpcschedulepage_MarkWatchedButton_3c4N6:hover {
+  background-color: #003050;
+}
 .dpcschedulepage_DPCScheduleGameDetails_vZFal .dpcschedulepage_HeroList_19hC7 {
   width: 170px;
   display: flex;

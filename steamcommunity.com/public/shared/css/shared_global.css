@@ -1144,7 +1144,7 @@ div#global_header {
 .partner_events div#global_header
 {
 	position: relative;
-	z-index: 2;
+	z-index: 151;
 }
 
 div#global_header .content {

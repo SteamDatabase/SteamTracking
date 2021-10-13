@@ -2075,3 +2075,25 @@ function CloseReviewSettingsModal()
 		g_reviewSettingsPopup.Dismiss();
 }
 
+function BindFocusVideoOnTablet()
+{
+    $J( '.highlight_movie' ).on( "focusin", function( event ) {
+    	this.play();
+    } );
+
+    $J( '.highlight_movie' ).on( "vgp_onok, click", function( event ) {
+		if (!document.fullscreenElement )
+		{
+			this.requestFullscreen();
+			this.play();
+		} else if ( document.exitFullscreen )
+		{
+			document.exitFullscreen();
+		}
+    } );
+
+    $J( '.highlight_movie' ).on( "focusout", function( event ) {
+		this.pause();
+    } );
+}
+

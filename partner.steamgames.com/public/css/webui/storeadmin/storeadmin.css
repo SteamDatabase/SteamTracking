@@ -2484,15 +2484,21 @@ span.suggestdialog_mentionSearchMatch_1t0Xl {
 .chatentry_chatSubmitButton_nLfX9:focus {
   outline: none;
 }
-.chatentry_chatSubmitButton_nLfX9.chatentry_EmbedButton_cyYZC:hover {
+.chatentry_chatSubmitButton_nLfX9.chatentry_EmbedButton_cyYZC:hover,
+.chatentry_chatSubmitButton_nLfX9.chatentry_EmbedButton_cyYZC:focus {
   background-color: #3d424b;
 }
+.chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):focus
+  .SVGIcon_Button.SVGIcon_Submit
+  path,
 .chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):hover
   .SVGIcon_Button.SVGIcon_Submit
   path {
   fill: #fff;
   stroke: #fff;
 }
+.chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):focus
+  .SVGIcon_Button,
 .chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):hover
   .SVGIcon_Button {
   fill: #f5ffd7;
@@ -2506,21 +2512,31 @@ span.suggestdialog_mentionSearchMatch_1t0Xl {
   cursor: default;
   background-color: #2c3036;
 }
+.chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):focus
+  .SVGIcon_VoiceRoom,
 .chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):hover
   .SVGIcon_VoiceRoom {
   fill: rgba(0, 0, 0, 0);
   stroke: #f5ffd7;
 }
+.chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):focus
+  .SVGIcon_VoiceRoom
+  .chatentry_AudioLines_1_HMB,
 .chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):hover
   .SVGIcon_VoiceRoom
   .chatentry_AudioLines_1_HMB {
   fill: #f5ffd7;
 }
+.chatentry_Active_1GuG1.chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):focus
+  .SVGIcon_VoiceRoom,
 .chatentry_Active_1GuG1.chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):hover
   .SVGIcon_VoiceRoom {
   fill: #fff;
   stroke: #000;
 }
+.chatentry_Active_1GuG1.chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):focus
+  .SVGIcon_VoiceRoom
+  .chatentry_AudioLines_1_HMB,
 .chatentry_Active_1GuG1.chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):hover
   .SVGIcon_VoiceRoom
   .chatentry_AudioLines_1_HMB {
@@ -2551,6 +2567,7 @@ span.suggestdialog_mentionSearchMatch_1t0Xl {
   stroke: #8492a4;
   stroke-width: 12px;
 }
+.chatentry_EmbedButton_cyYZC:focus .SVGIcon_Paperclip path,
 .chatentry_EmbedButton_cyYZC:hover .SVGIcon_Paperclip path,
 .SVGIcon_Paperclip {
   stroke: #fff;
@@ -2558,7 +2575,8 @@ span.suggestdialog_mentionSearchMatch_1t0Xl {
 .chatentry_EmoticonPickerButton_3AOY3 {
   margin-right: 1px;
 }
-.chatentry_EmoticonPickerButton_3AOY3:hover {
+.chatentry_EmoticonPickerButton_3AOY3:hover,
+.chatentry_EmoticonPickerButton_3AOY3:focus {
   background-color: #3d424b;
 }
 .chatentry_EmoticonPickerButton_3AOY3 .SVGIcon_Emoticon {
@@ -2582,8 +2600,11 @@ span.suggestdialog_mentionSearchMatch_1t0Xl {
   stroke-width: 16px;
 }
 .chatentry_EmoticonPickerButton_3AOY3:hover .SVGIcon_Emoticon line,
+.chatentry_EmoticonPickerButton_3AOY3:focus .SVGIcon_Emoticon line,
 .chatentry_EmoticonPickerButton_3AOY3:hover .SVGIcon_Emoticon circle,
-.chatentry_EmoticonPickerButton_3AOY3:hover .SVGIcon_Emoticon path {
+.chatentry_EmoticonPickerButton_3AOY3:focus .SVGIcon_Emoticon circle,
+.chatentry_EmoticonPickerButton_3AOY3:hover .SVGIcon_Emoticon path,
+.chatentry_EmoticonPickerButton_3AOY3:focus .SVGIcon_Emoticon path {
   stroke: #fff;
 }
 .chatentry_chatEntryControls_SZTCn .chatentry_chatSubmitButton_nLfX9 {
@@ -6331,6 +6352,28 @@ html.touch
   height: 478px;
   position: relative;
 }
+.ContentHubSalePage
+  .SaleSectionCtn.contenthubmaincarousel
+  .animated_featured_capsule_SuperCapsuleCtn_1yW5j {
+  height: 647px;
+}
+.ContentHubSalePage
+  .SaleSectionCtn.contenthubmaincarousel
+  .animated_featured_capsule_FeatureCtn_16rVm {
+  padding-top: 175px;
+  max-width: 940px;
+  width: 100%;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 940px) {
+  .ContentHubSalePage
+    .SaleSectionCtn.contenthubmaincarousel
+    .animated_featured_capsule_FeatureCtn_16rVm {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20vw;
+  }
+}
 .animated_featured_capsule_BGVideo_3t6Hv {
   position: absolute;
   width: 100%;
@@ -6355,6 +6398,9 @@ html.touch
   -webkit-mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%);
   mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%);
   z-index: 2;
+}
+.contenthubmaincarousel .animated_featured_capsule_BGGradient_2avQX {
+  width: 100vw;
 }
 .animated_featured_capsule_BGGradientTwo_IJi1Z {
   position: absolute;
@@ -7245,6 +7291,8 @@ body.v6.partner_events {
   }
 }
 .partnereventdisplay_DisplayAdminPanel_39cO1 {
+  position: relative;
+  z-index: 2;
   padding-top: 50px;
 }
 .partnereventdisplay_DisplayAdminPanel_ctn_3L896 {
@@ -7354,7 +7402,7 @@ body.v6.partner_events {
   left: 8%;
   right: 8%;
   transition: transform 0.15s;
-  background-image: url(https://cdn.cloudflare.steamstatic.com/store/promo/lunar2020/redenvelope.png?v=2);
+  background-image: url(https://cdn.akamai.steamstatic.com/store/promo/lunar2020/redenvelope.png?v=2);
   background-size: 100%;
   background-position-y: 0px;
   background-repeat: no-repeat;
@@ -7397,7 +7445,7 @@ body.v6.partner_events {
   .partnereventdisplay_EnvelopeArea_3E7nZ
   .partnereventdisplay_EnvelopeContainer_zIYox.partnereventdisplay_Opened_3GSov
   .partnereventdisplay_Envelope_fFo-i {
-  background-image: url(https://cdn.cloudflare.steamstatic.com/store/promo/lunar2020/redenvelopeback.png);
+  background-image: url(https://cdn.akamai.steamstatic.com/store/promo/lunar2020/redenvelopeback.png);
 }
 .partnereventdisplay_LunarNewYearHeader_1S4WN
   .partnereventdisplay_EnvelopeArea_3E7nZ
@@ -8082,6 +8130,7 @@ Body.v6.tag_page.contenthub_page {
 }
 .contenthubshared_MainCarousel_vpAQS {
   width: 100%;
+  position: unset;
 }
 .contenthubshared_MainCarousel_vpAQS .carousel .CarouselBtnLeft {
   left: calc(50% - 546px);
@@ -8089,8 +8138,12 @@ Body.v6.tag_page.contenthub_page {
 .contenthubshared_MainCarousel_vpAQS .carousel .CarouselBtnRight {
   left: calc(50% + 504px);
 }
+.contenthubshared_MainCarousel_vpAQS .carousel .SliderBody {
+  position: unset;
+}
 .contenthubshared_MainCarousel_vpAQS .carousel .SliderBody button {
   width: 60px;
+  top: 250px;
   height: 200px;
   padding-left: 7px;
   margin: auto 0;
@@ -8107,6 +8160,9 @@ Body.v6.tag_page.contenthub_page {
   svg
   polygon {
   fill: #000;
+}
+.contenthubshared_MainCarousel_vpAQS .carousel .SliderBody .carousel__slider {
+  position: unset;
 }
 .contenthubshared_MainCarousel_vpAQS .contenthubshared_FeatureCtn_2OSHU {
   width: 940px;
@@ -8134,6 +8190,20 @@ Body.v6.tag_page.contenthub_page {
   margin-top: 30px;
   font-weight: 300;
   margin-bottom: 8px;
+}
+.ContentHubSalePage .SaleSectionCtn.contenthubmaincarousel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 500px;
+  display: block;
+  width: 100%;
+}
+.ContentHubSalePage .SaleSectionTabListContainer {
+  position: unset;
+}
+.ContentHubSalePage .SaleSectionTabListContainer .SaleSectionCtn:first-child {
+  margin-bottom: 570px;
 }
 .creatorhomeembed_DevSummaryCtn_U7GS1 {
   flex-grow: 1;
@@ -11839,6 +11909,11 @@ html:not(.touch)
   grid-template-rows: 186px;
 }
 .eventcalendarcollectionheaders_SimpleTitleHeaderCtn_3FgtA.eventcalendarcollectionheaders_LargeHeader_1nUc-
+  .eventcalendarcollectionheaders_CollectionBannerGroup_K1QTv.eventcalendarcollectionheaders_NoHeaderImg_3jPvO {
+  grid-template-areas: "title";
+  grid-template-columns: 1fr;
+}
+.eventcalendarcollectionheaders_SimpleTitleHeaderCtn_3FgtA.eventcalendarcollectionheaders_LargeHeader_1nUc-
   .eventcalendarcollectionheaders_SimpleTitleCtn_1GvE8
   .eventcalendarcollectionheaders_Title_18v9c {
   font-size: 39px;
@@ -14011,8 +14086,13 @@ html:not(.touch)
 }
 @media screen and (max-width: 940px) {
   .partnersaledisplay_SaleOuterContainer_3ZZvZ {
-    margin-top: 60vw !important;
+    margin-top: 50vw !important;
     padding: 0px 10px;
+  }
+  html.responsive
+    .ContentHubSalePage
+    .partnersaledisplay_SaleOuterContainer_3ZZvZ {
+    margin-top: 10vw !important;
   }
 }
 .partnersaledisplay_SaleBackground_1COsa {
@@ -14104,9 +14184,20 @@ span.partnersaledisplay_vr_required_fQ_ZQ {
   width: 100%;
   overflow: hidden;
 }
-.partnersaledisplay_fullscreen_bg__video_2PYQV {
+.partnersaledisplay_fullscreen_bg_video_2DTxT {
+  position: fixed;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
   margin-left: 50%;
   transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 910px) {
+  .partnersaledisplay_fullscreen_bg_video_2DTxT {
+    display: none;
+  }
 }
 .partnersaledisplay_SalePageBroadcastContextHover_1d8Fc {
   display: flex;
@@ -14346,6 +14437,11 @@ html.responsive.touch .partnersaledisplay_SaleSectionTabs_QhcTn {
   .partnersaledisplay_SectionLabelLinkButton_9QFBD:hover {
   background: #7a5a6c;
   border-color: #fff;
+}
+@media screen and (max-width: 852px) {
+  .partnersaledisplay_DefaultCreatorCtn_23ZCI {
+    order: 5;
+  }
 }
 .eventrow_OtherEventsCtn_2t60e {
   margin-top: 8vw;
@@ -16458,10 +16554,13 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 36px;
+  position: relative;
+  z-index: 1;
 }
 .contenthubmaincarousel_ContentHubTitle_3Xj5I {
   font-size: 48px;
   font-weight: 300;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
 .contenthubmaincarousel_ContentHubSubtitle_t1mzq {
   font-size: 18px;
@@ -18468,7 +18567,7 @@ img.broadcastplayer_BroadcastPlaceholderImg_1LIEZ {
   margin-top: -25px;
   width: 50px;
   height: 50px;
-  background-image: url(https://store.cloudflare.steamstatic.com//public/shared/images/sharedfiles/sketchfab_play.png);
+  background-image: url(https://store.akamai.steamstatic.com//public/shared/images/sharedfiles/sketchfab_play.png);
   background-size: 100%;
   background-position-y: 0px;
   background-repeat: no-repeat;
@@ -19775,7 +19874,7 @@ hr {
   padding-left: 450px;
 }
 .optin_admin_email_editor_DevEmail_TopHeader_I1TnL {
-  background-image: url(https://cdn.cloudflare.steamstatic.com/store/email/general/bg_blue.png);
+  background-image: url(https://cdn.akamai.steamstatic.com/store/email/general/bg_blue.png);
   background-size: 100% auto;
   background-repeat: no-repeat;
   height: 180px;
@@ -20356,6 +20455,7 @@ hr {
   display: flex;
   flex-direction: column;
   margin-top: 40px;
+  max-height: 90vh;
 }
 .discountdashboard_DiscountGridCtn_12vp3 .discountdashboard_Title_HJ9O4 {
   font-size: 18px;
@@ -20382,6 +20482,9 @@ hr {
   padding: 16px;
   color: #fff;
   font-size: 13px;
+  flex-shrink: 1;
+  min-height: 200px;
+  display: flex;
 }
 .discountdashboard_DiscountGridCtn_12vp3
   .discountdashboard_DiscountGrid_1wfZe
@@ -20423,8 +20526,34 @@ hr {
 .discountdashboard_DiscountGridCtn_12vp3 .discountdashboard_PackageID_3Iu6M,
 .discountdashboard_DiscountGridCtn_12vp3 .discountdashboard_BasePrice_3KOPg,
 .discountdashboard_DiscountGridCtn_12vp3
-  .discountdashboard_DeepestDiscount_1ovOp {
+  .discountdashboard_DeepestDiscount_1ovOp,
+.discountdashboard_DiscountGridCtn_12vp3 .discountdashboard_PackageName_3PXbm {
   color: #bbb;
+}
+.discountdashboard_DiscountGridCtn_12vp3 .discountdashboard_PackageID_3Iu6M a,
+.discountdashboard_DiscountGridCtn_12vp3 .discountdashboard_BasePrice_3KOPg a,
+.discountdashboard_DiscountGridCtn_12vp3
+  .discountdashboard_DeepestDiscount_1ovOp
+  a,
+.discountdashboard_DiscountGridCtn_12vp3
+  .discountdashboard_PackageName_3PXbm
+  a {
+  color: inherit;
+  text-decoration: none;
+}
+.discountdashboard_DiscountGridCtn_12vp3
+  .discountdashboard_PackageID_3Iu6M
+  a:hover,
+.discountdashboard_DiscountGridCtn_12vp3
+  .discountdashboard_BasePrice_3KOPg
+  a:hover,
+.discountdashboard_DiscountGridCtn_12vp3
+  .discountdashboard_DeepestDiscount_1ovOp
+  a:hover,
+.discountdashboard_DiscountGridCtn_12vp3
+  .discountdashboard_PackageName_3PXbm
+  a:hover {
+  text-decoration: underline;
 }
 .discountdashboard_DiscountGridCtn_12vp3 .discountdashboard_PackageName_3PXbm {
   color: #fff;

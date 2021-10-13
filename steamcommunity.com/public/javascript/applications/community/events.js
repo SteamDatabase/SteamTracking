@@ -12035,15 +12035,28 @@
                 "Set this to on if the post contains adult only content so that it can be filtered accordingly.",
             }),
             t.GetAppID() == D.C &&
-              s.createElement(Ie.q, {
-                onChange: function () {
-                  return t.ToggleTag("steam_blog");
-                },
-                label: "(VO) Steam Official Blog",
-                checked: t.GetEventModel().BHasTag("steam_blog"),
-                description:
-                  "When checked this event will surface on https://store.steampowered.com/news/?feed=steam_blog. Make sure to set this before you publish, or it will have no effect.",
-              }),
+              s.createElement(
+                s.Fragment,
+                null,
+                s.createElement(Ie.q, {
+                  onChange: function () {
+                    return t.ToggleTag("steam_blog");
+                  },
+                  label: "(VO) Steam Official Blog",
+                  checked: t.GetEventModel().BHasTag("steam_blog"),
+                  description:
+                    "When checked this event will surface on https://store.steampowered.com/news/app/593110. Make sure to set this before you publish, or it will have no effect.",
+                }),
+                s.createElement(Ie.q, {
+                  onChange: function () {
+                    return t.ToggleTag("skip_megaphone");
+                  },
+                  label: "(VO) Skip Lighting Up Steam Client Megaphone",
+                  checked: t.GetEventModel().BHasTag("skip_megaphone"),
+                  description:
+                    "By default small event (patch notes) do not light up the megaphone in the Steam client. Enabling this flag does the same for all other event type.",
+                })
+              ),
             s.createElement(Ie.q, {
               onChange: function () {
                 return t.ToggleTag("forced_featured");

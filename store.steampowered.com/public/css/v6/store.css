@@ -371,6 +371,12 @@ body.v6 .supernav_content, body.v6 #global_header, body.v6 #global_header .conte
 	background: #171a21;
 }
 
+body.v6.sale_page_n_section #global_header
+{
+	position: relative;
+	z-index: 2;
+}
+
 body.v6 #store_header {
 	padding-left: 0;
 	padding-right: 0;

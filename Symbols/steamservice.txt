@@ -380,7 +380,6 @@
  strcmp
  strcpy
  strerror
- strftime
  strlen
  strncasecmp
  strncat

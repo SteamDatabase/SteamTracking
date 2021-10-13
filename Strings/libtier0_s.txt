@@ -411,7 +411,7 @@ crashhandler.dylib
 CreateInterface
 Steam
 Oct 12 2021
-11:29:16
+15:20:01
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -1756,7 +1756,6 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-ZZW	
 F(b7n
 Tri/
 thkP T
@@ -1764,6 +1763,7 @@ thkP T
 RDrc
 p RH
 !5lGH
+:z86d
 ^t)cJ
 8|:?8F)
 kY3V
@@ -1775,7 +1775,6 @@ subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-vA B
 uj_?
 wrCL*)N>
 n~5)4Y
@@ -1845,8 +1844,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211012182919Z0/
- 28!
+211012222004Z0/
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1854,30 +1852,37 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		lmGpc4MfnNa6WE6pXjKOI40/7VM=
+		+9Hka9LVf3+Dl2YzVqKGY1/S7zQ=
 		</data>
 		<data>
-		tuY3iGISHy/QuWUJwQgFrsr4m8A=
+		k3ipC95e0r7W31Iter16JqtZqxw=
 		</data>
 	</array>
 </dict>
 </plist>
-!CH8'
-20211012182958Z0
+>PB"6
+20211012222043Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-210928173501Z
-211109173500Z0B1
-Timestamp Signer NWK21
+210928174502Z
+211109174501Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
+H^ ;
+4b6;
+Q}0,
+-3/Uh
+d`zE
+mOY`
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-U>cG
-PTQPF"
+q3wp
+mhbr
+F;3N^
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -1916,12 +1921,12 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211012182958Z0#
- 122
-39XQ:8
- e@?
-8{mr
-xd6~
+211012222043Z0#
+d3ZM`
+y^nWwDk3\ )
+T_$[Z
+bpyg1
+;quhf
 __TEXT
 __text
 __TEXT
@@ -2641,7 +2646,7 @@ crashhandler.dylib
 CreateInterface
 Steam
 Oct 12 2021
-11:29:17
+15:20:01
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -3985,6 +3990,7 @@ subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
+G.h	
 0%4!
 *}OE:
 B{dKl
@@ -3992,7 +3998,6 @@ B{dKl
 1Ls5
 F8o?
 e DR<
-gpr<*
 $]5z
 Qb#^
 CH4&
@@ -4051,9 +4056,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211012182919Z0/
- xlB
-6/0-
+211012222004Z0/
+*m0-
+;_FK`
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -4061,40 +4066,35 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		5+8msXfUuHx6wDAtoj5tElr1Ni8=
+		Rn7z7yhMSwt73+GqBfmw+8aBKm0=
 		</data>
 		<data>
-		7AGpaZZgMR9AA8K0SwnP43An/vE=
+		yqXtMOM7X0ZLYNqZ6FFjFRuRIn0=
 		</data>
 	</array>
 </dict>
 </plist>
-o,sw@
-=Y+8>
-!W<w
-|mG"MLb
-20211012182958Z0
+b%<G
+to`c9B
+Q'@d
+F.XNDr
+qR/nl
+|VE'Z
+20211012222043Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-210928174502Z
-211109174501Z0B1
-Timestamp Signer NWK11
+210928173501Z
+211109173500Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-H^ ;
-4b6;
-Q}0,
--3/Uh
-d`zE
-mOY`
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-q3wp
-mhbr
-F;3N^
+U>cG
+PTQPF"
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -4133,14 +4133,12 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211012182958Z0#
-PU1DX
-)7Q,~2
-d3ZM`
-Be6'
-|F//
-<Wkm
- ^z3O
+211012222043Z0#
+,	r=
+ZR^ 
+GI%i
+?N}<
+dbS=
 __TEXT
 __text
 __TEXT
@@ -4177,7 +4175,6 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/libtier0_s.dylib
->j|g5
 @loader_path/crashhandler.dylib
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /usr/lib/libc++.1.dylib
@@ -4363,7 +4360,7 @@ crashhandler.dylib
 CreateInterface
 Steam
 Oct 12 2021
-11:29:17
+15:20:02
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -5695,16 +5692,18 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-2eAi
+UaHZ
 9Ikg
 0jH}
 Rgh4O
+Ai&9
+=q|]
 tFu=
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
->pHE
+8WKq&
 5,-@R
 s6Rp
 h`,Jq
@@ -5776,9 +5775,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211012182919Z0/
-+d=#6
-/`k	e
+211012222004Z0/
+c	*}0
+($@8
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -5786,31 +5785,40 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		RQxIi9WZ6LkOl2DaBVaCLOYRi7o=
+		5saW1Dbni7lGbKMGW5aiaL2jUro=
 		</data>
 		<data>
-		dZgLfojxAcEYEkekncmHdcEvYGs=
+		7HEoep4YyMBoA2boCCgkQDjMgUA=
 		</data>
 	</array>
 </dict>
 </plist>
-12}`
-vjCX
-20211012182958Z0
+hlbM
+R?"ly/
+"*`o
+p+HS
+20211012222043Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-210928173501Z
-211109173500Z0B1
-Timestamp Signer NWK21
+210928174502Z
+211109174501Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
+H^ ;
+4b6;
+Q}0,
+-3/Uh
+d`zE
+mOY`
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-U>cG
-PTQPF"
+q3wp
+mhbr
+F;3N^
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -5849,7 +5857,10 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211012182958Z0#
-D[a!?[
-X+?V
-L'ta
+211012222043Z0#
+F27x
+W{;0+
+d3ZM`
+h?86
+5\cON
+Or`*:;

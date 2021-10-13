@@ -1367,7 +1367,6 @@
  listen
  localeconv
  localtime
- localtime_r
  log
  log10
  longjmp
@@ -1396,7 +1395,6 @@
  memset_pattern16
  mkdir
  mkstemp
- mktemp
  mktime
  mlock
  mmap
