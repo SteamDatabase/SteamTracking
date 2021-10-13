@@ -656,7 +656,6 @@ html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenuItem_1n7Wl {
   height: 18px;
   background-color: #6dcff6;
   min-height: 1px;
-  display: inline-block;
   position: absolute;
   left: -4px;
   margin-top: 0px;
@@ -874,7 +873,7 @@ html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenuItem_1n7Wl {
   cursor: default;
 }
 .cloudconflict_CloudConflictModalContent_3Ps1l {
-  width: 53.3333333333vw;
+  width: 80vw;
 }
 .cloudconflict_CloudConflictText_2ZX5N {
   text-align: left;
@@ -905,12 +904,6 @@ html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenuItem_1n7Wl {
 .cloudconflict_DialogChoiceRow_1e3aA .cloudconflict_DialogChoiceButton_1NanE {
   margin-right: 24px;
   margin-bottom: 24px;
-}
-.euladialog_EulaText__x-YA {
-  text-align: center;
-}
-.euladialog_Eula_3rDQu {
-  min-height: 180px;
 }
 .appdetailshover_AppDetailsHover_38FqI {
   box-sizing: border-box;
@@ -2125,7 +2118,7 @@ div.UltraRightPanel
   margin-left: 2px;
 }
 .personastatusicons_PersonaStatusIcon_KxAI_.personastatusicons_MobilePhoneIcon_1iRFj {
-  margin-top: -2x;
+  margin-top: -2px;
   margin-left: -1px;
 }
 .personastatusicons_PersonaStatusIcon_KxAI_.ingame .SVGIcon_VR path,
@@ -2543,12 +2536,6 @@ div.UltraRightPanel
   font-size: 12px;
 }
 .miniprofile_miniProfileContent_1xTAT
-  .miniprofile_miniProfilePlayer_2jZ0A.watchingbroadcast
-  .miniprofile_playerContent_2-pwJ
-  .miniprofile_awayStatusLabel_1FgWI {
-  color: #c9bdf7;
-}
-.miniprofile_miniProfileContent_1xTAT
   .miniprofile_miniProfilePlayer_2jZ0A.in-game
   .miniprofile_playerContent_2-pwJ
   .miniprofile_awayStatusLabel_1FgWI {
@@ -2664,7 +2651,9 @@ div.UltraRightPanel
 .friendPlayerLevel.lvl_4700,
 .friendPlayerLevel.lvl_4800,
 .friendPlayerLevel.lvl_4900,
-.friendPlayerLevel.lvl_5000 {
+.friendPlayerLevel.lvl_5000,
+.friendPlayerLevel.lvl_5100,
+.friendPlayerLevel.lvl_5200 {
   border: none;
   border-radius: 0;
   background-repeat: no-repeat;
@@ -2822,6 +2811,15 @@ div.UltraRightPanel
 .friendPlayerLevel.lvl_4900 {
   background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_grunge_5.png?v=2");
 }
+.friendPlayerLevel.lvl_5000 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_halftone_1.png?v=2");
+}
+.friendPlayerLevel.lvl_5100 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_halftone_2.png?v=2");
+}
+.friendPlayerLevel.lvl_5200 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_halftone_3.png?v=2");
+}
 .friendPlayerLevel.lvl_plus_10 {
   background-position: 0 -32px;
 }
@@ -2848,6 +2846,12 @@ div.UltraRightPanel
 }
 .friendPlayerLevel.lvl_plus_90 {
   background-position: 0 -288px;
+}
+.euladialog_EulaText__x-YA {
+  text-align: center;
+}
+.euladialog_Eula_3rDQu {
+  min-height: 180px;
 }
 .GenericConfirmDialog.durationcontroldialog_DurationControlDialogBackground_2iwqV {
   background: linear-gradient(to bottom right, #6383b1, #273f65);
@@ -2942,6 +2946,10 @@ div.UltraRightPanel
   padding: 12px 20px 0px;
   color: #1e90ff;
   margin-bottom: 12px;
+}
+.savecollectiondialog_DynamicHeader_3haSL svg {
+  height: 32px;
+  width: 32px;
 }
 .savecollectiondialog_DynamicOption_3MlTP {
   padding: 0;
@@ -3974,7 +3982,6 @@ a.bbcodes_LinkButton_jPpgc:hover {
 }
 .emoticon_EmoticonSelector_1_1QI {
   max-height: 50vh;
-  max-width: 40vw;
   display: flex;
   flex-direction: column;
   max-width: 302px;
@@ -4048,7 +4055,6 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
 }
 .emoticon_GetFestive_1tX6q > a {
   color: #fff;
-  text-color: #fff;
   text-decoration: none;
 }
 .emoticon_TopDivider_2A8Fl {
@@ -4631,13 +4637,8 @@ button.DialogButton {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
-}
-button.DialogButton {
-  background: none;
   border: 0;
-  color: inherit;
   font: inherit;
-  line-height: normal;
   overflow: visible;
   padding: 0;
   margin: 2px 0;
@@ -4645,6 +4646,19 @@ button.DialogButton {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  display: block;
+  line-height: 32px;
+  color: #dfe3e6;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 2px;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.2s ease-out;
+  background: #3d4450;
+  background-position: 99% 1%;
+  background-size: 300% 300%;
+  position: relative;
 }
 input.DialogInput::-moz-focus-inner,
 button.DialogButton::-moz-focus-inner {
@@ -4835,6 +4849,11 @@ button.DialogButton::-moz-focus-inner {
 }
 .DialogToggle_Label {
   user-select: none;
+  display: flex;
+  flex-direction: row;
+}
+.DialogToggle_Label span {
+  display: flex;
 }
 .contextMenuItem .DialogToggle_Label {
   white-space: nowrap;
@@ -5028,6 +5047,9 @@ button.DialogButton::-moz-focus-inner {
 }
 .DialogInput {
   border: 1px solid #fff;
+  display: block;
+  line-height: 22px;
+  padding: 10px;
 }
 .DialogLabelExplainer.Left {
   text-align: left;
@@ -5053,7 +5075,6 @@ button.DialogButton::-moz-focus-inner {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   font-weight: 300;
   margin: 0;
-  padding: 0;
   border: none;
   border-radius: 3px;
   box-shadow: inset 0px 0px 0px #0000;
@@ -5064,7 +5085,7 @@ button.DialogButton::-moz-focus-inner {
   box-shadow: inset 1px 1px 8px #000a;
   padding-left: 11px;
 }
-.DialogTextInputBase:not(disabled):hover {
+.DialogTextInputBase:not(:disabled):hover {
   background: rgba(67, 73, 83, 0.6);
 }
 .DialogTextInputBase:disabled:hover {
@@ -5148,28 +5169,6 @@ button.DialogButton.DialogInput_CopyAction {
 }
 .DialogInput_ClearAction:hover .SVGIcon_X_Line line {
   stroke: #fff;
-}
-.DialogInput {
-  display: block;
-  line-height: 22px;
-  padding: 10px;
-}
-button.DialogButton {
-  display: block;
-  line-height: 32px;
-  color: #dfe3e6;
-  font-size: 14px;
-  text-align: center;
-  border-radius: 2px;
-  cursor: pointer;
-  transition: 0.1s all;
-  width: 100%;
-  background: transparent;
-  transition: all 0.2s ease-out;
-  background: #3d4450;
-  background-position: 99% 1%;
-  background-size: 300% 300%;
-  position: relative;
 }
 button.DialogButton::before {
   pointer-events: none;
@@ -5337,8 +5336,6 @@ button.TextButton:focus {
 }
 .Disabled .DialogOnOffToggle_Option.Active {
   color: #666;
-}
-.Disabled .DialogOnOffToggle_Option.Active {
   background-color: #434953;
 }
 .DialogToggle_Description {
@@ -5771,6 +5768,14 @@ body.in_global_drag .title-area {
     rgba(0, 0, 0, 0.2) 8px,
     rgba(0, 0, 0, 0) 100%
   );
+  mask: linear-gradient(
+    to bottom,
+    black 0px,
+    black 1px,
+    rgba(0, 0, 0, 0.4) 1px,
+    rgba(0, 0, 0, 0.2) 8px,
+    rgba(0, 0, 0, 0) 100%
+  );
   position: absolute;
   top: 0;
   opacity: 0;
@@ -5786,6 +5791,14 @@ body.in_global_drag .title-area {
   height: 24px;
   background: linear-gradient(to right, #007896, #1f3d96);
   -webkit-mask: linear-gradient(
+    to bottom,
+    black 0px,
+    black 1px,
+    rgba(0, 0, 0, 0.4) 1px,
+    rgba(0, 0, 0, 0.2) 8px,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask: linear-gradient(
     to bottom,
     black 0px,
     black 1px,
@@ -5962,8 +5975,6 @@ body.in_global_drag .title-area {
   width: 25%;
   height: 100%;
   background-color: #67c1f5;
-}
-.throbber > div {
   animation: loading_throbber_bar 1s ease-in-out infinite;
 }
 .throbber > div:nth-child(1) {
@@ -6075,9 +6086,6 @@ body.in_global_drag .title-area {
 .textLink {
   color: #fff;
   text-decoration: underline;
-}
-.allCaps {
-  text-transform: uppercase;
 }
 div:focus,
 a:focus,

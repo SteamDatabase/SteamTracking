@@ -524,8 +524,8 @@ MacOS
 Frameworks
 crashhandler.dylib
 CreateInterface
-Oct 12 2021
-15:19:33
+Oct 13 2021
+12:46:01
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -934,6 +934,7 @@ subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
+.nCF
  {],
 xi~3{oZ
 irs\E
@@ -1001,8 +1002,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211012222000Z0/
-9PH 
+211013194625Z0/
+ z~>t
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1010,18 +1011,21 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		OWJ47LpbLpWDoqNX8/xOGeLoRcM=
+		6SSA71y1yvzwDEWds6aDn2o3Z5M=
 		</data>
 		<data>
-		wKubUbw8xS0gftVxLpHXhy+0OVA=
+		en4+dBjwkSzfMzMEhhpzUJvZ30I=
 		</data>
 	</array>
 </dict>
 </plist>
-%Y|(0:f|
-Sqv,YOI
-p!|{
-20211012222039Z0
+CGn`
+R95i
+ojx=
+MApb
+Dp"/M"
+zQa"
+20211013194710Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -1074,10 +1078,10 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211012222039Z0#
-X3)L9
-uMI2>
-G<e}
+211013194710Z0#
+ei3y
+v]02Ff
+6R*v
 __TEXT
 __text
 __TEXT
@@ -1123,7 +1127,6 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/crashhandler.dylib
-ZaU$
 /usr/lib/libiconv.2.dylib
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
@@ -1801,8 +1804,8 @@ MacOS
 Frameworks
 crashhandler.dylib
 CreateInterface
-Oct 12 2021
-15:19:34
+Oct 13 2021
+12:46:03
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -2236,15 +2239,16 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-@*TY
 *4xm+nv
 3 /g
 Gji-R,
+""{-
 'Ej\V:Z
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
+t1^m
 \K4K
 D-s&e
 aZa}s?
@@ -2309,11 +2313,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211012222000Z0/
-Yvn%3
-}:gbS
-2q'v
-e?V4i[
+211013194625Z0/
+L"{z
+Li0[
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -2321,22 +2323,18 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		zGtVn6zsCRRaTZ99OmdiUxgHTR0=
+		ihrObrxiHP8pJth6oxR9KgVxs3w=
 		</data>
 		<data>
-		1OG9z0jOMnEndsyRFToLZT9WNGk=
+		gYQMBPs+b8ndPYut1SpPpgCl7B4=
 		</data>
 	</array>
 </dict>
 </plist>
-'`\Hr
-2's?5
--0 mE
-wAK%
-W$zk
- ayY
-vArl
-20211012222039Z0
+eN-|
+0TQd
+H2zC
+20211013194710Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -2396,12 +2394,14 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211012222039Z0#
+211013194710Z0#
+uL0+
 d3ZM`
-W}@!
-<C+1
-_o\)E7
-qF_h:
+p%6I8.
+52E]p
+d.H+
+S+} 
+{EJ`3
 __TEXT
 __text
 __TEXT
@@ -2698,8 +2698,8 @@ MacOS
 Frameworks
 crashhandler.dylib
 CreateInterface
-Oct 12 2021
-15:19:37
+Oct 13 2021
+12:46:06
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -3131,7 +3131,7 @@ o^hg
 IFJ 
 "pS%t
 oO/[
-E)6Wi
+HE9:
 %i,:
 subject.OU
 MXGJJ98X76
@@ -3197,9 +3197,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211012222000Z0/
-q;0[
-a	RSes0
+211013194625Z0/
+|lHa
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -3207,18 +3206,18 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		FaaKIZ17bzybUd7iH/vOVQ+q9vg=
+		43xsSGHYHgGnSXHpPuyQb/BpWOU=
 		</data>
 		<data>
-		wh+WsK5AMcnv74FurxzZ/P7tQ/w=
+		efvzE2SKBb3DNIUZ44wfAD0sm/8=
 		</data>
 	</array>
 </dict>
 </plist>
-%X*t
-:2hcKX
-z;0l=
-20211012222039Z0
+cL"2
+9QdK
+htC%
+20211013194710Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -3271,9 +3270,8 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211012222039Z0#
-POmA
-i>[.
-0e/$:g
-'#j|
-*&X]i
+211013194710Z0#
+5n:onT
+T@RRT
+TID7
+)kM8L

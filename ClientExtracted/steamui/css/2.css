@@ -59,6 +59,9 @@
   position: relative;
 }
 .broadcastchat_ChatMessages_3M5L0 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   flex-grow: 1;
   overflow-y: scroll;
   flex-basis: 1px;
@@ -110,7 +113,6 @@
   width: 24px;
   height: 24px;
   object-fit: contain;
-  margin-right: 4px;
   pointer-events: all;
   margin-top: -3px;
   margin-bottom: -3px;
@@ -623,6 +625,13 @@
 }
 .broadcast_embeddable_viewer_count_1MrTW svg .backGuy {
   fill: #fff;
+}
+div.broadcast_embeddable_viewer_count_1MrTW.broadcast_embeddable_vod_title_2xKaM {
+  display: block;
+  padding-left: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .broadcast_embeddable_stream_icon_and_viewer_container_2sbrG {
   display: grid;
