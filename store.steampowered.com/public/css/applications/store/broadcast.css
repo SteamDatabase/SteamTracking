@@ -878,6 +878,17 @@ div.broadcast_embeddable_viewer_count_1MrTW.broadcast_embeddable_vod_title_2xKaM
     min-height: unset;
   }
 }
+.broadcast_watch_iframe_page .broadcast_embeddable_BroadcastAndChat_1aJ9y {
+  margin: 0px;
+}
+.broadcast_watch_iframe_page
+  .broadcast_embeddable_BroadcastAndChat_1aJ9y
+  .broadcast_embeddable_embedded_player_12fBJ,
+.broadcast_watch_iframe_page
+  .broadcast_embeddable_BroadcastAndChat_1aJ9y
+  .broadcast_embeddable_video_placeholder_1KU95 {
+  height: 100vh;
+}
 .broadcast_embeddable_detail_chat_ctn_IaFns {
   position: absolute;
   top: 0;

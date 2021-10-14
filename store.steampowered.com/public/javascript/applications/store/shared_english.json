@@ -1046,7 +1046,7 @@
     "Login_UseAppForQR": "Use the %1$s to sign in via QR code",
     "Login_UseAppForQR_Inner": "Steam Mobile App",
     "Login_CheckCredentials": "Please check your password and account name and try again.",
-    "Login_IncorrectSteamGuard": "The Steam Guard code you entered was incorrect.",
+    "Login_IncorrectSteamGuard": "Incorrect code, please try again",
     "Login_Help_SignIn": "Help, I can't sign in",
     "Login_Help_AccessMobileApp": "Help, I no longer have access to my Steam Mobile App",
     "Login_EnterMobileCode": "Enter the code from your Steam Mobile App",
