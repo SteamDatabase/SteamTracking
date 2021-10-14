@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6828886";
+var CLSTAMP = "6830861";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [1],
   {
@@ -32571,18 +32571,20 @@ var CLSTAMP = "6828886";
               : "?",
             D = e.nNodeID == e.nExpandedNodeID,
             S = e.nNodeID != e.nExpandedNodeID && 0 != e.nExpandedNodeID,
-            T = o
+            T = Ra.a.Get().IsLeagueNodeLive(t, e.nLeagueID, e.nNodeID),
+            L = T
+              ? 1
+              : o
               ? a.matches.length
               : Ra.a
                   .Get()
                   .GetNodeTypeGameCount(null == a ? void 0 : a.node_type),
-            L = 115 + 30 * T,
-            C = D ? 1.5 * An.e : An.e,
-            j = D ? L : An.c,
-            w = D ? -An.e / 3 : 0,
-            G = D ? -An.c / 2 : 0,
-            A = Ra.a.Get().GetNodeTypeString(null == a ? void 0 : a.node_type),
-            R = Ra.a.Get().IsLeagueNodeLive(t, e.nLeagueID, e.nNodeID);
+            C = 115 + 30 * L,
+            j = D ? 1.5 * An.e : An.e,
+            w = D ? C : An.c,
+            G = D ? -An.e / 3 : 0,
+            A = D ? -An.c / 2 : 0,
+            R = Ra.a.Get().GetNodeTypeString(null == a ? void 0 : a.node_type);
           return e.bAlwaysRender ||
             0 != (null == a ? void 0 : a.team_id_1) ||
             0 != (null == a ? void 0 : a.team_id_2) ||
@@ -32596,7 +32598,7 @@ var CLSTAMP = "6828886";
                     D && Gn.a.Expanded,
                     S && Gn.a.OtherExpanded,
                     e.strBackgroundColor && Gn.a.ShowingColor,
-                    R && Gn.a.IsLive
+                    T && Gn.a.IsLive
                   ),
                   style: {
                     background: e.strBackgroundColor
@@ -32606,10 +32608,10 @@ var CLSTAMP = "6828886";
                         e.strBackgroundColor +
                         "33 ), linear-gradient( #27272D, #27272D )"
                       : "#27272D",
-                    width: C,
-                    height: j,
-                    marginLeft: w,
-                    marginTop: G,
+                    width: j,
+                    height: w,
+                    marginLeft: G,
+                    marginTop: A,
                   },
                   onClick: function () {
                     return e.setExpandedNodeID(
@@ -32644,7 +32646,7 @@ var CLSTAMP = "6828886";
                   i.a.createElement(
                     "div",
                     { className: Gn.a.BestOf },
-                    Object(_.a)(A)
+                    Object(_.a)(R)
                   ),
                   i.a.createElement(
                     "div",
@@ -32751,8 +32753,8 @@ var CLSTAMP = "6828886";
                       i.a.createElement("div", { className: Gn.a.Score }, O)
                     ),
                     i.a.createElement("div", { className: Gn.a.Separator }),
-                    !R &&
-                      kn(1, T).map(function (n) {
+                    !T &&
+                      kn(1, L).map(function (n) {
                         var r =
                             !o ||
                             n - 1 < (null == a ? void 0 : a.matches.length),
@@ -32773,7 +32775,7 @@ var CLSTAMP = "6828886";
                             "" + e.nNodeID,
                             Object(ba.l)(n, ba.f.SERIES)
                           ),
-                          m = R
+                          m = T
                             ? "#dpc_watch_live"
                             : s
                             ? "#dpc_watch_vod"
@@ -32797,7 +32799,7 @@ var CLSTAMP = "6828886";
                             {
                               to: {
                                 state: { bAutoScroll: !0 },
-                                pathname: R ? u : c,
+                                pathname: T ? u : c,
                               },
                               className: Gn.a.DetailsButton,
                             },
@@ -32805,7 +32807,7 @@ var CLSTAMP = "6828886";
                           )
                         );
                       }),
-                    R &&
+                    T &&
                       i.a.createElement(
                         "div",
                         { className: Gn.a.LiveContainer },
