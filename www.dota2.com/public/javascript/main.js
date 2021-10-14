@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6826029";
+var CLSTAMP = "6828886";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [1],
   {
@@ -10360,7 +10360,7 @@ var CLSTAMP = "6826029";
           }),
           (e.prototype.GetSpoilerBlockState = function (e) {
             var t = this.GetEventInfo(e);
-            return !t || t.bEventCompleted
+            return t && t.bEventCompleted
               ? c.l.UNBLOCKED
               : this.m_eSpoilerBlock;
           }),
@@ -37504,12 +37504,12 @@ var CLSTAMP = "6826029";
               return l(Date.now() / 1e3);
             }, 5e3);
           }, []);
-          var y = d.b.dpc_watch(
-            f == va.e.INVALID ? Object(ba.b)() : Object(ba.j)(f)
-          );
+          var y = d.b.dpc_schedule(Object(ba.j)(f));
           if (
-            (Ra.a.Get().GetSpoilerBlockState(f) == va.l.BLOCKED
-              ? (y = d.b.dpc_schedule(Object(ba.j)(f)))
+            (Ra.a.Get().GetSpoilerBlockState(f) == va.l.UNBLOCKED
+              ? (y = d.b.dpc_watch(
+                  f == va.e.INVALID ? Object(ba.b)() : Object(ba.j)(f)
+                ))
               : (null == E ? void 0 : E.bEventCompleted) &&
                 (y = d.b.dpc_standings(
                   Object(ba.j)(f),
