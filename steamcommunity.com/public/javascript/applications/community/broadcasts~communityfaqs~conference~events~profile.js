@@ -5173,22 +5173,28 @@
                       },
                       c.createElement("img", { src: q.a })
                     ),
-                  this.props.emoticonStore &&
-                    c.createElement(G.a, {
-                      title: " ",
-                      ttip: Object(R.f)("#Editor_Emoticon"),
-                      className: Object(C.a)(X.a.EmoteOuter),
-                      disabled: !1,
-                      OnEmoticonSelected: this.OnEmoticonSelected,
-                      rtLastAckedNewEmoticons: Number.MAX_VALUE,
-                      emoticonStore: this.props.emoticonStore,
-                      emoticonHoverStore: f.b,
-                      useImg: this.props.pathToImages + "/format_emote.png",
-                      contextOptions: {
-                        bOverlapHorizontal: !0,
-                        bDisablePopTop: !0,
-                      },
-                    }),
+                  c.createElement(
+                    "span",
+                    {
+                      className: "ttip",
+                      "data-tooltip-text": Object(R.f)("#Editor_Emoticon"),
+                    },
+                    this.props.emoticonStore &&
+                      c.createElement(G.a, {
+                        title: " ",
+                        className: Object(C.a)(X.a.EmoteOuter),
+                        disabled: !1,
+                        OnEmoticonSelected: this.OnEmoticonSelected,
+                        rtLastAckedNewEmoticons: Number.MAX_VALUE,
+                        emoticonStore: this.props.emoticonStore,
+                        emoticonHoverStore: f.b,
+                        useImg: this.props.pathToImages + "/format_emote.png",
+                        contextOptions: {
+                          bOverlapHorizontal: !0,
+                          bDisablePopTop: !0,
+                        },
+                      })
+                  ),
                   Boolean(this.BSupports("img") && !n) &&
                     c.createElement(
                       "span",
