@@ -64839,6 +64839,13 @@
             e != this.m_model.special_event_doc_link &&
               ((this.m_model.special_event_doc_link = e), this.SetDirty(!0));
           }),
+          (e.prototype.GetSpecialEventTypeMax = function () {
+            return this.m_model.special_event_type_max || 0;
+          }),
+          (e.prototype.SetSpecialEventTypeMax = function (e) {
+            e != this.m_model.special_event_type_max &&
+              ((this.m_model.special_event_type_max = e), this.SetDirty(!0));
+          }),
           (e.prototype.BRequiresRemotePlayTogether = function () {
             return (
               this.m_model.required_app_features.remote_play_together || !1
@@ -65812,6 +65819,8 @@
           ),
           Object(r.c)([c.a], e.prototype, "GetSpecialEventDocLink", null),
           Object(r.c)([T.k.bound], e.prototype, "SetSpecialEventDocLink", null),
+          Object(r.c)([c.a], e.prototype, "GetSpecialEventTypeMax", null),
+          Object(r.c)([T.k.bound], e.prototype, "SetSpecialEventTypeMax", null),
           Object(r.c)([c.a], e.prototype, "BRequiresRemotePlayTogether", null),
           Object(r.c)(
             [T.k.bound],
@@ -68519,7 +68528,29 @@
                   tooltip:
                     "Ideally links directly to the part of the OptIn documentation that talks about the purpose of this event. Use an anchor to do this.",
                   placeholder: "Optional: Documentation Link Here",
-                })
+                }),
+                i.a.createElement(K.l, {
+                  type: "number",
+                  label: "Optional: Maximum amount of events per game",
+                  onChange: function (e) {
+                    return t.SetSpecialEventTypeMax(
+                      Number.parseInt(e.target.value)
+                    );
+                  },
+                  value: t.GetSpecialEventTypeMax(),
+                  tooltip:
+                    "How many of these event type can a single game created? If set to zero, it means unlimited.",
+                  min: "0",
+                }),
+                i.a.createElement(
+                  "a",
+                  {
+                    href:
+                      "https://confluence.valve.org/display/STEAM/Opt-In+Tech+Custom+Event+type",
+                    target: "_blank",
+                  },
+                  "Learn more about this feature here."
+                )
               )
             : i.a.createElement(K.e, {
                 label: "Enable Feature",
