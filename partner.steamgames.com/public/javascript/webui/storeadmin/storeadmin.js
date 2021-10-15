@@ -64141,7 +64141,10 @@
         (e[(e.k_StatsSummary = 9)] = "k_StatsSummary"),
         (e[(e.k_SurveyButton = 10)] = "k_SurveyButton"),
         (e[(e.k_DemoLaunch = 11)] = "k_DemoLaunch"),
-        (e[(e.k_CallForRegistration = 12)] = "k_CallForRegistration");
+        (e[(e.k_CallForRegistration = 12)] = "k_CallForRegistration"),
+        (e[(e.k_EnterDiscount = 13)] = "k_EnterDiscount"),
+        (e[(e.k_EnterDiscountReminder = 14)] = "k_EnterDiscountReminder"),
+        (e[(e.k_LearnMore = 15)] = "k_LearnMore");
     })(qe || (qe = {}));
     var Qe = [
       qe.k_Custom,
@@ -64151,9 +64154,12 @@
       qe.k_PressPreviewDetails,
       qe.k_DemoReview,
       qe.k_DemoLaunch,
+      qe.k_EnterDiscount,
+      qe.k_EnterDiscountReminder,
       qe.k_ScheduleLiveStream,
       qe.k_ReviewCategorization,
       qe.k_DemoNotReady,
+      qe.k_LearnMore,
       qe.k_CancelSection,
       qe.k_StatsSummary,
       qe.k_SurveyButton,
@@ -64186,6 +64192,12 @@
           return "Survey button";
         case qe.k_DemoLaunch:
           return "Reminder: Launch your demo";
+        case qe.k_EnterDiscount:
+          return "Enter Discount";
+        case qe.k_EnterDiscountReminder:
+          return "Enter Discount Reminder";
+        case qe.k_LearnMore:
+          return "Learn More Link";
       }
       return "unknown";
     }
@@ -72332,7 +72344,7 @@
                 Object(q.n)(
                   "#OptIn_EmailSection_schedlive_Body",
                   t.GetScheduleMaxItems().toLocaleString(),
-                  at.Get().GetName(),
+                  at.Get().GetCurEventTitle(),
                   i.a.createElement(
                     "a",
                     { href: t.GetSalePreviewPage() || "" },
@@ -72563,6 +72575,76 @@
                     Object(q.f)("#OptIn_EmailSection_DemoRelease_Token")
                   )
                 )
+              ));
+            break;
+          case qe.k_EnterDiscount:
+            (a = "DISCOUNT"),
+              (o = i.a.createElement(
+                "div",
+                null,
+                "If you’d like to offer a discount on your title throughout the even then enter your ",
+                at.Get().GetCurEventTitle(),
+                "discounts before the event begins on ",
+                i.a.createElement(
+                  "span",
+                  null,
+                  " " +
+                    Object(q.k)(at.Get().GetEventStartTime() || 0) +
+                    " @ " +
+                    Object(q.m)(at.Get().GetEventStartTime() || 0)
+                ),
+                ". Enter the discount ",
+                i.a.createElement(
+                  "a",
+                  { href: s.c.PARTNER_BASE_URL + "pub/event/" },
+                  i.a.createElement("span", null, "HERE.")
+                )
+              ));
+            break;
+          case qe.k_EnterDiscountReminder:
+            (a = "DISCOUNT"),
+              (o = i.a.createElement(
+                "div",
+                null,
+                "If you’d like to offer a discount on your title throughout the event, it’s not too late to do so. Enter your ",
+                at.Get().GetCurEventTitle(),
+                " discounts before the event begins on",
+                Object(q.k)(at.Get().GetEventStartTime() || 0) +
+                  " @ " +
+                  Object(q.m)(at.Get().GetEventStartTime() || 0),
+                ". Enter the discount ",
+                i.a.createElement(
+                  "a",
+                  { href: s.c.PARTNER_BASE_URL + "pub/event/" },
+                  i.a.createElement("span", null, "HERE")
+                ),
+                "."
+              ));
+            break;
+          case qe.k_LearnMore:
+            (a = "LEARN MORE"),
+              (o = i.a.createElement(
+                "div",
+                null,
+                "Visit our ",
+                at.Get().GetCurEventTitle(),
+                " documentation ",
+                i.a.createElement(
+                  "a",
+                  { href: t.GetWikiDocURL() || "#" },
+                  "HERE"
+                ),
+                " for more information. Or reach out via Steam Support using this\t",
+                i.a.createElement(
+                  "a",
+                  {
+                    href:
+                      s.c.HELP_BASE_URL +
+                      "en/wizard/HelpWithPublishing?issueid=933",
+                  },
+                  "LINK"
+                ),
+                ", should you have any remaining questions."
               ));
             break;
           case qe.k_CallForRegistration:
@@ -73203,6 +73285,9 @@
               t.bNeedSurveyLink = !0;
               break;
             case qe.k_CallForRegistration:
+              break;
+            case qe.k_LearnMore:
+              t.bNeedWikiDocumentation = !0;
           }
         }),
         t
