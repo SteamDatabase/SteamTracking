@@ -13483,6 +13483,7 @@
                     })
                   );
                 }
+              var u = n.GetEventModel().jsondata.sale_opt_in_page_name;
               return d.createElement(
                 "div",
                 null,
@@ -13576,6 +13577,35 @@
                       ),
                     },
                     s
+                  ),
+                Boolean(A.i.is_support && u) &&
+                  d.createElement(
+                    "div",
+                    {
+                      className: Object(k.a)(
+                        C.ValveOnlyBackground,
+                        B.EventCategoryCtn
+                      ),
+                    },
+                    d.createElement(
+                      "div",
+                      null,
+                      "Use OptIn ",
+                      n.GetEventModel().jsondata.sale_opt_in_page_name,
+                      " Event Typpe (please ensure the custom event type Live Stream exists and is published)"
+                    ),
+                    d.createElement(ee, {
+                      key: "gs-" + u,
+                      category: {
+                        name: "OptIn Custom Name Not Imported yet",
+                        description: "TODO",
+                        icon: "11",
+                        type: 11,
+                        tags: [u],
+                      },
+                      fnCategoryToggle: this.OnCategoryCheck,
+                      fnContainCategory: this.BContainsCategory,
+                    })
                   ),
                 d.createElement("div", { className: B.EventCategoryCtn }, i)
               );
@@ -16242,6 +16272,8 @@
             "items" === n.section_type &&
               Boolean(n.smart_section_type) &&
               ((i = !1), (r = "#Sale_Section_RevealSetting_limit_smart")),
+            a.GetEventModel().jsondata.sale_opt_in_page_name ||
+              ((i = !1), (r = "#Sale_Section_RevealSetting_limit_optin_ttip")),
             "events" === n.section_type &&
               Boolean(n.smart_section_type) &&
               "recent_tagged_events" !== n.smart_section_type &&
