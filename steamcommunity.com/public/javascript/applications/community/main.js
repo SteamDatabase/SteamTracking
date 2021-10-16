@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6833682";
+var CLSTAMP = "6810750";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [101],
   {
@@ -610,10 +610,10 @@ var CLSTAMP = "6833682";
           return T;
         }),
         n.d(t, "y", function () {
-          return L;
+          return B;
         }),
         n.d(t, "H", function () {
-          return B;
+          return L;
         }),
         n.d(t, "Z", function () {
           return A;
@@ -1750,7 +1750,7 @@ var CLSTAMP = "6833682";
           })
         );
       }
-      function L(e) {
+      function B(e) {
         return o.createElement(
           "svg",
           {
@@ -1771,7 +1771,7 @@ var CLSTAMP = "6833682";
           })
         );
       }
-      function B(e) {
+      function L(e) {
         return o.createElement(
           "svg",
           {
@@ -3759,7 +3759,7 @@ var CLSTAMP = "6833682";
               u = l.elemProps,
               p = l.navOptions,
               h = l.gamepadEvents;
-            void 0 !== p.focusable || u.disabled || (p.focusable = !0);
+            void 0 === p.focusable && (p.focusable = !0);
             var m = w(Object(r.a)({}, p)),
               f = m.ref,
               g = m.node,
@@ -5635,10 +5635,10 @@ var CLSTAMP = "6833682";
           return T;
         }),
         n.d(t, "u", function () {
-          return L;
+          return B;
         }),
         n.d(t, "o", function () {
-          return B;
+          return L;
         }),
         n.d(t, "p", function () {
           return A;
@@ -5865,7 +5865,7 @@ var CLSTAMP = "6833682";
             })
           );
         }),
-        L = o.forwardRef(function (e, t) {
+        B = o.forwardRef(function (e, t) {
           return o.createElement(
             k,
             Object(r.a)({ type: "button" }, e, {
@@ -5886,7 +5886,7 @@ var CLSTAMP = "6833682";
           })
         );
       });
-      function B(e) {
+      function L(e) {
         return o.createElement(
           C,
           null,
@@ -11492,11 +11492,14 @@ var CLSTAMP = "6833682";
     },
     bDQf: function (e, t, n) {
       "use strict";
-      n.d(t, "a", function () {
-        return l;
+      n.d(t, "c", function () {
+        return c;
       }),
-        n.d(t, "b", function () {
+        n.d(t, "a", function () {
           return u;
+        }),
+        n.d(t, "b", function () {
+          return p;
         });
       var r,
         o = n("mrSG"),
@@ -11520,19 +11523,22 @@ var CLSTAMP = "6833682";
           "UIStore/BasicUIStore",
           "SystemNetworkStore",
           "SteamClient",
+          "VirtualizedBoxCarousel",
         ];
+      function l(e) {
+        return c.includes(e);
+      }
       !(function (e) {
         (e[(e.Debug = 0)] = "Debug"),
           (e[(e.Info = 1)] = "Info"),
           (e[(e.Warning = 2)] = "Warning"),
           (e[(e.Error = 3)] = "Error");
       })(r || (r = {}));
-      var l = (function () {
+      var u = (function () {
           function e(e, t) {
             (this.m_fnIdGenerator = null),
               (this.m_sName = e),
-              (this.m_fnIdGenerator = t),
-              u.Get().RegisterLogName(e);
+              (this.m_fnIdGenerator = t);
           }
           return (
             (e.prototype.Debug = function () {
@@ -11567,7 +11573,7 @@ var CLSTAMP = "6833682";
             (e.prototype.Log = function (e) {
               for (var t, n, i = [], a = 1; a < arguments.length; a++)
                 i[a - 1] = arguments[a];
-              if (e != r.Debug || u.Get().IsDebugLogEnabled(this.m_sName)) {
+              if (e != r.Debug || p.Get().IsDebugLogEnabled(this.m_sName)) {
                 var s = this.m_sName,
                   c =
                     null !==
@@ -11578,8 +11584,8 @@ var CLSTAMP = "6833682";
                       ? n
                       : null;
                 null != c && (s += " (" + c + ")");
-                var l = u.Get().IncludeBacktraceInLog;
-                m.apply(void 0, Object(o.g)([e, l, s, this.m_sName], i));
+                var l = p.Get().IncludeBacktraceInLog;
+                f.apply(void 0, Object(o.g)([e, l, s, this.m_sName], i));
               }
             }),
             Object(o.c)([i.a], e.prototype, "Debug", null),
@@ -11590,23 +11596,21 @@ var CLSTAMP = "6833682";
             e
           );
         })(),
-        u = (function () {
+        p = (function () {
           function e() {
             (this.m_Storage = null),
-              (this.m_rgLogNames = null),
               (this.m_setEnabledDebugLogs = new Set()),
               (this.m_bIncludeBacktraceInLog = !1),
               (this.m_SettingsChangedCallback = new s.a()),
               (this.m_bLoading = !1),
               (this.m_Storage = new a.a()),
-              (this.m_rgLogNames = c.slice()),
               this.LoadSettings();
           }
           return (
             (e.prototype.LogAsLogManager = function () {
               for (var e = [], t = 0; t < arguments.length; t++)
                 e[t] = arguments[t];
-              m.apply(
+              f.apply(
                 void 0,
                 Object(o.g)(
                   [
@@ -11649,7 +11653,7 @@ var CLSTAMP = "6833682";
                       return (
                         (n = r.sent()),
                         Array.isArray(n) &&
-                          ((this.m_setEnabledDebugLogs = new Set(n)),
+                          ((this.m_setEnabledDebugLogs = new Set(n.filter(l))),
                           this.LogAsLogManager(
                             "Loaded debug enabled log names. Will print log messages for:",
                             Array.from(this.m_setEnabledDebugLogs)
@@ -11713,16 +11717,10 @@ var CLSTAMP = "6833682";
             }),
             Object.defineProperty(e.prototype, "LogNames", {
               get: function () {
-                return this.m_rgLogNames;
+                return c;
               },
               enumerable: !1,
               configurable: !0,
-            }),
-            (e.prototype.RegisterLogName = function (e) {
-              this.m_rgLogNames.includes(e) || this.m_rgLogNames.push(e);
-            }),
-            (e.prototype.IsLogName = function (e) {
-              return this.m_rgLogNames.includes(e);
             }),
             (e.prototype.IsDebugLogEnabled = function (e) {
               return this.m_setEnabledDebugLogs.has(e);
@@ -11802,15 +11800,15 @@ var CLSTAMP = "6833682";
             e
           );
         })();
-      function p(e) {
+      function d(e) {
         for (var t = 0, n = 0; n < e.length; n++)
           t = e.charCodeAt(n) + ((t << 5) - t);
         return [(t >> 0) & 255, (t >> 8) & 255, (t >> 16) & 255];
       }
-      function d(e) {
+      function h(e) {
         return (299 * e[0] + 587 * e[1] + 114 * e[2]) / 1e3 >= 128;
       }
-      function h(e) {
+      function m(e) {
         switch (e) {
           case r.Debug:
             return String.fromCodePoint(128027);
@@ -11822,22 +11820,22 @@ var CLSTAMP = "6833682";
             return String.fromCodePoint(128165);
         }
       }
-      function m(e, t, n, i) {
+      function f(e, t, n, i) {
         for (var a = [], s = 4; s < arguments.length; s++)
           a[s - 4] = arguments[s];
-        var c = p(i),
+        var c = d(i),
           l = c.map(function (e, t) {
             return Math.max(
               0,
               Math.min(255, 255 * (0.8 * (e / 255 - 0.5) + 0.15))
             );
           }),
-          u = d(l),
-          m = n;
-        t && (m = h(e) + " " + m);
+          u = h(l),
+          p = n;
+        t && (p = m(e) + " " + p);
         var f = Object(o.g)(
           [
-            "%c" + m + "%c:",
+            "%c" + p + "%c:",
             "color: " +
               (u ? "black" : "white") +
               "; background: rgb(" +
@@ -14484,10 +14482,10 @@ var CLSTAMP = "6833682";
         T = function () {
           return "/profiles/:steamid/recommended/:appid/";
         },
-        L = function () {
+        B = function () {
           return "/profiles/:steamid/recommended";
         },
-        B = function () {
+        L = function () {
           return "/id/:vanity_url/recommended";
         },
         A = function () {
@@ -14598,13 +14596,13 @@ var CLSTAMP = "6833682";
                       },
                     }),
                     i.a.createElement(l.c, {
-                      path: B(),
+                      path: L(),
                       render: function (e) {
                         return i.a.createElement(v, Object(r.a)({}, e));
                       },
                     }),
                     i.a.createElement(l.c, {
-                      path: L(),
+                      path: B(),
                       render: function (e) {
                         return i.a.createElement(v, Object(r.a)({}, e));
                       },
