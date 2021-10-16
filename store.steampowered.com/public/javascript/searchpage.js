@@ -98,6 +98,8 @@ function PopulateTagFacetData( rgTagFacetData, rgForcedTop, bHydrate=false)
 		}
 		
 		var $Tag = g_TagMap[tagid];
+		if ( !$Tag ) // Facet data may include banned or missing tags.
+			continue;
 		$Tag.find('.tab_filter_control_count').text( textCount ).css( {display: '' });
 		$Container.append( $Tag );
 		if ( nIndex++ > 15 )
