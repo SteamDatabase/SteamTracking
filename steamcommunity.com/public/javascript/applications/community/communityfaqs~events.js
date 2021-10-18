@@ -13966,11 +13966,20 @@
                   e &&
                   e.startTime >= t.event_schedule_rtime_start &&
                   e.endTime <= t.event_schedule_rtime_end &&
-                  (function (e, t) {
-                    return t.some(function (t) {
-                      return t.type == e.type && e.BMatchesAllTags(t.tags);
-                    });
-                  })(e, t.event_schedule_categories)
+                  (function (e, t, n) {
+                    return (
+                      t.some(function (t) {
+                        return t.type == e.type && e.BMatchesAllTags(t.tags);
+                      }) ||
+                      (null == n
+                        ? void 0
+                        : n.some(function (t) {
+                            return t.events.some(function (t) {
+                              return t.announcement_gid == e.AnnouncementGID;
+                            });
+                          }))
+                    );
+                  })(e, t.event_schedule_categories, t.event_schedule_tracks)
                 );
               },
             })
