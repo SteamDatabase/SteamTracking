@@ -20719,9 +20719,18 @@ hr {
   height: 40px;
   flex-shrink: 0;
 }
+.dailydealeditor_DiscountEventLinks_1LKk1 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+}
 .dailydealeditor_SectionCtn_247gA {
   display: flex;
   flex-flow: row wrap;
+  background-color: #2e3138;
+  padding: 12px 12px 4px 12px;
+  box-sizing: border-box;
+  border-radius: 4px;
 }
 .dailydealeditor_SectionHdr_14AcV {
   font-weight: bold;
@@ -20740,12 +20749,31 @@ hr {
 .dailydealeditor_ButtonRow_2fO-C {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
   width: 100%;
+  justify-content: space-between;
 }
-.dailydealeditor_ButtonRow_2fO-C button {
+.dailydealeditor_ButtonRow_2fO-C .dailydealeditor_ButtonRowSpacer_3PObg {
+  flex-grow: 1;
+}
+.dailydealeditor_ButtonRow_2fO-C button.DialogButton {
   width: 25%;
-  margin-left: 8px;
+  margin-left: 18px;
+}
+.dailydealeditor_ButtonRow_2fO-C button.DialogButton.Primary {
+  margin-left: 0px;
+}
+.dailydealeditor_DDAdminColums_1KdA5 {
+  display: flex;
+  flex-direction: row;
+  margin-top: 12px;
+}
+.dailydealeditor_DDAdminColums_1KdA5 .dailydealeditor_Column_3tD9K {
+  flex-grow: 1;
+  background-color: #2e3138;
+  padding: 12px;
+  box-sizing: border-box;
+  margin-right: 8px;
+  border-radius: 4px;
 }
 @keyframes shared_icons_SpinnerSpokeFade_33nZz {
   0% {
@@ -20856,6 +20884,10 @@ hr {
   background: #58792b;
   cursor: pointer;
 }
+.dailydealcalendar_DailyDealCtn_2XgAJ.dailydealcalendar_Reserved_s-YTZ {
+  background: #282e3b;
+  justify-content: center;
+}
 .dailydealcalendar_DailyDealCtn_2XgAJ .dailydealcalendar_DailyDealImage_1Hprj {
   display: block;
   max-width: 96px;
@@ -20880,7 +20912,7 @@ hr {
   text-align: center;
 }
 .dailydealcalendar_DealSection_jxKWo {
-  height: 205px;
+  height: 148px;
   background: #3a4254;
   margin-bottom: 30px;
   padding: 6px;
@@ -20933,13 +20965,34 @@ hr {
 }
 .dailydealpartnerinfo_InfoCtn_1__uv {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  flex: 1;
+  background: #23262b;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  padding: 18px;
+  box-sizing: border-box;
 }
 .dailydealpartnerinfo_Title_2Ttas {
   color: #fff;
-  font-weight: bold;
   text-transform: uppercase;
-  font-size: large;
+  font-size: 18px;
+}
+ul li {
+  list-style-type: square;
+  list-style-position: outside;
+  margin-bottom: 6px;
+}
+.dailydealpartnerinfo_DDVisibilityExample_3OAcn {
+  max-width: 400px;
+}
+.dailydealsdashboard_Row_2fsEu {
+  background-color: pink;
+  padding-bottom: 10px;
+}
+.dailydealsdashboard_InfoCtn_3t-3P {
+  display: flex;
+  flex-direction: row;
 }
 .featuring_Featuring_3T5cu {
   width: 160px;
