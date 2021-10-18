@@ -8593,7 +8593,7 @@
             ? (Q = c.a.createElement(
                 "div",
                 null,
-                c.a.createElement(oe.b, { item: l, bMiniMode: !0 })
+                c.a.createElement(oe.a, { item: l, bMiniMode: !0 })
               ))
             : (W = c.a.createElement(je, {
                 info: O,
@@ -14936,7 +14936,7 @@
                         break;
                       case "event_schedule":
                         g = o.createElement(
-                          lt.c,
+                          lt.b,
                           Object(r.a)({ section: t }, e.props, { activeTab: v })
                         );
                         break;
@@ -23268,7 +23268,7 @@
                     appLinkInfo: t,
                     className: T.a.DemoButton,
                   }),
-                a && c.a.createElement(L.b, { item: a, bMiniMode: !0 }),
+                a && c.a.createElement(L.a, { item: a, bMiniMode: !0 }),
                 u &&
                   n &&
                   c.a.createElement(R.d, { appid: n.appid, bIsMuted: !1 })
@@ -54680,12 +54680,22 @@
           return n
             ? i.createElement(
                 s.b,
-                { to: r, className: e.className, onClick: e.onClick },
+                {
+                  to: r,
+                  style: e.style,
+                  className: e.className,
+                  onClick: e.onClick,
+                },
                 e.children
               )
             : i.createElement(
                 "a",
-                { href: r, className: e.className, onClick: e.onClick },
+                {
+                  href: r,
+                  style: e.style,
+                  className: e.className,
+                  onClick: e.onClick,
+                },
                 e.children
               );
         };
@@ -62631,17 +62641,14 @@
     },
     onkS: function (e, t, n) {
       "use strict";
-      n.d(t, "c", function () {
-        return me;
+      n.d(t, "b", function () {
+        return he;
       }),
         n.d(t, "a", function () {
-          return he;
+          return ye;
         }),
-        n.d(t, "b", function () {
-          return ge;
-        }),
-        n.d(t, "d", function () {
-          return De;
+        n.d(t, "c", function () {
+          return Re;
         });
       var r = n("mrSG"),
         a = n("vDqi"),
@@ -62693,15 +62700,69 @@
         Z = n.n(K),
         J = n("YVfL"),
         X = n.n(J),
-        $ = n("TOXn"),
-        ee = n("gPCo"),
-        te = n("IzPI"),
-        ne = n("TLUu"),
-        re = n.n(ne),
-        ae = Object(s.a)(function (e) {
+        $ = (function () {
+          function e() {
+            (this.m_mapAnnounceGIDToTrack = new Map()),
+              (this.m_mapAnnounceGIDToSaleClanID = new Map());
+          }
+          return (
+            (e.Get = function () {
+              return e.s_singleton || (e.s_singleton = new e()), e.s_singleton;
+            }),
+            (e.prototype.AddAllScheduleTrack = function (e, t) {
+              var n = this;
+              t &&
+                t.forEach(function (t) {
+                  t.events.forEach(function (r) {
+                    n.m_mapAnnounceGIDToTrack.set(r.announcement_gid, t),
+                      n.m_mapAnnounceGIDToSaleClanID.set(
+                        r.announcement_gid,
+                        e.clanSteamID.GetAccountID()
+                      );
+                  });
+                });
+            }),
+            (e.prototype.GetScheduleTrackByEvent = function (e) {
+              return this.m_mapAnnounceGIDToTrack.get(e.AnnouncementGID);
+            }),
+            (e.prototype.GetBrandingImageURLByEvent = function (e) {
+              var t = this.GetScheduleTrackByEvent(e);
+              if (t && t.localized_track_image) {
+                var n = Object(p.d)(N.c.LANGUAGE),
+                  r = M.a.GetWithFallback(t.localized_track_image, n),
+                  a = this.m_mapAnnounceGIDToSaleClanID.get(e.AnnouncementGID);
+                return (
+                  N.c.MEDIA_CDN_COMMUNITY_URL + "images/clans/" + a + "/" + r
+                );
+              }
+            }),
+            (e.prototype.BHasTracks = function () {
+              return (
+                this.m_mapAnnounceGIDToTrack.size > 0 &&
+                this.m_mapAnnounceGIDToSaleClanID.size > 0
+              );
+            }),
+            (e.prototype.BIsPartOfSomeTrack = function (e) {
+              return Boolean(this.GetScheduleTrackByEvent(e));
+            }),
+            (e.prototype.BIsPartOfSomeTrackByAnnouncementID = function (e) {
+              return Boolean(this.m_mapAnnounceGIDToTrack.has(e));
+            }),
+            (e.prototype.BIsPartOfSomeTrackByEventID = function (e) {
+              return Boolean(this.m_mapAnnounceGIDToTrack.has(e));
+            }),
+            e
+          );
+        })(),
+        ee = n("TOXn"),
+        te = n("gPCo"),
+        ne = n("IzPI"),
+        re = n("TLUu"),
+        ae = n.n(re),
+        ie = Object(s.a)(function (e) {
           var t = Object(p.d)(N.c.LANGUAGE),
-            n = he.Get().GetScheduleTrackByEvent(e.event),
-            r = he.Get().GetBrandingImageURLByEvent(e.event),
+            n = $.Get().GetScheduleTrackByEvent(e.event),
+            r = $.Get().GetBrandingImageURLByEvent(e.event),
             a = n ? M.a.GetWithFallback(n.localized_name || [], t) : "",
             i = null == n ? void 0 : n.background_gradient_left,
             o = null == n ? void 0 : n.background_gradient_right;
@@ -62741,7 +62802,7 @@
             )
           );
         }),
-        ie = Object(s.a)(function (e) {
+        oe = Object(s.a)(function (e) {
           var t = Object(l.useState)(null),
             n = t[0],
             a = t[1],
@@ -62794,10 +62855,10 @@
                     "a",
                     {
                       key: t + "-" + n,
-                      href: Object(te.f)(N.c.STORE_BASE_URL + "app/" + e.appid),
+                      href: Object(ne.f)(N.c.STORE_BASE_URL + "app/" + e.appid),
                     },
                     u.a.createElement("img", {
-                      className: re.a.PresenterEventScreenshotThumbnail,
+                      className: ae.a.PresenterEventScreenshotThumbnail,
                       src: n,
                       onMouseEnter: function () {
                         return c(t);
@@ -62811,16 +62872,16 @@
           }
           return u.a.createElement(
             "div",
-            { className: re.a.MediaContainer },
+            { className: ae.a.MediaContainer },
             u.a.createElement(
               "div",
-              { className: re.a.MainMediaCtn },
+              { className: ae.a.MainMediaCtn },
               u.a.createElement("img", { src: d })
             ),
             u.a.createElement(
               "div",
               {
-                className: re.a.PresenterEventScreenshot,
+                className: ae.a.PresenterEventScreenshot,
                 onMouseLeave: function () {
                   return c(-1);
                 },
@@ -62829,9 +62890,9 @@
             )
           );
         }),
-        oe = Object(s.a)(function (e) {
+        se = Object(s.a)(function (e) {
           var t = e.presenters.map(function (t) {
-            return u.a.createElement(ee.c, {
+            return u.a.createElement(te.c, {
               key: "presenter-" + e.event.GID + "-" + t.name,
               name: t.name,
               title: t.title,
@@ -62849,14 +62910,14 @@
                 "SaleSchedDetailCtn"
               ),
             },
-            u.a.createElement(ae, Object(r.a)({}, e)),
+            u.a.createElement(ie, Object(r.a)({}, e)),
             u.a.createElement(
               "div",
               { className: X.a.StatementAndHighlights },
               u.a.createElement(
                 "div",
                 { className: X.a.PresenterEventStatementCtn },
-                u.a.createElement($.a, {
+                u.a.createElement(ee.a, {
                   text: e.event.GetSummaryWithFallback(
                     Object(p.d)(N.c.LANGUAGE)
                   ),
@@ -62867,23 +62928,23 @@
                 }),
                 t
               ),
-              u.a.createElement(ie, Object(r.a)({}, e))
+              u.a.createElement(oe, Object(r.a)({}, e))
             ),
-            u.a.createElement(De, { event: e.event })
+            u.a.createElement(Re, { event: e.event })
           );
         }),
-        se = n("EC9l"),
-        ce = n("5L1o"),
-        le = n("NKJh"),
-        ue = n.n(le);
-      function de(e) {
+        ce = n("EC9l"),
+        le = n("5L1o"),
+        ue = n("NKJh"),
+        de = n.n(ue);
+      function pe(e) {
         var t = Math.floor(Date.now() / 1e3),
           n = e.GetCalendarEndTime();
         t >= n && (t = 0);
         var r = e.GetCurrentlyLoadedEventCount(t, n);
         return !(r.nCount > 0) && r.bIsComplete;
       }
-      var pe = (function (e) {
+      var me = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -62911,7 +62972,7 @@
                 : t.GetActiveTabUniqueID()) !=
                 (null === (n = this.props.activeTab) || void 0 === n
                   ? void 0
-                  : n.GetActiveTabUniqueID()) && be.ClearSelection();
+                  : n.GetActiveTabUniqueID()) && ge.ClearSelection();
             }),
             (t.prototype.componentDidMount = function () {
               return Object(r.b)(this, void 0, void 0, function () {
@@ -62925,12 +62986,10 @@
                         b.a
                           .Get()
                           .AddStreamChangedListener(this.OnBroadcastSelected),
-                        he
-                          .Get()
-                          .AddAllScheduleTrack(
-                            this.props.event,
-                            this.props.section.event_schedule_tracks
-                          ),
+                        $.Get().AddAllScheduleTrack(
+                          this.props.event,
+                          this.props.section.event_schedule_tracks
+                        ),
                         (e = this.GetScheduleCalendarStore()).SetFilteredView(
                           function (e) {
                             return a.BShouldShowOnTab(e.appid);
@@ -62999,8 +63058,9 @@
             Object.defineProperty(t.prototype, "cachedUpcomingCalenderEvents", {
               get: function () {
                 var e = Object(E.b)().GetStoreInitializationTimestamp(),
-                  t = Object(G.d)(e).getTime() / 1e3;
-                return Object(E.b)().GetCalendarItemsInTimeRange(t, void 0);
+                  t = Object(G.d)(e).getTime() / 1e3,
+                  n = Object(E.b)().GetCalendarItemsInTimeRange(t, void 0);
+                return $.Get().BHasTracks() && n.rgCalendarItems.sort(_e), n;
               },
               enumerable: !1,
               configurable: !0,
@@ -63036,7 +63096,7 @@
             }),
             (t.prototype.OnBroadcastSelected = function (e) {
               var t = this.GetFirstEventWithBroadcaster(e.steamid);
-              t && (be.BIsEventSelected(t) || be.ToggleClanEventGID(t));
+              t && (ge.BIsEventSelected(t) || ge.ToggleClanEventGID(t));
             }),
             (t.prototype.ApplyScheduleToBroadcasts = function () {
               var e = this;
@@ -63114,7 +63174,7 @@
                   string: Object(M.f)("#Sale_EventSchedule"),
                 });
               var i = this.GetScheduleCalendarStore(),
-                o = de(i);
+                o = pe(i);
               if (o && !a) return null;
               for (
                 var s = new Array(), c = 0, u = this.state.rgVisibleEvents;
@@ -63166,14 +63226,14 @@
                       activeTab: r,
                       fnVisibleEventsChanged: this.VisibleEventsChanged,
                     }),
-                    Boolean(be.BIsSomeEventSelected())
-                      ? l.createElement(Oe, {
-                          eventGID: be.GetClanEventGID(),
+                    Boolean(ge.BIsSomeEventSelected())
+                      ? l.createElement(Be, {
+                          eventGID: ge.GetClanEventGID(),
                           bShowDemoButton: t.show_as_demos,
                           broadcastEmbedContext: this.props
                             .broadcastEmbedContext,
                         })
-                      : l.createElement(Ee, {
+                      : l.createElement(Oe, {
                           rgEventGIDs: s,
                           bShowDemoButton: t.show_as_demos,
                           rgFutureCalendarItems: this.cachedUpcomingCalenderEvents.rgCalendarItems
@@ -63199,52 +63259,7 @@
             (t = n = Object(r.c)([s.a], t))
           );
         })(l.Component),
-        me = Object(d.j)(pe),
-        he = (function () {
-          function e() {
-            (this.m_mapAnnounceGIDToTrack = new Map()),
-              (this.m_mapAnnounceGIDToSaleClanID = new Map());
-          }
-          return (
-            (e.Get = function () {
-              return e.s_singleton || (e.s_singleton = new e()), e.s_singleton;
-            }),
-            (e.prototype.AddAllScheduleTrack = function (e, t) {
-              var n = this;
-              t &&
-                t.forEach(function (t) {
-                  t.events.forEach(function (r) {
-                    n.m_mapAnnounceGIDToTrack.set(r.announcement_gid, t),
-                      n.m_mapAnnounceGIDToSaleClanID.set(
-                        r.announcement_gid,
-                        e.clanSteamID.GetAccountID()
-                      );
-                  });
-                });
-            }),
-            (e.prototype.GetScheduleTrackByEvent = function (e) {
-              return this.m_mapAnnounceGIDToTrack.get(e.AnnouncementGID);
-            }),
-            (e.prototype.GetBrandingImageURLByEvent = function (e) {
-              var t = this.GetScheduleTrackByEvent(e);
-              if (t && t.localized_track_image) {
-                var n = Object(p.d)(N.c.LANGUAGE),
-                  r = M.a.GetWithFallback(t.localized_track_image, n),
-                  a = this.m_mapAnnounceGIDToSaleClanID.get(e.AnnouncementGID);
-                return (
-                  N.c.MEDIA_CDN_COMMUNITY_URL + "images/clans/" + a + "/" + r
-                );
-              }
-            }),
-            (e.prototype.BIsPartOfSomeTrack = function (e) {
-              return Boolean(this.GetScheduleTrackByEvent(e));
-            }),
-            (e.prototype.BIsPartOfSomeTrackByAnnouncementID = function (e) {
-              return Boolean(this.m_mapAnnounceGIDToTrack.has(e));
-            }),
-            e
-          );
-        })(),
+        he = Object(d.j)(me),
         fe = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
@@ -63313,7 +63328,7 @@
                     rootMargin: "0px 0px 100px 0px",
                     mode: "JustLoad",
                   },
-                  l.createElement(_e, {
+                  l.createElement(ve, {
                     strSectionLabel: a,
                     rtSectionStart: i - 3600,
                     rtSectionEnd: i,
@@ -63333,7 +63348,7 @@
                         rootMargin: "0px 0px 100px 0px",
                         mode: "JustLoad",
                       },
-                      l.createElement(_e, {
+                      l.createElement(ve, {
                         strSectionLabel: t.strSectionLabel,
                         rtSectionStart: t.rtSectionStart,
                         rtSectionEnd: t.rtSectionEnd,
@@ -63359,7 +63374,7 @@
                 l.createElement(
                   "div",
                   { className: Object(A.a)(X.a.SaleSchedList) },
-                  de(t) &&
+                  pe(t) &&
                     l.createElement(
                       "div",
                       { className: X.a.NoEventsYet },
@@ -63382,8 +63397,16 @@
             Object(r.c)([L.a], t.prototype, "OnEventVisibilityChange", null),
             t
           );
-        })(l.Component),
-        _e = (function (e) {
+        })(l.Component);
+      function _e(e, t) {
+        if (e.start_time == t.start_time) {
+          var n = $.Get().BIsPartOfSomeTrackByEventID(e.unique_id),
+            r = $.Get().BIsPartOfSomeTrackByEventID(t.unique_id);
+          return (n && r) || (!n && !r) ? 0 : n ? -1 : 1;
+        }
+        return t.start_time - e.start_time;
+      }
+      var ve = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -63416,15 +63439,16 @@
             }),
             Object.defineProperty(t.prototype, "cachedCalendarItems", {
               get: function () {
-                var e = this;
-                return Object(E.b)().GetCalendarItemsInTimeRange(
-                  c.a(function () {
-                    return e.props.rtSectionStart;
-                  }),
-                  c.a(function () {
-                    return e.props.rtSectionEnd;
-                  })
-                );
+                var e = this,
+                  t = Object(E.b)().GetCalendarItemsInTimeRange(
+                    c.a(function () {
+                      return e.props.rtSectionStart;
+                    }),
+                    c.a(function () {
+                      return e.props.rtSectionEnd;
+                    })
+                  );
+                return $.Get().BHasTracks() && t.rgCalendarItems.sort(_e), t;
               },
               enumerable: !1,
               configurable: !0,
@@ -63446,7 +63470,7 @@
                   })
                   .reverse()
                   .map(function (e, t) {
-                    return l.createElement(ve, {
+                    return l.createElement(be, {
                       key: "schedrow_" + e.unique_id,
                       item: e,
                       fnOnEventVisibilityChange: r,
@@ -63486,7 +63510,7 @@
             (t = Object(r.c)([s.a], t))
           );
         })(l.Component),
-        ve = function (e) {
+        be = function (e) {
           var t = e.item,
             n = e.fnOnEventVisibilityChange,
             r = e.indexOfSection,
@@ -63524,13 +63548,13 @@
                     placeholderHeight: "60px",
                     rootMargin: "0px 0px 200px 0px",
                   },
-                  l.createElement(ge, { item: t })
+                  l.createElement(ye, { item: t })
                 )
               )
             )
           );
         },
-        be = new ((function () {
+        ge = new ((function () {
           function e() {}
           return (
             (e.prototype.BIsSomeEventSelected = function () {
@@ -63559,7 +63583,7 @@
             e
           );
         })())(),
-        ge = function (e) {
+        ye = function (e) {
           var t = e.item,
             n = l.useState(!1),
             a = n[0],
@@ -63618,10 +63642,42 @@
             d = y.a.GetClanInfoByClanAccountID(t.clanid);
           return !c || (t.appid && !u) || (!t.appid && !d)
             ? null
-            : l.createElement(Se, Object(r.a)({}, e));
+            : l.createElement(Ce, Object(r.a)({}, e));
         },
-        ye = new Set([" ", "-", ":"]),
-        Se = Object(s.a)(function (e) {
+        Se = new Set([" ", "-", ":"]);
+      function Ee(e, t) {
+        var n = $.Get().GetScheduleTrackByEvent(e);
+        if (n) {
+          var r = "encore" == e.jsondata.broadcast_content_type,
+            a = n.label_color,
+            i = n.background_gradient_left,
+            o = n.background_gradient_right;
+          return (
+            r
+              ? ((i = n.encore_background_gradient_left || i),
+                (o = n.encore_background_gradient_right || o),
+                t &&
+                  ((i = n.selected_encore_background_gradient_left || i),
+                  (o = n.selected_encore_background_gradient_right || o)),
+                (a = n.encore_label_color || a))
+              : t &&
+                ((i = n.selected_background_gradient_left || i),
+                (o = n.selected_background_gradient_right || o)),
+            i || o
+              ? {
+                  background:
+                    "linear-gradient(to right, " +
+                    (i || "transparent") +
+                    " 0%, " +
+                    (o || "transparent") +
+                    " 100%)",
+                  color: a,
+                }
+              : { color: a }
+          );
+        }
+      }
+      var Ce = Object(s.a)(function (e) {
           var t,
             n = e.item,
             r = e.bMiniMode,
@@ -63635,21 +63691,23 @@
           var s = o.getTime() / 1e3,
             c = a.GetNameWithFallback(Object(p.d)(N.c.LANGUAGE));
           if (c.startsWith(i))
-            for (c = c.slice(i.length); ye.has(c[0]); ) c = c.slice(1);
-          var u = he.Get().BIsPartOfSomeTrack(a),
-            d = !a.BIsEventInFuture() && !a.BHasEventEnded();
+            for (c = c.slice(i.length); Se.has(c[0]); ) c = c.slice(1);
+          var u = $.Get().BIsPartOfSomeTrack(a),
+            d = !a.BIsEventInFuture() && !a.BHasEventEnded(),
+            m = ge.BIsEventSelected(n.unique_id);
           return l.createElement(
             q.c,
             {
+              style: Ee(a, m),
               eventModel: a,
               route: q.a.k_eStoreView,
               onClick: function (t) {
                 var n = e.item.unique_id;
                 if (window.innerWidth > parseInt(X.a.strMediumWidth))
-                  be.ToggleClanEventGID(n);
-                else if (be.BIsEventSelected(n)) be.ClearSelection();
+                  ge.ToggleClanEventGID(n);
+                else if (ge.BIsEventSelected(n)) ge.ClearSelection();
                 else {
-                  be.ClearSelection();
+                  ge.ClearSelection();
                   var r = O.d.GetClanEventModel(n);
                   r && Object(V.a)(r, window);
                 }
@@ -63658,7 +63716,7 @@
               className: Object(A.a)(
                 ((t = {}),
                 (t[X.a.SaleSchedRow] = !0),
-                (t[X.a.SchedRowSelected] = be.BIsEventSelected(n.unique_id)),
+                (t[X.a.SchedRowSelected] = m),
                 (t[X.a.MiniMode] = r),
                 (t.SchedEntryPartOfTrack = u),
                 (t[X.a.LiveNow] = d),
@@ -63670,7 +63728,7 @@
               l.createElement(
                 "div",
                 { className: X.a.Time },
-                l.createElement(ce.i, null)
+                l.createElement(le.i, null)
               ),
             !d &&
               l.createElement("div", { className: X.a.Time }, Object(k.h)(s)),
@@ -63696,7 +63754,7 @@
             )
           );
         }),
-        Ee = Object(s.a)(function (e) {
+        Oe = Object(s.a)(function (e) {
           var t = e.rgEventGIDs,
             n = e.bShowDemoButton,
             r = e.rgFutureCalendarItems;
@@ -63714,7 +63772,7 @@
                 h.a.GetAppLinkInfo(t.appid)
               ) {
                 var i = { id: t.appid, type: "game" };
-                return l.createElement(ce.l, {
+                return l.createElement(le.l, {
                   key: "schedule_grid_" + e,
                   capsule: i,
                   imageType: "main",
@@ -63722,7 +63780,7 @@
                   eventToShow: a,
                 });
               }
-              return l.createElement(Ce, {
+              return l.createElement(we, {
                 key: "schedule_grid_" + e,
                 event: t,
                 eventCalendarItem: a,
@@ -63730,7 +63788,7 @@
             })
           );
         }),
-        Ce = function (e) {
+        we = function (e) {
           var t = e.event,
             n = e.eventCalendarItem,
             r = Object(p.d)(N.c.LANGUAGE),
@@ -63740,14 +63798,14 @@
             {
               className: X.a.ClanEventCapsuleCtn,
               onClick: function () {
-                return be.SelectClanEventGID(t.GID);
+                return ge.SelectClanEventGID(t.GID);
               },
             },
             l.createElement("img", { className: X.a.ClanEventImage, src: a }),
-            l.createElement(ge, { item: n, bMiniMode: !0 })
+            l.createElement(ye, { item: n, bMiniMode: !0 })
           );
         };
-      var Oe = function (e) {
+      var Be = function (e) {
           var t = e.eventGID,
             n = e.bShowDemoButton;
           if (!t || !O.d.BHasClanEventModel(t)) return null;
@@ -63777,7 +63835,7 @@
                 : s.some(function (e) {
                     return e != r.appid;
                   })))
-            ? l.createElement(oe, { event: r, eventStore: O.d, presenters: o })
+            ? l.createElement(se, { event: r, eventStore: O.d, presenters: o })
             : l.createElement(
                 "div",
                 {
@@ -63790,21 +63848,21 @@
                   ? l.createElement(
                       l.Fragment,
                       null,
-                      l.createElement(Be, {
+                      l.createElement(Te, {
                         appCapsule: a,
                         bShowDemoButton: n,
                       }),
-                      l.createElement(Ie, { appCapsule: a }),
-                      l.createElement(Te, { appCapsule: a })
+                      l.createElement(je, { appCapsule: a }),
+                      l.createElement(De, { appCapsule: a })
                     )
-                  : l.createElement(we, { event: r }),
-                l.createElement(De, {
+                  : l.createElement(Ie, { event: r }),
+                l.createElement(Re, {
                   event: r,
                   broadcastEmbedContext: e.broadcastEmbedContext,
                 })
               );
         },
-        we = function (e) {
+        Ie = function (e) {
           var t = e.event,
             n = Object(p.d)(N.c.LANGUAGE),
             r = t.GetImageURLWithFallback("capsule", n),
@@ -63814,7 +63872,7 @@
             style: { backgroundImage: "url(" + a + ")" },
           });
         },
-        Be = function (e) {
+        Te = function (e) {
           var t = e.appCapsule,
             n = e.bShowDemoButton;
           return t
@@ -63852,7 +63910,7 @@
                     : l.createElement(
                         "div",
                         { className: X.a.GameButton },
-                        l.createElement(ce.q, { info: t })
+                        l.createElement(le.q, { info: t })
                       ),
                   n &&
                     l.createElement(H.a, {
@@ -63863,37 +63921,37 @@
               )
             : null;
         },
-        Ie = function (e) {
+        je = function (e) {
           var t = e.appCapsule;
           return l.createElement(
             "div",
             { className: X.a.SaleTagAndOS },
             l.createElement(
               "div",
-              { className: ue.a.StoreSaleWidgetTags },
+              { className: de.a.StoreSaleWidgetTags },
               t.tags
                 ? t.tags.map(function (e) {
                     return l.createElement(
                       "div",
-                      { key: "tag_" + e.tagid, className: ue.a.AppTag },
+                      { key: "tag_" + e.tagid, className: de.a.AppTag },
                       e.name
                     );
                   })
                 : void 0
             ),
-            l.createElement(ce.j, { item: t })
+            l.createElement(le.j, { item: t })
           );
         },
-        Te = function (e) {
+        De = function (e) {
           var t = e.appCapsule;
           return l.createElement(
             "div",
             { className: X.a.StatementAndHighlights },
-            l.createElement(je, { appCapsule: t }),
-            l.createElement(se.a, { appCapsule: t })
+            l.createElement(Ae, { appCapsule: t }),
+            l.createElement(ce.a, { appCapsule: t })
           );
         },
-        je = function (e) {
+        Ae = function (e) {
           var t = Object(w.d)(e.appCapsule.appid, 0, !0)[0];
           return l.createElement(
             "div",
@@ -63901,7 +63959,7 @@
             l.createElement("div", null, t)
           );
         },
-        De = function (e) {
+        Re = function (e) {
           var t = e.event,
             n = e.broadcastEmbedContext,
             a = t.BIsEventInFuture(),
@@ -64013,7 +64071,7 @@
                         });
                       },
                     },
-                    l.createElement(ce.i, null),
+                    l.createElement(le.i, null),
                     Object(M.f)("#Sale_WatchNow")
                   ),
                 l.createElement(

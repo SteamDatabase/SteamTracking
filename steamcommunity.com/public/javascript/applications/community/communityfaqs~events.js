@@ -13757,6 +13757,34 @@
               " 0%, " +
               ((null == n ? void 0 : n.background_gradient_right) ||
                 "transparent") +
+              " 100%)",
+            o =
+              "linear-gradient(to right, " +
+              ((null == n ? void 0 : n.selected_background_gradient_left) ||
+                "transparent") +
+              " 0%, " +
+              ((null == n ? void 0 : n.selected_background_gradient_right) ||
+                "transparent") +
+              " 100%)",
+            l =
+              "linear-gradient(to right, " +
+              ((null == n ? void 0 : n.encore_background_gradient_left) ||
+                "transparent") +
+              " 0%, " +
+              ((null == n ? void 0 : n.encore_background_gradient_right) ||
+                "transparent") +
+              " 100%)",
+            s =
+              "linear-gradient(to right, " +
+              ((null == n
+                ? void 0
+                : n.selected_encore_background_gradient_left) ||
+                "transparent") +
+              " 0%, " +
+              ((null == n
+                ? void 0
+                : n.selected_encore_background_gradient_right) ||
+                "transparent") +
               " 100%)";
           return d.createElement(
             "div",
@@ -13789,38 +13817,140 @@
             d.createElement(
               "div",
               null,
+              Object(h.f)("#Sale_Section_EventTrackColors")
+            ),
+            d.createElement(
+              "div",
+              { className: C.FlexRowContainer },
               d.createElement(
-                m.d,
-                {
-                  onClick: function (e) {
-                    return ae(e, n, a, "label_color");
+                "div",
+                null,
+                d.createElement(
+                  m.d,
+                  {
+                    onClick: function (e) {
+                      return ae(e, n, a, "label_color");
+                    },
+                    className: C.EventEditorTextTitle,
+                    style: { color: n.label_color },
                   },
-                  className: C.EventEditorTextTitle,
-                  style: { color: n.label_color },
-                },
-                Object(h.f)("#Sale_Section_Label_Color")
+                  Object(h.f)("#Sale_Section_Premiere_Label_Color")
+                ),
+                d.createElement(
+                  m.d,
+                  {
+                    onClick: function (e) {
+                      return ae(e, n, a, "background_gradient_left");
+                    },
+                    className: C.EventEditorTextTitle,
+                    style: { color: n.label_color, background: r },
+                  },
+                  Object(h.f)("#Sale_Section_Premiere_Background_Left")
+                ),
+                d.createElement(
+                  m.d,
+                  {
+                    onClick: function (e) {
+                      return ae(e, n, a, "background_gradient_right");
+                    },
+                    className: C.EventEditorTextTitle,
+                    style: { color: n.label_color, background: r },
+                  },
+                  Object(h.f)("#Sale_Section_Premiere_Background_Right")
+                ),
+                d.createElement(
+                  m.d,
+                  {
+                    onClick: function (e) {
+                      return ae(e, n, a, "selected_background_gradient_left");
+                    },
+                    className: C.EventEditorTextTitle,
+                    style: { color: n.label_color, background: o },
+                  },
+                  Object(h.f)("#Sale_Section_Premiere_Selected_Background_Left")
+                ),
+                d.createElement(
+                  m.d,
+                  {
+                    onClick: function (e) {
+                      return ae(e, n, a, "selected_background_gradient_right");
+                    },
+                    className: C.EventEditorTextTitle,
+                    style: { color: n.label_color, background: o },
+                  },
+                  Object(h.f)(
+                    "#Sale_Section_Premiere_Selected_Background_Right"
+                  )
+                )
               ),
               d.createElement(
-                m.d,
-                {
-                  onClick: function (e) {
-                    return ae(e, n, a, "background_gradient_left");
+                "div",
+                null,
+                d.createElement(
+                  m.d,
+                  {
+                    onClick: function (e) {
+                      return ae(e, n, a, "encore_label_color");
+                    },
+                    className: C.EventEditorTextTitle,
+                    style: { color: n.encore_label_color },
                   },
-                  className: C.EventEditorTextTitle,
-                  style: { color: n.label_color, background: r },
-                },
-                Object(h.f)("#Sale_Section_Background_Left")
-              ),
-              d.createElement(
-                m.d,
-                {
-                  onClick: function (e) {
-                    return ae(e, n, a, "background_gradient_right");
+                  Object(h.f)("#Sale_Section_Encore_Label_Color")
+                ),
+                d.createElement(
+                  m.d,
+                  {
+                    onClick: function (e) {
+                      return ae(e, n, a, "encore_background_gradient_left");
+                    },
+                    className: C.EventEditorTextTitle,
+                    style: { color: n.encore_label_color, background: l },
                   },
-                  className: C.EventEditorTextTitle,
-                  style: { color: n.label_color, background: r },
-                },
-                Object(h.f)("#Sale_Section_Background_Right")
+                  Object(h.f)("#Sale_Section_Encore_Background_Left")
+                ),
+                d.createElement(
+                  m.d,
+                  {
+                    onClick: function (e) {
+                      return ae(e, n, a, "encore_background_gradient_right");
+                    },
+                    className: C.EventEditorTextTitle,
+                    style: { color: n.encore_label_color, background: l },
+                  },
+                  Object(h.f)("#Sale_Section_Encore_Background_Right")
+                ),
+                d.createElement(
+                  m.d,
+                  {
+                    onClick: function (e) {
+                      return ae(
+                        e,
+                        n,
+                        a,
+                        "selected_encore_background_gradient_left"
+                      );
+                    },
+                    className: C.EventEditorTextTitle,
+                    style: { color: n.encore_label_color, background: s },
+                  },
+                  Object(h.f)("#Sale_Section_Encore_Selected_Background_Left")
+                ),
+                d.createElement(
+                  m.d,
+                  {
+                    onClick: function (e) {
+                      return ae(
+                        e,
+                        n,
+                        a,
+                        "selected_encore_background_gradient_right"
+                      );
+                    },
+                    className: C.EventEditorTextTitle,
+                    style: { color: n.encore_label_color, background: s },
+                  },
+                  Object(h.f)("#Sale_Section_Encore_Selected_Background_Right")
+                )
               )
             ),
             d.createElement(
