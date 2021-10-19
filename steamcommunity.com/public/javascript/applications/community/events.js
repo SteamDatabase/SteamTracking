@@ -1570,7 +1570,7 @@
           }),
           b = Boolean(a.event_type_max) ? a.event_type_max : Number.MAX_VALUE,
           g = m.filter(function (e) {
-            return e.BHasTag("steam_game_festival_broadcast");
+            return e.BHasTag(a.optInName);
           }).length,
           h = !_ && u.length + g >= b && !v,
           S = !_ && d.GetGID() && d.BPublished() && !v;
