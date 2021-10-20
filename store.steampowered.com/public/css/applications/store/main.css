@@ -16979,6 +16979,14 @@ html:not(.touch)
   color: #fff;
   text-decoration: none;
 }
+.saleitemdefdisplay_QuanityAndPrice_2qN9u {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.saleitemdefdisplay_dropdown_2uDos {
+  min-width: 80px;
+}
 @font-face {
   font-family: "Jolly Lodger";
   font-style: normal;

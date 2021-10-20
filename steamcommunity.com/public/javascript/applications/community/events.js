@@ -15328,7 +15328,7 @@
                 ),
                 (a.GetSaleSections() || []).map(function (e) {
                   return "items" == e.section_type && e.use_random_order
-                    ? s.createElement(Xt.h, {
+                    ? s.createElement(Xt.i, {
                         key: "sorttier_" + e.unique_id,
                         section: e,
                         language: a.GetCurEditLanguage(),

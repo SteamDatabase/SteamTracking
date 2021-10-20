@@ -3408,7 +3408,7 @@
                   ? "tabs" === (m = d[u]).section_type && m.tabs
                     ? (m.tabs.forEach(function (e) {
                         e.sale_tag_filter &&
-                          (e.store_filter = K(e.sale_tag_filter, o, l));
+                          (e.store_filter = Q(e.sale_tag_filter, o, l));
                       }),
                       [3, 7])
                     : [3, 5]
@@ -3431,7 +3431,7 @@
                             r++
                           ) {
                             (u = o[r]).type === c.l.k_ELanguage
-                              ? a.set(u, Q(u.language))
+                              ? a.set(u, K(u.language))
                               : u.type === c.l.k_EContentDescriptor
                               ? a.set(u, Z(u.contentDescriptor))
                               : u.type === c.l.k_EUserPreference
@@ -3442,7 +3442,7 @@
                                 })
                               : u.type === c.l.k_EAppType
                               ? a.set(u, X(u.appType))
-                              : (a.set(u, K(u.filter, t, n)),
+                              : (a.set(u, Q(u.filter, t, n)),
                                 i.set(u, J(u.filter, t)));
                           }
                           if (
@@ -3519,7 +3519,7 @@
           });
         });
       }
-      function K(e, t, n) {
+      function Q(e, t, n) {
         for (
           var a = {
               type: c.o.k_EStoreFilterClauseTypeAnd,
@@ -3568,7 +3568,7 @@
                 continue;
               }
               var h = n.get(_);
-              s.rgSubexpressions.push(K(h, t, n));
+              s.rgSubexpressions.push(Q(h, t, n));
             } else console.warn("Sale tag not implemented for faceting: " + p);
           }
           if (0 === s.rgSubexpressions.length) return null;
@@ -3595,7 +3595,7 @@
           }
         return 0;
       }
-      function Q(e) {
+      function K(e) {
         return {
           type: c.o.k_EStoreFilterClauseTypeLanguage,
           value: Object(s.a)(e),
@@ -4271,7 +4271,7 @@
                 l = n.bInvalidID,
                 m = Object(c.f)("#AppType_" + e.type);
               return r.createElement(
-                o.i,
+                o.k,
                 { className: s.a.FlexCenter, url: i },
                 a
                   ? r.createElement("img", {
@@ -4327,6 +4327,9 @@
             (t = Object(a.c)([i.a], t))
           );
         })(r.Component);
+    },
+    CtwA: function (e, t, n) {
+      e.exports = { itemimg: "saleitemdefwidgeteditor_itemimg_2by5O" };
     },
     EA3E: function (e, t, n) {
       "use strict";
@@ -7803,7 +7806,7 @@
                   )
               ),
             !e.bIsMinimized &&
-              s.createElement(K, {
+              s.createElement(Q, {
                 clanSteamID: e.clanSteamID,
                 title: e.title,
                 imageWidth: u,
@@ -7824,7 +7827,7 @@
             onCancel: n,
           });
         },
-        K = (function (e) {
+        Q = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -8013,7 +8016,7 @@
             (t.prototype.ShowLangChangeDialog = function (e, t) {
               var n = this.props.fnOnArtworkLanguageChange;
               Object(F.d)(
-                s.createElement(Q, {
+                s.createElement(K, {
                   clanImage: e,
                   lang: t,
                   fnOnArtworkLangChange: n,
@@ -8070,7 +8073,7 @@
             (t = Object(i.c)([l.a], t))
           );
         })(s.Component),
-        Q = (function (e) {
+        K = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.state = { selectedLang: t.props.lang }), t;
@@ -8429,7 +8432,7 @@
                 var o = f.d.GetClanImageByImageHash(a, r);
                 o &&
                   Object(F.d)(
-                    s.createElement(Q, {
+                    s.createElement(K, {
                       clanImage: o,
                       lang: i,
                       fnOnArtworkLangChange: this.props.fnOnArtworkLangChange,
@@ -12629,25 +12632,25 @@
     k3PP: function (e, t, n) {
       "use strict";
       n.d(t, "d", function () {
-        return Ke;
+        return et;
       }),
         n.d(t, "a", function () {
-          return Je;
-        }),
-        n.d(t, "g", function () {
-          return Xe;
-        }),
-        n.d(t, "b", function () {
           return tt;
         }),
+        n.d(t, "g", function () {
+          return it;
+        }),
+        n.d(t, "b", function () {
+          return lt;
+        }),
         n.d(t, "e", function () {
-          return nt;
+          return st;
         }),
         n.d(t, "f", function () {
-          return dt;
+          return ft;
         }),
         n.d(t, "c", function () {
-          return _t;
+          return St;
         });
       var a = n("mrSG"),
         i = n("vDqi"),
@@ -12927,9 +12930,9 @@
         W = n("mB/g"),
         q = n("xnZ7"),
         Y = n.n(q),
-        K = n("bS9Q"),
+        Q = n("bS9Q"),
         J = n("JiI5"),
-        Q = n("aoTL"),
+        K = n("aoTL"),
         Z = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
@@ -13010,7 +13013,7 @@
                       d.createElement(
                         "div",
                         { style: { display: "flex", alignItems: "center" } },
-                        Object(K.b)(e.name),
+                        Object(Q.b)(e.name),
                         " ",
                         d.createElement("span", null, "(", e.id, ")"),
                         " ",
@@ -13270,7 +13273,7 @@
         var t = e.editModel,
           n = e.saleSection,
           a = e.fnIsValidEvent,
-          i = Object(Q.d)(function () {
+          i = Object(K.d)(function () {
             var e;
             return null === (e = n.events) || void 0 === e
               ? void 0
@@ -13357,7 +13360,7 @@
               "div",
               { className: I.EventEditorTextTitle },
               Object(h.f)("#Sale_EventDateRange"),
-              d.createElement(Ke, {
+              d.createElement(et, {
                 tooltip: Object(h.f)("#Sale_EventDateRange_ttip"),
               })
             ),
@@ -13508,7 +13511,7 @@
                     )
                   )
                 ),
-                d.createElement(dt, {
+                d.createElement(ft, {
                   varName: "show_as_demos",
                   editModel: n,
                   section: a,
@@ -13648,7 +13651,7 @@
               "div",
               { className: I.EventEditorTextTitle },
               Object(h.f)("#EventSchedule_Track_Current"),
-              d.createElement(Ke, {
+              d.createElement(et, {
                 tooltip: Object(h.f)("#EventSchedule_Track_Current_ttip"),
               })
             ),
@@ -14288,7 +14291,7 @@
               " 100%)",
             f = "tabs" !== n.section_type;
           return d.createElement(
-            Xe,
+            it,
             {
               title: Object(h.f)("#Sale_Section_Background_Title"),
               tooltip: Object(h.f)("#Sale_Section_Background_Title_ttip"),
@@ -14378,7 +14381,7 @@
                       Object(h.f)("#Sale_Section_Background_Bottom")
                     )
                   ),
-                d.createElement(dt, {
+                d.createElement(ft, {
                   varName: "disable_background",
                   editModel: t,
                   section: n,
@@ -14395,7 +14398,7 @@
                     { className: I.EventEditorTextTitle },
                     Object(h.f)("#Sale_Section_BackgroundImage_Title"),
                     " ",
-                    d.createElement(Ke, {
+                    d.createElement(et, {
                       tooltip: Object(h.f)(
                         "#Sale_Section_BackgroundImage_ttip"
                       ),
@@ -14695,7 +14698,7 @@
                       "div",
                       { className: J.CrossTabWarning },
                       Object(h.f)("#Sale_Broadcast_Disabled"),
-                      d.createElement(Ke, {
+                      d.createElement(et, {
                         tooltip: Object(h.f)("#Sale_Broadcast_Disabled_hint"),
                       })
                     )
@@ -14791,7 +14794,7 @@
                                                 className: Y.a.AvatarImage,
                                               })
                                             ),
-                                            Object(K.b)(e.GetName())
+                                            Object(Q.b)(e.GetName())
                                           )
                                         );
                                       })
@@ -14965,7 +14968,7 @@
               "div",
               { className: I.EventEditorTextTitle },
               Object(h.f)("#Sale_CuratorRecommendation_FeaturedList"),
-              d.createElement(Ke, {
+              d.createElement(et, {
                 tooltip: Object(h.f)(
                   "#Sale_CuratorRecommendation_FeaturedList_ttip"
                 ),
@@ -15001,7 +15004,7 @@
                 ? void 0
                 : t.length) >= 2
             ) &&
-              d.createElement(dt, {
+              d.createElement(ft, {
                 varName: "use_random_order",
                 editModel: n,
                 section: s,
@@ -15193,7 +15196,7 @@
             Ce.a,
             null,
             d.createElement(
-              dt,
+              ft,
               Object(a.a)(
                 {
                   textToken: "#Sale_Section_CarouselAutoAdvance",
@@ -15207,23 +15210,228 @@
           );
         },
         Ye = n("GOhU"),
-        Ke = function (e) {
-          return d.createElement(
-            "span",
-            {
-              "data-tooltip-text": e.tooltip,
-              className: Object(B.a)(I.HelperTooltip, "HelperTooltip"),
+        Qe = n("ZC8J"),
+        Je = n("CtwA");
+      function Ke(e) {
+        return d.createElement(
+          "div",
+          null,
+          d.createElement($e, Object(a.a)({}, e)),
+          d.createElement("div", null, Object(h.f)("#Sale_ItemDef_Selected")),
+          d.createElement(Ze, Object(a.a)({}, e))
+        );
+      }
+      function Ze(e) {
+        var t = Object(K.d)(function () {
+          return e.saleSection.itemdefs;
+        });
+        return d.createElement(M.a, {
+          items: t || [],
+          onDelete: function (t) {
+            e.saleSection.links.splice(t, 1),
+              e.editModel.SetDirty(o.c.jsondata_sales);
+          },
+          onReorder: function () {
+            return e.editModel.SetDirty(o.c.jsondata_sales);
+          },
+          render: function (t) {
+            return d.createElement(Xe, {
+              key: "row" + t.nAppID + "_" + t.nItemDefID,
+              itemDefSetting: t,
+              editModel: e.editModel,
+            });
+          },
+        });
+      }
+      function Xe(e) {
+        var t,
+          n = e.itemDefSetting,
+          a = e.editModel,
+          i = Object(Qe.a)(n.nAppID, n.nItemDefID),
+          r = 0;
+        null === (t = n.localized_itemdef_capsule) ||
+          void 0 === t ||
+          t.forEach(function (e) {
+            r += e ? 1 : 0;
+          });
+        return i
+          ? d.createElement(
+              "div",
+              { className: I.FlexRowContainer },
+              d.createElement(
+                "div",
+                { style: { backgroundColor: i.strBackgroundColor } },
+                d.createElement("img", {
+                  className: Je.itemimg,
+                  src: null == i ? void 0 : i.strImgURL,
+                })
+              ),
+              d.createElement(
+                "div",
+                null,
+                null == i ? void 0 : i.strName,
+                " - (",
+                n.nAppID,
+                "/",
+                n.nItemDefID,
+                ")"
+              ),
+              d.createElement(m.m, {
+                type: "number",
+                max: "100",
+                min: "0",
+                label: Object(h.f)("#Sale_ItemDef_Quantity"),
+                tooltip: Object(h.f)("#Sale_ItemDef_Quantity_ttip"),
+                value: n.max_quantity || 0,
+                onChange: function (e) {
+                  var t,
+                    i = Number.parseInt(
+                      (null === (t = null == e ? void 0 : e.currentTarget) ||
+                      void 0 === t
+                        ? void 0
+                        : t.value) || "0"
+                    );
+                  i != n.max_quantity &&
+                    ((n.max_quantity = i), a.SetDirty(o.c.jsondata_sales));
+                },
+              }),
+              d.createElement(
+                G.a,
+                { toolTipContent: Object(h.f)("#Sale_ItemDef_AltImage") },
+                d.createElement(
+                  m.r,
+                  {
+                    onClick: function (t) {
+                      return (function (t, n) {
+                        t.preventDefault(),
+                          t.stopPropagation(),
+                          Object(w.d)(
+                            d.createElement(S, {
+                              loc_images: n.localized_itemdef_capsule,
+                              fnSetImage: function (e, t) {
+                                (n.localized_itemdef_capsule = Object(A.e)(
+                                  n.localized_itemdef_capsule || [],
+                                  30,
+                                  null
+                                )),
+                                  (n.localized_itemdef_capsule[e] = t);
+                              },
+                              editModel: e.editModel,
+                              artworkType: "link_capsule",
+                            }),
+                            Object(F.m)(t)
+                          );
+                      })(t, n);
+                    },
+                  },
+                  r > 0
+                    ? Object(h.l)("#selectimage_managing_n_existing_title", r)
+                    : Object(h.f)("#selectimage_uploading_title")
+                )
+              ),
+              d.createElement(
+                "a",
+                {
+                  href:
+                    R.c.STORE_BASE_URL +
+                    "itemstore/" +
+                    n.nAppID +
+                    "/detail/" +
+                    n.nItemDefID,
+                },
+                Object(h.f)("#EventDisplay_View")
+              )
+            )
+          : d.createElement(k.a, {
+              size: "small",
+              position: "center",
+              string: Object(h.f)("#Loading"),
+            });
+      }
+      function $e(e) {
+        var t = d.useState(730),
+          n = t[0],
+          a = t[1],
+          i = d.useState(0),
+          r = i[0],
+          l = i[1];
+        return d.createElement(
+          "div",
+          null,
+          d.createElement(
+            "div",
+            { className: I.FlexRowContainer },
+            d.createElement(m.m, {
+              type: "number",
+              min: "0",
+              label: "AppID",
+              value: n,
+              onChange: function (e) {
+                var t;
+                return a(
+                  Number.parseInt(
+                    (null === (t = null == e ? void 0 : e.currentTarget) ||
+                    void 0 === t
+                      ? void 0
+                      : t.value) || "0"
+                  )
+                );
+              },
+            }),
+            d.createElement(
+              "a",
+              { href: R.c.STORE_BASE_URL + "itemstore/" + n },
+              Object(h.f)("#Sale_ItemDef_ItemStore")
+            )
+          ),
+          d.createElement(m.m, {
+            type: "number",
+            min: "0",
+            label: "Item Def ID",
+            value: r,
+            onChange: function (e) {
+              var t;
+              return l(
+                Number.parseInt(
+                  (null === (t = null == e ? void 0 : e.currentTarget) ||
+                  void 0 === t
+                    ? void 0
+                    : t.value) || "0"
+                )
+              );
             },
-            " ",
-            d.createElement(ke.z, null)
-          );
-        };
-      function Je(e, t) {
+          }),
+          d.createElement(
+            m.r,
+            {
+              disabled: 0 == n || 0 == r,
+              onClick: function () {
+                e.saleSection.itemdefs || (e.saleSection.itemdefs = []),
+                  e.saleSection.itemdefs.push({ nAppID: n, nItemDefID: r }),
+                  e.editModel.SetDirty(o.c.jsondata_sales);
+              },
+            },
+            Object(h.f)("#Sale_ItemDef_Add")
+          )
+        );
+      }
+      var et = function (e) {
+        return d.createElement(
+          "span",
+          {
+            "data-tooltip-text": e.tooltip,
+            className: Object(B.a)(I.HelperTooltip, "HelperTooltip"),
+          },
+          " ",
+          d.createElement(ke.z, null)
+        );
+      };
+      function tt(e, t) {
         return e.disable_background
           ? { background: "transparent" }
           : Object(je.f)(e, t);
       }
-      function Qe(e, t) {
+      function nt(e, t) {
         for (var n = 0, a = e.GetSaleSections(); n < a.length; n++) {
           var i = a[n];
           if (i === t) break;
@@ -15231,8 +15439,8 @@
         }
         return null;
       }
-      function Ze(e, t) {
-        var n = Qe(e, t);
+      function at(e, t) {
+        var n = nt(e, t);
         if (n) {
           var i = new Set(Object(a.g)(t.show_on_tabs || [])),
             r = n.tabs.map(function (n) {
@@ -15283,7 +15491,7 @@
           );
         }
       }
-      var Xe = Object(u.a)(function (e) {
+      var it = Object(u.a)(function (e) {
           return d.createElement(
             d.Fragment,
             null,
@@ -15294,7 +15502,7 @@
                 "div",
                 { className: I.EventEditorTextTitle },
                 e.title,
-                d.createElement(Ke, { tooltip: e.tooltip })
+                d.createElement(et, { tooltip: e.tooltip })
               ),
               d.createElement(We.a, {
                 bIsMinimized: e.getMinimized(),
@@ -15304,7 +15512,7 @@
             !e.getMinimized() && d.createElement(Ce.a, null, e.children)
           );
         }),
-        $e = (function (e) {
+        rt = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -15340,13 +15548,13 @@
             (t.prototype.OnEditTabSections = function () {
               var e = this.props,
                 t = e.saleSection;
-              Ze(e.editModel, t);
+              at(e.editModel, t);
             }),
             (t.prototype.render = function () {
-              var e = Qe(this.props.editModel, this.props.saleSection);
+              var e = nt(this.props.editModel, this.props.saleSection);
               return e && e.tabs && 0 !== e.tabs.length
                 ? d.createElement(
-                    Xe,
+                    it,
                     {
                       title: Object(h.f)("#Sale_Section_TabSettings_Title"),
                       tooltip: Object(h.f)(
@@ -15355,7 +15563,7 @@
                       getMinimized: this.props.getMinimized,
                       toggleMinimized: this.props.toggleMinimized,
                     },
-                    d.createElement(dt, {
+                    d.createElement(ft, {
                       varName: "diable_tab_id_filtering",
                       editModel: this.props.editModel,
                       section: this.props.saleSection,
@@ -15394,7 +15602,7 @@
             (t = Object(a.c)([u.a], t))
           );
         })(d.Component),
-        et = Object(u.a)(function (e) {
+        ot = Object(u.a)(function (e) {
           var t = e.saleSection,
             n = e.editModel;
           if (!t.label_link) return null;
@@ -15412,7 +15620,7 @@
             })
           );
         });
-      function tt(e, t, n, a, i) {
+      function lt(e, t, n, a, i) {
         var r = Object(je.e)(e, t, n.GetClanSteamID().GetAccountID(), i);
         if (r) return r;
         var o = Object(h.f)("#Sale_Section_Header", a + 1),
@@ -15420,7 +15628,7 @@
           s = Object(h.f)(l);
         return s !== l && (o = o + " (" + s + ")"), o;
       }
-      var nt = (function (e) {
+      var st = (function (e) {
         function t() {
           var t = (null !== e && e.apply(this, arguments)) || this;
           return (t.state = { bIsExiting: !1 }), t;
@@ -15640,10 +15848,9 @@
                 data: "contenthubmaincarousel",
               }),
               o.push({
-                label:
-                  "(VO) " +
-                  Object(h.f)("#Sale_SectionType_ContentHubSectionList"),
-                data: "contenthubsections",
+                label: "(VO) " + Object(h.f)("#Sale_SectionType_ItemDef"),
+                data: "itemdef",
+                tooltip: Object(h.f)("#Sale_SectionType_ItemDef_ttip"),
               }));
             var l = n.GetEventModel().jsondata,
               s = l.sale_font,
@@ -15670,7 +15877,7 @@
               {
                 id: "SaleSection_" + i.unique_id,
                 className: Object(B.a)(J.SaleSection, J.InEditor),
-                style: Object(a.a)(Object(a.a)({}, Je(i, n.GetEventModel())), {
+                style: Object(a.a)(Object(a.a)({}, tt(i, n.GetEventModel())), {
                   opacity: this.state.bIsExiting ? 0 : 1,
                   transition: "opacity 500ms",
                 }),
@@ -15689,7 +15896,7 @@
                     color: this.props.saleSection.label_color,
                   },
                 },
-                tt(i, this.props.editLanguage, n, this.props.index, !1),
+                lt(i, this.props.editLanguage, n, this.props.index, !1),
                 d.createElement(
                   "div",
                   { className: Object(B.a)(I.CloseSectionTools) },
@@ -15743,7 +15950,7 @@
                 )
               ),
               S
-                ? d.createElement(at, {
+                ? d.createElement(ct, {
                     editModel: n,
                     section: i,
                     tabSection: n.GetTabSaleSection(),
@@ -15771,7 +15978,7 @@
                           onChange: this.OnSaleSectionTypeChange,
                           contextMenuPositionOptions: { bDisablePopTop: !0 },
                         }),
-                        d.createElement(Ke, {
+                        d.createElement(et, {
                           tooltip: Object(h.f)("#Sale_SectionTypeTTip_" + _),
                         })
                       )
@@ -15799,7 +16006,7 @@
                                   Object(h.f)(
                                     "#Sale_Section_SectionTitle_Title"
                                   ),
-                                  d.createElement(Ke, {
+                                  d.createElement(et, {
                                     tooltip: Object(h.f)(
                                       "#Sale_Section_SectionTitle_Title_ttip"
                                     ),
@@ -15881,7 +16088,7 @@
                                         value: this.props.saleSection
                                           .label_link,
                                       }),
-                                      d.createElement(et, {
+                                      d.createElement(ot, {
                                         saleSection: i,
                                         editModel: n,
                                       })
@@ -15889,7 +16096,7 @@
                                 )
                             ),
                           y && d.createElement(me, Object(a.a)({}, this.props)),
-                          d.createElement($e, {
+                          d.createElement(rt, {
                             saleSection: i,
                             editModel: n,
                             editLanguage: r,
@@ -15926,7 +16133,7 @@
                               className: J.EditorCtn,
                               id: "salesection_item_" + this.props.index,
                             },
-                            d.createElement(ft, Object(a.a)({}, this.props))
+                            d.createElement(Ot, Object(a.a)({}, this.props))
                           )
                       )
                   )
@@ -15952,7 +16159,7 @@
           (t = Object(a.c)([u.a], t))
         );
       })(d.Component);
-      var at = function (e) {
+      var ct = function (e) {
           var t = e.editModel,
             n = e.section,
             a = e.tabSection,
@@ -15962,7 +16169,7 @@
                   {
                     className: E.ShowInTabsList,
                     onClick: function () {
-                      return Ze(t, n);
+                      return at(t, n);
                     },
                   },
                   Object(h.f)(
@@ -16021,7 +16228,7 @@
               )
             : i;
         },
-        it = (function (e) {
+        ut = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -16045,7 +16252,7 @@
                   checked: this.props.saleSection.smart_section,
                 }),
                 this.props.saleSection.smart_section &&
-                  d.createElement(bt, {
+                  d.createElement(Tt, {
                     saleSection: this.props.saleSection,
                     editModel: this.props.editModel,
                   }),
@@ -16071,7 +16278,7 @@
             (t = Object(a.c)([u.a], t))
           );
         })(d.Component),
-        rt = Object(u.a)(function (e) {
+        dt = Object(u.a)(function (e) {
           var t = e.saleSection,
             n = e.editModel;
           return d.createElement(
@@ -16101,7 +16308,7 @@
               : d.createElement(Z, Object(a.a)({}, e))
           );
         }),
-        ot = (function (e) {
+        pt = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.state = { linkToAddURL: "" }), t;
@@ -16163,7 +16370,7 @@
                       });
                     var a = Object(Le.b)(t.url, R.c.STORE_BASE_URL);
                     return d.createElement(
-                      je.i,
+                      je.k,
                       {
                         className: Object(B.a)(Y.a.FlexCenter, J.UploadLinkRow),
                         url: t.url,
@@ -16212,7 +16419,7 @@
             (t = Object(a.c)([u.a], t))
           );
         })(d.Component),
-        lt = (function (e) {
+        mt = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -16416,7 +16623,7 @@
                   d.createElement(
                     "div",
                     { className: I.HalfColumn },
-                    d.createElement(dt, {
+                    d.createElement(ft, {
                       varName: "use_random_order",
                       onChange: this.OnRandomChange,
                       editModel: l,
@@ -16431,7 +16638,7 @@
                         : "Sale_Section_UseRandomOrder_SortingTiers_hint",
                     }),
                     s &&
-                      d.createElement(dt, {
+                      d.createElement(ft, {
                         varName: "random_from_entire_set",
                         editModel: l,
                         section: r,
@@ -16457,7 +16664,7 @@
                           value: this.state.capItemCountString,
                         })
                       ),
-                    d.createElement(dt, {
+                    d.createElement(ft, {
                       varName: "show_as_carousel",
                       editModel: l,
                       section: r,
@@ -16468,7 +16675,7 @@
                       d.createElement(
                         d.Fragment,
                         null,
-                        d.createElement(dt, {
+                        d.createElement(ft, {
                           varName: "cap_section_content",
                           onChange: this.OnCapSectionChange,
                           editModel: l,
@@ -16496,7 +16703,7 @@
                           })
                       ),
                     r.show_as_carousel &&
-                      d.createElement(dt, {
+                      d.createElement(ft, {
                         varName: "carousel_auto_advance",
                         valveOnly: !0,
                         editModel: l,
@@ -16504,14 +16711,14 @@
                         textToken: "#Sale_Section_CarouselAutoAdvance",
                         ttipToken: "#Sale_Section_CarouselAutoAdvance_Tooltip",
                       }),
-                    c && d.createElement(ct, { editModel: l, section: r }),
-                    d.createElement(ut, {
+                    c && d.createElement(gt, { editModel: l, section: r }),
+                    d.createElement(ht, {
                       editModel: l,
                       section: r,
                       bDisabled: !_,
                     }),
                     p &&
-                      d.createElement(dt, {
+                      d.createElement(ft, {
                         varName: "show_purchase_options",
                         editModel: l,
                         section: r,
@@ -16519,7 +16726,7 @@
                         ttipToken: "#Sale_Section_ShowPurchaseOptions_ttip",
                       }),
                     u &&
-                      d.createElement(dt, {
+                      d.createElement(ft, {
                         valveOnly: !0,
                         varName: "hide_prices",
                         editModel: l,
@@ -16527,7 +16734,7 @@
                         textToken: "#Sale_Section_HidePrices",
                         ttipToken: "#Sale_Section_HidePrices_ttip",
                       }),
-                    d.createElement(st, { editModel: l, saleSection: r })
+                    d.createElement(_t, { editModel: l, saleSection: r })
                   )
                 )
               );
@@ -16546,7 +16753,7 @@
             (t = Object(a.c)([u.a], t))
           );
         })(d.Component),
-        st = Object(u.a)(function (e) {
+        _t = Object(u.a)(function (e) {
           var t,
             n = e.saleSection,
             a = e.editModel;
@@ -16576,7 +16783,7 @@
               Boolean(n.smart_section_type) &&
               "recent_tagged_events" !== n.smart_section_type &&
               ((i = !1), (r = "#Sale_Section_RevealSetting_limit_smart")),
-            d.createElement(dt, {
+            d.createElement(ft, {
               valveOnly: !0,
               varName: "dynamic_reveal",
               editModel: a,
@@ -16587,8 +16794,8 @@
             })
           );
         }),
-        ct = function (e) {
-          return d.createElement(dt, {
+        gt = function (e) {
+          return d.createElement(ft, {
             varName: "show_as_demos",
             editModel: e.editModel,
             section: e.section,
@@ -16596,7 +16803,7 @@
             ttipToken: "#Sale_Section_UseDemoLayout_tooltip",
           });
         },
-        ut = Object(u.a)(function (e) {
+        ht = Object(u.a)(function (e) {
           var t = e.editModel,
             n = e.section,
             a = e.bDisabled;
@@ -16651,7 +16858,7 @@
             },
           });
         }),
-        dt = Object(u.a)(function (e) {
+        ft = Object(u.a)(function (e) {
           var t = e.editModel,
             n = e.section,
             a = e.varName,
@@ -16683,7 +16890,7 @@
                 disabled: s,
               });
         }),
-        pt = (function (e) {
+        bt = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.m_descBBCodeEditor = d.createRef()), t;
@@ -16799,7 +17006,7 @@
             (t = Object(a.c)([u.a], t))
           );
         })(d.Component),
-        mt = (function (e) {
+        vt = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.state = {}), t;
@@ -16863,7 +17070,7 @@
                   null,
                   n,
                   Boolean(null == t ? void 0 : t.tooltip) &&
-                    d.createElement(Ke, { tooltip: Object(h.f)(t.tooltip) })
+                    d.createElement(et, { tooltip: Object(h.f)(t.tooltip) })
                 )
               );
             }),
@@ -16924,7 +17131,7 @@
                   "div",
                   { className: I.EventEditorTextTitle },
                   Object(h.f)("#Sale_BrowseSection_TabList"),
-                  d.createElement(Ke, {
+                  d.createElement(et, {
                     tooltip: Object(h.f)("#Sale_BrowseSection_TabList_ttip"),
                   })
                 ),
@@ -16946,7 +17153,7 @@
                   "div",
                   { className: I.EventEditorTextTitle },
                   Object(h.f)("#Sale_BrowseSection_AdditionalTabList"),
-                  d.createElement(Ke, {
+                  d.createElement(et, {
                     tooltip: Object(h.f)(
                       "#Sale_BrowseSection_AdditionalTabList_ttip"
                     ),
@@ -16969,7 +17176,7 @@
             (t = Object(a.c)([u.a], t))
           );
         })(d.Component),
-        _t = Object(u.a)(function (e) {
+        St = Object(u.a)(function (e) {
           var t,
             n,
             a,
@@ -17039,7 +17246,7 @@
             })));
           var f = l.GetEventModel().jsondata;
           return d.createElement(
-            Xe,
+            it,
             {
               title: Object(h.f)("#Sale_BrowseSection_ContentHubTitle"),
               tooltip: Object(h.f)("#Sale_BrowseSection_ContentHubTooltip"),
@@ -17074,7 +17281,7 @@
                         };
                         (l.GetEventModel().jsondata.source_content_hub = t),
                           l.GetEventModel().jsondata
-                            .bAutoUpdateVanityURLForContentHub && gt(t, l);
+                            .bAutoUpdateVanityURLForContentHub && Et(t, l);
                       }
                       l.SetDirty(o.c.jsondata_sales);
                     },
@@ -17103,7 +17310,7 @@
                           };
                           (l.GetEventModel().jsondata.source_content_hub = t),
                             l.GetEventModel().jsondata
-                              .bAutoUpdateVanityURLForContentHub && gt(t, l),
+                              .bAutoUpdateVanityURLForContentHub && Et(t, l),
                             l.SetDirty(o.c.jsondata_sales);
                         },
                         isSearchable: !0,
@@ -17136,7 +17343,7 @@
                               (l.GetEventModel().jsondata.source_content_hub = t),
                                 l.GetEventModel().jsondata
                                   .bAutoUpdateVanityURLForContentHub &&
-                                  gt(t, l),
+                                  Et(t, l),
                                 l.SetDirty(o.c.jsondata_sales);
                             },
                             isSearchable: !0,
@@ -17170,7 +17377,7 @@
                               (l.GetEventModel().jsondata.source_content_hub = t),
                                 l.GetEventModel().jsondata
                                   .bAutoUpdateVanityURLForContentHub &&
-                                  gt(t, l),
+                                  Et(t, l),
                                 l.SetDirty(o.c.jsondata_sales);
                             },
                             isSearchable: !0,
@@ -17193,7 +17400,7 @@
                         onChange: function (e) {
                           ((l.GetEventModel().jsondata.bAutoUpdateVanityURLForContentHub = e),
                           e) &&
-                            gt(
+                            Et(
                               {
                                 type: l.GetEventModel().GetContentHubType(),
                                 category: l
@@ -17211,7 +17418,7 @@
               : d.createElement(k.a, { size: "medium", position: "center" })
           );
         });
-      function gt(e, t) {
+      function Et(e, t) {
         if (e.type)
           if ("category" !== e.type || e.category)
             if ("tags" !== e.type || e.tagid) {
@@ -17233,7 +17440,7 @@
             "SetVanityURLForContentHub: Undefined hub type, skipping vanity URL update."
           );
       }
-      var ht = Object(u.a)(function (e) {
+      var yt = Object(u.a)(function (e) {
           var t = e.editModel,
             n = e.saleSection,
             a = (e.index, n.internal_section_data),
@@ -17321,15 +17528,15 @@
               })
           );
         }),
-        ft = Object(u.a)(function (e) {
+        Ot = Object(u.a)(function (e) {
           switch (e.saleSection.section_type) {
             case "items":
               return d.createElement(
                 d.Fragment,
                 null,
-                d.createElement(it, Object(a.a)({}, e)),
+                d.createElement(ut, Object(a.a)({}, e)),
                 d.createElement(
-                  lt,
+                  mt,
                   Object(a.a)({}, e, {
                     bSmartSection: e.saleSection.smart_section,
                   })
@@ -17339,9 +17546,9 @@
               return d.createElement(
                 d.Fragment,
                 null,
-                d.createElement(rt, Object(a.a)({}, e)),
+                d.createElement(dt, Object(a.a)({}, e)),
                 d.createElement(
-                  lt,
+                  mt,
                   Object(a.a)({}, e, {
                     bSmartSection: e.saleSection.smart_section,
                   })
@@ -17351,9 +17558,9 @@
               return d.createElement(
                 d.Fragment,
                 null,
-                d.createElement(ot, Object(a.a)({}, e)),
+                d.createElement(pt, Object(a.a)({}, e)),
                 d.createElement(
-                  lt,
+                  mt,
                   Object(a.a)({}, e, {
                     bSmartSection: e.saleSection.smart_section,
                   })
@@ -17364,11 +17571,11 @@
             case "event_description":
               return d.createElement(Ue, Object(a.a)({}, e));
             case "text_section":
-              return d.createElement(pt, Object(a.a)({}, e));
+              return d.createElement(bt, Object(a.a)({}, e));
             case "curator":
               return d.createElement(Pe, Object(a.a)({}, e));
             case "vo_internal":
-              return d.createElement(ht, Object(a.a)({}, e));
+              return d.createElement(yt, Object(a.a)({}, e));
             case "tabs":
               return d.createElement(_e.b, Object(a.a)({}, e));
             case "tab_buttons":
@@ -17376,7 +17583,7 @@
             case "doors":
               return d.createElement("div", null, "No settings for now.");
             case "sale_item_browser":
-              return d.createElement(mt, Object(a.a)({}, e));
+              return d.createElement(vt, Object(a.a)({}, e));
             case "event_schedule":
               return d.createElement(ee, Object(a.a)({}, e));
             case "curator_recommendation":
@@ -17386,12 +17593,24 @@
                 qe,
                 Object(a.a)({ section: e.saleSection }, e)
               );
+            case "itemdef":
+              return d.createElement(
+                d.Fragment,
+                null,
+                d.createElement(Ke, Object(a.a)({}, e)),
+                d.createElement(
+                  mt,
+                  Object(a.a)({}, e, {
+                    bSmartSection: e.saleSection.smart_section,
+                  })
+                )
+              );
             case "unselected_empty":
             default:
               return null;
           }
         });
-      var bt = (function (e) {
+      var Tt = (function (e) {
         function t() {
           var t = (null !== e && e.apply(this, arguments)) || this;
           return (
@@ -17477,7 +17696,7 @@
                                   alignItems: "center",
                                 },
                               },
-                              Object(K.b)(e.name),
+                              Object(Q.b)(e.name),
                               " ",
                               d.createElement("span", null, "(", e.id, ")"),
                               " ",
@@ -18009,7 +18228,7 @@
         W = n("IMce"),
         q = n("mHFc"),
         Y = n("165M");
-      function K(e) {
+      function Q(e) {
         return (e = (e = (e = e.replace('"', " ")).replace("<", " ")).replace(
           ">",
           " "
@@ -18037,7 +18256,7 @@
         }
         return { appData: t, linkURL: n, bInvalidID: a };
       }
-      var Q = function (e) {
+      var K = function (e) {
           return m.createElement("img", {
             className: G.a.RemoveIcon,
             src: f.a,
@@ -18903,7 +19122,7 @@
                       })
                     )
                 ),
-                a && m.createElement(Q, { onClick: a })
+                a && m.createElement(K, { onClick: a })
               );
             }),
             Object(a.c)([R.a], t.prototype, "OnEditTags", null),
@@ -19119,7 +19338,7 @@
             }),
             (t.prototype.AddTag = function (e) {
               var t = this.state.currentTags,
-                n = (e = K(e)).toLocaleLowerCase();
+                n = (e = Q(e)).toLocaleLowerCase();
               if (
                 ($.Get(this.props.editModel).AddRecentTag(e),
                 !t.find(function (e) {
@@ -19493,7 +19712,7 @@
             }),
             (t.prototype.AddTag = function (e) {
               var t = this,
-                n = (e = K(e)).toLocaleLowerCase(),
+                n = (e = Q(e)).toLocaleLowerCase(),
                 i = this.state.otherTags.get(n);
               i && (e = i.properCaseString);
               var r = this.CloneModifiedTags();
@@ -20074,7 +20293,7 @@
                       })
                     ),
                     a > 0 &&
-                      m.createElement(Q, {
+                      m.createElement(K, {
                         onClick: function () {
                           return n.OnRemoveClauseTagSlot(t, a);
                         },
@@ -20099,7 +20318,7 @@
                   m.createElement(
                     m.Fragment,
                     null,
-                    m.createElement(Q, {
+                    m.createElement(K, {
                       onClick: function () {
                         return n.OnRemoveClause(t);
                       },
@@ -20567,7 +20786,7 @@
                   d = new Array();
                 if (c)
                   for (var p = 0, m = c[1].split(";"); p < m.length; p++) {
-                    var _ = K(m[p]);
+                    var _ = Q(m[p]);
                     if (_) {
                       var g = _.toLocaleLowerCase();
                       u.has(g) || (u.add(g), d.push(_));
@@ -21211,7 +21430,7 @@
                 tooltip: Object(N.f)("#Sale_EditAutoTags_Tooltip"),
                 value: n,
               }),
-              m.createElement(Q, {
+              m.createElement(K, {
                 onClick: function () {
                   return e.fnOnDeleted();
                 },
