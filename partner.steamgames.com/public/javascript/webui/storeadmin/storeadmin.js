@@ -85579,7 +85579,7 @@
                       (p = c.interval),
                       (m = c.allowed_confirmations),
                       (h = c.steamid),
-                      (this.m_msPollInterval = p),
+                      (this.m_msPollInterval = 1e3 * p),
                       (this.m_strClientID = u),
                       (this.m_rgRequestID = d),
                       (this.m_steamid = h),
@@ -85807,7 +85807,7 @@
         });
       });
     }
-    var Tl = [4, 5, 3, 2, 1, 0].reduce(function (e, t, n) {
+    var Tl = [3, 2, 1, 0, 4, 5].reduce(function (e, t, n) {
       return (e[t] = n), e;
     }, {});
     function jl(e) {
