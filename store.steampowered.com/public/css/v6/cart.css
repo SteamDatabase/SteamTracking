@@ -487,6 +487,12 @@ a.webmoney_prompt_link:hover .webmoney_prompt_ctn {
 	padding-top: 0px;
 }
 
+.checkout_steam_rewards_banner div.right div.logo img
+{
+	width: 20px;
+	height: 20px;
+}
+
 .checkout_steam_rewards_banner div.right div.points
 {
 	float: right;

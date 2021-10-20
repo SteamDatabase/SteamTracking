@@ -1217,9 +1217,12 @@ td.rdtYear:hover {
 .partnereventemails_EmailSection_1zUIk {
   display: flex;
   flex-direction: column;
+  padding-right: 80px;
+  padding-left: 80px;
 }
 .partnereventemails_EmailSection_1zUIk textarea {
   padding: 12px;
+  box-sizing: border-box;
   border: none;
   background: var(--main-editor-input-bg-color);
   outline-width: 0;
@@ -1303,7 +1306,7 @@ input.partnereventemails_HeadlineInput_2lHX9::placeholder {
 }
 .partnereventemails_BodyInput_3VRhY {
   align-self: center;
-  width: 90%;
+  width: 100%;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -1334,8 +1337,8 @@ input.partnereventemails_HeadlineInput_2lHX9::placeholder {
   width: 700px;
 }
 .partnereventemails_VideoCtn_2mtrE {
-  width: 740px;
-  height: 415px;
+  width: 640px;
+  height: 366px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1385,6 +1388,7 @@ input.partnereventemails_HeadlineInput_2lHX9::placeholder {
   background-color: #e1e4e9;
 }
 .partnereventemails_DevEmail_Content_25Gtl {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   padding-top: 40px;
   padding-bottom: 40px;
   padding-left: 78px;
@@ -1392,7 +1396,6 @@ input.partnereventemails_HeadlineInput_2lHX9::placeholder {
 }
 .partnereventemails_DevEmail_HearComes_3nvmQ {
   color: #000;
-  font-family: Arial, sans-serif;
   font-size: 36px;
   line-height: 50px;
   text-align: left;
@@ -1416,7 +1419,6 @@ input.partnereventemails_HeadlineInput_2lHX9::placeholder {
 }
 .partnereventemails_DevEmail_Subject_37Wbo {
   color: #000;
-  font-family: Arial, sans-serif;
   font-size: 42px;
   line-height: 50px;
   text-align: left;
@@ -1432,7 +1434,6 @@ input.partnereventemails_HeadlineInput_2lHX9::placeholder {
 }
 .partnereventemails_DevEmail_Signoff_3iJuG {
   color: #000;
-  font-family: Arial, sans-serif;
   font-size: 18px;
   line-height: 26px;
   text-align: left;
@@ -1448,7 +1449,6 @@ input.partnereventemails_HeadlineInput_2lHX9::placeholder {
 }
 .partnereventemails_DevEmail_Footer_Reason_1h_Bm {
   color: #000;
-  font-family: Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   text-align: left;
@@ -1462,7 +1462,6 @@ input.partnereventemails_HeadlineInput_2lHX9::placeholder {
 }
 .partnereventemails_DevEmail_Footer_Bold_CSfHW {
   color: #000;
-  font-family: Arial, sans-serif;
   font-size: 12px;
   line-height: 18px;
   text-align: left;
@@ -1471,7 +1470,6 @@ input.partnereventemails_HeadlineInput_2lHX9::placeholder {
 }
 .partnereventemails_DevEmail_Footer_Regular_1dDJa {
   color: #000;
-  font-family: Arial, sans-serif;
   font-size: 12px;
   line-height: 18px;
   text-align: left;
@@ -1480,7 +1478,6 @@ input.partnereventemails_HeadlineInput_2lHX9::placeholder {
 }
 .partnereventemails_DevEmail_Follow_1gwxy {
   color: #000;
-  font-family: Arial, sans-serif;
   font-size: 12px;
   line-height: 18px;
   text-align: left;
@@ -1527,6 +1524,16 @@ input.partnereventemails_HeadlineInput_2lHX9::placeholder {
   .partnereventemails_SelectListCtn_980o4
   > label {
   width: fit-content;
+}
+.partnereventemails_SupportCtn_27guD {
+  margin-top: 30px;
+  font-size: 18px;
+  color: #000;
+  display: block;
+}
+.partnereventemails_SupportCtn_27guD a {
+  color: #679dff;
+  text-decoration: underline;
 }
 .progressutils_ErrorMessaage_13sZc {
   color: red;

@@ -1751,6 +1751,9 @@ span.partnereventshared_tooltip_Ctn_3nqxI {
   text-transform: uppercase;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
+.ContentHubSalePage .partnereventshared_SaleSectionHeader_2WMiQ {
+  padding-left: 8px;
+}
 .partnereventshared_SaleSectionHeader_2WMiQ img {
   max-width: 100%;
 }
@@ -1774,6 +1777,35 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
 }
 .partnereventshared_HelperTooltip_3T6MQ > svg:hover {
   fill: #fff;
+}
+.partnereventshared_PixelOffsetCtn_3Xk96 {
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  padding: 16px;
+  margin-top: 16px;
+  background-color: #373b43;
+}
+.partnereventshared_PixelOffsetCtn_3Xk96
+  .partnereventshared_PixelOffsetRow_2PtWb {
+  margin-top: 8px;
+}
+.partnereventshared_PixelOffsetCtn_3Xk96
+  .partnereventshared_PixelOffsetNote_JjEwa {
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+}
+.partnereventshared_PixelOffsetCtn_3Xk96
+  .partnereventshared_PixelOffsetCallout_f5QZT {
+  color: orange;
+}
+.partnereventshared_Error_mSSED {
+  margin: 10px 0;
+  padding: 5px;
+  border: 1px solid #c44848;
+  font-size: 14px;
+  color: #c44848;
 }
 .login_LoginDialog_2Hj3a {
   background-color: #101114;
@@ -3782,6 +3814,17 @@ html.touch
     display: none;
   }
 }
+.salepreviewwidgets_FreeWeekendBar_2SCof {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.2);
+  align-items: center;
+  justify-content: end;
+  padding: 6px;
+}
+.salepreviewwidgets_FreeWeekendLabel_21B6L {
+  color: #fff;
+  padding: 0 16px;
+}
 .animated_featured_capsule_FeatureCtn_rq-9_ {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   display: flex;
@@ -3852,11 +3895,10 @@ html.touch
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url(data:image/gif;base64,R0lGODlhBAAEAIAAAAAAAP///yH/C05FVFNDQVBFMi4wAwEAAAAh+QQFAAABACwAAAAABAAEAAACBgQShqgJBQA7);
   z-index: 3;
 }
-.SaleSectionCarousel .animated_featured_capsule_BGGradientTwo_21GjW {
-  background-image: none;
+.ContentHubSalePage .animated_featured_capsule_BGGradientTwo_21GjW {
+  background-image: url(data:image/gif;base64,R0lGODlhBAAEAIAAAAAAAP///yH/C05FVFNDQVBFMi4wAwEAAAAh+QQFAAABACwAAAAABAAEAAACBgQShqgJBQA7);
 }
 .animated_featured_capsule_CapsuleDecorators_jaTSi {
   position: absolute;
@@ -4497,6 +4539,12 @@ body.v6.partner_events {
   .partnereventdisplay_EventDetailsBody_A_A2B {
   font-size: 7.9px;
   line-height: 11px;
+}
+.partnereventdisplay_InLibraryView_3_SEi.partnereventdisplay_InEditor_2YuAT
+  .AppSummaryWidgetCtn {
+  width: 900px;
+  transform: scale(0.48);
+  transform-origin: top left;
 }
 .partnereventdisplay_EventDetailsSubTitle_20f2s {
   font-size: 22px;
@@ -5333,6 +5381,11 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
   height: 35px;
   margin: 2px 10px 0px 10px;
 }
+.contenthubmaincarousel .carousel_pipScrollerContainer_3SyN- {
+  max-width: 940px;
+  width: 100%;
+  margin: 0px auto;
+}
 .carousel_pipScrollerContainer_3SyN- .carousel_pipScrollButton_qE43J {
   width: 40px;
   height: 100%;
@@ -5474,6 +5527,7 @@ Body.v6.tag_page.contenthub_page {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-right: 8px;
+  padding-left: 8px;
 }
 .contenthubshared_StoreSection_OyJ48
   .contenthubshared_SectionDescription_nVpbh {
@@ -10067,11 +10121,6 @@ html:not(.touch)
 .legalfooter_mainmenu_footer_spacer_3w1gN.legalfooter_china_spacer_16fnF {
   height: 330px;
 }
-@media only screen and (min-width: 1420px) {
-  .facetedbrowse_FacetedBrowseCtn_1Drr- {
-    margin-top: 40px;
-  }
-}
 @media only screen and (max-width: 768px) {
   .facetedbrowse_FacetedBrowseInnerCtn_3vjDu {
     display: grid;
@@ -10512,7 +10561,7 @@ html:not(.touch)
 }
 @media screen and (max-width: 940px) {
   .partnersaledisplay_SaleOuterContainer_150kd {
-    margin-top: 50vw !important;
+    margin-top: 41vw !important;
     padding: 0px 10px;
   }
   html.responsive
@@ -11627,7 +11676,8 @@ html.responsive.touch .partnersaledisplay_SaleSectionTabs_1FPIV {
   .saleitembrowser_SaleItemBrowserHeader_Eh-ow {
   display: flex;
   padding: 4px 16px;
-  width: fit-content;
+  width: 100%;
+  box-sizing: border-box;
   flex-wrap: wrap;
 }
 .saleitembrowser_SaleItemBrowserContainer_18byE
@@ -11663,6 +11713,13 @@ html.responsive.touch .partnersaledisplay_SaleSectionTabs_1FPIV {
   .saleitembrowser_SaleItemBrowserHeader_Eh-ow
   .saleitembrowser_FlavorLabel_KDLAS:hover {
   background-color: rgba(255, 255, 255, 0.2);
+}
+.saleitembrowser_SaleItemBrowserContainer_18byE
+  .saleitembrowser_SaleItemBrowserHeaderContainer_1edLK
+  .saleitembrowser_SaleItemBrowserHeader_Eh-ow
+  .saleitembrowser_Debug_1MGr0 {
+  text-align: right;
+  flex-grow: 1;
 }
 .saleitembrowser_SaleItemBrowserContainer_18byE
   .saleitembrowser_EmptyResults_3U-cq {

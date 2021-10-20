@@ -179,6 +179,9 @@
   flex-direction: column;
   flex: 1;
 }
+.conferencebroadcast_BroadcastChatCtn_28b1v .ChatEntry {
+  padding: 6px;
+}
 div#footer {
   display: none;
 }
@@ -294,7 +297,7 @@ div#footer {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-color: #2c3037;
+  background-color: #22252a;
   font-size: 14px;
   color: #969696;
   border-top-left-radius: 4px;
@@ -311,7 +314,6 @@ div#footer {
   .conferencepages_InnerChatTabs_2hj0C
   .conferencepages_InnerChatTab_1g3oa.conferencepages_Active_3PSCm {
   background-color: #393e45;
-  cursor: default;
 }
 .conferencepages_TabControlsCtn_1HJDD .conferencepages_ShowBothTabs_fZBE8 {
   opacity: 0.3;
@@ -558,6 +560,15 @@ div#footer {
   margin-left: 8px;
   margin-top: 0px;
   margin-bottom: 4px;
+}
+.questions_AnswerTitle_1c4mo {
+  font-size: 11px;
+  margin-top: -12px;
+  margin-left: 2px;
+  background: #111113;
+  width: fit-content;
+  padding: 0 6px;
+  color: #565661;
 }
 .questions_AnswerText_3ar8c {
   padding: 6px;

@@ -3502,7 +3502,7 @@ input.unlockcode_entry_input
 	padding: 8px 0px 0px 40px;
 }
 
-.create_help_request_secondary {
+.create_help_request_secondary, #extended_field_event_name, #extended_field_linux_support, #extended_field_controller_support, #extended_field_anti_cheat {
 	font-size: 14px;
 	color: #67c1f5;
 	line-height: 16px;

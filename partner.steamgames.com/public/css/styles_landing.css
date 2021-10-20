@@ -1455,7 +1455,7 @@ div + #landingFooter.nonconfidential {
 .icon_validate{ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjQ0Q0YyMDBFRjk1QzExRTI5OTJFRjUzRkE4RENDOTQ0IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjQ0Q0YyMDBGRjk1QzExRTI5OTJFRjUzRkE4RENDOTQ0Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NDRDRjIwMENGOTVDMTFFMjk5MkVGNTNGQThEQ0M5NDQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NDRDRjIwMERGOTVDMTFFMjk5MkVGNTNGQThEQ0M5NDQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6C+yMLAAAAvklEQVR42qSTYQ3EIAyFyxScBCRMAhJOAlLm4CScBCTcOdg5mATmgHVJWZqm7S2hyfdjrLyWVwitNRiJSXxnZEWaoCBJVTg7QB7I2v7Hm/IvtM0bkpFELEi1RIASzApGh4kLVFYZHCITKFygx+JsLoYn23RzWrOxHnkHH6eDmY4oIwMZdy04ItzISqLQzanCiyiqn2tPEkn8P0+qNy4SaBeJj6k4m1+aQFAeUyTXu/Nf5Ifs2hjC6GscFjgEGAB/+j5MIJELfwAAAABJRU5ErkJggg==) }
 .icon_workshop{ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAJZJREFUOMvtktENwjAMRM+IATICI2QDVoINskFHygrZoN0ANnj8uCgKoU3FLydFts7Rk86J1AiIwAOg8nAvak/AvAGYRwAAk9fk5+21960HkHSXFJrRU9JkZjYSIXf8PBphXWKqvPRtiaePTGZFUumwi8+2AUf1B0jnnSe9/QK4Srp4vxyNsEiKXut+TEDwr7sqA6F39wXrzJeE3ZyUYwAAAABJRU5ErkJggg==) }
 .icon_workshop.disabled{ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAKtJREFUOMvtkkkNAkEQRd8QBCABCeMARkCF4KRxMOMACTjgUAIGCS2hcYADuBRJpxemCVf+qbb82n5HAhHpgRnYqGpnsSfwAAZV9XH9ihxX6shy60LRFjgDTkTGKH4BXAsBwB2YIn+yFWghCMBBVYfkNrPlWLrBEejj8c3uLfeZwK7sC8Q+/UBtgq/wJ6gL6f0+9wvBzmRNSUBLKwQTTkjs5glO1n1v/s1iGV4+ASu9XR2imAAAAABJRU5ErkJggg==) }
-
+.icon_steam_deck { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsSAAALEgHS3X78AAAAs0lEQVQ4ja2T/RHCIAzFf3UCRugGOkJH6Ah1M0epG9QNcAM2iEelirmA9PTd5Q/CyyMfBBGxbJA3ZhGZCjxaBDYsItJr7oF2HIEF6D8iSqklG1MJOpNiCTHAZ2SffBclMlkCo1H3Bp3JbAn4ioA3HljjulUlteNLOzvFiefXFFzDLDTH5QIBuFeC492gfOGZ9x+b+PMYc3Pp2+7+SLVdiAh6H/bswg04AT53tghcgbMVDPAAJF41N8VFibwAAAAASUVORK5CYII=) }
 
 .icon_star{ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAMCAYAAAC5tzfZAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAKBJREFUKM+VktENwjAMRJ87QUbICEXKAGQCmgkYjRG6AgNYghH47lc2MD+pgMityv1Y5+TkyzngwJTRFDNl9M4HfFy7ekg0dXVfZMoExEZj4z8QU4w/MQAFqAfvV6BIsxSAGTjvCO5AkUSV7j0PcGN+SuK0FUTcmBLd9NoiQ2dnRTD9WB+chb6ALIkM5MYBLt7XWUyZWyjf/WDKzZRl7b0Bkt8xgrCBuZgAAAAASUVORK5CYII=); width: 13px; height: 12px; background-position: center center; background-repeat: no-repeat;}
 span.icon_star { display: inline-block;}
@@ -3285,4 +3285,110 @@ div .cdkey_request_details_row
 }
 .contactsList tr a {
     text-decoration: underline;
+}
+
+/* deck review section at top of app landing page */
+.app_landing_deck {
+	width: 400px;
+	margin: 10px;
+	border-radius: 3px;
+	font-size: 18px;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.app_landing_deck .title,
+.app_landing_deck .body {
+	padding: 10px;
+}
+.app_landing_deck .title {
+	padding: 10px 20px;
+	display: flex;
+	flex-direction: row;
+	line-height: 32px;
+}
+.app_landing_deck .body {
+	padding: 10px 20px;
+	padding-top: 5px;
+	font-size: 14px;
+}
+.app_landing_deck .footer {
+	line-height: 32px;
+	font-size: 14px;
+	width: 100%;
+	background-color: #8F8F8F;
+	border-radius: 3px;
+}
+
+.deck_header.left.deck_pending,
+.app_landing_deck.deck_pending {
+	background: linear-gradient(269.68deg, #2460D0 0.2%, #3A9BED 99.92%);
+}
+.deck_header.left.deck_unsupported,
+.app_landing_deck.deck_unsupported {
+	background: linear-gradient(269.68deg, #674B04 0.2%, #A86B0F 99.92%);
+}
+.deck_header.left.deck_verified,
+.app_landing_deck.deck_verified {
+	background: linear-gradient(269.68deg, #5E810F 0.2%, #7FAA1F 99.92%);
+}
+
+/* deck review page styles */
+.deck_header_container {
+	height: 80px;
+	width: 100%;
+}
+.deck_header_container.deck_pending {
+	background-color: #104CBC;
+}
+.deck_header_container.deck_unsupported {
+	background-color: #674B04;
+}
+.deck_header_container.deck_verified {
+	background-color: #5E810F;
+}
+.deck_header {
+	height: 100%;
+	padding: 0px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+}
+.deck_header.left {
+	margin-top: 0px;
+	font-size: 18px;
+	color: white;
+	text-align: left;
+	padding-left: 30px;
+	flex: 1;
+}
+.deck_header.right {
+	width: 320px;
+	justify-content: center;
+	margin: 0px;
+}
+.deck_header.right .iconLink {
+	width: unset;
+	font-size: 12px;
+	padding: 8px 20px;
+	background-color: #444955;
+}
+.deck_review_build_not_complete {
+	padding: 20px 10px 30px 10px;
+	font-size: 20px;
+	color: yellow;
+}
+.deck_review_nav {
+	padding: 10px;
+	min-height: 30px;
+}
+#DeckChecklistRequestForm fieldset {
+	border: 0;
+}
+#DeckChecklistRequestForm .please_confirm_title {
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: bold;
 }

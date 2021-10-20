@@ -218,6 +218,44 @@
                     "optional": false
                 }
             ]
+        },
+        {
+            "name": "QueryByFakeIP",
+            "version": 1,
+            "httpmethod": "GET",
+            "description": "Perform a query on a specific server by FakeIP",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "fake_ip",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "FakeIP of server to query."
+                },
+                {
+                    "name": "fake_port",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Fake port of server to query."
+                },
+                {
+                    "name": "app_id",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "AppID to use.  Each AppID has its own FakeIP address."
+                },
+                {
+                    "name": "query_type",
+                    "type": "{enum}",
+                    "optional": false,
+                    "description": "What type of query?"
+                }
+            ]
         }
     ]
 }
