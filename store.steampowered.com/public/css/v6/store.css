@@ -3620,6 +3620,12 @@ a.pulldown_mobile {
 		max-height: 90vh;
 	}
 
+	html.responsive body.responsive_store_nav_overlay_visible {
+		overflow-y: hidden;
+		touch-action: none;
+		-ms-touch-action: none;
+	}
+
 	html.responsive #responsive_store_nav_overlay_bottom {
 		flex: 1;
 	}
