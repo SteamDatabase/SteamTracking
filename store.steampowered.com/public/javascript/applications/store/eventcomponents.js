@@ -1820,7 +1820,7 @@
                         { type: "app", id: u.GetAppID() },
                         o.a.createElement(
                           $.a,
-                          { href: Object(ae.g)(u.GetStorePageURL()) },
+                          { href: Object(ae.h)(u.GetStorePageURL()) },
                           o.a.createElement("img", {
                             className: re.TileAppInfoImage,
                             src: u.assets.GetMainCapsuleURL(),
@@ -1832,7 +1832,7 @@
                         { type: "app", id: u.GetAppID() },
                         o.a.createElement(
                           $.a,
-                          { href: Object(ae.g)(u.GetStorePageURL()) },
+                          { href: Object(ae.h)(u.GetStorePageURL()) },
                           o.a.createElement("div", null, u.GetName())
                         )
                       )
@@ -1853,7 +1853,7 @@
                     o.a.createElement(
                       $.a,
                       {
-                        href: Object(ae.g)(
+                        href: Object(ae.h)(
                           M.d.STORE_BASE_URL + "/curator/" + m + "/"
                         ),
                       },
@@ -2545,7 +2545,7 @@
                       r.createElement(
                         "a",
                         {
-                          href: Object(ae.g)(
+                          href: Object(ae.h)(
                             M.d.STORE_BASE_URL + "app/" + n + "/?beta=0"
                           ),
                           target: "_blank",

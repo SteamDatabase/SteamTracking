@@ -16772,7 +16772,7 @@
         },
         ln = function (e) {
           var t = Object(K.c)(),
-            n = Object(ie.b)(e.url, S.c.STORE_BASE_URL);
+            n = Object(ie.c)(e.url, S.c.STORE_BASE_URL);
           if (n) {
             var r = Object(m.b)(n, t);
             return o.createElement(
@@ -20921,7 +20921,7 @@
                           { className: A.FlexRowContainer },
                           s.createElement(
                             _.a,
-                            { href: Object(v.f)(o), className: j.AvatarLink },
+                            { href: Object(v.g)(o), className: j.AvatarLink },
                             s.createElement("img", {
                               className: Object(m.a)(j.Avatar, "Avatar_Trgt"),
                               src: r.GetAvatarURLFullSize(),
@@ -20946,7 +20946,7 @@
                               s.createElement(
                                 _.a,
                                 {
-                                  href: Object(v.f)(o),
+                                  href: Object(v.g)(o),
                                   className: j.CreatorNameName,
                                 },
                                 r.GetName()
@@ -25313,26 +25313,29 @@
     },
     IzPI: function (e, t, n) {
       "use strict";
-      n.d(t, "d", function () {
+      n.d(t, "e", function () {
         return a;
       }),
-        n.d(t, "e", function () {
+        n.d(t, "f", function () {
           return i;
         }),
-        n.d(t, "g", function () {
-          return o;
-        }),
-        n.d(t, "a", function () {
+        n.d(t, "b", function () {
           return s;
         }),
-        n.d(t, "c", function () {
+        n.d(t, "h", function () {
+          return c;
+        }),
+        n.d(t, "a", function () {
           return l;
         }),
-        n.d(t, "f", function () {
-          return u;
-        }),
-        n.d(t, "b", function () {
+        n.d(t, "d", function () {
           return d;
+        }),
+        n.d(t, "g", function () {
+          return p;
+        }),
+        n.d(t, "c", function () {
+          return m;
         });
       var r = n("lkRc");
       function a(e) {
@@ -25347,7 +25350,11 @@
         var t = a(e);
         return t.startsWith("www.") && (t = t.slice(4)), t;
       }
-      function o(e) {
+      var o = /^(steam|ftp|https?):\/\//;
+      function s(e) {
+        return o.test(e) ? e : "https://" + e;
+      }
+      function c(e) {
         return (
           "http:" !== e.substr(0, 5) ||
             1 != r.c.EUNIVERSE ||
@@ -25381,7 +25388,7 @@
           e
         );
       }
-      function s(e) {
+      function l(e) {
         if (!e) return !0;
         var t = a(e).toLocaleLowerCase();
         return (
@@ -25396,13 +25403,13 @@
           ].indexOf(t) >= 0
         );
       }
-      function c(e, t) {
+      function u(e, t) {
         return r.c.MEDIA_CDN_URL + "steam/apps/" + e + "/" + t;
       }
-      function l(e) {
-        return c(e, "header.jpg");
+      function d(e) {
+        return u(e, "header.jpg");
       }
-      function u(e) {
+      function p(e) {
         return r.c.SNR &&
           r.c.SNR.length > 0 &&
           e &&
@@ -25410,7 +25417,7 @@
           ? e + (e.indexOf("?") >= 0 ? "&" : "?") + "snr=" + r.c.SNR
           : e;
       }
-      function d(e, t) {
+      function m(e, t) {
         try {
           var n = new URL(t),
             r = new URL(e);
@@ -32506,7 +32513,7 @@
                   ? void 0
                   : t.read_more_link
               )
-                ? Object(W.d)(e.jsondata.read_more_link).toLocaleLowerCase()
+                ? Object(W.e)(e.jsondata.read_more_link).toLocaleLowerCase()
                 : void 0,
             ];
           })(t)
@@ -32728,7 +32735,7 @@
           e.children.length > 0 &&
           n &&
           !n.startsWith("steam://")
-            ? Object(W.e)(n)
+            ? Object(W.f)(n)
             : void 0;
         return s.createElement(
           "a",
@@ -32930,9 +32937,9 @@
           : Me(e, null == t ? void 0 : t.event);
       }
       function Fe(e) {
-        var t = Object(W.d)(e).toLocaleLowerCase(),
-          n = Object(W.d)(C.c.STORE_BASE_URL),
-          r = Object(W.d)(C.c.COMMUNITY_BASE_URL);
+        var t = Object(W.e)(e).toLocaleLowerCase(),
+          n = Object(W.e)(C.c.STORE_BASE_URL),
+          r = Object(W.e)(C.c.COMMUNITY_BASE_URL);
         return (
           t == n ||
           t == r ||
@@ -35177,9 +35184,9 @@
       }
       function c(e, t, n) {
         void 0 === n && (n = null);
-        var r = Object(a.d)(e).toLowerCase(),
-          o = Object(a.d)(i.c.COMMUNITY_BASE_URL).toLowerCase(),
-          s = Object(a.d)(i.c.STORE_BASE_URL).toLowerCase();
+        var r = Object(a.e)(e).toLowerCase(),
+          o = Object(a.e)(i.c.COMMUNITY_BASE_URL).toLowerCase(),
+          s = Object(a.e)(i.c.STORE_BASE_URL).toLowerCase();
         return r === o || r === s ? l(e, t, n) : e;
       }
       function l(e, t, n) {
@@ -35255,14 +35262,14 @@
           }),
           (e.AddNavParamToURL = function (e, t) {
             try {
-              var n = new URL(e),
+              var n = new URL(Object(a.b)(e)),
                 r = new URLSearchParams(n.search);
               return (
                 r.set("snr", encodeURIComponent(t)),
                 n.origin + n.pathname + "?" + r.toString() + n.hash
               );
-            } catch (n) {
-              return console.log(e, t), console.error(n), e;
+            } catch (t) {
+              return console.error(e, t), e;
             }
           }),
           (e.ComputeStaticLinkPrefix = function () {
@@ -37183,7 +37190,7 @@
             }),
             Object.defineProperty(e.prototype, "capsule_link", {
               get: function () {
-                return Object(c.f)(l.c.STORE_BASE_URL + "app/" + this.appid);
+                return Object(c.g)(l.c.STORE_BASE_URL + "app/" + this.appid);
               },
               enumerable: !1,
               configurable: !0,
@@ -38272,7 +38279,7 @@
                         F.b,
                         {
                           className: Object(B.a)(S.a.Button),
-                          href: Object(D.f)(t.GetSaleURL()),
+                          href: Object(D.g)(t.GetSaleURL()),
                         },
                         Object(T.f)("#Event_Button_VisitSalePage")
                       )
@@ -38564,7 +38571,7 @@
                     ),
                     s.createElement(
                       x.a,
-                      { href: Object(D.f)(p.a.GetCreatorStoreURL(e)) },
+                      { href: Object(D.g)(p.a.GetCreatorStoreURL(e)) },
                       s.createElement("div", {
                         className: Y.a.EventDetailsAvatar,
                         style: {
@@ -46257,7 +46264,7 @@
                 a +
                 "/" +
                 i;
-            return Object(T.f)(o);
+            return Object(T.g)(o);
           }),
           (t.prototype.GetICSDownloadLink = function (e) {
             var t = this.props,
@@ -52432,7 +52439,7 @@
                       {
                         key: n.GID + "goto",
                         onSelected: function () {
-                          return (window.location.href = Object(ne.f)(
+                          return (window.location.href = Object(ne.g)(
                             W.c.STORE_BASE_URL + "app/" + n.appid
                           ));
                         },
@@ -63339,7 +63346,7 @@
                     "a",
                     {
                       key: t + "-" + n,
-                      href: Object(ne.f)(N.c.STORE_BASE_URL + "app/" + e.appid),
+                      href: Object(ne.g)(N.c.STORE_BASE_URL + "app/" + e.appid),
                     },
                     u.a.createElement("img", {
                       className: ae.a.PresenterEventScreenshotThumbnail,
@@ -67059,11 +67066,11 @@
       function w(e, t) {
         if (e.startsWith("steam://")) return !1;
         if (e.startsWith("/")) return !1;
-        var n = Object(_.d)(e).toLowerCase(),
-          r = Object(_.d)(v.c.COMMUNITY_BASE_URL).toLowerCase(),
-          a = Object(_.d)(v.c.STORE_BASE_URL).toLowerCase(),
-          i = Object(_.d)(v.c.HELP_BASE_URL).toLowerCase(),
-          o = Object(_.d)(v.c.PARTNER_BASE_URL || "").toLowerCase();
+        var n = Object(_.e)(e).toLowerCase(),
+          r = Object(_.e)(v.c.COMMUNITY_BASE_URL).toLowerCase(),
+          a = Object(_.e)(v.c.STORE_BASE_URL).toLowerCase(),
+          i = Object(_.e)(v.c.HELP_BASE_URL).toLowerCase(),
+          o = Object(_.e)(v.c.PARTNER_BASE_URL || "").toLowerCase();
         return (
           n !== r &&
           n !== a &&
@@ -67131,7 +67138,7 @@
           e.children.length > 0 &&
           n &&
           !n.startsWith("steam://")
-            ? Object(_.e)(n)
+            ? Object(_.f)(n)
             : void 0;
         return a.createElement(
           "a",
@@ -67220,18 +67227,18 @@
       }
       function F(e) {
         var t = B(e.args, "poster");
-        t && (t = Object(_.g)(t));
+        t && (t = Object(_.h)(t));
         var n = new Array(),
           r = B(e.args, "mp4");
-        r && n.push({ sURL: Object(_.g)(r), sFormat: "video/mp4" });
+        r && n.push({ sURL: Object(_.h)(r), sFormat: "video/mp4" });
         var a = B(e.args, "webm");
-        a && n.push({ sURL: Object(_.g)(a), sFormat: "video/webm" });
+        a && n.push({ sURL: Object(_.h)(a), sFormat: "video/webm" });
         for (var o = new Array(), s = 0; s < 30; s++) {
           var c = B(e.args, "sub_" + Object(i.e)(s));
           c &&
-            o.push({ sURL: Object(_.g)(c), eLanguage: s, sKind: "subtitles" });
+            o.push({ sURL: Object(_.h)(c), eLanguage: s, sKind: "subtitles" });
           var l = B(e.args, "cap_" + Object(i.e)(s));
-          l && o.push({ sURL: Object(_.g)(l), eLanguage: s, sKind: "caption" });
+          l && o.push({ sURL: Object(_.h)(l), eLanguage: s, sKind: "caption" });
         }
         return { sPoster: t, rgVideoSources: n, rgVideoTracks: o };
       }
@@ -67249,7 +67256,7 @@
           n = e.children ? e.children.toString() : void 0;
         n &&
           t.rgVideoSources.push({
-            sURL: Object(_.g)(n),
+            sURL: Object(_.h)(n),
             sFormat: "video/webm",
           });
         var r = B(e.args, "autoplay"),
@@ -73964,7 +73971,7 @@
                         A.b,
                         {
                           className: Object(L.a)(I.a.Button),
-                          href: Object(F.f)(t.GetSaleURL()),
+                          href: Object(F.g)(t.GetSaleURL()),
                         },
                         Object(N.f)("#Event_Button_VisitSalePage")
                       )
@@ -74335,7 +74342,7 @@
                     "a",
                     {
                       className: U.a.AppBannerLink,
-                      href: Object(F.f)(l),
+                      href: Object(F.g)(l),
                       target: x.c.IN_CLIENT ? void 0 : "_blank",
                     },
                     Object(N.f)("#EventDisplay_ViewStorePage_ExtraShort")
@@ -74345,7 +74352,7 @@
                       "a",
                       {
                         className: U.a.AppBannerLink,
-                        href: Object(F.f)(h),
+                        href: Object(F.g)(h),
                         target: x.c.IN_CLIENT ? void 0 : "_blank",
                       },
                       Object(N.f)("#EventDisplay_ViewCommunityPage_ExtraShort")
@@ -74355,7 +74362,7 @@
                       "a",
                       {
                         className: U.a.AppBannerLink,
-                        href: Object(F.f)(v),
+                        href: Object(F.g)(v),
                         target: x.c.IN_CLIENT ? void 0 : "_blank",
                       },
                       Object(N.f)("#EventDisplay_ViewForum_ExtraShort")
@@ -74366,7 +74373,7 @@
                       "a",
                       {
                         className: U.a.AppBannerLink,
-                        href: Object(F.f)(D),
+                        href: Object(F.g)(D),
                         target: x.c.IN_CLIENT ? void 0 : "_blank",
                       },
                       s.createElement(j.Q, null),
@@ -74377,7 +74384,7 @@
                       "a",
                       {
                         className: U.a.AppBannerLink,
-                        href: Object(F.f)(
+                        href: Object(F.g)(
                           Object(H.f)(t, p.a.InitFromClanID(n), "admin")
                         ),
                         target: x.c.IN_CLIENT ? void 0 : "_blank",
@@ -75506,7 +75513,7 @@
           n &&
             a.createElement(
               "a",
-              { href: Object($.f)(n) },
+              { href: Object($.g)(n) },
               a.createElement(
                 "div",
                 {
@@ -76846,7 +76853,7 @@
               var r = t;
               this.m_parentNode &&
                 "img" == this.m_parentNode.tag &&
-                (r = Object(c.g)(r)),
+                (r = Object(c.h)(r)),
                 e.prototype.AppendText.call(this, r, n);
             }),
             t

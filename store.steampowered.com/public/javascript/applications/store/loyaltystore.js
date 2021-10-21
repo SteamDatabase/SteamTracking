@@ -13062,12 +13062,12 @@
                 i.a.useEffect(
                   function () {
                     var t = !0,
-                      n = Object(y.d)(e);
+                      n = Object(y.e)(e);
                     r(n);
                     var a = new Image();
                     return (
                       (a.onerror = function () {
-                        return t && r(Object(y.c)(e));
+                        return t && r(Object(y.d)(e));
                       }),
                       (a.src = n),
                       function () {

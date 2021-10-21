@@ -1686,7 +1686,7 @@
                 var n = Ee.a.GetCreatorHome(new v.a(p.b.CLANSTEAMID));
                 n &&
                   n.BIsLoaded() &&
-                  ((e = Object(ve.f)(n.GetCreatorHomeURL("developer"))),
+                  ((e = Object(ve.g)(n.GetCreatorHomeURL("developer"))),
                   (t = n.GetAvatarURLFullSize()),
                   (a = n.GetName()));
               } else if (p.b.IS_CURATOR) {
@@ -1699,7 +1699,7 @@
                 var r = u.a.GetStoreCapsuleInfo(p.b.APPID),
                   o = r && r.GetAppStoreData();
                 o &&
-                  ((e = Object(ve.f)(o.capsule_link)),
+                  ((e = Object(ve.g)(o.capsule_link)),
                   (t = o.tiny_capsule),
                   (a = o.title));
               }
