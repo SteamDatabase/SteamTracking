@@ -12984,16 +12984,33 @@
                   : this.AddEvent(e);
             }),
             (t.prototype.AddEvent = function (e) {
-              this.props.saleSection.events.push({
-                announcement_gid: e.id,
-                clan_steamid: e.clan_steamid,
-              }),
-                C.d.LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
-                  new T.a(e.clan_steamid),
-                  e.id,
-                  null
-                ),
-                this.props.editModel.SetDirty(o.c.jsondata_sales);
+              return Object(a.b)(this, void 0, void 0, function () {
+                var t;
+                return Object(a.e)(this, function (n) {
+                  switch (n.label) {
+                    case 0:
+                      return [
+                        4,
+                        C.d.LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
+                          new T.a(e.clan_steamid),
+                          e.id,
+                          null
+                        ),
+                      ];
+                    case 1:
+                      return (
+                        (t = n.sent()),
+                        this.props.saleSection.events.push({
+                          announcement_gid: e.id,
+                          clan_steamid: e.clan_steamid,
+                          event_gid: null == t ? void 0 : t.GID,
+                        }),
+                        this.props.editModel.SetDirty(o.c.jsondata_sales),
+                        [2]
+                      );
+                  }
+                });
+              });
             }),
             (t.prototype.CreateSelectionMenu = function (e) {
               var t = this;

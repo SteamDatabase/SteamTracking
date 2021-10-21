@@ -14466,6 +14466,7 @@
                               loop: !0,
                               muted: !0,
                               autoPlay: !0,
+                              playsInline: !0,
                               className: Object(te.a)(
                                 Ve.a.SaleBackground,
                                 Ve.a[
@@ -63194,7 +63195,8 @@
         $ = (function () {
           function e() {
             (this.m_mapAnnounceGIDToTrack = new Map()),
-              (this.m_mapAnnounceGIDToSaleClanID = new Map());
+              (this.m_mapAnnounceGIDToSaleClanID = new Map()),
+              (this.m_mapEventGIDToTrack = new Map());
           }
           return (
             (e.Get = function () {
@@ -63209,7 +63211,8 @@
                       n.m_mapAnnounceGIDToSaleClanID.set(
                         r.announcement_gid,
                         e.clanSteamID.GetAccountID()
-                      );
+                      ),
+                      n.m_mapEventGIDToTrack.set(r.event_gid, t);
                   });
                 });
             }),
@@ -63240,7 +63243,7 @@
               return Boolean(this.m_mapAnnounceGIDToTrack.has(e));
             }),
             (e.prototype.BIsPartOfSomeTrackByEventID = function (e) {
-              return Boolean(this.m_mapAnnounceGIDToTrack.has(e));
+              return Boolean(this.m_mapEventGIDToTrack.has(e));
             }),
             e
           );
@@ -63893,7 +63896,7 @@
         if (e.start_time == t.start_time) {
           var n = $.Get().BIsPartOfSomeTrackByEventID(e.unique_id),
             r = $.Get().BIsPartOfSomeTrackByEventID(t.unique_id);
-          return (n && r) || (!n && !r) ? 0 : n ? -1 : 1;
+          return (n && r) || (!n && !r) ? 0 : n ? 1 : -1;
         }
         return t.start_time - e.start_time;
       }

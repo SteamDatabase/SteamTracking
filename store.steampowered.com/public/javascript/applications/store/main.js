@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6844759";
+var CLSTAMP = "6844906";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [40],
   {
@@ -79690,7 +79690,7 @@ var CLSTAMP = "6844759";
         if (e.start_time == t.start_time) {
           var n = $.Get().BIsPartOfSomeTrackByEventID(e.unique_id),
             r = $.Get().BIsPartOfSomeTrackByEventID(t.unique_id);
-          return (n && r) || (!n && !r) ? 0 : n ? -1 : 1;
+          return (n && r) || (!n && !r) ? 0 : n ? 1 : -1;
         }
         return t.start_time - e.start_time;
       }
