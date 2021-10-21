@@ -15228,7 +15228,7 @@
         return d.createElement(M.a, {
           items: t || [],
           onDelete: function (t) {
-            e.saleSection.links.splice(t, 1),
+            e.saleSection.itemdefs.splice(t, 1),
               e.editModel.SetDirty(o.c.jsondata_sales);
           },
           onReorder: function () {
