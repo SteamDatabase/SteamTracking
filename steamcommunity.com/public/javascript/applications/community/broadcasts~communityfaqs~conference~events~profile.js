@@ -35254,12 +35254,16 @@
             return i && ((r += "_" + i), n && (r += "_" + n)), r;
           }),
           (e.AddNavParamToURL = function (e, t) {
-            var n = new URL(e),
-              r = new URLSearchParams(n.search);
-            return (
-              r.set("snr", encodeURIComponent(t)),
-              n.origin + n.pathname + "?" + r.toString() + n.hash
-            );
+            try {
+              var n = new URL(e),
+                r = new URLSearchParams(n.search);
+              return (
+                r.set("snr", encodeURIComponent(t)),
+                n.origin + n.pathname + "?" + r.toString() + n.hash
+              );
+            } catch (n) {
+              return console.log(e, t), console.error(n), e;
+            }
           }),
           (e.ComputeStaticLinkPrefix = function () {
             return e.sm_strDomain
