@@ -413,7 +413,7 @@ crashhandler.dylib
 CreateInterface
 Steam
 Oct 21 2021
-16:35:57
+21:57:48
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -1785,8 +1785,6 @@ K)Q!
 1"KI
 aEk@
 tj-G
-o|d-
-V,:6
 4j}1T:
 1n4H
 R!5:
@@ -1845,8 +1843,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211021233600Z0/
-'C0[
+211022045751Z0/
+/S0[
+F[$t
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1854,18 +1853,18 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		jLDQ8XNy5vfw8tsyRMx83GzpzDc=
+		x0bbzSOMHJaBfq3aeULHUQg9RJI=
 		</data>
 		<data>
-		L+Z16nTJHsWCNN7oaCQbiJ1+V8E=
+		ycbVGaDEtMNGWyR033VLojoiGEE=
 		</data>
 	</array>
 </dict>
 </plist>
-:[@oR
-hI$wy
-*{{x
-20211021233600Z0
+_	V|
+-58`
+X{N}h
+20211022045752Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -1918,11 +1917,9 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211021233600Z0#
-*0:{
-j13n
-RI!E
-?M3X9
+211022045752Z0#
+s|6`
+;G!6no
 __TEXT
 __text
 __TEXT
@@ -2643,7 +2640,7 @@ crashhandler.dylib
 CreateInterface
 Steam
 Oct 21 2021
-16:35:57
+21:57:48
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -3977,6 +3974,7 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
+D>-NG
 Jo~M
 wX97
  igk
@@ -3988,6 +3986,7 @@ subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
+&9pk
 <xZ8
 '\]c
 -h\Y
@@ -3996,7 +3995,7 @@ I%m(
 P(Clk9K
 Wt^#c
 B~m{q
-Q 	P
+ OK#
 ,;xr
 ,4!F
 ,<*t$[
@@ -4057,9 +4056,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211021233600Z0/
-8Vo[
-}G7"}5I
+211022045751Z0/
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -4067,20 +4064,16 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		fUc3In01Sae2paVSnGJOsjKKhWw=
+		adXT7Q5F9OuVcqQUy80pyoGUAig=
 		</data>
 		<data>
-		GHJNhldUhA2HezqIUuzUT+4JPXs=
+		sxV4kAewBlhOAejPUfuUTuwBM8g=
 		</data>
 	</array>
 </dict>
 </plist>
-Hdp~
-(eop
-<e{k
-BY6O
-&Ar{
-20211021233600Z0
+Ro]P$7
+20211022045752Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -4140,11 +4133,12 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211021233600Z0#
+211022045752Z0#
 d3ZM`
-Ku)O
-8#LT
-TTc"6
+RcM0
+WN>[
+NO/{
+6kGb
 __TEXT
 __text
 __TEXT
@@ -4366,7 +4360,7 @@ crashhandler.dylib
 CreateInterface
 Steam
 Oct 21 2021
-16:35:57
+21:57:48
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -5709,6 +5703,8 @@ subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
+*qCR"B7
+e,GE%|G4
 %d0x
 rc1)
 ,f$-
@@ -5775,8 +5771,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211021233600Z0/
-/~20-
+211022045751Z0/
+ah2M8N
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -5784,20 +5780,17 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		2m07omWarRMOE3Gtw1wAHaMvfjI=
+		p7Bp69Te2A5i9NHy1Dr0ZvZqEiM=
 		</data>
 		<data>
-		a5N48LgDk3Ub6rxJYujXTVAIWm4=
+		QETj6pE8WkEIYWgyTThOlDVNe64=
 		</data>
 	</array>
 </dict>
 </plist>
-UaZb
-rZ<C3
-"Icwc
-\1%%
-7}EBn
-20211021233600Z0
+0u8Y
+I9lp
+20211022045752Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -5850,10 +5843,8 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211021233600Z0#
-vsaP
-Gm7'
-s<i|e
-'KG8a%
-"j7w
-J%rOF
+211022045752Z0#
+]ac9s
+GNUAZV
+z}	c
+NT&v

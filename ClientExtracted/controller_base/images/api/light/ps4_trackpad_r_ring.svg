@@ -1,0 +1,29 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M64 16C64 14.7376 62.9767 13.7143 61.7143 13.7143H2.28571C1.02335 13.7143 0 14.7376 0 16V41.1429C0 46.1923 4.0934 50.2857 9.14285 50.2857H54.8571C59.9066 50.2857 64 46.1923 64 41.1429V16Z" fill="white"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 25.1429 25.1429)" fill="#DCDEDF"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 20.5714 25.1429)" fill="#DCDEDF"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 16 25.1429)" fill="#DCDEDF"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 11.4286 25.1429)" fill="#DCDEDF"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 6.85714 25.1429)" fill="#DCDEDF"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 25.1429 29.7143)" fill="#DCDEDF"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 20.5714 29.7143)" fill="#DCDEDF"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 16 29.7143)" fill="#DCDEDF"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 11.4286 29.7143)" fill="#DCDEDF"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 6.85714 29.7143)" fill="#DCDEDF"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 25.1429 34.2857)" fill="#DCDEDF"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 25.1429 38.8571)" fill="#DCDEDF"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 25.1429 43.4286)" fill="#DCDEDF"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 20.5714 34.2857)" fill="#DCDEDF"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 20.5714 38.8571)" fill="#DCDEDF"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 20.5714 43.4286)" fill="#DCDEDF"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 16 34.2857)" fill="#DCDEDF"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 16 38.8571)" fill="#DCDEDF"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 16 43.4286)" fill="#DCDEDF"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 11.4286 34.2857)" fill="#DCDEDF"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 11.4286 38.8571)" fill="#DCDEDF"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 11.4286 43.4286)" fill="#DCDEDF"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 6.85714 34.2857)" fill="#DCDEDF"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 6.85714 38.8571)" fill="#DCDEDF"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 6.85714 43.4286)" fill="#DCDEDF"/>
+<path d="M60.5714 22.8571C60.5714 19.7012 58.013 17.1429 54.8571 17.1429H38.8571C35.7012 17.1429 33.1428 19.7012 33.1428 22.8571V41.1429C33.1428 44.2988 35.7012 46.8571 38.8571 46.8571H54.8571C58.013 46.8571 60.5714 44.2988 60.5714 41.1429V22.8571Z" stroke="black" stroke-width="2.28571"/>
+</svg>

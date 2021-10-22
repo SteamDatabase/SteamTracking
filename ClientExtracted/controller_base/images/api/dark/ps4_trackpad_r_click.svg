@@ -1,0 +1,36 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M64 15.9999C64 14.7376 62.9767 13.7142 61.7143 13.7142H2.28571C1.02335 13.7142 0 14.7376 0 15.9999V41.1428C0 46.1923 4.0934 50.2857 9.14285 50.2857H54.8571C59.9066 50.2857 64 46.1923 64 41.1428V15.9999Z" fill="black"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 29.7143 25.1429)" fill="#67707B"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 29.7143 29.7143)" fill="#67707B"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 29.7143 34.2857)" fill="#67707B"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 29.7143 38.8571)" fill="#67707B"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 29.7143 43.4286)" fill="#67707B"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 25.1428 25.1429)" fill="#67707B"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 20.5715 25.1429)" fill="#67707B"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 16 25.1429)" fill="#67707B"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 11.4287 25.1429)" fill="#67707B"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 6.85714 25.1429)" fill="#67707B"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 25.1428 29.7143)" fill="#67707B"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 20.5715 29.7143)" fill="#67707B"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 16 29.7143)" fill="#67707B"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 11.4287 29.7143)" fill="#67707B"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 6.85714 29.7143)" fill="#67707B"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 25.1428 34.2857)" fill="#67707B"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 25.1428 38.8571)" fill="#67707B"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 25.1428 43.4286)" fill="#67707B"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 20.5715 34.2857)" fill="#67707B"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 20.5715 38.8571)" fill="#67707B"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 20.5715 43.4286)" fill="#67707B"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 16 34.2857)" fill="#67707B"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 16 38.8571)" fill="#67707B"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 16 43.4286)" fill="#67707B"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 11.4287 34.2857)" fill="#67707B"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 11.4287 38.8571)" fill="#67707B"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 11.4287 43.4286)" fill="#67707B"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 6.85714 34.2857)" fill="#67707B"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 6.85714 38.8571)" fill="#67707B"/>
+<circle r="1.14286" transform="matrix(-1 0 0 1 6.85714 43.4286)" fill="#67707B"/>
+<path d="M51.7045 35.4286H49.5102L47.9902 32.8914H47.8188H46.8702V35.4286H44.8931V27.4286H48.0016C49.1445 27.4286 49.9902 27.6534 50.5388 28.1029C51.0874 28.5524 51.3616 29.1848 51.3616 30C51.3616 30.6172 51.2283 31.1353 50.9616 31.5543C50.7026 31.9657 50.3369 32.2781 49.8645 32.4914L51.7045 35.4286ZM46.8702 29.12V31.2H47.9445C48.3483 31.2 48.6645 31.1086 48.8931 30.9257C49.1293 30.7353 49.2474 30.461 49.2474 30.1029C49.2474 29.7753 49.1407 29.5314 48.9274 29.3714C48.714 29.2038 48.375 29.12 47.9102 29.12H46.8702Z" fill="white"/>
+<circle cx="48" cy="32" r="9.14286" stroke="white" stroke-width="2.28571"/>
+<circle cx="47.9999" cy="32" r="12.5714" stroke="white" stroke-width="1.14286"/>
+</svg>
