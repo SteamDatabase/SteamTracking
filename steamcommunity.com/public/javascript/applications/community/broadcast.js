@@ -26,7 +26,7 @@
         g = a("lkRc"),
         E = a("dLk7"),
         O = a.n(E),
-        y = Object(s.a)(function (e) {
+        C = Object(s.a)(function (e) {
           var t = e.appid,
             a = Object(m.d)(t, 0, !0),
             n = (a[0], a[1]),
@@ -59,8 +59,8 @@
               c.a.createElement(f.a, { size: "medium" }),
               ";"
             );
-          var y = "series" != E.type,
-            C = Object(p.b)(E.capsule_link, o);
+          var C = "series" != E.type,
+            y = Object(p.b)(E.capsule_link, o);
           return E && E.title
             ? c.a.createElement(
                 "div",
@@ -70,7 +70,7 @@
                   { className: u.Actions },
                   c.a.createElement(
                     "a",
-                    { href: C, target: g.c.IN_CLIENT ? void 0 : "_blank" },
+                    { href: y, target: g.c.IN_CLIENT ? void 0 : "_blank" },
                     c.a.createElement(
                       h.b,
                       { type: "app", id: E.appid },
@@ -93,7 +93,7 @@
                     { className: u.Actions },
                     c.a.createElement(
                       "a",
-                      { href: C, target: g.c.IN_CLIENT ? void 0 : "_blank" },
+                      { href: y, target: g.c.IN_CLIENT ? void 0 : "_blank" },
                       c.a.createElement(
                         h.b,
                         { type: "app", id: E.appid },
@@ -115,7 +115,7 @@
                     { className: u.StoreSaleWidgetRelease },
                     E.release
                   ),
-                  y &&
+                  C &&
                     c.a.createElement(b.o, {
                       info: E,
                       bShowDemoButton: !0,
@@ -127,7 +127,7 @@
                 className: u.StoreSaleWidgetEmptyContainer,
               });
         }),
-        C = a("kyHq"),
+        y = a("kyHq"),
         j = a("1BdX"),
         I = a("boaH"),
         P = a("nWbB"),
@@ -275,7 +275,7 @@
             Object(r.d)(t, e),
             (a = t),
             (t.IsBroadcastAllowed = function () {
-              return g.c.EREALM != C.f.k_ESteamRealmChina;
+              return g.c.EREALM != y.f.k_ESteamRealmChina;
             }),
             (t.prototype.componentDidMount = function () {
               return Object(r.b)(this, void 0, void 0, function () {
@@ -477,7 +477,7 @@
                 ) ||
                   (this.props.event &&
                     this.props.event.jsondata.broadcast_force_banner) ||
-                  ((o = i.createElement(y, {
+                  ((o = i.createElement(C, {
                     key: "mini" + e.accountid,
                     appid: n,
                   })),
@@ -520,14 +520,14 @@
                   (o = Object(r.a)(Object(r.a)({}, o), {
                     left_panel: d.GetImageURL(
                       "broadcast_left",
-                      l || Object(C.h)(g.c.LANGUAGE)
+                      l || Object(y.h)(g.c.LANGUAGE)
                     ),
                     right_panel: d.GetImageURL(
                       "broadcast_right",
-                      l || Object(C.h)(g.c.LANGUAGE)
+                      l || Object(y.h)(g.c.LANGUAGE)
                     ),
                     store_title: d.GetBroadcastTitle(
-                      l || Object(C.h)(g.c.LANGUAGE)
+                      l || Object(y.h)(g.c.LANGUAGE)
                     ),
                     broadcast_chat_visibility: d.GetBroadcastChatVisibility(),
                   }));
@@ -632,7 +632,7 @@
                           }),
                           p.rightPanel,
                           this.state.bExpanded &&
-                            i.createElement(H, { stream: o })
+                            i.createElement(H, { stream: o, bMultistream: u })
                         )
                     ),
                     Boolean(
@@ -642,7 +642,7 @@
                       i.createElement(
                         "div",
                         { className: "" + (d ? T.a.Event : "") },
-                        i.createElement(H, { stream: o })
+                        i.createElement(H, { stream: o, bMultistream: u })
                       ),
                     i.createElement("div", { className: T.a.clear_div })
                   )
@@ -818,7 +818,8 @@
             (t.prototype.render = function () {
               var e = this.ConstructBroadcastLink(),
                 t = "remove" != P.a.Get().GetChatVisibility(),
-                a = Number.parseInt(
+                a = "hide" === P.a.Get().GetChatVisibility(),
+                r = Number.parseInt(
                   "" +
                     I.a.GetOrCreateBroadcastInfo(this.props.stream.steamid)
                       .m_nViewerCount
@@ -830,11 +831,25 @@
                   "div",
                   { className: Object(S.a)(T.a.viewer_count, "viewer_count") },
                   i.createElement(B.jb, null),
-                  a.toLocaleString(A.e.GetPreferredLocales())
+                  r.toLocaleString(A.e.GetPreferredLocales())
                 ),
                 i.createElement(
                   "div",
                   { className: Object(S.a)(T.a.viewer_links, "viewer_links") },
+                  Boolean(t && !a && this.props.bMultistream) &&
+                    i.createElement(
+                      "div",
+                      { className: T.a.chat_link },
+                      i.createElement(
+                        "a",
+                        {
+                          href: "#",
+                          className: T.a.ChatToggle,
+                          onClick: this.OnToggleChat,
+                        },
+                        Object(A.f)("#sale_three_section_show_streams")
+                      )
+                    ),
                   t &&
                     i.createElement(
                       "div",
@@ -848,7 +863,7 @@
                           onClick: this.OnToggleChat,
                         },
                         Object(A.f)(
-                          "hide" === P.a.Get().GetChatVisibility()
+                          a
                             ? "#sale_three_section_show_chat"
                             : "#sale_three_section_hide_chat"
                         )

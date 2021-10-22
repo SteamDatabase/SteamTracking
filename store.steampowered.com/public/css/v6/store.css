@@ -158,6 +158,11 @@ body.v6 #footer {
     }
 
 
+body.v6.sale_page_n_section #footer
+{
+	z-index: 2;
+}
+
 
 body #footer .responsive_optin_link {
 	display: none;

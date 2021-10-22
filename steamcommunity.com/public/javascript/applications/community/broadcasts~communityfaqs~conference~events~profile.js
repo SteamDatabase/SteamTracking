@@ -55387,6 +55387,8 @@
                 ? this.m_bUserChatExpanded
                   ? "show"
                   : "hide"
+                : "show" === this.m_pageChatStatus
+                ? "show"
                 : "hide" === this.m_pageChatStatus ||
                   "hide" === this.m_streamChatStatus
                 ? "hide"

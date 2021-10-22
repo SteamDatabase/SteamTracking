@@ -17099,7 +17099,7 @@
                     Object(s.f)("#RewardCluster_Popular_RewardItems")
                   ),
                   void 0,
-                  { categoryTag: ["summer_2021_sale"], grouping: 2 }
+                  { categoryTag: ["tabletop_fest_2021"], grouping: 2 }
                 );
               I.unshift({ cluster: w, type: 1 });
               var M,

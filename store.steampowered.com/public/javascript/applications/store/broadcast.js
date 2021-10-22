@@ -11445,7 +11445,7 @@
                           }),
                           m.rightPanel,
                           this.state.bExpanded &&
-                            s.createElement(Gr, { stream: a })
+                            s.createElement(Gr, { stream: a, bMultistream: p })
                         )
                     ),
                     Boolean(
@@ -11455,7 +11455,7 @@
                       s.createElement(
                         "div",
                         { className: "" + (c ? Ur.a.Event : "") },
-                        s.createElement(Gr, { stream: a })
+                        s.createElement(Gr, { stream: a, bMultistream: p })
                       ),
                     s.createElement("div", { className: Ur.a.clear_div })
                   )
@@ -11631,7 +11631,8 @@
             (t.prototype.render = function () {
               var e = this.ConstructBroadcastLink(),
                 t = "remove" != Rr.a.Get().GetChatVisibility(),
-                r = Number.parseInt(
+                r = "hide" === Rr.a.Get().GetChatVisibility(),
+                n = Number.parseInt(
                   "" +
                     Cr.a.GetOrCreateBroadcastInfo(this.props.stream.steamid)
                       .m_nViewerCount
@@ -11645,13 +11646,27 @@
                     className: Object(ir.a)(Ur.a.viewer_count, "viewer_count"),
                   },
                   s.createElement(nr.lb, null),
-                  r.toLocaleString(St.e.GetPreferredLocales())
+                  n.toLocaleString(St.e.GetPreferredLocales())
                 ),
                 s.createElement(
                   "div",
                   {
                     className: Object(ir.a)(Ur.a.viewer_links, "viewer_links"),
                   },
+                  Boolean(t && !r && this.props.bMultistream) &&
+                    s.createElement(
+                      "div",
+                      { className: Ur.a.chat_link },
+                      s.createElement(
+                        "a",
+                        {
+                          href: "#",
+                          className: Ur.a.ChatToggle,
+                          onClick: this.OnToggleChat,
+                        },
+                        Object(St.f)("#sale_three_section_show_streams")
+                      )
+                    ),
                   t &&
                     s.createElement(
                       "div",
@@ -11665,7 +11680,7 @@
                           onClick: this.OnToggleChat,
                         },
                         Object(St.f)(
-                          "hide" === Rr.a.Get().GetChatVisibility()
+                          r
                             ? "#sale_three_section_show_chat"
                             : "#sale_three_section_hide_chat"
                         )
