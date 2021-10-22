@@ -363,42 +363,57 @@
           return (
             Object(r.d)(t, e),
             (t.prototype.OnEmoticonClick = function (e) {
-              var t = this,
-                n = this.props,
-                r = (n.emoticonStore, n.SetUIDisplayPref),
-                a = n.contextOptions,
-                o = n.bShowChatAddons
+              var t,
+                n = this,
+                r = this.props,
+                a = r.emoticonStore,
+                o = r.strFlairGroupID,
+                s = r.SetUIDisplayPref,
+                c = r.contextOptions,
+                l = null;
+              if (
+                ((l = r.bShowChatAddons
                   ? i.a.createElement(d.a, {
                       emoticonStore: this.props.emoticonStore,
                       emoticonHoverStore: this.props.emoticonHoverStore,
                       strFlairGroupID: this.props.strFlairGroupID,
                       onEmoticonSelected: function (e) {
-                        return t.props.OnEmoticonSelected(e, !1);
+                        return n.props.OnEmoticonSelected(e, !1);
                       },
                       roomEffectSettings: this.props.roomEffectSettings,
                       onRoomEffectSelected: this.props.onRoomEffectSelected,
                       onStickerSelected: this.props.onStickerSelected,
+                    })
+                  : o &&
+                    a.flair_list &&
+                    (null === (t = a.GetFlairListByGroupID(o)) || void 0 === t
+                      ? void 0
+                      : t.length) > 0
+                  ? i.a.createElement(d.d, {
+                      emoticonStore: this.props.emoticonStore,
+                      emoticonHoverStore: this.props.emoticonHoverStore,
+                      strFlairGroupID: this.props.strFlairGroupID,
+                      OnSelected: this.props.OnEmoticonSelected,
                     })
                   : i.a.createElement(d.c, {
                       emoticonStore: this.props.emoticonStore,
                       emoticonHoverStore: this.props.emoticonHoverStore,
                       strFlairGroupID: this.props.strFlairGroupID,
                       OnSelected: this.props.OnEmoticonSelected,
-                    });
-              if (
-                (Object(u.a)(
-                  o,
+                    })),
+                Object(u.a)(
+                  l,
                   e,
-                  a || {
+                  c || {
                     bOverlapHorizontal: !0,
                     bPreferPopLeft: !0,
                     bPreferPopTop: !0,
                   }
                 ),
-                this.BHaveUnseenEmoticons() && r)
+                this.BHaveUnseenEmoticons() && s)
               ) {
-                var s = this.GetNewestIndicatorTime();
-                (!s || s < v) && (s = v), r("rtLastAckedNewEmoticons", s);
+                var p = this.GetNewestIndicatorTime();
+                (!p || p < v) && (p = v), s("rtLastAckedNewEmoticons", p);
               }
             }),
             (t.prototype.GetNewestIndicatorTime = function () {
@@ -464,7 +479,7 @@
                         "data-tooltip-text": r,
                       },
                       this.props.buttonIcon || i.a.createElement(p.s, null),
-                      s && i.a.createElement(d.d, null)
+                      s && i.a.createElement(d.e, null)
                     ))
               );
             }),
@@ -4063,7 +4078,7 @@
                     emoticon: e.name,
                     emoticonHoverStore: this.props.emoticonHoverStore,
                   }),
-                  e.new && l.a.createElement(b.d, null)
+                  e.new && l.a.createElement(b.e, null)
                 ),
                 ":",
                 e.name,
@@ -23766,7 +23781,10 @@
           return x;
         }),
         n.d(t, "d", function () {
-          return X;
+          return z;
+        }),
+        n.d(t, "e", function () {
+          return ee;
         });
       var r = n("mrSG"),
         a = n("wUwH"),
@@ -24156,11 +24174,11 @@
                             e && f.a.ActiveTab
                           ),
                         },
-                        o.createElement(ne, null)
+                        o.createElement(ae, null)
                       );
                     },
                     renderContent: function () {
-                      return o.createElement(z, {
+                      return o.createElement(U, {
                         store: t,
                         hoverStore: n,
                         onEmoticonSelect: function (e) {
@@ -24189,11 +24207,11 @@
                                 e && f.a.ActiveTab
                               ),
                             },
-                            o.createElement(ee, null)
+                            o.createElement(ne, null)
                           );
                         },
                         renderContent: function () {
-                          return o.createElement(U, {
+                          return o.createElement(V, {
                             store: t,
                             hoverStore: n,
                             onItemSelect: function (e) {
@@ -24214,11 +24232,11 @@
                                 e && f.a.ActiveTab
                               ),
                             },
-                            o.createElement($, null)
+                            o.createElement(te, null)
                           );
                         },
                         renderContent: function () {
-                          return o.createElement(H, {
+                          return o.createElement(W, {
                             store: t,
                             onItemSelect: function (e) {
                               return s(e.name);
@@ -24237,11 +24255,11 @@
                                 e && f.a.ActiveTab
                               ),
                             },
-                            o.createElement(te, null)
+                            o.createElement(re, null)
                           );
                         },
                         renderContent: function () {
-                          return o.createElement(W, {
+                          return o.createElement(q, {
                             store: t,
                             effectSettings: a,
                             onItemSelect: function (e) {
@@ -24299,11 +24317,11 @@
                               title: Object(p.f)("#AddonPicker_Emoticons"),
                               className: f.a.PickerTab,
                             },
-                            o.createElement(ee, null)
+                            o.createElement(ne, null)
                           );
                         },
                         renderContent: function () {
-                          return o.createElement(q, {
+                          return o.createElement(Y, {
                             store: e.props.emoticonStore,
                             hoverStore: e.props.emoticonHoverStore,
                             onItemSelect: function (t) {
@@ -24321,6 +24339,66 @@
             );
           })(o.Component)),
         z = (function (e) {
+          function t(t) {
+            var n = e.call(this, t) || this;
+            n.state = { strSearchText: "" };
+            var r = n.props.emoticonStore;
+            return (
+              r.is_initialized ||
+                (r.UpdateEmoticonList(),
+                (n.m_disposeEmoticonStore = Object(d.M)(
+                  function () {
+                    return r.is_initialized;
+                  },
+                  function () {
+                    return n.forceUpdate();
+                  }
+                ))),
+              n
+            );
+          }
+          return (
+            Object(r.d)(t, e),
+            (t.prototype.componentWillUnmount = function () {
+              this.m_disposeEmoticonStore && this.m_disposeEmoticonStore();
+            }),
+            (t.prototype.render = function () {
+              var e = this;
+              return o.createElement(
+                u.c,
+                null,
+                o.createElement(S, {
+                  config: [
+                    {
+                      renderTab: function () {
+                        return o.createElement(
+                          "span",
+                          {
+                            title: Object(p.f)("#AddonPicker_Emoticons"),
+                            className: f.a.PickerTab,
+                          },
+                          o.createElement(ne, null)
+                        );
+                      },
+                      renderContent: function () {
+                        return o.createElement(Q, {
+                          store: e.props.emoticonStore,
+                          hoverStore: e.props.emoticonHoverStore,
+                          onItemSelect: function (t) {
+                            return e.props.OnSelected(t.name, !1);
+                          },
+                          flairGroupID: e.props.strFlairGroupID,
+                        });
+                      },
+                    },
+                  ],
+                })
+              );
+            }),
+            t
+          );
+        })(o.Component),
+        U = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.state = { filter: "" }), t;
@@ -24343,7 +24421,7 @@
                     items: a.a.FilterEmoticons(G(n), c),
                     onItemSelect: i,
                     renderItem: function (e) {
-                      return o.createElement(Y, {
+                      return o.createElement(K, {
                         emoticon: e,
                         emoticonHoverStore: r,
                       });
@@ -24370,7 +24448,7 @@
                     items: a.a.FilterStickers(N(n), c),
                     onItemSelect: s,
                     renderItem: function (e) {
-                      return o.createElement(Q, { sticker: e });
+                      return o.createElement(Z, { sticker: e });
                     },
                     keyExtractor: function (e) {
                       return e.name;
@@ -24400,7 +24478,7 @@
             t
           );
         })(o.Component),
-        U = (function (e) {
+        V = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.state = { filter: "" }), t;
@@ -24422,7 +24500,7 @@
                 items: u,
                 onItemSelect: i,
                 renderItem: function (e) {
-                  return o.createElement(Y, {
+                  return o.createElement(K, {
                     emoticon: e,
                     emoticonHoverStore: r,
                   });
@@ -24444,14 +24522,14 @@
                         null,
                         Object(p.f)("#AddonPicker_NoResults")
                       )
-                    : o.createElement(V, null);
+                    : o.createElement(H, null);
                 },
               });
             }),
             t
           );
         })(o.Component);
-      function V() {
+      function H() {
         return o.createElement(
           o.Fragment,
           null,
@@ -24482,7 +24560,7 @@
           )
         );
       }
-      var H = (function (e) {
+      var W = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.state = { filter: "" }), t;
@@ -24501,7 +24579,7 @@
                 items: s,
                 onItemSelect: r,
                 renderItem: function (e) {
-                  return o.createElement(Q, { sticker: e });
+                  return o.createElement(Z, { sticker: e });
                 },
                 keyExtractor: function (e) {
                   return e.name;
@@ -24555,7 +24633,7 @@
             t
           );
         })(o.Component),
-        W = (function (e) {
+        q = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.state = { filter: "" }), t;
@@ -24577,7 +24655,7 @@
                 items: s,
                 onItemSelect: a,
                 renderItem: function (e) {
-                  return o.createElement(Z, {
+                  return o.createElement(X, {
                     effect: e,
                     roomEffectSettings: r,
                   });
@@ -24635,7 +24713,7 @@
             t
           );
         })(o.Component),
-        q = (function (e) {
+        Y = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.state = { filter: "" }), t;
@@ -24657,7 +24735,7 @@
                     items: a.a.FilterEmoticons(G(n), c),
                     onItemSelect: s,
                     renderItem: function (e) {
-                      return o.createElement(Y, {
+                      return o.createElement(K, {
                         emoticon: e,
                         emoticonHoverStore: i,
                       });
@@ -24691,7 +24769,7 @@
                         .slice(0, 1e3),
                       onItemSelect: s,
                       renderItem: function (e) {
-                        return o.createElement(Y, {
+                        return o.createElement(K, {
                           emoticon: e,
                           emoticonHoverStore: i,
                         });
@@ -24706,7 +24784,7 @@
                               null,
                               Object(p.f)("#AddonPicker_NoResults")
                             )
-                          : o.createElement(V, null);
+                          : o.createElement(H, null);
                       },
                     },
                   ]),
@@ -24716,7 +24794,57 @@
             (t = Object(r.c)([i.a], t))
           );
         })(o.Component),
-        Y = function (e) {
+        Q = (function (e) {
+          function t() {
+            var t = (null !== e && e.apply(this, arguments)) || this;
+            return (t.state = { filter: "" }), t;
+          }
+          return (
+            Object(r.d)(t, e),
+            (t.prototype.render = function () {
+              var e = this,
+                t = this.props,
+                n = t.store,
+                r = t.hoverStore,
+                i = t.onItemSelect,
+                s = t.flairGroupID,
+                c = this.state.filter;
+              return o.createElement(I, {
+                onFilterChange: function (t) {
+                  return e.setState({ filter: t });
+                },
+                filter: c,
+                sections: [
+                  {
+                    title: Object(p.f)("#ChatEntryButton_Flair"),
+                    items: a.a.FilterStickers(n.GetFlairListByGroupID(s), c),
+                    onItemSelect: i,
+                    renderItem: function (e) {
+                      return o.createElement(K, {
+                        emoticon: e,
+                        emoticonHoverStore: r,
+                      });
+                    },
+                    keyExtractor: function (e) {
+                      return e.name;
+                    },
+                    renderEmpty: function () {
+                      return c
+                        ? o.createElement(
+                            D,
+                            null,
+                            Object(p.f)("#AddonPicker_NoResults")
+                          )
+                        : o.createElement(H, null);
+                    },
+                  },
+                ],
+              });
+            }),
+            (t = Object(r.c)([i.a], t))
+          );
+        })(o.Component),
+        K = function (e) {
           var t = e.emoticon,
             n = e.emoticonHoverStore,
             r = !t.last_used && t.time_received;
@@ -24724,10 +24852,10 @@
             "div",
             { className: f.a.EmoticonItem },
             o.createElement(k, { emoticon: t.name, emoticonHoverStore: n }),
-            r && o.createElement(X, null)
+            r && o.createElement(ee, null)
           );
         },
-        Q = (function (e) {
+        Z = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.state = { showHover: !1 }), (t.m_ref = o.createRef()), t;
@@ -24764,13 +24892,13 @@
                 ),
                 o.createElement("img", { style: { width: "100%" }, src: s }),
                 this.state.showHover &&
-                  o.createElement(K, { target: this.m_ref.current, sticker: n })
+                  o.createElement(J, { target: this.m_ref.current, sticker: n })
               );
             }),
             t
           );
         })(o.Component),
-        K = Object(i.a)(function (e) {
+        J = Object(i.a)(function (e) {
           var t = e.target,
             n = e.sticker,
             r = n.name,
@@ -24785,7 +24913,7 @@
             })
           );
         }),
-        Z = (function (e) {
+        X = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.state = { showHover: !1 }), (t.m_ref = o.createRef()), t;
@@ -24827,7 +24955,7 @@
                 ),
                 c.renderEffectIcon(),
                 this.state.showHover &&
-                  o.createElement(J, {
+                  o.createElement($, {
                     target: this.m_ref.current,
                     effect: n,
                     roomEffectSettings: a,
@@ -24837,7 +24965,7 @@
             t
           );
         })(o.Component),
-        J = Object(i.a)(function (e) {
+        $ = Object(i.a)(function (e) {
           var t = e.target,
             n = e.effect,
             r = n.name,
@@ -24854,7 +24982,7 @@
             )
           );
         });
-      function X() {
+      function ee() {
         return o.createElement(
           "div",
           { className: f.a.NewEmoticonIndicator },
@@ -24862,7 +24990,7 @@
         );
       }
       o.Component;
-      function $(e) {
+      function te(e) {
         return o.createElement(
           "svg",
           Object(r.a)({ viewBox: "0 0 59 59", width: "32" }, e),
@@ -24883,7 +25011,7 @@
           )
         );
       }
-      function ee(e) {
+      function ne(e) {
         return o.createElement(
           "svg",
           Object(r.a)({ viewBox: "0 -8 60 60", width: "32" }, e),
@@ -24896,7 +25024,7 @@
           })
         );
       }
-      function te(e) {
+      function re(e) {
         return o.createElement(
           "svg",
           Object(r.a)({ viewBox: "0 0 60 38", width: "32" }, e),
@@ -24909,7 +25037,7 @@
           })
         );
       }
-      function ne(e) {
+      function ae(e) {
         var t = e.className,
           n = Object(r.f)(e, ["className"]);
         return o.createElement(
