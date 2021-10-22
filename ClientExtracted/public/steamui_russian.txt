@@ -220,6 +220,7 @@
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "Не удалось проверить подписанные файлы %game%. Необходимо подтвердить их содержимое."
 "SteamUI_JoinDialog_CreateProcess_Error" "Не удалось запустить процесс %game% :\n\n%detail%"
+"SteamUI_JoinDialog_CreateProcess_Error_Detail_macOS" "32-битные приложения больше не поддерживаются на macOS версии 10.15 и выше."
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "Не удалось запустить %game% в режиме виртуальной реальности. Ошибка: %error%"
 "SteamUI_JoinDialog_OpenVRWaitingForQuit" "%quitting_game% закрывается %dots%"
@@ -1285,7 +1286,7 @@
 "Steam_Storefront_Title"	"Steam — Обзор игр"
 "Steam_RegisterProductCode"	"Активировать в Steam…"
 "Steam_RedeemWalletVoucher"	"Использовать код кошелька Steam..."
-"Steam_Wallet_PendingBalance" "%amount% (рассматривается: %amount_delayed%)"
+"Steam_Wallet_PendingBalance" "%amount% (на удержании: %amount_delayed%)"
 
 "Steam_PurchaseError_SubscriptionAlreadyOwned"	"У вас уже есть %subscription%."
 "Steam_UpdateNews_Title"	"Steam — Новости"
@@ -4585,7 +4586,7 @@
 "Steam_Settings_Streaming_Bandwidth50000" 	"50 Мбит/с"
 "Steam_Settings_Streaming_Bandwidth75000" 	"75 Мбит/с"
 "Steam_Settings_Streaming_BandwidthUnlimited" 	"Не ограничена (высокая задержка)"
-"Steam_Settings_Streaming_Resolution"	"Ограничить разрешение до"
+"Steam_Settings_Streaming_Resolution"	"Предельное разрешение"
 "Steam_Settings_Streaming_ResolutionDesktop" 	"Разрешение экрана"
 "Steam_Settings_Streaming_Resolution8K" 	"7680x4320 (8K)"
 "Steam_Settings_Streaming_Resolution2160p" 	"3840x2160 (4K)"

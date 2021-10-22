@@ -170,6 +170,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/../overlay/gameoverlayui/screenshotthread.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/AccountPage.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/CloudManager.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/CloudManager.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/DialogController.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/InstallAppWizard.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/InstallManager.cpp
@@ -200,7 +201,9 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gameactionjoinparty.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gameactionlaunchapp.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gameactions.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamepadui/gamepaduiframe.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gameslistpanel.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/audiorecorder.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/cudawrapper.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/desktopcaptureosx.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/desktopstreamthread.cpp

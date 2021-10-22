@@ -224,6 +224,7 @@ Potrwa to niecałą minutę."
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "Nie udało się zweryfikować podpisanych plików dla %game%, wymagana jest walidacja treści."
 "SteamUI_JoinDialog_CreateProcess_Error" "Nie udało się rozpocząć procesu dla %game%:\n\n%detail%"
+"SteamUI_JoinDialog_CreateProcess_Error_Detail_macOS" "Aplikacje 32-bitowe nie są już obsługiwane przez system macOS 10.15 i jego nowsze wersje."
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "Nie udało się uruchomić %game% w trybie VR (błąd: %error%)."
 "SteamUI_JoinDialog_OpenVRWaitingForQuit" "Oczekiwanie na zamknięcie %quitting_game%%dots%"

@@ -7,19 +7,19 @@ __stubs
 __TEXT
 __stub_helper
 __TEXT
+`x"
+`x"
 __gcc_except_tab__TEXT
 __const
 __TEXT
-@B#
-@B#
 __cstring
 __TEXT
 __objc_methname
 __TEXT
-DL)
-DL)
 __unwind_info
 __TEXT
+$P)
+$P)
 __DATA
 __nl_symbol_ptr
 __DATA
@@ -32,25 +32,17 @@ __DATA
 __const
 __DATA
 __objc_imageinfo__DATA
-p#,
-p#,
 __objc_selrefs
 __DATA
-x#,
-x#,
 __objc_classrefs__DATA
-H$,
+h$,
 (
-H$,
+h$,
 __data
 __DATA
-p$,
-p$,
 __thread_vars
 __DATA
-hw,
 0
-hw,
 __thread_data
 __DATA
 @
@@ -73,7 +65,6 @@ P
 *
 `
 h
->
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 p
 /System/Library/Frameworks/SystemConfiguration.framework/Versions/A/SystemConfiguration
@@ -84,7 +75,6 @@ X
 h
 /System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration
 0
-x
 /usr/lib/libc++.1.dylib
 8
 /usr/lib/libSystem.B.dylib
@@ -95,8 +85,9 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-P&
+`&
 )
+B-
 +k:,
 0
 0
@@ -104,18 +95,15 @@ P&
 Hi
 "
 "
-"
-@&
 H=
-0
+&&
 &
 &
 &
-?
+a"
 Hc
 Hc
 Hc
-|(
 0
 0
 AT=
@@ -126,6 +114,7 @@ AT=
 D
 @
 @
+!
 !
 10CIPCServer
 10IIPCServer
@@ -160,6 +149,7 @@ UnloadModule
 CallFunction
 CallFunctionAsync
 PollResponseAsync
+SetProtonEnvironment
 IRegistryInterface
 BGetValueStr
 BGetValueUint
@@ -1567,8 +1557,11 @@ CWorkItemFunctionCall::ThreadProcess
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/refcount.h
 m_iRefs > 0 && m_iRefs < 0x1000000
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/SteamServiceClient/servicemodulemanagerbase.cpp
-*pCallResult != k_ECallResultNone
 pModule->m_nLastResult != k_ECallResultNone
+%s/legacycompat/servicecall_%u.dll
+%s/legacycompat/servicecall_%u.in
+%s/legacycompat/servicecall_%u.out
+%s/legacycompat/steamservice.exe /runfunc %u %u %u %u
 Unimplemented function
 Invalid service module
 unCRC32 == pModule->m_unCRC32
@@ -8042,6 +8035,7 @@ flock %s %s failed. errno = %d
 LOCK_EX
 LOCK_SH
 fcntl failed to set F_NOCACHE
+ret != 0
 g_pFioAsyncEnqueue == NULL
 g_pFioAsyncFinalize == NULL
 TMPDIR
@@ -8064,6 +8058,7 @@ Unbuffered read should be called with cubData length that is aligned to system p
 Seeking to a position which is not sector aligned will break unbuffered io
 /
 ..
+%s/%s
 cbActual < (uint32)nBufSizeWithTerminator
 CPathString
 .dylib
@@ -8220,6 +8215,7 @@ pLeft->m_iStackPC <= V_ARRAYSIZE(pLeft->m_StackPC)
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/minidump.cpp
 Someone called SetWritingMinidump without holding the minidump lock.
 Someone called ClearWritingMinidump without holding the minidump lock.
+!g_pCrashMemoryReserve
 Assert( %s ):%s:%d
 MacOS
 Frameworks
@@ -8228,8 +8224,8 @@ crashhandler002
 crashhandler.dylib
 CreateInterface
 1.0
-Oct 13 2021
-12:46:03
+Oct 21 2021
+16:35:30
 Jan
 Feb
 Mar
@@ -8416,6 +8412,7 @@ version
 enums_clientserver.proto
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/enum_names.cpp
 EUniverse
+china
 Invalid
 Public
 Beta
@@ -8489,7 +8486,6 @@ streaming
 controller
 controller_ui
 metrics
-china
 Invalid spew group
 RequestHeaders
 ;
@@ -8684,7 +8680,6 @@ Could not read existing registry file.
 Overwriting on-disk registry with newly created registry.
 On-disk registry has changed and is marked dirty - we're about to lose data.
 %s/%s/%s
-%s/%s
 HKLM
 HKCU
 HKCR
@@ -8792,18 +8787,15 @@ m_cCurrentDepth > 0
 Hi
 "
 "
-"
-@&
 H=
-0
+&&
 &
 &
 &
-?
+a"
 Hc
 Hc
 Hc
-|(
 0
 0
 AT=
@@ -8815,11 +8807,16 @@ D
 @
 @
 !
-I(
-+
-(%
-!%
+!
+!
+!
+9(
 %
+%
+%
+%
+%
+(
 @
 Hc
 Hc
@@ -8851,25 +8848,21 @@ IcE
 IcE
 @
 @
-;$
+5
+.$
 '
 V
-H;5r|&
+H;52n&
 =
-^#
-T#
-+#
+Q#
+G#
+#
 =
-$
-$
-$
-L!
-'!
+?!
 @
-b
-f
+U
+Y
 @
-e!
 @
 M9e
 @
@@ -8895,10 +8888,6 @@ AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 @
 AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
-
-
-
-
 Pj
 ARj
 j
@@ -8909,7 +8898,7 @@ j
 @
 =
 9
-U
+G
 =
 %
 =
@@ -9260,9 +9249,8 @@ rc4(16x,int)
 RC4 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 j
 j
-|
 $
-4
+@
 $
 
 
@@ -9276,9 +9264,8 @@ H=
 
 =
 @
+\
 =*.*
-I
-D
 @
 @
 @
@@ -9297,7 +9284,6 @@ D
 
 
 
-
 0
 0
 0
@@ -9308,7 +9294,6 @@ D
 0
 0
 0
-P
 0
 H=
 0
@@ -9337,4 +9322,6 @@ Ic
 ?
 @
 @
+t
+0
 Hi

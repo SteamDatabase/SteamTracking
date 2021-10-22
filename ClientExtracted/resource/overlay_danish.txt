@@ -16,8 +16,8 @@
 "Overlay_SettingsHotKeyLabel"	"Overlay-genvejstaster"
 "Overlay_SettingsScreenshotHotKeyLabel"	"Skærmbillede-genvejstaster"
 "Overlay_SettingsScreenshotActionLabel" "Når et skærmbillede tages"
-"Overlay_SettingsEnableVRDesktopGameTheaterCheck" "Brug skrivebordsspilbiografen når der køres spil fra skrivebordet mens SteamVR er aktivt"
-"Overlay_SettingsDesktopGameTheaterCheck" "Brug skrivebordsspilbiografen mens SteamVR er aktivt"
+"Overlay_SettingsEnableVRDesktopGameTheaterCheck" "Brug biograftilstand, når der køres spil fra skrivebordet, mens SteamVR er aktivt"
+"Overlay_SettingsDesktopGameTheaterCheck" "Brug biograftilstand, mens SteamVR er aktivt"
 "Overlay_SettingsIsVRShortcut"			"Inkluder i VR-bibliotek"
 
 "Steam_Settings_Ingame_ShowFPS_Title"	"FPS-tæller i spil"

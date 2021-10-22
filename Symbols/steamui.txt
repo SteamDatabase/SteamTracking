@@ -12,6 +12,9 @@
  AudioDeviceGetProperty
  AudioGetCurrentHostTime
  AudioHardwareGetProperty
+ AudioObjectGetPropertyData
+ AudioObjectGetPropertyDataSize
+ AudioObjectSetPropertyData
  B CAAudioBufferList::sEmptyBufferList
  B CAHostTimeBase::sFrequency
  B CAHostTimeBase::sFromNanosDenominator
@@ -166,6 +169,7 @@
  CanBreakBetween
  CatchAndWriteMiniDumpForVoidPtrFn
  CompareAndSwap
+ CreateAudioResampler
  CreateVideoPlayer
  D ASWAVCaptureCodecFactory::defaultCodecType
  D pcre_free
@@ -200,6 +204,7 @@
  D vtable for CAPThread
  DebugStatsSystem
  DeclareCurrentThreadIsMainThread
+ DeleteAudioResampler
  DeleteVideoPlayer
  Error
  FSCreateFileUnicode
@@ -341,6 +346,7 @@
  RealPrintCallStack
  RescaleBase
  SDL_AddEventWatch
+ SDL_CloseAudioDevice
  SDL_CreateWindow
  SDL_DelEventWatch
  SDL_DestroyWindow
@@ -363,11 +369,16 @@
  SDL_GameControllerMappingForDeviceIndex
  SDL_GameControllerMappingForGUID
  SDL_GameControllerOpen
+ SDL_GetAudioDeviceName
+ SDL_GetAudioDeviceSpec
  SDL_GetDisplayBounds
+ SDL_GetError
  SDL_GetGlobalMouseState
  SDL_GetHint
+ SDL_GetNumAudioDevices
  SDL_GetNumVideoDisplays
  SDL_GetPlatform
+ SDL_GetQueuedAudioSize
  SDL_GetRevision
  SDL_GetVersion
  SDL_GetWindowFromID
@@ -389,6 +400,9 @@
  SDL_JoystickOpen
  SDL_LockJoysticks
  SDL_NumJoysticks
+ SDL_OpenAudioDevice
+ SDL_PauseAudioDevice
+ SDL_QueueAudio
  SDL_QuitSubSystem
  SDL_RaiseWindow
  SDL_SetHint
@@ -1174,6 +1188,7 @@
  __cxa_pure_virtual
  __cxa_rethrow
  __cxa_throw
+ __darwin_check_fd_set_overflow
  __dynamic_cast
  __error
  __gxx_personality_v0
@@ -1691,5 +1706,6 @@
  wcstol
  wctob
  wctype
+ wmemcmp
  wmemcpy
  write

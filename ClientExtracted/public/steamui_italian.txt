@@ -225,6 +225,7 @@ L'operazione dovrebbe richiedere meno di un minuto."
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "Impossibile verificare i file firmati di %game%. È necessaria la validazione del contenuto."
 "SteamUI_JoinDialog_CreateProcess_Error" "Impossibile avviare il processo per %game% :\n\n%detail%"
+"SteamUI_JoinDialog_CreateProcess_Error_Detail_macOS" "Le applicazioni a 32 bit non sono più supportate su macOS 10.15 o superiore."
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "Impossibile avviare %game% in VR. (Errore: %error%)"
 "SteamUI_JoinDialog_OpenVRWaitingForQuit" "In attesa della chiusura di %quitting_game%%dots%"

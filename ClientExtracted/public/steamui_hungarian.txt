@@ -220,6 +220,7 @@
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "Nem sikerült ellenőrizni a(z) %game% aláírt fájljait, tartalomellenőrzés szükséges."
 "SteamUI_JoinDialog_CreateProcess_Error" "A(z) %game% folyamatának indítása sikertelen:\n\n%detail%"
+"SteamUI_JoinDialog_CreateProcess_Error_Detail_macOS" "A 32 bites alkalmazások már nem támogatottak a macOS 10.15-ös vagy újabb verzióin."
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "Nem sikerült a(z) %game% indítása VR módban. (Hiba: %error%)"
 "SteamUI_JoinDialog_OpenVRWaitingForQuit" "Várakozás a(z) %quitting_game% bezáródására%dots%"
@@ -4592,7 +4593,7 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 "Steam_Settings_Streaming_P2PScopeDisabled"	"Kikapcsolva"
 "Steam_Settings_Streaming_P2PScopeOnlyMe" "Eszközeim"
 "Steam_Settings_Streaming_P2PScopeEveryone" "Minden eszköz"
-"Steam_Settings_Streaming_ChangeDesktopResolution" "Asztali felbontás változtatása a közvetítő klienssel megegyezőre"
+"Steam_Settings_Streaming_ChangeDesktopResolution" "Asztalfelbontás átállítása a közvetítő kliensével egyezőre"
 "Steam_Settings_Streaming_DynamicallyAdjustResolution" "Rögzítési felbontás dinamikus állítása a teljesítmény javításához"
 "Steam_Settings_Streaming_AudioChannelSelect" "Hangszóró-beállítások"
 "Steam_Settings_Streaming_AudioChannelAuto" "Automatikus észlelés"

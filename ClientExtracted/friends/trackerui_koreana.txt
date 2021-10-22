@@ -748,7 +748,7 @@
 "Steam_Settings_Broadcast_EncoderPerformance" "최고 성능"
 "Steam_Settings_Broadcast_StatusNotBroadcast" "방송 중 아님"
 "Steam_Settings_Broadcast_StatusBroadcast" "방송 중"
-"Steam_Settings_Broadcast_ShowChat_Off" "사용 안함"
+"Steam_Settings_Broadcast_ShowChat_Off" "사용 안 함"
 "Steam_Settings_Broadcast_ShowChat_LeftTop" "좌측 상단"
 "Steam_Settings_Broadcast_ShowChat_RightTop" "우측 상단"
 "Steam_Settings_Broadcast_ShowChat_RightBottom" "우측 하단"

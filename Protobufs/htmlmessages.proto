@@ -737,11 +737,6 @@ message CMsgJSRegisterMethod {
 	optional .EJSRegisterMethodType method_type = 3 [default = k_EJSRegisterMethodType_Invalid];
 }
 
-message CJSMethodArgument {
-	optional string json_data = 1;
-	optional uint64 function_handle = 2;
-}
-
 message CMsgJSValue {
 	message JSObjectProperty {
 		optional string name = 1;
@@ -763,24 +758,28 @@ message CMsgJSValue {
 
 message CMsgJSMethodCall {
 	optional uint32 browser_handle = 1;
-	optional string name = 2;
-	repeated .CMsgJSValue arguments = 3;
+	optional uint32 owning_browser_handle = 2;
+	optional string name = 3;
+	repeated .CMsgJSValue arguments = 4;
 }
 
 message CMsgJSExecuteCallback {
 	optional uint32 browser_handle = 1;
-	optional uint64 function_handle = 2;
-	repeated .CMsgJSValue arguments = 3;
+	optional uint32 owning_browser_handle = 2;
+	optional uint64 function_handle = 3;
+	repeated .CMsgJSValue arguments = 4;
 }
 
 message CMsgJSReleaseCallback {
 	optional uint32 browser_handle = 1;
-	optional uint64 function_handle = 2;
+	optional uint32 owning_browser_handle = 2;
+	optional uint64 function_handle = 3;
 }
 
 message CMsgJSRaiseException {
 	optional uint32 browser_handle = 1;
-	optional string exception = 2;
+	optional uint32 owning_browser_handle = 2;
+	optional string exception = 3;
 }
 
 message CMsgLoadLocalization {

@@ -46,7 +46,7 @@ __DATA
 P
 __data
 __DATA
-`%
+@%
 __thread_vars
 __DATA
 __thread_data
@@ -73,7 +73,6 @@ P
 0
 /usr/lib/libz.1.dylib
 h
->
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 X
 /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
@@ -81,12 +80,11 @@ h
 /System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration
 `
 p
-0
+6
 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices
 X
 /System/Library/Frameworks/Cocoa.framework/Versions/A/Cocoa
 0
-x
 /usr/lib/libc++.1.dylib
 8
 /usr/lib/libSystem.B.dylib
@@ -246,8 +244,11 @@ P
 q
 r
 0
+<
 0
-0
+4
+8
+$
 (
 (
 P
@@ -345,7 +346,6 @@ H
 (
 (
 H
-(
 (
 (
 x
@@ -494,7 +494,6 @@ H
 19CMsgSteamAuthNeeded
 23CMsgSteamAuthCookiesSet
 20CMsgJSRegisterMethod
-17CJSMethodArgument
 28CMsgJSValue_JSObjectProperty
 11CMsgJSValue
 16CMsgJSMethodCall
@@ -1044,6 +1043,8 @@ wt
 -steampid=%u
 -buildid=%u
 -steamid=%llu
+-logdir=%s
+-composer-mode=%d
 -steampal
 -steamdeck
 "
@@ -1119,10 +1120,10 @@ m_tsQueueResponses
 m_sHTMLCacheDir
 m_strProxy
 m_ChromeConnection
-SteamBootstrapper_GetLoggingDir
 cef_log.txt
-GenerateCEFLogFileName in unknown process
-logs/cef_log.txt
+SteamBootstrapper_GetLoggingDir
+GenerateCEFLogDir in unknown process
+logs
 !pszString || pszString[nChars] == '\0'
 %s.previous.txt
 %s_server
@@ -1944,8 +1945,6 @@ type() == TYPE_FIXED64
 google/protobuf/unknown_field_set.cc
 CHECK failed: !fields_.empty():
 CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()):
-CHECK failed: *ptr:
-CHECK failed: (overrun) <= (kSlopBytes):
 Can't happen
 google/protobuf/wire_format.cc
 Extensions of MessageSets must be optional messages.
@@ -2283,10 +2282,17 @@ sc_schinese
 
 @
 @
+k
+
+
+
+
+
 
 @
-T
-9
+j
+5
+,
 
 
 
@@ -2294,6 +2300,7 @@ T
 0
 0
 Hi
+#
 `
 0
 0
@@ -2301,7 +2308,6 @@ AT=
 AT5
 AT5
 AT=
-
 ?
 D
 @
@@ -2338,8 +2344,8 @@ IcE
 @
 @
 V
-H;5Rn
-T
+H;5Rm
+S
 =
 =
 @

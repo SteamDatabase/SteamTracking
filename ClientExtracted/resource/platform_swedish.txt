@@ -53,7 +53,7 @@
 "Steam_Login_Cancel"		"Avbryt"
 "Steam_Login_CloseSteam"		"Avsluta Steam"
 "Steam_AccountName"	"Kontonamn"
-"Steam_Twofactor_Code"			"Kod för Steam Guard"
+"Steam_Twofactor_Code"			"Steam Guard-kod"
 "Steam_ErrorLoginNeedTwoFactor" "Skriv in din nuvarande kod från Steam Guards autentiserare."
 "Steam_ErrorLoginBadTwoFactor" "Den tvåfaktorskoden var ogiltig.\nSkriv in din nuvarande kod från Steam Guards autentiserare."
 

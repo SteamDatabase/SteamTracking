@@ -11,6 +11,7 @@ message CMsgGSServerType {
 	optional string game_dir = 5;
 	optional string game_version = 6;
 	optional uint32 game_query_port = 7;
+	optional uint32 game_port_local = 10;
 	optional bytes sdr_logon = 8;
 	optional fixed32 fake_ip = 9;
 }

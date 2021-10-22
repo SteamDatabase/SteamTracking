@@ -225,6 +225,7 @@
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "Не вдалося перевірити підписані файли для %game%, необхідна перевірка вмісту."
 "SteamUI_JoinDialog_CreateProcess_Error" "Не вдалося розпочати процес для %game% :\n\n%detail%"
+"SteamUI_JoinDialog_CreateProcess_Error_Detail_macOS" "macOS 10.15 і новіших версій більше не підтримує 32-бітні застосунки."
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "Не вдалося запустити %game% у режимі VR. (Помилка: %error%)"
 "SteamUI_JoinDialog_OpenVRWaitingForQuit" "Очікування завершення %quitting_game% %dots%"

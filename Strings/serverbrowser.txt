@@ -36,19 +36,21 @@ __data
 __DATA
 __thread_vars
 __DATA
-'
 0
-'
 __thread_data
 __DATA
 @
+'
+@
+@
+'
 __thread_bss
 __DATA
+'
 __bss
 __DATA
 __common
 __DATA
-(3'
 H
 __LINKEDIT
 @'
@@ -57,8 +59,8 @@ __LINKEDIT
 @loader_path/serverbrowser.dylib
 "
 @'
-p\'
-`_'
+h\'
+X_'
 8
 (!
 P
@@ -72,7 +74,6 @@ P
 @
 @loader_path/libSDL2-2.0.0.dylib
 h
->
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 X
 /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
@@ -84,7 +85,6 @@ X
 X
 /System/Library/Frameworks/Cocoa.framework/Versions/A/Cocoa
 0
-x
 /usr/lib/libc++.1.dylib
 8
 /usr/lib/libSystem.B.dylib
@@ -478,8 +478,11 @@ P
 q
 r
 0
+<
 0
-0
+4
+8
+$
 (
 (
 P
@@ -577,7 +580,6 @@ H
 (
 (
 H
-(
 (
 (
 x
@@ -726,7 +728,6 @@ H
 19CMsgSteamAuthNeeded
 23CMsgSteamAuthCookiesSet
 20CMsgJSRegisterMethod
-17CJSMethodArgument
 28CMsgJSValue_JSObjectProperty
 11CMsgJSValue
 16CMsgJSMethodCall
@@ -819,6 +820,8 @@ N4vgui17FrameSystemButtonE
 N4vgui10GraphPanelE
 14CUtlLinkedListIN4vgui10GraphPanel8Sample_tEiE
 10CUtlVectorIf10CUtlMemoryIfEE
+?
+?
 @
 E
 F
@@ -2358,8 +2361,6 @@ type() == TYPE_FIXED64
 google/protobuf/unknown_field_set.cc
 CHECK failed: !fields_.empty():
 CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()):
-CHECK failed: *ptr:
-CHECK failed: (overrun) <= (kSlopBytes):
 Can't happen
 google/protobuf/wire_format.cc
 CHECK failed: descriptor:
@@ -3802,7 +3803,7 @@ CUtlStringBuilder::Data::MoveToHeap
 s_bAllowStaticSymbolTable
 s_pSymbolTable
 0
-&
+p&
 j
 j
 j
@@ -3835,7 +3836,6 @@ j
 j
 j
 j
-_%
 0
 p
 0
@@ -3886,6 +3886,7 @@ IcE
 @
 V
 =
+"
 =
 @
 @
@@ -3915,6 +3916,8 @@ M9e
 
 
 d
+J
+"
 A+M
 
 
@@ -4017,7 +4020,7 @@ j
 j
 Ic
 E
-H
+[
 j
 j
 j
@@ -4162,10 +4165,9 @@ d
 =*.*
 =
 @
-M
 @
 @
-O
+N
 @
 @
 @

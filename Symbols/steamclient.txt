@@ -390,6 +390,7 @@
  V_BasicHtmlEntityEncode
  V_CP437CharsToUTF8
  V_ComposeFileName
+ V_ConvertUUIDToString(V_UUID const*, EUUIDStringFlags, char*, int)
  V_CopyAndFixSlashes
  V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*)
  V_ExtractDomainFromURL

@@ -614,6 +614,34 @@ SelectMousePosition
 	visibility: visible;
 }
 
+#HelperGATitleText
+{
+	font-size: 34px;
+	font-family: platformfont;
+	color: #01caef;
+	margin-top: 220px;
+	text-align: left;
+	horizontal-align: center;
+	vertical-align: top;
+	width: 85%;
+	height: 90%;
+	visibility: hidden;
+}
+
+#HelperGADescriptionText 
+{
+	font-size: 28px;
+	font-family: platformfont;
+	color: #01caef;
+	margin-top: 280px;
+	text-align: left;
+	horizontal-align: center;
+	vertical-align: top;
+	width: 85%;
+	height: 90%;
+	visibility: hidden;
+}
+
 .ShowBackgroundHelper #BackgroundController
 {
 	background-image: url( "" );

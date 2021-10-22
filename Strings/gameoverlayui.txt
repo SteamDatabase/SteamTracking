@@ -4,33 +4,33 @@ __text
 __TEXT
 __stubs
 __TEXT
-ZS&
-ZS&
 __stub_helper
 __TEXT
-@]&
-@]&
 __cstring
 __TEXT
+@n&
+@n&
 __gcc_except_tab__TEXT
 __const
 __TEXT
 __objc_methname
 __TEXT
-sv,
-sv,
 __objc_classname__TEXT
+I},
+I},
 __objc_methtype
 __TEXT
+T},
 (
+T},
 __unwind_info
 __TEXT
-,},
-,},
+|},
+|},
 __eh_frame
 __TEXT
-8p-
-8p-
+Pp-
+Pp-
 __DATA
 __nl_symbol_ptr
 __DATA
@@ -60,7 +60,6 @@ __DATA
 P
 __data
 __DATA
-G
 __thread_vars
 __DATA
 0
@@ -69,10 +68,10 @@ __DATA
 @
 __thread_bss
 __DATA
-4B
+3B
 __bss
 __DATA
-8B
+7B
 __common
 __DATA
 hB
@@ -84,7 +83,7 @@ __LINKEDIT
 @loader_path/gameoverlayui.dylib
 "
 @B
-PzB
+@zB
 pC
 P
 j
@@ -104,7 +103,6 @@ k
 0
 /usr/lib/libz.1.dylib
 h
->
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 X
 /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
@@ -122,7 +120,6 @@ X
 X
 /System/Library/Frameworks/Cocoa.framework/Versions/A/Cocoa
 0
-x
 /usr/lib/libc++.1.dylib
 8
 /usr/lib/libSystem.B.dylib
@@ -137,6 +134,7 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
+xF
 )
 C
 23IClientParentalSettings
@@ -7207,8 +7205,11 @@ P
 q
 r
 0
+<
 0
-0
+4
+8
+$
 (
 (
 P
@@ -7306,7 +7307,6 @@ H
 (
 (
 H
-(
 (
 (
 x
@@ -7455,7 +7455,6 @@ H
 19CMsgSteamAuthNeeded
 23CMsgSteamAuthCookiesSet
 20CMsgJSRegisterMethod
-17CJSMethodArgument
 28CMsgJSValue_JSObjectProperty
 11CMsgJSValue
 16CMsgJSMethodCall
@@ -7781,6 +7780,8 @@ N4vgui10GraphPanelE
 10CUtlVectorIf10CUtlMemoryIfEE
 N4vgui11HotKeyEntryE
 N4vgui22HotkeyEntryClearButtonE
+?
+?
 @
 E
 F
@@ -8150,6 +8151,7 @@ bufRGB.TellPut() == nWidth*nHeight*3
 bufRGBA.TellPut() == nWidth*nHeight * 4
 log_files_always_flush
 0
+...
 %s
 arrURLs
 T@"NSArray",R,N,V_arrURLs
@@ -9821,8 +9823,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-Oct 13 2021
-12:48:22
+Oct 21 2021
+16:37:53
 crashhandler003
 gameoverlayui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -10756,8 +10758,6 @@ google.protobuf.SourceCodeInfo.Location.trailing_comments
 google.protobuf.SourceCodeInfo.Location.leading_detached_comments
 google.protobuf.GeneratedCodeInfo.Annotation.source_file
 CHECK failed: GetArena() == nullptr:
-CHECK failed: *ptr:
-CHECK failed: (overrun) <= (kSlopBytes):
 _InternalSerialize
 ./google/protobuf/extension_set.h
 !is_large()
@@ -11508,7 +11508,6 @@ bytes
 %f
 result
 message
-%lld
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/language.cpp
 !"enum ELanguage order mismatched from Language_t s_LanguageNames, fix it!"
 zh_CN
@@ -13183,6 +13182,7 @@ LOCK_SH
 fcntl failed to set F_NOCACHE
 *
 rb
+%lld
 unsupported flags 0x%x passed to CFileReader::BOpenFile
 BIsOpen()
 cubBytesToRead < INT32_MAX
@@ -13402,6 +13402,7 @@ cs
 EUniverse
 ECurrencyCode
 EControllerType
+china
 Failure
 No Connection
 Invalid Password
@@ -13693,7 +13694,6 @@ streaming
 controller
 controller_ui
 metrics
-china
 Invalid spew group
 @bEnableSpewThrottle
 @bEnableLogTearOff
@@ -13746,7 +13746,6 @@ Persistent logfile %s is past the keep until date - cleaning up
 Failed to find time in logfile name
 Persistent Logfiles created which have no cleanup limit specified!
 CLogInstance::EmitEventNow
-...
 Last Message Repeated %d times.%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/bitstring.h
 bitNum >= 0 && bitNum < this->Size()
@@ -13796,7 +13795,7 @@ Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 -
-0
+$
 0
 Ic
 p
@@ -13804,14 +13803,8 @@ p
 0
 p
 0
-%
-)
-$
-g%
-f%
--
-#
-1%
+5%
+"%
 j
 j
 j
@@ -13820,11 +13813,13 @@ j
 j
 j
 j
+J@
 j
 %
 %
 %
 0
+U$
 p
 0
 j
@@ -13833,26 +13828,17 @@ j
 j
 j
 j
-I#
-%
-j
-j
-5$
-2$
-1$
-j
-$
+)$
 j
 j
 $
-j
-j
-$
-j
-j
-j
-j
-j
+#
+#
+#
+#
+#
+#
++
 j
 j
 j
@@ -13892,16 +13878,6 @@ j
 j
 j
 $
-i?
-j
-j
-j
-j
-U-
-"
-"
-/?
-9$
 j
 j
 j
@@ -13912,6 +13888,12 @@ j
 j
 j
 j
+$
+j
+j
+j
+j
+,#
 j
 j
 j
@@ -13921,90 +13903,100 @@ j
 j
 j
 j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+E-
+?
 ?
 "
 "
-*
-*
-*
-*
+#
 0
 d
 #
 #
-#
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
->
 >
 >
 >
 j
->
->
 j
->
->
-9"
-
-
-
-
-
-#
-@
-
-0
-"
-"
-"
-"
-"
-"
-"
-"
-"
-p
-0
-p
-0
-p
-0
-p
-0
-p
-0
-p
-0
-p
-0
-p
-0
-p
-0
-p
-p
-p
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
 R"
+K!
+>
+>
+>
+>
+>
+>
+>
+>
+
+
+
+
+
+#
 @
-=
-"
 
 0
-%
+"
+"
+"
+"
+"
+"
+p
+0
+p
+0
+p
+0
+p
+0
+)
+)
+)
+)
+p
+0
+p
+0
+p
+0
+p
+0
+p
+0
+p
+p
+p
+@
 =
+a!
+"
+
+.
+0
 0
 \
-/
-w,
 !
 !
 !
@@ -14012,7 +14004,6 @@ w,
 !
 !
 !
-!
 j
 j
 j
@@ -14042,21 +14033,23 @@ j
 j
 j
 j
-S<
-l
+.
+.
 Hi
-^<
-i
-g
+0!
++!
 <
-!
+<
+<
+<
+<
 j
 j
 j
 j
 j
 j
-P
+0
 j
 j
 j
@@ -14073,8 +14066,9 @@ j
 0
 p
 0
-9
-1
+A
+#
+(
 j
 j
 j
@@ -14109,8 +14103,6 @@ AT=
 D
 @
 @
-#
-#
 @
 Hc
 Hc
@@ -14142,12 +14134,13 @@ IcE
 IcE
 @
 @
-$%
 V
+H;5R1$
 =
 =
-,
+#
 @
+4
 @
 M9e
 @
@@ -14285,6 +14278,7 @@ G
 @
 >
 0
+(-
 p
 =
 0
@@ -14343,17 +14337,14 @@ P
 |
 @
 @
-h
-
-
-
 d
-)
 
 
 
+Y
 A+M
-t7f9,'
+t7f9W,'
+t7f98$'
 
 
 
@@ -14364,8 +14355,10 @@ j
 j
 j
 =
-g
 0
+G
+E
+3
 j
 j
 j
@@ -14384,6 +14377,8 @@ j
 
 
 
+
+
 j
 j
 j
@@ -14402,19 +14397,17 @@ j
 j
 j
 
-}%
 d
 &
 &
 d
+
 0
 A+4$A+u
 ~m=
 =
 =
 =
-
-
 @
 j
 j
@@ -14438,7 +14431,6 @@ j
 j
 j
 j
-r#
 j
 j
 j
@@ -14454,6 +14446,8 @@ j
 
 
 
+#
+#
 j
 j
 j
@@ -14464,8 +14458,8 @@ j
 j
 j
 j
+u"
 E
-H
 j
 j
 j
@@ -14479,7 +14473,6 @@ j
 j
 j
 j
-G!
 j
 j
 j
@@ -14540,6 +14533,7 @@ j
 j
 j
 j
+;
 @
 @
 &
@@ -14615,7 +14609,6 @@ d
 =*.*
 =
 @
-N
 @
 @
 @
@@ -14636,4 +14629,7 @@ Hc
 E
 0
 0
+0
+3
+.
 p

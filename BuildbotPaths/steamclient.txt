@@ -1,3 +1,4 @@
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/../common/hiddevicesdl.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/ClientJobRemoteStorageSync.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/appdatacache.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/appdatacache.h
@@ -88,13 +89,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/remoteclientstream.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/remotestoragefilesynccontext.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/shadercachemanager/../contentupdatecontext.h
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/shadercachemanager/shadercacheimplamd.cpp
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/shadercachemanager/shadercacheimplfossilize.cpp
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/shadercachemanager/shadercacheimplmesa.cpp
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/shadercachemanager/shadercacheimplnvidia.cpp
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/shadercachemanager/shadercacheimplsteamdepot.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/shadercachemanager/shadercachemanager.cpp
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/shadercachemanager/shadercachemanager.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/shadercachemanager/shadercontentupdatejob.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/shadercachemanager/shadercontentupdatejob.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/sitelicenseclient.cpp
@@ -207,6 +202,12 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/scheduledfunction.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/scheduledfunction.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/scheduledjob.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/shadercache/ishaderdiskcache.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/shadercache/shadercacheimplamd.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/shadercache/shadercacheimplfossilize.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/shadercache/shadercacheimplmesa.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/shadercache/shadercacheimplnvidia.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/shadercache/shadercacheimplsteamdepot.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/sharedchatfilter.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/singleprocesspipe_any.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/socket.cpp

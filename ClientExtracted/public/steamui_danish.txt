@@ -227,6 +227,7 @@ Dette burde vare mindre end et minut."
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "Kunne ikke bekræfte signerede filer for %game%, indholdsvalidering påkrævet."
 "SteamUI_JoinDialog_CreateProcess_Error" "Kunne ikke starte processen for %game% :\n\n%detail%"
+"SteamUI_JoinDialog_CreateProcess_Error_Detail_macOS" "32-bit programmer understøttes ikke længere på macOS 10.15 og nyere."
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "Kunne ikke starte %game% i VR. (Fejl: %error%)"
 "SteamUI_JoinDialog_OpenVRWaitingForQuit" "Venter på, at %quitting_game% afslutter %dots%"

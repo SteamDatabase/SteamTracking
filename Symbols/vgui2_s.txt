@@ -92,7 +92,6 @@
  CGLayerGetContext
  CGLayerRelease
  CGMainDisplayID
- CGWindowLevelForKey
  CTFontCreateWithName
  CTFontGetPlatformFont
  CVProfile_ExitScope

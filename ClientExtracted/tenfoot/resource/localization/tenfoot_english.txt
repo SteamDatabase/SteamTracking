@@ -1729,6 +1729,8 @@
 
 	"Controller_OptOut_Title"			"Configuration Support Disabled"
 	"Controller_OptOut_Desc"			"Configuration support for the {s:controllertype} is disabled.  {s:controllertype} Configuration support must be enabled in Steam's main Controller Settings and Support for this Game must be enabled under this game's Controller Options."
+	"Controller_GameBundledConfigError_Title"	"Game Configuration Unavailible"
+	"Controller_GameBundledConfigError_Desc"	"This game includes the official configuration in the game files. Please install the game to view the configuration."
 
 	"Controller_NotAttached_Title"		"No Controller Attached"
 	"Controller_NotAttached_Desc"		"Please attach a controller in order to configure it"
@@ -5058,6 +5060,8 @@
 	//HELPER STUFF FOR CONTROLLER CONFIG PANEL
 	"SettingsController_HelperDescriptionHeader"	"Cool Header"
 	"SettingsController_HelperDescriptionText"	"Cool Description"
+	"SettingsController_HelperGATitleText"			""
+	"SettingsController_HelperGADescriptionText"	""
 	"SettingsController_HelperAlwaysOnHeader"	"Always On Actions"
 	"SettingsController_HelperAlwaysOnText"	"Any bindings assigned here will be automatically activated when this Action Set or Layer is enabled.  Activators can be used to modify how they behave, and for these purposes, these actions act as if they are a button which is held down while the action set or layer is active.  For example, Start Press activators will fire once at the start, while Regular Press activators will stay held while this set or layer is active."
 	"SettingsController_BindingTitle" "{s:bindingtitle}"
@@ -6044,7 +6048,7 @@
 	"ControllerBinding_DoubleTapBeep_On" "Double Tap Beep - On"
 	"ControllerBinding_DoubleTapBeep_On_Description" "Double Tap Beep will cause the controller to beep when a double tap is sent."
 	"ControllerBinding_DoubleTapBeep_Off" "Double Tap Beep - Off"
-	"ControllerBinding_DoubleTapBeep_Off_Description" "Double Tap Beep will cause the controller to beep when a double tap is sent."
+	"ControllerBinding_DoubleTapBeep_Off_Description" "Double Tap Beep won't cause the controller to beep when a double tap is sent."
 	"ControllerBinding_MouseTriggerClamp" "Trigger Press Mouse Dampening"
 	"ControllerBinding_MouseTriggerClamp_Description" "The mouse movement can be dampened while the trigger is being pulled.  This can help to correct for accidental movement while pulling the trigger."
 	"ControllerBinding_EdgeSpinRadius" "Edge Spin Radius"
@@ -6064,7 +6068,7 @@
 	"ControllerBinding_InvertMouseY_Off" "Invert Vertical Axis - Off"
 	"ControllerBinding_InvertMouseY_Off_Description" "The mouse vertical axis will act normally, with up movement on the pad corresponding to up movement of the mouse."
 	"ControllerBinding_MouseMoveThreshold" "Movement Threshold"
-	"ControllerBinding_MouseMoveThreshold_Description" "The mouse will accumulate movement until this threshold has been passed and only send at that point.  Intended for applications that exhibit aggressive filtering/clamping of the mouse, which can cause small motions to be lost, but shouldn't generally be required.  Ideally this should be as small of a value while not losing input for small motions."
+	"ControllerBinding_MouseMoveThreshold_Description" "Some games will aggressively filter out small mouse values which can cause small or slow movements to be lost. This setting will batch up smaller values and wait to send them until they are large enough to be accepted by the game. When tuning the slider try to keep the value as small as possible while preserving movement."
 	"ControllerBinding_GyroButtonInvertAbsMouse" "Gyro Button Behavior - Turns Gyro"
 	"ControllerBinding_GyroButtonInvertAbsMouse_Description" "The gyro input button behavior can be flipped.  If set to off, gyro will turn off when the button is pressed."
 	"ControllerBinding_GyroButtonInvertAbsMouse_On" "Gyro Button Behavior - On"

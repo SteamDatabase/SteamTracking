@@ -225,6 +225,7 @@ Dette bør ta under ett minutt."
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "Kunne ikke bekrefte signerte filer for %game%, innholdsvalidering er nødvendig."
 "SteamUI_JoinDialog_CreateProcess_Error" "Kunne ikke starte prosess for %game% :\n\n%detail%"
+"SteamUI_JoinDialog_CreateProcess_Error_Detail_macOS" "32-bit-programmer støttes ikke lenger på macOS 10.15 eller nyere."
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "Kunne ikke starte %game% i VR. (Feil: %error%)"
 "SteamUI_JoinDialog_OpenVRWaitingForQuit" "Venter på at %quitting_game% lukkes %dots%"
@@ -347,7 +348,7 @@ Dette bør ta under ett minutt."
 "SteamUI_AccountDialog_Subscriptions"	"Abonnementer"
 "SteamUI_AccountDialog_AccountDetails"	"Konto"
 "Steam_LogoutDialogTitle"			"Logg ut"
-"Steam_LogoutDialogMsg"				"Dermed logges du av Steam. Du må \nskrive inn kontonavnet\nog passordet på nytt for å bruke Steam igjen.\n\nVil du fortsette?"
+"Steam_LogoutDialogMsg"				"Dette logger deg ut av Steam. Du må skrive inn\nkontonavnet og passordet på nytt for å bruke Steam igjen.\n\nVil du fortsette?"
 "Steam_LogoutDialogOKButton"			"Logg ut"
 "Steam_LogoutDialogLabel"			"Kontonavn:"
 
@@ -4547,7 +4548,7 @@ Angi en kategori for dette spillet for å hjelpe deg med å finne det raskt og o
 
 "Steam_Settings_StreamingTitle" "Remote Play"
 
-"Steam_Settings_Streaming_Description" "Du kan strømme spilling fra datamaskinen til andre enheter. For å koble deg til, kan du bare logge inn på den samme Steam-kontoen på en annen datamaskin, eller velge «Annen datamaskin» på Steam Link."
+"Steam_Settings_Streaming_Description" "Du kan strømme spilling fra datamaskinen til andre enheter. Det er bare å logge inn på den samme Steam-kontoen på en annen datamaskin for å koble til, eller velge «Annen datamaskin» på Steam Link."
 "Steam_Settings_Streaming_DeviceName" "ENHETSNAVN"
 "Steam_Settings_Streaming_Status" "STATUS"
 "Steam_Settings_Streaming_EnableStreaming" "Slå på Remote Play"
@@ -4576,7 +4577,7 @@ Angi en kategori for dette spillet for å hjelpe deg med å finne det raskt og o
 "Steam_Settings_Streaming_EnableHardwareEncodingAMD" "Slå på maskinvarekoding på AMD-GPU"
 "Steam_Settings_Streaming_EnableHardwareEncodingIntel" "Slå på maskinvarekoding på Intel-iGPU"
 "Steam_Settings_Streaming_EnableHardwareDecoding" "Aktiver maskinvaredekoding"
-"Steam_Settings_Streaming_EnableTrafficPriority_Description" "Dersom du har en nyere eller mer eksklusiv ruter kan du også skru på prioritering av nettverkstrafikk."
+"Steam_Settings_Streaming_EnableTrafficPriority_Description" "Dersom du har en nyere eller avansert ruter, kan du også slå på prioritering av nettverkstrafikk."
 "Steam_Settings_Streaming_EnableTrafficPriority" "Prioriter nettverkstrafikk"
 "Steam_Settings_Streaming_PerformanceOverlay" "Ytelsesinformasjon"
 "Steam_Settings_Streaming_PerformanceOverlayDisabled" "Slått av"
@@ -4650,7 +4651,7 @@ Angi en kategori for dette spillet for å hjelpe deg med å finne det raskt og o
 "Steam_Settings_Streaming_Unsupported" "Datamaskin tilkoblet"
 
 "Steam_Settings_Streaming_PIN_Title" "Angi sikkerhetskode til Steam Link"
-"Steam_Settings_Streaming_PIN_Text" "Angi en numerisk PIN-kode som må skrives inn på Steam Link hver gang, for å strømme fra denne datamaskinen:"
+"Steam_Settings_Streaming_PIN_Text" "Angi en numerisk PIN-kode som må skrives inn på Steam Link hver gang for å strømme fra denne datamaskinen:"
 
 "Steam_Settings_ShareIPNetworking_Label" "Steam-nettverk"
 "Steam_Settings_ShareIPNetworking_Info" "Tillat spill som bruker Steam-nettverk å dele IP-adressen min for å få en raskere forbindelse"

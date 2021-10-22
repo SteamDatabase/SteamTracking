@@ -1,8 +1,8 @@
 __TEXT
 __text
 __TEXT
-PJ
-PJ
+@J
+@J
 __stubs
 __TEXT
 __stub_helper
@@ -58,7 +58,6 @@ P
 8
 @loader_path/libvstdlib_s.dylib
 h
->
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 X
 /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
@@ -66,7 +65,6 @@ h
 /System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration
 `
 0
-x
 /usr/lib/libc++.1.dylib
 8
 /usr/lib/libSystem.B.dylib
@@ -775,7 +773,6 @@ Hey, you just set %s's number values to be 0.  Is that what you wanted?If you do
 !( m_nFlags & FCVAR_NEVER_AS_STRING )
 m_vecCallbacks.Count() == 0
 %d
-%lld
 %llu
 %lf
 pDefaultValue
@@ -798,6 +795,7 @@ write %s failed, errno = %d
 written == count
 fsync %s failed, errno = %d
 %s%c%s
+%lld
 unReadAheadChunkSize should be zero when using bUnbuffered = true
 unReadAheadChunkSize < INT32_MAX/2
 unsupported flags 0x%x passed to CFileReader::BOpenFile
@@ -1271,5 +1269,8 @@ B
 0
 0
 0
+]
+I
 0
 0
+>

@@ -79,132 +79,6 @@
 	}
 	"group"
 	{
-		"id"		"1"
-		"mode"		"dpad"
-		"inputs"
-		{
-			"dpad_north"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"xinput_button dpad_up"
-						}
-						"settings"
-						{
-							"haptic_intensity"		"1"
-						}
-					}
-				}
-			}
-			"dpad_south"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"xinput_button dpad_down"
-						}
-						"settings"
-						{
-							"haptic_intensity"		"1"
-						}
-					}
-				}
-			}
-			"dpad_east"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"xinput_button dpad_right"
-						}
-						"settings"
-						{
-							"haptic_intensity"		"1"
-						}
-					}
-				}
-			}
-			"dpad_west"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"xinput_button dpad_left"
-						}
-						"settings"
-						{
-							"haptic_intensity"		"1"
-						}
-					}
-				}
-			}
-		}
-	}
-	"group"
-	{
-		"id"		"2"
-		"mode"		"joystick_move"
-		"inputs"
-		{
-			"click"
-			{
-				"activators"
-				{
-					"Soft_Press"
-					{
-						"bindings"
-						{
-							"binding"		"xinput_button JOYSTICK_RIGHT"
-						}
-					}
-				}
-			}
-		}
-	}
-	"group"
-	{
-		"id"		"3"
-		"mode"		"joystick_move"
-		"inputs"
-		{
-			"click"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"xinput_button JOYSTICK_LEFT"
-						}
-						"settings"
-						{
-							"haptic_intensity"		"2"
-						}
-					}
-				}
-			}
-		}
-		"settings"
-		{
-			"deadzone_inner_radius"		"7199"
-		}
-	}
-	"group"
-	{
 		"id"		"4"
 		"mode"		"trigger"
 		"inputs"
@@ -247,48 +121,6 @@
 						"settings"
 						{
 							"haptic_intensity"		"2"
-						}
-					}
-				}
-			}
-		}
-	}
-	"group"
-	{
-		"id"		"6"
-		"mode"		"joystick_move"
-		"inputs"
-		{
-			"click"
-			{
-				"activators"
-				{
-					"Soft_Press"
-					{
-						"bindings"
-						{
-							"binding"		"xinput_button JOYSTICK_RIGHT"
-						}
-					}
-				}
-			}
-		}
-	}
-	"group"
-	{
-		"id"		"8"
-		"mode"		"joystick_move"
-		"inputs"
-		{
-			"click"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"xinput_button JOYSTICK_RIGHT"
 						}
 					}
 				}
@@ -379,48 +211,6 @@
 	}
 	"group"
 	{
-		"id"		"10"
-		"mode"		"single_button"
-		"inputs"
-		{
-			"click"
-			{
-				"activators"
-				{
-					"Soft_Press"
-					{
-						"bindings"
-						{
-							"binding"		"xinput_button START"
-						}
-					}
-				}
-			}
-		}
-	}
-	"group"
-	{
-		"id"		"11"
-		"mode"		"single_button"
-		"inputs"
-		{
-			"click"
-			{
-				"activators"
-				{
-					"Soft_Press"
-					{
-						"bindings"
-						{
-							"binding"		"xinput_button SELECT"
-						}
-					}
-				}
-			}
-		}
-	}
-	"group"
-	{
 		"id"		"12"
 		"mode"		"absolute_mouse"
 		"inputs"
@@ -429,23 +219,15 @@
 			{
 				"activators"
 				{
-					"Soft_Press"
+					"Full_Press"
 					{
 						"bindings"
 						{
-							"binding"		"xinput_button JOYSTICK_RIGHT"
+							"binding"		"mouse_button LEFT"
 						}
 					}
 				}
 			}
-		}
-	}
-	"group"
-	{
-		"id"		"13"
-		"mode"		"joystick_camera"
-		"inputs"
-		{
 		}
 	}
 	"group"
@@ -566,18 +348,10 @@
 		{
 			"7"		"switch active"
 			"0"		"button_diamond active"
-			"1"		"left_trackpad inactive"
-			"11"		"left_trackpad inactive"
-			"2"		"right_trackpad inactive"
-			"6"		"right_trackpad inactive"
-			"10"		"right_trackpad inactive"
 			"12"		"right_trackpad active"
-			"13"		"right_trackpad inactive"
-			"3"		"joystick inactive"
 			"14"		"joystick active"
 			"4"		"left_trigger active"
 			"5"		"right_trigger active"
-			"8"		"right_joystick inactive"
 			"15"		"right_joystick active"
 			"9"		"dpad active"
 		}

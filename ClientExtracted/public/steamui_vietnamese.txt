@@ -223,6 +223,7 @@ Công đoạn này nên hoàn thành dưới một phút."
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "Không thể xác thực các tập tin đã được đăng ký cho %game%. Việc xác thực nội dung là bắt buộc."
 "SteamUI_JoinDialog_CreateProcess_Error" "Không thể khởi động %game%:\n\n%detail%"
+"SteamUI_JoinDialog_CreateProcess_Error_Detail_macOS" "Các ứng dụng 32-bit không còn được hỗ trợ trên macOS 10.15 hoặc mới hơn."
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "Không thể khởi động %game% ở chế độ VR. (Lỗi: %error%)"
 "SteamUI_JoinDialog_OpenVRWaitingForQuit" "Đang chờ %quitting_game% thoát ra %dots%"
@@ -4121,7 +4122,7 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Steam_AppUpdateError_8"		"nội dung vẫn bị mã hóa"
 "Steam_AppUpdateError_9"		"thiếu cấu hình ứng dụng"
 "Steam_AppUpdateError_10"		"lỗi đọc đĩa"
-"Steam_AppUpdateError_11"		"lỗi ghi đĩa"
+"Steam_AppUpdateError_11"		"lỗi ghi ổ đĩa"
 "Steam_AppUpdateError_12"		"không đủ dung lượng đĩa trống"
 "Steam_AppUpdateError_13"		"tập tin nội dung bị hỏng"
 "Steam_AppUpdateError_14"		"đang chờ đĩa cài đặt"

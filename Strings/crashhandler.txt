@@ -283,6 +283,7 @@ UUUU
 ^_[]
 ^_[]
 ^_[]
+^_[]
 VRQP
 L^_[]
  ^_]
@@ -519,13 +520,14 @@ pLeft->m_iStackPC <= V_ARRAYSIZE(pLeft->m_StackPC)
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/minidump.cpp
 Someone called SetWritingMinidump without holding the minidump lock.
 Someone called ClearWritingMinidump without holding the minidump lock.
+!g_pCrashMemoryReserve
 Assert( %s ):%s:%d
 MacOS
 Frameworks
 crashhandler.dylib
 CreateInterface
-Oct 13 2021
-12:46:01
+Oct 21 2021
+16:35:29
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -756,7 +758,7 @@ CreateInterface
 TJ",\
 c5u8
 $z$WnJ
-*>pl
+">pl
 Dzll
 ){c$V
 `m(w
@@ -925,28 +927,24 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-q>vV
-z`r;
-H2_e
-FwZ.=
-pQ=_!B
+V|	9
+s\ve6
+m!/:o
+h*G{
+V=G*
+]@L]
+te10
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-.nCF
- {],
-xi~3{oZ
-irs\E
-owU;AG
- c<-
-@GUl
-z;.5mr
-?Py>K
-;D<W
-eUP*
-|K1=1@
-kNRK
+&0qF
+u;hv
+fdBR
+*u?`
+Ca}F
+H_9pf
+B6N*
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -1002,8 +1000,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211013194625Z0/
- z~>t
+211021233555Z0/
+954o
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1011,35 +1009,38 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		6SSA71y1yvzwDEWds6aDn2o3Z5M=
+		tx53E0iDgTk1NG/7anglntI20Dg=
 		</data>
 		<data>
-		en4+dBjwkSzfMzMEhhpzUJvZ30I=
+		8Dlbjy/DonHaflY1iaLy4GSrdjI=
 		</data>
 	</array>
 </dict>
 </plist>
-CGn`
-R95i
-ojx=
-MApb
-Dp"/M"
-zQa"
-20211013194710Z0
+-R8?
+f,mrq
+20211021233556Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-210928173501Z
-211109173500Z0B1
-Timestamp Signer NWK21
+210928174502Z
+211109174501Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
+H^ ;
+4b6;
+Q}0,
+-3/Uh
+d`zE
+mOY`
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-U>cG
-PTQPF"
+q3wp
+mhbr
+F;3N^
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -1078,10 +1079,11 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211013194710Z0#
-ei3y
-v]02Ff
-6R*v
+211021233556Z0#
+d3ZM`
+(j3mA
+uV	m
+2%\1
 __TEXT
 __text
 __TEXT
@@ -1127,6 +1129,7 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/crashhandler.dylib
+.}	$
 /usr/lib/libiconv.2.dylib
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
@@ -1799,13 +1802,14 @@ pLeft->m_iStackPC <= V_ARRAYSIZE(pLeft->m_StackPC)
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/minidump.cpp
 Someone called SetWritingMinidump without holding the minidump lock.
 Someone called ClearWritingMinidump without holding the minidump lock.
+!g_pCrashMemoryReserve
 Assert( %s ):%s:%d
 MacOS
 Frameworks
 crashhandler.dylib
 CreateInterface
-Oct 13 2021
-12:46:03
+Oct 21 2021
+16:35:30
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -2071,6 +2075,7 @@ CreateInterface
 -Breakpad_SetSteamID
 6@@D
 }Z>x;
+"4jx
 @jtt
 Fvvh
 N~{ 
@@ -2239,24 +2244,28 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-*4xm+nv
-3 /g
-Gji-R,
-""{-
-'Ej\V:Z
+w	eZn
+zOc.p
+fTMd
+)"}xn
+3ei%
+MF!D
+_eR{
+dqg'
+z0?i=7
+q?>G01?
+BV	Q
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-t1^m
-\K4K
-D-s&e
-aZa}s?
-IKUU
-@iB|
-p2x,r'
-.*fx
-d`)'8
+Wm1(
+gI$8
+OY*A_
+]s=$+k
+QX!|
+m`<&a
+MTRZ^
 hsNl
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -2313,9 +2322,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211013194625Z0/
-L"{z
-Li0[
+211021233555Z0/
+M|0[
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -2323,39 +2331,34 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		ihrObrxiHP8pJth6oxR9KgVxs3w=
+		TdIer+u4jeDM/i3qBTlGquyFBsQ=
 		</data>
 		<data>
-		gYQMBPs+b8ndPYut1SpPpgCl7B4=
+		h0r3pfElIEEMe4qJYoUKqAuVeNU=
 		</data>
 	</array>
 </dict>
 </plist>
-eN-|
-0TQd
-H2zC
-20211013194710Z0
+u`J+k ;L
+?K)F
+$*rJv
+)p>%
+tSCk
+20211021233556Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-210928174502Z
-211109174501Z0B1
-Timestamp Signer NWK11
+210928173501Z
+211109173500Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-H^ ;
-4b6;
-Q}0,
--3/Uh
-d`zE
-mOY`
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-q3wp
-mhbr
-F;3N^
+U>cG
+PTQPF"
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -2394,14 +2397,10 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211013194710Z0#
-uL0+
-d3ZM`
-p%6I8.
-52E]p
-d.H+
-S+} 
-{EJ`3
+211021233556Z0#
+7k^0+
+tBw4
+\Yo6
 __TEXT
 __text
 __TEXT
@@ -2462,13 +2461,16 @@ Tv*@
  @9H5
 cS9 
 Q)Ij8?
-	X>2
-	X;2
+	X[2
+	XX2
  @9H
 5h"@9
 h&B)
 +ih8J	
 Lii8k	
+wZ	X
+6Z	X
+@K	X
 jv8(
 h(8*
 ij`8
@@ -2512,7 +2514,7 @@ R	a'9
 T+	@
 A}9h
 	I}9
-R	I=9@Q
+R	I=9
 E=9h
 (A=9
 	M}9
@@ -2693,13 +2695,14 @@ pLeft->m_iStackPC <= V_ARRAYSIZE(pLeft->m_StackPC)
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/minidump.cpp
 Someone called SetWritingMinidump without holding the minidump lock.
 Someone called ClearWritingMinidump without holding the minidump lock.
+!g_pCrashMemoryReserve
 Assert( %s ):%s:%d
 MacOS
 Frameworks
 crashhandler.dylib
 CreateInterface
-Oct 13 2021
-12:46:06
+Oct 21 2021
+16:35:30
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -3127,21 +3130,29 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-o^hg
-IFJ 
-"pS%t
-oO/[
-HE9:
-%i,:
+G]q-1!i
+S KU9`
+l:Now
+&c|A
+JBiG
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-YN)"
-UoyR
-$f\<
-PJ)x
-mYw{
+5}R<@
+S/EP
+U)d!
+sUG"
+?8ut[86
+,Sf=
+=dLN
+Sq?V
+\k96
+ aU6@
+CeYz'
+K"Lf
+D/`m
+7uUij
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -3197,8 +3208,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211013194625Z0/
-|lHa
+211021233556Z0/
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -3206,32 +3216,39 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		43xsSGHYHgGnSXHpPuyQb/BpWOU=
+		q93D8WPqXY+Y6AE0+61p1RO2FZI=
 		</data>
 		<data>
-		efvzE2SKBb3DNIUZ44wfAD0sm/8=
+		pQrVrnaVrpXxkOBhrX6CvIOx9wo=
 		</data>
 	</array>
 </dict>
 </plist>
-cL"2
-9QdK
-htC%
-20211013194710Z0
+A<kj{
+Z\A4_
+>.puz
+20211021233556Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-210928173501Z
-211109173500Z0B1
-Timestamp Signer NWK21
+210928174502Z
+211109174501Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
+H^ ;
+4b6;
+Q}0,
+-3/Uh
+d`zE
+mOY`
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-U>cG
-PTQPF"
+q3wp
+mhbr
+F;3N^
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -3270,8 +3287,8 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211013194710Z0#
-5n:onT
-T@RRT
-TID7
-)kM8L
+211021233556Z0#
+d3ZM`
+on?Q=*-
+x<fng
+[e4.!

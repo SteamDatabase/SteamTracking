@@ -68,10 +68,10 @@ __image_info
 __OBJC
 __LINKEDIT
 @loader_path/gameoverlayrenderer.dylib
-dUob
 /System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL
 /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices
+/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia
 /System/Library/Frameworks/IOSurface.framework/Versions/A/IOSurface
 /System/Library/Frameworks/Carbon.framework/Versions/A/Carbon
 /System/Library/Frameworks/Metal.framework/Versions/A/Metal
@@ -1586,7 +1586,7 @@ jIsOverlayEnabled
 cYY0T
 BrrrXJ\Z
 :>6x
-:>	s
+:L	s
 FF26(
 4>>^
 L d\8
@@ -1837,35 +1837,41 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-:\zd
-:YbJ
-w~WW,G
-Y\~U{
-TEA%Y7
-{'ZyEQd
-ye/S
-nsjY@lGcp
-mT.(8|
-M&HPG
+4:"Q
+vl`2_
+fiiF
+Xy6n
+$p<Y
+R{a>8
+	?xz
+6~=jL
+P_hD
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-}wHR
-%H0FS
-Yl**
-"Pkh
->"2R
-e8F`
-0:(Z
-V\js9K
-k62-
-q3SX
-|@r/1
-`m_Ww)(e5	
-@5tT
-d<o>
-A-U(
+|]!i
+=d;=
+t6zV
+6%sJx
+^Q1D
+aCH8)p
+0$lL
+^O!vd
+BS&4g
+3s2=
+%s9F
+?7o2
+l7_)
+;>//
+A$bcRm`
+P['3	~
+`9Tm0
+\#`BSd
+VbV5
+#Tur
+* %WP
+=[)\
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -1921,8 +1927,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211013194609Z0/
-~W-	q
+211021233540Z0/
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1930,38 +1935,34 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		mDXwzENACA6ECcg3pQZU//uYu98=
+		DvlU4Y9xaYMHx6EADsza/VyNy64=
 		</data>
 		<data>
-		mIeNtmY5XIlUU0ugRgsy3NRGFOg=
+		5FBgieUG01eGjE6BVLHPVCN3i8E=
 		</data>
 	</array>
 </dict>
 </plist>
->f\66gg
-w-%:
-20211013194653Z0
+?7z~
+{c'f
+=vQ7
+nD(vopGLty
+s)w,
+20211021233541Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-210928174502Z
-211109174501Z0B1
-Timestamp Signer NWK11
+210928173501Z
+211109173500Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-H^ ;
-4b6;
-Q}0,
--3/Uh
-d`zE
-mOY`
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-q3wp
-mhbr
-F;3N^
+U>cG
+PTQPF"
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -2000,11 +2001,11 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211013194653Z0#
-d3ZM`
-]L)_:
-b("S
-6d~ 
+211021233541Z0#
+yrRnLC(
+o!74
+5r1<VwO
+	j|:
 __TEXT
 __text
 __TEXT
@@ -2066,12 +2067,15 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/gameoverlayrenderer.dylib
+_GM8
 /System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL
 /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices
+/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia
 /System/Library/Frameworks/IOSurface.framework/Versions/A/IOSurface
 /System/Library/Frameworks/Carbon.framework/Versions/A/Carbon
 /System/Library/Frameworks/Metal.framework/Versions/A/Metal
+/System/Library/Frameworks/ReplayKit.framework/Versions/A/ReplayKit
 /usr/lib/libc++.1.dylib
 /usr/lib/libSystem.B.dylib
 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
@@ -2238,6 +2242,8 @@ AWAVATS
 AWAVAUATSPH
 [A\A]A^A_]
 vOA)
+AWAVSP
+[A^A_]
 AWAVAUATSH
 [A\A]A^A_]
 [A^]
@@ -2247,9 +2253,9 @@ AWAVATSI
 [A\A^A_]
 AVSH
 [A^]
-AWAVSH
-tyE1
-[A^A_]
+AWAVATSH
+wfHc
+[A\A^A_]
 AWAVSPI
 [A^A_]
 AVSA
@@ -2306,13 +2312,12 @@ AWAVSH
 AWAVAUATSH
 u8ASD
 ]0AS
-Y-5p
 H[A\A]A^A_]
 AWAVAUATSH
 D9` 
 D9c ~
 |$$I
-(%Zl
+Y%`v
 [A\A]A^A_]
 P A9
 [A\A]A^A_]
@@ -2357,7 +2362,6 @@ AWAVAUATSH
 H9^ 
 t$H9Y w
 D9A4u
-Y%US
 [A\A]A^A_]
 AWAVAUATSH
 8[A\A]A^A_]
@@ -2418,7 +2422,7 @@ AWAVAUATSPH
 AWAVAUATSH
 )C0f
 )C f
-L9(t
+L90t
 )C0f
 )C f
 [A\A]A^A_]
@@ -2494,7 +2498,8 @@ H[A\A]A^A_]
 A9N(u
 9F u
 AWAVSH
-[A^A_]
+86u"A
+h[A^A_]
 AWAVATSH
 )CNH
 [A\A^A_]
@@ -2521,8 +2526,6 @@ h[A\A]A^A_]
 h[A\A]A^A_]
 AWAVAUATSH
 t9L9
-D8=[i
-D8=:i
 |$$I
 E;u,s*H
 P0E;u4s
@@ -2567,6 +2570,7 @@ AWAVSPI
 AWAVSP
 [A^A_]
 AWAVAUATSH
+D8-mh
 ([A\A]A^A_]
 AWAVATSH
 [A\A^A_]
@@ -2602,6 +2606,9 @@ AWAVAUATSH
 [A\A]A^A_]
 [A\A]A^A_]
 [A\A]A^A_]
+AWAVATSH
+mcpluB
+[A\A^A_]
 AWAVATSH
 [A\A^A_]
 AWAVSPL
@@ -2865,6 +2872,23 @@ AWAVAUATSH
 [A\A]A^A_
 ++CCUNGH9CPt	H
 ++CCUNGH
+UAWAVATSH
+}%E1
+H;D$
+[A\A^A_]
+UAWAVAUATSH
+D$`H
+D$8H
+D$0H
+D$(H
+D$ H
+H;D$
+l$ H
+T$8H
+T$0H9
+|$@1
+H;D$`u
+h[A\A]A^A_]
 12CIMENullImpl
 4IIME
 24CGameStreamBaseMemStream
@@ -2954,6 +2978,8 @@ Timed out waiting for mutex in PutInternal()
 m_pMutex->Wait() failed in ShMemStream::PutInternal
 SHMemStream header is corrupt in PutInternal()
 PutInternal: Not enough space for put when locked
+Timed out waiting for available space in CSharedMemStream::BLockMemoryForWrite()
+Timed out waiting for lock in CSharedMemStream::BLockMemoryForWrite
 Asked to unlock memory for write.. but wasn't locked
 Video memory stream writer destroyed with frame lock!
 Video memory stream frame commit without lock!
@@ -3206,6 +3232,10 @@ T#,R
 description
 T@"NSString",R,C
 debugDescription
+presentedTime
+Td,R,N
+drawableID
+TQ,R,N
 texture
 T@"<MTLTexture>",R
 layer
@@ -3219,8 +3249,16 @@ commandQueue
 T@"<MTLCommandQueue>",R
 retainedReferences
 Tc,R
+errorOptions
 label
 T@"NSString",C
+kernelStartTime
+Td,R
+kernelEndTime
+logs
+T@"<MTLLogContainer>",R
+GPUStartTime
+GPUEndTime
 status
 error
 T@"NSError",R
@@ -3342,6 +3380,14 @@ pid %d != %d, skipping destruction (fork without exec?)
 NSView
 NSCursor
 NSEvent
+GameOverlay_AudioStream_%u
+Audio pipe full
+StartRecordingAudio( %s )
+v32@?0^{opaqueCMSampleBuffer=}8q16@"NSError"24
+v16@?0@"NSError"8
+startCapture: %@
+StartRecordingAudio() only supported on macOS 11.0 and newer
+StopRecordingAudio
 St11logic_error
 _GLOBAL_
 (anonymous namespace)
@@ -3423,6 +3469,20 @@ terminate called recursively
 terminate called after throwing an instance of '
   what():  
 terminate called without an active exception
+_availability_version_check
+kCFAllocatorNull
+CFDataCreateWithBytesNoCopy
+CFPropertyListCreateWithData
+CFPropertyListCreateFromXMLData
+CFStringCreateWithCStringNoCopy
+CFDictionaryGetValue
+CFGetTypeID
+CFStringGetTypeID
+CFStringGetCString
+CFRelease
+/System/Library/CoreServices/SystemVersion.plist
+ProductVersion
+%d.%d.%d
 windowWithWindowNumber:
 currentContext
 CGLContextObj
@@ -3489,6 +3549,10 @@ description
 debugDescription
 present
 presentAtTime:
+presentAfterMinimumDuration:
+addPresentedHandler:
+presentedTime
+drawableID
 texture
 layer
 steamoverlay_commit
@@ -3500,21 +3564,37 @@ commit
 addScheduledHandler:
 presentDrawable:
 presentDrawable:atTime:
+presentDrawable:afterMinimumDuration:
 waitUntilScheduled
 addCompletedHandler:
 waitUntilCompleted
 blitCommandEncoder
 renderCommandEncoderWithDescriptor:
+computeCommandEncoderWithDescriptor:
+blitCommandEncoderWithDescriptor:
 computeCommandEncoder
+computeCommandEncoderWithDispatchType:
+encodeWaitForEvent:value:
+encodeSignalEvent:value:
 parallelRenderCommandEncoderWithDescriptor:
+resourceStateCommandEncoder
+resourceStateCommandEncoderWithDescriptor:
+accelerationStructureCommandEncoder
+pushDebugGroup:
+popDebugGroup
 device
 commandQueue
 retainedReferences
+errorOptions
 label
 setLabel:
+kernelStartTime
+kernelEndTime
+logs
+GPUStartTime
+GPUEndTime
 status
 error
-presentDrawable:afterMinimumDuration:
 isVisible
 subviews
 convertRectFromLayer:
@@ -3546,12 +3626,10 @@ height
 numberWithInt:
 objectForKey:
 stringWithFormat:
-pushDebugGroup:
 setRenderPipelineState:
 setFragmentTexture:atIndex:
 setVertexBytes:length:atIndex:
 drawPrimitives:vertexStart:vertexCount:
-popDebugGroup
 pixelFormat
 texture2DDescriptorWithPixelFormat:width:height:mipmapped:
 newTextureWithDescriptor:
@@ -3595,6 +3673,9 @@ hide
 unhide
 pressedMouseButtons
 nextEventMatchingMask:untilDate:inMode:dequeue:
+sharedRecorder
+startCaptureWithHandler:completionHandler:
+stopCaptureWithHandler:
 arrowCursor
 IBeamCursor
 crosshairCursor
@@ -3652,21 +3733,33 @@ c24@0:8@"Protocol"16
 @"NSString"16@0:8
 v16@0:8
 v24@0:8d16
+v24@0:8@?16
+d16@0:8
+v24@0:8@?<v@?@"<MTLDrawable>">16
 @"<MTLTexture>"16@0:8
 @"CAMetalLayer"16@0:8
-v24@0:8@?16
 v32@0:8@16d24
 @24@0:8@16
+@24@0:8Q16
+v32@0:8@16Q24
 v24@0:8@?<v@?@"<MTLCommandBuffer>">16
 v24@0:8@"<MTLDrawable>"16
 v32@0:8@"<MTLDrawable>"16d24
 @"<MTLBlitCommandEncoder>"16@0:8
 @"<MTLRenderCommandEncoder>"24@0:8@"MTLRenderPassDescriptor"16
+@"<MTLComputeCommandEncoder>"24@0:8@"MTLComputePassDescriptor"16
+@"<MTLBlitCommandEncoder>"24@0:8@"MTLBlitPassDescriptor"16
 @"<MTLComputeCommandEncoder>"16@0:8
+@"<MTLComputeCommandEncoder>"24@0:8Q16
+v32@0:8@"<MTLEvent>"16Q24
 @"<MTLParallelRenderCommandEncoder>"24@0:8@"MTLRenderPassDescriptor"16
+@"<MTLResourceStateCommandEncoder>"16@0:8
+@"<MTLResourceStateCommandEncoder>"24@0:8@"MTLResourceStatePassDescriptor"16
+@"<MTLAccelerationStructureCommandEncoder>"16@0:8
+v24@0:8@"NSString"16
 @"<MTLDevice>"16@0:8
 @"<MTLCommandQueue>"16@0:8
-v24@0:8@"NSString"16
+@"<MTLLogContainer>"16@0:8
 @"NSError"16@0:8
 {CGPoint=dd}16@0:8
 @44@0:8Q16@24@32c40
@@ -3686,20 +3779,19 @@ zPLR
 zPLR
 zPLR
 zPLR
-! RI`
+!(RI`
 ASAXAXA`
 A^A[A^A\A`
 RBRBp
 RBRBSASA`
-UDTDTASDp
+RBUDTDTASDp
 p RARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARF
 SBTASDTDTDTASARAZBZASASARB
 XBWAp@p0`*ASASASASASASASB^CRAp
 RARARARARARARARARARARARARARARARARARARBRB`
-RARARAp
+RARARARARARBZAp
 RARBVAp
-RARARARARARARARARARARARARARARARARARARB`
-AVAZAREWBp `
+RARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARB`<AVAZAREWBp `
 p`SA
 @_CGLChoosePixelFormat
 @_CGLFlushDrawable
@@ -3713,9 +3805,11 @@ p`SA
 @_HideCursor
 @_InitCursor
 @_ShowCursor
+A_MTLCreateSystemDefaultDevice
 A_OBJC_CLASS_$_MTLRenderPassDescriptor
 A_OBJC_CLASS_$_MTLRenderPipelineDescriptor
 A_OBJC_CLASS_$_MTLTextureDescriptor
+A_OBJC_CLASS_$_RPScreenRecorder
 @__DefaultRuneLocale
 @__NSConcreteGlobalBlock
 @__NSConcreteStackBlock
@@ -3728,8 +3822,6 @@ A_OBJC_CLASS_$_MTLTextureDescriptor
 @_CFRunLoopRun
 @_CFRunLoopRunInMode
 @_OBJC_CLASS_$_NSDate
-@_OBJC_CLASS_$_NSObject
-@_OBJC_METACLASS_$_NSObject
 @___CFConstantStringClassReference
 @_CGAssociateMouseAndMouseCursorPosition
 @_CGCursorIsVisible
@@ -3743,6 +3835,8 @@ A_OBJC_CLASS_$_MTLTextureDescriptor
 @_OBJC_CLASS_$_NSNumber
 @_OBJC_CLASS_$_NSString
 @_OBJC_CLASS_$_NSThread
+@_OBJC_CLASS_$_NSObject
+@_OBJC_METACLASS_$_NSObject
 @__objc_empty_cache
 @_objc_msgSend
 @_objc_release
@@ -3789,6 +3883,10 @@ A_OBJC_CLASS_$_MTLTextureDescriptor
 @_CGSGetSurfaceBounds
 @_CGSGetWindowBounds
 @_CGWarpMouseCursorPosition
+@_CMAudioFormatDescriptionGetStreamBasicDescription
+@_CMBlockBufferGetDataPointer
+@_CMSampleBufferGetDataBuffer
+@_CMSampleBufferGetFormatDescription
 @_IOSurfaceGetHeight
 @_IOSurfaceGetWidth
 @_IOSurfaceLookup
@@ -3796,6 +3894,7 @@ A_OBJC_CLASS_$_MTLTextureDescriptor
 A_MTLCopyAllDevices
 A_MTLCreateSystemDefaultDevice
 @_NSClassFromString
+@_NSLog
 @_NSSelectorFromString
 @_NSStringFromSelector
 @__Block_object_assign
@@ -3835,6 +3934,7 @@ A_MTLCreateSystemDefaultDevice
 @_connect
 @_dispatch_after
 @_dispatch_async
+A_dispatch_once_f
 @_dispatch_time
 @_dlopen
 @_dlsym
@@ -3845,7 +3945,10 @@ A_MTLCreateSystemDefaultDevice
 @_fprintf
 @_fputc
 @_fputs
+@_fread
 @_free
+@_fseek
+@_ftell
 @_ftruncate
 @_fwrite
 @_getenv
@@ -3923,6 +4026,7 @@ A_MTLCreateSystemDefaultDevice
 @_pthread_setspecific
 @_realloc
 @_recvmsg
+@_rewind
 @_sem_close
 @_sem_open
 @_sem_post
@@ -3962,7 +4066,6 @@ G.11
 D: 0 
 (44n
 n<Xj
-H*@Z.
 :"6~K
 :*z6
 _BOverlayNeedsPresent
@@ -4011,6 +4114,10 @@ _CGSForceShowCursor
 _CGSGetSurfaceBounds
 _CGSGetWindowBounds
 _CGWarpMouseCursorPosition
+_CMAudioFormatDescriptionGetStreamBasicDescription
+_CMBlockBufferGetDataPointer
+_CMSampleBufferGetDataBuffer
+_CMSampleBufferGetFormatDescription
 _HideCursor
 _IOSurfaceGetHeight
 _IOSurfaceGetWidth
@@ -4020,6 +4127,7 @@ _MTLCopyAllDevices
 _MTLCreateSystemDefaultDevice
 _NSApp
 _NSClassFromString
+_NSLog
 _NSSelectorFromString
 _NSStringFromSelector
 _OBJC_CLASS_$_MTLRenderPassDescriptor
@@ -4037,6 +4145,7 @@ _OBJC_CLASS_$_NSOpenGLContext
 _OBJC_CLASS_$_NSOpenGLView
 _OBJC_CLASS_$_NSString
 _OBJC_CLASS_$_NSThread
+_OBJC_CLASS_$_RPScreenRecorder
 _OBJC_METACLASS_$_NSObject
 _ShowCursor
 __Block_object_assign
@@ -4085,6 +4194,7 @@ _close
 _connect
 _dispatch_after
 _dispatch_async
+_dispatch_once_f
 _dispatch_time
 _dlopen
 _dlsym
@@ -4095,7 +4205,10 @@ _fopen
 _fprintf
 _fputc
 _fputs
+_fread
 _free
+_fseek
+_ftell
 _ftruncate
 _fwrite
 _getenv
@@ -4177,6 +4290,7 @@ _pthread_self
 _pthread_setspecific
 _realloc
 _recvmsg
+_rewind
 _sem_close
 _sem_open
 _sem_post
@@ -4210,36 +4324,42 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-%'>2f
-V:&1
-]g _
-\dab
-S+?	
-:]?U
-ZV\V
-Hs;G`
-p-~V
-'Q-^
-/#/a1SG
-bLtn
+;"U<cw
++}/x
+@AyJ
+0A*h-
+1i]+J
+v-|M|&	9v
+A8	s
+#&BdEC4s
+_BEN
+6	)hY
+0yVf
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-('fub
-*YV	
-KHZy
-?eeDq
-Fe_I
-LOtN
-U"'l
-;8@hX
-hD Y
-di_K
-TOS^j.t
-i4]2
-9J$T
-zUk 
+g~9M
+M>JzZ
+hc;,
+d&`*
+#?LA!
+'Wi@
+]I<?
+ hVP
+{#@H
+t(tw
+ <s7
+DbQ.
+!*<S~
+Ic%dg=
+}9SS
+fH[^
+&u|f
+=@A~P
+LYV]$
+-E1	uq
+`'	|
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -4295,7 +4415,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211013194609Z0/
+211021233540Z0/
+`IJFD
+^F8u4
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -4303,33 +4425,37 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		dXPi+KE/VljE4vWzsFbVXiDExkU=
+		rrUqjTXoa2wr0x4Jyz86R+UZExo=
 		</data>
 		<data>
-		5B3iG0pkbh0kxq+Atzx7wKjXRZU=
+		bnn/5/xq8MLYy+VhcuMdVOONNhw=
 		</data>
 	</array>
 </dict>
 </plist>
-.e*I
-A=ytY
-@9I Go
-r"+h
-20211013194653Z0
+XP$eb
+20211021233541Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-210928173501Z
-211109173500Z0B1
-Timestamp Signer NWK21
+210928174502Z
+211109174501Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
+H^ ;
+4b6;
+Q}0,
+-3/Uh
+d`zE
+mOY`
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-U>cG
-PTQPF"
+q3wp
+mhbr
+F;3N^
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -4368,12 +4494,14 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211013194653Z0#
-9c'6
-OZ08
-TtVF
-v~Jy`
-S8~Q
+211021233541Z0#
+y{S4
+^P[O
+d3ZM`
+=|s8
+8_hw
+2<B^+\
+rS(A
 __TEXT
 __text
 __TEXT
@@ -4437,9 +4565,11 @@ __LINKEDIT
 /System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL
 /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices
+/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia
 /System/Library/Frameworks/IOSurface.framework/Versions/A/IOSurface
 /System/Library/Frameworks/Carbon.framework/Versions/A/Carbon
 /System/Library/Frameworks/Metal.framework/Versions/A/Metal
+/System/Library/Frameworks/ReplayKit.framework/Versions/A/ReplayKit
 /usr/lib/libc++.1.dylib
 /usr/lib/libSystem.B.dylib
 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
@@ -4461,6 +4591,7 @@ ia@9i
 ia@9i
 	a@9Ia
 h&B)
+19`I
 56L@
 ;wA9
 @9h*
@@ -4474,33 +4605,30 @@ Zh2E9
 h2E9
 $E9H
 &E9h
-`w	P
-`u	P
-@u	P
-au	P
-09@s	
-(	09
-R3n	
+h&A)
+jh8)	
+19:#	
+@9{A
 Th*@
 Th.@
 9h"@9h
-h^	P
-	k	0
 h&D)
 h&@9
-D9i,	p
 hVB9
 hRB9
+C91A
+Z)XA
 a"A9
-E)R>
 h&D)
 i"@9
-<)#	p
-*"	P
+<Ix	p
+Jw	P
 9h2@
 	)h"@
 yh6@
 <h"@9
+4 ]	p
+`\	P
 bD9h
 Th#@
 hbN9
@@ -4526,7 +4654,6 @@ X`2A
 7		)
 BP7	
 9kbD9i
-9(gC
 Z)x,
 Z-xL
 Z-x-
@@ -4568,20 +4695,17 @@ X`jB
 hjA9h
 4h.@
 4b.@
-Mm`6@
+Mm`n@
 NH `
 m@)h
 nA8!
 bnSjaN
 bn1ja
 bn!ha
-4!]B
 WA)9
-	Xbc
 	@q"
 	K?U
 @z`:@z`
-		B9)
 o"E@
 !~"8"
 T( @
@@ -4596,22 +4720,9 @@ T	!@
 T`*@
 T`*@
 T`*@
-@w	X
 T`*@
 +ih8J	
 hnA9h/
- m	X
-		B9)
-`Z	X
-`Y	X
-`X	X
-`W	X
-`V	X
-`U	X
-`T	X
-`S	X
-`R	X
-`Q	X
 T`*@
 hjA9(
 7`*@
@@ -4620,34 +4731,33 @@ hjA9(
 i"V)
 Ci8}
 hfA9
-fB9?
-fB9(
-)	B9)
+&D9?
+&D9(
 	*h&@
 5hrA9
-	iB9i
+	)D9i
 9h.@
 Th&@
 Th&@
 Rh:@
+Tv(	
+@%	X
+a#	XA
 T`*@
 4a*@
 4hrA9
 9`&@
 RivA9
 Th&@
-	AC9?
+Tl%A
 hBD9H
 hrD9h
-)qAy
+)QBy
 hrD9
 hBD9
 hBD9h
-)G9(
 !IzH
-zC9t
 +ih8J	
-	1E9
 12CIMENullImpl
 4IIME
 24CGameStreamBaseMemStream
@@ -4735,6 +4845,8 @@ Timed out waiting for mutex in PutInternal()
 m_pMutex->Wait() failed in ShMemStream::PutInternal
 SHMemStream header is corrupt in PutInternal()
 PutInternal: Not enough space for put when locked
+Timed out waiting for available space in CSharedMemStream::BLockMemoryForWrite()
+Timed out waiting for lock in CSharedMemStream::BLockMemoryForWrite
 Asked to unlock memory for write.. but wasn't locked
 Video memory stream writer destroyed with frame lock!
 Video memory stream frame commit without lock!
@@ -5135,6 +5247,28 @@ pid %d != %d, skipping destruction (fork without exec?)
 NSView
 NSCursor
 NSEvent
+GameOverlay_AudioStream_%u
+Audio pipe full
+StartRecordingAudio( %s )
+v32@?0^{opaqueCMSampleBuffer=}8q16@"NSError"24
+v16@?0@"NSError"8
+startCapture: %@
+StartRecordingAudio() only supported on macOS 11.0 and newer
+StopRecordingAudio
+_availability_version_check
+kCFAllocatorNull
+CFDataCreateWithBytesNoCopy
+CFPropertyListCreateWithData
+CFPropertyListCreateFromXMLData
+CFStringCreateWithCStringNoCopy
+CFDictionaryGetValue
+CFGetTypeID
+CFStringGetTypeID
+CFStringGetCString
+CFRelease
+/System/Library/CoreServices/SystemVersion.plist
+ProductVersion
+%d.%d.%d
 windowWithWindowNumber:
 currentContext
 CGLContextObj
@@ -5325,6 +5459,9 @@ hide
 unhide
 pressedMouseButtons
 nextEventMatchingMask:untilDate:inMode:dequeue:
+sharedRecorder
+startCaptureWithHandler:completionHandler:
+stopCaptureWithHandler:
 arrowCursor
 IBeamCursor
 crosshairCursor
@@ -5421,6 +5558,7 @@ RAYARA`
 ARA`
 RBRBp
 RBRBSBRAUBSFSCRDp
+RBRB
 Ap@p0SASASASASASASB^CRAp
 RARARARARARARARARARARARARARARARARARARBRB`
 RARARARARARBZAp
@@ -5441,6 +5579,7 @@ RARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARB`=ARDp
 A_OBJC_CLASS_$_MTLRenderPassDescriptor
 A_OBJC_CLASS_$_MTLRenderPipelineDescriptor
 A_OBJC_CLASS_$_MTLTextureDescriptor
+A_OBJC_CLASS_$_RPScreenRecorder
 @__ZNSt12length_errorD1Ev
 @__ZTISt12length_error
 @__ZTVN10__cxxabiv117__class_type_infoE
@@ -5520,6 +5659,10 @@ A_OBJC_CLASS_$_MTLTextureDescriptor
 @_CGSGetSurfaceBounds
 @_CGSGetWindowBounds
 @_CGWarpMouseCursorPosition
+@_CMAudioFormatDescriptionGetStreamBasicDescription
+@_CMBlockBufferGetDataPointer
+@_CMSampleBufferGetDataBuffer
+@_CMSampleBufferGetFormatDescription
 @_IOSurfaceGetHeight
 @_IOSurfaceGetWidth
 @_IOSurfaceLookup
@@ -5527,6 +5670,7 @@ A_OBJC_CLASS_$_MTLTextureDescriptor
 A_MTLCopyAllDevices
 A_MTLCreateSystemDefaultDevice
 @_NSClassFromString
+@_NSLog
 @_NSSelectorFromString
 @_NSStringFromSelector
 @__Block_object_assign
@@ -5560,6 +5704,7 @@ A_MTLCreateSystemDefaultDevice
 @_connect
 @_dispatch_after
 @_dispatch_async
+A_dispatch_once_f
 @_dispatch_time
 @_dlopen
 @_dlsym
@@ -5568,7 +5713,10 @@ A_MTLCreateSystemDefaultDevice
 @_fcntl
 @_fopen
 @_fprintf
+@_fread
 @_free
+@_fseek
+@_ftell
 @_ftruncate
 @_fwrite
 @_getenv
@@ -5648,6 +5796,7 @@ A_MTLCreateSystemDefaultDevice
 @_pthread_mutexattr_settype
 @_pthread_self
 @_recvmsg
+@_rewind
 @_sem_close
 @_sem_open
 @_sem_post
@@ -5681,6 +5830,8 @@ jIsOverlayEnabled
 HH88$
 H,8hx
 (<H$
+(`4,TX
+L,L|
 _BOverlayNeedsPresent
 _IsOverlayEnabled
 _SetNotificationPosition
@@ -5727,6 +5878,10 @@ _CGSForceShowCursor
 _CGSGetSurfaceBounds
 _CGSGetWindowBounds
 _CGWarpMouseCursorPosition
+_CMAudioFormatDescriptionGetStreamBasicDescription
+_CMBlockBufferGetDataPointer
+_CMSampleBufferGetDataBuffer
+_CMSampleBufferGetFormatDescription
 _HideCursor
 _IOSurfaceGetHeight
 _IOSurfaceGetWidth
@@ -5736,6 +5891,7 @@ _MTLCopyAllDevices
 _MTLCreateSystemDefaultDevice
 _NSApp
 _NSClassFromString
+_NSLog
 _NSSelectorFromString
 _NSStringFromSelector
 _OBJC_CLASS_$_MTLRenderPassDescriptor
@@ -5753,6 +5909,7 @@ _OBJC_CLASS_$_NSOpenGLContext
 _OBJC_CLASS_$_NSOpenGLView
 _OBJC_CLASS_$_NSString
 _OBJC_CLASS_$_NSThread
+_OBJC_CLASS_$_RPScreenRecorder
 _OBJC_METACLASS_$_NSObject
 _ShowCursor
 __Block_object_assign
@@ -5803,6 +5960,7 @@ _close
 _connect
 _dispatch_after
 _dispatch_async
+_dispatch_once_f
 _dispatch_time
 _dlopen
 _dlsym
@@ -5811,7 +5969,10 @@ _fclose
 _fcntl
 _fopen
 _fprintf
+_fread
 _free
+_fseek
+_ftell
 _ftruncate
 _fwrite
 _getenv
@@ -5892,6 +6053,7 @@ _pthread_mutexattr_init
 _pthread_mutexattr_settype
 _pthread_self
 _recvmsg
+_rewind
 _sem_close
 _sem_open
 _sem_post
@@ -5921,48 +6083,28 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-C&pU
-^qp]
-,%2%P
-c<ty9
-QKeIfsL
-@XGLD
-[5OJ
-I@{f0uaN
-usc#
-k|sW*
-y0B]
-D;)}r:OG
-EUx"
-+\v1pp
-%jS)
-kIl5
-#FjUo
-Jr5Y
+meZP
+o_|OA
+bGo6
+{e~p,X
+I}m!
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-qSbN
-jHEK
-!t\K
-9D@D
-5j_y
-^#wS
- a"c[
-0\]$
-pbRf5
-S??J
-CPJ}
-OJL(
-31~X
-bCjo
-Q7u_t'
-~6o{
-a#$HxD
-8-w" 
-[~Ln
-.Ya#c
+61(*
++<qP
+nW9&
+xO(rfvG
+X:|/w
+[^(oDi-
+*M=n
+(EYa
+3-O!}O]
+zQ\G]
+g4%s
+,8#r
+Frm}=sF
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -6018,7 +6160,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211013194609Z0/
+211021233540Z0/
+R}&>
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -6026,43 +6169,35 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		re0d10LEkHkTBhdU/aajgloiz8M=
+		kvEMzV9YrqfEavUk+WTXRFv7QIw=
 		</data>
 		<data>
-		+jQSCl7b4BrR3ib9kYcDqIo0bDw=
+		2/tmlb0ykIL1Un0mPhCUEQPp1+s=
 		</data>
 	</array>
 </dict>
 </plist>
-%/Cs
-Y,s-
-}:in
-hl-P
-!N}(
-Ngif
-'+~F
-20211013194653Z0
+"ZP3
+BHB<Qmx
+Pq0t
+L[xG
+vHl0
+#.N	
+20211021233541Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-210928174502Z
-211109174501Z0B1
-Timestamp Signer NWK11
+210928173501Z
+211109173500Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-H^ ;
-4b6;
-Q}0,
--3/Uh
-d`zE
-mOY`
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-q3wp
-mhbr
-F;3N^
+U>cG
+PTQPF"
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -6101,8 +6236,7 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211013194653Z0#
-d3ZM`
-JkZz
-p"D pp
-<w6arJ
+211021233541Z0#
+X=#,
+syTL
+wRbZ!"z

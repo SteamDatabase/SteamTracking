@@ -220,6 +220,7 @@
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "Error al verificar los archivos firmados de %game%, se requiere la validación del contenido."
 "SteamUI_JoinDialog_CreateProcess_Error" "Error al iniciar el proceso de %game% :\n\n%detail%"
+"SteamUI_JoinDialog_CreateProcess_Error_Detail_macOS" "Las aplicaciones de 32 bits ya no son compatibles con macOS 10.15 o superior."
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "No se ha podido iniciar %game% en RV. (Error: %error%)"
 "SteamUI_JoinDialog_OpenVRWaitingForQuit" "Esperando a que %quitting_game% se cierre %dots%"
@@ -2044,12 +2045,12 @@ Necesitarás cerrar la sesión en OSX para que los cambios surtan efecto."
 
 "Steam_GameProperties_BackgroundDownloadsWhilePlaying"	"Descargas en segundo plano"
 
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=game"	"¿Das permiso a Steam para que descargue otros juegos o aplicaciones mientras juegas a %game%?"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=application"	"¿Das permiso a Steam para que descargue otros juegos o aplicaciones mientras utilizas %game%?"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=demo"	"¿Das permiso a Steam para que descargue otros juegos o aplicaciones mientras juegas a %game%?"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=media"	"¿Das permiso a Steam para que descargue otros juegos o aplicaciones mientras reproduces %game%?"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=music"	"¿Das permiso a Steam para que descargue otros juegos o aplicaciones mientras reproduces %game%?"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=tool"	"¿Das permiso a Steam para que descargue otros juegos o aplicaciones mientras utilizas %game%?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=game"	"¿Permites que Steam descargue otros juegos o aplicaciones mientras juegas a %game%?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=application"	"¿Permites que Steam descargue otros juegos o aplicaciones mientras utilizas %game%?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=demo"	"¿Permites que Steam descargue otros juegos o aplicaciones mientras juegas a %game%?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=media"	"¿Permites que Steam descargue otros juegos o aplicaciones mientras reproduces %game%?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=music"	"¿Permites que Steam descargue otros juegos o aplicaciones mientras reproduces %game%?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=tool"	"¿Permites que Steam descargue otros juegos o aplicaciones mientras utilizas %game%?"
 
 "Steam_BackgroundDownloadsDefault_Allow"	"Usar ajustes globales (permitir descargas en segundo plano)"
 "Steam_BackgroundDownloadsDefault_Deny"	"Usar ajustes globales (detener descargas en segundo plano)"
@@ -3622,7 +3623,7 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "steam_library_section_menu_hideicons"	"Ocultar iconos"
 
 "steam_downloads_networkusage"	"Uso de la red"
-"steam_downloads_downloadrate"	"Velocidad actual"
+"steam_downloads_downloadrate"	"Actual"
 
 "steam_downloads_thissession"	"Esta sesión"
 "steam_downloads_peakdownloadrate"	"Pico de velocidad"
@@ -3699,7 +3700,7 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "steam_purchased_space"		"Nuevo "
 "Steam_SizeOnDiskColumn"	"Tamaño en disco"
 
-"steam_details_lastplayedheader" "Jugado por última vez"
+"steam_details_lastplayedheader" "ÚItima sesión"
 "steam_details_lastlaunchedheader" "Iniciado por última vez"
 "steam_details_lastpurchased$apptype=game"	"Fecha de adquisición:"
 "steam_details_lastpurchased$apptype=application"	"Fecha de adquisición:"
@@ -4568,7 +4569,7 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "Steam_Settings_Streaming_EnableHardwareEncodingAMD" "Activar codificación por hardware en gráficas AMD"
 "Steam_Settings_Streaming_EnableHardwareEncodingIntel" "Activar codificación por hardware en gráficas integradas Intel"
 "Steam_Settings_Streaming_EnableHardwareDecoding" "Activar decodificación por hardware"
-"Steam_Settings_Streaming_EnableTrafficPriority_Description" "Si tienes un router de los más actuales o de gama alta, es posible que también quieras activar la priorización de tráfico de red."
+"Steam_Settings_Streaming_EnableTrafficPriority_Description" "Si tienes un router de los más recientes o de gama alta, es posible que también quieras activar la priorización de tráfico de red."
 "Steam_Settings_Streaming_EnableTrafficPriority" "Priorizar tráfico de red"
 "Steam_Settings_Streaming_PerformanceOverlay" "Interfaz de rendimiento"
 "Steam_Settings_Streaming_PerformanceOverlayDisabled" "Desactivada"

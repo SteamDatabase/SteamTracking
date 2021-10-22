@@ -111,6 +111,13 @@ message CAuthentication_UpdateAuthSessionWithSteamGuardCode_Request {
 message CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response {
 }
 
+message CAuthentication_GetAuthSessionsForAccount_Request {
+}
+
+message CAuthentication_GetAuthSessionsForAccount_Response {
+	repeated uint64 client_ids = 1 [(description) = "unique identifier of requestor, also used for routing"];
+}
+
 message CCloudGaming_CreateNonce_Request {
 	optional string platform = 1;
 	optional uint32 appid = 2;
@@ -164,6 +171,10 @@ service Authentication {
 
 	rpc UpdateAuthSessionWithSteamGuardCode (.CAuthentication_UpdateAuthSessionWithSteamGuardCode_Request) returns (.CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response) {
 		option (method_description) = "approve an authentication session via steam guard code";
+	}
+
+	rpc GetAuthSessionsForAccount (.CAuthentication_GetAuthSessionsForAccount_Request) returns (.CAuthentication_GetAuthSessionsForAccount_Response) {
+		option (method_description) = "Gets all active auth sessions for an account for reference by the mobile app";
 	}
 }
 

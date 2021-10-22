@@ -13,7 +13,6 @@ __const
 __TEXT
 __objc_methname
 __TEXT
-"
 __objc_classname__TEXT
 __objc_methtype
 __TEXT
@@ -72,7 +71,6 @@ P
 0
 /usr/lib/libz.1.dylib
 h
->
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 X
 /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
@@ -94,7 +92,6 @@ P
 `
 /System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore
 0
-x
 /usr/lib/libc++.1.dylib
 8
 /usr/lib/libSystem.B.dylib
@@ -102,7 +99,7 @@ X
 -
 /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
 p
-0
+6
 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices
 h
 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
@@ -1869,6 +1866,7 @@ LOCK_EX
 LOCK_SH
 fcntl failed to set F_NOCACHE
 rb
+%lld
 unsupported flags 0x%x passed to CFileReader::BOpenFile
 BIsOpen()
 cubBytesToRead < INT32_MAX
@@ -1902,7 +1900,6 @@ can't convert uint64 to int32 (data loss)
 can't convert int64 to uint64 (negative number)
 %f
 %llu
-%lld
 RGBA: %.2X %.2X %.2X %.2X
 $0
 $1
@@ -2289,6 +2286,7 @@ P
 
 =
 @
+|
 @
 @
 0

@@ -225,6 +225,7 @@ Cela devrait prendre moins d'une minute."
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "Échec de la vérification des fichiers signés de %game%. Validation du contenu requise."
 "SteamUI_JoinDialog_CreateProcess_Error" "Échec du démarrage du processus de %game% :\n\n%detail%"
+"SteamUI_JoinDialog_CreateProcess_Error_Detail_macOS" "Les applications 32 bits ne sont plus prises en charge par macOS 10.15 ou toute version ultérieure."
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "Impossible de démarrer %game% en mode RV. (Erreur : %error%)"
 "SteamUI_JoinDialog_OpenVRWaitingForQuit" "En attente de l'arrêt de %quitting_game%%dots%"
@@ -802,7 +803,7 @@ Cela devrait prendre moins d'une minute."
 "SteamUI_Selection_Polish"		"Polski (Polonais)"
 "SteamUI_Selection_Danish"		"Dansk (Danois)"
 "SteamUI_Selection_Dutch"			"Nederlands (Néerlandais)"
-"SteamUI_Selection_Finnish"		"Suomi (Finnois)"
+"SteamUI_Selection_Finnish"		"Suomi (finnois)"
 "SteamUI_Selection_Norwegian"		"Norsk (Norvégien)"
 "SteamUI_Selection_Swedish"		"Svenska (Suédois)"
 "SteamUI_Selection_Czech"		"Čeština (Tchèque)"
@@ -3461,7 +3462,7 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 
 "SteamUI_Settings_Security_Status_TwoFactor" "Protégé par l'authentificateur mobile Steam Guard"
 "SteamUI_Settings_Security_ManageTwoFactor_Title" "Gérer l'authentificateur mobile Steam Guard"
-"SteamUI_Settings_Security_ManageTwoFactor" "Vous utilisez l'authentificateur mobile Steam Guard. Pour gérer vos paramètres Steam Guard, veuillez ouvrir l'application Steam Mobile sur votre smartphone."
+"SteamUI_Settings_Security_ManageTwoFactor" "Vous utilisez l'authentificateur mobile Steam Guard. Pour gérer vos paramètres Steam Guard, veuillez ouvrir l'application mobile Steam sur votre smartphone."
 "SteamUI_Settings_Security_ManageTwoFactor_2" "Si votre téléphone est indisponible de façon permanente, contactez le Support Steam pour recevoir de l'aide."
 
 "SteamUI_ManageSecurity_ChooseName" "Choisissez un nom familier pour cette machine :"
@@ -3492,11 +3493,11 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 "SteamUI_LockAccountButton" "Protéger mon compte avec Steam Guard (Recommandé)"
 
 "SteamUI_SteamGuardProviderEmail" "E-mail"
-"SteamUI_SteamGuardProviderMobile" "Client Steam Mobile"
+"SteamUI_SteamGuardProviderMobile" "Client de l'application mobile Steam"
 "SteamUI_SteamGuardDontRemember" "Vous devrez ressaisir le code si vous souhaitez vous reconnecter à votre compte depuis cet ordinateur."
-"SteamUI_SteamGuardUseMobile" "Utiliser l'application Steam Mobile pour fournir votre code Steam Guard"
+"SteamUI_SteamGuardUseMobile" "Utiliser l'application mobile Steam pour fournir votre code Steam Guard"
 "SteamUI_SteamGuardUseMobile2" "Mon appareil mobile est prêt"
-"SteamUI_SteamGuardUseMobile3" "Je ne possède plus mon appareil mobile comportant l'application Steam Mobile."
+"SteamUI_SteamGuardUseMobile3" "Je ne possède plus mon appareil mobile comportant l'application mobile Steam."
 
 "SteamUI_SteamGuardNotifyNewMachinesTitle" "Notification Steam Guard"
 "SteamUI_SteamGuardNotifyNewMachinesDetails" "Depuis votre dernière connexion à partir de cet ordinateur, les informations d'identification de votre compte ont été utilisées pour autoriser une autre machine via Steam Guard.\n\nVeuillez confirmer que vous êtes bien à l'origine des sessions suivantes :"

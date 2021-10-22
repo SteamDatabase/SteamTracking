@@ -106,7 +106,7 @@
 "Friends_SignIn_RefreshPassword"				"Inloggen..."
 "Friends_SignIn_ActivateFriends"				"Deelnemen aan bètaversie van Vrienden..."
 "Friends_ConnectingToFriendsNetwork"			"Verbinding maken met netwerk Vrienden..."
-"Friends_ScanningForFriends"					"Vriendenlijst downloaden..."
+"Friends_ScanningForFriends"					"Vriendenlijst wordt gedownload ..."
 
 "Friends_NotConnectedToFriendsNetwork"		"Er is geen verbinding mogelijk met het netwerk van Vrienden. Steam blijft automatisch proberen om verbinding te maken."
 "Friends_NotConnectedToFriendsNetwork_InvalidPassword"	"Je moet weer inloggen bij Steam om Vrienden te kunnen gebruiken."

@@ -188,6 +188,7 @@ UUUU
 ^_[]
 ^_[]
 ^_[]
+^_[]
 VRQP
 L^_[]
  ^_]
@@ -242,7 +243,7 @@ FX;E
 <^_[]
 ^_[]
 l^_[]
-PQh)	
+PQh'	
 ^_[]
 8#t#
 ^_[]
@@ -402,6 +403,7 @@ unknown
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/minidump.cpp
 Someone called SetWritingMinidump without holding the minidump lock.
 Someone called ClearWritingMinidump without holding the minidump lock.
+!g_pCrashMemoryReserve
 Assert( %s ):%s:%d
 MacOS
 Frameworks
@@ -410,8 +412,8 @@ crashhandler002
 crashhandler.dylib
 CreateInterface
 Steam
-Oct 13 2021
-12:46:27
+Oct 21 2021
+16:35:57
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -1188,12 +1190,13 @@ yI#WnI
 Dzll
 ){c$TII
 789>>8'
-RO""@bF
+RO""@@F
 			BA"
 Y@Y88
 ]W m(
 iF=+
 E5'$u	
+	7	   [t
 	5/)*D
 Qg	z""
 bPh0
@@ -1756,16 +1759,12 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-F(b7n
-Tri/
-thkP T
-`U2m
-RDrc
-p RH
-!5lGH
-^t)cJ
-8|:?8F)
-kY3V
+cl$6
+0Alk*i
+!ZQpR
+.m1Sb
+}Xau
+"sX_
 &%.G
 wPk%
 +!=+
@@ -1774,20 +1773,23 @@ subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-uj_?
-wrCL*)N>
-n~5)4Y
-?X<Pm
-Ac:0<
-dR>8
-0XzM
-#cHK'z
-m>|$q
-Jpx?
-Y=ni
-ZA{`
-0-CG
-V(WV
+C~^=
+3w|P
+ I_F
+ivE4T:
+Hqrz
+c_&e
+svmF
+/Ya=
+K)Q!
+1"KI
+aEk@
+tj-G
+o|d-
+V,:6
+4j}1T:
+1n4H
+R!5:
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -1843,8 +1845,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211013194629Z0/
-=k[1
+211021233600Z0/
+'C0[
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1852,19 +1854,18 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		7StwRtbCvTyMW3TMmP6PDxdujdk=
+		jLDQ8XNy5vfw8tsyRMx83GzpzDc=
 		</data>
 		<data>
-		icYJd9u8MfkN9wv06UQD394pGLU=
+		L+Z16nTJHsWCNN7oaCQbiJ1+V8E=
 		</data>
 	</array>
 </dict>
 </plist>
-&9&,r
-+4X=,A
-HJ3D(
-y.wW
-20211013194714Z0
+:[@oR
+hI$wy
+*{{x
+20211021233600Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -1917,11 +1918,11 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211013194714Z0#
-Oq{w q
-WVGcH
-Ta,3
-QM `~
+211021233600Z0#
+*0:{
+j13n
+RI!E
+?M3X9
 __TEXT
 __text
 __TEXT
@@ -2632,6 +2633,7 @@ unknown
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/minidump.cpp
 Someone called SetWritingMinidump without holding the minidump lock.
 Someone called ClearWritingMinidump without holding the minidump lock.
+!g_pCrashMemoryReserve
 Assert( %s ):%s:%d
 MacOS
 Frameworks
@@ -2640,8 +2642,8 @@ crashhandler002
 crashhandler.dylib
 CreateInterface
 Steam
-Oct 13 2021
-12:46:27
+Oct 21 2021
+16:35:57
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -3416,7 +3418,7 @@ LAA~{
 GG>.1i1
 qJ3J8:
 UHD!
-**x8
+**n8
 ,*,3D	EP
 fXd6zBBB
 6-G*
@@ -3975,29 +3977,31 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-4="j[I
-II(0
-l0]c
-/]G^
-^3+39
-%<u^^
-\%usa
-L@D>
+Jo~M
+wX97
+ igk
+iAb4
+)_v`
+\*h[
+up.4
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-~7zZ
-0%4!
-*}OE:
-B{dKl
-\p])
-1Ls5
-F8o?
-e DR<
-$]5z
-Qb#^
-CH4&
+<xZ8
+'\]c
+-h\Y
+/,d{
+I%m(
+P(Clk9K
+Wt^#c
+B~m{q
+Q 	P
+,;xr
+,4!F
+,<*t$[
+	6<>J
+.0cj
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -4053,7 +4057,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211013194629Z0/
+211021233600Z0/
+8Vo[
+}G7"}5I
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -4061,17 +4067,20 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		XrSHG+8ee7KjxNTw1E8j0+FvHEk=
+		fUc3In01Sae2paVSnGJOsjKKhWw=
 		</data>
 		<data>
-		UZQ6F3GSofSIdHanIxCMPe87Pho=
+		GHJNhldUhA2HezqIUuzUT+4JPXs=
 		</data>
 	</array>
 </dict>
 </plist>
-g @	vE
-n)GU
-20211013194714Z0
+Hdp~
+(eop
+<e{k
+BY6O
+&Ar{
+20211021233600Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -4131,13 +4140,11 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211013194714Z0#
-E2^0+
+211021233600Z0#
 d3ZM`
-MxN>t
-Rf+#
-<Q:$W
-] F(
+Ku)O
+8#LT
+TTc"6
 __TEXT
 __text
 __TEXT
@@ -4179,7 +4186,6 @@ __LINKEDIT
 /usr/lib/libc++.1.dylib
 /usr/lib/libSystem.B.dylib
 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
-#8) 
 T		@9?
 5'qHs
 	(B)J
@@ -4192,10 +4198,10 @@ kjh8k
 i+8,
 (a@9
 5(	@
-Iu	X)
-q	X)
-h	X)
-^	X)
+Ix	X)
+t	X)
+k	X)
+a	X)
 Th^@
 Th^@
 Ti^@
@@ -4220,24 +4226,24 @@ R	i09
 e09h
 (a09
 	mp9
-R	m09 
-5`w	
-w	Xh
-d	Xh
+R	m09`
+5`z	
+z	Xh
+5@g	
+f	Xh
 @9?q
-h1	X
+(3	X
 @9_q
+I	XH
+H	XH
 F	XH
-E	XH
-HD	XH
-D	Xi
+HF	Xi
+(D	XH
+C	Xi
 A	XH
-A	Xi
-H?	XH
-!?	\ 
-a<	\
-A8	\ 
-i5	X
+aA	\ 
+)<	X
+:	\ 
 jt8 
 C9uR
 RHk88Z
@@ -4350,6 +4356,7 @@ unknown
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/minidump.cpp
 Someone called SetWritingMinidump without holding the minidump lock.
 Someone called ClearWritingMinidump without holding the minidump lock.
+!g_pCrashMemoryReserve
 Assert( %s ):%s:%d
 MacOS
 Frameworks
@@ -4358,8 +4365,8 @@ crashhandler002
 crashhandler.dylib
 CreateInterface
 Steam
-Oct 13 2021
-12:46:27
+Oct 21 2021
+16:35:57
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -5128,12 +5135,13 @@ PManager
 Pile
 8L8L8
 (DD@D@4
-,TTX
+,TDX
  (LPTDHHH
 dLdLL
 PH(x0
 `T\8
 8H( 
+   `
 48H<T
 `x44<<<
 L(L,
@@ -5691,29 +5699,26 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-9Ikg
-0jH}
-Rgh4O
-tFu=
+xL-q
+=pHVqw
+$1s%
+sz,AT
+)5b%
+|MfW
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-5,-@R
-s6Rp
-h`,Jq
-]TQH
->TEl
-Ecj]
-N{.ky
-j"{)
-<T6\
- [YY
-v3:\Z}Bk
-vVHg>v
-uVqk
-Gz5M
-bm:v
+%d0x
+rc1)
+,f$-
+r*Uhs
+~j{+
+<}Bq
+"9+g]
+s>01
+2d?!
+-[LG
 O[xp
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -5770,8 +5775,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211013194629Z0/
-+-0-
+211021233600Z0/
+/~20-
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -5779,20 +5784,20 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		VGQS79RRprERIo4AZM5lWObmKy0=
+		2m07omWarRMOE3Gtw1wAHaMvfjI=
 		</data>
 		<data>
-		qMDbUWMry7WcKYT8DNiwDAl+IAE=
+		a5N48LgDk3Ub6rxJYujXTVAIWm4=
 		</data>
 	</array>
 </dict>
 </plist>
-tx9}
-V\5Vt
-z2C"i
-QPxO
-\hTt
-20211013194714Z0
+UaZb
+rZ<C3
+"Icwc
+\1%%
+7}EBn
+20211021233600Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -5845,6 +5850,10 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-211013194714Z0#
-WB,	l2
-Zk'K
+211021233600Z0#
+vsaP
+Gm7'
+s<i|e
+'KG8a%
+"j7w
+J%rOF

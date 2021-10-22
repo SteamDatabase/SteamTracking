@@ -221,6 +221,7 @@
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "Αδυναμία επαλήθευσης υπογεγραμμένων αρχείων για %game%, απαιτείται η επικύρωση περιεχομένου."
 "SteamUI_JoinDialog_CreateProcess_Error" "Αποτυχία εκκίνησης διαδικασίας για %game% :\n\n%detail%"
+"SteamUI_JoinDialog_CreateProcess_Error_Detail_macOS" "Οι εφαρμογές 32-bit δεν υποστηρίζονται πλέον σε macOS 10.15 ή νεότερο."
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "Αποτυχία εκκίνησης του %game% σε VR. (Σφάλμα: %error%)"
 "SteamUI_JoinDialog_OpenVRWaitingForQuit" "Αναμονή για %quitting_game% να τερματίσει το %dots%"
@@ -4071,7 +4072,7 @@
 "Steam_MoveAppFolder_FolderExists" "Ο φάκελος εγκατάστασης του παιχνιδιού υπάρχει ήδη στην επιλεγμένη βιβλιοθήκη Steam."
 "Steam_MoveAppFolder_NoStart" "Αδύνατη η μετακίνηση αρχείων στο νέο φάκελο συλλογής (%error%)."
 
-"Steam_HelpUsTranslate" "Είστε εύγλωττος σε άλλη γλώσσα; Βοηθήστε μας να μεταφράσουμε το Steam."
+"Steam_HelpUsTranslate" "Μιλάτε με ευχέρεια κάποια άλλη γλώσσα; Βοηθήστε μας να μεταφράσουμε το Steam."
 
 "steam_emailaddress_query" "Είναι αυτή η τρέχουσα διεύθυνση email σας;"
 "steam_emailaddress_query_yes" "ΝΑΙ"

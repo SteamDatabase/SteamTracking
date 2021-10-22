@@ -224,6 +224,7 @@ Processen tar max en minut."
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "Misslyckades att verifiera signerade filer för %game%, innehållsvalidering krävs."
 "SteamUI_JoinDialog_CreateProcess_Error" "Misslyckades starta processen för %game% :\n\n%detail%"
+"SteamUI_JoinDialog_CreateProcess_Error_Detail_macOS" "32-bitarsapplikationer stöds inte längre på macOS 10.15 eller nyare."
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "Misslyckades att starta %game% i VR. (Error: %error%)"
 "SteamUI_JoinDialog_OpenVRWaitingForQuit" "Väntar på att %quitting_game% avslutas %dots%"

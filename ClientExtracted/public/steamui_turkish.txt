@@ -227,6 +227,7 @@ Oyunu açmak %borrower% adlı kullanıcıya oyunu bırakma zamanının geldiğin
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "%game% için imzalanmış dosyalar doğrulanamadı, içerik doğrulaması gerekiyor."
 "SteamUI_JoinDialog_CreateProcess_Error" "%game% için işlem başlatılamadı:\n\n%detail%"
+"SteamUI_JoinDialog_CreateProcess_Error_Detail_macOS" "32 bitlik uygulamalar artık macOS 10.15 ve üzerinde desteklenmemektedir."
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "%game% VR'da başlatılamadı. (Hata: %error%)"
 "SteamUI_JoinDialog_OpenVRWaitingForQuit" "Çıkış için %quitting_game% bekleniyor%dots%"

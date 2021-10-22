@@ -35,6 +35,8 @@
 						<Panel id="HelperDescription" >
 							<Label id="HelperDescriptionHeader" text="#SettingsController_HelperDescriptionHeader" />
 							<Label id="HelperDescriptionText" text="#SettingsController_HelperDescriptionText"/>
+							<Label id="HelperGATitleText" text="#SettingsController_HelperGATitleText"/>
+							<Label id="HelperGADescriptionText" text="#SettingsController_HelperGADescriptionText"/>
 						</Panel>
 						<Panel id="HelperImageBG" >
 							<Image id="HelperImage" class="HelperImage" />

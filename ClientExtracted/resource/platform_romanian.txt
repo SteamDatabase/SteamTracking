@@ -30,6 +30,8 @@
 "app_task_steamvr"	"SteamVR"
 "app_task_stop_streaming"	"Oprește Remote Play"
 
+"Steam_AccountAlreadyLoggedInNeedShutdown"		"Contul „%account%” este utilizat momentan pe un alt dispozitiv.\nVa trebui să închizi Steam pe celălalt calculator pentru a te putea conecta aici."
+"Steam_AccountAlreadyLoggedInNeedPassword"		"Acest cont este momentan utilizat pe un alt dispozitiv.\nIntrodu din nou parola pentru a te conecta de pe acest computer."
 "Steam_AccountOfflineMissingConfig"				"Nu au putut fi descărcate datele pentru configurarea platformei."
 "Steam_NeverConnectedNoConnection"				"Contul '%account%' nu a fost accesat niciodată pe acest dispozitiv până acum şi conexiunea la serverele Steam nu a putut fi realizată.\nUnele servicii nu vor fi disponibile. Steam va continua să încerce conectarea, iar serviciile respective vor fi disponibile în cazul unei conexiuni reuşite."
 "Steam_RefreshEnterTwoFactorCode"				"Te rugăm să introduci codul actual Steam Guard de autentificare"

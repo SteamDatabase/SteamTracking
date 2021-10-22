@@ -225,6 +225,7 @@ Dies dauert in der Regel nicht länger als eine Minute."
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "Signierte Dateien von %game% konnten nicht verifiziert werden, Inhaltsüberprüfung ist erforderlich."
 "SteamUI_JoinDialog_CreateProcess_Error" "Prozess für %game% konnte nicht gestartet werden:\n\n%detail%"
+"SteamUI_JoinDialog_CreateProcess_Error_Detail_macOS" "32-Bit-Anwendungen werden nicht mehr von macOS 10.15 und neuer unterstützt."
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "%game% konnte nicht in VR gestartet werden. (Fehler: %error%)"
 "SteamUI_JoinDialog_OpenVRWaitingForQuit" "%quitting_game% wird beendet %dots%"
@@ -890,7 +891,7 @@ Dies dauert in der Regel nicht länger als eine Minute."
 "SteamUI_ValveSurvey_Summary_DirectXDriverVersion"			"DirectX-Treiberversion: %s1"
 "SteamUI_ValveSurvey_Summary_DriverDate"					"Treiberdatum: %s1.%s2.%s3"
 "SteamUI_ValveSurvey_Summary_ColorDepth"					"Desktopfarbtiefe: %s1 Bit per Pixel"
-"SteamUI_ValveSurvey_Summary_RefreshRate"					"Monitor-Aktualisierungsrate: %s1 Hz"
+"SteamUI_ValveSurvey_Summary_RefreshRate"					"Monitor-Bildwiederholfrequenz: %s1 Hz"
 "SteamUI_ValveSurvey_Summary_DirectXCard"					"DirectX-Karte: %s1"
 "SteamUI_ValveSurvey_Summary_OpenGL_Version"				"OpenGL-Version: %s1"
 "SteamUI_ValveSurvey_Summary_VideoVendorID"					"Anbieterkennung: 0x%s1"
@@ -2896,7 +2897,7 @@ Senden Sie einem Bekannten ein Geschenk und werden Sie Freunde auf Steam."
 "Steam_SubscriptionCancelled_PayPalDeclined" "Ihr Kauf von %subscription% konnte nicht abgeschlossen werden.\n\nDie %provider%-Autorisierung ist fehlgeschlagen. Klicken Sie auf \"Zurück\", um eine andere Zahlungsmethode zu wählen."
 
 "Steam_SubscriptionCancelled_PuchaseDeclined_ContactProvider"	"Ihr Kauf von %subscription% konnte nicht abgeschlossen werden.\n\n%provider% hat ein Problem mit Ihrem %provider%-Konto gemeldet. Wenden Sie sich an den %provider%-Support oder klicken Sie auf \"Zurück\", um eine andere Zahlungsmethode zu wählen."
-"Steam_SubscriptionCancelled_PuchaseDeclined_AcctNotVerified"	"Ihr Kauf von %subscription% konnte nicht abgeschlossen werden.\n\n%provider% hat gemeldet, dass Ihr %provider%-Konto geprüft werden oder gedeckt sein muss, um den Kauf abzuschließen. Wenden Sie sich an den %provider%-Support oder klicken Sie auf \"Zurück\", um eine andere Zahlungsmethode zu wählen."
+"Steam_SubscriptionCancelled_PuchaseDeclined_AcctNotVerified"	"Ihr Kauf von %subscription% konnte nicht abgeschlossen werden.\n\n%provider% hat gemeldet, dass Ihr %provider%-Konto geprüft werden oder gedeckt sein muss, um den Kauf abzuschließen. Wenden Sie sich an den %provider%-Support oder klicken Sie auf „Zurück“, um eine andere Zahlungsmethode zu wählen."
 
 "Steam_PaymentMethodNotAvailable_Generic" "Diese Zahlungsmethode ist zurzeit leider nicht verfügbar."
 

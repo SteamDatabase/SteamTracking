@@ -220,6 +220,7 @@
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "Error al verificar los archivos firmados de %game%, se requiere la validación del contenido."
 "SteamUI_JoinDialog_CreateProcess_Error" "Error al iniciar el proceso de %game% :\n\n%detail%"
+"SteamUI_JoinDialog_CreateProcess_Error_Detail_macOS" "Las aplicaciones de 32 bits ya no son compatibles con macOS 10.15 o superior."
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "No se ha podido iniciar %game% en RV. (Error: %error%)"
 "SteamUI_JoinDialog_OpenVRWaitingForQuit" "Esperando que %quitting_game% cierre %dots%"
@@ -2848,6 +2849,10 @@ Crea uno enviando un regalo por email a alguien que conozcas."
 "SteamUI_DurationControl_PlaytimeExceeded_Body_ThreeHours"	"Alcanzaste el límite de tiempo de conexión por hoy. Por favor, tómate un descanso e inténtalo mañana después de las 8 a. m."
 "SteamUI_DurationControl_PlaytimeExceeded_Body_FiveHours"	"Alcanzaste el límite de tiempo de conexión por hoy. Por favor, tómate un descanso e inténtalo mañana después de las 8 a. m."
 "SteamUI_DurationControl_PlaytimeExceeded_Body_Night"		"Los menores de 18 años no pueden jugar a este juego entre las 10 p. m. y las 8 a. m. del día siguiente. Toma un descanso."
+"SteamUI_DurationControl_PlaytimeExceeded_Body_WaitingVerification"		"Tu cuenta está en proceso de verificación del nombre real. Por favor, inténtalo de nuevo más tarde."
+"SteamUI_DurationControl_PlaytimeExceeded_Body_Maintenance"		"Este juego se está sometiendo a actualizaciones técnicas y los menores no podrán jugar hasta que se completen. Disculpa las molestias y gracias por tu comprensión."
+
+
 "Steam_GuestPassesColumn" 		"Regalos"
 "Steam_GuestPasses_LeftGift"		"Copia adicional"
 "Steam_GuestPasses_LeftGuestPass"		"Pase de invitado"

@@ -225,6 +225,7 @@ Tämä kestää alle minuutin."
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "Allekirjoitettujen tiedostojen vahvistus epäonnistui pelille %game%. Sisällön vahvistusta vaaditaan."
 "SteamUI_JoinDialog_CreateProcess_Error" "Epäonnistui prosessin aloituksessa pelille %game% :\n\n%detail%"
+"SteamUI_JoinDialog_CreateProcess_Error_Detail_macOS" "32-bittisiä sovelluksia ei enää tueta macOS 10.15:ssä tai uudemmissa versioissa."
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "Pelin %game% aloittaminen VR:ssä epäonnistui. (Virhe: %error%)"
 "SteamUI_JoinDialog_OpenVRWaitingForQuit" "Odotetaan pelin %quitting_game% sulkeutumista%dots%"

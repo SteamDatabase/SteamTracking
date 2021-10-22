@@ -1,5 +1,6 @@
 ﻿{
 	"language": "schinese",
+	"Steam_Platform": "蒸汽平台",
 	"CreatorHome_Follow_tooltip": "关注此创建者，以在他们发行新游戏时通过电子邮件并在您的蒸汽平台商店中收到通知。电子邮件通知可随时关闭。",
 	"EventCurator_BrowseDialog_Title": "来自蒸汽平台鉴赏家的新闻",
 	"EventCurator_BrowseDialog_Desc": "关注您最喜爱的蒸汽平台鉴赏家，在您的蒸汽平台新闻中心即可获取游戏新闻！",
@@ -77,6 +78,11 @@
 	"Login_Enter2FAHelp": "我无法访问我的蒸汽平台令牌验证码",
 	"Login_EnterSteamguard": "我没有收到关于蒸汽平台令牌的电子邮件",
 	"Login_SentSteamguard": "我们向您的 %1$s 发送了一封电子邮件。请输入邮件中提供的蒸汽平台令牌验证码。",
+	"Login_UseAppForQR_Inner": "蒸汽平台移动应用",
+	"Login_Help_AccessMobileApp": "请求帮助，我已无法访问我的蒸汽平台手机应用。",
+	"Login_EnterMobileCode": "输入您蒸汽平台手机应用上的代码",
+	"Login_AwaitingMobileConfirmation": "正在等待您通过蒸汽平台移动应用进行确认…",
+	"Login_Title_SteamGuard": "蒸汽平台令牌",
 	"ConnectionTrouble_FailedToConnect": "连接蒸汽平台失败",
 	"BroadcastWatch_ServerLoad": "蒸汽平台目前直播载入量过高，无法预留服务器空间开始此直播。请过几分钟后再试。",
 	"BroadcastWatch_SystemNotSupported": "此主播的系统目前不支持蒸汽平台实况直播",
@@ -110,5 +116,9 @@
 	"GrantAwardError_InsufficientFunds": "您没有足够的蒸汽平台点数来给予选中的奖励。",
 	"FAQViewer_SteamSupport": "蒸汽平台客服",
 	"FAQViewer_SideBar_ProblemWithSteam_Title": "需要蒸汽平台方面的帮助吗？",
-	"FAQViewer_SideBar_ProblemWithSteam_Desc": "使用蒸汽平台帮助向导缩小提问范围并获取所需帮助。"
+	"FAQViewer_SideBar_ProblemWithSteam_Desc": "使用蒸汽平台帮助向导缩小提问范围并获取所需帮助。",
+	"FAQViewer_SideBar_CommunityHelp_Desc": "在蒸汽平台讨论区发布问题，或搜索问题的答案。",
+	"FAQViewer_SideBar_CommunityHelp_Link": "访问蒸汽平台讨论区",
+	"StreamLaunch_Broadcasting": "远程计算机目前正在使用蒸汽平台实况直播，因此无法开始远程畅玩会话。",
+	"StreamLaunch_InstallDrivers": "流式传输需要安装额外的驱动程序。\n\n请按照远程计算机上的蒸汽平台提示进行操作。"
 }

@@ -227,6 +227,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "%game% 用の署名されたファイルを確認できませんでした。コンテンツの検証が必要です。"
 "SteamUI_JoinDialog_CreateProcess_Error" "%game% のプロセス開始に失敗しました :\n\n%detail%"
+"SteamUI_JoinDialog_CreateProcess_Error_Detail_macOS" "macOS 10.15以降における32ビットアプリケーションのサポートは終了しました。"
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "VR で %game% の起動に失敗しました。 (エラー: %error%)"
 "SteamUI_JoinDialog_OpenVRWaitingForQuit" "%quitting_game%が終了するのを待っています%dots%"

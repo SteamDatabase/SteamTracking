@@ -6493,3 +6493,22 @@ Label.NotEnoughRoom
 {
     visibility: collapse;
 }
+
+#ThrobberBackground
+{
+	perspective: 1000;
+	perspective-origin: 50% 50%;
+	position: 0px 0px 0%;
+	width: 1920px;
+	height: 1080px;
+	visibility: visible;
+	background-image: url( "file://{images}/mainmenu_bg_2.png" );
+	background-size: 100% 100%;
+	opacity: 0.99;
+}
+
+#LibraryDetailsThrobber
+{
+    vertical-align: center;
+    horizontal-align: center;
+}
