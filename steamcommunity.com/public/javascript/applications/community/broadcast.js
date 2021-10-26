@@ -830,7 +830,7 @@
                 i.createElement(
                   "div",
                   { className: Object(S.a)(T.a.viewer_count, "viewer_count") },
-                  i.createElement(B.jb, null),
+                  i.createElement(B.kb, null),
                   r.toLocaleString(A.e.GetPreferredLocales())
                 ),
                 i.createElement(
@@ -882,7 +882,7 @@
                         "#StoreBroadcast_Change_store_Broadcast_settings"
                       ),
                     },
-                    i.createElement(B.V, null)
+                    i.createElement(B.W, null)
                   ),
                   e
                 )
@@ -949,7 +949,7 @@
                 ),
                 onClick: e.OnPreventPopup,
               },
-              i.createElement(B.nb, null)
+              i.createElement(B.ob, null)
             )
           );
         }),
@@ -1129,7 +1129,7 @@
                     ? i.createElement(
                         i.Fragment,
                         null,
-                        i.createElement(B.jb, null),
+                        i.createElement(B.kb, null),
                         " ",
                         d.toLocaleString(A.e.GetPreferredLocales())
                       )

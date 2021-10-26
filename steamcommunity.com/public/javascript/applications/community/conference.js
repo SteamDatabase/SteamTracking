@@ -4303,7 +4303,7 @@
                       i.a.createElement(
                         "div",
                         { className: Object(D.a)(c, fe.a.Votes), onClick: l },
-                        i.a.createElement(ne.db, { className: fe.a.RateIcon }),
+                        i.a.createElement(ne.eb, { className: fe.a.RateIcon }),
                         i.a.createElement(
                           "div",
                           { className: fe.a.VoteCount },
@@ -4501,7 +4501,7 @@
                 disabled: !s,
                 className: Object(D.a)(fe.a.InputButton, fe.a.Reload),
               },
-              i.a.createElement(ne.R, null)
+              i.a.createElement(ne.S, null)
             ),
             (null == r ? void 0 : r.bUserCanAskQuestions)
               ? i.a.createElement(ve, { fnAskQuestion: o })
@@ -4707,7 +4707,7 @@
                     a(!0), u(!0);
                   },
                 },
-                r.createElement(ne.X, null)
+                r.createElement(ne.Y, null)
               )
             )
           ),

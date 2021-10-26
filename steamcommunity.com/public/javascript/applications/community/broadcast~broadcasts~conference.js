@@ -10723,7 +10723,7 @@
                               title: Object(vt.f)("#ChatEntryButton_Submit"),
                               onClick: this.SendMessage,
                             },
-                            o.createElement(nr.bb, null)
+                            o.createElement(nr.cb, null)
                           )
                         ),
                         o.createElement(

@@ -193,6 +193,7 @@
     "SteamLabs": "Steam Labs",
     "SteamLabs_ExperimentNumber": "Experiment %1$s",
     "SteamLabs_DiscussionLink": "Discuss this experiment",
+    "SteamLabs_OptOutLink": "Leave this experiment",
     "EventCalendar_SignIn_Title": "Sign In To Get Personalized News",
     "EventCalendar_SignIn_Text": "Sign in with your Steam account to access your personalized news hub or explore featured news and updates below.",
     "EventCalendar_FutureEventsHint": "Scroll up to see what's coming next",

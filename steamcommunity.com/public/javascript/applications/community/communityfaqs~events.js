@@ -597,7 +597,10 @@
                 t = e.editModel,
                 n = e.capsuleContainer,
                 a = Boolean(n.sale_tag_filter),
-                i = a || t.GetEventModel().GetTaggedItems().length > 0;
+                i =
+                  a ||
+                  t.GetEventModel().GetTaggedItems().length > 0 ||
+                  t.GetEventModel().BUsesContentHubForItemSource();
               return p.createElement(
                 b.a,
                 null,
@@ -872,8 +875,8 @@
           o.d,
           { "data-tooltip-text": Object(l.f)(a), onClick: n },
           e.bIsMinimized
-            ? c.createElement(s.G, null)
-            : c.createElement(s.J, null)
+            ? c.createElement(s.H, null)
+            : c.createElement(s.K, null)
         );
       }
       function h(e) {
@@ -1723,415 +1726,42 @@
     "4lry": function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
-        return P;
+        return N;
       }),
         n.d(t, "b", function () {
-          return Y;
+          return z;
         });
       var a = n("mrSG"),
         i = n("fcuX"),
         r = n("KP/B"),
-        o = n("vDqi"),
-        l = n.n(o),
-        s = n("mgoM"),
-        c = n("3+zv"),
-        u = n("OS6B"),
-        d = n("lkRc"),
-        p = new ((function () {
-          function e(e) {
-            void 0 === e && (e = null),
-              (this.m_rgCategoriesForTagID = null),
-              (this.m_rgTagNameForTagID = null),
-              (this.m_rgAtomicTagIDsForTagID = null),
-              (this.m_rgLocalizedCategoryNames = null),
-              (this.m_rgLocalizedTagNames = null),
-              (this.m_rgLanguages = null),
-              e && this.ParseResponse(e);
-          }
-          return (
-            (e.prototype.GetCategoriesForTagID = function () {
-              return this.m_rgCategoriesForTagID;
-            }),
-            (e.prototype.GetTagNameForTagID = function () {
-              return this.m_rgTagNameForTagID;
-            }),
-            (e.prototype.GetAtomicTagIDsForTagID = function () {
-              return this.m_rgAtomicTagIDsForTagID;
-            }),
-            (e.prototype.GetLocalizedCategoryNames = function () {
-              return this.m_rgLocalizedCategoryNames;
-            }),
-            (e.prototype.GetLocalizedTagNames = function () {
-              return this.m_rgLocalizedTagNames;
-            }),
-            (e.prototype.GetLanguages = function () {
-              return this.m_rgLanguages;
-            }),
-            (e.prototype.AutoGenerateFacets = function () {
-              var e = this.ComputeLocalizedCategoryNames(),
-                t = this.ComputeLocalizedTagNames(),
-                n = this.ComputeCategoryToTagMap(),
-                a = this.FindNonAtomicTags(),
-                i = this.ComputeFacetCategoryToTagMap(n, a),
-                r = this.ComputeAtomicTagToTagsMap();
-              return this.ComputeFacets(i, r, e, t);
-            }),
-            (e.prototype.AutoGenerateFacetsAsync = function () {
-              return Object(a.b)(this, void 0, void 0, function () {
-                return Object(a.e)(this, function (e) {
-                  switch (e.label) {
-                    case 0:
-                      return [4, this.EnsureLoaded()];
-                    case 1:
-                      return e.sent(), [2, this.AutoGenerateFacets()];
-                  }
-                });
-              });
-            }),
-            (e.prototype.BIsTagAtomic = function (e) {
-              return (
-                this.m_rgAtomicTagIDsForTagID.has(e) &&
-                this.m_rgAtomicTagIDsForTagID.get(e).includes(e)
-              );
-            }),
-            (e.prototype.ParseResponse = function (e) {
-              (this.m_rgCategoriesForTagID = new Map()),
-                (this.m_rgTagNameForTagID = new Map()),
-                (this.m_rgAtomicTagIDsForTagID = new Map()),
-                (this.m_rgLocalizedCategoryNames = new Map()),
-                (this.m_rgLocalizedTagNames = new Map()),
-                (this.m_rgLanguages = new Array());
-              for (
-                var t = 0, n = Object.keys(e.rgCategoriesByTag);
-                t < n.length;
-                t++
-              ) {
-                var a = n[t];
-                this.m_rgCategoriesForTagID.set(
-                  Number(a),
-                  Array.from(e.rgCategoriesByTag[a])
-                );
-              }
-              for (
-                var i = 0, r = Object.keys(e.rgTagNames);
-                i < r.length;
-                i++
-              ) {
-                a = r[i];
-                this.m_rgTagNameForTagID.set(Number(a), e.rgTagNames[a]);
-              }
-              for (
-                var o = 0, l = Object.keys(e.rgTagBreakdown);
-                o < l.length;
-                o++
-              ) {
-                a = l[o];
-                this.m_rgAtomicTagIDsForTagID.set(
-                  Number(a),
-                  Array.from(e.rgTagBreakdown[a]).map(function (e) {
-                    return Number(e);
-                  })
-                );
-              }
-              for (
-                var s = 0, c = Object.keys(e.rgLocalizedCategoryNames);
-                s < c.length;
-                s++
-              ) {
-                var u = c[s];
-                this.m_rgLocalizedCategoryNames.set(
-                  u,
-                  Array.from(e.rgLocalizedCategoryNames[u])
-                );
-              }
-              for (
-                var d = 0, p = Object.keys(e.rgLocalizedTagNames);
-                d < p.length;
-                d++
-              ) {
-                a = p[d];
-                this.m_rgLocalizedTagNames.set(
-                  Number(a),
-                  Array.from(e.rgLocalizedTagNames[a])
-                );
-              }
-              this.m_rgLanguages = Array.from(e.rgLanguages);
-            }),
-            (e.prototype.EnsureLoaded = function () {
-              return Object(a.b)(this, void 0, void 0, function () {
-                var e;
-                return Object(a.e)(this, function (t) {
-                  switch (t.label) {
-                    case 0:
-                      return this.m_rgCategoriesForTagID
-                        ? [2]
-                        : [4, this.Load()];
-                    case 1:
-                      return (e = t.sent()), this.ParseResponse(e), [2];
-                  }
-                });
-              });
-            }),
-            (e.prototype.Load = function () {
-              return Object(a.b)(this, void 0, void 0, function () {
-                var e, t, n;
-                return Object(a.e)(this, function (a) {
-                  switch (a.label) {
-                    case 0:
-                      (e = null), (a.label = 1);
-                    case 1:
-                      return (
-                        a.trys.push([1, 3, , 4]),
-                        [
-                          4,
-                          l.a.get(
-                            d.c.COMMUNITY_BASE_URL +
-                              "sale/ajaxgetcategoriesbytag"
-                          ),
-                        ]
-                      );
-                    case 2:
-                      return (
-                        (t = a.sent()),
-                        1 !== (null == (e = t.data) ? void 0 : e.success)
-                          ? (console.error(
-                              "Unable to load tag category data: " +
-                                (null == e ? void 0 : e.success)
-                            ),
-                            [2, null])
-                          : [3, 4]
-                      );
-                    case 3:
-                      return (
-                        (n = a.sent()),
-                        console.error(
-                          "Unable to load tag category data: " +
-                            Object(u.a)(n).strErrorMsg
-                        ),
-                        [2, null]
-                      );
-                    case 4:
-                      return [2, e];
-                  }
-                });
-              });
-            }),
-            (e.prototype.Verify = function (e) {
-              for (
-                var t = new Set(),
-                  n = new Set(),
-                  a = Object.keys(e.rgTagBreakdown),
-                  i = Object.keys(e.rgTagNames),
-                  r = Object.keys(e.rgCategoriesByTag),
-                  o = 0,
-                  l = a;
-                o < l.length;
-                o++
-              )
-                for (
-                  var s = l[o], c = 0, u = e.rgTagBreakdown[s].flat();
-                  c < u.length;
-                  c++
-                ) {
-                  var d = u[c];
-                  i.includes(d.toString()) || t.add(d),
-                    (r.includes(d.toString()) &&
-                      e.rgCategoriesByTag[d] &&
-                      0 !== e.rgCategoriesByTag[d].length) ||
-                      n.add(d);
-                }
-              console.log(t.size + " un-named tags."),
-                t.size > 0 && console.log(t),
-                console.log(n.size + " un-categorized tags."),
-                n.size > 0 && console.log(n);
-            }),
-            (e.prototype.ComputeCategoryToTagMap = function () {
-              var e = new Map();
-              return (
-                this.m_rgCategoriesForTagID.forEach(function (t, n) {
-                  if (t)
-                    for (var a = 0, i = t; a < i.length; a++) {
-                      var r = i[a];
-                      e.has(r) || e.set(r, new Array()), e.get(r).push(n);
-                    }
-                }),
-                e
-              );
-            }),
-            (e.prototype.FindNonAtomicTags = function () {
-              var e = new Set();
-              return (
-                this.m_rgAtomicTagIDsForTagID.forEach(function (t, n) {
-                  1 !== t.length && e.add(n);
-                }),
-                e
-              );
-            }),
-            (e.prototype.ComputeFacetCategoryToTagMap = function (e, t) {
-              for (
-                var n = new Set(),
-                  a = new Map(),
-                  i = function (i, r) {
-                    for (var o = 0, l = e.get(r); o < l.length; o++) {
-                      var s = l[o];
-                      n.has(s) || t.has(s) || (n.add(s), a.get(i).push(s));
-                    }
-                  },
-                  r = 0,
-                  o = [
-                    "supergenre",
-                    "genre",
-                    "subgenre",
-                    "visuals",
-                    "theme_mood",
-                    "feature",
-                    "players",
-                  ];
-                r < o.length;
-                r++
-              ) {
-                var l = o[r];
-                a.set(l, new Array()),
-                  "theme_mood" === l ? (i(l, "theme"), i(l, "mood")) : i(l, l);
-              }
-              return a;
-            }),
-            (e.prototype.ComputeLocalizedCategoryNames = function () {
-              var e = new Map();
-              e.set("supergenre", "#App_Taxonomy_Survey_QSuperGenreTitle"),
-                e.set("genre", "#App_Taxonomy_Survey_QGenreTitle"),
-                e.set("subgenre", "#App_Taxonomy_Survey_QSubGenreTitle"),
-                e.set("visuals", "#App_Taxonomy_Survey_QVisualsTitle"),
-                e.set("theme_mood", "#App_Taxonomy_Survey_QThemeMoodTitle"),
-                e.set("feature", "#App_Taxonomy_Survey_QFeaturesTitle"),
-                e.set("players", "#App_Taxonomy_Survey_QPlayersTitle");
-              var t = new Map();
-              return (
-                this.m_rgLocalizedCategoryNames.forEach(function (n, a) {
-                  var i = new Array(30);
-                  (i[0] = e.get(a)), t.set(a, i);
-                }),
-                t
-              );
-            }),
-            (e.prototype.ComputeLocalizedTagNames = function () {
-              var e = this,
-                t = new Map();
-              return (
-                this.m_rgLocalizedTagNames.forEach(function (n, a) {
-                  var i = n,
-                    r = new Array(30);
-                  r.fill(""),
-                    e.m_rgLanguages.forEach(function (e, t) {
-                      var n = Object(s.d)(e, -1);
-                      -1 === n
-                        ? console.warn("Unrecognized language: " + e)
-                        : 0 <= n && n < 30 && (r[n] = i[t]);
-                    }),
-                    t.set(a, r);
-                }),
-                t
-              );
-            }),
-            (e.prototype.ComputeAtomicTagToTagsMap = function () {
-              var e = new Map();
-              return (
-                this.m_rgAtomicTagIDsForTagID.forEach(function (t, n) {
-                  for (var a = 0, i = t; a < i.length; a++) {
-                    var r = i[a],
-                      o = Number(r);
-                    e.has(o) || e.set(o, new Array()), e.get(o).push(n);
-                  }
-                }),
-                e
-              );
-            }),
-            (e.prototype.ComputeFacets = function (e, t, n, a) {
-              var i = new Array();
-              return (
-                e.forEach(function (e, r) {
-                  for (
-                    var o = { name: n.get(r), facetValues: new Array() },
-                      l = Array(),
-                      s = 0,
-                      u = e;
-                    s < u.length;
-                    s++
-                  ) {
-                    var d = u[s];
-                    if (a.get(d)) {
-                      var p = {
-                        name: a.get(d),
-                        subtitle: new Array(),
-                        rgStoreTagFilter: {
-                          type: c.o.k_EStoreFilterClauseTypeAnd,
-                          rgSubexpressions: [
-                            {
-                              type: c.o.k_EStoreFilterClauseTypeOr,
-                              rgSubexpressions: t.has(d)
-                                ? t.get(d).map(function (e) {
-                                    return {
-                                      type:
-                                        c.o.k_EStoreFilterClauseTypeStoreTag,
-                                      value: e,
-                                    };
-                                  })
-                                : [
-                                    {
-                                      type:
-                                        c.o.k_EStoreFilterClauseTypeStoreTag,
-                                      value: d,
-                                    },
-                                  ],
-                            },
-                          ],
-                        },
-                        nAtomicStoreTagID: d,
-                        filter: null,
-                        matchingCapsules: [],
-                      };
-                      o.facetValues.push(p);
-                    } else l.push(d);
-                  }
-                  l.length > 0 &&
-                    console.warn(
-                      "No name information found for tag count " +
-                        l.length +
-                        ", skipping.",
-                      l
-                    ),
-                    i.push(o);
-                }),
-                i
-              );
-            }),
-            e
-          );
-        })())(),
-        m = n("TyAF"),
-        _ = n("q1tI"),
-        g = n("TtDX"),
-        h = n("Mgs7"),
-        f = n("IjL/"),
-        b = n("Jqb/"),
-        v = n("ka0M"),
-        S = n("0rc7"),
-        E = n("0OaU"),
-        y = n("exH9"),
-        O = n("TLQK"),
-        T = n("h5LU"),
-        C = n("Vitc"),
-        j = n("as1E"),
-        I = n("k3PP"),
-        D = n("oqmg"),
-        w = n("IMce"),
-        M = n("UvY0"),
-        k = n("vBFs"),
-        G = n("gyoR"),
-        L = n("5eAM"),
-        A = n("dpTt"),
-        B = n("165M"),
-        F = Object(m.a)(function (e) {
+        o = n("putg"),
+        l = n("TyAF"),
+        s = n("q1tI"),
+        c = n("mgoM"),
+        u = n("TtDX"),
+        d = n("3+zv"),
+        p = n("Mgs7"),
+        m = n("IjL/"),
+        _ = n("Jqb/"),
+        g = n("ka0M"),
+        h = n("0rc7"),
+        f = n("0OaU"),
+        b = n("exH9"),
+        v = n("TLQK"),
+        S = n("h5LU"),
+        E = n("Vitc"),
+        y = n("as1E"),
+        O = n("k3PP"),
+        T = n("oqmg"),
+        C = n("IMce"),
+        j = n("UvY0"),
+        I = n("vBFs"),
+        D = n("lkRc"),
+        w = n("gyoR"),
+        M = n("5eAM"),
+        k = n("dpTt"),
+        G = n("165M"),
+        L = Object(l.a)(function (e) {
           var t = e.language,
             n = e.facetValue,
             a = e.editModel,
@@ -2140,11 +1770,11 @@
             o = function (e) {
               if ("name" === e.target.name) {
                 var a = n.name,
-                  i = O.a.Set(a || [], t, e.target.value);
+                  i = v.a.Set(a || [], t, e.target.value);
                 n.name = i;
               } else if ("subtitle" === e.target.name) {
                 var o = n.subtitle,
-                  l = O.a.Set(o || [], t, e.target.value);
+                  l = v.a.Set(o || [], t, e.target.value);
                 n.subtitle = l;
               }
               r();
@@ -2154,137 +1784,137 @@
             },
             u = [
               {
-                label: Object(O.f)("#Sale_TagFilter_Filter"),
-                data: c.l.k_ESaleTagFilter,
+                label: Object(v.f)("#Sale_TagFilter_Filter"),
+                data: d.l.k_ESaleTagFilter,
               },
-              { label: Object(O.f)("#LanguageTitle"), data: c.l.k_ELanguage },
+              { label: Object(v.f)("#LanguageTitle"), data: d.l.k_ELanguage },
               {
-                label: Object(O.f)("#Browse_Sale_Mature_Themes"),
-                data: c.l.k_EContentDescriptor,
-              },
-              {
-                label: Object(O.f)("#Sale_Preferences"),
-                data: c.l.k_EUserPreference,
+                label: Object(v.f)("#Browse_Sale_Mature_Themes"),
+                data: d.l.k_EContentDescriptor,
               },
               {
-                label: Object(O.f)("#Sale_BrowserSortOption_Price"),
-                data: c.l.k_EPrice,
+                label: Object(v.f)("#Sale_Preferences"),
+                data: d.l.k_EUserPreference,
               },
               {
-                label: Object(O.f)("#AppTypeLabelTitle"),
-                data: c.l.k_EAppType,
+                label: Object(v.f)("#Sale_BrowserSortOption_Price"),
+                data: d.l.k_EPrice,
               },
-            ],
-            p = [
-              { label: Object(O.f)("#Browse_Sale_Mature_Feature"), data: 5 },
-              { label: Object(O.f)("#Browse_sale_Violence_Feature"), data: 2 },
-              { label: Object(O.f)("#Browse_Sale_Sexual_Feature"), data: 1 },
-              { label: Object(O.f)("#Browse_Sale_Adult_Feature"), data: 3 },
+              {
+                label: Object(v.f)("#AppTypeLabelTitle"),
+                data: d.l.k_EAppType,
+              },
             ],
             m = [
+              { label: Object(v.f)("#Browse_Sale_Mature_Feature"), data: 5 },
+              { label: Object(v.f)("#Browse_sale_Violence_Feature"), data: 2 },
+              { label: Object(v.f)("#Browse_Sale_Sexual_Feature"), data: 1 },
+              { label: Object(v.f)("#Browse_Sale_Adult_Feature"), data: 3 },
+            ],
+            _ = [
               {
-                label: Object(O.f)("#UserPreference_HideOwnedItems"),
-                data: c.m.k_EHideOwnedItems,
+                label: Object(v.f)("#UserPreference_HideOwnedItems"),
+                data: d.m.k_EHideOwnedItems,
               },
               {
-                label: Object(O.f)("#UserPreference_HideWishlistedItems"),
-                data: c.m.k_EHideWishlistedItems,
+                label: Object(v.f)("#UserPreference_HideWishlistedItems"),
+                data: d.m.k_EHideWishlistedItems,
               },
               {
-                label: Object(O.f)("#UserPreference_HideIgnoredItems"),
-                data: c.m.k_EHideIgnoredItems,
+                label: Object(v.f)("#UserPreference_HideIgnoredItems"),
+                data: d.m.k_EHideIgnoredItems,
               },
             ],
-            g = [
-              { label: Object(O.f)("#AppTypeLabel_game"), data: "game" },
+            h = [
+              { label: Object(v.f)("#AppTypeLabel_game"), data: "game" },
               {
-                label: Object(O.f)("#AppTypeLabel_software"),
+                label: Object(v.f)("#AppTypeLabel_software"),
                 data: "software",
               },
-              { label: Object(O.f)("#AppTypeLabel_dlc"), data: "dlc" },
-              { label: Object(O.f)("#AppTypeLabel_demo"), data: "demo" },
-              { label: Object(O.f)("#AppTypeLabel_music"), data: "music" },
-              { label: Object(O.f)("#AppTypeLabel_video"), data: "video" },
+              { label: Object(v.f)("#AppTypeLabel_dlc"), data: "dlc" },
+              { label: Object(v.f)("#AppTypeLabel_demo"), data: "demo" },
+              { label: Object(v.f)("#AppTypeLabel_music"), data: "music" },
+              { label: Object(v.f)("#AppTypeLabel_video"), data: "video" },
               {
-                label: Object(O.f)("#AppTypeLabel_hardware"),
+                label: Object(v.f)("#AppTypeLabel_hardware"),
                 data: "hardware",
               },
             ];
-          return _.createElement(
+          return s.createElement(
             "div",
             {
-              className: Object(y.a)(
-                j.FilterDisplayCtn,
-                C.FacetValueFilterDisplayCtn
+              className: Object(b.a)(
+                y.FilterDisplayCtn,
+                E.FacetValueFilterDisplayCtn
               ),
             },
-            _.createElement(
+            s.createElement(
               "div",
               null,
-              _.createElement(h.n, null, Object(O.f)("#EventEditor_TypeTitle")),
-              _.createElement(h.i, {
+              s.createElement(p.n, null, Object(v.f)("#EventEditor_TypeTitle")),
+              s.createElement(p.i, {
                 rgOptions: u,
-                selectedOption: n.type || c.l.k_ESaleTagFilter,
+                selectedOption: n.type || d.l.k_ESaleTagFilter,
                 onChange: function (e) {
                   (n.type = e.data),
-                    n.type === c.l.k_ELanguage &&
+                    n.type === d.l.k_ELanguage &&
                       null == n.language &&
-                      (n.language = Object(s.d)(d.c.LANGUAGE)),
-                    n.type === c.l.k_EContentDescriptor &&
+                      (n.language = Object(c.d)(D.c.LANGUAGE)),
+                    n.type === d.l.k_EContentDescriptor &&
                       null == n.contentDescriptor &&
                       (n.contentDescriptor = 5),
-                    n.type === c.l.k_EUserPreference &&
+                    n.type === d.l.k_EUserPreference &&
                       null == n.userPreference &&
-                      (n.userPreference = c.m.k_EHideOwnedItems),
-                    n.type === c.l.k_EAppType &&
+                      (n.userPreference = d.m.k_EHideOwnedItems),
+                    n.type === d.l.k_EAppType &&
                       null == n.appType &&
                       (n.appType = "game"),
                     r();
                 },
               })
             ),
-            _.createElement(
+            s.createElement(
               "div",
-              { className: C.FacetValueCtn },
-              _.createElement(h.m, {
+              { className: E.FacetValueCtn },
+              s.createElement(p.m, {
                 name: "name",
-                label: Object(O.f)("#FacetedBrowseEditor_Name"),
-                tooltip: Object(O.f)(
+                label: Object(v.f)("#FacetedBrowseEditor_Name"),
+                tooltip: Object(v.f)(
                   "#FacetedBrowseEditor_Tooltip_FacetValue_Name"
                 ),
-                value: O.a.Get(n.name, t),
+                value: v.a.Get(n.name, t),
                 onChange: o,
               }),
-              _.createElement(h.m, {
+              s.createElement(p.m, {
                 name: "subtitle",
-                label: Object(O.f)("#FacetedBrowseEditor_Subtitle"),
-                tooltip: Object(O.f)(
+                label: Object(v.f)("#FacetedBrowseEditor_Subtitle"),
+                tooltip: Object(v.f)(
                   "#FacetedBrowseEditor_Tooltip_FacetValue_Subtitle"
                 ),
-                value: O.a.Get(n.subtitle, t),
+                value: v.a.Get(n.subtitle, t),
                 onChange: o,
               }),
-              (n.type === c.l.k_ESaleTagFilter || void 0 === n.type) &&
-                _.createElement(
+              (n.type === d.l.k_ESaleTagFilter || void 0 === n.type) &&
+                s.createElement(
                   "div",
                   null,
-                  _.createElement(
-                    h.n,
+                  s.createElement(
+                    p.n,
                     null,
-                    Object(O.f)("#Sale_TagFilter_Filter")
+                    Object(v.f)("#Sale_TagFilter_Filter")
                   ),
-                  _.createElement(
+                  s.createElement(
                     "div",
                     null,
-                    _.createElement(
-                      h.d,
+                    s.createElement(
+                      p.d,
                       {
                         onClick: function () {
-                          Object(v.c)(
-                            _.createElement(D.a, {
+                          Object(g.c)(
+                            s.createElement(T.a, {
                               editModel: a,
                               filter: n.filter,
-                              title: Object(O.f)("#Sale_TagFilter_EditFilter"),
+                              title: Object(v.f)("#Sale_TagFilter_EditFilter"),
                               onApplyFilter: l,
                               ignoreStartingReferences: i,
                             }),
@@ -2292,36 +1922,36 @@
                           );
                         },
                       },
-                      Object(O.f)("#Sale_TagFilter_EditFilter")
+                      Object(v.f)("#Sale_TagFilter_EditFilter")
                     )
                   )
                 ),
-              n.type === c.l.k_ELanguage &&
-                _.createElement(
+              n.type === d.l.k_ELanguage &&
+                s.createElement(
                   "div",
                   null,
-                  _.createElement(h.n, null, Object(O.f)("#LanguageTitle")),
-                  _.createElement(
+                  s.createElement(p.n, null, Object(v.f)("#LanguageTitle")),
+                  s.createElement(
                     "div",
                     null,
-                    _.createElement(k.a, {
-                      selectedLang: n.language || Object(s.d)(d.c.LANGUAGE),
+                    s.createElement(I.a, {
+                      selectedLang: n.language || Object(c.d)(D.c.LANGUAGE),
                       fnOnLanguageChanged: function (e) {
                         (n.language = e), r();
                       },
                     })
                   )
                 ),
-              n.type === c.l.k_EContentDescriptor &&
-                _.createElement(
+              n.type === d.l.k_EContentDescriptor &&
+                s.createElement(
                   "div",
                   null,
-                  _.createElement(h.n, null, Object(O.f)("#ContentDescriptor")),
-                  _.createElement(
+                  s.createElement(p.n, null, Object(v.f)("#ContentDescriptor")),
+                  s.createElement(
                     "div",
                     null,
-                    _.createElement(h.i, {
-                      rgOptions: p,
+                    s.createElement(p.i, {
+                      rgOptions: m,
                       selectedOption: n.contentDescriptor || 5,
                       onChange: function (e) {
                         (n.contentDescriptor = e.data), r();
@@ -2329,33 +1959,33 @@
                     })
                   )
                 ),
-              n.type === c.l.k_EUserPreference &&
-                _.createElement(
+              n.type === d.l.k_EUserPreference &&
+                s.createElement(
                   "div",
                   null,
-                  _.createElement(h.n, null, Object(O.f)("#Sale_Preferences")),
-                  _.createElement(
+                  s.createElement(p.n, null, Object(v.f)("#Sale_Preferences")),
+                  s.createElement(
                     "div",
                     null,
-                    _.createElement(h.i, {
-                      rgOptions: m,
-                      selectedOption: n.userPreference || c.m.k_EHideOwnedItems,
+                    s.createElement(p.i, {
+                      rgOptions: _,
+                      selectedOption: n.userPreference || d.m.k_EHideOwnedItems,
                       onChange: function (e) {
                         (n.userPreference = e.data), r();
                       },
                     })
                   )
                 ),
-              n.type === c.l.k_EAppType &&
-                _.createElement(
+              n.type === d.l.k_EAppType &&
+                s.createElement(
                   "div",
                   null,
-                  _.createElement(h.n, null, Object(O.f)("#AppTypeLabelTitle")),
-                  _.createElement(
+                  s.createElement(p.n, null, Object(v.f)("#AppTypeLabelTitle")),
+                  s.createElement(
                     "div",
                     null,
-                    _.createElement(h.i, {
-                      rgOptions: g,
+                    s.createElement(p.i, {
+                      rgOptions: h,
                       selectedOption: n.appType || "game",
                       onChange: function (e) {
                         (n.appType = e.data), r();
@@ -2364,12 +1994,12 @@
                   )
                 )
             ),
-            n.type !== c.l.k_EPrice &&
-              _.createElement(
+            n.type !== d.l.k_EPrice &&
+              s.createElement(
                 "div",
                 null,
-                _.createElement(h.e, {
-                  label: Object(O.f)("#FacetedBrowseEditor_EnabledByDefault"),
+                s.createElement(p.e, {
+                  label: Object(v.f)("#FacetedBrowseEditor_EnabledByDefault"),
                   checked: n.bEnabledByDefault,
                   onChange: function (e) {
                     (n.bEnabledByDefault = e), r();
@@ -2378,7 +2008,7 @@
               )
           );
         }),
-        N = Object(m.a)(function (e) {
+        A = Object(l.a)(function (e) {
           var t = e.language,
             n = e.facet,
             a = e.facetValueArray,
@@ -2386,35 +2016,35 @@
             r = e.capsuleContainer,
             o = e.fnMarkEditModelDirty,
             l = e.fnNotifyExpanded,
-            s = _.useState(!1),
-            c = s[0],
-            u = s[1];
-          return _.createElement(
-            _.Fragment,
+            c = s.useState(!1),
+            u = c[0],
+            d = c[1];
+          return s.createElement(
+            s.Fragment,
             null,
-            _.createElement(
+            s.createElement(
               "div",
-              { className: j.SaleSectionTitleHeader },
-              _.createElement(
+              { className: y.SaleSectionTitleHeader },
+              s.createElement(
                 "div",
-                { className: j.EventEditorTextTitle },
-                Object(O.f)(
+                { className: y.EventEditorTextTitle },
+                Object(v.f)(
                   "#FacetedBrowseEditor_NumFacetValues",
                   a.length.toString()
                 )
               ),
-              _.createElement(B.a, {
-                bIsMinimized: !c,
+              s.createElement(G.a, {
+                bIsMinimized: !u,
                 fnToggleMinimize: function () {
-                  l(!c), u(!c);
+                  l(!u), d(!u);
                 },
               })
             ),
-            c &&
-              _.createElement(
-                _.Fragment,
+            u &&
+              s.createElement(
+                s.Fragment,
                 null,
-                _.createElement(S.a, {
+                s.createElement(h.a, {
                   items: a,
                   onDelete: function (e, t) {
                     a.splice(e, 1), o();
@@ -2423,7 +2053,7 @@
                     o();
                   },
                   render: function (e) {
-                    return _.createElement(F, {
+                    return s.createElement(L, {
                       language: t,
                       facetValue: e,
                       editModel: i,
@@ -2432,8 +2062,8 @@
                     });
                   },
                 }),
-                _.createElement(
-                  h.d,
+                s.createElement(
+                  p.d,
                   {
                     onClick: function (e) {
                       a.push({
@@ -2447,41 +2077,41 @@
                         o();
                     },
                   },
-                  Object(O.f)("#FacetedBrowseEditor_AddFacetValue")
+                  Object(v.f)("#FacetedBrowseEditor_AddFacetValue")
                 )
               )
           );
         }),
-        R = Object(m.a)(function (e) {
+        B = Object(l.a)(function (e) {
           var t = e.language,
             n = e.facet,
             a = e.editModel,
             i = e.capsuleContainer,
             r = e.fnMarkEditModelDirty,
             o = e.fnNotifyExpanded;
-          return _.createElement(
+          return s.createElement(
             "div",
             {
-              className: Object(y.a)(
-                j.FilterDisplayCtn,
-                C.FacetFilterDisplayCtn
+              className: Object(b.a)(
+                y.FilterDisplayCtn,
+                E.FacetFilterDisplayCtn
               ),
             },
-            _.createElement(h.m, {
+            s.createElement(p.m, {
               name: "name",
-              label: Object(O.f)("#FacetedBrowseEditor_Name"),
-              tooltip: Object(O.f)("#FacetedBrowseEditor_Tooltip_Facet_Name"),
-              value: O.a.Get(n.name, t),
+              label: Object(v.f)("#FacetedBrowseEditor_Name"),
+              tooltip: Object(v.f)("#FacetedBrowseEditor_Tooltip_Facet_Name"),
+              value: v.a.Get(n.name, t),
               onChange: function (e) {
                 if ("name" === e.target.name) {
                   var a = n.name,
-                    i = O.a.Set(a || [], t, e.target.value);
+                    i = v.a.Set(a || [], t, e.target.value);
                   n.name = i;
                 }
                 r();
               },
             }),
-            _.createElement(N, {
+            s.createElement(A, {
               language: t,
               facet: n,
               facetValueArray: n.facetValues,
@@ -2492,48 +2122,48 @@
             })
           );
         }),
-        x = Object(m.a)(function (e) {
+        F = Object(l.a)(function (e) {
           var t = e.language,
             n = e.section,
             a = e.facetArray,
             i = e.editModel,
             r = e.capsuleContainer,
             o = e.fnMarkEditModelDirty,
-            l = _.useState(!1),
-            s = l[0],
-            c = l[1],
-            u = _.useState(!1),
-            d = u[0],
-            p = u[1],
-            m = function (e) {
-              p(e);
+            l = s.useState(!1),
+            c = l[0],
+            u = l[1],
+            d = s.useState(!1),
+            m = d[0],
+            _ = d[1],
+            g = function (e) {
+              _(e);
             };
-          return _.createElement(
-            _.Fragment,
+          return s.createElement(
+            s.Fragment,
             null,
-            _.createElement(
+            s.createElement(
               "div",
-              { className: j.SaleSectionTitleHeader },
-              _.createElement(
+              { className: y.SaleSectionTitleHeader },
+              s.createElement(
                 "div",
-                { className: j.EventEditorTextTitle },
-                Object(O.f)(
+                { className: y.EventEditorTextTitle },
+                Object(v.f)(
                   "#FacetedBrowseEditor_NumFacets",
                   a.length.toString()
                 )
               ),
-              _.createElement(B.a, {
-                bIsMinimized: !s,
+              s.createElement(G.a, {
+                bIsMinimized: !c,
                 fnToggleMinimize: function () {
-                  c(!s);
+                  u(!c);
                 },
               })
             ),
-            s &&
-              _.createElement(
-                _.Fragment,
+            c &&
+              s.createElement(
+                s.Fragment,
                 null,
-                _.createElement(S.a, {
+                s.createElement(h.a, {
                   items: a,
                   onDelete: function (e, t) {
                     a.splice(e, 1), o();
@@ -2542,19 +2172,19 @@
                     o();
                   },
                   render: function (e) {
-                    return _.createElement(R, {
+                    return s.createElement(B, {
                       language: t,
                       facet: e,
                       editModel: i,
                       capsuleContainer: r,
                       fnMarkEditModelDirty: o,
-                      fnNotifyExpanded: m,
+                      fnNotifyExpanded: g,
                     });
                   },
-                  bDisabled: d,
+                  bDisabled: m,
                 }),
-                _.createElement(
-                  h.d,
+                s.createElement(
+                  p.d,
                   {
                     onClick: function (e) {
                       a.push({
@@ -2565,51 +2195,51 @@
                         o();
                     },
                   },
-                  Object(O.f)("#FacetedBrowseEditor_AddFacet")
+                  Object(v.f)("#FacetedBrowseEditor_AddFacet")
                 )
               )
           );
         }),
-        P = Object(m.a)(function (e) {
+        N = Object(l.a)(function (e) {
           var t = e.section,
             n = e.capsuleContainer,
             o = e.editModel,
             l = e.bAllowPruneFacets,
-            s = void 0 !== l && l,
-            u = Object(_.useState)(!1),
-            d = u[0],
-            p = u[1],
-            m = function () {
+            c = void 0 !== l && l,
+            h = Object(s.useState)(!1),
+            b = h[0],
+            E = h[1],
+            T = function () {
               o.SetDirty(i.c.jsondata_sales);
             },
-            S = [
+            I = [
               {
-                label: Object(O.f)("#FacetedBrowseEditor_SortFacetValues_Name"),
-                tooltip: Object(O.f)(
+                label: Object(v.f)("#FacetedBrowseEditor_SortFacetValues_Name"),
+                tooltip: Object(v.f)(
                   "#FacetedBrowseEditor_Tooltip_SortFacetValues_ByName"
                 ),
-                data: c.k.k_ESortFacetsByName,
+                data: d.k.k_ESortFacetsByName,
               },
               {
-                label: Object(O.f)(
+                label: Object(v.f)(
                   "#FacetedBrowseEditor_SortFacetValues_MatchCount"
                 ),
-                tooltip: Object(O.f)(
+                tooltip: Object(v.f)(
                   "#FacetedBrowseEditor_Tooltip_SortFacetValues_ByCount"
                 ),
-                data: c.k.k_ESortFacetsByMatchCount,
+                data: d.k.k_ESortFacetsByMatchCount,
               },
               {
-                label: Object(O.f)(
+                label: Object(v.f)(
                   "#FacetedBrowseEditor_SortFacetValues_Manual"
                 ),
-                tooltip: Object(O.f)(
+                tooltip: Object(v.f)(
                   "#FacetedBrowseEditor_Tooltip_SortFacetValues_Manual"
                 ),
-                data: c.k.k_ESortFacetsManually,
+                data: d.k.k_ESortFacetsManually,
               },
             ],
-            y = function () {
+            D = function () {
               return Object(a.b)(void 0, void 0, void 0, function () {
                 var e, t, l, s;
                 return Object(a.e)(this, function (a) {
@@ -2618,21 +2248,21 @@
                       return 0 ===
                         (e = o.GetEventModel().GetTaggedItems()).length
                         ? [2]
-                        : [4, U(n.facets, e)];
+                        : [4, R(n.facets, e)];
                     case 1:
                       for (a.sent(), t = 0, l = n.facets; t < l.length; t++)
                         (s = l[t]).facetValues = s.facetValues.filter(function (
                           t
                         ) {
-                          return t.type === c.l.k_ELanguage
+                          return t.type === d.l.k_ELanguage
                             ? e.some(function (e) {
-                                return L.a
+                                return M.a
                                   .GetAppLinkInfo(e.capsule.id)
                                   .localized_langs.includes(t.language);
                               })
-                            : t.type === c.l.k_EContentDescriptor
+                            : t.type === d.l.k_EContentDescriptor
                             ? e.some(function (e) {
-                                var n = L.a.GetAppLinkInfo(e.capsule.id);
+                                var n = M.a.GetAppLinkInfo(e.capsule.id);
                                 return (
                                   Boolean(n) &&
                                   n.content_descriptors.includes(
@@ -2640,13 +2270,13 @@
                                   )
                                 );
                               })
-                            : t.type === c.l.k_EAppType
+                            : t.type === d.l.k_EAppType
                             ? e.some(function (e) {
-                                var n = L.a.GetAppLinkInfo(e.capsule.id);
+                                var n = M.a.GetAppLinkInfo(e.capsule.id);
                                 return Boolean(n) && n.type === t.appType;
                               })
-                            : t.type === c.l.k_EUserPreference ||
-                              t.type === c.l.k_EPrice ||
+                            : t.type === d.l.k_EUserPreference ||
+                              t.type === d.l.k_EPrice ||
                               e.some(function (e) {
                                 return Object(r.h)(e.tags, t.filter);
                               });
@@ -2656,15 +2286,15 @@
                 });
               });
             };
-          return _.createElement(
-            f.a,
+          return s.createElement(
+            m.a,
             null,
-            _.createElement(
-              M.b,
+            s.createElement(
+              j.b,
               { clanSteamID: o.GetClanSteamID(), requireAdmin: !0 },
-              _.createElement(h.q, {
-                label: Object(O.f)("#FacetedBrowseEditor_FacetsCheckbox"),
-                description: Object(O.f)(
+              s.createElement(p.q, {
+                label: Object(v.f)("#FacetedBrowseEditor_FacetsCheckbox"),
+                description: Object(v.f)(
                   "#FacetedBrowseEditor_FacetsCheckboxHelp"
                 ),
                 checked: n.enable_faceted_browsing,
@@ -2675,33 +2305,33 @@
                 },
               }),
               n.enable_faceted_browsing &&
-                _.createElement(
+                s.createElement(
                   "div",
-                  { className: j.FilterDisplayCtn },
-                  _.createElement(
+                  { className: y.FilterDisplayCtn },
+                  s.createElement(
                     "div",
-                    { className: w.FilterDisplayCtn },
-                    _.createElement(
+                    { className: C.FilterDisplayCtn },
+                    s.createElement(
                       "div",
-                      { className: w.FilterTitle },
-                      Object(O.f)("#FacetedBrowseEditor_FacetsSection")
+                      { className: C.FilterTitle },
+                      Object(v.f)("#FacetedBrowseEditor_FacetsSection")
                     )
                   ),
-                  _.createElement(
+                  s.createElement(
                     "div",
-                    { className: w.FilterDisplayCtn },
-                    _.createElement(
+                    { className: C.FilterDisplayCtn },
+                    s.createElement(
                       "div",
-                      { className: w.FilterActionsCtn },
-                      _.createElement("span", null),
-                      _.createElement(
-                        h.d,
+                      { className: C.FilterActionsCtn },
+                      s.createElement("span", null),
+                      s.createElement(
+                        p.d,
                         {
                           onClick: function (e) {
-                            Object(g.a)(
-                              _.createElement(T.a, {
+                            Object(u.a)(
+                              s.createElement(S.a, {
                                 onChange: function (e) {
-                                  (n.highlighted_facet_color = e), m();
+                                  (n.highlighted_facet_color = e), T();
                                 },
                                 color: n.highlighted_facet_color,
                               }),
@@ -2711,23 +2341,23 @@
                           },
                           style: { color: n.highlighted_facet_color },
                         },
-                        Object(O.f)(
+                        Object(v.f)(
                           "#FacetedBrowseEditor_HighlightedFacetColor"
                         )
                       )
                     ),
-                    _.createElement(
+                    s.createElement(
                       "div",
-                      { className: w.FilterActionsCtn },
-                      _.createElement("span", null),
-                      _.createElement(
-                        h.d,
+                      { className: C.FilterActionsCtn },
+                      s.createElement("span", null),
+                      s.createElement(
+                        p.d,
                         {
                           onClick: function (e) {
-                            Object(g.a)(
-                              _.createElement(T.a, {
+                            Object(u.a)(
+                              s.createElement(S.a, {
                                 onChange: function (e) {
-                                  (n.heading_color = e), m();
+                                  (n.heading_color = e), T();
                                 },
                                 color: n.heading_color,
                               }),
@@ -2737,30 +2367,30 @@
                           },
                           style: { color: n.heading_color },
                         },
-                        Object(O.f)("#FacetedBrowseEditor_HeadingColor")
+                        Object(v.f)("#FacetedBrowseEditor_HeadingColor")
                       )
                     ),
-                    _.createElement(
+                    s.createElement(
                       "div",
-                      { className: w.FilterActionsCtn },
-                      _.createElement(
+                      { className: C.FilterActionsCtn },
+                      s.createElement(
                         "span",
                         null,
-                        Object(O.f)("#FacetedBrowseEditor_AutoGenerate"),
-                        _.createElement(I.d, {
-                          tooltip: Object(O.f)(
+                        Object(v.f)("#FacetedBrowseEditor_AutoGenerate"),
+                        s.createElement(O.d, {
+                          tooltip: Object(v.f)(
                             "#FacetedBrowseEditor_Tooltip_AutoGenerate"
                           ),
                         })
                       ),
-                      _.createElement(
-                        h.d,
+                      s.createElement(
+                        p.d,
                         {
                           onClick: function () {
                             var e,
                               t = function () {
-                                Object(v.c)(
-                                  _.createElement(z, {
+                                Object(g.c)(
+                                  s.createElement(U, {
                                     onOK: function (e) {
                                       return (function (e) {
                                         return Object(a.b)(
@@ -2774,17 +2404,17 @@
                                               function (a) {
                                                 switch (a.label) {
                                                   case 0:
-                                                    p(!0), (a.label = 1);
+                                                    E(!0), (a.label = 1);
                                                   case 1:
                                                     return (
                                                       a.trys.push([1, , 5, 6]),
                                                       (t = n),
-                                                      [4, H(e)]
+                                                      [4, x(e)]
                                                     );
                                                   case 2:
                                                     return (
                                                       (t.facets = a.sent()),
-                                                      s ? [4, y()] : [3, 4]
+                                                      c ? [4, D()] : [3, 4]
                                                     );
                                                   case 3:
                                                     a.sent(), (a.label = 4);
@@ -2796,7 +2426,7 @@
                                                       [3, 6]
                                                     );
                                                   case 5:
-                                                    return p(!1), [7];
+                                                    return E(!1), [7];
                                                   case 6:
                                                     return [2];
                                                 }
@@ -2813,12 +2443,12 @@
                             (null === (e = n.facets) || void 0 === e
                               ? void 0
                               : e.length) > 0
-                              ? Object(v.c)(
-                                  _.createElement(b.d, {
-                                    strTitle: Object(O.f)(
+                              ? Object(g.c)(
+                                  s.createElement(_.d, {
+                                    strTitle: Object(v.f)(
                                       "#FacetedBrowseEditor_AutoGenerateDialogTitle"
                                     ),
-                                    strDescription: Object(O.f)(
+                                    strDescription: Object(v.f)(
                                       "#FacetedBrowseEditor_AutoGenerateDialogText"
                                     ),
                                     onOK: t,
@@ -2828,46 +2458,46 @@
                               : t();
                           },
                         },
-                        Object(O.f)("#FacetedBrowseEditor_AutoGenerateButton")
+                        Object(v.f)("#FacetedBrowseEditor_AutoGenerateButton")
                       )
                     ),
-                    s &&
-                      _.createElement(
+                    c &&
+                      s.createElement(
                         "div",
-                        { className: w.FilterActionsCtn },
-                        _.createElement(
+                        { className: C.FilterActionsCtn },
+                        s.createElement(
                           "span",
                           null,
-                          Object(O.f)("#FacetedBrowseEditor_PruneUnused"),
-                          _.createElement(I.d, {
-                            tooltip: Object(O.f)(
+                          Object(v.f)("#FacetedBrowseEditor_PruneUnused"),
+                          s.createElement(O.d, {
+                            tooltip: Object(v.f)(
                               "#FacetedBrowseEditor_Tooltip_PruneUnused"
                             ),
                           })
                         ),
-                        _.createElement(
-                          h.d,
-                          { onClick: y },
-                          Object(O.f)("#FacetedBrowseEditor_PruneUnusedButton")
+                        s.createElement(
+                          p.d,
+                          { onClick: D },
+                          Object(v.f)("#FacetedBrowseEditor_PruneUnusedButton")
                         )
                       ),
-                    _.createElement(
+                    s.createElement(
                       "div",
-                      { className: w.FilterActionsCtn },
-                      _.createElement(
+                      { className: C.FilterActionsCtn },
+                      s.createElement(
                         "span",
                         null,
-                        Object(O.f)("#FacetedBrowseEditor_MinMatchesText"),
-                        _.createElement(I.d, {
-                          tooltip: Object(O.f)(
+                        Object(v.f)("#FacetedBrowseEditor_MinMatchesText"),
+                        s.createElement(O.d, {
+                          tooltip: Object(v.f)(
                             "#FacetedBrowseEditor_Tooltip_MinMatches"
                           ),
                         })
                       ),
-                      _.createElement(
+                      s.createElement(
                         "div",
-                        { className: w.FilterSettingRightCol },
-                        _.createElement(h.m, {
+                        { className: C.FilterSettingRightCol },
+                        s.createElement(p.m, {
                           mustBeNumeric: !0,
                           rangeMin: 1,
                           value: n.min_capsule_matches_for_facet_values,
@@ -2875,28 +2505,28 @@
                             (n.min_capsule_matches_for_facet_values = Number(
                               e.target.value
                             )),
-                              m();
+                              T();
                           },
                         })
                       )
                     ),
-                    _.createElement(
+                    s.createElement(
                       "div",
-                      { className: w.FilterActionsCtn },
-                      _.createElement(
+                      { className: C.FilterActionsCtn },
+                      s.createElement(
                         "span",
                         null,
-                        Object(O.f)("#FacetedBrowseEditor_MaxFacetValuesText"),
-                        _.createElement(I.d, {
-                          tooltip: Object(O.f)(
+                        Object(v.f)("#FacetedBrowseEditor_MaxFacetValuesText"),
+                        s.createElement(O.d, {
+                          tooltip: Object(v.f)(
                             "#FacetedBrowseEditor_Tooltip_MaxFacetValues"
                           ),
                         })
                       ),
-                      _.createElement(
+                      s.createElement(
                         "div",
-                        { className: w.FilterSettingRightCol },
-                        _.createElement(h.m, {
+                        { className: C.FilterSettingRightCol },
+                        s.createElement(p.m, {
                           mustBeNumeric: !0,
                           rangeMin: 1,
                           value: n.max_facet_values_for_facet,
@@ -2904,78 +2534,78 @@
                             (n.max_facet_values_for_facet = Number(
                               e.target.value
                             )),
-                              m();
+                              T();
                           },
                         })
                       )
                     ),
-                    _.createElement(
+                    s.createElement(
                       "div",
-                      { className: w.FilterActionsCtn },
-                      _.createElement(
+                      { className: C.FilterActionsCtn },
+                      s.createElement(
                         "span",
                         null,
-                        Object(O.f)("#FacetedBrowseEditor_SortFacetValuesText"),
-                        _.createElement(I.d, {
-                          tooltip: Object(O.f)(
+                        Object(v.f)("#FacetedBrowseEditor_SortFacetValuesText"),
+                        s.createElement(O.d, {
+                          tooltip: Object(v.f)(
                             "#FacetedBrowseEditor_Tooltip_SortFacetValues"
                           ),
                         })
                       ),
-                      _.createElement(
+                      s.createElement(
                         "div",
-                        { className: w.FilterSettingRightCol },
-                        _.createElement(h.i, {
-                          rgOptions: S,
+                        { className: C.FilterSettingRightCol },
+                        s.createElement(p.i, {
+                          rgOptions: I,
                           selectedOption: n.facet_sort_order,
                           onChange: function (e) {
-                            (n.facet_sort_order = e.data), m();
+                            (n.facet_sort_order = e.data), T();
                           },
                         })
                       )
                     ),
-                    _.createElement(
-                      M.b,
+                    s.createElement(
+                      j.b,
                       { clanSteamID: o.GetClanSteamID(), requireAdmin: !0 },
-                      W(t) &&
-                        _.createElement(
+                      H(t) &&
+                        s.createElement(
                           "div",
-                          { className: w.FilterActionsCtn },
-                          _.createElement(
+                          { className: C.FilterActionsCtn },
+                          s.createElement(
                             "span",
                             null,
-                            Object(O.f)(
+                            Object(v.f)(
                               "#FacetedBrowseEditor_GenerateDebugInfo"
                             )
                           ),
-                          _.createElement(
+                          s.createElement(
                             "div",
-                            { className: w.FilterSettingRightCol },
-                            _.createElement(h.e, {
+                            { className: C.FilterSettingRightCol },
+                            s.createElement(p.e, {
                               checked: n.facets_generate_debug_info,
                               onChange: function (e) {
-                                (n.facets_generate_debug_info = e), m();
+                                (n.facets_generate_debug_info = e), T();
                               },
                             })
                           )
                         )
                     )
                   ),
-                  d
-                    ? _.createElement(E.a, null)
-                    : _.createElement(x, {
+                  b
+                    ? s.createElement(f.a, null)
+                    : s.createElement(F, {
                         language: o.GetCurEditLanguage(),
                         section: t,
                         facetArray: n.facets,
                         editModel: o,
                         capsuleContainer: n,
-                        fnMarkEditModelDirty: m,
+                        fnMarkEditModelDirty: T,
                       })
                 )
             )
           );
         });
-      function U(e, t) {
+      function R(e, t) {
         return Object(a.b)(this, void 0, void 0, function () {
           var n, i;
           return Object(a.e)(this, function (a) {
@@ -2985,9 +2615,9 @@
                   !e.some(function (e) {
                     return e.facetValues.some(function (e) {
                       return (
-                        e.type === c.l.k_ELanguage ||
-                        e.type === c.l.k_EContentDescriptor ||
-                        e.type === c.l.k_EAppType
+                        e.type === d.l.k_ELanguage ||
+                        e.type === d.l.k_EContentDescriptor ||
+                        e.type === d.l.k_EAppType
                       );
                     });
                   })
@@ -2998,7 +2628,7 @@
                 })),
                   (a.label = 1);
               case 1:
-                return a.trys.push([1, 3, , 4]), [4, Object(G.i)(n)];
+                return a.trys.push([1, 3, , 4]), [4, Object(w.i)(n)];
               case 2:
                 return a.sent(), [3, 4];
               case 3:
@@ -3009,37 +2639,37 @@
           });
         });
       }
-      function H(e) {
+      function x(e) {
         return Object(a.b)(this, void 0, void 0, function () {
           var t;
           return Object(a.e)(this, function (n) {
             switch (n.label) {
               case 0:
-                return [4, p.AutoGenerateFacetsAsync()];
+                return [4, o.a.AutoGenerateFacetsAsync()];
               case 1:
                 return (
                   (function (e) {
                     for (
-                      var t = p.GetAtomicTagIDsForTagID(),
-                        n = p.GetTagNameForTagID(),
+                      var t = o.a.GetAtomicTagIDsForTagID(),
+                        n = o.a.GetTagNameForTagID(),
                         a = 0,
                         i = e;
                       a < i.length;
                       a++
                     )
-                      for (var r = 0, o = i[a].facetValues; r < o.length; r++) {
-                        var l = o[r],
-                          s = l.nAtomicStoreTagID,
-                          u = t.has(s)
-                            ? t.get(s).map(function (e) {
+                      for (var r = 0, l = i[a].facetValues; r < l.length; r++) {
+                        var s = l[r],
+                          c = s.nAtomicStoreTagID,
+                          u = t.has(c)
+                            ? t.get(c).map(function (e) {
                                 return n.get(e);
                               })
-                            : [n.get(s)];
+                            : [n.get(c)];
                         (u = u.map(function (e) {
-                          return V(e);
+                          return P(e);
                         })),
-                          (l.type = c.l.k_ESaleTagFilter),
-                          (l.filter = {
+                          (s.type = d.l.k_ESaleTagFilter),
+                          (s.filter = {
                             clauses: [{ type: "Must have", or_tags: u }],
                           });
                       }
@@ -3048,7 +2678,7 @@
                     (function (e) {
                       e.forEach(function (e) {
                         e.facetValues.forEach(function (e) {
-                          e.type === c.l.k_ESaleTagFilter &&
+                          e.type === d.l.k_ESaleTagFilter &&
                             e.filter.clauses.forEach(function (e) {
                               e.or_tags.forEach(function (t, n) {
                                 var a = Object(r.k)(t),
@@ -3083,7 +2713,7 @@
                       var i = a[n];
                       t.facetValues.push({
                         name: ["#AppTypeLabel_" + i],
-                        type: c.l.k_EAppType,
+                        type: d.l.k_EAppType,
                         appType: i,
                         filter: null,
                         matchingCapsules: null,
@@ -3096,7 +2726,7 @@
                     var t = { name: ["#Platform"], facetValues: [] };
                     t.facetValues.push({
                       name: ["#Platform_Windows"],
-                      type: c.l.k_ESaleTagFilter,
+                      type: d.l.k_ESaleTagFilter,
                       filter: {
                         clauses: [
                           { type: "Must have", or_tags: ["[Feature] Windows"] },
@@ -3107,7 +2737,7 @@
                     }),
                       t.facetValues.push({
                         name: ["#Platform_Linux"],
-                        type: c.l.k_ESaleTagFilter,
+                        type: d.l.k_ESaleTagFilter,
                         filter: {
                           clauses: [
                             { type: "Must have", or_tags: ["[Feature] Linux"] },
@@ -3118,7 +2748,7 @@
                       }),
                       t.facetValues.push({
                         name: ["#Platform_Mac"],
-                        type: c.l.k_ESaleTagFilter,
+                        type: d.l.k_ESaleTagFilter,
                         filter: {
                           clauses: [
                             { type: "Must have", or_tags: ["[Feature] Mac"] },
@@ -3137,8 +2767,8 @@
                       ++n
                     )
                       t.facetValues.push({
-                        name: ["#language_selection_" + Object(s.a)(n)],
-                        type: c.l.k_ELanguage,
+                        name: ["#language_selection_" + Object(c.a)(n)],
+                        type: d.l.k_ELanguage,
                         language: n,
                         filter: null,
                         matchingCapsules: null,
@@ -3150,7 +2780,7 @@
                     var t = { name: ["#ContentDescriptor"], facetValues: [] };
                     t.facetValues.push({
                       name: ["#ContentDescriptor_GeneralMatureContent"],
-                      type: c.l.k_EContentDescriptor,
+                      type: d.l.k_EContentDescriptor,
                       contentDescriptor: 5,
                       filter: null,
                       matchingCapsules: null,
@@ -3158,7 +2788,7 @@
                     }),
                       t.facetValues.push({
                         name: ["#ContentDescriptor_FrequentViolenceOrGore"],
-                        type: c.l.k_EContentDescriptor,
+                        type: d.l.k_EContentDescriptor,
                         contentDescriptor: 2,
                         filter: null,
                         matchingCapsules: null,
@@ -3166,7 +2796,7 @@
                       }),
                       t.facetValues.push({
                         name: ["#ContentDescriptor_NudityOrSexualContent"],
-                        type: c.l.k_EContentDescriptor,
+                        type: d.l.k_EContentDescriptor,
                         contentDescriptor: 1,
                         filter: null,
                         matchingCapsules: null,
@@ -3174,7 +2804,7 @@
                       }),
                       t.facetValues.push({
                         name: ["#ContentDescriptor_AdultOnlySexualContent"],
-                        type: c.l.k_EContentDescriptor,
+                        type: d.l.k_EContentDescriptor,
                         contentDescriptor: 3,
                         filter: null,
                         matchingCapsules: null,
@@ -3186,24 +2816,24 @@
                     var t = { name: ["#Sale_Preferences"], facetValues: [] };
                     t.facetValues.push({
                       name: ["#UserPreference_HideOwnedItems"],
-                      type: c.l.k_EUserPreference,
-                      userPreference: c.m.k_EHideOwnedItems,
+                      type: d.l.k_EUserPreference,
+                      userPreference: d.m.k_EHideOwnedItems,
                       filter: null,
                       matchingCapsules: null,
                       rgStoreTagFilter: null,
                     }),
                       t.facetValues.push({
                         name: ["#UserPreference_HideWishlistedItems"],
-                        type: c.l.k_EUserPreference,
-                        userPreference: c.m.k_EHideWishlistedItems,
+                        type: d.l.k_EUserPreference,
+                        userPreference: d.m.k_EHideWishlistedItems,
                         filter: null,
                         matchingCapsules: null,
                         rgStoreTagFilter: null,
                       }),
                       t.facetValues.push({
                         name: ["#UserPreference_HideIgnoredItems"],
-                        type: c.l.k_EUserPreference,
-                        userPreference: c.m.k_EHideIgnoredItems,
+                        type: d.l.k_EUserPreference,
+                        userPreference: d.m.k_EHideIgnoredItems,
                         bEnabledByDefault: !0,
                         filter: null,
                         matchingCapsules: null,
@@ -3217,28 +2847,28 @@
           });
         });
       }
-      function V(e) {
+      function P(e) {
         return Object(r.f)(e, r.j.Store);
       }
-      var z = Object(m.a)(function (e) {
+      var U = Object(l.a)(function (e) {
         var t = e.closeModal,
           n = e.onOK,
-          a = Object(_.useState)(!1),
+          a = Object(s.useState)(!1),
           i = a[0],
           r = a[1];
-        return _.createElement(
-          b.e,
+        return s.createElement(
+          _.e,
           { onCancel: t, closeModal: t },
-          _.createElement(
-            h.l,
+          s.createElement(
+            p.l,
             null,
-            Object(O.f)("#FacetedBrowseEditor_AutoGenerate")
+            Object(v.f)("#FacetedBrowseEditor_AutoGenerate")
           ),
-          _.createElement(
-            h.b,
+          s.createElement(
+            p.b,
             null,
-            _.createElement(h.e, {
-              label: Object(O.f)(
+            s.createElement(p.e, {
+              label: Object(v.f)(
                 "#FacetedBrowseEditor_AutoGenerateOptions_FeatureTagForController"
               ),
               checked: i,
@@ -3247,36 +2877,36 @@
               },
             })
           ),
-          _.createElement(
-            h.k,
+          s.createElement(
+            p.k,
             null,
-            _.createElement(
-              h.r,
+            s.createElement(
+              p.r,
               {
                 onClick: function () {
                   n({ bForceFeatureTagForFullController: i }), t();
                 },
               },
-              Object(O.f)("#Button_OK")
+              Object(v.f)("#Button_OK")
             ),
-            _.createElement(h.d, { onClick: t }, Object(O.f)("#Button_Cancel"))
+            s.createElement(p.d, { onClick: t }, Object(v.f)("#Button_Cancel"))
           )
         );
       });
-      function W(e) {
+      function H(e) {
         return (
           !("items" !== e.section_type || !e.smart_section) ||
           "sale_item_browser" === e.section_type
         );
       }
-      function q(e, t, n) {
+      function V(e, t, n) {
         var i;
         return Object(a.b)(this, void 0, void 0, function () {
-          var o, l, s, u, d, p, m, _, g, h, f, b, v, S, E, y, O, T, C, j;
+          var o, l, s, c, u, p, m, _, g, h, f, b, v, S, E, y, O, T, C, j;
           return Object(a.e)(this, function (a) {
             switch (a.label) {
               case 0:
-                return [4, U(n, t)];
+                return [4, R(n, t)];
               case 1:
                 for (
                   a.sent(),
@@ -3287,7 +2917,7 @@
                       };
                     }),
                     l = t.map(function (e) {
-                      var t = L.a.GetAppLinkInfo(e.capsule.id);
+                      var t = M.a.GetAppLinkInfo(e.capsule.id);
                       return {
                         languages: Boolean(t)
                           ? new Set(t.localized_langs)
@@ -3296,7 +2926,7 @@
                       };
                     }),
                     s = t.map(function (e) {
-                      var t = L.a.GetAppLinkInfo(e.capsule.id);
+                      var t = M.a.GetAppLinkInfo(e.capsule.id);
                       return {
                         contentDescriptors: Boolean(t)
                           ? new Set(t.content_descriptors)
@@ -3304,43 +2934,43 @@
                         capsule: e.capsule,
                       };
                     }),
-                    u = t.map(function (e) {
-                      var t = L.a.GetAppLinkInfo(e.capsule.id);
+                    c = t.map(function (e) {
+                      var t = M.a.GetAppLinkInfo(e.capsule.id);
                       return {
                         appType: Boolean(t) ? t.type : null,
                         capsule: e.capsule,
                       };
                     }),
-                    d = 0,
+                    u = 0,
                     p = n;
-                  d < p.length;
-                  d++
+                  u < p.length;
+                  u++
                 )
-                  for (m = p[d], _ = 0, g = m.facetValues; _ < g.length; _++)
+                  for (m = p[u], _ = 0, g = m.facetValues; _ < g.length; _++)
                     if (
                       (((h = g[_]).matchingCapsules = []),
-                      W(e) && !1 === e.facets_generate_debug_info)
+                      H(e) && !1 === e.facets_generate_debug_info)
                     )
                       h.matchingCapsules = void 0;
-                    else if (h.type === c.l.k_ELanguage)
+                    else if (h.type === d.l.k_ELanguage)
                       for (f = 0, b = l; f < b.length; f++)
                         (O = b[f]),
                           (null === (i = O.languages) || void 0 === i
                             ? void 0
                             : i.has(h.language)) &&
                             h.matchingCapsules.push(O.capsule);
-                    else if (h.type === c.l.k_EContentDescriptor)
+                    else if (h.type === d.l.k_EContentDescriptor)
                       for (v = 0, S = s; v < S.length; v++)
                         (null === (O = S[v]).contentDescriptors ||
                           O.contentDescriptors.has(h.contentDescriptor)) &&
                           h.matchingCapsules.push(O.capsule);
                     else if (
-                      h.type === c.l.k_EUserPreference ||
-                      h.type === c.l.k_EPrice
+                      h.type === d.l.k_EUserPreference ||
+                      h.type === d.l.k_EPrice
                     )
                       h.matchingCapsules = [];
-                    else if (h.type === c.l.k_EAppType)
-                      for (E = 0, y = u; E < y.length; E++)
+                    else if (h.type === d.l.k_EAppType)
+                      for (E = 0, y = c; E < y.length; E++)
                         (O = y[E]).appType === h.appType &&
                           h.matchingCapsules.push(O.capsule);
                     else
@@ -3353,34 +2983,38 @@
           });
         });
       }
-      function Y(e) {
+      function z(e) {
         return Object(a.b)(this, void 0, void 0, function () {
-          var t, n, i, r, o, l, u, d, m;
+          var t, n, i, r, l, s, u, p, m;
           return Object(a.e)(this, function (a) {
             switch (a.label) {
               case 0:
                 return e.BIsSourceEventSaleEnabled() &&
-                  (null == (t = e.GetEventModel().GetTaggedItems())
+                  ((null == (t = e.GetEventModel().GetTaggedItems())
                     ? void 0
-                    : t.length)
-                  ? [4, p.EnsureLoaded()]
+                    : t.length) ||
+                    e.GetEventModel().jsondata.item_source_type !==
+                      d.n.k_ETaggedItems)
+                  ? [4, o.a.EnsureLoaded()]
                   : [2];
               case 1:
                 return (
-                  a.sent(), (n = p.GetTagNameForTagID()), [4, p.GetLanguages()]
+                  a.sent(),
+                  (n = o.a.GetTagNameForTagID()),
+                  [4, o.a.GetLanguages()]
                 );
               case 2:
-                return (i = a.sent()), [4, p.GetLocalizedTagNames()];
+                return (i = a.sent()), [4, o.a.GetLocalizedTagNames()];
               case 3:
                 (r = a.sent()),
-                  (o = new Map()),
+                  (l = new Map()),
                   n.forEach(function (e, t) {
                     var n = e.toLocaleLowerCase();
-                    o.has(n)
+                    l.has(n)
                       ? console.error("Duplicate tag name: " + e)
-                      : o.set(n, t);
+                      : l.set(n, t);
                   }),
-                  (l = (function (e) {
+                  (s = (function (e) {
                     var t,
                       n,
                       a =
@@ -3401,23 +3035,21 @@
                     return i;
                   })(e)),
                   (u = 0),
-                  (d = e.GetSaleSections()),
+                  (p = e.GetSaleSections()),
                   (a.label = 4);
               case 4:
-                return u < d.length
-                  ? "tabs" === (m = d[u]).section_type && m.tabs
-                    ? (m.tabs.forEach(function (e) {
+                return u < p.length
+                  ? ((m = p[u]).sale_tag_filter &&
+                      (m.store_filter = W(m.sale_tag_filter, l, s)),
+                    "tabs" === m.section_type &&
+                      m.tabs &&
+                      m.tabs.forEach(function (e) {
                         e.sale_tag_filter &&
-                          (e.store_filter = Q(e.sale_tag_filter, o, l));
+                          (e.store_filter = W(e.sale_tag_filter, l, s));
                       }),
-                      [3, 7])
-                    : [3, 5]
-                  : [3, 8];
-              case 5:
-                return m.enable_faceted_browsing
-                  ? [4, q(m, t, m.facets)]
+                    m.enable_faceted_browsing ? [4, V(m, t, m.facets)] : [3, 6])
                   : [3, 7];
-              case 6:
+              case 5:
                 a.sent(),
                   (function (e, t, n) {
                     for (
@@ -3430,25 +3062,25 @@
                             r < o.length;
                             r++
                           ) {
-                            (u = o[r]).type === c.l.k_ELanguage
-                              ? a.set(u, K(u.language))
-                              : u.type === c.l.k_EContentDescriptor
-                              ? a.set(u, Z(u.contentDescriptor))
-                              : u.type === c.l.k_EUserPreference
-                              ? a.set(u, null)
-                              : u.type === c.l.k_EPrice
-                              ? a.set(u, {
-                                  type: c.o.k_EStoreFilterClauseTypePrice,
+                            (c = o[r]).type === d.l.k_ELanguage
+                              ? a.set(c, K(c.language))
+                              : c.type === d.l.k_EContentDescriptor
+                              ? a.set(c, Y(c.contentDescriptor))
+                              : c.type === d.l.k_EUserPreference
+                              ? a.set(c, null)
+                              : c.type === d.l.k_EPrice
+                              ? a.set(c, {
+                                  type: d.o.k_EStoreFilterClauseTypePrice,
                                 })
-                              : u.type === c.l.k_EAppType
-                              ? a.set(u, X(u.appType))
-                              : (a.set(u, Q(u.filter, t, n)),
-                                i.set(u, J(u.filter, t)));
+                              : c.type === d.l.k_EAppType
+                              ? a.set(c, Q(c.appType))
+                              : (a.set(c, W(c.filter, t, n)),
+                                i.set(c, q(c.filter, t)));
                           }
                           if (
                             e.facetValues.every(function (e) {
                               return (
-                                e.type !== c.l.k_EUserPreference &&
+                                e.type !== d.l.k_EUserPreference &&
                                 null === a.get(e)
                               );
                             })
@@ -3466,10 +3098,10 @@
                             l < s.length;
                             l++
                           ) {
-                            var u;
-                            (u = s[l]).rgStoreTagFilter = a.get(u);
-                            var d = i.get(u);
-                            d > 0 && (u.nAtomicStoreTagID = d);
+                            var c;
+                            (c = s[l]).rgStoreTagFilter = a.get(c);
+                            var u = i.get(c);
+                            u > 0 && (c.nAtomicStoreTagID = u);
                           }
                         },
                         i = 0,
@@ -3479,22 +3111,22 @@
                     ) {
                       a(r[i]);
                     }
-                  })(m, o, l),
+                  })(m, l, s),
                   (function (e, t, n, a) {
                     e.facets.forEach(function (e) {
                       e.facetValues.forEach(function (e) {
                         e.nAtomicStoreTagID &&
                           n.forEach(function (n, i) {
-                            var r = Object(s.d)(n);
-                            if (0 === O.a.Get(e.name, r).length) {
+                            var r = Object(c.d)(n);
+                            if (0 === v.a.Get(e.name, r).length) {
                               var o = t.get(e.nAtomicStoreTagID),
                                 l = a.get(e.nAtomicStoreTagID),
-                                c = O.a.Get(l, i);
-                              0 !== c.length &&
-                                (O.a.Set(e.name, r, c),
+                                s = v.a.Get(l, i);
+                              0 !== s.length &&
+                                (v.a.Set(e.name, r, s),
                                 console.warn(
                                   "Added missing localized name (" +
-                                    c +
+                                    s +
                                     ") (" +
                                     n +
                                     ") for facet value with atomic store tag ID " +
@@ -3510,19 +3142,19 @@
                   })(m, n, i, r),
                   m.metadata_matching_capsules &&
                     (m.metadata_matching_capsules = void 0),
-                  (a.label = 7);
-              case 7:
+                  (a.label = 6);
+              case 6:
                 return u++, [3, 4];
-              case 8:
+              case 7:
                 return [2];
             }
           });
         });
       }
-      function Q(e, t, n) {
+      function W(e, t, n) {
         for (
           var a = {
-              type: c.o.k_EStoreFilterClauseTypeAnd,
+              type: d.o.k_EStoreFilterClauseTypeAnd,
               rgSubexpressions: new Array(),
             },
             i = 0,
@@ -3533,16 +3165,16 @@
           for (
             var l = o[i],
               s = {
-                type: c.o.k_EStoreFilterClauseTypeOr,
+                type: d.o.k_EStoreFilterClauseTypeOr,
                 bNegated: "Must not have" === l.type,
                 rgSubexpressions: new Array(),
               },
-              u = 0,
-              d = l.or_tags;
-            u < d.length;
-            u++
+              c = 0,
+              u = l.or_tags;
+            c < u.length;
+            c++
           ) {
-            var p = d[u],
+            var p = u[c],
               m = Object(r.k)(p),
               _ = Object(r.s)(p).toLocaleLowerCase();
             if (m === r.j.Store) {
@@ -3554,12 +3186,12 @@
               }
               var g = t.get(_);
               s.rgSubexpressions.push({
-                type: c.o.k_EStoreFilterClauseTypeStoreTag,
+                type: d.o.k_EStoreFilterClauseTypeStoreTag,
                 value: g,
               });
             } else if (m == r.j.Feature)
               s.rgSubexpressions.push({
-                type: c.o.k_EStoreFilterClauseTypeFeatureTag,
+                type: d.o.k_EStoreFilterClauseTypeFeatureTag,
                 value: _,
               });
             else if (m === r.j.Auto) {
@@ -3568,47 +3200,47 @@
                 continue;
               }
               var h = n.get(_);
-              s.rgSubexpressions.push(Q(h, t, n));
+              s.rgSubexpressions.push(W(h, t, n));
             } else console.warn("Sale tag not implemented for faceting: " + p);
           }
           if (0 === s.rgSubexpressions.length) return null;
           a.rgSubexpressions.push(s);
         }
-        return 0 === a.rgSubexpressions.length ? null : Object(A.e)(a);
+        return 0 === a.rgSubexpressions.length ? null : Object(k.e)(a);
       }
-      function J(e, t) {
+      function q(e, t) {
         for (var n = 0, a = e.clauses; n < a.length; n++)
-          for (var i = 0, o = a[n].or_tags; i < o.length; i++) {
-            var l = o[i],
-              s = Object(r.k)(l),
-              c = Object(r.s)(l).toLocaleLowerCase();
-            if (s === r.j.Store) {
-              if (!t.has(c)) {
+          for (var i = 0, l = a[n].or_tags; i < l.length; i++) {
+            var s = l[i],
+              c = Object(r.k)(s),
+              u = Object(r.s)(s).toLocaleLowerCase();
+            if (c === r.j.Store) {
+              if (!t.has(u)) {
                 console.error(
-                  "No matching categorized store tag found for sale tag: " + l
+                  "No matching categorized store tag found for sale tag: " + s
                 );
                 continue;
               }
-              var u = t.get(c);
-              if (p.BIsTagAtomic(u)) return u;
+              var d = t.get(u);
+              if (o.a.BIsTagAtomic(d)) return d;
             }
           }
         return 0;
       }
       function K(e) {
         return {
-          type: c.o.k_EStoreFilterClauseTypeLanguage,
-          value: Object(s.a)(e),
+          type: d.o.k_EStoreFilterClauseTypeLanguage,
+          value: Object(c.a)(e),
         };
       }
-      function Z(e) {
+      function Y(e) {
         return {
-          type: c.o.k_EStoreFilterClauseTypeContentDescriptor,
+          type: d.o.k_EStoreFilterClauseTypeContentDescriptor,
           value: e,
         };
       }
-      function X(e) {
-        return { type: c.o.k_EStoreFilterClauseTypeAppType, value: e };
+      function Q(e) {
+        return { type: d.o.k_EStoreFilterClauseTypeAppType, value: e };
       }
     },
     "66At": function (e, t, n) {
@@ -4096,7 +3728,7 @@
                 return n(t);
               },
             },
-            r.createElement(b.ob, null)
+            r.createElement(b.pb, null)
           ),
           r.createElement(
             "div",
@@ -7754,8 +7386,8 @@
                     onClick: e.fnToggleMinimize,
                   },
                   e.bIsMinimized
-                    ? s.createElement(N.G, null)
-                    : s.createElement(N.J, null)
+                    ? s.createElement(N.H, null)
+                    : s.createElement(N.K, null)
                 )
             ),
             !e.bIsMinimized &&
@@ -7795,7 +7427,7 @@
                     {
                       onClick: function (t) {
                         Object(F.d)(
-                          s.createElement(Y, {
+                          s.createElement(K, {
                             fnRemoveAllArtwork: e.fnRemoveAllArtwork,
                           }),
                           Object(R.m)(t)
@@ -7806,7 +7438,7 @@
                   )
               ),
             !e.bIsMinimized &&
-              s.createElement(Q, {
+              s.createElement(Y, {
                 clanSteamID: e.clanSteamID,
                 title: e.title,
                 imageWidth: u,
@@ -7815,7 +7447,7 @@
               })
           );
         }),
-        Y = function (e) {
+        K = function (e) {
           var t = e.fnRemoveAllArtwork,
             n = e.closeModal;
           return s.createElement(B.d, {
@@ -7827,7 +7459,7 @@
             onCancel: n,
           });
         },
-        Q = (function (e) {
+        Y = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -7922,7 +7554,7 @@
                 : s.createElement(
                     "div",
                     null,
-                    s.createElement(J, {
+                    s.createElement(Q, {
                       list: this.state.lastSelection,
                       fnOnArtworkLanguageChange: this
                         .OnUpdateAndMoveClanImageLang,
@@ -8007,7 +7639,7 @@
             (t = Object(i.c)([l.a], t))
           );
         })(s.Component),
-        J = (function (e) {
+        Q = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -8016,7 +7648,7 @@
             (t.prototype.ShowLangChangeDialog = function (e, t) {
               var n = this.props.fnOnArtworkLanguageChange;
               Object(F.d)(
-                s.createElement(K, {
+                s.createElement(J, {
                   clanImage: e,
                   lang: t,
                   fnOnArtworkLangChange: n,
@@ -8073,7 +7705,7 @@
             (t = Object(i.c)([l.a], t))
           );
         })(s.Component),
-        K = (function (e) {
+        J = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.state = { selectedLang: t.props.lang }), t;
@@ -8432,7 +8064,7 @@
                 var o = f.d.GetClanImageByImageHash(a, r);
                 o &&
                   Object(F.d)(
-                    s.createElement(K, {
+                    s.createElement(J, {
                       clanImage: o,
                       lang: i,
                       fnOnArtworkLangChange: this.props.fnOnArtworkLangChange,
@@ -8537,7 +8169,7 @@
                               "#selectimage_viewimage_ttip"
                             ),
                           },
-                          N.P()
+                          N.Q()
                         ),
                       this.props.fnOnArtworkLangChange &&
                         s.createElement("img", {
@@ -10619,7 +10251,7 @@
             }
             (this.m_originalEvent = new v.c()),
               (this.m_originalEvent.loadedAllLanguages = !0),
-              Object(m.v)(this.m_curModel.jsondata),
+              Object(m.w)(this.m_curModel.jsondata),
               this.SetDirty(
                 r.description |
                   r.name |
@@ -12632,25 +12264,25 @@
     k3PP: function (e, t, n) {
       "use strict";
       n.d(t, "d", function () {
-        return et;
+        return it;
       }),
         n.d(t, "a", function () {
-          return tt;
+          return rt;
         }),
         n.d(t, "g", function () {
-          return it;
-        }),
-        n.d(t, "b", function () {
-          return lt;
-        }),
-        n.d(t, "e", function () {
           return st;
         }),
+        n.d(t, "b", function () {
+          return dt;
+        }),
+        n.d(t, "e", function () {
+          return pt;
+        }),
         n.d(t, "f", function () {
-          return ft;
+          return Et;
         }),
         n.d(t, "c", function () {
-          return St;
+          return Tt;
         });
       var a = n("mrSG"),
         i = n("vDqi"),
@@ -12929,10 +12561,10 @@
         z = n("y+6m"),
         W = n("mB/g"),
         q = n("xnZ7"),
-        Y = n.n(q),
-        Q = n("bS9Q"),
-        J = n("JiI5"),
-        K = n("aoTL"),
+        K = n.n(q),
+        Y = n("bS9Q"),
+        Q = n("JiI5"),
+        J = n("aoTL"),
         Z = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
@@ -13017,7 +12649,7 @@
               this.m_searchResultsMenu = Object(O.a)(
                 d.createElement(
                   z.c,
-                  { className: J.SearchResults },
+                  { className: Q.SearchResults },
                   e.map(function (e) {
                     return d.createElement(
                       z.d,
@@ -13030,13 +12662,13 @@
                       d.createElement(
                         "div",
                         { style: { display: "flex", alignItems: "center" } },
-                        Object(Q.b)(e.name),
+                        Object(Y.b)(e.name),
                         " ",
                         d.createElement("span", null, "(", e.id, ")"),
                         " ",
                         d.createElement(
                           "span",
-                          { className: J.SmallText },
+                          { className: Q.SmallText },
                           "(",
                           e.type,
                           ")"
@@ -13290,7 +12922,7 @@
         var t = e.editModel,
           n = e.saleSection,
           a = e.fnIsValidEvent,
-          i = Object(K.d)(function () {
+          i = Object(J.d)(function () {
             var e;
             return null === (e = n.events) || void 0 === e
               ? void 0
@@ -13318,7 +12950,7 @@
             var t = C.d.GetClanEventFromAnnouncementGID(e.announcement_gid);
             return d.createElement(
               W.c,
-              { className: Y.a.FlexCenter, eventModel: t, route: W.a.k_eView },
+              { className: K.a.FlexCenter, eventModel: t, route: W.a.k_eView },
               t
                 ? d.createElement("img", {
                     style: { height: "40px", marginRight: "8px" },
@@ -13377,7 +13009,7 @@
               "div",
               { className: I.EventEditorTextTitle },
               Object(h.f)("#Sale_EventDateRange"),
-              d.createElement(et, {
+              d.createElement(it, {
                 tooltip: Object(h.f)("#Sale_EventDateRange_ttip"),
               })
             ),
@@ -13528,7 +13160,7 @@
                     )
                   )
                 ),
-                d.createElement(ft, {
+                d.createElement(Et, {
                   varName: "show_as_demos",
                   editModel: n,
                   section: a,
@@ -13668,7 +13300,7 @@
               "div",
               { className: I.EventEditorTextTitle },
               Object(h.f)("#EventSchedule_Track_Current"),
-              d.createElement(et, {
+              d.createElement(it, {
                 tooltip: Object(h.f)("#EventSchedule_Track_Current_ttip"),
               })
             ),
@@ -14308,7 +13940,7 @@
               " 100%)",
             f = "tabs" !== n.section_type;
           return d.createElement(
-            it,
+            st,
             {
               title: Object(h.f)("#Sale_Section_Background_Title"),
               tooltip: Object(h.f)("#Sale_Section_Background_Title_ttip"),
@@ -14323,10 +13955,10 @@
             },
             d.createElement(
               "div",
-              { style: { display: "flex" }, className: J.BackgroundSettings },
+              { style: { display: "flex" }, className: Q.BackgroundSettings },
               d.createElement(
                 "div",
-                { className: Object(B.a)(I.HalfColumn, J.HalfColumn) },
+                { className: Object(B.a)(I.HalfColumn, Q.HalfColumn) },
                 d.createElement(
                   "div",
                   { className: I.EventEditorTextTitle },
@@ -14398,7 +14030,7 @@
                       Object(h.f)("#Sale_Section_Background_Bottom")
                     )
                   ),
-                d.createElement(ft, {
+                d.createElement(Et, {
                   varName: "disable_background",
                   editModel: t,
                   section: n,
@@ -14409,13 +14041,13 @@
               Boolean(f && !n.disable_background) &&
                 d.createElement(
                   "div",
-                  { className: Object(B.a)(I.HalfColumn, J.HalfColumn) },
+                  { className: Object(B.a)(I.HalfColumn, Q.HalfColumn) },
                   d.createElement(
                     "div",
                     { className: I.EventEditorTextTitle },
                     Object(h.f)("#Sale_Section_BackgroundImage_Title"),
                     " ",
-                    d.createElement(et, {
+                    d.createElement(it, {
                       tooltip: Object(h.f)(
                         "#Sale_Section_BackgroundImage_ttip"
                       ),
@@ -14676,7 +14308,7 @@
                     {
                       eventModel: t.GetEventModel(),
                       route: W.a.k_eCommunityEditBroadcast,
-                      className: J.CrossTabLink,
+                      className: Q.CrossTabLink,
                     },
                     Object(h.f)("#Sale_Broadcast_TabLink")
                   ));
@@ -14704,7 +14336,7 @@
                     )
                   : d.createElement(
                       "div",
-                      { className: J.CrossTabWarning },
+                      { className: Q.CrossTabWarning },
                       Object(h.f)("#Sale_ShowingBroadcastElsewhere")
                     )
                 : d.createElement(
@@ -14713,9 +14345,9 @@
                     n,
                     d.createElement(
                       "div",
-                      { className: J.CrossTabWarning },
+                      { className: Q.CrossTabWarning },
                       Object(h.f)("#Sale_Broadcast_Disabled"),
-                      d.createElement(et, {
+                      d.createElement(it, {
                         tooltip: Object(h.f)("#Sale_Broadcast_Disabled_hint"),
                       })
                     )
@@ -14780,7 +14412,7 @@
                                   (this.m_searchResultsMenu = Object(O.a)(
                                     d.createElement(
                                       z.c,
-                                      { className: J.SearchResults },
+                                      { className: Q.SearchResults },
                                       e.map(function (e) {
                                         return d.createElement(
                                           z.d,
@@ -14804,14 +14436,14 @@
                                               "div",
                                               {
                                                 className:
-                                                  Y.a.GameImageContainer,
+                                                  K.a.GameImageContainer,
                                               },
                                               d.createElement("img", {
                                                 src: e.GetAvatarURLFullSize(),
-                                                className: Y.a.AvatarImage,
+                                                className: K.a.AvatarImage,
                                               })
                                             ),
-                                            Object(Q.b)(e.GetName())
+                                            Object(Y.b)(e.GetName())
                                           )
                                         );
                                       })
@@ -14843,7 +14475,7 @@
                 null,
                 d.createElement(
                   "div",
-                  { className: J.SaleImportURL },
+                  { className: Q.SaleImportURL },
                   d.createElement(m.m, {
                     type: "text",
                     label: Object(h.f)("#Sale_SearchCurator"),
@@ -14887,7 +14519,7 @@
             if ("event_description" == a.GetSaleSections()[i].section_type)
               return d.createElement(
                 "div",
-                { className: J.CrossTabWarning },
+                { className: Q.CrossTabWarning },
                 Object(h.f)("#Sale_UsingEventBodyElsewhere")
               );
           return d.createElement(
@@ -14895,7 +14527,7 @@
             {
               eventModel: a,
               route: W.a.k_eCommunityEdit,
-              className: J.CrossTabLink,
+              className: Q.CrossTabLink,
             },
             Object(h.f)("#Sale_EventDescriptionTabLink")
           );
@@ -14985,7 +14617,7 @@
               "div",
               { className: I.EventEditorTextTitle },
               Object(h.f)("#Sale_CuratorRecommendation_FeaturedList"),
-              d.createElement(et, {
+              d.createElement(it, {
                 tooltip: Object(h.f)(
                   "#Sale_CuratorRecommendation_FeaturedList_ttip"
                 ),
@@ -15021,7 +14653,7 @@
                 ? void 0
                 : t.length) >= 2
             ) &&
-              d.createElement(ft, {
+              d.createElement(Et, {
                 varName: "use_random_order",
                 editModel: n,
                 section: s,
@@ -15031,7 +14663,7 @@
             _ &&
               d.createElement(
                 "div",
-                { className: J.CrossTabWarning },
+                { className: Q.CrossTabWarning },
                 Object(h.f)("#Sale_UsingCuratorRecommendationElsewhere")
               )
           );
@@ -15213,7 +14845,7 @@
             Ce.a,
             null,
             d.createElement(
-              ft,
+              Et,
               Object(a.a)(
                 {
                   textToken: "#Sale_Section_CarouselAutoAdvance",
@@ -15226,20 +14858,187 @@
             )
           );
         },
-        Ye = n("GOhU"),
-        Qe = n("ZC8J"),
-        Je = n("CtwA");
-      function Ke(e) {
+        Ke = (function () {
+          function e() {
+            (this.m_mapSections = new Map()), (this.m_mapPromises = new Map());
+          }
+          return (
+            (e.prototype.BHasSections = function (e, t, n) {
+              return this.m_mapSections.has(this.GetKey(e, t, n));
+            }),
+            (e.prototype.GetSections = function (e, t, n) {
+              return this.m_mapSections.get(this.GetKey(e, t, n));
+            }),
+            (e.prototype.LoadSections = function (e, t, n) {
+              return Object(a.b)(this, void 0, void 0, function () {
+                var i;
+                return Object(a.e)(this, function (a) {
+                  return (
+                    (i = this.GetKey(e, t, n)),
+                    this.m_mapPromises.get(i) ||
+                      this.m_mapPromises.set(
+                        i,
+                        this.InternalLoadSections(e, t, n)
+                      ),
+                    [2, this.m_mapPromises.get(i)]
+                  );
+                });
+              });
+            }),
+            (e.prototype.InternalLoadSections = function (e, t, n) {
+              return Object(a.b)(this, void 0, void 0, function () {
+                var i, o, l;
+                return Object(a.e)(this, function (a) {
+                  switch (a.label) {
+                    case 0:
+                      a.label = 1;
+                    case 1:
+                      return (
+                        a.trys.push([1, 3, , 4]),
+                        (i =
+                          R.c.STORE_BASE_URL +
+                          "contenthub/ajaxgetcontenthubsections"),
+                        (o = {
+                          strHubType: e,
+                          strCategory: t,
+                          nTagID: n,
+                          origin: self.origin,
+                        }),
+                        [4, r.a.get(i, { params: o })]
+                      );
+                    case 2:
+                      return 1 !== (l = a.sent()).data.success
+                        ? [2, null]
+                        : (this.m_mapSections.set(
+                            this.GetKey(e, t, n),
+                            l.data.section_ids
+                          ),
+                          [2, l.data.section_ids]);
+                    case 3:
+                      return a.sent(), [2, null];
+                    case 4:
+                      return [2];
+                  }
+                });
+              });
+            }),
+            (e.prototype.GetKey = function (e, t, n) {
+              return e + "_" + t + "_" + n;
+            }),
+            (e.Get = function () {
+              return (
+                e.s_singleton ||
+                  ((e.s_singleton = new e()),
+                  "dev" === R.c.WEB_UNIVERSE &&
+                    (window.g_ContentHubSectionsStore = e.s_singleton)),
+                e.s_singleton
+              );
+            }),
+            e
+          );
+        })();
+      var Ye = n("xs+m"),
+        Qe = Object(u.a)(function (e) {
+          var t = e.editModel,
+            n = e.section,
+            i = t.GetEventModel().jsondata.source_content_hub,
+            r = (function (e, t, n) {
+              var a = Ke.Get(),
+                i = Object(d.useState)(!a.BHasSections(e, t, n)),
+                r = i[0],
+                o = i[1],
+                l = Object(d.useState)(a.GetSections(e, t, n)),
+                s = l[0],
+                c = l[1];
+              return (
+                Object(d.useEffect)(
+                  function () {
+                    a.LoadSections(e, t, n).then(function () {
+                      c(a.GetSections(e, t, n)), o(!1);
+                    });
+                  },
+                  [a, e, t, n]
+                ),
+                { bLoading: r, rgSections: s }
+              );
+            })(i.type, i.category, i.tagid),
+            l = r.bLoading,
+            s = r.rgSections;
+          if (l)
+            return d.createElement(k.a, { size: "medium", position: "center" });
+          var c = s.map(function (e) {
+            return { label: e, value: e };
+          });
+          return d.createElement(
+            Ce.a,
+            null,
+            d.createElement(
+              Et,
+              Object(a.a)(
+                {
+                  textToken: "Show a specific carousel",
+                  ttipToken:
+                    "If checked, lets you specify which carousel to show.",
+                  varName: "contenthub_section_show_specific_carousel",
+                  valveOnly: !0,
+                },
+                e
+              )
+            ),
+            d.createElement(
+              "div",
+              { className: Ye.ContentHubSectionCtn },
+              n.contenthub_section_show_specific_carousel &&
+                d.createElement(
+                  "div",
+                  { className: Ye.ContentHubSectionInnerCtn },
+                  d.createElement(m.n, null, "ID"),
+                  d.createElement(he.a, {
+                    options: c,
+                    value: c.find(function (e) {
+                      return e.value === n.contenthub_section_id;
+                    }),
+                    onChange: function (e) {
+                      (n.contenthub_section_id = e.value),
+                        t.SetDirty(o.c.jsondata_sales);
+                    },
+                    isSearchable: !0,
+                  })
+                ),
+              d.createElement(
+                "div",
+                { className: Ye.ContentHubSectionInnerCtn },
+                d.createElement(m.n, null, "Capsules Per Page"),
+                d.createElement(m.m, {
+                  type: "number",
+                  min: 1,
+                  max: 6,
+                  value: n.contenthub_section_capsules_per_page,
+                  onChange: function (e) {
+                    (n.contenthub_section_capsules_per_page = Number(
+                      e.target.value
+                    )),
+                      t.SetDirty(o.c.jsondata_sales);
+                  },
+                })
+              )
+            )
+          );
+        }),
+        Je = n("GOhU"),
+        Ze = n("ZC8J"),
+        Xe = n("CtwA");
+      function $e(e) {
         return d.createElement(
           "div",
           null,
-          d.createElement($e, Object(a.a)({}, e)),
+          d.createElement(nt, Object(a.a)({}, e)),
           d.createElement("div", null, Object(h.f)("#Sale_ItemDef_Selected")),
-          d.createElement(Ze, Object(a.a)({}, e))
+          d.createElement(et, Object(a.a)({}, e))
         );
       }
-      function Ze(e) {
-        var t = Object(K.d)(function () {
+      function et(e) {
+        var t = Object(J.d)(function () {
           return e.saleSection.itemdefs;
         });
         return d.createElement(M.a, {
@@ -15252,7 +15051,7 @@
             return e.editModel.SetDirty(o.c.jsondata_sales);
           },
           render: function (t) {
-            return d.createElement(Xe, {
+            return d.createElement(tt, {
               key: "row" + t.nAppID + "_" + t.nItemDefID,
               itemDefSetting: t,
               editModel: e.editModel,
@@ -15260,11 +15059,11 @@
           },
         });
       }
-      function Xe(e) {
+      function tt(e) {
         var t,
           n = e.itemDefSetting,
           a = e.editModel,
-          i = Object(Qe.a)(n.nAppID, n.nItemDefID),
+          i = Object(Ze.a)(n.nAppID, n.nItemDefID),
           r = 0;
         null === (t = n.localized_itemdef_capsule) ||
           void 0 === t ||
@@ -15279,7 +15078,7 @@
                 "div",
                 { style: { backgroundColor: i.strBackgroundColor } },
                 d.createElement("img", {
-                  className: Je.itemimg,
+                  className: Xe.itemimg,
                   src: null == i ? void 0 : i.strImgURL,
                 })
               ),
@@ -15365,7 +15164,7 @@
               string: Object(h.f)("#Loading"),
             });
       }
-      function $e(e) {
+      function nt(e) {
         var t = d.useState(730),
           n = t[0],
           a = t[1],
@@ -15432,23 +15231,24 @@
           )
         );
       }
-      var et = function (e) {
-        return d.createElement(
-          "span",
-          {
-            "data-tooltip-text": e.tooltip,
-            className: Object(B.a)(I.HelperTooltip, "HelperTooltip"),
-          },
-          " ",
-          d.createElement(ke.z, null)
-        );
-      };
-      function tt(e, t) {
+      var at = n("oqmg"),
+        it = function (e) {
+          return d.createElement(
+            "span",
+            {
+              "data-tooltip-text": e.tooltip,
+              className: Object(B.a)(I.HelperTooltip, "HelperTooltip"),
+            },
+            " ",
+            d.createElement(ke.z, null)
+          );
+        };
+      function rt(e, t) {
         return e.disable_background
           ? { background: "transparent" }
           : Object(je.f)(e, t);
       }
-      function nt(e, t) {
+      function ot(e, t) {
         for (var n = 0, a = e.GetSaleSections(); n < a.length; n++) {
           var i = a[n];
           if (i === t) break;
@@ -15456,8 +15256,8 @@
         }
         return null;
       }
-      function at(e, t) {
-        var n = nt(e, t);
+      function lt(e, t) {
+        var n = ot(e, t);
         if (n) {
           var i = new Set(Object(a.g)(t.show_on_tabs || [])),
             r = n.tabs.map(function (n) {
@@ -15508,7 +15308,7 @@
           );
         }
       }
-      var it = Object(u.a)(function (e) {
+      var st = Object(u.a)(function (e) {
           return d.createElement(
             d.Fragment,
             null,
@@ -15519,7 +15319,7 @@
                 "div",
                 { className: I.EventEditorTextTitle },
                 e.title,
-                d.createElement(et, { tooltip: e.tooltip })
+                d.createElement(it, { tooltip: e.tooltip })
               ),
               d.createElement(We.a, {
                 bIsMinimized: e.getMinimized(),
@@ -15529,7 +15329,7 @@
             !e.getMinimized() && d.createElement(Ce.a, null, e.children)
           );
         }),
-        rt = (function (e) {
+        ct = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -15565,13 +15365,13 @@
             (t.prototype.OnEditTabSections = function () {
               var e = this.props,
                 t = e.saleSection;
-              at(e.editModel, t);
+              lt(e.editModel, t);
             }),
             (t.prototype.render = function () {
-              var e = nt(this.props.editModel, this.props.saleSection);
+              var e = ot(this.props.editModel, this.props.saleSection);
               return e && e.tabs && 0 !== e.tabs.length
                 ? d.createElement(
-                    it,
+                    st,
                     {
                       title: Object(h.f)("#Sale_Section_TabSettings_Title"),
                       tooltip: Object(h.f)(
@@ -15580,7 +15380,7 @@
                       getMinimized: this.props.getMinimized,
                       toggleMinimized: this.props.toggleMinimized,
                     },
-                    d.createElement(ft, {
+                    d.createElement(Et, {
                       varName: "diable_tab_id_filtering",
                       editModel: this.props.editModel,
                       section: this.props.saleSection,
@@ -15619,7 +15419,7 @@
             (t = Object(a.c)([u.a], t))
           );
         })(d.Component),
-        ot = Object(u.a)(function (e) {
+        ut = Object(u.a)(function (e) {
           var t = e.saleSection,
             n = e.editModel;
           if (!t.label_link) return null;
@@ -15637,7 +15437,7 @@
             })
           );
         });
-      function lt(e, t, n, a, i) {
+      function dt(e, t, n, a, i) {
         var r = Object(je.e)(e, t, n.GetClanSteamID().GetAccountID(), i);
         if (r) return r;
         var o = Object(h.f)("#Sale_Section_Header", a + 1),
@@ -15645,7 +15445,7 @@
           s = Object(h.f)(l);
         return s !== l && (o = o + " (" + s + ")"), o;
       }
-      var st = (function (e) {
+      var pt = (function (e) {
         function t() {
           var t = (null !== e && e.apply(this, arguments)) || this;
           return (t.state = { bIsExiting: !1 }), t;
@@ -15865,6 +15665,12 @@
                 data: "contenthubmaincarousel",
               }),
               o.push({
+                label:
+                  "(VO) " +
+                  Object(h.f)("#Sale_SectionType_ContentHubSectionList"),
+                data: "contenthubsections",
+              }),
+              o.push({
                 label: "(VO) " + Object(h.f)("#Sale_SectionType_ItemDef"),
                 data: "itemdef",
                 tooltip: Object(h.f)("#Sale_SectionType_ItemDef_ttip"),
@@ -15893,8 +15699,8 @@
               "div",
               {
                 id: "SaleSection_" + i.unique_id,
-                className: Object(B.a)(J.SaleSection, J.InEditor),
-                style: Object(a.a)(Object(a.a)({}, tt(i, n.GetEventModel())), {
+                className: Object(B.a)(Q.SaleSection, Q.InEditor),
+                style: Object(a.a)(Object(a.a)({}, rt(i, n.GetEventModel())), {
                   opacity: this.state.bIsExiting ? 0 : 1,
                   transition: "opacity 500ms",
                 }),
@@ -15913,7 +15719,7 @@
                     color: this.props.saleSection.label_color,
                   },
                 },
-                lt(i, this.props.editLanguage, n, this.props.index, !1),
+                dt(i, this.props.editLanguage, n, this.props.index, !1),
                 d.createElement(
                   "div",
                   { className: Object(B.a)(I.CloseSectionTools) },
@@ -15961,13 +15767,13 @@
                           return e.RemoveSection(e.props.index);
                         },
                       },
-                      d.createElement(ke.ob, null)
+                      d.createElement(ke.pb, null)
                     )
                   )
                 )
               ),
               S
-                ? d.createElement(ct, {
+                ? d.createElement(mt, {
                     editModel: n,
                     section: i,
                     tabSection: n.GetTabSaleSection(),
@@ -15977,13 +15783,13 @@
                     null,
                     d.createElement(
                       Me.a,
-                      { placeholderHeight: "300px", className: J.EditorCtn },
+                      { placeholderHeight: "300px", className: Q.EditorCtn },
                       d.createElement(
                         "div",
-                        { className: J.SectionTypePicker },
+                        { className: Q.SectionTypePicker },
                         d.createElement(
                           "div",
-                          { className: J.SectionTypePrompt },
+                          { className: Q.SectionTypePrompt },
                           " ",
                           Object(h.f)("#Sale_SectionContents"),
                           " "
@@ -15995,7 +15801,7 @@
                           onChange: this.OnSaleSectionTypeChange,
                           contextMenuPositionOptions: { bDisablePopTop: !0 },
                         }),
-                        d.createElement(et, {
+                        d.createElement(it, {
                           tooltip: Object(h.f)("#Sale_SectionTypeTTip_" + _),
                         })
                       )
@@ -16008,7 +15814,7 @@
                           Me.a,
                           {
                             placeholderHeight: "300px",
-                            className: J.EditorCtn,
+                            className: Q.EditorCtn,
                           },
                           null === p &&
                             d.createElement(
@@ -16023,7 +15829,7 @@
                                   Object(h.f)(
                                     "#Sale_Section_SectionTitle_Title"
                                   ),
-                                  d.createElement(et, {
+                                  d.createElement(it, {
                                     tooltip: Object(h.f)(
                                       "#Sale_Section_SectionTitle_Title_ttip"
                                     ),
@@ -16058,16 +15864,16 @@
                                       L.b,
                                       {
                                         clanSteamID: n.GetClanSteamID(),
-                                        className: J.CustomImageTitle,
+                                        className: Q.CustomImageTitle,
                                       },
                                       d.createElement(
                                         "span",
-                                        { className: J.PromptText },
+                                        { className: Q.PromptText },
                                         Object(h.f)("#Sale_option_title_image")
                                       ),
                                       d.createElement(
                                         "div",
-                                        { className: J.UploadImageButton },
+                                        { className: Q.UploadImageButton },
                                         d.createElement(
                                           m.r,
                                           {
@@ -16105,7 +15911,7 @@
                                         value: this.props.saleSection
                                           .label_link,
                                       }),
-                                      d.createElement(ot, {
+                                      d.createElement(ut, {
                                         saleSection: i,
                                         editModel: n,
                                       })
@@ -16113,7 +15919,7 @@
                                 )
                             ),
                           y && d.createElement(me, Object(a.a)({}, this.props)),
-                          d.createElement(rt, {
+                          d.createElement(ct, {
                             saleSection: i,
                             editModel: n,
                             editLanguage: r,
@@ -16147,10 +15953,10 @@
                             Me.a,
                             {
                               placeholderHeight: "300px",
-                              className: J.EditorCtn,
+                              className: Q.EditorCtn,
                               id: "salesection_item_" + this.props.index,
                             },
-                            d.createElement(Ot, Object(a.a)({}, this.props))
+                            d.createElement(It, Object(a.a)({}, this.props))
                           )
                       )
                   )
@@ -16176,7 +15982,7 @@
           (t = Object(a.c)([u.a], t))
         );
       })(d.Component);
-      var ct = function (e) {
+      var mt = function (e) {
           var t = e.editModel,
             n = e.section,
             a = e.tabSection,
@@ -16186,7 +15992,7 @@
                   {
                     className: E.ShowInTabsList,
                     onClick: function () {
-                      return at(t, n);
+                      return lt(t, n);
                     },
                   },
                   Object(h.f)(
@@ -16245,7 +16051,7 @@
               )
             : i;
         },
-        ut = (function (e) {
+        _t = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -16269,7 +16075,7 @@
                   checked: this.props.saleSection.smart_section,
                 }),
                 this.props.saleSection.smart_section &&
-                  d.createElement(Tt, {
+                  d.createElement(Dt, {
                     saleSection: this.props.saleSection,
                     editModel: this.props.editModel,
                   }),
@@ -16295,7 +16101,7 @@
             (t = Object(a.c)([u.a], t))
           );
         })(d.Component),
-        dt = Object(u.a)(function (e) {
+        gt = Object(u.a)(function (e) {
           var t = e.saleSection,
             n = e.editModel;
           return d.createElement(
@@ -16325,7 +16131,7 @@
               : d.createElement(Z, Object(a.a)({}, e))
           );
         }),
-        pt = (function (e) {
+        ht = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.state = { linkToAddURL: "" }), t;
@@ -16389,13 +16195,13 @@
                     return d.createElement(
                       je.k,
                       {
-                        className: Object(B.a)(Y.a.FlexCenter, J.UploadLinkRow),
+                        className: Object(B.a)(K.a.FlexCenter, Q.UploadLinkRow),
                         url: t.url,
                       },
                       a,
                       d.createElement(
                         "div",
-                        { className: J.UploadLinkImageButton },
+                        { className: Q.UploadLinkImageButton },
                         d.createElement(
                           m.r,
                           {
@@ -16436,7 +16242,7 @@
             (t = Object(a.c)([u.a], t))
           );
         })(d.Component),
-        mt = (function (e) {
+        ft = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -16640,7 +16446,7 @@
                   d.createElement(
                     "div",
                     { className: I.HalfColumn },
-                    d.createElement(ft, {
+                    d.createElement(Et, {
                       varName: "use_random_order",
                       onChange: this.OnRandomChange,
                       editModel: l,
@@ -16655,7 +16461,7 @@
                         : "Sale_Section_UseRandomOrder_SortingTiers_hint",
                     }),
                     s &&
-                      d.createElement(ft, {
+                      d.createElement(Et, {
                         varName: "random_from_entire_set",
                         editModel: l,
                         section: r,
@@ -16681,7 +16487,7 @@
                           value: this.state.capItemCountString,
                         })
                       ),
-                    d.createElement(ft, {
+                    d.createElement(Et, {
                       varName: "show_as_carousel",
                       editModel: l,
                       section: r,
@@ -16692,7 +16498,7 @@
                       d.createElement(
                         d.Fragment,
                         null,
-                        d.createElement(ft, {
+                        d.createElement(Et, {
                           varName: "cap_section_content",
                           onChange: this.OnCapSectionChange,
                           editModel: l,
@@ -16720,7 +16526,7 @@
                           })
                       ),
                     r.show_as_carousel &&
-                      d.createElement(ft, {
+                      d.createElement(Et, {
                         varName: "carousel_auto_advance",
                         valveOnly: !0,
                         editModel: l,
@@ -16728,14 +16534,14 @@
                         textToken: "#Sale_Section_CarouselAutoAdvance",
                         ttipToken: "#Sale_Section_CarouselAutoAdvance_Tooltip",
                       }),
-                    c && d.createElement(gt, { editModel: l, section: r }),
-                    d.createElement(ht, {
+                    c && d.createElement(vt, { editModel: l, section: r }),
+                    d.createElement(St, {
                       editModel: l,
                       section: r,
                       bDisabled: !_,
                     }),
                     p &&
-                      d.createElement(ft, {
+                      d.createElement(Et, {
                         varName: "show_purchase_options",
                         editModel: l,
                         section: r,
@@ -16743,7 +16549,7 @@
                         ttipToken: "#Sale_Section_ShowPurchaseOptions_ttip",
                       }),
                     u &&
-                      d.createElement(ft, {
+                      d.createElement(Et, {
                         valveOnly: !0,
                         varName: "hide_prices",
                         editModel: l,
@@ -16751,7 +16557,7 @@
                         textToken: "#Sale_Section_HidePrices",
                         ttipToken: "#Sale_Section_HidePrices_ttip",
                       }),
-                    d.createElement(_t, { editModel: l, saleSection: r })
+                    d.createElement(bt, { editModel: l, saleSection: r })
                   )
                 )
               );
@@ -16770,7 +16576,7 @@
             (t = Object(a.c)([u.a], t))
           );
         })(d.Component),
-        _t = Object(u.a)(function (e) {
+        bt = Object(u.a)(function (e) {
           var t,
             n = e.saleSection,
             a = e.editModel;
@@ -16800,7 +16606,7 @@
               Boolean(n.smart_section_type) &&
               "recent_tagged_events" !== n.smart_section_type &&
               ((i = !1), (r = "#Sale_Section_RevealSetting_limit_smart")),
-            d.createElement(ft, {
+            d.createElement(Et, {
               valveOnly: !0,
               varName: "dynamic_reveal",
               editModel: a,
@@ -16811,8 +16617,8 @@
             })
           );
         }),
-        gt = function (e) {
-          return d.createElement(ft, {
+        vt = function (e) {
+          return d.createElement(Et, {
             varName: "show_as_demos",
             editModel: e.editModel,
             section: e.section,
@@ -16820,7 +16626,7 @@
             ttipToken: "#Sale_Section_UseDemoLayout_tooltip",
           });
         },
-        ht = Object(u.a)(function (e) {
+        St = Object(u.a)(function (e) {
           var t = e.editModel,
             n = e.section,
             a = e.bDisabled;
@@ -16867,7 +16673,7 @@
                 : "#Sale_Section_SingleItemDisplay_ttip"
             ),
             strDropDownClassName: I.DropDownScroll,
-            selectedOption: n.single_item_style || ve.x,
+            selectedOption: n.single_item_style || ve.y,
             onChange: function (e) {
               n.single_item_style !== e.data &&
                 ((n.single_item_style = e.data),
@@ -16875,7 +16681,7 @@
             },
           });
         }),
-        ft = Object(u.a)(function (e) {
+        Et = Object(u.a)(function (e) {
           var t = e.editModel,
             n = e.section,
             a = e.varName,
@@ -16907,7 +16713,7 @@
                 disabled: s,
               });
         }),
-        bt = (function (e) {
+        yt = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.m_descBBCodeEditor = d.createRef()), t;
@@ -16953,10 +16759,10 @@
                 a = t.saleSection;
               return d.createElement(
                 "div",
-                { className: J.TextSectionGroup },
+                { className: Q.TextSectionGroup },
                 d.createElement(
                   "div",
-                  { className: J.TextSectionBBCode },
+                  { className: Q.TextSectionBBCode },
                   d.createElement(Te.a, {
                     fnGetCurText: this.GetCurText,
                     fnOnTextChange: this.OnTextChange,
@@ -17001,8 +16807,8 @@
                     {
                       className: Object(B.a)(
                         I.RightCol,
-                        Ye.DescEditorPadding,
-                        J.TextSectionImages
+                        Je.DescEditorPadding,
+                        Q.TextSectionImages
                       ),
                     },
                     d.createElement(s.a, {
@@ -17023,7 +16829,7 @@
             (t = Object(a.c)([u.a], t))
           );
         })(d.Component),
-        vt = (function (e) {
+        Ot = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.state = {}), t;
@@ -17070,7 +16876,7 @@
                 this.props.editModel.SetDirty(o.c.jsondata_sales);
             }),
             (t.prototype.RenderTabName = function (e) {
-              var t = ve.E.find(function (t) {
+              var t = ve.F.find(function (t) {
                   return t.flavor === e;
                 }),
                 n = e;
@@ -17087,7 +16893,7 @@
                   null,
                   n,
                   Boolean(null == t ? void 0 : t.tooltip) &&
-                    d.createElement(et, { tooltip: Object(h.f)(t.tooltip) })
+                    d.createElement(it, { tooltip: Object(h.f)(t.tooltip) })
                 )
               );
             }),
@@ -17096,7 +16902,7 @@
                 t = this.props.saleSection.item_browse_section_data || {},
                 n = t.master_subscription,
                 a = t.tabs || [],
-                i = ve.F.filter(function (e) {
+                i = ve.G.filter(function (e) {
                   return (
                     void 0 ===
                     a.find(function (t) {
@@ -17148,7 +16954,7 @@
                   "div",
                   { className: I.EventEditorTextTitle },
                   Object(h.f)("#Sale_BrowseSection_TabList"),
-                  d.createElement(et, {
+                  d.createElement(it, {
                     tooltip: Object(h.f)("#Sale_BrowseSection_TabList_ttip"),
                   })
                 ),
@@ -17170,7 +16976,7 @@
                   "div",
                   { className: I.EventEditorTextTitle },
                   Object(h.f)("#Sale_BrowseSection_AdditionalTabList"),
-                  d.createElement(et, {
+                  d.createElement(it, {
                     tooltip: Object(h.f)(
                       "#Sale_BrowseSection_AdditionalTabList_ttip"
                     ),
@@ -17193,7 +16999,7 @@
             (t = Object(a.c)([u.a], t))
           );
         })(d.Component),
-        St = Object(u.a)(function (e) {
+        Tt = Object(u.a)(function (e) {
           var t,
             n,
             a,
@@ -17263,7 +17069,7 @@
             })));
           var f = l.GetEventModel().jsondata;
           return d.createElement(
-            it,
+            st,
             {
               title: Object(h.f)("#Sale_BrowseSection_ContentHubTitle"),
               tooltip: Object(h.f)("#Sale_BrowseSection_ContentHubTooltip"),
@@ -17298,7 +17104,7 @@
                         };
                         (l.GetEventModel().jsondata.source_content_hub = t),
                           l.GetEventModel().jsondata
-                            .bAutoUpdateVanityURLForContentHub && Et(t, l);
+                            .bAutoUpdateVanityURLForContentHub && Ct(t, l);
                       }
                       l.SetDirty(o.c.jsondata_sales);
                     },
@@ -17327,7 +17133,7 @@
                           };
                           (l.GetEventModel().jsondata.source_content_hub = t),
                             l.GetEventModel().jsondata
-                              .bAutoUpdateVanityURLForContentHub && Et(t, l),
+                              .bAutoUpdateVanityURLForContentHub && Ct(t, l),
                             l.SetDirty(o.c.jsondata_sales);
                         },
                         isSearchable: !0,
@@ -17360,7 +17166,7 @@
                               (l.GetEventModel().jsondata.source_content_hub = t),
                                 l.GetEventModel().jsondata
                                   .bAutoUpdateVanityURLForContentHub &&
-                                  Et(t, l),
+                                  Ct(t, l),
                                 l.SetDirty(o.c.jsondata_sales);
                             },
                             isSearchable: !0,
@@ -17394,7 +17200,7 @@
                               (l.GetEventModel().jsondata.source_content_hub = t),
                                 l.GetEventModel().jsondata
                                   .bAutoUpdateVanityURLForContentHub &&
-                                  Et(t, l),
+                                  Ct(t, l),
                                 l.SetDirty(o.c.jsondata_sales);
                             },
                             isSearchable: !0,
@@ -17417,7 +17223,7 @@
                         onChange: function (e) {
                           ((l.GetEventModel().jsondata.bAutoUpdateVanityURLForContentHub = e),
                           e) &&
-                            Et(
+                            Ct(
                               {
                                 type: l.GetEventModel().GetContentHubType(),
                                 category: l
@@ -17435,7 +17241,7 @@
               : d.createElement(k.a, { size: "medium", position: "center" })
           );
         });
-      function Et(e, t) {
+      function Ct(e, t) {
         if (e.type)
           if ("category" !== e.type || e.category)
             if ("tags" !== e.type || e.tagid) {
@@ -17457,7 +17263,7 @@
             "SetVanityURLForContentHub: Undefined hub type, skipping vanity URL update."
           );
       }
-      var yt = Object(u.a)(function (e) {
+      var jt = Object(u.a)(function (e) {
           var t = e.editModel,
             n = e.saleSection,
             a = (e.index, n.internal_section_data),
@@ -17545,15 +17351,15 @@
               })
           );
         }),
-        Ot = Object(u.a)(function (e) {
+        It = Object(u.a)(function (e) {
           switch (e.saleSection.section_type) {
             case "items":
               return d.createElement(
                 d.Fragment,
                 null,
-                d.createElement(ut, Object(a.a)({}, e)),
+                d.createElement(_t, Object(a.a)({}, e)),
                 d.createElement(
-                  mt,
+                  ft,
                   Object(a.a)({}, e, {
                     bSmartSection: e.saleSection.smart_section,
                   })
@@ -17563,9 +17369,9 @@
               return d.createElement(
                 d.Fragment,
                 null,
-                d.createElement(dt, Object(a.a)({}, e)),
+                d.createElement(gt, Object(a.a)({}, e)),
                 d.createElement(
-                  mt,
+                  ft,
                   Object(a.a)({}, e, {
                     bSmartSection: e.saleSection.smart_section,
                   })
@@ -17575,9 +17381,9 @@
               return d.createElement(
                 d.Fragment,
                 null,
-                d.createElement(pt, Object(a.a)({}, e)),
+                d.createElement(ht, Object(a.a)({}, e)),
                 d.createElement(
-                  mt,
+                  ft,
                   Object(a.a)({}, e, {
                     bSmartSection: e.saleSection.smart_section,
                   })
@@ -17588,11 +17394,11 @@
             case "event_description":
               return d.createElement(Ue, Object(a.a)({}, e));
             case "text_section":
-              return d.createElement(bt, Object(a.a)({}, e));
+              return d.createElement(yt, Object(a.a)({}, e));
             case "curator":
               return d.createElement(Pe, Object(a.a)({}, e));
             case "vo_internal":
-              return d.createElement(yt, Object(a.a)({}, e));
+              return d.createElement(jt, Object(a.a)({}, e));
             case "tabs":
               return d.createElement(_e.b, Object(a.a)({}, e));
             case "tab_buttons":
@@ -17600,7 +17406,7 @@
             case "doors":
               return d.createElement("div", null, "No settings for now.");
             case "sale_item_browser":
-              return d.createElement(vt, Object(a.a)({}, e));
+              return d.createElement(Ot, Object(a.a)({}, e));
             case "event_schedule":
               return d.createElement(ee, Object(a.a)({}, e));
             case "curator_recommendation":
@@ -17610,13 +17416,18 @@
                 qe,
                 Object(a.a)({ section: e.saleSection }, e)
               );
+            case "contenthubsections":
+              return d.createElement(
+                Qe,
+                Object(a.a)({ section: e.saleSection }, e)
+              );
             case "itemdef":
               return d.createElement(
                 d.Fragment,
                 null,
-                d.createElement(Ke, Object(a.a)({}, e)),
+                d.createElement($e, Object(a.a)({}, e)),
                 d.createElement(
-                  mt,
+                  ft,
                   Object(a.a)({}, e, {
                     bSmartSection: e.saleSection.smart_section,
                   })
@@ -17627,7 +17438,7 @@
               return null;
           }
         });
-      var Tt = (function (e) {
+      var Dt = (function (e) {
         function t() {
           var t = (null !== e && e.apply(this, arguments)) || this;
           return (
@@ -17695,7 +17506,7 @@
                     n.m_searchResultsMenu = Object(O.a)(
                       d.createElement(
                         z.c,
-                        { className: J.SearchResults },
+                        { className: Q.SearchResults },
                         e.map(function (e) {
                           return d.createElement(
                             z.d,
@@ -17713,13 +17524,13 @@
                                   alignItems: "center",
                                 },
                               },
-                              Object(Q.b)(e.name),
+                              Object(Y.b)(e.name),
                               " ",
                               d.createElement("span", null, "(", e.id, ")"),
                               " ",
                               d.createElement(
                                 "span",
-                                { className: J.SmallText },
+                                { className: Q.SmallText },
                                 "(",
                                 e.type,
                                 ")"
@@ -17965,7 +17776,7 @@
                 "div",
                 { className: Object(B.a)(I.FlexRowContainer) },
                 d.createElement(m.i, {
-                  strClassName: J.SmartSelType,
+                  strClassName: Q.SmartSelType,
                   label: Object(h.f)("#Sale_SmartSectionType"),
                   rgOptions: i,
                   selectedOption:
@@ -17978,14 +17789,14 @@
                   null,
                   d.createElement(
                     "label",
-                    { className: Object(B.a)("DialogLabel", J.SmartSelLabel) },
+                    { className: Object(B.a)("DialogLabel", Q.SmartSelLabel) },
                     Object(h.f)("#Sale_SmartSection_MaxApps")
                   ),
                   d.createElement(
                     "div",
                     null,
                     d.createElement("input", {
-                      className: Object(B.a)(J.SmartSelCount),
+                      className: Object(B.a)(Q.SmartSelCount),
                       type: "number",
                       min: "0",
                       value: this.props.saleSection.smart_section_max_apps || 0,
@@ -18047,7 +17858,7 @@
                     d.createElement(ce.a, { capsule: r.capsules[0] }),
                   d.createElement(
                     "div",
-                    { className: J.SaleImportBarButtonGroup },
+                    { className: Q.SaleImportBarButtonGroup },
                     d.createElement(
                       G.a,
                       {
@@ -18057,7 +17868,7 @@
                       d.createElement(
                         m.d,
                         {
-                          className: J.SaleImportBarButton,
+                          className: Q.SaleImportBarButton,
                           onClick: this.OnChooseMasterSubscriptionID,
                         },
                         "Set Master Subscription ID"
@@ -18065,6 +17876,10 @@
                     )
                   )
                 ),
+              d.createElement(at.d, {
+                capsuleContainer: this.props.saleSection,
+                editModel: this.props.editModel,
+              }),
               d.createElement(ge.a, {
                 section: this.props.saleSection,
                 capsuleContainer: this.props.saleSection,
@@ -18189,16 +18004,16 @@
         return J;
       }),
         n.d(t, "c", function () {
-          return te;
-        }),
-        n.d(t, "d", function () {
           return ne;
         }),
-        n.d(t, "e", function () {
+        n.d(t, "d", function () {
           return ae;
         }),
+        n.d(t, "e", function () {
+          return ie;
+        }),
         n.d(t, "a", function () {
-          return de;
+          return pe;
         });
       var a = n("mrSG"),
         i = n("vDqi"),
@@ -18244,7 +18059,8 @@
         z = n("JiI5"),
         W = n("IMce"),
         q = n("mHFc"),
-        Y = n("165M");
+        K = n("165M"),
+        Y = n("putg");
       function Q(e) {
         return (e = (e = (e = e.replace('"', " ")).replace("<", " ")).replace(
           ">",
@@ -18273,14 +18089,14 @@
         }
         return { appData: t, linkURL: n, bInvalidID: a };
       }
-      var K = function (e) {
+      var Z = function (e) {
           return m.createElement("img", {
             className: G.a.RemoveIcon,
             src: f.a,
             onClick: e.onClick,
           });
         },
-        Z = function (e) {
+        X = function (e) {
           var t,
             n = e.clause;
           if (!(null === (t = n.or_tags) || void 0 === t ? void 0 : t.length))
@@ -18299,7 +18115,7 @@
             a
           );
         },
-        X = function (e) {
+        $ = function (e) {
           var t = e.filter;
           return Object(l.q)(t)
             ? m.createElement(
@@ -18314,11 +18130,11 @@
                 "div",
                 { className: W.FilterDisplayList },
                 t.clauses.map(function (e, t) {
-                  return m.createElement(Z, { clause: e, key: "clause" + t });
+                  return m.createElement(X, { clause: e, key: "clause" + t });
                 })
               );
         },
-        $ = (function () {
+        ee = (function () {
           function e(e) {
             this.m_storageKey = "RecentTags_" + e;
             var t = window.localStorage.getItem(this.m_storageKey);
@@ -18350,7 +18166,7 @@
             e
           );
         })(),
-        ee = Object(p.a)(function (e) {
+        te = Object(p.a)(function (e) {
           var t = e.id,
             n = e.type,
             a = e.name;
@@ -18372,7 +18188,7 @@
             m.createElement("span", { className: z.SmallText }, "(", n, ")")
           );
         }),
-        te = (function (e) {
+        ne = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.m_currentRequest = 0), (t.m_refInput = m.createRef()), t;
@@ -18484,7 +18300,7 @@
                                                 );
                                               },
                                             },
-                                            m.createElement(ee, {
+                                            m.createElement(te, {
                                               name: e.name,
                                               id: Number(e.id),
                                               type: e.type,
@@ -18538,7 +18354,7 @@
             t
           );
         })(m.Component),
-        ne = (function (e) {
+        ae = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -18555,9 +18371,9 @@
             (t.prototype.OnEditFilter = function () {
               var e = this.props.capsuleContainer;
               Object(M.d)(
-                m.createElement(de, {
+                m.createElement(pe, {
                   editModel: this.props.editModel,
-                  filter: e.sale_tag_filter,
+                  filter: e.sale_tag_filter || { clauses: [] },
                   title: Object(N.f)("#Sale_TagFilter_EditFilter"),
                   onApplyFilter: this.OnApplyFilter,
                   ignoreStartingReferences: e,
@@ -18581,7 +18397,7 @@
                 m.createElement(
                   "div",
                   { className: W.FilterActionsCtn },
-                  m.createElement(X, { filter: e.sale_tag_filter }),
+                  m.createElement($, { filter: e.sale_tag_filter }),
                   m.createElement(
                     T.d,
                     { onClick: this.OnEditFilter },
@@ -18595,7 +18411,7 @@
             (t = Object(a.c)([p.a], t))
           );
         })(m.Component),
-        ae = (function (e) {
+        ie = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -18625,7 +18441,7 @@
             (t.prototype.OnExploreTags = function () {
               var e = { clauses: new Array() };
               Object(M.d)(
-                m.createElement(de, {
+                m.createElement(pe, {
                   editModel: this.props.editModel,
                   filter: e,
                   title: Object(N.f)("#Sale_TagFilter_Explore"),
@@ -18635,13 +18451,13 @@
             }),
             (t.prototype.OnBatchEditTags = function () {
               Object(M.d)(
-                m.createElement(ce, { editModel: this.props.editModel }),
+                m.createElement(ue, { editModel: this.props.editModel }),
                 window
               );
             }),
             (t.prototype.OnEditAutoTags = function () {
               Object(M.d)(
-                m.createElement(ge, { editModel: this.props.editModel }),
+                m.createElement(fe, { editModel: this.props.editModel }),
                 window
               );
             }),
@@ -18654,7 +18470,7 @@
             (t.prototype.OnEditFilter = function () {
               var e = this.props.editModel;
               Object(M.d)(
-                m.createElement(de, {
+                m.createElement(pe, {
                   editModel: e,
                   filter: Object(l.p)(e),
                   title: Object(N.f)("#Sale_TagFilter_EditFilter"),
@@ -18672,7 +18488,7 @@
             }),
             (t.prototype.OnEditRaw = function (e) {
               Object(M.d)(
-                m.createElement(pe, {
+                m.createElement(_e, {
                   editModel: this.props.editModel,
                   bRemoveMissingEntries: !0,
                 }),
@@ -18681,7 +18497,7 @@
             }),
             (t.prototype.OnEditRawCustom = function (e) {
               Object(M.d)(
-                m.createElement(pe, {
+                m.createElement(_e, {
                   editModel: this.props.editModel,
                   collection: l.j.Custom,
                   bRemoveMissingEntries: !1,
@@ -18695,7 +18511,7 @@
             }),
             (t.prototype.OnSync = function (e) {
               Object(M.d)(
-                m.createElement(me, { editModel: this.props.editModel }),
+                m.createElement(ge, { editModel: this.props.editModel }),
                 window
               );
             }),
@@ -18797,7 +18613,7 @@
                   return (
                     u ? o++ : s++,
                     u || a
-                      ? m.createElement(ie, {
+                      ? m.createElement(re, {
                           key: t.capsule.type + t.capsule.id,
                           item: t,
                           strSearchFilter: n,
@@ -18831,7 +18647,7 @@
                         tooltip: Object(N.f)("#Sale_TaggedItemsCount_ttip"),
                       })
                     ),
-                    m.createElement(Y.a, {
+                    m.createElement(K.a, {
                       bIsMinimized: p,
                       fnToggleMinimize: function () {
                         return Object(q.d)("TaggedItemList", !1);
@@ -18985,10 +18801,28 @@
                       ? m.createElement(
                           m.Fragment,
                           null,
-                          m.createElement(te, { onAddItem: this.AddTagItem }),
+                          m.createElement(ne, { onAddItem: this.AddTagItem }),
                           this.RenderItemList()
                         )
                       : this.RenderEditPrompt()
+                  ),
+                t.GetEventModel().jsondata.item_source_type !==
+                  v.n.k_ETaggedItems &&
+                  m.createElement(
+                    u.b,
+                    { clanSteamID: t.GetClanSteamID() },
+                    m.createElement(
+                      "div",
+                      { className: W.ButtonRow },
+                      m.createElement(
+                        T.d,
+                        { onClick: this.OnEditAutoTags },
+                        Object(N.f)("#Sale_EditAutoTags"),
+                        m.createElement(V.d, {
+                          tooltip: Object(N.f)("#Sale_EditAutoTags_ttip"),
+                        })
+                      )
+                    )
                   )
               );
             }),
@@ -19010,7 +18844,7 @@
             (t = Object(a.c)([p.a], t))
           );
         })(m.Component),
-        ie = (function (e) {
+        re = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.state = { expanded: !1 }), t;
@@ -19019,7 +18853,7 @@
             Object(a.d)(t, e),
             (t.prototype.OnEditTags = function () {
               Object(M.d)(
-                m.createElement(se, {
+                m.createElement(ce, {
                   editModel: this.props.editModel,
                   item: this.props.item,
                   onTagsModified: this.props.onTagsModified,
@@ -19132,14 +18966,14 @@
                     m.createElement(
                       "div",
                       { onClick: this.OnEditTags },
-                      m.createElement(oe, {
+                      m.createElement(le, {
                         item: n,
                         lowerTagHighlight: h,
                         filter: o,
                       })
                     )
                 ),
-                a && m.createElement(K, { onClick: a })
+                a && m.createElement(Z, { onClick: a })
               );
             }),
             Object(a.c)([R.a], t.prototype, "OnEditTags", null),
@@ -19147,7 +18981,7 @@
             (t = Object(a.c)([p.a], t))
           );
         })(m.Component);
-      function re(e, t, n) {
+      function oe(e, t, n) {
         var a,
           i = e.toLocaleLowerCase();
         if (t && i === t) return W.TagHighlight;
@@ -19165,7 +18999,7 @@
           }
         return null;
       }
-      var oe = Object(p.a)(function (e) {
+      var le = Object(p.a)(function (e) {
           var t = e.item,
             n = Array.from(t.tags),
             a = (function (e, t) {
@@ -19215,15 +19049,15 @@
                 "div",
                 { className: W.TagListCtn },
                 n.map(function (t) {
-                  return m.createElement(le, {
+                  return m.createElement(se, {
                     key: t,
                     tag: t,
-                    className: re(t, e.lowerTagHighlight, e.filter),
+                    className: oe(t, e.lowerTagHighlight, e.filter),
                   });
                 }),
                 a &&
                   a.map(function (e) {
-                    return m.createElement(le, {
+                    return m.createElement(se, {
                       key: e,
                       tag: e,
                       className: W.TagMissingMustHave,
@@ -19236,7 +19070,7 @@
                 Object(N.f)("#Sale_TagFilter_AddTags")
               );
         }),
-        le = function (e) {
+        se = function (e) {
           var t = Object(l.k)(e.tag);
           return m.createElement(
             "div",
@@ -19250,7 +19084,7 @@
             e.tag
           );
         },
-        se = (function (e) {
+        ce = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -19357,7 +19191,7 @@
               var t = this.state.currentTags,
                 n = (e = Q(e)).toLocaleLowerCase();
               if (
-                ($.Get(this.props.editModel).AddRecentTag(e),
+                (ee.Get(this.props.editModel).AddRecentTag(e),
                 !t.find(function (e) {
                   return e.toLocaleLowerCase() === n;
                 }))
@@ -19454,7 +19288,7 @@
                 }
               });
               var h = [];
-              $.Get(this.props.editModel)
+              ee.Get(this.props.editModel)
                 .GetRecentTags()
                 .forEach(function (t) {
                   if (!c.has(t.toLocaleLowerCase())) {
@@ -19649,7 +19483,7 @@
             (t = Object(a.c)([p.a], t))
           );
         })(m.Component),
-        ce = (function (e) {
+        ue = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -19698,7 +19532,7 @@
             (t.prototype.OnPopulateFromFilter = function () {
               new Array();
               Object(M.d)(
-                m.createElement(de, {
+                m.createElement(pe, {
                   editModel: this.props.editModel,
                   filter: this.state.filter,
                   onApplyFilter: this.OnApplyFilter,
@@ -19733,7 +19567,7 @@
                 i = this.state.otherTags.get(n);
               i && (e = i.properCaseString);
               var r = this.CloneModifiedTags();
-              $.Get(this.props.editModel).AddRecentTag(e);
+              ee.Get(this.props.editModel).AddRecentTag(e);
               for (var o = 0, l = this.state.editItems; o < l.length; o++) {
                 var s = l[o],
                   c = r.get(s) || s.tags || [];
@@ -19839,7 +19673,7 @@
                   return e.localeCompare(t);
                 });
               var u = [];
-              $.Get(this.props.editModel)
+              ee.Get(this.props.editModel)
                 .GetRecentTags()
                 .forEach(function (t) {
                   var n = Object(F.a)(W.EditTag, W.OtherTag);
@@ -20071,667 +19905,747 @@
             (t = Object(a.c)([p.a], t))
           );
         })(m.Component);
-      function ue(e) {
+      function de(e) {
         var t = e.onClauseChanged,
           n = e.value,
           i = e.taggedItems,
           r = e.filter,
           o = e.clauseIndex,
           s = e.tagIndex,
-          c = m.useState(new Array()),
-          u = c[0],
-          d = c[1],
-          p = { label: Object(N.f)("#Sale_TagFilter_SelectTag"), value: "" },
-          g = n ? { label: n, value: n } : p,
-          h = {
+          c = e.rgOptions,
+          u = m.useState(new Array()),
+          d = u[0],
+          p = u[1],
+          g = { label: Object(N.f)("#Sale_TagFilter_SelectTag"), value: "" },
+          h = n ? { label: n, value: n } : g,
+          f = {
             option: function (e) {
               return Object(a.a)(Object(a.a)({}, e), { color: "#444444" });
             },
           };
         return m.createElement(_.a, {
-          styles: h,
+          styles: f,
           isSearchable: !0,
           isMulti: !1,
           onChange: function (e) {
             return t(e.value);
           },
-          value: g,
-          options: u,
-          defaultMenuIsOpen: u.length > 0,
+          value: h,
+          options: d,
+          defaultMenuIsOpen: d.length > 0,
           onMenuOpen: function () {
-            var e = Object(l.n)(i),
-              t = [p],
-              n = r.clauses[o].or_tags[s];
-            r.clauses[o].or_tags[s] = "";
-            var a = !0;
-            r.clauses.forEach(function (e) {
-              e.or_tags.some(Boolean) && (a = !1);
-            });
-            var c = a ? i : Object(l.l)(i, r),
-              u = new Set(
-                c.map(function (e) {
-                  return e.capsule.id;
-                })
-              );
-            e.forEach(function (e) {
-              r.clauses[o].or_tags[s] = e.properCaseString;
-              var n = 0,
-                i = 0;
-              a
-                ? (i =
-                    "Must have" === r.clauses[0].type
-                      ? c.length - e.items.length
-                      : e.items.length)
-                : e.items.forEach(function (e) {
-                    var t = Object(l.h)(e.tags, r);
-                    t != u.has(e.capsule.id) && (t ? n++ : i++);
-                  });
-              var d = c.length + n - i;
-              t.push({
-                label: e.properCaseString + " (" + d + ")",
-                value: e.properCaseString,
+            if (c) p(c);
+            else {
+              var e = Object(l.n)(i),
+                t = [g],
+                n = r.clauses[o].or_tags[s];
+              r.clauses[o].or_tags[s] = "";
+              var a = !0;
+              r.clauses.forEach(function (e) {
+                e.or_tags.some(Boolean) && (a = !1);
               });
-            }),
-              (r.clauses[o].or_tags[s] = n),
-              t.sort(function (e, t) {
-                return e.value.localeCompare(t.value);
+              var u = a ? i : Object(l.l)(i, r),
+                d = new Set(
+                  u.map(function (e) {
+                    return e.capsule.id;
+                  })
+                );
+              e.forEach(function (e) {
+                r.clauses[o].or_tags[s] = e.properCaseString;
+                var n = 0,
+                  i = 0;
+                a
+                  ? (i =
+                      "Must have" === r.clauses[0].type
+                        ? u.length - e.items.length
+                        : e.items.length)
+                  : e.items.forEach(function (e) {
+                      var t = Object(l.h)(e.tags, r);
+                      t != d.has(e.capsule.id) && (t ? n++ : i++);
+                    });
+                var c = u.length + n - i;
+                t.push({
+                  label: e.properCaseString + " (" + c + ")",
+                  value: e.properCaseString,
+                });
               }),
-              d(t);
+                (r.clauses[o].or_tags[s] = n),
+                t.sort(function (e, t) {
+                  return e.value.localeCompare(t.value);
+                }),
+                p(t);
+            }
           },
           onMenuClose: function () {
-            d([]);
+            p([]);
           },
           menuPlacement: "bottom",
         });
       }
-      var de = (function (e) {
-          function t() {
-            var t = (null !== e && e.apply(this, arguments)) || this;
-            return (t.state = t.GenerateInitialState()), t;
-          }
-          return (
-            Object(a.d)(t, e),
-            (t.prototype.GenerateInitialState = function () {
-              var e = this.SetupInitialFilter(),
-                t = this.GenerateStartingUnreferencedItems();
-              return Object(a.a)(
-                {
-                  tagDropdownOptions: this.GenerateTagDropDownOptions(),
-                  currentFilter: e,
-                  tagHighlight: "",
-                  showTagBreakdown: !1,
-                  showMode: "active",
-                  strSearch: "",
-                  startingUnreferencedItems: t,
-                },
-                this.CalcualateItemsAndTags(e, t)
-              );
-            }),
-            (t.prototype.GetFilteredItems = function () {
-              return this.props.ignoreEventFilter
-                ? this.props.editModel.GetEventModel().GetTaggedItems()
-                : Object(l.o)(this.props.editModel);
-            }),
-            (t.prototype.GenerateStartingUnreferencedItems = function () {
-              for (
-                var e = this.props.editModel,
-                  t = new Map(),
-                  n = 0,
-                  a = this.GetFilteredItems();
-                n < a.length;
-                n++
-              ) {
-                var i = a[n];
-                t.set(i.capsule.type + i.capsule.id, i);
-              }
-              for (
-                var r = 0, o = e.GetEventModel().GetSaleSections();
-                r < o.length;
-                r++
-              ) {
-                var l = o[r];
-                if (
-                  !this.props.ignoreStartingReferences ||
-                  l.capsules !== this.props.ignoreStartingReferences.capsules
-                )
-                  for (var s = 0, c = l.capsules; s < c.length; s++) {
-                    var u = c[s];
-                    t.delete(u.type + u.id);
-                  }
-              }
-              return Array.from(t.values());
-            }),
-            (t.prototype.CalcualateItemsAndTags = function (e, t) {
-              this.props.editModel;
-              var n = this.GetFilteredItems(),
-                a = Object(l.l)(n, e),
-                i = new Set(a),
-                r = n.filter(function (e) {
-                  return !i.has(e);
-                }),
-                o = t.filter(function (e) {
-                  return !i.has(e);
+      var pe = (function (e) {
+        function t() {
+          var t = (null !== e && e.apply(this, arguments)) || this;
+          return (t.state = t.GenerateInitialState()), t;
+        }
+        return (
+          Object(a.d)(t, e),
+          (t.prototype.componentDidMount = function () {
+            var e = this;
+            this.props.editModel.GetEventModel().jsondata.item_source_type !==
+              v.n.k_ETaggedItems &&
+              this.LoadDropdownOptions().then(function (t) {
+                e.setState({
+                  tagDropdownOptions: t,
+                  bDropdownOptionsLoaded: !0,
                 });
-              return {
-                activeItems: a,
-                activeTagBreakdown: Object(l.n)(a),
-                filteredItems: r,
-                filteredTagBreakdown: Object(l.n)(r),
-                unusedItems: o,
-                unusedTagBreakdown: Object(l.n)(o),
-              };
-            }),
-            (t.prototype.GenerateTagDropDownOptions = function () {
-              var e = Object(l.n)(this.GetFilteredItems()),
-                t = [
-                  {
-                    label: Object(N.f)("#Sale_TagFilter_SelectTag"),
-                    value: "",
-                  },
-                ];
-              return (
-                e.forEach(function (e) {
-                  return t.push({
-                    label: e.properCaseString + " (" + e.items.length + ")",
-                    value: e.properCaseString,
-                  });
-                }),
-                t.sort(function (e, t) {
-                  return e.value.localeCompare(t.value);
-                }),
-                t
-              );
-            }),
-            (t.prototype.SanitizeFilter = function (e) {
-              for (var t, n = 0, a = e.clauses; n < a.length; n++) {
-                var i = a[n];
-                i.or_tags =
-                  null === (t = i.or_tags) || void 0 === t
-                    ? void 0
-                    : t.filter(function (e) {
-                        return Boolean(e);
-                      });
-              }
-              e.clauses = e.clauses.filter(function (e) {
-                var t;
-                return Boolean(
-                  null === (t = e.or_tags) || void 0 === t ? void 0 : t.length
-                );
               });
-            }),
-            (t.prototype.SetupInitialFilter = function () {
-              var e = Object(l.e)(this.props.filter);
-              this.SanitizeFilter(e),
-                e.clauses || (e.clauses = new Array()),
-                0 === e.clauses.length &&
-                  e.clauses.push({ type: "Must have", or_tags: new Array("") });
-              for (var t = 0, n = e.clauses; t < n.length; t++) {
-                var a = n[t];
-                (a.or_tags && 0 !== a.or_tags.length) ||
-                  (a.or_tags = new Array(""));
-              }
-              return e;
-            }),
-            (t.prototype.RenderFilterClause = function (e, t) {
-              var n = this,
-                a = [
-                  {
-                    label: Object(N.f)("#Sale_TagFilter_MustHave"),
-                    data: "Must have",
-                  },
-                  {
-                    label: Object(N.f)("#Sale_TagFilter_MustNotHave"),
-                    data: "Must not have",
-                  },
-                ],
-                i = this.GetFilteredItems(),
-                r = e.or_tags.map(function (e, a) {
-                  return m.createElement(
-                    "div",
-                    { className: W.ClauseTagList, key: "Clause" + t + "_" + a },
-                    a > 0 &&
-                      m.createElement(
-                        "div",
-                        { className: W.OrLabel },
-                        Object(N.f)("#Sale_TagFilter_Or")
-                      ),
-                    m.createElement(
-                      "div",
-                      { className: W.TagDropDown },
-                      m.createElement(ue, {
-                        taggedItems: i,
-                        value: e,
-                        onClauseChanged: function (e) {
-                          return n.OnChangeClauseTag(t, a, e);
+          }),
+          (t.prototype.LoadDropdownOptions = function () {
+            return Object(a.b)(this, void 0, void 0, function () {
+              var e, t;
+              return Object(a.e)(this, function (n) {
+                switch (n.label) {
+                  case 0:
+                    return [4, me()];
+                  case 1:
+                    return (
+                      (e = n.sent()),
+                      (t = [
+                        {
+                          label: Object(N.f)("#Sale_TagFilter_SelectTag"),
+                          value: "",
                         },
-                        clauseIndex: t,
-                        tagIndex: a,
-                        filter: n.state.currentFilter,
-                      })
-                    ),
-                    a > 0 &&
-                      m.createElement(K, {
-                        onClick: function () {
-                          return n.OnRemoveClauseTagSlot(t, a);
-                        },
-                      })
-                  );
-                }),
-                o =
-                  "Must have" === e.type
-                    ? W.MustHaveClause
-                    : W.MustNotHaveClause;
-              return m.createElement(
-                "div",
-                {
-                  key: "Clause" + t,
-                  className: Object(F.a)(
-                    W.ClauseRowCtn,
-                    o,
-                    0 === t && W.FirstClause
-                  ),
-                },
-                t > 0 &&
-                  m.createElement(
-                    m.Fragment,
-                    null,
-                    m.createElement(K, {
-                      onClick: function () {
-                        return n.OnRemoveClause(t);
-                      },
-                    }),
-                    m.createElement(
-                      "div",
-                      { className: W.AndLabel },
-                      Object(N.f)("#Sale_TagFilter_And")
-                    )
-                  ),
-                m.createElement(
-                  "div",
-                  { className: W.ClauseTypeDropDown },
-                  m.createElement(T.i, {
-                    rgOptions: a,
-                    selectedOption: e.type,
-                    onChange: function (e) {
-                      return n.OnChangeClauseType(t, e.data);
-                    },
-                  })
-                ),
-                r,
-                e.or_tags.length < 3 &&
-                  m.createElement(
-                    T.d,
-                    {
-                      onClick: function () {
-                        return n.OnAddClauseTagSlot(t);
-                      },
-                    },
-                    "+",
-                    Object(N.f)("#Sale_TagFilter_Or"),
-                    m.createElement(V.d, {
-                      tooltip: Object(N.f)("#Sale_TagFilter_Or_ttip"),
-                    })
-                  )
-              );
-            }),
-            (t.prototype.RenderFilterControls = function () {
-              var e = this,
-                t = this.state.currentFilter,
-                n = t.clauses.map(function (t, n) {
-                  return e.RenderFilterClause(t, n);
-                });
-              return m.createElement(
-                "div",
-                { className: W.FilterControlsCtn },
-                m.createElement(
-                  "div",
-                  { className: W.SectionTitle },
-                  Object(N.f)("#Sale_TagFilter_Filter"),
-                  m.createElement(V.d, {
-                    tooltip: Object(N.f)("#Sale_TagFilter_Filter_ttip"),
-                  })
-                ),
-                m.createElement(
-                  "div",
-                  { className: W.FilterControlBox },
-                  n,
-                  t.clauses.length < 5 &&
-                    m.createElement(
-                      T.d,
-                      { onClick: this.OnAddClause },
-                      "+",
-                      Object(N.f)("#Sale_TagFilter_And"),
-                      m.createElement(V.d, {
-                        tooltip: Object(N.f)("#Sale_TagFilter_And_ttip"),
-                      })
-                    )
-                )
-              );
-            }),
-            (t.prototype.RenderTagBreakdown = function (e, t) {
-              var n = this,
-                a = this.state.tagHighlight,
-                i = [];
-              t.forEach(function (e) {
-                return i.push({
-                  tag: e.properCaseString,
-                  count: e.items.length,
+                      ]),
+                      e.forEach(function (e) {
+                        return t.push({ label: e, value: e });
+                      }),
+                      [2, t]
+                    );
+                }
+              });
+            });
+          }),
+          (t.prototype.GenerateInitialState = function () {
+            var e = this.SetupInitialFilter(),
+              t = this.GenerateStartingUnreferencedItems();
+            return Object(a.a)(
+              {
+                tagDropdownOptions: this.GenerateTagDropDownOptions(),
+                bDropdownOptionsLoaded:
+                  this.props.editModel.GetEventModel().jsondata
+                    .item_source_type === v.n.k_ETaggedItems,
+                currentFilter: e,
+                tagHighlight: "",
+                showTagBreakdown: !1,
+                showMode: "active",
+                strSearch: "",
+                startingUnreferencedItems: t,
+              },
+              this.CalcualateItemsAndTags(e, t)
+            );
+          }),
+          (t.prototype.GetFilteredItems = function () {
+            return this.props.ignoreEventFilter
+              ? this.props.editModel.GetEventModel().GetTaggedItems()
+              : Object(l.o)(this.props.editModel);
+          }),
+          (t.prototype.GenerateStartingUnreferencedItems = function () {
+            for (
+              var e = this.props.editModel,
+                t = new Map(),
+                n = 0,
+                a = this.GetFilteredItems();
+              n < a.length;
+              n++
+            ) {
+              var i = a[n];
+              t.set(i.capsule.type + i.capsule.id, i);
+            }
+            for (
+              var r = 0, o = e.GetEventModel().GetSaleSections();
+              r < o.length;
+              r++
+            ) {
+              var l = o[r];
+              if (
+                !this.props.ignoreStartingReferences ||
+                l.capsules !== this.props.ignoreStartingReferences.capsules
+              )
+                for (var s = 0, c = l.capsules; s < c.length; s++) {
+                  var u = c[s];
+                  t.delete(u.type + u.id);
+                }
+            }
+            return Array.from(t.values());
+          }),
+          (t.prototype.CalcualateItemsAndTags = function (e, t) {
+            this.props.editModel;
+            var n = this.GetFilteredItems(),
+              a = Object(l.l)(n, e),
+              i = new Set(a),
+              r = n.filter(function (e) {
+                return !i.has(e);
+              }),
+              o = t.filter(function (e) {
+                return !i.has(e);
+              });
+            return {
+              activeItems: a,
+              activeTagBreakdown: Object(l.n)(a),
+              filteredItems: r,
+              filteredTagBreakdown: Object(l.n)(r),
+              unusedItems: o,
+              unusedTagBreakdown: Object(l.n)(o),
+            };
+          }),
+          (t.prototype.GenerateTagDropDownOptions = function () {
+            var e = Object(l.n)(this.GetFilteredItems()),
+              t = [
+                { label: Object(N.f)("#Sale_TagFilter_SelectTag"), value: "" },
+              ];
+            return (
+              e.forEach(function (e) {
+                return t.push({
+                  label: e.properCaseString + " (" + e.items.length + ")",
+                  value: e.properCaseString,
                 });
               }),
-                i.sort(function (e, t) {
-                  return e.count != t.count
-                    ? t.count - e.count
-                    : e.tag.localeCompare(t.tag);
-                });
-              var r = i.map(function (t) {
+              t.sort(function (e, t) {
+                return e.value.localeCompare(t.value);
+              }),
+              t
+            );
+          }),
+          (t.prototype.SanitizeFilter = function (e) {
+            for (var t, n = 0, a = e.clauses; n < a.length; n++) {
+              var i = a[n];
+              i.or_tags =
+                null === (t = i.or_tags) || void 0 === t
+                  ? void 0
+                  : t.filter(function (e) {
+                      return Boolean(e);
+                    });
+            }
+            e.clauses = e.clauses.filter(function (e) {
+              var t;
+              return Boolean(
+                null === (t = e.or_tags) || void 0 === t ? void 0 : t.length
+              );
+            });
+          }),
+          (t.prototype.SetupInitialFilter = function () {
+            var e = Object(l.e)(this.props.filter);
+            this.SanitizeFilter(e),
+              e.clauses || (e.clauses = new Array()),
+              0 === e.clauses.length &&
+                e.clauses.push({ type: "Must have", or_tags: new Array("") });
+            for (var t = 0, n = e.clauses; t < n.length; t++) {
+              var a = n[t];
+              (a.or_tags && 0 !== a.or_tags.length) ||
+                (a.or_tags = new Array(""));
+            }
+            return e;
+          }),
+          (t.prototype.RenderFilterClause = function (e, t) {
+            var n,
+              a = this,
+              i = [
+                {
+                  label: Object(N.f)("#Sale_TagFilter_MustHave"),
+                  data: "Must have",
+                },
+                {
+                  label: Object(N.f)("#Sale_TagFilter_MustNotHave"),
+                  data: "Must not have",
+                },
+              ],
+              r = this.GetFilteredItems();
+            this.props.editModel.GetEventModel().jsondata.item_source_type !==
+              v.n.k_ETaggedItems && (n = this.state.tagDropdownOptions);
+            var o = e.or_tags.map(function (e, i) {
                 return m.createElement(
                   "div",
-                  {
-                    key: t.tag,
-                    className: Object(F.a)(
-                      W.TagBreakdownEntry,
-                      a === t.tag && W.Selected
+                  { className: W.ClauseTagList, key: "Clause" + t + "_" + i },
+                  i > 0 &&
+                    m.createElement(
+                      "div",
+                      { className: W.OrLabel },
+                      Object(N.f)("#Sale_TagFilter_Or")
                     ),
+                  m.createElement(
+                    "div",
+                    { className: W.TagDropDown },
+                    m.createElement(de, {
+                      taggedItems: r,
+                      value: e,
+                      onClauseChanged: function (e) {
+                        return a.OnChangeClauseTag(t, i, e);
+                      },
+                      clauseIndex: t,
+                      tagIndex: i,
+                      filter: a.state.currentFilter,
+                      rgOptions: n,
+                    })
+                  ),
+                  i > 0 &&
+                    m.createElement(Z, {
+                      onClick: function () {
+                        return a.OnRemoveClauseTagSlot(t, i);
+                      },
+                    })
+                );
+              }),
+              l =
+                "Must have" === e.type ? W.MustHaveClause : W.MustNotHaveClause;
+            return m.createElement(
+              "div",
+              {
+                key: "Clause" + t,
+                className: Object(F.a)(
+                  W.ClauseRowCtn,
+                  l,
+                  0 === t && W.FirstClause
+                ),
+              },
+              t > 0 &&
+                m.createElement(
+                  m.Fragment,
+                  null,
+                  m.createElement(Z, {
                     onClick: function () {
-                      return n.OnHighlightTag(t.tag);
+                      return a.OnRemoveClause(t);
+                    },
+                  }),
+                  m.createElement(
+                    "div",
+                    { className: W.AndLabel },
+                    Object(N.f)("#Sale_TagFilter_And")
+                  )
+                ),
+              m.createElement(
+                "div",
+                { className: W.ClauseTypeDropDown },
+                m.createElement(T.i, {
+                  rgOptions: i,
+                  selectedOption: e.type,
+                  onChange: function (e) {
+                    return a.OnChangeClauseType(t, e.data);
+                  },
+                })
+              ),
+              o,
+              e.or_tags.length < 3 &&
+                m.createElement(
+                  T.d,
+                  {
+                    onClick: function () {
+                      return a.OnAddClauseTagSlot(t);
                     },
                   },
+                  "+",
+                  Object(N.f)("#Sale_TagFilter_Or"),
+                  m.createElement(V.d, {
+                    tooltip: Object(N.f)("#Sale_TagFilter_Or_ttip"),
+                  })
+                )
+            );
+          }),
+          (t.prototype.RenderFilterControls = function () {
+            var e = this,
+              t = this.state.currentFilter,
+              n = t.clauses.map(function (t, n) {
+                return e.RenderFilterClause(t, n);
+              });
+            return m.createElement(
+              "div",
+              { className: W.FilterControlsCtn },
+              m.createElement(
+                "div",
+                { className: W.SectionTitle },
+                Object(N.f)("#Sale_TagFilter_Filter"),
+                m.createElement(V.d, {
+                  tooltip: Object(N.f)("#Sale_TagFilter_Filter_ttip"),
+                })
+              ),
+              m.createElement(
+                "div",
+                { className: W.FilterControlBox },
+                n,
+                t.clauses.length < 5 &&
                   m.createElement(
-                    "div",
-                    { className: W.TextStats },
-                    m.createElement("div", { className: W.TagName }, t.tag),
-                    m.createElement("div", { className: W.TagUses }, t.count)
-                  ),
-                  m.createElement(
-                    "div",
-                    { className: W.PercentageBar },
-                    m.createElement("div", {
-                      className: W.PercentageBarFill,
-                      style: { width: (100 * t.count) / e + "%" },
+                    T.d,
+                    { onClick: this.OnAddClause },
+                    "+",
+                    Object(N.f)("#Sale_TagFilter_And"),
+                    m.createElement(V.d, {
+                      tooltip: Object(N.f)("#Sale_TagFilter_And_ttip"),
                     })
                   )
-                );
+              )
+            );
+          }),
+          (t.prototype.RenderTagBreakdown = function (e, t) {
+            var n = this,
+              a = this.state.tagHighlight,
+              i = [];
+            t.forEach(function (e) {
+              return i.push({ tag: e.properCaseString, count: e.items.length });
+            }),
+              i.sort(function (e, t) {
+                return e.count != t.count
+                  ? t.count - e.count
+                  : e.tag.localeCompare(t.tag);
               });
+            var r = i.map(function (t) {
               return m.createElement(
-                m.Fragment,
+                "div",
+                {
+                  key: t.tag,
+                  className: Object(F.a)(
+                    W.TagBreakdownEntry,
+                    a === t.tag && W.Selected
+                  ),
+                  onClick: function () {
+                    return n.OnHighlightTag(t.tag);
+                  },
+                },
+                m.createElement(
+                  "div",
+                  { className: W.TextStats },
+                  m.createElement("div", { className: W.TagName }, t.tag),
+                  m.createElement("div", { className: W.TagUses }, t.count)
+                ),
+                m.createElement(
+                  "div",
+                  { className: W.PercentageBar },
+                  m.createElement("div", {
+                    className: W.PercentageBarFill,
+                    style: { width: (100 * t.count) / e + "%" },
+                  })
+                )
+              );
+            });
+            return m.createElement(
+              m.Fragment,
+              null,
+              m.createElement(
+                "div",
+                { className: W.TagBreakdownCtn },
+                m.createElement("div", { className: W.TagBreakdownList }, r)
+              )
+            );
+          }),
+          (t.prototype.ModifyFilter = function (e) {
+            var t = Object(l.e)(this.state.currentFilter);
+            e(t),
+              this.setState(
+                Object(a.a)(
+                  { currentFilter: t },
+                  this.CalcualateItemsAndTags(
+                    t,
+                    this.state.startingUnreferencedItems
+                  )
+                )
+              );
+          }),
+          (t.prototype.OnChangeClauseType = function (e, t) {
+            this.ModifyFilter(function (n) {
+              return (n.clauses[e].type = t);
+            });
+          }),
+          (t.prototype.OnChangeClauseTag = function (e, t, n) {
+            this.ModifyFilter(function (a) {
+              return (a.clauses[e].or_tags[t] = n);
+            });
+          }),
+          (t.prototype.OnAddClause = function () {
+            this.ModifyFilter(function (e) {
+              return e.clauses.push({
+                type: "Must have",
+                or_tags: new Array(""),
+              });
+            });
+          }),
+          (t.prototype.OnRemoveClause = function (e) {
+            this.ModifyFilter(function (t) {
+              return t.clauses.splice(e, 1);
+            });
+          }),
+          (t.prototype.OnAddClauseTagSlot = function (e) {
+            this.ModifyFilter(function (t) {
+              return t.clauses[e].or_tags.push("");
+            });
+          }),
+          (t.prototype.OnRemoveClauseTagSlot = function (e, t) {
+            this.ModifyFilter(function (n) {
+              return n.clauses[e].or_tags.splice(t, 1);
+            });
+          }),
+          (t.prototype.OnHighlightTag = function (e) {
+            this.setState({
+              tagHighlight: this.state.tagHighlight === e ? "" : e,
+            });
+          }),
+          (t.prototype.OnToggleTagBreakdown = function () {
+            this.setState({ showTagBreakdown: !this.state.showTagBreakdown });
+          }),
+          (t.prototype.OnSetViewMode = function (e) {
+            this.setState({ showMode: e });
+          }),
+          (t.prototype.OnTagsModified = function () {
+            var e = this.GenerateStartingUnreferencedItems();
+            this.setState(
+              Object(a.a)(
+                { startingUnreferencedItems: e },
+                this.CalcualateItemsAndTags(this.state.currentFilter, e)
+              )
+            );
+          }),
+          (t.prototype.UpdateSearchText = function (e) {
+            this.setState({ strSearch: e.target.value.toLowerCase() });
+          }),
+          (t.prototype.OnOK = function () {
+            if (this.props.onApplyFilter) {
+              var e = Object(l.e)(this.state.currentFilter);
+              this.SanitizeFilter(e), this.props.onApplyFilter(e);
+            }
+            this.props.editModel.SetDirty(o.c.jsondata_sales),
+              this.props.closeModal();
+          }),
+          (t.prototype.render = function () {
+            var e = this,
+              t = this.props,
+              n = t.editModel,
+              a = t.closeModal,
+              i = t.title,
+              r = this.state,
+              o = r.showMode,
+              l = r.currentFilter,
+              s = r.strSearch,
+              c = r.showTagBreakdown,
+              u = r.bDropdownOptionsLoaded,
+              d = this.state,
+              p = d.activeItems,
+              _ = d.activeTagBreakdown,
+              g = d.filteredItems,
+              h = d.filteredTagBreakdown,
+              f = d.unusedItems,
+              b = d.unusedTagBreakdown;
+            if (!u)
+              return m.createElement(L.a, {
+                size: "medium",
+                position: "center",
+              });
+            var v = c ? this.state.tagHighlight : "",
+              S = "active" === o ? _ : "filtered" === o ? h : b,
+              E = ("active" === o ? p : "filtered" === o ? g : f).map(function (
+                e
+              ) {
+                var t = J(e.capsule).appData;
+                return {
+                  item: e,
+                  name: t && t.name,
+                  highlight:
+                    v &&
+                    e.tags.find(function (e) {
+                      return e === v;
+                    }),
+                };
+              });
+            E.sort(function (e, t) {
+              return e.highlight != t.highlight
+                ? e.highlight
+                  ? -1
+                  : 1
+                : (e.name || "").localeCompare(t.name);
+            });
+            var y = [
+                {
+                  label: m.createElement(
+                    m.Fragment,
+                    null,
+                    Object(N.f)("#Sale_TagFilter_MatchingItems", p.length),
+                    m.createElement(V.d, {
+                      tooltip: Object(N.f)(
+                        "#Sale_TagFilter_MatchingItems_ttip"
+                      ),
+                    })
+                  ),
+                  data: "active",
+                },
+                {
+                  label: m.createElement(
+                    m.Fragment,
+                    null,
+                    Object(N.f)("#Sale_TagFilter_FilteredItems", g.length),
+                    m.createElement(V.d, {
+                      tooltip: Object(N.f)(
+                        "#Sale_TagFilter_FilteredItems_ttip"
+                      ),
+                    })
+                  ),
+                  data: "filtered",
+                },
+                {
+                  label: m.createElement(
+                    m.Fragment,
+                    null,
+                    Object(N.f)("#Sale_TagFilter_UnusedItems", f.length),
+                    m.createElement(V.d, {
+                      tooltip: Object(N.f)("#Sale_TagFilter_UnusedItems_ttip"),
+                    })
+                  ),
+                  data: "unused",
+                },
+              ],
+              O = E.map(function (t) {
+                var a = t.item;
+                return m.createElement(re, {
+                  key: a.capsule.type + a.capsule.id,
+                  editModel: n,
+                  item: a,
+                  tagHighlight: v,
+                  onTagsModified: e.OnTagsModified,
+                  strSearchFilter: s,
+                  filter: "filtered" === o && l,
+                });
+              }),
+              j = c ? W.ShowTagBreakdown : W.HideTagBreakdown;
+            return m.createElement(
+              w.e,
+              {
+                closeModal: a,
+                bDisableBackgroundDismiss: !0,
+                bAllowFullSize: !0,
+                className: C.NotTooWideModal,
+              },
+              m.createElement(T.l, null, i),
+              m.createElement(
+                T.b,
                 null,
                 m.createElement(
                   "div",
-                  { className: W.TagBreakdownCtn },
-                  m.createElement("div", { className: W.TagBreakdownList }, r)
-                )
-              );
-            }),
-            (t.prototype.ModifyFilter = function (e) {
-              var t = Object(l.e)(this.state.currentFilter);
-              e(t),
-                this.setState(
-                  Object(a.a)(
-                    { currentFilter: t },
-                    this.CalcualateItemsAndTags(
-                      t,
-                      this.state.startingUnreferencedItems
-                    )
-                  )
-                );
-            }),
-            (t.prototype.OnChangeClauseType = function (e, t) {
-              this.ModifyFilter(function (n) {
-                return (n.clauses[e].type = t);
-              });
-            }),
-            (t.prototype.OnChangeClauseTag = function (e, t, n) {
-              this.ModifyFilter(function (a) {
-                return (a.clauses[e].or_tags[t] = n);
-              });
-            }),
-            (t.prototype.OnAddClause = function () {
-              this.ModifyFilter(function (e) {
-                return e.clauses.push({
-                  type: "Must have",
-                  or_tags: new Array(""),
-                });
-              });
-            }),
-            (t.prototype.OnRemoveClause = function (e) {
-              this.ModifyFilter(function (t) {
-                return t.clauses.splice(e, 1);
-              });
-            }),
-            (t.prototype.OnAddClauseTagSlot = function (e) {
-              this.ModifyFilter(function (t) {
-                return t.clauses[e].or_tags.push("");
-              });
-            }),
-            (t.prototype.OnRemoveClauseTagSlot = function (e, t) {
-              this.ModifyFilter(function (n) {
-                return n.clauses[e].or_tags.splice(t, 1);
-              });
-            }),
-            (t.prototype.OnHighlightTag = function (e) {
-              this.setState({
-                tagHighlight: this.state.tagHighlight === e ? "" : e,
-              });
-            }),
-            (t.prototype.OnToggleTagBreakdown = function () {
-              this.setState({ showTagBreakdown: !this.state.showTagBreakdown });
-            }),
-            (t.prototype.OnSetViewMode = function (e) {
-              this.setState({ showMode: e });
-            }),
-            (t.prototype.OnTagsModified = function () {
-              var e = this.GenerateStartingUnreferencedItems();
-              this.setState(
-                Object(a.a)(
-                  { startingUnreferencedItems: e },
-                  this.CalcualateItemsAndTags(this.state.currentFilter, e)
-                )
-              );
-            }),
-            (t.prototype.UpdateSearchText = function (e) {
-              this.setState({ strSearch: e.target.value.toLowerCase() });
-            }),
-            (t.prototype.OnOK = function () {
-              if (this.props.onApplyFilter) {
-                var e = Object(l.e)(this.state.currentFilter);
-                this.SanitizeFilter(e), this.props.onApplyFilter(e);
-              }
-              this.props.editModel.SetDirty(o.c.jsondata_sales),
-                this.props.closeModal();
-            }),
-            (t.prototype.render = function () {
-              var e = this,
-                t = this.props,
-                n = t.editModel,
-                a = t.closeModal,
-                i = t.title,
-                r = this.state,
-                o = r.showMode,
-                l = r.currentFilter,
-                s = r.strSearch,
-                c = r.showTagBreakdown,
-                u = this.state,
-                d = u.activeItems,
-                p = u.activeTagBreakdown,
-                _ = u.filteredItems,
-                g = u.filteredTagBreakdown,
-                h = u.unusedItems,
-                f = u.unusedTagBreakdown,
-                b = c ? this.state.tagHighlight : "",
-                v = "active" === o ? p : "filtered" === o ? g : f,
-                S = ("active" === o ? d : "filtered" === o ? _ : h).map(
-                  function (e) {
-                    var t = J(e.capsule).appData;
-                    return {
-                      item: e,
-                      name: t && t.name,
-                      highlight:
-                        b &&
-                        e.tags.find(function (e) {
-                          return e === b;
-                        }),
-                    };
-                  }
-                );
-              S.sort(function (e, t) {
-                return e.highlight != t.highlight
-                  ? e.highlight
-                    ? -1
-                    : 1
-                  : (e.name || "").localeCompare(t.name);
-              });
-              var E = [
-                  {
-                    label: m.createElement(
-                      m.Fragment,
-                      null,
-                      Object(N.f)("#Sale_TagFilter_MatchingItems", d.length),
-                      m.createElement(V.d, {
-                        tooltip: Object(N.f)(
-                          "#Sale_TagFilter_MatchingItems_ttip"
-                        ),
-                      })
-                    ),
-                    data: "active",
-                  },
-                  {
-                    label: m.createElement(
-                      m.Fragment,
-                      null,
-                      Object(N.f)("#Sale_TagFilter_FilteredItems", _.length),
-                      m.createElement(V.d, {
-                        tooltip: Object(N.f)(
-                          "#Sale_TagFilter_FilteredItems_ttip"
-                        ),
-                      })
-                    ),
-                    data: "filtered",
-                  },
-                  {
-                    label: m.createElement(
-                      m.Fragment,
-                      null,
-                      Object(N.f)("#Sale_TagFilter_UnusedItems", h.length),
-                      m.createElement(V.d, {
-                        tooltip: Object(N.f)(
-                          "#Sale_TagFilter_UnusedItems_ttip"
-                        ),
-                      })
-                    ),
-                    data: "unused",
-                  },
-                ],
-                y = S.map(function (t) {
-                  var a = t.item;
-                  return m.createElement(ie, {
-                    key: a.capsule.type + a.capsule.id,
-                    editModel: n,
-                    item: a,
-                    tagHighlight: b,
-                    onTagsModified: e.OnTagsModified,
-                    strSearchFilter: s,
-                    filter: "filtered" === o && l,
-                  });
-                }),
-                O = c ? W.ShowTagBreakdown : W.HideTagBreakdown;
-              return m.createElement(
-                w.e,
-                {
-                  closeModal: a,
-                  bDisableBackgroundDismiss: !0,
-                  bAllowFullSize: !0,
-                  className: C.NotTooWideModal,
-                },
-                m.createElement(T.l, null, i),
-                m.createElement(
-                  T.b,
-                  null,
+                  { className: Object(F.a)(W.EditFitlerCtn, j) },
+                  this.RenderFilterControls(),
                   m.createElement(
                     "div",
-                    { className: Object(F.a)(W.EditFitlerCtn, O) },
-                    this.RenderFilterControls(),
+                    { className: W.TopTabs },
                     m.createElement(
                       "div",
-                      { className: W.TopTabs },
-                      m.createElement(
-                        "div",
-                        { className: W.TagSelector },
-                        m.createElement(T.i, {
-                          rgOptions: E,
-                          selectedOption: o,
-                          onChange: function (t) {
-                            return e.OnSetViewMode(t.data);
-                          },
-                        })
-                      ),
-                      m.createElement(
-                        T.d,
-                        {
-                          className: Object(F.a)(
-                            W.ShowTagBreakdown,
-                            W.SectionTab,
-                            c && W.TabActive
-                          ),
-                          onClick: this.OnToggleTagBreakdown,
+                      { className: W.TagSelector },
+                      m.createElement(T.i, {
+                        rgOptions: y,
+                        selectedOption: o,
+                        onChange: function (t) {
+                          return e.OnSetViewMode(t.data);
                         },
-                        Object(N.f)(
-                          this.state.showTagBreakdown
-                            ? "#Sale_TagFilter_HideTagBreakdown"
-                            : "#Sale_TagFilter_ShowTagBreakdown"
+                      })
+                    ),
+                    m.createElement(
+                      T.d,
+                      {
+                        className: Object(F.a)(
+                          W.ShowTagBreakdown,
+                          W.SectionTab,
+                          c && W.TabActive
                         ),
-                        m.createElement(V.d, {
-                          tooltip: Object(N.f)(
-                            "#Sale_TagFilter_TagBreakdown_ttip"
-                          ),
-                        })
-                      )
-                    ),
-                    m.createElement(
-                      "div",
-                      { className: W.TopSection },
-                      m.createElement(
-                        "div",
-                        { className: W.MatchingItemsCtn },
-                        m.createElement("div", { className: W.ItemList }, y)
+                        onClick: this.OnToggleTagBreakdown,
+                      },
+                      Object(N.f)(
+                        this.state.showTagBreakdown
+                          ? "#Sale_TagFilter_HideTagBreakdown"
+                          : "#Sale_TagFilter_ShowTagBreakdown"
                       ),
-                      this.RenderTagBreakdown(y.length, v)
-                    ),
-                    m.createElement(T.m, {
-                      type: "text",
-                      label: Object(N.f)("#Sale_TaggedItemsFilter"),
-                      onChange: this.UpdateSearchText,
-                      focusOnMount: !0,
-                      tooltip: Object(N.f)("#Sale_TaggedItemsFilter_ttip"),
-                    }),
+                      m.createElement(V.d, {
+                        tooltip: Object(N.f)(
+                          "#Sale_TagFilter_TagBreakdown_ttip"
+                        ),
+                      })
+                    )
+                  ),
+                  m.createElement(
+                    "div",
+                    { className: W.TopSection },
                     m.createElement(
                       "div",
-                      { className: W.OKButton },
-                      m.createElement(
-                        T.r,
-                        { onClick: this.OnOK },
-                        Object(N.f)("#Sale_TagFilter_OK")
-                      )
+                      { className: W.MatchingItemsCtn },
+                      m.createElement("div", { className: W.ItemList }, O)
+                    ),
+                    this.RenderTagBreakdown(O.length, S)
+                  ),
+                  m.createElement(T.m, {
+                    type: "text",
+                    label: Object(N.f)("#Sale_TaggedItemsFilter"),
+                    onChange: this.UpdateSearchText,
+                    focusOnMount: !0,
+                    tooltip: Object(N.f)("#Sale_TaggedItemsFilter_ttip"),
+                  }),
+                  m.createElement(
+                    "div",
+                    { className: W.OKButton },
+                    m.createElement(
+                      T.r,
+                      { onClick: this.OnOK },
+                      Object(N.f)("#Sale_TagFilter_OK")
                     )
                   )
                 )
-              );
-            }),
-            Object(a.c)([R.a], t.prototype, "OnChangeClauseType", null),
-            Object(a.c)([R.a], t.prototype, "OnChangeClauseTag", null),
-            Object(a.c)([R.a], t.prototype, "OnAddClause", null),
-            Object(a.c)([R.a], t.prototype, "OnRemoveClause", null),
-            Object(a.c)([R.a], t.prototype, "OnAddClauseTagSlot", null),
-            Object(a.c)([R.a], t.prototype, "OnRemoveClauseTagSlot", null),
-            Object(a.c)([R.a], t.prototype, "OnHighlightTag", null),
-            Object(a.c)([R.a], t.prototype, "OnToggleTagBreakdown", null),
-            Object(a.c)([R.a], t.prototype, "OnSetViewMode", null),
-            Object(a.c)([R.a], t.prototype, "OnTagsModified", null),
-            Object(a.c)([R.a], t.prototype, "UpdateSearchText", null),
-            Object(a.c)([R.a], t.prototype, "OnOK", null),
-            t
-          );
-        })(m.Component),
-        pe = (function (e) {
+              )
+            );
+          }),
+          Object(a.c)([R.a], t.prototype, "OnChangeClauseType", null),
+          Object(a.c)([R.a], t.prototype, "OnChangeClauseTag", null),
+          Object(a.c)([R.a], t.prototype, "OnAddClause", null),
+          Object(a.c)([R.a], t.prototype, "OnRemoveClause", null),
+          Object(a.c)([R.a], t.prototype, "OnAddClauseTagSlot", null),
+          Object(a.c)([R.a], t.prototype, "OnRemoveClauseTagSlot", null),
+          Object(a.c)([R.a], t.prototype, "OnHighlightTag", null),
+          Object(a.c)([R.a], t.prototype, "OnToggleTagBreakdown", null),
+          Object(a.c)([R.a], t.prototype, "OnSetViewMode", null),
+          Object(a.c)([R.a], t.prototype, "OnTagsModified", null),
+          Object(a.c)([R.a], t.prototype, "UpdateSearchText", null),
+          Object(a.c)([R.a], t.prototype, "OnOK", null),
+          t
+        );
+      })(m.Component);
+      function me() {
+        return Object(a.b)(this, void 0, void 0, function () {
+          var e, t, n;
+          return Object(a.e)(this, function (a) {
+            switch (a.label) {
+              case 0:
+                return [4, Y.a.EnsureLoaded()];
+              case 1:
+                return (
+                  a.sent(),
+                  (e = []),
+                  Y.a.GetTagNameForTagID().forEach(function (t, n) {
+                    e.push({ tagid: n, name: t });
+                  }),
+                  (t = e.map(function (e) {
+                    return Object(l.f)(e.name, "Store");
+                  })),
+                  (n = [
+                    "Linux",
+                    "Mac",
+                    "VR",
+                    "VR Only",
+                    "Full Controller",
+                    "Remote Play",
+                    "Remote Play Together",
+                    "Free",
+                    "Discounted",
+                    "Coop",
+                  ].map(function (e) {
+                    return Object(l.f)(e, "Feature");
+                  })),
+                  [2, t.concat(n)]
+                );
+            }
+          });
+        });
+      }
+      var _e = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -21002,7 +20916,7 @@
             (t = Object(a.c)([p.a], t))
           );
         })(m.Component),
-        me = (function (e) {
+        ge = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -21307,7 +21221,7 @@
             (t = Object(a.c)([p.a], t))
           );
         })(m.Component);
-      function _e(e) {
+      function he(e) {
         for (var t = new Set(), n = 0, a = e; n < a.length; n++) {
           var i = a[n],
             r = i.tag_name.trim().toLocaleLowerCase();
@@ -21318,7 +21232,7 @@
         }
         return !0;
       }
-      var ge = function (e) {
+      var fe = function (e) {
           var t = e.closeModal,
             n = e.editModel,
             i = n.GetEventModel().jsondata,
@@ -21332,10 +21246,10 @@
             h = g[0],
             f = g[1],
             b = function () {
-              c(_e(h)), _(!0);
+              c(he(h)), _(!0);
             },
             v = h.map(function (e, t) {
-              return m.createElement(he, {
+              return m.createElement(be, {
                 key: "AutoTag" + t,
                 editModel: n,
                 fnOnEdited: b,
@@ -21347,7 +21261,7 @@
                         return n != e;
                       })
                     ),
-                    void c(_e(h))
+                    void c(he(h))
                   );
                   var e;
                 },
@@ -21420,7 +21334,7 @@
             )
           );
         },
-        he = function (e) {
+        be = function (e) {
           var t = m.useState(e.autoTag.tag_name),
             n = t[0],
             a = t[1],
@@ -21447,7 +21361,7 @@
                 tooltip: Object(N.f)("#Sale_EditAutoTags_Tooltip"),
                 value: n,
               }),
-              m.createElement(K, {
+              m.createElement(Z, {
                 onClick: function () {
                   return e.fnOnDeleted();
                 },
@@ -21456,13 +21370,13 @@
             m.createElement(
               "div",
               { className: W.AutoTagRow },
-              m.createElement(X, { filter: r }),
+              m.createElement($, { filter: r }),
               m.createElement(
                 T.d,
                 {
                   onClick: function () {
                     Object(M.d)(
-                      m.createElement(de, {
+                      m.createElement(pe, {
                         editModel: e.editModel,
                         filter: r,
                         title: Object(N.f)("#Sale_TagFilter_EditFilter"),
@@ -21477,6 +21391,390 @@
             )
           );
         };
+    },
+    putg: function (e, t, n) {
+      "use strict";
+      n.d(t, "a", function () {
+        return u;
+      });
+      var a = n("mrSG"),
+        i = n("vDqi"),
+        r = n.n(i),
+        o = n("mgoM"),
+        l = n("3+zv"),
+        s = n("OS6B"),
+        c = n("lkRc"),
+        u = new ((function () {
+          function e(e) {
+            void 0 === e && (e = null),
+              (this.m_rgCategoriesForTagID = null),
+              (this.m_rgTagNameForTagID = null),
+              (this.m_rgAtomicTagIDsForTagID = null),
+              (this.m_rgLocalizedCategoryNames = null),
+              (this.m_rgLocalizedTagNames = null),
+              (this.m_rgLanguages = null),
+              e && this.ParseResponse(e);
+          }
+          return (
+            (e.prototype.GetCategoriesForTagID = function () {
+              return this.m_rgCategoriesForTagID;
+            }),
+            (e.prototype.GetTagNameForTagID = function () {
+              return this.m_rgTagNameForTagID;
+            }),
+            (e.prototype.GetAtomicTagIDsForTagID = function () {
+              return this.m_rgAtomicTagIDsForTagID;
+            }),
+            (e.prototype.GetLocalizedCategoryNames = function () {
+              return this.m_rgLocalizedCategoryNames;
+            }),
+            (e.prototype.GetLocalizedTagNames = function () {
+              return this.m_rgLocalizedTagNames;
+            }),
+            (e.prototype.GetLanguages = function () {
+              return this.m_rgLanguages;
+            }),
+            (e.prototype.AutoGenerateFacets = function () {
+              var e = this.ComputeLocalizedCategoryNames(),
+                t = this.ComputeLocalizedTagNames(),
+                n = this.ComputeCategoryToTagMap(),
+                a = this.FindNonAtomicTags(),
+                i = this.ComputeFacetCategoryToTagMap(n, a),
+                r = this.ComputeAtomicTagToTagsMap();
+              return this.ComputeFacets(i, r, e, t);
+            }),
+            (e.prototype.AutoGenerateFacetsAsync = function () {
+              return Object(a.b)(this, void 0, void 0, function () {
+                return Object(a.e)(this, function (e) {
+                  switch (e.label) {
+                    case 0:
+                      return [4, this.EnsureLoaded()];
+                    case 1:
+                      return e.sent(), [2, this.AutoGenerateFacets()];
+                  }
+                });
+              });
+            }),
+            (e.prototype.BIsTagAtomic = function (e) {
+              return (
+                this.m_rgAtomicTagIDsForTagID.has(e) &&
+                this.m_rgAtomicTagIDsForTagID.get(e).includes(e)
+              );
+            }),
+            (e.prototype.ParseResponse = function (e) {
+              (this.m_rgCategoriesForTagID = new Map()),
+                (this.m_rgTagNameForTagID = new Map()),
+                (this.m_rgAtomicTagIDsForTagID = new Map()),
+                (this.m_rgLocalizedCategoryNames = new Map()),
+                (this.m_rgLocalizedTagNames = new Map()),
+                (this.m_rgLanguages = new Array());
+              for (
+                var t = 0, n = Object.keys(e.rgCategoriesByTag);
+                t < n.length;
+                t++
+              ) {
+                var a = n[t];
+                this.m_rgCategoriesForTagID.set(
+                  Number(a),
+                  Array.from(e.rgCategoriesByTag[a])
+                );
+              }
+              for (
+                var i = 0, r = Object.keys(e.rgTagNames);
+                i < r.length;
+                i++
+              ) {
+                a = r[i];
+                this.m_rgTagNameForTagID.set(Number(a), e.rgTagNames[a]);
+              }
+              for (
+                var o = 0, l = Object.keys(e.rgTagBreakdown);
+                o < l.length;
+                o++
+              ) {
+                a = l[o];
+                this.m_rgAtomicTagIDsForTagID.set(
+                  Number(a),
+                  Array.from(e.rgTagBreakdown[a]).map(function (e) {
+                    return Number(e);
+                  })
+                );
+              }
+              for (
+                var s = 0, c = Object.keys(e.rgLocalizedCategoryNames);
+                s < c.length;
+                s++
+              ) {
+                var u = c[s];
+                this.m_rgLocalizedCategoryNames.set(
+                  u,
+                  Array.from(e.rgLocalizedCategoryNames[u])
+                );
+              }
+              for (
+                var d = 0, p = Object.keys(e.rgLocalizedTagNames);
+                d < p.length;
+                d++
+              ) {
+                a = p[d];
+                this.m_rgLocalizedTagNames.set(
+                  Number(a),
+                  Array.from(e.rgLocalizedTagNames[a])
+                );
+              }
+              this.m_rgLanguages = Array.from(e.rgLanguages);
+            }),
+            (e.prototype.EnsureLoaded = function () {
+              return Object(a.b)(this, void 0, void 0, function () {
+                var e;
+                return Object(a.e)(this, function (t) {
+                  switch (t.label) {
+                    case 0:
+                      return this.m_rgCategoriesForTagID
+                        ? [2]
+                        : [4, this.Load()];
+                    case 1:
+                      return (e = t.sent()), this.ParseResponse(e), [2];
+                  }
+                });
+              });
+            }),
+            (e.prototype.Load = function () {
+              return Object(a.b)(this, void 0, void 0, function () {
+                var e, t, n;
+                return Object(a.e)(this, function (a) {
+                  switch (a.label) {
+                    case 0:
+                      (e = null), (a.label = 1);
+                    case 1:
+                      return (
+                        a.trys.push([1, 3, , 4]),
+                        [
+                          4,
+                          r.a.get(
+                            c.c.COMMUNITY_BASE_URL +
+                              "sale/ajaxgetcategoriesbytag"
+                          ),
+                        ]
+                      );
+                    case 2:
+                      return (
+                        (t = a.sent()),
+                        1 !== (null == (e = t.data) ? void 0 : e.success)
+                          ? (console.error(
+                              "Unable to load tag category data: " +
+                                (null == e ? void 0 : e.success)
+                            ),
+                            [2, null])
+                          : [3, 4]
+                      );
+                    case 3:
+                      return (
+                        (n = a.sent()),
+                        console.error(
+                          "Unable to load tag category data: " +
+                            Object(s.a)(n).strErrorMsg
+                        ),
+                        [2, null]
+                      );
+                    case 4:
+                      return [2, e];
+                  }
+                });
+              });
+            }),
+            (e.prototype.Verify = function (e) {
+              for (
+                var t = new Set(),
+                  n = new Set(),
+                  a = Object.keys(e.rgTagBreakdown),
+                  i = Object.keys(e.rgTagNames),
+                  r = Object.keys(e.rgCategoriesByTag),
+                  o = 0,
+                  l = a;
+                o < l.length;
+                o++
+              )
+                for (
+                  var s = l[o], c = 0, u = e.rgTagBreakdown[s].flat();
+                  c < u.length;
+                  c++
+                ) {
+                  var d = u[c];
+                  i.includes(d.toString()) || t.add(d),
+                    (r.includes(d.toString()) &&
+                      e.rgCategoriesByTag[d] &&
+                      0 !== e.rgCategoriesByTag[d].length) ||
+                      n.add(d);
+                }
+              console.log(t.size + " un-named tags."),
+                t.size > 0 && console.log(t),
+                console.log(n.size + " un-categorized tags."),
+                n.size > 0 && console.log(n);
+            }),
+            (e.prototype.ComputeCategoryToTagMap = function () {
+              var e = new Map();
+              return (
+                this.m_rgCategoriesForTagID.forEach(function (t, n) {
+                  if (t)
+                    for (var a = 0, i = t; a < i.length; a++) {
+                      var r = i[a];
+                      e.has(r) || e.set(r, new Array()), e.get(r).push(n);
+                    }
+                }),
+                e
+              );
+            }),
+            (e.prototype.FindNonAtomicTags = function () {
+              var e = new Set();
+              return (
+                this.m_rgAtomicTagIDsForTagID.forEach(function (t, n) {
+                  1 !== t.length && e.add(n);
+                }),
+                e
+              );
+            }),
+            (e.prototype.ComputeFacetCategoryToTagMap = function (e, t) {
+              for (
+                var n = new Set(),
+                  a = new Map(),
+                  i = function (i, r) {
+                    for (var o = 0, l = e.get(r); o < l.length; o++) {
+                      var s = l[o];
+                      n.has(s) || t.has(s) || (n.add(s), a.get(i).push(s));
+                    }
+                  },
+                  r = 0,
+                  o = [
+                    "supergenre",
+                    "genre",
+                    "subgenre",
+                    "visuals",
+                    "theme_mood",
+                    "feature",
+                    "players",
+                  ];
+                r < o.length;
+                r++
+              ) {
+                var l = o[r];
+                a.set(l, new Array()),
+                  "theme_mood" === l ? (i(l, "theme"), i(l, "mood")) : i(l, l);
+              }
+              return a;
+            }),
+            (e.prototype.ComputeLocalizedCategoryNames = function () {
+              var e = new Map();
+              e.set("supergenre", "#App_Taxonomy_Survey_QSuperGenreTitle"),
+                e.set("genre", "#App_Taxonomy_Survey_QGenreTitle"),
+                e.set("subgenre", "#App_Taxonomy_Survey_QSubGenreTitle"),
+                e.set("visuals", "#App_Taxonomy_Survey_QVisualsTitle"),
+                e.set("theme_mood", "#App_Taxonomy_Survey_QThemeMoodTitle"),
+                e.set("feature", "#App_Taxonomy_Survey_QFeaturesTitle"),
+                e.set("players", "#App_Taxonomy_Survey_QPlayersTitle");
+              var t = new Map();
+              return (
+                this.m_rgLocalizedCategoryNames.forEach(function (n, a) {
+                  var i = new Array(30);
+                  (i[0] = e.get(a)), t.set(a, i);
+                }),
+                t
+              );
+            }),
+            (e.prototype.ComputeLocalizedTagNames = function () {
+              var e = this,
+                t = new Map();
+              return (
+                this.m_rgLocalizedTagNames.forEach(function (n, a) {
+                  var i = n,
+                    r = new Array(30);
+                  r.fill(""),
+                    e.m_rgLanguages.forEach(function (e, t) {
+                      var n = Object(o.d)(e, -1);
+                      -1 === n
+                        ? console.warn("Unrecognized language: " + e)
+                        : 0 <= n && n < 30 && (r[n] = i[t]);
+                    }),
+                    t.set(a, r);
+                }),
+                t
+              );
+            }),
+            (e.prototype.ComputeAtomicTagToTagsMap = function () {
+              var e = new Map();
+              return (
+                this.m_rgAtomicTagIDsForTagID.forEach(function (t, n) {
+                  for (var a = 0, i = t; a < i.length; a++) {
+                    var r = i[a],
+                      o = Number(r);
+                    e.has(o) || e.set(o, new Array()), e.get(o).push(n);
+                  }
+                }),
+                e
+              );
+            }),
+            (e.prototype.ComputeFacets = function (e, t, n, a) {
+              var i = new Array();
+              return (
+                e.forEach(function (e, r) {
+                  for (
+                    var o = { name: n.get(r), facetValues: new Array() },
+                      s = Array(),
+                      c = 0,
+                      u = e;
+                    c < u.length;
+                    c++
+                  ) {
+                    var d = u[c];
+                    if (a.get(d)) {
+                      var p = {
+                        name: a.get(d),
+                        subtitle: new Array(),
+                        rgStoreTagFilter: {
+                          type: l.o.k_EStoreFilterClauseTypeAnd,
+                          rgSubexpressions: [
+                            {
+                              type: l.o.k_EStoreFilterClauseTypeOr,
+                              rgSubexpressions: t.has(d)
+                                ? t.get(d).map(function (e) {
+                                    return {
+                                      type:
+                                        l.o.k_EStoreFilterClauseTypeStoreTag,
+                                      value: e,
+                                    };
+                                  })
+                                : [
+                                    {
+                                      type:
+                                        l.o.k_EStoreFilterClauseTypeStoreTag,
+                                      value: d,
+                                    },
+                                  ],
+                            },
+                          ],
+                        },
+                        nAtomicStoreTagID: d,
+                        filter: null,
+                        matchingCapsules: [],
+                      };
+                      o.facetValues.push(p);
+                    } else s.push(d);
+                  }
+                  s.length > 0 &&
+                    console.warn(
+                      "No name information found for tag count " +
+                        s.length +
+                        ", skipping.",
+                      s
+                    ),
+                    i.push(o);
+                }),
+                i
+              );
+            }),
+            e
+          );
+        })())();
     },
     t0uJ: function (e, t, n) {
       "use strict";
@@ -21578,10 +21876,10 @@
                 "Invalid Clan SteamID: " + n.clanSteamID.ConvertTo64BitString()
               ),
               (n.appid = C.b.APPID),
-              (n.bOldAnnouncement = e && e.startsWith(_.G)),
+              (n.bOldAnnouncement = e && e.startsWith(_.H)),
               (n.bLoaded = !0),
               null == e && (n.loadedAllLanguages = !0),
-              n.appid == _.C &&
+              n.appid == _.D &&
                 (n.vecTags.push("hide_library_overview"),
                 n.vecTags.push("steam_blog"),
                 n.vecTags.push("mod_reviewed")),
@@ -21848,7 +22146,7 @@
                     return (
                       (o =
                         !!this.m_editModel.GetGID() &&
-                        !this.m_editModel.GetGID().startsWith(_.G)),
+                        !this.m_editModel.GetGID().startsWith(_.H)),
                       t && !o
                         ? [
                             2,
@@ -22935,6 +23233,14 @@
           "partnereventcontrolbars_EventEditorTopBarContainer_1Afx7",
         EventPublished: "partnereventcontrolbars_EventPublished_3zTXC",
         EventUnPublished: "partnereventcontrolbars_EventUnPublished_pjxnm",
+      };
+    },
+    "xs+m": function (e, t, n) {
+      e.exports = {
+        ContentHubSectionCtn:
+          "contenthubsectionseditor_ContentHubSectionCtn_G2T4g",
+        ContentHubSectionInnerCtn:
+          "contenthubsectionseditor_ContentHubSectionInnerCtn_Xl-LL",
       };
     },
     yKSN: function (e, t, n) {

@@ -615,7 +615,7 @@
             t
           );
         })(_),
-        T = (function (e) {
+        F = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
@@ -657,7 +657,7 @@
             t
           );
         })(_),
-        F = (function (e) {
+        T = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
@@ -2232,7 +2232,7 @@
             );
           }),
           (e.AddReaction = function (e, t) {
-            return e.SendMsg("LoyaltyRewards.AddReaction#1", t, T, {
+            return e.SendMsg("LoyaltyRewards.AddReaction#1", t, F, {
               ePrivilege: 1,
             });
           }),
@@ -2446,7 +2446,7 @@
                     case 0:
                       return (
                         this.m_mapExistingReactions.clear(),
-                        (e = g.b.Init(F))
+                        (e = g.b.Init(T))
                           .Body()
                           .set_target_type(this.m_eTargetType),
                         e.Body().set_targetid(this.m_targetID),
@@ -3204,7 +3204,7 @@
                       {
                         className: Object(ee.a)(u.LoadingContainer, u.Visible),
                       },
-                      i.createElement(Fe, null)
+                      i.createElement(Te, null)
                     )
                   )
                 );
@@ -3341,14 +3341,14 @@
                                 u.Visible
                               ),
                             },
-                            i.createElement(Fe, null)
+                            i.createElement(Te, null)
                           )
                         ),
                       i.createElement(
                         "div",
                         { className: u.ButtonContainer },
                         B.map(function (t) {
-                          return i.createElement(Te, {
+                          return i.createElement(Fe, {
                             key: t,
                             reaction: t,
                             selected: t === m && !w.get(t),
@@ -3455,7 +3455,7 @@
                               y === ve.SUBMITTING && u.Visible
                             ),
                           },
-                          i.createElement(Fe, null)
+                          i.createElement(Te, null)
                         ),
                         i.createElement(
                           "div",
@@ -3619,7 +3619,7 @@
             i.createElement(
               "div",
               { className: u.Left },
-              i.createElement(ie.E, { className: u.BalanceIcon }),
+              i.createElement(ie.F, { className: u.BalanceIcon }),
               i.createElement(
                 "div",
                 { className: u.BalanceDetails },
@@ -3655,7 +3655,7 @@
         Le = function () {
           return i.createElement("div", { className: u.Divider });
         },
-        Te = (function (e) {
+        Fe = (function (e) {
           function t(t) {
             var r = e.call(this, t) || this;
             return (r.state = { bHovered: !1 }), r;
@@ -3718,7 +3718,7 @@
             t
           );
         })(i.PureComponent),
-        Fe = function () {
+        Te = function () {
           return i.createElement(ne.a, { size: "large", className: u.Loading });
         },
         We = function (e) {
@@ -3728,7 +3728,7 @@
           return i.createElement(
             "span",
             Object(n.a)({}, a, { className: Object(ee.a)(r, u.PointsAmount) }),
-            i.createElement(ie.E, { className: u.PointsAmountIcon }),
+            i.createElement(ie.F, { className: u.PointsAmountIcon }),
             t
           );
         };

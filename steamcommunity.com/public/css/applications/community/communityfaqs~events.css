@@ -2887,6 +2887,21 @@ p a:hover {
   position: absolute;
   width: 90%;
 }
+.contenthubsectionseditor_ContentHubSectionCtn_G2T4g {
+  flex-grow: 1;
+  margin-right: 16px;
+  display: flex;
+  flex-direction: row;
+}
+.contenthubsectionseditor_ContentHubSectionCtn_G2T4g
+  .contenthubsectionseditor_ContentHubSectionInnerCtn_Xl-LL {
+  flex-grow: 1;
+  padding: 8px;
+}
+.contenthubsectionseditor_ContentHubSectionCtn_G2T4g
+  .contenthubsectionseditor_ContentHubSectionInnerCtn_Xl-LL:first-child {
+  flex-grow: 4;
+}
 .partnereventdescriptiontab_ToolContainer_1YUip {
   padding: 10px 0px;
 }
