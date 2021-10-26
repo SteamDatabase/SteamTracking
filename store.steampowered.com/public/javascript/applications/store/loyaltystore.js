@@ -76,10 +76,10 @@
     "+j4l": function (e, t, n) {
       "use strict";
       n.d(t, "e", function () {
-        return Ce;
+        return Ie;
       }),
         n.d(t, "c", function () {
-          return Ie;
+          return Ce;
         }),
         n.d(t, "d", function () {
           return we;
@@ -108,8 +108,8 @@
         b = n("pQ8y"),
         y = n("r64O"),
         v = n("StxQ"),
-        C = n("n4wG"),
-        I = n("1fPh"),
+        I = n("n4wG"),
+        C = n("1fPh"),
         w = n("6Y59"),
         M = n("exH9"),
         j = { success: !0, result: 1 },
@@ -1217,7 +1217,7 @@
         be = fe(pe.GreenButton),
         ye = n("mw7S"),
         ve = n("RV7a");
-      function Ce(e, t, n, r) {
+      function Ie(e, t, n, r) {
         var i = {
           type: 1,
           rewardDefinition: t,
@@ -1229,7 +1229,7 @@
           e ? Object(_.m)(e) : window
         );
       }
-      function Ie(e, t, n, r) {
+      function Ce(e, t, n, r) {
         var i = {
           type: 3,
           profileCustomizationType: t,
@@ -1801,7 +1801,7 @@
               i &&
                 a.createElement(
                   c.b,
-                  { to: I.b.LoyaltyStore() + "/app/" + i.appid, onClick: o },
+                  { to: C.b.LoyaltyStore() + "/app/" + i.appid, onClick: o },
                   a.createElement(
                     "div",
                     { className: m.SubHeaderAppContainer },
@@ -1823,7 +1823,7 @@
               a.createElement(
                 "div",
                 { className: m.PointsContainer },
-                a.createElement(w.H, { className: m.Icon }),
+                a.createElement(w.I, { className: m.Icon }),
                 a.createElement(
                   "div",
                   { className: m.BalanceColumn },
@@ -3361,7 +3361,7 @@
               { className: Object(M.a)(m.WarningTextContainer, e.className) },
               t
             ),
-            a.createElement(w.fb, { className: m.TimeWarning }),
+            a.createElement(w.gb, { className: m.TimeWarning }),
             e.children
           );
         },
@@ -3534,7 +3534,7 @@
               { onClick: t },
               a.createElement(
                 c.b,
-                { to: I.b.LoyaltyHowItWorks() },
+                { to: C.b.LoyaltyHowItWorks() },
                 Object(d.f)("#Redeem_NeedToOwnApp")
               )
             ),
@@ -3551,7 +3551,7 @@
               { onClick: t },
               a.createElement(
                 c.b,
-                { to: I.b.LoyaltyHowItWorks() },
+                { to: C.b.LoyaltyHowItWorks() },
                 Object(d.f)("#Redeem_HowToGetPoints")
               )
             ),
@@ -3721,7 +3721,7 @@
                   a.createElement("div", {
                     className: m.BadgeImage,
                     style: {
-                      backgroundImage: "url( " + Object(C.a)(t.appid, i) + " )",
+                      backgroundImage: "url( " + Object(I.a)(t.appid, i) + " )",
                     },
                   })
                 ),
@@ -4055,7 +4055,7 @@
                   alignSelf: "center",
                 },
               },
-              i.a.createElement(I, {
+              i.a.createElement(C, {
                 items: n.items,
                 visible: 5,
                 width: 464,
@@ -4063,7 +4063,7 @@
                 offer: n,
               })
             ),
-            i.a.createElement(C, {
+            i.a.createElement(I, {
               label: m,
               count: n.items.length,
               cost: o,
@@ -4071,7 +4071,7 @@
             })
           );
         }),
-        C = function (e) {
+        I = function (e) {
           var t = e.cost,
             n = e.discount,
             r = e.label + " (" + e.count + ")";
@@ -4108,7 +4108,7 @@
                 )
           );
         };
-      var I = Object(o.a)(function (e) {
+      var C = Object(o.a)(function (e) {
         var t = e.offer,
           n = e.items,
           r = e.visible,
@@ -4150,9 +4150,9 @@
                   (h = u * (Math.sin(g) + Math.cos(g))),
                   (y = h - u),
                   (v = _ - y),
-                  (C = Math.min(u, v / c)),
-                  (I = ((m - c) / 2) * u),
-                  (M = l * C + I),
+                  (I = Math.min(u, v / c)),
+                  (C = ((m - c) / 2) * u),
+                  (M = l * I + C),
                   (j = (c - 1) / 2),
                   (N = (30 * Math.pow(l - j, 2)) / (j * j)),
                   (S = (0.84 / (c - 1)) * l - g),
@@ -4180,7 +4180,7 @@
                 className: p.ItemCardImage,
               })
             );
-            var l, c, m, u, _, g, h, y, v, C, I, M, j, N, S;
+            var l, c, m, u, _, g, h, y, v, I, C, M, j, N, S;
           })
         );
       });
@@ -4488,8 +4488,8 @@
           ),
         });
       }
-      var C = n("lypr"),
-        I = "none";
+      var I = n("lypr"),
+        C = "none";
       function w(e, t, n) {
         void 0 === n && (n = {});
         var o = n.cInitialItems,
@@ -4523,14 +4523,14 @@
             d = N(),
             p = d[0],
             f = d[1],
-            g = Object(_.i)("padding-right", I),
+            g = Object(_.i)("padding-right", C),
             h = Object(_.g)().spacing.none,
             y = 1;
           u.width &&
             void 0 !== f.width &&
             (y = Math.floor((f.width + h) / u.width));
           var v = !n && s + y < r,
-            C = function () {
+            I = function () {
               return v && l(s + y);
             },
             w = s > 0,
@@ -4558,7 +4558,7 @@
             rgVisibleItems: E,
             bAllowNext: v,
             bAllowPrev: w,
-            fnNext: C,
+            fnNext: I,
             fnPrev: M,
             iPosition: s,
           };
@@ -4718,7 +4718,7 @@
           "div",
           { className: Object(b.a)(h.Container, h.Mobile) },
           t.map(n),
-          i.a.createElement(C.a, {
+          i.a.createElement(I.a, {
             trigger: "repeated",
             onVisibiltyChange: function (e) {
               return e && r();
@@ -5335,7 +5335,7 @@
                   },
                   i
                 ),
-                a.createElement(fe.N, null)
+                a.createElement(fe.O, null)
               ),
             s &&
               a.createElement(
@@ -5352,7 +5352,7 @@
                   },
                   i
                 ),
-                a.createElement(fe.jb, null)
+                a.createElement(fe.kb, null)
               ),
             l &&
               a.createElement(
@@ -5388,7 +5388,7 @@
           e.persona.GetCurrentGameName()
         );
       }
-      var Ce = (function (e) {
+      var Ie = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -5412,8 +5412,8 @@
                 h = e.bHidePersona,
                 y = e.bDNDSet,
                 v = e.bHasPartyBeacon,
-                C = e.bHasGamePrivacy,
-                I = e.bNoMask,
+                I = e.bHasGamePrivacy,
+                C = e.bNoMask,
                 w = Object(r.f)(e, [
                   "className",
                   "onContextMenu",
@@ -5442,7 +5442,7 @@
                   ye.a.personaNameAndStatusLabel,
                   Object(me.b)(i),
                   m && ye.a.compactView,
-                  I && ye.a.NoMask,
+                  C && ye.a.NoMask,
                 ];
               f
                 ? (j = f())
@@ -5556,7 +5556,7 @@
                             "no-drag"
                           ),
                         },
-                        C &&
+                        I &&
                           a.createElement(
                             "div",
                             {
@@ -5586,7 +5586,7 @@
             (t = Object(r.c)([m.a], t))
           );
         })(a.Component),
-        Ie =
+        Ce =
           (Object(m.a)(function (e) {
             var t = e.persona,
               n = e.bParenthesizeNicknames,
@@ -5666,14 +5666,14 @@
                           i.a.createElement(
                             "div",
                             { className: re.AvatarHolder },
-                            i.a.createElement(Ie.c, {
+                            i.a.createElement(Ce.c, {
                               size: "FillArea",
                               className: re.CurrentAvatar,
                               persona: r,
                               animatedAvatar: o.animated_avatar,
                             })
                           ),
-                          i.a.createElement(Ce, {
+                          i.a.createElement(Ie, {
                             persona: r,
                             bIsSelf: !0,
                             eFriendRelationship: 0,
@@ -6462,7 +6462,7 @@
                   ie.e,
                   null,
                   i.a.createElement(st, { descriptor: a }),
-                  i.a.createElement(C.a, {
+                  i.a.createElement(I.a, {
                     trigger: "repeated",
                     onVisibiltyChange: function (n) {
                       return (
@@ -6499,7 +6499,7 @@
                   alignItems: "center",
                   className: dt.Header,
                 },
-                i.a.createElement(fe.U, { className: dt.Icon }),
+                i.a.createElement(fe.V, { className: dt.Icon }),
                 i.a.createElement(
                   "div",
                   { className: dt.Title },
@@ -6577,7 +6577,7 @@
             i.a.createElement(
               "div",
               null,
-              i.a.createElement(fe.U, { className: dt.Icon }),
+              i.a.createElement(fe.V, { className: dt.Icon }),
               i.a.createElement("div", null, "+", o)
             )
           );
@@ -6587,8 +6587,8 @@
         bt = n.n(ht),
         yt = (n("8j8b"), n("Lvue"), n("6bk4")),
         vt = n.n(yt),
-        Ct = n("++az"),
-        It = n.n(Ct),
+        It = n("++az"),
+        Ct = n.n(It),
         wt = (n("kJAG"), n("sf1Z"), n("Cw7J")),
         Mt = n.n(wt),
         jt = (n("FYLW"), n("TL5o"), n("J8Mo"), n("2y1i"), n("bnhs")),
@@ -6856,7 +6856,7 @@
                   }),
                   i.a.createElement("img", {
                     className: Xt.ItemAvatar,
-                    src: It.a,
+                    src: Ct.a,
                   })
                 ),
                 i.a.createElement("img", {
@@ -7713,8 +7713,8 @@
       }
       yn(u.b);
       var vn = yn(u.c),
-        Cn = n("1xRl"),
-        In = n("rKGf"),
+        In = n("1xRl"),
+        Cn = n("rKGf"),
         wn = i.a.createContext({ updateActivePosition: function () {} }),
         Mn = function (e) {
           var t = e.children,
@@ -7808,11 +7808,11 @@
               i.a.createElement(
                 "div",
                 Object(r.a)({}, a, {
-                  className: Object(b.a)(In.ItemContainer, n),
+                  className: Object(b.a)(Cn.ItemContainer, n),
                   ref: p,
                 }),
                 t,
-                i.a.createElement("div", { className: In.Accent, style: _ })
+                i.a.createElement("div", { className: Cn.Accent, style: _ })
               )
             )
           );
@@ -7844,7 +7844,7 @@
             i.a.createElement(
               "div",
               Object(r.a)(
-                { className: Object(b.a)(In.Item, n && In.Active, a), ref: u },
+                { className: Object(b.a)(Cn.Item, n && Cn.Active, a), ref: u },
                 o
               ),
               t
@@ -8004,7 +8004,7 @@
           var e = En();
           return i.a.createElement(
             _.a,
-            { padding: "none", className: Cn.PrimaryNav },
+            { padding: "none", className: In.PrimaryNav },
             i.a.createElement(
               _.e,
               { spacing: "none" },
@@ -8015,7 +8015,7 @@
                   t.label &&
                     i.a.createElement(
                       "div",
-                      { className: Cn.NavItem },
+                      { className: In.NavItem },
                       t.label
                     ),
                   t.items.map(function (e) {
@@ -8032,7 +8032,7 @@
                         );
                   }),
                   n < e.length - 1 &&
-                    i.a.createElement("div", { className: Cn.Line })
+                    i.a.createElement("div", { className: In.Line })
                 );
               })
             )
@@ -8058,14 +8058,14 @@
             d,
             Object(r.a)(
               {
-                className: Object(b.a)(Cn.SecondaryNavItem, n),
-                activeClassName: o ? void 0 : Cn.Selected,
+                className: Object(b.a)(In.SecondaryNavItem, n),
+                activeClassName: o ? void 0 : In.Selected,
               },
               l
             ),
-            i.a.createElement(c, { className: Cn.Icon }),
-            i.a.createElement("div", { className: Cn.Label }, a),
-            m && i.a.createElement(m, { className: Cn.Callout })
+            i.a.createElement(c, { className: In.Icon }),
+            i.a.createElement("div", { className: In.Label }, a),
+            m && i.a.createElement(m, { className: In.Callout })
           );
         },
         Bn = function (e) {
@@ -8076,9 +8076,9 @@
             s = t;
           return i.a.createElement(
             "a",
-            Object(r.a)({ className: Object(b.a)(Cn.SecondaryNavItem, n) }, o),
-            i.a.createElement(s, { className: Cn.Icon }),
-            i.a.createElement("div", { className: Cn.Label }, a)
+            Object(r.a)({ className: Object(b.a)(In.SecondaryNavItem, n) }, o),
+            i.a.createElement(s, { className: In.Icon }),
+            i.a.createElement("div", { className: In.Label }, a)
           );
         },
         Dn = function () {
@@ -8090,7 +8090,7 @@
                 jn,
                 {
                   active: !!t && (!e.exact || t.isExact),
-                  className: Cn.ScrollableTabItem,
+                  className: In.ScrollableTabItem,
                 },
                 e.children
               );
@@ -8107,7 +8107,7 @@
                       Object(r.a)({}, o, { key: e.props.href }),
                       i.a.createElement(
                         jn,
-                        { className: Cn.ScrollableTabItem },
+                        { className: In.ScrollableTabItem },
                         e.props.children
                       )
                     )
@@ -8132,7 +8132,7 @@
                 }
               });
             }),
-            i.a.createElement(Mn, { className: Cn.ScrollableTabs }, t)
+            i.a.createElement(Mn, { className: In.ScrollableTabs }, t)
           );
         },
         Pn = n("1Gs6"),
@@ -8364,7 +8364,7 @@
                 alignItems: "center",
                 className: Pn.PointsContainer,
               },
-              i.a.createElement(fe.H, { className: Pn.Icon }),
+              i.a.createElement(fe.I, { className: Pn.Icon }),
               i.a.createElement(
                 _.a,
                 {
@@ -10057,7 +10057,7 @@
           return v;
         }),
         n.d(t, "b", function () {
-          return C;
+          return I;
         }),
         n.d(t, "h", function () {
           return w;
@@ -10083,8 +10083,8 @@
             h = e.marginRight,
             y = e.marginBottom,
             v = e.display,
-            C = e.flexDirection,
-            I = e.flexWrap,
+            I = e.flexDirection,
+            C = e.flexWrap,
             w = e.justifyContent,
             M = e.alignItems,
             j = e.flexGrow,
@@ -10134,8 +10134,8 @@
             P = Object(r.a)(
               {
                 display: v,
-                flexDirection: C,
-                flexWrap: I,
+                flexDirection: I,
+                flexWrap: C,
                 justifyContent: w,
                 alignItems: M,
                 flexGrow: j,
@@ -10321,10 +10321,10 @@
           ? "tablet"
           : "mobile";
       }
-      function C(e) {
+      function I(e) {
         return e.children(v());
       }
-      var I = {};
+      var C = {};
       function w(e) {
         var t = i.a.useState(!1),
           n = t[0],
@@ -10333,10 +10333,10 @@
           i.a.useEffect(
             function () {
               var t = !0;
-              I[e]
-                ? I[e].refCount++
-                : (I[e] = { list: window.matchMedia(e), refCount: 1 });
-              var n = I[e].list,
+              C[e]
+                ? C[e].refCount++
+                : (C[e] = { list: window.matchMedia(e), refCount: 1 });
+              var n = C[e].list,
                 a = function () {
                   t && r(n.matches);
                 };
@@ -10346,8 +10346,8 @@
                 function () {
                   (t = !1),
                     n.removeListener(a),
-                    I[e].refCount--,
-                    0 === I[e].refCount && delete I[e];
+                    C[e].refCount--,
+                    0 === C[e].refCount && delete C[e];
                 }
               );
             },
@@ -10386,7 +10386,7 @@
           return i.a.createElement(
             "div",
             Object(r.a)({ className: Object(o.a)(s.Container, n) }, m),
-            i.a.createElement(c.H, { className: s.Icon }),
+            i.a.createElement(c.I, { className: s.Icon }),
             i.a.createElement(
               "div",
               {
@@ -10731,10 +10731,10 @@
           return v;
         }),
         n.d(t, "d", function () {
-          return C;
+          return I;
         }),
         n.d(t, "n", function () {
-          return I;
+          return C;
         }),
         n.d(t, "u", function () {
           return w;
@@ -11155,7 +11155,7 @@
           })
         );
       }
-      function C(e) {
+      function I(e) {
         var t = e.className,
           n = Object(r.f)(e, ["className"]);
         return i.a.createElement(
@@ -11178,7 +11178,7 @@
           })
         );
       }
-      function I(e) {
+      function C(e) {
         var t = e.className;
         Object(r.f)(e, ["className"]);
         return i.a.createElement(
@@ -11520,8 +11520,8 @@
           Object(r.a)({ className: Object(m.a)(t, y.Pulse) }, n)
         );
       }
-      var C,
-        I = n("2Ido"),
+      var I,
+        C = n("2Ido"),
         w = n("vN/p"),
         M = n("mw7S"),
         j = {
@@ -11869,8 +11869,8 @@
             b = e.styleOverride,
             y = e.strPriceOverride,
             v = (e.itemLevel, e.purchaseable),
-            C = void 0 === v || v,
-            I = Object(r.f)(e, [
+            I = void 0 === v || v,
+            C = Object(r.f)(e, [
               "appName",
               "appIcon",
               "attributes",
@@ -11895,7 +11895,7 @@
             { className: c.ItemContainer },
             i.a.createElement(
               f.a,
-              Object(r.a)({}, I, {
+              Object(r.a)({}, C, {
                 className: Object(m.a)(g, c.Item, b),
                 style: N,
               }),
@@ -11904,7 +11904,7 @@
                 { className: c.Body, style: M },
                 i.a.createElement("div", { className: c.Attributes }, a),
                 i.a.createElement(V, { src: n, title: t }),
-                !C &&
+                !I &&
                   i.a.createElement(
                     "div",
                     { className: c.BodyTopRight },
@@ -11942,7 +11942,7 @@
                     )
                   )
                 ),
-                C &&
+                I &&
                   i.a.createElement(
                     "div",
                     { className: c.CostRow },
@@ -11992,8 +11992,8 @@
                 "strPriceOverride",
                 "itemLevel",
               ])),
-            C = u,
-            I = { background: (h || j).colors.bodygradient },
+            I = u,
+            C = { background: (h || j).colors.bodygradient },
             w = { background: (h || j).colors.background };
           return i.a.createElement(
             "div",
@@ -12006,7 +12006,7 @@
               }),
               i.a.createElement(
                 f.b,
-                { className: c.Body, style: I },
+                { className: c.Body, style: C },
                 i.a.createElement("div", { className: c.Attributes }, a),
                 i.a.createElement(V, { src: n, title: t }),
                 o
@@ -12024,8 +12024,8 @@
                     i.a.createElement(
                       "div",
                       { className: c.ItemTypeContainer },
-                      C &&
-                        i.a.createElement(C, {
+                      I &&
+                        i.a.createElement(I, {
                           className: c.Icon,
                           style: { fill: "" },
                         }),
@@ -12055,15 +12055,15 @@
           );
         },
         H =
-          (((C = {})[11] = E),
-          (C[4] = O),
-          (C[12] = A),
-          (C[3] = B),
-          (C[13] = x),
-          (C[8] = T),
-          (C[14] = R),
-          (C[15] = L),
-          C),
+          (((I = {})[11] = E),
+          (I[4] = O),
+          (I[12] = A),
+          (I[3] = B),
+          (I[13] = x),
+          (I[8] = T),
+          (I[14] = R),
+          (I[15] = L),
+          I),
         U = Object(o.a)(function (e) {
           var t,
             n = e.className,
@@ -12075,7 +12075,7 @@
               g.a,
               { fallback: null },
               i.a.createElement(
-                I.a,
+                C.a,
                 Object(r.a)({}, a, { className: s, onClick: e.onClick })
               )
             );
@@ -12812,11 +12812,11 @@
                   ),
                 },
                 i.a.createElement(
-                  C,
+                  I,
                   null,
                   n.map(function (t) {
                     return i.a.createElement(
-                      I,
+                      C,
                       Object(r.a)({ key: t.level }, t, {
                         onClick: function (n) {
                           return Object(h.e)(n, e, t.level);
@@ -12829,7 +12829,7 @@
             )
           );
         }),
-        C = function (e) {
+        I = function (e) {
           var t = e.children;
           return i.a.createElement(
             b.c,
@@ -12837,7 +12837,7 @@
             t
           );
         },
-        I = function (e) {
+        C = function (e) {
           var t = e.level,
             n = e.owned,
             a = e.cost,
@@ -12899,7 +12899,7 @@
         return v;
       }),
         n.d(t, "d", function () {
-          return C;
+          return I;
         }),
         n.d(t, "e", function () {
           return j;
@@ -12978,7 +12978,7 @@
             i.a.createElement(u, { scrollElement: a.current })
           );
         },
-        C = function (e) {
+        I = function (e) {
           var t = e.className,
             n = Object(r.f)(e, ["className"]);
           return i.a.createElement(
@@ -12986,7 +12986,7 @@
             Object(r.a)({ className: Object(d.a)(s.StandardBackground, t) }, n)
           );
         },
-        I = function (e) {
+        C = function (e) {
           var t = e.children;
           return i.a.createElement(v, { className: s.ParallaxRoot }, t);
         },
@@ -13030,7 +13030,7 @@
           return (
             t && (r = t),
             i.a.createElement(
-              I,
+              C,
               null,
               i.a.createElement(w, { src: r }, i.a.createElement(M, null, n))
             )
@@ -13047,7 +13047,7 @@
         S = function (e) {
           var t = e.children;
           return i.a.createElement(
-            I,
+            C,
             null,
             i.a.createElement(N, null, i.a.createElement(M, null, t))
           );
@@ -13114,7 +13114,7 @@
         var t = e.children,
           n = e.appid;
         return i.a.createElement(
-          I,
+          C,
           null,
           i.a.createElement(E, { appid: n }, i.a.createElement(M, null, t))
         );
@@ -13330,7 +13330,7 @@
           return _e;
         }),
         n.d(t, "c", function () {
-          return Ie;
+          return Ce;
         });
       var r = n("mrSG"),
         a = n("2lpH"),
@@ -13379,7 +13379,7 @@
                       },
                       appid: { n: 3, br: h.d.readUint32, bw: h.h.writeUint32 },
                       owner: { n: 4, br: h.d.readUint32, bw: h.h.writeUint32 },
-                      attributes: { n: 5, c: C, r: !0, q: !0 },
+                      attributes: { n: 5, c: I, r: !0, q: !0 },
                       used: { n: 6, br: h.d.readBool, bw: h.h.writeBool },
                       owner_origin: {
                         n: 7,
@@ -13435,7 +13435,7 @@
             t
           );
         })(b),
-        C = (function (e) {
+        I = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var r = e.call(this) || this;
@@ -13507,7 +13507,7 @@
             t
           );
         })(b),
-        I = (function (e) {
+        C = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var r = e.call(this) || this;
@@ -15130,7 +15130,7 @@
               (this.m_bLoadedAwardCost = !1),
               (this.m_unAwardPointsTransferred = 0),
               (this.m_bIsSaleActive = !1),
-              (this.m_HeroImageFallbackLoader = new Ce(
+              (this.m_HeroImageFallbackLoader = new Ie(
                 function (e) {
                   return fetch(
                     m.d.STORE_BASE_URL + "points/heroimage?appid=" + e
@@ -15174,7 +15174,7 @@
                   return y.GetCommunityInventory(e.m_transport, t);
                 },
                 function (e) {
-                  var t = f.b.Init(I);
+                  var t = f.b.Init(C);
                   return t.Body().set_filter_appids(e), t;
                 },
                 function (e, t) {
@@ -15250,7 +15250,7 @@
                 t.golden_profiles &&
                   (this.m_goldenProfileConfigs = t.golden_profiles || []),
                 t.can_claim_sale_reward &&
-                  Ie.Get().InitFreeItemReward(t.can_claim_sale_reward),
+                  Ce.Get().InitFreeItemReward(t.can_claim_sale_reward),
                 t.is_sale_active && (this.m_bIsSaleActive = t.is_sale_active),
                 t.free_item_header &&
                   (this.m_strFreeItemHeader = t.free_item_header),
@@ -17058,7 +17058,7 @@
                     excludedAppIDs: [e.Get().GetCurrentSeasonalAppID()],
                   }
                 ),
-                C = n(
+                I = n(
                   Object(s.f)("#RewardCluster_TabletopFest2021Profiles_Title"),
                   void 0,
                   {
@@ -17067,7 +17067,7 @@
                     categoryTag: ["tabletop_fest_2021"],
                   }
                 ),
-                I = [
+                C = [
                   {
                     cluster: l,
                     type: 1,
@@ -17101,7 +17101,7 @@
                   void 0,
                   { categoryTag: ["tabletop_fest_2021"], grouping: 2 }
                 );
-              I.unshift({ cluster: w, type: 1 });
+              C.unshift({ cluster: w, type: 1 });
               var M,
                 j = [];
               Object(u.a)(m.d.EREALM)
@@ -17127,7 +17127,7 @@
                   iconComponent: $.v,
                 });
               for (
-                var N = [], S = [I, j], E = 0;
+                var N = [], S = [C, j], E = 0;
                 E < Math.max(S[0].length, S[1].length);
                 E++
               )
@@ -17209,7 +17209,7 @@
                   )
                 );
               var P = [{ cluster: v, type: 0, bHomogeneous: !0 }];
-              Date.now() > 16348356e5 && P.unshift({ cluster: C, type: 1 }),
+              Date.now() > 16348356e5 && P.unshift({ cluster: I, type: 1 }),
                 i(
                   new be(
                     "profilebundles",
@@ -17749,7 +17749,7 @@
             })
           : e;
       }
-      var Ce = (function () {
+      var Ie = (function () {
         function e(e, t) {
           (this.m_fnRequest = e), (this.m_fnBuildRequestKey = t), this.Reset();
         }
@@ -17780,7 +17780,7 @@
           e
         );
       })();
-      var Ie = (function () {
+      var Ce = (function () {
         function e() {
           this.m_bCanClaimFreeItem = !1;
         }
@@ -18204,10 +18204,10 @@
     "vN/p": function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
-        return C;
+        return I;
       }),
         n.d(t, "b", function () {
-          return I;
+          return C;
         });
       var r = n("mrSG"),
         a = n("q1tI"),
@@ -18227,10 +18227,10 @@
         b = n("reUc"),
         y = n("8Uds");
       var v = i.a.createContext(!1);
-      function C(e) {
+      function I(e) {
         return i.a.createElement(v.Provider, { value: !0 }, e.children);
       }
-      var I = Object(o.a)(function (e) {
+      var C = Object(o.a)(function (e) {
           var t,
             n,
             o,

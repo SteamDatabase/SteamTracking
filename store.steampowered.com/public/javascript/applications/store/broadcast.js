@@ -2034,7 +2034,7 @@
                 t.sm_m ||
                   (t.sm_m = {
                     proto: t,
-                    fields: { persona_names: { n: 1, c: $, r: !0, q: !0 } },
+                    fields: { persona_names: { n: 1, c: Y, r: !0, q: !0 } },
                   }),
                 t.sm_m
               );
@@ -2078,7 +2078,7 @@
             t
           );
         })(B),
-        $ = (function (e) {
+        Y = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
@@ -2150,7 +2150,7 @@
             t
           );
         })(B),
-        Y = (function (e) {
+        $ = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
@@ -3796,7 +3796,7 @@
             });
           }),
           (e.StartBuildClip = function (e, t) {
-            return e.SendMsg("Broadcast.StartBuildClip#1", t, Y, {
+            return e.SendMsg("Broadcast.StartBuildClip#1", t, $, {
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
@@ -5912,7 +5912,7 @@
             t
           );
         })(Be),
-        $e = (function (e) {
+        Ye = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
@@ -5954,7 +5954,7 @@
             t
           );
         })(Be),
-        Ye = (function (e) {
+        $e = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var n = e.call(this) || this;
@@ -7714,7 +7714,7 @@
             });
           }),
           (e.AddChatModerator = function (e, t) {
-            return e.SendMsg("SteamTV.AddChatModerator#1", t, $e, {
+            return e.SendMsg("SteamTV.AddChatModerator#1", t, Ye, {
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
@@ -9387,7 +9387,7 @@
                   switch (n.label) {
                     case 0:
                       return (
-                        (e = m.b.Init(Ye)).SetBodyFields({
+                        (e = m.b.Init($e)).SetBodyFields({
                           broadcast_channel_id: this.m_ulBroadcastChannelID,
                         }),
                         [
@@ -10141,8 +10141,8 @@
       var qt = r("1BdX"),
         Ht = r("a5LV"),
         Kt = r("Z9dU"),
-        $t = r.n(Kt),
-        Yt = r("y+6m"),
+        Yt = r.n(Kt),
+        $t = r("y+6m"),
         Jt = r("Gorr"),
         Xt = r("0QoN"),
         Qt = r("gPCo"),
@@ -10368,7 +10368,7 @@
               ((zt.k && zt.k.is_support) || i || a
                 ? n.push(
                     s.createElement(
-                      Yt.d,
+                      $t.d,
                       {
                         key: "remove",
                         onSelected: function () {
@@ -10381,7 +10381,7 @@
                       Object(St.f)("#BroadcastChat_RemoveMessages")
                     ),
                     s.createElement(
-                      Yt.d,
+                      $t.d,
                       {
                         key: "updatebanh",
                         onSelected: function () {
@@ -10397,7 +10397,7 @@
                       Object(St.f)("#BroadcastChat_half_Mute")
                     ),
                     s.createElement(
-                      Yt.d,
+                      $t.d,
                       {
                         key: "updateband",
                         onSelected: function () {
@@ -10413,7 +10413,7 @@
                       Object(St.f)("#BroadcastChat_day_Mute")
                     ),
                     s.createElement(
-                      Yt.d,
+                      $t.d,
                       {
                         key: "updatebanw",
                         onSelected: function () {
@@ -10429,7 +10429,7 @@
                       Object(St.f)("#BroadcastChat_week_Mute")
                     ),
                     s.createElement(
-                      Yt.d,
+                      $t.d,
                       {
                         key: "updatebanp",
                         onSelected: function () {
@@ -10445,7 +10445,7 @@
                       Object(St.f)("#BroadcastChat_perm_Mute")
                     ),
                     s.createElement(
-                      Yt.d,
+                      $t.d,
                       {
                         key: "removeban",
                         onSelected: function () {
@@ -10465,7 +10465,7 @@
                 : this.m_chat.IsUserMutedLocally(t.steamid)
                 ? n.push(
                     s.createElement(
-                      Yt.d,
+                      $t.d,
                       {
                         key: "unmuteuser",
                         onSelected: function () {
@@ -10480,7 +10480,7 @@
                   )
                 : n.push(
                     s.createElement(
-                      Yt.d,
+                      $t.d,
                       {
                         key: "muteuser",
                         onSelected: function () {
@@ -10499,7 +10499,7 @@
                 (this.m_chat.BIsUserBroadcastModerator(t.steamid)
                   ? n.push(
                       s.createElement(
-                        Yt.d,
+                        $t.d,
                         {
                           key: "removemod",
                           onSelected: function () {
@@ -10515,7 +10515,7 @@
                     )
                   : n.push(
                       s.createElement(
-                        Yt.d,
+                        $t.d,
                         {
                           key: "addmod",
                           onSelected: function () {
@@ -10532,7 +10532,7 @@
               return n.length
                 ? Object(d.a)(
                     s.createElement(
-                      Yt.c,
+                      $t.c,
                       null,
                       s.createElement(
                         "div",
@@ -10670,7 +10670,7 @@
                 s.createElement(
                   "div",
                   {
-                    className: sr.a.ChatMessages + " " + $t.a.minHeightZero,
+                    className: sr.a.ChatMessages + " " + Yt.a.minHeightZero,
                     onScroll: this.HandleScroll,
                     ref: this.messagesContainer,
                   },
@@ -10695,9 +10695,9 @@
                         },
                         s.createElement(
                           "form",
-                          { className: "" + $t.a.chatEntryControls },
+                          { className: "" + Yt.a.chatEntryControls },
                           s.createElement("textarea", {
-                            className: $t.a.chatTextarea,
+                            className: Yt.a.chatTextarea,
                             placeholder: Object(St.f)(
                               "#BroadcastChat_EnterResponse"
                             ),
@@ -10715,24 +10715,24 @@
                             "button",
                             {
                               className:
-                                $t.a.chatSubmitButton +
+                                Yt.a.chatSubmitButton +
                                 " " +
-                                (this.state.message ? "" : $t.a.disabled),
+                                (this.state.message ? "" : Yt.a.disabled),
                               title: Object(St.f)("#ChatEntryButton_Submit"),
                               onClick: this.SendMessage,
                             },
-                            s.createElement(nr.cb, null)
+                            s.createElement(nr.db, null)
                           )
                         ),
                         s.createElement(
                           "div",
                           {
                             style: { height: "50px" },
-                            className: "" + $t.a.chatEntryActionsContainer,
+                            className: "" + Yt.a.chatEntryActionsContainer,
                           },
                           s.createElement(
                             "div",
-                            { className: $t.a.chatEntryActionsGroup },
+                            { className: Yt.a.chatEntryActionsGroup },
                             s.createElement(Xt.a, {
                               disabled: !1,
                               OnEmoticonSelected: this.OnEmoticonSelected,
@@ -11645,7 +11645,7 @@
                   {
                     className: Object(ir.a)(Ur.a.viewer_count, "viewer_count"),
                   },
-                  s.createElement(nr.lb, null),
+                  s.createElement(nr.mb, null),
                   n.toLocaleString(St.e.GetPreferredLocales())
                 ),
                 s.createElement(
@@ -11699,7 +11699,7 @@
                         "#StoreBroadcast_Change_store_Broadcast_settings"
                       ),
                     },
-                    s.createElement(nr.X, null)
+                    s.createElement(nr.Y, null)
                   ),
                   e
                 )
@@ -11766,7 +11766,7 @@
                 ),
                 onClick: e.OnPreventPopup,
               },
-              s.createElement(nr.pb, null)
+              s.createElement(nr.qb, null)
             )
           );
         }),
@@ -11949,7 +11949,7 @@
                     ? s.createElement(
                         s.Fragment,
                         null,
-                        s.createElement(nr.lb, null),
+                        s.createElement(nr.mb, null),
                         " ",
                         c.toLocaleString(St.e.GetPreferredLocales())
                       )
