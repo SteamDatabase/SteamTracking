@@ -21161,6 +21161,7 @@ hr.VO {
   font-size: 17px;
   transition: all 0.3s ease;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0);
+  position: relative;
 }
 .dailydealcalendar_DailyDealCtn_2XgAJ.dailydealcalendar_Taken_uhJP7:hover {
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
@@ -21183,12 +21184,29 @@ hr.VO {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  text-align: center;
   width: 96px;
   height: 45px;
   margin-right: 4px;
   background: rgba(0, 0, 0, 0.4);
   color: #7b87a3;
   font-size: 12px;
+}
+.dailydealcalendar_DailyDealCtn_2XgAJ .dailydealcalendar_NotesIcon_1t0Rh {
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  top: 1px;
+  right: 1px;
+}
+.dailydealcalendar_DailyDealCtn_2XgAJ .dailydealcalendar_NotesIcon_1t0Rh svg {
+  fill: #fff;
+}
+.dailydealcalendar_DailyDealCtn_2XgAJ
+  .dailydealcalendar_NotesIcon_1t0Rh
+  svg
+  circle {
+  stroke: #fff;
 }
 .dailydealcalendar_DailyDealCtn_2XgAJ .dailydealcalendar_Pct_1mEh6 {
   flex-grow: 1;
