@@ -21,6 +21,7 @@ https://steamcommunity.com/public/css/applications/community/broadcast~broadcast
 https://steamcommunity.com/public/css/applications/community/broadcast~broadcasts~conference.css?__TIME__
 https://steamcommunity.com/public/css/applications/community/broadcasts.css?__TIME__
 https://steamcommunity.com/public/css/applications/community/broadcasts~communityfaqs~conference~events~profile.css?__TIME__
+https://steamcommunity.com/public/css/applications/community/broadcasts~communityfaqs~conference~events~profile~qanda.css?__TIME__
 https://steamcommunity.com/public/css/applications/community/broadcasts~communityfaqs~events~profile.css?__TIME__
 https://steamcommunity.com/public/css/applications/community/communityawardsapp~profile.css?__TIME__
 https://steamcommunity.com/public/css/applications/community/communityfaqs.css?__TIME__
@@ -30,6 +31,7 @@ https://steamcommunity.com/public/css/applications/community/events.css?__TIME__
 https://steamcommunity.com/public/css/applications/community/main.css?__TIME__
 https://steamcommunity.com/public/css/applications/community/managefriends.css?__TIME__
 https://steamcommunity.com/public/css/applications/community/profile.css?__TIME__
+https://steamcommunity.com/public/css/applications/community/qanda.css?__TIME__
 https://steamcommunity.com/public/css/bigpicture/apphub.css?__TIME__
 https://steamcommunity.com/public/css/bigpicture/comments.css?__TIME__
 https://steamcommunity.com/public/css/bigpicture/community.css?__TIME__
@@ -296,6 +298,7 @@ https://steamcommunity.com/public/javascript/applications/community/broadcast~br
 https://steamcommunity.com/public/javascript/applications/community/broadcast~broadcasts~profile.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/applications/community/broadcasts.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/applications/community/broadcasts~communityfaqs~conference~events~profile.js?__TIME__&l=english
+https://steamcommunity.com/public/javascript/applications/community/broadcasts~communityfaqs~conference~events~profile~qanda.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/applications/community/broadcasts~communityfaqs~events~profile.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/applications/community/communityawardsapp.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/applications/community/communityawardsapp~profile.js?__TIME__&l=english
@@ -311,6 +314,7 @@ https://steamcommunity.com/public/javascript/applications/community/managefriend
 https://steamcommunity.com/public/javascript/applications/community/managefriends_english-json.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/applications/community/manifest.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/applications/community/profile.js?__TIME__&l=english
+https://steamcommunity.com/public/javascript/applications/community/qanda.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/auction.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/badges.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/bigpicture/apphub_bigpicture.js?__TIME__&l=english
@@ -574,7 +578,6 @@ API/SupportedAPIList.json                       @ https://api.steampowered.com/I
 //
 // Other
 //
-Random/BPEventBackground.xml                    @ https://store.steampowered.com/api/bpeventbackground/
 Random/ControllerFirmware.vdf                   @ https://steamcdn-a.akamaihd.net/controller_config/firmware/firmware.vdf
 Random/NetworkDatagramConfig.json               @ https://steamcdn-a.akamaihd.net/apps/sdr/network_config.json
 Random/JobPostings.html                         @ https://www.valvesoftware.com/en/
