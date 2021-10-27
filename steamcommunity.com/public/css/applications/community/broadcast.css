@@ -1,3 +1,284 @@
+.insetshadow_FriendsListInsetShadowCtn_1qeW3 {
+  position: relative;
+  height: 0;
+  width: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.insetshadow_FriendListInsetShadowTop_1osHa {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.2) 25%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  height: 26px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  flex-shrink: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+.insetshadow_FriendListInsetShadowBottom_2OoTJ {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.2) 25%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  height: 16px;
+  position: absolute;
+  flex-shrink: 0;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+}
+.broadcastchat_BroadcastChat_3URK7 {
+  max-width: 194px;
+  min-width: 0;
+}
+.broadcastchat_ChatEntry_3soy- {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: row;
+  padding: 6px;
+  padding-bottom: 8px;
+  background-color: #22252b;
+  transition: all 0.21s ease-in-out;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.broadcastchat_ChatPanel_2ZCAI {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: #1b1c20;
+  position: relative;
+}
+.broadcastchat_ChatMessages_3M5L0 {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow-y: scroll;
+  flex-basis: 1px;
+  position: relative;
+  padding: 8px;
+}
+.broadcastchat_EmoticonContainer_1wa4o {
+  width: 15%;
+  height: 10%;
+}
+.broadcastchat_ChatSend_3JUnD {
+  width: 15%;
+  height: 10%;
+}
+.broadcastchat_ChatBox_2qfgS {
+  width: 70%;
+  height: 10%;
+}
+.broadcastchat_ChatControls_1TekO {
+  display: flex;
+}
+.broadcastchat_MessageChat_22PB4 {
+  padding: 4px;
+  color: #c1c6cf;
+  word-break: break-word;
+}
+.broadcastchat_MessageChat_22PB4:hover {
+  background: #24262e;
+}
+.broadcastchat_MessageName_BJe6C {
+  color: #6dcff6;
+  font-size: 14px;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: #6dcff63d;
+}
+.broadcastchat_MessageName_BJe6C:hover,
+.broadcastchat_MessageName_BJe6C:active {
+  color: #9edff8;
+  text-decoration-color: #6dcff6b4;
+}
+.broadcastchat_MessageContents_PNYZa {
+  font-size: 14px;
+}
+.broadcastchat_MessageContents_PNYZa a {
+  color: #fff;
+}
+.broadcastchat_MessageContents_PNYZa img.emoticon.large {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  pointer-events: all;
+  margin-top: -3px;
+  margin-bottom: -3px;
+  margin-right: -3px;
+}
+.broadcastchat_EmoticonsOnly_gFjH8 {
+  line-height: 32px;
+}
+.broadcastchat_MessageNotification_3Xb4_ {
+  color: gray;
+  padding: 6px;
+}
+.broadcastchat_MessageError_8MzyW {
+  color: #812819;
+  padding: 6px;
+  border: 1px dashed rgba(255, 58, 58, 0.15);
+  box-shadow: 2px 3px 14px 1px #00000066 inset;
+  margin: 8px;
+}
+.broadcastchat_minHeightZero_r7HLM {
+  min-height: 0;
+  flex: 1;
+}
+.broadcastchat_ChatLoginButton_2TAQo {
+  background: linear-gradient(to right, #3366ff, #7d6ebc);
+  display: inline-block;
+  padding: 0;
+  border-radius: 2px;
+  font-size: 14px;
+  color: #fff;
+  width: 100%;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  height: 42px;
+  text-align: center;
+  line-height: 40px;
+  text-decoration: none;
+  cursor: pointer;
+  min-width: 340px;
+}
+.broadcastchat_RateLimitProgressBarContainer_JPqUG {
+  width: 100%;
+  height: 8px;
+}
+.broadcastchat_RateLimitProgressBar_1EcVK {
+  background-color: #7d6ebc;
+  height: 100%;
+  width: 0%;
+}
+.broadcastchat_TimedProgressBarContainer_39xGj {
+  width: 44px;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  bottom: 3px;
+  background: #2c3036;
+  z-index: 2;
+}
+.broadcastchat_wrapper_2vz6R {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  background: #2c3036;
+}
+.broadcastchat_wrapper_2vz6R .SVGIcon_Submit {
+  z-index: 500;
+}
+.broadcastchat_pie_1k4dS {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  background: #2c3036;
+  border: 2px solid #0cf;
+  box-sizing: border-box;
+}
+.broadcastchat_spinner_3nRh5 {
+  border-radius: 45px 0 0 45px;
+  z-index: 200;
+  border-right: none;
+  animation: broadcastchat_rota_1xXh6 0s linear infinite;
+  transform-origin: 100% 50%;
+}
+.broadcastchat_filler_3Eegk {
+  border-radius: 0 45px 45px 0;
+  z-index: 100;
+  border-left: none;
+  animation: broadcastchat_fill_2tyuX 0s steps(1, end) infinite;
+  transform-origin: 50% 50%;
+  left: 50%;
+  opacity: 0;
+}
+.broadcastchat_mask_1V4Ke {
+  width: calc(50% + 1px);
+  height: calc(100% + 2px);
+  top: -1px;
+  left: -1px;
+  position: absolute;
+  z-index: 300;
+  opacity: 1;
+  background: inherit;
+  animation: broadcastchat_mask_1V4Ke 0s steps(1, end) infinite;
+  transform-origin: 50% 50%;
+}
+.broadcastchat_SelectedUserNameCtn_3K4QX {
+  padding: 4px 8px;
+  background: #2c2f35;
+}
+.broadcastchat_SelectedUserNameCtn_3K4QX .broadcastchat_SelectedUserName_c907V {
+  color: #9edff8;
+  font-size: 14px;
+}
+@keyframes broadcastchat_rota_1xXh6 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes broadcastchat_fill_2tyuX {
+  0% {
+    opacity: 0;
+  }
+  50%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes broadcastchat_mask_1V4Ke {
+  0% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+.broadcastchat_FlairContainer_166wp {
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+}
+.broadcastchat_FlairContainer_166wp img.emoticon.large {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  margin-right: 4px;
+  pointer-events: all;
+  margin-top: -3px;
+  margin-bottom: -3px;
+}
+@media screen and (max-aspect-ratio: 10/9), screen and (max-width: 910px) {
+  .broadcastchat_ChatEntry_3soy- {
+    padding: 6px 0px;
+  }
+}
+.broadcastchat_RoleFlairContainer_1QRJ2 {
+  padding-right: 4px;
+}
+.broadcastchat_RoleFlairContainer_1QRJ2 svg {
+  width: 16px;
+  height: 16px;
+}
 .broadcastwidgets_StoreSaleWidgetContainer_mini_nacWp {
   display: flex;
   flex-direction: column;
@@ -488,7 +769,7 @@ div.broadcast_embeddable_viewer_count_1MrTW.broadcast_embeddable_vod_title_2xKaM
 }
 .broadcast_embeddable_broadcast_floating_2WNxa {
   position: fixed;
-  bottom: 20px;
+  bottom: 190px;
   right: 50px;
   height: 213px;
   width: 325px;

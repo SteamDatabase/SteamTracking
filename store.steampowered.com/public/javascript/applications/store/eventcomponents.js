@@ -4824,7 +4824,7 @@
               L.f,
               null,
               o.a.createElement(
-                L.k,
+                L.j,
                 null,
                 " ",
                 Object(N.f)("#RSSModeration_ReindexAndReload"),
@@ -4849,7 +4849,7 @@
                           )
                         ),
                         o.a.createElement(
-                          L.q,
+                          L.p,
                           {
                             onClick: function () {
                               return Object(l.b)(
@@ -4926,7 +4926,7 @@
                   Boolean(u) && o.a.createElement("span", null, u, " ")
                 ),
                 o.a.createElement(
-                  L.j,
+                  L.i,
                   null,
                   o.a.createElement(
                     L.d,

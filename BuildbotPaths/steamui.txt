@@ -151,6 +151,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/netadr.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/refcount.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/smartptr.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlassociativelist.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utldict.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlfixedlinkedlist.h

@@ -1,8 +1,8 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6855439";
+var CLSTAMP = "6855816";
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [101],
+  [99],
   {
     "+d9t": function (e, t, n) {
       "use strict";
@@ -334,7 +334,7 @@ var CLSTAMP = "6855439";
                   "bNavStop",
                 ]);
               return o.createElement(
-                a.a,
+                a.b,
                 Object(r.a)(
                   { noFocusRing: !0, focusable: null != n ? n : !!i.onClick },
                   i
@@ -425,7 +425,7 @@ var CLSTAMP = "6855439";
         s = n.n(a),
         c = n("s4NR"),
         l = n.n(c),
-        u = n("kyHq"),
+        u = (n("q1tI"), n("kyHq")),
         p = n("lkRc"),
         d = new ((function () {
           function e() {
@@ -516,6 +516,8 @@ var CLSTAMP = "6855439";
         });
       }
       window.g_EventCalendarDevFeatures = d;
+      var m = new Date();
+      Math.floor(m.getTime() / 1e3);
     },
     "6+2x": function (e, t, n) {
       e.exports = {
@@ -534,16 +536,16 @@ var CLSTAMP = "6855439";
       n.d(t, "W", function () {
         return c;
       }),
-        n.d(t, "q", function () {
+        n.d(t, "r", function () {
           return l;
         }),
-        n.d(t, "u", function () {
+        n.d(t, "v", function () {
           return u;
         }),
         n.d(t, "G", function () {
           return p;
         }),
-        n.d(t, "s", function () {
+        n.d(t, "t", function () {
           return d;
         }),
         n.d(t, "cb", function () {
@@ -574,66 +576,66 @@ var CLSTAMP = "6855439";
           return O;
         }),
         n.d(t, "O", function () {
-          return E;
-        }),
-        n.d(t, "k", function () {
           return w;
         }),
-        n.d(t, "o", function () {
+        n.d(t, "l", function () {
+          return E;
+        }),
+        n.d(t, "j", function () {
           return C;
         }),
-        n.d(t, "db", function () {
+        n.d(t, "p", function () {
           return S;
         }),
-        n.d(t, "d", function () {
+        n.d(t, "db", function () {
           return D;
         }),
-        n.d(t, "c", function () {
+        n.d(t, "d", function () {
           return M;
         }),
-        n.d(t, "n", function () {
-          return x;
-        }),
-        n.d(t, "p", function () {
+        n.d(t, "c", function () {
           return R;
         }),
-        n.d(t, "H", function () {
+        n.d(t, "o", function () {
+          return x;
+        }),
+        n.d(t, "q", function () {
           return k;
         }),
-        n.d(t, "K", function () {
+        n.d(t, "H", function () {
           return I;
         }),
-        n.d(t, "T", function () {
+        n.d(t, "K", function () {
           return j;
         }),
-        n.d(t, "S", function () {
+        n.d(t, "T", function () {
           return T;
         }),
-        n.d(t, "y", function () {
+        n.d(t, "S", function () {
           return L;
         }),
-        n.d(t, "I", function () {
+        n.d(t, "z", function () {
           return B;
+        }),
+        n.d(t, "I", function () {
+          return A;
         }),
         n.d(t, "ab", function () {
           return N;
         }),
         n.d(t, "kb", function () {
-          return A;
-        }),
-        n.d(t, "j", function () {
           return P;
         }),
-        n.d(t, "Z", function () {
+        n.d(t, "k", function () {
           return F;
         }),
-        n.d(t, "U", function () {
+        n.d(t, "Z", function () {
           return G;
         }),
-        n.d(t, "V", function () {
+        n.d(t, "U", function () {
           return U;
         }),
-        n.d(t, "A", function () {
+        n.d(t, "V", function () {
           return H;
         }),
         n.d(t, "Y", function () {
@@ -651,7 +653,7 @@ var CLSTAMP = "6855439";
         n.d(t, "E", function () {
           return Y;
         }),
-        n.d(t, "t", function () {
+        n.d(t, "u", function () {
           return X;
         }),
         n.d(t, "gb", function () {
@@ -663,19 +665,19 @@ var CLSTAMP = "6855439";
         n.d(t, "i", function () {
           return Q;
         }),
-        n.d(t, "l", function () {
+        n.d(t, "m", function () {
           return Z;
         }),
-        n.d(t, "w", function () {
+        n.d(t, "x", function () {
           return $;
         }),
-        n.d(t, "r", function () {
+        n.d(t, "s", function () {
           return ee;
         }),
         n.d(t, "B", function () {
           return te;
         }),
-        n.d(t, "x", function () {
+        n.d(t, "y", function () {
           return ne;
         }),
         n.d(t, "N", function () {
@@ -696,13 +698,13 @@ var CLSTAMP = "6855439";
         n.d(t, "C", function () {
           return ce;
         }),
-        n.d(t, "v", function () {
+        n.d(t, "w", function () {
           return le;
         }),
-        n.d(t, "z", function () {
+        n.d(t, "A", function () {
           return ue;
         }),
-        n.d(t, "m", function () {
+        n.d(t, "n", function () {
           return pe;
         }),
         n.d(t, "eb", function () {
@@ -1146,7 +1148,7 @@ var CLSTAMP = "6855439";
           })
         );
       }
-      function E() {
+      function w() {
         return o.createElement(
           "svg",
           {
@@ -1170,7 +1172,7 @@ var CLSTAMP = "6855439";
           })
         );
       }
-      function w() {
+      function E() {
         return o.createElement(
           "svg",
           {
@@ -1195,7 +1197,36 @@ var CLSTAMP = "6855439";
           })
         );
       }
-      function C(e) {
+      function C() {
+        return o.createElement(
+          "svg",
+          {
+            width: "25",
+            height: "24",
+            viewBox: "0 0 25 24",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+          },
+          o.createElement("path", {
+            "fill-rule": "evenodd",
+            "clip-rule": "evenodd",
+            d:
+              "M1.97014 2.77093H4.44345V3.97865C4.44345 5.04817 5.31099 5.91572 6.38052 5.91572C7.45004 5.91572 8.31699 5.04817 8.31699 3.97865V2.77093H16.6836V3.97865C16.6836 5.04817 17.5511 5.91572 18.6207 5.91572C19.6902 5.91572 20.5571 5.04817 20.5571 3.97865V2.77093H23.0293C24.1136 2.77093 25 3.65738 25 4.74167V21.4991C25 22.5834 24.1136 23.4698 23.0293 23.4698H1.97073C0.886445 23.4698 0 22.5834 0 21.4991V4.74167C0 3.65738 0.886445 2.77093 1.97073 2.77093H1.97014ZM23.5005 8.23961V21.4991C23.5005 21.7578 23.2879 21.9704 23.0293 21.9704H1.97073C1.71206 21.9704 1.49946 21.7583 1.49946 21.4991V8.23961H23.5005V8.23961Z",
+            fill: "#717A81",
+          }),
+          o.createElement("path", {
+            d:
+              "M5.29335 1.08724C5.29335 0.486629 5.77998 0 6.38059 0C6.98061 0 7.46724 0.486629 7.46724 1.08724V3.97867C7.46724 4.57928 6.98061 5.06591 6.38059 5.06591C5.77998 5.06591 5.29335 4.57928 5.29335 3.97867V1.08724V1.08724Z",
+            fill: "#717A81",
+          }),
+          o.createElement("path", {
+            d:
+              "M17.5329 1.08724C17.5329 0.486629 18.0195 0 18.6201 0C19.2201 0 19.7068 0.486629 19.7068 1.08724V3.97867C19.7068 4.57928 19.2201 5.06591 18.6201 5.06591C18.0195 5.06591 17.5329 4.57928 17.5329 3.97867V1.08724V1.08724Z",
+            fill: "#717A81",
+          })
+        );
+      }
+      function S(e) {
         var t = e.highlightColor || "#00ccff",
           n = e.color || "#2d73ff";
         return o.createElement(
@@ -1275,7 +1306,7 @@ var CLSTAMP = "6855439";
           })
         );
       }
-      function S(e) {
+      function D(e) {
         var t = "SVGIcon_Button SVGIcon_Throbber ";
         return (
           e.className && (t += e.className),
@@ -1519,7 +1550,7 @@ var CLSTAMP = "6855439";
           )
         );
       }
-      function D() {
+      function M() {
         return o.createElement(
           "svg",
           {
@@ -1539,7 +1570,7 @@ var CLSTAMP = "6855439";
           })
         );
       }
-      function M(e) {
+      function R(e) {
         return o.createElement(
           "svg",
           {
@@ -1594,7 +1625,7 @@ var CLSTAMP = "6855439";
           })
         );
       }
-      function R(e) {
+      function k(e) {
         return o.createElement(
           "svg",
           {
@@ -1630,7 +1661,7 @@ var CLSTAMP = "6855439";
             })
         );
       }
-      function k() {
+      function I() {
         return o.createElement(
           "svg",
           {
@@ -1666,7 +1697,7 @@ var CLSTAMP = "6855439";
           })
         );
       }
-      function I() {
+      function j() {
         return o.createElement(
           "svg",
           {
@@ -1692,7 +1723,7 @@ var CLSTAMP = "6855439";
           })
         );
       }
-      function j() {
+      function T() {
         return o.createElement(
           "svg",
           {
@@ -1725,7 +1756,7 @@ var CLSTAMP = "6855439";
           })
         );
       }
-      function T() {
+      function L() {
         return o.createElement(
           "svg",
           {
@@ -1753,7 +1784,7 @@ var CLSTAMP = "6855439";
           })
         );
       }
-      function L(e) {
+      function B(e) {
         return o.createElement(
           "svg",
           {
@@ -1774,7 +1805,7 @@ var CLSTAMP = "6855439";
           })
         );
       }
-      function B(e) {
+      function A(e) {
         return o.createElement(
           "svg",
           {
@@ -1849,7 +1880,7 @@ var CLSTAMP = "6855439";
           })
         );
       }
-      function A() {
+      function P() {
         return o.createElement(
           "svg",
           {
@@ -1877,7 +1908,7 @@ var CLSTAMP = "6855439";
           })
         );
       }
-      function P() {
+      function F() {
         return o.createElement(
           "svg",
           {
@@ -1899,7 +1930,7 @@ var CLSTAMP = "6855439";
           )
         );
       }
-      function F() {
+      function G() {
         return o.createElement(
           "svg",
           {
@@ -1920,7 +1951,7 @@ var CLSTAMP = "6855439";
           )
         );
       }
-      function G() {
+      function U() {
         return o.createElement(
           "svg",
           {
@@ -1957,7 +1988,7 @@ var CLSTAMP = "6855439";
           )
         );
       }
-      function U() {
+      function H() {
         return o.createElement(
           "svg",
           {
@@ -1983,119 +2014,6 @@ var CLSTAMP = "6855439";
             width: "23.459",
             height: "137.332",
           })
-        );
-      }
-      function H(e) {
-        return o.createElement(
-          "svg",
-          {
-            version: "1.1",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_HideShowChat",
-            x: "0px",
-            y: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-          },
-          o.createElement(
-            "g",
-            { id: "hidechat", opacity: e.showChat ? "0" : "1" },
-            o.createElement("polyline", {
-              fill: "none",
-              stroke: "#ffffff",
-              strokeWidth: "10",
-              strokeLinecap: "round",
-              strokeMiterlimit: "10",
-              points:
-                "156.001,189.834 116.375,189.834 67.31,222.538 67.31,189.834 39.834,189.834 39.834,59.011 59.25,59.011",
-            }),
-            o.createElement("polyline", {
-              fill: "none",
-              stroke: "#ffffff",
-              strokeWidth: "10",
-              strokeLinecap: "round",
-              strokeMiterlimit: "10",
-              points:
-                "109.427,59.011 225.299,59.011 225.299,189.834 207,189.834",
-            }),
-            o.createElement("line", {
-              fill: "none",
-              stroke: "#ffffff",
-              strokeWidth: "10",
-              strokeLinecap: "round",
-              strokeMiterlimit: "10",
-              x1: "49.786",
-              y1: "15.012",
-              x2: "214.409",
-              y2: "233.723",
-            })
-          ),
-          o.createElement(
-            "g",
-            { id: "showchat", opacity: e.showChat ? "1" : "0" },
-            o.createElement("polygon", {
-              fill: "none",
-              stroke: "#ffffff",
-              strokeWidth: "10",
-              strokeLinecap: "round",
-              strokeMiterlimit: "10",
-              points:
-                "116.375,189.834 67.31,222.538 67.31,189.834 39.834,189.834 39.834,59.011 225.299,59.011 225.299,189.834",
-            })
-          ),
-          o.createElement(
-            "g",
-            { id: "textlines", opacity: e.showChat ? "1" : "0" },
-            o.createElement("line", {
-              fill: "none",
-              stroke: "#ffffff",
-              strokeWidth: "10",
-              strokeMiterlimit: "10",
-              x1: "72.333",
-              y1: "124.75",
-              x2: "194.167",
-              y2: "124.75",
-            }),
-            o.createElement("line", {
-              fill: "none",
-              stroke: "#ffffff",
-              strokeWidth: "10",
-              strokeMiterlimit: "10",
-              x1: "72.333",
-              y1: "155.75",
-              x2: "194.167",
-              y2: "155.75",
-            }),
-            o.createElement("line", {
-              fill: "none",
-              stroke: "#ffffff",
-              strokeWidth: "10",
-              strokeMiterlimit: "10",
-              x1: "72.333",
-              y1: "93.75",
-              x2: "179.926",
-              y2: "93.75",
-            }),
-            o.createElement("polyline", {
-              fill: "none",
-              stroke: "#ffffff",
-              strokeWidth: "10",
-              strokeLinecap: "round",
-              strokeMiterlimit: "10",
-              points:
-                "156.001,189.834 116.375,189.834 67.31,222.538 67.31,189.834 39.834,189.834 39.834,59.011 59.25,59.011 ",
-            }),
-            o.createElement("polyline", {
-              fill: "none",
-              stroke: "#ffffff",
-              strokeWidth: "10",
-              strokeLinecap: "round",
-              strokeMiterlimit: "10",
-              points:
-                "109.427,59.011 225.299,59.011 225.299,189.834 207,189.834",
-            })
-          )
         );
       }
       function W() {
@@ -3308,35 +3226,35 @@ var CLSTAMP = "6855439";
     },
     AvbV: function (e, t, n) {
       var r = {
-        "./main_brazilian.json": ["TFAN", 13],
-        "./main_bulgarian.json": ["c2SO", 14],
-        "./main_czech.json": ["peP3", 15],
-        "./main_danish.json": ["0bnV", 16],
-        "./main_dutch.json": ["wcLc", 17],
-        "./main_english.json": ["/rNK", 18],
-        "./main_finnish.json": ["iywU", 19],
-        "./main_french.json": ["Xnpc", 20],
-        "./main_german.json": ["pmKi", 21],
-        "./main_greek.json": ["mTRv", 22],
-        "./main_hungarian.json": ["WkHb", 23],
-        "./main_italian.json": ["Jz5U", 24],
-        "./main_japanese.json": ["3Dk9", 25],
-        "./main_koreana.json": ["neQD", 26],
-        "./main_latam.json": ["6oHD", 27],
-        "./main_norwegian.json": ["2OvS", 28],
-        "./main_polish.json": ["3pwE", 29],
-        "./main_portuguese.json": ["hY40", 30],
-        "./main_romanian.json": ["Q95+", 31],
-        "./main_russian.json": ["bsPT", 32],
-        "./main_sc_schinese.json": ["GOaQ", 33],
-        "./main_schinese.json": ["B/Zz", 34],
-        "./main_spanish.json": ["U6iL", 35],
-        "./main_swedish.json": ["4uPU", 36],
-        "./main_tchinese.json": ["rgC9", 37],
-        "./main_thai.json": ["87dp", 38],
-        "./main_turkish.json": ["yMpO", 39],
-        "./main_ukrainian.json": ["zTWm", 40],
-        "./main_vietnamese.json": ["wqiy", 41],
+        "./main_brazilian.json": ["TFAN", 11],
+        "./main_bulgarian.json": ["c2SO", 12],
+        "./main_czech.json": ["peP3", 13],
+        "./main_danish.json": ["0bnV", 14],
+        "./main_dutch.json": ["wcLc", 15],
+        "./main_english.json": ["/rNK", 16],
+        "./main_finnish.json": ["iywU", 17],
+        "./main_french.json": ["Xnpc", 18],
+        "./main_german.json": ["pmKi", 19],
+        "./main_greek.json": ["mTRv", 20],
+        "./main_hungarian.json": ["WkHb", 21],
+        "./main_italian.json": ["Jz5U", 22],
+        "./main_japanese.json": ["3Dk9", 23],
+        "./main_koreana.json": ["neQD", 24],
+        "./main_latam.json": ["6oHD", 25],
+        "./main_norwegian.json": ["2OvS", 26],
+        "./main_polish.json": ["3pwE", 27],
+        "./main_portuguese.json": ["hY40", 28],
+        "./main_romanian.json": ["Q95+", 29],
+        "./main_russian.json": ["bsPT", 30],
+        "./main_sc_schinese.json": ["GOaQ", 31],
+        "./main_schinese.json": ["B/Zz", 32],
+        "./main_spanish.json": ["U6iL", 33],
+        "./main_swedish.json": ["4uPU", 34],
+        "./main_tchinese.json": ["rgC9", 35],
+        "./main_thai.json": ["87dp", 36],
+        "./main_turkish.json": ["yMpO", 37],
+        "./main_ukrainian.json": ["zTWm", 38],
+        "./main_vietnamese.json": ["wqiy", 39],
       };
       function o(e) {
         if (!n.o(r, e))
@@ -3365,10 +3283,10 @@ var CLSTAMP = "6855439";
           return O;
         }),
         n.d(t, "g", function () {
-          return E;
+          return w;
         }),
         n.d(t, "a", function () {
-          return w;
+          return E;
         }),
         n.d(t, "b", function () {
           return C;
@@ -3383,7 +3301,7 @@ var CLSTAMP = "6855439";
         o = n("q1tI"),
         i = n.n(o),
         a = n("gQFo"),
-        s = (n("Mgs7"), n("z7tf"), n("Jqb/"), n("exH9")),
+        s = (n("z7tf"), n("Jqb/"), n("exH9")),
         c = n("opsS"),
         l = n("rHSA"),
         u = n("NxAk"),
@@ -3530,7 +3448,7 @@ var CLSTAMP = "6855439";
           })(c.current),
           u = i.a.useCallback(
             function (e) {
-              document.activeElement != s.current &&
+              (document.hasFocus() || document.activeElement != s.current) &&
                 (e.currentTarget == s.current
                   ? l.BIsActive() && l.DelayHideVirtualKeyboard()
                   : console.warn(
@@ -3590,7 +3508,7 @@ var CLSTAMP = "6855439";
       i.a.forwardRef(function (e, t) {
         return i.a.createElement(p.d, Object(r.a)({}, e, { ref: t }));
       });
-      function E(e) {
+      function w(e) {
         var t = e.navRef,
           n = Object(r.f)(e, ["navRef"]),
           a = i.a.useRef(),
@@ -3626,7 +3544,7 @@ var CLSTAMP = "6855439";
           { ref: a, node: u }
         );
       }
-      function w(e) {
+      function E(e) {
         var t = e.onButtonDown,
           n = e.onButtonUp,
           o = e.onOKButton,
@@ -3724,7 +3642,7 @@ var CLSTAMP = "6855439";
             navScrollSnapOffsetY: e.navScrollSnapOffsetY,
             navEntryPreferPosition: e.navEntryPreferPosition,
           },
-          n = w(
+          n = E(
             Object(r.f)(e, [
               "autoFocus",
               "preferredFocus",
@@ -3783,7 +3701,7 @@ var CLSTAMP = "6855439";
               p = l.navOptions,
               h = l.gamepadEvents;
             void 0 !== p.focusable || u.disabled || (p.focusable = !0);
-            var m = E(Object(r.a)({}, p)),
+            var m = w(Object(r.a)({}, p)),
               f = m.ref,
               g = m.node,
               v = Object(o.useCallback)(
@@ -3793,11 +3711,13 @@ var CLSTAMP = "6855439";
                 [f]
               );
             h.onOKButton ||
-              ((u.onClick || ("button" == e && "submit" == u.type)) &&
+              ((u.onClick ||
+                ("button" == e && "submit" == u.type) ||
+                "a" == e) &&
                 (h.onOKButton = v));
             var _,
               O = i.a.useState(null == g ? void 0 : g.BHasFocus()),
-              w = O[0],
+              E = O[0],
               S = O[1];
             Object(c.d)(null == g ? void 0 : g.FocusCallbackList, g ? S : null),
               p.focusable && (u.tabIndex = u.tabIndex || 0),
@@ -3806,7 +3726,7 @@ var CLSTAMP = "6855439";
             var D = Object(c.f)(a, f, _),
               M = u.children;
             delete u.children;
-            var x = u.focusClassName;
+            var R = u.focusClassName;
             return (
               delete u.focusClassName,
               i.a.createElement(
@@ -3816,7 +3736,7 @@ var CLSTAMP = "6855439";
                   e,
                   Object(r.a)(Object(r.a)({}, u), {
                     ref: D,
-                    className: Object(s.a)(u.className, "Focusable", w && x),
+                    className: Object(s.a)(u.className, "Focusable", E && R),
                   }),
                   M
                 )
@@ -4201,10 +4121,10 @@ var CLSTAMP = "6855439";
                       ),
                       y = _.nLeft,
                       O = _.nTop,
-                      E = _.nOverflow,
-                      w = _.nLateralOverflow;
+                      w = _.nOverflow,
+                      E = _.nLateralOverflow;
                     if (
-                      (E < g && ((p = v), (m = y), (f = O), (g = E), (b = w)),
+                      (w < g && ((p = v), (m = y), (f = O), (g = w), (b = E)),
                       g > this.props.nAllowOffscreenPx)
                     )
                       return (
@@ -5071,10 +4991,10 @@ var CLSTAMP = "6855439";
           return O;
         }),
         n.d(t, "h", function () {
-          return E;
+          return w;
         }),
         n.d(t, "a", function () {
-          return w;
+          return E;
         }),
         n.d(t, "j", function () {
           return C;
@@ -5089,7 +5009,7 @@ var CLSTAMP = "6855439";
           return M;
         }),
         n.d(t, "c", function () {
-          return x;
+          return R;
         }),
         n.d(t, "g", function () {
           return k;
@@ -5145,20 +5065,20 @@ var CLSTAMP = "6855439";
           y,
           { active: t },
           o.createElement(
-            E,
+            w,
             { onEscKeypress: n, className: i },
             o.createElement(c.f, { className: r }, a)
           )
         );
       };
-      function E(e) {
+      function w(e) {
         var t = o.useContext(_);
         return o.createElement(
           b.f,
-          Object(r.a)({ component: t.ModalPosition, fallback: w }, e)
+          Object(r.a)({ component: t.ModalPosition, fallback: E }, e)
         );
       }
-      function w(e) {
+      function E(e) {
         var t,
           n = {};
         e.onEscKeypress &&
@@ -5274,17 +5194,17 @@ var CLSTAMP = "6855439";
               return o.createElement(
                 D,
                 Object(r.a)({}, p),
-                o.createElement(c.l, null, " ", t, " "),
+                o.createElement(c.k, null, " ", t, " "),
                 o.createElement(
                   c.b,
                   null,
                   o.createElement(c.c, null, n, u),
                   o.createElement(
-                    c.k,
+                    c.j,
                     null,
                     l
-                      ? o.createElement(c.r, null, d)
-                      : o.createElement(c.o, {
+                      ? o.createElement(c.q, null, d)
+                      : o.createElement(c.n, {
                           bOKDisabled: this.props.bOKDisabled,
                           strOKText: i,
                           onCancel: this.Cancel,
@@ -5330,7 +5250,7 @@ var CLSTAMP = "6855439";
             }),
             (t.prototype.render = function () {
               return o.createElement(
-                E,
+                w,
                 {
                   onEscKeypress: this.Cancel,
                   bDestructiveWarning: this.props.bDestructiveWarning,
@@ -5383,7 +5303,7 @@ var CLSTAMP = "6855439";
             (t = Object(r.c)([d.a], t))
           );
         })(o.Component),
-        x = (function (e) {
+        R = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -5447,7 +5367,7 @@ var CLSTAMP = "6855439";
             t
           );
         })(o.Component),
-        R = (function () {
+        x = (function () {
           function e() {
             (this.m_bUsePopups = !0),
               (this.m_rgModals = []),
@@ -5529,7 +5449,7 @@ var CLSTAMP = "6855439";
         })();
       function k(e) {
         var t = I.get(e);
-        return t || ((t = new R()), I.set(e, t)), t;
+        return t || ((t = new x()), I.set(e, t)), t;
       }
       var I = new WeakMap();
     },
@@ -5621,74 +5541,71 @@ var CLSTAMP = "6855439";
     },
     Mgs7: function (e, t, n) {
       "use strict";
-      n.d(t, "l", function () {
-        return v;
+      n.d(t, "k", function () {
+        return _;
       }),
-        n.d(t, "v", function () {
-          return _;
-        }),
-        n.d(t, "k", function () {
+        n.d(t, "u", function () {
           return y;
         }),
-        n.d(t, "n", function () {
+        n.d(t, "j", function () {
           return O;
+        }),
+        n.d(t, "m", function () {
+          return w;
         }),
         n.d(t, "c", function () {
           return E;
         }),
         n.d(t, "b", function () {
-          return w;
-        }),
-        n.d(t, "w", function () {
           return C;
         }),
+        n.d(t, "v", function () {
+          return S;
+        }),
         n.d(t, "f", function () {
-          return D;
+          return M;
         }),
         n.d(t, "g", function () {
-          return R;
+          return k;
         }),
-        n.d(t, "h", function () {
-          return I;
-        }),
-        n.d(t, "r", function () {
+        n.d(t, "q", function () {
           return j;
         }),
         n.d(t, "d", function () {
           return T;
         }),
-        n.d(t, "u", function () {
+        n.d(t, "t", function () {
           return L;
         }),
-        n.d(t, "o", function () {
+        n.d(t, "n", function () {
           return B;
         }),
-        n.d(t, "p", function () {
-          return N;
+        n.d(t, "o", function () {
+          return A;
         }),
         n.d(t, "e", function () {
           return F;
         }),
-        n.d(t, "s", function () {
+        n.d(t, "r", function () {
           return G;
         }),
-        n.d(t, "q", function () {
+        n.d(t, "p", function () {
           return U;
         }),
-        n.d(t, "m", function () {
+        n.d(t, "l", function () {
           return Y;
         }),
-        n.d(t, "t", function () {
+        n.d(t, "s", function () {
           return X;
         }),
-        n.d(t, "i", function () {
+        n.d(t, "h", function () {
           return se;
         }),
-        n.d(t, "j", function () {
+        n.d(t, "i", function () {
           return me;
         }),
         n.d(t, "a", function () {
-          return je;
+          return Ie;
         });
       var r = n("mrSG"),
         o = n("q1tI"),
@@ -5736,8 +5653,9 @@ var CLSTAMP = "6855439";
             })
           );
         },
-        g = n("qDk6");
-      function b(e) {
+        g = n("qDk6"),
+        b = n("UPxs");
+      function v(e) {
         return o.forwardRef(function (t, n) {
           return o.createElement(
             g.a,
@@ -5748,29 +5666,29 @@ var CLSTAMP = "6855439";
           );
         });
       }
-      var v = Object(p.c)("DialogHeader"),
-        _ = Object(p.c)("DialogSubHeader"),
-        y = Object(p.c)("DialogFooter"),
-        O = Object(p.c)("DialogLabel _DialogLayout"),
+      var _ = Object(p.c)("DialogHeader"),
+        y = Object(p.c)("DialogSubHeader"),
+        O = Object(p.c)("DialogFooter"),
+        w = Object(p.c)("DialogLabel _DialogLayout"),
         E = Object(p.c)("DialogBodyText"),
-        w = Object(p.c)("DialogBody"),
-        C =
-          (b("DialogBody"),
+        C = Object(p.c)("DialogBody"),
+        S =
+          (v("DialogBody"),
           Object(p.c)("DialogInnerBody"),
           Object(p.c)("DialogControlsSection"),
           Object(p.c)("DialogControlsSectionHeader"),
-          b("DialogTwoColLayout _DialogColLayout")),
-        S = b("DialogThreeColLayout _DialogColLayout");
-      b("DialogTwoThirdColLayout _DialogColLayout"),
+          v("DialogTwoColLayout _DialogColLayout")),
+        D = v("DialogThreeColLayout _DialogColLayout");
+      v("DialogTwoThirdColLayout _DialogColLayout"),
         Object(p.c)("DialogColumn _DialogLayout");
-      function D(e) {
+      function M(e) {
         var t = Object(u.b)();
         return o.createElement(
           p.f,
-          Object(r.a)({ component: t.Content, fallback: M }, e)
+          Object(r.a)({ component: t.Content, fallback: R }, e)
         );
       }
-      function M(e) {
+      function R(e) {
         var t = e.children,
           n = e.bCenterVertically,
           i = e.renderDialogContentDiv,
@@ -5820,47 +5738,56 @@ var CLSTAMP = "6855439";
           t
         );
       })(o.Component);
-      function R(e) {
+      function k(e) {
         var t = e.classNameContent,
           n = e.bCenterVertically,
           i = Object(r.f)(e, ["classNameContent", "bCenterVertically"]);
         return o.createElement(
-          D,
+          M,
           { className: t, bCenterVertically: n },
           o.createElement(x, Object(r.a)({}, i))
         );
       }
-      var k = o.forwardRef(function (e, t) {
-          var n = Object(u.b)();
+      var I = o.forwardRef(function (e, t) {
+          var n = Object(u.b)(),
+            i = e.svgicon,
+            a = Object(r.f)(e, ["svgicon"]),
+            s = Object(l.a)(
+              e.className,
+              void 0 !== i && "hasSVGIcon",
+              a.disabled && "Disabled",
+              n.strButtonClassName
+            );
           return o.createElement(
-            p.f,
+            b.a,
             Object(r.a)(
-              { component: n.BaseButton, fallback: I, componentRef: t },
-              e
-            )
-          );
-        }),
-        I = o.forwardRef(function (e, t) {
-          var n = e.svgicon,
-            i = (e.primary, e.renderButtonElement),
-            a = Object(r.f)(e, ["svgicon", "primary", "renderButtonElement"]),
-            s = Object(l.a)(e.className, { hasSVGIcon: void 0 !== n });
-          return o.createElement(
-            p.f,
-            Object(r.a)(
-              { component: i, fallback: "button", componentRef: t },
+              { ref: t, onOKActionDescription: a.disabled ? null : void 0 },
               a,
-              { className: s }
+              {
+                className: s,
+                noFocusRing: !0,
+                disabled: !1,
+                onClick: a.disabled ? null : a.onClick,
+                onPointerDown: a.disabled ? null : a.onPointerDown,
+                onPointerUp: a.disabled ? null : a.onPointerUp,
+                onPointerCancel: a.disabled ? null : a.onPointerCancel,
+                onMouseDown: a.disabled ? null : a.onMouseDown,
+                onMouseUp: a.disabled ? null : a.onMouseUp,
+                onTouchStart: a.disabled ? null : a.onTouchStart,
+                onTouchEnd: a.disabled ? null : a.onTouchEnd,
+                onTouchCancel: a.disabled ? null : a.onTouchCancel,
+                onSubmit: a.disabled ? null : a.onSubmit,
+              }
             ),
-            n && n(),
+            i && i(),
             e.children
           );
         }),
         j = o.forwardRef(function (e, t) {
           return o.createElement(
-            k,
+            I,
             Object(r.a)(
-              { primary: !0, type: e.onClick ? "button" : "submit" },
+              { preferredFocus: !0, type: e.onClick ? "button" : "submit" },
               e,
               {
                 ref: t,
@@ -5876,7 +5803,7 @@ var CLSTAMP = "6855439";
         }),
         T = o.forwardRef(function (e, t) {
           return o.createElement(
-            k,
+            I,
             Object(r.a)({ type: "button" }, e, {
               ref: t,
               className: Object(l.a)(
@@ -5890,7 +5817,7 @@ var CLSTAMP = "6855439";
         }),
         L = o.forwardRef(function (e, t) {
           return o.createElement(
-            k,
+            I,
             Object(r.a)({ type: "button" }, e, {
               ref: t,
               className: Object(l.a)(
@@ -5902,7 +5829,7 @@ var CLSTAMP = "6855439";
         });
       o.forwardRef(function (e, t) {
         return o.createElement(
-          k,
+          I,
           Object(r.a)({ type: "button" }, e, {
             ref: t,
             className: Object(l.a)(e.className, "TextButton"),
@@ -5911,7 +5838,7 @@ var CLSTAMP = "6855439";
       });
       function B(e) {
         return o.createElement(
-          C,
+          S,
           null,
           o.createElement(
             j,
@@ -5926,9 +5853,9 @@ var CLSTAMP = "6855439";
           )
         );
       }
-      function N(e) {
+      function A(e) {
         return o.createElement(
-          S,
+          D,
           null,
           o.createElement(
             j,
@@ -5949,7 +5876,7 @@ var CLSTAMP = "6855439";
           )
         );
       }
-      var A = (function (e) {
+      var N = (function (e) {
           function t(t) {
             var n = e.call(this, t) || this;
             return (n.state = { checked: t.checked, disabled: t.disabled }), n;
@@ -6034,7 +5961,7 @@ var CLSTAMP = "6855439";
                       o.createElement(
                         "div",
                         { className: e },
-                        o.createElement(a.o, {
+                        o.createElement(a.p, {
                           color: this.props.color,
                           highlightColor: this.props.highlightColor,
                         })
@@ -6064,13 +5991,13 @@ var CLSTAMP = "6855439";
                         { className: e },
                         this.GetPanelElementProps()
                       ),
-                      o.createElement(a.o, null)
+                      o.createElement(a.p, null)
                     )
               );
             }),
             t
           );
-        })(A),
+        })(N),
         F = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
@@ -6086,7 +6013,7 @@ var CLSTAMP = "6855439";
             (t.contextType = u.a),
             t
           );
-        })(A),
+        })(N),
         G = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
@@ -6138,7 +6065,7 @@ var CLSTAMP = "6855439";
             }),
             t
           );
-        })(A),
+        })(N),
         U = o.forwardRef(function (e, t) {
           var n = Object(u.b)();
           return o.createElement(
@@ -6240,7 +6167,7 @@ var CLSTAMP = "6855439";
             Object(r.c)([c.a], t.prototype, "OnNewUIToggle", null),
             t
           );
-        })(A),
+        })(N),
         W = n("hJxo"),
         V = n("r64O");
       function z(e) {
@@ -6855,7 +6782,7 @@ var CLSTAMP = "6855439";
               o.createElement(
                 "div",
                 { className: "DialogDropDown_Arrow" },
-                o.createElement(a.q, null)
+                o.createElement(a.r, null)
               )
           );
         }),
@@ -7156,15 +7083,14 @@ var CLSTAMP = "6855439";
         fe = n("2vnA"),
         ge = n("sUmc"),
         be = n("Kw0F"),
-        ve = n("YyVH"),
-        _e = n("UPxs");
+        ve = n("YyVH");
       o.Component;
-      function ye(e, t, n, r) {
+      function _e(e, t, n, r) {
         return r
           ? n && e > n.left && e < n.right && t > n.top && t < n.bottom
           : n && e >= n.left && e <= n.right && t >= n.top && t <= n.bottom;
       }
-      var Oe = (function () {
+      var ye = (function () {
           function e() {
             (this.m_embeddedElement = new ge.a("DragGhosts")),
               (this.m_rgDropRegions = []),
@@ -7297,7 +7223,7 @@ var CLSTAMP = "6855439";
                 var a = t + o,
                   s = n + i,
                   c = e.GetDragDocument().body.getBoundingClientRect();
-                if (ye(t, n, c) && !ye(a, s, c, !0)) {
+                if (_e(t, n, c) && !_e(a, s, c, !0)) {
                   var l = ve.c(a, c.left, c.right, c.left - 200, c.right + 200),
                     u = ve.c(s, c.top, c.bottom, c.top - 100, c.bottom + 100);
                   this.m_dragOffWindowTimer = window.setTimeout(function () {
@@ -7328,7 +7254,7 @@ var CLSTAMP = "6855439";
             e
           );
         })(),
-        Ee = (function (e) {
+        Oe = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -7529,7 +7455,7 @@ var CLSTAMP = "6855439";
             (t.prototype.renderDragGhost = function () {
               return this.props.fnRenderDragGhost
                 ? this.props.fnRenderDragGhost()
-                : o.createElement(Ce, {
+                : o.createElement(Ee, {
                     elContent: this.GetClone(),
                     offsetX: this.m_DragInfo.startOffsetX,
                     offsetY: this.m_DragInfo.startOffsetY,
@@ -7580,7 +7506,7 @@ var CLSTAMP = "6855439";
             t
           );
         })(o.Component),
-        Ce = (function (e) {
+        Ee = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -7648,7 +7574,7 @@ var CLSTAMP = "6855439";
             t
           );
         })(o.Component),
-        Se = (function (e) {
+        Ce = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -7705,7 +7631,7 @@ var CLSTAMP = "6855439";
                 );
               }),
               (t.prototype.BDraggableInRegion = function (e, t, n) {
-                return ye(e, t, this.GetClientRect());
+                return _e(e, t, this.GetClientRect());
               }),
               (t.prototype.GetElement = function () {
                 return this.m_divRef.current;
@@ -7744,7 +7670,7 @@ var CLSTAMP = "6855439";
                     this.state.bDraggableActive && (n || "Active")
                   );
                 return o.createElement(
-                  _e.a,
+                  b.b,
                   Object(r.a)({ ref: this.m_divRef, className: c }, s, {
                     focusable: void 0 === a ? !!s.onClick : a,
                   }),
@@ -7756,18 +7682,18 @@ var CLSTAMP = "6855439";
             );
           })(o.Component)
         ),
-        De = n("zBSo"),
-        Me = n.n(De),
-        xe = n("IjL/");
+        Se = n("zBSo"),
+        De = n.n(Se),
+        Me = n("IjL/");
       function Re(e) {
         return o.createElement("div", Object(r.a)({}, e));
       }
-      function ke(e) {
+      function xe(e) {
         var t = e.title,
           n = (e.icon, e.active, Object(r.f)(e, ["title", "icon", "active"]));
         return o.createElement("div", Object(r.a)({}, n), t);
       }
-      function Ie(e) {
+      function ke(e) {
         var t,
           n,
           r =
@@ -7775,7 +7701,7 @@ var CLSTAMP = "6855439";
               ? n
               : "standard";
         return o.createElement(
-          D,
+          M,
           {
             className: Object(l.a)(
               e.stylesheet.PagedSettingsDialog_PageContent,
@@ -7784,9 +7710,9 @@ var CLSTAMP = "6855439";
             ),
           },
           e.activePage.header,
-          !e.hideTitle && o.createElement(v, null, e.activePage.title),
+          !e.hideTitle && o.createElement(_, null, e.activePage.title),
           o.createElement(
-            xe.a,
+            Me.a,
             { key: e.activePage.title },
             null != e.activePage.content && o.cloneElement(e.activePage.content)
           )
@@ -7795,7 +7721,7 @@ var CLSTAMP = "6855439";
       o.forwardRef(function (e, t) {
         var n,
           r,
-          i = null !== (n = e.stylesheet) && void 0 !== n ? n : Me.a,
+          i = null !== (n = e.stylesheet) && void 0 !== n ? n : De.a,
           a =
             null != e.startingPage
               ? e.pages
@@ -7827,7 +7753,7 @@ var CLSTAMP = "6855439";
               a = t == f;
             return o.createElement(p.f, {
               component: e.renderPageListItem,
-              fallback: ke,
+              fallback: xe,
               className: Object(l.a)(
                 i.PagedSettingsDialog_PageListItem,
                 ((r = {}), (r[i.Active] = a), r)
@@ -7873,7 +7799,7 @@ var CLSTAMP = "6855439";
             g.a,
             { className: "DialogContentTransition", onCancelButton: v },
             f &&
-              o.createElement(Ie, {
+              o.createElement(ke, {
                 stylesheet: i,
                 hideTitle: y,
                 activePage: f,
@@ -7881,7 +7807,7 @@ var CLSTAMP = "6855439";
           )
         );
       });
-      var je = (function (e) {
+      var Ie = (function (e) {
         function t() {
           var t = (null !== e && e.apply(this, arguments)) || this;
           return (
@@ -8206,6 +8132,12 @@ var CLSTAMP = "6855439";
           }),
           (e.prototype.ScrollSnap = function () {
             p(this.m_node);
+          }),
+          (e.prototype.NavTree = function () {
+            return this.m_node.Tree;
+          }),
+          (e.prototype.Node = function () {
+            return this.m_node;
           }),
           e
         );
@@ -8818,6 +8750,11 @@ var CLSTAMP = "6855439";
                         br: i.d.readBool,
                         bw: i.h.writeBool,
                       },
+                      app_type: {
+                        n: 14,
+                        br: i.d.readUint32,
+                        bw: i.h.writeUint32,
+                      },
                     },
                   }),
                 t.sm_m
@@ -9043,35 +8980,35 @@ var CLSTAMP = "6855439";
     },
     RMhI: function (e, t, n) {
       var r = {
-        "./sales_brazilian.json": ["8W/b", 42],
-        "./sales_bulgarian.json": ["CF5q", 43],
-        "./sales_czech.json": ["O2WS", 44],
-        "./sales_danish.json": ["XnEN", 45],
-        "./sales_dutch.json": ["amMP", 46],
-        "./sales_english.json": ["3u+3", 47],
-        "./sales_finnish.json": ["4mLc", 48],
-        "./sales_french.json": ["fJyv", 49],
-        "./sales_german.json": ["LcuH", 50],
-        "./sales_greek.json": ["7l8b", 51],
-        "./sales_hungarian.json": ["L9+e", 52],
-        "./sales_italian.json": ["EnBf", 53],
-        "./sales_japanese.json": ["O9QH", 54],
-        "./sales_koreana.json": ["hPCV", 55],
-        "./sales_latam.json": ["mkfq", 56],
-        "./sales_norwegian.json": ["Xzk6", 57],
-        "./sales_polish.json": ["Mfbu", 58],
-        "./sales_portuguese.json": ["EQQ2", 59],
-        "./sales_romanian.json": ["oXR9", 60],
-        "./sales_russian.json": ["kQHt", 61],
-        "./sales_sc_schinese.json": ["VTAw", 62],
-        "./sales_schinese.json": ["AVwL", 63],
-        "./sales_spanish.json": ["lRrx", 64],
-        "./sales_swedish.json": ["7tPl", 65],
-        "./sales_tchinese.json": ["mQlZ", 66],
-        "./sales_thai.json": ["yDdk", 67],
-        "./sales_turkish.json": ["mjwq", 68],
-        "./sales_ukrainian.json": ["gWvs", 69],
-        "./sales_vietnamese.json": ["VsX2", 70],
+        "./sales_brazilian.json": ["8W/b", 40],
+        "./sales_bulgarian.json": ["CF5q", 41],
+        "./sales_czech.json": ["O2WS", 42],
+        "./sales_danish.json": ["XnEN", 43],
+        "./sales_dutch.json": ["amMP", 44],
+        "./sales_english.json": ["3u+3", 45],
+        "./sales_finnish.json": ["4mLc", 46],
+        "./sales_french.json": ["fJyv", 47],
+        "./sales_german.json": ["LcuH", 48],
+        "./sales_greek.json": ["7l8b", 49],
+        "./sales_hungarian.json": ["L9+e", 50],
+        "./sales_italian.json": ["EnBf", 51],
+        "./sales_japanese.json": ["O9QH", 52],
+        "./sales_koreana.json": ["hPCV", 53],
+        "./sales_latam.json": ["mkfq", 54],
+        "./sales_norwegian.json": ["Xzk6", 55],
+        "./sales_polish.json": ["Mfbu", 56],
+        "./sales_portuguese.json": ["EQQ2", 57],
+        "./sales_romanian.json": ["oXR9", 58],
+        "./sales_russian.json": ["kQHt", 59],
+        "./sales_sc_schinese.json": ["VTAw", 60],
+        "./sales_schinese.json": ["AVwL", 61],
+        "./sales_spanish.json": ["lRrx", 62],
+        "./sales_swedish.json": ["7tPl", 63],
+        "./sales_tchinese.json": ["mQlZ", 64],
+        "./sales_thai.json": ["yDdk", 65],
+        "./sales_turkish.json": ["mjwq", 66],
+        "./sales_ukrainian.json": ["gWvs", 67],
+        "./sales_vietnamese.json": ["VsX2", 68],
       };
       function o(e) {
         if (!n.o(r, e))
@@ -10305,9 +10242,12 @@ var CLSTAMP = "6855439";
     },
     UPxs: function (e, t, n) {
       "use strict";
-      n.d(t, "a", function () {
+      n.d(t, "b", function () {
         return b;
-      });
+      }),
+        n.d(t, "a", function () {
+          return v;
+        });
       var r,
         o = n("mrSG"),
         i = n("q1tI"),
@@ -10494,9 +10434,9 @@ var CLSTAMP = "6855439";
       i.createContext(void 0), i.createContext(void 0), i.createContext(void 0);
       i.Component, new Map();
       var g,
-        b = Object(a.e)("div");
-      Object(a.e)("button"),
-        Object(a.e)("input"),
+        b = Object(a.e)("div"),
+        v = Object(a.e)("button");
+      Object(a.e)("input"),
         Object(a.e)("span"),
         Object(a.e)("textarea"),
         Object(a.e)("a"),
@@ -10506,7 +10446,7 @@ var CLSTAMP = "6855439";
           (e.DomOrder = "DomOrder"),
           (e.ReverseDomOrder = "ReverseDomOrder");
       })(g || (g = {}));
-      var v;
+      var _;
       i.forwardRef(function (e, t) {
         e.navKey;
         var n = e.className,
@@ -10526,7 +10466,7 @@ var CLSTAMP = "6855439";
           (e[(e.Preferred = 1)] = "Preferred"),
           (e[(e.StartFocused = 2)] = "StartFocused"),
           (e[(e.RestoredEpoch = 3)] = "RestoredEpoch");
-      })(v || (v = {}));
+      })(_ || (_ = {}));
     },
     WBba: function (e, t, n) {
       "use strict";
@@ -10810,10 +10750,10 @@ var CLSTAMP = "6855439";
           return O;
         }),
         n.d(t, "c", function () {
-          return E;
+          return w;
         }),
         n.d(t, "v", function () {
-          return w;
+          return E;
         }),
         n.d(t, "n", function () {
           return C;
@@ -10977,7 +10917,7 @@ var CLSTAMP = "6855439";
         }
         return t;
       }
-      function E(e, t) {
+      function w(e, t) {
         if ("x" === t) {
           if (e.scrollWidth <= e.clientWidth) return !1;
         } else if (e.scrollHeight <= e.clientHeight) return !1;
@@ -10985,7 +10925,7 @@ var CLSTAMP = "6855439";
           r = "x" === t ? n.overflowX : n.overflowY;
         return "auto" === r || "scroll" === r;
       }
-      function w(e, t) {
+      function E(e, t) {
         return Object(r.b)(this, void 0, void 0, function () {
           var n, o;
           return Object(r.e)(this, function (r) {
@@ -11113,7 +11053,7 @@ var CLSTAMP = "6855439";
           return b;
         }),
         n.d(t, "d", function () {
-          return w;
+          return E;
         }),
         n.d(t, "c", function () {
           return C;
@@ -11308,7 +11248,7 @@ var CLSTAMP = "6855439";
               : (u.setDate(u.getDate() + 1),
                 n < u
                   ? Object(i.f)("#Time_Tomorrow")
-                  : (u.setDate(u.getDate() + 5), n < u ? C(n) : w(n, !0)))
+                  : (u.setDate(u.getDate() + 5), n < u ? C(n) : E(n, !0)))
           );
         }
         s.b(new Date().setHours(24, 0, 0, 0) - r.getTime());
@@ -11348,11 +11288,11 @@ var CLSTAMP = "6855439";
         _ = new Map(),
         y = new Map(),
         O = new Map(),
-        E = new Map();
-      function w(e, t) {
+        w = new Map();
+      function E(e, t) {
         void 0 === t && (t = !1);
         var n = e.getDate() + 31 * (e.getMonth() + 12 * e.getFullYear()),
-          r = E.get(n);
+          r = w.get(n);
         return (
           r ||
           ((r = e.toLocaleDateString(i.e.GetPreferredLocales(), {
@@ -11360,7 +11300,7 @@ var CLSTAMP = "6855439";
             day: "numeric",
             month: t ? "long" : "short",
           })),
-          E.set(n, r),
+          w.set(n, r),
           r)
         );
       }
@@ -11466,43 +11406,43 @@ var CLSTAMP = "6855439";
               _ = v.elemProps,
               y = v.navOptions,
               O = v.gamepadEvents,
-              E = i.a.useRef(null);
-            E.current || (E.current = n.NewGamepadNavigationTree(m));
-            var w = E.current;
+              w = i.a.useRef(null);
+            w.current || (w.current = n.NewGamepadNavigationTree(m));
+            var E = w.current;
             i.a.useLayoutEffect(function () {
               var e = Object(c.a)(g);
-              w.Root.SetProperties(
+              E.Root.SetProperties(
                 Object(r.a)(Object(r.a)({}, y), { layout: e })
               );
             });
             var C = i.a.useRef();
             return (
-              w.SetUseVirtualFocus(h),
-              Object(s.d)(w.OnActivateCallbacks, o),
-              Object(s.d)(w.OnDeactivateCallbacks, u),
+              E.SetUseVirtualFocus(h),
+              Object(s.d)(E.OnActivateCallbacks, o),
+              Object(s.d)(E.OnDeactivateCallbacks, u),
               Object(l.b)(O, C, n),
               i.a.useLayoutEffect(
                 function () {
-                  return w.RegisterNavigationItem(w.Root, C.current);
+                  return E.RegisterNavigationItem(E.Root, C.current);
                 },
-                [w, C]
+                [E, C]
               ),
               i.a.useLayoutEffect(
                 function () {
-                  return n.RegisterGamepadNavigationTree(w, d);
+                  return n.RegisterGamepadNavigationTree(E, d);
                 },
-                [n, d, w]
+                [n, d, E]
               ),
               i.a.useLayoutEffect(
                 function () {
-                  Object(s.c)(p, w);
+                  Object(s.c)(p, E);
                 },
-                [p, w]
+                [p, E]
               ),
               i.a.createElement(
                 "div",
                 Object(r.a)({}, _, { ref: C }),
-                i.a.createElement(a.f.Provider, { value: w.Root }, f)
+                i.a.createElement(a.f.Provider, { value: E.Root }, f)
               )
             );
           }));
@@ -12820,22 +12760,22 @@ var CLSTAMP = "6855439";
                 var y = this.ComputeRelativeDirection(t, u.GRID);
                 if (_) {
                   var O = Object(f.f)(_.GetBoundingRect()),
-                    E = y == h.BACKWARD ? this.m_rgChildren.length - 1 : 0;
+                    w = y == h.BACKWARD ? this.m_rgChildren.length - 1 : 0;
                   if (
                     this.BFocusClosestChildInNextAxiallyAlignedSet(
                       v,
                       y,
                       t,
                       O,
-                      E,
-                      this.m_rgChildren[E].GetBoundingRect()
+                      w,
+                      this.m_rgChildren[w].GetBoundingRect()
                     )
                   )
                     return !0;
                 }
               } else if (b == p.PREFERRED_CHILD)
-                for (var w = 0, C = this.m_rgChildren; w < C.length; w++) {
-                  var S = C[w];
+                for (var E = 0, C = this.m_rgChildren; E < C.length; E++) {
+                  var S = C[E];
                   if (S.BWantsPreferredFocus() && S.BTakeFocus(m.b.GAMEPAD, t))
                     return !0;
                 }
@@ -13823,7 +13763,7 @@ var CLSTAMP = "6855439";
           (e[(e.k_BluetoothDeviceType_Keyboard = 11)] =
             "k_BluetoothDeviceType_Keyboard");
       })(b || (b = {}));
-      var v, _, y, O, E;
+      var v, _, y, O, w;
       !(function (e) {
         (e[(e.Unknown = 0)] = "Unknown"),
           (e[(e.Wired = 1)] = "Wired"),
@@ -13862,12 +13802,12 @@ var CLSTAMP = "6855439";
             (e[(e.k_EHTTPProxyMode_Manual = 2)] = "k_EHTTPProxyMode_Manual"),
             (e[(e.k_EHTTPProxyMode_Automatic = 3)] =
               "k_EHTTPProxyMode_Automatic");
-        })(E || (E = {}));
-      var w, C;
+        })(w || (w = {}));
+      var E, C;
       !(function (e) {
         (e[(e.SystemKey0 = 0)] = "SystemKey0"),
           (e[(e.SystemKey1 = 1)] = "SystemKey1");
-      })(w || (w = {})),
+      })(E || (E = {})),
         (function (e) {
           (e[(e.Hidden = 0)] = "Hidden"),
             (e[(e.Notification = 1)] = "Notification"),
@@ -14437,10 +14377,10 @@ var CLSTAMP = "6855439";
     nmPn: function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
-        return z;
+        return Y;
       }),
         n.d(t, "b", function () {
-          return Y;
+          return q;
         });
       var r = n("mrSG"),
         o = n("q1tI"),
@@ -14456,105 +14396,111 @@ var CLSTAMP = "6855439";
         m = n("6TF7"),
         f = n.n(m),
         g = i.a.lazy(function () {
-          return Promise.all([n.e(0), n.e(2), n.e(1), n.e(4), n.e(133)]).then(
+          return Promise.all([n.e(0), n.e(2), n.e(1), n.e(3), n.e(131)]).then(
             n.bind(null, "GEPe")
           );
         }),
         b = i.a.lazy(function () {
-          return Promise.all([n.e(0), n.e(2), n.e(1), n.e(5), n.e(12)]).then(
+          return Promise.all([n.e(0), n.e(2), n.e(1), n.e(3), n.e(10)]).then(
             n.bind(null, "IY+y")
           );
         }),
         v = i.a.lazy(function () {
-          return Promise.all([n.e(0), n.e(4), n.e(9)]).then(
-            n.bind(null, "/u7D")
-          );
+          return Promise.all([n.e(0), n.e(7)]).then(n.bind(null, "/u7D"));
         }),
         _ = i.a.lazy(function () {
-          return Promise.all([n.e(0), n.e(2), n.e(1), n.e(3), n.e(8)]).then(
+          return Promise.all([n.e(0), n.e(2), n.e(1), n.e(3), n.e(6)]).then(
             n.bind(null, "8zUZ")
           );
         }),
         y = i.a.lazy(function () {
-          return n.e(102).then(n.bind(null, "rt5e"));
+          return n.e(100).then(n.bind(null, "rt5e"));
         }),
         O = i.a.lazy(function () {
-          return Promise.all([n.e(0), n.e(2), n.e(1), n.e(5), n.e(10)]).then(
+          return Promise.all([n.e(0), n.e(2), n.e(1), n.e(3), n.e(8)]).then(
             n.bind(null, "JZ7q")
           );
         }),
-        E = i.a.lazy(function () {
-          return Promise.all([n.e(0), n.e(2), n.e(1), n.e(3), n.e(11)]).then(
+        w = i.a.lazy(function () {
+          return Promise.all([n.e(0), n.e(2), n.e(1), n.e(3), n.e(9)]).then(
             n.bind(null, "erIC")
           );
         }),
-        w = function () {
+        E = i.a.lazy(function () {
+          return Promise.all([n.e(0), n.e(2), n.e(1), n.e(132)]).then(
+            n.bind(null, "KVeB")
+          );
+        }),
+        C = function () {
           return h.b.IS_CREATOR_HOME || h.b.IS_CURATOR ? "groups" : "games";
         },
-        C = function () {
-          return "/" + w() + "/:anything*/diagdata";
-        },
         S = function () {
+          return "/" + C() + "/:anything*/diagdata";
+        },
+        D = function () {
           return "/(migrateevents|migrate)";
         },
-        D = function (e) {
-          return "/" + w() + "/" + e + "/(partnerevents|events|announcements)";
-        },
         M = function (e) {
+          return "/" + C() + "/" + e + "/(partnerevents|events|announcements)";
+        },
+        R = function (e) {
           return "/app/" + e + "(/workshop/)?";
         },
         x = function (e) {
           return "/groups/" + e + "/";
         },
-        R = function (e) {
+        k = function (e) {
           return "/id/" + e;
         },
-        k = function (e) {
+        I = function (e) {
           return "/profiles/" + e;
         },
-        I = function () {
+        j = function () {
           return "/:anything/filedetails";
         },
-        j = function () {
+        T = function () {
           return "/id/:vanity_url/recommended/:appid/";
         },
-        T = function () {
+        L = function () {
           return "/profiles/:steamid/recommended/:appid/";
         },
-        L = function () {
+        B = function () {
           return "/profiles/:steamid/recommended";
         },
-        B = function () {
+        A = function () {
           return "/id/:vanity_url/recommended";
         },
         N = function () {
           return "/id/:vanity_url/friends/add";
         },
-        A = function () {
+        P = function () {
           return "/profiles/:id/friends/add";
         },
-        P = function () {
+        F = function () {
           return "/broadcast";
         },
-        F = function () {
+        G = function () {
           return "/workshop/discussions";
         },
-        G = function () {
+        U = function () {
           return "/sharedfiles/filedetails/discussions";
         },
-        U = function () {
+        H = function () {
           return "/discussions/forum";
         },
-        H = function () {
+        W = function () {
           return "/faqs/";
         },
-        W = function () {
+        V = function () {
+          return "/questions/";
+        },
+        z = function () {
           return "/conference/";
         },
-        V = function () {
+        K = function () {
           return "/";
         },
-        z = (function (e) {
+        Y = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -14563,7 +14509,7 @@ var CLSTAMP = "6855439";
             (t.prototype.render = function () {
               return i.a.createElement(
                 c.a,
-                { basename: X() },
+                { basename: J() },
                 i.a.createElement(
                   i.a.Suspense,
                   { fallback: i.a.createElement("div", null) },
@@ -14572,7 +14518,7 @@ var CLSTAMP = "6855439";
                     null,
                     i.a.createElement(l.c, {
                       exact: !0,
-                      path: C(),
+                      path: S(),
                       render: function (e) {
                         return i.a.createElement(
                           u.a,
@@ -14584,13 +14530,13 @@ var CLSTAMP = "6855439";
                       },
                     }),
                     i.a.createElement(l.c, {
-                      path: D(":appid_or_vanity_str"),
+                      path: M(":appid_or_vanity_str"),
                       component: b,
                     }),
-                    i.a.createElement(l.c, { path: S(), component: b }),
-                    i.a.createElement(l.c, { path: P(), component: _ }),
+                    i.a.createElement(l.c, { path: D(), component: b }),
+                    i.a.createElement(l.c, { path: F(), component: _ }),
                     i.a.createElement(l.c, {
-                      path: M(":appid"),
+                      path: R(":appid"),
                       render: function (e) {
                         return i.a.createElement(d.a, {
                           config: {
@@ -14623,19 +14569,7 @@ var CLSTAMP = "6855439";
                       },
                     }),
                     i.a.createElement(l.c, {
-                      path: j(),
-                      render: function (e) {
-                        return i.a.createElement(v, Object(r.a)({}, e));
-                      },
-                    }),
-                    i.a.createElement(l.c, {
                       path: T(),
-                      render: function (e) {
-                        return i.a.createElement(v, Object(r.a)({}, e));
-                      },
-                    }),
-                    i.a.createElement(l.c, {
-                      path: B(),
                       render: function (e) {
                         return i.a.createElement(v, Object(r.a)({}, e));
                       },
@@ -14647,7 +14581,19 @@ var CLSTAMP = "6855439";
                       },
                     }),
                     i.a.createElement(l.c, {
-                      path: [U(), F(), G()],
+                      path: A(),
+                      render: function (e) {
+                        return i.a.createElement(v, Object(r.a)({}, e));
+                      },
+                    }),
+                    i.a.createElement(l.c, {
+                      path: B(),
+                      render: function (e) {
+                        return i.a.createElement(v, Object(r.a)({}, e));
+                      },
+                    }),
+                    i.a.createElement(l.c, {
+                      path: [H(), G(), U()],
                       render: function (e) {
                         return i.a.createElement(d.a, {
                           config: {
@@ -14660,31 +14606,32 @@ var CLSTAMP = "6855439";
                     }),
                     i.a.createElement(
                       l.c,
-                      { path: [N(), A()] },
+                      { path: [N(), P()] },
                       i.a.createElement(y, null)
                     ),
                     i.a.createElement(l.c, {
-                      path: R(":vanity_url"),
+                      path: k(":vanity_url"),
                       render: function (e) {
                         return i.a.createElement(g, Object(r.a)({}, e));
                       },
                     }),
                     i.a.createElement(l.c, {
-                      path: k(":steamid"),
+                      path: I(":steamid"),
                       render: function (e) {
                         return i.a.createElement(g, Object(r.a)({}, e));
                       },
                     }),
                     i.a.createElement(l.c, {
-                      path: I(),
+                      path: j(),
                       render: function (e) {
                         return i.a.createElement(v, Object(r.a)({}, e));
                       },
                     }),
-                    i.a.createElement(l.c, { path: H(), component: O }),
-                    i.a.createElement(l.c, { path: W(), component: E }),
+                    i.a.createElement(l.c, { path: W(), component: O }),
+                    i.a.createElement(l.c, { path: V(), component: E }),
+                    i.a.createElement(l.c, { path: z(), component: w }),
                     i.a.createElement(l.c, {
-                      path: V(),
+                      path: K(),
                       render: function (e) {
                         return i.a.createElement(d.a, {
                           config: {
@@ -14698,20 +14645,20 @@ var CLSTAMP = "6855439";
                         });
                       },
                     }),
-                    i.a.createElement(l.c, { component: Y })
+                    i.a.createElement(l.c, { component: q })
                   )
                 ),
-                i.a.createElement(K, null)
+                i.a.createElement(X, null)
               );
             }),
             t
           );
         })(i.a.Component),
-        K = function (e) {
+        X = function (e) {
           var t = i.a.createElement(p.c, { ModalManager: Object(p.g)(window) });
           return s.a.createPortal(t, document.body);
         };
-      function Y(e) {
+      function q(e) {
         return "dev" == h.c.WEB_UNIVERSE
           ? i.a.createElement(
               "div",
@@ -14720,7 +14667,7 @@ var CLSTAMP = "6855439";
             )
           : i.a.createElement(l.b, { push: !0, to: "/" });
       }
-      function X() {
+      function J() {
         var e = document.createElement("a");
         e.href = h.c.COMMUNITY_BASE_URL;
         var t = e.pathname;
@@ -14791,19 +14738,19 @@ var CLSTAMP = "6855439";
             d && (v.onCancelButton = v.onCancelButton || d),
             (g.className = Object(s.a)(g.className, "Panel", "Focusable"));
           var O = Object(a.g)(Object(r.a)(Object(r.a)({}, _), b)),
-            E = O.ref,
-            w = O.node;
-          Object(u.a)(v, E);
-          var C = Object(c.f)(E, t);
+            w = O.ref,
+            E = O.node;
+          Object(u.a)(v, w);
+          var C = Object(c.f)(w, t);
           return i.a.createElement(
             a.f.Provider,
-            { value: w },
-            w
+            { value: E },
+            E
               ? i.a.createElement(
                   a.c,
                   Object(r.a)({}, g, {
                     divRef: C,
-                    node: w,
+                    node: E,
                     focusClassName: Object(s.a)(h, "gpfocus"),
                   })
                 )
@@ -14979,36 +14926,36 @@ var CLSTAMP = "6855439";
     },
     rCDf: function (e, t, n) {
       var r = {
-        "./shared_arabic.json": ["d1TB", 71],
-        "./shared_brazilian.json": ["Pg9r", 72],
-        "./shared_bulgarian.json": ["ENge", 73],
-        "./shared_czech.json": ["Ts6V", 74],
-        "./shared_danish.json": ["9oiU", 75],
-        "./shared_dutch.json": ["nxN4", 76],
-        "./shared_english.json": ["TYjx", 77],
-        "./shared_finnish.json": ["NuB8", 78],
-        "./shared_french.json": ["bOPj", 79],
-        "./shared_german.json": ["svuF", 80],
-        "./shared_greek.json": ["eJKB", 81],
-        "./shared_hungarian.json": ["T7i2", 82],
-        "./shared_italian.json": ["w96W", 83],
-        "./shared_japanese.json": ["XQ4S", 84],
-        "./shared_koreana.json": ["4hyI", 85],
-        "./shared_latam.json": ["3qrw", 86],
-        "./shared_norwegian.json": ["XA4Q", 87],
-        "./shared_polish.json": ["TpXn", 88],
-        "./shared_portuguese.json": ["Q8UV", 89],
-        "./shared_romanian.json": ["Eme1", 90],
-        "./shared_russian.json": ["BUiO", 91],
-        "./shared_sc_schinese.json": ["O0N/", 92],
-        "./shared_schinese.json": ["3UpY", 93],
-        "./shared_spanish.json": ["4Fxc", 94],
-        "./shared_swedish.json": ["0JhB", 95],
-        "./shared_tchinese.json": ["OYRc", 96],
-        "./shared_thai.json": ["lhAZ", 97],
-        "./shared_turkish.json": ["RSoU", 98],
-        "./shared_ukrainian.json": ["lNXI", 99],
-        "./shared_vietnamese.json": ["RSmC", 100],
+        "./shared_arabic.json": ["d1TB", 69],
+        "./shared_brazilian.json": ["Pg9r", 70],
+        "./shared_bulgarian.json": ["ENge", 71],
+        "./shared_czech.json": ["Ts6V", 72],
+        "./shared_danish.json": ["9oiU", 73],
+        "./shared_dutch.json": ["nxN4", 74],
+        "./shared_english.json": ["TYjx", 75],
+        "./shared_finnish.json": ["NuB8", 76],
+        "./shared_french.json": ["bOPj", 77],
+        "./shared_german.json": ["svuF", 78],
+        "./shared_greek.json": ["eJKB", 79],
+        "./shared_hungarian.json": ["T7i2", 80],
+        "./shared_italian.json": ["w96W", 81],
+        "./shared_japanese.json": ["XQ4S", 82],
+        "./shared_koreana.json": ["4hyI", 83],
+        "./shared_latam.json": ["3qrw", 84],
+        "./shared_norwegian.json": ["XA4Q", 85],
+        "./shared_polish.json": ["TpXn", 86],
+        "./shared_portuguese.json": ["Q8UV", 87],
+        "./shared_romanian.json": ["Eme1", 88],
+        "./shared_russian.json": ["BUiO", 89],
+        "./shared_sc_schinese.json": ["O0N/", 90],
+        "./shared_schinese.json": ["3UpY", 91],
+        "./shared_spanish.json": ["4Fxc", 92],
+        "./shared_swedish.json": ["0JhB", 93],
+        "./shared_tchinese.json": ["OYRc", 94],
+        "./shared_thai.json": ["lhAZ", 95],
+        "./shared_turkish.json": ["RSoU", 96],
+        "./shared_ukrainian.json": ["lNXI", 97],
+        "./shared_vietnamese.json": ["RSmC", 98],
       };
       function o(e) {
         if (!n.o(r, e))
@@ -15255,7 +15202,7 @@ var CLSTAMP = "6855439";
       "use strict";
       (function (e) {
         n.d(t, "a", function () {
-          return w;
+          return E;
         });
         var r,
           o = n("mrSG"),
@@ -15452,7 +15399,7 @@ var CLSTAMP = "6855439";
                             (a = i.filter(function (e) {
                               return !!e.match(_);
                             })),
-                            (s = E(a[n])),
+                            (s = w(a[n])),
                             r && (s = s + " " + e.message),
                             (c = i
                               .map(function (e) {
@@ -15500,7 +15447,7 @@ var CLSTAMP = "6855439";
                             (a = i.filter(function (e) {
                               return !!e.match(y);
                             })),
-                            (s = E(a[n])),
+                            (s = w(a[n])),
                             r && (s = s + " " + e.message),
                             (c = i
                               .map(function (e) {
@@ -15540,7 +15487,7 @@ var CLSTAMP = "6855439";
             return console.warn("Failed to normalize error stack: " + e), null;
           }
         }
-        function E(e) {
+        function w(e) {
           return (function (e) {
             var t = "https://",
               n = e.indexOf(t);
@@ -15556,7 +15503,7 @@ var CLSTAMP = "6855439";
             })(e)
           );
         }
-        var w = function () {
+        var E = function () {
             return v || C(new g()), v;
           },
           C = function (e) {
@@ -15634,7 +15581,7 @@ var CLSTAMP = "6855439";
     "y+6m": function (e, t, n) {
       "use strict";
       n.d(t, "c", function () {
-        return w;
+        return E;
       }),
         n.d(t, "d", function () {
           return C;
@@ -15646,10 +15593,10 @@ var CLSTAMP = "6855439";
           return M;
         }),
         n.d(t, "a", function () {
-          return x;
+          return R;
         }),
         n.d(t, "e", function () {
-          return R;
+          return x;
         }),
         n.d(t, "g", function () {
           return k;
@@ -15673,10 +15620,10 @@ var CLSTAMP = "6855439";
         _ = n("lkRc"),
         y = n("+jbA"),
         O = n.n(y),
-        E = Object(d.a)("ContextMenuInstanceContext", function () {
+        w = Object(d.a)("ContextMenuInstanceContext", function () {
           return i.createContext(null);
         }),
-        w = (function (e) {
+        E = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.m_navRef = Object(l.a)()), t;
@@ -15802,7 +15749,7 @@ var CLSTAMP = "6855439";
                 c
               );
             }),
-            (t.contextType = E),
+            (t.contextType = w),
             Object(r.c)([v.a], t.prototype, "HideIfSubmenu", null),
             Object(r.c)([v.a], t.prototype, "HideMenu", null),
             (t = Object(r.c)([o.a], t))
@@ -15918,7 +15865,7 @@ var CLSTAMP = "6855439";
                 this.props.children
               );
             }),
-            (t.contextType = E),
+            (t.contextType = w),
             Object(r.c)([v.a], t.prototype, "OnClick", null),
             Object(r.c)([v.a], t.prototype, "OnOKButton", null),
             Object(r.c)([v.a], t.prototype, "OnMouseEnter", null),
@@ -15952,7 +15899,7 @@ var CLSTAMP = "6855439";
         })(i.PureComponent);
       function D(e) {
         var t,
-          n = i.useContext(E),
+          n = i.useContext(w),
           r =
             null !== (t = null == n ? void 0 : n.styles) && void 0 !== t
               ? t
@@ -16095,14 +16042,14 @@ var CLSTAMP = "6855439";
                   var _ = (a.bOverlapHorizontal ? b : f) - v,
                     y = _ > 0,
                     O = u - (a.bOverlapHorizontal ? f : b) - v,
-                    E = O > 0,
-                    w = (a.bPreferPopLeft || !E) && y;
+                    w = O > 0,
+                    E = (a.bPreferPopLeft || !w) && y;
                   y ||
-                    E ||
-                    ((w = y > E),
+                    w ||
+                    ((E = y > w),
                     a.bFitToWindow &&
-                      ((v += (w ? _ : O) - 8), (s.menuWidth = v))),
-                    (!a.bPreferPopLeft && E) || !y
+                      ((v += (E ? _ : O) - 8), (s.menuWidth = v))),
+                    (!a.bPreferPopLeft && w) || !y
                       ? (s.menuLeft = a.bOverlapHorizontal ? f : b)
                       : (s.menuRight = u - (a.bOverlapHorizontal ? b : f));
                   var C = l || r.top,
@@ -16110,19 +16057,19 @@ var CLSTAMP = "6855439";
                     D = e.scrollHeight;
                   a.bMatchHeight && ((D = S - C), (s.menuHeight = D));
                   var M = (a.bOverlapVertical ? S : C) - D,
-                    x = M > 0,
-                    R = p - (a.bOverlapVertical ? C : S) - D,
-                    k = R > 0,
-                    I = (a.bPreferPopTop || !k) && x && !a.bDisablePopTop;
-                  if (!x && !k) {
+                    R = M > 0,
+                    x = p - (a.bOverlapVertical ? C : S) - D,
+                    k = x > 0,
+                    I = (a.bPreferPopTop || !k) && R && !a.bDisablePopTop;
+                  if (!R && !k) {
                     var j =
                       void 0 !== a.bShiftToFitWindow
                         ? a.bShiftToFitWindow
                         : a.bFitToWindow && !a.bOverlapHorizontal;
-                    (I = M > R && !a.bDisablePopTop),
+                    (I = M > x && !a.bDisablePopTop),
                       j && (I ? (s.menuTop = 4) : (s.menuBottom = 4)),
                       a.bFitToWindow &&
-                        (j ? (D = Math.min(D, p - 8)) : (D += I ? M : R),
+                        (j ? (D = Math.min(D, p - 8)) : (D += I ? M : x),
                         (s.menuHeight = D - 8));
                   }
                   void 0 === s.menuBottom &&
@@ -16212,7 +16159,7 @@ var CLSTAMP = "6855439";
                   (r += " visible"),
                 (r += " " + O.a.ContextMenuFocusContainer),
                 i.createElement(
-                  E.Provider,
+                  w.Provider,
                   { value: this.props.instance },
                   i.createElement(
                     "div",
@@ -16242,7 +16189,7 @@ var CLSTAMP = "6855439";
             (t = Object(r.c)([o.a], t))
           );
         })(i.Component),
-        x = (function (e) {
+        R = (function (e) {
           function t(n, r, o) {
             var i =
               e.call(this, "contextmenu_" + t.sm_iContextMenuInstance++, {
@@ -16302,7 +16249,7 @@ var CLSTAMP = "6855439";
             t
           );
         })(c.a);
-      function R(e) {
+      function x(e) {
         return i.createElement("div", {
           className: O.a.ContextMenuMouseOverlay,
         });
@@ -16418,7 +16365,7 @@ var CLSTAMP = "6855439";
             ),
           t.length)
         )
-          Object(s.a)(i.createElement(w, null, t), e);
+          Object(s.a)(i.createElement(E, null, t), e);
         else {
           if (e.shiftKey) return;
           e.preventDefault(), e.stopPropagation();
@@ -16460,5 +16407,5 @@ var CLSTAMP = "6855439";
       };
     },
   },
-  [["gfbn", 132, 0]],
+  [["gfbn", 130, 0]],
 ]);

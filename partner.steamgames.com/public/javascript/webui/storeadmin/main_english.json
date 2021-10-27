@@ -298,5 +298,9 @@
     "DiscountDashboard_PackageTypeFilterInputPrompt": "ALL",
     "DiscountDashboard_NoPrimaryGameFoundForPackage": "No game in package",
     "DiscountDashboard_MultiplePrimaryGamesFoundForPackage": "Multi-game package",
+    "DiscountDashboard_Error_CouldNotLoadDiscountEvents": "ERROR: Could not load Discount Events.",
+    "DiscountDashboard_LoadingDiscountEvents": "Loading Discount Events.",
+    "DiscountDashboard_Error_CouldNotLoadPackageDiscounts": "ERROR: Could not load package discounts.",
+    "DiscountDashboard_LoadingPackageDiscounts": "Loading package info and discounts.",
     "dummy": "dummy"
 }

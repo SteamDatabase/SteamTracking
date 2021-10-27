@@ -65,7 +65,7 @@
                   u,
                   d,
                   m,
-                  h,
+                  f,
                   _ = this;
                 return Object(a.e)(this, function (b) {
                   switch (b.label) {
@@ -74,7 +74,7 @@
                         (l = Math.acos(r)),
                         [
                           4,
-                          new f(
+                          new h(
                             function (e) {
                               return Object(a.b)(
                                 _,
@@ -117,9 +117,9 @@
                       if ((p = b.sent()).path) {
                         for (c = [], u = 0, d = 0; d < p.path.length; d++)
                           (m = p.path[d]),
-                            (h = m.cost - u),
+                            (f = m.cost - u),
                             (u = m.cost),
-                            c.push({ appid: m.node, similarity: Math.cos(h) });
+                            c.push({ appid: m.node, similarity: Math.cos(f) });
                         return [2, c];
                       }
                       throw new Error("Unable to compute path.");
@@ -272,7 +272,7 @@
             e
           );
         })(),
-        f = (function () {
+        h = (function () {
           function e(e, t, r, a) {
             (this.m_fnGetNeighbors = e),
               (this.m_fnEstimateCosts = t),
@@ -282,7 +282,7 @@
           return (
             (e.prototype.FindPath = function (e, t, r) {
               return Object(a.b)(this, void 0, void 0, function () {
-                var n, i, s, o, l, p, c, u, d, f, h, _, b, y, g, v;
+                var n, i, s, o, l, p, c, u, d, h, f, _, b, y, g, v;
                 return Object(a.e)(this, function (a) {
                   switch (a.label) {
                     case 0:
@@ -306,11 +306,11 @@
                     case 2:
                       if (!(n.length > 0 && c < r)) return [3, 6];
                       if (((u = n.Pop()), this.m_fnEquality(u.node, t))) {
-                        for (d = [], f = u.node; l.has(f); )
-                          d.push(f), (f = l.get(f));
-                        for (h = [], v = d.length - 1; v >= 0; v--)
-                          h.push({ node: d[v], cost: o.get(d[v]) });
-                        return [2, { path: h }];
+                        for (d = [], h = u.node; l.has(h); )
+                          d.push(h), (h = l.get(h));
+                        for (f = [], v = d.length - 1; v >= 0; v--)
+                          f.push({ node: d[v], cost: o.get(d[v]) });
+                        return [2, { path: f }];
                       }
                       return i.add(u.node), [4, this.m_fnGetNeighbors(u.node)];
                     case 3:
@@ -380,8 +380,8 @@
             e
           );
         })(),
-        h = new d();
-      window.g_LabsSandbox = h;
+        f = new d();
+      window.g_LabsSandbox = f;
       var _ = r("q1tI"),
         b = r.n(_),
         y = r("55Ip"),
@@ -543,7 +543,7 @@
                     ? e
                     : v.AppSelector,
                 a = null,
-                n = b.a.createElement(S.l, {
+                n = b.a.createElement(S.k, {
                   type: "text",
                   onChange: this.UpdateAppSuggestions,
                 });
@@ -788,7 +788,7 @@
                   })
                 );
               }
-              for (var i = [], s = 0, o = h.rgModelNames; s < o.length; s++) {
+              for (var i = [], s = 0, o = f.rgModelNames; s < o.length; s++) {
                 var l = o[s],
                   p = {
                     label: b.a.createElement("div", { key: l }, l),
@@ -799,7 +799,7 @@
               return b.a.createElement(
                 "div",
                 { className: v.LabsSimilarGames },
-                b.a.createElement(S.i, {
+                b.a.createElement(S.h, {
                   rgOptions: i,
                   onChange: this.OnModelChanged,
                   selectedOption: "default",
@@ -860,7 +860,7 @@
                 b.a.createElement(
                   "div",
                   { className: v.OperatorSelect },
-                  b.a.createElement(S.i, {
+                  b.a.createElement(S.h, {
                     rgOptions: e,
                     onChange: this.OnSelectedOperator,
                     selectedOption: "Plus",
@@ -989,7 +989,7 @@
               }
             }),
             (t.prototype.render = function () {
-              for (var e = [], t = 0, r = h.rgModelNames; t < r.length; t++) {
+              for (var e = [], t = 0, r = f.rgModelNames; t < r.length; t++) {
                 var a = r[t],
                   n = {
                     label: b.a.createElement("div", { key: a }, a),
@@ -1032,14 +1032,14 @@
                 m < d;
                 m++
               ) {
-                var f = this.similar_apps[m],
+                var h = this.similar_apps[m],
                   _ = this.similarity_scores[m];
-                u.push(b.a.createElement(w, { appid: f, score: _, key: f }));
+                u.push(b.a.createElement(w, { appid: h, score: _, key: h }));
               }
               return b.a.createElement(
                 "div",
                 { className: v.LabsMixer },
-                b.a.createElement(S.i, {
+                b.a.createElement(S.h, {
                   rgOptions: e,
                   onChange: this.OnModelChanged,
                   selectedOption: "default",
@@ -1084,7 +1084,7 @@
                 ((this.in_progress = !0),
                 (this.progress_iteration = 0),
                 (this.found_path = void 0),
-                h
+                f
                   .ComputePathBetweenApps(
                     this.app_start,
                     this.app_end,
@@ -1895,13 +1895,13 @@
             },
             [i]
           ),
-          f = _.useCallback(
+          h = _.useCallback(
             function (e) {
               return p(e.currentTarget.value);
             },
             [p]
           ),
-          h = _.useCallback(
+          f = _.useCallback(
             function (e) {
               return d(e.data);
             },
@@ -1942,27 +1942,27 @@
           _.createElement(
             S.b,
             { className: ee.ClusterConfig },
-            _.createElement(S.l, {
+            _.createElement(S.k, {
               label: "SteamID",
               type: "text",
               value: n,
               onChange: m,
               explainer: !b && "Invalid SteamID",
             }),
-            _.createElement(S.l, {
+            _.createElement(S.k, {
               label: "Clusters to return (Set to blank for all clusters)",
               type: "text",
               value: l,
-              onChange: f,
+              onChange: h,
             }),
-            _.createElement(S.i, {
+            _.createElement(S.h, {
               label: "Sort clusters by",
               tooltip: l
                 ? "This only sorts clusters that are loaded - you may need to load all clusters for best results"
                 : "",
               rgOptions: O,
               selectedOption: u,
-              onChange: h,
+              onChange: f,
             })
           ),
           b && !E && _.createElement(Y.a, null),
@@ -2155,21 +2155,21 @@
             requires_login: !0,
           },
         ],
-        fe = Object(o.h)("labs", "application_config"),
-        he = new s.a(o.d.WEBAPI_BASE_URL, fe.webapi_token);
+        he = Object(o.h)("labs", "application_config"),
+        fe = new s.a(o.d.WEBAPI_BASE_URL, he.webapi_token);
       function _e(e) {
         var t = b.a.useState(!1),
           r = t[0],
           i = t[1],
-          s = !!fe.webapi_token;
+          s = !!he.webapi_token;
         if (
           (Object(_.useEffect)(function () {
-            h.Init(), i(!0);
+            f.Init(), i(!0);
           }, []),
           !r)
         )
           return b.a.createElement("div", { className: v.App });
-        var o = { SteamInterface: he };
+        var o = { SteamInterface: fe };
         return b.a.createElement(
           "div",
           { className: v.App },

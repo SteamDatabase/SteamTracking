@@ -64,9 +64,9 @@
         d = a("TLQK"),
         u = a("opsS"),
         m = a("lkRc"),
-        b = a("WBba"),
-        p = a("2lpH"),
-        _ = a.n(p),
+        p = a("WBba"),
+        b = a("2lpH"),
+        _ = a.n(b),
         f = a("2vnA"),
         h = a("bxBv"),
         E = a("OU48"),
@@ -406,7 +406,7 @@
                       return (
                         (r = s.sent()),
                         (o = Object(n.a)(Object(n.a)({}, t), r)),
-                        (i = new b.a(m.d.WEBAPI_BASE_URL, o.webapi_token)),
+                        (i = new p.a(m.d.WEBAPI_BASE_URL, o.webapi_token)),
                         (a.s_LoyaltyAwardModalStore = new g(
                           i.GetServiceTransport()
                         )),
@@ -427,7 +427,7 @@
                 d = t.targetid,
                 u = t.ugcType,
                 m = t.initialSelectedReaction,
-                b = a.s_LoyaltyAwardModalStore;
+                p = a.s_LoyaltyAwardModalStore;
               if (!o) return null;
               if (n)
                 return r.createElement(
@@ -451,7 +451,7 @@
                     )
                   )
                 );
-              b.GetAwardConfigurations();
+              p.GetAwardConfigurations();
               return r.createElement(I, {
                 key: d,
                 targetid: d,
@@ -537,8 +537,8 @@
                 i = t.store,
                 s = t.onDismiss,
                 u = this.state,
-                b = u.selectedReaction,
-                p = u.ePhase,
+                p = u.selectedReaction,
+                b = u.ePhase,
                 _ = u.celebrate;
               if (!a) return null;
               var f,
@@ -567,7 +567,7 @@
                     n
                   );
                 })(E, n, o),
-                y = 0 === b ? null : E.get(b),
+                y = 0 === p ? null : E.get(p),
                 O = y ? y.points_cost : 0,
                 L = y ? y.points_transferred : 0,
                 G = "";
@@ -587,12 +587,12 @@
                 case 5:
                   G = Object(d.f)("#GrantAwardDescription_Comment");
               }
-              switch (p) {
+              switch (b) {
                 case R.SELECTING:
-                  var j = 0 === b || h.get(b),
+                  var j = 0 === p || h.get(p),
                     T = !g || g.greaterThanOrEqual(O),
                     I = r.createElement(
-                      S.q,
+                      S.p,
                       {
                         onClick: function () {
                           return e.setState({ ePhase: R.CONFIRM });
@@ -635,12 +635,12 @@
                         return r.createElement(P, {
                           key: t,
                           reaction: t,
-                          selected: t === b && !h.get(t),
+                          selected: t === p && !h.get(t),
                           cost: E.get(t).points_cost,
                           alreadyAwarded: h.get(t),
                           onClick: function () {
                             h.get(t) ||
-                              e.setState({ selectedReaction: t === b ? 0 : t });
+                              e.setState({ selectedReaction: t === p ? 0 : t });
                           },
                         });
                       })
@@ -692,12 +692,12 @@
                         {
                           className: Object(w.a)(
                             l.ConfirmContainer,
-                            p === R.CONFIRM && l.Visible
+                            b === R.CONFIRM && l.Visible
                           ),
                         },
                         r.createElement(N, {
                           className: l.ConfirmAwardImage,
-                          reactionType: b,
+                          reactionType: p,
                         }),
                         r.createElement(
                           "div",
@@ -708,7 +708,7 @@
                             r.createElement(
                               "span",
                               { className: l.AwardName },
-                              A(b)
+                              A(p)
                             )
                           )
                         ),
@@ -733,7 +733,7 @@
                         {
                           className: Object(w.a)(
                             l.LoadingContainer,
-                            p === R.SUBMITTING && l.Visible
+                            b === R.SUBMITTING && l.Visible
                           ),
                         },
                         r.createElement(D, null)
@@ -743,12 +743,12 @@
                         {
                           className: Object(w.a)(
                             l.SuccessContainer,
-                            p === R.DONE && l.Visible
+                            b === R.DONE && l.Visible
                           ),
                         },
                         r.createElement(N, {
                           className: l.ConfirmAwardImage,
-                          reactionType: b,
+                          reactionType: p,
                         }),
                         r.createElement(
                           "div",
@@ -767,16 +767,16 @@
                           onClick: function () {
                             return e.setState({ ePhase: R.SELECTING });
                           },
-                          disabled: p !== R.CONFIRM,
+                          disabled: b !== R.CONFIRM,
                         },
                         Object(d.f)("#GrantAward_Back")
                       ),
                       r.createElement(
-                        S.q,
+                        S.p,
                         {
                           onClick: this.GrantAward,
                           title: Object(d.f)("#GrantAward_SubmitTooltip"),
-                          disabled: p !== R.CONFIRM,
+                          disabled: b !== R.CONFIRM,
                         },
                         Object(d.f)("#GrantAwardNowButton")
                       )

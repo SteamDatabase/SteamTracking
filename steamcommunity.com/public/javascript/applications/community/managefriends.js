@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [102],
+  [100],
   {
     "8H1D": function (e, t, n) {
       "use strict";
@@ -27,35 +27,35 @@
     },
     Cmuy: function (e, t, n) {
       var a = {
-        "./managefriends_brazilian.json": ["QEZI", 103],
-        "./managefriends_bulgarian.json": ["GBrP", 104],
-        "./managefriends_czech.json": ["Inia", 105],
-        "./managefriends_danish.json": ["mpv8", 106],
-        "./managefriends_dutch.json": ["0HlU", 107],
-        "./managefriends_english.json": ["nsfA", 108],
-        "./managefriends_finnish.json": ["dEJT", 109],
-        "./managefriends_french.json": ["2FtL", 110],
-        "./managefriends_german.json": ["vp55", 111],
-        "./managefriends_greek.json": ["lJ4a", 112],
-        "./managefriends_hungarian.json": ["Gspr", 113],
-        "./managefriends_italian.json": ["o9/S", 114],
-        "./managefriends_japanese.json": ["1dTH", 115],
-        "./managefriends_koreana.json": ["eLcJ", 116],
-        "./managefriends_latam.json": ["JPfx", 117],
-        "./managefriends_norwegian.json": ["SdNd", 118],
-        "./managefriends_polish.json": ["9Isg", 119],
-        "./managefriends_portuguese.json": ["rkGD", 120],
-        "./managefriends_romanian.json": ["EAZq", 121],
-        "./managefriends_russian.json": ["9GLV", 122],
-        "./managefriends_sc_schinese.json": ["pKcs", 123],
-        "./managefriends_schinese.json": ["uYkB", 124],
-        "./managefriends_spanish.json": ["5gvD", 125],
-        "./managefriends_swedish.json": ["ADK/", 126],
-        "./managefriends_tchinese.json": ["lro4", 127],
-        "./managefriends_thai.json": ["Ezt8", 128],
-        "./managefriends_turkish.json": ["UONk", 129],
-        "./managefriends_ukrainian.json": ["B7eG", 130],
-        "./managefriends_vietnamese.json": ["EcJa", 131],
+        "./managefriends_brazilian.json": ["QEZI", 101],
+        "./managefriends_bulgarian.json": ["GBrP", 102],
+        "./managefriends_czech.json": ["Inia", 103],
+        "./managefriends_danish.json": ["mpv8", 104],
+        "./managefriends_dutch.json": ["0HlU", 105],
+        "./managefriends_english.json": ["nsfA", 106],
+        "./managefriends_finnish.json": ["dEJT", 107],
+        "./managefriends_french.json": ["2FtL", 108],
+        "./managefriends_german.json": ["vp55", 109],
+        "./managefriends_greek.json": ["lJ4a", 110],
+        "./managefriends_hungarian.json": ["Gspr", 111],
+        "./managefriends_italian.json": ["o9/S", 112],
+        "./managefriends_japanese.json": ["1dTH", 113],
+        "./managefriends_koreana.json": ["eLcJ", 114],
+        "./managefriends_latam.json": ["JPfx", 115],
+        "./managefriends_norwegian.json": ["SdNd", 116],
+        "./managefriends_polish.json": ["9Isg", 117],
+        "./managefriends_portuguese.json": ["rkGD", 118],
+        "./managefriends_romanian.json": ["EAZq", 119],
+        "./managefriends_russian.json": ["9GLV", 120],
+        "./managefriends_sc_schinese.json": ["pKcs", 121],
+        "./managefriends_schinese.json": ["uYkB", 122],
+        "./managefriends_spanish.json": ["5gvD", 123],
+        "./managefriends_swedish.json": ["ADK/", 124],
+        "./managefriends_tchinese.json": ["lro4", 125],
+        "./managefriends_thai.json": ["Ezt8", 126],
+        "./managefriends_turkish.json": ["UONk", 127],
+        "./managefriends_ukrainian.json": ["B7eG", 128],
+        "./managefriends_vietnamese.json": ["EcJa", 129],
       };
       function r(e) {
         if (!n.o(a, e))
@@ -345,7 +345,7 @@
                     )
                   ),
                   s.a.createElement(
-                    u.r,
+                    u.q,
                     {
                       style: {
                         width: "fit-content",
@@ -378,7 +378,7 @@
                     s.a.createElement(
                       "div",
                       { style: { width: "100%" } },
-                      s.a.createElement(u.m, {
+                      s.a.createElement(u.l, {
                         className: f.a.Input,
                         onKeyDown: this.OnSearchKeyDown,
                         value: this.state.input_search,
@@ -521,7 +521,7 @@
               return s.a.createElement(
                 "div",
                 null,
-                s.a.createElement(u.m, {
+                s.a.createElement(u.l, {
                   className: f.a.Input,
                   value: this.state.input_friend_code,
                   onChange: this.OnFriendCodeChange,
@@ -583,7 +583,7 @@
                         )
                       ),
                       s.a.createElement(
-                        u.r,
+                        u.q,
                         {
                           onClick: function () {
                             return e.OnActionClick(

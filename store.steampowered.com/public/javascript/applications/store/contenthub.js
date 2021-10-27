@@ -1013,8 +1013,8 @@
         })(),
         I = a("WKKl"),
         A = a("TyAF"),
-        L = a("EC67"),
-        k = a("Mgs7"),
+        k = a("EC67"),
+        L = a("Mgs7"),
         G = a("GiuM"),
         j = a("7G5R"),
         D = a("U9Ih"),
@@ -1027,7 +1027,7 @@
         R = a("qiKp"),
         z = a("exH9"),
         x = a("lhLD"),
-        Q = Object(L.i)(
+        Q = Object(k.i)(
           Object(A.a)(function (e) {
             var t = E.Get(),
               a = t.GetVisibleTabs(),
@@ -1215,7 +1215,7 @@
               )
           );
         }),
-        J = Object(L.i)(
+        J = Object(k.i)(
           Object(A.a)(function (e) {
             var t = E.Get(),
               a = t.GetFacetFilter();
@@ -1249,7 +1249,7 @@
             );
           })
         ),
-        q = Object(L.i)(
+        q = Object(k.i)(
           Object(A.a)(function (e) {
             var t = E.Get(),
               a = t.GetVisibleTabs(),
@@ -1313,7 +1313,7 @@
                 o.a.createElement(
                   "div",
                   { className: D.SuggestContainer },
-                  o.a.createElement(k.l, {
+                  o.a.createElement(L.k, {
                     type: "text",
                     value: c,
                     onChange: function (e) {
@@ -1327,7 +1327,7 @@
                   }),
                   o.a.createElement(B.J, null)
                 ),
-                o.a.createElement(k.i, {
+                o.a.createElement(L.h, {
                   rgOptions: p,
                   selectedOption: t.GetViewType(),
                   onChange: function (e) {

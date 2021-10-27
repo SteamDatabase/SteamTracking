@@ -1546,7 +1546,9 @@ button.DialogButton::before {
   transition: opacity 200ms ease-in-out;
 }
 button.DialogButton:disabled:hover::before,
-button.DialogButton:disabled::before {
+button.DialogButton:disabled::before,
+button.DialogButton.Disabled:hover::before,
+button.DialogButton.Disabled::before {
   opacity: 0;
 }
 button.DialogButton:hover::before {
@@ -1617,11 +1619,14 @@ button.DialogButton:hover {
   color: #fff;
 }
 button.DialogButton:disabled,
-button.DialogButton:disabled:hover {
+button.DialogButton:disabled:hover,
+button.DialogButton.Disabled,
+button.DialogButton.Disabled:hover {
   background: rgba(61, 67, 77, 0.35);
   color: #464d58;
   box-shadow: none;
   cursor: default;
+  pointer-events: none;
 }
 button.DialogButton.Small {
   line-height: 22px;
@@ -1652,7 +1657,8 @@ button.TextButton:focus {
   vertical-align: middle;
   margin-right: 2px;
 }
-.DialogButton:disabled .SVGIcon_Button {
+.DialogButton:disabled .SVGIcon_Button,
+.DialogButton.Disabled .SVGIcon_Button {
   opacity: 0.1;
 }
 .DialogOnOffToggle_NewUIContainer {

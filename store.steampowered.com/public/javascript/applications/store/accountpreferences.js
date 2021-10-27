@@ -19,7 +19,7 @@
         _ = r("vDqi"),
         f = r.n(_),
         m = r("TLQK"),
-        p = (function () {
+        u = (function () {
           function e(e) {
             (this.m_Preferences = e),
               (this.m_Preferences.content_customization &&
@@ -223,15 +223,15 @@
             e
           );
         })(),
-        u = r("TyAF"),
+        p = r("TyAF"),
         h = r("Mgs7"),
         g = r("nNQW"),
         y = r("exH9");
-      var P = Object(u.a)(function () {
+      var P = Object(p.a)(function () {
           var e = (function () {
               if (!n) {
                 var e = Object(l.h)("cookiepreferences", "application_config");
-                n = new p(e);
+                n = new u(e);
               }
               return n;
             })(),
@@ -459,7 +459,7 @@
             null
           );
         }),
-        b = Object(u.a)(function (e) {
+        b = Object(p.a)(function (e) {
           var t = e.settings,
             r = Object(c.useCallback)(
               function () {
@@ -483,7 +483,7 @@
                 { className: g.SectionDescription },
                 Object(m.f)("#CookiePref_Content_Desc")
               ),
-              s.a.createElement(h.p, {
+              s.a.createElement(h.o, {
                 onChange: r,
                 label: Object(m.f)("#CookiePref_Content_ToggleTitle"),
                 checked: t.GetRecentApps(),
@@ -492,7 +492,7 @@
             )
           );
         }),
-        k = Object(u.a)(function (e) {
+        k = Object(p.a)(function (e) {
           var t = e.settings,
             r = Object(c.useCallback)(
               function () {
@@ -516,7 +516,7 @@
                 { className: g.SectionDescription },
                 Object(m.f)("#CookiePref_ValveAnalytics_Desc")
               ),
-              s.a.createElement(h.p, {
+              s.a.createElement(h.o, {
                 onChange: r,
                 label: Object(m.f)("#CookiePref_ValveAnalytics_ToggleTitle"),
                 checked: t.GetImpressions(),
@@ -527,7 +527,7 @@
             )
           );
         }),
-        d = Object(u.a)(function (e) {
+        d = Object(p.a)(function (e) {
           var t = e.settings,
             r = Object(c.useCallback)(
               function () {
@@ -551,7 +551,7 @@
                 { className: g.SectionDescription },
                 Object(m.f)("#CookiePref_GoogleAnalytics_Desc")
               ),
-              s.a.createElement(h.p, {
+              s.a.createElement(h.o, {
                 onChange: r,
                 label: Object(m.f)("#CookiePref_GoogleAnalytics_ToggleLabel"),
                 checked: t.GetGoogleAnalytics(),
@@ -562,7 +562,7 @@
             )
           );
         }),
-        C = Object(u.a)(function (e) {
+        C = Object(p.a)(function (e) {
           var t = e.settings,
             r = Object(c.useCallback)(
               function () {
@@ -598,19 +598,19 @@
                 { className: g.SectionDescription },
                 Object(m.f)("#CookiePref_ThirdParty_Desc")
               ),
-              s.a.createElement(h.p, {
+              s.a.createElement(h.o, {
                 onChange: r,
                 label: Object(m.f)("#CookiePref_YouTube_Title"),
                 checked: t.GetYouTube(),
                 description: Object(m.f)("#CookiePref_YouTube_Desc"),
               }),
-              s.a.createElement(h.p, {
+              s.a.createElement(h.o, {
                 onChange: n,
                 label: Object(m.f)("#CookiePref_Vimeo_Title"),
                 checked: t.GetVimeo(),
                 description: Object(m.f)("#CookiePref_Vimeo_Desc"),
               }),
-              s.a.createElement(h.p, {
+              s.a.createElement(h.o, {
                 onChange: a,
                 label: Object(m.f)("#CookiePref_Sketchfab_Title"),
                 checked: t.GetSketchfab(),
@@ -619,7 +619,7 @@
             )
           );
         }),
-        v = Object(u.a)(function (e) {
+        v = Object(p.a)(function (e) {
           var t = e.settings,
             r = Object(c.useCallback)(
               function () {
@@ -643,7 +643,7 @@
                 { className: g.SectionDescription },
                 Object(m.f)("#PrivacySettings_Marketing_Desc")
               ),
-              s.a.createElement(h.p, {
+              s.a.createElement(h.o, {
                 onChange: r,
                 label: Object(m.f)("#PrivacySettings_UTM_ToggleLabel"),
                 checked: t.GetUTMEnabled(),
