@@ -1,0 +1,418 @@
+.login_LoginDialog_2Hj3a {
+  background-color: #101114;
+  background-image: linear-gradient(to bottom, #101114, #1f2127);
+  min-height: 512px;
+  position: relative;
+}
+.login_AccountPasswordPanel_2LBKJ
+  .DialogCheckbox_Container
+  .DialogToggle_Label {
+  color: #969696;
+  font-size: 12px;
+  line-height: 22px;
+  font-weight: 300;
+}
+.login_LoginPanelBackground_3Xp1H {
+  position: absolute;
+  overflow: hidden;
+  pointer-events: none;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.login_LoginPanelBackground_3Xp1H .SVGIcon_SteamLogo {
+  pointer-events: none;
+  position: absolute;
+  bottom: -128px;
+  left: -64px;
+  opacity: 0.02;
+  width: 800px;
+  height: 800px;
+  max-width: 500px;
+  max-height: 500px;
+}
+.login_LoginPanelContent_UB5zI {
+  padding: 32px;
+}
+.login_ErrorMessage_3oDNF {
+  user-select: none;
+  color: #ff9696;
+  font-size: 12px;
+  margin: 0px;
+}
+.login_AccountPasswordForm_2Mp7X {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+.login_AccountPasswordForm_2Mp7X .DialogInputLabelGroup {
+  margin-bottom: 16px;
+}
+.login_AccountPasswordForm_2Mp7X .DialogTextInputBase {
+  font-size: 24px;
+  height: 24px;
+  width: 100%;
+  max-width: 398px;
+  color: #bfc6d4;
+  box-sizing: content-box;
+  background: #32353c;
+}
+@media screen and (max-width: 700px) {
+  .login_AccountPasswordForm_2Mp7X .DialogTextInputBase {
+    font-size: 18px;
+    height: 20px;
+    width: 70vw;
+  }
+}
+.login_AuthenticationPanel_ApHu0
+  .login_AccountPasswordForm_2Mp7X
+  .DialogTextInputBase {
+  text-transform: uppercase;
+}
+.login_AccountPasswordForm_2Mp7X .DialogTextInputBase:hover {
+  background: #3a3e46;
+}
+.login_AccountPasswordForm_2Mp7X .DialogTextInputBase:focus {
+  background: #464a53;
+}
+.login_AccountPasswordForm_2Mp7X
+  .login_AccountNameLabel_1WzDF.login_MedName_3V1uw {
+  font-size: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.login_AccountPasswordForm_2Mp7X
+  .login_AccountNameLabel_1WzDF.login_LargeName_142CN {
+  font-size: 14px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.login_AccountPasswordForm_2Mp7X .login_PasswordDots_1Xbz8 {
+  font-size: 36px;
+  font-family: monospace;
+}
+.login_AccountPasswordForm_2Mp7X .login_PasswordDots_1Xbz8.login_MedPass_2pUx4 {
+  font-size: 32px;
+}
+.login_AccountPasswordForm_2Mp7X
+  .login_PasswordDots_1Xbz8.login_LargePass_3268n {
+  font-size: 19px;
+}
+@media screen and (max-width: 700px) {
+  .login_AccountPasswordForm_2Mp7X .login_PasswordDots_1Xbz8,
+  .login_AccountPasswordForm_2Mp7X
+    .login_PasswordDots_1Xbz8.login_MedPass_2pUx4,
+  .login_AccountPasswordForm_2Mp7X
+    .login_PasswordDots_1Xbz8.login_LargePass_3268n {
+    font-size: 19px;
+  }
+}
+.login_AccountPasswordForm_2Mp7X input:-webkit-autofill,
+.login_AccountPasswordForm_2Mp7X input:-webkit-autofill:hover,
+.login_AccountPasswordForm_2Mp7X
+  input:-webkit-autofill:focus
+  textarea:-webkit-autofill,
+.login_AccountPasswordForm_2Mp7X
+  textarea:-webkit-autofill:hover
+  textarea:-webkit-autofill:focus,
+.login_AccountPasswordForm_2Mp7X select:-webkit-autofill,
+.login_AccountPasswordForm_2Mp7X select:-webkit-autofill:hover,
+.login_AccountPasswordForm_2Mp7X select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #d3eaeb;
+  -webkit-box-shadow: 0 0 0px 100px #53523f inset;
+  box-shadow: 0 0 0px 100px #53523f inset;
+}
+.login_AccountPasswordForm_2Mp7X .DialogButton.Primary {
+  height: 44px;
+  width: 50%;
+  align-self: flex-end;
+}
+.login_AccountFieldHeader_2bLG3 {
+  margin-top: 10px;
+}
+.login_PasswordFieldHeader_a3a45 {
+  margin-top: 10px;
+}
+.login_NeedHelpLink_1Mi1l {
+  color: #969696;
+  margin: 10px 0px 20px 0px;
+  font-size: 12px;
+  text-decoration: underline;
+  text-decoration-color: #4b4b4b;
+  transition: all 0.21s ease-in-out;
+}
+.login_NeedHelpLink_1Mi1l.login_NeedHelpHighlight_2RCec {
+  color: #ff7300;
+  text-decoration-color: #8f5100;
+}
+.login_NeedHelpLink_1Mi1l:hover {
+  color: #fff;
+  text-decoration-color: #b6b6b6;
+}
+.login_NeedHelpLink_1Mi1l:visited {
+  color: #969696;
+}
+.login_CreateAccountLink_x0Czn a {
+  color: #bfc6d4;
+  text-decoration: underline;
+  text-decoration-color: #4b4b4b;
+}
+.login_CreateAccountLink_x0Czn a:visited {
+  color: #bfc6d4;
+}
+.login_CreateAccountLink_x0Czn a:hover {
+  color: #fff;
+  text-decoration-color: #b6b6b6;
+}
+.login_LoginCreateSeperator__TANI {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: 16px;
+  height: 24px;
+}
+.login_RefreshCaptchaText_1_C2P {
+  color: #67c1f5;
+  margin: 10px 0px 20px 0px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.login_RefreshCaptchaText_1_C2P:visited {
+  color: #67c1f5;
+}
+.login_SigningInAccountName_2Tg37,
+.login_SigninTitle_xJ2mR {
+  user-select: none;
+  font-size: 28px;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #bfc6d4;
+  margin-top: 28px;
+  margin-bottom: 12px;
+}
+@media screen and (max-width: 700px) {
+  .login_SigningInAccountName_2Tg37,
+  .login_SigninTitle_xJ2mR {
+    margin-top: 0px;
+  }
+}
+.login_RememberMeCheck_1caeW {
+  margin-top: -8px;
+}
+.login_RememberMeCheck_1caeW._DialogLayout {
+  padding-left: 0px;
+}
+.login_RememberMeCheck_1caeW._DialogLayout .DialogCheckbox {
+  background: #32353c;
+}
+.login_RememberMeCheck_1caeW._DialogLayout:hover
+  > .DialogCheckbox:not(.Disabled),
+.login_RememberMeCheck_1caeW._DialogLayout:focus
+  > .DialogCheckbox:not(.Disabled) {
+  background: #3a3e46;
+}
+.login_SteamUpsellContainer_2Ge6a {
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.login_SteamUpsellContainer_2Ge6a div {
+  width: fit-content;
+  align-self: center;
+}
+.login_SteamUpsell_3r5LW {
+  color: #969696;
+  font-size: 12px;
+}
+.login_CaptchaContainer_1waDj .login_CaptchaBlock_1ltax {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid dotted;
+}
+.login_CaptchaContainer_1waDj
+  .login_CaptchaBlock_1ltax
+  .login_CaptchaImageAndInput_3HUT2 {
+  display: flex;
+  flex-direction: column;
+}
+.login_CaptchaContainer_1waDj
+  .login_CaptchaBlock_1ltax
+  .login_ErrorMessage_3oDNF {
+  position: relative;
+  padding-left: 16px;
+  margin: 0;
+}
+.login_CaptchaContainer_1waDj .login_CaptchaImageBox_dzf2f {
+  border: 1px solid #000;
+  border-radius: 3px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  overflow: hidden;
+  width: 203px;
+  height: 37px;
+}
+.login_CaptchaContainer_1waDj .login_CaptchaImage_3I-c1 {
+  margin-top: -2px;
+  margin-left: -2px;
+}
+.login_CaptchaContainer_1waDj .login_CaptchaInput_FnbII {
+  text-transform: uppercase;
+  color: #6dc7fb;
+  letter-spacing: 10px;
+  max-width: 159px;
+  background-color: #2a3649;
+  padding: 6px 14px 6px 30px;
+  font-family: monospace;
+  font-size: 28px;
+  border: 1px solid #000;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top-width: 0px;
+  overflow: hidden;
+  box-shadow: 0px 6px 16px 2px rgba(0, 0, 0, 0.75) inset;
+}
+.login_CaptchaContainer_1waDj .login_CaptchaInput_FnbII:focus {
+  padding: 6px 14px 6px 30px;
+}
+.login_AuthenticationPanel_ApHu0 .DialogLabel {
+  margin-top: 16px;
+  margin-bottom: 0px;
+}
+.login_AuthenticationPanel_ApHu0 .DialogBodyText {
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+.login_AuthenticationPanel_ApHu0 .DialogBodyText .SVGIcon_Caution {
+  width: 20px;
+  height: 20px;
+  margin-bottom: -5px;
+}
+.login_AuthenticationPanel_ApHu0
+  .DialogBodyText
+  .SVGIcon_Caution
+  .triangle
+  path {
+  fill: #bd6500;
+}
+.login_AuthenticationPanel_ApHu0 .login_NeedHelpLink_1Mi1l {
+  margin-top: 32px;
+  display: block;
+}
+.login_AuthenticatorInputcontainer_2_2v6 {
+  position: relative;
+  height: 180px;
+}
+.login_AuthenticatorInputcontainer_2_2v6 .SVGIcon_LargeMobilePhone {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 180px;
+  width: 90px;
+  filter: brightness(0.6);
+}
+.login_AuthenticatorInputcontainer_2_2v6 .SVGIcon_Envelope {
+  position: absolute;
+  top: -22px;
+  left: 0px;
+  height: 92px;
+  width: 92px;
+  filter: brightness(0.6);
+}
+.login_AuthenticatorInputcontainer_2_2v6 .login_AccountPasswordForm_2Mp7X {
+  z-index: 2;
+  position: relative;
+  margin-left: 24px;
+  margin-bottom: 0px;
+  height: 100%;
+}
+.login_AuthenticatorInputcontainer_2_2v6
+  .login_AccountPasswordForm_2Mp7X
+  .DialogButton.Primary {
+  width: calc(50% + 12px);
+  position: absolute;
+  bottom: 0px;
+}
+.login_AuthenticatorInputcontainer_2_2v6 .DialogInputLabelGroup {
+  margin-top: 10px;
+}
+.login_SigningInAccountName_2Tg37 {
+  text-transform: none;
+  color: #3ea5f1;
+  margin-top: -6px;
+  letter-spacing: 1px;
+}
+.login_Highlight_1tsys {
+  color: #dde1e4;
+  font-style: italic;
+}
+.login_LoginComplete_2aP2X {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.localdateandtime_DateAndTime_2V6GL,
+.localdateandtime_DateAndTimeInline_HZ6b2 {
+  display: inline-flex;
+  white-space: nowrap;
+}
+.localdateandtime_DateAndTime_2V6GL span.localdateandtime_At_Fn5EU,
+.localdateandtime_DateAndTimeInline_HZ6b2 span.localdateandtime_At_Fn5EU {
+  margin: 0px 4px;
+  color: #6c767f;
+}
+.localdateandtime_DateAndTimeInline_HZ6b2 {
+  display: inline-flex;
+}
+.localdateandtime_ActiveEvent_rT7Ek {
+  color: #a3cf06;
+  display: flex;
+}
+.localdateandtime_ActiveEvent_rT7Ek .localdateandtime_ActiveEventCallOut_2pJft {
+  background: #a3cf06;
+  font-size: 11px;
+  color: #222;
+  padding: 0px 5px;
+  border-radius: 2px;
+  display: table;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-right: 4px;
+  margin-top: 1px;
+}
+.localdateandtime_RightSideTitles_4LAnP {
+  font-size: 12px;
+  font-weight: 200;
+  color: #b1b4b9;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+.localdateandtime_DateToolTip_2E5LH {
+  z-index: 2000;
+  padding: 3px 8px;
+  border-radius: 2px;
+  background-color: #5e6068;
+  color: #fff;
+  text-transform: uppercase;
+  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.localdateandtime_ShortDateAndTime_MBkkh {
+  margin: 0px 4px;
+  text-transform: initial;
+  color: #868f98;
+  letter-spacing: normal;
+}
+.localdateandtime_ShortDateRange_3CN6I {
+  display: flex;
+}
+@media screen and (max-width: 500px) {
+  .localdateandtime_ShortDateRange_3CN6I {
+    flex-direction: column;
+  }
+}
+.localdateandtime_ShortDateRange_3CN6I .localdateandtime_RightSideTitles_4LAnP {
+  display: flex;
+  flex-wrap: wrap;
+}
