@@ -28935,20 +28935,23 @@
         return (
           Object(o.d)(t, e),
           (t.prototype.componentDidMount = function () {
-            var e = new Set(),
-              t = new Array(),
-              a = new Array();
-            this.props.saleSection.capsules.forEach(function (o) {
-              o &&
-                ("bundle" === o.type
-                  ? t.push(o.id)
-                  : "sub" === o.type
-                  ? a.push(o.id)
-                  : e.add(o.id));
-            }),
-              ve.a.EnsureAppInfoForAppIDs(new Set(e)),
-              Se.a.LoadBundleInfo(t),
-              _e.b.LoadPackageInfo(a),
+            var e,
+              t = new Set(),
+              a = new Array(),
+              o = new Array();
+            null === (e = this.props.saleSection.capsules) ||
+              void 0 === e ||
+              e.forEach(function (e) {
+                e &&
+                  ("bundle" === e.type
+                    ? a.push(e.id)
+                    : "sub" === e.type
+                    ? o.push(e.id)
+                    : t.add(e.id));
+              }),
+              ve.a.EnsureAppInfoForAppIDs(new Set(t)),
+              Se.a.LoadBundleInfo(a),
+              _e.b.LoadPackageInfo(o),
               I.d.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
                 null,
                 this.props.saleSection.events
@@ -30634,9 +30637,13 @@
                           d.createElement(ge.a, {
                             options: i,
                             value: i.find(function (e) {
+                              var t;
                               return (
                                 e.value ===
-                                r.GetEventModel().GetContentHubCategory()
+                                (null === (t = r.GetEventModel()) ||
+                                void 0 === t
+                                  ? void 0
+                                  : t.GetContentHubCategory())
                               );
                             }),
                             onChange: function (e) {
@@ -30666,9 +30673,14 @@
                           d.createElement(ge.a, {
                             options: n,
                             value: n.find(function (e) {
+                              var t;
                               return (
                                 e.value ===
-                                r.GetEventModel().GetContentHubTag().toString()
+                                (null ===
+                                  (t = r.GetEventModel().GetContentHubTag()) ||
+                                void 0 === t
+                                  ? void 0
+                                  : t.toString())
                               );
                             }),
                             onChange: function (e) {

@@ -14239,7 +14239,7 @@
               key: d.id,
               mapSectionLists: u,
               section: d,
-              nCapsulesPerPage: i,
+              nCapsulesPerPage: i || 4,
             });
           }
           return s.a.createElement(
@@ -14250,7 +14250,7 @@
                 key: e.id,
                 mapSectionLists: u,
                 section: e,
-                nCapsulesPerPage: i,
+                nCapsulesPerPage: i || 4,
               });
             })
           );

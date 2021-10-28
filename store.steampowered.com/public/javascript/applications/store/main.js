@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6855817";
+var CLSTAMP = "6859483";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [40],
   {
@@ -1873,9 +1873,6 @@ var CLSTAMP = "6855817";
               {
                 ContentHubHome: function () {
                   return "/:prefix(tags|category|genre|videos|weekly|vr|software|macos|linux|freetoplay|earlyaccess|pccafe|demos|specials|remoteplay_phone|remoteplay_tablet|remoteplay_tv|remoteplay_together|games|adultonly|soundtracks|controller)";
-                },
-                ContentHubSalePage: function () {
-                  return "/contenthubsalepage/:category";
                 },
               }
             ),
@@ -52523,7 +52520,7 @@ var CLSTAMP = "6855817";
               key: p.id,
               mapSectionLists: u,
               section: p,
-              nCapsulesPerPage: o,
+              nCapsulesPerPage: o || 4,
             });
           }
           return a.a.createElement(
@@ -52534,7 +52531,7 @@ var CLSTAMP = "6855817";
                 key: e.id,
                 mapSectionLists: u,
                 section: e,
-                nCapsulesPerPage: o,
+                nCapsulesPerPage: o || 4,
               });
             })
           );
@@ -65546,16 +65543,17 @@ var CLSTAMP = "6855817";
         ye = s.a.lazy(function () {
           return Promise.resolve().then(n.bind(null, "4sqd"));
         }),
-        Se = s.a.lazy(function () {
-          return n.e(5).then(n.bind(null, "j6A3"));
-        }),
+        Se =
+          (s.a.lazy(function () {
+            return n.e(5).then(n.bind(null, "j6A3"));
+          }),
+          s.a.lazy(function () {
+            return n.e(3).then(n.bind(null, "byIC"));
+          })),
         Me = s.a.lazy(function () {
-          return n.e(3).then(n.bind(null, "byIC"));
-        }),
-        Oe = s.a.lazy(function () {
           return n.e(104).then(n.bind(null, "AFtM"));
         }),
-        Ee = (function (e) {
+        Oe = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -65875,12 +65873,6 @@ var CLSTAMP = "6855817";
                         }),
                         s.a.createElement(P.b, {
                           path: m.b.ContentHubHome(),
-                          render: function () {
-                            return s.a.createElement(Se, null);
-                          },
-                        }),
-                        s.a.createElement(P.b, {
-                          path: m.b.ContentHubSalePage(),
                           render: function (e) {
                             var t = e.match.params.category;
                             return s.a.createElement(ee, {
@@ -65899,14 +65891,14 @@ var CLSTAMP = "6855817";
                         s.a.createElement(P.b, {
                           path: m.b.AccountPreferences(),
                           render: function (e) {
-                            return s.a.createElement(Me, Object(r.a)({}, e));
+                            return s.a.createElement(Se, Object(r.a)({}, e));
                           },
                         }),
                         s.a.createElement(P.b, {
                           exact: !0,
                           path: m.b.SummerSale2021Story(),
                           render: function (e) {
-                            return s.a.createElement(Oe, null);
+                            return s.a.createElement(Me, null);
                           },
                         }),
                         s.a.createElement(P.b, null, !1)
@@ -65922,11 +65914,11 @@ var CLSTAMP = "6855817";
             t
           );
         })(s.a.Component),
-        Ce = n("WBba"),
-        Ae = n("uobO");
+        Ee = n("WBba"),
+        Ce = n("uobO");
       n("Mgs7"), n("6Y59"), n("bDQf"), n("gCFW"), n("SRyh");
       n("xnZ7"), n("idvb"), n("M1X1");
-      function we(e) {
+      function Ae(e) {
         return Object(r.b)(this, void 0, void 0, function () {
           var t, a, i, o, s, c, l, u, d;
           return Object(r.e)(this, function (m) {
@@ -65987,19 +65979,19 @@ var CLSTAMP = "6855817";
                 e.sent(), (e.label = 2);
               case 2:
                 return (
-                  Object(Ae.a)().Init(
+                  Object(Ce.a)().Init(
                     "Store",
                     CLSTAMP,
-                    new Ce.a(u.d.WEBAPI_BASE_URL).GetServiceTransport()
+                    new Ee.a(u.d.WEBAPI_BASE_URL).GetServiceTransport()
                   ),
-                  [4, we(u.d.LANGUAGE)]
+                  [4, Ae(u.d.LANGUAGE)]
                 );
               case 3:
                 return (
                   e.sent(),
                   document.getElementById("application_root")
                     ? i.a.render(
-                        s.a.createElement(Ee),
+                        s.a.createElement(Oe),
                         document.getElementById("application_root")
                       )
                     : console.error(
