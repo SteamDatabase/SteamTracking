@@ -21265,19 +21265,6 @@ hr.VO {
 .partnersiteappsearch_ResultRow_1QyQu:last-child {
   border-bottom: none;
 }
-.partnersiteappsearch_ResultRow_1QyQu
-  .partnersiteappsearch_AvatarImageCtn_3h9l9 {
-  width: 64px;
-  height: 30px;
-  background: rgba(0, 0, 0, 0.2);
-}
-.partnersiteappsearch_ResultRow_1QyQu
-  .partnersiteappsearch_AvatarImageCtn_3h9l9
-  .partnersiteappsearch_AvatarImage_PBBKP {
-  width: auto;
-  height: 30px;
-  flex-shrink: 0;
-}
 .partnersiteappsearch_ResultRow_1QyQu .partnersiteappsearch_GameName_353Qh {
   color: #fff;
   padding: 0px 8px;
@@ -21293,6 +21280,19 @@ hr.VO {
   background: #add8e6;
   color: #000;
   padding: 0 10px;
+}
+.partnersiteappsearch_AvatarImageCtn_3h9l9 {
+  width: 64px;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.partnersiteappsearch_AvatarImageCtn_3h9l9
+  .partnersiteappsearch_AvatarImage_PBBKP {
+  width: auto;
+  height: 30px;
+  flex-shrink: 0;
+  font-size: 9px;
+  line-height: 11px;
 }
 .dailydealadmincreatenew_DealCapImg_29Nw3 {
   display: block;
@@ -21343,6 +21343,22 @@ hr.VO {
 .dailydealadmincreatenew_AssociatedPartnerCtn_1wLwc {
   margin-bottom: 24px;
 }
+.dailydealadmincreatenew_FeatureSelectCtn_RhuUZ .Shared_Radio_Group {
+  flex-direction: column;
+}
+.dailydealadmincreatenew_FeatureSelectCtn_RhuUZ
+  .Shared_Radio_Group
+  .RadioButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+.dailydealadmincreatenew_FeatureSelectCtn_RhuUZ
+  .Shared_Radio_Group
+  .RadioButton
+  .dailydealadmincreatenew_GameName_3wpQY {
+  margin-left: 4px;
+}
 .dailydealadmincreatenew_SelectInvitedAppRow_SxB7v img {
   width: 150px;
   height: auto;
@@ -21373,6 +21389,31 @@ hr.VO {
   .dailydealadmincreatenew_NormalPrice_3WNQa {
   text-decoration: line-through;
   font-size: 12px;
+}
+.dailydealdiscounts_HoverObject_2x-6c {
+  background: #2e3138;
+  color: #fff;
+  padding: 16px;
+  box-sizing: border-box;
+}
+.dailydealdiscounts_HoverCtn_3cend {
+  border-radius: 3px;
+  padding: 5px;
+  margin-right: auto;
+}
+.dailydealdiscounts_HoverCtn_3cend:hover {
+  background: #1c95ff;
+}
+.dailydealdiscounts_DiscountEventName_2H6CR {
+  font-size: 22px;
+}
+.dailydealdiscounts_DiscountDates_3fhuW {
+  font-size: 12px;
+}
+.dailydealdiscounts_DiscountedPackageList_2ixiP {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #7c7e83;
 }
 .dailydealeditor_PageTitle_2bGMg {
   font-size: 24px;
@@ -21437,6 +21478,10 @@ hr.VO {
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 8px;
+  box-sizing: border-box;
+  margin-top: 16px;
 }
 .dailydealeditor_ButtonRow_2fO-C .dailydealeditor_ButtonRowSpacer_3PObg {
   flex-grow: 1;
@@ -21458,8 +21503,14 @@ hr.VO {
   background-color: #2e3138;
   padding: 12px;
   box-sizing: border-box;
-  margin-right: 8px;
   border-radius: 4px;
+}
+.dailydealeditor_DDAdminColums_1KdA5 .dailydealeditor_Column_3tD9K:first-child {
+  margin-right: 8px;
+}
+.dailydealeditor_DiscountEventCtn_2Pk6W {
+  background-color: #2e3138;
+  margin-top: 8px;
 }
 @keyframes shared_icons_SpinnerSpokeFade_33nZz {
   0% {
@@ -21562,6 +21613,7 @@ hr.VO {
   color: #a4d007;
   text-decoration: none;
   font-size: 17px;
+  line-height: 19px;
   transition: all 0.3s ease;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0);
   position: relative;
@@ -21594,6 +21646,7 @@ hr.VO {
   background: rgba(0, 0, 0, 0.4);
   color: #7b87a3;
   font-size: 12px;
+  line-height: 12px;
 }
 .dailydealcalendar_DailyDealCtn_2XgAJ .dailydealcalendar_NotesIcon_1t0Rh {
   height: 16px;
