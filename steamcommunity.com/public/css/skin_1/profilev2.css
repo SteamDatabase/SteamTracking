@@ -284,6 +284,47 @@ body.PurpleTheme {
     --btn-outline: #603689;
 }
 
+/* Halloween 2021 */
+body.GreenSlimeTheme {
+	--gradient-right: rgb(254 249 156 / 30%);
+    --gradient-left: rgb(98 145 152 / 34%);
+    --gradient-background: rgb(35 58 26 / 58%);
+    --gradient-background-right: rgb(0 0 0);
+    --gradient-background-left: rgb(0 0 0);
+    --color-showcase-header: rgb(27 38 18);
+    --gradient-showcase-header-left: rgb(113 141 46);
+    --btn-background: rgb(33 45 20);
+    --btn-background-hover: rgb(80 101 35);
+    --btn-outline: rgb(86 109 37);
+}
+
+body.GhostTheme {
+	--gradient-right: rgb(82 64 83 / 52%);
+    --gradient-left: rgb(3 3 4 / 46%);
+    --gradient-background: rgb(93 123 137 / 32%);
+    --gradient-background-right: rgb(72 31 46);
+    --gradient-background-left: rgb(0 0 0);
+    --color-showcase-header: rgb(69 32 46);
+    --gradient-showcase-header-left: rgb(93 123 136);
+    --btn-background: rgb(93 122 135);
+    --btn-background-hover: rgb(112 151 169);
+    --btn-outline: rgb(126 126 126 / 27%);
+}
+
+body.ColorNightmareTheme {
+	--gradient-right: rgb(58 183 180 / 51%);
+    --gradient-left: rgb(243 106 9 / 25%);
+    --gradient-background: rgb(0 0 0 / 50%);
+    --gradient-background-right: rgb(0 0 0);
+    --gradient-background-left: rgb(9 243 217 / 33%);
+    --color-showcase-header: rgb(57 144 152 / 61%);
+    --gradient-showcase-header-left: rgb(198 96 50);
+    --btn-background: rgb(45 114 123);
+    --btn-background-hover: rgb(196 96 50);
+    --btn-outline: rgb(196 96 50);
+}
+
+
 div.profile_page {
 	position: relative;
 	min-width: 950px;

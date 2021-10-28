@@ -71,6 +71,9 @@
         BurntOrangeTheme: "profilethemecolors_BurntOrangeTheme_37pNJ",
         FlatGreyTheme: "profilethemecolors_FlatGreyTheme_2AFCa",
         PurpleTheme: "profilethemecolors_PurpleTheme_KM8jQ",
+        GreenSlimeTheme: "profilethemecolors_GreenSlimeTheme_FdC8c",
+        GhostTheme: "profilethemecolors_GhostTheme_1JZpe",
+        ColorNightmareTheme: "profilethemecolors_ColorNightmareTheme_2LNsd",
       };
     },
     "9g5v": function (e, t, r) {
@@ -817,7 +820,7 @@
                     n.createElement(
                       "div",
                       { className: f },
-                      n.createElement(F, { community_data: u, persona: t }),
+                      n.createElement(T, { community_data: u, persona: t }),
                       n.createElement(
                         "div",
                         { className: j.a.miniProfileHeader },
@@ -831,7 +834,7 @@
                               Object(v.c)(t)
                             ),
                           },
-                          n.createElement(T, {
+                          n.createElement(F, {
                             persona: this.props.persona,
                             community_data: u,
                           }),
@@ -920,7 +923,7 @@
             (t = Object(i.c)([f.a], t))
           );
         })(n.Component),
-        F = function (e) {
+        T = function (e) {
           var t = e.community_data,
             r = e.persona;
           if (t && t.profile_background) {
@@ -972,7 +975,7 @@
             })
           );
         },
-        T = function (e) {
+        F = function (e) {
           var t = e.persona,
             r = e.community_data,
             a =
@@ -3994,7 +3997,7 @@
                     null,
                     Object(_.f)("#Profile_Edit_Avatar_YourAvatars")
                   ),
-                  n.createElement(Fe, {
+                  n.createElement(Te, {
                     rgAnimatedAvatars: this.m_rgAvatars,
                     OGGAvatars: a,
                     AvatarHistory: o,
@@ -4152,7 +4155,7 @@
             })
           );
         },
-        Fe = Object(f.a)(function (e) {
+        Te = Object(f.a)(function (e) {
           var t = e.rgAnimatedAvatars,
             r = e.OGGAvatars,
             a = e.AvatarHistory,
@@ -4164,7 +4167,7 @@
           return n.createElement(
             n.Fragment,
             null,
-            n.createElement(Te, { rgAnimatedAvatars: t, onSelected: o }),
+            n.createElement(Fe, { rgAnimatedAvatars: t, onSelected: o }),
             n.createElement(ke, { rgAvatars: l, onSelected: c }),
             n.createElement(ze, {
               rgAvatars: m,
@@ -4179,7 +4182,7 @@
               })
           );
         }),
-        Te = function (e) {
+        Fe = function (e) {
           var t = e.rgAnimatedAvatars,
             r = e.onSelected;
           return t.length
@@ -6105,7 +6108,7 @@
                   onItemSelected: function (e) {
                     t.SetFavoriteBadge(e);
                   },
-                  ItemComponent: Ft,
+                  ItemComponent: Tt,
                 }),
                 n.createElement(Ke, {
                   onSave: this.CommitFavoriteBadge,
@@ -6170,7 +6173,7 @@
         Nt = function (e) {
           return [e.GetName(), e.GetGameName()];
         },
-        Ft = function (e) {
+        Tt = function (e) {
           var t = e.Item,
             r = e.onSelected,
             i = t;
@@ -6194,7 +6197,7 @@
             )
           );
         },
-        Tt = r("EWA5"),
+        Ft = r("EWA5"),
         kt = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
@@ -6295,15 +6298,15 @@
           e.children;
           return n.createElement(
             "div",
-            { className: Object(y.a)(Tt.Group, Tt.FavoriteGroup) },
+            { className: Object(y.a)(Ft.Group, Ft.FavoriteGroup) },
             n.createElement("img", {
-              className: Tt.GroupAvatar,
+              className: Ft.GroupAvatar,
               src: t.GetAvatarURL("full"),
             }),
             n.createElement(
               "div",
-              { className: Tt.GroupDetails },
-              n.createElement("div", { className: Tt.GroupName }, t.GetName())
+              { className: Ft.GroupDetails },
+              n.createElement("div", { className: Ft.GroupName }, t.GetName())
             )
           );
         },
@@ -6316,16 +6319,16 @@
             i = t;
           return n.createElement(
             "div",
-            { className: Object(y.a)(Tt.Group, Tt.GroupOption), onClick: r },
+            { className: Object(y.a)(Ft.Group, Ft.GroupOption), onClick: r },
             n.createElement("img", {
-              className: Tt.GroupAvatar,
+              className: Ft.GroupAvatar,
               src: i.GetAvatarURL("full"),
               loading: "lazy",
             }),
             n.createElement(
               "div",
-              { className: Tt.GroupDetails },
-              n.createElement("div", { className: Tt.GroupName }, i.GetName())
+              { className: Ft.GroupDetails },
+              n.createElement("div", { className: Ft.GroupName }, i.GetName())
             )
           );
         },
@@ -7911,7 +7914,7 @@
             (t.prototype.render = function () {
               var e = this.props.ProfileItems;
               return e.BHasAnyProfileModifiers()
-                ? n.createElement(Fr, {
+                ? n.createElement(Tr, {
                     active: this.state.bDialogActive,
                     ProfileItems: e,
                     onDismiss: this.HideDialog,
@@ -7955,7 +7958,7 @@
             )
           );
         },
-        Fr = (function (e) {
+        Tr = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -7997,7 +8000,7 @@
                       });
                     });
                   },
-                  ItemComponent: Tr,
+                  ItemComponent: Fr,
                   RenderDefaultComponent: function (e) {
                     var t = e.onSelected,
                       r = e.active;
@@ -8015,7 +8018,7 @@
             (t = Object(i.c)([f.a], t))
           );
         })(n.Component),
-        Tr = function (e) {
+        Fr = function (e) {
           var t = e.Item,
             r = e.onSelected,
             i = e.children,
@@ -10027,12 +10030,12 @@
                   (t.sm_m = {
                     proto: t,
                     fields: {
-                      total: { n: 1, c: F, r: !0, q: !0 },
-                      user_reviews: { n: 2, c: F, r: !0, q: !0 },
-                      ugc: { n: 3, c: F, r: !0, q: !0 },
-                      profile: { n: 4, c: F, r: !0, q: !0 },
-                      forum_topics: { n: 5, c: F, r: !0, q: !0 },
-                      comments: { n: 6, c: F, r: !0, q: !0 },
+                      total: { n: 1, c: T, r: !0, q: !0 },
+                      user_reviews: { n: 2, c: T, r: !0, q: !0 },
+                      ugc: { n: 3, c: T, r: !0, q: !0 },
+                      profile: { n: 4, c: T, r: !0, q: !0 },
+                      forum_topics: { n: 5, c: T, r: !0, q: !0 },
+                      comments: { n: 6, c: T, r: !0, q: !0 },
                       total_given: {
                         n: 7,
                         br: g.d.readUint32,
@@ -10097,7 +10100,7 @@
             t
           );
         })(P),
-        F = (function (e) {
+        T = (function (e) {
           function t(r) {
             void 0 === r && (r = null);
             var i = e.call(this) || this;
@@ -10176,7 +10179,7 @@
             t
           );
         })(P),
-        T = (function (e) {
+        F = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var r = e.call(this) || this;
@@ -11619,7 +11622,7 @@
                     case 0:
                       return (
                         (this.m_bReactionConfigurationLoadedOrInFlight = !0),
-                        (e = y.b.Init(T)),
+                        (e = y.b.Init(F)),
                         [4, O.GetReactionConfig(this.m_transport, e)]
                       );
                     case 1:
