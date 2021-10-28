@@ -1731,8 +1731,8 @@
               );
               if (void 0 !== window.Prototype)
                 return window.location.reload(), null;
-              var t = Object(p.f)(
-                  Object(p.d)(this.m_Admin.GetFeedLanguageHandleUnset())
+              var t = Object(p.d)(
+                  Object(p.b)(this.m_Admin.GetFeedLanguageHandleUnset())
                 ),
                 n = o.a.Get().GetDefaultAdmin();
               return m.a.createElement(
@@ -1829,7 +1829,7 @@
                           "#CuratorAdmin_Curator_lang_only",
                           Object(E.f)(
                             "#Language_" +
-                              Object(p.d)(this.m_Admin.GetCuratorLanguage())
+                              Object(p.b)(this.m_Admin.GetCuratorLanguage())
                           ),
                           t
                         )

@@ -3792,7 +3792,7 @@
                     t = a && a.group_name;
                   }
                   var r =
-                    e && e.GetNameWithFallback(Object(Ie.g)(M.d.LANGUAGE));
+                    e && e.GetNameWithFallback(Object(Ie.e)(M.d.LANGUAGE));
                   if (e && t && r) {
                     var o = Object(N.f)(
                       "#EventCalendar_TabTitle_GroupNameAndEventDetail",
@@ -3847,7 +3847,7 @@
             ),
             p || !d)
           ) {
-            var b = "lang_" + Object(Ie.e)(Object(Ie.g)(M.d.LANGUAGE));
+            var b = "lang_" + Object(Ie.c)(Object(Ie.e)(M.d.LANGUAGE));
             return o.a.createElement(
               "div",
               {
@@ -3911,7 +3911,7 @@
                 B.a,
                 null,
                 o.a.createElement(Re.c, {
-                  lang: Object(Ie.g)(M.d.LANGUAGE),
+                  lang: Object(Ie.e)(M.d.LANGUAGE),
                   partnerEventStore: xe,
                   event: d,
                   adminPanel:
@@ -4211,7 +4211,7 @@
             o.a.createElement(
               "div",
               { className: Ze.LatestUpdateIcon },
-              o.a.createElement(Xe.jb, null)
+              o.a.createElement(Xe.eb, null)
             ),
             o.a.createElement(
               "div",
@@ -4557,8 +4557,8 @@
                     },
                   },
                   i
-                    ? o.a.createElement(Xe.K, null)
-                    : o.a.createElement(Xe.N, null)
+                    ? o.a.createElement(Xe.G, null)
+                    : o.a.createElement(Xe.J, null)
                 )
               ),
               i &&

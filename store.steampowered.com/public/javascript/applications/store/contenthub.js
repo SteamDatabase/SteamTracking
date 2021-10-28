@@ -314,7 +314,7 @@
                     o = new Array(30);
                   o.fill(""),
                     e.m_rgLanguages.forEach(function (e, t) {
-                      var a = Object(S.g)(e, -1);
+                      var a = Object(S.e)(e, -1);
                       -1 === a
                         ? console.warn("Unrecognized language: " + e)
                         : 0 <= a && a < 30 && (o[a] = n[t]);
@@ -1325,7 +1325,7 @@
                       });
                     },
                   }),
-                  o.a.createElement(B.J, null)
+                  o.a.createElement(B.F, null)
                 ),
                 o.a.createElement(L.h, {
                   rgOptions: p,

@@ -10243,7 +10243,7 @@
                     "#BroadcastChat_Role_Presenter_ttip"
                   ),
                 },
-                s.createElement(nr.h, null)
+                s.createElement(nr.g, null)
               );
             case "moderator":
               return s.createElement(
@@ -10254,7 +10254,7 @@
                     "#BroadcastChat_Role_Moderatorr_ttip"
                   ),
                 },
-                s.createElement(nr.i, null)
+                s.createElement(nr.h, null)
               );
             case "broadcaster":
               return s.createElement(
@@ -10265,7 +10265,7 @@
                     "#BroadcastChat_Role_Broadcaster_ttip"
                   ),
                 },
-                s.createElement(nr.g, null)
+                s.createElement(nr.f, null)
               );
             default:
               return null;
@@ -10721,7 +10721,7 @@
                               title: Object(St.f)("#ChatEntryButton_Submit"),
                               onClick: this.SendMessage,
                             },
-                            s.createElement(nr.db, null)
+                            s.createElement(nr.Y, null)
                           )
                         ),
                         s.createElement(
@@ -10754,7 +10754,7 @@
                                   strFlairGroupID: this.m_chat
                                     .m_strFlairGroupID,
                                   title: Object(St.f)("#ChatEntryButton_Flair"),
-                                  buttonIcon: s.createElement(nr.j, null),
+                                  buttonIcon: s.createElement(nr.i, null),
                                 })
                               : null
                           )
@@ -11609,7 +11609,7 @@
                     "#BroadcastWatch_View_Broadcast_Page"
                   ),
                 },
-                s.createElement(nr.B, null)
+                s.createElement(nr.y, null)
               );
             }),
             (t.prototype.OnToggleChat = function (e) {
@@ -11645,7 +11645,7 @@
                   {
                     className: Object(ir.a)(Ur.a.viewer_count, "viewer_count"),
                   },
-                  s.createElement(nr.mb, null),
+                  s.createElement(nr.hb, null),
                   n.toLocaleString(St.e.GetPreferredLocales())
                 ),
                 s.createElement(
@@ -11671,7 +11671,7 @@
                     s.createElement(
                       "div",
                       { className: Ur.a.chat_link },
-                      s.createElement(nr.k, null),
+                      s.createElement(nr.j, null),
                       s.createElement(
                         "a",
                         {
@@ -11699,7 +11699,7 @@
                         "#StoreBroadcast_Change_store_Broadcast_settings"
                       ),
                     },
-                    s.createElement(nr.Y, null)
+                    s.createElement(nr.T, null)
                   ),
                   e
                 )
@@ -11766,7 +11766,7 @@
                 ),
                 onClick: e.OnPreventPopup,
               },
-              s.createElement(nr.qb, null)
+              s.createElement(nr.lb, null)
             )
           );
         }),
@@ -11949,7 +11949,7 @@
                     ? s.createElement(
                         s.Fragment,
                         null,
-                        s.createElement(nr.mb, null),
+                        s.createElement(nr.hb, null),
                         " ",
                         c.toLocaleString(St.e.GetPreferredLocales())
                       )
