@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6860822";
+var CLSTAMP = "6861380";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [40],
   {
@@ -69139,7 +69139,12 @@ var CLSTAMP = "6860822";
       }
       function he(e, t) {
         var n = new Array();
-        return n.push(de(d.a.Featured, e)), n.push(de(d.a.Steam, e)), n;
+        return (
+          n.push(de(d.a.Featured, e)),
+          n.push(de(d.a.Steam, e)),
+          n.push(de(d.a.Halloween, e)),
+          n
+        );
       }
       function fe(e, t) {
         Object(u.b)().BIsCollectionCalendar(), Object(Q.g)();

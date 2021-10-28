@@ -12,6 +12,8 @@ __TEXT
 __gcc_except_tab__TEXT
 __const
 __TEXT
+w#
+w#
 __cstring
 __TEXT
 __objc_methname
@@ -90,11 +92,13 @@ h
 &
 h&
 )
+F"
 +kZ,
 0
 0
 #
 Hi
+"
 H=
 )
 )
@@ -104,7 +108,7 @@ H=
 Hc
 Hc
 Hc
-5!
+D!
 10CIPCServer
 10IIPCServer
 11CPipeWaiter
@@ -1559,7 +1563,6 @@ pModule->m_nLastResult != k_ECallResultNone
 %s/legacycompat/servicecall_%u.dll
 %s/legacycompat/servicecall_%u.in
 %s/legacycompat/servicecall_%u.out
-%s/legacycompat/steamservice.exe /runfunc %u %u %u %u
 Unimplemented function
 Invalid service module
 unCRC32 == pModule->m_unCRC32
@@ -8220,8 +8223,8 @@ crashhandler002
 crashhandler.dylib
 CreateInterface
 1.0
-Oct 27 2021
-00:04:48
+Oct 28 2021
+10:15:50
 Jan
 Feb
 Mar
@@ -8776,11 +8779,13 @@ Work thread '%s' is marked exited, but we could not immediately join prior to de
 CWorkItem::DispatchCompletedWorkItem: got a work item with no job ID
 m_cCurrentDepth > 0
 %s%s%s
+F"
 +kZ,
 0
 0
 #
 Hi
+"
 H=
 )
 )
@@ -8790,7 +8795,7 @@ H=
 Hc
 Hc
 Hc
-5!
+D!
 0
 0
 AT=
@@ -8802,57 +8807,63 @@ D
 @
 @
 !
-`%
-%
-%
-%
-%
-%
-%
-%
+!
+!
+!
 (
-@
-Hc
-Hc
-@
-@
-@
-Hc
-@
-@
-@
-@
-=
-@
-@
-@
-@
-@
-=
-@
-@
-@
-Hc
-@
-@
-@
-@
-@
-IcE
-IcE
-@
-@
 %
-<$
-"$
+%
+%
+%
+@
+Hc
+Hc
+@
+@
+@
+Hc
+@
+@
+@
+@
+=
+@
+@
+@
+@
+@
+=
+@
+@
+@
+Hc
+@
+@
+@
+@
+@
+IcE
+IcE
+@
+@
+*
+m$
+W$
 V
+$
 =
+u#
 =
-["
-"
+0%
+h!
+$
 @
+!
+!
 @
-\
+#
+#
+&!
 @
 M9e
 @
@@ -8878,6 +8889,9 @@ AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 @
 AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
+
+
+
 
 Pj
 ARj
@@ -9214,7 +9228,9 @@ H
 
 
 *
+$
 Hc
+
 L95
 AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 %
@@ -9239,7 +9255,8 @@ rc4(16x,int)
 RC4 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 j
 j
-G
+
+t
 $
 $
 
@@ -9256,6 +9273,7 @@ H=
 @
 =*.*
 Ic
+T
 @
 @
 @
@@ -9265,6 +9283,12 @@ Ic
 @
 @
 0
+
+
+
+
+
+
 
 
 
@@ -9315,4 +9339,3 @@ Hc
 "
 0
 Hi
-+

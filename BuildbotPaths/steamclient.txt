@@ -13,6 +13,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/client_capi.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/clientdeviceauth.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/clientdfsconnection.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/clientdrm.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/clientgamestats.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/clientinventory.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/clientjob.cpp

@@ -40606,6 +40606,14 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   margin-right: 0px;
   margin-left: 4px;
 }
+.contentmanagement_InstallFolder_12aBP:focus {
+  background-color: #fff;
+}
+.contentmanagement_InstallFolder_12aBP:focus .contentmanagement_DriveName_1rihl,
+.contentmanagement_InstallFolder_12aBP:focus .contentmanagement_DriveSize_5bG9I,
+.contentmanagement_InstallFolder_12aBP:focus svg {
+  color: #0e141b;
+}
 .contentmanagement_InstallFolder_12aBP:hover {
   background-color: #3d4450;
 }
@@ -40689,10 +40697,6 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   width: 100%;
 }
 .contentmanagement_IsSelected_3VQeL {
-  background-color: #67707b;
-}
-.gpfocus .contentmanagement_IsSelected_3VQeL,
-.contentmanagement_IsSelected_3VQeL.gpfocus {
   background-color: #3d4450;
 }
 .contentmanagement_IsSelected_3VQeL .contentmanagement_DriveName_1rihl,
@@ -40918,7 +40922,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 .contentmanagement_AppsGrid_2n6FN
   .contentmanagement_AppBody_2RCSU:focus
   .DialogCheckbox {
-  background: #67707b;
+  background: #fff;
 }
 .contentmanagement_AppsGrid_2n6FN .contentmanagement_AppBodyInfo_1rWv0 {
   display: flex;
