@@ -6220,38 +6220,59 @@
         v = n("NKJh"),
         b = function (e) {
           var t,
-            n = Object(d.s)(e),
-            r = (n.myInstance, n.bIsHovered),
-            l = (n.setIsHovered, n.info),
-            b = n.appInfo,
-            g =
-              (n.hoverType,
-              n.nHoverId,
-              n.rgContainedInfos,
-              n.strShortDescription,
+            n,
+            r = Object(d.s)(e),
+            l = (r.myInstance, r.bIsHovered),
+            b = (r.setIsHovered, r.info),
+            g = r.appInfo,
+            y = r.fullGameAppInfo,
+            S =
+              (r.hoverType,
+              r.nHoverId,
+              r.rgContainedInfos,
+              r.strShortDescription,
               e.id),
-            y = e.type,
-            S = e.strReason,
-            E = e.bHidePrice,
-            C = e.bHidePlatforms,
-            O = (e.bShowDemoButton, e.bUseSubscriptionLayout),
-            w = Object(o.a)(g, Object(s.e)(y), {
+            E = e.type,
+            C = e.strReason,
+            O = e.bHidePrice,
+            w = e.bHidePlatforms,
+            B = (e.bShowDemoButton, e.bUseSubscriptionLayout),
+            I = Object(o.a)(S, Object(s.e)(E), {
               include_assets: !0,
               include_platforms: !0,
             })[0],
-            B = Object(_.c)();
-          if (!w || !l) return null;
-          var I =
-              (null === (t = w.assets.GetLibraryHeroURL()) || void 0 === t
-                ? void 0
-                : t.trim().length) > 0
-                ? w.assets.GetLibraryHeroURL()
-                : w.assets.GetPageBackgroundURL(),
-            j = Object(i.b)(w.GetStorePageURL(), B),
-            D = Object(i.c)(B);
+            j = Object(o.a)(
+              null == g ? void 0 : g.full_game_appid,
+              Object(s.e)(E),
+              { include_assets: !0, include_platforms: !0 }
+            )[0],
+            D = Object(_.c)();
+          if (!I || !b) return null;
+          var T = "",
+            A = "",
+            R = "";
+          j && y
+            ? ((T =
+                (null === (t = j.assets.GetLibraryHeroURL()) || void 0 === t
+                  ? void 0
+                  : t.trim().length) > 0
+                  ? j.assets.GetLibraryHeroURL()
+                  : j.assets.GetPageBackgroundURL()),
+              (A = null == y ? void 0 : y.microtrailer),
+              (R = null == y ? void 0 : y.microtrailer_mp4))
+            : ((T =
+                (null === (n = I.assets.GetLibraryHeroURL()) || void 0 === n
+                  ? void 0
+                  : n.trim().length) > 0
+                  ? I.assets.GetLibraryHeroURL()
+                  : I.assets.GetPageBackgroundURL()),
+              (A = null == g ? void 0 : g.microtrailer),
+              (R = null == g ? void 0 : g.microtrailer_mp4));
+          var k = Object(i.b)(I.GetStorePageURL(), D),
+            M = Object(i.c)(D);
           return a.a.createElement(
             d.e,
-            { appid: w.GetAppID() },
+            { appid: I.GetAppID() },
             a.a.createElement(
               "div",
               { className: c.SuperCapsuleCtn },
@@ -6267,57 +6288,56 @@
                   "div",
                   {
                     className: Object(p.a)(c.BGImage),
-                    style: { backgroundImage: 'url("' + I + '")' },
+                    style: { backgroundImage: 'url("' + T + '")' },
                   },
                   " "
                 ),
-                a.a.createElement(
-                  "video",
-                  {
-                    className: Object(p.a)(c.BGVideo),
-                    playsInline: !0,
-                    autoPlay: !0,
-                    muted: !0,
-                    loop: !0,
-                  },
-                  a.a.createElement("source", {
-                    src: null == b ? void 0 : b.microtrailer,
-                    type: "video/webm",
-                  }),
-                  Boolean(!h.c.IN_LIBRARY) &&
-                    a.a.createElement("source", {
-                      src: null == b ? void 0 : b.microtrailer_mp4,
-                      type: "video/mp4",
-                    })
-                )
+                A &&
+                  "" !== A &&
+                  a.a.createElement(
+                    "video",
+                    {
+                      className: Object(p.a)(c.BGVideo),
+                      playsInline: !0,
+                      autoPlay: !0,
+                      muted: !0,
+                      loop: !0,
+                    },
+                    a.a.createElement("source", { src: A, type: "video/webm" }),
+                    Boolean(!h.c.IN_LIBRARY) &&
+                      a.a.createElement("source", { src: R, type: "video/mp4" })
+                  )
               ),
               a.a.createElement(
                 "div",
                 { className: Object(p.a)(c.FeatureCtn) },
                 a.a.createElement(
                   "a",
-                  { href: j, className: Object(p.a)(c.Artwork) },
+                  { href: k, className: Object(p.a)(c.Artwork) },
                   a.a.createElement(f.c, {
-                    snr: D,
-                    appID: null == b ? void 0 : b.appid,
+                    snr: M,
+                    appID: null == g ? void 0 : g.appid,
                     classOverride: Object(p.a)(
                       u.a.WishlistButtonNotTop,
                       "WishlistButton"
                     ),
                   }),
-                  Object(d.b)(w.GetAppID(), w.GetAppIDToRun()) &&
+                  Object(d.b)(I.GetAppID(), I.GetAppIDToRun()) &&
                     a.a.createElement(
                       "div",
                       { className: c.CapsuleDecorators },
                       a.a.createElement(d.i, null)
                     ),
-                  a.a.createElement(d.f, { info: l, appInfo: b }),
-                  Boolean(O && b)
-                    ? a.a.createElement(d.d, { appid: b.appid, bIsMuted: r })
+                  a.a.createElement(d.f, {
+                    info: Boolean(y) ? y : b,
+                    appInfo: Boolean(y) ? y : g,
+                  }),
+                  Boolean(B && g)
+                    ? a.a.createElement(d.d, { appid: g.appid, bIsMuted: l })
                     : a.a.createElement(d.c, {
-                        info: l,
-                        bHidePlatforms: C,
-                        bHidePrice: E,
+                        info: b,
+                        bHidePlatforms: w,
+                        bHidePrice: O,
                       })
                 ),
                 a.a.createElement(
@@ -6325,20 +6345,20 @@
                   { className: Object(p.a)(c.Info) },
                   a.a.createElement(
                     "a",
-                    { className: c.Title, href: j },
-                    l.name
+                    { className: c.Title, href: k },
+                    b.name
                   ),
-                  a.a.createElement("div", { className: c.Reason }, S),
-                  !!b &&
+                  a.a.createElement("div", { className: c.Reason }, C),
+                  !!g &&
                     a.a.createElement(
                       "div",
                       { className: c.StoreSaleItemRelease },
                       Object(m.n)(
                         "#Sale_ReleaseDate",
-                        a.a.createElement("span", null, b.release)
+                        a.a.createElement("span", null, g.release)
                       )
                     ),
-                  !!b &&
+                  !!g &&
                     a.a.createElement(
                       "div",
                       {
@@ -6347,9 +6367,9 @@
                           c.StoreSaleItemReview
                         ),
                       },
-                      a.a.createElement(f.b, { appInfo: b })
+                      a.a.createElement(f.b, { appInfo: g })
                     ),
-                  a.a.createElement(d.m, { appInfo: b, instanceNum: g })
+                  a.a.createElement(d.m, { appInfo: g, instanceNum: S })
                 )
               )
             )
@@ -7485,54 +7505,67 @@
           E = Object(s.useState)(void 0),
           C = E[0],
           O = E[1],
-          B = Object(I.d)(
+          B = Object(s.useState)(),
+          D = B[0],
+          T = B[1],
+          A = Object(I.d)(
             e.id,
             Object(j.e)(e.type),
             !1 !== e.bLoadShortDescription
           )[0],
-          D = e.id,
-          T = e.type;
+          R = e.id,
+          k = e.type;
         return (
           Object(s.useEffect)(
             function () {
               w.a.Get().HintLoad();
-              var e = { id: D, type: T };
+              var e = { id: R, type: k };
               Object(ae.i)([e]).then(function () {
+                var n;
                 if (!Object(ae.c)(e)) {
-                  var n = Object(ae.h)(e),
-                    r = de(e.type),
-                    a = n.id;
-                  t.current.token.reason ||
-                    (n && r
-                      ? (u(n),
-                        m(r),
-                        f(a),
+                  var r = Object(ae.h)(e),
+                    a = de(e.type),
+                    i = r.id;
+                  if (!t.current.token.reason)
+                    if (r && a) {
+                      u(r),
+                        m(a),
+                        f(i),
                         Object(ae.f)(e).then(function (e) {
                           if (1 == e.length) {
-                            var i = v.a.GetAppLinkInfo(e[0]);
-                            i &&
+                            var n = v.a.GetAppLinkInfo(e[0]);
+                            n &&
                               !t.current.token.reason &&
-                              ((r = "app"), (a = i.appid), O(i), m(r), f(a));
+                              ((a = "app"), (i = n.appid), O(n), m(a), f(i));
                           } else
-                            "bundle" != r || t.current.token.reason
-                              ? "sub" != r ||
+                            "bundle" != a || t.current.token.reason
+                              ? "sub" != a ||
                                 t.current.token.reason ||
                                 S(
-                                  n.appids.map(function (e) {
+                                  r.appids.map(function (e) {
                                     return v.a.GetAppLinkInfo(e);
                                   })
                                 )
                               : S(
-                                  n.packageids.map(function (e) {
+                                  r.packageids.map(function (e) {
                                     return g.b.GetPackageInfo(e);
                                   })
                                 );
-                        }))
-                      : console.warn("Unsupported item:", e.type, D));
+                        });
+                      var o =
+                        null === (n = r) || void 0 === n
+                          ? void 0
+                          : n.full_game_appid;
+                      o !== e.id &&
+                        v.a.LoadAppLinkInfo([o]).then(function () {
+                          var e = v.a.GetAppLinkInfo(o);
+                          e && !t.current.token.reason && T(e);
+                        });
+                    } else console.warn("Unsupported item:", e.type, R);
                 }
               });
             },
-            [D, T]
+            [R, k]
           ),
           Object(s.useEffect)(function () {
             return function () {
@@ -7547,10 +7580,11 @@
             setIsHovered: o,
             info: l,
             appInfo: C,
+            fullGameAppInfo: D,
             hoverType: p,
             nHoverId: _,
             rgContainedInfos: y,
-            strShortDescription: B,
+            strShortDescription: A,
           }
         );
       }

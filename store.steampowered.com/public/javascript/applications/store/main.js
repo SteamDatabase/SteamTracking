@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6863257";
+var CLSTAMP = "6864979";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [40],
   {
@@ -7091,38 +7091,59 @@ var CLSTAMP = "6863257";
         _ = n("NKJh"),
         v = function (e) {
           var t,
-            n = Object(p.s)(e),
-            r = (n.myInstance, n.bIsHovered),
-            l = (n.setIsHovered, n.info),
-            v = n.appInfo,
-            g =
-              (n.hoverType,
-              n.nHoverId,
-              n.rgContainedInfos,
-              n.strShortDescription,
+            n,
+            r = Object(p.s)(e),
+            l = (r.myInstance, r.bIsHovered),
+            v = (r.setIsHovered, r.info),
+            g = r.appInfo,
+            y = r.fullGameAppInfo,
+            S =
+              (r.hoverType,
+              r.nHoverId,
+              r.rgContainedInfos,
+              r.strShortDescription,
               e.id),
-            y = e.type,
-            S = e.strReason,
-            M = e.bHidePrice,
-            O = e.bHidePlatforms,
-            E = (e.bShowDemoButton, e.bUseSubscriptionLayout),
-            C = Object(o.a)(g, Object(s.e)(y), {
+            M = e.type,
+            O = e.strReason,
+            E = e.bHidePrice,
+            C = e.bHidePlatforms,
+            A = (e.bShowDemoButton, e.bUseSubscriptionLayout),
+            B = Object(o.a)(S, Object(s.e)(M), {
               include_assets: !0,
               include_platforms: !0,
             })[0],
-            A = Object(f.c)();
-          if (!C || !l) return null;
-          var B =
-              (null === (t = C.assets.GetLibraryHeroURL()) || void 0 === t
-                ? void 0
-                : t.trim().length) > 0
-                ? C.assets.GetLibraryHeroURL()
-                : C.assets.GetPageBackgroundURL(),
-            w = Object(i.b)(C.GetStorePageURL(), A),
-            T = Object(i.c)(A);
+            w = Object(o.a)(
+              null == g ? void 0 : g.full_game_appid,
+              Object(s.e)(M),
+              { include_assets: !0, include_platforms: !0 }
+            )[0],
+            T = Object(f.c)();
+          if (!B || !v) return null;
+          var I = "",
+            L = "",
+            D = "";
+          w && y
+            ? ((I =
+                (null === (t = w.assets.GetLibraryHeroURL()) || void 0 === t
+                  ? void 0
+                  : t.trim().length) > 0
+                  ? w.assets.GetLibraryHeroURL()
+                  : w.assets.GetPageBackgroundURL()),
+              (L = null == y ? void 0 : y.microtrailer),
+              (D = null == y ? void 0 : y.microtrailer_mp4))
+            : ((I =
+                (null === (n = B.assets.GetLibraryHeroURL()) || void 0 === n
+                  ? void 0
+                  : n.trim().length) > 0
+                  ? B.assets.GetLibraryHeroURL()
+                  : B.assets.GetPageBackgroundURL()),
+              (L = null == g ? void 0 : g.microtrailer),
+              (D = null == g ? void 0 : g.microtrailer_mp4));
+          var j = Object(i.b)(B.GetStorePageURL(), T),
+            N = Object(i.c)(T);
           return a.a.createElement(
             p.e,
-            { appid: C.GetAppID() },
+            { appid: B.GetAppID() },
             a.a.createElement(
               "div",
               { className: c.SuperCapsuleCtn },
@@ -7138,57 +7159,56 @@ var CLSTAMP = "6863257";
                   "div",
                   {
                     className: Object(d.a)(c.BGImage),
-                    style: { backgroundImage: 'url("' + B + '")' },
+                    style: { backgroundImage: 'url("' + I + '")' },
                   },
                   " "
                 ),
-                a.a.createElement(
-                  "video",
-                  {
-                    className: Object(d.a)(c.BGVideo),
-                    playsInline: !0,
-                    autoPlay: !0,
-                    muted: !0,
-                    loop: !0,
-                  },
-                  a.a.createElement("source", {
-                    src: null == v ? void 0 : v.microtrailer,
-                    type: "video/webm",
-                  }),
-                  Boolean(!h.d.IN_LIBRARY) &&
-                    a.a.createElement("source", {
-                      src: null == v ? void 0 : v.microtrailer_mp4,
-                      type: "video/mp4",
-                    })
-                )
+                L &&
+                  "" !== L &&
+                  a.a.createElement(
+                    "video",
+                    {
+                      className: Object(d.a)(c.BGVideo),
+                      playsInline: !0,
+                      autoPlay: !0,
+                      muted: !0,
+                      loop: !0,
+                    },
+                    a.a.createElement("source", { src: L, type: "video/webm" }),
+                    Boolean(!h.d.IN_LIBRARY) &&
+                      a.a.createElement("source", { src: D, type: "video/mp4" })
+                  )
               ),
               a.a.createElement(
                 "div",
                 { className: Object(d.a)(c.FeatureCtn) },
                 a.a.createElement(
                   "a",
-                  { href: w, className: Object(d.a)(c.Artwork) },
+                  { href: j, className: Object(d.a)(c.Artwork) },
                   a.a.createElement(b.c, {
-                    snr: T,
-                    appID: null == v ? void 0 : v.appid,
+                    snr: N,
+                    appID: null == g ? void 0 : g.appid,
                     classOverride: Object(d.a)(
                       u.a.WishlistButtonNotTop,
                       "WishlistButton"
                     ),
                   }),
-                  Object(p.b)(C.GetAppID(), C.GetAppIDToRun()) &&
+                  Object(p.b)(B.GetAppID(), B.GetAppIDToRun()) &&
                     a.a.createElement(
                       "div",
                       { className: c.CapsuleDecorators },
                       a.a.createElement(p.i, null)
                     ),
-                  a.a.createElement(p.f, { info: l, appInfo: v }),
-                  Boolean(E && v)
-                    ? a.a.createElement(p.d, { appid: v.appid, bIsMuted: r })
+                  a.a.createElement(p.f, {
+                    info: Boolean(y) ? y : v,
+                    appInfo: Boolean(y) ? y : g,
+                  }),
+                  Boolean(A && g)
+                    ? a.a.createElement(p.d, { appid: g.appid, bIsMuted: l })
                     : a.a.createElement(p.c, {
-                        info: l,
-                        bHidePlatforms: O,
-                        bHidePrice: M,
+                        info: v,
+                        bHidePlatforms: C,
+                        bHidePrice: E,
                       })
                 ),
                 a.a.createElement(
@@ -7196,20 +7216,20 @@ var CLSTAMP = "6863257";
                   { className: Object(d.a)(c.Info) },
                   a.a.createElement(
                     "a",
-                    { className: c.Title, href: w },
-                    l.name
+                    { className: c.Title, href: j },
+                    v.name
                   ),
-                  a.a.createElement("div", { className: c.Reason }, S),
-                  !!v &&
+                  a.a.createElement("div", { className: c.Reason }, O),
+                  !!g &&
                     a.a.createElement(
                       "div",
                       { className: c.StoreSaleItemRelease },
                       Object(m.n)(
                         "#Sale_ReleaseDate",
-                        a.a.createElement("span", null, v.release)
+                        a.a.createElement("span", null, g.release)
                       )
                     ),
-                  !!v &&
+                  !!g &&
                     a.a.createElement(
                       "div",
                       {
@@ -7218,9 +7238,9 @@ var CLSTAMP = "6863257";
                           c.StoreSaleItemReview
                         ),
                       },
-                      a.a.createElement(b.b, { appInfo: v })
+                      a.a.createElement(b.b, { appInfo: g })
                     ),
-                  a.a.createElement(p.m, { appInfo: v, instanceNum: g })
+                  a.a.createElement(p.m, { appInfo: g, instanceNum: S })
                 )
               )
             )
@@ -8505,54 +8525,67 @@ var CLSTAMP = "6863257";
           M = Object(s.useState)(void 0),
           O = M[0],
           E = M[1],
-          A = Object(B.d)(
+          A = Object(s.useState)(),
+          T = A[0],
+          I = A[1],
+          L = Object(B.d)(
             e.id,
             Object(w.e)(e.type),
             !1 !== e.bLoadShortDescription
           )[0],
-          T = e.id,
-          I = e.type;
+          D = e.id,
+          j = e.type;
         return (
           Object(s.useEffect)(
             function () {
               C.a.Get().HintLoad();
-              var e = { id: T, type: I };
+              var e = { id: D, type: j };
               Object(ee.h)([e]).then(function () {
+                var n;
                 if (!Object(ee.c)(e)) {
-                  var n = Object(ee.g)(e),
-                    r = se(e.type),
-                    a = n.id;
-                  t.current.token.reason ||
-                    (n && r
-                      ? (u(n),
-                        m(r),
-                        b(a),
+                  var r = Object(ee.g)(e),
+                    a = se(e.type),
+                    i = r.id;
+                  if (!t.current.token.reason)
+                    if (r && a) {
+                      u(r),
+                        m(a),
+                        b(i),
                         Object(ee.f)(e).then(function (e) {
                           if (1 == e.length) {
-                            var i = _.a.GetAppLinkInfo(e[0]);
-                            i &&
+                            var n = _.a.GetAppLinkInfo(e[0]);
+                            n &&
                               !t.current.token.reason &&
-                              ((r = "app"), (a = i.appid), E(i), m(r), b(a));
+                              ((a = "app"), (i = n.appid), E(n), m(a), b(i));
                           } else
-                            "bundle" != r || t.current.token.reason
-                              ? "sub" != r ||
+                            "bundle" != a || t.current.token.reason
+                              ? "sub" != a ||
                                 t.current.token.reason ||
                                 S(
-                                  n.appids.map(function (e) {
+                                  r.appids.map(function (e) {
                                     return _.a.GetAppLinkInfo(e);
                                   })
                                 )
                               : S(
-                                  n.packageids.map(function (e) {
+                                  r.packageids.map(function (e) {
                                     return g.b.GetPackageInfo(e);
                                   })
                                 );
-                        }))
-                      : console.warn("Unsupported item:", e.type, T));
+                        });
+                      var o =
+                        null === (n = r) || void 0 === n
+                          ? void 0
+                          : n.full_game_appid;
+                      o !== e.id &&
+                        _.a.LoadAppLinkInfo([o]).then(function () {
+                          var e = _.a.GetAppLinkInfo(o);
+                          e && !t.current.token.reason && I(e);
+                        });
+                    } else console.warn("Unsupported item:", e.type, D);
                 }
               });
             },
-            [T, I]
+            [D, j]
           ),
           Object(s.useEffect)(function () {
             return function () {
@@ -8567,10 +8600,11 @@ var CLSTAMP = "6863257";
             setIsHovered: o,
             info: l,
             appInfo: O,
+            fullGameAppInfo: T,
             hoverType: d,
             nHoverId: f,
             rgContainedInfos: y,
-            strShortDescription: A,
+            strShortDescription: L,
           }
         );
       }
