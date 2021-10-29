@@ -1,0 +1,2291 @@
+:root {
+	/* System greys */
+	--gpSystemLightestGrey: #DCDEDF;
+	--gpSystemLighterGrey: #B8BCBF;
+	--gpSystemLightGrey: #8B929A;
+	--gpSystemGrey: #67707B;
+	--gpSystemDarkGrey: #3D4450;
+	--gpSystemDarkerGrey: #23262E;
+	--gpSystemDarkestGrey: #0E141B;
+
+	/* Store blue greys */
+	--gpStoreLightestGrey: #CCD8E3;
+	--gpStoreLighterGrey: #A7BACC;
+	--gpStoreLightGrey: #7C8EA3;
+	--gpStoreGrey: #5B6D82;
+	--gpStoreDarkGrey: #2A475E;
+	--gpStoreDarkerGrey: #1B2838;
+	--gpStoreDarkestGrey: #000F18;
+
+	/* Gradients */
+	--gpGradient-StoreBackground: radial-gradient(farthest-corner at 40px 40px,#2A475E 0%, #1B2838 80%);
+
+	/* Colours */
+	--gpColor-Blue: #1A9FFF;
+	--gpColor-BlueHi: #00BBFF;
+	--gpColor-Green: #5ba32b;
+	--gpColor-GreenHi: #59BF40;
+	--gpColor-Orange: #E35E1C;
+	--gpColor-Red: #D94126;
+	--gpColor-RedHi: #EE563B;
+	--gpColor-DustyBlue: #417a9b;
+	--gpColor-LightBlue: #B3DFFF;
+
+	/* Backgrounds */
+	--gpBackground-LightSofter: #6998bb24;
+	--gpBackground-LightSoft: #3b5a7280;
+	--gpBackground-LightMedium: #678BA680;
+	--gpBackground-LightHard: #93B8D480;
+
+	--gpBackground-DarkSoft: #0e141b66;
+	--gpBackground-DarkMedium: #0e141b99;
+	--gpBackground-DarkHard: #0e141bcc;
+
+	/* Corners */
+	--gpCorner-Small: 1px;
+	--gpCorner-Medium: 2px;
+	--gpCorner-Large: 3px;
+
+	/* Spacing */
+	--gpSpace-Gutter: 24px;
+	--gpSpace-Gap: 12px;
+
+	/* Fixed widths */
+	--gpNavWidth: 240px;
+	--gpPaymentsNavWidth: 40vw;
+
+    /* Fixed heights */
+    --gpStoreMenuHeight: 58px;
+
+	/* Surfaces */
+	--gpShadow-Small: 0px 2px 2px 0px #0000003D;
+	--gpShadow-Medium: 0px 3px 6px 0px #0000003D;
+	--gpShadow-Large: 0px 12px 16px 0px #0000003D;
+	--gpShadow-XLarge: 0px 24px 32px 0px #0000003D;
+
+	/* Type styles */
+	--gpText-HeadingLarge: normal 700 26px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-HeadingMedium: normal 700 22px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-HeadingSmall: normal 700 18px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-BodyLarge: normal 400 16px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-BodyMedium: normal 400 14px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-BodySmall: normal 400 12px/1.4 "Motiva Sans", Arial, Sans-serif;
+
+}
+@media screen and ( min-width: 501px ) and ( max-width: 910px ) {
+
+	/* Tablet specific layout changes, not intended for smaller than tablet width screens */
+	html.responsive .tablet_grid {
+		display: flex;
+		flex-direction: row;
+		margin-top: 0px;
+	}
+	html.responsive .purchase_options_content_tablet {
+		display: block !important;
+		box-sizing: border-box;
+		right: 0;
+		padding-bottom: 20px;
+		width: 300px;
+		overflow-y: auto;
+		position: sticky;
+		z-index: 100;
+	}
+
+	html.responsive .page_content_ctn {
+		width: calc(100vw - 332px);
+		margin-left: 10px;
+	}
+
+	html.responsive #responsive_apppage_details_left_ctn,
+	html.responsive .game_header_image_ctn {
+		width: unset !important;
+		float: unset !important;
+	}
+}
+
+@media screen and ( min-width: 501px ) and ( max-width: 910px ) {
+
+
+
+	html.responsive h2 {
+		background-image: unset;
+		font-size: 16px;
+	}
+
+	/* hide sections */
+	html.responsive #shareEmbedRow,
+	html.responsive #achievement_block,
+	html.responsive #votingImage,
+	html.responsive #awardsTable,
+	html.responsive #awardsTable .block_title,
+	html.responsive .breadcrumbs,
+	html.responsive .apphub_OtherSiteInfo,
+	html.responsive .glance_tags_label,
+	html.responsive .wishlist_added_temp_notice,
+	html.responsive .apphub_HeaderStandardTop,
+	html.responsive .user_reviews_summary_row .subtitle,
+	html.responsive .user_reviews_summary_row .responsive_reviewdesc,
+	html.responsive .user_reviews_filter_score,
+	html.responsive .block.recommendation_reasons hr,
+	html.responsive .item_store_items_block,
+	html.responsive .download_demo_button,
+	html.responsive .steam_curators_block,
+	html.responsive .slider_ctn,
+	html.responsive .store_tooltip {
+		display: none;
+	}
+
+	html.responsive #game_highlights {
+		width: unset;
+		height: unset;
+		background: unset;
+		margin: 0 2%;
+		padding: unset;
+	}
+	html.responsive .glance_ctn {
+		padding: unset;
+	}
+
+	/* hide the developer, publisher, released sections since we're using a different layout for mobile */
+	html.responsive .release_date,
+	html.responsive .dev_row {
+		display: none;
+	}
+
+	/* reduce layers */
+	html.responsive .game_page_background,
+	html.responsive .game_background_glow {
+		background-image: unset !important; /* Needed to override inline style */
+	}
+
+	/* app reviews needs additional top margin */
+	html.responsive .app_reviews_area {
+		margin-top: 10px;
+	}
+
+	/* move the 'read more' links to the center, use larger font, and hide the down arrow */
+	html.responsive .game_page_autocollapse_readmore {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		justify-content: center;
+		font-size: 14px;
+		background-image: unset;
+		padding-right: 0px;
+	}
+
+	/* switch to a full screen width header image */
+	html.responsive .game_header_image_ctn > img {
+		display: none !important;
+	}
+	html.responsive .responsive_page_header_img {
+		display: block !important;
+	}
+
+	/* style the game's name.  some of this is to support a ... menu if we choose to use that */
+	html.responsive #appHubAppName_responsive {
+		display: block !important;
+		padding: 4px 0px 2px 0px;
+		line-height: unset;
+		color: white;
+		font: var(--gpText-HeadingLarge);
+	}
+
+	/* game description below the title */
+	html.responsive .game_description_snippet {
+		display: flex;
+		flex-direction: column;
+		margin: 0px 0px 12px 0px;
+		max-height: unset;
+		font: var(--gpText-BodyLarge);
+        clear: left; /* this is important */
+	}
+
+	/* reduce padding and margins on the page header */
+	html.responsive .game_header_image_ctn {
+		margin-right: unset;
+	}
+	html.responsive .game_meta_data.rightcol {
+		margin-top: unset;
+	}
+
+	/* Tags */
+	html.responsive .glance_tags_ctn {
+		margin-top: 0px;
+		width: 100%;
+	}
+	html.responsive .glance_tags_ctn .glance_tags {
+		font-size: 14px;
+		height: unset !important;
+	}
+	html.responsive .glance_tags_ctn .glance_tags .app_tag {
+		padding: 8px 12px;
+		margin-right: 2px;
+	}
+
+	html.responsive .glance_tags_ctn .glance_tags .app_tag:hover {
+		background: var(--gpColor-Blue);
+	}
+
+
+
+
+
+	/* More from developer */
+	html.responsive #franchise_block,
+	html.responsive #recommended_block {
+		margin: 16px 0px;
+	}
+
+	html.responsive #franchise_block {
+		padding-top: var(--gpSpace-Gutter);
+		border-top: 1px solid var(--gpBackground-LightSoft);
+	}
+
+
+
+	/* Critic */
+	html.responsive #responsive_apppage_reviewblock_ctn .responsive_apppage_reviewblock {
+		padding: unset;
+		margin: unset;
+	}
+
+	html.responsive #game_area_metascore {
+		padding-left: unset;
+	}
+
+	html.responsive #game_area_metascore .score.high {
+		background: var(--gpColor-Green);
+	}
+
+
+
+	/* User reviews: hide the default review summary section and show the responsive version which is in a different page location  */
+	html.responsive #userReviews {
+		display: none;
+	}
+	html.responsive #appReviewsAll_Detail,
+	html.responsive #appReviewsRecent_Detail,
+	html.responsive #userReviews_responsive,
+	html.responsive #reviewsHeader_responsive {
+		display: block !important;
+	}
+
+	html.responsive #reviewsHeader_responsive {
+		margin-top: 10px;
+	}
+	html.responsive .user_reviews {
+		margin-top: 0px;
+		margin-left: 0px;
+		padding: 4px;
+	}
+	html.responsive .user_reviews_summary_row {
+		font-size: unset;
+		padding: 0px;
+	}
+	html.responsive .user_reviews_summary_row .column {
+		text-overflow: unset;
+		white-space: unset;
+	}
+
+	html.responsive .responsive_reviewdesc_short {
+		display: inline-block;
+		color: var(--gpStoreLighterGrey);
+	}
+	html.responsive .responsive_reviewdesc_short .desc_short {
+		text-transform: uppercase;
+	}
+
+
+
+
+	/* section explaining reviews are in an anomalous state */
+	html.responsive .responsive_reviews_off_topic_asterisk {
+		display: inline-block !important;
+	}
+	html.responsive .review_recent_events.has_events {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	html.responsive .review_recent_events.has_events .review_anomalous_events_title {
+		margin-left: 0px;
+		margin-bottom: 10px;
+	}
+	html.responsive .review_recent_events.has_events .review_anomalous_events_icon {
+		display: none;
+	}
+	html.responsive .review_recent_events.has_events .review_anomalous_events_title,
+	html.responsive .review_recent_events.has_events .review_anomalous_events_des {
+		font-size: 14px;
+	}
+
+	/* section headers */
+	html.responsive .responsive_block_header,
+	html.responsive .block_title.vrsupport,
+	html.responsive .details_block.vrsupport,
+	html.responsive #LanguagesHeader,
+	html.responsive .responsive_apppage_details_right.heading:not(.responsive_hidden),
+	html.responsive .early_access_announcements h2,
+	html.responsive .sys_req h2,
+	html.responsive .game_area_description h2:not(#aboutThisGame h2, h2.bb_tag),
+	html.responsive #aboutThisGame h2:not(h2.bb_tag),
+	html.responsive #franchise_block h2,
+	html.responsive #recommended_block h2,
+	html.responsive #app_reviews_hash h2,
+	html.responsive .package_group,
+	html.responsive #gameAreaDLCSection h2,
+	html.responsive .referring_curator_ctn h2,
+	html.responsive #game_area_purchase h2 {
+		text-transform: uppercase;
+		display: inline-block;
+		color: #ffffff !important;
+		font-size: 12px;
+        font-weight: 700;
+		margin-bottom: 8px;
+		padding-left: 0px !important;
+		letter-spacing: 0.5px;
+	}
+	html.responsive #aboutThisGame h2:not(h2.bb_tag) {
+		display: block;
+	}
+	html.responsive .block_title.vrsupport {
+		display: block;
+		padding-top: 10px;
+		margin-bottom: 0px;
+	}
+	html.responsive .details_block.vrsupport {
+		text-transform: none;
+		margin-top: 5px;
+		margin-bottom: 3px;
+		font-size: 13px !important;
+	}
+
+	html.responsive .block_header h4 {
+		text-transform: uppercase;
+		letter-spacing: 0.03em;
+		background-image: unset !important;
+		font-size: 16px;
+	}
+	html.responsive .responsive_apppage_details_right a {
+		font-size: 14px;
+	}
+	html.responsive .responsive_apppage_details_right {
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+		padding-top: 0px !important;
+	}
+	html.responsive .responsive_apppage_details_left {
+		padding: 0px !important;
+	}
+	html.responsive #responsive_apppage_details_right_ctn,
+	html.responsive #responsive_apppage_details_left_ctn {
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+	html.responsive #responsive_apppage_details_right_ctn {
+		margin-top: 20px;
+	}
+
+	/* list of game features such as single-player, online co-op, etc */
+	html.responsive .game_area_details_specs .icon,
+	html.responsive .game_area_details_specs .name {
+		background: unset;
+	}
+
+	/* remove top margins: early access announcements, game description column */
+	html.responsive .early_access_announcements,
+	html.responsive .game_description_column {
+		margin-top: unset;
+	}
+
+	html.responsive .early_access_banner {
+		height: unset;
+		margin: 15px 0px 0px 0px;
+	}
+
+	/*  The list of available DLC */
+	html.responsive .game_area_dlc_section {
+		margin-top: 30px;
+		margin-bottom: 20px;
+	}
+	html.responsive #gameAreaDLCSection h2 {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	html.responsive .game_area_dlc_row .ds_owned_flag.ds_flag {
+		background-position-x: 4px;
+		background-position-y: 6px;
+		padding-left: 18px;
+		margin-top: 5px;
+	}
+	html.responsive .game_area_dlc_row.ds_flagged {
+		background-color: #417a9b;
+	}
+	html.responsive .game_area_dlc_row.ds_flagged .ds_flag {
+		max-width: unset;
+	}
+	html.responsive .game_area_dlc_row.ds_flagged .game_area_dlc_name {
+		padding-top: 28px;
+		color: white;
+	}
+	html.responsive .game_area_dlc_name {
+		font-size: 14px;
+		padding-left: 0px;
+	}
+	html.responsive .game_area_dlc_price {
+		font-size: 14px;
+	}
+
+	html.responsive .discount_block {
+		line-height: unset;
+	}
+	html.responsive .dlc_footer_element {
+		font-size: 14px;
+	}
+	/* hide the DLC item mouse over menu (which doesn't seem very useful on any screen but especially not mobile) */
+	html.responsive .ds_options {
+		display: none;
+	}
+
+	/* hide the 'buy this game for a friend' text */
+	html.responsive .game_area_description_bodylabel {
+		display: none;
+	}
+
+	/* recommendation reasons and ratings need extra left margin*/
+	html.responsive .shared_game_rating,
+	html.responsive .responsive_apppage_details_right.recommendation_reasons {
+		margin: 0px 7px;
+	}
+	html.responsive .responsive_apppage_details_right.recommendation_reasons {
+		margin-bottom: 10px;
+	}
+	html.responsive .responsive_apppage_details_right.recommendation_noinfo {
+		margin: 0px 10px 20px 10px;
+	}
+
+	html.responsive	.ratings_title {
+		display: inline-block !important;
+		padding-bottom: 10px;
+	}
+
+	/* reduce franchise notice font */
+	html.responsive .franchise_name {
+		font-size: 16px;
+	}
+
+
+	/* Rolled up sections such as achievements, languages, points shop
+	   and other content moved into the Links & Info section */
+	html.responsive .block a.linkbar {
+		min-height: unset;
+	}
+	html.responsive .block_content_inner {
+		margin-top: 10px;
+		margin-left: 6px;
+	}
+	html.responsive .details_block > a {
+		margin: 0px 5px 0px 0px;
+	}
+	html.responsive .details_block a.linkbar {
+		margin: 0px 0px 2px 0px;
+	}
+	html.responsive .responsive_banner_link {
+		display: flex !important;
+		flex-direction: row;
+		color: #67C1F5;
+		font-size: 14px;
+		line-height: 16px;
+		margin: 0px 0px 2px 0px;
+		align-items: center;
+		cursor: pointer;
+	}
+	/* align the app details section with the banner links above it */
+	html.responsive #appDetailsUnderlinedLinks .details_block {
+		padding-top: 0px !important;
+	}
+	html.responsive #appDetailsUnderlinedLinks .block_content_inner {
+		margin-top: 0px;
+		margin-left: 0px;
+	}
+
+	/* the genres and manufacturer section has a different format.  These style changes help the section look good next to the other content*/
+	html.responsive #genresAndManufacturer.details_block {
+		margin-left: 0px;
+		margin-top: 20px;
+		color: var(--gpStoreLighterGrey);
+	}
+	html.responsive #genresAndManufacturer.details_block a {
+		padding: unset !important;
+		margin: unset !important;
+		background: unset;
+		display: unset !important;
+		line-height: unset !important;
+		color: var(--gpColor-Blue);
+	}
+
+	/* improve img spacing on the Links and Info section */
+	html.responsive a.linkbar > img:first-of-type {
+		padding-right: 5px;
+	}
+	html.responsive a.linkbar > img:last-of-type {
+		padding-left: 5px;
+	}
+	html.responsive a.linkbar > span.social_account {
+		max-width: unset;
+	}
+
+	html.responsive .responsive_banner_link .responsive_banner_link_title {
+		flex-grow: 1;
+		padding: 8px 12px !important;
+		font: var(--gpText-BodyMedium);
+	}
+	html.responsive .responsive_banner_link .responsive_banner_link_total {
+		color: var(--gpStoreLighterGrey);
+	}
+
+	/* list of packages which appear when clicking the purchase options banner */
+	html.responsive .purchase_options_content {
+		display: block !important;
+		box-sizing: border-box;
+		margin: 0 2%;
+	}
+	html.responsive #game_area_purchase h1 {
+		font-size: 16px;
+		color: white !important;
+	}
+
+	html.responsive #gamePurchaseAddToCartBtn {
+		display: none;
+	}
+	html.responsive #gamePurchaseAddToCartBtn_responsive {
+		display: inline-block !important;
+	}
+
+	/* reduce bottom padding in game purchase area */
+	html.responsive .game_area_purchase_game,
+	html.responsive .game_area_offsite_purchase {
+		padding: 16px;
+		background: var(--gpBackground-LightSoft);
+		transition: all 0.3s ease;
+	}
+	html.responsive .game_area_purchase_platform {
+		height: 20px;
+		margin-left: 5px;
+	}
+
+	html.responsive .game_area_purchase_game:focus-within {
+		background: var(--gpBackground-LightMedium);
+		transition: all 0.3s ease;
+	}
+
+
+
+
+
+	/* height restriction was cutting off the bottom, and needs bottom padding on small screens */
+	html.responsive .game_purchase_area_friends_want {
+		height: unset;
+		padding-bottom: 20px;
+	}
+
+	/* formatting for the "This game is already in your library" message */
+	html.responsive .game_area_already_owned.page_content {
+		line-height: unset !important;
+		display: flex;
+		flex-direction: row;
+		height: unset;
+		padding: 5px 0px;
+	}
+	html.responsive .game_area_already_owned .already_in_library {
+		font-size: 14px;
+		white-space: normal;
+		flex: 1;
+		padding: 0px 5px;
+	}
+	html.responsive .game_area_already_owned .ds_owned_flag.ds_flag {
+		top: unset;
+		left: unset;
+	}
+
+	/* the free weekend button area is empty on mobile so remove the padding and height */
+	html.responsive .game_area_purchase_game.demo_above_purchase .game_purchase_action_bg,
+	html.responsive .game_area_purchase_game.free_weekend .game_purchase_action_bg {
+		padding: 0px;
+		height: 0px;
+	}
+	html.responsive .game_area_purchase_game.demo_above_purchase,
+	html.responsive .game_area_purchase_game.free_weekend {
+		margin-bottom: 28px;
+	}
+
+	html.responsive .game_area_purchase_game .game_purchase_action,
+	html.responsive .game_area_comingsoon .game_purchase_action,
+	html.responsive .game_area_offsite_purchase .game_purchase_action {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		position: static;
+		justify-content: flex-end;
+		padding-top: 3px;
+		width: 100%;
+	}
+	html.responsive .game_purchase_discount .discount_pct,
+	html.responsive .game_purchase_discount .bundle_base_discount {
+		font-size: unset;
+	}
+	html.responsive #purchaseOptionsBanner_hidden {
+		display: flex;
+	}
+	html.responsive .game_purchase_action_bg a {
+		color: white !important;
+ 	}
+	html.responsive .game_purchase_action_bg {
+		padding: 0px;
+	}
+
+
+	/* Hide margin at top of page */
+	html.responsive .responsive_page_template_content {
+		padding-top: unset;
+	}
+
+
+
+	/* wishlist */
+	html.responsive #add_to_wishlist_area,
+	html.responsive #add_to_wishlist_area_success,
+	html.responsive #add_to_wishlist_area_fail {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+	html.responsive #add_to_wishlist_area a,
+	html.responsive #add_to_wishlist_area_success a,
+	html.responsive #add_to_wishlist_area_fail a {
+		width: 100%;
+		text-align: center;
+	}
+
+	html.responsive #wishlistDropDown {
+		display: none;
+	}
+
+	html.responsive #view_wishlist_btn.btnv6_blue_hoverfade {
+		border-radius: var(--gpCorner-Medium);
+	}
+
+	html.responsive #view_wishlist_btn.btnv6_blue_hoverfade {
+		background: var(--gpBackground-LightSoft);
+	}
+	
+
+
+
+	/* button row below wishlist */
+	html.responsive .queue_actions_ctn {
+		padding: 12px 24px;
+	}
+	html.responsive .queue_actions_ctn p {
+		margin-bottom: 10px;
+	}
+	html.responsive #rowBtnActions {
+		display: flex !important;
+		flex-direction: row;
+		width: 100%;
+		justify-content: center;
+	}
+	html.responsive #shareBtn span,
+	html.responsive #reportBtn span {
+		padding: 0px 10px;
+	}
+	html.responsive .queue_btn_follow,
+	html.responsive #shareBtn,
+	html.responsive #reportBtn {
+		display: flex !important;
+		margin-right: 4px;
+	}
+
+	html.responsive #queue_btn_ignore_menu {
+		display: none;
+	}
+
+	html.responsive #reportBtn img, html.responsive #shareBtn img {
+		filter: saturate(0) contrast(3) brightness(1) hue-rotate(0deg);
+	}
+
+	html.responsive .queue_btn_ignore > .btnv6_blue_hoverfade {
+		border-radius: var(--gpCorner-Medium);
+	}
+
+
+
+	/* using a share img instead of 'share' text on desktop */
+	html.responsive #reportBtn img,
+	html.responsive #shareBtn img {
+		vertical-align: middle;
+		height: 16px;
+		width: 16px;
+		padding-bottom: 3px;
+	}
+	html.responsive #shareBtn a,
+	html.responsive #reportBtn a,
+	html.responsive #queueBtnFollow > div {
+		width: 100%;
+		text-align: center;
+	}
+
+	/* discovery queue */
+	html.responsive .queue_ctn {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 7px;
+	}
+	html.responsive .queue_controls_description {
+		display: flex;
+		flex-direction: column;
+		margin: 5px 16px;
+		width: unset;
+	}
+	html.responsive .next_in_queue_area {
+		position: relative;
+		align-content: center;
+		max-width: unset;
+		top: unset;
+	}
+	html.responsive .btn_next_in_queue {
+		margin-top: -22px;
+		margin-bottom: -10px;
+		margin-right: unset;
+	}
+	html.responsive .next_in_queue_content {
+		padding-top: 20px;
+	}
+
+	/* Hide the "view all" button for recent events and announcements */
+	html.responsive div[class*='partnereventwebrowembed_SectionButtonCtn_'] {
+		display: none;
+	}
+
+	/* reduce font sizes in Early Access Game section */
+	html.responsive .early_access_header h1 {
+		font-size: 18px;
+	}
+	html.responsive .early_access_header h2 {
+		font-size: 16px;
+		line-height: unset;
+	}
+	html.responsive .early_access_header .heading{
+		font-size: 14px;
+	}
+	html.responsive .early_access_header #devnotes_expander {
+		font-size: 14px;
+	}
+
+	/* use 20px top-margin for consistent spacing between description sections */
+	html.responsive .game_area_description {
+		margin-top: 20px;
+	}
+
+	/* mobile uses an Awards banner which reveals the awards content when clicked */
+	html.responsive #awardsTable {
+		padding-top: 0px;
+	}
+	html.responsive #AwardsDefault .game_page_autocollapse {
+		max-height: unset !important;
+	}
+
+	/* clickable images in the MORE LIKE THIS and AWARDS sections */
+	html.responsive .game_description_column .block .block_content a {
+		/* background: unset !important; */
+		padding: 10px;
+	}
+
+	/* Curators section uses the banner format on mobile and needs extra margin on top and bottom because it's by itself */
+	html.responsive #bannerCurators.responsive_banner_link {
+		margin-top: 10px;
+		margin-bottom: 30px;
+	}
+
+	/* 'ignore' button flyout position */
+	html.responsive .queue_menu_flyout {
+		left: unset;
+		right: 0px;
+	}
+
+
+	/* shown in purchase popup when game is not yet released */
+	html.responsive .wishlist_note {
+		padding-bottom: 10px;
+	}
+
+	/* Reviews switch to using the responsive title */
+	html.responsive #reviews_filter_title {
+		display: none !important;
+	}
+	html.responsive #reviews_filter_title_responsive {
+		display: inline-block !important;
+	}
+	html.responsive #reviews_filter_title_responsive > img {
+		height: 16px;
+		padding-right: 7px;
+	}
+
+	/* Reviews filters are moved into a popup */
+	html.responsive .review_settings_popup_header {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		background-color: #1B2838;
+		font-size: 16px;
+	}
+	html.responsive .review_settings_popup_content {
+		padding: 5px;
+		background-color: #1B2838;
+	}
+
+	/* remove horizontal borders */
+	html.responsive .review_ctn {
+		border-top: unset;
+	}
+
+	html.responsive .reviews_info_ctn {
+		border-bottom: unset;
+		padding-bottom: 10px;
+	}
+
+	html.responsive .user_reviews_sub_header span {
+		display: inline-block;
+		padding-left: 0px;
+	}
+
+	/* top of the review details section showing the active filters */
+	html.responsive .user_reviews_active_filters {
+		padding: 7px;
+		margin: 10px 0px 0px 0px;
+		background-color: var(--gpBackground-LightSoft);
+		border-radius: var(--gpCorner-Medium);
+	}
+	html.responsive .user_reviews_active_filters .title {
+		padding: 5px !important;
+		justify-content: center;
+	}
+	html.responsive .user_reviews_active_filters img {
+		vertical-align: middle;
+		padding-bottom: 3px;
+	}
+
+	/* use smaller player avatar image in the review details */
+	html.responsive .review_box .playerAvatar,
+	html.responsive .review_box .playerAvatar img {
+		height: 24px;
+		width: 24px;
+	}
+	html.responsive .review_box .playerAvatar_friendindicator {
+		display: none;
+	}
+	html.responsive .friend_reviews .review_box {
+		border-left: unset;
+		border-top: unset;
+	}
+	html.responsive .friend_reviews .review_box a.vote_header {
+		width: unset;
+	}
+
+	html.responsive .review_box .review_award {
+		background-color: #1B2838;
+	}
+
+	/* formatting for the avatar | name | products owned | number of reviews row
+	   which is parented by a div with class responsive_review_leftcol_ctn */
+	html.responsive .review_box .responsive_review_leftcol_ctn .leftcol {
+		display: flex;
+		flex-direction: row;
+		float: none;
+		margin-right: 8px;
+		padding: 4px 0px 8px 0px;
+		width: 100%;
+		align-items: center;
+		opacity: 1;
+	}
+	html.responsive .review_box:hover .responsive_review_leftcol_ctn .leftcol {
+		opacity: 1;
+	}
+
+	html.responsive .review_box .responsive_review_leftcol_ctn .leftcol .num_owned_games,
+	html.responsive .review_box .responsive_review_leftcol_ctn .leftcol .num_reviews {
+		padding: 0px 7px;
+		align-items: center;
+		height: 100%;
+		word-wrap: normal;
+	}
+	html.responsive .review_box .responsive_review_leftcol_ctn .leftcol .persona_name {
+		width: unset;
+		flex-shrink: 1;
+		padding-right: 7px;
+	}
+
+	/* 'Recommended/Not Recommended' row */
+	html.responsive .review_box .title.ellipsis {
+		margin-bottom: 2px;
+	}
+
+	/* hours on record */
+	html.responsive .review_box .hours.ellipsis {
+		font-size: 13px;
+	}
+
+	/* tooltips are annoying on mobile - worth considering hiding them all*/
+	html.responsive .review_box .review_source.tooltip {
+		display: none;
+	}
+
+	/* posted date and purchase source are on the same row */
+	html.responsive .review_box .postedDate {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-right: 8px;
+		font-size: 12px;
+	}
+	html.responsive .responsive_purchase_source {
+		display: inline-block;
+	}
+
+	/* make the review detail header fit flush against the top border  */
+	html.responsive .review_box .rightcol {
+		padding: 1px 0px 10px 0px;
+	}
+
+	/* review thumb up/down image */
+	html.responsive .responsive_voting_image {
+		display: inline-block;
+		padding-top: 4px;
+		height: 26px;
+		width: 26px;
+	}
+
+
+	/* hide div in the developer response section which only has nbsp as content and some padding*/
+	html.responsive .review_developer_response_container .leftcol {
+		display: none;
+	}
+
+	/*
+		The below styles are for content which is only used in responsive UX
+	*/
+
+	/* grid of developer, publisher, released data */
+	html.responsive .app_header_grid_container {
+		display: inline-block !important;
+        margin-top: 8px;
+	}
+		html.responsive .app_header_grid_container .grid_label,
+		html.responsive .app_header_grid_container .grid_content {
+			font-size: 12px;
+            float: left;
+		}
+		html.responsive .app_header_grid_container .grid_label {
+			color: var(--gpStoreLightGrey);
+			text-transform: none;
+			margin-right: 5px;
+		}
+        html.responsive .app_header_grid_container .grid_content {
+            margin-right: 8px;
+        }
+        html.responsive .app_header_grid_container .grid_label.grid_date {
+            display: inline-block;
+            clear: left;
+        }
+        html.responsive .app_header_grid_container .grid_content.grid_date {
+            display: inline-block;
+            color: var(--gpStoreLightGrey);
+        }
+
+	/* new section for responsive UX called Links and Info
+	   existing content is moved here: achievements, game details, community link, ...
+	*/
+	html.responsive #appLinksAndInfoCtn {
+		padding-top: 20px;
+		display: block !important;
+	}
+
+	/* apply a right chevron to the right side of the element's background  */
+	html.responsive .responsive_chevron_right {
+		background-image: url('/public/images//v6/chevron_right.png');
+		background-repeat: no-repeat;
+		background-position: calc(100% - 7px);
+	}
+
+	/* a plus image that changes to minus when section is expanded*/
+	html.responsive .expand_section {
+		background-image: url('/public/images//v6/plus.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+		width: 16px;
+		height: 16px;
+		padding-right: 20px;
+	}
+	html.responsive .expand_section.expanded {
+		background-image: url('/public/images//v6/minus.svg');
+	}
+
+	/* show summary of supported languages and expand it when clicked */
+	html.responsive #bannerAwards.responsive_banner_link,
+	html.responsive #bannerLanguages.responsive_banner_link {
+		display: flex;
+		flex-grow: 1;
+		text-transform: none;
+	}
+	html.responsive #languageTable {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	html.responsive #languageTable .game_language_options {
+		width: 100%;
+	}
+
+	html.responsive #writeReviewTable {
+		display: none;
+	}
+
+	/* Container for the purchase options banner floating at the bottom */
+	html.responsive .responsive_purchase_options_ctn {
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		position: fixed;
+		bottom: 0px;
+		left: 0px;
+		width: 100%;
+		z-index: 1100;
+	}
+	html.responsive .purchase_options_empty_space {
+		display: none;
+		flex: 1;
+		opacity: 0.7;
+		background-color:black;
+		width: 100%;
+		touch-action: none;
+	}
+	html.responsive .purchase_options_banners {
+		display: block;
+		align-items: center;
+		color: white !important;
+		border-radius: 4px;
+		touch-action: none;
+	}
+	html.responsive .purchase_options_banners > div {
+		flex: 1;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		text-align: center;
+		padding-top: 10px;
+		padding-bottom: 30px;
+	}
+	/* purchase options banner button styling */
+	html.responsive .purchase_options_banners .purchase_banner_link_discount {
+		align-items: center;
+		font-size: 16px;
+	}
+	html.responsive .purchase_options_banners .purchase_banner_link_starting_at {
+		color: #8A97A0 !important;
+		flex: 1;
+		font-size: 14px;
+		padding-bottom: 5px;
+	}
+	html.responsive .purchase_options_banners .purchase_banner_link_close,
+	html.responsive .purchase_options_banners .purchase_banner_link_open {
+		font-size: 16px;
+		padding: 5px;
+		width: 70%;
+		border-radius: 2px;
+	}
+	html.responsive .purchase_options_banners .purchase_banner_link_open {
+		background: #75B022;
+	}
+	html.responsive .purchase_options_banners .purchase_banner_link_close {
+		background: #8A97A0;
+	}
+	html.responsive #purchaseOptionsBanner_visible {
+		padding: 32px 0px 30px 0px;
+	}
+	html.responsive #purchaseOptionsBanner_hidden {
+		border-top: 2px solid #111111;
+	}
+
+
+
+
+
+
+
+
+	/* Hide scrollbar */
+	html.responsive ::-webkit-scrollbar {
+		display: none;
+	}
+
+
+
+	/* Framework */
+	html.responsive #game_highlights,
+	html.responsive body.v6 .page_content {
+		margin: 0;
+		padding: 16px 24px;
+		background-color: var(--gpBackground-DarkHard);
+	}
+
+	html.responsive .v6.app.game_bg {
+		background-color: #1B2838;
+		background: radial-gradient(farthest-corner at 40px 40px,#2A475E 0%, #1B2838 80%); !important;
+		background-attachment: fixed;
+	}
+
+	html.responsive .page_content_ctn {
+		margin: 0px var(--gpSpace-Gutter);
+	}
+
+	html.responsive .responsive_store_nav_ctn_spacer {
+		height: 0px;
+	}
+
+	html.responsive .page_content_ctn {
+		/* padding-top: var(--gpSpace-Gutter); */
+	}
+
+	html.responsive #purchaseOptionsContent {
+		margin: unset;
+		margin-right: var(--gpSpace-Gutter);
+	}
+
+
+
+
+	/* Purchase options */
+	html.responsive .purchase_options_content_tablet {
+		top: 0px !important;
+		/* padding-top: var(--gpSpace-Gutter); */
+	}
+
+	.game_area_purchase_game,
+	.game_area_offsite_purchase {
+		background: none;
+		padding: 0;
+		border-radius: 0;
+		margin-bottom: 16px;
+	}
+
+	html.responsive .game_area_purchase_game_wrapper,
+	html.responsive .game_area_purchase_game.free_weekend {
+		margin-bottom: 4px;
+		box-shadow: unset;
+	}
+
+	.game_area_purchase_game.free_weekend {
+		background: unset;
+	}
+
+	html.responsive .rightcol.game_meta_data .block {
+		background: none;
+	}
+
+    html.responsive body.v6 .page_title_area.game_title_area.page_content {
+        padding: 0px;
+        background-color: unset;
+    }
+
+    html.responsive .saleEventBannerStyle:hover {
+        filter: saturate(1.0);
+        transform: unset;
+    }
+
+	html.responsive .free_weekend p {
+		margin-bottom: 8px;
+	}
+
+	html.responsive .game_area_purchase_game_wrapper .ds_completetheset {
+		position: unset;
+		box-shadow: unset;
+		height: unset;
+		background-color: var(--gpBackground-LightSoft);
+		color: white;
+		border-radius: var(--gpCorner-Medium);
+		padding: 0px 0px 16px 16px;
+	}
+
+
+
+
+	/* Download demo */
+	html.responsive .game_area_purchase_game.demo_above_purchase {
+		border-radius: 0px;
+		box-shadow: unset;
+		margin-bottom: 4px;
+	}
+
+	html.responsive .game_area_purchase_game.demo_above_purchase h1 {
+		margin-bottom: 8px;
+	}
+
+	html.responsive .game_area_purchase_game.demo_above_purchase .game_purchase_action_bg,
+	html.responsive .game_area_purchase_game.free_weekend .game_purchase_action_bg {
+		height: unset;
+	}
+
+
+
+
+	/* Pricing */
+	html.responsive .game_area_comingsoon {
+		box-shadow: unset;
+	}
+
+	html.responsive .game_area_purchase_game .game_purchase_action,
+	html.responsive .game_area_comingsoon .game_purchase_action,
+	html.responsive .game_area_offsite_purchase .game_purchase_action {
+		justify-content: unset;
+		flex-direction: unset;
+		flex-wrap: unset;
+		display: inline-block;
+		margin-top: 0px;
+		padding-top: 0px;
+		display: grid;
+		gap: 8px;
+	}
+
+	html.responsive .game_purchase_action_bg {
+		display: grid;
+		gap: 12px;
+		height: auto;
+		background: none;
+		margin-left: unset;
+	}
+
+	html.responsive .game_area_purchase_game_wrapper .game_area_purchase_game h1 {
+		margin-bottom: 6px;
+		font: var(--gpText-BodyLarge);
+	}
+
+	html.responsive .game_area_purchase_game.free_weekend .game_purchase_action_bg {
+		height: unset;
+	}
+
+	html.responsive .btn_addtocart,
+	html.responsive .btn_green_steamui,
+	html.responsive .btn_blue_steamui {
+		width: 100%;
+		box-sizing: border-box;
+	}
+
+	.game_purchase_discount {
+		height: unset;
+	}
+
+	.game_purchase_action_bg > * {
+		margin-left: unset;
+	}
+
+	html.responsive .game_purchase_discount .discount_pct, html.responsive .game_purchase_discount .bundle_base_discount {
+		background: unset;
+		height: unset;
+		line-height: unset;
+		padding-left: 0px;
+	}
+
+	html.responsive .game_purchase_discount .discount_prices {
+		display: flex;
+		position: unset;
+		vertical-align: unset;
+		height: unset;
+		align-items: center;
+	}
+
+	html.responsive .discount_block .discount_prices {
+		display: flex;
+		vertical-align: unset;
+		text-align: unset;
+		background: unset;
+	}
+
+	html.responsive .game_purchase_action_bg .discount_block {
+		margin-bottom: 0px;
+	}
+
+	html.responsive .game_purchase_discount .discount_original_price {
+		position: unset;
+		left: unset;
+		right: unset;
+		top: unset;
+		font-size: unset;
+		margin-right: 4px;
+		color: var(--gpStoreLightGrey);
+	}
+
+	html.responsive .game_area_purchase_game .discount_final_price {
+		font-weight: 700 !important;
+	}
+
+	html.responsive .game_purchase_discount .discount_final_price {
+		padding: unset;
+		color: white;
+	}
+
+	html.responsive .discount_block {
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		margin-bottom: 4px;
+	}
+
+	html.responsive .game_purchase_discount .discount_original_price,
+	html.responsive .game_purchase_discount .discount_final_price,
+	html.responsive .discount_block {
+		font: var(--gpText-BodyLarge);
+	}
+
+	html.responsive .game_purchase_price {
+		background: unset;
+		font-size: unset;
+		font: var(--gpText-BodyLarge);
+		padding: unset;
+		height: unset;
+		text-align: left;
+		color: white;
+		font-weight: 700;
+
+	}
+
+	html.responsive .discount_block.game_purchase_discount.no_discount .discount_final_price {
+		line-height: unset;
+	}
+
+	html.responsive .discount_block .bundle_base_discount {
+		color: #a4d007;
+		opacity: 0.6;
+	}
+
+
+
+	/* Hide now broadcasting sticky video */
+	html.responsive .video_placeholder_trgt {
+		display: none;
+	}
+
+
+
+
+	/* VR notice */
+	html.responsive .notice_box_content {
+		border: 2px solid var(--gpColor-Orange);
+		border-radius: var(--gpCorner-Large);
+		color: var(--gpStoreLighterGrey);
+		margin-bottom: 12px;
+		color: unset;
+		padding: 8px 12px;
+	}
+
+	html.responsive .notice_box_content b {
+		font-weight: 700;
+		color: var(--gpColor-Orange);
+	}
+
+
+
+
+	/* Purchase options groups and dropdown */
+	body.v6 #game_area_purchase h2.package_group {
+		margin-bottom: 12px;
+	}
+
+	html.responsive .game_area_purchase_game_dropdown_right_panel {
+		height: unset;
+		position: unset;
+		bottom: unset;
+		right: unset;
+	}
+
+	html.responsive .game_area_purchase_not_refundable, .game_area_purchase_custom_cart_credit {
+		height: unset;
+		padding: unset;
+		text-align: left;
+		color: var(--gpStoreLightGrey);
+		font: var(--gpText-BodySmall);
+		background: unset;
+		margin-top: 4px;
+	}
+
+	html.responsive .game_area_purchase_game a {
+		color: unset;
+	}
+
+	html.responsive .game_area_purchase_not_refundable a {
+		color: unset;
+	}
+
+	html.responsive .game_area_purchase_game_dropdown_selection {
+		background: unset;
+		border: 1px solid #ffffff6b;
+		border-radius: var(--gpCorner-Large);
+		transition: all 0.1s ease;
+		padding: 8px 8px 8px 12px;
+		float: unset;
+		height: unset;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+        white-space: normal;
+		font: var(--gpText-BodyLarge);
+	}
+
+	html.responsive .game_area_purchase_game_dropdown_selection:hover {
+		border: 1px solid white;
+	}
+
+	html.responsive .game_area_purchase_game_dropdown br, html.responsive .game_area_purchase_game_dropdown_subscription br { /*hide inline BR*/
+		display: none;
+	}
+
+	html.responsive .game_area_purchase_game_dropdown_description {
+		padding: 0px 0px 12px 0px;
+	}
+
+	html.responsive #game_area_purchase h2.package_group {
+		margin-top: 12px;
+	}
+
+
+
+
+	/* DLC content puchase options */
+	html.responsive #gameAreaDLCSection h2 {
+		display: grid;
+		gap: 8px;
+		justify-content: unset;
+	}
+
+	html.responsive h2 span.note {
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		border: unset;
+		border-radius: unset;
+		padding: unset;
+		float: unset;
+	}
+
+	html.responsive h2 span.note a {
+		border: 1px solid #ffffff6b;
+		border-radius: var(--gpCorner-Large);
+		transition: all 0.1s ease;
+		padding: 8px;
+		text-align: center;
+		font: var(--gpText-BodyLarge);
+	}
+
+	html.responsive h2 span.note a:hover {
+		border: 1px solid white;
+	}
+
+	html.responsive .game_area_dlc_price {
+		padding-right: unset;
+		font-size: unset;
+	}
+
+	html.responsive .game_area_dlc_name {
+		font-size: unset;
+		color: var(--gpStoreLightestGrey);
+	}
+
+	html.responsive .game_area_dlc_row.odd,
+	html.responsive .game_area_dlc_row.even {
+		background: unset;
+	}
+
+	html.responsive .game_area_dlc_row {
+		padding: 4px !important; /* overriding important */
+		border-bottom: 1px solid var(--gpBackground-LightMedium);
+		font: var(--gpText-BodyMedium);
+		transition: all 0.1s ease;
+	}
+
+	html.responsive .game_area_dlc_row:hover,
+	html.responsive .game_area_dlc_row.gpfocus {
+		background: var(--gpBackground-LightSoft);
+	}
+
+	html.responsive .discount_block_inline .discount_prices {
+		padding: unset;
+	}
+
+	html.responsive .game_area_dlc_row .discount_block_inline .discount_final_price {
+		font-size: unset;
+		color: white;
+	}
+
+	html.responsive .game_area_dlc_row .discount_block_inline .discount_original_price {
+		color: var(--gpStoreLightGrey);
+	}
+
+	html.responsive .game_area_dlc_row .discount_block_inline {
+		font: var(--gpText-BodyMedium);
+	}
+
+	html.responsive .game_area_dlc_row .discount_block_inline .discount_pct {
+		background: unset;
+	}
+
+	html.responsive #dlc_purchase_action {
+		float: unset;
+		margin-top: 8px;
+	}
+
+	html.responsive .game_area_purchase_game p.package_contents, .game_area_offsite_purchase p.package_contents {
+		color: unset;
+	}
+
+	html.responsive .bundle_contents_preview {
+		margin: 8px 0px;
+		background: var(--gpBackground-DarkHard);
+		border-radius: var(--gpCorner-Medium);
+	}
+
+
+
+
+	/* Bundle info */
+	html.responsive .discount_block.no_discount .bundle_base_discount {
+		color: unset;
+		color: var(--gpColor-GreenHi);
+		border-right: unset;
+	}
+
+	html.responsive .discount_block.game_purchase_discount.no_discount .discount_final_price.your_price {
+		display: flex;
+		font-size: unset;
+		font: var(--gpText-BodyLarge);
+	}
+
+	html.responsive .discount_block.game_purchase_discount.no_discount .discount_final_price.your_price div {
+		font: var(--gpText-BodyLarge);
+		font-weight: 700;
+	}
+
+	html.responsive .discount_block.game_purchase_discount.no_discount .discount_final_price.your_price .your_price_label {
+		margin-right: 4px;
+		font-weight: 400;
+	}
+
+
+
+
+	/* Coming soon block */
+	html.responsive .game_area_comingsoon .not_yet {
+		font: var(--gpText-BodyMedium);
+		color: var(--gpStoreLightestGrey);
+	}
+
+	html.responsive .game_area_comingsoon .content {
+		padding-bottom: 0px;
+	}
+
+	html.responsive .game_area_comingsoon .wishlist_add_reminder {
+		height: unset;
+		color: unset;
+		flex-direction: column;
+	}
+
+	html.responsive .game_area_comingsoon .wishlist_add_reminder .wishlist_note {
+		color: var(--gpStoreLightestGrey);
+		font: var(--gpText-BodyMedium);
+		padding-top: 12px;
+		margin-top: 0px;
+		border-top: 1px solid var(--gpBackground-LightMedium);
+	}
+
+	html.responsive #add_to_wishlist_area2 {
+		background: unset;
+		padding-top: 0px;
+	}
+
+
+
+
+
+	/* Purchase option bubbles */
+	html.responsive .game_area_bubble {
+		margin-bottom: 16px;
+		border-radius: var(--gpCorner-Medium);
+	}
+
+	html.responsive .game_area_bubble .content {
+		padding: 12px 16px;
+		color: white;
+	}
+
+	html.responsive .game_area_bubble .content p {
+		opacity: 0.8;
+	}
+
+	html.responsive .game_area_bubble .content p a {
+		color: unset;
+	}
+
+	html.responsive .game_area_bubble .content h1 {
+		font-weight: 700;
+	}
+
+	html.responsive .game_area_dlc_bubble {
+		background: linear-gradient(135deg,  #884a86 10%,rgba(165,84,177,0.8) 100%);
+	}
+
+
+
+	/* Heading dividers */
+	html.responsive #aboutThisGame h2:not(h2.bb_tag),
+	html.responsive #app_reviews_hash h2 {
+		border-top: 1px solid #54748C66;
+		padding-top: var(--gpSpace-Gutter);
+		display: block;
+	}
+
+
+
+
+	/* Game advertisement */
+	html.responsive .responsive_page_header_img, .saleEventBannerLink {
+		display: flex !important;
+		margin-bottom: unset;
+		box-shadow: var(--gpShadow-Medium);
+	}
+
+	html.responsive .saleEventBannerLink {
+		margin-bottom: 12px;
+	}
+
+
+
+
+	/* Review summary */
+	.game_review_summary.positive {
+		color: var(--gpColor-Blue);
+	}
+
+	
+
+
+	/* Links */
+	#game_highlights a {
+		color: var(--gpColor-Blue);
+	}
+
+
+
+	/* Tags */
+	html.responsive .details_block a.linkbar
+	html.responsive .responsive_banner_link,
+	html.responsive .user_reviews,
+	html.responsive .purchase_options_banners,
+	html.responsive .glance_tags_ctn .glance_tags .app_tag {
+		background-color: var(--gpBackground-LightSoft);
+		border-radius: var(--gpCorner-Medium);
+		color: var(--gpColor-Blue);
+		transition: all 0.1s ease;
+	}
+
+	html.responsive .game_area_details_specs {
+		background: none;
+		border-radius: 2px;
+	}
+
+
+
+
+	/* Features */
+	html.responsive .game_area_details_specs .icon {
+		padding: 0px;
+	}
+
+	html.responsive .game_area_details_specs {
+		margin-bottom: 0px;
+	}
+
+	html.responsive .game_area_details_specs a.name {
+		padding: 0px;
+	}
+
+	html.responsive #bannerLanguages.responsive_banner_link {
+		background: var(--gpBackground-LightSoft);
+		border-radius: var(--gpCorner-Medium);
+		color: var(--gpColor-Blue);
+	}
+
+	#userReviews_responsive {
+		background: unset;
+		padding: 0px;
+		margin-bottom: var(--gpSpace-Gutter);
+	}
+
+	html.responsive #appReviewsAll_responsive, html.responsive #appReviewsRecent_responsive {
+		padding: 0px 0px 4px 0px;
+	}
+
+	html.responsive .game_area_details_specs a {
+		color: var(--gpColor-Blue);
+	}
+
+	html.responsive .responsive_banner_link_title {
+		background: var(--gpBackground-LightSoft);
+		border-radius: var(--gpCorner-Medium);
+		color: var(--gpColor-Blue);
+	}
+
+	#bannerLanguages .responsive_banner_link_title {
+		background: unset;
+	}
+
+	html.responsive .partnereventwebrowembed_EventsSummariesCtn_1snIw {
+		margin-top: 0px;
+	}
+
+	html.responsive #category_block {
+		margin-top: 8px;
+	}
+
+
+
+
+	/* Notice */
+	html.responsive .DRM_notice {
+		border-radius: var(--gpCorner-Medium);
+		padding: 8px 12px;
+		color: #e1c48a;
+	}
+
+
+
+
+	/* Franchise notice */
+	html.responsive .franchise_notice {
+		text-shadow: unset;
+		box-shadow: unset;
+		border-radius: var(--gpCorner-Medium);
+	}
+
+	html.reponsive .franchise_notice:hover .franchise_highlight {
+		box-shadow: unset;
+	}
+
+	html.responsive .franchise_notice .franchise_highlight {
+		box-shadow: unset;
+		background: var(--gpBackground-LightSoft);
+	}
+
+
+
+
+	/* Links and info */
+	.game_page_autocollapse_ctn.collapsed .game_page_autocollapse_fade {
+		display: none;
+	}
+
+	html.responsive .game_page_autocollapse {
+		max-height: unset !important; /*needed to override inline html style*/
+	}
+
+	html.responsive .block a.linkbar {
+		background: var(--gpBackground-LightSoft);
+		border-radius: var(--gpCorner-Medium);
+		padding: 8px 12px;
+		color: var(--gpColor-Blue);
+		font: var(--gpText-BodyMedium);
+	}
+
+	html.responsive .details_block a {
+		font-weight: unset;
+	}
+
+	html.responsive .game_description_column img {
+		margin: 12px 0px;
+	}
+
+
+
+	/* Sign in queue */
+	html.responsive .game_background_glow {
+		padding-bottom: unset;
+	}
+
+	html.responsive .queue_ctn {
+		background: var(--gpBackground-DarkHard);
+		margin-bottom: 0px;
+	}
+
+
+
+
+	/* Curator review */
+	html.responsive .referring_curator_ctn {
+		margin: unset;
+	}
+
+	html.responsive .referring_curator_ctn .referring_curator {
+		border: 1px solid var(--gpBackground-LightSoft);
+		background: unset;
+		margin: unset;
+		box-shadow: unset;
+		border-radius: var(--gpCorner-Large);
+	}
+
+	html.responsive .referring_curator .blurb .review_title {
+		font: var(--gpText-BodyLarge);
+		text-transform: unset;
+		letter-spacing: unset;
+	}
+
+	html.responsive .referring_curator .blurb p {
+		margin-bottom: 12px;
+		color: var(--gpStoreLightestGrey);
+	}
+
+	html.responsive .referringSteamCurator,
+	html.responsive .referringSteamCurator .curator_review_date,
+	html.responsive .referringSteamCurator a {
+		color: var(--gpStoreLighterGrey);
+	}
+
+
+
+	/* Recent events and announcements */
+	html.responsive .localdateandtime_DateAndTime_2V6GL,
+	html.responsive .localdateandtime_DateAndTime_2V6GL span {
+		font: var(--gpText-BodySmall);
+	}
+
+	html.responsive .partnereventwebrowembed_LatestUpdateButton_1TRFt {
+		padding: 8px 12px;
+		border-radius: var(--gpCorner-Large);
+		transition: all 0.1s ease;
+	}
+
+	html.responsive .eventrow_OtherEvents_EventCtn_1MwNf.eventrow_HorizontalEvent_1ruRS {
+		background: var(--gpBackground-LightSoft);
+		box-shadow: unset;
+		border-radius: var(--gpCorner-Medium);
+	}
+
+	html.responsive .eventrow_OtherEvents_EventCtn_1MwNf.eventrow_HorizontalEvent_1ruRS .eventrow_HorizontalTitle_B9-wl {
+		font-size: unset;
+		color: var(--gpStoreLightestGrey);
+		font-weight: 400;
+	}
+
+
+
+
+	/* Game description */
+	html.responsive .game_description_column {
+		color: unset;
+	}
+
+	html.responsive body.v6 .game_area_description h2.bb_tag {
+		text-transform: lowercase;
+		color: var(--gpStoreLighterGrey);
+		font: var(--gpText-BodyLarge);
+		font-weight: 700;
+		margin-top: unset;
+	}
+
+	html.responsive body.v6 .game_area_description h2.bb_tag:first-letter {
+		text-transform: uppercase;
+	}
+
+	html.responsive .game_area_description ul {
+		color: unset;
+	}
+
+
+
+
+	/* System requirements */
+	html.responsive .sys_req {
+		display: none;
+	}
+
+
+
+
+	/* Legal */
+	#game_area_legal {
+		color: var(--gpStoreLightGrey);
+		font: var(--gpText-BodySmall);
+	}
+
+	#game_area_legal a {
+		color: var(--gpColor-Blue);
+	}
+
+
+
+	/* Sliders */
+	html.responsive .slider_ctn {
+		display: none !important; /* overriding inline style */
+	}
+
+	html.responsive .block_responsive_horizontal_scroll.block_content {
+		scroll-snap-type: x mandatory;
+		margin: 0px calc(0px - var(--gpSpace-Gutter));
+		padding-left: var(--gpSpace-Gutter);
+		scroll-padding: var(--gpSpace-Gutter);
+		width: calc(100% + var(--gpSpace-Gutter));
+	}
+
+	html.responsive .game_description_column .block .block_content a {
+		border:unset;
+		background: var(--gpStoreDarkestGrey);
+		margin-right: 8px;
+		padding: 12px;
+		height: auto;
+		scroll-snap-align: start;
+	}
+
+	html.responsive .store_horizontal_autoslider_ctn {
+		overflow: unset;
+		height: auto !important; /* to override inline style */
+	}
+
+	html.responsive .game_description_column .block .block_header .right a {
+		background-color: unset;
+		border-radius: var(--gpCorner-Medium);
+		border: 1px solid #FFFFFF52;
+		transition: all 0.2s ease;
+		font: var(--gpText-BodyMedium);
+		color: white;
+		padding: 4px 8px;
+		margin-top: -2px;
+	}
+
+	html.responsive .game_description_column .block .block_header .right a:hover {
+		background: unset;
+		border: 1px solid white;
+	}
+
+	html.responsive .btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover img {
+		filter: saturate(0) contrast(2) brightness(2) hue-rotate(32deg) !important;
+	}
+
+	html.responsive .discount_block_inline .discount_final_price {
+		font-size: unset;
+	}
+
+
+
+	/* Game relevance */
+	html.responsive .block.recommendation_reasons, .block.recommendation_reasons p {
+		color: unset;
+	}
+
+	html.responsive .block.recommendation_reasons a {
+		color: var(--gpColor-Blue);
+	}
+
+	html.responsive .block.recommendation_reasons .similar_recent_apps_container > a {
+		font-size: unset;
+		padding: 8px;
+		background: var(--gpStoreDarkestGrey);
+		margin-right: 8px;
+	}
+
+	html.responsive .similar_recent_apps_container {
+		margin: 6px 0px
+	}
+
+	html.responsive #responsive_apppage_details_right_ctn .responsive_apppage_details_right  {
+		margin-bottom: unset;
+	}
+
+	html.responsive #responsive_apppage_details_right_ctn .recommendation_reasons {
+		border: 1px solid var(--gpBackground-LightSoft);
+		border-radius: var(--gpCorner-Large);
+		margin: unset;
+		margin-bottom: 16px;
+		padding: 16px 0px 8px 32px !important;
+	}
+
+	html.responsive #responsive_apppage_details_right_ctn .friend_blocks_grid {
+		margin-bottom: unset;
+	}
+
+
+
+
+	/* Customer reviews */
+	html.responsive .review_box {
+		background: var(--gpStoreDarkestGrey);
+		padding: 16px;
+		margin-bottom: 6px;
+	}
+
+	html.responsive .review_box .rightcol .vote_header {
+		background: unset;
+		height: unset;
+		padding: 0px;
+		margin-top: 0px;
+	}
+
+	html.responsive .review_box .vote_header .title {
+		color: unset;
+		font-weight: 600;
+	}
+
+	html.responsive .review_box .hours.ellipsis {
+		font: var(--gpText-BodySmall);
+		color: var(--gpStoreLighterGrey);
+	}
+
+	html.responsive .user_reviews_sub_header,
+	html.responsive .user_reviews_sub_header span {
+		letter-spacing: unset;
+		text-transform: unset;
+		font: var(--gpText-BodyMedium);
+		font-weight: 400;
+	}
+
+	html.responsive .user_reviews_sub_header {
+		margin-bottom: 4px;
+	}
+
+	html.responsive .user_reviews_sub_header span {
+		color: var(--gpStoreLighterGrey);
+	}
+
+	html.responsive .review_developer_response_container,
+	html.responsive .review_box .responsive_review_leftcol_ctn,
+	html.responsive .review_box .postedDate,
+	html.responsive .review_box .content,
+	html.responsive .review_box .shortcol .control_block,
+	html.responsive .review_box .rightcol .control_block,
+	html.responsive .review_box .shortcol .vote_info,
+	html.responsive .review_box .rightcol .vote_info,
+	html.responsive .review_box .review_award_ctn,
+	html.responsive .review_box .receivedCompensation {
+		padding: 0px;
+		margin: 0px;
+	}
+
+	html.responsive .review_box .review_award_ctn {
+		margin-top: 12px;
+	}
+
+	html.responsive .review_box .review_award,
+	html.responsive .review_box .btnv6_grey_black {
+		padding: 6px;
+		border-radius: var(--gpCorner-Medium);
+		margin: 0px 4px 0px 0px;
+		background: var(--gpBackground-LightSoft);
+	}
+
+	html.responsive #reviews_active_filters .active_filter {
+		border: 1px solid var(--gpBackground-LightHard);
+		border-radius: var(--gpCorner-Large);
+		background-color: unset;
+	}
+
+	html.responsive .review_box .hr {
+		margin: 12px 0px;
+	}
+
+	html.responsive .review_box .content {
+		font: var(--gpText-BodyLarge);
+		color: var(--gpStoreLighterGrey);
+		font-weight: 400;
+	}
+
+	html.responsive .review_box .review_was_helpful,
+	html.responsive .review_box .vote_info {
+		font: var(--gpText-BodyMedium);
+		color: var(--gpStoreLightGrey);
+		font-weight: 400;
+		opacity: 1;
+	}
+
+	html.responsive .review_box.partial .content .gradient {
+		background: -webkit-linear-gradient( top, rgba( 16,21,30,0) 5%, var(--gpStoreDarkestGrey));
+	}
+
+	html.responsive .responsive_review_leftcol_ctn {
+		opacity: 1;
+	}
+
+	html.responsive .responsive_review_leftcol_ctn .persona_name a,
+	html.responsive .responsive_review_leftcol_ctn .num_owned_games a,
+	html.responsive .responsive_review_leftcol_ctn .num_reviews a {
+		font: var(--gpText-BodyMedium);
+		color: var(--gpColor-Blue);
+	}
+
+	html.responsive .responsive_review_leftcol_ctn .num_owned_games,
+	html.responsive .responsive_review_leftcol_ctn .num_reviews {
+		border-left: 1px solid var(--gpBackground-LightSoft);
+	}
+
+
+
+
+	/* Report bugs and leave feedback */
+	html.responsive .early_access_banner {
+		background: var(--gpStoreDarkestGrey);
+		height: unset;
+	}
+
+	html.responsive .early_access_banner > .img {
+		background-image: url(/store/public/images/v6/icon_bug.png);
+		background-size: cover;
+		width: 36px;
+		height: 36px;
+		left: 8px;
+		top: 8px;
+	}
+
+	html.responsive .early_access_banner p {
+		color: var(--gpStoreLightestGrey);
+	}
+
+	html.responsive .early_access_banner a {
+		border: 1px solid white;
+		background: unset;
+		color: white;
+	}
+
+
+
+
+
+	/* Early access game */
+	html.responsive .early_access_header {
+		border: unset;
+		border-bottom: 1px solid var(--gpBackground-LightSoft);
+	}
+
+	html.responsive .early_access_header .heading {
+		padding: 12px 12px;
+		border-radius: var(--gpCorner-Medium);
+		background: var(--gpColor-DustyBlue);
+	}
+
+	html.responsive .early_access_header .heading h2,
+	html.responsive .early_access_header .heading p {
+		font: var(--gpText-BodyMedium);
+		color: white;
+		letter-spacing: unset;
+	}
+
+	html.responsive .early_access_header .heading h1 {
+		font: var(--gpText-BodyLarge);
+		font-weight: 700;
+	}
+
+	html.responsive .early_access_header .inset {
+		text-shadow: unset;
+	}
+
+	html.responsive .early_access_header .heading p {
+		margin-top: 8px;
+	}
+
+	html.responsive .early_access_header .heading p span {
+		font-weight: 600;
+	}
+
+	html.responsive .early_access_header .devnotes {
+		padding: 12px 0px;
+	}
+
+	html.responsive .early_access_header .devnotes .devs_say {
+		margin-top: unset;
+		color: var(--gpStoreLightGrey);
+		text-transform: unset;
+		font: var(--gpText-BodySmall);
+	}
+
+	html.responsive .early_access_header #devnotes_expander h1 {
+		font: var(--gpText-BodyMedium);
+		font-weight: 600;
+		color: var(--gpStoreLightestGrey);
+	}
+
+	html.responsive .early_access_header #devnotes_expander {
+		font: var(--gpText-BodyMedium);
+		color: var(--gpStoreLighterGrey);
+	}
+
+	html.responsive .early_access_header #devnotes_expander h1 {
+		font-weight: 600;
+		color: var(--gpStoreLightestGrey);
+	}
+
+	html.responsive .early_access_header .devnotes > div {
+		max-height: 106px;
+	}
+
+	html.responsive .early_access_header .devnotes .morebutton {
+		padding-right: unset;
+		height: 18px;
+		text-transform: unset;
+		color: var(--gpColor-Blue);
+		font: var(--gpText-BodyMedium);
+		bottom: 13px;
+	}
+
+
+
+	/* Purchase options modal */
+	html.responsive .game_area_purchase_game_dropdown_menu_container {
+		box-shadow: unset;
+		background: unset;
+		border-radius: unset;
+		padding: unset;		
+	}
+
+	html.responsive .game_area_purchase_game_dropdown_menu_items_container_background {
+		background-image: unset;
+	}
+
+	html.responsive .game_area_purchase_game_dropdown_menu_items_container_background tr {
+		height: unset;
+		padding: unset;
+	}
+
+	html.responsive .game_area_purchase_game_dropdown_menu_items_container tr:first-child td,
+	html.responsive .game_area_purchase_game_dropdown_menu_items_container tr:last-child td {
+		border: unset !important;
+	}
+
+	html.responsive .game_area_purchase_game_dropdown_menu_item_savings {
+		border: unset;
+		display: none;
+	}
+
+	html.responsive .game_area_purchase_game_dropdown_menu_item_text {
+		border: unset;
+		padding: 10px;
+	}
+
+	html.responsive .game_area_purchase_game_dropdown_menu_items_container td {
+		font: var(--gpText-BodyLarge);
+	}
+
+	html.responsive .game_area_purchase_game_dropdown_menu_items_container tr:hover {
+		background: var(--gpBackground-LightSoft);
+	}
+
+	html.responsive .game_area_purchase_game_dropdown_menu_items_container tr.gpfocus {
+		background: white;
+		color: black;
+	}
+
+
+}
