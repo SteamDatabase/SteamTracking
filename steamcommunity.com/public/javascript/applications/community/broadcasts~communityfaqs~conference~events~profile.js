@@ -14148,6 +14148,9 @@
                   s.a.createElement(kt, {
                     strLabNumber: "013",
                     strLabName: "contenthub",
+                    strForumURL:
+                      S.c.COMMUNITY_BASE_URL +
+                      "groups/SteamLabs/discussions/15/",
                     bShowOptOut: !0,
                   })
                 )
@@ -14513,7 +14516,7 @@
                       ? a.jsondata.broadcast_whitelist
                       : void 0,
                   },
-                  h = Boolean(
+                  m = Boolean(
                     null ===
                       (n =
                         null === (t = this.props.eventModel) || void 0 === t
@@ -14522,10 +14525,10 @@
                       ? void 0
                       : n.broadcast_display_wide_player
                   ),
-                  _ =
+                  h =
                     a.jsondata.item_source_type === u.n.k_EContentHub &&
                     a.jsondata.sale_vanity_id.includes("contenthubsalepage_"),
-                  f = L.a.Get().GetPartnerEventPermissions(a.clanSteamID);
+                  _ = L.a.Get().GetPartnerEventPermissions(a.clanSteamID);
                 return o.createElement(
                   F.a,
                   null,
@@ -14541,7 +14544,7 @@
                         ),
                         backgroundImage: c,
                         backgroundColor: a.jsondata.sale_background_color,
-                        bContentHubSalePage: _,
+                        bContentHubSalePage: h,
                       },
                       Boolean(d || l) &&
                         o.createElement(
@@ -14605,7 +14608,7 @@
                           o.createElement(bn, {
                             event: a,
                             broadcastEmbedContext: p,
-                            bWideBroadcastDisplay: h,
+                            bWideBroadcastDisplay: m,
                           }),
                         a.jsondata.sale_show_creator &&
                           o.createElement(
@@ -14640,16 +14643,6 @@
                           nSaleDayIndex: this.state.nSaleDayIndex,
                           broadcastEmbedContext: p,
                         }),
-                        _ &&
-                          o.createElement(
-                            "a",
-                            {
-                              href: Object(m.a)(
-                                S.c.STORE_BASE_URL + "labs/contenthub?optout=1"
-                              ),
-                            },
-                            Object(ne.f)("#ContentHub_OptOut")
-                          ),
                         Boolean(
                           a.BSaleShowCuratorRecommendationAtBottomOfPage()
                         ) &&
@@ -14677,7 +14670,7 @@
                               bgcolor: a.jsondata.sale_browsemore_bgcolor,
                             })
                           ),
-                        f.can_edit &&
+                        _.can_edit &&
                           o.createElement(x.a, {
                             eventModel: a,
                             bPreviewMode: this.props.bIsPreview,

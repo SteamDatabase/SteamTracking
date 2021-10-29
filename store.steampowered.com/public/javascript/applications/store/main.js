@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6861699";
+var CLSTAMP = "6863257";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [40],
   {
@@ -15243,6 +15243,9 @@ var CLSTAMP = "6861699";
                   s.a.createElement(Xt, {
                     strLabNumber: "013",
                     strLabName: "contenthub",
+                    strForumURL:
+                      S.d.COMMUNITY_BASE_URL +
+                      "groups/SteamLabs/discussions/15/",
                     bShowOptOut: !0,
                   })
                 )
@@ -15448,7 +15451,7 @@ var CLSTAMP = "6861699";
                       ? a.jsondata.broadcast_whitelist
                       : void 0,
                   },
-                  h = Boolean(
+                  m = Boolean(
                     null ===
                       (n =
                         null === (t = this.props.eventModel) || void 0 === t
@@ -15457,10 +15460,10 @@ var CLSTAMP = "6861699";
                       ? void 0
                       : n.broadcast_display_wide_player
                   ),
-                  f =
+                  h =
                     a.jsondata.item_source_type === u.n.k_EContentHub &&
                     a.jsondata.sale_vanity_id.includes("contenthubsalepage_"),
-                  b = R.a.Get().GetPartnerEventPermissions(a.clanSteamID);
+                  f = R.a.Get().GetPartnerEventPermissions(a.clanSteamID);
                 return o.createElement(
                   P.a,
                   null,
@@ -15476,7 +15479,7 @@ var CLSTAMP = "6861699";
                         ),
                         backgroundImage: c,
                         backgroundColor: a.jsondata.sale_background_color,
-                        bContentHubSalePage: f,
+                        bContentHubSalePage: h,
                       },
                       Boolean(p || l) &&
                         o.createElement(
@@ -15540,7 +15543,7 @@ var CLSTAMP = "6861699";
                           o.createElement(Bn, {
                             event: a,
                             broadcastEmbedContext: d,
-                            bWideBroadcastDisplay: h,
+                            bWideBroadcastDisplay: m,
                           }),
                         a.jsondata.sale_show_creator &&
                           o.createElement(
@@ -15575,16 +15578,6 @@ var CLSTAMP = "6861699";
                           nSaleDayIndex: this.state.nSaleDayIndex,
                           broadcastEmbedContext: d,
                         }),
-                        f &&
-                          o.createElement(
-                            "a",
-                            {
-                              href: Object(m.a)(
-                                S.d.STORE_BASE_URL + "labs/contenthub?optout=1"
-                              ),
-                            },
-                            Object(ne.f)("#ContentHub_OptOut")
-                          ),
                         Boolean(
                           a.BSaleShowCuratorRecommendationAtBottomOfPage()
                         ) &&
@@ -15612,7 +15605,7 @@ var CLSTAMP = "6861699";
                               bgcolor: a.jsondata.sale_browsemore_bgcolor,
                             })
                           ),
-                        b.can_edit &&
+                        f.can_edit &&
                           o.createElement(F.a, {
                             eventModel: a,
                             bPreviewMode: this.props.bIsPreview,
