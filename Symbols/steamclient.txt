@@ -469,6 +469,7 @@
  V_strncpy
  V_strnicmp
  V_strnistr
+ V_strnlen
  V_strtoi64
  V_strtoui64
  V_strupper_fast
