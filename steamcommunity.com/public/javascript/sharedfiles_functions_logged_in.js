@@ -8,20 +8,17 @@ function WorkshopSetAccepted(item_id)
 		"if you are REALLY REALLY sure you want to do this."))
 		return;
 
-	var options = {
-		method: 'post',
-		postBody: 'id=' + item_id + '&sessionid=' + g_sessionID,
-		onComplete: (function(item_id){
-			return function(transport)
-			{
+	$J.post( 'https://steamcommunity.com/sharedfiles/setaccepted', { id: item_id, sessionid: g_sessionID } )
+	.done( function( json ) {
+		switch ( json.success )
+		{
+			case 1:
 				window.location.reload();
-			}
-		}(item_id))
-	};
-	new Ajax.Request(
-		'https://steamcommunity.com/sharedfiles/setaccepted',
-		options
-	);
+				break;
+			default:
+				ShowAlertDialog( 'Error', json.error );
+		}
+	} );
 }
 
 // Still won't work.
