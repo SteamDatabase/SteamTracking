@@ -359,6 +359,7 @@
 				str_starts_with( $OriginalFile, 'www.underlords.com/' ) ||
 				str_starts_with( $OriginalFile, 'www.dota2.com/' ) ||
 				str_contains( $OriginalFile, '/webui/' ) ||
+				str_contains( $OriginalFile, '/legacy_web/' ) ||
 				str_contains( $OriginalFile, '/applications/' )
 			)
 			{

@@ -212,14 +212,17 @@ https://store.steampowered.com/public/css/styles_ssav5.css?__TIME__
 https://store.steampowered.com/public/css/styles_stats.css?__TIME__
 https://store.steampowered.com/public/css/styles_storev5.css?__TIME__
 https://store.steampowered.com/public/css/styles_supportmessages.css?__TIME__
+https://store.steampowered.com/public/css/styles_tablet.css?__TIME__
 https://store.steampowered.com/public/css/styles_twofactor.css?__TIME__
 https://store.steampowered.com/public/css/styles_video.css?__TIME__
 https://store.steampowered.com/public/css/styles_video_watch.css?__TIME__
 https://store.steampowered.com/public/css/styles_widget.css?__TIME__
 https://store.steampowered.com/public/css/tablet/events_tablet.css?__TIME__
 https://store.steampowered.com/public/css/v6/account.css?__TIME__
+https://store.steampowered.com/public/css/v6/account_tablet.css?__TIME__
 https://store.steampowered.com/public/css/v6/browse.css?__TIME__
 https://store.steampowered.com/public/css/v6/cart.css?__TIME__
+https://store.steampowered.com/public/css/v6/cart_tablet.css?__TIME__
 https://store.steampowered.com/public/css/v6/contenthub.css?__TIME__
 https://store.steampowered.com/public/css/v6/creator_hub.css?__TIME__
 https://store.steampowered.com/public/css/v6/curator_admin.css?__TIME__
@@ -237,6 +240,7 @@ https://store.steampowered.com/public/css/v6/game_mob.css?__TIME__
 https://store.steampowered.com/public/css/v6/game_tablet.css?__TIME__
 https://store.steampowered.com/public/css/v6/genre.css?__TIME__
 https://store.steampowered.com/public/css/v6/home.css?__TIME__
+https://store.steampowered.com/public/css/v6/home_tablet.css?__TIME__
 https://store.steampowered.com/public/css/v6/itemstore.css?__TIME__
 https://store.steampowered.com/public/css/v6/library_update.css?__TIME__
 https://store.steampowered.com/public/css/v6/news.css?__TIME__
@@ -502,6 +506,8 @@ https://store.steampowered.com/public/javascript/itemstore.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/jserrorreport.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/labs/divingbell.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/localization_helper.js?__TIME__&l=english
+https://store.steampowered.com/public/shared/javascript/legacy_web/gamepad.js?__TIME__&l=english
+https://store.steampowered.com/public/shared/javascript/legacy_web/main.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/main.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/modal.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/news.js?__TIME__&l=english
