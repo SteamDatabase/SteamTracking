@@ -224,6 +224,7 @@ https://store.steampowered.com/public/css/v6/browse.css?__TIME__
 https://store.steampowered.com/public/css/v6/cart.css?__TIME__
 https://store.steampowered.com/public/css/v6/cart_tablet.css?__TIME__
 https://store.steampowered.com/public/css/v6/contenthub.css?__TIME__
+https://store.steampowered.com/public/css/v6/contenthub_tablet.css?__TIME__
 https://store.steampowered.com/public/css/v6/creator_hub.css?__TIME__
 https://store.steampowered.com/public/css/v6/curator_admin.css?__TIME__
 https://store.steampowered.com/public/css/v6/curator_announcements.css?__TIME__
@@ -249,7 +250,9 @@ https://store.steampowered.com/public/css/v6/promo/sale_n_section.css?__TIME__
 https://store.steampowered.com/public/css/v6/recommended.css?__TIME__
 https://store.steampowered.com/public/css/v6/sale.css?__TIME__
 https://store.steampowered.com/public/css/v6/search.css?__TIME__
+https://store.steampowered.com/public/css/v6/search_tablet.css?__TIME__
 https://store.steampowered.com/public/css/v6/steamaccount.css?__TIME__
+https://store.steampowered.com/public/css/v6/steamaccount_tablet.css?__TIME__
 https://store.steampowered.com/public/css/v6/steamaccount_sale_tokens.css?__TIME__
 https://store.steampowered.com/public/css/v6/steamlink_connect.css?__TIME__
 https://store.steampowered.com/public/css/v6/store.css?__TIME__
@@ -257,6 +260,7 @@ https://store.steampowered.com/public/css/v6/store_browse_experiment.css?__TIME_
 https://store.steampowered.com/public/css/v6/tags.css?__TIME__
 https://store.steampowered.com/public/css/v6/updated_apps.css?__TIME__
 https://store.steampowered.com/public/css/v6/wishlist.css?__TIME__
+https://store.steampowered.com/public/css/v6/wishlist_tablet.css?__TIME__
 https://www.dota2.com/public/css/applications/dpc/main.css?_cdn=cloudflare&__TIME__
 https://www.dota2.com/public/css/main.css?_cdn=cloudflare&__TIME__
 

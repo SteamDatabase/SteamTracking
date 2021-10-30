@@ -1,0 +1,399 @@
+:root {
+	/* System greys */
+	--gpSystemLightestGrey: #DCDEDF;
+	--gpSystemLighterGrey: #B8BCBF;
+	--gpSystemLightGrey: #8B929A;
+	--gpSystemGrey: #67707B;
+	--gpSystemDarkGrey: #3D4450;
+	--gpSystemDarkerGrey: #23262E;
+	--gpSystemDarkestGrey: #0E141B;
+
+	/* Store blue greys */
+	--gpStoreLightestGrey: #CCD8E3;
+	--gpStoreLighterGrey: #A7BACC;
+	--gpStoreLightGrey: #7C8EA3;
+	--gpStoreGrey: #5B6D82;
+	--gpStoreDarkGrey: #2A475E;
+	--gpStoreDarkerGrey: #1B2838;
+	--gpStoreDarkestGrey: #000F18;
+
+	/* Gradients */
+	--gpGradient-StoreBackground: radial-gradient(farthest-corner at 40px 40px,#2A475E 0%, #1B2838 80%);
+
+	/* Colours */
+	--gpColor-Blue: #1A9FFF;
+	--gpColor-BlueHi: #00BBFF;
+	--gpColor-Green: #5ba32b;
+	--gpColor-GreenHi: #59BF40;
+	--gpColor-Orange: #E35E1C;
+	--gpColor-Red: #D94126;
+	--gpColor-RedHi: #EE563B;
+	--gpColor-DustyBlue: #417a9b;
+	--gpColor-LightBlue: #B3DFFF;
+
+	/* Backgrounds */
+	--gpBackground-LightSofter: #6998bb24;
+	--gpBackground-LightSoft: #3b5a7280;
+	--gpBackground-LightMedium: #678BA680;
+	--gpBackground-LightHard: #93B8D480;
+
+	--gpBackground-DarkSoft: #0e141b66;
+	--gpBackground-DarkMedium: #0e141b99;
+	--gpBackground-DarkHard: #0e141bcc;
+
+	/* Corners */
+	--gpCorner-Small: 1px;
+	--gpCorner-Medium: 2px;
+	--gpCorner-Large: 3px;
+
+	/* Spacing */
+	--gpSpace-Gutter: 24px;
+	--gpSpace-Gap: 12px;
+
+	/* Fixed widths */
+	--gpNavWidth: 240px;
+	--gpPaymentsNavWidth: 40vw;
+
+    /* Fixed heights */
+    --gpStoreMenuHeight: 58px;
+
+	/* Surfaces */
+	--gpShadow-Small: 0px 2px 2px 0px #0000003D;
+	--gpShadow-Medium: 0px 3px 6px 0px #0000003D;
+	--gpShadow-Large: 0px 12px 16px 0px #0000003D;
+	--gpShadow-XLarge: 0px 24px 32px 0px #0000003D;
+
+	/* Type styles */
+	--gpText-HeadingLarge: normal 700 26px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-HeadingMedium: normal 700 22px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-HeadingSmall: normal 700 18px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-BodyLarge: normal 400 16px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-BodyMedium: normal 400 14px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-BodySmall: normal 400 12px/1.4 "Motiva Sans", Arial, Sans-serif;
+
+}
+
+@media screen and ( min-width: 501px ) and ( max-width: 910px ) {
+
+    /* Hide breadcrumbs */
+    html.responsive .breadcrumbs {
+        display: none;
+    }
+
+    /* Hide Steam Labs banner */
+    html.responsive .search_labs_banner {
+        display: none;
+    }
+
+    /* Remove and space */
+    html.responsive .page_header_ctn {
+        background: unset;
+        padding-bottom: unset;
+        margin-bottom: 12px;
+    }
+
+    html.responsive .page_header_ctn.search {
+        background: unset;
+        padding-bottom: unset;
+    }
+
+    /* Page title */
+    html.responsive .pagesubheader {
+		font: var(--gpText-HeadingLarge);
+		font-weight: 700;
+		text-shadow: unset;
+		text-transform: unset;
+		margin-top: 8px !important; /* Overriding important fromt contenthub css* */
+		padding: unset;
+        color: white;
+	}
+
+    html.responsive h2.pageheader {
+        display: none;
+    }
+
+
+
+    
+    /* SEARCH AND SORT */
+
+    /* Search bar */
+    html.responsive .searchbar {
+        margin-bottom: 12px;
+        background: unset;
+        padding: unset;
+    }
+
+    html.responsive .searchbar_left {
+        padding-bottom: unset;
+        overflow: unset;
+    }
+
+    html.responsive .searchbar .sortbox {
+        margin-top: unset;
+    }
+
+    /* Seach input */
+	html.responsive #term {
+		background-color: var(--gpBackground-LightMedium);
+		border-radius: var(--gpCorner-Medium);
+		font: var(--gpText-BodyLarge);
+		color: white;
+		transition: all 0.1s ease;
+		padding: 10px 10px;
+
+		box-shadow: unset;
+		border: unset;
+	}
+
+	html.responsive #term:focus {
+		background-color: white;
+		color: black;
+	}
+
+	html.responsive #term::placeholder {
+		color: var(--gpStoreLighterGrey);
+		font: var(--gpText-BodyLarge);
+	}
+
+    /* Search button */
+    html.responsive .searchbar_left > button {
+        height: unset;
+    }
+
+    html.responsive .btn_small {
+        padding: 10px 20px;
+    }
+
+    html.responsive .btn_small span {
+        font: var(--gpText-BodyLarge);
+    }
+
+    /* Sort dropdown */
+    html.responsive .sortbox {
+        display: flex;
+        align-items: center;
+    }    
+
+    html.responsive .sortbox .dselect_container {
+        width: 200px;
+    }
+
+    html.responsive .sortbox .label {
+        font: var(--gpText-BodyLarge);
+        color: var(--gpStoreLightestGrey);
+        margin-right: 8px;
+    }
+
+    /* Results counter */
+    html.responsive .search_results_count {
+        padding: 8px 0px 8px 0px;
+        background-color: unset;
+        border-top: 1px solid var(--gpBackground-LightSoft);
+        color: var(--gpStoreLighterGrey);
+    }
+
+
+
+
+
+    /* SEARCH RESULTS */
+
+    /* Results container */
+    html.responsive #search_result_container {
+        max-width: unset;
+    }
+
+    /* Results items */
+    html.responsive .search_result_row {
+        height: unset;
+        border: unset;
+        color: unset;
+        margin-bottom: 4px;
+        background: var(--gpBackground-DarkSoft);
+        font: var(--gpText-BodyMedium);
+        font-weight: 400;
+        display: flex;
+        transition: all 0.2s ease;
+    }
+
+    html.responsive .search_result_row:hover,
+    html.responsive .search_result_row.gpfocus {
+        background: var(--gpBackground-DarkHard);
+    }
+
+    html.responsive .search_result_row .col {
+        height: unset;
+    }
+
+    /* Flex all search item info */
+    html.responsive .responsive_search_name_combined {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 12px;
+        align-items: center;
+    }
+
+    html.responsive .search_result_row .title {
+        margin-top: unset;
+        color: white;
+        font: var(--gpText-BodyLarge);
+        font-weight: 500;
+    }
+
+    html.responsive .search_result_row .col.search_released {
+        color: var(--gpStoreLightGrey);
+        font: var(--gpText-BodyMedium);
+    }
+
+    html.responsive .search_result_row .search_capsule {
+        width: unset;
+    }
+
+    html.responsive .search_result_row .search_capsule img {
+        width: 140px;
+        display: block;
+    }
+
+    html.responsive .search_result_row .col {
+        vertical-align: unset;
+    }
+
+
+    /* Split title and platform icons into single row */
+    html.responsive .search_result_row .col.search_name {
+        width: 52%;
+        margin-left: unset;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    /* Pricing */
+    html.responsive .search_price_discount_combined {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 120px;
+    }
+
+    html.responsive .col.search_discount {
+        width: unset;
+    }
+
+    html.responsive .col.search_price.discounted {
+        padding-top: unset;
+    }
+
+    html.responsive .col.search_discount span {
+        font-size: unset;
+        margin-top: unset;
+        color: black;
+        background-color: var(--gpColor-Green);
+        font-weight: 700;
+        padding: 2px 4px;
+    }
+
+
+    /* Horizontally align platform icons and labels */
+    html.responsive .search_result_row .col.search_name p {
+        display: flex;
+        align-items: center;
+    }
+
+    html.responsive .search_result_row .vr_required,
+    html.responsive .search_result_row .vr_supported {
+        top: unset;
+    }
+
+    /* Already in library */
+    html.responsive .search_result_row.ds_flagged:not(.ds_wishlist) .col.search_name {
+        color: var(--gpStoreLightGrey);
+    }
+
+
+
+
+    /* FILTER PANEL */
+
+    /* Toggle filter visibility */
+    html.responsive .responsive_local_menu_tab.active {
+        border-radius: unset;
+        width: unset;
+        height: unset;
+        background: unset;
+        box-shadow: unset;
+        top: unset;
+        right: var(--gpSpace-Gutter);
+        bottom: var(--gpSpace-Gutter);
+    }
+
+    html.responsive .gamepad_filter_toggle {
+        background: white;
+        font: var(--gpText-BodySmall);
+		font-weight: 700;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: black;
+        padding: 8px 16px;
+        box-shadow: var(--gpShadow-Large);
+        border-radius: 32px;
+    }
+
+
+    /* Container */
+    html.responsive .responsive_page_frame.localmenu_active .responsive_page_menu_ctn.localmenu {
+        box-shadow: unset;
+    }
+
+    html.responsive .responsive_page_menu_ctn.localmenu .responsive_page_menu {
+        background: var(--gpStoreDarkerGrey);
+    }
+
+    html.responsive .localmenu_content {
+        padding: unset;
+    }
+
+    /* Blocks */
+    html.responsive .block {
+        margin-bottom: 8px;
+    }
+
+    /* Block headers */
+    html.responsive .block .block_header {
+        font: var(--gpText-BodyMedium);
+		font-weight: 500;
+        color: white;
+        padding: 10px 12px;
+        background: var(--gpBackground-LightSoft);
+    }
+
+    /* Hide new badges on deck */
+    html.responsive .labs_new {
+        display: none;
+    }
+
+    /* Block content */
+    html.responsive .block_content {
+        border: unset;
+    }
+
+    html.responsive .block_content_inner {
+        padding: unset;
+    }
+
+    /* Filter items */
+    html.responsive .tab_filter_control,
+    html.responsive .range_display {
+        padding: 8px 12px;
+        color: var(--gpStoreLightestGrey);
+        line-height: unset;
+    }
+    
+
+    
+
+
+}

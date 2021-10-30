@@ -1,0 +1,245 @@
+:root {
+	/* System greys */
+	--gpSystemLightestGrey: #DCDEDF;
+	--gpSystemLighterGrey: #B8BCBF;
+	--gpSystemLightGrey: #8B929A;
+	--gpSystemGrey: #67707B;
+	--gpSystemDarkGrey: #3D4450;
+	--gpSystemDarkerGrey: #23262E;
+	--gpSystemDarkestGrey: #0E141B;
+
+	/* Store blue greys */
+	--gpStoreLightestGrey: #CCD8E3;
+	--gpStoreLighterGrey: #A7BACC;
+	--gpStoreLightGrey: #7C8EA3;
+	--gpStoreGrey: #5B6D82;
+	--gpStoreDarkGrey: #2A475E;
+	--gpStoreDarkerGrey: #1B2838;
+	--gpStoreDarkestGrey: #000F18;
+
+	/* Gradients */
+	--gpGradient-StoreBackground: radial-gradient(farthest-corner at 40px 40px,#2A475E 0%, #1B2838 80%);
+
+	/* Colours */
+	--gpColor-Blue: #1A9FFF;
+	--gpColor-BlueHi: #00BBFF;
+	--gpColor-Green: #5ba32b;
+	--gpColor-GreenHi: #59BF40;
+	--gpColor-Orange: #E35E1C;
+	--gpColor-Red: #D94126;
+	--gpColor-RedHi: #EE563B;
+	--gpColor-DustyBlue: #417a9b;
+	--gpColor-LightBlue: #B3DFFF;
+
+	/* Backgrounds */
+	--gpBackground-LightSofter: #6998bb24;
+	--gpBackground-LightSoft: #3b5a7280;
+	--gpBackground-LightMedium: #678BA680;
+	--gpBackground-LightHard: #93B8D480;
+
+	--gpBackground-DarkSoft: #0e141b66;
+	--gpBackground-DarkMedium: #0e141b99;
+	--gpBackground-DarkHard: #0e141bcc;
+
+	/* Corners */
+	--gpCorner-Small: 1px;
+	--gpCorner-Medium: 2px;
+	--gpCorner-Large: 3px;
+
+	/* Spacing */
+	--gpSpace-Gutter: 24px;
+	--gpSpace-Gap: 12px;
+
+	/* Fixed widths */
+	--gpNavWidth: 240px;
+	--gpPaymentsNavWidth: 40vw;
+
+    /* Fixed heights */
+    --gpStoreMenuHeight: 58px;
+
+	/* Surfaces */
+	--gpShadow-Small: 0px 2px 2px 0px #0000003D;
+	--gpShadow-Medium: 0px 3px 6px 0px #0000003D;
+	--gpShadow-Large: 0px 12px 16px 0px #0000003D;
+	--gpShadow-XLarge: 0px 24px 32px 0px #0000003D;
+
+	/* Type styles */
+	--gpText-HeadingLarge: normal 700 26px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-HeadingMedium: normal 700 22px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-HeadingSmall: normal 700 18px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-BodyLarge: normal 400 16px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-BodyMedium: normal 400 14px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-BodySmall: normal 400 12px/1.4 "Motiva Sans", Arial, Sans-serif;
+
+}
+
+@media screen and ( min-width: 501px ) and ( max-width: 910px ) {
+
+    html.responsive :focus-visible {
+		outline: unset;
+	}
+
+
+	/* page background colour */
+	html.responsive .game_page_background {
+		background: unset !important;
+    }
+
+	html.responsive body.v6.game_bg {
+		background: var(--gpGradient-StoreBackground);
+		background-attachment: fixed;
+	}
+
+	
+
+	/* Name and avatar */
+	html.responsive .wishlist_header img {
+		width: 36px;
+		height: 36px;
+	}
+
+	html.responsive .page_content .wishlist_header h2 {
+		font: var(--gpText-HeadingLarge);
+		font-weight: 700;
+		letter-spacing: unset;
+		text-transform: unset;
+	}
+
+	html.responsive .wishlist_header {
+		padding: unset;
+		margin-bottom: 12px;
+	}
+
+
+    /* Wishlist Display */
+    .wishlist_row {
+        background: var(--gpSystemDarkestGrey);
+    }
+
+    .wishlist_header {
+        margin: 0px;
+        padding: 15px 0 25px 0;
+    }
+
+	html.responsive body.v6 .wishlist_header h2 {
+		margin-bottom: unset;
+		padding: unset;
+		margin-left: 8px;
+	}
+
+
+
+	/* Seach input */
+	html.responsive #wishlist_search {
+		background-color: var(--gpBackground-LightMedium);
+		border-radius: var(--gpCorner-Medium);
+		font: var(--gpText-BodyLarge);
+		color: white;
+		transition: all 0.1s ease;
+		padding: 8px 10px;
+
+		box-shadow: unset;
+		border: unset;
+	}
+
+	html.responsive #wishlist_search:focus {
+		background-color: white;
+		color: black;
+	}
+
+	html.responsive #wishlist_search.gpfocus {
+		/* border-radius: 0px; */
+	}
+
+	html.responsive #wishlist_search::placeholder {
+		color: var(--gpStoreLighterGrey);
+		font: var(--gpText-BodyLarge);
+	}	
+
+
+	/* Filters and control row */
+	html.responsive .controls .control_row {
+		display: none;
+		margin-top: 4px;
+	}
+
+	html.responsive .hr {
+		display: none;
+	}
+
+	html.responsive .controls {
+		margin-bottom: 8px;
+	}
+
+	html.responsive .filter_tab {
+		padding: 8px 12px;
+		font: var(--gpText-BodySmall);
+		font-weight: 700;
+		letter-spacing: 0.5px;
+		height: unset;
+	}
+
+	html.responsive .wishlist .controls div {
+		margin-right: 8px;
+	}
+
+
+	/* No search results */
+	html.responsive #nothing_to_see_here {
+		padding: 24px 0px;
+	}
+
+	html.responsive #nothing_to_see_here h2 {
+		font: var(--gpText-HeadingSmall);
+		text-transform: unset;
+		letter-spacing: unset;
+		font-weight: 400;
+		color: var(--gpStoreLighterGrey);
+	}
+
+	html.responsive #nothing_to_see_here p {
+		font-size: unset;
+		color: unset;
+		color: var(--gpStoreLighterGrey);
+	}
+
+
+	/* Wishlist container */
+	html.responsive #wishlist_ctn {
+		margin-top: 16px;
+	}
+
+
+	/* Wishlist item styling */
+	html.responsive .compact .wishlist_row {
+		padding: 8px;
+		width: calc(100% - 16px);
+		margin-bottom: 8px;
+		box-shadow: var(--gpShadow-Medium);
+	}
+
+	html.responsive .compact .wishlist_row .title {
+		font: var(--gpText-BodyLarge);
+		font-weight: 500;
+	}
+
+	html.responsive .compact .wishlist_row .addedon {
+		font: var(--gpText-BodyMedium);
+		font-weight: 400;
+		margin-top: unset;
+	}
+
+	html.responsive .compact .wishlist_row .game_review_summary {
+		font: var(--gpText-BodySmall);
+		font-weight: 400;
+		margin-top: unset;
+		text-transform: unset;
+	}
+
+	html.responsive .wishlist_row .purchase_area form,
+	html.responsive .wishlist_row .purchase_area .btn_blue_steamui {
+		display: none;
+	}
+
+
+}

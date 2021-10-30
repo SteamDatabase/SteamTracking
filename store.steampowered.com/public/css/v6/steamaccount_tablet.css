@@ -1,0 +1,133 @@
+
+
+@media screen and ( min-width: 501px ) and ( max-width: 910px ) {
+
+	/* PAGE SETUP */
+
+	/* Remove background */
+	html.responsive .page_header_ctn {
+		background: unset;
+		padding-bottom: 0px;
+		margin-bottom: 16px;
+	}
+
+	/* Remove breadcrumbs */
+	html.responsive .breadcrumbs {
+		/* display: none; */
+	}
+
+
+    /* Hide page header */
+    html.responsive .pageheader {
+        display: none;
+    }
+
+    html.responsive body.v6 h2.addfunds_pageheader {
+		font: var(--gpText-HeadingLarge);
+		font-weight: 700;
+		text-shadow: unset;
+		text-transform: unset;
+		margin-top: 0px; /* !important - Overriding important fromt contenthub css* */
+		padding: unset;
+        letter-spacing: 0px;
+	}
+
+
+    /* Text */
+    html.responsive .addfunds_about {
+        font-size: unset;
+    }
+
+    html.responsive .block .block_header {
+        font: var(--gpText-HeadingSmall);
+        text-transform: unset;
+        letter-spacing: unset;
+        font-weight: 500;
+        margin-bottom: 8px;
+    }
+
+
+    /* Your steam account block */
+    html.responsive .accountInfoBlock {
+        margin-bottom: 16px;
+    }
+
+    html.responsive .block_header {
+        display: none;
+    }
+
+    html.responsive .addfunds_accountBalance {
+        padding-bottom: 12px;
+        margin-bottom: 0px;
+        /* border-bottom: 1px solid var(--gpBackground-LightSoft); */
+    }
+
+    html.responsive .addfunds_about {
+        margin-bottom: 16px;
+    }
+    
+    html.responsive .accountInfoBlock .block_content {
+        background: unset;
+        color: unset;
+        padding: 0px;
+        overflow: visible;
+    }
+
+    html.responsive .accountBalance .price {
+        font: var(--gpText-HeadingLarge);
+        font-weight: 700;
+        top: -10px;
+    }
+
+    html.responsive .addfunds_accountBalance .accountLabel {
+        font: var(--gpText-HeadingSmall);
+        font-weight: 500;
+        color: white;
+    }
+
+    html.responsive .linkbar {
+		margin: 4px 0px;
+		background: var(--gpBackground-LightSofter);
+		padding: 8px 16px;
+		display: block;
+		transition: all 0.1s ease;
+        border-radius: unset;
+        color: var(--gpColor-Blue);
+        height: unset;
+        font: var(--gpText-BodyLarge);
+	}
+
+	html.responsive .linkbar:hover {
+		background: var(--gpBackground-LightMedium);
+		color: white;
+	}
+
+	html.responsive .linkbar.gpfocus {
+		background-color: white;
+		color: black;
+	}
+
+	
+    /* Add funds purchase area */
+    html.responsive .game_area_purchase_game {
+        padding: 10px 16px;
+        background: var(--gpBackground-DarkSoft);
+        transition: all 0.3s ease;
+        border-radius: unset;
+    }
+
+    html.responsive .game_area_purchase_game .game_purchase_action_bg {
+        background: unset;
+    }
+
+    html.responsive .game_area_purchase_game .game_purchase_price {
+        background: unset;
+        font: var(--gpText-BodyLarge);
+    }
+
+    html.responsive .addfunds_area_purchase_game {
+        margin-bottom: 4px;
+    }
+	
+
+}
