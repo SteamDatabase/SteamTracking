@@ -1,0 +1,403 @@
+
+
+@media screen and ( min-width: 501px ) and ( max-width: 910px ) {
+
+	/* PAGE SETUP */
+
+	/* Remove background */
+	html.responsive .page_header_ctn {
+		background: unset;
+		padding-bottom: 0px;
+		margin-bottom: 16px;
+	}
+
+
+	/* Remove breadcrumbs */
+	html.responsive .breadcrumbs {
+		/* display: none; */
+	}
+
+
+	/* Hide store menu on account pages */
+	html.responsive .tablet_header_menu_ctn {
+		display: none;
+	}
+
+
+	/* TEXT */
+	html.responsive body.v6 {
+		font: var(--gpText-BodyLarge);
+	}
+
+	html.responsive #main_content .two_column {
+		font-weight: 400;
+	}
+
+	html.responsive .account_setting_sub_block {
+		color: var(--gpStoreLightestGrey);
+	}
+
+	html.responsive .accountBalance .price {
+		font-size: unset;
+		font-weight: 700;
+	}
+
+	html.responsive .account_settings_container,
+	html.responsive .account_settings_container label {
+		font-size: unset;
+		line-height: unset;
+		color: unset;
+	}
+
+	html.responsive body.v6 h2.pageheader {
+		text-transform: uppercase;
+		margin-top: 12px;
+	}
+
+
+
+	/* Links, checkboxes and radios */
+	html.responsive .account_manage_link,
+	html.responsive .account_manage_checkbox {
+		margin: 4px 0px !important; /*to override inlines styles*/
+		background-color: var(--gpBackground-LightSofter);
+		padding: 8px 8px;
+		display: block;
+		transition: all 0.1s ease;
+	}
+
+	html.responsive .account_manage_checkbox {
+		color: white;
+	}
+
+	html.responsive .account_manage_link {
+		color: var(--gpColor-Blue);
+	}
+
+	html.responsive .account_manage_link:hover,
+	html.responsive .account_manage_checkbox:hover {
+		background-color: var(--gpBackground-LightMedium);
+		color: white;
+	}
+
+	html.responsive .account_manage_link.gpfocus,
+	html.responsive .account_manage_checkbox.gpfocus {
+		background-color: white;
+		color: black;
+	}
+
+	html.responsive .account_preferences input[type=checkbox]:disabled+label {
+		opacity: 0.5;
+		color: unset;
+	}
+
+
+
+
+
+	html.responsive .queue_customize,
+	html.responsive .preferences_link {
+		color: var(--gpColor-Blue);
+	}
+
+
+	/* Style delete links */
+	html.responsive .delete_link {
+		color: var(--gpColor-Red);
+	}
+
+	html.responsive .delete_link.gpfocus {
+		background: var(--gpColor-RedHi);
+		color: white;
+	}
+
+
+
+	/* Hide spacers */
+	html.responsive .spacer,
+	html.responsive .account_setting_sub_block br,
+	html.responsive .hspacer,
+	html.responsive .account_settings_content_types br,
+	html.responsive .account_settings_search_options br,
+	html.responsive .account_settings_platform_preferences br {
+		display: none;
+	}
+
+
+
+
+	/* NAVIGATION COLUMN FRAMEWORK */
+
+	/* Sitcky side nav */
+	html.responsive #main_content .two_column.left {
+		width: var(--gpNavWidth);
+		display: flex;
+		flex-direction: column;
+		position: fixed;
+		top: 16px;
+		left: 0px;
+		height: 100%;
+	}
+
+	html.responsive .two_column.right {
+		margin-bottom: 0px;
+	}
+
+
+	/* Right coloumn layout */
+	html.responsive #main_content .two_column.right,
+	html.responsive .page_header_ctn .page_content {
+		background-color: var(--gpBackground-DarkMedium);
+	}
+
+	html.responsive #main_content .two_column.right {
+		padding: var(--gpSpace-Gap) var(--gpSpace-Gutter);
+	}
+
+	html.responsive .page_header_ctn .page_content {
+		padding: 8px var(--gpSpace-Gutter) 0px var(--gpSpace-Gutter);
+	}
+
+	html.responsive .page_header_ctn {
+		margin-bottom: 0px;
+		width: 100%;
+	}
+
+	html.responsive body.v6 .page_content {
+		width: calc(100vw - var(--gpNavWidth));
+		margin: 0px;
+		box-sizing: border-box;
+		float: right;
+	}
+
+	html.responsive #main_content {
+		
+	}
+
+	html.responsive .account_settings_container {
+		background-color: unset;
+		padding: unset;
+	}
+
+
+
+
+	/* NAV ITEMS */
+	html.responsive .two_column .nav_item {
+		padding: 12px 16px;
+		transition: all 0.1s ease;
+		font-size: unset;
+	}
+
+	html.responsive .two_column .nav_item.active {
+		background-color: var(--gpBackground-LightMedium);
+	}
+
+	html.responsive .two_column .nav_item:hover,
+	html.responsive .two_column .nav_item.gpfocus {
+		background-color: white;
+		color: var(--gpStoreDarkestGrey);
+	}
+
+
+
+
+	/* CONTENT BLOCKS LAYOUT */
+
+	/* Display all as single column */
+	html.responsive .account_setting_block {
+		display: flex;
+		flex-direction: column;
+	}
+
+
+	/* All blocks full width */
+	html.responsive .account_setting_sub_block {
+		width: unset;
+	}
+
+
+
+
+	/* CONTENT BLOCKS STYLING */
+
+	/* Account settings containers */
+	html.responsive .account_settings_container {
+		margin-bottom: 24px;
+	}
+
+
+	/* H2 */
+	html.responsive .account_settings_container h2 {
+		border-top: 1px solid var(--gpBackground-LightMedium);
+		padding-top: 16px;
+		margin-top: 20px;
+	}
+
+
+	/* Header lines */
+	html.responsive .account_header_line {
+		background-color: unset;
+		text-transform: unset;
+		font: var(--gpText-HeadingMedium);
+		letter-spacing: unset;
+		font-weight: 700;
+	}
+
+	html.responsive .account_header_line img {
+		display: none; /*until icon update*/
+	}
+
+	html.responsive .account_header_line.noicon {
+		padding-left: unset;
+	}
+
+
+	/* Rules */
+	html.responsive .inner_rule {
+		border-top: 1px solid var(--gpBackground-LightMedium);
+		margin: 16px 0px;
+	}
+
+
+	/* Sub blocks */
+	html.responsive .account_setting_sub_block {
+		padding: 16px 0px;
+	}
+
+	html.responsive #main_content .account_setting_block {
+		background: unset;
+	}
+
+
+	/* Payment method box */
+	html.responsive .account_setting_sub_block .payment_method_box {
+		font-size: unset;
+		padding: 8px 12px;
+		background-color: unset;
+		margin: 16px 0px;
+		min-height: unset;
+		border: 1px solid var(--gpBackground-LightMedium);
+	}
+
+	html.responsive .account_setting_block_short {
+		font-size: unset;
+		padding: 8px 12px;
+		background-color: unset;
+		margin: 16px 0px;
+		min-height: unset;
+		border: 1px solid var(--gpBackground-LightMedium);
+	}
+
+	html.responsive .account_setting_sub_block_long {
+		padding: unset;
+		float: unset;
+		color: unset;
+	}
+
+	html.responsive .account_setting_sub_block .payment_method_box a {
+		color: var(--gpColor-Blue);
+	}
+
+	html.responsive .account_setting_sub_block,
+	html.responsive .cached_payment_method_description {
+		color: unset;
+	}
+
+	html.responsive .cached_payment_method_exists {
+		color: unset;
+	}
+
+
+	/* Checkbox inputs */
+	html.responsive blockquote {
+		margin: unset;
+	}
+
+
+	/* Steam ID */
+	html.responsive .youraccount_steamid {
+		color: var(--gpStoreLighterGrey);
+		font: var(--gpText-BodyMedium);
+	}
+
+
+	/* Sub descriptions */
+	html.responsive .account_setting_parenthetical {
+		color: var(--gpStoreLighterGrey);
+		font: var(--gpText-BodyMedium);
+		margin: 6px 0px 20px 0px;
+	}
+
+	/* Ignored titles */
+	html.responsive .not_interested_container {
+		background-color: var(--gpBackground-DarkHard);
+		border: unset;
+		padding: 12px;
+	}
+
+
+
+	/* DROPDOWNS */
+	html.responsive #primary_language {
+		margin-left: unset;
+		color: white;
+		font: var(--gpText-BodyLarge);
+		padding: 8px;
+		background-color: var(--gpStoreDarkGrey);
+		border: none;
+	}
+
+
+
+	/* TAGS TO EXLUDE */
+
+	/* Tag input field */
+	/* html.responsive .app_tag_form_ctn .gray_bevel.for_text_input input {
+		margin: unset;
+		height: unset;
+		line-height: unset;
+		background-color: unset;
+		color: unset;
+		font-size: unset;
+		width: unset;
+		margin: unset;
+	}
+
+	html.responsive .app_tag_form_ctn .gray_bevel.for_text_input {
+		height: unset;
+		padding: unset;
+		background-color: unset;
+		border-radius: unset;
+		border: unset;
+		box-shadow: unset;
+		color: unset;
+		outline: unset;
+		width: unset;
+	}
+
+	html.responsive .app_tag_form_ctn .gray_bevel.for_text_input .basic_text_input {
+		background-color: var(--gpBackground-LightMedium);
+		border-radius: var(--gpCorner-Large);
+		font: var(--gpText-BodyLarge);
+		color: white;
+		transition: all 0.1s ease;
+		padding: 8px 10px;
+
+	}
+
+	html.responsive .app_tag_form_ctn .gray_bevel.for_text_input .basic_text_input:focus {
+		background-color: white;
+		color: black;
+	}
+
+	html.responsive .app_tag_form_ctn .gray_bevel.for_text_input .basic_text_input.gpfocus {
+		border-radius: 0px;
+	}
+
+	html.responsive .app_tag_form_ctn .gray_bevel.for_text_input .basic_text_input::placeholder {
+		color: var(--gpStoreLighterGrey);
+		font: var(--gpText-BodyLarge);
+	} */
+
+}

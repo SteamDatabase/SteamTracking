@@ -1,0 +1,691 @@
+:root {
+	/* System greys */
+	--gpSystemLightestGrey: #DCDEDF;
+	--gpSystemLighterGrey: #B8BCBF;
+	--gpSystemLightGrey: #8B929A;
+	--gpSystemGrey: #67707B;
+	--gpSystemDarkGrey: #3D4450;
+	--gpSystemDarkerGrey: #23262E;
+	--gpSystemDarkestGrey: #0E141B;
+
+	/* Store blue greys */
+	--gpStoreLightestGrey: #CCD8E3;
+	--gpStoreLighterGrey: #A7BACC;
+	--gpStoreLightGrey: #7C8EA3;
+	--gpStoreGrey: #5B6D82;
+	--gpStoreDarkGrey: #2A475E;
+	--gpStoreDarkerGrey: #1B2838;
+	--gpStoreDarkestGrey: #000F18;
+
+	/* Gradients */
+	--gpGradient-StoreBackground: radial-gradient(farthest-corner at 40px 40px,#2A475E 0%, #1B2838 80%);
+
+	/* Colours */
+	--gpColor-Blue: #1A9FFF;
+	--gpColor-BlueHi: #00BBFF;
+	--gpColor-Green: #5ba32b;
+	--gpColor-GreenHi: #59BF40;
+	--gpColor-Orange: #E35E1C;
+	--gpColor-Red: #D94126;
+	--gpColor-RedHi: #EE563B;
+	--gpColor-DustyBlue: #417a9b;
+	--gpColor-LightBlue: #B3DFFF;
+
+	/* Backgrounds */
+	--gpBackground-LightSofter: #6998bb24;
+	--gpBackground-LightSoft: #3b5a7280;
+	--gpBackground-LightMedium: #678BA680;
+	--gpBackground-LightHard: #93B8D480;
+
+	--gpBackground-DarkSoft: #0e141b66;
+	--gpBackground-DarkMedium: #0e141b99;
+	--gpBackground-DarkHard: #0e141bcc;
+
+	/* Corners */
+	--gpCorner-Small: 1px;
+	--gpCorner-Medium: 2px;
+	--gpCorner-Large: 3px;
+
+	/* Spacing */
+	--gpSpace-Gutter: 24px;
+	--gpSpace-Gap: 12px;
+
+	/* Fixed widths */
+	--gpNavWidth: 240px;
+	--gpPaymentsNavWidth: 40vw;
+
+    /* Fixed heights */
+    --gpStoreMenuHeight: 58px;
+
+	/* Surfaces */
+	--gpShadow-Small: 0px 2px 2px 0px #0000003D;
+	--gpShadow-Medium: 0px 3px 6px 0px #0000003D;
+	--gpShadow-Large: 0px 12px 16px 0px #0000003D;
+	--gpShadow-XLarge: 0px 24px 32px 0px #0000003D;
+
+	/* Type styles */
+	--gpText-HeadingLarge: normal 700 26px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-HeadingMedium: normal 700 22px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-HeadingSmall: normal 700 18px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-BodyLarge: normal 400 16px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-BodyMedium: normal 400 14px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-BodySmall: normal 400 12px/1.4 "Motiva Sans", Arial, Sans-serif;
+
+}
+
+@media screen and ( min-width: 501px ) and ( max-width: 910px ) {
+
+	/* Wrapper */
+	.home_page_body_ctn {
+		padding-bottom: 12px;
+	}
+
+	html.responsive .responsive_page_template_content {
+		padding-top: unset;
+	}
+
+
+	/* Text */
+	html.responsive .home_page_content h2 {
+		margin-bottom: 8px;
+		font-weight: 700;
+		font-size: 12px;
+		letter-spacing: 0.5px;
+	}
+
+
+
+	/* 3 col game tiles */
+	html.responsive .community_recommendations_by_steam_labs_ctn .carousel_container .carousel_items > *,
+	html.responsive .community_recommendations_by_steam_labs_ctn .carousel_container .carousel_items .community_recommendation_app {
+		width: calc((100vw - (2 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 3);
+	}
+
+	/* 2 col game tiles */
+	html.responsive .carousel_container.maincap .carousel_items > * {
+		width: calc((100vw - (1 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 2);
+	}
+
+	html.responsive .spotlight_content {
+		width: calc(((100vw - (2 * var(--gpSpace-Gap)) - (2 * var(--gpSpace-Gutter))) / 3) - 32px);
+	}
+
+	html.responsive .home_ctn {
+		padding: 8px var(--gpSpace-Gutter);
+		overflow: visible;
+	}
+
+
+
+
+	/* Trending among friends */
+	html.responsive .friends_recently_purchased {
+		margin: unset;
+	}
+
+	html.responsive .store_capsule .friends_container {
+		border-top: unset;
+		background: unset;
+		padding: 0px 0px 0px 8px;
+		margin-top: -6px;
+	}
+
+	html.responsive img.nonresponsive_hidden {
+		display: none !important;
+	}
+
+	html.responsive .responsive_content_dive {
+		opacity: unset;
+		font: var(--gpText-BodyMedium);
+	}
+
+
+
+	/* Carousel "more" buttons */
+	html.responsive .home_page_content h2 span.right,
+	html.responsive .recommendation_section h2 span.right,
+	html.responsive .recommendation_mainsection h2 span.right,
+	html.responsive .user_reviews_header span.right,
+	html.responsive .bucket h2 span.right {
+		position: absolute;
+		top: -12px;
+		right: 0px;
+	}
+
+
+
+
+	/* Sign in module */
+	html.responsive .home_page_sign_in_ctn {
+		height: unset;
+		padding: unset;
+		background-color: unset;
+		color: var(--gpStoreLighterGrey)
+	}
+
+	html.responsive .page_content_ctn.dark:last-child {
+		margin-bottom: unset;
+	}
+
+
+
+
+	/* Advertising */
+	.home_hardware_banner {
+		display: none;
+	}
+
+
+
+
+	/* Featured and recommended */
+	html.responsive .carousel_container.maincap {
+		margin: unset;
+		max-width: unset;
+	}
+
+	html.responsive .carousel_container.maincap .carousel_items {
+		box-shadow: unset;
+		margin: 0px;
+	}
+
+	html.responsive .carousel_container.maincap .info {
+		background: var( --gpStoreDarkestGrey );
+		padding: 4px 8px;
+		min-height: 56px;
+		overflow: hidden;
+	}
+
+	html.responsive .store_main_capsule .app_name > div {
+		font: var(--gpText-HeadingSmall);
+		font-weight: 500;
+	}
+
+	#home_maincap_v7:focus-within {
+		outline-color: unset;
+		box-shadow: unset;
+	}
+
+	html.gpnav_active .maincap:focus-within {
+		outline: unset;
+	}
+
+	html.responsive .carousel_container.maincap .discount_block {
+		padding-top: 0px;
+	}
+
+	html.responsive .store_main_capsule .app_name > div {
+		padding-bottom: 0px;
+	}
+
+
+
+	/* Takeunder */
+	html.responsive #home_takeunder_ctn {
+		padding-bottom: 16px;
+	}
+
+	html.responsive .home_page_content.takeunder {
+		margin: unset;
+	}
+
+	html.responsive .home_page_content.takeunder a {
+		box-shadow: var(--gpShadow-Medium);
+	}
+
+	html.responsive .home_page_content.takeunder a:hover {
+		box-shadow: var(--gpShadow-Medium);
+	}
+
+
+
+	/* Browse Steam */
+	html.responsive .big_buttons .button_container {
+		grid-template-columns: repeat( 4, 1fr );
+	}
+
+	html.responsive .button_container {
+		gap: var(--gpSpace-Gap);
+	}
+
+	html.responsive .big_button {
+		text-transform: unset;
+		font: var(--gpText-BodyLarge);
+		font-weight: 500;
+		border-radius: var(--gpCorner-Medium);
+		background: var(--gpColor-Blue);
+		letter-spacing: unset;
+		transition: all 0.1s ease;
+	}
+
+	html.responsive .big_button:hover,
+	html.responsive .big_button.gpfocus {
+		background: var(--gpColor-BlueHi);
+	}
+
+	html.responsive .big_button.gpfocus {
+		border-radius: 0px;
+	}
+
+
+
+
+	/* Specials */
+	.specials_under10 .carousel_items:not(.no_paging),
+	.wishlist_on_sale .carousel_items:not(.no_paging) {
+		height: unset;
+	}
+
+	html.responsive .carousel_container.spotlight .carousel_items:not(.no_paging),
+	html.responsive .carousel_container.paging_capsules .carousel_items:not(.no_paging) {
+		padding-bottom: unset;
+	}
+
+	html.responsive #module_special_offers {
+		padding-top: 4px;
+		overflow: unset;
+	}
+
+
+
+
+	/* Special offers */
+	.carousel_container.spotlight .carousel_items > * .store_capsule {
+		box-shadow: unset;
+		margin-bottom: 0px;
+	}
+
+	html.responsive .spotlight_col > *:not(:last-child) {
+		justify-content: space-between;
+	}
+
+	html.responsive .spotlight_col {
+		display: grid;
+		grid-gap: var(--gpSpace-Gap);
+	}
+
+	.home_area_spotlight {
+		height: auto;
+	}
+
+	.spotlight .carousel_items {
+		height: unset;
+	}
+
+	.carousel_container .carousel_items:not(.no_paging) > * {
+		width: unset;
+	}
+
+
+
+
+	/* Streaming */
+	.live_stream_play_icon {
+		top: 34px !important;
+		left: 90px !important;
+	}
+
+	#live_streams_carousel .title {
+		margin-top: 4px;
+	}
+
+	.live_streams_ctn .home_right_btn {
+		margin-top: -10px;
+	}
+
+	html.responsive .live_streams_ctn {
+		overflow: visible;
+	}
+
+
+
+
+	/* Recommendations */
+	html.responsive body.v6 .page_content_ctn.dark {
+		background-color: unset;
+	}
+
+	html.responsive .home_ctn.home_content_ctn {
+		/* padding: calc(var(--gpSpace-Gutter) * 1.5) var(--gpSpace-Gutter); */
+		padding: var(--gpSpace-Gutter);
+	}
+
+	.community_recommendation_app {
+		margin-bottom: unset;
+	}
+
+	html.responsive body.v6 .home_content_ctn .page_content_ctn.dark {
+		padding: unset;
+	}
+
+	html.responsive .page_content_ctn.dark .home_content {
+		padding: unset;
+		margin-bottom: var(--gpSpace-Gutter);
+	}
+
+
+
+
+	/* Takeover */
+	.page_background_holder,
+	.home_page_takeover_link,
+	.fullscreen-bg a {
+		margin: 0px var(--gpSpace-Gutter) calc(var(--gpSpace-Gap) + 4px) var(--gpSpace-Gutter);
+	}
+
+	.fullscreen-bg a {
+		overflow: hidden;
+	}
+
+	html.responsive .page_background_holder,
+	html.responsive .home_page_body_ctn.has_takeover .home_page_takeover_sizer,
+	html.responsive .home_page_body_ctn.has_takeover .home_page_takeover_sizer img,
+	html.responsive .home_page_body_ctn.has_takeover .fullscreen-bg__video,
+	html.responsive .home_page_body_ctn.has_takeover a.home_page_takeover_sizer,
+	html.responsive body.responsive_page .home_page_body_ctn.has_takeover a.home_page_takeover_sizer,
+	html.responsive .fullscreen-bg a {
+		height: 32vw !important;
+	}
+
+	html.responsive .page_background_holder,
+	html.responsive .fullscreen-bg {
+		margin-top: var( --gpStoreMenuHeight );
+	}
+
+	/* Community */
+	.community_recommendation_app > .community_recommendation_capsule {
+		box-shadow: unset;
+		background: unset;
+	}
+
+	html.responsive .community_recommendation_app > .right_col {
+		background: unset;
+		height: 200px;
+		border-radius: 0px;
+		padding-right: 8px;
+	}
+
+	.community_recommendations_block > .review_box .view_more,
+	.community_recommendation_app > .right_col > .paging_thumbs {
+		display: none;
+	}
+
+	html.responsive .community_recommendation_app .community_recommendations_block {
+		height: 100%;
+	}
+
+	.community_recommendations_block > .review_box {
+		padding: var(--gpSpace-Gap);
+	}
+
+	html.responsive .community_recommendation_app .review_box .content {
+		height: unset;
+	}
+
+	.community_recommendation_app > .community_recommendation_capsule > .capsule {
+		height: 17.4vw;
+	}
+
+	html.responsive .community_recommendation_app {
+		background-color: var(--gpStoreDarkestGrey);
+	}
+
+	.main_cap_discount, .main_cap_price {
+		bottom: var(--gpSpace-Gap);
+	}
+
+	.community_recommendations_block > .review_box .author_block {
+		color: #b8bcc0;
+	}
+
+	.community_recommendations_block > .review_box .persona_name a {
+		color: white;
+	}
+
+
+
+	/* Under $10 */
+	html.responsive .home_page_content > *[data-content-dive=true] .btn_small_tall > span {
+		padding: unset;
+	}
+
+
+
+
+	/* Deep dive */
+	#module_deep_dive {
+		display: none;
+	}
+
+
+
+	/* Tabs container */
+	html.responsive .home_tabs_row_ctn {
+		display: none;
+	}
+
+	html.responsive .tab_content#tab_topgrossing_content {
+		display: none !important; /* TODO (Jays) once the flex display stops using !important this should not be necessary here either */
+	}
+
+	html.responsive .home_leftcol.home_tab_col {
+		margin-bottom: unset;
+	}
+
+
+
+
+	/* Top new releases */
+	html.responsive #module_top_new_releases {
+		margin: unset;
+	}
+
+	html.responsive .top_new_releases {
+		margin: unset;
+	}
+
+	html.responsive .top_new_releases_banner_ctn .title {
+		font: var(--gpText-HeadingLarge);
+		text-transform: unset;
+		letter-spacing: unset;
+		text-shadow: unset;
+	}
+
+	html.responsive .top_new_releases_banner_ctn .dateline {
+		font: var(--gpText-BodyMedium);
+		text-transform: unset;
+		letter-spacing: unset;
+		font-weight: 400;
+		color: white;
+		opacity: 0.8;
+	}
+
+	html.responsive .top_new_releases_banner_ctn .title,
+	html.responsive .top_new_releases_banner_ctn .dateline {
+		text-shadow: 0px 8px 40px black;
+	}
+
+	html.responsive .top_new_releases_banner_ctn a {
+		background: unset;
+		box-shadow: unset;
+		height: unset;
+		padding: var(--gpSpace-Gutter) 0px var(--gpSpace-Gap) 0px;
+	}
+
+	html.responsive .top_new_releases_background {
+		-webkit-mask-image: linear-gradient( 0deg, transparent 10%, black 50%, black 100%, transparent 0%);
+		top: 0px;
+		width: 150%;
+		background-size: cover;
+	}
+
+	html.responsive .top_new_releases_carousel .carousel_container.paging_capsules .carousel_items:not(.no_paging) {
+		padding-bottom: var(--gpSpace-Gap);
+	}
+
+
+
+
+	/* Curator Recommnends */
+	.responsive_giant_curator_capsule .curator_giant_capsule {
+		flex-direction: row;
+		box-shadow: var(--gpShadow-Medium);
+	}
+
+	.responsive_giant_curator_capsule .curator_content {
+		justify-content: center;
+		flex-direction: column-reverse;
+		width: 100%;
+		background: var(--gpStoreDarkestGrey);
+	}
+
+	.responsive_giant_curator_capsule .capsule_image {
+		width: 50%;
+	}
+
+	div#apps_recommended_by_curators_v2 {
+		height: auto;
+	}
+
+	html.responsive div.carousel_container.paging_capsules.more_apps_by_curators_capsule {
+		margin-top: var(--gpSpace-Gutter);
+	}
+
+	html.responsive .apps_recommended_by_curators_ctn .store_capsule_frame {
+		margin: unset;
+		padding: unset;
+	}
+
+
+
+	 /* Developers and publishers */
+	 html.responsive .recommended_creators_ctn .store_capsule {
+		 padding-bottom: unset;
+	 }
+
+	 .recommended_creators_ctn {
+		 margin: unset;
+	 }
+
+	 .recommended_creators_ctn .recommended_creators_container .avatars > .actions {
+		 display: none;
+	 }
+
+
+
+	 /* Player like you like */
+	#module_recommender {
+		 margin-bottom: unset;
+	}
+
+	html.responsive .recommended_by_steam_labs_ctn .carousel_container.paging_capsules .carousel_items:not(.no_paging) {
+		padding-bottom: unset;
+	}
+
+	html.responsive .best_selling_vr_ctn .carousel_container.paging_capsules .carousel_items:not(.no_paging) {
+		padding-bottom: unset;
+	}
+
+	.recommended_by_steam_labs_ctn.home_ctn.ir_ctn .btnv6_white_transparent {
+		display: none;
+	}
+
+	html.responsive .recommended_by_steam_labs_ctn {
+		margin-bottom: 0px !important; /* overriding inline style */
+	}
+
+	html.responsive body.v6 .recommended_by_steam_labs_ctn .header_inline_reason {
+		display: inline;
+		float: unset;
+		text-transform: unset;
+		font: var(--gpText-BodyMedium);
+		color: var(--gpStoreLighterGrey);
+		letter-spacing: 0px;
+		margin-left: 6px;
+	}
+
+
+
+
+	/* VO */
+	#module_shuffle_cohort_display {
+		display: none;
+	}
+
+
+
+
+	/* Discovery queue */
+	#module_discovery_queue {
+		display: none !important /* To override inline HTML style */
+	}
+
+
+
+
+	/* More recommendations */
+	.home_page_content .more_content_title {
+		color: unset;
+	}
+
+	html.responsive .gp_contiguous_singles {
+	overflow-x: scroll;
+    overflow-y: hidden;
+    box-sizing: content-box;
+    padding-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: nowrap;
+	}
+
+	html.responsive .responsive_app_menu {
+		display: none;
+	}
+
+	html.responsive .home_content.single {
+		margin-right: var(--gpSpace-Gap);
+		width: 262px;
+		height: 100%;
+		scroll-snap-align: start;
+        overflow: visible;
+	}
+
+	html.responsive .home_content.single .screenshots {
+		display: flex;
+	}
+
+	html.responsive .home_content.single .review {
+		display: none;
+	}
+
+
+
+
+	/* Keep scrolling for more content */
+	html.responsive .home_page_content .more_content_title {
+		font: var(--gpText-HeadingSmall);
+		color: white;
+		margin-bottom: 4px;
+		font-weight: 500;
+	}
+
+	html.responsive .home_page_content .more_content_desc {
+		font: var(--gpText-BodyMedium);
+		color: var(--gpStoreLighterGrey);
+	}
+
+	html.responsive #content_callout {
+		padding: 64px 0px 48px 0px;
+		background-image: url( '/public/images/v6/home/logo_steam_logo.svg' );
+		background-size: 48px;
+		background-position-y: 0px;
+		border-bottom: 1px solid var(--gpBackground-LightSoft);
+	}
+
+	html.responsive #content_callout .home_page_content {
+		padding: 0px 20%;
+	}
+
+}
