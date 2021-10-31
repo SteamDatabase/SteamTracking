@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6864979";
+var CLSTAMP = "6866351";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [40],
   {
@@ -16724,7 +16724,10 @@ var CLSTAMP = "6864979";
                     Y,
                     Q,
                     J,
-                    Z = this;
+                    Z,
+                    $,
+                    te,
+                    ne = this;
                   return Object(r.e)(this, function (r) {
                     switch (r.label) {
                       case 0:
@@ -16900,7 +16903,7 @@ var CLSTAMP = "6864979";
                               bAwaitingShowContentLoading: q,
                             },
                             function () {
-                              return q && Z.LoadCapsules(e, !1);
+                              return q && ne.LoadCapsules(e, !1);
                             }
                           ),
                           n.dynamic_reveal &&
@@ -16911,11 +16914,11 @@ var CLSTAMP = "6864979";
                               this.props.event.GID,
                               this.props.bIsPreview
                             )),
-                          [3, 22]
+                          [3, 24]
                         );
                       case 10:
                         return "events" !== n.section_type
-                          ? [3, 19]
+                          ? [3, 21]
                           : ((H = void 0),
                             !n.smart_section ||
                             ("recent_events" !== n.smart_section_type &&
@@ -16980,11 +16983,35 @@ var CLSTAMP = "6864979";
                           (Y = H.filter(function (e) {
                             return !!e && c.ShouldShowEvent(e);
                           })),
-                          p.a.LoadAppLinkInfo(
-                            Y.map(function (e) {
-                              return e.appid;
+                          [
+                            4,
+                            p.a.LoadAppLinkInfo(
+                              Y.map(function (e) {
+                                return e.appid;
+                              })
+                            ),
+                          ]
+                        );
+                      case 19:
+                        return (
+                          r.sent(),
+                          (Q = H.map(function (e) {
+                            return { type: "game", id: e.appid };
+                          })),
+                          (J = []),
+                          [4, Object(C.a)(Q, Object(ye.a)(n), J)]
+                        );
+                      case 20:
+                        return (
+                          (Q = r.sent()),
+                          (Z = new Set(
+                            J.map(function (e) {
+                              return e.id;
                             })
-                          ),
+                          )),
+                          (Y = Y.filter(function (e) {
+                            return !Z.has(e.appid);
+                          })),
                           this.setState({
                             events: Y,
                             bInitialLoadComplete: !0,
@@ -16999,31 +17026,31 @@ var CLSTAMP = "6864979";
                               this.props.event.GID,
                               this.props.bIsPreview
                             )),
-                          [3, 22]
+                          [3, 24]
                         );
-                      case 19:
+                      case 21:
                         return "links" !== n.section_type &&
                           "sale_tabhub" !== n.smart_section_type
-                          ? [3, 22]
-                          : ((Q = n.links),
+                          ? [3, 24]
+                          : (($ = n.links),
                             "sale_tabhub" !== n.smart_section_type
-                              ? [3, 21]
+                              ? [3, 23]
                               : [4, O.GetSaleTags()]);
-                      case 20:
-                        (J = r.sent()),
-                          (Q = J.map(function (e) {
+                      case 22:
+                        (te = r.sent()),
+                          ($ = te.map(function (e) {
                             return {
                               url: e.url,
                               localized_link_capsule: void 0,
                               materialized_link_capsule: e.square,
                             };
                           })),
-                          (Q = this.GetCachedRandomizedOrder("links", Q, ee.f)),
-                          (r.label = 21);
-                      case 21:
-                        this.setState({ links: Q, bInitialLoadComplete: !0 }),
-                          (r.label = 22);
-                      case 22:
+                          ($ = this.GetCachedRandomizedOrder("links", $, ee.f)),
+                          (r.label = 23);
+                      case 23:
+                        this.setState({ links: $, bInitialLoadComplete: !0 }),
+                          (r.label = 24);
+                      case 24:
                         return [2];
                     }
                   });
