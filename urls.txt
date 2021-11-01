@@ -223,6 +223,7 @@ https://store.steampowered.com/public/css/v6/account_tablet.css?__TIME__
 https://store.steampowered.com/public/css/v6/browse.css?__TIME__
 https://store.steampowered.com/public/css/v6/cart.css?__TIME__
 https://store.steampowered.com/public/css/v6/cart_tablet.css?__TIME__
+https://store.steampowered.com/public/css/v6/checkout_tablet.css?__TIME__
 https://store.steampowered.com/public/css/v6/contenthub.css?__TIME__
 https://store.steampowered.com/public/css/v6/contenthub_tablet.css?__TIME__
 https://store.steampowered.com/public/css/v6/creator_hub.css?__TIME__

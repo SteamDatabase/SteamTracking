@@ -1,0 +1,770 @@
+:root {
+	/* System greys */
+	--gpSystemLightestGrey: #DCDEDF;
+	--gpSystemLighterGrey: #B8BCBF;
+	--gpSystemLightGrey: #8B929A;
+	--gpSystemGrey: #67707B;
+	--gpSystemDarkGrey: #3D4450;
+	--gpSystemDarkerGrey: #23262E;
+	--gpSystemDarkestGrey: #0E141B;
+
+	/* Store blue greys */
+	--gpStoreLightestGrey: #CCD8E3;
+	--gpStoreLighterGrey: #A7BACC;
+	--gpStoreLightGrey: #7C8EA3;
+	--gpStoreGrey: #5B6D82;
+	--gpStoreDarkGrey: #2A475E;
+	--gpStoreDarkerGrey: #1B2838;
+	--gpStoreDarkestGrey: #000F18;
+
+	/* Gradients */
+	--gpGradient-StoreBackground: radial-gradient(farthest-corner at 40px 40px,#2A475E 0%, #1B2838 80%);
+
+	/* Colours */
+	--gpColor-Blue: #1A9FFF;
+	--gpColor-BlueHi: #00BBFF;
+	--gpColor-Green: #5ba32b;
+	--gpColor-GreenHi: #59BF40;
+	--gpColor-Orange: #E35E1C;
+	--gpColor-Red: #D94126;
+	--gpColor-RedHi: #EE563B;
+	--gpColor-DustyBlue: #417a9b;
+	--gpColor-LightBlue: #B3DFFF;
+
+	/* Backgrounds */
+	--gpBackground-LightSofter: #6998bb24;
+	--gpBackground-LightSoft: #3b5a7280;
+	--gpBackground-LightMedium: #678BA680;
+	--gpBackground-LightHard: #93B8D480;
+
+	--gpBackground-DarkSoft: #0e141b66;
+	--gpBackground-DarkMedium: #0e141b99;
+	--gpBackground-DarkHard: #0e141bcc;
+
+	/* Corners */
+	--gpCorner-Small: 1px;
+	--gpCorner-Medium: 2px;
+	--gpCorner-Large: 3px;
+
+	/* Spacing */
+	--gpSpace-Gutter: 24px;
+	--gpSpace-Gap: 12px;
+
+	/* Fixed widths */
+	--gpNavWidth: 240px;
+	--gpPaymentsNavWidth: 40vw;
+
+    /* Fixed heights */
+    --gpStoreMenuHeight: 58px;
+
+	/* Surfaces */
+	--gpShadow-Small: 0px 2px 2px 0px #0000003D;
+	--gpShadow-Medium: 0px 3px 6px 0px #0000003D;
+	--gpShadow-Large: 0px 12px 16px 0px #0000003D;
+	--gpShadow-XLarge: 0px 24px 32px 0px #0000003D;
+
+	/* Type styles */
+	--gpText-HeadingLarge: normal 700 26px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-HeadingMedium: normal 700 22px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-HeadingSmall: normal 700 18px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-BodyLarge: normal 400 16px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-BodyMedium: normal 400 14px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-BodySmall: normal 400 12px/1.4 "Motiva Sans", Arial, Sans-serif;
+
+}
+
+@media screen and ( min-width: 501px ) and ( max-width: 910px ) {
+
+
+	/* Page header */
+	html.responsive .page_header_ctn {
+		display: none;
+	}
+
+    /* Page title */
+	html.responsive h3#payment_header,
+    html.responsive #payment_row_method_name,
+    html.responsive h3.review_purchase_title,
+    html.responsive .checkout_tab.checkout_content h2.purchase_confirmation_title {
+		font: var(--gpText-HeadingLarge);
+		letter-spacing: unset;
+		text-transform: unset;
+		margin-top: 16px;
+        color: white;
+	}
+
+    /* Section titles */
+	html.responsive .checkout_content_box h3.tab_header {
+		font: var(--gpText-HeadingSmall);
+        font-weight: 500;
+		letter-spacing: unset;
+		text-transform: unset;
+		margin-top: 16px;
+	}
+
+    /* Page */
+    html.responsive body.v6 .page_content {
+        padding-bottom: 2px;
+    }
+
+
+    /* TEXT */
+    html.responsive .block .block_header {
+        font: var(--gpText-BodySmall);
+		font-weight: 700;
+		letter-spacing: 0.5px;
+		margin-bottom: 8px;
+    }
+
+    /* Font sizes for labels, checks etc */    
+    html.responsive .checkout_tab .form_right label,
+    html.responsive .checkout_tab .form_left label,
+    html.responsive .checkout_tab .form_row_sizable label,
+    html.responsive .checkout_tab .form_row label,
+    html.responsive #payment_info_method_label,
+    html.responsive #save_my_address_input label,
+    html.responsive .checkout_tab .form_row_sizable,
+    html.responsive .checkout_tab #youll_get_to_review,
+    html.responsive .checkout_tab .form_row,
+    html.responsive .checkout_tab #payment_row_step2 #payment_row_step2_header,
+    html.responsive .payment_method_notes_bubble li,
+    html.responsive .checkout_tab .form_row p {
+        font: var(--gpText-BodyLarge);
+        color: var(--gpStoreLightestGrey);
+    }
+
+    html.responsive .payment_method_notes_bubble li {
+        color: white;
+    }
+
+    html.responsive .checkout_content_box a {
+        color: var(--gpColor-Blue);
+    }
+
+
+
+    /* LAYOUT */
+
+    /* Working */
+    html.responsive #stored_card_processing {
+        /* position: fixed; */
+    }
+
+
+    /* Columns */
+    html.responsive body.checkout .leftcol,
+    html.responsive body.checkout .rightcol {
+        max-width: unset;
+        width: calc(100vw - var(--gpPaymentsNavWidth) - (2 * var(--gpSpace-Gutter)));
+        margin-left: unset;
+        margin-right: unset;
+	}
+
+    
+    /* Main container */
+    html.responsive h3#payment_header {
+        margin-bottom: 16px;
+    }
+
+
+    /* Wallet balance too low */
+    html.responsive #payment_row_step2_header {
+        padding: 12px 16px;
+        border: 2px solid var(--gpBackground-LightMedium);
+    }
+
+    html.responsive .checkout_tab .form_row p {
+        color: white;
+    }
+
+
+    /* Forms */
+    html.responsive .checkout_tab .form_left,
+    html.responsive .checkout_tab .form_right {
+        clear: unset;
+        float: unset;
+        text-align: unset;
+        width: unset;
+        max-width: unset;
+    }
+
+    html.responsive #payment_info_tab .checkout_content .payment_info_form_area {
+		padding: unset;
+		background: unset;
+	}
+
+
+	/* Right column */
+    html.responsive body.checkout .rightcol {
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+
+    html.responsive body.checkout .rightcol .block {
+        margin: unset;
+        background: unset;
+    }
+
+    html.responsive body.checkout .rightcol .block .block_header {
+        margin: unset;
+        padding: unset;
+    }
+
+    html.responsive body.checkout .block .block_content {
+        margin: unset;
+        padding: unset;
+    }
+
+    html.responsive .rightcol p {
+        margin: 8px 0px;
+        color: var(--gpStoreLighterGrey);
+    }
+
+
+    /* Action buttons */
+	html.responsive .button_row {
+		display: grid;
+		row-gap: 8px;
+	}
+
+	html.responsive .button_row .btn_medium {
+		margin: unset;
+	}
+
+    html.responsive .button_row #payment_method_previous_button a {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    html.responsive #purchase_button_container_bottom {
+        padding: unset;
+        display: grid;
+		row-gap: 8px;
+    }    
+
+
+    /* Review and purchase */
+    html.responsive .checkout_content.confirm {
+        background: unset;
+        padding: unset;
+        /* margin-top: 16px; */
+    }
+
+    html.responsive #checkout_content_review {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0px;
+    }
+    
+
+    /* Rule */
+    html.responsive .checkout_content.confirm .rule {
+        display: none;
+    }
+
+
+    /* Review rows */
+    html.responsive .review_row {
+        margin-bottom: 0px;
+    }
+
+    html.responsive .review_row_label {
+        font: var(--gpText-BodyLarge);
+        color: var(--gpStoreLighterGrey);
+    }
+
+    html.responsive .review_row_value {
+        font: var(--gpText-BodyLarge);
+        color: var(--gpStoreLightestGrey);
+    }
+
+    html.responsive .review_row_value {
+        padding-left: 18vw;
+    }
+
+    html.responsive .checkout_review_payment_method_area {
+        border-bottom: 1px solid var(--gpBackground-LightSoft);
+        padding: 12px 0px;
+        margin-bottom: 12px;
+    }
+
+    html.responsive #purchase_bottom {
+        margin-top: 16px;
+    }
+
+    html.responsive .payment_method_review_method_label {
+        color: var(--gpColor-GreenHi);
+        font-weight: 500;
+    }
+
+    html.responsive .payment_method_total {
+        right: 0px;
+    }
+
+
+
+    /* Security code */
+    html.responsive #security_code_cached {
+        width: 64px;
+    }
+
+    html.responsive #what_is_this {
+        padding-left: 8px;
+    }
+
+    html.responsive #what_is_this a {
+        color: var(--gpStoreLighterGrey);
+    }
+
+    html.responsive #payment_method_review_row_provider_cvv #payment_method_review_row {
+        display: flex;
+        align-items: center;
+    }
+
+
+
+    /* Checkboxes */
+    html.responsive #purchase_confirm_ssa {
+        margin-bottom: 12px;
+    }
+
+	html.responsive .checkout_checkbox {
+		margin: unset;
+		background-color: var(--gpBackground-LightSoft);
+		padding: 12px 12px;
+		display: block;
+		transition: all 0.1s ease;
+        float: unset;
+        height: unset;
+        clear: unset;
+        font: var(--gpText-BodyLarge);
+        color: var(--gpStoreLightestGrey);
+	}
+
+	html.responsive .checkout_checkbox:hover,
+    html.responsive .checkout_checkbox.gpfocus {
+		background-color: var(--gpBackground-LightMedium);
+		color: white;
+	}
+
+    html.responsive .checkout_checkbox a {
+        color: var(--gpStoreLightestGrey);
+    }
+
+
+
+    html.responsive .checkout_checkbox a:hover {
+        color: white;
+    }
+
+
+    /* Error messages */
+    html.responsive .checkout_form_error {
+        font: var(--gpText-BodyLarge);
+        margin: var(--gpSpace-Gutter) 0px 0px 0px;
+        padding: 8px 12px;
+        background: var(--gpColor-Orange) !important;
+        border-radius: var(--gpCorner-Medium);
+    }
+
+    html.responsive #error_display a {
+        color: white;
+    }
+
+
+
+
+    /* CHECKOUT CART REVIEW AND TOTALS */
+    html.responsive .tablet_checkout_right_column {
+        position: fixed;
+        width: var(--gpPaymentsNavWidth);
+        right: 0px;
+        top: 0px;
+        background-color: var(--gpBackground-DarkSoft);
+        height: 100vh;
+        padding: 24px;
+        box-sizing: border-box;
+        overflow-y: scroll;
+    }
+
+    html.responsive .tablet_checkout_right_column .checkout_content.confirm {
+        margin-top: 8px;
+        margin-bottom: 12px;
+    }
+
+
+    /* Total prices */
+    html.responsive .cart_total_row {
+        font: var(--gpText-BodyLarge);
+        color: var(--gpStoreLightestGrey);
+        margin: unset;
+    }
+
+    html.responsive .cart_totals_area .price {
+        font: var(--gpText-BodyLarge);
+        color: var(--gpStoreLightestGrey);
+        padding: unset;
+    }
+
+    html.responsive .cart_total_rule {
+        border-top: 1px solid var(--gpBackground-LightSoft);
+        display: none;
+    }
+
+    html.responsive #review_total_value,
+    html.responsive #cart_price_total_text {
+        font: var(--gpText-HeadingMedium);
+        color: white;
+    } 
+
+
+    /* Cart items */
+    html.responsive #checkout_review_cart_area {
+        margin-top: unset;
+        text-align: unset;
+        display: flex;
+        flex-direction: column;
+    }
+
+    html.responsive .checkout_review_cart_item {
+        margin: unset;
+        min-height: unset;
+        background: unset;
+        padding: 6px 0px;
+        border-bottom: 1px solid var(--gpBackground-LightSoft);
+    }
+
+    html.responsive .checkout_review_cart_item:first-child {
+        padding-top: 0px;
+    }
+
+    html.responsive .checkout_review_item_desc,
+    html.responsive .checkout_review_item_price .price {
+        font: var(--gpText-BodyMedium);
+    }
+
+    html.responsive .checkout_review_item_img,
+    html.responsive .checkout_review_item_price,
+    html.responsive .checkout_review_item_desc {
+        padding: unset;
+    }
+
+    html.responsive .checkout_review_item_desc {
+        padding-left: 8px;
+    }
+
+    html.responsive .checkout_review_item_img {
+        width: unset;
+        height: unset;
+        display: flex;
+    }
+
+    html.responsive .checkout_review_item_img img {
+        width: 96px;
+        height: 36px;
+    }
+
+    html.responsive .checkout_review_item_platform {
+        display: none;
+    }
+
+
+
+
+
+
+    /* Points total */
+    html.responsive .checkout_steam_rewards_banner {
+        border: unset;
+        align-items: center;
+        height: unset;
+        padding: 12px 12px;
+        box-shadow: inset 0px 0px 0px 2px #b4dfff1f;
+    }
+
+    html.responsive .checkout_steam_rewards_banner div.left {
+        font: var(--gpText-BodyMedium);
+        color: var(--gpColor-LightBlue);
+        margin-right: 12px;        
+    }
+
+    html.responsive .checkout_steam_rewards_banner div.right {
+        display: flex;
+        align-items: center;
+    }
+
+    html.responsive .checkout_steam_rewards_banner div.right div.logo {
+        margin-left: 8px;
+        display: flex;
+    }
+
+    html.responsive .checkout_steam_rewards_banner div.right div.logo img {
+        width: 24px;
+        height: 24px;
+    }
+
+    html.responsive .checkout_steam_rewards_banner div.right div.points div {
+        color: var(--gpColor-BlueHi);
+        background: unset;
+        -webkit-background-clip: unset;
+        -webkit-text-fill-color: unset;
+        font: var(--gpText-HeadingSmall);
+    }
+
+
+
+
+    /* PAYMENT METHODS SIDE NAV */
+
+    /* Container */
+    html.responsive #payment_method_list {
+        position: fixed;
+        z-index: 2;
+        top: 0px;
+        left: 0px;
+        width: var(--gpPaymentsNavWidth);
+        height: 100%;
+    }
+
+    html.responsive .payment_method_list_items {
+        margin-top: 12px;
+    }
+
+
+    /* List items */
+    html.responsive .selectable_payment_method {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        padding: 12px 12px 12px 16px;
+        transition: all 0.1s ease;
+    }
+
+    html.responsive .selectable_payment_method:hover,
+    html.responsive .selectable_payment_method.gpfocus {
+        background-color: white;
+        color: black;
+    }
+
+    html.responsive .selectable_payment_method.active:not(:hover) {
+        background-color: var(--gpBackground-LightMedium);
+        color: white;
+    }
+
+    html.responsive .selectable_payment_method_image {
+        width: 40px;
+        height: 24px;
+        overflow: hidden;
+        border-radius: 3px;
+    }
+
+    html.responsive .selectable_payment_method_name {
+        margin-left: var(--gpSpace-Gap);
+    }
+
+
+    /* Align heading and description */
+    html.responsive .payment_method_list_content {
+        margin-left: 16px;
+    }
+    
+
+
+
+    /* INPUTS */
+
+    /* Input fields */
+    html.responsive input.text {
+		background-color: var(--gpBackground-LightMedium);
+		border-radius: var(--gpCorner-Medium);
+		font: var(--gpText-BodyLarge);
+		color: white;
+		transition: all 0.1s ease;
+		padding: 8px 10px;
+		box-shadow: unset;
+		border: unset;
+        margin: unset;
+	}
+    
+    html.responsive input.text:hover {
+		background-color: var(--gpBackground-LightHard);
+	}
+
+    html.responsive input.text:focus {
+		background-color: white;
+        color: black;
+        border-radius: 0px;
+	}
+
+
+    /* Input widths */
+    html.responsive .dselect_container a.trigger,
+	html.responsive .dselect_container a.activetrigger,
+    html.responsive .checkout_main input[type="text"],
+    html.responsive #payment_method_dselect_container,
+    html.responsive #billing_state_select_dselect_container,
+    html.responsive #billing_country_dselect_container {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    html.responsive #first_name,
+    html.responsive #last_name,
+    html.responsive #first_name_label,
+    html.responsive #last_name_label {
+        width: 49%;
+    }
+
+    html.responsive #last_name,
+    html.responsive #last_name_label {
+        float: right;
+    }
+
+    html.responsive #billing_postal_code {
+        width: 32%;
+    }
+
+
+    /* PAYMENT AND FOOTER NOTES */
+    html.responsive #payment_method_notes {
+        margin-top: 12px;
+        box-shadow: var(--gpShadow-XLarge);
+    }
+
+    html.responsive .payment_method_notes_bubble {
+        border-radius: var(--gpCorner-Medium);
+        background: var(--gpColor-DustyBlue);
+    }
+
+    html.responsive .payment_method_notes_bubble:after {
+        border-width: 0 8px 8px;
+        top: -8px;
+        left: 24px;
+        border-color: var(--gpColor-DustyBlue) transparent;
+    }
+
+    html.responsive .checkout_footer_notes {
+        color: var(--gpStoreLightGrey);
+    }
+
+
+
+
+    /* SAVE PAYMENT INFO */
+
+    /* Hide <BR> */
+    html.responsive .form_row br,
+    html.responsive .payment_info_form_area br,
+    html.responsive #purchase_bottom br {
+        display: none;
+    }
+
+
+
+
+    /* COUNTRY NOTES */
+
+    html.responsive #verify_country_notes {
+        font-size: unset;
+    }
+
+
+
+
+    /* PURCHASE CONFIRMATION */
+
+    html.responsive .checkout_tab.checkout_content {
+        margin-top: var(--gpSpace-Gutter);
+    }
+
+    /* Hide rules */
+    html.responsive .checkout_tab.checkout_content .rule {
+        display: none;
+    }
+
+    /* Confirmation title */
+    html.responsive h2.purchase_confirmation_title {
+        background-image: url('/public/images/ico_gamepad/check-circle.svg');
+        background-repeat: no-repeat;
+        background-size: 36px 36px;
+        background-position: 0px 2px;
+        padding-left: 44px;
+    }
+
+    html.responsive .checkout_tab.checkout_content h2.purchase_confirmation_title {
+        margin-bottom: 12px;
+    }
+
+
+    /* Headings */
+    html.responsive .checkout_tab.checkout_content h2 {
+        margin-top: 24px;
+    }
+
+
+    /* Text */
+    html.responsive #receipt_area p,
+    html.responsive #ackgift_area p,
+    html.responsive #checkout_receipt_description {
+        font: var(--gpText-BodyLarge);
+        color: var(--gpStoreLightestGrey);
+        font-weight: 400;
+        margin: 0px 0px 8px 0px;
+    }
+
+
+    /* Install button */
+    html.responsive #library_button a {
+        width: 100%;
+    }
+
+    html.responsive #library_button {
+        margin-top: 16px;
+    }
+
+
+    /* Confirmation blocks */
+    html.responsive .purchase_summary_area,
+    html.responsive .add_free_content_success_area,
+    html.responsive .checkout_steam_direct_area {
+        background: var(--gpBackground-DarkSoft);
+    }
+
+
+    /* Receipt area */
+    html.responsive .receipt_body {
+        background: none;
+        padding: unset;
+    }
+
+
+    /* Receipt confirmation labels */
+    html.responsive .receipt_confirmation_label {
+        color: var(--gpStoreLighterGrey);
+        font: var(--gpText-BodyLarge);
+    }
+
+    html.responsive .receipt_confirmation_data {
+        color: var(--gpStoreLightestGrey);
+        font: var(--gpText-BodyLarge);
+    }
+
+
+    /* Hide print button */
+    html.responsive .receipt_print_button_row {
+        display: none;
+    }
+
+
+    /* Return to store */
+    html.responsive #return_to_store_button {
+        float: unset !important;
+    }
+
+
+
+    
+
+
+}
