@@ -445,7 +445,7 @@
               e.AddLanguageFacet(this.m_facets),
               e.AddContentDescriptorFacet(this.m_facets),
               e.AddUserPreferencesFacet(this.m_facets),
-              (this.m_facetFilterState = new O.b(
+              (this.m_facetFilterState = new O.c(
                 this.m_facets,
                 !1,
                 1,
@@ -1222,7 +1222,7 @@
             return o.a.createElement(
               "div",
               { className: x.FacetMenuCtn },
-              o.a.createElement(O.c, {
+              o.a.createElement(O.d, {
                 facetFilterState: a,
                 language: Object(f.i)(g.d.LANGUAGE),
                 nMaxFacetValues: 5,

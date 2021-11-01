@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6866351";
+var CLSTAMP = "6868221";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [40],
   {
@@ -8676,23 +8676,30 @@ var CLSTAMP = "6866351";
                   "div",
                   { className: Object(U.a)(re.a.StoreSaleWidgetLeft) },
                   c.a.createElement(
-                    "div",
-                    { className: re.a.StoreSaleWidgetImage },
-                    fe(
-                      null == o ? void 0 : o.appid,
-                      null == o ? void 0 : o.full_game_appid
-                    ) &&
-                      c.a.createElement(
-                        "div",
-                        { className: re.a.CapsuleDecorators },
-                        c.a.createElement(Ge, null)
-                      ),
-                    c.a.createElement(we, {
-                      info: i,
-                      appInfo: o,
-                      imageType: "header",
-                    }),
-                    Boolean(o && r) && c.a.createElement(ke, { appInfo: o })
+                    "a",
+                    {
+                      href: Object(S.b)(M, _),
+                      target: V.d.IN_CLIENT ? void 0 : "_blank",
+                    },
+                    c.a.createElement(
+                      "div",
+                      { className: re.a.StoreSaleWidgetImage },
+                      fe(
+                        null == o ? void 0 : o.appid,
+                        null == o ? void 0 : o.full_game_appid
+                      ) &&
+                        c.a.createElement(
+                          "div",
+                          { className: re.a.CapsuleDecorators },
+                          c.a.createElement(Ge, null)
+                        ),
+                      c.a.createElement(we, {
+                        info: i,
+                        appInfo: o,
+                        imageType: "header",
+                      }),
+                      Boolean(o && r) && c.a.createElement(ke, { appInfo: o })
+                    )
                   )
                 ),
                 c.a.createElement(
@@ -9185,7 +9192,20 @@ var CLSTAMP = "6866351";
                 Object(q.f)("#EventDisplay_CallToAction_ComingSoon")
               )
             );
-          if (r)
+          if (r) {
+            if ("bundle" !== n && "sub" !== n) {
+              var p = t;
+              if (p && p.full_game_appid !== p.id)
+                return c.a.createElement(
+                  "div",
+                  { className: re.a.StoreSalePriceWidgetContainer },
+                  c.a.createElement(
+                    "div",
+                    { className: re.a.StoreSalePriceBox },
+                    Object(q.f)("#EventDisplay_CallToAction_FreeDemo")
+                  )
+                );
+            }
             return c.a.createElement(
               "div",
               { className: re.a.StoreSalePriceWidgetContainer },
@@ -9195,15 +9215,16 @@ var CLSTAMP = "6866351";
                 Object(q.f)("#EventDisplay_CallToAction_FreeToPlay")
               )
             );
+          }
           if (!o) return null;
-          var p = a || u,
-            d = p && u && p > u && u;
+          var d = a || u,
+            m = d && u && d > u && u;
           return c.a.createElement(
             "div",
             {
               className: Object(U.a)(
                 re.a.StoreSalePriceWidgetContainer,
-                p && re.a.Discounted
+                d && re.a.Discounted
               ),
             },
             s &&
@@ -9218,19 +9239,19 @@ var CLSTAMP = "6866351";
                 },
                 Object(q.f)("#EventDisplay_CallToAction_Prepurchase_Short")
               ),
-            Boolean(d) &&
+            Boolean(m) &&
               c.a.createElement(
                 "span",
                 { className: Object(U.a)(re.a.BaseDiscount) },
-                "-" + d + "%"
+                "-" + m + "%"
               ),
-            Boolean(p) &&
+            Boolean(d) &&
               c.a.createElement(
                 "div",
                 { className: re.a.StoreSaleDiscountBox },
-                "-" + p + "%"
+                "-" + d + "%"
               ),
-            p && i
+            d && i
               ? c.a.createElement(
                   "div",
                   { className: re.a.StoreSaleDiscountedPriceCtn },
@@ -9729,7 +9750,10 @@ var CLSTAMP = "6866351";
           if ("library" === r)
             return c.a.createElement(Te, { info: t, appInfo: n });
           var i = new Array();
-          Be(t, n, "header" === r, i);
+          Be(t, n, "header" === r, i),
+            (i = i.filter(function (e) {
+              return Boolean(e) && "" !== e;
+            }));
           var o,
             s,
             l = "";
@@ -13708,9 +13732,9 @@ var CLSTAMP = "6866351";
                 r = n.section,
                 a = n.language;
               r.enable_faceted_browsing &&
-                (t = new he.b(
+                (t = new he.c(
                   r.facets,
-                  Object(he.a)(this.props.event, r),
+                  Object(he.b)(this.props.event, r),
                   r.min_capsule_matches_for_facet_values || 1,
                   r.facet_sort_order || u.k.k_ESortFacetsByMatchCount,
                   a
@@ -13743,9 +13767,9 @@ var CLSTAMP = "6866351";
                 var i = this.state.facetFilterState;
                 this.props.section.enable_faceted_browsing &&
                   this.props.section !== e.section &&
-                  (i = new he.b(
+                  (i = new he.c(
                     this.props.section.facets,
-                    Object(he.a)(this.props.event, this.props.section),
+                    Object(he.b)(this.props.event, this.props.section),
                     this.props.section.min_capsule_matches_for_facet_values ||
                       1,
                     this.props.section.facet_sort_order ||
@@ -13959,7 +13983,7 @@ var CLSTAMP = "6866351";
                           ? [2]
                           : ((T = p.length > e || b),
                             f
-                              ? ((I = (I = Object(he.e)(s.facets)).filter(
+                              ? ((I = (I = Object(he.f)(s.facets)).filter(
                                   function (e) {
                                     return o.ShouldShowCapsule(e);
                                   }
@@ -14138,7 +14162,7 @@ var CLSTAMP = "6866351";
                 o = i.rgCapsules,
                 c = i.facetFilterState;
               e.preventDefault();
-              var l = Object(he.e)(r.facets);
+              var l = Object(he.f)(r.facets);
               l = l.filter(function (e) {
                 return a.ShouldShowCapsule(e);
               });
@@ -14148,7 +14172,7 @@ var CLSTAMP = "6866351";
                   event: n,
                   actualMatches: o,
                   expectedMatches: u,
-                  saleCapsules: Object(he.e)(r.facets),
+                  saleCapsules: Object(he.f)(r.facets),
                 }),
                 window
               );
@@ -14230,7 +14254,7 @@ var CLSTAMP = "6866351";
               if (r.enable_faceted_browsing) {
                 var y = On(r, a).background;
                 g = s.a.createElement(
-                  he.d,
+                  he.e,
                   {
                     language: i,
                     section: r,
@@ -15792,7 +15816,7 @@ var CLSTAMP = "6866351";
                   : e.store_filter
               )
                 ? JSON.stringify(
-                    Object(he.f)(
+                    Object(he.g)(
                       null === (t = this.GetTab()) || void 0 === t
                         ? void 0
                         : t.store_filter
@@ -16112,6 +16136,7 @@ var CLSTAMP = "6866351";
                                 t.contenthub_section_id,
                               nCapsulesPerPage:
                                 t.contenthub_section_capsules_per_page,
+                              tab: b,
                             },
                             e.props
                           )
@@ -16449,8 +16474,8 @@ var CLSTAMP = "6866351";
             ) {
               var r = t.section.min_capsule_matches_for_facet_values || 1,
                 a = t.section.facet_sort_order || u.k.k_ESortFacetsByMatchCount,
-                i = Object(he.a)(t.event, t.section);
-              n.state.facetFilterState = new he.b(
+                i = Object(he.b)(t.event, t.section);
+              n.state.facetFilterState = new he.c(
                 t.section.facets,
                 i,
                 r,
@@ -16467,9 +16492,9 @@ var CLSTAMP = "6866351";
                 t = this;
               window.addEventListener("resize", this.OnResize),
                 this.props.section.enable_faceted_browsing &&
-                  (e = new he.b(
+                  (e = new he.c(
                     this.props.section.facets,
-                    Object(he.a)(this.props.event, this.props.section),
+                    Object(he.b)(this.props.event, this.props.section),
                     this.props.section.min_capsule_matches_for_facet_values ||
                       1,
                     this.props.section.facet_sort_order ||
@@ -16521,9 +16546,9 @@ var CLSTAMP = "6866351";
                   c = this.state.facetFilterState;
                 this.props.section.enable_faceted_browsing &&
                   this.props.section !== e.section &&
-                  (c = new he.b(
+                  (c = new he.c(
                     this.props.section.facets,
-                    Object(he.a)(this.props.event, this.props.section),
+                    Object(he.b)(this.props.event, this.props.section),
                     this.props.section.min_capsule_matches_for_facet_values ||
                       1,
                     this.props.section.facet_sort_order ||
@@ -16750,7 +16775,7 @@ var CLSTAMP = "6866351";
                           (d = void 0),
                           (m = !1),
                           (h = null),
-                          (f = Object(he.a)(i, n)),
+                          (f = Object(he.b)(i, n)),
                           (b = this.state.facetFilterState),
                           n.enable_faceted_browsing &&
                             b.SetFromURLParam(
@@ -16804,7 +16829,7 @@ var CLSTAMP = "6866351";
                             ((v = void 0),
                             (v = n.smart_section
                               ? _n(
-                                  (v = (v = Object(he.e)(n.facets)).filter(
+                                  (v = (v = Object(he.f)(n.facets)).filter(
                                     function (e) {
                                       return c.ShouldShowCapsule(e);
                                     }
@@ -17132,7 +17157,7 @@ var CLSTAMP = "6866351";
                 c = s.capsules,
                 l = s.facetFilterState;
               e.preventDefault();
-              var u = Object(he.e)(r.facets);
+              var u = Object(he.f)(r.facets);
               u = _n(
                 (u = u.filter(function (e) {
                   return a.ShouldShowCapsule(e);
@@ -17145,7 +17170,7 @@ var CLSTAMP = "6866351";
                   event: n,
                   actualMatches: c,
                   expectedMatches: p,
-                  saleCapsules: Object(he.e)(r.facets),
+                  saleCapsules: Object(he.f)(r.facets),
                 }),
                 window
               );
@@ -17324,7 +17349,7 @@ var CLSTAMP = "6866351";
                       S.k.is_support &&
                       _.smart_section &&
                       _.enable_faceted_browsing &&
-                      Object(he.a)(n, _) &&
+                      Object(he.b)(n, _) &&
                       o.createElement(
                         "div",
                         null,
@@ -17342,7 +17367,7 @@ var CLSTAMP = "6866351";
                   ),
                   _.enable_faceted_browsing
                     ? o.createElement(
-                        he.d,
+                        he.e,
                         {
                           language: i,
                           section: _,
@@ -23168,7 +23193,12 @@ var CLSTAMP = "6866351";
           };
         }
         if (e.recommendation.reason === r.c.k_ECreator) {
-          t = l.a.GetClanInfoByClanAccountID(e.recommendation.creator.creator);
+          if (
+            !(t = l.a.GetClanInfoByClanAccountID(
+              e.recommendation.creator.creator
+            ))
+          )
+            return { strReason: "" };
           var n = void 0;
           return (
             (n =
@@ -38602,6 +38632,13 @@ var CLSTAMP = "6866351";
               enumerable: !1,
               configurable: !0,
             }),
+            Object.defineProperty(e.prototype, "price_in_cents", {
+              get: function () {
+                return this.final_price;
+              },
+              enumerable: !1,
+              configurable: !0,
+            }),
             e
           );
         })(),
@@ -52360,60 +52397,97 @@ var CLSTAMP = "6866351";
     b3P5: function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
-        return b;
+        return _;
       });
       var r = n("q1tI"),
         a = n.n(r),
-        i = n("exH9"),
+        i = n("5eAM"),
         o = n("ee7K"),
         s = n("xVl9"),
-        c = n("5L1o"),
-        l = n("MnIK"),
-        u = n("dfs5"),
-        p = n("0OaU"),
-        d = n("TLQK"),
-        m = n("dStQ"),
-        h = n("O59X"),
-        f = n("5eAM"),
-        b = function (e) {
+        c = n("dpTt"),
+        l = n("5L1o"),
+        u = n("MnIK"),
+        p = n("dfs5"),
+        d = n("0OaU"),
+        m = n("exH9"),
+        h = n("TLQK"),
+        f = n("dStQ"),
+        b = n("O59X"),
+        _ = function (e) {
           var t = e.hubtype,
             n = e.category,
-            r = e.tagid,
-            i = e.strSectionID,
-            o = e.nCapsulesPerPage,
-            s = Object(m.b)(t, n, r),
-            c = s.bLoading,
-            l = s.sections,
-            u = s.mapSectionLists;
-          if (c) return null;
-          if (Boolean(i)) {
-            var p =
-              null == l
+            i = e.tagid,
+            o = e.strSectionID,
+            s = e.nCapsulesPerPage,
+            l = e.tab,
+            u = Object(f.b)(t, n, i),
+            p = u.bLoading,
+            d = u.sections,
+            m = u.mapSectionLists,
+            h = Object(r.useState)(),
+            b = h[0],
+            _ = h[1],
+            g = null == l ? void 0 : l.GetActiveTabUniqueID();
+          if (
+            (Object(r.useEffect)(
+              function () {
+                if (!p)
+                  if (l) {
+                    for (
+                      var e = new Map(),
+                        t = function (t) {
+                          var n = m.get(t.id),
+                            r = l.GetTab().store_filter,
+                            a = n.filter(function (e) {
+                              return (function (e, t) {
+                                return Object(c.a)(e, Object(f.a)([t])[0]);
+                              })(r, e);
+                            });
+                          e.set(t.id, a);
+                        },
+                        n = 0,
+                        r = d;
+                      n < r.length;
+                      n++
+                    ) {
+                      t(r[n]);
+                    }
+                    _(e);
+                  } else _(m);
+              },
+              [p, m, d, l, g]
+            ),
+            p || null == b)
+          )
+            return null;
+          if (Boolean(o)) {
+            var y =
+              null == d
                 ? void 0
-                : l.find(function (e) {
-                    return e.id === i;
+                : d.find(function (e) {
+                    return e.id === o;
                   });
-            return a.a.createElement(_, {
-              key: p.id,
-              mapSectionLists: u,
-              section: p,
-              nCapsulesPerPage: o || 4,
+            return a.a.createElement(v, {
+              key: y.id,
+              mapSectionLists: b,
+              section: y,
+              nCapsulesPerPage: s || 4,
             });
           }
           return a.a.createElement(
             a.a.Fragment,
             null,
-            l.map(function (e) {
-              return a.a.createElement(_, {
+            d.map(function (e) {
+              return a.a.createElement(v, {
                 key: e.id,
-                mapSectionLists: u,
+                mapSectionLists: b,
                 section: e,
-                nCapsulesPerPage: o || 4,
+                nCapsulesPerPage: s || 4,
               });
             })
           );
         },
-        _ = function (e) {
+        v = function (e) {
           var t = e.mapSectionLists,
             n = e.section,
             r = e.nCapsulesPerPage,
@@ -52422,21 +52496,21 @@ var CLSTAMP = "6866351";
           var o = null;
           switch (n.type) {
             case "4wide":
-              o = a.a.createElement(g, { capsuleList: i, nCapsulesPerPage: r });
+              o = a.a.createElement(y, { capsuleList: i, nCapsulesPerPage: r });
               break;
             case "creator4wide":
-              o = a.a.createElement(y, { capsuleList: i, nCapsulesPerPage: r });
+              o = a.a.createElement(S, { capsuleList: i, nCapsulesPerPage: r });
               break;
             default:
               o = a.a.createElement("div", null, "Unknown: ", n.type);
           }
           return a.a.createElement(
-            u.b,
+            p.b,
             { feature: n.id },
             a.a.createElement(
-              l.a,
+              u.a,
               { placeholderHeight: 250, rootMargin: "0px 0px 100% 0px" },
-              a.a.createElement(v, {
+              a.a.createElement(g, {
                 title: n.title,
                 description: n.description,
               }),
@@ -52444,35 +52518,35 @@ var CLSTAMP = "6866351";
             )
           );
         },
-        v = function (e) {
+        g = function (e) {
           var t = e.title,
             n = e.description;
           return a.a.createElement(
             "div",
-            { className: Object(i.a)(h.StoreSection, h.SectionTitleCtn) },
-            a.a.createElement("span", { className: h.SectionTitle }, t),
+            { className: Object(m.a)(b.StoreSection, b.SectionTitleCtn) },
+            a.a.createElement("span", { className: b.SectionTitle }, t),
             Boolean(n) &&
-              a.a.createElement("span", { className: h.SectionDescription }, n)
+              a.a.createElement("span", { className: b.SectionDescription }, n)
           );
         },
-        g = function (e) {
+        y = function (e) {
           var t = e.capsuleList,
             n = e.nCapsulesPerPage,
-            r = Object(m.a)(t, 40);
+            r = Object(f.a)(t, 40);
           return a.a.createElement(
             s.a,
             {
               visibleElements: n,
               useTestScrollbar: !0,
               bLazyRenderChildren: !0,
-              className: Object(i.a)(
-                h.StoreSection,
-                h.StoreSection,
+              className: Object(m.a)(
+                b.StoreSection,
+                b.StoreSection,
                 "SaleSectionCarouselPadding"
               ),
             },
             r.map(function (e) {
-              return a.a.createElement(c.l, {
+              return a.a.createElement(l.l, {
                 key: e.type + "_" + e.id,
                 capsule: e,
                 imageType: "header",
@@ -52480,48 +52554,48 @@ var CLSTAMP = "6866351";
             })
           );
         },
-        y = function (e) {
+        S = function (e) {
           var t = e.capsuleList,
             n = e.nCapsulesPerPage,
             r = Object(o.b)(),
-            l = r[0],
+            c = r[0],
             u = r[1];
-          if (l)
-            return a.a.createElement(p.a, {
-              string: Object(d.f)("#Loading"),
+          if (c)
+            return a.a.createElement(d.a, {
+              string: Object(h.f)("#Loading"),
               size: "medium",
               position: "center",
             });
-          var b = Object(m.a)(t, 40),
+          var p = Object(f.a)(t, 40),
             _ = (function (e, t) {
               for (var n = new Map(), r = 0, a = e; r < a.length; r++) {
-                var i = a[r].id,
-                  o = f.a.GetAppLinkInfo(i);
-                if (null == o ? void 0 : o.creator_clan_ids)
-                  for (var s = 0, c = o.creator_clan_ids; s < c.length; s++) {
-                    var l = c[s];
-                    if (t.BIsFollowingCreator(l)) {
-                      n.set(i, l);
+                var o = a[r].id,
+                  s = i.a.GetAppLinkInfo(o);
+                if (null == s ? void 0 : s.creator_clan_ids)
+                  for (var c = 0, l = s.creator_clan_ids; c < l.length; c++) {
+                    var u = l[c];
+                    if (t.BIsFollowingCreator(u)) {
+                      n.set(o, u);
                       break;
                     }
                   }
               }
               return n;
-            })(b, u);
+            })(p, u);
           return a.a.createElement(
             s.a,
             {
               visibleElements: n,
               useTestScrollbar: !0,
               bLazyRenderChildren: !0,
-              className: Object(i.a)(
-                h.StoreSection,
-                h.StoreSection,
+              className: Object(m.a)(
+                b.StoreSection,
+                b.StoreSection,
                 "SaleSectionCarouselPadding"
               ),
             },
-            b.map(function (e) {
-              return a.a.createElement(c.l, {
+            p.map(function (e) {
+              return a.a.createElement(l.l, {
                 key: e.type + "_" + e.id,
                 capsule: e,
                 imageType: "header",
@@ -61995,39 +62069,44 @@ var CLSTAMP = "6866351";
     },
     dpTt: function (e, t, n) {
       "use strict";
-      n.d(t, "f", function () {
-        return g;
+      n.d(t, "g", function () {
+        return S;
       }),
-        n.d(t, "b", function () {
-          return y;
-        }),
         n.d(t, "c", function () {
-          return S;
+          return M;
         }),
         n.d(t, "d", function () {
-          return B;
-        }),
-        n.d(t, "a", function () {
-          return T;
+          return O;
         }),
         n.d(t, "e", function () {
-          return I;
+          return T;
+        }),
+        n.d(t, "b", function () {
+          return L;
+        }),
+        n.d(t, "f", function () {
+          return D;
+        }),
+        n.d(t, "a", function () {
+          return j;
         });
       var r = n("mrSG"),
-        a = n("2vnA"),
-        i = n("TyAF"),
-        o = n("q1tI"),
-        s = n("3+zv"),
-        c = n("ee7K"),
-        l = n("6Y59"),
-        u = n("TLQK"),
-        p = n("lkRc"),
-        d = n("k5ES"),
-        m = n("FhLd"),
-        h = n("Mgs7"),
-        f = n("vDqi"),
-        b = n.n(f);
-      function _(e, t) {
+        a = n("vDqi"),
+        i = n.n(a),
+        o = n("2vnA"),
+        s = n("TyAF"),
+        c = n("q1tI"),
+        l = n("mgoM"),
+        u = n("3+zv"),
+        p = n("ee7K"),
+        d = n("Mgs7"),
+        m = n("gyoR"),
+        h = n("6Y59"),
+        f = n("TLQK"),
+        b = n("lkRc"),
+        _ = n("k5ES"),
+        v = n("FhLd");
+      function g(e, t) {
         var n = new Set();
         return (
           e.forEach(function (e) {
@@ -62036,25 +62115,25 @@ var CLSTAMP = "6866351";
           n
         );
       }
-      function v(e, t) {
+      function y(e, t) {
         for (var n = e.values(), r = n.next(); !r.done; ) {
           if (!t.has(r.value)) return !1;
           r = n.next();
         }
         return !0;
       }
-      function g(e) {
+      function S(e) {
         var t = Object(r.a)({}, e);
         if (!t) return t;
         if (
-          t.type === s.o.k_EStoreFilterClauseTypeOr ||
-          t.type === s.o.k_EStoreFilterClauseTypeAnd
+          t.type === u.o.k_EStoreFilterClauseTypeOr ||
+          t.type === u.o.k_EStoreFilterClauseTypeAnd
         ) {
           if (!t.rgSubexpressions || 0 === t.rgSubexpressions.length)
             return null;
           if (
             ((t.rgSubexpressions = t.rgSubexpressions.map(function (e) {
-              return g(e);
+              return S(e);
             })),
             !t.bNegated && 1 === t.rgSubexpressions.length)
           )
@@ -62071,11 +62150,11 @@ var CLSTAMP = "6866351";
         }
         return t;
       }
-      var y = (function () {
+      var M = (function () {
           function e(e, t, n, r, a) {
             var i = this;
             (this.m_nMinMatches = 1),
-              (this.m_facetSortKey = s.k.k_ESortFacetsByMatchCount),
+              (this.m_facetSortKey = u.k.k_ESortFacetsByMatchCount),
               (this.m_language = -1),
               this.LoadPriceStops(),
               (this.m_facets = []),
@@ -62090,7 +62169,7 @@ var CLSTAMP = "6866351";
                       : void 0,
                     matchingCapsulesSet:
                       Boolean(e.matchingCapsules) &&
-                      new Set(e.matchingCapsules.map(w)),
+                      new Set(e.matchingCapsules.map(I)),
                     bDeactivated: !1,
                     nMatchingPotentiallyVisibleCapsules: 0,
                     nMatchingFilteredCapsules: 0,
@@ -62127,8 +62206,8 @@ var CLSTAMP = "6866351";
               (this.m_bHasHideIgnoredItemsFacetValue = e.some(function (e) {
                 return e.facetValues.some(function (e) {
                   return (
-                    e.type === s.l.k_EUserPreference &&
-                    e.userPreference === s.m.k_EHideIgnoredItems
+                    e.type === u.l.k_EUserPreference &&
+                    e.userPreference === u.m.k_EHideIgnoredItems
                   );
                 });
               })),
@@ -62203,13 +62282,13 @@ var CLSTAMP = "6866351";
                 this.UpdateFilter());
             }),
             (e.prototype.SetPotentiallyVisibleCapsules = function (e) {
-              (this.m_potentiallyVisibleCapsules = new Set(e.map(w))),
+              (this.m_potentiallyVisibleCapsules = new Set(e.map(I))),
                 this.PruneFacets();
             }),
             (e.prototype.SetFilteredCapsules = function (e, t, n) {
               void 0 === t && (t = void 0),
                 void 0 === n && (n = !1),
-                (this.m_filteredCapsules = new Set(e.map(w))),
+                (this.m_filteredCapsules = new Set(e.map(I))),
                 (this.m_nFilteredCapsuleCount =
                   t || this.m_filteredCapsules.size),
                 (this.m_bFilteredCapsuleCountIsPartial = n),
@@ -62227,7 +62306,7 @@ var CLSTAMP = "6866351";
               var t = this;
               return this.m_bSomeFacetValueEnabled
                 ? e.filter(function (e) {
-                    return t.m_matchingReferencedCapsules.has(w(e));
+                    return t.m_matchingReferencedCapsules.has(I(e));
                   })
                 : e;
             }),
@@ -62247,7 +62326,7 @@ var CLSTAMP = "6866351";
                     null === (n = t.facetValue.matchingCapsules) ||
                       void 0 === n ||
                       n.forEach(function (t) {
-                        e.m_referencedCapsules.add(w(t));
+                        e.m_referencedCapsules.add(I(t));
                       });
                   });
                 });
@@ -62284,8 +62363,8 @@ var CLSTAMP = "6866351";
                   (t.matchingCapsules = new Set()),
                     t.facetValues.forEach(function (n) {
                       var r, a, i;
-                      n.facetValue.type === s.l.k_EPrice ||
-                      n.facetValue.type === s.l.k_EUserPreference
+                      n.facetValue.type === u.l.k_EPrice ||
+                      n.facetValue.type === u.l.k_EUserPreference
                         ? (t.matchingCapsules = e.m_referencedCapsules)
                         : n.bEnabled &&
                           (t.matchingCapsules =
@@ -62305,7 +62384,7 @@ var CLSTAMP = "6866351";
                   (t.matchingCapsulesInOtherFacets = e.GetReferencedCapsules()),
                     n.forEach(function (e) {
                       e.bSomeFacetValueEnabled &&
-                        (t.matchingCapsulesInOtherFacets = _(
+                        (t.matchingCapsulesInOtherFacets = g(
                           t.matchingCapsulesInOtherFacets,
                           e.matchingCapsules
                         ));
@@ -62314,7 +62393,7 @@ var CLSTAMP = "6866351";
                 (this.m_matchingReferencedCapsules = this.GetReferencedCapsules()),
                 this.m_facets.forEach(function (t) {
                   t.bSomeFacetValueEnabled &&
-                    (e.m_matchingReferencedCapsules = _(
+                    (e.m_matchingReferencedCapsules = g(
                       e.m_matchingReferencedCapsules,
                       t.matchingCapsules
                     ));
@@ -62339,14 +62418,14 @@ var CLSTAMP = "6866351";
               get: function () {
                 var t = this,
                   n = {
-                    type: s.o.k_EStoreFilterClauseTypeAnd,
+                    type: u.o.k_EStoreFilterClauseTypeAnd,
                     rgSubexpressions: new Array(),
                   };
                 return (
                   this.m_facets.forEach(function (a) {
                     if (!e.BFacetHasEnabledOptTags(a)) {
                       var i = {
-                        type: s.o.k_EStoreFilterClauseTypeOr,
+                        type: u.o.k_EStoreFilterClauseTypeOr,
                         rgSubexpressions: new Array(),
                       };
                       a.facetValues.forEach(function (e) {
@@ -62354,17 +62433,17 @@ var CLSTAMP = "6866351";
                           e.bEnabled &&
                           Boolean(e.facetValue.rgStoreTagFilter)
                         ) {
-                          if (e.facetValue.type === s.l.k_EUserPreference)
+                          if (e.facetValue.type === u.l.k_EUserPreference)
                             return;
                           var n = Object(r.a)(
                             {},
                             e.facetValue.rgStoreTagFilter
                           );
-                          e.facetValue.type === s.l.k_EPrice &&
+                          e.facetValue.type === u.l.k_EPrice &&
                             (n.value = Boolean(t.m_priceStopInfo)
                               ? t.m_priceStopInfo[e.nPriceStopIndex].price
                               : void 0),
-                            (e.facetValue.type !== s.l.k_EPrice ||
+                            (e.facetValue.type !== u.l.k_EPrice ||
                               Boolean(t.m_priceStopInfo)) &&
                               i.rgSubexpressions.push(n);
                         }
@@ -62391,7 +62470,7 @@ var CLSTAMP = "6866351";
                   if (
                     (n.facetValues.forEach(function (e, t) {
                       e.bEnabled !== Boolean(e.facetValue.bEnabledByDefault) &&
-                        (e.facetValue.type === s.l.k_EPrice
+                        (e.facetValue.type === u.l.k_EPrice
                           ? a.push(t + "_" + e.nPriceStopIndex)
                           : a.push(t.toString()));
                     }),
@@ -62419,7 +62498,7 @@ var CLSTAMP = "6866351";
               (this.m_userPreferences = new Set()),
                 this.m_facets.forEach(function (t) {
                   t.facetValues.forEach(function (t) {
-                    t.facetValue.type === s.l.k_EUserPreference &&
+                    t.facetValue.type === u.l.k_EUserPreference &&
                       t.bEnabled &&
                       e.m_userPreferences.add(t.facetValue.userPreference);
                   });
@@ -62432,14 +62511,14 @@ var CLSTAMP = "6866351";
                   ? this.m_facets.forEach(function (t) {
                       var n = [];
                       t.facetValues.forEach(function (t) {
-                        var r = _(
+                        var r = g(
                           t.matchingCapsulesSet,
                           e.m_potentiallyVisibleCapsules
                         );
                         ((e.m_nMinMatches <= r.size &&
                           r.size < e.m_potentiallyVisibleCapsules.size) ||
-                          t.facetValue.type === s.l.k_EUserPreference ||
-                          t.facetValue.type === s.l.k_EPrice) &&
+                          t.facetValue.type === u.l.k_EUserPreference ||
+                          t.facetValue.type === u.l.k_EPrice) &&
                           ((t.bDeactivated = !1),
                           (t.nMatchingPotentiallyVisibleCapsules = 0),
                           (t.nMatchingFilteredCapsules = 0),
@@ -62464,23 +62543,23 @@ var CLSTAMP = "6866351";
             (e.prototype.PruneFacetsForCurrentUser = function () {
               this.m_prunedFacets.forEach(function (e) {
                 e.facetValues = e.facetValues.filter(function (e) {
-                  return e.facetValue.type === s.l.k_EContentDescriptor
-                    ? c.a.Get().BIsLoaded() &&
-                        c.a
+                  return e.facetValue.type === u.l.k_EContentDescriptor
+                    ? p.a.Get().BIsLoaded() &&
+                        p.a
                           .Get()
                           .BIncludesContentDescriptor(
                             e.facetValue.contentDescriptor
                           )
-                    : e.facetValue.type === s.l.k_ELanguage
-                    ? c.a.Get().BIsLoaded() &&
-                      (c.a.Get().GetPrimaryLanguage() ===
+                    : e.facetValue.type === u.l.k_ELanguage
+                    ? p.a.Get().BIsLoaded() &&
+                      (p.a.Get().GetPrimaryLanguage() ===
                         e.facetValue.language ||
-                        c.a
+                        p.a
                           .Get()
                           .GetSecondaryLanguages()
                           .has(e.facetValue.language))
-                    : e.facetValue.type !== s.l.k_EUserPreference ||
-                      (p.k.logged_in && c.a.Get().BIsLoaded());
+                    : e.facetValue.type !== u.l.k_EUserPreference ||
+                      (b.k.logged_in && p.a.Get().BIsLoaded());
                 });
               }),
                 (this.m_prunedFacets = this.m_prunedFacets.filter(function (e) {
@@ -62493,7 +62572,7 @@ var CLSTAMP = "6866351";
                 ? this.m_prunedFacets.forEach(function (t) {
                     t.facetValues.forEach(function (t) {
                       e.m_filteredCapsules
-                        ? (t.nMatchingFilteredCapsules = _(
+                        ? (t.nMatchingFilteredCapsules = g(
                             e.m_filteredCapsules,
                             t.matchingCapsulesSet
                           ).size)
@@ -62521,19 +62600,19 @@ var CLSTAMP = "6866351";
                   ? this.m_prunedFacets.forEach(function (t) {
                       t.facetValues.forEach(function (n) {
                         if (
-                          n.facetValue.type !== s.l.k_EUserPreference &&
-                          n.facetValue.type !== s.l.k_EPrice &&
+                          n.facetValue.type !== u.l.k_EUserPreference &&
+                          n.facetValue.type !== u.l.k_EPrice &&
                           !n.bEnabled &&
                           e.m_bSomeFacetValueSetToNonDefault
                         )
                           if (t.facet.bSomeFacetValueEnabled) {
                             var r = t.facet.bSomeFacetValueEnabledInOtherFacets
-                              ? _(
+                              ? g(
                                   t.facet.matchingCapsulesInOtherFacets,
                                   n.matchingCapsulesSet
                                 )
                               : n.matchingCapsulesSet;
-                            n.bDeactivated = v(r, e.m_filteredCapsules);
+                            n.bDeactivated = y(r, e.m_filteredCapsules);
                           } else
                             n.bDeactivated =
                               (function (e, t) {
@@ -62553,7 +62632,7 @@ var CLSTAMP = "6866351";
                                 }
                                 return !0;
                               })(n.matchingCapsulesSet, e.m_filteredCapsules) ||
-                              v(e.m_filteredCapsules, n.matchingCapsulesSet);
+                              y(e.m_filteredCapsules, n.matchingCapsulesSet);
                       });
                     })
                   : this.m_prunedFacets.forEach(function (t) {
@@ -62578,13 +62657,13 @@ var CLSTAMP = "6866351";
                   var n = t.facetValues.slice();
                   n.sort(function (t, n) {
                     if (
-                      t.facetValue.type === s.l.k_EPrice &&
-                      n.facetValue.type !== s.l.k_EPrice
+                      t.facetValue.type === u.l.k_EPrice &&
+                      n.facetValue.type !== u.l.k_EPrice
                     )
                       return -1;
                     if (
-                      t.facetValue.type !== s.l.k_EPrice &&
-                      n.facetValue.type == s.l.k_EPrice
+                      t.facetValue.type !== u.l.k_EPrice &&
+                      n.facetValue.type == u.l.k_EPrice
                     )
                       return 1;
                     if (t.bEnabled !== n.bEnabled) return n.bEnabled ? 1 : -1;
@@ -62592,15 +62671,15 @@ var CLSTAMP = "6866351";
                       return t.bDeactivated ? 1 : -1;
                     if (!t.bEnabled && !t.bDeactivated) {
                       if (
-                        t.facetValue.type === s.l.k_ELanguage &&
-                        n.facetValue.type === s.l.k_ELanguage
+                        t.facetValue.type === u.l.k_ELanguage &&
+                        n.facetValue.type === u.l.k_ELanguage
                       )
                         return n.facetValue.language ===
-                          c.a.Get().GetPrimaryLanguage()
+                          p.a.Get().GetPrimaryLanguage()
                           ? 1
                           : -1;
                       if (
-                        e.m_facetSortKey === s.k.k_ESortFacetsByMatchCount &&
+                        e.m_facetSortKey === u.k.k_ESortFacetsByMatchCount &&
                         t.nMatchingFilteredCapsules !==
                           n.nMatchingFilteredCapsules
                       )
@@ -62609,12 +62688,12 @@ var CLSTAMP = "6866351";
                           t.nMatchingFilteredCapsules
                         );
                     }
-                    if (e.m_facetSortKey === s.k.k_ESortFacetsByName) {
-                      var r = u.a.GetWithFallback(
+                    if (e.m_facetSortKey === u.k.k_ESortFacetsByName) {
+                      var r = f.a.GetWithFallback(
                           t.facetValue.name,
                           e.m_language
                         ),
-                        a = u.a.GetWithFallback(
+                        a = f.a.GetWithFallback(
                           n.facetValue.name,
                           e.m_language
                         );
@@ -62630,33 +62709,33 @@ var CLSTAMP = "6866351";
             (e.prototype.LoadPriceStops = function () {
               var e, t, n;
               return Object(r.b)(this, void 0, void 0, function () {
-                var a, i, o;
+                var a, o, s;
                 return Object(r.e)(this, function (r) {
                   switch (r.label) {
                     case 0:
-                      return (a = Object(p.h)(
+                      return (a = Object(b.h)(
                         "pricestops",
                         "application_config"
                       ))
                         ? ((this.m_priceStopInfo = a), [3, 6])
                         : [3, 1];
                     case 1:
-                      (i = p.d.STORE_BASE_URL + "saleaction/ajaxgetpricestops"),
-                        (o = void 0),
+                      (o = b.d.STORE_BASE_URL + "saleaction/ajaxgetpricestops"),
+                        (s = void 0),
                         (r.label = 2);
                     case 2:
-                      return r.trys.push([2, 4, , 5]), [4, b.a.get(i)];
+                      return r.trys.push([2, 4, , 5]), [4, i.a.get(o)];
                     case 3:
                       return (
-                        (o = r.sent()),
+                        (s = r.sent()),
                         1 !==
-                        (null === (e = null == o ? void 0 : o.data) ||
+                        (null === (e = null == s ? void 0 : s.data) ||
                         void 0 === e
                           ? void 0
                           : e.success)
                           ? (console.error(
                               "Unable to load price stop data: ",
-                              null === (t = null == o ? void 0 : o.data) ||
+                              null === (t = null == s ? void 0 : s.data) ||
                                 void 0 === t
                                 ? void 0
                                 : t.success
@@ -62669,7 +62748,7 @@ var CLSTAMP = "6866351";
                         r.sent(),
                         console.error(
                           "Unable to load price stop data: ",
-                          null === (n = null == o ? void 0 : o.data) ||
+                          null === (n = null == s ? void 0 : s.data) ||
                             void 0 === n
                             ? void 0
                             : n.success
@@ -62677,7 +62756,7 @@ var CLSTAMP = "6866351";
                         [2, null]
                       );
                     case 5:
-                      (this.m_priceStopInfo = o.data.rgPriceStops),
+                      (this.m_priceStopInfo = s.data.rgPriceStops),
                         (r.label = 6);
                     case 6:
                       return (this.m_priceStopInfo[0].price = 0), [2];
@@ -62693,220 +62772,220 @@ var CLSTAMP = "6866351";
                   e.BFacetHasEnabledOptTags(i.facet)
                 ) {
                   var o = i.facet.matchingCapsules;
-                  n = null == n ? o : _(n, o);
+                  n = null == n ? o : g(n, o);
                 }
               }
               return null == n
                 ? t
                 : t.filter(function (e) {
-                    return n.has(w(e));
+                    return n.has(I(e));
                   });
             }),
-            Object(r.c)([a.C], e.prototype, "m_facets", void 0),
-            Object(r.c)([a.C], e.prototype, "m_priceStopInfo", void 0),
-            Object(r.c)([a.C], e.prototype, "m_sortedFacets", void 0),
-            Object(r.c)([a.k], e.prototype, "Reset", null),
-            Object(r.c)([a.k], e.prototype, "SetFromURLParam", null),
+            Object(r.c)([o.C], e.prototype, "m_facets", void 0),
+            Object(r.c)([o.C], e.prototype, "m_priceStopInfo", void 0),
+            Object(r.c)([o.C], e.prototype, "m_sortedFacets", void 0),
+            Object(r.c)([o.k], e.prototype, "Reset", null),
+            Object(r.c)([o.k], e.prototype, "SetFromURLParam", null),
             Object(r.c)(
-              [a.k],
+              [o.k],
               e.prototype,
               "SetPotentiallyVisibleCapsules",
               null
             ),
-            Object(r.c)([a.k], e.prototype, "SetFilteredCapsules", null),
-            Object(r.c)([a.k], e.prototype, "SetFacetCounts", null),
-            Object(r.c)([a.n], e.prototype, "strQuery", null),
+            Object(r.c)([o.k], e.prototype, "SetFilteredCapsules", null),
+            Object(r.c)([o.k], e.prototype, "SetFacetCounts", null),
+            Object(r.c)([o.n], e.prototype, "strQuery", null),
             e
           );
         })(),
-        S = Object(i.a)(function (e) {
+        O = Object(s.a)(function (e) {
           var t,
             n,
             r,
-            i = e.language,
-            s = e.linkColor,
-            c = e.headingColor,
+            a = e.language,
+            i = e.linkColor,
+            s = e.headingColor,
             l = e.background,
-            h = e.styleOverrides,
-            f = e.facetFilterState,
-            b = e.fnOnUpdateFilter;
-          (null == h ? void 0 : h.menu) ||
-            (n = { background: l, color: s || "white" }),
-            (null == h ? void 0 : h.menuTitle) ||
+            u = e.styleOverrides,
+            p = e.facetFilterState,
+            d = e.fnOnUpdateFilter;
+          (null == u ? void 0 : u.menu) ||
+            (n = { background: l, color: i || "white" }),
+            (null == u ? void 0 : u.menuTitle) ||
               (r = {
-                borderBottom: "0px solid " + (s || "white"),
-                color: c || "white",
+                borderBottom: "0px solid " + (i || "white"),
+                color: s || "white",
               });
-          var _ = Object(o.useRef)(null),
-            v = function () {
-              f.UpdateFilter(), b();
+          var m = Object(c.useRef)(null),
+            h = function () {
+              p.UpdateFilter(), d();
             };
-          return o.createElement(
+          return c.createElement(
             "div",
             {
-              ref: _,
+              ref: m,
               className:
-                (null == h ? void 0 : h.menu) || m.FacetedBrowseControls,
+                (null == u ? void 0 : u.menu) || v.FacetedBrowseControls,
               style: n,
             },
-            o.createElement(
+            c.createElement(
               "div",
               {
                 className:
-                  (null == h ? void 0 : h.menuTitle) || m.FacetMenuTitle,
+                  (null == u ? void 0 : u.menuTitle) || v.FacetMenuTitle,
                 style: r,
               },
-              Object(u.f)("#FacetedBrowse_Heading")
+              Object(f.f)("#FacetedBrowse_Heading")
             ),
-            (null == f ? void 0 : f.m_filteredCapsules) &&
-              (null == f ? void 0 : f.BSomeFacetValueEnabled()) &&
-              o.createElement(
+            (null == p ? void 0 : p.m_filteredCapsules) &&
+              (null == p ? void 0 : p.BSomeFacetValueEnabled()) &&
+              c.createElement(
                 "div",
                 {
                   className:
-                    (null == h ? void 0 : h.matchCount) ||
-                    m.FacetedBrowseMatchCount,
+                    (null == u ? void 0 : u.matchCount) ||
+                    v.FacetedBrowseMatchCount,
                 },
-                f.m_bFilteredCapsuleCountIsPartial
-                  ? Object(u.l)(
+                p.m_bFilteredCapsuleCountIsPartial
+                  ? Object(f.l)(
                       "#FacetedBrowse_MatchCountPartial",
-                      f.m_nFilteredCapsuleCount
+                      p.m_nFilteredCapsuleCount
                     )
-                  : Object(u.l)(
+                  : Object(f.l)(
                       "#FacetedBrowse_MatchCount",
-                      f.m_nFilteredCapsuleCount
+                      p.m_nFilteredCapsuleCount
                     )
               ),
-            o.createElement(
+            c.createElement(
               "div",
               {
                 className:
-                  (null == h ? void 0 : h.reset) || m.FacetedBrowseReset,
+                  (null == u ? void 0 : u.reset) || v.FacetedBrowseReset,
               },
-              o.createElement(
+              c.createElement(
                 "a",
                 {
                   onClick: function (e) {
                     e.preventDefault(),
-                      Object(a.G)(function () {
-                        f.Reset(), b();
+                      Object(o.G)(function () {
+                        p.Reset(), d();
                       });
                   },
                 },
-                Object(u.f)("#FacetedBrowse_Reset")
+                Object(f.f)("#FacetedBrowse_Reset")
               )
             ),
-            null === (t = null == f ? void 0 : f.GetSortedFacets()) ||
+            null === (t = null == p ? void 0 : p.GetSortedFacets()) ||
               void 0 === t
               ? void 0
               : t.map(function (t, n) {
-                  return o.createElement(M, {
+                  return c.createElement(E, {
                     key:
                       "facet_" +
-                      u.a.GetWithFallback(t.facet.facet.name, i) +
+                      f.a.GetWithFallback(t.facet.facet.name, a) +
                       "_" +
                       n,
                     facet: t,
-                    facetFilterState: f,
+                    facetFilterState: p,
                     nFacetIndex: n,
-                    language: i,
+                    language: a,
                     nMaxFacetValues: e.nMaxFacetValues,
                     highlightedFacetColor: e.highlightedFacetColor,
                     linkColor: e.linkColor,
                     headingColor: e.headingColor,
-                    fnOnUpdateFilter: v,
-                    styleOverrides: h,
+                    fnOnUpdateFilter: h,
+                    styleOverrides: u,
                   });
                 }),
-            o.createElement(
+            c.createElement(
               "div",
               {
                 className:
-                  (null == h ? void 0 : h.reset) || m.FacetedBrowseReset,
+                  (null == u ? void 0 : u.reset) || v.FacetedBrowseReset,
               },
-              o.createElement(
+              c.createElement(
                 "a",
                 {
                   onClick: function (e) {
                     e.preventDefault();
                     var t =
-                      _.current.getBoundingClientRect().top + window.scrollY;
+                      m.current.getBoundingClientRect().top + window.scrollY;
                     window.scrollTo(0, t);
                   },
                 },
-                Object(u.f)("#FacetedBrowse_ReturnToTop")
+                Object(f.f)("#FacetedBrowse_ReturnToTop")
               )
             ),
-            o.createElement(
+            c.createElement(
               "div",
-              { className: m.FacetedBrowseFeedbackLink },
-              o.createElement(d.e, {
+              { className: v.FacetedBrowseFeedbackLink },
+              c.createElement(_.e, {
                 strLabNumber: "012",
                 strForumURL:
-                  p.d.COMMUNITY_BASE_URL + "groups/SteamLabs/discussions/14/",
+                  b.d.COMMUNITY_BASE_URL + "groups/SteamLabs/discussions/14/",
               })
             )
           );
         }),
-        M = Object(i.a)(function (e) {
+        E = Object(s.a)(function (e) {
           var t,
             n = e.language,
             a = e.linkColor,
             i = e.headingColor,
-            s = e.facet,
-            c = e.nFacetIndex,
+            o = e.facet,
+            s = e.nFacetIndex,
             l = e.styleOverrides,
-            p = Object(o.useState)(Boolean(0 !== c)),
-            d = p[0],
-            h = p[1],
-            f = Object(o.useState)(!1),
-            b = f[0],
-            _ = f[1];
+            u = Object(c.useState)(Boolean(0 !== s)),
+            p = u[0],
+            d = u[1],
+            m = Object(c.useState)(!1),
+            h = m[0],
+            b = m[1];
           (null == l ? void 0 : l.facetName) ||
             (t = {
               borderBottom: "0px solid " + (a || "white"),
               color: i || "white",
             });
-          var v = Object(u.f)(u.a.GetWithFallback(s.facet.facet.name, n)),
+          var _ = Object(f.f)(f.a.GetWithFallback(o.facet.facet.name, n)),
             g = e.nMaxFacetValues,
-            y = s.facetValues.reduce(function (e, t) {
+            y = o.facetValues.reduce(function (e, t) {
               return e + (t.bDeactivated ? 1 : 0);
             }, 0);
-          g = Math.min(g, s.facetValues.length - y);
-          var S = s.facetValues.reduce(function (e, t) {
+          g = Math.min(g, o.facetValues.length - y);
+          var S = o.facetValues.reduce(function (e, t) {
               return e + (t.bEnabled ? 1 : 0);
             }, 0),
-            M = s.facetValues.some(function (e) {
+            M = o.facetValues.some(function (e) {
               return !e.bEnabled && !e.bDeactivated;
             });
           g = Math.max(g, S + (M ? 1 : 0));
-          var E = s.facetValues.length > g,
-            C = E && !b ? s.facetValues.slice(0, g) : s.facetValues;
+          var O = o.facetValues.length > g,
+            E = O && !h ? o.facetValues.slice(0, g) : o.facetValues;
           return (
-            d &&
-              (C = C.filter(function (e) {
+            p &&
+              (E = E.filter(function (e) {
                 return e.bEnabled;
               })),
-            o.createElement(
+            c.createElement(
               "div",
-              { className: m.Facet },
-              o.createElement(
+              { className: v.Facet },
+              c.createElement(
                 "div",
                 {
-                  className: (null == l ? void 0 : l.facetName) || m.FacetTitle,
+                  className: (null == l ? void 0 : l.facetName) || v.FacetTitle,
                   style: t,
                   onClick: function () {
-                    return h(!d);
+                    return d(!p);
                   },
                 },
-                v
+                _
               ),
-              C.map(function (t, n) {
-                return o.createElement(
-                  O,
+              E.map(function (t, n) {
+                return c.createElement(
+                  C,
                   Object(r.a)(
                     {
-                      key: "facet_" + v + "_value_" + n,
+                      key: "facet_" + _ + "_value_" + n,
                       facetValue: t,
                       styleOverrides: l,
                     },
@@ -62914,94 +62993,94 @@ var CLSTAMP = "6866351";
                   )
                 );
               }),
-              !d &&
-                E &&
-                o.createElement(
+              !p &&
+                O &&
+                c.createElement(
                   "div",
                   {
                     className:
-                      (null == l ? void 0 : l.showMore) || m.FacetValueShowMore,
+                      (null == l ? void 0 : l.showMore) || v.FacetValueShowMore,
                     onClick: function () {
-                      return _(!b);
+                      return b(!h);
                     },
                   },
-                  b
-                    ? Object(u.f)("#Bbcode_Expand_ShowMore_Expanded")
-                    : Object(u.f)("#Bbcode_Expand_ShowMore_Collapsed")
+                  h
+                    ? Object(f.f)("#Bbcode_Expand_ShowMore_Expanded")
+                    : Object(f.f)("#Bbcode_Expand_ShowMore_Collapsed")
                 )
             )
           );
         }),
-        O = Object(i.a)(function (e) {
+        C = Object(s.a)(function (e) {
           var t = e.language,
             n = e.highlightedFacetColor,
             r = e.linkColor,
-            i = e.facetValue,
-            c = e.facetFilterState,
-            l = e.styleOverrides,
-            p = e.fnOnUpdateFilter;
-          if (i.facetValue.type === s.l.k_EPrice && null == c.m_priceStopInfo)
+            a = e.facetValue,
+            i = e.facetFilterState,
+            s = e.styleOverrides,
+            l = e.fnOnUpdateFilter;
+          if (a.facetValue.type === u.l.k_EPrice && null == i.m_priceStopInfo)
             return null;
-          var d,
-            f,
-            b = i.bEnabled,
-            _ = i.bDeactivated,
-            v = {
+          var p,
+            m,
+            h = a.bEnabled,
+            b = a.bDeactivated,
+            _ = {
               color: n || "darkorange",
               borderLeft: "4px solid " + (n || "darkorange"),
             };
-          (null == l ? void 0 : l.facetValue) || (d = b ? v : {}),
-            (null == l ? void 0 : l.facetValueName) ||
-              (f = { color: r || "white" });
-          var g = Object(u.f)(u.a.GetWithFallback(i.facetValue.name, t)),
-            y = Boolean(i.facetValue.subtitle)
-              ? u.a.GetWithFallback(i.facetValue.subtitle, t)
+          (null == s ? void 0 : s.facetValue) || (p = h ? _ : {}),
+            (null == s ? void 0 : s.facetValueName) ||
+              (m = { color: r || "white" });
+          var g = Object(f.f)(f.a.GetWithFallback(a.facetValue.name, t)),
+            y = Boolean(a.facetValue.subtitle)
+              ? f.a.GetWithFallback(a.facetValue.subtitle, t)
               : null;
-          if (i.facetValue.type === s.l.k_EPrice) {
+          if (a.facetValue.type === u.l.k_EPrice) {
             var S =
-              null != i.nPriceStopIndex
-                ? i.nPriceStopIndex
-                : c.m_priceStopInfo.length - 1;
-            return o.createElement(h.q, {
-              classname: m.FacetValuePriceSlider,
+              null != a.nPriceStopIndex
+                ? a.nPriceStopIndex
+                : i.m_priceStopInfo.length - 1;
+            return c.createElement(d.q, {
+              classname: v.FacetValuePriceSlider,
               min: 0,
-              max: c.m_priceStopInfo.length - 1,
+              max: i.m_priceStopInfo.length - 1,
               value: S,
-              label: c.m_priceStopInfo[S].label,
+              label: i.m_priceStopInfo[S].label,
               onChange: function (e) {
-                Object(a.G)(function () {
-                  i.nPriceStopIndex = Math.floor(e);
+                Object(o.G)(function () {
+                  a.nPriceStopIndex = Math.floor(e);
                 });
               },
               onChangeComplete: function () {
-                Object(a.G)(function () {
-                  (i.bEnabled = Boolean(
-                    i.nPriceStopIndex !== c.m_priceStopInfo.length - 1
+                Object(o.G)(function () {
+                  (a.bEnabled = Boolean(
+                    a.nPriceStopIndex !== i.m_priceStopInfo.length - 1
                   )),
-                    p();
+                    l();
                 });
               },
             });
           }
-          var M = (null == l ? void 0 : l.facetValue) || m.FacetValue,
+          var M = (null == s ? void 0 : s.facetValue) || v.FacetValue,
             O =
-              (null == l ? void 0 : l.facetValueEnabled) || m.FacetValueEnabled,
+              (null == s ? void 0 : s.facetValueEnabled) || v.FacetValueEnabled,
             E =
-              (null == l ? void 0 : l.facetValueDeactivated) ||
-              m.FacetValueDeactivated,
-            C = (null == l ? void 0 : l.facetValueName) || m.FacetValueName;
-          return o.createElement(
+              (null == s ? void 0 : s.facetValueDeactivated) ||
+              v.FacetValueDeactivated,
+            C = (null == s ? void 0 : s.facetValueName) || v.FacetValueName;
+          return c.createElement(
             "div",
-            { className: b ? O : _ ? E : M, style: d },
-            o.createElement(
+            { className: h ? O : b ? E : M, style: p },
+            c.createElement(
               "a",
               {
                 className: C,
-                style: f,
+                style: m,
                 onClick: function (e) {
                   e.preventDefault(),
-                    Object(a.G)(function () {
-                      _ || ((i.bEnabled = !i.bEnabled), p());
+                    Object(o.G)(function () {
+                      b || ((a.bEnabled = !a.bEnabled), l());
                     });
                 },
                 href: "",
@@ -63009,46 +63088,46 @@ var CLSTAMP = "6866351";
               g
             ),
             Boolean(y) &&
-              o.createElement(
+              c.createElement(
                 "div",
                 {
                   className:
-                    (null == l ? void 0 : l.facetValueDesc) ||
-                    m.FacetValueDescription,
+                    (null == s ? void 0 : s.facetValueDesc) ||
+                    v.FacetValueDescription,
                 },
                 y
               )
           );
         }),
-        E = Object(i.a)(function (e) {
+        A = Object(s.a)(function (e) {
           var t = e.background,
             n = e.labelColor,
             a = e.headingColor,
             i = e.buttonColor,
-            s = e.highlightedFacetColor,
-            c = Object(o.useState)(!0),
-            l = c[0],
-            u = c[1];
-          return o.createElement(
+            o = e.highlightedFacetColor,
+            s = Object(c.useState)(!0),
+            l = s[0],
+            u = s[1];
+          return c.createElement(
             "div",
-            { className: m.FacetedBrowseCtn },
-            A() &&
-              o.createElement(C, {
+            { className: v.FacetedBrowseCtn },
+            w() &&
+              c.createElement(B, {
                 buttonColor: i,
                 bShowControls: l,
                 fnOnToggleControls: function () {
                   u(!l);
                 },
               }),
-            o.createElement(
+            c.createElement(
               "div",
-              { className: m.FacetedBrowseInnerCtn },
-              l || !A()
-                ? o.createElement(
-                    S,
+              { className: v.FacetedBrowseInnerCtn },
+              l || !w()
+                ? c.createElement(
+                    O,
                     Object(r.a)(
                       {
-                        highlightedFacetColor: s,
+                        highlightedFacetColor: o,
                         linkColor: n,
                         headingColor: a,
                         background: t,
@@ -63057,65 +63136,65 @@ var CLSTAMP = "6866351";
                     )
                   )
                 : null,
-              o.createElement(
+              c.createElement(
                 "div",
-                { className: m.FacetedBrowseItems },
+                { className: v.FacetedBrowseItems },
                 e.children
               )
             )
           );
         }),
-        C = Object(i.a)(function (e) {
+        B = Object(s.a)(function (e) {
           var t = e.buttonColor,
             n = e.bShowControls,
             r = e.fnOnToggleControls,
             a = { color: t || "white" };
-          return o.createElement(
+          return c.createElement(
             "div",
             {
-              className: m.FacetedBrowsePopupCtn,
+              className: v.FacetedBrowsePopupCtn,
               onClick: function () {
                 return r();
               },
             },
             n
-              ? o.createElement(
-                  o.Fragment,
+              ? c.createElement(
+                  c.Fragment,
                   null,
-                  o.createElement(
+                  c.createElement(
                     "div",
-                    { className: m.FacetedBrowsePopup, style: a },
-                    o.createElement(l.V, null)
+                    { className: v.FacetedBrowsePopup, style: a },
+                    c.createElement(h.V, null)
                   ),
-                  o.createElement(
+                  c.createElement(
                     "div",
-                    { className: m.FacetedBrowsePopupLabel },
-                    Object(u.f)("#Button_Close")
+                    { className: v.FacetedBrowsePopupLabel },
+                    Object(f.f)("#Button_Close")
                   )
                 )
-              : o.createElement(
-                  o.Fragment,
+              : c.createElement(
+                  c.Fragment,
                   null,
-                  o.createElement(
+                  c.createElement(
                     "div",
-                    { className: m.FacetedBrowsePopup, style: a },
-                    o.createElement(l.z, null)
+                    { className: v.FacetedBrowsePopup, style: a },
+                    c.createElement(h.z, null)
                   ),
-                  o.createElement(
+                  c.createElement(
                     "div",
-                    { className: m.FacetedBrowsePopupLabel },
-                    Object(u.f)("#FacetedBrowse_Heading")
+                    { className: v.FacetedBrowsePopupLabel },
+                    Object(f.f)("#FacetedBrowse_Heading")
                   )
                 )
           );
         }),
-        A = function () {
-          return window.innerWidth < parseInt(m.strWidescreenWidth);
+        w = function () {
+          return window.innerWidth < parseInt(v.strWidescreenWidth);
         },
-        B = Object(i.a)(function (e) {
+        T = Object(s.a)(function (e) {
           var t = e.section;
-          return o.createElement(
-            E,
+          return c.createElement(
+            A,
             Object(r.a)(
               {
                 labelColor: t.label_color,
@@ -63127,16 +63206,16 @@ var CLSTAMP = "6866351";
             )
           );
         });
-      function w(e) {
+      function I(e) {
         return e.type + e.id;
       }
-      function T(e, t) {
+      function L(e, t) {
         return "sale_item_browser" === t.section_type
           ? null == e.jsondata.source_content_hub
           : !t.smart_section ||
               new Set(["popularpurchased"]).has(t.smart_section_type);
       }
-      function I(e) {
+      function D(e) {
         for (
           var t = new Array(), n = new Set(), r = 0, a = e;
           r < a.length;
@@ -63152,6 +63231,79 @@ var CLSTAMP = "6866351";
               }
           }
         return t;
+      }
+      function j(e, t) {
+        var n,
+          r,
+          a,
+          i,
+          o,
+          s = Object(m.g)(t),
+          c =
+            "bundle" !== (null == s ? void 0 : s.type) &&
+            "sub" !== (null == s ? void 0 : s.type) &&
+            s;
+        switch (null == e ? void 0 : e.type) {
+          case u.o.k_EStoreFilterClauseTypeStoreTag:
+            return null === (n = null == c ? void 0 : c.tags) || void 0 === n
+              ? void 0
+              : n.some(function (t) {
+                  return (null == t ? void 0 : t.tagid) === e.value;
+                });
+          case u.o.k_EStoreFilterClauseTypeFeatureTag:
+            switch (e.value) {
+              case "linux":
+                return null == s ? void 0 : s.available_linux;
+              case "mac":
+                return null == s ? void 0 : s.available_mac;
+              case "vr":
+                return null == s ? void 0 : s.support_vrhmd;
+              case "vr only":
+                return null == s ? void 0 : s.support_vrhmd_only;
+              case "free":
+                return 0 === (null == s ? void 0 : s.price_in_cents);
+              case "discounted":
+                return (null == s ? void 0 : s.discount_percent) > 0;
+              default:
+                return !1;
+            }
+          case u.o.k_EStoreFilterClauseTypeAppType:
+            return (null == s ? void 0 : s.type) === e.value;
+          case u.o.k_EStoreFilterClauseTypeLanguage:
+            return null === (r = null == s ? void 0 : s.localized_langs) ||
+              void 0 === r
+              ? void 0
+              : r.some(function (t) {
+                  return t === Object(l.e)(e.value);
+                });
+          case u.o.k_EStoreFilterClauseTypeContentDescriptor:
+            return null === (a = null == c ? void 0 : c.content_descriptors) ||
+              void 0 === a
+              ? void 0
+              : a.some(function (t) {
+                  return t === e.value;
+                });
+          case u.o.k_EStoreFilterClauseTypePrice:
+            return (null == s ? void 0 : s.price_in_cents) <= 100 * e.value;
+          case u.o.k_EStoreFilterClauseTypeOr:
+            var p =
+              null === (i = e.rgSubexpressions) || void 0 === i
+                ? void 0
+                : i.some(function (e) {
+                    return j(e, t);
+                  });
+            return e.bNegated ? !p : p;
+          case u.o.k_EStoreFilterClauseTypeAnd:
+            var d =
+              null === (o = e.rgSubexpressions) || void 0 === o
+                ? void 0
+                : o.every(function (e) {
+                    return j(e, t);
+                  });
+            return e.bNegated ? !d : d;
+          default:
+            return !0;
+        }
       }
     },
     dsQf: function (e, t) {
@@ -78888,6 +79040,13 @@ var CLSTAMP = "6866351";
             Object.defineProperty(e.prototype, "is_free", {
               get: function () {
                 return !1;
+              },
+              enumerable: !1,
+              configurable: !0,
+            }),
+            Object.defineProperty(e.prototype, "price_in_cents", {
+              get: function () {
+                return this.final_price_cents;
               },
               enumerable: !1,
               configurable: !0,
