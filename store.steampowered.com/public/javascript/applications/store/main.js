@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6868221";
+var CLSTAMP = "6868394";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [40],
   {
@@ -7225,7 +7225,7 @@ var CLSTAMP = "6868221";
                       "div",
                       { className: c.StoreSaleItemRelease },
                       Object(m.n)(
-                        "#Sale_ReleaseDate",
+                        "#Sale_Released_Shorter",
                         a.a.createElement("span", null, g.release)
                       )
                     ),
@@ -30143,6 +30143,8 @@ var CLSTAMP = "6868221";
           "animated_featured_capsule_StoreSaleItemRelease_1B3Dl",
         StoreSaleItemReview:
           "animated_featured_capsule_StoreSaleItemReview_2NnxX",
+        animated_featured_capsule_Title:
+          "animated_featured_capsule_animated_featured_capsule_Title_3r390",
         Title: "animated_featured_capsule_Title_26-IC",
         Reason: "animated_featured_capsule_Reason_2iLfP",
         InfoSlideRight: "animated_featured_capsule_InfoSlideRight_2fdUm",
@@ -52432,7 +52434,7 @@ var CLSTAMP = "6868221";
             (Object(r.useEffect)(
               function () {
                 if (!p)
-                  if (l) {
+                  if (l && l.GetTab()) {
                     for (
                       var e = new Map(),
                         t = function (t) {
