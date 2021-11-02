@@ -1,8 +1,8 @@
 __TEXT
 __text
 __TEXT
-@J
-@J
+`I
+`I
 __stubs
 __TEXT
 __stub_helper
@@ -347,6 +347,7 @@ ERROR! AppId %u launch failed (%s)
 App info request sent.
 ERROR! Failed to request AppInfo for appID %d.
 Usage: force_install_dir <directory>
+Please use force_install_dir before logon!
 AppID %u already owned.
 Requesting license for AppID %u ...
 Success.
@@ -620,6 +621,9 @@ disabled
 verbose
 brief
 https://www.example.com/
+GetBootstrapperVersion
+Steam Console Client (c) Valve Corporation
+- version %llu
 -help
 --help
 -h
@@ -647,7 +651,7 @@ Steam>
 running profile for %d seconds...
 Help topics - type "help <topic>" or run with "--help <topic>" for more information:
 You can also type "find <string>" to see a list of all commands and convars that contain or reference <string>.
-Steam Console Client (c) Valve Corporation
+- local build
 -- type 'quit' to exit --
 sign_install_script
 sign_install_script <appid> <input filename> <output filename> : upload install script to back end for signing
@@ -1241,7 +1245,6 @@ E
 0
 @
 =
-?
 0
 0
 0
@@ -1269,8 +1272,10 @@ B
 0
 0
 0
-]
-I
+Hc5<
+k
+g
+Q
+M
 0
 0
->
