@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6868394";
+var CLSTAMP = "6868639";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [40],
   {
@@ -9728,7 +9728,7 @@ var CLSTAMP = "6868394";
             c.a.createElement(
               "span",
               { className: re.a.CreatorName },
-              !i && o.group_name
+              !i && o && o.group_name
             )
           );
         };
@@ -23182,17 +23182,18 @@ var CLSTAMP = "6868394";
       function h(e) {
         if (e.recommendation.reason === r.c.k_EStatusString)
           return { strReason: e.recommendation.statusString };
-        if (e.recommendation.reason === r.c.k_ECurator) {
-          var t = l.a.GetClanInfoByClanAccountID(e.recommendation.curator);
-          return {
-            strReason: Object(u.f)(
-              "#ContentHub_Recommendation_Curator",
-              t.group_name
-            ),
-            strImageURL: t.avatar_full_url,
-          };
-        }
+        if (e.recommendation.reason === r.c.k_ECurator)
+          return (t = l.a.GetClanInfoByClanAccountID(e.recommendation.curator))
+            ? {
+                strReason: Object(u.f)(
+                  "#ContentHub_Recommendation_Curator",
+                  t.group_name
+                ),
+                strImageURL: t.avatar_full_url,
+              }
+            : { strReason: "" };
         if (e.recommendation.reason === r.c.k_ECreator) {
+          var t;
           if (
             !(t = l.a.GetClanInfoByClanAccountID(
               e.recommendation.creator.creator
