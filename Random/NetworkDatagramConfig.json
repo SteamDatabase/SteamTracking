@@ -1,5 +1,5 @@
 {
-  "revision": 343,
+  "revision": 345,
   "certs": [
     "Ii4IARIgmuygThdRzmJo1WkALKHh+hstvCbTa06joAg603KCm4RFu+TkYE27JutyKT6tfJIvitz8MkBaXzlTtPZow863CN0tcByuYSphd0CEOEtlUNMD92DaJXMKwFn5/XEOVwDpNBwNnON7mQJ2rGMDcLWC6sU2aEQN",
     "Ij4IARIgpdtY6tZuJOfB3FHhsMDlJWo6EFDmRXVNMgEkptCg+YpFu+TkYE27S6dkUJrVEFCO0iNQ+pQ+UIy8TSk+rXySL4rc/DJAY1C1lwR/XncgtnCGj0zsgC7pgg6MIq4wWHGsAhUANcY17f6LbondXTCOLpVuF8gxXs8WJH0nadsmKrsJvD4SDQ==",
@@ -319,20 +319,6 @@
         "perfectworld"
       ],
       "partners": 2,
-      "relay_addresses": [
-        "155.133.235.18:27015-27052",
-        "155.133.235.34:27015-27052"
-      ],
-      "relays": [
-        {
-          "ipv4": "155.133.235.18",
-          "port_range": [ 27015, 27052 ]
-        },
-        {
-          "ipv4": "155.133.235.34",
-          "port_range": [ 27015, 27052 ]
-        }
-      ],
       "service_address_ranges": [
         "192.69.96.0/23",
         "208.78.166.0/24",
@@ -1403,24 +1389,6 @@
         "180.153.252.0/24"
       ]
     },
-    "sof": {
-      "desc": "Sofia, Bulgaria",
-      "geo": [ 23.41, 42.7 ],
-      "groups": [
-        "steam-global",
-        "valve"
-      ],
-      "partners": 1,
-      "relay_addresses": [
-        "139.45.193.10:27015-27019"
-      ],
-      "relays": [
-        {
-          "ipv4": "139.45.193.10",
-          "port_range": [ 27015, 27019 ]
-        }
-      ]
-    },
     "sto": {
       "desc": "Stockholm (Kista)",
       "geo": [ 17.9, 59.4 ],
@@ -1821,32 +1789,12 @@
       ],
       "partners": 1,
       "relay_addresses": [
-        "155.133.230.35:27015-27068",
-        "155.133.230.36:27015-27068",
-        "155.133.230.51:27015-27068",
-        "155.133.230.52:27015-27068",
         "155.133.230.66:27015-27068",
         "155.133.230.67:27015-27068",
         "155.133.230.68:27015-27068",
         "155.133.230.69:27015-27068"
       ],
       "relays": [
-        {
-          "ipv4": "155.133.230.35",
-          "port_range": [ 27015, 27068 ]
-        },
-        {
-          "ipv4": "155.133.230.36",
-          "port_range": [ 27015, 27068 ]
-        },
-        {
-          "ipv4": "155.133.230.51",
-          "port_range": [ 27015, 27068 ]
-        },
-        {
-          "ipv4": "155.133.230.52",
-          "port_range": [ 27015, 27068 ]
-        },
         {
           "ipv4": "155.133.230.66",
           "port_range": [ 27015, 27068 ]
